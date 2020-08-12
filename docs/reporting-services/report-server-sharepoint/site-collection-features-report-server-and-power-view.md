@@ -1,5 +1,6 @@
 ---
 title: SharePoint에서 보고서 서버 및 파워 뷰 통합 사이트 모음 기능 활성화 | Microsoft Docs
+description: SharePoint용 SQL Server Reporting Services 추가 기능은 일반적으로 자동으로 활성화됩니다. 수동으로 활성화해야 하는 경우 다음 지침을 사용합니다.
 ms.date: 09/25/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: dce33b0f267dadd8454378fccb72112970553a96
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f96e73135889e94cda9e84a39c8f03b59c39973f
+ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65580511"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83764896"
 ---
 # <a name="activate-the-report-server-and-power-view-integration-features-in-sharepoint"></a>SharePoint에서 보고서 서버 및 파워 뷰 통합 사이트 모음 기능 활성화
 

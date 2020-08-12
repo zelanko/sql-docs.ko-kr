@@ -1,5 +1,6 @@
 ---
 title: 성능 카운터 - ReportServer 서비스 성능 개체 | Microsoft Docs
+description: SQL Server 2012 배포의 일부인 ReportServer:Service 및 ReportServerSharePoint:Service 성능 개체의 성능 카운터에 대해 알아봅니다.
 ms.date: 06/26/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ ms.assetid: 2bcacab2-3a4f-4aae-b123-19d756b9b9ed
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: f86af60001deb0991983fe17c3cf1cf9ba3f2552
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b7afe684cb88327fd7b8bb22ae2637ad4064cb25
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68893447"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545525"
 ---
 # <a name="performance-counters---reportserver-service--performance-objects"></a>성능 카운터 - ReportServer 서비스 성능 개체
   이 항목에서는 **배포에 포함된** ReportServer:Service **및** ReportServerSharePoint:Service [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 성능 개체의 성능 카운터에 대해 설명합니다.  
@@ -49,7 +50,7 @@ ms.locfileid: "68893447"
 (get-counter -listset "ReportServer:Service").paths  
 ```  
   
-|카운터|Description|  
+|카운터|설명|  
 |-------------|-----------------|  
 |**Active connections**|서버에서 현재 활성화된 연결 수입니다.|  
 |**Bytes Received Total**|서버가 받은 바이트 수입니다. 이 카운터는 보고서 관리자와 보고서 서버가 받은 총 원시 바이트를 계산합니다.|  
@@ -82,7 +83,7 @@ ms.locfileid: "68893447"
 (get-counter -listset "ReportServerSharePoint:Service").paths  
 ```  
   
-|카운터|Description|  
+|카운터|설명|  
 |-------------|-----------------|  
 |**Memory Pressure State**||  
 |**Memory Shrink Amount**||  

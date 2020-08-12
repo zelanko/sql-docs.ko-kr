@@ -1,5 +1,6 @@
 ---
 title: 필터 수식 예(보고서 작성기) | Microsoft Docs
+description: 보고서 필터를 만드는 방법을 알아봅니다. 이러한 자주 사용되는 필터의 예제를 사용하여 직접 필터를 만들 수 있습니다.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 66bec93d-7c3b-4d4a-8cb6-7a7bb2f34ec6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 23a76863222fdd58d769031020ac888966596146
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 074a7d7b300d9ae55776199479b229407b2ba3a1
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080126"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689733"
 ---
 # <a name="filter-equation-examples-report-builder-and-ssrs"></a>필터 수식 예(보고서 작성기 및 SSRS)
   필터를 만들려면 하나 이상의 필터 수식을 지정해야 합니다. 필터 수식에는 식, 데이터 형식, 연산자 및 값이 포함됩니다. 이 항목에서는 일반적으로 사용되는 필터의 예를 제공합니다.  
@@ -26,7 +27,7 @@ ms.locfileid: "77080126"
 ## <a name="filter-examples"></a>필터 예  
  다음 표에서는 다양한 데이터 형식 및 연산자를 사용하는 필터 수식의 예를 보여 줍니다. 비교 범위는 필터가 정의된 보고서 항목에 따라 결정됩니다. 예를 들어 데이터 세트에 대해 정의된 필터의 경우 **TOP % 10**은 데이터 세트의 상위 10% 값이며 그룹에 대해 정의된 필터의 경우 **TOP % 10**은 그룹의 상위 10% 값입니다.  
   
-|간단한 식|데이터 형식|연산자|값|Description|  
+|간단한 식|데이터 형식|연산자|값|설명|  
 |-----------------------|---------------|--------------|-----------|-----------------|  
 |`[SUM(Quantity)]`|**정수**|**>**|`7`|7보다 큰 데이터 값을 포함합니다.|  
 |`[SUM(Quantity)]`|**정수**|**TOP N**|`10`|상위 10개 데이터 값을 포함합니다.|  

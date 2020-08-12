@@ -1,5 +1,6 @@
 ---
 title: 계기(보고서 작성기) | Microsoft Docs
+description: 보고서 작성기에서 방사형 또는 선형 계기를 사용하여 값을 설명하거나 데이터를 비교하는 핵심 성과 지표를 표시합니다.
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -156,12 +157,12 @@ f1_keywords:
 ms.assetid: 1f086882-4834-48e9-ab30-c214beee2040
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6fb9864d97975b15711ec9cc1264251e8aac8c76
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 24fb81c9714e9008308721906505aab8cc4247fc
+ms.sourcegitcommit: f898aa83561e94626024916932568ab05e73b656
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082117"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84011861"
 ---
 # <a name="gauges-report-builder-and-ssrs"></a>계기(보고서 작성기 및 SSRS)
   페이지가 매겨진 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 보고서의 계기 데이터 영역에는 데이터 세트의 단일 값이 표시됩니다. 개별 계기는 항상 자식 또는 인접 계기를 추가할 수 있는 계기 패널 안에 배치됩니다. 필터링, 그룹화, 정렬 등 일반적인 기능을 공유하는 여러 계기를 한 계기 패널 안에 만들 수 있습니다.  
@@ -204,7 +205,7 @@ ms.locfileid: "77082117"
   
  ![rs_LinearGauge](../../reporting-services/report-design/media/rs-lineargauge.gif "rs_LinearGauge")  
   
- 선형 계기 옵션: 가로, 세로, 여러 막대 포인터, 두 개의 눈금, 세 개의 색 범위, 로그, 온도계, 온도계 화씨/섭씨 및 블릿(Bullet) 그래프  
+ 선형 계기 옵션: 가로, 세로, 여러 막대 포인터, 두 개의 눈금, 세 개의 색 범위, 로그, 온도계, 온도계 화씨/섭씨 및 글머리 기호 그래프  
   
 ##  <a name="adding-data-to-a-gauge"></a><a name="AddingData"></a> 계기에 데이터 추가  
  디자인 화면에 계기를 추가한 후에 데이터 세트 필드를 계기 데이터 창으로 끕니다. 기본적으로 계기에서는 필드 값을 하나의 값으로 집계하여 계기에 표시합니다. Value 속성을 사용하여 이 값을 포인터에 연결합니다. 필드의 데이터 형식에 따라 계기에서는 SUM 또는 COUNT 집계를 사용합니다. 덧셈이 가능한 숫자 데이터를 사용할 때는 계기에서 SUM 함수를 사용하고 그렇지 않은 경우에는 COUNT 집계를 사용합니다. 포인터 값은 다른 집계를 사용하거나 집계를 사용하지 않을 수도 있습니다.  

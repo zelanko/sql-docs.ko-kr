@@ -1,5 +1,6 @@
 ---
 title: 보고서 서버 콘텐츠 관리(기본 모드) | Microsoft Docs
+description: Reporting Services 콘텐츠 관리를 위한 웹 포털 및 새로운 웹 포털 환경에 대해 알아봅니다. 속성 및 보안 설정을 통해 항목을 관리합니다.
 ms.date: 06/14/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 641961ac-53a5-4997-9d42-cf4ecce1f892
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 78fb75acfefce3a1f0c8cb28ea286a028463a56b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 12832f724da36f6359f34fd2fd950ba804619c45
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79286387"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547249"
 ---
 # <a name="report-server-content-management-ssrs-native-mode"></a>보고서 서버 콘텐츠 관리(SSRS 기본 모드)
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 내용 관리는 보고서 서버 항목의 관리를 의미합니다. 모든 항목은 속성 및 보안 설정을 통해 개별적으로 관리할 수 있습니다. 모든 항목을 보고서 서버 폴더 네임스페이스의 다른 위치로 이동할 수 있습니다. 항목을 효과적으로 관리하려면 내용 관리자가 수행하는 태스크에 대한 지식이 필요합니다. SQL Server 2016 Reporting Services(SSRS) 또는 CTP 3.2 이후 버전부터 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 웹 포털을 사용할 수 있습니다. 이 문서에서는 웹 포털 및 새로운 웹 포털 환경에 대해 설명합니다.  
@@ -42,7 +43,7 @@ ms.locfileid: "79286387"
   
 -   보고서 처리를 예약하고 요청 시 실행될 수 있는 보고서 처리와 캐시에서 로드되는 보고서 처리를 지정하여 서버에 대한 보고서 처리 요청의 균형을 조정합니다.  
   
--   관리 태스크를 수행할 권한은 미리 정의된 **시스템 관리자** 및 **내용 관리자**역할을 사용하여 제공합니다. 보고서 서버 내용을 효과적으로 관리하려면 두 역할을 모두 할당 받아야 합니다.  
+-   관리 작업을 수행할 권한은 미리 정의된 **시스템 관리자** 및 **콘텐츠 관리자** 역할을 통해 제공됩니다. 보고서 서버 내용을 효과적으로 관리하려면 두 역할을 모두 할당 받아야 합니다.  
   
 보고서 서버 내용을 관리하기 위한 도구에는 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 또는 웹 포털이 있습니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 를 사용하면 기본값을 설정하고 기능을 활성화할 수 있습니다. 웹 포털은 사용자에게 보고서 서버 항목 및 작업 보기에 대한 액세스 권한을 부여하고, 보고서 및 기타 내용 유형을 확인 및 사용하고, 모든 공유 항목 및 보고서 배포 기능을 확인 및 사용하는 데 사용됩니다. 웹 포털은 대부분의 사용하지 않는 보고서 관리자 기능을 사용할 수 있는 업데이트된 사이트입니다. 자세한 내용은 [Reporting Services 도구](../../reporting-services/tools/reporting-services-tools.md)를 참조하세요.  
   

@@ -1,5 +1,6 @@
 ---
 title: ReportingServicesService 구성 파일| Microsoft Docs
+description: Reporting Services에서 추적에 사용되는 ReportingServicesService.exe.config의 파일 위치, 편집 지침 및 구성 설정에 대해 알아봅니다.
 ms.date: 05/30/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 40f4a401-cb61-4c42-b1ec-01acdacdacd1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: dfb0f48bb35e6341e2b2a9a72007ef4eb09c2b9b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: bb3b4d6c7591385f332daab9102613f05f0e5dfc
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "66506627"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84535355"
 ---
 # <a name="reportingservicesservice-configuration-file"></a>ReportingServicesService 구성 파일
 
@@ -77,7 +78,7 @@ ReportingServicesService.exe.config 파일에는 추적을 구성하는 설정�
 ## <a name="configuration-settings"></a>구성 설정  
  다음 표는 특정 설정에 대한 정보를 제공합니다. 설정은 구성 파일에 나타나는 순서로 표시됩니다.  
   
-|설정|Description|  
+|설정|설명|  
 |-------------|-----------------|  
 |**RStrace**|오류 및 추적에 사용되는 네임스페이스를 지정합니다.|  
 |**DefaultTraceSwitch**|ReportServerService 추적 로그에 보고되는 정보의 수준을 지정합니다. 각 수준에는 낮은 번호가 매겨진 모든 수준별로 보고된 정보가 들어 있습니다. 추적을 설정하는 것이 좋습니다. 유효한 값은 다음과 같습니다.<br /><br /> 0= 추적 해제<br /><br /> 1= 예외 및 다시 시작<br /><br /> 2= 예외, 다시 시작, 경고<br /><br /> 3= 예외, 다시 시작, 경고, 상태 메시지(기본값)<br /><br /> 4= 세부 정보 표시 모드|  

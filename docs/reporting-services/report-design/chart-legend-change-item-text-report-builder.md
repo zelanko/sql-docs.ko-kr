@@ -1,5 +1,6 @@
 ---
 title: 범례 항목의 텍스트 변경(보고서 작성기) | Microsoft Docs
+description: 보고서 작성기에서 개별 데이터 요소에 대한 자세한 정보를 표시하도록 범례 항목의 텍스트를 변경하는 방법을 알아봅니다.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9e82fa34-17ed-494f-b25d-03dcc353a21f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5f592abd3f634865a432b31d2aba4764187b0d86
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7f13d4663cf0d4e27148e77eebc59068e8c36924
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77078704"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681242"
 ---
 # <a name="chart-legend---change-item-text-report-builder"></a>차트 범례 - 항목 텍스트 변경(보고서 작성기)
   차트의 값 영역에 필드를 배치하면 해당 필드의 이름이 들어 있는 범례 항목이 자동으로 생성됩니다. 모든 범례 항목은 차트의 개별 계열에 연결됩니다. 단, 셰이프 차트의 경우에는 범례가 개별 계열 대신 개별 데이터 요소에 연결됩니다.  
@@ -35,7 +36,7 @@ ms.locfileid: "77078704"
   
  다음 표에서는 **사용자 지정 범례 텍스트** 속성에 사용하는 차트별 키워드의 예를 보여 줍니다. 키워드에 대한 자세한 내용은 [차트의 데이터 요소에 서식 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)을 참조하세요.  
   
-|키워드|Description|범례에 텍스트로 나타나는 항목의 예|  
+|키워드|설명|범례에 텍스트로 나타나는 항목의 예|  
 |-------------|-----------------|---------------------------------------------------|  
 |`#PERCENT{P1}`|합계 값의 백분율을 소수점 한 자리 수로 표시합니다.|85.0%|  
 |`#VALY`|데이터 필드의 실제 숫자 값을 표시합니다.|17000|  

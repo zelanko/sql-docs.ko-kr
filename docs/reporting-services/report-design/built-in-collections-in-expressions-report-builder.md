@@ -1,6 +1,7 @@
 ---
 title: 식의 기본 제공 컬렉션(보고서 작성기) | Microsoft Docs
-ms.date: 03/14/2017
+description: 보고서 작성기에서 보고서의 매개 변수, 필드, 데이터 세트와 같은 컬렉션을 참조하기 위한 식의 기본 제공 컬렉션에 대해 알아봅니다.
+ms.date: 3/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-design
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 78d5e3b8-9320-4e4b-a025-e2de3cf7afa7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 73fcabfe163fce811b208861adbde97e4411300b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b5dbc7cf2683f78118087d18b2dd51865bf52f3d
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082204"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84880268"
 ---
 # <a name="built-in-collections-in-expressions-report-builder"></a>식에 기본 제공 컬렉션(보고서 작성기 및 SSRS)
   보고서의 식에는 ReportItems, 매개 변수, 필드, 데이터 세트, 데이터 원본, 변수 및 보고서 이름과 같은 글로벌 정보에 대한 기본 제공 필드 등 기본 제공 컬렉션에 대한 참조가 포함될 수 있습니다. **식** 대화 상자에 표시되지 않는 컬렉션도 있습니다. DataSets 및 DataSources 컬렉션은 보고서 서버의 게시된 보고서에 대해 런타임에만 사용할 수 있습니다. ReportItems 컬렉션은 페이지 또는 페이지 머리글의 입력란과 같이 보고서 영역에 있는 입력란의 컬렉션입니다.  
@@ -26,12 +27,12 @@ ms.locfileid: "77082204"
 ##  <a name="understanding-built-in-collections"></a><a name="Collections"></a> 기본 제공 컬렉션 이해  
  다음 표에서는 식을 작성할 때 사용할 수 있는 기본 제공 컬렉션을 보여 줍니다. 각 행에는 컬렉션에 대한 대/소문자 구분 프로그래밍 이름, 식 대화 상자를 사용하여 컬렉션에 대한 참조를 대화형으로 추가할 수 있는지 여부, 예, 그리고 컬렉션 값이 초기화되어 사용 가능해지는 시점을 포함한 설명이 포함됩니다.  
   
-|기본 제공 컬렉션|식 대화 상자의 범주|예제|Description|  
+|기본 제공 컬렉션|식 대화 상자의 범주|예제|설명|  
 |--------------------------|-------------------------------------------|-------------|-----------------|  
 |**Globals**|기본 제공 필드|`=Globals.ReportName`<br /><br /> `- or -`<br /><br /> `=Globals.PageNumber`|보고서 이름이나 페이지 번호를 비롯하여 보고서에 유용한 전역 변수를 나타냅니다. 항상 사용할 수 있습니다.<br /><br /> 자세한 내용은 [기본 제공 Globals 및 Users 참조&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md)를 참조하세요.|  
 |**사용자**|기본 제공 필드|`=User.UserID`<br /><br /> -또는-<br /><br /> `=User.Language`|언어 설정 또는 사용자 ID를 비롯하여 보고서를 실행하는 사용자에 대한 데이터 컬렉션을 나타냅니다. 항상 사용할 수 있습니다.<br /><br /> 자세한 내용은 [기본 제공 Globals 및 Users 참조&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md)를 참조하세요.|  
 |**매개 변수**|매개 변수|`=Parameters("ReportMonth").Value`<br /><br /> -또는-<br /><br /> `=Parameters!ReportYear.Value`|각각 단일 값 또는 다중값일 수 있는 보고서 매개 변수 컬렉션을 나타냅니다. 초기화 처리가 완료된 다음에만 사용할 수 있습니다. 자세한 내용은 [매개 변수 컬렉션 참조&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/built-in-collections-parameters-collection-references-report-builder.md)를 참조하세요.|  
-|**필드(** *\<데이터 세트>* **)**|필드|`=Fields!Sales.Value`|보고서에 사용할 수 있는 데이터 세트의 필드 컬렉션을 나타냅니다. 데이터 원본에 있는 데이터를 검색하여 데이터 세트로 가져온 후에 사용할 수 있습니다. 자세한 내용은 [데이터 세트 필드 컬렉션 참조&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/built-in-collections-dataset-fields-collection-references-report-builder.md)를 참조하세요.|  
+|**Fields(** *\<Dataset>* **)**|필드|`=Fields!Sales.Value`|보고서에 사용할 수 있는 데이터 세트의 필드 컬렉션을 나타냅니다. 데이터 원본에 있는 데이터를 검색하여 데이터 세트로 가져온 후에 사용할 수 있습니다. 자세한 내용은 [데이터 세트 필드 컬렉션 참조&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/built-in-collections-dataset-fields-collection-references-report-builder.md)를 참조하세요.|  
 |**데이터 세트**|표시되지 않음|`=DataSets("TopEmployees").CommandText`|보고서 정의 본문에서 참조하는 데이터 세트 컬렉션을 나타냅니다. 페이지 머리글이나 페이지 바닥글에만 사용되는 데이터 원본은 포함되지 않습니다. 로컬 미리 보기에서는 사용할 수 없습니다. 자세한 내용은 [DataSources 및 DataSets 컬렉션 참조&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/built-in-collections-datasources-and-datasets-references-report-builder.md)를 참조하세요.|  
 |**DataSources**|표시되지 않음|`=DataSources("AdventureWorks2012").Type`|보고서 본문에서 참조하는 데이터 원본 컬렉션을 나타냅니다. 페이지 머리글이나 페이지 바닥글에만 사용되는 데이터 원본은 포함되지 않습니다. 로컬 미리 보기에서는 사용할 수 없습니다. 자세한 내용은 [DataSources 및 DataSets 컬렉션 참조&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/built-in-collections-datasources-and-datasets-references-report-builder.md)를 참조하세요.|  
 |**변수**|`Variables`|`=Variables!CustomTimeStamp.Value`|보고서 변수 및 그룹 변수의 컬렉션을 나타냅니다. 자세한 내용은 [보고서 및 그룹 변수 컬렉션 참조&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/built-in-collections-report-and-group-variables-references-report-builder.md)를 참조하세요.|  

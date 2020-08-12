@@ -1,5 +1,6 @@
 ---
 title: 배달 확장 프로그램 개요 | Microsoft Docs
+description: 이메일 또는 파일 공유와 같은 다양한 방법으로 Reporting Services 보고서를 배달하는 데 사용할 수 있는 배달 확장 프로그램에 대해 개략적으로 알아봅니다.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: a30600a9-bbed-4519-9426-3470ff2982e7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 69dce8309f96988a9d339aefbb684116c0df2eb4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1aca4a83bb117624fdfd5a090c9caab2ff4b7efd
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63193771"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529166"
 ---
 # <a name="delivery-extensions-overview"></a>배달 확장 프로그램 개요
   사용자는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]를 통해 보고서를 만들고 게시한 다음에 다양한 위치로 배달할 수 있습니다. 또한 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]에는 다수의 배달 확장 프로그램이 포함되어 있으며 개발자가 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]에서 배달 기능을 더욱 확장할 수 있도록 추가 배달 확장 프로그램을 만들 수 있는 배달 API가 포함되어 있습니다.  
@@ -51,7 +52,7 @@ Reporting Services 배달 확장 프로그램 검토 및 업데이트 프로그�
   
 -   보고서 관리자에 대한 고유의 구독 사용자 인터페이스를 구현하려는 경우에는 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 및 웹 컨트롤에 대해 잘 알고 있어야 합니다.  
   
--   [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Visual C# 또는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET과 같은 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 언어에 대한 개발 경험이 있어야 합니다.  
+-   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# 또는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .NET과 같은 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 언어에 대한 개발 경험이 있어야 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [배달 확장 프로그램 구현](../../../reporting-services/extensions/delivery-extension/implementing-a-delivery-extension.md)   

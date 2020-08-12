@@ -1,5 +1,6 @@
 ---
 title: 성능 카운터 MSRS 2011 웹 서비스, 성능 개체 | Microsoft Docs
+description: MSRS 2011 웹 서비스 및 MSRS 2011 Windows 서비스 성능 개체용 성능 카운터에 대해 알아봅니다.
 ms.date: 06/26/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -16,12 +17,12 @@ ms.assetid: c642fc4f-8734-4626-a194-42ac9cd8e2ef
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: f8dbafaede198c82b3e41625d3e670afd980c57a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 21975c380bc948c9f8a514da40a42fd1f422c125
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68893449"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545538"
 ---
 # <a name="performance-counters-msrs-2011-web-service-performance-objects"></a>성능 카운터 MSRS 2011 웹 서비스, 성능 개체
   이 항목에서는 **MSRS 2011 Web Service** 및 **MSRS 2011 Windows Service** 성능 개체에 대한 성능 카운터에 대해 설명합니다. 이 개체는 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 기본 코드 배포의 일부입니다.  
@@ -46,7 +47,7 @@ ms.locfileid: "68893449"
   
  다음 표에서는 **MSRS 2011 Web Service** 성능 개체와 함께 제공되는 카운터를 나열합니다.  
   
-|카운터|Description|  
+|카운터|설명|  
 |-------------|-----------------|  
 |**Active Sessions**|활성 세션 수입니다. 이 카운터는 활성 상태인지 여부에 관계없이 보고서 실행에서 생성된 모든 브라우저 세션의 누적 개수를 제공합니다.<br /><br /> 이 카운터는 세션 레코드를 제거하면 감소합니다. 기본적으로 10분 동안 활동이 없으면 세션이 제거됩니다.|  
 |**Cache Hits/Sec**|캐시된 보고서에 대한 초당 요청 수입니다. 이러한 요청은 다시 렌더링된 보고서에 대한 것이며 캐시에서 직접 처리된 보고서에 대한 요청은 아닙니다. (이 항목 뒷부분에 나오는 **Total Cache Hits** 참조)|  
@@ -76,7 +77,7 @@ ms.locfileid: "68893449"
   
  다음 표에서는 **MSRS 2011 Windows Service** 성능 개체에 포함된 카운터를 나열합니다.  
   
-|카운터|Description|  
+|카운터|설명|  
 |-------------|-----------------|  
 |**Active Sessions**|보고서 서버 데이터베이스에 저장된 활성 세션의 수입니다. 이 카운터는 활성 상태인지 여부에 관계없이 보고서 구독에서 생성된 사용 가능한 모든 브라우저 세션의 누적 개수를 제공합니다.|  
 |**Cache Flushes/Sec**|초당 캐시 플러시 수입니다.|  

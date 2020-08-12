@@ -1,5 +1,6 @@
 ---
 title: 웹 포털 구성 | Microsoft Docs
+description: 보고서를 확인하고 보고서 서버 콘텐츠를 관리하며 사용자에게 기본 모드 보고서 서버에 대한 액세스 권한을 부여하는 데 사용되는 웹 포털 애플리케이션을 구성하는 방법을 알아봅니다.
 ms.date: 05/10/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: e918986c-af15-48f6-8178-256aed829c6a
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 962ab17170c69b6225f852f0b625a6cd50fa20d3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 52a6055a3b3c79c08622d89b2931a48eedd14d76
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63308397"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84548055"
 ---
 # <a name="configure-the-web-portal"></a>웹 포털 구성
 
 웹 포털은 보고서를 확인하고 보고서 서버 내용을 관리하며 사용자에게 기본 모드 보고서 서버에 대한 액세스 권한을 부여하는 데 사용되는 웹 프런트 엔드 애플리케이션입니다. 웹 포털은 보고서 서버 웹 서비스와 동일한 보고서 서버 인스턴스 내에 설치되며 설치 시 **기본값인 기본 모드 구성으로 설치** 옵션을 선택하면 구성됩니다. 웹 포털을 사후 설치 작업으로 구성할 수도 있습니다. 이 항목에서는 다음과 같은 웹 포털 구성 시나리오에 대한 정보를 제공합니다.
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 
 웹 포털을 사용하려면 다음과 같은 전제 조건을 충족해야 합니다.
 
@@ -80,7 +81,7 @@ ms.locfileid: "63308397"
 
 2. Internet Explorer를 엽니다.
 
-3. 웹 포털 URL을 입력합니다. 기본적으로 이 URL은 https://\<**your-server-name**>/reports이지만, Reporting Services를 명명된 인스턴스로 설치한 경우 기본 URL은 https://\<**your-server-name**>/reports\< **_instancename**>입니다.
+3. 웹 포털 URL을 입력합니다. 기본적으로 https://\<**your-server-name**>/reports이지만, Reporting Services를 명명된 인스턴스로 설치한 경우 기본 URL은 https://\<**your-server-name**>/reports\<**_instancename**>입니다.
 
 4. **사이트 설정**을 선택합니다.
 

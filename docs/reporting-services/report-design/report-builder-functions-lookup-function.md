@@ -1,5 +1,6 @@
 ---
 title: Lookup 함수(보고서 작성기) | Microsoft Docs
+description: Lookup 함수를 사용하여 이름 또는 값 쌍을 포함하는 데이터 세트에서 지정된 이름과 일치하는 첫 번째 값을 반환합니다.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: e60e5bab-b286-4897-9685-9ff12703517d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8ca2ef5b2c605d2eb1ca73d05e897919869a435f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f2a3016bc45537aed393124b6d20f8d4a1656759
+ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081226"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84255726"
 ---
 # <a name="report-builder-functions---lookup-function"></a>보고서 작성기 함수 - Lookup 함수
   이름/값 쌍을 포함하는 데이터 세트에서 지정된 이름과 일치하는 첫 번째 값을 반환합니다.  
@@ -30,13 +31,13 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
   
 #### <a name="parameters"></a>매개 변수  
  *source_expression*  
- (**Variant**) 현재 범위에서 평가되고, 조회할 키 또는 이름을 지정하는 식입니다. `=Fields!ProdID.Value`)을 입력합니다.  
+ (**Variant**) 현재 범위에서 평가되고, 조회할 키 또는 이름을 지정하는 식입니다. 예들 들어 `=Fields!ProdID.Value`입니다.  
   
  *destination_expression*  
- (**Variant**) 데이터 세트의 각 행에 대해 평가되고, 일치시킬 키 또는 이름을 지정하는 식입니다. `=Fields!ProductID.Value`)을 입력합니다.  
+ (**Variant**) 데이터 세트의 각 행에 대해 평가되고, 일치시킬 키 또는 이름을 지정하는 식입니다. 예들 들어 `=Fields!ProductID.Value`입니다.  
   
  *result_expression*  
- (**Variant**) *source_expression* = *destination_expression*인 데이터 세트의 행에 대해 평가되고, 검색할 값을 지정하는 식입니다. `=Fields!ProductName.Value`)을 입력합니다.  
+ (**Variant**) *source_expression* = *destination_expression*인 데이터 세트의 행에 대해 평가되고, 검색할 값을 지정하는 식입니다. 예들 들어 `=Fields!ProductName.Value`입니다.  
   
  *데이터 세트*  
  보고서의 데이터 세트 이름을 지정하는 상수입니다. 예를 들면 "Products"입니다.  

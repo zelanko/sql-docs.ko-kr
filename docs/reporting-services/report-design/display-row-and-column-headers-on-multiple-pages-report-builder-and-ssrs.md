@@ -1,6 +1,6 @@
 ---
 title: 여러 페이지에 행 및 열 머리글 표시(보고서 작성기) | Microsoft Docs
-description: 여러 페이지에 걸쳐 있는 테이블릭스 데이터 영역(테이블, 매트릭스 또는 목록)에 대해 페이지를 매긴 보고서의 Reporting Services 페이지마다 행 및 열 머리글을 반복할지 여부를 제어할 수 있습니다.
+description: 보고서 작성기에서 여러 페이지에 걸쳐 있는 테이블릭스 데이터 영역에 대해 페이지를 매긴 보고서의 모든 페이지에 반복되는 행 및 열 머리글을 제어하는 방법을 알아봅니다.
 author: maggiesMSFT
 ms.author: maggies
 ms.prod: reporting-services
@@ -8,12 +8,12 @@ ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.date: 12/09/2019
-ms.openlocfilehash: ca1b00d98c71808cd42acb220e7fbf5d1c382555
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a0ece423e7396e2c3aab07cc1882cf1e7f5b09ad
+ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75254589"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84778645"
 ---
 # <a name="display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs"></a>여러 페이지에 행 및 열 머리글 표시(보고서 작성기 및 SSRS)
 

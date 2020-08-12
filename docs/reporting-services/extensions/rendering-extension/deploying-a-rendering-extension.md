@@ -1,5 +1,6 @@
 ---
 title: 렌더링 확장 프로그램 배포 | Microsoft Docs
+description: 보고서 렌더링 확장 프로그램을 배포하는 방법을 알아봅니다. 보고서 서버와 보고서 디자이너가 확장 프로그램을 찾을 수 있도록 추가할 구성 파일 항목을 확인합니다.
 ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9fb8c887-5cb2-476e-895a-7b0e2dd11398
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 10c822b8cd292c975309443f9196fb7ceb66cbc5
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a13d9eb18fae38ef85c182576fe50ed3be6f4d38
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63193692"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529469"
 ---
 # <a name="deploying-a-rendering-extension"></a>렌더링 확장 프로그램 배포
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 보고서 렌더링 확장 프로그램을 작성하고 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 라이브러리에 컴파일한 후에는 보고서 서버 및 보고서 디자이너에서 이를 찾을 수 있도록 해야 합니다. 이 작업을 수행하려면 확장 프로그램을 적절한 디렉터리에 복사하고 해당하는 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 구성 파일에 항목을 추가합니다.  
@@ -26,7 +27,7 @@ ms.locfileid: "63193692"
   
  다음 표에서는 렌더링 확장 프로그램에 대한 **Extension** 요소의 특성을 설명합니다.  
   
-|attribute|Description|  
+|특성|설명|  
 |---------------|-----------------|  
 |**이름**|확장 프로그램의 고유한 이름입니다. **Name** 특성의 최대 길이는 255자입니다. 이름은 구성 파일의 **Extensions** 요소 내 모든 항목에서 고유해야 합니다. 중복된 이름이 있을 경우 보고서 서버에서 오류를 반환합니다.|  
 |**형식**|정규화된 네임스페이스와 어셈블리 이름을 포함하는 쉼표로 구분된 목록입니다.|  
@@ -40,7 +41,7 @@ ms.locfileid: "63193692"
   
 ### <a name="to-deploy-the-assembly"></a>어셈블리를 배포하려면  
   
-1.  준비 위치에서 렌더링 확장 프로그램을 사용할 보고서 서버의 bin 디렉터리로 어셈블리를 복사합니다. 보고서 서버 Bin 디렉터리의 기본 위치는 %ProgramFiles%\Microsoft SQL Server\MSRS10_50.\<InstanceName>\Reporting Services\ReportServer\Bin입니다.  
+1.  준비 위치에서 렌더링 확장 프로그램을 사용할 보고서 서버의 bin 디렉터리로 어셈블리를 복사합니다. 보고서 서버 bin 디렉터리의 기본 위치는 %ProgramFiles%\Microsoft SQL Server\MSRS10_50.\<InstanceName>\Reporting Services\ReportServer\Bin입니다.  
   
 2.  어셈블리 파일이 복사된 후 rsreportserver.config 파일을 엽니다. rsreportserver.config 파일도 보고서 서버 bin 디렉터리에 있습니다. 구성 파일에서 확장 프로그램 어셈블리 파일에 대한 항목을 만들어야 합니다. 이 파일은 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 또는 간단한 텍스트 편집기에서 열 수 있습니다.  
   

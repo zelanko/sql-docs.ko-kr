@@ -1,5 +1,6 @@
 ---
 title: 보고서에 테두리 추가(보고서 작성기) | Microsoft Docs
+description: 보고서 작성기에서 머리글, 바닥글, 보고서 본문에 테두리를 추가하여 페이지를 매긴 보고서의 영역을 정의합니다.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,17 +9,17 @@ ms.topic: conceptual
 ms.assetid: 81412f94-2991-4e58-bc05-5ccc0cbf2a75
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7790d44cc4160d7f61562cf470da43bb49a82cf2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: cfec5b85bce53a018bfab013494f2f0413a3803b
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080777"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681572"
 ---
 # <a name="add-a-border-to-a-report-report-builder-and-ssrs"></a>보고서에 테두리 추가(보고서 작성기 및 SSRS)
   선이나 사각형을 추가하지 않고 머리글, 바닥글 및 보고서 본문 자체에 테두리를 추가하여 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 페이지를 매긴 보고서에 테두리를 추가할 수 있습니다.    
     
- 페이지 머리글과 바닥글에 표시되는 보고서 테두리를 추가할 경우 보고서의 첫 페이지와 마지막 페이지에서 머리글과 바닥글을 표시하지 마십시오. 이를 표시할 경우 보고서의 첫 페이지와 마지막 페이지의 위쪽이나 아래쪽에서 테두리가 잘려서 나타날 수 있습니다. 자세한 내용은 [페이지 머리글 및 바닥글&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)을 참조하세요.    
+ 페이지 머리글과 바닥글에 표시되는 보고서 테두리를 추가할 경우 보고서의 첫 페이지와 마지막 페이지에서 머리글과 바닥글을 표시하지 마십시오. 그렇게 할 경우 보고서의 첫 페이지와 마지막 페이지의 위쪽이나 아래쪽에서 테두리가 잘려서 나타날 수 있습니다. 자세한 내용은 [페이지 머리글 및 바닥글&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)을 참조하세요.    
     
 ## <a name="to-add-a-border-to-a-report"></a>보고서에 테두리를 추가하려면    
     

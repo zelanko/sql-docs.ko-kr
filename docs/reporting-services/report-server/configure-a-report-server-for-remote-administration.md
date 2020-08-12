@@ -1,5 +1,6 @@
 ---
 title: 원격 관리를 위한 보고서 서버 구성 | Microsoft Docs
+description: 구성 도구를 사용하거나 사용자 지정 코드를 작성하여 로컬 또는 원격 구성에 대해 Reporting Services 보고서 서버 인스턴스를 구성하는 방법을 알아봅니다.
 ms.date: 09/14/2015
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8c7f145f-3ac2-4203-8cd6-2a4694395d09
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 48e8662f3547e9e483d67cc4af83e67d355ba664
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4edd8925bffec751d00379c9a9e78cc6d06a62c8
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65580421"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545605"
 ---
 # <a name="configure-a-report-server-for-remote-administration"></a>원격 관리를 위한 보고서 서버 구성
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서는 보고서 서버 인스턴스를 로컬 또는 원격으로 구성할 수 있습니다. 원격 보고서 서버 인스턴스를 구성하려면 Reporting Services 구성 도구를 사용하거나, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] WMI(Windows Management Instrumentation) 공급자를 사용하는 사용자 지정 코드를 작성할 수 있습니다. Reporting Services 구성 도구는 WMI 공급자에 대한 그래픽 인터페이스를 제공하므로 이 도구를 사용하면 코드를 작성하지 않고도 보고서 서버를 구성할 수 있습니다. 이 도구를 시작할 때 연결할 원격 서버를 지정할 수 있습니다.  
@@ -32,7 +33,7 @@ ms.locfileid: "65580421"
   
  `"The RPC server is unavailable. (Exception from HRESULT: 0x800706BA)".`  
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>필수 구성 요소  
  방화벽 설정을 수정하려면 로컬 Administrators 그룹의 멤버여야 하며 로컬로 로그온해야 합니다. 원격 컴퓨터의 Windows 방화벽 설정을 원격 연결을 통해 수정할 수는 없습니다.  
   
  관리자가 아닌 사용자가 원격 관리를 사용할 수 있도록 하려면 DCOM(Distributed Component Object Model) 원격 활성화 권한을 해당 계정에 부여해야 합니다. 관리자가 아닌 사용자가 액세스할 수 있도록 서버를 구성하는 방법은 이 항목에 설명되어 있습니다.  
@@ -70,7 +71,7 @@ ms.locfileid: "65580421"
   
 2.  관리자 권한으로 명령 프롬프트를 엽니다.  
   
-3.  다음 명령 실행:  
+3.  다음 명령을 실행합니다.  
   
     ```  
     netsh.exe firewall set service type=REMOTEADMIN mode=ENABLE scope=ALL  
@@ -108,7 +109,7 @@ ms.locfileid: "65580421"
   
 9. 사용자 계정 이름을 입력하고 **확인**을 클릭합니다.  
   
-10. **\<사용자 또는 그룹>의 권한**의 **허용** 열에서 **원격 시작** 및 **원격 활성화**를 선택한 다음 **확인**을 클릭합니다.  
+10. **\<User or Group>의 권한**의 **허용** 열에서 **원격 시작** 및 **원격 활성화**를 선택한 다음 **확인**을 클릭합니다.  
   
 ### <a name="to-set-permissions-on-the-report-server-wmi-namespace-for-non-administrators"></a>관리자가 아닌 사용자가 액세스할 수 있도록 보고서 서버 WMI 네임스페이스에 대한 권한을 설정하려면  
   

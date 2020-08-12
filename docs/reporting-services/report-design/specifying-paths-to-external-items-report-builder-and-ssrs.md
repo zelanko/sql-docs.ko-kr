@@ -1,5 +1,6 @@
 ---
 title: 외부 항목에 대한 경로 지정(보고서 작성기) | Microsoft Docs
+description: 보고서 작성기에서 보고서 항목 속성에 경로를 지정하여 보고서 정의 파일 외부에 있는 항목을 참조하는 방법을 알아봅니다.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4fe513da-f3c5-479c-9fec-8662b91a0d6d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: cad68b0b99479b074e04760f419e12ec9837aac3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6ec449fd6b57c81e25e2a05e1702748dd88197d3
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080911"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681472"
 ---
 # <a name="specifying-paths-to-external-items-report-builder-and-ssrs"></a>외부 항목에 대한 경로 지정(보고서 작성기 및 SSRS)
   드릴스루 보고서, 하위 보고서 및 이미지 파일과 같이 보고서 서버에 저장되어 있고 보고서 정의 파일 외부에 있는 항목을 참조하기 위해 보고서 항목 속성에 경로를 지정할 수 있습니다.  
@@ -37,7 +38,7 @@ ms.locfileid: "77080911"
   
 -   **항목에 대한 전체 경로.**  
   
-    -   **보고서 서버에서:** 경로는 홈 폴더인 **/** 부터 시작합니다. 예를 들면 /Reports/AllSubreports/Subreport1과 같은 형태입니다.  
+    -   **보고서 서버:** 경로는 홈 폴더인 **/** 에서 시작합니다. 예를 들면 /Reports/AllSubreports/Subreport1과 같은 형태입니다.  
   
     -   **SharePoint 사이트에서:** 항목의 전체 URL 및 파일 확장명 .rdl과 함께 보고서 이름을 식에 지정해야 합니다. `="https://server/site/library/folder/Report1.rdl"`)을 입력합니다.  
   

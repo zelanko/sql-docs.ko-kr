@@ -1,5 +1,6 @@
 ---
 title: 보고서 뷰어 웹 파트 사용자 지정 | Microsoft Docs
+description: 보고서 뷰어 웹 파트를 사용하여 SharePoint 통합용으로 구성된 SQL Server Reporting Services 서버에서 실행되는 보고서를 볼 수 있습니다.
 ms.date: 11/26/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -7,12 +8,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c908965e745b32222fbddcc7f5691774f02ede4e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 50ff7c29e6718d8d38829d9cb23f5fafb6cf4dea
+ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77256699"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83767066"
 ---
 # <a name="customize-the-report-viewer-web-part"></a>보고서 뷰어 웹 파트 사용자 지정
 
@@ -63,7 +64,7 @@ ms.locfileid: "77256699"
   
  보고서 뷰어 웹 파트의 사용자 지정 속성은 다음과 같습니다.  
   
-|속성|Description|  
+|속성|설명|  
 |--------------|-----------------|  
 |보고서|현재 SharePoint 사이트나 동일한 웹 애플리케이션 또는 팜 내의 사이트에 있는 보고서에 대한 정규화된 경로여야 합니다. 추가 속성을 설정할 때 최상의 결과를 얻으려면 보고서 URL을 지정한 다음 적용을 클릭합니다.|  
 |하이퍼링크 대상|현재 문서 내에 연결된 내용을 표시할 대상 프레임을 지정하는 표준 HTML입니다. 외부 웹 사이트에 대한 하이퍼링크가 포함된 보고서의 경우 대상 문서로 현재 창 내의 기존 보고서를 대체할지, 아니면 해당 문서를 새 브라우저 창에서 열지를 지정할 수 있습니다. 유효한 값은 **_Top**, **_Blank**및 **_Self**입니다. **_Top** 은 현재 창을 사용하고, **_Blank** 는 새 브라우저 창에서 문서를 로드하며 **_Self** 는 현재 프레임 내에서 문서를 엽니다. **_Parent** 도 HTML의 대상 특성에 대해 유효한 값이지만 페이지에 포함된 보고서 뷰어 웹 파트에는 사용하지 마세요.|  

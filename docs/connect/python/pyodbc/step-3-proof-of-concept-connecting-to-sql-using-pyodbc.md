@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 4bfd6e52-817d-4f0a-a33d-11466e3f0484
 author: arob98
 ms.author: angrobe
-ms.openlocfilehash: 971f89f9748ab8f31c234f872e817b0b474dcbe0
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.openlocfilehash: 73a57d6ea391d0b1d98c2f86b4c983771d4e2208
+ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81528477"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "83808115"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-pyodbc"></a>3단계: pyodbc를 사용하여 SQL에 연결하는 개념 증명
 
@@ -62,7 +62,7 @@ while row:
   
 ## <a name="insert-a-row"></a>행 삽입  
   
-이 예제에서는 [INSERT](../../../t-sql/statements/insert-transact-sql.md) 명령문을 안전하게 실행하고 [SQL injection](../../../relational-databases/tables/primary-and-foreign-key-constraints.md)으로부터 애플리케이션을 보호하는 매개 변수를 전달하는 방법을 보여줍니다.    
+이 예제에서는 [INSERT](../../../t-sql/statements/insert-transact-sql.md) 문을 안전하게 실행하고 매개 변수를 전달하는 방법을 알아봅니다. 이들 매개 변수가 [SQL 삽입](../../../relational-databases/tables/primary-and-foreign-key-constraints.md)으로부터 애플리케이션을 보호합니다.    
   
   
 ```python

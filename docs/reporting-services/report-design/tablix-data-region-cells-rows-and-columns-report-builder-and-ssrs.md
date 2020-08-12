@@ -1,6 +1,6 @@
 ---
 title: 테이블릭스의 셀, 행 및 열 | Microsoft Docs
-description: 페이지가 매겨진 SQL Server Reporting Services 보고서에서 테이블릭스 데이터 영역의 행 및 열에 데이터가 표시되는 방식을 제어하려면 정보 데이터, 그룹 데이터, 레이블과 합계에 행 및 열을 지정하는 방법을 이해해야 합니다.
+description: SQL Server 보고서에서 데이터, 레이블, 합계에 대한 행 및 열을 지정하여 표시를 제어하는 방법을 이해합니다.
 ms.date: 12/16/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,12 +14,12 @@ f1_keywords:
 ms.assetid: 70eef636-6d8c-495e-83fc-dc0fe9771658
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a1630b872e3a445b082c6ceca98d45cf225cdaf7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 26567c364e734824964e19ee6a639f2500ee2b4b
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75252394"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689443"
 ---
 # <a name="cells-rows--columns-in-a-tablix-data-region-report-builder-and-ssrs"></a>테이블릭스 데이터 영역의 셀, 행 및 열(보고서 작성기 및 SSRS)
 

@@ -1,5 +1,6 @@
 ---
 title: 공유 데이터 세트 캐시 | Microsoft Docs
+description: 보고서 관리자에서 캐시된 공유 데이터 세트의 만료 시간을 예약하는 방법을 알아봅니다. 공유 데이터 세트를 캐시하면 성능이 향상됩니다.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: c2d8c81a-da1e-4a8a-9845-fff9a0903d24
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7e98e5ffd8970806e2ed92e53c8e82da21387938
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 13b2f1d7af594346a6c9f0ce46a0c412541fcc65
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65574764"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547915"
 ---
 # <a name="cache-a-shared-dataset"></a>공유 데이터 세트 캐시
   성능을 향상시키는 한 가지 방법은 공유 데이터 세트의 캐싱 속성을 구성하는 것입니다. 공유 데이터 세트가 캐시되면 쿼리 결과의 복사본이 지정된 기간 동안 저장됩니다. 공유 데이터 세트를 사용하는 보고서를 요청하는 첫 번째 사용자는 쿼리 결과 및 모든 처리가 완료될 때까지 기다려야 보고서를 볼 수 있습니다. 캐싱 기간 내에 보고서를 요청하는 이후 사용자는 쿼리 및 처리가 이미 발생했기 때문에 기다리지 않고 볼 수 있습니다. 또한 쿼리를 실행하고 지정된 캐시 만료 시점까지 결과를 캐시하기 위한 캐시 새로 고침 계획을 지정할 수도 있습니다.  

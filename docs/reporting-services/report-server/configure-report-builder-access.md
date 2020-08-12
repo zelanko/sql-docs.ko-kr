@@ -1,5 +1,6 @@
 ---
 title: 보고서 작성기 액세스 구성 | Microsoft Docs
+description: SQL Server Reporting Services 보고서 서버와 함께 설치되는 보고 도구인 보고서 작성기를 구성합니다. 기본 모드 또는 SharePoint 통합 모드 중 하나를 사용합니다.
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
@@ -7,12 +8,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 06/06/2019
-ms.openlocfilehash: 724fac17abf7f5da45101a6ff22d3185a7ade93b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 168e8897743e113ae1a40df5ad8d35c66289fde0
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68255169"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84548085"
 ---
 # <a name="configure-report-builder-access"></a>보고서 작성기 액세스 구성
 보고서 작성기는 기본 모드 또는 SharePoint 통합 모드용으로 구성된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버와 함께 설치되는 임시 보고 도구입니다.  
@@ -25,7 +26,7 @@ ms.locfileid: "68255169"
 
 - 사용자 자격 증명을 보고서 서버로 전달할 수 있는지 여부 또는 애플리케이션 파일에 대해 익명 액세스가 구성되어 있는지 여부를 결정하는 인증 설정
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 
 일부 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서는 보고서 작성기를 사용할 수 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 지원되는 기능 목록은 [SQL Server 2017 버전에서 지원하는 기능](../../sql-server/editions-and-components-of-sql-server-2017.md)을 참조하세요.  
 
@@ -101,7 +102,7 @@ ms.locfileid: "68255169"
 
     4. 웹 포털 사용자가 역할의 용도를 파악할 수 있도록 설명에 역할에 대한 설명을 입력합니다.  
 
-    5. 이 역할에 **보고서 사용**, **보고서 보기**, **모델 보기**, **리소스 보기**, **폴더 보기**및 **개별 구독 관리**태스크를 추가합니다.  
+    5. 이 역할에 **보고서 사용**, **보고서 보기**, **모델 보기**, **리소스 보기**, **폴더 보기** 및 **개별 구독 관리** 작업을 추가합니다.  
 
     6. **확인** 을 클릭하여 역할을 저장합니다.  
 

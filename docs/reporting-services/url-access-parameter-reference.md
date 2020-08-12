@@ -1,7 +1,7 @@
 ---
 title: URL 액세스 매개 변수 참조 | Microsoft Docs
 description: 이 문서의 매개 변수를 URL의 일부로 사용하여 Reporting Services 보고서의 모양과 느낌을 구성합니다.
-ms.date: 01/31/2020
+ms.date: 05/22/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1c3e680a-83ea-4979-8e79-fa2337ae12a3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0ac67de4831d1785f17029bc6c68fa6f7d8aeb16
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5c975f457238912c16e33a13f1f2ba598c82cac3
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77147381"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83859035"
 ---
 # <a name="url-access-parameter-reference"></a>URL 액세스 매개 변수 참조
 
@@ -79,18 +79,21 @@ ms.locfileid: "77147381"
     https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rc:Section=2  
     ```  
   
--   **FindString**: 보고서에서 텍스트의 특정 집합을 검색합니다.
+-   **FindString**: 보고서에서 특정 텍스트 집합을 검색하여 텍스트를 강조 표시합니다.
+    
+    > [!IMPORTANT]  
+    >  URL 액세스 문자열에 *rc:Toolbar*=**false**를 포함하지 않으면 *rc:FindString*은 작동하지 않습니다.
   
      기본 모드의 예제:
   
     ```  
-    https://myrshost/reportserver?/Sales&rc:FindString=Mountain-400  
+    https://myrshost/reportserver?/Sales&rc:Toolbar=false&rc:FindString=Mountain-400  
     ```  
   
      SharePoint 모드의 예제:
   
     ```  
-    https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rc:FindString=Mountain-400  
+    https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rc:Toolbar=false&rc:FindString=Mountain-400  
     ```  
   
 -   **StartFind**: 검색할 마지막 섹션을 지정합니다. 이 매개 변수의 기본값은 보고서의 마지막 페이지입니다.  

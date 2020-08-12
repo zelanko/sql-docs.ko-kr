@@ -1,5 +1,6 @@
 ---
 title: SharePoint 통합 모드에서 Reporting Services에 RDL 샌드박싱 설정 및 해제 | Microsoft Docs
+description: RDL 샌드박싱을 사용하면 여러 테넌트가 보고서 서버의 단일 웹 팜을 사용하는 경우 테넌트별로 리소스 사용 유형을 검색하고 제한할 수 있습니다.
 ms.date: 09/25/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -7,12 +8,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: cc2f32dd81e8dd505b6eaa79359ce10c757ea744
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1d86cf9bbf284ad76c7423900c10a74f7ca26faa
+ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65577766"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83767028"
 ---
 # <a name="enable-and-disable-rdl-sandboxing-for-reporting-services-in-sharepoint-integrated-mode"></a>SharePoint 통합 모드에서 Reporting Services에 RDL 샌드박싱 설정 및 해제
 
@@ -65,7 +66,7 @@ RDL(Report Definition Language) 샌드박싱 기능을 사용하면 보고서 �
 
  다음 표에서는 구성 설정 정보를 제공합니다. 설정은 구성 파일에 나타나는 순서로 표시됩니다.  
   
-|설정|Description|  
+|설정|설명|  
 |-------------|-----------------|  
 |**MaxExpressionLength**|RDL 식에 허용되는 최대 문자 수입니다.<br /><br /> Default: 1000|  
 |**MaxResourceSize**|외부 리소스에 허용되는 최대 크기(KB)입니다.<br /><br /> Default: 100|  

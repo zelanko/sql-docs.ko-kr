@@ -1,5 +1,6 @@
 ---
 title: RunningValue 함수(보고서 작성기) | Microsoft Docs
+description: 보고서 작성기에서 식으로 지정된 Null이 아닌 모든 숫자 값의 실행 집계를 반환하는 RunningValue 함수에 대해 알아봅니다.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6bee2f15-0e69-49c8-9689-b04544063b1d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f90054a62168032ca29d99819061537e6a0b179a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 053efc8ddd1f9f00c528c626aa204d612cb82369
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081164"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681282"
 ---
 # <a name="report-builder-functions---runningvalue-function"></a>보고서 작성기 함수 - RunningValue 함수
   식으로 지정되어 정해진 범위에서 계산되는 Null이 아닌 모든 숫자 값의 실행 집계를 반환합니다.  
@@ -66,7 +67,7 @@ RunningValue(expression, function, scope)
   
  재귀 집계에 대한 자세한 내용은 [재귀 계층 구조 그룹 만들기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)를 참조하세요.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 코드 예에서는 가장 바깥쪽 범위인 데이터 세트에서 `Cost`라는 필드의 실행 합계를 제공합니다.  
   
 ```  

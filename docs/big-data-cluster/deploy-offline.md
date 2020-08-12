@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 15af041e94ac0abfdae13635345de62262a4b086
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a3e437e722665cb156fbd4c1bb474e1d9f095f95
+ms.sourcegitcommit: dc6ea6665cd2fb58a940c722e86299396b329fec
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73531979"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84423162"
 ---
 # <a name="perform-an-offline-deployment-of-a-sql-server-big-data-cluster"></a>SQL Server 빅 데이터 클러스터의 오프라인 배포 수행
 
@@ -54,6 +54,10 @@ ms.locfileid: "73531979"
    ```PowerShell
    docker push <TARGET_DOCKER_REGISTRY>/<TARGET_DOCKER_REPOSITORY>/<SOURCE_IMAGE_NAME>:<TARGET_DOCKER_TAG>
    ```
+ 
+> [!WARNING]
+> 빅 데이터 클러스터 이미지를 프라이빗 리포지토리에 푸시한 후에는 수정하지 마세요. 수정된 이미지로 배포를 수행하면 빅 데이터 클러스터 설정이 지원되지 않습니다.
+
 
 ### <a name="big-data-cluster-container-images"></a><a id="images"></a> 빅 데이터 클러스터 컨테이너 이미지
 

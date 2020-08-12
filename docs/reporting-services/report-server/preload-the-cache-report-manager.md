@@ -1,5 +1,6 @@
 ---
 title: 캐시 미리 로드(SSRS) | Microsoft Docs
+description: Reporting Services 보고서 서버에서 공유 데이터 세트에 대한 캐시 새로 고침 계획을 만들어 공유 데이터 세트의 캐시를 미리 로드하는 방법을 알아봅니다.
 ms.date: 05/14/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 152a1051-8aa5-4c01-bc85-f8be8971b0cd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6b2be1e020354f47aa21dc83f17ff6169bcf2d72
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5401d324be7bb59d5be21afa72acebc0a7ab6487
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "66174998"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84548045"
 ---
 # <a name="preload-the-cache"></a>캐시 미리 로드  
   공유 데이터 세트에 대한 캐시 새로 고침 계획을 만들어 공유 데이터 세트에 대한 캐시를 미리 로드할 수 있습니다.  
@@ -48,7 +49,7 @@ ms.locfileid: "66174998"
 5. 데이터 세트의 캐싱을 활성화하려면 **이 데이터 세트의 복사본을 캐시하고 사용 가능할 때 사용** 라디오 단추를 선택합니다. 아래쪽에 **캐시 만료** 섹션이 나타납니다. 다음 라디오 단추 중 하나를 선택합니다.
 
     - **다음 시간 이후 캐시 만료(분)** (원하는 분 수(x) 입력)
-    - **일정에 따라 캐시 만료**.  Reporting Services는 처리, 일관된 콘텐츠 및 보고서 배포의 성능을 제어할 수 있는 공유 일정 및 보고서별 일정을 제공합니다. 자세한 내용은 [Create, Modify, and Delete Schedules](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md "일정 만들기, 수정 및 삭제")을 참조하세요. 일정을 만드는 방법에 대한 몇 가지 옵션이 제공됩니다. 이 경우에는 캐시 만료에 대해 아래의 두 가지 일정 옵션 중 하나를 선택합니다.  
+    - **일정에 따라 캐시 만료**.  Reporting Services는 처리, 일관된 콘텐츠 및 보고서 배포의 성능을 제어할 수 있는 공유 일정 및 보고서별 일정을 제공합니다. 자세한 내용은 [Create, Modify, and Delete Schedules](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md "일정 만들기, 수정 및 삭제")을 참조하세요. 일정을 만드는 몇 가지 방법 옵션이 제공됩니다. 이 경우에는 캐시 만료에 대해 아래의 두 가지 일정 옵션 중 하나를 선택합니다.  
       - **공유 일정** 라디오 단추를 선택한 다음, 드롭다운 텍스트 상자의 **공유 일정 선택**에서 일정을 선택합니다. 자세한 내용은 [Schedules](../../reporting-services/subscriptions/schedules.md "일정")을(를) 참조하세요.  
       - **보고서별 일정** 라디오 단추를 선택하고 필요한 경우 **일정 편집** 링크를 선택하여 *일정 정보* 페이지를 표시합니다.  
 
@@ -118,7 +119,7 @@ ms.locfileid: "66174998"
    data source=<servername>;initial catalog=Subscribers  
    ```
   
-10. **쿼리** 섹션 - 원하는 구독자 데이터를 검색하는 쿼리를 지정합니다.  다음은 그 예입니다.  
+10. **쿼리** 섹션 - 원하는 구독자 데이터를 검색하는 쿼리를 지정합니다.  예를 들면 다음과 같습니다.  
   
     ```T-SQL  
     Select * from RptSubscribers  

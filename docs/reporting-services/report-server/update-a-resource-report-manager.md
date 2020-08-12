@@ -1,5 +1,6 @@
 ---
 title: 리소스 업데이트(웹 포털) | Microsoft Docs
+description: Reporting Services 웹 포털을 사용하여 리소스를 업데이트합니다. 새롭거나 다른 파일 내용을 기존 리소스에 가져와 기존 리소스를 바꿉니다.
 ms.date: 06/14/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: d21f7493-bcf7-4e9e-9886-55ebdc1f1037
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2f101df8f160e7d6bab50dd96e7a156622c7699a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a59d655ef6101d8b9968ff2a241eff7d245ecc75
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67228577"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547845"
 ---
 # <a name="update-a-resource-web-portal"></a>리소스 업데이트(웹 포털)
   리소스를 최신 버전으로 바꾸어 업데이트할 수 있습니다. 리소스는 보고서 서버에 저장된 항목이며 사용자가 업로드한 파일의 내용을 포함합니다. 새롭거나 다른 파일 내용을 기존 리소스에 가져와 기존 리소스를 바꿀 수 있습니다. 리소스를 업데이트하면 리소스에 대한 기존 속성과 보안 설정을 유지하면서 내용을 업데이트할 수 있습니다.  

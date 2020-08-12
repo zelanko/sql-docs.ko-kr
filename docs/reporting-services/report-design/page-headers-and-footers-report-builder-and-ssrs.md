@@ -1,5 +1,6 @@
 ---
 title: 페이지 머리글 및 바닥글(보고서 작성기) | Microsoft Docs
+description: 텍스트, 이미지, 사각형, 테두리, 배경색, 식 등 보고서 작성기에서 머리글 및 바닥글에 추가할 수 있는 여러 항목에 대해 알아봅니다.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -21,12 +22,12 @@ f1_keywords:
 ms.assetid: 4fb9faac-511e-404a-b8d7-1f2e3cb47b11
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8a94f7bf5e149431135972e4911463c5f86ffaa5
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ca788f2b86e2e71465228a7e00cf55efb86c8914
+ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082464"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84778375"
 ---
 # <a name="page-headers-and-footers-report-builder-and-ssrs"></a>페이지 머리글 및 바닥글(보고서 작성기 및 SSRS)
   보고서는 각 페이지의 위쪽과 아래쪽에서 각기 실행되는 머리글과 바닥글을 포함할 수 있습니다. 머리글과 바닥글에는 정적 텍스트, 이미지, 선, 사각형, 테두리, 배경색, 배경 이미지 및 식이 들어갈 수 있습니다. 식에는 단 하나의 데이터 세트와 데이터 세트를 범위로 포함하는 집계 함수 호출이 있는 보고서용 데이터 세트 필드 참조가 포함됩니다.  
@@ -55,9 +56,9 @@ ms.locfileid: "77082464"
   
 |식에서의 지원 여부|ReportItems 집계|데이터 세트 집계(범위는 데이터 세트의 이름이어야 함)|  
 |-----------------------------|----------------------------|----------------------------------------------------------|  
-|보고서 본문에 있는 입력란|yes|예|  
-|&PageNumber|yes|예|  
-|&TotalPages|yes|예|  
+|보고서 본문에 있는 입력란|예|예|  
+|&PageNumber|예|예|  
+|&TotalPages|예|예|  
 |집계 함수|예. 예를 들면 다음과 같습니다.<br /><br /> `=First(ReportItems!TXT_LastName.Value)`|예. 예를 들면 다음과 같습니다.<br /><br /> `=Max(Quantity.Value,"DataSet1")`|  
 |페이지에 있는 항목의 필드 컬렉션|간접적임. 예를 들면 다음과 같습니다.<br /><br /> `=Sum(ReportItems!Textbox1.Value)`|예. 예를 들면 다음과 같습니다.<br /><br /> `=Sum(Fields!Quantity.Value,"DataSet1")`|  
 |데이터 바인딩된 이미지|간접적임. 예를 들어 `=ReportItems!TXT_Photo.Value`|예. 예를 들면 다음과 같습니다.<br /><br /> `=First(Fields!Photo.Value,"DataSet1")`|  

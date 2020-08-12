@@ -1,6 +1,6 @@
 ---
 title: 행 및 열 머리글 제어(보고서 작성기 및 SSRS) | Microsoft Docs
-description: 페이지가 매겨진 보고서의 테이블, 행렬 또는 목록 데이터 영역은 가로 또는 세로로 여러 페이지에 분산되어 있을 수 있습니다. 각 페이지에 행 또는 열 머리글을 반복 표시할지 여부를 지정할 수 있습니다.
+description: 페이지를 매긴 보고서에서 테이블, 행렬 또는 목록 데이터 영역을 사용하는 방법을 알아봅니다. 이를 통해 보고서 작성기에서 여러 페이지를 가로 또는 세로로 확장할 수 있습니다.
 ms.date: 12/19/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4be6e836-158e-4bc9-8870-7f394d7c7e11
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ce25cfe5d8d84926cb9bc993d075372e3a81d336
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 654ec769905d17534a3896465909a14c41d60b54
+ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75245358"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84255346"
 ---
 # <a name="control-row--column-headings-report-builder--ssrs"></a>행 및 열 머리글 제어(보고서 작성기 및 SSRS)
   페이지가 매겨진 보고서의 테이블, 행렬 또는 목록 데이터 영역은 가로 또는 세로로 여러 페이지에 분산되어 있을 수 있습니다. 각 페이지에 행 또는 열 머리글을 반복 표시할지 여부를 지정할 수 있습니다. 웹 포털이나 보고서 미리 보기와 같은 대화형 렌더러에서 보고서를 스크롤할 때 행 또는 열 머리글이 항상 화면에 표시되도록 고정시킬 수 있습니다. 테이블이나 행렬의 첫 번째 행에는 각 열의 데이터에 대한 레이블이 있는 열 머리글이 있고, 첫 번째 열에는 각 행의 데이터에 대한 레이블이 있는 행 머리글이 있습니다. 중첩된 그룹의 경우 그룹 레이블이 있는 열 머리글과 처음 몇 개의 행을 반복 표시할 수 있습니다. 기본적으로 목록 데이터 영역에는 머리글이 포함되지 않습니다.  
@@ -65,7 +65,7 @@ ms.locfileid: "75245358"
   
  점선은 4개의 테이블릭스 영역을 보여 줍니다. 행 그룹 영역에는 첫 번째 열의 범주 레이블을 제어하는 행 그룹 머리글이 있습니다. 마찬가지로, 열 그룹 영역에는 첫 번째 행의 지리 레이블을 제어하는 열 그룹 머리글이 있습니다. 미리 보기에서 행렬이 여러 페이지에 걸쳐 있으면 다음 그림과 같이 첫 번째 행에 열 머리글이 나타납니다.  
   
- ![확장 그룹이 있는 렌더링된 행렬 미리 보기](../../reporting-services/report-design/media/rs-basicmatrixpreview.gif "확장 그룹이 있는 렌더링된 행렬 미리 보기")  
+ ![확장 그룹이 있는 렌더링된 행렬의 미리 보기](../../reporting-services/report-design/media/rs-basicmatrixpreview.gif "확장 그룹이 있는 렌더링된 행렬의 미리 보기")  
   
  첫 번째 행의 열 머리글을 반복하거나 고정하려면 테이블릭스 데이터 영역의 열 머리글 속성을 설정합니다. 중첩된 열 그룹의 열 머리글은 자동으로 포함됩니다.  
   
@@ -111,7 +111,7 @@ ms.locfileid: "75245358"
   
  ![행 그룹, 정적 멤버로 구성된 고급 모드](../../reporting-services/report-design/media/rs-tableheaderdynamicwithgroupheadercelladvanced.gif "행 그룹, 정적 멤버로 구성된 고급 모드")  
   
- **정적**, (**정적**), 범주 및 (**세부 정보**) 테이블릭스 멤버가 나열됩니다. 괄호()가 포함된 테이블릭스 멤버는 해당 그룹 머리글이 없음을 나타냅니다. 열 머리글을 반복 또는 고정하려면 정적 테이블릭스 멤버를 선택하고 속성 창에서 속성을 설정합니다.  
+ 테이블릭스의 경우 멤버는 다음과 같습니다. **정적**, (**정적**), 범주 및 (**세부 정보**)가 나열됩니다. 괄호()가 포함된 테이블릭스 멤버는 해당 그룹 머리글이 없음을 나타냅니다. 열 머리글을 반복 또는 고정하려면 정적 테이블릭스 멤버를 선택하고 속성 창에서 속성을 설정합니다.  
   
  [맨 위로 이동](#Top)  
   

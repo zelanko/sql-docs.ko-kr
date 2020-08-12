@@ -1,5 +1,6 @@
 ---
 title: 동기화 범위 설정(보고서 작성기) | Microsoft Docs
+description: 보고서 작성기에서 표시기 값 범위를 동기화하여 데이터 값을 전달하는 표시기로 페이지를 매긴 보고서의 동기화 범위를 설정합니다.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6f4a11e6-6151-47be-a43f-e3dbf6c0e737
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b5c844bf2ad09ee29dbcda1773e20d93eeb069d1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1ff29909da8662d39cadb064bab66eb14df9d013
+ms.sourcegitcommit: f898aa83561e94626024916932568ab05e73b656
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081015"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84012597"
 ---
 # <a name="set-synchronization-scope-report-builder-and-ssrs"></a>동기화 범위 설정(보고서 작성기 및 SSRS)
   페이지가 매겨진 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 표시기는 지정된 범위 내에서 전체 표시기 데이터 값 범위를 동기화하여 데이터 값을 나타냅니다.   

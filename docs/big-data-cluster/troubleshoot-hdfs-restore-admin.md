@@ -1,5 +1,5 @@
 ---
-title: HDFS 관리자 권한 복원
+title: HDFS 사용 권한 복원
 titleSuffix: SQL Server Big Data Cluster
 description: TRestore HDFS 관리자 권한.
 author: MikeRayMSFT
@@ -9,14 +9,14 @@ ms.date: 04/21/2020
 ms.topic: how-to
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 6fb8c7c53c6edf4a02649f256ac6aa6d7080fdf5
-ms.sourcegitcommit: 1f9fc7402b00b9f35e02d5f1e67cad2f5e66e73a
+ms.openlocfilehash: c6d09921074ca2f2e386535baff5060620a7a3c8
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82108697"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669378"
 ---
-# <a name="restore-hdfs-admin-rights"></a>HDFS 관리자 권한 복원
+# <a name="restore-hdfs-permissions"></a>HDFS 사용 권한 복원
 
 HDFS ACL(액세스 제어 목록)을 수정하면 HDFS의 `/system` 및 `/tmp` 폴더에 영향을 줄 수 있습니다. 가장 가능성이 높은 ACL 수정의 원인은 사용자가 폴더 ACL을 수동으로 조작하는 것입니다. /system 폴더 및 /tmp/logs 폴더에서 직접 권한을 수정할 수 없습니다.
 

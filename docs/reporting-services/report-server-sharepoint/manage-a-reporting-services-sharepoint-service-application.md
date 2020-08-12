@@ -1,5 +1,6 @@
 ---
 title: Reporting Services SharePoint 서비스 애플리케이션 관리 | Microsoft Docs
+description: SharePoint 중앙 관리에서 SQL Server Reporting Services 서비스 애플리케이션을 관리하는 방법을 알아봅니다.
 ms.date: 10/05/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 6e1b69fc176281e9be65ca7a9766fc8fb270a3de
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5de7b0a5b155c519a7a7d24331fb9ad2dc571e3e
+ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65580084"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83765114"
 ---
 # <a name="manage-a-reporting-services-sharepoint-service-application"></a>Reporting Services SharePoint 서비스 애플리케이션 관리
 
@@ -34,7 +35,7 @@ ms.locfileid: "65580084"
   
 2.  서비스 애플리케이션 이름 근처를 클릭하거나 **유형** 열을 클릭하여 전체 행을 선택하고 SharePoint 리본에서 **속성** 을 클릭합니다.  
   
- 서비스 애플리케이션 속성에 대한 자세한 내용은 [Step 3: Create a Reporting Services Service Application](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md#bkmk_create_serrviceapplication)을 참조하세요.  
+ 서비스 애플리케이션 속성에 대한 자세한 내용은 [3단계: Reporting Services 서비스 애플리케이션 만들기](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md#bkmk_create_serrviceapplication)의 "서비스 애플리케이션" 섹션을 참조하세요.  
   
 ## <a name="open-service-application-management-pages"></a>서비스 애플리케이션 관리 페이지 열기
 

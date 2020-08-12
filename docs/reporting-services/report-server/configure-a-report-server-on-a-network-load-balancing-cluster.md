@@ -1,5 +1,6 @@
 ---
 title: 네트워크 부하 분산 클러스터에서 보고서 서버 구성 | Microsoft Docs
+description: NLB에서 실행되도록 보고서 서버 스케일 아웃을 구성하는 방법을 알아봅니다. Reporting Services 스케일 아웃 배포를 지원하기 위해 NLB 클러스터 솔루션을 구현합니다.
 author: maggiesMSFT
 ms.author: maggies
 ms.prod: reporting-services
@@ -7,12 +8,12 @@ ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 ms.date: 12/11/2019
-ms.openlocfilehash: 09ccccf33047bb59d3097ff1bb304d3874335ade
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b8bd6d8e99549cb6228a46f04b1532bbf872a066
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75244397"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545575"
 ---
 # <a name="configure-a-report-server-on-a-network-load-balancing-cluster"></a>네트워크 부하 분산 클러스터에서 보고서 서버 구성
 
@@ -30,7 +31,7 @@ ms.locfileid: "75244397"
 
  배포를 설치하고 구성하려면 다음 지침을 따르십시오.  
   
-|단계|Description|자세한 정보|  
+|단계|설명|추가 정보|  
 |----------|-----------------|----------------------|  
 |1|NLB 클러스터의 서버 노드에서 Reporting Services를 설치하기 전에 스케일 아웃 배포를 위한 요구 사항을 확인합니다.|[기본 모드 보고서 서버 스케일 아웃 배포 구성](../install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)|  
 |2|NLB 클러스터를 구성하고 제대로 작동하는지 확인합니다.<br /><br /> NLB 클러스터의 가상 서버 IP에 호스트 헤더 이름을 매핑합니다. 호스트 헤더 이름은 보고서 서버 URL에서 사용되며 IP 주소보다 기억하기 쉽고 입력하기도 편리합니다.|자세한 내용은 실행 중인 Windows 운영 체제 버전에 대한 Windows Server 제품 설명서를 참조하십시오.|  
@@ -108,13 +109,13 @@ NLB 클러스터에서 스케일 아웃 배포를 실행하려면 사용자가 �
   
 1. 텍스트 편집기에서 RSReportServer.config를 엽니다.  
   
-2. **\<서비스>** 섹션을 찾고 **Hostname** 값을 NLB 서버의 가상 서버 이름으로 바꿔 구성 파일에 다음 정보를 추가합니다.  
+2. **\<Service>** 섹션을 찾고 **Hostname** 값을 NLB 서버의 가상 서버 이름으로 바꿔 구성 파일에 다음 정보를 추가합니다.  
   
     ```xml
     <Hostname>virtual_server</Hostname>  
     ```  
   
-3. **UrlRoot**찾기. 이 요소는 구성 파일에 지정되지 않지만 사용되는 기본값은 https:// 또는 `https://<computername>/<reportserver>` 형식의 URL입니다. 여기서 \<*reportserver*>는 보고서 서버 웹 서비스의 가상 디렉터리 이름입니다.  
+3. **UrlRoot**찾기. 이 요소는 구성 파일에 지정되지 않으며, 사용된 기본값은 https:// 또는 `https://<computername>/<reportserver>`(\<*reportserver*>는 보고서 서버 웹 서비스의 가상 디렉토리 이름) 형식의 URL입니다.  
   
 4. 클러스터의 가상 이름을 포함하는 **UrlRoot** 값을 https:// 또는 `https://<virtual_server>/<reportserver>` 형식으로 입력합니다.  
   
@@ -136,9 +137,9 @@ NLB 클러스터에서 스케일 아웃 배포를 실행하려면 사용자가 �
   
 1. 텍스트 편집기에서 RSReportServer.config 파일을 엽니다.  
   
-2. \<**Hostname**> \<**ReportServerUrl**> \<**UrlRoot**를 찾고 각 설정의 호스트 이름을 확인합니다. 호스트 이름이 올바르지 않은 경우에는 올바른 호스트 이름으로 바꾸십시오.  
+2. \<**Hostname**>, \<**ReportServerUrl**>및 \<**UrlRoot**>를 찾고 각 설정의 호스트 이름을 확인합니다. 호스트 이름이 올바르지 않은 경우에는 올바른 호스트 이름으로 바꾸십시오.  
   
- 이러한 변경을 수행한 후 Reporting Services 구성 도구를 시작하면 \<**ReportServerUrl**> 설정이 기본값으로 변경될 수 있습니다. 구성 파일을 필요한 설정이 포함된 버전으로 바꾸어야 하는 경우에는 항상 해당 백업 복사본을 보관해 두십시오.  
+ 이러한 변경을 수행한 후 Reporting Services 구성 도구를 시작하면 &lt;\<**ReportServerUrl**> 설정이 기본값으로 변경될 수 있습니다. 구성 파일을 필요한 설정이 포함된 버전으로 바꾸어야 하는 경우에는 항상 해당 백업 복사본을 보관해 두십시오.  
   
 ## <a name="see-also"></a>참고 항목
 

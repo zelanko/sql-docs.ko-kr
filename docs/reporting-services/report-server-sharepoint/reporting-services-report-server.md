@@ -1,5 +1,6 @@
 ---
 title: 기본 및 SharePoint Reporting Services 보고서 서버 비교 | Microsoft Docs
+description: 처리 엔진 및 기능 추가를 위한 확장으로 구성되는 SQL Server Reporting Services 설치의 핵심 부분에 대해 알아봅니다.
 ms.date: 06/10/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -7,12 +8,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f7a75f578c025386966fc4fc7a15c41e7e44e0a7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b884782c7ae1ad7898a2d2ef04de7de18b7c73df
+ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67038018"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83764878"
 ---
 # <a name="comparing-native-and-sharepoint-reporting-services-report-servers"></a>기본 및 SharePoint Reporting Services 보고서 서버 비교
 
@@ -49,21 +50,21 @@ Reporting Services 보고서 서버는 기본 모드 또는 SharePoint 모드 �
   
 |기능 또는 구성 요소|기본 모드|SharePoint 모드|  
 |--------------------------|-----------------|---------------------|  
-|**URL 주소 지정**|yes|URL 주소 지정이 SharePoint 통합 모드에서 다르게 작동합니다. SharePoint URL은 보고서, 보고서 모델, 공유 데이터 원본 및 리소스를 참조하는 데 사용됩니다. 보고서 서버 폴더 계층은 사용되지 않습니다. 사용자 지정 애플리케이션이 기본 모드 보고서 서버에서 지원되는 URL 액세스에 의존하는 경우 보고서 서버를 SharePoint 통합용으로 구성하면 해당 기능이 더 이상 작동하지 않습니다.<br /><br /> URL 액세스에 대한 자세한 내용은 [URL 액세스 매개 변수 참조](../../reporting-services/url-access-parameter-reference.md)를 참조하세요.|  
-|**사용자 지정 보안 확장 프로그램**|yes|Reporting Services 사용자 지정 보안 확장 프로그램을 보고서 서버에서 배포하거나 사용할 수 없습니다. 보고서 서버에는 SharePoint 통합 모드에서 실행되도록 보고서 서버를 구성할 때마다 사용되는 특수한 용도의 보안 확장 프로그램이 포함되어 있습니다. 이 보안 확장 프로그램은 내부 구성 요소로, 통합 작업에 필요합니다.|  
-|**구성 관리자**|yes|**\*\* 중요 \*\*** 구성 관리자를 사용하여 SharePoint 모드 보고서 서버를 관리할 수 없습니다. 대신 SharePoint 중앙 관리를 사용하세요.|  
-|**웹 포털**|yes|웹 포털에서는 SharePoint 모드를 관리할 수 없습니다. SharePoint 애플리케이션 페이지를 사용합니다. 자세한 내용은 [Reporting Services SharePoint Service 및 서비스 애플리케이션](../../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md)을 참조하세요.|  
-|**링크된 보고서**|yes|아니요.|  
-|**내 보고서**|yes|예|  
-|**내 구독** 및 일괄 처리 방법|yes|예|  
-|**데이터 경고**|예|yes|  
-|**파워 뷰**|예|yes<br /><br /> 클라이언트 브라우저에 Silverlight가 필요합니다. 브라우저 요구 사항에 대한 자세한 내용은 [Reporting Services 및 파워 뷰에 대한 브라우저 지원](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)을 참조하세요.|  
+|**URL 주소 지정**|예|URL 주소 지정이 SharePoint 통합 모드에서 다르게 작동합니다. SharePoint URL은 보고서, 보고서 모델, 공유 데이터 원본 및 리소스를 참조하는 데 사용됩니다. 보고서 서버 폴더 계층은 사용되지 않습니다. 사용자 지정 애플리케이션이 기본 모드 보고서 서버에서 지원되는 URL 액세스에 의존하는 경우 보고서 서버를 SharePoint 통합용으로 구성하면 해당 기능이 더 이상 작동하지 않습니다.<br /><br /> URL 액세스에 대한 자세한 내용은 [URL 액세스 매개 변수 참조](../../reporting-services/url-access-parameter-reference.md)를 참조하세요.|  
+|**사용자 지정 보안 확장 프로그램**|예|Reporting Services 사용자 지정 보안 확장 프로그램을 보고서 서버에서 배포하거나 사용할 수 없습니다. 보고서 서버에는 SharePoint 통합 모드에서 실행되도록 보고서 서버를 구성할 때마다 사용되는 특수한 용도의 보안 확장 프로그램이 포함되어 있습니다. 이 보안 확장 프로그램은 내부 구성 요소로, 통합 작업에 필요합니다.|  
+|**구성 관리자**|예|**\*\* 중요 \*\*** 구성 관리자를 사용하여 SharePoint 모드 보고서 서버를 관리할 수 없습니다. 대신 SharePoint 중앙 관리를 사용하세요.|  
+|**웹 포털**|예|웹 포털에서는 SharePoint 모드를 관리할 수 없습니다. SharePoint 애플리케이션 페이지를 사용합니다. 자세한 내용은 [Reporting Services SharePoint Service 및 서비스 애플리케이션](../../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md)을 참조하세요.|  
+|**링크된 보고서**|예|아니요.|  
+|**내 보고서**|예|예|  
+|**내 구독** 및 일괄 처리 방법|예|예|  
+|**데이터 경고**|예|예|  
+|**파워 뷰**|예|예<br /><br /> 클라이언트 브라우저에 Silverlight가 필요합니다. 브라우저 요구 사항에 대한 자세한 내용은 [Reporting Services 및 파워 뷰에 대한 브라우저 지원](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)을 참조하세요.|  
 |**.RDL 보고서**|yes|yes<br /><br /> .RDL 보고서는 Reporting Services 보고서 서버에서 기본 모드 또는 SharePoint 모드로 실행될 수 있습니다.|  
-|**.RDLX 보고서**|예|yes<br /><br /> 파워 뷰 .RDLX 보고서는 Reporting Services 보고서 서버에서만 SharePoint 모드로 실행될 수 있습니다.|  
-|**SharePoint 목록 확장 프로그램을 위한 SharePoint 사용자 토큰 자격 증명**|예|yes|  
-|**인터넷 연결 배포를 위한 AAM 영역**|예|yes|  
-|**SharePoint 백업 및 복구**|예|yes|  
-|**ULS 로그 지원**|예|yes|  
+|**.RDLX 보고서**|예|예<br /><br /> 파워 뷰 .RDLX 보고서는 Reporting Services 보고서 서버에서만 SharePoint 모드로 실행될 수 있습니다.|  
+|**SharePoint 목록 확장 프로그램을 위한 SharePoint 사용자 토큰 자격 증명**|예|예|  
+|**인터넷 연결 배포를 위한 AAM 영역**|예|예|  
+|**SharePoint 백업 및 복구**|예|예|  
+|**ULS 로그 지원**|예|예|  
   
 ## <a name="native-mode"></a>기본 모드
 

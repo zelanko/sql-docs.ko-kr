@@ -1,6 +1,6 @@
 ---
 title: 원형 차트에서 백분율 값 표시(보고서 작성기) | Microsoft Docs
-description: Reporting Services 페이지를 매긴 보고서에서는 기본적으로 범례에 범주가 표시됩니다. 범례 또는 원형 조각 자체에서 백분율할 수 있습니다.
+description: 보고서 작성기에서 원형 차트, 범례 또는 원형 조각에서 백분율 값을 표시하는 방법을 알아봅니다.
 ms.date: 12/09/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: eb905fc1-5235-4773-a27e-b07be9318be5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1b250f8bffdebeb0cb0f1e68a739bb808cb75abd
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: abacde42f813a00ecc2f48edd8fc71d2b3a83020
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487589"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681402"
 ---
 # <a name="display-percentage-values-on-a-pie-chart-report-builder-and-ssrs"></a>원형 차트에서 백분율 값 표시(보고서 작성기 및 SSRS)
 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 페이지가 매겨진 보고서에서 기본적으로 범례는 범주를 표시합니다. 범례 또는 원형 조각 자체에서 백분율할 수 있습니다.   

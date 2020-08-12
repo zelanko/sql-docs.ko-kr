@@ -1,5 +1,6 @@
 ---
 title: 원형 차트 값을 원형의 위쪽에서 시작(보고서 작성기) | Microsoft Docs
+description: 원형 차트의 값을 기본값인 차트 위쪽으로부터 90가 아니라 차트 맨 위에서 시작하는 방법을 알아봅니다.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: d0e6fb59-ca4e-4d70-97cb-0ad183da21d3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3f23163da5fc4b23a364646be607167e663187fd
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: dfdd7600a08a78baa0b70f2048423f1632ebe2db
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080905"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689440"
 ---
 # <a name="start-pie-chart-values-at-the-top-of-the-pie-report-builder-and-ssrs"></a>원형 차트를 원형의 위쪽에서 시작(보고서 작성기 및 SSRS)
 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 페이지를 매긴 보고서의 원형 차트에서는 기본적으로 데이터 세트의 첫 번째 값이 원형의 위쪽으로부터 90도에서 시작합니다. 
@@ -22,7 +23,7 @@ ms.locfileid: "77080905"
 
 *차트 값이 90도에서 시작합니다.*
 
-첫 번째 값이 맨 위에서 시작하도록 설정할 수 있습니다. 
+대신 첫 번째 값을 맨 위에서 시작해야 할 수도 있습니다. 
 
 ![report-builder-pie-chart-start-at-top](../../reporting-services/media/report-builder-pie-chart-start-at-top.png)
 

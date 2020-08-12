@@ -1,5 +1,6 @@
 ---
 title: RowNumber 함수(보고서 작성기) | Microsoft Docs
+description: 보고서 작성기에서 RowNumber 함수를 사용하여 지정된 범위에 대해 행 수의 실행 개수를 반환합니다.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9d718ba8-d323-49fb-aac8-e7013a117b75
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7af8523acb3bf531589a04268de1139d8bcefd35
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 379cdfb60be4eb36fb819693ae0c5f04f4adf6ae
+ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081172"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84255566"
 ---
 # <a name="report-builder-functions---rownumber-function"></a>보고서 작성기 함수 - RowNumber 함수
   지정한 범위에서 행 개수의 실행 개수를 반환합니다.  

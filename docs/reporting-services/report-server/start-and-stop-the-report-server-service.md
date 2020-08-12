@@ -1,5 +1,6 @@
 ---
 title: 보고서 서버 서비스 시작 및 중지 | Microsoft Docs
+description: 보고서 서버 웹 서비스, 웹 포털 및 백그라운드 처리 애플리케이션을 포함하는 Windows 서비스를 시작 및 중지하는 방법을 알아봅니다.
 ms.date: 05/21/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6ec69ac3-27b0-472d-91e1-733af9078ed2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6463dc7e4b17992138a61e6a37277149fccfda68
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b10a0445ab89934be7da2b3da2af9b14cc7d20ee
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "66270195"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547895"
 ---
 # <a name="start-and-stop-the-report-server-service"></a>보고서 서버 서비스 시작 및 중지
 

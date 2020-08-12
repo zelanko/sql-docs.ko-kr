@@ -1,5 +1,6 @@
 ---
 title: Union 함수(보고서 작성기) | Microsoft Docs
+description: 식으로 지정된 Null이 아닌 모든 숫자 값의 합집합을 반환하는 이 함수에 대해 알아봅니다.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: c87e16fe-c12a-4c9d-a9df-7a94e229fd04
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e760971e012e5144176484d921570bdee8097497
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a2c53ba51ebce8d0e3cbb78d7a7e8905cb5537bb
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081120"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689502"
 ---
 # <a name="report-builder-functions---union-function"></a>보고서 작성기 함수 - Union 함수
   식으로 지정되어 정해진 범위에서 계산되는 Null이 아닌 모든 숫자 값의 합집합을 반환합니다.  

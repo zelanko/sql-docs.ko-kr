@@ -1,5 +1,6 @@
 ---
 title: 보고서 서버의 SPN(서비스 사용자 이름) 등록 | Microsoft Docs
+description: 네트워크에서 인증에 Kerberos를 사용하는 경우 도메인 사용자로 실행되는 보고서 서버 서비스에 대한 SPN을 만드는 방법을 알아봅니다.
 ms.date: 02/12/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: dda91d4f-77cc-4898-ad03-810ece5f8e74
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9bfe7a68dc64d2248b9ff9fc4c0696970f692b60
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5d5f52195deab514d4f7bcc03c77d9cb9a5c69b3
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77256426"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544505"
 ---
 # <a name="register-a-service-principal-name-spn-for-a-report-server"></a>보고서 서버의 SPN(서비스 사용자 이름) 등록
   상호 인증에 Kerberos 프로토콜을 사용하는 네트워크에 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 배포하는 경우 도메인 사용자 계정으로 실행되도록 보고서 서버 서비스 SPN(서비스 사용자 이름)을 구성하려면 보고서 서버 서비스에 대한 SPN을 만들어야 합니다.  
@@ -41,7 +42,7 @@ Setspn -s http/<computer-name>.<domain-name>:<port> <domain-user-account>
   
  **HTTP** 는 서비스 클래스입니다. 보고서 서버 웹 서비스는 HTTP.SYS에서 실행됩니다. HTTP용 SPN을 만들면 HTTP.SYS에서 실행되는 같은 컴퓨터에 있는 모든 웹 애플리케이션(IIS에서 호스팅되는 애플리케이션 포함)에 도메인 사용자 계정을 기반으로 하는 티켓이 부여됩니다. 이러한 서비스가 다른 계정에서 실행되면 인증 요청이 실패합니다. 이 문제를 방지하려면 같은 계정에서 실행되도록 모든 HTTP 애플리케이션을 구성하거나 애플리케이션마다 호스트 헤더를 만든 다음 호스트 헤더별로 SPN을 만드십시오. 호스트 헤더를 구성할 때는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성과 관계없이 DNS를 변경해야 합니다.  
   
- \<*computername*> 및 \<*domainname*>에 대해 지정하는 값은 보고서 서버를 호스트하는 컴퓨터의 고유 네트워크 주소를 식별합니다. 이는 로컬 호스트 이름이거나 FQDN(정규화된 도메인 이름)일 수 있습니다. 도메인이 하나뿐인 경우 명령줄에서 \<*domainname*>을 생략할 수 있습니다. \<*domain-user-account*>는 보고서 서버 서비스를 실행하는 데 사용되며 SPN을 등록해야 하는 사용자 계정입니다.  
+ \<*computername*> 및 \<*domainname*>에 지정하는 값은 보고서 서버를 호스트하는 컴퓨터의 고유 네트워크 주소를 식별합니다. 이는 로컬 호스트 이름이거나 FQDN(정규화된 도메인 이름)일 수 있습니다. 도메인이 하나뿐인 경우 명령줄에서 \<*domainname*>을 생략할 수 있습니다. \<*domain-user-account*>는 보고서 서버 서비스를 실행하는 데 사용되며 SPN을 등록해야 하는 사용자 계정입니다.  
   
 ## <a name="register-an-spn-for-domain-user-account"></a>도메인 사용자 계정에 대한 SPN 등록  
   

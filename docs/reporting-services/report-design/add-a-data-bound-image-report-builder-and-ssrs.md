@@ -1,5 +1,6 @@
 ---
 title: 데이터 바인딩된 이미지 추가(보고서 작성기) | Microsoft Docs
+description: 보고서 작성기에서 보고서에 이미지를 표시하기 위해 데이터베이스에 저장된 이미지를 참조하는 방법을 알아봅니다.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: df4c38d4-bfcc-41c4-aa6d-952ca6fd7a2e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1ab11e39d435a2a4f965c4a6cb5cf367ae2b4d84
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f126fc98d517268f5513cc2cbaa8b439ae6623eb
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080762"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681562"
 ---
 # <a name="add-a-data-bound-image-report-builder-and-ssrs"></a>데이터 바인딩된 이미지 추가(보고서 작성기 및 SSRS)
   데이터베이스에 저장된 이미지에 대한 참조를 보고서에 포함할 수 있습니다. 이러한 이미지를 *데이터 바인딩된 이미지*라고 합니다. 제품 목록에서 제품 이름과 함께 표시되는 그림을 예로 들 수 있습니다.  
@@ -25,7 +26,7 @@ ms.locfileid: "77080762"
   
 ### <a name="to-add-a-data-bound-image"></a>데이터 바인딩된 이미지를 추가하려면  
   
-1.  보고서 디자인 뷰에서 데이터 원본 연결이 있는 테이블과 이진 이미지 데이터가 포함된 필드가 있는 데이터 세트를 만듭니다. 자세한 내용은 [테이블&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)을 참조하세요.  
+1.  보고서 디자인 뷰에서 데이터 원본 연결이 있는 테이블과 이진 이미지 데이터가 포함된 필드가 있는 데이터 세트를 만듭니다. 자세한 내용은 [테이블 &#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)를 참조하세요.  
   
 2.  테이블에 열을 삽입합니다. 자세한 내용은 [열 삽입 또는 삭제&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/insert-or-delete-a-column-report-builder-and-ssrs.md)를 참조하세요.  
   

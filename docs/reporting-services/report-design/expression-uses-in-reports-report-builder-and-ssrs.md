@@ -1,5 +1,6 @@
 ---
 title: 보고서에 사용되는 식(보고서 작성기) | Microsoft Docs
+description: 보고서 작성기에서 매개 변수, 쿼리, 필터 및 텍스트 상자 속성에 식을 사용하여 값을 지정하거나 계산합니다.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 76b9ed31-5aec-40fc-bb88-a1c1b0ab3fc3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e781df6f5ccbdbb427de7e8b68c9dbc06522be71
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b12b393e2b749c34abdd98c7f6363829800c5d06
+ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080272"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84462217"
 ---
 # <a name="expression-uses-in-reports-report-builder-and-ssrs"></a>보고서에 사용되는 식(보고서 작성기 및 SSRS)
 페이지가 매겨진 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 보고서에서는 매개 변수, 쿼리, 필터, 보고서 항목 속성, 그룹 및 정렬 정의, 입력란 속성, 책갈피, 문서 구조, 동적 페이지 머리글 및 바닥글 내용, 이미지, 동적 데이터 원본 정의에 대한 값을 지정하거나 계산하기 위해 보고서 정의 전체에서 식이 사용됩니다. 이 항목에서는 식을 사용하여 보고서의 내용 또는 모양을 수정할 수 있는 많은 경우에 대한 예를 제공합니다. 이 목록에는 일부만 나와 있습니다. 식 단추(**fx**)를 표시하는 대화 상자 또는 **\<Expression...>** 을 표시하는 드롭다운 목록에서 속성 식을 설정할 수 있습니다.  
@@ -57,7 +58,7 @@ ms.locfileid: "77080272"
 |값에 따라 입력란에 있는 데이터의 서식을 지정합니다.|테이블릭스의 정보 행에서 입력란 내에 있는 자리 표시자에 대한 Color입니다. **입력란 속성 대화 상자, 글꼴**을 사용합니다.|`=IIF(Fields!TotalDue.Value < 10000,"Red","Black")`|  
 |보고서 전체에서 참조할 값을 한 번 계산합니다.|보고서 변수에 대한 Value입니다. **보고서 속성 대화 상자, 변수**를 사용합니다.|`=Variables!MyCalculation.Value`|  
 |데이터 세트에서 두 개 이상의 필드에 대한 특정 값을 포함합니다.|테이블릭스의 그룹에 대한 필터 수식입니다. **테이블릭스 속성 대화 상자, 필터**를 사용합니다.|데이터 형식에 대해 **부울**을 선택합니다.<br /><br /> `=IIF(InStr(Fields!Subcat.Value,"Shorts")=0 AND (Fields!Size.Value="M" OR Fields!Size.Value="S"),TRUE, FALSE)`<br /><br /> `=`<br /><br /> `TRUE`|  
-|*Show*라는 부울 매개 변수를 사용하여 사용자가 전환할 수 있는 디자인 화면의 입력란을 숨깁니다.|입력란의 Hidden 속성입니다. **입력란 속성 대화 상자, 표시 유형**을 사용합니다.|`=Not Parameters!` *Show\<부울 매개 변수>* `.Value`|  
+|*Show*라는 부울 매개 변수를 사용하여 사용자가 전환할 수 있는 디자인 화면의 입력란을 숨깁니다.|입력란의 Hidden 속성입니다. **입력란 속성 대화 상자, 표시 유형**을 사용합니다.|`=Not Parameters!` *Show\<boolean parameter>* `.Value`|  
 |동적 페이지 머리글 또는 바닥글 내용을 지정합니다.|페이지 머리글 또는 페이지 바닥글에 위치한 입력란 내의 자리 표시자에 대한 Value입니다.|`="Page " & Globals!PageNumber & " of "  & Globals!TotalPages`|  
 |매개 변수를 사용하여 동적으로 데이터 원본을 지정합니다.|데이터 원본에 대한 연결 문자열입니다. **데이터 원본 속성 대화 상자, 일반**을 사용합니다.|`="Data Source=" & Parameters!ServerName.Value & ";initial catalog=AdventureWorks2012"`|  
 |사용자가 선택한 다중값 매개 변수의 모든 값을 식별합니다.|입력란 내의 자리 표시자에 대한 Value입니다. **테이블릭스 속성 대화 상자, 필터**를 사용합니다.|`=Join(Parameters!MyMultivalueParameter.Value,", ")`|  

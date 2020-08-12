@@ -1,5 +1,6 @@
 ---
 title: 배달 확장 프로그램 배포 | Microsoft Docs
+description: 보고서 서버에 배달 확장 프로그램을 배포하는 방법을 알아봅니다. 보고서 서버가 확장 프로그램을 찾을 수 있도록 어느 항목을 어느 구성 파일에 추가할지 확인합니다.
 ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4436ce48-397d-42c7-9b5d-2a267e2a1b2c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 06cffe614eaa55713fed862dc03f7c81da7bc287
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6f358ebb3cc58a9f10c117d24bce8c04d849fd2f
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63193766"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529119"
 ---
 # <a name="deploying-a-delivery-extension"></a>배달 확장 프로그램 배포
   배달 확장 프로그램은 XML 구성 파일 형식으로 구성 정보를 제공합니다. XML 파일은 배달 확장 프로그램에 대해 정의된 XML 스키마를 따릅니다. 배달 확장 프로그램은 구성 파일을 설정하고 수정하기 위한 인프라를 제공합니다.  
@@ -31,7 +32,7 @@ ms.locfileid: "63193766"
   
  다음 표는 배달 확장 프로그램에 대한 **Extension** 요소의 특성을 설명합니다.  
   
-|attribute|Description|  
+|특성|설명|  
 |---------------|-----------------|  
 |**이름**|확장 프로그램에 대한 고유한 이름으로서 예를 들면 전자 메일 배달 확장 프로그램의 경우 "Report Server E-Mail", 파일 공유 배달 확장 프로그램의 경우 "Report Server FileShare" 등입니다. **Name** 특성의 최대 길이는 255자입니다. 이름은 구성 파일의 **Extension** 요소에 있는 모든 항목 중에서 고유해야 합니다. 중복된 이름이 있을 경우 보고서 서버에서 오류를 반환합니다.|  
 |**형식**|정규화된 네임스페이스와 어셈블리 이름을 포함하는 쉼표로 구분된 목록입니다.|  
@@ -44,7 +45,7 @@ ms.locfileid: "63193766"
   
 #### <a name="to-deploy-a-deliver-extension-assembly-to-a-report-server"></a>보고서 서버에 배달 확장 프로그램 어셈블리를 배포하려면  
   
-1.  준비 위치에서 배달 확장 프로그램을 사용할 보고서 서버의 bin 디렉터리로 어셈블리를 복사합니다. 보고서 서버 Bin 디렉터리의 기본 위치는 %ProgramFiles%\Microsoft SQL Server\MSRS13.\<InstanceName>\Reporting Services\ReportServer\bin입니다.  
+1.  준비 위치에서 배달 확장 프로그램을 사용할 보고서 서버의 bin 디렉터리로 어셈블리를 복사합니다. 보고서 서버 bin 디렉터리의 기본 위치는 %ProgramFiles%\Microsoft SQL Server\MSRS13.\<InstanceName>\Reporting Services\ReportServer\bin입니다.  
   
     > [!IMPORTANT]  
     >  기존 배달 확장 프로그램 어셈블리를 덮어쓰려는 경우 업데이트된 어셈블리를 복사하기 전에 먼저 보고서 서버 서비스를 중지해야 합니다. 어셈블리 복사가 완료된 후 서비스를 다시 시작합니다.  
@@ -69,7 +70,7 @@ ms.locfileid: "63193766"
   
      **Name**에 대한 값은 배달 확장 프로그램의 고유한 이름입니다. **Type**의 값은 <xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension> 인터페이스를 구현하는 클래스의 정규화된 네임스페이스에 대한 항목과 그 다음에 어셈블리의 이름(.dll 파일 확장명 포함 안 함)이 따라오는 형태가 포함되며 쉼표로 구분된 목록입니다. 기본적으로 배달 확장 프로그램은 표시됩니다. 웹 포털과 같은 사용자 인터페이스에 확장 프로그램이 표시되지 않도록 숨기려면 **Visible** 특성을 **Extension** 요소에 추가하고 **false**로 설정합니다.  
   
-5.  마지막으로 배달 확장 프로그램에 대해 **FullTrust** 권한을 부여하는 사용자 지정 어셈블리에 대한 코드 그룹을 추가합니다. 기본적으로 %ProgramFiles%\Microsoft SQL Server\MSRS13.\<InstanceName>\Reporting Services\ReportServer에 있는 rssrvpolicy.config 파일에 코드 그룹을 추가하여 이 작업을 수행할 수 있습니다. 코드 그룹은 다음과 같습니다.  
+5.  마지막으로 배달 확장 프로그램에 대해 **FullTrust** 권한을 부여하는 사용자 지정 어셈블리에 대한 코드 그룹을 추가합니다. 기본 위치가 %ProgramFiles%\Microsoft SQL Server\MSRS13.\<InstanceName>\Reporting Services\ReportServer인 rssrvpolicy.config 파일에 코드 그룹을 추가하면 됩니다. 코드 그룹은 다음과 같습니다.  
   
     ```  
     <CodeGroup class="UnionCodeGroup"  

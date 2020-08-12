@@ -1,6 +1,6 @@
 ---
 title: SSMS 사용 팁과 요령
-description: 코드를 주석 처리하거나 주석 처리를 제거하고, 텍스트를 들여쓰고, 개체 탐색기에서 개체를 필터링하고, SQL Server 오류 로그에 액세스하고, SQL Server Management Studio를 사용하여 SQL Server 인스턴스 이름을 찾는 방법을 알아봅니다.
+description: SQL Server Management Studio를 사용하여 코드 주석 처리 및 제거, 텍스트 들여쓰기, 개체 필터링, 오류 로그 액세스, SQL Server 인스턴스 이름 찾기 등을 수행하는 방법을 알아봅니다.
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: ssms
@@ -19,12 +19,12 @@ helpviewer_keywords:
 - find sql server instance name
 ms.custom: seo-lt-2019
 ms.date: 03/13/2018
-ms.openlocfilehash: 7a07e4cd77d02e4c62c34e55eedbd3dbf01c8322
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2147baf038b99140bf21ab72695f779c0fe69faf
+ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75245506"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84462347"
 ---
 # <a name="tips-and-tricks-for-using-sql-server-management-studio-ssms"></a>SSMS(SQL Server Management Studio)를 사용하기 위한 팁과 요령
 

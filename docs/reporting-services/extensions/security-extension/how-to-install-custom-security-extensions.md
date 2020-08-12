@@ -1,5 +1,6 @@
 ---
 title: 사용자 지정 보안 확장 프로그램 설치 방법 | Microsoft Docs
+description: Reporting Services 2016에 도입된 새 웹 포털에 대해 알아봅니다. 해당 변경 사항이 사용자 지정 보안 확장 프로그램의 구현에 어떻게 영향을 주는지 확인합니다.
 ms.date: 07/10/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.assetid: bfa0a35b-ccfb-4279-bae6-106c227c5f16
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9fcef802f6c61b85b4905365bda075a9f11d9e10
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4dfc638f65c66f6ecf5957b80b883ab89337b03e
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68223234"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529069"
 ---
 # <a name="how-to-install-custom-security-extensions"></a>사용자 지정 보안 확장 프로그램 설치 방법
 

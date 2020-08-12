@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 574e326f-0520-4003-bdf1-62d92c3db457
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9bcf55fd300c977105229473228955581da7cdd3
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.openlocfilehash: ff48d23727c8dd48048293dd34127b6acbb3f005
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81528737"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84294002"
 ---
 # <a name="understanding-xa-transactions"></a>XA 트랜잭션 이해
 
@@ -60,7 +60,7 @@ ms.locfileid: "81528737"
 MS DTC(Microsoft Distributed Transaction Coordinator)와 XA 데이터 원본을 함께 사용하여 분산 트랜잭션을 처리하려면 다음과 같은 단계가 필요합니다.  
 
 > [!NOTE]  
-> JDBC 분산 트랜잭션 구성 요소는 JDBC 드라이버 설치의 xa 디렉터리에 있습니다. 이 구성 요소에는 xa_install.sql 및 sqljdbc_xa.dll 파일이 포함됩니다.  
+> JDBC 분산 트랜잭션 구성 요소는 JDBC 드라이버 설치의 xa 디렉터리에 있습니다. 이 구성 요소에는 xa_install.sql 및 sqljdbc_xa.dll 파일이 포함됩니다. 다른 클라이언트에 다른 버전의 JDBC 드라이버가 있는 경우 서버에서 최신 sqljdbc_xa.dll을 사용하는 것이 좋습니다.  
 
 > [!NOTE]  
 > SQL Server 2019 공개 미리 보기 CTP 2.0부터 JDBC XA 분산 트랜잭션 구성 요소는 SQL Server 엔진에 포함되며 시스템 저장 프로시저를 사용하여 사용하거나 사용하지 않도록 설정할 수 있습니다.

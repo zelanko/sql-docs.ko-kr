@@ -1,6 +1,6 @@
 ---
 title: 확장 또는 축소 작업 추가(보고서 작성기 및 SSRS) | Microsoft Docs
-description: 사용자가 페이지를 매긴 보고서의 항목을 대화형으로 확장 또는 축소하거나, 테이블이나 행렬의 경우 그룹과 연결된 행과 열을 축소 또는 확장할 수 있도록 설정할 수 있습니다.
+description: 보고서 작성기에서 사용자가 보고서의 테이블 또는 행렬 그룹과 연결된 항목, 행 및 열을 확장하거나 축소할 수 있습니다.
 ms.date: 12/19/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 49f07ad6-242b-4861-8fc1-91ca78c36d6c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 776326093518aa33f8f031e4c4d6675791acf82d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 78d67f7d34bd2e146f7f625c1fd8ddb538b3b3eb
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75242545"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681302"
 ---
 # <a name="add-an-expand-or-collapse-action-to-an-item-report-builder--ssrs"></a>항목에 확장 또는 축소 작업 추가(보고서 작성기 및 SSRS)
   사용자가 페이지를 매긴 보고서의 항목을 대화형으로 확장 또는 축소하거나, 테이블이나 행렬의 경우 그룹과 연결된 행과 열을 축소 또는 확장할 수 있도록 설정할 수 있습니다. 사용자가 항목을 확장 또는 축소할 수 있도록 하려면 해당 항목에 표시 유형 속성을 설정합니다. 표시 유형을 설정하면 HTML 보고서 뷰어에서 사용할 수 있으며 이를 *드릴다운* 동작이라고도 합니다.  
@@ -49,7 +49,7 @@ ms.locfileid: "75242545"
   
     -   보고서 항목을 숨기려면 **True** 를 선택합니다.  
   
-    -   보고서 항목을 표시하려면 **\<Expression>** 을 선택하여 **식** 대화 상자를 열고 런타임에 평가되어 표시 유형을 결정할 식을 만듭니다.  
+    -   **\<Expression>** 을 선택하여 **식** 대화 상자를 열고 런타임에 평가되어 표시 유형을 결정할 식을 만듭니다.  
   
 5.  **ToggleItem**의 드롭다운 상자에서 토글 이미지를 추가할 입력란의 이름을 선택합니다.  
   

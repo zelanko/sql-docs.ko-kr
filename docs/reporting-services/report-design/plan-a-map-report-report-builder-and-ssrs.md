@@ -1,5 +1,6 @@
 ---
 title: 지도 보고서 계획(보고서 작성기) | Microsoft Docs
+description: 보고서 작성기에서 페이지를 매긴 보고서에 지도를 사용하여 지리적 배경에 대해 분석 데이터를 표시하여 작업을 촉진하고 인사이트를 제공합니다.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: dc0c27a4-7e31-4a15-a0bc-3a02479d5b02
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0b90397a154836f41659aba858f55e28502e2741
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a064351ef75698958b3f46e989eb1945625c5066
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082422"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84881850"
 ---
 # <a name="plan-a-map-report-report-builder-and-ssrs"></a>지도 보고서 계획(보고서 작성기 및 SSRS)
 훌륭한 보고서는 조치를 취하거나 상황을 깊이 있게 파악할 수 있는 정보를 제공합니다. 지리적 배경에 대한 인구 통계 또는 판매량 합계와 같은 분석 데이터를 제공하기 위해 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 페이지를 매긴 보고서에 지도를 추가할 수 있습니다. 지도에는 여러 계층이 포함될 수 있으며, 각 계층에는 위치를 나타내는 점, 길을 나타내는 선, 영역을 나타내는 다각형 등의 특정 공간 데이터 유형으로 정의되는 지도 요소가 표시됩니다. 각 계층에서 분석 데이터와 지도 요소를 연결할 수 있습니다.  
@@ -105,12 +106,12 @@ ms.locfileid: "77082422"
   
 |마법사 아이콘|계층 스타일|계층 유형|설명 및 옵션|  
 |-----------------|-----------------|----------------|-----------------------------|  
-|![rs_MapType_Polygon_Basic](../../reporting-services/report-design/media/rs-maptype-polygon-basic.gif "rs_MapType_Polygon_Basic")|기본 지도|Polygon|영역만 표시하는 지도입니다(예: 판매 지역).<br /><br /> 옵션: 색상표에 따라 색을 변경하거나 한 색을 사용합니다. 색상표는 미리 정의된 색 집합입니다. 색상표의 모든 색이 할당되었으면 색의 음영이 할당됩니다.|  
+|![rs_MapType_Polygon_Basic](../../reporting-services/report-design/media/rs-maptype-polygon-basic.gif "rs_MapType_Polygon_Basic")|기본 지도|Polygon|영역만 표시하는 지도입니다(예: 판매 지역).<br /><br /> 옵션: 색상표에 따라 색을 변경하거나 한 가지 색을 사용합니다. 색상표는 미리 정의된 색 집합입니다. 색상표의 모든 색이 할당되었으면 색의 음영이 할당됩니다.|  
 |![rs_MapType_Polygon_ColorAnalytical](../../reporting-services/report-design/media/rs-maptype-polygon-coloranalytical.gif "rs_MapType_Polygon_ColorAnalytical")|색 분석 지도|Polygon|색을 변경하여 분석 데이터를 표시하는 지도입니다(예: 지역별 판매량 데이터).|  
 |![rs_MapType_Polygon_Bubble](../../reporting-services/report-design/media/rs-maptype-polygon-bubble.gif "rs_MapType_Polygon_Bubble")|거품형 지도|Polygon|지역 중심의 거품 크기를 변경하여 분석 데이터를 표시하는 지도입니다(예: 지역별 판매량 데이터).<br /><br /> 옵션: 두 번째 분석 필드에 따라 영역 색을 변경하고 색 규칙을 지정합니다.|  
-|![rs_MapType_Line_Basic](../../reporting-services/report-design/media/rs-maptype-line-basic.gif "rs_MapType_Line_Basic")|기본 선 지도|꺾은선형|선만 표시하는 지도입니다(예: 배달 경로).<br /><br /> 옵션: 색상표에 따라 색을 변경하거나 한 색을 사용합니다.|  
+|![rs_MapType_Line_Basic](../../reporting-services/report-design/media/rs-maptype-line-basic.gif "rs_MapType_Line_Basic")|기본 선 지도|꺾은선형|선만 표시하는 지도입니다(예: 배달 경로).<br /><br /> 옵션: 색상표에 따라 색을 변경하거나 한 가지 색을 사용합니다.|  
 |![rs_MapType_Line_Analytical](../../reporting-services/report-design/media/rs-maptype-line-analytical.gif "rs_MapType_Line_Analytical")|분석 선 지도|꺾은선형|선 색 및 두께를 변경하는 지도입니다(예: 경로별 정기 메트릭 및 배달된 물품 수).<br /><br /> 옵션: 한 분석 필드에 따라 선 두께를 변경하고, 두 번째 분석 필드에 따라 선 색을 변경하고, 색 규칙을 지정합니다.|  
-|![rs_MapType_Marker_Basic](../../reporting-services/report-design/media/rs-maptype-marker-basic.gif "rs_MapType_Marker_Basic")|기본 표식 지도|Point|도시와 같은 각 위치에 표식을 표시하는 지도입니다.<br /><br /> 옵션: 색상표에 따라 색을 변경하거나 한 색을 사용하고 표식 스타일을 변경합니다.|  
+|![rs_MapType_Marker_Basic](../../reporting-services/report-design/media/rs-maptype-marker-basic.gif "rs_MapType_Marker_Basic")|기본 표식 지도|Point|도시와 같은 각 위치에 표식을 표시하는 지도입니다.<br /><br /> 옵션: 색상표에 따라 색을 변경하거나 한 가지 색을 사용하고 표식 스타일을 변경합니다.|  
 |![rs_MapType_Marker_Bubble](../../reporting-services/report-design/media/rs-maptype-marker-bubble.gif "rs_MapType_Marker_Bubble")|거품형 표식 지도|Point|각 위치에 대한 거품을 표시하고 한 분석 데이터 필드에 따라 거품 크기를 변경하는 지도입니다(예: 도시별 판매량 데이터).<br /><br /> 옵션: 두 번째 분석 필드에 따라 거품 색을 변경하고 색 규칙을 지정합니다.|  
 |![rs_MapType_Marker_Analytical](../../reporting-services/report-design/media/rs-maptype-marker-analytical.gif "rs_MapType_Marker_Analytical")|분석 표식 지도|Point|각 위치에 표식을 표시하고 분석 데이터에 따라 표식 색, 크기 및 유형을 변경하는 지도입니다(예: 가장 많이 판매된 제품, 수익 범위 및 할인 전략).<br /><br /> 옵션: 한 분석 필드에 따라 표식 유형을 변경하고, 두 번째 분석 필드에 따라 표식 크기를 변경하고, 세 번째 분석 필드에 따라 표식 색을 변경하고, 색 규칙을 지정합니다.|  
   
@@ -150,8 +151,8 @@ ms.locfileid: "77082422"
   
 ## <a name="see-also"></a>참고 항목  
  [지도 또는 지도 계층의 데이터 및 표시 사용자 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)   
- [자습서: 지도 보고서&#40;보고서 작성기&#41;](../../reporting-services/tutorial-map-report-report-builder.md)   
+ [자습서: 맵 보고서&#40;보고서 작성기&#41;](../../reporting-services/tutorial-map-report-report-builder.md)   
  [지도&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
- [보고서 문제해결: 지도 보고서&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [보고서 문제 해결: 맵 보고서&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

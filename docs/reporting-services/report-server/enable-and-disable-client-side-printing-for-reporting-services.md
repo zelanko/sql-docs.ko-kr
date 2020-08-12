@@ -1,5 +1,6 @@
 ---
 title: Reporting Services에 대한 클라이언트 쪽 인쇄 기능 설정 및 해제 | Microsoft Docs
+description: 브라우저에 표시되는 Reporting Services 보고서에 대한 클라이언트 쪽 인쇄를 사용하도록 또는 사용하지 않도록 설정하는 방법을 알아봅니다. 클라이언트 쪽 인쇄는 PDF를 사용하며 기본적으로 사용하도록 설정되어 있습니다.
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0e709c96-7517-4547-8ef6-5632f8118524
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ae8d963b599191970497d841a6caa1f73fd920b3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9ffa8d5781eb3ad7eb95a4dc5b360ad51ede6843
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65580348"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547475"
 ---
 # <a name="enable-and-disable-client-side-printing-for-reporting-services"></a>Reporting Services에 대한 클라이언트 쪽 인쇄 기능 설정 및 해제
 

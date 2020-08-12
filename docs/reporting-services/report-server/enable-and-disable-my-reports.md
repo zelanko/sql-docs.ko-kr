@@ -1,5 +1,6 @@
 ---
 title: 내 보고서 사용 및 사용 안 함 설정 | Microsoft Docs
+description: Reporting Services에서 내 보고서 기능을 사용하거나 사용하지 않도록 설정하는 방법을 알아봅니다. 내 보고서는 사용자를 위해 보고서 서버 데이터베이스 내에 스토리지를 제공합니다.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 16c76e82-9fd4-417c-9ed3-a7d5bcd1dba2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6670d1da918ac1bdc6cb1947b265f9d543259814
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8ffc2b26db7e6211f16496b06f8bbaebf30b9ed7
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65577775"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547985"
 ---
 # <a name="enable-and-disable-my-reports"></a>내 보고서 설정 및 해제
   내 보고서 기능은 보고서 서버 데이터베이스에 프라이빗 스토리지를 할당하여 해당 사용자가 소유한 보고서를 프라이빗 폴더에 저장할 수 있도록 합니다. 보고서 서버 관리자는 이 기능을 설정 또는 해제하거나 이 작업 영역으로 수행할 수 있는 작업을 제어하는 보안 설정을 수정하여 이 기능의 작동 방식을 변경할 수 있습니다.  

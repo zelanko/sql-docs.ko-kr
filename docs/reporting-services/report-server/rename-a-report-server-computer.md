@@ -1,5 +1,6 @@
 ---
 title: 보고서 서버 컴퓨터 이름 바꾸기 | Microsoft Docs
+description: 컴퓨터 이름을 변경한 후 보고서 서버를 다시 구성하는 방법을 알아봅니다. 컴퓨터 이름을 변경한 후에 SQL Server Reporting Services에 액세스할 수 없을 수도 있습니다.
 ms.date: 06/19/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 82fc4ba2-291a-4939-a025-271b8d687c54
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b3fe381daf1b89d76d9282f2c1a54c3940a3ffbe
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 83de666e0f6aa3dc54c3e9b864ebabf957f4ac25
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67314050"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544525"
 ---
 # <a name="rename-a-report-server-computer"></a>보고서 서버 컴퓨터 이름 바꾸기
   컴퓨터 이름을 바꾸면 웹 서버 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 같은 컴퓨터에 있는 경우 이에 해당하는 이름이 변경됩니다. 컴퓨터 이름을 변경한 후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에 액세스할 수 없는 경우도 있습니다. 컴퓨터 이름을 변경한 다음에는 이 문서의 단계를 사용하여 보고서 서버를 다시 구성합니다.  

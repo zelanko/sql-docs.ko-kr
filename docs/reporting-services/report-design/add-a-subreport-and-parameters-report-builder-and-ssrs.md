@@ -1,5 +1,6 @@
 ---
 title: 하위 보고서 및 매개 변수 추가(보고서 작성기) | Microsoft Docs
+description: 하위 보고서를 추가하는 방법을 알아봅니다. 보고서 작성기에서 여러 관련 보고서의 컨테이너로 주 보고서를 만들려는 경우 하위 보고서를 사용합니다.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: 94f960f8-a629-4f1e-8277-c3b8f0680d98
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a74ef0a64fb7d1a77f3e336f98aeaa245c4458d8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9131d15b8374df4b3db22946583d3349f0386e91
+ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080673"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84462307"
 ---
 # <a name="add-a-subreport-and-parameters-report-builder-and-ssrs"></a>하위 보고서 및 매개 변수 추가(보고서 작성기 및 SSRS)
   여러 관련 보고서의 컨테이너인 주 보고서를 만들려는 경우 하위 보고서를 보고서에 추가합니다. 하위 보고서는 다른 보고서에 대한 참조입니다. 여러 보고서에서 동일한 고객에 대한 데이터를 표시하도록 하는 등의 이유로 데이터 값을 통해 여러 보고서를 연결하려면 매개 변수가 있는 보고서(예: 특정 고객에 대한 세부 정보를 표시하는 보고서)를 하위 보고서로 디자인해야 합니다. 하위 보고서를 주 보고서에 추가할 때에는 매개 변수를 지정하여 하위 보고서에 전달할 수 있습니다.  
@@ -57,7 +58,7 @@ ms.locfileid: "77080673"
 5.  **값** 목록 상자에서 하위 보고서에 전달할 값을 입력하거나 선택합니다. 이 값은 정적 텍스트이거나 주 보고서의 필드 또는 기타 개체를 참조하는 식일 수 있습니다.  
   
     > [!NOTE]  
-    >  보고서 작성기에서는 매개 변수가 **매개 변수** 목록에 없고 하위 보고서에 기본값이 정의되어 있으면 하위 보고서가 올바르게 처리됩니다.  
+    >   보고서 작성기에서는 매개 변수가 **매개 변수** 목록에 없고 하위 보고서에 기본값이 정의되어 있으면 하위 보고서가 올바르게 처리됩니다.  
     >   
     >  보고서 디자이너에서는 하위 보고서에 필요한 모든 매개 변수를 **매개 변수** 목록에 포함해야 합니다. 필요한 매개 변수가 없으면 하위 보고서가 주 보고서에 올바르게 표시되지 않습니다.  
   

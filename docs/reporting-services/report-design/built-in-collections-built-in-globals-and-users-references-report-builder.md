@@ -1,5 +1,6 @@
 ---
 title: 기본 제공 Globals 및 Users 참조(보고서 작성기) | Microsoft Docs
+description: 보고서 작성기에서 보고서의 결과를 필터링하기 위해 식에 사용할 수 있는 값에 대해 알아봅니다.
 ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5f5e1149-c967-454d-9a63-18ec4a33d985
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8dfd41dfbcbd35712fb2e13925b047e4ed2db962
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 23c0167fddf6887d0ff4e25dcfcd9242434b4f66
+ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082213"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84462197"
 ---
 # <a name="built-in-collections---built-in-globals-and-users-references-report-builder"></a>기본 제공 컬렉션 - 기본 제공 Globals 및 Users 참조(보고서 작성기)
   **Globals** 및 **User** 컬렉션을 모두 포함하는 기본 제공 필드 컬렉션은 보고서를 처리할 때 Reporting Services에서 제공하는 전역 값을 나타냅니다. **Globals** 컬렉션은 보고서의 이름, 보고서 처리가 시작된 시간, 보고서 머리글 또는 바닥글의 현재 페이지 번호와 같은 값을 제공합니다. **User** 컬렉션은 사용자 식별자 및 언어 설정을 제공합니다. 이러한 값을 식에 사용하여 보고서의 결과를 필터링할 수 있습니다.  
@@ -42,13 +43,13 @@ ms.locfileid: "77082213"
 ### <a name="renderformat"></a>RenderFormat  
  다음 표에서는 **RenderFormat**의 멤버에 대해 설명합니다.  
   
-|멤버|Type|Description|  
+|멤버|형식|설명|  
 |------------|----------|-----------------|  
-|속성|**String**|RSReportServer 구성 파일에 등록된 렌더러 이름입니다.<br /><br /> 보고서 처리/렌더링 주기의 특정 부분에서 사용 가능합니다.|  
+|Name|**String**|RSReportServer 구성 파일에 등록된 렌더러 이름입니다.<br /><br /> 보고서 처리/렌더링 주기의 특정 부분에서 사용 가능합니다.|  
 |IsInteractive|**Boolean**|현재 렌더링 요청이 대화형 렌더링 형식을 사용하는지 여부입니다.|  
 |DeviceInfo|읽기 전용 이름/값 컬렉션|현재 렌더링 요청에 대한 deviceinfo 매개 변수의 키/값 쌍입니다.<br /><br /> 컬렉션에 키나 인덱스를 사용해 문자열 값을 지정할 수 있습니다.|  
   
-### <a name="examples"></a>예  
+### <a name="examples"></a>예제  
  다음 예에서는 식에서 **Globals** 컬렉션에 대한 참조를 사용하는 방법을 보여 줍니다.  
   
 -   이 식을 보고서 바닥글의 입력란에 배치하면 보고서의 페이지 번호와 총 페이지 수가 제공됩니다.  
@@ -72,7 +73,7 @@ ms.locfileid: "77082213"
   
 |**멤버**|**형식**|**설명**|  
 |----------------|--------------|---------------------|  
-|**언어**|**String**|보고서를 실행하는 사용자의 `en-US`)을 입력합니다.|  
+|**언어**|**String**|보고서를 실행하는 사용자의 예들 들어 `en-US`입니다.|  
 |**UserID**|**String**|보고서를 실행하는 사용자의 ID입니다. Windows 인증을 사용하는 경우 이 값은 현재 사용자의 도메인 계정입니다. 값은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보안 확장 프로그램에 의해 결정되며 이 프로그램은 Windows 인증 또는 사용자 지정 인증을 사용할 수 있습니다.|  
  
 ### <a name="using-locale-settings"></a>로캘 설정 사용  

@@ -1,5 +1,6 @@
 ---
 title: 차트에서 여백 추가 또는 제거(보고서 작성기) | Microsoft Docs
+description: 보고서 작성기에서 세로 막대형 차트 또는 분산형 차트의 여백을 추가하거나 제거합니다. 페이지를 매긴 보고서의 가독성 또는 모양을 개선합니다.
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 91c43f58-5771-4d33-a54d-0e802d2f5cba
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1a5b9d749cbeab7164bd1ca06d0fc8192561931c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 90b6b1e10ded769785b038b03d3f9d4886c4ba96
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081542"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84882021"
 ---
 # <a name="add-or-remove-margins-from-a-chart-report-builder-and-ssrs"></a>차트에서 여백 추가 또는 제거(보고서 작성기 및 SSRS)
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 페이지를 매긴 보고서에서 세로 막대형 및 분산형 차트 종류의 경우 x-축의 끝에 자동으로 양쪽 여백이 추가됩니다. 가로 막대형 차트 종류의 경우 y축의 끝에 자동으로 양쪽 여백이 추가됩니다. 다른 모든 차트 종류에서는 양쪽 여백이 추가되지 않습니다. 여백의 크기는 변경할 수 없습니다.  

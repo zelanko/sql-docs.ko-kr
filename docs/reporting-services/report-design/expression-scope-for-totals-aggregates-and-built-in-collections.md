@@ -1,5 +1,6 @@
 ---
 title: 합계, 집계 및 기본 제공 컬렉션의 식 범위 | Microsoft Docs
+description: 보고서 작성기의 보고서에서 합계, 집계 및 기본 제공 컬렉션에 대한 식 범위의 다양한 의미를 알아봅니다.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,15 +9,15 @@ ms.topic: conceptual
 ms.assetid: a8d24287-8557-4b03-bea7-ca087f449b62
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c822f0b6a3a17ccba2afbaf8bf0a9e4a4e2f7b12
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 453d5d9e960ead988e4c7f57adc48e2de69b25a1
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65579818"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681312"
 ---
 # <a name="expression-scope-for-totals-aggregates-and-built-in-collections"></a>합계, 집계 및 기본 제공 컬렉션의 식 범위
-  식을 작성할 때 여러 컨텍스트에서 *범위* 라는 용어를 자주 볼 수 있습니다. 범위는 식 계산에 사용하는 데이터, 렌더링된 페이지의 입력란 집합, 그리고 토글을 기반으로 표시하거나 숨길 수 있는 보고서 항목 집합을 지정할 수 있습니다. *범위* 라는 용어는 식 계산, 집계 함수 구문, 조건부 표시 유형 및 이러한 영역과 관련된 오류 메시지에서 볼 수 있습니다. 다음 설명을 참조하면 적용되는 *범위* 의 각 의미를 구분할 수 있습니다.  
+  식을 작성할 때 여러 컨텍스트에서 범위라는 용어를 자주 볼 수 있습니다. 범위는 식 계산에 사용하는 데이터, 렌더링된 페이지의 입력란 집합, 그리고 토글을 기반으로 표시하거나 숨길 수 있는 보고서 항목 집합을 지정할 수 있습니다. *범위* 라는 용어는 식 계산, 집계 함수 구문, 조건부 표시 유형 및 이러한 영역과 관련된 오류 메시지에서 볼 수 있습니다. 다음 설명을 참조하면 적용되는 *범위* 의 각 의미를 구분할 수 있습니다.  
   
 -   **데이터 범위** 보고서 프로세서가 보고서 데이터와 보고서 레이아웃을 결합하고 데이터를 표시할 테이블, 차트 등의 데이터 영역을 작성할 때 사용하는 범위의 계층 구조입니다. 데이터 범위에 대해 이해하면 다음 작업을 수행할 때 원하는 결과를 얻을 수 있습니다.  
   
@@ -148,7 +149,7 @@ ms.locfileid: "65579818"
   
   
 ##  <a name="specifying-a-sort-expression-to-synchronize-sort-order"></a><a name="Sort"></a> 정렬 순서를 동기화할 정렬 식 지정.  
- 대화형 정렬 단추를 테이블 열에 추가할 때 공통의 포함하는 범위를 가진 여러 항목에 대한 정렬을 동기화할 수 있습니다. 예를 들어 행렬의 열 머리글에 정렬 단추를 추가하고 포함하는 범위를 행렬에 바인딩되는 데이터 세트의 이름으로 지정할 수 있습니다. 사용자가 정렬 단추를 클릭하면 행렬 행도 정렬되고 동일 데이터 집합에 바인딩되는 차트의 차트 계열 그룹도 정렬됩니다. 이러한 방식으로 해당 데이터 세트를 사용하는 모든 데이터 영역을 동기화해 같은 정렬 순서를 표시할 수 있습니다.  
+ 대화형 정렬 단추를 테이블 열에 추가할 때 공통의 포함하는 범위를 가진 여러 항목에 대한 정렬을 동기화할 수 있습니다. 예를 들어 행렬의 열 머리글에 정렬 단추를 추가하고 포함하는 범위를 행렬에 바인딩되는 데이터 세트의 이름으로 지정할 수 있습니다. 사용자가 정렬 단추를 클릭하면 행렬 행도 정렬되고 동일 데이터 세트에 바인딩되는 차트의 차트 계열 그룹도 정렬됩니다. 이러한 방식으로 해당 데이터 세트를 사용하는 모든 데이터 영역을 동기화해 같은 정렬 순서를 표시할 수 있습니다.  
   
  자세한 내용은 [데이터 필터링, 그룹화 및 정렬&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)를 참조하세요.  
   

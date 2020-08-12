@@ -1,5 +1,6 @@
 ---
 title: 재귀 계층 구조 그룹 만들기(보고서 작성기) | Microsoft Docs
+description: 재귀 계층 구조 그룹을 사용하여 계층적 수준을 포함하는 단일 보고서 데이터 세트에서 페이지를 매긴 보고서의 데이터를 구성하는 방법을 알아봅니다.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8b830ba5-4d64-4348-a2b1-76b9338a1462
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2d1a73f72cc267b8a58c70dd4ea958be3560a4fc
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9d72c85df464893a4f7e7d6ba1f183a3702aee87
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080552"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681532"
 ---
 # <a name="create-a-recursive-hierarchy-group-report-builder-and-ssrs"></a>재귀 계층 구조 그룹 만들기(보고서 작성기 및 SSRS)
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 페이지를 매긴 보고서에서 재귀 계층 구조 그룹은 조직 계층의 관리자와 직원 관계에 대한 보고 구조와 같이 여러 계층 수준을 포함하는 단일 보고서 데이터 세트의 데이터를 구성합니다.  
@@ -48,7 +49,7 @@ ms.locfileid: "77080552"
     > [!NOTE]  
     >  속성 창이 표시되지 않으면 **보기** 탭에서 **속성** 을 클릭합니다.  
   
-2.  속성 창에서 **패딩** 노드를 확장하고 **왼쪽**을 클릭한 다음, 드롭다운 목록에서 **\<식…>** 을 선택합니다.  
+2.  속성 창에서 **패딩** 노드를 확장하고 **왼쪽**을 클릭한 다음, 드롭다운 목록에서 **\<Expression...>** 을 선택합니다.  
   
 3.  식 창에서 다음 식을 입력합니다.  
   

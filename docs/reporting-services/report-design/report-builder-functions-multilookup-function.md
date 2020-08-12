@@ -1,5 +1,6 @@
 ---
 title: Multilookup 함수(보고서 작성기) | Microsoft Docs
+description: 보고서 작성기의 Multilookup 함수는 이름/값 쌍을 포함하는 데이터 세트에서 지정된 이름 집합의 첫 번째 일치 값 집합을 반환합니다.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1fec079e-33b3-4e4d-92b3-6b4d06a49a77
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 94883e68a4543c7fe98794d8b89dc38f05d2b410
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: fca4a966d661005f1c672011ac5712903644780b
+ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081192"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84462387"
 ---
 # <a name="report-builder-functions---multilookup-function"></a>보고서 작성기 함수 - Multilookup 함수
   이름/값 쌍을 포함하는 데이터 세트에서 지정된 이름 집합과 처음 일치하는 값 집합을 반환합니다.  
@@ -33,10 +34,10 @@ Multilookup(source_expression, destination_expression, result_expression, datase
  (**VariantArray**) 현재 범위에서 평가되고, 조회할 키 또는 이름의 집합을 지정하는 식입니다. 예를 들어 다중값 매개 변수의 경우 `=Parameters!IDs.value`입니다.  
   
  *destination_expression*  
- (**Variant**) 데이터 세트의 각 행에 대해 평가되고, 일치시킬 키 또는 이름을 지정하는 식입니다. `=Fields!ID.Value`)을 입력합니다.  
+ (**Variant**) 데이터 세트의 각 행에 대해 평가되고, 일치시킬 키 또는 이름을 지정하는 식입니다. 예들 들어 `=Fields!ID.Value`입니다.  
   
  *result_expression*  
- (**Variant**) *source_expression* = *destination_expression*인 데이터 세트의 행에 대해 평가되고, 검색할 값을 지정하는 식입니다. `=Fields!Name.Value`)을 입력합니다.  
+ (**Variant**) *source_expression* = *destination_expression*인 데이터 세트의 행에 대해 평가되고, 검색할 값을 지정하는 식입니다. 예들 들어 `=Fields!Name.Value`입니다.  
   
  *데이터 세트*  
  보고서의 데이터 세트 이름을 지정하는 상수입니다. 예를 들면 "Colors"입니다.  

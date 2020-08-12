@@ -1,6 +1,6 @@
 ---
 title: 역할 정의 - 미리 정의된 역할 | Microsoft Docs
-ms.date: 05/24/2019
+ms.date: 06/10/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: security
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6b46db51-7c30-467d-a251-50f50647fe21
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 18ac0bfb10914b8e0afb1aca363e53f9dff3af91
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7c792804d9e7daae9209bcbafb8bae95fffb3492
+ms.sourcegitcommit: c8e45e0fdab8ea2ae1c7e709346354576b18ca1e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67500193"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84716750"
 ---
 # <a name="role-definitions---predefined-roles"></a>역할 정의 - 미리 정의된 역할
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 보고서 서버 작업에 대한 액세스 권한을 부여하는 데 사용할 수 있는 미리 정의된 역할과 함께 설치됩니다. 미리 정의된 각 역할은 관련 태스크 모음을 설명합니다. 미리 정의된 역할에 그룹 및 사용자 계정을 할당하여 보고서 서버 작업에 즉시 액세스하도록 할 수 있습니다.  
@@ -59,11 +59,11 @@ ms.locfileid: "67500193"
 |----------|-----------------|  
 |보고서 사용|보고서 정의를 읽습니다.|  
 |링크된 보고서 만들기|링크되지 않은 보고서를 기반으로 하는 링크된 보고서를 만듭니다.|  
-|모든 구독 관리|구독의 소유자에 관계없이 보고서 및 링크된 보고서에 대한 모든 구독을 확인하고, 수정하고, 삭제합니다. 이 태스크는 데이터 기반 구독 만들기도 지원합니다.|  
+|모든 구독 관리|구독의 소유자에 관계없이 보고서 및 링크된 보고서에 대한 모든 구독을 확인하고, 수정하고, 삭제합니다. 이 태스크는 데이터 기반 구독 만들기를 지원합니다. 또한 [Power BI Report Server에서 Power BI(.pbix) 파일에 대한 예약된 새로 고침](https://docs.microsoft.com/power-bi/report-server/configure-scheduled-refresh) 편집 및 실행도 지원합니다.|  
 |데이터 원본 관리|공유 데이터 원본 항목을 만들고 삭제하며 데이터 원본 속성과 내용을 확인하고 수정합니다.|  
 |폴더 관리|폴더를 만들고, 확인하고, 삭제하며 폴더 속성을 확인하고 수정합니다.|  
 |모델 관리|모델을 만들고, 확인하고, 삭제하며 모델 속성을 확인하고 수정합니다.|  
-|개별 구독 관리|보고서 및 링크된 보고서에 대한 사용자 소유의 구독을 만들고, 확인하고, 수정하고, 삭제합니다.|  
+|개별 구독 관리|보고서 및 링크된 보고서에 대한 사용자 소유의 구독을 만들고, 확인하고, 수정하고, 삭제합니다. 이 태스크는 [Power BI Report Server에서 Power BI(.pbix) 파일에 대한 예약된 새로 고침](https://docs.microsoft.com/power-bi/report-server/configure-scheduled-refresh) 편집 및 실행도 지원합니다.|  
 |보고서 기록 관리|보고서 기록을 만들고, 확인하고, 삭제하며 보고서 기록 속성을 확인하고 스냅샷 기록 제한 및 캐싱 동작 방법을 결정하는 설정을 확인하고 수정합니다.|  
 |보고서 관리|보고서를 추가 및 삭제하고, 보고서 매개 변수를 수정하고, 보고서 속성을 확인 및 수정하고, 보고서에 내용을 제공하는 데이터 원본을 확인 및 수정하고, 보고서 정의를 확인 및 수정하고, 보고서 수준의 보안 정책을 설정합니다.|  
 |리소스 관리|리소스를 만들고, 수정하고, 삭제하며 리소스 속성을 확인하고 수정합니다.|  
@@ -92,7 +92,7 @@ ms.locfileid: "67500193"
 ### <a name="publisher-tasks"></a>게시자 태스크  
  다음 표에서는 **게시자** 역할에 포함되는 태스크를 나열합니다.  
   
-|Task|Description|  
+|Task|설명|  
 |----------|-----------------|  
 |링크된 보고서 만들기|링크된 보고서를 만들어 보고서 서버 폴더에 게시합니다.|  
 |데이터 원본 관리|공유 데이터 원본 항목을 만들고 삭제하며 데이터 원본 속성과 내용을 확인하고 수정합니다.|  
@@ -114,7 +114,7 @@ ms.locfileid: "67500193"
 ### <a name="browser-tasks"></a>브라우저 태스크  
  다음 표에서는 **브라우저** 역할에 포함되는 태스크에 대해 설명합니다.  
   
-|Task|Description|  
+|Task|설명|  
 |----------|-----------------|  
 |보고서 보기|보고서를 실행하고 보고서 속성을 봅니다.|  
 |리소스 보기|리소스 및 리소스 속성을 봅니다.|  
@@ -133,7 +133,7 @@ ms.locfileid: "67500193"
 ### <a name="report-builder-tasks"></a>보고서 작성기 작업  
  다음 표에서는 **보고서 작성기** 역할에 포함되는 태스크에 대해 설명합니다.  
   
-|Task|Description|  
+|Task|설명|  
 |----------|-----------------|  
 |보고서 사용|보고서 정의를 읽습니다.|  
 |보고서 보기|보고서를 실행하고 보고서 속성을 봅니다.|  
@@ -155,7 +155,7 @@ ms.locfileid: "67500193"
 ### <a name="my-reports-tasks"></a>내 보고서 태스크  
  다음 표에서는 **내 보고서** 역할에 포함된 태스크를 나열합니다.  
   
-|Task|Description|  
+|Task|설명|  
 |----------|-----------------|  
 |링크된 보고서 만들기|사용자의 내 보고서 폴더에 저장되어 있는 보고서를 기반으로 하는 링크된 보고서를 만듭니다.|  
 |폴더 관리|폴더를 만들고, 확인하고, 삭제하며 폴더 속성을 확인하고 수정합니다.|  
@@ -183,7 +183,7 @@ ms.locfileid: "67500193"
 ### <a name="system-administrator-tasks"></a>시스템 관리자 태스크  
  다음 표에서는 **시스템 관리자** 역할에 포함되는 태스크를 나열합니다.  
   
-|Task|Description|  
+|Task|설명|  
 |----------|-----------------|  
 |보고서 정의 실행|보고서 정의를 보고서 서버에 게시하지 않고 실행을 시작합니다.|  
 |작업 관리|실행 중인 작업을 확인 및 취소합니다. 자세한 내용은 [실행 중인 프로세스 관리](../../reporting-services/subscriptions/manage-a-running-process.md)를 참조하세요.|  
@@ -201,7 +201,7 @@ ms.locfileid: "67500193"
   
 ### <a name="system-user-tasks"></a>시스템 사용자 태스크  
   
-|Task|Description|  
+|Task|설명|  
 |----------|-----------------|  
 |보고서 정의 실행|보고서를 보고서 서버에 게시하지 않고 실행합니다.|  
 |보고서 서버 속성 보기|애플리케이션 이름, 내 보고서 설정을 사용하도록 지정하는지 여부 및 보고서 기록 기본값 등 보고서 서버에 적용되는 속성을 봅니다.<br /><br /> **시스템 사용자** 역할에서 이 태스크를 제거하면 사이트 설정 페이지를 사용할 수 없습니다. 각 페이지의 맨 위에 애플리케이션 제목도 표시되지 않습니다. 기본적으로 웹 포털의 제목은 “[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]”입니다.|  

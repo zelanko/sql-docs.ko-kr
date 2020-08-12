@@ -1,5 +1,6 @@
 ---
 title: 차트에 데이터 범위가 여러 개 있는 계열 표시 | Microsoft Docs
+description: 보고서 작성기에서 눈금 구분선, 필터를 사용하고 데이터 범위를 구분하여 차트 가독성을 향상하는 여러 방법을 알아봅니다.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 45da3d39-278e-4760-a4b3-9932c9547cf2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 776c8ab4b133a8655ce42c5b5c3d996360c71322
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 976319c02aa641873d2f92bd6c4b10c8e9427566
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65578828"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681522"
 ---
 # <a name="displaying-a-series-with-multiple-data-ranges-on-a-chart"></a>차트에 데이터 범위가 여러 개 있는 계열 표시
 

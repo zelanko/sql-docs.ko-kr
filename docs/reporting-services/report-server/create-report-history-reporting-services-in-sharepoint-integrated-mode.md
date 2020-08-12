@@ -1,5 +1,6 @@
 ---
 title: 보고서 기록 만들기(SharePoint 통합 모드의 Reporting Services) | Microsoft Docs
+description: SharePoint 통합 모드의 Reporting Services에서 과거에 만든 보고서 스냅샷의 컬렉션인 보고서 기록을 만드는 방법을 알아봅니다.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: e57ec746-05ae-4ff6-8e39-6cde87310daa
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4034d7a2892ede43f364d0ebdd105314b6107ff2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1f27689e6f1e573c85c869fda36881a53401084d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65580352"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547445"
 ---
 # <a name="create-report-history-reporting-services-in-sharepoint-integrated-mode"></a>보고서 기록 만들기(SharePoint 통합 모드의 Reporting Services)
   보고서 기록은 시간에 따라 만든 보고서 스냅샷의 모음입니다. 각 스냅샷은 생성 당시의 상태를 그대로 나타내는 보고서 복사본입니다. 스냅샷 생성 당시의 보고서 레이아웃 및 데이터가 포함됩니다. 렌더링 정보는 스냅샷에 저장되지 않습니다. 보고서 기록의 스냅샷을 열면 보고서 뷰어 웹 파트에 HTML로 열립니다. 렌더링된 후 스냅숏을 다른 애플리케이션 형식으로 내보낼 수 있습니다.  

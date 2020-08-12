@@ -1,5 +1,6 @@
 ---
 title: 집계 함수 참조(보고서 작성기) | Microsoft Docs
+description: 보고서 작성기에서 식에 기본 제공 집계 함수를 사용하여 보고서에 집계 값을 포함시킵니다.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: db6542ee-02d0-4073-90e6-cba8f9510fbb
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d5ef615a05648e2a5873e48371b1f1edaf754664
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0c767c4e4feced7f5979cf6b22e90cceef311ca5
+ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081322"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84255736"
 ---
 # <a name="report-builder-functions---aggregate-functions-reference"></a>보고서 작성기 함수 - 집계 함수 참조
   보고서에 집계 값을 포함하려면 식에서 기본 제공 집계 함수를 사용할 수 있습니다. 숫자 필드에 대한 기본 집계 함수는 SUM입니다. 식을 편집하고 다른 기본 제공 집계 함수를 사용하거나 다른 범위를 지정할 수 있습니다. 범위는 계산에 사용할 데이터 집합을 식별합니다.  
@@ -72,18 +73,18 @@ ms.locfileid: "77081322"
 |보고서의 위치|필드|매개 변수|ReportItems|PageNumber<br /><br /> TotalPages|DataSource<br /><br /> 데이터 세트|variables|RenderFormat|  
 |------------------------|------------|----------------|-----------------|-------------------------------|----------------------------|---------------|------------------|  
 |페이지 머리글<br /><br /> 페이지 바닥글|yes|yes|최대 하나<br /><br /> 참고 1|yes|yes|yes|yes|  
-|본문|yes<br /><br /> 참고 2|yes|현재 범위 또는 포함하는 범위의 항목만<br /><br /> 참고 3|예|yes|yes|yes|  
+|본문|예<br /><br /> 참고 2|예|현재 범위 또는 포함하는 범위의 항목만<br /><br /> 참고 3|예|yes|yes|yes|  
 |보고서 매개 변수|예|목록 앞부분의 매개 변수만<br /><br /> 참고 4|예|예|예|예|예|  
-|필드|yes|yes|예|예|예|예|예|  
-|쿼리 매개 변수|예|yes|예|예|예|예|예|  
-|그룹 식|yes|yes|예|예|yes|예|예|  
-|정렬 식|yes|yes|예|예|yes|yes<br /><br /> 참고 5|예|  
-|필터 식|yes|yes|예|예|yes|yes<br /><br /> 참고 6|예|  
-|코드|예|yes<br /><br /> 참고 7|예|예|예|예|예|  
-|보고서 언어|예|yes|예|예|예|예|예|  
-|variables|yes|yes|예|예|yes|현재 범위 또는 포함하는 범위|예|  
-|집계|yes|yes|페이지 머리글/페이지 바닥글에서만|보고서 항목 집계에서만|yes|예|예|  
-|조회 함수|yes|yes|yes|예|yes|예|예|  
+|필드|yes|예|예|예|예|예|예|  
+|쿼리 매개 변수|예|예|예|예|예|예|예|  
+|그룹 식|yes|예|예|예|예|예|예|  
+|정렬 식|yes|예|예|예|yes|yes<br /><br /> 참고 5|예|  
+|필터 식|yes|예|예|예|yes|yes<br /><br /> 참고 6|예|  
+|코드|예|예<br /><br /> 참고 7|예|예|예|예|예|  
+|보고서 언어|예|예|예|예|예|예|예|  
+|variables|yes|예|예|예|예|현재 범위 또는 포함하는 범위|예|  
+|집계|yes|yes|페이지 머리글/페이지 바닥글에서만|보고서 항목 집계에서만|예|예|예|  
+|조회 함수|yes|yes|예|예|예|예|예|  
   
 -   **참고 1.** ReportItems는 렌더링된 보고서 페이지에 있어야 하며, 그렇지 않은 경우 값이 null입니다. 보고서 항목의 표시 유형이 False로 계산되는 식에 따라 달라지는 경우 해당 보고서 항목이 페이지에 없습니다.  
   
@@ -108,12 +109,12 @@ ms.locfileid: "77081322"
   
 |Context|RunningValue|RowNumber|처음<br /><br /> 마지막|Previous|Sum 및 기타 미리 정렬 함수|ReportItem 집계|조회 함수|Aggregate 함수|  
 |-------------|------------------|---------------|--------------------|--------------|-------------------------------------|---------------------------|----------------------|------------------------|  
-|Running Value|예|예|예|예|yes|예|yes|예|  
-|처음<br /><br /> 마지막|예|예|예|예|yes|예|예|예|  
-|Previous|yes|yes|yes|예|yes|예|yes|예|  
-|Sum 및 기타 미리 정렬 함수|예|예|예|예|yes|예|yes|예|  
+|Running Value|예|예|예|예|예|예|예|예|  
+|처음<br /><br /> 마지막|예|예|예|예|예|예|예|예|  
+|Previous|yes|yes|예|예|예|예|예|예|  
+|Sum 및 기타 미리 정렬 함수|예|예|예|예|예|예|예|예|  
 |ReportItem 집계|예|예|예|예|예|예|예|예|  
-|조회 함수|yes|yes<br /><br /> 참고 1|yes<br /><br /> 참고 1|yes<br /><br /> 참고 1|yes<br /><br /> 참고 1|yes<br /><br /> 참고 1|예|예|  
+|조회 함수|yes|yes<br /><br /> 참고 1|예<br /><br /> 참고 1|예<br /><br /> 참고 1|예<br /><br /> 참고 1|예<br /><br /> 참고 1|예|예|  
 |Aggregate 함수|예|예|예|예|예|예|예|예|  
   
 -   **참고 1.** 집계 함수는 Lookup 함수가 집계에 포함되지 않은 경우 Lookup 함수의 *Source* 식 안에서만 허용됩니다. 집계 함수는 Lookup 함수의 *Destination* 또는 *Result* 식 안에서 허용되지 않습니다.  
@@ -173,7 +174,7 @@ ms.locfileid: "77081322"
 ##  <a name="testing-for-scope"></a><a name="TestingforScope"></a> 범위 테스트  
  다음 기본 제공 함수는 보고서 항목의 현재 컨텍스트를 테스트하여 특정 범위에 속하는지 확인합니다.  
   
-|함수|Description|  
+|기능|설명|  
 |--------------|-----------------|  
 |[InScope](../../reporting-services/report-design/report-builder-functions-inscope-function.md)|항목의 현재 인스턴스가 지정한 범위 내에 있는지 여부를 나타냅니다.|  
   
@@ -182,7 +183,7 @@ ms.locfileid: "77081322"
 ##  <a name="retrieving-recursive-level"></a><a name="RetrievingRecursiveLevel"></a> 재귀 수준 검색  
  다음 기본 제공 함수는 재귀 계층이 처리될 때 현재 수준을 검색합니다. 이 함수의 결과를 입력란의 **Padding** 속성에 사용하여 재귀 그룹에 대한 시각적 계층의 들여쓰기 수준을 제어할 수 있습니다. 자세한 내용은 [재귀 계층 구조 그룹 생성&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)을 참조하세요.  
   
-|함수|Description|  
+|기능|설명|  
 |--------------|-----------------|  
 |[Level](../../reporting-services/report-design/report-builder-functions-level-function.md)|재귀 계층의 현재 수준을 반환합니다.|  
   

@@ -1,5 +1,6 @@
 ---
 title: 폴더에 파일 업로드 | Microsoft Docs
+description: 파일 시스템에서 Reporting Services의 보고서 서버 데이터베이스에 다양한 파일 형식을 업로드하고 관리되는 항목으로 저장할 때 발생하는 상황을 알아봅니다.
 ms.date: 06/17/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 2f99a288-d4aa-4c64-b310-e457a2aef2c5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d93840b2b1b7354238ccae12ba3a540889038fb2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 94de4754811e1cb35c819b9cf8f4398b9e8c8634
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67228682"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547855"
 ---
 # <a name="upload-files-to-a-folder"></a>폴더에 파일 업로드
   파일 시스템에서 파일을 업로드하여 보고서 서버 데이터베이스에 관리되는 항목으로 저장할 수 있습니다. 파일을 업로드할 때 발생하는 상황은 파일 형식에 따라 다릅니다.  

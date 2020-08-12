@@ -1,5 +1,6 @@
 ---
 title: 차트의 축 레이블 서식 지정(보고서 작성기) | Microsoft Docs
+description: 보고서 작성기에서 대화 상자 또는 속성 창을 사용하여 관계를 분류하고 표시하는 방식으로 차트의 축 레이블 서식을 지정하는 방법을 알아봅니다.
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -25,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: ddf50dd5-5314-42ff-97f4-c3a4a17cfcdd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0838e5d0ea9c592a52408956b75ee651bcc542a4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5d44212b3d290f69f8565040d44946104f92b045
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77079915"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84880281"
 ---
 # <a name="formatting-axis-labels-on-a-chart-report-builder-and-ssrs"></a>차트의 축 레이블 서식 지정(보고서 작성기 및 SSRS)
   좌표 기반 차트 종류(세로 막대형, 가로 막대형, 영역형, 점, 꺾은선형 및 범위형)에는 데이터 관계를 범주화하고 표시하는 데 사용되는 두 개의 축이 있습니다. 각 축에는 다양한 유형의 서식이 지정됩니다.  
@@ -56,7 +57,7 @@ ms.locfileid: "77079915"
   
  축 눈금은 축을 따라 표시될 데이터 범위를 정의하는 최소값과 최대값으로 바인딩됩니다. 차트는 결과 집합의 값을 바탕으로 각 축에서 최소값과 최대값을 계산합니다. 값 축에서 눈금은 항상 값 필드의 가장 작은 수와 가장 큰 수에 의해 결정됩니다. 범주 축에서 최소값과 최대값 형식은 범주 필드의 형식에 따라 결정됩니다. 데이터 세트의 모든 필드는 세 가지 범주 필드 유형 중 하나로 분류할 수 있습니다. 다음 표에서는 이러한 세 가지 유형의 범주 필드에 대해 설명합니다.  
   
-|범주 필드 유형|Description|예제|  
+|범주 필드 유형|설명|예제|  
 |-------------------------|-----------------|-------------|  
 |숫자|범주는 x축을 따라 숫자순으로 표시됩니다.|x축을 따라 직원 ID 번호를 표시하는 직원 ID 번호별 판매 보고서|  
 |날짜/시간|범주는 시간순으로 x축을 따라 표시됩니다.|x축을 따라 서식이 지정된 날짜를 표시하는 월별 판매 보고서|  
@@ -75,7 +76,7 @@ ms.locfileid: "77079915"
 ### <a name="example-of-how-the-chart-calculates-axis-labels"></a>차트가 축 레이블을 계산하는 방법의 예  
  다음 표에는 세로 막대형 차트에 표시될 샘플 판매 데이터가 있습니다. 이름 필드는 범주 그룹 영역에 추가되고 수량 필드는 값 역에 추가됩니다.  
   
-|속성|수량|  
+|Name|수량|  
 |----------|--------------|  
 |Michael Blythe|229|  
 |Jae Pak|112|  

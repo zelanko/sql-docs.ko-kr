@@ -1,5 +1,6 @@
 ---
 title: StDev 함수(보고서 작성기) | Microsoft Docs
+description: 보고서 작성기의 StDev 함수는 식으로 지정된 Null이 아닌 모든 숫자 값의 표준 편차를 반환합니다.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: cb51e96e-a828-42f0-b67c-cee3f4d221e7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bbf17d4c642d3ccdb14f6a6f1f42212d6e9152a7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: aabefbf7eab7393702ccc99d9a62fdd9032540ab
+ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081146"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84462277"
 ---
 # <a name="report-builder-functions---stdev-function"></a>보고서 작성기 함수 - StDev 함수
   식으로 지정되어 정해진 범위에서 계산되는 Null이 아닌 모든 숫자 값의 표준 편차를 반환합니다.  

@@ -1,5 +1,6 @@
 ---
 title: DataSources 및 DataSets 컬렉션 참조(보고서 작성기) | Microsoft Docs
+description: 데이터 원본 및 데이터 세트의 컬렉션에 대해 알아봅니다. 보고서 작성기에서 보고서 서버에 보고서를 게시한 후 이를 사용하도록 설정하는 방법을 알아봅니다.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: f951a4aa-da55-4e43-8579-4a5d4480d11f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2f65020a094258e4d6ee4a3906d29d33438b0783
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8310d67c8305101b1729446d4d9e25bc463ea0fd
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081462"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681272"
 ---
 # <a name="built-in-collections---datasources-and-datasets-references-report-builder"></a>기본 제공 컬렉션 - DataSources 및 데이터 세트 참조(보고서 작성기)
   **DataSources** 컬렉션은 보고서에 사용되는 모든 데이터 원본을 나타냅니다. 마찬가지로 **DataSets** 컬렉션은 보고서의 모든 데이터 원본에 대한 모든 데이터 세트를 나타냅니다. **보고서 데이터** 창을 사용하여 참조하는 데이터 원본 아래에 구성된 보고서 데이터 세트를 계층적으로 볼 수 있습니다. 이러한 컬렉션에 대한 참조를 추가할 경우 보고서를 미리 볼 때 값이 표시되지 않습니다. 이러한 컬렉션은 보고서가 보고서 서버에 게시된 다음에만 사용할 수 있습니다.  
@@ -26,8 +27,8 @@ ms.locfileid: "77081462"
   
 |**변수**|**형식**|**설명**|  
 |------------------|--------------|---------------------|  
-|**DataSourceReference**|**String**|보고서 서버에 있는 데이터 원본 정의의 전체 경로입니다. 예를 들어 보고서 기록의 일부로 보고서에 사용된 모든 데이터 원본 목록을 포함할 수 있습니다. 다음 예에서는 AdventureWorks2012라는 데이터 원본의 전체 경로를 보여 줍니다.<br /><br /> `/DataSources/AdventureWorks2012`입니다.|  
-|**형식**|**String**|데이터 원본의 데이터 공급자 유형입니다. `SQL`)을 입력합니다.|  
+|**DataSourceReference**|**String**|보고서 서버에 있는 데이터 원본 정의의 전체 경로입니다. 예를 들어 보고서 기록의 일부로 보고서에 사용된 모든 데이터 원본 목록을 포함할 수 있습니다. 다음 예에서는 AdventureWorks2012라는 데이터 원본의 전체 경로를 보여 줍니다.<br /><br /> `/DataSources/AdventureWorks2012`.|  
+|**형식**|**String**|데이터 원본의 데이터 공급자 유형입니다. 예들 들어 `SQL`입니다.|  
   
 ## <a name="datasets"></a>DataSets  
  **DataSets** 컬렉션은 보고서 정의에 참조되는 데이터 세트를 나타냅니다. 보고서에 입력란으로 쿼리를 포함하면 보고서에 정확히 어떤 데이터가 있는지 알고자 하는 사용자가 원본 명령 텍스트를 볼 수 있습니다. 이 컬렉션은 **미리 보기** 모드에서는 사용할 수 없습니다. 다음 표에서는 **DataSets** 컬렉션의 멤버를 설명합니다.  

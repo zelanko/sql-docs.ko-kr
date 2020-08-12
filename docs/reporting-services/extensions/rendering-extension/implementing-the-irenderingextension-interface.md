@@ -1,5 +1,6 @@
 ---
 title: IRenderingExtension 인터페이스 구현 | Microsoft Docs
+description: IRenderingExtension 인터페이스를 구현하는 방법을 알아봅니다. 이 인터페이스는 보고서 데이터를 뷰어, 프린터 및 기타 대상에서 사용하는 출력 형식으로 변환합니다.
 ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 74b2f2b7-6796-42da-ab7d-b05891ad4001
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e19691222fd55350bb3f0da7aaf94a983ec620cd
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8e53f229aff5a0093a38d4d785994514aeb1e971
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63193590"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529449"
 ---
 # <a name="implementing-the-irenderingextension-interface"></a>IRenderingExtension 인터페이스 구현
   렌더링 확장 프로그램은 실제 데이터와 결합된 보고서 정의에서 결과를 가져오고 결과 데이터를 사용 가능한 형식으로 렌더링합니다. 결합된 데이터의 변환과 형식 지정은 <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension>을 구현하는 CLR(공용 언어 런타임) 클래스를 사용하여 수행됩니다. 이것은 개체 모델을 뷰어, 프린터 또는 기타 출력 대상에서 사용할 수 있는 출력 형식으로 변환합니다.  
@@ -47,7 +48,7 @@ ms.locfileid: "63193590"
 -   *createAndRegisterStream*은 렌더링할 스트림을 가져오기 위해 호출되는 대리자 함수입니다.  
   
 ### <a name="deviceinfo-parameter"></a>deviceInfo 매개 변수  
- *deviceInfo* 매개 변수에는 보고서 매개 변수가 아니라 렌더링 매개 변수가 포함됩니다. 이러한 렌더링 매개 변수는 렌더링 확장 프로그램에 전달됩니다. *deviceInfo* 값은 보고서 서버에서 <xref:System.Collections.Specialized.NameValueCollection> 개체로 변환됩니다. *deviceInfo* 매개 변수의 항목은 대소문자를 구분하지 않는 값으로 처리됩니다. 렌더링 요청이 URL 액세스 결과로 이루어진 경우 `rc:key=value` 형식의 URL 매개 변수가 *deviceInfo* 사전 개체의 키/값 쌍으로 변환됩니다. 브라우저 감지 코드는 *clientCapabilities* 사전에 EcmaScriptVersion, JavaScript, MajorVersion, MinorVersion, Win32, Type 및 AcceptLanguage 항목을 제공합니다. 렌더링 확장 프로그램에서 인식할 수 없는 *deviceInfo* 매개 변수의 이름/값 쌍은 무시됩니다. 다음 코드 예제는 아이콘을 검색하는 예제 <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.GetRenderingResource%2A> 메서드를 보여 줍니다.  
+ *deviceInfo* 매개 변수에는 보고서 매개 변수가 아니라 렌더링 매개 변수가 포함됩니다. 이러한 렌더링 매개 변수는 렌더링 확장 프로그램에 전달됩니다. *deviceInfo* 값은 보고서 서버에서 <xref:System.Collections.Specialized.NameValueCollection> 개체로 변환됩니다. *deviceInfo* 매개 변수의 항목은 대소문자를 구분하지 않는 값으로 처리됩니다. 렌더링 요청이 URL 액세스 결과로 이루어진 경우 `rc:key=value` 형식의 URL 매개 변수가 *deviceInfo* 사전 개체의 키/값 쌍으로 변환됩니다. 브라우저 감지 코드는 *clientCapabilities* 사전에서 다음 항목도 제공합니다. EcmaScriptVersion, JavaScript, MajorVersion, MinorVersion, Win32, Type, AcceptLanguage. 렌더링 확장 프로그램에서 인식할 수 없는 *deviceInfo* 매개 변수의 이름/값 쌍은 무시됩니다. 다음 코드 예제는 아이콘을 검색하는 예제 <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.GetRenderingResource%2A> 메서드를 보여 줍니다.  
   
 ```csharp  
 public void GetRenderingResource (CreateStream createStreamCallback, NameValueCollection deviceInfo)  
