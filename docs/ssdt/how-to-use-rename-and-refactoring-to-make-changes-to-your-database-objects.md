@@ -1,5 +1,6 @@
 ---
 title: 데이터베이스 개체를 변경하기 위한 이름 바꾸기 및 리팩터링
+description: Transact-SQL 편집기에 있는 이름 바꾸기 및 리팩터링 메뉴에 대해 알아봅니다. 형식 이름을 바꾸고, 개체 스키마를 전환하고, 와일드카드를 확장하고, 이름을 정규화하는 방법을 확인합니다.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -12,16 +13,15 @@ f1_keywords:
 ms.assetid: f35520e6-8e6e-47b1-87a3-22c0cf2cabdb
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: ac10530cf2fa3831a26733e7470b6bd107d17121
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8ca1ef866a86f71eaa1b5f7dfa94821c94da5588
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75244238"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895837"
 ---
 # <a name="how-to-use-rename-and-refactoring-to-make-changes-to-your-database-objects"></a>방법: 이름 바꾸기 및 리팩터링을 사용하여 데이터베이스 개체 변경
 

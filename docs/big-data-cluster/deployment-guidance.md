@@ -5,53 +5,51 @@ description: Kubernetes에 SQL Server 빅 데이터 클러스터를 배포하는
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 11/04/2019
+ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 828ad42bd6ecdc31d6e1c99a489fb4cbe8548d0e
-ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
+ms.openlocfilehash: 4bca65dbae188c02ddc85bc385f6ada912111efb
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80531082"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159371"
 ---
 # <a name="how-to-deploy-big-data-clusters-2019-on-kubernetes"></a>Kubernetes에 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]를 배포하는 방법
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 SQL Server 빅 데이터 클러스터는 Kubernetes 클러스터에 docker 컨테이너로 배포됩니다. 다음은 설치 및 구성 단계의 개요입니다.
 
-- 단일 VM, VM 클러스터 또는 AKS(Azure Kubernetes Service)에서 Kubernetes 클러스터를 설정합니다.
+- 단일 VM, VM 클러스터, AKS(Azure Kubernetes Service), Red Hat OpenShift 또는 ARO(Azure Red Hat OpenShift)에서 Kubernetes 클러스터를 설정합니다.
 - 클라이언트 머신에 클러스터 구성 도구 `azdata`를 설치합니다.
 - Kubernetes 클러스터에 SQL Server 빅 데이터 클러스터를 배포합니다.
 
-## <a name="install-sql-server-2019-big-data-tools"></a>SQL Server 2019 빅 데이터 도구 설치
+## <a name="supported-platforms"></a>지원 플랫폼
 
-SQL Server 2019 빅 데이터 클러스터를 배포하기 전에 먼저 [빅 데이터 도구를 설치](deploy-big-data-tools.md)합니다.
+SQL Server 빅 데이터 클러스터 배포를 위해 유효성이 검사된 다양한 Kubernetes 플랫폼의 전체 목록은 [지원되는 플랫폼](release-notes-big-data-cluster.md#supported-platforms)을 참조하세요.
 
-- `azdata`
-- `kubectl`
-- Azure Data Studio
-- Azure Data Studio용 [데이터 가상화 확장](../azure-data-studio/data-virtualization-extension.md)
+### <a name="sql-server-editions"></a>SQL Server 버전
 
-## <a name="kubernetes-prerequisites"></a><a id="prereqs"></a> Kubernetes 필수 조건
+|버전|메모|
+|---------|---------|
+|Enterprise<br/>Standard<br/>Developer| 빅 데이터 클러스터 버전은 SQL Server 마스터 인스턴스에 의해 결정됩니다. 배포 시점에는 기본적으로 개발자 버전이 배포됩니다. 배포 후에 버전을 변경할 수 있습니다. [SQL Server 마스터 인스턴스 구성](../big-data-cluster/configure-sql-server-master-instance.md)을 참조하세요. |
 
-[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]를 사용하려면 서버와 클라이언트 모두에 Kubernetes v1.13 이상이 필요합니다(kubectl).
-
-> [!NOTE]
-> 클라이언트 및 서버 Kubernetes 버전은 바로 이전 또는 이후 부 버전 이내여야 합니다. 자세한 내용은 [Kubernetes 릴리스 정보 및 버전 기울이기 SKU 정책](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/release/versioning.md#supported-releases-and-component-skew)을 참조하세요.
+## <a name="kubernetes"></a><a id="prereqs"></a> Kubernetes
 
 ### <a name="kubernetes-cluster-setup"></a><a id="kubernetes"></a> Kubernetes 클러스터 설정
 
 위 필수 조건을 충족하는 Kubernetes 클러스터가 이미 있는 경우에는 [배포 단계](#deploy)로 건너뛰어도 됩니다. 이 섹션에서는 Kubernetes 개념에 대한 기본 지식이 있다고 가정합니다.  Kubernetes에 대한 자세한 내용은 [Kubernetes 설명서](https://kubernetes.io/docs/home)를 참조하세요.
 
-다음 세 가지 방법 중 하나로 Kubernetes를 배포할 수 있습니다.
+다음 방법으로 Kubernetes를 배포할 수 있습니다.
 
 | Kubernetes 배포 위치: | Description | 링크 |
 |---|---|---|
 | **AKS(Azure Kubernetes Service)** | Azure의 관리되는 Kubernetes 컨테이너 서비스입니다. | [지침](deploy-on-aks.md) |
 | **단일 또는 여러 머신(`kubeadm`)** | `kubeadm`을 사용하여 물리적 머신 또는 가상 머신에 배포된 Kubernetes 클러스터입니다. | [지침](deploy-with-kubeadm.md) |
+|**Azure Red Hat OpenShift** | Azure에서 실행되는 OpenShift의 관리형 제품입니다. | [지침](deploy-openshift.md)|
+|**Red Hat OpenShift**|하이브리드 클라우드 엔터프라이즈 Kubernetes 애플리케이션 플랫폼입니다.| [지침](deploy-openshift.md)|
 
 > [!TIP]
 > AKS 및 빅 데이터 클러스터의 배포를 한 단계로 스크립팅할 수도 있습니다. 자세한 내용은 [python 스크립트](quickstart-big-data-cluster-deploy.md) 또는 Azure Data Studio [Notebook](notebooks-deploy.md)의 작업 방법을 참조하세요.
@@ -75,6 +73,16 @@ Kubernetes 클러스터를 구성한 후에는 새로운 SQL Server 빅 데이�
 
 AKS에서 배포하는 경우에는 스토리지를 설치할 필요가 없습니다. AKS는 동적 프로비저닝을 사용하는 기본 제공 스토리지 클래스를 제공합니다. 배포 구성 파일에서 스토리지 클래스(`default` 또는 `managed-premium`)를 사용자 지정할 수 있습니다. 기본 제공 프로필은 `default` 스토리지 클래스를 사용합니다. `kubeadm`을 사용하여 배포한 Kubernetes 클러스터에 배포하는 경우 원하는 크기의 클러스터에 대해 충분한 스토리지를 사용할 수 있는지 사용할 수 있게 구성되어 있는지 확인해야 합니다. 스토리지를 사용하는 방법을 사용자 지정하려는 경우 계속하기 전에 이 작업을 수행해야 합니다. [Kubernetes의 SQL Server 빅 데이터 클러스터를 사용한 데이터 지속성](concept-data-persistence.md)을 참조하세요.
 
+## <a name="install-sql-server-2019-big-data-tools"></a>SQL Server 2019 빅 데이터 도구 설치
+
+SQL Server 2019 빅 데이터 클러스터를 배포하기 전에 먼저 [빅 데이터 도구를 설치](deploy-big-data-tools.md)합니다.
+
+- `azdata`
+- `kubectl`
+- Azure Data Studio
+- Azure Data Studio용 [데이터 가상화 확장](../azure-data-studio/data-virtualization-extension.md)
+
+
 ## <a name="deployment-overview"></a><a id="deploy"></a> 배포 개요
 
 대부분의 빅 데이터 클러스터 설정은 JSON 배포 구성 파일에 정의되어 있습니다. `kubeadm`으로 만든 AKS 및 Kubernetes 클러스터에 기본 배포 프로필을 사용해도 되고, 설치 중에 사용할 고유한 배포 구성 파일을 사용자 지정할 수도 있습니다. 보안을 위해 인증 설정은 환경 변수를 통해 전달됩니다.
@@ -94,23 +102,18 @@ AKS에서 배포하는 경우에는 스토리지를 설치할 필요가 없습�
 azdata bdc config list -o table 
 ```
 
-예를 들어 SQL Server 2019 RTM 서비스 업데이트(GDR1) 릴리스의 경우 위의 명령이 다음을 반환합니다.
-
-```
-Result
-----------------
-aks-dev-test
-aks-dev-test-ha
-kubeadm-dev-test
-kubeadm-prod
-```
+다음 템플릿은 SQL Server 2019 CU5에서 사용할 수 있습니다. 
 
 | 배포 프로필 | Kubernetes 환경 |
 |---|---|
 | `aks-dev-test` | AKS(Azure Kubernetes Service)에 SQL Server 빅 데이터 클러스터 배포|
 | `aks-dev-test-ha` | AKS(Azure Kubernetes Service)에 SQL Server 빅 데이터 클러스터를 배포합니다. SQL Server 마스터 및 HDFS 이름 노드와 같은 중요 업무용 서비스는 고가용성 중심으로 구성됩니다.|
+| `aro-dev-test`|개발 및 테스트를 위해 Azure Red Hat OpenShift에 SQL Server 빅 데이터 클러스터를 배포합니다. <br/><br/>SQL Server 2019 CU 5에서 도입되었습니다.|
+| `aro-dev-test-ha`|개발 및 테스트를 위해 Red Hat OpenShift 클러스터에 고가용성 SQL Server 빅 데이터 클러스터를 배포합니다. <br/><br/>SQL Server 2019 CU 5에서 도입되었습니다.|
 | `kubeadm-dev-test` | 단일 또는 여러 물리적 머신이나 가상 머신을 사용하여 kubeadm으로 만든 Kubernetes 클러스터에 SQL Server 빅 데이터 클러스터를 배포합니다.|
 | `kubeadm-prod`| 단일 또는 여러 물리적 머신이나 가상 머신을 사용하여 kubeadm으로 만든 Kubernetes 클러스터에 SQL Server 빅 데이터 클러스터를 배포합니다. 이 템플릿을 사용하여 빅 데이터 클러스터 서비스를 Active Directory와 통합할 수 있습니다. SQL Server 마스터 인스턴스 및 HDFS 이름 노드와 같은 중요 업무용 서비스는 고가용성 구성으로 배포됩니다.  |
+| `openshift-dev-test`|개발 및 테스트를 위해 Red Hat OpenShift 클러스터에 SQL Server 빅 데이터 클러스터를 배포합니다. <br/><br/>SQL Server 2019 CU 5에서 도입되었습니다.|
+| `openshift-prod`|Red Hat OpenShift 클러스터에 고가용성 SQL Server 빅 데이터 클러스터를 배포합니다. <br/><br/>SQL Server 2019 CU 5에서 도입되었습니다.|
 
 `azdata bdc create`를 실행하여 빅 데이터 클러스터를 배포할 수 있습니다. 기본 구성 중 하나를 선택하라는 메시지가 표시되고 배포 과정이 안내됩니다.
 
@@ -127,7 +130,7 @@ azdata bdc create --accept-eula=yes
 
 ## <a name="custom-configurations"></a><a id="customconfig"></a> 사용자 지정 구성
 
-또한 실행하려는 워크로드에 맞게 배포를 사용자 지정할 수 있습니다. 배포 후 빅 데이터 클러스터 서비스의 크기(복제본 수) 또는 스토리지 설정을 변경할 수 없으므로, 용량 이슈가 없도록 배포 구성을 신중하게 계획해야 합니다. 배포를 사용자 지정하려면 다음 단계를 수행합니다.
+또한 실행하려는 워크로드에 맞게 배포를 사용자 지정할 수 있습니다. 배포 후 빅 데이터 클러스터 서비스의 스케일(복제본 수) 또는 스토리지 설정을 변경할 수 없으므로, 용량 이슈가 없도록 배포 구성을 신중하게 계획해야 합니다. 배포를 사용자 지정하려면 다음 단계를 수행합니다.
 
 1. Kubernetes 환경과 일치하는 표준 배포 프로필 중 하나로 시작합니다. 다음과 같이 `azdata bdc config list` 명령을 사용하여 프로필을 나열할 수 있습니다.
 
@@ -171,8 +174,8 @@ azdata bdc create --accept-eula=yes
 
 | 환경 변수 | 요구 사항 |Description |
 |---|---|---|
-| `AZDATA_USERNAME` | 필수 |SQL Server 빅 데이터 클러스터 관리자의 사용자 이름입니다. 이름이 같은 sysadmin 로그인이 SQL Server 마스터 인스턴스에 만들어집니다. 보안 모범 사례에 따라 `sa` 계정은 사용하지 않도록 설정됩니다. |
-| `AZDATA_PASSWORD` | 필수 |위에서 만든 사용자 계정의 암호입니다. Knox 게이트웨이 및 HDFS를 보호하는 데 사용되는 것과 동일한 암호가 `root` 사용자에게 사용됩니다. |
+| `AZDATA_USERNAME` | 필수 |SQL Server 빅 데이터 클러스터 관리자의 사용자 이름입니다. 이름이 같은 sysadmin 로그인이 SQL Server 마스터 인스턴스에 만들어집니다. 보안 모범 사례에 따라 `sa` 계정은 사용하지 않도록 설정됩니다. <br/><br/>[!INCLUDE [big-data-cluster-root-user](../includes/big-data-cluster-root-user.md)]|
+| `AZDATA_PASSWORD` | 필수 |위에서 만든 사용자 계정의 암호입니다. SQL Server 2019 CU5 이전에 배포된 클러스터에서 `root` 사용자에 동일한 암호를 사용하여 Knox 게이트웨이 및 HDFS를 보호합니다. |
 | `ACCEPT_EULA`| `azdata`를 처음 사용하는 경우 필수| "예"로 설정합니다. 환경 변수로 설정하면 SQL Server와 `azdata`에 모두 EULA가 적용됩니다. 환경 변수로 설정하지 않을 경우 `azdata`를 처음 사용할 때 `--accept-eula=yes`를 포함할 수 있습니다.|
 | `DOCKER_USERNAME` | 옵션 | 프라이빗 리포지토리에 저장된 컨테이너 이미지에 액세스하는 데 사용할 사용자 이름입니다. 빅 데이터 클러스터 배포에서 프라이빗 Docker 리포지토리를 사용하는 방법에 대한 자세한 내용은 [오프라인 배포](deploy-offline.md) 항목을 참조하세요.|
 | `DOCKER_PASSWORD` | 옵션 |위 프라이빗 리포지토리에 액세스하는 데 사용할 암호입니다. |
@@ -193,9 +196,9 @@ SET AZDATA_PASSWORD=<password>
 ```
 
 > [!NOTE]
-> 위의 암호를 사용하여 Knox 게이트웨이에 `root` 사용자를 사용해야 합니다. `root`는 이 기본 인증(사용자 이름/암호)에서 유일하게 지원되는 사용자입니다.
+> SQL Server 2019 CU 5 이전에 배포된 클러스터에서 위의 암호를 사용하여 Knox 게이트웨이에 `root` 사용자를 사용해야 합니다. `root`는 이 기본 인증(사용자 이름/암호)에서 유일하게 지원되는 사용자입니다.
+> [!INCLUDE [big-data-cluster-root-user](../includes/big-data-cluster-root-user.md)]
 > 기본 인증을 사용하여 SQL Server에 연결하려면 AZDATA_USERNAME 및 AZDATA_PASSWORD [환경 변수](#env)와 동일한 값을 사용합니다. 
-
 
 환경 변수를 설정한 후에는 `azdata bdc create`를 실행하여 배포를 트리거해야 합니다. 이 예제에서는 위에서 만든 클러스터 구성 프로필을 사용합니다.
 

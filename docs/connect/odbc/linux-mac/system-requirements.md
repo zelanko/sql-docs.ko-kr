@@ -1,5 +1,6 @@
 ---
-title: 시스템 요구 사항(ODBC Driver for SQL Server) | Microsoft Docs
+title: 시스템 요구 사항(ODBC Driver for SQL Server)
+description: Linux 및 macOS 운영 체제 기반 ODBC Driver for SQL Server의 시스템 요구 사항을 나열합니다.
 ms.custom: ''
 ms.date: 03/18/2020
 ms.prod: sql
@@ -14,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: f03b7fdd-0e9d-4e74-958d-e8c87e027348
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2459a9f57f3591db1107994d0b18770690f22724
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 01a5dd44d111fd72d76db244c8135d3bdde00ec8
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80921174"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86391758"
 ---
-# <a name="system-requirements"></a>시스템 요구 사항
+# <a name="system-requirements-linux-and-macos"></a>시스템 요구 사항(Linux 및 macOS)
 
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
@@ -33,7 +34,7 @@ Linux 및 macOS 드라이버 SQL 버전 호환성은 [Windows 드라이버 SQL �
 
 ## <a name="operating-system-support"></a>운영 체제 지원
 
-Linux 및 macOS 드라이버 버전 17, 13.1 및 13은 다음 운영 체제의 64비트 버전에서 지원됩니다.
+Linux 및 macOS 드라이버 버전 17, 13.1 및 13은 다음 운영 체제의 x64 아키텍처에서 지원됩니다.
 
 |지원되는 운영 체제     |17.5|17.4|17.3|17.2|17.1|17.0|13.1|13|
 |-------------------------------|----|----|----|----|----|----|----|--|
@@ -66,7 +67,7 @@ Linux 및 macOS 드라이버 버전 17, 13.1 및 13은 다음 운영 체제의 6
   
 * 64비트 SQLLEN/SQLULEN용으로 빌드된 64비트 UnixODBC 2.3.0 드라이버 관리자입니다. 이후 버전의 64비트 UnixODBC 드라이버 관리자는 Linux 기반 ODBC 드라이버로 지원되지 않습니다. 자세한 내용은 [Installing the Driver Manager](../../../connect/odbc/linux-mac/installing-the-driver-manager.md) 을 참조하세요.  
   
-* ODBC Driver for **Red Hat Enterprise Linux 5(64비트)** 에는 다음 패키지가 필요하며 여기에서 다운로드할 수 있습니다. [Microsoft ODBC Driver 11 for SQL Server - Red Hat Linux](https://go.microsoft.com/fwlink/?LinkId=267321)  
+* ODBC Driver for **Red Hat Enterprise Linux 5(64비트)** 에는 다음 패키지가 필요하며 [Microsoft ODBC Driver 11 for SQL Server - Red Hat Linux](https://go.microsoft.com/fwlink/?LinkId=267321)에서 다운로드할 수 있습니다.  
   * `glibc`  
   * `libgcc`  
   * `libstdc++`  
@@ -74,7 +75,7 @@ Linux 및 macOS 드라이버 버전 17, 13.1 및 13은 다음 운영 체제의 6
   * `krb5-libs`  
   * `openssl`  
   
-* ODBC Driver for  **Red Hat Enterprise Linux 6(64비트)** 에는 다음 패키지가 필요하며 여기에서 다운로드할 수 있습니다. [Microsoft ODBC Driver 11 for SQL Server - Red Hat Linux](https://go.microsoft.com/fwlink/?LinkId=267321)  
+* ODBC Driver for **Red Hat Enterprise Linux 6(64비트)** 에는 다음 패키지가 필요하며 [Microsoft ODBC Driver 11 for SQL Server - Red Hat Linux](https://go.microsoft.com/fwlink/?LinkId=267321)에서 다운로드할 수 있습니다.  
   * `glibc`  
   * `libgcc`  
   * `libstdc++`  
@@ -82,7 +83,7 @@ Linux 및 macOS 드라이버 버전 17, 13.1 및 13은 다음 운영 체제의 6
   * `krb5-libs`  
   * `openssl`  
   
-* ODBC Driver for **SUSE Linux Enterprise 11 Service Pack 2(64비트)** 에는 다음 패키지가 필요하며 여기에서 다운로드할 수 있습니다. [Microsoft ODBC Driver 11 Preview for SQL Server - SUSE Linux](https://go.microsoft.com/fwlink/?LinkId=264916)  
+* ODBC Driver for **SUSE Linux Enterprise 11 서비스 팩 2(64비트)** 에는 다음 패키지가 필요하며 [Microsoft ODBC Driver 11 Preview for SQL Server - SUSE Linux](https://go.microsoft.com/fwlink/?LinkId=264916)에서 다운로드할 수 있습니다.  
   * `glibc`  
   * `libstdc++46`  
   * `libgcc46`  

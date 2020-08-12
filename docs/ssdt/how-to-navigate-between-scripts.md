@@ -1,5 +1,6 @@
 ---
 title: 스크립트 간 이동
+description: Transact-SQL 편집기에서 스크립트를 탐색하는 방법을 알아봅니다. 정의로 이동 및 모든 참조 찾기 같은 도구를 사용하는 방법을 보여 주는 예를 봅니다.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -8,16 +9,15 @@ f1_keywords:
 ms.assetid: 8664bde5-86ff-4e8b-b5a6-af003316f6ad
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 910011609e928efe9180a3aa4f041aa063adbab4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f0b21634e2655d67812d9c6096c9d63633130c7a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241377"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896625"
 ---
 # <a name="how-to-navigate-between-scripts"></a>방법: 스크립트 간 이동
 

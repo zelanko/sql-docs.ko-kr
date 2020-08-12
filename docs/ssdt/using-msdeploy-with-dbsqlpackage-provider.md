@@ -1,33 +1,33 @@
 ---
 title: dbSqlPackage 공급자와 함께 MSDeploy 사용
+description: 사용되지 않는 MSDeploy 공급자 DbSqlPackage에 대해 알아봅니다. 매개 변수, 예, 대체 SQL Server 및 SQL Azure 데이터베이스 게시 도구를 봅니다.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 213b91ab-03e9-431a-80f0-17eed8335abe
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 04/26/2017
-ms.openlocfilehash: f4c45335bae79a0307be27efb88cb0858bd6439f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5a0bda3b935a7123de3c8766a40e7d7f8df5a0d0
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75243559"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899741"
 ---
 # <a name="using-msdeploy-with-dbsqlpackage-provider"></a>dbSqlPackage 공급자와 함께 MSDeploy 사용
 
 **DbSqlPackage**는 SQL Server/SQL Azure 데이터베이스와 상호 작용할 수 있는 **MSDeploy** 공급자입니다. **DbSqlPackage**에서는 다음 작업을 지원합니다.  
   
--   **Extract**: 라이브 SQL Server 또는 SQL Azure 데이터베이스에서 데이터베이스 스냅샷(.dacpac) 파일을 만듭니다.  
+-   **추출**: 라이브 SQL Server 또는 SQL Azure 데이터베이스에서 데이터베이스 스냅샷(.dacpac) 파일을 만듭니다.  
   
--   **Publish**: 원본 .dacpac 파일의 스키마와 일치하도록 데이터베이스 스키마를 증분식으로 업데이트합니다.  
+-   **게시**: 원본 .dacpac 파일의 스키마와 일치하도록 데이터베이스 스키마를 증분식으로 업데이트합니다.  
   
 -   **DeployReport**: 게시 작업으로 변경된 사항의 XML 보고서를 만듭니다.  
   
--   **Script**: 게시 작업에서 실행하는 스크립트와 같은 Transact\-SQL 스크립트를 만듭니다.  
+-   **스크립트**: 게시 작업에서 실행하는 스크립트와 같은 Transact\-SQL 스크립트를 만듭니다.  
   
 DACFx에 대한 자세한 내용은 [https://msdn.microsoft.com/library/microsoft.sqlserver.dac.aspx](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.aspx)의 DACFx 관리되는 API 설명서 또는 [SqlPackage.exe](../tools/sqlpackage.md)(DACFx 명령줄 도구)를 참조하세요.  
   
@@ -174,12 +174,12 @@ MS-Deploy 명령줄에서 **–verb** 스위치를 사용하여 MS-Deploy 동사
   
 |매개 변수|기본값|Description|  
 |-------------|-----------|---------------|  
-|**OutputPath**={ *string* }|해당 없음|**dbSqlPackage**에 ‘문자열’로 지정된 디스크 위치에 DeployReport XML 출력 파일 또는 Script SQL 출력 파일을 만들도록 지시하는 선택적 매개 변수입니다.  이 작업은 문자열로 지정된 위치에 현재 존재하는 모든 스크립트를 덮어씁니다.|  
+|**OutputPath**={ *string* }|해당 없음|**dbSqlPackage**에 ‘문자열’로 지정된 디스크 위치에 DeployReport XML 출력 파일 또는 Script SQL 출력 파일을 만들도록 지시하는 선택적 매개 변수입니다.** 이 작업은 문자열로 지정된 위치에 현재 존재하는 모든 스크립트를 덮어씁니다.|  
   
 > [!NOTE]  
 > **OutputPath** 매개 변수가 **DeployReport** 또는 **Script** 작업에 제공되지 않은 경우 출력이 메시지로 반환됩니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
 다음은 **dbSqlPackage**를 사용하는 **Extract** 작업의 예제 구문입니다.  
   
 ```  

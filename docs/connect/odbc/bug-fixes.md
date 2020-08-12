@@ -14,12 +14,12 @@ ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 author: v-chojas
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: d839caa5bd89e2ae4db4ab797ab4d5ca1967c13a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cf563e5d074f9e4629eb3b9f63304104167394a4
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "82153220"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091807"
 ---
 # <a name="list-of-bugs-fixed"></a>버그 수정 목록
 
@@ -51,8 +51,8 @@ ms.locfileid: "82153220"
 
 ### <a name="bug-fixes-in-the-msconame-odbc-driver-174-for-ssnoversion"></a>[!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17.4 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대한 버그 수정
 
-- MARS(Multiple Active Results Sets)를 사용할 때의 간헐적인 중단 수정
-- 비동기 알림을 사용할 때의 연결 복원력 중지 수정
+- MARS(Multiple Active Results Sets)를 사용하는 경우 드라이버가 응답을 멈추는 일시적인 문제 해결
+- 비동기 알림을 사용하는 경우 드라이버가 응답을 멈추는 연결 복원력 문제 해결
 - 다중 스레드 연결 시도에 대한 진단 레코드를 검색할 때의 크래시 해결
 - SQL_USER_NAME 및 SQL_DATA_SOURCE_READ_ONLY를 사용하여 SQLGetInfo()를 호출한 후 다시 연결 시 '암호화가 지원되지 않음' 수정
 - Azure Active Directory 대화형 인증 중 COM 초기화 오류 수정
@@ -94,7 +94,7 @@ ms.locfileid: "82153220"
 
 - Kerberos 인증을 사용할 때 대량 삽입이 실패하고 "액세스 거부" 오류가 발생하는 버그 수정
 - 2\.3.1 이전 버전에 존재하는 unixODBC 버그에 대한 해결 방법 제거(드라이버가 unixODBC로 전달되는 특정 버퍼의 크기를 두 배로 증가시킴)
-- ColumnEncryption=enabled를 사용할 때의 연결 복원력(다시 연결) 중단 수정
+- ColumnEncryption=enabled를 사용하는 경우 응답을 멈추는 연결 복원력(다시 연결) 수정
 - "Active Directory 대화형 인증" 옵션을 사용할 때 Azure 인증 창이 응답하지 않을 수 있는 DSN 생성 버그 수정(Windows)
 - 비동기 실행을 사용할 때 ODBC를 종료하는 동안 드물게 발생하는 크래시 수정(연결 핸들을 지울 때 발생)
 - SQL 드라이버에서 긴 저장 프로시저를 실행하는 동안 CPU 사용량이 높은 경우 발생하는 문제 해결

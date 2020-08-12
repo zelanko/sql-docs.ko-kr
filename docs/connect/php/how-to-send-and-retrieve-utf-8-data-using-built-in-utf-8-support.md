@@ -1,5 +1,6 @@
 ---
-title: '방법: 기본 제공 UTF-8 지원을 사용하여 UTF-8 데이터 보내기 및 검색 | Microsoft Docs'
+title: '방법: 기본 제공 UTF-8 지원을 사용하여 UTF-8 데이터 보내기 및 검색'
+description: PHP용 드라이버에 기본 제공되는 UTF-8 지원을 사용하여 UTF-8로 인코딩된 데이터를 보내고 검색하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 03/23/2018
 ms.prod: sql
@@ -14,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: 366c57cf-352f-4202-8074-6ddce44880d1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fe406ec4c1a198a6657da987e58bcfea289c41fd
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: bf7ec186a6a233d12034114f88b98efea50e72f9
+ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80916009"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86381016"
 ---
-# <a name="how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support"></a>기본 제공 UTF-8 지원을 사용하여 UTF-8 데이터를 보내고 검색하는 방법
+# <a name="how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support"></a>방법: 기본 제공 UTF-8 지원을 사용하여 UTF-8 데이터 보내기 및 검색
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 PDO_SQLSRV 드라이버를 사용하는 경우 PDO::SQLSRV_ATTR_ENCODING 특성으로 인코딩을 지정할 수 있습니다. 자세한 내용은 [상수&#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)를 참조하세요.  

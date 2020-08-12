@@ -1,24 +1,24 @@
 ---
 title: SSDT(SQL Server Data Tools) 다운로드
+description: SSDT(SQL Server Data Tools)에 대해 자세히 알아봅니다. Visual Studio 2019 및 Visual Studio 2017을 사용하여 이 데이터베이스 개발 도구 집합을 설치하는 방법을 확인합니다.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssdt
 ms.topic: conceptual
 keywords: ssdt 설치, ssdt 다운로드, 최신 ssdt
 ms.assetid: b0fc4987-d260-4d0a-9dd1-98099835b361
-author: markingmyname
-ms.author: maghan
-manager: jroth
-ms.reviewer: ''
+author: dzsquared
+ms.author: drskwier
+ms.reviewer: maghan
 ms.custom: seo-lt-2019
 ms.date: 02/20/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: ca30249097fa9ad4eec386ca0fc0698976e5362a
-ms.sourcegitcommit: 48e259549f65f0433031ed6087dbd5d9c0a51398
+ms.openlocfilehash: dbaaa71b61129d0bb1917644c017122e6ed88bf4
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80809591"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279003"
 ---
 # <a name="download-sql-server-data-tools-ssdt-for-visual-studio"></a>Visual Studio용 SSDT(SQL Server Data Tools) 다운로드
 
@@ -39,19 +39,19 @@ Visual Studio 2019에서는 Analysis Services, Integration Services 및 Reportin
 
 ### <a name="install-ssdt-with-visual-studio-2019"></a>Visual Studio 2019를 사용하여 SSDT 설치
 
-[Visual Studio 2019](https://docs.microsoft.com/visualstudio/install/install-visual-studio?view=vs-2019)가 이미 설치된 경우 워크로드 목록을 편집하여 SSDT를 포함할 수 있습니다.
+[Visual Studio 2019](https://docs.microsoft.com/visualstudio/install/install-visual-studio?view=vs-2019)가 이미 설치된 경우 워크로드 목록을 편집하여 SSDT를 포함할 수 있습니다. Visual Studio 2019가 설치되지 않은 경우 [Visual Studio 2019 Community](https://visualstudio.microsoft.com/downloads/)를 다운로드하고 설치할 수 있습니다.
 
-* SQL Database 프로젝트의 경우, **데이터 스토리지 및 처리**에서 **SQL Server Data Tools**를 선택합니다.
+* SQL Database 프로젝트의 경우, 워크로드 목록의 **데이터 스토리지 및 처리**에서 **SQL Server Data Tools**를 선택합니다.
 
    ![데이터 스토리지 및 처리 워크로드](../ssdt/media/download-sql-server-data-tools-ssdt/data-workload-2019.png)
 
 * Analysis Services, Integration Services 또는 Reporting Services 프로젝트의 경우 *도구 > 확장 및 업데이트*에서나 [Marketplace](https://marketplace.visualstudio.com/search?term=services&target=VS&category=All%20categories&vsVersion=&sortBy=Relevance)에서 적절한 [확장](https://docs.microsoft.com/visualstudio/ide/finding-and-using-visual-studio-extensions)을 설치할 수 있습니다.
 
-Visual Studio 2019가 설치되지 않은 경우 [Visual Studio 2019 Community](https://visualstudio.microsoft.com/downloads/)를 다운로드하고 설치할 수 있습니다. 
+* [Analysis Services](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftAnalysisServicesModelingProjects)
 
-* SQL Database 프로젝트의 경우, 설치하는 동안 워크로드 목록의 **데이터 스토리지 및 처리**에서 **SQL Server Data Tools**를 선택합니다.
+* [Integration Services](https://marketplace.visualstudio.com/items?itemName=SSIS.SqlServerIntegrationServicesProjects)
 
-* Analysis Services, Integration Services 또는 Reporting Services 프로젝트의 경우 *도구 > 확장 및 업데이트*에서나 [Marketplace](https://marketplace.visualstudio.com/search?term=services&target=VS&category=All%20categories&vsVersion=&sortBy=Relevance)에서 적절한 [확장](https://docs.microsoft.com/visualstudio/ide/finding-and-using-visual-studio-extensions)을 설치할 수 있습니다.
+* [Reporting Services](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftReportProjectsforVisualStudio)
 
 ## <a name="ssdt-for-visual-studio-2017"></a>Visual Studio 2017용 SSDT
 
@@ -79,10 +79,10 @@ Analysis Services, Integration Services 및 Reporting Services 프로젝트 지�
 
 ## <a name="ssdt-for-vs-2017-standalone-installer"></a>VS 2017용 SSDT(독립 실행형 설치 관리자)
 
-[![다운로드](../ssdt/media/download.png) Visual Studio 2017용 SSDT(15.9.4) 다운로드](https://go.microsoft.com/fwlink/?linkid=2124518 )
+:::image type="icon" source="media/download.png" border="false"::: **[Visual Studio 2017용 SSDT(15.9.5) 다운로드](https://go.microsoft.com/fwlink/?linkid=2131035)**
 
 > [!IMPORTANT]
-> * Visual Studio 2017용 SSDT(15.9.4)를 설치하기 전에 *Analysis Services Projects* 및 *Reporting Services Projects* 확장이 이미 설치되어 있는 경우 모두 제거하고, VS 인스턴스를 모두 닫습니다.
+> * Visual Studio 2017용 SSDT(15.9.5)를 설치하기 전에 *Analysis Services Projects* 및 *Reporting Services Projects* 확장이 이미 설치되어 있는 경우 모두 제거하고, VS 인스턴스를 모두 닫습니다. 
 > * SQL Server 2017용 수신함 구성 요소 파워 쿼리 원본을 제거했습니다. 이제 SQL Server 2017 및 2019용 파워 쿼리 원본을 기본 구성 요소로 발표했습니다. 이 구성 요소는 [여기](https://www.microsoft.com/download/details.aspx?id=100619)에서 다운로드할 수 있습니다.
 > * Oracle 및 Teradata 커넥터를 사용하고 SQL 2019보다 이전 버전의 SQL Server를 대상으로 지정하여 패키지를 디자인하려면 [Microsoft Oracle Connector for SQL 2019](https://www.microsoft.com/download/details.aspx?id=58228) 및 [Microsoft Teradata Connector for SQL 2019](https://www.microsoft.com/download/details.aspx?id=100599) 외에도 해당 버전의 Microsoft Connector for Oracle 및 Teradata by Attunity를 설치해야 합니다.
 >    * [SQL Server 2017을 대상으로 하는 Microsoft Connector Version 5.0 for Oracle 및 Teradata by Attunity](https://www.microsoft.com/download/details.aspx?id=55179)
@@ -102,17 +102,17 @@ Visual Studio 2017용 SSDT는 Visual Studio와 동일한 [시스템 요구 사�
 
 이 **VS 2017용 SSDT** 릴리스는 다음 언어로 설치할 수 있습니다.
 
-* [중국어(간체)]( https://go.microsoft.com/fwlink/?linkid=2124518&clcid=0x804)
-* [중국어(번체)]( https://go.microsoft.com/fwlink/?linkid=2124518&clcid=0x404)
-* [영어(미국)]( https://go.microsoft.com/fwlink/?linkid=2124518&clcid=0x409)
-* [프랑스어]( https://go.microsoft.com/fwlink/?linkid=2124518&clcid=0x40c)
-* [독일어]( https://go.microsoft.com/fwlink/?linkid=2124518&clcid=0x407)
-* [이탈리아어]( https://go.microsoft.com/fwlink/?linkid=2124518&clcid=0x410)
-* [일본어]( https://go.microsoft.com/fwlink/?linkid=2124518&clcid=0x411)
-* [한국어]( https://go.microsoft.com/fwlink/?linkid=2124518&clcid=0x412)
-* [포르투갈어(브라질)]( https://go.microsoft.com/fwlink/?linkid=2124518&clcid=0x416)
-* [러시아어]( https://go.microsoft.com/fwlink/?linkid=2124518&clcid=0x419)
-* [스페인어]( https://go.microsoft.com/fwlink/?linkid=2124518&clcid=0x40a)
+* [중국어(간체)](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x804)
+* [중국어(번체)](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x404)
+* [영어(미국)](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x409)
+* [프랑스어](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x40c)
+* [독일어](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x407)
+* [이탈리아어](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x410)
+* [일본어](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x411)
+* [한국어](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x412)
+* [포르투갈어(브라질)](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x416)
+* [러시아어](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x419)
+* [스페인어](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x40a)
 
 ### <a name="considerations-and-limitations"></a>고려 사항 및 제한 사항
 
@@ -139,7 +139,7 @@ Visual Studio 2017용 SSDT는 Visual Studio와 동일한 [시스템 요구 사�
 1. `vs_setup.exe --NoWeb`을 실행하여 VS2017 Shell 및 SQL Server Data Project를 설치합니다.
 
 2. 레이아웃 폴더에서 `SSDT-Setup-ENU.exe /install`을 실행하고 SSIS/SSRS/SSAS를 선택합니다.
-   * 무인 설치의 경우 `SSDT-Setup-ENU.exe /INSTALLALL[:vsinstances] /passive`를 실행합니다.
+   a. 무인 설치의 경우 `SSDT-Setup-ENU.exe /INSTALLALL[:vsinstances] /passive`를 실행합니다.
 
 사용 가능한 옵션을 보려면 `SSDT-Setup-ENU.exe /help`를 실행하세요.
 
@@ -162,6 +162,16 @@ Visual Studio 2015 및 2017용 SSDT는 둘 다 DacFx 17.4.1을 사용합니다. 
 
 Visual Studio 2015용 SSDT 또는 SSDT의 이전 버전을 다운로드하고 설치하려면 [SQL Server Data Tools의 이전 릴리스(SSDT 및 SSDT-BI)](previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi.md)를 참조하세요.
 
+## <a name="see-also"></a>참고 항목
+
+* [SSDT MSDN 포럼](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=ssdt) 
+
+* [SSDT 팀 블로그](https://blogs.msdn.com/b/ssdt/)
+
+* [DACFx API 참조](https://msdn.microsoft.com/library/dn645454.aspx)
+
+* [SSMS(SQL Server Management Studio) 다운로드](../ssms/download-sql-server-management-studio-ssms.md)
+
 ## <a name="next-steps"></a>다음 단계
 
 SSDT를 설치한 후에는 아래 자습서를 통해 SSDT를 사용하여 데이터베이스, 패키지, 데이터 모델을 만들고 보고서를 작성하는 방법을 알아보세요.
@@ -175,13 +185,3 @@ SSDT를 설치한 후에는 아래 자습서를 통해 SSDT를 사용하여 데�
 * [기본 테이블 보고서 만들기(SSRS 자습서)](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
-
-## <a name="see-also"></a>참고 항목
-
-* [SSDT MSDN 포럼](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=ssdt) 
-
-* [SSDT 팀 블로그](https://blogs.msdn.com/b/ssdt/)
-
-* [DACFx API 참조](https://msdn.microsoft.com/library/dn645454.aspx)
-
-* [SSMS(SQL Server Management Studio) 다운로드](../ssms/download-sql-server-management-studio-ssms.md)

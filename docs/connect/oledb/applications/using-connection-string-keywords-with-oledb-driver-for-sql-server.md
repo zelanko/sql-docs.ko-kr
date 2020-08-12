@@ -17,15 +17,15 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, connection string keywords
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: c1e7a40207665515e164ba4449715f8443616c17
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 9883323fd6474c05a2bf3a830206c01f52274272
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633913"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007008"
 ---
 # <a name="using-connection-string-keywords-with-ole-db-driver-for-sql-server"></a>SQL Server용 OLE DB 드라이버에서 연결 문자열 키워드 사용
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -98,12 +98,13 @@ ms.locfileid: "81633913"
 |**Net**|SSPROP_INIT_NETWORKLIBRARY|**Network**의 동의어입니다.|  
 |**Network**|SSPROP_INIT_NETWORKLIBRARY|조직의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 연결하는 데 사용하는 네트워크 라이브러리입니다.|  
 |**Network Library**|SSPROP_INIT_NETWORKLIBRARY|**Network**의 동의어입니다.|  
-|**PacketSize**|SSPROP_INIT_PACKETSIZE|네트워크 패킷 크기입니다. 기본값은 4096입니다.|  
+|**PacketSize**|SSPROP_INIT_PACKETSIZE|TDS(Tabular Data Stream) 패킷 크기입니다. 기본값은 0입니다(실제 값은 서버에서 결정함).|  
 |**PersistSensitive**|DBPROP_AUTH_PERSIST_SENSITIVE_AUTHINFO|`yes` 및 `no` 문자열을 값으로 허용합니다. `no`를 사용할 경우, 중요한 인증 정보를 데이터 원본 개체에 유지할 수 없습니다.|  
 |**PWD**|DBPROP_AUTH_PASSWORD|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 로그인 암호입니다.|  
 |**Server**|DBPROP_INIT_DATASOURCE|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스의 이름입니다. 이 값은 네트워크의 서버 이름(IP 주소)이거나 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 구성 관리자 별칭이어야 합니다.<br /><br /> 지정하지 않으면 로컬 컴퓨터의 기본 인스턴스에 연결합니다.<br /><br /> **Address** 키워드는 **Server** 키워드를 재정의합니다.<br /><br /> 다음 중 하나를 지정하여 로컬 서버에서 기본 인스턴스에 연결할 수 있습니다.<br /><br /> **Server=;**<br /><br /> **Server=.;**<br /><br /> **Server=(local);**<br /><br /> **Server=(local);**<br /><br /> **Server=(localhost);**<br /><br /> **Server=(localdb)\\** *instancename* **;**<br /><br /> LocalDB 지원에 대한 자세한 내용은 [OLE DB Driver for SQL Server의 LocalDB 지원](../../oledb/features/oledb-driver-for-sql-server-support-for-localdb.md)을 참조하세요.<br /><br /> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 명명된 인스턴스를 지정하려면 **\\** _InstanceName_을 추가합니다.<br /><br /> 서버를 지정하지 않으면 로컬 컴퓨터의 기본 인스턴스에 연결합니다.<br /><br /> IP 주소를 지정하는 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 구성 관리자에서 TCP/IP 또는 명명된 파이프 프로토콜이 설정되어 있는지 확인합니다.<br /><br /> **Server** 키워드에 대한 전체 구문은 다음과 같습니다.<br /><br /> **Server=** [_protocol_ **:** ]*Server*[ **,** _port_]<br /><br /> _protocol_ 은 **tcp** (TCP/IP), **lpc** (공유 메모리) 또는 **np** (명명된 파이프)일 수 있습니다.<br /><br /> 다음 예제는 명명된 파이프를 지정하는 방법입니다.<br /><br /> `np:\\.\pipe\MSSQL$MYINST01\sql\query`<br /><br /> 위 줄은 명명된 파이프 프로토콜(`np`), 로컬 머신의 명명된 파이프(`\\.\pipe`), [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스 이름(`MSSQL$MYINST01`) 및 명명된 파이프의 기본 이름(`sql/query`)을 지정합니다.<br /><br /> *protocol* 및 **Network** 키워드를 모두 지정하지 않은 경우 OLE DB Driver for SQL Server는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 구성 관리자에서 지정한 프로토콜 순서를 사용합니다.<br /><br /> *port*는 지정한 서버에서 연결할 포트입니다. 기본적으로 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]는 포트 1433을 사용합니다.<br /><br /> OLE DB Driver for SQL Server를 사용하는 경우 연결 문자열에서 **Server**에 전달된 값의 시작 부분에서 공백이 무시됩니다.|   
 |**ServerSPN**|SSPROP_INIT_SERVERSPN|서버의 SPN입니다. 기본값은 빈 문자열입니다. 빈 문자열을 지정하면 OLE DB Driver for SQL Server는 공급자가 생성한 기본 SPN을 사용합니다.|  
 |**Timeout**|DBPROP_INIT_TIMEOUT|데이터 원본 초기화가 완료될 때까지 기다릴 시간(초)입니다.|  
+|**TransparentNetworkIPResolution**|SSPROP_INIT_TNIR|호스트 이름의 첫 번째 확인된 IP가 응답하지 않고 호스트 이름과 연결된 여러 IP가 있는 경우 연결 시퀀스에 영향을 미칩니다. TNIR은 MultiSubnetFailover와 상호 작용하여 다른 연결 시퀀스를 제공합니다. 가능한 값은 `Yes` 및 `No`입니다. 기본값은 `Yes`입니다. 자세한 내용은 [투명 네트워크 IP 확인 사용](../../oledb/features/using-transparent-network-ip-resolution.md)을 참조하세요.|  
 |**Trusted_Connection**|DBPROP_AUTH_INTEGRATED|`yes`인 경우 OLE DB Driver for SQL Server에서 Windows 인증을 사용하여 로그인의 유효성을 검사합니다. 그렇지 않으면 OLE DB Driver for SQL Server에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 사용자 이름과 암호를 사용하여 로그인의 유효성을 검사하므로 UID 및 PWD 키워드를 지정해야 합니다.|  
 |**TrustServerCertificate**<a href="#table1_1"><sup>**1**</sup></a>|SSPROP_INIT_TRUST_SERVER_CERTIFICATE|`yes` 및 `no` 문자열을 값으로 허용합니다. 기본값은 `no`이며, 서버 인증서의 유효성을 검사합니다.|  
 |**UID**|DBPROP_AUTH_USERID|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 로그인 이름입니다.|  
@@ -160,11 +161,12 @@ ms.locfileid: "81633913"
 |**MultiSubnetFailover**|SSPROP_INIT_MULTISUBNETFAILOVER|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 가용성 그룹 또는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(failover) 클러스터 인스턴스의 가용성 그룹 수신기에 연결할 때는 항상 **MultiSubnetFailover=True**를 지정합니다. **MultiSubnetFailover=True**는 (현재) 활성 상태인 서버를 더 빠르게 검색하고 연결할 수 있도록 SQL Server용 OLE DB 드라이버를 구성합니다. 가능한 값은 `True` 및 `False`입니다. 기본값은 `False`입니다. 다음은 그 예입니다.<br /><br /> `MultiSubnetFailover=True`<br /><br /> OLE DB Driver for SQL Server의 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 지원에 대한 자세한 내용은 [OLE DB Driver for SQL Server의 고가용성, 재해 복구 지원](../features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)을 참조하세요.|  
 |**Network Address**|SSPROP_INIT_NETWORKADDRESS|조직의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스 네트워크 주소입니다.<br /><br /> 유효한 주소 구문에 대한 자세한 내용은 이 항목에 있는 **Address** 키워드에 대한 설명을 참조하십시오.|  
 |**Network Library**|SSPROP_INIT_NETWORKLIBRARY|조직의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 연결하는 데 사용하는 네트워크 라이브러리입니다.|  
-|**Packet Size**|SSPROP_INIT_PACKETSIZE|네트워크 패킷 크기입니다. 기본값은 4096입니다.|  
+|**Packet Size**|SSPROP_INIT_PACKETSIZE|TDS(Tabular Data Stream) 패킷 크기입니다. 기본값은 0입니다(실제 값은 서버에서 결정함).|  
 |**암호**|DBPROP_AUTH_PASSWORD|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 로그인 암호입니다.|  
 |**Persist Security Info**|DBPROP_AUTH_PERSIST_SENSITIVE_AUTHINFO|`true` 및 `false` 문자열을 값으로 허용합니다. `false`인 경우 중요한 인증 정보를 데이터 원본 개체에 유지할 수 없습니다.|  
 |**공급자**||OLE DB Driver for SQL Server의 경우 "MSOLEDBSQL"이어야 합니다.|  
 |**Server SPN**|SSPROP_INIT_SERVERSPN|서버의 SPN입니다. 기본값은 빈 문자열입니다. 빈 문자열을 지정하면 OLE DB Driver for SQL Server는 공급자가 생성한 기본 SPN을 사용합니다.|  
+|**TransparentNetworkIPResolution**|SSPROP_INIT_TNIR|호스트 이름의 첫 번째 확인된 IP가 응답하지 않고 호스트 이름과 연결된 여러 IP가 있는 경우 연결 시퀀스에 영향을 미칩니다. TNIR은 MultiSubnetFailover와 상호 작용하여 다른 연결 시퀀스를 제공합니다. 가능한 값은 `True` 및 `False`입니다. 기본값은 `True`입니다. 자세한 내용은 [투명 네트워크 IP 확인 사용](../../oledb/features/using-transparent-network-ip-resolution.md)을 참조하세요.|  
 |**서버 인증서 신뢰**<a href="#table2_1"><sup>**1**</sup></a>|SSPROP_INIT_TRUST_SERVER_CERTIFICATE|`true` 및 `false` 문자열을 값으로 허용합니다. 기본값은 `false`이며, 서버 인증서의 유효성을 검사합니다.|  
 |**데이터에 대해 암호화 사용**<a href="#table2_1"><sup>**1**</sup></a>|SSPROP_INIT_ENCRYPT|데이터를 네트워크를 통해 보내기 전에 암호화해야 하는지 여부를 지정합니다. 가능한 값은 `true` 및 `false`입니다. 기본값은 `false`입니다.|  
 |**Use FMTONLY**|SSPROP_INIT_USEFMTONLY|[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 이상에 연결할 때 메타데이터를 검색하는 방법을 제어합니다. 가능한 값은 `true` 및 `false`입니다. 기본값은 `false`입니다.<br /><br />기본적으로 OLE DB Driver for SQL Server는 [sp_describe_first_result_set](../../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md) 및 [sp_describe_undeclared_parameters](../../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md) 저장 프로시저를 사용하여 메타데이터를 검색합니다. 이러한 저장 프로시저에는 몇 가지 제한 사항이 있습니다(예: 임시 테이블에서 실행할 경우 실패함). **Use FMTONLY**를 `true`로 설정하면 드라이버가 메타데이터 검색을 위해 [SET FMTONLY](../../../t-sql/statements/set-fmtonly-transact-sql.md)를 대신 사용합니다.|  
@@ -219,11 +221,12 @@ ms.locfileid: "81633913"
 |**MultiSubnetFailover**|SSPROP_INIT_MULTISUBNETFAILOVER|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 가용성 그룹 또는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(failover) 클러스터 인스턴스의 가용성 그룹 수신기에 연결할 때는 항상 **MultiSubnetFailover=True**를 지정합니다. **MultiSubnetFailover=True**는 (현재) 활성 상태인 서버를 더 빠르게 검색하고 연결할 수 있도록 SQL Server용 OLE DB 드라이버를 구성합니다. 가능한 값은 `True` 및 `False`입니다. 기본값은 `False`입니다. 다음은 그 예입니다.<br /><br /> `MultiSubnetFailover=True`<br /><br /> OLE DB Driver for SQL Server의 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 지원에 대한 자세한 내용은 [OLE DB Driver for SQL Server의 고가용성, 재해 복구 지원](../features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)을 참조하세요.|  
 |**Network Address**|SSPROP_INIT_NETWORKADDRESS|조직의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스 네트워크 주소입니다.<br /><br /> 유효한 주소 구문에 대한 자세한 내용은 이 항목에 있는 **Address** 키워드에 대한 설명을 참조하십시오.|  
 |**Network Library**|SSPROP_INIT_NETWORKLIBRARY|조직의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 연결하는 데 사용하는 네트워크 라이브러리입니다.|  
-|**Packet Size**|SSPROP_INIT_PACKETSIZE|네트워크 패킷 크기입니다. 기본값은 4096입니다.|  
+|**Packet Size**|SSPROP_INIT_PACKETSIZE|TDS(Tabular Data Stream) 패킷 크기입니다. 기본값은 0입니다(실제 값은 서버에서 결정함).|  
 |**암호**|DBPROP_AUTH_PASSWORD|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 로그인 암호입니다.|  
 |**Persist Security Info**|DBPROP_AUTH_PERSIST_SENSITIVE_AUTHINFO|`true` 및 `false` 문자열을 값으로 허용합니다. `false`인 경우 중요한 인증 정보를 데이터 원본 개체에 유지할 수 없습니다.|  
 |**공급자**||OLE DB Driver for SQL Server의 경우 값은 `MSOLEDBSQL`입니다.|  
 |**Server SPN**|SSPROP_INIT_SERVERSPN|서버의 SPN입니다. 기본값은 빈 문자열입니다. 빈 문자열을 지정하면 OLE DB Driver for SQL Server는 공급자가 생성한 기본 SPN을 사용합니다.|  
+|**TransparentNetworkIPResolution**|SSPROP_INIT_TNIR|호스트 이름의 첫 번째 확인된 IP가 응답하지 않고 호스트 이름과 연결된 여러 IP가 있는 경우 연결 시퀀스에 영향을 미칩니다. TNIR은 MultiSubnetFailover와 상호 작용하여 다른 연결 시퀀스를 제공합니다. 가능한 값은 `True` 및 `False`입니다. 기본값은 `True`입니다. 자세한 내용은 [투명 네트워크 IP 확인 사용](../../oledb/features/using-transparent-network-ip-resolution.md)을 참조하세요.|  
 |**서버 인증서 신뢰**<a href="#table3_1"><sup>**1**</sup></a>|SSPROP_INIT_TRUST_SERVER_CERTIFICATE|`true` 및 `false` 문자열을 값으로 허용합니다. 기본값은 `false`이며, 서버 인증서의 유효성을 검사합니다.|  
 |**데이터에 대해 암호화 사용**<a href="#table3_1"><sup>**1**</sup></a>|SSPROP_INIT_ENCRYPT|데이터를 네트워크를 통해 보내기 전에 암호화해야 하는지 여부를 지정합니다. 가능한 값은 `true` 및 `false`입니다. 기본값은 `false`입니다.|  
 |**Use FMTONLY**|SSPROP_INIT_USEFMTONLY|[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 이상에 연결할 때 메타데이터를 검색하는 방법을 제어합니다. 가능한 값은 `true` 및 `false`입니다. 기본값은 `false`입니다.<br /><br />기본적으로 OLE DB Driver for SQL Server는 [sp_describe_first_result_set](../../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md) 및 [sp_describe_undeclared_parameters](../../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md) 저장 프로시저를 사용하여 메타데이터를 검색합니다. 이러한 저장 프로시저에는 몇 가지 제한 사항이 있습니다(예: 임시 테이블에서 실행할 경우 실패함). **Use FMTONLY**를 `true`로 설정하면 드라이버가 메타데이터 검색을 위해 [SET FMTONLY](../../../t-sql/statements/set-fmtonly-transact-sql.md)를 대신 사용합니다.|  

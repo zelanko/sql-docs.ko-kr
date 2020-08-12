@@ -1,7 +1,7 @@
 ---
 title: '자습서: 보안 Enclave를 사용한 Always Encrypted로 .NET 애플리케이션 개발 | Microsoft Docs'
 ms.custom: ''
-ms.date: 10/18/2019
+ms.date: 07/09/2020
 ms.reviewer: v-kaywon
 ms.prod: sql
 ms.prod_service: connectivity
@@ -10,12 +10,12 @@ ms.tgt_pltfrm: ''
 ms.topic: tutorial
 author: karinazhou
 ms.author: v-jizho2
-ms.openlocfilehash: 82ecd3fa04bbab0a1512ede08ebbc8bfaa3011f9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4af6f82c310393871434010480f0bb57bfca670f
+ms.sourcegitcommit: 7ce4a81c1b91239c8871c50f97ecaf387f439f6c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75244047"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86217751"
 ---
 # <a name="tutorial-develop-a-net-application-using-always-encrypted-with-secure-enclaves"></a>자습서: 보안 Enclave를 사용한 Always Encrypted로 .NET 애플리케이션 개발
 
@@ -25,7 +25,10 @@ ms.locfileid: "75244047"
 
 이 자습서에서는 [보안 enclave를 사용한 Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-enclaves.md)에 대해 서버 쪽 보안 enclave를 사용하는 데이터베이스 쿼리를 실행하는 간단한 애플리케이션을 개발하는 방법을 알아봅니다.
 
-## <a name="prerequisites"></a>사전 요구 사항
+> [!NOTE]
+> 보안 Enclave를 사용한 Always Encrypted는 Windows에서만 지원됩니다.
+
+## <a name="prerequisites"></a>필수 구성 요소
 
 이 자습서는 [자습서: SSMS를 사용하여 보안 enclave를 사용한 Always Encrypted 시작](../../../relational-databases/security/tutorial-getting-started-with-always-encrypted-enclaves.md)에서 이어집니다. 해당 자습서를 완료한 후에 아래 단계를 수행해야 합니다.
 

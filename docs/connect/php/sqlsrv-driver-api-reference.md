@@ -1,5 +1,6 @@
 ---
-title: SQLSRV 드라이버 API 참조 | Microsoft Docs
+title: SQLSRV 드라이버 API 참조
+description: PHP용 SQLSRV 드라이버 API 참조에서는 사용 가능한 함수, 매개 변수 및 반환 값을 설명합니다.
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 0b55da26-ddeb-4e89-872a-91e0aba57103
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a05b7a39bce6fb263b63bdbfa4644c78175a584c
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 01dfb59cd433a545efbe7376fd369c897ee4f693
+ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928234"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86381077"
 ---
 # <a name="sqlsrv-driver-api-reference"></a>SQLSRV 드라이버 API 참조
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -25,7 +26,7 @@ ms.locfileid: "80928234"
 ## <a name="in-this-section"></a>섹션 내용  
 SQLSRV 드라이버에는 다음과 같은 함수가 포함되어 있습니다.  
   
-|함수|Description|  
+|기능|설명|  
 |------------|---------------|  
 |[sqlsrv_begin_transaction](../../connect/php/sqlsrv-begin-transaction.md)|트랜잭션을 시작합니다.|  
 |[sqlsrv_cancel](../../connect/php/sqlsrv-cancel.md)|문을 취소하고 문에 대한 모든 보류 중인 결과를 삭제합니다.|  

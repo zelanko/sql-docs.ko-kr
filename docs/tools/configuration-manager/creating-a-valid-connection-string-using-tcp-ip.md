@@ -1,5 +1,6 @@
 ---
 title: TCP/IP를 사용하여 유효한 연결 문자열 만들기
+description: TCP/IP를 사용하여 SQL Server 인스턴스에 연결할 때 유효한 연결 문자열을 만드는 방법을 알아봅니다. 올바른 문자열의 예를 확인합니다.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,15 +18,15 @@ ms.assetid: ee5dbc2c-1fc6-42bd-bdf5-efa792557934
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1d257a0b1f6a6022ff5816ce6fab7378f05f89e9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 71c1c8e7dfa12a270ee32cc7740efc6770026d1a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306472"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899716"
 ---
 # <a name="creating-a-valid-connection-string-using-tcp-ip"></a>TCP/IP를 사용하여 유효한 연결 문자열 만들기
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   TCP/IP를 사용하여 유효한 연결 문자열을 만들려면 다음을 수행해야 합니다.  
   
 -   **별칭**을 지정합니다.  
@@ -56,7 +57,7 @@ WHERE session_id = @@SPID;
   
 ```  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  서버 이름으로 연결  
   
 ```  

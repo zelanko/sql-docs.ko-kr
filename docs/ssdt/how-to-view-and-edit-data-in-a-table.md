@@ -1,5 +1,6 @@
 ---
 title: 테이블의 데이터 보기 및 편집
+description: 데이터 편집기를 사용하여 기존 테이블의 데이터를 보고 편집하고 삭제하는 방법을 알아봅니다. 스크립트 양식에서 변경 내용을 확인하고 스크립트 파일에 저장하는 방법을 확인합니다.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -9,16 +10,15 @@ f1_keywords:
 ms.assetid: bb67ce83-a87a-4e14-84cd-9a5930fe74c8
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 557b5d5c5986b47eab22bb9d70bd8103c5032eeb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7c8321f4f1264b8bf0352f459bde02a07e439dd3
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75226755"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895795"
 ---
 # <a name="how-to-view-and-edit-data-in-a-table"></a>방법: 테이블의 데이터 보기 및 편집
 

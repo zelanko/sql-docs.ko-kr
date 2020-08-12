@@ -1,21 +1,21 @@
 ---
 title: 연결 문자열 및 권한
+description: SQL Server 단위 테스트를 실행하는 데 필요한 연결 문자열, 계정 및 권한에 대해 알아봅니다. 연결 문자열을 구성하는 방법을 확인합니다.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: ceff114e-a738-46ad-9785-b6647a2247f9
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 37e1b0c050da78722422d9bf20e4eae310565ec1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 292901b39a4c4f6732290ba7425f26f0bc1e6c48
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75243755"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901101"
 ---
 # <a name="overview-of-connection-strings-and-permissions"></a>연결 문자열 및 사용 권한 개요
 

@@ -2,21 +2,21 @@
 title: Python 및 R 구성 요소 업그레이드
 description: sqlbindr.exe를 사용해서 Machine Learning Server에 바인딩하여 SQL Server Machine Learning Services 또는 SQL Server R Services에서 Python 및 R을 업그레이드합니다.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 04/03/2020
-ms.topic: conceptual
+ms.topic: how-to
 author: cawrites
 ms.author: chadam
 monikerRange: =sql-server-2016||=sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: 4aebb9e64c73762166aa81aebd1bfbab22191bfc
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 918ab8c2b1e643196e99cd11ff92c07c3978e078
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487390"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900076"
 ---
 # <a name="upgrade-machine-learning-python-and-r-components-in-sql-server-instances"></a>SQL Server 인스턴스에서 Machine Learning(Python 및 R) 구성 요소 업그레이드
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 SQL Server의 Python 및 R 통합에는 오픈 소스 및 Microsoft 고유 패키지가 포함되어 있습니다.
                                                                                
@@ -263,9 +263,9 @@ SQL Server 설치 프로그램을 실행하여 Python 및 R 기능이 포함된 
 
 |속성|Description|
 |------|------|
-|*list*| 현재 컴퓨터의 모든 SQL Database 인스턴스 ID 목록을 표시합니다.|
-|*bind*| 지정된 SQL Database 인스턴스를 최신 버전의 R 서버로 업그레이드하고 인스턴스가 R Server의 향후 업그레이드를 자동으로 가져오도록 합니다.|
-|*unbind*|지정된 SQL Database 인스턴스에서 최신 버전의 R Server를 제거하고 향후 R Server 업그레이드가 인스턴스에 영향을 주지 않도록 합니다.|
+|*list*| 현재 컴퓨터의 모든 SQL Server 인스턴스 ID 목록을 표시합니다.|
+|*bind*| 지정된 SQL Server 인스턴스를 최신 버전의 R 서버로 업그레이드하고 인스턴스가 R Server의 향후 업그레이드를 자동으로 가져오도록 합니다.|
+|*unbind*|지정된 SQL Server 인스턴스에서 최신 버전의 R Server를 제거하고 향후 R Server 업그레이드가 인스턴스에 영향을 주지 않도록 합니다.|
 
 <a name="sqlbindr-error-codes"><a/>
 

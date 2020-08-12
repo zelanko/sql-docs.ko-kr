@@ -1,5 +1,6 @@
 ---
-title: JDBC 드라이버 관련 문제 진단 | Microsoft Docs
+title: JDBC 드라이버 관련 문제 진단
+description: 오류 처리, 드라이버 버전 및 추적과 같은 문제를 진단하고 해결하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 723e2680-a0c5-4a7d-a319-1e49e41078cf
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3728ac03477099b81ee51e8cbb779d9773984dbb
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: f51f21c3ede1a3bd11cb73e5b9b2fbecfdd851d9
+ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922424"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86381033"
 ---
 # <a name="diagnosing-problems-with-the-jdbc-driver"></a>JDBC 드라이버 관련 문제 진단
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -26,7 +27,7 @@ ms.locfileid: "80922424"
   
 ## <a name="in-this-section"></a>섹션 내용  
   
-|항목|Description|  
+|항목|설명|  
 |-----------|-----------------|  
 |[오류 처리](../../connect/jdbc/handling-errors.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 반환된 오류를 처리하는 방법에 대해 설명합니다.|  
 |[드라이버 버전 가져오기](../../connect/jdbc/getting-the-driver-version.md)|설치된 JDBC 드라이버 버전을 확인하는 방법에 대해 설명합니다.|  

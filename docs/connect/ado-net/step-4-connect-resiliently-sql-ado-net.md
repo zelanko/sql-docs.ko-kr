@@ -1,6 +1,6 @@
 ---
-title: '4단계: ADO.NET으로 SQL에 탄력적으로 연결 | Microsoft Docs'
-description: SQL에 탄력적으로 연결하는 방법을 설명합니다.
+title: '4단계: ADO.NET을 사용하여 탄력적으로 SQL에 연결'
+description: 재시도 논리를 사용하여, ADO.NET을 사용해 SQL 데이터베이스에 대한 연결 복원력을 개선하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 08/15/2019
 ms.prod: sql
@@ -13,12 +13,12 @@ ms.assetid: 9b608b0b-6b38-42da-bb83-79df8c170cd7
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 23b87d6774fb4020b5c7eca3d3f776bbb95fc7fe
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: a70b5449d1af02c3b367a204e2e32dfb32281d72
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80918040"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86391768"
 ---
 # <a name="step-4-connect-resiliently-to-sql-with-adonet"></a>4단계: ADO.NET을 사용하여 탄력적으로 SQL에 연결
 

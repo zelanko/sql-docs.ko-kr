@@ -25,20 +25,20 @@ helpviewer_keywords:
 ms.assetid: c0af54f5-ca4a-4995-a3a4-0ce39c30ec38
 author: markingmyname
 ms.author: maghan
-ms.reviewer: ''
+ms.reviewer: v-daenge
 ms.custom: seo-lt-2019
 ms.date: 01/23/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: cf55425be19e1f7d2bc201c222209f4693b5368e
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: 8bec01c994df45975ac42faa25f0fb389443eb82
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83151441"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85998548"
 ---
 # <a name="bcp-utility"></a>bcp 유틸리티
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 > Linux에서의 bcp 사용 방법에 대해서는 [Linux에 sqlcmd 및 bcp 설치](../linux/sql-server-linux-setup-tools.md)를 참조하세요.
 >
@@ -69,7 +69,7 @@ ms.locfileid: "83151441"
 
 ### <a name="system-requirements"></a>시스템 요구 사항
 
-Windows 10, Windows 7, Windows 8, Windows 8.1, Windows Server 2008, Windows Server 2008 R2, Windows Server 2008 R2 SP1, Windows Server 2012, Windows Server 2012 R2, Windows Server 2016
+Windows 10, Windows 7, Windows 8, Windows 8.1, Windows Server 2008, Windows Server 2008 R2, Windows Server 2008 R2 SP1, Windows Server 2012, Windows Server 2012 R2, Windows Server 2016, Windows Server 2019
 
 이 구성 요소에는 [Windows Installer 4.5](https://www.microsoft.com/download/details.aspx?id=8483) 및 [Microsoft ODBC Driver 17 for SQL Server](https://www.microsoft.com/download/details.aspx?id=56567)가 둘 다 필요합니다.
 
@@ -127,13 +127,13 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  **in** *data_file* | **out** *data_file* | **queryout** *data_file* | **format nul**  
  다음과 같이 대량 복사 방향을 지정합니다.  
   
--   **in**<a name="in"></a> 은 파일에서 데이터베이스 테이블 또는 뷰로 복사합니다.  
+- **in**<a name="in"></a> 은 파일에서 데이터베이스 테이블 또는 뷰로 복사합니다.  
   
--   **out**<a name="out"></a> 은 데이터베이스 테이블 또는 뷰에서 파일로 복사합니다. 기존 파일을 지정하면 이 파일을 덮어씁니다. 데이터를 추출할 때 **bcp** 유틸리티는 빈 문자열을 null로 나타내고 null 문자열은 빈 문자열로 나타냅니다.  
+- **out**<a name="out"></a> 은 데이터베이스 테이블 또는 뷰에서 파일로 복사합니다. 기존 파일을 지정하면 이 파일을 덮어씁니다. 데이터를 추출할 때 **bcp** 유틸리티는 빈 문자열을 null로 나타내고 null 문자열은 빈 문자열로 나타냅니다.  
   
--   **queryout**<a name="qry_out"></a> 은 쿼리에서 복사하며 쿼리에서 데이터를 대량 복사하는 경우에만 지정해야 합니다.  
+- **queryout**<a name="qry_out"></a> 은 쿼리에서 복사하며 쿼리에서 데이터를 대량 복사하는 경우에만 지정해야 합니다.  
   
--   **format**<a name="format"></a> 은 **-n**, **-c**, **-w**, **-N**등의 지정된 옵션과 테이블 또는 뷰 구분 기호를 기준으로 서식 파일을 만듭니다. 데이터를 대량 복사하는 경우 **bcp** 명령은 서식 파일을 참조할 수 있으므로 대화형으로 서식 정보를 다시 입력할 필요가 없습니다. **format** 옵션에는 **-f** 옵션이 필요하며 XML 서식 파일을 만드는 경우 **-x** 옵션도 필요합니다. 자세한 내용은 [서식 파일 만들기&#40;SQL Server&#41;](../relational-databases/import-export/create-a-format-file-sql-server.md)를 참조하세요. **nul** 을 값으로 지정해야 합니다(**format nul**).  
+- **format**<a name="format"></a> 은 **-n**, **-c**, **-w**, **-N**등의 지정된 옵션과 테이블 또는 뷰 구분 기호를 기준으로 서식 파일을 만듭니다. 데이터를 대량 복사하는 경우 **bcp** 명령은 서식 파일을 참조할 수 있으므로 대화형으로 서식 정보를 다시 입력할 필요가 없습니다. **format** 옵션에는 **-f** 옵션이 필요하며 XML 서식 파일을 만드는 경우 **-x** 옵션도 필요합니다. 자세한 내용은 [서식 파일 만들기&#40;SQL Server&#41;](../relational-databases/import-export/create-a-format-file-sql-server.md)를 참조하세요. **nul** 을 값으로 지정해야 합니다(**format nul**).  
   
  _**owner**_<a name="schema"></a>  
  테이블 또는 뷰의 소유자 이름입니다. 작업을 수행하는 사용자가 지정한 테이블 또는 뷰를 소유하고 있는 경우에는*owner* 를 생략할 수 있습니다. *owner* 를 지정하지 않은 경우 작업을 수행하는 사용자가 지정한 테이블이나 뷰의 소유자가 아니면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에서 오류 메시지를 반환하고 작업이 취소됩니다.  
@@ -199,9 +199,9 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  **-f** _**format\_file**_<a name="f"></a>  
  서식 파일의 전체 경로를 지정합니다. 다음과 같이 이 옵션의 의미는 해당 환경에 따라 다릅니다.  
   
--   **format** 옵션과 함께 **-f** 를 사용하는 경우 지정한 테이블 또는 뷰에 대해 지정한 *format_file* 이 만들어집니다. XML 서식 파일을 만들려면 **-x** 옵션도 지정합니다. 자세한 내용은 [서식 파일 만들기&#40;SQL Server&#41;](../relational-databases/import-export/create-a-format-file-sql-server.md)를 참조하세요.  
+- **format** 옵션과 함께 **-f** 를 사용하는 경우 지정한 테이블 또는 뷰에 대해 지정한 *format_file* 이 만들어집니다. XML 서식 파일을 만들려면 **-x** 옵션도 지정합니다. 자세한 내용은 [서식 파일 만들기&#40;SQL Server&#41;](../relational-databases/import-export/create-a-format-file-sql-server.md)를 참조하세요.  
   
--   **-f** 를 **in** 또는 **out** 옵션과 함께 사용하는 경우 기존 서식 파일이 필요합니다.  
+- **-f** 를 **in** 또는 **out** 옵션과 함께 사용하는 경우 기존 서식 파일이 필요합니다.  
   
     > [!NOTE]
     > 원할 경우 **in** 또는 **out** 옵션과 함께 서식 파일을 사용할 수도 있습니다. **-f** 옵션이 없을 경우 **-n**, **-c**, **-w**또는 **-N** 을 지정하지 않으면 서식 정보를 묻는 메시지가 표시되며 응답 내용을 서식 파일에 저장할 수 있습니다. 이 서식 파일의 기본 이름은 Bcp.fmt입니다.
@@ -402,7 +402,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
   
  **-T**<a name="T"></a>  
  **bcp** 유틸리티가 통합 보안을 사용하는 트러스트된 연결을 통해 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 로 연결되도록 지정합니다. 네트워크 사용자의 보안 자격 증명, *login_id*및 *password* 는 필요하지 않습니다. **-T** 를 지정하지 않은 경우 성공적으로 로그인하려면 **-U** 와 **-P** 를 지정해야 합니다.
- 
+
 > [!IMPORTANT]
 > **bcp** 유틸리티에서 통합 보안을 사용하는 트러스트된 연결을 통해 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에 연결하는 경우 **사용자 이름** 과 *암호* 를 조합하여 사용하는 대신 *-T* 옵션(트러스트된 연결)을 사용합니다. **bcp** 유틸리티가 SQL Database 또는 SQL Data Warehouse에 연결할 때 Windows 인증 또는 Azure Active Directory 인증을 사용이 지원되지 않습니다. **-U** 및 **-P** 옵션을 사용하세요. 
   
@@ -447,9 +447,9 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 - 총 **bcp** 도구를 설치하면 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 13.0 클라이언트가 설치됩니다. [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 와 이전 버전 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]둘 다에 대해 도구가 설치된 경우 PATH 환경 변수의 값에 따라 **bcp** 13.0 클라이언트 대신 이전 **bcp** 클라이언트를 사용하게 될 수 있습니다. 이 환경 변수는 실행 파일을 검색하기 위해 Windows에서 사용하는 디렉터리 집합을 정의합니다. 사용 중인 버전을 확인하려면 Windows 명령 프롬프트에서 **bcp /v** 또는 **bcp -v** 명령을 실행합니다. PATH 환경 변수에서 명령 경로를 설정하는 방법은 [환경 변수](https://docs.microsoft.com/windows/win32/shell/user-environment-variables)를 참조하거나 Windows 도움말에서 환경 변수를 검색하세요.
 
     최신 버전의 bcp 유틸리티가 실행되고 있는지 확인하려면 이전 버전의 bcp 유틸리티를 모두 제거해야 합니다.
-    
+
     모든 버전의 bcp 유틸리티가 설치된 위치를 확인하려면 명령 프롬프트에 다음을 입력합니다.
-    
+
     ```cmd
     where bcp.exe
     ```
@@ -482,35 +482,35 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 식별자에 중간 공백이나 따옴표와 같은 문자가 포함될 수 있습니다. 이러한 식별자는 다음과 같이 처리해야 합니다.  
   
--   명령 프롬프트에서 공백 또는 따옴표가 포함된 식별자나 파일 이름을 지정할 때는 식별자를 큰따옴표("")로 묶습니다.  
-  
-     예를 들어 다음 `bcp out` 명령은 `Currency Types.dat`라는 데이터 파일을 만듭니다.  
-  
-    ```  
+- 명령 프롬프트에서 공백 또는 따옴표가 포함된 식별자나 파일 이름을 지정할 때는 식별자를 큰따옴표("")로 묶습니다.  
+
+    예를 들어 다음 `bcp out` 명령은 `Currency Types.dat`라는 데이터 파일을 만듭니다.  
+
+    ```cmd
     bcp AdventureWorks2012.Sales.Currency out "Currency Types.dat" -T -c  
-    ```  
+    ```
   
--   공백 또는 따옴표를 포함하는 데이터베이스 이름을 지정하려면 **-q** 옵션을 사용해야 합니다.  
+- 공백 또는 따옴표를 포함하는 데이터베이스 이름을 지정하려면 **-q** 옵션을 사용해야 합니다.  
   
--   중간 공백이나 따옴표가 포함된 소유자, 테이블 또는 뷰 이름을 지정하려면 다음 중 하나를 수행합니다.  
+- 중간 공백이나 따옴표가 포함된 소유자, 테이블 또는 뷰 이름을 지정하려면 다음 중 하나를 수행합니다.  
   
-    -   **-q** 옵션을 지정합니다. 또는  
+    - **-q** 옵션을 지정합니다. 또는  
   
-    -   따옴표 안에서 소유자, 테이블 또는 뷰 이름을 대괄호([])로 묶습니다.  
+    - 따옴표 안에서 소유자, 테이블 또는 뷰 이름을 대괄호([])로 묶습니다.  
 
 ## <a name="data-validation"></a>데이터 유효성 검사
 
  **bcp**는 이제 데이터 유효성 검사 및 데이터 검사를 강제로 실행하므로 스크립트를 데이터 파일의 잘못된 데이터에 대해 실행할 경우 오류가 발생할 수 있습니다. 예를 들어 **bcp** 는 이제 다음을 확인합니다.  
   
--   float 또는 real 데이터 형식의 원시 표시가 유효한지 여부  
+- float 또는 real 데이터 형식의 원시 표시가 유효한지 여부  
   
--   유니코드 데이터의 길이가 짝수 바이트인지 여부  
+- 유니코드 데이터의 길이가 짝수 바이트인지 여부  
   
  이전 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에서 대량으로 가져올 수 있었던 잘못된 데이터 형식은 이제 로드되지 않습니다. 이전 버전에서는 클라이언트가 잘못된 데이터에 액세스해야 오류가 발생했습니다. 추가 유효성 검사를 수행하면 대량 로드 이후 데이터를 쿼리할 때 발생할 수 있는 예상치 못한 문제가 최소화됩니다.  
 
 ## <a name="bulk-exporting-or-importing-sqlxml-documents"></a>SQLXML 문서 대량 내보내기 또는 가져오기
 
- SQLXML 데이터를 대량으로 내보내거나 가져오려면 서식 파일에서 다음 데이터 형식 중 하나를 사용합니다.  
+SQLXML 데이터를 대량으로 내보내거나 가져오려면 서식 파일에서 다음 데이터 형식 중 하나를 사용합니다.  
   
 |데이터 형식|영향|  
 |---------------|------------|  
@@ -524,17 +524,17 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
   
  **bcp in** 작업을 수행하려면 적어도 대상 테이블에 대한 SELECT/INSERT 권한이 있어야 합니다. 또한 다음과 같은 경우 ALTER TABLE 권한이 있어야 합니다.  
   
--   제약 조건이 있으며 CHECK_CONSTRAINTS 힌트가 지정되지 않았습니다.  
+- 제약 조건이 있으며 CHECK_CONSTRAINTS 힌트가 지정되지 않았습니다.  
   
     > [!NOTE]
     > 기본적으로 제약 조건은 사용되지 않습니다. 제약 조건을 명시적으로 사용하려면 CHECK_CONSTRAINTS 힌트와 함께 **-h** 옵션을 사용합니다.
   
--   트리거가 있으며 FIRE_TRIGGER 힌트가 지정되지 않았습니다.  
+- 트리거가 있으며 FIRE_TRIGGER 힌트가 지정되지 않았습니다.  
   
     > [!NOTE]
     > 기본적으로 트리거는 실행되지 않습니다. 트리거를 명시적으로 실행하려면 FIRE_TRIGGERS 힌트와 함께 **-h** 옵션을 사용합니다.
   
--   **-E** 옵션을 사용하여 데이터 파일에서 ID 값을 가져옵니다.  
+- **-E** 옵션을 사용하여 데이터 파일에서 ID 값을 가져옵니다.  
   
 > [!NOTE]
 > 대상 테이블에 대해 ALTER TABLE 권한이 필요하게 된 것은 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]부터였습니다. 이 요구 사항으로 인해 사용자 계정에 대상 테이블에 대한 ALTER 테이블 권한이 없을 경우 트리거 및 제약 조건 검사를 실행하지 않는 **bcp** 스크립트가 실패할 수 있습니다.
@@ -543,11 +543,11 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 
  이 섹션에는 문자 모드(-c) 및 기본 모드(-n) 사용 시의 권장 사항이 나와 있습니다.  
   
--   (관리자/사용자) 가능하면 구분 기호 문제를 방지하기 위해 기본 모드(-n)를 사용하십시오. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]를 사용하여 내보내기 및 가져오기를 수행하려면 기본 형식을 사용합니다. 데이터를 비 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스로 가져오려는 경우에는 -c 또는 -w 옵션을 사용하여[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에서 데이터를 내보냅니다.  
+- (관리자/사용자) 가능하면 구분 기호 문제를 방지하기 위해 기본 모드(-n)를 사용하십시오. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]를 사용하여 내보내기 및 가져오기를 수행하려면 기본 형식을 사용합니다. 데이터를 비 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스로 가져오려는 경우에는 -c 또는 -w 옵션을 사용하여[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에서 데이터를 내보냅니다.  
   
--   (관리자) BCP OUT를 사용할 때는 데이터를 확인합니다. 예를 들어 BCP OUT, BCP IN, BCP OUT을 차례로 사용하는 경우에는 데이터가 정상적으로 내보내기되었으며 몇몇 데이터 값의 일부분으로 종결자 값이 사용되지 않았는지 확인해야 합니다. 종결자 값과 데이터 값 간의 충돌을 방지하려면 임의의 16진수 값을 사용하여 기본 종결자를 무시하세요(-t 및 -r 옵션 사용).  
+- (관리자) BCP OUT를 사용할 때는 데이터를 확인합니다. 예를 들어 BCP OUT, BCP IN, BCP OUT을 차례로 사용하는 경우에는 데이터가 정상적으로 내보내기되었으며 몇몇 데이터 값의 일부분으로 종결자 값이 사용되지 않았는지 확인해야 합니다. 종결자 값과 데이터 값 간의 충돌을 방지하려면 임의의 16진수 값을 사용하여 기본 종결자를 무시하세요(-t 및 -r 옵션 사용).  
   
--   (사용자) 실제 문자열 값 간의 충돌 가능성을 최소화하려면 길고 고유한 종결자(바이트 또는 문자 시퀀스)를 사용합니다. 이렇게 하려면 -t 및 -r 옵션을 사용하면 됩니다.  
+- (사용자) 실제 문자열 값 간의 충돌 가능성을 최소화하려면 길고 고유한 종결자(바이트 또는 문자 시퀀스)를 사용합니다. 이렇게 하려면 -t 및 -r 옵션을 사용하면 됩니다.  
 
 ## <a name="examples"></a>예
 
@@ -622,15 +622,15 @@ bcp -v
   bcp WideWorldImporters.Warehouse.StockItemTransactions out D:\BCP\StockItemTransactions_character.bcp -c -T
   ```
 
- - **Expanded**  
-이 예에서는 `StockItemTransactions_native.bcp` 라는 데이터 파일을 만들고 **네이티브** 형식을 사용하여 테이블 데이터를 파일에 복사합니다.  예제에서는 또한 최대 구문 오류 수, 오류 파일 및 출력 파일을 지정합니다.
+- **확장** 이 예제에서는 `StockItemTransactions_native.bcp`라는 데이터 파일을 만들고 **네이티브** 형식을 사용하여 테이블 데이터를 이 파일에 복사합니다.  예제에서는 또한 최대 구문 오류 수, 오류 파일 및 출력 파일을 지정합니다.
 
     명령 프롬프트에서 다음 명령을 입력합니다.
-    ```
+
+    ```cmd
     bcp WideWorldImporters.Warehouse.StockItemTransactions OUT D:\BCP\StockItemTransactions_native.bcp -m 1 -n -e D:\BCP\Error_out.log -o D:\BCP\Output_out.log -S -T
     ```
 
-`Error_out.log` 및 `Output_out.log`을 검토합니다.  `Error_out.log` 비어 있어야 합니다.  `StockItemTransactions_character.bcp` 및 `StockItemTransactions_native.bcp`간 파일 크기를 비교합니다. 
+`Error_out.log` 및 `Output_out.log`을 검토합니다.  `Error_out.log` 비어 있어야 합니다.  `StockItemTransactions_character.bcp` 및 `StockItemTransactions_native.bcp`간 파일 크기를 비교합니다.
 
 ### <a name="c-copying-table-rows-into-a-data-file-with-mixed-mode-authentication"></a>C. 데이터 파일로 테이블 행 복사(혼합 모드 인증 사용)
 
@@ -735,7 +735,7 @@ bcp WideWorldImporters.Warehouse.StockItemTransactions_bcp in D:\BCP\StockItemTr
 
 다음 부분 코드 예제에서는 코드 페이지 65001을 지정하는 동안 bcp 가져오기를 보여 줍니다.
 
-```
+```cmd
 bcp.exe MyTable in "D:\data.csv" -T -c -C 65001 -t , ...  
 ```
 
@@ -745,20 +745,18 @@ bcp.exe MyTable in "D:\data.csv" -T -c -C 65001 -t , ...
 |---|
 |대량 가져오기 또는 대량 내보내기를 위한 데이터 형식(SQL Server)<br />&emsp;&#9679;&emsp;[네이티브 형식을 사용하여 데이터 가져오기 또는 내보내기(SQL Server)](../relational-databases/import-export/use-native-format-to-import-or-export-data-sql-server.md)<br />&emsp;&#9679;&emsp;[문자 형식을 사용하여 데이터 가져오기 또는 내보내기(SQL Server)](../relational-databases/import-export/use-character-format-to-import-or-export-data-sql-server.md)<br />&emsp;&#9679;&emsp;[데이터를 가져오거나 내보내기 위해 유니코드 네이티브 형식 사용(SQL Server)](../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)<br />&emsp;&#9679;&emsp;[유니코드 문자 형식을 사용하여 데이터 가져오기 및 내보내기(SQL Server)](../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)<br /><br />[필드 및 행 종결자 지정(SQL Server)](../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)<br /><br />[대량 가져오기 수행 중 Null 유지 또는 기본값 사용(SQL Server)](../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)<br /><br />[데이터 대량 가져오기 중 ID 값 유지(SQL Server)](../relational-databases/import-export/keep-identity-values-when-bulk-importing-data-sql-server.md)<br /><br />데이터를 가져오거나 내보내기 위한 서식 파일(SQL Server)<br />&emsp;&#9679;&emsp;[서식 파일 만들기(SQL Server)](../relational-databases/import-export/create-a-format-file-sql-server.md)<br />&emsp;&#9679;&emsp;[서식 파일을 사용하여 데이터 대량 가져오기(SQL Server)](../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md)<br />&emsp;&#9679;&emsp;[서식 파일을 사용하여 테이블 열 건너뛰기(SQL Server)](../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md)<br />&emsp;&#9679;&emsp;[서식 파일을 사용하여 데이터 필드 건너뛰기(SQL Server)](../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md)<br />&emsp;&#9679;&emsp;[서식 파일을 사용하여 테이블 열을 데이터 파일 필드에 매핑(SQL Server)](../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)<br /><br />[XML 문서 대량 가져오기 및 내보내기 예(SQL Server)](../relational-databases/import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)<br /><p>  </p>|
 
-## <a name="see-also"></a>참고 항목
+## <a name="considerations-and-limitations"></a>고려 사항 및 제한 사항
+
+- bcp 유틸리티에는 오류 메시지가 512바이트 문자만 표시되는 제한 사항이 있습니다. 오류 메시지의 처음 512바이트만 표시됩니다.
+
+## <a name="next-steps"></a>다음 단계
 
 - [대량 내보내기 또는 가져오기를 위한 데이터 준비&#40;SQL Server&#41;](../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md)
-
 - [BULK INSERT&#40;Transact-SQL&#41;](../t-sql/statements/bulk-insert-transact-sql.md)
-
 - [OPENROWSET&#40;Transact-SQL&#41;](../t-sql/functions/openrowset-transact-sql.md)
-
 - [SET QUOTED_IDENTIFIER&#40;Transact-SQL&#41;](../t-sql/statements/set-quoted-identifier-transact-sql.md)
-
 - [sp_configure &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)
-
 - [sp_tableoption &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)
-
 - [데이터를 가져오거나 내보내기 위한 서식 파일&#40;SQL Server&#41;](../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)
 
 ## <a name="feedback"></a>사용자 의견

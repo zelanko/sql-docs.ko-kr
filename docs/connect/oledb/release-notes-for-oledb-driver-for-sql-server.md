@@ -1,23 +1,23 @@
 ---
 title: OLE DB Driver 릴리스 정보
 description: 이 릴리스 정보 문서에서는 Microsoft OLE DB Driver for SQL Server의 각 릴리스의 변경 사항을 설명합니다.
-ms.date: 02/27/2020
+ms.date: 05/25/2020
 ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual
 ms.reviewer: genemi
 author: mateusz-kmiecik
 ms.author: v-makmie
-ms.openlocfilehash: 70f3239f1e644850bc391a0be5ef8918e1e9e617
-ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
+ms.openlocfilehash: 296efcdd888e2424cfb80f40221f7d8f65acab89
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81727971"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011914"
 ---
 # <a name="release-notes-for-the-microsoft-ole-db-driver-for-sql-server"></a>SQL Server용 Microsoft OLE DB 드라이버에 대한 릴리스 정보
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 이 페이지에서는 SQL Server용 Microsoft OLE DB 드라이버의 각 버전에 추가된 기능에 대해 설명합니다.
 
@@ -27,6 +27,37 @@ Hello, from now on, please use the table-based format standard for all new Relea
 See section "## 18.2.1" for a live example in this article.
 Thank you. For questions, contact GeneMi. (2019/03/16)
 -->
+
+## <a name="1840"></a>18.4.0
+![다운로드](../../ssms/media/download-icon.png) [x64 설치 관리자 다운로드](https://go.microsoft.com/fwlink/?linkid=2129954)  
+![다운로드](../../ssms/media/download-icon.png) [x86 설치 관리자 다운로드](https://go.microsoft.com/fwlink/?linkid=2131003)  
+
+릴리스 날짜: 2020년 5월
+
+검색된 언어가 아닌 다른 언어로 설치 관리자를 다운로드해야 하는 경우 다음과 같은 직접 링크를 사용할 수 있습니다.  
+x64 드라이버의 경우: [중국어(간체)](https://go.microsoft.com/fwlink/?linkid=2129954&clcid=0x804) | [중국어(번체)](https://go.microsoft.com/fwlink/?linkid=2129954&clcid=0x404) | [영어(미국)](https://go.microsoft.com/fwlink/?linkid=2129954&clcid=0x409) | [프랑스어](https://go.microsoft.com/fwlink/?linkid=2129954&clcid=0x40c) | [독일어](https://go.microsoft.com/fwlink/?linkid=2129954&clcid=0x407) | [이탈리아어](https://go.microsoft.com/fwlink/?linkid=2129954&clcid=0x410) | [일본어](https://go.microsoft.com/fwlink/?linkid=2129954&clcid=0x411) | [한국어](https://go.microsoft.com/fwlink/?linkid=2129954&clcid=0x412) | [포르투갈어(브라질)](https://go.microsoft.com/fwlink/?linkid=2129954&clcid=0x416) | [러시아어](https://go.microsoft.com/fwlink/?linkid=2129954&clcid=0x419) | [스페인어](https://go.microsoft.com/fwlink/?linkid=2129954&clcid=0x40a)  
+x86 드라이버의 경우: [중국어(간체)](https://go.microsoft.com/fwlink/?linkid=2131003&clcid=0x804) | [중국어(번체)](https://go.microsoft.com/fwlink/?linkid=2131003&clcid=0x404) | [영어(미국)](https://go.microsoft.com/fwlink/?linkid=2131003&clcid=0x409) | [프랑스어](https://go.microsoft.com/fwlink/?linkid=2131003&clcid=0x40c) | [독일어](https://go.microsoft.com/fwlink/?linkid=2131003&clcid=0x407) | [이탈리아어](https://go.microsoft.com/fwlink/?linkid=2131003&clcid=0x410) | [일본어](https://go.microsoft.com/fwlink/?linkid=2131003&clcid=0x411) | [한국어](https://go.microsoft.com/fwlink/?linkid=2131003&clcid=0x412) | [포르투갈어(브라질)](https://go.microsoft.com/fwlink/?linkid=2131003&clcid=0x416) | [러시아어](https://go.microsoft.com/fwlink/?linkid=2131003&clcid=0x419) | [스페인어](https://go.microsoft.com/fwlink/?linkid=2131003&clcid=0x40a)  
+
+### <a name="features-added"></a>추가된 기능
+
+| 추가된 기능 | 세부 정보 |
+| :------------ | :------ |
+| TNIR(투명 네트워크 IP 확인) 지원 |[TNIR(투명 네트워크 IP 확인)](features/using-transparent-network-ip-resolution.md)|
+| UTF-8 클라이언트 인코딩 지원 | [SQL Server용 OLE DB 드라이버에서 UTF-8 지원](features/utf-8-support-in-oledb-driver-for-sql-server.md) |
+
+### <a name="bugs-fixed"></a>버그 수정
+
+| 버그 수정 | 세부 정보 |
+| :-------- | :------ |
+| [ISequentialStream](https://docs.microsoft.com/previous-versions/windows/desktop/ms718035(v=vs.85)) 인터페이스에서 다양한 버그 수정 | 멀티 바이트 코드 페이지에 영향을 주는 몇 가지 버그 때문에 읽기 작업 중에 인터페이스가 도중에 스트림 끝을 보고했었습니다.|
+| [IOpenRowset::OpenRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms716724(v=vs.85)) 인터페이스에서 메모리 누수 문제 수정 | `SSPROP_IRowsetFastLoad` 속성이 사용하도록 설정된 경우 [IOpenRowset::OpenRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms716724(v=vs.85)) 인터페이스에서 발생한 메모리 누수 문제가 수정되었습니다. |
+| `sql_variant` 데이터 형식 및 비 ASCII 문자열을 포함하는 시나리오의 버그가 수정되었습니다. | `sql_variant` 데이터 형식 및 비 ASCII 문자열과 관련된 특정 시나리오를 실행하면 데이터가 손상될 수 있습니다. 자세한 내용은 다음을 참조하세요. [알려진 문제](ole-db-data-types/ssvariant-structure.md#known-issues). |
+| [UDL 구성 대화 상자](help-topics/data-link-pages.md)에서 연결 테스트 단추 문제 해결 | [UDL 구성 대화 상자](help-topics/data-link-pages.md)의 연결 테스트 단추가 이제 모든 탭에서 설정된 초기화 속성을 인식합니다. |
+| `SSPROP_INIT_PACKETSIZE` 속성 기본값 처리 수정 | `SSPROP_INIT_PACKETSIZE` 속성이 기본값 `0`으로 설정된 경우 발생하는 예기치 않은 오류가 수정되었습니다. 이 속성에 대한 자세한 내용은 [초기화 및 권한 부여 속성](ole-db-data-source-objects/initialization-and-authorization-properties.md)을 참조하세요. |
+| [IBCPSession](ole-db-interfaces/ibcpsession-ole-db.md)에서 버퍼 오버플로 문제 수정 | 형식이 잘못된 데이터 파일을 사용하는 경우 발생한 버퍼 오버플로 문제가 해결되었습니다. |
+| 접근성 문제 해결 | 설치 관리자 UI 및 [SQL Server 로그인 대화 상자](help-topics/sql-server-login-dialog.md)에서 접근성 문제가 해결되었습니다(내용 읽기, 탭 중지). |
+
+## <a name="previous-releases"></a>이전 릴리스
 
 ## <a name="1830"></a>18.3.0
 
@@ -53,8 +84,6 @@ x86 드라이버의 경우: [중국어(간체)](https://go.microsoft.com/fwlink/
 | :-------- | :------ |
 | [IIndexDefinition::DropIndex](https://go.microsoft.com/fwlink/?linkid=2106448)의 인덱스 삭제 논리를 수정했습니다. | 이전 버전의 OLE DB 드라이버는 스키마 ID와 인덱스 소유자의 사용자 ID가 서로 다르면 기본 키 인덱스를 삭제할 수 없습니다. |
 | &nbsp; | &nbsp; |
-
-## <a name="previous-releases"></a>이전 릴리스
 
 다음 섹션의 다운로드 링크를 클릭하여 이전 OLE DB 드라이버 버전을 다운로드하세요.
 

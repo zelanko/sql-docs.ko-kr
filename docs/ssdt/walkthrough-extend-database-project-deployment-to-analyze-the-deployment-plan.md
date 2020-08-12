@@ -1,21 +1,21 @@
 ---
 title: 데이터베이스 프로젝트 배포를 확장하여 배포 계획 분석
+description: DeploymentPlanExecutor 배포 참가자를 만듭니다. 데이터베이스 프로젝트를 배포할 때 발생하는 이벤트의 레코드를 유지하는 참가자를 설정합니다.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 9ead8470-93ba-44e3-8848-b59322e37621
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 5e51dddb7635ba0f50dfdd7566722b170be9f48a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 797289f29c9c0eff6a7b9d876d21f7573a546c84
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75242680"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897470"
 ---
 # <a name="walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan"></a>연습: 데이터베이스 프로젝트 배포를 확장하여 배포 계획 분석
 
@@ -29,7 +29,7 @@ ms.locfileid: "75242680"
   
 -   [배포 참가자 테스트](#TestDeploymentContributor)  
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>필수 구성 요소  
 이 연습을 완료하려면 다음과 같은 구성 요소가 필요합니다.  
   
 -   SSDT(SQL Server Data Tools)가 포함되고 C# 또는 VB 개발이 지원되는 Visual Studio 버전이 설치되어 있어야 합니다.  
@@ -251,7 +251,7 @@ ms.locfileid: "75242680"
   
     OnExecute 메서드에는 지정된 모든 인수, 원본 및 대상 데이터베이스 모델, 빌드 속성 및 확장 파일에 대한 액세스를 제공하는 [DeploymentPlanContributorContext](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplancontributorcontext.aspx) 개체가 전달됩니다. 이 예에서는 모델을 가져온 후 모델에 대한 정보를 출력하기 위한 도우미 함수를 호출합니다. 기본 클래스에서 PublishMessage 도우미 메서드를 사용하여 발생한 모든 오류를 보고합니다.  
   
-    중요한 추가 유형 및 메서드에는 [TSqlModel](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlmodel.aspx), [ModelComparisonResult](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.modelcomparisonresult.aspx), [DeploymentPlanHandle](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanhandle.aspx) 및 [SqlDeploymentOptions](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqldeploymentoptions.aspx)가 포함됩니다.  
+    중요한 추가 유형 및 메서드는 다음과 같습니다. [TSqlModel](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlmodel.aspx), [ModelComparisonResult](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.modelcomparisonresult.aspx), [DeploymentPlanHandle](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanhandle.aspx) 및 [SqlDeploymentOptions](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqldeploymentoptions.aspx).  
   
     그런 다음 배포 계획의 세부 정보를 자세히 살펴보는 도우미 클래스를 정의합니다.  
   
@@ -601,7 +601,7 @@ ms.locfileid: "75242680"
     </Project>  
     ```  
   
-4.  참가자를 실행하려는 프로젝트의 .sqlproj 파일 내에서 \<Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" \/> 노드 뒤에 다음 문을 추가하여 대상 파일을 가져옵니다.  
+4.  참가자를 실행하려는 프로젝트의 .sqlproj 파일 내에서 .sqlproj 파일의 \<Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" \/> 노드 뒤에 다음 문을 추가하여 대상 파일을 가져옵니다.  
   
     ```  
     <Import Project="$(MSBuildExtensionsPath)\MyContributors\MyContributors.targets " />  

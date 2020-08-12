@@ -1,5 +1,6 @@
 ---
 title: 프로젝트 기반 오프라인 데이터베이스 개발
+description: 데이터베이스에 개체 가져오기, 시퀀스 개체 사용하기 등 프로젝트 기반 오프라인 데이터베이스 개발 작업에 대한 가용 리소스를 봅니다.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -9,16 +10,15 @@ f1_keywords:
 ms.assetid: e61e830d-9fcd-45e7-b7b4-93a42155dd56
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 395465b9f07c9927a2a0ed1a277cde9f9e37f587
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5e56a458d06fbc70a71f36f87fdcd68bd8688847
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75243744"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896617"
 ---
 # <a name="project-oriented-offline-database-development"></a>프로젝트 기반 오프라인 데이터베이스 개발
 
@@ -31,7 +31,7 @@ SSDT를 사용하여 서버 인스턴스에 연결하지 않고도 오프라인 
   
 ## <a name="in-this-section"></a>섹션 내용  
   
-|항목|Description|  
+|항목|설명|  
 |---------|---------------|  
 |[데이터베이스 프로젝트로 가져오기](../ssdt/import-into-a-database-project.md)|라이브 데이터베이스, .dacpac 또는 스크립트에서 개체 가져오기에 대해 설명합니다.|  
 |[데이터베이스 참조 추가 대화 상자](../ssdt/add-database-reference-dialog-box.md)|데이터베이스 참조를 추가하기 위한 다양한 방법에 대해 설명합니다.|  

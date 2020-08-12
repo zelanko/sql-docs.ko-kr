@@ -1,5 +1,6 @@
 ---
 title: SQL Server 설치의 새로운 기능 | Microsoft 문서
+description: 이 문서에는 SysPrep 지원 및 SQL Server 2005에서 업그레이드를 포함하여 SQL Server 설치 프로세스에 대한 몇 가지 변경 내용이 요약되어 있습니다.
 ms.custom: ''
 ms.date: 08/23/2017
 ms.prod: sql
@@ -7,17 +8,17 @@ ms.reviewer: ''
 ms.technology: install
 ms.topic: conceptual
 ms.assetid: 9b136b27-4779-4284-904f-b5a1c12bdcc0
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: c42d536f427bba1e0b1642bcc5068bf3cd2d04f0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: dcadc3152a98ad1477d702bef8989d9a5e33543f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68045655"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899611"
 ---
 # <a name="what39s-new-in-sql-server-installation"></a>SQL Server 설치의 새로운 기능
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
  설치는 x64 프로세서에서만 지원됩니다. 자세한 내용은 [SQL Server 설치를 위한 하드웨어 및 소프트웨어 요구 사항](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)을 참조하세요.
   

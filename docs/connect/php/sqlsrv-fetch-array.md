@@ -1,5 +1,6 @@
 ---
-title: sqlsrv_fetch_array | Microsoft Docs
+title: sqlsrv_fetch_array
+description: Driver for PHP for SQL Server의 sqlsrv_fetch_array 함수에 대한 API 참조입니다.
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 69270b9e-0791-42f4-856d-412da39dea63
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d0055ed89d217a664d201d93d2c13c8e078d2a38
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 3b3c3f296d0fd2ae05c3b88a08428c3ddb8a5f2c
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80927811"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86391808"
 ---
 # <a name="sqlsrv_fetch_array"></a>sqlsrv_fetch_array
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -41,13 +42,13 @@ sqlsrv_fetch_array( resource $stmt[, int $fetchType [, row[, ]offset]])
   
 *$fetchType* [선택 사항]: 미리 정의된 상수입니다. 이 매개 변수는 다음 표에 나열된 값 중 하나를 사용할 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |---------|---------------|  
 |SQLSRV_FETCH_NUMERIC|데이터의 다음 행이 숫자형 배열로 반환됩니다.|  
 |SQLSRV_FETCH_ASSOC|데이터의 다음 행이 결합형 배열로 반환됩니다. 배열 키는 결과 집합의 열 이름입니다.|  
 |SQLSRV_FETCH_BOTH|데이터의 다음 행이 숫자형 배열과 결합형 배열 둘 다로 반환됩니다. 이것은 기본값입니다.|  
   
-*row* [선택 사항]: 버전 1.1에서 추가되었습니다. 다음 값 중 하나로 스크롤 가능 커서를 사용하는 결과 집합에서 액세스할 행을 지정합니다. (*row*가 지정된 경우 기본값을 지정하는 경우에도 *fetchtype*이 명시적으로 지정되어야 합니다.)  
+*row* [선택 사항]: 버전 1.1에 추가되었습니다. 다음 값 중 하나로 스크롤 가능 커서를 사용하는 결과 집합에서 액세스할 행을 지정합니다. (*row*가 지정된 경우 기본값을 지정하는 경우에도 *fetchtype*이 명시적으로 지정되어야 합니다.)  
   
 -   SQLSRV_SCROLL_NEXT  
 -   SQLSRV_SCROLL_PRIOR  
@@ -58,7 +59,7 @@ sqlsrv_fetch_array( resource $stmt[, int $fetchType [, row[, ]offset]])
   
 이러한 값에 대한 자세한 내용은 [커서 유형 지정 및 행 선택](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md)을 참조하세요. 스크롤 가능 커서 지원이 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]의 버전 1.1에 추가되었습니다.  
   
-*offset* [선택 사항]: 검색할 행을 지정하는 데 SQLSRV_SCROLL_ABSOLUTE 및 SQLSRV_SCROLL_RELATIVE와 함께 사용됩니다. 결과 집합의 첫 번째 레코드는 0입니다.  
+*offset* [선택 사항]: 검색할 행을 지정하기 위해 SQLSRV_SCROLL_ABSOLUTE 및 SQLSRV_SCROLL_RELATIVE와 함께 사용됩니다. 결과 집합의 첫 번째 레코드는 0입니다.  
   
 ## <a name="return-value"></a>Return Value  
 데이터 행이 검색되는 경우 **배열** 이 반환됩니다. 검색할 행이 더 이상 없는 경우 **null** 이 반환됩니다. 오류가 발생하면 **false** 가 반환됩니다.  
@@ -73,7 +74,7 @@ INSERT INTO Production.ProductPhoto (LargePhoto) VALUES (?);
 SELECT SCOPE_IDENTITY()
 ```
   
-이 명령문의 `SELECT SCOPE_IDENTITY()` 부분에서 반환된 결과 집합이 결합형 배열로 검색되는 경우 반환된 열에 이름이 없기 때문에 반환된 값에 대한 키는 빈 문자열("")입니다. 이를 방지하려면 결과를 숫자형 배열로 검색하거나 Transact-SQL 문에서 반환된 열에 대한 이름을 지정할 수 있습니다. 다음은 Transact-SQL에 열 이름을 지정하는 한 가지 방법입니다.  
+이 명령문의 `SELECT SCOPE_IDENTITY()` 부분에서 반환된 결과 집합이 결합형 배열로 검색되는 경우 반환된 열에 이름이 없기 때문에 반환된 값에 대한 키는 빈 문자열("")입니다. 이를 방지하려면 결과를 숫자형 배열로 검색하거나 Transact-SQL 문에서 반환된 열에 대한 이름을 지정할 수 있습니다. 다음 문은 Transact-SQL에 열 이름을 지정하는 한 가지 방법입니다.  
   
 ```
 SELECT SCOPE_IDENTITY() AS PictureID
@@ -176,7 +177,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-**sqlsrv_fetch_array** 함수는 항상 [기본 PHP 데이터 형식](../../connect/php/default-php-data-types.md)에 따라 데이터를 반환합니다. PHP 데이터 형식을 지정하는 방법에 대한 자세한 내용은 [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md)을 참조하세요.  
+**sqlsrv_fetch_array** 함수는 항상 [기본 PHP 데이터 형식](../../connect/php/default-php-data-types.md)에 따라 데이터를 반환합니다. PHP 데이터 형식을 지정하는 방법에 대한 자세한 내용은 [방법: PHP 데이터 형식 지정](../../connect/php/how-to-specify-php-data-types.md)을 참조하세요.  
   
 이름이 없는 필드가 검색되는 경우 배열 요소에 대한 결합형 키는 빈 문자열("")입니다. 자세한 내용은 [sqlsrv_fetch_array](../../connect/php/sqlsrv-fetch-array.md)를 참조하세요.  
   

@@ -9,18 +9,18 @@ ms.date: 02/13/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: b614373ee8517c0b0aa369c9793dec323a137044
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 08574ef070803a8612d12e595169bbc00b99b139
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79286047"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279465"
 ---
 # <a name="deploy-sql-server-big-data-cluster-with-high-availability"></a>고가용성을 사용하여 SQL Server 빅 데이터 클러스터 배포
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-SQL Server 빅 데이터 클러스터는 Kubernetes에 컨테이너화된 애플리케이션으로 제공되고 상태 저장 세트 및 영구 스토리지와 같은 기능을 사용하므로, 이 인프라에는 클러스터 구성 요소에서 서비스 상태를 유지하는 데 활용하는 기본적으로 제공되는 상태 모니터링, 실패 검색 및 장애 조치 메커니즘이 있습니다. 안정성을 높이기 위해 고가용성 구성에서 추가 복제본과 함께 배포하도록 SQL Server 마스터 인스턴스 또는 HDFS 이름 노드 및 Spark 공유 서비스를 구성할 수도 있습니다. 모니터링, 실패 검색 및 자동 장애 조치는 빅 데이터 클러스터 관리 서비스, 즉 제어 서비스를 통해 관리됩니다. 이 서비스는 사용자 개입 없이 가용성 그룹 설정, 데이터베이스 미러링 엔드포인트 구성에서 가용성 그룹에 데이터베이스 추가 또는 장애 조치 및 업그레이드 조정에 이르기까지 모든 기능을 제공합니다. 
+SQL Server 빅 데이터 클러스터는 Kubernetes에 컨테이너화된 애플리케이션으로 제공되고 상태 저장 세트 및 영구 스토리지와 같은 기능을 사용하므로, 이 인프라에는 클러스터 구성 요소에서 서비스 상태를 유지하는 데 활용하는 기본적으로 제공되는 상태 모니터링, 실패 검색 및 장애 조치 메커니즘이 있습니다. 안정성을 높이기 위해 고가용성 구성에서 추가 복제본과 함께 배포하도록 SQL Server 마스터 인스턴스 또는 HDFS 이름 노드 및 Spark 공유 서비스를 구성할 수도 있습니다. 모니터링, 실패 검색 및 자동 장애 조치는 빅 데이터 클러스터 관리 서비스, 즉 제어 서비스를 통해 관리됩니다. 이 서비스는 사용자 개입 없이 가용성 그룹 설정, 데이터베이스 미러링 엔드포인트 구성에서 가용성 그룹에 데이터베이스 추가 또는 장애 조치(failover) 및 업그레이드 조정에 이르기까지 모든 기능을 제공합니다. 
 
 다음 이미지는 SQL Server 빅 데이터 클러스터에서 가용성 그룹을 배포하는 방법을 나타냅니다.
 

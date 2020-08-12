@@ -1,31 +1,31 @@
 ---
-title: SSMS를 사용하여 중단 또는 크래시 문제 해결
+title: SSMS에서 시스템 응답 없음 또는 충돌 문제 해결
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: dnethi
 ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: c28ffa44-7b8b-4efa-b755-c7a3b1c11ce4
 author: markingmyname
 ms.author: maghan
+ms.reviewer: dnethi
 ms.custom: seo-lt-2019
 ms.date: 09/18/2019
-ms.openlocfilehash: f994a44d6fe0f458ae8f8d8be0351421322e7967
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 98ed3868008808ff18a9847a009108ee41205d12
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75243878"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091299"
 ---
 # <a name="get-diagnostic-data-after-a-sql-server-management-studio-ssms-crash"></a>SSMS(SQL Server Management Studio) 충돌이 발생한 후 진단 데이터 가져오기
 
 [!INCLUDE[Applies to](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-## <a name="get-full-memory-dump-after-a-hang-or-crash"></a>중단 또는 충돌 후 전체 메모리 덤프 가져오기
+## <a name="get-full-memory-dump-after-an-unresponsive-system-or-crash"></a>시스템 응답 없음 또는 충돌 후 전체 메모리 덤프 가져오기
 
-중단되거나 충돌할 때 SSMS(SQL Server Management Studio)의 전체 메모리 덤프를 가져옵니다.
+응답이 멈추거나 충돌이 발생하면 SSMS(SQL Server Management Studio)의 전체 메모리 덤프를 가져옵니다.
 
-SSMS의 충돌 또는 중단 문제를 해결하기 위한 진단 정보를 캡처하려면 아래 단계를 따르세요.
+SSMS의 충돌 또는 응답 없음 문제를 해결하기 위한 진단 정보를 캡처하려면 아래 단계를 따르세요.
 
 1. [ProcDump](https://technet.microsoft.com/sysinternals/dd996900.aspx)를 다운로드합니다.
 

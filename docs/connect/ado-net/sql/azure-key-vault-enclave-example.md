@@ -1,7 +1,7 @@
 ---
 title: 보안 Enclave를 사용한 Always Encrypted에서 Azure Key Vault 공급자 사용을 보여 주는 예제 | Microsoft Docs
 ms.custom: ''
-ms.date: 10/18/2019
+ms.date: 07/09/2020
 ms.reviewer: v-kaywon
 ms.prod: sql
 ms.prod_service: connectivity
@@ -10,12 +10,12 @@ ms.tgt_pltfrm: ''
 ms.topic: tutorial
 author: karinazhou
 ms.author: v-jizho2
-ms.openlocfilehash: a4ba44733d2a14323f128f1ab105e79169b90cce
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d97d32ba50255181ae21cf0a1ac1cd079092b122
+ms.sourcegitcommit: 7ce4a81c1b91239c8871c50f97ecaf387f439f6c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75250940"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86217761"
 ---
 # <a name="example-demonstrating-use-of-azure-key-vault-provider-with-always-encrypted-enabled-with-secure-enclaves"></a>보안 Enclave를 사용한 Always Encrypted에서 Azure Key Vault 공급자 사용을 보여 주는 예제
 
@@ -26,6 +26,9 @@ ms.locfileid: "75250940"
 이 예에서는 암호화된 열에 액세스할 때 Azure Key Vault 공급자를 사용하는 방법을 보여 줍니다.
 
 [!code-csharp [Azure Key Vault Provider with Enclave Example#1](~/../sqlclient/doc/samples/AzureKeyVaultProviderWithEnclaveProviderExample.cs#1)]
+
+> [!NOTE]
+> 보안 Enclave를 사용한 Always Encrypted는 Windows에서만 지원됩니다.
 
 ## <a name="see-also"></a>참고 항목
 

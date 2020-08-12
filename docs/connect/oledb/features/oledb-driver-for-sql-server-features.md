@@ -14,15 +14,15 @@ helpviewer_keywords:
 - data access [OLE DB Driver for SQL Server], features
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 46f7de1e57686a0f54368407580d90236152d147
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3cb73bb9ea3685793de692ae9cff1508e8a7656c
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67989052"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86006905"
 ---
 # <a name="ole-db-driver-for-sql-server-features"></a>SQL Server 기능용 OLE DB 드라이버
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -100,6 +100,9 @@ ms.locfileid: "67989052"
   
  [SQL Server용 OLE DB 드라이버의 LocalDB 지원](../../oledb/features/oledb-driver-for-sql-server-support-for-localdb.md)  
  OLE DB Driver for SQL Server의 LocalDB 기능 지원에 대해 설명합니다.  
+  
+ [투명 네트워크 IP 확인 사용](../../oledb/features/using-transparent-network-ip-resolution.md)  
+ 장애 조치(failover) 클러스터에서 OLE DB Driver for SQL Server가 투명 네트워크 IP 확인을 지원하는 방식을 설명합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQL Server용 OLE DB 드라이버](../../oledb/oledb-driver-for-sql-server.md)      

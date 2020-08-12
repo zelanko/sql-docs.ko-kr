@@ -1,5 +1,6 @@
 ---
 title: 스키마 비교를 사용하여 서로 다른 데이터베이스 정의 비교
+description: 스키마 비교를 사용하여 데이터베이스 정의를 비교하는 방법을 알아봅니다. 특정 차이점을 제외하고 대상을 업데이트하거나 업데이트 스크립트를 만드는 방법을 확인합니다.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -12,16 +13,15 @@ f1_keywords:
 ms.assetid: 7f0905a4-081c-46e2-bd7d-325b63e5c675
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: f31d543906e4bfedb16e412be703ebc8cd797a04
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2347297adfbc9d4df88c7df32fffefa4990010d8
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75226848"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895825"
 ---
 # <a name="how-to-use-schema-compare-to-compare-different-database-definitions"></a>방법: 스키마 비교를 사용하여 서로 다른 데이터베이스 정의 비교
 
@@ -41,7 +41,7 @@ SSDT(SQL Server Data Tools)에는 두 데이터베이스 정의를 비교하는 
   
 ### <a name="to-compare-database-definitions"></a>데이터베이스 정의를 비교하려면  
   
-1.  **SQL** 메뉴에서 **스키마 비교**를 선택하고 **새 스키마 비교**를 클릭합니다.  
+1.  **도구** 메뉴에서 **SQL Server**를 선택한 다음 **새 스키마 비교**를 클릭합니다.  
   
     또는 **솔루션 탐색기**에서 **TradeDev** 프로젝트를 마우스 오른쪽 단추로 클릭하고 **스키마 비교**를 선택합니다.  
   

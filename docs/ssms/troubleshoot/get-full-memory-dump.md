@@ -1,6 +1,6 @@
 ---
 title: SSMS 문제를 해결하기 위한 전체 메모리 덤프 가져오기
-Description: 전체 메모리 덤프를 수집하여 SSMS 중단 또는 크래시 문제 해결
+Description: 전체 메모리 덤프를 수집하여 SSMS 응답 없음 또는 크래시 문제 해결
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssms
@@ -11,18 +11,18 @@ ms.author: maghan
 ms.reviewer: dineth, sstein
 ms.custom: seo-lt-2019
 ms.date: 05/17/2019
-ms.openlocfilehash: 95e88b8bbf61e04251ce17ad0a4fcd5aff91cc9e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7b55e8e68076ad14f874306ffdb578f619af1cf0
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75247168"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091273"
 ---
 # <a name="get-full-memory-dump"></a>전체 메모리 덤프 가져오기
 
 [!INCLUDE[Applies to](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-이 문서에서는 SSMS(SQL Server Management Studio)에서 발생한 크래시 또는 중단 문제를 해결하기 위한 진단 정보를 캡처하는 방법을 알아볼 수 있습니다.
+이 문서에서는 SSMS(SQL Server Management Studio)에서 발생한 크래시 또는 응답 없는 시스템 문제를 해결하기 위한 진단 정보를 캡처하는 방법을 알아봅니다.
 
 문제를 해결하기 위한 진단 정보를 캡처하려면 아래 단계를 따르세요.
 

@@ -2,7 +2,7 @@
 title: 상시 암호화와 JDBC 드라이버 사용
 description: SQL Server에 대한 JDBC 드라이버를 통해 Java 애플리케이션에서 Always Encrypted를 사용하여 서버에서 중요한 데이터를 암호화하는 방법을 알아봅니다.
 ms.custom: ''
-ms.date: 05/06/2020
+ms.date: 07/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c63c15ad0a435235f246945d25c732798fb758df
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: b2005416234f517a8414f3d9405968659f7e553a
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82886356"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279622"
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>상시 암호화와 JDBC 드라이버 사용
 
@@ -44,11 +44,11 @@ SQL Server용 Microsoft JDBC Driver는 열 마스터 키 저장소 공급 기업
 ### <a name="using-built-in-column-master-key-store-providers"></a>기본 제공 열 마스터 키 저장소 공급자 사용
 SQL Server용 Microsoft JDBC Driver에는 다음과 같은 기본 제공 열 마스터 키 저장소 공급자가 포함되어 있습니다. 이러한 공급자 중 일부는 공급자를 조회하는 데 사용되는 특정 공급자 이름으로 사전 등록되어 있으며 일부는 추가 자격 증명이나 명시적 등록이 필요합니다.
 
-| 클래스                                                 | Description                                        | 공급자 (조회) 이름  | 사전 등록 여부 |
-| :---------------------------------------------------- | :------------------------------------------------- | :---------------------- | :----------------- |
-| **SQLServerColumnEncryptionAzureKeyVaultProvider**    | Azure Key Vault에 대한 키 저장소 공급자입니다. | AZURE_KEY_VAULT         | JDBC 드라이버 버전 7.4.1 이전의 경우 _아니요_, JDBC 드라이버 버전 7.4.1부터 _예_입니다. |
-| **SQLServerColumnEncryptionCertificateStoreProvider** | Windows 인증서 저장소에 대한 공급자입니다.      | MSSQL_CERTIFICATE_STORE | _예_                |
-| **SQLServerColumnEncryptionJavaKeyStoreProvider**     | Java 키 저장소 공급자입니다.                  | MSSQL_JAVA_KEYSTORE     | _예_                |
+| 클래스                                                 | Description                                        | 공급자 (조회) 이름  | 사전 등록 여부 | 플랫폼 |
+| :---------------------------------------------------- | :------------------------------------------------- | :---------------------- | :----------------- | :------- |
+| **SQLServerColumnEncryptionAzureKeyVaultProvider**    | Azure Key Vault에 대한 키 저장소 공급자입니다. | AZURE_KEY_VAULT         | JDBC 드라이버 버전 7.4.1 이전의 경우 _아니요_, JDBC 드라이버 버전 7.4.1부터 _예_입니다. | Windows, Linux, macOS |
+| **SQLServerColumnEncryptionCertificateStoreProvider** | Windows 인증서 저장소에 대한 공급자입니다.      | MSSQL_CERTIFICATE_STORE | _예_                | Windows |
+| **SQLServerColumnEncryptionJavaKeyStoreProvider**     | Java 키 저장소 공급자입니다.                  | MSSQL_JAVA_KEYSTORE     | _예_                | Windows, Linux, macOS |
 |||||
 
 사전 등록된 키 저장소 제공자의 경우 이러한 공급자를 사용하기 위해 애플리케이션 코드를 변경할 필요는 없지만 다음 항목에 유의하세요.
@@ -152,7 +152,7 @@ WITH VALUES
 ```
 
 > [!IMPORTANT]
-> 이 문서의 다른 키 저장소 공급자는 드라이버가 지원하는 모든 플랫폼에서 사용 가능하지만 JDBC 드라이버의 SQLServerColumnEncryptionCertificateStoreProvider 구현은 Windows 운영 체제에서만 사용 가능합니다. 드라이버 패키지에서 사용할 수 있는 mssql-jdbc_auth-\<버전>-\<arch>.dll에 대한 종속성이 있습니다. 이 공급자를 사용하려면 mssql-jdbc_auth-\<버전>-\<arch>.dll 파일을 JDBC 드라이버가 설치된 컴퓨터의 Windows 시스템 경로에 있는 디렉터리에 복사합니다. 또는 java.library.path 시스템 속성을 설정하여 mssql-jdbc_auth-\<버전>-\<arch>.dll의 디렉터리를 지정할 수도 있습니다. 32비트 JVM(Java Virtual Machine)을 실행할 경우 운영 체제가 x64 버전이라도 x86 폴더에 있는 mssql-jdbc_auth-\<버전>-x86.dll 파일을 사용하세요. x64 프로세서에서 64비트 JVM을 실행할 경우 x64 폴더의 mssql-jdbc_auth-\<버전>-x64.dll 파일을 사용하세요. 예를 들어 32비트 JVM을 사용 중이고 JDBC 드라이버가 기본 디렉터리에 설치된 경우 Java 애플리케이션이 시작될 때 다음과 같은 VM(가상 머신) 인수를 사용하여 DLL의 위치를 지정할 수 있습니다. `-Djava.library.path=C:\Microsoft JDBC Driver <version> for SQL Server\sqljdbc_<version>\enu\auth\x86`
+> 이 문서의 다른 키 저장소 공급자는 드라이버가 지원하는 모든 플랫폼에서 사용 가능하지만 JDBC 드라이버의 SQLServerColumnEncryptionCertificateStoreProvider 구현은 Windows 운영 체제에서만 사용 가능합니다. 드라이버 패키지에서 사용할 수 있는 mssql-jdbc_auth-\<version>-\<arch>.dll에 대한 종속성이 있습니다. 이 공급자를 사용하려면 mssql-jdbc_auth-\<version>-\<arch>.dll 파일을 JDBC 드라이버가 설치된 컴퓨터의 Windows 시스템 경로에 있는 디렉터리에 복사합니다. 또는 java.library.path 시스템 속성을 설정하여 mssql-jdbc_auth-\<version>-\<arch>.dll.의 디렉터리를 지정할 수도 있습니다. 32비트 JVM(Java Virtual Machine)을 실행할 경우 운영 체제가 x64 버전이라도 x86 폴더에 있는 mssql-jdbc_auth-\<version>-x86.dll 파일을 사용하세요. x64 프로세서에서 64비트 JVM을 실행할 경우 x64 폴더의 mssql-jdbc_auth-\<version>-x64.dll 파일을 사용하세요. 예를 들어 32비트 JVM을 사용 중이고 JDBC 드라이버가 기본 디렉터리에 설치된 경우 Java 애플리케이션이 시작될 때 다음과 같은 VM(가상 머신) 인수를 사용하여 DLL의 위치를 지정할 수 있습니다. `-Djava.library.path=C:\Microsoft JDBC Driver <version> for SQL Server\sqljdbc_<version>\enu\auth\x86`
 
 ### <a name="using-java-key-store-provider"></a>Java 키 저장소 공급자 사용
 JDBC 드라이버는 Java 키 저장소를 위해 기본 제공된 키 저장소 공급자 구현을 제공합니다. **keyStoreAuthentication** 연결 문자열 속성이 연결 문자열에 존재하고 "JavaKeyStorePassword"로 설정된 경우 드라이버는 자동으로 인스턴스화하고 Java 키 저장소에 대한 공급자를 등록합니다. Java Key Store 공급자의 이름은 MSSQL_JAVA_KEYSTORE입니다. 이 이름은 SQLServerColumnEncryptionJavaKeyStoreProvider.getName() API를 사용하여 쿼리할 수도 있습니다. 

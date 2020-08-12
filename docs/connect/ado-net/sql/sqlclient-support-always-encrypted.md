@@ -1,7 +1,7 @@
 ---
 title: SqlClient와 Always Encrypted 사용
 description: 데이터를 안전하게 유지하기 위해 Microsoft. SqlClient 및 Always Encrypted를 사용하여 애플리케이션을 개발하는 방법을 알아봅니다.
-ms.date: 05/06/2020
+ms.date: 07/09/2020
 ms.assetid: ''
 ms.prod: sql
 ms.prod_service: connectivity
@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: cheenamalhotra
 ms.author: v-chmalh
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 5b4634d1d9bed66aed6d7871d1e2c14813e5ec34
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: 1bdb50bccf859bdd640e1da1650dc160d1d79c1e
+ms.sourcegitcommit: 7ce4a81c1b91239c8871c50f97ecaf387f439f6c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82886470"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86217771"
 ---
 # <a name="using-always-encrypted-with-the-microsoft-net-data-provider-for-sql-server"></a>Microsoft.NET Data Provider for SQL Server와 Always Encrypted 사용
 
@@ -74,6 +74,9 @@ Enclave 계산 및 Enclave 증명에서 클라이언트 드라이버 역할에 �
 3. 연결 문자열에서 `Attestation Protocol` 키워드를 설정하여 사용할 증명 프로토콜을 제공합니다. 이 키워드의 값은 "HGS"로 설정해야 합니다.
 
 단계별 자습서를 보려면 [자습서: 보안 Enclave를 사용한 Always Encrypted를 이용하여 .NET 애플리케이션 개발](tutorial-always-encrypted-enclaves-develop-net-apps.md)을 참조하세요.
+
+> [!NOTE]
+> 보안 Enclave를 사용한 Always Encrypted는 Windows에서만 지원됩니다.
 
 ## <a name="retrieving-and-modifying-data-in-encrypted-columns"></a>암호화된 열에서 데이터 검색 및 수정
 
@@ -288,13 +291,13 @@ using (SqlCommand cmd = connection.CreateCommand())
 
 ### <a name="using-built-in-column-master-key-store-providers"></a>기본 제공 열 마스터 키 저장소 공급자 사용
 
-**Microsoft .NET Data Provider for SQL Server**에는 다음 열 마스터 키 저장소 공급자가 기본 제공되며 특정 공급자 이름이 미리 등록되어 있습니다(공급자 조회에 사용).
+**Microsoft .NET Data Provider for SQL Server**에는 다음 열 마스터 키 저장소 공급자가 기본 제공되며 특정 공급자 이름이 미리 등록되어 있습니다(공급자 조회에 사용). 이러한 기본 제공 키 저장소 공급자는 Windows에서만 지원됩니다.
 
-| 클래스 | Description | 공급자 (조회) 이름 |
-|:---|:---|:---|
-|[SqlColumnEncryptionCertificateStoreProvider 클래스](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlcolumnencryptioncertificatestoreprovider) | Windows 인증서 저장소에 대한 공급자입니다. | MSSQL_CERTIFICATE_STORE |
-|[SqlColumnEncryptionCngProvider 클래스](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlcolumnencryptioncngprovider) | [Microsoft CNG (Cryptography Next Generation) API](https://docs.microsoft.com/windows/win32/seccng/cng-portal)를 지원하는 키 저장소 공급자입니다. 일반적으로 이 저장소의 형식은 하드웨어 보안 모듈로서, 디지털 키를 보호 및 관리하고 암호화 프로세스를 제공하는 물리적 디바이스입니다. | MSSQL_CNG_STORE |
-| [SqlColumnEncryptionCspProvider 클래스](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlcolumnencryptioncspprovider) | [Microsoft CAPI(암호화 API)](https://docs.microsoft.com/windows/win32/seccrypto/cryptographic-service-providers)를 지원하는 키 저장소 공급자입니다. 일반적으로 이 저장소의 형식은 하드웨어 보안 모듈로서, 디지털 키를 보호 및 관리하고 암호화 프로세스를 제공하는 물리적 디바이스입니다. | MSSQL_CSP_PROVIDER |
+| 클래스 | Description | 공급자 (조회) 이름 | 플랫폼 |
+|:---|:---|:---|:---|
+|[SqlColumnEncryptionCertificateStoreProvider 클래스](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlcolumnencryptioncertificatestoreprovider) | Windows 인증서 저장소에 대한 공급자입니다. | MSSQL_CERTIFICATE_STORE | Windows |
+|[SqlColumnEncryptionCngProvider 클래스](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlcolumnencryptioncngprovider) | [Microsoft CNG (Cryptography Next Generation) API](https://docs.microsoft.com/windows/win32/seccng/cng-portal)를 지원하는 키 저장소 공급자입니다. 일반적으로 이 저장소의 형식은 하드웨어 보안 모듈로서, 디지털 키를 보호 및 관리하고 암호화 프로세스를 제공하는 물리적 디바이스입니다. | MSSQL_CNG_STORE | Windows |
+| [SqlColumnEncryptionCspProvider 클래스](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlcolumnencryptioncspprovider) | [Microsoft CAPI(암호화 API)](https://docs.microsoft.com/windows/win32/seccrypto/cryptographic-service-providers)를 지원하는 키 저장소 공급자입니다. 일반적으로 이 저장소의 형식은 하드웨어 보안 모듈로서, 디지털 키를 보호 및 관리하고 암호화 프로세스를 제공하는 물리적 디바이스입니다. | MSSQL_CSP_PROVIDER | Windows |
 
 이러한 공급자를 사용하기 위해 애플리케이션 코드를 변경할 필요는 없지만 다음에 유의하세요.
 
@@ -303,7 +306,11 @@ using (SqlCommand cmd = connection.CreateCommand())
 
 ### <a name="using-the-azure-key-vault-provider"></a>Azure Key Vault 공급자 사용
 
-Azure 주요 자격 증명 모음은 상시 암호화에 대한 열 마스터 키를 저장 및 관리하는 편리한 옵션입니다(특히 애플리케이션이 Azure에서 호스트되는 경우). **Microsoft .NET Data Provider for SQL Server**에서는 Azure Key Vault용 열 마스터 키 저장소 공급자가 기본 제공되지 않지만 NuGet 패키지로 사용할 수 있으므로 애플리케이션과 쉽게 통합할 수 있습니다. 자세한 내용은 [상시 암호화 - 데이터 암호화를 사용하여 SQL 데이터베이스의 중요 데이터를 보호하고 Azure 주요 자격 증명 모음에 암호화 키 저장](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted-azure-key-vault/)을 참조하세요.
+Azure 주요 자격 증명 모음은 상시 암호화에 대한 열 마스터 키를 저장 및 관리하는 편리한 옵션입니다(특히 애플리케이션이 Azure에서 호스트되는 경우). **Microsoft .NET Data Provider for SQL Server**에서는 Azure Key Vault용 열 마스터 키 저장소 공급자가 기본 제공되지 않지만 NuGet 패키지([Microsoft.Data.SqLClient.AlwaysEncrypted.AzureKeyVaultProvider](https://www.nuget.org/packages/Microsoft.Data.SqlClient.AlwaysEncrypted.AzureKeyVaultProvider))로 사용할 수 있으므로 애플리케이션과 쉽게 통합할 수 있습니다. 자세한 내용은 [상시 암호화 - 데이터 암호화를 사용하여 SQL 데이터베이스의 중요 데이터를 보호하고 Azure 주요 자격 증명 모음에 암호화 키 저장](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted-azure-key-vault/)을 참조하세요.
+
+| 클래스 | Description | 공급자 (조회) 이름 | 플랫폼 |
+|:---|:---|:---|:---|
+|[SqlColumnEncryptionAzureKeyVaultProvider 클래스](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.alwaysencrypted.azurekeyvaultprovider.sqlcolumnencryptionazurekeyvaultprovider) | Azure Key Vault 공급자입니다. | AZURE_KEY_VAULT | Windows, Linux, macOS |
 
 Azure Key Vault를 사용하여 암호화/암호 해독을 수행하는 방법에 대한 예제는 [Always Encrypted에서 작동하는 Azure Key Vault](azure-key-vault-example.md) 및 [보안 Enclave를 사용한 Always Encrypted에서 작동하는 Azure Key Vault](azure-key-vault-enclave-example.md)를 참조하세요.
 
@@ -508,7 +515,8 @@ SqlBulkCopy를 사용하면 데이터의 암호를 해독하지 않고 한 테�
 - 상시 암호화를 사용하지 않고 원본 테이블과 대상 테이블에 대한 데이터베이스 연결을 구성합니다.
 - `AllowEncryptedValueModifications` 옵션을 설정합니다([SqlBulkCopyOptions](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlbulkcopyoptions)참조).
 
-참고: `AllowEncryptedValueModifications`를 지정하면 **Microsoft .NET Data Provider for SQL Server**가 데이터가 실제로 암호화되었는지 여부 또는 동일한 암호화 형식, 알고리즘 및 키를 대상 열로 사용하여 올바르게 암호화되었는지 확인하지 않아 데이터베이스가 손상될 수 있으므로 주의하여 사용합니다.
+> [!NOTE]
+> `AllowEncryptedValueModifications`를 지정하면 **Microsoft .NET Data Provider for SQL Server**가 데이터가 실제로 암호화되었는지 여부 또는 동일한 암호화 형식, 알고리즘 및 키를 대상 열로 사용하여 올바르게 암호화되었는지 확인하지 않아 데이터베이스가 손상될 수 있으므로 주의하여 사용합니다.
 
 다음은 한 테이블에서 다른 테이블로 데이터를 복사하는 예제입니다. SSN 및 BirthDate 열은 암호화된 것으로 간주됩니다.
 

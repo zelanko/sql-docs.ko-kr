@@ -1,5 +1,6 @@
 ---
 title: SQL Server 도구(CEIP) 사용 현황 및 진단 데이터 수집 구성 | Microsoft Docs
+description: CEIP가 제품을 개선하기 위해 사용자로부터 수집하는 정보에 대해 알아봅니다. SSDT(SQL Server Data Tools)에서 프로그램을 옵트인 또는 옵트아웃하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 10/21/2016
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.assetid: baf3a205-a6bb-4564-8b64-3a0475bb9273
 author: stevestein
 ms.author: sstein
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 556d60a4c7f2cc8003f6b9a29fa20dad8c5b72ef
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c93a4023ebcdb9716d7e7790ea97c8df186081f9
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68091808"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000421"
 ---
 # <a name="configure-usage-and-diagnostic-data-collection-for-sql-server-tools-ceip"></a>SQL Server 도구(CEIP) 사용 현황 및 진단 데이터 수집 구성
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 사용자 환경 개선 프로그램(CEIP)이 어떻게 Microsoft가 소프트웨어 개선 방법을 식별하는 데 도움이 되는지 알아 보세요.  언제든지 참여하거나 참여하지 않도록 도구를 구성할 수 있습니다.  
   
@@ -71,7 +72,7 @@ ms.locfileid: "68091808"
 
   
 > [!CAUTION]  
->  레지스트리를 잘못 편집하면 시스템이 심각하게 손상될 수 있습니다. 따라서 레지스트리를 변경하기 전에 컴퓨터의 중요한 데이터를 백업해 두어야 합니다. 변경 내용을 수동으로 적용한 후 문제가 발생할 경우 마지막으로 성공한 구성 시작 옵션을 사용할 수도 있습니다.  
+>  레지스트리를 잘못 편집하면 시스템에 심각한 손상을 줄 수 있습니다. 따라서 레지스트리를 변경하기 전에 컴퓨터의 중요한 데이터를 백업해 두어야 합니다. 변경 내용을 수동으로 적용한 후 문제가 발생할 경우 마지막으로 성공한 구성 시작 옵션을 사용할 수도 있습니다.  
   
  CEIP에서 수집, 처리 또는 전송하는 정보에 대한 자세한 내용은 [개인정보처리방침](https://go.microsoft.com/fwlink/?LinkID=868444)을 참조하세요.  
  
@@ -113,7 +114,7 @@ ms.locfileid: "68091808"
 -   1은 참여함  
   
 > [!CAUTION]  
->  레지스트리를 잘못 편집하면 시스템이 심각하게 손상될 수 있습니다. 따라서 레지스트리를 변경하기 전에 컴퓨터의 중요한 데이터를 백업해 두어야 합니다. 변경 내용을 수동으로 적용한 후 문제가 발생할 경우 마지막으로 성공한 구성 시작 옵션을 사용할 수도 있습니다.  
+>  레지스트리를 잘못 편집하면 시스템에 심각한 손상을 줄 수 있습니다. 따라서 레지스트리를 변경하기 전에 컴퓨터의 중요한 데이터를 백업해 두어야 합니다. 변경 내용을 수동으로 적용한 후 문제가 발생할 경우 마지막으로 성공한 구성 시작 옵션을 사용할 수도 있습니다.  
   
  CEIP에서 수집, 처리 또는 전송하는 정보에 대한 자세한 내용은 [개인정보처리방침](https://go.microsoft.com/fwlink/?LinkID=868444)을 참조하세요.  
   

@@ -1,5 +1,6 @@
 ---
 title: 보고서 서버 속성(로그온 탭)
+description: SQL Server 보고서 서버 속성 대화 상자의 로그온 탭에 대해 알아봅니다. 이 탭을 사용하여 계정을 지정하고 서비스를 시작 또는 중지하는 방법을 알아봅니다.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: f54be594-f290-4db2-bf18-fd2521728a4a
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1dda864021df72f2e45e2db08fec0c66765fb0a4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8a79108efea864af196de1d8b756195c1a9e4036
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306339"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897612"
 ---
 # <a name="report-server-properties-log-on-tab"></a>보고서 서버 속성(로그온 탭)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   **보고서 서버 속성** 대화 상자의 **로그온** 탭을 사용하여 보고서 서버 서비스에서 사용할 계정을 지정할 수 있으며 서비스를 시작 및 중지할 수 있습니다.  
   
 ## <a name="options"></a>옵션  

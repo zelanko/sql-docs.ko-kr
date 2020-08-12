@@ -1,5 +1,6 @@
 ---
-title: 드라이버 버전 가져오기 | Microsoft Docs
+title: 드라이버 버전 가져오기
+description: Microsoft JDBC Driver for SQL Server의 버전을 찾는 방법과 확인할 수 있는 곳을 알아봅니다.
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 5e241d72-16da-4ada-ac67-e6308394108f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1a1c5c6d4dcc3a5bd5acaac37ffdcdadc184e497
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: f90f521457f5df17be814a179353d138a3245aea
+ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924653"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86381197"
 ---
 # <a name="getting-the-driver-version"></a>드라이버 버전 가져오기
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

@@ -1,10 +1,11 @@
 ---
 title: 장애 조치(Failover) 클러스터링을 설치하기 전에 | Microsoft 문서
+description: 이 문서에서는 하드웨어, 운영 체제, 구성 등 SQL Server 장애 조치(failover) 클러스터 설치를 준비할 때 고려할 사항을 설명합니다.
 ms.custom: ''
 ms.date: 08/24/2016
 ms.reviewer: ''
 ms.prod: sql
-ms.technology: install
+ms.technology: high-availability
 ms.topic: conceptual
 helpviewer_keywords:
 - clusters [SQL Server], preinstallation checklist
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: a655225d-8c54-4b30-95fd-31f588167899
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5d2fe2d80b0f9d54e877d6bc1be9a05c8c34c584
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f13de472628de7f0bfea12cdac2c001682678a66
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "72517935"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900515"
 ---
 # <a name="before-installing-failover-clustering"></a>장애 조치(Failover) 클러스터링을 설치하기 전에
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   SQL Server 장애 조치(Failover) 클러스터를 설치하기 전에 SQL Server에서 실행할 하드웨어와 운영 체제를 선택해야 합니다. 또한 WSFC(Windows Server 장애 조치(Failover) 클러스터링)를 구성하고 네트워크, 보안 및 기타 장애 조치(Failover) 클러스터에서 실행할 소프트웨어에 대한 고려 사항을 검토해야 합니다.  
   
  Windows 클러스터에 로컬 디스크 드라이브가 있고, 하나 이상의 클러스터 노드에서 같은 드라이브 문자가 공유 드라이브로 사용된 경우 해당 드라이브에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 을 설치할 수 없습니다. 이 제한은 SQL Server 장애 조치(failover) 클러스터 인스턴스와 Windows 장애 조치 클러스터 인스턴스의 일부인 서버에 있는 독립 실행형 인스턴스에 모두 적용됩니다.
@@ -47,7 +48,7 @@ ms.locfileid: "72517935"
   
     -   .NET Framework 3.5 SP1은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 프로그램으로 더 이상 설치되지 않지만 이전 버전의 Windows 운영 체제에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 를 설치할 경우 필요할 수 있습니다. 자세한 내용은 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][릴리스 정보](https://go.microsoft.com/fwlink/?LinkId=296445)를 참조하십시오.  
   
-    -   **[!INCLUDE[msCoName](../../../includes/msconame-md.md)] 업데이트 패키지:** 설치 중 .NET Framework 4 설치로 인한 컴퓨터 다시 시작이 발생하지 않도록 하려면 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 설치에 대한 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Update 항목이 컴퓨터에 설치되어 있어야 합니다.  [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] 를 Windows 7 SP1 또는 [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] SP2에 설치하는 경우 이 업데이트가 포함됩니다. 이전 버전의 Windows 운영 체제에 설치하는 경우 [Windows Vista 및 Windows Server 2008의 .NET Framework 4.0용 Microsoft Update](https://go.microsoft.com/fwlink/?LinkId=198093)에서 다운로드하십시오.  
+    -   **[!INCLUDE[msCoName](../../../includes/msconame-md.md)] 업데이트 패키지:** 설치 중 .NET Framework 4 설치로 인한 컴퓨터 다시 시작을 방지하려면 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 설치 전 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 업데이트가 컴퓨터에 설치되어 있어야 합니다.  [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] 를 Windows 7 SP1 또는 [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] SP2에 설치하는 경우 이 업데이트가 포함됩니다. 이전 버전의 Windows 운영 체제에 설치하는 경우 [Windows Vista 및 Windows Server 2008의 .NET Framework 4.0용 Microsoft Update](https://go.microsoft.com/fwlink/?LinkId=198093)에서 다운로드하십시오.  
   
     -   .NET Framework 4: 설치 프로그램에서는 클러스터링된 운영 체제에 .NET Framework 4를 설치합니다. 설치 시간을 단축하려면 설치 프로그램을 실행하기 전에 .NET Framework 4를 설치하는 것이 좋습니다.  
   
@@ -188,12 +189,12 @@ ms.locfileid: "72517935"
   
 |[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 버전|[!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] Enterprise|[!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] Datacenter Server|[!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] Enterprise|[!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] Datacenter Server|  
 |---------------------------------------|------------------------------------------------|-------------------------------------------------------|----------------------------------------------|-----------------------------------------------------|  
-|[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Enterprise(64비트) x64*|yes|yes|예**|예**|  
-|[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Enterprise(32비트)|yes|yes|||  
-|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Developer(64비트)|yes|yes|예**|예**|  
-|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Developer(32비트)|yes|yes|||  
-|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Standard(64비트)|yes|yes|yes|yes|  
-|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Standard(32비트)|yes|yes|||  
+|[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Enterprise(64비트) x64*|yes|예|예**|예**|  
+|[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Enterprise(32비트)|yes|예|||  
+|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Developer(64비트)|yes|예|예**|예**|  
+|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Developer(32비트)|yes|예|||  
+|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Standard(64비트)|yes|yes|yes|예|  
+|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Standard(32비트)|yes|예|||  
   
  *[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 클러스터는 WOW 모드에서 지원되지 않습니다. 또한 WOW에 원래 설치했던 이전 버전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터에서 업그레이드하는 것도 지원되지 않습니다. 이 경우 업그레이드할 수 있는 유일한 방법은 새 버전을 추가로 설치한 후 마이그레이션하는 것 뿐입니다.  
   
@@ -216,7 +217,7 @@ ms.locfileid: "72517935"
   
 1.  IP 주소 리소스 종속성은 다중 서브넷 구성에서 OR로 설정됩니다. 자세한 내용은 [새 SQL Server 장애 조치(failover) 클러스터 만들기&#40;설치 프로그램&#41;](../../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)를 참조하세요.  
   
-2.  Mixed AND-OR IP 주소 종속성은 지원되지 않습니다. 예: \<IP1> AND \<IP2> OR \<IP3>은 되지 않습니다.  
+2.  Mixed AND-OR IP 주소 종속성은 지원되지 않습니다. 예를 들어 \<IP1> AND \<IP2> OR \<IP3>은 지원되지 않습니다.  
   
 3.  서브넷당 둘 이상의 IP 주소는 지원되지 않습니다.  
   

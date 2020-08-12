@@ -1,23 +1,24 @@
 ---
 title: 장애 조치(failover) 클러스터 인스턴스 설치
+description: SQL Server 장애 조치(failover) 클러스터를 설치하는 방법을 알아봅니다. SQL Server 설치 프로그램을 실행하여 장애 조치(failover) 클러스터 인스턴스를 만들고 구성합니다.
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
 ms.reviewer: ''
-ms.technology: install
+ms.technology: high-availability
 ms.topic: conceptual
 ms.assetid: c0e75a7c-85c5-423c-a218-77247bf071aa
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c3de22853ccef8bd38c338b05043da7061ffeed0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 574f8f557eab10fa43be721f9b73bfc446b04687
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75230618"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897667"
 ---
 # <a name="sql-server-failover-cluster-installation"></a>SQL Server 장애 조치(Failover) 클러스터 설치
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터를 설치하려면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 프로그램을 실행하여 장애 조치(Failover) 클러스터 인스턴스를 만들고 구성해야 합니다.  
   
 ## <a name="installing-a-failover-cluster"></a>장애 조치(Failover) 클러스터 설치  
@@ -39,7 +40,7 @@ ms.locfileid: "75230618"
   
     -   장애 조치(Failover) 클러스터의 모든 노드는 32비트 또는 64비트의 동일한 플랫폼에 속해야 하며 동일한 운영 체제 에디션 및 버전을 실행해야 합니다. 또한 64비트 버전의 Windows 운영 체제를 실행 중인 64비트 하드웨어에는 64비트 버전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 를 설치해야 합니다. 이 릴리스에서는 장애 조치(Failover) 클러스터링에 WOW64가 지원되지 않습니다.  
   
-3.  각 장애 조치(Failover) 클러스터 인스턴스에 대해 IP 주소를 여러 개 지정할 수 있습니다. 각 서브넷에 대해 여러 IP 주소를 지정할 수 있습니다. 같은 서브넷에 여러 IP 주소가 있는 경우에는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 프로그램에서 종속성을 AND로 설정하고, 여러 서브넷의 노드를 클러스터링하는 경우에는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 프로그램에서 종속성을 OR로 설정합니다.  
+3.  각 장애 조치(Failover) 클러스터 인스턴스에 대해 IP 주소를 여러 개 지정할 수 있습니다. 각 서브넷에 대해 여러 IP 주소를 지정할 수 있습니다. 같은 서브넷에 여러 IP 주소가 있는 경우에는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 프로그램에서 종속성을 AND로 설정합니다. 여러 서브넷의 노드를 클러스터링하는 경우에는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 프로그램에서 종속성을 OR로 설정합니다.  
 
 4.  SQL Server FCI(장애 조치 클러스터 인스턴스)를 사용하려면 클러스터 노드가 도메인에 가입되어 있어야 합니다. 다음 구성은 **지원되지 않습니다**.
     - 작업 그룹 클러스터에 대한 SQL FCI 

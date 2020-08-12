@@ -1,23 +1,24 @@
 ---
 title: '클라이언트 도구 설치: 장애 조치(failover) 클러스터'
+description: SQL Server 장애 조치(failover) 인스턴스에서 SQL Server Management Studio와 같은 클라이언트 도구를 설치하는 방법을 알아봅니다.
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.reviewer: ''
 ms.prod: sql
-ms.technology: install
+ms.technology: high-availability
 ms.topic: conceptual
 ms.assetid: 3c82d510-9798-46be-bebb-cac9bef56936
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c4918cdbb99a49bf577f9efad19ed0360c9a4911
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b9f992c50b19d8618f1eacbdbb4a441501de4a61
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75230495"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897687"
 ---
 # <a name="install-client-tools-on-a-sql-server-failover-cluster"></a>SQL Server 장애 조치 클러스터에 클라이언트 도구 설치
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 와 같은 클라이언트 도구는 동일한 시스템의 모든 인스턴스에서 공통으로 공유하는 기능으로, 나란히 설치할 수 있도록 지원되는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 이전 버전과 호환됩니다. 한 번에 하나의 클라이언트 도구 버전만 노드에 존재합니다.  
   
  설치 중에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 클라이언트 도구가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 클러스터의 첫 번째 노드에 설치되면 자동으로 임의 노드에 추가되어 나중에 노드 추가를 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 추가할 수 있습니다.  
@@ -45,7 +46,7 @@ ms.locfileid: "75230495"
   
 1.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 클라이언트 도구 및 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 온라인 설명서를 설치하려면 다음 명령을 실행합니다. Setup.exe/q/Action=Install /Features=Tools  
   
-2.  기본 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 관리 도구만 설치하려면 다음 명령을 실행합니다. Setup.exe/q/Action=Install Features=SSMS. 그러면 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] , [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)], sqlcmd 유틸리티 및 [!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)]Powershell 공급자에 대한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 지원이 설치됩니다.  
+2.  기본 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 관리 도구만 설치하려면 다음 명령을 실행합니다. Setup.exe/q/Action=Install Features=SSMS. 그러면 [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)], [!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)], sqlcmd 유틸리티 및 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 공급자에 대한 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] 지원이 설치됩니다.  
   
 3.  전체 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 관리 도구를 설치하려면 다음 명령을 실행합니다. Setup.exe/q/Action=Install /Features=ADV_SSMS. 기능의 매개 변수 값에 대한 자세한 내용은 [명령 프롬프트에서 SQL Server 2016 설치](../../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)를 참조하세요.  
   

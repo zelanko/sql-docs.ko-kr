@@ -1,6 +1,6 @@
 ---
 title: 쿼럼 강제를 통한 재해 복구
-description: 쿼럼 실패에서 복구하려면 수동 개입이 필요합니다. 이 문서에서는 SQL Server 장애 조치(failover) 클러스터 인스턴스(FCI)에 재해가 발생할 경우 쿼럼 강제 방법을 어떻게 다루는지를 설명합니다.
+description: 쿼럼 실패에서 복구하려면 수동 개입이 필요합니다. SQL Server 장애 조치(failover) 클러스터 인스턴스에 재해가 발생한 경우 쿼럼을 강제 적용하는 방법을 알아봅니다.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 6cefdc18-899e-410c-9ae4-d6080f724046
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 36eebd77371cf2cede1e36ab68873c080a752128
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 20beee1d78975cdb4da4338ca85eff14a32b8153
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74821986"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896694"
 ---
 # <a name="wsfc-disaster-recovery-through-forced-quorum-sql-server"></a>강제 쿼럼을 통해 WSFC 재해 복구(SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   쿼럼 실패는 일반적으로 시스템 관련 재해나, 지속적인 통신 오류 또는 WSFC 클러스터의 여러 노드와 관련된 잘못된 구성으로 인해 발생합니다.  쿼럼 실패에서 복구하려면 수동 개입이 필요합니다.  
   
 -   **시작하기 전에:**  [필수 구성 요소](#Prerequisites), [보안](#Security)  

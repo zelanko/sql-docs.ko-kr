@@ -1,5 +1,6 @@
 ---
 title: SQL Server 속성(Always On 고가용성 탭)
+description: 가용성 그룹을 고가용성 및 재해 복구 솔루션으로 사용하려면 SQL Server에서 Always On 가용성 그룹 기능을 설정합니다.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: d8630923-a600-4f1c-aca1-027453a3ec82
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: d57f7e3f98c9db33569414e3c6876e54503f25bf
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b5ecf784f4a15bc8b5ff705d46bc64076436c3f8
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306828"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85902038"
 ---
 # <a name="sql-server-properties-always-on-high-availability-tab"></a>SQL Server 속성(Always On 고가용성 탭)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   **구성 관리자에서** SQL Server 속성 **대화 상자의** Always On 고가용성 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 탭을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 Always On 가용성 그룹 기능을 사용하거나 사용하지 않도록 설정할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 고가용성 및 재해 복구 솔루션으로 가용성 그룹을 사용하려면 먼저 Always On 가용성 그룹을 사용하도록 설정해야 합니다.  
   
 ##  <a name="prerequisites"></a><a name="Prerequisites"></a> 필수 조건  
@@ -50,7 +51,7 @@ ms.locfileid: "75306828"
     > [!TIP]  
     >  Always On 가용성 그룹을 사용하지 않도록 설정한 후 서버 인스턴스에서 모든 로컬 가용성 복제본을 제거해야 합니다. 지정된 가용성 그룹의 마지막 복제본을 제거하는 경우 그룹도 제거해야 합니다.  
   
-## <a name="uielement-list"></a>UIElement 목록  
+## <a name="ui-element-list"></a>UI 요소 목록  
   
 > [!NOTE]  
 >  Always On 가용성 그룹을 사용하지 않도록 설정한 후의 후속 작업과 가용성 그룹을 만들고 구성하는 방법은 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 온라인 설명서를 참조하세요.  

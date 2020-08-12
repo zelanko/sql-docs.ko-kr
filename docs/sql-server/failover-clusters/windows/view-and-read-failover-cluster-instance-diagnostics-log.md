@@ -1,6 +1,6 @@
 ---
 title: 장애 조치(failover) 클러스터 인스턴스 진단 로그 보기 및 읽기
-description: SQL Server 장애 조치(failover) 클러스터 인스턴스에서 생성된 진단 로그를 보고 읽는 방법에 대해 알아봅니다.
+description: SQL Server 장애 조치(failover) 클러스터 인스턴스에서 생성된 실행 진단 로그를 보고 읽는 방법을 알아봅니다.
 ms.custom: seo-lt-2019
 ms.date: 03/04/2017
 ms.prod: sql
@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 68074bd5-be9d-4487-a320-5b51ef8e2b2d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 44b631bb1c453ebc09e8a38a57b1a3160084b09d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e2f84b38751b57e1fe9ebba525e636da45a59954
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75242877"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896672"
 ---
 # <a name="view-and-read-failover-cluster-instance-diagnostics-log"></a>장애 조치(failover) 클러스터 인스턴스 진단 로그 보기 및 읽기
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   SQL Server 리소스 DLL에 대한 모든 오류 및 경고 이벤트는 Windows 이벤트 로그에 기록됩니다. [sp_server_diagnostics&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) 시스템 저장 프로시저에서 캡처된 SQL Server 관련 진단 정보의 실행 로그는 SQL Server 장애 조치(failover) 클러스터 진단(*SQLDIAG* 로그라고도 함) 로그 파일에 기록됩니다.  
   
 -   **시작하기 전 주의 사항:**  [권장 사항](#Recommendations), [보안](#Security)  
@@ -30,7 +30,7 @@ ms.locfileid: "75242877"
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
 ###  <a name="recommendations"></a><a name="Recommendations"></a> 권장 사항  
- 기본적으로 SQLDIAG는 SQL Server 인스턴스 디렉터리의 로컬 LOG 폴더(예: Always On FCI(장애 조치(failover) 클러스터 인스턴스) 소유 노드의 'C\Program Files\Microsoft SQL Server\MSSQL13.\<InstanceName>\MSSQL\LOG')에 저장됩니다. 각 SQLDIAG 로그 파일의 크기는 100MB로 고정됩니다. 새 로그에 재활용하기 전에 이러한 로그 파일이 컴퓨터에 10개 저장됩니다.  
+ 기본적으로 SQLDIAG는 SQL Server 인스턴스 디렉터리의 로컬 LOG 폴더에 저장됩니다(예: Always On FCI(장애 조치(failover) 클러스터 인스턴스)의 소유 노드인 'C\Program Files\Microsoft SQL Server\MSSQL13.\<InstanceName>\MSSQL\LOG'). 각 SQLDIAG 로그 파일의 크기는 100MB로 고정됩니다. 새 로그에 재활용하기 전에 이러한 로그 파일이 컴퓨터에 10개 저장됩니다.  
   
  로그는 확장 이벤트 파일 형식을 사용합니다. **sys.fn_xe_file_target_read_file** 시스템 함수를 사용하여 확장 이벤트에서 만든 파일을 읽을 수 있습니다. 행당 하나의 이벤트가 XML 형식으로 반환됩니다. XML 데이터를 결과 집합으로 구문 분석하려면 시스템 뷰를 쿼리합니다. 자세한 내용은 [sys.fn_xe_file_target_read_file&#40;Transact-SQL&#41;](../../../relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql.md)을 참조하세요.  
   

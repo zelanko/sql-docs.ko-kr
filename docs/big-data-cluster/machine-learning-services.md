@@ -7,17 +7,17 @@ ms.author: davidph
 ms.date: 04/30/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.technology: machine-learning
-ms.openlocfilehash: d105db3da8a6732c2884af7e42a71441eef6f077
-ms.sourcegitcommit: ed5f063d02a019becf866c4cb4900e5f39b8db18
+ms.technology: machine-learning-bdc
+ms.openlocfilehash: a14258c15ac1af1445b201f7b999dbec1682555d
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82643335"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196931"
 ---
 # <a name="run-python-and-r-scripts-with-machine-learning-services-on-sql-server-big-data-clusters"></a>SQL Server 빅 데이터 클러스터에서 Machine Learning Services를 사용하여 Python 및 R 스크립트 실행
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 [SQL Server 빅 데이터 클러스터](big-data-cluster-overview.md)에서 [Machine Learning Services](../machine-learning/index.yml)를 사용하여 Python 및 R 스크립트를 실행할 수 있습니다.
 
@@ -119,7 +119,7 @@ service/mymaster-2 exposed
 
 다음 이미지에서는 이 프로세스를 보여 줍니다.
 
-[![](media/machine-learning-services/example-kube-enable-scripts.png "Demonstrate enable feature on Kubernetes")](media/machine-learning-services/example-kube-enable-scripts.png#lightbox)
+[![데모](media/machine-learning-services/example-kube-enable-scripts.png "Demonstrate enable feature on Kubernetes(Kubernetes에서 기능 설정 시연)")](media/machine-learning-services/example-kube-enable-scripts.png#lightbox)
 
 이제 빅 데이터 클러스터의 마스터 인스턴스에서 Python 및 R 스크립트를 실행할 준비가 되었습니다. [다음 단계](#next-steps)의 빠른 시작을 참고하여 첫 번째 스크립트를 실행하세요.
 
@@ -141,7 +141,7 @@ kubectl delete svc mymaster-2 -n mssql-cluster
 
 ## <a name="next-steps"></a>다음 단계
 
-+ [빠른 시작: SQL Server Machine Learning Services를 사용하여 간단한 Python 스크립트 만들기 및 실행](../machine-learning/tutorials/quickstart-python-create-script.md)
-+ [빠른 시작: SQL Server Machine Learning Services를 사용하여 Python에서 예측 모델 만들기 및 점수 매기기](../machine-learning/tutorials/quickstart-python-train-score-model.md)
-+ [빠른 시작: SQL Server Machine Learning Services를 사용하여 간단한 R 스크립트 만들기 및 실행](../machine-learning/tutorials/quickstart-r-create-script.md)
-+ [빠른 시작: SQL Server Machine Learning Services를 사용하여 R에서 예측 모델 만들기 및 점수 매기기](../machine-learning/tutorials/quickstart-r-train-score-model.md)
++ [간단한 Python 스크립트 실행](../machine-learning/tutorials/quickstart-python-create-script.md?toc=/sql/toc.json)
++ [Python에서 예측 모델 학습 및 점수 매기기](../machine-learning/tutorials/quickstart-python-train-score-model.md?toc=/sql/toc.json)
++ [간단한 R 스크립트 실행](../machine-learning/tutorials/quickstart-r-create-script.md?toc=/sql/toc.json)
++ [R에서 예측 모델 학습 및 점수 매기기](../machine-learning/tutorials/quickstart-r-train-score-model.md?toc=/sql/toc.json)

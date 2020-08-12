@@ -2,7 +2,7 @@
 title: IROWSETFASTLOAD 및 ISEQUENTIALSTREAM을 사용하여 BLOB 데이터를 SQL Server로 보내기 | Microsoft Docs
 description: IROWSETFASTLOAD 및 ISEQUENTIALSTREAM을 사용하여 BLOB 데이터를 SQL Server로 보내기
 ms.custom: ''
-ms.date: 06/14/2018
+ms.date: 05/25/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -10,15 +10,15 @@ ms.technology: connectivity
 ms.topic: reference
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 18dc87158bc1a6086cf8406423c123b0789b0f08
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2add5bbc762709122a6cf7c7292fd139c42cd39f
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68015542"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001484"
 ---
 # <a name="send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db"></a>IROWSETFASTLOAD 및 ISEQUENTIALSTREAM을 사용하여 BLOB 데이터를 SQL Server로 보내기(OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -26,15 +26,17 @@ ms.locfileid: "68015542"
   
  기본적으로 이 예제는 인라인 바인딩을 사용하여 다양한 길이의 BLOB 데이터를 행별로 보내기 위해 IRowsetFastLoad를 사용하는 방법을 보여 줍니다. 인라인 BLOB 데이터는 가용 메모리를 초과해서는 안 됩니다. 이 방법은 BLOB 데이터가 수 MB 이하일 때 추가적인 스트림 오버헤드가 없기 때문에 최상으로 수행됩니다. 수 MB 이상의 데이터인 경우, 특히 하나의 블록으로 사용할 수 없는 데이터인 경우 스트리밍이 더 나은 성능을 제공합니다.  
   
- #define USE_ISEQSTREAM 주석 처리를 제거한 경우 원본 코드에서 이 예제는 ISequentialStream을 사용합니다. 스트림 구현은 예제에 정의되어 있으며 MAX_BLOB만 변경하면 크기에 관계 없이 BLOB 데이터를 보낼 수 있습니다. 따라서 스트림 데이터는 메모리 크기에 맞거나 하나의 블록 크기일 필요가 없습니다. IRowsetFastLoad::InsertRow를 사용하여 이 공급자를 호출합니다. IRowsetFastLoad::InsertRow를 사용하는 포인터를 스트림에서 읽을 수 있는 데이터의 양과 함께 데이터 버퍼(rgBinding.obValue 오프셋)에 있는 스트림 구현으로 전달합니다. 일부 공급자는 바인딩이 발생할 때 데이터의 길이를 반드시 알 필요가 없습니다. 이런 경우 바인딩에서 길이가 생략될 수 있습니다.  
+ 소스 코드에서 `#define USE_ISEQSTREAM` 주석 처리를 제거하면 샘플이 ISequentialStream을 사용합니다. 스트림 구현은 예제에 정의되어 있으며 MAX_BLOB만 변경하면 크기에 관계없이 BLOB 데이터를 보낼 수 있습니다. 따라서 스트림 데이터는 메모리 크기에 맞거나 하나의 블록 크기일 필요가 없습니다. IRowsetFastLoad::InsertRow를 사용하여 이 공급자를 호출합니다. IRowsetFastLoad::InsertRow를 사용하는 포인터를 스트림에서 읽을 수 있는 데이터의 양과 함께 데이터 버퍼(rgBinding.obValue 오프셋)에 있는 스트림 구현으로 전달합니다. 일부 공급자는 바인딩이 발생할 때 데이터의 길이를 반드시 알 필요가 없습니다. 이런 경우 바인딩에서 길이가 생략될 수 있습니다.  
   
- 이 예제는 공급자에 데이터를 쓰는 데 공급자의 스트림 인터페이스를 사용하지 않습니다. 대신 공급자가 데이터를 읽는 데 소모하는 스트림 개체로 포인터를 전달합니다. 일반적으로 Microsoft 공급자(SQLOLEDB, SQLNCLI 및 MSOLEDBSQL)는 모든 데이터가 처리될 때까지 개체에서 1024바이트 청크 형식으로 데이터를 읽습니다. SQLOLEDB나 SQLNCLI나 MSOLEDBSQL 모두 소비자가 공급자의 스트림 개체에 데이터를 쓰도록 허용하기 위한 일체의 구현을 갖고 있지 않습니다. 공급자의 스트림 개체를 통해서 보낼 수 있는 데이터는 길이가 0인 데이터뿐입니다.  
+ 이 예제는 공급자에 데이터를 쓰는 데 공급자의 스트림 인터페이스를 사용하지 않습니다. 대신 공급자가 데이터를 읽는 데 소모하는 스트림 개체로 포인터를 전달합니다. 일반적으로 Microsoft 공급자(SQLOLEDB, SQLNCLI 및 MSOLEDBSQL)는 1,024바이트 청크로 데이터를 읽습니다. 공급자는 모든 데이터가 처리될 때까지 개체에서 읽습니다. SQLOLEDB, SQLNCLI, MSOLEDBSQL 모두 소비자가 공급자의 스트림 개체에 데이터를 쓰도록 허용하기 위한 전체 구현이 없습니다. 공급자의 스트림 개체를 통해서 보낼 수 있는 데이터는 길이가 0인 데이터뿐입니다.  
   
- 소비자가 구현한 ISequentialStream 개체는 행 집합 데이터(IRowsetChange::InsertRow, IRowsetChange::SetData)와 함께 사용하거나 매개 변수를 DBTYPE_IUNKNOWN으로 바인딩하여 매개 변수와 함께 사용할 수 있습니다.  
+ 소비자 구현 ISequentialStream 개체는 행 집합 데이터(IRowsetChange::InsertRow, IRowsetChange::SetData)와 함께 사용할 수 있습니다. 또한 매개 변수를 DBTYPE_IUNKNOWN으로 바인딩하여 매개 변수와 함께 사용할 수 있습니다.  
   
- DBTYPE_IUNKNOWN은 바인딩에 데이터 형식으로 지정되었으므로 열이나 대상 매개 변수의 유형과 일치해야 합니다. 행 집합 인터페이스에서 ISequentialStream을 통해 데이터를 보낼 때 변환은 불가능합니다. 매개 변수의 경우 ICommandWithParameters::SetParameterInfo의 사용을 피하고 다른 유형을 지정하여 변환을 강제 실행하도록 합니다. 이 경우 공급자는 모든 BLOB 데이터를 SQL Server로 보내기 전에 로컬에서 데이터를 캐싱하고 변환해야 할 수 있습니다. 큰 BLOB을 로컬에서 캐싱하고 변환하면 성능이 저하됩니다.  
-  
- 자세한 내용은 [Blob 및 OLE 개체](../../oledb/ole-db-blobs/blobs-and-ole-objects.md)를 참조하세요.  
+ DBTYPE_IUNKNOWN은 바인딩에 데이터 형식으로 지정되었으므로 열이나 대상 매개 변수의 유형과 일치해야 합니다. 행 집합 인터페이스에서 ISequentialStream을 통해 데이터를 보낼 때 변환은 불가능합니다<a href="#conversion_note"><sup>**1**</sup></a>. 매개 변수의 경우 ICommandWithParameters::SetParameterInfo를 사용하지 않고 다른 형식을 지정하여 변환을 강제로 수행해야 합니다. 이렇게 하려면 공급자가 모든 BLOB 데이터를 로컬로 캐시하여 SQL Server로 보내기 전에 변환해야 합니다. 큰 BLOB을 로컬에서 캐싱하고 변환하면 성능이 저하됩니다.  
+
+ 자세한 내용은 [Blob 및 OLE 개체](../../oledb/ole-db-blobs/blobs-and-ole-objects.md)를 참조하세요.
+
+ <b id="conversion_note">[1]:</b> 변환이 가능하지는 않지만 서버에서 UTF-8을 지원하지 않는 경우 UTF-8과 데이터베이스 데이터 정렬 코드 페이지 간의 변환이 계속 발생할 수 있습니다. 자세한 내용은 [OLE DB Driver for SQL Server에서 UTF-8 지원](../features/utf-8-support-in-oledb-driver-for-sql-server.md)을 참조하세요.
   
 > [!IMPORTANT]  
 >  가능하면 Windows 인증을 사용하세요. Windows 인증을 사용할 수 없으면 런타임에 사용자에게 자격 증명을 입력하라는 메시지를 표시합니다. 자격 증명은 파일에 저장하지 않는 것이 좋습니다. 자격 증명을 유지하려면 [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532)를 사용하여 자격 증명을 암호화해야 합니다.  
@@ -46,12 +48,12 @@ ms.locfileid: "68015542"
   
  세 번째([!INCLUDE[tsql](../../../includes/tsql-md.md)]) 코드 목록을 실행하여 애플리케이션에서 사용하는 테이블을 삭제합니다.  
   
-```  
+```sql
 use master  
 create table fltest(col1 int, col2 int, col3 image)  
 ```  
   
-```  
+```cpp
 // compile with: ole32.lib oleaut32.lib  
 #include <windows.h>  
   
@@ -479,7 +481,7 @@ void wmain() {
 }  
 ```  
   
-```  
+```sql
 use master  
 drop table fltest  
 ```  

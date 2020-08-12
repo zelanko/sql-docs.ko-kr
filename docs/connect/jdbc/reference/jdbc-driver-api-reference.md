@@ -1,5 +1,6 @@
 ---
-title: JDBC 드라이버 API 참조 | Microsoft Docs
+title: JDBC 드라이버 API 참조
+description: SQL Server용 JDBC Driver의 JDBC 클래스에 대한 기술 API 참조입니다.
 ms.custom: ''
 ms.date: 07/19/2018
 ms.prod: sql
@@ -8,14 +9,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: e4e1ae9d-18a6-41db-8bd2-9cf0eee4cccb
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 04cbe39698a99fbde43043b70bb9b1f0e5887f58
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 0e96f8eb6ff2e3f20a5d6804ba3083e668c0f3a7
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67977004"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86391795"
 ---
 # <a name="jdbc-driver-api-reference"></a>JDBC 드라이버 API 참조
 

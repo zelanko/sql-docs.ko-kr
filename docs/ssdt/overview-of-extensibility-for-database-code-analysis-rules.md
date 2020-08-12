@@ -1,21 +1,21 @@
 ---
 title: 데이터베이스 코드 분석 규칙의 확장성
+description: 데이터베이스 코드 분석 규칙의 다양한 구성 요소 및 이 구성 요소가 SQL Server Data Tools에서 상호 작용하는 방식에 대해 알아봅니다. 사용자 지정 규칙 만들기에 대해 알아봅니다.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 62f5c980-18d5-43fe-b443-c9e149d01fc7
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: ef4ab84a123252dd35da85213110b8b4abb616ad
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e67b6dabc0d8db2b3644a6183b4a6855738e54ba
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75251964"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897625"
 ---
 # <a name="overview-of-extensibility-for-database-code-analysis-rules"></a>데이터베이스 코드 분석 규칙의 확장성 개요
 

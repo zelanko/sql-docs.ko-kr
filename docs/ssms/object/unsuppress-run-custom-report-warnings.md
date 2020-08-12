@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 0deed900-c910-4d12-aac0-6ab9e39eb068
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7df3354d78d9736f08e412e6da5e200b9ad41858
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: df96d2b9b4f141fb84e373979d122fec62b5c9b0
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75243497"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001842"
 ---
 # <a name="unsuppress-run-custom-report-warnings"></a>사용자 지정 보고서 실행 경고 표시
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 사용자 지정 보고서에 대한 경고 대화 상자에는 두 가지가 있습니다. 이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 를 사용하여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 이러한 상자를 표시하는 방법에 대해 설명합니다.  
   
 기본적으로 사용자 지정 보고서가 실행되기 전에 **사용자 지정 보고서 실행** 대화 상자가 표시됩니다. **이 경고 메시지를 다시 표시 안 함** 확인란을 선택하면 이 대화 상자가 더 이상 표시되지 않습니다. 또한 사용자 지정 보고서를 연 다음 링크를 클릭하여 다른 사용자 지정 보고서를 열면 기본적으로 **사용자 지정 보고서 실행** 대화 상자가 표시됩니다. 이 대화 상자는 드릴스루 사용자 지정 보고서 파일에 대한 채우기 경로를 표시합니다. **이 경고 메시지를 다시 표시 안 함** 확인란을 선택하면 이 대화 상자가 더 이상 표시되지 않습니다.  
@@ -33,7 +33,7 @@ ms.locfileid: "75243497"
   
 2.  **reports.xml**을 마우스 오른쪽 단추로 클릭한 다음 **편집**을 클릭합니다.  
   
-3.  **<SuppressWarning>true\<\/SuppressWarning>을 <SuppressWarning>false\<\/SuppressWarning>** 으로 변경합니다.  
+3.  **<SuppressWarning>true\<\/SuppressWarning>를 <SuppressWarning>false\<\/SuppressWarning>** 로 변경합니다.  
   
 4.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 다시 시작합니다.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "75243497"
   
 2.  **reports.xml**을 마우스 오른쪽 단추로 클릭하고 **편집**을 클릭합니다.  
   
-3.  **<SuppressDrillthroughWarning>true\<\/SuppressDrillthroughWarning>을 <SuppressDrillthroughWarning>false\<\/SuppressDrillthroughWarning>** 으로 변경합니다.  
+3.  **<SuppressDrillthroughWarning>true\<\/SuppressDrillthroughWarning>를 <SuppressDrillthroughWarning>false\<\/SuppressDrillthroughWarning>** 로 변경합니다.  
   
 4.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 다시 시작합니다.  
   
