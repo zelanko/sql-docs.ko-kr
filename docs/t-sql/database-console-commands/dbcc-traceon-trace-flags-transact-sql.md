@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 248377fa1c4d498d6ffeb5b72518b2baf322362a
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 67dc81b5a0a3c8c5e7dabdd1013f5927ceedff0b
+ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87248529"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87877803"
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON - 추적 플래그(Transact-SQL)
 
@@ -54,7 +54,7 @@ ms.locfileid: "87248529"
 다음 표에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용할 수 있는 추적 플래그와 그에 대한 설명을 보여 줍니다. 
 
 > [!NOTE]
-> Azure SQL Database Managed Instance는 전역 추적 플래그 460, 2301, 2389, 2390, 2453, 2467, 7471, 8207, 9389, 10316 및 11024를 지원합니다. 세션 추적-플래그는 Managed Instance에서 아직 지원되지 않습니다.
+> Azure SQL Managed Instance는 전역 추적 플래그 460, 2301, 2389, 2390, 2453, 2467, 7471, 8207, 9389, 10316 및 11024를 지원합니다. 세션 추적-플래그는 Managed Instance에서 아직 지원되지 않습니다.
  
 > [!NOTE]
 > 일부 추적 플래그는 특정 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 도입되었습니다. 해당 버전에 대한 자세한 내용은 특정 추적 플래그와 관련된 Microsoft 지원 문서를 참조하세요.
