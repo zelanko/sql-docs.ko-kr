@@ -14,12 +14,12 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.custom: seo-dt-2019
-ms.openlocfilehash: be447109a1432fdf8c3f3ae4a44f34a2eed1fd46
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: 200a473843e27d7096b71e675c140120da803bd2
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86196785"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88173186"
 ---
 # <a name="sp_pdw_remove_network_credentials-sql-data-warehouse"></a>sp_pdw_remove_network_credentials (SQL Data Warehouse)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "86196785"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```syntaxsql  
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 sp_pdw_remove_network_credentials 'target_server_name'  
@@ -45,7 +45,7 @@ sp_pdw_remove_network_credentials 'target_server_name'
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  **ALTER SERVER STATE** 권한이 필요 합니다.  
   
 ## <a name="error-handling"></a>오류 처리  
@@ -64,7 +64,7 @@ sp_pdw_remove_network_credentials 'target_server_name'
 ### <a name="a-remove-credentials-for-performing-a-database-backup"></a>A. 데이터베이스 백업을 수행 하기 위한 자격 증명 제거  
  다음 예에서는 IP 주소가 10.192.147.63 인 대상 서버에 액세스 하기 위한 사용자 이름 및 암호 자격 증명을 제거 합니다.  
   
-```  
+```sql  
 EXEC sp_pdw_remove_network_credentials '10.192.147.63';  
 ```  
   

@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: c4458738-ed25-40a6-8294-a26ca5a05bd9
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 68737e96c3c2c90592b1cccf807675ae5518ee4d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 53bc390e3e95ac49554826ad6ed96b8c4138ca10
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891197"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88172902"
 ---
 # <a name="syssp_cdc_add_job-transact-sql"></a>sys.sp_cdc_add_job(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -70,7 +70,7 @@ sys.sp_cdc_add_job [ @job_type = ] 'job_type'
   
 `[ @pollinginterval ] = polling\_interval_`로그 검색 주기 사이의 시간 (초)입니다. *polling_interval* 는 **bigint** 이며 기본값은 5입니다.  
   
- *연속* 이 1로 설정 된 경우 *polling_interval* 는 캡처 작업에 대해서만 유효 합니다. 지정된 경우 값은 음수가 아니어야 하고 24시간을 초과할 수 없습니다. 값 0이 지정된 경우 로그 검색 간에 대기 시간이 없습니다.  
+ *연속* 이 1로 설정 된 경우 *polling_interval* 는 캡처 작업에 대해서만 유효 합니다. 지정 된 경우 값은 0 보다 크거나 같고 24 시간 (최대: 86399 초) 보다 작아야 합니다. 값 0이 지정된 경우 로그 검색 간에 대기 시간이 없습니다.  
   
 `[ @retention ] = retention_`변경 테이블에 변경 데이터 행이 보관 되는 시간 (분)입니다. *보존* 은 **bigint** 이며 기본값은 4320 (72 시간)입니다. 최대값은 52494800(100년)입니다. 지정된 경우 값은 양의 정수여야 합니다.  
   

@@ -18,12 +18,12 @@ ms.assetid: f328c9eb-8211-4863-bafa-347e1bf7bb3f
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 695e879b4f6eb5ab54a0d83636bcbef5f9f3c65f
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: d9095536219fc0cdc419a0952217b0eeb2ef19f5
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396023"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88173114"
 ---
 # <a name="sp_prepare-transact-sql"></a>sp_prepare(Transact SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "87396023"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```syntaxsql  
 sp_prepare handle OUTPUT, params, stmt, options  
 ```  
   
@@ -51,17 +51,17 @@ sp_prepare handle OUTPUT, params, stmt, options
  *options*  
  커서 결과 집합 열의 설명을 반환하는 선택적 매개 변수입니다. *옵션* 에는 다음 int 입력 값이 필요 합니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |0x0001|RETURN_METADATA|  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
 A. 다음 예제에서는 간단한 문을 준비하고 실행합니다.  
   
 ```sql  
-DECLARE @P1 int;  
-EXEC sp_prepare @P1 output,   
-    N'@P1 nvarchar(128), @P2 nvarchar(100)',  
+DECLARE @P1 INT;  
+EXEC sp_prepare @P1 OUTPUT,   
+    N'@P1 NVARCHAR(128), @P2 NVARCHAR(100)',  
     N'SELECT database_id, name FROM sys.databases WHERE name=@P1 AND state_desc = @P2';  
 EXEC sp_execute @P1, N'tempdb', N'ONLINE';  
 EXEC sp_unprepare @P1;  
@@ -71,9 +71,9 @@ B. 다음 예에서는 AdventureWorks2016 데이터베이스에서 문을 준비
 
 ```sql
 -- Prepare query
-DECLARE @P1 int;  
-EXEC sp_prepare @P1 output,   
-    N'@Param int',  
+DECLARE @P1 INT;  
+EXEC sp_prepare @P1 OUTPUT,   
+    N'@Param INT',  
     N'SELECT *
 FROM Sales.SalesOrderDetail AS sod
 INNER JOIN Production.Product AS p ON sod.ProductID = p.ProductID

@@ -18,11 +18,12 @@ ms.assetid: c2f19ab1-e742-4d56-ba8e-8ffd40cf4925
 ms.author: vanto
 author: VanMSFT
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8be7e84ccd80d80c1345adec3450e5bc8e0f4da6
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 1ffff6387f2129c2e3bdb2af726e6b87e665554e
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012704"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88180106"
 ---
 # <a name="sp_droprolemember-transact-sql"></a>sp_droprolemember(Transact-SQL)
 
@@ -39,14 +40,14 @@ ms.locfileid: "86012704"
 
 ### <a name="syntax-for-both-sql-server-and-azure-sql-database"></a>SQL Server 및 Azure SQL Database에 대 한 구문
 
-```  
+```syntaxsql  
 sp_droprolemember [ @rolename = ] 'role' ,   
      [ @membername = ] 'security_account'  
 ```  
 
 ### <a name="syntax-for-both-azure-sql-data-warehouse-and-parallel-data-warehouse"></a>Azure SQL Data Warehouse 및 병렬 데이터 웨어하우스의 구문
 
-```  
+```syntaxsql  
 sp_droprolemember 'role' ,  
      'security_account'  
 ```  
@@ -66,7 +67,7 @@ sp_droprolemember 'role' ,
   
  Sp_helpuser를 사용 하 여 역할의 멤버를 확인 하 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 고 ALTER role을 사용 하 여 역할에 멤버를 추가 합니다.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  역할에 대한 ALTER 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  

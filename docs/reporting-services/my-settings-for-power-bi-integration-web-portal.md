@@ -1,5 +1,6 @@
 ---
 title: Power BI 통합(웹 포털)을 위한 내 설정 | Microsoft Docs
+description: Reporting Services 웹 포털의 내 설정 페이지와 개별 사용자가 이 페이지를 사용하여 Power BI 로그인을 관리하는 방법을 알아봅니다.
 ms.date: 08/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 85c2fac7-80bf-45b7-8654-764b5f5231f5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7535b16e731bc74df98f853156214abcfbe5961f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f25ab8f848c642de95f1ba62eaca15bbb8b7e7d9
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65503724"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248581"
 ---
 # <a name="my-settings-for-power-bi-integration-web-portal"></a>Power BI 통합을 위한 내 설정(웹 포털)
 

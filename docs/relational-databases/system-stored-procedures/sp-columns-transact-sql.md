@@ -18,11 +18,12 @@ ms.assetid: 2dec79cf-2baf-4c0f-8cbb-afb1a8654e1e
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 83f46ddd70061ef0f0647c902221b7f906917048
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 5ac9e5647193899335af494ac87f8ecdafe6390d
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999899"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88180295"
 ---
 # <a name="sp_columns-transact-sql"></a>sp_columns(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -33,7 +34,7 @@ ms.locfileid: "85999899"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```syntaxsql  
 -- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
   
 sp_columns [ @table_name = ] object  
@@ -57,7 +58,7 @@ sp_columns [ @table_name = ] object
 `[ \@ODBCVer = ] ODBCVer`사용 중인 ODBC의 버전입니다. *ODBCVer* 는 **int**이며 기본값은 2입니다. 이 값은 ODBC 버전 2를 나타내며 유효한 값은 2 또는 3입니다. 버전 2와 3의 동작 차이에 대 한 자세한 내용은 ODBC **Sqlcolumns** 사양을 참조 하십시오.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
- None  
+ 없음  
   
 ## <a name="result-sets"></a>결과 집합  
  **Sp_columns** 카탈로그 저장 프로시저는 ODBC의 **sqlcolumns** 와 동일 합니다. 반환 되는 결과는 **TABLE_QUALIFIER**, **TABLE_OWNER**및 **TABLE_NAME**순으로 정렬 됩니다.  
@@ -70,10 +71,10 @@ sp_columns [ @table_name = ] object
 |**COLUMN_NAME**|**sysname**|반환 된 **TABLE_NAME** 의 각 열에 대 한 열 이름입니다. 이 필드는 항상 값을 반환합니다.|  
 |**DATA_TYPE**|**smallint**|ODBC 데이터 형식을 나타내는 정수 코드입니다. ODBC 형식에 매핑될 수 없는 데이터 형식인 경우에는 NULL이 됩니다. Native data 형식 이름은 **TYPE_NAME** 열에 반환 됩니다.|  
 |**TYPE_NAME**|**sysname**|데이터 형식을 나타내는 문자열입니다. 이 이름은 기본 DBMS에서 제공합니다.|  
-|**소수**|**int**|유효 자릿수입니다. **전체 자릿수** 열의 반환 값은 밑수 10에 있습니다.|  
+|**PRECISION**|**int**|유효 자릿수입니다. **전체 자릿수** 열의 반환 값은 밑수 10에 있습니다.|  
 |**LENGTH**|**int**|데이터의 전송 크기입니다. <sup>1</sup>|  
 |**배율을**|**smallint**|소수점 오른쪽 자릿수입니다.|  
-|**기 수**|**smallint**|숫자 데이터 형식의 기수입니다.|  
+|**RADIX**|**smallint**|숫자 데이터 형식의 기수입니다.|  
 |**않는**|**smallint**|NULL 허용 여부를 지정합니다.<br /><br /> 1 = NULL을 사용할 수 있습니다.<br /><br /> 0 = NULL을 사용할 수 없습니다.|  
 |**설명**|**varchar (254)**|이 필드는 항상 NULL을 반환합니다.|  
 |**COLUMN_DEF**|**nvarchar(4000)**|열의 기본값입니다.|  
@@ -86,7 +87,7 @@ sp_columns [ @table_name = ] object
   
  <sup>1</sup> 자세한 내용은 Microsoft ODBC 설명서를 참조 하십시오.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  스키마에 대 한 SELECT 및 VIEW DEFINITION 권한이 필요 합니다.  
   
 ## <a name="remarks"></a>설명  
@@ -95,7 +96,7 @@ sp_columns [ @table_name = ] object
 ## <a name="examples"></a>예  
  다음 예에서는 지정된 테이블의 열 정보를 반환합니다.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_columns @table_name = N'Department',  
@@ -105,7 +106,7 @@ EXEC sp_columns @table_name = N'Department',
 ## <a name="examples-sssdwfull-and-sspdw"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  다음 예에서는 지정된 테이블의 열 정보를 반환합니다.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 EXEC sp_columns @table_name = N'DimEmployee',  

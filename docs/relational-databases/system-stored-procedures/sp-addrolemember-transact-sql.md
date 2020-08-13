@@ -18,11 +18,12 @@ ms.assetid: a583c087-bdb3-46d2-b9e5-3921b3e6d10b
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b6afbbc9cc5a1300048b043ab92e0152e68ed03a
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: f00b2446595835cb4ff556c34d58a3dd04b448a8
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007450"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88180112"
 ---
 # <a name="sp_addrolemember-transact-sql"></a>sp_addrolemember(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,9 +37,8 @@ ms.locfileid: "86007450"
   
 ## <a name="syntax"></a>구문  
   
-```
+```syntaxsql
 sp_addrolemember [ @rolename = ] 'role', [ @membername = ] 'security_account'  
-
 ```    
   
 ## <a name="arguments"></a>인수  
@@ -60,7 +60,7 @@ sp_addrolemember [ @rolename = ] 'role', [ @membername = ] 'security_account'
   
  데이터베이스 역할에 멤버를 추가할 경우에만 sp_addrolemember를 사용하십시오. 서버 역할에 멤버를 추가 하려면 [sp_addsrvrolemember &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md)를 사용 합니다.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  멤버를 유연한 데이터베이스 역할에 추가하려면 다음 항목 중 하나가 필요합니다.  
   
 -   Db_securityadmin 또는 db_owner 고정 데이터베이스 역할의 멤버 자격  
@@ -79,7 +79,7 @@ sp_addrolemember [ @rolename = ] 'role', [ @membername = ] 'security_account'
 > [!NOTE]  
 >  `Contoso\Mary5`는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에서 `Mary5` 데이터베이스 사용자로 알려져 있기 때문에 `Mary5` 사용자 이름을 지정해야 합니다. `Contoso\Mary5`라는 로그인이 없으면 문이 실패합니다. 사용자 도메인의 로그인을 사용하여 테스트하세요.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 CREATE USER Mary5 FOR LOGIN [Contoso\Mary5] ;  
@@ -89,7 +89,7 @@ GO
 ### <a name="b-adding-a-database-user"></a>B. 데이터베이스 사용자 추가  
  다음 예에서는 `Mary5` 데이터베이스 사용자를 현재 데이터베이스의 `Production` 데이터베이스 역할에 추가합니다.  
   
-```  
+```sql  
 EXEC sp_addrolemember 'Production', 'Mary5';  
 ```  
   
@@ -101,7 +101,7 @@ EXEC sp_addrolemember 'Production', 'Mary5';
 > [!NOTE]  
 >  로그인은 `LoginMary` 데이터베이스에서 데이터베이스 사용자로 알려져 있기 때문에 `UserMary` [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 사용자 이름을 `UserMary` 지정 해야 합니다. `Mary5`라는 로그인이 없으면 문이 실패합니다. 로그인과 사용자는 일반적으로 동일한 이름을 갖습니다. 이 예에서는 다른 이름을 사용 하 여 로그인에 영향을 주는 작업과 사용자를 구분 합니다.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 CREATE USER UserMary FOR LOGIN LoginMary ;  
@@ -112,7 +112,7 @@ EXEC sp_addrolemember 'Production', 'UserMary'
 ### <a name="d-adding-a-database-user"></a>D. 데이터베이스 사용자 추가  
  다음 예에서는 `UserMary` 데이터베이스 사용자를 현재 데이터베이스의 `Production` 데이터베이스 역할에 추가합니다.  
   
-```  
+```sql  
 EXEC sp_addrolemember 'Production', 'UserMary'  
 ```  
   

@@ -1,5 +1,6 @@
 ---
 title: '자습서: 맵 보고서(보고서 작성기) | Microsoft Docs'
+description: Reporting Services 페이지를 매긴 보고서에 지리적 배경 데이터를 표시하는 데 사용할 수 있는 지도 기능에 대해 알아봅니다.
 ms.date: 08/31/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8d831356-7efa-40cc-ae95-383b3eecf833
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4db47bde02745ddc554f17e1f951c836c1542cc8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 069fb0c365e3ecb5353e9dad99f116779222af87
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63041668"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248132"
 ---
 # <a name="tutorial-map-report-report-builder"></a>자습서: 지도 보고서(보고서 작성기)
 이 [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] 자습서에서는 페이지가 매겨진 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 보고서에 지리적 배경 데이터를 표시하는 데 사용할 수 있는 지도 기능에 대해 알아봅니다. 
@@ -29,7 +30,7 @@ ms.locfileid: "63041668"
 > [!NOTE]  
 > 이 자습서에서 마법사의 단계는 두 개의 절차로 통합됩니다. 하나는 데이터 세트를 만드는 절차이고 다른 하나는 테이블을 만드는 절차입니다. 보고서 서버를 찾고, 데이터 원본을 선택하고, 데이터 세트를 만들고, 마법사를 실행하는 방법에 대한 단계별 지침은 이 시리즈의 첫 번째 자습서인 [자습서: 기본 테이블 보고서 만들기&#40;보고서 작성기&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)을 참조하세요.  
   
-이 자습서에 소요되는 예상 시간: 30분  
+이 자습서에 소요되는 예상 시간: 30분.  
   
 ## <a name="requirements"></a>요구 사항  
 이 자습서에서는 Bing 지도를 배경으로 지원하도록 보고서 서버를 구성해야 합니다. 자세한 내용은 [지도 보고서 지원 계획](https://msdn.microsoft.com/5ddc97a7-7ee5-475d-bc49-3b814dce7e19)을 참조하세요. 
@@ -174,7 +175,7 @@ ms.locfileid: "63041668"
     *   **SellingArea**: 455평방피트에서 1125평방피트 사이의 제품 전시 영역입니다.
     *   **City**.
     *   **County**.
-    *   **Sales**: 총 판매량입니다. 
+    *   **판매**: 총 판매량입니다. 
     *   **SpatialLocation**: 경도 및 위도 위치입니다. 
 
     ![report-builder-map-design-query](../reporting-services/media/report-builder-map-design-query.png) 

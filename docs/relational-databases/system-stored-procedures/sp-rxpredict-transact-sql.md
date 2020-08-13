@@ -16,15 +16,15 @@ helpviewer_keywords:
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 13d5355bd1798af1514d16965059916e42e1ade0
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: dd1359fa3430e45ae54cadacd75f9ee261021b8d
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243763"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88173056"
 ---
 # <a name="sp_rxpredict"></a>sp_rxPredict  
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly.md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server 2016 Windows only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
 
 SQL Server 데이터베이스에서 이진 형식으로 저장 된 기계 학습 모델로 구성 된 지정 된 입력에 대 한 예측 값을 생성 합니다.
 

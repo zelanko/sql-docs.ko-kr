@@ -14,12 +14,12 @@ helpviewer_keywords:
 - ghost clean up process
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 557f76e3f54811581e41ad15a5270a0c1e6e4057
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: 16c9aa51475b00998b3c7aa9e71529bbbc292464
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83859095"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248162"
 ---
 # <a name="ghost-cleanup-process-guide"></a>고스트 정리 프로세스 가이드
 
@@ -46,7 +46,7 @@ ms.locfileid: "83859095"
 
 ## <a name="disable-the-ghost-cleanup"></a>고스트 정리를 사용 안 함
 
-많은 삭제가 있는 고부하 시스템에서 고스트 정리 프로세스는 버퍼 풀에 페이지를 유지하고 IO를 생성하는 것에서 성능 문제를 일으킬 수 있습니다. 추적 플래그 661을 사용하여 이 프로세스를 사용하지 않을 수 있습니다. 이에 대한 자세한 정보는 [고성능 워크로드를 실행하는 경우 SQL Server에 대한 옵션 튜닝](https://support.microsoft.com/help/920093/tuning-options-for-sql-server-when-running-in-high-performance-workloa)을 참조합니다. 그러나 프로세스를 사용하지 않도록 설정함으로써 성능에 미치는 영향이 있습니다.
+많은 삭제가 있는 고부하 시스템에서 고스트 정리 프로세스는 버퍼 풀에 페이지를 유지하고 IO를 생성하는 것에서 성능 문제를 일으킬 수 있습니다. [추적 플래그 661](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)을 사용하여 이 프로세스를 비활성화할 수 있습니다. 그러나 프로세스를 사용하지 않도록 설정함으로써 성능에 미치는 영향이 있습니다.
 
 고스트 정리 프로세스를 사용하지 않도록 설정하면 데이터베이스가 불필요하게 커져 결국 성능 문제를 일으킬 수 있습니다. 고스트 정리 프로세스는 고스트로 표시된 레코드를 제거하므로 이 프로세스를 사용하지 않으면 페이지에 이런 레코드를 그래도 남겨 놓아 SQL Server가 이 공간을 재사용하지 못하게 합니다. 이렇게 하면 SQL Server가 대신 새 페이지에 데이터를 강제로 추가하여 그 결과 데이터베이스 파일이 확장되고 [페이지 분할](indexes/specify-fill-factor-for-an-index.md)을 일으킬 수 있습니다. 페이지 분할은 실행 계획을 만들 때 및 검사 작업을 수행하는 경우 성능 문제로 이어집니다. 
 

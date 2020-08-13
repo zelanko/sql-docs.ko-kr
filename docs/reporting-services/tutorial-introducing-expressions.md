@@ -1,5 +1,6 @@
 ---
 title: '자습서: 식 소개 | Microsoft Docs'
+description: 일반적인 함수 및 연산자와 함께 식을 사용하여 강력하고 유연한 Reporting Services 페이지를 매긴 보고서를 만드는 방법을 알아봅니다.
 ms.date: 09/16/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2d05ef4c-5f91-48b2-8795-f0a201a0b3cc
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7a26065cc1d65e5c187123ead990888aa4de0e60
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7ebb428a12bc75f3c61793918dde0594da531ed2
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63295891"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248542"
 ---
 # <a name="tutorial-introducing-expressions"></a>자습서: 식 소개
 이 [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] 자습서에서는 일반적인 함수 및 연산자와 함께 식을 사용하여 강력하고 유연한 페이지가 매겨진 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 보고서를 만듭니다. 
@@ -26,7 +27,7 @@ ms.locfileid: "63295891"
   
 ![보고서-작성기-식-자습서-브라우저 내](../reporting-services/media/report-builder-expression-tutorial-in-browser.png) 
   
-이 자습서에 소요되는 예상 시간: 30분  
+이 자습서에 소요되는 예상 시간: 30분.  
   
 ## <a name="requirements"></a>요구 사항  
 요구 사항에 대한 자세한 내용은 [자습서의 필수 조건&#40;보고서 작성기&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md)을 참조하세요.  
@@ -89,7 +90,7 @@ ms.locfileid: "63295891"
     ```  
 
   
-10. 쿼리 디자이너 도구 모음에서 **실행** ( **!** )을 클릭합니다. 결과 집합에는 FirstName, LastName, StateProvince, CountryRegionID, Gender, YTDPurchase 및 LastPurchase 열에 23행의 데이터가 표시됩니다.  
+10. 쿼리 디자이너 도구 모음에서 **실행** ( **!** )을 클릭합니다. 결과 집합에는 23개 행의 데이터가 표시되고 FirstName, LastName, StateProvince, CountryRegionID, Gender, YTDPurchase 및 LastPurchase 열이 포함됩니다.  
 
     ![보고서-작성기-식-자습서-쿼리를-텍스트로](../reporting-services/media/report-builder-expression-tutorial-query-as-text.png)
   
@@ -147,7 +148,7 @@ ms.locfileid: "63295891"
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ## <a name="3-display-first-initial-and-last-name"></a><a name="Concatenate"></a>3. 이름 및 성 표시  
-이 섹션에서는 이름과 성을 포함하는 이름으로 계산되는 식에서 **Left** 함수와 **Concatenate** ( **&** ) 연산자를 사용합니다. 단계별로 식을 작성하거나 절차에서 단계를 건너뛰고 자습서의 식을 복사하여 **식** 대화 상자에 붙여넣을 수 있습니다.   
+이 섹션에서는 이름과 성을 포함하는 이름으로 계산되는 식에서 **Left** 함수와 **Concatenate** (**&**) 연산자를 사용합니다. 단계별로 식을 작성하거나 절차에서 단계를 건너뛰고 자습서의 식을 복사하여 **식** 대화 상자에 붙여넣을 수 있습니다.   
   
 1.  **StateProvince** 열을 마우스 오른쪽 단추로 클릭하고 **열 삽입**을 가리킨 다음 **왼쪽**을 클릭합니다.  
   

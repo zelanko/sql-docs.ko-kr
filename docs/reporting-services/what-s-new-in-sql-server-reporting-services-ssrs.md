@@ -1,5 +1,6 @@
 ---
 title: Reporting Services의 새로운 기능 | Microsoft Docs
+description: 주요 기능 영역에 대한 변경 내용을 포함하여 다양한 SQL Server Reporting Services 버전의 새로운 기능에 대해 알아봅니다.
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -9,12 +10,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 12/05/2019
-ms.openlocfilehash: cb50ca237fb1b9fae87b73fd81a9e6f2426b4775
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 869c2be4422df2361a0522e5b2183e61e43ae797
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77079612"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248554"
 ---
 # <a name="whats-new-in-sql-server-reporting-services-ssrs"></a>SSRS(SQL Server Reporting Services)의 새로운 기능
 
@@ -34,19 +35,19 @@ Power BI Report Server에 대한 정보는 [Power BI Report Server란?](https://
 
 ### <a name="azure-sql-managed-instance-support"></a>Azure SQL Managed Instance 지원
 
-이제 VM 또는 데이터 센터에서 호스트되는 Azure SQL Managed Instance(MI)에서 SQL Server Reporting Services(SSRS)에 사용되는 데이터베이스 카탈로그를 호스트할 수 있습니다. SQL MI 연결에는 데이터베이스 자격 증명을 사용하는 것으로 제한됩니다.
+이제 VM 또는 데이터 센터에서 호스트되는 Azure SQL Managed Instance(MI)에서 SQL Server Reporting Services(SSRS)에 사용되는 데이터베이스 카탈로그를 호스트할 수 있습니다. 지원은 SQL Server에 대한 연결 시 데이터베이스 자격 증명 사용으로 제한됩니다.
 
 ### <a name="power-bi-premium-dataset-support"></a>Power BI Premium 데이터 세트 지원
 
 Microsoft 보고서 작성기 또는 SSDT(SQL Server Data Tools) 중 하나를 사용하여 Power BI 데이터 세트에 연결할 수 있습니다. 그런 다음 SQL Server Analysis Services 연결을 사용하여 이러한 보고서를 SSRS 2019에 게시할 수 있습니다. 사용자는 저장된 Windows 사용자 이름 및 암호를 사용하여 시나리오를 사용하도록 설정해야 합니다.
 
-### <a name="alttext-alternative-text-support-for-report-elements"></a>보고서 요소에 대한 AltText(대체 텍스트) 지원
+### <a name="alttext-alternative-text-support-for-report-elements"></a>AltText(대체 텍스트)가 보고서 요소 지원
 
 보고서를 작성할 때 도구 설명을 사용하여 보고서의 각 요소에 대한 텍스트를 지정할 수 있습니다. 화면 읽기 프로그램 기술은 이러한 도구 설명을 올바르게 식별합니다.
 
 ### <a name="azure-active-directory-application-proxy-support"></a>Azure Active Directory 애플리케이션 프록시 지원
 
-Azure Active Directory 애플리케이션 프록시를 사용하면 더 이상 웹 또는 모바일 앱을 통해 보안 액세스를 허용하기 위해 웹 애플리케이션 프록시를 관리할 필요가 없습니다.
+Azure Active Directory 애플리케이션 프록시를 사용하면 더 이상 웹 또는 모바일 앱을 통한 보안 액세스를 허용하기 위해 웹 애플리케이션 프록시를 관리할 필요가 없습니다.
 
 ### <a name="custom-headers"></a>사용자 지정 헤더
 
@@ -58,7 +59,7 @@ SQL Server 2019는 이제 Enterprise 및 Standard Edition용 SSRS 카탈로그 �
 
 ### <a name="microsoft-report-builder-update"></a>Microsoft 보고서 작성기 업데이트
 
-새로 릴리스된 보고서 작성기 버전은 Reporting Services의 2016, 2017 및 2019 버전과 완벽하게 호환됩니다. 또한 Power BI Report Server의 모든 릴리스 및 지원 버전과 호환됩니다.
+새로 릴리스된 보고서 작성기 버전은 Reporting Services의 2016, 2017 및 2019 버전과 완전히 호환됩니다. 또한 Power BI Report Server의 모든 릴리스 및 지원 버전과도 호환됩니다.
 
 ::: moniker-end
 
@@ -137,7 +138,7 @@ SQL Server 2017 Reporting Services를 다운로드하려면 **[Microsoft 다운�
 Reporting Services 모바일 보고서는 다양한 폼 팩터에 최적화된 전용 보고서로서, 모바일 디바이스에서 보고서에 액세스하는 사용자에게 최적의 환경을 제공합니다. 모바일 보고서는 시간, 범주 및 비교 차트부터 트리 맵 및 사용자 지정 맵까지의 다양한 시각화 기능을 사용합니다. 온-프레미스 SQL Server Analysis Services 다차원 및 테이블 형식 데이터를 포함하여 모바일 보고서를 다양한 데이터 원본에 연결합니다. 표 행과 열을 조정하여 디자인 화면에 모바일 보고서용 필드를 배치할 수 있습니다. 유연한 모바일 보고서 요소는 모든 화면 크기에 맞게 자동으로 조정합니다. 보바일 보고서를 Reporting Service 서버에 저장하고 브라우저 또는 Power BI 모바일 앱에서 이를 보고 상호 작용할 수 있습니다. 지원되는 디바이스에는 다음이 포함됩니다.
 
 - iPad
-- iPhones
+- iPhone
 - Android 휴대폰
 - 또는 모든 Windows 10 디바이스
 
@@ -179,13 +180,13 @@ Reporting Services 모바일 보고서는 다양한 폼 팩터에 최적화된 �
 
 브라우저 지원에 대한 자세한 내용은 [Reporting Services 및 파워 뷰에 대한 브라우저 지원](../reporting-services/browser-support-for-reporting-services-and-power-view.md)을 참조하세요.  
 
-**페이지를 매긴 세련된 보고서:** 차트, 계기, 지도 및 기타 데이터 시각화에 대해 새롭고 현대적인 스타일을 사용하여 페이지를 매긴 세련된 보고서를 디자인할 수 있습니다.
+**페이지가 매겨진 세련된 보고서:** 차트, 계기, 지도 및 기타 데이터 시각화에 대한 새롭고 최신 스타일을 사용하여 페이지가 매겨진 세련된 보고서를 디자인할 수 있습니다.
 
-**트리 맵 및 선버스트 차트:** 트리 맵 ![ssrs_treemap_icon](../reporting-services/media/ssrs-treemap-icon.png "ssrs_treemap_icon") 및 선버스트 ![ssrs_sunburst_icon](../reporting-services/media/ssrs-sunburst-icon.png "ssrs_sunburst_icon") 차트를 사용하여 보고서를 개선합니다. 계층적 데이터를 표시하는 데 유용한 방법입니다. 자세한 내용은 [Tree Map and Sunburst Charts in Reporting Services](../reporting-services/report-design/tree-map-and-sunburst-charts-in-reporting-services.md)를 참조하세요.  
+**트리 맵과 선버스트 차트:** 트리 맵 ![ssrs_treemap_icon](../reporting-services/media/ssrs-treemap-icon.png "ssrs_treemap_icon") 및 선버스트 ![ssrs_sunburst_icon](../reporting-services/media/ssrs-sunburst-icon.png "ssrs_sunburst_icon") 차트를 사용하여 보고서를 개선합니다. 계층적 데이터를 표시하는 데 유용한 방법입니다. 자세한 내용은 [Tree Map and Sunburst Charts in Reporting Services](../reporting-services/report-design/tree-map-and-sunburst-charts-in-reporting-services.md)를 참조하세요.  
 
-**보고서 포함:** 이제 URL 매개 변수와 함께 iframe을 사용하여 다른 웹 페이지 및 애플리케이션에 모바일 및 페이지가 매겨진 보고서를 포함할 수 있습니다.  
+**보고서 포함:** 이제 URL 매개 변수와 함께 iframe을 사용하여 다른 웹 페이지와 애플리케이션에 모바일 및 페이지가 매겨진 보고서를 포함할 수 있습니다.  
 
-**Power BI 대시보드에 보고서 항목 고정:** [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]에서 보고서를 보는 동안 보고서 항목을 선택하여 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 대시보드에 고정할 수 있습니다.   고정할 수는 항목은 차트, 계기 패널, 지도 및 이미지입니다. 다음을 수행할 수 있습니다.
+**Power BI 대시보드에 보고서 항목 고정:**[!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]에서 보고서를 보는 동안 보고서 항목을 선택하여 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 대시보드에 고정할 수 있습니다.   고정할 수는 항목은 차트, 계기 패널, 지도 및 이미지입니다. 다음을 수행할 수 있습니다.
 
 1. 고정하려는 대시보드가 포함된 그룹을 선택합니다.
 2. 항목을 고정할 대시보드를 선택합니다.
@@ -197,7 +198,7 @@ Reporting Services 모바일 보고서는 다양한 폼 팩터에 최적화된 �
 
 자세한 내용은 [Power BI 보고서 서버 통합&#40;Configuration Manager&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md) 및 [Power BI 대시보드에 Reporting Services 항목 고정](../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md)을 참조하세요.  
 
-**PowerPoint 렌더링 및 내보내기:** Microsoft PowerPoint(PPTX) 형식은 새로운 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 렌더링 확장 프로그램입니다. 일반적인 애플리케이션(보고서 작성기, 보고서 디자이너 (SSDT), [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)])에서 PPTX 형식으로 보고서를 내보낼 수 있습니다. 예를 들어 다음 이미지는 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]의 내보내기 메뉴를 보여 줍니다. 
+**PowerPoint 렌더링 및 내보내기:** Microsoft PowerPoint(PPTX) 형식은 새로운 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 렌더링 확장입니다. 일반적인 애플리케이션(보고서 작성기, 보고서 디자이너 (SSDT), [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)])에서 PPTX 형식으로 보고서를 내보낼 수 있습니다. 예를 들어 다음 이미지는 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]의 내보내기 메뉴를 보여 줍니다. 
 
 ![ssrs-export-powerpoint](../reporting-services/media/ssrs-export-powerpoint.png) 
 
@@ -209,7 +210,7 @@ https://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freport
 
 자세한 내용은 [Export a Report Using URL Access](../reporting-services/export-a-report-using-url-access.md)를 참조하세요.
 
-**원격 인쇄용 ActiveX를 대체하는 PDF:** 이제 보고서 뷰어 도구 모음에서 ActiveX 컨트롤 대신 PDF를 통해 인쇄합니다. 새 보고서 뷰어는 Microsoft Edge를 비롯한 대부분의 최신 브라우저에서 지원됩니다. 다운로드할 ActiveX 컨트롤이 없습니다! 사용하는 브라우저와 설치한 PDF 보기 애플리케이션 및 서비스에 따라 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]에서 보고서를 인쇄할 인쇄 대화 상자를 열거나 .PDF 파일을 다운로드하라는 메시지가 표시됩니다. 관리자는 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]에서 클라이언트 쪽 인쇄를 사용하지 않도록 설정할 수 있습니다.
+**원격 인쇄용 ActiveX를 대체하는 PDF:** 이제 보고서 뷰어 도구 모음이 ActiveX 컨트롤 대신 PDF를 통해 출력됩니다. 새 보고서 뷰어는 Microsoft Edge를 비롯한 대부분의 최신 브라우저에서 지원됩니다. 다운로드할 ActiveX 컨트롤이 없습니다! 사용하는 브라우저와 설치한 PDF 보기 애플리케이션 및 서비스에 따라 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]에서 보고서를 인쇄할 인쇄 대화 상자를 열거나 .PDF 파일을 다운로드하라는 메시지가 표시됩니다. 관리자는 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]에서 클라이언트 쪽 인쇄를 사용하지 않도록 설정할 수 있습니다.
 
 자세한 내용은 [Reporting Services에 대한 클라이언트 쪽 인쇄 기능 설정 및 해제](../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md)를 참조하세요.
 
@@ -226,7 +227,7 @@ https://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freport
 
 ### <a name="sql-server-data-tools-ssdt"></a>SSDT(SQL Server Data Tools)
 
-SSDT의 새 릴리스에는 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]용 프로젝트 템플릿(보고서 서버 프로젝트 마법사 및 보고서 서버 프로젝트)이 포함되어 있습니다. SSDT를 다운로드하는 방법에 대한 자세한 내용은 [Visual Studio 2015용 SQL Server Data Tools](https://go.microsoft.com/fwlink/?LinkId=827542)를 참조하세요.  
+SSDT의 새 릴리스에는 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]의 프로젝트 템플릿이 포함되어 있습니다. 보고서 서버 프로젝트 마법사 및 보고서 서버 프로젝트. SSDT를 다운로드하는 방법에 대한 자세한 내용은 [Visual Studio 2015용 SQL Server Data Tools](https://go.microsoft.com/fwlink/?LinkId=827542)를 참조하세요.  
 
 ### <a name="report-builder-improvements"></a>보고서 작성기 고급 기능
 
@@ -237,7 +238,7 @@ SSDT의 새 릴리스에는 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md
 |새로 만들기|Previous|  
 |![ssrs_rbfacelift_new](../reporting-services/media/ssrs-rbfacelift-new.png "ssrs_rbfacelift_new")|![ssrs_rbfacelift_old](../reporting-services/media/ssrs-rbfacelift-old.png "ssrs_rbfacelift_old")|  
 
-**매개 변수 창 사용자 지정:** 이제 매개 변수 창을 사용자 지정할 수 있습니다. 보고서 작성기의 디자인 화면을 사용하여 매개 변수 창의 특정 열과 행에 매개 변수를 끌어 넣을 수 있습니다. 열을 추가하거나 제거하여 창 레이아웃을 변경할 수 있습니다. 자세한 내용은 [보고서에서 매개 변수 창 사용자 지정&#40;보고서 작성기&#41;](../reporting-services/report-design/customize-the-parameters-pane-in-a-report-report-builder.md)에서 만드는 모바일 보고서에서 보고서 매개 변수를 사용할 수 있습니다.  
+**사용자 지정 매개 변수 창:** 이제 매개 변수 창을 사용자 지정할 수 있습니다. 보고서 작성기의 디자인 화면을 사용하여 매개 변수 창의 특정 열과 행에 매개 변수를 끌어 넣을 수 있습니다. 열을 추가하거나 제거하여 창 레이아웃을 변경할 수 있습니다. 자세한 내용은 [보고서에서 매개 변수 창 사용자 지정&#40;보고서 작성기&#41;](../reporting-services/report-design/customize-the-parameters-pane-in-a-report-report-builder.md)에서 만드는 모바일 보고서에서 보고서 매개 변수를 사용할 수 있습니다.  
 
 ![보고서 데이터 창 및 매개 변수 창의 매개 변수 목록](../reporting-services/media/ssrs-customizeparameter-parameterlist-reportdatapane.png "보고서 데이터 창 및 매개 변수 창의 매개 변수 목록")  
 
