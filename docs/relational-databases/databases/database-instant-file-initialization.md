@@ -2,7 +2,7 @@
 title: 데이터베이스 즉시 파일 초기화
 description: 인스턴트 파일 초기화 및 SQL Server 데이터베이스에서 이를 사용하도록 설정하는 방법을 알아봅니다.
 ms.custom: contperfq4
-ms.date: 05/30/2020
+ms.date: 07/24/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1ad468f5-4f75-480b-aac6-0b01b048bd67
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: a10e6f9cff886b18b8bc344270516aaf2b5577db
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 20b182186244221c0f8cea2dda86d8f6a269cd50
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756258"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246588"
 ---
 # <a name="database-instant-file-initialization"></a>데이터베이스 즉시 파일 초기화
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,6 +37,7 @@ ms.locfileid: "85756258"
 - 데이터베이스 또는 파일 그룹을 복원합니다.  
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 IFI(인스턴트 파일 초기화)를 사용하여 앞서 언급한 파일 작업을 더 빠르게 실행할 수 있습니다. 이는 해당 공간을 0으로 채우지 않고 사용된 디스크 공간을 회수하기 때문입니다. 대신, 새 데이터를 파일에 기록할 때 디스크 내용을 덮어씁니다. 로그 파일은 즉시 초기화할 수 없습니다.
+
 
 ## <a name="enable-instant-file-initialization"></a>인스턴트 파일 초기화 사용
 
@@ -99,5 +100,29 @@ ms.locfileid: "85756258"
     > [!NOTE]
     > 사용하지 않도록 설정하면 데이터 파일에 대한 할당 시간이 늘어나고 사용자 권한이 취소된 후 생성되거나 크기가 증가한 파일에만 영향을 줍니다.
   
+### <a name="se_manage_volume_name-user-right"></a>SE_MANAGE_VOLUME_NAME 사용자 권한
+
+*SE_MANAGE_VOLUME_NAME* 사용자 권한은 **Windows 관리 도구**, **로컬 보안 정책** 애플릿에서 할당할 수 있습니다. **로컬 정책**에서 **사용자 권한 할당**을 선택하고 **볼륨 유지 관리 작업 수행** 속성을 수정합니다.
+
+## <a name="performance-considerations"></a>성능 고려 사항
+
+데이터베이스 파일 초기화 프로세스는 초기화 중인 파일의 새 영역에 0을 씁니다. 이 프로세스 진행 시간은 초기화되는 파일 부분의 크기와 스토리지 시스템의 응답 시간 및 용량에 따라 달라집니다. 초기화가 오래 걸리는 경우 SQL Server 오류 로그 및 애플리케이션 로그에 다음과 같은 메시지가 기록될 수 있습니다.
+
+```
+Msg 5144
+Autogrow of file '%.*ls' in database '%.*ls' was cancelled by user or timed out after %d milliseconds.  Use ALTER DATABASE to set a smaller FILEGROWTH value for this file or to explicitly set a new file size.
+```
+
+```
+Msg 5145
+Autogrow of file '%.*ls' in database '%.*ls' took %d milliseconds.  Consider using ALTER DATABASE to set a smaller FILEGROWTH for this file.
+```
+
+데이터베이스 및/또는 트랜잭션 로그 파일 자동 증가가 오래 걸리는 경우 쿼리 성능 문제가 발생할 수 있습니다. 이는 파일 자동 증가를 요구하는 작업이 파일 증가 작업 동안 잠금 또는 래치와 같은 리소스를 유지하기 때문입니다. 할당 페이지에 대한 래치 대기 시간이 길어질 수 있습니다. 긴 자동 증가를 필요로 하는 작업에는 PREEMPTIVE_OS_WRITEFILEGATHER 대기 유형이 표시됩니다.
+
+
+
+
+
 ## <a name="see-also"></a>참고 항목  
  [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)

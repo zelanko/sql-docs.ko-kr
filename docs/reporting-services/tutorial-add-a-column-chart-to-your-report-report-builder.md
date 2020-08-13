@@ -1,5 +1,6 @@
 ---
 title: '자습서: 보고서에 세로 막대형 차트 추가(보고서 작성기) | Microsoft Docs'
+description: 계열을 범주별로 그룹화된 일련의 세로 막대로 표시하는 세로 막대형 차트가 있는 Reporting Services 페이지가 매겨진 보고서를 만드는 방법을 알아봅니다.
 ms.date: 09/02/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 63480059-b7b9-44b5-9d7f-91780db708b6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 55a74bcd165fd06d55eccd6afa718ccd775c7faf
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 450e625fba58eaa6ff1d9e9fe13065bf934a633b
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63041399"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245690"
 ---
 # <a name="tutorial-add-a-column-chart-to-your-report-report-builder"></a>자습서: 보고서에 세로 막대형 차트 추가(보고서 작성기)
 이 자습서에서는 계열을 범주별로 그룹화된 일련의 세로 막대로 표시하는 세로 막대형 차트가 있는, 페이지가 매겨진 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 보고서를 만듭니다. 
@@ -30,7 +31,7 @@ ms.locfileid: "63041399"
 > [!NOTE]  
 > 이 자습서에서 마법사의 단계는 하나의 절차로 통합됩니다. 보고서 서버를 찾고, 데이터 원본을 선택하고, 데이터 세트를 만드는 방법에 대한 단계별 지침은 이 시리즈의 첫 번째 자습서인 [자습서: 기본 테이블 보고서 만들기&#40;보고서 작성기&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)을 참조하세요.  
   
-이 자습서에 소요되는 예상 시간: 15분  
+이 자습서에 소요되는 예상 시간: 15분.  
   
 ## <a name="requirements"></a>요구 사항  
 요구 사항에 대한 자세한 내용은 [자습서의 필수 조건&#40;보고서 작성기&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md)을 참조하세요.  
@@ -215,7 +216,7 @@ ms.locfileid: "63041399"
 
     ![report-builder-column-chart-format-y-axis](../reporting-services/media/report-builder-column-chart-format-y-axis.png)
     
-## <a name="8-show-all-the-labels-on-the-horizontal-x-axis"></a>8. 가로(x) 축에 있는 모든 레이블 표시
+## <a name="8-show-all-the-labels-on-the-horizontal-x-axis"></a>8. 가로(x) 축에 있는 모든 레이블을 표시합니다.
 
 x축의 레이블 중 일부만 표시되는 것을 확인할 수 있습니다. 이 섹션에서는 속성 창의 속성을 설정하여 모두 표시합니다.
 

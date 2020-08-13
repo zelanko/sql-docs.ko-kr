@@ -1,5 +1,6 @@
 ---
 title: '자습서: 텍스트 서식 지정(보고서 작성기) | Microsoft Docs'
+description: Reporting Services 페이지를 매긴 보고서에서 다양한 방법으로 텍스트의 서식을 지정하는 방법을 알아봅니다. 예를 들어 다양한 서식을 실험할 수 있습니다.
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 67d8513e-8a70-464b-b87f-e91d010cfd82
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 090729625991e3a1aaa6fb1ada3012a15ff20dce
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6f71447f2e0f83c87d9b48a464a99dbbb7a1d4c9
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63043045"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248122"
 ---
 # <a name="tutorial-format-text-report-builder"></a>자습서: 텍스트 서식 지정(보고서 작성기)
 
@@ -25,7 +26,7 @@ ms.locfileid: "63043045"
   
 한 단계에서는 고의적으로 작업을 잘못 수행하므로 해당 작업이 잘못인 이유를 확인할 수 있습니다. 그런 다음 이를 올바르게 수정하여 원하는 결과를 얻을 수 있습니다.  
     
-이 자습서에 소요되는 예상 시간: 20분  
+이 자습서에 소요되는 예상 시간: 20분.  
   
 ## <a name="requirements"></a>요구 사항  
 요구 사항에 대한 자세한 내용은 [자습서의 필수 조건&#40;보고서 작성기&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md)을 참조하세요.  
@@ -50,7 +51,7 @@ ms.locfileid: "63043045"
 
     **보고서 데이터** 창이 표시되지 않는 경우 **보기** 탭에서 **보고서 데이터**를 선택합니다.
   
-2.  **이름** 상자에 **TextDataSource**를 입력합니다.  
+2.  **이름** 상자에 다음을 입력합니다. **TextDataSource**  
   
 3.  **내 보고서에 포함된 연결 사용**을 클릭합니다.  
   
@@ -67,7 +68,7 @@ ms.locfileid: "63043045"
   
 2.  데이터 원본이 **TextDataSource**인지 확인합니다.  
   
-3.  **이름** 상자에 **TextDataset**를 입력합니다.  
+3.  **이름** 상자에 다음을 입력합니다. **TextDataset.**  
   
 4.  **텍스트** 쿼리 유형이 선택되어 있는지 확인한 다음 **쿼리 디자이너**를 클릭합니다.  
   
@@ -179,7 +180,7 @@ ms.locfileid: "63043045"
   
 1.  **삽입** 탭 > **테이블** > **테이블 마법사**를 클릭합니다.  
   
-2.  새 테이블 또는 행렬 마법사의 **데이터 세트 선택** 페이지에서 **이 보고서의 기존 데이터 세트 또는 공유 데이터 세트 선택** > **TextDataset(이 보고서)**  > **다음**을 클릭합니다.  
+2.  새 테이블 또는 행렬 마법사의 **데이터 세트 선택** 페이지에서 **이 보고서의 기존 데이터 세트 또는 공유 데이터 세트 선택** > **TextDataset(이 보고서)** > **다음**을 클릭합니다.  
   
 3.  **필드 정렬** 페이지에서 **Territory**, **LinkText**및 **Product** 필드를 **행 그룹**으로 끌고 **Sales** 필드를 **값**으로 끈 후 **다음**을 클릭합니다.  
 

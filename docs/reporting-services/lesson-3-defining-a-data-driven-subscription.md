@@ -1,5 +1,6 @@
 ---
 title: '3단원: 데이터 기반 구독 정의 | Microsoft Docs'
+description: Reporting Services 웹 포털의 데이터 기반 구독 페이지를 사용하여 구독 데이터 원본에 연결하고 구독 데이터를 검색하는 쿼리를 작성합니다.
 ms.date: 06/06/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,14 +9,14 @@ ms.topic: conceptual
 ms.assetid: 89197b9b-7502-4fe2-bea3-ed7943eebf3b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fafd591e4b29f9b8beb1639ff64f4e2d43b65c2d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 332a1cbcda7bee87c16167179ef488fe02334474
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "66826860"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247182"
 ---
-# <a name="lesson-3-defining-a-data-driven-subscription"></a>Lesson 3: Defining a Data-Driven Subscription
+# <a name="lesson-3-defining-a-data-driven-subscription"></a>3단원: 데이터 기반 구독 정의
 이 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 자습서 단원에서는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 웹 포털 데이터 기반 구독 페이지를 사용하여 구독 데이터 원본에 연결하고 구독 데이터를 검색하는 쿼리를 작성하며 결과 세트를 보고서 및 전송 옵션에 매핑합니다.  
   
 > [!NOTE]  
@@ -86,7 +87,7 @@ ms.locfileid: "66826860"
 **렌더링 형식** | 데이터 세트에서 값 가져오기 | 형식
 **쓰기 모드**| 값 입력| 자동 증분    
 **파일 확장명** |값 입력 |True
-**사용자 이름** | 값 입력 | 도메인 사용자 계정을 입력합니다. \<domain>\\\<account> 형식으로 입력합니다. 사용자 계정에는 사용자가 구성한 경로에 대한 권한이 있어야 합니다. 
+**사용자 이름** | 값 입력 | 도메인 사용자 계정을 입력합니다. 이 계정을 \<domain>\\\<account> 형식으로 입력합니다. 사용자 계정에는 사용자가 구성한 경로에 대한 권한이 있어야 합니다. 
 **암호** | 값 입력 | 암호 입력
 **파일 공유 계정 사용** | 값 입력 | False
 

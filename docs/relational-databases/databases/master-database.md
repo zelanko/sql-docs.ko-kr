@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 660e909f-61eb-406b-bbce-8864dd629ba0
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 2964e02ad49ef21b61949da7eec2f48ede553b02
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b5f8da43f32319c45c94a8a6f82b012c4460e8e1
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728437"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246388"
 ---
 # <a name="master-database"></a>master 데이터베이스
 
@@ -87,6 +87,7 @@ ms.locfileid: "85728437"
 **master** 데이터베이스에서는 다음 작업을 수행할 수 없습니다.  
   
 - 파일이나 파일 그룹 추가  
+- 백업, master 데이터베이스에서는 전체 데이터베이스 백업만 수행할 수 있습니다.
 - 데이터 정렬 변경. 기본 데이터 정렬은 서버 데이터 정렬입니다.  
 - 데이터베이스 소유자 변경. **master** 는 **sa**가 소유합니다.  
 - 전체 텍스트 카탈로그 또는 전체 텍스트 인덱스 만들기  

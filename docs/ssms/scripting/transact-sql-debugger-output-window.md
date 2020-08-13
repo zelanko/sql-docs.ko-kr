@@ -1,5 +1,6 @@
 ---
 title: 출력 창
+description: 출력 창을 사용하여 SQL Server Management Studio 디버거 등의 도구에서 상태 메시지 및 기타 출력을 보는 방법을 알아봅니다.
 titleSuffix: T-SQL Debugger
 ms.prod: sql
 ms.technology: scripting
@@ -14,16 +15,16 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4d446b3b7af6ce4606d656a6a1232016dbb90ea5
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 93cf1e703e7a8610ecf2bc8de841c00b7b2b3397
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253031"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247337"
 ---
 # <a name="transact-sql-debugger---output-window"></a>Transact-SQL 디버거 - 출력 창
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 이 창에는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 다양한 기능에 대한 상태 메시지가 표시됩니다. **디버거, 외부 도구 기능 또는 디버거** 명령 창 [!INCLUDE[tsql](../../includes/tsql-md.md)] 에서 실행되는 명령의 출력은 **출력**창의 특수 창으로 전달됩니다 일반적으로 명령 프롬프트 창에 표시되는 .bat 파일이나 .com 파일과 같은 외부 도구의 출력도 확인할 수 있습니다.
 

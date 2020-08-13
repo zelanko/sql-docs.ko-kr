@@ -1,5 +1,6 @@
 ---
 title: '자습서: 보고서에 원형 차트 추가(보고서 작성기) | Microsoft Docs'
+description: Reporting Services 페이지를 매긴 보고서에서 원형 차트를 만들고, 백분율을 추가하고, 작은 조각을 단일 조각으로 결합하는 방법을 알아봅니다.
 ms.date: 06/15/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: eaadf7bf-c312-428a-b214-0a1fbf959c3f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b25a2f955ddd630c7093a1dc82a22c2cd0ba41b0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 55cf0d48ebe4cec7063089c1ec025dd4b34bce1b
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63041269"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245670"
 ---
 # <a name="tutorial-add-a-pie-chart-to-your-report-report-builder"></a>자습서: 보고서에 원형 차트 추가(보고서 작성기)
 이 자습서에서는 페이지가 매겨진 Reporting Services 보고서에 원형 차트를 만듭니다. 백분율을 추가하고 작은 조각을 한 조각으로 결합합니다.
@@ -115,7 +116,7 @@ ms.locfileid: "63041269"
   
 4.  **레이블 데이터** 상자에서 **#PERCENT**를 선택합니다.  
     
-5.  (옵션) 레이블을 표시할 때 사용할 소수 자릿수를 지정하려면 **#PERCENT** **레이블 데이터** 상자에 **{Pn}** 을 입력합니다. 여기서 *n*은 표시할 소수 자릿수입니다. 예를 들어 소수 자릿수를 표시하지 않으려면 **#PERCENT{P0}** 을 입력합니다.  
+5.  (옵션) 레이블을 표시할 때 사용할 소수 자릿수를 지정하려면 **#PERCENT****레이블 데이터** 상자에 **{Pn}** 을 입력합니다. 여기서 *n*은 표시할 소수 자릿수입니다. 예를 들어 소수 자릿수를 표시하지 않으려면 **#PERCENT{P0}** 을 입력합니다.  
 
 6.  값을 백분율로 표시하려면 UseValueAsLabel 속성이 false여야 합니다. **동작 확인** 대화 상자에서 이 값을 설정할지 묻는 메시지가 표시되면 **예**를 클릭합니다.  
   

@@ -1,5 +1,6 @@
 ---
 title: Management Studio에서 속성 창 사용
+description: 속성 창을 사용하여 연결과 같은 SQL Server Management Studio 항목에 대한 정보와 데이터베이스 개체에 대한 정보를 보는 방법을 알아봅니다.
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,15 +15,15 @@ ms.assetid: 903d4aca-f57c-43d9-a893-702eceaa7004
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9277e6ee5e1dbd7b5c059c30d7ae49f56963d917
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 256355d1cf0d7b245832c0effe551a0236ed8597
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75252946"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245541"
 ---
 # <a name="use-the-properties-window-in-management-studio"></a>Management Studio에서 속성 창 사용
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   속성 창은 연결 또는 실행 계획 연산자와 같은 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 항목의 상태와 테이블, 뷰, 디자이너 등과 같은 데이터베이스 개체에 대한 정보를 설명합니다.  
   
  속성 창을 사용하여 현재 연결의 속성을 볼 수 있습니다. 대부분의 속성은 속성 창에서 읽기 전용이지만 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]의 다른 위치에서 변경할 수 있습니다. 예를 들어 쿼리의 데이터베이스 속성은 속성 창에서 읽기 전용이지만 도구 모음에서 변경할 수 있습니다.  

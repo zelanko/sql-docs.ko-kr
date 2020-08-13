@@ -1,5 +1,6 @@
 ---
 title: '자습서: 기본 테이블 보고서 만들기(보고서 작성기) | Microsoft Docs'
+description: 보고서 작성기에서 마법사를 사용하여 샘플 판매 데이터를 기반으로 하는 기본 테이블 보고서를 만드는 방법을 알아봅니다.
 ms.date: 06/23/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: d9e30521-f8ae-4c45-89c3-d40727f622f7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5a97a0cfc446a32e02172d22391dec8e5ca13af6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: bffaef60422d47484968ad30b5bc8d625549a74e
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63041207"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247472"
 ---
 # <a name="tutorial-creating-a-basic-table-report-report-builder"></a>자습서: 기본 테이블 보고서 만들기(보고서 작성기)
 이 자습서에서는 예제 판매 데이터를 기반으로 기본 테이블 보고서를 만드는 방법을 배웁니다. 다음 그림에서는 만들려는 보고서를 보여 줍니다.  
@@ -56,7 +57,7 @@ ms.locfileid: "63041207"
   
 4.  **연결 유형 선택**에서 **Microsoft SQL Server** 가 선택되어 있는지 확인합니다.  
   
-5.  **연결 문자열**에 다음 텍스트를 입력합니다. 여기서 \<servername>은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스의 이름입니다.  
+5.  **연결 문자열**에 다음 텍스트를 입력합니다. 여기서 \<servername>은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 인스턴스 이름입니다.  
   
     ```  
     Data Source=<servername>  

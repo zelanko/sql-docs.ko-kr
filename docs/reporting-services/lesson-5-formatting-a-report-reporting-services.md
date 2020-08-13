@@ -1,5 +1,6 @@
 ---
 title: '5단원: 보고서 서식 지정(Reporting Services) | Microsoft Docs'
+description: Sales Orders 보고서에 데이터 영역과 일부 필드를 추가한 후 날짜 및 통화 필드와 열 머리글의 서식을 지정하는 방법을 알아봅니다.
 ms.date: 04/29/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: ae46efa9-6e04-48ec-afb4-5a2314dcb05a
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a8bf8b6814f7989a904507cd89fbea397b8b6930
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ef2d3fd220aef7a593a2244cf2d7509c5264fcca
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65105933"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245112"
 ---
 # <a name="lesson-5-formatting-a-report-reporting-services"></a>5단원: 보고서 서식 지정(Reporting Services)
 
@@ -65,7 +66,7 @@ LineTotal 필드 식은 일반 숫자를 표시합니다. 숫자에 서식을 �
 
 ## <a name="next-steps"></a>다음 단계
 
-이 단원에서는 열 머리글과 필드 식에 성공적으로 서식을 지정했습니다. 다음으로, 보고서에 그룹화 및 합계를 추가해 보겠습니다. [6단원: 그룹화 및 합계 추가 &#40;Reporting Services&#41;](lesson-6-adding-grouping-and-totals-reporting-services.md)에서 계속 진행하세요.
+이 단원에서는 열 머리글과 필드 식에 성공적으로 서식을 지정했습니다. 다음으로, 보고서에 그룹화 및 합계를 추가해 보겠습니다. 다음으로 [6단원: 그룹화 및 합계 추가&#40;Reporting Services&#41;](lesson-6-adding-grouping-and-totals-reporting-services.md)를 참조하세요.
 
 ## <a name="see-also"></a>참고 항목
 

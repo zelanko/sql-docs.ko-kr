@@ -1,5 +1,6 @@
 ---
 title: 보고서 디자인 및 보고서 배포 계획 | Microsoft Docs
+description: Reporting Services를 사용하여 보고서 작성 및 함께 작동하는 보고서 서버 환경을 계획하는 방법을 알아봅니다.
 ms.date: 09/12/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1c1e265e-52a2-4de3-96fd-ca4abae01c02
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bca1457eb9be7b686ccfe86a1f7e7bdcab15cc14
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8921fa3e19ca9de4184af907ee1aac59bd82f824
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65581242"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247542"
 ---
 # <a name="plan-for-report-design-and-report-deployment--reporting-services"></a>보고서 디자인 및 보고서 배포 계획 | Reporting Services
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]에서는 페이지를 매긴 보고서를 여러 가지 방법으로 작성 및 배포할 수 있습니다. 보고서 제작 및 함께 작동하는 보고서 서버 환경을 계획하는 방법을 알아봅니다.

@@ -1,6 +1,6 @@
 ---
 title: '3단원: 테이블 보고서에 대한 데이터 세트 정의 | Microsoft Docs'
-description: 페이지를 매긴 보고서에 대해 데이터 원본을 정의한 후에는 데이터 세트를 정의해야 합니다. SQL Server Reporting Services에서 보고서에 사용되는 데이터는 데이터 세트에 포함됩니다.
+description: 이 단원에서는 SSRS(SQL Server Reporting Services)에서 테이블 보고서에 대한 데이터 세트를 정의하는 방법을 알아봅니다.
 ms.date: 05/01/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: ee93dfcb-8f52-4d63-b4f6-0d38e00fd350
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 25c62e0cd615748a764937d6dc2b8e4c952e59a1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 272787e124616593c90483735afec702f5d4fb18
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75244313"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247552"
 ---
 # <a name="lesson-3-define-a-dataset-for-the-table-report---sql-server-reporting-services"></a>3단원: 테이블 보고서에 대한 데이터 세트 정의 - SQL Server Reporting Services
 
@@ -61,7 +61,7 @@ ms.locfileid: "75244313"
     HAVING ppc.Name = 'Clothing'
     ```
 
-7. (선택 사항) **쿼리 디자이너** 단추를 선택합니다. 텍스트 기반 ‘쿼리 디자이너’에 쿼리가 표시됩니다.  **Query Designer** 도구 모음에서 ![ssrs_querydesigner_run](media/ssrs-querydesigner-run.png) **실행** 단추를 선택하여 쿼리 결과를 확인합니다. 표시되는 데이터 세트에는 AdventureWorks2016 데이터베이스에 있는 테이블 4개의 필드 6개가 포함됩니다. 쿼리는 Transact-SQL 기능을 별칭으로 사용합니다. 예를 들어 SalesOrderHeader 테이블을 *soh*라고 합니다.
+7. (선택 사항) **쿼리 디자이너** 단추를 선택합니다. 텍스트 기반 ‘쿼리 디자이너’에 쿼리가 표시됩니다. **Query Designer** 도구 모음에서 ![ssrs_querydesigner_run](media/ssrs-querydesigner-run.png) **실행** 단추를 선택하여 쿼리 결과를 확인합니다. 표시되는 데이터 세트에는 AdventureWorks2016 데이터베이스에 있는 테이블 4개의 필드 6개가 포함됩니다. 쿼리는 Transact-SQL 기능을 별칭으로 사용합니다. 예를 들어 SalesOrderHeader 테이블을 *soh*라고 합니다.
 
 8. **확인**을 선택하여 **쿼리 디자이너**를 종료합니다.
 

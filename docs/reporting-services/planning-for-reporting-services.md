@@ -1,5 +1,6 @@
 ---
 title: Reporting Services에 대한 계획 | Microsoft Docs
+description: 요구에 가장 적합하게 SSRS(SQL Server Reporting Services) 환경을 설치하고 구성하는 방법을 알아봅니다.
 ms.date: 09/12/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4dde9d4d-e4fa-4bbe-91b0-0bcb0dc7dde7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: aa89fdf4bce0f268d71ea8c93e60ec4fcee6237c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 569daf4b395e40d9bcaf444aace9565cd9fd3822
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68891769"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247522"
 ---
 # <a name="planning-for-reporting-services"></a>Reporting Services에 대한 계획
   다음 항목을 통해 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]를 더 잘 이해할 수 있습니다. 사용자의 요구에 가장 적합한 방식으로 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 환경을 설치 및 구성하는 방법을 자세히 알아보십시오.  

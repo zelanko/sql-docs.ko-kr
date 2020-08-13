@@ -1,5 +1,6 @@
 ---
 title: '자습서: 자유 형식 보고서 만들기(보고서 작성기) | Microsoft Docs'
+description: 뉴스레터로 사용되고 각 페이지에 정적 텍스트, 요약 시각적 개체 및 샘플 판매 데이터가 표시되는 페이지를 매긴 보고서를 만드는 방법을 알아봅니다.
 ms.date: 09/02/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 87288b59-faf2-4b1d-a8e4-a7582baedf2f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 567abd4423f546f853abea4caa5c944ce9d8ccdb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6b189c494f887faca2b6d3d4bb00253992470132
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "66499559"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247462"
 ---
 # <a name="tutorial-creating-a-free-form-report-report-builder"></a>자습서: 자유 형식 보고서 만들기(보고서 작성기)
 이 자습서에서는 뉴스레터 역할을 하는 페이지가 매겨진 보고서를 만듭니다. 각 페이지에는 정적 텍스트, 요약 시각적 개체 및 자세한 샘플 판매 데이터가 표시됩니다.
@@ -22,7 +23,7 @@ ms.locfileid: "66499559"
 
 이 보고서에서는 정보가 지역별로 그룹화되고 지역의 판매 관리자 이름과 세부 및 요약 판매 정보가 표시됩니다. 자유 형식 보고서의 기초로 목록 데이터 영역에서 시작한 다음 이미지가 있는 장식 패널, 데이터가 삽입된 정적 텍스트, 세부 정보를 표시할 테이블, 요약 정보를 표시할 원형 및 세로 막대형 차트(옵션) 등을 추가합니다.  
   
-이 자습서에 소요되는 예상 시간: 20분  
+이 자습서에 소요되는 예상 시간: 20분.  
   
 ## <a name="requirements"></a>요구 사항  
 요구 사항에 대한 자세한 내용은 [자습서의 필수 조건&#40;보고서 작성기&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md)을 참조하세요.  
@@ -48,11 +49,11 @@ ms.locfileid: "66499559"
   
 1.  보고서 데이터 창에서 **새로 만들기** > **데이터 원본**을 클릭합니다.  
   
-2.  **이름** 상자에 **ListDataSource**를 입력합니다.  
+2.  **이름** 상자에 다음을 입력합니다. **ListDataSource**  
   
 3.  **내 보고서에 포함된 연결 사용**을 클릭합니다.  
   
-4.  연결 형식이 Microsoft SQL Server인지 확인한 다음 **연결 문자열** 상자에 **Data Source = \<servername>** 을 입력합니다.  
+4.  연결 형식이 Microsoft SQL Server인지 확인한 다음 **연결 문자열** 상자에 다음을 입력합니다. **Data Source = \<servername>**  
   
     **\<servername>** (예: Report001)은 SQL Server 데이터베이스 엔진의 인스턴스가 설치된 컴퓨터를 지정합니다. 이 보고서의 데이터는 SQL Server 데이터베이스에서 추출된 것이 아니므로 데이터베이스 이름을 포함하면 안 됩니다. 지정된 서버의 기본 데이터베이스는 쿼리를 구문 분석하는 데만 사용됩니다.  
   
@@ -64,7 +65,7 @@ ms.locfileid: "66499559"
   
 1.  보고서 데이터 창에서 **새로 만들기** > **데이터 세트**을 클릭합니다.  
   
-2.  **이름** 상자에 **ListDataset**을 입력합니다.  
+2.  **이름** 상자에 다음을 입력합니다. **ListDataset**.  
   
 3.  **내 보고서에 포함된 데이터 세트 사용**을 클릭하고 데이터 원본이 **ListDataSource**인지 확인합니다.  
   
@@ -199,7 +200,7 @@ ms.locfileid: "66499559"
   
 2.  **삽입** 탭 > **텍스트 상자**로 이동합니다. 이전에 추가한 사각형 안에 있는 목록의 왼쪽 위를 클릭하고 마우스를 끌어 입력란의 너비와 높이를 각각 3.45인치와 5인치로 조정합니다.  
   
-3.  입력란에 커서를 놓고 **Newsletter for** 를 입력합니다. 다음 단계에서 추가할 필드의 텍스트를 구분하기 위해 "for" 단어 뒤에 공백을 포함합니다.   
+3.  텍스트 상자에 커서를 놓고 다음을 입력합니다. **Newsletter for**. 다음 단계에서 추가할 필드의 텍스트를 구분하기 위해 "for" 단어 뒤에 공백을 포함합니다.   
   
     ![뉴스레터 제목 텍스트 추가](../reporting-services/media/tutorial-newsletterfor.png "뉴스레터 제목 텍스트 추가")  
   
@@ -405,7 +406,7 @@ ms.locfileid: "66499559"
   
 9. 차트를 사각형 안으로 끌어옵니다.  
    
-10. 차트 제목을 선택하고 **Product Quantities Sold**를 입력합니다.  
+10. 차트 제목을 선택하고 다음을 입력합니다. **Product Quantities Sold**.  
   
 12. **홈** 탭 > **글꼴**에서 제목을 다음과 같이 조정합니다.
     * **글꼴** **맑은 고딕 Semibold**.
@@ -444,7 +445,7 @@ ms.locfileid: "66499559"
   
 9. 차트를 원형 차트 아래의 사각형 안으로 끌어옵니다.  
    
-10. 차트 제목을 선택하고 **Product Sales**를 입력합니다.  
+10. 차트 제목을 선택하고 다음을 입력합니다. **Product Sales**.  
   
 12. **홈** 탭 > **글꼴**에서 제목을 다음과 같이 조정합니다.
     * **글꼴** **맑은 고딕 Semibold**.

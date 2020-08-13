@@ -10,14 +10,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
-ms.openlocfilehash: ab118c18b2656701470a22b6987a659b45f2fdc7
-ms.sourcegitcommit: d1535944bff3f2580070cc036ece30f1d43ee2ce
+ms.openlocfilehash: c8bf01e39fb68d2315df2a441f7b2b4fefa81872
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86406116"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246530"
 ---
-# <a name="configure-polybase-to-access-external-data-in-sql-server"></a>SQL Server의 외부 데이터에 액세스하도록 PolyBase 구성
+# <a name="configure-polybase-to-access-external-data-with-odbc-generic-types"></a>ODBC 제네릭 형식의 외부 데이터를 액세스하도록 PolyBase 구성
 
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 

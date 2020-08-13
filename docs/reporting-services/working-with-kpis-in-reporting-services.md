@@ -1,5 +1,6 @@
 ---
 title: Reporting Services에서 KPI 사용 | Microsoft Docs
+description: SQL Server Reporting Services에서 KPI를 사용하여 상태 및 성능을 쉽게 측정할 수 있는 방법을 알아봅니다.
 author: maggiesMSFT
 ms.author: maggies
 ms.prod: reporting-services
@@ -7,12 +8,12 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.date: 07/02/2017
-ms.openlocfilehash: dd8dc50b9885bb33df66d152b432092b6ac9868d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b92f19c74e5b5e3215836e174bf895f7cb61c36b
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68329366"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247442"
 ---
 # <a name="working-with-kpis-in-reporting-services"></a>Reporting Services에서 KPI 사용
 
@@ -35,7 +36,7 @@ SQL Server Reporting Services에서 KPI를 사용하여 다음 질문에 대한 
 
 KPI는 공유된 데이터 세트에서 데이터의 첫 행만 사용합니다. 사용하려는 데이터가 첫 행에 있는지 확인합니다. 공유 데이터 세트를 만들기 위해 보고서 작성기 또는 SQL Server Data Tools를 사용할 수 있습니다.  
   
-> **참고**: 데이터 세트는 KPI와 같은 폴더에 있이 필요가 없습니다.  
+> **참고**: 데이터 세트는 KPI와 같은 폴더에 있을 필요가 없습니다.  
   
 ## <a name="placement-of-kpis"></a>KPI의 배치  
   
@@ -52,7 +53,7 @@ KPI의 위치를 확인한 후 해당 폴더로 이동하고 상단 메뉴에서
   
 정적 값을 할당 하거나 공유 데이터 세트에서 데이터를 사용할 수 있습니다. 새 KPI를 만들 때 임의 수동 데이터 집합으로 채워집니다.  
   
-| 필드 | Description |
+| 필드 | 설명 |
 |-----------------|--------------------------------------------------------------------------------------------------------------------------------------------------|
 | 값 형식 | 표시되는 값의 형식을 변경하는 데 사용합니다. |
 | 값 | KPI에 대해 표시할 값입니다. |

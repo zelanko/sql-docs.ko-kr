@@ -1,5 +1,6 @@
 ---
 title: sqlcmd를 사용하여 Transact-SQL 스크립트 파일 실행
+description: sqlcmd를 사용하여 Transact-SQL 스크립트 파일을 실행하는 방법을 알아봅니다. 여기에 Transact-SQL 문, sqlcmd 명령 및 스크립팅 변수가 포함될 수 있습니다.
 ms.custom: seo-lt-2019
 ms.date: 07/15/2016
 ms.prod: sql
@@ -12,15 +13,15 @@ ms.assetid: 90067eb8-ca3e-44e8-bb1a-bf7d1a359423
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ed85470d8e054ba60ae0b2525f773f83d70d0da3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 560eb5c224c700d5936c53c888af6af4eae08c6f
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253207"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247402"
 ---
 # <a name="sqlcmd---run-transact-sql-script-files"></a>sqlcmd - Transact-SQL 스크립트 파일 실행
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
  **sqlcmd** 를 사용하여 Transact-SQL 스크립트 파일을 실행합니다. Transact-SQL 스크립트 파일은 Transact-SQL 문, **sqlcmd** 명령 및 스크립팅 변수의 조합을 포함할 수 있는 텍스트 파일입니다.  
 
 ## <a name="create-a-script-file"></a>스크립트 파일 만들기  

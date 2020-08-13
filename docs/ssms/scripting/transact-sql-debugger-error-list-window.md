@@ -1,5 +1,6 @@
 ---
 title: 오류 목록 창
+description: 오류 목록을 사용하여 Transact-SQL 스크립트를 편집할 때 Intellisense에서 생성하는 오류 및 경고를 확인하는 방법을 알아봅니다.
 titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.technology: scripting
@@ -16,16 +17,16 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 64fa6b834d3f771712f9ce09dedb237fff46ed2c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4755c439edafb5f38740e12f6ec57abf468bc01a
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75243389"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247353"
 ---
 # <a name="transact-sql-debugger---error-list-window"></a>Transact-SQL 디버거 - 오류 목록 창
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **오류 목록**은 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기의 IntelliSense 코드에서 생성된 구문 및 의미 체계 오류를 표시합니다.  
 
@@ -74,7 +75,7 @@ ms.locfileid: "75243389"
 > [!NOTE]  
 >  **오류 목록** 에는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기의 오류만 표시되며 MDX, DMX 또는 XML/A 편집기의 오류는 표시되지 않습니다. 모든 MDX, DMX 및 XML/A 오류는 해당 편집기의 **메시지** 탭에 표시됩니다.  
   
-## <a name="uielement-list"></a>UIElement 목록  
+## <a name="ui-element-list"></a>UI 요소 목록  
  **오류 목록** 을 열면 다음 열에 정보가 표시됩니다.  
   
  **기본 순서**  

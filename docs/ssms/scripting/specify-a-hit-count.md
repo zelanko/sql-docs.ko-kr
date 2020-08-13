@@ -1,5 +1,6 @@
 ---
 title: 적중 횟수 지정
+description: 중단점이 적중 횟수에 도달할 때까지 디버거가 해당 중단점에서 중단하지 않도록 중단점 적중 횟수를 설정하는 방법을 알아봅니다.
 titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.technology: scripting
@@ -15,16 +16,16 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 03eed65b3295f1b9a1cc5b33de8809ce1d1c5c90
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: bdd2924500e7770f4c18b1f50908dd8cc0b437a0
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75243536"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245576"
 ---
 # <a name="specify-a-hit-count"></a>적중 횟수 지정
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 중단점 적중 횟수는 중단점에 도달할 때마다 [!INCLUDE[tsql](../../includes/tsql-md.md)] 디버거가 증가시키는 카운터입니다. 지정한 적중 횟수에 도달하고 지정한 중단 조건을 만족하면 디버거는 해당 중단점에 대해 지정된 동작을 수행합니다.  
 

@@ -1,5 +1,6 @@
 ---
 title: IntelliSense에서 지원되는 Transact-SQL 구문
+description: SQL Server 2019(15.x)의 SQL Server Management Studio IntelliSense에서 지원되는 Transact-SQL 문 및 구문 요소에 대해 알아봅니다.
 ms.prod: sql
 ms.technology: scripting
 ms.topic: conceptual
@@ -15,15 +16,15 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/16/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5acada236056a5691ceebe81d0372f1fa06543f1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 772574d5f50c9c3f9666c56abab80d3ce5181d82
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75252985"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247372"
 ---
 # <a name="transact-sql-syntax-supported-by-intellisense"></a>IntelliSense에서 지원되는 Transact-SQL 구문
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   이 항목에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 의 IntelliSense에서 지원하는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]문 및 구문 요소에 대해 설명합니다.  
   
 ## <a name="statements-supported-by-intellisense"></a>IntelliSense에서 지원하는 문  
@@ -35,14 +36,47 @@ ms.locfileid: "75252985"
 ### <a name="select-statement"></a>SELECT 문  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기에서는 SELECT 문의 다음 구문 요소에 대한 IntelliSense 지원을 제공합니다.  
   
-|||  
-|-|-|  
-|SELECT|WHERE|  
-|FROM|ORDER BY|  
-|HAVING|UNION|  
-|FOR|GROUP BY|  
-|맨 위로 이동|OPTION (hint)|  
-  
+:::row:::
+    :::column:::
+        SELECT
+    :::column-end:::
+    :::column:::
+        WHERE
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        FROM
+    :::column-end:::
+    :::column:::
+        ORDER BY
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        HAVING
+    :::column-end:::
+    :::column:::
+        UNION
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        FOR
+    :::column-end:::
+    :::column:::
+        GROUP BY
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        맨 위로 이동
+    :::column-end:::
+    :::column:::
+        OPTION (hint)
+    :::column-end:::
+:::row-end:::
+
 ### <a name="additional-transact-sql-statements-that-are-supported"></a>지원되는 추가 Transact-SQL 문  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기에서는 다음 표에 표시된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에 대한 IntelliSense 지원도 제공합니다.  
   
@@ -94,7 +128,7 @@ ms.locfileid: "75252985"
   
  앞에서 나열된 요소가 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에서 사용되는 경우에는 IntelliSense가 제공되지 않습니다. 예를 들어 SELECT 문에서 사용되는 열 이름에 대해서는 IntelliSense가 지원되지만 CREATE FUNCTION 문에서 사용되는 열에 대해서는 IntelliSense가 지원되지 않습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트나 일괄 처리 내에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기의 IntelliSense는 이 항목에 나열된 문과 구문만 지원합니다. 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드 예제에서는 IntelliSense에서 지원하는 문 및 구문을 보여 줍니다. 예를 들어 다음 일괄 처리에서 IntelliSense는 `SELECT` 가 `SELECT` 문에 포함되어 있지 않고 자체적으로 코딩된 경우 `CREATE FUNCTION` 문에 대해 사용할 수 있습니다.  
   
 ```  

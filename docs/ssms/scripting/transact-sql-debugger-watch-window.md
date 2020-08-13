@@ -1,5 +1,6 @@
 ---
 title: 조사식 창
+description: 선택한 식에 대한 정보를 표시하는 조사식 창(한 번에 최대 4개)에 대해 알아봅니다. 이 정보는 디버그 모드에서만 표시됩니다.
 titleSuffix: T-SQL Debugger
 ms.prod: sql
 ms.technology: scripting
@@ -13,18 +14,18 @@ ms.custom: seo-lt-2019
 ms.reviewer: ''
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ab0abfe0e2221da335e069ef2f8ba6de38c1d3f8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 42ddd23645e866cd066f8d70ea2cded0f9c0fcd0
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75252990"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248019"
 ---
 # <a name="transact-sql-debugger---watch-window"></a>Transact-SQL 디버거 - 조사식 창
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-**조사식** 창은 선택한 식에 대한 정보를 표시합니다. **조사식 1**, **조사식 2, 조사식 3**및 **조사식 4**의 최대 4개의 창으로 구성할 수 있습니다. 식은 **호출 스택** 창에서 선택한 현재 호출 스택 프레임 범위 내에서 평가됩니다. 변수 및 식을 조사하려면 디버그 모드여야 합니다.  
+**조사식** 창은 선택한 식에 대한 정보를 표시합니다. 조사식 창은 **조사식 1**, **조사식 2, 조사식 3** 및 **조사식 4**의 최대 4개의 창으로 구성할 수 있습니다. 식은 **호출 스택** 창에서 선택한 현재 호출 스택 프레임 범위 내에서 평가됩니다. 변수 및 식을 조사하려면 디버그 모드여야 합니다.  
 
 [!INCLUDE[ssms-old-versions](../../includes/ssms-old-versions.md)]
 
@@ -50,7 +51,7 @@ ms.locfileid: "75252990"
   
 -   @IntegerCounter + 1 또는 FirstName + LastName과 같이 하나 이상의 변수, 매개 변수 또는 시스템 함수에 연산자를 적용하여 빌드한 식  
   
--   SELECT CharacterCol FROM MyTable WHERE PrimaryKey = 1 등의 단일 값을 반환하는 Transact-SQL 문입니다.  
+-   SELECT CharacterCol FROM MyTable WHERE PrimaryKey = 1과 같이 단일 값을 반환하는 Transact-SQL 문  
   
  **값**  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 디버거에서 **이름**에 지정된 식을 평가한 후 반환되는 값을 표시합니다.  

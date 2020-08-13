@@ -1,5 +1,6 @@
 ---
 title: XML 디바이스 정보 설정 | Microsoft Docs
+description: XML 형식으로 렌더링하는 데 사용할 수 있는 다양한 디바이스 정보 설정을 자세히 알아봅니다.
 ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: a32e83fe-c10e-4ebd-8975-5be7dcc422e7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ee4e9f30dc190aae78e1e3e763451e42b3a52ecb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 72a645983dadaeff9c446ef3baf6fbcbfc94990b
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65571021"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247410"
 ---
 # <a name="xml-device-information-settings"></a>XML 디바이스 정보 설정
   다음 표는 XML 형식으로 렌더링하기 위한 디바이스 정보 설정을 나열합니다.  

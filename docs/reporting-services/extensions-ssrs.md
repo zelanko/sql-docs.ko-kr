@@ -1,5 +1,6 @@
 ---
 title: 확장
+description: Reporting Services에서 즉시 사용할 수 있는 확장과 Reporting Services가 확장을 사용하여 허용되는 입력 또는 출력의 형식을 모듈화하는 방식을 알아봅니다.
 author: maggiesMSFT
 ms.author: maggies
 ms.reviewer: ''
@@ -9,12 +10,12 @@ ms.technology: reporting-services
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
-ms.openlocfilehash: f7a64289bd3f1e1bd8fce71d21e5e1604e5bf4b4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0c532561c8d31cce2b5b044d8158be046bb824e4
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68262894"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247226"
 ---
 # <a name="extensions-for-sql-server-reporting-services-ssrs"></a>SSRS(SQL Server Reporting Services) 확장
 
@@ -56,7 +57,7 @@ ms.locfileid: "68262894"
   
 ## <a name="rendering-extensions"></a>렌더링 확장 프로그램
 
- 렌더링 확장 프로그램은 보고서 처리기의 데이터 및 레이아웃 정보를 디바이스 특정 형식으로 변환합니다. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 에는 HTML, Excel, CSV, XML, 이미지, PDF 및 [!INCLUDE[msCoName](../includes/msconame-md.md)] 단어의 7개 렌더링 확장 프로그램이 포함되어 입습니다.  
+ 렌더링 확장 프로그램은 보고서 처리기의 데이터 및 레이아웃 정보를 디바이스 특정 형식으로 변환합니다. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]에는 다음 7개의 렌더링 확장 프로그램이 포함되어 있습니다. HTML, Excel, CSV, XML, Image, PDF 및 [!INCLUDE[msCoName](../includes/msconame-md.md)] Word 렌더링 확장 프로그램이 포함되어 있습니다.  
   
 - **HTML 렌더링 확장 프로그램** 웹 브라우저를 통해 보고서 서버에서 보고서를 요청할 때 보고서 서버는 HTML 렌더링 확장 프로그램을 사용하여 보고서를 렌더링합니다. HTML 렌더링 확장 프로그램은 UTF-8 인코딩을 사용하여 모든 HTML을 생성합니다. 자세한 내용은 [HTML로 렌더링&#40;보고서 작성기 및 SSRS&#41;](../reporting-services/report-builder/rendering-to-html-report-builder-and-ssrs.md) 및 [Reporting Services 및 파워 뷰에 대한 브라우저 지원](../reporting-services/browser-support-for-reporting-services-and-power-view.md)을 참조하세요.  
   

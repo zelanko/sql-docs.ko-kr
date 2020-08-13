@@ -1,5 +1,6 @@
 ---
 title: 중단점 설정/해제
+description: '중단점을 설정/해제하여 연결된 Transact-SQL 문을 강조 표시하는 방법과 문에 다양한 작업(예: 편집)을 수행하는 방법을 알아봅니다.'
 titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.technology: scripting
@@ -11,16 +12,16 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 868e588d5ff2a60acbed41a729a8f1c3c1819b00
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 159834507edfc57466dc0872bf42e2976c4ca8cc
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75243423"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248072"
 ---
 # <a name="toggle-a-breakpoint"></a>중단점 설정/해제
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에 중단점을 설정하는 작업을 중단점 설정/해제라고 합니다.  
 

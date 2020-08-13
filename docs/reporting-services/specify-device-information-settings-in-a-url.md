@@ -1,5 +1,6 @@
 ---
 title: URL에 디바이스 정보 설정 지정 | Microsoft Docs
+description: DeviceInfo XML 요소를 사용하여 URL에 디바이스 정보 설정을 지정하는 방법을 알아봅니다.
 ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: cb7f7577-c6a8-4e6f-8e60-5ec0760f29c3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 906a21de49d562d788f9a1384b31e080616c67c4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a2d2ef7937d228cc4feeff2c788c1ae3aa3f0b59
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65578437"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246636"
 ---
 # <a name="specify-device-information-settings-in-a-url"></a>URL에 디바이스 정보 설정 지정
   디바이스 정보 설정은 렌더링 확장 프로그램에 전달되는 매개 변수입니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 보고서 서버 웹 서비스의 메서드를 사용하여 보고서를 렌더링하는 경우 **DeviceInfo** XML 요소가 입력 매개 변수로 전달됩니다. **DeviceInfo** 요소의 자식 요소는 다양한 렌더링 확장 프로그램의 디바이스 정보 설정마다 다릅니다. *rc:tag=value* 매개 변수 문자열을 사용하여 URL에 디바이스 정보 설정을 포함시킬 수 있습니다. 여기서 *tag* 는 액세스되는 디바이스 정보 설정 요소의 이름입니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]의 디바이스 정보 설정에 대한 자세한 내용은 [디바이스 정보 설정을 렌더링 확장 프로그램에 전달](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)을 참조하세요.  

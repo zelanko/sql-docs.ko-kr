@@ -1,8 +1,8 @@
 ---
-title: 초기화 및 권한 부여 속성 | Microsoft Docs
+title: 초기화 및 권한 부여 속성(OLE DB 드라이버) | Microsoft Docs
 description: 초기화 및 권한 부여 속성
 ms.custom: ''
-ms.date: 10/11/2019
+ms.date: 01/02/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - initialization properties [OLE DB]
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 28923ccb78e3edfa4de7b7e780195a643ec9914e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1a133b8b259b7746ff6f5e8750f31c5288c88aa9
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "72381868"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87244962"
 ---
 # <a name="initialization-and-authorization-properties"></a>초기화 및 권한 부여 속성
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -69,10 +69,12 @@ ms.locfileid: "72381868"
 |SSPROP_INIT_FAILOVERPARTNER|유형: VT_BSTR<br /><br /> R/W: 읽기/쓰기<br /><br /> 설명: 데이터베이스 미러링을 위한 장애 조치(Failover) 파트너 이름을 지정합니다. 이는 초기화 속성이며 초기화 전에만 설정할 수 있습니다. 초기화 후에는 주 서버에 의해 반환된 장애 조치(Failover) 파트너가 있는 경우 이를 반환합니다.<br /><br /> 이를 통해 지능형 애플리케이션은 가장 최근에 확인된 백업 서버를 캐시할 수 있지만 이러한 애플리케이션은 연결이 처음 설정될 때(또는 풀링된 경우 다시 설정될 때)만 정보가 업데이트되므로 장시간 연결에서는 정보가 최신 상태가 아닐 수 있음을 인식해야 합니다.<br /><br /> 연결을 설정한 후 애플리케이션은 이 특성을 쿼리하여 장애 조치(Failover) 파트너의 ID를 확인할 수 있습니다. 주 서버에 장애 조치(failover) 파트너가 없는 경우 이 속성은 빈 문자열을 반환합니다. 자세한 내용은 [데이터베이스 미러링 사용](../../oledb/features/using-database-mirroring.md)을 참조하세요.|  
 |SSPROP_INIT_FILENAME|유형: VT_BSTR<br /><br /> R/W: 읽기/쓰기<br /><br /> 설명: 연결할 수 있는 데이터베이스의 주 파일 이름을 지정합니다. 이 데이터베이스는 연결되어 해당 연결에 대한 기본 데이터베이스가 됩니다. SSPROP_INIT_FILENAME을 사용하려면 데이터베이스 이름을 DBPROP_INIT_CATALOG 초기화 속성의 값으로 지정해야 합니다. 데이터베이스 이름이 없으면 SSPROP_INIT_FILENAME에 지정된 주 파일 이름을 찾고 해당 데이터베이스를 DBPROP_INIT_CATALOG에 지정된 이름에 연결합니다. 데이터베이스가 이전에 연결된 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]는 이를 다시 연결하지 않습니다.|  
 |SSPROP_INIT_MARSCONNECTION|유형: VT_BOOL<br /><br /> R/W: 읽기/쓰기<br /><br /> Default: VARIANT_FALSE<br /><br /> 설명: 연결에 대해 MARS(Multiple Active Result Set)를 활성화할지 여부를 지정합니다. 데이터베이스에 연결을 설정하기 전에 이 옵션을 true로 설정해야 합니다. 자세한 내용은 [MARS&#40;Multiple Active Result Sets&#41; 사용](../../oledb/features/using-multiple-active-result-sets-mars.md)을 참조하세요.|  
+|SSPROP_INIT_MULTISUBNETFAILOVER|유형: VT_BOOL<br /><br /> R/W: 읽기/쓰기<br /><br/>Default: VARIANT_FALSE<br /><br />설명: MultiSubnetFailover를 사용하면 SQL Server에서 모든 Always On 가용성 그룹 및 장애 조치(failover) 클러스터 인스턴스에 대한 장애 조치(failover)를 빠르게 수행하고 단일 및 다중 서브넷 Always On 토폴로지에 대한 장애 조치(failover) 시간을 크게 줄일 수 있습니다. 다중 서브넷 장애 조치(Failover) 중에는 클라이언트가 연결을 병렬로 시도합니다. 자세한 내용은 [OLE DB Driver for SQL Server의 고가용성, 재해 복구 지원](../../oledb/features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)을 참조하세요.|  
 |SSPROP_INIT_NETWORKADDRESS|유형: VT_BSTR<br /><br /> R/W: 읽기/쓰기<br /><br /> 설명: DBPROP_INIT_DATASOURCE 속성으로 지정된 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스를 실행 중인 서버의 네트워크 주소입니다.|  
 |SSPROP_INIT_NETWORKLIBRARY|유형: VT_BSTR<br /><br /> R/W: 읽기/쓰기<br /><br /> 설명: [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스와 통신하는 데 사용되는 networklibrary(DLL)의 이름입니다. 이름에는 경로 또는 .dll 파일 확장명이 포함되면 안 됩니다.<br /><br /> 기본값은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 클라이언트 구성 유틸리티를 사용하여 사용자 지정할 수 있습니다.<br /><br /> 참고: 이 속성은 TCP와 명명된 파이프만 지원합니다. 이 속성은 내부적으로 접두사를 생성하는 데 사용되므로 이 속성을 접두사와 함께 사용하는 경우 이중 접두사로 인해 오류가 발생합니다.|  
-|SSPROP_INIT_PACKETSIZE|유형: VT_I4<br /><br /> R/W: 읽기/쓰기<br /><br /> 설명: 네트워크 패킷 크기(바이트)입니다. 패킷 크기 속성 값은 512에서 32,767 사이여야 합니다. 기본 OLE DB Driver for SQL Server 네트워크 패킷 크기는 4,096입니다.|  
+|SSPROP_INIT_PACKETSIZE|유형: VT_I4<br /><br /> R/W: 읽기/쓰기<br /><br /> 설명: TDS(Tabular Data Stream) 패킷 크기(바이트)입니다. 패킷 크기 속성 값은 0이거나 512에서 32,767 사이여야 합니다. 기본값은 0입니다. 즉, 실제 패킷 크기는 서버에 의해 결정됩니다.|  
 |SSPROP_INIT_TAGCOLUMNCOLLATION|유형: BOOL<br /><br /> R/W: 쓰기<br /><br /> Default: FALSE<br /><br /> 설명: 서버 쪽 커서가 사용되는 경우 데이터베이스 업데이트 동안 사용됩니다. 이 속성은 클라이언트의 코드 페이지가 아닌 서버에서 얻은 데이터 정렬 정보를 데이터에 첨부합니다. 현재 이 속성은 대상 데이터의 데이터 정렬을 알고 이를 올바르게 변환하는 분산 쿼리 처리에서만 사용됩니다.|  
+|SSPROP_INIT_TNIR|유형: VT_BOOL<br /><br /> R/W: 읽기/쓰기<br /><br/>Default: VARIANT_TRUE<br /><br />설명: 호스트 이름과 연결된 여러 IP가 있는 경우, 호스트 이름의 첫 번째 확인된 IP가 응답하지 않으면 TNIR이 연결 시퀀스에 영향을 미칩니다. TNIR은 MultiSubnetFailover와 상호 작용하여 다른 연결 시퀀스를 제공합니다. 자세한 내용은 [투명 네트워크 IP 확인 사용](../../oledb/features/using-transparent-network-ip-resolution.md)을 참조하세요.|  
 |SSPROP_INIT_TRUST_SERVER_CERTIFICATE<a href="#table1_1"><sup>**1**</sup></a>|유형: VT_BOOL<br /><br /> R/W: 읽기/쓰기<br /><br /> Default: VARIANT_FALSE<br /><br /> 설명: 서버 인증서 유효성 검사를 설정 또는 해제하는 데 사용됩니다. 이 속성은 읽기/쓰기이지만 연결이 설정된 후에 이 속성을 설정하려고 하면 오류가 발생합니다.<br /><br /> 인증서 유효성 검사가 필요하도록 클라이언트가 구성된 경우 이 속성은 무시됩니다. 그러나 애플리케이션에서 이 속성을 SSPROP_INIT_ENCRYPT와 함께 사용하면 클라이언트가 암호화를 요구하지 않도록 구성되고 클라이언트에 제공된 인증서가 없는 경우에도 서버에 대한 연결이 암호화되도록 보장할 수 있습니다.<br /><br /> 클라이언트 애플리케이션은 연결이 열린 후에 이 속성을 쿼리하여 실제 사용되는 암호화 및 유효성 검사 설정을 확인할 수 있습니다.<br /><br /> 참고: 인증서 유효성 검사 없이 암호화를 사용하면 패킷 스니핑에 대한 부분적인 보호가 가능하지만 메시지 가로채기(man-in-the-middle) 공격은 차단하지 못합니다. 서버 인증서 유효성을 검사하지 않고 단순히 로그인과 서버로 전송되는 데이터의 암호화만 허용합니다.<br /><br /> 자세한 내용은 [유효성 검사 없이 암호화 사용](../../oledb/features/using-encryption-without-validation.md)을 참조하세요.|  
 |SSPROP_INIT_USEPROCFORPREP|유형: VT_I4<br /><br /> R/W: 읽기/쓰기<br /><br /> Default: SSPROPVAL_USEPROCFORPREP_ON<br /><br /> 설명: [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 저장 프로시저 사용법입니다. **ICommandPrepare** 인터페이스를 지원하기 위한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 임시 저장 프로시저 사용을 정의합니다. 이 속성은 SQL Server 6.5에 연결하는 경우에만 의미가 있었습니다. 이후 버전에서는 이 속성이 무시됩니다.<br /><br /> SSPROPVAL_USEPROCFORPREP_OFF: 명령이 준비될 때 임시 저장 프로시저가 만들어지지 않습니다.<br /><br /> SSPROPVAL_USEPROCFORPREP_ON: 명령이 준비될 때 임시 저장 프로시저가 만들어집니다. 임시 저장 프로시저는 세션이 해제될 때 삭제됩니다.<br /><br /> SSPROPVAL_USEPROCFORPREP_ON_DROP: 명령이 준비될 때 임시 저장 프로시저가 만들어집니다. 이 프로시저는 **ICommandPrepare::Unprepare**로 명령이 준비 취소될 때, **ICommandText::SetCommandText**로 명령 개체에 대해 새 명령이 지정될 때, 또는 명령을 참조하는 모든 애플리케이션이 해제될 때 삭제됩니다.|  
 |SSPROP_INIT_WSID|유형: VT_BSTR<br /><br /> R/W: 읽기/쓰기<br /><br /> 설명: 워크스테이션을 식별하는 문자열입니다.|  
@@ -83,7 +85,7 @@ ms.locfileid: "72381868"
  공급자별 속성 집합 DBPROPSET_SQLSERVERDATASOURCEINFO에서 OLE DB Driver for SQL Server는 추가 속성을 정의합니다. 자세한 내용은 [데이터 원본 정보 속성](../../oledb/ole-db-data-source-objects/data-source-information-properties.md)을 참조하세요.  
   
 ## <a name="the-ole-db-driver-for-sql-server-string"></a>SQL Server 문자열용 OLE DB 드라이버  
- OLE DB Driver for SQL Server는 공급자 문자열 속성 값에서 ODBC 유사 구문을 인식합니다. 공급자 문자열 속성은 OLE DB 데이터 원본에 대한 연결이 설정될 때 OLE DB 초기화 속성 DBPROP_INIT_PROVIDERSTRING의 값으로 제공됩니다. 이 속성은 OLE DB 데이터 원본에 대한 연결을 구현하기 위해 필요한 OLE DB 공급자별 연결 데이터를 지정합니다. 문자열 내에서 요소는 세미콜론으로 구분됩니다. 문자열의 마지막 요소는 세미콜론으로 끝나야 합니다. 각 요소는 키워드, 등호 문자, 그리고 초기화 시 전달되는 값으로 구성됩니다. 다음은 그 예입니다.  
+ OLE DB Driver for SQL Server는 공급자 문자열 속성 값에서 ODBC 유사 구문을 인식합니다. 공급자 문자열 속성은 OLE DB 데이터 원본에 대한 연결이 설정될 때 OLE DB 초기화 속성 DBPROP_INIT_PROVIDERSTRING의 값으로 제공됩니다. 이 속성은 OLE DB 데이터 원본에 대한 연결을 구현하기 위해 필요한 OLE DB 공급자별 연결 데이터를 지정합니다. 문자열 내에서 요소는 세미콜론으로 구분됩니다. 문자열의 마지막 요소는 세미콜론으로 끝나야 합니다. 각 요소는 키워드, 등호 문자, 그리고 초기화 시 전달되는 값으로 구성됩니다. 예를 들면 다음과 같습니다.  
   
 ```  
 Server=MyServer;UID=MyUserName;  

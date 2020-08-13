@@ -1,5 +1,6 @@
 ---
 title: Reporting Services 개발자 설명서 | Microsoft Docs
+description: 설명서를 통해 웹 사이트와 Windows 애플리케이션에 사용자 지정 보고 및 관리 도구를 빌드하기 위한 Reporting Services 기능을 이해합니다.
 author: maggiesMSFT
 ms.author: maggies
 ms.prod: reporting-services
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - Reporting Services, programming
 - programming [Reporting Services]
 ms.date: 03/17/2017
-ms.openlocfilehash: e2db4a113ebdb53756200879e3797ccbbeec8a52
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2a60936a1a267ac93b181ff8c5b5913486ba9314
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68259612"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246672"
 ---
 # <a name="reporting-services-developer-documentation"></a>Reporting Services 개발자 설명서
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]는 애플리케이션에서 활용할 수 있는 프로그래밍 인터페이스를 다수 제공합니다. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 의 기존 기능을 사용하여 웹 사이트와 Windows 애플리케이션에 사용자 지정 보고 및 관리 도구를 작성할 수 있으며 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 플랫폼을 확장할 수도 있습니다.  

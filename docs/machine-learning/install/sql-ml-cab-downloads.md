@@ -2,23 +2,23 @@
 title: 오프라인 설치를 위한 업데이트 다운로드
 description: SQL Server Machine Learning Services용 Python 및 R CAB 파일을 다운로드합니다. 이러한 CAB 파일은 Machine Learning Services(Python 및 R) 기능에 대한 업데이트를 포함하며 인터넷에 액세스할 수 없는 서버에 SQL Server를 설치할 때 사용됩니다.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 03/24/2020
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 3682858eb76b78069497c23364e1f9db12ade9f4
-ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
+ms.openlocfilehash: 21e95b5e3fa15a48e62974aa7f574a370b3aeba1
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82087383"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247992"
 ---
 # <a name="cab-downloads-for-cumulative-updates-of-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services의 누적 업데이트를 위한 CAB 다운로드
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 SQL Server Machine Learning Services용 Python 및 R CAB 파일을 다운로드합니다. 이러한 CAB 파일은 Machine Learning Services(Python 및 R) 기능에 대한 업데이트를 포함하며 인터넷에 액세스할 수 없는 서버에 SQL Server를 설치할 때 사용됩니다.
@@ -50,6 +50,11 @@ CAB 파일은 시간의 역순으로 나열됩니다. CAB 파일을 다운로드
 
 |해제 | 구성 요소 | 다운로드 링크 | 해결된 문제 |
 |------- | --------- | ------------- | ---------------- |
+|**[SQL Server 2019 CU5](https://support.microsoft.com/help/4552255)** |  |  |  |
+| | Microsoft R Open      | [SRO_3.5.2.293_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2118178)  |  |
+| | R Server              | [SRS_9.4.7.804_1033.cab](https://go.microsoft.com/fwlink/?linkid=2122004)  |  |
+| | Microsoft Python Open | [SPO_4.5.12.479_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2118341) |  |
+| | Python 서버         | [SPS_9.4.7.804_1033.cab](https://go.microsoft.com/fwlink/?linkid=2121809)  |  |
 |**[SQL Server 2019 CU3](https://support.microsoft.com/help/4538853)** |  |  |  |
 | | Microsoft R Open      | [SRO_3.5.2.293_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2118178)  |  |
 | | R Server              | [SRS_9.4.7.717_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2118177)  |  |
@@ -125,7 +130,7 @@ CAB 파일은 시간의 역순으로 나열됩니다. CAB 파일을 다운로드
 | | Microsoft R Open     |[SRO_3.3.3.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863894)|
 | | R Server      |[SRS_9.2.0.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863893)|
 | | Microsoft Python Open     |[SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502)| 이전 버전과의 변경 사항이 없습니다. |
-| | Python 서버    |[SPS_9.2.0.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863892)| [rx_serialize_model function](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-serialize-model)를 사용하는 revoscalepy의 Python 모델 직렬화입니다.<br/>[실시간 채점](../real-time-scoring.md)에대 한 향상 기능과 함께 [네이티브 채점](../sql-native-scoring.md)을 지원합니다. 
+| | Python 서버    |[SPS_9.2.0.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863892)| [rx_serialize_model function](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-serialize-model)를 사용하는 revoscalepy의 Python 모델 직렬화입니다.<br/>[실시간 채점](../predictions/real-time-scoring.md)에대 한 향상 기능과 함께 [네이티브 채점](../predictions/native-scoring-predict-transact-sql.md)을 지원합니다. 
 |**[SQL Server 2017 CU1](https://support.microsoft.com/help/4038634)-[CU2](https://support.microsoft.com/help/4052574)** |  |  |  |
 | | Microsoft R Open     | [SRO_3.3.3.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851496)| 이전 버전과의 변경 사항이 없습니다. |
 | | R Server      |[SRS_9.2.0.100_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851501)|
@@ -149,7 +154,7 @@ SQL Server 2016 R Services의 경우 기본 릴리스는 RTM 버전 또는 서�
 
 |해제  |다운로드 링크  |
 |---------|---------------|
-|**SQL Server 2016 SP2 CU6**     |
+|**SQL Server 2016 SP2 CU6-CU13**     |
 |Microsoft R Open     |[SRO_3.2.2.20100_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2079936&clcid=1033)|
 |Microsoft R 서버    |[SRS_8.0.3.20100_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2079933&clcid=1033)|
 |**SQL Server 2016 SP2 CU1-CU5**     |

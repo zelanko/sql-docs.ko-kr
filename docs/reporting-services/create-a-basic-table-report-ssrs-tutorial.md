@@ -1,5 +1,6 @@
 ---
 title: 기본 테이블 보고서 만들기(SSRS 자습서) | Microsoft Docs
+description: Visual Studio/SSDT(SQL Server Data Tools)에서 보고서 디자이너 도구를 사용하고 SSRS(SQL Server Reporting Services) 페이지를 매긴 보고서를 작성합니다.
 ms.date: 04/16/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 3b539b4b-26f2-4c0b-b506-80f175679a46
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: af41da75d553794019f1d01c8b8f5bb6aba80622
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f1549d3ba775d598902fd0fd4b5cc33bab2f54de
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65103309"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245142"
 ---
 # <a name="create-a-basic-table-report-ssrs-tutorial"></a>기본 테이블 보고서 만들기(SSRS 자습서)
 
-이 자습서에서는 Visual Studio/SSDT(SQL Server Data Tools)의 ‘보고서 디자이너’ 도구를 사용합니다.  SSRS(SQL Server Reporting Services) 페이지를 매긴 보고서를 만듭니다. 보고서에는 AdventureWorks2016 데이터베이스의 데이터로 만든 쿼리 테이블이 포함됩니다.
+이 자습서에서는 Visual Studio/SSDT(SQL Server Data Tools)의 ‘보고서 디자이너’ 도구를 사용합니다. SSRS(SQL Server Reporting Services) 페이지를 매긴 보고서를 만듭니다. 보고서에는 AdventureWorks2016 데이터베이스의 데이터로 만든 쿼리 테이블이 포함됩니다.
 
 이 자습서를 진행하면서 다음 작업을 수행하는 방법을 알아보겠습니다.
   
@@ -41,11 +42,11 @@ ms.locfileid: "65103309"
 - [!INCLUDE[msconame-md](../includes/msconame-md.md)] SQL Server 데이터베이스 엔진.  
 - SQL Server 2016 Reporting Services 이상(SSRS)
 - AdventureWorks2016 데이터베이스.  자세한 내용은 [Adventure Works 샘플 데이터베이스](https://github.com/Microsoft/sql-server-samples/releases)를 참조하세요.
-- Visual Studio용 [SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md) 및 ‘보고서 디자이너’에 액세스하기 위한 Reporting Services 확장. 
+- Visual Studio용 [SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md) 및 ‘보고서 디자이너’에 액세스하기 위한 Reporting Services 확장.
   
 또한 AdventureWorks2016 데이터베이스에서 데이터를 검색하려면 읽기 전용 권한이 있어야 합니다.
 
-**자습서에 소요되는 예상 시간:** 30분
+**자습서에 소요되는 예상 시간:** 30분.
 
 ## <a name="next-steps"></a>다음 단계
 
@@ -59,7 +60,7 @@ ms.locfileid: "65103309"
 
 [5단원: 보고서 서식 지정&#40;Reporting Services&#41;](lesson-5-formatting-a-report-reporting-services.md)
 
-[6단원: 그룹화 및 합계 추가&#40;Reporting Services&#41;](lesson-6-adding-grouping-and-totals-reporting-services.md)
+[단원 6: 그룹화 및 합계 추가&#40;Reporting Services&#41;](lesson-6-adding-grouping-and-totals-reporting-services.md)
 
 ## <a name="see-also"></a>참고 항목
 

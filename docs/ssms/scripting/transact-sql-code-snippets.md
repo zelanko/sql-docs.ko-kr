@@ -1,5 +1,6 @@
 ---
 title: Transact-SQL 코드 조각
+description: Transact-SQL 코드 조각을 사용하여 용이하게 코드를 작성할 수 있습니다. 여기에서 코드 조각 태스크 목록과 각 태스크를 설명하는 문서에 대한 링크를 확인할 수 있습니다.
 ms.prod: sql
 ms.technology: scripting
 ms.topic: conceptual
@@ -10,16 +11,16 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/16/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: aed4261773b7a7b6e539a60000d1b0748aca2602
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1b2986e68cf58afaab0d0254f29ca6b0124af126
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75243361"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246222"
 ---
 # <a name="transact-sql-code-snippets"></a>Transact-SQL 코드 조각
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[tsql](../../includes/tsql-md.md)].code 코드 조각은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 또는 블록의 기본 구조가 포함된 템플릿입니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기에서 문을 추가할 때 코드 조각을 시작 지점으로 사용할 수 있습니다. SQL Server와 함께 제공되는 미리 정의된 코드 조각을 삽입하거나 고유의 코드 조각을 만들 수 있습니다.  
 

@@ -1,5 +1,6 @@
 ---
 title: Transact-SQL 디버거
+description: Transact-SQL 디버거를 사용하여 코드를 단계별로 실행하고 실행 상태를 확인하는 방법과 다양한 디버깅 태스크를 수행하는 방법을 알아봅니다.
 titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.technology: scripting
@@ -11,18 +12,18 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
-ms.date: 12/04/2019
-monikerRange: '>= sql-server-2014 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8e705be1cda43f0645b53f74f3f658a5bc8c2f2c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.date: 07/22/2020
+monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 7a3f86e5df9c94905089cd5382d3895dd9f01e84
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75252998"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246165"
 ---
 # <a name="transact-sql-debugger"></a>Transact-SQL 디버거
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 [!INCLUDE[tsql](../../includes/tsql-md.md)] 디버거를 사용하면 코드의 런타임 동작을 조사하여 [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드에서 오류를 찾을 수 있습니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기 창을 디버그 모드로 설정한 후 코드의 특정 줄에서 실행을 일시 중지하여 해당 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에서 사용하거나 반환하는 정보 및 데이터를 검사할 수 있습니다.
 

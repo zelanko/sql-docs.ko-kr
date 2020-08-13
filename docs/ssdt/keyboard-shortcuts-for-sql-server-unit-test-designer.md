@@ -1,29 +1,28 @@
 ---
 title: SQL Server 단위 테스트 디자이너의 바로 가기 키
+description: SQL Server 단위 테스트 디자이너를 탐색하는 데 사용할 수 있는 바로 가기 키를 숙지합니다.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: b1c61454-242f-4948-a9ca-e2cd5df26102
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: eab27b8ece9e15fddf9f397533d1a272fcd617b5
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4df1c5680f44d7585200e4db199b8e099d8fd355
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75246406"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246470"
 ---
 # <a name="keyboard-shortcuts-for-sql-server-unit-test-designer"></a>SQL Server 단위 테스트 디자이너의 바로 가기 키
 
 다음 바로 가기 키를 사용하여 SQL Server 단위 테스트 디자이너 내에서 탐색할 수 있습니다.  
   
-|||  
-|-|-|  
-|**작업 또는 메뉴 옵션**|**바로 가기 키**|  
+|작업 또는 메뉴 옵션|바로 가기 키|  
+|-|-|   
 |Transact\-SQL 편집기에서 탐색 모음으로 이동합니다.|Ctrl + F2|  
 |다음 탐색 모음 요소로 이동합니다.|Tab|  
 |이전 탐색 모음 요소로 이동합니다.|Shift+Tab|  

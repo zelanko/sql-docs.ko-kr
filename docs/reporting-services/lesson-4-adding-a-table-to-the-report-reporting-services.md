@@ -1,6 +1,6 @@
 ---
 title: '4단원: 보고서에 테이블 추가 | Microsoft Docs'
-description: 데이터 집합을 정의하고 나면 페이지가 매겨진 보고서의 디자인을 시작할 수 있습니다. 도구 상자 창에서 디자인 화면으로 보고서 개체를 끌어다 놓아 보고서 레이아웃을 만듭니다.
+description: 도구 상자 창에서 디자인 화면으로 테이블 같은 보고서 개체를 끌어다 놓아 보고서 레이아웃을 만듭니다.
 ms.date: 12/16/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.assetid: 5ddf2914-bcdd-427d-8cba-0ccb8342f819
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fca89bf8992db9ec3b07cea422ec146993e8aec8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0194591ffec572c7d079c70233de45977a38d130
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75244296"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246312"
 ---
 # <a name="lesson-4-add-a-table-to-the-report-reporting-services"></a>4단원: 보고서에 테이블 추가(Reporting Services)
 
-데이터 집합을 정의하고 나면 페이지가 매겨진 보고서의 디자인을 시작할 수 있습니다. **도구 상자** 창에서 **디자인 화면**으로 ‘보고서 개체’를 끌어다 놓아 보고서 레이아웃을 만듭니다.  보고서 개체의 몇 가지 유형은 다음과 같습니다.
+데이터 집합을 정의하고 나면 페이지가 매겨진 보고서의 디자인을 시작할 수 있습니다. **도구 상자** 창에서 **디자인 화면**으로 ‘보고서 개체’를 끌어다 놓아 보고서 레이아웃을 만듭니다. 보고서 개체의 몇 가지 유형은 다음과 같습니다.
 
 - 테이블
 - 텍스트 상자
@@ -43,7 +43,7 @@ ms.locfileid: "75244296"
 3. **보고서 데이터** 창에서 테이블의 첫 번째 열로 `[Date]` 필드를 끕니다.
 
     > [!IMPORTANT]
-    > 필드를 첫 번째 열에 놓으면 두 가지 동작이 발생합니다. 먼저 보고서 디자이너의 데이터 셀에 ‘필드 식’이라는 필드 이름이 대괄호 안에 표시됩니다. 이 경우 `[Date]`가 표시됩니다.  두 번째로, 필드 식 바로 위의 머리글 행에 열 레이블을 추가합니다. 기본적으로 열 레이블은 필드 이름입니다. 열 레이블을 변경하려는 경우 열 레이블을 선택하고 새 값을 입력할 수 있습니다.
+    > 필드를 첫 번째 열에 놓으면 두 가지 동작이 발생합니다. 먼저 보고서 디자이너의 데이터 셀에 ‘필드 식’이라는 필드 이름이 대괄호 안에 표시됩니다. 이 경우 `[Date]`가 표시됩니다. 두 번째로, 필드 식 바로 위의 머리글 행에 열 레이블을 추가합니다. 기본적으로 열 레이블은 필드 이름입니다. 열 레이블을 변경하려는 경우 열 레이블을 선택하고 새 값을 입력할 수 있습니다.
 
 4. **보고서 데이터** 창에서 테이블의 두 번째 열로 `[Order]` 필드를 끕니다.
 

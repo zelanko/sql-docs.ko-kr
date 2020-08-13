@@ -1,5 +1,6 @@
 ---
 title: Transact-SQL 코드 단계별 실행
+description: Transact-SQL 디버거를 사용하여 데이터베이스 엔진 쿼리 편집기 창에서 실행되는 Transact-SQL 문을 제어하는 방법을 알아봅니다.
 ms.prod: sql
 ms.technology: scripting
 ms.topic: conceptual
@@ -15,16 +16,16 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1fbd6c6b01d5be8afb3e0e0c70c15363664263eb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d7317f783df8cd8810cb4d2371f8469697bb9a45
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75243438"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246192"
 ---
 # <a name="step-through-transact-sql-code"></a>Transact-SQL 코드 단계별 실행
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 [!INCLUDE[tsql](../../includes/tsql-md.md)] 디버거를 사용하면 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리 편집기 창에서 실행되는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 문을 제어할 수 있습니다. 개별 문에서 디버거를 일시 중지한 다음 해당 지점에서의 코드 요소 상태를 볼 수 있습니다.  
 

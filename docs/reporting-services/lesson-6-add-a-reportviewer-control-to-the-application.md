@@ -1,5 +1,6 @@
 ---
 title: '6단원: 애플리케이션에 ReportViewer 컨트롤 추가 | Microsoft Docs'
+description: 보고서 마법사를 사용하여 자식 보고서를 디자인한 후 웹 사이트 애플리케이션에 ReportViewer 컨트롤을 추가하는 방법을 알아봅니다.
 ms.date: 05/18/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: f9492a97-5609-4059-ae76-0fba111d4968
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9b13a3653b19d4079a47941a0bb05faa2821c823
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4090a01d4aa50fcbbfa64182dcd23a3e01c50e78
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "62512538"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245102"
 ---
 # <a name="lesson-6-add-a-reportviewer-control-to-the-application"></a>6단원: 애플리케이션에 ReportViewer 컨트롤 추가
 보고서 마법사를 사용하여 자식 보고서를 디자인한 후에는 웹 사이트 애플리케이션에 ReportViewer 컨트롤을 추가합니다. ASP.NET 보고서 웹 사이트를 사용하는 경우 default.aspx 페이지에 ReportViewer 컨트롤이 추가됩니다.   
@@ -37,6 +38,6 @@ ms.locfileid: "62512538"
     보고서가 컴파일되고 보고서 식의 구문 오류와 같은 오류가 모두 **오류 목록** 영역에 표시됩니다. Visual Studio 창의 아래쪽에 있는 **오류 목록** 을 클릭하여 **오류 목록** 영역을 표시합니다.  
   
 ## <a name="next-task"></a>다음 태스크  
-웹 사이트 애플리케이션에 ReportViewer 컨트롤을 성공적으로 추가했습니다. 이제 부모 보고서에 드릴스루 동작을 추가합니다. [7단원: 부모 보고서에 드릴스루 동작 추가](../reporting-services/lesson-7-add-drillthrough-action-on-parent-report.md)를 참조하세요,  
+웹 사이트 애플리케이션에 ReportViewer 컨트롤을 성공적으로 추가했습니다. 이제 부모 보고서에 드릴스루 동작을 추가합니다. [7단원: 부모 보고서에 드릴스루 동작 추가](../reporting-services/lesson-7-add-drillthrough-action-on-parent-report.md)를 참조하세요.  
   
 

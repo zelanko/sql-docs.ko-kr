@@ -1,5 +1,6 @@
 ---
 title: Reporting Services 기능 및 작업 | Microsoft Docs
+description: Reporting Services 기본 콘텐츠가 보고서를 기준으로 또한 보고서 기능, 보고서 서버 기능 및 Reporting Services 제품 기능을 기준으로 구성되는 방법을 알아봅니다.
 ms.date: 12/18/2015
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 0cc20225-5784-479c-bfb0-445854111367
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 764eda3b356a42272b5f26790574746f842768ae
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d10c723351b6c32738a02cfadc1a3715896ca03e
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081846"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246649"
 ---
 # <a name="reporting-services-features-and-tasks-ssrs"></a>Reporting Services 기능 및 태스크(SSRS)
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 기반 콘텐츠는 보고서 및 보고서 기능, 보고서 서버 기능 및 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 제품 기능별로 구성됩니다.  

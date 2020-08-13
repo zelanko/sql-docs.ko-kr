@@ -1,5 +1,6 @@
 ---
 title: 데이터 기반 구독 만들기(SSRS 자습서) | Microsoft Docs
+description: 데이터 기반 구독을 만들어 필터링된 보고서 출력을 생성하고 파일 공유에 저장하는 간단한 예제를 통해 데이터 기반 구독에 대해 알아봅니다.
 ms.date: 05/26/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 79ab0572-43e9-4dc4-9b5a-cd8b627b8274
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: baff01bd8bc02af409a37c5cc1ce193e69663387
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2f4843c02d12c08cac8efa8b453999f4484ab084
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63194826"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246335"
 ---
 # <a name="create-a-data-driven-subscription-ssrs-tutorial"></a>데이터 기반 구독 만들기(SSRS 자습서)
 이 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 자습서에서는 필터링된 보고서 출력을 생성하고 파일 공유에 저장하기 위해 데이터 기반 구독을 만드는 간단한 예제를 단계별로 안내하여 데이터 기반 구독의 개념을 설명합니다. 
@@ -39,7 +40,7 @@ ms.locfileid: "63194826"
 
 다음 다이어그램은 자습서의 기본 워크플로를 보여 줍니다.
 
-| 단계    | Description |
+| 단계    | 설명 |
 | --------|------------ |
 | (1)     | 구독 구성에는 원본 보고서, 일정 및 구독자 데이터베이스에 대한 필드 매핑이 표시됩니다. |
 | (2)     | OrderInfo 테이블에는 필터링에 사용할 4개의 주문 번호(파일당 1개씩)가 포함되어 있습니다. 또한 테이블에는 생성된 보고서의 파일 형식이 있습니다. |
@@ -53,7 +54,7 @@ ms.locfileid: "63194826"
 ## <a name="requirements"></a>요구 사항  
 데이터 기반 구독은 대개 보고서 서버 관리자가 만들고 유지 관리합니다. 데이터 기반 구독을 만드는 단계를 수행하려면 쿼리 작성, 구독자 데이터가 포함된 데이터 원본에 대한 지식, 보고서 서버에서 승격된 권한이 필요합니다.  
   
-이 자습서에서는 *기본 테이블 보고서 만들기&amp;#40;SSRS 자습서&amp;#41;* 자습서에서 만든 [기본 테이블 보고서 만들기&#40;SSRS 자습서&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md) 보고서와 샘플 데이터베이스 **AdventureWorks2014**의 데이터를 사용합니다.  
+이 자습서에서는 *기본 테이블 보고서 만들기&#40;SSRS 자습서&#41;* 자습서에서 만든 [기본 테이블 보고서 만들기&amp;#40;SSRS 자습서&amp;#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md) 보고서와 샘플 데이터베이스 **AdventureWorks2014**의 데이터를 사용합니다.  
   
 이 자습서를 사용하려면 컴퓨터에 다음 항목이 설치되어 있어야 합니다.  
   
@@ -63,7 +64,7 @@ ms.locfileid: "63194826"
   
 -   SQL Server 에이전트 서비스가 실행되고 있어야 합니다.  
   
--   매개 변수가 들어 있는 보고서가 필요합니다. 이 자습서에서는 `Sales Orders` 기본 테이블 보고서 만들기&amp;#40;SSRS 자습서&amp;#41; [기본 테이블 보고서 만들기&#40;SSRS 자습서&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)의 데이터를 사용합니다.  
+-   매개 변수가 들어 있는 보고서가 필요합니다. 이 자습서에서는 `Sales Orders` 기본 테이블 보고서 만들기&#40;SSRS 자습서&#41; [기본 테이블 보고서 만들기&amp;#40;SSRS 자습서&amp;#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)의 데이터를 사용합니다.  
   
 -   샘플 보고서에 데이터를 제공하는 **AdventureWorks2014** 샘플 데이터베이스가 필요합니다.  
   
@@ -71,7 +72,7 @@ ms.locfileid: "63194826"
   
 -   쓰기 권한이 있는 공유 폴더가 필요합니다. 이 공유 폴더는 네트워크 연결을 통해 액세스할 수 있어야 합니다.  
   
-**자습서에 소요되는 예상 시간:** 30분 기본 보고서 자습서를 완료하지 않은 경우 추가 30분이 소요됩니다.  
+**자습서에 소요되는 예상 시간:** 30분. 기본 보고서 자습서를 완료하지 않은 경우 추가 30분이 소요됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
 [데이터 기반 구독](../reporting-services/subscriptions/data-driven-subscriptions.md)  

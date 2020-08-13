@@ -1,5 +1,5 @@
 ---
-title: OLE DB 날짜 및 시간 기능 향상을 위한 데이터 형식 지원 | Microsoft Docs
+title: 날짜 및 시간 기능 향상을 위한 데이터 형식 지원(OLE DB 드라이버) | Microsoft Docs
 description: OLE DB 날짜 및 시간 기능 향상을 위한 데이터 형식 지원
 ms.custom: ''
 ms.date: 06/14/2018
@@ -13,15 +13,15 @@ helpviewer_keywords:
 - OLE DB, date/time improvements
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 0e6ceaa3fae1efd04490932dd1fdc42a9805b2f3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c4306574aca251ad1f530cfeb3c26ce91e0a48b1
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67995114"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87244881"
 ---
 # <a name="data-type-support-for-ole-db-date-and-time-improvements"></a>OLE DB 날짜 및 시간 기능 향상을 위한 데이터 형식 지원
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -75,7 +75,7 @@ ms.locfileid: "67995114"
   
  다음과 같은 기존 OLE DB 구조체의 구현은 새로운 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 날짜 및 시간 데이터 형식을 지원하도록 수정되었습니다. 단, 정의는 변경되지 않았습니다.  
   
--   DBTYPE_DATE. 자동 DATE 형식입니다. 내부적으로 **더블**로 표시됩니다. 정수 부분은 1899년 12월 30일 이후의 일 수이고, 소수 부분은 하루를 분수로 표시한 수입니다. 이 형식의 정확도는 1초 단위이므로 소수 자릿수가 0입니다.  
+-   DBTYPE_DATE. 자동 DATE 형식입니다. 내부적으로 **double**로 표시됩니다. 정수 부분은 1899년 12월 30일 이후의 일 수이고, 소수 부분은 하루를 분수로 표시한 수입니다. 이 형식의 정확도는 1초 단위이므로 소수 자릿수가 0입니다.  
   
 -   DBTYPE_DBDATE  
   

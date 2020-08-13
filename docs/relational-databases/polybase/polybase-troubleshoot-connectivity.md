@@ -11,12 +11,12 @@ ms.date: 10/02/2019
 ms.prod: sql
 ms.prod_service: polybase, sql-data-warehouse, pdw
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 9e50701d0486ee7bc00bf765d2a71cb4de0c0b25
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: cc030aa9036c67b1175a99ef01eab47099b8fc36
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86196196"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247304"
 ---
 # <a name="troubleshoot-polybase-kerberos-connectivity"></a>PolyBase Kerberos 연결 문제 해결
 
@@ -69,7 +69,7 @@ PolyBase에는 Hadoop 클러스터의 속성이 포함된 다음과 같은 구�
 
 이러한 파일은 다음 위치에 있습니다.
 
-`\[System Drive\]:{install path}\{instance}\{name}\MSSQL\Binn\PolyBase\Hadoop\conf`
+`\[System Drive\]:{install path}\{MSSQL##.INSTANCENAME}\MSSQL\Binn\PolyBase\Hadoop\conf`
 
 예를 들어 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]의 기본값은 `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\PolyBase\Hadoop\conf`입니다.
 
@@ -97,7 +97,7 @@ PolyBase에는 Hadoop 클러스터의 속성이 포함된 다음과 같은 구�
 이 도구는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 독립적으로 실행되므로, SQL Server가 실행되고 있지 않아도 되고 구성 XML을 업데이트하는 경우 SQL Server를 다시 시작하지 않아도 됩니다. 이 도구를 실행하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 설치된 호스트에서 다음 명령을 실행합니다.
 
 ```cmd
-> cd C:\Program Files\Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL13.MSSQLSERVER\MSSQL\Binn\PolyBase  
+> cd C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\PolyBase  
 > java -classpath ".\Hadoop\conf;.\Hadoop\*;.\Hadoop\HDP2_2\*" com.microsoft.polybase.client.HdfsBridge {Name Node Address} {Name Node Port} {Service Principal} {Filepath containing Service Principal's Password} {Remote HDFS file path (optional)}
 ```
 
@@ -105,7 +105,7 @@ PolyBase에는 Hadoop 클러스터의 속성이 포함된 다음과 같은 구�
 
 | 인수 | Description|
 | --- | --- |
-| Name Node Address | 이름 노드의 IP 또는 FQDN입니다. CREATE EXTERNAL DATA SOURCE T-SQL의 "LOCATION" 인수를 가리킵니다.|
+| Name Node Address | 이름 노드의 IP 또는 FQDN입니다. CREATE EXTERNAL DATA SOURCE T-SQL의 "LOCATION" 인수를 가리킵니다. 참고: SQL Server 2019 버전의 도구를 사용하려면 *hdfs:\/\/* 가 IP 또는 FQDN 앞에 와야 합니다.|
 | Name Node Port | 이름 노드의 포트입니다. CREATE EXTERNAL DATA SOURCE T-SQL의 "LOCATION" 인수를 가리킵니다. 예: 8020 |
 | Service Principal | KDC의 관리 서비스 사용자입니다. `CREATE DATABASE SCOPED CREDENTIAL` T-SQL에서 "IDENTITY" 인수와 일치합니다.|
 | Service Password | 암호를 콘솔에 입력하는 대신 파일에 저장하고 여기에 파일 경로를 전달합니다. 파일의 내용이 `CREATE DATABASE SCOPED CREDENTIAL` T-SQL에서 "SECRET" 인수로 사용하는 내용과 일치해야 합니다. |

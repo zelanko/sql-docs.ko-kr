@@ -1,5 +1,6 @@
 ---
 title: sqlcmd 유틸리티 시작
+description: SQLCMD 모드 또는 스크립트 및 작업에서 Transact-SQL 문, 시스템 프로시저 및 스크립트 파일을 입력할 수 있는 sqlcmd 유틸리티를 시작하는 방법을 알아봅니다.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.assetid: 00d57437-7a29-4da1-b639-ee990db055fb
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2571401f408babd0d3fe0ce114dbabbf3deeed26
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: cbbf6064708f272eda5d646043ee7d43e766d104
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75243467"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248112"
 ---
 # <a name="sqlcmd---start-the-utility"></a>sqlcmd - 유틸리티 시작
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  [sqlcmd 유틸리티](../../tools/sqlcmd-utility.md) 를 사용하면 명령 프롬프트, SQLCMD 모드의 쿼리 편집기, Windows 스크립트 파일 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 에이전트 작업의 운영 체제(Cmd.exe) 작업 단계에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 문, 시스템 프로시저 및 스크립트 파일을 입력할 수 있습니다.
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+  [sqlcmd 유틸리티](../../tools/sqlcmd-utility.md)를 사용하면 명령 프롬프트, SQLCMD 모드의 쿼리 편집기, Windows 스크립트 파일 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업의 운영 체제(Cmd.exe) 작업 단계에서 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문, 시스템 프로시저 및 스크립트 파일을 입력할 수 있습니다.
 > [!NOTE]  
 >  **sqlcmd**에 대한 기본 인증 모드는 Windows 인증입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하려면 **-U** 및 **-P** 옵션을 사용하여 사용자 이름과 암호를 지정해야 합니다.  
   

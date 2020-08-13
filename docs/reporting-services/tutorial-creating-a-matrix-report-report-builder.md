@@ -1,5 +1,6 @@
 ---
 title: '자습서: 행렬 보고서 만들기(보고서 작성기) | Microsoft Docs'
+description: 중첩 행 및 열 그룹에 샘플 판매 데이터의 행렬이 포함된 Reporting Services 페이지를 매긴 보고서를 만드는 방법을 알아봅니다.
 ms.date: 06/23/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9ee19c2e-2a8c-4bb0-9274-04a5812c2e96
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ed53800a1b45dd79548c59aaab57f71bd700d94d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4891a25815d1efb14f230cbab9bcaaa75cad0a16
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63294723"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247452"
 ---
 # <a name="tutorial-creating-a-matrix-report-report-builder"></a>자습서: 행렬 보고서 만들기(보고서 작성기)
 이 자습서에서는 중첩된 행 및 열 그룹의 샘플 판매 데이터 행렬을 사용하여 페이지가 매겨진 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 보고서를 만드는 방법을 설명합니다. 
@@ -22,7 +23,7 @@ ms.locfileid: "63294723"
   
 ![report-builder-matrix-tutorial](../reporting-services/media/report-builder-matrix-tutorial.png)
    
-이 자습서에 소요되는 예상 시간: 20분  
+이 자습서에 소요되는 예상 시간: 20분.  
   
 ## <a name="requirements"></a>요구 사항  
 요구 사항에 대한 자세한 내용은 [자습서의 필수 조건](../reporting-services/prerequisites-for-tutorials-report-builder.md)을 참조하세요. 
@@ -49,7 +50,7 @@ ms.locfileid: "63294723"
   
 5.  **다음**을 클릭합니다.  
   
-6.  **데이터 원본에 대한 연결 선택** 페이지에서 기존 데이터 원본을 선택하거나 보고서 서버를 찾아 데이터 원본을 선택합니다. 데이터 원본을 사용할 수 없거나 보고서 서버에 대한 액세스 권한이 없는 경우 포함된 데이터 원본을 대신 사용할 수 있습니다. 포함된 데이터 원본을 만드는 방법에 대한 자세한 내용은 [자습서: 기본 테이블 보고서 만들기&#40;보고서 작성기&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)를 참조하세요.  
+6.  **데이터 원본에 대한 연결 선택** 페이지에서 기존 데이터 원본을 선택하거나 보고서 서버를 찾아 데이터 원본을 선택합니다. 데이터 원본을 사용할 수 없거나 보고서 서버에 대한 액세스 권한이 없는 경우 포함된 데이터 원본을 대신 사용할 수 있습니다. 포함된 데이터 원본을 만드는 방법에 대한 자세한 내용은 [자습서: 기본 테이블 보고서 만들기&#40;보고서 작성기&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 7.  **다음**을 클릭합니다.  
   
@@ -133,7 +134,7 @@ ms.locfileid: "63294723"
   
 13. **Finish**를 클릭합니다.  
   
-    디자인 화면에 행렬이 추가됩니다. 행 그룹 창에는 Territory 및 SalesDate라는 두 개의 행 그룹이 표시됩니다. 열 그룹 창에는 하위 범주 및 제품이라는 두 개의 열 그룹이 표시됩니다. 세부 데이터는 모두 데이터 세트 쿼리로 검색된 데이터입니다.  
+    디자인 화면에 행렬이 추가됩니다. 행 그룹 창에는 Territory 및 SalesDate라는 두 개의 행 그룹이 표시됩니다. 열 그룹 창에는 Subcategory 및 Product라는 두 개의 열 그룹이 표시됩니다. 세부 데이터는 모두 데이터 세트 쿼리로 검색된 데이터입니다.  
     
     ![report-builder-row-and-column-groups](../reporting-services/media/report-builder-row-and-column-groups.png)
   

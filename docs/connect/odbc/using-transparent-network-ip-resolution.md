@@ -11,14 +11,14 @@ ms.topic: conceptual
 ms.assetid: d255208f-d486-4ad3-8080-61c6e0261825
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1a003b4817868516c6acfac10df80cafdf044c01
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: 12a8a151902bd4f191fbc79f165f936e991a0226
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922290"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245002"
 ---
-# <a name="using-transparent-network-ip-resolution"></a>투명 네트워크 IP 확인 사용
+# <a name="using-transparent-network-ip-resolution-with-the-odbc-driver"></a>ODBC 드라이버에서 투명 네트워크 IP 확인 사용
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
 
 TransparentNetworkIPResolution은 호스트 이름의 첫 번째 확인된 IP가 응답하지 않고 해당 호스트 이름과 연결된 복수의 IP가 있는 경우에 드라이버의 연결 순서에 영향을 미치는 기존 MultiSubnetFailover 기능(Microsoft ODBC Driver 13.1 for SQL Server에서 사용 가능)의 개정판입니다. 이 기능은 MultiSubnetFailover와 상호 작용하여 다음과 같은 세 가지 연결 시퀀스를 제공합니다.

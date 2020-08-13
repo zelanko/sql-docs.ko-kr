@@ -1,5 +1,5 @@
 ---
-title: 데이터 원본에 대한 연결 설정 | Microsoft Docs
+title: 데이터 원본에 대한 연결 설정(OLE DB 드라이버) | Microsoft Docs
 description: OLE DB Driver for SQL Server를 사용하여 데이터 원본에 대한 연결 설정
 ms.custom: ''
 ms.date: 06/14/2018
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - OLE DB data sources [OLE DB Driver for SQL Server]
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 268c81f98a46174aa09df80e8459529e0f854bfc
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 79f0ba6da0416c269d4a23cf45862746462f38e4
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67995000"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87244842"
 ---
 # <a name="establishing-a-connection-to-a-data-source"></a>데이터 원본에 대한 연결 설정
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

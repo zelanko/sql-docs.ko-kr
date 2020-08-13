@@ -1,5 +1,6 @@
 ---
 title: URL 액세스를 사용하여 보고서 기록 스냅샷 렌더링 | Microsoft Docs
+description: rs:Snapshot 매개 변수를 제공하고 이 값을 유효한 스냅샷 ID로 설정하여 보고서 기록 스냅샷을 기반으로 보고서를 렌더링하는 방법을 알아봅니다.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3f87f82d-0e61-4492-9c4b-f5238c39e8cd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2caf9def46440aa87f8b4e143cc9e3163e408ba5
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 01a173da6f22b2f2ed1cc5c273b4e1f0f1c0ec1a
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65580802"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247480"
 ---
 # <a name="render-a-report-history-snapshot-using-url-access"></a>URL 액세스를 사용하여 보고서 기록 스냅샷 렌더링
   *rs:Snapshot* 매개 변수를 제공하고 이 값을 유효한 스냅샷 ID로 설정하여 보고서 기록 스냅샷을 기반으로 한 보고서를 렌더링할 수 있습니다. 매개 변수 값은 ISO(국제 표준화 기구) 8601 표준을 기반으로 하여 YYYY-MM-DDTHH:MM:SS 형식으로 사용합니다.  

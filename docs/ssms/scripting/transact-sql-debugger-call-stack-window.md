@@ -1,5 +1,6 @@
 ---
 title: 호출 스택 창
+description: Transact-SQL 디버거의 호출 스택 창을 사용하여 매개 변수 데이터 형식과 저장 프로시저, 함수 및 트리거의 값을 확인하는 방법을 알아봅니다.
 titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.technology: scripting
@@ -13,16 +14,16 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2c15e01a9555ceeacbbd741660cd19baba1f6842
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8421e448b36cb1cf4958ef5cfaa1d583a7cca262
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75243383"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248042"
 ---
 # <a name="transact-sql-debugger---call-stack-window"></a>Transact-SQL 디버거 - 호출 스택 창
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 **호출 스택** 창에는 호출 스택의 모듈, 모듈에 전달되는 매개 변수의 값 및 데이터 형식이 표시됩니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 모듈은 저장 프로시저, 함수 및 트리거를 포함합니다. 호출 스택을 표시하려면 디버그 모드여야 합니다.  
 

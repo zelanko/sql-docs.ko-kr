@@ -1,5 +1,6 @@
 ---
 title: Reporting Services 데이터 경고 | Microsoft Docs
+description: SQL Server Reporting Services 데이터 경고가 사용자에게 흥미롭고 중요한 보고서 데이터에 대해 알려주는 방법을 알아봅니다.
 ms.date: 07/02/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -9,12 +10,12 @@ ms.assetid: 8c234077-b670-45c0-803f-51c5a5e0866e
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b1cb553c263bc822d5139d50169241a0f19fdd79
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 7a3d3d4cc792afdef44a6c5ff6684e1e6aa4ff14
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487800"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246682"
 ---
 # <a name="reporting-services-data-alerts"></a>Reporting Services 데이터 경고
 
@@ -81,7 +82,7 @@ SQL Server Reporting Services 데이터 경고는 사용자가 관심을 가지�
 ### <a name="save-data-alert-definitions-and-alerting-metadata"></a>데이터 경고 정의 및 경고 메타데이터 저장  
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 를 SharePoint 모드로 설치한 경우 SQL Server 경고 데이터베이스가 자동으로 생성됩니다.  
   
- 데이터 경고 정의 및 경고 메타데이터는 경고 데이터베이스에 저장됩니다. 기본적으로 이 데이터베이스 이름은 ReportingServices\<GUID>_Alerting으로 지정됩니다.  
+ 데이터 경고 정의 및 경고 메타데이터는 경고 데이터베이스에 저장됩니다. 기본적으로 이 데이터베이스는 이름이 ReportingServices\<GUID>_Alerting으로 지정됩니다.  
   
  데이터 경고 정의를 저장하면 경고 정의에 대한 SQL Server 에이전트 작업이 생성됩니다. 작업에는 작업 일정이 포함됩니다. 일정은 사용자가 경고 정의에 지정하는 되풀이 패턴을 기반으로 합니다. 작업을 실행하면 데이터 경고 정의에 대한 처리가 시작됩니다.  
   
@@ -131,7 +132,7 @@ SQL Server Reporting Services 데이터 경고는 사용자가 관심을 가지�
   
  다음 표에서는 데이터 경고에 대한 구성 요소, 해당 기본값, 설명 및 위치를 보여 줍니다.  
   
-|설정|기본값|Description|위치|  
+|설정|기본값|설명|위치|  
 |-------------|-------------------|-----------------|--------------|  
 |AlertingCleanupCycleMinutes|20|정리 주기가 시작되는 지점 간의 간격(분)입니다.|보고서 서버 구성 파일|  
 |AlertingExecutionLogCleanupMinutes|10080|실행 로그 항목이 유지되는 시간(분)입니다.|보고서 서버 구성 파일|  

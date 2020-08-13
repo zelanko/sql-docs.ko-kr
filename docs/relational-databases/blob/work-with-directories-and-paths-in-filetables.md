@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: f1e45900-bea0-4f6f-924e-c11e1f98ab62
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 4ab8501b5b0753143ce5bfe2b289211729c35821
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 28c1d78a4def2b3549957715c754e55b0d91e743
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765460"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246402"
 ---
 # <a name="work-with-directories-and-paths-in-filetables"></a>FileTable에서 디렉터리 및 경로 작업
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -93,9 +93,8 @@ GO
 ##  <a name="the-is_directory-column-in-the-filetable-schema"></a><a name="is_directory"></a> FileTable 스키마의 is_directory 열  
  다음 표에서는 **is_directory** 열과 FileTable의 FILESTREAM 데이터가 포함된 **file_stream** 열 간의 상호 작용에 대해 설명합니다.  
   
-||||  
-|-|-|-|  
-|*is_directory* **value**|*file_stream* **value**|**동작**|  
+|is_directory 값|file_stream 값|동작|  
+|-|-|-|    
 |FALSE|NULL|이는 시스템 정의 제약 조건에 의해 catch되는 잘못된 조합입니다.|  
 |FALSE|\<value>|항목은 파일을 나타냅니다.|  
 |TRUE|NULL|항목은 디렉터리를 나타냅니다.|  

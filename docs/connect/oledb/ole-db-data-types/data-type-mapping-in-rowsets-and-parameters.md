@@ -1,5 +1,5 @@
 ---
-title: 행 집합 및 매개 변수의 데이터 형식 매핑 | Microsoft Docs
+title: 행 집합 및 매개 변수의 데이터 형식 매핑(OLE DB 드라이버) | Microsoft Docs
 description: 행 집합 및 매개 변수의 데이터 형식 매핑
 ms.custom: ''
 ms.date: 02/21/2020
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - OLE DB, data types
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: e496790c2c6f6798edcec1f9ee63c99aa98e9b00
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 373bb0165c663232342b690711d5f56e18544211
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77558387"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87244922"
 ---
 # <a name="data-type-mapping-in-rowsets-and-parameters"></a>행 집합 및 매개 변수의 데이터 형식 매핑
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -91,7 +91,7 @@ ms.locfileid: "77558387"
 ## <a name="ssprop_allownativevariant"></a>SSPROP_ALLOWNATIVEVARIANT  
  SSPROP_ALLOWNATIVEVARIANT는 세션 속성이며 DBPROPSET_SQLSERVERSESSION 속성 집합의 일부입니다.  
   
-|||  
+|속성|설명|  
 |-|-|  
 |SSPROP_ALLOWNATIVEVARIANT|유형: VT_BOOL<br /><br /> R/W: 읽기/쓰기<br /><br /> Default: VARIANT_FALSE<br /><br /> 설명: 데이터가 DBTYPE_VARIANT 또는 DBTYPE_SQLVARIANT로 페치되는지를 결정합니다.<br /><br /> VARIANT_TRUE: 열 유형이 DBTYPE_SQLVARIANT로 반환되고, 이 경우 버퍼에 SSVARIANT 구조체가 포함됩니다.<br /><br /> VARIANT_FALSE: 열 유형이 DBTYPE_VARIANT로 반환되고, 이 경우 버퍼에 VARIANT 구조체가 포함됩니다.|  
   

@@ -1,20 +1,18 @@
 ---
 title: SQL 설명서 버전 관리 시스템
-ms.date: 10/15/2019
+ms.date: 07/22/2020
 ms.prod: sql
-ms.technology: ''
-ms.custom: ''
+ms.technology: release-landing
 ms.topic: conceptual
-ms.reviewer: ''
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||>=sql-server-linux-2017||=sql-server-previousversions||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: b343f34e0d7fdc30e2549095f5731d93e863414c
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: 7ca82e29d32bfe2721baa619ec37d4c7576a0533
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83150604"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247369"
 ---
 # <a name="versioning-system-for-sql-documentation"></a>SQL 설명서용 버전 관리 시스템
 
@@ -136,7 +134,7 @@ SQL의 경우 에디션 간에는 버전 관리 모니커가 다르지 않지만
 
 일부 아티클에는 여러 버전의 SQL Server 관련 정보가 포함되어 있습니다. 모든 일반 모니커는 모니커 버전에 대해 부정확하거나, 혼동을 일으키거나, 모순되는 정보를 표시할 수 있는 버전 관련 섹션을 숨깁니다. 특별한 **모든 SQL** 모니커는 모든 버전 섹션을 표시하며, 부정확한 정보가 표시되고 있음을 명확하게 나타내지 않을 수 있습니다.
 
-## <a name="message-the-requested-page-is-not-available-for-moniker"></a><a name="anchor-message-unavailable-for-moniker"></a> 메시지: 요청된 페이지를 \<모니커\>에 사용할 수 없습니다.
+## <a name="message-the-requested-page-is-not-available-for-moniker"></a><a name="anchor-message-unavailable-for-moniker"></a> 메시지: 요청된 페이지를 \<moniker\>에 사용할 수 없습니다.
 
 다음 시나리오에서는 :::no-loc text="Docs"::: 웹 페이지 맨 위에 있는 정보 메시지를 표시합니다.
 
@@ -163,10 +161,11 @@ _최신_ 버전은 아직 완전히 릴리스되지 않았으며 _미리 보기_
     - [SQL Server 이전 버전, 2012-2005](../toc/previous-versions-sql-server.md)
 
 - _2014:_ &nbsp; 버전 관리 시스템은 SQL Server 2014에서는 절반 정도 구현됩니다. 버전 관리 컨트롤에서 SQL Server 2014를 선택할 수 있으며 문제없이 작동합니다. 그러나 기본적으로 2014용 파일은 2014 전용이고, 마찬가지로 2008용 파일도 2008 전용입니다.
-    - [SQL Server 2014 설명서](/sql/2014-toc/books-online-for-sql-server-2014?view=sql-server-2014)
+    - [SQL Server 2014 오프라인 설명서](/sql/sql-server/sql-server-offline-documentation)
 
 - _2016 이상:_ &nbsp; 버전 관리 시스템은 SQL Server 2016 이상 버전에 대해 완전히 구현됩니다.
     - [SQL Server 설명서 2016 이상 시작](/sql/sql-server/?view=sql-server-2016)
+    - [SQL Server 2016 오프라인 설명서](sql-server-offline-documentation.md)
 
 ## <a name="see-also"></a>참고 항목
 

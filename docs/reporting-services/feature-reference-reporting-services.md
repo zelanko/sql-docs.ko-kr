@@ -1,5 +1,6 @@
 ---
 title: 기능 참조(Reporting Services) | Microsoft Docs
+description: 보고서를 만들고 관리하고 보는 데 사용할 수 있는 SQL Server Reporting Services 도구 및 애플리케이션에 대해 알아봅니다.
 ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 01daf21c-19c6-448d-ac30-accb54ad83da
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 40e4fb9280d7ff9d05412966487997f507fb3dc7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b5b87404b685fe9e5de09f8703d3c06c48371836
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65503095"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247242"
 ---
 # <a name="feature-reference-reporting-services"></a>기능 참조(Reporting Services)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]에는 보고서를 생성, 관리 및 확인하는 데 사용할 수 있는 여러 가지 도구와 애플리케이션이 포함되어 있습니다. 이 섹션에서는 이러한 도구와 애플리케이션의 대화 상자, 웹 페이지 및 마법사와 관련된 항목에 대해 설명합니다.  
   
- 도구나 애플리케이션 실행 중에 사용자 인터페이스 항목에 액세스하려면 대화 상자, 웹 페이지 또는 마법사가 열려 있는 상태에서 F1 키를 누르거나 **도움말** 을 클릭합니다. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 도구를 시작하는 방법에 대한 자세한 내용은 [자습서: Reporting Services 도구를 찾고 시작하는 방법&#40;SSRS&#41;](../reporting-services/tools/tutorial-how-to-locate-and-start-reporting-services-tools-ssrs.md)을 참조하세요.  
+ 도구나 애플리케이션 실행 중에 사용자 인터페이스 항목에 액세스하려면 대화 상자, 웹 페이지 또는 마법사가 열려 있는 상태에서 F1 키를 누르거나 **도움말** 을 클릭합니다. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 도구를 시작하는 방법은 [자습서: Reporting Services 도구 찾기 및 시작 방법&#40;SSRS&#41;](../reporting-services/tools/tutorial-how-to-locate-and-start-reporting-services-tools-ssrs.md)을 참조하세요.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [보고서 디자이너 F1 도움말](../reporting-services/tools/report-designer-f1-help.md)  

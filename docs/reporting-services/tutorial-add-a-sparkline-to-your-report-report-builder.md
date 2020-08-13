@@ -1,5 +1,6 @@
 ---
 title: '자습서: 보고서에 스파크라인 추가(보고서 작성기) | Microsoft Docs'
+description: 보고서 작성기를 사용하여 Reporting Services 페이지를 매긴 보고서에서 스파크라인 차트가 포함된 기본 테이블을 만드는 방법을 알아봅니다.
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 18c90a36-48bf-4805-a960-2d1e8f00c2dc
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4dbe5d5afdf507f3edfd68135aa8ee14aee5ae08
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: fe0d52f55905721002a1590f54ada84d7732f2a0
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63043181"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245660"
 ---
 # <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>자습서: 보고서에 스파크라인 추가(보고서 작성기)
 
@@ -23,7 +24,7 @@ ms.locfileid: "63043181"
   
 ![report-builder-sparkline-final](../reporting-services/media/report-builder-sparkline-final.png)  
      
-이 자습서에 소요되는 예상 시간: 30분  
+이 자습서에 소요되는 예상 시간: 30분.  
   
 ## <a name="requirements"></a>요구 사항  
 요구 사항에 대한 자세한 내용은 [자습서의 필수 조건&#40;보고서 작성기&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md)을 참조하세요.  
@@ -154,7 +155,7 @@ ms.locfileid: "63043181"
   
 14. 디자인 화면에 테이블이 추가됩니다. 이 테이블에는 열 3개와 행 3개가 있습니다.  
   
-    그룹화 창을 확인합니다. 그룹화 창이 표시되지 않는 경우 **보기** 메뉴에서 **그룹화**를 클릭합니다. 행 그룹 창에는 **Product**라는 한 개의 행 그룹이 표시됩니다. 열 그룹 창에는 **SalesDate**라는 한 개의 열 그룹이 표시됩니다. 세부 데이터는 모두 데이터 세트 쿼리로 검색된 데이터입니다.  
+    그룹화 창을 확인합니다. 그룹화 창이 표시되지 않는 경우 **보기** 메뉴에서 **그룹화**를 클릭합니다. 행 그룹 창에는 **Product**라는 하나의 행 그룹이 표시됩니다. 열 그룹 창에는 **SalesDate**라는 하나의 열 그룹이 표시됩니다. 세부 데이터는 모두 데이터 세트 쿼리로 검색된 데이터입니다.  
     
     ![report-builder-sparkline-grouping-pane](../reporting-services/media/report-builder-sparkline-grouping-pane.png)
   

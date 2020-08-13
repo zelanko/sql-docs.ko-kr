@@ -1,6 +1,7 @@
 ---
 title: Reporting Services(2017 이상)의 릴리스 정보 | Microsoft Docs
-ms.date: 04/06/2020
+description: SSRS(SQL Server Reporting Services) 버전 2017 이상의 변경 내용을 자세히 알아봅니다.
+ms.date: 04/28/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -9,12 +10,12 @@ ms.reviewer: maggies
 author: casualoak
 ms.author: rhys
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: 9227aa7ad22b64da499020d0c4bc561de00c14f4
-ms.sourcegitcommit: 48e259549f65f0433031ed6087dbd5d9c0a51398
+ms.openlocfilehash: 4a97ab8d68a1b265a25eb3b97a5146a402aa9b3b
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80809850"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247512"
 ---
 # <a name="release-notes-for-sql-server-reporting-services-ssrs-2017-and-later"></a>SSRS(SQL Server Reporting Services)(2017 이상)의 릴리스 정보
 
@@ -50,6 +51,15 @@ We are "standardizing" all our 'Release Notes' style articles:
 
 GeneMi, DevOps = 1467988 (MsEng > TechnicalContent) , 2019/03/19
 -->
+## <a name="sql-server-2019-reporting-services"></a>SQL Server 2019 Reporting Services
+
+## <a name="150724337714-20191101"></a>15.0.7243.37714, 2019/11/01
+
+초기 릴리스
+
+
+## <a name="sql-server-2017-reporting-services"></a>SQL Server 2017 Reporting Services
+
 ## <a name="1406001572-20200406"></a>14.0.600.1572, 2020/04/06 
 
 | 해결된 문제 | 세부 정보 |

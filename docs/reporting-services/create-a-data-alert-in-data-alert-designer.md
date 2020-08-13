@@ -1,5 +1,6 @@
 ---
 title: 데이터 경고 디자이너에서 데이터 경고 만들기 | Microsoft Docs
+description: 데이터 경고 디자이너에서 데이터 경고 정의를 만드는 방법을 알아봅니다. 또한 경고를 편집하고 완료되면 편집 내용을 저장하는 방법을 알아봅니다.
 ms.date: 08/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -9,12 +10,12 @@ ms.assetid: 8464ab9d-afe1-4490-955f-9f3319bcbf8d
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 5be6c645caadfc2b619e3fbd6d8f6b2a78ad2ff0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4a7ef1c053dbf22bc1717a47d9a662d1d29fd55f
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65571574"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247568"
 ---
 # <a name="create-a-data-alert-in-data-alert-designer"></a>데이터 경고 디자이너에서 데이터 경고 만들기
 
@@ -114,7 +115,7 @@ ms.locfileid: "65571574"
   
 20. 필요에 따라 **제목** 입력란에서 경고 메시지의 제목 줄을 업데이트합니다.  
   
-     기본 제목은 **데이터 경고 이름>\<에 대한 데이터 경고**입니다.  
+     기본 제목은 **\<data alert name>에 대한 데이터 경고**입니다.  
   
 21. 필요에 따라 **설명** 입력란에 경고 메시지에 대한 설명을 입력합니다.  
   

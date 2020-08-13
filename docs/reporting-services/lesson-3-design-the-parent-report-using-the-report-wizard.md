@@ -1,5 +1,6 @@
 ---
 title: '3단원: 보고서 마법사를 사용하여 부모 보고서 디자인 | Microsoft Docs'
+description: 부모 보고서에 대한 데이터 연결 및 데이터 테이블을 만든 후 보고서 디자이너의 보고서 마법사를 사용하여 부모 보고서를 디자인하는 방법을 알아봅니다.
 ms.date: 05/18/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2f69dcd3-cd6d-45a9-a62a-ba6f5f3179d8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ad06a5a76344348c71838873edcc490c75b7b2e2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 74b71002f5f84f4d9b80966f6b44721b9942c8b4
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "62651279"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247532"
 ---
 # <a name="lesson-3-design-the-parent-report-using-the-report-wizard"></a>3단원: 보고서 마법사를 사용하여 부모 보고서 디자인
 부모 보고서에 대한 데이터 테이블 및 데이터 연결을 만든 후에는 보고서 디자이너의 보고서 마법사를 사용하여 부모 보고서를 디자인합니다. 보고서 디자이너에 대한 자세한 내용은 [보고서 디자이너로 보고서 디자인&#40;SSRS&#41;](../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md)을 참조하세요.  

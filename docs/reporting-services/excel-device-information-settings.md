@@ -1,5 +1,6 @@
 ---
 title: Excel 디바이스 정보 설정 | Microsoft Docs
+description: Microsoft Excel 형식으로 렌더링하기 위한 다양한 디바이스 정보 설정을 자세히 알아봅니다.
 ms.date: 01/23/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: bb5f3566-f033-4470-be87-1f52fb7a4ab6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7a83bcd79a50400888d5a973ad9a743db19b87b5
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c4d84c98923a3cee94f64fed863e621821bd7a39
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "76761827"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245132"
 ---
 # <a name="excel-device-information-settings"></a>Excel 디바이스 정보 설정
   다음 표는 [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] 형식으로 렌더링하기 위한 디바이스 정보 설정을 나열합니다.  

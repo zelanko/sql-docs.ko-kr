@@ -1,5 +1,6 @@
 ---
 title: Word 디바이스 정보 설정 | Microsoft Docs
+description: Microsoft Word 형식으로 렌더링하는 데 사용할 수 있는 디바이스 정보 설정에 대해 알아봅니다.
 ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 28146498-fae7-4b13-b47f-6ec05aa8e057
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 776a825c480568be2640d1309c7c3a48970e2c54
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e12669575e06ab2ea3898e7592c2c1d08e90f283
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65571137"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247432"
 ---
 # <a name="word-device-information-settings"></a>Word 디바이스 정보 설정
   다음 표는 [!INCLUDE[ofprword](../includes/ofprword-md.md)] 형식으로 렌더링하기 위한 디바이스 정보 설정을 나열합니다.  

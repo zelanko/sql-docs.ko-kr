@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 9ed9ca8e-8b1e-48d9-907d-285516d6562b
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: de9ceed1aa019b82bc943a1985f0f251ad82b1fa
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b32c0b24aea8e1a55060b501fd001c1ad7f90b36
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917535"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248054"
 ---
 # <a name="integration-services-ssis-package-and-project-parameters"></a>Integration Services(SSIS) 패키지 및 프로젝트 매개 변수
 
@@ -76,10 +76,10 @@ ms.locfileid: "86917535"
  매개 변수 값을 표시 및 설정하는 데 사용할 수 있는 Transact-SQL 뷰 및 저장 프로시저는 다음과 같습니다.  
   
  [catalog.execution_parameter_values&#40;SSISDB 데이터베이스&#41;](../integration-services/system-views/catalog-execution-parameter-values-ssisdb-database.md)(뷰)  
- 특정 실행에 사용될 실제 매개 변수 값을 보여 줍니다.  
+ 특정 실행의 실제 매개 변수 값을 표시합니다.
   
  [catalog.get_parameter_values&#40;SSISDB 데이터베이스&#41;](../integration-services/system-stored-procedures/catalog-get-parameter-values-ssisdb-database.md)(저장 프로시저)  
- 지정된 패키지와 환경 참조의 실제 값을 확인하고 보여 줍니다.  
+ 지정된 패키지와 환경 참조의 실제 값을 확인하고 보여 줍니다.
   
  [catalog.object_parameters&#40;SSISDB 데이터베이스&#41;](../integration-services/system-views/catalog-object-parameters-ssisdb-database.md)(뷰)  
  디자인 기본값 및 서버 기본값을 포함하여 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 카탈로그의 모든 패키지 및 속성에 대한 매개 변수와 속성을 표시합니다.  

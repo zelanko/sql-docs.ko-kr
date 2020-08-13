@@ -1,5 +1,6 @@
 ---
 title: SharePoint 통합의 보고서 뷰어 웹 파트 프로그래밍 기능 | Microsoft Docs
+description: 웹 파트 연결을 사용하여 보고서 뷰어 웹 파트에 보고서 경로 및 매개 변수를 제공하는 사용자 지정 웹 파트를 만드는 방법을 알아봅니다.
 ms.date: 03/04/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.assetid: 714017b7-1bd6-4950-a3c6-d0df8450a877
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 990dba53ca575e09bcfefead21b5e37c82754c40
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ee3b85d50225a8c3b7b74e111a152128e4af0d4a
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63187302"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245720"
 ---
 # <a name="report-viewer-web-part-programmability-in-sharepoint-integration"></a>SharePoint 통합의 보고서 뷰어 웹 파트 프로그래밍 기능
   보고서 뷰어 웹 파트는 서버 컨트롤로, 개발자가 사용자 지정 SharePoint 애플리케이션을 만드는 데 사용할 수 있는 공용 API(애플리케이션 프로그래밍 인터페이스) 집합을 포함합니다. 웹 파트 연결을 사용하여 보고서 뷰어 웹 파트에 보고서 경로 및 매개 변수를 제공하는 사용자 지정 웹 파트를 만들 수 있습니다. 사용자 지정 SharePoint 웹 파트 페이지 내에 웹 파트를 포함하고 공용 API를 사용하여 웹 파트를 사용자 지정할 수도 있습니다.  

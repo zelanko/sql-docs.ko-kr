@@ -12,12 +12,12 @@ ms.assetid: 065296fe-6711-4837-965e-252ef6c13a0f
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a6a13f70bfffbdbeba0ba08882c4dcc9b53aaa69
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0c62f1f2ef34bd5ba1a59a642ac8d07db2dbe259
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85668881"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247082"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블에 대한 쿼리 처리 가이드
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -195,7 +195,7 @@ END
   
  고유하게 컴파일된 저장 프로시저는 프로시저를 만들 때 컴파일되지만 해석된 저장 프로시저는 처음 실행할 때 컴파일됩니다. 컴파일 중 특히 구문 분석과 대수 부분은 생성 시에 발생합니다. 하지만 해석된 저장 프로시저의 경우 처음 실행할 때 쿼리 계획의 최적화가 발생합니다. 다시 컴파일 논리도 비슷합니다. 고유하게 컴파일된 저장 프로시저는 서버를 다시 시작한 경우 프로시저를 처음 실행할 때 다시 컴파일됩니다. 해석된 저장 프로시저는 계획 캐시에 계획이 더 이상 없는 경우에 다시 컴파일됩니다. 다음 표에서는 고유하게 컴파일된 저장 프로시저와 해석된 저장 프로시저 모두의 컴파일 및 다시 컴파일 사례를 요약해서 보여줍니다.  
   
-||네이티브 컴파일|메모리 액세스에 최적화된 테이블에 대한 해석된|  
+|컴파일 형식|네이티브 컴파일|메모리 액세스에 최적화된 테이블에 대한 해석된|  
 |-|-----------------------|-----------------|  
 |초기 컴파일|생성 시|처음 실행 시|  
 |자동 다시 컴파일|데이터베이스나 서버를 다시 시작한 후 프로시저를 처음 실행할 때|서버를 다시 시작할 때 또는 일반적으로 스키마 또는 통계 변경이나 메모리 압력에 따라 계획 캐시에서 계획이 제거될 때|  

@@ -5,21 +5,21 @@ ms.custom: ''
 ms.date: 11/01/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.technology: install
+ms.technology: release-landing
 ms.topic: conceptual
 ms.assetid: 13942af8-5a40-4cef-80f5-918386767a47
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = sql-server-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 43e6451f54e55af8e9c782dbab8a23bc753a03bc
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 33d6fd836bd4676e9f178fb5a3c59cc9fba67f80
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83001131"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245607"
 ---
 # <a name="sql-server-2017-release-notes"></a>SQL Server 2017 릴리스 정보
-[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[SQL Server 2017](../includes/applies-to-version/sqlserver2017.md)]
 이 문서에서는 SQL Server 2017의 관련 제한 사항 및 문제에 대해 설명합니다. 관련 정보는 다음을 참조하세요.
 - [SQL Server 2017의 새로운 기능](../sql-server/what-s-new-in-sql-server-2017.md)
 - [Linux 릴리스 노트의 SQL Server](../linux/sql-server-linux-release-notes.md)
@@ -74,7 +74,7 @@ ms.locfileid: "83001131"
 - **문제 및 고객에게 미치는 영향:** 일관성과 가독성을 향상하기 위해 저장 프로시저 **[catalog].[create_execution]** 의 *runincluster* 매개 변수 이름이 *runinscaleout*으로 변경되었습니다.
 - **해결 방법:** Scale Out에서 패키지를 실행하는 기존 스크립트가 있는 경우 매개 변수 이름을 *runincluster*에서 *runinscaleout*으로 변경해야만 RC1에서 스크립트가 작동합니다.
 
-- **문제 및 고객에게 미치는 영향:** SSMS(SQL Server Management Studio) 17.1 및 이전 버전은 RC1의 Scale Out에서 패키지 실행을 트리거할 수 없습니다. 오류 메시지: “ *@runincluster* 은(는) 프로시저 **create_execution**의 매개 변수가 아닙니다.” 이 문제는 다음 릴리스인 SSMS 버전 17.2에서 해결됩니다. SSMS 17.2 이상 버전은 Scale Out에서 새 매개 변수 이름 및 패키지 실행을 지원합니다. 
+- **문제 및 고객에게 미치는 영향:** SSMS(SQL Server Management Studio) 17.1 및 이전 버전은 RC1의 Scale Out에서 패키지 실행을 트리거할 수 없습니다. 오류 메시지는 다음과 같습니다. " *\@runincluster*는 프로시저 **create_execution**의 매개 변수가 아닙니다." 이 문제는 다음 릴리스인 SSMS 버전 17.2에서 해결됩니다. SSMS 17.2 이상 버전은 Scale Out에서 새 매개 변수 이름 및 패키지 실행을 지원합니다. 
 - **해결 방법:** SSMS 버전 17.2가 나올 때까지:
   1. 기존 버전의 SSMS를 사용하여 패키지 실행 스크립트를 생성합니다.
   2. 스크립트에서 *runincluster* 매개 변수의 이름을 *runinscaleout*으로 변경합니다.
@@ -150,7 +150,7 @@ ms.locfileid: "83001131"
 
 ## <a name="more-information"></a>자세한 정보
 - [SQL Server Reporting Services 릴리스 정보](../reporting-services/release-notes-reporting-services.md)관련 제한 사항 및 문제에 대해 설명합니다.
-- [Machine Learning Services에 대한 알려진 문제](../machine-learning/known-issues-for-sql-server-machine-learning-services.md)
+- [Machine Learning Services에 대한 알려진 문제](../machine-learning/troubleshooting/known-issues-for-sql-server-machine-learning-services.md)
 - [SQL Server 업데이트 센터 - 지원되는 모든 버전에 대한 링크 및 정보](https://msdn.microsoft.com/library/ff803383.aspx)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

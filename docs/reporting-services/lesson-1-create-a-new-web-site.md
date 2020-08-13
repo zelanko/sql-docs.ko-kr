@@ -1,5 +1,6 @@
 ---
 title: '1단원: 새 웹 사이트 만들기 | Microsoft Docs'
+description: Visual C#용 ASP.NET 웹 사이트 템플릿을 사용하여 새 웹 사이트 프로젝트를 만드는 방법을 알아봅니다.
 ms.date: 05/18/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,14 +9,14 @@ ms.topic: conceptual
 ms.assetid: 3f226bc8-614e-4dac-9078-3448a83342b5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ac670743ba36e3e1d880f152317956115ccf8c78
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d44bb92cccea8067abcfd249d592b44661544eb4
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "62651568"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247162"
 ---
-# <a name="lesson-1-create-a-new-web-site"></a>1단원: 새 웹 사이트 만들기
+# <a name="lesson-1-create-a-new-website"></a>1단원: 새 웹 사이트 만들기
 이 단원에서는 Visual C#용 ASP.NET 웹 사이트 템플릿을 사용하여 새 웹 사이트 프로젝트를 만드는 방법을 배웁니다.  
   
 ## <a name="to-create-a-new-website"></a>새 웹 사이트를 만들려면  

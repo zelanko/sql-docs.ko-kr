@@ -1,5 +1,6 @@
 ---
 title: 데이터에 연결하는 다른 방법(보고서 작성기) | Microsoft Docs
+description: SQL Server 데이터베이스와 같은 외부 데이터 원본에 연결하는 다른 방법을 자세히 알아봅니다.
 ms.date: 06/15/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: aebc5f3d-97d5-4d54-b525-753fed073a9a
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 887104ff6667844071e44e1933592e8238b124dc
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: dfa10030537ebd325dae78c61985e75d6d2a49ff
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "62703887"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246355"
 ---
 # <a name="alternative-ways-to-get-a-data-connection-report-builder"></a>데이터에 연결하는 다른 방법(보고서 작성기)
 데이터 연결은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스와 같은 외부 데이터 원본에 연결하는 데 필요한 정보를 포함합니다. 일반적으로 데이터 원본 소유자로부터 사용할 자격 증명 유형과 연결 정보를 가져옵니다.  

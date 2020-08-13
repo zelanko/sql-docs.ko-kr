@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 14b0ff1c40ae8e809f7ad5b39e482bd3f76774ec
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 89f68b19a47605e5f2ad9d02abffc6810d8df578
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899644"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245630"
 ---
 # <a name="configure-sql-server-container-images-on-docker"></a>Docker에서 SQL Server 컨테이너 이미지 구성
 
@@ -640,6 +640,14 @@ chown -R 10001:0 <database file dir>
 docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=MyStrongPassword" -e "MSSQL_DATA_DIR=/my/file/path" -v /my/host/path:/my/file/path -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-latest
 ```
 
+## <a name="enable-sql-server-agent"></a><a id="enablesqlagent"></a> SQL Server 에이전트 사용
+
+SQL Server 에이전트를 사용하도록 설정하고 SQL Server와 함께 자동으로 시작
+
+```bash
+docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=MyStrongPassword" -e "MSSQL_AGENT_ENABLED=true" --name sql1 -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-latest
+```
+
 ## <a name="troubleshooting"></a><a id="troubleshooting"></a> 문제 해결
 
 다음 섹션에서는 컨테이너에서 SQL Server를 실행하기 위한 문제 해결 제안 사항을 제공합니다.
@@ -667,7 +675,7 @@ Windows에서 PowerShell 또는 명령 프롬프트를 관리자 권한으로 �
 
 SQL Server 컨테이너가 실행되지 않으면 다음 테스트를 시도합니다.
 
-- **‘네트워크 브리지에서 CONTAINER_NAME 엔드포인트를 만들지 못했습니다. 프록시를 시작하는 중 오류 발생: listen tcp 0.0.0.0:1433 bind: 주소가 이미 사용 중입니다.’** 와 같은 오류가 발생할 경우 컨테이너 포트 1433을 이미 사용 중인 포트에 매핑하려고 한 것입니다. 이 문제는 호스트 머신에서 SQL Server를 로컬로 실행하는 경우에 발생할 수 있습니다. 두 개의 SQL Server 컨테이너를 시작하고 둘 다 동일한 호스트 포트에 매핑하려고 하는 경우에도 발생할 수 있습니다. 이 문제가 발생할 경우 `-p` 매개 변수를 사용하여 컨테이너 포트 1433을 다른 호스트 포트에 매핑합니다. 다음은 그 예입니다. 
+- **‘네트워크 브리지에서 CONTAINER_NAME 엔드포인트를 만들지 못했습니다. 프록시를 시작하는 중 오류 발생: listen tcp 0.0.0.0:1433 bind: 주소가 이미 사용 중입니다.’** 와 같은 오류가 발생할 경우 컨테이너 포트 1433을 이미 사용 중인 포트에 매핑하려고 한 것입니다. 이 문제는 호스트 머신에서 SQL Server를 로컬로 실행하는 경우에 발생할 수 있습니다. 두 개의 SQL Server 컨테이너를 시작하고 둘 다 동일한 호스트 포트에 매핑하려고 하는 경우에도 발생할 수 있습니다. 이 문제가 발생할 경우 `-p` 매개 변수를 사용하여 컨테이너 포트 1433을 다른 호스트 포트에 매핑합니다. 예를 들면 다음과 같습니다. 
 
 <!--SQL Server 2017 on Linux -->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"

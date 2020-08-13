@@ -1,5 +1,6 @@
 ---
 title: '5단원: 보고서 마법사를 사용하여 하위 보고서 디자인 | Microsoft Docs'
+description: 자식 보고서에 대한 데이터 연결 및 데이터 테이블을 만든 후 보고서 디자이너의 보고서 마법사를 사용하여 자식 보고서를 디자인하는 방법을 알아봅니다.
 ms.date: 05/18/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 19a3f927-ea97-4f40-a5f8-cd5f2598e4da
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: da9f07cf60a2ec42e23416b52cbfebab78802247
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: cb9555522638ab6c8132f3422c7f0ca30928f893
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "62512647"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246258"
 ---
 # <a name="lesson-5-design-the-child-report-using-the-report-wizard"></a>5단원: 보고서 마법사를 사용하여 자식 보고서 디자인
 자식 보고서에 대한 데이터 테이블 및 데이터 연결을 만든 후에는 보고서 디자이너의 보고서 마법사를 사용하여 자식 보고서를 디자인합니다. 보고서 디자이너에 대한 자세한 내용은 [보고서 디자이너로 보고서 디자인&#40;SSRS&#41;](../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md)을 참조하세요.  
@@ -38,7 +39,7 @@ ms.locfileid: "62512647"
   
     1.  **ProductID**, **PurchaseOrderID**, **PurchaseOrderDetailID**, **OrderQty**, **ReceivedQty**, **RejectedQty**및 **StockedQty** 를 **사용 가능한 필드** 에서 **값** 상자로 끌어옵니다.  
   
-    2.  **Sum(ProductID)** , **Sum(PurchaseOrderID)** , **Sum(PurchaseOrderDetailID)** , **Sum(OrderQty)** , **Sum(ReceivedQty)** , **Sum(RejectedQty)** 및 **Sum(StockedQty)** 옆에 있는 화살표를 선택하고 **합계** 선택을 취소합니다.  
+    2.  **Sum(ProductID)**, **Sum(PurchaseOrderID)**, **Sum(PurchaseOrderDetailID)**, **Sum(OrderQty)**, **Sum(ReceivedQty)**, **Sum(RejectedQty)** 및 **Sum(StockedQty)** 옆에 있는 화살표를 선택하고 **합계** 선택을 취소합니다.  
   
 7.  **다음** 을 두 번 선택한 다음 **마침** 을 선택하여 **보고서 마법사**를 닫습니다.  
   

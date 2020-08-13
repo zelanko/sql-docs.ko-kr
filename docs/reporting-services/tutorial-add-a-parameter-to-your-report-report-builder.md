@@ -1,5 +1,6 @@
 ---
 title: '자습서: 보고서에 매개 변수 추가(보고서 작성기) | Microsoft Docs'
+description: 보고서를 읽는 사람이 하나 이상의 값으로 보고서 데이터를 필터링할 수 있도록 Reporting Services 페이지를 매긴 보고서에 매개 변수를 추가하는 방법을 알아봅니다.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: eab34ec4-b3ad-4a76-95cc-07b2f75ee6d7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7a50e32eb3d13e2b78705a3f2ba4fd63e9ccd442
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: cd5fab649fc481bdb91b42c34be33f5976b5af93
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "72252132"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245680"
 ---
 # <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>자습서: 보고서에 매개 변수 추가(보고서 작성기)
 이 자습서에서는 보고서를 읽는 사람이 하나 이상의 값에 대해 보고서 데이터를 필터링할 수 있도록 페이지가 매겨진 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 보고서에 매개 변수를 추가합니다. 
@@ -23,7 +24,7 @@ ms.locfileid: "72252132"
 보고서 매개 변수는 데이터 세트 쿼리에 포함하는 각 쿼리 매개 변수에 대해 자동으로 만들어집니다. 매개 변수 데이터 형식에 따라 보고서 뷰 도구 모음에 매개 변수가 표시되는 방식이 결정됩니다. 
    
 > [!NOTE]  
-> 이 자습서에서 마법사의 단계는 하나의 절차로 통합됩니다. 보고서 서버를 찾고 데이터 원본을 선택하고 데이터 세트를 만드는 방법에 대한 단계별 지침은 이 시리즈의 첫 번째 자습서인 다음 자습서를 참조하세요. [자습서: 기본 테이블 보고서 만들기&#40;보고서 작성기&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+> 이 자습서에서 마법사의 단계는 하나의 절차로 통합됩니다. 보고서 서버를 찾고, 데이터 원본을 선택하고, 데이터 세트를 만드는 방법에 대한 단계별 지침은 이 시리즈의 첫 번째 자습서인 [자습서: 기본 테이블 보고서 만들기&#40;보고서 작성기&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)을 참조하세요.  
   
 이 자습서에 소요되는 예상 시간: 25분  
   
@@ -82,7 +83,7 @@ ms.locfileid: "72252132"
   
 11. 쿼리 디자이너 도구 모음에서 **실행** ( **!** )을 클릭하여 데이터를 확인합니다.   
   
-    결과 집합은 네 상점의 각 하위 범주에 대한 판매 항목의 수량을 StoreID, Subcategory, Quantity 열에 표시하는 11개 데이터 행으로 구성됩니다. 상점 이름은 결과 집합에 포함되지 않습니다. 이 자습서의 뒷부분에 나오는 별도의 데이터 세트에서 상점 식별자에 해당하는 상점 이름을 조회할 수 있습니다.  
+    결과 집합은 네 상점의 각 하위 범주에 대한 판매 항목의 수량을 StoreID, Subcategory, Quantity 열에 표시하는 11개 데이터 행으로 구성되어 있습니다. 상점 이름은 결과 집합에 포함되는 데이터가 아닙니다. 이 자습서의 뒷부분에 나오는 별도의 데이터 세트에서 상점 식별자에 해당하는 상점 이름을 조회할 수 있습니다.  
   
     이 쿼리에는 쿼리 매개 변수가 포함되어 있지 않습니다. 이 자습서의 뒷부분에서 쿼리 매개 변수를 추가합니다.   
   

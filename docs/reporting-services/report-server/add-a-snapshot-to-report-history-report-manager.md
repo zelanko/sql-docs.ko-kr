@@ -1,5 +1,6 @@
 ---
 title: 보고서 기록에 스냅샷 추가 - Reporting Services | Microsoft Docs
+description: SSRS(SQL Server Reporting Services)에서 보고서 기록에 스냅샷을 수동으로 추가하는 방법을 자세히 알아봅니다.
 ms.prod: reporting-services
 ms.technology: reporting-services
 ms.topic: conceptual
@@ -8,12 +9,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/26/2019
-ms.openlocfilehash: 2ada64f14c3564bd1e6c9846f890fdd8b287cb6f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1effcdd44d04b3125cdeaf9983372cdcb00bd429
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68251932"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245736"
 ---
 # <a name="add-a-snapshot-to-report-history"></a>보고서 기록에 스냅샷 추가
 
