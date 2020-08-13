@@ -1,5 +1,6 @@
 ---
 title: '2단원: 부모 보고서에 대한 데이터 연결 및 데이터 테이블 정의 | Microsoft Docs'
+description: Visual C#용 ASP.NET 웹 사이트 템플릿을 사용하여 새 웹 사이트 프로젝트를 만든 후 부모 보고서에 대한 데이터 연결 및 데이터 테이블을 만드는 방법을 알아봅니다.
 ms.date: 05/18/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: f02dee0c-85ad-45d4-b707-10e9e8541db9
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e8bcfe976a8094c6faa22d8aab3db8a4a833d8cd
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 26599029af2b4fd6a52e85dc9b7567e9a7152038
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "62651601"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87235659"
 ---
 # <a name="lesson-2-define-a-data-connection-and-data-table-for-parent-report"></a>2단원: 부모 보고서에 대한 데이터 연결 및 데이터 테이블 정의
 Visual C#용 ASP.NET 웹 사이트 템플릿을 사용하여 새 웹 사이트 프로젝트를 만든 후에는 부모 보고서에 대한 데이터 연결 및 데이터 테이블을 만듭니다. 이 자습서에서 데이터 연결은 AdventureWorks2014 데이터베이스에 대한 연결입니다.  

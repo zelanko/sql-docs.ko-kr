@@ -1,8 +1,8 @@
 ---
-title: IBCPSession::BCPColFmt(OLE DB) | Microsoft Docs
+title: IBCPSession::BCPColFmt(OLE DB 드라이버) | Microsoft Docs
 description: IBCPSession::BCPColFmt(OLE DB)
 ms.custom: ''
-ms.date: 06/14/2018
+ms.date: 05/25/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -15,15 +15,15 @@ helpviewer_keywords:
 - BCPColFmt method
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 76dd26d42951a95c604b8d5b3bceaff21c355be2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4d4d55b6e950ccf7e1e9bfac54bf357d070ab09f
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67994579"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87244669"
 ---
 # <a name="ibcpsessionbcpcolfmt-ole-db"></a>IBCPSession::BCPColFmt(OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -60,10 +60,14 @@ HRESULT BCPColFmt(
   
 -   사용자 파일 필드당 최대 데이터 길이  
   
--   각 필드에 대한 종결 바이트 시퀀스(옵션)  
+-   각 필드에 대한 종결 바이트 시퀀스(옵션)<a href="#terminator_note"><sup>**1**</sup></a>.  
   
--   선택 사항인 종결 바이트 시퀀스의 길이  
+-   선택 사항인 종결 바이트 시퀀스의 길이<a href="#terminator_note"><sup>**1**</sup></a>.  
   
+
+> [!IMPORTANT]
+> <b id="terminator_note">[1]:</b> 데이터 파일 코드 페이지가 UTF-8로 설정된 시나리오에서 종결자 시퀀스를 사용하는 것은 지원되지 않습니다. 이러한 시나리오에서는 **pbUserDataTerm**을 `nullptr`로 설정하고 **cbUserDataTerm**을 `0`으로 설정해야 합니다.
+
  **BCPColFmt** 에 대한 각 호출에서는 사용자 파일의 한 필드에 대한 서식을 지정합니다. 예를 들어 다섯 개의 필드로 구성된 사용자 데이터 파일에서 세 필드의 기본 설정을 변경하려면 먼저 `BCPColumns(5)`를 호출한 다음 **BCPColFmt** 를 다섯 번 호출합니다. 이 중 세 번의 호출에서 사용자 지정 형식을 설정합니다. 나머지 두 번의 호출에서는 *eUserDataType* 을 BCP_TYPE_DEFAULT로 설정하고 *cbIndicator*, *cbUserData*및 *cbUserDataTerm* 을 각각 0, BCP_VARIABLE_LENGTH 및 0으로 설정합니다. 이 프로시저는 다섯 개의 열을 모두 복사하는데 이 중 세 개는 사용자 지정된 형식으로, 두 개는 기본 형식으로 복사합니다.  
   
 > [!NOTE]  
@@ -105,11 +109,11 @@ HRESULT BCPColFmt(
   
  종결자와 길이 표시기를 사용하거나 종결자와 최대 열 길이를 사용하는 등 두 가지 이상의 방법을 사용하여 사용자 파일 열 길이를 지정하는 경우 대량 복사에는 복사되는 데이터 크기가 가장 작은 방법이 선택됩니다.  
   
- 대량 복사 API는 필요한 경우 유니코드에서 MBCS로의 문자 변환을 수행합니다. 종결자 바이트 문자열 및 바이트 문자열 길이가 모두 올바르게 설정되도록 주의해야 합니다.  
-  
+ 대량 복사 API는 필요한 경우 유니코드에서 MBCS로의 문자 변환을 수행합니다. 종결자 바이트 문자열 및 바이트 문자열 길이가 모두 올바르게 설정되도록 주의해야 합니다. UTF-8 인코딩 제한 사항은 위의 [설명](#remarks) 섹션을 참조하세요.
+
  *cbUserDataTerm*[in]  
- 이 열에 사용할 종결자 시퀀스의 길이(바이트)입니다. 종결자가 없거나 데이터에 필요하지 않은 경우 이 값을 0으로 설정합니다.  
-  
+ 이 열에 사용할 종결자 시퀀스의 길이(바이트)입니다. 종결자가 없거나 데이터에 필요하지 않은 경우 이 값을 0으로 설정합니다. UTF-8 인코딩 제한 사항은 위의 [설명](#remarks) 섹션을 참조하세요.
+
  *idxServerCol*[in]  
  데이터베이스 테이블에서 열의 서수 위치입니다. 첫 번째 열 번호는 1입니다. 열의 서수 위치는 **IColumnsInfo::GetColumnInfo** 또는 이와 유사한 메서드를 사용하여 확인할 수 있습니다. 이 값이 0이면 대량 복사에서 데이터 파일의 필드를 무시합니다.  
   
@@ -130,7 +134,7 @@ HRESULT BCPColFmt(
  메모리 부족 오류가 발생했습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [IBCPSession &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md)   
+ [IBCPSession&#40;OLE DB&#41;](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md)   
  [대량 복사 작업 수행](../../oledb/features/performing-bulk-copy-operations.md)  
   
   

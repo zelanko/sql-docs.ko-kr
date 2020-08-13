@@ -1,5 +1,6 @@
 ---
 title: '자습서: 드릴스루 보고서 및 주 보고서 만들기(보고서 작성기) | Microsoft Docs'
+description: 두 종류의 Reporting Services 페이지를 매긴 보고서, 즉 드릴스루 보고서 및 주 보고서를 만드는 방법을 알아봅니다.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 02defc00e1c65eff7eb624a8d3295082d8d6dc8c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ce825906ef6282cd722f91b1c0dbf76463a7c821
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73637981"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87238427"
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>자습서: 드릴스루 보고서 및 주 보고서 만들기(보고서 작성기)
 이 자습서에서는 두 종류의 페이지가 매겨진 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 보고서인 드릴스루 보고서와 주 보고서를 만드는 방법을 알아봅니다. 이러한 보고서에서 사용되는 샘플 판매 데이터는 Analysis Services 큐브에서 검색됩니다. 
@@ -22,7 +23,7 @@ ms.locfileid: "73637981"
   
 ![rs_DrillthroughCubeTutorial](../reporting-services/media/rs-drillthroughcubetutorial.gif "rs_DrillthroughCubeTutorial")  
    
-이 자습서에 소요되는 예상 시간: 30분  
+이 자습서에 소요되는 예상 시간: 30분.  
   
 ## <a name="requirements"></a>요구 사항  
 이 자습서를 실행하려면 드릴스루 보고서 및 주 보고서 둘 다에서 Contoso Sales 큐브에 액세스할 수 있어야 합니다. 이 데이터 세트는 ContosoDW 데이터 웨어하우스와 Contoso_Retail OLAP(온라인 분석 처리) 데이터베이스로 구성되어 있습니다. 이 자습서에서 만들 보고서는 Contoso Sales 큐브에서 보고서 데이터를 검색합니다. Contoso_Retail OLAP 데이터베이스는 [Microsoft 다운로드 센터](https://www.microsoft.com/download/details.aspx?id=18279)에서 다운로드할 수 있습니다. ContosoBIdemoABF.exe 파일만 다운로드하면 됩니다. 이 파일에 OLAP 데이터베이스가 포함되어 있습니다.  
@@ -120,7 +121,7 @@ ContosoRetail.abf 백업 파일을 추출하여 Contoso_Retail OLAP 데이터베
   
 5.  필터 식 목록에서 **All Channel**을 확장하고, **Online**, **Reseller**를 차례로 클릭한 다음 **확인**을 클릭합니다.  
   
-    이제 쿼리에는 온라인과 대리점 채널만 포함할 필터가 제공됩니다.  
+    이제 쿼리에는 온라인과 재판매인 채널만 포함할 필터가 제공됩니다.  
   
 6.  Sales Territory 차원을 확장한 다음 Sales Territory Group을 **Channel Name** 아래에 있는 **계층**열로 끕니다.  
   
@@ -208,7 +209,7 @@ ContosoRetail.abf 백업 파일을 추출하여 Contoso_Retail OLAP 데이터베
   
 3.  보고서를 미리 보려면 **실행(!)** 을 클릭합니다.  
   
-## <a name="2-format-data-as-currency"></a><a name="DFormat"></a>2. 데이터 서식을 통화로 지정  
+## <a name="2-format-data-as-currency"></a><a name="DFormat"></a>2. 데이터 형식을 통화로 지정  
 드릴스루 보고서의 판매량 필드에 통화 서식을 적용합니다.  
   
 #### <a name="to-format-data-as-currency"></a>데이터 서식을 통화로 지정하려면  
@@ -411,7 +412,7 @@ ContosoRetail.abf 백업 파일을 추출하여 Contoso_Retail OLAP 데이터베
   
 5.  필터 식 목록에서 **All Channel**을 확장하고, **Online** , **Reseller**를 차례로 클릭한 다음 **확인**을 클릭합니다.  
   
-    이제 쿼리에는 온라인과 대리점 채널만 포함할 필터가 제공됩니다.  
+    이제 쿼리에는 온라인과 재판매인 채널만 포함할 필터가 제공됩니다.  
   
 6.  Sales Territory 차원을 확장한 다음 Sales Territory Group을 **Channel Name** 아래에 있는 **계층**열로 끕니다.  
   

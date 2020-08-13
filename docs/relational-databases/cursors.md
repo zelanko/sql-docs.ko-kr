@@ -1,5 +1,5 @@
 ---
-title: 커서 | Microsoft 문서
+title: 커서(SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/11/2020
 ms.prod: sql
@@ -19,14 +19,14 @@ ms.assetid: e668b40c-bd4d-4415-850d-20fc4872ee72
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b8a589358edabaf25e3dfcadf9395e7771a965c5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d4bec8b13cd060801e99e4c6cb842c2b0f38c25e
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733910"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87236202"
 ---
-# <a name="cursors"></a>커서
+# <a name="sql-server-cursors"></a>SQL Server 커서
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
   관계형 데이터베이스에서의 연산은 전체 행 집합에 적용됩니다. 예를 들어 `SELECT` 문에 의해 반환된 행 세트는 명령문의 `WHERE` 절 조건을 만족하는 모든 행으로 구성됩니다. SELECT 문에 의해 반환된 전체 행 집합을 결과 집합이라고 합니다. 애플리케이션, 특히 대화형 온라인 애플리케이션에서는 전체 결과 집합을 한 단위로 사용하므로 항상 효과적으로 작업할 수는 없습니다. 이러한 애플리케이션에는 한 번에 한 행이나 적은 행 블록을 사용하여 작업하는 메커니즘이 필요합니다. 커서는 이러한 메커니즘을 제공하는 결과 집합에 대한 확장입니다.  
   

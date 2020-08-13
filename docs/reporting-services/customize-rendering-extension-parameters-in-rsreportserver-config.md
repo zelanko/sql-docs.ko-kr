@@ -1,5 +1,6 @@
 ---
 title: RSReportServer.Config의 렌더링 확장 프로그램 매개 변수를 사용자 지정 | Microsoft Docs
+description: RSReportServer 구성 파일에서 렌더링 확장 프로그램 매개 변수를 지정하여 Reporting Services 보고서의 기본 보고서 렌더링 동작을 재정의합니다.
 ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3bf7ab2b-70bb-41c8-acda-227994d15aed
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2d5266de3f5fe52a75c1027addd02ca32488c38b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ae82af83d1933e204e405995864c9f17cfe3521a
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65571586"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242493"
 ---
 # <a name="customize-rendering-extension-parameters-in-rsreportserverconfig"></a>RSReportServer.Config의 렌더링 확장 프로그램 매개 변수 사용자 지정
   RSReportServer 구성 파일에서 렌더링 확장 프로그램 매개 변수를 지정하여 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서 서버에서 실행되는 보고서의 기본 보고서 렌더링 동작을 재정의할 수 있습니다. 다음과 같은 목적으로 렌더링 확장 프로그램 매개 변수를 수정할 수 있습니다.  

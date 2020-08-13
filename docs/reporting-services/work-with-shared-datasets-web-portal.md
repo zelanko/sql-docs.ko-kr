@@ -1,5 +1,6 @@
 ---
 title: 공유 데이터 세트 사용(웹 포털) | Microsoft Docs
+description: 웹 포털 내에서 공유 데이터 세트의 속성을 보고 관리합니다. 웹 포털을 사용하여 보고서 작성기에서 공유 데이터 세트를 만들거나 편집합니다.
 ms.date: 07/02/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2641ea84-9343-4e6f-aec1-25339031b163
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e034b911ec5817ac82214466fdc2bf7087e8865a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0d37e617ef7dcb4c63b7d2239881cc6cb96c7c2f
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68222755"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243604"
 ---
 # <a name="work-with-shared-datasets---web-portal"></a>공유 데이터 세트 사용 - 웹 포털
 

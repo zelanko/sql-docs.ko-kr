@@ -1,5 +1,6 @@
 ---
 title: '7단원: 상위 보고서에 드릴스루 작업 추가 | Microsoft Docs'
+description: 웹 사이트 애플리케이션에 ReportViewer 컨트롤을 추가한 후 부모 보고서에 드릴스루 동작을 추가하는 방법을 알아봅니다.
 ms.date: 05/18/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: aad2da1a-d7b1-4afa-a66a-1ff102e8306f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ade2bf3463ca2efc139cfea661dba0a83394f804
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d6a6e588cb79ffbc97450a4ad0a627957dc73b75
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "62651269"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243254"
 ---
 # <a name="lesson-7-add-drillthrough-action-on-parent-report"></a>7단원: 부모 보고서에 드릴스루 동작 추가
 웹 사이트 애플리케이션에 ReportViewer 컨트롤을 추가한 후에는 부모 보고서에 드릴스루 동작을 추가합니다.  

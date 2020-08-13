@@ -1,5 +1,6 @@
 ---
 title: sqlcmd를 사용하여 데이터베이스 엔진에 연결
+description: sqlcmd가 SQL Server와 통신하는 데 사용하는 프로토콜을 선택하는 방법을 알아봅니다. 선택 사항은 다음과 같습니다. TCP/IP, 명명된 파이프 및 공유 메모리.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,15 +19,15 @@ ms.assetid: 74b0fb71-7f8e-4171-9431-d07528532524
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b286c817895cf45c2cdffbb75ef3ccf83fd01ccd
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9b64449cb8e63b4295d86023c60cd51cec50084e
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75243476"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243591"
 ---
 # <a name="sqlcmd---connect-to-the-database-engine"></a>sqlcmd - 데이터베이스 엔진에 연결
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 TCP/IP 네트워크 프로토콜(기본값) 및 명명된 파이프 프로토콜을 통한 클라이언트 통신을 지원합니다. 클라이언트가 동일 컴퓨터의 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에 연결하고 있는 경우 공유 메모리 프로토콜도 사용할 수 있습니다. 일반적으로 프로토콜을 선택하는 방법에는 3가지가 있습니다. **sqlcmd** 유틸리티에서 사용하는 프로토콜은 다음과 같은 순서로 결정됩니다.  
   
 -   **sqlcmd** 는 다음 설명과 같이 연결 문자열의 일부로 지정된 프로토콜을 사용합니다.  

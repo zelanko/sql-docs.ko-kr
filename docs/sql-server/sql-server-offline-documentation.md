@@ -8,17 +8,18 @@ ms.assetid: 51f8a08c-51d0-41d8-8bc5-1cb4d42622fb
 author: markingmyname
 ms.author: maghan
 ms.reviewer: carlrab
-ms.date: 05/08/2020
-ms.openlocfilehash: 5ca11e672e91b8d2b8801838c40057d6b2c8fbfd
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.date: 07/22/2020
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || sql-server-previousversions || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 0d4145832aee94a1786308e21ac425081d4d2a88
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83151541"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87237968"
 ---
 # <a name="install-sql-server-documentation-to-view-offline-in-ssms"></a>SQL Server 설명서를 설치하여 오프라인으로 SSMS에서 보기
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
 이 문서에서는 오프라인 SQL Server 콘텐츠를 다운로드하고 [SSMS(SQL Server Management Studio)](../ssms/download-sql-server-management-studio-ssms.md)에서 보는 방법을 설명합니다. 오프라인 콘텐츠를 사용하면 인터넷에 연결되어 있지 않아도 설명서에 액세스할 수 있습니다(처음에 다운로드할 때는 인터넷 연결이 필요함).
 
@@ -34,7 +35,7 @@ ms.locfileid: "83151541"
 
 1. SSMS의 도움말 메뉴에서 **도움말 콘텐츠 추가 및 제거**를 선택합니다.
 
-   ![도움말 뷰어 콘텐츠 추가 제거](../sql-server/media/sql-server-offline-documentation/add-remove-content.png)
+   ![도움말 콘텐츠 추가 및 제거](../sql-server/media/sql-server-offline-documentation/add-remove-content.png)
 
    도움말 뷰어에서 콘텐츠 관리 탭이 열립니다.
 
@@ -58,11 +59,14 @@ ms.locfileid: "83151541"
 
 ## <a name="sql-server-2014-offline-content"></a>SQL Server 2014 오프라인 콘텐츠
 
+> [!IMPORTANT]
+> SQL 2014 Transact-SQL 콘텐츠는 오프라인에서만 사용할 수 있습니다.
+
 다음 단계에서는 SQL Server 2014에 대한 오프라인 콘텐츠를 로드하는 방법을 설명합니다.
 
 1. 다운로드 센터에서 [방화벽 및 프록시로 제한된 환경의 Microsoft SQL Server 2014 제품 설명서](https://www.microsoft.com/download/details.aspx?id=42557)를 다운로드하여 폴더에 저장합니다.
 
-2. 파일의 압축을 풀어 .msha 파일을 확인합니다.
+2. 파일의 압축을 풀어 *.msha* 파일을 확인합니다.
 
    ![SQL Server 2014 도움말 설명서 설치 파일](../sql-server/media/sql-server-offline-documentation/sql-2014-help-content-setup-msha.png)
 
@@ -97,16 +101,13 @@ ms.locfileid: "83151541"
 
    ![SQL Server 2014 책이 자동으로 업데이트됨](../sql-server/media/sql-server-offline-documentation/sql-2014-content.png)
 
-> [!Tip]
-> SQL 2014 Transact-SQL 콘텐츠는 오프라인에서만 사용할 수 있습니다.
-
 ## <a name="sql-server-2012-offline-content"></a>SQL Server 2012 오프라인 콘텐츠
 
 다음 단계에서는 SQL Server 2012에 대한 오프라인 콘텐츠를 로드하는 방법을 설명합니다.
 
 1. 다운로드 센터에서 [방화벽 및 프록시로 제한된 환경의 Microsoft SQL Server 2012 제품 설명서](https://www.microsoft.com/download/details.aspx?id=35750)를 다운로드하여 폴더에 저장합니다.
 
-2. 파일의 압축을 풀어 .msha 파일을 확인합니다.
+2. 파일의 압축을 풀어 *.msha* 파일을 확인합니다.
 
    ![SQL Server 2012 도움말 콘텐츠 설치 파일](../sql-server/media/sql-server-offline-documentation/sql-2012-help-content-setup-msha.png)
 
@@ -153,7 +154,7 @@ SSMS에서 설치된 도움말을 보려면 도움말 메뉴에서 **도움말 �
 
 도움말 뷰어에서 콘텐츠 관리 탭이 열리고, 왼쪽 창에 설치된 도움말 목차가 표시됩니다. 목차에서 항목을 선택하면 오른쪽 창에 표시됩니다.
 
-> [!TIP]
+> [!Important]
 > 콘텐츠 창이 표시되지 않으면 왼쪽 여백에서 콘텐츠를 선택합니다. 압정 아이콘을 선택하면 콘텐츠 창이 계속 열려 있습니다.  
 
    ![콘텐츠가 포함된 도움말 뷰어](../sql-server/media/sql-server-offline-documentation/view-offline-all.png)
@@ -170,7 +171,7 @@ SSMS에서 설치된 도움말을 보려면 도움말 메뉴에서 **도움말 �
 
 보관된 콘텐츠 및 도움말 뷰어에 대한 자세한 내용을 보려면 아래 링크를 참조하세요.
 
-- [SQL Server 설명서](../sql-server/index.yml?view=sql-server-2016)
-- [SQL Server 2014 설명서](../2014/database-engine/install-windows/installation-for-sql-server.md)
-- [이전 버전 SQL Server 설명서](https://docs.microsoft.com/previous-versions/sql/)
+- [SQL Server 온라인 설명서](../sql-server/index.yml?view=sql-server-2016)
+- [SQL Server 2014 온라인 설명서](/sql/2014-toc/)
+- [이전 버전 SQL Server 온라인 설명서](previous-versions-sql-server.md)
 - [SQL 버전 관리 시스템 설명서](../sql-server/versioning-system-monikers-ui-sql-server.md?view=sql-server-2016)

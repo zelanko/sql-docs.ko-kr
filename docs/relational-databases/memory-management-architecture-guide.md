@@ -15,12 +15,12 @@ ms.assetid: 7b0d0988-a3d8-4c25-a276-c1bdba80d6d5
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 12dc8a03cbf65a0c07e9a5985f1ffade813a3e5f
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 4681cdb7dbca293501902caec456a3e08eac5ba7
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012146"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243712"
 ---
 # <a name="memory-management-architecture-guide"></a>메모리 관리 아키텍처 가이드
 
@@ -55,7 +55,7 @@ AWE와 Lock Pages in Memory 권한을 사용하면 [!INCLUDE[ssNoVersion](../inc
 > [!NOTE]
 > 다음 표에는 더 이상 사용할 수 없는 32비트 버전의 열이 나와 있습니다.
 
-| |32비트 <sup>1</sup> |64비트|
+|메모리 정책|32비트 <sup>1</sup> |64비트|
 |-------|-------|-------| 
 |기본 메모리 |모든 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 버전 프로세스 가상 주소 공간 제한까지 허용됩니다. <br>- 2GB<br>- 3 GB /3gb 부팅 매개 변수를 사용하면 3GB <sup>2</sup> <br>- WOW64에서는 4GB <sup>3</sup> |모든 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 버전 프로세스 가상 주소 공간 제한까지 허용됩니다. <br>- IA64 아키텍처에서는 7TB(IA64는 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 이상에서 지원되지 않음)<br>- 최대 x64 아키텍처의 운영 체제가 지원하는 최대 크기 <sup>4</sup>
 |AWE 메커니즘( [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에서 32비트 플랫폼의 프로세스 가상 주소 공간 제한을 초과할 수 있도록 허용) |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard, Enterprise 및 Developer 버전: 버퍼 풀이 최대 64GB의 메모리에 액세스할 수 있습니다.|해당 사항 없음 <sup>5</sup> |
@@ -93,9 +93,9 @@ AWE와 Lock Pages in Memory 권한을 사용하면 [!INCLUDE[ssNoVersion](../inc
 |-------|-------|-------|
 |단일 페이지 할당|예|예, "임의 크기" 페이지 할당에 통합됨|
 |다중 페이지 할당|예|예, "임의 크기" 페이지 할당에 통합됨|
-|CLR 할당|예|예|
-|스레드 스택 메모리|예|예|
-|Windows에서 직접 할당|예|예|
+|CLR 할당|아니요|예|
+|스레드 스택 메모리|예|아니요|
+|Windows에서 직접 할당|예|아니요|
 
 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]부터 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 max server memory 설정에 지정된 값보다 많은 메모리를 할당할 수 있습니다. 이 동작은 **_Total Server Memory (KB)_** 값이 이미 max server memory에 지정된 **_Target Server Memory (KB)_** 설정에 도달했을 때 발생할 수 있습니다. 메모리 조각화로 인해 다중 페이지 메모리 요청(8KB 이상)의 요구를 충족시키기에 연속 여유 메모리가 충분하지 않은 경우 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]은 메모리 요청을 거부하는 대신 과도한 커밋을 수행할 수 있습니다. 
 
@@ -121,7 +121,7 @@ AWE와 Lock Pages in Memory 권한을 사용하면 [!INCLUDE[ssNoVersion](../inc
 |-------|-------|-------|
 |단일 페이지 할당|예|아니요, "임의 크기" 페이지 할당에 통합됨|
 |다중 페이지 할당|예|아니요, "임의 크기" 페이지 할당에 통합됨|
-|CLR 할당|예|예|
+|CLR 할당|예|yes|
 |스레드 스택 메모리|예|예|
 |Windows에서 직접 할당|예|예|
 

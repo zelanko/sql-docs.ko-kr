@@ -1,5 +1,6 @@
 ---
 title: '1단원: 샘플 구독자 데이터베이스 만들기 | Microsoft Docs'
+description: 소규모 "구독자" 데이터베이스를 만들어 데이터 기반 구독에서 사용할 구독 데이터를 저장하는 방법을 알아봅니다.
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 47a882b7-efe5-4ee6-bef4-06118eb56903
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2aa2fefb5df874b08a34c4a7091d450afdfd4828
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a62e0e1c47cd6df4d2d5e4f28b35294af694a824
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "62513165"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243274"
 ---
 # <a name="lesson-1-creating-a-sample-subscriber-database"></a>1단원: 샘플 구독자 데이터베이스 만들기
 
@@ -55,14 +56,14 @@ ms.locfileid: "62513165"
     GO  
     ```  
   
-7.  **! 실행** 을 도구 모음에서 클릭합니다.  
+7.  **! 실행**을 도구 모음에서 클릭합니다.  
   
 8.  SELECT 문을 사용하여 세 개의 데이터 행이 있는지 확인합니다. 예: `select * from OrderInfo`  
   
 ## <a name="next-steps"></a>다음 단계  
 + 보고서 배포를 추진하고 구독자마다 보고서 출력을 다르게 할 구독 데이터를 만들었습니다. 
 + 다음에는 저장된 자격 증명을 사용하도록 보고서의 데이터 원본 속성을 수정합니다. 
-+ 또한 구독에서 구독자 데이터와 함께 사용할 매개 변수를 포함하도록 보고서 디자인을 수정합니다. [2단원: 보고서 데이터 원본 속성 수정](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md).  
++ 또한 구독에서 구독자 데이터와 함께 사용할 매개 변수를 포함하도록 보고서 디자인을 수정합니다. [2단원: 보고서 데이터 원본 속성 수정](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md)을 참조하세요.  
 
 ## <a name="next-steps"></a>다음 단계
 

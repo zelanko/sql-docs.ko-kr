@@ -1,7 +1,8 @@
 ---
 title: Windows 방화벽 구성
+description: SQL Server 인스턴스에 방화벽을 통해 액세스할 수 있도록 Windows 방화벽을 구성하는 방법을 알아봅니다.
 ms.custom: seo-lt-2019
-ms.date: 12/13/2019
+ms.date: 07/22/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -20,17 +21,17 @@ helpviewer_keywords:
 - ports [SQL Server], TCP
 - netsh to open firewall ports
 ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: f2e73d6acd17e3a77802ecde712a2e18c7d66846
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: dce5cf7e83be47bda2bcfef17b4602eb5f2fb49e
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81528877"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87238513"
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 방화벽 시스템은 컴퓨터 리소스에 대한 무단 액세스를 방지합니다. 방화벽을 설정하고 올바르게 구성하지 않으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 대한 연결 시도가 차단될 수 있습니다.  
   
@@ -182,7 +183,7 @@ ms.locfileid: "81528877"
 |-------------|----------|--------------|  
 |[!INCLUDE[msCoName](../../includes/msconame-md.md)] 원격 프로시저 호출(MS RPC)<br /><br /> [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 런타임에 사용됩니다.|TCP 포트 135<br /><br /> [포트 135에 대한 특별 고려 사항](#BKMK_port_135)을 참조하세요.|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스는 포트 135에서 DCOM을 사용합니다. 서비스 제어 관리자는 포트 135를 사용하여 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스 시작 및 중지, 실행 중인 서비스에 대한 제어 요청 전송과 같은 태스크를 수행합니다. 포트 번호는 변경할 수 없습니다.<br /><br /> 이 포트는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 또는 사용자 지정 애플리케이션에서 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 서비스의 원격 인스턴스에 연결하는 경우에만 열면 됩니다.|  
   
-[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에 대해 Windows 방화벽을 구성하는 단계별 지침은 [Integration Services 서비스&#40;SSIS 서비스&#41;](../../integration-services/service/configure-a-windows-firewall-for-access-to-the-ssis-service.md?view=sql-server-2014)를 참조하세요.  
+[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에 대해 Windows 방화벽을 구성하는 단계별 지침은 [Integration Services 서비스&#40;SSIS 서비스&#41;](/previous-versions/sql/sql-server-2012/ms137861(v=sql.110))를 참조하세요.  
   
 ###  <a name="additional-ports-and-services"></a><a name="BKMK_additional_ports"></a> 추가 포트 및 서비스  
 다음 표에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 사용할 수 있는 포트 및 서비스를 보여 줍니다.  

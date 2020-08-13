@@ -15,15 +15,15 @@ helpviewer_keywords:
 - BLOBs, fetching
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 513da9e05794e2f0ba2ace396c481faa4c36160a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 80d7a8ccce0a0713c9dc2cb2dbbd4914fd391e96
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67994203"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87244214"
 ---
-# <a name="fetching-blob-data-using-irowgetcolumns-and-isequentialstream"></a>IRow::GetColumns 및 ISequentialStream을 사용하여 BLOB 데이터 인출
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+# <a name="fetching-blob-data-by-using-irowgetcolumns-and-isequentialstream"></a>IRow::GetColumns 및 ISequentialStream을 사용하여 BLOB 데이터 인출
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

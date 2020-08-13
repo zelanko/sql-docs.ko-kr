@@ -1,5 +1,5 @@
 ---
-title: IRow::GetColumns를 사용하여 열 페치(OLE DB) | Microsoft Docs
+title: IRow::GetColumns를 사용하여 열 페치(OLE DB 드라이버) | Microsoft Docs
 description: IRow::GetColumns를 사용하여 열 인출(OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -12,21 +12,21 @@ helpviewer_keywords:
 - IRow interface
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 336b5b12eaf0744afd63510ce287edbb5439c3ca
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d2ca2ba9284c0e1fca7eef3f6b8911111c4559f6
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68015585"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87244803"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-ole-db"></a>IRow::GetColumns를 사용하여 열 인출(OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   **IRow** 인터페이스를 사용하여 결과 집합에 있는 단일 행의 열에 직접 액세스할 수 있습니다. 따라서 **IRow**는 행이 한 개인 결과 집합에서 열을 검색하는 데 효과적입니다.  
   
- **IRow**를 사용하여 단일 행을 인출하는 방법을 보여 주는 코드 예제가 있습니다. 이 예제에서는 행에서 한 번에 한 개의 열이 검색됩니다. 이 예제에서는 다음 작업을 수행하는 방법을 보여 줍니다.  
+ **IRow**를 사용하여 단일 행을 페치하는 방법을 보여 주는 코드 예제가 있습니다. 이 예제에서는 행에서 한 번에 한 개의 열이 검색됩니다. 이 예제에서는 다음 작업을 수행하는 방법을 보여 줍니다.  
   
 -   열 그룹을 순서대로 인출하는 방법  
   

@@ -1,5 +1,6 @@
 ---
 title: XML 편집기(SQL Server Management Studio)
+description: SQL Server Management Studio XML 편집기의 시각적 도구를 사용하여 XSD(XML 스키마), ADO.NET 데이터 세트 및 XML 문서에 대한 작업을 수행하는 방법을 알아봅니다.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,15 +18,15 @@ ms.assetid: 0824a5ce-e67b-4b53-98d9-d371faf2d23c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d9b62b35ee3819edcbfcc0fc41f8fa22747d966b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 528293a500c391fa2d7efbcd9fe8a35f6a797f23
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75252926"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87237073"
 ---
 # <a name="xml-editor-sql-server-management-studio"></a>XML 편집기(SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   XML 스키마, ADO.NET 데이터 세트 및 XML 문서 작업에 사용할 수 있는 다양한 시각적 도구를 제공합니다. XML 디자이너는 WC3(World Wide Web Consortium)에서 정의한 XSD(XML 스키마 정의) 언어를 지원합니다. DTD(문서 유형 정의)나 XDR(XML-Data Reduced)와 같은 다른 XML 스키마 언어는 지원하지 않습니다.  
   
  디자이너를 표시하려면 데이터 세트, XML 스키마 또는 XML 파일을 프로젝트에 추가하거나 아래 표에 나오는 파일 형식을 여십시오.  
@@ -35,7 +36,7 @@ ms.locfileid: "75252926"
   
  XML 디자이너는 XML 파일, XML 스키마 및 데이터 세트 작업에 다음 세 가지 뷰(또는 모드)를 제공합니다.  
   
-|보기|Description|지원되는 파일 형식|  
+|View|설명|지원되는 파일 형식|  
 |----------|-----------------|--------------------------|  
 |**스키마**|XML 스키마 및 ADO.NET 데이터 세트를 시각적으로 만들고 수정할 때 사용합니다.|.xsd|  
 |**Data**|구조화된 데이터 표에서 XML 데이터 파일을 시각적으로 수정할 때 사용|.xml|  
@@ -82,7 +83,7 @@ ms.locfileid: "75252926"
 ## <a name="data-view"></a>데이터 뷰  
  데이터 뷰는 .xml 파일을 수정하는 데 사용할 수 있는 데이터 표를 제공합니다. 데이터 뷰에서는 XML 파일의 내용만 편집할 수 있으며 태그와 구조는 편집할 수 없습니다.  
   
- 데이터 뷰에는 **데이터 테이블** 및 **데이터**의 두 가지 별도 영역이 있습니다. **데이터 테이블** 영역은 XML 파일에 정의되어 있는 관계를 중첩된 순서(바깥쪽에서부터 안쪽으로)대로 보여 주는 목록입니다. **데이터** 영역은 데이터 테이블 영역에서 선택한 내용에 따라 해당 데이터를 표시하는 데이터 표입니다.  
+ 데이터 뷰에는 **데이터 테이블**과 **데이터**의 두 가지 영역이 있습니다. **데이터 테이블** 영역은 XML 파일에 정의되어 있는 관계를 중첩된 순서(바깥쪽에서부터 안쪽으로)대로 보여 주는 목록입니다. **데이터** 영역은 데이터 테이블 영역에서 선택한 내용에 따라 해당 데이터를 표시하는 데이터 표입니다.  
   
 > [!NOTE]  
 >  새로 만든 XML 파일에는 데이터가 들어 있지 않으므로 데이터 뷰에서 표시할 수 없습니다. 이외에도 일부 XML 문서에서는 데이터 뷰를 실행할 수 없습니다. XML의 형식이 올바르더라도 구조화된 데이터가 아닌 경우 데이터 뷰로 전환하려고 하면 "이 XML 문서는 형식이 올바르지만 데이터 뷰에서 표시할 수 없는 구조를 포함하고 있습니다"라는 메시지가 표시됩니다.  

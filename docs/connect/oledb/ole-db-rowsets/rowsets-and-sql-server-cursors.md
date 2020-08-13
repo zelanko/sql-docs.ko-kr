@@ -1,5 +1,5 @@
 ---
-title: 행 집합 및 SQL Server 커서 | Microsoft Docs
+title: 행 집합 및 SQL Server 커서(OLE DB 드라이버)
 description: 행 집합 및 SQL Server 커서
 ms.custom: ''
 ms.date: 06/14/2018
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - cursors [OLE DB]
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 9ba062c9718203c52659dd0c35fa7bcb76b1a40c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4c87699f389d487354b562fafa8cfab378c2ff0d
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67994181"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87244158"
 ---
 # <a name="rowsets-and-sql-server-cursors"></a>행 집합 및 SQL Server 커서
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -77,7 +77,7 @@ ms.locfileid: "67994181"
 |DBPROP_IMMOBILEROWS|VARIANT_FALSE|행 집합을 통해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터를 업데이트할 수 없습니다. 행 집합은 정방향 스크롤만 지원합니다. 상대적인 행 위치 지정은 지원됩니다. 참조된 열에 인덱스가 있으면 명령 텍스트에 ORDER BY 절이 포함될 수 있습니다.<br /><br /> DBPROP_IMMOBILEROWS는 다른 세션의 명령이나 다른 사용자에 의해 삽입된 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 행을 표시할 수 있는 행 집합에서만 사용할 수 있습니다. DBPROP_OTHERINSERT가 VARIANT_TRUE일 수 없는 행 집합에서 속성이 VARIANT_FALSE로 설정된 행 집합을 열려고 하면 오류가 발생합니다.|  
 |DBPROP_REMOVEDELETED|VARIANT_TRUE|행 집합을 통해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터를 업데이트할 수 없습니다. 행 집합은 정방향 스크롤만 지원합니다. 상대적인 행 위치 지정은 지원됩니다. 다른 속성으로 제한되지 않은 경우 명령 텍스트에 ORDER BY 절이 포함될 수 있습니다.|  
   
- **IOpenRowset::OpenRowset** 메서드를 사용하면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 기본 테이블이나 뷰에서 서버 커서가 지원하는 SQL Server용 OLE DB 드라이버 행 집합을 쉽게 만들 수 있습니다. *rgPropertySets* 매개 변수에 필요한 행 집합 속성 세트를 전달하여 이름으로 테이블이나 뷰를 지정합니다.  
+ **IOpenRowset::OpenRowset** 메서드를 사용하면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 기본 테이블이나 뷰에서 서버 커서가 지원하는 OLE DB Driver for SQL Server 행 집합을 쉽게 만들 수 있습니다. *rgPropertySets* 매개 변수에 필요한 행 집합 속성 세트를 전달하여 이름으로 테이블이나 뷰를 지정합니다.  
   
  행 집합이 서버 커서에서 지원되도록 소비자가 요구하는 경우 행 집합을 만드는 명령 텍스트가 제한됩니다. 구체적으로, 명령 텍스트는 단일 행 집합 결과를 반환하는 단일 SELECT 문이나 단일 행 집합 결과를 반환하는 단일 SELECT 문을 구현하는 저장 프로시저로 제한됩니다.  
   
@@ -145,10 +145,10 @@ ms.locfileid: "67994181"
   
  특정 행 집합 속성 집합의 경우 선택되는 커서 모델은 다음과 같이 결정됩니다.  
   
- 지정한 행 집합 속성 컬렉션에서 앞의 표에 나열된 속성의 하위 집합을 가져옵니다. 각 행 집합 속성의 플래그 값(필수(T, F) 또는 옵션(-))에 따라 이러한 속성을 두 개의 하위 그룹으로 나눕니다. 각 커서 모델에 대해 첫 번째 표에서 시작하여 왼쪽에서 오른쪽으로 이동합니다. 두 하위 그룹의 속성 값을 이 열의 해당 속성 값과 비교합니다. 필수 속성과 불일치하는 항목이 없고 옵션 속성과 불일치하는 항목 수가 최소인 커서 모델이 선택됩니다. 커서 모델이 두 개 이상 있으면 가장 왼쪽의 항목이 선택됩니다.  
+ 지정한 행 집합 속성 컬렉션에서 앞의 표에 나열된 속성의 하위 집합을 가져옵니다. 각 행 집합 속성의 플래그 값(필수(T, F) 또는 옵션(-))에 따라 이러한 속성을 두 개의 하위 그룹으로 나눕니다. 각 커서 모델에 대해 첫 번째 테이블에서 시작하여 왼쪽에서 오른쪽으로 이동합니다. 두 하위 그룹의 속성 값을 해당 열의 해당 속성 값과 비교합니다. 필수 속성과 불일치하는 항목이 없고 옵션 속성과 불일치하는 항목 수가 최소인 커서 모델이 선택됩니다. 커서 모델이 두 개 이상 있으면 가장 왼쪽의 항목이 선택됩니다.  
   
 ## <a name="sql-server-cursor-block-size"></a>SQL Server 커서 블록 크기  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 커서가 SQL Server용 OLE DB 드라이버 행 집합을 지원하는 경우 **IRowset::GetNextRows** 또는 **IRowsetLocate::GetRowsAt** 메서드의 행 핸들 배열 매개 변수에 있는 요소 수에 따라 커서 블록 크기가 결정됩니다. 배열의 핸들로 표시된 행이 커서 블록의 멤버입니다.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 커서가 OLE DB Driver for SQL Server 행 집합을 지원하는 경우 **IRowset::GetNextRows** 또는 **IRowsetLocate::GetRowsAt** 메서드의 행 핸들 배열 매개 변수에 있는 요소 수에 따라 커서 블록 크기가 결정됩니다. 배열의 핸들로 표시된 행이 커서 블록의 멤버입니다.  
   
  책갈피를 지원하는 행 집합의 경우 **IRowsetLocate::GetRowsByBookmark** 메서드를 사용하여 검색된 행 핸들이 커서 블록의 멤버를 정의합니다.  
   

@@ -1,5 +1,5 @@
 ---
-title: OLE DB 데이터 원본 열거(OLE DB) | Microsoft Docs
+title: OLE DB 데이터 원본 열거(OLE DB 드라이버) | Microsoft Docs
 description: MSOLEDBSQL 열거자를 사용하여 OLE DB 데이터 원본 열거
 ms.custom: ''
 ms.date: 06/14/2018
@@ -12,15 +12,15 @@ helpviewer_keywords:
 - data sources [OLE DB]
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: b9e14ef426a07705c51c0aa77c908dd1c2b8bbcf
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 33006af4eee9d97566144e66c984d55cabd5765d
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67994823"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87244816"
 ---
 # <a name="enumerate-ole-db-data-sources-ole-db"></a>OLE DB 데이터 원본 열거(OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

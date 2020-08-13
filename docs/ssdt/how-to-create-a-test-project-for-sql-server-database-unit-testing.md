@@ -1,21 +1,21 @@
 ---
 title: SQL Server 데이터베이스 단위 테스트용 테스트 프로젝트 만들기
+description: SQL Server 데이터베이스 단위 테스트용 테스트 프로젝트를 만드는 방법을 알아봅니다. 데이터베이스 프로젝트를 포함하는 솔루션에 테스트 프로젝트를 추가하는 다양한 방법을 살펴봅니다.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 4b3e7ba8-b565-4689-af1a-34cc255b7c60
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: fe6b8e2e70a20041f394afa5cad1d800535559d1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4ff3cb815dcd27f72ea96296935484ec0cc15ea0
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241522"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243534"
 ---
 # <a name="how-to-create-a-test-project-for-sql-server-database-unit-testing"></a>방법: SQL Server 데이터베이스 단위 테스트용 테스트 프로젝트 만들기
 
@@ -23,9 +23,8 @@ ms.locfileid: "75241522"
   
 지정된 데이터베이스 프로젝트에 대한 모든 SQL Server 단위 테스트를 단일 테스트 프로젝트 내에 둘 수 있습니다. 하지만 다음 질문의 답변에 따라 추가 테스트 프로젝트를 만들 수도 있습니다.  
   
-|||  
-|-|-|  
-|**질문**|**결정**|  
+|질문|의사 결정|  
+|-|-|   
 |테스트 실행 또는 테스트 유효성 검사를 위해 서로 다른 SQL Server 단위 테스트로 서로 다른 데이터베이스 연결에 액세스해야 합니까?|예인 경우, 두 개 이상의 테스트 프로젝트가 필요합니다. 테스트 실행에 대해서는 두 개 이상의 데이터베이스 연결을 지정할 수 없습니다. 하지만 테스트 유효성 검사를 위해서는 다른 데이터베이스 연결을 지정할 수 있습니다.|  
 |서로 다른 단위 테스트에 대해 서로 다른 데이터베이스 프로젝트를 배포해야 합니까?|예인 경우, 두 개 이상의 테스트 프로젝트가 필요합니다. 테스트 프로젝트에서는 데이터베이스 프로젝트를 하나만 배포할 수 있습니다.|  
   

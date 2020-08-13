@@ -1,5 +1,6 @@
 ---
 title: '8단원: 데이터 필터 만들기 | Microsoft Docs'
+description: 자식 보고서에 정의한 데이터 테이블에 대한 데이터 필터를 만드는 방법을 알아봅니다. 드릴스루 보고서에 대한 테이블 기반 필터 또는 쿼리 필터를 만듭니다.
 ms.date: 05/18/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 19ccbdba-e3da-40a4-b652-32c628cf32e5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 991610dacf7a13a467a3058f2bdbcfcc454ee71e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d64d2557945bc7fdd7b602652e23d52c0a052da7
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "62512395"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243244"
 ---
 # <a name="lesson-8-create-a-data-filter"></a>8단원: 데이터 필터 만들기
 부모 보고서에 드릴스루 동작을 추가한 후에는 자식 보고서에 대해 정의한 데이터 테이블에 대한 데이터 필터를 만듭니다.  
@@ -41,7 +42,7 @@ ms.locfileid: "62512395"
   
 5.  **=** 연산자 **드롭다운 목록에서 같음 연산자(** )를 선택합니다.  
   
-6.  **값** 필드 옆의 식 단추를 선택하고 **범주** 영역에서 **매개 변수** 를 선택한 다음 **값** 영역에서 **productid** 를 두 번 클릭합니다. 이제 **다음에 대한 식 설정: 값** 필드에 **=Parameters!productid.Value**와 비슷한 식이 포함됩니다.  
+6.  **값** 필드 옆의 식 단추를 선택하고 **범주** 영역에서 **매개 변수** 를 선택한 다음 **값** 영역에서 **productid** 를 두 번 클릭합니다. 이제 **다음에 대한 식 설정: 값** 필드에 **=Parameters!productid.Value**와 비슷한 식이 포함되어 있어야 합니다.  
   
 7.  **확인** 을 선택하고 **테이블릭스 속성** 대화 상자에서 **확인** 을 다시 선택합니다.  
   
@@ -165,7 +166,7 @@ ms.locfileid: "62512395"
   
     1.  **4단원: 자식 보고서에 대한 데이터 연결 및 데이터 테이블 정의**의 2단계에서 만든 데이터 세트([DataSet2](../reporting-services/lesson-4-define-a-data-connection-and-data-table-for-child-report.md))의인스턴스를 만듭니다.  
   
-    2.  SqlServer 데이터베이스에 대한 연결을 만들어 **4단원: 자식 보고서에 대한 데이터 연결 및 데이터 테이블 정의**에서 정의된 쿼리를 실행합니다.  
+    2.  SqlServer 데이터베이스에 대한 연결을 만들어 **4단원: 자식 보고서에 대한 데이터 연결 및 DataTable 정의**에서 정의한 쿼리를 실행합니다.  
   
     3.  쿼리에는 반환된 데이터가 부모 보고서에서 선택한 **ProductID**를 기반으로 필터링되어 있는지 확인하는 **productid** 매개 변수가 포함됩니다.  
   

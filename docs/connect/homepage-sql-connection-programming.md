@@ -10,12 +10,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.reviewer: v-daveng
 ms.author: v-daenge
-ms.openlocfilehash: c3f2b6db58879a8d0fd3ce82a89511275fe9d3bb
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.openlocfilehash: 19dafa831f6763c5c2da5b54f14326db38372be4
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81529047"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243415"
 ---
 # <a name="homepage-for-client-programming-to-microsoft-sql-server"></a>Microsoft SQL Server로의 클라이언트 프로그래밍 홈페이지
 
@@ -51,13 +51,27 @@ Azure SQL Database에 연결하기 위한 연결 문자열에 대한 자세한 �
 
 다음 표에서 각 언어 이미지는 SQL Server에서 언어를 사용하는 방법에 대한 세부 정보 링크입니다. 각 링크는 이 문서의 이후 섹션으로 이동합니다.
 
-| &nbsp; | &nbsp; | &nbsp; |
-| :-- | :-- | :-- |
-| &nbsp; [![C# 로고][image-ref-320-csharp]](#an-110-ado-net-docu) | &nbsp; [![.NET Framework의 ORM Entity Framework][image-ref-333-ef]](#an-116-csharp-ef-orm) | &nbsp; [![Java 로고][image-ref-330-java]](#an-130-jdbc-docu) |
-| &nbsp; [![Node.js 로고][image-ref-340-node]](#an-140-node-js-docu) | &nbsp; [ **`ODBC for C++`** ](#an-160-odbc-cpp-docu)<br/>[![cpp-big-plus][image-ref-322-cpp]](#an-160-odbc-cpp-docu) | &nbsp; [![PHP 로고][image-ref-360-php]](#an-170-php-docu) |
-| &nbsp;[![Python 로고][image-ref-370-python]](#an-180-python-docu) | &nbsp; [![Ruby 로고][image-ref-380-ruby]](#an-190-ruby-docu) | &nbsp; ... |
-| &nbsp; | &nbsp; | <br />|
+:::row:::
+    :::column:::
+        [![C# 로고][image-ref-320-csharp]](#an-110-ado-net-docu)  
 
+        [![Node.js 로고][image-ref-340-node]](#an-140-node-js-docu)  
+
+        [![Python 로고][image-ref-370-python]](#an-180-python-docu)  
+    :::column-end:::
+    :::column:::
+        [![.NET Framework의 ORM Entity Framework][image-ref-333-ef]](#an-116-csharp-ef-orm)  
+
+        [**`ODBC for C++`**](#an-160-odbc-cpp-docu)<br/>[![cpp-big-plus][image-ref-322-cpp]](#an-160-odbc-cpp-docu)  
+
+        [![Ruby 로고][image-ref-380-ruby]](#an-190-ruby-docu)  
+    :::column-end:::
+    :::column:::
+        [![Java 로고][image-ref-330-java]](#an-130-jdbc-docu)  
+
+        [![PHP 로고][image-ref-360-php]](#an-170-php-docu)  
+    :::column-end:::
+:::row-end:::
 
 #### <a name="downloads-and-installs"></a>다운로드 및 설치
 
@@ -75,7 +89,7 @@ C# 및 Visual Basic 같은 .NET 관리 언어는 가장 일반적인 ADO.NET 사
 
 #### <a name="code-examples"></a>코드 예제
 
-|||
+| 예제 | Description |
 | :-- | :-- |
 | [ADO.NET을 사용하여 SQL에 연결하는 개념 증명](./ado-net/step-3-connect-sql-ado-net.md) | SQL Server에 연결하고 쿼리하는 데 초점을 맞춘 소형 코드 예제입니다. |
 | [ADO.NET을 사용하여 탄력적으로 SQL에 연결](./ado-net/step-4-connect-resiliently-sql-ado-net.md) | 재시도 논리 코드 예제입니다(연결에서 간헐적으로 연결 손실이 발생할 수 있기 때문).<br /><br />재시도 논리는 인터넷을 통해 유지되는 클라우드 데이터베이스(예: Azure SQL Database) 쪽 연결에 잘 적용됩니다. |
@@ -85,7 +99,7 @@ C# 및 Visual Basic 같은 .NET 관리 언어는 가장 일반적인 ADO.NET 사
 
 #### <a name="documentation"></a>문서화
 
-|||
+| 영역 | 설명 |
 | :-- | :-- |
 | [ADO.NET 사용 C# ](./ado-net/index.md)| 설명서의 루트입니다. |
 | [네임스페이스: System.Data](https://docs.microsoft.com/dotnet/api/system.data) | ADO.NET에 사용되는 클래스 집합입니다. |
@@ -116,7 +130,7 @@ EF는 다음 기술과 직접 또는 간접적인 관계가 있습니다.
 
 *Entity Framework*는 두 개의 개별 소스 코드 분기에서 공유하는 이름입니다. 한 분기는 최초 EF이며, 이제 소스 코드가 공개적으로 유지 관리됩니다. 다른 분기는 새로운 EF입니다. 두 EF에 대해서는 다음에 설명되어 있습니다.
 
-|     |     |
+| 버전 | Description |
 | :-- | :-- |
 | [EF 6.x](https://docs.microsoft.com/ef/ef6/) | Microsoft는 2008년 8월 EF를 최초로 발표했습니다. 2015년 3월에는 Microsoft가 개발한 최종 버전인 EF 6.x가 발표되었습니다. Microsoft는 퍼블릭 도메인에 소스 코드를 릴리스했습니다.<br /><br />초기에는 EF가 .NET Framework의 일부였습니다. 그러나 EF 6.x는 .NET Framework에서 제거되었습니다.<br /><br />[GitHub의 EF 6.x에서 소스 코드, 리포지토리: *aspnet/EntityFramework6*](https://github.com/aspnet/EntityFramework6) |
 | [EF Core](https://docs.microsoft.com/ef/core/) | Microsoft는 2016년 6월에 새로 개발된 EF Core를 출시했습니다. EF Core는 향상된 유연성 및 이식성을 제공하도록 설계되었습니다. EF Core는 Microsoft Windows 이외의 운영 체제에서도 실행할 수 있습니다. 또한 EF Core는 Microsoft SQL Server 및 기타 관계형 데이터베이스 이외의 데이터베이스와도 상호 작용할 수 있습니다.<br /><br />**C&#x23; 코드 예제:**<br />[Entity Framework Core 시작하기](https://docs.microsoft.com/ef/core/get-started/index)<br />[기존 데이터베이스를 사용하여 .NET Framework의 EF Core 시작하기](https://docs.microsoft.com/ef/core/get-started/full-dotnet/existing-db) |
@@ -136,7 +150,7 @@ Microsoft는 SQL Server(또는 Azure SQL Database)와 함께 사용할 JDBC(Java
 
 #### <a name="code-examples"></a>코드 예제
 
-|||
+| 예제 | Description |
 | :-- | :-- |
 | [코드 예제](./jdbc/code-samples/index.md) | 데이터 형식, 결과 집합 및 대량 데이터에 대해 학습하는 코드 예제입니다. |
 | [연결 URL 샘플](./jdbc/connection-url-sample.md) | 연결 URL을 사용하여 SQL Server에 연결하는 방법을 설명합니다. 그런 다음 이를 통해 SQL 문을 사용하여 데이터를 검색합니다. |
@@ -149,7 +163,7 @@ Microsoft는 SQL Server(또는 Azure SQL Database)와 함께 사용할 JDBC(Java
 
 JDBC 설명서에는 다음과 같은 주요 영역이 포함되어 있습니다.
 
-|||
+| 영역 | 설명 |
 | :-- | :-- |
 | [Java Database Connectivity(JDBC)](./jdbc/index.md) | JDBC 설명서의 루트입니다. |
 | [참조](./jdbc/reference/index.md) | 인터페이스, 클래스 및 멤버입니다. |
@@ -168,7 +182,7 @@ SQL Server용 Node.js 연결 드라이버는 JavaScript에서 구현됩니다. �
 
 #### <a name="code-examples"></a>코드 예제
 
-|||
+| 예제 | Description |
 | :-- | :-- |
 | [Node.js를 사용하여 SQL에 연결하는 개념 증명](./node-js/step-3-proof-of-concept-connecting-to-sql-using-node-js.md) | SQL Server에 연결하고 쿼리를 실행하기 위한 기본 기능 소스 코드입니다. |
 | [Azure SQL Database: Node.js를 사용하여 쿼리](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-nodejs) | 클라우드 기반 Azure SQL Database의 예제입니다. |
@@ -223,7 +237,7 @@ PHP를 사용하여 SQL Server와 상호 작용할 수 있습니다. PHP 설명�
 
 #### <a name="code-examples"></a>코드 예제
 
-|||
+| 예제 | Description |
 | :-- | :-- |
 | [PHP를 사용하여 SQL에 연결하는 개념 증명](./php/step-3-proof-of-concept-connecting-to-sql-using-php.md) | SQL Server에 연결하고 쿼리하는 데 초점을 맞춘 소형 코드 예제입니다. |
 | [PHP를 사용하여 탄력적으로 SQL에 연결](./php/step-4-connect-resiliently-to-sql-with-php.md) | 재시도 논리 코드 예제입니다(인터넷 및 클라우드를 통한 연결에서 간헐적으로 연결 손실이 발생할 수 있기 때문). |
@@ -242,7 +256,7 @@ Python을 사용하여 SQL Server와 상호 작용할 수 있습니다.
 
 #### <a name="code-examples"></a>코드 예제
 
-|||
+| 예제 | Description |
 | :-- | :-- |
 | [Python - pyodbc를 사용하여 SQL에 연결하는 개념 증명](./python/pyodbc/step-3-proof-of-concept-connecting-to-sql-using-pyodbc.md) | SQL Server에 연결하고 쿼리하는 데 초점을 맞춘 소형 코드 예제입니다. |
 | [Azure SQL Database: Python을 사용하여 쿼리](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-python) | Azure SQL Database 예제입니다. |
@@ -267,7 +281,7 @@ Ruby를 사용하여 SQL Server와 상호 작용할 수 있습니다. Ruby 설�
 
 #### <a name="code-examples"></a>코드 예제
 
-|||
+| 예제 | Description |
 | :-- | :-- |
 | [Ruby를 사용하여 SQL에 연결하는 개념 증명](./ruby/step-3-proof-of-concept-connecting-to-sql-using-ruby.md) | SQL Server에 연결하고 쿼리하는 데 초점을 맞춘 소형 코드 예제입니다. |
 | [Azure SQL Database: Ruby를 사용하여 쿼리](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-ruby) | Azure SQL Database 예제입니다. |

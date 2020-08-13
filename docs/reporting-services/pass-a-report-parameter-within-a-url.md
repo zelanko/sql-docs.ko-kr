@@ -1,5 +1,6 @@
 ---
 title: URL에 보고서 매개 변수 전달 | Microsoft Docs
+description: 보고서 매개 변수를 보고서 URL에 포함하여 보고서 처리 엔진에 직접 전달하는 방법을 알아봅니다.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: f93a94cc-27b5-435a-aa85-69e6ec6459ad
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 551fc19b3d39ef6cf12c5fdd4e77196b0abbb9fe
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2eca700dbe01abdb94ff2b60763db840fc4f3d53
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65580836"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242933"
 ---
 # <a name="pass-a-report-parameter-within-a-url"></a>URL에 보고서 매개 변수 전달
   보고서 매개 변수를 보고서 URL에 포함시켜 보고서에 전달할 수 있습니다. 이러한 URL 매개 변수는 보고서 처리 엔진에 직접 전달되기 때문에 접두사가 붙지 않습니다.  

@@ -1,5 +1,6 @@
 ---
 title: 필요한 권한
+description: SQL Server Data Tools에서 데이터베이스 만들기, 단위 테스트 실행, 스키마 비교와 같은 다양한 작업을 수행할 때 필요한 사용 권한에 대해 알아봅니다.
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.prod: sql
@@ -8,14 +9,13 @@ ms.topic: conceptual
 ms.assetid: b27038c4-94ab-449c-90b7-29d87ce37a8b
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
-ms.openlocfilehash: fbe44c84b2a1974981dff5173015ecf0fc5e74b5
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5637af0406176ba8099038eaa8a2500d2f03629e
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75256988"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243724"
 ---
 # <a name="required-permissions-for-sql-server-data-tools"></a>SQL Server Data Tools에 필요한 권한
 
@@ -38,9 +38,8 @@ Visual Studio에서 데이터베이스에 대한 작업을 수행하려면 먼�
 ## <a name="permissions-to-create-or-deploy-a-database"></a><a name="DatabaseCreationAndDeploymentPermissions"></a>데이터베이스를 만들거나 배포할 수 있는 권한  
 데이터베이스를 만들거나 배포하려면 다음과 같은 사용 권한이 있어야 합니다.  
   
-|||  
-|-|-|  
 |동작|필요한 권한|  
+|-|-|  
 |데이터베이스 개체 및 설정 가져오기|원본 데이터베이스에 연결할 수 있어야 합니다.<br /><br />원본 데이터베이스가 SQL Server 2005를 기반으로 하는 경우 각 개체에 대한 **VIEW DEFINITION** 권한도 가지고 있어야 합니다.<br /><br />원본 데이터베이스가 SQL Server 2008 이상을 기반으로 하는 경우 각 개체에 대한 **VIEW DEFINITION** 권한도 가지고 있어야 합니다. 로그인하려면 데이터베이스 암호화 키에 대한 **VIEW SERVER STATE** 권한이 있어야 합니다.|  
 |서버 개체 및 설정 가져오기|지정된 서버의 master 데이터베이스에 연결할 수 있어야 합니다.<br /><br />서버에서 SQL Server 2005가 실행 중인 경우 해당 서버에 대한 **VIEW ANY DEFINITION** 권한이 있어야 합니다.<br /><br />원본 데이터베이스가 SQL Server 2008 이상을 기반으로 하는 경우 해당 서버에 대한 **VIEW ANY DEFINITION** 권한이 있어야 합니다. 로그인하려면 데이터베이스 암호화 키에 대한 **VIEW SERVER STATE** 권한이 있어야 합니다.|  
 |데이터베이스 프로젝트 만들기 또는 업데이트|데이터베이스 프로젝트를 만들거나 수정할 때는 데이터베이스 권한이 필요하지 않습니다.|  
@@ -57,9 +56,8 @@ Visual Studio에서 데이터베이스에 대한 작업을 수행하려면 먼�
 ## <a name="permissions-to-perform-unit-testing-on-a-sql-server-database"></a><a name="DatabaseUnitTestingPermissions"></a>SQL Server 데이터베이스에 대한 단위 테스트를 수행할 수 있는 권한  
 데이터베이스에 대한 단위 테스트를 수행하려면 다음과 같은 사용 권한이 있어야 합니다.  
   
-|||  
-|-|-|  
 |동작|필요한 권한|  
+|-|-|   
 |테스트 작업 실행|실행 컨텍스트 데이터베이스 연결을 사용해야 합니다. 자세한 내용은 [연결 문자열 및 사용 권한 개요](../ssdt/overview-of-connection-strings-and-permissions.md)를 참조하세요.|  
 |테스트 전 및 테스트 후 작업 실행|권한 있는 컨텍스트 데이터베이스 연결을 사용해야 합니다. 이 데이터베이스 연결에는 실행 컨텍스트 연결보다 더 많은 사용 권한이 있습니다.|  
 |TestInitialize 및 TestCleanup 스크립트 실행|권한 있는 컨텍스트 데이터베이스 연결을 사용해야 합니다.|  
@@ -72,9 +70,8 @@ Visual Studio에서 데이터베이스에 대한 작업을 수행하려면 먼�
 ## <a name="permissions-to-compare-schemas-and-data"></a><a name="SchemaAndDataComparePermissions"></a>스키마 및 데이터를 비교할 수 있는 권한  
 스키마 또는 데이터를 비교하려면 다음과 같은 사용 권한이 있어야 합니다.  
   
-|||  
-|-|-|  
 |동작|필요한 권한|  
+|-|-|   
 |두 데이터베이스의 스키마 비교|[데이터베이스를 만들거나 배포할 수 있는 권한](#DatabaseCreationAndDeploymentPermissions)에 설명된 대로 데이터베이스에서 개체 및 설정을 가져올 수 있는 권한이 있어야 합니다.|  
 |데이터베이스 및 데이터베이스 프로젝트의 스키마 비교|[데이터베이스를 만들거나 배포할 수 있는 권한](#DatabaseCreationAndDeploymentPermissions)에 설명된 대로 데이터베이스에서 개체 및 설정을 가져올 수 있는 권한이 있어야 합니다. Visual Studio에서 열려 있는 데이터베이스 프로젝트가 있어야 합니다.|  
 |대상 데이터베이스에 대한 업데이트 쓰기|[데이터베이스를 만들거나 배포할 수 있는 권한](#DatabaseCreationAndDeploymentPermissions)에 설명된 대로 대상 데이터베이스에 대한 업데이트를 배포할 수 있는 권한이 있어야 합니다.|  

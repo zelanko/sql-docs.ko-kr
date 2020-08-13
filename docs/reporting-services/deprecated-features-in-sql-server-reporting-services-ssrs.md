@@ -1,5 +1,6 @@
 ---
 title: SQL Server 2016 Reporting Services에서 사용되지 않는 기능 | Microsoft Docs
+description: 사용되지 않는 SQL Server 2016 Reporting Services 기능에 대해 알아봅니다. 이러한 기능은 지원되지 않는 버전에서 여전히 사용할 수 있습니다.
 ms.date: 07/02/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3876c01e-f81d-4cce-9104-5106a8c369e6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 38c050f8b41a8ff6e1bb9601abc562002caa4a27
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8d99b836fced9ca788564c75011a00b4c66b8e9e
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74317947"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243298"
 ---
 # <a name="deprecated-features-in-sql-server-2016-reporting-services"></a>SQL Server 2016 Reporting Services에서 사용되지 않는 기능
 
@@ -32,7 +33,7 @@ ms.locfileid: "74317947"
 
 다음 SQL Server Reporting Services 기능은 다음 버전의 SQL Server에서 지원되지 않습니다. 새 개발 작업에서는 이러한 기능을 사용하지 말고, 현재 이러한 기능을 사용하는 애플리케이션은 가능한 한 빨리 수정하세요.
 
-|Category|사용되지 않는 기능|
+|범주|사용되지 않는 기능|
 |--------------|------------------------| 
 |보고서 서버|HTML4.0 렌더러. HTML5 렌더러를 사용합니다.|
 

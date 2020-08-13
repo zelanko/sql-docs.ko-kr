@@ -1,5 +1,6 @@
 ---
 title: 데이터 경고 디자이너 | Microsoft Docs
+description: 데이터 경고 정의에 대한 내용과 데이터 경고 디자이너에서 데이터 경고 정의를 만들고 편집하는 방법을 알아봅니다.
 ms.date: 07/02/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -15,12 +16,12 @@ helpviewer_keywords:
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: f259c5a8a9b32d723c62d73f2b0563093851ef5c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d0d166462c2a542d834e92da03735e6e8294290d
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65571601"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243305"
 ---
 # <a name="data-alert-designer"></a>데이터 경고 디자이너
 
@@ -170,7 +171,7 @@ ms.locfileid: "65571601"
 ### <a name="email-settings"></a>전자 메일 설정  
  **받는 사람** 옵션에서 메일을 통해 데이터 경고 메시지를 받을 사람의 메일 주소를 지정합니다. 전자 메일 주소가 여러 개 있으면 Microsoft Office Outlook 전자 메일 메시지와 마찬가지로 세미콜론으로 구분합니다. 메일 그룹을 받는 사람으로 지정할 수도 있습니다. 이렇게 하면 더 쉽고 효율적인 방식으로 받는 사람 목록을 관리할 수 있습니다. 사용자가 경고 정의를 만들 때 SharePoint에서 사용자의 전자 메일 주소를 확인할 수 있으면 해당 전자 메일 주소가 받는 사람 목록에 자동으로 추가되고, 그렇지 않으면 자신을 받는 사람으로 명시적으로 추가해야 합니다.  
   
- 메일의 기본 제목은 **경고 이름>\<에 대한 데이터 경고**입니다. 제목은 필요에 따라 변경할 수 있습니다.  
+ 메일의 기본 제목은 **\<alert name>에 대한 데이터 경고**입니다. 제목은 필요에 따라 변경할 수 있습니다.  
   
  **설명** 옵션에서 데이터 경고 메시지에 포함할 설명을 입력할 수도 있습니다. 유사한 여러 데이터 경고가 있는 경우 등에 설명을 포함하면 경고 메시지를 빠르게 구분하고 이해하는 데 도움이 됩니다. 보고서 데이터가 지정된 규칙을 만족하는 경우 전송되는 경고 메시지 외에, 오류 발생 시 모든 받는 사람에게 전송되는 경고 메시지도 있습니다. 자세한 내용은 [Data Alert Messages](../reporting-services/data-alert-messages.md)을 참조하세요.  
   

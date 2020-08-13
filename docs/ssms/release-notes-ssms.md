@@ -6,22 +6,21 @@ ms.prod_service: sql-tools
 ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: 3dc76cc1-3b4c-4719-8296-f69ec1b476f9
-author: markingmyname
-ms.author: maghan
-ms.manager: jroth
-ms.reviewer: dnethi
+author: dzsquared
+ms.author: drskwier
+ms.reviewer: maghan
 ms.custom: seo-lt-2019
-ms.date: 04/07/2020
-ms.openlocfilehash: 4379b5aea85bdc3eeeca96d6be690a3fb3c89bcb
-ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
+ms.date: 07/22/2020
+ms.openlocfilehash: 0a9b93190f0240c917c6331ae69d1e8461cb7ea2
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82086820"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243789"
 ---
 # <a name="release-notes-for-sql-server-management-studio-ssms"></a>SSMS(SQL Server Management Studio) 릴리스 정보
 
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md.md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 이 문서에서는 SSMS의 현재 버전과 이전 버전에 대한 업데이트, 향상 및 버그 수정에 대한 세부 정보를 제공합니다.
 
@@ -43,17 +42,117 @@ Thank you.
 GeneMi. 2019/04/02.
 -->
 
-## <a name="185"></a>18.5
+## <a name="current-ssms-release"></a>현재 SSMS 릴리스
 
-- 다운로드: [SSMS 18.5 다운로드](download-sql-server-management-studio-ssms.md)
+### <a name="186"></a>18.6
+
+- 다운로드: [SSMS 18.6 다운로드](download-sql-server-management-studio-ssms.md)
+
+- 릴리스 번호: 18.6
+- 빌드 번호: 15.0.18338.0
+- 릴리스 날짜: 2020년 7월 22일
+
+[중국어(간체)](https://go.microsoft.com/fwlink/?linkid=2135491&clcid=0x804) | [중국어(번체)](https://go.microsoft.com/fwlink/?linkid=2135491&clcid=0x404) | [영어(미국)](https://go.microsoft.com/fwlink/?linkid=2135491&clcid=0x409) | [프랑스어](https://go.microsoft.com/fwlink/?linkid=2135491&clcid=0x40c) | [독일어](https://go.microsoft.com/fwlink/?linkid=2135491&clcid=0x407) | [이탈리아어](https://go.microsoft.com/fwlink/?linkid=2135491&clcid=0x410) | [일본어](https://go.microsoft.com/fwlink/?linkid=2135491&clcid=0x411) | [한국어](https://go.microsoft.com/fwlink/?linkid=2135491&clcid=0x412) | [포르투갈어(브라질)](https://go.microsoft.com/fwlink/?linkid=2135491&clcid=0x416) | [러시아어](https://go.microsoft.com/fwlink/?linkid=2135491&clcid=0x419) | [스페인어](https://go.microsoft.com/fwlink/?linkid=2135491&clcid=0x40a)
+
+SSMS 18.6은 SSMS의 최신 GA(일반 공급) 릴리스입니다. 이전 버전의 SSMS가 필요한 경우 [이전 SSMS 릴리스](release-notes-ssms.md#previous-ssms-releases)를 참조하세요.
+
+### <a name="whats-new-in-186"></a>18.6의 새로운 기능
+
+| 새 항목 | 세부 정보 |
+|----------|---------|
+| Analysis Services | AS 클라이언트 라이브러리의 최신 릴리스로 업데이트되었습니다. |
+| 감사 | SENSITIVE_BATCH_COMPLETED_GROUP 작업 ID에 대한 지원이 추가되었습니다(숫자가 아닌 문자열). |
+| 감사 | 감사 뷰어에 affected_rows, response_rows, connection_id, duration_milliseconds, data_sensitivity_information 필드가 추가되었습니다. |
+| 데이터 분류 | SSMS가 PowerShell cmdlet을 통해 내보낸 정책의 가져오기/내보내기를 지원하도록 업데이트되었습니다. |
+| 플랫 파일 가져오기 | .csv/.tsv 파일이 각각 csv/tsv 파일로 구문 분석될 수 있도록 해당 파일의 고정 너비 파일 및 파일 형식 감지를 위한 지원이 추가되었습니다. |
+| Integration Services | Azure SQL Managed Instance 에이전트 작업이 Azure-SSIS IR의 패키지 스토어에서 SSIS 패키지를 실행하도록 하는 지원이 추가되었습니다. |
+| SMO/스크립팅 | [Azure Synapse Analytics](https://docs.microsoft.com/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is)(이전 명칭: SQL Azure DW)에서 동적 데이터 마스킹 스크립팅을 위한 지원이 추가되었습니다. |
+| SMO/스크립팅 | [Azure Synapse Analytics](https://docs.microsoft.com/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is)(이전 명칭: SQL DW)에서 보안 정책 스크립팅을 위한 지원이 추가되었습니다. |
+
+### <a name="bug-fixes-in-186"></a>18.6의 버그 수정
+
+| 새 항목 | 세부 정보 |
+|----------|---------|
+| 접근성 | **데이터베이스 일반 속성 페이지**에서 접근성을 위해 테두리 색이 조정되었습니다(그리드 및 이름 상자의 테두리가 어두워졌고 대비를 3:1보다 크게 설정할 수 있게 됐습니다). |
+| 접근성 | 내레이터 업데이트를 위한 쿼리 실행에 대한 처리가 추가되었습니다(머신에 설치된 NetFx4.8+ 필요). |
+| Always Encrypted | ‘새 열 암호화 키’ 대화 상자에 CMK가 enclave를 사용하도록 설정된 경우에도 CEK가 enclave를 사용하지 않도록 설정되었다고 표시되는 문제를 해결했습니다. |
+| Analysis Services | 처리되지 않은 예외를 발생시킬 수 있는 Analysis Services 파티션 보기 문제를 해결했습니다. |
+| **데이터베이스 다이어그램** | 기존 다이어그램과 SSMS의 손상이 충돌하도록 만드는 **데이터베이스 다이어그램**의 오래된 문제를 해결했습니다. SSMS 18.0~18.5.1을 사용하여 다이어그램을 만들었거나 저장했으며 다이어그램에 ‘텍스트 주석’이 포함되어 있는 경우 SSMS의 어떤 버전에서도 다이어그램을 열 수 없었습니다. 이번 수정의 결과로, SSMS 17.9.1 및 이전 버전에서 만든 다이어그램을 SSMS 18.6에서 열고 저장할 수 있게 되었습니다. SSMS 18.6에서 저장한 다이어그램을 SSMS 17.9.1 및 이전 릴리스에서 열 수도 있습니다. [SQL Server 사용자 피드백](https://feedback.azure.com/forums/908035/suggestions/37992649)을 참조하세요. |
+| 데이터 분류 | 데이터 분류 창의 권장 사항 패널에 열 이름이 표시되지 않는 문제를 해결했습니다. |
+| 일반 SSMS | 데이터베이스 속성 *Size*와 *Space Available*에 SQL Azure DB(하이퍼스케일 서비스 계층)에 대해 잘못된 값을 갖는 문제를 해결했습니다. |
+| 일반 SSMS | 데이터베이스 속성 “Size”가 SQL Azure DB의 실제 데이터베이스 크기가 아닌 Max Size를 표시하는 문제를 해결했습니다(참고: DW의 경우 여전히 Max Size를 표시합니다). |
+| 일반 SSMS | SSMS에서 일반적인 세 가지 중단 원인을 수정했습니다. |
+| 일반 SSMS | SSMS 연결 대화 상자가 항목(서버/사용자/암호)을 ‘잊어버리는’ 것과 관련된 몇 가지 문제를 해결했습니다. [SQL Server 사용자 피드백](https://feedback.azure.com/forums/908035/suggestions/40256401) 및 [SQL Server 사용자 피드백](https://feedback.azure.com/forums/908035/suggestions/40015519)을 참조하세요. |
+| 일반 SSMS | **통계 속성** 대화 상자에서 **이 열에 대한 통계 업데이트** 확인란을 선택하고 **확인**을 선택하면 아무런 변화가 없는 문제를 해결했습니다. 통계가 업데이트되지 않았고, 작업을 스크립팅하려고 시도하면 ‘스크립팅할 동작이 없습니다’ 메시지가 표시되었습니다. [SQL Server 사용자 피드백](https://feedback.azure.com/forums/908035/suggestions/37799992)을 참조하세요. |
+| 데이터 계층 애플리케이션 가져오기/내보내기 | bacpac 파일을 가져올 때 SSMS에서 오류를 발생시키는 문제를 해결했습니다. [SQL Server 사용자 피드백](https://feedback.azure.com/forums/908035/suggestions/40229137)을 참조하세요. |
+| Integration Services | SSMS 18.4 또는 이전 버전을 사용하여 Azure SQL Managed Instance에서 SSIS 패키지를 실행할 때 고객이 SQL 에이전트 작업 단계를 편집할 수 없는 버그가 해결했습니다. |
+| Integration Services | **실행 옵션** 탭에 SQL 에이전트 작업 단계에서 온-프레미스 SQL Server에 대해 SSIS 패키지를 실행할 때 **32비트 런타임 사용** 옵션이 누락되는 버그가 해결했습니다. |
+| Intellisense/편집기 | 파일 -> 새로 만들기 -> 데이터베이스 엔진 쿼리를 수행할 때 오류 대화 상자가 팝업으로 표시되는 문제가 수정되었습니다. |
+| 개체 탐색기 | 개체 탐색기에서 테이블 또는 인덱스 노드를 마우스 오른쪽 단추로 클릭할 때 SQL Azure Database에 대한 ‘속성 창’이 표시되지 않는 문제를 해결했습니다. |
+| 개체 탐색기 | sys.database_service_objectives에 영향을 주는 컨트롤 플레인 중단이 있는 경우 SSMS가 Azure의 마스터에 대해 데이터베이스 노드를 확장하지 못하는 문제가 수정되었습니다. |
+| 보고서 | Linux에서 손상되었던 몇 가지 표준 보고서가 수정되었습니다. </br></br> 예제: “/var/opt/mssql/log/log_116.trc\log.trc' is invalid…”와 비슷한 오류와 함께 메모리 사용 보고서에서 실패가 발생했습니다). |
+| SMO/스크립팅 | Gen5_2를 기본 SLO로 사용하도록 새로운 SQL Azure Database를 만드는 로직이 업데이트되었습니다. |
+| Xevent UI | SSMS 18.0에서 발생한 “XEL 파일에 저장...” 오류를 발생시키던 오래된 문제를 해결되었습니다. [SQL Server 사용자 피드백](https://feedback.azure.com/forums/908035/suggestions/37695592)을 참조하세요. |
+
+#### <a name="known-issues-186"></a>알려진 문제(18.6)
+
+| 새 항목 | 세부 정보 | 해결 방법 |
+|----------|---------|------------|
+| Analysis Services | msmdpump.dll을 통해 SSAS에 연결할 때 오류가 발생합니다. [SQL Server 사용자 피드백](https://feedback.azure.com/forums/908035-sql-server/suggestions/40144696)을 참조하세요. | 해당 없음 |
+| 일반 SSMS | 새 서버 감사 사양 대화 상자에서 SSMS가 액세스 위반 오류로 인해 충돌을 일으킬 수 있습니다. | 해당 없음 |
+| 일반 SSMS | SMO를 사용하는 SSMS 확장을 새로운 SSMS용 v161 패키지를 대상으로 지정하여 다시 컴파일해야 합니다. https://www.nuget.org/packages/Microsoft.SqlServer.SqlManagementObjects.SSMS/ 에서 미리 보기 버전을 사용할 수 있습니다. </br></br> Microsoft.SqlServer.SqlManagementObjects 패키지의 이전 160개 버전에 대해 컴파일된 확장도 계속해서 작동합니다. | 해당 없음 |
+| Integration Services | Azure-SSIS Integration Runtime에서 패키지를 가져오거나 내보낼 때 Integration Services 스크립트 태스크/구성 요소가 포함된 패키지에 대한 스크립트가 손실됩니다. 해결 방법: “C:\Program Files (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\CommonExtensions\MSBuild” 폴더를 제거합니다. | 해당 없음|
+
+
+다른 알려진 문제를 확인하고 제품 팀에 피드백을 제공하려면 [SQL Server 사용자 피드백](https://feedback.azure.com/forums/908035-sql-server)을 참조하세요.
+
+## <a name="previous-ssms-releases"></a>이전 SSMS 릴리스
+
+관련 섹션에서 다운로드 링크를 선택하여 이전 SSMS 버전을 다운로드합니다.
+
+| SSMS 버전 | 빌드 번호 | 릴리스 날짜 |
+|--------------|--------------|-------------------|
+| [18.5.1](#1851) | 15.0.18333.0 | 2020년 6월 9일 |
+| [18.5](#185) | 15.0.18330.0 | 2020년 4월 7일 |
+| [18.4](#184) | 15.0.18206.0 | 2019년 11월 4일 |
+| [18.3.1](#1831) | 15.0.18183.0 | 2019년 10월 2일 |
+| [18.2](#182) | 15.0.18142.0 | 2019년 7월 25일 |
+| [18.1](#181) | 15.0.18131.0 | 2019년 6월 11일 |
+| [18.0](#180) | 15.0.18118.0 | 2019년 4월 24일 |
+| [17.9.1](#1791) | 14.0.17289.0 | 2018년 11월 21일 |
+| [16.5.3](#1653) | 13.0.16106.4 | 2017년 1월 30일 |
+
+### <a name="1851"></a>18.5.1
+
+- 다운로드: [SSMS 18.5.1 다운로드](https://go.microsoft.com/fwlink/?linkid=2132606)
+
+- 릴리스 번호: 18.5.1
+- 빌드 번호: 15.0.18333.0
+- 릴리스 날짜: 2020년 6월 9일
+
+[중국어(간체)](https://go.microsoft.com/fwlink/?linkid=2132606&clcid=0x804) | [중국어(번체)](https://go.microsoft.com/fwlink/?linkid=2132606&clcid=0x404) | [영어(미국)](https://go.microsoft.com/fwlink/?linkid=2132606&clcid=0x409) | [프랑스어](https://go.microsoft.com/fwlink/?linkid=2132606&clcid=0x40c) | [독일어](https://go.microsoft.com/fwlink/?linkid=2132606&clcid=0x407) | [이탈리아어](https://go.microsoft.com/fwlink/?linkid=2132606&clcid=0x410) | [일본어](https://go.microsoft.com/fwlink/?linkid=2132606&clcid=0x411) | [한국어](https://go.microsoft.com/fwlink/?linkid=2132606&clcid=0x412) | [포르투갈어(브라질)](https://go.microsoft.com/fwlink/?linkid=2132606&clcid=0x416) | [러시아어](https://go.microsoft.com/fwlink/?linkid=2132606&clcid=0x419) | [스페인어](https://go.microsoft.com/fwlink/?linkid=2132606&clcid=0x40a)
+
+### <a name="bug-fixes-in-1851"></a>18.5.1의 버그 수정
+
+| 새 항목 | 세부 정보 |
+|----------|---------|
+| Analysis Services | AS Azure 또는 Power BI 서버에 연결된 상태에서 데이터베이스 목록을 펼칠 때의 성능이 향상되었습니다. |
+| Analysis Services | Analysis Services 서버의 데이터베이스 동기화 마법사를 열려고 시도하면 오류가 발생하는 문제가 해결되었습니다. |
+| Analysis Services | 사용자가 셀 데이터 권한으로 SSAS 2017 및 이전 버전을 쿼리할 수 없도록 하는 문제를 해결했습니다. |
+| 일반 SSMS | [테이블 디자이너 - 테이블 디자이너 그리드에서 TAB 키를 사용하려고 할 때 발생하는 경고음이 해결했습니다](https://feedback.azure.com/forums/908035/suggestions/40318435) |
+
+### <a name="known-issues-1851"></a>알려진 문제 18.5.1
+
+| 새 항목 | 세부 정보 | 해결 방법 | |----------|---------||-----------| | 일반 SSMS | 다이어그램 디자인에 기존 다이어그램이 손상되도록 하는 알려진 버그가 있습니다. 예를 들어 SSMS 17.9.1을 사용하여 다이어그램 디자인을 만든 다음 SSMS 18.x를 사용하여 업데이트/저장한 후 나중에 17.9.1을 사용하여 엽니다. 자세한 내용은 [SQL Server 사용자 피드백](https://feedback.azure.com/forums/908035/suggestions/37992649)을 참조하세요. | N/A | | 일반 SSMS | 새 서버 감사 사양 대화 상자에서 SSMS가 액세스 위반 오류로 인해 충돌을 일으킬 수 있습니다. | N/A || | SMO/스크립팅 | SMO를 사용하는 SSMS 확장을 새로운 SMO v160을 대상으로 지정하여 다시 컴파일해야 합니다. | N/A | | Integration Services | Azure-SSIS Integration Runtime에서 패키지를 가져오거나 내보낼 때 Integration Services 스크립트 태스크/구성 요소가 포함된 패키지에 대한 스크립트가 손실됩니다. 해결 방법: | “C:\Program Files (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\CommonExtensions\MSBuild” 폴더를 제거합니다. |
+
+### <a name="185"></a>18.5
+
+![다운로드](media/download-icon.png) [SSMS 18.5 다운로드](https://go.microsoft.com/fwlink/?linkid=2125901)
+- 릴리스 번호: 18.5
 - 빌드 번호: 15.0.18330.0
 - 릴리스 날짜: 2020년 4월 7일
 
 [중국어(간체)](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x804) | [중국어(번체)](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x404) | [영어(미국)](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x409) | [프랑스어](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x40c) | [독일어](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x407) | [이탈리아어](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x410) | [일본어](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x411) | [한국어](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x412) | [포르투갈어(브라질)](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x416) | [러시아어](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x419) | [스페인어](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x40a)
-
-SSMS 18.5는 SSMS의 최신 GA(일반 공급) 릴리스입니다. 이전 버전의 SSMS가 필요한 경우 [이전 SSMS 릴리스](release-notes-ssms.md#previous-ssms-releases)를 참조하세요.
-
-18.5는 18.4의 업데이트로, 다음과 같은 새 항목과 버그 수정이 포함되어 있습니다.
 
 ### <a name="whats-new-in-185"></a>18.5의 새로운 기능
 
@@ -103,24 +202,24 @@ SSMS 18.5는 SSMS의 최신 GA(일반 공급) 릴리스입니다. 이전 버전�
 | 일반 SSMS | "데이터베이스 속성 옵션" 표에서 스크롤 막대가 중간부터 시작하는 문제를 해결했습니다. |
 | 일반 SSMS | Analysis Services 서버에 연결된 상태에서 .sql 파일을 열 때 SSMS가 충돌하는 문제를 해결했습니다. |
 | 일반 SSMS | 연결 대화 상자: "암호 저장" 선택 취소가 작동하지 않는 문제를 해결했습니다. |
-| 일반 SSMS | 서버/사용자에 연결된 자격 증명이 항상 기억되는 문제를 해결했습니다. [UserVoice 37875172](https://feedback.azure.com/forums/908035/suggestions/37875172)를 참조하세요. |
-| 일반 SSMS | 가끔 편집기 창이 제대로 새로 고쳐지지 않는 문제를 해결했습니다. 이 문제는 *도구 > 옵션 > 환경*에서 하드웨어 가속을 사용하지 않도록 설정하면 해결됩니다. [UserVoice 37474042](https://feedback.azure.com/forums/908035/suggestions/37474042)를 참조하세요. |
+| 일반 SSMS | 서버/사용자에 연결된 자격 증명이 항상 기억되는 문제를 해결했습니다. [SQL Server 사용자 피드백](https://feedback.azure.com/forums/908035/suggestions/37875172)을 참조하세요. |
+| 일반 SSMS | 가끔 편집기 창이 제대로 새로 고쳐지지 않는 문제를 해결했습니다. 이 문제는 *도구 > 옵션 > 환경*에서 하드웨어 가속을 사용하지 않도록 설정하면 해결됩니다. [SQL Server 사용자 피드백](https://feedback.azure.com/forums/908035/suggestions/37474042)을 참조하세요. |
 | 일반 SSMS | Azure Active Directory 인증이 프록시를 통해 작동하지 않는 문제를 해결했습니다. |
-| 높은 DPI/크기 조정 | *인덱스 속성*의 컨트롤이 잘못 렌더링 될 수 있는 문제(단추가 표와 겹침)를 해결했습니다. [UserVoice 36030424](https://feedback.azure.com/forums/908035/suggestions/36030424)를 참조하세요. |
+| 높은 DPI/크기 조정 | *인덱스 속성*의 컨트롤이 잘못 렌더링 될 수 있는 문제(단추가 표와 겹침)를 해결했습니다. [SQL Server 사용자 피드백](https://feedback.azure.com/forums/908035/suggestions/36030424)을 참조하세요. |
 | 높은 DPI/크기 조정 | *데이터베이스 속성* 대화 상자에서 4K 모니터에 잘린 컨트롤이 표시될 수 있는 여러 문제를 해결했습니다. |
 | 높은 DPI/크기 조정 | 4k 디스플레이에서 게시 및 구독 마법사를 수정했습니다. |
 | 높은 DPI/크기 조정 | 새 감사 서버 사양 페이지에서 사소한 수정. |
 | 높은 DPI/크기 조정 | 고가용성 마법사의 4k 디스플레이 문제를 수정했습니다. |
 | 높은 DPI/크기 조정 | 사용자가 Xevent 새 세션 창에서 대상을 추가할 수 없는 문제를 해결했습니다. 125% 크기 조정으로 표시할 때 Xevent 세션 마법사에서 세션 이벤트 필터를 설정합니다. |
 | 높은 DPI/크기 조정 | 100% 이상 크기 조정에서 *URL에 데이터베이스 백업* UI에 대한 컨트롤이 보이지 않는 문제를 해결하는 중입니다. |
-|플랫 파일 가져오기 | Null 허용 열에서 모두 선택을 허용하도록 플랫 파일 가져오기 마법사를 업데이트했습니다. [UserVoice 38027137](https://feedback.azure.com/forums/908035/suggestions/38027137)을 참조하세요. |
+|플랫 파일 가져오기 | Null 허용 열에서 모두 선택을 허용하도록 플랫 파일 가져오기 마법사를 업데이트했습니다. [SQL Server 사용자 피드백](https://feedback.azure.com/forums/908035/suggestions/38027137)을 참조하세요. |
 | 개체 탐색기 | 연결 대화 상자에서 연결 문자열을 사용하여 연결하는 경우 개체 탐색기가 잘못된 정보를 표시할 수 있는 문제를 해결했습니다. |
 | 개체 탐색기 | 수천 개 테이블(20k+)이 있는 데이터베이스에서 테이블을 확장하는 동안 OE가 느려지는 문제를 해결했습니다. |
 | 쿼리 저장소 UI | 각 개별 대기 범주에 대한 실행 수를 합하는(정확하지 않음) TRC 보고서 계산 실행 횟수(*대기 시간* 메트릭)를 수정했습니다. 쿼리는 단일 실행을 제외하고 대기한 각 대기 범주에 대해 등록됩니다. 따라서 TRC가 대기 범주에서만 합계를 계산하는 경우 실행 횟수가 과장됩니다. 실제로는 wait_category의 최대값이어야 합니다. |
 | 쿼리 저장소 UI | 결과 집합이 상위 x에서 필터링되면 수정된 TRC 자세히 보기가 잘못된 데이터를 반환합니다. 이는 쿼리가 여러 공통 테이블 식을 사용하고 이를 조인하여 최종 결과 집합을 만들기 때문에 발생합니다. 상위 x가 CTE에 푸시되는 경우에는 때때로 필수 행을 필터링할 수 있습니다. 이 경우 결과 집합을 비결정적으로 만들 수 있습니다. 해결 방법은 상위 x 절을 CTE에 푸시하지 않는 것입니다. |
 | 쿼리 저장소 UI | 수정된 플랜 요약은 표 또는 차트 보기 모두에서 마지막 쿼리 실행 대기 시간이 필요합니다. 이 열이 없으면 쿼리가 중단됩니다. 이 변경 집합은 대기 통계 CTE에 이 열을 추가합니다. |
 | 실행 계획 | SSMS가 여러 번 실행되는 연산자에 대해 예상 행 개수를 표시하는 방법을 개선했습니다. (1) SSMS에서 *예상 행 수*를 "실행당 예상 행 수"로 수정했습니다. (2) 새 속성 *모든 실행에 대한 예상 행 수*를 추가했습니다. (3) 속성 *실제 행 수*를 *모든 실행에 대한 실제 행 수*로 수정했습니다. |
-| SQL 에이전트 | SQL 에이전트 작업 단계를 편집하려고 할 때 SSMS UI가 고정되는 문제를 해결했습니다. 이제 SSMS에서 (적어도 런타임 시 결정되지 않은 SQL 에이전트에서 지원하는 간단한 매크로/토큰에 대해) 이름이 토큰화된 output_file을 볼 수 있습니다(*보기* 단추). 또한 사용자가 (SQL 권한 때문에) 파일에 액세스할 수 없는 경우 SSMS는 "보기" 단추를 비활성화하지 않습니다. [UserVoice 39063124](https://feedback.azure.com/forums/908035/suggestions/39063124)를 참조하세요. |
+| SQL 에이전트 | SQL 에이전트 작업 단계를 편집하려고 할 때 SSMS UI가 고정되는 문제를 해결했습니다. 이제 SSMS에서 (적어도 런타임 시 결정되지 않은 SQL 에이전트에서 지원하는 간단한 매크로/토큰에 대해) 이름이 토큰화된 output_file을 볼 수 있습니다(*보기* 단추). 또한 사용자가 (SQL 권한 때문에) 파일에 액세스할 수 없는 경우 SSMS는 "보기" 단추를 비활성화하지 않습니다. [SQL Server 사용자 피드백](https://feedback.azure.com/forums/908035/suggestions/39063124)을 참조하세요. |
 | SQL 에이전트 | 작업 단계 페이지에서 탭 순서를 수정했습니다. |
 | SQL 에이전트 | 작업 단계 페이지에서 "다음" 및 "이전" 단추의 위치를 반대로 하여 논리적 순서로 배치했습니다. |
 | SQL 에이전트 | UI가 잘리지 않도록 작업 일정 창을 조정했습니다. |
@@ -130,33 +229,19 @@ SSMS 18.5는 SSMS의 최신 GA(일반 공급) 릴리스입니다. 이전 버전�
 | SMO/스크립팅 | 외부 개체 스크립팅과 관련된 문제를 해결했습니다. |
 | SMO/스크립팅 | *스크립트 생성*이 SQL DB에 대해 확장 속성 스크립팅 옵션을 선택하는 것을 허용하지 않는 문제를 해결했습니다. 또한 이러한 확장 속성의 스크립팅도 수정했습니다. |
 | SMO/스크립팅 | [SQL 평가 API](../sql-assessment-api/sql-assessment-api-overview.md) - XTPHashAvgChainBuckets 규칙에서 도움말 링크가 잘못되었습니다. |
-| XEvent UI | 표에서 마우스로 가리키면 항목이 선택되는 문제를 수정했습니다. [UserVoice 38262124](https://feedback.azure.com/forums/908035/suggestions/38262124) 및 [UserVoice 37873921](https://feedback.azure.com/forums/908035-sql-server/suggestions/37873921)을 참조하세요. |
+| XEvent UI | 표에서 마우스로 가리키면 항목이 선택되는 문제를 수정했습니다. [SQL Server 사용자 피드백](https://feedback.azure.com/forums/908035/suggestions/38262124) 및 [SQL Server 사용자 피드백](https://feedback.azure.com/forums/908035-sql-server/suggestions/37873921)을 참조하세요. |
 
 ### <a name="known-issues-185"></a>알려진 문제(18.5)
 
-- 머신 A에서 실행되는 SSMS에서 만든 데이터베이스 다이어그램을 머신 B에서 수정할 수 없습니다(SSMS 충돌). 자세한 내용은 [UserVoice 37992649](https://feedback.azure.com/forums/908035/suggestions/37992649)를 참조하세요.
+- 머신 A에서 실행되는 SSMS에서 만든 데이터베이스 다이어그램을 머신 B에서 수정할 수 없습니다(SSMS 충돌). 자세한 내용은 [SQL Server 사용자 피드백 37992649](https://feedback.azure.com/forums/908035/suggestions/37992649)를 참조하세요.
 
 - Azure-SSIS Integration Runtime에서 패키지를 가져오거나 내보낼 때 Integration Services 스크립트 태스크/구성 요소가 포함된 패키지에 대한 스크립트가 손실됩니다. 해결 방법은 *C:\Program Files (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\CommonExtensions\MSBuild* 폴더를 제거하는 것입니다.
 
 - 새 서버 감사 사양 대화 상자에서 SSMS가 액세스 위반 오류로 인해 충돌을 일으킬 수 있습니다.
 
-- SMO를 사용하는 SSMS 확장은 새 SMO v160을 대상으로 다시 컴파일해야 합니다(SSMS 18.5 릴리스 직후 Nuget.org에서 패키지를 사용할 수 있음).
+- SMO를 사용하는 SSMS 확장을 새로운 SMO v160을 대상으로 지정하여 다시 컴파일해야 합니다(SSMS 18.5 릴리스 직후 Nuget.org에서 패키지를 사용할 수 있음).
 
-다른 알려진 문제를 확인하고 제품 팀에 피드백을 제공하려면 [UserVoice](https://feedback.azure.com/forums/908035-sql-server)를 참조할 수 있습니다.
-
-## <a name="previous-ssms-releases"></a>이전 SSMS 릴리스
-
-관련 섹션에서 다운로드 링크를 선택하여 이전 SSMS 버전을 다운로드합니다.
-
-| SSMS 버전 | 빌드 번호 | 릴리스 날짜 |
-|--------------|--------------|-------------------|
-| [18.4](#184) | 15.0.18206.0 | 2019년 11월 4일 |
-| [18.3.1](#1831) | 15.0.18183.0 | 2019년 10월 2일 |
-| [18.2](#182) | 15.0.18142.0 | 2019년 7월 25일 |
-| [18.1](#181) | 15.0.18131.0 | 2019년 6월 11일 |
-| [18.0](#180) | 15.0.18118.0 | 2019년 4월 24일 |
-| [17.9.1](#1791) | 14.0.17289.0 | 2018년 11월 21일 |
-| [16.5.3](#1653) | 13.0.16106.4 | 2017년 1월 30일 |
+- [SSMS에서 msmdpump.dll을 통해 SSAS에 연결할 때 오류가 발생합니다.](https://feedback.azure.com/forums/908035-sql-server/suggestions/40144696-error-when-connecting-to-ssas-via-msmdpump-dll-in)
 
 ### <a name="184"></a>18.4
 
@@ -167,8 +252,6 @@ SSMS 18.5는 SSMS의 최신 GA(일반 공급) 릴리스입니다. 이전 버전�
 - 릴리스 날짜: 2019년 11월 4일
 
 [중국어(간체)](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x804) | [중국어(번체)](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x404) | [영어(미국)](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x409) | [프랑스어](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x40c) | [독일어](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x407) | [이탈리아어](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x410) | [일본어](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x411) | [한국어](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x412) | [포르투갈어(브라질)](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x416) | [러시아어](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x419) | [스페인어](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x40a)
-
-18.4는 18.3.1의 업데이트로, 다음과 같은 새 항목과 버그 수정이 포함되어 있습니다.
 
 | 새 항목 | 세부 정보 |
 |----------|---------|
@@ -205,15 +288,15 @@ SSMS 18.5는 SSMS의 최신 GA(일반 공급) 릴리스입니다. 이전 버전�
 | 복제 도구 | SQL 에이전트 작업을 편집하려고 할 때 애플리케이션이 오류(“파일 또는 어셈블리를 로드할 수 없습니다...”)를 throw하는 문제를 해결했습니다. |
 | SMO/스크립팅 | *Script Table As...* 가 데이터 정렬이 Japanese_BIN2인 SQL DW에 대해 작동하지 않는 문제가 해결되었습니다.|
 | SMO/스크립팅 | ScriptAlter()가 서버에서 문을 실행하는 문제가 해결되었습니다.|
-| SQL 에이전트 | 에이전트 운영자 UI가 UI에서 변경될 때 운영자 이름을 업데이트하지 않거나 스크립팅되지 않는 문제를 해결했습니다. 자세한 내용은 [UserVoice](https://feedback.azure.com/forums/908035/suggestions/32897647)를 참조하세요.|
+| SQL 에이전트 | 에이전트 운영자 UI가 UI에서 변경될 때 운영자 이름을 업데이트하지 않거나 스크립팅되지 않는 문제를 해결했습니다. 자세한 내용은 [SQL Server 사용자 피드백](https://feedback.azure.com/forums/908035/suggestions/32897647)을 참조하세요.|
 
 #### <a name="known-issues-184"></a>알려진 문제(18.4)
 
-- 머신 A에서 실행되는 SSMS에서 만든 데이터베이스 다이어그램을 머신 B에서 수정할 수 없습니다(SSMS 충돌). 자세한 내용은 [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37992649)를 참조하세요.
+- 머신 A에서 실행되는 SSMS에서 만든 데이터베이스 다이어그램을 머신 B에서 수정할 수 없습니다(SSMS 충돌). 자세한 내용은 [SQL Server 사용자 피드백](https://feedback.azure.com/forums/908035/suggestions/37992649)을 참조하세요.
 
-- 여러 쿼리 창 간을 전환할 때 다시 그려지는 문제가 있습니다. 자세한 내용은 [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37474042)를 참조하세요. 이 문제의 해결 방법은 *도구 > 옵션*에서 하드웨어 가속을 사용하지 않도록 설정하는 것입니다.
+- 여러 쿼리 창 간을 전환할 때 다시 그려지는 문제가 있습니다. 자세한 내용은 [SQL Server 사용자 피드백](https://feedback.azure.com/forums/908035/suggestions/37474042)을 참조하세요. 이 문제의 해결 방법은 *도구 > 옵션*에서 하드웨어 가속을 사용하지 않도록 설정하는 것입니다.
 
-다른 알려진 문제를 확인하고 제품 팀에 피드백을 제공하려면 [UserVoice](https://feedback.azure.com/forums/908035-sql-server)를 참조할 수 있습니다.
+다른 알려진 문제를 확인하고 제품 팀에 피드백을 제공하려면 [SQL Server 사용자 피드백](https://feedback.azure.com/forums/908035-sql-server)을 참조하세요.
 
 ### <a name="1831"></a>18.3.1
 
@@ -224,8 +307,6 @@ SSMS 18.5는 SSMS의 최신 GA(일반 공급) 릴리스입니다. 이전 버전�
 - 릴리스 날짜: 2019년 10월 2일
 
 [중국어(간체)](https://go.microsoft.com/fwlink/?linkid=2105412&clcid=0x804) | [중국어(번체)](https://go.microsoft.com/fwlink/?linkid=2105412&clcid=0x404) | [영어(미국)](https://go.microsoft.com/fwlink/?linkid=2105412&clcid=0x409) | [프랑스어](https://go.microsoft.com/fwlink/?linkid=2105412&clcid=0x40c) | [독일어](https://go.microsoft.com/fwlink/?linkid=2105412&clcid=0x407) | [이탈리아어](https://go.microsoft.com/fwlink/?linkid=2105412&clcid=0x410) | [일본어](https://go.microsoft.com/fwlink/?linkid=2105412&clcid=0x411) | [한국어](https://go.microsoft.com/fwlink/?linkid=2105412&clcid=0x412) | [포르투갈어(브라질)](https://go.microsoft.com/fwlink/?linkid=2105412&clcid=0x416) | [러시아어](https://go.microsoft.com/fwlink/?linkid=2105412&clcid=0x419) | [스페인어](https://go.microsoft.com/fwlink/?linkid=2105412&clcid=0x40a)
-
-18.3.1은 18.2의 업데이트로, 다음과 같은 새 항목과 버그 수정이 포함되어 있습니다.
 
 #### <a name="whats-new-in-1831"></a>18.3.1의 새로운 기능
 
@@ -249,14 +330,14 @@ SSMS 18.5는 SSMS의 최신 GA(일반 공급) 릴리스입니다. 이전 버전�
 | Analysis Services | 사용자가 새 세션을 만들 수 없도록 하는 XEvent UI 문제를 수정했습니다. |
 | SQL Azure에 데이터베이스 배포 | 이 기능이 작동하지 않도록 만드는 문제를 수정했습니다(DacFx에서).|
 | 일반 SSMS | XEvent 뷰어에서 정렬 기능을 사용할 때 SSMS가 충돌하는 문제를 수정했습니다. |
-| 일반 SSMS | SSMS 복원 데이터베이스가 무기한 중단될 수 있는 긴 미해결 문제를 수정했습니다. </br></br> 자세한 내용은 UserVoice 항목을 참조하세요. </br> [데이터베이스 복원 - 백업 디바이스 느린 로딩을 선택합니다](https://feedback.azure.com/forums/908035/suggestions/32899099/).  </br> [SSMS 2016이 데이터베이스 복원 대화 상자에서 매우 느립니다](https://feedback.azure.com/forums/908035/suggestions/32900767/). </br> [데이터베이스 복원이 느립니다](https://feedback.azure.com/forums/908035/suggestions/32900224/).  </br> ["..."를 클릭하여 디바이스 중단에서 데이터베이스를 복원합니다](https://feedback.azure.com/forums/908035/suggestions/34281658/).  |
-| 일반 SSMS | 모든 로그인에 대해 기본 언어가 아랍어로 표시되는 문제를 해결했습니다. </br></br> 자세한 내용은 UserVoice의 다음 항목을 참조하세요. [SSMS 18.2 기본 언어 표시 버그](https://feedback.azure.com/forums/908035/suggestions/38236363)입니다. |
+| 일반 SSMS | SSMS 복원 데이터베이스가 무기한 응답하지 않을 수 있는 오래된 문제를 해결했습니다. </br></br> 자세한 내용은 SQL Server 사용자 피드백 항목을 참조하세요. </br> [데이터베이스 복원 - 백업 디바이스 느린 로딩을 선택합니다](https://feedback.azure.com/forums/908035/suggestions/32899099/).  </br> [SSMS 2016이 데이터베이스 복원 대화 상자에서 매우 느립니다](https://feedback.azure.com/forums/908035/suggestions/32900767/). </br> [데이터베이스 복원이 느립니다](https://feedback.azure.com/forums/908035/suggestions/32900224/).  </br> ["..."를 클릭하여 디바이스 중단에서 데이터베이스를 복원합니다](https://feedback.azure.com/forums/908035/suggestions/34281658/).  |
+| 일반 SSMS | 모든 로그인에 대해 기본 언어가 아랍어로 표시되는 문제를 해결했습니다. </br></br> 자세한 내용은 SQL Server 사용자 피드백 항목을 참조하세요. [SSMS 18.2 기본 언어 표시 버그](https://feedback.azure.com/forums/908035/suggestions/38236363)입니다. |
 | 일반 SSMS | *쿼리 옵션*의 대화 상자를 보기 어려운 문제(사용자가 T-SQL 편집기 창을 오른쪽 클릭할 경우)를 크기 재설정을 가능하도록 만들어서 해결했습니다.|
 | 일반 SSMS | 결과 그리드/파일에 표시되는 *완료 시간* 메시지(SSMS 18.2에서 도입됨)를 이제 도구 > 옵션 > 쿼리 실행 > SQL Server > 고급 > 완료 시간 표시에서 구성할 수 있습니다. |
 | 일반 SSMS | 연결 대화 상자에서 *Active Directory - 암호* 및 *Active Directory - 통합*을 *Azure Active Directory - 암호* 및 *Azure Active Directory - 통합*으로 각각 대체했습니다. |
-| 일반 SSMS | 사용자가 UTC 오프셋이 음수인 TZ에 있는 경우 SSMS를 사용하여 SQL Azure-Managed Instance에 대한 감사를 구성할 수 없도록 하는 문제를 수정했습니다. |
-| 일반 SSMS | 표에 마우스를 가리키면 해당 행이 선택되는 XEvent UI의 문제를 수정했습니다. </br></br> 자세한 내용은 UserVoice의 다음 항목을 참조하세요. [SSMS 확장 이벤트 UI가 마우스로 가리키면 작업을 선택합니다](https://feedback.azure.com/forums/908035/suggestions/38262124). |
-| 플랫 파일 가져오기 | 사용자가 단순 데이터 형식과 풍부한 데이터 형식 검색 중에서 선택할 수 있도록 함으로써 플랫 파일 가져오기에서 모든 데이터를 가져오지 않는 문제를 해결했습니다.</br></br> 자세한 내용은 UserVoice의 다음 항목을 참조하세요. [SSMS 플랫 파일 가져오기에서 모든 데이터를 가져오지 못합니다](https://feedback.azure.com/forums/908035/suggestions/38096989). |
+| 일반 SSMS | 사용자가 UTC 오프셋이 음수인 TZ에 있는 경우 SSMS를 사용하여 SQL Azure 관리형 인스턴스에 대한 감사를 구성할 수 없도록 하는 문제를 해결했습니다. |
+| 일반 SSMS | 표에 마우스를 가리키면 해당 행이 선택되는 XEvent UI의 문제를 수정했습니다. </br></br> 자세한 내용은 SQL Server 사용자 피드백 항목을 참조하세요. [SSMS 확장 이벤트 UI가 마우스로 가리키면 작업을 선택합니다](https://feedback.azure.com/forums/908035/suggestions/38262124). |
+| 플랫 파일 가져오기 | 사용자가 단순 데이터 형식과 풍부한 데이터 형식 검색 중에서 선택할 수 있도록 함으로써 플랫 파일 가져오기에서 모든 데이터를 가져오지 않는 문제를 해결했습니다.</br></br> 자세한 내용은 SQL Server 사용자 피드백 항목을 참조하세요. [SSMS 플랫 파일 가져오기에서 모든 데이터를 가져오지 못합니다](https://feedback.azure.com/forums/908035/suggestions/38096989). |
 | Integration Services | SSIS 작업 보고서에 대한 새 작업 형식 *StartNonCatalogExecution*을 추가했습니다.|
 | Integration Services | Azure 사용 `DTExec` 유틸리티에서 생성된 Azure Data Factory 파이프라인의 문제가 올바른 매개 변수 형식을 사용하도록 해결되었습니다. (18.3.1에서는 명시적) |
 | SMO/스크립팅 | **SMO.Server.SetDefaultInitFields(true)** 사용 중 속성을 가져올 때 SMO로 인해 에러가 발생하는 문제를 수정했습니다.|
@@ -265,11 +346,11 @@ SSMS 18.5는 SSMS의 최신 GA(일반 공급) 릴리스입니다. 이전 버전�
 
 #### <a name="known-issues-1831"></a>알려진 문제(18.3.1)
 
-- 머신 A에서 실행되는 SSMS에서 만든 데이터베이스 다이어그램을 머신 B에서 수정할 수 없습니다(SSMS 충돌). 자세한 내용은 [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37992649)를 참조하세요.
+- 머신 A에서 실행되는 SSMS에서 만든 데이터베이스 다이어그램을 머신 B에서 수정할 수 없습니다(SSMS 충돌). 자세한 내용은 [SQL Server 사용자 피드백](https://feedback.azure.com/forums/908035/suggestions/37992649)을 참조하세요.
 
-- 여러 쿼리 창 간을 전환할 때 다시 그려지는 문제가 있습니다. 자세한 내용은 [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37474042)를 참조하세요. 이 문제의 해결 방법은 도구 > 옵션에서 하드웨어 가속을 사용하지 않도록 설정하는 것입니다.
+- 여러 쿼리 창 간을 전환할 때 다시 그려지는 문제가 있습니다. 자세한 내용은 [SQL Server 사용자 피드백](https://feedback.azure.com/forums/908035/suggestions/37474042)을 참조하세요. 이 문제의 해결 방법은 도구 > 옵션에서 하드웨어 가속을 사용하지 않도록 설정하는 것입니다.
 
-다른 알려진 문제를 확인하고 제품 팀에 피드백을 제공하려면 [UserVoice](https://feedback.azure.com/forums/908035-sql-server)를 참조할 수 있습니다.
+다른 알려진 문제를 확인하고 제품 팀에 피드백을 제공하려면 [SQL Server 사용자 피드백](https://feedback.azure.com/forums/908035-sql-server)을 참조하세요.
 
 ### <a name="182"></a>18.2
 
@@ -280,8 +361,6 @@ SSMS 18.5는 SSMS의 최신 GA(일반 공급) 릴리스입니다. 이전 버전�
 - 릴리스 날짜: 2019년 7월 25일
 
 [중국어(간체)](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x804) | [중국어(번체)](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x404) | [영어(미국)](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x409) | [프랑스어](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x40c) | [독일어](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x407) | [이탈리아어](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x410) | [일본어](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x411) | [한국어](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x412) | [포르투갈어(브라질)](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x416) | [러시아어](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x419) | [스페인어](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x40a)
-
-18.2는 18.1의 업데이트로 다음과 같은 새 항목 및 버그가 수정되었습니다.
 
 ### <a name="whats-new-in-182"></a>18.2의 새로운 기능
 
@@ -306,38 +385,38 @@ SSMS 18.5는 SSMS의 최신 GA(일반 공급) 릴리스입니다. 이전 버전�
 | Always On | SSMS가 동기로 구성된 경우 읽기 확장 AG(클러스터 유형=없음)를 사용할 때 잘못된 장애 조치(failover) 마법사를 표시하는 문제를 해결했습니다. 이제 SSMS는 클러스터 유형이 없음인 가용성에만 허용되는 Force_Failover_Allow_Data_Loss 옵션에 대한 마법사를 표시합니다. |
 | Always On | 마법사에서 동기화 횟수를 3회로 제한하는 문제를 해결했습니다. |
 | 데이터 분류 | CompatLevel이 150보다 작은 데이터베이스에 대해 데이터 분류 보고서를 보려고 할 때 SSMS가 *0에서 시작하는 인덱스는 0보다 크거나 같아야 합니다.* 오류를 발생하는 문제를 해결했습니다. |
-| 일반 SSMS | 사용자가 마우스 휠을 통해 결과 창을 가로로 스크롤할 수 없는 문제를 해결했습니다. 자세한 내용은 [UserVoice](https://feedback.azure.com/forums/908035/suggestions/34145641)를 참조하세요. |
+| 일반 SSMS | 사용자가 마우스 휠을 통해 결과 창을 가로로 스크롤할 수 없는 문제를 해결했습니다. 자세한 내용은 [SQL Server 사용자 피드백](https://feedback.azure.com/forums/908035/suggestions/34145641)을 참조하세요. |
 | 일반 SSMS | 무해한 대기 유형 SQLTRACE_WAIT_ENTRIES를 무시하도록 *작업 모니터*가 업데이트되었습니다. |
-| 일반 SSMS | 일부 색 옵션 *(텍스트 편집기 > 편집기 탭 및 상태 표시줄)* 이 유지되지 않는 문제가 해결되었습니다. [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37924165)를 참조하세요.
+| 일반 SSMS | 일부 색 옵션 *(텍스트 편집기 > 편집기 탭 및 상태 표시줄)* 이 유지되지 않는 문제가 해결되었습니다. [SQL Server 사용자 피드백](https://feedback.azure.com/forums/908035/suggestions/37924165)을 참조하세요.
 | 일반 SSMS | 기능은 동일하지만 혼동을 줄이기 위해 연결 대화 상자에서 *Azure Active Directory - MFA 지원을 포함한 유니버설*이 *Active Directory - MFA를 통한 유니버설*로 바뀌었습니다. |
 | 일반 SSMS | Azure SQL Database를 만들 때 올바른 기본값을 사용하도록 SSMS가 업데이트되었습니다. |
 | 일반 SSMS | 서버가 [SQL Linux 컨테이너](../linux/quickstart-install-connect-docker.md)인 경우 [서버 등록](register-servers/register-servers.md)의 노드에서 *PowerShell을 시작*할 수 없는 문제를 해결했습니다. |
-| 플랫 파일 가져오기 | SSMS 18.0에서 18.1로 업그레이드 한 후 *플랫 파일 가져오기*가 작동하지 않는 문제를 해결했습니다. [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37912636)를 참조하세요. |
+| 플랫 파일 가져오기 | SSMS 18.0에서 18.1로 업그레이드 한 후 *플랫 파일 가져오기*가 작동하지 않는 문제를 해결했습니다. [SQL Server 사용자 피드백](https://feedback.azure.com/forums/908035/suggestions/37912636)을 참조하세요. |
 | 플랫 파일 가져오기 | *플랫 파일 가져오기 마법사가 헤더에 유니코드 문자가 포함된 .csv 파일에서 중복되거나 잘못된 열*을 보고하는 문제가 해결되었습니다. |
-| 개체 탐색기 | Sql Express에 연결된 경우 일부 메뉴 항목(예: SQL Server *가져오기 및 내보내기 마법사*)이 없거나 사용하지 않도록 설정되는 문제를 해결했습니다. 자세한 내용은 [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37500016)를 참조하세요. |
-| 개체 탐색기 | 개체 탐색기에서 편집기로 개체를 끌어올 때 SSMS가 충돌하는 문제를 해결했습니다. 자세한 내용은 [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37887988)를 참조하세요. |
-| 개체 탐색기 | 데이터베이스 이름을 바꾸면 잘못된 데이터베이스 이름이 개체 탐색기에 표시되는 문제를 해결했습니다. 자세한 내용은 [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37638472)를 참조하세요. |
+| 개체 탐색기 | Sql Express에 연결된 경우 일부 메뉴 항목(예: SQL Server *가져오기 및 내보내기 마법사*)이 없거나 사용하지 않도록 설정되는 문제를 해결했습니다. 자세한 내용은 [SQL Server 사용자 피드백](https://feedback.azure.com/forums/908035/suggestions/37500016)을 참조하세요. |
+| 개체 탐색기 | 개체 탐색기에서 편집기로 개체를 끌어올 때 SSMS가 충돌하는 문제를 해결했습니다. 자세한 내용은 [SQL Server 사용자 피드백](https://feedback.azure.com/forums/908035/suggestions/37887988)을 참조하세요. |
+| 개체 탐색기 | 데이터베이스 이름을 바꾸면 잘못된 데이터베이스 이름이 개체 탐색기에 표시되는 문제를 해결했습니다. 자세한 내용은 [SQL Server 사용자 피드백](https://feedback.azure.com/forums/908035/suggestions/37638472)을 참조하세요. |
 | 개체 탐색기 | Windows에서 지원하지 않는 데이터 정렬을 사용하도록 설정된 데이터베이스에 대해 개체 탐색기에서 *테이블* 노드를 확장하려고 할 때 오류를 트리거하는(사용자가 자신의 테이블을 확장할 수 없음) 장기 미해결 문제가 해결되었습니다. 이러한 데이터 정렬의 예는 Korean_Wansung_Unicode_CI_AS입니다. |
 | [서버 등록](register-servers/register-servers.md) | 등록된 서버가 *Active Directory - 통합* 또는 *Azure Active Directory - MFA를 통한 유니버설 인증*을 사용할 경우 여러 서버에 대해 쿼리를 실행하려고 하면(등록된 서버의 *그룹*에서) SSMS가 연결되지 못하여 쿼리가 작동되지 않는 문제가 해결되었습니다. |
 | [서버 등록](register-servers/register-servers.md) | 등록된 서버가 *Active Directory - 암호* 또는 *SQL 인증*을 사용하고 사용자가 암호를 저장하지 않도록 선택할 경우 여러 서버에 대해 쿼리를 실행하려고 하면(등록된 서버의 *그룹*에서) SSMS가 중단되는 문제를 해결했습니다. |
 | 보고서 | 데이터 파일에 방대한 수의 익스텐트가 있을 때 보고서에 오류가 발생하는 *디스크 사용* 보고서의 문제를 해결했습니다. |
 | 복제 도구 | 복제 모니터가 AG의 게시자 DB 및 AG의 배포자와 작동되지 않는 문제를 해결했습니다(이전에는 SSMS 17.x에서 이 문제를 해결함). |
-| SQL 에이전트 | 작업 단계 추가, 삽입, 편집 또는 제거 시 포커스가 활성 행 대신 첫 번째 행을 재설정하는 문제를 해결했습니다. 자세한 내용은 [UserVoice](https://feedback.azure.com/forums/908035/suggestions/38070892)를 참조하세요. |
-| SMO/스크립팅 | *CREATE OR ALTER*가 확장 속성이 있는 개체를 스크립팅하지 않는 문제를 해결했습니다. 자세한 내용은 [UserVoice](https://feedback.azure.com/forums/908035-sql-server/suggestions/37236748)를 참조하세요. |
-| SMO/스크립팅 | SSMS가 CREATE EXTERNAL LIBRARY를 올바르게 스크립트로 작성할 수 없는 문제를 해결했습니다. 자세한 내용은 [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37868089)를 참조하세요. |
+| SQL 에이전트 | 작업 단계 추가, 삽입, 편집 또는 제거 시 포커스가 활성 행 대신 첫 번째 행을 재설정하는 문제를 해결했습니다. 자세한 내용은 [SQL Server 사용자 피드백](https://feedback.azure.com/forums/908035/suggestions/38070892)을 참조하세요. |
+| SMO/스크립팅 | *CREATE OR ALTER*가 확장 속성이 있는 개체를 스크립팅하지 않는 문제를 해결했습니다. 자세한 내용은 [SQL Server 사용자 피드백](https://feedback.azure.com/forums/908035-sql-server/suggestions/37236748)을 참조하세요. |
+| SMO/스크립팅 | SSMS가 CREATE EXTERNAL LIBRARY를 올바르게 스크립트로 작성할 수 없는 문제를 해결했습니다. 자세한 내용은 [SQL Server 사용자 피드백](https://feedback.azure.com/forums/908035/suggestions/37868089)을 참조하세요. |
 | SMO/스크립팅 | 수천 개의 테이블을 포함하는 데이터베이스에 대해 *스크립트 생성*을 실행하려고 하면 진행률 대화 상자가 중단된 것처럼 나타내는 문제를 해결했습니다. |
 | SMO/스크립팅 | SQL 2019에서 *외부 테이블* 스크립팅이 작동하지 않는 문제가 해결되었습니다. |
-| SMO/스크립팅 | SQL 2019에서 *외부 데이터 원본* 스크립팅이 작동하지 않는 문제가 해결되었습니다. 자세한 내용은 [UserVoice](https://feedback.azure.com/forums/908035/suggestions/34295080)를 참조하세요. |
+| SMO/스크립팅 | SQL 2019에서 *외부 데이터 원본* 스크립팅이 작동하지 않는 문제가 해결되었습니다. 자세한 내용은 [SQL Server 사용자 피드백](https://feedback.azure.com/forums/908035/suggestions/34295080)을 참조하세요. |
 | SMO/스크립팅 | Azure SQL DB를 대상으로 할 때 열의 *확장 속성*이 스크립팅되지 않는 문제를 해결했습니다. 자세한 내용은 [stackoverflow](https://stackoverflow.com/questions/56952337/how-can-i-script-the-descriptions-of-columns-in-ms-sql-server-management-studio)를 참조하세요. |
 | SMO/스크립팅 | 마지막 페이지 삽입: SMO - 속성 *Index.IsOptimizedForSequentialKey* 추가 |
-|**SSMS 설치**| **SSMS 설치 프로그램이 언어 불일치를 보고하는 SSMS의 설치를 잘못 차단하는 문제를 완화했습니다. 이러한 특성은 중단된 설치 또는 이전 버전 SSMS의 잘못된 제거와 같은 일부 비정상적인 상황에서 문제가 될 수 있습니다. 자세한 내용은 [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37483594/)를 참조하세요.** |
+|**SSMS 설치**| **SSMS 설치 프로그램이 언어 불일치를 보고하는 SSMS의 설치를 잘못 차단하는 문제를 완화했습니다. 이러한 특성은 중단된 설치 또는 이전 버전 SSMS의 잘못된 제거와 같은 일부 비정상적인 상황에서 문제가 될 수 있습니다. 자세한 내용은 [SQL Server 사용자 피드백](https://feedback.azure.com/forums/908035/suggestions/37483594/)을 참조하세요.** |
 | XEvent 프로파일러 | 뷰어를 닫을 때 발생하는 충돌이 해결되었습니다. |
 
 #### <a name="known-issues-182"></a>알려진 문제(18.2)
 
-- SSMS 충돌이 발생할 수 있기 때문에 머신 A에서 실행되는 SSMS에서 만든 데이터베이스 다이어그램을 머신 B에서 수정할 수 없습니다. 자세한 내용은 [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37992649)를 참조하세요.
+- SSMS 충돌이 발생할 수 있기 때문에 머신 A에서 실행되는 SSMS에서 만든 데이터베이스 다이어그램을 머신 B에서 수정할 수 없습니다. 자세한 내용은 [SQL Server 사용자 피드백](https://feedback.azure.com/forums/908035/suggestions/37992649)을 참조하세요.
 
-- 여러 쿼리 창 간을 전환할 때 다시 그려지는 문제가 있습니다. [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37474042)를 참조하세요. 이 문제의 해결 방법은 **도구** > **옵션**에서 하드웨어 가속을 사용하지 않도록 설정하는 것입니다.
+- 여러 쿼리 창 간을 전환할 때 다시 그려지는 문제가 있습니다. [SQL Server 사용자 피드백](https://feedback.azure.com/forums/908035/suggestions/37474042)을 참조하세요. 이 문제의 해결 방법은 **도구** > **옵션**에서 하드웨어 가속을 사용하지 않도록 설정하는 것입니다.
 
 - SSMS 결과에서 표시되는 데이터의 크기에는 그리드, 텍스트 또는 파일로 표시되는 제한 사항이 있습니다.
 
@@ -354,8 +433,6 @@ SSMS 18.5는 SSMS의 최신 GA(일반 공급) 릴리스입니다. 이전 버전�
 - 릴리스 날짜: 2019년 6월 11일
 
 [중국어(간체)](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x804) | [중국어(번체)](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x404) | [영어(미국)](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x409) | [프랑스어](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x40c) | [독일어](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x407) | [이탈리아어](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x410) | [일본어](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x411) | [한국어](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x412) | [포르투갈어(브라질)](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x416) | [러시아어](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x419) | [스페인어](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x40a)
-
-18.1은 18.0의 작은 업데이트로 다음과 같은 새 항목 및 버그가 수정되었습니다.
 
 #### <a name="whats-new-in-181"></a>18.1의 새로운 기능
 
@@ -383,26 +460,26 @@ SSMS 18.5는 SSMS의 최신 GA(일반 공급) 릴리스입니다. 이전 버전�
 | 일반 SSMS | SSMS가 도움말 설정을 준수하지 않은 문제가 해결되었습니다(온라인 및 오프라인). |
 | 높은 DPI | 지원되지 않는 쿼리 옵션에 대한 오류 대화 상자의 컨트롤 레이아웃이 수정되었습니다. |
 | 높은 DPI | 일부 지역화 버전의 SSMS에 있는 *새 가용성 그룹* 페이지의 컨트롤 레이아웃을 수정했습니다. |
-| 높은 DPI | *새 작업 일정* 페이지의 레이아웃이 수정되었습니다. 자세한 내용은 [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37632094)를 참조하세요. |
+| 높은 DPI | *새 작업 일정* 페이지의 레이아웃이 수정되었습니다. 자세한 내용은 [SQL Server 사용자 피드백](https://feedback.azure.com/forums/908035/suggestions/37632094)을 참조하세요. |
 | 플랫 파일 가져오기 | 가져오기 중에 행이 자동으로 손실될 수 있는 문제가 해결되었습니다.|
 | Intellisense/편집기 | IntelliSense용 Azure SQL Database에 대한 SMO 기반 쿼리 트래픽이 줄어듭니다. |
 | Intellisense/편집기 | 사용자를 만들기 위해 T-SQL을 입력할 때 표시되는 도구 설명의 문법적 오류가 해결되었습니다. 또한 사용자와 로그인 사이의 모호함을 없애기 위해 오류 메시지를 수정했습니다. |
-| 로그 뷰어 | 개체 탐색기에서 이전 보관 기호를 두 번 클릭하더라도 SSMS가 항상 현재 서버(또는 에이전트) 로그를 여는 문제가 해결되었습니다. 자세한 내용은 [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37633648)를 참조하세요. |
-| SSMS 설치 | 설치 로그 경로에 공백이 포함되어 있을 때 SSMS 설치가 실패하는 문제가 해결되었습니다. 자세한 내용은 [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37496110)를 참조하세요. |
-| SSMS 설치 | SSMS가 시작 화면을 표시한 후 바로 종료되는 문제가 해결되었습니다. </br> 자세한 내용은 다음 사이트를 참조하세요. [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37502512)[SSMS에서 시작 거부](https://dba.stackexchange.com/questions/238609/ssms-refuses-to-start), [데이터베이스 관리자](https://dba.stackexchange.com/questions/237086/sql-server-management-studio-18-wont-open-only-splash-screen-pops-up) |
+| 로그 뷰어 | 개체 탐색기에서 이전 보관 기호를 두 번 클릭하더라도 SSMS가 항상 현재 서버(또는 에이전트) 로그를 여는 문제가 해결되었습니다. 자세한 내용은 [SQL Server 사용자 피드백](https://feedback.azure.com/forums/908035/suggestions/37633648)을 참조하세요. |
+| SSMS 설치 | 설치 로그 경로에 공백이 포함되어 있을 때 SSMS 설치가 실패하는 문제가 해결되었습니다. 자세한 내용은 [SQL Server 사용자 피드백](https://feedback.azure.com/forums/908035/suggestions/37496110)을 참조하세요. |
+| SSMS 설치 | SSMS가 시작 화면을 표시한 후 바로 종료되는 문제가 해결되었습니다. </br> 자세한 내용은 다음 사이트를 참조하세요. [SQL Server 사용자 피드백](https://feedback.azure.com/forums/908035/suggestions/37502512), [SSMS에서 시작 거부](https://dba.stackexchange.com/questions/238609/ssms-refuses-to-start) 및 [데이터베이스 관리자](https://dba.stackexchange.com/questions/237086/sql-server-management-studio-18-wont-open-only-splash-screen-pops-up). |
 | 개체 탐색기 | Linux의 SQL에 연결된 경우 *PowerShell 시작* 활성화에 대한 제한이 해제되었습니다. |
 | 개체 탐색기 | Polybase/스케일 아웃 그룹 노드를 확장하려고 할 때(컴퓨팅 노드에 연결될 때) SSMS가 충돌하는 문제가 해결되었습니다. |
-| 개체 탐색기 | 지정된 인덱스를 비활성화한 후에도 *사용 안 함* 메뉴 항목이 여전히 활성화되는 문제가 해결되었습니다. 자세한 내용은 [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37735375)를 참조하세요. |
-| 보고서 | 보고서(SQL 성능 대시보드 보고서)를 수정하여 GrantedQueryMemory를 KB 단위로 표시합니다. 자세한 내용은 [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37167289)를 참조하세요. |
+| 개체 탐색기 | 지정된 인덱스를 비활성화한 후에도 *사용 안 함* 메뉴 항목이 여전히 활성화되는 문제가 해결되었습니다. 자세한 내용은 [SQL Server 사용자 피드백](https://feedback.azure.com/forums/908035/suggestions/37735375)을 참조하세요. |
+| 보고서 | 보고서(SQL 성능 대시보드 보고서)를 수정하여 GrantedQueryMemory를 KB 단위로 표시합니다. 자세한 내용은 [SQL Server 사용자 피드백](https://feedback.azure.com/forums/908035/suggestions/37167289)을 참조하세요. |
 | 보고서 | Always-On 시나리오에서 로그 블록의 추적을 개선했습니다. |
 | 실행 계획 | 실행 계획 스키마에 새 실행 계획 요소 *SpillOccurred*가 추가되었습니다. |
 | 실행 계획 | 실행 계획 스키마에 원격 읽기(*ActualPageServerReads*, *ActualPageServerReadAheads* *ActualLobPageServerReads*, *ActualLobPageServerReadAheads*)를 추가했습니다. |
 | SMO/스크립팅 | 비그래프 테이블에 대한 스크립팅 중에 에지 제약 조건을 쿼리하지 마세요. |
 | SMO/스크립팅 | *데이터 분류*로 열을 스크립팅할 때 민감도 분류에 대한 제약 조건이 제거되었습니다. |
-| SMO/스크립팅 | 데이터 생성 시 그래프 테이블의 "스크립트 생성"이 실패하는 문제가 해결되었습니다. 자세한 내용은 [UserVoice](https://feedback.azure.com/forums/908035-sql-server/suggestions/32898466)를 참조하세요. |
+| SMO/스크립팅 | 데이터 생성 시 그래프 테이블의 "스크립트 생성"이 실패하는 문제가 해결되었습니다. 자세한 내용은 [SQL Server 사용자 피드백](https://feedback.azure.com/forums/908035-sql-server/suggestions/32898466)을 참조하세요. |
 | SMO/스크립팅 | EnumObjects() 메서드가 동의어의 스키마 이름을 가져오지 않는 문제가 해결되었습니다. |
 | SMO/스크립팅 | *AdvancedOptions* 섹션을 읽지 않은(암호가 지정되지 않은 경우) UIConnectionInfo.LoadFromStream()의 문제가 해결되었습니다. |
-| SQL 에이전트 | 작업 속성 창을 사용하여 작업하는 동안 SSMS가 충돌하는 문제가 해결되었습니다. 자세한 내용은 [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37164244)를 참조하세요. |
+| SQL 에이전트 | 작업 속성 창을 사용하여 작업하는 동안 SSMS가 충돌하는 문제가 해결되었습니다. 자세한 내용은 [SQL Server 사용자 피드백](https://feedback.azure.com/forums/908035/suggestions/37164244)을 참조하세요. |
 | SQL 에이전트 | *작업 단계 속성*의 "보기" 단추가 항상 활성화되지 않아 지정된 작업 단계의 출력을 볼 수 없게 되는 문제가 해결되었습니다. |
 | XEvent UI | 동일한 이름의 이벤트와 구분하기 위해 XEvent 목록에 "Package" 열을 추가했습니다. |
 | XEvent UI | 누락된 "EXTERNAL LIBRARY" 클래스 형식 매핑이 XEventUI에 추가되었습니다. |
@@ -415,7 +492,7 @@ SSMS 18.5는 SSMS의 최신 GA(일반 공급) 릴리스입니다. 이전 버전�
 
 - SSMS 결과에서 표시되는 데이터의 크기에는 그리드, 텍스트 또는 파일로 표시되는 제한 사항이 있습니다.
 
-- 머신 A에서 실행되는 SSMS에서 만든 데이터베이스 다이어그램을 머신 B에서 수정할 수 없습니다(SSMS 충돌). 자세한 내용은 [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37992649)를 참조하세요.
+- 머신 A에서 실행되는 SSMS에서 만든 데이터베이스 다이어그램을 머신 B에서 수정할 수 없습니다(SSMS 충돌). 자세한 내용은 [SQL Server 사용자 피드백](https://feedback.azure.com/forums/908035/suggestions/37992649)을 참조하세요.
 
 ### <a name="180"></a>18.0
 
@@ -519,13 +596,13 @@ SSMS 18.5는 SSMS의 최신 GA(일반 공급) 릴리스입니다. 이전 버전�
 | :-------| :------|
 |크래시 및 중지|GDI 개체와 관련된 일반적인 SSMS 크래시의 소스를 수정했습니다.|
 |크래시 및 중지|"만들기/업데이트/삭제"로 스크립트를 선택할 때 반응이 없거나 성능이 저하되는 공통 소스를 수정했습니다(SMO 개체의 불필요한 페치를 제거함).|
-|크래시 및 중지|ADAL 추적을 사용하는 동안 MFA를 사용하여 Azure SQL DB에 연결할 때 반응이 없는 문제를 해결했습니다.|
-|크래시 및 중지|작업 모니터에서 호출하면 활성 쿼리 통계에서 반응이 없는(또는 인지된 반응 없음) 문제(“보안 정보 유지”가 설정되지 않은 SQL Server 인증을 사용할 때 발생하는 문제)를 해결했습니다.|
-|크래시 및 중지|개체 탐색기에서 “보고서”를 선택할 때 반응이 없는 문제(리소스 연결 대기 시간이 길거나 일시적으로 리소스에 액세스할 수 없으면 발생하는 문제)를 해결했습니다.|
+|크래시 및 중지|ADAL 추적이 사용하도록 설정된 동안 MFA를 사용하여 Azure SQL DB에 연결할 때 시스템이 반응하지 않는 문제를 해결했습니다.|
+|크래시 및 중지|활동 모니터에서 호출하면 라이브 쿼리 통계에서 시스템이 반응하지 않는(또는 인지된 반응이 없는) 문제(“보안 정보 유지”가 설정되지 않은 SQL Server 인증을 사용할 때 발생하는 문제)가 수정되었습니다.|
+|크래시 및 중지|개체 탐색기에서 “보고서”를 선택할 때 시스템이 반응하지 않는 문제(리소스 연결 대기 시간이 길거나 일시적으로 리소스에 액세스할 수 없으면 발생하는 문제)가 해결했습니다.|
 |크래시 및 중지|중앙 관리 서버 및 Azure SQL 서버를 사용하려고 할 때 SSMS에서 발생하는 충돌 문제가 해결되었습니다. 자세한 내용은 [중앙 관리 서버를 사용할 때 SMSS 17.5 애플리케이션 오류 및 충돌](https://feedback.azure.com/forums/908035/suggestions/33374884)을 참조하세요.|
-|크래시 및 중지|IsFullTextEnabled 속성을 검색하는 방법을 최적화하여 개체 탐색기의 중단 문제가 해결되었습니다.|
-|크래시 및 중지|불필요한 쿼리를 작성하여 데이터베이스 속성을 검색하지 않도록 방지하여 "데이터베이스 복사 마법사"의 중단 문제가 해결되었습니다.|
-|크래시 및 중지|T-SQL을 편집하는 동안 SSMS가 중단/충돌하는 문제가 해결되었습니다.|
+|크래시 및 중지|IsFullTextEnabled 속성을 검색하는 방법을 최적화하여 개체 탐색기에서 시스템이 반응하지 않는 문제를 해결했습니다.|
+|크래시 및 중지|불필요한 쿼리를 작성하여 데이터베이스 속성을 검색하지 않도록 방지하여 “데이터베이스 복사 마법사”에서 시스템이 반응하지 않는 문제를 해결했습니다.|
+|크래시 및 중지|T-SQL을 편집하는 동안 SSMS가 반응하지 않도록 하는 문제를 해결했습니다.|
 |크래시 및 중지|대규모 T-SQL 스크립트를 편집할 때 SSMS가 응답하지 않는 문제를 완화했습니다.|
 |크래시 및 중지|쿼리에서 반환된 대규모 데이터 세트를 처리할 때 SSMS의 메모리 부족이 발생하는 문제가 해결되었습니다.|
 |일반 SSMS|"등록된 서버"의 연결에서 "ApplicationIntent"가 전달되지 않는 문제가 해결되었습니다.|
@@ -686,7 +763,7 @@ SSMS 18.5는 SSMS의 최신 GA(일반 공급) 릴리스입니다. 이전 버전�
 
 - SSMS 결과에서 표시되는 데이터의 크기에는 그리드, 텍스트 또는 파일로 표시되는 제한 사항이 있습니다.
 
-- 여러 쿼리 창 간을 전환할 때 다시 그려지는 문제가 있습니다. 자세한 내용은 [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37474042)를 참조하세요. 이 문제의 해결 방법은 도구 > 옵션에서 하드웨어 가속을 사용하지 않도록 설정하는 것입니다.
+- 여러 쿼리 창 간을 전환할 때 다시 그려지는 문제가 있습니다. 자세한 내용은 [SQL Server 사용자 피드백](https://feedback.azure.com/forums/908035/suggestions/37474042)을 참조하세요. 이 문제의 해결 방법은 도구 > 옵션에서 하드웨어 가속을 사용하지 않도록 설정하는 것입니다.
 
 ### <a name="1791"></a>17.9.1
 
@@ -695,8 +772,6 @@ SSMS 18.5는 SSMS의 최신 GA(일반 공급) 릴리스입니다. 이전 버전�
 - 릴리스 번호: 17.9.1  
 - 빌드 번호: 14.0.17289.0  
 - 릴리스 날짜: 2018년 11월 21일
-
-17.9.1은 17.9의 작은 업데이트로 다음과 같은 버그가 수정되었습니다.
 
 #### <a name="bug-fixes-in-1791"></a>17.9.1의 버그 수정
 
@@ -763,7 +838,7 @@ SSMS 설치에 문제가 있고, 표준 제거 및 다시 설치로 해결되지
 
 * SQL 디자이너 스크롤 막대 관련 문제를 해결함. [Connect ID 3114856](https://connect.microsoft.com/SQLServer/feedback/details/3114856/bug-in-scrollbar-on-sql-desginer-in-ssms-2016)
 
-* 테이블의 상황에 맞는 메뉴가 잠시 중단됨
+* 테이블의 상황에 맞는 메뉴가 잠시 응답하지 않음
 
 * SSMS에서 가끔 [작업 모니터]에서 예외를 발생시키고 작동을 중단함. [Connect ID 697527](https://connect.microsoft.com/SQLServer/feedback/details/697527/)
 

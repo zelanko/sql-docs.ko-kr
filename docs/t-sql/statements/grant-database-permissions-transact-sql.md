@@ -20,12 +20,12 @@ ms.assetid: 499e5ed6-945c-4791-ab45-68dec0b9c289
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3c421a03bfbafbe8d734ad6d3174e3ea20834606
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 5aca8d2f5135400c80c5943455237c066a7ba424
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483241"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87236859"
 ---
 # <a name="grant-database-permissions-transact-sql"></a>GRANT 데이터베이스 사용 권한(Transact-SQL)
 
@@ -63,9 +63,9 @@ permission | ALL [ PRIVILEGES ]
 
 *permission* 데이터베이스에 대해 부여할 수 있는 권한을 지정합니다. 사용 권한 목록은 이 항목의 뒤에 나오는 주의 섹션을 참조하세요.
 
-ALL 이 옵션은 모든 가능한 권한을 부여하지 않습니다. ALL을 부여하는 것은 다음 사용 권한을 부여하는 것과 동일합니다. BACKUP DATABASE, BACKUP LOG, CREATE DATABASE, CREATE DEFAULT, CREATE FUNCTION, CREATE PROCEDURE, CREATE RULE, CREATE TABLE 및 CREATE VIEW.
+ALL 이 옵션은 모든 가능한 권한을 부여하지 않습니다. ALL을 부여하는 것은 다음 사용 권한을 부여하는 것과 동일합니다. BACKUP DATABASE, BACKUP LOG, CREATE DEFAULT, CREATE FUNCTION, CREATE PROCEDURE, CREATE RULE, CREATE TABLE, CREATE VIEW.
 
-PRIVILEGES ISO 준수를 위해 포함됩니다. ALL의 동작을 변경하지 않습니다.
+PRIVILEGES ANSI-92 준수를 위해 포함됩니다. ALL의 동작을 변경하지 않습니다.
 
 WITH GRANT OPTION 지정된 권한을 다른 보안 주체에게 부여할 수 있는 권한도 이 보안 주체에 제공됨을 나타냅니다.
 

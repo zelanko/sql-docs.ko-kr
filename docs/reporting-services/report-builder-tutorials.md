@@ -1,5 +1,6 @@
 ---
 title: 보고서 작성기 자습서 | Microsoft Docs
+description: 데이터 원본에 연결하고 보고서에 차트를 추가하는 방법을 포함하여 기본 SSRS(SQL Server Reporting Services) 페이지를 매긴 보고서를 만드는 방법을 알아봅니다.
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: c99495c3-899b-4c84-af87-76e96d4afa23
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8e9d481e03efdcfb7ff109998eda3f4b2f6f3a3d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 096823a659f8b0e1e75cbde0635a4715068f8392
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "64330636"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242943"
 ---
 # <a name="report-builder-tutorials"></a>보고서 작성기 자습서
 
@@ -56,7 +57,7 @@ ms.locfileid: "64330636"
 [자습서: 보고서에 KPI 추가&#40;보고서 작성기&#41;](../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md)  
 이 자습서의 단계를 따라 보고서에 KPI(핵심 성과 지표)를 추가하는 방법을 배울 수 있습니다.  
   
-[자습서: 지도 보고서&#40;보고서 작성기&#41;](../reporting-services/tutorial-map-report-report-builder.md)  
+[자습서: 맵 보고서&#40;보고서 작성기&#41;](../reporting-services/tutorial-map-report-report-builder.md)  
 이 자습서의 단계를 따라 보고서에 지도를 추가하는 방법을 배울 수 있습니다.  
   
 [자습서: 보고서에 매개 변수 추가&#40;보고서 작성기&#41;](../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)  

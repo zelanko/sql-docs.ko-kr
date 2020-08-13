@@ -1,5 +1,5 @@
 ---
-title: SQL Server 테이블 삭제 | Microsoft Docs
+title: SQL Server 테이블 삭제(OLE DB 드라이버) | Microsoft Docs
 description: OLE DB Driver for SQL Server를 사용하여 SQL Server 테이블 삭제
 ms.custom: ''
 ms.date: 06/14/2018
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - dropping tables
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 5c5b241af215c04a72bf389079a4a0299d7496b7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6a913e3fa3d57c8f2e7a51f2b1d5b177361c43ff
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67993997"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87244140"
 ---
 # <a name="dropping-a-sql-server-table"></a>SQL Server 테이블 삭제
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

@@ -1,5 +1,6 @@
 ---
 title: 기술 참조 | Microsoft Docs
+description: SQL Server Reporting Services를 사용하거나 관리하기 위한 도구 및 PowerShell 참조 설명서에 대해 알아봅니다.
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4876bee2-071f-4a8d-ab8a-b03337625b74
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9d368a5156651ed47ed6942f8fb5ba7925a397c6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 89d7d4acbb9edda1e6bb5edd78f6bc043c429529
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77077862"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87238246"
 ---
 # <a name="technical-reference-ssrs"></a>기술 참조(SSRS)
 

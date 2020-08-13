@@ -1,5 +1,6 @@
 ---
 title: 개체 탐색기에서 공간 데이터 보기
+description: 쿼리 편집기 공간 데이터 결과 창의 시각적 매핑 도구를 사용하여 공간 데이터 결과(기하학적 또는 지리적)를 보는 방법을 알아봅니다.
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,15 +11,15 @@ ms.assetid: 59cca562-e3f5-4257-b868-adcbcc0142cc
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fa47c1fe77caa828808c5a923a3ad824c12384e0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: dd277e7ebc0bcee59d87fc76e47aec80b77fdba2
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75252918"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87237273"
 ---
 # <a name="view-spatial-data-in-object-explorer"></a>개체 탐색기에서 공간 데이터 보기
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   쿼리 편집기의 **공간 데이터 결과** 창은 공간 데이터 결과와 **결과** 창에 표 형식으로 표시되는 데이터를 볼 수 있는 시각적인 매핑 도구를 제공합니다. **공간 데이터 결과** 창에 공간 데이터를 표시하려면 쿼리 결과에서 기하 도형 또는 지리 데이터가 포함된 적어도 하나 이상의 공간 데이터 열이 있어야 합니다.  
   
 ### <a name="to-view-spatial-data-in-the-spatial-results-window"></a>공간 데이터 결과 창에서 공간 데이터를 보려면  

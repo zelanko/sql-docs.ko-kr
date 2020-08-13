@@ -1,5 +1,5 @@
 ---
-title: 행 페치 | Microsoft Docs
+title: 행 페치(OLE DB 드라이버) | Microsoft Docs
 description: IRowset 인터페이스를 사용하여 행 페치
 ms.custom: ''
 ms.date: 06/14/2018
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, fetching
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: d47e94795f3bb81dd7a2d870190f081436c47e07
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2d803da7e8930eccb66843a025cb3426f5af62f5
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68015357"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87244198"
 ---
 # <a name="fetching-rows"></a>행 인출
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

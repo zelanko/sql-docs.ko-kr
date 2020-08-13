@@ -1,5 +1,6 @@
 ---
 title: '6단원: 그룹화 및 합계 추가(Reporting Services) | Microsoft Docs'
+description: Reporting Services 보고서에 그룹화 및 합계를 추가하여 데이터를 구성하고 요약하는 방법을 알아봅니다.
 ms.date: 04/18/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: e3d61228-2aa4-42cc-955e-602dbf3406a7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b5b9846a20615cf613dd50752ac63f2669b1e399
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5d149bb85834ae9c775e414e405889631a81f288
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65089676"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243267"
 ---
 # <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>6단원: 그룹화 및 합계 추가(Reporting Services)
 
@@ -86,7 +87,7 @@ ms.locfileid: "65089676"
 
    ![미리 보기: 총합계가 있는 기본 테이블](media/rs-basictablesumgrandtotalpreview.gif "미리 보기: 총합계가 있는 기본 테이블")
 
-## <a name="publishing-the-report-to-the-report-server-optional"></a>‘보고서 서버’에 보고서 게시(선택 사항) 
+## <a name="publishing-the-report-to-the-report-server-optional"></a>‘보고서 서버’에 보고서 게시(선택 사항)
 
 선택 단계로, 웹 포털에서 보고서를 볼 수 있도록 완성된 보고서를 보고서 서버에 게시할 수 있습니다.
 
@@ -117,7 +118,7 @@ ms.locfileid: "65089676"
 
 6. 관리자 권한으로 브라우저를 엽니다. 예를 들어 Internet Explorer 아이콘을 마우스 오른쪽 단추로 클릭하고 **관리자 권한으로 실행**을 선택합니다.
 7. 웹 포털 URL로 이동합니다.
-   - `https://<server name>/reports`입니다.
+   - `https://<server name>/reports`.
    - `https://localhost/reports`는 보고서 서버에서 보고서를 디자인하는 경우에만 작동합니다.
 
 8. Tutorial 폴더를 선택하고 “Sales Orders” 보고서를 선택하여 보고서를 봅니다.

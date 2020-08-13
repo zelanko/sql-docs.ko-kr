@@ -1,5 +1,6 @@
 ---
 title: '2단원: 보고서 데이터 원본 속성 수정 | Microsoft Docs'
+description: 웹 포털을 사용하여 받는 사람에게 배달될 보고서를 선택하는 방법과 보고서 데이터 원본 속성을 수정하는 방법을 알아봅니다.
 ms.date: 05/23/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,15 +9,15 @@ ms.topic: conceptual
 ms.assetid: c962b0ff-ce8a-4742-8262-dc730901afcf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 466415ebd4075afd5dda83e95a498a32b50af453
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1b45f2145efcca54d577db370b436e27c36ce987
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "62651740"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87235669"
 ---
-# <a name="lesson-2-modifying-the-report-data-source-properties"></a>Lesson 2: Modifying the Report Data Source Properties
-이 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 자습서 단원에서는 웹 포털을 사용하여 받는 사람에게 배달될 보고서를 선택합니다. 사용자가 정의하는 데이터 기반 구독은 **기본 테이블 보고서 만들기&amp;#40;SSRS 자습서&amp;#41;** 자습서에서 만든 [기본 테이블 보고서 만들기&#40;SSRS 자습서&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)보고서를 배포합니다.  다음 단계에서는 보고서에서 데이터를 가져오는 데 사용되는 데이터 원본 연결 정보를 수정합니다. **저장된 자격 증명** 을 사용하여 보고서 데이터 원본에 액세스하는 보고서만 데이터 기반 구독을 통해 배포할 수 있습니다. 저장된 자격 증명은 무인 보고서 처리에 필요합니다.  
+# <a name="lesson-2-modifying-the-report-data-source-properties"></a>2단원: 보고서 데이터 원본 속성 수정
+이 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 자습서 단원에서는 웹 포털을 사용하여 받는 사람에게 배달될 보고서를 선택합니다. 사용자가 정의하는 데이터 기반 구독은 **기본 테이블 보고서 만들기&#40;SSRS 자습서&#41;** 자습서에서 만든 [기본 테이블 보고서 만들기&amp;#40;SSRS 자습서&amp;#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)보고서를 배포합니다.  다음 단계에서는 보고서에서 데이터를 가져오는 데 사용되는 데이터 원본 연결 정보를 수정합니다. **저장된 자격 증명** 을 사용하여 보고서 데이터 원본에 액세스하는 보고서만 데이터 기반 구독을 통해 배포할 수 있습니다. 저장된 자격 증명은 무인 보고서 처리에 필요합니다.  
   
 또한 구독이 특정 주문 및 렌더링 형식에 대해 보고서의 서로 다른 인스턴스를 출력할 수 있도록 `[Order]` 에 대해 보고서를 필터링하는 매개 변수를 사용하기 위해 데이터 세트 및 보고서를 수정합니다.  
   
@@ -24,10 +25,10 @@ ms.locfileid: "62651740"
   
 1.  관리자 권한으로 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 웹 포털로 이동합니다. 예를 들어 Internet Explorer 아이콘을 마우스 오른쪽 단추로 클릭하고 **관리자 권한으로 실행**을 클릭합니다.  
  
-2.    웹 포털 URL로 이동합니다.  다음은 그 예입니다.   
-    `https://<server name>/reports`입니다.  
+2.    웹 포털 URL로 이동합니다.  예를 들면 다음과 같습니다.   
+    `https://<server name>/reports`.  
     `https://localhost/reports`
- **참고:** 웹 *포털* URL은 Report *Server* URL인 "Reportserver"가 아니라 "Reports"입니다.  
+ **참고:** 웹 포털 URL은 "Reports"입니다. 보고서 서버 URL인 "Reportserver"가 아닙니다.  
 3.  **Sales Orders** 보고서가 포함된 폴더로 이동하고 보고서의 상황에 맞는 메뉴에서 **관리**를 클릭합니다.  
  
  ![ssrs_tutorial_datadriven_manage_report](../reporting-services/media/ssrs-tutorial-datadriven-manage-report.png)

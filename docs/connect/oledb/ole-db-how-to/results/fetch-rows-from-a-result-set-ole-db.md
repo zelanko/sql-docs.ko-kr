@@ -1,5 +1,5 @@
 ---
-title: 결과 집합에서 행 페치(OLE DB) | Microsoft Docs
+title: 결과 집합에서 행 페치(OLE DB 드라이버) | Microsoft Docs
 description: OLE DB Driver for SQL Server를 사용하여 결과 집합에서 행 페치
 ms.custom: ''
 ms.date: 06/14/2018
@@ -12,15 +12,15 @@ helpviewer_keywords:
 - rows [OLE DB]
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 8aed6ce5eb93c68f22217667fe01306e28d9910e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 26d224012aadbd382ac3db1d66627e2e5b6160fd
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68015554"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87244717"
 ---
 # <a name="fetch-rows-from-a-result-set-ole-db"></a>결과 집합에서 행 인출(OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../../includes/driver_oledb_download.md)]
 

@@ -1,5 +1,5 @@
 ---
-title: 사용되지 않는 데이터베이스 엔진 기능 | Microsoft Docs
+title: SQL Server 2017에서 사용되지 않는 데이터베이스 엔진 기능 | Microsoft Docs
 titleSuffix: SQL Server 2019
 description: 사용되지 않는 데이터베이스 엔진 기능을 알아보세요. 이러한 기능은 SQL Server 2017(14.x)에서도 계속 사용할 수 있지만 새 애플리케이션에서는 사용하면 안 됩니다.
 ms.custom: seo-lt-2019
@@ -17,12 +17,12 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 33b12c2b68c067db1a47159c201f5cd04a9b1c45
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7ff7a91230daff2aab0e031fa2b87803e379921b
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85759138"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87244084"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2017"></a>SQL Server 2017에서 사용되지 않는 데이터베이스 엔진 기능
 

@@ -1,5 +1,6 @@
 ---
 title: 구독 사용(웹 포털) | Microsoft Docs
+description: Reporting Services에서 구독 페이지를 사용하여 현재 보고서에 대한 모든 구독을 나열하는 방법을 알아봅니다.
 ms.date: 01/31/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 09e8ece5-0200-41f2-87c1-9fab19e261be
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 046faa5ff137f62ac2554192012ff0917bfb17e2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d5d936933b96c8d7f5c4c2830707b4a6bb4d9fe2
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "76971256"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243556"
 ---
 # <a name="working-with-subscriptions-web-portal"></a>구독 작업(웹 포털)
 

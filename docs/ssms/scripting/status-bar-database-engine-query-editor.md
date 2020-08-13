@@ -1,5 +1,6 @@
 ---
 title: 상태 표시줄(데이터베이스 엔진 쿼리 편집기)
+description: 데이터베이스 엔진 쿼리 편집기 창의 상태 표시줄에 대한 색 코드를 지정하여 창이 연결된 데이터베이스 엔진 인스턴스를 나타내는 방법을 알아봅니다.
 titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.technology: scripting
@@ -11,16 +12,16 @@ ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a579eeeb12795c76bbe585a982a159d6e069813d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 95cccb6c8f63e149de806c4c956e1371a83f3619
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75243454"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243770"
 ---
 # <a name="status-bar-database-engine-query-editor"></a>상태 표시줄(데이터베이스 엔진 쿼리 편집기)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기 창에서 각 창이 연결되는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스를 나타내도록 상태 표시줄을 색으로 구분할 수 있습니다.
 

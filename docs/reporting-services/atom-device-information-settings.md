@@ -1,5 +1,6 @@
 ---
 title: ATOM 디바이스 정보 설정 | Microsoft Docs
+description: Atom 피드 이름 및 사용할 문자 인코딩 전송을 지원하는 Atom 렌더링 확장 프로그램에 대한 디바이스 정보 설정을 알아봅니다.
 ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: fe4a56a4-5552-423c-85c1-895e2e212fee
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b2d04fae8687e31df79d72aec2b41bfe67cc1cc3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 274815c98aa15aead103e33de761b8b496212242
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65504114"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242503"
 ---
 # <a name="atom-device-information-settings"></a>ATOM 디바이스 정보 설정
   Atom 렌더링 확장 프로그램의 디바이스 정보 설정은 사용할 문자 인코딩 및 Atom 피드 이름 전송을 지원합니다.  

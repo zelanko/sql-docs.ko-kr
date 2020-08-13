@@ -5,25 +5,25 @@ description: azdata bdc hdfs 명령에 대한 참조 문서입니다.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 11/04/2019
+ms.date: 06/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 74af88306288adaa584e26c943bd8c6c743fa315
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d9f128f354156f6e9f9413f491bba3a30d1a0c9d
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74821410"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243035"
 ---
 # <a name="azdata-bdc-hdfs"></a>azdata bdc hdfs
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-다음 문서에서는 `azdata` 도구의 `bdc hdfs` 명령에 대한 참조를 제공합니다. 다른 `azdata` 명령에 대한 자세한 내용은 [azdata 참조](reference-azdata.md)를 참조하세요.
+다음 문서에서는 `azdata` 도구의 `sql` 명령에 대한 참조를 제공합니다. 다른 `azdata` 명령에 대한 자세한 내용은 [azdata 참조](reference-azdata.md)를 참조하세요.
 
 ## <a name="commands"></a>명령
-|     |     |
+| 명령 | 설명 |
 | --- | --- |
 [azdata bdc hdfs status](reference-azdata-bdc-hdfs-status.md) | Hdfs 서비스 상태 명령입니다.
 [azdata bdc hdfs shell](#azdata-bdc-hdfs-shell) | HDFS 셸은 HDFS 파일 시스템을 위한 간단한 대화형 명령 셸입니다.
@@ -44,7 +44,7 @@ HDFS 셸은 HDFS 파일 시스템을 위한 간단한 대화형 명령 셸입니
 ```bash
 azdata bdc hdfs shell 
 ```
-### <a name="examples"></a>예
+### <a name="examples"></a>예제
 셸을 시작합니다.
 ```bash
 azdata bdc hdfs shell
@@ -57,18 +57,19 @@ azdata bdc hdfs shell
 #### `--output -o`
 출력 형식입니다.  허용되는 값: json, jsonc, table, tsv  기본값: json
 #### `--query -q`
-JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmespath.org/](http://jmespath.org/)를 참조하세요.
+JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmespath.org/](http://jmespath.org)를 참조하세요.
 #### `--verbose`
 로깅의 자세한 정도를 늘립니다. 전체 디버그 로그를 표시하려면 --debug를 사용합니다.
 ## <a name="azdata-bdc-hdfs-ls"></a>azdata bdc hdfs ls
 지정된 파일 또는 디렉터리의 상태를 나열합니다.
 ```bash
 azdata bdc hdfs ls --path -p 
- ```
-### <a name="examples"></a>예
+                   
+```
+### <a name="examples"></a>예제
 상태를 나열합니다.
 ```bash
-azdata bdc hdfs ls --path '/tmp'
+azdata bdc hdfs ls --path tmp/
 ```
 ### <a name="required-parameters"></a>필수 매개 변수
 #### `--path -p`
@@ -81,18 +82,19 @@ azdata bdc hdfs ls --path '/tmp'
 #### `--output -o`
 출력 형식입니다.  허용되는 값: json, jsonc, table, tsv  기본값: json
 #### `--query -q`
-JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmespath.org/](http://jmespath.org/)를 참조하세요.
+JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmespath.org/](http://jmespath.org)를 참조하세요.
 #### `--verbose`
 로깅의 자세한 정도를 늘립니다. 전체 디버그 로그를 표시하려면 --debug를 사용합니다.
 ## <a name="azdata-bdc-hdfs-exists"></a>azdata bdc hdfs exists
 파일 또는 디렉터리가 있는지 확인합니다.  있으면 True를 반환하고, 없으면 False를 반환합니다.
 ```bash
 azdata bdc hdfs exists --path -p 
-     ```
-### Examples
-Check for file or directory existance.
+                       
+```
+### <a name="examples"></a>예제
+파일 또는 디렉터리가 있는지 확인합니다.
 ```bash
-azdata bdc hdfs exists --path '/tmp'
+azdata bdc hdfs exists --path tmp/
 ```
 ### <a name="required-parameters"></a>필수 매개 변수
 #### `--path -p`
@@ -105,18 +107,19 @@ azdata bdc hdfs exists --path '/tmp'
 #### `--output -o`
 출력 형식입니다.  허용되는 값: json, jsonc, table, tsv  기본값: json
 #### `--query -q`
-JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmespath.org/](http://jmespath.org/)를 참조하세요.
+JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmespath.org/](http://jmespath.org)를 참조하세요.
 #### `--verbose`
 로깅의 자세한 정도를 늘립니다. 전체 디버그 로그를 표시하려면 --debug를 사용합니다.
 ## <a name="azdata-bdc-hdfs-mkdir"></a>azdata bdc hdfs mkdir
 지정된 경로에 디렉터리를 만듭니다.
 ```bash
 azdata bdc hdfs mkdir --path -p 
-    ```
-### Examples
-Make directory.
+                      
+```
+### <a name="examples"></a>예제
+디렉터리를 만듭니다.
 ```bash
-azdata bdc hdfs mkdir --path '/tmp'
+azdata bdc hdfs mkdir --path tmp/
 ```
 ### <a name="required-parameters"></a>필수 매개 변수
 #### `--path -p`
@@ -129,7 +132,7 @@ azdata bdc hdfs mkdir --path '/tmp'
 #### `--output -o`
 출력 형식입니다.  허용되는 값: json, jsonc, table, tsv  기본값: json
 #### `--query -q`
-JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmespath.org/](http://jmespath.org/)를 참조하세요.
+JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmespath.org/](http://jmespath.org)를 참조하세요.
 #### `--verbose`
 로깅의 자세한 정도를 늘립니다. 전체 디버그 로그를 표시하려면 --debug를 사용합니다.
 ## <a name="azdata-bdc-hdfs-mv"></a>azdata bdc hdfs mv
@@ -138,10 +141,10 @@ JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmesp
 azdata bdc hdfs mv --source-path -s 
                    --target-path -t
 ```
-### <a name="examples"></a>예
+### <a name="examples"></a>예제
 파일 또는 디렉터리를 이동합니다.
 ```bash
-azdata bdc hdfs mv --source-path '/tmp' --target-path '/dest'
+azdata bdc hdfs mv --source-path tmp/ --target-path "dest/"
 ```
 ### <a name="required-parameters"></a>필수 매개 변수
 #### `--source-path -s`
@@ -156,7 +159,7 @@ azdata bdc hdfs mv --source-path '/tmp' --target-path '/dest'
 #### `--output -o`
 출력 형식입니다.  허용되는 값: json, jsonc, table, tsv  기본값: json
 #### `--query -q`
-JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmespath.org/](http://jmespath.org/)를 참조하세요.
+JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmespath.org/](http://jmespath.org)를 참조하세요.
 #### `--verbose`
 로깅의 자세한 정도를 늘립니다. 전체 디버그 로그를 표시하려면 --debug를 사용합니다.
 ## <a name="azdata-bdc-hdfs-create"></a>azdata bdc hdfs create
@@ -165,10 +168,10 @@ JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmesp
 azdata bdc hdfs create --path -p 
                        --data -d
 ```
-### <a name="examples"></a>예
+### <a name="examples"></a>예제
 파일을 만듭니다.
 ```bash
-azdata bdc hdfs create --path '/tmp/test.txt' --data "This is a test."
+azdata bdc hdfs create --path "tmp/test.txt" --data "This is a test."
 ```
 ### <a name="required-parameters"></a>필수 매개 변수
 #### `--path -p`
@@ -183,7 +186,7 @@ azdata bdc hdfs create --path '/tmp/test.txt' --data "This is a test."
 #### `--output -o`
 출력 형식입니다.  허용되는 값: json, jsonc, table, tsv  기본값: json
 #### `--query -q`
-JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmespath.org/](http://jmespath.org/)를 참조하세요.
+JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmespath.org/](http://jmespath.org)를 참조하세요.
 #### `--verbose`
 로깅의 자세한 정도를 늘립니다. 전체 디버그 로그를 표시하려면 --debug를 사용합니다.
 ## <a name="azdata-bdc-hdfs-cat"></a>azdata bdc hdfs cat
@@ -191,12 +194,13 @@ JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmesp
 ```bash
 azdata bdc hdfs cat --path -p 
                     --offset  
-                    --length -l
+                    
+--length -l
 ```
-### <a name="examples"></a>예
+### <a name="examples"></a>예제
 파일을 읽습니다.
 ```bash
-azdata bdc hdfs cat --path '/tmp/test.txt'
+azdata bdc hdfs cat --path "tmp/test.txt"
 ```
 ### <a name="required-parameters"></a>필수 매개 변수
 #### `--path -p`
@@ -213,18 +217,19 @@ azdata bdc hdfs cat --path '/tmp/test.txt'
 #### `--output -o`
 출력 형식입니다.  허용되는 값: json, jsonc, table, tsv  기본값: json
 #### `--query -q`
-JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmespath.org/](http://jmespath.org/)를 참조하세요.
+JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmespath.org/](http://jmespath.org)를 참조하세요.
 #### `--verbose`
 로깅의 자세한 정도를 늘립니다. 전체 디버그 로그를 표시하려면 --debug를 사용합니다.
 ## <a name="azdata-bdc-hdfs-rm"></a>azdata bdc hdfs rm
 파일 또는 디렉터리를 제거합니다.
 ```bash
 azdata bdc hdfs rm --path -p 
- ```
-### <a name="examples"></a>예
+                   
+```
+### <a name="examples"></a>예제
 파일 또는 디렉터리를 제거합니다.
 ```bash
-azdata bdc hdfs rm --path '/tmp'
+azdata bdc hdfs rm --path tmp/
 ```
 ### <a name="required-parameters"></a>필수 매개 변수
 #### `--path -p`
@@ -237,18 +242,19 @@ azdata bdc hdfs rm --path '/tmp'
 #### `--output -o`
 출력 형식입니다.  허용되는 값: json, jsonc, table, tsv  기본값: json
 #### `--query -q`
-JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmespath.org/](http://jmespath.org/)를 참조하세요.
+JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmespath.org/](http://jmespath.org)를 참조하세요.
 #### `--verbose`
 로깅의 자세한 정도를 늘립니다. 전체 디버그 로그를 표시하려면 --debug를 사용합니다.
 ## <a name="azdata-bdc-hdfs-rmr"></a>azdata bdc hdfs rmr
 파일 또는 디렉터리를 재귀적으로 제거합니다.
 ```bash
 azdata bdc hdfs rmr --path -p 
-  ```
-### <a name="examples"></a>예
+                    
+```
+### <a name="examples"></a>예제
 디렉터리를 재귀적으로 제거합니다.
 ```bash
-azdata bdc hdfs rmr --path '/tmp'
+azdata bdc hdfs rmr --path tmp/
 ```
 ### <a name="required-parameters"></a>필수 매개 변수
 #### `--path -p`
@@ -261,7 +267,7 @@ azdata bdc hdfs rmr --path '/tmp'
 #### `--output -o`
 출력 형식입니다.  허용되는 값: json, jsonc, table, tsv  기본값: json
 #### `--query -q`
-JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmespath.org/](http://jmespath.org/)를 참조하세요.
+JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmespath.org/](http://jmespath.org)를 참조하세요.
 #### `--verbose`
 로깅의 자세한 정도를 늘립니다. 전체 디버그 로그를 표시하려면 --debug를 사용합니다.
 ## <a name="azdata-bdc-hdfs-chmod"></a>azdata bdc hdfs chmod
@@ -270,10 +276,10 @@ JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmesp
 azdata bdc hdfs chmod --path -p 
                       --permission
 ```
-### <a name="examples"></a>예
+### <a name="examples"></a>예제
 파일 또는 디렉터리 사용 권한을 변경합니다.
 ```bash
-azdata bdc hdfs chmod --permission 775 --path '/tmp/test.txt'
+azdata bdc hdfs chmod --permission 775 --path "tmp/test.txt"
 ```
 ### <a name="required-parameters"></a>필수 매개 변수
 #### `--path -p`
@@ -288,7 +294,7 @@ azdata bdc hdfs chmod --permission 775 --path '/tmp/test.txt'
 #### `--output -o`
 출력 형식입니다.  허용되는 값: json, jsonc, table, tsv  기본값: json
 #### `--query -q`
-JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmespath.org/](http://jmespath.org/)를 참조하세요.
+JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmespath.org/](http://jmespath.org)를 참조하세요.
 #### `--verbose`
 로깅의 자세한 정도를 늘립니다. 전체 디버그 로그를 표시하려면 --debug를 사용합니다.
 ## <a name="azdata-bdc-hdfs-chown"></a>azdata bdc hdfs chown
@@ -296,12 +302,13 @@ JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmesp
 ```bash
 azdata bdc hdfs chown --path -p 
                       --owner  
-                      --group -g
+                      
+--group -g
 ```
-### <a name="examples"></a>예
+### <a name="examples"></a>예제
 소유자 및 그룹을 변경합니다.
 ```bash
-azdata bdc hdfs chown --owner hdfs --group superusergroup --path '/tmp/test.txt'
+azdata bdc hdfs chown --owner hdfs --group superusergroup --path "tmp/test.txt"
 ```
 ### <a name="required-parameters"></a>필수 매개 변수
 #### `--path -p`
@@ -318,7 +325,7 @@ azdata bdc hdfs chown --owner hdfs --group superusergroup --path '/tmp/test.txt'
 #### `--output -o`
 출력 형식입니다.  허용되는 값: json, jsonc, table, tsv  기본값: json
 #### `--query -q`
-JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmespath.org/](http://jmespath.org/)를 참조하세요.
+JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmespath.org/](http://jmespath.org)를 참조하세요.
 #### `--verbose`
 로깅의 자세한 정도를 늘립니다. 전체 디버그 로그를 표시하려면 --debug를 사용합니다.
 ## <a name="azdata-bdc-hdfs-cp"></a>azdata bdc hdfs cp
@@ -327,10 +334,10 @@ JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmesp
 azdata bdc hdfs cp --from-path -f 
                    --to-path -t
 ```
-### <a name="examples"></a>예
+### <a name="examples"></a>예제
 로컬 머신과 HDFS 간에 파일 또는 디렉터리를 복사합니다.
 ```bash
-azdata bdc hdfs cp --from_path '/tmp/test.txt --to-path 'hdfs:/user/me/test.txt'
+azdata bdc hdfs cp --from_path "tmp/test.txt" --to-path "hdfs:/user/me/test.txt"
 ```
 ### <a name="required-parameters"></a>필수 매개 변수
 #### `--from-path -f`
@@ -345,7 +352,7 @@ azdata bdc hdfs cp --from_path '/tmp/test.txt --to-path 'hdfs:/user/me/test.txt'
 #### `--output -o`
 출력 형식입니다.  허용되는 값: json, jsonc, table, tsv  기본값: json
 #### `--query -q`
-JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmespath.org/](http://jmespath.org/)를 참조하세요.
+JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmespath.org/](http://jmespath.org)를 참조하세요.
 #### `--verbose`
 로깅의 자세한 정도를 늘립니다. 전체 디버그 로그를 표시하려면 --debug를 사용합니다.
 

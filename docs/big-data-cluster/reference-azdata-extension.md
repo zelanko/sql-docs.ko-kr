@@ -1,7 +1,7 @@
 ---
-title: azdata context 참조
+title: azdata 확장 참조
 titleSuffix: SQL Server big data clusters
-description: azdata context 명령에 대한 참조 문서입니다.
+description: azdata 확장 명령에 대한 참조 문서입니다.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,14 +9,14 @@ ms.date: 06/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 8e5113020c9baeb22fb512ee3be7ed735d50aa48
+ms.openlocfilehash: 9e2585a77c3117df8514622728d0f09df93d7bc2
 ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243015"
+ms.locfileid: "87243002"
 ---
-# <a name="azdata-context"></a>azdata context
+# <a name="azdata-extension"></a>azdata 확장
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
@@ -25,27 +25,46 @@ ms.locfileid: "87243015"
 ## <a name="commands"></a>명령
 | 명령 | 설명 |
 | --- | --- |
-[azdata context list](#azdata-context-list) | 사용자 프로필에서 사용할 수 있는 컨텍스트를 나열합니다.
-[azdata context delete](#azdata-context-delete) | 사용자 프로필에서 특정 네임스페이스가 있는 컨텍스트를 삭제합니다.
-[azdata context set](#azdata-context-set) | 특정 네임스페이스가 있는 컨텍스트를 사용자 프로필의 활성 컨텍스트로 설정합니다.
-## <a name="azdata-context-list"></a>azdata context list
-`azdata context set` 또는 `azdata context delete`를 사용하여 컨텍스트를 설정하거나 삭제할 수 있습니다. 새 컨텍스트에 로그인하려면 `azdata login`을 사용합니다.
+[azdata extension add](#azdata-extension-add) | 확장을 추가합니다.
+[azdata extension remove](#azdata-extension-remove) | 확장을 제거합니다.
+[azdata extension list](#azdata-extension-list) | 설치된 모든 확장을 나열합니다.
+## <a name="azdata-extension-add"></a>azdata extension add
+확장을 추가합니다.
 ```bash
-azdata context list [--active -a] 
-                    
+azdata extension add --source -s 
+                     [--index]  
+                     
+[--pip-proxy]  
+                     
+[--pip-extra-index-urls]  
+                     
+[--yes -y]
 ```
 ### <a name="examples"></a>예제
-사용자 프로필에서 사용할 수 있는 모든 컨텍스트를 나열합니다.
+URL에서 확장을 추가합니다.
 ```bash
-azdata context list
+azdata extension add --source https://contoso.com/some_ext-0.0.1-py2.py3-none-any.whl
 ```
-사용자 프로필의 활성 컨텍스트를 나열합니다.
+로컬 디스크에서 확장을 추가합니다.
 ```bash
-azdata context list --active
+azdata extension add --source ~/some_ext-0.0.1-py2.py3-none-any.whl
 ```
+로컬 디스크에서 확장을 추가하고 종속성을 위해 pip 프록시를 사용합니다.
+```bash
+azdata extension add --source ~/some_ext-0.0.1-py2.py3-none-any.whl --pip-proxy https://user:pass@proxy.server:8080
+```
+### <a name="required-parameters"></a>필수 매개 변수
+#### `--source -s`
+디스크의 확장 휠 또는 확장에 대한 URL의 경로입니다.
 ### <a name="optional-parameters"></a>선택적 매개 변수
-#### `--active -a`
-현재 활성 컨텍스트만 나열합니다.
+#### `--index`
+Python 패키지 인덱스의 기준 URL입니다(기본값: https://pypi.org/simple) ). PEP 503(간단한 리포지토리 API) 규격 리포지토리 또는 동일한 형식으로 명시된 로컬 디렉터리를 가리켜야 합니다.
+#### `--pip-proxy`
+pip이 확장 종속성에 대해 [user:passwd@]proxy.server:port의 형식으로 사용할 프록시입니다.
+#### `--pip-extra-index-urls`
+사용할 패키지 인덱스의 추가 URL을 공백으로 구분한 목록입니다. PEP 503(간단한 리포지토리 API) 규격 리포지토리 또는 동일한 형식으로 명시된 로컬 디렉터리를 가리켜야 합니다.
+#### `--yes -y`
+확인을 묻는 메시지를 표시하지 마세요.
 ### <a name="global-arguments"></a>전역 인수
 #### `--debug`
 로깅의 자세한 정도를 늘려 모든 디버그 로그를 표시합니다.
@@ -57,20 +76,23 @@ azdata context list --active
 JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmespath.org/](http://jmespath.org)를 참조하세요.
 #### `--verbose`
 로깅의 자세한 정도를 늘립니다. 전체 디버그 로그를 표시하려면 --debug를 사용합니다.
-## <a name="azdata-context-delete"></a>azdata context delete
-삭제된 컨텍스트가 활성 상태이면 사용자가 새 활성 컨텍스트를 설정해야 합니다. 설정하거나 삭제할 수 있는 컨텍스트를 확인하려면 `azdata context list`를 사용합니다.
+## <a name="azdata-extension-remove"></a>azdata extension remove
+확장을 제거합니다.
 ```bash
-azdata context delete --namespace -n 
-                      
+azdata extension remove --name -n 
+                        [--yes -y]
 ```
 ### <a name="examples"></a>예제
-사용자 프로필에서 contextNamespace를 삭제합니다.
+확장을 제거합니다.
 ```bash
-azdata context delete -n contextNamespace
+azdata extension remove --name some-ext
 ```
 ### <a name="required-parameters"></a>필수 매개 변수
-#### `--namespace -n`
-삭제하려는 컨텍스트의 네임스페이스입니다.
+#### `--name -n`
+확장의 이름입니다.
+### <a name="optional-parameters"></a>선택적 매개 변수
+#### `--yes -y`
+확인을 묻는 메시지를 표시하지 마세요.
 ### <a name="global-arguments"></a>전역 인수
 #### `--debug`
 로깅의 자세한 정도를 늘려 모든 디버그 로그를 표시합니다.
@@ -82,20 +104,16 @@ azdata context delete -n contextNamespace
 JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmespath.org/](http://jmespath.org)를 참조하세요.
 #### `--verbose`
 로깅의 자세한 정도를 늘립니다. 전체 디버그 로그를 표시하려면 --debug를 사용합니다.
-## <a name="azdata-context-set"></a>azdata context set
-설정할 수 있는 컨텍스트를 확인하려면 `azdata context list`를 사용합니다. 나열된 컨텍스트가 없으면 로그인하여 사용자 프로필 `azdata login`에 컨텍스트를 만들어야 합니다. 로그인하는 컨텍스트는 활성 컨텍스트가 됩니다. 여러 엔터티에 로그인하는 경우 이 명령을 사용하여 활성 컨텍스트 간에 전환할 수 있습니다. 현재 활성 컨텍스트를 보려면 `azdata context list --active`를 사용합니다.
+## <a name="azdata-extension-list"></a>azdata extension list
+설치된 모든 확장을 나열합니다.
 ```bash
-azdata context set --namespace -n 
-                   
+azdata extension list 
 ```
 ### <a name="examples"></a>예제
-contextNamespace를 사용자 프로필의 활성 컨텍스트로 설정합니다.
+확장을 나열합니다.
 ```bash
-azdata context set -n contextNamespace
+azdata extension list
 ```
-### <a name="required-parameters"></a>필수 매개 변수
-#### `--namespace -n`
-설정하려는 컨텍스트의 네임스페이스입니다.
 ### <a name="global-arguments"></a>전역 인수
 #### `--debug`
 로깅의 자세한 정도를 늘려 모든 디버그 로그를 표시합니다.

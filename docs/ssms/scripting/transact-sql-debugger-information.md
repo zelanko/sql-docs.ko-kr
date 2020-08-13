@@ -1,5 +1,6 @@
 ---
 title: Transact-SQL 디버거 정보
+description: 호출 스택, 스레드, 중단점, 코드, 변수, 명령과 같은 정보가 포함된 Transact-SQL 디버거 출력을 보는 방법을 알아봅니다.
 titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.technology: scripting
@@ -18,16 +19,16 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 82f5caaa772ab21ce5e36165fcc46665c99a4ea5
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 853c11d1cf08a24168d21f0d20cedc74c2ea4004
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253037"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243778"
 ---
 # <a name="transact-sql-debugger---information"></a>Transact-SQL 디버거 - 정보
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 디버거가 특정 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에서 실행을 일시 중지할 때마다 여러 디버거 창을 사용하여 현재 실행 상태를 볼 수 있습니다. 
 

@@ -1,5 +1,5 @@
 ---
-title: 테이블 반환 매개 변수에 데이터 삽입 | Microsoft Docs
+title: 테이블 반환 매개 변수에 데이터 삽입(OLE DB 드라이버) | Microsoft Docs
 description: OLE DB Driver for SQL Server를 사용하여 테이블 반환 매개 변수에 데이터 삽입
 ms.custom: ''
 ms.date: 06/14/2018
@@ -12,24 +12,24 @@ helpviewer_keywords:
 - table-valued parameters, inserting data into
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 064dcfa74cd6471c8c279ef4b08e874097d98d64
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 31cfbbd1afd2e5b249c3f3106aec471965038c86
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67994134"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87244167"
 ---
 # <a name="inserting-data-into-table-valued-parameters"></a>테이블 반환 매개 변수에 데이터 삽입
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  SQL Server용 OLE DB 드라이버는 소비자가 테이블 반환 매개 변수 행의 데이터를 지정하는 두 가지 모델로 밀어넣기 모델과 끌어오기 모델을 지원합니다. 끌어오기 모델을 보여 주는 예제를 사용할 수 있습니다. [SQL Server 데이터 프로그래밍 예제](https://msftdpprodsamples.codeplex.com/)를 참조하십시오.  
+  OLE DB Driver for SQL Server는 소비자가 테이블 반환 매개 변수 행의 데이터를 지정하는 두 가지 모델로 밀어넣기 모델과 끌어오기 모델을 지원합니다. 끌어오기 모델을 보여 주는 예제를 사용할 수 있습니다. [SQL Server 데이터 프로그래밍 예제](https://msftdpprodsamples.codeplex.com/)를 참조하십시오.  
   
 > [!NOTE]  
 >  테이블 반환 매개 변수 열은 모든 행에 기본값이 아닌 값이 있거나 모든 행에 기본값이 있어야 합니다. 일부 행에만 기본값이 있으면 안 됩니다. 따라서 테이블 반환 매개 변수 바인딩에서 테이블 반환 매개 변수 행 집합 열 데이터에는 DBSTATUS_S_ISNULL 및 DBSTATUS_S_OK 상태 값만 사용할 수 있습니다. DBSTATUS_S_DEFAULT를 사용하면 오류가 발생하며 바인딩 상태 값은 DBSTATUS_E_BADSTATUS로 설정됩니다.  
   
-## <a name="push-model-loads-all-table-valued-paremeter-data-in-memory"></a>밀어넣기 모델(모든 테이블 반환 매개 변수 데이터를 메모리에 로드)  
+## <a name="push-model-loads-all-table-valued-parameter-data-in-memory"></a>밀어넣기 모델(모든 테이블 반환 매개 변수 데이터를 메모리에 로드)  
  밀어넣기 모델은 매개 변수 집합(ICommand::Execute의 DBPARAMS 매개 변수)을 사용하는 것과 비슷합니다. 테이블 반환 매개 변수 행 집합 개체가 IRowset 인터페이스의 사용자 지정된 구현 없이 사용되는 경우에만 밀어넣기 모델이 사용됩니다. 밀어넣기 모델은 테이블 반환 매개 변수 행 집합의 행 수가 적어 애플리케이션에 과도한 메모리 부담을 주지 않는 경우에만 사용하는 것이 좋습니다. 이 모델은 현재 일반적인 OLE DB 애플리케이션에서 흔히 사용되는 기능 이외의 기능은 소비자 애플리케이션에 요구하지 않기 때문에 끌어오기 모델보다 간단합니다.  
   
  소비자는 명령을 실행하기 전에 모든 테이블 반환 매개 변수 데이터를 공급자에게 제공해야 합니다. 데이터를 제공하기 위해 소비자는 각 테이블 반환 매개 변수의 테이블 반환 매개 변수 행 집합 개체를 채웁니다. 테이블 반환 매개 변수 행 집합 개체는 행 집합 삽입, 설정 및 삭제 작업을 제공하며, 소비자는 이를 사용하여 테이블 반환 매개 변수 데이터를 조작합니다. 공급자는 실행 시에 이 테이블 반환 매개 변수 행 집합 개체에서 데이터를 인출합니다.  
