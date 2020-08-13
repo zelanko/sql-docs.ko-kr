@@ -1,5 +1,6 @@
 ---
 title: 단어 자동 완성(IntelliSense)
+description: Microsoft IntelliSense 단어 자동 완성 기능은 사용자가 고유하게 식별될 정도로 입력한 내용을 자동으로 완성하거나 사용자가 선택할 수 있도록 가능한 항목의 목록을 제공할 수 있습니다. 이 기능을 호출하는 네 가지 방법을 알아봅니다.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,15 +17,15 @@ ms.assetid: ee9c43a6-aae9-4cfa-b18e-1da9266fabcd
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7b516e75ce312dbc2970ccb31975d892f7ab98cb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3fb33d179463383e41f73ddba30525ce908e2cb5
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253990"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122885"
 ---
 # <a name="complete-word-intellisense"></a>단어 자동 완성(IntelliSense)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense 단어 자동 완성 옵션은 용어를 고유하게 식별할 수 있을 정도의 문자가 입력된 경우 변수, 명령 또는 함수 이름의 나머지를 입력하는 기능입니다.  
   
  다음과 같은 네 가지 방법으로 단어 자동 완성 기능을 호출할 수 있습니다.  

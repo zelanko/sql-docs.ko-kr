@@ -1,5 +1,6 @@
 ---
 title: SQL Server Management Studio의 Reporting Services | Microsoft Docs
+description: SQL Server Management Studio를 사용하여 웹 포털에서 보고 작업을 수행하는 방법 및 공유 일정을 만들고 관리하는 방법을 알아봅니다.
 ms.date: 06/10/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 60685458-9108-47bf-820a-5e7db454d408
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8a975ad6d6aecfd701bf4893d5d91b26f998297d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 99a5cd92ee141195a56b1c85239afe8535a3949c
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082157"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86915648"
 ---
 # <a name="reporting-services-in-sql-server-management-studio-ssrs"></a>SQL Server Management Studio의 Reporting Services(SSRS)
   보고서 서버 관리자는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 를 사용하여 다음을 수행할 수 있습니다.  

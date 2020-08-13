@@ -13,12 +13,12 @@ ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 author: v-makouz
 ms.author: v-makouz
 manager: kenvh
-ms.openlocfilehash: 8f0f821890cabe25a9abb572e453c9846c75ec94
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 63600f98fcf86fb9549c6da91224988ce7483eee
+ms.sourcegitcommit: 41ff0446bd8e4380aad40510ad579a3a4e096dfa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "72041126"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86465320"
 ---
 # <a name="data-classification"></a>데이터 분류
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -244,7 +244,7 @@ int main(int argc, char **argv)
 ```
 
 ## <a name="supported-version"></a><a name="bkmk-version"></a>지원되는 버전
-Microsoft ODBC Driver 17.2는 `FieldIdentifier`가 `SQL_CA_SS_DATA_CLASSIFICATION`(1237)으로 설정된 경우 `SQLGetDescField`를 통해 데이터 분류 정보 검색을 허용합니다. 
+Microsoft ODBC Driver 17.2는 `FieldIdentifier`가 `SQL_CA_SS_DATA_CLASSIFICATION`(1237)으로 설정된 경우 `SQLGetDescField`를 통해 데이터 분류 정보를 검색할 수 있습니다. 
 
 Microsoft ODBC Driver 17.4.1.1부터는 `SQL_CA_SS_DATA_CLASSIFICATION_VERSION`(1238) 필드 식별자를 사용하여 `SQLGetDescField`를 통해 서버에서 지원하는 데이터 분류 버전을 검색할 수 있습니다. 17.4.1.1에서는 지원되는 데이터 분류 버전이 "2"로 설정됩니다.
 

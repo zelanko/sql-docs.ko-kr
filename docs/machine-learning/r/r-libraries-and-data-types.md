@@ -2,22 +2,22 @@
 title: R 및 SQL 데이터 형식 변환
 description: 데이터 과학 및 기계 학습 솔루션에서 R과 SQL Server 간의 암시적 데이터 및 명시적 데이터 형식 변환을 검토합니다.
 ms.prod: sql
-ms.technology: machine-learning
-ms.date: 08/08/2019
-ms.topic: conceptual
+ms.technology: machine-learning-services
+ms.date: 07/15/2020
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 1f7a6a95033d16e7bc39f07d6b72324e3aea6634
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: bf08045adba7298d5a5b8e261c406915b44effe0
+ms.sourcegitcommit: fd7b268a34562d70d46441f689543ecce7df2e4d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81486734"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86411641"
 ---
 # <a name="data-type-mappings-between-r-and-sql-server"></a>R과 SQL Server 간의 데이터 형식 매핑
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 SQL Server Machine Learning Services의 R 통합 기능에서 실행되는 R 솔루션의 경우 R 라이브러리와 SQL Server 간에 데이터가 전달될 때 암시적으로 수행될 수 있는 지원되지 않는 데이터 형식 및 데이터 형식 변환의 목록을 검토합니다.
 
@@ -41,17 +41,17 @@ SQL Server의 특정 인스턴스와 연결된 R 버전을 보려면 **RGui**를
 
 |SQL 유형|R 클래스|RESULT SET 형식|주석|
 |-|-|-|-|
-|**bigint**|`numeric`|**float**||
+|**bigint**|`numeric`|**float**|`sp_execute_external_script`를 사용하여 R 스크립트를 실행하면 bigint 데이터 형식을 입력 데이터로 사용할 수 있습니다. 그러나 이 데이터 형식은 R의 숫자 형식으로 변환되기 때문에 값이 매우 크거나 소수 부분을 가지는 경우 전체 자릿수 손실이 발생합니다. R에서는 최대 53비트 정수만 지원하며 이후로 전체 자릿수 손실이 발생하기 시작합니다.|
 |**binary(n)**<br /><br /> n <= 8000|`raw`|**varbinary(max)**|입력 매개 변수 및 출력으로만 허용됨|
 |**bit**|`logical`|**bit**||
-|**char(n)**<br /><br /> n <= 8000|`character`|**varchar(max)**||
+|**char(n)**<br /><br /> n <= 8000|`character`|**varchar(max)**|입력 데이터 프레임(input_data_1)이 *stringsAsFactors* 매개 변수를 명시적으로 설정하지 않고 만들어지므로 R에서 열 형식이 *default.stringsAsFactors()* 에 따라 달라집니다.|
 |**datetime**|`POSIXct`|**datetime**|GMT로 표시됨|
 |**date**|`POSIXct`|**datetime**|GMT로 표시됨|
-|**decimal(p,s)**|`numeric`|**float**||
+|**decimal(p,s)**|`numeric`|**float**|`sp_execute_external_script`를 사용하여 R 스크립트를 실행하면 decimal 데이터 형식을 입력 데이터로 사용할 수 있습니다. 그러나 이 데이터 형식은 R의 숫자 형식으로 변환되기 때문에 값이 매우 크거나 소수 부분을 가지는 경우 전체 자릿수 손실이 발생합니다. `sp_execute_external_script`를 사용하는 R 스크립트는 이 데이터 형식의 전체 범위를 지원하지 않으며 마지막 몇 자리(특히 소수 부분)가 변경됩니다.|
 |**float**|`numeric`|**float**||
 |**int**|`integer`|**int**||
-|**money**|`numeric`|**float**||
-|**numeric(p,s)**|`numeric`|**float**||
+|**money**|`numeric`|**float**|`sp_execute_external_script`를 사용하여 R 스크립트를 실행하면 money 데이터 형식을 입력 데이터로 사용할 수 있습니다. 그러나 이 데이터 형식은 R의 숫자 형식으로 변환되기 때문에 값이 매우 크거나 소수 부분을 가지는 경우 전체 자릿수 손실이 발생합니다. 경우에 따라 센트 값이 정확하지 않으며 경고가 발생합니다. 경고: 센트 값을 정확하게 나타낼 수 없습니다.  |
+|**numeric(p,s)**|`numeric`|**float**|`sp_execute_external_script`를 사용하여 R 스크립트를 실행하면 numeric 데이터 형식을 입력 데이터로 사용할 수 있습니다. 그러나 이 데이터 형식은 R의 숫자 형식으로 변환되기 때문에 값이 매우 크거나 소수 부분을 가지는 경우 전체 자릿수 손실이 발생합니다. `sp_execute_external_script`를 사용하는 R 스크립트는 이 데이터 형식의 전체 범위를 지원하지 않으며 마지막 몇 자리(특히 소수 부분)가 변경됩니다.|
 |**real**|`numeric`|**float**||
 |**smalldatetime**|`POSIXct`|**datetime**|GMT로 표시됨|
 |**smallint**|`integer`|**int**||
@@ -60,8 +60,7 @@ SQL Server의 특정 인스턴스와 연결된 R 버전을 보려면 **RGui**를
 |**uniqueidentifier**|`character`|**varchar(max)**||
 |**varbinary(n)**<br /><br /> n <= 8000|`raw`|**varbinary(max)**|입력 매개 변수 및 출력으로만 허용됨|
 |**varbinary(max)**|`raw`|**varbinary(max)**|입력 매개 변수 및 출력으로만 허용됨|
-|**varchar(n)**<br /><br /> n <= 8000|`character`|**varchar(max)**||
-
+|**varchar(n)**<br /><br /> n <= 8000|`character`|**varchar(max)**|입력 데이터 프레임(input_data_1)이 *stringsAsFactors* 매개 변수를 명시적으로 설정하지 않고 만들어지므로 R에서 열 형식이 *default.stringsAsFactors()* 에 따라 달라집니다.|
 
 ## <a name="data-types-not-supported-by-r"></a>R에서 지원되지 않는 데이터 형식
 

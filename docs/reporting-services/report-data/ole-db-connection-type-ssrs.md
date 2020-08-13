@@ -1,5 +1,6 @@
 ---
 title: OLE DB 연결 형식 | Microsoft Docs
+description: OLE DB 연결 형식에 대한 이 문서의 정보를 사용하여 데이터 원본을 작성하는 방법을 알아봅니다.
 ms.date: 03/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: d00cb13b-e1c2-4300-a195-3da1430a2df1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: cd597c9a85f381e95de3b04fa22c577e89a26047
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 554622ce583bb314609c9000b1398ffbca4b6718
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081772"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458227"
 ---
 # <a name="ole-db-connection-type-ssrs"></a>OLE DB 연결 형식(SSRS)
   OLE DB 데이터 공급자의 데이터를 포함하려면 OLE DB 유형의 보고서 데이터 원본에 기초하는 데이터 세트가 있어야 합니다. 이 기본 제공 데이터 원본 유형은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] OLE DB 데이터 처리 확장 프로그램을 기반으로 합니다.  
@@ -55,7 +56,7 @@ Provider=SQLNCLI10.1;Data Source=server; Initial Catalog=AdventureWorks
 ##  <a name="remarks"></a><a name="Remarks"></a> 주의  
  OLEDB는 특정 데이터 원본에 사용할 데이터 공급자를 만들기 위한 기본 기술입니다. OLEDB는 COM(구성 요소 개체 모델) 인터페이스를 기반으로 합니다. OLEDB는 ODBC보다 뒤에 나오고 ADO.NET 데이터 공급자 이전에 나온 기술입니다. OLEDB 공급자는 다른 모든 COM 구성 요소와 마찬가지로 운영 체제에 등록됩니다. OLEDB 데이터 공급자는 Microsoft 및 타사 공급업체를 통해 사용할 수 있습니다. Microsoft는 ODBC 드라이버에 대한 통신을 연결하는 OLEDB 데이터 공급자인 MSDASQL도 제공합니다. 자세한 내용은 [ODBC 연결 형식&#40;SSRS&#41;](../../reporting-services/report-data/odbc-connection-type-ssrs.md)을 참조하세요.  
   
- 원하는 데이터를 성공적으로 검색하려면 데이터 공급자가 지원하는 쿼리 구문을 제공해야 합니다. 매개 변수 지원은 데이터 공급자에 따라 다릅니다. 자세한 내용은 선택한 데이터 공급자와 관련된 항목을 참조하십시오. 다음은 그 예입니다.  
+ 원하는 데이터를 성공적으로 검색하려면 데이터 공급자가 지원하는 쿼리 구문을 제공해야 합니다. 매개 변수 지원은 데이터 공급자에 따라 다릅니다. 자세한 내용은 선택한 데이터 공급자와 관련된 항목을 참조하십시오. 예를 들면 다음과 같습니다.  
   
 -   [Analysis Services OLE DB 공급자&#40;Analysis Services - 다차원 데이터&#41;](https://docs.microsoft.com/analysis-services/instances/data-providers-used-for-analysis-services-connections
 )  

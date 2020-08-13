@@ -1,5 +1,6 @@
 ---
 title: 책갈피 관리
+description: 코드 편집기의 책갈피 창에서 코드의 위치에 대한 링크를 만들 수 있습니다. 책갈피를 만들고, 삭제하고, 활성화하고 비활성화하는 방법과 책갈피를 사용하여 코드를 탐색하는 방법을 알아봅니다.
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ ms.assetid: 67cc3fd6-3238-4c58-a3ec-2d3b0438143a
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7879c6c7d07e7e0caeb075652b87b42fdf3ab66c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4b75287c722757e6bb6f12a7eb282b7f141a9483
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "78261842"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122604"
 ---
 # <a name="manage-bookmarks"></a>책갈피 관리
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   코드 편집기에서 작업하는 동안 **책갈피** 창을 사용하여 문서 내의 특정 코드 행에 대한 링크를 만들 수 있습니다. 이 창은 **보기** 메뉴에서 표시할 수 있습니다.  
   
  책갈피를 만들고 탐색하려면 **텍스트 편집기** 도구 모음과 **책갈피** 창 상단에 있는 단추를 클릭합니다. 책갈피를 추가하거나 제거하고 책갈피를 활성화하거나 비활성화하며 책갈피를 폴더로 구성할 수 있습니다. 특정 명령은 **책갈피** 창의 바로 가기 메뉴에서도 사용할 수 있습니다. 책갈피를 추가하거나 제거하려면 편집기에서 원하는 행에 삽입 지점을 넣은 다음 **현재 줄에서 책갈피를 설정/해제합니다**를 클릭합니다. 책갈피를 활성화하려면 **책갈피** 창에서 해당 확인란을 선택하고 책갈피를 제거하지 않고 비활성화하려면 해당 확인란의 선택을 취소합니다.  

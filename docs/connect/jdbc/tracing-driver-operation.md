@@ -1,5 +1,6 @@
 ---
-title: 드라이버 작업 추적 | Microsoft Docs
+title: 드라이버 작업 추적
+description: JDBC Driver for SQL Server를 사용할 때 추적을 사용하여 세부 정보를 로깅하고 문제를 해결하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 723aeae7-6504-4585-ba8b-3525115bea8b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 91f71543b9fecd994cc2b951758caacd23e8ae1f
-ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
+ms.openlocfilehash: b89be9709f04e995ed560e291a5199cebfd2bd75
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81219362"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86393131"
 ---
 # <a name="tracing-driver-operation"></a>드라이버 작업 추적
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -39,7 +40,7 @@ ms.locfileid: "81219362"
   
  다음 표에서는 공용 로깅 범주에 대해 사용할 수 있는 각 로깅 수준에 대해 설명합니다.  
   
-|속성|Description|  
+|Name|설명|  
 |----------|-----------------|  
 |SEVERE|심각한 오류를 나타내는 가장 높은 로깅 수준입니다. JDBC 드라이버에서 이 수준은 오류 및 예외를 보고하는 데 사용합니다.|  
 |WARNING|잠재적인 문제를 의미합니다.|  
@@ -53,7 +54,7 @@ ms.locfileid: "81219362"
   
  다음 표에서는 내부 로깅 범주에 대해 사용할 수 있는 각 로깅 수준에 대해 설명합니다.  
   
-|속성|Description|  
+|Name|설명|  
 |----------|-----------------|  
 |SEVERE|심각한 오류를 나타내는 가장 높은 로깅 수준입니다. JDBC 드라이버에서 이 수준은 오류 및 예외를 보고하는 데 사용합니다.|  
 |WARNING|잠재적인 문제를 의미합니다.|  
@@ -67,7 +68,7 @@ ms.locfileid: "81219362"
 ## <a name="logging-categories"></a>로깅 범주  
  Logger 개체를 만들 때 로그 정보를 가져올 명명된 엔터티나 범주가 어떤 것인지 이 개체에 알려야 합니다. JDBC 드라이버는 com.microsoft.sqlserver.jdbc 드라이버 패키지에 정의된 다음 공용 로깅 범주를 지원합니다.  
   
-|속성|Description|  
+|Name|설명|  
 |----------|-----------------|  
 |연결|[SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) 클래스의 메시지를 로깅합니다. 애플리케이션에서는 로깅 수준을 FINER로 설정할 수 있습니다.|  
 |인수를 제거합니다.|[SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) 클래스의 메시지를 로깅합니다. 애플리케이션에서는 로깅 수준을 FINER로 설정할 수 있습니다.|  

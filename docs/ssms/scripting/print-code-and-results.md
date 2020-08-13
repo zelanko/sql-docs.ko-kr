@@ -1,5 +1,6 @@
 ---
 title: 코드 및 결과 인쇄
+description: 인쇄할 때 텍스트 색을 지정하는 방법을 알아봅니다. 이러한 색은 표시에 사용되는 색과 다를 수 있습니다. 줄 번호를 목록에 표시할지 여부를 제어하는 방법도 알아봅니다.
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
@@ -15,15 +16,15 @@ ms.assetid: 6e60173f-77fb-4a3e-a561-62c4d0128b95
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: af9e8ec48a47caf9f5512c282b86e81ef1bc1dbc
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: cf3abb5bbecbc93a9a2f86b373f6192b7fbb6169
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253721"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122561"
 ---
 # <a name="print-code-and-results"></a>코드 및 결과 인쇄
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   쿼리나 파일을 인쇄할 경우 프린터에서 컬러 인쇄를 지원하며 프린터 설정에서 컬러 인쇄가 설정된 경우 컬러 요소는 컬러로 인쇄됩니다.  
   
  그러나 편집기의 텍스트 글꼴 및 색과 해당 텍스트가 프린터에서 인쇄되는 방식이 다를 수 있습니다. **도구** 메뉴에서 **옵션**을 클릭합니다. **환경**아래에서 **글꼴 및 색**을 클릭한 다음 편집기에 표시할 항목에 대한 글꼴 및 색과 인쇄 시에 적용할 글꼴 및 색을 선택합니다. 이러한 설정이 다르기 때문에 편집기에 표시된 것과 출력이 다를 수 있습니다.  

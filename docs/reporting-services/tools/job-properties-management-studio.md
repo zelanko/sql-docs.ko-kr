@@ -1,5 +1,6 @@
 ---
 title: 작업 속성(Management Studio) | Microsoft Docs
+description: SQL Server Management Studio에서 보고서 서버의 작업에 대한 정보를 볼 수 있는 위치인 작업 속성 페이지에 대해 알아봅니다.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ f1_keywords:
 ms.assetid: 807ffd0e-9363-4f8f-9c36-c5d746ad19fd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fb1a989876126a57553a1ae833bcf847f9c005bc
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8aabf771f7bd87f138e188a41be4b46ed43d2045
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65571124"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86915569"
 ---
 # <a name="job-properties-management-studio"></a>작업 속성(Management Studio)
   **작업 속성** 페이지를 사용하여 진행 중인 보고서 또는 구독을 취소하기 전에 이에 대한 정보를 볼 수 있습니다.  

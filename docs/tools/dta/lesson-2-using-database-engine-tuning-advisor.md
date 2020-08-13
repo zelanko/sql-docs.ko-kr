@@ -1,5 +1,6 @@
 ---
 title: 데이터베이스 엔진 튜닝 관리자 사용
+description: SQL Server 데이터베이스 엔진 튜닝 관리자 GUI가 데이터베이스를 튜닝하고 튜닝 세션을 관리하며 튜닝 권장 사항을 표시하는 방식을 알아봅니다.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: performance
@@ -9,24 +10,23 @@ helpviewer_keywords:
 ms.assetid: 3317d4f8-ed9e-4f2e-b5f1-a6bf3a9d6c8d
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 6352a5d32f7b173343729582cdb1bfb0c1de99b3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 385171c8465a06595a65c02ff457d003ce723a7f
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79285747"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458695"
 ---
 # <a name="lesson-2-using-database-engine-tuning-advisor"></a>2단원: 데이터베이스 엔진 튜닝 관리자 사용
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 데이터베이스 엔진 튜닝 관리자를 사용하면 데이터베이스를 튜닝하고 튜닝 세션을 관리하며 튜닝 권장 구성을 확인할 수 있습니다. 물리적 디자인 구조에 대해 잘 아는 사용자라면 이 도구를 사용하여 탐구적인 데이터베이스 튜닝 분석을 수행할 수 있습니다. 데이터베이스 튜닝에 대해 잘 모르는 사용자도 이 도구를 사용하여 자신이 튜닝하는 작업에 가장 적합한 물리적 디자인 구조 구성을 찾을 수 있습니다. 이 단원에서는 데이터베이스 엔진 튜닝 관리자 그래픽 사용자 인터페이스를 처음 접하는 데이터베이스 관리자와 물리적 디자인 구조에 대한 광범위한 지식이 없는 시스템 관리자에게 기본 연습을 제공합니다.  
 
-## <a name="prerequisites"></a>사전 요구 사항 
+## <a name="prerequisites"></a>필수 구성 요소 
 
 이 자습서를 완료하려면 SQL Server Management Studio, SQL Server를 실행하는 서버에 대한 액세스 및 AdventureWorks 데이터베이스가 필요합니다.
 

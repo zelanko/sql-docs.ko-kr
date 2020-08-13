@@ -1,5 +1,6 @@
 ---
 title: 보고서 서버 속성 설정(Management Studio) | Microsoft Docs
+description: SQL Server Management Studio에서 보고서 서버 시스템 속성을 설정하여 기능을 사용하도록 설정하거나 서버 기본값을 설정하는 방법을 알아봅니다.
 ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1ed0f84b-b12a-4e49-b65c-a11a99f9093f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e2632e93cf325a560434e0833e3bb5a7288f83ef
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 360c2408e7078845d58e28dff42fdf932d5e311a
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65578994"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918019"
 ---
 # <a name="set-report-server-properties-management-studio"></a>보고서 서버 속성 설정(Management Studio)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서 보고서 서버 시스템 속성을 설정하여 기능 또는 서버 기본값을 설정할 수 있습니다.  

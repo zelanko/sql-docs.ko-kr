@@ -1,5 +1,6 @@
 ---
 title: 구문 쌍의 자동 일치 기능
+description: 쿼리 편집기(구분 기호 일치), XMLA 쿼리 편집기(중괄호 일치), MDX 및 DMX(괄호 일치)에서 구문 쌍의 자동 일치에 대해 알아봅니다.
 ms.date: 03/01/2017
 ms.prod: sql
 ms.technology: scripting
@@ -11,15 +12,15 @@ ms.assetid: bfc54cda-bfd6-4545-a5b9-f9db2ae13769
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1251b6664266fdd1e4d91519186df95a52e52f35
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d23610ed602133b7c9c218a1da1a678c84954a93
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74834245"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920949"
 ---
 # <a name="automatic-matching-of-syntax-pairs"></a>구문 쌍의 자동 일치 기능
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   구문 쌍 자동 맞추기 기능은 쌍으로 코드를 작성해야 하는 구문 요소가 제대로 쌍을 이루는지 여부에 대한 즉각적인 피드백을 제공합니다. 이를 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기에서는 구분 기호 짝 맞추기, Analysis Services XMLA 쿼리 편집기에서는 중괄호 짝 맞추기, MDX 및 DMX 편집기에서는 괄호 짝 맞추기라고 합니다.  
   
 ## <a name="database-engine-query-editor-delimiter-matching"></a>데이터베이스 엔진 쿼리 편집기의 구분 기호 짝 맞추기  
@@ -34,7 +35,7 @@ ms.locfileid: "74834245"
   
 |여는 구분 기호|닫는 구분 기호|  
 |--------------------|-----------------------|  
-|**(**|**).**|  
+|**(**|**)**|  
 |**BEGIN**|**END**|  
 |**BEGIN TRY**|**END TRY**|  
 |**BEGIN CATCH**|**END CATCH**|  
@@ -55,17 +56,17 @@ ms.locfileid: "74834245"
   
 -   쌍을 이루는 시작 및 끝 태그  
   
--   모든 "\<" 및 ">" 꺾쇠 괄호의 쌍  
+-   "\<" and ">" 꺾쇠 괄호 쌍  
   
--   주석의 시작 및 끝  
+-   주석의 시작과 끝  
   
--   처리 명령의 시작 및 끝  
+-   처리 명령의 시작과 끝  
   
--   CDATA 블록의 시작 및 끝  
+-   CDATA 블록의 시작과 끝  
   
--   DTD 선언의 시작 및 끝  
+-   DTD 선언의 시작과 끝  
   
--   특성의 여는 따옴표 및 닫는 따옴표  
+-   특성의 여는 따옴표와 닫는 따옴표  
   
 ## <a name="mdx-and-dmx-editor-parenthesis-matching"></a>MDX 및 DMX 편집기의 괄호 짝 맞추기  
  MDX(Multi-Dimensional Expressions) 및 DMX(Data Mining Expressions) 편집기에서는 함수의 괄호 짝을 자동으로 맞춥니다.

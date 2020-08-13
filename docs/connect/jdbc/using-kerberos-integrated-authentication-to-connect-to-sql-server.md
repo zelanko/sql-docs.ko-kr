@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 687802dc-042a-4363-89aa-741685d165b3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4494931e0ee189e785ed057471e5560f4737ecc0
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: 8eaa889f12adb2470040cab4c0fba5df295a1cb2
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922307"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86916239"
 ---
 # <a name="using-kerberos-integrated-authentication-to-connect-to-sql-server"></a>Kerberos 통합 인증을 사용하여 SQL Server에 연결
 
@@ -37,13 +37,13 @@ Java **Krb5LoginModule**과 함께 통합 인증을 사용하면 [Class Krb5Logi
 
 ## <a name="remarks"></a>설명
 
-[!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] 이전에는 [연결 URL 작성](../../connect/jdbc/building-the-connection-url.md)에 설명된 대로 애플리케이션에서 **integratedSecurity** 연결 속성을 사용하고 **mssql-jdbc_auth-\<버전>-\<arch>.dll**을 참조하여 통합 인증(Kerberos 또는 NTLM 중 사용 가능한 인증 사용)을 지정할 수 있었습니다.
+[!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] 이전에는 [연결 URL 작성](../../connect/jdbc/building-the-connection-url.md)에 설명된 대로 애플리케이션에서 **integratedSecurity** 연결 속성을 사용하고 **mssql-jdbc_auth-\<version>-\<arch>.dll**을 참조하여 통합 인증(Kerberos 또는 NTLM 중 사용 가능한 인증 사용)을 지정할 수 있었습니다.
 
 [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)]부터 애플리케이션에서는 순수한 Java Kerberos 구현을 사용하는 Kerberos 통합 인증을 사용하여 데이터베이스에 연결한다는 것을 나타내기 위해 **authenticationScheme** 연결 속성을 사용할 수 있습니다.
 
 - **Krb5LoginModule**을 사용하는 통합 인증을 원하는 경우에도 여전히 **integratedSecurity=true** 연결 속성을 지정해야 합니다. 그런 다음 **authenticationScheme=JavaKerberos** 연결 속성도 지정해야 합니다.
 
-- 통합 인증을 계속 **mssql-jdbc_auth-\<버전>-\<arch>.dll**과 함께 사용하려면 **integratedSecurity=true** 연결 속성을 지정하고 필요에 따라 **authenticationScheme=NativeAuthentication**을 지정하면 됩니다.
+- 통합 인증을 계속 **mssql-jdbc_auth-\<version>-\<arch>.dll**과 함께 사용하려면 **integratedSecurity=true** 연결 속성을 지정하고 필요에 따라 **authenticationScheme=NativeAuthentication**을 지정하면 됩니다.
 
 - **authenticationScheme=JavaKerberos**를 지정하지만 **integratedSecurity=true**는 지정하지 않는 경우 드라이버는 **authenticationScheme** 연결 속성을 무시하고 연결 문자열에 사용자 이름 및 암호 자격 증명이 있을 것으로 예상합니다.
 
@@ -71,7 +71,7 @@ SPN(서비스 사용자 이름)은 클라이언트가 서비스 인스턴스를 
 
 SPN(서비스 사용자 이름)에 대한 자세한 내용은 다음을 참조하십시오.
 
-- [SQL Server에서 Kerberos 인증을 사용하는 방법](https://support.microsoft.com/kb/319723)
+- [Kerberos 연결의 서비스 사용자 이름 등록](../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)
 
 - [SQL Server에서 Kerberos 사용](https://docs.microsoft.com/archive/blogs/sql_protocols/using-kerberos-with-sql-server)
 

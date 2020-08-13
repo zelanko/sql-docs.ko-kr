@@ -1,5 +1,6 @@
 ---
 title: 결과 목록을 사용하여 문서 검색
+description: 프로젝트, 솔루션 또는 파일 시스템 폴더에 포함된 모든 파일에서 텍스트를 검색하고 바꾸는 방법을 알아봅니다. 일치 항목은 찾기 결과 1 창에 표시되고 일치 항목을 두 번 클릭하면 해당 항목이 포함된 줄을 볼 수 있습니다.
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
@@ -15,15 +16,15 @@ ms.assetid: 275e1b6c-fbd0-4408-af77-35903f90657c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b06660f3bc175e9869d669e7996f31d1a704f9b3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: fa62cc76deab4f40f7db63ebd119fc9cd227c72e
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253675"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122833"
 ---
 # <a name="search-documents-using-results-lists"></a>결과 목록을 사용하여 문서 검색
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   **찾기 및 바꾸기** 대화 상자를 사용하면 프로젝트나 솔루션 또는 파일 시스템 폴더의 모든 파일을 검색하여 바꿀 수 있으며 이러한 파일이 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 열려 있지 않은 경우에도 마찬가지입니다. **찾기 및 바꾸기** 대화 상자에서 수행한 검색 조건과 일치하는 항목이 찾기 결과 1 및 찾기 결과 2 창에 나타나며 일치하는 항목이 포함된 줄에서 해당 텍스트를 볼 수 있습니다.  
   
 ### <a name="to-search-in-multiple-files"></a>여러 파일을 검색하려면  

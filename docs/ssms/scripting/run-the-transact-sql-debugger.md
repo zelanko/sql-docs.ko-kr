@@ -1,5 +1,6 @@
 ---
 title: Transact-SQL 디버거 실행
+description: Transact-SQL 디버거를 사용자 지정하는 방법과 이를 사용하여 Transact-SQL 코드를 디버그하는 방법을 알아봅니다. 다른 컴퓨터에 있는 데이터베이스 엔진 인스턴스에서 디버거를 실행할 수 있습니다.
 ms.prod: sql
 ms.technology: scripting
 ms.topic: conceptual
@@ -22,16 +23,16 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 471a69f76a9cb663267e6d1b8c5e8c10614912bf
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 24fc9e6fd00aa0586630e611ef09568b7bf61cba
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253787"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122837"
 ---
 # <a name="run-the-transact-sql-debugger"></a>Transact-SQL 디버거 실행
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리 편집기 창을 연 후에 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 디버거를 시작할 수 있습니다. 그러면 디버거를 중지할 때까지 [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드를 디버그 모드에서 실행할 수 있습니다. 옵션을 설정하여 디버거 실행 방식을 사용자 지정할 수 있습니다.
 

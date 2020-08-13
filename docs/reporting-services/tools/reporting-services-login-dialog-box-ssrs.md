@@ -1,5 +1,6 @@
 ---
 title: Reporting Services 로그인 대화 상자 | Microsoft Docs
+description: Reporting Services 로그인 대화 상자를 사용하여 보고서 서버에 보고서를 게시하는 데 사용할 자격 증명을 제공하는 방법을 알아봅니다.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ f1_keywords:
 ms.assetid: 2037d797-0b61-44c7-931f-6c689c3fc733
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3d60450f0f4c7feb7d6a00f66fcedeb89c764bf5
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4d3e34d7ff9f92506f1225aea173521ee7d30e79
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082168"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919619"
 ---
 # <a name="reporting-services-login-dialog-box-ssrs"></a>Reporting Services 로그인 대화 상자(SSRS)
   **Reporting Services 로그인** 대화 상자를 사용하여 보고서 서버에 보고서를 게시하는 데 사용할 자격 증명을 제공할 수 있습니다.  
@@ -24,7 +25,7 @@ ms.locfileid: "77082168"
   
 ## <a name="options"></a>옵션  
  **Server**  
- 보고서 서버의 이름을 표시합니다. `https://localhost/reportserver`)을 입력합니다. 기본 포트 80 이외의 다른 포트를 사용하는 보고서 서버의 경우 포트 번호를 포함해야 합니다. `https://localhost:81/reportserver`)을 입력합니다.  
+ 보고서 서버의 이름을 표시합니다. 예들 들어 `https://localhost/reportserver`입니다. 기본 포트 80 이외의 다른 포트를 사용하는 보고서 서버의 경우 포트 번호를 포함해야 합니다. 예들 들어 `https://localhost:81/reportserver`입니다.  
   
  **사용자 이름**  
  웹 서비스에 로그인할 사용자 이름을 입력합니다.  

@@ -1,5 +1,6 @@
 ---
-title: 암호화 지원 이해 | Microsoft Docs
+title: 암호화 지원 이해
+description: JDBC 드라이버가 TLS 암호화를 사용하여 SQL 데이터베이스에 대한 연결을 안전하게 보호하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 09/12/2019
 ms.prod: sql
@@ -8,14 +9,14 @@ ms.reviewer: vanto
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 073f3b9e-8edd-4815-88ea-de0655d0325e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5ec3ad142e3dc5e2945afebeb2c9a6c97350672c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: aa20ac9d4118e5fec4dbaf225d27c9db8257a88f
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "71713304"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86393121"
 ---
 # <a name="understanding-encryption-support"></a>암호화 지원 이해
 
@@ -36,11 +37,11 @@ ms.locfileid: "71713304"
   
  다음 표에는 가능한 TLS 연결 시나리오에 대해 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 버전이 어떻게 동작하는지 요약되어 있습니다. 각 시나리오는 서로 다른 TLS 연결 속성 집합을 사용합니다. 표에는 다음과 같은 값이 포함되어 있습니다.  
   
-- **blank**: "연결 문자열에 속성이 없습니다."  
+- **blank**: “연결 문자열에 속성이 없습니다.”  
   
-- **value**: "연결 문자열에 속성이 있으며 해당 값이 유효합니다."  
+- **value**: “연결 문자열에 속성이 있으며 해당 값이 유효합니다.”  
   
-- **any**: "연결 문자열에 속성이 있는지 여부나 해당 값이 유효한지 여부가 중요하지 않습니다."  
+- **any**: “연결 문자열에 속성이 있는지 여부나 해당 값이 유효한지 여부가 중요하지 않습니다.”  
   
 > [!NOTE]  
 > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용자 인증 및 Windows 통합 인증에 대해서도 같은 동작이 적용됩니다.  
@@ -48,7 +49,7 @@ ms.locfileid: "71713304"
 | encrypt        | trustServerCertificate | hostNameInCertificate | trustStore | trustStorePassword | 동작                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | -------------- | ---------------------- | --------------------- | ---------- | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | false 또는 blank | any                    | any                   | any        | any                | [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 TLS 암호화를 지원하도록 적용하지 않습니다. 서버에 자체 서명된 인증서가 있는 경우 드라이버에서 TLS 인증서 교환을 시작합니다. TLS 인증서의 유효성은 검사되지 않으며 자격 증명(로그인 패킷에 있음)만 암호화됩니다.<br /><br /> 클라이언트에서 TLS 암호화를 지원하도록 서버가 요구할 경우 드라이버에서 TLS 인증서 교환을 시작합니다. TLS 인증서의 유효성은 검사되지 않지만 전체 통신은 암호화됩니다.                                                                                                                                                                                    |
-| true           | true                   | any                   | any        | any                | [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 TLS 암호화를 사용하도록 요청합니다.<br /><br /> 클라이언트에서 TLS 암호화를 지원하도록 서버가 요구하거나 서버에서 암호화를 지원하는 경우 드라이버에서 TLS 인증서 교환을 시작합니다. **trustServerCertificate** 속성이 "true"로 설정되어 있는 경우 드라이버에서 TLS 인증서의 유효성을 검사하지 않습니다.<br /><br /> 서버가 암호화를 지원하도록 구성되어 있지 않은 경우 드라이버에서 오류가 발생하고 연결이 종료됩니다.                                                                                                                                                                                          |
+| true           | true                   | any                   | any        | any                | [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 TLS 암호화를 사용하도록 요청합니다.<br /><br /> 클라이언트에서 TLS 암호화를 지원하도록 서버가 요구하거나 서버에서 암호화를 지원하는 경우 드라이버에서 TLS 인증서 교환을 시작합니다. **trustServerCertificate** 속성이 “true”로 설정되어 있는 경우 드라이버에서 TLS 인증서의 유효성을 검사하지 않습니다.<br /><br /> 서버가 암호화를 지원하도록 구성되어 있지 않은 경우 드라이버에서 오류가 발생하고 연결이 종료됩니다.                                                                                                                                                                                          |
 | true           | false 또는 blank         | 비어 있음                 | 비어 있음      | 비어 있음              | [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 TLS 암호화를 사용하도록 요청합니다.<br /><br /> 클라이언트에서 TLS 암호화를 지원하도록 서버가 요구하거나 서버에서 암호화를 지원하는 경우 드라이버에서 TLS 인증서 교환을 시작합니다.<br /><br /> 드라이버는 연결 URL에 지정된 **serverName** 속성을 사용하여 서버 TLS 인증서의 유효성을 검사하며 트러스트 관리자 팩터리의 조회 규칙에 따라 사용할 인증서 저장소를 결정합니다.<br /><br /> 서버가 암호화를 지원하도록 구성되어 있지 않은 경우 드라이버에서 오류가 발생하고 연결이 종료됩니다.                                                                             |
 | true           | false 또는 blank         | 값                 | 비어 있음      | 비어 있음              | [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 TLS 암호화를 사용하도록 요청합니다.<br /><br /> 클라이언트에서 TLS 암호화를 지원하도록 서버가 요구하거나 서버에서 암호화를 지원하는 경우 드라이버에서 TLS 인증서 교환을 시작합니다.<br /><br /> 드라이버는 **hostNameInCertificate** 속성에 대해 지정된 값을 사용하여 TLS 인증서 주체 값의 유효성을 검사합니다.<br /><br /> 서버가 암호화를 지원하도록 구성되어 있지 않은 경우 드라이버에서 오류가 발생하고 연결이 종료됩니다.                                                                                                                                                                 |
 | true           | false 또는 blank         | 비어 있음                 | 값      | 값              | [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 TLS 암호화를 사용하도록 요청합니다.<br /><br /> 클라이언트에서 TLS 암호화를 지원하도록 서버가 요구하거나 서버에서 암호화를 지원하는 경우 드라이버에서 TLS 인증서 교환을 시작합니다.<br /><br /> 드라이버는 **trustStore** 속성 값을 사용하여 인증서 trustStore 파일을 찾고 **trustStorePassword** 속성 값을 사용하여 trustStore 파일의 무결성을 검사합니다.<br /><br /> 서버가 암호화를 지원하도록 구성되어 있지 않은 경우 드라이버에서 오류가 발생하고 연결이 종료됩니다.                                                                                                                |
@@ -58,11 +59,11 @@ ms.locfileid: "71713304"
 | true           | false 또는 blank         | 값                 | 값      | 비어 있음              | [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 TLS 암호화를 사용하도록 요청합니다.<br /><br /> 클라이언트에서 TLS 암호화를 지원하도록 서버가 요구하거나 서버에서 암호화를 지원하는 경우 드라이버에서 TLS 인증서 교환을 시작합니다.<br /><br /> 드라이버는 **trustStore** 속성 값을 사용하여 trustStore 파일의 위치를 조회합니다. 또한 **hostNameInCertificate** 속성 값을 사용하여 TLS 인증서의 유효성을 검사합니다.<br /><br /> 서버가 암호화를 지원하도록 구성되어 있지 않은 경우 드라이버에서 오류가 발생하고 연결이 종료됩니다.                                                                                  |
 | true           | false 또는 blank         | 값                 | 값      | 값              | [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 TLS 암호화를 사용하도록 요청합니다.<br /><br /> 클라이언트에서 TLS 암호화를 지원하도록 서버가 요구하거나 서버에서 암호화를 지원하는 경우 드라이버에서 TLS 인증서 교환을 시작합니다.<br /><br /> 드라이버는 **trustStore** 속성 값을 사용하여 인증서 trustStore 파일을 찾고 **trustStorePassword** 속성 값을 사용하여 trustStore 파일의 무결성을 검사합니다. 또한 **hostNameInCertificate** 속성 값을 사용하여 TLS 인증서의 유효성을 검사합니다.<br /><br /> 서버가 암호화를 지원하도록 구성되어 있지 않은 경우 드라이버에서 오류가 발생하고 연결이 종료됩니다. |
   
-encrypt 속성이 **true**로 설정되어 있는 경우 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]에서는 JVM의 기본 JSSE 보안 공급자를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 TLS 암호화를 협상합니다. 기본 보안 공급자는 TLS 암호화를 성공적으로 협상하는 데 필요한 기능을 모두 지원하지 않을 수 있습니다. 예를 들어 기본 보안 공급자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] TLS 인증서에 사용되는 RSA 공개 키의 크기를 지원하지 않을 수 있습니다. 이 경우 기본 보안 공급자에서 오류가 발생하여 JDBC 드라이버가 연결을 종료합니다. 이 문제를 해결하려면 다음 중 하나를 수행하십시오.  
+encrypt 속성이 **true**로 설정되어 있는 경우 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]에서는 JVM의 기본 JSSE 보안 공급자를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 TLS 암호화를 협상합니다. 기본 보안 공급자는 TLS 암호화를 성공적으로 협상하는 데 필요한 기능을 모두 지원하지 않을 수 있습니다. 예를 들어 기본 보안 공급자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] TLS 인증서에 사용되는 RSA 공개 키의 크기를 지원하지 않을 수 있습니다. 이 경우 기본 보안 공급자에서 오류가 발생하여 JDBC 드라이버가 연결을 종료합니다. 이 문제를 해결하기 위해 다음 옵션 중 하나를 사용할 수 있습니다.  
   
 - 보다 작은 RSA 공개 키를 사용하는 서버 인증서로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성  
   
-- "\<java-home>/lib/security/java.security" 보안 속성 파일에서 다른 JSSE 보안 공급자를 사용하도록 JVM 구성  
+- “\<java-home>/lib/security/java.security” 보안 속성 파일에서 다른 JSSE 보안 공급자를 사용하도록 JVM 구성  
   
 - 다른 JVM을 사용합니다.  
   

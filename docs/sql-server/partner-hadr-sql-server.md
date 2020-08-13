@@ -1,22 +1,22 @@
 ---
 title: SQL Server 고가용성 및 재해 복구 파트너
 description: 서버를 모니터링할 솔루션이 있는 타사 파트너 목록입니다.
-services: sql-server
 ms.topic: conceptual
 ms.custom: seo-dt-2019
 ms.date: 09/17/2017
 ms.prod: sql
+ms.technology: release-landing
 ms.author: mikeray
 author: MikeRayMSFT
-ms.openlocfilehash: 4d01deaf94e18fcf277e11e4a880f99a70693ead
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5fd19ca04a383ca8485d2668a7988c8558040f76
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75656961"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86923049"
 ---
 # <a name="sql-server-high-availability-and-disaster-recovery-partners"></a>SQL Server 고가용성 및 재해 복구 파트너
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 SQL Server 서비스에 대한 고가용성 및 재해 복구를 제공하려면 다양한 업계 최고의 도구 중에서 선택합니다.  이 문서에서는 Microsoft SQL Server를 지원하는 고가용성 및 재해 복구 솔루션이 있는 Microsoft 파트너 회사를 강조 표시합니다.
 
 ## <a name="high-availability-and-disaster-recovery-partners"></a>고가용성 및 재해 복구 파트너
@@ -25,7 +25,7 @@ SQL Server 서비스에 대한 고가용성 및 재해 복구를 제공하려면
 | --- | --- | --- |
 |![Azure][5] |**Azure Site Recovery**<br>Site Recovery는 주 사이트를 사용할 수 없는 경우 보조 위치에서 계속 사용할 수 있도록 가상 컴퓨터 또는 실제 서버에서 실행 중인 워크로드를 복제합니다. 온-프레미스 데이터 센터에서 Azure나 다른 온-프레미스 데이터 센터로, 한 Azure 데이터 센터에서 다른 Azure 데이터 센터로 SQL Server 가상 컴퓨터를 복제하고 장애 조치(failover)할 수 있습니다.<br><br> SQL Server 2008 R2- SQL Server 2016의 Enterprise 및 Standard Edition|[웹 사이트][azure_website]<br>[Marketplace][azure_marketplace]<br>[데이터시트][azure_datasheet]<br>[Twitter][azure_twitter]<br>[비디오][azure_youtube]|
 |![DH2i][2] |**DH2i**<br>DxEnterprise는 계획 및 계획되지 않은 가동 중지 시간을 최소화하고, 막대한 비용을 절감하며, 관리를 대폭 간소화하고, 물리적 및 논리적 통합을 가능하게 하는 Windows, Linux 및 Docker용 Smart Availability 소프트웨어입니다.<br><br>SQL Server 2005+, Windows Server 2008R2+, Ubuntu 16+, RHEL 7+, CentOS 7+|[웹 사이트][dh2i_website]<br>[데이터시트][dh2i_datasheet]<br>[Twitter][dh2i_twitter]<br>[비디오][dh2i_youtube]|
-|![HPE][4] |**HPE Serviceguard**<br>SGLX(Linux용 HPE Serviceguard)를 사용하여 어떤 거리에서든, 물리적 환경 및 가상 환경 전반에 걸친 수많은 인프라 및 애플리케이션 오류를 통해 발생하는 계획 및 계획되지 않은 가동 중지 시간으로부터 Linux®의 중요한 SQL Server 2017 워크로드를 보호합니다. HPE SGLX A.12.20.00 이상은 장애 조치(Failover) 클러스터 인스턴스 및 Always On 가용성 그룹 SQL Server 워크로드에 대한 상황에 맞는 모니터링 및 복구 옵션을 제공합니다. 데이터 무결성 및 성능 저하 없이 HPE SGLX의 가동 시간을 극대화합니다.<br><br>Linux의 SQL Server 2017 - RedHat 7.3, 7.4, SUSE 12 SP2, SP3|[웹 사이트][hpe_website]<br>[데이터시트][hpe]<br>[평가 다운로드][hpe_download]<br>[블로그][hpe_download]<br>[Twitter][hpe_twitter]
+|![HPE][4] |**HPE Serviceguard**<br>SGLX(Linux용 HPE Serviceguard)를 사용하여 어떤 거리에서든, 물리적 환경 및 가상 환경 전반에 걸친 수많은 인프라 및 애플리케이션 오류를 통해 발생하는 계획 및 계획되지 않은 가동 중지 시간으로부터 Linux&reg;의 중요한 SQL Server 2017 워크로드를 보호합니다. HPE SGLX A.12.20.00 이상은 장애 조치(Failover) 클러스터 인스턴스 및 Always On 가용성 그룹 SQL Server 워크로드에 대한 상황에 맞는 모니터링 및 복구 옵션을 제공합니다. 데이터 무결성 및 성능 저하 없이 HPE SGLX의 가동 시간을 극대화합니다.<br><br>Linux의 SQL Server 2017 - RedHat 7.3, 7.4, SUSE 12 SP2, SP3|[웹 사이트][hpe_website]<br>[데이터시트][hpe]<br>[평가 다운로드][hpe_download]<br>[블로그][hpe_download]<br>[Twitter][hpe_twitter]
 |![IDERA][3]|**IDERA**<br>SQL 안전 백업은 데이터베이스 백업 시간 및 백업 파일 크기를 줄이고 백업 파일 내의 데이터베이스에 대한 즉시 읽기 및 쓰기 액세스를 제공함으로써 비용을 절감하는 SQL Server용 고성능 백업 및 복구 솔루션입니다.<br><br>Microsoft SQL Server: 2005 SP1 이상, 2008, 2008 R2, 2012, 2014, 2016, 모든 버전 |[웹 사이트][idera_website]|
 |![NEC][7]|**NEC**<br>ExpressCluster는 SQL Server에 대한 하드웨어, 소프트웨어, 네트워크 및 사이트 오류를 비롯한 모든 주요 오류에 대한 포괄적이고 완벽하게 자동화된 고가용성 및 재해 복구 솔루션이며, 온-프레미스 또는 클라우드 환경의 물리적 또는 가상 머신에서 실행되는 연결된 애플리케이션입니다.<br><br>Microsoft SQL Server: 2005 이상, 모든 버전 |[웹 사이트][necec_website]<br>[데이터시트][necec_datasheet]<br>[비디오][necec_youtube]<br>[다운로드][necec_download]|
 |![Portworx][6] |**Portworx**<br>Portworx는 프로덕션 환경에서 실행되는 상태 저장 컨테이너에 대한 솔루션입니다. Portworx를 통해 사용자는 Kubernetes, Mesosphere DC/OS 및 Docker Swarm과 같은 컨테이너 스케줄러를 사용하여 어떠한 인프라에서나 모든 데이터베이스 또는 상태 저장 서비스를 관리할 수 있습니다. Portworx는 지속성, 고가용성, 데이터 자동화, 다중 데이터 저장소 및 인프라 지원, 보안 등 DevOps 팀이 프로덕션 환경에서 컨테이너화된 데이터베이스 및 기타 상태 저장 서비스를 실행할 때 직면하는 5가지 가장 일반적인 문제를 해결합니다.<br><br>Docker의 SQL Server 2017 |[웹 사이트][portworx_website]<br>[설명서][portworx_docs]<br>[비디오][portworx_youtube]|

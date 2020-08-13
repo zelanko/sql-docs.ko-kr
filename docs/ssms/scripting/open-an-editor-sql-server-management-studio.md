@@ -1,5 +1,6 @@
 ---
 title: 편집기 열기(SQL Server Management Studio)
+description: SQL Server Management Studio에서 데이터베이스 엔진 쿼리, MDX, DMX 및 XML/A 편집기를 여는 방법을 알아봅니다.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,22 +11,22 @@ ms.assetid: 5d654a60-d205-49d2-a831-b3d986d60024
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 478f48cbea6bccb1cb66838a34d12689a94cf05a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ab96c21c9ac7d6e8b90564d6759c85744adc27f8
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253783"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122574"
 ---
 # <a name="open-an-editor-sql-server-management-studio"></a>편집기 열기(SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   이 항목에서는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]쿼리, MDX, DMX 또는 XML/A 편집기를 여는 방법에 대해 설명합니다. 편집기를 열면 각 편집기 창이 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]가운데 창에 탭으로 표시됩니다.  
   
 ## <a name="before-you-begin"></a>시작하기 전에  
  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기( [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트 편집용), DMX 및 MDX 편집기(해당 언어를 통한 스크립트 편집용) 및 XML/A 편집기(XML/A 스크립트 또는 XML 파일 편집용)의 네 가지 편집기를 지원합니다. 텍스트 파일은 어떠한 편집기로도 편집할 수 있습니다.  
   
 ### <a name="limitations-and-restrictions"></a>제한 사항  
- 고유한 코드 페이지를 사용하는 다른 사이트의 사용자와 파일을 공유하는 경우에는 파일을 읽을 때 오류가 발생하지 않도록 적절한 유니코드 코드 페이지로 파일을 저장해야 합니다. 또한 UNIX나 Macintosh용으로 파일을 저장할 경우에는 적절한 문서 형식으로 파일을 저장해야 합니다. **파일** 메뉴의 **저장**단추 옆에 있는 아래쪽 화살표에서 **다른 이름으로 저장** , **인코딩하여 저장** 을 클릭한 다음 **줄 끝** 에서 **Unix** 또는 **Macintosh**를 선택합니다.  
+ 고유한 코드 페이지를 사용하는 다른 사이트의 사용자와 파일을 공유하는 경우에는 파일을 읽을 때 오류가 발생하지 않도록 적절한 유니코드 코드 페이지로 파일을 저장해야 합니다. 또한 UNIX나 Macintosh용으로 파일을 저장할 경우에는 적절한 문서 형식으로 파일을 저장해야 합니다. **파일** 메뉴의 **저장** 단추 옆에 있는 아래쪽 화살표에서 **다른 이름으로 저장**, **인코딩하여 저장**을 클릭한 다음 **줄 끝**에서 **Unix** 또는 **Macintosh**를 선택합니다.  
   
 ### <a name="permissions"></a>사용 권한  
  코드 편집기에서 수행하는 작업에는 로그인하는 데 사용된 인증 계정에 부여된 사용 권한이 적용됩니다. 예를 들어 Windows 인증을 사용하여 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기 창을 열 경우 Windows 로그인 계정에 액세스 권한이 없는 개체를 참조하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 실행할 수 없습니다.  

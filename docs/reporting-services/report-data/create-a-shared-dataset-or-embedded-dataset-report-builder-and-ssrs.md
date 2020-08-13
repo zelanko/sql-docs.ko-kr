@@ -1,5 +1,6 @@
 ---
 title: 공유 데이터 세트 또는 포함된 데이터 세트 만들기(보고서 작성기) | Microsoft Docs
+description: 다양한 보고서에서 사용할 포함된 데이터 세트 및 공유 데이터 세트를 만드는 방법을 알아봅니다. 데이터 세트를 만들려면 포함된 데이터 원본 또는 공유 데이터 원본이 필요합니다.
 ms.date: 10/17/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: d1d7bc71-f0e9-4ce5-b3ad-6fee54388a31
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b19b5442731bf52e299450a32cb8536c0f95467f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 76e1482bf441401b02de984529d7fd178d88975c
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081415"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457805"
 ---
 # <a name="create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs"></a>공유 데이터 세트 또는 포함된 데이터 세트 만들기(보고서 작성기 및 SSRS)
 포함된 데이터 세트는 단일 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 보고서에 사용하기 위한 것입니다. 보고서 서버의 공유 데이터 세트는 여러 보고서(모바일 및 페이지 매김 둘 다)에서 사용될 수 있습니다. 데이터 세트를 만들려면 포함된 데이터 원본 또는 공유 데이터 원본이 필요합니다.  

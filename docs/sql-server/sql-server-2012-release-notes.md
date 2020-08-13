@@ -2,9 +2,9 @@
 title: SQL Server 2012 릴리스 정보 | Microsoft 문서
 description: 이 릴리스 정보 문서에서는 Microsoft SQL Server 2012를 설치하거나 문제를 해결하기 전에 읽어야 할 알려진 문제에 대해 설명합니다.
 ms.prod: sql
-ms.technology: install
+ms.technology: release-landing
 ms.custom: ''
-ms.date: 02/01/2017
+ms.date: 07/22/2020
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,17 +12,17 @@ helpviewer_keywords:
 ms.assetid: 9ccb390a-67a9-4593-85ea-2b4c41c4620f
 author: rothja
 ms.author: jroth
-monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: d60d53f11096343e96c0c309ba3aeb7bed419856
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+monikerRange: = sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: f07d5ea10fbb762b46dcf47fb15e9acdfe8404a9
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "82999403"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87111145"
 ---
 # <a name="sql-server-2012-release-notes"></a>SQL Server 2012 릴리스 정보
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
-이 릴리스 정보 문서에서는 Microsoft SQL Server 2012([다운로드하려면 여기를 클릭](https://go.microsoft.com/fwlink/?LinkId=238647))를 설치하거나 문제를 해결하기 전에 읽어야 할 알려진 문제에 대해 설명합니다. 이 릴리스 정보 문서는 정기적으로 업데이트되며 온라인으로만 사용할 수 있고 설치 미디어에는 포함되지 않습니다.  
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
+이 릴리스 정보 문서에서는 [Microsoft SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=238647)를 설치하거나 문제를 해결하기 전에 읽어야 할 알려진 문제에 대해 설명합니다. 이 릴리스 정보 문서는 정기적으로 업데이트되며 온라인으로만 사용할 수 있고 설치 미디어에는 포함되지 않습니다.  
   
 SQL Server 2012를 시작하고 설치하는 방법은 SQL Server 2012 추가 정보를 참조하십시오. 추가 정보 문서는 설치 미디어에 포함되어 있거나 [추가 정보](https://download.microsoft.com/download/3/B/D/3BD9DD65-D3E3-43C3-BB50-0ED850A82AD5/ENU/Readme.htm) 다운로드 페이지에서 다운로드할 수 있습니다. 또한 [SQL Server 온라인 설명서](https://go.microsoft.com/fwlink/?LinkId=190948) 및 [SQL Server 포럼](https://go.microsoft.com/fwlink/?LinkId=213599)에서 자세한 내용을 볼 수 있습니다.  
   
@@ -62,13 +62,17 @@ SQL Server 2012를 시작하고 설치하는 방법은 SQL Server 2012 추가 �
 ### <a name="13-sql-server-setup-might-fail-while-trying-to-start-the-sql-server-browser-service"></a>1.3 SQL Server 설치 프로그램이 SQL Server Browser 서비스를 시작하려는 동안 실패할 수 있음  
 **문제:** SQL Server 설치 프로그램이 SQL Server Browser 서비스를 시작하려는 동안 다음과 유사한 오류로 인해 실패할 수 있습니다.  
   
-<pre>The following error has occurred:  
-Service 'SQLBrowser' start request failed. Click 'Retry' to retry the failed action, or click 'Cancel' to cancel this action and continue setup.</pre>  
+```
+The following error has occurred:  
+Service 'SQLBrowser' start request failed. Click 'Retry' to retry the failed action, or click 'Cancel' to cancel this action and continue setup.
+```
   
 또는  
   
-<pre>The following error has occurred:  
-SQL Server Browser configuration for feature 'SQL_Browser_Redist_SqlBrowser_Cpu32' was cancelled by user after a previous installation failure. The last attempted step: Starting the SQL Server Browser service 'SQLBrowser', and waiting for up to '900' seconds for the process to complete.</pre>  
+```
+The following error has occurred:  
+SQL Server Browser configuration for feature 'SQL_Browser_Redist_SqlBrowser_Cpu32' was cancelled by user after a previous installation failure. The last attempted step: Starting the SQL Server Browser service 'SQLBrowser', and waiting for up to '900' seconds for the process to complete.
+```
   
 **해결 방법:** 이 문제는 SQL Server 엔진 또는 Analysis Services가 설치되지 못할 때 발생할 수 있습니다. 이 문제를 해결하려면 SQL Server 설치 로그를 참조하고 SQL Server 엔진 및 Analysis Services 실패를 해결합니다. 자세한 내용은 SQL Server 설치 로그 파일 보기 및 읽기를 참조하십시오. 자세한 내용은 [View and Read SQL Server Setup Log Files](../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)을 참조하세요.  
   
@@ -105,8 +109,10 @@ Windows Server 2008 R2 Server Core SP1에 SQL Server를 설치할 수 있습니�
   
 이러한 작업을 완료하지 않으면 의미 체계 인덱스를 만들려고 할 때 다음과 같은 오류 메시지가 표시됩니다.  
   
-<pre>Msg 41209, Level 16, State 3, Line 1  
-A semantic language statistics database is not registered. Full-text indexes using 'STATISTICAL_SEMANTICS' cannot be created or populated.</pre>  
+```
+Msg 41209, Level 16, State 3, Line 1  
+A semantic language statistics database is not registered. Full-text indexes using 'STATISTICAL_SEMANTICS' cannot be created or populated.
+```
   
 ### <a name="17-installation-prerequisite-handling-during-sql-server-2012-setup"></a>1.7 SQL Server 2012 설치 중 설치 필수 구성 요소 처리  
 다음 항목은 SQL Server 2012 설치 중 필수 구성 요소 설치 동작에 대해 설명합니다.  
@@ -378,9 +384,9 @@ Data Quality 클라이언트에서 매핑 단계 중에 DQS 작업에서 SQL Ser
 ### <a name="414-issue-with-date-or-datetime-values-in-unmapped-source-fields-in-excel-during-cleansing-and-matching"></a>4.14 정리 및 일치 중에 Excel의 매핑되지 않은 원본 필드에 있는 Date 또는 DateTime 값의 문제점  
 **문제**: 원본 데이터가 Excel이고 **Date** 또는 **DateTime** 데이터 형식의 값이 포함된 원본 필드를 매핑하지 않은 경우 정리 및 일치 작업 중에 다음과 같은 현상이 발생합니다.  
   
--   매핑되지 않은 **날짜** 값이 yyyymmdd 형식으로 표시되고 내보내집니다.  
+-   매핑되지 않은 **날짜** 값이 yyyy-mm-dd 형식으로 표시되고 내보내집니다.  
   
--   매핑되지 않은 **날짜/시간** 값의 시간 값이 손실되고, 값이 yyyymmdd 형식으로 표시되고 내보내집니다.  
+-   매핑되지 않은 **날짜/시간** 값에서 시간 값이 손실되고 날짜 값이 yyyy-mm-dd 형식으로 표시되고 내보내집니다.  
   
 **해결 방법:** 정리 작업의 **결과 관리 및 보기** 페이지와 일치 작업의 **Matching** 페이지에 있는 오른쪽 아래 창에서 매핑되지 않은 필드 값을 볼 수 있습니다.  
   
@@ -464,12 +470,12 @@ Data Quality 클라이언트에서 매핑 단계 중에 DQS 작업에서 SQL Ser
 ### <a name="54-an-error-might-occur-when-navigating-in-the-generate-script-wizard"></a>5.4 스크립트 생성 마법사에서 탐색하는 중에 오류가 발생할 수 있음  
 **문제:** **스크립트 저장 또는 게시**를 클릭하여 스크립트 생성 마법사에서 스크립트를 생성한 다음, **옵션 선택** 또는 **스크립팅 옵션 설정**을 클릭하고 다시 **스크립트 저장 및 게시**를 클릭하여 탐색하면 다음 오류가 발생할 수 있습니다.  
   
-<pre>
+```
 An exception occurred while executing a Transact-SQL statement or batch. (Microsoft.SqlServer.ConnectionInfo)  
 ------------------------------  
 ADDITIONAL INFORMATION:  
 Invalid object name 'sys.federations'. (Microsoft SQL Server, Error: 208)
-</pre>  
+```
   
 **해결 방법:** 스크립트 생성 마법사를 닫고 다시 엽니다.  
   
@@ -631,9 +637,8 @@ SQL Server 2012에는 StreamInsight 2.0이 포함되어 있습니다. StreamInsi
 ## <a name="100-upgrade-advisor"></a><a name="UA"></a>10.0 업그레이드 관리자  
   
 ### <a name="101-link-to-install-upgrade-advisor-is-not-enabled-on-chinese-hk-operating-systems"></a>10.1 업그레이드 관리자 설치에 대한 링크가 중국어(HK) 운영 체제에서 활성화되지 않음  
-문제: 중국어(홍콩 특별행정구) 운영 체제(OS)가 지원되는 Windows 버전에 업그레이드 관리자를 설치하려고 할 때 업그레이드 관리자 설치에 대한 링크가 활성화되지 않은 것을 발견할 수 있습니다.  
+문제: 중국어(홍콩 특별 행정구) 운영 체제(OS)가 지원되는 Windows 버전에 업그레이드 관리자를 설치하려고 할 때 업그레이드 관리자 설치에 대한 링크가 활성화되지 않은 것을 발견할 수 있습니다.  
   
 **해결 방법**: 해당 운영 체제 아키텍처에 따라 `\1028_CHT_LP\x64\redist\Upgrade Advisor` 또는 `\1028_CHT_LP\x86\redist\Upgrade Advisor`에서 SQL Server 2012 미디어에 있는 **SQLUA.msi** 파일을 찾습니다.  
   
 ![horizontal_bar](media/horizontal-bar.png "horizontal_bar")  
-  

@@ -1,5 +1,6 @@
 ---
 title: 서버 속성(실행 페이지) | Microsoft Docs
+description: 서버 속성 실행 페이지의 옵션을 사용하여 보고서 실행 시간 제한 값을 설정하는 방법을 알아봅니다.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ f1_keywords:
 ms.assetid: 53b77db1-b013-4dac-82dd-30c0de276639
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e8259591c54068cde134c98ae405dd77fac6fab4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6a7023a7cdea8281594f1a934d7eeed03847b794
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65571362"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86912409"
 ---
 # <a name="server-properties-execution-page"></a>서버 속성(실행 페이지)
   이 페이지를 사용하여 보고서 실행 제한 시간 값을 설정할 수 있습니다. 이 값은 현재 보고서 서버 인스턴스에서 처리하는 모든 보고서에 적용됩니다. 개별 보고서에 대해 이 값을 다시 정의할 수 있습니다. 보고서 서버에서 수행되는 모든 보고서 처리와 보고서 서버가 보고서에 사용되는 데이터를 검색할 때 데이터베이스에서 수행되는 쿼리 처리를 감안하여 값을 지정해야 합니다.  

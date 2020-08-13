@@ -1,5 +1,6 @@
 ---
 title: 매개 변수 정보(IntelliSense)
+description: 함수 또는 저장 프로시저에 필요한 매개 변수를 입력할 때 정보를 제공하는 IntelliSense 매개 변수 정보 옵션을 사용하는 방법을 알아봅니다.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,15 +16,15 @@ ms.assetid: 56c2aac9-c65c-4679-b62c-d9f689876dde
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d5668216e971c0e7c68e75f395699254ec61c109
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ec0f385f78a7d6c4ab1747ab7b81efd90e3b70dd
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253739"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122567"
 ---
 # <a name="parameter-info-intellisense"></a>매개 변수 정보(IntelliSense)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense **매개 변수 정보** 옵션은 함수나 저장 프로시저에 필요한 매개 변수의 개수, 이름 및 유형에 대한 정보를 제공하는 매개 변수 목록을 엽니다. 굵게 표시된 매개 변수는 함수나 시스템 저장 프로시저를 입력할 때 필요한 다음 매개 변수를 나타냅니다.  
   
  또한 중첩 함수에 대한 매개 변수 목록이 표시됩니다. 함수를 다른 함수에 대한 매개 변수로 입력할 경우 내부 함수에 대한 매개 변수가 매개 변수 목록에 표시됩니다. 그런 다음 내부 함수 매개 변수 목록이 완료되면 매개 변수 목록은 외부 함수 매개 변수를 표시하도록 원래대로 바뀝니다.  

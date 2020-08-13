@@ -5,20 +5,20 @@ description: RStudio의 sparklyr를 사용하여 빅 데이터 클러스터에 �
 author: jejiang
 ms.author: jejiang
 ms.reviewer: mikeray
-ms.date: 11/04/2019
+ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.technology: big-data-cluster
-ms.openlocfilehash: 375993e4fd9506c129e4f98d9ad2193472e03edb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.technology: machine-learning-bdc
+ms.openlocfilehash: e6767d32ae1f6c5f397141d1eddb15a5ec3f94a6
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73531624"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970014"
 ---
 # <a name="use-sparklyr-in-sql-server-big-data-cluster"></a>SQL Server 빅 데이터 클러스터에서 sparklyr를 사용합니다.
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 Sparklyr는 Apache Spark를 위한 R 인터페이스를 제공합니다. Sparklyr는 R 개발자가 Spark를 사용하는 데 널리 사용되는 방법입니다. 이 문서에서는 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]에서 RStudio를 사용하여 sparklyr를 사용하는 방법을 설명합니다.
 
@@ -49,7 +49,11 @@ sparklyr를 사용하여, Livy 및 HDFS/Spark 게이트웨이를 사용하여 �
 RStudio에서 다음 예제처럼 R 스크립트를 만들고 Spark에 연결합니다.
 
 > [!TIP]
-> `<AZDATA_USERNAME>` 및 `<AZDATA_PASSWORD>` 값의 경우, 빅 데이터 클러스터 배포 중에 설정한 사용자 이름(예: root)과 암호를 사용하세요. `<IP>` 및 `<PORT>` 값의 경우, [빅 데이터 클러스터에 연결](connect-to-big-data-cluster.md)에 관해 설명하는 설명서를 참조하세요.
+> `<AZDATA_USERNAME>` 및 `<AZDATA_PASSWORD>` 값의 경우, 빅 데이터 클러스터 배포 중에 설정한 사용자 이름과 암호를 사용하세요.
+
+[!INCLUDE [big-data-cluster-root-user](../includes/big-data-cluster-root-user.md)]
+
+`<IP>` 및 `<PORT>` 값의 경우, [빅 데이터 클러스터에 연결](connect-to-big-data-cluster.md)에 관해 설명하는 설명서를 참조하세요.
 
 ```r
 library(sparklyr)
@@ -80,7 +84,7 @@ iris_count
 
 ## <a name="distributed-r-computations"></a>분산 R 계산
 
-sparklyr의 기능 중 하나는 [spark_apply](https://spark.rstudio.com/reference/spark_apply/)를 사용하여 [R 계산을 분산](https://spark.rstudio.com/guides/distributed-r/)하는 것입니다.
+sparklyr의 기능 중 하나는 [spark_apply](https://spark.rstudio.com/guides/distributed-r/#apply-an-r-function-to-a-spark-object)를 사용하여 [R 계산을 분산](https://spark.rstudio.com/guides/distributed-r/)하는 것입니다.
 
 빅 데이터 클러스터는 Livy 연결을 사용하므로 **spark_apply**를 호출할 때 `packages = FALSE`를 설정해야 합니다. 자세한 내용은 분산 R 계산에 대한 sparklyr 설명서에서 [Livy 섹션](https://spark.rstudio.com/guides/distributed-r/#livy)을 참조하세요. 이렇게 설정하면 **spark_apply**로 전달한 R 코드에서 Spark 클러스터에 이미 설치한 R 패키지만 사용할 수 있습니다. 다음 예제에서 이 기능을 보여 줍니다.
 

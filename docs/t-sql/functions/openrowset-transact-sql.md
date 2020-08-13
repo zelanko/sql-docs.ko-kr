@@ -25,12 +25,12 @@ ms.assetid: f47eda43-33aa-454d-840a-bb15a031ca17
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 28519681f18d13fb11a93df9ffd852243c503a0b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9986119c2ceb4a04002344f8c703e302088e474c
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85738075"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87110897"
 ---
 # <a name="openrowset-transact-sql"></a>OPENROWSET(Transact-SQL)
 
@@ -76,6 +76,8 @@ OPENROWSET
    [ , FORMATFILE = 'format_file_path' ]
    [ , FORMATFILE_DATASOURCE = 'data_source_name' ]
 ```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>인수
 
@@ -233,7 +235,7 @@ SELECT *
 #### <a name="bulk-input-file-format-options"></a>BULK 입력 파일 형식 옵션
 
 ##### <a name="codepage"></a>CODEPAGE
-`CODEPAGE` = { 'ACP'| 'OEM'| 'RAW'| '*code_page*' } 데이터 파일에 있는 데이터의 코드 페이지를 지정합니다. CODEPAGE는 문자 값이 127보다 크거나 32보다 작은 **char**, **varchar** 또는 **text** 열이 데이터에 포함된 경우에만 적합합니다.
+`CODEPAGE` = { 'ACP' \| 'OEM' \| 'RAW' \| '*code_page*' } 데이터 파일에 있는 데이터의 코드 페이지를 지정합니다. CODEPAGE는 문자 값이 127보다 크거나 32보다 작은 **char**, **varchar** 또는 **text** 열이 데이터에 포함된 경우에만 적합합니다.
 
 > [!IMPORTANT]
 > `CODEPAGE`는 Linux에서 지원되는 옵션이 아닙니다.

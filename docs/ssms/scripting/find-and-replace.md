@@ -1,5 +1,6 @@
 ---
 title: 찾기 및 바꾸기
+description: 찾기 및 바꾸기 대화 상자를 사용하여 텍스트를 찾아서 바꾸는 방법을 알아봅니다.
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ ms.assetid: 09297893-d80b-4c88-86b4-52bfb639e521
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6598fafd54ba3b5e517e39869c45b3fd7ad7f47b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c3eef56e8db1a92d021d074de9a1c821f8d3fbc9
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "78261880"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122946"
 ---
 # <a name="find-and-replace"></a>찾기 및 바꾸기
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   **찾기 및 바꾸기** 대화 상자를 사용하여 파일 내에서 텍스트를 찾을 수 있으며 필요하면 다른 텍스트로 바꿀 수 있습니다. 대화 상자를 여는 방법에 따라 **찾기 및 바꾸기** 대화 상자에 표시되는 옵션이 조금씩 다릅니다. 찾기 옵션만 있고 바꾸기 옵션은 없는 대화 상자를 열려면 **편집** 메뉴에서 **찾기 및 바꾸기**를 가리킨 다음 **빠른 찾기** 를 클릭합니다. 찾기 옵션과 바꾸기 옵션이 모두 있는 대화 상자를 열려면 **편집** 메뉴에서 **찾기 및 바꾸기**를 가리킨 다음 **빠른 바꾸기** 를 클릭합니다.  
   
  도구 모음 단추 및 바로 가기 키를 사용하여 **찾기 및 바꾸기** 대화 상자를 열 수도 있습니다.  

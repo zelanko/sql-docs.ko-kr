@@ -1,5 +1,6 @@
 ---
 title: 그래픽 쿼리 디자이너 사용자 인터페이스 | Microsoft Docs
+description: 보고서 디자이너에서 보고서 데이터 세트에 대한 관계형 데이터베이스의 데이터를 검색할 수 있도록 그래픽 쿼리 디자이너 사용자 인터페이스에 대해 알아봅니다.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5022ae33-03a3-48de-8ac1-82742f48cebe
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ff907d83a4d793169872d5abaa059e8b6a1d91b3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: bd66f5f839c101343babf642e40fdfd999a528e9
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65572744"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458275"
 ---
 # <a name="graphical-query-designer-user-interface"></a>그래픽 쿼리 디자이너 사용자 인터페이스
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]는 보고서 디자이너의 보고서 데이터 세트에 대한 관계형 데이터베이스에서 데이터를 검색하기 위해 쿼리를 만들 수 있도록 그래픽 쿼리 디자이너와 텍스트 기반 쿼리 디자이너를 모두 제공합니다. 그래픽 쿼리 디자이너를 사용하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, OLE DB 및 ODBC와 같은 데이터 원본 유형에 대한 쿼리를 대화형으로 작성하고 결과를 볼 수 있습니다. 텍스트 기반 쿼리 디자이너를 사용하면 여러 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문, 복잡한 쿼리 또는 명령 구문 및 식 기반 쿼리를 지정할 수 있습니다. 자세한 내용은 [텍스트 기반 쿼리 디자이너 사용자 인터페이스](https://msdn.microsoft.com/library/44b7c664-03aa-494e-a484-052b318e810c)를 참조하세요. 특정 데이터 원본 유형 작업에 대한 자세한 내용은 [보고서 데이터 세트&#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)을 참조하세요.  
@@ -30,11 +31,11 @@ ms.locfileid: "65572744"
  .  
   
 ## <a name="graphical-query-designer"></a>그래픽 쿼리 디자이너  
- 이 그래픽 쿼리 디자이너에서 지원하는 쿼리 명령에는 **Text**, **StoredProcedure**또는 **TableDirect**의 세 가지 유형이 있습니다. 데이터 세트에 대한 쿼리를 만들기 전에 [데이터 세트 속성](https://msdn.microsoft.com/library/1fa34a4b-7de0-4e92-99fa-bc28a206773f) 대화 상자의 쿼리 페이지에서 명령 유형 옵션을 선택해야 합니다.  
+ 이 그래픽 쿼리 디자이너는 3가지 유형의 쿼리 명령인 **Text**, **StoredProcedure** 또는 **TableDirect**를 지원합니다. 데이터 세트에 대한 쿼리를 만들기 전에 [데이터 세트 속성](https://msdn.microsoft.com/library/1fa34a4b-7de0-4e92-99fa-bc28a206773f) 대화 상자의 쿼리 페이지에서 명령 유형 옵션을 선택해야 합니다.  
   
  쿼리 유형에 사용할 수 있는 옵션은 다음과 같습니다.  
   
--   **Text**에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] 및 Oracle용 데이터 처리 확장 프로그램을 비롯한 관계형 데이터베이스 데이터 원본의 표준 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 쿼리 텍스트를 지원합니다.  
+-   **Text**에서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 Oracle용 데이터 처리 확장 프로그램을 비롯한 관계형 데이터베이스 데이터 원본의 표준 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리 텍스트를 지원합니다.  
   
 -   **TableDirect** 지정한 테이블에서 모든 열을 선택합니다. 예를 들어 Customers라는 테이블에 대해 이는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 `SELECT * FROM Customers`와 같습니다.  
   
@@ -66,7 +67,7 @@ ms.locfileid: "65572744"
 #### <a name="toolbar-for-the-graphical-query-designer"></a>그래픽 쿼리 디자이너 도구 모음  
  그래픽 쿼리 디자이너 도구 모음은 그래픽 인터페이스를 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리를 디자인하는 데 도움이 되는 단추를 제공합니다.  
   
-|단추|Description|  
+|단추|설명|  
 |------------|-----------------|  
 |**텍스트로 편집**|텍스트 기반 쿼리 디자이너와 그래픽 쿼리 디자이너 사이를 전환합니다.|  
 |**가져오기**|파일 또는 보고서에서 기존 쿼리를 가져옵니다. 파일 유형 .sql 및 .rdl만 지원됩니다. 자세한 내용은 [보고서 포함된 데이터 세트 및 공유 데이터 세트&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)을 참조하세요.|  
@@ -111,7 +112,7 @@ EXEC uspGetEmployeeManagers '1';
 #### <a name="toolbar-buttons-for-the-command-type-tabledirect"></a>TableDirect 명령 유형의 도구 모음 단추  
  그래픽 쿼리 디자이너 도구 모음은 데이터 원본의 테이블에 대한 드롭다운 목록을 제공합니다. 다음 표에서는 각 단추와 해당 기능을 나열합니다.  
   
-|단추|Description|  
+|단추|설명|  
 |------------|-----------------|  
 |**텍스트로 편집**|텍스트 기반 쿼리 디자이너와 그래픽 쿼리 디자이너 사이를 전환합니다.|  
 |**가져오기**|파일 또는 보고서에서 기존 쿼리를 가져옵니다. 파일 유형 .sql 및 .rdl만 지원됩니다. 자세한 내용은 [보고서 포함된 데이터 세트 및 공유 데이터 세트&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)을 참조하세요.|  
@@ -129,7 +130,7 @@ EXEC uspGetEmployeeManagers '1';
 #### <a name="toolbar-buttons-for-command-type-storedprocedure"></a>StoredProcedure 명령 유형의 도구 모음 단추  
  그래픽 쿼리 디자이너 도구 모음은 데이터 원본의 저장 프로시저에 대한 드롭다운 목록을 제공합니다. 다음 표에서는 각 단추와 해당 기능을 나열합니다.  
   
-|단추|Description|  
+|단추|설명|  
 |------------|-----------------|  
 |**텍스트로 편집**|텍스트 기반 쿼리 디자이너와 그래픽 쿼리 디자이너 사이를 전환합니다.|  
 |**가져오기**|파일 또는 보고서에서 기존 쿼리를 가져옵니다. 파일 유형 .sql 및 .rdl만 지원됩니다. 자세한 내용은 [보고서 포함된 데이터 세트 및 공유 데이터 세트&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)을 참조하세요.|  

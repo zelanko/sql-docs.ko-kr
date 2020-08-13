@@ -1,5 +1,6 @@
 ---
 title: rs.exe 유틸리티 및 웹 서비스를 사용한 스크립트 | Microsoft Docs
+description: Microsoft Visual Basic으로 작성된 스크립트를 사용하여 보고서 서버를 프로그래밍 방식으로 관리하는 데 사용할 수 있는 RS.exe 유틸리티에 대해 알아봅니다.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0ec5ac6e-b3cf-49cd-96f6-6b4b7dc29982
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f20551117454ca742c8c681cd43f2704695dd276
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 689f77476a6b1f9931dc9ed82e8e9cd63f2083a7
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65571412"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914412"
 ---
 # <a name="script-with-the-rsexe-utility-and-the-web-service"></a>rs.exe 유틸리티 및 웹 서비스를 사용한 스크립팅
   개발자와 보고서 서버 관리자는 **rs** 유틸리티(RS.exe)를 사용하여 보고서 서버 작업을 수행할 수 있습니다. 이 유틸리티를 사용하면 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]으로 작성한 스크립트를 사용하여 보고서 서버를 프로그래밍 방식으로 관리할 수 있습니다.  

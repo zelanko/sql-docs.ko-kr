@@ -1,5 +1,6 @@
 ---
 title: SQL Server Data Tools의 Reporting Services(SSDT) | Microsoft Docs
+description: Microsoft Visual Studio에서 SQL Server Data Tools 보고서 디자이너 제작 환경을 사용하여 Reporting Services 솔루션을 만드는 방법을 알아봅니다.
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 0903c7b2-ac59-45f1-b7d0-922ecd9d76f8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c1f327b42dd3cdc18be769ef4b4b6fac571578e0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 30e7824d1519fb09a7947dde1cfdc2b818ebc144
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68889838"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86916589"
 ---
 # <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>SQL Server Data Tools의 Reporting Services(SSDT)
 
@@ -93,7 +94,7 @@ ms.locfileid: "68889838"
   
  속성 창을 사용하여 다음을 수행할 수 있습니다.  
   
--   디자인 화면에서 현재 선택한 항목의 속성을 설정합니다. 일부 속성은 값이 포함된 드롭다운 목록을 제공합니다. 셀에 직접 값을 입력할 수도 있습니다. 일부 속성은 값 컬렉션을 포함하며 이는 값 **(컬렉션)** 으로 표시됩니다. 대부분의 속성에는 식이 허용될 수 있으며 복합 식은 **\<Expression>** 값으로 표시됩니다. **\<Expression>** 을 클릭하면 **식** 대화 상자가 열립니다. 자세한 내용은 [Expression Dialog Box](https://msdn.microsoft.com/library/e6c74ccb-4594-4d4f-b958-618d710e34eb)을 참조하세요.  
+-   디자인 화면에서 현재 선택한 항목의 속성을 설정합니다. 일부 속성은 값이 포함된 드롭다운 목록을 제공합니다. 셀에 직접 값을 입력할 수도 있습니다. 일부 속성은 값 컬렉션을 포함하며 이는 값 **(컬렉션)** 으로 표시됩니다. 대부분의 속성에는 식이 허용될 수 있으며 복잡한 식은 값 **\<Expression>** 으로 표시됩니다. **\<Expression>** 을 클릭하여 **식** 대화 상자를 엽니다. 자세한 내용은 [Expression Dialog Box](https://msdn.microsoft.com/library/e6c74ccb-4594-4d4f-b958-618d710e34eb)을 참조하세요.  
   
 -   속성 창의 도구 모음 단추를 사용하여 종류별 보기에서 사전순 보기로 표 형태 창을 변경할 수 있습니다. 종류별 보기에서는 범주 내의 모든 속성을 보기 위해 해당 범주를 확장해야 할 수 있습니다. 항목의 속성 대화 상자를 열려면 도구 모음에서 **속성 페이지** 단추를 클릭하거나 항목을 마우스 오른쪽 단추로 클릭하고 **속성**을 클릭합니다.  
   

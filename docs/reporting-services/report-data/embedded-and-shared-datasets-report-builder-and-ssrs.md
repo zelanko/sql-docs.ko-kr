@@ -1,5 +1,6 @@
 ---
 title: 포함된 데이터 세트 및 공유 데이터 세트(보고서 작성기) | Microsoft Docs
+description: '포함된 데이터 세트 및 공유 데이터 세트에 대해 알아봅니다. 데이터 세트에는 쿼리 명령, 매개 변수 및 데이터 옵션(예: 대/소문자 구분, 데이터 정렬)이 포함됩니다.'
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: adc95cc0-d15a-413d-bc5a-302eab37a069
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f1d665699dc2051745b08a56796588dab51e3bcf
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: be5419348e7fa14ada37b119a9df9078dfe8bba8
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77077625"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458368"
 ---
 # <a name="embedded-and-shared-datasets-report-builder-and-ssrs"></a>포함된 데이터 세트 및 공유 데이터 세트(보고서 작성기 및 SSRS)
   보고서에서 데이터 세트는 외부 데이터 원본에 대해 쿼리를 실행할 때 반환되는 보고서 데이터를 나타냅니다. 데이터 세트는 외부 데이터 원본에 대한 정보를 포함하는 데이터 연결에 따라 달라집니다. 이때 데이터 자체가 보고서 정의에 포함되지는 않습니다. 데이터 세트에는 쿼리 명령, 필드 컬렉션, 매개 변수, 필터 및 대/소문자 구분, 데이터 정렬 등의 데이터 옵션이 포함됩니다. 데이터 세트에는 두 가지 유형이 있습니다.  

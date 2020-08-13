@@ -1,5 +1,6 @@
 ---
 title: 파워 피벗 연결 형식 | Microsoft Docs
+description: 파워 피벗 연결 형식에 대한 이 문서의 정보를 사용하여 데이터 원본을 작성하는 방법을 알아봅니다.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,19 +9,19 @@ ms.topic: conceptual
 ms.assetid: a104c3c7-f118-4d02-9a0f-6859f1469d11
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fb4fe31bfddb1c2312ae7e99e8a53609b5e5d70c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ba0c6616c2a99007a379a71e0169b2bac85e5be5
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79112358"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458008"
 ---
 # <a name="power-pivot-connection-type-ssrs"></a>파워 피벗 연결 형식(SSRS)
   SQL Server Analysis Services 데이터 처리 확장 프로그램을 사용하면 SharePoint [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리에 게시된 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서에서 데이터를 검색할 수 있습니다.  
   
  이 항목의 정보를 사용하여 데이터 원본을 작성할 수 있습니다. 단계별 지침은 [데이터 연결 추가 및 확인&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)을 참조하세요.  
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>필수 구성 요소  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터 원본을 SharePoint 사이트의 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리에 게시해야 합니다.  
   
  보고서 작성기에서 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서로의 연결을 지원하려면 워크스테이션 컴퓨터에 SQL Server 2008 R2 ADOMD.NET이 있어야 합니다. 이 클라이언트 라이브러리는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel과 함께 설치되지만 이 애플리케이션이 없는 컴퓨터를 사용하는 경우에는 [SQL Server 2008 R2 기능 팩](https://www.microsoft.com/download/details.aspx?id=44272)에서 ADOMD.NET을 다운로드하여 설치해야 합니다.  

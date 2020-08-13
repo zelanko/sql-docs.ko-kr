@@ -1,5 +1,6 @@
 ---
 title: 보고서에 Office 데이터 연결(.odc) 사용 | Microsoft Docs
+description: 기존 Office 데이터 연결(.odc) 파일을 사용하여 Reporting Services 보고서에 연결 정보를 제공하는 방법을 알아봅니다.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e8d6896d-f886-4390-8b5d-96f0a50c250c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a33b5bae668835ca1dbf52b2e7852c3af731ddfe
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8b8fd87736e84336cc206235dd78aa76576bfdf1
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65574944"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458506"
 ---
 # <a name="use-an-office-data-connection-odc-with-reports"></a>보고서에 Office 데이터 연결(.odc) 사용
   제한된 시나리오에서 기존 Office 데이터 연결 파일(.odc)을 사용하여 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서에 연결 정보를 제공할 수 있습니다. 공유 데이터 원본을 만들 때 .rsds 파일 대신 .odc 파일을 사용할 수 있습니다. 보고서 서버는 .rsds 파일과 같은 방식으로 .odc 파일을 사용합니다. 즉, 이 파일을 읽어 데이터 원본 유형, 연결 문자열 및 자격 증명 정보를 확인합니다.  

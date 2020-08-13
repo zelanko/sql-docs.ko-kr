@@ -1,6 +1,7 @@
 ---
 title: '보고서 문제 해결: 지도 보고서(보고서 작성기) | Microsoft Docs'
-ms.date: 01/17/2018
+description: 보고서 작성기에서 사용자 지정하거나, 계층을 추가하거나, 지도가 포함된 보고서를 게시하는 경우 발생할 수 있는 상황에 대한 문제 해결 아이디어를 살펴봅니다.
+ms.date: 07/22/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-design
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: a690aec2-056b-40bc-8cab-c694bd2d6d62
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 87c034202eb5a4c17fd73e75f881361c04b3b636
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a3dc21f30222704622f86732c11bd5f1db7b46d1
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080844"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87112020"
 ---
 # <a name="troubleshoot-reports-map-reports-report-builder-and-ssrs"></a>보고서 문제 해결: 지도 보고서(보고서 작성기 및 SSRS)
   [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 페이지를 매긴 보고서의 지도 문제는 지도나 지도 계층을 보고서에 추가하거나, 보고서에서 기존 지도 또는 지도 계층을 사용자 지정하거나, 보고서에서 지도를 미리 보거나, 지도가 포함된 보고서를 게시하는 경우 발생할 수 있습니다. 이 항목에서는 이러한 문제를 해결하는 데 유용한 정보를 제공합니다.  
@@ -206,6 +207,6 @@ ms.locfileid: "77080844"
   
 ## <a name="see-also"></a>참고 항목  
  [지도&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
- [보고서 작성기 문제 해결](https://docs.microsoft.com/sql/reporting-services/troubleshoot-report-builder?view=sql-server-2014)  
+ [보고서 작성기 문제 해결](/previous-versions/sql/2014/reporting-services/troubleshoot-report-builder?view=sql-server-2014)  
   
   

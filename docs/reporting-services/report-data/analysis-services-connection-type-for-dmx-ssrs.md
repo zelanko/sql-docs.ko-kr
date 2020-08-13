@@ -1,5 +1,6 @@
 ---
 title: DMX용 Analysis Services 연결 형식 | Microsoft Docs
+description: DMX용 Analysis Services 연결 형식을 살펴보고 그래픽 요소를 사용하여 DMX 쿼리를 작성하는 데 DMX 쿼리 디자이너를 사용하는 방법을 알아봅니다.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 2de825e9-6d8a-4128-add0-da15dc6cea3e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 96aa224d6eb9dac6e6f2959010631007ba41a8cd
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e44b1872f3962f27666bf68b1f661b9804b8880b
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081441"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458985"
 ---
 # <a name="analysis-services-connection-type-for-dmx-ssrs"></a>DMX용 Analysis Services 연결 형식(SSRS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 원본을 사용하여 데이터 세트를 만들면 올바른 큐브가 검색될 경우 보고서 디자이너에 MDX(Multidimensional Expressions) 쿼리 디자이너가 표시됩니다. 큐브가 검색되지 않지만 데이터 마이닝 모델을 사용할 수 있는 경우에는 보고서 디자이너에 DMX(Data Mining Extension) 쿼리 디자이너가 표시됩니다. MDX와 DMX 디자이너 사이를 전환하려면 도구 모음에서 **명령 형식 DMX** (![DMX 쿼리 언어 뷰로 변경](../../reporting-services/report-data/media/rsqdicon-commandtypedmx.gif "DMX 쿼리 언어 뷰로 변경")) 단추를 클릭합니다. DMX 쿼리 디자이너에서는 그래픽 요소를 사용하여 DMX 쿼리를 대화형으로 작성할 수 있습니다. DMX 쿼리 디자이너를 사용하려면 지정한 데이터 원본에는 이미 데이터를 제공하는 데이터 마이닝 모델이 있어야 합니다. 쿼리 결과는 보고서에 사용되는 일반 행 집합으로 변환됩니다.  
@@ -35,7 +36,7 @@ ms.locfileid: "77081441"
  DMX 쿼리 디자이너의 모드를 변경하려면 쿼리 디자인 화면을 마우스 오른쪽 단추로 클릭하고 **디자인**, **쿼리**또는 **결과**를 선택합니다. 자세한 내용은 [Analysis Services DMX 쿼리 디자이너 사용자 인터페이스](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md) 및 [데이터 마이닝 모델에서 데이터 검색&#40;DMX&#41;&#40;SSRS&#41;](../../reporting-services/report-data/retrieve-data-from-a-data-mining-model-dmx-ssrs.md)을 참조하세요.  
   
 ## <a name="designing-a-prediction-query"></a>예측 쿼리 디자인  
- 디자인 모드의 쿼리 디자인 창에는 **마이닝 모델** 창과 **입력 테이블 선택**창이 있습니다. **마이닝 모델** 창을 사용하여 쿼리에 사용할 마이닝 모델을 선택하고 **입력 테이블 선택** 창을 사용하여 예측의 기반이 될 테이블을 선택할 수 있습니다. 입력 테이블 대신 단일 쿼리를 사용하려면 쿼리 디자인 창을 마우스 오른쪽 단추로 클릭하고 **단일 쿼리**를 선택합니다. **입력 테이블 선택** 창이 **단일 쿼리 입력** 창으로 바뀝니다.  
+ 디자인 모드의 쿼리 디자인 창에는 **마이닝 모델 창**과 **입력 테이블 선택 창**이 있습니다. **마이닝 모델** 창을 사용하여 쿼리에 사용할 마이닝 모델을 선택하고 **입력 테이블 선택** 창을 사용하여 예측의 기반이 될 테이블을 선택할 수 있습니다. 입력 테이블 대신 단일 쿼리를 사용하려면 쿼리 디자인 창을 마우스 오른쪽 단추로 클릭하고 **단일 쿼리**를 선택합니다. **입력 테이블 선택** 창이 **단일 쿼리 입력** 창으로 바뀝니다.  
   
  디자인 모드에서 **마이닝 모델** 및 **입력 테이블 선택** 창의 필드를 표 형태 창의 **필드** 열로 끕니다. 나머지 열을 채워 별칭을 지정하고, 결과에 해당 필드를 표시하고, 여러 필드를 그룹화하고, 연산자를 지정하여 필드 값을 지정한 기준 또는 인수로 제한할 수도 있습니다. 쿼리 모드에 있는 경우 필드를 쿼리 창으로 끌어 DMX 쿼리를 작성합니다.  
   

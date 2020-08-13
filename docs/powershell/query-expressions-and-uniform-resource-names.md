@@ -1,5 +1,6 @@
 ---
 title: 쿼리 식 및 URN | Microsoft 문서
+description: 개체 모델 계층 구조에 있는 하나 이상의 개체를 열거하는 쿼리 식과 단일 개체를 고유하게 식별하는 URN(Uniform Resource Names)에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: e0d30dbe-7daf-47eb-8412-1b96792b6fb9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0eca650c1e499c54715204637306485280938707
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 84c9067c00962878d058871151eb0e47d06294f2
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68049115"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86921229"
 ---
 # <a name="query-expressions-and-uniform-resource-names"></a>쿼리 식 및 URN
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 SMO( [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Object) 모델 및 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell 스냅인은 XPath 식과 유사한 두 가지 유형의 식 문자열을 사용합니다. 쿼리 식은 개체 모델 계층 구조에 있는 하나 이상의 개체를 열거하는 데 사용되는 조건 집합을 지정하는 문자열입니다. URN(Uniform Resource Name)은 단일 개체를 고유하게 식별하는 특정 유형의 쿼리 식 문자열입니다.  
 
@@ -107,7 +108,7 @@ Object1[<FilterExpression1>]/ ... /ObjectN[<FilterExpressionN>]
  is_null(\@*PropertyName*)  
  지정된 속성 값이 NULL인 개체를 모두 열거합니다.  
   
- not(\<*PropertyExpression*>)  
+ 아님(\<*PropertyExpression*>)  
  *PropertyExpression*의 평가 값을 부정하고 *PropertyExpression*에 지정된 조건과 일치하지 않는 개체를 모두 열거합니다. 예를 들어 not(contains(\@Name, 'xyz'))는 이름에 xyz 문자열이 없는 개체를 모두 열거합니다.  
   
 ## <a name="remarks"></a>설명  
@@ -115,7 +116,7 @@ Object1[<FilterExpression1>]/ ... /ObjectN[<FilterExpressionN>]
   
  쿼리 식은 Server 개체에 대한 절대 참조로 시작해야 합니다. /로 시작하는 상대 식은 사용할 수 없습니다. 쿼리 식에 지정된 개체 시퀀스는 관련 개체 모델에 있는 컬렉션 개체의 계층 구조를 따라야 합니다. 예를 들어 Microsoft.SqlServer.Management.Smo 네임스페이스의 개체를 참조하는 쿼리 식은 Server 노드로 시작하고 그 다음에 Database 노드 등이 와야 합니다.  
   
- 개체에 대해 *\<FilterExpression>* 이 지정되지 않은 경우 해당 노드의 개체가 모두 열거됩니다.  
+ 개체에 대해 *\<FilterExpression>* 이 지정되지 않은 경우 해당 노드의 모든 개체가 열거됩니다.  
   
 ## <a name="uniform-resource-names-urn"></a>URN(Uniform Resource Name)  
  URN은 쿼리 식의 하위 집합입니다. 각 URN은 단일 개체에 대한 정규화된 참조를 형성합니다. 일반적인 URN에서는 Name 속성을 사용하여 각 노드의 단일 개체를 식별합니다. 예를 들어 이 URN은 특정 열을 참조합니다.  

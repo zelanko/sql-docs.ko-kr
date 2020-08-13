@@ -1,5 +1,6 @@
 ---
 title: 데이터베이스 엔진 스크립팅
+description: Microsoft PowerShell 스크립팅 환경을 사용하여 SQL Server 데이터베이스 엔진 인스턴스를 관리하는 방법과 Transact-SQL 및 XQuery를 포함하는 데이터베이스 엔진 쿼리를 작성하고 실행하는 방법을 알아봅니다.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,15 +17,15 @@ ms.assetid: 9978a884-59a2-4e7f-a82a-335149f3a261
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0ead4b8b90c6ef7a1fee0a0e4e28e6f7a15bce80
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 42305b48b6446788e3e8ffbb11f13ea1a64346cc
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253977"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122994"
 ---
 # <a name="database-engine-scripting"></a>데이터베이스 엔진 스크립팅
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 인스턴스 및 이러한 인스턴스의 개체를 관리하기 위한 [!INCLUDE[ssDE](../../includes/ssde-md.md)] PowerShell 스크립팅 환경을 지원합니다. 또한 스크립팅 환경과 매우 유사한 환경에서는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 및 XQuery를 포함하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리를 작성 및 실행할 수 있습니다.  
   
 ## <a name="sql-server-powershell"></a>SQL Server PowerShell  

@@ -1,23 +1,23 @@
 ---
-title: 동시 스크립트 크기 조정
+title: 병렬 또는 동시 R 및 Python 스크립트 실행 구성
 description: 사용자 계정 풀에서 병렬 또는 동시 R 및 Python 스크립트 실행을 구성하여 SQL Server Machine Learning Services 크기를 조정합니다.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 09/25/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: =sql-server-2016||=sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: 430af4eb1127ab5b924b2429e166f68e2dffa334
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 525e9d0931b3ff25d4258004680ed158a9baf82d
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81118806"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86484449"
 ---
 # <a name="scale-concurrent-execution-of-external-scripts-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services에서 외부 스크립트의 동시 실행 확장
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 SQL Server Machine Learning Services의 작업자 계정 및 기본 구성을 변경하여 외부 스크립트의 동시 실행 수를 조정하는 방법을 알아봅니다.
 

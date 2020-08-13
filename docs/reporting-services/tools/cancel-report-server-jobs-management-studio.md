@@ -1,5 +1,6 @@
 ---
 title: 보고서 서버 작업 취소(Management Studio) | Microsoft Docs
+description: 보고서 서버 작업 취소 대화 상자의 옵션을 사용하여 진행 중인 보고서를 보거나 취소하는 방법을 알아봅니다.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ f1_keywords:
 ms.assetid: 1c5b4975-49e9-4d0b-b298-2638e81edbfd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8c433b8fcc0d768b3db48edf8bc56bed6440839a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2da03690f084dbc1ce4cd7c4faf1e1e6cf2cb6d7
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65574214"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86917987"
 ---
 # <a name="cancel-report-server-jobs-management-studio"></a>보고서 서버 작업 취소(Management Studio)
   **보고서 서버 작업 취소** 대화 상자를 사용하여 진행 중인 보고서를 보거나 취소할 수 있습니다. 이 대화 상자에는 현재 보고서 서버에서 실행 중인 모든 작업이 표시됩니다. 현재 처리 중인 작업을 일시 중지하거나 다시 시작할 수는 없지만 완료하는 데 오랜 시간이 걸릴 경우 모든 작업 또는 개별 작업을 취소할 수 있습니다.  

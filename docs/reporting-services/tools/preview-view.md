@@ -1,5 +1,6 @@
 ---
 title: 미리 보기 뷰 | Microsoft Docs
+description: 렌더링된 보고서의 표시를 확인할 수 있는 Reporting Services 보고서 디자이너의 미리 보기 뷰에 대해 알아봅니다.
 ms.date: 05/30/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 108255d1-5be8-47c1-80f3-1f2a055e4d02
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7c546ee5bdc941a5b0dba77b9c110bd283b217d7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: bdfb752b3d78f037e1ce5a9202c2ef564b12bc2d
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65582171"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86915579"
 ---
 # <a name="preview-view"></a>미리 보기 뷰
 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 보고서 디자이너에서 **미리 보기** 뷰를 사용하여 렌더링된 보고서를 표시할 수 있습니다. 보고서를 미리 보는 경우 보고서 디자이너가 로컬 컴퓨터에서 보고서를 실행하여 미리 보기에 표시합니다. 미리 보기 모드에서는 보고서 전체를 처리합니다. 보고서에 복잡한 쿼리나 많은 양의 데이터가 있는 경우 처음 볼 때 미리 보기를 완료하는데 몇 분 정도 걸릴 수 있습니다. 보고서의 형식에만 영향을 미치는 후속 변경 내용의 경우 미리 보기 기능에서는 캐시된 데이터를 사용합니다.

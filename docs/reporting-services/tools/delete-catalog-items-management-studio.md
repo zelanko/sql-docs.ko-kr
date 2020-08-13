@@ -1,5 +1,6 @@
 ---
 title: 카탈로그 항목 삭제(Management Studio) | Microsoft Docs
+description: 공유 일정 및 역할 정의를 삭제할 수 있는 Management Studio의 카탈로그 항목 삭제 페이지에 있는 옵션에 대해 알아봅니다.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ f1_keywords:
 ms.assetid: b0599e01-6dc3-4484-80d4-022a412e0ebd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b8576a1946368c7adc1a32aa66ce44e28603616a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6a41e1ed676a00f05837ed502f020b888fe05ca1
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65573943"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918379"
 ---
 # <a name="delete-catalog-items-management-studio"></a>카탈로그 항목 삭제(Management Studio)
   이 페이지를 사용하여 공유 일정 및 역할 정의를 삭제할 수 있습니다.  

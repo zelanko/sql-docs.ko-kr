@@ -1,5 +1,6 @@
 ---
 title: 중단점 위치 편집
+description: Transact-SQL 스크립트 파일의 중단점을 스크립트의 다른 위치 또는 다른 스크립트로 이동하는 방법을 알아봅니다.
 titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -14,16 +15,16 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 82709b15e729eb972c28b22c0113682464232809
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1ada37fc6ca1b90e65b2cc4531b13c090db05736
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253966"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122954"
 ---
 # <a name="edit-a-breakpoint-location"></a>중단점 위치 편집
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 중단점 위치는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트 파일에서 중단점이 나오는 줄과 문자를 지정합니다. 중단점 위치를 편집하여 중단점을 스크립트의 다른 위치나 다른 스크립트로 이동할 수 있습니다.
 

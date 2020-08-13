@@ -1,5 +1,6 @@
 ---
 title: Windows PowerShell에서 SMO 어셈블리 로드 | Microsoft 문서
+description: SQL Server PowerShell 공급자를 사용하지 않는 Windows PowerShell 스크립트에서 SQL SMO(SQL Server Management Object) 어셈블리를 로드하는 방법을 설명합니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -9,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 8ca42b69-da5a-47f4-9085-34e443f0e389
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2262de78691c14b14bf9177306c0eb7526ef290b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f3ac67e05f5a94de1c45e44b2fc466d5f4097751
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67951691"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919124"
 ---
 # <a name="load-the-smo-assemblies-in-windows-powershell"></a>Windows PowerShell에서 SMO 어셈블리 로드
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 이 문서에서는 SQL Server PowerShell 공급자를 사용하지 않는 Windows PowerShell 스크립트에서 SMO(SQL Server Management Object) 어셈블리를 로드하는 방법을 설명합니다.  
   
@@ -35,7 +36,7 @@ SMO 어셈블리를 직접 로드해야 할 수 있는 두 가지 경우가 있�
   
 -   공급자 또는 cmdlet을 사용하지 않는 C# 또는 Visual Basic과 같은 다른 언어에서 SMO 코드를 이식하려는 경우  
   
-## <a name="example-loading-the-sql-server-management-objects"></a>예제: SQL Server 관리 개체 로드  
+## <a name="example-loading-the-sql-server-management-objects"></a>예제: SQL Server Management Objects 로드  
  다음 코드는 SMO 어셈블리를 로드합니다.  
   
 ```  

@@ -1,5 +1,6 @@
 ---
 title: XML 연결 형식 | Microsoft Docs
+description: XML 연결 형식을 사용하여 쿼리에 포함된 XML 문서, 웹 서비스 또는 XML에 연결하여 데이터를 검색하는 방법을 알아봅니다.
 ms.date: 03/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5b55fff2-1b15-4156-83ef-15ad9cf9f509
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9355ac713c502acbbd319ec7bdc9cb035079ca34
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 120e99440b77a27be4f83f8e4355a4ec75cab7bb
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081684"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458510"
 ---
 # <a name="xml-connection-type-ssrs"></a>XML 연결 형식(SSRS)
   보고서에 XML 데이터 원본의 데이터를 포함하려면 XML 유형의 보고서 데이터 원본에 기초하는 데이터 세트가 있어야 합니다. 이 기본 제공 데이터 원본 유형은 XML 데이터 확장 프로그램을 기반으로 합니다. 이 데이터 원본 유형을 사용하여 쿼리에 포함된 XML 문서, 웹 서비스 또는 XML에서 데이터에 연결하여 검색합니다.  
@@ -93,7 +94,7 @@ ms.locfileid: "77081684"
   
     -   **XML 데이터 원본은 XML 문서입니다.**  
   
-         필수 XML 요소: 없음  
+         필수 XML 요소: None  
   
          선택적 XML 요소:  
   
@@ -115,7 +116,7 @@ ms.locfileid: "77081684"
   
  쿼리 구문에 대한 자세한 내용은 [XML 보고서 데이터를 위한 XML 쿼리 구문&#40;SSRS&#41;](../../reporting-services/report-data/xml-query-syntax-for-xml-report-data-ssrs.md)을 참조하세요.  
   
- 예를 보려면 [Reporting Services: XML 및 웹 서비스 데이터 원본 사용(Reporting Services: Using XML and Web Service Data Sources)](https://go.microsoft.com/fwlink/?LinkId=81654)을 참조하십시오.  
+ 예를 보려면 [Reporting Services: XML 및 웹 서비스 데이터 원본 사용](https://go.microsoft.com/fwlink/?LinkId=81654)을 참조하세요.  
   
 ### <a name="requirements-for-retrieving-xml-web-service-data"></a>XML 웹 서비스 데이터 검색을 위한 요구 사항  
  XML 데이터 처리 확장 프로그램은 스키마를 검색하지 않습니다. 따라서 다른 방법으로 원하는 데이터를 검색할 SOAP 메서드를 찾아야 합니다. 또한 웹 서비스에서 해당 데이터에 사용하는 주소 지정 스키마나 네임스페이스에 대해 이해하고 있어야 합니다.  

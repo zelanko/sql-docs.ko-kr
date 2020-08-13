@@ -1,7 +1,7 @@
 ---
 title: 'PowerShell: 인증 관리'
+description: 데이터베이스 엔진 인스턴스에 연결할 때 Windows 인증(기본값)이 아닌 SQL Server 인증을 사용하는 방법을 알아봅니다.
 titleSuffix: SQL Server on Linux
-description: PowerShell을 사용하여 SQL Server에 대한 Windows 및 SQL 인증을 관리하는 방법에 대해 알아봅니다.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: ab9212a6-6628-4f08-a38c-d3156e05ddea
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 22c48323aa7570440a3edb06400d9a96e9bd9924
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 13ec62ac5adfd818de429f087f9b5d8dc83bb8a2
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75557968"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919113"
 ---
 # <a name="powershell-manage-authentication-to-sql-server"></a>PowerShell: SQL Server에 대한 인증 관리
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 기본적으로 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell 구성 요소는 Windows 인증을 사용하여 [!INCLUDE[ssDE](../includes/ssde-md.md)]인스턴스에 연결합니다. PowerShell 가상 드라이브를 정의하거나 **Invoke-Sqlcmd**에 대한 **-Username** 및 **-Password**매개 변수를 지정하여 SQL Server 인증을 사용할 수 있습니다.  
   

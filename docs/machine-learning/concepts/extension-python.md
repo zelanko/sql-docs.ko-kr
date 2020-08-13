@@ -1,27 +1,32 @@
 ---
 title: Python 언어 확장
-description: SQL Server Machine Learning Services의 Python 코드 실행 및 기본 제공 Python 라이브러리에 대해 알아봅니다.
+description: SQL Server Machine Learning Services에서 외부 Python 스크립트를 실행하기 위한 Python 확장에 대해 알아봅니다.
 ms.prod: sql
-ms.technology: machine-learning
-ms.date: 11/04/2019
+ms.technology: machine-learning-services
+ms.date: 07/14/2020
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 1c81434a2ba9d20dd4d39b258534cd9c8bf32222
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 9e9fedafebab6b5353ddb6f2f51bd0c8662377e1
+ms.sourcegitcommit: d1535944bff3f2580070cc036ece30f1d43ee2ce
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487592"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86406286"
 ---
-# <a name="python-language-extension-in-sql-server"></a>SQL Server의 Python 언어 확장
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="python-language-extension-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services의 Python 언어 확장
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-Python 확장은 관계형 데이터베이스 엔진에 대한 SQL Server Machine Learning Services 추가 기능에 포함되어 있습니다. 이 확장은 Python 실행 환경, Python 3.5 런타임 및 인터프리터가 포함된 Anaconda 배포판, 표준 라이브러리 및 도구, Python용 Microsoft 제품 라이브러리(규모에 따른 분석을 위한 [revoscalepy](../python/ref-py-revoscalepy.md) 및 기계 학습 알고리즘 개발을 위한 [microsoftml](../python/ref-py-microsoftml.md))를 추가합니다. 
+이 문서에서는 [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md)에서 외부 Python 스크립트를 실행하기 위한 Python 확장에 대해 설명합니다. 이 확장은 다음을 추가합니다.
 
-Python 통합은 [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md)로 설치됩니다.
+- Python 실행 환경
+- Python 3.5 런타임 및 인터프리터가 포함된 Anaconda 배포판
+- 표준 라이브러리 및 도구
+- Microsoft Python 패키지:
+  - 대규모 분석을 위한 [revoscalepy](../python/ref-py-revoscalepy.md)
+  - 기계 학습 알고리즘을 위한 [microsoftml](../python/ref-py-microsoftml.md)
 
 Python 3.5 런타임 및 인터프리터를 설치하면 표준 Python 솔루션과 거의 완벽하게 호환됩니다. 데이터베이스 작업이 손상되지 않도록 보장하기 위해 Python은 SQL Server와 별도의 프로세스에서 실행됩니다.
 

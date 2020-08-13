@@ -1,5 +1,6 @@
 ---
 title: 서버 속성(로깅 페이지) | Microsoft Docs
+description: SQL Server Management Studio에서 Reporting Services 페이지의 옵션을 사용하여 보고서 서버가 수집하는 보고서 실행 데이터에 대한 제한을 설정하는 방법을 알아봅니다.
 ms.date: 06/10/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ f1_keywords:
 ms.assetid: b338deab-4868-4951-9f22-0605add2fc95
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9e9286363970b568e0690b622fac6d94c2b01f6b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8b06ebb1151d68b462fa96cd1c7493460209d33d
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65571384"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86912399"
 ---
 # <a name="server-properties-logging-page"></a>서버 속성(로깅 페이지)
   [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 의 이 [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] 페이지를 사용하여 보고서 서버에서 수집한 보고서 실행 데이터에 대한 제한을 설정할 수 있습니다. 실행 데이터는 보고서 서버 데이터베이스에 내부적으로 저장됩니다. 기본 모드 또는 SharePoint 통합 모드로 실행되는 보고서 서버에 대한 보고서 작업을 추적할 수 있습니다. 보고서 서버가 스케일 아웃 배포에 포함되는 경우 보고서 실행 로그는 단일 로그 파일에 전체 배포에 대한 모든 보고서 작업 기록을 유지합니다.  

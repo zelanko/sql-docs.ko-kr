@@ -1,5 +1,6 @@
 ---
 title: 시스템 역할 속성(Management Studio) | Microsoft Docs
+description: 보고서 서버에 현재 정의된 시스템 역할 정의를 볼 수 있는 시스템 역할 페이지의 옵션에 대해 알아봅니다.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,17 +11,17 @@ f1_keywords:
 ms.assetid: 0210fc2a-74fb-41dd-8e39-4830047ec417
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f3084f12a417986571c3feb2195e513f071f9dbb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6099c12a66ebcca61ac18ed1ca3f612512bf2fad
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65576026"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914905"
 ---
 # <a name="system-role-properties-management-studio"></a>시스템 역할 속성(Management Studio)
   시스템 역할 페이지를 사용하여 보고서 서버에 현재 정의되어 있는 시스템 역할 정의를 볼 수 있습니다. 시스템 역할 정의에는 개별 항목이 아닌 전체 사이트에 대해 수행되는 태스크의 명명된 모음이 포함됩니다. 역할 정의는 사용자나 그룹에 할당되어 역할 할당을 만듭니다. 역할 정의의 태스크는 사용자나 그룹이 수행할 수 있는 태스크를 지정합니다.  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에는 **시스템 관리자** 및 **시스템 사용자**로 두 개의 미리 정의된 시스템 역할 정의가 있습니다. 태스크 목록을 변경하여 이러한 역할 정의를 수정하거나 다른 태스크 조합을 지원하는 새 시스템 역할을 만들 수 있습니다. 역할 정의를 편집하면 역할 정의를 포함하는 모든 역할 할당에 영향을 줍니다.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에는 두 개의 미리 정의된 시스템 역할 정의인 **시스템 관리자** 및 **시스템 사용자**가 있습니다. 태스크 목록을 변경하여 이러한 역할 정의를 수정하거나 다른 태스크 조합을 지원하는 새 시스템 역할을 만들 수 있습니다. 역할 정의를 편집하면 역할 정의를 포함하는 모든 역할 할당에 영향을 줍니다.  
   
 > [!NOTE]  
 >  시스템 역할 할당은 기본 모드로 실행되는 보고서 서버에만 사용됩니다. 보고서 서버가 SharePoint 통합 모드로 구성된 경우 이 페이지를 사용할 수 없습니다.  

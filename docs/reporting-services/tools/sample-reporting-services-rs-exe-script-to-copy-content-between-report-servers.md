@@ -1,5 +1,6 @@
 ---
 title: 보고서 서버 간 콘텐츠 복사를 위한 예제 Reporting Services rs.exe 스크립트 | Microsoft Docs
+description: RS.exe 유틸리티를 사용하여 Reporting Services RSS 스크립트를 실행해 한 SQL Server Reporting Services 보고서 서버에서 다른 보고서 서버로 콘텐츠 항목 및 설정을 복사하는 방법을 알아봅니다.
 ms.date: 05/23/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: d81bb03a-a89e-4fc1-a62b-886fb5338150
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 18d10f94696f901efd4f3938bf9b5e06d1c7078d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1f56cd8793d75776335769b22195abb27b1818dc
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "70176282"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86916919"
 ---
 # <a name="sample-reporting-services-rsexe-script-to-copy-content-between-report-servers"></a>보고서 서버 간 콘텐츠 복사를 위한 예제 Reporting Services rs.exe 스크립트
 
@@ -59,7 +60,7 @@ ms.locfileid: "70176282"
 |폴더|예|예|스크립트가 대상 서버에 있는 기존 항목을 덮어쓰지 않습니다. 대상 서버에 있는 항목이 동일한 이름으로 존재할 경우 다음과 비슷한 오류 메시지가 표시됩니다.<br /><br /> `Migrating Folder: /Reports ... FAILURE: The item '/Reports' already exists. ---> Microsoft.ReportingServices.Diagnostics.Utilities.ItemAlreadyExistsException: The item '/Reports' already exists.`|  
 |보고서|예|예|스크립트가 대상 서버에 있는 기존 항목을 덮어쓰지 않습니다. 대상 서버에 있는 항목이 동일한 이름으로 존재할 경우 다음과 비슷한 오류 메시지가 표시됩니다.<br /><br /> `Migrating Report: /Reports/testThe item '/Reports/test' already exists. ---> Microsoft.ReportingServices.Diagnostics.Utilities.ItemAlreadyExistsException: The item '/Reports/test' already exists.`|  
 |매개 변수|예|예||  
-|Subscriptions|예|예||  
+|구독|예|예||  
 |기록 설정|예|예|기록 설정이 마이그레이션되지만 기록 세부 정보는 마이그레이션되지 않습니다.|  
 |처리 옵션|예|예||  
 |캐시 새로 고침 옵션|예|예|종속 설정은 카탈로그 항목의 일부로 마이그레이션됩니다. 다음은 보고서(.rdl) 및 캐시 새로 고침 옵션과 같은 관련 설정을 마이그레이션하는 스크립트의 예제입니다.<br /><br /> - TitleOnly.rdl 보고서에 대한 매개 변수를 마이그레이션하는 중: 0개 항목이 발견되었습니다.<br />- TitleOnly.rdl 보고서에 대한 구독을 마이그레이션하는 중: 1개 항목이 발견되었습니다.<br />- \\\server\public\savedreports에서 TitleOnly로 구독 저장을 마이그레이션하는 중... SUCCESS<br />- TitleOnly.rdl 보고서에 대한 기록 설정을 마이그레이션하는 중... SUCCESS<br />- TitleOnly.rdl 보고서에 대한 처리 옵션을 마이그레이션하는 중... 0개 항목이 발견되었습니다.<br />- TitleOnly.rdl 보고서에 대한 캐시 새로 고침 옵션을 마이그레이션하는 중... SUCCESS<br />- TitleOnly.rdl 보고서에 대한 캐시 새로 고침 계획을 마이그레이션하는 중: 1개 항목이 발견되었습니다.<br />- 캐시 새로 고침 계획 titleonly_refresh735amM2F를 마이그레이션하는 중... SUCCESS|  
@@ -199,7 +200,7 @@ ms.locfileid: "70176282"
   
 ##  <a name="parameter-description"></a><a name="bkmk_parameter_description"></a> 매개 변수 설명  
   
-|매개 변수|Description|필수|  
+|매개 변수|설명|필수|  
 |---------------|-----------------|--------------|  
 |**-s** Source_URL|원본 보고서 서버의 URL|예|  
 |**-u** Domain\password **–p** 암호|원본 서버의 자격 증명입니다.|선택 사항입니다. 누락된 경우 기본 자격 증명이 사용됩니다.|  
@@ -314,7 +315,7 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://uetesta02/_vti_bin/reportser
   
  **–t** 플래그로 스크립트를 다시 실행하면 다음과 비슷한 메시지가 표시됩니다.  
   
--   System.Exception: 서버에 연결하지 못했습니다. https://\<servername>/ReportServer/ReportService2010.asmx ---> System.Net.WebException: **HTTP 상태 401 때문에 요청이 실패했습니다. 권한 없음**.   at System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse (SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall) at System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke (String methodName, Object parameters) at Microsoft.sqlserver.reportingservices2010.reportingservice2010.issslrequired at Microsoft.ReportingServices.ScriptHost.Management2010Endpoint.PingService (String url, String userName, String password String domain, Int32 timeout) at Microsoft.reportingservices.scripthost.scripthost.determineserverurlsecurity---내부 예외 스택 추적 끝--  
+-   System.Exception: 서버에 연결할 수 없습니다. https://\<servername>/ReportServer/ReportService2010.asmx ---> System.Net.WebException: **HTTP 상태 401 때문에 요청이 실패했습니다. 권한 없음**.   at System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse (SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall) at System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke (String methodName, Object parameters) at Microsoft.sqlserver.reportingservices2010.reportingservice2010.issslrequired at Microsoft.ReportingServices.ScriptHost.Management2010Endpoint.PingService (String url, String userName, String password String domain, Int32 timeout) at Microsoft.reportingservices.scripthost.scripthost.determineserverurlsecurity---내부 예외 스택 추적 끝--  
   
 ## <a name="see-also"></a>참고 항목  
  [RS.exe 유틸리티&#40;SSRS&#41;](../../reporting-services/tools/rs-exe-utility-ssrs.md)   

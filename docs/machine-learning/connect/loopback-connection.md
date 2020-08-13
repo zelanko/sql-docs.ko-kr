@@ -1,8 +1,8 @@
 ---
 title: SQL 루프백 연결
-description: 루프백 연결을 사용해서 ODBC로 SQL Server에 다시 연결하여 sp_execute_external_script로부터 실행된 Python 또는 R 스크립트에서 데이터를 읽거나 쓰는 방법을 알아봅니다. 이 방법은 sp_execute_external_script의 InputDataSet 및 OutputDataSet 인수를 사용할 수 없을 때 사용할 수 있습니다.
+description: 루프백 연결을 사용해서 ODBC로 SQL Server에 다시 연결하여 sp_execute_external_script로부터 실행된 Python 또는 R 스크립트에서 데이터를 읽거나 쓰는 방법을 알아봅니다.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 08/21/2019
 ms.topic: conceptual
 author: Aniruddh25
@@ -10,17 +10,17 @@ ms.author: anmunde
 ms.reviewer: dphansen
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: c7fa36db48a7912951f0232136945798caf6f7f7
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 00938d1fe628c4984a55cb5c0b76e6910293808a
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81118646"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86482674"
 ---
 # <a name="loopback-connection-to-sql-server-from-a-python-or-r-script"></a>Python 또는 R 스크립트에서 SQL Server에 루프백 연결
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-루프백 연결을 사용해서 [ODBC](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md)로 SQL Server에 다시 연결하여 `sp_execute_external_script`로부터 실행된 Python 또는 R 스크립트에서 데이터를 읽거나 쓰는 방법을 알아봅니다. 이 방법은 **의** InputDataSet**및**OutputDataSet`sp_execute_external_script` 인수 사용이 불가능할 때 사용할 수 있습니다.
+루프백 연결을 사용해서 [ODBC](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md)로 SQL Server에 다시 연결하여 `sp_execute_external_script`로부터 실행된 Python 또는 R 스크립트에서 데이터를 읽거나 쓰는 방법을 알아봅니다. 이 방법은 `sp_execute_external_script`의 **InputDataSet** 및 **OutputDataSet** 인수 사용이 불가능할 때 사용할 수 있습니다.
 
 ## <a name="connection-string"></a>연결 문자열
 
@@ -46,22 +46,22 @@ Linux에서 루프백 연결 문자열 예는 다음과 같습니다.
 "Driver=ODBC Driver 17 for SQL Server;Server=fe80::8012:3df5:0:5db1%eth0;Database=nameOfDatabase;ClientCertificate=file:/var/opt/mssql-extensibility/data/baeaac72-60b3-4fae-acfd-c50eff5d34a2/sqlsatellitecert.pem;ClientKey=file:/var/opt/mssql-extensibility/data/baeaac72-60b3-4fae-acfd-c50eff5d34a2/sqlsatellitekey.pem;TrustServerCertificate=Yes;Trusted_Connection=no;Encrypt=Yes"
 ```
 
-서버 주소, 클라이언트 인증서 파일 위치 및 클라이언트 키 파일 위치는 모든 `sp_execute_external_script`에 대해 고유하며, Python의 경우 API **rx_get_sql_loopback_connection_string()** , R의 경우에는 **rxGetSqlLoopbackConnectionString()** 을 사용하여 얻을 수 있습니다.
+서버 주소, 클라이언트 인증서 파일 위치 및 클라이언트 키 파일 위치는 모든 `sp_execute_external_script`에 대해 고유하며, Python의 경우 API **rx_get_sql_loopback_connection_string()**, R의 경우에는 **rxGetSqlLoopbackConnectionString()** 을 사용하여 얻을 수 있습니다.
 
 연결 문자열 특성에 대한 자세한 내용은 Microsoft ODBC Driver for SQL Server에 대한 [DSN 및 연결 문자열 키워드 및 특성](https://docs.microsoft.com/sql/connect/odbc/dsn-connection-string-attribute?view=sql-server-linux-ver15#new-connection-string-keywords-and-connection-attributes)을 참조하십시오.
 
 ## <a name="generate-connection-string-with-revoscalepy-for-python"></a>Python용 revoscalepy를 사용하여 연결 문자열 생성
 
-**revoscalepy**에서 API [rx_get_sql_loopback_connection_string()](../python/ref-py-revoscalepy.md)을 사용하여 Python 스크립트에서 루프백 연결을 위해 올바른 연결 문자열을 생성할 수 있습니다.
+[revoscalepy](../python/ref-py-revoscalepy.md)에서 API **rx_get_sql_loopback_connection_string()** 을 사용하여 Python 스크립트에서 루프백 연결을 위해 올바른 연결 문자열을 생성할 수 있습니다.
 
 다음 인수가 사용됩니다.
 
-| 인수 | Description |
+| 인수 | 설명 |
 |-|-|
 | name_of_database | 연결을 설정할 데이터베이스 이름입니다. |
 | odbc_driver | ODBC 드라이버의 이름입니다. |
 
-### <a name="examples"></a>예
+### <a name="examples"></a>예제
 
 Windows의 SQL Server 예:
 
@@ -100,16 +100,16 @@ GO
 
 ## <a name="generate-connection-string-with-revoscaler-for-r"></a>R용 RevoScaleR을 사용하여 연결 문자열 생성
 
-**RevoScaleR**에서 API [rxGetSqlLoopbackConnectionString()](../r/ref-r-revoscaler.md)을 사용하여 R 스크립트에서 루프백 연결을 위해 올바른 연결 문자열을 생성할 수 있습니다.
+[RevoScaleR](../r/ref-r-revoscaler.md)에서 API **rxGetSqlLoopbackConnectionString()** 을 사용하여 R 스크립트에서 루프백 연결을 위해 올바른 연결 문자열을 생성할 수 있습니다.
 
 다음 인수가 사용됩니다.
 
-| 인수 | Description |
+| 인수 | 설명 |
 |-|-|
 | nameOfDatabase | 연결을 설정할 데이터베이스 이름입니다. |
 | odbcDriver | ODBC 드라이버의 이름입니다. |
 
-### <a name="examples"></a>예
+### <a name="examples"></a>예제
 
 Windows의 SQL Server 예:
 

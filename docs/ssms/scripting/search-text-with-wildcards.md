@@ -1,5 +1,6 @@
 ---
 title: 와일드카드로 텍스트 검색
+description: 찾기 및 바꾸기 대화 상자의 "찾을 내용" 필드에서 와일드카드를 사용하여 일치시킬 패턴을 지정하는 방법을 알아봅니다.
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
@@ -16,15 +17,15 @@ ms.assetid: 449600f8-cc87-4b3f-878a-59c158a88a40
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 766bb8d9a90fb3f1af5a7697e52ae42f6c8fc8d7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c8e2766939038879d92de0f8f73b5c2eab38f45d
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253621"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122794"
 ---
 # <a name="search-text-with-wildcards"></a>와일드카드로 텍스트 검색
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **찾기 및 바꾸기** 대화 상자의 **찾을 내용** 필드에서 다음 식은 문자나 숫자를 대체할 수 있습니다.  
   
 #### <a name="to-search-using-wildcards"></a>와일드카드를 사용하여 검색하려면  

@@ -1,5 +1,6 @@
 ---
 title: 보고서 데이터 원본 관리 | Microsoft Docs
+description: 보고서에서 참조되는 외부 데이터 원본에 연결하는 방법을 비롯하여 보고서 데이터 원본 관리에 대해 알아봅니다.
 ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0475aded-c8fe-4337-a2b5-4df0ec4c46af
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 68125acb2c810e7463c8612936e545026ea94d69
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2a433169d694f9f2d71a049c906267a64b6c0756
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74190811"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458260"
 ---
 # <a name="manage-report-data-sources"></a>보고서 데이터 원본 관리
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 보고서, 보고서 모델 및 데이터 기반 구독은 외부 데이터 원본에서 데이터를 검색합니다. 보고서 서버는 외부 데이터 원본에 연결하기 위해 보고서, 모델 또는 구독에 정의되어 있거나 참조된 데이터 원본 연결 정보를 사용합니다. 데이터 원본 연결 속성은 보고서 또는 모델을 만들 때 항상 함께 정의되지만 보고서 또는 모델이 보고서 서버에 게시된 후에 독립적으로 관리할 수 있습니다.  
@@ -37,10 +38,10 @@ ms.locfileid: "74190811"
   
  쿼리 수정은 데이터 원본 연결 관리에 속하지 않습니다. 보고서 또는 모델에 대한 쿼리를 수정하려면 제작 도구를 사용해야 하며 보고서 또는 모델 정의에서 변경을 수행해야 합니다.  
   
-## <a name="managed-properties-data-source-type-connection-strings-and-credentials"></a>관리되는 속성: 데이터 원본 유형, 연결 문자열 및 자격 증명  
+## <a name="managed-properties-data-source-type-connection-strings-and-credentials"></a>관리형 속성: 데이터 원본 형식, 연결 문자열 및 자격 증명  
  보고서 서버에서 관리할 수 있는 데이터 원본 속성은 다음과 같습니다.  
   
-|속성|Description|관리 방법|  
+|속성|설명|관리 방법|  
 |--------------|-----------------|----------------------|  
 |데이터 원본 유형|보고서 서버의 데이터 처리 확장 프로그램에 따라 지원되는 데이터 원본 유형이 달라집니다. 데이터 프로세서의 예로는 SQL Server, Analysis Services, Oracle 등이 있습니다.|데이터 원본 유형은 구성 가능하므로 관리되는 속성입니다. 그러나 새 공유 데이터 원본을 만들 경우에만 데이터 원본 유형을 구성해야 합니다.<br /><br /> 게시된 보고서 또는 모델의 속성 페이지에서 데이터 원본 유형을 변경하지 마십시오. 변경할 경우 거의 항상 연결이 무효화됩니다. 보고서 또는 모델에 필요한 데이터 구조가 다른 데이터 플랫폼에서도 동일할 가능성은 희박합니다.|  
 |연결 문자열|외부 데이터 원본에 대한 초기 연결을 설정합니다. 보고서는 정적 또는 동적 연결 문자열을 사용할 수 있습니다.<br /><br /> *정적 연결 문자열* 은 보고서가 실행될 때마다 동일한 데이터 원본에 연결하기 위해 보고서에서 항상 사용하는 값 집합입니다.<br /><br /> *동적 연결 문자열* 은 보고서에 만들어 넣는 식으로, 사용자가 런타임에 사용할 데이터 원본을 선택할 수 있도록 합니다. 보고서 디자이너에서 보고서를 만들 경우 식과 데이터 원본 선택 목록을 작성하여 보고서에 넣어야 합니다.|연결 문자열 변경은 데이터 원본을 다른 컴퓨터로 이동하는 경우 또는 테스트 데이터를 사용하여 보고서를 만들었으나 프로덕션 데이터베이스로 보고서를 배포하려는 경우 유용합니다.<br /><br /> 정적 연결 문자열은 원본 문자열을 다른 문자열로 대체하여 관리할 수 있습니다.<br /><br /> 웹 포털 또는 SharePoint 사이트에서 동적 연결 문자열을 관리하는 경우 정적 연결 문자열로 대체하는 방법만 사용할 수 있습니다. 식 자체를 편집하거나 데이터 원본 선택 목록을 변경할 수 없습니다. 식 또는 유효한 값 목록을 변경하려면 보고서 정의를 편집하여 보고서 서버에 다시 게시해야 합니다. 자세한 내용은 [데이터 연결 문자열 만들기 - 보고서 작성기 및 SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)를 참조하세요.|  

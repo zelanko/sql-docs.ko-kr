@@ -1,5 +1,6 @@
 ---
 title: SQL Server Data Tools의 배포 및 버전 지원(SSDT) | Microsoft Docs
+description: SQL Server Data Tools에서 보고서 작성 및 게시를 위한 지원되는 버전을 확인하고 프로젝트 구성 및 배포 속성을 설정하는 방법을 알아봅니다.
 ms.date: 03/15/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 36f5686d-7e40-4f31-be81-bd197ca33a02
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5f055219476507f52894fe7d5b246710e6054a20
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a33626c529d59d9ffa2b80e012dbb325c93b670a
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65571504"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86917965"
 ---
 # <a name="deployment-and-version-support-in-sql-server-data-tools-ssdt"></a>SQL Server Data Tools의 배포 및 버전 지원(SSDT)
   [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 는 다음과 같은 시나리오를 지원합니다.  

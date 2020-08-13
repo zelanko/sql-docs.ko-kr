@@ -5,45 +5,49 @@ description: azdata 명령에 대한 참조 문서입니다.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 11/04/2019
+ms.date: 06/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 94adabb2ace2f5619abd700b2652aa7d88f3e1aa
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7a3862dca974efc0ef035a0b52edfff39d2f5bcf
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74822348"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942975"
 ---
 # <a name="azdata"></a>azdata
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-이 참조 문서에서는 `azdata` 명령에 대해 설명합니다.
+다음 문서에서는 `azdata` 도구의 `sql` 명령에 대한 참조를 제공합니다. 다른 `azdata` 명령에 대한 자세한 내용은 [azdata 참조](reference-azdata.md)를 참조하세요.
 
 ## <a name="commands"></a>명령
-|     |     |
+| 명령 | 설명 |
 | --- | --- |
-|[azdata bdc](reference-azdata-bdc.md) | SQL Server 빅 데이터 클러스터를 선택, 관리, 운영합니다. |
 |[azdata app](reference-azdata-app.md) | 애플리케이션을 만들고, 삭제, 실행, 관리합니다. |
+|[azdata bdc](reference-azdata-bdc.md) | SQL Server 빅 데이터 클러스터를 선택, 관리, 운영합니다. |
+|[azdata sql](reference-azdata-sql.md) | SQL DB CLI를 사용하여 사용자가 T-SQL을 통해 SQL Server를 조작할 수 있습니다. |
 [azdata login](#azdata-login) | 클러스터의 컨트롤러 엔드포인트에 로그인하고 네임스페이스를 활성 컨텍스트로 설정합니다. 로그인 시 암호를 사용하려면 AZDATA_PASSWORD 환경 변수를 설정해야 합니다.
 [azdata logout](#azdata-logout) | 클러스터에서 로그아웃합니다.
 |[azdata context](reference-azdata-context.md) | 컨텍스트 관리 명령입니다. |
-|[azdata control](reference-azdata-control.md) | 컨트롤 플레인을 만들고, 삭제하고, 관리합니다. |
-|[azdata sql](reference-azdata-sql.md) | SQL DB CLI를 사용하여 사용자가 T-SQL을 통해 SQL Server를 조작할 수 있습니다. |
+|[azdata 확장](reference-azdata-extension.md) | CLI 확장을 관리하고 업데이트합니다. |
 |[azdata notebook](reference-azdata-notebook.md) | 터미널에서 Notebook을 보고, 실행, 관리하기 위한 명령입니다. |
 ## <a name="azdata-login"></a>azdata login
 클러스터가 배포된 경우 배포 중에 컨트롤러 엔드포인트가 나열됩니다. 이 엔드포인트를 사용하여 로그인해야 합니다.  컨트롤러 엔드포인트를 모르는 경우 시스템의 기본 위치인 <user home>/.kube/config에 클러스터의 kube 구성을 저장하여 로그인하거나, KUBECONFIG 환경 변수를 사용할 수 있습니다(즉, export KUBECONFIG=path/to/.kube/config).  로그인하면 이 클러스터의 네임스페이스가 활성 컨텍스트로 설정됩니다.
 ```bash
 azdata login [--auth] 
              [--endpoint -e]  
-             [--accept-eula -a]  
-             [--namespace -n]  
-             [--username -u]  
-             [--principal -p]
+             
+[--accept-eula -a]  
+             
+[--namespace -n]  
+             
+[--username -u]  
+             
+[--principal -p]
 ```
-### <a name="examples"></a>예
+### <a name="examples"></a>예제
 기본 인증을 사용하여 로그인합니다.
 ```bash
 azdata login --auth basic --username johndoe --endpoint https://<ip or domain name>:30080            
@@ -89,7 +93,7 @@ Kerberos 영역입니다. 대부분의 경우 Kerberos 영역은 도메인 이�
 #### `--output -o`
 출력 형식입니다.  허용되는 값: json, jsonc, table, tsv  기본값: json
 #### `--query -q`
-JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmespath.org/](http://jmespath.org/)를 참조하세요.
+JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmespath.org/](http://jmespath.org)를 참조하세요.
 #### `--verbose`
 로깅의 자세한 정도를 늘립니다. 전체 디버그 로그를 표시하려면 --debug를 사용합니다.
 ## <a name="azdata-logout"></a>azdata logout
@@ -97,7 +101,7 @@ JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmesp
 ```bash
 azdata logout 
 ```
-### <a name="examples"></a>예
+### <a name="examples"></a>예제
 이 사용자를 로그아웃합니다.
 ```bash
 azdata logout
@@ -110,7 +114,7 @@ azdata logout
 #### `--output -o`
 출력 형식입니다.  허용되는 값: json, jsonc, table, tsv  기본값: json
 #### `--query -q`
-JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmespath.org/](http://jmespath.org/)를 참조하세요.
+JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmespath.org/](http://jmespath.org)를 참조하세요.
 #### `--verbose`
 로깅의 자세한 정도를 늘립니다. 전체 디버그 로그를 표시하려면 --debug를 사용합니다.
 

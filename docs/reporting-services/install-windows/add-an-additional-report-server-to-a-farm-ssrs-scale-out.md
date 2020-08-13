@@ -8,12 +8,12 @@ ms.assetid: c1a6b683-15cf-44ae-ac60-ceee63a60aaf
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 17cffe2f1eaf94174301212c6bb926528c56c7d3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f7997b4e7bf9ccf51198e317c2e175f115fa6973
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63225686"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942985"
 ---
 # <a name="add-an-additional-report-server-to-a-farm-ssrs-scale-out"></a>팜에 추가 보고서 서버 추가(SSRS 확장)
 
@@ -68,11 +68,13 @@ ms.locfileid: "63225686"
   
  개별 보고서 서버의 동작을 변경하려면 **RSreportServer.config** 구성 파일에서 **\<IsWebServiceEnable>** 을 false로 설정합니다.  
   
- 기본적으로 \<IsWebServiceEnable>을 TRUE로 설정하여 보고서 서버가 구성됩니다. 모든 서버가 TRUE로 구성된 경우 팜의 모든 노드에서 대화형 및 백그라운드의 로드 균형이 조정됩니다.  
+ 기본적으로 보고서 서버는 \<IsWebServiceEnable>을 TRUE로 설정하여 구성됩니다. 모든 서버가 TRUE로 구성된 경우 팜의 모든 노드에서 대화형 및 백그라운드의 로드 균형이 조정됩니다.  
   
  \<IsWebServiceEnable>을 False로 설정하여 모든 보고서 서버를 구성하면 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기능을 사용하려고 시도할 때 다음과 같은 오류 메시지가 나타납니다.  
   
-      The Reporting Services Web Service is not enabled. Configure at least one instance of the Reporting Services SharePoint Service to have <IsWebServiceEnable> set to true. 
+```output
+The Reporting Services Web Service is not enabled. Configure at least one instance of the Reporting Services SharePoint Service to have <IsWebServiceEnable> set to true.
+```
  
  자세한 내용은 [Reporting Services 구성 파일 수정&#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)을 참조하세요.  
 

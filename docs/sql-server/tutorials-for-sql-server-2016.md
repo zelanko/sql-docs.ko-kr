@@ -1,23 +1,22 @@
 ---
 title: SQL Server 자습서 | Microsoft Docs
-ms.custom: ''
+description: SQL Server 자습서를 활용하여 새 기술 및 기능을 자세히 알아봅니다. 이전 버전 SQL Server에 대한 자습서는 일반적으로 더 최신 버전에서도 유효합니다.
 ms.date: 11/01/2017
 ms.prod: sql
-ms.reviewer: ''
-ms.technology: performance
+ms.technology: ''
 ms.topic: conceptual
 ms.assetid: a93667ad-e856-405a-9328-065331b7ab7b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 95cf7a3b2d7be413df8ddc0f84ff8d71cffffdd0
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 8d86c5a3662417c1af39f12fc3d32167a73912c3
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000683"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913959"
 ---
 # <a name="tutorials-for-sql-server"></a>SQL Server 자습서
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]에서는 새로운 기술과 기능을 알아볼 수 있는 자습서를 제공합니다. 대개 이전 버전용 자습서를 최신 버전에서도 사용할 수 있습니다. 자습서에서 최신 기능을 설명할 때는 자습서를 완료하는 데 필요한 최소 버전이 표시됩니다.  
      
 -   자습서에서 [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] 데이터베이스 중 하나를 사용하는 경우에는 CodePlex에서 최신 버전을 다운로드하여 사용해야 합니다. 자세한 내용은 [AdventureWorks Databases and Scripts for SQL Server 2016 CTP3](https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks)(SQL Server 2016 CTP3용 AdventureWorks 데이터베이스 및 스크립트)을 참조하세요.    
@@ -27,7 +26,7 @@ ms.locfileid: "83000683"
  
 ## <a name="current-tutorials"></a>현재 자습서  
   
-|기술|Description|  
+|기술|설명|  
 |--------------|---------------|  
 |[Analysis Services 자습서&#40;SSAS&#41;](https://docs.microsoft.com/analysis-services/analysis-services-tutorials-ssas)|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 의 테이블 형식 모델 또는 다차원 모델을 개발하고 배포하는 방법에 대해 알아봅니다. PowerPivot과 같은 도구를 사용하여 모델의 데이터를 분석하는 방법에 대해서도 알아봅니다.|  
 |[데이터베이스 엔진 자습서](../relational-databases/database-engine-tutorials.md)|데이터베이스 엔진 인스턴스에 연결한 다음 Transact-SQL 문을 작성하고 실행하는 방법에 대해 알아봅니다.|  

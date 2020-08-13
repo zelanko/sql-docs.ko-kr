@@ -1,5 +1,6 @@
 ---
 title: 글꼴 색상, 크기 및 스타일 변경
+description: 'SQL Server Management Studio 편집기의 글꼴 색, 크기 및 스타일을 변경하는 방법을 알아봅니다. 색은 텍스트 형식(예: 주석 및 문)에 따라 다를 수 있습니다.'
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
@@ -18,15 +19,15 @@ ms.assetid: 5c3061db-23c5-4d9f-a6ab-6b53a1a83f88
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3d479991bed66e04a7c42870f0f1ba0c61ca7101
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b131fef64ea7628b89a64c01be100b40a09af9e5
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75246423"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920917"
 ---
 # <a name="change-font-color-size-and-style"></a>글꼴 색상, 크기 및 스타일 변경
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   편집기뿐만 아니라 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 다른 위치에서 텍스트가 표시되는 방법을 사용자 지정할 수 있습니다.  
   
 ### <a name="to-change-font-color-size-and-style-in-the-editor"></a>편집기에서 글꼴 색, 크기 및 스타일을 변경하려면  

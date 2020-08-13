@@ -1,5 +1,6 @@
 ---
 title: 공간 데이터 결과 창
+description: 공간 데이터를 보기 위한 시각적 매핑 도구를 제공하는 공간 결과 창을 사용하는 방법을 알아봅니다. 공간 데이터 결과를 보려면 쿼리 결과에 기하 도형 또는 지리 데이터가 포함된 공간 열이 있어야 합니다.
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,15 +11,15 @@ ms.assetid: c2d5a477-6496-4d01-adee-7322ebdfadf3
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 523cd3ffd5b72c08106e7d128e74138001619fdb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6f6d173343b91f1434ab107c62c6b460b6961b1e
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253608"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122544"
 ---
 # <a name="spatial-results-window"></a>공간 데이터 결과 창
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   **공간 데이터 결과** 창에서는 공간 데이터를 볼 수 있는 시각적인 매핑 도구를 제공합니다. 공간 데이터 결과를 보려면 쿼리 결과에 기하 도형 또는 지리 데이터가 포함된 공간 열이 있어야 합니다.  
   
 > [!NOTE]  
@@ -34,7 +35,7 @@ ms.locfileid: "75253608"
  쿼리로 점만 반환된 경우 이 옵션을 사용할 수 없습니다.  
   
  **투영 선택**  
- 등장방형(Equirectangular), 메르카토르(Mercator), 로빈슨(Robinson) 또는 본느(Bonne) 투영 모드 중 하나로 지리 데이터를 표시합니다.  
+ Equirectangular, Mercator, Robinson 또는 Bonne 투영 모드 중 하나로 지리 데이터를 표시합니다.  
   
  기하 도형 데이터에 대해서는 이 옵션을 사용할 수 없습니다.  
   

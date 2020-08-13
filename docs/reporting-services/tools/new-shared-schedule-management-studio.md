@@ -1,5 +1,6 @@
 ---
 title: 새 공유 일정(Management Studio) | Microsoft Docs
+description: SQL Server Management Studio에서 새 일정 페이지의 옵션을 사용하여 게시된 보고서 및 구독을 실행하는 새 공유 일정을 만드는 방법을 알아봅니다.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ f1_keywords:
 ms.assetid: b2c69586-d98e-4933-827d-f5e6c15c5203
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 61be4b4668b6736d30e28adb30fd16f289fb7c56
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 00ad35697044427b47a07cd9a3b44105ab1d5c8a
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65582194"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86915559"
 ---
 # <a name="new-shared-schedule-management-studio"></a>새 공유 일정(Management Studio)
   이 페이지를 사용하여 게시된 보고서 및 구독의 공유 일정을 만들 수 있습니다. 보고서별 일정 또는 구독별 일정 대신 공유 일정을 사용할 수 있습니다. 공유 일정이 항목별 일정과 구분되는 두 가지 주요 기능은 중앙화된 일정 정보, 그리고 예약된 작업을 일시 중지했다가 재개하는 기능입니다.  

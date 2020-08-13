@@ -1,5 +1,6 @@
 ---
 title: 배포 속성 설정(Reporting Services) | Microsoft Docs
+description: 보고서를 작성하고, 미리 보고, 배포하기 위해 SSDT(SQL Server Data Tools) 또는 Visual Studio에서 사용하는 배포 속성을 설정하는 방법을 알아봅니다.
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: tools
@@ -13,12 +14,12 @@ ms.assetid: 18201ca0-bf4a-484f-b3a2-95d1046a6a9b
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 05/15/2019
-ms.openlocfilehash: 9106c4c45845d1e31d65180c8f0fd979e7e3e14c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 45e168c5fa0e0edcb450ca4f302de2676303b5c3
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "66175334"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914891"
 ---
 # <a name="set-deployment-properties-reporting-services"></a>배포 속성 설정(Reporting Services)
 
@@ -62,7 +63,7 @@ ms.locfileid: "66175334"
     > [!NOTE]  
     > 기본 모드로 실행 중인 보고서 서버의 경우 대상 폴더에 보고서를 게시하려면 해당 폴더에 대한 **게시** 권한이 있어야 합니다. 게시 권한은 게시 작업을 포함하는 역할에 사용자 계정을 매핑하는 역할 할당을 통해 제공됩니다. 자세한 내용은 [역할 할당 만들기 및 관리](../../reporting-services/security/create-and-manage-role-assignments.md)를 참조하세요. SharePoint 통합 모드로 실행 중인 보고서 서버의 경우 SharePoint 사이트에 대한 **멤버** 또는 **소유자** 권한이 있어야 합니다. 자세한 내용은 [보고서 서버 항목에 대한 SharePoint 사이트 및 목록 사용 권한 참조](../../reporting-services/security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)를 참조하세요.  
   
-10. **TargetServerURL** 입력란에 대상 보고서 서버의 URL을 입력합니다. 보고서를 게시하기 전에 이 속성을 유효한 보고서 서버 URL로 설정해야 합니다. 기본 모드로 실행 중인 보고서 서버에 게시하는 경우 보고서 서버의 가상 디렉터리 URL(예: http: *//server/reportserver* 또는 https: *//server/reportserver*)을 사용합니다. 이는 웹 포털이 아닌 보고서 서버의 가상 디렉터리입니다.  
+10. **TargetServerURL** 입력란에 대상 보고서 서버의 URL을 입력합니다. 보고서를 게시하기 전에 이 속성을 유효한 보고서 서버 URL로 설정해야 합니다. 기본 모드로 실행 중인 보고서 서버에 게시하는 경우 보고서 서버의 가상 디렉터리 URL(예: http:*//server/reportserver* 또는 https:*//server/reportserver*)을 사용합니다. 이는 웹 포털이 아닌 보고서 서버의 가상 디렉터리입니다.  
   
      SharePoint 통합 모드로 실행 중인 보고서 서버에 게시하는 경우 SharePoint 최상위 사이트나 하위 사이트에 대한 URL을 사용합니다. 사이트를 지정하지 않으면 기본 최상위 사이트(예: <https://*servername*>, <https://*servername*/*site*>또는 <https://*servername*/*site*/*subsite*>)으로 나열됩니다.  
   
@@ -72,7 +73,7 @@ ms.locfileid: "66175334"
   
 2. 해당 프로젝트의 **속성 페이지** 대화 상자에서 **구성 관리자**를 클릭합니다.  
   
-3. **구성 관리자** 대화 상자에서 편집할 구성을 선택합니다. 현재 활성 구성이 **활성(***\<구성>***)** 으로 표시됩니다.  
+3. **구성 관리자** 대화 상자에서 편집할 구성을 선택합니다. 현재 활성 구성이 **활성(***\<configuration>***)** 으로 표시됩니다.  
   
 4. **프로젝트 컨텍스트**에서 솔루션의 각 프로젝트에 대해 **빌드** 또는 **배포**를 선택하거나 선택을 취소합니다.  
   

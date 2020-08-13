@@ -1,5 +1,6 @@
 ---
 title: 일정 속성(일반 페이지) | Microsoft Docs
+description: SQL Server Management Studio의 Reporting Services 페이지에서 공유 일정을 보거나 수정하기 위한 옵션에 대해 알아봅니다.
 ms.date: 06/11/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ f1_keywords:
 ms.assetid: 20e43966-6caf-4972-a2e2-0d9131ac8f51
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a05afd2a99ca8680d5c3d38538a9fcee03d5dc5f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: dd34cc584049eb363f6119e1131eaaaa853b3ce4
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65571392"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920939"
 ---
 # <a name="schedule-properties-general-page"></a>일정 속성(일반 페이지)
   [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 의 [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] 페이지를 사용하여 공유 일정을 보거나 수정할 수 있습니다. 보고서별 일정 또는 구독별 일정 대신 공유 일정을 사용할 수 있습니다. 일정에 대한 변경 내용은 일정을 저장한 후에 적용됩니다. 일정을 편집해도 현재 진행 중인 작업은 영향을 받지 않습니다. 사용 중인 일정을 편집할 경우 해당 일정에서 트리거된 현재 처리 중인 모든 보고서 및 구독을 완료할 수 있습니다.  

@@ -1,6 +1,7 @@
 ---
 title: Reporting Services에서 지원하는 데이터 원본 | Microsoft Docs
-ms.date: 04/16/2020
+description: Microsoft SQL Server, Oracle, ODBC 등 Reporting Services에서 지원하는 다양한 데이터 원본에 대해 알아봅니다.
+ms.date: 05/21/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-data
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9d11d055-a3be-45aa-99a7-46447a94ed42
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9b84ba1a790a86d503ced41f6cd1a95e7bec4dc1
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.openlocfilehash: 9d373e347df9207a3cbea8bd0fc1682a865323c2
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81528147"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458965"
 ---
 # <a name="data-sources-supported-by-reporting-services-ssrs"></a>Reporting Services에서 지원하는 데이터 원본(SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서는 데이터 처리 확장 프로그램을 사용하는 확장 가능한 모듈식 데이터 계층을 통해 데이터 원본에서 보고서 데이터를 검색합니다. 데이터 원본에서 보고서 데이터를 검색하려면 데이터 원본 유형, 데이터 원본에서 실행 중인 소프트웨어 버전 및 데이터 원본 플랫폼(32비트 또는 64비트 [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)])을 지원하는 데이터 처리 확장 프로그램을 선택해야 합니다.  
@@ -89,11 +90,11 @@ ms.locfileid: "81528147"
   
 -   기본 데이터 공급자 버전(옵션): 일부 데이터 원본 유형은 여러 데이터 공급자를 지원합니다. 이는 같은 공급자의 다른 버전일 수도 있고 데이터 공급자 유형에 대한 타사의 다른 구현일 수도 있습니다. 공급자 이름은 데이터 원본을 구성한 후 연결 문자열에 자주 나타납니다. 이 열을 통해 "데이터 원본 유형을 선택한 후 **연결 속성** 대화 상자에서 어떤 데이터 공급자를 선택할 것인가?"라는 질문에 대한 답을 얻을 수 있습니다.  
   
--   데이터 원본 *\<플랫폼>* : 데이터 처리 확장 프로그램이나 데이터 공급자가 대상 데이터 원본에 대해 지원하는 데이터 원본 플랫폼입니다. 이 열을 통해 "이 데이터 처리 확장 프로그램이나 데이터 공급자가 이 플랫폼 유형의 데이터 원본에서 데이터를 검색할 수 있는가?"라는 질문에 대한 답을 얻을 수 있습니다.  
+-   데이터 원본 *\<platform>* : 데이터 처리 확장 프로그램이나 데이터 공급자가 대상 데이터 원본에 대해 지원하는 데이터 원본 플랫폼입니다. 이 열을 통해 "이 데이터 처리 확장 프로그램이나 데이터 공급자가 이 플랫폼 유형의 데이터 원본에서 데이터를 검색할 수 있는가?"라는 질문에 대한 답을 얻을 수 있습니다.  
   
 -   데이터 원본 버전: DPE 또는 데이터 공급자가 지원하는 대상 데이터 원본의 버전입니다. 이 열을 통해 "이 데이터 처리 확장 프로그램이나 데이터 공급자가 이 버전의 데이터 원본에서 데이터를 검색할 수 있는가?"라는 질문에 대한 답을 얻을 수 있습니다.  
   
--   RS *\<플랫폼>* : 사용자 지정 DPE 또는 데이터 공급자를 설치할 수 있는 보고서 서버 및 보고서 제작 클라이언트의 플랫폼입니다. 기본 제공 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램은 모든 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]설치에 포함되어 있습니다. 사용자 지정 데이터 처리 확장 프로그램이나 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 데이터 공급자는 특정 플랫폼에 대해 기본적으로 컴파일되어야 합니다. 이 열을 통해 "이 데이터 처리 확장 프로그램이나 데이터 공급자를 이 플랫폼 유형에 설치할 수 있는가?"라는 질문에 대한 답을 얻을 수 있습니다.  
+-   RS *\<platform>* : 사용자 지정 DPE 또는 데이터 공급자를 설치할 수 있는 보고서 서버 및 보고서 제작 클라이언트의 플랫폼입니다. 기본 제공 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램은 모든 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]설치에 포함되어 있습니다. 사용자 지정 데이터 처리 확장 프로그램이나 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 데이터 공급자는 특정 플랫폼에 대해 기본적으로 컴파일되어야 합니다. 이 열을 통해 "이 데이터 처리 확장 프로그램이나 데이터 공급자를 이 플랫폼 유형에 설치할 수 있는가?"라는 질문에 대한 답을 얻을 수 있습니다.  
   
 ###  <a name="types-of-data-sources"></a><a name="DataSourcesTable"></a> 데이터 원본 유형  
   
@@ -101,22 +102,22 @@ ms.locfileid: "81528147"
 |-------------------------------|-----------------------------------------|------------------------------------------------------|-------------------------------------------------------|--------------------------------------|--------------------------------------|----------------------------|-------------------------|-------------------------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관계형 데이터베이스|[Microsoft SQL Server](#MicrosoftSQLServer)|기본 제공 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램|System.Data.SqlClient 확장|Y|Y|SQL Server 2008 이상|Y|Y|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관계형 데이터베이스|OLEDB|기본 제공 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램|System.Data.OledbClient 확장|Y|Y|SQL Server 2008 이상|Y|Y|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관계형 데이터베이스|[ODBC](#ODBC)|기본 제공 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램|System.Data.OdbcClient 확장|Y|Y|SQL Server 2008 이상|Y|Y|  
-|[!INCLUDE[ssSDS](../../includes/sssds-md.md)]|[Microsoft Azure SQL Database](#Azure)|기본 제공 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램|System.Data.SqlClient 확장|해당 없음|해당 없음|[!INCLUDE[ssSDS](../../includes/sssds-md.md)]|Y|Y|
-|SQL Data Warehouse|[Microsoft Azure SQL Database](#Azure)|기본 제공 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램|System.Data.SqlClient 확장|해당 없음|해당 없음|SQL Data Warehouse|Y|Y| 
-|[!INCLUDE[ssDW](../../includes/ssdw-md.md)] 어플라이언스|[Microsoft 병렬 데이터 웨어하우스](#PWD)|사용되지 않는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램|해당 없음|해당 없음|해당 없음|[!INCLUDE[ssDWfull](../../includes/ssdwfull-md.md)]|N|N|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 다차원 또는 테이블 형식 데이터베이스|[Microsoft SQL Server Analysis Services](#AnalysisServices)|기본 제공 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램|ADOMD.NET 사용|Y|Y|SQL Server 2008 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 이상|Y|Y|  
-|Power BI Premium 데이터 세트 |[Microsoft SQL Server Analysis Services](#AnalysisServices)|기본 제공 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램|ADOMD.NET 사용|Y|Y|SQL Server 2019 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 이상 및 Power BI Report Server|Y|Y|
-|Azure Analysis Services |[Microsoft SQL Server Analysis Services](#AnalysisServices)|기본 제공 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램|ADOMD.NET 사용|Y|Y|SQL Server 2017 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 이상|Y|Y| 
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 다차원 데이터베이스|OLEDB|기본 제공 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램|System.Data.OledbClient 확장<br /><br /> 버전 10.0|Y|Y|SQL Server 2008 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|Y|Y|
-|SharePoint 목록|[Microsoft SharePoint 목록](#SharePointList)|기본 제공 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램|Lists.asmx 또는 SharePoint 개체 모델 API 인터페이스에서 데이터 가져오기<br /><br /> [참고](#SharePointList)를 참조하십시오.|N|Y|SharePoint 2013 제품 이상|Y|Y|   
-|XML|[XML](#XML)|기본 제공 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램|XML 데이터 원본에는 플랫폼 종속성이 없음|해당 없음|해당 없음|[!INCLUDE[vstecwebservices](../../includes/vstecwebservices-md.md)] 또는 문서|Y|Y|  
-|보고서 서버 모델|보고서 모델|게시된 SMDL 파일에 대한 사용되지 않는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램|모델의 데이터 원본에서 기본 제공 데이터 처리 확장 프로그램을 사용합니다.<br /><br /> Oracle 기반 모델을 사용하려면 Oracle 클라이언트 구성 요소가 필요합니다.<br /><br /> Teradata 기반 모델을 사용하려면 Teradata의 .NET Data Provider for Teradata 필요<br /><br /> 플랫폼 지원에 대한 자세한 내용은 Teradata 설명서를 참조하십시오.|해당 없음|해당 없음|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상에서 모델을 만들 수 있습니다.<br /><br /> [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]<br /><br /> Oracle 9.2.0.3 이상<br /><br /> Teradata V14, v13, v12 및 v6.2|N|N|  
-|SAP 다차원 데이터베이스|SAP BW|기본 제공 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램|플랫폼 지원에 대한 자세한 내용은 SAP 설명서를 참조하십시오.|해당 없음|해당 없음|SAP BW 7.0-7.5|Y|해당 없음|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관계형 데이터베이스|[ODBC](#ODBC)|기본 제공 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램|System.Data.OdbcClient 확장|Y|지원|SQL Server 2008 이상|Y|지원|  
+|[!INCLUDE[ssSDS](../../includes/sssds-md.md)]|[Microsoft Azure SQL Database](#Azure)|기본 제공 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램|System.Data.SqlClient 확장|해당 없음|N/A|[!INCLUDE[ssSDS](../../includes/sssds-md.md)]|Y|지원|
+|SQL Data Warehouse|[Microsoft Azure SQL Database](#Azure)|기본 제공 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램|System.Data.SqlClient 확장|해당 없음|N/A|SQL Data Warehouse|Y|지원| 
+|[!INCLUDE[ssDW](../../includes/ssdw-md.md)] 어플라이언스|[Microsoft 병렬 데이터 웨어하우스](#PWD)|사용되지 않는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램|해당 없음|해당 없음|N/A|[!INCLUDE[ssDWfull](../../includes/ssdwfull-md.md)]|N|N|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 다차원 또는 테이블 형식 데이터베이스|[Microsoft SQL Server Analysis Services](#AnalysisServices)|기본 제공 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램|ADOMD.NET 사용|Y|지원|SQL Server 2008 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 이상|Y|지원|  
+|Power BI Premium 데이터 세트(Reporting Services 2019 및 Power BI Report Server 2020년 1월부터) |[Microsoft SQL Server Analysis Services](#AnalysisServices)|기본 제공 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램|ADOMD.NET 사용|Y|지원|SQL Server 2019 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 이상|Y|지원|
+|Azure Analysis Services |[Microsoft SQL Server Analysis Services](#AnalysisServices)|기본 제공 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램|ADOMD.NET 사용|Y|지원|SQL Server 2017 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 이상|Y|지원| 
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 다차원 데이터베이스|OLEDB|기본 제공 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램|System.Data.OledbClient 확장<br /><br /> 버전 10.0|Y|지원|SQL Server 2008 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|Y|지원|
+|SharePoint 목록|[Microsoft SharePoint 목록](#SharePointList)|기본 제공 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램|Lists.asmx 또는 SharePoint 개체 모델 API 인터페이스에서 데이터 가져오기<br /><br /> [참고](#SharePointList)를 참조하십시오.|N|지원|SharePoint 2013 제품 이상|Y|지원|   
+|XML|[XML](#XML)|기본 제공 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램|XML 데이터 원본에는 플랫폼 종속성이 없음|해당 없음|N/A|[!INCLUDE[vstecwebservices](../../includes/vstecwebservices-md.md)] 또는 문서|Y|지원|  
+|보고서 서버 모델|보고서 모델|게시된 SMDL 파일에 대한 사용되지 않는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램|모델의 데이터 원본에서 기본 제공 데이터 처리 확장 프로그램을 사용합니다.<br /><br /> Oracle 기반 모델을 사용하려면 Oracle 클라이언트 구성 요소가 필요합니다.<br /><br /> Teradata 기반 모델을 사용하려면 Teradata의 .NET Data Provider for Teradata 필요<br /><br /> 플랫폼 지원에 대한 자세한 내용은 Teradata 설명서를 참조하십시오.|해당 없음|N/A|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상에서 모델을 만들 수 있습니다.<br /><br /> [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]<br /><br /> Oracle 9.2.0.3 이상<br /><br /> Teradata V14, v13, v12 및 v6.2|N|N|  
+|SAP 다차원 데이터베이스|SAP BW|기본 제공 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램|플랫폼 지원에 대한 자세한 내용은 SAP 설명서를 참조하십시오.|해당 없음|N/A|SAP BW 7.0-7.5|Y|해당 없음|  
 |[!INCLUDE[extEssbase](../../includes/extessbase-md.md)]|[Hyperion Essbase](#Hyperion)|기본 제공 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램|플랫폼 지원에 대한 자세한 내용은 Hyperion 설명서를 참조하십시오.|Y|해당 없음|[!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 9.3.1|Y|해당 없음|  
-|Oracle 관계형 데이터베이스|[Oracle](#OracleClient)|기본 제공 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램|Oracle 클라이언트 구성 요소 12c 이상 필요|Y|해당 없음|Oracle 11g, 11g R2, 12c|Y|Y|  
-|Teradata |[Teradata](#Teradata)|기본 제공 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램|Teradata의 .NET Data Provider for Teradata 확장<br /><br /> Teradata의 .NET Data Provider for Teradata 필요<br /><br /> 플랫폼 지원에 대한 자세한 내용은 Teradata 설명서를 참조하십시오.|Y|해당 없음|Teradata v15<br /><br />Teradata v14<br /><br /> Teradata v13|Y|N|  
-|DB2 관계형 데이터베이스|사용자 지정 및 등록된 데이터 확장 프로그램 이름||2004 Host Integration (HI) Server<br /><br /> |Y|해당 없음|해당 없음|Y|N|  
+|Oracle 관계형 데이터베이스|[Oracle](#OracleClient)|기본 제공 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램|Oracle 클라이언트 구성 요소 12c 이상 필요|Y|해당 없음|Oracle 11g, 11g R2, 12c|Y|지원|  
+|Teradata |[Teradata](#Teradata)|기본 제공 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램|Teradata의 .NET Data Provider for Teradata 확장<br /><br /> Teradata의 .NET Data Provider for Teradata 필요<br /><br /> 플랫폼 지원에 대한 자세한 내용은 Teradata 설명서를 참조하십시오.|Y|해당 없음|Teradata v15<br /><br />Teradata v14<br /><br /> Teradata v13|지원|N|  
+|DB2 관계형 데이터베이스|사용자 지정 및 등록된 데이터 확장 프로그램 이름||2004 Host Integration (HI) Server<br /><br /> |Y|해당 없음|N/A|지원|N|  
 |일반 OLE DB 데이터 원본|OLEDB|기본 제공 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램|OLE DB를 지원하는 모든 데이터 원본<br /><br /> 플랫폼 지원에 대한 자세한 내용은 데이터 원본 설명서를 참조하십시오.|Y|해당 없음|OLE DB를 지원하는 모든 데이터 원본 [참고](#OLEDBStandard)를 참조하십시오.|Y|해당 없음|  
 |일반 ODBC 데이터 원본|[ODBC](#ODBCGeneric)|기본 제공 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램|ODBC를 지원하는 모든 데이터 원본.<br /><br /> 플랫폼 지원에 대한 자세한 내용은 데이터 원본 설명서를 참조하십시오.|Y|해당 없음|ODBC를 지원하는 모든 데이터 원본. [참고](#ODBCGeneric)를 참조하십시오.|Y|Y|  
   
@@ -170,7 +171,7 @@ ms.locfileid: "81528147"
   
  이 데이터 공급자는 ADOMD.NET 개체 모델을 사용하여 XMLA(XML for Analysis) 버전 1.1을 사용하는 쿼리를 만듭니다. 결과는 일반 행 집합으로 반환됩니다. 자세한 내용은 [MDX용 Analysis Services 연결 형식&#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md), [DMX용 Analysis Services 연결 형식&#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md), [Analysis Services MDX 쿼리 디자이너 사용자 인터페이스](../../reporting-services/report-data/analysis-services-mdx-query-designer-user-interface.md) 및 [Analysis Services DMX 쿼리 디자이너 사용자 인터페이스](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md)를 참조하세요. 
  
- Azure Analysis Services 데이터 원본의 경우 데이터 원본에 연결하는 데 사용되는 자격 증명에 대해 다단계 인증을 사용하지 않도록 설정해야 합니다. 
+ Azure Analysis Services 및 Power BI Premium 데이터 세트 데이터 원본의 경우 데이터 원본에 연결하는 데 사용되는 자격 증명에 대해 다단계 인증을 사용하지 않도록 설정해야 합니다. 사용자 환경에서 다단계 인증을 사용하도록 설정해야 하는 경우 데이터 원본에 사용되는 자격 증명에 다단계 인증을 사용하지 않도록 설정하는 옵션으로 <a href="https://docs.microsoft.com/azure/active-directory/conditional-access/overview">Azure Active Directory 조건부 액세스</a>를 검토합니다.
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 원본에 연결할 때 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 처리 확장 프로그램은 다중값 매개 변수를 지원하고 셀 및 멤버 속성을 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 지원되는 확장 속성에 매핑합니다. 자세한 내용은 [Analysis Services 데이터베이스에 대한 확장 필드 속성 &#40;SSRS&#41;](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md)을 참조하세요.  
   

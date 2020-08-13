@@ -1,5 +1,6 @@
 ---
 title: 사용자 역할 속성(Management Studio) | Microsoft Docs
+description: SQL Server Management Studio에서 항목 수준 역할 정의 태스크를 보거나 태스크 목록을 변경하거나 역할 설명을 수정할 수 있는 사용자 역할 속성 페이지에 대해 알아봅니다.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ f1_keywords:
 ms.assetid: c8b22236-a8b1-4e15-b1ff-4e1909b602d3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f7c663f1a6d13b910492e21b1bd05145dc2a5833
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 15e72e12f36753c86010a487e33ba4170c4d91c5
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65575772"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918929"
 ---
 # <a name="user-role-properties-management-studio"></a>사용자 역할 속성(Management Studio)
   이 페이지를 사용하여 항목 수준의 역할 정의에 포함된 태스크를 볼 수 있으며 태스크 목록을 변경하거나 역할 설명을 수정할 수 있습니다.  

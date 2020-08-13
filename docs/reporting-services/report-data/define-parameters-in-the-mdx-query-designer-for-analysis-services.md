@@ -1,5 +1,6 @@
 ---
 title: Analysis Services용 MDX 쿼리 디자이너에서 매개 변수 정의 | Microsoft Docs
+description: Analysis Services용 MDX(Multidimensional Expression) 쿼리 디자이너에서 쿼리 매개 변수를 정의하는 방법을 알아봅니다.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4ad1e5bc-f510-4752-b4f6-589e55317a90
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 02b9884d4f1f9d7928db80091c68678dbc55fa10
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 72fe1a64e1aa474d0aa0233e8065cf351acfe432
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65573661"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458201"
 ---
 # <a name="define-parameters-in-the-mdx-query-designer-for-analysis-services"></a>Analysis Services용 MDX 쿼리 디자이너에서 매개 변수 정의
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 원본에 대한 MDX 쿼리를 매개 변수화하려면 쿼리 매개 변수를 쿼리에 추가해야 합니다. MDX 쿼리 디자이너에서 필터를 지정하여 디자인 모드와 쿼리 모드 모두에서 쿼리 매개 변수를 추가할 수 있습니다. 쿼리 매개 변수를 사용하여 쿼리를 정의하면 Reporting Services에서 자동으로 보고서 매개 변수 및 데이터 세트를 만들어 올바른 값 목록을 제공합니다. 따라서 사용자는 쿼리에 직접 전달되는 값을 지정할 수 있습니다.  
@@ -59,7 +60,7 @@ ms.locfileid: "65573661"
   
 3.  MDX 쿼리 디자이너 도구 모음에서 **쿼리 매개 변수**(![쿼리 매개 변수 대화 상자의 아이콘](../../reporting-services/report-data/media/iconqueryparameter.gif "쿼리 매개 변수 대화 상자 아이콘"))를 클릭합니다. 쿼리 매개 변수 대화 상자가 열립니다.  
   
-4.  **매개 변수** 열에서 **\<매개 변수 입력>** 을 클릭한 다음 매개 변수 이름을 입력합니다.  
+4.  **매개 변수** 열에서 **\<Enter Parameter>** 를 클릭한 다음 매개 변수 이름을 입력합니다.  
   
 5.  **차원** 열의 드롭다운 목록에서 값을 선택합니다.  
   

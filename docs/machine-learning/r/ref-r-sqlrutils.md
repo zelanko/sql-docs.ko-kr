@@ -1,24 +1,24 @@
 ---
 title: sqlrutils 도우미 함수
-description: SQL Server 2016 R Services 및 R이 있는 SQL Server Machine Learning Services에서 sqlrutils 함수 라이브러리를 사용하여 R 스크립트를 포함하는 저장 프로시저를 생성합니다.
+description: sqlrutils는 R 사용자가 T-SQL 저장 프로시저에 R 스크립트를 입력하고, 데이터베이스에 해당 저장 프로시저를 등록하며, R 개발 환경에서 저장 프로시저를 실행하는 메커니즘을 제공하는 Microsoft의 R 패키지입니다. 이 패키지는 SQL Server Machine Learning Services 및 SQL Server 2016 R Services에 포함되어 있습니다.
 ms.prod: sql
-ms.technology: machine-learning
-ms.date: 12/15/2018
-ms.topic: conceptual
+ms.technology: machine-learning-services
+ms.date: 07/14/2020
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3de8d438691afb7ebf1aabe15265227b7876b837
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 7c989ad848324536122c042e2b5a823b16b72657
+ms.sourcegitcommit: d1535944bff3f2580070cc036ece30f1d43ee2ce
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117396"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86406146"
 ---
-# <a name="sqlrutils-r-library-in-sql-server"></a>sqlrutils(SQL Server의 R 라이브러리)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="sqlrutils-r-package-in-sql-server-machine-learning-services"></a>sqlrutils(SQL Server Machine Learning Services의 R 패키지)
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-**sqlrutils** 패키지는 R 사용자가 T-SQL 저장 프로시저에 R 스크립트를 입력하고, 데이터베이스에 해당 저장 프로시저를 등록하며, R 개발 환경에서 저장 프로시저를 실행하는 메커니즘을 제공합니다. 
+**sqlrutils**는 R 사용자가 T-SQL 저장 프로시저에 R 스크립트를 입력하고, 데이터베이스에 해당 저장 프로시저를 등록하며, R 개발 환경에서 저장 프로시저를 실행하는 메커니즘을 제공하는 Microsoft의 R 패키지입니다. 이 패키지는 [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) 및 [SQL Server 2016 R Services](sql-server-r-services.md)에 포함되어 있습니다.
 
 단일 저장 프로시저 내에서 실행되도록 R 코드를 변환하면 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)에 대한 매개 변수로 R 스크립트를 포함해야 하는 SQL Server R Services를 보다 효과적으로 사용할 수 있습니다. **sqlrutils** 패키지를 사용하면 이 포함된 R 스크립트를 작성하고 관련 매개 변수를 적절히 설정할 수 있습니다.
 
@@ -30,18 +30,18 @@ ms.locfileid: "81117396"
 
 잘 구성된(Well-Formed) 매개 변수를 전달하고 결과를 처리하여 R 환경에서 저장 프로시저를 실행할 수도 있습니다. 또는 SQL Server의 저장 프로시저를 사용하여 ETL, 모델 학습 및 고용량 점수 매기기 같은 일반적인 데이터베이스 통합 시나리오를 지원할 수 있습니다.
 
-  > [!NOTE]
-  > R 환경에서 *executeStoredProcedure* 함수를 호출하여 저장 프로시저를 실행하려는 경우 SQL Server용 ODBC 드라이버 13과 같은 ODBC 3.8 공급자를 사용해야 합니다.  
+> [!NOTE]
+> R 환경에서 *executeStoredProcedure* 함수를 호출하여 저장 프로시저를 실행하려는 경우 SQL Server용 ODBC 드라이버 13과 같은 ODBC 3.8 공급자를 사용해야 합니다.  
   
 ## <a name="full-reference-documentation"></a>전체 참조 설명서
 
-**sqlrutils** 라이브러리는 여러 Microsoft 제품에 배포되지만, SQL Server에서 라이브러리를 가져오든, 다른 제품에서 라이브러리를 가져오든, 사용 방식은 동일합니다. 함수는 동일하기 때문에 [개별 sqlrutils 함수에 대한 설명서](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)는 Microsoft Machine Learning Server에 대한 [R 참조](https://docs.microsoft.com/machine-learning-server/r-reference/introducing-r-server-r-package-reference) 아래의 한 위치에만 게시됩니다. 제품별로 고유한 동작이 있는 경우 함수 도움말 페이지에 차이점이 표시됩니다.
+**sqlrutils** 패키지는 여러 Microsoft 제품에 배포되지만, 패키지를 SQL Server에서 가져오든 다른 제품에서 가져오든 사용 방식은 동일합니다. 함수는 동일하기 때문에 [개별 sqlrutils 함수에 대한 설명서](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)는 Microsoft Machine Learning Server에 대한 [R 참조](https://docs.microsoft.com/machine-learning-server/r-reference/introducing-r-server-r-package-reference) 아래의 한 위치에만 게시됩니다. 제품별로 고유한 동작이 있는 경우 함수 도움말 페이지에 차이점이 표시됩니다.
 
 ## <a name="functions-list"></a>함수 목록
 
 다음 섹션에서는 포함된 R 코드를 포함하는 저장 프로시저를 개발하기 위해 **sqlrutils** 패키지에서 호출할 수 있는 함수에 대한 개요를 제공합니다. 각 메서드 또는 함수의 매개 변수에 대한 자세한 내용은 패키지에 대한 R 도움말을 참조하세요. `help(package="sqlrutils")`
 
-|함수 | Description |
+|기능 | 설명 |
 |------|-------------|
 |[executeStoredProcedure](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/executestoredprocedure)| SQL 저장 프로시저를 실행합니다.|
 |[getInputParameters](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/getinputparameters)| 저장 프로시저에 대한 입력 매개 변수 목록을 가져옵니다.| 
@@ -57,16 +57,16 @@ ms.locfileid: "81117396"
 
 ## <a name="how-to-use-sqlrutils"></a>sqlrutils 사용 방법
 
-**sqlrutils** 라이브러리 함수는 R을 포함하는 SQL Server Machine Learning이 있는 컴퓨터에서 실행해야 합니다. 클라이언트 워크스테이션에서 작업하는 경우 실행을 SQL Server으로 전환하도록 원격 컴퓨팅 컨텍스트를 설정합니다. 이 패키지를 사용하기 위한 워크플로에는 다음 단계가 포함됩니다.
+**sqlrutils** 패키지 함수는 R을 포함하는 SQL Server Machine Learning이 있는 컴퓨터에서 실행해야 합니다. 클라이언트 워크스테이션에서 작업하는 경우 실행을 SQL Server으로 전환하도록 원격 컴퓨팅 컨텍스트를 설정합니다. 이 패키지를 사용하기 위한 워크플로에는 다음 단계가 포함됩니다.
 
 + 저장 프로시저 매개 변수(입력, 출력 또는 둘 다)를 정의합니다. 
 + 저장 프로시저 생성 및 등록    
 + 저장 프로시저 실행  
 
-R 세션에서 **를 입력하여 명령줄에서** sqlrutils`library(sqlrutils)`를 로드합니다.
+R 세션에서 `library(sqlrutils)`를 입력하여 명령줄에서 **sqlrutils**를 로드합니다.
 
 > [!Note]
-> 컴퓨팅 컨텍스트를 SQL Server로 변경하고 해당 컴퓨팅 컨텍스트에서 코드를 실행하는 경우에는 SQL Server가 없는 컴퓨터(예: R Client 인스턴스)에서 이 라이브러리를 로드할 수 있습니다.
+> 컴퓨팅 컨텍스트를 SQL Server로 변경하고 해당 컴퓨팅 컨텍스트에서 코드를 실행하는 경우에는 SQL Server가 없는 컴퓨터(예: R Client 인스턴스)에서 이 패키지를 로드할 수 있습니다.
 
 
 ### <a name="define-stored-procedure-parameters-and-inputs"></a>저장 프로시저 매개 변수 및 입력 정의

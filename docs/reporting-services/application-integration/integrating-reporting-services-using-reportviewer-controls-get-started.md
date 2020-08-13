@@ -2,7 +2,7 @@
 title: 보고서 뷰어 컨트롤 시작
 description: 보고서 뷰어 컨트롤은 Reporting Services RDL 보고서를 WebForms 및 WinForms 앱에 통합하는 데 사용할 수 있습니다.
 ms.custom: seo-lt-2019
-ms.date: 12/12/2019
+ms.date: 06/03/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: application-integration
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 01a821c4-2920-400c-be03-93d26c749bb1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d7e1e64bddcdcc7efed701770aea0e97c8e84ec5
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a559bdb5b525b8d95c121b8059076d86029a37fd
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241834"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86943196"
 ---
 # <a name="integrating-reporting-services-using-the-report-viewer-controls---get-started"></a>보고서 뷰어 컨트롤을 사용하여 Reporting Services 통합 - 시작
 
@@ -252,10 +252,18 @@ ms.locfileid: "75241834"
     
 뷰어 컨트롤은 최신 브라우저용으로 디자인되었습니다. 이 컨트롤은 브라우저가 IE 호환성 모드를 사용하여 페이지를 렌더링하는 경우 예상대로 작동하지 않을 수 있습니다. 인트라넷 사이트는 기본 브라우저 동작을 재정의하기 위해 메타 태그가 필요할 수 있습니다.
 
-    ```
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    ```
-      
+```html
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+```
+
+## <a name="nugetorg-pages"></a>NuGet.org 페이지
+
+다음은 NuGet.org 사이트에 게시된 보고서 뷰어 컨트롤의 WebForm 및 WinForm 버전 관련 문서에 대한 링크입니다.
+
+- Microsoft.ReportingServices.ReportViewerControl.WebForms [https://www.nuget.org/packages/Microsoft.ReportingServices.ReportViewerControl.WebForms/](https://www.nuget.org/packages/Microsoft.ReportingServices.ReportViewerControl.WebForms/)
+- Microsoft.ReportingServices.ReportViewerControl.Winforms [https://www.nuget.org/packages/Microsoft.ReportingServices.ReportViewerControl.WinForms/](https://www.nuget.org/packages/Microsoft.ReportingServices.ReportViewerControl.WinForms/)
+
+
 ## <a name="feedback"></a>사용자 의견
 
 [Reporting Services 포럼](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=sqlreportingservices)에서 문제를 게시하여 팀에 알려주세요.

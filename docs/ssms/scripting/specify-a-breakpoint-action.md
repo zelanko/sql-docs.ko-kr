@@ -1,5 +1,6 @@
 ---
 title: 중단점 동작 지정
+description: 중단점에 도달하고 다른 특정 조건이 충족될 때 Transact-SQL 디버거가 수행할 사용자 지정 태스크인 적중 작업을 지정하는 방법을 알아봅니다.
 titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.technology: scripting
@@ -14,16 +15,16 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d4bffc7742a9833d8715c9479e051cdd732d7596
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: bbe5cd84c13c84f8902ac82bd8ef3ef54dc82bda
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253646"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122734"
 ---
 # <a name="specify-a-breakpoint-action"></a>중단점 동작 지정
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 중단점 **적중될 때** 동작은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 디버거가 중단점에 대해 수행하는 사용자 지정 태스크를 지정합니다. 지정한 적중 횟수에 도달하고 지정한 중단 조건을 만족하면 디버거는 해당 중단점에 대해 지정된 동작을 수행합니다.
 
@@ -41,7 +42,7 @@ ms.locfileid: "75253646"
   
     1.  $ADDRESS는 중단점이 설정된 저장 프로시저 또는 사용자 정의 함수의 이름을 반환합니다. 중단점이 편집기 창에 설정되어 있으면 $ADDRESS는 편집 중인 스크립트 파일의 이름을 반환합니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 디버거에서 $ADDRESS와 $FUNCTION은 동일한 정보를 반환합니다.  
   
-    2.  $CALLER는 저장 프로시저 또는 함수를 호출한 [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드 단위의 이름을 반환합니다. 중단점이 편집기 창에 있으면 $CALLER는 \<No caller available>을 반환합니다. 중단점이 편집기 창의 코드에서 호출되는 저장 프로시저 또는 사용자 정의 함수에 있으면 $CALLER는 편집 중인 파일의 이름을 반환합니다. 중단점이 다른 저장 프로시저 또는 함수에서 호출되는 저장 프로시저 또는 사용자 정의 함수에 있으면 $CALLER는 호출하는 프로시저 또는 함수의 이름을 반환합니다.  
+    2.  $CALLER는 저장 프로시저 또는 함수를 호출한 [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드 단위의 이름을 반환합니다. 중단점이 편집기 창에 있으면 $CALLER가 \<No caller available>을 반환합니다. 중단점이 편집기 창의 코드에서 호출되는 저장 프로시저 또는 사용자 정의 함수에 있으면 $CALLER는 편집 중인 파일의 이름을 반환합니다. 중단점이 다른 저장 프로시저 또는 함수에서 호출되는 저장 프로시저 또는 사용자 정의 함수에 있으면 $CALLER는 호출하는 프로시저 또는 함수의 이름을 반환합니다.  
   
     3.  $CALLSTACK은 체인에서 현재 저장 프로시저 또는 사용자 정의 함수를 호출한 함수 호출 스택을 반환합니다. 중단점이 편집기 창에 있으면 $CALLSTACK은 편집 중인 스크립트 파일의 이름을 반환합니다.  
   

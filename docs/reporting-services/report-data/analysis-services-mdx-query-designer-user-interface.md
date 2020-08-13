@@ -1,5 +1,6 @@
 ---
 title: Analysis Services MDX 쿼리 디자이너 사용자 인터페이스 | Microsoft Docs
+description: MDX(Multidimensional Expression) 쿼리를 작성하기 위한 Reporting Services 그래픽 쿼리 디자이너에 대해 알아봅니다.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d9c7c0b3-fce4-4a65-b679-408273e6a925
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 41d02ba0cd1dc9067bd6425895e53d9a949fd0d3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 471c6d3ab92295fccc5cadcee286cc362fab9e8c
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65573262"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458945"
 ---
 # <a name="analysis-services-mdx-query-designer-user-interface"></a>Analysis Services MDX 쿼리 디자이너 사용자 인터페이스
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 원본에 대한 MDX(Multidimensional Expression) 쿼리 및 DMX(Data Mining Expression) 쿼리를 작성하기 위한 그래픽 쿼리 디자이너를 제공합니다. 이 항목에서는 MDX 쿼리 디자이너에 대해 설명합니다. DMX 쿼리 디자이너에 대한 자세한 내용은 [DMX용 Analysis Services 연결 형식&#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md)을 참조하세요.  
@@ -62,7 +63,7 @@ ms.locfileid: "65573262"
 ### <a name="graphical-mdx-query-designer-toolbar-in-design-mode"></a>디자인 모드의 그래픽 MDX 쿼리 디자이너 도구 모음  
  쿼리 디자이너 도구 모음은 그래픽 인터페이스를 사용하여 MDX 쿼리를 디자인하는 데 도움이 되는 단추를 제공합니다. 다음 표에서는 단추와 해당 기능을 나열합니다.  
   
-|단추|Description|  
+|단추|설명|  
 |------------|-----------------|  
 |**텍스트로 편집**|이 데이터 원본 유형에 대해서는 사용할 수 없습니다.|  
 |**가져오기**|파일 시스템의 보고서 정의 파일(.rdl)에서 기존 쿼리를 가져옵니다. 자세한 내용은 [보고서 포함된 데이터 세트 및 공유 데이터 세트&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)을 참조하세요.|  

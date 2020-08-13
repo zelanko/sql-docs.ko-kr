@@ -5,42 +5,46 @@ description: azdata bdc config 명령에 대한 참조 문서입니다.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 11/04/2019
+ms.date: 06/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 8a2c87a374be247e4b31f2e34736de95d9edc319
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 66886cc2fc691e27e93d4f8a4d8a2c0a65bd82c9
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74822360"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942923"
 ---
 # <a name="azdata-bdc-config"></a>azdata bdc config
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-다음 문서에서는 `azdata` 도구의 `bdc config` 명령에 대한 참조를 제공합니다. 다른 `azdata` 명령에 대한 자세한 내용은 [azdata 참조](reference-azdata.md)를 참조하세요.
+다음 문서에서는 `azdata` 도구의 `sql` 명령에 대한 참조를 제공합니다. 다른 `azdata` 명령에 대한 자세한 내용은 [azdata 참조](reference-azdata.md)를 참조하세요.
 
 ## <a name="commands"></a>명령
-|     |     |
+| 명령 | 설명 |
 | --- | --- |
-[azdata bdc config init](#azdata-bdc-config-init) | 클러스터를 만드는 데 사용할 수 있는 빅 데이터 클러스터 구성 프로필을 초기화합니다.
+[azdata bdc config init](#azdata-bdc-config-init) | bdc create와 함께 사용할 수 있는 빅 데이터 클러스터 구성 프로필을 초기화합니다.
 [azdata bdc config list](#azdata-bdc-config-list) | 사용 가능한 구성 프로필 선택 항목을 나열합니다.
 [azdata bdc config show](#azdata-bdc-config-show) | BDC의 현재 구성 또는 지정한 로컬 파일(즉, custom/bdc.json)의 구성을 표시합니다.
 [azdata bdc config add](#azdata-bdc-config-add) | 구성 파일에서 json 경로의 값을 추가합니다.
 [azdata bdc config remove](#azdata-bdc-config-remove) | 구성 파일에서 json 경로의 값을 제거합니다.
 [azdata bdc config replace](#azdata-bdc-config-replace) | 구성 파일에서 json 경로의 값을 바꿉니다.
 [azdata bdc config patch](#azdata-bdc-config-patch) | json 패치 파일을 기준으로 구성 파일을 패치합니다.
+[azdata bdc config set](#azdata-bdc-config-set) | 아직 진행 중인 작업입니다. 빅 데이터 클러스터의 구성을 설정합니다.
+[azdata bdc config upgrade](#azdata-bdc-config-upgrade) | 아직 진행 중인 작업입니다. 빅 데이터 클러스터의 구성을 업그레이드합니다.
 ## <a name="azdata-bdc-config-init"></a>azdata bdc config init
-클러스터를 만드는 데 사용할 수 있는 빅 데이터 클러스터 구성 프로필을 초기화합니다. 구성 프로필의 특정 원본을 세 가지 선택 항목 중 하나로 인수에 지정할 수 있습니다.
+bdc create와 함께 사용할 수 있는 빅 데이터 클러스터 구성 프로필을 초기화합니다. 구성 프로필의 특정 원본을 인수에 지정할 수 있습니다.
 ```bash
 azdata bdc config init [--target -t] 
                        [--source -s]  
-                       [--force -f]  
-                       [--accept-eula -a]
+                       
+[--force -f]  
+                       
+[--accept-eula -a]
 ```
-### <a name="examples"></a>예
+### <a name="examples"></a>예제
 안내에 따른 BDC 구성 초기화 환경 - 필요한 값에 대한 프롬프트가 표시됩니다.
 ```bash
 azdata bdc config init
@@ -53,7 +57,7 @@ azdata bdc config init --source aks-dev-test --target custom
 #### `--target -t`
 구성 프로필을 배치할 위치의 파일 경로입니다. 기본적으로 <cwd>/custom으로 설정되어 있습니다.
 #### `--source -s`
-구성 프로필 원본: ['kubeadm-dev-test', 'kubeadm-prod', 'aks-dev-test', 'aks-dev-test-ha']
+구성 프로필 원본입니다. ['openshift-dev-test', 'aro-dev-test-ha', 'aks-dev-test', 'openshift-prod', 'aks-dev-test-ha', 'kubeadm-prod', 'aro-dev-test', 'kubeadm-dev-test']
 #### `--force -f`
 대상 파일을 강제로 덮어씁니다.
 #### `--accept-eula -a`
@@ -66,7 +70,7 @@ azdata bdc config init --source aks-dev-test --target custom
 #### `--output -o`
 출력 형식입니다.  허용되는 값: json, jsonc, table, tsv  기본값: json
 #### `--query -q`
-JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmespath.org/](http://jmespath.org/)를 참조하세요.
+JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmespath.org/](http://jmespath.org)를 참조하세요.
 #### `--verbose`
 로깅의 자세한 정도를 늘립니다. 전체 디버그 로그를 표시하려면 --debug를 사용합니다.
 ## <a name="azdata-bdc-config-list"></a>azdata bdc config list
@@ -74,9 +78,10 @@ JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmesp
 ```bash
 azdata bdc config list [--config-profile -c] 
                        [--type -t]  
-                       [--accept-eula -a]
+                       
+[--accept-eula -a]
 ```
-### <a name="examples"></a>예
+### <a name="examples"></a>예제
 사용 가능한 구성 프로필 이름을 모두 표시합니다.
 ```bash
 azdata bdc config list
@@ -87,10 +92,9 @@ azdata bdc config list --config-profile aks-dev-test
 ```
 ### <a name="optional-parameters"></a>선택적 매개 변수
 #### `--config-profile -c`
-기본 구성 프로필: ['kubeadm-dev-test', 'kubeadm-prod', 'aks-dev-test', 'aks-dev-test-ha']
+기본 구성 프로필입니다. ['openshift-dev-test', 'aro-dev-test-ha', 'aks-dev-test', 'openshift-prod', 'aks-dev-test-ha', 'kubeadm-prod', 'aro-dev-test', 'kubeadm-dev-test']
 #### `--type -t`
 확인하려는 구성 유형입니다.
-`cluster`
 #### `--accept-eula -a`
 사용 조건에 동의하시겠습니까? [예/아니요]. 이 인수를 사용하지 않으려면 ACCEPT_EULA 환경 변수를 ‘yes’로 설정하면 됩니다. 이 제품의 사용 조건은 https://aka.ms/eula-azdata-en 에서 볼 수 있습니다.
 ### <a name="global-arguments"></a>전역 인수
@@ -101,7 +105,7 @@ azdata bdc config list --config-profile aks-dev-test
 #### `--output -o`
 출력 형식입니다.  허용되는 값: json, jsonc, table, tsv  기본값: json
 #### `--query -q`
-JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmespath.org/](http://jmespath.org/)를 참조하세요.
+JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmespath.org/](http://jmespath.org)를 참조하세요.
 #### `--verbose`
 로깅의 자세한 정도를 늘립니다. 전체 디버그 로그를 표시하려면 --debug를 사용합니다.
 ## <a name="azdata-bdc-config-show"></a>azdata bdc config show
@@ -109,21 +113,23 @@ BDC의 현재 구성 또는 지정한 로컬 파일(즉, custom/bdc.json)의 구
 ```bash
 azdata bdc config show [--config-file -c] 
                        [--target -t]  
-                       [--json-path -j]  
-                       [--force -f]
+                       
+[--json-path -j]  
+                       
+[--force -f]
 ```
-### <a name="examples"></a>예
+### <a name="examples"></a>예제
 콘솔에 BDC 구성을 표시합니다.
 ```bash
 azdata bdc config show
 ```
 로컬 구성 파일에서 간단한 json 키 경로의 끝에 있는 값을 가져옵니다.
 ```bash
-azdata bdc config show --config-file custom-config/bdc.json --json-path 'metadata.name' --target section.json
+azdata bdc config show --config-file custom-config/bdc.json --json-path "metadata.name" --target section.json
 ```
 로컬 구성 파일에서 서비스 내의 리소스를 가져옵니다.
 ```bash
-azdata bdc config show --config-file custom-config/bdc.json --json-path '$.spec.services.sql.resources' --target section.json
+azdata bdc config show --config-file custom-config/bdc.json --json-path "$.spec.services.sql.resources" --target section.json
 ```
 ### <a name="optional-parameters"></a>선택적 매개 변수
 #### `--config-file -c`
@@ -142,7 +148,7 @@ azdata bdc config show --config-file custom-config/bdc.json --json-path '$.spec.
 #### `--output -o`
 출력 형식입니다.  허용되는 값: json, jsonc, table, tsv  기본값: json
 #### `--query -q`
-JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmespath.org/](http://jmespath.org/)를 참조하세요.
+JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmespath.org/](http://jmespath.org)를 참조하세요.
 #### `--verbose`
 로깅의 자세한 정도를 늘립니다. 전체 디버그 로그를 표시하려면 --debug를 사용합니다.
 ## <a name="azdata-bdc-config-add"></a>azdata bdc config add
@@ -151,10 +157,10 @@ JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmesp
 azdata bdc config add --config-file -c 
                       --json-values -j
 ```
-### <a name="examples"></a>예
+### <a name="examples"></a>예제
 예 1 - 제어 평면 스토리지를 추가합니다.
 ```bash
-azdata bdc config add --config-file custom/control.json --json-values 'spec.storage={"accessMode":"ReadWriteOnce","className":"managed-premium","size":"10Gi"}'
+azdata bdc config add --config-file custom/control.json --json-values "spec.storage={"accessMode":"ReadWriteOnce","className":"managed-premium","size":"10Gi"}"
 ```
 ### <a name="required-parameters"></a>필수 매개 변수
 #### `--config-file -c`
@@ -169,7 +175,7 @@ azdata bdc config add --config-file custom/control.json --json-values 'spec.stor
 #### `--output -o`
 출력 형식입니다.  허용되는 값: json, jsonc, table, tsv  기본값: json
 #### `--query -q`
-JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmespath.org/](http://jmespath.org/)를 참조하세요.
+JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmespath.org/](http://jmespath.org)를 참조하세요.
 #### `--verbose`
 로깅의 자세한 정도를 늘립니다. 전체 디버그 로그를 표시하려면 --debug를 사용합니다.
 ## <a name="azdata-bdc-config-remove"></a>azdata bdc config remove
@@ -178,10 +184,10 @@ JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmesp
 azdata bdc config remove --config-file -c 
                          --json-path -j
 ```
-### <a name="examples"></a>예
+### <a name="examples"></a>예제
 예 1 - 제어 평면 스토리지를 제거합니다.
 ```bash
-azdata bdc config remove --config-file custom/control.json --json-path '.spec.storage'
+azdata bdc config remove --config-file custom/control.json --json-path ".spec.storage"
 ```
 ### <a name="required-parameters"></a>필수 매개 변수
 #### `--config-file -c`
@@ -196,7 +202,7 @@ jsonpatch 라이브러리를 기준으로, 제거하려는 값을 나타내는 j
 #### `--output -o`
 출력 형식입니다.  허용되는 값: json, jsonc, table, tsv  기본값: json
 #### `--query -q`
-JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmespath.org/](http://jmespath.org/)를 참조하세요.
+JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmespath.org/](http://jmespath.org)를 참조하세요.
 #### `--verbose`
 로깅의 자세한 정도를 늘립니다. 전체 디버그 로그를 표시하려면 --debug를 사용합니다.
 ## <a name="azdata-bdc-config-replace"></a>azdata bdc config replace
@@ -205,18 +211,18 @@ JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmesp
 azdata bdc config replace --config-file -c 
                           --json-values -j
 ```
-### <a name="examples"></a>예
+### <a name="examples"></a>예제
 예 1 - 단일 엔드포인트(컨트롤러 엔드포인트)의 포트를 바꿉니다.
 ```bash
-azdata bdc config replace --config-file custom/control.json --json-values '$.spec.endpoints[?(@.name=="Controller")].port=30080'
+azdata bdc config replace --config-file custom/control.json --json-values "$.spec.endpoints[?(@.name=="Controller")].port=30080"
 ```
 예 2 - 제어 평면 스토리지를 바꿉니다.
 ```bash
-azdata bdc config replace --config-file custom/control.json --json-values 'spec.storage={"accessMode":"ReadWriteOnce","className":"managed-premium","size":"10Gi"}'
+azdata bdc config replace --config-file custom/control.json --json-values "spec.storage={"accessMode":"ReadWriteOnce","className":"managed-premium","size":"10Gi"}"
 ```
 예 3 - 복제본을 포함하여 스토리지-0 리소스 사양을 바꿉니다.
 ```bash
-azdata bdc config replace --config-file custom/bdc.json --json-values '$.spec.resources.storage-0.spec={"replicas": 2,"storage": {"className": "managed-premium","size": "10Gi","accessMode": "ReadWriteOnce"},"type": "Storage"}'
+azdata bdc config replace --config-file custom/bdc.json --json-values "$.spec.resources.storage-0.spec={"replicas": 2,"storage": {"className": "managed-premium","size": "10Gi","accessMode": "ReadWriteOnce"},"type": "Storage"}"
 ```
 ### <a name="required-parameters"></a>필수 매개 변수
 #### `--config-file -c`
@@ -231,7 +237,7 @@ azdata bdc config replace --config-file custom/bdc.json --json-values '$.spec.re
 #### `--output -o`
 출력 형식입니다.  허용되는 값: json, jsonc, table, tsv  기본값: json
 #### `--query -q`
-JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmespath.org/](http://jmespath.org/)를 참조하세요.
+JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmespath.org/](http://jmespath.org)를 참조하세요.
 #### `--verbose`
 로깅의 자세한 정도를 늘립니다. 전체 디버그 로그를 표시하려면 --debug를 사용합니다.
 ## <a name="azdata-bdc-config-patch"></a>azdata bdc config patch
@@ -240,13 +246,13 @@ JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmesp
 azdata bdc config patch --config-file -c 
                         --patch-file -p
 ```
-### <a name="examples"></a>예
+### <a name="examples"></a>예제
 예 1 - 패치 파일을 사용하여 단일 엔드포인트(컨트롤러 엔드포인트)의 포트를 바꿉니다.
 ```bash
 azdata bdc config patch --config-file custom/control.json --patch ./patch.json
 
     Patch File Example (patch.json):
-        {"patch":[{"op":"replace","path":"$.spec.endpoints[?(@.name=='Controller')].port","value":30080}]}
+        {"patch":[{"op":"replace","path":"$.spec.endpoints[?(@.name=="Controller")].port","value":30080}]}
 ```
 예 2 - 패치 파일을 사용하여 제어 평면 스토리지를 바꿉니다.
 ```bash
@@ -275,7 +281,57 @@ jsonpatch 라이브러리(http://jsonpatch.com/ )를 기반으로 하는 패치 
 #### `--output -o`
 출력 형식입니다.  허용되는 값: json, jsonc, table, tsv  기본값: json
 #### `--query -q`
-JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmespath.org/](http://jmespath.org/)를 참조하세요.
+JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmespath.org/](http://jmespath.org)를 참조하세요.
+#### `--verbose`
+로깅의 자세한 정도를 늘립니다. 전체 디버그 로그를 표시하려면 --debug를 사용합니다.
+## <a name="azdata-bdc-config-set"></a>azdata bdc config set
+아직 진행 중인 작업입니다. 빅 데이터 클러스터의 구성을 설정합니다.
+```bash
+azdata bdc config set --name -n 
+                      
+```
+### <a name="examples"></a>예제
+구성이 빅 데이터 클러스터 테스트에 대해 설정되어 있습니다.
+```bash
+azdata config set --name test
+```
+### <a name="required-parameters"></a>필수 매개 변수
+#### `--name -n`
+Kubernetes 네임스페이스에 사용되는 빅 데이터 클러스터 이름입니다.
+### <a name="global-arguments"></a>전역 인수
+#### `--debug`
+로깅의 자세한 정도를 늘려 모든 디버그 로그를 표시합니다.
+#### `--help -h`
+이 도움말 메시지를 표시하고 종료합니다.
+#### `--output -o`
+출력 형식입니다.  허용되는 값: json, jsonc, table, tsv  기본값: json
+#### `--query -q`
+JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmespath.org/](http://jmespath.org)를 참조하세요.
+#### `--verbose`
+로깅의 자세한 정도를 늘립니다. 전체 디버그 로그를 표시하려면 --debug를 사용합니다.
+## <a name="azdata-bdc-config-upgrade"></a>azdata bdc config upgrade
+아직 진행 중인 작업입니다. 빅 데이터 클러스터의 구성을 업그레이드합니다.
+```bash
+azdata bdc config upgrade --name -n 
+                          
+```
+### <a name="examples"></a>예제
+빅 데이터 클러스터 테스트의 구성 업그레이드입니다.
+```bash
+azdata config upgrade --name test
+```
+### <a name="required-parameters"></a>필수 매개 변수
+#### `--name -n`
+Kubernetes 네임스페이스에 사용되는 빅 데이터 클러스터 이름입니다.
+### <a name="global-arguments"></a>전역 인수
+#### `--debug`
+로깅의 자세한 정도를 늘려 모든 디버그 로그를 표시합니다.
+#### `--help -h`
+이 도움말 메시지를 표시하고 종료합니다.
+#### `--output -o`
+출력 형식입니다.  허용되는 값: json, jsonc, table, tsv  기본값: json
+#### `--query -q`
+JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmespath.org/](http://jmespath.org)를 참조하세요.
 #### `--verbose`
 로깅의 자세한 정도를 늘립니다. 전체 디버그 로그를 표시하려면 --debug를 사용합니다.
 

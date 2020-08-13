@@ -1,5 +1,6 @@
 ---
 title: 새 시스템 역할(Management Studio) | Microsoft Docs
+description: Management Studio에서 보고서 서버 전체에 적용되는 태스크 집합을 지정하는 시스템 수준 역할 정의를 만드는 위치인 새 시스템 역할 페이지에 대해 알아봅니다.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ f1_keywords:
 ms.assetid: 7b4a0b98-975b-478a-8359-7db39ccbb347
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4bb010a6f3b9c21661cfa840e6975cec51f90c84
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 22c3442e16503fd58f8fcb099018b88ab6bfbf92
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65582187"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86915541"
 ---
 # <a name="new-system-role-management-studio"></a>새 시스템 역할(Management Studio)
   이 페이지를 사용하여 시스템 수준의 역할 정의를 만들 수 있습니다. 시스템 역할 정의는 보고서 서버 전체에 적용되는 시스템 수준 태스크 집합을 지정합니다.  

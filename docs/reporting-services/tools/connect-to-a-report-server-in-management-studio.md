@@ -1,5 +1,6 @@
 ---
 title: Management Studio에서 보고서 서버에 연결 | Microsoft Docs
+description: SQL Server 제품군의 서버에 연결하고 SQL Server Management Studio의 개체 탐색기를 사용하여 그래픽으로 콘텐츠를 검색하는 방법을 알아봅니다.
 ms.date: 05/07/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: c875ff87-ee7d-443a-a702-bdb4b6c27c6e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 602c939c382bc5946e64340736f73bb88f17c655
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: adcbb82d80fae35889202fe8702a98b6315da100
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65574104"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918419"
 ---
 # <a name="connect-to-a-report-server-in-management-studio"></a>Management Studio에서 보고서 서버에 연결
 
@@ -49,7 +50,7 @@ ms.locfileid: "65574104"
 
 2. **연결**을 선택하여 서버 유형 목록을 보고 **Reporting Services**를 선택합니다.
 
-3. **서버에 연결** 대화 상자에서 보고서 서버 인스턴스의 이름을 입력합니다. 보고서 서버 인스턴스 이름은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 이름을 기반으로 합니다. 기본적으로 로컬 보고서 서버 인스턴스의 인스턴스 이름은 컴퓨터 이름입니다. 보고서 서버를 명명된 인스턴스로 설치한 경우 다음 구문을 사용하여 서버를 지정합니다. *\<servername>[\\<instancename\>]*
+3. **서버에 연결** 대화 상자에서 보고서 서버 인스턴스의 이름을 입력합니다. 보고서 서버 인스턴스 이름은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 이름을 기반으로 합니다. 기본적으로 로컬 보고서 서버 인스턴스의 인스턴스 이름은 컴퓨터 이름입니다. 보고서 서버를 명명된 인스턴스로 설치한 경우 다음 구문을 사용하여 서버를 지정합니다. *\<servername>[\\<instancename\>]* .
 
 4. **인증 형식**을 선택합니다. Windows 인증을 사용하는 경우 자격 증명을 사용하여 연결합니다. 기본 인증 또는 폼 인증을 선택하는 경우 계정과 암호를 입력합니다.  
   
@@ -81,7 +82,7 @@ ms.locfileid: "65574104"
 
 4. **서버 이름**에 값을 입력합니다. 서버 모드에 따라 값을 지정합니다.
 
-    - 기본 모드 보고서 서버의 경우 보고서 서버 인스턴스의 이름을 입력합니다. 보고서 서버 인스턴스 이름은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 이름을 기반으로 합니다. 기본적으로 로컬 보고서 서버 인스턴스의 인스턴스 이름은 컴퓨터 이름입니다. 보고서 서버를 명명된 인스턴스로 설치한 경우 다음 구문을 사용하여 서버를 지정합니다. *\<servername>[\\<instancename\>]*
+    - 기본 모드 보고서 서버의 경우 보고서 서버 인스턴스의 이름을 입력합니다. 보고서 서버 인스턴스 이름은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 이름을 기반으로 합니다. 기본적으로 로컬 보고서 서버 인스턴스의 인스턴스 이름은 컴퓨터 이름입니다. 보고서 서버를 명명된 인스턴스로 설치한 경우 다음 구문을 사용하여 서버를 지정합니다. *\<servername>[\\<instancename\>]* .
 
     - SharePoint 통합 모드에서 실행되는 보고서 서버의 경우 연결할 서버는 보고서 서버가 연결된 SharePoint 사이트입니다. 사용 권한 수준을 볼 수 있도록 SharePoint 사이트에 연결합니다. 사용 권한은 보고서 서버 콘텐츠 및 작업에 대한 액세스를 제어합니다. 사이트 모음에 임의의 사이트를 지정할 수 있습니다. 다음 예에서는 구문을 보여줍니다.`https://mysharepointsite`
 

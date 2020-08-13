@@ -1,5 +1,6 @@
 ---
-title: NTLM 인증을 사용하여 SQL Server에 연결 | Microsoft Docs
+title: NTLM 인증을 사용하여 SQL Server에 연결
+description: JDBC 드라이버로 NTLM 인증을 사용하여 SQL 데이터베이스 연결을 설정하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -12,12 +13,12 @@ ms.assetid: ''
 author: lilgreenbird
 ms.author: v-susanh
 manager: kenvh
-ms.openlocfilehash: 2fab4794544ada07e0bf5e690da35b72ad6b7421
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 93b4956b70e6e81e215da4fcde61a3a3287b50ec
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "69026098"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86393151"
 ---
 # <a name="using-ntlm-authentication-to-connect-to-sql-server"></a>NTLM 인증을 사용하여 SQL Server에 연결
 
@@ -72,7 +73,7 @@ try (Connection c = ds.getConnection(); Statement s = c.createStatement();
 
 SPN(서비스 사용자 이름)은 클라이언트가 서비스 인스턴스를 고유하게 식별하는 이름입니다.
 
-**serverSpn** 연결 속성을 사용하여 SPN을 지정하거나, 드라이버에서 자동으로 빌드(기본값)하도록 할 수 있습니다. 이 속성은 "MSSQLSvc/fqdn:port\@REALM"과 같은 형식으로 지정할 수 있습니다. 여기서 fqdn은 정규화된 도메인 이름이고, port는 포트 번호이며, REALM은 대문자로 표시된 SQL Server의 영역입니다. 기본 영역이 서버의 영역과 동일하므로 이 속성의 영역 부분은 선택 사항입니다.
+**serverSpn** 연결 속성을 사용하여 SPN을 지정하거나, 드라이버에서 자동으로 빌드(기본값)하도록 할 수 있습니다. 이 속성은 "MSSQLSvc/fqdn:port\@REALM" 형식이 될 수 있습니다. 여기서 fqdn은 정규화된 도메인 이름이고, port는 포트 번호이며, REALM은 대문자로 표시된 SQL Server의 영역입니다. 기본 영역이 서버의 영역과 동일하므로 이 속성의 영역 부분은 선택 사항입니다.
 
 예를 들어 SPN은 다음과 같을 수 있습니다. "MSSQLSvc/some-server.zzz.corp.contoso.com:1433"
 

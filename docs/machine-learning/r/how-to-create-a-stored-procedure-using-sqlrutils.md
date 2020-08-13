@@ -1,23 +1,23 @@
 ---
-title: R 저장 프로시저 만들기
+title: Sqlrutils 패키지를 사용하여 번들 R 코드에서 함수 만들기
 description: SQL Server의 sqlrutils R 패키지를 사용하여 R 언어 코드를 단일 함수로 번들화합니다. 이는 저장 프로시저에 인수로 전달할 수 있습니다.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 04/15/2018
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e0846442abce6dd598c6318e4ba7cf9e74685066
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: f1a53e3b2c5d6481bea436d7a7b6d045653a9e7d
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117646"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86483874"
 ---
 # <a name="create-a-stored-procedure-using-sqlrutils"></a>sqlrutils를 사용하여 저장 프로시저 만들기
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 이 문서에서는 R 코드를 변환하여 T-SQL 저장 프로시저로 실행하는 단계에 대해 설명합니다. 최상의 결과를 얻으려면 모든 입력을 매개 변수화할 수 있도록 코드를 약간 수정해야 할 수 있습니다.
 

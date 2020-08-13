@@ -1,5 +1,6 @@
 ---
 title: 편집기 구성(SQL Server Management Studio)
+description: 옵션 대화 상자에서 옵션을 설정하여 SQL Server Management Studio 편집기의 작업을 사용자 지정하는 방법을 알아봅니다.
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
@@ -11,18 +12,18 @@ ms.assetid: e7c7a8ef-f561-4258-a7b6-c445dba69f87
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2c70980653cd23241d0021d85a507e55573cf43b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2fe8cc40b18678e080e97285f5566a3a0de7a73b
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253958"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122874"
 ---
 # <a name="configure-editors-sql-server-management-studio"></a>편집기 구성(SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   각 편집기에 대한 옵션을 구성하여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 편집기 작업을 사용자 지정할 수 있습니다.  
   
-## <a name="settng-editor-options"></a>편집기 옵션 설정  
+## <a name="setting-editor-options"></a>편집기 옵션 설정  
  대부분의 편집기 옵션은 **도구** 메뉴에서 **옵션...** 을 선택하여 표시되는 **옵션** 대화 상자에서 설정합니다. **옵션** 대화 상자의 왼쪽 창에서 **텍스트 편집기** 노드를 열어서 코드 및 텍스트 편집 옵션을 설정합니다. 텍스트 편집기 아래의 노드가 특정 편집기에 적용됩니다.  
   
 1.  **모든 언어** – 이 노드를 사용하여 설정한 옵션이 모든 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 편집기에 적용됩니다. 다른 노드를 통해 특정 편집기에 대한 다른 옵션을 설정하여 이러한 설정을 무시할 수 있습니다.  

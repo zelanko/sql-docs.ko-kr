@@ -5,29 +5,31 @@ description: 4부로 구성된 이 자습서 시리즈에서는 SQL 기계 학�
 ms.prod: sql
 ms.technology: machine-learning
 ms.devlang: python
-ms.date: 04/15/2020
+ms.date: 05/26/2020
 ms.topic: tutorial
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8b3be490a6da01d34f8c762bf9c6cae1a35dbe40
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: e1482824da2d83e56538ce094e74c91cee224867
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606555"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86967909"
 ---
 # <a name="python-tutorial-categorizing-customers-using-k-means-clustering-with-sql-machine-learning"></a>Python 자습서: SQL 기계 학습에서 k-평균 클러스터링을 사용하여 고객 분류
-
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 4부로 구성된 이 자습서 시리즈에서는 고객 데이터를 분류하기 위해 Python을 사용하여 [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) 또는 [빅 데이터 클러스터](../../big-data-cluster/machine-learning-services.md)에서 K-평균 클러스터링 모델을 개발하고 배포합니다.
 ::: moniker-end
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 4부로 구성된 이 자습서 시리즈에서는 고객 데이터를 클러스터링하기 위해 [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md)에서 Python을 사용하여 K-평균 클러스터링 모델을 개발 및 배포합니다.
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+4부로 구성된 이 자습서 시리즈에서는 고객 데이터를 클러스터링하기 위해 [Azure SQL Managed Instance Machine Learning Services](/azure/azure-sql/managed-instance/machine-learning-services-overview)에서 Python을 사용하여 K-평균 클러스터링 모델을 개발 및 배포합니다.
 ::: moniker-end
 
 이 시리즈의 1부에서는 자습서의 사전 요구 사항을 설치한 다음, 샘플 데이터 세트를 데이터베이스에 복원합니다. 이 시리즈의 뒷부분에서는 Python에서 SQL 기계 학습을 사용하여 이 데이터로 클러스터링 모델을 학습시키고 배포합니다.
@@ -55,6 +57,11 @@ ms.locfileid: "83606555"
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 * [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) 및 Python 언어 옵션 - [Windows 설치 가이드](../install/sql-machine-learning-services-windows-install.md)의 설치 지침을 따릅니다.
 ::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+* Azure SQL Managed Instance Machine Learning Services. 등록 방법은 [Azure SQL Managed Instance Machine Learning Services 개요](/azure/azure-sql/managed-instance/machine-learning-services-overview)를 참조하세요.
+
+* 샘플 데이터베이스를 Azure SQL Managed Instance로 복원하기 위한 [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md).
+::: moniker-end
 
 * [Azure Data Studio](../../azure-data-studio/what-is.md) Python 및 SQL에 대한 Azure Data Studio에서 Notebook을 사용합니다. Notebook에 대한 자세한 내용은 [Azure Data Studio에서 Notebook을 사용하는 방법](../../azure-data-studio/sql-notebooks.md)을 참조하세요.
 
@@ -72,13 +79,14 @@ ms.locfileid: "83606555"
 
 ## <a name="restore-the-sample-database"></a>샘플 데이터베이스 복원
 
-이 자습서에 사용되는 샘플 데이터 세트는 **.bak** 데이터베이스 백업 파일로 저장되었으며, 사용자가 다운로드하여 사용할 수 있습니다. 이 데이터 세트는 [Transaction Processing Performance Council(TPC)](http://www.tpc.org/default.asp)에서 제공되는 [tpcx-bb](http://www.tpc.org/tpcx-bb/default.asp) 데이터 세트에서 파생됩니다.
+이 자습서에 사용되는 샘플 데이터 세트는 **.bak** 데이터베이스 백업 파일로 저장되었으며, 사용자가 다운로드하여 사용할 수 있습니다. 이 데이터 세트는 [Transaction Processing Performance Council(TPC)](http://www.tpc.org/)에서 제공되는 [tpcx-bb](http://www.tpc.org/tpcx-bb/default5.asp) 데이터 세트에서 파생됩니다.
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 > [!NOTE]
 > 빅 데이터 클러스터에서 Machine Learning Services를 사용하는 경우 [SQL Server 빅 데이터 클러스터 마스터 인스턴스에 데이터베이스 복원](../../big-data-cluster/data-ingestion-restore-database.md)을 참조하세요.
 ::: moniker-end
 
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 1. [tpcxbb_1gb.bak](https://sqlchoice.blob.core.windows.net/sqlchoice/static/tpcxbb_1gb.bak) 파일을 다운로드하세요.
 
 1. Azure Data Studio에서 다음 세부 정보를 사용하여 [백업 파일에서 데이터베이스 복원](../../azure-data-studio/tutorial-backup-restore-sql-server.md#restore-a-database-from-a-backup-file)의 지침을 따릅니다.
@@ -92,6 +100,22 @@ ms.locfileid: "83606555"
     USE tpcxbb_1gb;
     SELECT * FROM [dbo].[customer];
     ```
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+1. [tpcxbb_1gb.bak](https://sqlchoice.blob.core.windows.net/sqlchoice/static/tpcxbb_1gb.bak) 파일을 다운로드하세요.
+
+1. 다음 세부 정보를 사용하여 SQL Server Management Studio에서 [데이터베이스를 관리되는 인스턴스로 복원](/azure/sql-database/sql-database-managed-instance-get-started-restore)의 지침을 따릅니다.
+
+   * 다운로드한 **tpcxbb_1gb.bak** 파일에서 가져옵니다.
+   * 대상 데이터베이스 이름을 "tpcxbb_1gb"로 지정합니다.
+
+1. **dbo.customer** 테이블을 쿼리하여 데이터베이스를 복원한 후 데이터 세트가 존재하는지 확인할 수 있습니다.
+
+    ```sql
+    USE tpcxbb_1gb;
+    SELECT * FROM [dbo].[customer];
+    ```
+::: moniker-end
 
 ## <a name="clean-up-resources"></a>리소스 정리
 

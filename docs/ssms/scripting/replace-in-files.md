@@ -1,5 +1,6 @@
 ---
 title: 파일에서 바꾸기
+description: 찾기 및 바꾸기 창의 파일에서 바꾸기 기능을 사용하여 파일 집합의 텍스트에서 특정 문자열 또는 식을 검색하고 찾은 텍스트의 일부 또는 모두를 변경하는 방법을 알아봅니다.
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ ms.assetid: 51191c0a-e022-41d6-8473-5cb3c6596862
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 062fd4a1ecdf9e858e75d4d36292296bdee619fc
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b14b359a71de345a245e874cca0c191296c823f7
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "78261682"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122527"
 ---
 # <a name="replace-in-files"></a>파일에서 바꾸기
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   찾기 및 바꾸기 창의 **파일에서 바꾸기** 탭을 사용하여 지정한 파일 집합의 코드에서 문자열이나 식을 검색하고 일치하는 항목을 일부 또는 모두 변경할 수 있습니다. **결과 옵션**에서 선택한 찾기 결과 창에 일치하는 항목과 수행한 동작이 나열됩니다.  
   
  도구 모음 단추 및 바로 가기 키를 사용하여 **찾기 및 바꾸기** 대화 상자를 열 수도 있습니다.  
@@ -67,7 +68,7 @@ ms.locfileid: "78261682"
  **찾는 위치** 드롭다운 목록에서 선택한 옵션에 따라 **파일에서 바꾸기** 를 사용할 때 현재 활성 파일에서만 검색할지 특정 폴더 내에 저장된 파일을 모두 검색할지 결정됩니다. 목록에서 검색 범위를 선택하거나 폴더 경로를 입력하거나 **찾아보기** 단추를 클릭하여 **사용자 지정 디렉터리 집합** 대화 상자를 표시하고 검색할 폴더 집합을 선택합니다.  
   
 > [!NOTE]  
->  **찾는 위치** 옵션을 선택하면 소스 코드 제어에서 체크 아웃한 파일을 검색합니다. 즉, 로컬 컴퓨터로 다운로드한 파일의 버전만 검색합니다.  
+>  **찾는 위치** 옵션을 선택하면 원본 코드 제어에서 체크 아웃한 파일을 검색합니다. 즉, 로컬 컴퓨터로 다운로드한 버전만 검색합니다.  
   
  **Look in**  
  이 목록에서 미리 정의된 검색 범위를 선택하거나 **사용자 지정 디렉터리 집합** 대화 상자를 사용하여 원하는 디렉터리 집합을 입력합니다.  
@@ -88,7 +89,7 @@ ms.locfileid: "78261682"
  **찾는 위치** 에서 지정한 폴더의 하위 폴더도 검색하도록 지정합니다. 이 옵션을 사용하려면 사용자 지정 디렉터리 집합이 있어야 합니다.  
   
  **찾아보기(...)**  
- **찾는 위치** 입력란에 입력할 명명된 디렉터리 집합을 조합, 편집, 저장 및 선택할 수 있는 **검색 폴더 선택** 대화 상자를 표시하려면 이 단추를 클릭합니다.  
+ **찾는 위치** 상자에 입력할 명명된 디렉터리 집합을 조합, 편집, 저장 및 선택할 수 있는 **검색 폴더 선택** 대화 상자를 표시하려면 이 단추를 클릭합니다.  
   
 ## <a name="find-options"></a>사용  
  **찾기 옵션** 섹션을 확장하거나 축소할 수 있습니다. 다음과 같은 옵션을 선택하거나 선택 취소할 수 있습니다.  

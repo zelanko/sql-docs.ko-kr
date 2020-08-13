@@ -1,22 +1,22 @@
 ---
 title: SQLRUserGroup에 대한 로그인 만들기
-description: 암시적 인증을 사용하는 루프백 연결의 경우 SQLRUserGroup에 대한 SQL Server 로그인을 만듭니다. 이렇게 하면 작업자 계정은 ID를 호출 사용자로 다시 변환하기 위해 서버에 로그인할 수 있습니다.
+description: SQL Server에서 호출 사용자로 다시 ID 변환을 위해 서버 로그인에 대한 암시적 인증을 사용하여 SQLRUserGroup용 로그인을 만듭니다.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 01/25/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: c57a62e954ae8cb0fc52c9a5ead22d418243c0b8
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: f3d7bd23c2a6b218e56f4de57d5b281b34d0687d
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117126"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86484639"
 ---
 # <a name="create-a-login-for-sqlrusergroup"></a>SQLRUserGroup에 대한 로그인 만들기
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 스크립트의 [루프백 연결](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/create-a-login)이 [신뢰할 수 있는 연결](../concepts/security.md#sqlrusergroup)을 지정하고 코드를 포함하는 개체를 실행하는 데 사용되는 ID가 Windows 사용자 계정인 경우 [SQLRUserGroup](../../machine-learning/concepts/security.md#implied-authentication)에 대한 *SQL Server 로그인*을 만듭니다.
 

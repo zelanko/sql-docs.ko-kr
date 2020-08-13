@@ -1,5 +1,6 @@
 ---
 title: SharePoint 사이트의 보고서 데이터 원본에서 자격 증명 업데이트 | Microsoft Docs
+description: 보고서에 포함된 데이터 원본 및 SharePoint 문서 라이브러리에 저장된 공유 데이터 원본을 업데이트하는 방법을 알아봅니다.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: e0c50b6e-89e7-4b4d-8fe5-c90682c5d1b1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0a9908e340dadeb1108e68ca10f466276c14df23
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 335fdaee0e27a868a889de4ab00b55f06c372e15
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65575439"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458959"
 ---
 # <a name="update-credentials-in-report-data-sources-from-a-sharepoint-site"></a>SharePoint 사이트의 보고서 데이터 원본에서 자격 증명 업데이트
   이 항목에서는 SharePoint 문서 라이브러리에 저장된 공유 데이터 원본 및 보고서에 포함된 데이터 원본을 업데이트하는 방법에 대해 설명합니다.  
@@ -46,7 +47,7 @@ ms.locfileid: "65575439"
   
 7.  사용자 이름 및 암호를 입력합니다.  
   
-    -   계정이 Windows 도메인 사용자 계정인 경우 \<도메인>\\<계정\> 형식으로 지정한 다음 **데이터 원본에 연결할 때 Windows 자격 증명으로 사용**을 선택합니다.  
+    -   계정이 Windows 도메인 사용자 계정인 경우 \<domain>\\<account\> 형식으로 지정한 다음 **데이터 원본에 연결할 때 Windows 자격 증명으로 사용**을 선택합니다.  
   
     -   사용자 이름과 암호가 데이터베이스 자격 증명인 경우 **데이터 원본에 연결할 때 Windows 자격 증명으로 사용**을 선택하지 않습니다. 데이터베이스 서버에서 가장 또는 위임이 지원되는 경우 **실행 컨텍스트를 이 계정으로 설정**을 선택할 수 있습니다.  
   
@@ -72,7 +73,7 @@ ms.locfileid: "65575439"
   
 5.  사용자 이름 및 암호를 입력합니다.  
   
-    -   계정이 Windows 도메인 사용자 계정인 경우 \<도메인>\\<계정\> 형식으로 지정한 다음 **데이터 원본에 연결할 때 Windows 자격 증명으로 사용**을 선택합니다.  
+    -   계정이 Windows 도메인 사용자 계정인 경우 \<domain>\\<account\> 형식으로 지정한 다음 **데이터 원본에 연결할 때 Windows 자격 증명으로 사용**을 선택합니다.  
   
     -   사용자 이름과 암호가 데이터베이스 자격 증명인 경우 **데이터 원본에 연결할 때 Windows 자격 증명으로 사용**을 선택하지 않습니다. 데이터베이스 서버에서 가장 또는 위임이 지원되는 경우 **실행 컨텍스트를 이 계정으로 설정**을 선택할 수 있습니다.  
   

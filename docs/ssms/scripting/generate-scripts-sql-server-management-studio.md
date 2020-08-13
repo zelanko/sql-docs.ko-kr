@@ -1,5 +1,6 @@
 ---
 title: 스크립트 생성
+description: 스크립트 생성 및 게시 마법사를 사용하여 여러 개체에 대한 Transact-SQL 스크립트를 만드는 방법과 개체 탐색기 메뉴를 사용하여 개별 개체 또는 여러 개체에 대한 스크립트를 생성하는 방법을 알아봅니다.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: scripting
@@ -11,16 +12,16 @@ ms.reviewer: mathoma
 ms.custom: seo-lt-2019
 ms.date: 04/07/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a25249c04d322e2faa4c876b1afd2822896038b6
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: 534d4982f46d0d83cb25718646b018dfa662cc35
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83151874"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87123134"
 ---
 # <a name="generate-scripts-sql-server-management-studio"></a>스크립트 생성(SQL Server Management Studio)
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트를 생성하는 두 가지 메커니즘을 제공합니다. **스크립트 생성 및 게시 마법사**를 사용하여 여러 개체에 대한 스크립트를 만들 수 있습니다. 또한 **개체 탐색기** 에서 **스크립팅**메뉴를 사용하여 개별 개체 또는 여러 개체에 대한 스크립트를 생성할 수도 있습니다.
 
@@ -48,7 +49,7 @@ SSMS(SQL Server Management Studio)를 사용하여 다양한 개체를 스크립
 
 3. 개체의 범주를 확장합니다. 예를 들어 **테이블** 또는 **뷰** 노드를 확장합니다.
 
-4. 개체를 마우스 오른쪽으로 클릭하여 **\<개체 유형> 스크립팅**을 가리킵니다. 예를 들어 **테이블 스크립팅**을 가리킵니다.
+4. 개체를 마우스 오른쪽으로 클릭하여 **\<object type> 스크립팅**을 가리킵니다. 예를 들어 **테이블 스크립팅**을 가리킵니다.
 
 5. 스크립트 유형을 가리킵니다(예: **CREATE** 또는 **ALTER**).
 
@@ -72,6 +73,6 @@ SSMS(SQL Server Management Studio)를 사용하여 다양한 개체를 스크립
 
 6. Ctrl 키를 누른 채로 스크립팅할 두 번째 개체를 클릭합니다.
 
-7. 선택된 개체 중 하나를 마우스 오른쪽 단추로 클릭하고 **\<개체 유형> 스크립팅**을 선택합니다.
+7. 선택한 개체 중 하나를 마우스 오른쪽 단추로 클릭하고 **\<object type> 스크립팅**을 선택합니다.
 
     ![개체 탐색기](media/generate-scripts-sql-server-management-studio/object-explorer-details.png)

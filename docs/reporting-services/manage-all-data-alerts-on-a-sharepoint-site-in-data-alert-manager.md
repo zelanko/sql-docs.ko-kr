@@ -1,5 +1,6 @@
 ---
 title: 데이터 경고 관리자에서 SharePoint 사이트의 모든 데이터 경고 관리 | Microsoft Docs
+description: 사이트 사용자가 만든 데이터 경고와 경고에 대한 정보를 보는 방법을 알아봅니다. 또한 경고를 삭제하는 방법도 알아봅니다.
 ms.date: 08/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ ms.assetid: 9c70b0f4-2db8-4c2e-acbf-96e2a55ddc48
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 9702ca84fab0da2024db6f6f5e0f510822dcd29e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a6435b5e113d7ac79546e415479acb47e1c90b89
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65579804"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87235706"
 ---
 # <a name="manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager"></a>데이터 경고 관리자에서 SharePoint 사이트의 모든 데이터 경고 관리
 

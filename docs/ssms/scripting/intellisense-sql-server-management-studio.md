@@ -1,5 +1,6 @@
 ---
 title: IntelliSense(SQL Server Management Studio)
+description: Microsoft IntelliSense는 여러 가지 방법으로 코드 작성 프로세스를 지원할 수 있습니다. 자세한 정보를 제공하는 문서에 대한 링크를 포함하여 IntelliSense를 사용하는 방법을 개략적으로 알아봅니다.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: 7d6b0f60-c6ac-4f71-a9d0-fc3c2ffa7e91
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d2117410304632c9ab0e6637eab6c156c18973f4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 66bb25859efcd49f43a61e173156214ff9ca46e6
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253868"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87123115"
 ---
 # <a name="intellisense-sql-server-management-studio"></a>IntelliSense(SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 의 편집기는 입력을 축소하는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense 옵션을 지원하거나, 구문 정보에 대한 빠른 액세스를 제공하거나, 복잡한 식의 구분 기호를 쉽게 볼 수 있습니다.  
   
 ## <a name="benefits-of-intellisense"></a>IntelliSense의 이점  

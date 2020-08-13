@@ -1,34 +1,32 @@
 ---
-title: MicrosoftML R 함수 라이브러리
-description: SQL Server 2016 R Services 및 SQL Server Machine Learning Services(R 포함)의 MicrosoftML 함수 라이브러리를 소개합니다.
+title: MicrosoftML R 패키지
+description: MicrosoftML은 고성능 기계 학습 알고리즘을 제공하는 Microsoft의 R 패키지입니다. 여기에는 학습 및 변환, 점수 매기기, 텍스트 및 이미지 분석, 기존 데이터에서 값을 파생하기 위한 기능 추출을 위한 함수가 포함됩니다. 이 패키지는 SQL Server Machine Learning Services 및 SQL Server 2016 R Services에 포함되어 있으며, 다중 코어 처리 및 빠른 데이터 스트리밍을 사용하여 빅 데이터에 대한 고성능을 지원합니다. 또한 MicrosoftML에는 텍스트 및 이미지 처리를 위한 다양한 변환이 포함되어 있습니다.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 11/06/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 450091bba39cf10e551b8da5e62993ca676c64af
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 28f043ea0005f1020581218c358aed559285a5a4
+ms.sourcegitcommit: d1535944bff3f2580070cc036ece30f1d43ee2ce
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117446"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86406176"
 ---
-# <a name="microsoftml-r-library-in-sql-server"></a>MicrosoftML(SQL Server의 R 라이브러리)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="microsoftml-r-package-in-sql-server-machine-learning-services"></a>MicrosoftML(SQL Server Machine Learning Services의 R 패키지)
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-**MicrosoftML**은 고성능 기계 학습 알고리즘을 제공하는 Microsoft의 R 함수 라이브러리입니다. 여기에는 학습 및 변환, 점수 매기기, 텍스트 및 이미지 분석, 기존 데이터에서 값을 파생하기 위한 기능 추출을 위한 함수가 포함됩니다.
-
-기계 학습 API는 내부 기계 학습 애플리케이션을 위해 Microsoft에서 개발했으며, 다중 코어 처리 및 빠른 데이터 스트리밍을 사용하여 빅 데이터에 대한 고성능을 지원하기 위해 수년에 걸쳐 조정되었습니다. 또한 MicrosoftML에는 텍스트 및 이미지 처리를 위한 다양한 변환이 포함되어 있습니다.
+**MicrosoftML**은 고성능 기계 학습 알고리즘을 제공하는 Microsoft의 R 패키지입니다. 여기에는 학습 및 변환, 점수 매기기, 텍스트 및 이미지 분석, 기존 데이터에서 값을 파생하기 위한 기능 추출을 위한 함수가 포함됩니다. 이 패키지는 [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) 및 [SQL Server 2016 R Services](sql-server-r-services.md)에 포함되어 있으며, 다중 코어 처리 및 빠른 데이터 스트리밍을 사용하여 빅 데이터에 대한 고성능을 지원합니다. 또한 MicrosoftML에는 텍스트 및 이미지 처리를 위한 다양한 변환이 포함되어 있습니다.
 
 ## <a name="full-reference-documentation"></a>전체 참조 설명서
 
-**MicrosoftML** 라이브러리는 여러 Microsoft 제품에 배포되지만, SQL Server에서 라이브러리를 가져오든, 다른 제품에서 라이브러리를 가져오든, 사용 방식은 동일합니다. 함수는 동일하기 때문에 [개별 RevoScaleR 함수에 대한 설명서](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)는 Microsoft Machine Learning Server에 대한 [R 참조](https://docs.microsoft.com/machine-learning-server/r-reference/introducing-r-server-r-package-reference) 아래의 한 위치에만 게시됩니다. 제품별로 고유한 동작이 있는 경우 함수 도움말 페이지에 차이점이 표시됩니다.
+**MicrosoftML** 패키지는 여러 Microsoft 제품에 배포되지만, 패키지를 SQL Server에서 가져오든 다른 제품에서 가져오든 사용 방식은 동일합니다. 함수는 동일하기 때문에 [개별 RevoScaleR 함수에 대한 설명서](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)는 Microsoft Machine Learning Server에 대한 [R 참조](https://docs.microsoft.com/machine-learning-server/r-reference/introducing-r-server-r-package-reference) 아래의 한 위치에만 게시됩니다. 제품별로 고유한 동작이 있는 경우 함수 도움말 페이지에 차이점이 표시됩니다.
 
 ## <a name="versions-and-platforms"></a>버전 및 플랫폼
 
-**MicrosoftML** 라이브러리는 R 3.4.3을 기준으로 하며, 다음 Microsoft 제품 또는 다운로드 중 하나를 설치한 경우에만 사용할 수 있습니다.
+**MicrosoftML** 패키지는 R 3.4.3을 기준으로 하며, 다음 Microsoft 제품 또는 다운로드 중 하나를 설치한 경우에만 사용할 수 있습니다.
 
 + [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md)
 + [SQL Server Machine Learning 서비스](../install/sql-machine-learning-services-windows-install.md)
@@ -43,7 +41,7 @@ ms.locfileid: "81117446"
 **MicrosoftML**의 알고리즘은 다음에 대해 [RevoScaleR](ref-r-revoscaler.md)에 따라 좌우됩니다.
 
 + 데이터 원본 개체 **MicrosoftML** 함수에서 사용하는 데이터는 **RevoScaleR** 함수를 사용하여 생성됩니다.
-+ 원격 컴퓨팅(원격 SQL Server 인스턴스로 함수 실행 이동) **RevoScaleR** 라이브러리는 SQL Server에 대한 원격 컴퓨팅 컨텍스트를 만들고 활성화하는 함수를 제공합니다.
++ 원격 컴퓨팅(원격 SQL Server 인스턴스로 함수 실행 이동) **RevoScaleR** 패키지는 SQL Server에 대한 원격 컴퓨팅 컨텍스트를 만들고 활성화하는 함수를 제공합니다.
 
 대부분의 경우 **MicrosoftML**을 사용할 때마다 패키지를 함께 로드하게 됩니다.
 

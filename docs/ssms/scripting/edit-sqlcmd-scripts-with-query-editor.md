@@ -1,5 +1,6 @@
 ---
 title: 쿼리 편집기로 SQLCMD 스크립트 편집
+description: 같은 스크립트에서 Windows 시스템 명령과 Transact-SQL 문을 처리해야 하는 경우 SQLCMD 스크립트를 사용합니다. 데이터베이스 엔진 쿼리 편집기를 사용하여 SQLCMD 스크립트를 작성하고 편집하는 방법을 알아봅니다.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,15 +18,15 @@ ms.assetid: f77b866d-c330-47c9-9e74-0b8d8dff4b31
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 637de4e8168b97e27da707f3f189d3608786d973
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ed1171649c422ccb451fc7540cae8ca6629b65b1
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253911"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122965"
 ---
 # <a name="edit-sqlcmd-scripts-with-query-editor"></a>쿼리 편집기로 SQLCMD 스크립트 편집
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   [!INCLUDE[ssDE](../../includes/ssde-md.md)] 의 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 쿼리 편집기를 사용하여 쿼리를 SQLCMD 스크립트로 작성 및 편집할 수 있습니다. 같은 스크립트에서 Windows 시스템 명령과 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 처리해야 하는 경우 SQLCMD 스크립트를 사용합니다.  
   
 ## <a name="sqlcmd-mode"></a>SQLCMD 모드  
@@ -78,7 +79,7 @@ ms.locfileid: "75253911"
   
     -   (6개 행 적용됨)  
   
-    -   \<디렉터리 정보>  
+    -   \<The directory information>  
   
     -   (4개 행 적용됨)  
   
@@ -140,7 +141,7 @@ ms.locfileid: "75253911"
 > [!NOTE]  
 >  `:error` 및 `:out`모두에서 `stderr` 및 `stdout` 은 출력을 메시지 탭으로 보냅니다.  
   
- 위에 나열되지 않은 SQLCMD 명령은 쿼리 편집기에서 지원되지 않습니다. 지원되지 않은 SQLCMD 키워드가 포함된 스크립트가 실행되면 쿼리 편집기는 지원되지 않는 각 키워드의 대상에 "Ignoring command *\<무시된 명령*>" 메시지를 보냅니다. 스크립트가 성공적으로 실행되지만 지원되지 않은 명령은 무시됩니다.  
+ 위에 나열되지 않은 SQLCMD 명령은 쿼리 편집기에서 지원되지 않습니다. 지원되지 않는 SQLCMD 키워드가 포함된 스크립트가 실행되면 쿼리 편집기는 지원되지 않는 각 키워드의 대상에 "Ignoring command *\<ignored command*>" 메시지를 보냅니다. 스크립트가 성공적으로 실행되지만 지원되지 않은 명령은 무시됩니다.  
   
 > [!CAUTION]  
 >  SQLCMD를 명령줄에서 시작하지 않기 때문에 SQLCMD 모드에서 쿼리 편집기를 실행할 때 몇 가지 제한 사항이 있습니다. 변수와 같은 명령줄 매개 변수를 전달할 수 없으며, 쿼리 편집기는 운영 체제 프롬프트에 응답하는 기능이 없으므로 대화형 문을 실행하지 않도록 주의해야 합니다.  

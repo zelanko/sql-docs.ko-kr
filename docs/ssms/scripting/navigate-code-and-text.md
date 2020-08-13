@@ -1,5 +1,6 @@
 ---
 title: 코드 및 텍스트 이동
+description: 다양한 기술을 사용하여 문서를 탐색하는 방법을 알아봅니다. 특정 위치로 쉽게 돌아갈 수 있도록 책갈피를 설정하고, 증분식으로 검색하고, 마우스 및 키보드를 사용하고, Go To 명령으로 줄 번호를 지정하여 특정 줄로 이동합니다.
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
@@ -21,15 +22,15 @@ ms.assetid: f63247ff-9751-4e99-8ee3-0772ad4009d0
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4c1a77dfbe88a3018d7ae170675b84461f69a12b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4ac0d91b3d6bc3dd6527063a176b0728f96f144e
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "78261850"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122592"
 ---
 # <a name="navigate-code-and-text"></a>코드 및 텍스트 이동
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   다음을 사용하여 텍스트 간을 이동할 수 있습니다.  
   
 -   책갈피  

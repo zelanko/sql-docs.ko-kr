@@ -1,5 +1,6 @@
 ---
 title: 찾기 결과 창
+description: 파일에서 찾기 및 파일에서 바꾸기 작업으로 찾은 일치 항목을 유지하는 두 개의 찾기 결과 창이 있습니다. 이러한 창을 표시하는 방법과 일치 항목에 해당하는 코드 파일 및 줄을 표시하는 방법을 알아봅니다.
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
@@ -15,16 +16,16 @@ ms.assetid: 3b68dbb7-26d6-4bc9-bd2c-c27e5dc385c3
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 463e2943fbad1b8ad03843d94267c2d0a009104b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ef2063c8d9c5d4645ad96826400e14e9d2eea870
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253838"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122922"
 ---
 # <a name="find-results-windows"></a>찾기 결과 창
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  두 개의 찾기 결과 창에는 **찾기 및 바꾸기** 대화 상자의 **파일에서 찾기** 또는 **파일에서 바꾸기** 탭을 사용하여 찾은 항목이 표시됩니다. **파일에서 찾기** 와 **파일에서 바꾸기** 의 **결과 옵션** 명령을 사용하여 항목을 표시할 찾기 결과 창을 선택할 수 있습니다.  
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+   두 개의 찾기 결과 창에는 **찾기 및 바꾸기** 대화 상자의 **파일에서 찾기** 또는 **파일에서 바꾸기** 탭을 사용하여 찾은 항목이 표시됩니다. **파일에서 찾기** 와 **파일에서 바꾸기** 의 **결과 옵션** 명령을 사용하여 항목을 표시할 찾기 결과 창을 선택할 수 있습니다.  
   
  이렇게 하면 항목을 찾을 때마다 자동으로 선택한 찾기 결과 창이 열립니다. 찾기 결과 창을 수동으로 표시하려면 **보기** 메뉴에서 **다른 창** 을 클릭한 다음 **찾기 결과 1** 이나 **찾기 결과 2**를 클릭합니다.  
   

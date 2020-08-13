@@ -1,5 +1,6 @@
 ---
 title: 보고서 디자이너로 보고서 디자인 | Microsoft Docs
+description: SQL Server Reporting Services에서 보고서 디자이너를 사용하여 완전한 기능을 갖춘 페이지를 매긴 보고서 및 보고 솔루션을 만드는 방법을 알아봅니다.
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 3a26dccc-6ad6-48f5-a882-f96c6c0dd405
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4e4cfac1ba56647ae0218242d0fb9228a3e80579
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8f83c1f169706af4a02d1940049d2a1814bc26ca
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79286167"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914089"
 ---
 # <a name="design-reporting-services-paginated-reports-with-report-designer-ssrs"></a>보고서 디자이너로 Reporting Services 페이지가 매겨진 보고서 디자인(SSRS)
 
@@ -168,7 +169,7 @@ ms.locfileid: "79286167"
   
  다음 표에서는 오류 수준을 보여 줍니다.  
   
-|오류 수준|Description|  
+|오류 수준|설명|  
 |-----------------|-----------------|  
 |0|보고서 미리 보기 및 배포를 불가능하게 만드는 가장 심각하고 불가피한 빌드 문제|  
 |1|보고서 레이아웃을 대폭 변경하는 심각한 빌드 문제|  

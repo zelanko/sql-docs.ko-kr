@@ -1,5 +1,6 @@
 ---
 title: Transact-SQL 코드 조각 완성
+description: Transact-SQL 코드 조각은 코드 템플릿입니다. 대체 지점에 콘텐츠를 삽입하고 템플릿에 구문 요소를 추가하여 이 코드 조각의 사용을 사용자 지정하는 방법을 알아봅니다.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,15 +16,15 @@ ms.assetid: a8316a58-bb57-485e-845f-84c23360314c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2109b236bc13e8335e619ed90b8ee9a33ca08844
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7abde619db694c4b1157b2258491d73f7d1bd979
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253999"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122894"
 ---
 # <a name="complete-transact-sql-snippets"></a>Transact-SQL 코드 조각 완성
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드 조각을 스크립트에 삽입한 후 코드 조각의 내용을 편집하여 완전한 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 만들 수 있습니다.  
   
 ## <a name="completing-snippets"></a>코드 조각 완성  

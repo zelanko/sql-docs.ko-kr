@@ -1,5 +1,6 @@
 ---
 title: Reporting Services 데이터 원본에 자격 증명 저장 | Microsoft Docs
+description: 기본 모드 및 SharePoint 모드 보고서 서버 모두에서 저장된 자격 증명을 구성하는 방법을 알아봅니다.
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-data
@@ -9,12 +10,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 05/24/2018
-ms.openlocfilehash: 09fcacbd2f1c5c197517f962073dce6294aed2e2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c0fd3f93cd38c562d5374ecfa65d52b082eef07b
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68891853"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458205"
 ---
 # <a name="store-credentials-in-a-reporting-services-data-source"></a>Reporting Services 데이터 원본에 자격 증명 저장
 
@@ -61,7 +62,7 @@ ms.locfileid: "68891853"
   
 7.  사용자 이름 및 암호를 입력합니다.  
   
-    -   계정이 Windows 도메인 사용자 계정인 경우 \<도메인>\\<계정\> 형식으로 지정한 다음 **데이터 원본에 연결할 때 Windows 자격 증명으로 사용**을 선택합니다.  
+    -   계정이 Windows 도메인 사용자 계정인 경우 \<domain>\\<계정\> 형식으로 지정한 다음 **데이터 원본에 연결할 때 Windows 자격 증명으로 사용**을 선택합니다.  
   
     -   사용자 이름과 암호가 데이터베이스 자격 증명인 경우 **데이터 원본에 연결할 때 Windows 자격 증명으로 사용**을 선택하지 않습니다. 데이터베이스 서버가 가장 또는 위임을 지원하는 경우에는 **데이터 원본에 연결한 후 인증된 사용자로 가장**을 선택할 수 있습니다.  
   
@@ -89,7 +90,7 @@ ms.locfileid: "68891853"
   
 7.  **사용자 이름** 및 **암호**를 입력합니다.  
   
-    -   계정이 Windows 도메인 사용자 계정인 경우 \<도메인>\\<계정\> 형식으로 지정한 다음 **데이터 원본에 연결할 때 Windows 자격 증명으로 사용**을 선택합니다.  
+    -   계정이 Windows 도메인 사용자 계정인 경우 \<domain>\\<계정\> 형식으로 지정한 다음 **데이터 원본에 연결할 때 Windows 자격 증명으로 사용**을 선택합니다.  
   
     -   사용자 이름과 암호가 데이터베이스 자격 증명인 경우 **Windows 자격 증명으로 사용**을 선택하지 않습니다. 데이터베이스 서버에서 가장 또는 위임이 지원되는 경우 **실행 컨텍스트를 이 계정으로 설정**을 선택할 수 있습니다.  
   
@@ -115,7 +116,7 @@ ms.locfileid: "68891853"
   
 5.  사용자 이름 및 암호를 입력합니다.  
   
-    -   계정이 Windows 도메인 사용자 계정인 경우 \<도메인>\\<계정\> 형식으로 지정한 다음 **데이터 원본에 연결할 때 Windows 자격 증명으로 사용**을 선택합니다.  
+    -   계정이 Windows 도메인 사용자 계정인 경우 \<domain>\\<계정\> 형식으로 지정한 다음 **데이터 원본에 연결할 때 Windows 자격 증명으로 사용**을 선택합니다.  
   
     -   사용자 이름과 암호가 데이터베이스 자격 증명인 경우 **데이터 원본에 연결할 때 Windows 자격 증명으로 사용**을 선택하지 않습니다. 데이터베이스 서버가 가장 또는 위임을 지원하는 경우에는 **데이터 원본에 연결한 후 인증된 사용자로 가장**을 선택할 수 있습니다.  
   
@@ -143,7 +144,7 @@ ms.locfileid: "68891853"
   
 6.  사용자 이름 및 암호를 입력합니다.  
   
-    -   계정이 Windows 도메인 사용자 계정인 경우 \<도메인>\\<계정\> 형식으로 지정한 다음 **Windows 자격 증명으로 사용**을 선택합니다.  
+    -   계정이 Windows 도메인 사용자 계정인 경우 \<domain>\\<계정\> 형식으로 지정한 다음 **Windows 자격 증명으로 사용**을 선택합니다.  
   
     -   사용자 이름과 암호가 데이터베이스 자격 증명인 경우 **Windows 자격 증명으로 사용**을 선택하지 않습니다. 데이터베이스 서버에서 가장 또는 위임이 지원되는 경우 **실행 컨텍스트를 이 계정으로 설정**을 선택할 수 있습니다.  
   

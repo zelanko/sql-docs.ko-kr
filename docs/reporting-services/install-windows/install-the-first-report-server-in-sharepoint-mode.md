@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: af1ceea86c3e91cb11c393f585c2906f50f039c1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 05ab2bfea73d7419613d21a3cce85135743e48f5
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79286177"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86941295"
 ---
 # <a name="install-the-first-report-server-in-sharepoint-mode"></a>SharePoint 모드에서 첫 번째 보고서 서버 설치
 
@@ -92,13 +92,17 @@ ms.locfileid: "79286177"
     > [!NOTE]
     > SharePoint 서버의 올바른 이름을 지정해야 합니다.
     
-        Set-SPServer SERVERNAME -Role Custom
+    ```powershell
+    Set-SPServer SERVERNAME -Role Custom
+    ```
 
 4. 타이머 작업이 예약된 응답이 표시됩니다. 작업을 실행할 때까지 대기해야 합니다.
 
 5. 서버의 할당된 역할을 확인하려면 다음 명령을 사용합니다.
 
-        Get-SPServer SERVERNAME 
+    ```powershell
+    Get-SPServer SERVERNAME 
+    ```
  
  6. **역할** 에 **사용자 지정**이 나열됩니다.
  
@@ -209,7 +213,9 @@ ms.locfileid: "79286177"
     > [!IMPORTANT]
     > 다음과 유사한 오류 메시지가 표시되는 경우  
     >   
-    >     Install-SPRSService : 'Install-SPRSService' 용어는 cmdlet, 함수, 스크립트 파일 또는 실행 프로그램의 이름으로 **인식되지 않습니다**. 이름의 철자를 확인하거나 경로가 포함되어 있으면 경로가 올바른지 확인하고 다시 시도합니다.  
+    ```powershell
+    >     Install-SPRSService : The term 'Install-SPRSService' **is not recognized** as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.  
+    ```
     >
     > SharePoint 관리 셸 대신 Windows PowerShell에 있거나 Reporting Services SharePoint 모드가 설치되어 있지 않습니다. Reporting Services 및 PowerShell에 대한 자세한 내용은 [Reporting Services SharePoint 모드용 PowerShell cmdlet](../../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)을 참조하세요.  
   
@@ -270,7 +276,7 @@ ms.locfileid: "79286177"
   
 1.  다음 단계에서는 SharePoint 사이트가 SharePoint 2013에 대한 2013 **환경 버전**에 대해 구성되었다고 가정합니다.  
   
-     원하는 SharePoint 사이트로 브라우저를 엽니다. 엽니다(예: https://\<servername>/sites/bi).  
+     원하는 SharePoint 사이트로 브라우저를 엽니다. 예: https://\<servername>/sites/bi  
   
 2.  **설정**![SharePoint 설정](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 설정")을 선택합니다.  
   

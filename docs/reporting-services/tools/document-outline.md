@@ -1,5 +1,6 @@
 ---
 title: 문서 개요 | Microsoft Docs
+description: 보고서의 보고서 항목 계층 구조를 보기 위한 문서 개요 창에 대해 알아봅니다.
 ms.date: 05/31/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ f1_keywords:
 ms.assetid: 521f3772-043a-4bfa-a3d6-d5e3405ac09c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1e7b98cb6ffedcf5427ccafbc10d8b8f6f6e604a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5df8be16c976713d9fd18f148afdb8fab5c7a967
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65580325"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914039"
 ---
 # <a name="document-outline"></a>문서 개요
   문서 개요 창을 사용하여 보고서의 보고서 항목 계층 구조를 볼 수 있습니다. 테이블릭스 데이터 영역에는 테이블릭스 셀에 들어 있는 모든 입력란과 기타 보고서 항목이 표시됩니다. 디자인 화면에서 보고서 항목을 선택하면 문서 개요 창에서 해당 보고서 항목이 선택됩니다. 이 뷰를 사용하여 디자인 화면에서 보고서 항목을 찾을 수 있습니다. 예를 들어 식 오류가 있는 보고서를 미리 보면 개요 창에 각 오류 메시지가 표시됩니다. 메시지에는 오류가 발생한 식이 들어 있는 입력란의 이름이 포함되어 있습니다. 문서 개요 창에서 입력란의 이름을 클릭하여 디자인 화면에서 해당 항목이 선택되는 것을 확인하고 오류가 있는 식을 살펴볼 수 있습니다.  

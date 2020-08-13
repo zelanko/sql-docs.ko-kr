@@ -1,5 +1,6 @@
 ---
 title: 보고서 데이터 세트 | Microsoft Docs
+description: 보고서 데이터 세트에 대해 알아봅니다. 예를 들어 데이터 원본에서 특정 데이터 집합을 검색하는 데 필요한 정보를 포함하는 데이터 세트입니다.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: f2e42303-e355-4c1f-bb3b-3338fbdd230d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 73de47423caed308e1a9ae433bdcc7b24b3e69d0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0677b5c5cdf5ff01009a81da01668ff977d2fcff
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081943"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458348"
 ---
 # <a name="report-datasets-ssrs"></a>보고서 데이터 세트(SSRS)
   보고서에 데이터를 추가하려면 데이터 세트를 만듭니다. 각 데이터 세트는 데이터 원본에 대해 쿼리 명령을 실행하여 얻은 결과 집합을 나타냅니다. 결과 집합의 열은 필드 컬렉션이고, 결과 집합의 행은 데이터입니다. 데이터 세트에는 실제 데이터가 포함되는 것이 아니라 데이터 원본에서 특정 데이터의 세트를 검색하는 데 필요한 정보가 포함됩니다.  
@@ -36,7 +37,7 @@ ms.locfileid: "77081943"
   
  종속되는 데이터 세트를 포함하는 보고서 파트를 추가하여 보고서에 데이터 세트를 추가할 수도 있습니다. [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에서 데이터를 표시하는 보고서를 만드는 방법은 [자습서: 기본 테이블 보고서 만들기&#40;보고서 작성기&#41;](../../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)를 참조하세요. 자체 데이터를 포함하는 보고서를 작성하려면 [자습서: 오프라인에서 빠른 차트 보고서 만들기&#40;보고서 작성기&#41;](../../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)를 참조하세요.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에서 데이터를 표시하는 보고서를 만드는 방법은 [자습서: 기본 테이블 보고서 만들기&#40;보고서 작성기&#41;](../../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)를 참조하세요. 자체 데이터를 포함하는 보고서를 작성하려면 다음을 참조하세요. [자습서: 오프라인에서 빠른 차트 보고서 만들기&#40;보고서 작성기&#41;](../../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)를 참조하세요.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

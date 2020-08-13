@@ -1,5 +1,6 @@
 ---
 title: 서버 속성(일반 페이지) | Microsoft Docs
+description: 보고서 서버 속성 페이지의 옵션에 대해 알아봅니다.
 ms.date: 06/08/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ f1_keywords:
 ms.assetid: 23537d52-4356-450f-a671-5921cef2431f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 71c0d3d28de1a9c63770b37f2bb6013768aaee78
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 718121027064cc44e540ea710097da9added0c0b
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65576165"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86916613"
 ---
 # <a name="report-server-properties-general-page"></a>보고서 서버 속성(일반 페이지)
   이 페이지를 사용하여 보고서 관리자에 사용된 제목을 보거나 수정하고, 내 보고서를 설정 또는 해제하고, 내 보고서의 보안에 대한 역할 정의를 선택하고 클라이언트 인쇄 컨트롤을 설정 또는 해제할 수 있습니다.  

@@ -1,5 +1,6 @@
 ---
 title: 파일에서 찾기
+description: 지정된 파일 집합에서 문자열 또는 식을 검색하는 방법과 검색 결과의 위치를 지정하는 방법을 알아봅니다.
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,16 +14,16 @@ ms.assetid: bf92770a-33df-43ef-85ad-5a9223649b98
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 81ddd51b2b005a104e2311dc7853484d081c3391
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5d22ecc6a36e64d064a9429eea02644428762c44
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "78261879"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122939"
 ---
 # <a name="find-in-files"></a>파일에서 찾기
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  찾기 및 바꾸기 창의 **파일에서 찾기** 탭을 사용하여 지정한 파일에서 문자열이나 식을 검색할 수 있습니다. **결과 옵션**에서 선택한 찾기 결과 창에 일치하는 항목과 수행한 동작이 나열됩니다.  
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+   찾기 및 바꾸기 창의 **파일에서 찾기** 탭을 사용하여 지정한 파일에서 문자열이나 식을 검색할 수 있습니다. **결과 옵션**에서 선택한 찾기 결과 창에 일치하는 항목과 수행한 동작이 나열됩니다.  
   
  도구 모음 단추 및 바로 가기 키를 사용하여 **찾기 및 바꾸기** 대화 상자를 열 수도 있습니다.  
   
@@ -47,7 +48,7 @@ ms.locfileid: "78261879"
  **찾는 위치** 드롭다운 목록에서 선택한 옵션에 따라 **파일에서 찾기** 에서 현재 활성화된 파일만 검색할지 아니면 특정 폴더에 저장되어 있는 모든 파일을 검색할지 여부가 결정됩니다. 목록에서 검색 범위를 선택하거나 폴더 경로를 입력하거나 **찾아보기** 단추를 클릭하여 **사용자 지정 디렉터리 집합** 대화 상자를 표시한 다음 검색할 폴더 집합을 선택합니다.  
   
 > [!NOTE]  
->  **찾는 위치** 옵션을 선택하면 소스 코드 제어에서 체크 아웃한 파일을 검색합니다. 즉, 로컬 컴퓨터로 다운로드한 파일의 버전만 검색합니다.  
+>  **찾는 위치** 옵션을 선택하면 원본 코드 제어에서 체크 아웃한 파일을 검색합니다. 즉, 로컬 컴퓨터로 다운로드한 버전만 검색합니다.  
   
  **Look in**  
  이 목록에서 미리 정의된 검색 범위를 선택하거나 **사용자 지정 디렉터리 집합** 대화 상자를 사용하여 원하는 디렉터리 집합을 입력합니다.  

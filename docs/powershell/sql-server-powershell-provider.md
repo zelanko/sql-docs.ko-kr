@@ -1,5 +1,6 @@
 ---
 title: SQL Server PowerShell 공급자 | Microsoft 문서
+description: 파일 시스템 경로와 비슷한 경로를 사용하여 SQL Server 개체에 대한 액세스를 제공하는 Windows PowerShell용 SQL Server 공급자에 대해 알아봅니다.
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: scripting
@@ -16,16 +17,16 @@ author: markingmyname
 ms.author: maghan
 ms.custom: ''
 ms.date: 07/31/2019
-ms.openlocfilehash: 1017620181ac127576f02fc792e3c4b85213a6d9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9434ad33aee0f00856e4c59ece38c0729830c977
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68731122"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86912471"
 ---
 # <a name="sql-server-powershell-provider"></a>SQL Server PowerShell Provider
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Windows PowerShell용 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 공급자는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 개체의 계층 구조를 파일 시스템 경로와 비슷한 경로에 표시합니다. 이 경로를 사용하여 개체를 찾은 다음 SMO( [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Object) 모델의 메서드를 사용하여 개체에 대해 동작을 수행할 수 있습니다.  
   
@@ -50,7 +51,7 @@ Windows PowerShell용 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 공
 |`SQLSERVER:\SQLPolicy`|<xref:Microsoft.SqlServer.Management.Dmf><br /><br /> <xref:Microsoft.SqlServer.Management.Facets>|정책 및 패싯과 같은 정책 기반 관리 개체입니다.|  
 |`SQLSERVER:\SQLRegistration`|<xref:Microsoft.SqlServer.Management.RegisteredServers><br /><br /> <xref:Microsoft.SqlServer.Management.Smo.RegSvrEnum>|서버 그룹 및 등록된 서버와 같은 등록된 서버 개체입니다.|  
 |`SQLSERVER:\Utility`|<xref:Microsoft.SqlServer.Management.Utility>|[!INCLUDE[ssDE](../includes/ssde-md.md)]의 관리되는 인스턴스와 같은 유틸리티 개체입니다.|  
-|`SQLSERVER:\DAC`|<xref:Microsoft.SqlServer.Management.DAC>|DAC 패키지와 같은 데이터 계층 애플리케이션 개체 및 DAC 배포와 같은 작업입니다.|  
+|`SQLSERVER:\DAC`|[Microsoft.SqlServer.Management.Dac](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/ee212127(v=sql.110))|DAC 패키지와 같은 데이터 계층 애플리케이션 개체 및 DAC 배포와 같은 작업입니다.|  
 |`SQLSERVER:\DataCollection`|<xref:Microsoft.SqlServer.Management.Collector>|컬렉션 집합 및 구성 저장소와 같은 데이터 수집기 개체입니다.|  
 |`SQLSERVER:\SSIS`|<xref:Microsoft.SqlServer.Management.IntegrationServices>|[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 개체.|  
 |`SQLSERVER:\XEvent`|<xref:Microsoft.SqlServer.Management.XEvent>|SQL Server 확장 이벤트|

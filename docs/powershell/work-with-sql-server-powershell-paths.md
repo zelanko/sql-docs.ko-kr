@@ -1,5 +1,6 @@
 ---
 title: SQL Server PowerShell 경로 작업 | Microsoft 문서
+description: 공급자 경로로 식별되는 개체의 메서드 및 속성 또는 cmdlet을 사용하여 정보를 조작하고 검색하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -9,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: f31d8e2c-8d59-4fee-ac2a-324668e54262
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 17c898e02f63a9d491c514967137e1f357b2db74
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f075dcbbe4123c8395844a18a5aaee1bd53c0482
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68121347"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922309"
 ---
 # <a name="work-with-sql-server-powershell-paths"></a>SQL Server PowerShell 경로 작업
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[ssDE](../includes/ssde-md.md)] 공급자 경로의 노드로 이동한 후에는 노드에 연결된 [!INCLUDE[ssDE](../includes/ssde-md.md)] 관리 개체에서 메서드 및 속성을 사용하여 작업을 수행하거나 정보를 검색할 수 있습니다.  
   
@@ -40,7 +41,7 @@ ms.locfileid: "68121347"
   
  특정 개체 또는 개체 클래스에 사용할 수 있는 메서드 및 속성을 보려면 **Get-Member** cmdlet을 사용합니다.  
   
-### <a name="examples-listing-methods-and-properties"></a>예: 메서드 및 속성 나열  
+### <a name="examples-listing-methods-and-properties"></a>예제: 메서드 및 속성 나열  
  이 예에서는 Windows PowerShell 변수를 SMO <xref:Microsoft.SqlServer.Management.Smo.Database> 클래스로 설정하고 메서드 및 속성을 나열합니다.  
   
 ```  
@@ -70,7 +71,7 @@ Get-Item . | Get-Member -Type Properties
   
  [!INCLUDE[ssDE](../includes/ssde-md.md)] 공급자 경로에서 개체에 대한 작업을 수행하려면 SMO 메서드 및 속성을 사용할 수 있습니다.  
   
-### <a name="examples-using-methods-and-properties"></a>예: 메서드 및 속성 사용  
+### <a name="examples-using-methods-and-properties"></a>예제: 메서드 및 속성 사용  
  이 예에서는 SMO **Schema** 속성을 사용하여 AdventureWorks2012의 Sales 스키마에서 테이블 목록을 가져옵니다.  
   
 ```  

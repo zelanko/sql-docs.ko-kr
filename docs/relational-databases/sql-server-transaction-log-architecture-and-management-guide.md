@@ -21,12 +21,12 @@ ms.assetid: 88b22f65-ee01-459c-8800-bcf052df958a
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 976fae5e1f906e80248ac11d1f89e889bcbb5e0e
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 1b41b9a68776a41b9b7aaab480ea749187becf5b
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000526"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122663"
 ---
 # <a name="sql-server-transaction-log-architecture-and-management-guide"></a>SQL Server 트랜잭션 로그 아키텍처 및 관리 가이드
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -95,11 +95,11 @@ ms.locfileid: "86000526"
   
  트랜잭션 로그는 순환 파일입니다. 예를 들어 데이터베이스에 4개의 VLF로 나뉜 물리 로그 파일이 한 개 있다고 가정합니다. 이 데이터베이스가 생성될 때 물리 로그 파일의 시작 부분에서 논리 로그 파일이 시작됩니다. 새 로그 레코드는 논리 로그의 끝 부분에 추가되며 물리 로그의 끝 방향으로 확장됩니다. 로그 잘림을 수행하면 모든 레코드가 MinLSN(최소 복구 로그 시퀀스 번호) 앞에 있는 가상 로그에 대한 공간이 확보됩니다. *MinLSN* 은 성공적인 데이터베이스 차원의 롤백에 필요한 가장 오래된 로그 레코드의 로그 시퀀스 번호입니다. 예제 데이터베이스의 트랜잭션 로그는 다음 그림의 로그와 유사합니다.  
   
- ![tranlog3](../relational-databases/media/tranlog3.gif)  
+ ![물리적 로그 파일이 가상 로그로 분할되는 방식을 보여 줍니다.](../relational-databases/media/tranlog3.png)  
   
  논리 로그의 끝 부분이 물리 로그 파일의 끝 부분에 도달하면 새 로그 레코드는 물리 로그 파일의 시작 부분으로 순환됩니다.  
   
-![tranlog4](../relational-databases/media/tranlog4.gif)   
+![논리적 트랜잭션 로그가 물리적 로그 파일에서 래핑되는 방식을 보여 줍니다.](../relational-databases/media/tranlog4.png)   
   
  이러한 순환은 논리 로그 끝 부분이 논리 로그의 시작 부분에 도달하지 않는 한 계속 반복됩니다. 다음 검사점까지 생성되는 모든 새 로그 레코드를 위해 항상 충분한 공간이 남을 만큼 기존 로그 레코드가 자주 잘리면 로그는 가득 차지 않습니다. 그러나 논리 로그의 끝 부분이 논리 로그의 시작 부분에 도달하면 다음 두 가지 상황 중 하나가 발생합니다.  
   
@@ -117,11 +117,11 @@ ms.locfileid: "86000526"
   
  다음 그림에서는 잘림 전과 후의 트랜잭션 로그를 보여 줍니다. 첫 번째 그림은 잘림이 수행되지 않은 트랜잭션 로그를 보여 줍니다. 현재 논리 로그에서 4개의 가상 로그 파일을 사용하고 있습니다. 논리 로그는 첫 번째 가상 로그 파일의 앞에서 시작하고 가상 로그 4에서 끝납니다. MinLSN 레코드는 가상 로그 3에 있습니다. 가상 로그 1과 가상 로그 2에는 비활성 로그 레코드만 포함되어 있습니다. 이러한 레코드는 자를 수 있습니다. 가상 로그 5는 사용하지 않았으며 현재 논리 로그에 포함되지 않습니다.  
   
-![tranlog2](../relational-databases/media/tranlog2.gif)  
+![트랜잭션 로그가 잘리기 전에 표시되는 모습을 보여 줍니다.](../relational-databases/media/tranlog2.png)  
   
  두 번째 그림은 잘림 후의 로그 모습을 보여 줍니다. 가상 로그 1과 가상 로그 2는 다시 사용할 수 있도록 공간이 확보되었습니다. 이제 논리 로그는 가상 로그 3의 시작 부분에서 시작됩니다. 가상 로그 5는 아직 사용되지 않았으며 현재 논리 로그에 포함되지 않습니다.  
   
-![tranlog3](../relational-databases/media/tranlog3.gif)  
+![트랜잭션 로그가 잘린 후 표시되는 모습을 보여 줍니다.](../relational-databases/media/tranlog3.png)  
   
  여타의 이유로 지연된 경우를 제외하고 로그 잘림은 다음과 같이 자동으로 발생합니다.  
   
@@ -228,7 +228,7 @@ MinLSN에서 마지막으로 쓰여진 로그 레코드까지의 로그 파일 �
 
 다음 그림에서는 두 개의 활성 트랜잭션이 있는 트랜잭션 로그 끝의 단순화된 버전을 보여 줍니다. 검사점 레코드는 단일 레코드로 압축되었습니다.
 
-![active_log](../relational-databases/media/active-log.gif) 
+![두 개의 활성 트랜잭션과 한 개의 압축된 검사점 레코드가 있는 트랜잭션 종료 로그를 보여 줍니다.](../relational-databases/media/active-log.png) 
 
 LSN 148은 트랜잭션 로그의 마지막 레코드입니다. LSN 147에 기록된 검사점이 처리되면 Tran 1이 커밋되고 Tran 2만 유일한 활성 트랜잭션이 됩니다. 이 경우 Tran 2에 대한 첫 번째 로그 레코드가 마지막 검사점에서 활성 상태인 트랜잭션에 대한 가장 오래된 로그 레코드가 됩니다. 따라서 Tran 2에 대한 Begin Transaction 레코드인 LSN 142가 MinLSN이 됩니다.
 

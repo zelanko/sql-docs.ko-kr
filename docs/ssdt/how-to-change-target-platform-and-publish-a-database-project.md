@@ -1,5 +1,6 @@
 ---
 title: 대상 플랫폼 변경 및 데이터베이스 프로젝트 게시
+description: SQL Server Data Tools 데이터베이스 프로젝트의 플랫폼을 SQL Server의 지원되는 인스턴스로 변경하는 방법을 알아봅니다. 데이터베이스 프로젝트를 게시하는 방법을 알아봅니다.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -9,16 +10,15 @@ f1_keywords:
 ms.assetid: 6012e120-5f72-4f4f-ae6e-f9a57ae1dea7
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: a2af594db8c4f92028a9a36b8cc54f5f3712c9b4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1d69b0f2a11afb46e46ff88a49dff12c2037ecca
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241597"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942469"
 ---
 # <a name="how-to-change-target-platform-and-publish-a-database-project"></a>방법: 대상 플랫폼 변경 및 데이터베이스 프로젝트 게시
 
@@ -41,7 +41,7 @@ SSDT에서는 대상 플랫폼이 인식되고 코드의 오류(예를 들어 SQ
   
 2.  `ON [PRIMARY]` 문의 끝에 `CREATE TABLE` 을 추가합니다.  
   
-3.  **오류 목록** 창에 다음 오류가 표시됩니다.  SQL70015: '파일 그룹 참조 및 파티션 구성표'는 SQL Azure에서 지원되지 않습니다.  
+3.  **오류 목록** 창에 SQL70015: SQL Azure에서는 ‘파일 그룹 참조 및 파티션 구성표’가 지원되지 않습니다.라는 오류가 표시되는지 확인합니다.  
   
     SSDT에서는 대상 플랫폼에 따라 스크립트의 유효성을 자동으로 검사합니다. 이 예의 경우 SQL Azure에서는 파일 그룹이 지원되지 않으므로 오류가 반환됩니다. SQL Azure에서 지원되지 않는 Transact\-SQL 문 목록은 [부분적으로 지원되는 Transact-SQL 문(Microsoft Azure SQL Database)](https://msdn.microsoft.com/library/ee336267.aspx)을 참조하세요.  
   
@@ -67,5 +67,5 @@ SSDT에서는 대상 플랫폼이 인식되고 코드의 오류(예를 들어 SQ
   
 **Microsoft SQL Server 2012를 대상 플랫폼으로 지정하는 프로젝트에서 SQL Server 2008에 대한 호환성 문제가 발생할 수 있음**    Microsoft SQL Server 2012에 도입된 엔터티(예: 시퀀스 개체)가 이러한 프로젝트에 포함되어 있으면 게시 작업이 실패합니다.  
   
-    The deployment will fail if object predicates use **CONTAINS** or **FREETEXT** over a newly created full-text index and transactional scripts are used. If the option to include transactional scripts is enabled during deployment, then procedures and views are defined inside a transaction while a full-text index is defined outside of a transaction at the end of the deploy script. Because of this ordering in the script, procedures or views using CONTAINS or FREETEXT will not be resolved against the full-text index, resulting in a deployment error.  
+개체 조건자가 새로 만들어진 전체 텍스트 인덱스에서 **CONTAINS** 또는 **FREETEXT**를 사용하고 트랜잭션 스크립트가 사용되는 경우 배포가 실패합니다. 배포 중 트랜잭션 스크립트를 포함하는 옵션을 사용하면 트랜잭션 내에 프로시저 및 보기가 정의되고 배포 스크립트 끝의 트랜잭션 밖에서는 전체 텍스트 인덱스가 정의됩니다. 스크립트의 이러한 순서로 인해 CONTAINS 또는 FREETEXT를 사용하는 프로시저 또는 보기가 전체 텍스트 인덱스에 대해 해결되지 않아 배포 오류가 발생합니다.  
   

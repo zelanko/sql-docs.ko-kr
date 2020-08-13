@@ -1,27 +1,32 @@
 ---
 title: R 언어 확장
-description: SQL Server R Services 또는 SQL Server Machine Learning Services의 R 코드 실행 및 기본 제공 R 라이브러리에 대해 알아봅니다.
+description: SQL Server Machine Learning Services 및 SQL Server R Services에서 외부 R 스크립트를 실행하기 위한 R 확장에 대해 알아봅니다.
 ms.prod: sql
-ms.technology: machine-learning
-ms.date: 11/04/2019
+ms.technology: machine-learning-services
+ms.date: 07/14/2020
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: c85839d89fbdb2d69752ac989abb40637f9d13ca
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: e51e4121a7e941512a84e3acf577af0ff687f4d7
+ms.sourcegitcommit: d1535944bff3f2580070cc036ece30f1d43ee2ce
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487567"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86406276"
 ---
-# <a name="r-language-extension-in-sql-server"></a>SQL Server의 R 언어 확장
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="r-language-extension-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services의 R 언어 확장
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-R 확장은 관계형 데이터베이스 엔진에 대한 SQL Server Machine Learning Services 추가 기능에 포함되어 있습니다. 이 확장은 R 실행 환경, 표준 라이브러리 및 도구가 포함된 기본 R 배포판, Microsoft R 라이브러리를 추가합니다. [RevoScaleR](../r/ref-r-revoscaler.md)은 대규모 분석용이고, [MicrosoftML](../r/ref-r-microsoftml.md)은 기계 학습 알고리즘용이며, 그 외에도 SQL Server에서 데이터 또는 R 코드에 액세스하기 위한 기타 라이브러리를 추가합니다.
+이 문서에서는 [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) 및 [SQL Server 2016 R Services](../r/sql-server-r-services.md)에서 외부 Python 스크립트를 실행하는 R 확장에 대해 설명합니다. 이 확장은 다음을 추가합니다.
 
-R 통합은 [SQL Server R Services](../r/sql-server-r-services.md) 및 [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md)에서 사용할 수 있습니다.
+- R 실행 환경
+- 표준 라이브러리 및 도구가 포함된 기본 R 배포판
+- Microsoft R 라이브러리:
+  - 대규모 분석을 위한 [RevoScaleR](../r/ref-r-revoscaler.md)
+  - 기계 학습 알고리즘을 위한 [MicrosoftML](../r/ref-r-microsoftml.md)
+  - SQL Server에서 데이터 또는 R 코드에 액세스하기 위한 기타 라이브러리
 
 ## <a name="r-components"></a>R 구성 요소
 
@@ -33,7 +38,7 @@ SQL Server는 기본 R 실행 파일을 수정하지 않지만, 설치 프로그
 
 병렬 및 분산 워크로드를 처리하기 위해 Microsoft에서 추가한 R 패키지에는 다음 라이브러리가 포함되어 있습니다.
 
-| 라이브러리 | Description |
+| 라이브러리 | 설명 |
 |---------|-------------|
 | [**RevoScaleR**](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) | 데이터 원본 개체와 데이터 탐색, 조작, 변환 및 시각화를 지원합니다. **rxLinMod**와 같이 다양한 확장 가능한 기계 학습 모델뿐 아니라 원격 컴퓨팅 컨텍스트 만들기도 지원합니다. API는 너무 커서 메모리에 맞출 수 없는 데이터 집합을 분석하고 여러 코어 또는 프로세서에 분배되는 계산을 수행하도록 최적화되었습니다. 분석에 사용되는 데이터를 더 빠르게 이동하고 스토리지하기 위해 RevoScaleR 패키지는 XDF 파일 형식도 지원합니다. XDF 형식은 열 형식 스토리지를 사용하고, 이식 가능하고, 텍스트, SPSS 또는 ODBC 연결과 같은 다양한 원본에서 데이터를 로드하고 나서 조작하는 데 사용될 수 있습니다. |
 | [**MicrosoftML**](https://docs.microsoft.com/r-server/r/concept-what-is-the-microsoftml-package) | 속도와 정확도에 최적화된 기계 학습 알고리즘과 텍스트 및 이미지 작업을 위한 인라인 변환이 포함되어 있습니다. 자세한 내용은 [SQL Server의 MicrosoftML](../r/ref-r-microsoftml.md)을 참조하세요. | 

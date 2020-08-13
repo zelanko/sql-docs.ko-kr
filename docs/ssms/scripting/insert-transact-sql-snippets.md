@@ -1,5 +1,6 @@
 ---
 title: Transact-SQL 코드 조각 삽입
+description: 데이터베이스 엔진 쿼리 편집기에서 새 Transact-SQL 문을 작성할 때 시작점으로 사용할 수 있는 Transact-SQL 코드 조각을 선택, 삽입, 수정하는 방법을 알아봅니다.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,15 +16,15 @@ ms.assetid: d66c96f4-2e84-4d79-9bfd-3635fdd98425
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 060dd1f05e55bf1de064e5497664077cac9f2903
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 387bb2bf62146503b8c086dd5706697b024846fa
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253826"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122618"
 ---
 # <a name="insert-transact-sql-snippets"></a>Transact-SQL 코드 조각 삽입
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드 조각은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리 편집기에서 새 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 문을 작성할 때 시작 지점으로 사용할 수 있는 템플릿입니다.  
   
 ## <a name="inserting-snippets"></a>조각 삽입  

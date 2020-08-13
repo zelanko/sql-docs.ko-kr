@@ -10,16 +10,16 @@ ms.date: 12/13/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ff4038fd5a09b0776533c2ffa94cb6c1afeb567b
-ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
+ms.openlocfilehash: d87d817f2bc7c23e2df3dd18d55ce21d12304cb4
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80531131"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86943215"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>자습서: Spark 작업을 사용하여 SQL Server 데이터 풀로 데이터 수집
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 이 자습서에서는 Spark 작업을 사용하여 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]의 [데이터 풀](concept-data-pool.md)로 데이터를 수집하는 방법을 보여 줍니다. 
 
@@ -111,7 +111,12 @@ ms.locfileid: "80531131"
 2. 새 Notebook 만들기 및 Spark 선택 | Scala as your kernel
 
 3. Spark 수집 작업 실행
+
    1. Spark-SQL 커넥터 매개 변수 구성
+
+    > [!NOTE]
+    > 빅 데이터 클러스터가 Active Directory 통합을 사용하여 배포된 경우, 아래의 **hostname**이 서비스 이름에 추가된 FQDN을 포함하도록 값을 바꿉니다. 예를 들어 *hostname=master-p-svc.\<domainName>* .
+
       ```
       import org.apache.spark.sql.types._
       import org.apache.spark.sql.{SparkSession, SaveMode, Row, DataFrame}
@@ -129,7 +134,7 @@ ms.locfileid: "80531131"
       StructField("wcs_web_page_sk",LongType,true), StructField("wcs_user_sk",LongType,true)
       ))
 
-      val hostname = "master-0.master-svc"
+      val hostname = "master-p-svc"
       val port = 1433
       val url = s"jdbc:sqlserver://${hostname}:${port};database=${database};user=${user};password=${password};"
       ```

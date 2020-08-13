@@ -1,5 +1,6 @@
 ---
 title: 데이터 영역에 대한 데이터 없음 메시지 설정(보고서 작성기) | Microsoft Docs
+description: 렌더링된 보고서에서 데이터가 없는 데이터 영역 대신 표시할 데이터 없음 메시지를 설정하는 방법을 알아봅니다.
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4b194714-46f7-4f0e-9632-7f89d9600762
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 42a2692b0bcc381a54f4578cd1043cb3d865374b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 504c0cffb8522503eba67308d34b3ad4a1333ff8
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081934"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458326"
 ---
 # <a name="set-a-no-data-message-for-a-data-region-report-builder-and-ssrs"></a>데이터 영역에 대한 데이터 없음 메시지 설정(보고서 작성기 및 SSRS)
   렌더링된 보고서에서 데이터가 없는 데이터 영역의 자리에 텍스트가 표시되도록 지정하려면 테이블, 행렬 또는 목록 데이터 영역에 대해 NoRowsMessage 속성을 설정하거나 차트 데이터 영역에 대해 NoDataMessage를 설정하거나, 지도의 색 눈금에 대해 NoDataText를 설정합니다. 보고서 처리기는 런타임에 보고서의 각 데이터 세트에 대한 쿼리를 실행하며 해당 데이터 세트 쿼리에서 결과 집합이 생성되지 않을 수 있습니다. 빈 데이터 세트에 바인딩된 데이터 영역의 경우 빈 데이터 영역을 표시하는 대신 텍스트를 지정하여 표시할 수 있습니다. 또한 런타임에, 하위 보고서의 데이터 세트에 데이터가 없는 경우 하위 보고서의 NoRowsMessage 속성을 설정할 수 있습니다.  

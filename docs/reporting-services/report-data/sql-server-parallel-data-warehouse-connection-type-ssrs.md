@@ -1,5 +1,6 @@
 ---
 title: SQL Server 병렬 데이터 웨어하우스 연결 형식 | Microsoft Docs
+description: 이 문서에서 제공하는 SQL Server 병렬 데이터 웨어하우스 연결 형식에 대한 정보를 사용하여 데이터 원본을 만드는 방법을 알아봅니다.
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3925fd3d-2aa1-4768-96ad-cfc2c0ba9283
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d506c15c1cc0a9bf2e4d414210b769c02556a32a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8fa55524aa371e65f747ee0f53d6ef2b666f8519
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081402"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458175"
 ---
 # <a name="sql-server-parallel-data-warehouse-connection-type-ssrs"></a>SQL Server 병렬 데이터 웨어하우스 연결 형식(SSRS)
 

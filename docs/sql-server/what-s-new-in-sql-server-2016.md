@@ -5,7 +5,7 @@ ms.custom: ''
 ms.date: 07/22/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.technology: install
+ms.technology: release-landing
 ms.topic: conceptual
 keywords:
 - 새 SQL Server
@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 6a428023-e3cc-4626-a88a-4c13ccbd7db0
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 0289967cfb3585f6fa7914262e8e280089d4b478
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: e7fa3484063a5d57de1540e54454b674d8d687c9
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82886242"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86967554"
 ---
 # <a name="whats-new-in-sql-server-2016"></a>SQL Server 2016의 새로운 기능
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]  
+[!INCLUDE [SQL Server 2016](../includes/applies-to-version/sqlserver2016.md)]    
  SQL Server 2016을 사용하면 메모리 내 성능 및 고급 보안부터 데이터베이스 내 분석까지 모든 기능이 기본 제공된 확장 가능한 하이브리드 데이터베이스 플랫폼을 사용하여 지능형 중요 업무용 애플리케이션을 빌드할 수 있습니다. SQL Server 2016 릴리스에는 다양한 개선 사항 및 향상된 기능과 함께 새로운 보안 기능, 쿼리 기능, Hadoop 및 클라우드 통합, R 분석 등이 추가되어 있습니다. 
 
 이 페이지에서는 각 SQL Server 구성 요소에 대해 SQL Server 2016의 새로운 기능에 대한 자세한 정보를 확인할 수 있는 요약 정보 및 링크를 제공합니다. 
@@ -33,7 +33,7 @@ ms.locfileid: "82886242"
 ![SQL Server 2016](../sql-server/media/sql-server-2016.png)
 
  **SQL Server를 지금 사용해 보세요.** 
-- **무료** [**SQL Server 2016 Developer Edition**](https://www.microsoft.com/cloud-platform/sql-server-editions-developers)을 다운로드하세요.
+- **무료** [**SQL Server 최신 버전**](https://www.microsoft.com/sql-server/sql-server-downloads)을 다운로드하세요.
 - 최신 버전의 [SQL Server Management Studio(SSMS)](../ssms/download-sql-server-management-studio-ssms.md)를 다운로드하세요. 
 - Azure 계정이 있으세요? [SQL Server 2016이 이미 설치된 가상 머신](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2017-ws2019?tab=Overview)을 설정하세요.
 

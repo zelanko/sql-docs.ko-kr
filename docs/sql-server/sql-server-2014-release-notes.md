@@ -2,21 +2,21 @@
 title: SQL Server 2014 릴리스 정보 | Microsoft 문서
 description: 이 릴리스 정보 문서에서는 Microsoft SQL Server 2014(12.x) 릴리스를 설치하거나 문제를 해결하기 전에 읽어야 할 알려진 문제에 대해 설명합니다.
 ms.custom: ''
-ms.date: 03/15/2018
+ms.date: 07/22/2020
 ms.prod: sql
-ms.technology: install
+ms.technology: release-landing
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: bf4c4922-80b3-4be3-bf71-228247f97004
 author: rothja
 ms.author: jroth
-monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: 6346b8e611fc70f07211abe3060781d548a6a929
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+monikerRange: = sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: aeeaf52d389da8bb58d4b76bfbe85957cbd832dd
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83001143"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87111121"
 ---
 # <a name="sql-server-2014-release-notes"></a>SQL Server 2014 Release Notes
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -287,7 +287,7 @@ DATEPART(weekday, @d)
 5.  수정할 인스턴스에 해당하는 행을 식별합니다. 
 6.  sysdac_history_internal.instance_id 값을 3단계에서 기록해 놓은 값(sysdac_instances_internal 테이블의 값)으로 업데이트합니다.  
   
-    `update` sysdac_history_internal `set` instance_id = '\<3단계의 값\>' `where` \<업데이트할 행과 일치하는 식\>  
+    `update` sysdac_history_internal `set` instance_id = '\<value from step 3\>' `where` \<expression that matches the rows you want to update\>  
   
 ### <a name="reporting-services-rtm"></a><a name="SSRS"></a>Reporting Services(RTM)
   

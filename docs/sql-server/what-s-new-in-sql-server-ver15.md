@@ -9,16 +9,16 @@ ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: eb85d1867461ba25bb4fc572634fba443dd14282
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 299182ad45f8c96f4b2f07d38f1b3f366eea7b33
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665360"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86923415"
 ---
 # <a name="whats-new-in-sql-server-2019"></a>[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]의 새로운 기능
 
-[!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]는 이전 릴리스를 토대로 하여 SQL Server로 구축되었으며 개발 언어, 데이터 형식, 온-프레미스 또는 클라우드 환경, 운영 체제를 선택할 수 있는 플랫폼으로 개선되었습니다.
 
@@ -39,7 +39,7 @@ ms.locfileid: "80665360"
 
 ## <a name="data-virtualization-and-big-data-clusters-2019"></a>데이터 가상화 및 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]
 
-오늘날의 기업은 회사 전체의 고립된 데이터 원본에 호스트되는, 점점 증가하는 데이터 세트로 구성된 광범위한 데이터 자산을 관리하는 경우가 많습니다. 기계 학습 및 AI 기능을 포함하여 대규모 데이터 세트를 사용하여 작업하기 위한 완전한 환경을 제공하는 SQL Server 2019 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]로 모든 데이터에서 거의 실시간으로 인사이트를 얻을 수 있습니다.
+오늘날의 기업은 회사 전체의 고립된 데이터 원본에 호스트되는, 점점 증가하는 데이터 세트로 구성된 광범위한 데이터 자산을 관리하는 경우가 많습니다. 기계 학습 및 AI 기능을 포함하여 대규모 데이터 세트를 사용하여 작업하기 위한 완전한 환경을 제공하는 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]로 모든 데이터에서 거의 실시간으로 인사이트를 얻을 수 있습니다.
 
 | 새로운 기능 또는 업데이트 | 세부 정보 |
 |:---|:---|
@@ -160,7 +160,7 @@ ms.locfileid: "80665360"
 |보안 Enclave를 사용한 Always Encrypted|서버 쪽 보안 Enclave 내에서 일반 텍스트 데이터에 대한 계산을 사용하도록 설정하여 현재 위치의 암호화 및 다양한 계산을 사용하여 Always Encrypted 시에 확장합니다. 내부 암호화는 데이터베이스 외부로 데이터 이동을 방지하므로 암호화 작업(열 암호화, 열 회전 암호화 키 등)의 성능 및 안정성을 개선합니다.<br><br> 다양한 계산(패턴 일치 및 비교 연산)이 지원되면 중요한 데이터 보호를 요구하는 한편 Transact-SQL 쿼리에서 풍부한 기능을 필요로 하는 광범위한 시나리오와 애플리케이션에서 Always Encrypted를 사용할 수 있게 됩니다. [보안 Enclave를 사용한 Always Encrypted](../relational-databases/security/encryption/always-encrypted-enclaves.md)를 참조하세요.|
 |SQL Server 구성 관리자의 인증서 관리|이제 SQL Server 구성 관리자를 사용하여 인증서 보기 및 배포와 같은 인증서 관리 작업을 수행할 수 있습니다. [인증서 관리(SQL Server 구성 관리자)](../database-engine/configure-windows/manage-certificates.md)를 참조하세요.|
 |데이터 검색 및 분류|데이터 검색 및 분류는 사용자 테이블에서 열을 분류하고 레이블을 지정하는 기능을 제공합니다. 중요 데이터 분류(비즈니스, 재무, 보건, PII 등)는 조직의 정보 보호 수준에서 중요한 역할을 담당할 수 있습니다. 다음에 대한 인프라를 제공할 수 있습니다.<ul><li>데이터 개인 정보 보호 표준 및 규정 준수 요구 사항 충족 지원</li><li>중요한 데이터에 대한 비정상적인 액세스 모니터링(감사) 및 경고와 같은 다양한 보안 시나리오</li><li>엔터프라이즈에서 중요한 데이터가 있는 위치를 보다 쉽게 파악할 수 있으므로 관리자는 데이터베이스를 보호하기 위한 적절한 단계를 수행할 수 있습니다.</li></ul>|
-|SQL Server Audit|감사[감사](../relational-databases/security/auditing/sql-server-audit-database-engine.md) 기능도 감사 로그 레코드에 새 필드 `data_sensitivity_information`을 포함하도록 개선되었습니다. 이 필드에는 쿼리가 반환한 실제 데이터의 민감도 분류(레이블)가 기록됩니다. 자세한 내용 및 예제를 보려면 [`ADD SENSITIVITY CLASSIFICATION`](../t-sql/statements/add-sensitivity-classification-transact-sql.md)를 참조하세요.|
+|SQL Server Audit|[감사](../relational-databases/security/auditing/sql-server-audit-database-engine.md) 기능도 감사 로그 레코드에 새 필드 `data_sensitivity_information`을 포함하도록 개선되었습니다. 이 필드에는 쿼리가 반환한 실제 데이터의 민감도 분류(레이블)가 기록됩니다. 자세한 내용 및 예제를 보려면 [`ADD SENSITIVITY CLASSIFICATION`](../t-sql/statements/add-sensitivity-classification-transact-sql.md)를 참조하세요.|
 | &nbsp; | &nbsp; |
 
 ## <a name="high-availability"></a>고가용성
@@ -222,7 +222,7 @@ ms.locfileid: "80665360"
 
 |새로운 기능 또는 업데이트 | 세부 정보 |
 |:---|:---| 
-|새 메모리 설정 옵션 | 설치 중에 *최소 서버 메모리(MB)* 및 *최대 서버 메모리(MB)* 서버 구성을 설정합니다. [데이터베이스 엔진 구성 - 메모리 페이지](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#memory)와 [명령 프롬프트에서 SQL Server 설치](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Install)의 `USESQLRECOMMENDEDMEMORYLIMITS`, `SQLMINMEMORY` 및 `SQLMAXMEMORY` 매개 변수를 참조하세요. 제안된 값은 [서버 메모리 구성 옵션](../database-engine/configure-windows/server-memory-server-configuration-options.md#setting-the-memory-options-manually)의 메모리 구성 지침에 따른 것입니다.| 
+|새 메모리 설정 옵션 | 설치 중에 *최소 서버 메모리(MB)* 및 *최대 서버 메모리(MB)* 서버 구성을 설정합니다. [데이터베이스 엔진 구성 - 메모리 페이지](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#memory)와 [명령 프롬프트에서 SQL Server 설치](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Install)의 `USESQLRECOMMENDEDMEMORYLIMITS`, `SQLMINMEMORY` 및 `SQLMAXMEMORY` 매개 변수를 참조하세요. 제안된 값은 [서버 메모리 구성 옵션](../database-engine/configure-windows/server-memory-server-configuration-options.md#manually)의 메모리 구성 지침에 따른 것입니다.| 
 |새 병렬 처리 설정 옵션 | 설치 중에 *최대 병렬 처리 수준* 서버 구성을 설정합니다. [데이터베이스 엔진 구성 - MaxDOP 페이지](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#maxdop)와 [ SQL Server 설치](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Install)의 `SQLMAXDOP` 매개 변수를 참조하세요. 기본값은 [최대 병렬 처리 수준 서버 구성 옵션 구성](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines)의 최대 병렬 처리 수준 지침에 따른 것입니다.| 
 |서버/CAL 라이선스 제품 키에 대한 설정 경고|엔터프라이즈 서버/CAL 라이선스 제품 키를 입력했으며, 머신에 20개가 넘는 물리적 코어가 있거나 하이퍼스레딩을 사용하는 경우 40개가 넘는 논리적 코어가 있는 경우 설치 중에 경고가 표시됩니다. 사용자는 여전히 제한을 승인하고 설치를 계속하거나 운영 체제의 최대 프로세서 수를 지원하는 라이선스 키를 입력할 수 있습니다.|
 | &nbsp; | &nbsp; |

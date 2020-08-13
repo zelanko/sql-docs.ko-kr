@@ -1,5 +1,6 @@
 ---
 title: 서버 속성(기록 페이지) | Microsoft Docs
+description: SQL Server Management Studio에서 Reporting Services 기록 페이지를 사용하여 보관할 보고서 기록의 복사본 수에 대한 기본값을 설정하는 방법을 알아봅니다.
 ms.date: 06/10/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ f1_keywords:
 ms.assetid: be9d8018-a46f-4625-9ae1-138ebe6b38ba
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f4f3c13e6393dc935c09d54a274d2dbe357401f1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 47238e11a5c4d1b455914fca948dacc680286a14
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65571355"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913909"
 ---
 # <a name="server-properties-history-page"></a>서버 속성(기록 페이지)
   [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 에서 이 [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] 페이지를 사용하여 보관할 보고서 기록 복사본 수의 기본값을 설정할 수 있습니다. 이 기본값은 모든 보고서에 대한 보고서 기록 제한을 설정하는 초기 설정이 됩니다. 이 설정은 보고서마다 다르게 설정할 수 있습니다.  

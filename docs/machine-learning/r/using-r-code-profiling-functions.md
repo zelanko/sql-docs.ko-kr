@@ -1,27 +1,27 @@
 ---
-title: R 코드 프로파일링 함수 사용
-description: R 프로파일링 함수를 사용하여 내부 함수 호출에 대한 정보를 반환함으로써 SQL Server에서 R 컴퓨팅에 대해 성능을 향상시키고 더 빠르게 결과를 얻을 수 있습니다.
+title: R 코드 프로파일링 함수를 사용하여 성능 향상
+description: R 프로파일링 기능을 사용하여 SQL Server에서 R 계산에 대한 성능을 향상하고 더 빠른 결과를 얻을 수 있는 유용한 정보를 수집합니다. *rprof* 함수는 내부 함수 호출에 대한 정보를 수집하고 반환합니다.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 12/12/2018
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e03ae1a8c4cdab87f46f63da6271886b4518b5e3
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 16a1ed8df29de58450f87118068e43646c46fd90
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117196"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86484644"
 ---
 # <a name="use-r-code-profiling-functions-to-improve-performance"></a>R 코드 프로파일링 함수를 사용하여 성능 향상
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 SQL Server 리소스 및 도구를 사용하여 R 스크립트 실행을 모니터링할 뿐 아니라 다른 R 패키지에서 제공된 성능 도구를 사용하여 내부 함수 호출에 대한 추가 정보를 가져올 수 있습니다. 
 
 > [!TIP]
-> 이 문서에서는 시작하는 데 도움이 되는 기본 리소스를 제공합니다. 전문가인 경우에는 *Hadley Wickham의 서적 ""Advanced R""* 에서 [Performance](http://adv-r.had.co.nz) 섹션을 참조하는 것이 좋습니다.
+> 이 문서에서는 시작하는 데 도움이 되는 기본 리소스를 제공합니다. 전문가인 경우에는 [Hadley Wickham의 서적 ""Advanced R""](http://adv-r.had.co.nz)에서 *Performance* 섹션을 참조하는 것이 좋습니다.
 
 ## <a name="using-rprof"></a>RPROF 사용
 

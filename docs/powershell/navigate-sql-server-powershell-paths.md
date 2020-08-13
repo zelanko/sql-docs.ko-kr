@@ -1,5 +1,6 @@
 ---
 title: SQL Server PowerShell 경로 탐색 | Microsoft 문서
+description: PowerShell cmdlet을 사용하여 PowerShell 공급자가 지원하는 개체의 계층 구조를 보여주는 경로 구조를 탐색하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -9,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: d68aca48-d161-45ed-9f4f-14122ed30218
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4ced679315a8e682a438f2ab99ca610219768172
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 93055cda4e87e36ff430486842d4aa86073e5c50
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68049122"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86904587"
 ---
 # <a name="navigate-sql-server-powershell-paths"></a>SQL Server PowerShell 경로 탐색
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[ssDE](../includes/ssde-md.md)] PowerShell 공급자는 SQL Server 인스턴스의 개체를 파일 경로와 비슷한 구조로 표시합니다. Windows PowerShell cmdlet을 사용하여 공급자 경로를 탐색하고 사용자 지정 드라이브를 만들어 입력해야 하는 경로를 단축할 수 있습니다.  
 

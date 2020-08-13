@@ -2,26 +2,26 @@
 title: 확장성에 대한 보안 개요
 description: SQL Server Machine Learning Services의 확장성 프레임워크에 대한 보안 개요. 로그인 및 사용자 계정, SQL Server 실행 패드 서비스, 작업자 계정, 여러 스크립트 실행 및 파일 권한에 대한 보안
 ms.prod: sql
-ms.technology: machine-learning
-ms.date: 03/11/2020
+ms.technology: machine-learning-services
+ms.date: 07/14/2020
 ms.topic: conceptual
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 562cc28d09b7c1341b58c45bfcc517db553bff16
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 80f14fc69a6abf0720f3f9d9fb3c170f0ab1da0d
+ms.sourcegitcommit: d1535944bff3f2580070cc036ece30f1d43ee2ce
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81118546"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86406226"
 ---
 # <a name="security-overview-for-the-extensibility-framework-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services의 확장성 프레임워크에 대한 보안 개요
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-이 문서에서는 SQL Server 데이터베이스 엔진 및 관련 구성 요소를 확장성 프레임워크와 통합하는 데 사용되는 전체 보안 아키텍처에 대해 설명합니다. 또한 보안 개체, 서비스, 프로세스 ID 및 사용 권한을 살펴봅니다. SQL Server 확장성의 주요 개념 및 구성 요소에 대한 자세한 내용은 [SQL Server Machine Learning Services의 확장성 아키텍처](extensibility-framework.md)를 참조하세요.
+이 문서에서는 [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md)에서 SQL Server 데이터베이스 엔진 및 관련 구성 요소를 확장성 프레임워크와 통합하는 데 사용되는 전체 보안 아키텍처에 대해 설명합니다. 또한 보안 개체, 서비스, 프로세스 ID 및 사용 권한을 살펴봅니다. SQL Server 확장성의 주요 개념 및 구성 요소에 대한 자세한 내용은 [SQL Server Machine Learning Services의 확장성 아키텍처](extensibility-framework.md)를 참조하세요.
 
 ## <a name="securables-for-external-script"></a>외부 스크립트에 대한 보안 개체
 
@@ -192,7 +192,7 @@ print(system("ls -al /var/opt/mssql-extensibility/data/*/*"))
 
 ## <a name="implied-authentication-loopback-requests"></a>암시적 인증(루프백 요청)
 
-‘암시적 인증’은 데이터 또는 작업에 대한 루프백 요청에서 권한이 낮은 작업자 계정으로 실행되는 외부 프로세스가 SQL Server에 신뢰할 수 있는 사용자 ID로 제공되는 연결 요청 동작을 설명합니다.  개념적으로 묵시적 인증은 R 또는 Python 스크립트와 같은 외부 프로세스에서 요청이 시작되는 경우 신뢰할 수 있는 연결을 지정하는 SQL Server 연결 문자열의 Windows 인증에 고유합니다. ‘루프백’이라고도 합니다. 
+‘암시적 인증’은 데이터 또는 작업에 대한 루프백 요청에서 권한이 낮은 작업자 계정으로 실행되는 외부 프로세스가 SQL Server에 신뢰할 수 있는 사용자 ID로 제공되는 연결 요청 동작을 설명합니다.  개념적으로 묵시적 인증은 R 또는 Python 스크립트와 같은 외부 프로세스에서 요청이 시작되는 경우 신뢰할 수 있는 연결을 지정하는 SQL Server 연결 문자열의 Windows 인증에 고유합니다. ‘루프백’이라고도 합니다.
 
 신뢰할 수 있는 연결은 외부 스크립트에서 작업할 수 있지만 추가 구성이 필요합니다. 확장성 아키텍처에서 외부 프로세스는 작업자 계정으로 실행되며, 부모 **SQLRUserGroup**에서 사용 권한을 상속합니다. 연결 문자열에서 `Trusted_Connection=True`를 지정하면 연결 요청에서 작업자 계정의 ID가 제공되지만 SQL Sever에서는 기본적으로 이를 알 수 없습니다.
 

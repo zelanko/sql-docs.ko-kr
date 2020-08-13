@@ -1,39 +1,39 @@
 ---
-title: RevoScaleR R 함수 라이브러리
-description: SQL Server 2016 R Services 및 SQL Server Machine Learning Services(R 포함)의 RevoScaleR 함수 라이브러리를 소개합니다.
+title: RevoScaleR R 패키지
+description: RevoScaleR은 분산 컴퓨팅, 원격 컴퓨팅 컨텍스트 및 고성능 데이터 과학 알고리즘을 지원하는 Microsoft의 R 패키지입니다. 또한 데이터 가져오기, 데이터 변환, 요약, 시각화 및 분석을 지원합니다. 이 패키지는 SQL Server Machine Learning Services 및 SQL Server 2016 R Services에 포함되어 있습니다.
 ms.prod: sql
-ms.technology: machine-learning
-ms.date: 11/06/2019
-ms.topic: conceptual
+ms.technology: machine-learning-services
+ms.date: 07/14/2020
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 7b24d5499e618a09c4d80e8614b08219e6c6f788
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 2288c1898d9299fb346a80e2cd0a53104e308724
+ms.sourcegitcommit: d1535944bff3f2580070cc036ece30f1d43ee2ce
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117436"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86406156"
 ---
-# <a name="revoscaler-r-library-in-sql-server"></a>RevoScaleR(SQL Server의 R 라이브러리)
+# <a name="revoscaler-r-package-in-sql-server-machine-learning-services"></a>RevoScaleR(SQL Server Machine Learning Services의 R 패키지)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-**RevoScaleR**은 Microsoft의 고성능 데이터 과학 함수 라이브러리입니다. 함수는 데이터 가져오기, 데이터 변환, 요약, 시각화 및 분석을 지원합니다.
+**RevoScaleR**은 분산 컴퓨팅, 원격 컴퓨팅 컨텍스트 및 고성능 데이터 과학 알고리즘을 지원하는 Microsoft의 R 패키지입니다. 또한 데이터 가져오기, 데이터 변환, 요약, 시각화 및 분석을 지원합니다. 이 패키지는 [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) 및 [SQL Server 2016 R Services](sql-server-r-services.md)에 포함되어 있습니다.
 
-기본 R 함수와 달리, RevoScaleR 작업은 분산 파일 시스템에서 매우 큰 데이터 세트에 대해 병렬로 수행할 수 있습니다. 함수는 청크를 사용하고, 작업이 완료될 때 결과를 다시 어셈블하여 메모리에 맞지 않는 데이터 세트를 처리합니다.
+기본 R 함수와 달리, RevoScaleR 작업은 분산 파일 시스템에서 대규모 데이터 세트에 대해 병렬로 수행할 수 있습니다. 함수는 청크를 사용하고, 작업이 완료될 때 결과를 다시 어셈블하여 메모리에 맞지 않는 데이터 세트를 처리합니다.
 
-RevoScaleR 함수는 **rx** 또는 **Rx** 접두사로 표시되므로 쉽게 식별할 수 있습니다.
+RevoScaleR 함수는 rx** 또는 **Rx** 접두사로 표시되므로 쉽게 식별할 수 있습니다.
 
 RevoScaleR는 분산 데이터 과학을 위한 플랫폼 역할을 합니다. 예를 들어, [MicrosoftML](https://docs.microsoft.com/machine-learning-server/r/concept-what-is-the-microsoftml-package)의 최신 알고리즘과 RevoScaleR 컴퓨팅 컨텍스트 및 변환을 함께 사용할 수 있습니다. [rxExec](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxexec)를 사용하여 기본 R 함수를 병렬로 실행할 수도 있습니다.
 
 ## <a name="full-reference-documentation"></a>전체 참조 설명서
 
-**RevoScaleR** 라이브러리는 여러 Microsoft 제품에 배포되지만, SQL Server에서 라이브러리를 가져오든, 다른 제품에서 라이브러리를 가져오든, 사용 방식은 동일합니다. 함수는 동일하기 때문에 [개별 RevoScaleR 함수에 대한 설명서](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)는 Microsoft Machine Learning Server에 대한 [R 참조](https://docs.microsoft.com/machine-learning-server/r-reference/introducing-r-server-r-package-reference) 아래의 한 위치에만 게시됩니다. 제품별로 고유한 동작이 있는 경우 함수 도움말 페이지에 차이점이 표시됩니다.
+**RevoScaleR** 패키지는 여러 Microsoft 제품에 배포되지만, 패키지를 SQL Server에서 가져오든 다른 제품에서 가져오든 사용 방식은 동일합니다. 함수는 동일하기 때문에 [개별 RevoScaleR 함수에 대한 설명서](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)는 Microsoft Machine Learning Server에 대한 [R 참조](https://docs.microsoft.com/machine-learning-server/r-reference/introducing-r-server-r-package-reference) 아래의 한 위치에만 게시됩니다. 제품별로 고유한 동작이 있는 경우 함수 도움말 페이지에 차이점이 표시됩니다.
 
 ## <a name="versions-and-platforms"></a>버전 및 플랫폼
 
-**RevoScaleR** 라이브러리는 R 3.4.3을 기준으로 하며, 다음 Microsoft 제품 또는 다운로드 중 하나를 설치한 경우에만 사용할 수 있습니다.
+**RevoScaleR** 패키지는 R 3.4.3을 기준으로 하며, 다음 Microsoft 제품 또는 다운로드 중 하나를 설치한 경우에만 사용할 수 있습니다.
 
 + [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md)
 + [SQL Server Machine Learning 서비스](../install/sql-machine-learning-services-windows-install.md)
@@ -53,7 +53,7 @@ RevoScaleR는 분산 데이터 과학을 위한 플랫폼 역할을 합니다. �
 
 경우에 따라 SQL Server와 R은 다른 데이터 형식을 사용합니다. SQL 및 R 데이터 형식 간 매핑 목록은 [R-SQL 데이터 형식](r-libraries-and-data-types.md)을 참조하세요.
 
-| 함수| Description|
+| 기능| Description|
 | ------- | ---------- |
 | [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserver) |  SQL Server 컴퓨팅 컨텍스트 개체를 만들어 원격 인스턴스에 컴퓨팅을 푸시합니다. 여러 **RevoScaleR** 함수는 컴퓨팅 컨텍스트를 인수로 사용합니다. |
 |[rxGetComputeContext / rxSetComputeContext](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsetcomputecontext) | 활성 컴퓨팅 컨텍스트를 가져오거나 설정합니다. |
@@ -68,7 +68,7 @@ RevoScaleR는 분산 데이터 과학을 위한 플랫폼 역할을 합니다. �
 
 인스턴스 및 데이터베이스에 대한 필요한 권한이 있는 경우 R에서 DDL 문을 실행할 수 있습니다. 다음 함수는 ODBC 호출을 사용하여 DDL 문을 실행하거나 데이터베이스 스키마를 검색합니다.
 
-| 함수| Description|
+| 기능| 설명|
 | ------- | ---------- |
 | [rxSqlServerTableExists 및 rxSqlServerDropTable](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqlserverdroptable) | [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 테이블을 삭제하거나 데이터베이스 테이블 또는 개체가 있는지 확인합니다. |
 | [rxExecuteSQLDDL](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxexecutesqlddl) | 데이터베이스 개체를 정의하거나 조작하는 DDL(데이터 정의 언어) 명령을 실행합니다. 이 함수는 데이터를 반환할 수 없으며, 개체 스키마 또는 메타데이터를 검색하거나 수정하는 데만 사용됩니다.|
@@ -77,7 +77,7 @@ RevoScaleR는 분산 데이터 과학을 위한 플랫폼 역할을 합니다. �
 
 데이터 원본 개체를 만든 후 해당 개체를 사용하여 데이터를 로드하거나, 데이터를 변환하거나, 지정된 대상에 새 데이터를 쓸 수 있습니다. 원본의 데이터 크기에 따라 일괄 처리 크기를 데이터 원본의 일부로 정의하고 데이터를 청크로 이동할 수도 있습니다.
 
-| 함수 | Description |
+| 기능 | 설명 |
 |----------|-------------|
 | [rxOpen-methods](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxopen-methods) | 데이터 원본을 사용할 수 있는지 확인하고, 데이터 원본을 열거나 닫고, 원본에서 데이터를 읽고, 대상에 데이터를 쓰고, 데이터 원본을 닫습니다.|
 | [rxImport](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rximport) | 데이터 원본의 데이터를 파일 스토리지 또는 데이터 프레임으로 이동합니다.|

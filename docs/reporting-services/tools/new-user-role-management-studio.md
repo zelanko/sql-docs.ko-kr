@@ -1,5 +1,6 @@
 ---
 title: 새 사용자 역할(Management Studio) | Microsoft Docs
+description: SQL Server Management Studio의 새 사용자 역할 페이지에서 사용자가 수행할 수 있는 작업을 열거하는 항목 수준 역할 정의를 만드는 방법을 알아봅니다.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ f1_keywords:
 ms.assetid: 9f76a235-0b58-479c-8e5b-50588091b71c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 16f083c08a9d82a019ae98a8f9a71d7e596394da
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 853ef460d56f1561b735ccaff1acfb95b6dfc580
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65582174"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913919"
 ---
 # <a name="new-user-role-management-studio"></a>새 사용자 역할(Management Studio)
   이 페이지를 사용하여 항목 수준의 역할 정의를 만들 수 있습니다. 항목 수준의 역할 정의란 폴더, 보고서, 모델, 리소스 및 공유 데이터 원본과 관련하여 사용자가 수행할 수 있는 태스크를 열거하는 작업의 명명된 모음입니다. 항목 수준의 역할 정의의 예로 보고서 최종 사용자가 폴더를 이동하고 보고서를 보는 데 필요한 동작 종류를 식별하는 미리 정의된 브라우저 역할을 들 수 있습니다.  

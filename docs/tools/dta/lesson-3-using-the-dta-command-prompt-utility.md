@@ -1,5 +1,6 @@
 ---
 title: dta 명령 프롬프트 유틸리티 사용
+description: SQL Server 데이터베이스 엔진 튜닝 관리자에서 제공하는 기능 외에 dta 명령 프롬프트 유틸리티가 제공하는 기능에 대해 알아봅니다.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,17 +12,16 @@ helpviewer_keywords:
 ms.assetid: 30f27f4d-8852-4b12-ba62-57f63e496f1d
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 1c97122d6181470ded13a57c54b0c6d44f830ed6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7d0ffc5d1fa1ba7fa0fbf6b89ce5eea4c8d179c4
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306970"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457519"
 ---
 # <a name="lesson-3-using-the-dta-command-prompt-utility"></a>3단원: dta 명령 프롬프트 유틸리티 사용
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 **dta** 명령 프롬프트 유틸리티는 데이터베이스 엔진 튜닝 관리자에서 제공하는 기능 외에도 많은 기능을 제공합니다.  
   
 자주 사용하는 XML 도구에서 데이터베이스 엔진 튜닝 관리자 XML 스키마를 사용하여 유틸리티의 입력 파일을 만들 수 있습니다. 이 스키마는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 설치할 때 설치되며 C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd에서 확인할 수 있습니다.  
@@ -34,13 +34,13 @@ ms.locfileid: "75306970"
   
 데이터베이스 엔진 튜닝 관리자의 XML 입력 기능을 사용하는 방법은 이 단원에서 다루지 않습니다.  
   
-이 태스크에서는 **dta** 유틸리티를 시작하고 도움말을 본 다음 이 유틸리티를 사용하여 명령 프롬프트에서 작업을 튜닝하는 과정을 안내합니다. 여기서는 데이터베이스 엔진 튜닝 관리자 GUI(그래픽 사용자 인터페이스) 연습인 [작업 튜닝](lesson-2-using-database-engine-tuning-advisor.md#tuning-a-workload)에 대해 만든 MyScript.sql 작업을 사용합니다.  
+ 이 태스크에서는 **dta** 유틸리티를 시작하고 도움말을 본 다음, 이 유틸리티를 사용하여 명령 프롬프트에서 작업을 튜닝하는 과정을 안내합니다. 여기서는 데이터베이스 엔진 튜닝 관리자 GUI(그래픽 사용자 인터페이스) 연습인 [작업 튜닝](lesson-2-using-database-engine-tuning-advisor.md#tuning-a-workload)에 대해 만든 MyScript.sql 작업을 사용합니다.  
   
 이 자습서에서는 AdventureWorks2017 샘플 데이터베이스를 사용합니다. 보안을 위해 예제 데이터베이스는 기본적으로 설치되지 않습니다. 예제 데이터베이스를 설치하려면 [SQL Server 예제 및 예제 데이터베이스](https://docs.microsoft.com/sql/samples/adventureworks-install-configure)를 참조하세요.  
   
 다음 태스크에서는 명령 프롬프트를 열고 **dta** 명령 프롬프트 유틸리티를 시작하고 구문 도움말을 본 다음 [Tuning a Workload](../../tools/dta/lesson-1-1-tuning-a-workload.md)에서 만든 단순 작업인 MyScript.sql을 튜닝하는 과정을 안내합니다.  
 
-## <a name="prerequisites"></a>사전 요구 사항 
+## <a name="prerequisites"></a>필수 구성 요소 
 
 이 자습서를 완료하려면 SQL Server Management Studio, SQL Server를 실행하는 서버에 대한 액세스 및 AdventureWorks 데이터베이스가 필요합니다.
 
@@ -93,7 +93,7 @@ SSMS에서 데이터베이스를 복원하기 위한 지침은 [데이터베이�
 -   [Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md) - 이 도구로 태스크를 수행하는 방법에 대한 설명 
 -   [dta Utility](../../tools/dta/dta-utility.md) - 유틸리티 작업을 제어하는 데 사용할 수 있는 명령 프롬프트 유틸리티 및 선택적 XML 파일에 대한 참조 자료  
   
-자습서의 시작 부분으로 돌아가려면 [Tutorial: Database Engine Tuning Advisor](../../tools/dta/tutorial-database-engine-tuning-advisor.md)를 참조하십시오.  
+자습서의 시작 부분으로 돌아가려면 [자습서: 데이터베이스 엔진 튜닝 관리자](../../tools/dta/tutorial-database-engine-tuning-advisor.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
 [데이터베이스 엔진 자습서](../../relational-databases/database-engine-tutorials.md)  

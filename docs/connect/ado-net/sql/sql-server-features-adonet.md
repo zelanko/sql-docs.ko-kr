@@ -1,7 +1,7 @@
 ---
 title: SQL Server 기능 및 ADO.NET
 description: ADO.NET 애플리케이션 개발자에게 유용한 SQL Server 기능에 대해 설명합니다.
-ms.date: 08/15/2019
+ms.date: 07/09/2020
 ms.assetid: 2839529b-a79b-4450-be5d-07a98dbc7a0f
 ms.prod: sql
 ms.prod_service: connectivity
@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 3c2a2c1597caa95c15f41de0e16f9cf9290d2a8a
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: d1c1911905c1ddf0af01a2592d0be49796cd3596
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80902089"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86393111"
 ---
 # <a name="sql-server-features-and-adonet"></a>SQL Server 기능 및 ADO.NET
 
@@ -55,6 +55,9 @@ LocalDB 데이터베이스를 위한 SqlClient 지원에 대해 설명합니다.
 
 [Always Encrypted에 대한 SqlClient 지원](sqlclient-support-always-encrypted.md)  
 Always Encrypted 기능을 위한 SqlClient 지원에 대해 설명합니다.
+
+[데이터 검색 및 분류에 대한 SqlClient 지원](data-classification.md)  
+SqlClient를 통해 데이터 검색 및 분류 정보에 액세스하는 방법을 설명합니다.
 
 ## <a name="next-steps"></a>다음 단계
 - [ADO.NET의 SQL Server 데이터 작업](sql-server-data-operations.md)

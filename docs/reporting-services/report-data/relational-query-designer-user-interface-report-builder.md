@@ -1,5 +1,6 @@
 ---
 title: 관계형 쿼리 디자이너 사용자 인터페이스(보고서 작성기) | Microsoft Docs
+description: 그래픽 쿼리 디자이너를 사용하여 메타데이터를 탐색하고, 쿼리를 대화형으로 작성하고, 쿼리 결과를 보는 방법을 알아봅니다.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: cd5fa70c-5218-40d5-9ae6-02d798b5c485
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 59889ce4625b8c8748c83fada670551db8584ea6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: faa47b9ac36cc4606b327b1eec0ff73220d58934
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73593385"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86455595"
 ---
 # <a name="relational-query-designer-user-interface-report-builder"></a>관계형 쿼리 디자이너 사용자 인터페이스(보고서 작성기)
   보고서 작성기 및 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 보고서 디자이너는 보고서 데이터 세트에 대한 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 관계형 데이터베이스와 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)]에서 검색할 데이터를 지정하는 쿼리를 만들 수 있도록 그래픽 쿼리 디자이너와 텍스트 기반 쿼리 디자이너를 모두 제공합니다. 그래픽 쿼리 디자이너를 사용하면 메타데이터를 탐색하고,  쿼리를 대화형으로 작성하고,  쿼리 결과를 볼 수 있습니다. 텍스트 기반 쿼리 디자이너를 사용하면 그래픽 쿼리 디자이너로 만든 쿼리를 보거나 쿼리를 수정할 수 있습니다. 파일 또는 보고서에서 기존 쿼리를 가져올 수도 있습니다.  
@@ -182,7 +183,7 @@ ms.locfileid: "73593385"
 ### <a name="graphical-query-designer-toolbar"></a>그래픽 쿼리 디자이너 도구 모음  
  관계형 쿼리 디자이너 도구 모음은 쿼리 결과를 지정하거나 보는 데 사용할 수 있는 다음 단추를 제공합니다.  
   
-|단추|Description|  
+|단추|설명|  
 |------------|-----------------|  
 |**텍스트로 편집**|자동으로 생성된 쿼리를 보거나 쿼리를 수정할 수 있도록 텍스트 기반 쿼리 디자이너로 전환합니다.|  
 |**가져오기**|파일 또는 보고서에서 기존 쿼리를 가져옵니다. .sql  및 .rdl  파일 형식이 지원됩니다.|  

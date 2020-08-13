@@ -1,5 +1,5 @@
 ---
-title: SQL Server 테이블에 열 추가 | Microsoft Docs
+title: SQL Server 테이블에 열 추가(OLE DB 드라이버) | Microsoft Docs
 description: OLE DB Driver for SQL Server를 사용하여 SQL Server 테이블에 열 추가
 ms.custom: ''
 ms.date: 06/14/2018
@@ -15,15 +15,15 @@ helpviewer_keywords:
 - adding columns
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 2c6cd539e499f80342a30371d047c9870c4fda08
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ce22cc49060451e7d47a1f9452f1c10a134ae610
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67994098"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86943145"
 ---
 # <a name="adding-a-column-to-a-sql-server-table"></a>SQL Server 테이블에 열 추가
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

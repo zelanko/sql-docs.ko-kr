@@ -1,5 +1,6 @@
 ---
 title: RS.exe 유틸리티 | Microsoft Docs
+description: 보고서 서버 배포 및 관리 태스크를 자동화하는 데 사용되는 스크립트를 처리하는 rs.exe 유틸리티의 명령 및 구문에 대해 알아봅니다.
 ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: bd6f958f-cce6-4e79-8a0f-9475da2919ce
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ebd9d811c39247822d2200327fefe02026c067e8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3e92646e27dcabed21aa387a8cf22caf95770ff6
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081692"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914981"
 ---
 # <a name="rsexe-utility-ssrs"></a>RS.exe 유틸리티(SSRS)
   RS.exe 유틸리티에서는 입력 파일에 제공된 스크립트를 처리합니다. 이 유틸리티를 사용하여 보고서 서버 배포 및 관리 태스크를 자동화할 수 있습니다.  
@@ -90,7 +91,7 @@ rs {-?}
   
  `rs.exe -i myScriptFile.rss -s https://myServer/reportserver -v parentFolder="Financial Reports"`  
   
- 전역 변수가 지정한 이름으로 생성된 다음 제공된 값으로 설정됩니다. 예를 들어 **-v a=** "**1**" **-v b=** "**2**"를 지정하면 **a** 수에는 "**1**" 값이 지정되고 **b** 변수에는 "**2**" 값이 지정됩니다.  
+ 전역 변수가 지정한 이름으로 생성된 다음 제공된 값으로 설정됩니다. 예를 들어 **-v a=**"**1**" **-v b=**"**2**"를 지정하면 **a** 수에는 "**1**" 값이 지정되고 **b** 변수에는 "**2**" 값이 지정됩니다.  
   
  전역 변수는 스크립트의 모든 함수에서 사용할 수 있습니다. 백슬래시와 인용 부호( **\\"** )는 큰따옴표로 해석됩니다. 인용 부호는 문자열에 공백이 포함되어 있는 경우에만 필요합니다. 변수 이름은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]에 유효해야 하며 알파벳 문자 또는 밑줄로 시작하고 알파벳 문자, 숫자 또는 밑줄이 포함되어야 합니다. 예약어는 변수 이름으로 사용할 수 없습니다. 전역 변수 사용에 대한 자세한 내용은 [식의 기본 제공 컬렉션&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)을 참조하세요.  
   

@@ -1,8 +1,8 @@
 ---
-title: BLOB 및 OLE 개체 | Microsoft Docs
+title: BLOB 및 OLE 개체(OLE DB 드라이버) | Microsoft Docs
 description: BLOB 및 OLE 개체
 ms.custom: ''
-ms.date: 06/14/2018
+ms.date: 05/25/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -16,20 +16,22 @@ helpviewer_keywords:
 - large data, OLE objects
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 70d3ffccfc9613434b09335944e445a2705b95c3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 54f8b4c38c22bcb32b039d9f0f0887c298051302
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67988674"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942801"
 ---
 # <a name="blobs-and-ole-objects"></a>BLOB 및 OLE 개체
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  OLE DB Driver for SQL Server는 소비자가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **ntext**, **text**, **image**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** 및 XML 데이터 형식을 BLOB(Binary Large Object)으로 액세스할 수 있도록 지원하기 위해 **ISequentialStream** 인터페이스를 공개합니다. **ISequentialStream**에서 **Read** 메서드를 사용하면 소비자가 많은 양의 데이터를 관리하기 쉬운 청크로 가져올 수 있습니다.  
-  
+  OLE DB Driver for SQL Server는 소비자가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **ntext**, **text**<a href="#text_note"><sup>**1**</sup></a>, **image**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** 및 XML 데이터 형식을 BLOB(Binary Large Object)으로 액세스할 수 있도록 지원하기 위해 **ISequentialStream** 인터페이스를 노출합니다. **ISequentialStream**에서 **Read** 메서드를 사용하면 소비자가 많은 양의 데이터를 관리하기 쉬운 청크로 가져올 수 있습니다.
+
+ <b id="text_note">[1]:</b> UTF-8로 인코딩된 데이터를 레거시 텍스트 열에 삽입하기 위해 ISequentialStream 인터페이스를 사용하는 것은 UTF-8을 지원하는 서버로만 제한됩니다. UTF-8을 지원하지 않는 서버를 대상으로 하는 경우 이 시나리오를 실행하려고 하면 드라이버에서 다음과 같은 오류 메시지를 게시합니다. "선택한 열 유형에 대해 스트리밍이 지원되지 않습니다."
+
  이 기능을 보여주는 샘플을 보려면 [큰 데이터 설정&#40;OLE DB&#41;](../../oledb/ole-db-how-to/set-large-data-ole-db.md)을 참조하세요.  
   
  소비자가 데이터 수정을 위해 바인딩한 접근자에서 인터페이스 포인터를 제공하면 SQL Server용 OLE DB 드라이버는 소비자가 구현한 **IStorage** 인터페이스를 사용할 수 있습니다.  

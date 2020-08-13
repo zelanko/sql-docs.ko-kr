@@ -1,5 +1,6 @@
 ---
 title: 보고서 디자이너에서 보고서 데이터 창 고정 | Microsoft Docs
+description: SQL Server Data Tools의 Reporting Services 보고서 디자이너에서 보고서 데이터 개체의 계층 뷰를 표시하는 보고서 데이터 창을 보고 도킹하는 방법을 알아봅니다.
 ms.date: 05/31/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 8b87bb59-6083-44cb-ab34-493855b41585
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e865cb5d12a66a1225a037fdc3a191333de7179c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9e1faf69fd193279e4f914651b483402ff993da3
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080581"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914054"
 ---
 # <a name="dock-the-report-data-pane-in-report-designer-ssrs"></a>보고서 디자이너에서 보고서 데이터 창 도킹(SSRS)
   [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]의 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]보고서 디자이너에 있는 보고서 데이터 창에는 데이터 원본, 데이터 세트, 필드, 매개 변수 및 이미지를 비롯하여 보고서에 사용할 수 있는 데이터 개체의 계층 뷰가 표시됩니다. 이 뷰의 데이터 원본은 포함된 데이터 원본이거나 솔루션 탐색기에 표시되는 공유 데이터 원본에 대한 참조일 수 있습니다.  

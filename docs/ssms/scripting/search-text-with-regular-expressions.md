@@ -1,5 +1,6 @@
 ---
 title: 정규식을 사용한 텍스트 검색
+description: 찾기 및 바꾸기 대화 상자의 "찾을 내용" 필드에서 정규식을 사용하여 일치시킬 패턴을 지정하는 방법을 알아봅니다.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,15 +17,15 @@ ms.assetid: a057690c-d118-4159-8e4d-2ed5ccfe79d3
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 69ce1c16013b9ad27e390ddd91b0655aee2986d5
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 44c9350ef8134382a413018bcfde1d36351f808d
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253685"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122784"
 ---
 # <a name="search-text-with-regular-expressions"></a>정규식을 사용한 텍스트 검색
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 정규식은 텍스트 패턴을 검색 및 대체하기 위한 간결하고 유연한 표기법입니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **찾기 및 바꾸기** 대화 상자의 **찾을 내용** 필드에서 특정 정규식 세트를 사용할 수 있습니다.  
   
@@ -108,7 +109,7 @@ ms.locfileid: "75253685"
 |공백 없음 표시|:Mn|공백 없음 표시와 대응합니다.|  
 |결합 표시|:Mc|결합 표시와 대응합니다.|  
 |묶음 표시|:Me|묶음 표시와 대응합니다.|  
-|수학 기호|:Sm|+, =, ~, &#124;, \< 및 >와 대응합니다.|  
+|수학 기호|:Sm|+, =, ~, &#124;, \<, and >와 대응합니다.|  
 |통화 기호|:Sc|$ 및 기타 통화 기호와 대응합니다.|  
 |한정자 기호|:Sk|한정자 기호(예: 곡절 악센트, 억음 악센트 및 장음 기호)와 대응합니다.|  
 |기타 기호|:So|기타 기호(예: 저작권 기호, 필크로우 기호 및 각도 기호)와 대응합니다.|  

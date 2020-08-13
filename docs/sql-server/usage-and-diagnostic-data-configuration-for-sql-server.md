@@ -1,6 +1,6 @@
 ---
 title: SQL Server(CEIP) 사용 현황 및 진단 데이터 수집 구성 | Microsoft Docs
-description: ''
+description: SQL Server가 제품을 개선하기 위해 사용자로부터 수집하는 정보에 대해 알아봅니다. 이 정보를 보내지 않도록 SQL Server를 구성하는 방법을 알아봅니다.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: 03/27/2019
@@ -8,16 +8,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: ''
 ms.technology: configuration
-ms.openlocfilehash: d5248f97b044cb688174171fdb6ef79943851a92
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 76ffe524200c2f8df136074bc089b13e7404d6bd
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "69028930"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86902081"
 ---
 # <a name="configure-usage-and-diagnostic-data-collection-for-sql-server-ceip"></a>SQL Server(CEIP) 사용 현황 및 진단 데이터 수집 구성
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
 ## <a name="summary"></a>요약
 
@@ -84,7 +84,7 @@ SQL Server 오류 및 사용 보고를 시작하려면 **시작**을 클릭하�
     
     레지스트리 항목 이름 = CustomerFeedback
     
-    항목 종류 DWORD: 0은 참여하지 않음, 1은 참여함
+    항목 종류 DWORD: 0은 참여하지 않음. 1은 참여함
     
     {InstanceID}은(는) 다음 예제와 같이 인스턴스 유형 및 인스턴스를 나타냅니다.
 
@@ -98,7 +98,7 @@ SQL Server 오류 및 사용 보고를 시작하려면 **시작**을 클릭하�
     
     레지스트리 항목 이름 = CustomerFeedback
     
-    항목 종류 DWORD: 0은 참여하지 않음, 1은 참여함
+    항목 종류 DWORD: 0은 참여하지 않음. 1은 참여함
 
 > [!NOTE]
 > {Major Version}은 SQL Server 버전을 나타냄(예: SQL Server 2017의 경우는 140)
@@ -115,7 +115,7 @@ SQL Server 오류 및 사용 보고를 시작하려면 **시작**을 클릭하�
 
     레지스트리 항목 이름 = EnableErrorReporting
 
-    항목 종류 DWORD: 0은 참여하지 않음, 1은 참여함
+    항목 종류 DWORD: 0은 참여하지 않음. 1은 참여함
  
     {InstanceID}은(는) 다음 예제와 같이 인스턴스 유형 및 인스턴스를 나타냅니다. 
 
@@ -130,7 +130,7 @@ SQL Server 오류 및 사용 보고를 시작하려면 **시작**을 클릭하�
 
     레지스트리 항목 이름 = EnableErrorReporting
 
-    항목 종류 DWORD: 0은 참여하지 않음, 1은 참여함
+    항목 종류 DWORD: 0은 참여하지 않음. 1은 참여함
 
 > [!NOTE]
 > {Major Version}은 SQL Server 버전을 나타냅니다. 예를 들어 SQL Server 2017의 경우는 “140”입니다.

@@ -1,5 +1,6 @@
 ---
 title: rsconfig 유틸리티 | Microsoft Docs
+description: 보고서 서버 데이터베이스 연결 및 계정 값을 암호화하여 RSReportServer.config 파일에 저장하는 rsconfig.exe 유틸리티에 대해 알아봅니다.
 ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 84e45a2f-3ca6-4c16-8259-c15ff49d72ad
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7ad41870ac9bcb162e792dc6abd8ca21ceeeb3f2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8397412801d38107c3532bea377d7bd150561f17
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082184"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913645"
 ---
 # <a name="rsconfig-utility-ssrs"></a>rsconfig 유틸리티(SSRS)
   **rsconfig.exe** 유틸리티는 연결 및 계정 값을 암호화하여 RSReportServer.config 파일에 저장합니다. 암호화되는 값에는 무인 보고서 처리에 사용되는 보고서 서버 데이터베이스 연결 정보 및 계정 값이 포함됩니다.  
@@ -74,7 +75,7 @@ rsconfig {-?}
   
 이 유틸리티를 실행하려면 구성 중인 컴퓨터에 WMI(Windows Management Instrumentation)가 설치되어 있어야 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 **rsconfig**를 사용하는 방법을 보여 줍니다.  
   
 #### <a name="specifying-a-domain-user-account"></a>도메인 사용자 계정 지정  

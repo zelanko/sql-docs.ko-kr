@@ -1,5 +1,6 @@
 ---
 title: Reporting Services 스크립트 파일 실행 | Microsoft Docs
+description: Reporting Services 스크립트 환경(RS.exe)을 사용하여 명령 프롬프트에서 Reporting Services 스크립트 파일을 실행하는 방법의 예제를 확인합니다.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 0de4995c-85ec-4d4c-aaef-fbd30edfb20f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8ad3c0bb7ea7700f457cfaa9e7cb08684624dc73
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 79d96354c497977b780078ccbe94b25738b0f522
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65571540"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914796"
 ---
 # <a name="run-a-reporting-services-script-file"></a>Reporting Services 스크립트 파일 실행
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 스크립트 파일은 명령 프롬프트에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 스크립트 환경(RS.exe)을 사용하여 실행합니다. RS.exe에는 사용할 수 있는 많은 명령 프롬프트 인수가 있습니다. 명령 프롬프트 옵션에 대한 자세한 내용은 [RS.exe 유틸리티&#40;SSRS&#41;](../../reporting-services/tools/rs-exe-utility-ssrs.md)를 참조하세요. 추가 스크립트 예제는 [SQL Server Reporting Services 제품 예제(SQL Server Reporting Services Product Samples)](https://go.microsoft.com/fwlink/?LinkId=177889)를 참조하십시오.  

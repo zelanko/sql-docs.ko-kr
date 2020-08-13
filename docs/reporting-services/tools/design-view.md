@@ -1,5 +1,6 @@
 ---
 title: 디자인 뷰 | Microsoft Docs
+description: Reporting Services 보고서 디자이너에서 디자인 뷰를 사용하여 보고서에서 보고서 항목을 정렬하는 방법을 알아봅니다.
 ms.date: 05/31/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6fa378aa-442f-4d2f-beab-02a0fb5cd3ce
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e0e69efeb8f0b7bd0bdd4fbcb1bcb8a934ffdf6c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: db7b82684edf89ef66bd033ab7ca6c673a873d0f
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65577875"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914069"
 ---
 # <a name="design-view"></a>디자인 뷰
 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 보고서 디자이너에서 디자인 뷰를 사용하여 보고서에 보고서 항목을 배치할 수 있습니다. 디자인 뷰는 디자인 화면 또는 레이아웃 뷰라고도 합니다.  

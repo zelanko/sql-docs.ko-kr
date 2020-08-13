@@ -1,30 +1,30 @@
 ---
 title: 확장성 아키텍처
-description: 이 문서에서는 SQL Server에서 R 또는 Python과 같은 외부 스크립트를 실행하기 위한 확장성 프레임워크의 아키텍처에 대해 설명합니다.
+description: 이 문서에서는 SQL Server Machine Learning Services에서 외부 Python 또는 R 스크립트를 실행하기 위한 확장성 프레임워크의 아키텍처에 대해 설명합니다. 이 스크립트는 언어 런타임 환경에서 핵심 데이터베이스 엔진에 대한 확장으로 실행됩니다.
 ms.prod: sql
-ms.technology: machine-learning
-ms.date: 11/04/2019
+ms.technology: machine-learning-services
+ms.date: 07/14/2020
 ms.topic: conceptual
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 408125a3369d35a28893852a2f674e3e4562b063
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 14611369afe42da2e87aab87d675fd77e710c461
+ms.sourcegitcommit: d1535944bff3f2580070cc036ece30f1d43ee2ce
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81118826"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86406296"
 ---
 # <a name="extensibility-architecture-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services의 확장성 아키텍처 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-SQL Server에는 서버에서 R 또는 Python과 같은 외부 스크립트를 실행하기 위한 확장성 프레임워크가 있습니다. 이 스크립트는 언어 런타임 환경에서 핵심 데이터베이스 엔진에 대한 확장으로 실행됩니다.
+이 문서에서는 SQL Server Machine Learning Services에서 외부 Python 또는 R 스크립트를 실행하기 위한 확장성 프레임워크의 아키텍처에 대해 설명합니다. 이 스크립트는 언어 런타임 환경에서 핵심 데이터베이스 엔진에 대한 확장으로 실행됩니다.
 
 ## <a name="background"></a>배경
 
-확장성 프레임워크는 R 런타임을 지원하기 위해 SQL Server 2016에 도입되었습니다. SQL Server 2017 이상에서는 Python을 지원합니다.
+확장성 프레임워크는 [R Services](../r/sql-server-r-services.md)에서 R 런타임을 지원하기 위해 SQL Server 2016에 도입되었습니다. SQL Server 2017 이상은 [Machine Learning Services](../sql-server-machine-learning-services.md)에서 Python을 지원합니다.
 
 확장성 프레임워크의 목적은 SQL Server와 데이터 과학 언어(예: R 및 Python) 간에 인터페이스를 제공하는 것입니다. 목표는 데이터 과학 솔루션을 프로덕션으로 이동할 때 마찰을 줄이고 개발 프로세스 중에 노출되는 데이터를 보호하는 것입니다. 데이터베이스 관리자는 SQL Server에서 관리하는 보안 프레임워크 내에서 신뢰할 수 있는 스크립팅 언어를 실행하여 데이터 과학자가 엔터프라이즈 데이터에 액세스할 수 있도록 허용하는 동시에 보안을 유지할 수 있습니다.
 

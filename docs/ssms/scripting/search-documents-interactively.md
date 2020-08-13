@@ -1,5 +1,6 @@
 ---
 title: 대화형으로 문서 검색
+description: 찾기 및 바꾸기 대화 상자를 사용하여 하나 이상의 열려 있는 파일 또는 창을 검색하고 일치 항목이 발생할 때마다 일시 중지하여 컨텍스트를 확인하는 방법을 알아봅니다. 대량 찾기 작업을 수행하고 보고서 형식에서 검색 일치 항목을 검토할 수도 있습니다.
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,15 +15,15 @@ ms.assetid: dae65ac5-67af-45c6-a6e0-952fea26d680
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5bcdb8d269deb90d7c88c0f88a98e55289c89635
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6c6bfdd07a0af13e5b0e8923a7549b3401db485b
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253658"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122841"
 ---
 # <a name="search-documents-interactively"></a>대화형으로 문서 검색
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   **찾기 및 바꾸기** 대화 상자를 사용하면 하나 이상의 열려 있는 파일이나 창을 검색하고 검색 조건과 일치하는 항목을 하나씩 이동할 수 있습니다. 이 기술을 사용하면 일치하는 항목 주위의 텍스트 컨텍스트에서 일치하는 개별 항목을 검토할 수 있습니다. 또한 **찾기 및 바꾸기** 대화 상자를 사용하여 대량 찾기 작업을 수행하고 검색 조건과 일치하는 항목을 보고서 형식으로 검토할 수 있습니다.  
   
 ### <a name="to-search-all-open-documents"></a>열린 모든 문서를 검색하려면  

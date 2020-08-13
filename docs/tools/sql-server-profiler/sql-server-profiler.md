@@ -1,6 +1,7 @@
 ---
 title: SQL Server Profiler
 titleSuffix: SQL Server Profiler
+description: SQL Server Profiler의 기능을 살펴봅니다. 이 도구를 사용하여 추적을 만들고 추적 결과를 분석 및 재생하면 문제 해결에 도움을 받을 수 있습니다.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,16 +12,16 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 05/01/2020
-ms.openlocfilehash: 127c8dc055118612bff2382b2cf01a899be5f8fd
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 93fb645af08eaef372694e492cc211ed4f82b922
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82719231"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914813"
 ---
 # <a name="sql-server-profiler"></a>SQL Server Profiler
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+ [!INCLUDE[sql-asdbmi](../../includes/applies-to-version/sql-asdbmi.md)]
 
 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]는 추적을 작성 및 관리하고 추적 결과를 분석 및 재생하기 위한 인터페이스입니다. 이벤트는 추적 파일에 저장되며 이 파일은 나중에 분석되거나 문제를 진단할 때 특정 단계를 다시 수행하기 위해 사용할 수 있습니다.
 

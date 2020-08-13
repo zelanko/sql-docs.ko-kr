@@ -1,5 +1,5 @@
 ---
-title: 명령 구문 | Microsoft Docs
+title: 명령 구문(OLE DB 드라이버) | Microsoft Docs
 description: 명령 구문 및 저장 프로시저
 ms.custom: ''
 ms.date: 06/14/2018
@@ -15,15 +15,15 @@ helpviewer_keywords:
 - stored procedures [OLE DB], command syntax
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 15d6d221c9e3435a3ba4c3f58c7d6b6e55314f29
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 06516c7ac352ced53ba56241d8845aafaf236139
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68016125"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942787"
 ---
 # <a name="command-syntax"></a>명령 구문
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
