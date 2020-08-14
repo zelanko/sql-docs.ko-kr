@@ -27,12 +27,12 @@ ms.assetid: 7e695364-1a98-4cfd-8ebd-137ac5a425b3
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: b70035a1fc54d4b59978a3256b2ed3040ba4e8f9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c57c5a76818eabcc956a197b52b275a289576173
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68006512"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823522"
 ---
 # <a name="create-route-transact-sql"></a>CREATE ROUTE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -43,7 +43,7 @@ ms.locfileid: "68006512"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```syntaxsql
   
 CREATE ROUTE route_name  
 [ AUTHORIZATION owner_name ]  
@@ -61,7 +61,7 @@ WITH
  생성할 경로의 이름입니다. 새 경로는 현재 데이터베이스에 생성되고 AUTHORIZATION 절에서 지정한 보안 주체가 소유합니다. 서버, 데이터베이스 및 스키마 이름은 지정될 수 없습니다. *route_name*은 유효한 **sysname**이어야 합니다.  
   
  AUTHORIZATION *owner_name*  
- 지정한 데이터베이스 사용자 또는 역할로 경로의 소유자를 설정합니다. 현재 사용자가 **db_owner** 고정 데이터베이스 역할의 멤버이거나 **sysadmin** 고정 서버 역할의 멤버인 경우 *owner_name*은 유효한 사용자 또는 역할의 이름이 될 수 있습니다. 그렇지 않으면 *owner_name*은 현재 사용자 이름, 현재 사용자가 IMPERSONATE 권한을 갖는 사용자의 이름, 현재 사용자가 속해 있는 역할 이름 중 하나여야 합니다. 이 절을 생략하면 경로가 현재 사용자에 속합니다.  
+ 지정한 데이터베이스 사용자 또는 역할로 경로의 소유자를 설정합니다. 현재 사용자가 *db_owner* 고정 데이터베이스 역할의 멤버이거나 **sysadmin** 고정 서버 역할의 멤버인 경우 **owner_name**은 유효한 사용자 또는 역할의 이름이 될 수 있습니다. 그렇지 않으면 *owner_name*은 현재 사용자 이름, 현재 사용자가 IMPERSONATE 권한을 갖는 사용자의 이름, 현재 사용자가 속해 있는 역할 이름 중 하나여야 합니다. 이 절을 생략하면 경로가 현재 사용자에 속합니다.  
   
  WITH  
  생성할 경로를 정의하는 절을 보여 줍니다.  
@@ -84,13 +84,13 @@ WHERE database_id = DB_ID()
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 라우팅 테이블에 경로를 유지하는 시간(초)을 지정합니다. 수명이 다되어 경로가 만료되면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 새 대화를 위한 경로를 선택할 때 더 이상 해당 경로를 고려하지 않습니다. 이 절을 생략하면 *route_lifetime*은 NULL이고 경로는 만료되지 않습니다.  
   
  ADDRESS **='** _next\_hop\_address_ **'**  
-SQL Database 관리되는 인스턴스의 경우 `ADDRESS`는 로컬이어야 합니다. 
+SQL Managed Instance의 경우 `ADDRESS`는 로컬이어야 합니다. 
 
 이 경로에 대한 네트워크 주소를 지정합니다. *next_hop_address*는 다음과 같은 형식으로 TCP/IP 주소를 지정합니다.  
   
  **TCP://** { *dns_name* | *netbios_name* | *ip_address* } **:** _port\_number_  
   
- 지정된 *port_number*는 지정된 컴퓨터에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 엔드포인트의 포트 번호와 일치해야 합니다. 선택한 데이터베이스에서 다음 쿼리를 실행하여 얻을 수 있습니다.  
+ 지정된 *port_number*는 지정된 컴퓨터에서 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 인스턴스의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 엔드포인트의 포트 번호와 일치해야 합니다. 선택한 데이터베이스에서 다음 쿼리를 실행하여 얻을 수 있습니다.  
   
 ```  
 SELECT tcpe.port  
@@ -102,16 +102,16 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
   
  서비스가 미러된 데이터베이스에서 호스팅되면 미러된 데이터베이스를 호스팅하는 다른 인스턴스에 대해서도 MIRROR_ADDRESS를 지정해야 합니다. 그렇지 않으면 이 경로는 미러에 대해 장애 조치(Failover)되지 않습니다.  
   
- 경로에 *next_hop_address*가 **‘LOCAL’** 로 지정되어 있으면 메시지는 현재 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 내의 서비스로 배달됩니다.  
+ 경로에 **next_hop_address**가 *‘LOCAL’* 로 지정되어 있으면 메시지는 현재 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 내의 서비스로 배달됩니다.  
   
- 경로에 *next_hop_address*가 **‘TRANSPORT’** 로 지정되어 있으면 네트워크 주소는 서비스 이름의 네트워크 주소를 기준으로 결정됩니다. **‘TRANSPORT’** 를 지정하는 경로는 서비스 이름이나 broker 인스턴스를 지정하지 않을 수 있습니다.  
+ 경로에 **next_hop_address**가 *‘TRANSPORT’* 로 지정되어 있으면 네트워크 주소는 서비스 이름의 네트워크 주소를 기준으로 결정됩니다. **‘TRANSPORT’** 를 지정하는 경로는 서비스 이름이나 broker 인스턴스를 지정하지 않을 수 있습니다.  
   
  MIRROR_ADDRESS **='** _next\_hop\_mirror\_address_ **'**  
  *next_hop_address*에서 호스팅되는 미러된 데이터베이스 하나로 미러된 데이터베이스의 네트워크 주소를 지정합니다. *next_hop_mirror_address*는 다음과 같은 형식으로 TCP/IP 주소를 지정합니다.  
   
  **TCP://** { *dns_name* | *netbios_name* | *ip_address* } **:** *port_number*  
   
- 지정된 *port_number*는 지정된 컴퓨터에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 엔드포인트의 포트 번호와 일치해야 합니다. 선택한 데이터베이스에서 다음 쿼리를 실행하여 얻을 수 있습니다.  
+ 지정된 *port_number*는 지정된 컴퓨터에서 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 인스턴스의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 엔드포인트의 포트 번호와 일치해야 합니다. 선택한 데이터베이스에서 다음 쿼리를 실행하여 얻을 수 있습니다.  
   
 ```  
 SELECT tcpe.port  
@@ -121,14 +121,14 @@ INNER JOIN sys.service_broker_endpoints AS ssbe
 WHERE ssbe.name = N'MyServiceBrokerEndpoint';  
 ```  
   
- MIRROR_ADDRESS가 지정된 경로에는 SERVICE_NAME 절 및 BROKER_INSTANCE 절을 지정해야 합니다. *next_hop_address*가 **‘LOCAL’** 또는 **‘TRANSPORT’** 로 지정된 경로에는 미러 주소가 지정되지 않을 수 있습니다.  
+ MIRROR_ADDRESS가 지정된 경로에는 SERVICE_NAME 절 및 BROKER_INSTANCE 절을 지정해야 합니다. **next_hop_address**가 **‘LOCAL’** 또는 *‘TRANSPORT’* 로 지정된 경로에는 미러 주소가 지정되지 않을 수 있습니다.  
   
 ## <a name="remarks"></a>설명  
  경로를 저장하는 라우팅 테이블은 **sys.routes** 카탈로그 뷰를 통해 읽을 수 있는 메타데이터 테이블입니다. 이 카탈로그 뷰는 CREATE ROUTE, ALTER ROUTE 및 DROP ROUTE 문을 통해서만 업데이트할 수 있습니다.  
   
- 기본적으로 각 사용자 데이터베이스의 라우팅 테이블에는 한 경로가 들어 있습니다. 이 경로의 이름은 **AutoCreatedLocal**입니다. 경로는 *next_hop_address*로 **‘LOCAL’** 을 지정하고 모든 서비스 이름 및 Broker 인스턴스 식별자와 일치합니다.  
+ 기본적으로 각 사용자 데이터베이스의 라우팅 테이블에는 한 경로가 들어 있습니다. 이 경로의 이름은 **AutoCreatedLocal**입니다. 경로는 **next_hop_address**로 *‘LOCAL’* 을 지정하고 모든 서비스 이름 및 Broker 인스턴스 식별자와 일치합니다.  
   
- 경로에 *next_hop_address*가 **‘TRANSPORT’** 로 지정되어 있으면 네트워크 주소는 서비스 이름의 네트워크 주소를 기준으로 결정됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 *next_hop_address*에 유효한 형식의 네트워크 주소로 시작하는 서비스 이름을 처리할 수 있습니다.  
+ 경로에 **next_hop_address**가 *‘TRANSPORT’* 로 지정되어 있으면 네트워크 주소는 서비스 이름의 네트워크 주소를 기준으로 결정됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 *next_hop_address*에 유효한 형식의 네트워크 주소로 시작하는 서비스 이름을 처리할 수 있습니다.  
   
  라우팅 테이블에는 동일한 서비스, 네트워크 주소 및 Broker 인스턴스 식별자를 지정하는 경로가 여러 개일 수 있습니다. 이 경우 [!INCLUDE[ssSB](../../includes/sssb-md.md)]는 라우팅 테이블의 정보 중 대화에 지정된 정보와 가장 정확하게 일치하는 정보를 찾을 수 있도록 개발된 프로시저를 사용하여 경로를 선택합니다.  
   

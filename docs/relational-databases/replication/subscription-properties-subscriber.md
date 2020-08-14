@@ -15,12 +15,12 @@ ms.assetid: db2be511-c76e-4f21-8be4-6a8c60a50d30
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 718c095fb544c2c0b9436a3cfa70040fcf31d71c
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 7b1338f4e935a2c7e8662a09aacff1cc4b7df9d3
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111730"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988812"
 ---
 # <a name="sql-server-replication-subscription-properties-dialog-box"></a>SQL Server 복제 구독 속성 대화 상자 
 [!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "87111730"
   
 > [!NOTE]  
 >  - 구독에 대한 배포 에이전트 또는 병합 에이전트 작업이 아직 생성되지 않은 경우 많은 구독 속성이 표시되지 않습니다. 끌어오기 구독에 대한 에이전트 작업을 만들려면 [sp_addpullsubscription_agent&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)(스냅샷 또는 트랜잭션 게시에 대한 구독) 또는 [sp_addmergepullsubscription_agent&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)(병합 게시에 대한 구독)을 실행합니다.  
-> - Azure SQL Database 관리형 인스턴스는 스냅샷 및 트랜잭션 복제의 게시자, 배포자 및 구독자일 수 있습니다. Azure SQL 데이터베이스 단일 및 풀링된 데이터베이스만 스냅샷 및 트랜잭션의 복제 푸시 구독자가 될 수 있습니다. 자세한 내용은 [Azure SQL Database를 사용하는 트랜잭션 복제](/azure/sql-database/sql-database-managed-instance-transactional-replication)를 참조하세요. 
+> - Azure SQL Managed Instance 데이터베이스는 스냅샷 및 트랜잭션 복제의 게시자, 배포자 및 구독자일 수 있습니다. Azure SQL Database의 데이터베이스만 스냅샷 및 트랜잭션의 복제 푸시 구독자가 될 수 있습니다. 자세한 내용은 [Azure SQL Database를 사용하는 트랜잭션 복제](/azure/sql-database/sql-database-managed-instance-transactional-replication)를 참조하세요. 
   
 ## <a name="publisher-options-for-all-subscriptions"></a>모든 구독에 대한 게시자 옵션  
  **보안**  

@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 123618a84b07aa2215a2666f9d427f669247c5d7
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: f7da670d93de95d06fb7a602332011f9218cdc2b
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411099"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87861974"
 ---
 # <a name="azure-data-studio-faq"></a>Azure Data Studio FAQ
 
@@ -80,14 +80,14 @@ Azure Data Studio 및 해당 데이터 공급자용 소스 코드는 GitHub에�
 
 |기능|Azure Data Studio|SSMS|
 |:---|:---|:---|
-|Azure 로그인|yes|yes|
+|Azure 로그인|예|예|
 |대시보드|예| |
 |확장|예| |
 |통합 터미널|예||
-|개체 탐색기|yes|yes|
-|개체 스크립팅|yes|yes|
+|개체 탐색기|예|예|
+|개체 스크립팅|예|예|
 |프로젝트 시스템|예||
-|테이블에서 선택|yes|yes|
+|테이블에서 선택|예|예|
 |원본 코드 제어|예||
 |작업창|예||
 |테마|예||
@@ -104,8 +104,8 @@ Azure Data Studio 및 해당 데이터 공급자용 소스 코드는 GitHub에�
 |:---|:---|:---|
 |차트 뷰어|예||
 |CSV, JSON, XLSX로 결과 내보내기|예||
-|IntelliSense|yes|yes|
-|코드 조각|yes|yes|
+|IntelliSense|예|예|
+|코드 조각|예|예|
 |플랜 표시|미리 보기|예|
 |클라이언트 통계||예|
 |활성 쿼리 통계||예|
@@ -120,7 +120,7 @@ Azure Data Studio 및 해당 데이터 공급자용 소스 코드는 GitHub에�
 
 |기능|Azure Data Studio|SSMS|
 |:---|:---|:---|
-|Windows|yes|yes|
+|Windows|예|예|
 |macOS|예||
 |Linux|예||
 
@@ -136,7 +136,7 @@ Azure Data Studio 및 해당 데이터 공급자용 소스 코드는 GitHub에�
 
 |기능|Azure Data Studio|SSMS|
 |:---|:---|:---|
-|백업/복원|yes|yes|
+|백업/복원|예|예|
 |플랫 파일 가져오기|미리 보기|예|
 |SQL 에이전트|미리 보기|예|
 |SQL 프로파일러|미리 보기|예|
@@ -183,7 +183,7 @@ SQL PowerShell은 현재 PowerShell 갤러리에서 사용 가능하며, Windows
 
 ## <a name="does-azure-data-studio-integrate-with-azure-sql-data-warehouse"></a>Azure Data Studio는 Azure SQL Data Warehouse와 연결되나요?
 
-예. Azure SQL Data Warehouse에 대한 Azure Data Studio 지원은 현재 Azure SQL Database Managed Instance 및 SQL Server 2019 빅 데이터와 함께 미리 보기로 제공됩니다.
+예. Azure SQL Data Warehouse에 대한 Azure Data Studio 지원은 현재 Azure SQL Managed Instance 및 SQL Server 2019 빅 데이터와 함께 미리 보기로 제공됩니다.
 
 ## <a name="why-is-azure-data-studio-important-for-the-new-version-of-sql-server"></a>새 버전의 SQL Server에서 Azure Data Studio가 중요한 이유는 무엇인가요?
 

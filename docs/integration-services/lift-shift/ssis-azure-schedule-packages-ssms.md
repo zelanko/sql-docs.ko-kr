@@ -10,12 +10,12 @@ ms.technology: integration-services
 author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
-ms.openlocfilehash: 194ad3581252d5baaca6d5bfaf4c8c2272efc610
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 9a69ebabab91a9c257e96afb312e5498217bb967
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915314"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864610"
 ---
 # <a name="schedule-the-execution-of-ssis-packages-deployed-in-azure-with-sql-server-management-studio-ssms"></a>SQL Server Management Studio(SSMS)를 사용하여 Azure에 배포된 SSIS 패키지 실행 예약
 
@@ -23,7 +23,7 @@ ms.locfileid: "86915314"
 
 
 
-Azure SQL Database에 배포된 SSIS 패키지를 예약하려면 SQL Server Management Studio(SSMS)를 사용할 수 있습니다. 온-프레미스 SQL Server 및 SQL Database Managed Instance에는 고급 SSIS 작업 스케줄러인 SQL Server 에이전트 및 관리되는 인스턴스 에이전트가 각각 있습니다. 반면 SQL Database에는 기본 제공 고급 SSIS 작업 스케줄러가 없습니다. 이 아티클에 설명된 SSMS 기능은 SQL Database에 배포된 패키지를 예약하는 데 사용되는 SQL Server 에이전트가 유사한 기능을 제공하는 친숙한 사용자 인터페이스를 제공 합니다.
+Azure SQL Database에 배포된 SSIS 패키지를 예약하려면 SQL Server Management Studio(SSMS)를 사용할 수 있습니다. 온-프레미스 SQL Server 및 SQL Managed Instance에는 고급 SSIS 작업 스케줄러인 SQL Server 에이전트 및 관리되는 인스턴스 에이전트가 각각 있습니다. 반면 SQL Database에는 기본 제공 고급 SSIS 작업 스케줄러가 없습니다. 이 아티클에 설명된 SSMS 기능은 SQL Database에 배포된 패키지를 예약하는 데 사용되는 SQL Server 에이전트가 유사한 기능을 제공하는 친숙한 사용자 인터페이스를 제공 합니다.
 
 SQL Database를 사용하여 SSIS 카탈로그인 `SSISDB`를 호스팅하는 경우 이 SSMS 기능을 사용하여 SSIS 패키지를 예약하는 데 필요한 Data Factory 파이프라인, 활동 및 트리거를 생성할 수 있습니다. 나중에 Data Factory에서 이러한 개체를 선택적으로 편집하고 확장할 수 있습니다.
 

@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: e6b38724e2cb8fde7fe38a544c3f87fba3cebd45
-ms.sourcegitcommit: 48d60fe6b6991303a88936fb32322c005dfca2d8
+ms.openlocfilehash: 8a415678b777ba6142bab01bced7d7da908b2204
+ms.sourcegitcommit: 68c1dbc465898e20ec95f98cc2f14a8c9cd166a7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85352420"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88051112"
 ---
 # <a name="machine-learning-extension-preview-for-azure-data-studio"></a>Azure Data Studio용 Machine Learning 확장(미리 보기)
 
@@ -30,6 +30,23 @@ Azure Data Studio를 실행하는 컴퓨터에 다음 필수 구성 요소를 �
 - Windows, macOS 또는 Linux용 [Microsoft ODBC driver 17 for SQL Server](../connect/odbc/download-odbc-driver-for-sql-server.md).
 
 - [R 3.5](https://www.r-project.org/)(선택 사항). 3\.5 이외의 다른 버전은 현재 지원되지 않습니다. R 3.5 설치가 끝나면 [확장 설정](#settings)에서 R을 활성화하고 R 설치의 로컬 경로를 지정해야 합니다. 이 작업은 데이터베이스에서 R 패키지를 관리하려는 경우에만 필요합니다.
+
+### <a name="trouble-installing-python-3-from-within-ads"></a>ADS에서 Python 3을 설치하는 데 문제가 있나요?
+Python 3을 설치하는 과정에서 TLS/SSL 오류가 발생하는 경우 다음과 같은 2가지 선택적 구성 요소를 추가합니다.
+
+‘샘플 오류:’
+```
+$: ~/0.0.1/bin/python3 -m pip install --user "jupyter>=1.0.0" --extra-index-url https://prose-python-packages.azurewebsites.net
+WARNING: pip is configured with locations that require TLS/SSL, however the ssl module in Python is not available.
+Looking in indexes: https://pypi.org/simple, https://prose-python-packages.azurewebsites.net
+Requirement already satisfied: jupyter
+```
+
+‘설치 항목:’
+
+- [Homebrew](https://brew.sh)(선택 사항). Homebrew를 설치하고 명령줄에서 `brew update`를 실행합니다.
+
+- *openssl*(선택 사항). 다음으로 `brew install openssl`을 실행합니다.
 
 ## <a name="install-the-extension"></a>확장 설치
 

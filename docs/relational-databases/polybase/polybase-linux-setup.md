@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
-ms.openlocfilehash: 117620c170b183b12d06eb717cfc1bb4b2dc559c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f72635a68b0b47a29151d45d2bf1e32e85c1f1bc
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77173554"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823578"
 ---
 # <a name="install-polybase-on-linux"></a>Linux에 PolyBase 설치
 
@@ -157,7 +157,7 @@ sudo systemctl restart mssql-server
 
 Linux의 PolyBase는 다음 데이터 원본에 액세스할 수 있습니다. PolyBase에서 이러한 소스로 외부 테이블을 만드는 방법에 대한 자세한 내용은 제공된 링크를 따릅니다. 
 
-- [SQL Server( 및 SQL DB, Azure SQL DW)](../../relational-databases/polybase/polybase-configure-sql-server.md)
+- [SQL Server(및 SQL Database, Azure SQL Data Warehouse)](../../relational-databases/polybase/polybase-configure-sql-server.md)
 - [Oracle](../../relational-databases/polybase/polybase-configure-oracle.md)
 - [Teradata](../../relational-databases/polybase/polybase-configure-teradata.md)
 - [MongoDB(및 Cosmos DB)](../../relational-databases/polybase/polybase-configure-mongodb.md)

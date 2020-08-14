@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a04a2aba-d07a-4423-ab8a-0a31658f6317
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: f8d91ef65f8beb5194bbb8cbe3b1618d7666e106
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7e7f5fb29c15fbd8532a6852477ed9376df92f72
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85781736"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988778"
 ---
 # <a name="data-tier-applications"></a>데이터 계층 애플리케이션
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -72,7 +72,7 @@ ms.locfileid: "85781736"
   
     -   SQL Server Management Studio를 사용하여 기존 데이터베이스로부터 DACPAC를 추출하고 다른 DAC 작업도 수행할 수 있습니다.  
   
-    -   또한 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 의 DBA는 DAC 작업을 위해 SQL Azure용 관리 포털을 사용할 수 있습니다.  
+    -   또한 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]의 DBA가 DAC 작업을 위해 Azure Portal을 사용할 수 있습니다.  
   
 -   개별 소프트웨어 공급업체:  
   
@@ -87,7 +87,7 @@ ms.locfileid: "85781736"
   
 -   **추출** – 사용자가 데이터베이스를 DACPAC로 추출할 수 있습니다.  
   
--   **배포** - 사용자가 DACPAC를 호스트 서버에 배포할 수 있습니다. SQL Server Management Studio 또는 SQL Azure용 관리 포털과 같은 관리 도구에서 배포를 수행할 경우 호스트 서버의 결과 데이터베이스가 암시적으로 데이터 계층 애플리케이션으로 등록됩니다.  
+-   **배포** - 사용자가 DACPAC를 호스트 서버에 배포할 수 있습니다. SQL Server Management Studio 또는 Azure Portal과 같은 관리 도구에서 배포를 수행할 경우 호스트 서버의 결과 데이터베이스가 암시적으로 데이터 계층 애플리케이션으로 등록됩니다.  
   
 -   **등록** - 사용자가 데이터베이스를 데이터 계층 애플리케이션으로 등록할 수 있습니다.  
   

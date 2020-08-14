@@ -27,12 +27,12 @@ ms.assetid: eb737149-7c92-4552-946b-91085d8b1b01
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 11f67835fe3cd74b63a9f2921850376ff4805881
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: 0ff1117c601cc42d8fa14147df18b90a10fc97bd
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411045"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87987962"
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN(Transact-SQL)
 
@@ -51,7 +51,7 @@ CREATE LOGIN은 트랜잭션에 참여합니다. CREATE LOGIN이 트랜잭션 �
         **_\* SQL Server \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [Azure SQL Database<br />단일 데이터베이스/탄력적 풀](create-login-transact-sql.md?view=azuresqldb-current)
+        [Azure SQL Database](create-login-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
         [Azure SQL<br />Managed Instance](create-login-transact-sql.md?view=azuresqldb-mi-current)
@@ -284,7 +284,7 @@ CHECK_EXPIRATION = OFF ;
         [SQL Server](create-login-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        **_\* Azure SQL Database<br />단일 데이터베이스/탄력적 풀 \*_**
+        **_\* Azure SQL Database \*_**
     :::column-end:::
     :::column:::
         [Azure SQL<br />Managed Instance](create-login-transact-sql.md?view=azuresqldb-mi-current)
@@ -299,7 +299,7 @@ CHECK_EXPIRATION = OFF ;
 
 &nbsp;
 
-## <a name="azure-sql-database-single-databaseelastic-pool"></a>Azure SQL Database 단일 데이터베이스/탄력적 풀
+## <a name="sql-database"></a>SQL Database
 
 ## <a name="syntax"></a>구문
 
@@ -402,7 +402,7 @@ GO
         [SQL Server](create-login-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [Azure SQL Database<br />단일 데이터베이스/탄력적 풀](create-login-transact-sql.md?view=azuresqldb-current)
+        [Azure SQL Database](create-login-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
         **_\* Azure SQL<br />Managed Instance \*_**
@@ -417,12 +417,12 @@ GO
 
 &nbsp;
 
-## <a name="azure-sql-database-managed-instance"></a>Azure SQL Database Managed Instance
+## <a name="azure-sql-managed-instance"></a>Azure SQL Managed Instance
 
 ## <a name="syntax"></a>구문
 
 ```syntaxsql
--- Syntax for Azure SQL Database managed instance
+-- Syntax for Azure SQL Managed Instance
 CREATE LOGIN login_name [FROM EXTERNAL PROVIDER] { WITH <option_list> [,..]}
 
 <option_list> ::=
@@ -451,7 +451,7 @@ SID **=** *sid* 로그인을 다시 만드는데 사용됩니다. SQL Server 인
 - Azure AD 계정에 매핑된 서버 수준 보안 주체를 만들기 위한 새 구문이 도입되었습니다(**FROM EXTERNAL PROVIDER**).
 - **FROM EXTERNAL PROVIDER**가 지정된 경우:
 
-  - login_name은 현재 Azure SQL 관리되는 인스턴스로 Azure AD에서 액세스할 수 있는 기존 Azure AD 계정(사용자, 그룹 또는 애플리케이션)을 나타내야 합니다. Azure AD 주체의 경우 CREATE LOGIN 구문에는 다음 항목이 필요합니다.
+  - login_name은 현재 Azure SQL Managed Instance로 Azure AD에서 액세스할 수 있는 기존 Azure AD 계정(사용자, 그룹 또는 애플리케이션)을 나타내야 합니다. Azure AD 주체의 경우 CREATE LOGIN 구문에는 다음 항목이 필요합니다.
     - Azure AD 사용자에 대한 Azure AD 개체의 UserPrincipalName.
     - Azure AD 그룹 및 Azure AD 애플리케이션에 대한 Azure AD 개체의 DisplayName.
   - **PASSWORD** 옵션은 사용할 수 없습니다.
@@ -469,18 +469,18 @@ SID **=** *sid* 로그인을 다시 만드는데 사용됩니다. SQL Server 인
 
 기본적으로 마스터에 새로 생성된 Azure AD 로그인에 부여된 표준 권한은 다음과 같습니다. **CONNECT SQL** 및 **VIEW ANY DATABASE**가 부여됩니다.
 
-### <a name="sql-database-managed-instance-logins"></a>SQL Database 관리되는 인스턴스 로그인
+### <a name="sql-managed-instance-logins"></a>SQL Managed Instance 로그인
 
 - 서버의 **ALTER ANY LOGIN** 권한이나 고정 서버 역할 `securityadmin` 또는 `sysadmin` 중 하나의 멤버 자격이 있어야 합니다. 서버의 **ALTER ANY LOGIN** 권한 또는 해당 역할 중 하나의 멤버 자격이 있는 Azure AD(Azure Active Directory) 계정만 create 명령을 실행할 수 있습니다.
 - 로그인이 SQL 보안 주체인 경우 `sysadmin` 역할에 포함된 로그인만 create 명령을 사용하여 Azure AD 계정에 대한 로그인을 만들 수 있습니다.
-- Azure SQL 관리되는 인스턴스에 사용된 동일한 디렉터리 내에서 Azure AD의 구성원이어야 합니다.
+- Azure SQL Managed Instance에 사용된 동일한 디렉터리 내에서 Azure AD의 구성원이어야 합니다.
 
 ## <a name="after-creating-a-login"></a>로그인을 만든 후
 
 > [!NOTE]
-> 생성 후 관리형 인스턴스 기능에 대한 Azure AD 관리자가 변경되었습니다. 자세한 내용은 [MI의 새 Azure AD 관리자 기능](/azure/sql-database/sql-database-aad-authentication-configure#new-azure-ad-admin-functionality-for-mi)을 참조하세요.
+> 생성 후 Azure SQL Managed Instance 기능의 Azure AD 관리자가 변경되었습니다. 자세한 내용은 [MI의 새 Azure AD 관리자 기능](/azure/sql-database/sql-database-aad-authentication-configure#new-azure-ad-admin-functionality-for-mi)을 참조하세요.
 
-로그인을 만든 후 해당 로그인으로 SQL Database 관리되는 인스턴스에 연결할 수 있지만 이 로그인은 **public** 역할에 부여된 권한만 있습니다. 다음 작업 중 일부를 수행하는 것이 좋습니다.
+로그인을 만든 후 해당 로그인으로 Managed Instance에 연결할 수 있지만 이 로그인은 **public** 역할에 부여된 권한만 있습니다. 다음 작업 중 일부를 수행하는 것이 좋습니다.
 
 - Azure AD 로그인으로 Azure AD 사용자를 만들려면 [CREATE USER](../../t-sql/statements/create-user-transact-sql.md)를 참조하세요.
 - 데이터베이스에서 사용자에게 권한을 부여하려면 **ALTER SERVER ROLE** ... **ADD MEMBER** 문을 사용하여 기본 제공 데이터베이스 역할 중 하나 또는 사용자 지정 역할에 사용자를 추가하거나 [GRANT](../../t-sql/statements/grant-transact-sql.md) 문을 사용하여 사용자에게 권한을 직접 부여합니다. 자세한 내용은 [비관리자 역할](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users), [추가 서버 수준 관리 역할](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) 및 [GRANT](grant-transact-sql.md) 문을 참조합니다.
@@ -601,7 +601,7 @@ GO
         [SQL Server](create-login-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [Azure SQL Database<br />단일 데이터베이스/탄력적 풀](create-login-transact-sql.md?view=azuresqldb-current)
+        [Azure SQL Database](create-login-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
         [Azure SQL<br />Managed Instance](create-login-transact-sql.md?view=azuresqldb-mi-current)
@@ -729,7 +729,7 @@ GO
         [SQL Server](create-login-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [Azure SQL Database<br />단일 데이터베이스/탄력적 풀](create-login-transact-sql.md?view=azuresqldb-current)
+        [Azure SQL Database](create-login-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
         [Azure SQL<br />Managed Instance](create-login-transact-sql.md?view=azuresqldb-mi-current)

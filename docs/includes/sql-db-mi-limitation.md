@@ -1,2 +1,2 @@
 > [!IMPORTANT]  
-> [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)에서 이 T-SQL 기능은 특정 동작이 변경되었습니다. 모든 T-SQL 동작 변경에 대한 자세한 내용은 [SQL Server에서 Azure SQL Database Managed Instance T-SQL 차이점](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information)을 참조하세요.
+> [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)에서 이 T-SQL 기능은 특정 동작이 변경되었습니다. 모든 T-SQL 동작 변경에 대한 자세한 내용은 [SQL Server에서 Azure SQL Managed Instance T-SQL 차이점](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information)을 참조하세요.

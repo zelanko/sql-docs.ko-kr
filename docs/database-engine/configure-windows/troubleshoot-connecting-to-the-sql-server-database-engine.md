@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 474c365b-c451-4b07-b636-1653439f4b1f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: afe2679e29f92d4b222067b6ab3b5220078744e1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: dbd46a6a2de2e46841eb8cc7b40542d8073e82c6
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85763958"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988638"
 ---
 # <a name="troubleshoot-connecting-to-the-sql-server-database-engine"></a>SQL Server 데이터베이스 엔진 연결 문제 해결
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "85763958"
 
 - 이 항목에는 SSPI 오류 정보가 포함되어 있지 않습니다. SSPI 오류의 경우 ["SSPI 컨텍스트를 생성할 수 없습니다" 오류 메시지의 문제를 해결하는 방법](https://support.microsoft.com/kb/811889)을 참조하세요.
 - 이 항목에는 Kerberos 오류 정보가 포함되어 있지 않습니다. 도움말을 보려면 [SQL Server용 Microsoft Kerberos 구성 관리자](https://www.microsoft.com/download/details.aspx?id=39046)를 참조하세요.
-- 이 항목에는 SQL Azure 연결 정보가 포함되어 있지 않습니다. 도움말은 [Microsoft Azure SQL Database 연결 문제 해결(영문)](/azure/sql-database/troubleshoot-connectivity-issues-microsoft-azure-sql-database)을 참조하세요.
+- 이 항목에는 Azure SQL Database 연결에 대한 정보가 포함되어 있지 않습니다. 도움말은 [Microsoft Azure SQL Database 연결 문제 해결(영문)](/azure/sql-database/troubleshoot-connectivity-issues-microsoft-azure-sql-database)을 참조하세요.
 
 ## <a name="get-instance-name-from-configuration-manger"></a>Configuration Manger에서 인스턴스 이름 가져오기
 

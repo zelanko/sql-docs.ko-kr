@@ -21,12 +21,12 @@ ms.assetid: c183b0e4-ef4c-4bfc-8575-5ac219c25b0a
 author: stevestein
 ms.author: sstein
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 00132b65b2dc5e21fbc57c376ac005d968871f62
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f7f5c8f910d4fd9d5af81789a62eea86d609ec7a
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85743326"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864504"
 ---
 # <a name="estimate-the-size-of-a-nonclustered-index"></a>비클러스터형 인덱스의 크기 예측
 
@@ -176,13 +176,13 @@ ms.locfileid: "85743326"
   
 4.  가변 길이 데이터 크기를 계산합니다.  
   
-     인덱스 키에 가변 길이 열이 있는 경우에는 2.2단계에서 이미 설명한 것처럼 필요한 클러스터링 키 열을 포함하여 해당 인덱스 행 내에 열을 저장하는 데 사용되는 공간을 결정합니다.  
+     가변 길이 열(키 열 또는 포함된 항목)이 있는 경우에는 위의 2.2단계에서 설명한 대로 필요한 클러스터링 키 열을 포함하여 해당 인덱스 행 내에 열을 저장하는 데 사용되는 공간을 결정합니다.  
   
      ***Variable_Leaf_Size***  = 2 + (***Num_Variable_Leaf_Cols*** x 2) + ***Max_Var_Leaf_Size***  
   
      ***Max_Var_Key_Size*** 에 추가된 바이트는 각 변수 열을 추적하기 위한 것입니다. 이 수식에서는 모든 가변 길이 열이 100% 꽉 찬 것으로 가정합니다. 사용할 가변 길이 열 스토리지 공간 비율이 더 적을 것으로 예상되는 경우 해당 비율로 ***Max_Var_Leaf_Size*** 값을 조정하여 전체 테이블 크기를 보다 정확하게 예측할 수 있습니다.  
   
-     가변 길이 열이 없는 경우에는 ***Variable_Leaf_Size*** 를 0으로 설정합니다.  
+     가변 길이 열(키 열 또는 포함된 항목)이 없는 경우에는 ***Variable_Leaf_Size***를 0으로 설정합니다.  
   
 5.  인덱스 행 크기를 계산합니다.  
   

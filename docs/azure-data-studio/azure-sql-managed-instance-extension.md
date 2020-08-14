@@ -1,6 +1,6 @@
 ---
-title: Azure SQL Database 관리되는 인스턴스 확장
-description: Azure Data Studio에서 Azure SQL 관리되는 인스턴스 사용
+title: Azure SQL Managed Instance 확장
+description: Azure Data Studio에서 Azure SQL Managed Instance 사용
 ms.custom: seodec18
 ms.date: 10/07/2019
 ms.reviewer: alanyu, maghan, sstein
@@ -10,18 +10,18 @@ ms.topic: conceptual
 author: jovanpop-msft
 ms.author: jovanpop
 manager: alanyu
-ms.openlocfilehash: 6a406efdd7c07d2740ebf33b6e84cd7d7175fde2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 58c79a367782f040739b23f52e01bec5cb0ed917
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774702"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988602"
 ---
-# <a name="azure-sql-database-managed-instance-dashboard-for-azure-data-studio-preview"></a>Azure Data Studio용 Azure SQL Database 관리되는 인스턴스 대시보드(미리 보기)
+# <a name="azure-sql-managed-instance-dashboard-for-azure-data-studio-preview"></a>Azure Data Studio용 Azure SQL Managed Instance 대시보드(미리 보기)
 
-Azure SQL Database 관리되는 인스턴스 확장은 [Azure Data Studio](https://github.com/Microsoft/azuredatastudio)에서 [Azure SQL Database 관리되는 인스턴스](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index)를 사용하기 위한 대시보드를 제공합니다. 이 확장은 다음과 같은 기능을 제공합니다.
+Azure SQL Managed Instance 확장은 [Azure Data Studio](https://github.com/Microsoft/azuredatastudio)에서 [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index)를 사용하기 위한 대시보드를 제공합니다. 이 확장은 다음과 같은 기능을 제공합니다.
 
-- vCore 및 사용된 스토리지를 포함하여 관리되는 인스턴스 속성을 표시
+- vCore 및 사용된 스토리지를 포함하여 SQL Managed Instance 속성 표시
 - 이전 2시간 동안 CPU 및 스토리지 사용량을 모니터링
 - 구성 경고 및 튜닝 권장 사항을 표시
 - 데이터베이스 복제본의 상태를 표시
@@ -30,7 +30,7 @@ Azure SQL Database 관리되는 인스턴스 확장은 [Azure Data Studio](https
 ## <a name="install"></a>설치
 
 이 확장의 공식 릴리스를 설치할 수 있습니다. [Azure Data Studio 설명서](https://docs.microsoft.com/sql/azure-data-studio/extensions)의 단계를 수행합니다.
-**확장** 창에서 “관리되는 인스턴스”를 검색하여 설치합니다. 이 확장을 설치하면 후속 확장 업데이트에 대한 알림이 자동으로 제공됩니다.
+**확장** 창에서 “Managed Instance”를 검색하여 설치합니다. 이 확장을 설치하면 후속 확장 업데이트에 대한 알림이 자동으로 제공됩니다.
 
 그리고 Azure Data Studio에 **관리되는 인스턴스** 탭이 표시됩니다. 이 탭에서 관리되는 인스턴스 관련 정보를 찾을 수 있습니다.
 
@@ -38,7 +38,7 @@ Azure SQL Database 관리되는 인스턴스 확장은 [Azure Data Studio](https
 
 확장은 관리되는 인스턴스의 기술 특성 및 일부 리소스 사용을 표시합니다.
 
-[ ![관리되는 인스턴스 속성](media/azure-sql-mi-extension/ads-mi-tab1.png )](media/azure-sql-mi-extension/ads-mi-tab1.png#lightbox)
+[ ![Managed Instance 속성](media/azure-sql-mi-extension/ads-mi-tab1.png )](media/azure-sql-mi-extension/ads-mi-tab1.png#lightbox)
 
 위쪽 창에는 다음과 같은 세부 정보가 표시됩니다.
 
@@ -51,7 +51,7 @@ Azure SQL Database 관리되는 인스턴스 확장은 [Azure Data Studio](https
 
 **관리되는 인스턴스** 탭에서 두 번째 창을 선택하면 관리되는 인스턴스를 최적화하는 데 도움이 되는 권장 사항 및 경고가 표시됩니다.
 
-[ ![관리되는 인스턴스 권장 사항](media/azure-sql-mi-extension/ads-mi-tab2.png )](media/azure-sql-mi-extension/ads-mi-tab2.png#lightbox)
+[ ![Managed Instance 권장 사항](media/azure-sql-mi-extension/ads-mi-tab2.png )](media/azure-sql-mi-extension/ads-mi-tab2.png#lightbox)
 
 다음과 같은 권장 사항이 표시될 수 있습니다.
 
@@ -62,13 +62,13 @@ Azure SQL Database 관리되는 인스턴스 확장은 [Azure Data Studio](https
 - **데이터 파일 제한**. 데이터 파일이 [범용 서비스 계층에 대한 파일 I/O 제한](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-resource-limits#file-io-characteristics-in-general-purpose-tier)에 근접하는 경우 더 나은 성능을 얻으려면 데이터 파일 크기를 늘려야 할 수 있습니다. 이 문제로 인해 메모리 압력이 유발되거나 백업 속도가 느려질 수 있습니다.
 - **가용성 문제**. 가상 로그 파일 수가 많으면 성능에 영향을 줄 수 있습니다. 프로세스 오류가 발생하면 이러한 문제로 인해 범용 서비스 계층에서 데이터베이스 복구가 길어질 수 있습니다.
 
-정기적으로 이러한 권장 사항을 검토하고 근본 원인을 조사하여 문제를 해결하기 위한 조치를 취해야 합니다. Azure SQL Database 관리되는 인스턴스 확장은 보고된 문제 중 일부를 완화하기 위해 실행할 수 있는 스크립트를 제공합니다.
+정기적으로 이러한 권장 사항을 검토하고 근본 원인을 조사하여 문제를 해결하기 위한 조치를 취해야 합니다. SQL Managed Instance 확장은 보고된 문제 중 일부를 완화하기 위해 실행할 수 있는 스크립트를 제공합니다.
 
 ## <a name="replicas"></a>복제본
 
 **관리되는 인스턴스** 탭의 세 번째 창에서는 관리되는 인스턴스의 데이터베이스 복제본 상태를 보여 줍니다.
 
-[ ![관리되는 인스턴스 복제본](media/azure-sql-mi-extension/ads-mi-tab3.png )](media/azure-sql-mi-extension/ads-mi-tab3.png#lightbox)
+[ ![Managed Instance 복제본](media/azure-sql-mi-extension/ads-mi-tab3.png )](media/azure-sql-mi-extension/ads-mi-tab3.png#lightbox)
 
 범용 서비스 계층에서 모든 데이터베이스에는 단일 (기본) 복제본이 있습니다. 중요 비즈니스용 계층 인스턴스에서 모든 데이터베이스에는 기본 복제본 1개와 보조 복제본 3개가 있으며, 이 중 하나는 읽기 전용 작업에 사용됩니다. **복제본** 창에서 동기화 프로세스를 모니터링하고 모든 보조 복제본이 주 복제본과 동기화되었는지 확인할 수 있습니다.
 
@@ -76,15 +76,15 @@ Azure SQL Database 관리되는 인스턴스 확장은 [Azure Data Studio](https
 
 **관리되는 인스턴스**의 네 번째 창에는 최신 및 관련 SQL 오류 로그 항목이 표시됩니다.
 
-[ ![관리되는 인스턴스 로그 항목](media/azure-sql-mi-extension/ads-mi-tab4.png )](media/azure-sql-mi-extension/ads-mi-tab4.png#lightbox)
+[ ![Managed Instance 로그 항목](media/azure-sql-mi-extension/ads-mi-tab4.png )](media/azure-sql-mi-extension/ads-mi-tab4.png#lightbox)
 
 관리되는 인스턴스는 수많은 로그 항목을 생성하지만, 대부분은 내부/시스템 정보입니다. 또한 일부 로그 항목은 논리적 데이터베이스 이름 대신 실제 데이터베이스 이름(`GUID` 값)을 표시합니다.
 
-Azure SQL Database 관리되는 인스턴스 확장은 [Dimitri Furman 방법](https://techcommunity.microsoft.com/t5/DataCAT/Azure-SQL-DB-Managed-Instance-sp-readmierrorlog/ba-p/305506)에 따라 불필요한 로그 항목을 필터링합니다. 또한 확장은 실제 이름 대신 실제 논리적 파일 이름을 표시합니다.
+SQL Managed Instance 확장은 [Dimitri Furman 방법](https://techcommunity.microsoft.com/t5/DataCAT/Azure-SQL-DB-Managed-Instance-sp-readmierrorlog/ba-p/305506)에 따라 불필요한 로그 항목을 필터링합니다. 또한 확장은 실제 이름 대신 실제 논리적 파일 이름을 표시합니다.
 
 ## <a name="reporting-problems"></a>문제 보고
 
-Azure SQL Database 관리되는 인스턴스 확장에 문제가 발생하는 경우 [확장 GitHub 프로젝트](https://github.com/JocaPC/AzureDataStudio-Managed-Instance/issues)로 이동하여 문제를 보고합니다.
+SQL Managed Instance 확장에 문제가 발생하는 경우 [확장 GitHub 프로젝트](https://github.com/JocaPC/AzureDataStudio-Managed-Instance/issues)로 이동하여 문제를 보고합니다.
 
 ## <a name="code-of-conduct"></a>사용 규정
 

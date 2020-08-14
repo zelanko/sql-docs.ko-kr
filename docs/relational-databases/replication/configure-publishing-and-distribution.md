@@ -16,12 +16,12 @@ ms.assetid: 3cfc8966-833e-42fa-80cb-09175d1feed7
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 0e39946071c85dff0c1e29f6f36e6bafe910f77d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0fba95ecd1553bcd090cbf7ef987728bd17b712d
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774005"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87863363"
 ---
 # <a name="configure-publishing-and-distribution"></a>게시 및 배포 구성
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -66,7 +66,7 @@ ms.locfileid: "85774005"
 
 2. 게시자이기도 한 배포자에서 [sp_adddistpublisher&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)를 실행하여 `@working_directory`에 기본 스냅샷 폴더로 사용할 UNC 공유를 지정합니다.
 
-   SQL Database Managed Instance의 배포자에는 `@working_directory`에 대한 Azure storage 계정 및 `@storage_connection_string`에 대한 스토리지 액세스 키를 사용합니다. 
+   SQL Managed Instance의 배포자에는 `@working_directory`에 대한 Azure Storage 계정 및 `@storage_connection_string`에 대한 스토리지 액세스 키를 사용합니다. 
 
 3. 게시자에서 [sp_replicationdboption&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md)을 실행합니다. 이때 `@dbname`에 게시할 데이터베이스를 지정하고 `@optname`에 복제 유형을 지정하며 `@value`에 `true` 값을 지정합니다.
 
@@ -80,7 +80,7 @@ ms.locfileid: "85774005"
 
 2. 배포자에서 [sp_adddistpublisher&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)를 실행하여 `@working_directory`에 기본 스냅샷 폴더로 사용할 UNC 공유를 지정합니다. 게시자에 연결할 때 배포자가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하면 `@security_mode`에 `0` 값을 지정하고 `@login` 및 `@password`에 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 정보를 지정해야 합니다.
 
-   SQL Database Managed Instance의 배포자에는 `@working_directory`에 대한 Azure storage 계정 및 `@storage_connection_string`에 대한 스토리지 액세스 키를 사용합니다. 
+   SQL Managed Instance의 배포자에는 `@working_directory`에 대한 Azure Storage 계정 및 `@storage_connection_string`에 대한 스토리지 액세스 키를 사용합니다. 
 
 3. master 데이터베이스의 게시자에서 [sp_adddistributor&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md)를 실행합니다. 이때 `@password`에 1단계에서 사용한 강력한 암호를 지정합니다. 이 암호는 배포자에 연결할 때 게시자에서 사용됩니다.
 

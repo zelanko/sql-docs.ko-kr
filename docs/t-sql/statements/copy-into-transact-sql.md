@@ -18,12 +18,12 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 6d18996610899fd348b179495ab78af2e2717f83
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 9bbc4017411c457638ac93aac147ab63b44dbcab
+ms.sourcegitcommit: 6f49804b863fed44968ea5829e2c26edc5988468
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396012"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87807506"
 ---
 # <a name="copy-transact-sql-preview"></a>COPY(Transact-SQL)(미리 보기)
 
@@ -428,9 +428,9 @@ Parquet 및 ORC 파일은 COPY 명령이 자동으로 분할하기 때문에 파
 ### <a name="when-will-the-copy-command-be-generally-available"></a>COPY 명령은 언제 출시되나요?
 COPY 명령은 올해(2020년) 말에 출시될 예정입니다. 
 
-### <a name="are-there-any-known-issues-with-the-copy-command"></a>COPY 명령에 알려진 문제가 있나요?
+### <a name="are-there-any-limitations-on-the-number-or-size-of-files"></a>파일 개수 또는 크기에 제한이 있나요?
+파일은 4MB 이상이어야 합니다.
 
-- (n)varchar(max)와 같은 LOB 지원은 COPY 문에서 사용할 수 없습니다. 이 기능은 내년 초에 제공될 예정입니다.
 
 피드백이나 문제가 있으면 배포 목록(sqldwcopypreview@service.microsoft.com)으로 보내주세요.
 

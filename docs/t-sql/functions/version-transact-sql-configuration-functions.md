@@ -21,12 +21,12 @@ ms.assetid: 385ba80e-7c28-41a5-9cdb-5648f3785983
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 272bfdacbf11207539f75c2c51045eff4e8c5c90
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 3a92f830f4880278afacf10f59072b29dede6026
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112195"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87863421"
 ---
 # <a name="x40x40version---transact-sql-configuration-functions"></a>&#x40;&#x40;버전 - Transact SQL 구성 함수
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -78,7 +78,7 @@ ms.locfileid: "87112195"
 > [!NOTE]  
 > @@VERSION에서 보고한 제품 버전이 Azure SQL Database에 올바르지 않은 문제를 알고 있습니다. Azure SQL Database에서 실행하는 SQL Server 데이터베이스 엔진의 버전은 SQL Server의 온-프레미스 이상 버전으로 최신 보안 수정이 포함되어 있습니다. 즉, 패치 수준이 항상 SQL Server의 온-프레미스 버전 이상으로 SQL Server에서 사용할 수 있는 최신 기능이 Azure SQL Database에서 제공됩니다.
 >
-> 엔진 버전을 프로그래밍 방식으로 결정하려면 SELECT SERVERPROPERTY('EngineEdition')를 사용합니다. 이 쿼리는 단일 데이터베이스/탄력적 풀에 '5'를 반환하고, Azure SQL Database의 관리되는 인스턴스에 '8'을 반환합니다. 
+> 엔진 버전을 프로그래밍 방식으로 결정하려면 SELECT SERVERPROPERTY('EngineEdition')를 사용합니다. 이 쿼리는 Azure SQL Database에 대해 ‘5’를 반환하고 Azure SQL Managed Instance에 대해 ‘8’을 반환합니다.
 >
 > 이 문제를 해결한 후에 설명서를 업데이트할 예정입니다.
 

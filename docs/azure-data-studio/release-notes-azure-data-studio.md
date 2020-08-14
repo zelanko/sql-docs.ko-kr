@@ -9,12 +9,12 @@ ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
 ms.date: 07/17/2020
-ms.openlocfilehash: b064c24ff7717fc5a03ee1413b1e85fbb71530dc
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: 4a8f50b7a6558974c79f01f3d157715890beeb82
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411264"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988557"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio의 릴리스 정보
 
@@ -47,7 +47,7 @@ ms.locfileid: "87411264"
 | 새로운 기능 둘러보기가 추가됨 | 이제 사용자는 환영 페이지 및 명령 팔레트에서 기능 둘러보기를 시작하여 연결 뷰렛, Notebook 뷰렛, 확장 Marketplace 등 일반적으로 사용되는 기능을 둘러볼 수 있습니다. |
 | 새로운 Notebook 기능 | &bull; &nbsp; Markdown 도구 모음의 헤더 지원<br/> &bull; &nbsp; 텍스트 셀의 병렬 Markdown 미리 보기
 | 쿼리 편집기에서 열 및 테이블 끌어서 놓기 | 이제 사용자는 연결 뷰렛에서 쿼리 편집기로 열과 테이블을 직접 끌어서 놓을 수 있습니다. |
-| 작업 막대에 Azure 계정 아이콘이 추가됨 | Azure에 로그인하는 기능을 찾기가 더 쉬워짐 |
+| 작업 막대에 Azure 계정 아이콘이 추가됨 | 이제 사용자가 Azure에 로그인하는 위치를 쉽게 확인할 수 있습니다. |
 | 버그 및 이슈 해결 | 전체 수정 목록은 [GitHub의 버그 및 이슈](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22July+2020+Release%22+is%3Aclosed)를 참조하세요. |
 | &nbsp; | &nbsp; |
 
@@ -60,7 +60,7 @@ ms.locfileid: "87411264"
 
 | 변경 | 세부 정보 |
 | :----- | :------ |
-| Azure Portal 통합에 Azure Data Studio가 추가됨 | 이제 사용자는 Azure SQL DB 연결과 Azure Postgres 등에서 Azure Portal을 바로 열 수 있습니다. |
+| Azure Portal 통합에 Azure Data Studio가 추가됨 | 이제 사용자는 Azure SQL Database 연결과 Azure Postgres 등에서 Azure Portal을 바로 열 수 있습니다. |
 | 새로운 Notebook 기능 | &bull; &nbsp; 새로운 Notebook 도구 모음 <br/> &bull; &nbsp; 새로운 셀 편집 도구 모음 <br/> &bull; &nbsp; Python 종속성 마법사 UX 업데이트 <br/> &bull; &nbsp; Notebook에서의 간격 개선 |
 | SQL 평가 API 확장 발표 | 이 확장은 ADS에 SQL Server 모범 사례 평가를 추가합니다. 이전에는 PowerShell SqlServer 모듈과 SMO에서만 사용할 수 있었던 SQL 평가 API를 노출하여 사용자가 SQL Server 인스턴스를 평가하고 SQL Server 팀의 추천을 받을 수 있게 합니다. SQL 평가 API와 관련 기능에 관한 자세한 내용은 [이 문서를 참조하세요.](https://docs.microsoft.com/sql/sql-assessment-api/sql-assessment-api-overview?view=sql-server-ver15) |
 | [Machine Learning 확장 개선](https://go.microsoft.com/fwlink/?linkid=2129918) | 이제 Azure SQL Managed Instance를 지원합니다. |
@@ -489,7 +489,7 @@ ms.locfileid: "87411264"
 
 ### <a name="bug-fixes-november-2018"></a>버그 수정, 2018년 11월
 
-- [이슈 #2933](https://github.com/Microsoft/azuredatastudio/issues/2933) 해결: Azure SQL DB에 대한 연결 끊김
+- [이슈 #2933](https://github.com/Microsoft/azuredatastudio/issues/2933) 해결: Azure SQL Database와의 연결이 끊김
 - [이슈 #2914](https://github.com/Microsoft/azuredatastudio/issues/2914) 해결: OE 데이터베이스 노드를 확장하는 “잘못된 인수” 예외
 - [이슈 #2935](https://github.com/Microsoft/azuredatastudio/pull/2935) 해결: 쿼리 결과에 여러 줄 메시지를 올바르게 표시
 - [이슈 #2906](https://github.com/Microsoft/azuredatastudio/pull/2906) 해결: 테이블 이름에 특수 문자가 포함된 경우 데이터 편집 문서 이름 수정
@@ -546,7 +546,7 @@ Azure Data Studio(이전 SQL Operations Studio)의 일반 공급 릴리스
 | :----- | :------ |
 | [빅 데이터 클러스터](../big-data-cluster/big-data-cluster-overview.md) 지원을 포함하는 SQL Server 2019 미리 보기 기능 지원 | SQL Server 2019 미리 보기와 함께 제공되는 HDFS/Spark 게이트웨이에 연결합니다.<br/><br/>HDFS를 찾아보고, 파일을 업로드 및 저장하며, Notebook에서 CSV 파일 분석 등의 유용한 작업을 시작합니다.<br/><br/>대시보드에서 Spark 작업을 제출하거나 개체 탐색기에서 HDFS/Spark 연결을 마우스 오른쪽 단추로 클릭합니다. |
 | Azure Data Studio Notebook | 통합 Notebook 뷰어를 사용하여 Notebook을 만들거나 엽니다. 이 릴리스에서는 Notebook 뷰어를 통해 로컬 커널 및 SQL Server 2019 빅 데이터 클러스터에만 연결할 수 있습니다.<br/><br/>Notebook에서 PROSE Code Accelerator 라이브러리를 사용하여 빠른 데이터 준비를 위한 파일 형식 및 데이터 형식을 알아봅니다. |
-| Azure Resource Explorer | Azure Resource Explorer 뷰를 사용하여 Azure 계정의 데이터 관련 엔드포인트를 검색하고 개체 탐색기를 통해 해당 엔드포인트에 연결할 수 있습니다. 이 릴리스에서는 Azure SQL Database 및 서버가 지원됩니다. |
+| Azure Resource Explorer | Azure Resource Explorer 뷰를 사용하여 Azure 계정의 데이터 관련 엔드포인트를 검색하고 개체 탐색기를 통해 해당 엔드포인트에 연결할 수 있습니다. 이 릴리스에서는 Azure SQL Database가 지원됩니다. |
 | SQL Server PolyBase 외부 테이블 만들기 마법사 | 간편한 마법사를 사용하여 외부 테이블 및 해당하는 지원 메타데이터 구조를 만듭니다. 이 릴리스에서는 원격 SQL Server 및 Oracle 서버가 지원됩니다. |
 | &nbsp; | &nbsp; |
 

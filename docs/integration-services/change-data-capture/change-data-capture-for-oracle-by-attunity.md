@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 520dc05b-83de-4668-8d27-07ee0ef08185
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a78ef76f0b8a1c133d09747e460837e1d68dd318
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 2afa40749326b5b7a69179001787e5fa9469bee6
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918688"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87952308"
 ---
 # <a name="change-data-capture-for-oracle-by-attunity"></a>Attunity Oracle CDC
 
@@ -29,4 +29,9 @@ Attunity Oracle CDC 다운로드는 다음 두 구성 요소를 포함합니다.
 -   [Attunity Oracle CDC Service](../../integration-services/change-data-capture/change-data-capture-service-for-oracle-by-attunity.md)   
 
 ## <a name="get-the-change-data-capture-for-oracle-by-attunity-download"></a>Attunity Oracle CDC 다운로드 가져오기
-Microsoft SQL ServerÂ® 2016용 MicrosoftÂ® Change Data Capture Designer and Service for Oracle by Attunity는 SQL Server 2016 기능 팩의 일부입니다. [SQL Server 2016 기능 팩 웹 페이지](https://go.microsoft.com/fwlink/?LinkId=746297)에서 기능 팩의 구성 요소를 다운로드합니다.  
+
+아래 링크에서 해당 SQL Server 버전의 Microsoft Change Data Capture Designer and Service for Oracle by Attunity를 다운로드합니다.
+
+- [Microsoft SQL Server 2016 Integration Services Attunity Oracle CDC Designer/Service 기능 팩](https://www.microsoft.com/download/details.aspx?id=55802)
+- [Microsoft SQL Server 2017 Integration Services Attunity Oracle CDC Designer/Service 기능 팩](https://www.microsoft.com/download/details.aspx?id=56610)
+- [Microsoft SQL Server 2019 Integration Services 기능 팩](https://www.microsoft.com/download/details.aspx?id=100303)

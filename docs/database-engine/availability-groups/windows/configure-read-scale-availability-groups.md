@@ -1,6 +1,6 @@
 ---
 title: 가용성 그룹에 대한 읽기 확장 구성
-description: Windows에서 읽기 확장 작업에 대해 Always On 가용성 그룹을 구성합니다.
+description: Windows에서 읽기 확장 워크로드에 대한 SQL Server Always On 가용성 그룹을 구성하는 방법을 알아봅니다.
 ms.custom: seodec18
 author: MashaMSFT
 ms.author: mathoma
@@ -9,12 +9,12 @@ ms.date: 05/24/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: high-availability
-ms.openlocfilehash: ba7827a637c1317500894fcfda85cd1d5122cce7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 89dee4f1fbce612ec3200bf700302f98bd4f9f36
+ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888117"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565311"
 ---
 # <a name="configure-read-scale-for-an-always-on-availability-group"></a>Always On 가용성 그룹에 대한 읽기 확장 구성
 

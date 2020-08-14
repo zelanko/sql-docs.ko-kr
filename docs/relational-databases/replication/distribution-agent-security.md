@@ -15,12 +15,12 @@ ms.assetid: de40cc21-2e58-4464-9be7-b5b90c925e9b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: e664b1d96683d33ea9ffdc7cf38a5de0fe72a84e
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 3322ef185178ab2254066281d9f6f6a6c85611da
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111052"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87862992"
 ---
 # <a name="distribution-agent-security"></a>배포 에이전트 보안
 ::: moniker range=">=sql-server-2016||=sqlallproducts-allversions" 
@@ -161,7 +161,7 @@ Persist Security Info=False;Connection Pooling=True;
  이 문자열의 옵션 대부분은 구성 중인 DB2 서버와만 관련이 있지만 **Process Binary as Character** 옵션은 항상 **False**로 설정해야 합니다. 구독 데이터베이스를 식별하려면 **Initial Catalog** 옵션 값을 지정해야 합니다. 자세한 내용은 [IBM DB2 Subscribers](../../relational-databases/replication/non-sql/ibm-db2-subscribers.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [Azure SQL Database를 사용하여 트랜잭션 복제](/azure/sql-database/sql-database-managed-instance-transactional-replication) [관리형 인스턴스에 대해 복제 구성](/azure/sql-database/replication-with-sql-database-managed-instance)
+ [Azure SQL Database를 사용하여 트랜잭션 복제](/azure/sql-database/sql-database-managed-instance-transactional-replication) [Azure SQL Managed Instance의 복제 구성](/azure/sql-database/replication-with-sql-database-managed-instance)
 ::: moniker-end
 
 

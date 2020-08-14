@@ -1,6 +1,6 @@
 ---
 title: 가용성 그룹 시작
-description: Always On 가용성 그룹을 구성하는 데 필요한 단계에 대한 검사 목록입니다.
+description: Always On 가용성 그룹을 지원하고 가용성 그룹을 만들고 관리하고 모니터링하는 SQL Server 인스턴스를 구성하는 단계에 대해 알아봅니다.
 ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 33f2f2d0-79e0-4107-9902-d67019b826aa
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2d5232cbf132e8fe84865dea9e64092692757c14
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: 8391f41c1024d8bf747aace5acd5571aad4284b2
+ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87362692"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565191"
 ---
 # <a name="getting-started-with-always-on-availability-groups"></a>Always On 가용성 그룹 시작
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

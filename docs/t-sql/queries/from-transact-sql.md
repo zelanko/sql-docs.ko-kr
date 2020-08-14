@@ -34,12 +34,12 @@ ms.assetid: 36b19e68-94f6-4539-aeb1-79f5312e4263
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e958aaf757ecc9e28c090d50a13ead57b2de90bb
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 4aa3383d88121c1b9fce53c48c24ebfd3ebb73ff
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87397082"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87931930"
 ---
 # <a name="from-clause-plus-join-apply-pivot-transact-sql"></a>FROM 절과 JOIN, APPLY, PIVOT(Transact-SQL)
 
@@ -228,7 +228,7 @@ FROM { <table_source> [ ,...n ] }
  *derived_table*  
  데이터베이스의 행을 검색하는 하위 쿼리입니다. *derived_table*은 외부 쿼리에 대한 입력으로 사용됩니다.  
   
- *derived* *_table*은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 테이블 값 생성자 기능을 사용하여 여러 행을 지정할 수 있습니다. 예들 들어 `SELECT * FROM (VALUES (1, 2), (3, 4), (5, 6), (7, 8), (9, 10) ) AS MyTable(a, b);`입니다. 자세한 내용은 [테이블 값 생성자&#40;Transact-SQL&#41;](../../t-sql/queries/table-value-constructor-transact-sql.md)를 참조하세요.  
+ *derived_table*은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 테이블 값 생성자 기능을 사용하여 여러 행을 지정할 수 있습니다. 예들 들어 `SELECT * FROM (VALUES (1, 2), (3, 4), (5, 6), (7, 8), (9, 10) ) AS MyTable(a, b);`입니다. 자세한 내용은 [테이블 값 생성자&#40;Transact-SQL&#41;](../../t-sql/queries/table-value-constructor-transact-sql.md)를 참조하세요.  
   
  *column_alias*  
  파생된 테이블의 결과 집합에서 열 이름을 대체할 선택적인 별칭입니다. SELECT 목록의 각 열당 한 개의 열 별칭을 포함하고 열 별칭의 전체 목록을 괄호로 묶습니다.  

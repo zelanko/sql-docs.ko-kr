@@ -9,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 81fb9b9cb792cf350137a375e7a2e25643656b6e
-ms.sourcegitcommit: 335d27d0493ddf4ffb770e13f8fe8802208d25ae
+ms.openlocfilehash: 7bf5aa9ee503dff3a00053365485c3ef70cc9247
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "81002854"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823267"
 ---
 # <a name="migrate-on-premises-ssis-workloads-to-ssis-in-adf"></a>온-프레미스 SSIS 워크로드를 ADF의 SSIS로 마이그레이션
 
@@ -36,5 +36,5 @@ DMA(Data Migration Assistant)는 이 목적을 위해 로컬에서 설치 및 �
 
 ## <a name="next-steps"></a>다음 단계
 
-- [SSIS 패키지를 Azure SQL Database Managed Instance로 마이그레이션](https://docs.microsoft.com/azure/dms/how-to-migrate-ssis-packages-managed-instance)
+- [SSIS 패키지를 Azure SQL Managed Instance로 마이그레이션](https://docs.microsoft.com/azure/dms/how-to-migrate-ssis-packages-managed-instance).
 - [SSMS(SQL Server Management Studio)를 사용하여 SSIS 작업을 ADF(Azure Data Factory)로 마이그레이션](https://docs.microsoft.com/azure/data-factory/how-to-migrate-ssis-job-ssms)

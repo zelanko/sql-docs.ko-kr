@@ -27,12 +27,12 @@ ms.assetid: 016fb05e-a702-484b-bd2a-a6eabd0d76fd
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 23d39a7b7149f6ac75873389c1ac90c6daca8a90
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 73b805149ca1061c73572d742875fa11d9d81b23
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483932"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87932024"
 ---
 # <a name="set-transaction-isolation-level-transact-sql"></a>SET TRANSACTION ISOLATION LEVEL(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -86,7 +86,7 @@ SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
   
 -   READ_COMMITTED_SNAPSHOT이 OFF(SQL Server의 기본값)로 설정되어 있으면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 공유 잠금을 사용하여 현재 트랜잭션이 읽기 작업을 실행하는 동안 다른 트랜잭션이 행을 수정하지 못하도록 합니다. 또한 공유 잠금은 다른 트랜잭션이 완료될 때까지 해당 트랜잭션이 수정한 행을 문이 읽을 수 없도록 합니다. 공유 잠금의 해제 시기는 공유 잠금 유형에 의해 결정됩니다. 행 잠금은 다음 행이 처리되기 전에 해제되고, 페이지 잠금은 다음 페이지를 읽을 때 해제되고 테이블 잠금은 명령문이 끝나면 해제됩니다.  
   
--   READ_COMMITTED_SNAPSHOT이 ON(SQL Azure Database의 기본값)으로 설정되어 있으면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 행 버전 관리를 사용하여 명령문 시작 시와 트랜잭션별로 데이터의 일관성이 유지된 스냅샷을 각 명령문에 제공합니다. 다른 트랜잭션에 의한 데이터 업데이트 차단을 위해 잠금이 사용되지는 않습니다.
+-   READ_COMMITTED_SNAPSHOT이 ON(Azure SQL Database의 기본값)으로 설정되어 있으면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 행 버전 관리를 사용하여 명령문 시작 시와 트랜잭션별로 데이터의 일관성이 유지된 스냅샷을 각 명령문에 제공합니다. 다른 트랜잭션에 의한 데이터 업데이트 차단을 위해 잠금이 사용되지는 않습니다.
 
 > [!IMPORTANT]  
 > 트랜잭션 격리 수준을 선택해도 데이터 수정 내용을 보호하기 위해 획득된 잠금에는 영향을 주지 않습니다. 설정된 격리 수준에 관계없이 트랜잭션은 항상 수정하는 데이터에 대해 배타적 잠금을 얻고 해당 트랜잭션이 완료될 때까지 이 잠금을 보유합니다. 또한 READ_COMMITTED 격리 수준에서 이루어진 업데이트는 선택된 데이터 행에 대한 업데이트 잠금을 사용하지만, SNAPSHOT 격리 수준에서 이루어진 업데이트는 행 버전을 사용하여 업데이트할 행을 선택합니다. 읽기 작업의 경우 트랜잭션 격리 수준은 대개 다른 트랜잭션에서 수정한 내용의 영향을 받지 않도록 보호 수준을 정의합니다. 자세한 내용은 [트랜잭션 잠금 및 행 버전 관리 지침](https://docs.microsoft.com/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide)을 참조하세요.

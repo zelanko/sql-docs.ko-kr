@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 386cedbb-fae5-45ce-9363-c4a417f80a2f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 31a3cba341ee6d7ec8aada3bf620ab23ab55bf9f
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f50c53d596c73565b3b5e56c27fa59fca0afe708
+ms.sourcegitcommit: 6ab28d954f3a63168463321a8bc6ecced099b247
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920981"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87790356"
 ---
 # <a name="connect-to-a-sql-server-data-source-sql-server-import-and-export-wizard"></a>SQL Server 데이터 원본에 연결(SQL Server 가져오기 및 내보내기 마법사)
 
@@ -67,7 +67,7 @@ ms.locfileid: "86920981"
 ODBC 드라이버는 데이터 원본의 드롭다운 목록에 표시되지 않습니다. ODBC 드라이버를 사용하여 연결하려면 **.NET Framework Data Provider for ODBC**를 데이터 원본으로 선택합니다. 이 공급자는 ODBC 드라이버 주위에서 래퍼 역할을 합니다.
 
 > [!TIP]
-> **최신 드라이버를 가져오세요**. [Microsoft ODBC Driver 13 for SQL Server](https://www.microsoft.com/download/details.aspx?id=53339)를 다운로드합니다.
+> **최신 드라이버를 가져오세요**. [Microsoft ODBC Driver for SQL Server](https://aka.ms/downloadmsodbcsql)를 다운로드합니다.
 
 다음은 .NET Framework Data Provider for ODBC를 선택한 직후 표시되는 일반적인 화면입니다.
 

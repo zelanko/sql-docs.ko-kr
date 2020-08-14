@@ -1,6 +1,6 @@
 ---
 title: T-SQL(Transact-SQL)을 사용하여 가용성 그룹 모니터링
-description: T-SQL(Transact-SQL)을 사용하여 Always On 가용성 그룹을 모니터링하는 방법의 설명입니다.
+description: Transact-SQL SELECT 문을 사용하여 Always On 가용성 그룹 및 해당 복제본 및 데이터베이스를 모니터링합니다.
 ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 881a34de-8461-4811-8c62-322bf7226bed
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4b21deb3019a2d31c16a61f98ad9a1953ad65174
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 13c92b7783605eb501a73522d0820be9856588a6
+ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897369"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565575"
 ---
 # <a name="monitor-availability-groups-transact-sql"></a>가용성 그룹 모니터링(Transact-SQL)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

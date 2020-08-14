@@ -1,7 +1,7 @@
 ---
 title: SERVERPROPERTY(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/08/2020
+ms.date: 07/28/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -23,12 +23,12 @@ ms.assetid: 11e166fa-3dd2-42d8-ac4b-04f18c612c4a
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ba9181d1b34bf39711dac702a11687b3ca38f604
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: e797b97fec0fb2263780cb1623882d16a717b196
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113356"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823622"
 ---
 # <a name="serverproperty-transact-sql"></a>SERVERPROPERTY(Transact-SQL)
 
@@ -64,32 +64,37 @@ SERVERPROPERTY ( 'propertyname' )
 |버전|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스의 설치된 제품 버전입니다. 이 속성 값을 이용하여 [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)와 같은 기능 및 제한을 확인합니다. 64비트 버전의 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에는 (64비트)가 추가됩니다.<br /><br /> HRESULT = NO_ERROR를<br /><br /> 'Enterprise Edition'<br /><br /> 'Enterprise Edition: 코어 기반 라이선스’<br /><br /> 'Enterprise Evaluation Edition'<br /><br /> 'Business Intelligence Edition'<br /><br /> 'Developer Edition'<br /><br /> 'Express Edition'<br /><br /> 'Express Edition with Advanced Services'<br /><br /> 'Standard Edition'<br /><br /> 'Web Edition'<br /><br /> 'SQL Azure'는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 또는 [!INCLUDE[ssDW](../../includes/ssdw-md.md)]를 나타냅니다.<br /><br /> 'Azure SQL Edge Developer'는 Azure SQL Edge 개발 전용 버전을 나타냅니다. <br /><br /> 'Azure SQL Edge'는 Azure SQL Edge의 유료 버전을 나타냅니다. <br /><br /> 기본 데이터 형식: **nvarchar(128)**|  
 |EditionID|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 설치된 제품 버전을 나타내는 EditionID입니다. 이 속성 값을 이용하여 [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)와 같은 기능 및 제한을 확인합니다.<br /><br /> 1804890536 = Enterprise<br /><br /> 1872460670 = Enterprise Edition: 코어 기반 라이선스<br /><br /> 610778273= Enterprise Evaluation<br /><br /> 284895786 = Business Intelligence<br /><br /> -2117995310 = Developer<br /><br /> -1592396055 = Express<br /><br /> -133711905 = Express with Advanced Services<br /><br /> -1534726760 = Standard<br /><br /> 1293598313 = Web<br /><br /> 1674378470 = SQL Database 또는 Microsoft Azure Synapse Analytics(이전의 SQL Data Warehouse)<br /><br /> -1461570097 = Azure SQL Edge Developer <br /><br /> 1994083197 = Azure SQL Edge <br /><br />기본 데이터 형식: **bigint**|  
 |EngineEdition|서버에 설치된 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전입니다.<br /><br /> 1 = Personal 또는 Desktop Engine([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전에는 사용할 수 없음)<br /><br /> 2 = Standard(Standard, Web 및 Business Intelligence 버전인 경우 이 값이 반환됨)<br /><br /> 3 = Enterprise (Evaluation, Developer 및 Enterprise 버전인 경우 이 값이 반환됨)<br /><br /> 4 = Express(Express, Express with Tools 및 Express with Advanced Services 버전인 경우 이 값이 반환됨)<br /><br /> 5 = [!INCLUDE[ssSDS](../../includes/sssds-md.md)]<br /><br /> 6 = [!INCLUDE[ssDW](../../includes/ssdw-md.md)]<br /><br /> 8 = 관리되는 인스턴스<br /><br /> 9 = Azure SQL Edge(Azure SQL Edge 두 가지 버전 모두에 대해 반환됨)<br /><br /> 기본 데이터 형식: **int**|  
-|HadrManagerStatus|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상<br /><br /> [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 관리자가 시작되었는지 여부를 나타냅니다.<br /><br /> 0 = 시작되지 않았습니다. 통신 보류 중입니다.<br /><br /> 1 = 시작되어 실행 중입니다.<br /><br /> 2 = 시작되지 않고 실패했습니다.<br /><br /> NULL = 입력이 유효하지 않거나, 오류이거나, 적용 가능하지 않습니다.|  
-|InstanceDefaultDataPath|**적용 대상**: 2015년 후반부터 업데이트된 현재 버전을 통해 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에 적용됩니다.<br /><br /> 인스턴스 데이터 파일의 기본 경로 이름입니다.|  
-|InstanceDefaultLogPath|**적용 대상**: 2015년 후반부터 업데이트된 현재 버전을 통해 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에 적용됩니다.<br /><br /> 인스턴스 로그 파일의 기본 경로 이름입니다.|  
+|FilestreamConfiguredLevel|구성된 FILESTREAM 액세스 수준입니다. 자세한 내용은 [파일 스트림 액세스 수준](../../database-engine/configure-windows/filestream-access-level-server-configuration-option.md)을 참조하세요.<br /><br /> 기본 데이터 형식: **int**|  
+|FilestreamEffectiveLevel|유효한 FILESTREAM 액세스 수준입니다. 수준이 변경되었고 인스턴스 다시 시작이나 컴퓨터 다시 시작이 보류 중인 경우 이 값은 FilestreamConfiguredLevel과 다를 수 있습니다. 자세한 내용은 [파일 스트림 액세스 수준](../../database-engine/configure-windows/filestream-access-level-server-configuration-option.md)을 참조하세요.<br /><br /> 기본 데이터 형식: **int**|  
+|FilestreamShareName|FILESTREAM이 사용하는 공유의 이름입니다.<br /><br /> NULL = 입력이 유효하지 않거나, 오류이거나, 적용 가능하지 않습니다.<br /><br /> 기본 데이터 형식: **nvarchar(128)**| 
+|HadrManagerStatus|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상<br /><br /> [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 관리자가 시작되었는지 여부를 나타냅니다.<br /><br /> 0 = 시작되지 않았습니다. 통신 보류 중입니다.<br /><br /> 1 = 시작되어 실행 중입니다.<br /><br /> 2 = 시작되지 않고 실패했습니다.<br /><br /> NULL = 입력이 유효하지 않거나, 오류이거나, 적용 가능하지 않습니다.<br /><br /> 기본 데이터 형식: **int**|  
+|InstanceDefaultBackupPath|**적용 대상**:  [!INCLUDE[ssSQL2019](../../includes/sssqlv15-md.md)] 이상.<br /><br /> 인스턴스 백업 파일의 기본 경로 이름입니다.|  
+|InstanceDefaultDataPath|**적용 대상**: 2015년 후반부터 업데이트된 현재 버전을 통해 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에 적용됩니다.<br /><br /> 인스턴스 데이터 파일의 기본 경로 이름입니다.<br /><br /> 기본 데이터 형식: **nvarchar(128)**|  
+|InstanceDefaultLogPath|**적용 대상**: 2015년 후반부터 업데이트된 현재 버전을 통해 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에 적용됩니다.<br /><br /> 인스턴스 로그 파일의 기본 경로 이름입니다.<br /><br /> 기본 데이터 형식: **nvarchar(128)**|  
 |InstanceName|사용자가 연결된 인스턴스의 이름입니다.<br /><br /> 인스턴스 이름이 기본 인스턴스이거나 입력이 유효하지 않거나 오류일 경우에는 NULL을 반환합니다.<br /><br /> NULL = 입력이 유효하지 않거나, 오류이거나, 적용 가능하지 않습니다.<br /><br /> 기본 데이터 형식: **nvarchar(128)**|  
-|IsAdvancedAnalyticsInstalled|설치 중에 Advanced Analytics 기능이 설치되어 있으면 1을, Advanced Analytics가 설치되어 있지 않으면 0을 반환합니다.|  
-|IsBigDataCluster| [!INCLUDE[ssSQL2019](../../includes/sssqlv15-md.md)] CU4부터 도입되었습니다.<br /><br />인스턴스가 빅 데이터 클러스터 SQL Server이면 1을 반환하고, 그렇지 않으면 0을 반환합니다.|  
+|IsAdvancedAnalyticsInstalled|설치 중에 Advanced Analytics 기능이 설치되어 있으면 1을, Advanced Analytics가 설치되어 있지 않으면 0을 반환합니다.<br /><br /> 기본 데이터 형식: **int**|  
+|IsBigDataCluster| [!INCLUDE[ssSQL2019](../../includes/sssqlv15-md.md)] CU4부터 도입되었습니다.<br /><br />인스턴스가 빅 데이터 클러스터 SQL Server이면 1을 반환하고, 그렇지 않으면 0을 반환합니다.<br /><br /> 기본 데이터 형식: **int**|  
 |IsClustered|서버 인스턴스가 장애 조치(failover) 클러스터에 구성되어 있습니다.<br /><br /> 1 = 클러스터형입니다.<br /><br /> 0 = 비클러스터형입니다.<br /><br /> NULL = 입력이 유효하지 않거나, 오류이거나, 적용 가능하지 않습니다.<br /><br /> 기본 데이터 형식: **int**|  
 |IsFullTextInstalled|전체 텍스트 및 의미 체계 인덱싱 구성 요소가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 현재 인스턴스에 설치되었습니다.<br /><br /> 1 = 전체 텍스트 및 의미 체계 인덱싱 구성 요소가 설치되었습니다.<br /><br /> 0 = 전체 텍스트 및 의미 체계 인덱싱 구성 요소가 설치되지 않았습니다.<br /><br /> NULL = 입력이 유효하지 않거나, 오류이거나, 적용 가능하지 않습니다.<br /><br /> 기본 데이터 형식: **int**|  
 |IsHadrEnabled|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상<br /><br /> 이 서버 인스턴스에서 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]을 사용합니다.<br /><br /> 0 = [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 기능을 사용하지 않습니다.<br /><br /> 1 = [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 기능을 사용합니다.<br /><br /> NULL = 입력이 유효하지 않거나, 오류이거나, 적용 가능하지 않습니다.<br /><br /> 기본 데이터 형식: **int**<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 가용성 복제본을 만들고 실행하려면 서버 인스턴스에서 HADR 서비스를 사용하도록 설정해야 합니다. 자세한 내용은 [AlwaysOn 가용성 그룹 활성화 및 비활성화(SQL Server)](../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)를 참조하세요.<br /><br /> **참고:** IsHadrEnabled 속성은 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]에만 적용됩니다. 데이터베이스 미러링 또는 로그 전달 등의 다른 고가용성 또는 재해 복구 기능은 이 서버 속성의 영향을 받지 않습니다.|  
 |IsIntegratedSecurityOnly|서버가 통합 보안 모드에 있습니다.<br /><br /> 1 = 통합 보안(Windows 인증)<br /><br /> 0 = 통합 보안 모드가 아닙니다. Windows 인증 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증이라는 두 가지 인증 모드를 사용할 수 있습니다.<br /><br /> NULL = 입력이 유효하지 않거나, 오류이거나, 적용 가능하지 않습니다.<br /><br /> 기본 데이터 형식: **int**|  
-|IsLocalDB|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상<br /><br /> 서버가 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] LocalDB의 인스턴스입니다.<br /><br /> NULL = 입력이 유효하지 않거나, 오류이거나, 적용 가능하지 않습니다.|  
+|IsLocalDB|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상<br /><br /> 서버가 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] LocalDB의 인스턴스입니다.<br /><br /> NULL = 입력이 유효하지 않거나, 오류이거나, 적용 가능하지 않습니다.<br /><br /> 기본 데이터 형식: **int**|  
 |IsPolyBaseInstalled|**적용 대상**: [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 서버 인스턴스에 PolyBase 기능이 설치되어 있는지 여부를 반환합니다.<br /><br /> 0 = PolyBase가 설치되어 있지 않습니다.<br /><br /> 1 = PolyBase가 설치되어 있습니다.<br /><br /> 기본 데이터 형식: **int**|  
 |IsSingleUser|서버가 단일 사용자 모드입니다.<br /><br /> 1 = 단일 사용자 모드입니다.<br /><br /> 0 = 단일 사용자 모드가 아닙니다.<br /><br /> NULL = 입력이 유효하지 않거나, 오류이거나, 적용 가능하지 않습니다.<br /><br /> 기본 데이터 형식: **int**|  
+|IsTempDbMetadataMemoryOptimized|**적용 대상**: [!INCLUDE[ssSQL2019](../../includes/sssqlv15-md.md)] 이상<br /><br />tempdb가 메타데이터에서 메모리 최적화 테이블을 사용하도록 설정된 경우 1을 반환합니다. tempdb가 메타데이터에서 일반, 디스크 기반 테이블을 사용하는 경우 0을 반환합니다. 자세한 내용은 [tempdb Database](../../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata)을(를) 참조하세요.<br /><br /> 기본 데이터 형식: **int**|  
 |IsXTPSupported|**적용 대상**: SQL Server([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상), [!INCLUDE[ssSDS](../../includes/sssds-md.md)].<br /><br /> 서버에서 메모리 OLTP를 지원합니다.<br /><br /> 1= 서버에서 메모리 OLTP를 지원합니다.<br /><br /> 0 = 서버에서 메모리 OLTP를 지원하지 않습니다.<br /><br /> NULL = 입력이 유효하지 않거나, 오류이거나, 적용 가능하지 않습니다.<br /><br /> 기본 데이터 형식: **int**|  
 |LCID|데이터 정렬의 Windows LCID(로캘 ID)입니다.<br /><br /> 기본 데이터 형식: **int**|  
 |LicenseType|사용되지 않습니다. 라이선스 정보는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 제품에서 보존 또는 유지 관리되지 않습니다. 항상 DISABLED를 반환합니다.<br /><br /> 기본 데이터 형식: **nvarchar(128)**|  
 |MachineName|서버 인스턴스가 실행 중인 Windows 컴퓨터 이름입니다.<br /><br /> Microsoft Cluster Service의 가상 서버에서 실행되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 클러스터형 인스턴스인 경우에는 가상 서버의 이름을 반환합니다.<br /><br /> NULL = 입력이 유효하지 않거나, 오류이거나, 적용 가능하지 않습니다.<br /><br /> 기본 데이터 형식: **nvarchar(128)**|  
 |NumLicenses|사용되지 않습니다. 라이선스 정보는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 제품에서 보존 또는 유지 관리되지 않습니다. 항상 NULL을 반환합니다.<br /><br /> 기본 데이터 형식: **int**|  
 |ProcessID|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스의 프로세스 ID입니다. ProcessID는 인스턴스에 속하는 Sqlservr.exe를 식별하는 데 유용합니다.<br /><br /> NULL = 입력이 유효하지 않거나, 오류이거나, 적용 가능하지 않습니다.<br /><br /> 기본 데이터 형식: **int**|  
-|ProductBuild|**적용 대상**: 2015년 10월부터 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]에 적용됩니다.<br /><br /> 빌드 번호입니다.|  
-|ProductBuildType|**적용 대상**: 2015년 후반부터 업데이트된 현재 버전을 통해 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에 적용됩니다.<br /><br /> 현재 빌드의 빌드 형식입니다.<br /><br /> 다음 중 하나를 반환합니다.<br /><br /> OD = 요청 시 특정 고객을 릴리스합니다.<br /><br /> GDR = Windows 업데이트를 통해 릴리스된 일반 배포 릴리스입니다.<br /><br /> NULL<br />= 해당 사항이 없습니다.|  
+|ProductBuild|**적용 대상**: 2015년 10월부터 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]에 적용됩니다.<br /><br /> 빌드 번호입니다.<br /><br /> 기본 데이터 형식: **nvarchar(128)**|  
+|ProductBuildType|**적용 대상**: 2015년 후반부터 업데이트된 현재 버전을 통해 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에 적용됩니다.<br /><br /> 현재 빌드의 빌드 형식입니다.<br /><br /> 다음 중 하나를 반환합니다.<br /><br /> OD = 요청 시 특정 고객을 릴리스합니다.<br /><br /> GDR = Windows 업데이트를 통해 릴리스된 일반 배포 릴리스입니다.<br /><br /> NULL = 해당 사항 없음<br /><br /> 기본 데이터 형식: **nvarchar(128)**|  
 |ProductLevel|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 버전 수준입니다.<br /><br /> 다음 중 하나를 반환합니다.<br /><br /> 'RTM' = 초기 릴리스 버전<br /><br /> 'SP*n*' = 서비스 팩 버전<br /><br /> 'CTP*n*', = Community Technology Preview 버전<br /><br /> 기본 데이터 형식: **nvarchar(128)**|  
-|ProductMajorVersion|**적용 대상**: 2015년 후반부터 업데이트된 현재 버전을 통해 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에 적용됩니다.<br /><br /> 주 버전|  
-|ProductMinorVersion|**적용 대상**: 2015년 후반부터 업데이트된 현재 버전을 통해 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에 적용됩니다.<br /><br /> 부 버전|  
-|ProductUpdateLevel|**적용 대상**: 2015년 후반부터 업데이트된 현재 버전을 통해 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에 적용됩니다.<br /><br /> 현재 빌드의 업데이트 수준입니다. CU는 누적 업데이트를 나타냅니다.<br /><br /> 다음 중 하나를 반환합니다.<br /><br /> CU*n* = 누적 업데이트<br /><br /> NULL<br />= 해당 사항이 없습니다.|  
-|ProductUpdateReference|**적용 대상**: 2015년 후반부터 업데이트된 현재 버전을 통해 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에 적용됩니다.<br /><br /> 해당 릴리스에 대한 기술 자료 문서입니다.|  
+|ProductMajorVersion|**적용 대상**: 2015년 후반부터 업데이트된 현재 버전을 통해 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에 적용됩니다.<br /><br /> 주 버전<br /><br /> 기본 데이터 형식: **nvarchar(128)**|  
+|ProductMinorVersion|**적용 대상**: 2015년 후반부터 업데이트된 현재 버전을 통해 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에 적용됩니다.<br /><br /> 부 버전<br /><br /> 기본 데이터 형식: **nvarchar(128)**|  
+|ProductUpdateLevel|**적용 대상**: 2015년 후반부터 업데이트된 현재 버전을 통해 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에 적용됩니다.<br /><br /> 현재 빌드의 업데이트 수준입니다. CU는 누적 업데이트를 나타냅니다.<br /><br /> 다음 중 하나를 반환합니다.<br /><br /> CU*n* = 누적 업데이트<br /><br /> NULL = 해당 사항 없음<br /><br /> 기본 데이터 형식: **nvarchar(128)**|  
+|ProductUpdateReference|**적용 대상**: 2015년 후반부터 업데이트된 현재 버전을 통해 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에 적용됩니다.<br /><br /> 해당 릴리스에 대한 기술 자료 문서입니다.<br /><br /> 기본 데이터 형식: **nvarchar(128)**|  
 |ProductVersion|'*major.minor.build.revision*’ 형식의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 버전입니다.<br /><br /> 기본 데이터 형식: **nvarchar(128)**|  
 |ResourceLastUpdateDateTime|리소스 데이터베이스를 마지막으로 업데이트한 날짜와 시간을 반환합니다.<br /><br /> 기본 데이터 형식: **datetime**|  
 |ResourceVersion|리소스 데이터베이스 버전을 반환합니다.<br /><br /> 기본 데이터 형식: **nvarchar(128)**|  
@@ -98,9 +103,7 @@ SERVERPROPERTY ( 'propertyname' )
 |SqlCharSetName|데이터 정렬의 SQL 문자 집합 이름입니다.<br /><br /> 기본 데이터 형식: **nvarchar(128)**|  
 |SqlSortOrder|데이터 정렬의 SQL 정렬 순서 ID입니다.<br /><br /> 기본 데이터 형식: **tinyint**|  
 |SqlSortOrderName|데이터 정렬의 SQL 정렬 순서 이름입니다.<br /><br /> 기본 데이터 형식: **nvarchar(128)**|  
-|FilestreamShareName|FILESTREAM이 사용하는 공유의 이름입니다.<br /><br /> NULL = 입력이 유효하지 않거나, 오류이거나, 적용 가능하지 않습니다.|  
-|FilestreamConfiguredLevel|구성된 FILESTREAM 액세스 수준입니다. 자세한 내용은 [파일 스트림 액세스 수준](../../database-engine/configure-windows/filestream-access-level-server-configuration-option.md)을 참조하세요.|  
-|FilestreamEffectiveLevel|유효한 FILESTREAM 액세스 수준입니다. 수준이 변경되었고 인스턴스 다시 시작이나 컴퓨터 다시 시작이 보류 중인 경우 이 값은 FilestreamConfiguredLevel과 다를 수 있습니다. 자세한 내용은 [파일 스트림 액세스 수준](../../database-engine/configure-windows/filestream-access-level-server-configuration-option.md)을 참조하세요.|  
+ 
   
 ## <a name="return-types"></a>반환 형식  
 
@@ -131,7 +134,7 @@ GO
 
 모든 사용자가 서버 속성을 쿼리할 수 있습니다.
   
-## <a name="examples"></a>예제
+## <a name="examples"></a>예
 
 다음 예에서는 `SELECT` 문에서 `SERVERPROPERTY` 함수를 사용하여 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]의 현재 인스턴스에 대한 정보를 반환합니다.
   

@@ -18,12 +18,12 @@ ms.assetid: f1375fd7-a2fd-48bf-922a-4f778f0deb1f
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 28e5524c0d2359f3edcbe003be366618df00217b
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 7b952b51c6171bf22590403452e7b17899459de0
+ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112086"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87564936"
 ---
 # <a name="concat_ws-transact-sql"></a>CONCAT_WS(Transact-SQL)
 [!INCLUDE [sqlserver2017-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2017-asdb-asdbmi-asa.md)]
@@ -38,11 +38,9 @@ CONCAT_WS ( separator, argument1, argument2 [, argumentN]... )
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>인수
-구분 기호  
-모든 문자 형식(`char`, `nchar`, `nvarchar` 또는 `varchar`)의 식입니다.
+‘구분 기호’ 모든 문자 형식의 식(`char`, `nchar`, `nvarchar` 또는 `varchar`).
 
-argument1, argument2, argument*N*  
-모든 형식의 식입니다.
+‘인수1, 인수2, 인수N’ 모든 형식의 식. `CONCAT_WS` 함수에는 2개 이상, 254개 이하의 인수가 필요합니다.
 
 ## <a name="return-types"></a>반환 형식
 길이와 형식이 입력에 따라 달라지는 문자열 값입니다.

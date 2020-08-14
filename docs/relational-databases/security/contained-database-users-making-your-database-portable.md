@@ -15,12 +15,12 @@ ms.assetid: e57519bb-e7f4-459b-ba2f-fd42865ca91d
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e297be837d954217aa9197494d6734f53d5a6aa0
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: a76bc720df1808290a09e2cec5fad1c0667ae389
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005601"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988792"
 ---
 # <a name="contained-database-users---making-your-database-portable"></a>포함된 데이터베이스 사용자 - 이식 가능한 데이터베이스 만들기
 
@@ -77,7 +77,7 @@ ms.locfileid: "86005601"
 
 ### <a name="managed-instance"></a>관리되는 인스턴스
 
-Azure SQL Database 관리되는 인스턴스는 포함된 데이터베이스의 컨텍스트에서 온-프레미스 SQL Server처럼 동작합니다. 포함된 사용자를 만드는 경우 데이터베이스 컨텍스트를 master 데이터베이스에서 사용자 데이터베이스로 변경해야 합니다. 또한 포함 옵션을 설정할 때 사용자 데이터베이스에 대한 활성 연결이 없어야 합니다. 
+Azure SQL Managed Instance는 포함된 데이터베이스의 컨텍스트에서 온-프레미스 SQL Server처럼 동작합니다. 포함된 사용자를 만드는 경우 데이터베이스 컨텍스트를 master 데이터베이스에서 사용자 데이터베이스로 변경해야 합니다. 또한 포함 옵션을 설정할 때 사용자 데이터베이스에 대한 활성 연결이 없어야 합니다. 
 
 다음은 그 예입니다. 
 

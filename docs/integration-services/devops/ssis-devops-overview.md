@@ -9,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c89ff705077782d0cf8287f0d1bc010ce609cc72
-ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
+ms.openlocfilehash: 29cef6bf700c6d837c77f02e16debe50e1f1a267
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87472479"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823485"
 ---
 # <a name="sql-server-integration-services-ssis-devops-tools"></a>SSIS(SQL Server Integration Services) DevOps 도구
 
@@ -95,7 +95,7 @@ cat log.txt
 
 #### <a name="destination-server"></a>대상 서버
 
-대상 SQL server의 이름입니다. 온-프레미스 SQL Server, Azure SQL Database 또는 Azure SQL Database 관리되는 인스턴스의 이름일 수 있습니다. 이 속성은 대상 유형이 SSISDB인 경우에만 표시됩니다.
+대상 SQL server의 이름입니다. 온-프레미스 SQL Server, Azure SQL Database 또는 Azure SQL Managed Instance의 이름일 수 있습니다. 이 속성은 대상 유형이 SSISDB인 경우에만 표시됩니다.
 
 #### <a name="destination-path"></a>대상 경로
 
@@ -184,7 +184,7 @@ SSIS 카탈로그 구성의 인라인 JSON입니다. 이 속성은 구성 파일
 
 #### <a name="target-server"></a>대상 서버
 
-대상 SQL Server의 이름입니다. 온-프레미스 SQL Server, Azure SQL Database 또는 Azure SQL Database 관리되는 인스턴스의 이름일 수 있습니다.
+대상 SQL Server의 이름입니다. 온-프레미스 SQL Server, Azure SQL Database 또는 Azure SQL Managed Instance의 이름일 수 있습니다.
 
 #### <a name="authentication-type"></a>인증 유형
 

@@ -21,18 +21,18 @@ helpviewer_keywords:
 ms.assetid: 6d09fc8d-843a-4a7a-9812-f093d99d8192
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 59657ae7be557bfd2c9036f2cba84f3019d4cf0a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 41d77ae1b9c0763fedf2e53610bb3a0be5cd185c
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882068"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823938"
 ---
 # <a name="replication-agent-security-model"></a>복제 에이전트 보안 모델
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   복제 에이전트 보안 모델을 사용하여 복제 에이전트를 실행 및 연결하는 계정을 세부적으로 제어할 수 있습니다. 즉, 각 에이전트에 대해 다른 계정을 지정할 수 있습니다. 계정을 지정하는 방법에 대한 자세한 내용은 [복제에 대한 ID 및 액세스 제어](../../../relational-databases/replication/security/identity-and-access-control-replication.md)를 참조하세요.  
 
-에이전트가 실행되는 Windows 계정이 없으므로 복제 에이전트 보안 모델은 Azure SQL Database 관리형 인스턴스에 대해 약간 다릅니다. 대신, SQL Server 인증을 통해 모든 작업을 수행해야 합니다. 
+에이전트가 실행되는 Windows 계정이 없으므로 복제 에이전트 보안 모델은 Azure SQL Managed Instance과는 약간 다릅니다. 대신, SQL Server 인증을 통해 모든 작업을 수행해야 합니다. 
   
 > [!IMPORTANT]  
 >  **sysadmin** 고정 서버 역할의 멤버가 복제를 구성할 경우 복제 에이전트가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트 계정을 가장하도록 구성할 수 있습니다. 이는 복제 에이전트의 로그인과 암호를 지정하여 수행할 수 있지만 이 방법은 사용하지 않는 것이 좋습니다. 대신 이 항목의 뒷부분에 나오는 "에이전트에 필요한 사용 권한" 섹션에서 설명하는 최소 사용 권한이 있는 각 에이전트에 대해 계정을 지정(최상의 보안 방법)하는 것이 좋습니다.  

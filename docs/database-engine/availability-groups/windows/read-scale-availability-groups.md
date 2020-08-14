@@ -1,6 +1,6 @@
 ---
 title: 가용성 그룹이 포함된 읽기-배율 사용
-description: 'Always On 가용성 그룹을 사용하는 경우 읽기-배율을 달성하는 방법에 대한 설명입니다. '
+description: Always On 가용성 그룹을 사용하는 경우 읽기 확장을 수행하는 방법 및 지리적 읽기 확장에 분산 가용성 그룹을 사용하는 방법에 대해 자세히 알아봅니다.
 ms.custom: seodec18
 ms.date: 10/24/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 28d9540c331ac5a250acc24abbd173f7ddf87e5f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 540f02a2b58fff4c2800dfcf16908d53935ed82c
+ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882569"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565562"
 ---
 # <a name="use-read-scale-with-always-on-availability-groups"></a>Always On 가용성 그룹이 포함된 읽기-배율 사용
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

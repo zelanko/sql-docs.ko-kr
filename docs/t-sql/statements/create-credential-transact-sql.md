@@ -24,12 +24,12 @@ ms.assetid: d5e9ae69-41d9-4e46-b13d-404b88a32d9d
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 4690f82c1ae731a25edce6dbe0b36d7b31d448f2
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: 0f87466ebfccaaf69b970386865af68275e83e10
+ms.sourcegitcommit: 95be98587f6a3730ca75a77676dd952c45e4f53a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86392831"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88046668"
 ---
 # <a name="create-credential-transact-sql"></a>CREATE CREDENTIAL(Transact-SQL)
 
@@ -89,7 +89,7 @@ IDENTITY가 Windows 사용자인 경우 암호는 해당 사용자의 암호일 
 
 ## <a name="examples"></a>예제
 
-### <a name="a-basic-example"></a>A. 기본 예
+### <a name="a-creating-a-credential-for-windows-identity"></a>A. Windows ID에 대한 자격 증명 만들기
 
 다음 예에서는 `AlterEgo`라는 자격 증명을 만듭니다. 이 자격 증명에는 Windows 사용자 `Mary5` 및 암호가 들어 있습니다.
 
@@ -145,7 +145,7 @@ EXEC ('CREATE CREDENTIAL Azure_EKM_TDE_cred
 
 ### <a name="d-creating-a-credential-using-a-sas-token"></a>D. SAS 토큰을 사용하여 자격 증명 만들기
 
-**적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]~[현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658) 및 Azure SQL Database 관리형 인스턴스
+**적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]~[현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658) 및 Azure SQL Managed Instance.
 
 다음 예제에서는 SAS 토큰을 사용하여 공유 액세스 서명 자격 증명을 만듭니다. Azure 컨테이너에 저장된 액세스 정책과 공유 액세스 서명을 만든 다음, 공유 액세스 서명을 사용하여 자격 증명을 만드는 방법에 대한 자습서는 [자습서: SQL Server 2016 데이터베이스와 함께 Microsoft Azure Blob 스토리지 서비스 사용](../../relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)에서 참조하세요.
 
@@ -159,6 +159,15 @@ USE master
 CREATE CREDENTIAL [https://<mystorageaccountname>.blob.core.windows.net/<mystorageaccountcontainername>] -- this name must match the container path, start with https and must not contain a trailing forward slash.
     WITH IDENTITY='SHARED ACCESS SIGNATURE' -- this is a mandatory string and do not change it.
     , SECRET = 'sharedaccesssignature' -- this is the shared access signature token
+GO
+```
+
+### <a name="e-creating-a-credential-for-managed-identity"></a>E. 관리 ID에 대한 자격 증명 만들기
+
+다음 예제에서는 Azure SQL 또는 Azure Synapse 서비스의 관리 ID를 나타내는 자격 증명을 만듭니다. 이 경우 암호 및 비밀이 적용되지 않습니다.
+
+```sql
+CREATE CREDENTIAL ServiceIdentity WITH IDENTITY = 'Managed Identity';
 GO
 ```
 

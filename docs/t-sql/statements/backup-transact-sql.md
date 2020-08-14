@@ -46,12 +46,12 @@ ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: e0dc290a3e514d8de7a63a6afb4a0ed6453b6107
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.openlocfilehash: 568a3824405798cf7fc23f9dc0b28f6b43d0fff9
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87332512"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864414"
 ---
 # <a name="backup-transact-sql"></a>BACKUP(Transact-SQL)
 
@@ -70,7 +70,7 @@ SQL 데이터베이스를 백업합니다.
         **_\* SQL Server \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [SQL Database<br />관리되는 인스턴스](backup-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL Database<br />Managed Instance](backup-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Analytics Platform<br />System(PDW)](backup-transact-sql.md?view=aps-pdw-2016)
@@ -941,7 +941,7 @@ WHERE r.command LIKE 'BACKUP%'
         [SQL Server](backup-transact-sql.md?view=sql-server-2016)
     :::column-end:::
     :::column:::
-        **_\* SQL Database<br />관리되는 인스턴스 \*_** &nbsp;
+        **_\* SQL Database<br />Managed Instance \*_** &nbsp;
     :::column-end:::
     :::column:::
         [Analytics Platform<br />System(PDW)](backup-transact-sql.md?view=aps-pdw-2016)
@@ -950,9 +950,9 @@ WHERE r.command LIKE 'BACKUP%'
 
 &nbsp;
 
-## <a name="azure-sql-database-managed-instance"></a>Azure SQL Database Managed Instance
+## <a name="azure-sql-managed-instance"></a>Azure SQL Managed Instance
 
-Azure SQL Database 관리되는 인스턴스에 배치/호스트되는 SQL 데이터베이스를 백업합니다. SQL Database [관리되는 인스턴스](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)를 사용하면 자동으로 백업되고 사용자가 전체 데이터베이스 `COPY_ONLY` 백업을 만들 수 있습니다. 차등, 로그 및 파일 스냅샷 백업은 지원되지 않습니다.
+Azure SQL Managed Instance에 배치/호스트되는 SQL 데이터베이스를 백업합니다. SQL [Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)에는 자동 백업이 있으며, 사용자가 전체 데이터베이스 `COPY_ONLY` 백업을 만들 수 있습니다. 차등, 로그 및 파일 스냅샷 백업은 지원되지 않습니다.
 
 ## <a name="syntax"></a>구문
 
@@ -990,12 +990,12 @@ BACKUP DATABASE { database_name | @database_name_var }
 
 ## <a name="arguments"></a>인수
 
-DATABASE 전체 데이터베이스 백업을 지정합니다. 데이터베이스 백업 중에 관리되는 인스턴스는 백업을 복원할 때 일관성 있는 데이터베이스를 생성하기 위해 충분한 트랜잭션 로그를 백업합니다.
+DATABASE 전체 데이터베이스 백업을 지정합니다. 데이터베이스 백업 중에 Azure SQL Managed Instance는 백업을 복원할 때 일관성 있는 데이터베이스를 생성하기 위해 충분한 트랜잭션 로그를 백업합니다.
 
 > [!IMPORTANT]
-> 관리되는 인스턴스에서 생성된 데이터베이스 백업은 다른 관리되는 인스턴스에서만 복원할 수 있습니다. SQL Server 온-프레미스 인스턴스로 복원할 수 없습니다(SQL Server 2016 데이터베이스의 백업을 SQL Server 2012 인스턴스로 복원할 수 없는 방식과 비슷함).
+> Azure SQL Managed Instance에서 생성된 데이터베이스 백업은 다른 관리되는 인스턴스에서만 복원할 수 있습니다. SQL Server 온-프레미스 인스턴스로 복원할 수 없습니다(SQL Server 2016 데이터베이스의 백업을 SQL Server 2012 인스턴스로 복원할 수 없는 방식과 비슷함).
 
-BACKUP DATABASE(데이터베이스 백업)로 만든 백업을 복원하면 전체 백업이 복원됩니다. Azure SQL Database 관리형 인스턴스 자동 백업에서 복원하려면 [관리형 인스턴스로 데이터베이스 복원](/azure/sql-database/sql-database-managed-instance-get-started-restore)을 참조하세요.
+BACKUP DATABASE(데이터베이스 백업)로 만든 백업을 복원하면 전체 백업이 복원됩니다. SQL Managed Instance 자동 백업에서 복원하려면 [관리되는 인스턴스로 데이터베이스 복원](/azure/sql-database/sql-database-managed-instance-get-started-restore)을 참조하세요.
 
 { *database_name* |  **@** _database\_name\_var_ } 전체 데이터베이스를 백업하는 데이터베이스입니다. 변수( **@** _database\_name\_var_)로 제공된 경우, 이 이름은 문자열 상수( **@** _database\_name\_var_ **=** _database name_)나 **ntext** 또는 **text** 데이터 형식을 제외한 문자열 데이터 형식의 변수로 지정할 수 있습니다.
 
@@ -1097,7 +1097,7 @@ STATS [ **=** _percentage_ ] 새로 *percentage*가 완료될 때마다 메시�
 
 STATS 옵션은 다음 간격을 보고할 임계값에 도달한 시점까지의 완료 백분율을 보고합니다. 간격은 지정된 비율을 대략적으로 나타냅니다. 예를 들어 STATS=10인 경우 완료된 크기가 40%이면 옵션은 43%를 표시할 수 있습니다. 대용량 백업 세트의 경우 완료 백분율이 완료된 I/O 호출 간에 매우 느리게 진행되므로 문제가 되지 않습니다.
 
-## <a name="limitations-for-sql-database-managed-instance"></a>SQL Database 관리되는 인스턴스의 제한 사항
+## <a name="limitations-for-sql-managed-instance"></a>SQL Managed Instance 제한 사항
 
 최대 백업 스트라이프 크기는 195GB(최대 blob 크기)입니다. 개별 스트라이프 크기를 줄이고 이 제한 내로 유지하려면 백업 명령에서 스트라이프 수를 늘립니다.
 
@@ -1131,7 +1131,7 @@ WITH STATS = 5, COPY_ONLY;
         [SQL Server](backup-transact-sql.md?view=sql-server-2016)
     :::column-end:::
     :::column:::
-        [SQL Database<br />관리되는 인스턴스](backup-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL Database<br />Managed Instance](backup-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         **_\* Analytics<br />Platform System(PDW) \*_** &nbsp;
@@ -1208,7 +1208,7 @@ DIFFERENTIAL 사용자 데이터베이스의 차등 백업을 수행하도록 �
 
 **db_backupoperator** 고정 데이터베이스 역할에서 **BACKUP DATABASE** 권한 또는 멤버 자격이 필요합니다. master 데이터베이스는 백업할 수 없지만 **db_backupoperator** 고정 데이터베이스 역할에 추가된 일반 사용자의 경우 할 수 있습니다. master 데이터베이스는 **sa**, 패브릭 관리자 또는 **sysadmin** 고정 서버 역할을 하는 멤버만이 백업할 수 있습니다.
 
-백업 디렉토리에 액세스하고, 만들고, 쓸 수 있는 권한이 있는 Windows 계정이 필요합니다. 또한 Windows 계정 이름 및 암호를 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에 저장해야 합니다. 이러한 네트워크 자격 증명을 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에 추가하려면 [sp_pdw_add_network_credentials - SQL Data Warehouse](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md) 저장 프로시저를 사용합니다.
+백업 디렉토리에 액세스하고, 만들고, 쓸 수 있는 권한이 있는 Windows 계정이 필요합니다. 또한 Windows 계정 이름 및 암호를 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에 저장해야 합니다. 이 네트워크 자격 증명을 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에 추가하려면 [sp_pdw_add_network_credentials - SQL Data Warehouse](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md) 저장 프로시저를 사용합니다.
 
 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에서의 자격 증명 관리에 대한 자세한 내용은 [보안](#Security) 섹션을 참조하세요.
 
@@ -1359,6 +1359,6 @@ WITH (
 
 ## <a name="see-also"></a>참고 항목
 
-[RESTORE DATABASE - 병렬 데이터 웨어하우스](../../t-sql/statements/restore-statements-transact-sql.md)
+[RESTORE DATABASE -병렬 데이터 웨어하우스](../../t-sql/statements/restore-statements-transact-sql.md)
 
 ::: moniker-end

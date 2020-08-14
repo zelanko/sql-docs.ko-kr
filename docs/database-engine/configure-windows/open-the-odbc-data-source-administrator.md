@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7d475d33-a776-4776-a174-2c8a4acd476f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 86a7cc5f6a52b0492ceb45a65a4a68c6a0109c3d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1704438e867c5ab0610230f3e64567ea52024921
+ms.sourcegitcommit: 6ab28d954f3a63168463321a8bc6ecced099b247
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85696727"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87790376"
 ---
 # <a name="open-the-odbc-data-source-administrator"></a>ODBC 데이터 원본 관리자 열기
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "85696727"
 
 
 > [!NOTE]  
->  SQL 데이터베이스용 Azure Active Directory 인증에 연결하려면 [SQL Server용 ODBC 드라이버 13.1](https://www.microsoft.com/download/details.aspx?id=53339)과 같은 최신 드라이버를 설치합니다.   
+> SQL Database용 Azure Active Directory 인증에 연결하려면 [SQL Server용 ODBC 드라이버 17](https://aka.ms/downloadmsodbcsql)과 같은 최신 드라이버를 설치합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [ODBC SQL Server 드라이버 버전 검사&#40;Windows&#41;](../../database-engine/configure-windows/check-the-odbc-sql-server-driver-version-windows.md)  

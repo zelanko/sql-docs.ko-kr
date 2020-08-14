@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: a801c619-611b-4e82-a8d8-d1e01691b7a1
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1e3f26672d208d848a2cf76707fb92d7b72d5e11
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 211b16d4b03439295c4970449ef61855c09addc4
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85776006"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988553"
 ---
 # <a name="enroll-an-instance-of-sql-server-sql-server-utility"></a>SQL Server 인스턴스 등록(SQL Server 유틸리티)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "85776006"
   
 -   UCP 및 모든 SQL Server의 관리되는 인스턴스에 대한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 계정에는 Active Directory의 사용자에 대한 읽기 권한이 있어야 합니다.  
   
--   등록할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스는 SQL Azure일 수 없습니다.  
+-   등록할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스는 Azure SQL Database일 수 없습니다.  
   
  이 릴리스에서 UCP는 다음 요구 사항을 충족해야 합니다.  
   

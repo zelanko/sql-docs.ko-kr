@@ -1,6 +1,6 @@
 ---
 title: 가용성 복제본이 가용성 그룹에 조인되어 있지 않음
-description: 복제본이 Always On 가용성 그룹에 조인되지 않은 이유의 가능한 원인을 식별합니다.
+description: 복제본이 Always On 가용성 그룹에 조인되지 않은 이유의 가능한 원인을 식별하는 방법을 알아봅니다.
 ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9c0d10b1-9e12-430c-83b9-ca2bd0a3afc4
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a0902212b2f1ab8cf7d7c16c1d1e0c811b6d6b78
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b76cf1afa8ff38fb94d453d09decda2521ab79a3
+ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896191"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565331"
 ---
 # <a name="availability-replica-is-not-joined-to-an-always-on-availability-group"></a>가용성 복제본이 Always On 가용성 그룹에 조인되어 있지 않음
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

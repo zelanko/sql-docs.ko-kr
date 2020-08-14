@@ -1,6 +1,6 @@
 ---
 title: 가용성 그룹에 포함된 데이터베이스 사용
-description: Always On 가용성 그룹에 포함된 데이터베이스를 사용하는 방법
+description: SQL Server 2019(15.x)에서 Always On 가용성 그룹을 포함하는 포함된 데이터베이스를 사용하는 방법에 대해 알아봅니다.
 ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: cacce3ae-e940-4566-8298-6607c4268e74
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 58bbe0be8b2e139327605e674c580b7520b32af9
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 26518e529c02018c43a08d4e0597aa7fe7507359
+ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893191"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565287"
 ---
 # <a name="use-contained-databases-with-always-on-availability-groups"></a>Always On 가용성 그룹에 포함된 데이터베이스 사용 
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

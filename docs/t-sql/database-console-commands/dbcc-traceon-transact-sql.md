@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 93085324-ebaa-4e38-aac8-5e57b4b0d36d
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: c1bf9d7182e7547a69e7b5cd634c07ff2130c9cc
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: e3058e60f1ff0ed5ab519cf1ef5873df27faa075
+ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485561"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87877863"
 ---
 # <a name="dbcc-traceon-transact-sql"></a>DBCC TRACEON(Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -64,7 +64,7 @@ WITH NO_INFOMSGS
   
 쿼리 계획에 영향을 주는 추적 플래그를 켠 후, 새 계획에 영향을 주는 동작을 사용하여 캐시된 계획이 다시 컴파일되도록 `DBCC FREEPROCCACHE;`를 실행합니다.
 
-Azure SQL Database Managed Instance는 전역 추적 플래그 460,2301,2389,2390,2453,2467,7471,8207,9389,10316 및 11024를 지원합니다.
+Azure SQL Managed Instance는 전역 추적 플래그 460,2301,2389,2390,2453,2467,7471,8207,9389,10316 및 11024를 지원합니다.
 
 ## <a name="result-sets"></a>결과 집합  
  DBCC TRACEON은 다음 결과 집합(메시지)을 반환합니다.  

@@ -16,12 +16,12 @@ ms.assetid: f82d6918-a5a7-4af8-868e-4247f5b00c52
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: eef7e0322edef41e7b5b12b53a0fe52a818f6be4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: acaf5441ee5ca80468d6795071f99979ac3bcda9
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718113"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87863384"
 ---
 # <a name="copy-only-backups"></a>복사 전용 백업
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "85718113"
  복사 전용 백업은 **backupset** 테이블의 [is_copy_only](../../relational-databases/system-tables/backupset-transact-sql.md) 열에 기록됩니다.  
  
  > [!IMPORTANT]  
-> [서비스 관리형 TDE(투명한 데이터 암호화)](https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-azure-sql?tabs=azure-portal#service-managed-transparent-data-encryption)로 암호화된 데이터베이스의 경우 Azure SQL 관리형 인스턴스 복사 전용 백업을 만들 수 없습니다. 서비스 관리형 TDE는 데이터 암호화에 내부 키를 사용하며, 해당 키를 내보낼 수 없으므로 다른 위치에서 백업을 복원할 수 없습니다. [고객 관리형 TDE](https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql)를 대신 사용하여 암호화된 데이터베이스의 복사 전용 백업을 만들 수는 있지만, 나중에 복원하는 데 사용할 수 있는 암호화 키가 있어야 합니다.
+> [서비스 관리형 TDE(투명한 데이터 암호화)](https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-azure-sql?tabs=azure-portal#service-managed-transparent-data-encryption)로 암호화된 데이터베이스의 경우 Azure SQL Managed Instance 복사 전용 백업을 만들 수 없습니다. 서비스 관리형 TDE는 데이터 암호화에 내부 키를 사용하며, 해당 키를 내보낼 수 없으므로 다른 위치에서 백업을 복원할 수 없습니다. [고객 관리형 TDE](https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql)를 대신 사용하여 암호화된 데이터베이스의 복사 전용 백업을 만들 수는 있지만, 나중에 복원하는 데 사용할 수 있는 암호화 키가 있어야 합니다.
   
 ## <a name="to-create-a-copy-only-backup"></a>복사 전용 백업을 만들려면  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]또는 PowerShell을 사용하여 복사 전용 백업을 만들 수 있습니다.  

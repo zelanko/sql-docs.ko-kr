@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: fc5daa2f-0159-4bda-9402-c87f1035a96f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 13248409cca973de00f0ee04f6fcb22e020f64fd
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 2e12c6d57b9505bfefaae5c7fae87e03375c4e9d
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918604"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864670"
 ---
 # <a name="adonet-connection-manager"></a>ADO.NET 연결 관리자
 
@@ -85,10 +85,10 @@ ms.locfileid: "86918604"
 연결을 선택한 다음 **삭제**를 선택하여 삭제합니다.  
   
 #### <a name="managed-identities-for-azure-resources-authentication"></a>Azure 리소스 인증을 위한 관리 ID
-[Azure Data Factory의 Azure-SSIS 통합 런타임](https://docs.microsoft.com/azure/data-factory/concepts-integration-runtime#azure-ssis-integration-runtime)에 대해 SSIS 패키지를 실행하는 경우 Azure SQL Database(또는 관리되는 인스턴스) 인증을 위해 데이터 팩터리와 연결된 [관리 ID](https://docs.microsoft.com/azure/data-factory/connector-azure-sql-database#managed-identity)를 사용할 수 있습니다. 지정된 팩터리는 이 ID를 사용하여 데이터베이스에 액세스하고 해당 데이터베이스에 대해 데이터를 복사할 수 있습니다.
+[Azure Data Factory의 Azure-SSIS Integration Runtime](https://docs.microsoft.com/azure/data-factory/concepts-integration-runtime#azure-ssis-integration-runtime)에 대해 SSIS 패키지를 실행하는 경우 Azure SQL Database 또는 Azure SQL Managed Instance 인증을 위해 데이터 팩터리와 연결된 [관리 ID](https://docs.microsoft.com/azure/data-factory/connector-azure-sql-database#managed-identity)를 사용할 수 있습니다. 지정된 팩터리는 이 ID를 사용하여 데이터베이스에 액세스하고 해당 데이터베이스에 대해 데이터를 복사할 수 있습니다.
 
 > [!NOTE]
->  Azure Active Directory(Azure AD) 인증(관리 ID 인증 포함)을 사용하여 Azure SQL Database(또는 관리되는 인스턴스)에 연결하는 경우 패키지 실행 실패 또는 예기치 않은 동작 변경과 관련된 문제가 발생할 수 있습니다. 자세한 내용은 [Azure AD 기능 및 제한 사항](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication#azure-ad-features-and-limitations)을 참조하세요.
+>  Azure AD(Active Directory) 인증(관리 ID 인증 포함)을 사용하여 Azure SQL Database 또는 Azure SQL Managed Instance에 연결하는 경우 패키지 실행 실패 또는 예기치 않은 동작 변경과 관련된 문제가 발생할 수 있습니다. 자세한 내용은 [Azure AD 기능 및 제한 사항](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication#azure-ad-features-and-limitations)을 참조하세요.
 
 Azure SQL Database에 대해 관리 ID 인증을 사용하려면 아래 단계를 수행하여 데이터베이스를 구성합니다.
 
@@ -106,7 +106,7 @@ Azure SQL Database에 대해 관리 ID 인증을 사용하려면 아래 단계�
     EXEC sp_addrolemember [role name], [your data factory name];
     ```
 
-Azure SQL Database Managed Instance에 관리 ID 인증을 사용하려면 아래 단계를 수행하여 데이터베이스를 구성합니다.
+Azure SQL Managed Instance에 관리 ID 인증을 사용하려면 아래 단계를 수행하여 데이터베이스를 구성합니다.
     
 1. 아직 수행하지 않은 경우 Azure Portal에서 관리되는 인스턴스에 대해 [Azure Active Directory 관리자를 프로비전](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure#provision-an-azure-active-directory-administrator-for-your-managed-instance)합니다. Azure AD 관리자는 Azure AD 사용자 또는 Azure AD 그룹이 될 수 있습니다. 관리 ID를 가진 그룹에 관리자 역할을 부여하는 경우 2~4단계를 건너뛰세요. 관리자는 데이터베이스에 대한 전체 액세스 권한을 가집니다.
 

@@ -20,12 +20,12 @@ ms.assetid: 63426d31-7a5c-4378-aa9e-afcf4f64ceb3
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 8f61833c4c532056d7af9980360e04e9d124854d
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+ms.openlocfilehash: 34a467f81612e88e15b45c055650c961493357dd
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86381297"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823516"
 ---
 # <a name="alter-server-audit--transact-sql"></a>ALTER SERVER AUDIT(Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -81,7 +81,7 @@ ALTER SERVER AUDIT audit_name
  감사 대상의 위치를 결정합니다. 이 옵션은 이진 파일, Windows 애플리케이션 로그 또는 Windows 보안 로그가 될 수 있습니다.  
 
 > [!IMPORTANT]
-> Azure SQL Database 관리되는 인스턴스에서 SQL Audit은 서버 수준에서 작동하며 Azure Blob Storage에 `.xel` 파일을 저장합니다.
+> Azure SQL Managed Instance에서 SQL Audit는 서버 수준에서 작동하며 Azure Blob Storage에 `.xel` 파일을 저장합니다.
   
  FILEPATH **= ‘** _os\_파일\_경로_ **’**  
  감사 내역의 경로입니다. 파일 이름은 감사 이름과 감사 GUID를 기준으로 생성됩니다.  

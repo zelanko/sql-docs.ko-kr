@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1409125ca324117a3b7bba1792ff0a3f3361fe05
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6835fbc893b45214cf8ea6f7b6a02d8f1e1df773
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85768079"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988741"
 ---
 # <a name="sql-server-backup-to-url"></a>URL에 대한 SQL Server 백업
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "85768079"
 - 프록시 서버를 통해 페이지 Blob에 백업해야 하는 고객은 backuptourl.exe를 사용해야 합니다. 
 
 
-Blob Storage에 대용량 데이터베이스를 백업하는 경우에는 [관리되는 인스턴스 T-SQL 차이점, 제한 사항 및 알려진 문제](/azure/sql-database/sql-database-managed-instance-transact-sql-information#backup)에 나열된 제한 사항이 적용됩니다.
+Blob Storage에 대용량 데이터베이스를 백업하는 경우에는 [Managed Instance T-SQL 차이점, 제한 사항 및 알려진 문제](/azure/sql-database/sql-database-managed-instance-transact-sql-information#backup)에 나열된 제한 사항이 적용됩니다.
 
  데이터베이스가 너무 크면 다음 중 하나를 수행합니다.
 - 백업 압축 사용 또는

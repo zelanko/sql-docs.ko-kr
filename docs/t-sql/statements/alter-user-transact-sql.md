@@ -25,12 +25,12 @@ ms.assetid: 344fc6ce-a008-47c8-a02e-47fae66cc590
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f6e25763f585f063eeb25fd512b65a3e51c070e5
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 5626b98f81bcca2a21902cf0d38f44a256fa73e0
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394668"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988450"
 ---
 # <a name="alter-user-transact-sql"></a>ALTER USER(Transact-SQL)
 
@@ -47,10 +47,10 @@ ms.locfileid: "87394668"
         **_\* SQL Server \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [SQL Database<br />단일 데이터베이스/탄력적 풀](alter-user-transact-sql.md?view=azuresqldb-current)
+        [SQL 데이터베이스](alter-user-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [SQL Database<br />관리되는 인스턴스](alter-user-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL Database<br />Managed Instance](alter-user-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-user-transact-sql.md?view=azure-sqldw-latest)
@@ -222,10 +222,10 @@ GO
         [SQL Server](alter-user-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        **_\*SQL Database<br />단일 데이터베이스/탄력적 풀\*_**
+        **_\* SQL Database \*_**
     :::column-end:::
     :::column:::
-        [SQL Database<br />관리되는 인스턴스](alter-user-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL Database<br />Managed Instance](alter-user-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-user-transact-sql.md?view=azure-sqldw-latest)
@@ -237,7 +237,7 @@ GO
 
 &nbsp;
 
-## <a name="azure-sql-database-single-databaseelastic-pool"></a>Azure SQL Database 단일 데이터베이스/탄력적 풀
+## <a name="sql-database"></a>SQL Database
 
 ## <a name="syntax"></a>구문
 
@@ -407,10 +407,10 @@ GO
         [SQL Server](alter-user-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [SQL Database<br />단일 데이터베이스/탄력적 풀](alter-user-transact-sql.md?view=azuresqldb-current)
+        [SQL 데이터베이스](alter-user-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        **_\* SQL Database<br />관리되는 인스턴스 \*_**
+        **_\* SQL Database<br />Managed Instance \*_**
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-user-transact-sql.md?view=azure-sqldw-latest)
@@ -422,16 +422,16 @@ GO
 
 &nbsp;
 
-## <a name="azure-sql-database-managed-instance"></a>Azure SQL Database Managed Instance
+## <a name="azure-sql-managed-instance"></a>Azure SQL Managed Instance
 
 ## <a name="syntax"></a>구문
 
 > [!IMPORTANT]
-> Azure AD 로그인을 사용하는 사용자에게 적용하는 경우 Azure SQL Database 관리되는 인스턴스에 대해 `DEFAULT_SCHEMA = { schemaName | NULL }` 및 `DEFAULT_LANGUAGE = { NONE | lcid | language name | language alias }` 옵션만 지원됩니다.
-> </br> </br> 관리되는 인스턴스로 마이그레이션된 데이터베이스의 사용자를 다시 매핑하는 데 도움이 되는 새로운 구문 확장이 추가되었습니다. ALTER USER 구문은 Azure AD와 페더레이션 및 동기화된 도메인의 데이터베이스 사용자를 Azure AD 로그인에 매핑하는 데 도움이 됩니다.
+> Azure AD 로그인을 사용하는 사용자에게 적용하는 경우 Azure SQL Managed Instance에 대해 `DEFAULT_SCHEMA = { schemaName | NULL }` 및 `DEFAULT_LANGUAGE = { NONE | lcid | language name | language alias }` 옵션만 지원됩니다.
+> </br> </br> Azure SQL Managed Instance로 마이그레이션된 데이터베이스의 사용자를 다시 매핑하는 데 도움이 되는 새로운 구문 확장이 추가되었습니다. ALTER USER 구문은 Azure AD와 페더레이션 및 동기화된 도메인의 데이터베이스 사용자를 Azure AD 로그인에 매핑하는 데 도움이 됩니다.
 
 ```syntaxsql
--- Syntax for Azure SQL Database managed instance
+-- Syntax for SQL Managed Instance
 ALTER USER userName
  { WITH <set_item> [ ,...n ] | FROM EXTERNAL PROVIDER }
 [;]
@@ -521,7 +521,7 @@ ALTER USER userName
  WITH LOGIN 절을 사용하면 사용자를 다른 로그인으로 다시 매핑할 수 있습니다. 로그인이 없는 사용자, 인증서로 매핑된 사용자 또는 비대칭 키에 매핑된 사용자는 이 절을 사용하여 다시 매핑할 수 없습니다. SQL 사용자 및 Windows 사용자(또는 그룹)만 다시 매핑할 수 있습니다. WITH LOGIN 절은 Windows 계정을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인으로 변경하는 것과 같이 사용자 유형을 변경하는 데는 사용할 수 없습니다. 유일한 예외는 Windows 사용자를 Azure AD 사용자로 변경하는 경우뿐입니다.
 
 > [!NOTE]
-> 관리되는 인스턴스에서 Windows 로그인 만들기를 지원하지 않으므로 다음 규칙은 관리되는 인스턴스의 Windows 사용자에게는 적용되지 않습니다. WITH LOGIN 옵션은 Azure AD 로그인이 있는 경우에만 사용할 수 있습니다.
+> Azure SQL Managed Instance에서 Windows 로그인 만들기를 지원하지 않으므로 다음 규칙은 Azure SQL Managed Instance의 Windows 사용자에게는 적용되지 않습니다. WITH LOGIN 옵션은 Azure AD 로그인이 있는 경우에만 사용할 수 있습니다.
 
  다음 조건이 충족되면 사용자 이름이 로그인 이름으로 자동 변경됩니다.
 
@@ -540,21 +540,21 @@ ALTER USER userName
 > [!CAUTION]
 > [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]
 
-### <a name="remarks-for-windows-users-in-sql-on-premises-migrated-to-managed-instance"></a>관리되는 인스턴스로 마이그레이션된 SQL 온-프레미스의 Windows 사용자에 대한 주의 사항
+### <a name="remarks-for-windows-users-in-sql-on-premises-migrated-to-azure-sql-managed-instance"></a>Azure SQL Managed Instance로 마이그레이션된 SQL 온-프레미스의 Windows 사용자에 대한 주의 사항
 
 이러한 주의 사항은 Azure AD와 페더레이션 및 동기화된 Windows 사용자로 인증하는 데 적용됩니다.
 
 > [!NOTE]
-> 생성 후 관리형 인스턴스 기능에 대한 Azure AD 관리자가 변경되었습니다. 자세한 내용은 [MI의 새 Azure AD 관리자 기능](/azure/sql-database/sql-database-aad-authentication-configure#new-azure-ad-admin-functionality-for-mi)을 참조하세요.
+> 생성 후 Azure SQL Managed Instance 기능의 Azure AD 관리자가 변경되었습니다. 자세한 내용은 [MI의 새 Azure AD 관리자 기능](/azure/sql-database/sql-database-aad-authentication-configure#new-azure-ad-admin-functionality-for-mi)을 참조하세요.
 
 - Azure AD에 매핑되는 Windows 사용자 또는 그룹의 유효성 검사는 기본적으로 마이그레이션 목적에 사용되는 모든 버전의 ALTER USER 구문에서 Graph API를 통해 수행됩니다.
 - 별칭이 지정된 온-프레미스 사용자(원래 Windows 계정에서 다른 이름을 사용)는 별칭이 지정된 이름을 유지합니다.
-- Azure AD 인증의 경우 LOGIN 매개 변수는 관리되는 인스턴스에만 적용되며 SQL DB에서 사용할 수 없습니다.
+- Azure AD 인증의 경우 LOGIN 매개 변수는 Azure SQL Managed Instance에만 적용되며 SQL Database에서 사용할 수 없습니다.
 - Azure AD 보안 주체에 대한 로그인을 보려면 다음 명령을 사용합니다. `select * from sys.server_principals`.
 - 로그인의 지정된 형식이 `E` 또는 `X`인지 확인합니다.
 - Azure AD 사용자에 대해 PASSWORD 옵션을 사용할 수 없습니다.
 - 모든 마이그레이션 사례에서 Windows 사용자 또는 그룹의 역할 및 권한이 자동으로 새 Azure AD 사용자 또는 그룹으로 이전됩니다.
-- 새 구문 확장 **FROM EXTERNAL PROVIDER**은 SQL 온-프레미스의 Windows 사용자 및 그룹을 Azure AD 사용자 및 그룹으로 변경하는 데 사용할 수 있습니다. 이 확장을 사용하는 경우 Windows 도메인이 Azure AD와 페더레이션되어 있어야 하며 모든 Windows 도메인 구성원이 Azure AD에 있어야 합니다. **FROM EXTERNAL PROVIDER** 구문은 관리되는 인스턴스에 적용되며 Windows 사용자가 원래 SQL 인스턴스에 대한 로그인이 없고 독립 실행형 Azure AD 데이터베이스 사용자에 매핑되어야 하는 경우에 사용해야 합니다.
+- 새 구문 확장 **FROM EXTERNAL PROVIDER**은 SQL 온-프레미스의 Windows 사용자 및 그룹을 Azure AD 사용자 및 그룹으로 변경하는 데 사용할 수 있습니다. 이 확장을 사용하는 경우 Windows 도메인이 Azure AD와 페더레이션되어 있어야 하며 모든 Windows 도메인 구성원이 Azure AD에 있어야 합니다. **FROM EXTERNAL PROVIDER** 구문은 Azure SQL Managed Instance에 적용되며 Windows 사용자가 원래 SQL 인스턴스에 대한 로그인이 없고 독립 실행형 Azure AD 데이터베이스 사용자에 매핑되어야 하는 경우에 사용해야 합니다.
 - 이 경우 허용되는 사용자 이름은 다음과 같습니다.
 - Widows 사용자(_domain\user_).
 - Windows 그룹(_MyWidnowsGroup_).
@@ -628,13 +628,13 @@ GO
 
 ### <a name="d-map-the-user-in-the-database-to-an-azure-ad-login-after-migration"></a>D. 마이그레이션 후 데이터베이스의 사용자를 Azure AD 로그인에 매핑
 
-다음 예제에서는 사용자 `westus/joe`를 Azure AD 사용자 `joe@westus.com`에 다시 매핑합니다. 이 예제는 관리되는 인스턴스에 이미 있는 로그인에 대한 것입니다. 관리되는 인스턴스로 데이터베이스 마이그레이션을 완료하고 Azure AD 로그인을 사용하여 인증하려는 경우에 이를 수행해야 합니다.
+다음 예제에서는 사용자 `westus/joe`를 Azure AD 사용자 `joe@westus.com`에 다시 매핑합니다. 이 예제는 관리되는 인스턴스에 이미 있는 로그인에 대한 것입니다. Azure SQL Managed Instance로 데이터베이스 마이그레이션을 완료하고 Azure AD 로그인을 사용하여 인증하려는 경우에 이를 수행해야 합니다.
 
 ```sql
 ALTER USER [westus/joe] WITH LOGIN = joe@westus.com
 ```
 
-### <a name="e-map-an-old-windows-user-in-the-database-without-a-login-in-managed-instance-to-an-azure-ad-user"></a>E. 관리되는 인스턴스 로그인이 없는 데이터베이스의 기존 Windows 사용자를 Azure AD 사용자에게 매핑
+### <a name="e-map-an-old-windows-user-in-the-database-without-a-login-in-azure-sql-managed-instance-to-an-azure-ad-user"></a>E. Azure SQL Managed Instance 로그인이 없는 데이터베이스의 기존 Windows 사용자를 Azure AD 사용자에게 매핑
 
 다음 예제에서는 로그인이 없는 사용자 `westus/joe`를 Azure AD 사용자 `joe@westus.com`에 다시 매핑합니다. 페더레이션된 사용자가 Azure AD에 있어야 합니다.
 
@@ -650,7 +650,7 @@ ALTER USER [westus/joe] FROM EXTERNAL PROVIDER
 ALTER USER [westus/joe] WITH LOGIN = joe@westus.com, name= joe_alias
 ```
 
-### <a name="g-map-a-windows-group-that-was-migrated-in-managed-instance-to-an-azure-ad-group"></a>G. 관리되는 인스턴스에서 마이그레이션된 Windows 그룹을 Azure AD 그룹에 매핑
+### <a name="g-map-a-windows-group-that-was-migrated-in-azure-sql-managed-instance-to-an-azure-ad-group"></a>G. Azure SQL Managed Instance에서 마이그레이션된 Windows 그룹을 Azure AD 그룹에 매핑
 
 다음 예제에서는 기존 온-프레미스 그룹 `westus\mygroup`을 관리되는 인스턴스의 Azure AD 그룹 `mygroup`에 다시 매핑합니다. 그룹이 Azure AD에 있어야 합니다.
 
@@ -665,7 +665,7 @@ ALTER USER [westus\mygroup] WITH LOGIN = mygroup
 - [포함된 데이터베이스](../../relational-databases/databases/contained-databases.md)
 - [EVENTDATA&#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)
 - [sp_migrate_user_to_contained &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md)
-- [자습서: T-SQL DDL 구문을 사용하여 SQL Server 온-프레미스 Windows 사용자 및 그룹을 Azure SQL Database 관리되는 인스턴스로 마이그레이션](/azure/sql-database/tutorial-managed-instance-azure-active-directory-migration)
+- [자습서: T-SQL DDL 구문을 사용하여 SQL Server 온-프레미스 Windows 사용자 및 그룹을 SQL Managed Instance로 마이그레이션](/azure/sql-database/tutorial-managed-instance-azure-active-directory-migration)
 
 ::: moniker-end
 ::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
@@ -675,10 +675,10 @@ ALTER USER [westus\mygroup] WITH LOGIN = mygroup
         [SQL Server](alter-user-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [SQL Database<br />단일 데이터베이스/탄력적 풀](alter-user-transact-sql.md?view=azuresqldb-current)
+        [SQL 데이터베이스](alter-user-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [SQL Database<br />관리되는 인스턴스](alter-user-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL Database<br />Managed Instance](alter-user-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         **_\* Azure Synapse<br />Analytics \*_**
@@ -800,10 +800,10 @@ GO
         [SQL Server](alter-user-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [SQL Database<br />단일 데이터베이스/탄력적 풀](alter-user-transact-sql.md?view=azuresqldb-current)
+        [SQL 데이터베이스](alter-user-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [SQL Database<br />관리되는 인스턴스](alter-user-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL Database<br />Managed Instance](alter-user-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-user-transact-sql.md?view=azure-sqldw-latest)

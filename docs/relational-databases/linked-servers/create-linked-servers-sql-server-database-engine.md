@@ -17,12 +17,12 @@ ms.assetid: 3228065d-de8f-4ece-a9b1-e06d3dca9310
 author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
-ms.openlocfilehash: e4252d018df169f6fac238b4cb0b39991f9c8996
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e1bb0bc0ec1b16af3882880ac1d528a8c7907994
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85719039"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823753"
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>연결된 서버 만들기(SQL Server 데이터베이스 엔진)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -99,7 +99,7 @@ ms.locfileid: "85719039"
      원격 사용자를 사용하여 **로컬 로그인**에 정의되어 있지 않은 사용자를 매핑합니다. **원격 사용자** 는 원격 서버에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증 로그인이어야 합니다.  
 
     > [!WARNING]
-    > Azure SQL Database 관리형 인스턴스 배포에서는 SQL Server 사용자만 “원격 사용자”로 사용할 수 있습니다.  
+    > Managed Instance 배포에서는 SQL Server 사용자만 “원격 사용자”로 사용할 수 있습니다.  
 
      **원격 암호**  
      원격 사용자의 암호를 지정합니다.  

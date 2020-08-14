@@ -1,6 +1,6 @@
 ---
 title: 분산 가용성 그룹 구성
-description: 'Always On 분산 가용성 그룹을 만들고 구성하는 방법을 설명합니다. '
+description: Transact-SQL 예제를 사용하여 분산 가용성 그룹을 구성하는 방법에 대해 알아봅니다. 또한 분산 가용성 그룹에 대한 정보를 어디에서 찾을 수 있는지 알아봅니다.
 ms.custom: seodec18
 ms.date: 01/28/2020
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: f7c7acc5-a350-4a17-95e1-e689c78a0900
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d5bd6d960b30d6c6b261de96ba93ae558e71e866
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 629aceee12a89498d763fde2d3510f69e0cde452
+ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896132"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565286"
 ---
 # <a name="configure-an-always-on-distributed-availability-group"></a>Always On 분산 가용성 그룹 구성  
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -236,7 +236,7 @@ ALTER DATABASE [db1] SET HADR AVAILABILITY GROUP = [ag2];
 
 다음 Transact-SQL 예제에서는 `distributedag`라는 분산 가용성 그룹을 장애 조치(failover)하는 자세한 단계를 보여줍니다.
 
-1. 데이터가 손실되지 않도록 하려면 전역 주 데이터베이스(주 가용성 그룹의 데이터베이스)에서 모든 트랜잭션을 중지합니다. 그런 다음, 전역 기본 및 전달자 ‘모두’에서 다음 코드를 실행하여 분산 가용성 그룹을 동기 커밋으로 설정합니다.    
+1. 데이터가 손실되지 않도록 하려면 전역 주 데이터베이스(주 가용성 그룹의 데이터베이스)에서 모든 트랜잭션을 중지합니다. 그런 다음, 전역 기본 및 전달자 ‘모두’에서 다음 코드를 실행하여 분산 가용성 그룹을 동기 커밋으로 설정합니다.   
     
       ```sql  
       -- sets the distributed availability group to synchronous commit 

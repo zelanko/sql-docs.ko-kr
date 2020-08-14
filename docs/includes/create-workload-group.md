@@ -41,7 +41,7 @@ IMPORTANCE는 리소스 풀에 대해 로컬입니다. 같은 리소스 풀 내�
 REQUEST_MAX_MEMORY_GRANT_PERCENT = *value*</br>
 단일 요청이 풀에서 사용할 수 있는 최대 메모리 양을 지정합니다. *값*은 MAX_MEMORY_PERCENT에서 지정한 리소스 풀 크기와 관련된 백분율입니다.
 
-[!INCLUDE[ssSQL17](sssql17-md.md)]까지는 *value*가 정수이고, [!INCLUDE[sql-server-2019](sssqlv15-md.md)]부터 및 [!INCLUDE[ssSDSfull](sssdsfull-md.md)] 관리되는 인스턴스에서는 float입니다. 기본값은 25입니다. 허용되는 *value*의 범위는 1에서 100까지입니다.
+[!INCLUDE[ssSQL17](sssql17-md.md)]까지는 *value*가 정수이고, [!INCLUDE[sql-server-2019](sssqlv15-md.md)]부터 및 Azure SQL Managed Instance에서는 float입니다. 기본값은 25입니다. 허용되는 *value*의 범위는 1에서 100까지입니다.
 
 > [!IMPORTANT]  
 > 지정된 양은 쿼리 실행 부여 메모리만 참조합니다.

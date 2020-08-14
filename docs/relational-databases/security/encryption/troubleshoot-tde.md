@@ -1,6 +1,6 @@
 ---
 title: Azure Key Vault의 고객 관리형 키와 관련된 일반적인 오류
-description: Azure Key Vault의 고객 관리형 키 및 TDE(투명한 데이터 암호화)와 관련된 일반적인 오류 문제를 해결합니다.
+description: Azure Key Vault에서 TDE(투명한 데이터 암호화) 및 고객 관리형 키를 사용하여 액세스 문제 및 일반 오류를 식별하고 해결하는 방법에 대해 알아봅니다.
 ms.custom: seo-lt-2019
 helpviewer_keywords:
 - troublshooting, tde akv
@@ -14,16 +14,17 @@ ms.topic: conceptual
 ms.date: 11/06/2019
 ms.author: jaszymas
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 8ec410ba98be0c1893f376daf596a0746983b87d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 16368fe948d2cefeb052d503385c99cedfb097ff
+ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76909903"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87899007"
 ---
 # <a name="common-errors-for-transparent-data-encryption-with-customer-managed-keys-in-azure-key-vault"></a>Azure Key Vault의 고객 관리 키를 통한 투명한 데이터 암호화의 일반적인 오류
 
-[!INCLUDE[appliesto-xx-asdb-asdw-xxx-md.md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
+[!INCLUDE[asdb-asdbmi-asa](../../../includes/applies-to-version/asdb-asdbmi-asa.md)]
+
 이 문서에서는 [Azure Key Vault에서 고객 관리 키와 함께 TDE(투명한 데이터 암호화)](/azure/sql-database/transparent-data-encryption-byok-azure-sql)를 사용하도록 구성된 데이터베이스에 액세스할 수 없는 Azure Key Vault 키 액세스 문제를 파악하고 해결하는 방법을 설명합니다.
 
 ## <a name="introduction"></a>소개

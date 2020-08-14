@@ -2,7 +2,7 @@
 title: Microsoft SQL Server의 스칼라 UDF 인라인 처리 | Microsoft Docs
 description: 스칼라 UDF 인라인 처리 기능은 SQL Server(SQL Server 2019부터)에서 스칼라 UDF를 호출하는 쿼리의 성능을 향상하기 위한 것입니다.
 ms.custom: ''
-ms.date: 06/23/2020
+ms.date: 08/04/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: ''
 author: s-r-k
 ms.author: karam
 monikerRange: = azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: b1a8d91cc9da7cb0707211464e53b2cccaf0a111
-ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
+ms.openlocfilehash: 0d9a618e8170d08250c15c75e83d5d2dbc627447
+ms.sourcegitcommit: 6ab28d954f3a63168463321a8bc6ecced099b247
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87435584"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87790306"
 ---
 # <a name="scalar-udf-inlining"></a>스칼라 UDF 인라인 처리
 
@@ -164,6 +164,9 @@ UDF의 논리 복잡성에 따라 결과적인 쿼리 계획이 더 크고 복�
 - UDF는 여러 개의 RETURN 문을 포함하지 않습니다<sup>6</sup>.
 - UDF는 RETURN 문에서 호출되지 않습니다<sup>6</sup>.
 - UDF는 `STRING_AGG` 함수를 참조하지 않습니다<sup>6</sup>. 
+- UDF는 원격 테이블을 참조하지 않습니다<sup>7</sup>.
+- UDF 호출 쿼리는 `GROUPING SETS`, `CUBE` 또는 `ROLLUP`을(를) 사용하지 않습니다<sup>7</sup>.
+- UDF 호출 쿼리에는 할당의 UDF 매개 변수로 사용되는 변수(예: `SELECT @y = 2`, `@x = UDF(@y)`)가 포함되지 않습니다 <sup>7</sup>.
 
 <sup>1</sup> 변수 누적/집계가 있는 `SELECT`는 인라인 처리가 지원되지 않습니다(예: `SELECT @val += col1 FROM table1`).
 
@@ -176,6 +179,8 @@ UDF의 논리 복잡성에 따라 결과적인 쿼리 계획이 더 크고 복�
 <sup>5</sup> [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU4에 추가된 제한
 
 <sup>6</sup> [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU5에 추가된 제한
+
+<sup>7</sup> [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU6에 추가된 제한
 
 > [!NOTE]
 > 최신 T-SQL Scalar UDF 인라인 처리 수정 및 인라인 처리 적격 시나리오에 관한 내용은 다음 기술 자료 문서를 참조하십시오. [수정: SQL Server 2019에서의 Scalar UDF 인라인 처리 문제](https://support.microsoft.com/help/4538581).

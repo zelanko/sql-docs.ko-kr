@@ -1,7 +1,7 @@
 ---
 title: 정책 기반 관리 정책 가져오기 | Microsoft 문서
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 08/06/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -12,42 +12,24 @@ helpviewer_keywords:
 ms.assetid: 850b7ef9-d2b7-4754-bf04-7cb419ffb776
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 6a534ca6028b7e5f6eade08e5503e9ea83b98179
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 54e0ca12595b0ce8bdde128c9261918c910ffdcf
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85749367"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934350"
 ---
 # <a name="import-a-policy-based-management-policy"></a>정책 기반 관리 정책 가져오기
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 를 사용하여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 정책 기반 관리 정책 인스턴스를 가져오는 방법에 대해 설명합니다.  
   
- **항목 내용**  
+## <a name="permissions"></a>사용 권한
+ msdb 데이터베이스에서 PolicyAdministratorRole 역할의 멤버 자격이 필요합니다.
+
   
--   **시작하기 전 주의 사항:**  
+##  <a name="using-sql-server-management-studio"></a>SQL Server Management Studio 사용  
   
-     [제한 사항](#Restrictions)  
-  
-     [보안](#Security)  
-  
--   **다음을 사용하여 정책 인스턴스를 가져오려면**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
-  
-###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 제한 사항  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스를 모니터링하는 데 사용할 수 있는 정책과 함께 제공됩니다. 기본적으로 이러한 정책은 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에 설치되지 않지만 기본 위치인 64비트 설치의 C:\Program Files\Microsoft SQL Server\###\Tools\Policies\DatabaseEngine\1033 또는 C:\Program Files (x86)\Microsoft SQL Server\###\Tools\Policies\DatabaseEngine\1033에서 가져올 수 있습니다.
-  
-###  <a name="security"></a><a name="Security"></a> 보안  
-  
-####  <a name="permissions"></a><a name="Permissions"></a> 권한  
- msdb 데이터베이스에서 PolicyAdministratorRole 역할의 멤버 자격이 필요합니다.  
-  
-##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
-  
-#### <a name="to-import-a-policy-instance"></a>정책 인스턴스를 가져오려면  
+### <a name="to-import-a-policy-instance"></a>정책 인스턴스를 가져오려면  
   
 1.  **개체 탐색기**에서 더하기 기호를 클릭하여 새로 가져온 정책 인스턴스가 상주할 서버를 확장합니다.  
   
@@ -57,7 +39,10 @@ ms.locfileid: "85749367"
   
 4.  **정책** 폴더를 마우스 오른쪽 단추로 클릭하고 **정책 가져오기**를 선택합니다.  
   
-5.  **가져오기** 대화 상자에서 파일의 경로와 이름을 입력하거나 찾아보기( **...** ) 단추를 사용하여 정책이 포함된 XML 파일을 찾은 다음 파일을 선택합니다. **가져오기** 대화 상자에서 사용할 수 있는 옵션에 대한 자세한 내용은 [Import Policies Dialog Box](../../relational-databases/policy-based-management/import-policies-dialog-box.md)를 참조하세요.  
+5.  **가져오기** 대화 상자에서 파일의 경로와 이름을 입력하거나 찾아보기(**...**) 단추를 사용하여 정책이 포함된 XML 파일을 찾은 다음 파일을 선택합니다. **가져오기** 대화 상자에서 사용할 수 있는 옵션에 대한 자세한 내용은 [Import Policies Dialog Box](../../relational-databases/policy-based-management/import-policies-dialog-box.md)를 참조하세요.  
   
 6.  완료되었으면 **확인**을 클릭합니다.  
 
+
+## <a name="example-policies"></a>예제 정책
+ 예제 정책이 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에 포함되지 않지만 이전에 배포된 예제 정책은 [SQL Server Management Studio v17](../../ssms/release-notes-ssms.md#previous-ssms-releases)을 설치하여 액세스할 수 있습니다.  SQL Server Management Studio v17이 설치되면 `C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Policies`에서 예제 정책을 찾을 수 있습니다. 이 정책은 사용 중인 정책 기반 관리 정책의 기준으로 가져와 사용할 수 있습니다.

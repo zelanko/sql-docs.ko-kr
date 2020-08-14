@@ -37,12 +37,12 @@ ms.assetid: 29ddac46-7a0f-4151-bd94-75c1908c89f8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ad86aa823fc10827e8f0d11aaf36ae10fc0622bf
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: aee1c65fb03dcbf192c3f33fc4750bf496b05c77
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112554"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988214"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -61,10 +61,10 @@ ms.locfileid: "87112554"
         **_\* SQL Server \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [SQL Database<br />단일 데이터베이스/탄력적 풀](create-database-transact-sql.md?view=azuresqldb-current)
+        [SQL 데이터베이스](create-database-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [SQL Database<br />관리되는 인스턴스](create-database-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL Database<br />Managed Instance](create-database-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](create-database-transact-sql.md?view=azure-sqldw-latest)
@@ -867,10 +867,10 @@ GO
         [SQL Server](create-database-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        **_\*SQL Database<br />단일 데이터베이스/탄력적 풀\*_**
+        **_\* SQL Database \*_**
     :::column-end:::
     :::column:::
-        [SQL Database<br />관리되는 인스턴스](create-database-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL Database<br />Managed Instance](create-database-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](create-database-transact-sql.md?view=azure-sqldw-latest)
@@ -882,11 +882,11 @@ GO
 
 &nbsp;
 
-## <a name="azure-sql-database-single-databaseelastic-pool"></a>Azure SQL Database 단일 데이터베이스/탄력적 풀
+## <a name="sql-database"></a>SQL Database
 
 ## <a name="overview"></a>개요
 
-[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 단일 데이터베이스/탄력적 풀에서 이 명령문은 Azure SQL Server와 함께 사용하여 단일 데이터베이스 또는 탄력적 풀의 데이터베이스를 만들 수 있습니다. 이 문을 사용하여 데이터베이스 이름, 데이터 정렬, 최대 크기, 버전, 서비스 목표 및 새 데이터베이스의 탄력적 풀(해당하는 경우)을 지정합니다. 탄력적 풀에서 데이터베이스를 만드는 데 사용할 수도 있습니다. 또한 다른 SQL Database 서버에서 데이터베이스 복사본을 만드는 데 사용할 수 있습니다.
+[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에서 이 명령문은 Azure SQL Server와 함께 사용하여 단일 데이터베이스 또는 탄력적 풀의 데이터베이스를 만들 수 있습니다. 이 문을 사용하여 데이터베이스 이름, 데이터 정렬, 최대 크기, 버전, 서비스 목표 및 새 데이터베이스의 탄력적 풀(해당하는 경우)을 지정합니다. 탄력적 풀에서 데이터베이스를 만드는 데 사용할 수도 있습니다. 또한 다른 SQL Database 서버에서 데이터베이스 복사본을 만드는 데 사용할 수 있습니다.
 
 ## <a name="syntax"></a>구문
 
@@ -973,7 +973,7 @@ CATALOG_COLLATION 메타데이터 카탈로그의 기본 데이터 정렬을 지
 
 EDITION 데이터베이스의 서비스 계층을 지정합니다.
 
-단일 데이터베이스/탄력적 풀의 단일 및 풀링된 데이터베이스입니다. 사용 가능한 값은 ‘Basic’, ‘Standard’, ‘Premium’, ‘GeneralPurpose’, ‘BusinessCritical’ 및 ‘Hyperscale’입니다.
+단일 및 풀링된 데이터베이스. 사용 가능한 값은 ‘Basic’, ‘Standard’, ‘Premium’, ‘GeneralPurpose’, ‘BusinessCritical’ 및 ‘Hyperscale’입니다.
 
 MAXSIZE 데이터베이스의 최대 크기를 지정합니다. MAXSIZE는 지정된 EDITION(서비스 계층)에 대해 유효해야 합니다. 지원되는 MAXSIZE 값 및 서비스 계층의 기본값(D)은 다음과 같습니다.
 
@@ -1273,10 +1273,10 @@ CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140 (MAXSIZE = 100 MB, EDITION = '
         [SQL Server](create-database-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [SQL Database<br />단일 데이터베이스/탄력적 풀](create-database-transact-sql.md?view=azuresqldb-current)
+        [SQL 데이터베이스](create-database-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        **_\* SQL Database<br />관리되는 인스턴스 \*_**
+        **_\* SQL Database<br />Managed Instance \*_**
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](create-database-transact-sql.md?view=azure-sqldw-latest)
@@ -1288,11 +1288,11 @@ CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140 (MAXSIZE = 100 MB, EDITION = '
 
 &nbsp;
 
-## <a name="azure-sql-database-managed-instance"></a>Azure SQL Database Managed Instance
+## <a name="azure-sql-managed-instance"></a>Azure SQL Managed Instance
 
 ## <a name="overview"></a>개요
 
-Azure SQL Database Managed Instance에서 이 문은 데이터베이스를 만드는 데 사용됩니다. 관리되는 인스턴스에서 데이터베이스를 만들 때 데이터베이스 이름 및 데이터 정렬을 지정합니다.
+Azure SQL Managed Instance에서 이 문은 데이터베이스를 만드는 데 사용됩니다. 관리되는 인스턴스에서 데이터베이스를 만들 때 데이터베이스 이름 및 데이터 정렬을 지정합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -1357,10 +1357,10 @@ CREATE DATABASE TestDB1;
         [SQL Server](create-database-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [SQL Database<br />단일 데이터베이스/탄력적 풀](create-database-transact-sql.md?view=azuresqldb-current)
+        [SQL 데이터베이스](create-database-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [SQL Database<br />관리되는 인스턴스](create-database-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL Database<br />Managed Instance](create-database-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         **_\* Azure Synapse<br />Analytics \*_**
@@ -1482,10 +1482,10 @@ CREATE DATABASE TestDW COLLATE Latin1_General_100_CI_AS_KS_WS
         [SQL Server](create-database-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [SQL Database<br />단일 데이터베이스/탄력적 풀](create-database-transact-sql.md?view=azuresqldb-current)
+        [SQL 데이터베이스](create-database-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [SQL Database<br />관리되는 인스턴스](create-database-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL Database<br />Managed Instance](create-database-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](create-database-transact-sql.md?view=azure-sqldw-latest)

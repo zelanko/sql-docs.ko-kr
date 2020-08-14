@@ -1,6 +1,6 @@
 ---
 title: 가용성 그룹 만들기 및 구성(콘텐츠 인덱스)
-description: SQL Server에 대한 Always On 가용성 그룹을 만들고 구성하는 데 도움이 되는 링크의 인덱스입니다.
+description: SQL Server Always On 가용성 그룹을 만들고 구성하는 데 사용할 수 있는 참조에 대해 알아봅니다.
 ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7f89fab8-6ee2-4273-9de0-e594bfb9407f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2e11ba9aff326c6656a2c719ff00ef736022fc64
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 3a20f798a107c6afb1d26a9f0707c35913a44d7b
+ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899887"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565127"
 ---
 # <a name="reference-for-the-creation-and-configuration-of-always-on-availability-groups"></a>Always On 가용성 그룹 생성 및 구성에 대한 참조
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
