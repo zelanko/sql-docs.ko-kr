@@ -1,4 +1,5 @@
 ---
+description: StrToSet(MDX)
 title: StrToSet (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 729dae70fce03b3dec1394900126b216d09dc497
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 882ab646af51d4b1edbe0a1240eaaed7cbfa5422
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68036795"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88386779"
 ---
 # <a name="strtoset-mdx"></a>StrToSet(MDX)
 
@@ -34,13 +35,13 @@ StrToSet(Set_Specification [,CONSTRAINED] )
 ## <a name="remarks"></a>설명  
  **Strtoset** 함수는 문자열 식에 지정 된 집합을 반환 합니다. **Strtoset** 함수는 일반적으로 외부 함수의 집합 사양을 mdx 문에 다시 반환 하거나 mdx 쿼리가 매개 변수화 될 때 사용자 정의 함수와 함께 사용 됩니다.  
   
--   제한 된 플래그를 사용 하는 경우 집합 사양에는 정규화 되거나 정규화 되지 않은 멤버 이름이 나 중괄호로 {}묶은 정규화 되거나 정규화 되지 않은 멤버 이름이 포함 된 튜플 집합이 포함 되어야 합니다. 이 플래그를 사용하면 지정한 문자열을 통한 삽입 공격 위험을 줄일 수 있습니다. 정규화 되거나 정규화 되지 않은 멤버 이름으로 직접 확인할 수 없는 문자열을 제공 하는 경우 "STRTOSET 함수에서 제약 조건이 적용 된 제한을 위반 했습니다." 라는 오류가 나타납니다.  
+-   제한 된 플래그를 사용 하는 경우 집합 사양에는 정규화 되거나 정규화 되지 않은 멤버 이름이 나 중괄호로 묶은 정규화 되거나 정규화 되지 않은 멤버 이름이 포함 된 튜플 집합이 포함 되어야 합니다 {} . 이 플래그를 사용하면 지정한 문자열을 통한 삽입 공격 위험을 줄일 수 있습니다. 정규화 되거나 정규화 되지 않은 멤버 이름으로 직접 확인할 수 없는 문자열을 제공 하는 경우 "STRTOSET 함수에서 제약 조건이 적용 된 제한을 위반 했습니다." 라는 오류가 나타납니다.  
   
 -   CONSTRAINED 플래그를 사용하지 않을 경우 지정한 집합 사양은 집합을 반환하는 유효한 MDX 식으로 확인될 수 있습니다.  
   
 -   집합과 멤버의 차이를 더 잘 이해하려면 집합 식 사용 및 멤버 식 사용을 참조하십시오.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 **Strtoset** 함수를 사용 하 여 시/도 특성 계층의 멤버 집합을 반환 합니다. 해당 집합 사양에서는 유효한 MDX 집합 식이 제공됩니다.  
   
 ```  

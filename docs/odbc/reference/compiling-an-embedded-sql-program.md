@@ -1,4 +1,5 @@
 ---
+description: Embedded SQL 프로그램 컴파일
 title: 포함 된 SQL 프로그램 컴파일 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9e94146a-5b80-4a01-b586-1e03ff05b9ac
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: eb801dc532009410055b67031b3e036cc6b9c3d0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5065d50bd9ae23cc7db8a2310b13792b461da2a5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306534"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88386079"
 ---
 # <a name="compiling-an-embedded-sql-program"></a>Embedded SQL 프로그램 컴파일
 포함 된 SQL 프로그램에는 SQL 및 호스트 언어 문이 혼합 되어 있으므로 호스트 언어의 컴파일러에 직접 제출할 수 없습니다. 대신 다단계 프로세스를 통해 컴파일됩니다. 이 프로세스는 제품과 제품의 차이점에도 불구 하 고 모든 제품에 대 한 단계는 거의 동일 합니다.  

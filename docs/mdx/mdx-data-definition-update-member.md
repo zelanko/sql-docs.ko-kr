@@ -1,4 +1,5 @@
 ---
+description: MDX 데이터 정의 - UPDATE MEMBER
 title: UPDATE MEMBER 문 (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 73a2bf2973d8c4f8f9bf9ac886728fb45250343f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3b1333a8784ea5427dec3ed7223a3c7c1a09120d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68038141"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88387067"
 ---
 # <a name="mdx-data-definition---update-member"></a>MDX 데이터 정의 - UPDATE MEMBER
 
@@ -64,7 +65,7 @@ UPDATE MEMBER Cube_Name.Member_Name
 |VISIBLE|계산 멤버를 스키마 행 집합에서 볼 수 있는지 여부를 나타내는 값입니다. [AddCalculatedMembers](../mdx/addcalculatedmembers-mdx.md) 함수를 사용 하 여 집합에 표시 되는 계산 멤버를 추가할 수 있습니다. 0이 아닌 값은 계산 멤버를 볼 수 있음을 나타냅니다. 이 속성의 기본값은 *표시*됩니다.<br /><br /> 볼 수 없는 계산 멤버는 일반적으로 더 복잡한 계산 멤버에서 중간 단계로 사용됩니다. 이런 계산 멤버는 측정값과 같은 다른 종류의 멤버가 참조할 수도 있습니다.|  
 |NON_EMPTY_BEHAVIOR|빈 셀을 확인할 때 계산 멤버의 동작을 결정하기 위해 MDX가 사용하는 측정값 또는 집합입니다.|  
 |CAPTION|클라이언트 애플리케이션이 멤버를 표시하기 위해 사용하는 캡션을 지정하는 문자열 값입니다.|  
-|DISPLAY_FOLDER|클라이언트 애플리케이션이 멤버를 표시하는 표시 폴더의 경로를 지정하는 문자열 값입니다. 폴더 수준 구분 기호는 클라이언트 애플리케이션에서 정의합니다. 에서 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]제공 하는 도구와 클라이언트의 경우에는\\백슬래시 ()가 수준 구분 기호입니다. 정의 멤버에 대해 여러 표시 폴더를 제공하려면 세미콜론(;)을 사용하여 폴더를 구분하십시오.|  
+|DISPLAY_FOLDER|클라이언트 애플리케이션이 멤버를 표시하는 표시 폴더의 경로를 지정하는 문자열 값입니다. 폴더 수준 구분 기호는 클라이언트 애플리케이션에서 정의합니다. 에서 제공 하는 도구와 클라이언트의 경우에는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 백슬래시 ( \\ )가 수준 구분 기호입니다. 정의 멤버에 대해 여러 표시 폴더를 제공하려면 세미콜론(;)을 사용하여 폴더를 구분하십시오.|  
 |ASSOCIATED_MEASURE_GROUP|이 멤버를 연결할 측정값 그룹의 이름입니다.|  
   
 ## <a name="see-also"></a>참고 항목  

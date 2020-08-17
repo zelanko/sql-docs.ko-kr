@@ -1,4 +1,5 @@
 ---
+description: 메뉴 명령 및 기타 바로 가기 키 (DB2ToSQL)
 title: 메뉴 명령 및 기타 바로 가기 키 (DB2ToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 13189359-73ff-45cf-8225-2a8f7194accc
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 3622c9928946e8708097f535b311a70b2a996bf3
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: b24fb152402386ba3b22cad8be196cd2c042699e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87933724"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88320789"
 ---
 # <a name="menu-commands-and-other-shortcut-keys-db2tosql"></a>메뉴 명령 및 기타 바로 가기 키 (DB2ToSQL)
 다음 섹션에서는 SSMA for DB2 응용 프로그램의 다양 한 대화 상자에서 사용 되는 메뉴 명령 및 기타 바로 가기 키에 액세스할 수 있는 바로 가기 키에 대해 설명 합니다.  
@@ -180,5 +181,5 @@ ms.locfileid: "87933724"
 |선언으로 이동 합니다.|F12|  
   
 ## <a name="see-also"></a>참고 항목  
-[DB2ToSQL&#41;&#40;바로 가기 키](../../ssma/db2/shortcut-keys-db2tosql.md)  
+[DB2ToSQL&#41;&#40;바로 가기 키 ](../../ssma/db2/shortcut-keys-db2tosql.md)  
   

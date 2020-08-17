@@ -1,4 +1,5 @@
 ---
+description: DQS 작업 모니터링
 title: DQS 작업 모니터링
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1d4c76f3-0d7b-498e-b792-4db4a0349814
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 92f0d05b8b7f6bc4e72c70c73d9b93f0e785206d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ea7afe223bdbeb1d6e85347fe34f7d103a39621d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897485"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88353569"
 ---
 # <a name="monitor-dqs-activities"></a>DQS 작업 모니터링
 
@@ -116,7 +117,7 @@ ms.locfileid: "85897485"
 2.  **작업 목록 새로 고침** 아이콘을 클릭하여 필터링을 적용하고 필터링한 DQS 작업만 봅니다.  
   
 ##  <a name="view-dqs-activity-details"></a><a name="ActivityDetails"></a> DQS 작업 세부 정보 보기  
- 작업 모니터링 화면에서 작업 단계 및 프로파일러 정보와 같이 DQS 작업에 대한 세부 정보를 볼 수 있습니다. 이를 수행하려면:  
+ 작업 모니터링 화면에서 작업 단계 및 프로파일러 정보와 같이 DQS 작업에 대한 세부 정보를 볼 수 있습니다. 확인 방법은 다음과 같습니다.  
   
 1.  위쪽 창의 작업 표에서 DQS 작업을 선택합니다.  
   
@@ -127,7 +128,7 @@ ms.locfileid: "85897485"
     -   **프로파일러**: 현재 및 이제까지의 작업에 대한 프로파일링 정보가 표시됩니다. 현재 작업의 경우 부분적이지만 일관된 정보가 포함됩니다. 해당 작업 세부 정보를 Excel 파일로 내보내면 작업의 프로파일링 정보를 excel 파일로 내보내게 됩니다. 이 정보는 내보낸 Excel 파일의 **프로파일러-원본** 및 **프로파일러-필드** 시트에서 사용할 수 있습니다.  
   
 ##  <a name="export-dqs-activity-details"></a><a name="Export"></a> DQS 작업 세부 정보 내보내기  
- 모니터링 화면의 작업 속성, 작업 프로세스 및 작업의 프로파일링 정보를 Excel 파일로 내보낼 수 있습니다. 이를 수행하려면:  
+ 모니터링 화면의 작업 속성, 작업 프로세스 및 작업의 프로파일링 정보를 Excel 파일로 내보낼 수 있습니다. 확인 방법은 다음과 같습니다.  
   
 1.  위쪽 창의 작업 표에서 작업을 선택합니다.  
   

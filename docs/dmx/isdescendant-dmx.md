@@ -1,4 +1,5 @@
 ---
+description: IsDescendant(DMX)
 title: IsDescendant 항목 (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: bab465fe98c9509eaa99999a321317ee8013a74d
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 9fe1c150f243e78c379823427e9940bba3680cb1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86969764"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88352649"
 ---
 # <a name="isdescendant-dmx"></a>IsDescendant(DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -28,12 +29,12 @@ IsDescendant(<NodeID>)
 ```  
   
 ## <a name="return-type"></a>반환 형식  
- 부울 유형입니다.  
+ Boolean 형식입니다.  
   
 ## <a name="remarks"></a>설명  
- **Isdescendant 항목** 은 [SELECT FROM &#60;모델&#62; 에서만 사용 됩니다. DMX&#41;콘텐츠 &#40;](../dmx/select-from-model-content-dmx.md) [&#60;모델&#62;에서 선택 합니다. DMX&#41;쿼리를 &#40;DIMENSION_CONTENT](../dmx/select-from-model-dimension-content-dmx.md) .  
+ **Isdescendant 항목** 은 [SELECT FROM &#60;모델&#62; 에서만 사용 됩니다. DMX&#41;콘텐츠 &#40;](../dmx/select-from-model-content-dmx.md) [&#60;모델&#62;에서 선택 합니다. DMX&#41;쿼리를 &#40;DIMENSION_CONTENT ](../dmx/select-from-model-dimension-content-dmx.md) .  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 IsDescendant 함수에서 지정한 노드의 하위 노드인 사례를 모두 반환합니다.  
   
 ```  

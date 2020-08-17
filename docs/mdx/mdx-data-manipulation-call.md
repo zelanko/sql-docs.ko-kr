@@ -1,4 +1,5 @@
 ---
+description: MDX 데이터 조작 - CALL
 title: CALL 문 (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: de74590ac4c43a9141c0ab2092babf41ffd23ba5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3a8f3b550e3fed3fe28e74896c3c4ff764db8810
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68106298"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88387045"
 ---
 # <a name="mdx-data-manipulation---call"></a>MDX 데이터 조작 - CALL
 
@@ -47,7 +48,7 @@ CALL SP_Name
  큐브가 지정되지 않은 경우 이 문은 현재 큐브에서 저장 프로시저를 실행합니다.  
   
 > [!NOTE]  
->  저장 프로시저가 클라이언트에 등록 되어 있지 않으면 **call** 문이 인스턴스에서 저장 프로시저를 호출 하려고 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]합니다.  
+>  저장 프로시저가 클라이언트에 등록 되어 있지 않으면 **call** 문이 인스턴스에서 저장 프로시저를 호출 하려고 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [Mdx 데이터 조작 문은 MDX를 &#40;&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)   

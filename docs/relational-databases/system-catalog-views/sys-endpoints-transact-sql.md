@@ -1,4 +1,5 @@
 ---
+description: sys.endpoints(Transact-SQL)
 title: sys. 엔드포인트 (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -19,19 +20,19 @@ helpviewer_keywords:
 ms.assetid: e6dafa4e-e47e-43ec-acfc-88c0af53c1a1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 297142bceb77c9f90f7496b00c0e9549a5f39a3e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 58199515a947ccc741314e962e457c14c7ca61f4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893229"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88377819"
 ---
 # <a name="sysendpoints-transact-sql"></a>sys.endpoints(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   시스템에서 만든 각 엔드포인트에 대해 한 행을 포함합니다. SYSTEM 엔드포인트는 항상 하나만 있습니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|엔드포인트의 이름입니다. 서버 내에서 고유합니다. Null을 허용하지 않습니다.|  
 |**endpoint_id**|**int**|엔드포인트의 ID입니다. 서버 내에서 고유합니다. ID가 65536보다 작은 엔드포인트는 시스템 엔드포인트입니다. Null을 허용하지 않습니다.|  
@@ -48,7 +49,7 @@ ms.locfileid: "85893229"
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;끝점 카탈로그 뷰](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)   
+ [엔드포인트 카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)   
  [카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
   

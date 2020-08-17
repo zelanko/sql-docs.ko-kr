@@ -1,4 +1,5 @@
 ---
+description: MySQL에 연결(MySQLToSQL)
 title: MySQL에 연결 (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 94099d01-ab19-4d58-a172-340c86b4a0f3
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 66ec484ca6bd442f936eb852db48f34c89099d11
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 399946496bbb649f84c9d539a9fe80f3f7919b31
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935982"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88372699"
 ---
 # <a name="connect-to-mysql-mysqltosql"></a>MySQL에 연결(MySQLToSQL)
 **Mysql에 연결** 대화 상자를 사용 하 여 마이그레이션하려는 mysql 데이터베이스에 연결 합니다.  
@@ -22,7 +23,7 @@ ms.locfileid: "87935982"
 이 대화 상자에 액세스 하려면 **파일** 메뉴에서 **MySQL에 연결**을 선택 합니다. 이전에 연결한 경우 명령은 **MySQL에 다시 연결**됩니다.  
   
 ## <a name="options"></a>옵션  
-**공급 기업**  
+**공급자**  
   
 사용 가능한 MySQL 공급자는 MySQL ODBC 5.1 드라이버 (신뢰할 수 있음)입니다.  
   

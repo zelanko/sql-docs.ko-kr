@@ -1,4 +1,5 @@
 ---
+description: 비즈니스 규칙 제외(Master Data Services)
 title: 비즈니스 규칙 제외
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: bdbc9df0-23f7-40b9-8aba-4445c1482580
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 7bad539d25afec6da4a706e0986bfd9f4770c899
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: bc69a5cfcd36e96ed6bc0778c72e6a3a09e6fb23
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811927"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88388959"
 ---
 # <a name="exclude-a-business-rule-master-data-services"></a>비즈니스 규칙 제외(Master Data Services)
 
@@ -25,7 +26,7 @@ ms.locfileid: "85811927"
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서는 비즈니스 규칙을 영구적으로 삭제하지는 않되 규칙에 대해 데이터 유효성을 검사하지 않으려면 규칙을 제외합니다.  
   
-## <a name="prerequisites"></a>전제 조건  
+## <a name="prerequisites"></a>사전 요구 사항  
  이 절차를 수행하려면  
   
 -   **시스템 관리** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  
@@ -48,7 +49,7 @@ ms.locfileid: "85811927"
   
 7.  **제외됨** 확인란을 표시합니다.  
   
-8.  **Save**을 클릭합니다.  
+8.  **저장**을 클릭합니다.  
   
 9. **모두 게시**를 클릭합니다.  
   

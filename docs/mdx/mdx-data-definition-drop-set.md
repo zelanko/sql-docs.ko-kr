@@ -1,4 +1,5 @@
 ---
+description: MDX 데이터 정의 - DROP SET
 title: DROP SET 문 (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: f4e31a687597e454b9afe38d6c6dd1c15af486d0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0992df0c7180c8a572fb1f8c34b99059ab118ea4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68893718"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88387239"
 ---
 # <a name="mdx-data-definition---drop-set"></a>MDX 데이터 정의 - DROP SET
 

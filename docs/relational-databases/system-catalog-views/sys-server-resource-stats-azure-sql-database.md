@@ -1,4 +1,5 @@
 ---
+description: server_resource_stats (Azure SQL Database)
 title: server_resource_stats (Azure SQL Database) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/28/2018
@@ -19,12 +20,12 @@ ms.assetid: ''
 author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
-ms.openlocfilehash: 716d9703ca684adc653d1f43e674b7d99ae91765
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: ef3f27b814405cf6ca56a47ffcac8dd467f939f7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87864494"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88376709"
 ---
 # <a name="sysserver_resource_stats-azure-sql-database"></a>server_resource_stats (Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -44,7 +45,7 @@ Azure SQL Managed Instance에 대 한 CPU 사용량, IO 및 저장소 데이터�
 |resource_name|nvarchar(128)|리소스의 이름입니다.|
 |sku|nvarchar(128)|인스턴스의 서비스 계층을 Managed Instance 합니다. 가능한 값은 다음과 같습니다. <br><ul><li>범용</li></ul><ul><li>중요 비즈니스용</li></ul>|
 |hardware_generation|nvarchar(128)|하드웨어 생성 식별자 (예: Gen 4 또는 Gen 5)|
-|virtual_core_count|Int|인스턴스당 가상 코어 수를 나타냅니다 (공개 미리 보기에서 8, 16 또는 24).|
+|virtual_core_count|int|인스턴스당 가상 코어 수를 나타냅니다 (공개 미리 보기에서 8, 16 또는 24).|
 |avg_cpu_percent|decimal (5, 2)|인스턴스가 사용 하는 Managed Instance 서비스 계층 한도의 백분율로 나타낸 평균 계산 사용률입니다. 인스턴스의 모든 데이터베이스에 대 한 모든 리소스 풀의 CPU 시간 합계를 계산 하 고 지정 된 간격으로 해당 계층의 사용 가능한 CPU 시간으로 나눈 값을 계산 합니다.|
 |reserved_storage_mb|bigint|인스턴스당 예약 된 저장소 (고객이 관리 되는 인스턴스에 대해 구매한 저장소 공간 크기)|
 |storage_space_used_mb|decimal (18, 2)|관리 되는 인스턴스의 모든 데이터베이스 파일에서 사용 하는 저장소 (사용자 및 시스템 데이터베이스 포함)|
@@ -62,7 +63,7 @@ Azure SQL Managed Instance에 대 한 CPU 사용량, IO 및 저장소 데이터�
 ## <a name="remarks"></a>설명  
  **Server_resource_stats** 에서 반환 되는 데이터는 실행 중인 서비스 계층/성능 수준에 대해 허용 되는 최대 한도의 백분율로 표시 되는 바이트 또는 메가바이트 (열 이름에 표시 됨 avg_cpu)에서 사용 되는 합계로 표시 됩니다.  
  
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 지난 1주일 동안 평균적으로 컴퓨팅 활용률의 80% 이상을 사용한 모든 데이터베이스를 반환합니다.  
   
 ```sql  

@@ -1,4 +1,5 @@
 ---
+description: INSERT INTO(DMX)
 title: INSERT INTO (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: eedff3b14960fae68ad4e3a9ac54a0034c1a9300
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 5388b3a4d59a80f3e4b030313cde4a5ea9361a3d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86969782"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88352919"
 ---
 # <a name="insert-into-dmx"></a>INSERT INTO(DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]

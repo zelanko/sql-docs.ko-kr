@@ -1,4 +1,5 @@
 ---
+description: '&gt;= (크거나 같음) (DMX)'
 title: '&gt;= (크거나 같음) (DMX) | Microsoft Docs'
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: f4dfae8259c1ea9379500d426ce1c8ac22762068
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: c34473ee7d8334ae332ce71bc44f94bcfdaee598
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86971661"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88353079"
 ---
 # <a name="gt-greater-than-or-equal-to-dmx"></a>&gt;= (크거나 같음) (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -35,7 +36,7 @@ DMX_Expression >= DMX_Expression
  두 매개 변수가 Null이 아니고 첫 번째 매개 변수 값이 두 번째 매개 변수 값보다 크거나 같으면 부울 값에 TRUE가 포함됩니다. 두 매개 변수가 Null이 아니고 첫 번째 매개 변수 값이 두 번째 매개 변수 값보다 작으면 부울 값에 FALSE가 포함됩니다. 매개 변수 중 하나 또는 둘 모두가 Null 값으로 계산되면 부울 값에 Null 값이 포함됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [DMX&#41;&#40;비교 연산자](../dmx/operators-comparison.md)   
+ [DMX&#41;&#40;비교 연산자 ](../dmx/operators-comparison.md)   
  [데이터 마이닝 확장 &#40;DMX&#41; 연산자 참조](../dmx/data-mining-extensions-dmx-operator-reference.md)   
  [&#40;DMX&#41;](../dmx/operators-dmx.md)  
   

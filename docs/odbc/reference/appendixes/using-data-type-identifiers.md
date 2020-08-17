@@ -1,4 +1,5 @@
 ---
+description: 데이터 형식 식별자 사용
 title: 데이터 형식 식별자 사용 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 467e0c0c-a818-4737-8a24-3d8e15c7e162
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8be8eef0441d48ed03ea6ccf8f656627c1dd9b63
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 54fe7267ea70dc50b0b40f16b27a1306fea533f2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301424"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88386279"
 ---
 # <a name="using-data-type-identifiers"></a>데이터 형식 식별자 사용
 응용 프로그램은 두 가지 방법으로 데이터 형식 식별자를 사용 합니다. 즉, 드라이버에 대 한 버퍼를 설명 하 고 드라이버에서 결과 집합에 대 한 메타 데이터를 검색 하 여 데이터를 저장 하는 데 사용할 C 버퍼 형식을 결정할 수 있습니다. 응용 프로그램은 다음 함수를 호출 하 여 이러한 작업을 수행 합니다.  

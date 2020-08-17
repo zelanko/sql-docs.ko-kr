@@ -1,4 +1,5 @@
 ---
+description: IIf(MDX)
 title: IIf (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: ca6449308f9683bccf55e58d9cec6d5d5a97a59e
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 8a9a8da3ec20a34ba1dea30b1285d6a9c147e55d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247137"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88387469"
 ---
 # <a name="iif-mdx"></a>IIf(MDX)
 

@@ -1,4 +1,5 @@
 ---
+description: StrToMember(MDX)
 title: StrToMember (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: a78f0664ea561825bb279db47aa3c01fc98bf7dc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 68d2d99bb51412a98919d1ab1626c7a86bd86245
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68036802"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88386809"
 ---
 # <a name="strtomember-mdx"></a>StrToMember(MDX)
 
@@ -40,7 +41,7 @@ StrToMember(Member_Name [,CONSTRAINED] )
   
 -   집합과 멤버의 차이를 더 잘 이해하려면 집합 식 사용 및 멤버 식 사용을 참조하십시오.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 **Strtomember** 함수를 사용 하 여 시/도 특성 계층의 Bayern 멤버에 대 한 대리점 Sales Amount 측정값을 반환 합니다. 지정된 문자열은 정규화된 멤버 이름을 제공합니다.  
   
 ```  

@@ -1,4 +1,5 @@
 ---
+description: 식별자(MDX)
 title: 식별자 (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: c11561ac71aa72469a809ea25297d62133aa93da
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fe8494558f7026355cb25e1415f9269fbeb1bed3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68891216"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88387499"
 ---
 # <a name="identifiers-mdx"></a>식별자(MDX)
 
@@ -79,7 +80,7 @@ ms.locfileid: "68891216"
   
 -   개체 이름 또는 이름 중 일부에 예약어를 사용하는 경우  
   
-     예약어는 개체 이름으로 사용하지 않는 것이 좋습니다. 이전 버전의 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서 업그레이드 된 데이터베이스에는 이전 버전에서 예약 되지 않은 단어를 포함 하는 식별자가 포함 되어 있지만 현재 예약 되어 있습니다. 해당 개체에 대한 식별자를 변경할 수 있을 때까지는 구분 식별자를 사용하여 개체를 참조할 수 있습니다.  
+     예약어는 개체 이름으로 사용하지 않는 것이 좋습니다. 이전 버전의에서 업그레이드 된 데이터베이스에는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 이전 버전에서 예약 되지 않은 단어를 포함 하는 식별자가 포함 되어 있지만 현재 예약 되어 있습니다. 해당 개체에 대한 식별자를 변경할 수 있을 때까지는 구분 식별자를 사용하여 개체를 참조할 수 있습니다.  
   
 -   개체 이름에 정규화된 식별자로 나열되지 않은 문자를 사용하는 경우  
   

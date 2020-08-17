@@ -1,4 +1,5 @@
 ---
+description: 프로젝트 설정(마이그레이션)(MySQLToSQL)
 title: 프로젝트 설정 (마이그레이션) (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 2a3cba9e-cd54-4a8b-b858-8fc4cf2580d9
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: fe0c1ac52a72a627cf6b266fdb9636878be85c1a
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 17ba3712f1b644a0d80d890c405e8ead8267236c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935202"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88372649"
 ---
 # <a name="project-settings-migration-mysqltosql"></a>프로젝트 설정(마이그레이션)(MySQLToSQL)
 **프로젝트 설정** 대화 상자의 마이그레이션 페이지에는 Ssma가 MySQL에서 SQL Server로 데이터를 마이그레이션하는 방법을 사용자 지정 하는 설정이 포함 되어 있습니다.  

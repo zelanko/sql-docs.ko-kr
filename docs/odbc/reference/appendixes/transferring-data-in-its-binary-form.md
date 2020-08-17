@@ -1,4 +1,5 @@
 ---
+description: 이진 형식으로 데이터 전송
 title: 이진 형식으로 데이터 전송 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4b12a9de-51d0-416a-87f4-9bf84959cad9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 53531ff4a3b2e1441fabf22ec7a3ce12b15540eb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ec858729e76c1e360ec0933eca3a29ab17542f4f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301415"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88386329"
 ---
 # <a name="transferring-data-in-its-binary-form"></a>이진 형식으로 데이터 전송
 응용 프로그램은 동일한 DBMS 및 하드웨어 플랫폼을 사용 하는 두 데이터 원본 간에 데이터 (지정 된 DBMS에서 사용 하는 내부 양식)를 안전 하 게 전송할 수 있습니다. 지정 된 데이터 조각에 대해 SQL 데이터 형식은 원본 및 대상 데이터 원본에서 동일 해야 합니다. C 데이터 형식은 SQL_C_BINARY입니다.  

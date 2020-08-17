@@ -1,4 +1,5 @@
 ---
+description: 서버로 결과 집합 보내기(확장 저장 프로시저 API)
 title: 서버로 결과 집합 보내기(확장 저장 프로시저 API)
 ms.date: 03/16/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ ms.assetid: 9d54673d-ea9d-4ac6-825a-f216ad8b0e34
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: c0ba957f0cde17f7accfeee66952fe2488a854bd
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4747c464956d4c1da804a4bf9182cbb507a45989
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85767746"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88383139"
 ---
 # <a name="sending-result-sets-to-the-server-extended-stored-procedure-api"></a>서버로 결과 집합 보내기(확장 저장 프로시저 API)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

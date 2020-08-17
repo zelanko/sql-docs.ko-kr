@@ -1,4 +1,5 @@
 ---
+description: 연결 전환
 title: 연결 전환 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6b6e1a47-4a52-41c8-bb9e-7ddeae09913e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 225f8517a78f8e9d4d765163649da174d72e490c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a5f7fecf0ad25311e9d96f4db8554c1cdbf24e91
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81284773"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88339449"
 ---
 # <a name="connection-transitions"></a>연결 전환
 ODBC 연결의 상태는 다음과 같습니다.  
@@ -53,7 +54,7 @@ ODBC 연결의 상태는 다음과 같습니다.
   
  [4] *HandleType* 가 SQL_HANDLE_DESC 된 경우이 행은 전환을 표시 합니다.  
   
- [5] 유효한 핸들을 가리키는 *OutputHandlePtr* 를 사용 하 여 **SQLAllocHandle** 를 호출 하면이를 처리 하는 이전 콘텐츠를 고려 하지 않고 처리가 처리 되며 ODBC 드라이버에 문제가 발생할 수 있습니다. **Sqlfreehandle** 을 호출 하지 않고 * \*OutputHandlePtr* 에 대해 정의 된 것과 동일한 응용 프로그램 변수를 사용 하 여 **SQLAllocHandle** 를 두 번 호출 하 여 다시 할당 하기 전에 핸들을 해제 합니다. 이러한 방식으로 ODBC 핸들을 덮어쓰면 ODBC 드라이버의 일부에서 일관 되지 않은 동작이 나 오류가 발생할 수 있습니다.  
+ [5] 유효한 핸들을 가리키는 *OutputHandlePtr* 를 사용 하 여 **SQLAllocHandle** 를 호출 하면이를 처리 하는 이전 콘텐츠를 고려 하지 않고 처리가 처리 되며 ODBC 드라이버에 문제가 발생할 수 있습니다. **Sqlfreehandle** 을 호출 하지 않고 * \* OutputHandlePtr* 에 대해 정의 된 것과 동일한 응용 프로그램 변수를 사용 하 여 **SQLAllocHandle** 를 두 번 호출 하 여 다시 할당 하기 전에 핸들을 해제 합니다. 이러한 방식으로 ODBC 핸들을 덮어쓰면 ODBC 드라이버의 일부에서 일관 되지 않은 동작이 나 오류가 발생할 수 있습니다.  
   
 ## <a name="sqlbrowseconnect"></a>SQLBrowseConnect  
   

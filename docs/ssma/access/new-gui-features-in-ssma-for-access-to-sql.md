@@ -1,4 +1,5 @@
 ---
+description: SQL에 대 한 액세스를 위한 SSMA의 새로운 GUI 기능
 title: SQL에 대 한 액세스를 위한 SSMA의 새로운 GUI 기능 Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 95b95de2-db05-4422-825d-43968ecfd01c
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 89c22a7151a7c7aa94c76d5278edd5911b9f2b6d
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: efeebd6774a3f264d590c3f8d08da7f281c64464
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87937716"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88320809"
 ---
 # <a name="new-gui-features-in-ssma-for-access-to-sql"></a>SQL에 대 한 액세스를 위한 SSMA의 새로운 GUI 기능
 이 장에서는 SSMA 사용자 인터페이스의 새로운 기능에 대해 설명 합니다.  

@@ -1,4 +1,5 @@
 ---
+description: 엔터티 동기화 관계 편집 및 삭제(Master Data Services)
 title: 엔터티 동기화 관계 편집 및 삭제
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9a5e37f3-352e-45a6-b4a0-6f98f83b4bd8
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 92b67b981c5eb7dbd1e05b1d18af291cae78aaa1
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 68b88f98626f2645d2ca69311f4302e0d51fe51c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813998"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88389469"
 ---
 # <a name="edit-and-delete-an-entity-sync-relationship-master-data-services"></a>엔터티 동기화 관계 편집 및 삭제(Master Data Services)
 
@@ -23,7 +24,7 @@ ms.locfileid: "85813998"
 
   엔터티 동기화는 엔터티 버전 간의 반복 가능한 단방향 동기화입니다. 이는 서로 다른 모델 간에 엔터티 데이터를 공유하는 방법을 제공합니다. 만든 동기화 관계를 편집하고 삭제할 수 있습니다.  
   
-## <a name="prerequisites"></a>전제 조건  
+## <a name="prerequisites"></a>사전 요구 사항  
  엔터티 동기화 관계를 편집하기 위한 필수 구성 요소  
   
 -   시스템 관리 기능 영역에 액세스할 수 있는 권한이 있어야 합니다. 자세한 내용은 [기능 영역 권한&#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md)을 참조하세요.  
@@ -70,7 +71,7 @@ ms.locfileid: "85813998"
   
 5.  **빈도**를 변경합니다. **필요 시 동기화**를 선택하거나 **자동 동기화** 를 선택하고 빈도를 설정합니다.  
   
-6.  **Save**을 클릭합니다.  
+6.  **저장**을 클릭합니다.  
   
  **엔터티 동기화 관계를 삭제하려면**  
   
@@ -85,7 +86,7 @@ ms.locfileid: "85813998"
 5.  확인 대화 상자에서 **확인**을 클릭합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [MDS(Master Data Services)&#41;&#40;엔터티 동기화 관계 만들기 및 실행](../master-data-services/create-and-execute-an-entity-sync-relationship-master-data-services.md)   
+ [MDS(Master Data Services)&#41;&#40;엔터티 동기화 관계 만들기 및 실행 ](../master-data-services/create-and-execute-an-entity-sync-relationship-master-data-services.md)   
  [엔터티 동기화 관계&#40;Master Data Services&#41;](../master-data-services/entity-sync-relationship-master-data-services.md)  
   
   

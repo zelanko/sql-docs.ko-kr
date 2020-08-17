@@ -1,4 +1,5 @@
 ---
+description: SQLTables(텍스트 파일 드라이버)
 title: SQLTables (텍스트 파일 드라이버) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f47fd1a4-5bd8-4b2e-8ae3-e595e49f4f95
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 938ceba5da25d176628d5c1d9875383d977e3aec
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a6c6f65603cee70811d7c9894ba9d840d28ad4f4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299333"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88339698"
 ---
 # <a name="sqltables-text-file-driver"></a>SQLTables(텍스트 파일 드라이버)
 > [!NOTE]  

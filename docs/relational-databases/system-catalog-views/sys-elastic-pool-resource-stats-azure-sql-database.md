@@ -1,4 +1,5 @@
 ---
+description: sys.elastic_pool_resource_stats (Azure SQL Database)
 title: sys.elastic_pool_resource_stats
 titleSuffix: Azure SQL Database
 ms.date: 01/28/2019
@@ -18,12 +19,12 @@ author: CarlRabeler
 ms.author: carlrab
 ms.custom: seo-dt-2019
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 4c6d2e7cccc7e1aa07327480415c0acd2a3db192
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+ms.openlocfilehash: 899621325f6299b2faf0e99df3578fdbf5ee8996
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87822948"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88377849"
 ---
 # <a name="syselastic_pool_resource_stats-azure-sql-database"></a>sys.elastic_pool_resource_stats (Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -32,7 +33,7 @@ ms.locfileid: "87822948"
   
 ||  
 |-|  
-|**적용**대상: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] V12.|  
+|**적용**대상:  [!INCLUDE[ssSDS](../../includes/sssds-md.md)] V12.|  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
@@ -57,7 +58,7 @@ ms.locfileid: "87822948"
 
  **Dbmanager** 역할의 멤버 자격이 필요 합니다.  
   
-## <a name="examples"></a>예
+## <a name="examples"></a>예제
 
  다음 예에서는 현재 SQL Database 서버에 있는 모든 탄력적 데이터베이스 풀에 대해 가장 최근 시간 순으로 정렬 된 리소스 사용률 데이터를 반환 합니다.  
   

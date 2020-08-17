@@ -1,4 +1,5 @@
 ---
+description: 인덱스 편집 및 삭제(Master Data Services)
 title: 인덱스 편집 및 삭제
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: f8fb2a63-f9ae-4b9d-b26f-2024d9af15c5
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 0a543cc6c153af6cd40617d4fe7699ccabad8f9a
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: bd01942fd0545b338c43b1711b4d58be9a5052ec
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812368"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88389479"
 ---
 # <a name="edit-and-delete-an-index-master-data-services"></a>인덱스 편집 및 삭제(Master Data Services)
 
@@ -23,7 +24,7 @@ ms.locfileid: "85812368"
 
   특성에 대해 생성한 인덱스를 편집하고 삭제할 수 있습니다.  
   
-## <a name="prerequisites"></a>전제 조건  
+## <a name="prerequisites"></a>사전 요구 사항  
  이 절차를 수행하려면  
   
 -   시스템 관리 기능 영역에 액세스할 수 있는 권한이 있어야 합니다. 자세한 내용은 [기능 영역 권한&#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md)을 참조하세요.  
@@ -48,7 +49,7 @@ ms.locfileid: "85812368"
   
 8.  할당된 특성 목록에서 특성을 추가하고 제거하여 해당 목록을 편집합니다.  
   
-9. **Save**을 클릭합니다.  
+9. **저장**을 클릭합니다.  
   
  **인덱스를 삭제하려면**  
   

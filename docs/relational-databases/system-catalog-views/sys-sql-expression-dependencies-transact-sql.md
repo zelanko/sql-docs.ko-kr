@@ -1,4 +1,5 @@
 ---
+description: sys.sql_expression_dependencies(Transact-SQL)
 title: sys. sql_expression_dependencies (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,12 +21,12 @@ ms.assetid: 78a218e4-bf99-4a6a-acbf-ff82425a5946
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f358296320ebeeefcc6004a59754ba8e8052e789
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 742b366a871a929463b044b53a822a71fd7e073d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396674"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88376019"
 ---
 # <a name="syssql_expression_dependencies-transact-sql"></a>sys.sql_expression_dependencies(Transact-SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
@@ -73,14 +74,14 @@ ms.locfileid: "87396674"
 |엔터티 유형|참조 엔터티|참조된 엔터티|  
 |-----------------|------------------------|-----------------------|  
 |테이블|예*|예|  
-|View|yes|yes|  
+|보기|예|예|  
 |필터링된 인덱스|예**|예|  
 |필터링된 통계|예**|예|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저***|yes|yes|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저***|예|예|  
 |CLR 저장 프로시저|예|예|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] 사용자 정의 함수|yes|yes|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 사용자 정의 함수|예|예|  
 |CLR 사용자 정의 함수|예|예|  
-|CLR 트리거(DML 및 DDL)|아니요|예|  
+|CLR 트리거(DML 및 DDL)|예|예|  
 |[!INCLUDE[tsql](../../includes/tsql-md.md)] DML 트리거|예|예|  
 |[!INCLUDE[tsql](../../includes/tsql-md.md)] 데이터베이스 수준 DDL 트리거|예|예|  
 |[!INCLUDE[tsql](../../includes/tsql-md.md)] 서버 수준 DDL 트리거|예|예|  
@@ -91,7 +92,7 @@ ms.locfileid: "87396674"
 |XML 스키마 컬렉션|예|예|  
 |파티션 함수|예|예|  
   
- \*테이블은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 계산 열, CHECK 제약 조건 또는 DEFAULT 제약 조건 정의에서 모듈, 사용자 정의 형식 또는 XML 스키마 컬렉션을 참조 하는 경우에만 참조 엔터티로 추적 됩니다.  
+ \* 테이블은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 계산 열, CHECK 제약 조건 또는 DEFAULT 제약 조건 정의에서 모듈, 사용자 정의 형식 또는 XML 스키마 컬렉션을 참조 하는 경우에만 참조 엔터티로 추적 됩니다.  
   
  ** 필터 조건자에 사용된 각 열은 참조 엔터티로 추적됩니다.  
   
@@ -100,7 +101,7 @@ ms.locfileid: "87396674"
 ## <a name="permissions"></a>사용 권한  
  데이터베이스에 대한 VIEW DEFINITION 권한과 데이터베이스의 sys.sql_expression_dependencies에 대한 SELECT 권한이 필요합니다. 기본적으로 SELECT 권한은 db_owner 고정 데이터베이스 역할의 멤버에게만 부여됩니다. SELECT와 VIEW DEFINITION 권한을 다른 사용자에게 부여하면 피부여자는 데이터베이스의 모든 종속성을 볼 수 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-returning-entities-that-are-referenced-by-another-entity"></a>A. 다른 엔터티에서 참조한 엔터티 반환  
  다음 예는 `Production.vProductAndDescription` 뷰에서 참조되는 테이블과 열을 반환합니다. 이 뷰는 `referenced_entity_name` 및 `referenced_column_name` 열에 반환된 엔터티(테이블 및 열)에 종속됩니다.  

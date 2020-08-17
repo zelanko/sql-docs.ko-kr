@@ -1,4 +1,5 @@
 ---
+description: 평가 보고서(MySQLToSQL)
 title: 평가 보고서 (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 5525d989-024c-402d-9e84-faa4721cc5b9
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 362a1a5a79fa61b90ea02382018979a003f54424
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 6db16aab94dccd4d347325af36c9957f19168059
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87936158"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88320619"
 ---
 # <a name="assessment-report-mysqltosql"></a>평가 보고서(MySQLToSQL)
 평가 보고서 창에는 데이터베이스 개체를 구문으로 변환한 결과가 표시 [!INCLUDE[tsql](../../includes/tsql-md.md)] 되며 마이그레이션 프로젝트의 복잡성과 비용을 예측 하는 데에도 도움이 될 수 있습니다.  

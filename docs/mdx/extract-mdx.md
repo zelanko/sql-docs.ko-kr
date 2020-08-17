@@ -1,4 +1,5 @@
 ---
+description: Extract(MDX)
 title: Extract (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 26edefab1a81aebaa9bf63e69e24067428266de1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0b168794a38a515d4ace97d576710041eac86195
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67906047"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88387519"
 ---
 # <a name="extract-mdx"></a>Extract(MDX)
 
@@ -42,7 +43,7 @@ Extract(Set_Expression, Hierarchy_Expression1 [,Hierarchy_Expression2, ...n] )
   
  **Extract** 함수는 [Crossjoin](../mdx/crossjoin-mdx.md) 함수의 반대 동작을 수행 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 쿼리는 **비어 있지** 않은 함수에서 반환 된 튜플 집합에서 **Extract** 함수를 사용 하는 방법을 보여 줍니다.  
   
  `SELECT [Measures].[Internet Sales Amount] ON 0,`  

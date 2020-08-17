@@ -1,4 +1,5 @@
 ---
+description: MDX 데이터 정의 - CREATE MEASURE
 title: CREATE MEASURE 문 (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 3bac5d7d067186e2b84277a5c0dc02cd31cba011
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: cdbee6f6ede5e46926f1a8189792d86cf9e99f5b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86967384"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88387269"
 ---
 # <a name="mdx-data-definition---create-measure"></a>MDX 데이터 정의 - CREATE MEASURE
 

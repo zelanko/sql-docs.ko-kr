@@ -1,4 +1,5 @@
 ---
+description: 사용자 지정 워크플로 만들기(Master Data Services)
 title: 사용자 지정 워크플로 만들기
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: reference
 ms.assetid: 8e4403e9-595c-4b6b-9d0c-f6ae1b2bc99d
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: b30b9a9c8adf7386e0a645b082466dec5afe9220
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 7328d550697e1c6e0edd076d748a594946372915
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897445"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88389859"
 ---
 # <a name="create-a-custom-workflow-master-data-services"></a>사용자 지정 워크플로 만들기(Master Data Services)
 
@@ -53,7 +54,7 @@ ms.locfileid: "85897445"
 5.  사용자 지정 워크플로를 트리거하는 멤버에 비즈니스 규칙을 적용합니다.  
   
 ### <a name="create-the-workflow-handler-assembly"></a>워크플로 처리기 어셈블리 만들기  
- 사용자 지정 워크플로는 [MasterDataServices](/previous-versions/sql/sql-server-2016/hh758785(v=sql.130)) 를 구현 하는 .net 클래스 라이브러리 어셈블리로 서,. SQL Server MDS 워크플로 통합 서비스는 코드를 실행 하기 위해 [MasterDataServices 워크플로 *](/previous-versions/sql/sql-server-2016/hh759009(v=sql.130)) 메서드를 호출 합니다. [MasterDataServices](/previous-versions/sql/sql-server-2016/hh759009(v=sql.130)) 를 구현 하는 예제 코드는 [사용자 지정 워크플로 예제 &#40;MDS(Master Data Services)&#41;](../../master-data-services/develop/create-a-custom-workflow-example.md)를 참조 하세요.  
+ 사용자 지정 워크플로는 [MasterDataServices](/previous-versions/sql/sql-server-2016/hh758785(v=sql.130)) 를 구현 하는 .net 클래스 라이브러리 어셈블리로 서,. SQL Server MDS 워크플로 통합 서비스는 코드를 실행 하기 위해 [MasterDataServices 워크플로 *](/previous-versions/sql/sql-server-2016/hh759009(v=sql.130))  메서드를 호출 합니다. [MasterDataServices](/previous-versions/sql/sql-server-2016/hh759009(v=sql.130)) 를 구현 하는 예제 코드는 [사용자 지정 워크플로 예제 &#40;MDS(Master Data Services)&#41;](../../master-data-services/develop/create-a-custom-workflow-example.md)를 참조 하세요.  
   
  Visual Studio 2010을 사용하여 사용자 지정 워크플로를 처리하기 위해 SQL Server MDS Workflow Integration Service가 호출할 수 있는 어셈블리를 만들려면 다음 단계를 수행하십시오.  
   
@@ -82,7 +83,7 @@ ms.locfileid: "85897445"
     </setting>  
     ```  
   
-3.  "ConnectionString" 설정 아래에 "WorkflowTypeExtenders" 설정을 추가하여 사용자 워크플로 처리기 어셈블리에 태그 이름을 연결합니다. 예를 들어:  
+3.  "ConnectionString" 설정 아래에 "WorkflowTypeExtenders" 설정을 추가하여 사용자 워크플로 처리기 어셈블리에 태그 이름을 연결합니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.  
   
     ```xml  
     <setting name="WorkflowTypeExtenders" serializeAs="String">  
@@ -90,7 +91,7 @@ ms.locfileid: "85897445"
     </setting>  
     ```  
   
-     태그의 내부 텍스트는 \<value> 형식입니다 \<Workflow tag> = \<assembly-qualified workflow type name> . \<Workflow tag>는에서 비즈니스 규칙을 만들 때 워크플로 처리기 어셈블리를 식별 하는 데 사용 하는 이름입니다 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] . \<assembly-qualified workflow type name>은 (는) 워크플로 클래스의 네임 스페이스로 한정 된 이름이 고, 쉼표 뒤에는 어셈블리의 표시 이름이 옵니다. 어셈블리가 강력한 이름으로 지정되어 있는 경우 버전 정보와 해당 PublicKeyToken도 포함해야 합니다. 여러 \<setting> 종류의 워크플로에 대해 여러 워크플로 처리기를 만든 경우 여러 태그를 포함할 수 있습니다.  
+     태그의 내부 텍스트는 \<value> 형식입니다 \<Workflow tag> = \<assembly-qualified workflow type name> . \<Workflow tag> 는에서 비즈니스 규칙을 만들 때 워크플로 처리기 어셈블리를 식별 하는 데 사용 하는 이름입니다 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] . \<assembly-qualified workflow type name> 은 (는) 워크플로 클래스의 네임 스페이스로 한정 된 이름이 고, 쉼표 뒤에는 어셈블리의 표시 이름이 옵니다. 어셈블리가 강력한 이름으로 지정되어 있는 경우 버전 정보와 해당 PublicKeyToken도 포함해야 합니다. 여러 \<setting> 종류의 워크플로에 대해 여러 워크플로 처리기를 만든 경우 여러 태그를 포함할 수 있습니다.  
   
 > [!NOTE]  
 >  서버 구성에 따라 Microsoft.MasterDataServices.Workflow.exe.config 파일을 저장할 때 "액세스가 거부되었습니다." 오류가 표시될 수 있습니다. 이 경우 서버에서 UAC(사용자 계정 컨트롤)를 일시적으로 비활성화하십시오. 이렇게 하려면 제어판을 열고 **시스템 및 보안**을 클릭합니다. **알림 센터**에서 **사용자 계정 컨트롤 설정 변경**을 클릭합니다. **사용자 계정 컨트롤 설정** 대화 상자에서 알림을 받지 않도록 막대를 맨 아래로 이동합니다. 컴퓨터를 다시 시작하고 이전 단계를 반복하여 구성 파일을 편집합니다. 파일을 저장한 후 UAC 설정을 기본 수준으로 다시 설정합니다.  

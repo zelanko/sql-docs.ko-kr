@@ -1,4 +1,5 @@
 ---
+description: 드라이버가 수행하는 작업
 title: 드라이버의 기능 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 75dcdea6-ff6b-4ac8-aa11-a1f9edbeb8e6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c0438478f5aa625ffdd4d3bcd1c0a6f0f80d3367
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4f15473d1eb0e6344fbd5772f2b28233c07aa7a3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301394"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88386229"
 ---
 # <a name="what-the-driver-does"></a>드라이버가 수행하는 작업
 다음 표에는 ODBC *3.x 드라이버가 블록* 및 스크롤 가능 커서에 대해 구현 해야 하는 함수 및 문 특성이 요약 되어 있습니다.  

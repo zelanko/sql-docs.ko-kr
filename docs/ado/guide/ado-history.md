@@ -1,4 +1,5 @@
 ---
+description: 각 릴리스에 대 한 ADO 기능
 title: ADO 기록 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2019
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 667673f2-3151-432b-894a-3fc60b704ea4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 726487d366450f003ca745624a916d400990723b
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: d97e81eca94867ad00317667d08ef6bdf4c6f058
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761711"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88355429"
 ---
 # <a name="ado-features-for-each-release"></a>각 릴리스에 대 한 ADO 기능
 
@@ -55,7 +56,7 @@ ms.locfileid: "82761711"
 
  **언어**  _속성_ [언어](../../ado/reference/ado-api/dialect-property.md) 는 공급자가 문자열 또는 스트림을 구문 분석 하는 데 사용 하는 구문 및 일반 규칙을 정의 하는 새 속성입니다.
 
- **명령 실행**_메서드_ 입력 및 출력에 대 한 스트림을 사용 하도록 ADO **명령** 개체의 [Execute 메서드가](../../ado/reference/ado-api/execute-method-ado-command.md) 향상 되었습니다.  
+ **Command.Exe귀여운**_메서드_ 는 입력 및 출력에 대 한 스트림을 사용 하도록 ADO **명령** 개체의 [Execute 메서드](../../ado/reference/ado-api/execute-method-ado-command.md) 를 향상 시켰습니다.  
 
  *필드 statusvalues* **레코드 집합**의 **필드** 를 수정할 때 사용자에 게 DB_E_ERRORSOCCURRED 오류가 발생 하면 ADO는 이제 사용자에 게 잘못 된 문제에 대 한 자세한 정보를 제공 하도록 적절 한 상태 정보를 사용 하 여 **status** 속성을 채웁니다. [Status 속성 (ADO 필드)](../../ado/reference/ado-api/status-property-ado-field.md)을 참조 하세요.
 

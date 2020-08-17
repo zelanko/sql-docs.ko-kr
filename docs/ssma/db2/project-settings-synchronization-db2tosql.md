@@ -1,4 +1,5 @@
 ---
+description: 프로젝트 설정 (동기화) (DB2ToSQL)
 title: 프로젝트 설정 (동기화) (DB2ToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: a5629a72-8c17-46a4-bb4d-19d51a0b98a2
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: c66b7e9ad09c61b1ecfaddb21a9253ae6a6237c9
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: d6b4aef228ca1631bb550437ff0f66ff20555cb0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87933604"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88321069"
 ---
 # <a name="project-settingssynchronization-db2tosql"></a>프로젝트 설정 (동기화) (DB2ToSQL)
 **프로젝트 설정** 대화 상자의 동기화 페이지에는에서 테이블 및 저장 프로시저와 같은 데이터베이스 개체를 로드 하 고 새로 고치는 방법을 사용자 지정 하는 설정이 포함 되어 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

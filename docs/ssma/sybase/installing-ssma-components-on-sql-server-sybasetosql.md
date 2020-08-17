@@ -1,4 +1,5 @@
 ---
+description: SQL Server에 SSMA 구성 요소 설치 (SybaseToSQL)
 title: SQL Server에 SSMA 구성 요소 설치 (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/14/2020
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 5ad9e12c-2cdb-4dd2-8703-05a23242d19d
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 1c66255f57a69db0807ab1620cafd60444f296c8
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 33b5663e7693de8c031f2b39c0436a771920be56
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87865391"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88372369"
 ---
 # <a name="installing-ssma-components-on-sql-server-sybasetosql"></a>SQL Server에 SSMA 구성 요소 설치 (SybaseToSQL)
 
@@ -26,12 +27,12 @@ SSMA 확장 팩은 지정 된 인스턴스에 **sysdb** 및 **ssmatesterdb_syb**
 
 또한 데이터를로 마이그레이션하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ssma는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 마이그레이션에 서버 쪽 데이터 마이그레이션 엔진을 사용 하는 경우 에이전트 작업을 만듭니다.
 
-### <a name="prerequisites"></a>필수 구성 요소
+### <a name="prerequisites"></a>사전 요구 사항
 
 Sybase 용 SSMA 서버 구성 요소를 설치 하기 전에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템이 다음과 같은 요구 사항을 충족 하는지 확인 합니다.
 
-- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스가 설치 되었습니다.
-- [!INCLUDE[msCoName](../../includes/msconame_md.md)]Windows Installer 3.1 이상 버전
+- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 설치 되었습니다.
+- [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows Installer 3.1 이상 버전
 - [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] 버전 4.7.2 이상 버전입니다. [.NET Framework 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=48882)에서 가져올 수 있습니다.
 - Sybase OLE DB/ADO.Net/ODBC 공급자 및 마이그레이션할 데이터베이스가 포함 된 SAP ASE 데이터베이스 서버에 대 한 연결입니다. SAP ASE 제품 미디어에서 공급자를 설치할 수 있습니다. 연결에 대 한 자세한 내용은 [SYBASE ASE &#40;SybaseToSQL&#41;에 연결을 ](../../ssma/sybase/connecting-to-sybase-ase-sybasetosql.md)참조 하세요.
 - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]설치 하는 동안 Browser 서비스를 실행 해야 합니다. 이는 설치 마법사에서 인스턴스 목록을 채우는 데 사용 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 설치 후 Browser 서비스를 사용 하지 않도록 설정할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .

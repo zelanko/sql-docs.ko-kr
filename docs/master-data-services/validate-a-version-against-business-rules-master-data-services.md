@@ -1,4 +1,5 @@
 ---
+description: 비즈니스 규칙에 대해 버전 유효성 검사(Master Data Services)
 title: 비즈니스 규칙에 대해 버전 유효성 검사
 ms.custom: ''
 ms.date: 03/01/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5aee7901-6d05-41d4-8bbb-c6f26791d1df
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 66a934d1cddad1e7fdb2e36291611fa50e9c8ce5
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 676a6fff88de31480737f1bb82cc0466605b4699
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813207"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88388319"
 ---
 # <a name="validate-a-version-against-business-rules-master-data-services"></a>비즈니스 규칙에 대해 버전 유효성 검사(Master Data Services)
 
@@ -33,7 +34,7 @@ ms.locfileid: "85813207"
 > [!NOTE]  
 >  모든 멤버가 유효성 검사를 통과해야 버전을 커밋할 수 있습니다.  
   
-## <a name="prerequisites"></a>전제 조건  
+## <a name="prerequisites"></a>사전 요구 사항  
  이 절차를 수행하려면  
   
 -   **버전 관리** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  

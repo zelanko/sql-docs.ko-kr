@@ -1,4 +1,5 @@
 ---
+description: SSMA 콘솔 실행(SybaseToSQL)
 title: SSMA 콘솔 실행 (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/27/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: ea8950b7-fabc-4aa4-89f8-9573a2617d70
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: ee279098aa195cdc8cb1f5b7d50cf5ba7a8a73c5
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: fee973fdcb79105d5fe7c412c10bdda2cd1bbec5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87931679"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88372239"
 ---
 # <a name="executing-the-ssma-console-sybasetosql"></a>SSMA 콘솔 실행(SybaseToSQL)
 Microsoft는 SSMA 활동을 실행 하 고 제어할 수 있는 강력한 스크립트 파일 명령 집합을 제공 합니다. 결과 섹션에서 자세히 설명 합니다.  
@@ -37,9 +38,9 @@ Microsoft는 SSMA 활동을 실행 하 고 제어할 수 있는 강력한 스크
 ### <a name="create-new-project"></a>create-new-project  
 이 명령은 새 SSMA 프로젝트를 만듭니다.  
   
--   `project-folder`생성 되는 프로젝트의 폴더를 나타냅니다.  
+-   `project-folder` 생성 되는 프로젝트의 폴더를 나타냅니다.  
   
--   `project-name`프로젝트의 이름을 나타냅니다. {string}  
+-   `project-name` 프로젝트의 이름을 나타냅니다. {string}  
   
 -   `overwrite-if-exists`기존 프로젝트를 덮어쓸지 여부를 나타내는 선택적 특성입니다. 부울  
   
@@ -66,9 +67,9 @@ Microsoft는 SSMA 활동을 실행 하 고 제어할 수 있는 강력한 스크
 ### <a name="open-project"></a>열기-프로젝트  
 이 명령은 프로젝트를 엽니다.
 
--   `project-folder`생성 되는 프로젝트의 폴더를 나타냅니다. 지정 된 폴더가 존재 하지 않으면 명령이 실패 합니다.  {string}  
+-   `project-folder` 생성 되는 프로젝트의 폴더를 나타냅니다. 지정 된 폴더가 존재 하지 않으면 명령이 실패 합니다.  {string}  
   
--   `project-name`프로젝트의 이름을 나타냅니다. 지정 된 프로젝트가 없는 경우 명령이 실패 합니다.  {string}  
+-   `project-name` 프로젝트의 이름을 나타냅니다. 지정 된 프로젝트가 없는 경우 명령이 실패 합니다.  {string}  
   
 **구문 예제:**  
   
@@ -189,25 +190,25 @@ Microsoft는 SSMA 활동을 실행 하 고 제어할 수 있는 강력한 스크
   
 명령을 실행 하는 동안 원본 데이터베이스 서버에 연결 하지 못하면 콘솔 응용 프로그램도 종료 됩니다.  
   
--   `conversion-report-folder:`평가 보고서를 저장할 수 있는 폴더를 지정 합니다. (선택적 특성)  
+-   `conversion-report-folder:` 평가 보고서를 저장할 수 있는 폴더를 지정 합니다. (선택적 특성)  
   
--   `object-name:`평가 보고서 생성에 고려 되는 개체를 지정 합니다 (개별 개체 이름 또는 그룹 개체 이름을 지원).  
+-   `object-name:` 평가 보고서 생성에 고려 되는 개체를 지정 합니다 (개별 개체 이름 또는 그룹 개체 이름을 지원).  
   
--   `object-type:`개체 이름 특성에서 호출 된 개체의 형식을 지정 합니다. 개체 범주가 지정 된 경우 개체 형식은 "category"가 됩니다.  
+-   `object-type:` 개체 이름 특성에서 호출 된 개체의 형식을 지정 합니다. 개체 범주가 지정 된 경우 개체 형식은 "category"가 됩니다.  
   
--   `conversion-report-overwrite:`평가 보고서 폴더가 이미 있는 경우 덮어쓸지 여부를 지정 합니다.  
+-   `conversion-report-overwrite:` 평가 보고서 폴더가 이미 있는 경우 덮어쓸지 여부를 지정 합니다.  
   
     **기본값:** false (선택적 특성)  
   
--   `write-summary-report-to:`보고서가 생성 될 경로를 지정 합니다.  
+-   `write-summary-report-to:` 보고서가 생성 될 경로를 지정 합니다.  
   
     폴더 경로만 언급 하는 경우 파일 이름 **AssessmentReport &lt; n &gt; . XML** 이 생성 됩니다. (선택적 특성)  
   
     보고서 만들기에는 다음 두 개의 하위 범주가 있습니다.  
   
-    -   `report-errors`(= "true/false", 기본값은 "false" (옵션 특성))  
+    -   `report-errors` (= "true/false", 기본값은 "false" (옵션 특성))  
   
-    -   `verbose`(= "true/false", 기본값은 "false" (옵션 특성))  
+    -   `verbose` (= "true/false", 기본값은 "false" (옵션 특성))  
   
 **구문 예제:**  
   
@@ -255,25 +256,25 @@ Microsoft는 SSMA 활동을 실행 하 고 제어할 수 있는 강력한 스크
   
 이 명령을 실행 하기 전에 원본 또는 대상 데이터베이스 연결을 수행 하지 않거나 명령이 실행 되는 동안 원본 또는 대상 데이터베이스 서버에 대 한 연결이 실패 하면 오류가 발생 하 고 콘솔 응용 프로그램이 종료 됩니다.  
   
--   `conversion-report-folder:`평가 보고서를 저장할 수 있는 폴더를 지정 합니다. (선택적 특성)  
+-   `conversion-report-folder:` 평가 보고서를 저장할 수 있는 폴더를 지정 합니다. (선택적 특성)  
   
--   `object-name:`스키마 변환에 고려 되는 원본 개체를 지정 합니다. 개별 개체 이름이 나 그룹 개체 이름을 지원 합니다.  
+-   `object-name:` 스키마 변환에 고려 되는 원본 개체를 지정 합니다. 개별 개체 이름이 나 그룹 개체 이름을 지원 합니다.  
   
--   `object-type:`개체 이름 특성에서 호출 된 개체의 형식을 지정 합니다. 개체 범주가 지정 된 경우 개체 형식은 "category"가 됩니다.  
+-   `object-type:` 개체 이름 특성에서 호출 된 개체의 형식을 지정 합니다. 개체 범주가 지정 된 경우 개체 형식은 "category"가 됩니다.  
   
--   `conversion-report-overwrite:`평가 보고서 폴더가 이미 있는 경우 덮어쓸지 여부를 지정 합니다.  
+-   `conversion-report-overwrite:` 평가 보고서 폴더가 이미 있는 경우 덮어쓸지 여부를 지정 합니다.  
   
     **기본값:** false (선택적 특성)  
   
--   `write-summary-report-to:`요약 보고서가 생성 될 경로를 지정 합니다.  
+-   `write-summary-report-to:` 요약 보고서가 생성 될 경로를 지정 합니다.  
   
     폴더 경로만 언급 하는 경우 파일 이름 **SchemaConversionReport &lt; n &gt; . XML** 이 생성 됩니다. (선택적 특성)  
   
     보고서 만들기에는 다음 두 개의 하위 범주가 있습니다.  
   
-    -   `report-errors`(= "true/false", 기본값은 "false" (옵션 특성))  
+    -   `report-errors` (= "true/false", 기본값은 "false" (옵션 특성))  
   
-    -   `verbose`(= "true/false", 기본값은 "false" (옵션 특성))  
+    -   `verbose` (= "true/false", 기본값은 "false" (옵션 특성))  
   
 **구문 예제:**  
   
@@ -314,19 +315,19 @@ Microsoft는 SSMA 활동을 실행 하 고 제어할 수 있는 강력한 스크
 ### <a name="migrate-data"></a>마이그레이션-데이터  
 이 명령은 원본 데이터를 대상으로 마이그레이션합니다.  
   
--   `object-name:`데이터 마이그레이션에 고려 되는 원본 개체를 지정 합니다 (개별 개체 이름 또는 그룹 개체 이름을 지원).  
+-   `object-name:` 데이터 마이그레이션에 고려 되는 원본 개체를 지정 합니다 (개별 개체 이름 또는 그룹 개체 이름을 지원).  
   
--   `object-type:`개체 이름 특성에서 호출 된 개체의 형식을 지정 합니다. 개체 범주가 지정 된 경우 개체 형식은 "category"가 됩니다.  
+-   `object-type:` 개체 이름 특성에서 호출 된 개체의 형식을 지정 합니다. 개체 범주가 지정 된 경우 개체 형식은 "category"가 됩니다.  
   
--   `write-summary-report-to:`보고서가 생성 될 경로를 지정 합니다.  
+-   `write-summary-report-to:` 보고서가 생성 될 경로를 지정 합니다.  
   
     폴더 경로만 언급 하는 경우 파일 이름 **DataMigrationReport &lt; n &gt; . XML** 이 생성 됩니다. (선택적 특성)  
   
     보고서 만들기에는 다음 두 개의 하위 범주가 있습니다.  
   
-    -   `report-errors`(= "true/false", 기본값은 "false" (옵션 특성))  
+    -   `report-errors` (= "true/false", 기본값은 "false" (옵션 특성))  
   
-    -   `verbose`(= "true/false", 기본값은 "false" (옵션 특성))  
+    -   `verbose` (= "true/false", 기본값은 "false" (옵션 특성))  
   
 **구문 예제:**  
   
@@ -374,9 +375,9 @@ Microsoft는 SSMA 활동을 실행 하 고 제어할 수 있는 강력한 스크
 ### <a name="map-schema"></a>맵-스키마  
 이 명령은 원본 데이터베이스와 대상 스키마의 스키마 매핑을 제공 합니다.  
   
--   `source-schema`마이그레이션할 원본 스키마를 지정 합니다.  
+-   `source-schema` 마이그레이션할 원본 스키마를 지정 합니다.  
   
--   `sql-server-schema`원본 스키마를 마이그레이션할 대상 스키마를 지정 합니다.  
+-   `sql-server-schema` 원본 스키마를 마이그레이션할 대상 스키마를 지정 합니다.  
   
 **구문 예제:**  
   
@@ -399,11 +400,11 @@ sql-server-schema="<target-schema>"/>
   
 이 명령을 실행 하기 전에 대상 데이터베이스 연결이 수행 되지 않거나 명령 실행 중에 대상 데이터베이스 서버에 대 한 연결이 실패 하면 오류가 발생 하 고 콘솔 응용 프로그램이 종료 됩니다.  
   
--   `object-name:`대상 데이터베이스와 동기화 하는 것으로 간주 되는 대상 개체를 지정 합니다 (개별 개체 이름 또는 그룹 개체 이름을 지원).  
+-   `object-name:` 대상 데이터베이스와 동기화 하는 것으로 간주 되는 대상 개체를 지정 합니다 (개별 개체 이름 또는 그룹 개체 이름을 지원).  
   
--   `object-type:`개체 이름 특성에서 호출 된 개체의 형식을 지정 합니다. 개체 범주가 지정 된 경우 개체 형식은 "category"가 됩니다.  
+-   `object-type:` 개체 이름 특성에서 호출 된 개체의 형식을 지정 합니다. 개체 범주가 지정 된 경우 개체 형식은 "category"가 됩니다.  
   
--   `on-error:`동기화 오류를 경고 또는 오류로 지정 하는지 여부를 지정 합니다. 오류 시 사용 가능한 옵션:  
+-   `on-error:` 동기화 오류를 경고 또는 오류로 지정 하는지 여부를 지정 합니다. 오류 시 사용 가능한 옵션:  
   
     -   보고-전체 경고  
   
@@ -411,7 +412,7 @@ sql-server-schema="<target-schema>"/>
   
     -   fail-스크립트  
   
--   `report-errors-to:`동기화 작업에 대 한 오류 보고서의 위치를 지정 합니다 (옵션 특성). 폴더 경로만 지정 된 경우 이름으로 파일 **TargetSynchronizationReport.XML** 만들어집니다.  
+-   `report-errors-to:` 동기화 작업에 대 한 오류 보고서의 위치를 지정 합니다 (옵션 특성). 폴더 경로만 지정 된 경우 이름으로 파일 **TargetSynchronizationReport.XML** 만들어집니다.  
   
 **구문 예제:**  
   
@@ -460,11 +461,11 @@ fail-script>" (optional)
   
 이 명령을 사용 하려면 명령줄 매개 변수로 하나 이상의 메타 베이스 노드가 필요 합니다.  
   
--   `object-name:`원본 데이터베이스에서 새로 고치는 것으로 간주 되는 원본 개체를 지정 합니다. 개별 개체 이름이 나 그룹 개체 이름을 지원 합니다.  
+-   `object-name:` 원본 데이터베이스에서 새로 고치는 것으로 간주 되는 원본 개체를 지정 합니다. 개별 개체 이름이 나 그룹 개체 이름을 지원 합니다.  
   
--   `object-type:`개체 이름 특성에 지정 된 개체의 유형을 지정 합니다. 개체 범주가 지정 된 경우 개체 유형은 "category"가 됩니다.  
+-   `object-type:` 개체 이름 특성에 지정 된 개체의 유형을 지정 합니다. 개체 범주가 지정 된 경우 개체 유형은 "category"가 됩니다.  
   
--   `on-error:`새로 고침 오류를 경고 또는 오류로 수행할지 여부를 지정 합니다. 오류 시 사용 가능한 옵션:  
+-   `on-error:` 새로 고침 오류를 경고 또는 오류로 수행할지 여부를 지정 합니다. 오류 시 사용 가능한 옵션:  
   
     -   보고-전체 경고  
   
@@ -472,7 +473,7 @@ fail-script>" (optional)
   
     -   fail-스크립트  
   
--   `report-errors-to:`새로 고침 작업 (옵션 특성)에 대 한 오류 보고서의 위치를 지정 합니다. 폴더 경로만 지정 된 경우 이름으로 파일 **SourceDBRefreshReport.XML** 만들어집니다.  
+-   `report-errors-to:` 새로 고침 작업 (옵션 특성)에 대 한 오류 보고서의 위치를 지정 합니다. 폴더 경로만 지정 된 경우 이름으로 파일 **SourceDBRefreshReport.XML** 만들어집니다.  
   
 **구문 예제:**  
   
@@ -518,15 +519,15 @@ fail-script>" (optional)
   
 이 명령을 사용 하려면 명령줄 매개 변수로 하나 이상의 메타 베이스 노드가 필요 합니다.  
   
--   `object-name:`스크립트를 저장할 개체를 지정 합니다. 개별 개체 이름 또는 그룹 개체 이름을 지원 합니다.  
+-   `object-name:` 스크립트를 저장할 개체를 지정 합니다. 개별 개체 이름 또는 그룹 개체 이름을 지원 합니다.  
   
--   `object-type:`개체 이름 특성에서 호출 된 개체의 형식을 지정 합니다. 개체 범주가 지정 된 경우 개체 형식은 "category"가 됩니다.  
+-   `object-type:` 개체 이름 특성에서 호출 된 개체의 형식을 지정 합니다. 개체 범주가 지정 된 경우 개체 형식은 "category"가 됩니다.  
   
--   `metabase:`원본 또는 대상 메타 베이스 인지 여부를 지정 합니다.  
+-   `metabase:` 원본 또는 대상 메타 베이스 인지 여부를 지정 합니다.  
   
--   `destination:`스크립트를 저장 해야 하는 경로 또는 폴더를 지정 합니다. 파일 이름을 지정 하지 않은 경우 형식 (object_name 특성 값)의 파일 이름이 제공 됩니다.
+-   `destination:` 스크립트를 저장 해야 하는 경로 또는 폴더를 지정 합니다. 파일 이름을 지정 하지 않은 경우 형식 (object_name 특성 값)의 파일 이름이 제공 됩니다.
   
--   `overwrite:`True 이면 동일한 파일 이름 (있는 경우)을 덮어씁니다. 값 (true/false)이 있을 수 있습니다.  
+-   `overwrite:` True 이면 동일한 파일 이름 (있는 경우)을 덮어씁니다. 값 (true/false)이 있을 수 있습니다.  
   
 **구문 예제:**  
   
@@ -564,25 +565,25 @@ fail-script>" (optional)
 ### <a name="convert-sql-statement"></a>convert-sql 문
 이 명령은 SQL 문을 변환 합니다.  
   
--   `context`스키마 이름을 지정 합니다.  
+-   `context` 스키마 이름을 지정 합니다.  
   
--   `destination`출력을 파일에 저장할지 여부를 지정 합니다.  
+-   `destination` 출력을 파일에 저장할지 여부를 지정 합니다.  
   
     이 특성을 지정 하지 않으면 변환 된 T-sql 문이 콘솔에 표시 됩니다. (선택적 특성)  
   
--   `conversion-report-folder`평가 보고서를 저장할 수 있는 폴더를 지정 합니다. (선택적 특성)  
+-   `conversion-report-folder` 평가 보고서를 저장할 수 있는 폴더를 지정 합니다. (선택적 특성)  
   
--   `conversion-report-overwrite`평가 보고서 폴더가 이미 있는 경우 덮어쓸지 여부를 지정 합니다.  
+-   `conversion-report-overwrite` 평가 보고서 폴더가 이미 있는 경우 덮어쓸지 여부를 지정 합니다.  
   
     **기본값:** false (선택적 특성)  
   
--   `write-converted-sql-to`변환 된 T-sql을 저장할 파일 (또는) 폴더 경로를 지정 합니다. 폴더 경로를 특성과 함께 지정 하면 `sql-files` 각 원본 파일에 지정 된 폴더에 해당 하는 대상 t-sql 파일이 생성 됩니다. 특성을 사용 하 여 폴더 경로를 지정 하면 `sql` 변환 된 t-sql은 지정 된 폴더에 있는 Result. out 이라는 파일에 기록 됩니다.  
+-   `write-converted-sql-to` 변환 된 T-sql을 저장할 파일 (또는) 폴더 경로를 지정 합니다. 폴더 경로를 특성과 함께 지정 하면 `sql-files` 각 원본 파일에 지정 된 폴더에 해당 하는 대상 t-sql 파일이 생성 됩니다. 특성을 사용 하 여 폴더 경로를 지정 하면 `sql` 변환 된 t-sql은 지정 된 폴더에 있는 Result. out 이라는 파일에 기록 됩니다.  
   
--   `sql`변환할 Sybase sql 문을 지정 합니다. ";"을 사용 하 여 하나 이상의 문을 구분할 수 있습니다.  
+-   `sql` 변환할 Sybase sql 문을 지정 합니다. ";"을 사용 하 여 하나 이상의 문을 구분할 수 있습니다.  
   
--   `sql-files`T-sql 코드로 변환 해야 하는 sql 파일의 경로를 지정 합니다.  
+-   `sql-files` T-sql 코드로 변환 해야 하는 sql 파일의 경로를 지정 합니다.  
   
--   `write-summary-report-to`요약 보고서가 생성 될 경로를 지정 합니다. 폴더 경로만 설명 된 경우 이름으로 파일 **ConvertSQLReport.XML** 생성 됩니다. (선택적 특성)  
+-   `write-summary-report-to` 요약 보고서가 생성 될 경로를 지정 합니다. 폴더 경로만 설명 된 경우 이름으로 파일 **ConvertSQLReport.XML** 생성 됩니다. (선택적 특성)  
   
     요약 보고서 생성에는 다음과 같은 두 개의 하위 범주가 있습니다.  
   

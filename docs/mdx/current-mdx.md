@@ -1,4 +1,5 @@
 ---
+description: Current(MDX)
 title: Current (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 821d517419b90df44b7943a1e0edde12ef667b6e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 105bb306cb84f151024a288f5aa15eb09ddbf5c2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68047125"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88387549"
 ---
 # <a name="current-mdx"></a>Current(MDX)
 
@@ -39,7 +40,7 @@ Set_Expression.Current
 > [!NOTE]  
 >  이 함수는 집합 별칭을 사용하거나 명명된 집합을 정의함으로써 명명된 집합에 대해서만 사용할 수 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예제에서는 **생성**내에서 **현재** 함수를 사용 하는 방법을 보여 줍니다.  
   
  `WITH`  

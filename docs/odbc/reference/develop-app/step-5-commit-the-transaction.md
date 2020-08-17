@@ -1,4 +1,5 @@
 ---
+description: '5단계: 트랜잭션 커밋'
 title: '5 단계: 트랜잭션 커밋 | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 311685e2-f7b5-4ddc-8020-59380cd2f035
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e348ce697e512f30db46d14535cf19bd6d530f61
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b4cc3a73e5cfc564992795ab6b18759b1066288c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81283353"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88385899"
 ---
 # <a name="step-5-commit-the-transaction"></a>5단계: 트랜잭션 커밋
 다음 단계는 다음 그림과 같이 트랜잭션을 커밋하는 것입니다.  

@@ -1,4 +1,5 @@
 ---
+description: SQLGetTypeInfo(Excel 드라이버)
 title: SQLGetTypeInfo (Excel 드라이버) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 708845be-e6a1-4677-8113-c52819a43fa4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 64befe30be9ed7988e0c9348e9335eb632dd975c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ca7e70d9f26a87ededb21bc6c48f3d3cd31d8af3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81295073"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88339959"
 ---
 # <a name="sqlgettypeinfo-excel-driver"></a>SQLGetTypeInfo(Excel 드라이버)
 > [!NOTE]  

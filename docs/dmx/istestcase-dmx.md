@@ -1,4 +1,5 @@
 ---
+description: IsTestCase(DMX)
 title: IsTestCase (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: ef4dc17d77707ca5bf08f935fb4a62f6d979ae05
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 11795005d0a2a7cf97a515278a30a586ff640ef0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86969620"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88352279"
 ---
 # <a name="istestcase-dmx"></a>IsTestCase(DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -40,7 +41,7 @@ IsTestCase()
   
  학습 데이터 집합의 일부인 사례를 반환 하려면 [IsTrainingCase &#40;DMX&#41;](../dmx/istrainingcase-dmx.md)함수를 사용 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `Targeted Mailing` [기본 데이터 마이닝 자습서](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)에서 만든 마이닝 구조를 사용 합니다. 쿼리는 테스트에 사용된 구조의 모든 사례를 반환합니다.  
   
 ```  
@@ -49,7 +50,7 @@ FROM [Targeted Mailing].CASES
 WHERE IsTestCase()  
 ```  
   
- 데이터 마이닝에 사용 되는 사례를 쿼리 하는 방법에 대 한 자세한 내용은 [SELECT FROM &#60;model&#62;을 참조 하세요. DMX&#41;&#40;사례](../dmx/select-from-model-cases-dmx.md) 는 [&#60;구조&#62;에서 선택 합니다. 사례](../dmx/select-from-structure-cases.md).  
+ 데이터 마이닝에 사용 되는 사례를 쿼리 하는 방법에 대 한 자세한 내용은 [SELECT FROM &#60;model&#62;을 참조 하세요. DMX&#41;&#40;사례 ](../dmx/select-from-model-cases-dmx.md) 는 [&#60;구조&#62;에서 선택 합니다. 사례](../dmx/select-from-structure-cases.md).  
   
 ## <a name="see-also"></a>참고 항목  
  [DMX &#40;함수&#41;](../dmx/functions-dmx.md)   

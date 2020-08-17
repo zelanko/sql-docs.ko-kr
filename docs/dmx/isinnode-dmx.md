@@ -1,4 +1,5 @@
 ---
+description: IsInNode(DMX)
 title: IsInNode (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 063c436f2e0d76ca891f332f25be385c2f16fdfa
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 68f88915209a3a15cb7e8f1fd64e9d877655f3ac
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86969676"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88352349"
 ---
 # <a name="isinnode-dmx"></a>IsInNode(DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -28,12 +29,12 @@ IsInNode(<NodeID>)
 ```  
   
 ## <a name="return-type"></a>반환 형식  
- 부울 유형입니다.  
+ Boolean 형식입니다.  
   
 ## <a name="remarks"></a>설명  
- **IsInNode** 는 [SELECT FROM &#60;모델&#62; 에서만 사용 됩니다. DMX&#41;&#40;사례](../dmx/select-from-model-cases-dmx.md) [&#60;모델&#62;에서 선택 합니다. DMX&#41;쿼리를 &#40;SAMPLE_CASES](../dmx/select-from-model-sample-cases-dmx.md) .  
+ **IsInNode** 는 [SELECT FROM &#60;모델&#62; 에서만 사용 됩니다. DMX&#41;&#40;사례 ](../dmx/select-from-model-cases-dmx.md) [&#60;모델&#62;에서 선택 합니다. DMX&#41;쿼리를 &#40;SAMPLE_CASES ](../dmx/select-from-model-sample-cases-dmx.md) .  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 IsInNode 함수에서 지정한 노드와 연관된 모델을 만드는 데 사용된 모든 사례를 반환합니다.  
   
 ```  

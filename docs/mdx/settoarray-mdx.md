@@ -1,4 +1,5 @@
 ---
+description: SetToArray(MDX)
 title: SetToArray (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: c52c2641d21c20c91ec7548cafc969e506801b08
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f5b0c4b39761e25065b2c262943b4ce335fccf6e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68036996"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88386979"
 ---
 # <a name="settoarray-mdx"></a>SetToArray(MDX)
 

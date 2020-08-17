@@ -1,4 +1,5 @@
 ---
+description: 애플리케이션
 title: 응용 프로그램 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 39d6461f-0d24-4b7d-a723-843ade15ad73
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9184986883f64bd082ca1db472d887609d3071bd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dc811b075eb698e5127fc321406bf906012c6d12
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306554"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88386139"
 ---
 # <a name="applications"></a>애플리케이션
 *응용 프로그램* 은 ODBC API를 호출 하 여 데이터에 액세스 하는 프로그램입니다. 대부분의 응용 프로그램은 가능 하지만이 가이드 전체에서 예로 사용 되는 세 가지 범주에 해당 합니다.  

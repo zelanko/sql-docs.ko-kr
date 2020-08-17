@@ -1,4 +1,5 @@
 ---
+description: StrToTuple(MDX)
 title: StrToTuple (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 232d1e94892165430867ec5217f8c87ccd625b48
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6df003fcbac42c791cc6939dfc96d316c89f4612
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68036707"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88386769"
 ---
 # <a name="strtotuple-mdx"></a>StrToTuple(MDX)
 
@@ -38,7 +39,7 @@ StrToTuple(Tuple_Specification [,CONSTRAINED] )
   
 -   CONSTRAINED 플래그를 사용하지 않을 경우 지정한 튜플은 튜플을 반환하는 유효한 MDX 식으로 확인될 수 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 2004년에 대한 Bayern 멤버의 Reseller Sales Amount 측정값을 반환합니다. 제공되는 튜플 사양에는 유효한 MDX 튜플 식이 포함됩니다.  
   
 ```  

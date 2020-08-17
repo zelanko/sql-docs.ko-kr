@@ -1,4 +1,5 @@
 ---
+description: 모델 관리자 만들기(Master Data Services)
 title: 모델 관리자 만들기
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: dae17afc-3b39-490e-b51f-2d8da26d429e
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 1a81be69eee7a0fa8ea61b4491a296552aca51ff
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 9049dc6e40cb7bba60b68e8185e887fe27f4a5ec
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85814050"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88390089"
 ---
 # <a name="create-a-model-administrator-master-data-services"></a>모델 관리자 만들기(Master Data Services)
 
@@ -28,7 +29,7 @@ ms.locfileid: "85814050"
 > [!TIP]  
 >  관리를 간소화 하려면 Windows 또는 로컬 그룹을 만들고이를 모델 관리자로 구성 합니다. 그러면 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]에 액세스하지 않고 그룹에서 사용자를 추가하고 제거할 수 있습니다.  
   
-## <a name="prerequisites"></a>전제 조건  
+## <a name="prerequisites"></a>사전 요구 사항  
  이 절차를 수행하려면  
   
 -   **사용자 및 그룹 권한** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  
@@ -55,7 +56,7 @@ ms.locfileid: "85814050"
   
 9. 그룹 또는 사용자를 관리자로 만들 각 모델에 대해 7단계와 8단계를 수행합니다.  
   
-10. **Save**을 클릭합니다.  
+10. **저장**을 클릭합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [관리자는 MDS(Master Data Services) &#40;&#41;](../master-data-services/administrators-master-data-services.md)   

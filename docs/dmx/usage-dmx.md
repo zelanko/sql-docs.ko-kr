@@ -1,4 +1,5 @@
 ---
+description: 사용법(DMX)
 title: 사용량 (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: cdbefcfeb6d638998ec2e0a01b8da5ca40f2aeaf
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 3886cd500282d34ef07145913e036a6ab4ad4852
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86971576"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88394859"
 ---
 # <a name="usage-dmx"></a>사용법(DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]

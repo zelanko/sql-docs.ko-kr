@@ -1,4 +1,5 @@
 ---
+description: 제품 및 기술 표
 title: ADO 기술 테이블 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 38c8ad3c-d6f1-40f6-a394-bbba6ed861e5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0e0fb8e559dcf98f39b5f3783e3e43d5d10671cb
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: a524139113cffeaf437b91a41b4f10b4468d5fe4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761661"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88355249"
 ---
 # <a name="products-and-technologies-table"></a>제품 및 기술 표
 다음 표에서는 ADO 프로그래머 가이드에서 설명 하는 Microsoft 제품, 도구 및 기술을 보여 줍니다. 설명서의 관련 항목에 가능한 한 링크를 제공 합니다.

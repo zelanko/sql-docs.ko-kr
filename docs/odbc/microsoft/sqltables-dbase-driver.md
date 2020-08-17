@@ -1,4 +1,5 @@
 ---
+description: SQLTables(dBASE 드라이버)
 title: SQLTables (dBASE 드라이버) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 45938efb-b678-47d8-9345-644fa26ad679
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 242be06eafc7657f37f55ce266af471cbc72597f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5cadded2fe1dfdcb99902a69bb5cbc0608b4614e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306074"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88339899"
 ---
 # <a name="sqltables-dbase-driver"></a>SQLTables(dBASE 드라이버)
 > [!NOTE]  

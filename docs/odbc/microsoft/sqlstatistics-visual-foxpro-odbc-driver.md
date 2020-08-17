@@ -1,4 +1,5 @@
 ---
+description: SQLStatistics(Visual FoxPro ODBC 드라이버)
 title: SQLStatistics (Visual FoxPro ODBC 드라이버) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: bb48c22f-1fd5-47b4-8eaa-ff69cd431cf9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f225e37fd8bace25c90782d6a35b0eab09ea82cb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4a7da15a03bfcc6bd8d2cef86849264ca44de0bd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306112"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88339939"
 ---
 # <a name="sqlstatistics-visual-foxpro-odbc-driver"></a>SQLStatistics(Visual FoxPro ODBC 드라이버)
 > [!NOTE]  

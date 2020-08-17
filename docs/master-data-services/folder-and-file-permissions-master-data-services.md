@@ -1,4 +1,5 @@
 ---
+description: 폴더 및 파일 사용 권한(Master Data Services)
 title: 폴더 및 파일 사용 권한
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6402d81d-7349-47b1-95ca-99b0c0f4f373
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 4183f8be34e7322af72a76297631df2b4060421c
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 0d06fb6aaacdac159ab9241209c862e22758e999
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811508"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88388829"
 ---
 # <a name="folder-and-file-permissions-master-data-services"></a>폴더 및 파일 사용 권한(Master Data Services)
 
@@ -39,7 +40,7 @@ ms.locfileid: "85811508"
 |---------------------------|-----------------|  
 |CREATOR OWNER|특별 사용 권한|  
 |SYSTEM|특별 사용 권한|  
-|Administrators|특별 사용 권한|  
+|관리자|특별 사용 권한|  
 |사용자|읽기 & 실행, 폴더 내용 보기, 읽기|  
 |TrustedInstaller|폴더 내용 보기, 특별 사용 권한|  
   
@@ -51,7 +52,7 @@ ms.locfileid: "85811508"
 |그룹 또는 계정 이름|사용 권한|  
 |---------------------------|-----------------|  
 |SYSTEM|수정, 읽기 & 실행, 폴더 내용 보기, 읽기, 쓰기|  
-|Administrators|수정, 읽기 & 실행, 폴더 내용 보기, 읽기, 쓰기|  
+|관리자|수정, 읽기 & 실행, 폴더 내용 보기, 읽기, 쓰기|  
 |MDS_ServiceAccounts|수정, 읽기 & 실행, 폴더 내용 보기, 읽기, 쓰기|  
   
 ###### <a name="webconfig-permissions"></a>Web.config 사용 권한  
@@ -59,7 +60,7 @@ ms.locfileid: "85811508"
 |그룹 또는 계정 이름|사용 권한|  
 |---------------------------|-----------------|  
 |SYSTEM|모든 권한, 수정, 읽기 & 실행, 읽기, 쓰기|  
-|Administrators|모든 권한, 수정, 읽기 & 실행, 읽기, 쓰기|  
+|관리자|모든 권한, 수정, 읽기 & 실행, 읽기, 쓰기|  
 |MDS_ServiceAccounts|읽기 & 실행, 읽기|  
   
  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Web.config 파일의 내용에 대한 자세한 내용은 [웹 구성 참조&#40;Master Data Services&#41;](../master-data-services/web-configuration-reference-master-data-services.md)를 참조하세요.  

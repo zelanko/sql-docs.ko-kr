@@ -1,4 +1,5 @@
 ---
+description: ADO 용어
 title: ADO 용어 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 4b92f9c8b65db459d46aff51b7aed58c3ff6e307
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b67f8f38a57d7918f2b6f79ed9a2a82dc00d4dee
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76940432"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88355459"
 ---
 # <a name="ado-glossary-terms"></a>ADO 용어
 이 항목에서는 ADO와 관련 된 용어를 정의 합니다.
@@ -40,7 +41,7 @@ ms.locfileid: "76940432"
 ## <a name="b"></a>b
  바인딩 항목 테이블과 변수의 필드 간 매핑입니다. ADO Visual C++ 확장에서 **레코드 집합** 필드는 C/c + + 변수에 매핑됩니다.
 
- 비트 값과 비트 값 비교를 위한 숫자 값을 일반적으로 매개 변수 또는 반환 값의 플래그 옵션에 대 한 비트 마스크입니다. 일반적으로 이러한 비교 작업 **은 and,** **or** 등의 비트 논리 연산자를 사용 하 여 **&** 수행 되며 c + +의 **&#124;** Visual Basic.
+ 비트 값과 비트 값 비교를 위한 숫자 값을 일반적으로 매개 변수 또는 반환 값의 플래그 옵션에 대 한 비트 마스크입니다. 일반적으로 이러한 비교 작업 **은 and,** **or** 등의 비트 논리 연산자를 사용 하 여 수행 되며 **&** c + +의 **&#124;** Visual Basic.
 
  예를 들어 ADO **FieldAttributeEnum** 값을 비트 마스크로 사용 하 여 필드의 특성을 확인할 수 있습니다. 필드를 업데이트할 수 있는지 여부를 확인 하 려 한다고 가정 합니다. Visual Basic에서 다음 식을 사용 하 여이를 테스트할 수 있습니다.`Field.Attributes AND adFldUpdatable`
 
@@ -77,7 +78,7 @@ ms.locfileid: "76940432"
 
  비교 연산자 두 식을 비교 하 고 부울 값을 반환 하는 연산자입니다.
 
- ">" (보다 큼), "\<" (보다 작음), "=" (같음), ">=" (크거나 같음), "<=" (작거나 같음), "<>" (같지 않음) 또는 "like" (패턴 일치)로 표현 될 수 있는 조건 매개 변수입니다.
+ ">" (보다 큼), " \<" (less than), "=" (equal), "> =" (크거나 같음), "<=" (작거나 같음), "<>" (같지 않음) 또는 "like" (패턴 일치)로 표현 될 수 있는 조건 매개 변수입니다.
 
  구성 요소 데이터와 코드를 캡슐화 하 고 공개적으로 사용 가능한 서비스의 잘 지정 된 집합을 제공 하는 개체입니다.
 
@@ -119,7 +120,7 @@ ms.locfileid: "76940432"
  동적 속성 데이터 공급자나 커서 서비스와 관련 된 속성입니다. 개체의 **속성** 컬렉션이 자동으로 채워집니다 ("동적"). 개체는 특정 데이터 공급자를 통해 데이터 원본에 연결 될 때까지 동적 속성이 없습니다. 데이터 공급자, 커서도 참조 하세요.
 
 ## <a name="e"></a>E
- 명명 된 상수 목록을 열거 합니다. 열거 값은 고유할 필요가 없습니다. 그러나 각 값의 이름은 열거가 정의 된 범위 내에서 고유 해야 합니다. ADO에서는 숫자 매개 변수 및 반환 값에 대 한 열거형을 사용 하 여 ADO 코드에 의미를 추가 하 고 버전에서 버전으로 변경 될 수 있는 숫자 값을 개발자에 게 보호 합니다. 예를 들어 정적 **레코드 집합**을 열려면 **adopenstatic** 열거형 값을 사용 합니다.`Recordset.Open ,,adOpenStatic`
+ 명명 된 상수 목록을 열거 합니다. 열거 값은 고유할 필요가 없습니다. 그러나 각 값의 이름은 열거가 정의 된 범위 내에서 고유 해야 합니다. ADO에서는 숫자 매개 변수 및 반환 값에 대 한 열거형을 사용 하 여 ADO 코드에 의미를 추가 하 고 버전에서 버전으로 변경 될 수 있는 숫자 값을 개발자에 게 보호 합니다. 예를 들어 정적 **레코드 집합**을 열려면 **adopenstatic** 열거형 값을 사용 합니다. `Recordset.Open ,,adOpenStatic`
 
  *열거 상수*라고도 합니다. *상수*도 참조 하세요.
 

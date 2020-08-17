@@ -1,4 +1,5 @@
 ---
+description: 프로젝트 만들기 및 관리 (AccessToSQL)
 title: 프로젝트 만들기 및 관리 (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f2d1f0b0-5394-4adb-b3f3-abd71eb68ca7
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: ed3c26296f856c87875e2f50766a57c3f6d0c66e
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 078b7f511d8120a0b5fa7cd182024cf7a124e84a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934074"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88373059"
 ---
 # <a name="creating-and-managing-projects-accesstosql"></a>프로젝트 만들기 및 관리 (AccessToSQL)
 Access 데이터베이스를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure 마이그레이션하려면 먼저 SSMA 프로젝트를 만들어야 합니다. 프로젝트는 SQL Azure 마이그레이션하려는 액세스 데이터베이스에 대 한 메타 데이터 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 마이그레이션된 개체 및 데이터, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결 정보 및 프로젝트 설정을 받는 SQL Azure의 대상 인스턴스에 대 한 메타 데이터를 포함 하는 파일입니다.  
@@ -89,7 +90,7 @@ SSMA에서 프로젝트 파일을 만듭니다. 이제 [하나 이상의 Access 
   
         메타 데이터를 저장 하는 데 몇 분 정도 걸릴 수 있습니다. 이때 메타 데이터를 저장 하지 않으려면 확인란을 선택 하지 마십시오.  
   
-    2.  **Save**을 클릭합니다.  
+    2.  **저장**을 클릭합니다.  
   
         SSMA는 액세스 스키마를 구문 분석 하 고 메타 데이터를 프로젝트 파일에 저장 합니다.  
   

@@ -1,4 +1,5 @@
 ---
+description: sys. edge_constraint_clauses (Transact-sql)
 title: sys. edge_constraint_clauses (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/17/2018
@@ -20,12 +21,12 @@ ms.assetid: 0f782d2f-7126-46ab-85b7-bcba44862231
 author: shkale-msft
 ms.author: shkale
 monikerRange: '>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 73231458308622d6d73e08fbc6bfe8c5064c3888
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: a89937ae82b1bd53f2eae10f15d0cd6f87660ef8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919737"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88378079"
 ---
 # <a name="sysedge_constraint_clauses-transact-sql"></a>sys. edge_constraint_clauses (Transact-sql)
 [!INCLUDE[sqlserver2019](../../includes/applies-to-version/sqlserver2019.md)]

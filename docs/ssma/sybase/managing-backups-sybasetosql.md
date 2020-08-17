@@ -1,4 +1,5 @@
 ---
+description: 백업 관리(SybaseToSQL)
 title: 백업 관리 (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 266d987c-ecc5-4fa4-bfdf-8c584f1a1332
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 2a7a32804d3c4cb08f593398e901bed66d124b2a
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 916c0493f477175d9bb92c5fc0db860ea7b375c6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87931081"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88372059"
 ---
 # <a name="managing-backups-sybasetosql"></a>백업 관리(SybaseToSQL)
 Sybase 백업 관리를 사용 하면 테스트를 실행 하기 전이나 후에 테이블 데이터를 백업 및 복원할 수 있습니다. 백업 콘텐츠 관리 대화 상자를 사용 하 여 백업 콘텐츠를 관리할 수도 있습니다.  

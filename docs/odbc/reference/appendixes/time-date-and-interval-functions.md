@@ -1,4 +1,5 @@
 ---
+description: 시간, 날짜 및 간격 함수
 title: 시간, 날짜 및 간격 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: bdf054a0-7aba-4e99-a34a-799917376fd5
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: aec3d6b23383edcc9659ff884e8cd71b0595dae1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dcbdf9f40a9cd1f1296920e3d2ea71fcb5ce6b39
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302824"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88386379"
 ---
 # <a name="time-date-and-interval-functions"></a>시간, 날짜 및 간격 함수
 다음 표에서는 ODBC 스칼라 함수 집합에 포함 된 시간 및 날짜 함수를 보여 줍니다. 응용 프로그램은 SQL_TIMEDATE_FUNCTIONS *정보 형식* 으로 **SQLGetInfo** 를 호출 하 여 드라이버에서 지원 되는 시간 및 날짜 함수를 확인할 수 있습니다.  
@@ -35,7 +36,7 @@ ms.locfileid: "81302824"
   
  CURRENT_DATE, CURRENT_TIME 및 CURRENT_TIMESTAMP timedate.cpl 스칼라 함수는 SQL-92에 맞게 ODBC 3.0에 추가 되었습니다.  
   
-|함수|Description|  
+|기능|설명|  
 |--------------|-----------------|  
 |**CURRENT_DATE ()** (ODBC 3.0)|현재 날짜를 반환합니다.|  
 |**CURRENT_TIME [(** *시간-전체 자릿수* **)]** (ODBC 3.0)|현재 현지 시간을 반환합니다. *시간 전체 자릿수* 인수는 반환 된 값의 초 전체 자릿수를 결정 합니다.|  

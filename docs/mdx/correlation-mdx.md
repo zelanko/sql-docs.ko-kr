@@ -1,4 +1,5 @@
 ---
+description: Correlation(MDX)
 title: 상관 관계 (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 35227d129f70a505a33157d1aa945da5acb219d9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ae050b681830b81ffa63ae82c714d69d54b03c91
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68045210"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88387649"
 ---
 # <a name="correlation-mdx"></a>Correlation(MDX)
 

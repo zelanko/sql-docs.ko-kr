@@ -1,4 +1,5 @@
 ---
+description: 명시적 계층 이름 변경(Master Data Services)
 title: 명시적 계층 이름 변경
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 12991603-474e-4042-b160-b1f7979694b1
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 31f93bbb8aa214a1353fce1a571f555c94055ccd
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: af898be32f3c3713bbf73a34bec2d9a4f67368be
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812038"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88390259"
 ---
 # <a name="change-an-explicit-hierarchy-name-master-data-services"></a>명시적 계층 이름 변경(Master Data Services)
 
@@ -25,7 +26,7 @@ ms.locfileid: "85812038"
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 명시적 계층의 이름을 변경할 수 있습니다.  
   
-## <a name="prerequisites"></a>전제 조건  
+## <a name="prerequisites"></a>사전 요구 사항  
  이 절차를 수행하려면  
   
 -   **시스템 관리** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  
@@ -46,7 +47,7 @@ ms.locfileid: "85812038"
   
 6.  **이름** 상자에 계층의 업데이트된 이름을 입력합니다.  
   
-7.  **Save**을 클릭합니다.  
+7.  **저장**을 클릭합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [명시적 계층 &#40;MDS(Master Data Services)&#41;](../master-data-services/explicit-hierarchies-master-data-services.md)   

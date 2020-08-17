@@ -1,4 +1,5 @@
 ---
+description: 솔루션 탐색기
 title: 데이터 원본 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4ae44fa2-0b9b-4e19-ab45-c1dc93b68406
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9b7e464963471b0cad41c5b93d50507d0fa9bf96
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3b9f980ad9ccd1fa38b6fce863703ec706e21a76
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306514"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88386059"
 ---
 # <a name="data-sources"></a>솔루션 탐색기
 *데이터 원본은* 단순히 데이터 원본입니다. 파일, DBMS의 특정 데이터베이스 또는 라이브 데이터 피드 일 수 있습니다. 데이터는 프로그램과 동일한 컴퓨터 또는 네트워크의 다른 컴퓨터에 있을 수 있습니다. 예를 들어 데이터 원본은 운영 체제®에서 실행 되는 Oracle DBMS로, Novell® Netware에서 액세스할 수 있습니다. 게이트웨이를 통해 액세스 하는 IBM DB2 DBMS 서버 디렉터리에 있는 Xbase 파일의 컬렉션입니다. 또는 로컬 Microsoft® Access 데이터베이스 파일  

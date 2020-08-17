@@ -1,4 +1,5 @@
 ---
+description: 프로젝트 옵션 설정 (DB2ToSQL)
 title: 프로젝트 옵션 설정 (DB2ToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: f325a606-97ac-48bc-b344-b55f5e086a48
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: be1cc5ca7d48d72ee9c87ceb2c421a0c411548dc
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 307c726811d4071754ff118ebd56d7d43abd05f9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87936657"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88321019"
 ---
 # <a name="setting-project-options-db2tosql"></a>프로젝트 옵션 설정 (DB2ToSQL)
 각 SSMA 프로젝트에 대해 프로젝트 수준 옵션을 설정할 수 있습니다. 이러한 옵션은 개체 변환, 개체 로드, 사용자 인터페이스 및 데이터 마이그레이션 설정을 지정 합니다. 개체를로 변환 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 하거나 데이터를로 마이그레이션하기 전에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 옵션이 프로젝트에 적합 한지 확인 합니다.  
@@ -36,7 +37,7 @@ SSMA에는 5 개의 프로젝트 설정 집합이 있습니다.
   
 또한 이러한 설정을 구성 하는 네 가지 모드가 있습니다.  
   
--   Default  
+-   기본값  
   
 -   Optimistic  
   

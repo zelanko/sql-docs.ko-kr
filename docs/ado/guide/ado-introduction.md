@@ -1,4 +1,5 @@
 ---
+description: ADO 개요 및 이점
 title: ADO 소개 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c5b3a134-de22-4e9c-9489-9a1cc7a5dcfa
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 811d850127b215e69c3710e7680f655714773f57
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: b702f96fab776c383e309a94eea9358ed95cab90
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761701"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88355439"
 ---
 # <a name="ado-overview-and-benefits"></a>ADO 개요 및 이점
 ADO (ADO(ActiveX Data Objects))는 OLE DB 하는 데 사용 하기 쉬운 고급 인터페이스입니다. OLE DB은 다양 한 데이터 저장소에 대 한 낮은 수준의 고성능 인터페이스입니다. ADO와 OLE DB 모두 관계형 (테이블 형식) 및 비관계형 (계층적 또는 스트림) 데이터에서 사용할 수 있습니다.

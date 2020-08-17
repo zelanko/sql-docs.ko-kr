@@ -1,4 +1,5 @@
 ---
+description: ADO 보안 디자인 기능
 title: ADO 보안 디자인 문제 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/08/2018
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 86b83a38-efdf-4831-a6d5-7e470d517d1c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8dde159e0b04b319b978e9a3743d866d05c64253
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: fc525a10d6211ee5f15517618f2cc5b99c8abee8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761681"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88355399"
 ---
 # <a name="ado-security-design-features"></a>ADO 보안 디자인 기능
 다음 섹션에서는 ADO(ActiveX Data Objects) (ADO) 2.8 이상의 보안 디자인 기능에 대해 설명 합니다. 이러한 변경 내용은 보안을 개선 하기 위해 ADO 2.8에서 수행 되었습니다. Windows Vista의 Windows DAC 6.0에 포함 된 ADO 6.0는 Windows XP 및 Windows Server 2003의 MDAC 2.8에 포함 된 ADO 2.8와 기능적으로 동일 합니다. 이 항목에서는 ADO 2.8 이상에서 응용 프로그램의 보안을 유지 하는 방법에 대 한 정보를 제공 합니다.
@@ -107,7 +108,7 @@ This Website is using your identity to access a data source. If you trust this W
  ADO 응용 프로그램 코드를 사용 하 여 타사 (타사) OLE DB 공급자를 사용 하는 경우 **DBPROP_AUTH_PERSIST_SENSITIVE_AUTHINFO** 속성을 구현 하는 방법을 확인 하 여 ado 연결 문자열과 함께 암호 정보가 포함 되는지 여부를 확인할 수 있습니다.
 
 ## <a name="checking-for-non-file-devices-when-loading-and-saving-recordsets-or-streams"></a>레코드 집합 또는 스트림을 로드 하 고 저장할 때 파일이 아닌 장치를 확인 하는 중
- ADO 2.7 및 이전 버전의 경우 파일 기반 데이터를 읽고 쓰는 데 사용 된 [Open](../../ado/reference/ado-api/open-method-ado-recordset.md) 및 [Save](../../ado/reference/ado-api/save-method.md) 와 같은 파일 입/출력 작업은 디스크 기반이 아닌 파일 형식을 지정 하는 URL 또는 파일 이름을 사용할 수 있습니다. 예: LPT1, COM2, PRN. TXT, AUX는 특정 장치를 사용 하 여 시스템에서 프린터와 보조 장치 간의 입력/출력에 대 한 별칭으로 사용할 수 있습니다.
+ ADO 2.7 및 이전 버전의 경우 파일 기반 데이터를 읽고 쓰는 데 사용 된 [Open](../../ado/reference/ado-api/open-method-ado-recordset.md) 및 [Save](../../ado/reference/ado-api/save-method.md) 와 같은 파일 입/출력 작업은 디스크 기반이 아닌 파일 형식을 지정 하는 URL 또는 파일 이름을 사용할 수 있습니다. 예를 들어 LPT1, COM2, PRN.TXT, AUX는 특정를 사용 하 여 시스템에서 프린터와 보조 장치 간의 입력/출력에 대 한 별칭으로 사용 될 수 있습니다.
 
  ADO 2.8 이상 버전의 경우이 기능이 업데이트 되었습니다. **레코드 집합과** **스트림** 개체를 열고 저장 하는 경우 ADO는 이제 파일 형식 검사를 수행 하 여 URL 또는 파일 이름에 지정 된 입력 또는 출력 장치가 실제 파일 인지 확인 합니다.
 

@@ -1,4 +1,5 @@
 ---
+description: sys. pdw_loader_run_stages (Transact-sql)
 title: sys. pdw_loader_run_stages (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -12,12 +13,12 @@ ms.assetid: 255681e9-323c-42c0-a63c-1f05536efdd5
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 0b25a615f6b420b9cc08fe5d7600249cb0e5fb03
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: b2af896ec6a187f81c523ee172662141b71cffb8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394241"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88377009"
 ---
 # <a name="syspdw_loader_run_stages-transact-sql"></a>sys. pdw_loader_run_stages (Transact-sql)
 [!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
