@@ -1,4 +1,5 @@
 ---
+description: UnknownMember(MDX)
 title: UnknownMember (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: a0332b200a74044dcd4e7d8d308923cc4b759738
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0489556836b943ba91d4e17b3a164aeca0c648d2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68097279"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88341149"
 ---
 # <a name="unknownmember-mdx"></a>UnknownMember(MDX)
 
@@ -56,7 +57,7 @@ Hierarchy_Expression.UnknownMember
 > [!NOTE]  
 >  계층이나 멤버에 알 수 없는 멤버가 존재하지 않으면 오류가 생성됩니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 Measures 차원의 모든 멤버에 대해 Product 특성 계층에 있는 All Products 멤버의 알 수 없는 멤버를 반환합니다.  
   
 ```  

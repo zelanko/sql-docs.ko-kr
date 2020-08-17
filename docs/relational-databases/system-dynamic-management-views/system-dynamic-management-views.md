@@ -1,4 +1,5 @@
 ---
+description: 동적 관리 뷰 (Transact-sql)
 title: 동적 관리 뷰 (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/29/2017
@@ -24,12 +25,12 @@ ms.assetid: cf893ecb-0bf6-4cbf-ac00-8a1099e405b1
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fbeef1cf93e9ea2c9556a7f68b550fc2da0c9508
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: a1644a542a7f7c70b3f2293fbd340ddda9474721
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86941932"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88322689"
 ---
 # <a name="system-dynamic-management-views"></a>시스템 동적 관리 뷰
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -74,15 +75,15 @@ FROM sys.dm_os_wait_stats;
 
         [공용 언어 런타임 관련 동적 관리 뷰 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/common-language-runtime-related-dynamic-management-views-transact-sql.md)
 
-        [Transact-sql&#41;&#40;데이터베이스 미러링 관련 동적 관리 뷰](database-mirroring-sys-dm-db-mirroring-auto-page-repair.md)
+        [Transact-sql&#41;&#40;데이터베이스 미러링 관련 동적 관리 뷰 ](database-mirroring-sys-dm-db-mirroring-auto-page-repair.md)
 
-        [Transact-sql&#41;&#40;데이터베이스 관련 동적 관리 뷰](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)
+        [Transact-sql&#41;&#40;데이터베이스 관련 동적 관리 뷰 ](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)
 
         [실행 관련 동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)
 
         [확장 이벤트 동적 관리 뷰](../../relational-databases/system-dynamic-management-views/extended-events-dynamic-management-views.md)
 
-        [Transact-sql&#41;&#40;Filestream 및 FileTable 동적 관리 뷰](../../relational-databases/system-dynamic-management-views/filestream-and-filetable-dynamic-management-views-transact-sql.md)
+        [Transact-sql&#41;&#40;Filestream 및 FileTable 동적 관리 뷰 ](../../relational-databases/system-dynamic-management-views/filestream-and-filetable-dynamic-management-views-transact-sql.md)
 
         [Transact-sql&#41;전체 텍스트 검색 및 의미 체계 검색 동적 관리 뷰 및 함수 &#40;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)
 
@@ -90,7 +91,7 @@ FROM sys.dm_os_wait_stats;
 
         [인덱스 관련 동적 관리 뷰 및 함수 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)
 
-        [Transact-sql&#41;&#40;동적 관리 뷰 및 함수](../../relational-databases/system-dynamic-management-views/i-o-related-dynamic-management-views-and-functions-transact-sql.md)
+        [Transact-sql&#41;&#40;동적 관리 뷰 및 함수 ](../../relational-databases/system-dynamic-management-views/i-o-related-dynamic-management-views-and-functions-transact-sql.md)
     :::column-end:::
     :::column:::
         [메모리 최적화 테이블 동적 관리 뷰 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)
@@ -109,11 +110,11 @@ FROM sys.dm_os_wait_stats;
 
         [Service Broker 관련 동적 관리 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/service-broker-related-dynamic-management-views-transact-sql.md)
 
-        [Transact-sql&#41;&#40;공간 데이터 관련 동적 관리 뷰 및 함수](https://msdn.microsoft.com/library/c542ac38-451f-43a5-bf8c-4edd38bb738e)
+        [Transact-sql&#41;&#40;공간 데이터 관련 동적 관리 뷰 및 함수 ](https://msdn.microsoft.com/library/c542ac38-451f-43a5-bf8c-4edd38bb738e)
 
-        [Transact-sql&#41;&#40;SQL Data Warehouse 및 병렬 데이터 웨어하우스 동적 관리 뷰](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)
+        [Transact-sql&#41;&#40;SQL Data Warehouse 및 병렬 데이터 웨어하우스 동적 관리 뷰 ](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)
 
-        [Transact-sql&#41;&#40;운영 체제 관련 동적 관리 뷰 SQL Server](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)
+        [Transact-sql&#41;&#40;운영 체제 관련 동적 관리 뷰 SQL Server ](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)
 
         [Stretch Database 동적 관리 뷰 &#40;Transact-sql&#41;](https://msdn.microsoft.com/library/1193efce-a105-49a9-a8b8-26b063485567)
 
@@ -122,8 +123,8 @@ FROM sys.dm_os_wait_stats;
 :::row-end:::
 
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;서버 사용 권한 부여](../../t-sql/statements/grant-server-permissions-transact-sql.md)   
+ [Transact-sql&#41;&#40;서버 사용 권한 부여 ](../../t-sql/statements/grant-server-permissions-transact-sql.md)   
  [GRANT 데이터베이스 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-permissions-transact-sql.md)   
- [Transact-sql&#41;&#40;시스템 뷰](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
+ [Transact-sql&#41;&#40;시스템 뷰 ](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
   
   

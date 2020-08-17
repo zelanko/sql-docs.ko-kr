@@ -1,4 +1,5 @@
 ---
+description: 전역 설정(테스터)(OracleToSQL)
 title: 전역 설정 (테스터) (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -10,12 +11,12 @@ ms.assetid: 4acc0f2a-85ba-4c99-856a-89030f5c418e
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 12ca00b130367495ba725627b7fbd5c523505387
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 789d2cbb22e03053ab8f03e0bdd50b6383ea788e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934776"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88320399"
 ---
 # <a name="global-settings-tester-oracletosql"></a>전역 설정(테스터)(OracleToSQL)
 **전역 설정** 대화 상자의 테스터 페이지를 사용 하 여 Ssma 테스터에 대 한 설정을 지정할 수 있습니다.  
@@ -30,7 +31,7 @@ ms.locfileid: "87934776"
   
 1.  예  
   
-2.  아니요  
+2.  예  
   
 **보조 테이블 저장 모드**  
 이 설정은 테스트 사례를 실행 하는 동안 생성 된 내부 보조 테이블을 저장 하는 방법을 지정 합니다. 이 특정 설정에 대해 다음 옵션을 설정할 수 있습니다.  
@@ -52,7 +53,7 @@ ms.locfileid: "87934776"
   
 1.  예  
   
-2.  아니요  
+2.  예  
   
 **첫 번째 실패 후 테스트 실행 중지**  
 이 설정은 실행 중에 오류가 발생 한 경우 현재 실행 중인 테스트 사례를 중지할지 여부를 지정 합니다. 기본 옵션 집합은 **예**입니다.  
@@ -61,8 +62,8 @@ ms.locfileid: "87934776"
   
 1.  예  
   
-2.  아니요  
+2.  예  
   
 ## <a name="see-also"></a>참고 항목  
-[OracleToSQL&#41;&#40;테스트 사례 준비 완료](../../ssma/oracle/finishing-test-case-preparation-oracletosql.md)  
+[OracleToSQL&#41;&#40;테스트 사례 준비 완료 ](../../ssma/oracle/finishing-test-case-preparation-oracletosql.md)  
   

@@ -1,4 +1,5 @@
 ---
+description: 기타 텍스트 파일 드라이버 프로그래밍 세부 정보
 title: 기타 텍스트 파일 드라이버 프로그래밍 정보 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bfa85e91-060e-4d70-88c3-f5c48df634f1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 5565c5682e8e33fbadd6ffdd66a89098098bea6d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3539b23bcd256c55dbf38b5194f9321618f1aa0e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81290943"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88340469"
 ---
 # <a name="other-text-file-driver-programming-details"></a>기타 텍스트 파일 드라이버 프로그래밍 세부 정보
 > [!NOTE]  

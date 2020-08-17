@@ -1,4 +1,5 @@
 ---
+description: 수치 연산 함수 사용
 title: 수치 연산 함수 사용 | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: a1ad62871870dc98b5de1e514150cc837ac16e4c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c6f589f865fc148a95a687b8780eb4547807e385
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68097150"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88340989"
 ---
 # <a name="using-mathematical-functions"></a>수치 연산 함수 사용
 

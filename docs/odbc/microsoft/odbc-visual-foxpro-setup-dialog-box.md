@@ -1,4 +1,5 @@
 ---
+description: ODBC Visual FoxPro 설치 대화 상자
 title: ODBC Visual FoxPro 설정 대화 상자 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: de020197-7f53-4643-9cbf-b7887ba88de9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ef7ac702a69342833c6dfffa0ffc9cdd0ac2857e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2083f76300ed19e047b0a138aed6c65ecef4da3d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298083"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88340709"
 ---
 # <a name="odbc-visual-foxpro-setup-dialog-box"></a>ODBC Visual FoxPro 설치 대화 상자
 **ODBC Visual Foxpro 설정** 대화 상자를 사용 하 여 visual foxpro 데이터 원본을 추가 하거나 변경할 수 있습니다.  
@@ -42,7 +43,7 @@ ms.locfileid: "81298083"
  **Free 테이블 디렉터리**  
  데이터 원본을 [사용 가능한 테이블](../../odbc/microsoft/visual-foxpro-terminology.md)의 디렉터리에 연결 하도록 지정 합니다. [Sqlcolumns](../../odbc/microsoft/sqlcolumns-visual-foxpro-odbc-driver.md) 또는 [SQLCOLUMNS](../../odbc/microsoft/sqltables-visual-foxpro-odbc-driver.md)와 같은 ODBC 카탈로그 함수는 동일한 디렉터리에 있는 모든 [데이터베이스](../../odbc/microsoft/visual-foxpro-terminology.md) 테이블을 무시 합니다. [Sqlexecute](../../odbc/microsoft/sqlexecute-visual-foxpro-odbc-driver.md) 및 [sqlexecdirect](../../odbc/microsoft/sqlexecdirect-visual-foxpro-odbc-driver.md)를 통해 전송 되는 SQL SELECT 문을 사용 하 여 데이터베이스 테이블에 액세스할 수 있습니다.  
   
- **경로**  
+ **Path**  
  데이터베이스의 경로와 이름 또는 데이터 원본이 연결 된 free 테이블의 디렉터리를 표시 합니다.  
   
  **찾아보기**  
@@ -55,10 +56,10 @@ ms.locfileid: "81298083"
  **데이터 정렬 순서**  
  필드가 정렬 되는 순서입니다. 기본 시퀀스는 운영 체제의 언어 버전에서 지원 되는 시퀀스를 반영 합니다. 지원 되는 데이터 정렬 순서 목록은 [COLLATE 설정](../../odbc/microsoft/set-collate-command.md)을 참조 하세요.  
   
- **단독**  
+ **전용**  
  이 확인란을 선택 하면 데이터 원본을 사용 하 여 데이터에 액세스할 때 드라이버가 Visual FoxPro 데이터베이스를 독점적으로 엽니다. 데이터베이스가 단독으로 열리는 동안에는 다른 사용자가 데이터베이스 또는 데이터베이스의 테이블에 액세스할 수 없습니다. 단독으로 열린 데이터베이스 내의 테이블은 공유로 열립니다. 테이블을 독점적으로 열려면 [SET EXCLUSIVE](../../odbc/microsoft/set-exclusive-command.md) 명령을 사용 합니다. **데이터베이스 유형** 을 **Free 테이블 디렉터리로**설정한 경우에는이 확인란을 사용할 수 없습니다.  
   
- **N**  
+ **Null**  
  ALTER TABLE 및 CREATE TABLE를 사용 하 여 만든 열에 null 값을 사용할 수 있는지 여부를 결정 합니다. 에 Null을 설정 하는 경우 INSERT sql은 INSERT-SQL에 포함 되지 않은 모든 열에 null 값을 삽입 합니다. 값 절입니다. Null이 해제 되어 있으면 빈가 삽입 됩니다. 다음 코드와 같이 전달 된 연결 문자열을 통해이 옵션을 제어할 수도 있습니다.  
   
 ```  
@@ -66,7 +67,7 @@ strCon = "DRIVER=MICROSOFT VISUAL FOXPRO DRIVER;
 SOURCETYPE=DBC;SOURCEDB=D:\Testdata.dbc;BACKGROUNDFETCH=NO;NULL=NO"  
 ```  
   
- **Deleted**  
+ **삭제됨**  
  삭제 된 것으로 표시 된 행이 반환 되는지 여부를 결정 합니다. 다음 코드와 같이 전달 된 연결 문자열을 통해이 옵션을 제어할 수도 있습니다.  
   
 ```  

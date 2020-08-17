@@ -1,4 +1,5 @@
 ---
+description: UniqueName(MDX)
 title: UniqueName (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 69144341bd9cff344d4514f076517afac52e2a4b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3108cf8fdfbd0bc6864438be9ac95ff909308bc6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68097291"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88341169"
 ---
 # <a name="uniquename-mdx"></a>UniqueName(MDX)
 

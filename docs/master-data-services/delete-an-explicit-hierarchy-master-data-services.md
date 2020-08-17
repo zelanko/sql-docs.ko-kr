@@ -1,4 +1,5 @@
 ---
+description: 명시적 계층 삭제(Master Data Services)
 title: 명시적 계층 삭제
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4ce177b0-9884-47a2-9cea-212e845dd762
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: d49665fff9fe5821bf5cb38e908202483f2250b5
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: e2ce835a8ac38b13557cc412a83d7f18f2d05e4a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812390"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88345209"
 ---
 # <a name="delete-an-explicit-hierarchy-master-data-services"></a>명시적 계층 삭제(Master Data Services)
 
@@ -29,7 +30,7 @@ ms.locfileid: "85812390"
 > [!WARNING]  
 >  명시적 계층을 삭제하면 해당 계층의 모든 통합 멤버도 삭제됩니다. 엔터티에 대한 모든 명시적 계층을 삭제하면 해당 엔터티의 모든 컬렉션도 삭제되며 명시적 계층과 컬렉션에 대해 엔터티를 더 이상 사용할 수 없습니다.  
   
-## <a name="prerequisites"></a>전제 조건  
+## <a name="prerequisites"></a>사전 요구 사항  
  이 절차를 수행하려면  
   
 -   **시스템 관리** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  

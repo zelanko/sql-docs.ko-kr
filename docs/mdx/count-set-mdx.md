@@ -1,4 +1,5 @@
 ---
+description: Count(집합)(MDX)
 title: Count (Set) (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: aac2f72cc8cd91e1964fd7734b858be8215cfdd8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3a8760d4df4aa1479aaa9ad365c92a5168eb3869
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68047287"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88341529"
 ---
 # <a name="count-set-mdx"></a>Count(집합)(MDX)
 
@@ -43,7 +44,7 @@ Set_Expression.Count
 > [!NOTE]  
 >  **Count (Set)** 함수는 기본적으로 빈 셀을 계산 합니다. 반면 집합을 계산 하는 OLE DB의 **Count** 함수는 기본적으로 빈 셀을 제외 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 Product 차원에 있는 Model Name 특성 계층의 자식으로 구성된 멤버 집합의 셀 수를 계산합니다.  
   
 ```  

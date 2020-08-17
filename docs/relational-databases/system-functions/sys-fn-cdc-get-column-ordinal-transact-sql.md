@@ -1,4 +1,5 @@
 ---
+description: sys.fn_cdc_get_column_ordinal(Transact-SQL)
 title: sys. fn_cdc_get_column_ordinal (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/25/2016
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 4bb21a57-2b94-4208-8bdf-6a3e2681d881
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 97c9c8d5b8c15bd2400874104bc1595aa93a4def
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: edf094b9476813e649bb12038f243407e8d11f2c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898410"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88322129"
 ---
 # <a name="sysfn_cdc_get_column_ordinal-transact-sql"></a>sys.fn_cdc_get_column_ordinal(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -57,7 +58,7 @@ sys.fn_cdc_get_column_ordinal ( 'capture_instance','column_name')
 ## <a name="permissions"></a>사용 권한  
  원본 테이블의 모든 캡처된 열에 대해 SELECT 권한이 필요합니다. 캡처 인스턴스에 대해 변경 데이터 캡처 구성 요소의 데이터베이스 역할이 지정되어 있으면 해당 역할의 멤버 자격도 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음은 `VacationHours` 캡처 인스턴스에 대한 업데이트 마스크에서 `HumanResources_Employee` 열의 서수 위치를 가져오는 예입니다. 이 값은 반환된 업데이트 마스크에서 정보를 추출하기 위해 `sys.fn_cdc_is_bit_set`에 대한 호출에 사용됩니다.  
   
 ```  
@@ -76,8 +77,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;변경 데이터 캡처 함수](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md)   
- [변경 데이터 캡처 &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)   
+ [변경 데이터 캡처 함수&#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md)   
+ [변경 데이터 캡처 정보&#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)   
  [sp_cdc_help_change_data_capture &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)   
  [sp_cdc_get_captured_columns &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-captured-columns-transact-sql.md)   
  [fn_cdc_is_bit_set &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-cdc-is-bit-set-transact-sql.md)  

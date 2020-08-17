@@ -1,4 +1,5 @@
 ---
+description: sys.dm_xe_database_session_events(Azure SQL Database)
 title: sys.dm_xe_database_session_events
 titleSuffix: Azure SQL Database
 ms.date: 06/10/2016
@@ -11,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 92db79c57390b039fa7f5b4a88c83405c11fb2c1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 06de1e7657008f924e80427b3e9bfa04eae225a8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85676000"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88323059"
 ---
 # <a name="sysdm_xe_database_session_events-azure-sql-database"></a>sys.dm_xe_database_session_events(Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -39,7 +40,7 @@ ms.locfileid: "85676000"
   
 ### <a name="relationship-cardinalities"></a>관계 카디널리티  
   
-|시작|대상|관계|  
+|보낸 사람|대상|관계|  
 |----------|--------|------------------|  
 |dm_xe_database_session_events. event_session_address|dm_xe_database_sessions. 주소|다 대 일|  
 |dm_xe_database_session_events. event_package_guid, dm_xe_database_session_events event_name|sys.dm_xe_objects.name, sys.dm_xe_objects.package_guid|다 대 일|  

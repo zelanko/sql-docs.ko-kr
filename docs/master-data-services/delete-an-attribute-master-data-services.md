@@ -1,4 +1,5 @@
 ---
+description: 특성 삭제(Master Data Services)
 title: 특성 삭제
 ms.custom: ''
 ms.date: 03/15/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ec3e66f7-0e35-43d7-a80d-64899948ebfe
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 3f33b7b5b0f68eb5dd45bf62188efd38d9bc996d
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 0e9dd0776b2909f0227d1e2b22946f5d298bb721
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85814003"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88344799"
 ---
 # <a name="delete-an-attribute-master-data-services"></a>특성 삭제(Master Data Services)
 
@@ -26,7 +27,7 @@ ms.locfileid: "85814003"
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서는 특성 및 연결된 모든 특성 값을 영구적으로 삭제하려는 경우 특성을 삭제할 수 있습니다.  
   
-## <a name="prerequisites"></a>전제 조건  
+## <a name="prerequisites"></a>사전 요구 사항  
  이 절차를 수행하려면  
   
 -   **시스템 관리** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  

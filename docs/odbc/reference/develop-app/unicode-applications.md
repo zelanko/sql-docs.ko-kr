@@ -1,4 +1,5 @@
 ---
+description: 유니코드 애플리케이션
 title: 유니코드 응용 프로그램 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7986c623-2792-4e77-bfee-c86cbf84f08d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 94bd5211c878904453624adb2acd0fe435ebc812
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ee2db77c569876b008d21149c500aa0f1f009b7a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298949"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88339159"
 ---
 # <a name="unicode-applications"></a>유니코드 애플리케이션
 다음 두 가지 방법 중 하나로 응용 프로그램을 유니코드 응용 프로그램으로 다시 컴파일할 수 있습니다.  
@@ -37,6 +38,6 @@ ms.locfileid: "81298949"
   
  응용 프로그램을 작성 하 여 유니코드 응용 프로그램 또는 ANSI 응용 프로그램으로 컴파일할 수 있습니다. 이 경우 문자 데이터 형식을 SQL_C_TCHAR로 선언할 수 있습니다. 응용 프로그램을 유니코드 응용 프로그램으로 컴파일하거나 ANSI 응용 프로그램으로 컴파일된 경우 SQL_C_CHAR 삽입 하는 SQL_C_WCHAR 삽입 하는 매크로입니다. 응용 프로그램 프로그래머는 응용 프로그램의 ANSI 또는 유니코드 여부에 따라 길이 인수의 크기가 변경 되기 때문에 (문자열 데이터 형식의 경우) SQLPOINTER를 인수로 사용 하는 함수를 주의 해 서 사용 해야 합니다.  
   
- 함수는 유니코드 전용 함수 호출 ( *W* 접미사 포함), ANSI 전용 함수 호출 (접미사 포함) 또는 접미사가 없는 ODBC 함수 호출 *로 하는* 세 가지 방법 중 하나로 호출 될 수 있습니다. 함수의 세 가지 형태에 대 한 인수는 동일 합니다. 문자열을 가리키는 SQLCHAR \* 인수나 sqlpointer 인수를 사용 하는 함수만 UNICODE 및 ANSI 형식으로 지정 해야 합니다. **SQLBindCol** 또는 **SQLGetData** 와 같이 문자 형식으로 선언할 수 있는 인수를 포함 하는 함수의 경우 (유니코드 및 ansi 형식이 없는) 인수를 유니코드 형식, ANSI 형식 또는 C 형식 인수의 경우 SQL_C_TCHAR 매크로로 선언할 수 있습니다. 자세한 내용은 [유니코드 데이터](../../../odbc/reference/develop-app/unicode-data.md)를 참조 하세요.  
+ 함수는 유니코드 전용 함수 호출 ( *W* 접미사 포함), ANSI 전용 함수 호출 (접미사 포함) 또는 접미사가 없는 ODBC 함수 호출 *로 하는* 세 가지 방법 중 하나로 호출 될 수 있습니다. 함수의 세 가지 형태에 대 한 인수는 동일 합니다. \*문자열을 가리키는 SQLCHAR 인수나 SQLPOINTER 인수를 사용 하는 함수만 Unicode 및 ANSI 형식으로 지정 해야 합니다. **SQLBindCol** 또는 **SQLGetData** 와 같이 문자 형식으로 선언할 수 있는 인수를 포함 하는 함수의 경우 (유니코드 및 ansi 형식이 없는) 인수를 유니코드 형식, ANSI 형식 또는 C 형식 인수의 경우 SQL_C_TCHAR 매크로로 선언할 수 있습니다. 자세한 내용은 [유니코드 데이터](../../../odbc/reference/develop-app/unicode-data.md)를 참조 하세요.  
   
  응용 프로그램을 사용할 수 있는 유니코드 드라이버가 없는 경우에도 응용 프로그램을 유니코드 응용 프로그램으로 작성할 수 있습니다. 드라이버 관리자가 유니코드 함수 및 데이터 형식을 ANSI에 매핑합니다. 유니코드에서 ANSI로의 매핑을 수행 하는 데는 몇 가지 제한 사항이 있습니다. 유니코드 응용 프로그램에서 사용할 유니코드 드라이버가 있으면 성능이 향상 되 고 유니코드에서 ANSI로의 제약에 내재 된 제한이 제거 됩니다.

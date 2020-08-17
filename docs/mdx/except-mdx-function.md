@@ -1,4 +1,5 @@
 ---
+description: Except (MDX) 함수
 title: Except (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: d53a88ce78eb5a1b106cefb0832ca1023f67c000
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6e4cd8dcf3a8c3100a064e8ba5888060477de979
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68077259"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88341509"
 ---
 # <a name="except-mdx-function"></a>Except (MDX) 함수
 
@@ -37,7 +38,7 @@ Except(Set_Expression1, Set_Expression2 [, ALL ] )
 ## <a name="remarks"></a>설명  
  **ALL** 이 지정 된 경우 함수는 첫 번째 집합에서 발견 된 중복 항목을 유지 합니다. 두 번째 집합에서 발견 된 중복은 계속 제거 됩니다. 멤버는 첫 번째 집합에 나타나는 순서대로 반환됩니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 이 함수의 사용 방법을 보여 줍니다.  
   
 ```  

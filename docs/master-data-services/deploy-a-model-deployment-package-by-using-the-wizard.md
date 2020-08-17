@@ -1,4 +1,5 @@
 ---
+description: 마법사를 사용하여 모델 배포 패키지 배포
 title: 모델 배포 패키지 배포 (마법사)
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4f65dc60-0ff8-46e6-9988-5bc5b9603ad0
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 16e1ff64a2c5178eda70fb681c11a7d7a1b79bc0
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 86170829ee1ae3f5116497f8435bf207edb3d5a2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811786"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88344459"
 ---
 # <a name="deploy-a-model-deployment-package-by-using-the-wizard"></a>마법사를 사용하여 모델 배포 패키지 배포
 
@@ -29,7 +30,7 @@ ms.locfileid: "85811786"
 > [!IMPORTANT]  
 >  패키지는 해당 패키지를 만드는 데 사용한 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에만 배포할 수 있습니다. 따라서 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 에서 만든 패키지는 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]에 배포할 수 없습니다.  
   
-## <a name="prerequisites"></a>전제 조건  
+## <a name="prerequisites"></a>사전 요구 사항  
  이 절차를 수행하려면  
   
 -   대상 **환경의** 시스템 관리 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  

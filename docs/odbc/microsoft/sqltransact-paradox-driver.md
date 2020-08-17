@@ -1,4 +1,5 @@
 ---
+description: SQLTransact(Paradox 드라이버)
 title: SQLTransact (Paradox 드라이버) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1d7f0c4c-f092-4bbb-9643-f7c9d07ed1af
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8a9c4478f82e7466f6c3b6a613852b679fd79219
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d52660d3e2596532cb013e5419e6713bd6ed1bea
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299243"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88339699"
 ---
 # <a name="sqltransact-paradox-driver"></a>SQLTransact(Paradox 드라이버)
 > [!NOTE]  

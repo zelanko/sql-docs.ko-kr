@@ -1,4 +1,5 @@
 ---
+description: sys.dm_xtp_system_memory_consumers(Transact-SQL)
 title: sys. dm_xtp_system_memory_consumers (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9eb0dd82-7920-42e0-9e50-7ce6e7ecee8b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 12cfa8fa0ebde7fe2cb6d1a6e9402a0466a4895f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4dbecba15c5f60c0b3818739ccd842d5a31a66a2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85648030"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88322599"
 ---
 # <a name="sysdm_xtp_system_memory_consumers-transact-sql"></a>sys.dm_xtp_system_memory_consumers(Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -37,7 +38,7 @@ select * from sys.dm_xtp_system_memory_consumers
   
  자세한 내용은 [메모리 내 OLTP&#40;메모리 내 최적화&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)를 참조하세요.  
   
-|열 이름|형식|설명|  
+|열 이름|Type|설명|  
 |-----------------|----------|-----------------|  
 |memory_consumer_id|**bigint**|메모리 소비자의 내부 ID입니다.|  
 |memory_consumer_type|**int**|다음 값 중 하나를 사용 하는 메모리 소비자의 유형을 나타내는 정수입니다.<br /><br /> 0-표시 되지 않아야 합니다. 둘 이상 소비자의 메모리 사용량을 집계합니다.<br /><br /> 1-할당 준비: 시스템 할당 준비에 대 한 메모리 소비량을 추적 합니다.<br /><br /> 2 VARHEAP: 가변 길이 힙의 메모리 소비량을 추적 합니다.<br /><br /> 4-IO 페이지 풀: IO 작업에 사용 되는 시스템 페이지 풀의 메모리 소비량을 추적 합니다.|  

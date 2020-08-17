@@ -1,4 +1,5 @@
 ---
+description: SQLSetPos(커서 라이브러리)
 title: SQLSetPos (커서 라이브러리) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 574399c3-2bb2-4d19-829c-7c77bd82858d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4c46ef88075a5adbd96138d7d1f03c26712f7ea1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d35f1461f6a5da3ee894d9275c6ca112bfabab44
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300513"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88339239"
 ---
 # <a name="sqlsetpos-cursor-library"></a>SQLSetPos(커서 라이브러리)
 > [!IMPORTANT]  

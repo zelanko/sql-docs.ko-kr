@@ -1,4 +1,5 @@
 ---
+description: 테스트 사례 초기화(OracleToSQL)
 title: 테스트 사례 초기화 (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -10,12 +11,12 @@ ms.assetid: 45897363-cfc2-44bb-817b-7561e60b7410
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 63439231e63170f94e9a1f56662b2d75d8db0816
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: ce2dbecbb82c02b3473cbb8af46c2549d0eebbc8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934752"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88320369"
 ---
 # <a name="initializing-test-cases-oracletosql"></a>테스트 사례 초기화(OracleToSQL)
 이 단계에서는 새 테스트 사례에 대 한 초기 정보를 지정 합니다.  
@@ -34,8 +35,8 @@ ms.locfileid: "87934752"
 테스트 사례의 용도를 식별 하는 추가 정보를 입력 합니다.  
   
 ## <a name="next-step"></a>다음 단계  
-[OracleToSQL&#41;&#40;테스트할 개체 선택 및 구성](../../ssma/oracle/selecting-and-configuring-objects-to-test-oracletosql.md)  
+[OracleToSQL&#41;&#40;테스트할 개체 선택 및 구성 ](../../ssma/oracle/selecting-and-configuring-objects-to-test-oracletosql.md)  
   
 ## <a name="see-also"></a>참고 항목  
-[OracleToSQL&#41;&#40;마이그레이션된 데이터베이스 개체 테스트](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
+[OracleToSQL&#41;&#40;마이그레이션된 데이터베이스 개체 테스트 ](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
   

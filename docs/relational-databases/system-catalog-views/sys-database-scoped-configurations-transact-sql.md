@@ -1,4 +1,5 @@
 ---
+description: sys. database_scoped_configurations (Transact-sql)
 title: sys. database_scoped_configurations (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/14/2018
@@ -18,12 +19,12 @@ ms.assetid: 8899310a-3464-4d38-9f2f-88396c4e7dc2
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||= azure-sqldw-latest
-ms.openlocfilehash: a463fea7a70b5e01c26a6ff5e93c1c8c1dab32ea
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6edd7864c127ea068e3017c7aa26ad5be86a4c8a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78288943"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88323249"
 ---
 # <a name="sysdatabase_scoped_configurations-transact-sql"></a>sys. database_scoped_configurations (Transact-sql)
 
@@ -31,7 +32,7 @@ ms.locfileid: "78288943"
 
 구성 당 한 개의 행을 포함 합니다. 
 
-|열 이름|데이터 형식|설명|
+|열 이름|데이터 형식|Description|
 |-----------------|---------------|-----------------|
 |**configuration_id**|**int**|구성 옵션의 ID입니다.|
 |**name**|**nvarchar(60)**|구성 옵션의 이름입니다. 가능한 구성에 대 한 자세한 내용은 [ALTER DATABASE 범위 구성 &#40;transact-sql&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)을 참조 하세요.|

@@ -1,4 +1,5 @@
 ---
+description: sys.fn_cdc_decrement_lsn(Transact-SQL)
 title: sys. fn_cdc_decrement_lsn (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 83c182ad-4713-439b-8769-9b7408aec8b4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0d3650074475fef2ed74dd589a53c78ce7090676
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 6402fabc4904ca8d9c9953d8dddc6f4626d949dc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898433"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88321759"
 ---
 # <a name="sysfn_cdc_decrement_lsn-transact-sql"></a>sys.fn_cdc_decrement_lsn(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,7 +55,7 @@ sys.fn_cdc_decrement_lsn ( lsn_value )
 ## <a name="permissions"></a>사용 권한  
  **Public** 데이터베이스 역할의 멤버 자격이 필요 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `sys.fn_cdc_decrement_lsn`을 사용하여 최대 LSN 값보다 작은 LSN 값을 갖는 변경 데이터 행을 반환하는 쿼리에서 LSN 상한을 설정합니다.  
   
 ```  

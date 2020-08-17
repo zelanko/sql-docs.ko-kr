@@ -1,4 +1,5 @@
 ---
+description: 프로젝트 설정(GUI)(MySQLToSQL)
 title: 프로젝트 설정 (GUI) (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: fd92aa77-21e3-41ac-8f3e-08608a734b7f
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 8da37a73c0a251b5ae11b59b12c688e061e3a0cd
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: aa798c425733282b50b4baeb3140173719fc0bb2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935212"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88320569"
 ---
 # <a name="project-settings-gui--mysqltosql"></a>프로젝트 설정(GUI)(MySQLToSQL)
 GUI 프로젝트 설정을 사용 하면 **데이터 탭에 데이터를** 표시 하는 방법 및 평가 보고서와 함께 데이터 보고서를 포함 하는 방법을 구성할 수 있습니다.  

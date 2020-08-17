@@ -1,4 +1,5 @@
 ---
+description: SQL Server Native Client에서 대량 데이터 설정
 title: 대량 데이터 설정 (Native Client OLE DB 공급자)
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ ms.assetid: 9d0c524b-22b0-475a-9ff5-5a69a6393b46
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 01e0e20b410ddf2300779923ed317a897a74862d
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.openlocfilehash: ab0fb692b2d50dc99276a55ab4773962d757b2c0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87332180"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88328329"
 ---
 # <a name="setting-large-data-in-sql-server-native-client"></a>SQL Server Native Client에서 대량 데이터 설정
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -44,7 +45,7 @@ ms.locfileid: "87332180"
 ## <a name="how-to-set-large-data"></a>대규모 데이터를 설정하는 방법  
  자체의 스토리지 개체에 대한 포인터를 전달하기 위해 소비자는 BLOB 열의 값을 바인딩하는 접근자를 만든 다음 **IRowsetChange::SetData** 또는 **IRowsetChange::InsertRow** 메서드를 호출합니다. BLOB 데이터를 설정하려면 다음과 같이 하십시오.  
   
-1.  BLOB 열에 액세스하는 방법을 설명하는 DBOBJECT 구조를 만듭니다. DBOBJECT 구조의 *Dwflag* 요소를 STGM_READ 설정 하 고 *iid* 요소를 IID_ISequentialStream (노출할 인터페이스)로 설정 합니다.  
+1.  BLOB 열에 액세스하는 방법을 설명하는 DBOBJECT 구조를 만듭니다. DBOBJECT 구조의 *dwFlag* 요소를 STGM_READ로 설정하고 *iid* 요소를 IID_ISequentialStream (표시할 인터페이스)으로 설정합니다.  
   
 2.  행 집합 업데이트가 가능하도록 DBPROPSET_ROWSET 속성 그룹의 속성을 설정합니다.  
   
@@ -721,7 +722,7 @@ Exit:
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Blob 및 OLE 개체](../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)   
+ [BLOB 및 OLE 개체](../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)   
  [큰 값 형식 사용](../../relational-databases/native-client/features/using-large-value-types.md)  
   
   

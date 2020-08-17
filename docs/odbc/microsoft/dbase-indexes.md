@@ -1,4 +1,5 @@
 ---
+description: dBASE 인덱스
 title: dBASE 인덱스 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: fdfa56f5-e324-4ec2-9267-fdf95ab99373
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9300a38a0e36da771a238f73b77d3dda527334ae
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 30a6390f0e187cc063b2a650af2da3b9fcc87d57
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307674"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88340959"
 ---
 # <a name="dbase-indexes"></a>dBASE 인덱스
 ODBC dBASE 드라이버가 dBASE IV 인덱스 파일을 자동으로 열고 업데이트 합니다. ODBC 데이터 원본 관리자를 통해 표시 되는 **인덱스 선택** 대화 상자를 사용 하 여 dbase III. ndx 파일을 dbase 파일과 연결 해야 합니다.  

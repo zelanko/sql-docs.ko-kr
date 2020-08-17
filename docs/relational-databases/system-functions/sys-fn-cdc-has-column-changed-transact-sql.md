@@ -1,4 +1,5 @@
 ---
+description: sys.fn_cdc_has_column_changed(Transact-SQL)
 title: sys. fn_cdc_has_column_changed (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 2b9e6278-050d-4ffc-8d1a-09606180facc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ce79c24b75fb0efd3b9934e90c7cb748cfe2f154
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b89b4a42df7e0f1481d55fb7d011e947d3e12cf3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898385"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88322019"
 ---
 # <a name="sysfn_cdc_has_column_changed-transact-sql"></a>sys.fn_cdc_has_column_changed(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

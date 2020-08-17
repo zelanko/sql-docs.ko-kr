@@ -1,4 +1,5 @@
 ---
+description: Oracle 소프트웨어 패치
 title: Oracle 소프트웨어 패치 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1275157b-f4e1-4c24-b273-c02555e261c2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b1fb577e7b08f6ef332ed35f6d275a5f7ce543ba
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e6bc07ae904b8bb682d9a5cf9eefebe00dc532aa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81292953"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88340689"
 ---
 # <a name="oracle-software-patches"></a>Oracle 소프트웨어 패치
 > [!IMPORTANT]  

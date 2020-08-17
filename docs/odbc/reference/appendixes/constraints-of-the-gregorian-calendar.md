@@ -1,4 +1,5 @@
 ---
+description: 일반 달력의 제약 조건
 title: 양력 달력의 제약 조건 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 70667410-c582-4369-8e06-9d98e21cd2bf
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f88842c7426e17af1fdc0533b8b97e2c559de237
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e473c090a889d54de5ca63bd10b07b410936223f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81284763"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88339369"
 ---
 # <a name="constraints-of-the-gregorian-calendar"></a>일반 달력의 제약 조건
 날짜 및 날짜/시간 데이터 형식과 interval 데이터 형식의 후행 필드는 양력의 제약 조건을 준수 해야 합니다. 이러한 제약 조건은 다음과 같습니다.  

@@ -1,4 +1,5 @@
 ---
+description: SQLTransact(텍스트 파일 드라이버)
 title: SQLTransact (텍스트 파일 드라이버) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0349bd4e-f402-4a69-b215-046210a433de
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: bec76b8abbcb6eda77c6e96a0115268e8f9989ee
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 179281e15af460da74fdb26b336f3d1bf7f4b94d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299233"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88339696"
 ---
 # <a name="sqltransact-text-file-driver"></a>SQLTransact(텍스트 파일 드라이버)
 > [!NOTE]  

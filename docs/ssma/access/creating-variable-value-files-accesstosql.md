@@ -1,4 +1,5 @@
 ---
+description: 변수 값 파일 만들기 (AccessToSQL)
 title: 변수 값 파일 만들기 (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 808595c3-8ef1-40bd-a93e-5cf237950e08
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 6d208be8fb7ebf8d1c33b0df5d7c49dd28a412a7
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 8815b6d3f6d4f825082b0c2eac4d8bfa45cb98de
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87933972"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88320879"
 ---
 # <a name="creating-variable-value-files-accesstosql"></a>변수 값 파일 만들기 (AccessToSQL)
 변수 값 파일은 서버 마이그레이션 간에 자주 변경 되는 명령 (예: 원본 또는 대상 서버 이름)의 매개 변수 값을 구성 하는 XML 파일입니다. 데이터베이스 마이그레이션이 많이 발생 하면 각 원본 서버의 값을 저장 하기 위한 여러 변수 파일이 생성 되 고 명령줄에서 **-v** 스위치를 사용 하 여 마스터 스크립트 파일에 참조 됩니다. 이 동작은 여러 변수 파일의 변수 값을 사용 하 여 몇 가지 스크립트 파일의 정적 값을 유지 하는 데 도움이 됩니다.  

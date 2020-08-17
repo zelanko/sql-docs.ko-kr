@@ -1,4 +1,5 @@
 ---
+description: sys.fn_get_audit_file(Transact-SQL)
 title: sys. fn_get_audit_file (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/19/2020
@@ -21,12 +22,12 @@ ms.assetid: d6a78d14-bb1f-4987-b7b6-579ddd4167f5
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
-ms.openlocfilehash: 4d280a00eb9d972cea510ae650c4598561b77fef
-ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
+ms.openlocfilehash: cda66aed0e3ddea4bcb14bc30ca5805bf943afb4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87988781"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88321799"
 ---
 # <a name="sysfn_get_audit_file-transact-sql"></a>sys.fn_get_audit_file(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]    
@@ -49,9 +50,9 @@ fn_get_audit_file ( file_pattern,
  
  - **SQL Server**:
     
-    이 인수에는 경로와 파일 이름이 모두 포함되어야 합니다. 드라이브 문자나 네트워크 공유를 경로로 사용할 수 있으며, 파일 이름에 와일드카드를 사용할 수 있습니다. 단일 별표 (*)를 사용 하 여 감사 파일 집합에서 여러 파일을 수집할 수 있습니다. 예:  
+    이 인수에는 경로와 파일 이름이 모두 포함되어야 합니다. 드라이브 문자나 네트워크 공유를 경로로 사용할 수 있으며, 파일 이름에 와일드카드를 사용할 수 있습니다. 단일 별표 (*)를 사용 하 여 감사 파일 집합에서 여러 파일을 수집할 수 있습니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.  
   
-    -   **\<path>\\\***-지정 된 위치에 있는 모든 감사 파일을 수집 합니다.  
+    -   **\<path>\\\*** -지정 된 위치에 있는 모든 감사 파일을 수집 합니다.  
   
     -   ** \<path> \ LOGINSAUDIT_ {guid}***-지정 된 이름 및 GUID 쌍을 가진 모든 감사 파일을 수집 합니다.  
   
@@ -59,9 +60,9 @@ fn_get_audit_file ( file_pattern,
   
  - **Azure SQL Database**:
  
-    이 인수는 blob URL (저장소 끝점 및 컨테이너 포함)을 지정 하는 데 사용 됩니다. 별표 와일드 카드를 지원 하지 않는 경우 전체 blob 이름 대신 부분 파일 (blob) 이름 접두사를 사용 하 여이 접두사로 시작 하는 여러 파일 (blob)을 수집할 수 있습니다. 예:
+    이 인수는 blob URL (저장소 끝점 및 컨테이너 포함)을 지정 하는 데 사용 됩니다. 별표 와일드 카드를 지원 하지 않는 경우 전체 blob 이름 대신 부분 파일 (blob) 이름 접두사를 사용 하 여이 접두사로 시작 하는 여러 파일 (blob)을 수집할 수 있습니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.
  
-      - **\<Storage_endpoint\>/\<Container\>/\<ServerName\>/\<DatabaseName\>/**-특정 데이터베이스에 대 한 모든 감사 파일 (blob)을 수집 합니다.    
+      - **\<Storage_endpoint\>/\<Container\>/\<ServerName\>/\<DatabaseName\>/** -특정 데이터베이스에 대 한 모든 감사 파일 (blob)을 수집 합니다.    
       
       - ** \<Storage_endpoint\> / \<Container\> / \<ServerName\> / \<DatabaseName\> / \<AuditName\> / \<CreationDate\> / \<FileName\> . xel** -특정 감사 파일 (blob)을 수집 합니다.
   
@@ -138,7 +139,7 @@ fn_get_audit_file ( file_pattern,
   - 이외 서버 관리자는 현재 데이터베이스의 감사 로그에만 액세스할 수 있습니다.
   - 위의 조건을 충족 하지 않는 blob은 건너뜁니다 (건너뛴 blob 목록이 쿼리 출력 메시지에 표시 됨) .이 함수는 액세스가 허용 된 blob 에서만 로그를 반환 합니다.  
   
-## <a name="examples"></a>예
+## <a name="examples"></a>예제
 
 - **SQL Server**
 
@@ -179,7 +180,7 @@ fn_get_audit_file ( file_pattern,
 Azure SQL Database 감사를 설정 하는 방법에 대 한 자세한 내용은 [SQL Database 감사 시작](https://docs.microsoft.com/azure/sql-database/sql-database-auditing)을 참조 하세요.
   
 ## <a name="see-also"></a>참고 항목  
- [서버 감사 &#40;Transact-sql&#41;만들기](../../t-sql/statements/create-server-audit-transact-sql.md)   
+ [서버 감사 &#40;Transact-sql&#41;만들기 ](../../t-sql/statements/create-server-audit-transact-sql.md)   
  [ALTER SERVER AUDIT  &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-transact-sql.md)   
  [DROP SERVER AUDIT  &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-transact-sql.md)   
  [CREATE SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-specification-transact-sql.md)   

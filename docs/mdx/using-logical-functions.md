@@ -1,4 +1,5 @@
 ---
+description: 논리 함수 사용
 title: 논리 함수 사용 | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 723d481bc858d7d1db4a63cbb32ab5614eddbb55
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2a13f9fa95878277b164b37bb71e3d9af646d89f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68097161"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88340999"
 ---
 # <a name="using-logical-functions"></a>논리 함수 사용
 

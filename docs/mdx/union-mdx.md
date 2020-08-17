@@ -1,4 +1,5 @@
 ---
+description: Union (MDX)
 title: Union (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 170e3764795e1bb6db3fc9589ecf1fe486078633
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b0b4240d6c646761c5d962e4b9fa1ca54e0dcc0e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68097305"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88341209"
 ---
 # <a name="union--mdx"></a>Union (MDX)
 
@@ -44,7 +45,7 @@ Alternate syntax 2
 ## <a name="remarks"></a>설명  
  이 함수는 지정 된 두 집합의 합집합을 반환 합니다. 표준 구문을 사용 하 고 대체 구문 1을 사용 하면 기본적으로 중복 항목이 제거 됩니다. 표준 구문을 사용 하는 경우 **ALL** 플래그를 사용 하면 조인 된 집합에 중복이 유지 됩니다. 중복 항목은 집합의 뒷부분부터 삭제됩니다. 대체 구문 2를 사용하면 중복 항목이 항상 유지됩니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 각 구문을 사용 하는 **Union** 함수의 동작을 보여 줍니다.  
   
 ### <a name="standard-syntax-duplicates-eliminated"></a>중복 항목을 제거하는 표준 구문  

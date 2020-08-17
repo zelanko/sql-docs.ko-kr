@@ -1,4 +1,5 @@
 ---
+description: sys.fulltext_document_types(Transact-SQL)
 title: sys. fulltext_document_types (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -20,12 +21,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 454b1460b0f1db0da7298e640b7b4cf081bb90b3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 05314ee0324683c712e72dc6b524030fc50a6c71
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85790539"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88323749"
 ---
 # <a name="sysfulltext_document_types-transact-sql"></a>sys.fulltext_document_types(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -39,7 +40,7 @@ ms.locfileid: "85790539"
 |**class_id**|**uniqueidentifier**|파일 확장명을 지원하는 IFilter 클래스의 GUID입니다.|  
 |**path**|**nvarchar(260)**|IFilter DLL의 경로입니다. 이 경로는 **serveradmin** 고정 서버 역할의 멤버만 볼 수 있습니다.|  
 |**version**|**sysname**|IFilter DLL의 버전입니다.|  
-|**manufacturer**|**sysname**|IFilter 제조업체의 이름입니다.<br /><br /> 참고: 제조업체의 문서만 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 에서 지원 됩니다 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] .|  
+|**제조업체**|**sysname**|IFilter 제조업체의 이름입니다.<br /><br /> 참고: 제조업체의 문서만 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 에서 지원 됩니다 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] .|  
   
 ## <a name="permissions"></a>사용 권한  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]  

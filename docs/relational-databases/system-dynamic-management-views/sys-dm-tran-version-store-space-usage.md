@@ -1,4 +1,5 @@
 ---
+description: sys. dm_tran_version_store_space_usage (Transact-sql)
 title: sys. dm_tran_version_store_space_usage (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/24/2018
@@ -20,12 +21,12 @@ author: savjani
 ms.author: pariks
 manager: ajayj
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2a4fac732f784a401206f37fb2af9d3d8e0688ba
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b3e40c6fd2ce7da44c2d6e347c7bcc0729ab0236
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68262659"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88322969"
 ---
 # <a name="sysdm_tran_version_store_space_usage-transact-sql"></a>sys. dm_tran_version_store_space_usage (Transact-sql)
 [!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-xxxx-xxx-md.md)]
@@ -43,10 +44,10 @@ ms.locfileid: "68262659"
 |**reserved_space_kb**|**bigint**|데이터베이스의 버전 저장소 레코드에 대해 tempdb에서 사용 된 총 공간 (kb)입니다.|  
   
 ## <a name="permissions"></a>사용 권한  
-에 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]는 권한이 `VIEW SERVER STATE` 필요 합니다.   
+에 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 는 `VIEW SERVER STATE` 권한이 필요 합니다.   
 
-## <a name="examples"></a>예  
-다음 쿼리를 사용 하 여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 있는 각 데이터베이스의 버전 저장소에서 tempdb에 사용 되는 공간을 확인할 수 있습니다. 
+## <a name="examples"></a>예제  
+다음 쿼리를 사용 하 여 인스턴스에 있는 각 데이터베이스의 버전 저장소에서 tempdb에 사용 되는 공간을 확인할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 
   
 ```sql  
 SELECT 
@@ -68,6 +69,6 @@ WideWorldImporters        20                   160
 ```
  
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;동적 관리 뷰 및 함수](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [트랜잭션 관련 동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
   

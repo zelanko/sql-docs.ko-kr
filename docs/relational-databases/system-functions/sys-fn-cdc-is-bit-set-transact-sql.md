@@ -1,4 +1,5 @@
 ---
+description: sys.fn_cdc_is_bit_set(Transact-SQL)
 title: sys. fn_cdc_is_bit_set (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 792fe7cf-b3b8-4f25-8329-78d63f0e6921
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b099f578ebe60a7caaf1f0179af549cd42679c11
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ab93830bd9e2b164f5b76412b2b412dc095c6c9c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898376"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88321619"
 ---
 # <a name="sysfn_cdc_is_bit_set-transact-sql"></a>sys.fn_cdc_is_bit_set(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -59,7 +60,7 @@ sys.fn_cdc_is_bit_set ( position , update_mask )
 ## <a name="permissions"></a>사용 권한  
  **public** 역할의 멤버 자격이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `sys.fn_cdc_is_bit_set`을 사용하여 `cdc.fn_cdc_get_all_changes_HR_Department` 쿼리 함수에 의해 생성된 결과 집합 앞에 사전 계산된 열 서수와 `IsGroupNmUpdated` 값을 호출 인수로 사용하는 '`__$update_mask`' 열을 추가합니다.  
   
 ```  
@@ -77,7 +78,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;변경 데이터 캡처 함수](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md)   
+ [변경 데이터 캡처 함수&#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md)   
  [fn_cdc_get_column_ordinal &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-cdc-get-column-ordinal-transact-sql.md)   
  [fn_cdc_has_column_changed &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-cdc-has-column-changed-transact-sql.md)   
  [fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-sql&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)   

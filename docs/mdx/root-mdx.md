@@ -1,4 +1,5 @@
 ---
+description: Root(MDX)
 title: Root (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: be687d5cbfd4fdbb706ef5c10778a4f3e3f93197
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a408250de53e3d77750d6ea9a87aa679152a86d8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68037046"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88341309"
 ---
 # <a name="root-mdx"></a>Root(MDX)
 
@@ -52,7 +53,7 @@ Root( Tuple_Expression )
   
  튜플 식이 지정 된 경우 **루트** 함수는 지정 된 튜플에 대해 명시적으로 포함 되지 않은 다른 모든 차원 특성의 **모든** 멤버와 지정 된 튜플의 교집합을 포함 하는 튜플을 반환 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 어드벤처 큐브의 각 계층에서 **all** 멤버 (또는 **all** 멤버가 없는 경우 기본값)를 포함 하는 튜플을 반환 합니다.  
   
 ```  

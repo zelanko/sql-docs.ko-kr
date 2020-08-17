@@ -1,4 +1,5 @@
 ---
+description: sys.fn_cdc_increment_lsn(Transact-SQL)
 title: sys. fn_cdc_increment_lsn (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: e53b6703-358b-4c9a-912a-8f7c7331069b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6907b5df12a655d6444981afa4a84a2753d22f53
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 4ad4595995bc6768c4b0b5e297155530316a9d04
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898398"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88321569"
 ---
 # <a name="sysfn_cdc_increment_lsn-transact-sql"></a>sys.fn_cdc_increment_lsn(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -56,7 +57,7 @@ sys.fn_cdc_increment_lsn ( lsn_value )
 ## <a name="permissions"></a>사용 권한  
  public 데이터베이스 역할의 멤버여야 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `sys.fn_cdc_increment_lsn`을 사용하여 이전 쿼리에 저장된 상한 및 `@save_to_lsn` 변수에 저장된 상한을 기준으로 변경 데이터 캡처 쿼리에 대한 새 하한 값을 생성합니다.  
   
 ```  

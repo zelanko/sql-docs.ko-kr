@@ -1,4 +1,5 @@
 ---
+description: 검색된 문 생성
 title: 검색 문 생성 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: e429254c-c43f-4fbf-98b2-5f1ed53501ff
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b8b9a27aa9fc84aadc6659993de3e12e269631d2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b5ae620c4ba0292ff1133d70423cb85c360b1e53
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81284743"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88339359"
 ---
 # <a name="constructing-searched-statements"></a>검색된 문 생성
 > [!IMPORTANT]  

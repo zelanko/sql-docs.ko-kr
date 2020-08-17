@@ -1,4 +1,5 @@
 ---
+description: 데스크톱 데이터베이스 드라이버 호환성
 title: 데스크톱 데이터베이스 드라이버 호환성 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: dd695638-1a0b-4e27-8a6a-9510ebb5a5ee
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 89eea7ab112eaefdc73c7cbc72ee3555797c7efd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6b15ec35a01b61eef401f217733917a80bbe32b4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303524"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88340779"
 ---
 # <a name="desktop-database-driver-compatibility"></a>데스크톱 데이터베이스 드라이버 호환성
 유니코드는 모든 문자를 고정 너비가 2 바이트인 것으로 처리 하는 소프트웨어 문자 인코딩의 메서드입니다. 이 메서드는 Windows ANSI 문자 인코딩에 대 한 대 안으로 사용 되며, 1 바이트의 문자를 나타내므로 256 자로 제한 됩니다. 유니코드는 65000 자를 초과 하 여 나타낼 수 있으므로, ANSI 인코딩으로 표시 되지 않는 문자를 포함 하는 많은 언어를 수용 합니다.  

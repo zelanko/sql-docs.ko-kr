@@ -1,4 +1,5 @@
 ---
+description: SQL Server Native Client 오류 정보
 title: SQL Server 오류 세부 정보 (Native Client OLE DB 공급자)
 ms.custom: ''
 ms.date: 03/16/2017
@@ -18,12 +19,12 @@ ms.assetid: 51500ee3-3d78-47ec-b90f-ebfc55642e06
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3cc3f7ff6550361baf616d26edf19aad3d6640d7
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 34e98418c65a4c00dab1c344c53249dd27457b66
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87942175"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88328389"
 ---
 # <a name="sql-server-native-client-error-detail"></a>SQL Server Native Client 오류 정보
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -47,7 +48,7 @@ if(FAILED(hr=pIErrorRecords->GetCustomErrorObject(
   
  SSERRORINFO 구조 멤버는 소비자에 의해 다음과 같이 해석됩니다.  
   
-|멤버|설명|  
+|멤버|Description|  
 |------------|-----------------|  
 |*pwszMessage*|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 메시지입니다. **IErrorInfo::GetDescription**에 반환된 문자열과 같습니다.|  
 |*pwszServer*|세션에 대한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이름입니다.|  

@@ -1,4 +1,5 @@
 ---
+description: IsTrainingCase(DMX)
 title: IsTrainingCase (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: e6bdfe1e3d22a2d2c4752e43df254231725fa447
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: e31f1c575441c01c6ff7e9325179ae6776802276
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86969560"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88352339"
 ---
 # <a name="istrainingcase-dmx"></a>IsTrainingCase(DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -40,7 +41,7 @@ IsTrainingCase()
   
  테스트 데이터 집합의 일부인 사례를 반환 하려면 [DMX&#41;&#40;Istestcase ](../dmx/istestcase-dmx.md)함수를 사용 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 [기본 데이터 마이닝 자습서](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)의 타겟 메일링 시나리오에서 클러스터링 데이터 마이닝 모델을 사용 합니다. 이 쿼리는 마이닝 모델을 학습하는 데 사용된 사례만 반환합니다. 또한 학습 사례는 40세 미만의 고객으로 제한됩니다.  
   
 ```  
@@ -50,7 +51,7 @@ WHERE IsTrainingCase()
 AND [Age] <40  
 ```  
   
- 데이터 마이닝에 사용 되는 사례를 쿼리 하는 방법에 대 한 다른 예는 [SELECT FROM &#60;model&#62;을 참조 하세요. DMX&#41;&#40;사례](../dmx/select-from-model-cases-dmx.md) 는 [&#60;구조&#62;에서 선택 합니다. 사례](../dmx/select-from-structure-cases.md).  
+ 데이터 마이닝에 사용 되는 사례를 쿼리 하는 방법에 대 한 다른 예는 [SELECT FROM &#60;model&#62;을 참조 하세요. DMX&#41;&#40;사례 ](../dmx/select-from-model-cases-dmx.md) 는 [&#60;구조&#62;에서 선택 합니다. 사례](../dmx/select-from-structure-cases.md).  
   
 ## <a name="see-also"></a>참고 항목  
  [데이터 집합 학습 및 테스트](https://docs.microsoft.com/analysis-services/data-mining/training-and-testing-data-sets)   

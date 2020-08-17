@@ -1,4 +1,5 @@
 ---
+description: 계층 멤버 권한(Master Data Services)
 title: 계층 멤버 권한
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b3880eed-1bf6-4f65-ab23-b08c194cc858
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 39470b09370db89cdba3e8c8f26e8b08376c1c07
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 3911b44ee31c0bb4cd4e8b829bf3d8e2c70e9913
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813336"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88344099"
 ---
 # <a name="hierarchy-member-permissions-master-data-services"></a>계층 멤버 권한(Master Data Services)
 
@@ -42,7 +43,7 @@ ms.locfileid: "85813336"
 |**읽기**|멤버가 표시됩니다.<br /><br /> <br /><br /> 참고: **루트** 에 **읽기**권한만 할당하면 **루트** 아래의 멤버는 읽기 전용이 되지만 명시적 계층 및 컬렉션에서는 사용자가 멤버를 **루트** 로 이동하고 **루트**에 새 멤버를 추가할 수 있습니다.|  
 |**만들기**|계층 멤버 권한에서는 만들기 권한이 제공되지 않습니다.|  
 |**Update**|멤버가 표시되며 사용자가 멤버를 변경할 수 있습니다. 또한 사용자는 멤버가 속한 모든 명시적 계층이나 컬렉션에서 멤버를 이동할 수도 있습니다.|  
-|**삭제**|멤버가 표시되며 사용자가 멤버를 삭제할 수 있습니다.|  
+|**Delete**|멤버가 표시되며 사용자가 멤버를 삭제할 수 있습니다.|  
 |**거부**|멤버가 표시되지 않습니다.|  
   
  **계층 멤버** 탭에서 할당하는 사용 권한은 즉시 적용되지 않습니다. 사용 권한이 적용되는 주기는 **데이터베이스의 시스템 설정 테이블에 지정된** 멤버 보안 처리 간격 설정 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 에 따라 다릅니다. [멤버 권한 즉시 적용&#40;Master Data Services&#41;](../master-data-services/immediately-apply-member-permissions-master-data-services.md)의 단계를 수행하여 멤버 권한을 즉시 적용할 수 있습니다.  

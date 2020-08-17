@@ -1,4 +1,5 @@
 ---
+description: 테스트 사례 보고서 보기(OracleToSQL)
 title: 테스트 사례 보고서 보기 (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 8da14323-9dd6-4019-bf79-3e8b972a9bc0
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 38097cda1a014c173f96657f5758a95b9d266f6a
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 62dfe8db323cfbf640ca1dc0f7df5e0c78aec3a7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87932534"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88320039"
 ---
 # <a name="viewing-test-case-reports-oracletosql"></a>테스트 사례 보고서 보기(OracleToSQL)
 테스트 사례 보고서는 테스트 확인 결과 및 일반 테스트 정보를 표시 합니다. 테스트에 실패 하는 경우 확인 된 개체의 일치 하지 않는 데이터에 대 한 정보도 표시 됩니다.  
@@ -43,6 +44,6 @@ ms.locfileid: "87932534"
 실행 상태를 **성공** 또는 **실패로**표시 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
-[OracleToSQL&#41;&#40;테스트 사례 실행](../../ssma/oracle/running-test-cases-oracletosql.md)  
-[OracleToSQL&#41;&#40;마이그레이션된 데이터베이스 개체 테스트](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
+[OracleToSQL&#41;&#40;테스트 사례 실행 ](../../ssma/oracle/running-test-cases-oracletosql.md)  
+[OracleToSQL&#41;&#40;마이그레이션된 데이터베이스 개체 테스트 ](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
   

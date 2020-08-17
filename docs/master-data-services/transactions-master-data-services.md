@@ -1,5 +1,6 @@
 ---
-title: 의
+description: 트랜잭션(Master Data Services)
+title: 트랜잭션
 ms.custom: ''
 ms.date: 01/10/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4cd2fa6f-9c76-4b7a-ae18-d4e5fd2f03f5
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 0b9f2eeec0e5936d215595755bbc92bb5b9a8c42
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: bfaa5eb1d111b29de1354a48f779c5d628e041dc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812679"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88342249"
 ---
 # <a name="transactions-master-data-services"></a>트랜잭션(Master Data Services)
 
@@ -54,7 +55,7 @@ ms.locfileid: "85812679"
   
  다음 저장 프로시저를 호출하여 트랜잭션 로그를 정리할 수도 있습니다.  
   
-|저장 프로시저|설명|  
+|저장 프로시저|Description|  
 |----------------------|-----------------|  
 |mdm.udpTransactionsCleanup|트랜잭션 기록을 정리합니다.|  
 |mdm.udpValidationsCleanup|유효성 검사 기록을 정리합니다.|  

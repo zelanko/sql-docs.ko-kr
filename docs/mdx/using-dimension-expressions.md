@@ -1,4 +1,5 @@
 ---
+description: 차원 식 사용
 title: 차원 식 사용 | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 0373bbda2d0c97946f15e048b7cc49175ca66669
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e8fb367f0e4ab1cc99a1a84ed51e3cca3cab75ee
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68097160"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88341119"
 ---
 # <a name="using-dimension-expressions"></a>차원 식 사용
 

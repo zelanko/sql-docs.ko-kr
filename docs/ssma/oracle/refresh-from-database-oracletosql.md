@@ -1,4 +1,5 @@
 ---
+description: 데이터베이스에서 새로 고침(OracleToSQL)
 title: 데이터베이스에서 새로 고침 (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -10,12 +11,12 @@ ms.assetid: 84492f44-c368-4c75-954d-7307a2d2bbc0
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 694953d914b9811208f2ea143f93e2c91878f07b
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 66bb67e64f3b95b78cdcf78d84145df25a02d4b2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87933014"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88320179"
 ---
 # <a name="refresh-from-database-oracletosql"></a>데이터베이스에서 새로 고침(OracleToSQL)
 **데이터베이스에서 새로 고침** 대화 상자를 사용 하 여 Oracle 데이터베이스에서 새로 고칠 개체를 선택할 수 있습니다. 대화 상자의 행은 메타 데이터의 상태를 기반으로 하는 색으로 구분 됩니다.  

@@ -1,4 +1,5 @@
 ---
+description: 스크립트 파일 만들기 (DB2ToSQL)
 title: 스크립트 파일 만들기 (DB2ToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ec23d188-b890-49b8-9a88-446df96269e4
 author: F
 ms.author: alexiva
-ms.openlocfilehash: ac87b3459a5a2ae5c8477ce0674facaf361f03b0
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 3df3cd8297dbf4f6be480f183b8b0f3acdcb8fe6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87933834"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88372729"
 ---
 # <a name="creating-script-files-db2tosql"></a>스크립트 파일 만들기 (DB2ToSQL)
 SSMA 콘솔 응용 프로그램을 시작 하기 전의 첫 번째 단계는 스크립트 파일을 만드는 것이 고, 필요한 경우 변수 값 파일 및 서버 연결 파일을 만드는 것입니다.  
@@ -395,5 +396,5 @@ SSMA 콘솔 응용 프로그램을 시작 하기 전의 첫 번째 단계는 스
 콘솔 운영의 다음 단계에서는 [DB2ToSQL&#41;&#40;변수 값 파일을 만듭니다 ](../../ssma/db2/creating-variable-value-files-db2tosql.md).  
   
 ## <a name="see-also"></a>참고 항목  
-[DB2ToSQL&#41;&#40;변수 값 파일 만들기](../../ssma/db2/creating-variable-value-files-db2tosql.md)  
+[DB2ToSQL&#41;&#40;변수 값 파일 만들기 ](../../ssma/db2/creating-variable-value-files-db2tosql.md)  
   

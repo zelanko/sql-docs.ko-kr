@@ -1,4 +1,5 @@
 ---
+description: Members(집합)(MDX)
 title: Members (Set) (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: d3e5bb14455d2d2ea67c4187e8e1a2a420031944
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0358f20d0aeba0e4d455fabadb6dc1e4361081e5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68138264"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88341399"
 ---
 # <a name="members-set-mdx"></a>Members(집합)(MDX)
 
@@ -46,7 +47,7 @@ Level_Expression.Members
 > [!IMPORTANT]  
 >  차원에 표시 가능한 계층이 하나만 있는 경우 해당 차원 이름은 표시 가능한 유일한 계층으로 확인되므로 해당 계층을 차원 이름이나 계층 이름 중 하나로 참조할 수 있습니다. 예를 들어 Measures.Members는 Measures 차원의 유일한 계층으로 확인되므로 유효한 MDX 식입니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 Adventure Works 큐브에 있는 Calendar Year 계층의 모든 멤버 집합을 반환합니다.  
   
 ```  

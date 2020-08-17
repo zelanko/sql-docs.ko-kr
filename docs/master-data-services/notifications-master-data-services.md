@@ -1,4 +1,5 @@
 ---
+description: 알림(Master Data Services)
 title: 알림
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d7ad32d5-9fe5-48fd-8c61-0b00c0aff082
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: c1f645bf481b193b78003808725d60b97b33d845
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 6a907505771493e7e087b5eead35923feb8659ae
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812899"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88343169"
 ---
 # <a name="notifications-master-data-services"></a>알림(Master Data Services)
 
@@ -34,11 +35,11 @@ ms.locfileid: "85812899"
 ## <a name="when-notifications-are-sent"></a>알림을 보내는 경우  
  알림이 구성된 후 다음 인스턴스에 자동화된 전자 메일 알림을 보낼 수 있습니다.  
   
-|인스턴스|설명|  
+|인스턴스|Description|  
 |--------------|-----------------|  
-|데이터가 비즈니스 규칙 유효성 검사를 통과하지 못할 경우|특성 값이 비즈니스 규칙 유효성 검사를 통과하지 못하는 경우 전자 메일을 보내도록 개별 비즈니스 규칙을 구성해야 합니다. 이 알림에는 다음과 같은 정보가 포함되어 있습니다.<br /><br /> 모델<br /><br /> Version<br /><br /> 엔터티<br /><br /> 멤버 코드<br /><br /> 비즈니스 규칙 실패<br /><br /> 비즈니스 규칙이 실패하는 특성 값의 멤버에 연결<br /><br /> 알림 발급 시간<br /><br /> 자세한 내용은 [알림을 보내도록 비즈니스 규칙 구성&#40;Master Data Services&#41;](../master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)에서 알림을 구성합니다.|  
-|모델 버전 상태가 변경될 경우|모델 버전의 상태가 변경될 때마다 모델 관리자인 사용자가 알림을 자동으로 받습니다. 이 알림에는 다음과 같은 정보가 포함되어 있습니다.<br /><br /> 모델<br /><br /> Version<br /><br /> 버전의 이전 및 새 상태<br /><br /> 알림 발급 시간<br /><br /> 자세한 내용은 [관리자 &#40;MDS(Master Data Services)&#41;](../master-data-services/administrators-master-data-services.md)를 참조 하세요.|  
-|변경 집합 상태 변경|승인이 필요한 엔터티에 대해 변경 집합 상태가 변경될 때마다 엔터티 관리자 및/또는 변경 집합 소유자는 자동으로 알림을 받습니다. 이 알림에는 다음과 같은 정보가 포함되어 있습니다.<br /><br /> 모델<br /><br /> Version<br /><br /> 변경 집합 이름<br /><br /> 이전 상태<br /><br /> 새 상태<br /><br /> 보류 중인 변경 내용을 보고 수정하기 위해 변경 집합을 적용하려면 연결합니다.<br /><br /> 자세한 내용은 [변경 집합 &#40;MDS(Master Data Services)](../master-data-services/changesets-master-data-services.md) 를 참조 하세요&#41;|  
+|데이터가 비즈니스 규칙 유효성 검사를 통과하지 못할 경우|특성 값이 비즈니스 규칙 유효성 검사를 통과하지 못하는 경우 전자 메일을 보내도록 개별 비즈니스 규칙을 구성해야 합니다. 이 알림에는 다음과 같은 정보가 포함되어 있습니다.<br /><br /> 모델<br /><br /> 버전<br /><br /> 엔터티<br /><br /> 멤버 코드<br /><br /> 비즈니스 규칙 실패<br /><br /> 비즈니스 규칙이 실패하는 특성 값의 멤버에 연결<br /><br /> 알림 발급 시간<br /><br /> 자세한 내용은 [알림을 보내도록 비즈니스 규칙 구성&#40;Master Data Services&#41;](../master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)에서 알림을 구성합니다.|  
+|모델 버전 상태가 변경될 경우|모델 버전의 상태가 변경될 때마다 모델 관리자인 사용자가 알림을 자동으로 받습니다. 이 알림에는 다음과 같은 정보가 포함되어 있습니다.<br /><br /> 모델<br /><br /> 버전<br /><br /> 버전의 이전 및 새 상태<br /><br /> 알림 발급 시간<br /><br /> 자세한 내용은 [관리자 &#40;MDS(Master Data Services)&#41;](../master-data-services/administrators-master-data-services.md)를 참조 하세요.|  
+|변경 집합 상태 변경|승인이 필요한 엔터티에 대해 변경 집합 상태가 변경될 때마다 엔터티 관리자 및/또는 변경 집합 소유자는 자동으로 알림을 받습니다. 이 알림에는 다음과 같은 정보가 포함되어 있습니다.<br /><br /> 모델<br /><br /> 버전<br /><br /> 변경 집합 이름<br /><br /> 이전 상태<br /><br /> 새 상태<br /><br /> 보류 중인 변경 내용을 보고 수정하기 위해 변경 집합을 적용하려면 연결합니다.<br /><br /> 자세한 내용은 [변경 집합 &#40;MDS(Master Data Services)](../master-data-services/changesets-master-data-services.md) 를 참조 하세요&#41;|  
   
 ## <a name="system-settings"></a>시스템 설정  
  [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 에는 알림에 영향을 주는 설정이 있습니다. 이러한 설정은 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 에서 조정하거나 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스의 시스템 설정 테이블에서 직접 조정할 수 있습니다. 자세한 내용은 [시스템 설정&#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md)을 참조하세요.  

@@ -1,4 +1,5 @@
 ---
+description: MDX 스크립팅 문(MDX)
 title: Mdx 스크립팅 문 (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 5564c73ec8d10b37285c1d3e7e7f65fd295894a8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 633a44f28852898e2638438a5e8395d8d865fca3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68893332"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88341471"
 ---
 # <a name="mdx-scripting-statements-mdx"></a>MDX 스크립팅 문(MDX)
 
@@ -22,7 +23,7 @@ ms.locfileid: "68893332"
   
 ## <a name="in-this-section"></a>섹션 내용  
   
-|항목|Description|  
+|항목|설명|  
 |-----------|-----------------|  
 |[CALCULATE 문&#40;MDX&#41;](../mdx/mdx-scripting-calculate.md)|하위 큐브를 계산하고 선택적으로 하위 큐브 내에 포함된 차원의 해결 순서를 결정합니다.|  
 |[CASE 문&#40;MDX&#41;](../mdx/case-statement-mdx.md)|여러 비교에서 조건에 따라 특정 값을 반환할 수 있습니다.|  

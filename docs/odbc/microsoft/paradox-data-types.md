@@ -1,4 +1,5 @@
 ---
+description: Paradox 데이터 형식
 title: Paradox 데이터 형식 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0c9e5d21-9321-49f8-a055-69459e1c9c85
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a85cf643a6d22b9b2fce15984539d74dc43c62ab
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 44494e9945a84f978449b6bab02bd967e40d9a20
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81290933"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88340459"
 ---
 # <a name="paradox-data-types"></a>Paradox 데이터 형식
 ODBC Paradox 드라이버는 Paradox 데이터 형식을 ODBC SQL 데이터 형식에 매핑합니다. 다음 표에서는 모든 Paradox 데이터 형식을 나열 하 고 매핑되는 ODBC SQL 데이터 형식을 보여 줍니다.  
@@ -53,7 +54,7 @@ ODBC Paradox 드라이버는 Paradox 데이터 형식을 ODBC SQL 데이터 형�
   
  다음 표에서는 Paradox 데이터 형식에 대 한 제한 사항을 보여 줍니다.  
   
-|데이터 형식|설명|  
+|데이터 형식|Description|  
 |---------------|-----------------|  
 |영숫자만|0 또는 지정 되지 않은 길이의 영숫자 열을 만들면 실제로 255 바이트 열이 반환 됩니다.|  
 |BYTES|Paradox5 드라이버를 사용 하 여 이진 열에 NULL을 삽입 하는 경우 0으로 변경 됩니다.|  

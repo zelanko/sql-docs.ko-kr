@@ -1,4 +1,5 @@
 ---
+description: ORDER BY 절 제한 사항
 title: ORDER BY 절 제한 사항 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: fd4ddc7c-9c7e-4a0c-a781-e5427dfb2e18
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e80fcf8b1f2e3e83182e3278b63bdb856c7189fe
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c116c40bdb16f3417b2b92295b0d13056dfcc18a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81292933"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88340629"
 ---
 # <a name="order-by-clause-limitations"></a>ORDER BY 절 제한 사항
 SELECT 문에 GROUP BY 절과 ORDER BY 절이 포함 된 경우 ORDER BY 절은 결과 집합의 열 이나 GROUP BY 절의 식만 포함할 수 있습니다.

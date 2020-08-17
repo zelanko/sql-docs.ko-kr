@@ -1,4 +1,5 @@
 ---
+description: '개요: 데이터 내보내기(Master Data Services)'
 title: Exporting Data
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8b74409a-ea70-45f8-84c7-da6905e4901a
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 0b58dca3531ba535c48c6dc6134c660ca4fed7be
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: f477249f9f65b85598a11e40da268aa3a15b35a3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812889"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88342939"
 ---
 # <a name="overview-exporting-data-master-data-services"></a>개요: 데이터 내보내기(Master Data Services)
 
@@ -60,6 +61,6 @@ ms.locfileid: "85812889"
   
 -   [구독 뷰 형식&#40;Master Data Services&#41;](../master-data-services/subscription-view-formats-master-data-services.md)  
   
--   [뷰](../relational-databases/views/views.md)  
+-   [Views](../relational-databases/views/views.md)  
   
   

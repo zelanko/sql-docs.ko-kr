@@ -1,4 +1,5 @@
 ---
+description: ODBC 함수 및 Visual FoxPro ODBC 드라이버
 title: ODBC 함수 및 Visual FoxPro ODBC 드라이버 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 512f9cee-ffad-439b-b612-b49c34c32658
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 260630321825a695b4f1d701f18fff08551ff673
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: 017e66c137f6c0921f3a382c0832598c9415c9e6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87363533"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88340739"
 ---
 # <a name="odbc-functions-and-the-visual-foxpro-odbc-driver"></a>ODBC 함수 및 Visual FoxPro ODBC 드라이버
 이 섹션의 항목에서는 ODBC API 함수 및 모든 Visual FoxPro 관련 세부 정보에 대 한 간략 한 요약을 제공 합니다.  

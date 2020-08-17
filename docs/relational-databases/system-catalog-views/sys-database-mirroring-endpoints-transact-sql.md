@@ -1,4 +1,5 @@
 ---
+description: sys.database_mirroring_endpoints(Transact-SQL)
 title: sys. database_mirroring_endpoints (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: f2285199-97ad-473c-a52d-270044dd862b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ec6735986626463a3e784ca4b87a9d50564d9b81
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 155dce156469f5ee629143b7613bbf5e6c174c71
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895242"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88324069"
 ---
 # <a name="sysdatabase_mirroring_endpoints-transact-sql"></a>sys.database_mirroring_endpoints(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,7 +48,7 @@ ms.locfileid: "85895242"
 |**connection_auth_desc**|**nvarchar (60)**|이 엔드포인트에 연결하는 데 필요한 인증 유형 설명. 다음 중 하나입니다.<br /><br /> NTLM<br /><br /> KERBEROS<br /><br /> NEGOTIATE<br /><br /> 인증서<br /><br /> NTLM, CERTIFICATE<br /><br /> KERBEROS, CERTIFICATE<br /><br /> NEGOTIATE, CERTIFICATE<br /><br /> CERTIFICATE, NTLM<br /><br /> CERTIFICATE, KERBEROS<br /><br /> CERTIFICATE, NEGOTIATE|  
 |**certificate_id**|**int**|인증에 사용된 인증서 ID<br /><br /> 0 = Windows 인증 사용 중|  
 |**encryption_algorithm**|**tinyint**|암호화 알고리즘. 다음 중 하나입니다.<br /><br /> **0** -없음<br /><br /> **1** -RC4<br /><br /> **2** -AES<br /><br /> **3** -없음, RC4<br /><br /> **4** -없음, AES<br /><br /> **5** -RC4, AES<br /><br /> **6** -AES, RC4<br /><br /> **7** -없음, RC4, AES<br /><br /> **8** -없음, AES, RC4|  
-|**encryption_algorithm_desc**|**nvarchar(60)**|암호화 알고리즘에 대한 설명. 다음 중 하나입니다.<br /><br /> NONE<br /><br /> RC4<br /><br /> AES<br /><br /> NONE, RC4<br /><br /> NONE, AES<br /><br /> RC4, AES<br /><br /> AES, RC4<br /><br /> NONE, RC4, AES<br /><br /> NONE, AES, RC4|  
+|**encryption_algorithm_desc**|**nvarchar(60)**|암호화 알고리즘에 대한 설명. 다음 중 하나입니다.<br /><br /> 없음<br /><br /> RC4<br /><br /> AES<br /><br /> NONE, RC4<br /><br /> NONE, AES<br /><br /> RC4, AES<br /><br /> AES, RC4<br /><br /> NONE, RC4, AES<br /><br /> NONE, AES, RC4|  
   
 ## <a name="remarks"></a>설명  
   
@@ -62,7 +63,7 @@ ms.locfileid: "85895242"
  [sys.availability_replicas&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-availability-replicas-transact-sql.md)   
  [database_mirroring &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md)   
  [database_mirroring_witnesses &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md)   
- [데이터베이스 미러링 끝점은 SQL Server을 &#40;&#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
+ [데이터베이스 미러링 엔드포인트&#40;SQL Server&#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
  [SQL Server 시스템 카탈로그 쿼리에 대한 질문과 대답](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
   
   

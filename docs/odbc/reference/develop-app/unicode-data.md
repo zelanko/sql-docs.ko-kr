@@ -1,4 +1,5 @@
 ---
+description: 유니코드 데이터
 title: 유니코드 데이터 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: abc28718-e6d9-49fb-97ff-402d50c3c375
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 73ea9035b05f04fec1527ca2aa98531a807db8cf
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f217e6b629936cc835d134c89d972bb1408b9d0b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307400"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88339119"
 ---
 # <a name="unicode-data"></a>유니코드 데이터
 SQL 유니코드 데이터 형식은 기본적으로 DBMS에 있는 유니코드로 된 데이터를 설명 하기 위해 제공 됩니다. 응용 프로그램이 유니코드 버퍼에 데이터를 바인딩할 수 있도록 하는 C 유니코드 데이터 형식이 제공 됩니다. 드라이버 관리자는 ANSI 드라이버를 사용할 수 있도록 유니코드 C 형식 (SQL_C_WCHAR)에서 데이터를 변환할 수 있습니다.  

@@ -1,4 +1,5 @@
 ---
+description: 데이터베이스 개체 보안(Master Data Services)
 title: 데이터베이스 개체 보안
 ms.custom: ''
 ms.date: 03/04/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: dd5ba503-7607-45d9-ad0d-909faaade179
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 656b36f796d05d6ea7533c8c35e4b6ffe9572f99
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: f9b2089b72f11872df0dc0c0b2758fb8272a4c06
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811588"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88344909"
 ---
 # <a name="database-object-security-master-data-services"></a>데이터베이스 개체 보안(Master Data Services)
 
@@ -57,7 +58,7 @@ ms.locfileid: "85811588"
   
  자세한 내용은 [개요: 테이블에서 데이터 가져오기 &#40;MDS(Master Data Services)&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)를 참조 하세요.  
   
-##  <a name="validating-data-against-business-rules"></a><a name="rules"></a>비즈니스 규칙에 대해 데이터 유효성 검사  
+##  <a name="validating-data-against-business-rules"></a><a name="rules"></a> 비즈니스 규칙에 대해 데이터 유효성 검사  
   
 |작업|보안 개체|사용 권한|  
 |------------|---------------|-----------------|  
@@ -65,7 +66,7 @@ ms.locfileid: "85811588"
   
  자세한 내용은 [유효성 검사 저장 프로시저&#40;Master Data Services&#41;](../master-data-services/validation-stored-procedure-master-data-services.md)를 참조하세요.  
   
-##  <a name="deleting-versions"></a><a name="Versions"></a>버전 삭제  
+##  <a name="deleting-versions"></a><a name="Versions"></a> 버전 삭제  
   
 |작업|보안 개체|사용 권한|  
 |------------|----------------|-----------------|  
@@ -74,7 +75,7 @@ ms.locfileid: "85811588"
   
  자세한 내용은 [버전 삭제&#40;Master Data Services&#41;](../master-data-services/delete-a-version-master-data-services.md)를 참조하세요.  
   
-##  <a name="immediately-applying-hierarchy-member-permissions"></a><a name="Hierarchy"></a>계층 멤버 권한 즉시 적용  
+##  <a name="immediately-applying-hierarchy-member-permissions"></a><a name="Hierarchy"></a> 계층 멤버 권한 즉시 적용  
   
 |작업|보안 개체|사용 권한|  
 |------------|----------------|-----------------|  
@@ -82,7 +83,7 @@ ms.locfileid: "85811588"
   
  자세한 내용은 [멤버 권한 즉시 적용&#40;Master Data Services&#41;](../master-data-services/immediately-apply-member-permissions-master-data-services.md)을 참조하세요.  
   
-##  <a name="configuring-system-settings"></a><a name="SysSettings"></a>시스템 설정 구성  
+##  <a name="configuring-system-settings"></a><a name="SysSettings"></a> 시스템 설정 구성  
  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에는 동작을 제어하기 위해 구성할 수 있는 시스템 설정이 있습니다. [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 에서 이러한 설정을 조정할 수 있으며, UPDATE 권한이 있는 경우에는 mdm.tblSystemSetting 데이터베이스 테이블에서 이러한 설정을 직접 조정할 수 있습니다. 자세한 내용은 [시스템 설정&#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  

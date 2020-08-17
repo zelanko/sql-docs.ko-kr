@@ -1,4 +1,5 @@
 ---
+description: 예약어(MDX 구문)
 title: 예약 키워드 (MDX 구문) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: d88e78e49a52919ff710cd123ab2b25022aa5d1b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 630f004a230d473ef5aab6ea230dc2d3903ce0e7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68037066"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88341349"
 ---
 # <a name="reserved-keywords-mdx-syntax"></a>예약어(MDX 구문)
 

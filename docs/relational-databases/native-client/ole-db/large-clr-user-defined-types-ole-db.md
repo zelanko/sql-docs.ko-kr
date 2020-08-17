@@ -1,4 +1,5 @@
 ---
+description: SQL Server Native Client의 많은 CLR 사용자 정의 형식 (OLE DB)
 title: 큰 CLR 사용자 정의 형식(OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ ms.assetid: 4bf12058-0534-42ca-a5ba-b1c23b24d90f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e851332ad3f8485e7c716101942b1cdc0c6838bb
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: b5342dcab8dee628f074963a7ddc56a0ecc1d940
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243893"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88328289"
 ---
 # <a name="large-clr-user-defined-types-in-sql-server-native-client-ole-db"></a>SQL Server Native Client의 많은 CLR 사용자 정의 형식 (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -54,7 +55,7 @@ ms.locfileid: "87243893"
 ## <a name="icommandwithparametersgetparameterinfo"></a>ICommandWithParameters::GetParameterInfo  
  **prgParamInfo**를 통해 DBPARAMINFO 구조에 반환된 정보는 다음과 같습니다.  
   
-|매개 변수 유형|*wType*|*ulParamSize*|*bPrecision*|*bScale*|*dwFlags* DBPARAMFLAGS_ISLONG|  
+|매개 변수 형식|*wType*|*ulParamSize*|*bPrecision*|*bScale*|*dwFlags* DBPARAMFLAGS_ISLONG|  
 |--------------------|-------------|-------------------|------------------|--------------|------------------------------------|  
 |DBTYPE_UDT<br /><br /> (8,000바이트 이하 길이)|"DBTYPE_UDT"|*n*|정의되지 않음|정의되지 않음|지우기|  
 |DBTYPE_UDT<br /><br /> (8,000바이트를 초과하는 길이)|"DBTYPE_UDT"|~0|정의되지 않음|정의되지 않음|set|  
@@ -62,7 +63,7 @@ ms.locfileid: "87243893"
 ## <a name="icommandwithparameterssetparameterinfo"></a>ICommandWithParameters::SetParameterInfo  
  DBPARAMBINDINFO 구조에 제공된 정보는 다음을 준수해야 합니다.  
   
-|매개 변수 유형|*pwszDataSourceType*|*ulParamSize*|*bPrecision*|*bScale*|*dwFlags* DBPARAMFLAGS_ISLONG|  
+|매개 변수 형식|*pwszDataSourceType*|*ulParamSize*|*bPrecision*|*bScale*|*dwFlags* DBPARAMFLAGS_ISLONG|  
 |--------------------|--------------------------|-------------------|------------------|--------------|------------------------------------|  
 |DBTYPE_UDT<br /><br /> (8,000바이트 이하 길이)|DBTYPE_UDT|*n*|무시됨|무시됨|DBTYPE_IUNKNOWN을 사용하여 매개 변수가 전달되는 경우 설정해야 합니다.|  
 |DBTYPE_UDT<br /><br /> (8,000바이트를 초과하는 길이)|DBTYPE_UDT|~0|무시됨|무시됨|무시됨|  
@@ -90,7 +91,7 @@ ms.locfileid: "87243893"
 ## <a name="icolumnsinfogetcolumninfo"></a>IColumnsInfo::GetColumnInfo  
  DBCOLUMNINFO 구조에 반환되는 정보는 다음과 같습니다.  
   
-|매개 변수 유형|*wType*|*ulColumnSize*|*bPrecision*|*bScale*|*dwFlags*<br /><br /> DBCOLUMNFLAGS_ISLONG|  
+|매개 변수 형식|*wType*|*ulColumnSize*|*bPrecision*|*bScale*|*dwFlags*<br /><br /> DBCOLUMNFLAGS_ISLONG|  
 |--------------------|-------------|--------------------|------------------|--------------|-----------------------------------------|  
 |DBTYPE_UDT<br /><br /> (8,000바이트 이하 길이)|DBTYPE_UDT|*n*|~0|~0|지우기|  
 |DBTYPE_UDT<br /><br /> (8,000바이트를 초과하는 길이)|DBTYPE_UDT|~0|~0|~0|설정|  

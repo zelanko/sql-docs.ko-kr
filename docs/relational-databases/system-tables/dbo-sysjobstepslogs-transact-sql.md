@@ -1,4 +1,5 @@
 ---
+description: dbo.sysjobstepslogs(Transact-SQL)
 title: dbo.sysjobstepslogs (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 128c25db-0b71-449d-bfb2-38b8abcf24a0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1807760e10c6a158ab2ef05162e391290e073ab4
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f32042c01db8a35f9ce44fe938b19e4ae8e6118b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890434"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88373830"
 ---
 # <a name="dbosysjobstepslogs-transact-sql"></a>dbo.sysjobstepslogs(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

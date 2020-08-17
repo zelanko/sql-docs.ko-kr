@@ -1,4 +1,5 @@
 ---
+description: 큐브 및 하위 큐브 식 사용
 title: 큐브 및 하위 큐브 식 사용 | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 7c656bdaa0de108ade568a22bbcc734f38d43bfd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b431d82f24e5bf531dfa407d459ff9f36b543160
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68893535"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88341129"
 ---
 # <a name="using-cube-and-subcube-expressions"></a>큐브 및 하위 큐브 식 사용
 
@@ -71,7 +72,7 @@ ms.locfileid: "68893535"
 ## <a name="see-also"></a>참고 항목  
  [MDX &#40;기본 MDX 쿼리&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-query-the-basic-query)   
  [Mdx &#40;mdx로 하위 큐브 작성&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx)   
- [MDX&#41;&#40;CREATE 하위 큐브 문](../mdx/mdx-data-definition-create-subcube.md)   
+ [MDX&#41;&#40;CREATE 하위 큐브 문 ](../mdx/mdx-data-definition-create-subcube.md)   
  [MDX &#40;식&#41;](../mdx/expressions-mdx.md)   
  [SCOPE 문&#40;MDX&#41;](../mdx/mdx-scripting-scope.md)  
   

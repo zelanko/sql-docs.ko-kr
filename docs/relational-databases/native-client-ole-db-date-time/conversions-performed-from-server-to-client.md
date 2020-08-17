@@ -1,4 +1,5 @@
 ---
+description: 서버에서 클라이언트로 수행 되는 SQL Server Native Client 변환
 title: 서버에서 클라이언트로 수행되는 변환
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-dt-2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3e4e183c58de8eb3749a01fc95c32a1b405e04e8
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 7960647af0d661d52fe6ebce467468691cc2e785
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245884"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88328029"
 ---
 # <a name="sql-server-native-client-conversions-performed-from-server-to-client"></a>서버에서 클라이언트로 수행 되는 SQL Server Native Client 변환
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -28,7 +29,7 @@ ms.locfileid: "87245884"
 ## <a name="conversions"></a>변환  
  다음 표에서는 클라이언트로 반환된 형식과 바인딩 형식 간의 변환에 대해 설명합니다. 출력 매개 변수의 경우 ICommandWithParameters::SetParameterInfo가 호출된 후 *pwszDataSourceType*에 지정된 형식이 서버의 실제 형식과 일치하지 않으면 서버에 의해 암시적 변환이 수행되며 클라이언트로 반환되는 형식은 ICommandWithParameters::SetParameterInfo를 통해 지정된 형식과 일치하게 됩니다. 따라서 서버의 변환 규칙이이 항목에 설명 된 것과 다를 경우 예기치 않은 변환 결과가 발생할 수 있습니다. 예를 들어 기본 날짜를 입력해야 하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 1899-12-30을 사용하지 않고, 1900-1-1을 사용합니다.  
   
-|대상 -><br /><br /> From|DATE|DBDATE|DBTIME|DBTIME2|DBTIMESTAMP|DBTIMESTAMPOFFSET|FILETIME|BYTES|VARIANT|SSVARIANT|BSTR|STR|WSTR|  
+|대상 -><br /><br /> 보낸 사람|DATE|DBDATE|DBTIME|DBTIME2|DBTIMESTAMP|DBTIMESTAMPOFFSET|FILETIME|BYTES|VARIANT|SSVARIANT|BSTR|STR|WSTR|  
 |----------------------|----------|------------|------------|-------------|-----------------|-----------------------|--------------|-----------|-------------|---------------|----------|---------|----------|  
 |Date|1,7|확인|-|-|1|1,3|1,7|-|OK(VT_BSTR)|확인|확인|4|4|  
 |Time|5, 6, 7|-|9|확인|6|3, 6|5, 6|-|OK(VT_BSTR)|확인|확인|4|4|  

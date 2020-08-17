@@ -1,4 +1,5 @@
 ---
+description: sys.dm_tran_transactions_snapshot(Transact-SQL)
 title: sys. dm_tran_transactions_snapshot (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/30/2017
@@ -20,12 +21,12 @@ ms.assetid: 03f64883-07ad-4092-8be0-31973348c647
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 257878b1995a779f7e6f317864a627eaa27f1e88
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f7497dbdce71e0989cc6bfa06da0acbaea118dbd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718696"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88323739"
 ---
 # <a name="sysdm_tran_transactions_snapshot-transact-sql"></a>sys.dm_tran_transactions_snapshot(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -77,7 +78,7 @@ transaction_sequence_num snapshot_id snapshot_sequence_num
  각 트랜잭션은 트랜잭션이 시작될 때 할당된 트랜잭션 시퀀스 번호로 식별됩니다. 트랜잭션은 BEGIN TRANSACTION 또는 BEGIN WORK 문이 실행될 때 시작됩니다. 그러나 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 BEGIN TRANSACTION 또는 BEGIN WORK 문 이후 데이터에 액세스하는 첫 번째 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 실행할 때 트랜잭션 시퀀스 번호를 할당합니다. 트랜잭션 시퀀스 번호는 1씩 증가합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;동적 관리 뷰 및 함수](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [트랜잭션 관련 동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   

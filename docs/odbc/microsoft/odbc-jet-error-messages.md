@@ -1,4 +1,5 @@
 ---
+description: ODBC Jet 오류 메시지
 title: ODBC Jet 오류 메시지 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: f8d2a8f2-0316-42c4-bc34-5367661634ae
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e8fa6e672b69c7791e66dc3919e6fcd22b7c3de7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 19f7d4b00c9e6b206ecd563083c0fcf16ced55e3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81293113"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88340719"
 ---
 # <a name="odbc-jet-error-messages"></a>ODBC Jet 오류 메시지
 데이터 원본에서 발생 하는 오류의 경우 odbc 드라이버는 ODBC 파일 라이브러리에 의해 반환 된 오류 메시지를 반환 합니다. ODBC 드라이버 또는 드라이버 관리자에서 발생 하는 오류의 경우 드라이버는 SQLSTATE와 연결 된 텍스트를 기반으로 오류 메시지를 반환 합니다.  
@@ -34,5 +35,5 @@ ms.locfileid: "81293113"
   
 |오류 메시지|오류 위치|  
 |-------------------|--------------------|  
-|Microsoft [ODBC 드라이버 관리자] *메시지 텍스트*|드라이버 관리자 (위한 odbc32.dll)|  
+|Microsoft [ODBC 드라이버 관리자] *메시지 텍스트*|드라이버 관리자 (Odbc32.dll)|  
 |Microsoft [ODBC *드라이버-이름*] *메시지 텍스트*|드라이버 ISAM (드라이버 ISAMs 참조)|

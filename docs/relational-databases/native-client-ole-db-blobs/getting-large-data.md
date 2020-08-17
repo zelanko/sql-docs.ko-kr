@@ -1,4 +1,5 @@
 ---
+description: SQL Server Native Client OLE DB 공급자에서 대량 데이터 가져오기
 title: 대량 데이터 가져오기 (Native Client OLE DB 공급자) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -16,12 +17,12 @@ ms.assetid: a31c5632-96aa-483f-a307-004c5149fbc0
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 298a442dbb93ca2c0bb95d79e341d712cd3651ea
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 372f8c7c24c94330decd807bef1393a0dfbd7d49
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243686"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88328629"
 ---
 # <a name="getting-large-data-from-a-sql-server-native-client-ole-db-provider"></a>SQL Server Native Client OLE DB 공급자에서 대량 데이터 가져오기
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -149,7 +150,7 @@ HRESULT GetUnboundData
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Blob 및 OLE 개체](../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)   
+ [BLOB 및 OLE 개체](../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)   
  [큰 값 형식 사용](../../relational-databases/native-client/features/using-large-value-types.md)  
   
   

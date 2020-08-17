@@ -1,4 +1,5 @@
 ---
+description: SQLGetData(Visual FoxPro ODBC 드라이버)
 title: SQLGetData (Visual FoxPro ODBC 드라이버) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: fbf1b1eb-ecab-43d6-9099-3d627344e0fe
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 88a872ca15544c3dd6909cd210f98987d21a13dc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c6403d23172a4fd25dcf96e71796739bb2359f54
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304114"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88340209"
 ---
 # <a name="sqlgetdata-visual-foxpro-odbc-driver"></a>SQLGetData(Visual FoxPro ODBC 드라이버)
 > [!NOTE]  

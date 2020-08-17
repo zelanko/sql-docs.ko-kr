@@ -1,4 +1,5 @@
 ---
+description: sys.dm_xtp_transaction_stats(Transact-SQL)
 title: sys. dm_xtp_transaction_stats (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9389f48d-0de5-47bd-9821-4db8f04504e4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9d238313d97ff3e509803d284efa3cfd9b8d6a9f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c26dfd447806c3ffcf7d4a105255aad87aaa9787
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85647982"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88322569"
 ---
 # <a name="sysdm_xtp_transaction_stats-transact-sql"></a>sys.dm_xtp_transaction_stats(Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

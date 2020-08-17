@@ -1,4 +1,5 @@
 ---
+description: SQLTransact(dBASE 드라이버)
 title: SQLTransact (dBASE 드라이버) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 159ca21a-ccc4-45e2-97ca-2a9387efa7df
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1ca3d968dbc175cc06650196e4387a0a42896e1a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c7ef7f21342508a2df13d892b6cf3e34ba630277
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299272"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88339694"
 ---
 # <a name="sqltransact-dbase-driver"></a>SQLTransact(dBASE 드라이버)
 > [!NOTE]  

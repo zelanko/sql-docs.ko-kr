@@ -1,4 +1,5 @@
 ---
+description: sys.dm_tran_session_transactions(Transact-SQL)
 title: sys. dm_tran_session_transactions (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/30/2017
@@ -20,11 +21,12 @@ ms.assetid: c7157491-58c2-49fe-87d7-0c9723113adf
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fb4c1742ed3b32a20d0026dad914a0fc7c90b6ea
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 210eeb14df34b10e895815aaf3f60af26764ca2f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000245"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88324369"
 ---
 # <a name="sysdm_tran_session_transactions-transact-sql"></a>sys.dm_tran_session_transactions(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -45,9 +47,9 @@ ms.locfileid: "86000245"
 |is_enlisted|**bit**|1 = 참여한 분산 트랜잭션<br /><br /> 0 = 참여한 분산 트랜잭션 아님|  
 |is_bound|**bit**|1 = 바운드 세션을 통해 세션에서 활성화된 트랜잭션<br /><br /> 0 = 바운드 세션을 통해 세션에서 활성화되지 않은 트랜잭션|  
 |open_transaction_count||각 세션에 대해 열린 트랜잭션 수입니다.|  
-|pdw_node_id|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포가 설정 된 노드의 식별자입니다.|  
+|pdw_node_id|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포가 설정 된 노드의 식별자입니다.|  
   
-## <a name="permissions"></a>권한
+## <a name="permissions"></a>사용 권한
 
 에 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 는 `VIEW SERVER STATE` 권한이 필요 합니다.   
 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium 계층에서는 데이터베이스에 대 한 권한이 필요 합니다 `VIEW DATABASE STATE` . [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]표준 및 기본 계층에서는 **서버 관리자** 또는 **Azure Active Directory 관리자** 계정이 필요 합니다.   
@@ -58,7 +60,7 @@ ms.locfileid: "86000245"
  MARS(Multiple Active Result Sets)를 사용하여 자동 커밋 모드에서 여러 개의 요청을 실행하면 단일 세션에 둘 이상의 활성 트랜잭션이 있을 수 있습니다. 이 경우 sys.dm_tran_session_transactions는 해당 세션에서 실행되고 있는 각 트랜잭션에 대해 하나씩 동일한 session_id에 대한 여러 개의 행을 표시합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;동적 관리 뷰 및 함수](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [트랜잭션 관련 동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   

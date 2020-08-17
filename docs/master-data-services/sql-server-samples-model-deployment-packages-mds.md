@@ -1,4 +1,5 @@
 ---
+description: 'SQL Server 예제: 모델 배포 패키지(MDS)'
 title: 모델 배포 패키지 예
 ms.custom: ''
 ms.date: 07/28/2017
@@ -13,12 +14,12 @@ keywords:
 ms.assetid: 9b31b7b6-319b-4840-b67d-eb383e7762b1
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 76ef4f409fd5a4072d27cdfa3e4180896534eaa0
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 70375fd359e56081267f2478a582281d96c253eb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811382"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88342379"
 ---
 # <a name="sql-server-examples-model-deployment-packages-mds"></a>SQL Server 예제: 모델 배포 패키지(MDS)
 

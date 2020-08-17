@@ -1,4 +1,5 @@
 ---
+description: SQLGetInfo(커서 라이브러리)
 title: SQLGetInfo (커서 라이브러리) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1b4d220d-2c07-4f56-987e-36813bb1a6ce
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9067fd8b33cb2408f1ef6f0e58603eb4f1f7eb09
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 08fbc40dfc7245e6f72349acc2ac63de8f0838bd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307814"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88339319"
 ---
 # <a name="sqlgetinfo-cursor-library"></a>SQLGetInfo(커서 라이브러리)
 > [!IMPORTANT]  

@@ -1,4 +1,5 @@
 ---
+description: 이전 SQL Server 버전 관련 새로운 날짜 및 시간 기능(OLE DB)
 title: 이전 SQL Server 버전을 사용 하는 날짜 및 시간 OLE DB 기능
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,11 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-dt-2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 70cfdccd5ba5c51e0ecdbb1106397364daf70aa4
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: b58fe4128d8df7b01d30b0a5ad11ce41881973ae
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86010583"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88327889"
 ---
 # <a name="new-date-and-time-features-with-previous-sql-server-versions-ole-db"></a>이전 SQL Server 버전 관련 새로운 날짜 및 시간 기능(OLE DB)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -31,19 +33,19 @@ ms.locfileid: "86010583"
   
 |OLE DB 클라이언트 형식|SQL Server 2005 형식|SQL Server 2008(또는 이후 버전) 형식|결과 변환(서버에서 클라이언트로)|매개 변수 변환(클라이언트에서 서버로)|  
 |------------------------|--------------------------|---------------------------------------|--------------------------------------------|-----------------------------------------------|  
-|DBTYPE_DBDATE|DateTime|날짜|정상|정상|  
+|DBTYPE_DBDATE|DateTime|Date|확인|확인|  
 |DBTYPE_DBTIMESTAMP|||시간 필드가 0으로 설정됩니다.|시간 필드가 0이 아닌 경우 문자열 잘림이 발생 하 여 IRowsetChange가 실패 합니다.|  
-|DBTYPE_DBTIME||Time(0)|정상|정상|  
+|DBTYPE_DBTIME||Time(0)|확인|확인|  
 |DBTYPE_DBTIMESTAMP|||날짜 필드가 현재 날짜로 설정됩니다.|소수 자릿수 초가 0이 아닌 경우 문자열 잘림이 발생 하 여 IRowsetChange가 실패 합니다.<br /><br /> 날짜는 무시됩니다.|  
 |DBTYPE_DBTIME||Time(7)|실패-시간 리터럴이 잘못 되었습니다.|정상|  
 |DBTYPE_DBTIMESTAMP|||실패-시간 리터럴이 잘못 되었습니다.|정상|  
-|DBTYPE_DBTIMESTAMP||Datetime2 (3)|정상|정상|  
-|DBTYPE_DBTIMESTAMP||Datetime2 (7)|정상|정상|  
-|DBTYPE_DBDATE|Smalldatetime|날짜|정상|정상|  
+|DBTYPE_DBTIMESTAMP||Datetime2 (3)|확인|확인|  
+|DBTYPE_DBTIMESTAMP||Datetime2 (7)|확인|확인|  
+|DBTYPE_DBDATE|Smalldatetime|Date|확인|확인|  
 |DBTYPE_DBTIMESTAMP|||시간 필드가 0으로 설정됩니다.|시간 필드가 0이 아닌 경우 문자열 잘림 때문에 IRowsetChange가 실패 합니다.|  
-|DBTYPE_DBTIME||Time(0)|정상|정상|  
+|DBTYPE_DBTIME||Time(0)|확인|확인|  
 |DBTYPE_DBTIMESTAMP|||날짜 필드가 현재 날짜로 설정됩니다.|소수 자릿수 초가 0이 아닌 경우 문자열 잘림이 발생 하 여 IRowsetChange가 실패 합니다.<br /><br /> 날짜는 무시됩니다.|  
-|DBTYPE_DBTIMESTAMP||Datetime2(0)|정상|정상|  
+|DBTYPE_DBTIMESTAMP||Datetime2(0)|확인|확인|  
   
  표에서 정상은 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 동작하는 경우 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)](또는 이후 버전)에서도 계속 동작함을 의미합니다.  
   
@@ -63,7 +65,7 @@ ms.locfileid: "86010583"
 #### <a name="icommandwithparametersgetparameterinfo"></a>ICommandWithParameters::GetParameterInfo  
  DBPARAMINFO 구조는 *Prgparaminfo* 매개 변수를 통해 다음 정보를 반환 합니다.  
   
-|매개 변수 유형|wType|ulParamSize|bPrecision|bScale|  
+|매개 변수 형식|wType|ulParamSize|bPrecision|bScale|  
 |--------------------|-----------|-----------------|----------------|------------|  
 |date|DBTYPE_WSTR|10|~0|~0|  
 |time|DBTYPE_WSTR|8, 10..16|~0|~0|  
@@ -128,7 +130,7 @@ ms.locfileid: "86010583"
 #### <a name="provider_types-rowset"></a>PROVIDER_TYPES 행 집합  
  날짜/시간 형식에 대해 다음 행이 반환됩니다.  
   
-|형식 -><br /><br /> Column|date|time|smalldatetime|Datetime|datetime2|datetimeoffset|  
+|형식 -><br /><br /> 열|date|time|smalldatetime|Datetime|datetime2|datetimeoffset|  
 |--------------------------|----------|----------|-------------------|--------------|---------------|--------------------|  
 |TYPE_NAME|date|time|smalldatetime|Datetime|datetime2|datetimeoffset|  
 |DATA_TYPE|DBTYPE_WSTR|DBTYPE_WSTR|DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMP|DBTYPE_WSTR|DBTYPE_WSTR|  
@@ -138,7 +140,7 @@ ms.locfileid: "86010583"
 |CREATE_PARAMS|NULL|NULL|NULL|NULL|NULL|NULL|  
 |IS_NULLABLE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|  
 |CASE_SENSITIVE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  
-|SEARCHABLE|DB_SEARCHABLE|DB_SEARCHABLE|DB_SEARCHABLE|DB_SEARCHABLE|DB_SEARCHABLE|DB_SEARCHABLE|  
+|검색 가능|DB_SEARCHABLE|DB_SEARCHABLE|DB_SEARCHABLE|DB_SEARCHABLE|DB_SEARCHABLE|DB_SEARCHABLE|  
 |UNSIGNED_ATTRIBUTE|NULL|NULL|NULL|NULL|NULL|NULL|  
 |FIXED_PREC_SCALE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  
 |AUTO_UNIQUE_VALUE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  

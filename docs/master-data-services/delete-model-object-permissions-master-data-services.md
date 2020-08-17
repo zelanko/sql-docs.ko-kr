@@ -1,4 +1,5 @@
 ---
+description: 모델 개체 사용 권한 삭제(Master Data Services)
 title: 모델 개체 사용 권한 삭제
 ms.custom: ''
 ms.date: 03/01/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 859c5952-f600-4940-8064-1afd13f7f6dc
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 0a1705e9d94a8b5c4dccb2634fe643dc45624a62
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: abe02163deac7a26e0301e5e7b9a34abadecf3cb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811976"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88344779"
 ---
 # <a name="delete-model-object-permissions-master-data-services"></a>모델 개체 사용 권한 삭제(Master Data Services)
 
@@ -27,7 +28,7 @@ ms.locfileid: "85811976"
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 모델 개체 사용 권한을 삭제하여 모든 할당을 제거합니다.  
   
-## <a name="prerequisites"></a>전제 조건  
+## <a name="prerequisites"></a>사전 요구 사항  
  이 절차를 수행하려면  
   
 -   **사용자 및 그룹 권한** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  
@@ -54,7 +55,7 @@ ms.locfileid: "85811976"
   
 8.  트리 노드를 클릭하고 상황에 맞는 메뉴에서 **액세스 정리**를 클릭합니다.  
   
-9. **Save**을 클릭합니다.  
+9. **저장**을 클릭합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [모델 개체 사용 권한 &#40;MDS(Master Data Services)&#41;](../master-data-services/model-object-permissions-master-data-services.md)   

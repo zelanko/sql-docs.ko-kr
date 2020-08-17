@@ -1,4 +1,5 @@
 ---
+description: sys.dm_tran_top_version_generators(Transact-SQL)
 title: sys. dm_tran_top_version_generators (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -20,11 +21,12 @@ ms.assetid: cec7809b-ba8a-4df9-b5bb-d4f651ff1a86
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 416e527ad37ae34fcd3484a80cf774b054649548
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 3d946cd1abb09defc9072da893979bb2e6c32508
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000231"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88323609"
 ---
 # <a name="sysdm_tran_top_version_generators-transact-sql"></a>sys.dm_tran_top_version_generators(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -34,7 +36,7 @@ ms.locfileid: "86000231"
 > [!NOTE]  
 >  또는에서이를 호출 하려면 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 이름 **sys. dm_pdw_nodes_tran_top_version_generators**을 사용 합니다.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>구문  
   
 ```  
   
@@ -48,9 +50,9 @@ sys.dm_tran_top_version_generators
 |**database_id**|**int**|데이터베이스 ID입니다.|  
 |**rowset_id**|**bigint**|행 집합 ID입니다.|  
 |**aggregated_record_length_in_bytes**|**int**|버전 저장소의 각 **database_id** 및 **rowset_id 쌍** 에 대 한 레코드 길이의 합계입니다.|  
-|**pdw_node_id**|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포가 설정 된 노드의 식별자입니다.|  
+|**pdw_node_id**|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포가 설정 된 노드의 식별자입니다.|  
   
-## <a name="permissions"></a>권한
+## <a name="permissions"></a>사용 권한
 
 에 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 는 `VIEW SERVER STATE` 권한이 필요 합니다.   
 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium 계층에서는 데이터베이스에 대 한 권한이 필요 합니다 `VIEW DATABASE STATE` . [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]표준 및 기본 계층에서는 **서버 관리자** 또는 **Azure Active Directory 관리자** 계정이 필요 합니다.   
@@ -58,7 +60,7 @@ sys.dm_tran_top_version_generators
 ## <a name="remarks"></a>설명  
  **Sys. dm_tran_top_version_generators** 는 전체 버전 저장소를 검색할 때 많은 페이지를 읽어야 할 수 있습니다 **. dm_tran_top_version_generators** 를 실행 하면 시스템 성능에 방해가 될 수 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 ALLOW_SNAPSHOT_ISOLATION 및 READ_COMMITTED_SNAPSHOT 옵션이 ON으로 설정된 데이터베이스에서 각각 XSN(트랜잭션 시퀀스 번호)으로 식별되는 4개의 동시 트랜잭션이 실행되는 테스트 시나리오를 사용합니다. 다음 트랜잭션이 실행되고 있습니다.  
   
 -   XSN-57은 직렬화 격리에서 실행되는 UPDATE 작업입니다.  
@@ -91,7 +93,7 @@ database_id rowset_id            aggregated_record_length_in_bytes
  출력은 모든 버전이에서 만들어지고 `database_id``9` 버전이 두 테이블에서 생성 됨을 보여 줍니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;동적 관리 뷰 및 함수](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [트랜잭션 관련 동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   

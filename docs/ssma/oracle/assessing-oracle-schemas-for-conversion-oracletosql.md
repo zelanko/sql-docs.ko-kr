@@ -1,4 +1,5 @@
 ---
+description: 변환을 위해 Oracle 스키마 평가(OracleToSQL)
 title: 변환을 위해 Oracle 스키마 평가 (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -12,12 +13,12 @@ ms.assetid: 4de9bcf6-1346-4740-87f9-7f24a8226357
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: f8aaa58da9e9ace704d6214dcc56cab997fe082e
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 641d97868dcd308dbe487d43b7eba84a8b772371
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935070"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88320739"
 ---
 # <a name="assessing-oracle-schemas-for-conversion-oracletosql"></a>변환을 위해 Oracle 스키마 평가(OracleToSQL)
 개체를 로드 하 고로 데이터를 마이그레이션하려면 먼저 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 마이그레이션의 복잡성과 마이그레이션에 소요 되는 시간을 결정 해야 합니다. SSMA는 성공적으로 변환 되는 개체의 비율을 보여 주는 평가 보고서를 만들 수 있습니다. SSMA를 사용 하면 변환 오류를 발생 시키는 특정 문제를 확인할 수도 있습니다.  
@@ -80,8 +81,8 @@ ms.locfileid: "87935070"
     -   마이그레이션할 때 개체를 제외할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]메타 데이터 탐색기 및 Oracle 메타 데이터 탐색기에서 개체를에 로드 하 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 고 oracle에서 데이터를 마이그레이션하기 전에 항목 옆에 있는 확인란의 선택을 취소 합니다.  
   
 ## <a name="next-step"></a>다음 단계  
-[Oracle 스키마 &#40;OracleToSQL&#41;변환](../../ssma/oracle/converting-oracle-schemas-oracletosql.md)  
+[Oracle 스키마 &#40;OracleToSQL&#41;변환 ](../../ssma/oracle/converting-oracle-schemas-oracletosql.md)  
   
 ## <a name="see-also"></a>참고 항목  
-[Oracle 데이터베이스를 SQL Server &#40;OracleToSQL&#41;로 마이그레이션](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
+[Oracle 데이터베이스를 SQL Server &#40;OracleToSQL&#41;로 마이그레이션 ](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
   

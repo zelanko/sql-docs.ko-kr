@@ -1,4 +1,5 @@
 ---
+description: 새 프로젝트(OracleToSQL)
 title: 새 프로젝트 (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -10,12 +11,12 @@ ms.assetid: 16849cfd-050c-4ac7-bd3d-a929aebb5010
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: eb608e61207f32567eca576c2ab9040b1451968a
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: d16a3aee923d7b57e7195799ed26a72571f4d92d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87933377"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88320539"
 ---
 # <a name="new-project-oracletosql"></a>새 프로젝트(OracleToSQL)
 **새 프로젝트** 대화 상자를 사용 하 여 새 ssma 프로젝트를 만들 수 있습니다. **새 프로젝트** 대화 상자에 액세스 하려면 **파일** 메뉴에서 **새 프로젝트**를 클릭 합니다.  
@@ -36,7 +37,7 @@ ms.locfileid: "87933377"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016  
   

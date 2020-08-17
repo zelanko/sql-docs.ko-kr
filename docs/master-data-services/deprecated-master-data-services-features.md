@@ -1,4 +1,5 @@
 ---
+description: 사용되지 않는 Master Data Services 기능
 title: 사용되지 않는 Master Data Services 기능
 ms.custom: ''
 ms.date: 03/14/2017
@@ -11,12 +12,12 @@ ms.assetid: d8506bda-66dd-45a4-bfc9-3a10fa665acc
 author: lrtoyou1223
 ms.author: lle
 manager: erikre
-ms.openlocfilehash: fc17ed2046ead7d142f0f5c138341b7a56eee26c
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 88304221dfa827679f787c55ec5065722cc9bc39
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811528"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88344159"
 ---
 # <a name="deprecated-master-data-services-features"></a>사용되지 않는 Master Data Services 기능
 

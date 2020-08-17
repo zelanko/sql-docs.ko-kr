@@ -1,4 +1,5 @@
 ---
+description: 변경 내용 추적 카탈로그 뷰-sys. change_tracking_databases
 title: sys. change_tracking_databases (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/08/2016
@@ -21,12 +22,12 @@ ms.assetid: bb233baa-2991-4904-a0eb-3772b81121a4
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 414286c06884721fad81ea25dd100fa5a7cd13b2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f5bdc89402ed43464fb84c02177ca9e07de3a1cd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85753015"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88324563"
 ---
 # <a name="change-tracking-catalog-views---syschange_tracking_databases"></a>변경 내용 추적 카탈로그 뷰-sys. change_tracking_databases
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -45,7 +46,7 @@ ms.locfileid: "85753015"
  sys.databases에 대한 권한 확인과 동일한 권한 확인이 sys.change_tracking_databases에 대해 수행됩니다. sys.change_tracking의 호출자가 데이터베이스의 소유자가 아니고 해당 행을 보는 데 필요한 최소 권한은 master 데이터베이스나 현재 데이터베이스의 ALTER ANY DATABASE나 VIEW ANY DATABASE 서버 수준 사용 권한 또는 CREATE DATABASE 권한입니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;카탈로그 뷰 변경 내용 추적](https://msdn.microsoft.com/library/6e8fd949-5560-4b34-879f-4e25aa24b183)   
+ [Transact-sql&#41;&#40;카탈로그 뷰 변경 내용 추적 ](https://msdn.microsoft.com/library/6e8fd949-5560-4b34-879f-4e25aa24b183)   
  [데이터 변경 내용 추적&#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)  
   
   

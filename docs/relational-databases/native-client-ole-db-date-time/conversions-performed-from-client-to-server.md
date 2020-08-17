@@ -1,4 +1,5 @@
 ---
+description: 클라이언트에서 서버로 수행 되는 SQL Server Native Client 변환
 title: 클라이언트에서 서버로 수행되는 변환
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-dt-2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: da80b44c2b24d58906d4b8fab6c0989caceec544
-ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
+ms.openlocfilehash: 3bd997af611ec04a67d937752bde8318eb70ee84
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87472269"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88328019"
 ---
 # <a name="sql-server-native-client-conversions-performed-from-client-to-server"></a>클라이언트에서 서버로 수행 되는 SQL Server Native Client 변환
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "87472269"
   
  ICommandWithParameters::SetParameterInfo가 호출되지 않으면 DBTYPE_DBTIMESTAMP 바인딩은 **datetime2**인 것처럼 변환됩니다.  
   
-|대상 -><br /><br /> From|DBDATE(date)|DBTIME(time)|DBTIME2(time)|DBTIMESTAMP(smalldatetime)|DBTIMESTAMP(datetime)|DBTIMESTAMP(datetime2)|DBTIMESTAMPOFFSET(datetimeoffset)|STR|WSTR|SQLVARIANT<br /><br /> (sql_variant)|  
+|대상 -><br /><br /> 보낸 사람|DBDATE(date)|DBTIME(time)|DBTIME2(time)|DBTIMESTAMP(smalldatetime)|DBTIMESTAMP(datetime)|DBTIMESTAMP(datetime2)|DBTIMESTAMPOFFSET(datetimeoffset)|STR|WSTR|SQLVARIANT<br /><br /> (sql_variant)|  
 |----------------------|---------------------|---------------------|----------------------|-----------------------------------|------------------------------|-------------------------------|------------------------------------------|---------|----------|-------------------------------------|  
 |DATE|1,2|1,3,4|4,12|1,12|1,12|1,12|1,5, 12|1,12|1,12|1,12<br /><br /> datetime2(0)|  
 |DBDATE|1|-|-|1,6|1,6|1,6|1,5, 6|1,10|1,10|1<br /><br /> date|  
@@ -40,18 +41,18 @@ ms.locfileid: "87472269"
 |DBTIMESTAMPOFFSET|1,2,8|1,3,4,8|1,4,8,10|1,8,10,14|1,8,10,15|1,8,10|1,10|1,10,11|1,10,11|1,10<br /><br /> datetimeoffset(7)|  
 |FILETIME|1,2|1,3,4|1,4,13|1,13|1,13|1,13|1,5,13|1,13|1,10|1,13<br /><br /> datetime2(3)|  
 |BYTES|-|-|-|-|-|-|-|해당 없음|해당 없음|해당 없음|  
-|VARIANT|1|1|1|1,10|1,10|1,10|1,10|N/A|해당 없음|1,10|  
-|SSVARIANT|1,16|1,16|1,16|1,10,16|1,10,16|1,10,16|1,10,16|N/A|해당 없음|1,16|  
-|BSTR|1,9|1,9|1,9,10|1,9,10|1,9,10|1,9,10|1,9,10|N/A|해당 없음|해당 없음|  
-|STR|1,9|1,9|1,9,10|1,9,10|1,9,10|1,9,10|1,9,10|N/A|해당 없음|해당 없음|  
-|WSTR|1,9|1,9|1,9,10|1,9,10|1,9,10|1,9,10|1,9,10|N/A|해당 없음|해당 없음|  
+|VARIANT|1|1|1|1,10|1,10|1,10|1,10|해당 없음|해당 없음|1,10|  
+|SSVARIANT|1,16|1,16|1,16|1,10,16|1,10,16|1,10,16|1,10,16|해당 없음|해당 없음|1,16|  
+|BSTR|1,9|1,9|1,9,10|1,9,10|1,9,10|1,9,10|1,9,10|해당 없음|해당 없음|해당 없음|  
+|STR|1,9|1,9|1,9,10|1,9,10|1,9,10|1,9,10|1,9,10|해당 없음|해당 없음|해당 없음|  
+|WSTR|1,9|1,9|1,9,10|1,9,10|1,9,10|1,9,10|1,9,10|해당 없음|해당 없음|해당 없음|  
   
 ## <a name="key-to-symbols"></a>기호 설명  
   
 |기호|의미|  
 |------------|-------------|  
 |-|변환이 지원되지 않습니다. IAccessor::CreateAccessor가 호출될 때 바인딩의 유효성이 검사되면 *rgStatus*에 DBBINDSTATUS_UPSUPPORTEDCONVERSION이 반환됩니다. 접근자 유효성 검사가 지연되면 DBSTATUS_E_BADACCESSOR가 설정됩니다.|  
-|N/A|해당 사항 없음.|  
+|해당 없음|해당 사항 없음|  
 |1|지정한 데이터가 유효하지 않으면 DBSTATUS_E_CANTCONVERTVALUE가 설정됩니다. 입력 데이터는 변환이 적용되기 전에 유효성이 검사되므로 이후 변환에서 구성 요소를 무시하더라도 계속 유효해야 변환에 성공할 수 있습니다.|  
 |2|시간 필드가 무시됩니다.|  
 |3|소수 자릿수 초가 0이어야 하며 그렇지 않으면 DBSTATUS_E_DATAOVERFLOW가 설정됩니다.|  

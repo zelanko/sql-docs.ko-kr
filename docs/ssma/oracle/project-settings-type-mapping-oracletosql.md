@@ -1,4 +1,5 @@
 ---
+description: 프로젝트 설정(형식 매핑)(OracleToSQL)
 title: 프로젝트 설정 (형식 매핑) (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -10,12 +11,12 @@ ms.assetid: 4bb8466e-2199-4f00-8513-b04e9586723d
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: ab1b453fb85d7b9c6ee0cf9a271c1af55a337b4a
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 0facd2ecca0ff6cc0a4bc28fe709a7adfc0c5acf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87933184"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88320449"
 ---
 # <a name="project-settings-type-mapping-oracletosql"></a>프로젝트 설정(형식 매핑)(OracleToSQL)
 **프로젝트 설정** 대화 상자의 형식 매핑 페이지에는 Ssma에서 Oracle 데이터 형식을 데이터 형식으로 변환 하는 방법을 사용자 지정 하는 설정이 포함 되어 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -88,7 +89,7 @@ Oracle 용 SSMA에서 인수, 열, 지역 변수 및 반환 값에 대 한 사�
 |국가별 문자 변경<sup>*</sup>|nvarchar(max)|  
 |nchar|nvarchar(max)|  
 |nclob|nvarchar(max)|  
-|숫자|float [53]|  
+|number|float [53]|  
 |numeric|float [53]|  
 |nvarchar2|nvarchar(max)|  
 |pls_integer|int|  
@@ -106,9 +107,9 @@ Oracle 용 SSMA에서 인수, 열, 지역 변수 및 반환 값에 대 한 사�
 |varchar2|varchar(max)|  
 |xmltype|Xml|  
   
-<sup>*</sup>반환 값 형식 매핑에만 적용 됩니다.  
+<sup>*</sup> 반환 값 형식 매핑에만 적용 됩니다.  
   
-<sup>**</sup>인수 형식 매핑에만 적용 됩니다.  
+<sup>**</sup> 인수 형식 매핑에만 적용 됩니다.  
   
 ### <a name="default-column-type-mapping"></a>기본 열 유형 매핑  
 다음 표에서는 열에 대 한 기본 형식 매핑을 포함 합니다.  
@@ -155,7 +156,7 @@ Oracle 용 SSMA에서 인수, 열, 지역 변수 및 반환 값에 대 한 사�
 |nchar|nchar|  
 |nchar [*]|nchar [*]|  
 |nclob|nvarchar(max)|  
-|숫자|float [53]|  
+|number|float [53]|  
 |number [*.. \* ]|숫자 [*]|  
 |number [*.. \* ] [\*..\*]|숫자 [*] [ \* ]|  
 |numeric|numeric|  
@@ -234,7 +235,7 @@ Oracle 용 SSMA에서 인수, 열, 지역 변수 및 반환 값에 대 한 사�
 |nchar 변경 [*.. 4000]|nvarchar [*]|  
 |nchar 변경 [4001.. *]|nvarchar(max)|  
 |Nclob|nvarchar(max)|  
-|번호|float [53]|  
+|Number|float [53]|  
 |number [*.. \* ]|숫자 [*]|  
 |number [*.. \* ] [\*..\*]|숫자 [*] [ \* ]|  
 |숫자|숫자 [38] [0]|  
@@ -266,5 +267,5 @@ Oracle 용 SSMA에서 인수, 열, 지역 변수 및 반환 값에 대 한 사�
 |Xmltype|Xml|  
   
 ## <a name="see-also"></a>참고 항목  
-[OracleToSQL&#41;&#40;사용자 인터페이스 참조](../../ssma/oracle/user-interface-reference-oracletosql.md)  
+[OracleToSQL&#41;&#40;사용자 인터페이스 참조 ](../../ssma/oracle/user-interface-reference-oracletosql.md)  
   

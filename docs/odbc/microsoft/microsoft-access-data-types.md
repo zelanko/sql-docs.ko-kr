@@ -1,4 +1,5 @@
 ---
+description: Microsoft Access 데이터 형식
 title: Microsoft Access 데이터 형식 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2019
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b537348a-bea0-4bd6-84a4-52a75292957f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 024fb65b6fdc81ae0a8e007d1cee150c6a35b91c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 24428c436e9e60c8ca5e42288b217f2c576cbd0d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307732"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88340769"
 ---
 # <a name="microsoft-access-data-types"></a>Microsoft Access 데이터 형식
 다음 표에서는 Microsoft Access 데이터 형식, 테이블을 만드는 데 사용 되는 데이터 형식 및 ODBC SQL 데이터 형식을 보여 줍니다.  
@@ -33,7 +34,7 @@ ms.locfileid: "81307732"
 |BINARY|BINARY|SQL_BINARY|  
 |BIT|BIT|SQL_BIT|  
 |COUNTER|COUNTER|SQL_INTEGER|  
-|Currency|Currency|SQL_NUMERIC|  
+|CURRENCY|통화|SQL_NUMERIC|  
 |날짜/시간|DATETIME|SQL_TIMESTAMP|  
 |GUID|GUID|SQL_GUID|  
 |긴 이진|LONGBINARY|SQL_LONGVARBINARY|  
@@ -60,7 +61,7 @@ ms.locfileid: "81307732"
   
  다음 표에서는 Microsoft Access 데이터 형식에 대 한 제한 사항을 보여 줍니다.  
   
-|데이터 형식|설명|  
+|데이터 형식|Description|  
 |---------------|-----------------|  
 |BINARY, VARBINARY 및 VARCHAR|0 또는 지정 되지 않은 길이의 BINARY, VARBINARY 또는 VARCHAR 열을 만들면 실제로 510 바이트 열이 반환 됩니다.|  
 |BYTE|FieldSize가 BYTE 인 Microsoft Access NUMBER 필드에는 부호가 없지만 Microsoft Access driver를 사용할 때 필드에 음수를 삽입할 수 있습니다.|  

@@ -1,4 +1,5 @@
 ---
+description: 설명자 및 데스크톱 데이터베이스 드라이버
 title: 설명자 및 데스크톱 데이터베이스 드라이버 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9ae2d9b5-365f-4f0a-9116-defe9498b401
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4ef79855f71d23e5a884822371f1894eb83442a9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 80565f912ef3136dc03cf7216ff3f997ee3eeba3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303514"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88340799"
 ---
 # <a name="descriptors-and-desktop-database-drivers"></a>설명자 및 데스크톱 데이터베이스 드라이버
 설명자는 열 데이터 또는 동적 매개 변수에 대 한 정보를 포함 하는 데이터 구조입니다. **SQLGetDescField** 은 아래에 나열 된 지원 되는 설명자를 검색 하는 데 사용할 수 있습니다. **SQLDescribeParam** 가 지원 되지 않으므로 IPD (구현 매개 변수 설명자)가 자동으로 채워지지 않습니다. Jet를 통해 사용할 수 없는 설명자 필드 (예: SQL_DESC_BASE_TABLE_NAME)도 지원 되지 않습니다.  
