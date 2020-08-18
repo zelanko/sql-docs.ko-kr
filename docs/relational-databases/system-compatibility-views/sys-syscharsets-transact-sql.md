@@ -1,4 +1,5 @@
 ---
+description: sys.syscharsets(Transact-SQL)
 title: sys.sys문자 집합 (transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -21,11 +22,12 @@ ms.assetid: f16d987c-bd19-4668-9ef7-785b8fb9ff5b
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 141a57db220be9d415febc5722eb34e313d6830f
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 47e839f090a3a7420a3da01cb4d468d3da667314
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009967"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88399699"
 ---
 # <a name="syssyscharsets-transact-sql"></a>sys.syscharsets(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -39,7 +41,7 @@ ms.locfileid: "86009967"
 |**csid**|**tinyint**|행이 문자 집합을 표시하는 경우에는 이 필드를 사용하지 않습니다. 행이 정렬 순서를 표시하는 경우에는 정렬 순서가 작성된 기반이 되는 문자 집합의 ID가 이 필드에 사용됩니다. 이 ID를 가진 문자 집합 행은 이 테이블에 있다고 간주됩니다.|  
 |**status**|**smallint**|내부 시스템 상태 정보 비트입니다.|  
 |**name**|**sysname**|문자 집합 또는 정렬 순서에 대한 고유한 이름입니다. 이 필드에서는 반드시 A-Z 또는 a-z의 문자, 0 - 9의 숫자 및 밑줄(_)만 사용해야 하고 문자로 시작해야 합니다.|  
-|**한**|**nvarchar(255)**|문자 집합 또는 정렬 순서의 기능에 관한 선택적 설명입니다.|  
+|**description**|**nvarchar(255)**|문자 집합 또는 정렬 순서의 기능에 관한 선택적 설명입니다.|  
 |**binarydefinition**|**varbinary(6000)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**정의**|**image**|문자 집합 또는 정렬 순서의 내부 정의입니다. 이 필드의 데이터 구조는 유형에 따라 달라집니다.|  
   

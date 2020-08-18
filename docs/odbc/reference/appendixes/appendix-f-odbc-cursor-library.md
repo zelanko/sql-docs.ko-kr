@@ -1,4 +1,5 @@
 ---
+description: '부록 F: ODBC 커서 라이브러리'
 title: '부록 F: ODBC 커서 라이브러리 | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: a03084df-4e48-48ef-917d-4a3fae48a605
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ec7982150bfa805c7093ab445400ef5ad1ee070c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 325c7cdc5d2fb185ef3dbd2500a20230d90193bf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81292433"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88411429"
 ---
 # <a name="appendix-f-odbc-cursor-library"></a>부록 F: ODBC 커서 라이브러리
 > [!IMPORTANT]  
 >  이 기능은 이후 버전의 Windows에서 제거 될 예정입니다. 새 개발 작업에서는이 기능을 사용 하지 않도록 하 고 현재이 기능을 사용 하는 응용 프로그램은 수정 하십시오. 드라이버의 커서 기능을 사용 하는 것이 좋습니다.  
   
- ODBC 커서 라이브러리 (Odbccr32)는 수준 1 API 규칙 수준을 준수 하 고 응용 프로그램이 나 드라이버를 사용 하 여 개발자가 재배포할 수 있는 모든 드라이버에 대해 스크롤 가능 커서 블록을 지원 합니다. 또한 커서 라이브러리는 **SELECT** 문에서 생성 된 결과 집합에 대해 위치 지정 update 및 delete 문을 지원 합니다. 정적 및 전진 전용 커서만 지원 하지만 커서 라이브러리는 많은 응용 프로그램의 요구 사항을 충족 합니다. 또한 좋은 성능을 제공할 수 있습니다. 특히 크기가 작고 크기를 조정 하는 결과 집합의 경우 커서 지원 기능이 없는 응용 프로그램에 적합 합니다.  
+ ODBC 커서 라이브러리 (Odbccr32.dll)는 수준 1 API 규칙 수준을 준수 하 고 응용 프로그램이 나 드라이버를 사용 하 여 개발자가 재배포할 수 있는 모든 드라이버에 대해 스크롤 가능 커서를 차단할 수 있도록 지원 합니다. 또한 커서 라이브러리는 **SELECT** 문에서 생성 된 결과 집합에 대해 위치 지정 update 및 delete 문을 지원 합니다. 정적 및 전진 전용 커서만 지원 하지만 커서 라이브러리는 많은 응용 프로그램의 요구 사항을 충족 합니다. 또한 좋은 성능을 제공할 수 있습니다. 특히 크기가 작고 크기를 조정 하는 결과 집합의 경우 커서 지원 기능이 없는 응용 프로그램에 적합 합니다.  
   
  커서 라이브러리는 드라이버 관리자와 드라이버 사이에 있는 DLL (동적 연결 라이브러리)입니다. 응용 프로그램에서 함수를 호출 하는 경우 드라이버 관리자는 커서 라이브러리의 함수를 호출 합니다 .이 함수는 함수를 실행 하거나 지정 된 드라이버에서 호출 합니다. 지정 된 연결의 경우 응용 프로그램은 커서 라이브러리가 항상 사용 되는지 여부를 지정 합니다. 드라이버에서 스크롤 가능 커서를 지원 하지 않거나 사용 되지 않는 경우 사용 됩니다.  
   
@@ -44,6 +45,6 @@ ms.locfileid: "81292433"
   
 -   [커서 라이브러리 코드 예제](../../../odbc/reference/appendixes/cursor-library-code-example.md)  
   
--   [구현 참고 사항](../../../odbc/reference/appendixes/implementation-notes.md)  
+-   [구현 노트](../../../odbc/reference/appendixes/implementation-notes.md)  
   
 -   [ODBC 커서 라이브러리 오류 코드](../../../odbc/reference/appendixes/odbc-cursor-library-error-codes.md)

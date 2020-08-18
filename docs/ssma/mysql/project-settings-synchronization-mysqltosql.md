@@ -1,4 +1,5 @@
 ---
+description: 프로젝트 설정(동기화)(MySQLToSQL)
 title: 프로젝트 설정 (동기화) (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 42061ff7-e6e7-497b-a0d9-440b9cf5986c
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: cbf4252f9d9fb71fe98755dfbba748ca15ca5657
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 3ea89bcdf9b10fb50e74228a26bfcd5cead83aca
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935192"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492386"
 ---
 # <a name="project-settings-synchronization-mysqltosql"></a>프로젝트 설정(동기화)(MySQLToSQL)
 동기화 **프로젝트 설정을** 사용 하 여 MySQL 데이터베이스 개체가 SQL Server database 개체와 동기화 되는 방법을 구성할 수 있습니다.  

@@ -1,4 +1,5 @@
 ---
+description: ToggleDrillState(MDX)
 title: ToggleDrillState (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: ffe8cb97ffa8dd01b058d5cf71fc2f0922e11501
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: e10c62742e28b69545efac51f70bf9628b43e08d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86971481"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88412917"
 ---
 # <a name="toggledrillstate-mdx"></a>ToggleDrillState(MDX)
 
@@ -35,10 +36,10 @@ ToggleDrillState(Set_Expression1,Set_Expression2 [, [RECURSIVE] [,INCLUDE_CALC_M
  집합을 반환하는 유효한 MDX 식입니다.  
   
  *폴더*  
- (선택 사항) 집합의 재귀 비교를 나타내는 키워드입니다. **ToggleDrillState** 함수는 **DrillupMember** 및 **DrilldownMember** 함수의 조합입니다. 재귀는 멤버가 **DrilldownMember** 상태인 경우에만 적용 됩니다.  
+ (선택 사항). 집합의 재귀 비교를 나타내는 키워드입니다. **ToggleDrillState** 함수는 **DrillupMember** 및 **DrilldownMember** 함수의 조합입니다. 재귀는 멤버가 **DrilldownMember** 상태인 경우에만 적용 됩니다.  
   
  *Include_calc_members*  
- (선택 사항) 드릴다운 수준에서 계산된 구성원 포함 여부(존재하는 경우)를 나타내는 플래그입니다.  
+ (선택 사항). 드릴다운 수준에서 계산된 구성원 포함 여부(존재하는 경우)를 나타내는 플래그입니다.  
   
 ## <a name="remarks"></a>설명  
  **ToggleDrillState** 함수는 첫 번째 집합에 있는 두 번째 집합의 각 멤버에 대 한 드릴 상태를 전환 합니다. 첫 번째 집합에는 모든 차원의 튜플이 포함될 수 있지만 두 번째 집합에는 단일 차원의 멤버만 포함되어야 합니다. **ToggleDrillState** 함수는 **DrillupMember** 및 **DrilldownMember** 함수의 조합입니다. 두 번째 집합의 멤버 *m*이 첫 번째 집합에 있고 해당 멤버가 드릴 다운 된 경우 (즉, 바로 다음에 하위 항목이 있는 경우) `DrillupMember(Set_Expression1, {m})` 는 첫 번째 집합의 멤버나 튜플에 적용 됩니다. *M 멤버가 드릴업* 된 경우 (즉 *, m 바로*뒤에 오는 *m* 의 하위 항목이 없는 경우) `DrilldownMember(Set_Expression1, {m}[, RECURSIVE])` 는 첫 번째 집합에 적용 됩니다.  

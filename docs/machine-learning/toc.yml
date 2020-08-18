@@ -37,6 +37,8 @@
       href: ../machine-learning/install/sql-pretrained-models-install.md
     - name: Python 및 R 업그레이드
       href: ../machine-learning/install/upgrade-r-and-python.md
+    - name: 기본 언어 버전 변경
+      href: ../machine-learning/install/change-default-language-runtime-version.md
     - name: Azure Data Studio Notebook
       href: ../machine-learning/install/sql-machine-learning-azure-data-studio.md
     - name: Python 클라이언트 설정
@@ -100,15 +102,15 @@
         - name: SQL 개발자를 위한 Python
           items:
             - name: 1 - 소개
-              href: ../machine-learning/tutorials/sqldev-in-database-python-for-sql-developers.md
+              href: ../machine-learning/tutorials/python-taxi-classification-introduction.md
             - name: 2 - 데이터 살펴보기
-              href: ../machine-learning/tutorials/sqldev-py3-explore-and-visualize-the-data.md
+              href: ../machine-learning/tutorials/python-taxi-classification-explore-data.md
             - name: 3 - 기능 엔지니어링
-              href: ../machine-learning/tutorials/sqldev-py4-create-data-features-using-t-sql.md
+              href: ../machine-learning/tutorials/python-taxi-classification-create-features.md
             - name: 4 - 학습 및 배포
-              href: ../machine-learning/tutorials/sqldev-py5-train-and-save-a-model-using-t-sql.md
+              href: ../machine-learning/tutorials/python-taxi-classification-train-model.md
             - name: 5 - 예측
-              href: ../machine-learning/tutorials/sqldev-py6-operationalize-the-model.md
+              href: ../machine-learning/tutorials/python-taxi-classification-deploy-model.md
     - name: R
       items:
         - name: R 자습서
@@ -135,18 +137,18 @@
               href: ../machine-learning/tutorials/r-clustering-model-deploy.md
         - name: 파티션 기반 모델 만들기
           href: ../machine-learning/tutorials/r-tutorial-create-models-per-partition.md
-        - name: T-SQL에서 R 사용
+        - name: SQL 개발자를 위한 R
           items:
             - name: 1. 소개
-              href: ../machine-learning/tutorials/sqldev-in-database-r-for-sql-developers.md
+              href: ../machine-learning/tutorials/r-taxi-classification-introduction.md
             - name: 2. 데이터 살펴보기
-              href: ../machine-learning/tutorials/sqldev-explore-and-visualize-the-data.md
+              href: ../machine-learning/tutorials/r-taxi-classification-explore-data.md
             - name: 3. 기능 엔지니어링
-              href: ../machine-learning/tutorials/sqldev-create-data-features-using-t-sql.md
+              href: ../machine-learning/tutorials/r-taxi-classification-create-features.md
             - name: 4. 학습 및 배포
-              href: ../machine-learning/tutorials/sqldev-train-and-save-a-model-using-t-sql.md
+              href: ../machine-learning/tutorials/r-taxi-classification-train-model.md
             - name: 5. 예측
-              href: ../machine-learning/tutorials/sqldev-operationalize-the-model.md
+              href: ../machine-learning/tutorials/r-taxi-classification-deploy-model.md
         - name: R 도구에서 SQL ML 사용
           items:
             - name: 1. 소개
@@ -229,6 +231,14 @@
               href: ../machine-learning/r/how-to-create-mdx-queries-using-olapr.md
     - name: 데이터 탐색 및 모델링
       items:
+        - name: Python
+          items:
+            - name: Python에서 히스토그램 그리기
+              href: ../machine-learning/data-exploration/python-plot-histogram.md
+            - name: pandas 데이터 프레임으로 데이터 가져오기
+              href: ../machine-learning/data-exploration/python-dataframe-pandas.md
+            - name: SQL에 데이터 프레임 삽입
+              href: ../machine-learning/data-exploration/python-dataframe-sql-server.md
         - name: R
           items:
             - name: ODBC를 사용하여 R 개체 로드
@@ -255,12 +265,10 @@
           href: ../machine-learning/r/how-to-create-a-stored-procedure-using-sqlrutils.md
     - name: 예측
       items:
-        - name: 예측을 생성하는 방법
-          href: ../machine-learning/r/how-to-do-realtime-scoring.md
-        - name: Sp_rxPredict로 실시간 점수 매기기
-          href: ../machine-learning/real-time-scoring.md
         - name: PREDICT T-SQL로 네이티브 점수 매기기
-          href: ../machine-learning/sql-native-scoring.md
+          href: ../machine-learning/predictions/native-scoring-predict-transact-sql.md
+        - name: Sp_rxPredict로 실시간 점수 매기기
+          href: ../machine-learning/predictions/real-time-scoring.md
     - name: 패키지 관리
       items:
         - name: 새 Python 패키지 설치
@@ -359,19 +367,23 @@
           href: ../machine-learning/r/ref-r-sqlrutils.md
 - name: 리소스
   items:
-    - name: 릴리스 정보 >
+    - name: 릴리스 정보 2019 >
+      href: ../sql-server/sql-server-ver15-release-notes.md?toc=../toc.json
+    - name: 릴리스 정보 2017 >
       href: ../sql-server/sql-server-2017-release-notes.md?toc=../toc.json
+    - name: 릴리스 정보 2016 >
+      href: ../sql-server/sql-server-2016-release-notes.md?toc=../toc.json
+    - name: 릴리스 정보 2014 >
+      href: ../sql-server/sql-server-2014-release-notes.md?toc=../toc.json
     - name: 문제 해결
       items:
         - name: 문제 해결 개요
-          href: ../machine-learning/machine-learning-troubleshooting-faq.md
+          href: ../machine-learning/troubleshooting/machine-learning-troubleshooting-overview.md
         - name: 알려진 문제
-          href: ../machine-learning/known-issues-for-sql-server-machine-learning-services.md
-        - name: 데이터 수집
-          href: ../machine-learning/data-collection-ml-troubleshooting-process.md
-        - name: 설치 및 업그레이드 오류
-          href: ../machine-learning/r/upgrade-and-installation-faq-sql-server-r-services.md
-        - name: 실행 패드 및 외부 스크립트 실행 오류
-          href: ../machine-learning/common-issues-external-script-execution.md
-        - name: R 스크립팅 오류
-          href: ../machine-learning/r-script-execution-errors.md
+          href: ../machine-learning/troubleshooting/known-issues-for-sql-server-machine-learning-services.md
+        - name: 문제 해결을 위한 데이터 수집
+          href: ../machine-learning/troubleshooting/data-collection-ml-troubleshooting-process.md
+        - name: 실행 패드 및 외부 스크립트 문제
+          href: ../machine-learning/troubleshooting/common-issues-external-script-execution.md
+        - name: 일반적인 R 스크립팅 오류
+          href: ../machine-learning/troubleshooting/r-script-execution-errors.md

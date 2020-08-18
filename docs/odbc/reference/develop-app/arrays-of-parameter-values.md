@@ -1,4 +1,5 @@
 ---
+description: 매개 변수 값 배열
 title: 매개 변수 값의 배열 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9b572c5b-1dfe-40af-bebd-051548ab6d90
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: eb9389c769e3a7bb0c39959a559531e8051a7bec
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 230f15f1c9cae0509ba7d616ab61ed5d8d7a370b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298804"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483116"
 ---
 # <a name="arrays-of-parameter-values"></a>매개 변수 값 배열
 응용 프로그램에서 매개 변수 배열을 전달 하는 것이 유용한 경우가 많습니다. 예를 들어 매개 변수 배열과 매개 변수가 있는 **INSERT** 문을 사용 하는 경우 응용 프로그램은 한 번에 여러 행을 삽입할 수 있습니다. 배열을 사용 하는 경우 몇 가지 이점이 있습니다. 첫째, 대부분의 문에 대 한 데이터가 단일 패킷으로 전송 되기 때문에 (데이터 원본이 기본적으로 매개 변수 배열을 지 원하는 경우) 네트워크 트래픽이 줄어듭니다. 둘째, 일부 데이터 소스는 동일한 수의 개별 SQL 문을 실행 하는 것 보다 빠르게 배열을 사용 하 여 SQL 문을 실행할 수 있습니다. 마지막으로 데이터가 배열에 저장 될 때 화면 데이터의 경우 처럼 응용 프로그램은 **SQLBindParameter** 에 대 한 단일 호출로 특정 열의 모든 행을 바인딩하고 단일 문을 실행 하 여 업데이트할 수 있습니다.  

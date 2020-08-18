@@ -1,4 +1,5 @@
 ---
+description: 구현 노트
 title: 구현 참고 사항 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,14 +11,14 @@ ms.topic: conceptual
 ms.assetid: 7ec14b9c-69b8-4c6e-838a-88d1ebdc8725
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 970188a2fca45706405e398cece0f04d38dfdc68
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7117e0d8af856a16a47414f5a8c3ec11c475cb92
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81284314"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483266"
 ---
-# <a name="implementation-notes"></a>구현 참고 사항
+# <a name="implementation-notes"></a>구현 노트
 > [!IMPORTANT]  
 >  이 기능은 이후 버전의 Windows에서 제거 될 예정입니다. 새 개발 작업에서는이 기능을 사용 하지 않도록 하 고 현재이 기능을 사용 하는 응용 프로그램은 수정 하십시오. 드라이버의 커서 기능을 사용 하는 것이 좋습니다.  
   

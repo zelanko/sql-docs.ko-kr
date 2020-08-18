@@ -1,4 +1,5 @@
 ---
+description: SQL Server에서 확장 저장 프로시저 제거
 title: 확장 저장 프로시저 제거
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ ms.assetid: 7827e574-3f59-4279-9a9b-532582e041cb
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 4ec666e49ccc6da12e14f7f1c85ce6eda4b6a4d0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d7296391a9105c9831ed8652f7b63e234ac4f6df
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85723415"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460775"
 ---
 # <a name="removing-an-extended-stored-procedure-from-sql-server"></a>SQL Server에서 확장 저장 프로시저 제거
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

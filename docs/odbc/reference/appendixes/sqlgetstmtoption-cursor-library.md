@@ -1,4 +1,5 @@
 ---
+description: SQLGetStmtOption(커서 라이브러리)
 title: SQLGetStmtOption (커서 라이브러리) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 986170b3-fba8-4323-9224-60b381c7effb
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fa33df432463779f397fee2dcd50b06443082c52
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: 93a1e34648d1cef320ca7385eb24215701ed9dd3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87362940"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88411109"
 ---
 # <a name="sqlgetstmtoption-cursor-library"></a>SQLGetStmtOption(커서 라이브러리)
 > [!IMPORTANT]  

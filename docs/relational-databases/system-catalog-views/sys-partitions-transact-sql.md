@@ -1,4 +1,5 @@
 ---
+description: sys.partitions(Transact-SQL)
 title: sys.debug (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,12 +21,12 @@ ms.assetid: 1c19e1b1-c925-4dad-a652-581692f4ab5e
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5a2b7b017a7308628ff8d487d72629d86a04dc1a
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 2e0683282d8f60dd80f2abf3081ed33c787e5b26
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87397186"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460647"
 ---
 # <a name="syspartitions-transact-sql"></a>sys.partitions(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

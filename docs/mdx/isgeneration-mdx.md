@@ -1,4 +1,5 @@
 ---
+description: IsGeneration(MDX)
 title: IsGeneration (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 401a11a10f190cda8efeaffa04e1025ef7f4e681
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e7b7f3df41af6af51a826352814fc6aef52ef0a0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68105232"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471835"
 ---
 # <a name="isgeneration-mdx"></a>IsGeneration(MDX)
 

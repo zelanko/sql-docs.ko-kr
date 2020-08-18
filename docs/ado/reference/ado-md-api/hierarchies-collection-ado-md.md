@@ -1,4 +1,5 @@
 ---
+description: Hierarchies 컬렉션(ADO MD)
 title: 계층 구조 컬렉션 (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: bef0fcb1-8060-4faa-84f0-3d52e9c4526f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f7d8605b52ead95433548095015497b6b42220d8
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 81161819bd03b4261a0da321579f6df32dd824ea
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82753981"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441005"
 ---
 # <a name="hierarchies-collection-ado-md"></a>Hierarchies 컬렉션(ADO MD)
 차원의 [계층](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md) 개체 집합을 포함 합니다.  

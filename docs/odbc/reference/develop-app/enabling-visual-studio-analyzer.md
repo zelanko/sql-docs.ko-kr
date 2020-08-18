@@ -1,4 +1,5 @@
 ---
+description: Visual Studio 분석기 사용
 title: Visual Studio 분석기 사용 Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 423950e9-a5c0-4da9-b9b2-49c38b3bb0b8
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d80d54dc4aeebcc5c32d07a2beebb9ded41bf355
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0e657a6ea9bff73aee54b5d4fc474283e1109b11
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300453"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483016"
 ---
 # <a name="enabling-visual-studio-analyzer"></a>Visual Studio 분석기 사용
 > [!IMPORTANT]  
@@ -29,7 +30,7 @@ ms.locfileid: "81300453"
   
 1.  ODBC 데이터 원본 관리자에 액세스 합니다.  
   
-2.  **추적** 탭을 클릭 합니다.  
+2.  **추적** 탭을 클릭합니다.  
   
 3.  **Visual Studio 분석기 추적 시작**을 클릭 합니다.  
   

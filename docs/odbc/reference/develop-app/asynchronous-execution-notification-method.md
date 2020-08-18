@@ -1,4 +1,5 @@
 ---
+description: 비동기 실행(알림 방법)
 title: 비동기 실행 (알림 방법) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: e509dad9-5263-4a10-9a4e-03b84b66b6b3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 250e71dcb47d44a6e437d12c269ea23fa6fb3c2c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 19c201d71d42c40277ad67cef25922e55e97de12
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306414"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483126"
 ---
 # <a name="asynchronous-execution-notification-method"></a>비동기 실행(알림 방법)
 ODBC에서는 연결 및 문 작업을 비동기적으로 실행할 수 있습니다. 응용 프로그램 스레드는 비동기 모드에서 ODBC 함수를 호출할 수 있으며,이 함수는 작업이 완료 되기 전에 반환할 수 있으므로 응용 프로그램 스레드에서 다른 작업을 수행할 수 있습니다. Windows 7 SDK에서 비동기 문 또는 연결 작업의 경우 응용 프로그램은 폴링 메서드를 사용 하 여 비동기 작업이 완료 되었음을 확인 합니다. 자세한 내용은 [비동기 실행 (폴링 방법)](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md)을 참조 하세요. Windows 8 SDK부터 알림 방법을 사용 하 여 비동기 작업이 완료 되었는지 확인할 수 있습니다.  
@@ -330,7 +331,7 @@ if (SQL_ASYNC_NOTIFICATION_CAPABLE == InfoValue)
 |-------------------------------------------------------------------------|-------------------------------------------------------------------|----------|  
 |사용|null이 아닌|비동기 알림|  
 |사용|null|비동기 폴링|  
-|사용 안 함|any|동기|  
+|사용 중지|any|동기|  
   
  응용 프로그램은 비동기 작업 모드를 일시적으로 비활성화할 수 있습니다. 연결 수준 비동기 작업을 사용할 수 없는 경우 ODBC는 SQL_ATTR_ASYNC_DBC_EVENT의 값을 무시 합니다. 문 수준 비동기 작업을 사용할 수 없는 경우 ODBC는 SQL_ATTR_ASYNC_STMT_EVENT의 값을 무시 합니다.  
   

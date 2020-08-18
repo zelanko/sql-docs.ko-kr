@@ -1,4 +1,5 @@
 ---
+description: 변경 내용 추적 그룹에 특성 추가(Master Data Services)
 title: 변경 내용 추적 그룹에 특성 추가
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e153eb5f-70ca-4c6f-89d8-1f937ed3917d
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: d9e277fb7609879c9baa1efc347773b855163b3b
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 154dc5a555e97d4de56f3a40981aad71e64fe22c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812474"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491503"
 ---
 # <a name="add-attributes-to-a-change-tracking-group-master-data-services"></a>변경 내용 추적 그룹에 특성 추가(Master Data Services)
 
@@ -30,7 +31,7 @@ ms.locfileid: "85812474"
 > [!NOTE]  
 >  변경 내용 추적 그룹에 특성을 추가한 후에는 특성이 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스에서 변경될 때 특성에 플래그가 지정됩니다. 변경 내용에 따라 동작을 수행할 비즈니스 규칙을 만듭니다.  
   
-## <a name="prerequisites"></a>전제 조건  
+## <a name="prerequisites"></a>사전 요구 사항  
  이 절차를 수행하려면  
   
 -   **시스템 관리** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  

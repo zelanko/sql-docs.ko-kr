@@ -1,4 +1,5 @@
 ---
+description: MSreplication_objects(Transact-SQL)
 title: MSreplication_objects (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 08f9710d-976d-448e-bead-ac9835e87bc5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 57a4c20f6aac12f1671b88dc04b0366290abe127
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 64cb218090b811b60bd45ec598b4615be9150ce8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881490"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492720"
 ---
 # <a name="msreplication_objects-transact-sql"></a>MSreplication_objects(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "85881490"
 |**발행자**|**sysname**|게시자의 이름입니다.|  
 |**publisher_db**|**sysname**|게시자 데이터베이스의 이름입니다.|  
 |**게시물**|**sysname**|게시의 이름입니다.|  
-|**object_name**|**sysname**|개체 이름입니다.|  
+|**object_name**|**sysname**|개체의 이름입니다.|  
 |**object_type**|**char(2)**|개체 형식입니다.<br /><br /> **u** = 테이블<br /><br /> **t** = 트리거입니다.<br /><br /> **p** = 저장 프로시저|  
 |**문서**|**sysname**|개체가 연결된 아티클의 이름입니다.|  
   

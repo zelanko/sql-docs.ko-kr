@@ -1,4 +1,5 @@
 ---
+description: Dimensions 컬렉션 속성, 메서드 및 이벤트
 title: 차원 컬렉션 속성, 메서드 및 이벤트 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0025687e-e20d-4c36-8242-b9ab56e50706
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 40d3a6e5bb88e8b38441a8ff4869ac17b74e8bb1
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 0024a8b0c96d5007f821da86293d40662ca02d98
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764254"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441055"
 ---
 # <a name="dimensions-collection-properties-methods-and-events"></a>Dimensions 컬렉션 속성, 메서드 및 이벤트
 ## <a name="properties"></a>속성  

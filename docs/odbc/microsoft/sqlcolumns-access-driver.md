@@ -1,4 +1,5 @@
 ---
+description: SQLColumns(Access 드라이버)
 title: SQLColumns (Access 드라이버) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1eac255c-6110-4805-a1bc-feee1eec35d0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7031e9eebbb1ffae045598863d22399147503c88
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3fef37db9ae45591b173db8822d17399c257b423
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307904"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88412179"
 ---
 # <a name="sqlcolumns-access-driver"></a>SQLColumns(Access 드라이버)
 > [!NOTE]  

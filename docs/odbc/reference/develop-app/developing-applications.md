@@ -1,4 +1,5 @@
 ---
+description: 애플리케이션 개발
 title: 응용 프로그램 개발 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0dd1a3b6-69dc-462f-9290-12ebee2b4a2a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 995d6b9ada4576bb5792042a1f0b5b6a25cde452
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3996987d8aa110da5646db883ff7cb1a98dfc98e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305864"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483096"
 ---
 # <a name="developing-applications"></a>애플리케이션 개발
 이 섹션에서는 ODBC 인터페이스와이를 구현 하는 드라이버를 사용 하는 응용 프로그램을 개발 하는 방법에 대해 설명 합니다.  
@@ -54,5 +55,5 @@ ms.locfileid: "81305864"
   
 -   [프로그래밍 고려 사항](../../../odbc/reference/develop-app/programming-considerations.md)  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [ODBC 프로그래머 참조](../../../odbc/reference/odbc-programmer-s-reference.md)

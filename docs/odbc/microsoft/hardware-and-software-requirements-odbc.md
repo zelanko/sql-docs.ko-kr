@@ -1,4 +1,5 @@
 ---
+description: 하드웨어 및 소프트웨어 요구 사항(ODBC)
 title: 하드웨어 및 소프트웨어 요구 사항 (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6df2e9cd-de10-4629-97bd-32f2782616c7
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fe69775e379e9a9d661b4ddf81e577b738fcf34d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a0f88c8877161122c11fb65bcdb62fd4e7b684c3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81295243"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88412489"
 ---
 # <a name="hardware-and-software-requirements-odbc"></a>하드웨어 및 소프트웨어 요구 사항(ODBC)
 이 항목에서는 ODBC 데스크톱 데이터베이스 드라이버를 사용 하기 위한 요구 사항을 나열 합니다.  
@@ -39,7 +40,7 @@ ms.locfileid: "81295243"
   
 -   ODBC 드라이버입니다.  
   
--   32 비트 ODBC 드라이버 관리자, 버전 3.51 이상 (위한 odbc32.dll)  
+-   32 비트 ODBC 드라이버 관리자, 버전 3.51 이상 (Odbc32.dll)  
   
 -   Microsoft Windows 95 이상 또는 Windows NT 4.0 또는 Windows 2000.  
   
@@ -53,4 +54,4 @@ ms.locfileid: "81295243"
   
 ## <a name="driver-specific-hardware-and-software-requirements"></a>드라이버 특정 하드웨어 및 소프트웨어 요구 사항  
   
--   MicrosoftAccess 및 dBASEdrivers는 Autoexec 또는 Config.xml 파일을 변경 해야 할 수 있습니다.
+-   MicrosoftAccess 및 드라이버는 Autoexec.bat 또는 Config.sys 파일을 변경 해야 할 수 있습니다.

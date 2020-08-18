@@ -1,4 +1,5 @@
 ---
+description: SSMA 프로젝트 작업(MySQLToSQL)
 title: SSMA 프로젝트 작업 (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9e4394e9-f177-41d9-839e-5d53a9c9b840
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 98315541dc7eb2df1e77e32bcd34744b98708557
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: d6a1bbc7b47531c66e27818e8673a7c6aa9723c8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935123"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492426"
 ---
 # <a name="working-with-ssma-projects-mysqltosql"></a>SSMA 프로젝트 작업(MySQLToSQL)
 MySQL 데이터베이스를 SQL Server 또는 SQL Azure로 마이그레이션하려면 먼저 SSMA 프로젝트를 만들어야 합니다. 프로젝트는 다음 정보를 포함 하는 파일입니다.  
@@ -81,7 +82,7 @@ MySQL 데이터베이스에서 SQL Server 또는 SQL Azure로 데이터를 마�
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014  
   
     -   Azure SQL Database  
   
@@ -105,7 +106,7 @@ SSMA에서 프로젝트 파일을 만듭니다.
   
 1.  **누락 된 메타 데이터**의 상태를 표시 하는 각 데이터베이스에 대해 데이터베이스 이름 옆의 확인란을 선택 합니다. 메타 데이터를 저장 하는 데 몇 분 정도 걸릴 수 있습니다. 이때 메타 데이터를 저장 하지 않으려면 확인란을 선택 하지 마십시오.  
   
-2.  **Save**을 클릭합니다.  
+2.  **저장**을 클릭합니다.  
   
 SSMA는 MySQL 스키마를 구문 분석 하 고 메타 데이터를 프로젝트 파일에 저장 합니다.  
   
@@ -131,9 +132,9 @@ SSMA는 MySQL 스키마를 구문 분석 하 고 메타 데이터를 프로젝�
 ## <a name="next-step"></a>다음 단계  
 마이그레이션 프로세스의 다음 단계는 [MySQL &#40;MySQLToSQL&#41;에 연결 하](../../ssma/mysql/connecting-to-mysql-mysqltosql.md) 는 것입니다.  
   
-## <a name="see-also"></a>참고 항목  
-[MySQL &#40;MySQLToSQL&#41;에 연결](../../ssma/mysql/connecting-to-mysql-mysqltosql.md)  
-[MySQL 데이터베이스를 SQL Server-Azure SQL Database &#40;MySQLToSql&#41;로 마이그레이션](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
-[MySQLToSQL&#41;&#40;SQL Server에 연결](../../ssma/mysql/connecting-to-sql-server-mysqltosql.md)  
-[MySQLToSQL&#41;&#40;Azure SQL Database에 연결](../../ssma/mysql/connecting-to-azure-sql-db-mysqltosql.md)  
+## <a name="see-also"></a>관련 항목  
+[MySQL &#40;MySQLToSQL&#41;에 연결 ](../../ssma/mysql/connecting-to-mysql-mysqltosql.md)  
+[MySQL 데이터베이스를 SQL Server-Azure SQL Database &#40;MySQLToSql&#41;로 마이그레이션 ](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
+[MySQLToSQL&#41;&#40;SQL Server에 연결 ](../../ssma/mysql/connecting-to-sql-server-mysqltosql.md)  
+[MySQLToSQL&#41;&#40;Azure SQL Database에 연결 ](../../ssma/mysql/connecting-to-azure-sql-db-mysqltosql.md)  
   

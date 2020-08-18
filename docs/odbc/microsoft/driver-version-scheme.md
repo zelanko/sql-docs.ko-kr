@@ -1,4 +1,5 @@
 ---
+description: 드라이버 버전 구성표
 title: 드라이버 버전 구성표 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e4a8d9d7-8aba-48ab-8be6-1a6129adfb8f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 864a8bd892315b060fc6fcf42dbe69dfea61ae59
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0414da00ffc5a220e3bf6b13837880b1116f58eb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303454"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88412729"
 ---
 # <a name="driver-version-scheme"></a>드라이버 버전 구성표
 > [!IMPORTANT]  

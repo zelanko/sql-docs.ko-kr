@@ -1,4 +1,5 @@
 ---
+description: TopCount(MDX)
 title: TopCount (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: e0f607f3111c150bff3d5dc562c77901a381bedc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b7d917963d8500e06bf9d2adcd1057e72e50512a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68036605"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88412879"
 ---
 # <a name="topcount-mdx"></a>TopCount(MDX)
 
@@ -45,7 +46,7 @@ TopCount(Set_Expression,Count [ ,Numeric_Expression ] )
   
  숫자 식이 지정 되지 않은 경우이 함수는 멤버 집합을 정렬 하지 않고 일반적인 순서로 반환 합니다. [Head (MDX)](../mdx/head-mdx.md) 함수 처럼 동작 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 Internet Sales Amount를 기준으로 상위 10개 날짜를 반환합니다.  
   
  `SELECT [Measures].[Internet Sales Amount] ON 0,`  

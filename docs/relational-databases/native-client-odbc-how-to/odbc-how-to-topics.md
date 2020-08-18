@@ -1,4 +1,5 @@
 ---
+description: ODBC How-to Topics
 title: ODBC 방법 도움말 항목 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -11,11 +12,12 @@ ms.assetid: 151f2066-1c37-410f-88f4-b27dfca66031
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9866c13f2a7385c008cc8fd98455e371ebd6f250
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 70ad00292ae7d5605b7cd54a2a04d040b94f8e20
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007904"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460767"
 ---
 # <a name="odbc-how-to-topics"></a>ODBC How-to Topics
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -26,7 +28,7 @@ ms.locfileid: "86007904"
   
 -   [SQL Server ODBC 드라이버 구성 방법 도움말 항목](https://msdn.microsoft.com/library/e26fbc87-9483-4a2e-99f1-bf52a58360db)  
   
--   [핸들을 할당 하 고 ODBC&#41;SQL Server &#40;에 연결](../../relational-databases/native-client-odbc-how-to/allocate-handles-and-connect-to-sql-server-odbc.md)  
+-   [핸들을 할당 하 고 ODBC&#41;SQL Server &#40;에 연결 ](../../relational-databases/native-client-odbc-how-to/allocate-handles-and-connect-to-sql-server-odbc.md)  
   
 -   [쿼리 실행 방법 도움말 항목 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
   
@@ -34,7 +36,7 @@ ms.locfileid: "86007904"
   
 -   [커서 사용 방법 항목 ODBC&#41;&#40;](../../relational-databases/native-client-odbc-how-to/cursors/using-cursors-how-to-topics-odbc.md)  
   
--   [Microsoft DTC(Distributed Transaction Coordinator) &#40;ODBC&#41;사용](../../relational-databases/native-client-odbc-how-to/use-microsoft-distributed-transaction-coordinator-odbc.md)  
+-   [Microsoft DTC(Distributed Transaction Coordinator) &#40;ODBC&#41;사용 ](../../relational-databases/native-client-odbc-how-to/use-microsoft-distributed-transaction-coordinator-odbc.md)  
   
 -   [저장 프로시저 실행 방법 항목 ODBC&#41;&#40;](https://msdn.microsoft.com/library/c2220182-a23d-4475-b353-77a77ab613d6)  
   
@@ -42,7 +44,7 @@ ms.locfileid: "86007904"
   
 -   [ODBC 드라이버 성능 프로 파일링 방법 항목 ODBC&#41;&#40;](../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)  
   
--   [Odbc&#41;&#40;ODBC 오류 처리](../../relational-databases/native-client-odbc-how-to/process-odbc-errors-odbc.md)  
+-   [Odbc&#41;&#40;ODBC 오류 처리 ](../../relational-databases/native-client-odbc-how-to/process-odbc-errors-odbc.md)  
   
 -   [SQL Server ODBC 드라이버를 사용 하 여 대량 복사 방법 도움말 항목 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)  
   

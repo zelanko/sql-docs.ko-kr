@@ -1,4 +1,5 @@
 ---
+description: 데이터 마이그레이션 보고서(MySQLToSQL)
 title: 데이터 마이그레이션 보고서 (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 5524a575-67dd-4ef6-9d17-3412df9b9f9c
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: e9c88bb9f59d38a1d9cf85785954f5fc6b4ae276
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: e591fae2984714fcc0bcb2f70eab614f27e397b1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935843"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492486"
 ---
 # <a name="data-migration-report--mysqltosql"></a>데이터 마이그레이션 보고서(MySQLToSQL)
 데이터 **마이그레이션 보고서** 대화 상자는 데이터를로 마이그레이션한 후에 표시 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -38,7 +39,7 @@ ms.locfileid: "87935843"
 **비율**  
 성공적으로 마이그레이션된 행의 비율입니다.  
   
-**설명**  
+**세부 정보**  
 데이터 마이그레이션이 실패 한 경우 보고서에서 선택한 행에 대 한 마이그레이션 세부 정보를 표시 하려면 클릭 합니다. SSMA에서 오류의 원인을 표시 합니다.  
   
 **보고서 저장**  

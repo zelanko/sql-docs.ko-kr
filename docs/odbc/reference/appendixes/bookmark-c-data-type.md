@@ -1,4 +1,5 @@
 ---
+description: 책갈피 C 데이터 유형
 title: 책갈피 C 데이터 형식 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: add88e48-ada3-4c0c-a5ac-e78903d3ff41
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 566f1065d30a47b2db234ba1f11f877725189fb7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4647002d5e57ea20656a4fa2dec03aa8092b9b36
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81292293"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88411259"
 ---
 # <a name="bookmark-c-data-type"></a>책갈피 C 데이터 유형
 책갈피 C 데이터 형식을 사용 하면 응용 프로그램에서 책갈피를 검색할 수 있습니다. 책갈피 C 형식은 길이가 가변적 일 수 있는 책갈피 값을 검색 하는 데만 사용 됩니다. 다른 데이터 형식으로 변환 하면 안 됩니다. 응용 프로그램은 **SQLBulkOperations** 를 사용 하 여 결과 집합의 0 열에서 책갈피를 검색 합니다 (SQL_ADD 작업 포함), **sqlfetch**, **sqlfetchscroll**또는 **SQLGetData**. 자세한 내용은 [책갈피](../../../odbc/reference/develop-app/bookmarks-odbc.md)를 참조 하세요.  

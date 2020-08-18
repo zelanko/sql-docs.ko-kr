@@ -1,4 +1,5 @@
 ---
+description: 저장 프로시저에서 배열 매개 변수 반환
 title: 저장 프로시저에서 배열 매개 변수 반환 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2018069b-da5d-4cee-a971-991897d4f7b5
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: bc998dadc0e0c4a4bfe054bfd1d40296bc176393
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a6b18921e027e16f322c47da9757ef9c8ee7f1aa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81292863"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449285"
 ---
 # <a name="returning-array-parameters-from-stored-procedures"></a>저장 프로시저에서 배열 매개 변수 반환
 > [!IMPORTANT]  
@@ -35,7 +36,7 @@ ms.locfileid: "81292863"
 ```  
   
 > [!NOTE]  
->  최대 \<레코드 요청> 매개 변수는 결과 집합에 있는 행 수보다 크거나 같아야 합니다. 그렇지 않으면 Oracle은 드라이버에 의해 사용자에 게 전달 되는 오류를 반환 합니다.  
+>  \<max-records-requested>매개 변수는 결과 집합에 있는 행 수보다 크거나 같아야 합니다. 그렇지 않으면 Oracle은 드라이버에 의해 사용자에 게 전달 되는 오류를 반환 합니다.  
 >   
 >  PL/SQL 레코드는 배열 매개 변수로 사용할 수 없습니다. 각 배열 매개 변수는 데이터베이스 테이블의 열을 하나만 나타낼 수 있습니다.  
   

@@ -1,4 +1,5 @@
 ---
+description: 스칼라 식 사용
 title: 스칼라 식 사용 | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: b87fad1b9c568f4ebd5f65ef3705001b12d26693
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cc13d94aaf44e563a9519f797effee7cbeb74305
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68038044"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491397"
 ---
 # <a name="using-scalar-expressions"></a>스칼라 식 사용
 

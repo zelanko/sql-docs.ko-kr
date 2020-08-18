@@ -1,4 +1,5 @@
 ---
+description: sys.syscacheobjects(Transact-SQL)
 title: Cacheobjects sys.sys(Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 9b14f37c-b7f5-4f71-b070-cce89a83f69e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a4d065ba57ab90e1bb035a6ef92100d351d93603
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 25160eb8e7a25e2a4ec6d2f8b318fc78e7af61ef
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899946"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88399679"
 ---
 # <a name="syssyscacheobjects-transact-sql"></a>sys.syscacheobjects(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

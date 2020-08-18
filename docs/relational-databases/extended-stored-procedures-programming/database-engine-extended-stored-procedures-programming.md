@@ -1,4 +1,5 @@
 ---
+description: 데이터베이스 엔진 확장 저장 프로시저 프로그래밍
 title: 확장 저장 프로시저 프로그래밍 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 561305cd-c803-48af-9eec-2c19f4d311ce
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8d205888982349bc58669653aa5ff5cb6d9d902b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c9b17ecfe69eef7f30015cdcef84aaef4790afc3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717670"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460849"
 ---
 # <a name="database-engine-extended-stored-procedures---programming"></a>데이터베이스 엔진 확장 저장 프로시저 프로그래밍
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

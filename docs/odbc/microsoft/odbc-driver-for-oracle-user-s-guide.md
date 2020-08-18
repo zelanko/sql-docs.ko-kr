@@ -1,4 +1,5 @@
 ---
+description: Oracle 사용자를 위한 ODBC 드라이버&#39;s 가이드
 title: Oracle 용 ODBC 드라이버 사용자&#39;s 가이드 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c506aaa1-0b4f-440b-b069-98e0a463a5f6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 09eed63bec2a7dd7ff361a1407159977a3a84b4d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 558a10c25073a2b6f589aec14c1c45e53e278e4f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81293154"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449325"
 ---
 # <a name="odbc-driver-for-oracle-user39s-guide"></a>Oracle 사용자를 위한 ODBC 드라이버&#39;s 가이드
 > [!IMPORTANT]  

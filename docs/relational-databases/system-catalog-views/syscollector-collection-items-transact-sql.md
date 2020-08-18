@@ -1,4 +1,5 @@
 ---
+description: syscollector_collection_items(Transact-SQL)
 title: syscollector_collection_items (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: a279ecd1-a59c-4315-9f08-bf221f00a465
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f775d96b0bc56217f1400021e6c51b62d2886e5f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 7e52f737337a35a48398efe713fa608f6ccf9319
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899950"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88399739"
 ---
 # <a name="syscollector_collection_items-transact-sql"></a>syscollector_collection_items(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,8 +44,8 @@ ms.locfileid: "85899950"
  **Dc_operator**, **dc_proxy**에 대 한 SELECT가 필요 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;데이터 수집기 저장 프로시저](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
- [Transact-sql&#41;&#40;데이터 수집기 뷰](../../relational-databases/system-catalog-views/data-collector-views-transact-sql.md)   
- [데이터 수집](../../relational-databases/data-collection/data-collection.md)  
+ [데이터 수집기 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;데이터 수집기 뷰 ](../../relational-databases/system-catalog-views/data-collector-views-transact-sql.md)   
+ [데이터 컬렉션](../../relational-databases/data-collection/data-collection.md)  
   
   

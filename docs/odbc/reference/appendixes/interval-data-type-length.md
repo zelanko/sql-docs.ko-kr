@@ -1,4 +1,5 @@
 ---
+description: 간격 데이터 형식 길이
 title: Interval 데이터 형식 길이 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e9eb38d8-f9db-4401-8c62-aa394054cbbf
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 68bb4daa47cb58d5a0ff7b680a2d2154fb14b345
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 589a13e0f0b2c6e6e42ade0f0dc32415556a0efc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81284323"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483285"
 ---
 # <a name="interval-data-type-length"></a>간격 데이터 형식 길이
 다음 규칙은 문자에서 간격 데이터 형식의 길이를 확인 하는 데 사용 됩니다. 길이는 문자 수로 표시 됩니다. 바이트 수는 문자 집합에 따라 달라 집니다. 길이는 함께 추가 되는 다음 값을 포함 합니다.  

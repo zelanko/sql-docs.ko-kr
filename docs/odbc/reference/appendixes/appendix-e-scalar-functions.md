@@ -1,4 +1,5 @@
 ---
+description: '부록 E: 스칼라 함수'
 title: '부록 E: 스칼라 함수 | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 59c7cd5e-32d6-43ab-bac3-7010322d105a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ea354a7f882bd1a75c5f16fb19350d69ca11d375
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4a814de22df4a97e3c3b3abd0ddc30266fe02a30
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81292493"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88411439"
 ---
 # <a name="appendix-e-scalar-functions"></a>부록 E: 스칼라 함수
 ODBC는 다음과 같은 유형의 스칼라 함수를 지정 하며,이 부록의 해당 섹션에서 제공 하는 각 함수 형식에 대 한 자세한 정보를 제공 합니다. 함수 설명에는 관련 된 구문이 포함 되어 있습니다.  

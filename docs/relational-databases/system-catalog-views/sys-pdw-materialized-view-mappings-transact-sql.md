@@ -1,4 +1,5 @@
 ---
+description: sys. pdw_materialized_view_mappings (Transact-sql)
 title: sys. pdw_materialized_view_mappings (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/03/2019
@@ -12,12 +13,12 @@ ms.assetid: d62b0e25-3226-4f87-a10a-b3a0d9555e19
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: bf5146b885839b88268b5ffbd6fe642503523655
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 0ee83b26439397066806c50ba6e3056042f628a9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395804"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460606"
 ---
 # <a name="syspdw_materialized_view_mappings-transact-sql"></a>sys. pdw_materialized_view_mappings (Transact-sql)  
 
@@ -41,7 +42,7 @@ VIEW DATABASE STATE 권한이 필요합니다.
 [구체화 된 뷰로 성능 조정](/azure/sql-data-warehouse/performance-tuning-materialized-views)   
 [CREATE MATERIALIZED VIEW AS SELECT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-materialized-view-as-select-transact-sql?view=azure-sqldw-latest)   
 [ALTER MATERIALIZED VIEW &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-materialized-view-transact-sql?view=azure-sqldw-latest)   
-[Transact-sql&#41;&#40;설명](/sql/t-sql/queries/explain-transact-sql?view=azure-sqldw-latest)   
+[Transact-sql&#41;&#40;설명 ](/sql/t-sql/queries/explain-transact-sql?view=azure-sqldw-latest)   
 [sys.pdw_materialized_view_column_distribution_properties &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-pdw-materialized-view-column-distribution-properties-transact-sql?view=azure-sqldw-latest)   
 [sys.pdw_materialized_view_distribution_properties &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-pdw-materialized-view-distribution-properties-transact-sql?view=azure-sqldw-latest)   
 [DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-pdw-showmaterializedviewoverhead-transact-sql?view=azure-sqldw-latest)   

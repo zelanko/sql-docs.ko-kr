@@ -1,4 +1,5 @@
 ---
+description: 데이터 마이그레이션 설정(MySQLToSQL)
 title: 데이터 마이그레이션 설정 (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9c396df4-5676-4f32-9c57-70d4f15f9b7a
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: c8e673a4a12952303cb9b355698ed15742c9a704
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 3dbf44933ae4abe26f5dacfc79bad0d971bfe5ad
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935639"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492448"
 ---
 # <a name="data-migration-settings-mysqltosql"></a>데이터 마이그레이션 설정(MySQLToSQL)
   
@@ -51,6 +52,6 @@ ms.locfileid: "87935639"
   
 -   **취소:** 변경을 수행 하기 전에 표시 되는 설정을 복원 하려면 **취소** 를 클릭 합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
 [MySQL 데이터를 SQL Server/SQL Azure으로 마이그레이션](https://msdn.microsoft.com/a6a7f4d6-68aa-4a38-93bf-53eba0d7dc82)  
   

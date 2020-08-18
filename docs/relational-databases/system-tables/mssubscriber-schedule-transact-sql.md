@@ -1,4 +1,5 @@
 ---
+description: MSsubscriber_schedule(Transact-SQL)
 title: MSsubscriber_schedule (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ff428306-0ef4-49a3-b536-07ccdf6e2196
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c5b4a3ac4c00dcb90d62961554d7bc4d12911f6f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: dc347249ecda20c1f753c0e5f2b098ed3f5f1a49
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889375"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492730"
 ---
 # <a name="mssubscriber_schedule-transact-sql"></a>MSsubscriber_schedule(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,7 +50,7 @@ ms.locfileid: "85889375"
 |**active_end_date**|**int**|배포 에이전트가 마지막으로 실행되도록 예약된 날짜이며 YYYYMMDD 형식으로 표시됩니다.|  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;복제 테이블](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Transact-sql&#41;&#40;복제 테이블 ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [복제 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: MSrepl_identity_range(Transact-SQL)
 title: MSrepl_identity_range (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6e92a8e8-7667-4c98-b1c4-46735bac50d8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4aafc6415d968d25b7ba4e708985e72378f9d95f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0586beec3a294b13104c9b0bec17850662d22c71
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889514"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492757"
 ---
 # <a name="msrepl_identity_range-transact-sql"></a>MSrepl_identity_range(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +44,7 @@ ms.locfileid: "85889514"
 |**current_max**|**bigint**|할당할 수는 있지만 꼭 할당할 필요는 없는 현재 최대값입니다.|  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;복제 테이블](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Transact-sql&#41;&#40;복제 테이블 ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [복제 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

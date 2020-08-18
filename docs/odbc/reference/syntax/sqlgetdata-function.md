@@ -1,4 +1,5 @@
 ---
+description: SQLGetData 함수(SQLGetData Function)
 title: SQLGetData 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: e3c1356a-5db7-4186-85fd-8b74633317e8
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ac11505b8e47dae8df53af27c64a7ee6372b3f28
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a659e1bb5ad7765dbfcbcb01dbc16744de7cfc20
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81285509"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461081"
 ---
 # <a name="sqlgetdata-function"></a>SQLGetData 함수(SQLGetData Function)
 **규칙**  
@@ -70,7 +71,7 @@ SQLRETURN SQLGetData(
  *BufferLength*  
  입력 **Targetvalueptr* 버퍼의 길이 (바이트)입니다.  
   
- 드라이버는 문자 또는 이진 데이터와 같은 가변 길이 데이터를 반환할 \*때 *targetvalueptr* 버퍼의 끝을 지나서 쓰기를 방지 하기 위해 *bufferlength* 를 사용 합니다. 드라이버는 문자 데이터를 \* *targetvalueptr*으로 반환할 때 null 종료 문자를 계산 합니다. *따라서 *Targetvalueptr* 은 null 종료 문자에 대 한 공간을 포함 해야 합니다. 그렇지 않으면 드라이버에서 데이터를 자릅니다.  
+ 드라이버는 *BufferLength* \* 문자 또는 이진 데이터와 같은 가변 길이 데이터를 반환할 때 *targetvalueptr* 버퍼의 끝을 지나서 쓰기를 방지 하기 위해 bufferlength를 사용 합니다. 드라이버는 문자 데이터를 \* *targetvalueptr*으로 반환할 때 null 종료 문자를 계산 합니다. *따라서 *Targetvalueptr* 은 null 종료 문자에 대 한 공간을 포함 해야 합니다. 그렇지 않으면 드라이버에서 데이터를 자릅니다.  
   
  드라이버가 정수 또는 날짜 구조와 같은 고정 길이 데이터를 반환 하는 경우 드라이버는 *Bufferlength* 를 무시 하 고 버퍼가 데이터를 저장할 수 있을 만큼 충분히 큰지 가정 합니다. 따라서 응용 프로그램은 고정 길이 데이터에 충분 한 크기의 버퍼를 할당 하는 것이 중요 합니다. 그렇지 않으면 드라이버가 버퍼의 끝을 넘어 기록 됩니다.  
   
@@ -95,10 +96,10 @@ SQLRETURN SQLGetData(
 ## <a name="diagnostics"></a>진단  
  **SQLGetData** 가 SQL_ERROR 또는 SQL_SUCCESS_WITH_INFO를 반환 하는 경우 HandleType SQL_HANDLE_STMT의 *HandleType* 및 *StatementHandle* *핸들* 을 사용 하 여 **SQLGetDiagRec** 를 호출 하 여 연결 된 SQLSTATE 값을 얻을 수 있습니다. 다음 표에서는 일반적으로 **SQLGetData** 에서 반환 하는 SQLSTATE 값을 나열 하 고이 함수의 컨텍스트에서 각 항목에 대해 설명 합니다. "(DM)" 표기법은 드라이버 관리자에서 반환 된 SQLSTATEs의 설명 보다 앞에 나옵니다. 다른 설명이 없는 한 각 SQLSTATE 값과 연결 된 반환 코드는 SQL_ERROR 됩니다.  
   
-|SQLSTATE|Error|Description|  
+|SQLSTATE|오류|설명|  
 |--------------|-----------|-----------------|  
 |01000|일반 경고|드라이버 관련 정보 메시지입니다. 함수는 SQL_SUCCESS_WITH_INFO를 반환 합니다.|  
-|01004|문자열 데이터, 오른쪽이 잘렸습니다.|지정 된 열 *Col_or_Param_Num*에 대 한 모든 데이터는 함수에 대 한 단일 호출에서 검색할 수 없습니다. \* *StrLen_or_IndPtr*에서 **SQLGetData** 를 호출 하기 전에 지정 된 열에 남아 있는 데이터의 길이를 SQL_NO_TOTAL 하거나 반환 합니다. 함수는 SQL_SUCCESS_WITH_INFO를 반환 합니다.<br /><br /> 단일 열에 대해 **SQLGetData** 를 여러 번 호출 하는 방법에 대 한 자세한 내용은 "설명"을 참조 하십시오.|  
+|01004|문자열 데이터, 오른쪽이 잘렸습니다.|지정 된 열 *Col_or_Param_Num*에 대 한 모든 데이터는 함수에 대 한 단일 호출에서 검색할 수 없습니다. StrLen_or_IndPtr에서 **SQLGetData** 를 호출 하기 전에 지정 된 열에 남아 있는 데이터의 길이를 SQL_NO_TOTAL 하거나 반환 \* *StrLen_or_IndPtr*합니다. 함수는 SQL_SUCCESS_WITH_INFO를 반환 합니다.<br /><br /> 단일 열에 대해 **SQLGetData** 를 여러 번 호출 하는 방법에 대 한 자세한 내용은 "설명"을 참조 하십시오.|  
 |01S07|소수 잘림|하나 이상의 열에 대해 반환 된 데이터가 잘렸습니다. 숫자 데이터 형식의 경우 숫자의 소수 부분이 잘렸습니다. 시간 구성 요소를 포함 하는 time, timestamp 및 interval 데이터 형식의 경우 시간의 소수 부분이 잘렸습니다.<br /><br /> 함수는 SQL_SUCCESS_WITH_INFO를 반환 합니다.|  
 |07006|제한 된 데이터 형식 특성 위반|결과 집합에 있는 열의 데이터 값을 인수 *TargetType*에 지정 된 C 데이터 형식으로 변환할 수 없습니다.|  
 |07009|잘못 된 설명자 인덱스|인수 *Col_or_Param_Num* 에 지정 된 값이 0이 고 SQL_ATTR_USE_BOOKMARKS statement 특성이 SQL_UB_OFF로 설정 되었습니다.<br /><br /> 인수 *Col_or_Param_Num* 에 지정 된 값이 결과 집합의 열 수보다 큽니다.<br /><br /> *Col_or_Param_Num* 값이 사용 가능한 매개 변수의 서 수와 같지 않은 경우<br /><br /> (DM) 지정한 열이 바인딩 되었습니다. 이 설명은 **SQLGetInfo**의 SQL_GETDATA_EXTENSIONS 옵션에 대 한 SQL_GD_BOUND 비트 마스크를 반환 하는 드라이버에는 적용 되지 않습니다.<br /><br /> (DM) 지정 된 열의 번호가 가장 높은 바인딩 열의 숫자 보다 작거나 같습니다. 이 설명은 **SQLGetInfo**의 SQL_GETDATA_EXTENSIONS 옵션에 대 한 SQL_GD_ANY_COLUMN 비트 마스크를 반환 하는 드라이버에는 적용 되지 않습니다.<br /><br /> (DM) 응용 프로그램이 이미 현재 행에 대 한 **SQLGetData** 를 호출 했습니다. 현재 호출에 지정 된 열 번호가 앞의 호출에 지정 된 열 수보다 작은 경우 그리고 드라이버는 **SQLGetInfo**의 SQL_GETDATA_EXTENSIONS 옵션에 대 한 SQL_GD_ANY_ORDER 비트 마스크를 반환 하지 않습니다.<br /><br /> (DM) *TargetType* 인수가 SQL_ARD_TYPE 되었으며, 그에 대 한 *Col_or_Param_Num* 설명자 레코드가 일관성 확인에 실패 했습니다.<br /><br /> (DM) *TargetType* 인수가 SQL_ARD_TYPE 되었으며, SQL_DESC_COUNT 필드의 값이 *Col_or_Param_Num* 인수 보다 낮습니다.|  
@@ -153,7 +154,7 @@ SQLRETURN SQLGetData(
  *TargetType* 인수가 interval 데이터 형식인 경우에는 데이터에 대 한 기본 간격 선행 전체 자릿수 (2)와 기본 간격 초 전체 자릿수 (6)가 각각의 SQL_DESC_DATETIME_INTERVAL_PRECISION 및 SQL_DESC_PRECISION 필드에 설정 됩니다. *TargetType* 인수가 SQL_C_NUMERIC 데이터 형식이 면 데이터에 사용 되는 SQL_DESC_PRECISION 및 SQL_DESC_SCALE 필드에 설정 된 기본 전체 자릿수 (드라이버 정의) 및 기본 소수 자릿수 (0)가 사용 됩니다. 기본 전체 자릿수 또는 소수 자릿수가 적절 하지 않은 경우 응용 프로그램에서 **SQLSetDescField** 또는 **SQLSetDescRec**를 호출 하 여 적절 한 설명자 필드를 명시적으로 설정 해야 합니다. SQL_DESC_CONCISE_TYPE 필드를 SQL_C_NUMERIC로 설정 하 고 SQL_ARD_TYPE의 *TargetType* 인수로 **SQLGetData** 를 호출 하 여 설명자 필드의 전체 자릿수 및 소수 자릿수 값이 사용 되도록 할 수 있습니다.  
   
 > [!NOTE]
->  ODBC 2.x에서 *.x*응용 프로그램은 *TargetType* 을 SQL_C_DATE, SQL_C_TIME 또는 SQL_C_TIMESTAMP로 설정 하 여 \* *targetvalueptr* 이 날짜, 시간 또는 타임 스탬프 구조 임을 나타내야 합니다. ODBC 3.x에서 응용 프로그램은 *TargetType* *을 SQL_C_TYPE_DATE*, SQL_C_TYPE_TIME 또는 SQL_C_TYPE_TIMESTAMP로 설정 합니다. 드라이버 관리자는 필요한 경우 응용 프로그램 및 드라이버 버전에 따라 적절 한 매핑을 수행 합니다.  
+>  ODBC 2.x에서 응용 프로그램은 *TargetType* *을 SQL_C_DATE*, SQL_C_TIME 또는 SQL_C_TIMESTAMP로 설정 하 여 \* *targetvalueptr* 이 날짜, 시간 또는 타임 스탬프 구조 임을 나타내야 합니다. ODBC 3.x에서 응용 프로그램은 *TargetType* *을 SQL_C_TYPE_DATE*, SQL_C_TYPE_TIME 또는 SQL_C_TYPE_TIMESTAMP로 설정 합니다. 드라이버 관리자는 필요한 경우 응용 프로그램 및 드라이버 버전에 따라 적절 한 매핑을 수행 합니다.  
   
 ## <a name="retrieving-variable-length-data-in-parts"></a>부분에서 가변 길이 데이터 검색  
  **SQLGetData** 를 사용 하 여 부분에 가변 길이 데이터가 포함 된 열에서 데이터를 검색할 수 있습니다. 즉, 열의 SQL 데이터 형식 식별자가 SQL_CHAR, SQL_VARCHAR, SQL_LONGVARCHAR, SQL_WCHAR, SQL_WVARCHAR, SQL_WLONGVARCHAR, SQL_BINARY, SQL_VARBINARY, SQL_LONGVARBINARY 또는 가변 길이 형식의 드라이버별 식별자 인 경우입니다.  
@@ -172,7 +173,7 @@ SQLRETURN SQLGetData(
   
 1.  열에 대 한 모든 데이터를 이미 반환한 경우 SQL_NO_DATA를 반환 합니다.  
   
-2.  데이터가 \*NULL 인 경우 *StrLen_or_IndPtr* 를 SQL_NULL_DATA로 설정 합니다. 데이터가 NULL이 고 *StrLen_or_IndPtr* null 포인터인 경우 **SQLGetData** 는 SQLSTATE 22002 (표시기 변수 필요 하지만 제공 되지 않음)을 반환 합니다.  
+2.  \*데이터가 NULL 인 경우 *StrLen_or_IndPtr* 를 SQL_NULL_DATA로 설정 합니다. 데이터가 NULL이 고 *StrLen_or_IndPtr* null 포인터인 경우 **SQLGetData** 는 SQLSTATE 22002 (표시기 변수 필요 하지만 제공 되지 않음)을 반환 합니다.  
   
      열에 대 한 데이터가 NULL이 아닌 경우 **SQLGetData** 는 3 단계로 진행 됩니다.  
   
@@ -191,9 +192,9 @@ SQLRETURN SQLGetData(
   
 6.  변환 되 고 잘린 데이터를 \* *targetvalueptr*에 배치 합니다. **SQLGetData** 는 데이터를 아웃오브 라인으로 반환할 수 없습니다.  
   
-7.  데이터의 길이를 \* *StrLen_or_IndPtr*에 배치 합니다. *StrLen_or_IndPtr* null 포인터인 경우 **SQLGetData** 는 길이를 반환 하지 않습니다.  
+7.  데이터의 길이를 StrLen_or_IndPtr에 배치 \* *StrLen_or_IndPtr*합니다. *StrLen_or_IndPtr* null 포인터인 경우 **SQLGetData** 는 길이를 반환 하지 않습니다.  
   
-    -   문자 또는 이진 데이터의 경우 변환 후의 데이터 길이 및 *Bufferlength*로 인 한 잘림 전의 데이터 길이입니다. 변환 후 드라이버에서 데이터 길이를 확인할 수 없는 경우, 경우에 따라 긴 데이터를 사용 하는 경우에는 SQL_SUCCESS_WITH_INFO을 반환 하 고 SQL_NO_TOTAL 길이를 설정 합니다. **SQLGetData** 에 대 한 마지막 호출은 항상 0 또는 SQL_NO_TOTAL이 아닌 데이터의 길이를 반환 해야 합니다. SQL_ATTR_MAX_LENGTH statement 특성으로 인해 데이터가 잘린 경우 실제 길이와는 달리이 특성의 값은 \* *StrLen_or_IndPtr*에 배치 됩니다. 이 특성은 변환 전에 서버에서 데이터를 잘라내는 것 이므로 드라이버에서 실제 길이를 확인할 수 있는 방법이 없기 때문입니다. 동일한 열에 대해 **SQLGetData** 를 연속 해 서 여러 번 호출 하는 경우 현재 호출을 시작할 때 사용할 수 있는 데이터의 길이입니다. 즉, 각 후속 호출에서 길이가 줄어듭니다.  
+    -   문자 또는 이진 데이터의 경우 변환 후의 데이터 길이 및 *Bufferlength*로 인 한 잘림 전의 데이터 길이입니다. 변환 후 드라이버에서 데이터 길이를 확인할 수 없는 경우, 경우에 따라 긴 데이터를 사용 하는 경우에는 SQL_SUCCESS_WITH_INFO을 반환 하 고 SQL_NO_TOTAL 길이를 설정 합니다. **SQLGetData** 에 대 한 마지막 호출은 항상 0 또는 SQL_NO_TOTAL이 아닌 데이터의 길이를 반환 해야 합니다. SQL_ATTR_MAX_LENGTH statement 특성으로 인해 데이터가 잘린 경우 실제 길이와는 달리이 특성의 값은 StrLen_or_IndPtr에 배치 됩니다 \* *StrLen_or_IndPtr*. 이 특성은 변환 전에 서버에서 데이터를 잘라내는 것 이므로 드라이버에서 실제 길이를 확인할 수 있는 방법이 없기 때문입니다. 동일한 열에 대해 **SQLGetData** 를 연속 해 서 여러 번 호출 하는 경우 현재 호출을 시작할 때 사용할 수 있는 데이터의 길이입니다. 즉, 각 후속 호출에서 길이가 줄어듭니다.  
   
     -   다른 모든 데이터 형식의 경우 변환 후의 데이터 길이입니다. 즉, 데이터가 변환 된 형식의 크기입니다.  
   
@@ -270,7 +271,7 @@ if (retcode == SQL_SUCCESS) {
 |실행 시 매개 변수 데이터 보내기|[SQLPutData](../../../odbc/reference/syntax/sqlputdata-function.md)|  
 |커서 위치 지정, 행 집합의 데이터 새로 고침 또는 행 집합의 데이터 업데이트 또는 삭제|[SQLSetPos](../../../odbc/reference/syntax/sqlsetpos-function.md)|  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [ODBC API 참조](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 헤더 파일](../../../odbc/reference/install/odbc-header-files.md)   
  [SQLGetData를 사용하여 출력 매개 변수 검색](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md)

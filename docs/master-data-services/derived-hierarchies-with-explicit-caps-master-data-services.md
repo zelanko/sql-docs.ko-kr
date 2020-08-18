@@ -1,4 +1,5 @@
 ---
+description: 명시적 캡이 포함된 파생 계층(Master Data Services)
 title: 명시적 캡이 포함된 파생 계층
 ms.custom: ''
 ms.date: 03/01/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6a82ff66-c137-4757-99bb-787d189b4295
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 0966fff84b46a6fbfbea4b99dd628bf957151017
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 1aefe55d141cfc5add402b7b14d93a18e3fd6514
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813009"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471951"
 ---
 # <a name="derived-hierarchies-with-explicit-caps-master-data-services"></a>명시적 캡이 포함된 파생 계층(Master Data Services)
 

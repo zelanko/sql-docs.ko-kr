@@ -1,4 +1,5 @@
 ---
+description: SQLGetDiagField 함수(SQLGetDiagField Function)
 title: SQLGetDiagField 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2019
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 1dbc4398-97a8-4585-bb77-1f7ea75e24c4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a26319868a4b94b895da73d39b284f612fe35889
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 92043f5deb505d60ebe168a9c219c4d37a304ed5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81285433"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461028"
 ---
 # <a name="sqlgetdiagfield-function"></a>SQLGetDiagField 함수(SQLGetDiagField Function)
 
@@ -79,7 +80,7 @@ SQLRETURN SQLGetDiagField(
  *DiagInfoPtr* 가 NULL 인 경우 *StringLengthPtr* 는 *DiagInfoPtr*가 가리키는 버퍼에서 반환 될 수 있는 총 바이트 수 (문자 데이터의 NULL 종료 문자 제외)를 반환 합니다.  
   
  *BufferLength*  
- 입력 *DiagIdentifier* 이 ODBC에 정의 된 진단이 고 *DiagInfoPtr* 가 문자열 또는 이진 버퍼를 가리키는 경우이 인수는 \* *DiagInfoPtr*의 길이 여야 합니다. *DiagIdentifier* 가 ODBC 정의 필드이 고 \* *DiagInfoPtr* 가 정수인 경우 *bufferlength* 는 무시 됩니다. * \*DiagInfoPtr* 의 값이 유니코드 문자열이 면 ( **SQLGetDiagFieldW**호출 시) *bufferlength* 인수는 짝수 여야 합니다.  
+ 입력 *DiagIdentifier* 이 ODBC에 정의 된 진단이 고 *DiagInfoPtr* 가 문자열 또는 이진 버퍼를 가리키는 경우이 인수는 DiagInfoPtr의 길이 여야 합니다 \* *DiagInfoPtr*. *DiagIdentifier* 가 ODBC 정의 필드이 고 \* *DiagInfoPtr* 가 정수인 경우 *bufferlength* 는 무시 됩니다. * \* DiagInfoPtr* 의 값이 유니코드 문자열이 면 ( **SQLGetDiagFieldW**호출 시) *bufferlength* 인수는 짝수 여야 합니다.  
   
  *DiagIdentifier* 가 드라이버 정의 필드인 경우 응용 프로그램은 *bufferlength* 인수를 설정 하 여 필드의 특성을 드라이버 관리자에 게 표시 합니다. *Bufferlength* 에는 다음 값을 사용할 수 있습니다.  
   
@@ -89,10 +90,10 @@ SQLRETURN SQLGetDiagField(
   
 -   *DiagInfoPtr* 가 문자열 또는 이진 문자열이 아닌 값에 대 한 포인터인 경우 *bufferlength* 의 값은 SQL_IS_POINTER 이어야 합니다.  
   
--   * \*DiagInfoPtr* 에 고정 길이 데이터 형식이 포함 된 경우 *bufferlength* 는 SQL_IS_INTEGER, SQL_IS_UINTEGER, SQL_IS_SMALLINT 또는 SQL_IS_USMALLINT입니다.  
+-   * \* DiagInfoPtr* 에 고정 길이 데이터 형식이 포함 된 경우 *bufferlength* 는 SQL_IS_INTEGER, SQL_IS_UINTEGER, SQL_IS_SMALLINT 또는 SQL_IS_USMALLINT입니다.  
   
  *StringLengthPtr*  
- 출력 문자 데이터에 대해 \* *DiagInfoPtr*에서 반환 하는 데 사용할 수 있는 총 바이트 수 (null 종결 문자에 필요한 바이트 수 제외)를 반환할 버퍼에 대 한 포인터입니다. 반환할 수 있는 바이트 수가 *bufferlength*보다 크거나 같은 경우 \* *DiagInfoPtr* 의 텍스트는 *bufferlength* 에서 null 종료 문자의 길이를 뺀 값으로 잘립니다.  
+ 출력 \*문자 데이터에 대해 *DiagInfoPtr*에서 반환 하는 데 사용할 수 있는 총 바이트 수 (null 종결 문자에 필요한 바이트 수 제외)를 반환할 버퍼에 대 한 포인터입니다. 반환할 수 있는 바이트 수가 *Bufferlength*보다 크거나 같은 경우 DiagInfoPtr의 텍스트는 \* *DiagInfoPtr* *bufferlength* 에서 null 종료 문자의 길이를 뺀 값으로 잘립니다.  
   
 ## <a name="returns"></a>반환  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR, SQL_INVALID_HANDLE 또는 SQL_NO_DATA입니다.  
@@ -218,7 +219,7 @@ SQLRETURN SQLGetDiagField(
 |*번역-정의*|"번역 만들기"|SQL_DIAG_CREATE_TRANSLATION|  
 |*업데이트-문 배치*|"동적 업데이트 커서"|SQL_DIAG_DYNAMIC_UPDATE_CURSOR|  
 |*업데이트-문-검색*|"업데이트 위치"|SQL_DIAG_UPDATE_WHERE|  
-|Unknown|*빈 문자열*|SQL_DIAG_UNKNOWN_STATEMENT|  
+|알 수 없음|*빈 문자열*|SQL_DIAG_UNKNOWN_STATEMENT|  
 
 <!--
 These two malformed table rows were fixed by educated GUESS only.
@@ -280,6 +281,6 @@ n-definition*|"CREATE DOMAIN"|SQL_DIAG_CREATE_DOMAIN|
 |---------------------------|---------|  
 |진단 데이터 구조의 여러 필드 가져오기|[SQLGetDiagRec 함수](sqlgetdiagrec-function.md)|  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [ODBC API 참조](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 헤더 파일](../../../odbc/reference/install/odbc-header-files.md)

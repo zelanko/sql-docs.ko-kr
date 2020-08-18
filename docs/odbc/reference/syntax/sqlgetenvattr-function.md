@@ -1,4 +1,5 @@
 ---
+description: SQLGetEnvAttr 함수
 title: SQLGetEnvAttr 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 07/18/2019
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 01f4590f-427a-4280-a1c3-18de9f7d86c1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 77cd24386a8eea6769aee59f3674b681c516d9ed
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 937524b89d199ee3ae0bd5d1d722bf3a14ec8ce4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81285313"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461004"
 ---
 # <a name="sqlgetenvattr-function"></a>SQLGetEnvAttr 함수
 **규칙**  
@@ -50,7 +51,7 @@ SQLRETURN SQLGetEnvAttr(
  *EnvironmentHandle*  
  입력 환경 핸들.  
   
- *특성도*  
+ *Attribute*  
  입력 검색할 특성입니다.  
   
  *ValuePtr*  
@@ -59,10 +60,10 @@ SQLRETURN SQLGetEnvAttr(
  *Valueptr* 이 NULL 인 경우 *StringLengthPtr* 는 해당 값을 가리키는 버퍼에서 반환 하는 데 사용할 수 있는 총 바이트 수 (문자 데이터의 NULL 종료 문자 제외)를 반환 *합니다.*  
   
  *BufferLength*  
- 입력 *Valueptr* 이 문자열을 가리키는 경우이 인수는의 \*길이 여야 합니다. *ValuePtr* \* *Valueptr* 이 정수인 경우 *bufferlength* 는 무시 됩니다. **SQLGetEnvAttrW**를 호출할 때 * \*valueptr* 이 유니코드 문자열이 면 *bufferlength* 인수는 짝수 여야 합니다. 특성 값이 문자열이 아닌 경우 *Bufferlength* 는 사용 되지 않습니다.  
+ 입력 *Valueptr* 이 문자열을 가리키는 경우이 인수는의 길이 여야 합니다 \* *ValuePtr*. \* *Valueptr* 이 정수인 경우 *bufferlength* 는 무시 됩니다. **SQLGetEnvAttrW**를 호출할 때 * \* Valueptr* 이 유니코드 문자열이 면 *bufferlength* 인수는 짝수 여야 합니다. 특성 값이 문자열이 아닌 경우 *Bufferlength* 는 사용 되지 않습니다.  
   
  *StringLengthPtr*  
- 출력 * \*Valueptr*에서 반환 하는 데 사용할 수 있는 총 바이트 수 (null 종료 문자 제외)를 반환할 버퍼에 대 한 포인터입니다. *Valueptr* 이 null 포인터인 경우 길이가 반환 되지 않습니다. 특성 값이 문자열이 고 반환할 수 있는 바이트 수가 *bufferlength*보다 크거나 같은 경우에는 값 \* *eptr* 의 데이터가 *bufferlength* 에서 null 종료 문자의 길이를 뺀 값으로 잘리고 드라이버에 의해 null로 종료 됩니다.  
+ 출력 * \* Valueptr*에서 반환 하는 데 사용할 수 있는 총 바이트 수 (null 종료 문자 제외)를 반환할 버퍼에 대 한 포인터입니다. *Valueptr* 이 null 포인터인 경우 길이가 반환 되지 않습니다. 특성 값이 문자열이 고 반환할 수 있는 바이트 수가 *Bufferlength*보다 크거나 같은 경우에는 값 \* *Eptr* 의 데이터가 *bufferlength* 에서 null 종료 문자의 길이를 뺀 값으로 잘리고 드라이버에 의해 null로 종료 됩니다.  
   
 ## <a name="returns"></a>반환  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA, SQL_ERROR 또는 SQL_INVALID_HANDLE입니다.  
@@ -70,11 +71,11 @@ SQLRETURN SQLGetEnvAttr(
 ## <a name="diagnostics"></a>진단  
  **SQLGetEnvAttr** 가 SQL_ERROR 또는 SQL_SUCCESS_WITH_INFO를 반환 하는 경우 SQL_HANDLE_ENV의 *HandleType* 및 *EnvironmentHandle* *핸들* 을 사용 하 여 **SQLGetDiagRec** 를 호출 하 여 연결 된 SQLSTATE 값을 얻을 수 있습니다. 다음 표에서는 일반적으로 **SQLGetEnvAttr** 에서 반환 하는 SQLSTATE 값을 나열 하 고이 함수의 컨텍스트에서 각 항목에 대해 설명 합니다. "(DM)" 표기법은 드라이버 관리자에서 반환 된 SQLSTATEs의 설명 보다 앞에 나옵니다. 다른 설명이 없는 한 각 SQLSTATE 값과 연결 된 반환 코드는 SQL_ERROR 됩니다.  
   
-|SQLSTATE|Error|Description|  
+|SQLSTATE|오류|설명|  
 |--------------|-----------|-----------------|  
 |01000|일반 경고|드라이버 관련 정보 메시지입니다. 함수는 SQL_SUCCESS_WITH_INFO를 반환 합니다.|  
-|01004|문자열 데이터, 오른쪽이 잘렸습니다.|\* *Valueptr* 에서 반환 된 데이터가 *bufferlength* 에서 null 종료 문자를 뺀 값으로 잘렸습니다. 잘리지 않는 문자열 값의 길이는 **StringLengthPtr*에서 반환 됩니다. 함수는 SQL_SUCCESS_WITH_INFO를 반환 합니다.|  
-|HY000|일반 오류|특정 SQLSTATE가 없고 구현 별 SQLSTATE가 정의 되지 않은 오류가 발생 했습니다. MessageText 버퍼에서 **SQLGetDiagRec** 에 의해 반환 되는 오류 메시지는 오류 및 해당 원인을 설명 합니다. * \**|  
+|01004|문자열 데이터, 오른쪽이 잘렸습니다.|Valueptr에서 반환 된 데이터가 \* *ValuePtr* *bufferlength* 에서 null 종료 문자를 뺀 값으로 잘렸습니다. 잘리지 않는 문자열 값의 길이는 **StringLengthPtr*에서 반환 됩니다. 함수는 SQL_SUCCESS_WITH_INFO를 반환 합니다.|  
+|HY000|일반 오류|특정 SQLSTATE가 없고 구현 별 SQLSTATE가 정의 되지 않은 오류가 발생 했습니다. * \* MessageText* 버퍼에서 **SQLGetDiagRec** 에 의해 반환 되는 오류 메시지는 오류 및 해당 원인을 설명 합니다.|  
 |HY001|메모리 할당 오류|드라이버에서 함수 실행 또는 완료를 지 원하는 데 필요한 메모리를 할당할 수 없습니다.|  
 |HY010|함수 시퀀스 오류|(DM) **SQL_ATTR_ODBC_VERSION** **SQLSetEnvAttr**를 통해 아직 설정 되지 않았습니다. **SQLAllocHandleStd**를 사용 하는 경우 **SQL_ATTR_ODBC_VERSION** 를 명시적으로 설정할 필요가 없습니다.|  
 |HY013|메모리 관리 오류|메모리 부족 상태로 인해 기본 메모리 개체에 액세스할 수 없기 때문에 함수 호출을 처리할 수 없습니다.|  
@@ -101,6 +102,6 @@ SQLRETURN SQLGetEnvAttr(
 |환경 특성 설정|[SQLSetEnvAttr 함수](../../../odbc/reference/syntax/sqlsetenvattr-function.md)|  
 |문 특성 설정|[SQLSetStmtAttr 함수](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)|  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [ODBC API 참조](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 헤더 파일](../../../odbc/reference/install/odbc-header-files.md)

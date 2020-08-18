@@ -1,4 +1,5 @@
 ---
+description: 간격 데이터 형식 전체 자릿수
 title: Interval 데이터 형식 전체 자릿수 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: eb73bd77-2e7e-4498-a266-4d7c990a0d56
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 746293c545c47917abd084ec3eb105051fc2fbcf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 138cb4cae21b1c1fc0fd742cefac1b6f3a3e5978
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81290743"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483280"
 ---
 # <a name="interval-data-type-precision"></a>간격 데이터 형식 전체 자릿수
 간격 데이터 형식에 대 한 전체 자릿수는 간격 선행 전체 자릿수, 간격 전체 자릿수, 초 정밀도를 포함 합니다.  

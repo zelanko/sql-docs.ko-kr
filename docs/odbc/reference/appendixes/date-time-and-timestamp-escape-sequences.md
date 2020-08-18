@@ -1,4 +1,5 @@
 ---
+description: 날짜, 시간 및 타임스탬프 이스케이프 시퀀스
 title: 날짜, 시간 및 타임 스탬프 이스케이프 시퀀스 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 67b7dee0-e5b1-4469-a626-0c7767852b80
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a2b9b62fae23932d1072ea319e1305a0853ca2d6
-ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
+ms.openlocfilehash: 1bd70c005d2fa7ae4972605c45793f2a0836f849
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83807532"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483306"
 ---
 # <a name="date-time-and-timestamp-escape-sequences"></a>날짜, 시간 및 타임스탬프 이스케이프 시퀀스
 ODBC는 날짜, 시간 및 타임 스탬프 리터럴에 대 한 이스케이프 시퀀스를 정의 합니다. 이러한 이스케이프 시퀀스의 구문은 다음과 같습니다.  

@@ -1,4 +1,5 @@
 ---
+description: sys.tables(Transact-SQL)
 title: sys tables (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/22/2017
@@ -20,11 +21,12 @@ ms.assetid: 8c42eba1-c19f-4045-ac82-b97a5e994090
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 13e37cd873b3158fcde41f0e3b5836a27d370f6e
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 83362a976690875df7d45a8ba6a186441bd10283
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002706"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460589"
 ---
 # <a name="systables-transact-sql"></a>sys.tables(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -56,7 +58,7 @@ ms.locfileid: "86002706"
 |temporal_type|**tinyint**|**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상 및 [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]<br /><br /> 테이블의 유형을 나타내는 숫자 값입니다.<br /><br /> 0 = NON_TEMPORAL_TABLE<br /><br /> 1 = HISTORY_TABLE<br /><br /> 2 = SYSTEM_VERSIONED_TEMPORAL_TABLE|  
 |temporal_type_desc|**nvarchar(60)**|**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상 및 [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]<br /><br /> 테이블 형식에 대 한 텍스트 설명입니다.<br /><br /> NON_TEMPORAL_TABLE<br /><br /> HISTORY_TABLE<br /><br /> SYSTEM_VERSIONED_TEMPORAL_TABLE|  
 |history_table_id|**int**|**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상 및 [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]<br /><br /> (2, 4)의 temporal_type 기록 데이터를 유지 하는 테이블의 object_id를 반환 하 고, 그렇지 않으면 NULL을 반환 합니다.|  
-|is_remote_data_archive_enabled|**bit**|**적용**대상: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상 및[!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]<br /><br /> 테이블이 스트레치를 사용 하는지 여부를 나타냅니다.<br /><br /> 0 = 테이블이 스트레치 사용 되지 않습니다.<br /><br /> 1 = 스트레치를 사용 하도록 설정 된 테이블입니다.<br /><br /> 자세한 내용은 [Stretch Database](../../sql-server/stretch-database/stretch-database.md)를 참조하십시오.|  
+|is_remote_data_archive_enabled|**bit**|**적용**대상: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상 및 [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]<br /><br /> 테이블이 스트레치를 사용 하는지 여부를 나타냅니다.<br /><br /> 0 = 테이블이 스트레치 사용 되지 않습니다.<br /><br /> 1 = 스트레치를 사용 하도록 설정 된 테이블입니다.<br /><br /> 자세한 내용은 [Stretch Database](../../sql-server/stretch-database/stretch-database.md)를 참조하십시오.|  
 |is_external|**bit**|**적용**대상: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상, [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] 및 [!INCLUDE[sssdwfull](../../includes/sssdwfull-md.md)]<br /><br /> 테이블이 외부 테이블 임을 나타냅니다.<br /><br /> 0 = 테이블이 외부 테이블이 아닙니다.<br /><br /> 1 = 테이블이 외부 테이블입니다.| 
 |history_retention_period|**int**|**적용 대상**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/>History_retention_period_unit 지정 된 단위로 temporal 기록 보존 기간의 기간을 나타내는 숫자 값입니다. |  
 |history_retention_period_unit|**int**|**적용 대상**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/>Temporal 기록 보존 기간 단위의 형식을 나타내는 숫자 값입니다. <br /><br />-1: 무한 <br /><br />3: 일 <br /><br />4: 주 <br /><br />5: 월 <br /><br />6: 년 |  
@@ -64,10 +66,10 @@ ms.locfileid: "86002706"
 |is_node|**bit**|**적용 대상**: [!INCLUDE[sssql17-md.md](../../includes/sssql17-md.md)] 및 [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/>1 = 그래프 노드 테이블입니다. <br /><br />0 = 그래프 노드 테이블이 아닙니다. |  
 |is_edge|**bit**|**적용 대상**: [!INCLUDE[sssql17-md.md](../../includes/sssql17-md.md)] 및 [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/>1 = 그래프에 지 테이블입니다. <br /><br />0 = 그래프에 지 테이블이 아닙니다. |  
 
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 기본 키가 없는 모든 사용자 테이블을 반환합니다.  
   
 ```  
@@ -109,8 +111,8 @@ ON T1.history_table_id = T2.object_id WHERE T1.temporal_type = 2
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;개체 카탈로그 뷰](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
- [Transact-sql&#41;&#40;카탈로그 뷰](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [개체 카탈로그 뷰 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [DBCC CHECKDB &#40;Transact-sql&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)   
  [DBCC CHECKTABLE &#40;Transact-sql&#41;](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md)   
  [SQL Server 시스템 카탈로그 쿼리 FAQ](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   

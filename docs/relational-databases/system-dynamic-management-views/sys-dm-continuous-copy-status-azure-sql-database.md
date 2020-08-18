@@ -1,4 +1,5 @@
 ---
+description: sys.dm_continuous_copy_status(Azure SQL Database)
 title: sys.dm_continuous_copy_status
 titleSuffix: Azure SQL Database
 ms.date: 03/03/2017
@@ -20,12 +21,12 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.custom: seo-dt-2019
-ms.openlocfilehash: b2c90c3a6e6251da7b8e318a57002f224e074ac5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 44da877ab3977f9c17746e935a588cef402c685e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717480"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460455"
 ---
 # <a name="sysdm_continuous_copy_status-azure-sql-database"></a>sys.dm_continuous_copy_status(Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "85717480"
 SQL Database V12를 사용 하는 경우 V11에만 적용 *dm_continuous_copy_status* 되므로 [dm_geo_replication_link_status](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md) 를 사용 해야 합니다.
 
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**copy_guid**|**uniqueidentifier**|복제본 데이터베이스의 고유 ID입니다.|  
 |**partner_server**|**sysname**|연결된 SQL Database 서버의 이름입니다.|  
@@ -60,6 +61,6 @@ SQL Database V12를 사용 하는 경우 V11에만 적용 *dm_continuous_copy_st
   
 ## <a name="see-also"></a>참고 항목  
  [dm_database_copies &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md)   
- [Transact-sql&#41;&#40;활성 지역 복제 저장 프로시저](https://msdn.microsoft.com/library/81658ee4-4422-4d73-bf7a-86a07422cb0d)  
+ [Transact-sql&#41;&#40;활성 지역 복제 저장 프로시저 ](https://msdn.microsoft.com/library/81658ee4-4422-4d73-bf7a-86a07422cb0d)  
   
   

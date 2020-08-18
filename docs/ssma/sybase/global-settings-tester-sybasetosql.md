@@ -1,4 +1,5 @@
 ---
+description: 전역 설정(테스터)(SybaseToSQL)
 title: 전역 설정 (테스터) (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 6f0b9cea-5a24-4e42-8bbf-c4516b00da23
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: f1ebf6d1122db6b28b13c33320dabef520a40f5a
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: c03a52c837d2f07e5a6027b181a2047a5f53add6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87931290"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492179"
 ---
 # <a name="global-settings-tester-sybasetosql"></a>전역 설정(테스터)(SybaseToSQL)
 **전역 설정** 대화 상자의 테스터 페이지를 사용 하 여 Ssma 테스터에 대 한 설정을 지정할 수 있습니다.  
@@ -29,7 +30,7 @@ ms.locfileid: "87931290"
   
 1.  예  
   
-2.  아니요  
+2.  예  
   
 **보조 테이블 저장 모드**  
 이 설정은 테스트 사례를 실행 하는 동안 생성 된 내부 보조 테이블을 저장 하는 방법을 지정 합니다. 이 특정 설정에 대해 다음 옵션을 설정할 수 있습니다.  
@@ -51,7 +52,7 @@ ms.locfileid: "87931290"
   
 1.  예  
   
-2.  아니요  
+2.  예  
   
 **첫 번째 실패 후 테스트 실행 중지**  
 이 설정은 실행 중에 오류가 발생 한 경우 현재 실행 중인 테스트 사례를 중지할지 여부를 지정 합니다. 기본 옵션 집합은 **예**입니다.  
@@ -60,7 +61,7 @@ ms.locfileid: "87931290"
   
 1.  예  
   
-2.  아니요  
+2.  예  
   
 ## <a name="see-also"></a>참고 항목  
 [테스트 사례 준비 완료 &#40;SybaseToSQL&#41;](../../ssma/sybase/finishing-test-case-preparation-sybasetosql.md)  

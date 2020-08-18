@@ -1,4 +1,5 @@
 ---
+description: Dimensions 컬렉션(ADO MD)
 title: 차원 컬렉션 (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: eaf6f4e7-2ea0-49a3-89ee-e219e025257c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 91d535097ce43b910aac24afc841d2a061d29956
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: c76d8b6e18c3ae8e348d0ee443b9602945585e30
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764274"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441065"
 ---
 # <a name="dimensions-collection-ado-md"></a>Dimensions 컬렉션(ADO MD)
 큐브를 구성 하는 [차원](../../../ado/reference/ado-md-api/dimension-object-ado-md.md) 개체를 포함 합니다.  

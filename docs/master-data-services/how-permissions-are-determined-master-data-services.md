@@ -1,4 +1,5 @@
 ---
+description: 사용 권한이 결정되는 방식(Master Data Services)
 title: 사용 권한이 결정되는 방식
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1dc0b43a-d023-4e7d-b027-8b1459fd058c
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 729f8c21155b06f42858edd4cf530f08c049fa47
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 81463077bc370b4cae8ae1838da14a27cdd20f2b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812982"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471950"
 ---
 # <a name="how-permissions-are-determined-master-data-services"></a>사용 권한이 결정되는 방식(Master Data Services)
 
@@ -79,7 +80,7 @@ ms.locfileid: "85812982"
  이 경우 모델 개체 사용 권한과 계층 멤버 권한을 비교하기 전에 겹치는 사용자 및 그룹 권한을 확인해야 합니다. 자세한 내용은 [겹치는 사용자 및 그룹 권한&#40;Master Data Services&#41;](../master-data-services/overlapping-user-and-group-permissions-master-data-services.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [MDS(Master Data Services)&#41;&#40;겹치는 사용자 및 그룹 권한](../master-data-services/overlapping-user-and-group-permissions-master-data-services.md)   
+ [MDS(Master Data Services)&#41;&#40;겹치는 사용자 및 그룹 권한 ](../master-data-services/overlapping-user-and-group-permissions-master-data-services.md)   
  [겹치는 모델 및 멤버 권한&#40;Master Data Services&#41;](../master-data-services/overlapping-model-and-member-permissions-master-data-services.md)  
   
   

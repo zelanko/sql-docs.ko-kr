@@ -1,4 +1,5 @@
 ---
+description: SQLColAttributes(dBASE 드라이버)
 title: SQLColAttributes (dBASE 드라이버) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: ed44de2b-0b01-4dce-a340-f5eb3aac30b7
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a9e9d5adb75a99784d7244852bfda0499e481fc4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f2adb0f1ffb2fb311bcdb8e3387d3e7a1bfd34de
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307954"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88412239"
 ---
 # <a name="sqlcolattributes-dbase-driver"></a>SQLColAttributes(dBASE 드라이버)
 > [!NOTE]  
 >  이 항목에서는 dBASE 드라이버 관련 정보를 제공 합니다. 이 함수에 대 한 일반 정보는 [ODBC API 참조](../../odbc/reference/syntax/odbc-api-reference.md)에서 적절 한 항목을 참조 하세요.  
   
-|특성|주석|  
+|attribute|주석|  
 |---------------|--------------|  
 |SQL_COLUMN_DISPLAY_SIZE|가 중 데이터의 경우에는 열의 최대 길이가 열 시간 2의 최대 길이가 아니라 열의 최대 길이를 SQL_COLUMN_DISPLAY_SIZE 합니다.|  
 |SQL_OWNER_NAME|소유자 이름이 지원 되지 않으므로이 열에 빈 문자열 ("")이 반환 됩니다.|  
