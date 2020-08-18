@@ -1,4 +1,5 @@
 ---
+description: 드라이버 관리자 오류 및 경고 검사
 title: 드라이버 관리자 오류 및 경고 검사 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: eeb5ab3f-987d-4f30-87d2-7425a81ad1d7
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ee8a0f5ebfac8b6f87281806f07989f4980eb9b9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 99a99e1dfeb6cb6993a6967d5d93748afbd44b83
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305786"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483056"
 ---
 # <a name="driver-manager-error-and-warning-checks"></a>드라이버 관리자 오류 및 경고 검사
 드라이버 관리자는 여러 함수를 완전히 또는 부분적으로 구현 하므로 이러한 함수에서 오류 및 경고의 일부 또는 전부를 확인 합니다.  

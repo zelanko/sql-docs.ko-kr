@@ -1,4 +1,5 @@
 ---
+description: 명령문 매개 변수
 title: 문 매개 변수 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 58d5b166-2578-4699-a560-1f1e6d86c49a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 02327ff4bb6a1ac3ac57fbf7d3c6b09b70c11534
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7400367d4b237d2d0e22c6363d1559eb89506d7d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306824"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482896"
 ---
 # <a name="statement-parameters"></a>명령문 매개 변수
 *매개 변수* 는 SQL 문의 변수입니다. 예를 들어 부품 테이블에 PartID, 설명 및 가격 이라는 열이 있다고 가정 합니다. 매개 변수 없이 파트를 추가 하려면 다음과 같은 SQL 문을 생성 해야 합니다.  

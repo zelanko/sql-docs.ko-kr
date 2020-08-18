@@ -1,4 +1,5 @@
 ---
+description: 데이터 마이그레이션 설정(SybaseToSQL)
 title: 데이터 마이그레이션 설정 (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 94d7a083-2dbc-4e3d-94dd-92b7ff9d0c2d
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 42ec7a228aa317f1427dae14cf95631341645bc8
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 1d86fbfceefd3f0a4fba6f3bb86a071736e12c54
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87931773"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492237"
 ---
 # <a name="data-migration-settings-sybasetosql"></a>데이터 마이그레이션 설정(SybaseToSQL)
   

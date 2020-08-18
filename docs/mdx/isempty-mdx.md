@@ -1,4 +1,5 @@
 ---
+description: IsEmpty(MDX)
 title: IsEmpty (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 8b31b884e0f86bf2aebe4859cd1c7a441669e813
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 504df180a15673ecb0982d5a70c2eea1e9f71d11
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67905996"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471865"
 ---
 # <a name="isempty-mdx"></a>IsEmpty(MDX)
 
@@ -37,7 +38,7 @@ IsEmpty(Value_Expression)
 > [!NOTE]  
 >  멤버의 기본 속성은 멤버의 값입니다.  
   
- **IsEmpty** 함수는 빈 셀 값이에서 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]특수 한 의미를 갖기 때문에 빈 셀을 안정적으로 테스트 하는 유일한 방법입니다.  
+ **IsEmpty** 함수는 빈 셀 값이에서 특수 한 의미를 갖기 때문에 빈 셀을 안정적으로 테스트 하는 유일한 방법입니다 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
 > [!IMPORTANT]  
 >  값 식의 계산에서 오류를 반환 하는 경우이 함수는 **false**를 반환 합니다. 예를 들어 속성 참조가 잘못된 속성이나 존재하지 않는 속성을 참조하는 경우 값 식에서 오류가 반환될 수 있습니다.  

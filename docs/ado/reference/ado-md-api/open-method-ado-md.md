@@ -1,4 +1,5 @@
 ---
+description: Open 메서드(ADO MD)
 title: Open 메서드 (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: a87d8080-a238-45e5-bc80-9a8625b3810f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c0469bef1bce402efe143fbaa1ac760e3465d630
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 56d6a216b7d21723d84d374b09a9c0b8c6c4806b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765118"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440825"
 ---
 # <a name="open-method-ado-md"></a>Open 메서드(ADO MD)
 다차원 쿼리 결과를 검색 하 고 결과를 [셀 집합](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)에 반환 합니다.  
@@ -34,7 +35,7 @@ Cellset.Open Source, ActiveConnection
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- *소스*  
+ *원본*  
  (선택 사항) MDX (Multidimensional Expression) 쿼리와 같은 유효한 다차원 쿼리로 계산 되는 **Variant** 입니다. *Source* 인수는 [source](../../../ado/reference/ado-md-api/source-property-ado-md.md) 속성에 해당 합니다. MDX에 대 한 자세한 내용은 Microsoft Data Access Components SDK의 [OLAP (온라인 분석 처리)](https://msdn.microsoft.com/8a7673c6-3ca1-4411-9f1e-adf1e47df4f3) 설명서에 대 한 OLE DB를 참조 하세요.  
   
  *ActiveConnection*  

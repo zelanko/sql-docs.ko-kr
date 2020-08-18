@@ -1,4 +1,5 @@
 ---
+description: MSlogreader_agents(Transact-SQL)
 title: MSlogreader_agents (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8baa3c5a-cb40-42d0-b966-00e6d55368e8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c0d858466dd0477cd41f0eafdde5b214583b2938
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8a9167b9f63bdd4c2e1219e5ad9b74667db85245
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889935"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423347"
 ---
 # <a name="mslogreader_agents-transact-sql"></a>MSlogreader_agents(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,7 +48,7 @@ ms.locfileid: "85889935"
 |**job_password**|**nvarchar (524)**||  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;복제 테이블](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Transact-sql&#41;&#40;복제 테이블 ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [복제 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

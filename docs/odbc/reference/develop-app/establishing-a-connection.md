@@ -1,4 +1,5 @@
 ---
+description: 연결 설정
 title: 연결 설정 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 8e3c717e-35e3-47ef-b5d3-3a96eeb7b869
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6f71190a8a2ca1dd8af0d28adb5531540fb1b57e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4256f3f0fe3e082b789d3758ece9bf7c8919eacb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298703"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482936"
 ---
 # <a name="establishing-a-connection"></a>연결 설정
 환경 및 연결 핸들을 할당 하 고 연결 특성을 설정 하 고 나면 응용 프로그램은 데이터 원본 또는 드라이버에 연결할 준비가 된 것입니다. 응용 프로그램에서이 작업을 수행 하는 데 사용할 수 있는 세 가지 함수는 **SQLConnect** (핵심 인터페이스 규칙 수준), **SQLDriverConnect** (core) 및 **SQLBrowseConnect** (수준 1)입니다. 각각의 세 가지는 다른 시나리오에서 사용 하도록 설계 되었습니다. 연결 하기 전에 응용 프로그램은 **sqldrivers**에서 반환 된 **connectfunctions** 키워드를 사용 하 여 지원 되는 함수를 결정할 수 있습니다.  

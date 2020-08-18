@@ -1,4 +1,5 @@
 ---
+description: 데이터 마이그레이션 보고서(SybaseToSQL)
 title: 데이터 마이그레이션 보고서 (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: bac234ef-bc16-47e6-8a7c-aa6e76d860c5
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: b55228d51099c8c48c181a85d2615039f764b8a4
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: c13b2536ddada33a6b9a3f14d53b208dd177098c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87932174"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492296"
 ---
 # <a name="data-migration-report-sybasetosql"></a>데이터 마이그레이션 보고서(SybaseToSQL)
 데이터 **마이그레이션 보고서** 대화 상자는 데이터를로 마이그레이션한 후에 표시 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -38,7 +39,7 @@ ms.locfileid: "87932174"
 **비율**  
 성공적으로 마이그레이션된 행의 비율입니다.  
   
-**설명**  
+**세부 정보**  
 데이터 마이그레이션이 실패 한 경우 보고서에서 선택한 행에 대 한 마이그레이션 세부 정보를 표시 하려면 클릭 합니다. SSMA에서 오류의 원인을 표시 합니다.  
   
 **보고서 저장**  

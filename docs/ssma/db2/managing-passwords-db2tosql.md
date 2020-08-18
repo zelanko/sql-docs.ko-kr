@@ -1,4 +1,5 @@
 ---
+description: 암호 관리 (DB2ToSQL)
 title: 암호 관리 (DB2ToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 56d546e3-8747-4169-aace-693302667e94
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: af41c1a9eed355d75d5bd3e48886845b9a3069d1
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 25a6063863355fe40f36ab00bf7473d5d3d690d2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87936681"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472482"
 ---
 # <a name="managing-passwords-db2tosql"></a>암호 관리 (DB2ToSQL)
 이 섹션에서는 데이터베이스 암호를 보호 하는 방법과 서버에서 데이터베이스를 가져오거나 내보내는 절차에 대해 설명 합니다.  
@@ -73,7 +74,7 @@ SSMA를 사용 하면 데이터베이스의 암호를 보호할 수 있습니다
   
         를 사용 하 여를 실행 하 `SSMAforDB2Console.exe` `-securepassword` 고 `-remove` 명령줄에서 서버 id를 전달 하는 스위치를 사용 하 여 로컬 컴퓨터에 있는 보호 된 저장소 파일에서 암호화 된 암호를 제거 합니다.  
   
-        예:  
+        예제:  
 
         ```console
         C:\SSMA\SSMAforDB2Console.EXE -securepassword -remove all
@@ -84,7 +85,7 @@ SSMA를 사용 하면 데이터베이스의 암호를 보호할 수 있습니다
   
         를 사용 하 여를 실행 하 `SSMAforDB2Console.exe` `-securepassword` 고 `-list` 명령줄에서 스위치를 사용 하 여 암호가 암호화 된 모든 서버 id를 나열 합니다.  
   
-        예:  
+        예제:  
 
         ```console
         C:\SSMA\SSMAforDB2Console.EXE -securepassword -list

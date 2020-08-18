@@ -1,4 +1,5 @@
 ---
+description: 연결 프로세스에서 드라이버 관리자&#39;s 역할
 title: 연결 프로세스에서 드라이버 관리자&#39;s 역할 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 77c05630-5a8b-467d-b80e-c705dc06d601
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0227a4063573cb05ecaa9434605ba35f2811bd06
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6fb4eea978604960d87ef6c5b621e5801121c5f1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305804"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483046"
 ---
 # <a name="driver-manager39s-role-in-the-connection-process"></a>연결 프로세스에서 드라이버 관리자&#39;s 역할
 응용 프로그램은 드라이버 함수를 직접 호출 하지 않습니다. 대신 이름이 같은 드라이버 관리자 함수를 호출 합니다. 드라이버 관리자는 드라이버 함수를 호출 합니다. 일반적으로이는 거의 즉시 발생 합니다. 예를 들어 응용 프로그램은 드라이버 관리자에서 **Sqlexecute** 를 호출 하 고 몇 가지 오류 검사 후 드라이버 관리자는 드라이버에서 **sqlexecute** 를 호출 합니다.  

@@ -1,4 +1,5 @@
 ---
+description: 카탈로그 함수 실행
 title: 카탈로그 함수 실행 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c59cbda3-e214-4399-9edc-cfac86b378d7
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6469a5394e232ab9d9135fbbbd56ba7b791ccbcb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 19baae1518078c44b8e170fb623eab0087bac12a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305724"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482916"
 ---
 # <a name="executing-catalog-functions"></a>카탈로그 함수 실행
 카탈로그 함수는 결과 집합을 만들기 때문에 결과 집합을 생성 하는 SQL 문을 실행 하는 것과 같습니다. 실제로 카탈로그 함수는 미리 정의 된 SQL 문을 실행 하거나 드라이버 또는 DBMS와 함께 제공 되는 미리 정의 된 프로시저를 호출 하 여 구현 되는 경우가 많습니다. 결과 집합을 만드는 SQL 문에 적용 되는 거의 모든 항목은 카탈로그 함수에도 적용 됩니다. 예를 들어 SQL_ATTR_MAX_ROWS statement 특성은 **SELECT** 문에서 반환 되는 행 수를 제한 하는 것 처럼 catalog 함수에서 반환 되는 행 수를 제한 합니다.  

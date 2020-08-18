@@ -1,4 +1,5 @@
 ---
+description: .dqs 파일에서 기술 자료 가져오기
 title: .dqs 파일에서 기술 자료 가져오기
 ms.date: 03/01/2017
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9b9786fe-9e80-429a-afcb-dc3b3dd6f0b0
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: eb9487a3f633aa60dcfd66557d3fb9d33f62ad54
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c6be16bf484f3b5f6f55afaaacbeda8d2bb6d341
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895436"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491573"
 ---
 # <a name="import-a-knowledge-base-from-a-dqs-file"></a>.dqs 파일에서 기술 자료 가져오기
 
@@ -38,7 +39,7 @@ ms.locfileid: "85895436"
 ####  <a name="permissions"></a><a name="Permissions"></a> 권한  
  .dqs 데이터 파일에서 기술 자료를 가져오려면 DQS_MAIN 데이터베이스에 대한 dqs_kb_editor 또는 dqs_administrator 역할이 있어야 합니다.  
   
-##  <a name="import-a-knowledge-base-from-a-dqs-file"></a><a name="Import"></a>Dqs 파일에서 기술 자료 가져오기  
+##  <a name="import-a-knowledge-base-from-a-dqs-file"></a><a name="Import"></a> Dqs 파일에서 기술 자료 가져오기  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Data Quality Client 응용 프로그램을 실행](../data-quality-services/run-the-data-quality-client-application.md)합니다.  
   
@@ -66,7 +67,7 @@ ms.locfileid: "85895436"
   
 13. Data Quality Services 홈 페이지에서 **최근 기술 자료**에 해당 기술 자료가 나열되는지 확인합니다.  
   
-##  <a name="follow-up-after-importing-a-knowledge-base-from-a-dqs-file"></a><a name="FollowUp"></a>후속 작업: dqs 파일에서 기술 자료를 가져온 후  
+##  <a name="follow-up-after-importing-a-knowledge-base-from-a-dqs-file"></a><a name="FollowUp"></a> 후속 작업: dqs 파일에서 기술 자료를 가져온 후  
  .dqs 파일에서 기술 자료를 가져온 후 기술 자료에 정보를 추가하거나 기술 자료의 내용에 따라 정리 또는 일치 프로젝트에서 기술 자료를 사용할 수 있습니다. 자세한 내용은 [기술 자료 검색 수행](../data-quality-services/perform-knowledge-discovery.md), [도메인 관리](../data-quality-services/managing-a-domain.md), [복합 도메인 관리](../data-quality-services/managing-a-composite-domain.md), [일치 정책 만들기](../data-quality-services/create-a-matching-policy.md), [데이터 정리](../data-quality-services/data-cleansing.md) 또는 [데이터 일치](../data-quality-services/data-matching.md)를 참조하세요.  
   
   

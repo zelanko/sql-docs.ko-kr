@@ -1,4 +1,5 @@
 ---
+description: 멤버 함수 사용
 title: 멤버 함수 사용 | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 54f600eb020472f93067f7b9fe1e867f2730d670
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4cec35f8d09d671b3b426ff5ac9e18797df716ed
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68097106"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491410"
 ---
 # <a name="using-member-functions"></a>멤버 함수 사용
 

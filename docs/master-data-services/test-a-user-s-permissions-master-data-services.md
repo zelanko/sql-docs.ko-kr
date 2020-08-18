@@ -1,4 +1,5 @@
 ---
+description: 사용자의 사용 권한 테스트(Master Data Services)
 title: 사용자&#39;s 사용 권한 테스트
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 83a03b85-ea7f-4b4a-b19b-f7eca534ffae
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: dd1c6dc3673fc7ff00fec90eb85825e9e34f84d9
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 90299ab429b38e3c851b51273742c5fef28fec40
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812942"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471909"
 ---
 # <a name="test-a-user39s-permissions-master-data-services"></a>사용자의 사용 권한 테스트(Master Data Services)
 

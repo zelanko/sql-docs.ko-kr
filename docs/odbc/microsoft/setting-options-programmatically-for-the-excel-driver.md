@@ -1,4 +1,5 @@
 ---
+description: Excel 드라이버에 프로그래밍 방식으로 옵션 설정
 title: Excel 드라이버에 대해 프로그래밍 방식으로 옵션 설정 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b5ee3636-4591-427a-a65a-a2d5926fcc1a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1fcd5542e4beee1f7c7a30d5e0ee9f2815a3f0b6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 97a17a0967581f4097b5030adb803a69c6a82f80
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300773"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449255"
 ---
 # <a name="setting-options-programmatically-for-the-excel-driver"></a>Excel 드라이버에 프로그래밍 방식으로 옵션 설정
 

@@ -1,4 +1,5 @@
 ---
+description: 중복된 기능
 title: 중복 된 기능 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 641b16bc-f791-46d8-b093-31736473fe3d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 00f5529cfbfacebcad78a0a4433e84f34034694a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0aa03482efbadc8dac2fa887deb0f01d9b167214
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300483"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483026"
 ---
 # <a name="duplicated-features"></a>중복된 기능
 다음 ODBC 2.x *함수는 odbc* *2.x 함수에서* 중복 되었습니다. 따라서 *odbc 2.x 함수는* odbc 2.x에서 더 이상 사용 되지 *않습니다.* ODBC 3.x 함수를 대체 함수 라고 *합니다.*  

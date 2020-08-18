@@ -1,4 +1,5 @@
 ---
+description: 스레드 지원(Visual FoxPro ODBC 드라이버)
 title: 스레드 지원 (Visual FoxPro ODBC 드라이버) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0c6abbbc-012b-41aa-bded-5e7e362d015b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2aa19eb233525b5a65ef67fe9903814fc1163177
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 013ccd1f5d202794ba6b7a44c10339dd14c08d17
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303084"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449075"
 ---
 # <a name="thread-support-visual-foxpro-odbc-driver"></a>스레드 지원(Visual FoxPro ODBC 드라이버)
 Visual FoxPro ODBC 드라이버는 스레드로부터 안전 합니다. 환경 핸들 (*h)*)에 대 한 액세스, 연결 핸들 (*hdbc*) 및 문 핸들 (*hstmt*)이 적절 한 세마포에 래핑되어 다른 프로세스에서 드라이버의 내부 데이터 구조에 액세스 하 고 잠재적으로 변경 하지 못하도록 합니다.  

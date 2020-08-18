@@ -1,4 +1,5 @@
 ---
+description: sysmail_mailattachments(Transact-SQL)
 title: sysmail_mailattachments (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: aee87059-a4c1-459a-a95c-641b4e3f0e73
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0fd6122ec99d4f5788fbe9f2b33478df7723f238
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 3bdec861d8793d2943111a692d5bcde98b582cfe
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900972"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460539"
 ---
 # <a name="sysmail_mailattachments-transact-sql"></a>sysmail_mailattachments(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

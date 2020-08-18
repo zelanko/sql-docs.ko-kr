@@ -1,4 +1,5 @@
 ---
+description: LevelDepth 속성(ADO MD)
 title: LevelDepth 속성 (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8a1cfe2c-f207-4445-b152-ade090f64608
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1daadfc3839bffdfcfd6f085e2cf4900b8251044
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 9d5ba44be5c4fa532a754c81c36407f06bfd4f12
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82753451"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440915"
 ---
 # <a name="leveldepth-property-ado-md"></a>LevelDepth 속성(ADO MD)
 계층의 루트와 [멤버](../../../ado/reference/ado-md-api/member-object-ado-md.md)간의 수준 수를 나타냅니다.  

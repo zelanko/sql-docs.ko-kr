@@ -1,4 +1,5 @@
 ---
+description: '4a단계: 결과 페치'
 title: '4a 단계: 결과 가져오기 | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 77d30142-c774-473c-96fb-b364bb92ac60
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c4f810e5c42b54ec871c233ab498936abae610dc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 91a81809d07faafac6511bb5ec96c97d4f59d654
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302974"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491360"
 ---
 # <a name="step-4a-fetch-the-results"></a>4a단계: 결과 페치
 다음 단계는 다음 그림과 같이 결과를 인출 하는 것입니다.  

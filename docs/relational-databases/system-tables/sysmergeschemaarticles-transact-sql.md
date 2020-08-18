@@ -1,4 +1,5 @@
 ---
+description: sysmergeschemaarticles(Transact-SQL)
 title: sysmergeschemaarticles (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b5085979-2f76-48e1-bf3b-765a84003dd9
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9239181b95485b42e839d7dd6d98de6d4186e750
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c4357681a782b878b9cc9bfe4df002d706e1d1f0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881362"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473139"
 ---
 # <a name="sysmergeschemaarticles-transact-sql"></a>sysmergeschemaarticles(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "85881362"
 |**type**|**tinyint**|스키마 전용 아티클의 유형을 나타내며 다음 중 하나일 수 있습니다.<br /><br /> **0x20** = 저장 프로시저 스키마 전용 아티클입니다.<br /><br /> **0x40** = 뷰 스키마 전용 아티클 또는 인덱싱된 뷰 스키마 전용 아티클입니다.|  
 |**objid**|**int**|아티클 기준 개체의 개체 식별자입니다. 프로시저, 뷰, 인덱싱된 뷰, 사용자 정의 함수 등의 개체 식별자일 수 있습니다.|  
 |**artid**|**uniqueidentifier**|아티클 ID입니다.|  
-|**한**|**nvarchar(255)**|아티클 설명입니다.|  
+|**description**|**nvarchar(255)**|아티클 설명입니다.|  
 |**pre_creation_command**|**tinyint**|아티클이 구독 데이터베이스에서 만들어질 때 수행되는 기본 동작입니다.<br /><br /> **0 =** None-구독자에 테이블이 이미 있는 경우 아무 동작도 수행 되지 않습니다.<br /><br /> **1** = Drop-테이블을 다시 만들기 전에 테이블을 삭제 합니다.<br /><br /> **2** = delete-하위 집합 필터의 where 절을 기반으로 삭제를 실행 합니다.<br /><br /> **3** = Truncate- **2**와 동일 하지만 행 대신 페이지를 삭제 합니다. 단, WHERE 절은 사용하지 않습니다.|  
 |**pubid**|**uniqueidentifier**|게시의 고유 식별자입니다.|  
 |**status**|**tinyint**|스키마 전용 아티클의 상태를 나타내며 다음 중 하나일 수 있습니다.<br /><br /> **1** = 동기화 됨-다음에 스냅숏 에이전트 실행 될 때 테이블을 게시 하는 초기 처리 스크립트가 실행 됩니다.<br /><br /> **2** = 활성-테이블을 게시 하는 초기 처리 스크립트가 실행 되었습니다.<br /><br /> **5** = New_inactive를 추가 합니다.<br /><br /> **6** = New_active 추가할 수 있습니다.|  
@@ -44,8 +45,8 @@ ms.locfileid: "85881362"
 |**destination_object**|**sysname**|구독 데이터베이스 내 대상 개체의 이름입니다. 이 값은 저장 프로시저, 뷰 및 UDF와 같은 스키마 전용 아티클에만 적용합니다.|  
 |**destination_owner**|**sysname**|**Dbo**가 아닌 경우 구독 데이터베이스에 있는 개체의 소유자입니다.|  
   
-## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;복제 테이블](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+## <a name="see-also"></a>관련 항목  
+ [Transact-sql&#41;&#40;복제 테이블 ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [복제 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

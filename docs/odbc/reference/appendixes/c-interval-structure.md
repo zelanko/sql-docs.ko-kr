@@ -1,4 +1,5 @@
 ---
+description: C 간격 구조
 title: C 간격 구조 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 52b42b56-50aa-4ce6-8d79-0963c7a71437
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 02c86ebe24a0e12531e355f95185b01f3089a31b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 89962558fdbd6f0de5b5e030fe504669d51c40be
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81292155"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88411209"
 ---
 # <a name="c-interval-structure"></a>C 간격 구조
 [C 데이터 형식](../../../odbc/reference/appendixes/c-data-types.md) 섹션에 나열 된 각 c interval 데이터 형식은 동일한 구조를 사용 하 여 간격 데이터를 포함 합니다. **Sqlfetch**, **Sqlfetchscroll**또는 **SQLGetData** 가 호출 되 면 드라이버는 SQL_INTERVAL_STRUCT 구조에 데이터를 반환 하 고, **SQLBindCol**, **SQLGetData**또는 **SQLBindParameter**에 대 한 호출에서 c 데이터 형식에 대해 응용 프로그램에서 지정 된 값을 사용 하 여 SQL_INTERVAL_STRUCT 내용을 해석 하 고, 구조체의 *interval_type* 필드를 c 형식에 해당 하는 *열거형* 값으로 채웁니다. 드라이버는 *interval_type* 필드를 읽지 않으므로 간격 유형을 결정 하지 않습니다. SQL_DESC_CONCISE_TYPE 설명자 필드의 값을 검색 합니다. 구조를 매개 변수 데이터에 사용 하는 경우 드라이버는 응용 프로그램에서 *interval_type* 필드의 값을 다른 값으로 설정 하는 경우에도 apd의 SQL_DESC_CONCISE_TYPE 필드에서 응용 프로그램에 지정 된 값을 사용 하 여 SQL_INTERVAL_STRUCT 내용을 해석 합니다.  

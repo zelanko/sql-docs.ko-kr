@@ -1,4 +1,5 @@
 ---
+description: 영향을 받는 행 수 확인
 title: 영향을 받는 행 수 결정 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1e56297d-a786-415e-b66d-b42d1b2a8d45
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 156a5fe41d2c9b57a33bbc2bdb4540d1f5b00340
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 14114700c4d79f83f0388509056dd0b49bb21a8d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305894"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483076"
 ---
 # <a name="determining-the-number-of-affected-rows"></a>영향을 받는 행 수 확인
 응용 프로그램에서 행을 업데이트, 삭제 또는 삽입 한 후 **Sqlrowcount** 를 호출 하 여 영향을 받는 행 수를 확인할 수 있습니다. **Sqlrowcount** 는 **update**, **delete**또는 **INSERT** 문을 실행 하 고, 위치 지정 UPDATE 또는 delete 문을 실행 하거나, **SQLSetPos**를 호출 하 여 행을 업데이트, 삭제 또는 삽입 하는 방법으로이 값을 반환 합니다.  

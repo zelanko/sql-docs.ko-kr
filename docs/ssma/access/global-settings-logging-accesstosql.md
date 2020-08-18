@@ -1,4 +1,5 @@
 ---
+description: 전역 설정 (로깅) (AccessToSQL)
 title: 전역 설정 (로깅) (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 835b09b5-eb42-47ea-b46e-e115d4d6461f
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: dbb89fe23d8ca357bcac02b16100905e27c54d8e
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: bc7bec3f7f4ce358ccbb725e039208f574ae7aae
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87938572"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472566"
 ---
 # <a name="global-settings-logging-accesstosql"></a>전역 설정 (로깅) (AccessToSQL)
 **전역 설정** 대화 상자를 사용 하 여 ssma의 로깅 설정을 지정할 수 있습니다. 일반적으로 제품 지원에 대 한 작업을 수행 하는 경우에만 이러한 설정을 변경할 수 있습니다.  

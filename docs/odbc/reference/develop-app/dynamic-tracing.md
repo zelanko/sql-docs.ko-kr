@@ -1,4 +1,5 @@
 ---
+description: 동적 추적
 title: 동적 추적 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ebe58a83-a7b0-4747-86c8-2af2940471ef
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8cbd2dbae4f4b437f45845ce2791f4a9b0aa8c8b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a1618d1b2837c5169f03b07900aba3921bc98659
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305772"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482996"
 ---
 # <a name="dynamic-tracing"></a>동적 추적
 응용 프로그램 실행의 특정 지점에서 추적을 사용 하거나 사용 하지 않도록 설정할 수 있습니다. 이렇게 하면 응용 프로그램에서 원하는 수의 함수 호출을 추적할 수 있습니다.  

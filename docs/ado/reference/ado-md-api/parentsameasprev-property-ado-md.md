@@ -1,4 +1,5 @@
 ---
+description: ParentSameAsPrev 속성(ADO MD)
 title: ParentSameAsPrev 속성 (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 510842e0-e8dc-4b33-9517-bd1c6df0cf3c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 688f1810fa1748ddbd0b312eefa319e837e4440c
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 7bed95b3ce856b8636131da50ad8230a0a203add
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765044"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440785"
 ---
 # <a name="parentsameasprev-property-ado-md"></a>ParentSameAsPrev 속성(ADO MD)
 이 위치 [멤버](../../../ado/reference/ado-md-api/member-object-ado-md.md) 의 부모가 바로 앞에 있는 멤버의 부모와 같은지 여부를 나타냅니다.  
