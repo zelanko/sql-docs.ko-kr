@@ -1,4 +1,5 @@
 ---
+description: '부록 G: 이전 버전과의 호환성을 위한 드라이버 지침'
 title: '부록 G: 이전 버전과의 호환성을 위한 드라이버 지침 | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 911cd335-f2c0-4d03-9739-1078308a678a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1055f94cb54bba9262f210e5df5f028029aebf5b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e2c09485879c2f0d16518dcfc0a17f4bf3a13943
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81292403"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88411409"
 ---
 # <a name="appendix-g-driver-guidelines-for-backward-compatibility"></a>부록 G: 이전 버전과의 호환성을 위한 드라이버 지침
 이 부록에서는 ODBC 3에서 작동 하는 드라이버 작성자를 위한 정보를 제공 합니다. ODBC 2를 지원 해야 하는 *x* 드라이버. *x* 응용 프로그램. 이전 버전과의 호환성에 대 한 자세한 내용은 [이전 버전과의 호환성 및 표준 준수](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md)를 참조 하세요.  

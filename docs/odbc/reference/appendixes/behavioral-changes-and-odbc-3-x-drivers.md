@@ -1,4 +1,5 @@
 ---
+description: 동작 변경 및 ODBC 3.x 드라이버
 title: 동작 변경 내용 및 ODBC 3.x 드라이버 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 88a503cc-bff7-42d9-83ff-8e232109ed06
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4d8343573261d74a6a0c652cf425b12da91f7cb0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 43f64aa4b627130308ea920918c2de6d98116020
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81292367"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88411339"
 ---
 # <a name="behavioral-changes-and-odbc-3x-drivers"></a>동작 변경 및 ODBC 3.x 드라이버
 환경 특성 SQL_ATTR_ODBC_VERSION *은 odbc 2.x* 동작 또는 odbc *2.x 동작을* 표시 해야 하는지 여부를 드라이버에 나타냅니다. SQL_ATTR_ODBC_VERSION 환경 특성을 설정 하는 방법은 응용 프로그램에 따라 달라 집니다. ODBC *3.x 응용 프로그램은* **SQLSetEnvAttr** 를 호출 하 여 환경 핸들을 할당 한 후 **SQLAllocHandle** 를 호출 하 여 연결 핸들을 할당 하기 전에 **SQLAllocHandle** 를 호출 하 여이 특성을 설정 해야 합니다. 이 작업을 수행 하는 데 실패 하는 경우 드라이버 관리자는 **SQLAllocHandle**에 대 한 후자의 호출에서 SQLSTATE HY010 (함수 시퀀스 오류)를 반환 합니다.  

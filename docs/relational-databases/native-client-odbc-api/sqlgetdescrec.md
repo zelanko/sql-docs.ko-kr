@@ -1,4 +1,5 @@
 ---
+description: SQLGetDescRec
 title: SQLGetDescRec | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -13,12 +14,12 @@ ms.assetid: f3389ff2-f3be-4035-9fb5-c9ebc2f15025
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4c3c3f91a81213159f283d769a106b75f1ea28f6
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.openlocfilehash: 3b8cef5ec3586347e9bde76cdde8f0a95de71519
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87332311"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88407519"
 ---
 # <a name="sqlgetdescrec"></a>SQLGetDescRec
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,7 +37,7 @@ ms.locfileid: "87332311"
 |---------------|-----------------------------|----------------------------------------------------------|  
 |*이름*|저장 프로시저 호출의 경우 형식 매개 변수 이름, 다른 경우 길이가 0인 문자열|테이블 반환 매개 변수 열 이름|  
 |*TypePtr*|SQL_DESC_TYPE 테이블 반환 매개 변수의 경우 SQL_SS_TABLE|SQL_DESC_TYPE|  
-|*SubTypePtr*|Undefined|SQL_DESC_DATETIME_INTERVAL_CODE(형식이 SQL_DATETIME 또는 SQL_INTERVAL인 레코드의 경우)|  
+|*SubTypePtr*|정의되지 않음|SQL_DESC_DATETIME_INTERVAL_CODE(형식이 SQL_DATETIME 또는 SQL_INTERVAL인 레코드의 경우)|  
 |*LengthPtr*|0|SQL_DESC_OCTET_LENGTH|  
 |*PrecisionPtr*|0|SQL_DESC_PRECISION|  
 |*ScalePtr*|0|SQL_DESC_SCALE|  

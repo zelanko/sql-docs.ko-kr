@@ -1,4 +1,5 @@
 ---
+description: 열 크기
 title: 열 크기 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 541b83ab-b16d-4714-bcb2-3c3daa9a963b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 07b6151c723cb5e05189791100338e9e343c28aa
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 53d7934f3ac4669545e3cc24752e4a9e0f4fb589
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306584"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88411119"
 ---
 # <a name="column-size"></a>열 크기
 숫자 데이터 형식의 열 또는 매개 변수 크기는 열 또는 매개 변수의 데이터 형식에 사용 되는 최대 자릿수 또는 데이터의 전체 자릿수로 정의 됩니다. 문자 형식의 경우 데이터 문자 길이입니다. binary 데이터 형식의 경우 열 크기는 데이터의 길이 (바이트)로 정의 됩니다. Time, timestamp 및 all interval 데이터 형식의 경우이 데이터의 문자 표현에 있는 문자 수입니다. 각 간결한 SQL 데이터 형식에 대해 정의 된 열 크기는 다음 표에 나와 있습니다.  
@@ -41,17 +42,17 @@ ms.locfileid: "81306584"
 |SQL_TYPE_DATE [c]|10 ( *yyyy-mm-dd* 형식의 문자 수)|  
 |SQL_TYPE_TIME [c]|8 ( *hh-mm-ss* 형식의 문자 수) 또는 9 + *s* ( *hh: mm: ss*[. fff ...] 형식의 문자 수)입니다. 여기서 *s* 는 초 전체 자릿수입니다.|  
 |SQL_TYPE_TIMESTAMP|16 ( *yyyy-mm-dd hh: mm* 형식의 문자 수)<br /><br /> 19 ( *yyyy-mm-dd* *hh: mm: ss* 형식의 문자 수)<br /><br /> 또는<br /><br /> 20 + *s* ( *yyyy-mm-dd hh: mm: ss*[. fff ...] 형식의 문자 수)입니다. 여기서 *s* 는 초 전체 자릿수입니다.|  
-|SQL_INTERVAL_SECOND|여기서 *p* 는 간격의 선행 전체 자릿수이 고 *s* 는 초 전체 자릿수, *p* ( *s*= 0) 또는 *p*+*s*+ 1 ( *s*>0)입니다. 2|  
-|SQL_INTERVAL_DAY_TO_SECOND|여기서 *p* 는 간격 선행 전체 자릿수이 고,은 초 전체 자릿수, 9 *+ p* ( *s*= 0) 또는 10 +*p*+*s* ( *s*>0) 인 *경우입니다.* 2|  
-|SQL_INTERVAL_HOUR_TO_SECOND|여기서 *p* 는 간격 선행 전체 자릿수이 *고은* 초 전체 자릿수, 6 +*p* ( *s*= 0) 또는 7 +*p*+*s* ( *s*>0)입니다. 2|  
-|SQL_INTERVAL_MINUTE_TO_SECOND|여기서 *p* 는 간격 선행 전체 자릿수이 *고은* 초 전체 자릿수, 3 +*p* ( *s*= 0) 또는 4 +*p*+*s* ( *s*>0)입니다. 2|  
+|SQL_INTERVAL_SECOND|여기서 *p* 는 간격의 선행 전체 자릿수이 고 *s* 는 초 전체 자릿수, *p* ( *s*= 0) 또는 *p* + *s*+ 1 ( *s*>0)입니다. [ 2|  
+|SQL_INTERVAL_DAY_TO_SECOND|여기서 *p* 는 간격 선행 전체 자릿수이 *고은* 초 전체 자릿수, 9 +*p* ( *s*= 0) 또는 10 +*p* + *s* ( *s*>0) 인 경우입니다. 2|  
+|SQL_INTERVAL_HOUR_TO_SECOND|여기서 *p* 는 간격 선행 전체 자릿수이 *고은* 초 전체 자릿수, 6 +*p* ( *s*= 0) 또는 7 +*p* + *s* ( *s*>0) 인 경우입니다. 2|  
+|SQL_INTERVAL_MINUTE_TO_SECOND|여기서 *p* 는 간격 선행 전체 자릿수이 *고은* 초 전체 자릿수, 3 +*p* ( *s*= 0) 또는 4 +*p* + *s* ( *s*>0) 인 경우입니다. 2|  
 |SQL_INTERVAL_YEAR SQL_INTERVAL_MONTH SQL_INTERVAL_DAY SQL_INTERVAL_HOUR SQL_INTERVAL_MINUTE|*p*. 여기서 *p* 는 간격의 선행 전체 자릿수입니다. 2|  
 |SQL_INTERVAL_YEAR_TO_MONTH SQL_INTERVAL_DAY_TO_HOUR|3 +*p*, 여기서 *p* 는 간격 선행 전체 자릿수입니다. 2|  
 |SQL_INTERVAL_DAY_TO_MINUTE|6 +*p*. 여기서 *p* 는 간격 선행 전체 자릿수입니다. 2|  
 |SQL_INTERVAL_HOUR_TO_MINUTE|3 +*p*, 여기서 *p* 는 간격 선행 전체 자릿수입니다. 2|  
 |SQL_GUID|36 ( *aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee* 형식의 문자 수)|  
   
- [a] odbc 2.0 드라이버에서 **SQLSetParam** 를 호출 하는 odbc 1.0 응용 프로그램의 경우, odbc 1.0 드라이버에서 **SQLBindParameter** 를 호출 하는 odbc 2.0 응용 \*프로그램의 경우, *StrLen_or_IndPtr* 가 SQL_LONGVARCHAR 또는 SQL_LONGVARBINARY 유형에 대해 SQL_DATA_AT_EXEC 되는 경우 *columnsize* 는이 표에 정의 된 전체 자릿수가 아니라 전송할 데이터의 전체 길이로 설정 해야 합니다.  
+ [a] odbc 2.0 드라이버에서 **SQLSetParam** 를 호출 하는 odbc 1.0 응용 프로그램의 경우, odbc 1.0 드라이버에서 **SQLBindParameter** 를 호출 하는 odbc 2.0 응용 프로그램의 경우, \* *StrLen_or_IndPtr* 가 SQL_LONGVARCHAR 또는 SQL_LONGVARBINARY 유형에 대해 SQL_DATA_AT_EXEC 되는 경우 *columnsize* 는이 표에 정의 된 전체 자릿수가 아니라 전송할 데이터의 전체 길이로 설정 해야 합니다.  
   
  [b] 드라이버에서 변수 형식의 열 또는 매개 변수 길이를 확인할 수 없는 경우 SQL_NO_TOTAL 반환 합니다.  
   
