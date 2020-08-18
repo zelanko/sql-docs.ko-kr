@@ -1,4 +1,5 @@
 ---
+description: SMO 연결 관리자
 title: SMO 연결 관리자 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d273f1fb-a6a8-4f2f-a5ff-55c2e3de4723
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: cfa304fa19b8d2f259a0cad77d4c25b5d81aa8be
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 0b89d916df89535bcd48fd383714457d6bcbc494
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922909"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88350279"
 ---
 # <a name="smo-connection-manager"></a>SMO 연결 관리자
 
@@ -72,7 +73,7 @@ ms.locfileid: "86922909"
  **연결 테스트**  
  구성한 연결을 테스트합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [Integration Services&#40;SSIS&#41; 연결](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
   
   

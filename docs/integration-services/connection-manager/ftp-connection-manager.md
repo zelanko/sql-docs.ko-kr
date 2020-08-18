@@ -1,4 +1,5 @@
 ---
+description: FTP 연결 관리자
 title: FTP 연결 관리자 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: c4f43455-29ca-44ba-ac7f-ea729b1daf93
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: bb0b1a81a495639aa170b2047df3dd517fac1716
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 6aac44dfdbbe1c88965ff7aa37249651d3f7c199
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918947"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88350919"
 ---
 # <a name="ftp-connection-manager"></a>FTP 연결 관리자
 
@@ -99,7 +100,7 @@ ms.locfileid: "86918947"
  **연결 테스트**  
  FTP 연결 관리자를 구성했으면 **연결 테스트**를 클릭하여 연결이 실행 가능한지 확인합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [FTP 태스크](../../integration-services/control-flow/ftp-task.md)   
  [Integration Services&#40;SSIS&#41; 연결](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
   

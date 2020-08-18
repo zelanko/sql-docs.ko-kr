@@ -1,4 +1,5 @@
 ---
+description: Azure Blob 다운로드 작업
 title: Azure Blob 다운로드 작업 | Microsoft Docs
 ms.custom: ''
 ms.date: 05/22/2019
@@ -13,12 +14,12 @@ f1_keywords:
 ms.assetid: 8a63bf44-71be-456d-9a5c-be7c31aff065
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f16ae336c0fd01253bc45439cb3202e3501d6dda
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 6437172ce0336938ad17a8b49bdb81e6fc4a0177
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919674"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88350029"
 ---
 # <a name="azure-blob-download-task"></a>Azure Blob 다운로드 작업
 

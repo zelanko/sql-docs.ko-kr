@@ -1,4 +1,5 @@
 ---
+description: Analysis Services 처리 태스크
 title: Analysis Services 처리 태스크 | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e5748836-b4ce-4e17-ab6b-617a336f02f4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9c39fdf1f63084d7f1340dae6b11f17124a52138
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 2287bb2e429eba74f7ca98dcdf2b18b8d11cfda2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86908679"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88349989"
 ---
 # <a name="analysis-services-processing-task"></a>Analysis Services 처리 태스크
 
@@ -114,14 +115,14 @@ ms.locfileid: "86908679"
  **새로 만들기**  
  새 Analysis Services 연결 관리자를 만듭니다.  
   
- **관련 항목:** [Analysis Services 연결 관리자](../../integration-services/connection-manager/analysis-services-connection-manager.md), [Analysis Services 연결 관리자 추가 대화 상자 UI 참조](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
+ **관련 항목:** [Analysis Services Connection Manager](../../integration-services/connection-manager/analysis-services-connection-manager.md), [Analysis Services 연결 관리자 추가 대화 상자 UI 참조](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
   
  **개체 목록**  
  
 |속성|Description|  
 |--------------|-----------------|  
 |**개체 이름**|지정한 개체 이름을 나열합니다.|  
-|**형식**|지정한 개체의 유형을 나열합니다.|  
+|**유형**|지정한 개체의 유형을 나열합니다.|  
 |**처리 옵션**|목록에서 처리 옵션을 선택합니다.<br /><br /> **관련 항목**: [다차원 모델 처리&#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services)|  
 |**설정**|지정한 개체에 대한 처리 설정을 나열합니다.|  
   

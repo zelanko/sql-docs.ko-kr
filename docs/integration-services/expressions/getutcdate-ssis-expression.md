@@ -1,4 +1,5 @@
 ---
+description: GETUTCDATE(SSIS 식)
 title: GETUTCDATE(SSIS 식) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2282339c-c24f-493e-8e66-181ea8af5ad0
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2ca0a021560dd99ec2ebdcd82c40255905cc0784
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 5e14b4477f6a9ea6d39769cdb2f8a2883b361939
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916996"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88347989"
 ---
 # <a name="getutcdate-ssis-expression"></a>GETUTCDATE(SSIS 식)
 
@@ -37,7 +38,7 @@ GETUTCDATE()
 ```  
   
 ## <a name="arguments"></a>인수  
- None  
+ 없음  
   
 ## <a name="result-types"></a>결과 형식  
  DT_DBTIMESTAMP  
@@ -61,7 +62,7 @@ DATEDIFF("dd",ModifiedDate,GETUTCDATE())
 DATEADD("Month",3,GETUTCDATE())  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [GETDATE&#40;SSIS 식&#41;](../../integration-services/expressions/getdate-ssis-expression.md)   
  [함수&#40;SSIS 식&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   

@@ -1,4 +1,5 @@
 ---
+description: Azure Blob 업로드 태스크
 title: Azure Blob 업로드 태스크 | Microsoft Docs
 ms.custom: ''
 ms.date: 05/22/2019
@@ -13,12 +14,12 @@ f1_keywords:
 ms.assetid: 6ea068b0-4cd8-45b5-b89d-09b8f25040c0
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5f5d1d38785cb998ae5f26c62e3de9ff5010c15e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 4fefa039f03e061c683c3df916a25087cb9a4e5c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86908543"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88349969"
 ---
 # <a name="azure-blob-upload-task"></a>Azure Blob 업로드 태스크
 

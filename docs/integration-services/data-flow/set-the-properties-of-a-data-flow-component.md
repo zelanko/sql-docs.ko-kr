@@ -1,4 +1,5 @@
 ---
+description: 데이터 흐름 구성 요소의 속성 설정
 title: 데이터 흐름 구성 요소의 속성 설정 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 73000ef6-52a2-4dec-8320-0e79acf0c2c5
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ae953f5267c9facc141c823941fae645a5d05e0e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c7799b5d2f5f541b6713821dccbec820697371ed
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917809"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88348949"
 ---
 # <a name="set-the-properties-of-a-data-flow-component"></a>데이터 흐름 구성 요소의 속성 설정
 
@@ -117,7 +118,7 @@ ms.locfileid: "86917809"
   
 -   [Input columns](#inputcolumns)  
   
--   [Outputs](#outputs)  
+-   [출력](#outputs)  
   
 -   [출력 열](#outputcolumns)  
   
@@ -136,7 +137,7 @@ ms.locfileid: "86917809"
 |IdentificationString|String|구성 요소를 식별합니다.|  
 |IsDefaultLocale|부울|구성 요소가 속해 있는 데이터 흐름 태스크의 로캘이 구성 요소에 사용되는지 여부를 나타냅니다.|  
 |LocaleID|정수|패키지가 실행될 때 데이터 흐름 구성 요소에서 사용하는 로캘입니다. 데이터 흐름 구성 요소에는 모든 Windows 로캘을 사용할 수 있습니다.|  
-|속성|String|데이터 흐름 구성 요소의 이름입니다.|  
+|Name|String|데이터 흐름 구성 요소의 이름입니다.|  
 |PipelineVersion|정수|구성 요소가 내부에서 실행되도록 디자인된 데이터 흐름 태스크의 버전입니다.|  
 |UsesDispositions|부울|구성 요소에 오류 출력이 있는지 여부를 나타냅니다.|  
 |ValidateExternalMetadata|부울|외부 열 메타데이터의 유효성이 검사되었는지 여부를 나타냅니다. 이 속성의 기본값은 **True**입니다.|  
@@ -156,7 +157,7 @@ ms.locfileid: "86917809"
 |ID|정수|입력을 고유하게 식별하는 값입니다.|  
 |IdentificationString|String|입력을 식별하는 문자열입니다.|  
 |IsSorted|부울|입력의 데이터가 정렬되었는지 여부를 나타냅니다.|  
-|속성|String|입력의 이름입니다.|  
+|Name|String|입력의 이름입니다.|  
 |SourceLocale|정수|입력 데이터의 LCID(로캘 ID)입니다.|  
 |TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|행을 처리할 때 발생하는 잘림을 구성 요소가 처리하는 방법을 결정하는 값입니다. . 가능한 값은 **Fail component**, **Ignore failure**및 **Redirect row**입니다.|  
   
@@ -178,7 +179,7 @@ ms.locfileid: "86917809"
 |IdentificationString|String|입력 열을 식별하는 문자열입니다.|  
 |LineageID|정수|업스트림 열의 ID입니다.|  
 |LineageIdentificationString|String|업스트림 열의 이름을 포함하는 ID 문자열입니다.|  
-|속성|String|입력 열의 이름입니다.|  
+|Name|String|입력 열의 이름입니다.|  
 |SortKeyPosition|정수|열 정렬 여부, 정렬 순서 및 여러 열이 정렬되는 순서를 나타내는 값입니다. 값 **0** 은 열이 정렬되어 있지 않음을 나타냅니다.  자세한 내용은 [병합 및 병합 조인 변환을 위한 데이터 정렬](../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)을 참조하세요.|  
 |TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|행을 처리할 때 발생하는 잘림을 구성 요소가 처리하는 방법을 결정하는 값입니다. 가능한 값은 **Fail component**, **Ignore failure**및 **Redirect row**입니다.|  
 |UpstreamComponentName|String|업스트림 구성 요소의 이름입니다.|  
@@ -203,7 +204,7 @@ ms.locfileid: "86917809"
 |IdentificationString|String|출력을 식별하는 문자열입니다.|  
 |IsErrorOut|부울|출력이 오류 출력인지 여부를 나타냅니다.|  
 |IsSorted|부울|출력이 정렬되었는지 여부를 나타냅니다. 기본값은 **False**입니다.<br /><br /> **\*\* 중요 \*\*** **IsSorted** 속성의 값을 **True**로 설정해도 데이터가 졍렬되지는 않습니다. 이 속성은 데이터가 이전에 정렬되었다는 정보를 다운스트림 구성 요소에 제공하기만 합니다. 자세한 내용은 [병합 및 병합 조인 변환을 위한 데이터 정렬](../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)을 참조하세요.|  
-|속성|String|출력의 이름입니다.|  
+|Name|String|출력의 이름입니다.|  
 |SynchronousInputID|정수|출력과 동시에 수행되는 입력의 ID입니다.|  
 |TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|행을 처리할 때 발생하는 잘림을 구성 요소가 처리하는 방법을 결정하는 값입니다. 가능한 값은 **Fail component**, **Ignore failure**및 **Redirect row**입니다.|  
   
@@ -223,7 +224,7 @@ ms.locfileid: "86917809"
 |IdentificationString|String|출력 열을 식별하는 문자열입니다.|  
 |LineageID|정수|출력 열의 ID입니다. 다운스트림 구성 요소는 이 값을 사용하여 열을 참조합니다.|  
 |LineageIdentificationString|String|열의 이름을 포함하는 ID 문자열입니다.|  
-|속성|String|출력 열의 이름입니다.|  
+|Name|String|출력 열의 이름입니다.|  
 |SortKeyPosition|정수|열 정렬 여부, 정렬 순서 및 여러 열이 정렬되는 순서를 나타내는 값입니다. 값 **0** 은 열이 정렬되어 있지 않음을 나타냅니다. 자세한 내용은 [병합 및 병합 조인 변환을 위한 데이터 정렬](../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)을 참조하세요.|  
 |SpecialFlags|정수|출력 열의 특수 플래그를 포함하는 값입니다.|  
 |TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|행을 처리할 때 발생하는 잘림을 구성 요소가 처리하는 방법을 결정하는 값입니다. 가능한 값은 **Fail component**, **Ignore failure**및 **Redirect row**입니다. 기본값은 **Fail component**입니다.|  
@@ -240,7 +241,7 @@ ms.locfileid: "86917809"
 |Description|String|외부 열에 대해 설명합니다.|  
 |ID|정수|열을 고유하게 식별하는 값입니다.|  
 |IdentificationString|String|열을 식별하는 문자열입니다.|  
-|속성|String|외부 열의 이름입니다.|  
+|Name|String|외부 열의 이름입니다.|  
   
  외부 메타데이터 열은 데이터 형식 속성 집합도 포함합니다.  
   
@@ -254,7 +255,7 @@ ms.locfileid: "86917809"
 |CodePage|정수|유니코드가 아닌 문자열 데이터에 대한 코드 페이지를 지정합니다.|  
 |DataType|Integer(열거형)|열의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 데이터 형식입니다. 자세한 내용은 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)을 참조하세요.|  
 |길이|정수|열의 길이(문자 수)입니다.|  
-|자릿수|정수|숫자 열의 전체 자릿수입니다.|  
+|전체 자릿수|정수|숫자 열의 전체 자릿수입니다.|  
 |확장|정수|숫자 열의 소수 자릿수입니다.|  
 
 ## <a name="custom-properties-of-data-flow-components"></a>데이터 흐름 구성 요소의 사용자 지정 속성
@@ -278,7 +279,7 @@ ms.locfileid: "86917809"
   
 -   [ODBC 대상 사용자 지정 속성](../../integration-services/data-flow/odbc-destination-custom-properties.md)  
   
--   [ODBC 원본 사용자 지정 속성](../../integration-services/data-flow/odbc-source-custom-properties.md)  
+-   [ODBC Source Custom Properties](../../integration-services/data-flow/odbc-source-custom-properties.md)  
   
 -   [OLE DB Custom Properties](../../integration-services/data-flow/ole-db-custom-properties.md)OLE DB 사용자 지정 속성  
   
@@ -326,7 +327,7 @@ ms.locfileid: "86917809"
         > [!NOTE]  
         >  **조건** 열이나 **식** 열에서 포커스가 제거될 때 식 구문이 유효하지 않은 경우 식 텍스트가 강조 표시될 수 있습니다.  
   
-10. **확인** 을 클릭하여 대화 상자를 종료합니다.  
+10. **확인**을 클릭하여 대화 상자를 닫습니다.  
   
     > [!NOTE]  
     >  식이 유효하지 않으면 식의 구문 오류를 설명하는 경고가 나타납니다.  

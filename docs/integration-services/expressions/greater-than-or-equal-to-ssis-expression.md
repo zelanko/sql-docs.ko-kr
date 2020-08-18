@@ -1,4 +1,5 @@
 ---
+description: '&gt;=(크거나 같음)(SSIS 식)'
 title: '&gt;=(크거나 같음)(SSIS 식) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 52ad504d-2f54-44de-b5e2-620577c0e289
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 165c016e7352b1ca90b3962763074b2df81a83ee
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b3cb7014c1f919503995921a6c90c5d4f5e52c6d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916991"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88347829"
 ---
 # <a name="gt-greater-than-or-equal-to-ssis-expression"></a>&gt;=(크거나 같음)(SSIS 식)
 
@@ -106,7 +107,7 @@ ListPrice >= 500
 @LPrice >= 500  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [&#62;&#40;보다 큼&#41;&#40;SSIS 식&#41;](../../integration-services/expressions/greater-than-ssis-expression.md)   
  [&#60;&#40;보다 작음&#41;&#40;SSIS 식&#41;](../../integration-services/expressions/less-than-ssis-expression.md)   
  [&#60;=&#40;작거나 같음&#41;&#40;SSIS 식&#41;](../../integration-services/expressions/less-than-or-equal-to-ssis-expression.md)   

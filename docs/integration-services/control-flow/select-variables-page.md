@@ -1,4 +1,5 @@
 ---
+description: 변수 선택 페이지
 title: 변수 선택 페이지 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e62083ec-d127-48ea-aaa4-cca6017a29cb
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a9527c0d73ed47e893e51e8e192c170a310172e4
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 1eec7f57655dd86ef62ee8cef40f2c2a9454a8f2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921134"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88349309"
 ---
 # <a name="select-variables-page"></a>변수 선택 페이지
 
@@ -38,10 +39,10 @@ ms.locfileid: "86921134"
  **이름**  
  변수의 이름을 지정합니다.  
   
- **형식**  
+ **유형**  
  변수의 데이터 형식을 지정합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [스크립트 태스크 편집기&#40;스크립트 페이지&#41;](../../integration-services/control-flow/script-task-editor-script-page.md)  
   
   

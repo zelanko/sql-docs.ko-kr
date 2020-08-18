@@ -1,4 +1,5 @@
 ---
+description: 파생 열 변환을 사용하여 열 값 파생
 title: 파생 열 변환을 사용하여 열 값 파생 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 28b07746-fc6f-42b2-b741-9de6fac3f29c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3ef2d8078dedfb15c1f4be27d4970c7eaaf4731a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 30708e4bfb6dc21aa3f110a74754600aa3492b0e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919401"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88348419"
 ---
 # <a name="derive-column-values-with-the-derived-column-transformation"></a>파생 열 변환을 사용하여 열 값 파생
 

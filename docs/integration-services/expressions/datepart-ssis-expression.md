@@ -1,4 +1,5 @@
 ---
+description: DATEPART(SSIS 식)
 title: DATEPART(SSIS 식) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3e590094-fc49-4144-805f-fdc1bf2fe509
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d8a87b6ca0118d181c21e46620a3cfd5e4c050d2
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 3d4509e356193391b903b764771dca170c06026d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923985"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88348249"
 ---
 # <a name="datepart-ssis-expression"></a>DATEPART(SSIS 식)
 
@@ -55,14 +56,14 @@ DATEPART(datepart, date)
 |--------------|-------------------|  
 |Year|yy, yyyy|  
 |Quarter|qq, q|  
-|Month|mm, m|  
+|월|mm, m|  
 |Dayofyear|dy, y|  
 |일|dd, d|  
-|Week|wk, ww|  
+|주|wk, ww|  
 |요일|dw|  
-|Hour|Hh|  
+|시간|Hh|  
 |Minute|mi, n|  
-|초|ss, s|  
+|Second|ss, s|  
 |Millisecond|Ms|  
   
 ## <a name="ssis-expression-examples"></a>SSIS 식 예  
@@ -84,7 +85,7 @@ DATEPART("dd", ModifiedDate)
 DATEPART("yy",GETDATE())  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [DATEADD&#40;SSIS 식&#41;](../../integration-services/expressions/dateadd-ssis-expression.md)   
  [DATEDIFF&#40;SSIS 식&#41;](../../integration-services/expressions/datediff-ssis-expression.md)   
  [DAY&#40;SSIS 식&#41;](../../integration-services/expressions/day-ssis-expression.md)   

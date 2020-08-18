@@ -1,4 +1,5 @@
 ---
+description: 함수(SSIS 식)
 title: 함수(SSIS 식) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: e9a41a31-94f4-46a4-b737-c707dd59ce48
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 72f03d8d53e9d85b9b274ad1ac821fdfc79a6f24
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: e0d2644192f6c38b98aaeec134b540ac269560d0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917017"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88348140"
 ---
 # <a name="functions-ssis-expression"></a>함수(SSIS 식)
 
@@ -42,7 +43,7 @@ ms.locfileid: "86917017"
   
  식 언어는 다음 수치 연산 함수를 제공합니다.  
   
-|함수|Description|  
+|기능|Description|  
 |--------------|-----------------|  
 |[ABS&#40;SSIS 식&#41;](../../integration-services/expressions/abs-ssis-expression.md)|숫자 식의 절대값을 양수로 반환합니다.|  
 |[EXP&#40;SSIS 식&#41;](../../integration-services/expressions/exp-ssis-expression.md)|밑이 e인 지정한 식의 지수를 반환합니다.|  
@@ -58,7 +59,7 @@ ms.locfileid: "86917017"
   
  식 계산기는 다음 문자열 함수를 제공합니다.  
   
-|함수|Description|  
+|기능|Description|  
 |--------------|-----------------|  
 |[CODEPOINT&#40;SSIS 식&#41;](../../integration-services/expressions/codepoint-ssis-expression.md)|문자 식에서 가장 왼쪽 문자의 유니코드 코드 값을 반환합니다.|  
 |[FINDSTRING&#40;SSIS 식&#41;](../../integration-services/expressions/findstring-ssis-expression.md)|식에서 지정한 문자열 항목의 인덱스(1부터 시작)를 반환합니다.|  
@@ -78,7 +79,7 @@ ms.locfileid: "86917017"
   
  식 계산기는 다음 날짜 및 시간 함수를 제공합니다.  
   
-|함수|Description|  
+|기능|Description|  
 |--------------|-----------------|  
 |[DATEADD&#40;SSIS 식&#41;](../../integration-services/expressions/dateadd-ssis-expression.md)|지정한 날짜에 날짜 또는 시간 간격을 더하여 새로운 DT_DBTIMESTAMP 값을 반환합니다.|  
 |[DATEDIFF&#40;SSIS 식&#41;](../../integration-services/expressions/datediff-ssis-expression.md)|지정한 두 날짜 간에 교차되는 날짜와 시간 경계값을 반환합니다.|  
@@ -91,14 +92,14 @@ ms.locfileid: "86917017"
   
  식 계산기는 다음 Null 함수를 제공합니다.  
   
-|함수|Description|  
+|기능|Description|  
 |--------------|-----------------|  
 |[ISNULL&#40;SSIS 식&#41;](../../integration-services/expressions/isnull-ssis-expression.md)|식이 Null인지 여부에 따라 부울 결과를 반환합니다.|  
 |[NULL&#40;SSIS 식&#41;](../../integration-services/expressions/null-ssis-expression.md)|요청한 데이터 형식의 Null 값을 반환합니다.|  
   
  식 이름은 대문자로 표시되지만 대/소문자를 구분하지 않습니다. 예를 들어 "null"은 "NULL"과 동일한 기능을 수행합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [연산자&#40;SSIS 식&#41;](../../integration-services/expressions/operators-ssis-expression.md)   
  [고급 Integration Services 식의 예](../../integration-services/expressions/examples-of-advanced-integration-services-expressions.md)   
  [Integration Services&#40;SSIS&#41; 식](../../integration-services/expressions/integration-services-ssis-expressions.md)  

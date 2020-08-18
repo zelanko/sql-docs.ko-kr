@@ -1,4 +1,5 @@
 ---
+description: 유사 항목 그룹화 변환
 title: 유사 항목 그룹화 변환 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -28,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: e43f17bd-9d13-4a8f-9f29-cce44cac1025
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c4e00be6f692bd3e4bec21acec6c2de6359622b7
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: e69c2b63e617e37fcd4dec1b7589e9b1808fefce
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919341"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88348449"
 ---
 # <a name="fuzzy-grouping-transformation"></a>유사 항목 그룹화 변환
 
@@ -43,7 +44,7 @@ ms.locfileid: "86919341"
   유사 항목 그룹화 변환에서는 중복되기 쉬운 데이터 행을 식별하고 데이터 표준화에 사용할 데이터의 중복 행을 선택하여 데이터 정리 태스크를 수행합니다.  
   
 > [!NOTE]  
->  성능 및 메모리 제한 사항을 포함하여 유사 항목 그룹화 변환에 대한 자세한 내용은 [Fuzzy Lookup and Fuzzy Grouping in SQL Server Integration Services 2005](https://go.microsoft.com/fwlink/?LinkId=96604)(SQL Server Integration Services 2005에서 유사 항목 조회 및 유사 항목 그룹화) 백서를 참조하세요.  
+>   성능 및 메모리 제한 사항을 포함하여 유사 항목 그룹화 변환에 대한 자세한 내용은 [SQL Server Integration Services 2005에서 유사 항목 조회 및 유사 항목 그룹화(Fuzzy Lookup and Fuzzy Grouping in SQL Server Integration Services 2005)](https://go.microsoft.com/fwlink/?LinkId=96604)백서를 참조하십시오.  
   
  유사 항목 그룹화 변환에는 변환 알고리즘이 작업을 수행하는 데 필요한 임시 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 테이블을 만들기 위해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 대한 연결이 필요합니다. 연결은 데이터베이스에 테이블을 만드는 권한을 가진 사용자로 확인되어야 합니다.  
   
@@ -180,7 +181,7 @@ ms.locfileid: "86919341"
  **토큰 구분 기호**  
  변환에서 데이터 토큰화에 사용할 수 있는 기본 구분 기호 집합을 제공하지만 필요에 따라 목록을 편집하여 구분 기호를 추가 또는 제거할 수 있습니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [유사 항목 조회 변환](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation.md)   
  [Integration Services 변환](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   

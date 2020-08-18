@@ -1,4 +1,5 @@
 ---
+description: Excel 연결 관리자
 title: Excel 연결 관리자 | Microsoft Docs
 ms.date: 04/02/2018
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 667419f2-74fb-4b50-b963-9197d1368cda
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: fdac3f09fa3b92d7babd9c43f5a71adc4191ac7e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 53d3ab2b085058cb81ce679e5da5a44ea1deb293
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923725"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88351159"
 ---
 # <a name="excel-connection-manager"></a>Excel 연결 관리자
 

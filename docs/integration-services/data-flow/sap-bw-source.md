@@ -1,4 +1,5 @@
 ---
+description: SAP BW 원본
 title: SAP BW 원본 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 749afb64-3567-4dc9-8431-783d650c25db
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 894d94e277f1304a5d9d1e1986e5f769fbc5f4e9
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 0506eb531462702870ef726b585dd5f07c1d4db4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917825"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88349029"
 ---
 # <a name="sap-bw-source"></a>SAP BW 원본
 
@@ -52,7 +53,7 @@ ms.locfileid: "86917825"
   
     2.  **Activation Type**에서 **Registered Server Program**을 선택합니다.  
   
-    3.  **Communication Type with Target System**(대상 시스템과 통신 유형)에서 **Non-Unicode (Inactive MDMP Settings)** (비유니코드(비활성 MDMP 설정))를 선택합니다.  
+    3.  **Communication Type with Target System**(대상 시스템과 통신 유형)에서 **Non-Unicode (Inactive MDMP Settings)**(비유니코드(비활성 MDMP 설정))를 선택합니다.  
   
     4.  적절한 프로그램 ID를 할당합니다.  
   
@@ -141,7 +142,7 @@ ms.locfileid: "86917825"
   
 -   [미리 보기](../../integration-services/data-flow/preview.md)  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [Microsoft Connector for SAP BW 구성 요소](../../integration-services/microsoft-connector-for-sap-bw-components.md)  
   
   

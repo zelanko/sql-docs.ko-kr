@@ -1,4 +1,5 @@
 ---
+description: CDC Service 명령줄 인터페이스를 사용하는 방법
 title: CDC Service 명령줄 인터페이스를 사용하는 방법 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ab87b7da-c3b9-4bc8-a853-798716cbf74b
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 12556983c82d6d06e8821d009c8a8e7ece7d618c
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 3a2017ef22c611e7ba84095d11725e3dcfaca378
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916542"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88351089"
 ---
 # <a name="how-to-use-the-cdc-service-command-line-interface"></a>CDC Service 명령줄 인터페이스를 사용하는 방법
 

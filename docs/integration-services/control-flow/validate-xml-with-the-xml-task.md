@@ -1,4 +1,5 @@
 ---
+description: Validate XML with the XML Task
 title: XML 태스크를 사용하여 XML 유효성 검사 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 224fc025-c21f-4d43-aa9d-5ffac337f9b0
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 334b50ec74ebd8d67b2598740a0bb8f2c7f48059
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 2dd292ea05ae40ff5cd19a1a8e8de55f9f0b9095
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913879"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88349259"
 ---
 # <a name="validate-xml-with-the-xml-task"></a>Validate XML with the XML Task
 

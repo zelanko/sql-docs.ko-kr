@@ -1,4 +1,5 @@
 ---
+description: 패키지 선택
 title: 패키지 선택 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 92b47a2b-21b5-460a-885d-6cc4bb567249
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1045623c5eabe80a66a9320cb8425b47788d950d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ce10dbf39c92754b2fbc2879041e98094dc06ceb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921149"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88349939"
 ---
 # <a name="select-a-package"></a>패키지 선택
 
@@ -62,7 +63,7 @@ ms.locfileid: "86921149"
  **파일 이름**  
  패키지 경로를 입력하거나 찾아보기 단추 **(...)** 를 클릭하고 패키지를 찾습니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [메시지 큐 태스크](../../integration-services/control-flow/message-queue-task.md)  
   
   

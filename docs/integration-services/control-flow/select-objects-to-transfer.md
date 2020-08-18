@@ -1,4 +1,5 @@
 ---
+description: 전송할 개체 선택
 title: 전송할 개체 선택 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 57941e52-374a-4c07-84eb-9899ff1bb119
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f54c4a0e32effba84652514844b16754f5dacdd2
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 3328426a280f8e974ddaa8cbb99ea944e006553f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921139"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88350169"
 ---
 # <a name="select-objects-to-transfer"></a>전송할 개체 선택
 

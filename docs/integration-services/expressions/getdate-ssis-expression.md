@@ -1,4 +1,5 @@
 ---
+description: GETDATE(SSIS 식)
 title: GETDATE(SSIS 식) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6d20ec93-3244-4d63-baf6-70eff7bd598c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 36646e7411312cd6285f61dafbb64628bb82eb20
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d74e82c27fa21070d3932b98304894964b91e3a8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916997"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88348089"
 ---
 # <a name="getdate-ssis-expression"></a>GETDATE(SSIS 식)
 
@@ -39,7 +40,7 @@ GETDATE()
 ```  
   
 ## <a name="arguments"></a>인수  
- None  
+ 없음  
   
 ## <a name="result-types"></a>결과 형식  
  DT_DBTIMESTAMP  
@@ -63,7 +64,7 @@ DATEDIFF("dd",ModifiedDate,GETDATE())
 DATEADD("Month",3,GETDATE())  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [GETUTCDATE&#40;SSIS 식&#41;](../../integration-services/expressions/getutcdate-ssis-expression.md)   
  [함수&#40;SSIS 식&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
