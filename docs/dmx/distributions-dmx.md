@@ -1,4 +1,5 @@
 ---
+description: 배포(DMX)
 title: 배포 (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 3c3544e73726dafa713b45cf08aba0e20631a869
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: f0aef6ed4b98241b07e84aa11ed6408c600d6ee7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86969865"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88414199"
 ---
 # <a name="distributions-dmx"></a>배포(DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -36,7 +37,7 @@ ms.locfileid: "86969865"
  배포 유형에 대 한 자세한 내용은 [열 배포 &#40;데이터 마이닝&#41;](https://docs.microsoft.com/analysis-services/data-mining/column-distributions-data-mining)를 참조 하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [데이터 마이닝&#41;&#40;내용 유형](https://docs.microsoft.com/analysis-services/data-mining/content-types-data-mining)   
+ [데이터 마이닝&#41;&#40;내용 유형 ](https://docs.microsoft.com/analysis-services/data-mining/content-types-data-mining)   
  [DMX&#41; 참조 &#40;데이터 마이닝 확장](../dmx/data-mining-extensions-dmx-reference.md)   
  [데이터 마이닝 확장 &#40;DMX&#41; 구문 요소](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
  [데이터 마이닝 확장 &#40;DMX&#41; 함수 참조](../dmx/data-mining-extensions-dmx-function-reference.md)   

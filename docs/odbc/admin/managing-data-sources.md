@@ -1,4 +1,5 @@
 ---
+description: 데이터 원본 관리
 title: 데이터 원본 관리 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,20 +17,20 @@ helpviewer_keywords:
 ms.assetid: 67cc4945-4850-4eb4-8da6-b835ddaeca4c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a5069ac9a5babc3071c52d73d5b56b21729a5d8a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 506a7b6fbbf93b8fb4b28f66824778b2266f6cbc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307214"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88412866"
 ---
 # <a name="managing-data-sources"></a>데이터 원본 관리
 드라이버의 설치 프로그램에서 ODBC 드라이버를 설치한 후에는 하나 이상의 데이터 원본을 정의할 수 있습니다. 데이터 원본 이름 (DSN)은 데이터에 대 한 고유한 설명을 제공 해야 합니다. 예: *급여* 또는 *외상 매입금*. 현재 설치 된 모든 드라이버에 대해 정의 된 사용자 및 시스템 데이터 원본은 **ODBC 데이터 원본 관리자** 대화 상자의 **사용자 DSN** 또는 **시스템 dsn** 탭에 나열 됩니다. 지정 된 디렉터리의 파일 데이터 원본이 **파일 DSN** 탭에 나열 됩니다. 표시 되는 디렉터리는 **파일 DSN** 탭의 **찾는 위치** 상자에 입력 됩니다.  
   
 > [!NOTE]  
->  64 비트 플랫폼에서 32 비트 드라이버에 연결 하는 데이터 원본을 관리 하려면 c:\windows\sysWOW64\odbcad32.exe.를 사용 합니다. 64 비트 드라이버에 연결 하는 데이터 원본을 관리 하려면 c:\windows\system32\odbcad32.exe.를 사용 합니다. 64 비트 Windows 8 운영 체제의 **관리 도구** 에는 32 비트 및 64 비트 **ODBC 데이터 원본 관리자** 대화 상자 둘 다에 대 한 아이콘이 있습니다.  
+>  64 비트 플랫폼에서 32 비트 드라이버에 연결 하는 데이터 원본을 관리 하려면 c:\windows\sysWOW64\odbcad32.exe을 사용 합니다. 64 비트 드라이버에 연결 하는 데이터 원본을 관리 하려면 c:\windows\system32\odbcad32.exe을 사용 합니다. 64 비트 Windows 8 운영 체제의 **관리 도구** 에는 32 비트 및 64 비트 **ODBC 데이터 원본 관리자** 대화 상자 둘 다에 대 한 아이콘이 있습니다.  
   
- 64 비트 odbcad32.exe를 사용 하 여 32 비트 드라이버에 연결 하는 DSN을 구성 하거나 제거 하는 경우 (예: **Microsoft Access에서 Microsoft Access\*(.mdb)**, 다음과 같은 오류 메시지가 표시 됩니다.  
+ 64 비트 odbcad32.exe를 사용 하 여 32 비트 드라이버에 연결 하는 DSN을 구성 하거나 제거 하는 경우, 예를 들어 **Driver Microsoft Access ( \* .mdb)** 를 사용 하는 경우 다음 오류 메시지가 표시 됩니다.  
   
 ```  
 The specified DSN contains an architecture mismatch between the Driver and Application  

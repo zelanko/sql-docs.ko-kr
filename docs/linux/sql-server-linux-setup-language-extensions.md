@@ -11,16 +11,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 29c0d209ada9ea624c588b4510191b8ae8b7e91c
-ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
+ms.openlocfilehash: 24a203a45fac725a95402010531185705b3af5cd
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87522875"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88178268"
 ---
 # <a name="install-sql-server-language-extensions-on-linux"></a>Linux에 SQL Server 언어 확장 설치
 
-[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
+[!INCLUDE [SQL Server 2019 - Linux](../includes/applies-to-version/sqlserver2019-linux.md)]
 
 언어 확장은 데이터베이스 엔진의 추가 기능입니다. [데이터베이스 엔진과 언어 확장을 동시에 설치](#install-all)할 수 있지만, 더 많은 구성 요소를 추가하기 전에 문제를 해결할 수 있도록 먼저 SQL Server 데이터베이스 엔진을 설치하고 구성하는 것이 모범 사례입니다. 
 

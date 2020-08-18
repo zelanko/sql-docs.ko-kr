@@ -11,16 +11,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning-services
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 34e33ea3fbb3ff0ef10e237bc7bdc0ad61c223db
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: ed29244d06e0fcf08c5f56af59c3e1f9feeb2883
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484631"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88178258"
 ---
 # <a name="install-sql-server-machine-learning-services-python-and-r-on-linux"></a>Linux에 SQL Server Machine Learning Services(Python 및 R) 설치
 
-[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
+[!INCLUDE [SQL Server 2019 - Linux](../includes/applies-to-version/sqlserver2019-linux.md)]
 
 이 문서에서는 Linux에 [SQL Server Machine Learning Services](../machine-learning/index.yml)를 설치하는 과정을 안내합니다. Machine Learning Services를 사용하여 데이터베이스 내에서 Python 및 R 스크립트를 실행할 수 있습니다.
 

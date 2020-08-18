@@ -1,4 +1,5 @@
 ---
+description: DROP TABLE 명령
 title: DROP TABLE 명령 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: bc50459b-8861-4889-84a9-129ae9065aa8
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 779c519f720027aea3a6f6cf2587d3c6e0b59b52
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9f383740584ca524c732172ee363f7ffb393c30c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303424"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88412569"
 ---
 # <a name="drop-table-command"></a>DROP TABLE 명령
 데이터 원본을 사용 하 여 지정 된 데이터베이스에서 테이블을 제거 하 고 디스크에서 삭제 합니다.  

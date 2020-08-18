@@ -1,4 +1,5 @@
 ---
+description: SQLColAttributes(Visual FoxPro ODBC 드라이버)
 title: SQLColAttributes (Visual FoxPro ODBC 드라이버) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: d403dfa0-c26d-47d4-91d9-2f29aa387399
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9508fa7b9ada8273e1250d7584e577892acf5c51
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 062a5af2e8aab4d71cf201284bd065242c588f6a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307914"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88412199"
 ---
 # <a name="sqlcolattributes-visual-foxpro-odbc-driver"></a>SQLColAttributes(Visual FoxPro ODBC 드라이버)
 > [!NOTE]  
@@ -34,7 +35,7 @@ ms.locfileid: "81307914"
   
  Visual FoxPro ODBC 드라이버는 모든 *fDescType* 값을 지원 합니다. 다음 표에는 선택한 값의 드라이버 구현에 대 한 주석이 포함 되어 있습니다.  
   
-|*fDescType*|주석|  
+|*fDescType*|의견|  
 |-----------------|-------------|  
 |SQL_COLUMN_AUTO_INCREMENT|FALSE를 반환 합니다. Visual FoxPro에 카운터 필드가 없습니다.|  
 |SQL_COLUMN_CASE_SENSITIVE|열 형식이 문자인 경우 항상 TRUE를 반환 합니다.|  

@@ -1,4 +1,5 @@
 ---
+description: TopPercent(MDX)
 title: TopPercent (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: dcb01ae9771f748ad62faba37cea103f1c7acc8c
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: 5f0ae1e59a46c03300018f3243926bb30cef0398
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87362653"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88412867"
 ---
 # <a name="toppercent-mdx"></a>TopPercent(MDX)
 
@@ -35,7 +36,7 @@ TopPercent(Set_Expression, Percentage, Numeric_Expression)
  반환할 튜플의 백분율을 지정하는 유효한 숫자 식입니다.  
   
 > [!IMPORTANT]  
->  *백분율* 은 양수 여야 합니다. 음수 값은 오류를 생성 합니다.  
+>  *백분율*  은 양수 여야 합니다. 음수 값은 오류를 생성 합니다.  
   
  *Numeric_Expression*  
  숫자를 반환하는 셀 좌표의 유효한 숫자 식으로서, 일반적으로 MDX 식입니다.  

@@ -1,4 +1,5 @@
 ---
+description: 데이터 정의 문 (DMX)
 title: 데이터 정의 문 (DMX) | Microsoft Docs
 ms.date: 10/23/2019
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 7c9646fa7e2ba438bb2f2b57ac37b2ceca5a957c
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 020dd7baa05a6b02c7acea681343361c559c7c22
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86969844"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88413889"
 ---
 # <a name="dmx-statements---data-definition"></a>DMX 문 - 데이터 정의 
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -23,13 +24,13 @@ ms.locfileid: "86969844"
 |인수를 제거합니다.|설명|  
 |---------------|-----------------|  
 |[CREATE MINING STRUCTURE&#40;DMX&#41;](../dmx/create-mining-structure-dmx.md)|데이터베이스에 새 마이닝 구조를 만듭니다.|  
-|[DMX&#41;&#40;마이닝 구조 변경](../dmx/alter-mining-structure-dmx.md)|기존 마이닝 구조에 마이닝 모델을 추가합니다.|  
-|[DMX&#41;&#40;마이닝 모델 만들기](../dmx/create-mining-model-dmx.md)|데이터베이스에 새 마이닝 구조 및 마이닝 모델을 만듭니다.|  
+|[DMX&#41;&#40;마이닝 구조 변경 ](../dmx/alter-mining-structure-dmx.md)|기존 마이닝 구조에 마이닝 모델을 추가합니다.|  
+|[DMX&#41;&#40;마이닝 모델 만들기 ](../dmx/create-mining-model-dmx.md)|데이터베이스에 새 마이닝 구조 및 마이닝 모델을 만듭니다.|  
 |[DROP MINING MODEL&#40;DMX&#41;](../dmx/drop-mining-model-dmx.md)|데이터베이스에서 마이닝 모델을 삭제합니다.|  
-|[DMX&#41;&#40;마이닝 구조 삭제](../dmx/drop-mining-structure-dmx.md)|데이터베이스에서 마이닝 구조를 삭제합니다.|  
+|[DMX&#41;&#40;마이닝 구조 삭제 ](../dmx/drop-mining-structure-dmx.md)|데이터베이스에서 마이닝 구조를 삭제합니다.|  
 |[EXPORT&#40;DMX&#41;](../dmx/export-dmx.md)|마이닝 모델이나 마이닝 구조 및 연결된 개체를 .abf 파일로 내보냅니다.|  
 |[IMPORT&#40;DMX&#41;](../dmx/import-dmx.md)|.abf 파일에서 마이닝 모델이나 마이닝 구조 및 연결된 개체를 가져옵니다.|  
-|[&#40;DMX&#41;를 선택 합니다.](../dmx/select-into-dmx.md)|기존 마이닝 모델의 복사본을 만듭니다.|  
+|[&#40;DMX&#41;를 선택 합니다. ](../dmx/select-into-dmx.md)|기존 마이닝 모델의 복사본을 만듭니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [데이터 마이닝 확장 &#40;DMX&#41; 데이터 조작 문](../dmx/dmx-statements-data-manipulation.md)   

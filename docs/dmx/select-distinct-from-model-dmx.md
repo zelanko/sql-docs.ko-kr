@@ -1,4 +1,5 @@
 ---
+description: 모델에서 고유 &lt; 선택 &gt; (DMX)
 title: 모델에서 고유 &lt; 선택 &gt; (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 3413ec29cb2f1f3e710a1d52037161094ab713ce
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 3a8c65f6d0321ae74d18d32bd3c5208bbc2df5b8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970637"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88413269"
 ---
 # <a name="select-distinct-from-ltmodel-gt-dmx"></a>모델에서 고유 &lt; 선택 &gt; (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -47,7 +48,7 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
 ## <a name="remarks"></a>설명  
  **SELECT DISTINCT FROM** 문은 단일 열 또는 관련 열 집합을 사용 하는 경우에만 작동 합니다. 이 절은 관련 없는 열 집합에는 적용되지 않습니다.  
   
- **SELECT DISTINCT FROM** 문을 사용 하 여 중첩 테이블 내의 열을 직접 참조할 수 있습니다. 예를 들어:  
+ **SELECT DISTINCT FROM** 문을 사용 하 여 중첩 테이블 내의 열을 직접 참조할 수 있습니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.  
   
 ```  
 <model>.<table column reference>.<column reference>  

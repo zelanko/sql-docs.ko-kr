@@ -1,4 +1,5 @@
 ---
+description: DMX(Data Mining Extensions) 연산자 참조
 title: DMX (데이터 마이닝 확장) 연산자 참조 | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 60271f810de7d577bebdaac4ed0ceb6e48c08d68
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: ba8f03b86a93122b2dcd9b825adc656feae80cd2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86971788"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88414299"
 ---
 # <a name="data-mining-extensions-dmx-operator-reference"></a>DMX(Data Mining Extensions) 연산자 참조
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -22,10 +23,10 @@ ms.locfileid: "86971788"
   
 |연산자|설명|  
 |--------------|-----------------|  
-|[+ &#40;&#41; &#40;DMX&#41;를 추가 합니다.](../dmx/add-dmx.md)|두 개의 수를 더하는 산술 연산자|  
-|[-&#40;&#41; &#40;DMX&#41;빼기](../dmx/subtract-dmx.md)|한 수에서 다른 수를 빼는 산술 연산자|  
+|[+ &#40;&#41; &#40;DMX&#41;를 추가 합니다. ](../dmx/add-dmx.md)|두 개의 수를 더하는 산술 연산자|  
+|[-&#40;&#41; &#40;DMX&#41;빼기 ](../dmx/subtract-dmx.md)|한 수에서 다른 수를 빼는 산술 연산자|  
 |[&#42; &#40;&#41; &#40;DMX&#41;](../dmx/multiply-dmx.md)|두 개의 수를 곱하는 산술 연산자|  
-|[DMX&#41; &#40;&#40;나눕니다&#41;](../dmx/divide-dmx.md)|한 수를 다른 수로 나누는 산술 연산자|  
+|[ DMX&#41; &#40;&#40;나눕니다&#41;](../dmx/divide-dmx.md)|한 수를 다른 수로 나누는 산술 연산자|  
 |[&#60; &#40;&#41; &#40;DMX&#41;](../dmx/less-than-dmx.md)|비교 연산자. Null이 아닌 값으로 계산되는 인수의 경우 왼쪽의 인수 값이 오른쪽의 인수 값보다 작으면 TRUE를 반환하고 그렇지 않으면 FALSE를 반환합니다. 인수 중 하나 또는 둘 다가 Null 값으로 계산되면 연산자는 Null 값을 반환합니다.|  
 |[&#62; &#40;&#41; &#40;DMX&#41;](../dmx/greater-than-dmx.md)|비교 연산자. Null이 아닌 값으로 계산되는 인수의 경우 왼쪽의 인수 값이 오른쪽의 인수 값보다 크면 TRUE를 반환하고 그렇지 않으면 FALSE를 반환합니다. 인수 중 하나 또는 둘 다가 Null 값으로 계산되면 연산자는 Null 값을 반환합니다.|  
 |[= &#40;&#41; &#40;DMX와 동일&#41;](../dmx/equal-to-dmx.md)|비교 연산자. Null이 아닌 값으로 계산되는 인수의 경우 왼쪽의 인수 값과 오른쪽의 인수 값이 같으면 TRUE를 반환하고 그렇지 않으면 FALSE를 반환합니다. 인수 중 하나 또는 둘 다가 Null 값으로 계산되면 연산자는 Null 값을 반환합니다.|  
@@ -39,7 +40,7 @@ ms.locfileid: "86971788"
 |[-&#40;부정&#41; &#40;DMX&#41;](../dmx/negative-dmx.md)|숫자 식의 음수 값을 반환하는 단항 연산자|  
 |[&#41; &#40;DMX &#40;주석&#41;](../dmx/double-slash-comment-dmx.md)|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에서 실행되지 않는 텍스트 문자열을 나타냅니다. 주석을 DMX 문 안에 중첩하거나 코드 줄 끝에 포함하거나 별도의 줄에 삽입할 수 있습니다.|  
 |[--&#40;설명&#41; &#40;DMX&#41; 요약](../dmx/comment-dmx-summary.md)|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에서 실행되지 않는 텍스트 문자열을 나타냅니다. 주석을 DMX 문 안에 중첩하거나 코드 줄 끝에 포함하거나 별도의 줄에 삽입할 수 있습니다.|  
-|[DMX&#41; &#40;DMX&#41;&#40;주석](../dmx/slash-star-comment-dmx.md)|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에서 실행되지 않는 텍스트 문자열을 나타냅니다. 주석을 DMX 문 안에 중첩하거나 코드 줄 끝에 포함하거나 별도의 줄에 삽입할 수 있습니다.|  
+|[DMX&#41; &#40;DMX&#41;&#40;주석 ](../dmx/slash-star-comment-dmx.md)|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에서 실행되지 않는 텍스트 문자열을 나타냅니다. 주석을 DMX 문 안에 중첩하거나 코드 줄 끝에 포함하거나 별도의 줄에 삽입할 수 있습니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [데이터 마이닝 확장 &#40;DMX&#41; 함수 참조](../dmx/data-mining-extensions-dmx-function-reference.md)   

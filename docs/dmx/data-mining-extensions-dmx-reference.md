@@ -1,4 +1,5 @@
 ---
+description: DMX(Data Mining Extensions) 참조
 title: DMX (데이터 마이닝 확장) 참조 | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 02c7185ebbf264ebf8ed8adda4915170f888e74b
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 6197fc8508e1334e5f8afdcb14aeaf7488890159
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86971789"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88414089"
 ---
 # <a name="data-mining-extensions-dmx-reference"></a>DMX(Data Mining Extensions) 참조
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -33,7 +34,7 @@ ms.locfileid: "86971789"
   
  **자세한 내용:** [마이닝 구조 &#40;Analysis Services 데이터 마이닝&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-structures-analysis-services-data-mining)  
   
-##  <a name="dmx-statements"></a><a name="BKMK_DMXStatements"></a>DMX 문  
+##  <a name="dmx-statements"></a><a name="BKMK_DMXStatements"></a> DMX 문  
  DMX 문을 사용하여 데이터 마이닝 모델을 작성, 처리, 삭제, 복사, 검색 및 예측할 수 있습니다. DMX에는 두 가지 유형의 문인 데이터 정의 문과 데이터 조작 문이 있습니다. 이 두 가지 유형의 문을 사용하여 다양한 태스크를 수행할 수 있습니다.  
   
  다음 섹션에서는 DMX 문을 사용하는 방법에 대해 설명합니다.  
@@ -44,7 +45,7 @@ ms.locfileid: "86971789"
   
 -   [쿼리 기본 사항](#BKMK_Queries)  
   
-###  <a name="data-definition-statements"></a><a name="BKMK_DDL"></a>데이터 정의 문  
+###  <a name="data-definition-statements"></a><a name="BKMK_DDL"></a> 데이터 정의 문  
  DMX의 데이터 정의 문을 사용하여 새 마이닝 구조 및 모델을 만들거나 정의하고 마이닝 모델과 마이닝 구조를 가져오거나 내보내고 데이터베이스의 기존 모델을 삭제할 수 있습니다. DMX의 데이터 정의 문은 DDL(데이터 정의 언어)의 일부입니다.  
   
  DMX의 데이터 정의 문을 사용하여 다음과 같은 태스크를 수행할 수 있습니다.  
@@ -63,7 +64,7 @@ ms.locfileid: "86971789"
   
  [DMX 문으로 이동](#BKMK_DMXStatements)  
   
-###  <a name="data-manipulation-statements"></a><a name="BKMK_DML"></a>데이터 조작 문  
+###  <a name="data-manipulation-statements"></a><a name="BKMK_DML"></a> 데이터 조작 문  
  DMX의 데이터 조작 문을 사용하여 기존 마이닝 모델로 작업하고 모델을 검색하고 모델에 대한 예측을 만들 수 있습니다. DMX의 데이터 조작 문은 DML(데이터 조작 언어)의 일부입니다.  
   
  DMX의 데이터 조작 문을 사용하여 다음과 같은 태스크를 수행할 수 있습니다.  
@@ -72,7 +73,7 @@ ms.locfileid: "86971789"
   
 -   SELECT 문을 확장 하 여 원본 데이터의 통계와 같이 모델 학습 중에 계산 되 고 데이터 마이닝 모델에 저장 되는 정보를 검색 합니다. SELECT 문의 기능을 확장 하기 위해 포함할 수 있는 절은 다음과 같습니다.  
   
-    -   [&#60;모델 &#62; &#40;DMX&#41;에서 고유를 선택 합니다.](../dmx/select-distinct-from-model-dmx.md)  
+    -   [&#60;모델 &#62; &#40;DMX&#41;에서 고유를 선택 합니다. ](../dmx/select-distinct-from-model-dmx.md)  
   
     -   [&#60;모델&#62;에서 선택 합니다. 콘텐츠 &#40;DMX&#41;](../dmx/select-from-model-content-dmx.md)  
   
@@ -90,7 +91,7 @@ ms.locfileid: "86971789"
   
  [DMX 문으로 이동](#BKMK_DMXStatements)  
   
-###  <a name="dmx-query-fundamentals"></a><a name="BKMK_Queries"></a>DMX 쿼리 기본 사항  
+###  <a name="dmx-query-fundamentals"></a><a name="BKMK_Queries"></a> DMX 쿼리 기본 사항  
  SELECT 문은 대부분의 DMX 쿼리에 대 한 기본입니다. 이 문과 함께 다양한 절을 사용하여 마이닝 모델을 검색하거나 복사하거나 예측할 수 있습니다. 예측 쿼리는 SELECT의 형태를 사용 하 여 기존 마이닝 모델을 기반으로 예측을 만듭니다. 함수를 통해 데이터 마이닝 모델의 내재된 기능을 확장하여 마이닝 모델을 다양하게 검색 및 쿼리할 수 있습니다.  
   
  DMX 함수를 사용하여 모델 학습 중에 발견한 정보를 가져오고 새 정보를 계산할 수 있습니다. 기본 데이터 또는 예측 정확성을 설명하는 통계를 반환하거나 예측에 대한 상세한 설명을 반환하는 등의 여러 가지 용도로 함수를 사용할 수 있습니다.  

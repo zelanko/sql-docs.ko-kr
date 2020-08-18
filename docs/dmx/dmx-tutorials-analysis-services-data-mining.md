@@ -1,4 +1,5 @@
 ---
+description: DMX 자습서(Analysis Services - 데이터 마이닝)
 title: DMX 자습서 (Analysis Services 데이터 마이닝) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 4fcf803bb76bfb894faa75e6e51180cc25434abe
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 8974b18cf666382d5be395f5b52b87fccae29aff
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86969822"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88413400"
 ---
 # <a name="dmx-tutorials-analysis-services---data-mining"></a>DMX 자습서(Analysis Services - 데이터 마이닝)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -38,7 +39,7 @@ ms.locfileid: "86969822"
   
  [DMX Select 문 이해](../dmx/understanding-the-dmx-select-statement.md)  
   
-## <a name="related-sections"></a>관련 단원  
+## <a name="related-sections"></a>관련 섹션  
  [다차원 모델 데이터 액세스 &#40;Analysis Services 다차원 데이터&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data)  
   
 ## <a name="see-also"></a>참고 항목  

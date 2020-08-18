@@ -21,14 +21,14 @@ helpviewer_keywords:
 - marked transactions [SQL Server], restoring
 - database restores [SQL Server], point in time
 ms.assetid: 77a0d9c0-978a-4891-8b0d-a4256c81c3f8
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 4f959ddb388be7f0f21441629239a3d479a0c711
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: MashaMSFT
+ms.author: mathoma
+ms.openlocfilehash: 71241e4a76e90a7c42e4dbd6e176d43bb5281fdb
+ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85669819"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88088171"
 ---
 # <a name="recovery-of-related--databases-that-contain-marked-transaction"></a>표시된 트랜잭션이 포함된 관련 데이터베이스 복구
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "85669819"
 ## <a name="transact-sql-syntax-for-inserting-named-marks-into-a-transaction-log"></a>명명된 표시를 트랜잭션 로그에 삽입하는 Transact-SQL 구문  
  [BEGIN TRANSACTION](../../t-sql/language-elements/begin-transaction-transact-sql.md) 문과 WITH MARK [*description*] 절을 사용하여 표시를 트랜잭션 로그에 삽입합니다. 표시 이름은 트랜잭션 이름과 같습니다. 선택 요소인 *description* 은 표시의 이름이 아니라 표시의 텍스트 설명입니다. 예를 들어 다음 `BEGIN TRANSACTION` 문에서 생성된 표시 및 트랜잭션의 이름은 `Tx1`입니다.  
   
-```wmimof  
+```sql  
 BEGIN TRANSACTION Tx1 WITH MARK 'not the mark name, just a description'    
 ```  
   

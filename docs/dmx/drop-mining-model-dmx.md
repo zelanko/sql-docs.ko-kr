@@ -1,4 +1,5 @@
 ---
+description: DROP MINING MODEL(DMX)
 title: 마이닝 모델 삭제 (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: e2a4a4a1905e3d3ac742b1985a762e08f27f6338
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: e95390c8014835862fa5ce9b65291bb4a7c1b107
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86969784"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88413380"
 ---
 # <a name="drop-mining-model-dmx"></a>DROP MINING MODEL(DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -31,7 +32,7 @@ DROP MINING MODEL <model >
  *model*  
  모델 식별자입니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 코드 예에서는 NBSample 마이닝 모델을 삭제합니다.  
   
 ```  

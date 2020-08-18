@@ -1,4 +1,5 @@
 ---
+description: SQLColAttributes(Paradox 드라이버)
 title: SQLColAttributes (Paradox 드라이버) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: bbeef024-d470-4d28-b61b-26997ef41007
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8a18cfa1a3c22795b16427ef341b215cdadb998b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 016de4e65579b8218a73fb871071622adf0ce3de
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307934"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88412219"
 ---
 # <a name="sqlcolattributes-paradox-driver"></a>SQLColAttributes(Paradox 드라이버)
 > [!NOTE]  
 >  이 항목에서는 Paradox 드라이버 관련 정보를 제공 합니다. 이 함수에 대 한 일반 정보는 [ODBC API 참조](../../odbc/reference/syntax/odbc-api-reference.md)에서 적절 한 항목을 참조 하세요.  
   
-|특성|주석|  
+|attribute|주석|  
 |---------------|--------------|  
 |SQL_COLUMN_DISPLAY_SIZE|가 중 데이터의 경우에는 열의 최대 길이가 열 시간 2의 최대 길이가 아니라 열의 최대 길이를 SQL_COLUMN_DISPLAY_SIZE 합니다.|  
 |SQL_OWNER_NAME|소유자 이름이 지원 되지 않으므로이 열에 빈 문자열 ("")이 반환 됩니다.|  

@@ -1,4 +1,5 @@
 ---
+description: dBASE 데이터 형식
 title: dBASE 데이터 형식 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a0e31e6b-d02b-4ee2-9b37-5baf6a11c0a6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 17b96ad0b6674a2d120ef46d9bfa221e8df6d140
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9eca7d603a136bd1921ee93656d38f59efcda5f4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307694"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88412769"
 ---
 # <a name="dbase-data-types"></a>dBASE 데이터 형식
 다음 표에서는 dBASE 데이터 형식이 ODBC SQL 데이터 형식으로 매핑되는 방법을 보여 줍니다. 모든 ODBC SQL 데이터 형식이 지원 되는 것은 아닙니다.  
@@ -50,7 +51,7 @@ ms.locfileid: "81307694"
   
  다음 표에서는 dBASE 데이터 형식에 대 한 제한 사항을 보여 줍니다.  
   
-|데이터 형식|설명|  
+|데이터 형식|Description|  
 |---------------|-----------------|  
 |CHAR|0 또는 지정 되지 않은 길이의 CHAR 열을 만들면 실제로 254 바이트 열이 반환 됩니다.|  
 |암호화된 데이터|DBASE 드라이버는 암호화 된 dBASE 테이블을 지원 하지 않습니다.|  

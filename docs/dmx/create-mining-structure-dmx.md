@@ -1,4 +1,5 @@
 ---
+description: CREATE MINING STRUCTURE(DMX)
 title: 마이닝 구조 만들기 (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: efe160fc3bb50f80b70c0d510eedd880f985f9b9
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 06f013ccb5c33dfbaba2fe0a0e102a448c17e036
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86971817"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88414029"
 ---
 # <a name="create-mining-structure-dmx"></a>CREATE MINING STRUCTURE(DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -106,7 +107,7 @@ CREATE [SESSION] MINING STRUCTURE <structure>
  열 하나에 대해 여러 개의 모델링 플래그 값을 정의할 수 있습니다. 단, 하나의 열에는 각각 하나의 내용 유형과 데이터 형식만 있을 수 있습니다.  
   
 ### <a name="column-relationships"></a>열 관계  
- 열 정의 문에 절을 추가하여 두 열 간의 관계를 설명할 수 있습니다. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에서는 다음 절의 사용을 지원 합니다 \<column relationship> .  
+ 열 정의 문에 절을 추가하여 두 열 간의 관계를 설명할 수 있습니다. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서는 다음 절의 사용을 지원 합니다 \<column relationship> .  
   
  **관련 항목**  
  값 계층 구조를 나타냅니다. RELATED TO 열의 대상은 중첩 테이블의 키 열, 사례 행의 불연속 값 열 또는 RELATED TO 절이 있는 다른 열(중첩된 열을 나타냄)일 수 있습니다.  
@@ -133,7 +134,7 @@ WITH HOLDOUT (2000 CASES OR 20 PERCENT)
 > [!NOTE]  
 >  파티션 정보는 학습 데이터와 함께 캐시 되므로 홀드 아웃을 사용 하려면 마이닝 구조의 **Cachemode** 속성이 **KeepTrainingData**로 설정 되어 있는지 확인 해야 합니다. 이는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에서 새 마이닝 구조에 대한 기본 설정입니다. 홀드 아웃 파티션이 포함 된 기존 마이닝 구조에서 **Cachemode** 속성을 **ClearTrainingCases** 로 변경 해도 처리 된 마이닝 모델에는 영향을 주지 않습니다. 그러나 <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> 가 **KeepTrainingData**으로 설정 되지 않은 경우 홀드 아웃 매개 변수는 영향을 주지 않습니다. 이는 모든 원본 데이터가 학습에 사용되며 테스트 집합은 사용할 수 없음을 의미합니다. 파티션의 정의는 구조와 함께 캐시됩니다. 학습 사례의 캐시를 지우면 테스트 데이터의 캐시와 홀드아웃 집합의 정의도 함께 지워집니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 DMX를 사용하여 홀드아웃이 있는 마이닝 구조를 만드는 방법을 보여 줍니다.  
   
 ### <a name="example-1-adding-a-structure-with-no-training-set"></a>예 1: 학습 집합을 포함하지 않는 구조 추가  

@@ -1,4 +1,5 @@
 ---
+description: 연결 문자열 형식 및 특성
 title: 연결 문자열 형식 및 특성 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0c360112-8720-4e54-a1a6-b9b18d943557
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d95866976d2e83c058f83b3a0ae5e9a4e8888ed1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 53efb4dd010913029185f0cbf27f0991f34815fa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81281153"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88412935"
 ---
 # <a name="connection-string-format-and-attributes"></a>연결 문자열 형식 및 특성
 > [!IMPORTANT]  
@@ -31,15 +32,15 @@ ms.locfileid: "81281153"
 ```  
   
 > [!NOTE]  
->  Oracle 용 Microsoft ODBC 드라이버는 = 대신를 사용 `CONNECTSTRING`하는 첫 번째 버전의 드라이버에 대 한 연결 문자열 형식을 지원 `SERVER=`합니다.  
+>  Oracle 용 Microsoft ODBC 드라이버는 = 대신를 사용 하는 첫 번째 버전의 드라이버에 대 한 연결 문자열 형식을 지원 `CONNECTSTRING` `SERVER=` 합니다.  
   
- Windows 인증을 지 원하는 데이터 원본 공급자에 연결 하는 경우 연결 문자열에 사용자 `Trusted_Connection=yes` ID 및 암호 정보를 지정 하는 대신를 지정 해야 합니다.  
+ Windows 인증을 지 원하는 데이터 원본 공급자에 연결 하는 경우 `Trusted_Connection=yes` 연결 문자열에 사용자 ID 및 암호 정보를 지정 하는 대신를 지정 해야 합니다.  
   
  UID, PWD, 서버 (또는 CONNECTSTRING) 및 드라이버 특성을 지정 하지 않으면 데이터 원본 이름을 지정 해야 합니다. 그러나 다른 모든 특성은 선택 사항입니다. 특성을 지정 하지 않으면 해당 특성은 **ODBC 데이터 원본 관리자** 대화 상자의 관련 DSN 탭에 지정 된 특성으로 설정 됩니다. 특성 값은 대/소문자를 구분 합니다.  
   
  연결 문자열의 특성은 다음과 같습니다.  
   
-|특성|Description|기본값|  
+|attribute|설명|기본값|  
 |---------------|-----------------|-------------------|  
 |DSN|**ODBC 데이터 원본 관리자** 대화 상자의 드라이버 탭에 나열 된 데이터 원본 이름입니다.|""|  
 |PWD|액세스 하려는 Oracle 서버의 암호입니다. 이 드라이버는 Oracle에서 암호를 저장 하는 제한 사항을 지원 합니다.|""|  

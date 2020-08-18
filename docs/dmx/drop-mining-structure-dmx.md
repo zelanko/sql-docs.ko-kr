@@ -1,4 +1,5 @@
 ---
+description: DROP MINING STRUCTURE(DMX)
 title: DROP 마이닝 구조 (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 607f8f18688f9a16b2f80131e728031b3ca78608
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: ad77fb58a630765eb6361b30bde22a90f291b18d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86971761"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88413370"
 ---
 # <a name="drop-mining-structure-dmx"></a>DROP MINING STRUCTURE(DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -31,7 +32,7 @@ DROP MINING STRUCTURE <structure>
  *구조체나*  
  구조 식별자입니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 데이터베이스에서 New Mailing 마이닝 구조를 삭제합니다.  
   
 ```  

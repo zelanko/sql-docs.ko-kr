@@ -1,4 +1,5 @@
 ---
+description: CREATE REMOTE TABLE AS SELECT(병렬 데이터 웨어하우스)
 title: CREATE REMOTE TABLE AS SELECT(병렬 데이터 웨어하우스)
 ms.custom: seo-dt-2019
 ms.date: 08/10/2017
@@ -10,12 +11,12 @@ author: ronortloff
 ms.author: rortloff
 ms.reviewer: jrasnick
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4547fe6ae7282aa95ed2b1e46c47a5a07aa20f11
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 841c8a62a90b6d14a1ee4d20bce7b57be097e9b9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395248"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88305092"
 ---
 # <a name="create-remote-table-as-select-parallel-data-warehouse"></a>CREATE REMOTE TABLE AS SELECT(병렬 데이터 웨어하우스)
 [!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]

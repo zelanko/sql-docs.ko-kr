@@ -1,4 +1,5 @@
 ---
+description: CurrentOrdinal(MDX)
 title: CurrentOrdinal (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 38ac7a3f4c966f9496f5ff9a0855960da8a38fb6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 68119266fd9460a28e036914fce036ec165e553a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68135877"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88413159"
 ---
 # <a name="currentordinal-mdx"></a>CurrentOrdinal(MDX)
 
@@ -34,7 +35,7 @@ Set_Expression.CurrentOrdinal
 ## <a name="remarks"></a>설명  
  [Filter (mdx)](../mdx/filter-mdx.md) 또는 [Generate (mdx)](../mdx/generate-mdx.md) 함수를 사용 하 여 집합을 반복할 때 **currentordinal** 함수는 반복 번호를 반환 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음의 간단한 예제에서는 set에서 각 항목의 이름이 포함 된 문자열을 반환 하는 데 사용 되는 **Currentordinal** 수를 **생성** 하는 방법을 보여 줍니다.  
   
  `WITH SET MySet AS [Customer].[Customer Geography].[Country].MEMBERS`  

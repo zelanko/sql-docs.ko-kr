@@ -1,4 +1,5 @@
 ---
+description: DMX(Data Mining Extensions) 문 참조
 title: DMX (데이터 마이닝 확장) 문 참조 | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 1b8fe4c8a83eaf56aea70abc810e7dc45f35eebb
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: ce95adec18bd17dce45fdc988b6db92d66383c74
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86971781"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88414099"
 ---
 # <a name="data-mining-extensions-dmx-statements"></a>DMX(Data Mining Extensions) 문
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]

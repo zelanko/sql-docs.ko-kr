@@ -1,4 +1,5 @@
 ---
+description: DataMember(MDX)
 title: DataMember (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 4395f0ff113c8549ec2250d5fa87d37090627b3c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7291a8d2c57d4a996893146e8e855df234ed0139
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68892913"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88413139"
 ---
 # <a name="datamember-mdx"></a>DataMember(MDX)
 

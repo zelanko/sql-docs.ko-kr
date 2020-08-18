@@ -1,4 +1,5 @@
 ---
+description: DMX(Data Mining Extensions) 함수 참조
 title: DMX (데이터 마이닝 확장) 함수 참조 | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,19 +9,19 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 7b25146ce36a0b58bb46bcacb4348f8e34221068
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 3066c971a434f1fab0dd2963003d53e37585983a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86971820"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88414149"
 ---
 # <a name="data-mining-extensions-dmx-function-reference"></a>DMX(Data Mining Extensions) 함수 참조
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]는 DMX(Data Mining Extensions) 언어의 일부 함수를 지원합니다. 이러한 함수는 예측 쿼리의 결과를 확장하여 예측에 대한 더 많은 정보를 제공합니다. 함수는 또한 예측 결과의 반환 방법에 대한 제어 기능도 제공합니다. 다음 표에서는 DMX의 함수를 사용하는 방법을 이해하는 데 도움이 되는 리소스의 링크를 제공합니다.  
   
-|함수|설명|  
+|기능|설명|  
 |--------------|-----------------|  
 |[DMX&#41;일반 예측 함수 &#40;](../dmx/general-prediction-functions-dmx.md)|모든 모델 유형과 함께 사용할 수 있는 함수를 나열하고, 특정 마이닝 모델 유형을 쿼리하는 방법에 대한 자세한 내용의 링크를 제공합니다.|  
 |[DMX 예측 쿼리의 구조 및 사용법](../dmx/structure-and-usage-of-dmx-prediction-queries.md)|DMX를 사용하여 예측 쿼리를 생성하는 방법을 개괄적으로 설명합니다.|  
@@ -28,7 +29,7 @@ ms.locfileid: "86971820"
   
  다음 표에서는 DMX에서 지원하는 함수를 나열합니다.  
   
-|함수|설명|  
+|기능|설명|  
 |--------------|-----------------|  
 |[BottomCount &#40;DMX&#41;](../dmx/bottomcount-dmx.md)|테이블 식의 마지막 n개 항목 행을 차수 식에 따라 오름차순으로 정렬한 테이블을 반환합니다.|  
 |[BottomPercent &#40;DMX&#41;](../dmx/bottompercent-dmx.md)|차수 식에 따라 차수의 오름차순으로 지정된 백분율 식을 만족하는 가장 적은 수의 최하위 행이 포함된 테이블을 반환합니다.|  
