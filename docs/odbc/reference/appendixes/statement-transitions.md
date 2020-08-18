@@ -1,4 +1,5 @@
 ---
+description: 명령문 전환
 title: 문 전환 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3d70e0e3-fe83-4b4d-beac-42c82495a05b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 55f82e275bfd5bff12544b35a1370cdb31495320
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3515b1d6aea4cab66bc01ee3d071727e6cb8f447
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302854"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88386519"
 ---
 # <a name="statement-transitions"></a>명령문 전환
 ODBC 문의 상태는 다음과 같습니다.  
@@ -61,7 +62,7 @@ ODBC 문의 상태는 다음과 같습니다.
   
  [4] *HandleType* 가 SQL_HANDLE_DESC 된 경우이 행은 전환을 표시 합니다.  
   
- [5] 유효한 핸들을 가리키는 *OutputHandlePtr* 를 사용 하 여 **SQLAllocHandle** 를 호출 하면 해당 핸들에 대 한 이전 콘텐츠를 고려 하지 않고 핸들을 덮어쓰므로 ODBC 드라이버에 문제가 발생할 수 있습니다. **Sqlfreehandle** 을 호출 하지 않고 * \*OutputHandlePtr* 에 대해 정의 된 것과 동일한 응용 프로그램 변수를 사용 하 여 **SQLAllocHandle** 를 두 번 호출 하 여 다시 할당 하기 전에 핸들을 해제 합니다. 이러한 방식으로 ODBC 핸들을 덮어쓰면 ODBC 드라이버의 일부에 대해 일관 되지 않은 동작이 나 오류가 발생할 수 있습니다.  
+ [5] 유효한 핸들을 가리키는 *OutputHandlePtr* 를 사용 하 여 **SQLAllocHandle** 를 호출 하면 해당 핸들에 대 한 이전 콘텐츠를 고려 하지 않고 핸들을 덮어쓰므로 ODBC 드라이버에 문제가 발생할 수 있습니다. **Sqlfreehandle** 을 호출 하지 않고 * \* OutputHandlePtr* 에 대해 정의 된 것과 동일한 응용 프로그램 변수를 사용 하 여 **SQLAllocHandle** 를 두 번 호출 하 여 다시 할당 하기 전에 핸들을 해제 합니다. 이러한 방식으로 ODBC 핸들을 덮어쓰면 ODBC 드라이버의 일부에 대해 일관 되지 않은 동작이 나 오류가 발생할 수 있습니다.  
   
 ## <a name="sqlbindcol"></a>SQLBindCol  
   
@@ -99,19 +100,19 @@ ODBC 문의 상태는 다음과 같습니다.
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |항목|--|--|--|--|S1 [1] S2 [nr] 및 [2] S3 [r] 및 [2] S5 [3] 및 [5] S6 ([3] 또는 [4]) 및 [6] S7 [4] 및 [7]|다음 표 참조|  
   
- [1] **Sqlexecdirect** 가 SQL_NEED_DATA 반환 했습니다.  
+ [1]   **Sqlexecdirect** 가 SQL_NEED_DATA 반환 했습니다.  
   
- [2] **Sqlexecute** 가 SQL_NEED_DATA 반환 했습니다.  
+ [2]   **Sqlexecute** 가 SQL_NEED_DATA 반환 했습니다.  
   
- [3] **SQLBulkOperations** 반환 SQL_NEED_DATA.  
+ [3]   **SQLBulkOperations** 반환 SQL_NEED_DATA.  
   
- [4] **SQLSetPos** 가 SQL_NEED_DATA를 반환 했습니다.  
+ [4]   **SQLSetPos** 가 SQL_NEED_DATA를 반환 했습니다.  
   
- [5] **Sqlfetch**, **Sqlfetchscroll**또는 **sqlextendedfetch** 가 호출 되지 않았습니다.  
+ [5]   **Sqlfetch**, **Sqlfetchscroll**또는 **sqlextendedfetch** 가 호출 되지 않았습니다.  
   
- [6] **Sqlfetch** 또는 **sqlfetchscroll** 이 호출 되었습니다.  
+ [6]   **Sqlfetch** 또는 **sqlfetchscroll** 이 호출 되었습니다.  
   
- [7] **Sqlextendedfetch** 가 호출 되었습니다.  
+ [7]   **Sqlextendedfetch** 가 호출 되었습니다.  
   
 ## <a name="sqlcancel-asynchronous-states"></a>SQLCancel (비동기 상태)  
   
@@ -141,9 +142,9 @@ ODBC 문의 상태는 다음과 같습니다.
 |-----------------------|--------------------|  
 |--[1] 07005 [2]|--[s] S11 x|  
   
- [1] *FieldIdentifier* 가 SQL_DESC_COUNT 되었습니다.  
+ [1]   *FieldIdentifier* 가 SQL_DESC_COUNT 되었습니다.  
   
- [2] *FieldIdentifier* 가 SQL_DESC_COUNT 되지 않았습니다.  
+ [2]   *FieldIdentifier* 가 SQL_DESC_COUNT 되지 않았습니다.  
   
 ## <a name="sqlcolumnprivileges-sqlcolumns-sqlforeignkeys-sqlgettypeinfo-sqlprimarykeys-sqlprocedurecolumns-sqlprocedures-sqlspecialcolumns-sqlstatistics-sqltableprivileges-and-sqltables"></a>SQLColumnPrivileges, SQLColumns, SQLForeignKeys, SQLGetTypeInfo, Sqlcolumnprivileges, SQLProcedureColumns, Sql프로시저, SQLSpecialColumns, SQLStatistics, Sqlcolumnprivileges 및 SQLTables  
   
@@ -472,15 +473,15 @@ ODBC 문의 상태는 다음과 같습니다.
 |----------------------|---------------------|---------------------|  
 |S1 [e] 및 [1] S2 [e], [nr] 및 [2] S3 [e], [r] 및 [2] S5 [e] 및 [4] S6 [e] 및 [5] S7 [e] 및 [3] S9 [d] S11 [x]|HY010|S1 [e] 및 [1] S2 [e], [nr] 및 [2] S3 [e], [r] 및 [2] S4 [s], [nr] 및 ([1] 또는 [2]) S5 [s] [r] 및 ([1] 또는 [2]) S5 ([s] 또는 [e]) 및 [4] S6 ([s] 또는 [e]) 및 [5] S7 ([s] 또는 [e]) 및 [3] S9 [d] S11 [x]|  
   
- [1] **Sqlexecdirect** 가 SQL_NEED_DATA 반환 했습니다.  
+ [1]   **Sqlexecdirect** 가 SQL_NEED_DATA 반환 했습니다.  
   
- [2] **Sqlexecute** 가 SQL_NEED_DATA 반환 했습니다.  
+ [2]   **Sqlexecute** 가 SQL_NEED_DATA 반환 했습니다.  
   
- [3] **SQLSetPos** 가 S7 상태에서 호출 되 고 SQL_NEED_DATA 반환 되었습니다.  
+ [3]   **SQLSetPos** 가 S7 상태에서 호출 되 고 SQL_NEED_DATA 반환 되었습니다.  
   
- [4] **SQLBulkOperations** 가 S5 상태에서 호출 되었으며 SQL_NEED_DATA 반환 되었습니다.  
+ [4]   **SQLBulkOperations** 가 S5 상태에서 호출 되었으며 SQL_NEED_DATA 반환 되었습니다.  
   
- [5] **SQLSetPos** 또는 **SQLBulkOperations** 가 S6 상태에서 호출 되 고 SQL_NEED_DATA 반환 되었습니다.  
+ [5]   **SQLSetPos** 또는 **SQLBulkOperations** 가 S6 상태에서 호출 되 고 SQL_NEED_DATA 반환 되었습니다.  
   
 ## <a name="sqlprepare"></a>SQLPrepare  
   
@@ -514,15 +515,15 @@ ODBC 문의 상태는 다음과 같습니다.
 |----------------------|---------------------|---------------------|  
 |HY010|S1 [e] 및 [1] S2 [e], [nr] 및 [2] S3 [e], [r] 및 [2] S5 [e] 및 [4] S6 [e] 및 [5] S7 [e] 및 [3] S10 [s] S11 [x]|--[s] S1 [e], [1] S2 [e], [nr] 및 [2] S3 [e], [r] 및 [2] S5 [e] 및 [4] S6 [e] 및 [5] S7 [e] 및 [3] S11 [x] HY011 [6]|  
   
- [1] **Sqlexecdirect** 가 SQL_NEED_DATA 반환 했습니다.  
+ [1]   **Sqlexecdirect** 가 SQL_NEED_DATA 반환 했습니다.  
   
- [2] **Sqlexecute** 가 SQL_NEED_DATA 반환 했습니다.  
+ [2]   **Sqlexecute** 가 SQL_NEED_DATA 반환 했습니다.  
   
- [3] **SQLSetPos** 가 S7 상태에서 호출 되 고 SQL_NEED_DATA 반환 되었습니다.  
+ [3]   **SQLSetPos** 가 S7 상태에서 호출 되 고 SQL_NEED_DATA 반환 되었습니다.  
   
- [4] **SQLBulkOperations** 가 S5 상태에서 호출 되었으며 SQL_NEED_DATA 반환 되었습니다.  
+ [4]   **SQLBulkOperations** 가 S5 상태에서 호출 되었으며 SQL_NEED_DATA 반환 되었습니다.  
   
- [5] **SQLSetPos** 또는 **SQLBulkOperations** 가 S6 상태에서 호출 되 고 SQL_NEED_DATA 반환 되었습니다.  
+ [5]   **SQLSetPos** 또는 **SQLBulkOperations** 가 S6 상태에서 호출 되 고 SQL_NEED_DATA 반환 되었습니다.  
   
  [6] SQL_SUCCESS 반환 된 단일 매개 변수에 대 한 **Sqlputdata** 에 대 한 하나 이상의 호출에서 *StrLen_or_Ind* SQL_NULL_DATA 설정 된 동일한 매개 변수에 대해 **sqlputdata** 를 호출 했습니다.  
   

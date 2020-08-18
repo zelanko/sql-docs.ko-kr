@@ -1,4 +1,5 @@
 ---
+description: 8진수 길이 전송
 title: 전송 옥텟 길이 | Microsoft Docs
 ms.custom: ''
 ms.date: 10/28/2019
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9fdc9762-e203-4cff-9212-54f450bf18d9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4204b47816747506a5672241eeeef736eca54856
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8c89a9cb1423693e7d92114233f967d6fb5dcee1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302814"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88386349"
 ---
 # <a name="transfer-octet-length"></a>8진수 길이 전송
 열의 전송 옥텟 길이는 데이터를 기본 C 데이터 형식으로 전송할 때 응용 프로그램에 반환 되는 최대 바이트 수입니다. 문자 데이터의 경우 전송 8 진수 길이는 null 종료 문자에 대 한 공간을 포함 하지 않습니다. 열의 전송 옥텟 길이는 데이터 원본에 데이터를 저장 하는 데 필요한 바이트 수와 다를 수 있습니다.  

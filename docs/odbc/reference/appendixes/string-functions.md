@@ -1,4 +1,5 @@
 ---
+description: 문자열 함수
 title: 문자열 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 270f669e-8aab-4db0-95a4-f2b3c69538b3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d9323809028ad170a4811b1af8b6e276cdbb4293
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 42a5301f49a033dbc6e84a5fe43d68c794a76e84
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302844"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88386479"
 ---
 # <a name="string-functions"></a>문자열 함수
 다음 표에서는 문자열 조작 함수를 보여 줍니다. 응용 프로그램은 SQL_STRING_FUNCTIONS *정보 형식* 으로 **SQLGetInfo** 를 호출 하 여 드라이버에서 지원 되는 문자열 함수를 확인할 수 있습니다.  
@@ -34,16 +35,16 @@ ms.locfileid: "81302844"
   
  BIT_LENGTH, CHAR_LENGTH, CHARACTER_LENGTH, OCTET_LENGTH 및 위치 문자열 스칼라 함수는 SQL-92에 맞게 ODBC 3.0에 추가 되었습니다.  
   
-|함수|Description|  
+|기능|설명|  
 |--------------|-----------------|  
-|**ASCII (** _string_exp_ **)** (ODBC 1.0)|*String_exp* 에서 가장 왼쪽 문자의 ASCII 코드 값을 정수로 반환 합니다.|  
-|**BIT_LENGTH (** _string_exp_ **)** (ODBC 3.0)|문자열 식의 길이(비트)를 반환합니다.<br /><br /> 는 문자열 데이터 형식에 대해서만 작동 하지 않으므로 암시적으로 *string_exp* 문자열로 변환 되지 않고 대신 지정 된 데이터 형식의 (내부) 크기를 반환 합니다.|  
-|**CHAR (** _코드_ **)** (ODBC 1.0)|*코드*에 지정 된 ASCII 코드 값을 포함 하는 문자를 반환 합니다. *코드* 의 값은 0에서 255 사이 여야 합니다. 그렇지 않으면 반환 값은 데이터 원본에 따라 달라 집니다.|  
-|**CHAR_LENGTH (** _string_exp_ **)** (ODBC 3.0)|문자열 식이 문자 데이터 형식이 면 문자열 식의 문자 길이를 반환 합니다. 그렇지 않으면 문자열 식의 길이 (바이트)를 반환 합니다 (비트 수를 8로 나눈 값 보다 작은 정수). 이 함수는 CHARACTER_LENGTH 함수와 동일 합니다.|  
-|**CHARACTER_LENGTH (** _string_exp_ **)** (ODBC 3.0)|문자열 식이 문자 데이터 형식이 면 문자열 식의 문자 길이를 반환 합니다. 그렇지 않으면 문자열 식의 길이 (바이트)를 반환 합니다 (비트 수를 8로 나눈 값 보다 작은 정수). 이 함수는 CHAR_LENGTH 함수와 동일 합니다.|  
-|**CONCAT (** _string_exp1_,_string_exp2_**)** (ODBC 1.0)|*String_exp1*에 *string_exp2* 를 연결한 결과인 문자열을 반환 합니다. 결과 문자열은 DBMS에 종속됩니다. 예를 들어 *string_exp1* 표시 된 열에 null 값이 포함 된 경우 DB2는 null을 반환 하지만 SQL SERVER는 null이 아닌 문자열을 반환 합니다.|  
-|**차이 (** _string_exp1_,_string_exp2_**)** (ODBC 2.0)|*String_exp1* 및 *string_exp2*에 대 한 SOUNDEX 함수에서 반환 되는 값의 차이를 나타내는 정수 값을 반환 합니다.|  
-|**INSERT (** _string_exp1_, *start*, *length*, _string_exp2_**)** (ODBC 1.0)|*시작에서*시작 하 여 *string_exp1*에서 *길이* 문자가 삭제 되 고 *string_exp2* *string_exp* 에 삽입 된 문자열을 반환 *합니다.*|  
+|**ASCII (** _string_exp_ **)**  (ODBC 1.0)|*String_exp* 에서 가장 왼쪽 문자의 ASCII 코드 값을 정수로 반환 합니다.|  
+|**BIT_LENGTH (** _string_exp_ **)**  (ODBC 3.0)|문자열 식의 길이(비트)를 반환합니다.<br /><br /> 는 문자열 데이터 형식에 대해서만 작동 하지 않으므로 암시적으로 *string_exp* 문자열로 변환 되지 않고 대신 지정 된 데이터 형식의 (내부) 크기를 반환 합니다.|  
+|**CHAR (** _코드_ **)**  (ODBC 1.0)|*코드*에 지정 된 ASCII 코드 값을 포함 하는 문자를 반환 합니다. *코드* 의 값은 0에서 255 사이 여야 합니다. 그렇지 않으면 반환 값은 데이터 원본에 따라 달라 집니다.|  
+|**CHAR_LENGTH (** _string_exp_ **)**  (ODBC 3.0)|문자열 식이 문자 데이터 형식이 면 문자열 식의 문자 길이를 반환 합니다. 그렇지 않으면 문자열 식의 길이 (바이트)를 반환 합니다 (비트 수를 8로 나눈 값 보다 작은 정수). 이 함수는 CHARACTER_LENGTH 함수와 동일 합니다.|  
+|**CHARACTER_LENGTH (** _string_exp_ **)**  (ODBC 3.0)|문자열 식이 문자 데이터 형식이 면 문자열 식의 문자 길이를 반환 합니다. 그렇지 않으면 문자열 식의 길이 (바이트)를 반환 합니다 (비트 수를 8로 나눈 값 보다 작은 정수). 이 함수는 CHAR_LENGTH 함수와 동일 합니다.|  
+|**CONCAT (** _string_exp1_,_string_exp2_**)**  (ODBC 1.0)|*String_exp1*에 *string_exp2* 를 연결한 결과인 문자열을 반환 합니다. 결과 문자열은 DBMS에 종속됩니다. 예를 들어 *string_exp1* 표시 된 열에 null 값이 포함 된 경우 DB2는 null을 반환 하지만 SQL SERVER는 null이 아닌 문자열을 반환 합니다.|  
+|**차이 (** _string_exp1_,_string_exp2_**)**  (ODBC 2.0)|*String_exp1* 및 *string_exp2*에 대 한 SOUNDEX 함수에서 반환 되는 값의 차이를 나타내는 정수 값을 반환 합니다.|  
+|**INSERT (** _string_exp1_, *start*, *length*, _string_exp2_**)**  (ODBC 1.0)|*시작에서*시작 하 여 *string_exp1*에서 *길이* 문자가 삭제 되 고 *string_exp2* *string_exp* 에 삽입 된 문자열을 반환 *합니다.*|  
 |**LCASE (** _string_exp_ **)** (ODBC 1.0)|모든 대문자를 소문자로 변환 하 여 *string_exp*에 있는 문자열과 동일한 문자열을 반환 합니다.|  
 |**LEFT (** _string_exp_, _count_**)** (ODBC 1.0)|*String_exp*의 가장 왼쪽 *카운트* 문자를 반환 합니다.|  
 |**길이 (** _string_exp_ **)** (ODBC 1.0)|후행 공백을 제외 *하 고 string_exp* 의 문자 수를 반환 합니다.<br /><br /> **길이** 는 문자열만 허용 합니다. 따라서는 *string_exp* 문자열로 암시적으로 변환 하 고이 문자열의 길이 (데이터 형식의 내부 크기는 아님)를 반환 합니다.|  

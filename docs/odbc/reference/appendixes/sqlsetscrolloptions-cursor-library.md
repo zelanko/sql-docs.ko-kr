@@ -1,4 +1,5 @@
 ---
+description: SQLSetScrollOptions(커서 라이브러리)
 title: SQLSetScrollOptions (커서 라이브러리) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c5c0ac6d-a6c1-4077-8186-1644df1944f8
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0099ca5e9bcb3aefdd86e0132f52d110ab64e8a4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f40e5cd3b62b91b1b0b832b9b8fcf36101487c10
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304914"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88386559"
 ---
 # <a name="sqlsetscrolloptions-cursor-library"></a>SQLSetScrollOptions(커서 라이브러리)
 > [!IMPORTANT]  

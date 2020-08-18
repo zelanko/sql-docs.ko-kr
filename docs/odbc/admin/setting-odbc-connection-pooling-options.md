@@ -1,4 +1,5 @@
 ---
+description: ODBC 연결 풀링 옵션 설정
 title: ODBC 연결 풀링 옵션 설정 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 037e2f78-f204-40f4-b4ab-d9cdf562012b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1d8e66c506518b77320347ce9120254aa1cae287
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5d6f741654f9765e909a8a2e33bce5e7e596f8b4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307201"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88386599"
 ---
 # <a name="setting-odbc-connection-pooling-options"></a>ODBC 연결 풀링 옵션 설정
 연결 풀링을 사용 하면 응용 프로그램에서 각 사용을 위해 다시 설정 하지 않아도 되는 연결 풀의 연결을 사용할 수 있습니다. **ODBC 데이터 원본 관리자** 대화 상자의 **연결 풀링** 탭을 사용 하 여 성능 모니터링을 사용 하거나 사용 하지 않도록 설정할 수 있습니다. 드라이버 이름을 두 번 클릭 하 여 연결 시간 제한 기간을 설정 합니다.  
