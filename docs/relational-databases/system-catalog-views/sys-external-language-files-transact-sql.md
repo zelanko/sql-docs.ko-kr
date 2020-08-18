@@ -1,4 +1,5 @@
 ---
+description: sys. external_language_files (Transact-sql)-SQL Server
 title: sys. external_language_files (Transact-sql)-SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 05/22/2019
@@ -19,12 +20,12 @@ ms.author: negust
 ms.reviewer: dphansen
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e90925354a9a48d3a2b0ff8e789d940ece6cb476
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fe6da94cc085e14667ee0518452fc6043eed60e9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85751739"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88401069"
 ---
 # <a name="sysexternal_language_files-transact-sql"></a>sys. external_language_files (Transact-sql)
 [!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
