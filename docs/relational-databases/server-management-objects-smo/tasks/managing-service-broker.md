@@ -1,4 +1,5 @@
 ---
+description: Service Broker 관리
 title: Service Broker 관리
 ms.custom: seo-dt-2019
 ms.date: 05/24/2019
@@ -13,12 +14,12 @@ ms.assetid: b29d7432-d1e5-4bb6-b544-57b3a9430f95
 author: markingmyname
 ms.author: maghan
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e00f1d8c2e048581adaedb0bd6b9f07a1a5bec6b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 94ff0ae52a3025d1ddf4a18f4cfbc2dc61d4274d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922821"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88403499"
 ---
 # <a name="managing-service-broker"></a>Service Broker 관리
 

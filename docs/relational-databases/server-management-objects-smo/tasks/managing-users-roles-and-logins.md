@@ -1,4 +1,5 @@
 ---
+description: 사용자, 역할 및 로그인 관리
 title: 사용자, 역할 및 로그인 관리
 ms.custom: seo-dt-2019
 ms.date: 08/06/2017
@@ -15,11 +16,12 @@ ms.assetid: 74e411fa-74ed-49ec-ab58-68c250f2280e
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7326e0379fe0a62f2f6369e87d9e28f1d90ced2a
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: ca50fbcdaa1f94fbe91210db69613335257986f4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005983"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88403389"
 ---
 # <a name="managing-users-roles-and-logins"></a>사용자, 역할 및 로그인 관리
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
