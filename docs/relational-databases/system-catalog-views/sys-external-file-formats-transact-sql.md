@@ -1,4 +1,5 @@
 ---
+description: sys. external_file_formats (Transact-sql)
 title: sys. external_file_formats (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ ms.assetid: a89efb2c-0a3a-4b64-9284-6e93263e29ac
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 75e3f884e09d41c2ae7aa5c7610b0c7ac24691a7
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: cfdbcd0d436176d11ba5702403a2fc032df28f25
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828518"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88401510"
 ---
 # <a name="sysexternal_file_formats-transact-sql"></a>sys. external_file_formats (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -27,7 +28,7 @@ ms.locfileid: "82828518"
   
  의 서버에 있는 각 외부 파일 형식에 대 한 행을 포함 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 합니다.  
   
-|열 이름|데이터 형식|설명|범위|  
+|열 이름|데이터 형식|Description|범위|  
 |-----------------|---------------|-----------------|-----------|  
 |file_format_id|**int**|외부 파일 형식에 대 한 개체 ID입니다.||  
 |name|**sysname**|파일 형식의 이름입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]및에서는 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 데이터베이스에 대해 고유 합니다. 에서 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 이는 서버에 대해 고유 합니다.||  
@@ -41,8 +42,8 @@ ms.locfileid: "82828518"
 |encoding|**nvarchar (10)**|Format_type = DELIMITEDTEXT의 경우이는 외부 Hadoop 파일의 인코딩 방법입니다.|항상 ' UTF8 '입니다.|  
 |data_compression|**nvarchar(255)**|외부 데이터에 대 한 데이터 압축 방법입니다.|Format_type = DELIMITEDTEXT:<br /><br /> -' org. f i n.<br />-' GzipCodec '가 있습니다.<br /><br /> Format_type = RCFILE:<br /><br /> -' org. f i n.<br /><br /> Format_type = ORC:<br /><br /> -' org. f i n.<br />-' Org.apache.io.compress.snappycodec '가 있습니다.<br /><br /> Format_type = PARQUET:<br /><br /> -' GzipCodec '가 있습니다.<br />-' Org.apache.io.compress.snappycodec '가 있습니다.|  
   
-## <a name="permissions"></a>권한  
- 사용자가 소유하고 있거나 사용 권한을 부여 받은 보안 개체에 대해서만 카탈로그 뷰의 메타데이터를 볼 수 있습니다.  자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
+## <a name="permissions"></a>사용 권한  
+ 사용자가 소유하고 있거나 사용 권한을 부여 받은 보안 개체에 대해서만 카탈로그 뷰의 메타데이터를 볼 수 있습니다. 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [external_data_sources &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-external-data-sources-transact-sql.md)   

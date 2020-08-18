@@ -1,4 +1,5 @@
 ---
+description: sys.external_data_sources(Transact-SQL)
 title: sys. external_data_sources (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ ms.assetid: 1016db6e-9950-4ae2-a004-bd4171e27359
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 85b64de0b575738061757254c9698e47982fd942
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 74546998aeba42167659eabcbed4571c2f15c492
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394481"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88401719"
 ---
 # <a name="sysexternal_data_sources-transact-sql"></a>sys.external_data_sources(Transact-SQL)
 

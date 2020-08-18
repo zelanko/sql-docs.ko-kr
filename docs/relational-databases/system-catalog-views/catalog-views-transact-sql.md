@@ -1,4 +1,5 @@
 ---
+description: 시스템 카탈로그 뷰 (Transact-sql)
 title: 카탈로그 뷰 (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/02/2016
@@ -23,12 +24,12 @@ ms.assetid: 13bccc2f-ed3c-4b58-abd0-ca8bf34a66b8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f7b106652573b5324794848dff69e9ae51c81a20
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 6e0fd2e8ee936d9ecf9b7b433870edd3f6da19f4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914309"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88402609"
 ---
 # <a name="system-catalog-views-transact-sql"></a>시스템 카탈로그 뷰 (Transact-sql)
 
@@ -55,17 +56,17 @@ ms.locfileid: "86914309"
         
         [Azure SQL Database 카탈로그 뷰](../../relational-databases/system-catalog-views/azure-sql-database-catalog-views.md)
         
-        [Transact-sql&#41;&#40;카탈로그 뷰 변경 내용 추적](../system-catalog-views/change-tracking-catalog-views-sys-change-tracking-databases.md)
+        [Transact-sql&#41;&#40;카탈로그 뷰 변경 내용 추적 ](../system-catalog-views/change-tracking-catalog-views-sys-change-tracking-databases.md)
         
-        [Transact-sql&#41;&#40;CLR 어셈블리 카탈로그 뷰](../../relational-databases/system-catalog-views/clr-assembly-catalog-views-transact-sql.md)
+        [Transact-sql&#41;&#40;CLR 어셈블리 카탈로그 뷰 ](../../relational-databases/system-catalog-views/clr-assembly-catalog-views-transact-sql.md)
         
         [데이터 수집기 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/data-collector-views-transact-sql.md)
         
         [데이터 공간 &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/data-spaces-transact-sql.md)
         
-        [Transact-sql&#41;&#40;데이터베이스 메일 뷰](../../relational-databases/system-catalog-views/database-mail-views-transact-sql.md)
+        [Transact-sql&#41;&#40;데이터베이스 메일 뷰 ](../../relational-databases/system-catalog-views/database-mail-views-transact-sql.md)
         
-        [Transact-sql&#41;&#40;데이터베이스 미러링 모니터 서버 카탈로그 뷰](../system-catalog-views/database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md)
+        [Transact-sql&#41;&#40;데이터베이스 미러링 모니터 서버 카탈로그 뷰 ](../system-catalog-views/database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md)
         
         [데이터베이스 및 파일 카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)
         
@@ -75,11 +76,11 @@ ms.locfileid: "86914309"
         
         [확장 속성 카탈로그 뷰&#40;Transact-SQL&#41;](../system-catalog-views/extended-properties-catalog-views-sys-extended-properties.md)
         
-        [Transact-sql&#41;&#40;외부 작업 카탈로그 뷰](../../relational-databases/system-catalog-views/external-operations-catalog-views-transact-sql.md)
+        [Transact-sql&#41;&#40;외부 작업 카탈로그 뷰 ](../../relational-databases/system-catalog-views/external-operations-catalog-views-transact-sql.md)
         
-        [Transact-sql&#41;&#40;Filestream 및 FileTable 카탈로그 뷰](../../relational-databases/system-catalog-views/filestream-and-filetable-catalog-views-transact-sql.md)
+        [Transact-sql&#41;&#40;Filestream 및 FileTable 카탈로그 뷰 ](../../relational-databases/system-catalog-views/filestream-and-filetable-catalog-views-transact-sql.md)
         
-        [Transact-sql&#41;&#40;전체 텍스트 검색 및 의미 체계 검색 카탈로그 뷰](../../relational-databases/system-catalog-views/full-text-search-and-semantic-search-catalog-views-transact-sql.md)
+        [Transact-sql&#41;&#40;전체 텍스트 검색 및 의미 체계 검색 카탈로그 뷰 ](../../relational-databases/system-catalog-views/full-text-search-and-semantic-search-catalog-views-transact-sql.md)
         
         [연결 된 서버 카탈로그 뷰 &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/linked-servers-catalog-views-transact-sql.md)
     :::column-end:::
@@ -88,15 +89,15 @@ ms.locfileid: "86914309"
         
         [개체 카탈로그 뷰 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)
         
-        [Transact-sql&#41;&#40;파티션 함수 카탈로그 뷰](../../relational-databases/system-catalog-views/partition-function-catalog-views-transact-sql.md)
+        [Transact-sql&#41;&#40;파티션 함수 카탈로그 뷰 ](../../relational-databases/system-catalog-views/partition-function-catalog-views-transact-sql.md)
         
         [정책 기반 관리 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)
         
-        [Transact-sql&#41;&#40;카탈로그 뷰 Resource Governor](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md)
+        [Transact-sql&#41;&#40;카탈로그 뷰 Resource Governor ](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md)
         
         [쿼리 저장소 카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)
         
-        [Transact-sql&#41;&#40;스칼라 형식 카탈로그 뷰](../../relational-databases/system-catalog-views/scalar-types-catalog-views-transact-sql.md)
+        [Transact-sql&#41;&#40;스칼라 형식 카탈로그 뷰 ](../../relational-databases/system-catalog-views/scalar-types-catalog-views-transact-sql.md)
         
         [스키마 카탈로그 뷰 &#40;Transact-sql&#41;](../system-catalog-views/schemas-catalog-views-sys-schemas.md)
         
@@ -104,13 +105,13 @@ ms.locfileid: "86914309"
         
         [Service Broker 카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/service-broker-catalog-views-transact-sql.md)
         
-        [Transact-sql&#41;&#40;서버 차원의 구성 카탈로그 뷰](../../relational-databases/system-catalog-views/server-wide-configuration-catalog-views-transact-sql.md)
+        [Transact-sql&#41;&#40;서버 차원의 구성 카탈로그 뷰 ](../../relational-databases/system-catalog-views/server-wide-configuration-catalog-views-transact-sql.md)
         
         [공간 데이터 카탈로그 뷰](../../relational-databases/system-catalog-views/spatial-data-catalog-views.md)
         
         [SQL Data Warehouse 및 병렬 Data Warehouse 카탈로그 뷰](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)
         
-        [Transact-sql&#41;&#40;카탈로그 뷰 Stretch Database](../system-catalog-views/stretch-database-catalog-views-sys-remote-data-archive-databases.md)
+        [Transact-sql&#41;&#40;카탈로그 뷰 Stretch Database ](../system-catalog-views/stretch-database-catalog-views-sys-remote-data-archive-databases.md)
         
         [Xml 스키마 &#40;XML 형식 시스템&#41; 카탈로그 뷰 &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/xml-schemas-xml-type-system-catalog-views-transact-sql.md)
     :::column-end:::
@@ -118,6 +119,6 @@ ms.locfileid: "86914309"
 
 ## <a name="see-also"></a>참고 항목
 
-- [Transact-sql&#41;&#40;정보 스키마 뷰](../../relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)
+- [Transact-sql&#41;&#40;정보 스키마 뷰 ](../../relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)
 - [시스템 테이블&#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)
 - [SQL Server 시스템 카탈로그 쿼리에 대한 질문과 대답](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)

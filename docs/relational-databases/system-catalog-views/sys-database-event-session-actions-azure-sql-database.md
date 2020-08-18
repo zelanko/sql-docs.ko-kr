@@ -1,4 +1,5 @@
 ---
+description: sys.database_event_session_actions(Azure SQL Database)
 title: database_event_session_actions (Azure SQL Database) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -11,12 +12,12 @@ ms.assetid: 32494df1-7ab7-4b88-a858-6b1021d67433
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d2171403f78fe3de84223e24ef189fd08c53fd88
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: a9a1e5219efbd773568f401404d9ea8b481a328f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920721"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88401649"
 ---
 # <a name="sysdatabase_event_session_actions-azure-sql-database"></a>sys.database_event_session_actions(Azure SQL Database)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -41,7 +42,7 @@ ms.locfileid: "86920721"
 ## <a name="remarks"></a>설명  
  이 뷰는 다음과 같은 관계 카디널리티를 가집니다.  
   
-| 보낸 사람 | 수행할 작업 | 관계 |
+| 보낸 사람 | 대상 | 관계 |
 | ---- | -- | ------------ |
 |database_event_session_actions. event_session_id|sys.sys. database_event_sessions event_session_id|다 대 일|  
 |database_event_session_actions. event_id<br /><br /> database_event_session_actions. event_session_id|database_event_session_events. event_session_id<br /><br /> database_event_session_events. event_id|다 대 일|  
