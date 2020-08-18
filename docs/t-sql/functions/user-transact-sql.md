@@ -1,4 +1,5 @@
 ---
+description: USER(Transact-SQL)
 title: USER(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -23,12 +24,12 @@ ms.assetid: 82bbbd94-870c-4c43-9ed9-d9abc767a6be
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9cffa2b899c7f321f19711665fcef04c58245b53
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: c4b1e652bfeff0646fb28da125a46b3ff222f54f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111290"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88362639"
 ---
 # <a name="user-transact-sql"></a>USER(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -57,7 +58,7 @@ USER
   
  Windows 보안 주체가 그룹 멤버 자격으로 데이터베이스에 액세스하는 경우 USER는 그룹 이름 대신 Windows 보안 주체의 이름을 반환합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-using-user-to-return-the-database-user-name"></a>A. USER를 사용하여 데이터베이스 사용자 이름 반환  
  다음 예에서는 변수를 `char`로 선언하고 USER의 현재 값을 변수에 할당한 다음 텍스트 설명과 함께 변수를 인쇄합니다.  
@@ -157,7 +158,7 @@ DBO
  [보안 함수&#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)   
  [SESSION_USER &#40;Transact-SQL&#41;](../../t-sql/functions/session-user-transact-sql.md)   
  [SYSTEM_USER &#40;Transact-SQL&#41;](../../t-sql/functions/system-user-transact-sql.md)   
- [USER_NAME&#40;Transact-SQL&#41;](../../t-sql/functions/user-name-transact-sql.md)  
+ [USER_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/user-name-transact-sql.md)  
   
   
 

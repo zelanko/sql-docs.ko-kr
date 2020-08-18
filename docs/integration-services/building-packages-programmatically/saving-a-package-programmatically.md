@@ -1,4 +1,5 @@
 ---
+description: 프로그래밍 방식으로 패키지 저장
 title: 프로그래밍 방식으로 패키지 저장 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4204f817-d5df-475a-9338-d7f01305d566
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3630bbebf5c86b0e839fe51735cba4fb71763b8a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 4ce0606f8d63015be37b5230a47cb66c82cf1a20
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922716"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88352109"
 ---
 # <a name="saving-a-package-programmatically"></a>프로그래밍 방식으로 패키지 저장
 
@@ -41,7 +42,7 @@ ms.locfileid: "86922716"
 > [!IMPORTANT]  
 >  SSIS 패키지 저장소를 사용하기 위한 <xref:Microsoft.SqlServer.Dts.Runtime.Application> 클래스의 메서드는 "." 또는 로컬 서버의 서버 이름만 지원합니다. "(local)" 또는 "localhost"는 사용할 수 없습니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [패키지 저장](../../integration-services/save-packages.md)  
   
   

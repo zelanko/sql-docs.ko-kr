@@ -1,4 +1,5 @@
 ---
+description: Integration Services(SSIS) 서버 및 카탈로그
 title: Integration Services(SSIS) 서버 및 카탈로그 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6d667bba-7c25-492a-8f4d-70ebaca28f40
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 37acf59a44c561e43f6c1dc6dbcb4f26cd06918e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 99ea39318e06ba7fbaa6cf3e1147382bb1184a83
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922631"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88351849"
 ---
 # <a name="integration-services-ssis-server-and-catalog"></a>Integration Services(SSIS) 서버 및 카탈로그
 

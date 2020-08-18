@@ -1,4 +1,5 @@
 ---
+description: SET FIPS_FLAGGER(Transact-SQL)
 title: SET FIPS_FLAGGER(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/29/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: e82f6bee-6cf6-4061-be22-9ad2e8e9d3d6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fcbc4df284ef9fdd6467cf5bbe52e91c5c98da18
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: d915f45f9b73b6701ac0994ec87bcf31acb999bd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484681"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88356859"
 ---
 # <a name="set-fips_flagger-transact-sql"></a>SET FIPS_FLAGGER(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -57,14 +58,14 @@ SET FIPS_FLAGGER ( 'level' |  OFF )
 |OFF|표준 검사를 하지 않습니다.|  
   
 ## <a name="remarks"></a>설명  
- `SET FIPS_FLAGGER`의 설정은 구문 분석 시 설정되며 실행 또는 런타임에는 설정되지 않습니다. 구문 분석 시에 설정되면 코드 실행이 실제로 해당 지점에 이르렀는지에 상관 없이 SET 문이 일괄 처리나 저장 프로시저에 있으면 이 옵션이 적용되고 문이 실행되기 전에 `SET` 문이 적용됩니다. 예를 들어, `SET` 문이 실행 중 도달한 적이 없는 `IF...ELSE` 문 블록에 있어도, `SET` 문 블록이 구문 분석되기 때문에 `IF...ELSE` 문이 적용됩니다.  
+ `SET FIPS_FLAGGER`의 설정은 구문 분석 시 설정되며 실행 또는 런타임에는 설정되지 않습니다. 구문 분석 시에 설정되면 코드 실행이 실제로 해당 지점에 이르렀는지에 상관 없이 SET 문이 일괄 처리나 저장 프로시저에 있으면 이 옵션이 적용되고 문이 실행되기 전에 `SET` 문이 적용됩니다. 예를 들어, `SET` 문이 실행 중 도달한 적이 없는 `IF...ELSE` 문 블록에 있어도, `IF...ELSE` 문 블록이 구문 분석되기 때문에 `SET` 문이 적용됩니다.  
   
  `SET FIPS_FLAGGER`이 저장 프로시저에 설정되면 저장 프로시저에서 컨트롤이 반환된 후 `SET FIPS_FLAGGER`의 값이 복원됩니다. 따라서 동적 SQL에 지정한 `SET FIPS_FLAGGER` 문은 동적 SQL 문 다음에 오는 문에는 아무런 영향을 주지 않습니다.  
   
 ## <a name="permissions"></a>사용 권한  
  **public** 역할의 멤버 자격이 필요합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [SET 문&#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)  
   
   

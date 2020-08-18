@@ -1,4 +1,5 @@
 ---
+description: SET DATEFORMAT(Transact-SQL)
 title: SET DATEFORMAT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -27,12 +28,12 @@ ms.assetid: da217878-7ec4-477e-aa13-604073c948f8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8983c1ffb63fae634fe86ffa8b90707d7242d014
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 9d7a2c4feb97c534dcef80c851e1df0ae2721a44
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484663"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88357149"
 ---
 # <a name="set-dateformat-transact-sql"></a>SET DATEFORMAT(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -58,7 +59,7 @@ SET DATEFORMAT { format | @format_var }
 ## <a name="remarks"></a>설명  
  DATEFORMAT **ydm**은 **date**, **datetime2** 및 **datetimeoffset** 데이터 형식에 대해 지원되지 않습니다.  
   
- DATEFORMAT 설정은 문자열 형식에 따라 날짜 데이터 형식에 대해 문자열을 다르게 해석할 수 있습니다. 예를 들어 **datetime** 및 **smalldatetime** 해석은 **date**, **datetime2** 또는  **datetimeoffset**과 일치하지 않을 수 있습니다. DATEFORMAT은 문자열이 데이터베이스의 날짜 값으로 변환될 때 문자열의 해석에 영향을 줍니다. 날짜 데이터 형식 값의 표시나 데이터베이스 스토리지 형식에 영향을 주지 않습니다.  
+ DATEFORMAT 설정은 문자열 형식에 따라 날짜 데이터 형식에 대해 문자열을 다르게 해석할 수 있습니다. 예를 들어 **datetime** 및 **smalldatetime** 해석은 **date**, **datetime2** 또는 ** datetimeoffset**과 일치하지 않을 수 있습니다. DATEFORMAT은 문자열이 데이터베이스의 날짜 값으로 변환될 때 문자열의 해석에 영향을 줍니다. 날짜 데이터 형식 값의 표시나 데이터베이스 스토리지 형식에 영향을 주지 않습니다.  
   
  예를 들어 ISO 8601과 같은 일부 문자열 형식의 경우 DATEFORMAT 설정과 관계없이 해석됩니다.  
   
@@ -69,7 +70,7 @@ SET DATEFORMAT { format | @format_var }
 ## <a name="permissions"></a>사용 권한  
  **public** 역할의 멤버 자격이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예제는 동일한 `DATEFORMAT` 설정을 가진 세션의 입력으로 다른 날짜 문자열을 사용합니다.  
   
 ```sql
@@ -90,6 +91,6 @@ GO
 GO  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [SET 문&#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)  
 

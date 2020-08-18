@@ -1,4 +1,5 @@
 ---
+description: 프로그래밍 방식으로 로깅 설정
 title: 프로그래밍 방식으로 로깅 설정 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 3222a1ed-83eb-421c-b299-a53b67bba740
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 297b5730db79d1a47295a2e454f6bd3433c56d44
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 358bd8e70acba47961909583c153669e21389105
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922717"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88352139"
 ---
 # <a name="enabling-logging-programmatically"></a>프로그래밍 방식으로 로깅 설정
 
@@ -47,7 +48,7 @@ ms.locfileid: "86922717"
   
  다음 표에는 사용할 수 있는 로그 공급자, 해당 설명 및 <xref:Microsoft.SqlServer.Dts.Runtime.LogProvider.ConfigString%2A> 정보가 나열되어 있습니다.  
   
-|공급자|Description|ConfigString 속성|  
+|공급자|설명|ConfigString 속성|  
 |--------------|-----------------|---------------------------|  
 |SQL Server Profiler|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로파일러에서 캡처하고 볼 수 있는 SQL 추적을 생성합니다. 이 공급자의 기본 파일 이름 확장명은 .trc입니다.|구성이 필요하지 않습니다.|  
 |SQL Server|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 **sysssislog** 테이블에 이벤트 로그 항목을 기록합니다.|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 공급자를 사용하려면 데이터베이스에 대한 연결과 대상 데이터베이스 이름이 지정되어 있어야 합니다.|  

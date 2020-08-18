@@ -1,4 +1,5 @@
 ---
+description: 논리 함수 - CHOOSE(Transact-SQL)
 title: CHOOSE(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1c382c83-7500-4bae-bbdc-c1dbebd3d83f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d5bd06dd57b1b5c8bc26acbe0c85af175ba9c8d8
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: cc63fcaa6e7419a37005817f3121a2b8851dc749
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110422"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88363799"
 ---
 # <a name="logical-functions---choose-transact-sql"></a>논리 함수 - CHOOSE(Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -55,7 +56,7 @@ CHOOSE ( index, val_1, val_2 [, val_n ] )
 ## <a name="remarks"></a>설명  
  CHOOSE는 배열에서 인덱스와 같은 역할을 하며 배열은 index 인수 다음에 나오는 인수로 구성됩니다. index 인수는 다음 중 반환될 값을 결정합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
 
 ### <a name="a-simple-choose-example"></a>A. 간단한 CHOOSE 예제
 
@@ -131,7 +132,7 @@ Sales Representative                               2007-07-01 Summer
   
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [IIF &#40;Transact-SQL&#41;](../../t-sql/functions/logical-functions-iif-transact-sql.md)  
+## <a name="see-also"></a>관련 항목  
+ [IIF&#40;Transact-SQL&#41;](../../t-sql/functions/logical-functions-iif-transact-sql.md)  
   
   

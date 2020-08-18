@@ -1,4 +1,5 @@
 ---
+description: JSON 함수(Transact-SQL)
 title: JSON 함수(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/03/2020
@@ -12,12 +13,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: jroth
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: c857d57f26c22e0f4eb9346e2925d493ec5e4541
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 06bf0965714c893d5b7684335edbb191e86ee77a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394228"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88364329"
 ---
 # <a name="json-functions-transact-sql"></a>JSON 함수(Transact-SQL)
 
@@ -25,7 +26,7 @@ ms.locfileid: "87394228"
 
 JSON 텍스트에 대한 유효성 검사 또는 변경을 수행하거나 간단한 값이나 복잡한 값을 추출하려면 이 섹션의 페이지에 설명된 함수를 사용합니다.  
   
-|함수|Description|  
+|기능|Description|  
 |--------------|-----------------|  
 |[ISJSON](../../t-sql/functions/isjson-transact-sql.md)|문자열에 유효한 JSON이 포함되어 있는지 테스트합니다.|  
 |[JSON_VALUE](../../t-sql/functions/json-value-transact-sql.md)|JSON 문자열에서 스칼라 값을 추출합니다.|  
@@ -34,7 +35,7 @@ JSON 텍스트에 대한 유효성 검사 또는 변경을 수행하거나 간�
 
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 JSON에 대한 기본 제공 지원에 관한 자세한 내용은 [JSON 데이터&#40;SQL Server&#41;](../../relational-databases/json/json-data-sql-server.md)를 참조하세요.  
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목
 
  - [기본 제공 함수를 사용하여 JSON 데이터 유효성 검사, 쿼리, 변경&#40;SQL Server&#41;](../../relational-databases/json/validate-query-and-change-json-data-with-built-in-functions-sql-server.md)
  - [JSON 경로 식&#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)

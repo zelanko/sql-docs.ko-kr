@@ -1,4 +1,5 @@
 ---
+description: SIGNBYASYMKEY(Transact-SQL)
 title: SIGNBYASYMKEY(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: b1c46159-cc76-4205-a841-8f4a71742f80
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 44bdf92723ed68b4b79e5b6dd5825d9b9e3a7907
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: e39fe276442feec54f7dc87bba65fde0381c82b0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111355"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88362609"
 ---
 # <a name="signbyasymkey-transact-sql"></a>SIGNBYASYMKEY(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -62,7 +63,7 @@ SignByAsymKey( Asym_Key_ID , @plaintext [ , 'password' ] )
 ## <a name="remarks"></a>설명  
  비대칭 키에 대한 CONTROL 권한이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 일반 텍스트와 해당 서명을 저장할 `SignedData04` 테이블을 만듭니다. 그런 다음 테이블에 비대칭 키 `PrimeKey`로 서명된 레코드를 삽입합니다. 이 비대칭 키는 먼저 암호 `'pGFD4bb925DGvbd2439587y'`를 사용하여 해독해야 합니다.  
   
 ```  
@@ -81,7 +82,7 @@ INSERT INTO [SignedData04]
 GO  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [ASYMKEY_ID&#40;Transact-SQL&#41;](../../t-sql/functions/asymkey-id-transact-sql.md)   
  [VERIFYSIGNEDBYASYMKEY &#40;Transact-SQL&#41;](../../t-sql/functions/verifysignedbyasymkey-transact-sql.md)   
  [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   

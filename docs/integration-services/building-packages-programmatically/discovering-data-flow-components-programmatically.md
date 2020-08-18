@@ -1,4 +1,5 @@
 ---
+description: 프로그래밍 방식으로 데이터 흐름 구성 요소 검색
 title: 프로그래밍 방식으로 데이터 흐름 구성 요소 검색 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: ff92a96a-8af6-4532-82cc-c0bbff92401b
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3ec0914353d941aec9e85ebd4d5ce058c5a69740
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: a29345489624c38d4c8e00732bce2977eb6cca7d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922732"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88352409"
 ---
 # <a name="discovering-data-flow-components-programmatically"></a>프로그래밍 방식으로 데이터 흐름 구성 요소 검색
 
@@ -89,7 +90,7 @@ Module Module1
 End Module  
 ```
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [프로그래밍 방식으로 데이터 흐름 구성 요소 추가](../../integration-services/building-packages-programmatically/adding-data-flow-components-programmatically.md)  
   
   

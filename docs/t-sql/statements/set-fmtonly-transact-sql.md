@@ -1,4 +1,5 @@
 ---
+description: SET FMTONLY(Transact-SQL)
 title: SET FMTONLY(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/03/2019
@@ -22,12 +23,12 @@ ms.assetid: 02a1d9ac-2e58-433c-9a07-2c5a4a2214e1
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a610546822965def77ff5dcc973c77c0dbb292e9
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: ef1047125b3c923de910e046a0e92a3380480699
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634340"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88355949"
 ---
 # <a name="set-fmtonly-transact-sql"></a>SET FMTONLY(Transact-SQL)
 
@@ -38,10 +39,10 @@ ms.locfileid: "81634340"
 > [!NOTE]
 > 이 기능은 사용할 수 없습니다. 이 기능은 다음 항목으로 대체되었습니다.
 >
-> - [sp_describe_first_result_set (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)
-> - [sp_describe_undeclared_parameters (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)
-> - [sys.dm_exec_describe_first_result_set (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)
-> - [sys.dm_exec_describe_first_result_set_for_object (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)
+> - [sp_describe_first_result_set(Transact-SQL)](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)
+> - [sp_describe_undeclared_parameters(Transact-SQL)](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)
+> - [sys.dm_exec_describe_first_result_set(Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)
+> - [sys.dm_exec_describe_first_result_set_for_object(Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)
 
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -62,7 +63,7 @@ Transact-SQL 일괄 처리를 구문 분석할 때 `SET FMTONLY ON`은 아무 �
 ## <a name="permissions"></a>사용 권한  
  public 역할의 멤버 자격이 필요합니다.  
 
-## <a name="examples"></a>예
+## <a name="examples"></a>예제
 
 다음 Transact-SQL 코드 예제에서는 `FMTONLY`를 `ON`으로 설정합니다. 이 설정으로 인해 SQL Server는 선택한 열에 대한 메타데이터 정보만 반환합니다. 특히 열 이름이 반환됩니다. 데이터 행이 반환되지 않습니다.
 
@@ -148,7 +149,7 @@ go
 ****/
 ```
 
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [SET 문&#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)  
   
   

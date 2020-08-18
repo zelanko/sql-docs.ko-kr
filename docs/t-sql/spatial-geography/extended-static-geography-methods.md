@@ -1,4 +1,5 @@
 ---
+description: 확장 정적 지리 메서드
 title: 확장 정적 지리 메서드 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a665a137-197c-4201-a2fb-ba639b5f3ca3
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: de86e2b2b2bb958fcd57999bf8f7984078c3a48a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 227af5db894525c1fe99b2020efa27ed6c2f8ec9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731185"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88360119"
 ---
 # <a name="extended-static-geography-methods"></a>확장 정적 지리 메서드
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,11 +41,11 @@ ms.locfileid: "85731185"
   
 -   [Null](../../t-sql/spatial-geography/null-geography-data-type.md)  
   
--   [구문 분석](../../t-sql/spatial-geography/parse-geography-data-type.md)  
+-   [Parse](../../t-sql/spatial-geography/parse-geography-data-type.md)  
   
 -   [Point](../../t-sql/spatial-geography/point-geography-data-type.md)  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [정적 지리 집계 메서드](../../t-sql/spatial-geography/static-aggregate-geography-methods.md)   
  [Geography 인스턴스의 OGC 메서드](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)   
  [지리 인스턴스의 확장 메서드](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   

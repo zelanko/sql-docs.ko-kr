@@ -1,4 +1,5 @@
 ---
+description: 폴더 속성 대화 상자
 title: 폴더 속성 대화 상자 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/26/2016
@@ -14,12 +15,12 @@ f1_keywords:
 ms.assetid: d9a2bfae-fcc8-46be-b588-4a9db03f7e45
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 334105bde7936543fd1dba3167fd61e1b440fd5e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 29fb988b6c326f9c6bb6ef39d5d1fc031d12f908
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922649"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88351909"
 ---
 # <a name="folder-properties-dialog-box"></a>폴더 속성 대화 상자
 
@@ -40,7 +41,7 @@ ms.locfileid: "86922649"
   
 5.  **확인** 을 클릭하여 변경 사항을 수락하고 **폴더 속성** 대화 상자를 닫습니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [Integration Services &#40;SSIS&#41; 서버](../integration-services-ssis-packages.md)   
  [catalog.grant_permission &#40;SSISDB 데이터베이스&#41;](../../integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database.md)  
   
