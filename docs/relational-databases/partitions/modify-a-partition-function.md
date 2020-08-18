@@ -1,4 +1,5 @@
 ---
+description: 파티션 함수 수정
 title: 파티션 함수 수정 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.assetid: ae5bfc09-f27a-4ea9-9518-485278b11674
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0124f027ce4b3293afe754acfd5ad19354372cb9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2717bf5791cd5f057a57da6693e05700c9045e3c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787538"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88326909"
 ---
 # <a name="modify-a-partition-function"></a>파티션 함수 수정
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

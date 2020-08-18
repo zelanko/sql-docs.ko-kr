@@ -1,4 +1,5 @@
 ---
+description: 데이터 미리 보기 대화 상자(SQL Server 가져오기 및 내보내기 마법사)
 title: 데이터 미리 보기 대화 상자(SQL Server 가져오기 및 내보내기 마법사) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/16/2017
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: 423ac26a-ba02-4fdf-88b4-07995fe4a97e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e59c3aa71cbbff6f955c67d033713f7a27dfbb28
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 4608eed330a6ac8a64150197a591f68fcc832c65
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920184"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88347219"
 ---
 # <a name="preview-data-dialog-box-sql-server-import-and-export-wizard"></a>데이터 미리 보기 대화 상자(SQL Server 가져오기 및 내보내기 마법사)
 
@@ -43,7 +44,7 @@ ms.locfileid: "86920184"
 ## <a name="thats-not-right-i-want-to-change-something"></a>잘못된 부분이 있습니다. 변경하고 싶습니다.
 데이터를 미리 본 후 마법사의 이전 페이지에서 선택한 옵션을 변경할 수도 있습니다. 변경하려면 **확인**을 클릭하여 **원본 테이블 및 보기 선택** 페이지로 돌아간 다음 **뒤로**를 클릭하여 선택 내용을 변경할 수 있는 이전 페이지로 돌아갑니다.
 
-## <a name="whats-next"></a>다음 단계  
+## <a name="whats-next"></a>다음 작업  
  복사할 데이터를 미리 보고 **확인**을 클릭하면 **데이터 미리 보기** 대화 상자가 **원본 테이블 및 뷰 선택** 페이지 또는 **플랫 파일 대상 구성** 페이지로 돌아갑니다. 자세한 내용은 [원본 테이블 및 뷰 선택](../../integration-services/import-export-data/select-source-tables-and-views-sql-server-import-and-export-wizard.md) 또는 [플랫 파일 대상 구성](../../integration-services/import-export-data/configure-flat-file-destination-sql-server-import-and-export-wizard.md)을 참조하세요.  
  
  ## <a name="see-also"></a>참고 항목

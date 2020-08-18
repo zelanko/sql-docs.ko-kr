@@ -1,4 +1,5 @@
 ---
+description: SSIS 패키지 저장(SQL Server 가져오기 및 내보내기 마법사)
 title: SSIS 패키지 저장(SQL Server 가져오기 및 내보내기 마법사) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/17/2017
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: 7bf8ac6a-5599-43ab-bf5c-e072c11b85a0
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8f354643c156024eeee1db53ad366dfb63f55859
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 379973cb0174e25a91b6a3dfb0ed7cc319efd842
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914384"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88346819"
 ---
 # <a name="save-ssis-package-sql-server-import-and-export-wizard"></a>SSIS 패키지 저장(SQL Server 가져오기 및 내보내기 마법사)
 
@@ -110,10 +111,10 @@ SQL Server 인증을 지정한 경우 암호를 입력합니다.
 ## <a name="customize-the-saved-package"></a>저장된 패키지 사용자 지정  
  저장된 패키지를 사용자 지정하는 방법을 알아보려면 [Integration Services&#40;SSIS&#41; 패키지](../../integration-services/integration-services-ssis-packages.md)를 참조하세요.  
   
-## <a name="whats-next"></a>다음 단계  
+## <a name="whats-next"></a>다음 작업  
  패키지 저장 옵션을 추가로 지정한 후 다음 페이지는 **마법사 완료**입니다. 이 페이지에서는 마법사에서 선택한 내용을 검토하고 작업을 시작합니다. 자세한 내용은 [마법사 완료](../../integration-services/import-export-data/complete-the-wizard-sql-server-import-and-export-wizard.md)를 참조하세요.  
  
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
 [패키지 저장](../../integration-services/save-packages.md)  
 [Integration Services(SSIS) 패키지 실행](../../integration-services/packages/run-integration-services-ssis-packages.md)  
 [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)

@@ -1,4 +1,5 @@
 ---
+description: DBCC HELP(Transact-SQL)
 title: DBCC HELP(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/16/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 306092c6-4354-4e47-928b-606124fbdc6e
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: aa73ad04708c75a474fade49a183b2f66b55c006
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 3440683db3fb0b72987e26913a43ed4ba2a852ec
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485034"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88311169"
 ---
 # <a name="dbcc-help-transact-sql"></a>DBCC HELP(Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]

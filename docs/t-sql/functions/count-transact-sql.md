@@ -1,4 +1,5 @@
 ---
+description: COUNT(Transact-SQL)
 title: COUNT(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2017
@@ -23,12 +24,12 @@ ms.assetid: 28d39da6-bc2e-46c7-858c-b1721c938830
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 82928e721df413a1d5194492726734b1986b0294
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: a5b660c4b55f01f794a07e19374a4c6a8ba38bfb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110616"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88311109"
 ---
 # <a name="count-transact-sql"></a>COUNT(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -58,7 +59,7 @@ DISTINCT
 `COUNT`이 Null이 아닌 고유한 값의 수를 반환하도록 지정합니다.
   
 *expression*  
-[image](../../t-sql/language-elements/expressions-transact-sql.md), **ntext** 또는 **text**를 제외한 형식의 **식**입니다. `COUNT`이 식에서 집계 함수 또는 하위 쿼리를 지원하지 않습니다.
+**image**, **ntext** 또는 **text**를 제외한 형식의 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다. `COUNT`이 식에서 집계 함수 또는 하위 쿼리를 지원하지 않습니다.
   
 \*  
 `COUNT`이 반환할 총 테이블 행 개수를 결정하는 모든 행을 계산해야 한다고 지정합니다. `COUNT(*)`에는 매개 변수가 없으며 DISTINCT의 사용을 지원하지 않습니다. `COUNT(*)`은 특정 열에 대한 정보를 사용하지 않도록 정의되어 있으므로 *expression* 매개 변수가 필요하지 않습니다. `COUNT(*)`은 지정한 테이블에서 행의 수를 반환하고 중복 행을 유지합니다. 각 행은 개별적으로 계산되며 Null 값을 가진 행도 포함됩니다.
@@ -80,7 +81,7 @@ COUNT(DISTINCT *식*)은 그룹에 포함된 각 행의 *식*을 계산하여 Nu
   
 `COUNT`은 OVER 및 ORDER BY 절 ***없이*** 사용되는 경우 결정적 함수이고, OVER 및 ORDER BY 절과 ***함께*** 사용되는 경우 비결정적 함수입니다. 자세한 내용은 [결정적 및 비결정 함수](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)를 참조하세요.
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-using-count-and-distinct"></a>A. COUNT 및 DISTINCT 사용  
 이 예제에서는 [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] 직원이 보유할 수 있는 여러 직함의 수를 반환합니다.
@@ -138,7 +139,7 @@ GO
 ```
   
 ### <a name="d-using-the-over-clause"></a>D. OVER 절 사용  
-이 예제에서는 `MIN` 절에서 `MAX`, `AVG`, `COUNT` 및 `OVER` 함수를 사용하여 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스 `HumanResources.Department` 테이블에서 각 부서에 대해 집계된 값을 반환합니다.
+이 예제에서는 `OVER` 절에서 `MIN`, `MAX`, `AVG` 및 `COUNT` 함수를 사용하여 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스 `HumanResources.Department` 테이블에서 각 부서에 대해 집계된 값을 반환합니다.
   
 ```sql
 SELECT DISTINCT Name  
@@ -237,7 +238,7 @@ TotalCount  Average Sales Quota
 ```
   
 ### <a name="h-using-count-with-having"></a>H. HAVING과 함께 COUNT 사용  
-이 예제에서는 `COUNT` 절과 함께 `HAVING`를 사용하여 각각 15명 이상의 직원이 있는 회사의 부서를 반환합니다.
+이 예제에서는 `HAVING` 절과 함께 `COUNT`를 사용하여 각각 15명 이상의 직원이 있는 회사의 부서를 반환합니다.
   
 ```sql
 USE ssawPDW;  
@@ -259,7 +260,7 @@ Production      179
 ```
   
 ### <a name="i-using-count-with-over"></a>9\. OVER와 함께 COUNT 사용  
-이 예제에서는 `COUNT` 절과 함께 `OVER`를 사용하여 지정된 각 판매 주문에 포함된 제품의 수를 반환합니다.
+이 예제에서는 `OVER` 절과 함께 `COUNT`를 사용하여 지정된 각 판매 주문에 포함된 제품의 수를 반환합니다.
   
 ```sql
 USE ssawPDW;  
@@ -281,7 +282,7 @@ ProductCount   SalesOrderID`
   
 ## <a name="see-also"></a>참고 항목
 [집계 함수&#40;Transact-SQL&#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)  
-[COUNT_BIG&#40;Transact-SQL&#41;](../../t-sql/functions/count-big-transact-sql.md)  
+[COUNT_BIG &#40;Transact-SQL&#41;](../../t-sql/functions/count-big-transact-sql.md)  
 [OVER 절&#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)
   
   

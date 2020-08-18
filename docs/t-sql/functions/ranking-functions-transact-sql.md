@@ -1,4 +1,5 @@
 ---
+description: 순위 함수(Transact-SQL)
 title: 순위 함수(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -18,12 +19,12 @@ ms.assetid: e7f917ba-bf4a-4fe0-b342-a91bcf88a71b
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8aa10e165dff3f32227f52880afebb8de24f2d12
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: b21cca9750aeb85ae75f0b0ad8699262d7b696cc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87248528"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88309149"
 ---
 # <a name="ranking-functions-transact-sql"></a>순위 함수(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -49,7 +50,7 @@ ms.locfileid: "87248528"
     :::column-end:::
 :::row-end:::
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예제에서는 동일한 쿼리에 사용되는 4가지 순위 함수를 보여줍니다. 함수별 예제는 각 순위 함수를 참조하세요.  
   
 ```  

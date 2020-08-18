@@ -1,4 +1,5 @@
 ---
+description: Parse(데이터베이스 엔진)
 title: Parse(데이터베이스 엔진) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/22/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b37e28b6-6e2e-470a-945b-ce5252da743a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e024024726ab6366b6dbb3580f1c27367195c130
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 78ff3df45fd3d835d273d2f00f4d7ddf65170a62
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86548658"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88311509"
 ---
 # <a name="parse-database-engine"></a>Parse(데이터베이스 엔진)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -60,7 +61,7 @@ CLR: 평가되는 문자열 값입니다.
 ## <a name="remarks"></a>설명  
 Parse가 **hierarchyid**의 유효한 문자열 표현이 아닌 값을 수신하면 예외가 발생합니다. 예를 들어 **char** 데이터 형식에 후행 공백이 포함되어 있으면 예외가 발생합니다.
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-converting-transact-sql-values-without-a-table"></a>A. 테이블이 없는 Transact-SQL 값 변환  
 다음 코드 예에서는 `ToString`을 사용하여 **hierarchyid** 값을 문자열로 변환하고 `Parse`를 사용하여 문자열 값을 **hierarchyid**로 변환합니다.

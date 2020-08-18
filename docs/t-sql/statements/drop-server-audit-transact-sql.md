@@ -1,4 +1,5 @@
 ---
+description: DROP SERVER AUDIT(Transact-SQL)
 title: DROP SERVER AUDIT(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: faace8a3-daa9-4208-a2cd-4249eb32175c
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 790a477ecda6380a779b08b6c09b52db1a5b0ab0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 589334b9834a6f64c2a50bed77d890c5da013efd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883669"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88304363"
 ---
 # <a name="drop-server-audit--transact-sql"></a>DROP SERVER AUDIT(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,9 @@ DROP SERVER AUDIT audit_name
     [ ; ]  
 ```  
   
-## <a name="remarks"></a>설명  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="remarks"></a>설명
  감사를 변경하려면 감사 상태를 OFF 옵션으로 설정해야 합니다. 감사가 STATE=OFF 외의 옵션으로 설정되었을 때 DROP AUDIT를 실행하면 MSG_NEED_AUDIT_DISABLED 오류 메시지가 표시됩니다.  
   
  DROP SERVER AUDIT는 명령이 실행되기 전에 수집된 감사 데이터를 제외한 감사의 메타데이터를 제거합니다.  
@@ -49,7 +52,7 @@ DROP SERVER AUDIT audit_name
 ## <a name="permissions"></a>사용 권한  
  서버 감사 보안 주체를 생성, 변경 또는 삭제하려면 ALTER ANY SERVER AUDIT 또는 CONTROL SERVER 권한이 있어야 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `HIPAA_Audit`라는 감사를 삭제합니다.  
   
 ```  
@@ -60,7 +63,7 @@ DROP SERVER AUDIT HIPAA_Audit;
 GO  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   
  [ALTER SERVER AUDIT  &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-transact-sql.md)   
  [CREATE SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-specification-transact-sql.md)   

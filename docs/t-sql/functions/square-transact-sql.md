@@ -1,4 +1,5 @@
 ---
+description: SQUARE(Transact-SQL)
 title: SQUARE(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -19,12 +20,12 @@ ms.assetid: 007b6b12-da86-4229-8f5c-fdd4fa839f5f
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0df938f2e88300a5b9bcc5b741c041996c9ea571
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 342576d4010f068c397df70db08ce209ef07a56d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113320"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88309059"
 ---
 # <a name="square-transact-sql"></a>SQUARE(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -43,12 +44,12 @@ SQUARE ( float_expression )
 
 ## <a name="arguments"></a>인수
  *float_expression*  
- [float](../../t-sql/language-elements/expressions-transact-sql.md) 형식 또는 float로 암시적으로 변환되는 형식의 **식**입니다.  
+ **float** 형식 또는 float로 암시적으로 변환되는 형식의 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다.  
   
 ## <a name="return-types"></a>반환 형식  
  **float**  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 반경 `1`인치, 높이 `5`인치인 실린더의 부피를 반환합니다.  
   
 ```  
@@ -67,7 +68,7 @@ Cyl Vol
 ```  
   
 ## <a name="examples-sssdwfull-and-sspdw"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 다음 예에서는 `volume` 테이블의 `containers` 열에 각 값의 제곱을 반환합니다.  
+ 다음 예에서는 `containers` 테이블의 `volume` 열에 각 값의 제곱을 반환합니다.  
   
 ```  
 -- Uses AdventureWorks  

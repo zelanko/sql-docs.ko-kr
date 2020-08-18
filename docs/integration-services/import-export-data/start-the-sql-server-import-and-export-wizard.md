@@ -1,4 +1,5 @@
 ---
+description: SQL Server 가져오기 및 내보내기 마법사 시작
 title: SQL Server 가져오기 및 내보내기 마법사 시작
 titleSuffix: Integration Services (SSIS)
 ms.prod: sql
@@ -15,12 +16,12 @@ ms.author: chugu
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 11/18/2019
-ms.openlocfilehash: a80b12db0f303ee82f91be9e3eb60c975396063e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: adbb8eee477e9f021c011b91e586492e64747851
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914368"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88346579"
 ---
 # <a name="start-the-sql-server-import-and-export-wizard"></a>SQL Server 가져오기 및 내보내기 마법사 시작
 
@@ -123,7 +124,7 @@ Visual Studio가 설치되어 있지 않거나 Visual Studio가 있지만 SQL Se
 > [!TIP]
 > 마법사의 모든 페이지 또는 대화 상자에서 F1 키를 누르면 현재 페이지에 대한 설명서를 볼 수 있습니다.   
 
-## <a name="whats-next"></a>다음 단계
+## <a name="whats-next"></a>다음 작업
 
 마법사를 시작할 때 첫 번째 페이지는 **SQL Server 가져오기 및 내보내기 마법사 시작**입니다. 이 페이지에서는 어떤 작업도 수행할 필요가 없습니다. 자세한 내용은 [SQL Server 가져오기 및 내보내기 마법사 시작](../../integration-services/import-export-data/welcome-to-sql-server-import-and-export-wizard.md)을 참조하세요.  
   
@@ -139,7 +140,7 @@ Visual Studio가 설치되어 있지 않거나 Visual Studio가 있지만 SQL Se
 
   - **마법사의 작동 원리에 대해 자세히 알아보기.**
 
-  - **마법사에 대해 자세히 알아보기.** 마법사에 대한 개요를 살펴보려면 [SQL Server 가져오기 및 내보내기 마법사를 사용하여 데이터 가져오기 및 내보내기](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)를 참조하세요.
+  - **마법사에 대해 자세히 알아봅니다.** 마법사에 대한 개요를 살펴보려면 [SQL Server 가져오기 및 내보내기 마법사를 사용하여 데이터 가져오기 및 내보내기](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)를 참조하세요.
 
   - **마법사의 단계에 대해 자세히 알아보기** - 마법사의 단계에 대한 정보를 찾으려면 [SQL Server 가져오기 및 내보내기 마법사의 단계](../../integration-services/import-export-data/steps-in-the-sql-server-import-and-export-wizard.md)를 참조하세요. 또한 마법사의 각 페이지마다 별도의 설명서 페이지가 있습니다.
 

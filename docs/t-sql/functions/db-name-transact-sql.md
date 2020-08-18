@@ -1,4 +1,5 @@
 ---
+description: DB_NAME(Transact-SQL)
 title: DB_NAME(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/30/2017
@@ -22,12 +23,12 @@ ms.assetid: e21fb33a-a3ea-49b0-bb6b-8f789a675a0e
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5c27b44eeb93e7164344287ceb640c8a5734f650
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 5d55a8194cff725c61d7584d1c01970f5be2c76e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113036"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88310459"
 ---
 # <a name="db_name-transact-sql"></a>DB_NAME(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -59,7 +60,7 @@ DB_NAME ( [ database_id ] )
 > [!IMPORTANT]  
 >  기본적으로 public 역할에는 모든 로그인이 데이터베이스 정보를 보도록 허용하는 `VIEW ANY DATABASE` 권한이 있습니다. 로그인이 데이터베이스를 검색하지 않게 하려면 public에서 `VIEW ANY DATABASE` 권한을 `REVOKE`하거나 로그인에 대한 `DENY` 권한을 `VIEW ANY DATABASE`합니다.
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-returning-the-current-database-name"></a>A. 현재 데이터베이스 이름 반환  
 이 예에서는 현재 데이터베이스의 이름을 반환합니다.

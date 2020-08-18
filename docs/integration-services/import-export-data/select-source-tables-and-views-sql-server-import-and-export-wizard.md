@@ -1,4 +1,5 @@
 ---
+description: 원본 테이블 및 뷰 선택(SQL Server 가져오기 및 내보내기 마법사)
 title: 원본 테이블 및 뷰 선택(SQL Server 가져오기 및 내보내기 마법사) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/02/2018
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: f60e1a19-2ea6-403c-89ab-3e60ac533ea0
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 788aef06cb86897735c91e2407e488b053f128f5
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: dad9a87c5055e8dfd8292dca048b5f9d239c1e94
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914385"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88346789"
 ---
 # <a name="select-source-tables-and-views-sql-server-import-and-export-wizard"></a>원본 테이블 및 뷰 선택(SQL Server 가져오기 및 내보내기 마법사)
 
@@ -74,21 +75,21 @@ ms.locfileid: "86914385"
 
 ### <a name="excel-source-tables"></a>Excel 원본 테이블
 Excel 데이터 원본에 대한 원본 테이블 및 뷰 목록에는 두 가지 유형의 Excel 개체가 포함됩니다.
--   **워크시트**. 워크시트 이름 뒤에는 달러 기호($)가 옵니다(예: **'Sheet1$ '** ).
+-   **워크시트**. 워크시트 이름 뒤에는 달러 기호($)가 옵니다(예: **'Sheet1$ '**).
 -   **명명된 범위.** 명명된 범위(있는 경우)는 이름별으로 나열됩니다.
 
-명명되지 않는 특정 셀 범위(예: **[Sheet1$A1:B4]** )에서 또는 해당 범위로 데이터를 로드하려면 쿼리를 작성해야 합니다. **테이블 복사 또는 쿼리 지정** 페이지로 돌아가서 **전송 데이터를 지정할 쿼리 작성**을 선택합니다.
+명명되지 않는 특정 셀 범위(예: **[Sheet1$A1:B4]**)에서 또는 해당 범위로 데이터를 로드하려면 쿼리를 작성해야 합니다. **테이블 복사 또는 쿼리 지정** 페이지로 돌아가서 **전송 데이터를 지정할 쿼리 작성**을 선택합니다.
 
 ### <a name="excel-destination-tables"></a>Excel 대상 테이블
 Excel로 데이터를 내보내는 경우에 다음 세 가지 방법 중 하나로 대상을 지정할 수 있습니다.
--   **워크시트.** 워크시트를 지정하려면 시트 이름 끝에 $ 문자를 추가하고 문자열 주위에 구분 기호를 추가합니다(예: **[Sheet1$]** ).
+-   **워크시트.** 워크시트를 지정하려면 시트 이름 끝에 $ 문자를 추가하고 문자열 주위에 구분 기호를 추가합니다(예: **[Sheet1$]**).
 -   **명명된 범위.** 명명된 범위를 지정하려면 범위 이름을 사용하면 됩니다(예: **MyDataRange**).
 -   **명명되지 않은 범위.** 명명하지 않은 셀의 범위를 지정하려면 시트 이름 끝에 $ 문자를 추가하고 문자열 주위에 구분 기호를 추가합니다(예: **[Sheet1$A1:B4]** ).
 
 > [!TIP]
 > Excel을 원본 또는 대상으로 사용하는 경우 **매핑 편집** 을 클릭하고 **열 매핑** 페이지에서 데이터 형식 매핑을 검토하는 것이 좋습니다. 
 
-## <a name="whats-next"></a>다음 단계  
+## <a name="whats-next"></a>다음 작업  
  대상에 복사 및 매핑할 기존 테이블 및 뷰를 선택한 후 다음 페이지는 **패키지 저장 및 실행**입니다. 이 페이지에서는 복사 작업을 즉시 실행할지 여부를 지정합니다. 구성에 따라 마법사에서 만든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 저장하여 사용자 지정하고 나중에 다시 사용할 수도 있습니다. 자세한 내용은 [패키지 저장 및 실행](../../integration-services/import-export-data/save-and-run-package-sql-server-import-and-export-wizard.md)을 참조하세요.
  
  ## <a name="see-also"></a>참고 항목

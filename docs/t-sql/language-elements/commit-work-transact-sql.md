@@ -1,5 +1,6 @@
 ---
-title: COMMIT WORK(Transact-SQL) | Microsoft Docs
+description: COMMIT WORK(Transact-SQL)
+title: COMMIT WORK(Transact-SQL)
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,14 +21,14 @@ helpviewer_keywords:
 - marking end of transactions [SQL Server]
 - COMMIT WORK statement
 ms.assetid: 4de76f33-399e-4912-a617-6eb6c560a058
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: b46633e17ee508a9e38ef1cc57cb76004ecdcba1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 3b99eb919c732f303c4a94d289c8e960a8f6aa0a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85706623"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88307877"
 ---
 # <a name="commit-work-transact-sql"></a>COMMIT WORK(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,14 +37,15 @@ ms.locfileid: "85706623"
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>구문
   
 ```syntaxsql
-  
 COMMIT [ WORK ]  
 [ ; ]  
 ```  
-  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="remarks"></a>설명  
  COMMIT TRANSACTION이 사용자 정의 트랜잭션 이름을 허용하는 것을 제외하면 이 문은 COMMIT TRANSACTION과 동일한 기능을 수행합니다. COMMIT 구문은 선택적인 키워드인 WORK의 지정 여부와 관계 없이 SQL-92와 호환이 가능합니다.  
   

@@ -1,4 +1,5 @@
 ---
+description: MSSQLSERVER_21893
 title: MSSQLSERVER_21893 | Microsoft 문서
 ms.custom: ''
 ms.date: 04/04/2017
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1ab1195a-fe2a-4e06-b871-b177b6bea1fe
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d1ab933d65ab0851f89ea313f87240979adf9288
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9d32c40ca57fd9f46fc8ef622bcb9b0e620efc1c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85780502"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88332589"
 ---
 # <a name="mssqlserver_21893"></a>MSSQLSERVER_21893
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

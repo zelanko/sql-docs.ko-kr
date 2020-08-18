@@ -1,4 +1,5 @@
 ---
+description: UPDATETEXT(Transact-SQL)
 title: UPDATETEXT(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/23/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: d73c28ee-3972-4afd-af8d-ebbbd9e50793
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5da5354681ff38fbcf818294f85b9381db21659a
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: c78bf19d7264d0f1c7d073cbe0ce76e2e5b6f4e8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554748"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88306571"
 ---
 # <a name="updatetext-transact-sql"></a>UPDATETEXT(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -33,7 +34,7 @@ ms.locfileid: "86554748"
   기존 **text**, **ntext** 또는 **image** 필드를 업데이트합니다. UPDATETEXT를 사용하여 **text**, **ntext** 또는 **image** 열의 일부만 변경할 수 있습니다. WRITETEXT를 사용하여 **text**, **ntext** 또는 **image** 필드 전체를 업데이트하고 바꿀 수 있습니다.  
   
 > [!IMPORTANT]
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 대신 큰 값 데이터 형식 및 **UPDATE** 문의 [.](../../t-sql/queries/update-transact-sql.md)WRITE 절을 사용합니다.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 대신 큰 값 데이터 형식 및 [UPDATE](../../t-sql/queries/update-transact-sql.md) 문의 **.** WRITE 절을 사용합니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -74,7 +75,7 @@ UPDATETEXT [BULK] { table_name.dest_column_name dest_text_ptr }
  로깅은 데이터베이스에 영향을 주는 복구 모델에 의해 결정됩니다.  
   
  *inserted_data*  
- **insert_offset** 위치에서 기존 **text**, **ntext** 또는 *image* 열로 삽입할 데이터입니다. 이것은 단일 **char**, **nchar**, **varchar**, **nvarchar**, **binary**, **varbinary**, **text**, **ntext** 또는 **image** 값입니다. *inserted_data*는 리터럴 또는 변수일 수 있습니다.  
+ *insert_offset* 위치에서 기존 **text**, **ntext** 또는 **image** 열로 삽입할 데이터입니다. 이것은 단일 **char**, **nchar**, **varchar**, **nvarchar**, **binary**, **varbinary**, **text**, **ntext** 또는 **image** 값입니다. *inserted_data*는 리터럴 또는 변수일 수 있습니다.  
   
  *table_name.src_column_name*  
  삽입된 데이터 원본으로 사용되는 **text**, **ntext** 또는 **image** 열 이름과 테이블의 이름입니다. 테이블 이름과 열 이름은 식별자 규칙을 따라야 합니다.  
@@ -103,7 +104,7 @@ UPDATETEXT [BULK] { table_name.dest_column_name dest_text_ptr }
 ## <a name="permissions"></a>사용 권한  
  지정된 테이블에 대해 UPDATE 권한이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음은 텍스트 포인터를 지역 변수인 `@ptrval`에 둔 다음 `UPDATETEXT`를 사용하여 맞춤법 오류를 업데이트하는 예입니다.  
   
 > [!NOTE]  
@@ -125,7 +126,7 @@ ALTER DATABASE pubs SET RECOVERY FULL;
 GO  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [READTEXT&#40;Transact-SQL&#41;](../../t-sql/queries/readtext-transact-sql.md)   
  [TEXTPTR&#40;Transact-SQL&#41;](../../t-sql/functions/text-and-image-functions-textptr-transact-sql.md)   
  [WRITETEXT&#40;Transact-SQL&#41;](../../t-sql/queries/writetext-transact-sql.md)  

@@ -1,4 +1,5 @@
 ---
+description: MSSQLSERVER_926
 title: MSSQLSERVER_926 | Microsoft 문서
 ms.custom: ''
 ms.date: 04/04/2017
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 57e01668-883b-4be4-84a8-a111caaf0486
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 022706502e3fe96dad1dbdc826dfb4076f024b0f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 854648c2971c1cc7f49f52c0a45b761367c64f25
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85636440"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88330939"
 ---
 # <a name="mssqlserver_926"></a>MSSQLSERVER_926
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

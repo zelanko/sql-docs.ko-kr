@@ -1,4 +1,5 @@
 ---
+description: GET_TRANSMISSION_STATUS(Transact-SQL)
 title: GET_TRANSMISSION_STATUS(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/26/2017
@@ -25,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 621805d5-49ed-4764-b3cb-2ae4a3bf797e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 22293acb123af48eee2806a9536b9bcebc3f07bf
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: a2523504a518497a86b9d4ebcd15fed2b75ce5af
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483810"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88304684"
 ---
 # <a name="get_transmission_status-transact-sql"></a>GET_TRANSMISSION_STATUS(Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -63,7 +64,7 @@ GET_TRANSMISSION_STATUS ( conversation_handle )
 > [!NOTE]  
 >  GET_TRANSMISSION_STATUS는 현재 인스턴스에서 대화 엔드포인트를 가지고 있지 않은 메시지에 대한 정보는 제공하지 않습니다. 즉 전달할 메시지에 대한 정보는 제공하지 않습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  이 예에서는 대화 핸들이 `58ef1d2d-c405-42eb-a762-23ff320bddf0`인 대화의 전송 상태를 보고합니다.  
   
 ```  
@@ -81,8 +82,8 @@ SELECT Status =
   
  이 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 [!INCLUDE[ssSB](../../includes/sssb-md.md)]가 네트워크에서 통신할 수 있도록 구성되지 않은 것입니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [sys.conversation_endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql.md)   
- [sys.transmission_queue &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-transmission-queue-transact-sql.md)  
+ [sys.transmission_queue&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-transmission-queue-transact-sql.md)  
   
   

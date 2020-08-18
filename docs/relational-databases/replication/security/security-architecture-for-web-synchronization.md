@@ -1,4 +1,5 @@
 ---
+description: 웹 동기화를 위한 보안 아키텍처
 title: 웹 동기화를 위한 보안 아키텍처 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 74eee587-d5f5-4d1a-bbae-7f4e3f27e23b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5797dc0f216d0956619e2874676b917314162dd5
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 59ad240e910a4188672b0d73abcd98f168603f94
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900007"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88326899"
 ---
 # <a name="security-architecture-for-web-synchronization"></a>웹 동기화를 위한 보안 아키텍처
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

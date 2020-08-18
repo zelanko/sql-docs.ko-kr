@@ -1,4 +1,5 @@
 ---
+description: 스크립트 태스크에서 이벤트 발생
 title: 스크립트 태스크에서 이벤트 발생 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 21ea07d1-e267-4fb1-a6cc-82c95a39beae
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: fa645e56314e460a70e9ee5c95fb02cecb8cc1e3
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 590691ef8e1a9791325a19cafdca378d3b95ee14
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913206"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88347509"
 ---
 # <a name="raising-events-in-the-script-task"></a>스크립트 태스크에서 이벤트 발생
 
@@ -38,7 +39,7 @@ ms.locfileid: "86913206"
   
  이벤트를 발생시키기 위해 스크립트 태스크에서는 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Events%2A> 속성에 의해 제공된 메서드 중 하나를 호출합니다. 다음 표에서는 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Events%2A> 속성에 의해 제공된 메서드를 보여 줍니다.  
   
-|행사|Description|  
+|이벤트|Description|  
 |-----------|-----------------|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireCustomEvent%2A>|패키지에서 사용자가 정의한 사용자 지정 이벤트를 발생시킵니다.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireError%2A>|패키지에 오류 조건을 알립니다.|  

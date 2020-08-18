@@ -1,4 +1,5 @@
 ---
+description: SSIS 패키지 업그레이드 마법사를 사용하여 Integration Services 패키지 업그레이드
 title: SSIS 패키지 업그레이드 마법사를 사용하여 Integration Services 패키지 업그레이드 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9359275a-48f5-4d1e-8ae7-e797759e3ccf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 452ad0e1fec7ac1f4773a1d6a2491ba903f83884
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 0a9e27d3d7379ad4e0c16d47bcdb97abab38741e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915866"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88346399"
 ---
 # <a name="upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard"></a>SSIS 패키지 업그레이드 마법사를 사용하여 Integration Services 패키지 업그레이드
 
@@ -90,7 +91,7 @@ ms.locfileid: "86915866"
 2.  마법사의 **패키지 관리 옵션 선택** 페이지에서 **원래 패키지 백업** 옵션을 선택합니다.  
   
     > [!WARNING]  
-    >  마법사를 자동으로 실행하는 **에서** 이후 프로젝트를 열면 [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] 원래 패키지 백업 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]옵션이 표시되지 않습니다.  
+    >  마법사를 자동으로 실행하는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] 이후 프로젝트를 열면 **원래 패키지 백업** 옵션이 표시되지 않습니다.  
   
 3.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지 업그레이드 마법사를 실행합니다.  
   

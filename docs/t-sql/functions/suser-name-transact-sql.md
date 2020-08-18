@@ -1,4 +1,5 @@
 ---
+description: SUSER_NAME(Transact-SQL)
 title: SUSER_NAME(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -24,12 +25,12 @@ ms.assetid: ae598d9f-9baa-49b8-b1c1-042854206de4
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3b62e29885c9e23ae7f391106ce83cdf77c1b8d3
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: b47d97f42c1da9420a79f3ed45bd4fb5d6071220
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110754"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88307979"
 ---
 # <a name="suser_name-transact-sql"></a>SUSER_NAME(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -64,14 +65,14 @@ SUSER_NAME은 SELECT 목록이나 WHERE 절, 그리고 식이 사용되는 모�
 > [!NOTE]
 > SUSER_NAME 함수는 Azure SQL Database에서 지원되지만, Azure SQL Database에서 SUSER_NAME과 함께 *Execute as*를 사용할 수는 없습니다. 
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
 다음 예에서는 로그인 ID가 `1`인 사용자의 로그인 ID 이름을 반환합니다.  
   
 ```  
 SELECT SUSER_NAME(1);  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
 [SUSER_ID &#40;Transact-SQL&#41;](../../t-sql/functions/suser-id-transact-sql.md)   
 [보안 주체&#40;데이터베이스 엔진&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  
   

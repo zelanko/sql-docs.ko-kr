@@ -1,4 +1,5 @@
 ---
+description: 구독, 동기화 기록
 title: 구독, 동기화 기록 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/07/2017
@@ -14,12 +15,12 @@ ms.assetid: 85f666f6-14ee-4f19-b385-e5cc508aabe4
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: b82300ff328470f0b195796385f29e651a1998b9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: db40c8e3848ee5dac3d770e77629555ea87814b3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85729326"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88326016"
 ---
 # <a name="subscription-synchronization-history"></a>구독, 동기화 기록
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -34,9 +35,9 @@ ms.locfileid: "85729326"
  **상태**  
  세션 종료 시 병합 에이전트의 상태입니다. 다음 목록에서는 가능한 상태 값을 보여 줍니다.  
   
--   Error  
+-   오류  
   
--   Completed  
+-   완료됨  
   
 -   다시 시도 중  
   
@@ -48,7 +49,7 @@ ms.locfileid: "85729326"
  **종료 시간**  
  세션의 종료 시간입니다. 에이전트가 중지되지 않은 경우 이 필드는 비어 있습니다.  
   
- **Duration**  
+ **기간**  
  세션에서 병합 에이전트가 실행된 시간입니다. 에이전트가 현재 실행되고 있는 경우 이 시간은 경과된 시간을 나타내고 에이전트가 이전에 실행된 경우에는 총 시간을 나타냅니다.  
   
  **업로드된 명령**  
@@ -60,7 +61,7 @@ ms.locfileid: "85729326"
  **오류 메시지**  
  세션이 오류로 인해 종료된 경우 이 필드는 병합 에이전트에서 기록한 마지막 오류 메시지를 표시합니다. 세션이 오류 없이 종료된 경우에는 필드가 비어 있습니다.  
   
- **문서**  
+ **아티클**  
  게시에 있는 각 아티클의 이름입니다. 다음은 전체 게시의 처리 단계입니다.  
   
 -   **초기화**. 병합 에이전트를 시작한다는 의미이며 스냅샷 적용과 관련된 구독 초기화와는 다릅니다.  
@@ -76,7 +77,7 @@ ms.locfileid: "85729326"
  **총 %**  
  선택한 세션에서 각 단계가 차지하는 처리 시간 비율입니다.  
   
- **Duration**  
+ **기간**  
  각 처리 단계에서 소요된 시간입니다. 병합 에이전트가 현재 세션에 대해 실행 중이면 이 시간은 경과된 시간을 나타내고 병합 에이전트가 이전에 실행된 경우에는 총 시간을 나타냅니다.  
   
  **Inserts**  
@@ -97,7 +98,7 @@ ms.locfileid: "85729326"
  **선택한 세션에 대한 마지막 메시지**  
  이 텍스트 영역은 선택한 세션의 마지막 메시지를 표시합니다. 오류가 발생하면 오류 발생 시 시도한 명령과 자세한 오류 정보를 표시합니다. 오류와 관련된 추가 내용으로 연결되는 링크도 포함되어 있습니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [복제 모니터 시작](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
  [복제 모니터를 사용하여 정보 보기 및 태스크 수행](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [복제 모니터링](../../relational-databases/replication/monitor/monitoring-replication.md)   

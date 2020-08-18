@@ -1,4 +1,5 @@
 ---
+description: 데이터 형식 매핑 검토(SQL Server 가져오기 및 내보내기 마법사)
 title: 데이터 형식 매핑 검토(SQL Server 가져오기 및 내보내기 마법사) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: 0625c4f9-b8ff-4593-b884-39398b9d43af
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6fa50c1de5a5cf1cd1963e60774617bd92713872
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 2376f29d6e488af4481e245440e995fd584dfea1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920164"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88347049"
 ---
 # <a name="review-data-type-mapping-sql-server-import-and-export-wizard"></a>데이터 형식 매핑 검토(SQL Server 가져오기 및 내보내기 마법사)
 
@@ -94,7 +95,7 @@ ms.locfileid: "86920164"
  -   오류가 발생하면 실패하고 가져오기 또는 내보내기 프로세스가 중지됩니다. 이것은 기본값입니다.
  -   잘림을 무시하고 가져오기 또는 내보내기 프로세스를 계속합니다.  
    
-## <a name="whats-next"></a>다음 단계  
+## <a name="whats-next"></a>다음 작업  
  경고를 검토하고 변환 옵션과 오류 처리 방법을 지정하면 **데이터 형식 매핑 검토** 페이지에서 **열 매핑** 대화 상자로 다시 이동됩니다. 자세한 내용은 [열 매핑](../../integration-services/import-export-data/column-mappings-sql-server-import-and-export-wizard.md)을 참조하세요.  
  
  ## <a name="see-also"></a>참고 항목

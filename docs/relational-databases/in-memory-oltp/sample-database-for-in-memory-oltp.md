@@ -12,12 +12,12 @@ ms.assetid: df347f9b-b950-4e3a-85f4-b9f21735eae3
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2cc94e5f36b6c36ed44185c47356f67efb8729fe
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: fe3f756c08229631a76effe5fc8b16bc5fe6f965
+ms.sourcegitcommit: bf8cf755896a8c964774a438f2bd461a2a648c22
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87947552"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88216703"
 ---
 # <a name="sample-database-for-in-memory-oltp"></a>메모리 내 OLTP에 대한 예제 데이터베이스
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -183,8 +183,7 @@ ms.locfileid: "87947552"
   
  해시 인덱스를 사용하여 작업을 추가로 최적화할 수 있습니다. 해시 인덱스는 포인트 조회와 행 삽입에 대해 특히 최적화됩니다. 그러나 해시 인덱스가 범위 검색, 정렬된 검색 또는 선행 인덱스 키 열에 대한 검색을 지원하지 않는다는 점을 고려해야 합니다. 따라서 이러한 인덱스를 사용할 때는 주의를 기울여야 합니다. 또한 만들 때 bucket_count를 지정해야 합니다. bucket_count는 일반적으로 인덱스 키 값의 수와 그 두 배 사이에서 설정되어야 하지만 더 많이 추정해도 대개 문제가 되지 않습니다.  
   
-[인덱스 지침](https://docs.microsoft.com/sql/relational-databases/indexes/guidelines-for-online-index-operations) 및 [올바른 bucket_count 선택](https://technet.microsoft.com/library/dn494956\(v=sql.120\).aspx) 지침에 대한 자세한 내용은 온라인 설명서를 참조하세요.  
-
+[인덱스 지침](https://docs.microsoft.com/sql/relational-databases/indexes/guidelines-for-online-index-operations) 및 [올바른 bucket_count 선택](https://sqlserver-help.com/tag/bucket_count/) 지침에 대한 자세한 내용은 온라인 설명서를 참조하세요.  
 
 온라인 설명서에서는 다음 항목에 대해 자세히 설명합니다.
 - [인덱스 지침](https://docs.microsoft.com/sql/relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables) <!-- On MSDN-TechNet was version sql.120 (2014), library/dn133166 -->

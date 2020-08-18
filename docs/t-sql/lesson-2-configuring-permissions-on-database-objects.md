@@ -1,4 +1,5 @@
 ---
+description: '2단원: 데이터베이스 개체에 대한 사용 권한 구성'
 title: '자습서: DB 개체에 대한 권한 구성'
 ms.custom: seo-lt-2019
 ms.date: 07/31/2018
@@ -12,12 +13,12 @@ ms.assetid: f964b66a-ec32-44c2-a185-6a0f173bfa22
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 991bdef702b1ed298bb492172ef65c6d25d5d0ab
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 195390d76716bcad18df884491fa07335c70665b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75244753"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88306639"
 ---
 # <a name="lesson-2-configure-permissions-on-database-objects"></a>2단원: 데이터베이스 개체에 대한 사용 권한 구성
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -26,14 +27,14 @@ ms.locfileid: "75244753"
   >[!NOTE]
   > 이 단원에서는 [1 단원 - 데이터베이스 개체 만들기](lesson-1-creating-database-objects.md)에서 만든 개체를 사용합니다. 2단원을 계속하기 전에 1단원을 완료합니다. 
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>전제 조건
 이 자습서를 완료하려면 SQL Server Management Studio 및 SQL Server 인스턴스에 대한 액세스 권한이 필요합니다. 
 
 - [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)를 설치합니다.
 
 SQL Server 인스턴스에 대한 액세스 권한이 없는 경우 다음 링크에서 플랫폼을 선택합니다. SQL 인증을 선택한 경우 SQL Server 로그인 자격 증명을 사용합니다.
-- **Windows**: [SQL Server 2017 Developer Edition 다운로드](https://www.microsoft.com/sql-server/sql-server-downloads).
-- **macOS**: [Docker에서 SQL Server 2017 다운로드](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker).
+- **Windows**: [SQL Server 2017 Developer Edition 다운로드](https://www.microsoft.com/sql-server/sql-server-downloads)
+- **macOS**: [Docker에서 SQL Server 2017 다운로드](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker)
 
 [!INCLUDE[Freshness](../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
@@ -44,7 +45,7 @@ SQL Server 인스턴스에 대한 액세스 권한이 없는 경우 다음 링�
   
 ### <a name="create-a-new-windows-account"></a>새 Windows 계정 만들기  
   
-1.  **시작**, **실행**을 차례로 클릭하고 **열기** 상자에 **%SystemRoot%\system32\compmgmt.msc /s**를 입력한 다음 **확인** 을 클릭하여 컴퓨터 관리 프로그램을 엽니다. 
+1.  **시작**, **실행**을 클릭하고 **열기** 상자에 **%SystemRoot%\system32\compmgmt.msc /s**를 입력한 다음 **확인**을 클릭하여 컴퓨터 관리 프로그램을 엽니다. 
 2.  **시스템 도구**에서 **로컬 사용자 및 그룹**을 확장하고 **사용자**를 마우스 오른쪽 단추로 클릭한 다음 **새 사용자**를 클릭합니다.    
 3.  **사용자 이름** 상자에 **Mary**를 입력합니다.    
 4.  **암호** 및 **암호 확인** 상자에 강력한 암호를 입력한 다음 **만들기** 를 클릭하여 새 로컬 Windows 사용자를 만듭니다.  
@@ -86,7 +87,7 @@ Mary에게 액세스 권한을 부여하려면 **TestData** 데이터베이스�
 
 
 ## <a name="create-views-and-stored-procedures"></a>보기 및 저장 프로시저 만들기
-관리자는 **Products** 테이블 및 **vw_Names** 뷰에서 SELECT를 실행하고 **pr_Names** 프로시저를 실행할 수 있지만 Mary는 이러한 작업을 수행할 수 없습니다. Mary에게 필요한 사용 권한을 부여하려면 GRANT 문을 사용합니다.  
+ 관리자는 **Products** 테이블 및 **vw_Names** 뷰에서 SELECT를 실행하고 **pr_Names** 프로시저를 실행할 수 있지만 Mary는 이러한 작업을 수행할 수 없습니다. Mary에게 필요한 사용 권한을 부여하려면 GRANT 문을 사용합니다.  
 
 ### <a name="grant-permission-to-stored-procedure"></a>저장 프로시저에 사용 권한 부여  
 다음 문을 실행하여 `Mary` 저장 프로시저에 대한 `EXECUTE` 권한을 `pr_Names` 에게 제공합니다.

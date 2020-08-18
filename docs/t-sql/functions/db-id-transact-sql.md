@@ -1,4 +1,5 @@
 ---
+description: DB_ID(Transact-SQL)
 title: DB_ID(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/13/2019
@@ -23,12 +24,12 @@ ms.assetid: 7b3aef89-a6fd-4144-b468-bf87ebf381b8
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 35b2dd7756d50d2f69fece370330c35e614e33ef
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 6742ad9d5dae61ffcdbefe5d8f66bcbe8cd5078e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112482"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88310939"
 ---
 # <a name="db_id-transact-sql"></a>DB_ID(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -64,7 +65,7 @@ DB_ID ( [ 'database_name' ] )
 > [!IMPORTANT]  
 >  기본적으로 public 역할에는 모든 로그인이 데이터베이스 정보를 보도록 허용하는 `VIEW ANY DATABASE` 권한이 있습니다. 로그인이 데이터베이스를 검색하지 않게 하려면 public에서 `VIEW ANY DATABASE` 권한을 `REVOKE`하거나 로그인에 대한 `DENY` 권한을 `VIEW ANY DATABASE`합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-returning-the-database-id-of-the-current-database"></a>A. 현재 데이터베이스의 데이터베이스 ID 반환  
 이 예에서는 현재 데이터베이스의 데이터베이스 ID를 반환합니다.

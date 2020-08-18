@@ -1,4 +1,5 @@
 ---
+description: SCOPE_IDENTITY(Transact-SQL)
 title: SCOPE_IDENTITY(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/06/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: eef24670-059b-4f10-91d4-a67bc1ed12ab
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 1c3a04c1fdb01ff87543789bd2f9da8bfd685b78
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: d4543adc695f7de97394bc02e8b2c478f7a22d34
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112835"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88308799"
 ---
 # <a name="scope_identity-transact-sql"></a>SCOPE_IDENTITY(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -58,7 +59,7 @@ SCOPE_IDENTITY()
   
  문 및 트랜잭션이 실패해도 테이블의 현재 ID가 변경되고 ID 열 값 간에 간격이 생성될 수 있습니다. 테이블에 값을 삽입하려고 시도한 트랜잭션이 커밋되지 않아도 ID 값은 롤백되지 않습니다. 예를 들어 IGNORE_DUP_KEY 위반으로 인해 INSERT 문이 실패해도 테이블의 현재 ID 값은 계속 증가합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-using-identity-and-scope_identity-with-triggers"></a>A. 트리거에 @@IDENTITY 및 SCOPE_IDENTITY 사용  
  다음 예에서는 두 개의 테이블 `TZ` 및 `TY`를 만들고 `TZ`에서 INSERT 트리거를 만듭니다. `TZ` 테이블에 행이 삽입될 때 트리거(`Ztrig`)가 발생하고 `TY`에서 행을 삽입합니다.  
@@ -177,7 +178,7 @@ GO
  89
  ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [@@IDENTITY&#40;Transact-SQL&#41;](../../t-sql/functions/identity-transact-sql.md)  
   
   

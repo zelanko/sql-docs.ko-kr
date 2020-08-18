@@ -1,4 +1,5 @@
 ---
+description: 전체 텍스트 인덱싱 문제 해결
 title: 전체 텍스트 인덱싱 문제 해결 | Microsoft 문서
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 36a8f05f6f135b5f8790f95e409f5db59dcf145a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c11c753528ed4fdc723ee45884093d9c5ec95dc8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85628964"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88325905"
 ---
 # <a name="troubleshoot-full-text-indexing"></a>전체 텍스트 인덱싱 문제 해결
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -58,7 +59,7 @@ ms.locfileid: "85628964"
  데이터베이스의 트랜잭션 로그를 복원할 때 전체 텍스트 인덱스에 일관성이 없다는 경고가 표시될 수 있습니다. 이는 데이터베이스가 백업된 후 테이블에 대한 전체 텍스트 인덱스가 수정되었기 때문입니다. 전체 텍스트 인덱스를 일관성 있게 구성하려면 해당 테이블에 대해 전체 채우기(탐색)를 실행해야 합니다. 자세한 내용은 [전체 텍스트 인덱스 채우기](../../relational-databases/search/populate-full-text-indexes.md)를 참조하세요.  
   
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [ALTER FULLTEXT CATALOG&#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-catalog-transact-sql.md)   
  [전체 텍스트 인덱스 채우기](../../relational-databases/search/populate-full-text-indexes.md)  
   

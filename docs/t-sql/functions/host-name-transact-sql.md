@@ -1,4 +1,5 @@
 ---
+description: HOST_NAME(Transact-SQL)
 title: HOST_NAME(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/21/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4b8b0705-c083-4b07-b954-c83ee73b2ebb
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ec753666e5baac90e9098bc8718d0f0b8fa1878e
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 120580a238307981610179389f39cd7639baf785
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113495"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88309749"
 ---
 # <a name="host_name-transact-sql"></a>HOST_NAME(Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "87113495"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```syntaxsql
   
 HOST_NAME ()  
 ```  
@@ -50,7 +51,7 @@ HOST_NAME ()
 > [!IMPORTANT]  
 >  클라이언트 애플리케이션에서 워크스테이션 이름을 제공하므로 제공된 데이터가 정확하지 않을 수 있습니다. HOST_NAME을 보안 용도로는 사용하지 마세요.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `HOST_NAME()` 정의에 `DEFAULT`을 사용하는 테이블을 만들고 주문 기록 테이블에 행을 삽입하는 컴퓨터의 워크스테이션 이름을 새로 만든 테이블에 기록합니다.  
   
 ```  

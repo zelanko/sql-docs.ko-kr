@@ -1,4 +1,5 @@
 ---
+description: Integration Services 패키지 업그레이드
 title: Integration Services 패키지 업그레이드 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ ms.assetid: 68dbdf81-032c-4a73-99f6-41420e053980
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
-ms.openlocfilehash: 6603041f72a434895aab20b5ab22bf771c90dcac
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: dca0076160c9e21b991c444986d1b27162941f5c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921249"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88346219"
 ---
 # <a name="upgrade-integration-services-packages"></a>Integration Services 패키지 업그레이드
 

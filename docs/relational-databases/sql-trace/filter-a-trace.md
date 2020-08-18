@@ -1,4 +1,5 @@
 ---
+description: 추적 필터링
 title: 추적 필터링 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 019c10ab-68f6-4e40-a5e8-735b2e1270db
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6d5677de166b1bfff58c64665901ce814a7448fa
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d6ba791898d86f9e51baa9bd516e8a6752a94254
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85751005"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88325095"
 ---
 # <a name="filter-a-trace"></a>추적 필터링
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -68,13 +69,13 @@ ms.locfileid: "85751005"
 |같음|=|추적 이벤트 데이터가 입력한 값과 같아야 함을 지정합니다. 다중 값을 허용합니다.|  
 |같지 않음|<>|추적 이벤트 데이터가 입력한 값과 같지 않아야 함을 지정합니다. 다중 값을 허용합니다.|  
 |초과|>|추적 이벤트 데이터가 입력한 값보다 커야 함을 지정합니다.|  
-|크거나 같음|>=|추적 이벤트 데이터가 입력한 값보다 크거나 같아야 함을 지정합니다.|  
+|다음보다 크거나 같음|>=|추적 이벤트 데이터가 입력한 값보다 크거나 같아야 함을 지정합니다.|  
 |보다 작음|<|추적 이벤트 데이터가 입력한 값보다 작아야 함을 지정합니다.|  
 |작거나 같음|<=|추적 이벤트 데이터가 입력한 값보다 작거나 같아야 함을 지정합니다.|  
   
  다음 표에는 필터링할 수 있는 데이터 열과 사용 가능한 관계형 연산자가 나열되어 있습니다.  
   
-|데이터 열|관계 연산자|  
+|데이터 열|관계형 연산자|  
 |------------------|--------------------------|  
 |**ApplicationName**|LIKE, NOT LIKE|  
 |**BigintData1**|=, <>, >=, <=|  
@@ -86,7 +87,7 @@ ms.locfileid: "85751005"
 |**DatabaseID**|=, <>, >=, <=|  
 |**DatabaseName**|LIKE, NOT LIKE|  
 |**DBUserName**|LIKE, NOT LIKE|  
-|**Duration**|=, <>, >=, \<=|  
+|**기간**|=, <>, >=, \<=|  
 |**EndTime**|>=, <=|  
 |**오류**|=, <>, >=, <=|  
 |**EventSubClass**|=, <>, >=, <=|  
@@ -115,14 +116,14 @@ ms.locfileid: "85751005"
 |**OwnerID**|=, <>, >=, <=|  
 |**OwnerName**|LIKE, NOT LIKE|  
 |**ParentName**|LIKE, NOT LIKE|  
-|**사용 권한**|=, <>, >=, <=|  
+|**권한**|=, <>, >=, <=|  
 |**ProviderName**|LIKE, NOT LIKE|  
 |**Reads**|=, <>, >=, <=|  
 |**RequestID**|=, <>, >=, <=|  
 |**RoleName**|LIKE, NOT LIKE|  
 |**RowCounts**|=, <>, >=, <=|  
 |**SessionLoginName**|LIKE, NOT LIKE|  
-|**Severity**|=, <>, >=, <=|  
+|**심각도**|=, <>, >=, <=|  
 |**SourceDatabaseID**|=, <>, >=, <=|  
 |**SPID**|=, <>, >=, \<=|  
 |**SqlHandle**|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 를 사용하여 이 데이터 열의 이벤트를 필터링할 수 있습니다. 자세한 내용은 [SQL Server Profiler로 추적 필터링](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md)을 참조하세요.|  
@@ -134,7 +135,7 @@ ms.locfileid: "85751005"
 |**TargetUserName**|LIKE, NOT LIKE|  
 |**TextData** *|LIKE, NOT LIKE|  
 |**TransactionID**|=, <>, >=, <=|  
-|**형식**|=, <>, >=, <=|  
+|**유형**|=, <>, >=, <=|  
 |**Writes**|=, <>, >=, <=|  
 |**XactSequence**|=, <>, >=, <=|  
   
@@ -154,7 +155,7 @@ ms.locfileid: "85751005"
   
  [sp_addlinkedserver&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)  
   
- [sp_addlinkedsrvlogin&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)  
+ [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)  
   
  [sp_addlogin&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlogin-transact-sql.md)  
   

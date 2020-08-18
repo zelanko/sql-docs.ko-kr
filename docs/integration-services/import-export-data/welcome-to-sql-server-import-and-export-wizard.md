@@ -1,4 +1,5 @@
 ---
+description: SQL Server 가져오기 및 내보내기 마법사 시작
 title: SQL Server 가져오기 및 내보내기 마법사 시작 | Microsoft Docs
 ms.custom: ''
 ms.date: 02/15/2017
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: 8a56d80d-8e31-4542-87cc-a41b3fdd5a7d
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7a18a16353ff2d015bdd5f19c59c6cf9d7fd279b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 9d872657de8cb28a64d709eb458cffa7b6569a53
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922870"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88346209"
 ---
 # <a name="welcome-to-sql-server-import-and-export-wizard"></a>SQL Server 가져오기 및 내보내기 마법사 시작
 
@@ -41,7 +42,7 @@ ms.locfileid: "86922870"
 **이 시작 페이지를 다시 표시 안 함**  
  다음에 마법사를 실행할 때 시작 페이지를 표시하지 않습니다.  
   
-## <a name="whats-next"></a>다음 단계  
+## <a name="whats-next"></a>다음 작업  
  시작 페이지의 다음 페이지는 **데이터 원본 선택**입니다. 이 페이지에서는 데이터 원본 및 데이터 원본에 연결하는 방법에 대한 정보를 제공합니다. 자세한 내용은 [데이터 원본 선택](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)을 참조하세요.
 
 ## <a name="related-tasks-and-content"></a><a name="related"></a> 관련 태스크 및 콘텐츠  
@@ -54,7 +55,7 @@ ms.locfileid: "86922870"
 
 -   **마법사의 작동 원리에 대해 자세히 알아보기.**
 
-    -   **마법사에 대해 자세히 알아보기.** 마법사에 대한 개요를 살펴보려면 [SQL Server 가져오기 및 내보내기 마법사를 사용하여 데이터 가져오기 및 내보내기](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)를 참조하세요.
+    -   **마법사에 대해 자세히 알아봅니다.** 마법사에 대한 개요를 살펴보려면 [SQL Server 가져오기 및 내보내기 마법사를 사용하여 데이터 가져오기 및 내보내기](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)를 참조하세요.
 
     -   **마법사의 단계에 대해 자세히 알아보기** - 마법사의 단계에 대한 정보를 찾으려면 [SQL Server 가져오기 및 내보내기 마법사의 단계](../../integration-services/import-export-data/steps-in-the-sql-server-import-and-export-wizard.md)를 참조하세요. 또한 마법사의 각 페이지마다 별도의 설명서 페이지가 있습니다.
 

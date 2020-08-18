@@ -1,4 +1,5 @@
 ---
+description: Integration Services 개발자 설명서
 title: Integration Services 개발자 설명서 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 60fe148b-a7c4-4289-ae3e-2e949fc1886c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 21cb77e73651347d0a06be5aba0675372984948a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d5202d583a6b4b5ba0b27d25aa7c0a3ed87c9e6b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919959"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88346099"
 ---
 # <a name="integration-services-developer-documentation"></a>Integration Services 개발자 설명서
 
@@ -70,7 +71,7 @@ ms.locfileid: "86919959"
  [사용자 지정 개체를 사용한 패키지 확장](../integration-services/extending-packages-custom-objects/extending-packages-with-custom-objects.md)  
  여러 패키지에서 사용할 사용자 지정 태스크, 데이터 흐름 구성 요소 및 기타 패키지 개체를 만들고 프로그래밍하는 방법에 대해 설명합니다.  
   
- [프로그래밍 방식으로 패키지 빌드](../integration-services/building-packages-programmatically/building-packages-programmatically.md)  
+ [프로그래밍 방식으로 패키지 작성](../integration-services/building-packages-programmatically/building-packages-programmatically.md)  
  프로그래밍 방식으로 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지를 만들고 구성 및 저장하는 방법에 대해 설명합니다.  
   
  [프로그래밍 방식으로 패키지 실행 및 관리](../integration-services/run-manage-packages-programmatically/running-and-managing-packages-programmatically.md)  
@@ -86,9 +87,9 @@ ms.locfileid: "86919959"
   
 ## <a name="external-resources"></a>외부 리소스  
   
--   www.codeplex.com/MSFTISProdSamples 의 CodePlex 예제 - [Integration Services 제품 예제](https://go.microsoft.com/fwlink/?LinkID=131204)  
+-   [www.codeplex.com/MSFTISProdSamples](www.codeplex.com/MSFTISProdSamples) 의 CodePlex 예제 - [Integration Services 제품 예제](https://go.microsoft.com/fwlink/?LinkID=131204)  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [SQL Server Integration Services](../integration-services/sql-server-integration-services.md)  
   
   

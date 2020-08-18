@@ -1,4 +1,5 @@
 ---
+description: 원본 쿼리 지정(SQL Server 가져오기 및 내보내기 마법사)
 title: 원본 쿼리 지정(SQL Server 가져오기 및 내보내기 마법사) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: c8cbd07e-b9c3-422f-94b8-d6fc8cf31cf5
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 267db7655133669266b9fc0c9f6b54819333a6fa
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: edd3812cce0a5d0b956691f3a6bfb4f708495819
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920169"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88347169"
 ---
 # <a name="provide-a-source-query-sql-server-import-and-export-wizard"></a>원본 쿼리 지정(SQL Server 가져오기 및 내보내기 마법사)
 
@@ -50,7 +51,7 @@ SELECT 쿼리의 추가 예는 [SELECT 예&#40;Transact-SQL&#41;](../../t-sql/qu
 
 데이터 원본이 Excel인 경우 이 항목 뒷부분에서 [Excel에 대한 원본 쿼리 입력](#excelQueries) 을 참조하여 쿼리에서 Excel 워크시트 및 범위를 지정하는 방법을 알아봅니다.
   
- **구문 분석**  
+ **Parse**  
  **SQL 문** 입력란에 입력한 SQL 문의 구문을 검사합니다.  
   
 > [!NOTE]
@@ -65,7 +66,7 @@ SELECT 쿼리의 추가 예는 [SELECT 예&#40;Transact-SQL&#41;](../../t-sql/qu
 > Excel 파일 연결 및 Excel 파일에서 데이터를 로드할 때 제한 사항 및 알려진 문제에 대한 자세한 내용은 [SSIS(SQL Server Integration Services)를 통해 Excel로 데이터 로드](../load-data-to-from-excel-with-ssis.md)를 참조하세요.
 
 쿼리할 수 있는 Excel 개체는 다음과 같이 세 가지입니다.
--   **워크시트.** 워크시트를 쿼리하려면 시트 이름 끝에 $ 문자를 추가하고 문자열 주위에 구분 기호를 추가합니다(예: **[Sheet1$]** ).
+-   **워크시트.** 워크시트를 쿼리하려면 시트 이름 끝에 $ 문자를 추가하고 문자열 주위에 구분 기호를 추가합니다(예: **[Sheet1$]**).
 
     ```sql
     SELECT * FROM [Sheet1$]
@@ -83,7 +84,7 @@ SELECT 쿼리의 추가 예는 [SELECT 예&#40;Transact-SQL&#41;](../../t-sql/qu
     SELECT * FROM [Sheet1$A1:B4]
     ```
 
-## <a name="whats-next"></a>다음 단계  
+## <a name="whats-next"></a>다음 작업  
  복사할 데이터를 선택하는 SQL 쿼리를 작성하고 테스트한 후 다음 페이지는 데이터의 대상에 따라 다릅니다.  
   
 -   대부분의 대상에 대한 다음 페이지는 **원본 테이블 및 뷰 선택**입니다. 이 페이지에서는 제공한 쿼리를 검토하고 필요에 따라 복사할 열을 선택하고 샘플 데이터를 미리 봅니다. 자세한 내용은 [원본 테이블 및 뷰 선택](../../integration-services/import-export-data/select-source-tables-and-views-sql-server-import-and-export-wizard.md)을 참조하세요.  

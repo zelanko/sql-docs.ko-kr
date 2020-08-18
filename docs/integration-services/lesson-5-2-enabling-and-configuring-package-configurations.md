@@ -1,4 +1,5 @@
 ---
+description: '5-2단원: 패키지 구성 설정 및 구성'
 title: '2단계: 패키지 구성 설정 및 구성 | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/08/2019
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: 005218ab-8dd5-48e9-a185-6bc60cd43a7a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 84f37f49d1b2a688463fcb974f6777bda601def4
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 7237d7356ffb97861779c4d5427fd4fb05083695
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918131"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88345329"
 ---
 # <a name="lesson-5-2-enable-and-configure-package-configurations"></a>5-2단원: 패키지 구성 설정 및 구성
 
@@ -108,7 +109,7 @@ ms.locfileid: "86918131"
   
 ## <a name="create-and-populate-a-new-sample-data-folder"></a>새 샘플 데이터 폴더 만들기 및 채우기  
   
-1.  Windows 탐색기의 드라이브 루트 수준(예: **C:\\** )에서 **New Sample Data**라는 폴더를 만듭니다.  
+1.  Windows 탐색기의 드라이브 루트 수준(예: **C:\\**)에서 **New Sample Data**라는 폴더를 만듭니다.  
   
 2.  컴퓨터에서 예제 파일을 찾아 폴더에서 3개의 파일을 복사합니다.  
   

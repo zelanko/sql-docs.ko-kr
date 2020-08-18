@@ -1,4 +1,5 @@
 ---
+description: WHILE(Transact-SQL)
 title: WHILE(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -22,12 +23,12 @@ ms.assetid: 52dd29ab-25d7-4fd3-a960-ac55c30c9ea9
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f11e2a6261976b3e96533647d37fcad3a1eaa792
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 78b7ac5ab0a9b65e50059f45e5bdca5e4219bf11
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915319"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88307324"
 ---
 # <a name="while-transact-sql"></a>WHILE(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -59,7 +60,7 @@ WHILE Boolean_expression
 
 ## <a name="arguments"></a>인수
  *Boolean_expression*  
- [TRUE](../../t-sql/language-elements/expressions-transact-sql.md) 또는 **FALSE**를 반환하는 **식**입니다. 부울 식이 SELECT 문을 포함하는 경우에는 SELECT 문을 괄호로 묶어야 합니다.  
+ **TRUE** 또는 **FALSE**를 반환하는 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다. 부울 식이 SELECT 문을 포함하는 경우에는 SELECT 문을 괄호로 묶어야 합니다.  
   
  {*sql_statement* | *statement_block*}  
  문 블록에 정의된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문이나 문 그룹입니다. 문 블록을 정의하려면 흐름 제어 키워드인 BEGIN 및 END를 사용하세요.  
@@ -73,7 +74,7 @@ WHILE Boolean_expression
 ## <a name="remarks"></a>설명  
  둘 이상의 WHILE 루프가 중첩된 경우 내부 루프에 BREAK가 있으면 현재 루프를 종료하고 한 단계 바깥쪽 루프로 이동합니다. 먼저 내부 루프의 끝 이후에 있는 모든 문이 실행된 다음 바깥쪽 루프가 다시 시작됩니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-using-break-and-continue-with-nested-ifelse-and-while"></a>A. 중첩된 IF...ELSE 및 WHILE에서 BREAK 및 CONTINUE 사용  
  다음 예에서는 제품의 평균 정가가 `$300` 미만인 경우 `WHILE` 루프가 가격을 두 배로 한 다음 최대 가격을 선택합니다. 최대 가격이 `$500` 이하인 경우 `WHILE` 루프가 다시 시작되어 가격을 다시 두 배로 만듭니다. 이 루프는 최대 가격이 `$500`를 초과할 때까지 가격을 계속 두 배로 만든 다음 `WHILE` 루프를 종료하고 메시지를 출력합니다.  
@@ -136,7 +137,7 @@ END
   
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [ALTER TRIGGER&#40;Transact-SQL&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)   
  [흐름 제어 언어 &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md)   
  [CREATE TRIGGER&#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   

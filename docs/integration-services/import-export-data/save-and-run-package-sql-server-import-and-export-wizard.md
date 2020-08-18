@@ -1,4 +1,5 @@
 ---
+description: 패키지 저장 및 실행(SQL Server 가져오기 및 내보내기 마법사)
 title: 패키지 저장 및 실행(SQL Server 가져오기 및 내보내기 마법사) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/16/2017
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: b582c462-3d7a-4a4c-a2a2-2c79fedab75a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 33e4ec58943372643ca25518634fdeea47047b27
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 8739c955343207a9a91660a9f8643ea807741e0c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920149"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88346889"
 ---
 # <a name="save-and-run-package-sql-server-import-and-export-wizard"></a>패키지 저장 및 실행(SQL Server 가져오기 및 내보내기 마법사)
 
@@ -89,14 +90,14 @@ SSDT(SQL Server Data Tools)를 사용하여 Visual Studio의 Integration Service
   
  이러한 옵션은 이 페이지에서 **SSIS 패키지 저장** 옵션을 선택하는 경우에만 사용할 수 있습니다.  
   
-## <a name="whats-next"></a>다음 단계  
+## <a name="whats-next"></a>다음 작업  
  복사 작업을 즉시 실행할지 여부와 패키지 저장 여부를 지정한 후 다음 페이지는 선택한 옵션에 따라 다릅니다.  
   
 -   패키지를 저장하지 않고 즉시 실행하는 옵션을 선택한 경우 다음 페이지는 **마법사 완료**입니다. 이 페이지에서는 마법사에서 선택한 내용을 검토하고 복사 작업을 시작합니다. 자세한 내용은 [마법사 완료](../../integration-services/import-export-data/complete-the-wizard-sql-server-import-and-export-wizard.md)를 참조하세요.  
   
 -   패키지를 저장하는 옵션을 선택한 경우 다음 페이지는 **SSIS 패키지 저장**입니다. 이 페이지에서는 패키지 저장 옵션을 추가로 지정할 수 있습니다. (패키지를 저장한 후 다음 페이지는 **마법사 완료**입니다.) 자세한 내용은 [SSIS 패키지 저장](../../integration-services/import-export-data/save-ssis-package-sql-server-import-and-export-wizard.md)을 참조하세요.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
 [패키지 저장](../../integration-services/save-packages.md)  
 [Integration Services(SSIS) 패키지 실행](../../integration-services/packages/run-integration-services-ssis-packages.md)  
 [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)  

@@ -1,4 +1,5 @@
 ---
+description: DEALLOCATE(Transact-SQL)
 title: DEALLOCATE(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: c75cf73d-0268-4c57-973d-b8a84ff801fa
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8470f4d370e3879f1bdaadee3b08b80f758ccadc
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b29ee9539e8b6d4da64dfcc0da7c2ef9f4296a87
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914079"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88307746"
 ---
 # <a name="deallocate-transact-sql"></a>DEALLOCATE(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -45,7 +46,7 @@ DEALLOCATE { { [ GLOBAL ] cursor_name } | @cursor_variable_name }
 
 ## <a name="arguments"></a>인수
  *cursor_name*  
- 이미 선언된 커서의 이름입니다. 글로벌 커서와 지역 커서에 모두 해당 이름으로 *cursor_name*이 있는 경우 *이 지정되면* cursor_name`GLOBAL`이 글로벌 커서를 참조하고, `GLOBAL`이 지정되지 않으면 지역 커서를 참조합니다.  
+ 이미 선언된 커서의 이름입니다. 글로벌 커서와 지역 커서에 모두 해당 이름으로 *cursor_name*이 있는 경우 `GLOBAL`이 지정되면 *cursor_name*이 글로벌 커서를 참조하고, `GLOBAL`이 지정되지 않으면 지역 커서를 참조합니다.  
   
  @*cursor_variable_name*  
  **cursor** 변수의 이름입니다. @*cursor_variable_name*은 **cursor** 형식이어야 합니다.  
@@ -101,7 +102,7 @@ GO
 ## <a name="permissions"></a>사용 권한  
  `DEALLOCATE` 권한은 기본적으로 모든 유효한 사용자에게 부여됩니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음은 마지막 커서 이름이나 이를 참조하는 변수가 할당 해제될 때까지 커서가 유지되는 방법을 나타내는 스크립트입니다.  
   
 ```sql  
@@ -141,7 +142,7 @@ DEALLOCATE @MyCursor;
 GO  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [CLOSE &#40;Transact-SQL&#41;](../../t-sql/language-elements/close-transact-sql.md)   
  [커서](../../relational-databases/cursors.md)   
  [DECLARE @local_variable&#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   

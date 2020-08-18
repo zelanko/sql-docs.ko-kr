@@ -1,4 +1,5 @@
 ---
+description: DROP SEARCH PROPERTY LIST(Transact-SQL)
 title: DROP SEARCH PROPERTY LIST(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 7c7ce52a-6b77-4a1c-9abf-d5feb664bea8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 72baa445ceca98fdf66877ae64340dc1fb94f0ae
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: a214dff5fe12656cc4c0fb9c3ce72fef8e42b574
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485475"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88305068"
 ---
 # <a name="drop-search-property-list-transact-sql"></a>DROP SEARCH PROPERTY LIST(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -73,7 +74,7 @@ SELECT name FROM sys.registered_search_property_lists;
 > [!NOTE]  
 >  속성 목록 소유자는 목록에 대한 CONTROL 권한을 부여할 수 있습니다. 기본적으로 검색 속성 목록을 만든 사용자가 소유자입니다. [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 사용하여 소유자를 변경할 수 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `JobCandidateProperties` 데이터베이스에서 `AdventureWorks2012` 속성 목록을 삭제합니다.  
   
 ```  
@@ -81,7 +82,7 @@ DROP SEARCH PROPERTY LIST JobCandidateProperties;
 GO  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [ALTER SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](../../t-sql/statements/alter-search-property-list-transact-sql.md)   
  [CREATE SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](../../t-sql/statements/create-search-property-list-transact-sql.md)   
  [검색 속성 목록을 사용하여 문서 속성 검색](../../relational-databases/search/search-document-properties-with-search-property-lists.md)   

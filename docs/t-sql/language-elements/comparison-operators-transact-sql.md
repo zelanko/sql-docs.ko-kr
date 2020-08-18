@@ -1,4 +1,5 @@
 ---
+description: 비교 연산자(Transact-SQL)
 title: 비교 연산자(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: b0cc68ef-3029-484c-a917-0c15dcbc230d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3fbe10ec2f0d36a94b2c00ad07d71a510c2975c7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 940b0ab0250a626673c883542fc2e1f1700f0c52
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85706609"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88307395"
 ---
 # <a name="comparison-operators-transact-sql"></a>비교 연산자(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -34,17 +35,17 @@ ms.locfileid: "85706609"
   
 |연산자|의미|  
 |--------------|-------------|  
-|[=(같음)](../../t-sql/language-elements/equals-transact-sql.md)|같음|  
+|[= (같음)](../../t-sql/language-elements/equals-transact-sql.md)|같음|  
 |[>(보다 큼)](../../t-sql/language-elements/greater-than-transact-sql.md)|초과|  
 |[<(보다 작음)](../../t-sql/language-elements/less-than-transact-sql.md)|보다 작음|  
-|[>=(크거나 같음)](../../t-sql/language-elements/greater-than-or-equal-to-transact-sql.md)|크거나 같음|  
+|[>=(크거나 같음)](../../t-sql/language-elements/greater-than-or-equal-to-transact-sql.md)|다음보다 크거나 같음|  
 |[<=(작거나 같음)](../../t-sql/language-elements/less-than-or-equal-to-transact-sql.md)|작거나 같음|  
 |[<>(같지 않음)](../../t-sql/language-elements/not-equal-to-transact-sql-traditional.md)|같지 않음|  
-|[\!=(같지 않음)](../../t-sql/language-elements/not-equal-to-transact-sql-exclamation.md)|같지 않음(ISO 표준이 아님)|  
+|[!= (같지 않음)](../../t-sql/language-elements/not-equal-to-transact-sql-exclamation.md)|같지 않음(ISO 표준이 아님)|  
 |[\!<(보다 작지 않음)](../../t-sql/language-elements/not-less-than-transact-sql.md)|보다 작지 않음(ISO 표준이 아님)|  
 |[\!>(보다 크지 않음)](../../t-sql/language-elements/not-greater-than-transact-sql.md)|보다 크지 않음(ISO 표준이 아님)|  
   
-## <a name="boolean-data-type"></a>부울 데이터 형식  
+## <a name="boolean-data-type"></a>Boolean 데이터 형식  
  비교 연산자의 결과는 **Boolean** 데이터 형식입니다. TRUE, FALSE 및 UNKNOWN의 세 값이 있습니다. **Boolean** 데이터 형식을 반환하는 식을 부울 식이라고 합니다.  
   
  **Boolean** 데이터 형식은 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식과 달리 테이블 열이나 변수의 데이터 형식으로 지정될 수 없으며 결과 집합으로 반환될 수 없습니다.  
@@ -64,7 +65,7 @@ IF (@MyProduct <> 0)
    WHERE ProductID = @MyProduct;  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [식&#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
  [연산자&#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)  
   

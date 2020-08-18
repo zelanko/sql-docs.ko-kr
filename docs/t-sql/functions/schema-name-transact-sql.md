@@ -1,4 +1,5 @@
 ---
+description: SCHEMA_NAME(Transact-SQL)
 title: SCHEMA_NAME(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -19,12 +20,12 @@ ms.assetid: 20071b77-2b6e-4ce7-a8e3-fa71480baf73
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dce9f9332562ca0e03be710f25336786f0a95d19
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 72de5307eaa3da7fc60011fc06c794df89fc885a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112652"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88309209"
 ---
 # <a name="schema_name-transact-sql"></a>SCHEMA_NAME(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -55,7 +56,7 @@ SCHEMA_NAME ( [ schema_id ] )
 ## <a name="remarks"></a>설명  
  SCHEMA_NAME은 시스템 스키마와 사용자 정의 스키마의 이름을 반환합니다. SCHEMA_NAME은 SELECT 목록, WHERE 절 및 식을 사용할 수 있는 곳이면 어디에서나 호출할 수 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-returning-the-name-of-the-default-schema-of-the-caller"></a>A. 호출자의 기본 스키마 이름 반환  
   

@@ -1,4 +1,5 @@
 ---
+description: GetAncestor(데이터베이스 엔진)
 title: GetAncestor(데이터베이스 엔진) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/22/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b96a986f-d5e4-4034-8013-de7974594ee9
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a6bbdeb7e8f54bbdb02d7daff3b08f83bf0a98d1
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: e377a022c4a027c64008b2a09ff58f2d7d27112c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554512"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88311739"
 ---
 # <a name="getancestor-database-engine"></a>GetAncestor(데이터베이스 엔진)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,11 +37,11 @@ ms.locfileid: "86554512"
 child.GetAncestor ( n )   
 ```  
   
-```sql
+```syntaxsql
 -- CLR syntax  
 SqlHierarchyId GetAncestor ( int n )  
-```  
-  
+```
+
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>인수
@@ -59,7 +60,7 @@ SqlHierarchyId GetAncestor ( int n )
   
 음수가 전달되면 예외가 발생합니다.
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-finding-the-child-nodes-of-a-parent"></a>A. 부모의 자식 노드 찾기  
 `GetAncestor(1)`는 `david0`을 직계 상위 항목(부모)으로 갖는 직원을 반환합니다. 다음 예에서는 `GetAncestor(1)`를 사용합니다.

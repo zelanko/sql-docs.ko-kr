@@ -1,4 +1,5 @@
 ---
+description: ToString(geometry 데이터 형식)
 title: ToString(geometry 데이터 형식) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 2e55fa98-aa22-4baa-a516-7c233a33e212
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 62d8f5a0348dd6104983daaf2592feda80514a4f
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: d5b8e9d4c027dd364c9aaf84b4b8e56680548d0c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554922"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88305663"
 ---
 # <a name="tostring-geometry-data-type"></a>ToString(geometry 데이터 형식)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -47,7 +48,7 @@ ms.locfileid: "86554922"
   
  Null이 아닌 인스턴스에서 이 메서드는 `AsTextZM().`을 사용하는 것과 동일합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `LineString` 인스턴스를 만들고 `ToString()`을 사용하여 인스턴스의 텍스트 설명을 인출합니다.  
   
 ```  
@@ -56,7 +57,7 @@ SET @g = geometry::STGeomFromText('LINESTRING(0 0, 0 1, 1 0)', 0);
 SELECT @g.ToString();  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [STAsText&#40;geometry 데이터 형식&#41;](../../t-sql/spatial-geometry/stastext-geometry-data-type.md)   
  [geometry 인스턴스의 확장 메서드](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
   

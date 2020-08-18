@@ -1,4 +1,5 @@
 ---
+description: STNumCurves(geography 데이터 형식)
 title: STNumCurves(geography 데이터 형식) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e98a56c2-8496-4dfd-9b37-7f3c4ca9b2b5
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 07626f3ded35ee9c4075e08765b76974d1c1b209
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 3f2d2eead1803745d58cc827b85acd612f925a0e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86556064"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88306037"
 ---
 # <a name="stnumcurves-geography-data-type"></a>STNumCurves(geography 데이터 형식)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -50,7 +51,7 @@ ms.locfileid: "86556064"
   
  초기화되지 않은 **geography** 인스턴스에 대해서는 **Null**이 반환됩니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-using-stnumcurves-on-a-circularstring-instance"></a>A. CircularString 인스턴스에 STNumCurves() 사용  
  다음 예에서는 `CircularString` 인스턴스의 곡선 수를 가져오는 방법을 보여 줍니다.  
@@ -72,6 +73,6 @@ ms.locfileid: "86556064"
   
 ## <a name="see-also"></a>참고 항목  
  [공간 데이터 형식 개요](../../relational-databases/spatial/spatial-data-types-overview.md)   
- [지리 인스턴스의 OGC 메서드](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
+ [geography 인스턴스의 OGC 메서드](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: 스크립트 태스크에서 로깅
 title: 스크립트 태스크에서 로깅 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 2e11fc15-df18-4309-bd2d-fc58aa4b9b7a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: faeda1cef116ac1094ed95d2617f3f998d89dd7f
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: fcef64bfa13829236a9eb56deed3574c6f5fc85d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917599"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88347389"
 ---
 # <a name="logging-in-the-script-task"></a>스크립트 태스크에서 로깅
 

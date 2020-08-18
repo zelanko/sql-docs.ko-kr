@@ -1,4 +1,5 @@
 ---
+description: DROP SENSITIVITY CLASSIFICATION(Transact-SQL)
 title: DROP SENSITIVITY CLASSIFICATION(Transact-SQL) | Microsoft Docs
 ms.date: 03/25/2019
 ms.reviewer: ''
@@ -24,12 +25,12 @@ helpviewer_keywords:
 - information types
 - data classification
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: d70e4a10601ab7c9171ddccf41a9ab9e5b2395c7
-ms.sourcegitcommit: bc10ec0be5ddfc5f0bc220a9ac36c77dd6b80f1d
+ms.openlocfilehash: 347573e5eb507ca1e607382e2df0dd07763f7689
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87544323"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88304697"
 ---
 # <a name="drop-sensitivity-classification-transact-sql"></a>DROP SENSITIVITY CLASSIFICATION(Transact-SQL)
 [!INCLUDE [asdb-asdbmi-asa](../../includes/applies-to-version/asdb-asdbmi-asa.md)]
@@ -66,7 +67,7 @@ DROP SENSITIVITY CLASSIFICATION FROM
 ALTER ANY SENSITIVITY CLASSIFICATION 권한이 필요합니다. ALTER ANY SENSITIVITY CLASSIFICATION은 데이터베이스 권한 ALTER 또는 서버 권한 CONTROL SERVER에 포함됩니다.
 
 
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
 
 
 ### <a name="a-dropping-classification-from-a-single-column"></a>A. 단일 열에서 분류 삭제
@@ -87,7 +88,7 @@ DROP SENSITIVITY CLASSIFICATION FROM
     dbo.sales.price, dbo.sales.discount, SalesLT.Customer.Phone  
 ```
 
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
 
 [ADD SENSITIVITY CLASSIFICATION(Transact-SQL)](../../t-sql/statements/add-sensitivity-classification-transact-sql.md)
 

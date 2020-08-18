@@ -1,4 +1,5 @@
 ---
+description: 테이블 값 생성자(Transact-SQL)
 title: 테이블 값 생성자(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/23/2019
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e57cd31d-140e-422f-8178-2761c27b9deb
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 7e7fe813ca74c5f8bfd8a7746a05613d95d3373c
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 9ac95b5d2fc71636ca55a29e0d82a2a35f13b816
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555548"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88306746"
 ---
 # <a name="table-value-constructor-transact-sql"></a>테이블 값 생성자(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -47,7 +48,7 @@ VALUES ( <row value expression list> ) [ ,...n ]
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>인수
- VALUES  
+ Values  
  행 값 식 목록을 나타냅니다. 각 목록은 괄호로 묶고 쉼표로 구분해야 합니다.  
   
  각 목록에는 같은 수의 값을 지정해야 하고 이러한 값의 순서는 테이블의 열 순서와 같아야 합니다. 테이블의 각 열에 대해 값을 지정하거나,  들어오는 각 값을 위한 열을 열 목록에서 명시적으로 지정해야 합니다.  
@@ -111,7 +112,7 @@ GO
 INSERT INTO dbo.t VALUES (1,'a'), (2, CONVERT(CHAR,1));  
 ```  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-inserting-multiple-rows-of-data"></a>A. 여러 데이터 행 삽입  
  다음 예에서는 `dbo.Departments` 테이블을 만든 다음 테이블 값 생성자를 사용하여 이 테이블에 5개의 행을 삽입합니다. 모든 열에 대한 값이 제공되어 있고 값이 테이블 내의 열과 같은 순서로 나열되어 있기 때문에 열 목록에 열 이름을 지정할 필요가 없습니다.  

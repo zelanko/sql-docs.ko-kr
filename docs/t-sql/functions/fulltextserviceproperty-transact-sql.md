@@ -1,4 +1,5 @@
 ---
+description: FULLTEXTSERVICEPROPERT(Transact-SQL)
 title: FULLTEXTSERVICEPROPERTY(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: b7dcacb0-af83-4807-9d1e-49148b56b59c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c660b9d2e88a6ef48a75f17dfe759df94fb53266
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 095ba81db2c432b33ceb1795582cff3b9ef559c1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112705"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88309949"
 ---
 # <a name="fulltextserviceproperty-transact-sql"></a>FULLTEXTSERVICEPROPERT(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -62,7 +63,7 @@ FULLTEXTSERVICEPROPERTY ('property')
 ## <a name="return-types"></a>반환 형식  
  **int**  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 서명된 이진 파일만 로드할지 여부를 확인하고 반환 값은 이 확인이 발생하지 않음을 나타냅니다.  
   
 ```  
@@ -83,7 +84,7 @@ EXEC sp_fulltext_service @action='verify_signature', @value=1;
 GO  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [FULLTEXTCATALOGPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md)   
  [메타데이터 함수&#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
  [sp_fulltext_service&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)  

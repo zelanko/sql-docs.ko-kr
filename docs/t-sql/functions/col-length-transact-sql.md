@@ -1,4 +1,5 @@
 ---
+description: COL_LENGTH(Transact-SQL)
 title: COL_LENGTH(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: cf891206-c49f-40eb-858e-eefd2b638a33
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4a03934759aa32ca9c852eef0588d9cec17b0983
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: a46720f3752e5588221a3af686d2449554dc0fe4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110986"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88310929"
 ---
 # <a name="col_length-transact-sql"></a>COL_LENGTH(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -58,9 +59,9 @@ COL_LENGTH ( 'table' , 'column' )
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용자는 소유하고 있거나 권한을 부여받은 보안 개체의 메타데이터만 볼 수 있습니다. 즉, 사용자에게 개체에 대한 올바른 권한이 없으면 COL_LENGTH와 같은 메타데이터 내보내기 기본 제공 함수에서 NULL을 반환할 수 있습니다. 자세한 내용은 [메타데이터 표시 유형 구성](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.
   
 ## <a name="remarks"></a>설명  
-**max** 지정자(**varchar(max)** )를 사용하여 선언된 **varchar** 열의 경우 COL_LENGTH는 -1 값을 반환합니다.
+**max** 지정자(**varchar(max)**)를 사용하여 선언된 **varchar** 열의 경우 COL_LENGTH는 -1 값을 반환합니다.
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
 다음 예제에서는 `varchar(40)` 형식 및 `nvarchar(40)` 형식의 열에 대한 반환 값을 보여 줍니다.
   
 ```sql

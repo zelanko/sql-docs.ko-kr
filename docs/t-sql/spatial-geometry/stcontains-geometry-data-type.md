@@ -1,4 +1,5 @@
 ---
+description: STContains(geometry 데이터 형식)
 title: STContains(geometry 데이터 형식) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 865ceca1-9200-45ed-a7d8-e286e2679fdc
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 0244ff677c11d40153afb302243bd714e3438480
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 69290b85b4788f0e35c4fb48cc05222211cd0413
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86556002"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88305775"
 ---
 # <a name="stcontains-geometry-data-type"></a>STContains(geometry 데이터 형식)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -50,7 +51,7 @@ ms.locfileid: "86556002"
 ## <a name="remarks"></a>설명  
  `STContains()`는 **geometry** 인스턴스의 SRID(spatial Reference ID)가 일치하지 않으면 항상 Null을 반환합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `STContains()`를 사용하여 두 `geometry` 인스턴스를 테스트하여 첫 번째 인스턴스가 두 번째 인스턴스를 포함하는지 확인합니다.  
   
 ```  
@@ -61,7 +62,7 @@ SET @h = geometry::STGeomFromText('POINT(1 1)', 0);
 SELECT @g.STContains(@h);  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [공간 인덱스 개요](../../relational-databases/spatial/spatial-indexes-overview.md)   
  [geometry 인스턴스의 OGC 메서드](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   

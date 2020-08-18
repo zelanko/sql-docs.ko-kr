@@ -1,4 +1,5 @@
 ---
+description: RADIANS(Transact-SQL)
 title: RADIANS(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2017
@@ -18,12 +19,12 @@ ms.assetid: e9f69951-ecda-45d9-8909-dcb716b1b1c0
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d5cde3c074d1e63ffbf193a083e06829d5c275f0
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: a85032d93f1326bacca6727c1923c70e6824eff7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111370"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88309869"
 ---
 # <a name="radians-transact-sql"></a>RADIANS(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -42,14 +43,14 @@ RADIANS ( numeric_expression )
 
 ## <a name="arguments"></a>인수
  *numeric_expression*  
- [bit](../../t-sql/language-elements/expressions-transact-sql.md) 데이터 형식을 제외한 정확한 수치 또는 근사치 데이터 형식 범주의 **expression**입니다.  
+ **bit** 데이터 형식을 제외한 정확한 수치 또는 근사치 데이터 형식 범주의 [expression](../../t-sql/language-elements/expressions-transact-sql.md)입니다.  
   
 ## <a name="return-types"></a>반환 형식  
  *numeric_expression*과 같은 유형을 반환합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
-### <a name="a-using-radians-to-show-00"></a>A. 0\.0을 표시하기 위해 RADIANS 사용  
+### <a name="a-using-radians-to-show-00"></a>A. 0.0을 표시하기 위해 RADIANS 사용  
  다음 예에서는 라디안으로 변환하기 위한 숫자 식이 `0.0` 함수에 대해 너무 작기 때문에 `RADIANS`인 결과를 반환합니다.  
   
 ```  
@@ -121,7 +122,7 @@ The RADIANS of the angle is: 3.44022
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [CAST 및 CONVERT&#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
  [decimal 및 numeric&#40;Transact-SQL&#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)   
  [float 및 real &#40;Transact-SQL&#41;](../../t-sql/data-types/float-and-real-transact-sql.md)   

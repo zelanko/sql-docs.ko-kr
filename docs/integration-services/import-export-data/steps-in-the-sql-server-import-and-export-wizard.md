@@ -1,4 +1,5 @@
 ---
+description: SQL Server 가져오기 및 내보내기 마법사의 단계
 title: SQL Server 가져오기 및 내보내기 마법사의 단계 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/29/2020
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 816fb1bd-7bb9-450d-ad65-e4c2d02eaff8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ee20fb7253e42a0bc6bf28f7beb790342ea6c581
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 5799d85c7978505503fcbd56aa85eb693da6665e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922877"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88346439"
 ---
 # <a name="steps-in-the-sql-server-import-and-export-wizard"></a>SQL Server 가져오기 및 내보내기 마법사의 단계
 
@@ -32,7 +33,7 @@ ms.locfileid: "86922877"
 
 |단계|마법사 페이지|  
 |----------|------------------|  
-|**시작**<br />이 페이지에서는 어떤 작업도 수행할 필요가 없습니다.|[SQL Server 가져오기 및 내보내기 마법사 시작](../../integration-services/import-export-data/welcome-to-sql-server-import-and-export-wizard.md)|  
+|**Microsoft의**<br />이 페이지에서는 어떤 작업도 수행할 필요가 없습니다.|[SQL Server 가져오기 및 내보내기 마법사 시작](../../integration-services/import-export-data/welcome-to-sql-server-import-and-export-wizard.md)|  
 |데이터 **원본을 선택**합니다.|[데이터 원본 선택](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)|  
 |데이터의 **대상을 선택**합니다.|[대상 선택](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)|  
 |**대상을 구성합니다**. (선택적 단계)<br /><br /> - 새 대상 데이터베이스를 만듭니다.<br />- 텍스트 파일에 데이터를 복사할 경우 추가 설정을 구성합니다.|[데이터베이스 만들기](../../integration-services/import-export-data/create-database-sql-server-import-and-export-wizard.md)<br /><br />[플랫 파일 대상 구성](../../integration-services/import-export-data/configure-flat-file-destination-sql-server-import-and-export-wizard.md)|  
@@ -53,7 +54,7 @@ ms.locfileid: "86922877"
 
 -   **마법사의 작동 원리에 대해 자세히 알아보기.**
 
-    -   **마법사에 대해 자세히 알아보기.** 마법사에 대한 개요를 살펴보려면 [SQL Server 가져오기 및 내보내기 마법사를 사용하여 데이터 가져오기 및 내보내기](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)를 참조하세요.
+    -   **마법사에 대해 자세히 알아봅니다.** 마법사에 대한 개요를 살펴보려면 [SQL Server 가져오기 및 내보내기 마법사를 사용하여 데이터 가져오기 및 내보내기](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)를 참조하세요.
 
     -   **데이터 원본 및 대상에 연결하는 방법에 대해 자세히 알아보기.** 데이터에 연결하는 방법에 대한 정보를 찾으려면 [SQL Server 가져오기 및 내보내기 마법사를 사용하여 데이터 원본에 연결](../../integration-services/import-export-data/connect-to-data-sources-with-the-sql-server-import-and-export-wizard.md)의 목록에서 원하는 페이지를 선택하세요. 주로 사용되는 각 데이터 원본에 대한 개별 설명서 페이지도 있습니다. 
 
