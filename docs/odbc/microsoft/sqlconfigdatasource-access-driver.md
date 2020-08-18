@@ -1,4 +1,5 @@
 ---
+description: SQLConfigDataSource(Access 드라이버)
 title: SQLConfigDataSource (Access 드라이버) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1b152fb7-fa12-46b9-b168-006bb1355e77
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 48668525b578845fc330881d7c7de503d69d0928
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: deb777e0d1d4a4e3ea9a45968256ad23dbeb56ab
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81284053"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88411989"
 ---
 # <a name="sqlconfigdatasource-access-driver"></a>SQLConfigDataSource(Access 드라이버)
 > [!NOTE]  
@@ -29,10 +30,10 @@ ms.locfileid: "81284053"
 |키워드|설명|  
 |-------------|-----------------|  
 |COLLATINGSEQUENCE|필드가 정렬 되는 순서입니다.<br /><br /> 이 옵션은 설정 대화 상자에서 **정렬 순서** 와 동일한 옵션을 설정 합니다.|  
-|COMPACT_DB|데이터베이스 파일에 대 한 데이터 압축을 수행 합니다. 에는 COMPACT_DB =<path_name><optionaL_sort_order>\<선택적 ENCRYPT 키워드> 형식이 있습니다.<br /><br /> 동일한 문에서 DSN 키워드를 사용 하 여 COMPACT_DB 키워드를 사용 하는 경우이 드라이버는 DSN 키워드를 무시 합니다. 따라서 데이터베이스를 압축 하 고 DSN을 지정 하는 것은 2 단계 프로세스입니다.|  
-|CREATE_DB|데이터베이스 파일을 만듭니다. 에는 다음 형식의 형식이 있습니다. CREATE_DB =<\<path_name>optional_sort><order optional_ENCRYPT 키워드>. 여기서 경로 이름은 Microsoft Access 데이터베이스의 전체 경로입니다. 경로 이름에서 기존 데이터베이스를 지정 하면 오류가 반환 됩니다. Microsoft Access Setup 대화 상자에서 만들기 단추를 누르면 표시 되는 새 데이터베이스 대화 상자에 정렬 순서가 설정 됩니다. 정렬 순서가 지정 되지 않은 경우 일반이 사용 됩니다.<br /><br /> 동일한 문에서 DSN 키워드를 사용 하 여 CREATE_DB 키워드를 사용 하는 경우이 드라이버는 DSN 키워드를 무시 합니다. 따라서 데이터베이스를 만들고 DSN을 지정 하는 것은 2 단계 프로세스입니다. CREATE_DB 키워드를 사용할 때 만들 Microsoft Access 데이터베이스의 경로 이름에 하나 이상의 공백이 포함 된 경우 다음 예제와 같이 전체 경로 이름을 큰따옴표로 묶어야 합니다.<br /><br /> "C:\PROGRAM FILES\COMMON files\ MyAccess .mdb"<br /><br /> "C:\PROGRAM FILES\Access2.mdb"<br /><br /> CREATE_DB = C:\TEMP\test.mdb (인용 부호가 필요 하지 않음)|  
-|CREATE_SYSDB|시스템 데이터베이스 파일을 만듭니다. 에는 다음 형식이 있습니다. CREATE_SYSDB\<= 경로-이름 \<>선택적 정렬 순서>. 여기서 경로 이름은 Microsoft Access 데이터베이스의 전체 경로입니다. 경로 이름에서 기존 데이터베이스를 지정 하면 오류가 반환 됩니다. 정렬 순서는 **ODBC Microsoft Access Setup** 대화 상자에서 **만들기** 단추를 클릭할 때 표시 되는 **새 데이터베이스** 대화 상자에 설정 됩니다. 정렬 순서가 지정 되지 않은 경우 일반이 사용 됩니다.|  
-|CREATE_V2DB|Microsoft Access 2.0와 호환 되는 데이터베이스 파일을 만듭니다. 에는 다음 형식이 있습니다. CREATE_V2DB\<= 경로-이름 \<>선택적 정렬 순서>. 여기서 경로 이름은 Microsoft Access 데이터베이스의 전체 경로입니다. 경로 이름에서 기존 데이터베이스를 지정 하면 오류가 반환 됩니다. Microsoft Access Setup 대화 상자에서 만들기 단추를 누르면 표시 되는 새 데이터베이스 대화 상자에 정렬 순서가 설정 됩니다. 정렬 순서가 지정 되지 않은 경우 일반이 사용 됩니다.<br /><br /> 동일한 문에서 DSN 키워드를 사용 하 여 CREATE_V2DB 키워드를 사용 하는 경우이 드라이버는 DSN 키워드를 무시 합니다. 따라서 데이터베이스를 만들고 DSN을 지정 하는 것은 2 단계 프로세스입니다.<br /><br /> CREATE_V2DB 키워드를 사용할 때 만들 Microsoft Access 데이터베이스의 경로 이름에 하나 이상의 공백이 포함 된 경우 다음 예제와 같이 전체 경로 이름을 큰따옴표로 묶어야 합니다.<br /><br /> "C:\PROGRAM FILES\COMMON files\ MyAccess .mdb"<br /><br /> "C:\PROGRAM FILES\Access2.mdb"<br /><br /> CREATE_V2DB = C:\TEMP\test.mdb (인용 부호가 필요 하지 않음)|  
+|COMPACT_DB|데이터베이스 파일에 대 한 데이터 압축을 수행 합니다. 에는 COMPACT_DB =<path_name><\<optional ENCRYPT keyword> optionaL_sort_order>형식이 있습니다.<br /><br /> 동일한 문에서 DSN 키워드를 사용 하 여 COMPACT_DB 키워드를 사용 하는 경우이 드라이버는 DSN 키워드를 무시 합니다. 따라서 데이터베이스를 압축 하 고 DSN을 지정 하는 것은 2 단계 프로세스입니다.|  
+|CREATE_DB|데이터베이스 파일을 만듭니다. 에는 다음 형식이 있습니다. CREATE_DB =<path_name>\<optional_sort-order><optional_ENCRYPT 키워드>. 여기서 경로 이름은 Microsoft Access 데이터베이스의 전체 경로입니다. 경로 이름에서 기존 데이터베이스를 지정 하면 오류가 반환 됩니다. Microsoft Access Setup 대화 상자에서 만들기 단추를 누르면 표시 되는 새 데이터베이스 대화 상자에 정렬 순서가 설정 됩니다. 정렬 순서가 지정 되지 않은 경우 일반이 사용 됩니다.<br /><br /> 동일한 문에서 DSN 키워드를 사용 하 여 CREATE_DB 키워드를 사용 하는 경우이 드라이버는 DSN 키워드를 무시 합니다. 따라서 데이터베이스를 만들고 DSN을 지정 하는 것은 2 단계 프로세스입니다. CREATE_DB 키워드를 사용할 때 만들 Microsoft Access 데이터베이스의 경로 이름에 하나 이상의 공백이 포함 된 경우 다음 예제와 같이 전체 경로 이름을 큰따옴표로 묶어야 합니다.<br /><br /> "C:\PROGRAM FILES\COMMON files\ MyAccess .mdb"<br /><br /> "C:\PROGRAM FILES\Access2.mdb"<br /><br /> CREATE_DB = C:\TEMP\test.mdb (인용 부호가 필요 하지 않음)|  
+|CREATE_SYSDB|시스템 데이터베이스 파일을 만듭니다. 에는 CREATE_SYSDB = 형식이 있습니다. \<path-name> \<optional-sort-order> 여기서 경로 이름은 Microsoft Access 데이터베이스의 전체 경로입니다. 경로 이름에서 기존 데이터베이스를 지정 하면 오류가 반환 됩니다. 정렬 순서는 **ODBC Microsoft Access Setup** 대화 상자에서 **만들기** 단추를 클릭할 때 표시 되는 **새 데이터베이스** 대화 상자에 설정 됩니다. 정렬 순서가 지정 되지 않은 경우 일반이 사용 됩니다.|  
+|CREATE_V2DB|Microsoft Access 2.0와 호환 되는 데이터베이스 파일을 만듭니다. 에는 CREATE_V2DB = 형식이 있습니다. \<path-name> \<optional-sort-order> 여기서 경로 이름은 Microsoft Access 데이터베이스의 전체 경로입니다. 경로 이름에서 기존 데이터베이스를 지정 하면 오류가 반환 됩니다. Microsoft Access Setup 대화 상자에서 만들기 단추를 누르면 표시 되는 새 데이터베이스 대화 상자에 정렬 순서가 설정 됩니다. 정렬 순서가 지정 되지 않은 경우 일반이 사용 됩니다.<br /><br /> 동일한 문에서 DSN 키워드를 사용 하 여 CREATE_V2DB 키워드를 사용 하는 경우이 드라이버는 DSN 키워드를 무시 합니다. 따라서 데이터베이스를 만들고 DSN을 지정 하는 것은 2 단계 프로세스입니다.<br /><br /> CREATE_V2DB 키워드를 사용할 때 만들 Microsoft Access 데이터베이스의 경로 이름에 하나 이상의 공백이 포함 된 경우 다음 예제와 같이 전체 경로 이름을 큰따옴표로 묶어야 합니다.<br /><br /> "C:\PROGRAM FILES\COMMON files\ MyAccess .mdb"<br /><br /> "C:\PROGRAM FILES\Access2.mdb"<br /><br /> CREATE_V2DB = C:\TEMP\test.mdb (인용 부호가 필요 하지 않음)|  
 |DBQ|데이터베이스 파일의 이름입니다.<br /><br /> 이 옵션은 설치 대화 상자에서 **데이터베이스** 와 동일한 옵션을 설정 합니다.|  
 |DEFAULTDIR|데이터베이스 파일에 대 한 경로 지정입니다.|  
 |설명|데이터 원본의 데이터에 대 한 설명입니다.<br /><br /> 그러면 설정 대화 상자에서 **설명과** 동일한 옵션을 설정 합니다.|  

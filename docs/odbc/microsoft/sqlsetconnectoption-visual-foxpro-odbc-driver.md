@@ -1,4 +1,5 @@
 ---
+description: SQLSetConnectOption(Visual FoxPro ODBC 드라이버)
 title: SQLSetConnectOption (Visual FoxPro ODBC 드라이버) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5a35449e-4694-4ee5-9fa1-45d5a8fe7823
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2af208663f1e91250faad0ca9538b76bcec43b06
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 683e767454d4056fd1114fc8796594aa91845ed3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301504"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88411609"
 ---
 # <a name="sqlsetconnectoption-visual-foxpro-odbc-driver"></a>SQLSetConnectOption(Visual FoxPro ODBC 드라이버)
 > [!NOTE]  

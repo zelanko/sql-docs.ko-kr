@@ -1,4 +1,5 @@
 ---
+description: SQLConfigDataSource(dBASE 드라이버)
 title: SQLConfigDataSource (dBASE 드라이버) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 19909902-054c-4e19-9c06-a212aace13fe
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 18c6721b4f34772e8c3cd8e4f515233f80566fb3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 23e734c5aafc903e210eea18f002f4c5e8d7a456
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81283973"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88411959"
 ---
 # <a name="sqlconfigdatasource-dbase-driver"></a>SQLConfigDataSource(dBASE 드라이버)
 > [!NOTE]  

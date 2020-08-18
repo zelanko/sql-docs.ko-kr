@@ -1,4 +1,5 @@
 ---
+description: SQLGetConnectOption(Visual FoxPro ODBC 드라이버)
 title: SQLGetConnectOption (Visual FoxPro ODBC 드라이버) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5703eb39-f3b2-4f3a-8676-a5625ae29a41
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2dd801988343ded46305665ab2a99aa4e7d76cba
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dd22ec3862ff2f0f3c4f7b5aa9dbeff53a5d8cfe
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298633"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88411789"
 ---
 # <a name="sqlgetconnectoption-visual-foxpro-odbc-driver"></a>SQLGetConnectOption(Visual FoxPro ODBC 드라이버)
 > [!NOTE]  

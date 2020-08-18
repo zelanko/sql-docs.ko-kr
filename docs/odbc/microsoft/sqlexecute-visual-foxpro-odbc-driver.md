@@ -1,4 +1,5 @@
 ---
+description: SQLExecute(Visual FoxPro ODBC 드라이버)
 title: SQLExecute (Visual FoxPro ODBC 드라이버) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: cce0c25f-fa85-4cf5-bfee-4b7a9401f585
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 20622abf67780afbc69a8933657110507af9c83e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 098a6dda8866db7a9705b5c32f63369b24bb575d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298663"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88411819"
 ---
 # <a name="sqlexecute-visual-foxpro-odbc-driver"></a>SQLExecute(Visual FoxPro ODBC 드라이버)
 > [!NOTE]  
