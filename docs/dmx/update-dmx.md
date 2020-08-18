@@ -1,4 +1,5 @@
 ---
+description: UPDATE(DMX)
 title: 업데이트 (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: f77d71eab284b695171e923cfe53b53575d45d94
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: d74a59aaea079a5d3c1945b92813f6d276591b78
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86971541"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88394879"
 ---
 # <a name="update-dmx"></a>UPDATE(DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -39,7 +40,7 @@ SET NODE_CAPTION='new caption'
  *조건 식*  
  (선택 사항) 열 목록에서 반환되는 값을 제한하는 조건입니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예제에서 **UPDATE** 문은 클러스터의 기본 이름인를 `Cluster 1` `001` 보다 설명적인 이름으로 변경 합니다 `Likely Customers` .  
   
 ```  

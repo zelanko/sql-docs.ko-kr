@@ -1,4 +1,5 @@
 ---
+description: TopPercent(DMX)
 title: TopPercent (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: a91941241b61f74190b9ab1ef0c29dffded5dc79
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 1a8cb8bc64f81f05196fd2856c6b9b5c1a583eb4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970244"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88395179"
 ---
 # <a name="toppercent-dmx"></a>TopPercent(DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -36,7 +37,7 @@ TopPercent(<table expression>, <rank expression>, <percent>)
 ## <a name="remarks"></a>설명  
  **TopPercent** 함수는 각 행에 대해 계산 된 인수의 값을 기준으로 최상위 행을 내림차순으로 반환 합니다 \<rank expression> .이 값의 합계는 인수에 지정 된 비율 이상으로 \<rank expression> 지정 됩니다 \<percent> . **TopPercent** 는 지정 된 백분율 값을 충족 하는 동안 가능한 가장 작은 수의 요소를 반환 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 [기본 데이터 마이닝 자습서](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)를 사용 하 여 작성 하는 연결 모델에 대 한 예측 쿼리를 만듭니다.  
   
  TopPercent이 어떻게 작동 하는지 이해 하려면 먼저 중첩 테이블만 반환 하는 예측 쿼리를 실행 하는 것이 유용할 수 있습니다.  
