@@ -1,4 +1,5 @@
 ---
+description: sys. pdw_index_mappings (Transact-sql)
 title: sys. pdw_index_mappings (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -12,19 +13,19 @@ ms.assetid: d62b0e25-3226-4f87-a10a-b3a0d9555e19
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 3e51acd0ef179d4bb9bf85bed34593f9676db063
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: e79b15df940c154d20c2bc6a4ab5218717ddabe5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86196791"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88400969"
 ---
 # <a name="syspdw_index_mappings-transact-sql"></a>sys. pdw_index_mappings (Transact-sql)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   는 인덱스를 포함 하는 테이블 **object_id** 의 고유 조합과 해당 테이블 내의 특정 인덱스 **index_id** 에 의해 반영 되는 논리 인덱스를 계산 노드에서 사용 되는 실제 이름에 매핑합니다.  
   
-|열 이름|데이터 형식|설명|범위|  
+|열 이름|데이터 형식|Description|범위|  
 |-----------------|---------------|-----------------|-----------|  
 |object_id|**int**|이 인덱스가 있는 논리 테이블의 개체 ID입니다. [Sys.debug &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)를 참조 하세요.<br /><br /> **physical_name** 및 **object_id** 이 보기의 키를 구성 합니다.||  
 |index_id|**nvarchar(32)**|인덱스의 ID입니다. [&#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)를 참조 하세요.||  

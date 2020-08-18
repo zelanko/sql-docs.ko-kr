@@ -1,4 +1,5 @@
 ---
+description: sys.dm_cryptographic_provider_algorithms(Transact-SQL)
 title: sys. dm_cryptographic_provider_algorithms (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 8bcccb37-5cfb-4e1e-a0bb-7ff4c279fe8e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 84b7a59ce701118f2c7e1fc28160ebc6d9e8b60d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 75fac268f987b571945f1c48cc24920116033160
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894599"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88399527"
 ---
 # <a name="sysdm_cryptographic_provider_algorithms-transact-sql"></a>sys.dm_cryptographic_provider_algorithms(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -55,7 +56,7 @@ sys.dm_cryptographic_provider_algorithms ( provider_id )
 ## <a name="permissions"></a>사용 권한  
  사용자는 공용 데이터베이스 역할의 멤버여야 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예제에서는 ID 번호 `1234567`과 함께 공급자에 대한 공급자 옵션을 표시합니다.  
   
 ```  
@@ -64,7 +65,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [EKM&#41;&#40;확장 가능 키 관리](../../relational-databases/security/encryption/extensible-key-management-ekm.md)   
+ [확장 가능 키 관리 &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)   
  [보안 관련 동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/security-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   

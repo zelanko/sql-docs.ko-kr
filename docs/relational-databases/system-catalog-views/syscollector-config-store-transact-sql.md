@@ -1,4 +1,5 @@
 ---
+description: syscollector_config_store(Transact-SQL)
 title: syscollector_config_store (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: f15f6b05-6808-4b76-b6a8-48dec844cf63
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ccdb22362e8e52fe58aca8b7430d5329400a4908
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 339bbba2335512c582251f960224baae15513618
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896740"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88399789"
 ---
 # <a name="syscollector_config_store-transact-sql"></a>syscollector_config_store(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,7 +50,7 @@ ms.locfileid: "85896740"
 |MDWDatabase|관리 데이터 웨어하우스의 이름입니다. 이 값을 변경하려면 sp_syscollector_set_warehouse_database_name 저장 프로시저를 사용하십시오.|  
 |MDWInstance|관리 데이터 웨어하우스에 대한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이름입니다. 이 값을 변경하려면 sp_syscollector_set_warehouse_instance_name 저장 프로시저를 사용하십시오.|  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 syscollector_config_store 뷰를 쿼리합니다.  
   
 ```sql  
@@ -58,11 +59,11 @@ FROM msdb.dbo.syscollector_config_store;
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;데이터 수집기 저장 프로시저](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
- [Transact-sql&#41;&#40;데이터 수집기 뷰](../../relational-databases/system-catalog-views/data-collector-views-transact-sql.md)   
- [데이터 수집](../../relational-databases/data-collection/data-collection.md)   
- [Transact-sql&#41;sp_syscollector_enable_collector &#40;](../../relational-databases/system-stored-procedures/sp-syscollector-enable-collector-transact-sql.md)   
- [Transact-sql&#41;sp_syscollector_disable_collector &#40;](../../relational-databases/system-stored-procedures/sp-syscollector-disable-collector-transact-sql.md)   
+ [데이터 수집기 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;데이터 수집기 뷰 ](../../relational-databases/system-catalog-views/data-collector-views-transact-sql.md)   
+ [데이터 컬렉션](../../relational-databases/data-collection/data-collection.md)   
+ [sp_syscollector_enable_collector&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-enable-collector-transact-sql.md)   
+ [sp_syscollector_disable_collector&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-disable-collector-transact-sql.md)   
  [Transact-sql&#41;sp_syscollector_set_warehouse_database_name &#40;](../../relational-databases/system-stored-procedures/sp-syscollector-set-warehouse-database-name-transact-sql.md)   
  [Transact-sql&#41;sp_syscollector_set_warehouse_instance_name &#40;](../../relational-databases/system-stored-procedures/sp-syscollector-set-warehouse-instance-name-transact-sql.md)   
  [sp_syscollector_set_cache_window&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-set-cache-window-transact-sql.md)  

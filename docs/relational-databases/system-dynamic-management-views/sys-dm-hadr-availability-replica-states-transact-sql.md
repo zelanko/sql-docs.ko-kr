@@ -1,4 +1,5 @@
 ---
+description: sys.dm_hadr_availability_replica_states(Transact-SQL)
 title: sys. dm_hadr_availability_replica_states (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/16/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: d2e678bb-51e8-4a61-b223-5c0b8d08b8b1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0b01d8ebe8f9a880e7f4a1dc06e324770dddaf1d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4e8242f81b78c943590785aea03cbc798a7d632f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85676311"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88398699"
 ---
 # <a name="sysdm_hadr_availability_replica_states-transact-sql"></a>sys.dm_hadr_availability_replica_states(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -53,7 +54,7 @@ ms.locfileid: "85676311"
 |**last_connect_error_description**|**nvarchar(1024)**|**Last_connect_error_number** 메시지의 텍스트입니다.|  
 |**last_connect_error_timestamp**|**datetime**|**Last_connect_error_number** 오류가 발생 한 시간을 나타내는 날짜 및 시간 타임 스탬프입니다.|  
   
-##  <a name="roles-and-operational-states"></a><a name="RolesAndOperationalStates"></a>역할 및 작동 상태  
+##  <a name="roles-and-operational-states"></a><a name="RolesAndOperationalStates"></a> 역할 및 작동 상태  
  Role **역할은**지정 된 가용성 복제본의 상태를 반영 하 고 작동 상태 **operational_state**는 복제본이 가용성 복제본의 모든 데이터베이스에 대 한 클라이언트 요청을 처리할 준비가 되었는지 여부를 설명 합니다. 다음은 각 역할에 대해 가능한 작동 상태를 요약 한 것입니다. 각 역할은 해결, 기본 및 보조입니다.  
   
  **해결 방법:** 가용성 복제본이 확인 역할에 있는 경우 가능한 작동 상태는 다음 표에 나와 있는 것과 같습니다.  

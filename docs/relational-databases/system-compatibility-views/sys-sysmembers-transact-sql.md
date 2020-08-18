@@ -1,4 +1,5 @@
 ---
+description: sys.sysmembers(Transact-SQL)
 title: sys.sys멤버 (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: ceb18341-f985-4849-ac83-21d67ab7b980
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8814ca2cb5b87a3f69c9162bdbb3c00126838ef2
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9d528e9479b5a193baccf6ccf26c327f53016fd6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896723"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88399329"
 ---
 # <a name="syssysmembers-transact-sql"></a>sys.sysmembers(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

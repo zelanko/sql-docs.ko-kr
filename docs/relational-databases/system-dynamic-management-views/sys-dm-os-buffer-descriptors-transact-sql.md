@@ -1,4 +1,5 @@
 ---
+description: sys.dm_os_buffer_descriptors(Transact-SQL)
 title: sys. dm_os_buffer_descriptors (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/14/2017
@@ -20,12 +21,12 @@ ms.assetid: 012aab95-8888-4f35-9ea3-b5dff6e3f60f
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 61a84a655bced5a053f47d0aae1493ec80dd9ff8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: da01a45d1c55af134774ec7313e541d9fdc4ea4d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787017"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88398749"
 ---
 # <a name="sysdm_os_buffer_descriptors-transact-sql"></a>sys.dm_os_buffer_descriptors(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -50,7 +51,7 @@ ms.locfileid: "85787017"
 |numa_node|**int**|버퍼에 대한 Nonuniform Memory Access 노드입니다. Null을 허용합니다.|  
 |read_microsec|**bigint**|페이지를 버퍼로 읽어 오는 데 필요한 실제 시간(밀리초)입니다 이 값은 버퍼를 다시 사용하면 다시 설정됩니다. Null을 허용합니다.|  
 |is_in_bpool_extension|**bit**|1 = 페이지가 버퍼 풀 확장에 있습니다. Null을 허용합니다.|  
-|pdw_node_id|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포가 설정 된 노드의 식별자입니다.|  
+|pdw_node_id|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포가 설정 된 노드의 식별자입니다.|  
   
 ## <a name="permissions"></a>사용 권한  
 
@@ -60,7 +61,7 @@ ms.locfileid: "85787017"
 ## <a name="remarks"></a>설명  
  dm_os_buffer_descriptors는 리소스 데이터베이스에서 사용 중인 페이지를 반환 합니다. dm_os_buffer_descriptors은 사용 가능한 페이지 또는 도난당 한 페이지에 대 한 정보 또는 읽을 때 오류가 발생 한 페이지에 대 한 정보를 반환 하지 않습니다.  
   
-|시작|대상|켜기|관계|  
+|보낸 사람|대상|켜기|관계|  
 |----------|--------|--------|------------------|  
 |sys.dm_os_buffer_descriptors|sys.databases|database_id|다 대 일|  
 |sys.dm_os_buffer_descriptors|\<userdb>.sys. allocation_units|allocation_unit_id|다 대 일|  
@@ -113,9 +114,9 @@ ORDER BY cached_pages_count DESC;
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
+ [sys.allocation_units&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
  
- [Transact-sql&#41;&#40;운영 체제 관련 동적 관리 뷰 SQL Server](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
+ [Transact-sql&#41;&#40;운영 체제 관련 동적 관리 뷰 SQL Server ](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
  [Resource 데이터베이스](../../relational-databases/databases/resource-database.md)   
  [sys.dm_os_buffer_pool_extension_configuration&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql.md)  
   

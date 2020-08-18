@@ -1,4 +1,5 @@
 ---
+description: sys. dm_column_store_object_pool (Transact-sql)
 title: sys. dm_column_store_object_pool (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -13,11 +14,12 @@ ms.assetid: a8a58ca7-0a7d-4786-bfd9-e8894bd345dd
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 720eebdbc1898d0b3ce34fb9a2205c41d4898dd2
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 8e9034e786c2e03038f808e8d5d7d2fe183362d1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012903"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88399535"
 ---
 # <a name="sysdm_column_store_object_pool-transact-sql"></a>sys. dm_column_store_object_pool (Transact-sql)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -33,12 +35,12 @@ ms.locfileid: "86012903"
 |`column_id`|`int`|Columnstore 열의 ID입니다. DELETE_BITMAP의 경우 NULL입니다.| 
 |`row_group_id`|`int`|행 그룹의 ID입니다.|
 |`object_type`|`smallint`|1 = COLUMN_SEGMENT<br /><br /> 2 = COLUMN_SEGMENT_PRIMARY_DICTIONARY<br /><br /> 3 = COLUMN_SEGMENT_SECONDARY_DICTIONARY<br /><br /> 4 = COLUMN_SEGMENT_BULKINSERT_DICTIONARY<br /><br /> 5 = COLUMN_SEGMENT_DELETE_BITMAP|  
-|`object_type_desc`|`nvarchar(60)`|COLUMN_SEGMENT-열 세그먼트입니다. `object_id`세그먼트 ID입니다. 세그먼트는 한 행 그룹 내에서 한 열의 모든 값을 저장 합니다. 예를 들어 테이블에 10 개의 열이 있는 경우 행 그룹 당 10 개의 열 세그먼트가 있습니다. <br /><br /> COLUMN_SEGMENT_PRIMARY_DICTIONARY-테이블의 모든 열 세그먼트에 대 한 조회 정보를 포함 하는 전역 사전입니다.<br /><br /> COLUMN_SEGMENT_SECONDARY_DICTIONARY-한 열과 연결 된 로컬 사전입니다.<br /><br /> COLUMN_SEGMENT_BULKINSERT_DICTIONARY-전역 사전의 다른 표현입니다. Dictionary_id에 대 한 값의 역방향 조회를 제공 합니다. 튜플 이동 기 또는 대량 로드의 일부로 압축 된 세그먼트를 만드는 데 사용 됩니다.<br /><br /> COLUMN_SEGMENT_DELETE_BITMAP-세그먼트 삭제를 추적 하는 비트맵입니다. 파티션당 하나의 삭제 비트맵이 있습니다.|  
+|`object_type_desc`|`nvarchar(60)`|COLUMN_SEGMENT-열 세그먼트입니다. `object_id` 세그먼트 ID입니다. 세그먼트는 한 행 그룹 내에서 한 열의 모든 값을 저장 합니다. 예를 들어 테이블에 10 개의 열이 있는 경우 행 그룹 당 10 개의 열 세그먼트가 있습니다. <br /><br /> COLUMN_SEGMENT_PRIMARY_DICTIONARY-테이블의 모든 열 세그먼트에 대 한 조회 정보를 포함 하는 전역 사전입니다.<br /><br /> COLUMN_SEGMENT_SECONDARY_DICTIONARY-한 열과 연결 된 로컬 사전입니다.<br /><br /> COLUMN_SEGMENT_BULKINSERT_DICTIONARY-전역 사전의 다른 표현입니다. Dictionary_id에 대 한 값의 역방향 조회를 제공 합니다. 튜플 이동 기 또는 대량 로드의 일부로 압축 된 세그먼트를 만드는 데 사용 됩니다.<br /><br /> COLUMN_SEGMENT_DELETE_BITMAP-세그먼트 삭제를 추적 하는 비트맵입니다. 파티션당 하나의 삭제 비트맵이 있습니다.|  
 |`access_count`|`int`|이 개체에 대 한 읽기 또는 쓰기 액세스 수입니다.|  
 |`memory_used_in_bytes`|`bigint`|개체 풀에서이 개체에 사용 되는 메모리입니다.|  
 |`object_load_time`|`datetime`|Object_id 개체 풀로 가져온 클록 시간입니다.|  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
 
 에 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 는 `VIEW SERVER STATE` 권한이 필요 합니다.   
 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium 계층에서는 데이터베이스에 대 한 권한이 필요 합니다 `VIEW DATABASE STATE` . [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]표준 및 기본 계층에서는 **서버 관리자** 또는 **Azure Active Directory 관리자** 계정이 필요 합니다.   
@@ -48,7 +50,7 @@ ms.locfileid: "86012903"
  [인덱스 관련 동적 관리 뷰 및 함수 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)   
  [sys.dm_db_index_physical_stats&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)   
  [dm_db_index_operational_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)   
- [sys.debug &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
+ [sys.indexes&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
  [sys. 개체 &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
  [성능 모니터링 및 튜닝](../../relational-databases/performance/monitor-and-tune-for-performance.md)  
   

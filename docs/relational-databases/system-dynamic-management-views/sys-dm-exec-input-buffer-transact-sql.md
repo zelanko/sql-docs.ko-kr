@@ -1,4 +1,5 @@
 ---
+description: sys. dm_exec_input_buffer (Transact-sql)
 title: sys. dm_exec_input_buffer (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/14/2019
@@ -20,12 +21,12 @@ ms.assetid: fb34a560-bde9-4ad9-aa96-0d4baa4fc104
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 05ec724effbabfeec11d113e46fd11c4daec0688
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 281854c00ba5a1c09bde0ed754e8a10c6dafa5ea
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82821075"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88398639"
 ---
 # <a name="sysdm_exec_input_buffer-transact-sql"></a>sys. dm_exec_input_buffer (Transact-sql)
 
@@ -54,7 +55,7 @@ sys.dm_exec_input_buffer ( session_id , request_id )
 |열 이름|데이터 형식|Description|
 |-----------------|---------------|-----------------|
 |**event_type**|**nvarchar(256)**|지정 된 spid의 입력 버퍼에 있는 이벤트의 유형입니다.|
-|**변수의**|**smallint**|문에 대해 제공 되는 모든 매개 변수입니다.|
+|**parameters**|**smallint**|문에 대해 제공 되는 모든 매개 변수입니다.|
 |**event_info**|**nvarchar(max)**|지정 된 spid의 입력 버퍼에 있는 문의 텍스트입니다.|
 
 ## <a name="permissions"></a>사용 권한
@@ -73,7 +74,7 @@ sys.dm_exec_input_buffer ( session_id , request_id )
 
 이 동적 관리 함수는 **CROSS APPLY**를 수행 하 여 dm_exec_sessions 또는 dm_exec_requests와 함께 사용할 수 있습니다.
 
-## <a name="examples"></a>예
+## <a name="examples"></a>예제
 
 ### <a name="a-simple-example"></a>A. 간단한 예
 

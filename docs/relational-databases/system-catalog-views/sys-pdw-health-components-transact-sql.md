@@ -1,4 +1,5 @@
 ---
+description: sys. pdw_health_components (Transact-sql)
 title: sys. pdw_health_components (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.assetid: d5c7589b-09b0-4f12-ab84-feb3ec3fbaaa
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 83bea79a009e25d54f9d0ae589936de7fed7d94a
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 74b741d94d5e9a10c4b657cfbe70ad69f9cbbfa1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396045"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88400769"
 ---
 # <a name="syspdw_health_components-transact-sql"></a>sys. pdw_health_components (Transact-sql)
 [!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]

@@ -1,4 +1,5 @@
 ---
+description: sys.syslanguages(Transact-SQL)
 title: sys.sys언어 (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -21,11 +22,12 @@ ms.assetid: f216d1cd-997c-42f0-a737-abbdfcd88383
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 62491475c51fcfc879415bb53f3d5cb08447a427
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: e5a5cde7f76b77c0c6f06da61227350b7649373e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012201"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88399769"
 ---
 # <a name="syssyslanguages-transact-sql"></a>sys.syslanguages(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -78,14 +80,14 @@ ms.locfileid: "86012201"
 |라트비아어|1062|1062|  
 |리투아니아어|1063|1063|  
 |포르투갈어(브라질)|1046|1046|  
-|중국어(번체)|1028|1028|  
+|중국어 번체|1028|1028|  
 |한국어|1042|1042|  
 |중국어(간체)|2052|2052|  
 |아랍어|1025|1025|  
 |태국어|1054|1054|  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;호환성 뷰](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)   
+ [Transact-sql&#41;&#40;호환성 뷰 ](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)   
  [시스템 테이블을 시스템 뷰로 매핑 &#40;Transact-sql&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)  
   
   
