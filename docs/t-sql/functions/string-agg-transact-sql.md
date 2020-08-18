@@ -1,4 +1,5 @@
 ---
+description: STRING_AGG(Transact-SQL)
 title: STRING_AGG(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/19/2017
@@ -16,12 +17,12 @@ ms.assetid: 8860ef3f-142f-4cca-aa64-87a123e91206
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f7b87c06324bf168c9dce7441f14c78d89833f24
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 3b8a92c7776251547934799b68f3dc6cf7ada2b5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111312"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88362499"
 ---
 # <a name="string_agg-transact-sql"></a>STRING_AGG(Transact-SQL)
 
@@ -84,7 +85,7 @@ Null 값이 무시되고 해당 구분 기호는 추가되지 않습니다. null
 
 `STRING_AGG`는 모든 호환성 수준에서 사용할 수 있습니다.
 
-## <a name="examples"></a>예
+## <a name="examples"></a>예제
 
 ### <a name="a-generate-list-of-names-separated-in-new-lines"></a>A. 새 줄에 구분된 이름 목록 생성
 
@@ -101,7 +102,7 @@ FROM Person.Person;
 |--- |
 |Syed <br />Catherine <br />Kim <br />Kim <br />Kim <br />Hazem <br />... | 
 
-`NULL` 셀에 있는 `name` 값은 결과에 반환되지 않습니다.   
+`name` 셀에 있는 `NULL` 값은 결과에 반환되지 않습니다.   
 
 > [!NOTE]  
 > [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Query Editor를 사용하는 경우 **표 형태로 결과 표시** 옵션으로 캐리지 리턴을 구현할 수 없습니다. 결과 집합을 올바르게 보려면 **텍스트로 결과 표시**로 전환하세요.       
@@ -167,7 +168,7 @@ GROUP BY a.articleId, title;
 |177 |Dogs continue to be more popular than cats |polls,animals|
 
 > [!NOTE]
-> `GROUP BY` 함수가 `STRING_AGG` 목록의 유일한 항목이 아닌 경우 `SELECT` 절이 필요합니다.
+> `STRING_AGG` 함수가 `SELECT` 목록의 유일한 항목이 아닌 경우 `GROUP BY` 절이 필요합니다.
 
 ### <a name="e-generate-list-of-emails-per-towns"></a>E. 도시별 이메일 목록 생성
 
@@ -200,7 +201,7 @@ GROUP BY City;
 |Bell Gardens|christy8@adventure-works.com
 |Bellevue|min0@adventure-works.com;gigi0@adventure-works.com;terry18@adventure-works.com;...|
 |Bellflower|philip0@adventure-works.com;emma34@adventure-works.com;jorge8@adventure-works.com;...|
-|Bellingham|christopher23@adventure-works.com;frederick7@adventure-works.com;omar0@adventure-works.com;...|
+|벨링햄|christopher23@adventure-works.com;frederick7@adventure-works.com;omar0@adventure-works.com;...|
 
 메일 열에 반환된 메일은 특정 도시에서 근무하는 사람들에게 메일을 전송하는 데 직접 사용할 수 있습니다. 
 

@@ -1,4 +1,5 @@
 ---
+description: SESSION_USER(Transact-SQL)
 title: SESSION_USER (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -23,12 +24,12 @@ ms.assetid: 3dbe8532-31b6-4862-8b2a-e58b00b964de
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 82172de7034ad8579d4e1952ca23dae8f7002be1
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 5a69a4d5f7cd7153b6acd4b6d487fbb2a201deb1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112327"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88362819"
 ---
 # <a name="session_user-transact-sql"></a>SESSION_USER(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -53,7 +54,7 @@ SESSION_USER
   
  컨텍스트 전환 후 SESSION_USER를 호출하면 가장된 컨텍스트의 사용자 이름이 반환됩니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-using-session_user-to-return-the-user-name-of-the-current-session"></a>A. SESSION_USER를 사용하여 현재 세션의 사용자 이름 반환  
  다음 예에서는 변수를 `nchar`로 선언하고 이 변수에 `SESSION_USER`의 현재 값을 할당한 다음 텍스트 설명과 함께 변수를 인쇄합니다.  
@@ -141,7 +142,7 @@ Order #   Customer #  When Delivered       Received By
   
 ## <a name="examples-sssdwfull-and-sspdw"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-using-session_user-to-return-the-user-name-of-the-current-session"></a>3\. SESSION_USER를 사용하여 현재 세션의 사용자 이름 반환  
+### <a name="c-using-session_user-to-return-the-user-name-of-the-current-session"></a>3. SESSION_USER를 사용하여 현재 세션의 사용자 이름 반환  
  다음 예에서는 현재 세션의 세션 사용자를 반환합니다.  
   
 ```  
@@ -156,7 +157,7 @@ SELECT SESSION_USER;
  [SYSTEM_USER &#40;Transact-SQL&#41;](../../t-sql/functions/system-user-transact-sql.md)   
  [시스템 함수&#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-category-transact-sql.md)   
  [USER &#40;Transact-SQL&#41;](../../t-sql/functions/user-transact-sql.md)   
- [USER_NAME&#40;Transact-SQL&#41;](../../t-sql/functions/user-name-transact-sql.md)  
+ [USER_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/user-name-transact-sql.md)  
   
   
 

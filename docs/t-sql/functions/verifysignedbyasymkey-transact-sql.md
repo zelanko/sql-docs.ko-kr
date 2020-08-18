@@ -1,4 +1,5 @@
 ---
+description: VERIFYSIGNEDBYASYMKEY(Transact-SQL)
 title: VERIFYSIGNEDBYASYMKEY(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 9f7c6e0b-5ba4-4dbb-994d-5bd59f4908de
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 8404d41f9447eeafd30788c482abd7279c6b6c46
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 0257bd8b66a915ec5d7f0b59e3aa85f197f38867
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112212"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88362249"
 ---
 # <a name="verifysignedbyasymkey-transact-sql"></a>VERIFYSIGNEDBYASYMKEY(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -52,7 +53,7 @@ VerifySignedByAsymKey( Asym_Key_ID , clear_text , signature )
  *clear_text*  
  확인할 일반 텍스트 데이터입니다.  
   
- *signature*  
+ *서명*  
  서명된 데이터에 첨부된 서명입니다. *signature*는 **varbinary**입니다.  
   
 ## <a name="return-types"></a>반환 형식  
@@ -66,7 +67,7 @@ VerifySignedByAsymKey( Asym_Key_ID , clear_text , signature )
 ## <a name="permissions"></a>사용 권한  
  비대칭 키에 대한 VIEW DEFINITION 권한이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-testing-for-data-with-a-valid-signature"></a>A. 유효한 서명이 있는 데이터 테스트  
  다음 예에서는 선택한 데이터가 `WillisKey74` 비대칭 키로 서명된 후 변경되지 않은 경우 1을 반환하고 데이터가 손상된 경우에는 0을 반환합니다.  
@@ -93,7 +94,7 @@ AND Description = N'data encrypted by asymmetric key ''WillisKey74''';
 GO  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [ASYMKEY_ID&#40;Transact-SQL&#41;](../../t-sql/functions/asymkey-id-transact-sql.md)   
  [SIGNBYASYMKEY&#40;Transact-SQL&#41;](../../t-sql/functions/signbyasymkey-transact-sql.md)   
  [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   

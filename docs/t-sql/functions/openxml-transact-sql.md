@@ -1,4 +1,5 @@
 ---
+description: OPENXML(Transact-SQL)
 title: OPENXML(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/20/2018
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 8088b114-7d01-435a-8e0d-b81abacc86d6
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: ca8ececca1e40762aa386ba05a53bdf8a1932090
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: f081b224d80537943946b5d4e31eff43bbf88de1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112396"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88363639"
 ---
 # <a name="openxml-transact-sql"></a>OPENXML(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -61,7 +62,7 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
 |**8**|XML_ATTRIBUTES 또는 XML_ELEMENTS와 결합(논리적 OR 연산을 수행)할 수 있습니다. 검색 상황에서 이 플래그는 소비된 데이터를 오버플로 속성인 **\@mp:xmltext**로 복사할 수 없음을 나타냅니다.|  
   
  _SchemaDeclaration_  
- _ColName_*ColType* [_ColPattern_ | _MetaProperty_] [ **,** _ColNameColType_ [_ColPattern_ | _MetaProperty_]...] 형식의 스키마 정의입니다.  
+ _ColName_*ColType* [_ColPattern_ | _MetaProperty_] [**,**_ColNameColType_ [_ColPattern_ | _MetaProperty_]...] 형식의 스키마 정의입니다.  
   
  _ColName_  
  행 집합의 열 이름입니다.  
@@ -70,9 +71,9 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
  행 집합에 있는 열의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식입니다. 열 형식이 특성의 기본 **xml** 데이터 형식과 다른 경우 형식 강제 변환이 발생합니다.  
   
  *ColPattern*  
- 선택 사항이며 XML 노드를 열에 매핑하는 방법을 설명하는 일반 XPath 패턴입니다. *ColPattern*을 지정하지 않으면 기본 매핑(**flags**에 지정된 대로 **특성 중심** 또는 *요소 중심* 매핑)이 수행됩니다.  
+ 선택 사항이며 XML 노드를 열에 매핑하는 방법을 설명하는 일반 XPath 패턴입니다. *ColPattern*을 지정하지 않으면 기본 매핑(*flags*에 지정된 대로 **특성 중심** 또는 **요소 중심** 매핑)이 수행됩니다.  
   
- *ColPattern*으로 지정된 XPath 패턴은 **flags**로 표시된 기본 매핑을 덮어쓰거나 향상시키도록 매핑의 특수한 특성(**특성 중심** 및 *요소 중심* 매핑의 경우)을 지정하는 데 사용합니다.  
+ *ColPattern*으로 지정된 XPath 패턴은 *flags*로 표시된 기본 매핑을 덮어쓰거나 향상시키도록 매핑의 특수한 특성(**특성 중심** 및 **요소 중심** 매핑의 경우)을 지정하는 데 사용합니다.  
   
  *ColPattern*으로 지정된 일반 XPath 패턴은 메타 속성도 지원합니다.  
   
@@ -99,12 +100,12 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
 |**prev**|**bigint**|이전의 형제 요소에 대한 XML ID입니다. 바로 이전의 형제가 없으면 NULL입니다.|  
 |**text**|**ntext**|텍스트 형식의 특성 값 또는 요소 내용을 포함합니다. **edge** 테이블 항목에 값이 필요하지 않은 경우에는 NULL입니다.|  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-using-a-simple-select-statement-with-openxml"></a>A. 단순 SELECT 문에 OPENXML 사용  
  다음 예는 `sp_xml_preparedocument`를 사용하여 XML 이미지의 내부 표현을 만듭니다. `SELECT` 행 집합 공급자를 사용하는 `OPENXML` 문은 XML 문서의 내부 표현에 대해 실행됩니다.  
   
- *flag* 값이 `1`로 설정됩니다. 이 값은 **특성 중심** 매핑을 나타냅니다. 따라서 XML 특성이 행 집합의 열에 매핑됩니다. *로 지정된* rowpattern`/ROOT/Customer`은 처리할 `<Customers>` 노드를 식별합니다.  
+ *flag* 값이 `1`로 설정됩니다. 이 값은 **특성 중심** 매핑을 나타냅니다. 따라서 XML 특성이 행 집합의 열에 매핑됩니다. `/ROOT/Customer`로 지정된 *rowpattern*은 처리할 `<Customers>` 노드를 식별합니다.  
   
  열 이름이 XML 특성 이름과 일치하므로 선택적인 *ColPattern*(열 패턴) 매개 변수는 지정되지 않습니다.  
   
@@ -145,7 +146,7 @@ VINET      Paul Henriot
 LILAS      Carlos Gonzlez  
 ```  
   
- `SELECT`flags*가* 로 설정되고 `2`요소 중심**매핑을 나타내는 동일한** 문이 실행되면, XML 문서에 `CustomerID` 또는 `ContactName` 이름의 요소가 없으므로 XML 문서의 두 고객 모두에 대한 `CustomerID` 및 `ContactName`의 값이 NULL로 반환됩니다.  
+ *flags*가 `2`로 설정되고 **요소 중심** 매핑을 나타내는 동일한 `SELECT` 문이 실행되면, XML 문서에 `CustomerID` 또는 `ContactName` 이름의 요소가 없으므로 XML 문서의 두 고객 모두에 대한 `CustomerID` 및 `ContactName`의 값이 NULL로 반환됩니다.  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
@@ -163,7 +164,7 @@ NULL       NULL
   
 -   행 집합의 `OrderID`, `CustomerID` 및 `OrderDate`는 XML 문서에서 *rowpattern*으로 식별된 노드의 부모 특성에 매핑됩니다.  
   
--   행 집합의 `ProdID` 열은 `ProductID` 특성에 매핑되며, 행 집합의 `Qty` 열은 `Quantity`rowpattern*으로 식별된 노드의*  특성에 매핑됩니다.  
+-   행 집합의 `ProdID` 열은 `ProductID` 특성에 매핑되며, 행 집합의 `Qty` 열은 *rowpattern*으로 식별된 노드의 `Quantity` 특성에 매핑됩니다.  
   
  **요소 중심** 매핑이 *flags* 매개 변수에 지정되더라도 *ColPattern*에 지정된 매핑이 이 매핑을 덮어씁니다.  
   
@@ -246,6 +247,6 @@ EXEC sp_xml_removedocument @idoc;
   
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [예제: OPENXML 사용](../../relational-databases/xml/examples-using-openxml.md)  
   

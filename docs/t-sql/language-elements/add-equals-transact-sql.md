@@ -1,4 +1,5 @@
 ---
+description: +=(더하기 대입)(Transact-SQL)
 title: +=(더하기 대입)(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -21,12 +22,12 @@ ms.assetid: 9ea52519-80d1-473f-b988-0572f0e2c92f
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8ec2b25adc213be5b19ab3784a2a6e234c9477b1
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: da7541273796c63781723455481782af612a22e3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396772"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88361699"
 ---
 # <a name="-addition-assignment-transact-sql"></a>+=(더하기 대입)(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -53,7 +54,7 @@ expression += expression
 ## <a name="remarks"></a>설명  
  자세한 내용은 [+&#40;더하기&#41;&#40;Transact-SQL&#41;](../../t-sql/language-elements/add-transact-sql.md)을 참조하세요.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [복합 연산자&#40;Transact-SQL&#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
  [식&#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [연산자&#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   

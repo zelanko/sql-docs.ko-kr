@@ -1,4 +1,5 @@
 ---
+description: PATINDEX(Transact-SQL)
 title: PATINDEX(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/19/2016
@@ -22,12 +23,12 @@ ms.assetid: c0dfb17f-2230-4e36-98da-a9b630bab656
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 12f1f710a78c6dcd059fbae5078b0b643296700e
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: c4d2ee21a4b2c2975fcead1e883cb28459c608dd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111427"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88363379"
 ---
 # <a name="patindex-transact-sql"></a>PATINDEX(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -55,7 +56,7 @@ PATINDEX ( '%pattern%' , expression )
  일반적으로 지정된 패턴이 검색되는 열을 나타내는 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다. *식*은 문자열 데이터 형식 범주입니다.  
   
 ## <a name="return-types"></a>반환 형식  
-**식**의 데이터 형식이 *varchar(max)* 또는 **nvarchar(max)** 이면 **bigint**, 그렇지 않으면 **int**입니다.  
+*식*의 데이터 형식이 **varchar(max)** 또는 **nvarchar(max)** 이면 **bigint**, 그렇지 않으면 **int**입니다.  
   
 ## <a name="remarks"></a>설명  
 *패턴* 또는 *식*이 NULL인 경우 PATINDEX에서 NULL을 반환합니다.  
@@ -67,9 +68,9 @@ PATINDEX는 입력 데이터 정렬에 따라 비교를 수행합니다. 지정�
 ## <a name="supplementary-characters-surrogate-pairs"></a>보조 문자(서로게이트 쌍)  
 SC 데이터 정렬을 사용하는 경우 반환 값은 *식* 매개 변수에 있는 UTF-16 서로게이트 쌍을 단일 문자로 계산합니다. 자세한 내용은 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)을 참조하세요.  
   
-0x0000 (**char(0)** )은 Windows 데이터 정렬에서 정의되지 않은 문자이며 PATINDEX에 포함할 수 없습니다.  
+0x0000 (**char(0)**)은 Windows 데이터 정렬에서 정의되지 않은 문자이며 PATINDEX에 포함할 수 없습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-simple-patindex-example"></a>A. 간단한 PATINDEX 예  
  다음 예는 짧은 문자열(`interesting data`)에서 `ter` 문자의 시작 위치를 검사합니다.  
@@ -87,7 +88,7 @@ position
 ```
   
 ### <a name="b-using-a-pattern-with-patindex"></a>B. PATINDEX와 함께 패턴 사용  
-다음 예에서는 `ensure` 데이터베이스에서 `DocumentSummary` 테이블에 있는 `Document` 열의 특정 행에서 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 패턴이 시작하는 위치를 찾습니다.  
+다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에서 `ensure` 테이블에 있는 `DocumentSummary` 열의 특정 행에서 `Document` 패턴이 시작하는 위치를 찾습니다.  
   
 ```sql  
 SELECT position = PATINDEX('%ensure%',DocumentSummary)  
@@ -174,7 +175,7 @@ position
 22
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [LIKE &#40;Transact-SQL&#41;](../../t-sql/language-elements/like-transact-sql.md)   
  [CHARINDEX&#40;Transact-SQL&#41;](../../t-sql/functions/charindex-transact-sql.md)  
  [LEN&#40;Transact-SQL&#41;](../../t-sql/functions/len-transact-sql.md)  

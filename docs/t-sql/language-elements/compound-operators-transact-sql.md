@@ -1,4 +1,5 @@
 ---
+description: 복합 연산자(Transact-SQL)
 title: 복합 연산자(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5072fe91-02d3-42a7-831f-756eff714a17
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6fe313e317a2d57bbb8547f66ccac6f44eaad264
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: e42ce0876a6354056ae13daea43878a231bd5306
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922965"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88361809"
 ---
 # <a name="compound-operators-transact-sql"></a>복합 연산자(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -59,7 +60,7 @@ expression operator expression
 ## <a name="remarks"></a>설명  
  자세한 내용은 각 연산자와 관련된 항목을 참조하세요.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 복합 연산을 보여 줍니다.  
   
 ```  
@@ -97,7 +98,7 @@ SELECT @x8 AS Bitwise_OR;
   
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [연산자&#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [비트 연산자&#40;Transact-SQL&#41;](../../t-sql/language-elements/bitwise-operators-transact-sql.md)  
   

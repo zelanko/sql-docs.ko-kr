@@ -1,4 +1,5 @@
 ---
+description: NULLIF(Transact-SQL)
 title: NULLIF(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/08/2017
@@ -21,12 +22,12 @@ ms.assetid: 44c7b67e-74c7-4bb9-93a4-7a3016bd2feb
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b5db97fd036dfa614a5a9c6c399a3100d5128d73
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 6ceef62e268cc34f036423b2e55b56152d24ea2e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922343"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88361329"
 ---
 # <a name="nullif-transact-sql"></a>NULLIF(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -57,7 +58,7 @@ NULLIF ( expression , expression )
   
  NULLIF 함수 내에 RAND()와 같은 시간에 종속적인 함수를 사용하지 않는 것이 좋습니다. 이렇게 하면 함수가 두 번 평가되고 두 호출에서 다른 결과가 반환됩니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-returning-budget-amounts-that-have-not-changed"></a>A. 변경되지 않은 예산 반환  
  다음 예에서는 부서(`budgets`), 금년도 예산(`dept`) 및 전년도 예산(`current_year`)을 보여 주는 `previous_year` 테이블을 만듭니다. 금년 예산이 전년도 예산에서 변하지 않은 부서에는 `NULL`이 예산이 아직 결정되지 않은 부서에는 `0`이 사용됩니다. 예산이 결정된 부서만의 평균을 계산하고 이전 연도의 예산 값(`previous_year` 값 사용. 여기서 `current_year`는 `NULL`임)을 포함하려면 `NULLIF` 함수와 `COALESCE` 함수를 결합합니다.  

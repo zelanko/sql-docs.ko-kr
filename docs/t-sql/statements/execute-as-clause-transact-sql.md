@@ -1,4 +1,5 @@
 ---
+description: EXECUTE AS 절(Transact-SQL)
 title: EXECUTE AS Clause(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -25,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: bd517aa3-f06e-4356-87d8-70de5df4494a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5ad156a9164d2b59833b3103a8f08b9cbe1ab284
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 999773d8e8406dac20f86e9f19a2b886a4988619
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483728"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88358409"
 ---
 # <a name="execute-as-clause-transact-sql"></a>EXECUTE AS 절(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -103,7 +104,7 @@ DDL Triggers with Database Scope
  실행 컨텍스트의 사용자 ID는 메타데이터에 저장되고 **sys.sql_modules** 또는 **sys.assembly_modules** 카탈로그 뷰의 **execute_as_principal_id** 열에 표시될 수 있습니다.  
   
  **'** *login_name* **'**  
- 모듈 내부의 문이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]login_name*에 지정된*  로그인의 컨텍스트에서 실행되도록 지정합니다. 모듈 내의 모든 개체에 대한 사용 권한은 *login_name*과 비교 검증됩니다. *login_name*은 서버 범위의 DDL 트리거 또는 로그온 트리거에만 지정할 수 있습니다.  
+ 모듈 내부의 문이 *login_name*에 지정된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인의 컨텍스트에서 실행되도록 지정합니다. 모듈 내의 모든 개체에 대한 사용 권한은 *login_name*과 비교 검증됩니다. *login_name*은 서버 범위의 DDL 트리거 또는 로그온 트리거에만 지정할 수 있습니다.  
   
  *login_name*은 그룹, 역할, 인증서 또는 키이거나 NT AUTHORITY\LocalService, NT AUTHORITY\NetworkService 또는 NT AUTHORITY\LocalSystem과 같은 기본 제공 계정이 될 수 없습니다.  
   
@@ -198,7 +199,7 @@ GO
   
  Windows 그룹 멤버 자격을 통해 데이터베이스에 대한 암시적 액세스 권한이 있는 *login_name* 또는 *user_name*을 지정하려면 해당 데이터베이스에 대한 CONTROL 권한이 있어야 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에 저장 프로시저를 만들고 실행 컨텍스트를 `OWNER`로 할당합니다.  
   
 ```  
@@ -223,7 +224,7 @@ GO
   
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [sys.assembly_modules&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-assembly-modules-transact-sql.md)   
  [sys.sql_modules&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
  [sys.service_queues &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-service-queues-transact-sql.md)   

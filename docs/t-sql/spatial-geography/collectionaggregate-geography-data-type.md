@@ -1,4 +1,5 @@
 ---
+description: CollectionAggregate(geography 데이터 형식)
 title: CollectionAggregate(geography Data Type) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/30/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e49a644a-dbf2-46c3-98f5-4b3ec197e2ad
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: cdb2269e38b482d51a8320c6dd91403bdf7cc289
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: b49f1ab03be85c2c83caf50b548528ff36fd97b3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555488"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88360389"
 ---
 # <a name="collectionaggregate-geography-data-type"></a>CollectionAggregate(geography 데이터 형식)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -53,7 +54,7 @@ ConvexHullAggregate ( geography_operand )
 > [!NOTE]  
 >  이 메서드는 모든 입력 값이 **null**인 경우 **null**을 반환합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 **geography** 개체 집합을 포함하는 `GeometryCollection` 인스턴스를 반환합니다.  
   
  ```
