@@ -1,4 +1,5 @@
 ---
+description: sys. dm_exec_external_work (Transact-sql)
 title: sys. dm_exec_external_work (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2019
@@ -22,12 +23,12 @@ ms.assetid: 7597d97b-1fde-4135-ac35-4af12968f300
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8348ebacb68f2df122b73d6ad3480cadedd27c1b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: d8854b1e784fb6bdbfe8f12d749a937e9f1a6b9e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82821109"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88398289"
 ---
 # <a name="sysdm_exec_external_work-transact-sql"></a>sys. dm_exec_external_work (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -36,13 +37,13 @@ ms.locfileid: "82821109"
   
  분리를 dm_exec_external_work 쿼리하여 외부 데이터 원본 (예: Hadoop 또는 외부 SQL Server)과 통신 하는 작업을 식별 합니다.  
   
-|열 이름|데이터 형식|설명|범위|  
+|열 이름|데이터 형식|Description|범위|  
 |-----------------|---------------|-----------------|-----------|  
 |execution_id|`nvarchar(32)`|연결 된 PolyBase 쿼리의 고유 식별자입니다.|[Dm_exec_requests &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)에서 *request_ID* 를 참조 하세요.|  
 |step_index|`int`|이 작업자에서 수행 하는 요청입니다.|[Dm_exec_requests &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)에서 *step_index* 를 참조 하세요.|  
 |dms_step_index|`int`|이 작업자를 실행 하는 DMS 계획의 단계입니다.|[Dm_exec_dms_workers &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md)을 참조 하십시오.|  
 |compute_node_id|`int`|Worker가 실행 되 고 있는 노드입니다.|[Dm_exec_compute_nodes &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)을 참조 하십시오.|  
-|형식|`nvarchar(60)`|외부 작업의 형식입니다.|' 파일 분할 '|  
+|type|`nvarchar(60)`|외부 작업의 형식입니다.|' 파일 분할 '|  
 |work_id|`int`|실제 분할의 ID입니다.|0 보다 크거나 같습니다.|  
 |input_name|`nvarchar(4000)`|읽을 입력의 이름입니다.|Hadoop을 사용 하는 경우의 파일 이름입니다.|  
 |read_location|`bigint`|오프셋 또는 읽기 위치입니다.|읽을 파일의 오프셋입니다.|  
@@ -56,7 +57,7 @@ ms.locfileid: "82821109"
 
 ## <a name="see-also"></a>참고 항목  
  [동적 관리 뷰를 사용한 PolyBase 문제 해결](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
- [Transact-sql&#41;&#40;동적 관리 뷰 및 함수](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Transact-sql&#41;&#40;데이터베이스 관련 동적 관리 뷰](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
+ [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Transact-sql&#41;&#40;데이터베이스 관련 동적 관리 뷰 ](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: 논리 연산자(DMX)
 title: 논리 연산자 (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 3626cc323cd29f9a575398559bd2b82e40164246
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 2171e867051c0092f2a03349b964df13f8f68e43
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86968509"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88395719"
 ---
 # <a name="operators---logical"></a>연산자 - 논리
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]

@@ -1,4 +1,5 @@
 ---
+description: sys.dm_server_memory_dumps(Transact-SQL)
 title: sys. dm_server_memory_dumps (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 41782719-f54d-4e11-941a-c050c7576e23
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 40e8457a4f31e0961560c1c48cc5885fa3cfd053
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 636beea5b820aef3d37b8ac27f6e75c66bc6da3c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898639"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88397709"
 ---
 # <a name="sysdm_server_memory_dumps-transact-sql"></a>sys.dm_server_memory_dumps(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,4 +1,5 @@
 ---
+description: 연산자(DMX)
 title: 연산자 (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: f274ebc498e5b88b8ae1fbac17c3c972686e348f
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 4c523ea9150f7d3361f93582e01b703be35d2366
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86971614"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88395739"
 ---
 # <a name="operators-dmx"></a>연산자(DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "86971614"
 |연산자 범주|연산 유형|  
 |-----------------------|-----------------------|  
 |[산술 연산자 &#40;DMX&#41;](../dmx/operators-arithmetic.md)|더하기, 빼기, 곱하기 또는 나누기를 수행합니다.|  
-|[DMX&#41;&#40;비교 연산자](../dmx/operators-comparison.md)|값을 다른 값 또는 식과 비교합니다.|  
+|[DMX&#41;&#40;비교 연산자 ](../dmx/operators-comparison.md)|값을 다른 값 또는 식과 비교합니다.|  
 |[논리 연산자 &#40;DMX&#41;](../dmx/operators-logical.md)|AND, OR 또는 NOT 등의 조건에서 진리를 검사합니다.|  
 |[DMX &#40;단항 연산자&#41;](../dmx/operators-unary.md)|단일 피연산자로 연산을 수행합니다.|  
   

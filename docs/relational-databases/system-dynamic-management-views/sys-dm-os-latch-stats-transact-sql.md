@@ -1,4 +1,5 @@
 ---
+description: sys.dm_os_latch_stats(Transact-SQL)
 title: sys. dm_os_latch_stats (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/18/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 2085d9fc-828c-453e-82ec-b54ed8347ae5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: dc310a735c55bc2cdd248597a6cffe1d6f874d4f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 59624b04e417f2b1b7713adec784abca60303504
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85754146"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88398529"
 ---
 # <a name="sysdm_os_latch_stats-transact-sql"></a>sys.dm_os_latch_stats(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -39,7 +40,7 @@ ms.locfileid: "85754146"
 |waiting_requests_count|**bigint**|이 클래스의 래치 대기 수입니다. 이 카운터는 래치 대기가 시작될 때 증가합니다.|  
 |wait_time_ms|**bigint**|이 클래스의 총 래치 대기 시간(밀리초)입니다.<br /><br /> **참고:** 이 열은 래치 대기 중에 5 분 마다 업데이트 되며 래치 대기의 끝에는 업데이트 됩니다.|  
 |max_wait_time_ms|**bigint**|메모리 개체가 이 래치를 기다린 최대 시간입니다. 이 값이 지나치게 높으면 내부 교착 상태가 발생한 것일 수 있습니다.|  
-|pdw_node_id|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포가 설정 된 노드의 식별자입니다.|  
+|pdw_node_id|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포가 설정 된 노드의 식별자입니다.|  
   
 ## <a name="permissions"></a>사용 권한  
 에 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 는 `VIEW SERVER STATE` 권한이 필요 합니다.   
@@ -60,7 +61,7 @@ GO
 > [!NOTE]  
 >  이러한 통계는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 다시 시작할 경우 지속되지 않습니다. 모든 데이터는 통계가 마지막으로 다시 설정된 이후나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 시작된 이후로 누적됩니다.  
   
-## <a name="latches"></a><a name="latches"></a>래치  
+## <a name="latches"></a><a name="latches"></a> 래치  
  래치는 여러 구성 요소에서 사용 하는 잠금과 유사한 내부 경량 동기화 개체입니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 래치는 주로 버퍼 또는 파일 액세스와 같은 작업 중에 데이터베이스 페이지를 동기화 하는 데 사용 됩니다. 각 래치는 단일 할당 단위와 연결되어 있습니다. 
   
  충돌 모드의 다른 스레드에서 래치를 보유하기 때문에 래치 요청에 즉시 권한을 부여할 수 없을 때 래치 대기가 발생합니다. 잠금과 달리 래치는 작업 후 즉시 해제되는데 이는 쓰기 작업에서도 마찬가지입니다.  
@@ -195,5 +196,5 @@ GO
   
 ## <a name="see-also"></a>참고 항목  
 [DBCC SQLPERF &#40;Transact-sql&#41;](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md)       
-[Transact-sql&#41;&#40;운영 체제 관련 동적 관리 뷰 SQL Server](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)       
+[Transact-sql&#41;&#40;운영 체제 관련 동적 관리 뷰 SQL Server ](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)       
 [SQL Server, Latches 개체](../../relational-databases/performance-monitor/sql-server-latches-object.md)      

@@ -1,5 +1,6 @@
 ---
-title: cdc. fn_cdc_get_all_changes_ &lt; capture_instance &gt; (transact-sql) | Microsoft Docs
+description: cdc.fn_cdc_get_all_changes_&lt;capture_instance&gt;  (Transact-SQL)
+title: cdc. fn_cdc_get_all_changes_ &lt; capture_instance &gt;  (transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: c6bad147-1449-4e20-a42e-b51aed76963c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4946bff122f64da126291bb797effe60c361663f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c3877214c5df16b8c9bf48f9ee20bd2ec83109d7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898547"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88397569"
 ---
 # <a name="cdcfn_cdc_get_all_changes_ltcapture_instancegt--transact-sql"></a>cdc.fn_cdc_get_all_changes_&lt;capture_instance&gt;  (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -72,7 +73,7 @@ cdc.fn_cdc_get_all_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
 |-----------------|---------------|-----------------|  
 |**__$start_lsn**|**binary(10)**|변경의 커밋 순서를 유지하고 있는 변경과 관련된 LSN을 커밋합니다. 동일한 트랜잭션에서 커밋된 변경의 커밋 LSN 값은 동일합니다.|  
 |**__$seqval**|**binary(10)**|트랜잭션 내 행 변경을 정렬하는 데 사용되는 시퀀스 값입니다.|  
-|**__ $ 연산**|**int**|변경 데이터의 행을 대상 데이터 원본에 적용하는 데 필요한 DML(데이터 조작 언어) 작업을 식별합니다. 다음 중 하나일 수 있습니다.<br /><br /> 1 = 삭제<br /><br /> 2 = 삽입<br /><br /> 3 = 업데이트(캡처된 열 값은 업데이트 작업 전의 값임) 이 값은 행 필터 옵션이 'all update old'로 지정된 경우에만 적용됩니다.<br /><br /> 4 = 업데이트(캡처된 열 값은 업데이트 작업 후의 값임)|  
+|**__$operation**|**int**|변경 데이터의 행을 대상 데이터 원본에 적용하는 데 필요한 DML(데이터 조작 언어) 작업을 식별합니다. 다음 중 하나일 수 있습니다.<br /><br /> 1 = 삭제<br /><br /> 2 = 삽입<br /><br /> 3 = 업데이트(캡처된 열 값은 업데이트 작업 전의 값임) 이 값은 행 필터 옵션이 'all update old'로 지정된 경우에만 적용됩니다.<br /><br /> 4 = 업데이트(캡처된 열 값은 업데이트 작업 후의 값임)|  
 |**__$update_mask**|**varbinary(128)**|캡처 인스턴스에 대해 식별된 각 캡처된 열에 해당하는 비트가 있는 비트 마스크입니다. 이 값에는 **__ $ operation** 이 1 또는 2 인 경우 정의 된 모든 비트가 1로 설정 됩니다. **__ $ Operation** 이 3 또는 4 인 경우에는 변경 된 열에 해당 하는 비트만 1로 설정 됩니다.|  
 |**\<captured source table columns>**|다름|함수에서 반환되는 나머지 열은 캡처 인스턴스가 생성될 때 식별된 캡처된 열입니다. 캡처된 열 목록에 아무 열도 지정하지 않으면 원본 테이블의 모든 열이 반환됩니다.|  
   
@@ -84,7 +85,7 @@ cdc.fn_cdc_get_all_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
   
  **__ $ Operation** 이 1 이거나 **__ $ operation** 이 3 인 경우에는 **image**, **text**및 **ntext** 데이터 형식의 열에 항상 NULL 값이 할당 됩니다. 업데이트 중에 열이 변경 되지 **않은 경우** **varbinary (max)**, **varchar (max)** 또는 **nvarchar (MAX)** 데이터 형식의 열에는 NULL 값이 할당 됩니다. **__ $ Operation** 이 1 인 경우에는 삭제 시 이러한 열에 해당 값이 할당 됩니다. 캡처 인스턴스에 포함된 계산 열은 항상 NULL 값을 갖습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]변경 데이터 캡처 쿼리 함수를 사용 하는 방법을 보여 주는 몇 가지 템플릿을 사용할 수 있습니다. 이러한 템플릿은의 **보기** 메뉴에서 사용할 수 있습니다 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] . 자세한 내용은 [템플릿 탐색기](../../ssms/template/template-explorer.md)를 참조 하세요.  
   
  이 예에서는 `Enumerate All Changes for Valid Range Template`을 보여 줍니다. 이 템플릿은 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스의 HumanResources.Department 원본 테이블에 대해 정의된 `cdc.fn_cdc_get_all_changes_HR_Department` 함수를 사용하여 `HR_Department` 캡처 인스턴스에서 현재 사용할 수 있는 모든 변경 내용을 보고합니다.  

@@ -1,4 +1,5 @@
 ---
+description: semanticsimilaritytable(Transact-SQL)
 title: semanticsimilaritytable (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b49d40ab-7552-438b-ad67-6237dcccb75b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 759ac2b464bbdee2a0199afe540f00c7695381a9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4866c5002fce3540014b9ad0c94ccd7b20a0e235
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85764279"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88397279"
 ---
 # <a name="semanticsimilaritytable-transact-sql"></a>semanticsimilaritytable(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +45,7 @@ SEMANTICSIMILARITYTABLE
     )  
 ```  
   
-##  <a name="arguments"></a><a name="Arguments"></a>인수의  
+##  <a name="arguments"></a><a name="Arguments"></a> 인수  
  **table**  
  전체 텍스트 및 의미 체계 인덱싱을 사용하도록 설정된 테이블의 이름입니다.  
   
@@ -69,7 +70,7 @@ SEMANTICSIMILARITYTABLE
   
  결과가 둘 이상의 열에서 요청된 경우에는 열 단위로 대응 문서가 반환됩니다.  
   
-|Column_name|형식|설명|  
+|Column_name|Type|설명|  
 |------------------|----------|-----------------|  
 |**source_column_id**|**int**|유사한 문서를 찾는 데 사용된 원본 문서의 열 ID입니다.<br /><br /> column_id에서 열 이름을 검색하거나 열 이름에서 column_id를 검색하는 방법에 대한 자세한 내용은 COL_NAME 및 COLUMNPROPERTY 함수를 참조하십시오.|  
 |**matched_column_id**|**int**|유사한 문서를 찾은 열의 ID입니다.<br /><br /> column_id에서 열 이름을 검색하거나 열 이름에서 column_id를 검색하는 방법에 대한 자세한 내용은 COL_NAME 및 COLUMNPROPERTY 함수를 참조하십시오.|  

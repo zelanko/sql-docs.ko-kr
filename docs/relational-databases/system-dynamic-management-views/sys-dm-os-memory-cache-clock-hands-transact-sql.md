@@ -1,4 +1,5 @@
 ---
+description: sys.dm_os_memory_cache_clock_hands(Transact-SQL)
 title: sys. dm_os_memory_cache_clock_hands (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/21/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 0660eddc-691c-425f-9d43-71151d644de7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: edfb4ec3851f27750499def7b0652929f3c89cb8
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 688cafb3413d1252113ecb226daef76d2e730d1e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898748"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88397959"
 ---
 # <a name="sysdm_os_memory_cache_clock_hands-transact-sql"></a>sys.dm_os_memory_cache_clock_hands(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,7 +48,7 @@ ms.locfileid: "85898748"
 |**last_tick_time**|**bigint**|마지막으로 클럭 포인터가 이동한 시간(밀리초)입니다. Null을 허용하지 않습니다.|  
 |**round_start_time**|**bigint**|이전 스윕의 시간(밀리초)입니다. Null을 허용하지 않습니다.|  
 |**last_round_start_time**|**bigint**|클럭이 이전 라운드를 완료하는 데 걸린 총 시간(밀리초)입니다. Null을 허용하지 않습니다.|  
-|**pdw_node_id**|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포가 설정 된 노드의 식별자입니다.|  
+|**pdw_node_id**|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포가 설정 된 노드의 식별자입니다.|  
   
 ## <a name="permissions"></a>사용 권한  
 
@@ -58,7 +59,7 @@ ms.locfileid: "85898748"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 메모리 캐시라는 구조의 메모리에 정보를 저장합니다. 캐시의 정보는 데이터, 인덱스 항목, 컴파일된 프로시저 계획 및 다양한 유형의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 정보일 수 있습니다. 정보가 다시 생성되지 않도록 하기 위해 가능한 한 오랫동안 메모리 캐시에 정보가 보관되며 정보가 너무 오래되어서 유용하지 않거나 새 정보를 위해 메모리 공간이 필요한 경우 일반적으로 캐시에서 정보가 제거됩니다. 이전 정보를 제거하는 프로세스를 메모리 스윕이라고 합니다. 메모리 스윕 작업은 자주 수행될 수 있지만 연속적으로 수행되지 않습니다. 메모리 캐시의 스윕은 클럭 알고리즘으로 제어됩니다. 각 클럭에서 포인터라고 하는 메모리 스윕을 여러 개 제어할 수 있습니다. 메모리 캐시 클럭 포인터는 메모리 스윕 그룹 중 하나의 현재 위치입니다.  
 
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;운영 체제 관련 동적 관리 뷰 SQL Server](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)    
+ [Transact-sql&#41;&#40;운영 체제 관련 동적 관리 뷰 SQL Server ](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)    
  [dm_os_memory_cache_counters &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-cache-counters-transact-sql.md)
   
 

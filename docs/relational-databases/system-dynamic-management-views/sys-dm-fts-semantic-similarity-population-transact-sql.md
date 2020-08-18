@@ -1,4 +1,5 @@
 ---
+description: sys.dm_fts_semantic_similarity_population(Transact-SQL)
 title: sys. dm_fts_semantic_similarity_population (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -18,12 +19,12 @@ ms.assetid: 33666f28-c370-47e2-a932-190316ed5f69
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: a148750db907ebf43d6976d4d574145516e13d65
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2857896ffefb5591482a44051081aa1034f3fee0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898821"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88398489"
 ---
 # <a name="sysdm_fts_semantic_similarity_population-transact-sql"></a>sys.dm_fts_semantic_similarity_population(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "85898821"
     
 ||||  
 |-|-|-|  
-|**열 이름**|**Type**|**설명**|  
+|**열 이름**|**형식**|**설명**|  
 |**database_id**|**int**|채우기가 진행되고 있는 전체 텍스트 인덱스를 포함하는 데이터베이스의 ID입니다.|  
 |**catalog_id**|**int**|이 전체 텍스트 인덱스를 포함하는 전체 텍스트 카탈로그의 ID입니다.|  
 |**table_id**|**int**|전체 텍스트 인덱스가 채워지고 있는 테이블의 ID입니다.|  
@@ -59,7 +60,7 @@ ms.locfileid: "85898821"
 ### <a name="permissions"></a>사용 권한  
  을 실행하려면 서버에 대해 VIEW SERVER STATE 권한이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 연결된 의미 체계 인덱스가 있는 모든 테이블에 대한 문서 유사성 인덱스 채우기의 상태를 쿼리하는 방법을 보여 줍니다.  
   
 ```  

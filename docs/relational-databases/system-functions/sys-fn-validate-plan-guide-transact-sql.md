@@ -1,4 +1,5 @@
 ---
+description: sys.fn_validate_plan_guide(Transact-SQL)
 title: sys. fn_validate_plan_guide (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 3af8b47a-936d-4411-91d1-d2d16dda5623
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8ddc9e534b5f0e434dd9c0ca980da82eddb8006a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b19a3cd2f2ee449780127682555f1ae77fabd5d0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898278"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88396899"
 ---
 # <a name="sysfn_validate_plan_guide-transact-sql"></a>sys.fn_validate_plan_guide(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -60,7 +61,7 @@ sys.fn_validate_plan_guide ( plan_guide_id )
   
  SQL 범위 또는 TEMPLATE 범위의 계획 지침에는 데이터베이스에 대한 ALTER 권한과 계획 지침에 제공된 쿼리나 일괄 배치를 컴파일할 수 있는 권한이 필요합니다. 예를 들어 일괄 처리에 SELECT 문이 있으면 참조 개체의 SELECT 권한이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-validating-all-plan-guides-in-a-database"></a>A. 데이터베이스에 있는 모든 계획 지침 확인  
  다음 예에서는 현재 데이터베이스에 있는 모든 계획 지침의 유효성을 확인합니다. 빈 결과 집합이 반환되면 모든 계획 지침을 사용할 수 있습니다.  

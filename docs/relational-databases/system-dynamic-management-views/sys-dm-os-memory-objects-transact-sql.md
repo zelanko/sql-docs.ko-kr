@@ -1,4 +1,5 @@
 ---
+description: sys.dm_os_memory_objects(Transact-SQL)
 title: sys. dm_os_memory_objects (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2017
@@ -20,11 +21,12 @@ ms.assetid: 5688bcf8-5da9-4ff9-960b-742b671d7096
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 31af260a5290b899bb64fa3942d1e2aa0a076d31
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 3378ee753ebc9205ac4607930801fdf3cc434b3a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999048"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88398069"
 ---
 # <a name="sysdm_os_memory_objects-transact-sql"></a>sys.dm_os_memory_objects(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -53,11 +55,11 @@ ms.locfileid: "85999048"
 |**contention_factor**|**real**|**적용 대상**: [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)] 이상<br /><br /> 이 메모리 개체에 대 한 경합을 지정 하는 값으로 0은 경합이 없음을 의미 합니다. 지정 된 수의 메모리 할당이 해당 기간 동안 경합을 반영 하는 경우 값이 업데이트 됩니다. 스레드로부터 안전한 메모리 개체에만 적용 됩니다.|  
 |**waiting_tasks_count**|**bigint**|**적용 대상**: [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)] 이상<br /><br /> 이 메모리 개체의 대기 수입니다. 이 카운터는 메모리가이 메모리 개체에서 할당 될 때마다 증가 합니다. 이 증가값은 현재이 메모리 개체에 대 한 액세스를 대기 중인 작업의 수입니다. 스레드로부터 안전한 메모리 개체에만 적용 됩니다. 이 값은 정확성을 보장 하지 않는 최상의 노력입니다.|  
 |**exclusive_access_count**|**bigint**|**적용 대상**: [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)] 이상<br /><br /> 이 메모리 개체에 단독으로 액세스 한 빈도를 지정 합니다. 스레드로부터 안전한 메모리 개체에만 적용 됩니다.  이 값은 정확성을 보장 하지 않는 최상의 노력입니다.|  
-|**pdw_node_id**|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포가 설정 된 노드의 식별자입니다.|  
+|**pdw_node_id**|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포가 설정 된 노드의 식별자입니다.|  
   
  **partition_type**, **contention_factor**, **waiting_tasks_count**및 **exclusive_access_count** 은에서 아직 구현 되지 않았습니다 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] .  
   
-## <a name="permissions"></a>권한
+## <a name="permissions"></a>사용 권한
 
 에 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 는 `VIEW SERVER STATE` 권한이 필요 합니다.   
 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium 계층에서는 데이터베이스에 대 한 권한이 필요 합니다 `VIEW DATABASE STATE` . [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]표준 및 기본 계층에서는 **서버 관리자** 또는 **Azure Active Directory 관리자** 계정이 필요 합니다.   
@@ -70,7 +72,7 @@ ms.locfileid: "85999048"
 > [!NOTE]  
 >  페이지 크기는 최대 할당이 아닙니다. 대신에 페이지 크기는 페이지 할당자에서 지원하고 메모리 클럭에서 구현하는 할당 세분성을 지원합니다. 메모리 개체에서 8KB보다 큰 할당을 요청할 수 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 각 메모리 개체 유형에서 할당한 메모리를 반환합니다.  
   
 ```  
@@ -82,7 +84,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>참고 항목  
-  [Transact-sql&#41;&#40;운영 체제 관련 동적 관리 뷰 SQL Server](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
+  [Transact-sql&#41;&#40;운영 체제 관련 동적 관리 뷰 SQL Server ](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
  [dm_os_memory_clerks &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)  
   
   

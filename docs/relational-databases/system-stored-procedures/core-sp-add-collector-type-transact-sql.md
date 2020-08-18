@@ -1,4 +1,5 @@
 ---
+description: core.sp_add_collector_type(Transact-SQL)
 title: core. sp_add_collector_type (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 1d981037-2147-464e-a456-7d8e479bce89
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 28353a7b2112be801f465b5a919b537f17a17f4d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: fcaf70019a38a0306d56c94e86ec6376626a2991
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898219"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88397029"
 ---
 # <a name="coresp_add_collector_type-transact-sql"></a>core.sp_add_collector_type(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,7 +52,7 @@ core.sp_add_collector_type [ @collector_type_uid = ] 'collector_type_uid'
 ## <a name="permissions"></a>사용 권한  
  **Mdw_admin** (실행 권한 포함) 고정 데이터베이스 역할의 멤버 자격이 필요 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 core.supported_collector_types 뷰에 일반 T-SQL 쿼리 수집기 유형을 추가합니다. 기본적으로 일반 T-SQL 쿼리 수집기 형식은 이미 있으므로 기본 설치에서 이 코드를 실행하면 수집기 형식이 이미 있다는 메시지가 나타납니다.  
   
  일반 T-SQL 쿼리 수집기 유형을 core.sp_remove_collector_type 저장 프로시저를 사용하여 제거한 다음 관리 데이터 웨어하우스에 데이터를 업로드할 수 있는 등록된 수집기 유형으로 다시 추가하려는 경우 이 코드가 성공적으로 실행됩니다.  
@@ -66,8 +67,8 @@ EXECUTE @RC = core.sp_add_collector_type @collector_type_uid;
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;시스템 저장 프로시저](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Transact-sql&#41;&#40;데이터 수집기 저장 프로시저](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;시스템 저장 프로시저 ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [데이터 수집기 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
  [관리 데이터 웨어하우스](../../relational-databases/data-collection/management-data-warehouse.md)  
   
   

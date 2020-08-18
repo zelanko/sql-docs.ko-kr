@@ -1,4 +1,5 @@
 ---
+description: sys. dm_pdw_waits (Transact-sql)
 title: sys. dm_pdw_waits (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
@@ -12,23 +13,23 @@ ms.assetid: 5130e498-1c77-4ae3-a80b-9aae396494e9
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 6111ce07ecb3de932ff4cb12cf6d7c53d5a1be6d
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: 1214a5e7f4d6d64d739440f0ecebf35d39a81dd8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86197005"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88397839"
 ---
 # <a name="sysdm_pdw_waits-transact-sql"></a>sys. dm_pdw_waits (Transact-sql)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   요청 또는 쿼리를 실행 하는 동안 발생 한 모든 대기 상태에 대 한 정보 (예를 들어, 잠금, 전송 큐 대기 등)를 포함 합니다.  
   
-|열 이름|데이터 형식|설명|범위|  
+|열 이름|데이터 형식|Description|범위|  
 |-----------------|---------------|-----------------|-----------|  
 |wait_id|**bigint**|대기 상태와 연결 된 고유 숫자 id입니다.<br /><br /> 이 보기의 키입니다.|시스템의 모든 대기에서 고유 합니다.|  
 |session_id|**nvarchar(32)**|대기 상태가 발생 한 세션의 ID입니다.|[Dm_pdw_exec_sessions &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md)에서 session_id를 참조 하세요.|  
-|형식|**nvarchar(255)**|이 항목이 나타내는 대기 유형입니다.|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
+|type|**nvarchar(255)**|이 항목이 나타내는 대기 유형입니다.|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
 |object_type|**nvarchar(255)**|대기의 영향을 받는 개체의 형식입니다.|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
 |object_name|**nvarchar (386)**|대기의 영향을 받은 지정 된 개체의 이름 또는 GUID입니다.||  
 |request_id|**nvarchar(32)**|대기 상태가 발생 한 요청의 ID입니다.|[Dm_pdw_exec_requests &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md)에서 request_id를 참조 하세요.|  
@@ -38,7 +39,7 @@ ms.locfileid: "86197005"
 |priority|**int**|대기 중인 항목의 우선 순위입니다.|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;SQL Data Warehouse 및 병렬 데이터 웨어하우스 동적 관리 뷰](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)   
+ [Transact-sql&#41;&#40;SQL Data Warehouse 및 병렬 데이터 웨어하우스 동적 관리 뷰 ](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)   
  [dm_pdw_wait_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-wait-stats-transact-sql.md)  
   
   

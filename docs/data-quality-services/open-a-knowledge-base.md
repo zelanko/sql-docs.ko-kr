@@ -1,4 +1,5 @@
 ---
+description: 기술 자료 열기
 title: 기술 자료 열기
 ms.date: 06/04/2013
 ms.prod: sql
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: a5f010a5-b762-41c9-881b-bf0c192dca83
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 3eec1826d383f51933a9d47ae4acd932ebda7759
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 5d93731b7e28aafbffdf659678c0017d37ce61db
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882741"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88395889"
 ---
 # <a name="open-a-knowledge-base"></a>기술 자료 열기
 
@@ -34,7 +35,7 @@ ms.locfileid: "85882741"
 ####  <a name="permissions"></a><a name="Permissions"></a> 권한  
  기술 자료를 열려면 DQS_MAIN 데이터베이스에 대한 dqs_kb_editor 또는 dqs_administrator 역할이 있어야 합니다.  
   
-##  <a name="open-a-knowledge-base"></a><a name="Open"></a>기술 자료 열기  
+##  <a name="open-a-knowledge-base"></a><a name="Open"></a> 기술 자료 열기  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Data Quality Client 응용 프로그램을 실행](../data-quality-services/run-the-data-quality-client-application.md)합니다.  
   
