@@ -1,4 +1,5 @@
 ---
+description: 시퀀스 번호
 title: 시퀀스 번호 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ ms.assetid: c900e30d-2fd3-4d5f-98ee-7832f37e79d1
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0fc2167d4dc6179b760cfe03ad380b98d041f7b3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 65e1196ec8ea240f2e8a9210657a60f967e4b7c5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725914"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490464"
 ---
 # <a name="sequence-numbers"></a>시퀀스 번호
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -82,7 +83,7 @@ CREATE SEQUENCE Schema.SequenceName
 ## <a name="managing-sequences"></a>시퀀스 관리  
  시퀀스에 대한 자세한 내용을 보려면 [sys.sequences](../../relational-databases/system-catalog-views/sys-sequences-transact-sql.md)를 쿼리하십시오.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  [CREATE SEQUENCE&#40;Transact-SQL&#41;](../../t-sql/statements/create-sequence-transact-sql.md), [NEXT VALUE FOR&#40;Transact-SQL&#41;](../../t-sql/functions/next-value-for-transact-sql.md) 및 [sp_sequence_get_range](../../relational-databases/system-stored-procedures/sp-sequence-get-range-transact-sql.md) 항목에서 또 다른 예제를 찾아볼 수 있습니다.  
   
 ### <a name="a-using-a-sequence-number-in-a-single-table"></a>A. 단일 테이블에서 시퀀스 번호 사용  
@@ -398,7 +399,7 @@ GO
   
  [ALTER SEQUENCE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-sequence-transact-sql.md)  
   
- [DROP SEQUENCE&#40;Transact-SQL&#41;](../../t-sql/statements/drop-sequence-transact-sql.md)  
+ [DROP SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-sequence-transact-sql.md)  
   
  [IDENTITY&#40;속성&#41;&#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql-identity-property.md)  
   

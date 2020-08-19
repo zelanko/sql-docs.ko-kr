@@ -1,4 +1,5 @@
 ---
+description: TOP(Transact-SQL)
 title: TOP(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -21,12 +22,12 @@ ms.assetid: da983c0a-06c5-4cf8-a6a4-7f9d66f34f2c
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ce9c31baedb0b423e93e96080ea6697c553e549e
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 7dbaf282383bfeb83efc1b7ccf6f74ad90ed1764
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555874"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445312"
 ---
 # <a name="top-transact-sql"></a>TOP(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -86,7 +87,7 @@ TOP 식은 트리거로 인해 실행될 수 있는 문에 영향을 주지 않�
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 뷰를 통해 행을 업데이트할 수 있습니다. TOP 절을 뷰 정의에 포함할 수 있으므로 행이 업데이트로 인해 TOP 식의 요구 사항을 더 이상 충족하지 않는 경우에는 특정 행이 뷰에서 사라질 수 있습니다.  
   
-MERGE 문에 지정되는 경우 TOP 절은 전체 원본 테이블과 전체 대상 테이블이 조인된 ‘후에’ 적용됩니다.  또한 삽입, 업데이트 또는 삭제 동작에 적합하지 않은 조인된 행이 제거됩니다. TOP 절은 조인된 행 수를 지정된 값으로 더 줄이며, 삽입, 업데이트 또는 삭제 동작은 나머지 조인된 행에 순서 없이 적용됩니다. 즉, 행은 WHEN 절에 정의된 동작에 순서 없이 분산됩니다. 예를 들어 TOP (10)을 지정하면 10개 행이 영향을 받는 경우 이 10개 행 중 7개가 업데이트되고 3개가 삽입될 수 있습니다. 또는 1개가 삭제되고 5개가 업데이트되고 4개가 삽입될 수 있습니다. MERGE 문은 원본과 대상 테이블 모두에 전체 테이블 검색을 수행하므로 큰 테이블을 수정하기 위해 TOP 절을 사용하여 다중 일괄 처리를 생성하는 경우에는 I/O 성능에 영향을 줄 수 있습니다. 이러한 시나리오에서 연속된 모든 일괄 처리는 새로운 행을 대상으로 해야 합니다.  
+MERGE 문에 지정되는 경우 TOP 절은 전체 원본 테이블과 전체 대상 테이블이 조인된 ‘후에’ 적용됩니다.** 또한 삽입, 업데이트 또는 삭제 동작에 적합하지 않은 조인된 행이 제거됩니다. TOP 절은 조인된 행 수를 지정된 값으로 더 줄이며, 삽입, 업데이트 또는 삭제 동작은 나머지 조인된 행에 순서 없이 적용됩니다. 즉, 행은 WHEN 절에 정의된 동작에 순서 없이 분산됩니다. 예를 들어 TOP (10)을 지정하면 10개 행이 영향을 받는 경우 이 10개 행 중 7개가 업데이트되고 3개가 삽입될 수 있습니다. 또는 1개가 삭제되고 5개가 업데이트되고 4개가 삽입될 수 있습니다. MERGE 문은 원본과 대상 테이블 모두에 전체 테이블 검색을 수행하므로 큰 테이블을 수정하기 위해 TOP 절을 사용하여 다중 일괄 처리를 생성하는 경우에는 I/O 성능에 영향을 줄 수 있습니다. 이러한 시나리오에서 연속된 모든 일괄 처리는 새로운 행을 대상으로 해야 합니다.  
   
 UNION, UNION ALL, EXCEPT 또는 INTERSECT 연산자가 포함된 쿼리에서 TOP 절을 지정할 때는 주의해야 합니다. 이러한 연산자가 SELECT 작업에 사용된 경우에는 TOP 및 ORDER BY 절이 논리적으로 처리되는 순서가 직관적이지 않을 수 있으므로 예기치 않은 결과를 반환하는 쿼리가 작성될 수 있습니다. 예를 들어 다음 테이블 및 데이터에서 가장 저렴한 빨간색 차와 가장 저렴한 파란색 차, 즉 red sedan과 blue van을 반환하려는 경우를 가정해 봅니다.  
   
@@ -155,9 +156,9 @@ INSERT, UPDATE, MERGE 또는 DELETE에서 TOP을 사용하면 참조된 행이 �
   
 같은 쿼리 식(같은 쿼리 범위)에서 TOP을 OFFSET 및 FETCH와 결합할 수 없습니다. 자세한 내용은 [ORDER BY 절&#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md)을 참조하세요.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
-|Category|중요한 구문 요소|  
+|범주|중요한 구문 요소|  
 |--------------|------------------------------|  
 |[기본 구문](#BasicSyntax)|TOP • PERCENT|  
 |[동률 값 포함](#tie)|WITH  TIES|  

@@ -1,4 +1,5 @@
 ---
+description: 내용 유형(DMX)
 title: 콘텐츠 형식 (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 9a0c44e0ea90b253cee5564a327d49c34c1ae78a
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: b4d69b516a06bd6d68c3f85e82b18be774ada0f9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86969897"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88431105"
 ---
 # <a name="content-types-dmx"></a>내용 유형(DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]

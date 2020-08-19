@@ -1,4 +1,5 @@
 ---
+description: 흐름 제어
 title: 흐름 제어 | Microsoft 문서 도구
 ms.custom: ''
 ms.date: 03/16/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1115a779-484a-4f32-bcd2-d8f0675945b7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 18dd2df663babde055be4756e6f3e4d2bff40f42
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 0229be825cfb465c12fd5e19f18d83517554c57b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87248493"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445490"
 ---
 # <a name="control-of-flow"></a>흐름 제어
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

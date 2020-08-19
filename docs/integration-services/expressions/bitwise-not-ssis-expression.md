@@ -1,4 +1,5 @@
 ---
+description: ~(비트 Not)(SSIS 식)
 title: ~(비트 Not)(SSIS 식) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e4413ddd-0d0e-40c3-9c76-b5ce323218ec
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c64bc1c2e2a6814450d7857480c2e0c8f094ff3e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ae8fa8bb0aae6700d1082e52385c7d162c193b84
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923499"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430615"
 ---
 # <a name="-bitwise-not-ssis-expression"></a>~(비트 Not)(SSIS 식)
 
@@ -43,7 +44,7 @@ ms.locfileid: "86923499"
  *integer_expression*의 데이터 형식을 반환합니다.  
   
 ## <a name="remarks"></a>설명  
- None  
+ 없음  
   
 ## <a name="expression-examples"></a>식 예  
  이 예에서는 숫자 170(0000 0000 1010 1010)에 비트 ~(NOT) 연산을 수행합니다. 숫자는 부호 있는 정수입니다.  

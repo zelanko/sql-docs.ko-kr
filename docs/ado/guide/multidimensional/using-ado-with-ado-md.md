@@ -1,4 +1,5 @@
 ---
+description: ADO MD에서 ADO 사용
 title: ADO MD에서 ADO 사용 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: cfae435e-2ac3-4312-8c1e-9ca4a74cd875
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 591a10e8c91aa22f939ff48f341b376bbd8ebe1b
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 6314ae9a0682e1c10b1ecd45c8f8d5217e7d6426
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82748003"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452405"
 ---
 # <a name="using-ado-with-ado-md"></a>ADO MD에서 ADO 사용
 ADO 및 ADO MD는 관련 되지만 별도의 개체 모델입니다. ADO는 데이터 원본에 연결 하 고, 명령을 실행 하 고, 테이블 형식 데이터 및 스키마 메타 데이터를 테이블 형식으로 검색 하 고, 공급자 오류 정보를 볼 수 있는 개체를 제공 합니다. ADO MD 다차원 데이터를 검색 하 고 다차원 스키마 메타 데이터를 볼 개체를 제공 합니다.  

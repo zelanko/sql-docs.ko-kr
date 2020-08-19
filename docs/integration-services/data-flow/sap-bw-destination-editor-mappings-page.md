@@ -1,4 +1,5 @@
 ---
+description: SAP BW 대상 편집기(매핑 페이지)
 title: SAP BW 대상 편집기(매핑 페이지) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: dfa1f1d6-6b64-4331-bdc5-eaa8b7aa41a1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a2878b4691515c835165f764e09735bafb617b0f
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f1c92a8976e22648768c3f4986d9c1ff13a35f55
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917871"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430805"
 ---
 # <a name="sap-bw-destination-editor-mappings-page"></a>SAP BW 대상 편집기(매핑 페이지)
 

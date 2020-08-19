@@ -1,4 +1,5 @@
 ---
+description: CreateRecordset 메서드 예제(VB)
 title: CreateRecordset 메서드 예제 (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2de8fd02-0f49-4d47-8bd3-397726d1c644
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7d520e58866e7092f6e11807bca8c9407c6b16ca
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: e91e1c0801cb8062bca89968d0345f5bbcee1220
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760199"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444315"
 ---
 # <a name="createrecordset-method-example-vb"></a>CreateRecordset 메서드 예제(VB)
 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체를 만들고 열 정보를 지정할 수 있습니다. 그런 다음 **레코드 집합** 개체에 데이터를 삽입할 수 있습니다. 기본 행 집합은 삽입을 버퍼링 합니다.  

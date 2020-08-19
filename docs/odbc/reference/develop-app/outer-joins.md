@@ -1,4 +1,5 @@
 ---
+description: 외부 조인
 title: 외부 조인 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: be1a0203-5da9-4871-9566-4bd3fbc0895c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 81988d34dca38d5c041ff9f87e9674d7c97d76cc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a9be14c2b7c0dd6cdebc458fd22dc090862eb9dc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81282451"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429125"
 ---
 # <a name="outer-joins"></a>외부 조인
 ODBC는 SQL-92 left, right 및 full outer join 구문을 지원 합니다. 외부 조인의 이스케이프 시퀀스는  

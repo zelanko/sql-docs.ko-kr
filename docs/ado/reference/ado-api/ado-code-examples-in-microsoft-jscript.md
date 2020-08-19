@@ -1,4 +1,5 @@
 ---
+description: Microsoft JScript의 ADO 코드 예제
 title: Microsoft JScript의 ADO 코드 예제 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 228b978d-eef1-4e30-928a-005b2f77ef14
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: db537a1d7fb8d5a440145c298a6ce524965a12b0
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 4bc7e233b109266a7918576dadb24631cbb210d5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760589"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451525"
 ---
 # <a name="ado-code-examples-in-microsoft-jscript"></a>Microsoft JScript의 ADO 코드 예제
 다음 코드 예제를 사용 하 여 JScript에서 작성할 때 ADO 메서드, 속성 및 이벤트를 사용 하는 방법을 배울 수 있습니다.  

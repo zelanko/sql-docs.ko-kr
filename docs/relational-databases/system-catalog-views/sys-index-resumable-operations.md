@@ -1,4 +1,5 @@
 ---
+description: sys. index_resumable_operations (Transact-sql)
 title: sys. index_resumable_operations (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/12/2019
@@ -19,12 +20,12 @@ ms.assetid: ''
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c57cc780bc3e05347daf8dd7778e7e5de274d303
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fa2ae5221dbd360c5bad7279d27dbaedc7ae7f16
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85790493"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490313"
 ---
 # <a name="sysindex_resumable_operations-transact-sql"></a>sys. index_resumable_operations (Transact-sql)
 

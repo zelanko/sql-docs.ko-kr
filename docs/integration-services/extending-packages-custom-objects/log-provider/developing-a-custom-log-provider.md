@@ -1,4 +1,5 @@
 ---
+description: 사용자 지정 로그 공급자 개발
 title: 사용자 지정 로그 공급자 개발 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3f715b95-7074-4f5c-8ae2-246998052e78
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 41da6c13c50ded80c5388da1b38dad582084b3c5
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: e69139c38d87c1a61a61b774efdd80db49ea8181
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916432"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430495"
 ---
 # <a name="developing-a-custom-log-provider"></a>사용자 지정 로그 공급자 개발
 

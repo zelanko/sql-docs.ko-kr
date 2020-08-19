@@ -1,4 +1,5 @@
 ---
+description: Oracle 연결 관리자
 title: Oracle 연결 관리자 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/14/2019
@@ -9,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0df21d12c9a7d29957d004517a3a6de3e93a8221
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 428ca450371e452081d548a64e26dba2bd29b3b5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915664"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430745"
 ---
 # <a name="oracle-connection-manager"></a>Oracle 연결 관리자
 

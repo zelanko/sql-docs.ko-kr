@@ -1,4 +1,5 @@
 ---
+description: STGeometryType(geography 데이터 형식)
 title: STGeometryType(geography 데이터 형식) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3e169ead-a98e-44af-8d33-fd59a955cae4
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 957615b665641afd3ffbfbcac8d789a2426b35cc
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 082c6ede155c04f9ea323db2c345a690a2d39a7d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555408"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445280"
 ---
 # <a name="stgeometrytype-geography-data-type"></a>STGeometryType(geography 데이터 형식)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -46,7 +47,7 @@ ms.locfileid: "86555408"
 ## <a name="remarks"></a>설명  
  `STGeometryType()`에 의해 반환될 수 있는 OGC 형식 이름은 **Point**, **LineString**, **CircularString**, **CompoundCurve**, **Polygon**, **CurvePolygon**, **GeometryCollection**, **MultiPoint**, **MultiLineString**, **MultiPolygon** 및 **FullGlobe**입니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `Polygon` 인스턴스를 만들고 `STGeometryType()`을 사용하여 이 인스턴스가 다각형인지 확인합니다.  
   
 ```  
@@ -56,6 +57,6 @@ SELECT @g.STGeometryType();
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [지리 인스턴스의 OGC 메서드](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
+ [Geography 인스턴스의 OGC 메서드](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

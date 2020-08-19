@@ -1,4 +1,5 @@
 ---
+description: ActiveCommand 속성(ADO)
 title: ActiveCommand 속성 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: fb4088d5-5968-42d6-aeaa-3955046bb4da
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b89876366c80d20bde110da9e9d86414873e86bc
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 38c0a0955e934b4f303937d978f739e00ac6c120
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82747474"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451745"
 ---
 # <a name="activecommand-property-ado"></a>ActiveCommand 속성(ADO)
 연결 된 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체를 만든 [명령](../../../ado/reference/ado-api/command-object-ado.md) 개체를 나타냅니다.  

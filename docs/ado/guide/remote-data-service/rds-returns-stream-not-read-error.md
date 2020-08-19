@@ -1,4 +1,5 @@
 ---
+description: RDS 반환 &quot; 스트림 읽기 &quot; 오류
 title: RDS에서 &quot; 읽기 불가능 한 스트림 반환 &quot; 오류 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: cb5a68f8-dba4-41da-bafd-04efe53706b7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ca194c911b590dfcc8baba87195c91a70640dd24
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 039a881d0d38e6dc58661c92f59ba74bd9ea2bb3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82747735"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452105"
 ---
 # <a name="rds-returns-quotstream-not-readquot-error"></a>RDS 반환 &quot; 스트림 읽기 &quot; 오류
 "스트림 개체는 비어 있거나 현재 위치가 스트림의 끝에 있기 때문에 읽을 수 없습니다. 비어 있지 않은 스트림의 경우 Position 속성을 사용 하 여 현재 위치를 설정 합니다. 스트림이 비어 있는지 확인 하려면 Size 속성을 확인 하십시오.  

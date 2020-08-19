@@ -1,4 +1,5 @@
 ---
+description: DQS에서 프로파일링 알림 설정 또는 해제
 title: DQS에서 프로파일링 알림 설정 또는 해제
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e439bb29-60cc-4afd-a79a-f629b8d843c1
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 26e0026e1ea9b22c87a590639d605b17da7fcf16
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 4595f034ad1a3c26f3991af21207bb02e4321769
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895375"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88431315"
 ---
 # <a name="enable-or-disable-profiling-notifications-in-dqs"></a>DQS에서 프로파일링 알림 설정 또는 해제
 
@@ -33,7 +34,7 @@ ms.locfileid: "85895375"
 ####  <a name="permissions"></a><a name="Permissions"></a> 권한  
  알림을 설정하려면 DQS_MAIN 데이터베이스에 대한 dqs_kb_editor 또는 dqs_administrator 역할이 있어야 합니다.  
   
-##  <a name="enable-or-disable-profiling-notifications"></a><a name="Enable"></a>프로 파일링 알림 사용 또는 사용 안 함  
+##  <a name="enable-or-disable-profiling-notifications"></a><a name="Enable"></a> 프로 파일링 알림 사용 또는 사용 안 함  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Data Quality Client 응용 프로그램을 실행](../data-quality-services/run-the-data-quality-client-application.md)합니다.  
   

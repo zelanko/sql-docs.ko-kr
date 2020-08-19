@@ -1,4 +1,5 @@
 ---
+description: '2단계: 서버 프로그램 호출(RDS 자습서)'
 title: '2 단계: 서버 프로그램 호출 (RDS 자습서) | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5e74c2da-65ee-4de4-8b41-6eac45c3632e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c0e85b276ed8cc38419035d48357180c7952ff98
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 4b864578b67eda29c703bcf4952a9a2878aafe9c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764684"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451945"
 ---
 # <a name="step-2-invoke-the-server-program-rds-tutorial"></a>2단계: 서버 프로그램 호출(RDS 자습서)
 클라이언트 *프록시에서*메서드를 호출 하면 서버의 실제 프로그램이 메서드를 실행 합니다. 이 단계에서는 서버에서 쿼리를 실행 합니다.  
@@ -27,7 +28,7 @@ ms.locfileid: "82764684"
   
  **A 부** 이 자습서에서 [RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) 를 사용 하지 않은 경우이 단계를 수행 하는 가장 편리한 방법은 RDS를 사용 하는 것입니다. [ DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) 개체입니다. **RDS. DataControl** 은 프록시를 만드는 이전 단계를 결합 합니다 .이 단계에서는 쿼리를 실행 합니다.  
   
- RDS를 설정 **합니다. **서버 프로그램을 인스턴스화해야 하는 위치를 식별 하는 DataControl 개체 [서버](../../../ado/reference/rds-api/server-property-rds.md) 속성 연결 [속성을](../../../ado/reference/rds-api/connect-property-rds.md) 사용 하 여 데이터 원본에 액세스 하는 연결 문자열을 지정 합니다. 그리고 [SQL](../../../ado/reference/rds-api/sql-property.md) 속성을 통해 쿼리 명령 텍스트를 지정할 수 있습니다. 그런 다음 [Refresh](../../../ado/reference/rds-api/refresh-method-rds.md) 메서드를 실행 하 여 서버 프로그램이 데이터 원본에 연결 하 고, 쿼리에 지정 된 행을 검색 하 고, **레코드 집합** 개체를 클라이언트에 반환 하도록 합니다.  
+ RDS를 설정 **합니다. ** 서버 프로그램을 인스턴스화해야 하는 위치를 식별 하는 DataControl 개체 [서버](../../../ado/reference/rds-api/server-property-rds.md) 속성 연결 [속성을](../../../ado/reference/rds-api/connect-property-rds.md) 사용 하 여 데이터 원본에 액세스 하는 연결 문자열을 지정 합니다. 그리고 [SQL](../../../ado/reference/rds-api/sql-property.md) 속성을 통해 쿼리 명령 텍스트를 지정할 수 있습니다. 그런 다음 [Refresh](../../../ado/reference/rds-api/refresh-method-rds.md) 메서드를 실행 하 여 서버 프로그램이 데이터 원본에 연결 하 고, 쿼리에 지정 된 행을 검색 하 고, **레코드 집합** 개체를 클라이언트에 반환 하도록 합니다.  
   
  이 자습서에서는 RDS를 사용 하지 않습니다 **. 무엇 보다도이**방법이 무엇 인지 확인 하는 방법은 다음과 같습니다.  
   

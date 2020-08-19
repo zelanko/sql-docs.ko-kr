@@ -1,4 +1,5 @@
 ---
+description: STEquals(geometry 데이터 형식)
 title: STEquals(geometry 데이터 형식) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 808f0e25-9e68-4ba7-9329-07ec950698f3
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: af6fdaff361ae845000455bf53cb952466a0ef30
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 4ce45e482bac277168afdf65d447a53ebed00ea5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554306"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445096"
 ---
 # <a name="stequals-geometry-data-type"></a>STEquals(geometry 데이터 형식)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -50,7 +51,7 @@ ms.locfileid: "86554306"
 ## <a name="remarks"></a>설명  
  이 메서드는 **geometry** 인스턴스의 SRID(spatial Reference ID)가 일치하지 않으면 항상 Null을 반환합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 동일하지만 약간 다른 `geometry`를 사용하여 두 개의 `STGeomFromText()` 인스턴스를 만들고 `STEquals()`를 사용하여 서로 같은지 테스트합니다.  
   
 ```  
@@ -61,7 +62,7 @@ SET @h = geometry::STGeomFromText('MULTILINESTRING((4 2, 2 0), (0 2, 2 0))', 0);
 SELECT @g.STEquals(@h);  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [공간 인덱스 개요](../../relational-databases/spatial/spatial-indexes-overview.md)   
  [geometry 인스턴스의 OGC 메서드](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   

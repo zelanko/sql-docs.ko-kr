@@ -1,4 +1,5 @@
 ---
+description: 사용자 지정 태스크에 디버깅 지원 추가
 title: 사용자 지정 태스크에 디버깅 지원 추가 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 7f06e49b-0b60-4e81-97da-d32dc248264a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: cf8461adf02267d433a12543208d48fea00ff953
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 23abaf34f5bec9ecab8e506a123e9e9a1ec4f81f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916439"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430455"
 ---
 # <a name="adding-support-for-debugging-in-a-custom-task"></a>사용자 지정 태스크에 디버깅 지원 추가
 

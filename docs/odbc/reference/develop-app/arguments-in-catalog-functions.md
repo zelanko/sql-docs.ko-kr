@@ -1,4 +1,5 @@
 ---
+description: 카탈로그 함수의 인수
 title: 카탈로그 함수의 인수 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f5e0abec-8f24-42e0-b94f-16dd1f2004fd
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 819c10d0b137d5e0999c1e10bf22810392509f76
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ef53514f41d28e93648970b03fa53927529d8344
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81288169"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483136"
 ---
 # <a name="arguments-in-catalog-functions"></a>카탈로그 함수의 인수
 모든 카탈로그 함수는 응용 프로그램이 반환 하는 데이터의 범위를 제한할 수 있는 인수를 허용 합니다. 예를 들어 다음 코드에서 **Sqltables** 에 대 한 첫 번째 및 두 번째 호출은 모든 테이블에 대 한 정보를 포함 하는 결과 집합을 반환 하 고, 세 번째 호출은 Orders 테이블에 대 한 정보를 반환 합니다.  

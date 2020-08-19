@@ -1,4 +1,5 @@
 ---
+description: ConnectPromptEnum
 title: ConnectPromptEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 21026e24-62b7-4cc9-8aef-62c1fc6cba75
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 61a66866f8206f2df4cbdeb3f2144e0ac12ac695
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 0ad8fe77bb3472931d3b16d5849b047001922c96
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762594"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444415"
 ---
 # <a name="connectpromptenum"></a>ConnectPromptEnum
 데이터 원본에 대 한 연결을 열 때 누락 된 매개 변수를 확인 하기 위해 대화 상자를 표시할지 여부를 지정 합니다.  

@@ -1,4 +1,5 @@
 ---
+description: 스크립트 태스크를 사용하여 원격 프라이빗 메시지 큐에 메시지 보내기
 title: 스크립트 태스크를 사용하여 원격 프라이빗 메시지 큐에 메시지 보내기 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 636314fd-d099-45cd-8bb4-f730d0a06739
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 58fc117593359bf8e06b7d38a3eb0510a44de09a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 5bc25b37bb4dfac2aa03795972edb56eb406aebd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921095"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430345"
 ---
 # <a name="sending-to-a-remote-private-message-queue-with-the-script-task"></a>스크립트 태스크를 사용하여 원격 프라이빗 메시지 큐에 메시지 보내기
 
@@ -48,7 +49,7 @@ ms.locfileid: "86921095"
   
 3.  디자인 화면에 스크립트 태스크를 추가하고 편집합니다. **스크립트 태스크 편집기**의 **스크립트** 탭에서 **ReadOnlyVariables** 속성에 `MessageText` 변수를 추가하여 해당 변수를 스크립트 내에서 사용할 수 있게 합니다.  
   
-4.  **스크립트 편집**을 클릭하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] VSTA([!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications) 스크립트 편집기를 엽니다.  
+4.  **스크립트 편집**을 클릭하여  VSTA([!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications) 스크립트 편집기를 엽니다.  
   
 5.  **System.Messaging** 네임스페이스에 대한 참조를 스크립트 프로젝트에 추가합니다.  
   

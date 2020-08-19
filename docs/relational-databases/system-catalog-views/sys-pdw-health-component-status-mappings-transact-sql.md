@@ -1,4 +1,5 @@
 ---
+description: sys. pdw_health_component_status_mappings (Transact-sql)
 title: sys. pdw_health_component_status_mappings (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -10,12 +11,12 @@ ms.assetid: 4272cfad-5ad7-493d-9edd-d9111619bda0
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: def9dc4a7601e4d5a89794e85f4e209036966f73
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 2965fb53df87c09c1ccd99c42bed541272b91da7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87397122"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490256"
 ---
 # <a name="syspdw_health_component_status_mappings-transact-sql"></a>sys. pdw_health_component_status_mappings (Transact-sql)
 [!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]

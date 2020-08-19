@@ -1,4 +1,5 @@
 ---
+description: Synchronize21 메서드(RDS)
 title: Synchronize21 메서드 (RDS) | Microsoft Docs
 ms.technology: connectivity
 ms.custom: ''
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6b35f136-9d9a-4bdd-8144-67decfd3c4e9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 454b012b8027b86256215721bdfca17122713c75
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 4627ac4b67e31861ff91cb516076a561a7a315e2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82750555"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438565"
 ---
 # <a name="synchronize21-method-rds"></a>Synchronize21 메서드(RDS)
 지정 된 레코드 집합을 ADO 2.1에 사용 하기 위해 연결 문자열에 지정 된 데이터베이스와 동기화 합니다.  
@@ -58,7 +59,7 @@ object.Synchronize21(ConnectionString As String, HandlerString As String, lSynch
  동기화의 영향을 받는 행의 안전 행 상태 배열을 반환 하는 데 사용 되는 variant입니다. 다음 동기화 옵션이 설정 되지 않은 경우에는 *Refreshwithupdate*, *Refresh* 및 *refresh충돌과*같이 설정 되지 않습니다.  
   
 ## <a name="remarks"></a>설명  
- *Handlerstring* 매개 변수는 null 일 수 있습니다. 이 경우에 발생 하는 상황은 RDS 서버를 구성 하는 방법에 따라 달라 집니다. "MSDFMAP. handler"의 처리기 문자열은 Microsoft에서 제공 하는 처리기 (Msdfmap .dll)를 사용 해야 함을 나타냅니다. "MASDFMAP, .sample"의 처리기 문자열은 Msdfmap .dll 처리기를 사용 해야 하며 "sample. .ini" 인수를 처리기에 전달 해야 함을 나타냅니다. 그러면 msdfmap .dll에서 .sample을 사용 하 여 연결 및 쿼리 문자열을 확인 하는 방향으로 인수를 해석 합니다.  
+ *Handlerstring* 매개 변수는 null 일 수 있습니다. 이 경우에 발생 하는 상황은 RDS 서버를 구성 하는 방법에 따라 달라 집니다. "MSDFMAP. handler"의 처리기 문자열은 Microsoft에서 제공 하는 처리기 (Msdfmap.dll)를 사용 해야 함을 나타냅니다. "MASDFMAP sample.ini" 처리기 문자열은 Msdfmap.dll 처리기를 사용 해야 하며 "sample.ini" 인수를 처리기에 전달 해야 함을 나타냅니다. 그러면 Msdfmap.dll는 sample.ini를 사용 하 여 연결 및 쿼리 문자열을 확인 하는 방향으로 인수를 해석 합니다.  
   
 > [!NOTE]
 >  **Synchronize21** 메서드는 단순히 [동기화 방법 (RDS)](../../../ado/reference/rds-api/synchronize-method-rds.md)의 버전입니다. **Synchronize** 메서드를 사용 하 여 ADO 2.1와 통신 해야 하는 경우 대신 **Synchronize21** 메서드를 호출할 수 있습니다. ADO 2.5 이상에서 **Synchronize** 메서드의 기능은 ado 2.1에서 동일한 방법으로 제공 되는 기능의 상위 집합입니다.  

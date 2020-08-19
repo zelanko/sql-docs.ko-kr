@@ -1,4 +1,5 @@
 ---
+description: ODBC 원본을 사용하여 데이터 추출
 title: ODBC 원본을 사용하여 데이터 추출 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 10f25703-49a2-4d45-abab-6b4da2a57ba5
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d32d104426b76be32510fc3737763d6436a0c816
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 6684e36201e20ee84821f25694dd8326915aaf46
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86906649"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430865"
 ---
 # <a name="extract-data-by-using-the-odbc-source"></a>ODBC 원본을 사용하여 데이터 추출
 

@@ -1,4 +1,5 @@
 ---
+description: SET XACT_ABORT(Transact-SQL)
 title: SET XACT_ABORT(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/03/2019
@@ -26,12 +27,12 @@ ms.assetid: cbcaa433-58f2-4dc3-a077-27273bef65b5
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7a4eeff8a2ee64a318931fad63d74bb4cd780c49
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: b745de81c42af218c71c1b99e02369fad3feb797
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85990352"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444645"
 ---
 # <a name="set-xact_abort-transact-sql"></a>SET XACT_ABORT(Transact-SQL)
 
@@ -49,6 +50,8 @@ ms.locfileid: "85990352"
 ```syntaxsql
 SET XACT_ABORT { ON | OFF }
 ```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="remarks"></a>설명
 
@@ -73,7 +76,7 @@ SELECT @XACT_ABORT AS XACT_ABORT;
 
 ```
 
-## <a name="examples"></a>예
+## <a name="examples"></a>예제
 
 다음 코드 예에서는 다른 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문이 있는 트랜잭션에서 외래 키 위반 오류를 일으킵니다. 첫 번째 문 집합에서는 오류가 생성되지만 다른 문이 성공적으로 처리되고 트랜잭션이 성공적으로 커밋됩니다. 두 번째 문 집합에서는 `SET XACT_ABORT` 옵션이 `ON`으로 설정됩니다. 이렇게 설정하면 문 오류로 인해 일괄 처리가 종료되고 트랜잭션이 롤백됩니다.
 
@@ -125,7 +128,7 @@ GO
 
 - [THROW&#40;Transact-SQL&#41;](../../t-sql/language-elements/throw-transact-sql.md)
 - [BEGIN TRANSACTION&#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-transaction-transact-sql.md)
-- [COMMIT TRANSACTION&#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-transaction-transact-sql.md)
+- [COMMIT TransactION&#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-transaction-transact-sql.md)
 - [ROLLBACK TRANSACTION&#40;Transact-SQL&#41;](../../t-sql/language-elements/rollback-transaction-transact-sql.md)
 - [SET 문&#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)
 - [@@TRANCOUNT&#40;Transact-SQL&#41;](../../t-sql/functions/trancount-transact-sql.md)  

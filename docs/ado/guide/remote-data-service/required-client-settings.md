@@ -1,4 +1,5 @@
 ---
+description: 필수 클라이언트 설정
 title: 필수 클라이언트 설정 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e776b4e3-fcc4-4bfb-a7e8-5ffae1d83833
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9ec52c594cb058ef8359c39d696d47d4cd3dd127
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 8d21cf3f08b284ed2642f9567ae86909fb35579b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82749383"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452025"
 ---
 # <a name="required-client-settings"></a>필수 클라이언트 설정
 > [!IMPORTANT]
@@ -31,11 +32,11 @@ ms.locfileid: "82749383"
   
 -   [DataControl 개체 (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md) 개체의 **Handler** 속성 또는 [레코드 집합 개체 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) 개체의 연결 문자열 "**handler**=" 키워드에 사용할 처리기의 이름을 지정 합니다. **연결** 개체 연결 문자열에는 처리기를 설정할 수 없습니다.  
   
- RDS는 Msdfmap 이라는 서버에 기본 처리기를 제공 합니다 **. 처리기**. 기본 사용자 지정 파일의 이름은 MSDFMAP입니다. INI.)  
+ RDS는 Msdfmap 이라는 서버에 기본 처리기를 제공 합니다 **. 처리기**. 기본 사용자 지정 파일의 이름은 MSDFMAP.INI입니다.  
   
  **예제**  
   
- Msdfmap의 다음 섹션을 가정 합니다 **. INI** 및 데이터 원본 이름 AdvWorks가 이전에 정의 되었습니다.  
+ **MSDFMAP.INI** 및 데이터 원본 이름인 AdvWorks의 다음 섹션이 이전에 정의 되어 있다고 가정 합니다.  
   
 ```console
 [connect CustomerDataBase]  

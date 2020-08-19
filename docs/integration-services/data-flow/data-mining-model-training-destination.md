@@ -1,4 +1,5 @@
 ---
+description: 데이터 마이닝 모델 학습 대상
 title: 데이터 마이닝 모델 학습 대상 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 6bc8cbe2-46af-4f7b-93d6-86779313c9d7
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5332b93b6f51204700473d2faadbde39458db4fe
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 9e79b6190a8e3659b97f3e8f1c82533f3270bd42
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916790"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430915"
 ---
 # <a name="data-mining-model-training-destination"></a>데이터 마이닝 모델 학습 대상
 

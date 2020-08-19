@@ -1,4 +1,5 @@
 ---
+description: DENY 인증서 권한(Transact-SQL)
 title: DENY Certificate Permissions(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5971ff9e-d6a4-414b-ae1f-819bc2e348f5
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 4bbf8f2aa031b7f8a33993d6054d27137011814c
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: feec699a67378db5a7cdd1c169e507c72859b639
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484998"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444776"
 ---
 # <a name="deny-certificate-permissions-transact-sql"></a>DENY 인증서 권한(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

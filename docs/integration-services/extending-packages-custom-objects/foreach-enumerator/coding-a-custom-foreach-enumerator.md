@@ -1,4 +1,5 @@
 ---
+description: 사용자 지정 Foreach 열거자 코딩
 title: 사용자 지정 Foreach 열거자 코딩 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 279cf6de-d06f-40e7-b8ca-569310449f36
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 539231ea284fd43f797858cf2dd549d578dfab6c
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 046b40b0dd7502e57614691066d8c87bcfe5d9fa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86902550"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430555"
 ---
 # <a name="coding-a-custom-foreach-enumerator"></a>사용자 지정 Foreach 열거자 코딩
 

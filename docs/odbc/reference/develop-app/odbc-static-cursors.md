@@ -1,4 +1,5 @@
 ---
+description: ODBC 정적 커서
 title: ODBC 정적 커서 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 28cb324c-e1c3-4b5c-bc3e-54df87037317
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b99566c473e88684e8b092a5ac9fc899e7dce177
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9689badd39e21f82c268be904b29ffb1fa90a8ae
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81282450"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429165"
 ---
 # <a name="odbc-static-cursors"></a>ODBC 정적 커서
 정적 커서는 결과 집합이 정적으로 표시 되는 커서입니다. 일반적으로 커서를 연 후 결과 집합의 멤버 자격, 순서 또는 값에 대 한 변경 내용을 검색 하지 않습니다. 예를 들어 정적 커서에서 행을 인출 하 고 다른 응용 프로그램에서 해당 행을 업데이트 한다고 가정 합니다. 정적 커서가 행을 refetches 다른 응용 프로그램에서 변경한 내용에도 불구 하 고 표시 되는 값은 변경 되지 않습니다.  

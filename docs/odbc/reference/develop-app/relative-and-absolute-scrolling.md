@@ -1,4 +1,5 @@
 ---
+description: 상대 및 절대 스크롤
 title: 상대 및 절대 스크롤 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3d0ff48d-fef5-4c01-bb1d-a583e6269b66
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ae0ed5af8d116a3038b55b1e3d68231154c2a35c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6c7471e7ee245d9cf70adc8c3453705453bc1aac
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300103"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482946"
 ---
 # <a name="relative-and-absolute-scrolling"></a>상대 및 절대 스크롤
 **Sqlfetchscroll** 의 스크롤 옵션 대부분은 커서를 현재 위치를 기준으로 또는 절대 위치에 상대적으로 배치 합니다. **Sqlfetchscroll** 은 다음, 이전, 첫 번째 및 마지막 행 집합을 인출 하 고, 상대 인출 (현재 행 집합의 시작 부분에서 행 집합 *n* 행 인출) 및 절대 인출 (행 *n*에서 시작 하 여 행 집합 인출)을 지원 합니다. 절대 인출에서 *n* 이 음수 이면 결과 집합의 끝에서 행이 계산 됩니다. 즉,-1 행의 절대 페치는 결과 집합의 마지막 행으로 시작 하는 행 집합을 인출 하는 것을 의미 합니다.  

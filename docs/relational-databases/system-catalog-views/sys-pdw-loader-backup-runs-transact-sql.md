@@ -1,4 +1,5 @@
 ---
+description: sys. pdw_loader_backup_runs (Transact-sql)
 title: sys. pdw_loader_backup_runs (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -12,28 +13,28 @@ ms.assetid: 2b72034c-6a11-46b9-a76c-7a88b2bea360
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 6ca5fc44e34153411e32a890b509d86caacbd9db
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: fc85ec89f07359714c4661b3b7c4c8d8d5138b1a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86196989"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490271"
 ---
 # <a name="syspdw_loader_backup_runs-transact-sql"></a>sys. pdw_loader_backup_runs (Transact-sql)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   에서 진행 중이 고 완료 된 백업 및 복원 작업과의 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 지속적인 백업, 복원 및 로드 작업에 대 한 정보를 포함 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 합니다. 이 정보는 시스템을 다시 시작해도 유지됩니다.  
   
-|열 이름|데이터 형식|설명|범위|  
+|열 이름|데이터 형식|Description|범위|  
 |-----------------|---------------|-----------------|-----------|  
 |run_id|**int**|특정 백업, 복원 또는 로드 실행에 대 한 고유 식별자입니다.<br /><br /> 이 보기의 키입니다.||  
-|이름|**nvarchar(255)**|로드의 경우 Null입니다. 백업 또는 복원에 대 한 선택적 이름입니다.||  
+|name|**nvarchar(255)**|로드의 경우 Null입니다. 백업 또는 복원에 대 한 선택적 이름입니다.||  
 |submit_time|**datetime**|요청이 제출 된 시간입니다.||  
 |start_time|**datetime**|작업이 시작된 시간입니다.||  
 |end_time|**datetime**|작업이 완료, 실패 또는 취소 된 시간입니다.||  
 |total_elapsed_time|**int**|완료, 취소 또는 실패 한 실행에 대 한 start_time와 현재 시간 사이 또는 start_time와 end_time 간에 경과 된 총 시간입니다.|Total_elapsed_time 정수 24.8 (밀리초)의 최대값을 초과 하는 경우 오버플로로 인 한 구체화 실패가 발생 합니다.<br /><br /> 최대 값 (밀리초)은 24.8 일에 해당 합니다.|  
 |operation_type|**nvarchar (16)**|로드 형식입니다.|' 백업 ', ' 로드 ', ' 복원 '|  
-|mode|**nvarchar (16)**|실행 형식 내의 모드입니다.|Operation_type = **백업**<br />**큰**<br />**FULL**<br /><br /> Operation_type = **로드**<br />**추가할**<br />**로딩**<br />**UPSERT**<br /><br /> Operation_type = **복원**<br />**데이터**<br />**HEADER_ONLY**|  
+|mode|**nvarchar (16)**|실행 형식 내의 모드입니다.|Operation_type = **백업**<br />**DIFFERENTIAL**<br />**FULL**<br /><br /> Operation_type = **로드**<br />**추가할**<br />**로딩**<br />**UPSERT**<br /><br /> Operation_type = **복원**<br />**데이터**<br />**HEADER_ONLY**|  
 |database_name|**nvarchar(255)**|이 작업의 컨텍스트인 데이터베이스의 이름입니다.||  
 |table_name|**nvarchar(255)**|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]||  
 |Principal_id|**int**|작업을 요청 하는 사용자의 ID입니다.||  

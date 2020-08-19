@@ -1,4 +1,5 @@
 ---
+description: SSIS를 사용하여 패키지 배포
 title: SSIS를 사용하여 패키지 배포 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/20/2018
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: de18468c-cff3-48f4-99ec-6863610e5886
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9d6636cbd74f31448381b1f6cb2c3dd3826324a5
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 4ba92220b368e1ef7ee1218d972e6113e1378d27
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916659"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430655"
 ---
 # <a name="deploy-packages-with-ssis"></a>SSIS를 사용하여 패키지 배포
 
@@ -51,7 +52,7 @@ ms.locfileid: "86916659"
 ## <a name="what-you-learn"></a>학습 내용    
 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서 사용할 수 있는 새 도구, 컨트롤 및 기능에 익숙해지는 가장 좋은 방법은 실제로 사용해 보는 것입니다. 이 자습서에서는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트를 만든 다음 패키지 및 기타 필요한 파일을 프로젝트에 추가하는 단계를 진행합니다. 프로젝트가 완료된 후에 배포 번들을 만들고 번들을 대상 컴퓨터에 복사한 다음 패키지를 대상 컴퓨터에 설치합니다.    
     
-## <a name="prerequisites"></a>사전 요구 사항    
+## <a name="prerequisites"></a>전제 조건    
 이 자습서는 기본적인 파일 시스템 작업에는 이미 익숙하지만, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]의 새 기능은 많이 접해 보지 못한 사용자를 위한 것입니다. 이 자습서에서 사용되는 기본 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 개념을 더 쉽게 이해할 수 있도록 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 자습서인 [SSIS ETL 패키지를 만드는 방법](../integration-services/ssis-how-to-create-an-etl-package.md)을 먼저 완료하는 것이 좋습니다.    
     
 ### <a name="on-the-source-computer"></a>원본 컴퓨터의 경우
@@ -66,7 +67,7 @@ ms.locfileid: "86916659"
 
 -   AdventureWorks 데이터베이스에서 테이블을 만들고 삭제할 수 있는 권한이 있어야 합니다.
     
--   [SQL Server Data Tools(SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md).    
+-   [SQL Server Data Tools(SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md) .    
     
 ### <a name="on-the-destination-computer"></a>대상 컴퓨터의 경우
 
@@ -84,7 +85,7 @@ ms.locfileid: "86916659"
     
 -   AdventureWorks 데이터베이스에서 테이블을 만들고 삭제할 권한과 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에서 SSIS 패키지를 실행할 권한이 있어야 합니다.    
     
--   `sysssispackages` `msdb` 시스템 데이터베이스의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 테이블에 대한 읽기/쓰기 권한    
+-   `msdb` [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 시스템 데이터베이스의 `sysssispackages` 테이블에 대한 읽기/쓰기 권한    
     
 배포 번들을 만든 컴퓨터에 패키지를 배포하려면 해당 컴퓨터는 원본 및 대상 컴퓨터에 대한 요구 사항을 모두 충족해야 합니다.    
         

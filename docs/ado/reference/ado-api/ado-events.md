@@ -1,4 +1,5 @@
 ---
+description: ADO 이벤트
 title: ADO 이벤트 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0ded5ad9-8f83-4224-95af-38512783b972
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a93353be1737b38e7acb557a682e84cbb947c2a1
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 07ef1c379dcf59b386b86d5b9fce38f77c521e01
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242873"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451425"
 ---
 # <a name="ado-events"></a>ADO 이벤트
 
@@ -27,7 +28,7 @@ ms.locfileid: "87242873"
 |[BeginTransComplete](../../../ado/reference/ado-api/begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado.md)|**BeginTrans** 작업 후에 호출 됩니다.|  
 |[CommitTransComplete](../../../ado/reference/ado-api/begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado.md)|**CommitTrans** 작업 후에 호출 됩니다.|  
 |[ConnectComplete](../../../ado/reference/ado-api/connectcomplete-and-disconnect-events-ado.md)|연결이 시작 된 후에 호출 됩니다.|  
-|[케이블](../../../ado/reference/ado-api/connectcomplete-and-disconnect-events-ado.md)|연결이 종료 된 후에 호출 됩니다.|  
+|[연결 끊기](../../../ado/reference/ado-api/connectcomplete-and-disconnect-events-ado.md)|연결이 종료 된 후에 호출 됩니다.|  
 |[EndOfRecordset](../../../ado/reference/ado-api/endofrecordset-event-ado.md)|**레코드 집합**의 끝을 지나서 행으로 이동 하려고 할 때 호출 됩니다.|  
 |[ExecuteComplete](../../../ado/reference/ado-api/executecomplete-event-ado.md)|명령 실행이 완료 된 후에 호출 됩니다.|  
 |[FetchComplete](../../../ado/reference/ado-api/fetchcomplete-event-ado.md)|긴 비동기 작업의 모든 레코드를 **레코드 집합**으로 검색 한 후에 호출 됩니다.|  
@@ -45,7 +46,7 @@ ms.locfileid: "87242873"
 |[WillExecute](../../../ado/reference/ado-api/willexecute-event-ado.md)|이 연결에서 보류 중인 명령이 실행 되 고 사용자가 보류 중인 실행 매개 변수를 검사 하 고 수정할 수 있는 기회를 발생 하기 직전에 호출 됩니다.|  
 |[WillMove](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)|**WillMove** 이벤트는 보류 중인 작업이 **레코드 집합**의 현재 위치를 변경 *하기 전에* 호출 됩니다.|  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [ADO API 참조](../../../ado/reference/ado-api/ado-api-reference.md)   
  [ADO 컬렉션](../../../ado/reference/ado-api/ado-collections.md)   
  [ADO 동적 속성](../../../ado/reference/ado-api/ado-dynamic-properties.md)   

@@ -1,4 +1,5 @@
 ---
+description: 사용자 지정 파일 SQL 섹션
 title: 사용자 지정 파일 SQL 섹션 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e65c2871-9986-44ff-b8b7-7f5eda91b3fa
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 934b982004bf27e28a8daeed09061101886ce444
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 3ceb97d4859126c2116383196db5e6c71affb77f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82749874"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452245"
 ---
 # <a name="customization-file-sql-section"></a>사용자 지정 파일 SQL 섹션
 **Sql** 섹션에는 클라이언트 명령 문자열을 대체 하는 새 sql 문자열이 포함 될 수 있습니다. 섹션에 SQL 문자열이 없는 경우 섹션은 무시 됩니다.  
@@ -45,7 +46,7 @@ SQL = " "
  **SQL =**   
  ***sqlString***  
   
-|부분|Description|  
+|부분|설명|  
 |----------|-----------------|  
 |**SQL**|SQL 섹션 항목 임을 나타내는 리터럴 문자열입니다.|  
 |***sqlString***|클라이언트 문자열을 대체 하는 SQL 문자열입니다.|  

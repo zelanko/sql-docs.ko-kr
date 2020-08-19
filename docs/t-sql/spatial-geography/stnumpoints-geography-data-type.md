@@ -1,4 +1,5 @@
 ---
+description: STNumPoints(geography 데이터 형식)
 title: STNumPoints(geography 데이터 형식) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 25ff7ad1-ba5f-4cfb-816a-59255ac1591d
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 372dea8b43f386795d49274ed63d62b862ecff43
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 6dbbf84ae21589d6428528d1599fe65eba7704f6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86552469"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445189"
 ---
 # <a name="stnumpoints-geography-data-type"></a>STNumPoints(geography 데이터 형식)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -46,7 +47,7 @@ ms.locfileid: "86552469"
 ## <a name="remarks"></a>설명  
  이 메서드는 **geography** 인스턴스의 설명에 있는 점을 셉니다. 중복 점도 개수에 포함되지만 세그먼트 사이의 연결 점은 한 번만 셉니다. 이 인스턴스가 컬렉션인 경우 이 메서드는 컬렉션에 있는 점의 총 개수를 반환합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-retrieving-the-total-number-of-points-in-a-linestring"></a>A. LineString에 있는 점의 총 개수 검색  
  다음 예에서는 `LineString` 인스턴스를 만들고 `STNumPoints()`를 사용하여 인스턴스의 설명에 사용된 점의 수를 확인합니다.  
@@ -75,6 +76,6 @@ SELECT @g.STNumPoints();
  ```  
   
 ## <a name="see-also"></a>참고 항목  
- [지리 인스턴스의 OGC 메서드](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
+ [Geography 인스턴스의 OGC 메서드](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

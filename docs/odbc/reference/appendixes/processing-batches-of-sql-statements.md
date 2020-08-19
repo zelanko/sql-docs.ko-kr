@@ -1,4 +1,5 @@
 ---
+description: SQL 문의 일괄 처리
 title: SQL 문의 일괄 처리 Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 04b93ef9-11de-47a3-8bd8-ba963c42f182
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ec0e4b67d75b1ff1b14eb11682869041717a4055
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7f00d728f8a8b716d27834f82b770d25d8333a56
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81308034"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483216"
 ---
 # <a name="processing-batches-of-sql-statements"></a>SQL 문의 일괄 처리
 > [!IMPORTANT]  

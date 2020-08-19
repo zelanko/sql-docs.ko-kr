@@ -1,4 +1,5 @@
 ---
+description: FILEGROUPPROPERTY(Transact-SQL)
 title: FILEGROUPPROPERTY(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: b3a930e6-df05-4034-929c-f681f5f6fc6e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 48c0d9a2a3b83256e8ae32a13d615e3a36b10ccb
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 5992e56da8ae602d2e681265b63b52f6415f9374
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111541"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468031"
 ---
 # <a name="filegroupproperty-transact-sql"></a>FILEGROUPPROPERTY(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +45,7 @@ FILEGROUPPROPERTY ( filegroup_name, property )
 
 ## <a name="arguments"></a>인수
  *filegroup_name*  
-명명된 속성 정보를 반환하는 **의 파일 그룹 이름을 나타내는** sysname`FILEGROUPPROPERTY` 형식의 식입니다.  
+명명된 속성 정보를 반환하는 `FILEGROUPPROPERTY`의 파일 그룹 이름을 나타내는 **sysname** 형식의 식입니다.  
   
  *property*  
 파일 그룹 속성의 이름을 반환하는 **varchar(128)** 형식의 식입니다. *Property*는 다음 값 중 하나를 반환할 수 있습니다.  
@@ -61,7 +62,7 @@ FILEGROUPPROPERTY ( filegroup_name, property )
 ## <a name="remarks"></a>설명  
 *filegroup_name*은 **sys.filegroups** 카탈로그 뷰의 **name** 열과 일치합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
 다음 예에서는 `IsDefault` 데이터베이스의 주 파일 그룹에 대해 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 속성 설정을 반환합니다.  
   
 ```  
@@ -83,6 +84,6 @@ Default Filegroup
  [FILEGROUP_NAME&#40;Transact-SQL&#41;](../../t-sql/functions/filegroup-name-transact-sql.md)   
  [메타데이터 함수&#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
  [SELECT&#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [sys.filegroups&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)  
+ [sys.filegroups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)  
   
   

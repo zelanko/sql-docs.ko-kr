@@ -1,4 +1,5 @@
 ---
+description: 여러 결과
 title: 여러 결과 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: a3c32e4b-8fe7-4a33-ae39-ae664001f315
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d90414b631a7e81a7868ab7974b64ea84a0ea452
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dc42bfa96c4784d232d8359a15ac74b2f3c5a2be
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302417"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429255"
 ---
 # <a name="multiple-results"></a>여러 결과
 *결과* 는 문이 실행 된 후 데이터 원본에서 반환 되는 항목입니다. ODBC에는 결과 집합과 행 개수 라는 두 가지 유형의 결과가 있습니다. *행 개수* 는 update, delete 또는 insert 문의 영향을 받는 행의 수입니다. [SQL 문의 일괄 처리](../../../odbc/reference/develop-app/batches-of-sql-statements.md)로 설명 된 일괄 처리는 여러 결과를 생성할 수 있습니다.  

@@ -1,4 +1,5 @@
 ---
+description: 전체 텍스트 인덱싱 마법사 사용
 title: 전체 텍스트 인덱싱 마법사 사용 | Microsoft Docs
 ms.date: 08/19/2016
 ms.prod: sql
@@ -23,12 +24,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2531d7f8034440b48a032ee1e9e74ae7fdb9df73
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 24903e075fc7ce38e79c0b99a559afac194638bf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85628810"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490591"
 ---
 # <a name="use-the-full-text-indexing-wizard"></a>전체 텍스트 인덱싱 마법사 사용
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -47,7 +48,7 @@ ms.locfileid: "85628810"
   
 5.  **유형 열.** 전체 텍스트 인덱싱되는 열의 문서 유형을 보관하는 열 이름을 선택합니다.  
 
-> **참고:** **유형 열** 은 **사용 가능한 열** 열에 이름이 지정된 열이 **varbinary(max)** 또는 **image**유형일 경우에만 사용할 수 있습니다.  
+> **참고:****유형 열** 은 **사용 가능한 열** 열에 이름이 지정된 열이 **varbinary(max)** 또는 **image**유형일 경우에만 사용할 수 있습니다.  
   
 6. **통계 의미 체계.** 선택한 열에 대해 의미 체계 인덱싱을 사용하도록 설정할지 여부를 선택합니다. 자세한 내용은 [의미 체계 검색&#40;SQL Server&#41;](../../relational-databases/search/semantic-search-sql-server.md)을 참조하세요.  
   

@@ -1,4 +1,5 @@
 ---
+description: CopyRecord, CopyTo 및 SaveToFile 메서드 예제 (VB)
 title: CopyRecord, CopyTo 및 SaveToFile 메서드 예제 (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 61a51b74-93cd-439c-877f-f3055499d39f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9ca0f7f5a7f9057001e6c2b33563d11c2c6188dd
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: d19c7a994cd4db7d65a285e523726c0bdd88f582
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758809"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444395"
 ---
 # <a name="copyrecord-copyto-and-savetofile-methods-example-vb"></a>CopyRecord, CopyTo 및 SaveToFile 메서드 예제 (VB)
 이 예제에서는 [Stream](../../../ado/reference/ado-api/stream-object-ado.md) 또는 [Record](../../../ado/reference/ado-api/record-object-ado.md) 개체를 사용 하 여 파일의 복사본을 만드는 방법을 보여 줍니다. 웹 폴더에 대 한 복사본 하나가 인터넷 게시용으로 수행 됩니다. 표시 되는 다른 속성 및 메서드는 [Stream Type](../../../ado/reference/ado-api/type-property-ado-stream.md), **open**, [LoadFromFile](../../../ado/reference/ado-api/loadfromfile-method-ado.md)및 [Record open](../../../ado/reference/ado-api/open-method-ado-record.md)을 포함 합니다.  

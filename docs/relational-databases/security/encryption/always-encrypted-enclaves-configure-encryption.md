@@ -1,4 +1,5 @@
 ---
+description: 보안 Enclave를 사용한 Always Encrypted를 사용하여 바로 열 암호화 구성
 title: 보안 Enclave를 사용한 Always Encrypted를 사용하여 바로 열 암호화 구성 | Microsoft Docs
 ms.custom: ''
 ms.date: 10/10/2019
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: b4f794e66e881ddeb36c724fc583d95a42bce33d
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: 38f421815202b16fe5d7d2570ce5661be5097109
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411459"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490498"
 ---
 # <a name="configure-column-encryption-in-place-using-always-encrypted-with-secure-enclaves"></a>보안 Enclave를 사용한 Always Encrypted를 사용하여 바로 열 암호화 구성 
 [!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]

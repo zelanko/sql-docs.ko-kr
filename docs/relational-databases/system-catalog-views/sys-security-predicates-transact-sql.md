@@ -1,4 +1,5 @@
 ---
+description: sys. security_predicates (Transact-sql)
 title: sys. security_predicates (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -21,12 +22,12 @@ ms.assetid: c7a2f28c-98da-463d-8b8a-8e5619e2c6a6
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 80ca5a060d464562b9b97d2931082af98f3df785
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: c2ba8b6c9c4a2fc2f6b3beb562edfac0728678fe
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395238"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490140"
 ---
 # <a name="syssecurity_predicates-transact-sql"></a>sys. security_predicates (Transact-sql)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -38,10 +39,10 @@ ms.locfileid: "87395238"
 |object_id|**int**|이 조건자를 포함하는 보안 정책의 ID입니다.|  
 |security_predicate_id|**int**|이 보안 정책 내의 조건자 ID입니다.|  
 |target_object_id|**int**|보안 조건자가 바인딩되는 개체의 ID입니다.|  
-|predicate_definition|**nvarchar(max)**|인수를 포함하여 보안 조건자로 사용될 함수의 정규화된 이름입니다. 일관성을 위해 텍스트에 있는 다른 요소뿐만 아니라 `schema.function` 이름도 정규화(즉, 이스케이프)할 수 있습니다. 예:<br /><br /> `[dbo].[fn_securitypredicate]([wing], [startTime], [endTime])`|  
+|predicate_definition|**nvarchar(max)**|인수를 포함하여 보안 조건자로 사용될 함수의 정규화된 이름입니다. 일관성을 위해 텍스트에 있는 다른 요소뿐만 아니라 `schema.function` 이름도 정규화(즉, 이스케이프)할 수 있습니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.<br /><br /> `[dbo].[fn_securitypredicate]([wing], [startTime], [endTime])`|  
 |predicate_type|**int**|보안 정책에서 사용 하는 조건자의 유형입니다.<br /><br /> 0 = 필터 조건자<br /><br /> 1 = 차단 조건자|  
 |predicate_type_desc|**nvarchar(60)**|보안 정책에서 사용 하는 조건자의 유형입니다.<br /><br /> FILTER<br /><br /> 차단|  
-|operation(작업)|**int**|조건자에 대해 지정 된 작업의 유형입니다.<br /><br /> NULL = 적용 가능한 모든 작업<br /><br /> 1 = 삽입 후<br /><br /> 2 = 업데이트 후<br /><br /> 3 = 업데이트 전<br /><br /> 4 = 삭제 전|  
+|operation|**int**|조건자에 대해 지정 된 작업의 유형입니다.<br /><br /> NULL = 적용 가능한 모든 작업<br /><br /> 1 = 삽입 후<br /><br /> 2 = 업데이트 후<br /><br /> 3 = 업데이트 전<br /><br /> 4 = 삭제 전|  
 |operation_desc|**nvarchar(60)**|조건자에 대해 지정 된 작업의 유형입니다.<br /><br /> NULL<br /><br /> 삽입 후<br /><br /> AFTER UPDATE<br /><br /> 업데이트 전<br /><br /> 삭제 전|  
   
 ## <a name="permissions"></a>사용 권한  

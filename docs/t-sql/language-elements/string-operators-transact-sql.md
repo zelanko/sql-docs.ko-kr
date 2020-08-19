@@ -1,4 +1,5 @@
 ---
+description: 문자열 연산자(Transact-SQL)
 title: 문자열 연산자(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ee4e715d-d8f1-4d0e-81b3-04573ec9f13c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fe2fe0e18d480ec6ff094b2436e6368a47744f49
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fe780c6250f5e93292d3e54af66d5f01ebcf6bdf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85706106"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445357"
 ---
 # <a name="string-operators-transact-sql"></a>문자열 연산자(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,11 +40,11 @@ ms.locfileid: "85706106"
   
 [+=(문자열 연결 대입)](../../t-sql/language-elements/string-concatenation-equal-transact-sql.md)  
   
-[%(와일드카드 - 일치하는 문자)](../../t-sql/language-elements/percent-character-wildcard-character-s-to-match-transact-sql.md)  
+[%(와일드카드 - 하나 이상의 문자 일치)](../../t-sql/language-elements/percent-character-wildcard-character-s-to-match-transact-sql.md)  
   
-[&#91; &#93;(와일드카드 - 일치하는 문자)](../../t-sql/language-elements/wildcard-character-s-to-match-transact-sql.md)  
+[&#91 &#93;(와일드카드 - 일치하는 문자)](../../t-sql/language-elements/wildcard-character-s-to-match-transact-sql.md)  
   
 [&#91;^&#93;(와일드카드 - 일치하지 않는 문자)](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)  
   
-[_(와일드카드 - 문자 하나와 일치)](../../t-sql/language-elements/wildcard-match-one-character-transact-sql.md)  
+[_(와일드카드 - 한 문자 일치)](../../t-sql/language-elements/wildcard-match-one-character-transact-sql.md)  
   

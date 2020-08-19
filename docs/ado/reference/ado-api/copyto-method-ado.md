@@ -1,4 +1,5 @@
 ---
+description: CopyTo 메서드(ADO)
 title: CopyTo 메서드 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b4aa5714-916b-48b8-8b09-cc2708379602
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d8b34e47948cbc0742b0b7b0a4f413d56e4086cf
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: fbb9fc1c9d6f2a86a6f047b20962e5513798a26e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760249"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444365"
 ---
 # <a name="copyto-method-ado"></a>CopyTo 메서드(ADO)
 [스트림에](../../../ado/reference/ado-api/stream-object-ado.md) 따라 지정 된 문자 또는 바이트 수를 다른 **스트림** 개체에 복사 합니다. [Type](../../../ado/reference/ado-api/type-property-ado-stream.md)  

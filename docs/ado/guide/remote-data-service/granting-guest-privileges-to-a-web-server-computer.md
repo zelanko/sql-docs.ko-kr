@@ -1,4 +1,5 @@
 ---
+description: 웹 서버 컴퓨터에 게스트 권한 부여
 title: 웹 서버 컴퓨터에 게스트 권한 부여 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e851a22d-01bc-4eb0-bc42-92b8f65d1c63
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a9a2145fdf106814647b4d9cca067c28db72f848
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 9fa62e95920e8a4aece0f7b6833c635cfdbf7b09
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82749585"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452185"
 ---
 # <a name="granting-guest-privileges-to-a-web-server-computer"></a>웹 서버 컴퓨터에 게스트 권한 부여
 익명 웹 서버 계정 (IUSR_*ComputerName*)을 웹 서버 컴퓨터의 게스트 로컬 그룹에 추가 하 여 RDS를 사용 해야 합니다.  

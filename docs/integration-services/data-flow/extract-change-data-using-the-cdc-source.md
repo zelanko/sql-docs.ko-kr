@@ -1,4 +1,5 @@
 ---
+description: CDC 원본을 사용하여 변경 데이터 추출
 title: CDC 원본을 사용하여 변경 데이터 추출 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 604fbafb-15fa-4d11-8487-77d7b626eed8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 56eda2d73e9d60367529e078829900433bd8617e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c6ae5739b4309c9f56d2f67a17573722f141ec5b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86906604"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430885"
 ---
 # <a name="extract-change-data-using-the-cdc-source"></a>CDC 원본을 사용하여 변경 데이터 추출
 

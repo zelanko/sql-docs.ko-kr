@@ -1,4 +1,5 @@
 ---
+description: ActualSize 속성(ADO)
 title: ActualSize 속성 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 722803d0-cef5-4d4c-b79d-3f2f58052229
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fd8288fa9f39593cb1f5fb91818925d36d731b9f
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 53384838d53003f0c4f81ec3b629e987ce2649a8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760689"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451635"
 ---
 # <a name="actualsize-property-ado"></a>ActualSize 속성(ADO)
 필드 값의 실제 길이 (바이트)를 나타냅니다.  

@@ -1,4 +1,5 @@
 ---
+description: RDS 구성
 title: RDS 구성 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5dd48483-858a-48c2-98ce-f2359abe1f59
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f916a78d9a61bcfa7b0896301a46eb3a52874043
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 223822bf6921ce63eb0893fe9db3024c46dfb628
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82750041"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452285"
 ---
 # <a name="configuring-rds"></a>RDS 구성
 > [!IMPORTANT]

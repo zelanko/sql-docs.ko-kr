@@ -1,4 +1,5 @@
 ---
+description: STMPolyFromWKB(geometry 데이터 형식)
 title: STMPolyFromWKB(geometry 데이터 형식) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: cac25868-08ef-46fc-9c3d-a15e43794a7a
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: e551d74df5418ca16c4428531ea1d4beeed6f478
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: dc49ab21f8cb21d3039c020dedc16d95b7301ec5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554968"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445053"
 ---
 # <a name="stmpolyfromwkb-geometry-data-type"></a>STMPolyFromWKB(geometry 데이터 형식)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -54,7 +55,7 @@ STMPolyFromWKB ( 'WKB_multipolygon' , SRID )
   
 ## <a name="remarks"></a>설명  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `STMPolyFromWKB()`를 사용하여 `geometry` 인스턴스를 만듭니다.  
   
 ```  

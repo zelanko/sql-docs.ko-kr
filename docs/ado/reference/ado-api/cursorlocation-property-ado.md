@@ -1,4 +1,5 @@
 ---
+description: CursorLocation 속성(ADO)
 title: CursorLocation 속성 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 39c8d86e-7ee9-4182-be5e-aad5ce952f84
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9aa95b7633d5dfa3a484dd97289c15c5737af986
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 92567057acad1edb0a0571a0057a11a47a3c65d6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242743"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444305"
 ---
 # <a name="cursorlocation-property-ado"></a>CursorLocation 속성(ADO)
 커서 서비스의 위치를 나타냅니다.  

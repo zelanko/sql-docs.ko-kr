@@ -1,4 +1,5 @@
 ---
+description: dm_execution_performance_counters(SSISDB 데이터베이스)
 title: dm_execution_performance_counters(SSISDB 데이터베이스) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 1b38e8e3-c560-4b6e-b60e-bfd7cfcd4fdf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 85c2d413207778f4d0195f86df74b2d834047f6e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: fea0c2df2ec25493e09214289802824ffe5f93ba
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86910174"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430245"
 ---
 # <a name="functions---dm_execution_performance_counters"></a>함수 - dm_execution_performance_counters
 

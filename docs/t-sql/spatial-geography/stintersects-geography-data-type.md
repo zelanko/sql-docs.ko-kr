@@ -1,4 +1,5 @@
 ---
+description: STIntersects(geography 데이터 형식)
 title: STIntersects(geometry 데이터 형식) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ ms.assetid: c9db8b42-83c7-48c6-8963-fce54eb34c05
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7d7987b23c1f941684b7ab8b169c397d51e53eab
-ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
+ms.openlocfilehash: ce978df17e7f0fd904e630fb3e8eaf84db375765
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87523215"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445235"
 ---
 # <a name="stintersects-geography-data-type"></a>STIntersects(geography 데이터 형식)
 [!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -32,24 +33,27 @@ ms.locfileid: "87523215"
   
 ## <a name="syntax"></a>구문  
   
-```  
-  
+```syntaxsql
 .STIntersects ( other_geography )  
 ```  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
   
-## <a name="arguments"></a>인수  
- *other_geography*  
- `STIntersects()`를 호출할 인스턴스와 비교할 다른 **geography** 인스턴스입니다.  
+## <a name="arguments"></a>인수
+
+*other_geography*  
+`STIntersects()`를 호출할 인스턴스와 비교할 다른 **geography** 인스턴스입니다.  
   
-## <a name="return-types"></a>반환 형식  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 반환 형식: **bit**  
+## <a name="return-types"></a>반환 형식
+
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 반환 형식: **bit**  
   
  CLR 반환 형식: **SqlBoolean**  
   
 ## <a name="remarks"></a>설명  
  이 메서드는 **geography** 인스턴스의 SRID(spatial Reference IDs)가 일치하지 않으면 항상 **NULL**을 반환합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `STIntersects()`를 사용하여 두 `geography` 인스턴스가 서로 교차하는지 확인합니다.  
   
 ```  
@@ -67,6 +71,6 @@ ms.locfileid: "87523215"
  ```  
   
 ## <a name="see-also"></a>참고 항목  
- [지리 인스턴스의 OGC 메서드](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
+ [Geography 인스턴스의 OGC 메서드](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

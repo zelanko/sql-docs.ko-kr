@@ -1,4 +1,5 @@
 ---
+description: 데이터 프로파일링 태스크 편집기(일반 페이지)
 title: 데이터 프로파일링 태스크 편집기(일반 페이지) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: eec15906-d757-4079-b2f6-aca4e52b3b4c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8c1d3d2c727deea49e68e9f58e3ad0bf14245899
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 6fb78185693d455428de22021d133a63eb13c543
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919796"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88431015"
 ---
 # <a name="data-profiling-task-editor-general-page"></a>데이터 프로파일링 태스크 편집기(일반 페이지)
 

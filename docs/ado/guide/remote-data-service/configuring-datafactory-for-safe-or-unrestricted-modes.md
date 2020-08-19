@@ -1,4 +1,5 @@
 ---
+description: 안전 또는 무제한 모드에 대한 DataFactory 구성
 title: 안전 또는 무제한 모드에 대 한 DataFactory 구성 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8ff24805-dc7a-42ae-b600-5bad0e3f51b8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cff72ed7c02cb4f0e9dc2a719ee7e82b55e44408
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: a0b01eada84095b94740319a6d63ed6b0066425d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82750076"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452305"
 ---
 # <a name="configuring-datafactory-for-safe-or-unrestricted-modes"></a>안전 또는 무제한 모드에 대한 DataFactory 구성
 > [!IMPORTANT]
@@ -29,7 +30,7 @@ ms.locfileid: "82750076"
   
 2.  기본 처리기 msdfmap. 처리기가 등록 되 고, 안전 처리기 목록에 표시 되며, 기본 처리기로 표시 됩니다.  
   
-3.  Msdfmap .ini 파일이 Windows 디렉터리에 설치 되어 있습니다. 3 계층 모드로 RDS를 사용 하기 전에 필요에 따라이 파일을 구성 해야 합니다.  
+3.  Msdfmap.ini 파일이 Windows 디렉터리에 설치 되어 있습니다. 3 계층 모드로 RDS를 사용 하기 전에 필요에 따라이 파일을 구성 해야 합니다.  
   
  필요에 따라 제한 없는 **DataFactory** 설치를 구성할 수 있습니다. **DataFactory** 은 사용자 지정 처리기 없이 직접 사용할 수 있습니다. 사용자는 연결 문자열을 수정 하 여 사용자 지정 처리기를 계속 사용할 수 있지만 반드시 필요한 것은 아닙니다. **DataFactory** 개체 사용의 의미에 대 한 자세한 내용은 [RDS 응용 프로그램 보안](../../../ado/guide/remote-data-service/securing-rds-applications.md)을 참조 하세요.  
   

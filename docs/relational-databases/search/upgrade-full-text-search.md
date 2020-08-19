@@ -1,4 +1,5 @@
 ---
+description: 전체 텍스트 검색 업그레이드
 title: 전체 텍스트 검색 업그레이드 | Microsoft 문서
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,12 +17,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 841c5bd53f2498a6e057495e3953744784beb211
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 763184ba374d004001b33357591a89668c3dd0a2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85629037"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490596"
 ---
 # <a name="upgrade-full-text-search"></a>전체 텍스트 검색 업그레이드
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -123,7 +124,7 @@ ms.locfileid: "85629037"
   
 -   [!INCLUDE[tsql](../../includes/tsql-md.md)]: [sp\_fulltext\_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)의 **upgrade\_option** 동작을 사용합니다.  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **:** **서버 속성** 대화 상자의 **전체 텍스트 업그레이드 옵션**을 사용합니다. 자세한 내용은 [서버 인스턴스의 전체 텍스트 검색 관리 및 모니터링](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md)을 참조하세요.  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **:****서버 속성** 대화 상자의 **전체 텍스트 업그레이드 옵션** 을 사용합니다. 자세한 내용은 [서버 인스턴스의 전체 텍스트 검색 관리 및 모니터링](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md)을 참조하세요.  
   
 ##  <a name="considerations-for-restoring-a-ssversion2005-full-text-catalog-to-sscurrent"></a><a name="Considerations_for_Restore"></a>[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 전체 텍스트 카탈로그를 다음으로 복원 시 고려 사항: [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 데이터베이스의 전체 텍스트 데이터를 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 로 업그레이드하는 방법 중 하나는 전체 데이터베이스 백업을 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로 복원하는 것입니다.  

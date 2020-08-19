@@ -1,4 +1,5 @@
 ---
+description: ConnectOptionEnum
 title: ConnectOptionEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bff07eeb-dee3-4e4e-9b2d-d56061ea744d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fa372f05a80290e907298a0969d9eb9f14355f90
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 71142aac94003987267a6d4a6b30d2c9d17c1bfd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762604"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444425"
 ---
 # <a name="connectoptionenum"></a>ConnectOptionEnum
 [연결 개체](../../../ado/reference/ado-api/connection-object-ado.md) 의 [Open](../../../ado/reference/ado-api/open-method-ado-connection.md) 메서드가 연결이 설정 된 후 (동기적) 또는 before (비동기적으로) 반환 되어야 하는지 여부를 지정 합니다.  

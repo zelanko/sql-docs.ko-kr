@@ -1,4 +1,5 @@
 ---
+description: 데이터 스트리밍 대상
 title: 데이터 스트리밍 대상 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 640e6a19-49ae-4ee8-ac07-008370158f0e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3dd1ae26ab126e87a8f239597a573d24dbc8b3e1
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 34f4ba8e001f43d4c29379dac0de36b595163679
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916779"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430905"
 ---
 # <a name="data-streaming-destination"></a>데이터 스트리밍 대상
 
@@ -50,19 +51,19 @@ SELECT * FROM OPENQUERY([Default Linked Server for Integration Services], N'Fold
 3.  SQL Server Management Studio에서 SQL 뷰를 실행하고 SSIS 패키지의 결과를 검토합니다. 이 뷰는 사용자가 만든 연결 서버를 통해 SSIS용 OLE DB 공급자에게 쿼리를 전송합니다. SSIS용 OLE DB 공급자는 쿼리에 지정된 패키지를 실행하고 탭 형식의 결과 집합을 반환합니다.  
   
 > [!IMPORTANT]  
->  자세한 단계에 대해서는 [연습: SSIS 패키지를 SQL 뷰로 게시](../../integration-services/data-flow/walkthrough-publish-an-ssis-package-as-a-sql-view.md)를 참조하세요.  
+>  자세한 단계는 [연습: SSIS 패키지를 SQL 뷰로 게시](../../integration-services/data-flow/walkthrough-publish-an-ssis-package-as-a-sql-view.md)를 참조하세요.  
 
 ## <a name="configure-data-streaming-destination"></a>데이터 스트리밍 대상 구성
   **고급 데이터 스트리밍 대상 편집기** 대화 상자를 사용하여 데이터 스트리밍 대상을 구성합니다. 구성 요소를 두 번 클릭하거나 데이터 흐름 디자이너에서 구성 요소를 마우스 오른쪽 단추로 클릭하고 **편집**을 클릭하여 이 대화 상자를 엽니다.  
   
- 이 대화 상자에는 **구성 요소 속성**, **입력 열**, **입력 및 출력 속성**, 이렇게 3개 탭이 있습니다.  
+ 이 대화 상자에는 **구성 요소 속성**, **입력 열**, **입력 및 출력 속성**의 3개 탭이 있습니다.  
   
 ## <a name="component-properties-tab"></a>구성 요소 속성 탭  
  이 탭에는 다음과 같은 편집 가능 필드가 있습니다.  
   
 |필드|Description|  
 |-----------|-----------------|  
-|속성|패키지에 포함된 데이터 스트리밍 대상 구성 요소의 이름입니다.|  
+|Name|패키지에 포함된 데이터 스트리밍 대상 구성 요소의 이름입니다.|  
 |ValidateExternalMetadata|디자인 타임에 외부 데이터 원본을 사용하여 구성 요소의 유효성을 검사하는지 여부를 나타냅니다. false로 설정하면 외부 데이터 원본에 대한 유효성 검사가 런타임까지 연기됩니다.|  
 |IDColumnName|데이터 피드 게시 마법사가 생성한 뷰에는 이 추가 ID 열이 있습니다. 다른 애플리케이션이 데이터를 OData 피드로 사용할 때 ID 열은 데이터 흐름의 출력 데이터에 대한 EntityKey로 사용됩니다.<br /><br /> 이 열의 기본값은 _ID입니다. ID 열에 대해 다른 이름을 지정할 수 있습니다.|  
   

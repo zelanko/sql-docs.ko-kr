@@ -1,4 +1,5 @@
 ---
+description: 개체에서 RDS 프로그래밍 모델
 title: 개체를 사용 하는 RDS 프로그래밍 모델 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 07ce0ef0-72f1-48f4-823d-1b65d28c0926
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5f41fd577b470493aa6a53c8ea9ad760287a3507
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 2230a4082f79ea386dd02c7530e3af29c57f1b69
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82747751"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452115"
 ---
 # <a name="rds-programming-model-with-objects"></a>개체에서 RDS 프로그래밍 모델
 RDS의 목표는 IIS와 같은 중개자를 통해 데이터 원본에 액세스 하 고 업데이트 하는 것입니다. 프로그래밍 모델은이 목표를 달성 하는 데 필요한 활동의 시퀀스를 지정 합니다. 개체 모델은 메서드 및 속성이 프로그래밍 모델에 영향을 주는 개체를 지정 합니다.  

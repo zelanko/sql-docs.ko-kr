@@ -1,4 +1,5 @@
 ---
+description: sys.dm_external_script_execution_stats
 title: sys. dm_external_script_execution_stats | Microsoft Docs
 ms.custom: ''
 ms.date: 06/25/2020
@@ -20,12 +21,12 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 4bdf4215b01df0f9011123eb42232bba594554ed
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 9c8244de0efc2bdd3dc506e5e1ebcddcd4843dea
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180104"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489926"
 ---
 # <a name="sysdm_external_script_execution_stats"></a>sys.dm_external_script_execution_stats
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -74,7 +75,7 @@ R은 임의의 스크립트를 지원 하 고, R 커뮤니티는 각각 고유�
 
 이러한 함수는 기능이 설치될 때 등록되며 등록된 함수는 추가하거나 삭제할 수 없습니다.
 
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="viewing-the-number-of-r-scripts-run-on-the-server"></a>서버에서 실행되는 R 스크립트 수 보기
 

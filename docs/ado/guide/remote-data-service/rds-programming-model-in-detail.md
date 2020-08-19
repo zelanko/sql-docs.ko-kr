@@ -1,4 +1,5 @@
 ---
+description: RDS 프로그래밍 모델 세부 정보
 title: RDS 프로그래밍 모델 세부 정보 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3e57af8d-519b-4467-a0bd-af468534cefd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6bf59580985a4c46fa163a00423bb7dd90ad9463
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: ad3cd950c958fce95c0264533040fbe9e1df634b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82747753"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452125"
 ---
 # <a name="rds-programming-model-in-detail"></a>RDS 프로그래밍 모델 세부 정보
 다음은 RDS 프로그래밍 모델의 주요 요소입니다.  
@@ -54,13 +55,13 @@ ms.locfileid: "82747753"
  서버 프로그램을 *비즈니스 개체*라고도 합니다. 복잡 한 데이터 액세스, 유효성 검사 등을 수행할 수 있는 고유한 사용자 지정 비즈니스 개체를 작성할 수 있습니다. 사용자 지정 비즈니스 개체를 작성 하는 경우에도 **RDSServer** 개체의 인스턴스를 만들고 해당 메서드 중 일부를 사용 하 여 고유한 작업을 수행할 수 있습니다.  
   
 ## <a name="rdsdatacontrol"></a>RDS. DataControl  
- RDS는 Rds의 기능을 결합 하는 수단을 제공 합니다 **. **RDSServer 및 **DataFactory**를 사용 하 여 시각적 컨트롤에서 데이터 원본의 쿼리에 의해 반환 되는 **레코드 집합** 개체를 쉽게 사용 하도록 할 수도 있습니다. RDS는 가장 일반적인 경우에서 서버에 대 한 정보에 대 한 액세스를 자동으로 얻고 시각적 컨트롤에 표시 하는 데 최대한 많은 작업을 시도 합니다.  
+ RDS는 Rds의 기능을 결합 하는 수단을 제공 합니다 **. ** RDSServer 및 **DataFactory**를 사용 하 여 시각적 컨트롤에서 데이터 원본의 쿼리에 의해 반환 되는 **레코드 집합** 개체를 쉽게 사용 하도록 할 수도 있습니다. RDS는 가장 일반적인 경우에서 서버에 대 한 정보에 대 한 액세스를 자동으로 얻고 시각적 컨트롤에 표시 하는 데 최대한 많은 작업을 시도 합니다.  
   
  RDS 개체 모델은 Rds를 사용 하 여이 기능을 구현 합니다 [. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) 개체입니다.  
   
- **RDS. DataControl** 에는 두 가지 측면이 있습니다. 데이터 소스와 관련 된 한 가지 측면이 있습니다. RDS의 **연결** 및 **SQL** 속성을 사용 하 여 명령 및 연결 정보를 설정 하는 경우 ** **즉, RDS가 자동으로 사용 됩니다 **. **기본 **RDSServer DataFactory** 개체에 대 한 참조를 만들기 위한 공간을 만듭니다. 그런 다음 **RDSServer DataFactory** 는 **connect** 속성 값을 사용 하 여 데이터 원본에 연결 하 고, **SQL** 속성 값을 사용 하 여 데이터 원본에서 **레코드 집합** 을 가져오고, **레코드 집합** 개체를 RDS로 반환 합니다. ** DataControl**.  
+ **RDS. DataControl** 에는 두 가지 측면이 있습니다. 데이터 소스와 관련 된 한 가지 측면이 있습니다. RDS의 **연결** 및 **SQL** 속성을 사용 하 여 명령 및 연결 정보를 설정 하는 경우 ** **즉, RDS가 자동으로 사용 됩니다 **. ** 기본 **RDSServer DataFactory** 개체에 대 한 참조를 만들기 위한 공간을 만듭니다. 그런 다음 **RDSServer DataFactory** 는 **connect** 속성 값을 사용 하 여 데이터 원본에 연결 하 고, **SQL** 속성 값을 사용 하 여 데이터 원본에서 **레코드 집합** 을 가져오고, **레코드 집합** 개체를 RDS로 반환 합니다. ** DataControl**.  
   
- 두 번째 측면은 시각적 컨트롤에서 반환 된 **레코드 집합** 정보를 표시 하는 것과 관련이 있습니다. 시각적 컨트롤을 RDS와 연결할 수 있습니다 **. **Microsoft® Internet Explorer의 웹 페이지에 쿼리 결과를 표시 하 고 연결 된 **레코드 집합** 개체의 정보에 대 한 액세스 권한을 얻을 수 있습니다. 각 **RDS. DataControl** 개체는 단일 쿼리의 결과를 나타내는 하나의 **레코드 집합** 개체를 하나 이상의 시각적 컨트롤 (예: 텍스트 상자, 콤보 상자, 그리드 컨트롤 등)에 바인딩합니다. 둘 이상의 RDS가 있을 수 있습니다 **. **각 페이지의 DataControl 개체입니다. 각 **RDS. DataControl** 개체는 다른 데이터 원본에 연결 하 고 별도의 쿼리 결과를 포함할 수 있습니다.  
+ 두 번째 측면은 시각적 컨트롤에서 반환 된 **레코드 집합** 정보를 표시 하는 것과 관련이 있습니다. 시각적 컨트롤을 RDS와 연결할 수 있습니다 **. ** Microsoft® Internet Explorer의 웹 페이지에 쿼리 결과를 표시 하 고 연결 된 **레코드 집합** 개체의 정보에 대 한 액세스 권한을 얻을 수 있습니다. 각 **RDS. DataControl** 개체는 단일 쿼리의 결과를 나타내는 하나의 **레코드 집합** 개체를 하나 이상의 시각적 컨트롤 (예: 텍스트 상자, 콤보 상자, 그리드 컨트롤 등)에 바인딩합니다. 둘 이상의 RDS가 있을 수 있습니다 **. ** 각 페이지의 DataControl 개체입니다. 각 **RDS. DataControl** 개체는 다른 데이터 원본에 연결 하 고 별도의 쿼리 결과를 포함할 수 있습니다.  
   
  **RDS. 또한 DataControl** 개체에는 연결 된 **레코드 집합** 개체의 행을 탐색, 정렬 및 필터링 하는 고유한 메서드도 있습니다. 이러한 메서드는 비슷하지만 ADO **레코드 집합** 개체의 메서드와는 다릅니다.  
   

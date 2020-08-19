@@ -1,4 +1,5 @@
 ---
+description: sys. pdw_nodes_pdw_physical_databases (Transact-sql)
 title: sys. pdw_nodes_pdw_physical_databases (Transact-sql)
 ms.custom: seo-dt-2019
 ms.date: 03/09/2017
@@ -12,12 +13,12 @@ ms.assetid: 70e0939d-4d97-4ae0-ba16-934e0a80e718
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 64d74d28c4b99e75c114effdf651a58d01a614d6
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 41c43a39c85c05dcb0155c90fea74c5899445527
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394048"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475375"
 ---
 # <a name="syspdw_nodes_pdw_physical_databases-transact-sql"></a>sys. pdw_nodes_pdw_physical_databases (Transact-sql)
 [!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]

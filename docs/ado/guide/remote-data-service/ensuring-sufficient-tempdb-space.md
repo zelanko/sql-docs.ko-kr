@@ -1,4 +1,5 @@
 ---
+description: 충분한 TempDB 공간 확인
 title: TempDB 공간이 충분 한지 확인 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 09130db1-6248-4234-a1e5-a9c8e1622c06
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a783c6b6cecbd1fb4139d0ffd3af1a960347f968
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: a84bec7cbd7a79fadf4ea5b11d486e7daf6aa9ab
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82749581"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452195"
 ---
 # <a name="ensuring-sufficient-tempdb-space"></a>충분한 TempDB 공간 확인
 Microsoft SQL Server 6.5에서 처리 공간이 필요한 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체를 처리 하는 동안 오류가 발생 하는 경우 TempDB의 크기를 늘려야 할 수 있습니다. 일부 쿼리에는 임시 처리 공간이 필요 합니다. 예를 들어 ORDER BY 절을 사용 하는 쿼리에는 약간의 임시 공간이 필요한 **레코드 집합**정렬이 필요 합니다.  

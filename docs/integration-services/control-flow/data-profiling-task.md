@@ -1,4 +1,5 @@
 ---
+description: 데이터 프로파일링 태스크
 title: 데이터 프로파일링 태스크 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 248ce233-4342-42c5-bf26-f4387ea152cf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e8076ccc258b7de7075bafc9f0a0f5c9bed6d6a0
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 60e136951deb8701893ea3d611597e8388909816
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914829"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430995"
 ---
 # <a name="data-profiling-task"></a>데이터 프로파일링 태스크
 

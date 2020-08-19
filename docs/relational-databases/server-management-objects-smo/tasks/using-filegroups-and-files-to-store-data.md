@@ -1,4 +1,5 @@
 ---
+description: 파일 그룹 및 파일을 사용하여 데이터 저장
 title: 파일 그룹 및 파일을 사용 하 여 데이터 저장 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
@@ -17,11 +18,12 @@ ms.assetid: 7e2327ce-e1a6-4904-83d1-0944b24a7b43
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 68c07b3135009ba9cbbf124e1573932812f571ab
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: b71e0797fceee89dafc2bca1811e83a536d43d49
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008952"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490400"
 ---
 # <a name="using-filegroups-and-files-to-store-data"></a>파일 그룹 및 파일을 사용하여 데이터 저장
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -30,7 +32,7 @@ ms.locfileid: "86008952"
   
  자동으로 생성된 모든 데이터베이스에는 "Primary"라는 파일 그룹과 데이터베이스와 같은 이름의 데이터 파일이 있습니다. 추가 파일과 그룹을 컬렉션에 추가할 수 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 코드 예제를 사용하려면 애플리케이션을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 [Visual Studio .net에서 Visual C&#35; SMO 프로젝트 만들기](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)를 참조 하세요.  
   
 ## <a name="adding-filegroups-and-datafiles-to-a-database-in-visual-basic"></a>Visual Basic에서 데이터베이스에 파일 그룹 및 데이터 파일 추가  

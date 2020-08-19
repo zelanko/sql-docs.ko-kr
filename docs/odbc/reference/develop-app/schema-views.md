@@ -1,4 +1,5 @@
 ---
+description: 스키마 보기
 title: 스키마 뷰 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f1dfb3e8-a7bd-46c3-92b6-c19531e8409d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a1a9e421c4835d35e3c4f3c644e69b8c7601e8e4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 34e1b52b5e96b5fedb964e53f14a7b554d12aa05
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304254"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429075"
 ---
 # <a name="schema-views"></a>스키마 보기
 응용 프로그램은 ODBC 카탈로그 함수를 호출 하거나 INFORMATION_SCHEMA 뷰를 사용 하 여 DBMS에서 메타 데이터 정보를 검색할 수 있습니다. 뷰는 ANSI SQL-92 표준에 의해 정의 됩니다.  

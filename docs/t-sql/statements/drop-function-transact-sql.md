@@ -1,4 +1,5 @@
 ---
+description: DROP FUNCTION(Transact-SQL)
 title: DROP FUNCTION(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/11/2020
@@ -22,12 +23,12 @@ ms.assetid: ee5ad283-9e44-4109-902f-0ce12669ee11
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3d0f955bbb373c48f55b9769485354050c2c86a3
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 4dfb731f2ce4bd0ed1beeea64aacf071267a7efb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396754"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444646"
 ---
 # <a name="drop-function-transact-sql"></a>DROP FUNCTION(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -55,6 +56,8 @@ DROP FUNCTION [IF EXISTS] [ schema_name. ] function_name
 ```  
    
   
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="arguments"></a>인수
  *IF EXISTS*    
  이미 있는 경우에만 함수를 조건적으로 삭제합니다. [!INCLUDE[ssnoversion_md](../../includes/ssnoversion-md.md)] 2016과 [!INCLUDE[sssds_md](../../includes/sssds-md.md)]부터 사용할 수 있습니다.
@@ -73,10 +76,10 @@ DROP FUNCTION [IF EXISTS] [ schema_name. ] function_name
 ## <a name="permissions"></a>사용 권한  
  DROP FUNCTION을 실행하려면 사용자에게 최소한 해당 함수가 속한 스키마에 대한 ALTER 권한이나 해당 함수에 대한 CONTROL 권한이 있어야 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-dropping-a-function"></a>A. 함수 삭제  
- 다음 예에서는 `fn_SalesByStore`예제 데이터베이스의 `Sales` 스키마에서 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 사용자 정의 함수를 삭제합니다. 이 함수를 만들려면의 [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md)에서 예제 B를 참조 하십시오.  
+ 다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]예제 데이터베이스의 `Sales` 스키마에서 `fn_SalesByStore` 사용자 정의 함수를 삭제합니다. 이 함수를 만들려면의 [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md)에서 예제 B를 참조 하십시오.  
   
 ```  
 DROP FUNCTION Sales.fn_SalesByStore;  

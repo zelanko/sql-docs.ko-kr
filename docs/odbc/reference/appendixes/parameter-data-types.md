@@ -1,4 +1,5 @@
 ---
+description: 매개 변수 데이터 형식
 title: 매개 변수 데이터 형식 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ ms.assetid: fd7e99d8-d26a-408c-9733-6ffccde99f75
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: ''
-ms.openlocfilehash: f29bb70937df32e03480c13c7ef739eb273f15eb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0114f0cff269d35ddf1e93c653c46bcc8d863a29
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303584"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483246"
 ---
 # <a name="parameter-data-types"></a>매개 변수 데이터 형식
 **SQLBindParameter** 로 지정 된 각 매개 변수는 sql 데이터 형식을 사용 하 여 정의 되더라도 sql 문의 매개 변수에는 내장 데이터 형식이 없습니다. 따라서 매개 변수 표식은 문의 다른 피연산자에서 해당 데이터 형식을 유추할 수 있는 경우에만 SQL 문에 포함할 수 있습니다. 예를 들어?와 같은 산술 식에서 + COLUMN1, 매개 변수의 데이터 형식은 COLUMN1으로 표시 되는 명명 된 열의 데이터 형식에서 유추할 수 있습니다. 응용 프로그램은 데이터 형식을 확인할 수 없는 경우 매개 변수 표식을 사용할 수 없습니다.  
