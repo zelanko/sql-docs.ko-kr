@@ -1,4 +1,5 @@
 ---
+description: ALTER SERVICE(Transact-SQL)
 title: ALTER SERVICE(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 2b4608f7-bb2e-4246-aa29-b52c55995b3a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ed739b0994f6637729c2edf6a2f2da26097fbe44
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+ms.openlocfilehash: 8a99076d994a9866c9b6a0d0b6b434dcf30a04d2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86380966"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426795"
 ---
 # <a name="alter-service-transact-sql"></a>ALTER SERVICE(Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -54,7 +55,7 @@ ALTER SERVICE service_name
  *service_name*  
  변경할 서비스의 이름입니다. 서버, 데이터베이스 및 스키마 이름은 지정될 수 없습니다.  
   
- ON QUEUE [ _schema_name_ **.** ] *queue_name*  
+ ON QUEUE [ _schema_name_**.** ] *queue_name*  
  이 서비스의 새 큐를 지정합니다. [!INCLUDE[ssSB](../../includes/sssb-md.md)]는 이 서비스에 대한 모든 메시지를 현재 큐에서 새 큐로 이동합니다.  
   
  ADD CONTRACT *contract_name*  
@@ -71,7 +72,7 @@ ALTER SERVICE service_name
 ## <a name="permissions"></a>사용 권한  
  서비스 변경 권한은 기본적으로 서비스 소유자, **db_ddladmin** 또는 **db_owner** 고정 데이터베이스 역할의 멤버 및 **sysadmin** 고정 서버 역할의 멤버로 설정됩니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-changing-the-queue-for-a-service"></a>A. 서비스 큐 변경  
  다음 예에서는 `//Adventure-Works.com/Expenses` 큐를 사용하도록 `NewQueue` 서비스를 변경합니다.  

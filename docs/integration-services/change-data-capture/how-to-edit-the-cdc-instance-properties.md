@@ -1,4 +1,5 @@
 ---
+description: CDC 인스턴스 속성을 편집하는 방법
 title: CDC 인스턴스 속성을 편집하는 방법 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 7a6c719a-3735-43b7-b3ab-dfadd325eca2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f5ed2069a61efae1f108828c114420c9600a0b68
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ee2861b40dbe132e7c95b52802bd10ccd46c20c1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921563"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426095"
 ---
 # <a name="how-to-edit-the-cdc-instance-properties"></a>CDC 인스턴스 속성을 편집하는 방법
 

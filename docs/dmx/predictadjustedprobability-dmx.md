@@ -1,4 +1,5 @@
 ---
+description: PredictAdjustedProbability(DMX)
 title: PredictAdjustedProbability (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 735df047307f78c238fbf29669f0e0b1e0933e37
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: e923e96aec1f001818f5dcff300de0d13af2f5a5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86971569"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426185"
 ---
 # <a name="predictadjustedprobability-dmx"></a>PredictAdjustedProbability(DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -40,7 +41,7 @@ PredictAdjustedProbability(<scalar column reference>, [<predicted state>])
   
  **PredictAdjustedProbability** 함수는 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] [!INCLUDE[msCoName](../includes/msconame-md.md)] 데이터 마이닝 사양의 OLE DB에 대 한 확장입니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 자연 예측 조인을 사용하여 TM Decision Tree 마이닝 모델을 기반으로 개별 고객이 자전거를 구입할 가능성이 있는지 여부를 확인하고 예측의 조정된 확률도 확인합니다.  
   
 ```  

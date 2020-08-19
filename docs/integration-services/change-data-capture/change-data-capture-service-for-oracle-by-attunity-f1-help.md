@@ -1,4 +1,5 @@
 ---
+description: Attunity Oracle CDC Service F1 도움말
 title: Attunity Oracle CDC Service F1 도움말 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/20/2017
@@ -10,12 +11,12 @@ ms.topic: reference
 ms.assetid: 0617fca6-1bc1-4ad2-9986-fab94ea0a6f0
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 92a393f944729270239e1470f3cb9972bca21c55
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f7ad3930220a4f88c3d3386c763c4e418e6cc2d0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918668"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426115"
 ---
 # <a name="change-data-capture-service-for-oracle-by-attunity-f1-help"></a>Attunity Oracle CDC Service F1 도움말
 
@@ -28,13 +29,13 @@ ms.locfileid: "86918668"
   
 ## <a name="in-this-section"></a>섹션 내용  
   
--   [SQL Server에 연결](../../integration-services/change-data-capture/connection-to-sql-server.md)  
+-   [SQL 서버에 연결](../../integration-services/change-data-capture/connection-to-sql-server.md)  
   
 -   [삭제를 위해 SQL Server에 연결](../../integration-services/change-data-capture/connection-to-sql-server-for-delete.md)  
   
 -   [Oracle CDC Service 만들기 및 편집](../../integration-services/change-data-capture/create-and-edit-an-oracle-cdc-service.md)  
   
--   [Oracle CDC Service 관리](../../integration-services/change-data-capture/manage-an-oracle-cdc-service.md)  
+-   [Manage an Oracle CDC Service](../../integration-services/change-data-capture/manage-an-oracle-cdc-service.md)  
   
 -   [CDC를 위한 SQL Server 준비](../../integration-services/change-data-capture/prepare-sql-server-for-cdc.md)  
   

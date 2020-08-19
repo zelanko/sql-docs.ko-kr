@@ -1,4 +1,5 @@
 ---
+description: 열 패턴 프로필 요청 옵션(데이터 프로파일링 태스크)
 title: 열 패턴 프로필 요청 옵션(데이터 프로파일링 태스크) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9ccb8fc5-f65e-41a2-9511-7fa55586eb8b
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0119d52241741d318f4fd6aba17467144d3e9fb0
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 85beabd085481a48d6681bbaf2d2d381a1d0df93
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915797"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425975"
 ---
 # <a name="column-pattern-profile-request-options-data-profiling-task"></a>열 패턴 프로필 요청 옵션(데이터 프로파일링 태스크)
 
@@ -49,10 +50,10 @@ ms.locfileid: "86915797"
   
 |태그|용어|  
 |---------|----------|  
-|Direction|East|  
-|Direction|West|  
-|Direction|North|  
-|Direction|South|  
+|방향|East|  
+|방향|West|  
+|방향|North|  
+|방향|South|  
   
  다른 태그를 사용하여 주소에서 "번지"의 개념을 나타내는 다른 단어를 그룹화할 수 있습니다.  
   
@@ -126,7 +127,7 @@ ms.locfileid: "86915797"
  **CaseSensitive**  
  패턴에서 대/소문자를 구분할지 여부를 나타냅니다. 이 옵션의 기본값은 **False**입니다.  
   
- **Delimiters**  
+ **구분 기호**  
  텍스트를 토큰화할 때 단어 간 공백과 동일하게 처리할 문자를 나열합니다. 기본적으로 **Delimiters** 목록에는 공백 문자, 가로 탭 문자(\t), 줄 바꿈 문자(\n) 및 캐리지 리턴 문자(\r)가 포함됩니다. 추가 구분 기호를 지정할 수 있지만 기본 구분 기호는 제거할 수 없습니다.  
   
  자세한 내용은 이 항목의 앞부분에 나오는 "구분 기호 및 기호 사용 이해"를 참조하십시오.  
@@ -146,7 +147,7 @@ ms.locfileid: "86915797"
   
  자세한 내용은 이 항목의 앞부분에 나오는 "태그 테이블 사용 이해"를 참조하십시오.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [데이터 프로파일링 태스크 편집기&#40;일반 페이지&#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
  [단일 테이블 빠른 프로필 형식&#40;데이터 프로파일링 태스크&#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
   

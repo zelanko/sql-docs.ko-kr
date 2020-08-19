@@ -1,4 +1,5 @@
 ---
+description: Manage an Oracle CDC Service
 title: Oracle CDC Service 관리 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 5972cee3-b1a9-4c56-aed6-bdddf84af283
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 82c3d3d2cdac0bb13eb1fd740da96bd7a7f7589a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: aea4d1beb0a77e6bc7a0456c3f3437c919698bcd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922509"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426075"
 ---
 # <a name="manage-an-oracle-cdc-service"></a>Manage an Oracle CDC Service
 
@@ -61,7 +62,7 @@ ms.locfileid: "86922509"
   
  속성을 편집할 CDC Service를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택할 수도 있습니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [로컬 CDC Service를 관리하는 방법](../../integration-services/change-data-capture/how-to-manage-a-local-cdc-service.md)  
   
   

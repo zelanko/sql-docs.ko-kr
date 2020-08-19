@@ -1,4 +1,5 @@
 ---
+description: PredictSequence(DMX)
 title: PredictSequence (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: acb1982e61e622b150ee79af08e36ddcf24048ba
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 31f99205f3e23db23c5c2a38750f75212763e8de
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970751"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426105"
 ---
 # <a name="predictsequence-dmx"></a>PredictSequence(DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -30,7 +31,7 @@ PredictSequence(\<table column reference, n-start, n-end>)
 ```  
   
 ## <a name="return-type"></a>반환 형식  
- \<table expression>.  
+ \<table expression>  
   
 ## <a name="remarks"></a>설명  
  *N* 매개 변수를 지정 하면 다음 값이 반환 됩니다.  
@@ -39,7 +40,7 @@ PredictSequence(\<table column reference, n-start, n-end>)
   
 -   *N-시작* 및 *n 끝* 이 모두 지정 된 경우 *n-시작* 에서 *n-end*까지의 시퀀스 값입니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 Sequence Clustering 마이닝 모델을 기반으로 하는 [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] 데이터베이스에서 고객이 구매할 가능성이 가장 높은 다섯 개의 제품 시퀀스를 반환합니다.  
   
 ```  

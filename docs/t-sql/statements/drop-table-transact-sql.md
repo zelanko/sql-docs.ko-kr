@@ -1,4 +1,5 @@
 ---
+description: DROP TABLE(Transact-SQL)
 title: DROP TABLE(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/12/2017
@@ -37,12 +38,12 @@ ms.assetid: 0b6f2b6f-3aa3-4767-943f-43df3c3c5cfd
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0e0c7cc3432a18ad0203816523dc02cba6b56788
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: c8153dcaf2935163bd8991a9a2086f6d3e39a0c3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485454"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426585"
 ---
 # <a name="drop-table-transact-sql"></a>DROP TABLE(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -105,27 +106,27 @@ DROP TABLE { database_name.schema_name.table_name | schema_name.table_name | tab
 ## <a name="permissions"></a>사용 권한  
  테이블이 속한 스키마에 대한 ALTER 권한, 테이블에 대한 CONTROL 권한 또는 **db_ddladmin** 고정 데이터베이스 역할의 멤버 자격이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-dropping-a-table-in-the-current-database"></a>A. 현재 데이터베이스에서 테이블 삭제  
  다음 예에서는 현재 데이터베이스에서 `ProductVendor1` 테이블과 해당 데이터 및 인덱스를 제거합니다.  
   
-```  
+```sql  
 DROP TABLE ProductVendor1 ;  
 ```  
   
 ### <a name="b-dropping-a-table-in-another-database"></a>B. 다른 데이터베이스에서 테이블 삭제  
- 다음 예에서는 `SalesPerson2` 데이터베이스에서 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 테이블을 삭제합니다. 이 예는 서버 인스턴스의 모든 데이터베이스에서 실행할 수 있습니다.  
+ 다음 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에서 `SalesPerson2` 테이블을 삭제합니다. 이 예는 서버 인스턴스의 모든 데이터베이스에서 실행할 수 있습니다.  
   
-```  
+```sql  
 DROP TABLE AdventureWorks2012.dbo.SalesPerson2 ;  
 ```  
   
 ### <a name="c-dropping-a-temporary-table"></a>C. 임시 테이블 삭제  
- 다음 예에서는 임시 테이블을 만들고 존재 여부를 테스트한 다음 테이블을 삭제하고 다시 존재 여부를 테스트합니다. 이 예에서는 **으로 시작하는 사용 가능한** IF EXISTS[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 구문을 사용하지 않습니다.  
+ 다음 예에서는 임시 테이블을 만들고 존재 여부를 테스트한 다음 테이블을 삭제하고 다시 존재 여부를 테스트합니다. 이 예에서는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]으로 시작하는 사용 가능한 **IF EXISTS** 구문을 사용하지 않습니다.  
   
-```  
-CREATE TABLE #temptable (col1 int);  
+```sql  
+CREATE TABLE #temptable (col1 INT);  
 GO  
 INSERT INTO #temptable  
 VALUES (10);  
@@ -137,7 +138,6 @@ DROP TABLE #temptable;
 GO  
 --Test the drop.  
 SELECT * FROM #temptable;  
-  
 ```  
   
 ### <a name="d-dropping-a-table-using-if-exists"></a>D. IF EXISTS를 사용하여 테이블 삭제  
@@ -146,8 +146,8 @@ SELECT * FROM #temptable;
   
  다음 예에서는 T1이라는 리소스 풀을 만듭니다. 다음으로 두 번째 문이 삭제됩니다. 세 번째 문은 테이블이 이미 삭제되었으므로 아무런 작업도 수행하지 않지만 오류는 발생하지 않습니다.  
   
-```  
-CREATE TABLE T1 (Col1 int);  
+```sql  
+CREATE TABLE T1 (Col1 INT);  
 GO  
 DROP TABLE IF EXISTS T1;  
 GO  

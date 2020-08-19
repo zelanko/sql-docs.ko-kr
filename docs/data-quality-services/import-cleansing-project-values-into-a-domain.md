@@ -1,4 +1,5 @@
 ---
+description: 도메인으로 정리 프로젝트 값 가져오기
 title: 도메인으로 정리 프로젝트 값 가져오기
 ms.date: 03/01/2017
 ms.prod: sql
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: f23e38e2-39e0-42d7-abd5-34d8fcca5d2a
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 8688d5d20f1b5ac600e75327725ab18e9f8dba1b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 06600482f843ecf014b5ec8648bc8079c871be6a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892397"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426355"
 ---
 # <a name="import-cleansing-project-values-into-a-domain"></a>도메인으로 정리 프로젝트 값 가져오기
 
@@ -73,10 +74,10 @@ ms.locfileid: "85892397"
     > [!NOTE]  
     >  **도메인 값** 탭의 값에 대한 작업 방법은 [Change Domain Values](../data-quality-services/change-domain-values.md)을 참조하세요.  
   
-##  <a name="follow-up-after-importing-project-values-into-a-domain"></a><a name="FollowUp"></a>후속 작업: 도메인에 프로젝트 값을 가져온 후  
+##  <a name="follow-up-after-importing-project-values-into-a-domain"></a><a name="FollowUp"></a> 후속 작업: 도메인에 프로젝트 값을 가져온 후  
  정리 프로세스 도중 수집된 데이터 품질 기술 자료를 도메인으로 가져온 후 도메인 및 값에 대해 다른 도메인 관리 태스크를 수행할 수 있습니다. 자세한 내용은 [도메인 관리](../data-quality-services/managing-a-domain.md)를 참조하세요.  
   
-##  <a name="values-that-will-be-imported"></a><a name="Values"></a>가져올 값  
+##  <a name="values-that-will-be-imported"></a><a name="Values"></a> 가져올 값  
  프로젝트에서 도메인으로 가져올 수 있는 값은 다음과 같습니다.  
   
 -   문자열 값만 도메인으로 가져올 수 있습니다.  
@@ -95,7 +96,7 @@ ms.locfileid: "85892397"
   
 -   도메인의 용어 기반 관계의 결과로 만들어진 수정 사항은 올바른 값(오류 아님)으로 추가됩니다.  
   
-##  <a name="values-that-will-not-be-imported"></a><a name="ValuesNot"></a>가져올 수 없는 값  
+##  <a name="values-that-will-not-be-imported"></a><a name="ValuesNot"></a> 가져올 수 없는 값  
  프로젝트에서 도메인으로 가져올 수 없는 값은 다음과 같습니다.  
   
 -   **정리** 작업의 **결과 관리 및 보기** 페이지에서 **제안** 및 **유효하지 않음** 탭의 값은 가져올 수 없습니다.  

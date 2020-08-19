@@ -1,4 +1,5 @@
 ---
+description: 선행 제약 조건
 title: 선행 제약 조건 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: c5ce5435-fd89-4156-a11f-68470a69aa9f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ba2b9f0e9dbf23eea54da531305553db712ad677
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ee2c1ffab719566875a7c9f7f6090a12aef5675f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921208"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425915"
 ---
 # <a name="precedence-constraints"></a>선행 제약 조건
 
@@ -120,7 +121,7 @@ ms.locfileid: "86921208"
  제약 조건 값을 지정합니다. **성공**, **실패** 또는 **완료**와 같은 값을 사용할 수 있습니다.  
   
 > [!NOTE]  
->  선행 제약 조건 줄은 **성공**인 경우 녹색으로 표시되고 **실패**인 경우 강조 표시되고 **완료**인 경우 파란색으로 표시됩니다.  
+>   선행 제약 조건 줄은 **성공**인 경우 녹색으로 표시되고 **실패**인 경우 강조 표시되고 **완료**인 경우 파란색으로 표시됩니다.  
   
  **식**  
  **식**, **식 및 제약 조건**또는 **식 또는 제약 조건**작업을 사용하는 경우 식을 입력하거나 식 작성기를 실행하여 식을 만듭니다. 식은 부울로 계산되어야 합니다.  
@@ -156,7 +157,7 @@ ms.locfileid: "86921208"
     |EvalOp|계산 작업을 선택합니다. **Expression**, **ExpressionAndConstant**또는 **ExpressionOrConstant** 작업을 선택할 경우 식을 지정할 수 있습니다.|  
     |식|계산 작업에 식이 포함된 경우 식을 제공합니다. 식은 부울로 계산되어야 합니다. 식 언어에 대한 자세한 내용은 [Integration Services&#40;SSIS&#41; 식](../../integration-services/expressions/integration-services-ssis-expressions.md)을 참조하세요.|  
     |LogicalAnd|여러 실행 개체가 선행되고 제약 조건이 지정된 실행 개체에 연결된 경우 **LogicalAnd** 를 설정하여 선행 제약 조건이 다른 선행 제약 조건과 함께 계산되는지 여부를 지정합니다.|  
-    |속성|선행 제약 조건의 이름을 업데이트합니다.|  
+    |Name|선행 제약 조건의 이름을 업데이트합니다.|  
     |ShowAnnotation|사용할 주석의 유형을 지정합니다. 주석을 사용하지 않으려면 **Never** 를 선택하고, 요청 시 주석을 사용하려면 **AsNeeded** 를 선택하고, Name 속성의 값을 사용하여 자동으로 주석을 달려면 **ConstraintName** 을 선택합니다. 또한 Description 속성의 값을 사용하여 자동으로 주석을 달려면 **ConstraintDescription** 을 선택하고, Value 및 Expression 속성의 값을 사용하여 자동으로 주석을 달려면 **ConstraintOptions** 를 선택합니다.|  
     |값|EvalOP 속성에 지정된 계산 작업에 제약 조건이 포함된 경우 제약 조건이 지정된 실행 개체의 실행 결과를 선택합니다.|  
   
@@ -217,7 +218,7 @@ ms.locfileid: "86921208"
 |평가 작업|제약 조건 계산 결과|식 계산 결과|제약 조건이 지정된 실행 개체 실행|  
 |--------------------------|-----------------------------|-----------------------------|---------------------------------|  
 |제약 조건|True|해당 없음|True|  
-|제약 조건|False|해당 없음|False|  
+|제약 조건|아니요|해당 없음|아니요|  
 |식|해당 없음|True|True|  
 |식|해당 없음|False|False|  
 |제약 조건 및 식|True|True|True|  

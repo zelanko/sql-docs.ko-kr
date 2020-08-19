@@ -1,4 +1,5 @@
 ---
+description: OData 원본 속성
 title: OData 원본 속성 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 4fde5bb0-6d78-4ec4-8f0b-67f91c53fe99
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: fe4a3c3d1375095a4766186e1b854ea038b54ac9
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: e6af5b248d0d6822b81c070bffc09e1f270abb54
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920802"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425845"
 ---
 # <a name="odata-source-properties"></a>OData 원본 속성
 
@@ -34,5 +35,5 @@ ms.locfileid: "86920802"
 |ResourcePath|컬렉션 이름을 선택하는 대신 전체 리소스 경로를 지정해야 하는 경우 이 속성을 사용합니다. 이 속성은 **UseResourcePath** 가 True인 경우 사용됩니다.|  
 |UseResourcePath|True로 설정되면 OData 피드 위치를 결정하기 위해 **ResourcePath** 값이 기본 URL에 추가됩니다. False로 설정되면 **CollectionName** 값이 사용됩니다.<br /><br /> **기본값:** False|  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목
 [OData 원본](odata-source.md)

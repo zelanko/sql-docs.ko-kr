@@ -1,7 +1,8 @@
 ---
+description: ALTER SERVER ROLE(Transact-SQL)
 title: ALTER SERVER ROLE(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/06/2016
+ms.date: 04/16/2020
 ms.prod: sql
 ms.prod_service: pdw, sql-database
 ms.reviewer: ''
@@ -19,12 +20,12 @@ ms.assetid: 7a4db7bb-c442-4e12-9a8a-114da5bc7710
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2307a80d3a40599aed4762077b188baac0533967
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c79b8ad73bc939354d3b9078c9486531ec8b01ec
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68070268"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426815"
 ---
 # <a name="alter-server-role-transact-sql"></a>ALTER SERVER ROLE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-pdw-md.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "68070268"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server  
   
 ALTER SERVER ROLE server_role_name   
@@ -46,7 +47,7 @@ ALTER SERVER ROLE server_role_name
 } [ ; ]  
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Parallel Data Warehouse  
   
 ALTER SERVER ROLE  server_role_name  ADD MEMBER login;  
@@ -93,12 +94,12 @@ WITH NAME **=** _new_server_role_name_
 > [!NOTE]  
 >  고정 서버 역할과 달리 사용자 정의 서버 역할의 멤버는 기본적으로 동일한 역할에 멤버를 추가할 수 있는 사용 권한이 없습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-changing-the-name-of-a-server-role"></a>A. 서버 역할의 이름 변경  
 다음 예에서는 `Product`라는 서버 역할을 만든 다음 서버 역할 이름을 `Production`으로 변경합니다.  
   
-```  
+```sql
 CREATE SERVER ROLE Product ;  
 ALTER SERVER ROLE Product WITH NAME = Production ;  
 GO  
@@ -107,14 +108,14 @@ GO
 ### <a name="b-adding-a-domain-account-to-a-server-role"></a>B. 서버 역할에 도메인 계정 추가  
 다음 예에서는 `adventure-works\roberto0`이라는 도메인 계정을 `Production`이라는 사용자 정의 서버 역할에 추가합니다.  
   
-```  
+```sql
 ALTER SERVER ROLE Production ADD MEMBER [adventure-works\roberto0] ;  
 ```  
   
 ### <a name="c-adding-a-sql-server-login-to-a-server-role"></a>C. 서버 역할에 SQL Server 로그인 추가  
 다음 예에서는 `Ted`라는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인을 `diskadmin` 고정 서버 역할에 추가합니다.  
   
-```  
+```sql
 ALTER SERVER ROLE diskadmin ADD MEMBER Ted ;  
 GO  
 ```  
@@ -122,14 +123,14 @@ GO
 ### <a name="d-removing-a-domain-account-from-a-server-role"></a>D. 서버 역할에서 도메인 계정 제거  
 다음 예에서는 `adventure-works\roberto0`이라는 도메인 계정을 `Production`이라는 사용자 정의 서버 역할에서 제거합니다.  
   
-```  
+```sql
 ALTER SERVER ROLE Production DROP MEMBER [adventure-works\roberto0] ;  
 ```  
   
 ### <a name="e-removing-a-sql-server-login-from-a-server-role"></a>E. 서버 역할에서 SQL Server 로그인 제거  
 다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 `Ted`를 `diskadmin` 고정 서버 역할에서 제거합니다.  
   
-```  
+```sql
 ALTER SERVER ROLE Production DROP MEMBER Ted ;  
 GO  
 ```  
@@ -137,7 +138,7 @@ GO
 ### <a name="f-granting-a-login-the-permission-to-add-logins-to-a-user-defined-server-role"></a>F. 로그인에 사용 권한을 부여하여 사용자 정의 서버 역할에 로그인 추가  
 다음 예에서는 `Ted`가 `Production` 사용자 정의 서버 역할에 다른 로그인을 추가할 수 있도록 허용합니다.  
   
-```  
+```sql
 GRANT ALTER ON SERVER ROLE::Production TO Ted ;  
 GO  
 ```  
@@ -145,7 +146,7 @@ GO
 ### <a name="g-to-view-role-membership"></a>G. 역할 멤버 자격 보기  
 역할 멤버 자격을 보려면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 **서버 역할(멤버)** 페이지를 사용하거나 다음 쿼리를 실행합니다.  
   
-```  
+```sql
 SELECT SRM.role_principal_id, SP.name AS Role_Name,   
 SRM.member_principal_id, SP2.name  AS Member_Name  
 FROM sys.server_role_members AS SRM  
@@ -161,14 +162,14 @@ ORDER BY  SP.name,  SP2.name
 ### <a name="h-basic-syntax"></a>H. 기본 구문  
 다음 예는 Windows 로그인 `Anna`을 `LargeRC` 서버 역할에 추가합니다.  
   
-```  
+```sql
 ALTER SERVER ROLE LargeRC ADD MEMBER Anna;  
 ```  
   
 ### <a name="i-remove-a-login-from-a-resource-class"></a>9\. 리소스 클래스에서 로그인을 제거합니다.  
 다음 예제에서는 `LargeRC` 서버 역할에서 안나의 멤버 자격을 삭제합니다.  
   
-```  
+```sql
 ALTER SERVER ROLE LargeRC DROP MEMBER Anna;  
 ```  
   

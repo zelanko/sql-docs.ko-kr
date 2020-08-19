@@ -1,4 +1,5 @@
 ---
+description: 스크립트 태스크
 title: 스크립트 태스크 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: f6cce7df-4bd6-4b75-9f89-6c37b4bb5558
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 18ff96f3fd227507d57051cec69f5704b7b64749
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 506b99d81a47df7a88a2ef33ea91815b99e165fb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921160"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425885"
 ---
 # <a name="script-task"></a>스크립트 태스크
 
@@ -130,13 +131,13 @@ ms.locfileid: "86921160"
  VSTA 프로젝트에서 메서드 이름을 변경한 경우 **EntryPoint** 속성의 값을 변경해야 합니다.  
   
  **ReadOnlyVariables**  
- 스크립트에 사용할 수 있는 읽기 전용 변수 목록을 쉼표로 구분하여 입력하거나 줄임표 단추( **...** )를 클릭하고 **변수 선택** 대화 상자에서 변수를 선택합니다.  
+ 스크립트에 사용할 수 있는 읽기 전용 변수 목록을 쉼표로 구분하여 입력하거나 줄임표 단추(**...**)를 클릭하고 **변수 선택** 대화 상자에서 변수를 선택합니다.  
   
 > [!NOTE]  
 >  변수 이름은 대/소문자를 구분합니다.  
   
  **ReadWriteVariables**  
- 스크립트에 사용할 수 있는 읽기/쓰기 변수 목록을 쉼표로 구분하여 입력하거나 줄임표 단추( **...** )를 클릭하고 **변수 선택** 대화 상자에서 변수를 선택합니다.  
+ 스크립트에 사용할 수 있는 읽기/쓰기 변수 목록을 쉼표로 구분하여 입력하거나 줄임표 단추(**...**)를 클릭하고 **변수 선택** 대화 상자에서 변수를 선택합니다.  
   
 > [!NOTE]  
 >  변수 이름은 대/소문자를 구분합니다.  

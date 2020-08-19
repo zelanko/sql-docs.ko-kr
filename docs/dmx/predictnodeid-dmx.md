@@ -1,4 +1,5 @@
 ---
+description: PredictNodeId(DMX)
 title: PredictNodeId (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 65516f633d0e639a0263006639f0078967397459
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 3fac7baa2f30d20c8e5043a405156a36f43a29a4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970781"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426135"
 ---
 # <a name="predictnodeid-dmx"></a>PredictNodeId(DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -33,7 +34,7 @@ PredictNodeId(<scalar column reference>)
 ## <a name="return-type"></a>반환 형식  
  \<scalar expression>  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 지정한 개별 고객이 자전거를 구입할 가능성이 있는지 여부를 반환하고 해당 고객이 속할 가능성이 가장 높은 노드의 노드 ID를 반환합니다.  
   
 ```  

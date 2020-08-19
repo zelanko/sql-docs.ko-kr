@@ -1,4 +1,5 @@
 ---
+description: 변환을 사용하여 데이터 변환
 title: 변환을 사용하여 데이터 변환 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e1340b6f-ef75-4b14-af6f-823586eff0ed
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 96e1d318429b81f45088b176c45f1ccfc822a3de
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 2d9422574f80febefc6458b389f04b4b1625b22c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914264"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425655"
 ---
 # <a name="transform-data-with-transformations"></a>변환을 사용하여 데이터 변환
 
@@ -30,7 +31,7 @@ ms.locfileid: "86914264"
   
  다음 다이어그램에서는 원본 하나, 변환 두 가지, 대상 하나를 포함하는 간단한 데이터 흐름을 보여 줍니다.  
   
- ![데이터 흐름](../../../integration-services/data-flow/media/mw-dts-08.gif "디자이너의")  
+ ![데이터 흐름](../../../integration-services/data-flow/media/mw-dts-08.gif "데이터 흐름")  
   
  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 변환은 다음과 같은 기능을 제공합니다.  
   
@@ -62,7 +63,7 @@ ms.locfileid: "86914264"
   
 -   [데이터 흐름 구성 요소의 속성 설정](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [데이터 흐름 태스크](../../../integration-services/control-flow/data-flow-task.md)   
  [데이터 흐름](../../../integration-services/data-flow/data-flow.md)   
  [경로에 구성 요소 연결](https://msdn.microsoft.com/library/05633e4c-1370-4b05-802b-f36b07dd71c8)   

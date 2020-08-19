@@ -1,4 +1,5 @@
 ---
+description: '자습서: Transact-SQL 문 작성'
 title: '자습서: Transact-SQL 문 작성 | Microsoft Docs'
 ms.custom: ''
 ms.date: 08/03/2016
@@ -14,12 +15,12 @@ ms.assetid: 2addc9be-67d0-423d-a457-192fe9d7d058
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ae6f97bd7aeea2bb587f5c572204d76f7167aafa
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9d842186c057df54276d19c2b5b5774225961b3e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68051341"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426475"
 ---
 # <a name="tutorial-writing-transact-sql-statements"></a>자습서: Transact-SQL 문 작성
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]

@@ -1,4 +1,5 @@
 ---
+description: 인덱스 다시 작성 태스크
 title: 인덱스 다시 작성 태스크 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 021884dd-e72d-47b2-99e8-b741410509c3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 031af8472fcce7f21d43069245c136f7aa8e7d41
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 98be7870112403b610420a8508928ba1c60f266e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921206"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425925"
 ---
 # <a name="rebuild-index-task"></a>인덱스 다시 작성 태스크
 

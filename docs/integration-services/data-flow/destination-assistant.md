@@ -1,4 +1,5 @@
 ---
+description: 대상 길잡이
 title: 대상 길잡이 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ f1_keywords:
 ms.assetid: 10a40921-a2c2-4ac8-be28-311f8500fbf6
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b36cd33f3d9cc0b18c0454abe393e8e68e96c644
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b47670e1830b7689231cdc87752ce6222faef5b3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916724"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425835"
 ---
 # <a name="destination-assistant"></a>대상 길잡이
 

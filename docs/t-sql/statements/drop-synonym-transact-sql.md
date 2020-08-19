@@ -1,4 +1,5 @@
 ---
+description: DROP SYNONYM(Transact-SQL)
 title: DROP SYNONYM(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/26/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 23578932-e4de-4c39-a5a0-ce45139c4269
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cc8d4d19c645c78b7121c7335461de5b7bd95513
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: c79cd921290a89d040edd85fc218c9de6baa8f37
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483636"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426595"
 ---
 # <a name="drop-synonym-transact-sql"></a>DROP SYNONYM(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -70,7 +71,7 @@ DROP SYNONYM [ IF EXISTS ] [ schema. ] synonym_name
   
 -   포함하는 스키마에 대한 ALTER SCHEMA 권한을 보유하는 피부여자  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 우선 동의어인 `MyProduct`를 만든 다음 그 동의어를 삭제하는 방법을 보여 줍니다.  
   
 ```  

@@ -1,4 +1,5 @@
 ---
+description: Oracle 보완 로깅 스크립트
 title: Oracle 보완 로깅 스크립트 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 5e6ee618-b89b-46c7-92ad-4fc5ef7b777a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f2c2a71afd526aa177490c817631dd9cd1f5fdc2
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ec1835467ed0fb3ac23d570d26d8416cd83521b5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86901281"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425995"
 ---
 # <a name="oracle-supplemental-logging-script"></a>Oracle 보완 로깅 스크립트
 
@@ -37,10 +38,10 @@ ms.locfileid: "86901281"
  **다른 이름으로 저장**  
  스크립트를 텍스트 파일에 저장합니다. Oracle 데이터베이스 관리자(DBA)가 보완 로깅 스크립트를 검사하고 실행해야 하는 경우에 사용되며, 스크립트를 텍스트 파일로 저장하여 나중에 전자 메일 또는 다른 방법으로 Oracle DBA에게 보낸 다음 Oracle 데이터베이스에서 스크립트를 실행하는 데 사용되는 SQL*Plus Oracle 유틸리티 또는 기타 도구를 사용하여 스크립트를 실행할 수 있습니다.  
   
- **Copy**  
+ **복사**  
  스크립트를 클립보드에 복사합니다. Oracle 데이터베이스 관리자가 보완 로깅 스크립트를 검사하고 실행해야 하는 경우에 필요한 위치에 스크립트를 붙여 넣을 수 있습니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [How to Manage a CDC Instance](../../integration-services/change-data-capture/how-to-manage-a-cdc-instance.md)   
  [CDC 인스턴스 관리](../../integration-services/change-data-capture/manage-a-cdc-instance.md)  
   

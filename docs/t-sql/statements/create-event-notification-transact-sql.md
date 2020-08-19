@@ -1,4 +1,5 @@
 ---
+description: CREATE EVENT NOTIFICATION(Transact-SQL)
 title: CREATE EVENT NOTIFICATION(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: dbbff0e8-9e25-4f12-a1ba-e12221d16ac2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7e5b1db8f48e6d4f336d47e8ce6dc09a1659be7f
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: 3c13c9635537ead88d8cb0f140a65cdf2dd82c35
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86392751"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426765"
 ---
 # <a name="create-event-notification-transact-sql"></a>CREATE EVENT NOTIFICATION(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -127,7 +128,7 @@ TO SERVICE 'broker_service' , { 'broker_instance_specifier' | 'current database'
   
  큐에 한정되는 이벤트 알림을 생성하려면 해당 큐에 대해 ALTER 권한이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 > [!NOTE]  
 >  다음의 예 1과 예 2에서 `TO SERVICE 'NotifyService'` 절의 GUID('8140a771-3c4b-4479-8ac0-81008ab17984')는 예가 구성된 컴퓨터에만 해당됩니다. 예를 들어 이 GUID는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 GUID입니다.  
@@ -135,7 +136,7 @@ TO SERVICE 'broker_service' , { 'broker_instance_specifier' | 'current database'
 >  이러한 예를 복사하고 실행하려면 이 GUID를 사용자의 컴퓨터 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 맞게 바꿔야 합니다. 위의 인수 섹션에서 설명한 것처럼 sys.databases 카탈로그 뷰의 service_broker_guid 열을 쿼리하여 **‘** _broker\_instance\_specifier_ **’** 를 얻을 수 있습니다.  
   
 ### <a name="a-creating-an-event-notification-that-is-server-scoped"></a>A. 서버에 한정되는 이벤트 알림 생성  
- 다음 예에서는 [!INCLUDE[ssSB](../../includes/sssb-md.md)]를 사용하여 대상 서비스를 설정하는 데 필요한 개체를 만듭니다. 대상 서비스는 이벤트 알림용 시작 서비스의 메시지 유형과 계약을 참조합니다. 그러면 `Object_Created`의 인스턴스에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 추적 이벤트가 발생할 때마다 알림을 보내는 대상 서비스에서 이벤트 알림이 생성됩니다.  
+ 다음 예에서는 [!INCLUDE[ssSB](../../includes/sssb-md.md)]를 사용하여 대상 서비스를 설정하는 데 필요한 개체를 만듭니다. 대상 서비스는 이벤트 알림용 시작 서비스의 메시지 유형과 계약을 참조합니다. 그러면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스에서 `Object_Created` 추적 이벤트가 발생할 때마다 알림을 보내는 대상 서비스에서 이벤트 알림이 생성됩니다.  
   
 ```sql  
 --Create a queue to receive messages.  
@@ -162,7 +163,7 @@ TO SERVICE 'NotifyService',
 ```  
   
 ### <a name="b-creating-an-event-notification-that-is-database-scoped"></a>B. 데이터베이스에 한정되는 이벤트 알림 생성  
- 다음 예에서는 앞의 예와 같은 대상 서비스에서 이벤트 알림을 생성합니다. `ALTER_TABLE` 예제 데이터베이스에서 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 이벤트가 발생한 후 이벤트 알림이 발생합니다.  
+ 다음 예에서는 앞의 예와 같은 대상 서비스에서 이벤트 알림을 생성합니다. [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 예제 데이터베이스에서 `ALTER_TABLE` 이벤트가 발생한 후 이벤트 알림이 발생합니다.  
   
 ```sql  
 CREATE EVENT NOTIFICATION Notify_ALTER_T1  

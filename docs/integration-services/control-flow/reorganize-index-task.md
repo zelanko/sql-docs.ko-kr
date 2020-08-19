@@ -1,4 +1,5 @@
 ---
+description: 인덱스 다시 구성 태스크
 title: 인덱스 다시 구성 태스크 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9ed87861-e5c3-4fcd-8760-d112f4c0af0c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 74e3b6d54dfddc976080a5a530d89905524887bc
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d94d1cd62cc9fb8e367b112690de8331b6e2e5c1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921169"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425935"
 ---
 # <a name="reorganize-index-task"></a>인덱스 다시 구성 태스크
 
@@ -30,7 +31,7 @@ ms.locfileid: "86921169"
 
   인덱스 다시 구성 태스크는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 테이블과 뷰의 인덱스를 다시 구성합니다. 인덱스 관리에 대한 자세한 내용은 [인덱스 다시 구성 및 다시 작성](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)을 참조하세요.  
   
- 인덱스 다시 구성 태스크를 사용하면 패키지가 단일 데이터베이스나 여러 데이터베이스의 인덱스를 다시 구성할 수 있습니다. 태스크가 단일 데이터베이스의 인덱스만 다시 구성하는 경우 인덱스를 다시 구성할 뷰와 테이블을 선택할 수 있습니다. 인덱스 다시 구성 태스크에는 큰 개체 데이터를 압축하는 옵션도 포함되어 있습니다. 큰 개체 데이터는 **image**, **text**, **ntext**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** 또는 **xml** 데이터 형식의 데이터입니다. 자세한 내용은 [데이터 형식&#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)을 참조하세요.  
+ 인덱스 다시 구성 태스크를 사용하면 패키지가 단일 데이터베이스나 여러 데이터베이스의 인덱스를 다시 구성할 수 있습니다. 태스크가 단일 데이터베이스의 인덱스만 다시 구성하는 경우 인덱스를 다시 구성할 뷰와 테이블을 선택할 수 있습니다. 인덱스 다시 구성 태스크에는 큰 개체 데이터를 압축하는 옵션도 포함되어 있습니다. 큰 개체 데이터는 **image**, **text**, **ntext**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)** 또는 **xml** 데이터 형식의 데이터입니다. 자세한 내용은 [데이터 형식&#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)을 참조하세요.  
   
  인덱스 다시 구성 태스크는 Transact-SQL ALTER INDEX 문을 캡슐화합니다. 큰 개체 데이터를 압축하도록 선택하면 이 문은 REORGANIZE WITH (LOB_COMPACTION = ON) 절을 사용하고 그렇지 않으면 LOB_COMPACTION이 OFF로 설정됩니다. 자세한 내용은 [ALTER INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)를 참조하세요.  
   

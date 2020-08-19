@@ -1,4 +1,5 @@
 ---
+description: SQL Server 대상 사용자 지정 속성
 title: SQL Server 대상 사용자 지정 속성 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: b736aa6d-c154-44a0-be08-f25733fca1d9
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 28b2257dc78950815fd65682c57713486993aaf9
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 06ca0836b3c588e8b598ae60b47e540562f18802
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917779"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425795"
 ---
 # <a name="sql-server-destination-custom-properties"></a>SQL Server 대상 사용자 지정 속성
 
@@ -41,13 +42,13 @@ ms.locfileid: "86917779"
 |BulkInsertTablock|부울|대량 삽입 작업을 수행하는 동안 테이블을 잠글지 여부를 지정하는 값입니다. 이 속성의 기본값은 **True**입니다.|  
 |DefaultCodePage|정수|데이터 원본에서 코드 페이지 정보를 사용할 수 없을 경우 사용할 코드 페이지입니다.|  
 |MaxInsertCommitSize|정수|일괄 처리 시 삽입할 최대 행 수를 지정하는 값입니다. 값이 0인 경우 모든 행이 단일 일괄 처리로 삽입됩니다.|  
-|시간 제한|정수|삽입에 사용할 데이터가 없는 경우 종료 전에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대상에서 대기하는 시간(초)을 지정하는 값입니다. 값 0은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대상에 제한 시간이 없음을 의미합니다. 이 속성의 기본값은 30입니다.|  
+|제한 시간|정수|삽입에 사용할 데이터가 없는 경우 종료 전에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대상에서 대기하는 시간(초)을 지정하는 값입니다. 값 0은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대상에 제한 시간이 없음을 의미합니다. 이 속성의 기본값은 30입니다.|  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대상의 입력 및 입력 열에는 사용자 지정 속성이 없습니다.  
   
  자세한 내용은 [SQL Server Destination](../../integration-services/data-flow/sql-server-destination.md)을 참조하세요.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
   

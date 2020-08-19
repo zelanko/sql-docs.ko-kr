@@ -1,4 +1,5 @@
 ---
+description: 스크립트 실행을 위한 Oracle 자격 증명
 title: 스크립트 실행을 위한 Oracle 자격 증명 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 4a301cb0-2f5b-41ba-81bf-46b41d07f137
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d6e7cd34cbbccded9d8b92a9013e988980d8622f
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ba5959cec249da89655d1edb4df8ef8ca225a416
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917177"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426015"
 ---
 # <a name="oracle-credentials-for-running-script"></a>스크립트 실행을 위한 Oracle 자격 증명
 
@@ -35,7 +36,7 @@ ms.locfileid: "86917177"
   
 -   **Oracle 인증**: 이 옵션을 선택하는 경우 연결 중인 원본 Oracle 데이터베이스에 사용자의 **사용자 이름** 과 **암호** 를 입력해야 합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [How to Manage a CDC Instance](../../integration-services/change-data-capture/how-to-manage-a-cdc-instance.md)   
  [보완 로깅 스크립트 검토 및 생성](../../integration-services/change-data-capture/review-and-generate-supplemental-logging-scripts.md)  
   

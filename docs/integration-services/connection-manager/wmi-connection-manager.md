@@ -1,4 +1,5 @@
 ---
+description: WMI 연결 관리자
 title: WMI 연결 관리자 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: fbfa4ba7-3d0d-4d6b-94ad-50741a88d03d
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0efcca67f53415d34cd8522fa4a59a4ddd2dab79
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 0bb36af50d48fb0155c85a1662b4dd4780f3f03d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918253"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425955"
 ---
 # <a name="wmi-connection-manager"></a>WMI 연결 관리자
 
@@ -74,9 +75,9 @@ ms.locfileid: "86918253"
  **암호**  
  Windows 인증을 사용하지 않으면 연결할 때 암호를 제공해야 합니다.  
   
- **Test**  
+ **테스트**  
  연결 관리자 설정을 테스트합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [웹 서비스 태스크](../../integration-services/control-flow/web-service-task.md)   
  [Integration Services&#40;SSIS&#41; 연결](../../integration-services/connection-manager/integration-services-ssis-connections.md)  

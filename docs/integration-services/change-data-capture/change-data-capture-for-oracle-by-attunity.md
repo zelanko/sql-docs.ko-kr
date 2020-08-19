@@ -1,4 +1,5 @@
 ---
+description: Attunity Oracle CDC
 title: Attunity Oracle CDC | Microsoft Docs
 ms.custom: ''
 ms.date: 03/02/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 520dc05b-83de-4668-8d27-07ee0ef08185
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2afa40749326b5b7a69179001787e5fa9469bee6
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 897172c3a268ac07f1fccb0c3756d10d89054978
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87952308"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426175"
 ---
 # <a name="change-data-capture-for-oracle-by-attunity"></a>Attunity Oracle CDC
 

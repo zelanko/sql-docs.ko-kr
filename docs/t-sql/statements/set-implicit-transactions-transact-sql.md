@@ -1,4 +1,5 @@
 ---
+description: SET IMPLICIT_TRANSACTIONS(Transact-SQL)
 title: SET IMPLICIT_TRANSACTIONS(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -24,12 +25,12 @@ ms.assetid: a300ac43-e4c0-4329-8b79-a1a05e63370a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e2ca06a2b34d0c4823ad6e548ddba58f0c5589d9
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 992a1fd5e6129666cae7413cb461a51285fb5973
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110274"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426555"
 ---
 # <a name="set-implicit_transactions-transact-sql"></a>SET IMPLICIT_TRANSACTIONS(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -44,7 +45,9 @@ ms.locfileid: "87110274"
 SET IMPLICIT_TRANSACTIONS { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>설명  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="remarks"></a>설명
  ON이면 시스템이 암시적(*implicit*) 트랜잭션 모드입니다. 즉, @@TRANCOUNT = 0이면 다음 Transact-SQL 문 중 하나가 새 트랜잭션을 시작합니다. 보이지 않는 BEGIN TRANSACTION이 먼저 실행되는 것과 같습니다.  
 
 :::row:::

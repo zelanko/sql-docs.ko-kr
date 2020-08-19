@@ -1,4 +1,5 @@
 ---
+description: 열 유형 제안 대화 상자 UI 참조
 title: 열 유형 제안 대화 상자 UI 참조 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 8d5652e0-cf57-483f-828b-10f00c08418b
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a1e742bfc0254cddf38a73a8b5923168fb58745f
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d1c2bfd93e046141889d9cfa5c1c438462efa92d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918259"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425965"
 ---
 # <a name="suggest-column-types-dialog-box-ui-reference"></a>열 유형 제안 대화 상자 UI 참조
 

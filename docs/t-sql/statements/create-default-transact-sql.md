@@ -1,4 +1,5 @@
 ---
+description: CREATE DEFAULT(Transact-SQL)
 title: CREATE DEFAULT(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/25/2015
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 08475db4-7d90-486a-814c-01a99d783d41
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 361963d6836cb4c4b89c62f8ca1481b292bc803e
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: 8d1001196c5b4e88c105f0fa7e0355e97e3ee884
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86392761"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426785"
 ---
 # <a name="create-default-transact-sql"></a>CREATE DEFAULT(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -56,7 +57,7 @@ AS constant_expression [ ; ]
  기본값의 이름입니다. 기본값 이름은 [식별자](../../relational-databases/databases/database-identifiers.md)에 대한 규칙을 따라야 합니다. 기본 소유자 이름을 지정하는 것은 선택 사항입니다.  
   
 *constant_expression*  
-상수 값만 포함하는 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다. 열 이름이나 다른 데이터베이스 개체의 이름을 포함할 수 없습니다. 별칭 데이터 형식을 포함한 식을 제외하고 모든 종류의 상수, 기본 제공 함수 및 수치 연산 식을 사용할 수 있습니다. 사용자 정의 함수는 사용할 수 없습니다. 문자와 날짜 상수는 작은따옴표( **'** )로 묶어야 하지만 통화, 정수 및 부동 소수점 상수에는 따옴표가 필요 없습니다. 이진 데이터는 0x로 시작해야 하고 통화 데이터는 달러 기호($)로 시작해야 합니다. 기본값은 열 데이터 형식과 호환이 가능해야 합니다.  
+상수 값만 포함하는 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다. 열 이름이나 다른 데이터베이스 개체의 이름을 포함할 수 없습니다. 별칭 데이터 형식을 포함한 식을 제외하고 모든 종류의 상수, 기본 제공 함수 및 수치 연산 식을 사용할 수 있습니다. 사용자 정의 함수는 사용할 수 없습니다. 문자와 날짜 상수는 작은따옴표(**'**)로 묶어야 하지만 통화, 정수 및 부동 소수점 상수에는 따옴표가 필요 없습니다. 이진 데이터는 0x로 시작해야 하고 통화 데이터는 달러 기호($)로 시작해야 합니다. 기본값은 열 데이터 형식과 호환이 가능해야 합니다.  
   
 ## <a name="remarks"></a>설명  
  현재 데이터베이스에서는 기본 이름만 만들 수 있습니다. 기본값 이름은 데이터베이스에서 스키마별로 고유해야 합니다. 기본값을 만들 경우 **sp_bindefault**를 사용하여 값을 열이나 별칭 데이터 형식에 바인딩합니다.  
@@ -81,15 +82,15 @@ AS constant_expression [ ; ]
   
 |열 정의|입력 안 함, 기본값 없음|입력 안 함, 기본값 있음|NULL 입력, 기본값 없음|NULL 입력, 기본값 있음|  
 |-----------------------|--------------------------|-----------------------|----------------------------|-------------------------|  
-|**NULL**|NULL|기본값|NULL|NULL|  
-|**NOT NULL**|Error|기본값|error|error|  
+|**NULL**|NULL|default|NULL|NULL|  
+|**NOT NULL**|오류|default|error|error|  
   
  기본값의 이름을 바꾸려면 **sp_rename**을 사용합니다. 기본값에 대한 보고서를 보려면 **sp_help**를 사용합니다.  
   
 ## <a name="permissions"></a>사용 권한  
  CREATE DEFAULT를 사용하려면 최소한 현재 데이터베이스에서 CREATE DEFAULT 권한과 기본값이 생성된 스키마에 대한 ALTER 권한이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-creating-a-simple-character-default"></a>A. 단순한 문자 기본값 만들기  
  다음 예에서는 `unknown`이라는 문자 기본값을 만듭니다.  

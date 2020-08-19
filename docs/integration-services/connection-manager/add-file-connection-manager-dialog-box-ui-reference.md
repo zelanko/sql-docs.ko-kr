@@ -1,4 +1,5 @@
 ---
+description: 파일 연결 관리자 추가 대화 상자 UI 참조
 title: 파일 연결 관리자 추가 대화 상자 UI 참조 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9370bfb5-5993-4ad8-a9cd-2de53f320f34
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 226dd6c94787af8c32d17cd7bf923a860645c5ac
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 8096ccaf1fc92710e46970744a7a4f7cbe000700
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921722"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426035"
 ---
 # <a name="add-file-connection-manager-dialog-box-ui-reference"></a>파일 연결 관리자 추가 대화 상자 UI 참조
 
@@ -59,7 +60,7 @@ ms.locfileid: "86921722"
  **화살표 단추**  
  파일이나 폴더를 선택한 다음 화살표 단추를 통해 위/아래로 이동하여 액세스 순서를 지정합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [Integration Services 오류 및 메시지 참조](../../integration-services/integration-services-error-and-message-reference.md)  
   
   

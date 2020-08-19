@@ -1,4 +1,5 @@
 ---
+description: SAP BW 연결 관리자
 title: SAP BW 연결 관리자 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ f1_keywords:
 - sql13.dts.designer.sapbwconnectionmanager.f1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c619db7e6386bb31b39b7a347f319ae45ddfacbc
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 6a67889df1635e2654adc80151e33a1c137985d0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921439"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426005"
 ---
 # <a name="sap-bw-connection-manager"></a>SAP BW 연결 관리자
 
@@ -151,7 +152,7 @@ ms.locfileid: "86921439"
  **연결 테스트**  
  사용자가 제공한 값을 사용하여 연결을 테스트합니다. **연결 테스트**를 클릭하면 메시지 상자가 표시되고 연결이 성공했는지 여부가 표시됩니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [Microsoft Connector for SAP BW 구성 요소](../../integration-services/microsoft-connector-for-sap-bw-components.md)  
   
   

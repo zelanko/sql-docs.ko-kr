@@ -1,4 +1,5 @@
 ---
+description: PredictHistogram(DMX)
 title: PredictHistogram (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 94ec67fe103901f19af36b8be01ea21ceaa9ac85
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: ecc213e023483245fb8b40a55de749c23ae16a84
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86967921"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426165"
 ---
 # <a name="predicthistogram-dmx"></a>PredictHistogram(DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -47,11 +48,11 @@ PredictHistogram(<scalar column reference> | <cluster column reference>)
   
 -   **$ProbabilityVariance**  
   
-     [!INCLUDE[msCoName](../includes/msconame-md.md)]데이터 마이닝 알고리즘은 **$ProbabilityVariance**를 지원 하지 않습니다. 이 열은 항상 [!INCLUDE[msCoName](../includes/msconame-md.md)] 알고리즘에 대해 0을 포함합니다.  
+     [!INCLUDE[msCoName](../includes/msconame-md.md)] 데이터 마이닝 알고리즘은 **$ProbabilityVariance**를 지원 하지 않습니다. 이 열은 항상 [!INCLUDE[msCoName](../includes/msconame-md.md)] 알고리즘에 대해 0을 포함합니다.  
   
 -   **$ProbabilityStdev**  
   
-     [!INCLUDE[msCoName](../includes/msconame-md.md)]데이터 마이닝 알고리즘은 **$ProbabilityStdev**를 지원 하지 않습니다. 이 열은 항상 [!INCLUDE[msCoName](../includes/msconame-md.md)] 알고리즘에 대해 0을 포함합니다.  
+     [!INCLUDE[msCoName](../includes/msconame-md.md)] 데이터 마이닝 알고리즘은 **$ProbabilityStdev**를 지원 하지 않습니다. 이 열은 항상 [!INCLUDE[msCoName](../includes/msconame-md.md)] 알고리즘에 대해 0을 포함합니다.  
   
 -   **$AdjustedProbability**  
   
@@ -66,7 +67,7 @@ PredictHistogram(<scalar column reference> | <cluster column reference>)
   
 -   **$Probability**  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 단일 쿼리를 사용하여 Bike Buyer 열의 예측 상태를 반환합니다. 또한이 쿼리는 **PredictHistogram** 함수를 사용 하 여 얻은 조정 된 확률에 따라 자전거 구매자 특성의 가장 중요 한 두 가지 상태를 반환 합니다.  
   
 ```  

@@ -1,4 +1,5 @@
 ---
+description: 산술 연산자(DMX)
 title: 산술 연산자 (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: c01879c7b99b1cc9c184513c1e95ec174d8f39d7
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 77b9f300859b6ce1250ed9d36a33a88a3dd12fe1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86971621"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426195"
 ---
 # <a name="operators---arithmetic"></a>연산자 - 산술
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -24,10 +25,10 @@ ms.locfileid: "86971621"
   
 |연산자|설명|  
 |--------------|-----------------|  
-|[+ &#40;&#41; &#40;DMX&#41;를 추가 합니다.](../dmx/add-dmx.md)|두 수를 더합니다.|  
-|[-&#40;&#41; &#40;DMX&#41;빼기](../dmx/subtract-dmx.md)|한 수에서 다른 수를 뺍니다.|  
+|[+ &#40;&#41; &#40;DMX&#41;를 추가 합니다. ](../dmx/add-dmx.md)|두 수를 더합니다.|  
+|[-&#40;&#41; &#40;DMX&#41;빼기 ](../dmx/subtract-dmx.md)|한 수에서 다른 수를 뺍니다.|  
 |[&#42; &#40;&#41; &#40;DMX&#41;](../dmx/multiply-dmx.md)|두 수를 곱합니다.|  
-|[DMX&#41; &#40;&#40;나눕니다&#41;](../dmx/divide-dmx.md)|한 수를 다른 수로 나눕니다.|  
+|[ DMX&#41; &#40;&#40;나눕니다&#41;](../dmx/divide-dmx.md)|한 수를 다른 수로 나눕니다.|  
   
  다음 규칙은 DMX 식에서 산술 연산자의 우선 순위를 나타냅니다.  
   

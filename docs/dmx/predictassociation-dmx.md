@@ -1,4 +1,5 @@
 ---
+description: PredictAssociation(DMX)
 title: PredictAssociation (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: a834c87c3febf0554ad07334000d62f1f9a93fee
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: b94af0ab8da71e5bf978852fd884d46b460715bc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86968239"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426155"
 ---
 # <a name="predictassociation-dmx"></a>PredictAssociation(DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -51,7 +52,7 @@ PredictAssociation(colref, [$AdjustedProbability], n)
   
  **$AdjustedProbability**를 포함 하는 경우 문은 **$AdjustedProbability**를 기반으로 상위 *n* 개의 값을 반환 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 **PredictAssociation** 함수를 사용 하 여 함께 판매 될 가능성이 가장 높은 놀이 Works 데이터베이스의 4 개 제품을 반환 합니다.  
   
 ```  

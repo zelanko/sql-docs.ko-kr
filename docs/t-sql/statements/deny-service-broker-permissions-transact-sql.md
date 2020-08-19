@@ -1,4 +1,5 @@
 ---
+description: DENY Service Broker 권한(Transact-SQL)
 title: DENY Service Broker 사용 권한(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/09/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 7c6de71b-865c-41db-9413-ad9b3562e579
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 360c83ddf14139665c6ab1132c84b4e3b608e735
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 8043eb95855e463c63bf4667209d47b293a492e7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483827"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426605"
 ---
 # <a name="deny-service-broker-permissions-transact-sql"></a>DENY Service Broker 권한(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -59,19 +60,19 @@ DENY permission  [ ,...n ] ON
  *permission*  
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] 보안 개체에 대해 거부할 수 있는 사용 권한을 지정합니다. 사용 권한 목록은 이 항목의 뒤에 나오는 주의 섹션을 참조하세요.  
   
- CONTRACT **::** _contract_name_  
+ CONTRACT **::**_contract_name_  
  사용 권한을 거부할 계약을 지정합니다. 범위 한정자 **::** 가 필요합니다.  
   
- MESSAGE TYPE **::** _message_type_name_  
+ MESSAGE TYPE **::**_message_type_name_  
  사용 권한을 거부할 메시지 유형을 지정합니다. 범위 한정자 **::** 가 필요합니다.  
   
- REMOTE SERVICE BINDING **::** _remote_binding_name_  
+ REMOTE SERVICE BINDING **::**_remote_binding_name_  
  사용 권한을 거부할 원격 서비스 바인딩을 지정합니다. 범위 한정자 **::** 가 필요합니다.  
   
- ROUTE **::** _route_name_  
+ ROUTE **::**_route_name_  
  사용 권한을 거부할 경로를 지정합니다. 범위 한정자 **::** 가 필요합니다.  
   
- SERVICE **::** _message_type_name_  
+ SERVICE **::**_message_type_name_  
  사용 권한을 거부할 서비스를 지정합니다. 범위 한정자 **::** 가 필요합니다.  
   
  *database_principal*  

@@ -1,4 +1,5 @@
 ---
+description: Predict(DMX)
 title: Predict (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: d323794af598cb621b7fb8f9939cd2ae1c0f2746
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 4f53f331b078fce4f02e548a83a145dce8ba6a91
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86968401"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426205"
 ---
 # <a name="predict-dmx"></a>Predict(DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -66,7 +67,7 @@ Predict(<table column reference>, [option1], [option2], [option n], [INCLUDE_NOD
   
  테이블 반환 열에 대 한 예측에 INCLUDE_STATISTICS를 전달 하면 **$Probability** 열과 **$Support** 결과 테이블에 추가 됩니다. 이러한 열은 연관된 중첩 테이블 레코드가 있을 가능성을 나타냅니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 Predict 함수를 사용 하 여 함께 판매 될 가능성이 가장 높은 놀이 Works 데이터베이스의 4 개 제품을 반환 합니다. 함수는 연결 규칙 마이닝 모델에 대해 예측 하므로 앞에서 설명한 대로 자동으로 **PredictAssociation** 함수를 사용 합니다.  
   
 ```  

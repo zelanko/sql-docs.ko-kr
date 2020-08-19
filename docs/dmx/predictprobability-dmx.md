@@ -1,4 +1,5 @@
 ---
+description: PredictProbability(DMX)
 title: PredictProbability (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: e2933700c24e34748d2c0d6593d5f34eb8e69bc2
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 778c3539061f8739872ff9164f000118b1996215
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970849"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426145"
 ---
 # <a name="predictprobability-dmx"></a>PredictProbability(DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -39,7 +40,7 @@ PredictProbability(<scalar column reference>, [<predicted state>])
 > [!NOTE]  
 >  일부 마이닝 모델은 확률 값을 제공하지 않으므로 이 함수를 사용할 수 없습니다. 또한 쿼리하는 모델 유형에 따라 특정 대상 값에 대한 확률 값이 다르게 계산되거나 다르게 해석될 수 있습니다. 특정 모델 유형에 대 한 확률을 계산 하는 방법에 대 한 자세한 내용은 [마이닝 모델 콘텐츠 &#40;Analysis Services-데이터 마이닝&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-analysis-services-data-mining)의 개별 알고리즘 항목을 참조 하세요.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 자연 예측 조인을 사용하여 TM Decision Tree 마이닝 모델을 기반으로 개별 고객이 자전거를 구입할 가능성이 있는지 여부를 확인하고 예측의 확률도 확인합니다. 예에는 가능한 각 값에 대해 하나씩 두 개의 PredictProbability 함수가 있습니다. 이 인수를 생략하면 함수에서 가장 가능성 있는 값의 확률을 반환합니다.  
   
 ```  

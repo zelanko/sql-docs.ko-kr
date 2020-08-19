@@ -1,4 +1,5 @@
 ---
+description: SQL Server 대상
 title: SQL Server 대상 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: a0227cd8-6944-4547-87e8-7b2507e26442
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 278cfb16ddc6c00fba9570d7912a6d5fa3a31727
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: dbd48bf2dee8268fa87209ab3d4283938961c918
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917769"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425805"
 ---
 # <a name="sql-server-destination"></a>SQL Server 대상
 
@@ -203,7 +204,7 @@ ms.locfileid: "86917769"
  **열 순서 지정**  
  정렬 열의 이름을 입력합니다. 각 열을 오름차순이나 내림차순으로 정렬할 수 있습니다. 여러 정렬 열을 사용하는 경우 쉼표로 목록을 구분합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [데이터 흐름](../../integration-services/data-flow/data-flow.md)  
   
   

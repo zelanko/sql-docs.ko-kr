@@ -1,4 +1,5 @@
 ---
+description: ADO.NET 대상
 title: ADO NET 대상 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: cb883990-d875-4d8b-b868-45f9f15ebeae
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5ab34cf592628a92f2dcf536e2eda400aecf80ad
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 1c1864f1a0a5e57a025f90d1219b8068656f87d1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920887"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425905"
 ---
 # <a name="ado-net-destination"></a>ADO.NET 대상
 

@@ -1,4 +1,5 @@
 ---
+description: OData 원본
 title: OData 원본 | Microsoft Docs
 ms.date: 09/17/2018
 ms.prod: sql
@@ -15,12 +16,12 @@ f1_keywords:
 ms.assetid: cc9003c9-638e-432b-867e-e949d50cec90
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e06cb4ec3bbc74779ad2fcb4f36d6e75a4e7cb55
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 8f74fa8478953c4c1353d35f49250896ab2a7ab8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916221"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425825"
 ---
 # <a name="odata-source"></a>OData 원본
 
@@ -107,7 +108,7 @@ OData 원본은 단순 데이터 형식 int, byte[], bool, byte, DateTime, DateT
   
 #### <a name="use-collection-or-resource-path--resource-path"></a>컬렉션 또는 리소스 경로 사용 = 리소스 경로  
  **Resource path**  
- 리소스 경로를 입력합니다. 다음은 그 예입니다.  Employees  
+ 리소스 경로를 입력합니다. 예: Employees  
   
 ## <a name="odata-source-editor-columns-page"></a>OData 원본 편집기(열 페이지)
   **OData 원본 편집기** 대화 상자의 **열** 페이지를 사용하여 출력에 포함될 외부(원본) 열을 선택하고 출력 열에 매핑할 수 있습니다.  

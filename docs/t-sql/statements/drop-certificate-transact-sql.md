@@ -1,4 +1,5 @@
 ---
+description: DROP CERTIFICATE(Transact-SQL)
 title: DROP CERTIFICATE(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/18/2018
@@ -22,12 +23,12 @@ ms.assetid: 5704aa04-68a3-4b29-b62b-8868af487817
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 53f8461051c02b5046bd15c385acbfffe796047e
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 7c3907c74fd03e58416a2b15cec06d3416570f11
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484942"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426635"
 ---
 # <a name="drop-certificate-transact-sql"></a>DROP CERTIFICATE(Transact-SQL)
 [!INCLUDE [sql-asdb-asa-pdw](../../includes/applies-to-version/sql-asdb-asa-pdw.md)]
@@ -61,7 +62,7 @@ DROP CERTIFICATE certificate_name
 ## <a name="permissions"></a>사용 권한  
  인증서에 대한 CONTROL 권한이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `Shipping04` 데이터베이스에서 `AdventureWorks` 인증서를 삭제합니다.  
   
 ```  

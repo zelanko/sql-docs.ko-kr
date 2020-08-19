@@ -1,4 +1,5 @@
 ---
+description: Windows 데이터 정렬 이름(Transact-SQL)
 title: Windows 데이터 정렬 이름(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2019
@@ -18,12 +19,12 @@ ms.assetid: acceef84-2c68-46e2-a021-be019b7ab14e
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cfe6578107f87eddb62f5f31efd93778f8c2af96
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 2a95152ded1edc82ea153c40b6f9df68c1d3dea7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484064"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426525"
 ---
 # <a name="windows-collation-name-transact-sql"></a>Windows 데이터 정렬 이름(Transact-SQL)
 
@@ -74,12 +75,12 @@ Windows 데이터 정렬에 사용할 기본 데이터 정렬 규칙을 지정�
 이 옵션을 생략하면 전자/반자를 구분하지 않도록 지정하고 **WS**는 전자/반자를 구분하도록 지정합니다.
 
 *VariationSelectorSensitivity*  
-- **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)]부터 
+- **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)]로 시작 
 
 - 이 옵션을 생략하면 변형 선택기를 구분하지 않도록 지정하며, **VSS**는 변형 선택기를 구분하도록 지정합니다.
 
 **UTF8**  
-- **적용 대상**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터   
+- **적용 대상**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]로 시작   
 
 - 적합한 데이터 형식에 사용할 UTF-8 인코딩을 지정합니다. 자세한 내용은 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)을 참조하세요.
 
@@ -109,7 +110,7 @@ SELECT LOWER(NCHAR(504) COLLATE Latin1_General_CI_AS) AS [Version80Collation],
 
 일부 경우에 Windows 데이터 정렬 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 정렬은 동일한 쿼리에 대해 다른 쿼리 계획을 생성할 수 있습니다.
 
-## <a name="examples"></a>예
+## <a name="examples"></a>예제
 
 다음은 Windows 데이터 정렬 이름의 몇 가지 예입니다.
 
@@ -242,7 +243,7 @@ SELECT * FROM sys.fn_helpcollations() WHERE [name] NOT LIKE N'SQL%';
 
 <sup>2</sup> 중국어(마카오)는 중국어(대만) 데이터 정렬과 마찬가지로 중국어 간체의 규칙을 사용합니다. 하지만 중국어(대만)와 달리 코드 페이지 950을 사용합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목
 
 - [데이터 정렬 및 유니코드 지원](../../relational-databases/collations/collation-and-unicode-support.md)
 - [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)
