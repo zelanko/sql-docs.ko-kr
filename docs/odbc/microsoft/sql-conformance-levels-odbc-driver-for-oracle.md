@@ -1,4 +1,5 @@
 ---
+description: SQL 적합성 수준(Oracle용 ODBC 드라이버)
 title: SQL 규칙 수준 (Oracle 용 ODBC 드라이버) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 077a6c6a-2c57-42c9-a4fd-4cf0e65cf7e2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 969296e377d398615ad95cf1337c3f9f97d5eb5c
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: 78e98aed952ef8b15a4654be9f82e355d1b4177b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87363403"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483426"
 ---
 # <a name="sql-conformance-levels-odbc-driver-for-oracle"></a>SQL 적합성 수준(Oracle용 ODBC 드라이버)
 > [!IMPORTANT]  

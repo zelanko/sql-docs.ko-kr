@@ -1,4 +1,5 @@
 ---
+description: 잠금 형식
 title: 잠금 유형 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 12a978c0-b8a0-4ef0-87f0-a43c13659272
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f734b1eeaaba460169e3c8932d90fc31de6d23c2
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 58bf825312f6d2d580359c0421aea2a710d28fa6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759039"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452695"
 ---
 # <a name="types-of-locks"></a>잠금 형식
 ## <a name="adlockbatchoptimistic"></a>adLockBatchOptimistic  

@@ -1,4 +1,5 @@
 ---
+description: OLE DB에 대 한 Microsoft Cursor Service (ADO 서비스 구성 요소)
 title: OLE DB에 대 한 Microsoft Cursor Service (ADO 서비스 구성 요소) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 420d0989-7cfb-4c66-a7b5-f4199d13165d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6b0b4a3773f0de637458384e8819a7b913da3e40
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 3f83f151331fe483400edda90d7deb7c469b5574
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758509"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444555"
 ---
 # <a name="microsoft-cursor-service-for-ole-db-overview"></a>OLE DB에 대 한 Microsoft 커서 서비스 개요
 OLE DB에 대 한 Microsoft Cursor Service는 데이터 공급자의 커서 지원 기능을 보완 합니다. 따라서 사용자는 모든 데이터 공급자의 상대적으로 일관 된 기능을 제공 합니다.
@@ -63,7 +64,7 @@ Recordset1.Properties.Item("Command Time out") = 50
 |자식 행 캐시 (DBPROP_ADC_CACHECHILDROWS)|데이터 셰이핑 서비스를 사용 하 여 만든 레코드 집합의 경우이 값은 나중에 사용할 수 있도록 자식 레코드 집합을 캐시에 저장할지 여부를 나타냅니다.|
 |커서 엔진 버전 (DBPROP_ADC_CEVER)|사용 중인 커서 서비스의 버전을 나타냅니다.|
 |변경 상태 유지 관리 (DBPROP_ADC_MAINTAINCHANGESTATUS)|여러 테이블 조인에서 하나 이상의 행을 다시 동기화 하는 데 사용 되는 명령의 텍스트를 나타냅니다.|
-|[최적화](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)|인덱스를 만들어야 하는지 여부를 나타냅니다. **True**로 설정 하면 특정 작업의 실행을 향상 시키기 위해 인덱스를 임시로 만들 수 있습니다.|
+|[Optimize](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)|인덱스를 만들어야 하는지 여부를 나타냅니다. **True**로 설정 하면 특정 작업의 실행을 향상 시키기 위해 인덱스를 임시로 만들 수 있습니다.|
 |[이름 변경](../../../ado/reference/ado-api/reshape-name-property-dynamic-ado.md)|**레코드 집합**의 이름을 나타냅니다. 현재 또는 후속 데이터 셰이핑 명령 내에서 참조할 수 있습니다.|
 |[다시 동기화 명령](../../../ado/reference/ado-api/resync-command-property-dynamic-ado.md)|[고유 테이블](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) 속성이 적용 될 때 [Resync](../../../ado/reference/ado-api/resync-method.md) 메서드에서 사용 하는 사용자 지정 명령 문자열을 나타냅니다.|
 |[고유 카탈로그](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)|**고유 테이블** 속성에서 참조 되는 테이블을 포함 하는 데이터베이스의 이름을 나타냅니다.|
@@ -86,7 +87,7 @@ rs.Properties("Optimize") = True
 |-------------------|-----------------|
 |[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|**레코드 집합**에 사용할 수 있는 커서 유형을 보완 합니다.|
 |[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|**레코드 집합**에 사용할 수 있는 잠금 유형을 보완 합니다. 일괄 업데이트를 사용 하도록 설정 합니다.|
-|[정렬](../../../ado/reference/ado-api/sort-property.md)|**레코드 집합이** 정렬 되는 하나 이상의 필드 이름과 각 필드가 오름차순으로 정렬 되는지 또는 내림차순으로 정렬 되는지를 지정 합니다.|
+|[Sort](../../../ado/reference/ado-api/sort-property.md)|**레코드 집합이** 정렬 되는 하나 이상의 필드 이름과 각 필드가 오름차순으로 정렬 되는지 또는 내림차순으로 정렬 되는지를 지정 합니다.|
 
 ## <a name="method-behavior"></a>메서드 동작
  OLE DB에 대 한 Cursor Service는 [Field](../../../ado/reference/ado-api/field-object.md) 개체의 [Append](../../../ado/reference/ado-api/append-method-ado.md) 메서드를 사용 하거나 동작에 영향을 줍니다. 그리고 **레코드 집합** 개체의 [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md), [Resync](../../../ado/reference/ado-api/resync-method.md), [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)및 [Save](../../../ado/reference/ado-api/save-method.md) 메서드가 있습니다.

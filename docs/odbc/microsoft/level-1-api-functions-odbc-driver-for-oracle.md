@@ -1,4 +1,5 @@
 ---
+description: 수준 1 API 함수(Oracle용 ODBC 드라이버)
 title: 수준 1 API 함수 (Oracle 용 ODBC 드라이버) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 98cced6f-41b8-43c1-a3cd-f4ea1615c0af
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 37305ee75ebeb0686bafe039f1102cb3c6e18674
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0c82ab0f481fbc60d0308895640371e84886e77e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299953"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483546"
 ---
 # <a name="level-1-api-functions-odbc-driver-for-oracle"></a>수준 1 API 함수(Oracle용 ODBC 드라이버)
 > [!IMPORTANT]  
@@ -29,14 +30,14 @@ ms.locfileid: "81299953"
   
  이 수준의 함수는 핵심 인터페이스 규칙 및 트랜잭션 지원과 같은 추가 기능을 제공 합니다.  
   
-|API 함수|참고|  
+|API 함수|메모|  
 |------------------|-----------|  
 |**SQLColumns**|지정 된 테이블의 열 목록에 해당 하는 테이블의 결과 집합을 만듭니다. 공용 동의어에 대 한 열을 요청 하는 경우 SYNONYMCOLUMNS 연결 특성을 설정 하 고 빈 문자열을 *Sztableowner* 인수로 지정 해야 합니다. 공용 동의어에 대 한 열을 반환 하는 경우 드라이버는 테이블 이름 열을 빈 문자열로 설정 합니다. 결과 집합에는 각 행의 끝에 추가 열 서 수 위치가 포함 됩니다. 이 값은 테이블에서 열의 서 수 위치입니다.|  
 |**SQLDriverConnect**|기존 데이터 원본에 연결 합니다. 자세한 내용은 [연결 문자열 형식 및 특성](../../odbc/microsoft/connection-string-format-and-attributes.md)을 참조 하세요.|  
 |**SQLGetConnectOption**|연결 옵션의 현재 설정을 반환 합니다. 이 함수는 부분적으로 지원 됩니다. 드라이버는 *foption* 인수에 대 한 모든 값을 지원 하지만 [SQL_TXN_ISOLATION](../../odbc/microsoft/connect-options.md) *foption* 인수에 대 한 일부 *vparam* 값은 지원 하지 않습니다. 자세한 내용은 [Connect Options](../../odbc/microsoft/connect-options.md)를 참조 하세요.|  
 |**SQLGetData**|지정 된 결과 집합의 현재 레코드에서 단일 필드의 값을 검색 합니다.|  
 |**SQLGetFunctions**|지원 되는 모든 함수에 대해 TRUE를 반환 합니다. 드라이버 관리자에 의해 구현 됩니다.|  
-|**SQLGetInfo**|Oracle 용 ODBC 드라이버 및 연결 핸들과 연결 된 데이터 원본에 대 한 SQLHDBC, SQLUSMALLINT \*, SQLPOINTER, SQLPOINTER 및 sqlpointer를 비롯 한 *정보를 반환 합니다.*|  
+|**SQLGetInfo**|\*Oracle 용 ODBC 드라이버 및 연결 핸들과 연결 된 데이터 원본에 대 한 SQLHDBC, SQLUSMALLINT, SQLPOINTER, sqlpointer 및 SQLPOINTER를 비롯 한 *정보를 반환*합니다.|  
 |**SQLGetStmtOption**|문 옵션의 현재 설정을 반환 합니다. 자세한 내용은 [문 옵션](../../odbc/microsoft/statement-options.md)을 참조 하세요.|  
 |**SQLGetTypeInfo**|데이터 원본에서 지 원하는 데이터 형식에 대 한 정보를 반환 합니다. 드라이버는 SQL 결과 집합의 정보를 반환 합니다.|  
 |**SQLParamData**|**Sqlputdata** 와 함께 사용 되어 문 실행 시 매개 변수 데이터를 지정 합니다.|  

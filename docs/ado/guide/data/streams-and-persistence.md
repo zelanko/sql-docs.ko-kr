@@ -1,4 +1,5 @@
 ---
+description: 스트림 및 지속성
 title: 스트림 및 지 속성 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ad5bf52c-fd10-4cfa-bf7d-fcedcaa41eea
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3e7c47c668bc2b64a511e316396da913d5dcb930
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 869c5ef7380c315b60d2cbf6ad11f0cf638a0d7f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760759"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452775"
 ---
 # <a name="streams-and-persistence"></a>스트림 및 지속성
 [레코드](../../../ado/reference/ado-api/recordset-object-ado.md) 집합 개체 [Save](../../../ado/reference/ado-api/save-method.md) 메서드는 파일에 **레코드 집합** 을 저장 하거나 *유지*하며, [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) 메서드는 해당 파일에서 **레코드 집합** 을 복원 합니다.  
@@ -104,7 +105,7 @@ Set rs = nothing
   
  RDS [DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) [URL](../../../ado/reference/rds-api/url-property-rds.md)의 새 속성은 **레코드 집합**을 생성 하는 .asp 페이지를 가리킵니다. 즉, 서버 쪽 [DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) 개체 또는 비즈니스 개체를 작성 하는 사용자를 사용 하 여 RDS 없이 **레코드 집합** 개체를 가져올 수 있습니다. 이렇게 하면 RDS 프로그래밍 모델을 크게 간소화할 것입니다.  
   
- 서버 쪽 코드, 명명 된https://server/directory/recordset.asp:  
+ 서버 쪽 코드, 명명 된 https://server/directory/recordset.asp:  
   
 ```  
 <%  

@@ -1,4 +1,5 @@
 ---
+description: Always Encrypted를 사용하여 데이터베이스 백업 및 복원
 title: Always Encrypted를 사용하여 데이터베이스 백업 및 복원 | Microsoft Docs
 ms.custom: ''
 ms.date: 10/30/2019
@@ -10,12 +11,12 @@ ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bb529b9cc518cd7802dfdbbddba8b88e399dbcba
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ff78b0f657e70a16051531f1a0bea3fdc5cfe7d3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85627382"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475523"
 ---
 # <a name="backup-and-restore-databases-using-always-encrypted"></a>Always Encrypted를 사용하여 데이터베이스 백업 및 복원 
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "85627382"
 다른 서버 또는 다른 이름으로 데이터베이스를 복원하는 경우 두 데이터베이스의 키가 동일하기 때문에 애플리케이션에서 대상 데이터베이스의 암호화된 데이터를 쿼리할 수 있도록 특별한 작업을 수행할 필요가 없습니다.
 
 데이터베이스를 백업 및 복원하는 방법에 대한 자세한 내용은 다음을 참조하세요.
-- [백업 개요(SQL Server)](../../backup-restore/backup-overview-sql-server.md)
+- [Backup Overview (SQL Server)](../../backup-restore/backup-overview-sql-server.md)
 - [데이터베이스를 관리되는 인스턴스로 복원](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-get-started-restore)
 
 ## <a name="next-steps"></a>다음 단계

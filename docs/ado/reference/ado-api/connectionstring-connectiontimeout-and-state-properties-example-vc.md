@@ -1,4 +1,5 @@
 ---
+description: ConnectionString, ConnectionTimeout 및 State 속성 예제 (VC + +)
 title: 연결 속성 예제 (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: c6bd2609-4c49-462f-a1aa-7bee0f615adb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3f70a5e98a34811af2b6d2b173da3f6c4215682d
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 4b0281b569a6bfaf4f28d6958011ab3efacb4221
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762644"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444465"
 ---
 # <a name="connectionstring-connectiontimeout-and-state-properties-example-vc"></a>ConnectionString, ConnectionTimeout 및 State 속성 예제 (VC + +)
 이 예에서는 [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) 속성을 사용 하 여 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체를 여는 다양 한 방법을 보여 줍니다. 또한 [ConnectionTimeout](../../../ado/reference/ado-api/connectiontimeout-property-ado.md) 속성을 사용 하 여 연결 제한 시간을 설정 하 고 [상태](../../../ado/reference/ado-api/state-property-ado.md) 속성을 사용 하 여 연결 상태를 확인 합니다. GetState 함수는이 프로시저를 실행 하는 데 필요 합니다.  

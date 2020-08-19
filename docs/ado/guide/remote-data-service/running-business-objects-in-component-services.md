@@ -1,4 +1,5 @@
 ---
+description: 구성 요소 서비스에서 비즈니스 개체 실행
 title: 구성 요소 서비스에서 비즈니스 개체 실행 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3077d0b6-42d6-4f10-8e5d-42e6204f1109
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f13e876cb5707b7e906235c5b12e5f019f7b5d60
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 52e90a1913a0500a174e335c178ea8a556d9659a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758999"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452015"
 ---
 # <a name="running-business-objects-in-component-services"></a>구성 요소 서비스에서 비즈니스 개체 실행
 > [!IMPORTANT]

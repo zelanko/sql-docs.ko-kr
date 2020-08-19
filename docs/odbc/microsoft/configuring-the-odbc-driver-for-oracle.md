@@ -1,4 +1,5 @@
 ---
+description: Oracle용 ODBC 드라이버 구성
 title: Oracle 용 ODBC 드라이버 구성 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0a5f827c-0b80-4627-85cb-f10292b9fb33
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1bbdbe36ed9e6f254e2b738479698bd9eece09f8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f53bf5efc66ad260c0184baf95a254313319da5d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81281373"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483676"
 ---
 # <a name="configuring-the-odbc-driver-for-oracle"></a>Oracle용 ODBC 드라이버 구성
 > [!IMPORTANT]  

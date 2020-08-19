@@ -1,4 +1,5 @@
 ---
+description: SQL Server Native Client에서 대량 복사 작업 수행
 title: 대량 복사 작업 수행 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ ms.assetid: 50d8456b-e6a1-4b25-bc7e-56946ed654a7
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e5047dda28d7d1540f1c69c9c2919aa031b8206c
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 4ddb2ace735188b86761257675a496bc95489b94
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247609"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498887"
 ---
 # <a name="performing-bulk-copy-operations-in-sql-server-native-client"></a>SQL Server Native Client에서 대량 복사 작업 수행 
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -1,4 +1,5 @@
 ---
+description: sp_syscollector_set_cache_directory(Transact-SQL)
 title: sp_syscollector_set_cache_directory (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: df56d5a5-8961-494f-a745-d752ca63805a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: dd2a18570770f8a7eeecc1fc9b15c7cacf3e3eb4
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: dd4f3a049a0433ed41c9ebb1f82f6f16f6222544
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892860"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469195"
 ---
 # <a name="sp_syscollector_set_cache_directory-transact-sql"></a>sp_syscollector_set_cache_directory(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +41,7 @@ sp_syscollector_set_cache_directory [ @cache_directory = ] 'cache_directory'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @cache_directory = ] 'cache_directory'`수집 된 데이터가 임시로 저장 되는 파일 시스템의 디렉터리입니다. *cache_directory* 은 **nvarchar (255)** 이며 기본값은 NULL입니다. 값을 지정하지 않으면 기본 임시 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 디렉터리가 사용됩니다.  
+`[ @cache_directory = ] 'cache_directory'` 수집 된 데이터가 임시로 저장 되는 파일 시스템의 디렉터리입니다. *cache_directory* 은 **nvarchar (255)** 이며 기본값은 NULL입니다. 값을 지정하지 않으면 기본 임시 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 디렉터리가 사용됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -53,7 +54,7 @@ sp_syscollector_set_cache_directory [ @cache_directory = ] 'cache_directory'
 ## <a name="permissions"></a>사용 권한  
  이 프로시저를 실행하려면 dc_admin(EXECUTE 권한 있음) 고정 데이터베이스 역할의 멤버 자격이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 데이터 수집기를 사용 하지 않도록 설정 하 고 데이터 수집기의 캐시 디렉터리를로 설정한 `D:\tempdata` 다음 데이터 수집기를 사용 하도록 설정 합니다.  
   
 ```sql  
@@ -68,7 +69,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;데이터 수집기 저장 프로시저](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
+ [데이터 수집기 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
  [sp_syscollector_set_cache_window&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-set-cache-window-transact-sql.md)  
   
   

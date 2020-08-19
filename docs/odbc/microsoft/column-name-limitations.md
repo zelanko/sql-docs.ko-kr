@@ -1,4 +1,5 @@
 ---
+description: 열 이름 제한 사항
 title: 열 이름 제한 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5a339f61-c52f-40ad-8deb-d785f72753d4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 41d973afdac360af114da41620997cad23a2c740
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 82cac260fc81ce5a2cfbbe3e4c3c0bdab5a47049
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81281383"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483696"
 ---
 # <a name="column-name-limitations"></a>열 이름 제한 사항
 열 이름에는 모든 유효한 문자 (예: 공백)를 사용할 수 있습니다. 문자, 숫자 및 밑줄을 제외한 모든 문자가 열 이름에 포함 되어 있으면 이름을 백슬래시 (')로 묶어 구분 해야 합니다.  

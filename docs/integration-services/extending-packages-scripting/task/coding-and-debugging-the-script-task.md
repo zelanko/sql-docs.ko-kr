@@ -1,4 +1,5 @@
 ---
+description: 스크립트 태스크 코딩 및 디버깅
 title: 스크립트 태스크 코딩 및 디버깅 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 687c262f-fcab-42e8-92ae-e956f3d92d69
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2ccf1b65fdbdd5493dd5e62e9e19b90fb72d8746
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 203c87b39165330d7d58106c4a4d888af11e9751
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915185"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430285"
 ---
 # <a name="coding-and-debugging-the-script-task"></a>스크립트 태스크 코딩 및 디버깅
 
@@ -214,7 +215,7 @@ To open Help, press F1.
   
  다음 표에는 전역 **Dts** 개체를 통해 스크립트 태스크 코드에 노출되는 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel> 클래스의 주요 공용 멤버가 나와 있습니다. 이 섹션의 항목에서는 이러한 멤버의 사용 방법을 보다 자세히 설명합니다.  
   
-|멤버|목적|  
+|멤버|용도|  
 |------------|-------------|  
 |<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Connections%2A>|패키지에 정의된 연결 관리자에 액세스할 수 있게 해 줍니다.|  
 |<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Events%2A>|스크립트 태스크에서 오류, 경고 및 정보 메시지를 발생시킬 수 있게 해 주는 이벤트 인터페이스를 제공합니다.|  

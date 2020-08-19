@@ -1,4 +1,5 @@
 ---
+description: MemberValue(MDX)
 title: MemberValue (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 4db81766060f8f1afde2241d0c89407ad3cbb864
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: aaa7592c5f2d3413a63fbc0867bb8857e5d87d73
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68001408"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483796"
 ---
 # <a name="membervalue-mdx"></a>MemberValue(MDX)
 
@@ -31,7 +32,7 @@ Member_Expression.MemberValue
  *Member_Expression*  
  멤버로 평가되는 유효한 MDX 식입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
  반환되는 멤버 값에는 다음 정보가 포함되며 반환 값에 표시되는 순서대로 나열됩니다.  
   
 -   정의된 경우 값 바인딩  

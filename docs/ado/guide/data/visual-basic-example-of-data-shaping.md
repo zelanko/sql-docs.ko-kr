@@ -1,4 +1,5 @@
 ---
+description: 데이터 셰이핑의 Visual Basic 예제
 title: 데이터 셰이핑의 Visual Basic 예 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d95dd499-19e2-4ce7-b16e-f56a04a9519c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1c370f09ada37f67e32231e58c70d2bb0bfd4c51
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: da0fc3bcc0af5aa4c4477c91f66e2ce1f2b2d7e0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763024"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452565"
 ---
 # <a name="visual-basic-example-of-data-shaping"></a>데이터 셰이핑의 Visual Basic 예제
 ```  

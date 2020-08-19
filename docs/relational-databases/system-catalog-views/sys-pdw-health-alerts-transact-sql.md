@@ -1,4 +1,5 @@
 ---
+description: sys. pdw_health_alerts (Transact-sql)
 title: sys. pdw_health_alerts (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -10,12 +11,12 @@ ms.assetid: 49c01e5f-ee47-41a0-871d-35a759f50851
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: f28f48d8530111e2de12bbb6f075b69147ad1cff
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 3b2da23d973042638f39e52ed7c1173422a97eeb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396047"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475412"
 ---
 # <a name="syspdw_health_alerts-transact-sql"></a>sys. pdw_health_alerts (Transact-sql)
 [!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "87396047"
 |alert_name|**nvarchar(255)**|경고의 이름입니다.|NOT NULL|  
 |state|**nvarchar(32)**|경고의 상태입니다.|NOT NULL<br /><br /> 가능한 값은 다음과 같습니다.<br /><br /> 주기와<br /><br /> 'NonOperational'<br /><br /> 성능<br /><br /> 오류가|  
 |severity|**nvarchar(32)**|경고의 심각도입니다.|NOT NULL<br /><br /> 가능한 값은 다음과 같습니다.<br /><br /> 위해서<br /><br /> 내용의<br /><br /> 메시지가|  
-|형식|**nvarchar(32)**|경고의 유형입니다.|NOT NULL<br /><br /> 가능한 값은 다음과 같습니다.<br /><br /> StatusChange-장치 상태가 변경 되었습니다.<br /><br /> Threshold-값이 임계값을 초과 했습니다.|  
+|type|**nvarchar(32)**|경고의 유형입니다.|NOT NULL<br /><br /> 가능한 값은 다음과 같습니다.<br /><br /> StatusChange-장치 상태가 변경 되었습니다.<br /><br /> Threshold-값이 임계값을 초과 했습니다.|  
 |description|**nvarchar(4000)**|경고에 대한 설명입니다.|NOT NULL|  
 |condition(조건)|**nvarchar(255)**|Type = Threshold 인 경우 사용 됩니다. 경고 임계값을 계산 하는 방법을 정의 합니다.|NULL|  
 |상태|**nvarchar(32)**|경고 상태|NULL|  

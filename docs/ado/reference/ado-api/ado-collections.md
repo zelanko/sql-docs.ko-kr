@@ -1,4 +1,5 @@
 ---
+description: ADO 컬렉션
 title: ADO 컬렉션 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b5e1d26d-b41d-4e35-8c7c-972426473dfb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c19252e14ba5a04329c9cdc1c38b5ee6398b7874
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 7fb960d7539dd2d47be6eb2aad424808d44db10d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242903"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451475"
 ---
 # <a name="ado-collections"></a>ADO 컬렉션
 이러한 컬렉션과 ADO 개체 간의 관계는 [Ado 개체 모델](../../../ado/reference/ado-api/ado-object-model.md)에 표시 됩니다.  

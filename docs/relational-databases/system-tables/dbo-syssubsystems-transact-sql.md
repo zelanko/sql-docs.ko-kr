@@ -1,4 +1,5 @@
 ---
+description: dbo.syssubsystems(Transact-SQL)
 title: dbo.sys하위 시스템 (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 114b3d55-1ad6-4777-b868-8ef0c86ba596
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7de71454c59ede4bfea182ea605a0e9d59da2c00
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f208311142cd5f58efdbda884d0e336de70e37c2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890365"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469111"
 ---
 # <a name="dbosyssubsystems-transact-sql"></a>dbo.syssubsystems(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,7 +49,7 @@ ms.locfileid: "85890365"
   
 ## <a name="see-also"></a>참고 항목  
  [dbo.sysproxysubsystem &#40;Transact-sql&#41;](../../relational-databases/system-tables/dbo-sysproxysubsystem-transact-sql.md)   
- [Transact-sql&#41;&#40;dbo.sys프록시](../../relational-databases/system-tables/dbo-sysproxies-transact-sql.md)   
+ [ Transact-sql&#41;&#40;dbo.sys프록시 ](../../relational-databases/system-tables/dbo-sysproxies-transact-sql.md)   
  [sys.messages&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)  
   
   

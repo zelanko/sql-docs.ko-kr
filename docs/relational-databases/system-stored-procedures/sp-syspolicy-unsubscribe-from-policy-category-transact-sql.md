@@ -1,4 +1,5 @@
 ---
+description: sp_syspolicy_unsubscribe_from_policy_category(Transact-SQL)
 title: sp_syspolicy_unsubscribe_from_policy_category (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 47abab63-e605-40e8-a54e-2241e2e01afd
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: c1ec70cea37a8cfcb0b017a98989d00c445860d8
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 4591c3b20702923d7f9ea418951b8510977dc840
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891467"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469162"
 ---
 # <a name="sp_syspolicy_unsubscribe_from_policy_category-transact-sql"></a>sp_syspolicy_unsubscribe_from_policy_category(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,7 @@ sp_syspolicy_unsubscribe_from_policy_category [ @policy_category = ] 'policy_cat
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @policy_category = ] 'policy_category'`삭제할 정책 범주 구독의 이름입니다. *policy_category* 는 **sysname**이며 필수입니다.  
+`[ @policy_category = ] 'policy_category'` 삭제할 정책 범주 구독의 이름입니다. *policy_category* 는 **sysname**이며 필수입니다.  
   
  *Policy_category*에 대 한 값을 가져오려면 msdb.dbo.syspolicy_policy_categories 시스템 뷰를 쿼리 합니다.  
   
@@ -52,7 +53,7 @@ sp_syspolicy_unsubscribe_from_policy_category [ @policy_category = ] 'policy_cat
 ## <a name="permissions"></a>사용 권한  
  db_owner 고정 데이터베이스 역할의 멤버 자격이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 지정한 데이터베이스의 'Finance' 정책 범주에 대한 구독을 삭제합니다.  
   
 ```  
@@ -64,7 +65,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;정책 기반 관리 저장 프로시저](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;정책 기반 관리 저장 프로시저 ](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
  [Transact-sql&#41;sp_syspolicy_subscribe_to_policy_category &#40;](../../relational-databases/system-stored-procedures/sp-syspolicy-subscribe-to-policy-category-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: ~(비트 NOT)(Transact-SQL)
 title: ~(비트 NOT)(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/10/2017
@@ -23,12 +24,12 @@ ms.assetid: 02da8016-f6c0-41ae-8d59-33eaa02bfc95
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5cb8dc14764feeeb8ebc83f424d1b1e979e160e2
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 498c2a81c0d7b94cd6288c24165f051bfc073fbf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915819"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459487"
 ---
 # <a name="-bitwise-not-transact-sql"></a>~(비트 NOT)(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -65,9 +66,9 @@ ms.locfileid: "86915819"
  **~** 비트 연산자는 각 비트를 차례로 가져와서 *expression*에 대한 비트 논리 NOT을 수행합니다. *expression*의 값이 0이면 결과 집합의 비트가 1로 설정되며, 그렇지 않으면 결과 비트가 0 값으로 지워집니다. 즉, 1은 0으로 변경되고 0은 1로 변경됩니다.  
   
 > [!IMPORTANT]  
->  비트 연산을 수행할 때는 연산에 사용되는 식의 스토리지 길이가 중요합니다. 값을 저장할 때는 동일한 바이트 수를 사용하는 것이 좋습니다. 예를 들어 5(10진수 값)를 **tinyint**, **smallint** 또는 **int**로 저장하면 다른 바이트 수로 저장되는 값을 생성합니다. 즉 **tinyint**는 1바이트, **smallint**는 2바이트, **int**는 4바이트를 사용하는 데이터를 저장합니다. 따라서 **int** 10진수 값에 대해 비트 연산을 수행하면, 특히 **~** (비트 NOT) 연산자가 사용될 때 직접 이진 또는 16진수 변환을 사용하는 것과 다른 결과를 생성할 수 있습니다. 비트 NOT 연산은 길이가 짧은 변수에서 발생할 수 있습니다. 이 경우 길이가 짧은 변수를 길이가 긴 데이터 형식 변수로 변환할 때 상위 8비트는 예상된 값으로 설정되지 않을 수 있습니다. 작은 데이터 형식 변수를 큰 데이터 형식 변수로 변환한 다음 그 결과에서 NOT 연산을 수행하는 것이 좋습니다.  
+>  비트 연산을 수행할 때는 연산에 사용되는 식의 스토리지 길이가 중요합니다. 값을 저장할 때는 동일한 바이트 수를 사용하는 것이 좋습니다. 예를 들어 5(10진수 값)를 **tinyint**, **smallint** 또는 **int**로 저장하면 다른 바이트 수로 저장되는 값을 생성합니다. 즉 **tinyint**는 1바이트, **smallint**는 2바이트, **int**는 4바이트를 사용하는 데이터를 저장합니다. 따라서 **int** 10진수 값에 대해 비트 연산을 수행하면, 특히 **~**(비트 NOT) 연산자가 사용될 때 직접 이진 또는 16진수 변환을 사용하는 것과 다른 결과를 생성할 수 있습니다. 비트 NOT 연산은 길이가 짧은 변수에서 발생할 수 있습니다. 이 경우 길이가 짧은 변수를 길이가 긴 데이터 형식 변수로 변환할 때 상위 8비트는 예상된 값으로 설정되지 않을 수 있습니다. 작은 데이터 형식 변수를 큰 데이터 형식 변수로 변환한 다음 그 결과에서 NOT 연산을 수행하는 것이 좋습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예제에서는 **int** 데이터 형식을 사용하여 테이블을 만들어 값을 저장하고 한 행에 두 값을 삽입합니다.  
   
 ```  

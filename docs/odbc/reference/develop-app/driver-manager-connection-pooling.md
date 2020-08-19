@@ -1,4 +1,5 @@
 ---
+description: 드라이버 관리자 연결 풀링
 title: 드라이버 관리자 연결 풀링 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ee95ffdb-5aa1-49a3-beb2-7695b27c3df9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 84ccc0db8f9a54eecc8337ca5efbc7b4c4baa239
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 397aed6cd2b2066bd73343ad861f0212e8357570
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305824"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483086"
 ---
 # <a name="driver-manager-connection-pooling"></a>드라이버 관리자 연결 풀링
 연결 풀링을 사용 하면 응용 프로그램에서 각 사용을 위해 다시 설정 하지 않아도 되는 연결 풀의 연결을 사용할 수 있습니다. 연결이 만들어지고 풀에 배치 되 면 응용 프로그램은 전체 연결 프로세스를 수행 하지 않고 해당 연결을 다시 사용할 수 있습니다.  
@@ -30,7 +31,7 @@ ms.locfileid: "81305824"
  연결 풀링 아키텍처를 사용 하면 성능 향상 외에도 단일 프로세스로 여러 구성 요소에서 환경과 연결 된 연결을 사용할 수 있습니다. 즉, 동일한 프로세스의 독립 실행형 구성 요소가 서로를 인식 하지 않고도 서로 상호 작용할 수 있습니다. 연결 풀의 연결은 여러 구성 요소에서 반복적으로 사용할 수 있습니다.  
   
 > [!NOTE]
->  ODBC 2를 사용 하는 ODBC 응용 프로그램에서 연결 풀링을 사용할 수 있습니다. *x* 동작은 응용 프로그램이 *SQLSetEnvAttr*를 호출할 수 있는 경우에만 가능 합니다. 연결 풀링을 사용 하는 경우 응용 프로그램은 데이터베이스 \< *이름을* 변경 하는 것과 같이 데이터베이스 또는 데이터베이스의 컨텍스트를 변경 하는 SQL 문을 실행 하지 않아야 합니다. 그러면 데이터 원본에서 사용 하는 카탈로그를 변경 하는>.  
+>  ODBC 2를 사용 하는 ODBC 응용 프로그램에서 연결 풀링을 사용할 수 있습니다. *x* 동작은 응용 프로그램이 *SQLSetEnvAttr*를 호출할 수 있는 경우에만 가능 합니다. 연결 풀링을 사용 하는 경우 응용 프로그램은 데이터 원본에서 사용 하는 카탈로그를 변경 하는를 변경 하는 것과 같이 데이터베이스 또는 데이터베이스의 컨텍스트를 변경 하는 SQL 문을 실행 해서는 안 \<*database name*> 됩니다.  
 
 
  ODBC 드라이버는 완전히 스레드로부터 안전 해야 하며 연결 풀링을 지원 하기 위해 연결에 스레드 선호도가 없어야 합니다. 즉, 드라이버는 언제 든 지 모든 스레드에 대 한 호출을 처리할 수 있으며 한 스레드에서 연결 하 여 다른 스레드에서 연결을 사용 하 고 세 번째 스레드에서 연결을 끊을 수 있습니다.  
@@ -82,7 +83,7 @@ ms.locfileid: "81305824"
 ## <a name="driver-aware-connection-pooling"></a>드라이버 인식 연결 풀링  
  Windows 8부터 ODBC 드라이버는 풀의 연결을 보다 효율적으로 사용할 수 있습니다. 자세한 내용은 [드라이버 인식 연결 풀링](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md)을 참조 하세요.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [데이터 원본 또는 드라이버에 연결](../../../odbc/reference/develop-app/connecting-to-a-data-source-or-driver.md)   
  [ODBC 드라이버 개발](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   
  [Microsoft 데이터 액세스 구성 요소의 풀링](https://go.microsoft.com/fwlink/?LinkId=120776)

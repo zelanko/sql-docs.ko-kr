@@ -1,4 +1,5 @@
 ---
+description: sysmail_configure_sp(Transact-SQL)
 title: sysmail_configure_sp (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 73b33c56-2bff-446a-b495-ae198ad74db1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: df5b364408b012a186ca090b6d3a6d7de77119cf
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: 28506e30d5f2d253410cca319f22ae620a2c33a0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87122429"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469152"
 ---
 # <a name="sysmail_configure_sp-transact-sql"></a>sysmail_configure_sp(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -74,7 +75,7 @@ sysmail_configure_sp [ [ @parameter_name = ] 'parameter_name' ]
 ## <a name="permissions"></a>사용 권한  
  이 프로시저에 대 한 실행 권한은 기본적으로 **sysadmin** 고정 서버 역할의 멤버로 사용 됩니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  **1. 각 계정을 10번씩 다시 시도하도록 데이터베이스 메일 설정**  
   
  다음 예에서는 계정에 연결할 수 없는 것으로 간주하기 전에 각 계정을 10번씩 다시 시도하도록 데이터베이스 메일을 설정합니다.  
@@ -96,6 +97,6 @@ EXECUTE msdb.dbo.sysmail_configure_sp
 ## <a name="see-also"></a>참고 항목  
  [데이터베이스 메일](../../relational-databases/database-mail/database-mail.md)   
  [Transact-sql&#41;sysmail_help_configure_sp &#40;](../../relational-databases/system-stored-procedures/sysmail-help-configure-sp-transact-sql.md)   
- [Transact-sql&#41;&#40;저장 프로시저 데이터베이스 메일](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [Transact-sql&#41;&#40;저장 프로시저 데이터베이스 메일 ](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

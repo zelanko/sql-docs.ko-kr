@@ -1,4 +1,5 @@
 ---
+description: Var(MDX)
 title: Var (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 96bb307607792a3846ee6566027457a05ce3b905
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 46aad9a9b7c328d23680df3c74bcf09a465b868d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68037931"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483716"
 ---
 # <a name="var-mdx"></a>Var(MDX)
 
@@ -39,7 +40,7 @@ Var(Set_Expression [ ,Numeric_Expression ] )
   
  **Var** 함수는 비편향 모집단 수식을 사용 하 고, [VarP](../mdx/varp-mdx.md) 함수는 편향 모집단 수식을 사용 합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [MDX 함수 참조&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

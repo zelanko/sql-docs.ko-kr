@@ -1,4 +1,5 @@
 ---
+description: SQL Server Native Client의 많은 CLR 사용자 정의 형식
 title: 큰 CLR 사용자 정의 형식 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -12,12 +13,12 @@ ms.assetid: b65eb61d-ccf6-49c0-98e7-9a4ef4b2f790
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 78928140c3aed95662535410501622e9554fc2d0
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 9b841020b73ea7dde90eca5a0b693bb1f943fa4e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245770"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498926"
 ---
 # <a name="large-clr-user-defined-types-in-sql-server-native-client"></a>SQL Server Native Client의 많은 CLR 사용자 정의 형식
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

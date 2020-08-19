@@ -1,4 +1,5 @@
 ---
+description: 다차원 스키마 및 데이터 개요
 title: 다차원 스키마 및 데이터 개요 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ce37fa06-c581-4d80-9a9b-c3aa66408909
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a4a2f6dbd2c5d075bb888e61bb01e1094c8ef5c0
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 449bfe5056cdf96f86b5371731c2d1c0b00ba31e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82748086"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452425"
 ---
 # <a name="overview-of-multidimensional-schemas-and-data"></a>다차원 스키마 및 데이터 개요
 ## <a name="understanding-multidimensional-schemas"></a>다차원 스키마 이해  
@@ -58,15 +59,15 @@ Hamburg, Munich, Stuttgart}
   
  각 수준에는 다음과 같은 멤버 집합이 있습니다.  
   
--   전 세계`= {All}`  
+-   전 세계 `= {All}`  
   
--   대륙`= {North America, Europe}`  
+-   대륙 `= {North America, Europe}`  
   
--   서양`= {Canada, USA, UK, Germany}`  
+-   서양 `= {Canada, USA, UK, Germany}`  
   
--   영역만`= {Canada-East, Canada-West, USA-NE, USA-NW, USA-SE, USA-SW, England, Ireland, Scotland, Wales, Germany-North, Germany-South}`  
+-   영역만 `= {Canada-East, Canada-West, USA-NE, USA-NW, USA-SE, USA-SW, England, Ireland, Scotland, Wales, Germany-North, Germany-South}`  
   
--   건설`= {Ottawa, Toronto, Vancouver, Calgary, Seattle, Boise, Los Angeles, Houston, Shreveport, Miami, Boston, New York, London, Dover, Glasgow, Edinburgh, Cardiff, Pembroke, Belfast, Derry, Berlin, Hamburg, Munich, Stuttgart}`  
+-   건설 `= {Ottawa, Toronto, Vancouver, Calgary, Seattle, Boise, Los Angeles, Houston, Shreveport, Miami, Boston, New York, London, Dover, Glasgow, Edinburgh, Cardiff, Pembroke, Belfast, Derry, Berlin, Hamburg, Munich, Stuttgart}`  
   
 ### <a name="members"></a>멤버  
  계층의 리프 수준에 있는 멤버에는 자식이 없고 루트 수준의 멤버에는 부모가 없습니다. 다른 모든 멤버는 하나 이상의 부모 및 하나 이상의 자식을 가집니다. 예를 들어 Geography 차원에서 계층 트리의 부분 순회는 다음과 같은 부모-자식 관계를 생성 합니다.  

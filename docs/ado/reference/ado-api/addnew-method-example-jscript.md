@@ -1,4 +1,5 @@
 ---
+description: AddNew 메서드 예제(JScript)
 title: AddNew 메서드 예제 (JScript) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: eabdd278-6576-4be7-9315-fb79cb8ef678
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d3943b06e623eca2e90a3a5a3aeefaf2dede83bb
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 3c1e4ca8f4019153620494a3b6d945d9fdb75338
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760639"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451575"
 ---
 # <a name="addnew-method-example-jscript"></a>AddNew 메서드 예제(JScript)
 이 예제에서는 [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) 메서드를 사용 하 여 지정 된 이름의 새 레코드를 만듭니다. 다음 코드를 잘라내어 메모장 또는 다른 텍스트 편집기에 붙여 넣고 **AddNewJS**로 저장 합니다.  

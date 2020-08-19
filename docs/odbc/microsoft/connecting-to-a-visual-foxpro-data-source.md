@@ -1,4 +1,5 @@
 ---
+description: Visual FoxPro 데이터 원본에 연결
 title: Visual FoxPro 데이터 원본에 연결 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: dfd404aa-c455-41b5-b69d-b6739575033c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9ee35a5d8c6eaf3e1800097dffcd3fab079ff8db
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e9aef19b35a6dce2b6b1fa21b3878d2b8f219158
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81281293"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483656"
 ---
 # <a name="connecting-to-a-visual-foxpro-data-source"></a>Visual FoxPro 데이터 원본에 연결
 Microsoft Office 응용 프로그램을 사용 하거나 SQL API를 사용 하 여 Visual FoxPro 데이터 원본에 연결할 수 있습니다.  

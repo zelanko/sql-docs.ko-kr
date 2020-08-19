@@ -1,4 +1,5 @@
 ---
+description: SQL 행 수(Visual FoxPro ODBC 드라이버)
 title: SQL 행 개수 (Visual FoxPro ODBC 드라이버) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9d851f8d-94ca-47ae-a4ad-53863be2d404
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6c4ac1e4d780285e80fd22f3adebb042c20d8e78
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9136b52c6222503dde123c6b678f8de17f6bfc8f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300671"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483416"
 ---
 # <a name="sql-row-count-visual-foxpro-odbc-driver"></a>SQL 행 수(Visual FoxPro ODBC 드라이버)
 > [!NOTE]  

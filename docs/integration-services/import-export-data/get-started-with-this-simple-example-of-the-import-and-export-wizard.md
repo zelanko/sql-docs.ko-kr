@@ -1,4 +1,5 @@
 ---
+description: 가져오기 및 내보내기 마법사의 간단한 예제 시작
 title: 가져오기 및 내보내기 마법사의 간단한 예제 시작 | Microsoft Docs
 ms.custom: ''
 ms.date: 02/15/2017
@@ -9,12 +10,12 @@ ms.topic: quickstart
 ms.assetid: ea3db39b-698b-4a74-8eb8-21dc7252dc1a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 58225c6728915c5b9dcd73937b2bd645bd08950f
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 0f2d241fa54c59eed331c1377f828aec980691e1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86910229"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430205"
 ---
 # <a name="get-started-with-this-simple-example-of-the-import-and-export-wizard"></a>가져오기 및 내보내기 마법사의 간단한 예제 시작
 
@@ -155,7 +156,7 @@ SQL Server Management Studio에서 마법사가 SQL Server에 만든 새 대상 
 
 ## <a name="learn-more"></a>자세한 정보  
 마법사의 작동 방식에 대해 자세히 알아봅니다.
--   **마법사에 대해 자세히 알아보기.** 마법사에 대한 개요를 살펴보려면 [SQL Server 가져오기 및 내보내기 마법사를 사용하여 데이터 가져오기 및 내보내기](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)를 참조하세요.
+-   **마법사에 대해 자세히 알아봅니다.** 마법사에 대한 개요를 살펴보려면 [SQL Server 가져오기 및 내보내기 마법사를 사용하여 데이터 가져오기 및 내보내기](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)를 참조하세요.
 
 -   **마법사의 단계에 대해 자세히 알아보기** - 마법사의 단계에 대한 정보를 찾으려면 [SQL Server 가져오기 및 내보내기 마법사의 단계](../../integration-services/import-export-data/steps-in-the-sql-server-import-and-export-wizard.md)의 목록에서 원하는 페이지를 선택하세요. 또한 마법사의 각 페이지마다 별도의 설명서 페이지가 있습니다.
 

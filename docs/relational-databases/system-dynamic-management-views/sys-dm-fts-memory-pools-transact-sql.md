@@ -1,4 +1,5 @@
 ---
+description: sys.dm_fts_memory_pools(Transact-SQL)
 title: sys. dm_fts_memory_pools (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/29/2017
@@ -20,12 +21,12 @@ ms.assetid: 24747239-cd78-4d55-a00a-19233a457f42
 author: pmasl
 ms.author: pelopes
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0f14acaaf8e4f92a603270619c181e9d97108c5d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 720c3a3727f332c289b08480f6367babc0213ad4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734518"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489890"
 ---
 # <a name="sysdm_fts_memory_pools-transact-sql"></a>sys.dm_fts_memory_pools(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -50,7 +51,7 @@ ms.locfileid: "85734518"
   
 ## <a name="relationship-cardinalities"></a>관계 카디널리티  
   
-|시작|대상|관계|  
+|보낸 사람|대상|관계|  
 |----------|--------|------------------|  
 |dm_fts_memory_buffers.pool_id|dm_fts_memory_pools.pool_id|다 대 일|  
   

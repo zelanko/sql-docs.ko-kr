@@ -1,4 +1,5 @@
 ---
+description: 원격 데이터 액세스에 대한 솔루션
 title: 원격 데이터 액세스를 위한 솔루션 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: d311cc67-7db7-4c43-9590-d465564695e4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bc2addcc74551e754218f200ae977e6641c214b9
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 27217324754143bcb1933bc1b9b139dccc7dee45
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758949"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451965"
 ---
 # <a name="solutions-for-remote-data-access"></a>원격 데이터 액세스에 대한 솔루션
 ## <a name="the-issue"></a>문제  

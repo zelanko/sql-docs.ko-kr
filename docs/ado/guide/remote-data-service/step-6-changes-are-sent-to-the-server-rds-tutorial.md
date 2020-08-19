@@ -1,4 +1,5 @@
 ---
+description: '6단계: 서버에 변경 내용이 보내집니다(RDS 자습서).'
 title: '6 단계: 서버에 변경 내용 전송 (RDS 자습서) | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: b1e927d6-7d50-4978-9eef-045043cdce7a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2094562f03f768ad6c98feccd0ed4a1e932a8fca
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: e2a52faceafdde92acb3aed1e2a1b765594777e1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764644"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451905"
 ---
 # <a name="step-6-changes-are-sent-to-the-server-rds-tutorial"></a>6단계: 서버에 변경 내용이 보내집니다(RDS 자습서).
 **레코드 집합** 개체를 편집 하는 경우 변경 내용 (즉, 추가, 변경 또는 삭제 된 행)을 서버에 다시 보낼 수 있습니다.  
@@ -34,7 +35,7 @@ rs.   ' The equivalent of
 ...  
 ```  
   
- **A 부** 이 경우에는 RDS만 사용 했다고 가정 [합니다. ](../../../ado/reference/rds-api/datacontrol-object-rds.md)이제는 **레코드 집합** 개체가 RDS와 연결 되어 있습니다 **. DataControl**. [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md) 메서드는 [서버](../../../ado/reference/rds-api/server-property-rds.md) 및 [연결](../../../ado/reference/rds-api/connect-property-rds.md) 속성이 여전히 설정 된 경우 **레코드 집합** 개체에 대 한 변경 내용으로 데이터 원본을 업데이트 합니다.  
+ **A 부** 이 경우에는 RDS만 사용 했다고 가정 [합니다. ](../../../ado/reference/rds-api/datacontrol-object-rds.md) 이제는 **레코드 집합** 개체가 RDS와 연결 되어 있습니다 **. DataControl**. [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md) 메서드는 [서버](../../../ado/reference/rds-api/server-property-rds.md) 및 [연결](../../../ado/reference/rds-api/connect-property-rds.md) 속성이 여전히 설정 된 경우 **레코드 집합** 개체에 대 한 변경 내용으로 데이터 원본을 업데이트 합니다.  
   
 ```vb
 Sub RDSTutorial6A()  

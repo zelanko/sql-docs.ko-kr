@@ -1,4 +1,5 @@
 ---
+description: 시스템 함수(Transact-SQL)
 title: 시스템 함수(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9cd7618d-6bd5-4f26-9351-87219b44775f
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 1103bd992b54032864a24c281271f06187118c8e
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 2f72c9b307a56574a07fb64b1ebccb35fb246e9c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87248501"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459575"
 ---
 # <a name="system-functions-transact-sql"></a>시스템 함수(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,4 +1,5 @@
 ---
+description: 복제 모니터로 성능 모니터링
 title: 복제 모니터로 성능 모니터링 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,12 +21,12 @@ ms.assetid: f212397d-1bfd-496b-a246-668952891d09
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: d98498fa2f63ef4e4c3cd977c7612fd3277fbf91
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: a881bfd928d8a8d1c84d85ea8d226bc2751126a1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918719"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498747"
 ---
 # <a name="monitor-performance-with-replication-monitor"></a>복제 모니터로 성능 모니터링
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -61,7 +62,7 @@ ms.locfileid: "86918719"
 ## <a name="view-performance-measurements"></a>성능 측정값 보기  
  복제 모니터는 게시에 대해서는 **현재 평균 성능** 및 **현재 가장 낮은 성능** 열에, 구독에 대해서는 **성능** 열에 트랜잭션 복제 및 병합 복제에 대한 성능 품질 값을 표시합니다. 값은 다음과 같습니다.  
   
--   최고  
+-   우수  
   
 -   좋음  
   
@@ -75,7 +76,7 @@ ms.locfileid: "86918719"
   
 -   트랜잭션 복제의 경우 성능 품질은 대기 시간 임계값으로 결정됩니다. 임계값을 설정하지 않으면 값이 표시되지 않습니다. 다음 표에서는 임계값과 성능 품질 값의 상관 관계를 나타냅니다. 예를 들어 임계값이 60초로 설정되고 실제 대기 시간이 30초이면 대기 시간은 임계값의 50%이므로 값은 좋음이 됩니다.  
   
-    |최고|좋음|보통|나쁨|위험|  
+    |우수|좋음|보통|나쁨|위험|  
     |---------------|----------|----------|----------|--------------|  
     |0 – 34%|35 – 59%|60 – 84%|85 – 99%|100% +|  
   
@@ -83,7 +84,7 @@ ms.locfileid: "86918719"
   
      다음 표에서는 평균 성능과 성능 품질 값의 상관 관계를 나타냅니다. 예를 들어 LAN 연결에서 10개의 구독자가 초당 100개 행을 처리하는 평균 속도로 동기화하고 구독 중 하나가 초당 125개 행을 처리하는 속도로 동기화하는 경우 해당 구독자의 동기화 성능은 평균 125%가 되어 값은 좋음이 됩니다.  
   
-    |최고|좋음|보통|나쁨|  
+    |우수|좋음|보통|나쁨|  
     |---------------|----------|----------|----------|  
     |151+%|76 – 150%|26 – 75%|0 – 25%|  
   
@@ -100,6 +101,6 @@ ms.locfileid: "86918719"
   
 ## <a name="see-also"></a>참고 항목  
  [복제 모니터링](../../../relational-databases/replication/monitor/monitoring-replication.md)   
- [Set Thresholds and Warnings in Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)  
+ [복제 모니터에 임계값 및 경고 설정](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: 배포자 정보, 게시
 title: 배포자 정보, 게시 | Microsoft 문서
 ms.custom: ''
 ms.date: 11/20/2018
@@ -17,12 +18,12 @@ ms.assetid: 1f499277-7f12-42ba-8cf4-52b683434944
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 63d70982c38a84b4765331c4a978cc276fe749ac
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0e2cdb7832e97c575af79c322e1cd21d1d8f09f4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85653544"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498768"
 ---
 # <a name="distributor-information-publications"></a>배포자 정보, 게시
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -55,8 +56,8 @@ ms.locfileid: "85653544"
  **상태**  
  에이전트의 상태입니다. 다음 목록에서는 가능한 상태 값을 보여 줍니다.  
   
--   Error    
--   다시 시도    
+-   오류    
+-   재시도    
 -   실행 중    
 -   실행 중이 아님   
 -   시작한 적 없음  
@@ -70,7 +71,7 @@ ms.locfileid: "85653544"
  **구독**  
  [*SubscriberName*].[*Database*]와(과) 같은 형식의 구독 이름입니다.  
   
- **형식**  
+ **유형**  
  복제 유형(밀어넣기, 끌어오기 또는 익명)입니다.  
   
  **마지막 시작 시간**  
@@ -101,9 +102,9 @@ ms.locfileid: "85653544"
  **상태**  
  에이전트의 상태입니다. 다음 목록에서는 가능한 상태 값을 보여 줍니다.  
   
--   Error  
+-   오류  
   
--   다시 시도  
+-   재시도  
   
 -   실행 중  
   
@@ -120,7 +121,7 @@ ms.locfileid: "85653544"
  **구독**  
  [*SubscriberName*].[*Database*]와(과) 같은 형식의 구독 이름입니다.  
   
- **형식**  
+ **유형**  
  복제 유형(밀어넣기, 끌어오기 또는 익명)입니다.  
   
  **마지막 시작 시간**  

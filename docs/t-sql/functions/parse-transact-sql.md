@@ -1,4 +1,5 @@
 ---
+description: PARSE(Transact-SQL)
 title: PARSE(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/05/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6a2dbf10-f692-471b-9458-24d246963049
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 36649527ab73d15de4c811bcbe5c3234980e6a86
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 7dac50281c264412e288fe3fce25fda84d99b659
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111432"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459657"
 ---
 # <a name="parse-transact-sql"></a>PARSE(Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -49,7 +50,7 @@ PARSE ( string_value AS data_type [ USING culture ] )
  *data_type*  
  결과에 대해 요청된 데이터 형식을 나타내는 리터럴 값입니다.  
   
- *문화권*  
+ *culture*  
  *string_value*의 형식을 지정하는 데 사용되는 culture를 식별하는 선택적 문자열입니다.  
   
  *culture* 인수를 지정하지 않으면 현재 세션의 언어가 사용됩니다. 이 언어는 SET LANGUAGE 문을 사용하여 명시적으로 또는 암시적으로 설정됩니다. *culture*는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 명시적으로 지원하는 언어로만 국한되지 않으며 .NET Framework에서 지원하는 모든 culture를 수용합니다. *culture* 인수가 유효하지 않을 경우 PARSE는 오류를 발생시킵니다.  

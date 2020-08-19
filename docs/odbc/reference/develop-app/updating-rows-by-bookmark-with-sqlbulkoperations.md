@@ -1,4 +1,5 @@
 ---
+description: SQLBulkOperations로 책갈피별로 행 업데이트
 title: SQLBulkOperations로 책갈피를 사용 하 여 행 업데이트 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: c9ad82b7-8dba-45b0-bdb9-f4668b37c0d6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9c755297e8beadad92b5be81d78ca534bb96ecae
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9981136d546d53b131cff0d71edcdeab5b2e650c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81283201"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482876"
 ---
 # <a name="updating-rows-by-bookmark-with-sqlbulkoperations"></a>SQLBulkOperations로 책갈피별로 행 업데이트
 책갈피를 사용 하 여 행을 업데이트할 때 **SQLBulkOperations** 는 데이터 원본이 하나 이상의 테이블 행을 업데이트 하도록 합니다. 행은 바인딩된 책갈피 열의 책갈피에 의해 식별 됩니다. 행은 각 바인딩된 열에 대해 응용 프로그램 버퍼의 데이터를 사용 하 여 업데이트 됩니다 (열에 대 한 길이/표시기 버퍼의 값이 SQL_COLUMN_IGNORE 경우 제외). 바인딩되지 않은 열은 업데이트 되지 않습니다.  

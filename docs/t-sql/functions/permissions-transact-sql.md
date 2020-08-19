@@ -1,4 +1,5 @@
 ---
+description: PERMISSIONS(Transact-SQL)
 title: PERMISSIONS(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -24,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 81625a56-b160-4424-91c5-1ce8b259a8e6
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 1985ba159951718772d6a7bc16b4ea76f59d5686
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 0681d22c6a48d8680c7b44e767558f02e2a4c251
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111918"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467942"
 ---
 # <a name="permissions-transact-sql"></a>PERMISSIONS(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -82,7 +83,7 @@ PERMISSIONS ( [ objectid [ , 'column' ] ] )
 |32|0x20|CREATE DEFAULT|  
 |64|0x40|BACKUP DATABASE|  
 |128|0x80|BACKUP LOG|  
-|256|0x100|Reserved|  
+|256|0x100|예약됨|  
   
  다음 표에서는 *objectid*만 지정한 경우 반환되는 개체 사용 권한에 사용되는 비트를 보여 줍니다.  
   
@@ -112,7 +113,7 @@ PERMISSIONS ( [ objectid [ , 'column' ] ] )
   
  sp_helprotect 시스템 저장 프로시저를 사용하여 현재 데이터베이스의 사용자에 대한 사용 권한 목록을 반환할 수도 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-using-the-permissions-function-with-statement-permissions"></a>A. 문 사용 권한과 함께 PERMISSIONS 함수 사용  
  다음 예는 현재 사용자가 `CREATE TABLE` 문을 실행할 수 있는지 여부를 확인합니다.  

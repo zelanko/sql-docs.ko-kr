@@ -1,4 +1,5 @@
 ---
+description: Visual Basic 6 애플리케이션에서 ADO 라이브러리 참조
 title: Visual Basic 6 응용 프로그램에서 ADO 라이브러리 참조 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: cfd37a82-aad2-41cd-8d13-1566c43d95f0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 766707f8903f72da8b1735def4ed4433c4468d90
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 5e3ed89e523a164f96c4f71595609658816f5864
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82747883"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452375"
 ---
 # <a name="referencing-the-ado-libraries-in-a-visual-basic-6-application"></a>Visual Basic 6 애플리케이션에서 ADO 라이브러리 참조
 Microsoft Visual Basic 6 응용 프로그램으로 ADO 라이브러리를 가져오려면 Visual Basic 프로젝트에서 참조를 설정 해야 합니다.  
@@ -32,11 +33,11 @@ Microsoft Visual Basic 6 응용 프로그램으로 ADO 라이브러리를 가져
   
 2.  **프로젝트** 메뉴 항목을 클릭 한 다음 드롭다운 메뉴 패널에서 **참조 ...** 를 선택 합니다.  
   
-3.  **사용 가능한 참조**에서 **Microsoft ADO(ActiveX Data Objects) *n. n* 라이브러리**의 확인란을 선택 합니다. 여기서 ***n. n*** 은 최신 버전 번호를 나타냅니다. 아래 **위치** 필드는 사용자의 선택 항목을 *$installDir \msado15.dll*으로 식별 해야 합니다. 여기서 *$installDir* 는 ADO 라이브러리가 설치 된 디렉터리의 경로를 나타냅니다.  
+3.  **사용 가능한 참조**에서 **Microsoft ADO(ActiveX Data Objects) *n. n* 라이브러리**의 확인란을 선택 합니다. 여기서 ***n. n*** 은 최신 버전 번호를 나타냅니다. 아래 **위치** 필드는 사용자의 선택 항목을 *$installDir\msado15.dll*으로 식별 해야 합니다. 여기서 *$installDir* 는 ADO 라이브러리가 설치 된 디렉터리의 경로를 나타냅니다.  
   
-4.  ADO MD를 사용 하려는 경우 3 단계를 반복 하 여 **Microsoft ADO(ActiveX Data Objects) (다차원) *n. n* 라이브러리**를 선택 합니다. **Location** 필드는이 선택을 *$installDir \msadomd.dll*으로 식별 해야 합니다.  
+4.  ADO MD를 사용 하려는 경우 3 단계를 반복 하 여 **Microsoft ADO(ActiveX Data Objects) (다차원) *n. n* 라이브러리**를 선택 합니다. **Location** 필드는이 선택을 *$installDir\msadomd.dll*으로 식별 해야 합니다.  
   
-5.  ADOX를 사용 하려는 경우 3 단계를 반복 하 여 **DDL 및 보안에 대 *n.n* 한 Microsoft ADO Ext.** n을 선택 합니다. **Location** 필드는이 선택을 *$installDir \msadox.dll*으로 식별 해야 합니다.  
+5.  ADOX를 사용 하려는 경우 3 단계를 반복 하 여 **DDL 및 보안에 대 *n.n* 한 Microsoft ADO Ext.** n을 선택 합니다. **Location** 필드는이 선택을 *$installDir\msadox.dll*으로 식별 해야 합니다.  
   
 6.  **확인** 을 클릭 하 여 참조 설정을 마칩니다.  
   

@@ -1,4 +1,5 @@
 ---
+description: 스크립트 구성 요소에서 이벤트 발생
 title: 스크립트 구성 요소에서 이벤트 발생 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: bb389073-e1d0-4794-8d29-c8b293b6a5e3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 489806f32a35ed4ca72bd2628951e8c6d7e623b4
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: aa7e77defb74e1bd606536064788c4430322a6ac
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915978"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430265"
 ---
 # <a name="raising-events-in-the-script-component"></a>스크립트 구성 요소에서 이벤트 발생
 
@@ -30,7 +31,7 @@ ms.locfileid: "86915978"
   
  이벤트를 발생시키기 위해 스크립트 태스크에서는 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> 속성에 의해 제공된 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ComponentMetaData%2A> 인터페이스의 다음 메서드 중 하나를 호출합니다.  
   
-|행사|Description|  
+|이벤트|Description|  
 |-----------|-----------------|  
 |<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.FireCustomEvent%2A>|패키지에서 사용자가 정의한 사용자 지정 이벤트를 발생시킵니다.|  
 |<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.FireError%2A>|패키지에 오류 조건을 알립니다.|  

@@ -1,4 +1,5 @@
 ---
+description: 고유한 사용자 지정된 처리기 작성
 title: 사용자 지정 처리기 작성 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d447712a-e123-47b5-a3a4-5d366cfe8d72
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cd7aec0e98afd09b30c4e4d67102d1333efdcdd6
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 73e71438b7f49472dff8c3f4732c541222598b08
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82747609"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451845"
 ---
 # <a name="writing-your-own-customized-handler"></a>고유한 사용자 지정된 처리기 작성
 기본 RDS 지원을 원하는 IIS 서버 관리자 인 경우 사용자 요청 및 액세스 권한을 더 자세히 제어 하려면 고유한 처리기를 작성 하는 것이 좋습니다.  

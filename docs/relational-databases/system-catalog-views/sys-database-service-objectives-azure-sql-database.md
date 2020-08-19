@@ -1,4 +1,5 @@
 ---
+description: sys.database_service_objectives(Azure SQL Database)
 title: sys.database_service_objectives
 titleSuffix: Azure SQL Database
 ms.date: 03/21/2018
@@ -16,12 +17,12 @@ author: CarlRabeler
 ms.author: carlrab
 ms.custom: seo-dt-2019
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: e6ee5d0f6a2b26dc10c901297097b99338ba9091
-ms.sourcegitcommit: bc10ec0be5ddfc5f0bc220a9ac36c77dd6b80f1d
+ms.openlocfilehash: 4b6714721748fb0e41cdaa8986341385bf9d84a5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87544376"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475465"
 ---
 # <a name="sysdatabase_service_objectives-azure-sql-database"></a>sys.database_service_objectives(Azure SQL Database)
 [!INCLUDE [asdb-asdbmi-asa](../../includes/applies-to-version/asdb-asdbmi-asa.md)]

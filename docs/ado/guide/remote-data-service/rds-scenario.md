@@ -1,4 +1,5 @@
 ---
+description: RDS 시나리오
 title: RDS 시나리오 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a7dcad87-aaf0-4b02-9660-472f8469761c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d73bb03ceb08e61257c0e4fc6d3f6a627ddb746d
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: f5a1058b23c92160b039d2cb439d429b46bfcb98
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763584"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452095"
 ---
 # <a name="rds-scenario"></a>RDS 시나리오
 > [!IMPORTANT]
@@ -35,15 +36,15 @@ ms.locfileid: "82763584"
   
  응용 프로그램 인터페이스는 다음과 같은 부분으로 구성 됩니다.  
   
--   비시각적 **RDS. **클라이언트에서 데이터베이스에 연결 하는 데 사용 하는 DataControl 데이터 바인딩 개체입니다.  
+-   비시각적 **RDS. ** 클라이언트에서 데이터베이스에 연결 하는 데 사용 하는 DataControl 데이터 바인딩 개체입니다.  
   
 -   직원 특성 검색 조건에 대 한 입력 필드 역할을 하는 HTML 텍스트 상자입니다.  
   
 -   쿼리를 작성 하 고, 검색 필드를 지우고, 직원 정보를 사용 하 여 데이터베이스를 업데이트 하 고, 보류 중인 변경 내용을 취소 하 고, 표에 표시 되는 데이터 행을 탐색 하는 HTML 명령 단추입니다.  
   
--   RDS를 통해 백 엔드 데이터베이스에 대 한 쿼리에서 반환 된 데이터를 표시 하는 DHTML 데이터 바인딩 ** **테이블의 DataControl 데이터 바인딩 개체).  
+-   RDS를 통해 백 엔드 데이터베이스에 대 한 쿼리에서 반환 된 데이터를 표시 하는 DHTML 데이터 바인딩 ** ** 테이블의 DataControl 데이터 바인딩 개체).  
   
--   이전에 언급 된 각 요소를 연결 하 고 상호 작용할 수 있도록 하는 VBScript 루틴 또한 VBScript 코드는 RDS를 초기화 하는 데 사용 됩니다 **. **Rds의 이름으로 HTML 테이블의 열 머리글을 동적으로 만듭니다 **. DataControl** 레코드 집합 필드.  
+-   이전에 언급 된 각 요소를 연결 하 고 상호 작용할 수 있도록 하는 VBScript 루틴 또한 VBScript 코드는 RDS를 초기화 하는 데 사용 됩니다 **. ** Rds의 이름으로 HTML 테이블의 열 머리글을 동적으로 만듭니다 **. DataControl** 레코드 집합 필드.  
   
  단계별 링크를 따라 시나리오를 설정 및 실행 하 고 시나리오의 작동 방식에 대해 자세히 알아보세요.  
   

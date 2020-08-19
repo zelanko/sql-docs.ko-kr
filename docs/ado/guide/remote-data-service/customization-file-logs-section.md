@@ -1,4 +1,5 @@
 ---
+description: 사용자 지정 파일 로그 섹션
 title: 사용자 지정 파일 로그 섹션 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a368e264-865c-41ee-be00-d9097255c2ea
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3be02570fbff1efd9adb091c121d4eb1a8782817
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 365b57f174f289317a7e8b3e09fe0c29b051ef64
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82749952"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452255"
 ---
 # <a name="customization-file-logs-section"></a>사용자 지정 파일 로그 섹션
 **Logs** 섹션에는 **DataFactory**작업 중에 오류를 기록 하는 파일의 이름을 지정 하는 로그 파일 항목이 포함 되어 있습니다.  
@@ -38,7 +39,7 @@ FileName
   
 ## <a name="remarks"></a>설명  
   
-|부분|Description|  
+|부분|설명|  
 |----------|-----------------|  
 |**err**|로그 파일 항목 임을 나타내는 리터럴 문자열입니다.|  
 |*FileName*|전체 경로 및 파일 이름입니다. 일반적인 파일 이름은 **c:\msdfmap.log**입니다.|  

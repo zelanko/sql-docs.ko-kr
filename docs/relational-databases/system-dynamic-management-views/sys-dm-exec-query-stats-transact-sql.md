@@ -1,4 +1,5 @@
 ---
+description: sys.dm_exec_query_stats(Transact-SQL)
 title: sys. dm_exec_query_stats (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/30/2019
@@ -20,12 +21,12 @@ ms.assetid: eb7b58b8-3508-4114-97c2-d877bcb12964
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f73452beb45c9f5df4b806d937043f22c5c0dbe1
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 12ef4ff17b243a674911a9611517529bbe0ce0dc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87865321"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490001"
 ---
 # <a name="sysdm_exec_query_stats-transact-sql"></a>sys.dm_exec_query_stats(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -33,7 +34,7 @@ ms.locfileid: "87865321"
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 캐시된 쿼리 계획에 대한 집계 성능 통계를 반환합니다. 이 뷰에는 캐시된 계획 내의 쿼리 문당 하나의 행이 포함되어 있습니다. 행의 유효 기간은 계획 자체와 연결되어 있습니다. 캐시에서 계획이 제거되면 이 뷰에서도 해당 행이 제거됩니다.  
   
 > [!NOTE]
-> - 데이터는 완료 된 쿼리만 반영 하 고 아직 진행 중인 쿼리는 반영 하지 않으므로, **dm_exec_query_stats** 의 결과는 각 실행에 따라 달라질 수 있습니다.
+> - 데이터는 완료 된 쿼리만 반영 하 고 아직 진행 중인 쿼리는 반영 하지 않으므로, **dm_exec_query_stats**  의 결과는 각 실행에 따라 달라질 수 있습니다.
 > - 또는에서이를 호출 하려면 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 이름 **sys. dm_pdw_nodes_exec_query_stats**을 사용 합니다.    
 
   
@@ -115,7 +116,7 @@ ms.locfileid: "87865321"
 |**last_spills**|**bigint**|쿼리가 마지막으로 실행 되었을 때의 페이지 수입니다.<br /><br /> **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 및 CU3부터 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 시작|  
 |**min_spills**|**bigint**|단일 실행 중이 쿼리가 분산 한 최소 페이지 수입니다.<br /><br /> **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 및 CU3부터 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 시작|  
 |**max_spills**|**bigint**|단일 실행 중이 쿼리가 분산 한 최대 페이지 수입니다.<br /><br /> **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 및 CU3부터 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 시작|  
-|**pdw_node_id**|**int**|이 배포가 설정 된 노드의 식별자입니다.<br /><br /> **적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]| 
+|**pdw_node_id**|**int**|이 배포가 설정 된 노드의 식별자입니다.<br /><br /> **적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]| 
 |**total_page_server_reads**|**bigint**|이 계획이 컴파일된 이후 실행 될 때 수행 된 원격 페이지 서버 읽기의 총 수입니다.<br /><br /> **적용 대상:** Azure SQL Database Hyperscale |  
 |**last_page_server_reads**|**bigint**|계획이 마지막으로 실행 되었을 때 수행 된 원격 페이지 서버 읽기 수입니다.<br /><br /> **적용 대상:** Azure SQL Database Hyperscale |  
 |**min_page_server_reads**|**bigint**|단일 실행 중이 계획에서 수행한 최소 원격 페이지 서버 읽기 수입니다.<br /><br /> **적용 대상:** Azure SQL Database Hyperscale |  
@@ -131,7 +132,7 @@ ms.locfileid: "87865321"
 ## <a name="remarks"></a>설명  
  쿼리가 완료되면 뷰의 통계가 업데이트됩니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-finding-the-top-n-queries"></a>A. TOP N 쿼리 찾기  
  다음 예제는 평균 CPU 시간별로 상위 5개의 쿼리에 대한 정보를 반환합니다. 이 예에서는 논리적으로 동일한 쿼리를 누적 리소스 소비량에 따라 그룹화할 수 있도록 쿼리 해시에 따라 쿼리를 집계합니다.  
@@ -173,8 +174,8 @@ WHERE qt.text like '%SELECT%'
 ORDER BY qs.execution_count DESC;  
 ```  
   
-## <a name="see-also"></a>참고 항목  
-[Transact-sql&#41;&#40;관련 동적 관리 뷰 및 함수 실행](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)    
+## <a name="see-also"></a>참조  
+[Transact-sql&#41;&#40;관련 동적 관리 뷰 및 함수 실행 ](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)    
 [dm_exec_sql_text &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)    
 [dm_exec_query_plan &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)    
 [dm_exec_procedure_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)     

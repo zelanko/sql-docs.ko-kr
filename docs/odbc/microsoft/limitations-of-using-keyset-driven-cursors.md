@@ -1,4 +1,5 @@
 ---
+description: 키 집합 커서 사용 제한 사항
 title: 키 집합 커서 사용에 대 한 제한 사항 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 59d86fed-387c-4719-9550-36343e74da44
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2aeb5a0c50192118dfff8ed7d866c3911c2b4007
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 611bc032c51760742e5dce4dfbd8e1fa4fe33d0f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81284153"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483476"
 ---
 # <a name="limitations-of-using-keyset-driven-cursors"></a>키 집합 커서 사용 제한 사항
 > [!IMPORTANT]  

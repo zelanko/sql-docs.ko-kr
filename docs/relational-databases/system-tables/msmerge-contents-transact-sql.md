@@ -1,4 +1,5 @@
 ---
+description: MSmerge_contents(Transact-SQL)
 title: MSmerge_contents (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8d68a61a-683f-4b20-92f9-c0a8d9ba0ad1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 147e1c2843fc88bbeed4d23e0119cec0f4575ac3
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 81320e7cc5301577369d6d3d89cbfb53f77b0e6e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889865"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469109"
 ---
 # <a name="msmerge_contents-transact-sql"></a>MSmerge_contents(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +44,7 @@ ms.locfileid: "85889865"
 |**logical_relation_change_gen**|**bigint**|논리적 레코드에서 기존 행을 논리적 레코드 안팎으로 이동시켜 다시 맞추도록 만든 마지막 변경과 관련된 생성 값입니다.|  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;복제 테이블](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Transact-sql&#41;&#40;복제 테이블 ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [복제 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

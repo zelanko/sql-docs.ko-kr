@@ -1,4 +1,5 @@
 ---
+description: LOG10(Transact-SQL)
 title: LOG10(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -21,12 +22,12 @@ ms.assetid: 1eb7fb34-1937-4a39-a936-f5c0c7c7e06f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7f468b4fb5ca3a0b24a91170e735793c40b4fc71
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 4b4ceb286ddb1e90ebd5bd703a741f34a6cdd8bd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111500"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467981"
 ---
 # <a name="log10-transact-sql"></a>LOG10(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -45,7 +46,7 @@ LOG10 ( float_expression )
 
 ## <a name="arguments"></a>인수
  *float_expression*  
- [float](../../t-sql/language-elements/expressions-transact-sql.md) 형식 또는 **float**로 암시적으로 변환되는 형식의 **식**입니다.  
+ **float** 형식 또는 **float**로 암시적으로 변환되는 형식의 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다.  
   
 ## <a name="return-types"></a>반환 형식  
  **float**  
@@ -53,7 +54,7 @@ LOG10 ( float_expression )
 ## <a name="remarks"></a>설명  
  LOG10과 POWER 함수는 서로 역함수 관계에 있습니다. 예를 들어 10 ^ LOG10(*n*) = *n*입니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-calculating-the-base-10-logarithm-for-a-variable"></a>A. 변수에 대한 상용 로그 계산  
  다음 예에서는 지정된 변수의 `LOG10`을 계산하는 방법을 보여 줍니다.  
@@ -91,7 +92,7 @@ SELECT POWER (10, LOG10(5));
   
 ## <a name="examples-sssdwfull-and-sspdw"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-calculating-the-base-10-logarithm-for-a-value"></a>3\. 값에 대한 기본 10 로그 계산  
+### <a name="c-calculating-the-base-10-logarithm-for-a-value"></a>3. 값에 대한 기본 10 로그 계산  
  다음 예에서는 지정된 값의 `LOG10`을 계산하는 방법을 보여 줍니다.  
   
 ```sql  

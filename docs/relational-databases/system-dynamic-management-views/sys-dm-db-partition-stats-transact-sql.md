@@ -1,4 +1,5 @@
 ---
+description: sys.dm_db_partition_stats(Transact-SQL)
 title: sys. dm_db_partition_stats (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/28/2020
@@ -20,11 +21,12 @@ ms.assetid: 9db9d184-b3a2-421e-a804-b18ebcb099b7
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 191dc00caa5ab39d3a3adf7882aa3bb88ea0d3f3
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: eddc690043c541c3726c66bba40f4a81d188e91a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011632"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490014"
 ---
 # <a name="sysdm_db_partition_stats-transact-sql"></a>sys.dm_db_partition_stats(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -50,8 +52,8 @@ ms.locfileid: "86011632"
 |**used_page_count**|**bigint**|파티션에 사용되는 페이지의 총 수입니다. Row_overflow_used_page_count lob_used_page_count **in_row_used_page_count**으로 계산  +  **lob_used_page_count**  +  **row_overflow_used_page_count**됩니다.|  
 |**reserved_page_count**|**bigint**|파티션에 사용하도록 예약된 페이지의 총 수입니다. Row_overflow_reserved_page_count lob_reserved_page_count **in_row_reserved_page_count**으로 계산  +  **lob_reserved_page_count**  +  **row_overflow_reserved_page_count**됩니다.|  
 |**row_count**|**bigint**|파티션에 있는 행의 대략적인 수입니다.|  
-|**pdw_node_id**|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포가 설정 된 노드의 식별자입니다.|  
-|**distribution_id**|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 분포와 연결 된 고유 숫자 id입니다.|  
+|**pdw_node_id**|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포가 설정 된 노드의 식별자입니다.|  
+|**distribution_id**|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 분포와 연결 된 고유 숫자 id입니다.|  
   
 ## <a name="remarks"></a>설명  
  **sys.dm_db_partition_stats**는 데이터베이스의 모든 파티션에 대한 행 내부 데이터, LOB 데이터 및 행 오버플로 데이터를 저장하고 관리하는 데 사용되는 공간에 대한 정보를 표시합니다. 파티션마다 행 하나가 표시됩니다.  
@@ -64,10 +66,10 @@ ms.locfileid: "86011632"
   
  개별 테이블이나 인덱스에 대한 총 수는 관련된 모든 파티션에 대한 수를 더하여 얻을 수 있습니다.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  `VIEW DATABASE STATE` `VIEW DEFINITION` **Dm_db_partition_stats** 동적 관리 뷰를 쿼리하려면 및 권한이 필요 합니다. 동적 관리 뷰 사용 권한에 대 한 자세한 내용은 [동적 관리 뷰 및 함수 &#40;transact-sql&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)를 참조 하세요.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-returning-all-counts-for-all-partitions-of-all-indexes-and-heaps-in-a-database"></a>A. 데이터베이스에 있는 모든 인덱스와 힙의 모든 파티션에 대한 모든 개수 반환  
  다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에 있는 모든 인덱스와 힙의 모든 파티션에 대한 모든 개수를 표시합니다.  
@@ -103,9 +105,9 @@ WHERE object_id=OBJECT_ID('HumanResources.Employee')    AND (index_id=0 or index
 GO  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;동적 관리 뷰 및 함수](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Transact-sql&#41;&#40;데이터베이스 관련 동적 관리 뷰](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
+## <a name="see-also"></a>관련 항목  
+ [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Transact-sql&#41;&#40;데이터베이스 관련 동적 관리 뷰 ](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
   
   
 

@@ -1,4 +1,5 @@
 ---
+description: LIKE 조건자 제한 사항
 title: LIKE 조건자 제한 사항 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: dbd39099-caf6-4c4c-9ad8-f6c63c1bd5e4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6d596d688956d7bdbf3d9125184d81c16249781c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 63410b78b6d0b7ab59dd74b9f69fe57fe498c6ea
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298963"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483526"
 ---
 # <a name="like-predicate-limitations"></a>LIKE 조건자 제한 사항
 열의 데이터가 255 자를 초과 하는 경우에는 첫 번째 255 문자만 기반으로 하는 비교를 사용할 수 있습니다.  

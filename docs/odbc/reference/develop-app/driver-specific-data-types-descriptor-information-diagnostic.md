@@ -1,4 +1,5 @@
 ---
+description: 드라이버별 데이터 형식, 설명자 형식, 정보 형식, 진단 형식 및 특성
 title: 드라이버 특정 유형-데이터, 설명자, 정보, 진단 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ad4c76d3-5191-4262-b47c-5dd1d19d1154
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 19bb2dd113fbeae871892ea510713c638c886e5a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9a0ac3fd67e07f23f14420ee46ccda5cd409f87a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305771"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483006"
 ---
 # <a name="driver-specific-data-types-descriptor-types-information-types-diagnostic-types-and-attributes"></a>드라이버별 데이터 형식, 설명자 형식, 정보 형식, 진단 형식 및 특성
 드라이버는 다음에 대 한 드라이버 관련 값을 할당할 수 있습니다.  

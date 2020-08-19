@@ -1,4 +1,5 @@
 ---
+description: 스크립트 태스크에서 변수 사용
 title: 스크립트 태스크에서 변수 사용 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 593b5961-4bfa-4ce1-9531-a251c34e89d3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 168216359a112fe98168164fde16f406508f0eff
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c319ec2d8deca78787ca0cec80e2afc7947eaa41
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86911855"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430215"
 ---
 # <a name="using-variables-in-the-script-task"></a>스크립트 태스크에서 변수 사용
 

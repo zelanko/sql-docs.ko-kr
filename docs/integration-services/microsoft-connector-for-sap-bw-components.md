@@ -1,4 +1,5 @@
 ---
+description: Microsoft Connector for SAP BW 구성 요소
 title: Microsoft Connector for SAP BW 구성 요소 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: bdf81735-dba7-45ef-8794-0eb67c01475a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 11775da254ac04203fa2b1f7ff44b012f0704ec6
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ff14d08bebd8de8c2ea6b2475f70229db8bd4074
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921224"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430175"
 ---
 # <a name="microsoft-connector-for-sap-bw-components"></a>Microsoft Connector for SAP BW 구성 요소
 

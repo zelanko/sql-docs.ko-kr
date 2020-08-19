@@ -1,4 +1,5 @@
 ---
+description: 검색 속성의 속성 세트 GUID 및 속성 정수 ID 찾기
 title: 검색 속성의 속성 세트 GUID 및 속성 정수 ID 찾기
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: c7b613fc9b8b80169beab7d77fe52e5a9a37ad81
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b405768f889e73d1885b67b05d8cf124d3f28d1f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85767601"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498623"
 ---
 # <a name="find-property-set-guids-and-property-integer-ids-for-search-properties"></a>검색 속성의 속성 세트 GUID 및 속성 정수 ID 찾기
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -42,8 +43,8 @@ ms.locfileid: "85767601"
   
 |잘 알려진 이름|Windows 정식 이름|속성 집합 GUID|정수 ID|Description|  
 |----------------------|----------------------------|-----------------------|----------------|-----------------|  
-|Authors|**System.Author**|F29F85E0-4FF9-1068-AB91-08002B27B3D9|4|지정된 항목의 작성자입니다.|  
-|태그들|**System.Keywords**|F29F85E0-4FF9-1068-AB91-08002B27B3D9|5|항목에 할당된 키워드(태그라고도 함) 집합입니다.|  
+|만든 이|**System.Author**|F29F85E0-4FF9-1068-AB91-08002B27B3D9|4|지정된 항목의 작성자입니다.|  
+|태그|**System.Keywords**|F29F85E0-4FF9-1068-AB91-08002B27B3D9|5|항목에 할당된 키워드(태그라고도 함) 집합입니다.|  
 |Type|**System.PerceivedType**|28636AA6-953D-11D2-B5D6-00C04FD918D0|9|정식 유형을 기반으로 인식되는 파일 유형입니다.|  
 |제목|**System.Title**|F29F85E0-4FF9-1068-AB91-08002B27B3D9|2|항목의 제목입니다. 예를 들어 문서의 제목, 메시지의 제목, 사진의 캡션 또는 음악 트랙의 이름이 여기에 해당합니다.|  
   
@@ -83,7 +84,7 @@ propID = 4
 ...  
 ```  
   
- 이 속성의 전체 설명은 Windows 검색 설명서에서 [System.Author](https://go.microsoft.com/fwlink/?LinkId=144337) 를 참조하십시오.  
+ 이 속성의 전체 설명은 Windows 검색 설명서에서 [System.Author](https://go.microsoft.com/fwlink/?LinkId=144337)를 참조하십시오.  
   
  Windows 속성의 전체 목록을 보려면 Windows 검색 설명서에서 [Windows 속성](https://go.microsoft.com/fwlink/?LinkId=215013)을 참조하십시오.  
   

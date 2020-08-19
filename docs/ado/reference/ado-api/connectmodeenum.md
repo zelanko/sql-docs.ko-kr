@@ -1,4 +1,5 @@
 ---
+description: ConnectModeEnum
 title: ConnectModeEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3792c294-5161-4538-a908-22a5fc50b85f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b9a25677f79ede93f8ea24e979d80dd13adff4fe
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: ce1d75faaf4bbaeb941a0da87b68c09744c2a422
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242763"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444435"
 ---
 # <a name="connectmodeenum"></a>ConnectModeEnum
 [연결](../../../ado/reference/ado-api/connection-object-ado.md)의 데이터를 수정 하거나 [레코드](../../../ado/reference/ado-api/record-object-ado.md)를 열거나 **Record** 및 [Stream](../../../ado/reference/ado-api/stream-object-ado.md) 개체의 [Mode](../../../ado/reference/ado-api/mode-property-ado.md) 속성 값을 지정 하는 데 사용할 수 있는 권한을 지정 합니다.  

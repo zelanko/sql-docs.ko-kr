@@ -1,4 +1,5 @@
 ---
+description: 데이터 수집기 보안
 title: 데이터 수집기 보안 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e75d6975-641e-440a-a642-cb39a583359a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1b2e6e607a49ea4888e6f5f5ec9ad5148e9f790b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8ff53ca4e4118b105eabac256663a8b052e218fa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733850"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429055"
 ---
 # <a name="data-collector-security"></a>데이터 수집기 보안
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -144,7 +145,7 @@ ms.locfileid: "85733850"
 ### <a name="mdw_reader-role"></a>mdw_reader 역할  
  **mdw_reader** 역할의 멤버는 관리 데이터 웨어하우스에 대한 읽기 권한을 갖습니다. 이 역할은 기록 데이터에 대한 액세스를 제공하여 문제 해결을 지원하기 위한 것이므로 이 역할의 멤버는 관리 데이터 웨어하우스 스키마의 다른 요소를 볼 수 없습니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [SQL Server 에이전트 보안 구현](../../ssms/agent/implement-sql-server-agent-security.md)  
   
   

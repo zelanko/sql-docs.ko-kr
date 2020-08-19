@@ -1,4 +1,5 @@
 ---
+description: sys.dm_exec_sessions(Transact-SQL)
 title: sys. dm_exec_sessions (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/03/2019
@@ -20,12 +21,12 @@ ms.assetid: 2b7e8e0c-eea0-431e-819f-8ccd12ec8cfa
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: eff5e947caed2471d63c980418688f6945c78b21
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 364b8c255054d10d8ae7ee10d1231ade99615bde
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734678"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490026"
 ---
 # <a name="sysdm_exec_sessions-transact-sql"></a>sys.dm_exec_sessions(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -88,13 +89,13 @@ ms.locfileid: "85734678"
 |database_id|**smallint**|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상<br /><br /> 각 세션에 대한 현재 데이터베이스의 ID입니다.|  
 |authenticating_database_id|**int**|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상<br /><br /> 보안 주체를 인증하는 데이터베이스의 ID입니다. 로그인의 경우 값이 0이 됩니다. 포함된 데이터베이스 사용자의 경우 값은 포함된 데이터베이스의 데이터베이스 ID가 됩니다.|  
 |open_transaction_count|**int**|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상<br /><br /> 세션당 열린 트랜잭션 수입니다.|  
-|pdw_node_id|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포가 설정 된 노드의 식별자입니다.|  
+|pdw_node_id|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포가 설정 된 노드의 식별자입니다.|  
 |page_server_reads|**bigint**|**적용 대상**: Azure SQL Database hyperscale<br /><br /> 이 세션 중에이 세션의 요청에 의해 수행 된 페이지 서버 읽기 수입니다. Null을 허용하지 않습니다.|  
   
 ## <a name="permissions"></a>사용 권한  
 누구나 자신의 세션 정보를 볼 수 있습니다.  
 ** [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] :** `VIEW SERVER STATE` [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 서버의 모든 세션을 보려면에 대 한 권한이 필요 합니다.  
-** [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] :** 를 사용 `VIEW DATABASE STATE` 하 여 현재 데이터베이스에 대 한 모든 연결을 확인 합니다. `VIEW DATABASE STATE`데이터베이스에서를 부여할 수 없습니다 `master` . 
+** [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] :** 를 사용 `VIEW DATABASE STATE` 하 여 현재 데이터베이스에 대 한 모든 연결을 확인 합니다. `VIEW DATABASE STATE` 데이터베이스에서를 부여할 수 없습니다 `master` . 
   
   
 ## <a name="remarks"></a>설명  
@@ -114,7 +115,7 @@ ms.locfileid: "85734678"
   
 ## <a name="relationship-cardinalities"></a>관계 카디널리티  
   
-|시작|대상|열 이름/APPLY|관계|  
+|보낸 사람|대상|열 이름/APPLY|관계|  
 |----------|--------|---------------|------------------|  
 |sys.dm_exec_sessions|[sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)|session_id|일 대 영 또는 일 대 다|  
 |sys.dm_exec_sessions|[sys.dm_exec_connections](../../relational-databases/system-dynamic-management-views/sys-dm-exec-connections-transact-sql.md)|session_id|일 대 영 또는 일 대 다|  
@@ -183,8 +184,8 @@ JOIN sys.dm_exec_sessions AS s
 WHERE c.session_id = @@SPID;  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;동적 관리 뷰 및 함수](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+## <a name="see-also"></a>관련 항목  
+ [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [실행 관련 동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   

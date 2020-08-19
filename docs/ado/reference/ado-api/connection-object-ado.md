@@ -1,4 +1,5 @@
 ---
+description: 연결 개체(ADO)
 title: Connection 개체 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ef6b1824-5b12-43db-89d7-8f3d13896d4d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 49a270f143e57c1e093ac94732b67b6424c88607
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 68b6a8dd0b0cd75f511c042981672444d9b3bcb0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760299"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444515"
 ---
 # <a name="connection-object-ado"></a>연결 개체(ADO)
 데이터 소스에 대해 열려 있는 연결을 나타냅니다.  
@@ -63,7 +64,7 @@ ms.locfileid: "82760299"
 >  Microsoft® .NET Framework 응용 프로그램에서이 기능 (명명 된 명령 또는 저장 프로시저를 **연결** 개체의 네이티브 메서드인 것 처럼 호출)을 사용 하지 마세요 .이 기능은 .NET Framework의 기본 구현이 COM과 상호 작용 하는 방식과 충돌 하기 때문입니다.  
   
 ## <a name="execute-a-command-as-a-native-method-of-a-connection-object"></a>연결 개체의 네이티브 메서드로 명령을 실행 합니다.  
- 명령을 실행 하려면 명령 개체 [이름](../../../ado/reference/ado-api/name-property-ado.md) **속성을 사용** 하 여 명령에 이름을 지정 합니다. **명령** 개체의 **ActiveConnection** 속성을 연결로 설정 합니다. 그런 다음 명령 이름이 **연결** 개체의 메서드인 것 처럼 사용 되는 문을 실행 한 다음 매개 변수를 사용 하 고 행이 반환 되 면 **레코드 집합** 개체를 실행 합니다. **레코드** 집합 속성을 설정 하 여 결과 **레코드**집합을 사용자 지정 합니다. 다음은 그 예입니다.  
+ 명령을 실행 하려면 명령 개체 [이름](../../../ado/reference/ado-api/name-property-ado.md) **속성을 사용** 하 여 명령에 이름을 지정 합니다. **명령** 개체의 **ActiveConnection** 속성을 연결로 설정 합니다. 그런 다음 명령 이름이 **연결** 개체의 메서드인 것 처럼 사용 되는 문을 실행 한 다음 매개 변수를 사용 하 고 행이 반환 되 면 **레코드 집합** 개체를 실행 합니다. **레코드** 집합 속성을 설정 하 여 결과 **레코드**집합을 사용자 지정 합니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.  
   
 ```  
 Dim cnn As New ADODB.Connection  
@@ -79,7 +80,7 @@ cnn. "parameter", rst
 ```  
   
 ## <a name="execute-a-stored-procedure-as-a-native-method-of-a-connection-object"></a>연결 개체의 네이티브 메서드로 저장 프로시저 실행  
- 저장 프로시저를 실행 하려면 저장 프로시저 이름이 **Connection** 개체의 메서드인 것 처럼 사용 된 다음 매개 변수를 사용 하는 문을 실행 합니다. ADO는 매개 변수 형식의 "최상의 추측"을 만듭니다. 다음은 그 예입니다.  
+ 저장 프로시저를 실행 하려면 저장 프로시저 이름이 **Connection** 개체의 메서드인 것 처럼 사용 된 다음 매개 변수를 사용 하는 문을 실행 합니다. ADO는 매개 변수 형식의 "최상의 추측"을 만듭니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.  
   
 ```  
 Dim cnn As New ADODB.Connection  

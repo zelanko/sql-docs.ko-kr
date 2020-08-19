@@ -1,4 +1,5 @@
 ---
+description: 스크립트 구성 요소 편집기에서 스크립트 구성 요소 구성
 title: 스크립트 구성 요소 편집기에서 스크립트 구성 요소 구성 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 586dd799-f383-4d6d-b1a1-f09233d14f0a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ac2db997c49df1ef482ab6b9dba5647426eb7bb3
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d3193a0801e5e9babf187ea88782a1c71f5216f3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913448"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430305"
 ---
 # <a name="configuring-the-script-component-in-the-script-component-editor"></a>스크립트 구성 요소 편집기에서 스크립트 구성 요소 구성
 
@@ -116,7 +117,7 @@ Dim currentCustomerName as String = CustomerInput.CustomerName
  스크립트 구성 요소에 대한 프로그래밍 언어로 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic 또는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#을 선택할 수 있습니다.  
   
 #### <a name="edit-script-button"></a>스크립트 편집 단추  
- **스크립트 편집** 단추를 클릭하면 사용자 지정 스크립트를 작성할 수 있는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] VSTA([!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications) IDE가 열립니다. 자세한 내용은 [스크립트 구성 요소 코딩 및 디버깅](../../../integration-services/extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md)을 참조하세요.  
+ **스크립트 편집** 단추를 클릭하면 사용자 지정 스크립트를 작성할 수 있는  VSTA([!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications) IDE가 열립니다. 자세한 내용은 [스크립트 구성 요소 코딩 및 디버깅](../../../integration-services/extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md)을 참조하세요.  
   
 ### <a name="connection-managers-page-of-the-script-transformation-editor"></a>스크립트 변환 편집기의 연결 관리자 페이지  
  **스크립트 변환 편집기**의 **연결 관리자** 페이지에서는 사용자 지정 스크립트에 사용할 연결 관리자를 추가하거나 제거합니다. 일반적으로 원본 또는 대상 구성 요소를 만들 때는 연결 관리자를 참조해야 합니다.  

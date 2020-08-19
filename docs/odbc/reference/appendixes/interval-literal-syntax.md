@@ -1,4 +1,5 @@
 ---
+description: 간격 리터럴 구문
 title: 간격 리터럴 구문 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2f2d22c1-51d6-4055-9f5a-53bc31e9fea0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3387b07a8e769206a6a495addff4287000691fec
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 20a994cbcfa063a4bbc7189f95d6f7e45ba2ffb0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81290573"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483256"
 ---
 # <a name="interval-literal-syntax"></a>간격 리터럴 구문
 다음 구문은 ODBC의 간격 리터럴에 사용 됩니다.  

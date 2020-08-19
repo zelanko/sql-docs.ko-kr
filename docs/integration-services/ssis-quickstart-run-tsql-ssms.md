@@ -1,4 +1,5 @@
 ---
+description: Transact-SQL(SSMS)을 사용하여 SSIS 패키지 실행
 title: Transact-SQL(SSMS)을 사용하여 SSIS 패키지 실행 | Microsoft Docs
 ms.date: 05/21/2018
 ms.topic: quickstart
@@ -8,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a2526e630468ca7b58a0b21c8d63845b6978fdd8
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: afd8fb3bf9b77eaaf5ee69728fafd83ed4f63889
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921856"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430115"
 ---
 # <a name="run-an-ssis-package-from-ssms-with-transact-sql"></a>Transact-SQL(SSMS)을 사용하여 SSIS 패키지 실행
 
@@ -24,13 +25,13 @@ ms.locfileid: "86921856"
 
 SQL Server Management Studio는 SQL Server에서 SQL Database까지 모든 SQL 인프라를 관리하기 위한 통합 환경입니다. SSMS에 대한 자세한 내용은 [SSMS(SQL Server Management Studio)](../ssms/sql-server-management-studio-ssms.md)를 참조하세요.
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>전제 조건
 
 시작하기 전에 최신 버전의 SSMS(SQL Server Management Studio)가 설치되어 있는지 확인합니다. SSMS를 다운로드하려면 [SSMS(SQL Server Management Studio) 다운로드](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)를 참조하세요.
 
 Azure SQL Database 서버는 포트 1433에서 수신 대기합니다. 회사 방화벽 내에서 Azure SQL Database 서버에 성공적으로 연결하려면 이 포트가 회사 방화벽에서 열려 있어야 합니다.
 
-## <a name="supported-platforms"></a>지원 플랫폼
+## <a name="supported-platforms"></a>지원되는 플랫폼
 
 이 빠른 시작의 정보를 사용하여 다음과 같은 플랫폼에서 SSIS 패키지를 실행할 수 있습니다.
 

@@ -1,4 +1,5 @@
 ---
+description: CreateParameter 메서드(ADO)
 title: CreateParameter 메서드 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9666fdcc-0544-4ed7-a97b-c415f2a56d7e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6cd78e3cbe992a3f2df5046a26eca990479cb3fd
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 6bf45e2d458784972d7057e95878c9db3526ffac
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760219"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444325"
 ---
 # <a name="createparameter-method-ado"></a>CreateParameter 메서드(ADO)
 지정 된 속성을 사용 하 여 새 [매개 변수](../../../ado/reference/ado-api/parameter-object.md) 개체를 만듭니다.  
@@ -40,13 +41,13 @@ Set parameter = command.CreateParameter (Name, Type, Direction, Size, Value)
  *이름*  
  (선택 사항) **매개 변수** 개체의 이름을 포함 하는 **문자열** 값입니다.  
   
- *Type*  
+ *유형*  
  (선택 사항) **매개 변수** 개체의 데이터 형식을 지정 하는 [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) 값입니다.  
   
- *방향*  
+ *Direction*  
  (선택 사항) **매개 변수** 개체의 유형을 지정 하는 [ParameterDirectionEnum](../../../ado/reference/ado-api/parameterdirectionenum.md) 값입니다.  
   
- *Size*  
+ *크기*  
  (선택 사항) 매개 변수 값의 최대 길이 (문자 또는 바이트)를 지정 하는 **Long** 값입니다.  
   
  *값*  

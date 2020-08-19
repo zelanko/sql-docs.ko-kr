@@ -1,5 +1,6 @@
 ---
-title: 커서란? | Microsoft 문서
+description: 커서란?
+title: 커서란? | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 596eb4b6-c22f-4cde-b23f-172dd66c3161
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e2761a716981a5d22fd7f7347f7b757013cccc5d
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: a3fabe19ad59f7e1ee6b24f278c7a5edf1985db6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763004"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452545"
 ---
 # <a name="what-is-a-cursor"></a>커서란?
 관계형 데이터베이스에서의 연산은 전체 행 집합에 적용됩니다. SELECT 문에 의해 반환된 행 집합은 문의 WHERE 절 조건을 만족하는 모든 행으로 구성됩니다. SELECT 문에 의해 반환된 전체 행 집합을 결과 집합이라고 합니다. 응용 프로그램, 특히 대화형 및 온라인 인 응용 프로그램은 전체 결과 집합을 하나의 단위로 항상 효과적으로 작업할 수 없습니다. 이러한 애플리케이션에는 한 번에 한 행이나 적은 행 블록을 사용하여 작업하는 메커니즘이 필요합니다. 커서는 이러한 메커니즘을 제공하는 결과 집합에 대한 확장입니다.  

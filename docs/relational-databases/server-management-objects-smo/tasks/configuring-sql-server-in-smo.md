@@ -1,4 +1,5 @@
 ---
+description: SMO에서 SQL Server 구성
 title: SMO에서 SQL Server 구성
 ms.custom: seo-dt-2019
 ms.date: 08/06/2017
@@ -14,11 +15,12 @@ ms.assetid: 0a372643-15cb-45a7-8665-04f1215df8ed
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6e685a8c2980cf3faa375e9fb13b3d6d873f1735
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 82b797bdf365b5b1226f63bae31047f4c6aa29c3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000273"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498563"
 ---
 # <a name="configuring-sql-server-in-smo"></a>SMO에서 SQL Server 구성
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -40,7 +42,7 @@ ms.locfileid: "86000273"
   
  <xref:Microsoft.SqlServer.Management.Smo.Configuration> 개체의 모든 구성 옵션은 시스템 관리자가 변경해야 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 코드 예제를 사용하려면 애플리케이션을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 [Visual Studio .net에서 Visual C&#35; SMO 프로젝트 만들기](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)를 참조 하세요.  
   
 ## <a name="modifying-sql-server-configuration-options-in-visual-basic"></a>Visual Basic에서 SQL Server 구성 옵션 수정  

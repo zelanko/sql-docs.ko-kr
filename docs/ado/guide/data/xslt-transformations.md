@@ -1,4 +1,5 @@
 ---
+description: XSLT 변환
 title: XSLT 변환 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1a46196e-839f-4734-a59e-2c64609ffb9e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8556576656d4b6eb6ba5e38216a78074cd1f9fc4
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 13326277c0be8abbf7c2d7d623233b34ad2ed348
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82748207"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452485"
 ---
 # <a name="xslt-transformations"></a>XSLT 변환
 XSLT는 생성 된 XML에 적용 하 여 다른 형식으로 변환할 수 있습니다. ADO의 XML 형식을 이해 하면 보다 사용자에 게 친숙 한 형식으로 변환할 수 있는 XSLT 템플릿 개발에 도움이 됩니다.  

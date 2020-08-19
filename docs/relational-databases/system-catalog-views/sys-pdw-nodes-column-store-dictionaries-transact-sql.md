@@ -1,4 +1,5 @@
 ---
+description: sys. pdw_nodes_column_store_dictionaries (Transact-sql)
 title: sys. pdw_nodes_column_store_dictionaries (Transact-sql)
 ms.date: 03/03/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ ms.assetid: 7ae1c2e4-45c0-4880-a692-1f299fbcfd19
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: bc82a44fcd536b53b2e49851806262a0bdd230ef
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: c0510e37a1d3dc2feb537bc64c0e2cb5f3e56414
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86197169"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475413"
 ---
 # <a name="syspdw_nodes_column_store_dictionaries-transact-sql"></a>sys. pdw_nodes_column_store_dictionaries (Transact-sql)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -42,7 +43,7 @@ ms.locfileid: "86197169"
   
 ## <a name="see-also"></a>참고 항목  
  [SQL Data Warehouse 및 병렬 Data Warehouse 카탈로그 뷰](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
- [Transact-sql&#41;&#40;COLUMNSTORE 인덱스 만들기](../../t-sql/statements/create-columnstore-index-transact-sql.md)   
+ [Transact-sql&#41;&#40;COLUMNSTORE 인덱스 만들기 ](../../t-sql/statements/create-columnstore-index-transact-sql.md)   
  [pdw_nodes_column_store_segments &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-segments-transact-sql.md)   
  [pdw_nodes_column_store_row_groups &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-row-groups-transact-sql.md)  
   

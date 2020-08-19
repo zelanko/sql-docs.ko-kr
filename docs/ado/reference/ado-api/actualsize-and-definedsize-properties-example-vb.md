@@ -1,4 +1,5 @@
 ---
+description: ActualSize 및 DefinedSize 속성 예제 (VB)
 title: ActualSize 및 DefinedSize 속성 예제 (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bff2c273-b535-4b32-83b3-0336a406859c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e8694873320659b69ef127a7cd3056185fc1b9f9
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 43deeca92f1809dd560cd6b1a6671aa3ceaafdb6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760672"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451655"
 ---
 # <a name="actualsize-and-definedsize-properties-example-vb"></a>ActualSize 및 DefinedSize 속성 예제 (VB)
 이 예에서는 [ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md) 및 [DefinedSize](../../../ado/reference/ado-api/definedsize-property.md) 속성을 사용 하 여 필드의 정의 된 크기 및 실제 크기를 표시 합니다.  

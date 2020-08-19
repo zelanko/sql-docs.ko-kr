@@ -1,4 +1,5 @@
 ---
+description: FILESTREAM 지원
 title: FILESTREAM 지원 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -13,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: 1ad3400d-7fcd-40c9-87ae-f5afc61e0374
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 26e1d47dea484e818870eb829f6de6318bac1c86
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b1229da063f1752ba68a0fc172f892bf23236194
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85885654"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498896"
 ---
 # <a name="filestream-support"></a>FILESTREAM 지원
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   FILESTREAM은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 또는 Windows 파일 시스템에 대한 직접 액세스를 통해 큰 이진 값을 저장하고 액세스하는 방법을 제공합니다. 큰 이진 값은 2GB보다 큰 값입니다. 향상된 FILESTREAM 지원에 대한 자세한 내용은 [FILESTREAM &#40;SQL Server&#41;](../../../relational-databases/blob/filestream-sql-server.md)를 참조하세요.  
   
- 데이터베이스 연결이 열리면 ** \@ \@ TEXTSIZE** 은 기본적으로-1 ("제한 없음")으로 설정 됩니다.  
+ 데이터베이스 연결을 열면 **\@\@TEXTSIZE**가 기본적으로 -1("제한 없음")로 설정됩니다.  
   
  Windows 파일 시스템 API를 사용하여 FILESTREAM 열에 액세스하고 업데이트할 수도 있습니다.  
   
@@ -33,7 +34,7 @@ ms.locfileid: "85885654"
   
 -   [FILESTREAM Support &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/filestream-support-ole-db.md)  
   
--   [ODBC&#41;&#40;FILESTREAM 지원](../../../relational-databases/native-client/odbc/filestream-support-odbc.md)  
+-   [ODBC&#41;&#40;FILESTREAM 지원 ](../../../relational-databases/native-client/odbc/filestream-support-odbc.md)  
   
 -   [OpenSqlFilestream을 사용하여 FILESTREAM 데이터 액세스](../../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md)  
   
@@ -44,7 +45,7 @@ ms.locfileid: "85885654"
   
  FILESTREAM 열을 만들거나 FILESTREAM 열인 기존 열을 검색하려면 [sys.columns](../../../relational-databases/system-catalog-views/sys-columns-transact-sql.md) 카탈로그 뷰의 **is_filestream** 열을 사용할 수 있습니다.  
   
- 다음은 예입니다.  
+ 다음은 이에 대한 예입니다.  
   
 ```  
 -- Create a table with a FILESTREAM column.  

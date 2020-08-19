@@ -1,4 +1,5 @@
 ---
+description: sysmail_start_sp(Transact-SQL)
 title: sysmail_start_sp (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 25fd7bb6-cfdd-463f-bea8-c6fcb805d3f5
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e2986749f21982e5eee75772e794a9461545b967
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 4c0a4bda3849a5863ce5ed87e25cafdc7983f49f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890836"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469110"
 ---
 # <a name="sysmail_start_sp-transact-sql"></a>sysmail_start_sp(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,7 @@ sysmail_start_sp
 ```  
   
 ## <a name="arguments"></a>인수  
- 없음  
+ None  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -60,7 +61,7 @@ sysmail_start_sp
 ## <a name="permissions"></a>사용 권한  
  이 프로시저에 대 한 실행 권한은 기본적으로 **sysadmin** 고정 서버 역할의 멤버로 사용 됩니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 **msdb** 데이터베이스에서 데이터베이스 메일를 시작 하는 방법을 보여 줍니다. 이 예에서는 데이터베이스 메일이 설정되었다고 가정합니다.  
   
 ```  
@@ -75,6 +76,6 @@ GO
  [데이터베이스 메일](../../relational-databases/database-mail/database-mail.md)   
  [데이터베이스 메일 XPs 서버 구성 옵션](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md)   
  [Transact-sql&#41;sysmail_stop_sp &#40;](../../relational-databases/system-stored-procedures/sysmail-stop-sp-transact-sql.md)   
- [Transact-sql&#41;&#40;저장 프로시저 데이터베이스 메일](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [Transact-sql&#41;&#40;저장 프로시저 데이터베이스 메일 ](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

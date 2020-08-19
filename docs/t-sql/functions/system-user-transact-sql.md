@@ -1,4 +1,5 @@
 ---
+description: SYSTEM_USER(Transact-SQL)
 title: SYSTEM_USER(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -26,12 +27,12 @@ ms.assetid: 565984cd-60c6-4df7-83ea-2349b838ccb2
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 93b31a9f6b86ed256f84fb1dba731e1d248c3c5d
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 02877aa808d53a586ae9191154dc0bfe3f9a785e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394209"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459552"
 ---
 # <a name="system_user-transact-sql"></a>SYSTEM_USER(Transact-SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
@@ -56,7 +57,7 @@ SYSTEM_USER
   
  사용자 이름과 로그인 이름이 다르면 SYSTEM_USER가 로그인 이름을 반환합니다.  
   
- 현재 사용자가 Windows 인증을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 로그인하면 SYSTEM_USER는 *DOMAIN*\\*user_login_name* 형식의 Windows 로그인 식별 이름을 반환합니다. 하지만 현재 사용자가 SQL Server 인증을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 로그인한 경우에는 SYSTEM_USER가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 ID 이름을 반환합니다. 예를 들어 `WillisJo`로 로그인한 사용자의 경우에는 `WillisJo`를 반환합니다.  
+ 현재 사용자가 Windows 인증을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 로그인하면 SYSTEM_USER는 Windows 로그인 ID 이름을 다음과 같은 형식으로 반환합니다. *DOMAIN*\\*user_login_name*. 하지만 현재 사용자가 SQL Server 인증을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 로그인한 경우에는 SYSTEM_USER가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 ID 이름을 반환합니다. 예를 들어 `WillisJo`로 로그인한 사용자의 경우에는 `WillisJo`를 반환합니다.  
   
  SYSTEM_USER는 현재 실행 중인 컨텍스트의 이름을 반환합니다. EXECUTE AS 문이 컨텍스트를 전환하는 데 사용된 경우에는 SYSTEM_USER가 가장된 컨텍스트의 이름을 반환합니다.  
 
@@ -133,7 +134,7 @@ Territory_id Rep_id Last_sale            SRep_tracking_user
   
 ## <a name="examples-sssdwfull-and-sspdw"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-using-system_user-to-return-the-current-system-user-name"></a>3\. SYSTEM_USER를 사용하여 현재 시스템 사용자 이름 반환  
+### <a name="c-using-system_user-to-return-the-current-system-user-name"></a>3. SYSTEM_USER를 사용하여 현재 시스템 사용자 이름 반환  
  다음 예에서는 `SYSTEM_USER`의 현재 값을 반환합니다.  
   
 ```  

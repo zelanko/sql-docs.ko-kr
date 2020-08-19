@@ -1,4 +1,5 @@
 ---
+description: TYPE_NAME(Transact-SQL)
 title: TYPE_NAME(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -22,12 +23,12 @@ ms.assetid: e4075a2e-5f70-440f-986b-9ec8434e07c1
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: da4c194a533f53704b5979dd88587869a1c67fb7
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: def376308310d249dfe65f0a66d38095e67733eb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112607"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459517"
 ---
 # <a name="type_name-transact-sql"></a>TYPE_NAME(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -64,7 +65,7 @@ TYPE_NAME ( type_id )
  시스템 함수는 선택 목록, WHERE 절 및 식이 허용되는 모든 곳에서 사용될 수 있습니다. 자세한 내용은 [식 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md) 및 [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)을 참조하세요.  
   
 ## <a name="examples"></a>예  
- 다음 예에서는 `Vendor` 데이터베이스의 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 테이블에 있는 각 열의 개체 이름, 열 이름 및 형식 이름을 반환합니다.  
+ 다음 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스의 `Vendor` 테이블에 있는 각 열의 개체 이름, 열 이름 및 형식 이름을 반환합니다.  
   
 ```  
 SELECT o.name AS obj_name, c.name AS col_name,  

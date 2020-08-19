@@ -1,4 +1,5 @@
 ---
+description: KILL STATS JOB(Transact-SQL)
 title: KILL STATS JOB(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/27/2017
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 55a8f9f1-3259-45c0-8ab9-60b9c088b4b4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 97992969506b030047089a973e412cdadc703416
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 439ca52d7678372ee6bf3adecccc99444631a311
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919599"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459333"
 ---
 # <a name="kill-stats-job-transact-sql"></a>KILL STATS JOB(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -57,7 +58,7 @@ KILL STATS JOB job_id
   
  KILL STATS JOB 권한은 sysadmin과 processadmin 고정 데이터베이스 역할의 멤버에게 기본적으로 부여되며 위임할 수 없습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 *job_id* = `53`인 작업과 관련된 통계 업데이트를 종료하는 방법을 보여 줍니다.  
   
 ```  

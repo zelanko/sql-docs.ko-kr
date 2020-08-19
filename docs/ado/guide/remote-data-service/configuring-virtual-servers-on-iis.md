@@ -1,4 +1,5 @@
 ---
+description: IIS에서 가상 서버 구성
 title: IIS에서 가상 서버 구성 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: 2b4786c6-40c4-4ce1-9ad4-03df436e0aff
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fded1c66de5cd6c64d8663964de510e9d2f982f9
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: f4e09c5775d87d3339a4965b587828c613ed89fa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82749993"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452275"
 ---
 # <a name="configuring-virtual-servers-on-iis"></a>IIS에서 가상 서버 구성
 인터넷 정보 서비스 4.0에서 가상 서버를 만들 때 다음 두 가지 추가 단계를 수행 하 여 RDS와 작동 하도록 virtual server를 구성 합니다.  
   
 1.  서버를 설정 하는 경우 "실행 액세스 허용"을 선택 합니다.  
   
-2.  Msadcs를 *vroot*\msadc로 이동 합니다. 여기서 *vroot* 는 가상 서버의 홈 디렉터리입니다.  
+2.  msadcs.dll를 *vroot*\msadc로 이동 합니다. 여기서 *vroot* 는 가상 서버의 홈 디렉터리입니다.  
   
 > [!IMPORTANT]
 >  Windows 8 및 Windows Server 2012부터 RDS 서버 구성 요소는 더 이상 Windows 운영 체제에 포함 되지 않습니다 (자세한 내용은 Windows 8 및 [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) 참조). 이후 버전의 Windows에서는 RDS 클라이언트 구성 요소가 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. RDS를 사용 하는 응용 프로그램은 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)로 마이그레이션해야 합니다.  

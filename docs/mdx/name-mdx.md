@@ -1,4 +1,5 @@
 ---
+description: Name(MDX)
 title: 이름 (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 8fd8aa240a72dacc67e7cd09cb058192cddee282
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1f7598d8ee25b3ffa50d8b4ab7638640d0c5e4ac
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68088385"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483766"
 ---
 # <a name="name-mdx"></a>Name(MDX)
 
@@ -53,7 +54,7 @@ Member_Expression.Name
 ## <a name="remarks"></a>설명  
  **Name** 함수는 고유 이름이 아니라 개체의 이름을 반환 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="dimension-hierarchy-and-level-expression-example"></a>차원, 계층 및 수준 식 예  
  다음 예에서는 Date 차원의 차원 이름과 July 2001 멤버의 계층 및 수준 이름을 반환합니다.  

@@ -1,4 +1,5 @@
 ---
+description: 파일 데이터 원본
 title: 파일 데이터 원본 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: db245c80-981a-4638-bd03-69d04bc67af0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0661aa424a7a118b8b12f4bf8433987ff83bd788
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d02c767adab90ee4a7b6ff93a34886c03b87780c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306654"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429045"
 ---
 # <a name="file-data-sources"></a>파일 데이터 원본
 *파일 데이터 원본은* 파일에 저장 되 고 연결 정보는 단일 사용자가 반복적으로 사용 하거나 여러 사용자가 공유할 수 있습니다. 파일 데이터 원본을 사용할 때 드라이버 관리자는 dsn 파일의 정보를 사용 하 여 데이터 원본에 대 한 연결을 만듭니다. 이 파일은 다른 파일 처럼 조작할 수 있습니다. 파일 데이터 원본에는 컴퓨터 데이터 원본 처럼 데이터 원본 이름이 없고 한 사용자 또는 컴퓨터에 등록 되지 않습니다.  

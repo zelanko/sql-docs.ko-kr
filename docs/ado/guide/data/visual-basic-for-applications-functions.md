@@ -1,4 +1,5 @@
 ---
+description: Visual Basic for Applications 기능
 title: Visual Basic for Applications 함수 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ccbdea9d-f9cf-4b0c-ade2-2d65311e12dc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2d7493fbba302ce23279374177819bfa7ff9b2e5
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: d680d8a0f0f7d34e9074b5e2e9e63aedd82a1217
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242923"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452555"
 ---
 # <a name="visual-basic-for-applications-functions"></a>Visual Basic for Applications 기능
 데이터 셰이핑 계산 식에는 다음과 같은 Visual Basic for Applications 함수를 사용할 수 있습니다.  
@@ -62,7 +63,7 @@ ms.locfileid: "87242923"
         오류  
         Error$  
         Exp  
-        Fix  
+        수정  
         서식  
         Format$  
         FV  
@@ -136,9 +137,9 @@ ms.locfileid: "87242923"
         String$  
         SYD  
         Tan  
-        Time  
+        시간  
         Time$  
-        Timer  
+        타이머  
         TimeSerial  
         TimeValue  
         Trim  
@@ -149,7 +150,7 @@ ms.locfileid: "87242923"
         Val  
         VarType  
         요일  
-        년  
+        Year  
     :::column-end:::
 :::row-end:::
 

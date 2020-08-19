@@ -1,4 +1,5 @@
 ---
+description: 오류 메시지(Oracle용 ODBC 드라이버)
 title: 오류 메시지 (Oracle 용 ODBC 드라이버) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6e54fe40-8306-4c2b-9e60-e521705e5b4b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7098b43bd9b1c2bbe4008fa0d44e5562d00443d8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 65634e39e76882249e7057050a7cbd8f1fbf21fa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81286453"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483616"
 ---
 # <a name="error-messages-odbc-driver-for-oracle"></a>오류 메시지(Oracle용 ODBC 드라이버)
 > [!IMPORTANT]  

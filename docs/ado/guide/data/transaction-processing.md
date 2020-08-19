@@ -1,4 +1,5 @@
 ---
+description: '트랜잭션 처리 '
 title: 트랜잭션 처리 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 74ab6706-e2dc-42cb-af77-dbc58a9cf4ce
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 33e78f7a278623c5990a22a638c5a8e693b9a3e1
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 5b4d8e959cab799c5436b1c1357ae1e734d3d5a0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759079"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452705"
 ---
 # <a name="transaction-processing"></a>트랜잭션 처리
 *트랜잭션은* 연결에서 실행 되는 일련의 데이터 액세스 작업의 시작과 끝을 구분 합니다. 데이터 원본의 트랜잭션 기능에 따라 **연결** 개체를 사용 하 여 트랜잭션을 만들고 관리할 수도 있습니다. 예를 들어 SQL Server에 대 한 Microsoft OLE DB 공급자를 사용 하 여 Microsoft SQL Server에서 데이터베이스에 액세스 하는 경우 실행 하는 명령에 대해 중첩 된 트랜잭션을 여러 개 만들 수 있습니다.  

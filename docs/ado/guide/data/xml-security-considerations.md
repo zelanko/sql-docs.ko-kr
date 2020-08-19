@@ -1,4 +1,5 @@
 ---
+description: XML 보안 고려 사항
 title: XML 보안 고려 사항 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: fadbd38e-6e7b-4b81-96ea-85169c664374
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ab98aaf7bb2a0f4887df5a1c2276fe0df8862972
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 76ec899a26485a81a5ec81006d0dbd4c838738dd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82748221"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452495"
 ---
 # <a name="xml-security-considerations"></a>XML 보안 고려 사항
 레코드 집합 개체에 대 한 ADO Save 및 Open 메서드는 Internet Explorer에서 실행 되는 안전한 작업으로 간주 되지 않습니다. 따라서 브라우저에서 호스팅되는 응용 프로그램이 나 컨트롤에서 실행 되는 스크립트 코드에서 이러한 메서드를 사용 하는 경우 브라우저의 보안 구성은 동작에 영향을 미칠 수 있습니다.  

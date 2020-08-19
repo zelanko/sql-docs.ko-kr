@@ -1,4 +1,5 @@
 ---
+description: Microsoft Connector for SAP BW F1 도움말
 title: Microsoft Connector for SAP BW F1 도움말 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 292f9572-362a-45c1-879a-d81d31496ca7
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: aee724d88bfc203472c09d80e3e3ceec9bafa7f3
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f52bd1f1c56a8f9dc84b1474bf4447c6311cb508
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86924017"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430165"
 ---
 # <a name="microsoft-connector-for-sap-bw-f1-help"></a>Microsoft Connector for SAP BW F1 도움말
 
@@ -82,7 +83,7 @@ ms.locfileid: "86924017"
   
 -   [InfoPackage 만들기](../integration-services/data-flow/create-infopackage.md)  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [Microsoft Connector for SAP BW 구성 요소](../integration-services/microsoft-connector-for-sap-bw-components.md)  
   
   

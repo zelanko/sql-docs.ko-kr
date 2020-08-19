@@ -1,4 +1,5 @@
 ---
+description: '인터넷 서버 오류: 액세스가 거부되었습니다.'
 title: '인터넷 서버 오류: 액세스가 거부 되었습니다. Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e5b43cfa-da8d-430d-a2ab-5443dda47a16
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 93761afa168d8b6b2cd06cf5e1360d54fa5177c6
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 970c9c09946cebe74684e6aecc997e56213b1a97
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82749495"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452175"
 ---
 # <a name="internet-server-error-access-denied"></a>인터넷 서버 오류: 액세스가 거부되었습니다.
 이 오류가 발생 하는 경우 일반적으로 Microsoft 인터넷 정보 서비스 (IIS)에서 다음 상태를 반환 했음을 의미 합니다.  

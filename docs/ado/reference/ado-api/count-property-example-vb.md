@@ -1,4 +1,5 @@
 ---
+description: Count 속성 예제(VB)
 title: Count 속성 예제 (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 35033910-623b-449a-a57d-baff3ed5ab8f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8adf469970b6bfb75d4abe75694c99424768353b
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 2503065a7a8fceb590e0ad28e57f7ed0ae172589
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760229"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444345"
 ---
 # <a name="count-property-example-vb"></a>Count 속성 예제(VB)
 이 예에서는 ***Employee*** 데이터베이스에 두 개의 컬렉션이 있는 [Count](../../../ado/reference/ado-api/count-property-ado.md) 속성을 보여 줍니다. 속성은 각 컬렉션의 개체 수를 가져오고 이러한 컬렉션을 열거 하는 루프의 상한 값을 설정 합니다. **Count** 속성을 사용 하지 않고 이러한 컬렉션을 열거 하는 또 다른 방법은 문을 사용 하는 것 `For Each...Next` 입니다.  

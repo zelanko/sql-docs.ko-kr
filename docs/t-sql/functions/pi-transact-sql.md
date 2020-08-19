@@ -1,4 +1,5 @@
 ---
+description: PI(Transact-SQL)
 title: PI(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -19,12 +20,12 @@ ms.assetid: d7c4575b-ba1c-4ef7-a633-9a379d7f01fd
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 818f68046fe916bcafbcd91bdc865d6b6f039cb7
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: ef1ca09b778e11ad9db482f9a3438c1a20138e61
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111888"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467955"
 ---
 # <a name="pi-transact-sql"></a>PI(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -44,7 +45,7 @@ PI ( )
 ## <a name="return-types"></a>반환 형식
  **float**  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `PI`의 값을 반환합니다.  
   
 ```  

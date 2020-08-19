@@ -1,4 +1,5 @@
 ---
+description: Embedded SQL 예제
 title: Embedded SQL 예제 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b8a26e05-3c82-4c5f-8f01-9de0edb645e9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 39ec504c423817c6a3e11bc954555b201b8b09c6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fec0f3e3776b8ac70e85042c565343b35f8a893e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81294174"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429065"
 ---
 # <a name="embedded-sql-example"></a>Embedded SQL 예제
 다음 코드는 C로 작성 된 간단한 임베디드 SQL 프로그램입니다. 이 프로그램은 포함 된 SQL 기술 중 일부를 보여 줍니다. 프로그램은 사용자에 게 주문 번호를 묻는 메시지를 표시 하 고, 고객 번호, 영업 사원 및 주문 상태를 검색 하 고, 검색 된 정보를 화면에 표시 합니다.  

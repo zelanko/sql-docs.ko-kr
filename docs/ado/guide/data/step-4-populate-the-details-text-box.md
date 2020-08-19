@@ -1,4 +1,5 @@
 ---
+description: '4단계: 세부 정보 텍스트 상자 채우기'
 title: '4 단계: 세부 정보 텍스트 상자 채우기 | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: cb4273e2-c907-4a86-a621-3bf110088228
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2110384afa66e74e17d4e3c9a8600b5825cc412e
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 59b074b3e635457f8d96060575d941e26846281d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760789"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452785"
 ---
 # <a name="step-4-populate-the-details-text-box"></a>4단계: 세부 정보 텍스트 상자 채우기
 세부 정보 텍스트 상자를 채우려면 새 **서브루틴 이라는 새 서브루틴을 만들고** 다음 코드를 삽입 합니다.  

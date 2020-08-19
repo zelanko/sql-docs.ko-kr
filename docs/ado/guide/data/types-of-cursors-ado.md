@@ -1,4 +1,5 @@
 ---
+description: 커서 형식(ADO)
 title: 커서 유형 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7cc01544-e814-403b-bbfe-a2750bf921bd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4953b0509cade52a8badd8d578c9fa13f0c2b42b
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: ea996827565f0cc6d593078e7772c336699260bf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759049"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452715"
 ---
 # <a name="types-of-cursors-ado"></a>커서 형식(ADO)
 일반적으로 응용 프로그램은 필요한 데이터 액세스를 제공 하는 가장 간단한 커서를 사용 해야 합니다. 앞 으로만 이동 가능한 읽기 전용, 정적, 스크롤, 버퍼링 되지 않음 등의 추가 커서 특성에는 가격 책정 클라이언트 메모리, 네트워크 로드 또는 성능이 있습니다. 대부분의 경우 기본 커서 옵션은 응용 프로그램에 실제로 필요한 것 보다 더 복잡 한 커서를 생성 합니다.  

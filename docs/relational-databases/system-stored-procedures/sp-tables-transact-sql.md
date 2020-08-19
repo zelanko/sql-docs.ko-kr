@@ -1,4 +1,5 @@
 ---
+description: sp_tables(Transact-SQL)
 title: sp_tables (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ ms.assetid: 787a2fa5-87a1-49bd-938b-6043c245f46b
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a11d686bef327e4e3daba1ed5365289f78169853
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 66081d1f9dd7af2e368aea4d00d645bf62317d83
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173113"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469190"
 ---
 # <a name="sp_tables-transact-sql"></a>sp_tables(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -48,23 +49,23 @@ sp_tables [ [ @table_name = ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @table_name = ] 'name'`카탈로그 정보를 반환 하는 데 사용 되는 테이블입니다. *name* 은 **nvarchar (384)** 이며 기본값은 NULL입니다. 와일드카드 패턴 일치가 지원됩니다.  
+`[ @table_name = ] 'name'` 카탈로그 정보를 반환 하는 데 사용 되는 테이블입니다. *name* 은 **nvarchar (384)** 이며 기본값은 NULL입니다. 와일드카드 패턴 일치가 지원됩니다.  
   
-`[ @table_owner = ] 'owner'`카탈로그 정보를 반환 하는 데 사용 되는 테이블의 소유자입니다. *owner* 는 **nvarchar (384)** 이며 기본값은 NULL입니다. 와일드카드 패턴 일치가 지원됩니다. 소유자를 지정하지 않은 경우 기본 DBMS의 기본 테이블 표시 유형 규칙이 적용됩니다.  
+`[ @table_owner = ] 'owner'` 카탈로그 정보를 반환 하는 데 사용 되는 테이블의 소유자입니다. *owner* 는 **nvarchar (384)** 이며 기본값은 NULL입니다. 와일드카드 패턴 일치가 지원됩니다. 소유자를 지정하지 않은 경우 기본 DBMS의 기본 테이블 표시 유형 규칙이 적용됩니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 현재 사용자가 지정된 이름의 테이블을 소유한 경우 해당 테이블의 열이 반환됩니다. 소유자를 지정하지 않았으며 현재 사용자가 지정된 이름의 테이블을 소유하고 있지 않은 경우 이 프로시저는 데이터베이스 소유자가 소유한 지정된 이름의 테이블을 찾습니다. 테이블이 있을 경우 해당 테이블의 열이 반환됩니다.  
   
-`[ @table_qualifier = ] 'qualifier'`테이블 한정자의 이름입니다. *한정자* 는 **sysname**이며 기본값은 NULL입니다. 다양 한 DBMS 제품에서 테이블에 대해 세 부분으로 구성 되는 이름 (_한정자_)을 지원**합니다.** _소유자_**.** _이름_). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 이 열은 데이터베이스 이름을 나타냅니다. 일부 제품에서는 테이블 데이터베이스 환경의 서버 이름을 나타냅니다.  
+`[ @table_qualifier = ] 'qualifier'` 테이블 한정자의 이름입니다. *한정자* 는 **sysname**이며 기본값은 NULL입니다. 다양 한 DBMS 제품에서 테이블에 대해 세 부분으로 구성 되는 이름 (_한정자_)을 지원**합니다.** _소유자_**.** _이름_). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 이 열은 데이터베이스 이름을 나타냅니다. 일부 제품에서는 테이블 데이터베이스 환경의 서버 이름을 나타냅니다.  
   
-``[ , [ @table_type = ] "'type', 'type'" ]``지정 된 테이블 형식의 모든 테이블에 대 한 정보를 제공 하는 쉼표로 구분 된 값 목록입니다. 여기에는 **table**, **Systemtable**및 **VIEW**가 포함 됩니다. *type* 은 **varchar (100)** 이며 기본값은 NULL입니다.  
+``[ , [ @table_type = ] "'type', 'type'" ]`` 지정 된 테이블 형식의 모든 테이블에 대 한 정보를 제공 하는 쉼표로 구분 된 값 목록입니다. 여기에는 **table**, **Systemtable**및 **VIEW**가 포함 됩니다. *type* 은 **varchar (100)** 이며 기본값은 NULL입니다.  
   
 > [!NOTE]  
 >  각 테이블 유형은 작은따옴표로 묶고, 전체 매개 변수는 큰따옴표로 묶어야 합니다. 테이블 유형은 대문자로 표시해야 합니다. SET QUOTED_IDENTIFIER가 ON이면 모든 작은따옴표는 큰따옴표로 바꾸고 전체 매개 변수는 작은따옴표로 묶어야 합니다.  
   
-`[ @fUsePattern = ] 'fUsePattern'`밑줄 (_), 백분율 (%) 및 대괄호 ([또는]) 문자를 와일드 카드 문자로 해석할지 여부를 결정 합니다. 유효한 값은 0(패턴 일치 해제)과 1(패턴 일치 설정)입니다. *fUsePattern* 는 **bit**이며 기본값은 1입니다.  
+`[ @fUsePattern = ] 'fUsePattern'` 밑줄 (_), 백분율 (%) 및 대괄호 ([또는]) 문자를 와일드 카드 문자로 해석할지 여부를 결정 합니다. 유효한 값은 0(패턴 일치 해제)과 1(패턴 일치 설정)입니다. *fUsePattern* 는 **bit**이며 기본값은 1입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
- 없음  
+ None  
   
 ## <a name="result-sets"></a>결과 집합  
   
@@ -86,7 +87,7 @@ sp_tables [ [ @table_name = ] 'name' ]
 ## <a name="permissions"></a>사용 권한  
  스키마에 대한 SELECT 권한이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-returning-a-list-of-objects-that-can-be-queried-in-the-current-environment"></a>A. 현재 환경에서 쿼리할 수 있는 개체 목록 반환  
  다음 예에서는 현재 환경에서 쿼리할 수 있는 개체 목록을 반환합니다.  

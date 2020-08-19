@@ -1,4 +1,5 @@
 ---
+description: MSmerge_conflicts_info(Transact-SQL)
 title: MSmerge_conflicts_info (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6b76ae96-737a-4000-a6b6-fcc8772c2af4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ff17275823540538a1ddb35cf17b0fa393a6ee11
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2acd79359758c4bc5c14d8d204a5b5ac6b889c48
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889840"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469077"
 ---
 # <a name="msmerge_conflicts_info-transact-sql"></a>MSmerge_conflicts_info(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +43,7 @@ ms.locfileid: "85889840"
 |**origin_datasource_id**|**uniqueidentifier**|충돌을 일으키는 변경이 시작된 데이터베이스의 식별자입니다.|  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;복제 테이블](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Transact-sql&#41;&#40;복제 테이블 ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [복제 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

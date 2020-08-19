@@ -1,4 +1,5 @@
 ---
+description: SQL 데이터 형식
 title: SQL 데이터 형식 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1b22f985-f5e4-4779-87eb-e43329a442b1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3cc91213533aa39f30be1bc838cc014c20e70884
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8209463c3c316a5bd2e45a2d7b08eb65b3cb113d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305007"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483156"
 ---
 # <a name="sql-data-types"></a>SQL 데이터 형식
 각 DBMS는 자체 SQL 형식을 정의 합니다. 각 ODBC 드라이버는 관련 DBMS에서 정의 하는 SQL 데이터 형식만 노출 합니다. 드라이버가 DBMS SQL 형식을 ODBC 정의 SQL 형식 식별자에 매핑하는 방법 및 드라이버가 DBMS SQL 형식을 고유한 드라이버별 SQL 형식 식별자에 매핑하는 방법에 대 한 정보는 **SQLGetTypeInfo**를 호출 하 여 반환 됩니다. 또한 드라이버는 **Sqlcolattribute**, **sqlcolumns**, **SQLDescribeCol**, **SQLDescribeParam**, **SQLProcedureColumns**및 **SQLSpecialColumns**에 대 한 호출을 통해 열과 매개 변수의 데이터 형식을 설명 하는 경우 SQL 데이터 형식을 반환 합니다.  
@@ -42,11 +43,11 @@ ms.locfileid: "81305007"
 |SQL_WCHAR|WCHAR (*n*)|고정 문자열 길이 *n* 의 유니코드 문자열|  
 |SQL_WVARCHAR|VARWCHAR (*n*)|최대 문자열 길이가 *n* 인 유니코드 가변 길이 문자열|  
 |SQL_WLONGVARCHAR|LONGWVARCHAR|유니코드 가변 길이 문자 데이터입니다. 최대 길이는 데이터 소스에 따라 다릅니다.|  
-|SQL_DECIMAL|DECIMAL (*p*,*s*)|최소 *p* 와 소수 자릿수의 전체 자릿수를 가진 부호 있는 정확한 숫자 값 *입니다.* 최대 전체 자릿수는 드라이버에 정의 되어 있습니다. (1 <= *p* <= 15; *s* <= *p*). 3-4|  
-|SQL_NUMERIC|숫자 (*p*,*s*)|전체 자릿수가 *p* 및 소수 자릿수 *s* 인 부호 있는 정확한 숫자 값 (1 <= *p* <= 15; *s* <= *p*). 3-4|  
+|SQL_DECIMAL|DECIMAL (*p*,*s*)|최소 *p* 와 소수 자릿수의 전체 자릿수를 가진 부호 있는 정확한 숫자 값 *입니다.* 최대 전체 자릿수는 드라이버에 정의 되어 있습니다. (1 <= *p* <= 15; *s*  <=  *p*). 3-4|  
+|SQL_NUMERIC|숫자 (*p*,*s*)|전체 자릿수가 *p* 및 소수 자릿수 *s* 인 부호 있는 정확한 숫자 값 (1 <= *p* <= 15; *s*  <=  *p*). 3-4|  
 |SQL_SMALLINT|SMALLINT|전체 자릿수가 5이 고 소수 자릿수가 0 인 정확한 숫자 값 (부호 있음:-32768 <= *n* <= 32767, unsigned: 0 <= *n* <= 65535) [3].|  
-|SQL_INTEGER|INTEGER|전체 자릿수가 10 이며 소수 자릿수가 0 인 정확한 숫자 값 (부호 있음:-2 [31] <= *n* <= 2 [31]-1, unsigned: 0 <= *n* <= 2 [32]-1) [3].|  
-|SQL_REAL|real|이진 정밀도 24 (0 또는 절대값 10 [-38] ~ 10 [38])를 포함 하는 부호 있는 근사 숫자 값입니다.|  
+|SQL_INTEGER|정수|전체 자릿수가 10 이며 소수 자릿수가 0 인 정확한 숫자 값 (부호 있음:-2 [31] <= *n* <= 2 [31]-1, unsigned: 0 <= *n* <= 2 [32]-1) [3].|  
+|SQL_REAL|실수|이진 정밀도 24 (0 또는 절대값 10 [-38] ~ 10 [38])를 포함 하는 부호 있는 근사 숫자 값입니다.|  
 |SQL_FLOAT|FLOAT (*p*)|최소 *p*의 이진 전체 자릿수를 사용 하는 부호 있는 근사 숫자 값입니다. 최대 전체 자릿수는 드라이버에 정의 되어 있습니다. 5|  
 |SQL_DOUBLE|DOUBLE PRECISION|이진 전체 자릿수 53 (0 또는 절대값 10 [-308] ~ 10 [308])를 사용 하는 부호 있는 근사 숫자 값입니다.|  
 |SQL_BIT|BIT|단일 비트 이진 데이터입니다. 20cm(8|  

@@ -1,4 +1,5 @@
 ---
+description: '2단계: 애플리케이션 초기화'
 title: '2 단계: 응용 프로그램 초기화 | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 23a7a230-ae2c-4a5e-9760-d2e17f92c389
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 843155ba6b641ea26717e63af55c8774f963a800
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 26d20a5b10ee7b414b9285a388359b3a93029f16
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81288269"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482886"
 ---
 # <a name="step-2-initialize-the-application"></a>2단계: 애플리케이션 초기화
 두 번째 단계는 다음 그림에 표시 된 것 처럼 응용 프로그램을 초기화 하는 것입니다. 여기에서 수행 하는 작업은 응용 프로그램에 따라 다릅니다.  

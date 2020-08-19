@@ -1,4 +1,5 @@
 ---
+description: SQLMoreResults(데스크톱 데이터베이스 드라이버)
 title: SQLMoreResults (데스크톱 데이터베이스 드라이버) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 676da17b-daea-487f-b2d8-e579db6547cc
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 34da68ce174c55d67e51a562bbe42c43a0e0d8d7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 76064ce69106fb78904c0c1090323930f6c3dce3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "81299513"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483366"
 ---
 # <a name="sqlmoreresults-desktop-database-drivers"></a>SQLMoreResults(데스크톱 데이터베이스 드라이버)
 이 함수는 항상 SQL_NO_DATA_FOUND 반환 합니다.

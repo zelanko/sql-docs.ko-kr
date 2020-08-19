@@ -1,4 +1,5 @@
 ---
+description: sys.dm_exec_requests(Transact-SQL)
 title: sys. dm_exec_requests (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/01/2019
@@ -20,12 +21,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 44c20aeed09468b9f2e0cc7047364f563e463daf
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 375dc6e15f8bf592ff3d5d9e8f9388f188008d3b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734693"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489975"
 ---
 # <a name="sysdm_exec_requests-transact-sql"></a>sys.dm_exec_requests(Transact-SQL)
 
@@ -57,7 +58,7 @@ ms.locfileid: "85734693"
 |transaction_id|**bigint**|이 요청이 실행되는 트랜잭션의 ID입니다. Null을 허용하지 않습니다.|  
 |context_info|**varbinary(128)**|세션의 CONTEXT_INFO 값입니다. Null을 허용합니다.|  
 |percent_complete|**real**|다음 명령에 대한 작업 완료율입니다.<br /><br /> ALTER INDEX REORGANIZE<br />ALTER DATABASE의 AUTO_SHRINK 옵션<br />BACKUP DATABASE<br />DBCC CHECKDB<br />DBCC CHECKFILEGROUP<br />DBCC CHECKTABLE<br />DBCC INDEXDEFRAG<br />DBCC SHRINKDATABASE<br />DBCC SHRINKFILE<br />RECOVERY<br />RESTORE DATABASE<br />ROLLBACK<br />TDE ENCRYPTION<br /><br /> Null을 허용하지 않습니다.|  
-|estimated_completion_time|**bigint**|내부용입니다. Null을 허용하지 않습니다.|  
+|estimated_completion_time|**bigint**|내부 전용입니다. Null을 허용하지 않습니다.|  
 |cpu_time|**int**|요청에 사용된 CPU 시간(밀리초)입니다. Null을 허용하지 않습니다.|  
 |total_elapsed_time|**int**|요청이 도착한 이후 경과한 총 시간(밀리초)입니다. Null을 허용하지 않습니다.|  
 |scheduler_id|**int**|이 요청을 예약하고 있는 스케줄러의 ID입니다. Null을 허용하지 않습니다.|  
@@ -104,7 +105,7 @@ ms.locfileid: "85734693"
 [행 모드](../../relational-databases/query-processing-architecture-guide.md#row-mode-execution)에서 병렬 요청을 실행할 경우는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 할당 된 작업을 완료 하는 작업을 담당 하는 작업자 스레드를 조정 하는 작업자 스레드를 할당 합니다. 이 DMV에서는 요청에 대해 코디네이터 스레드만 볼 수 있습니다. **읽기**, **쓰기**, **logical_reads**및 **row_count** 열은 코디네이터 스레드에 대해 **업데이트 되지 않습니다** . **Wait_type**, **wait_time**, **last_wait_type**, **wait_resource**및 **granted_query_memory** 열은 코디네이터 스레드에 대해서 **만 업데이트** 됩니다. 자세한 내용은 [스레드 및 태스크 아키텍처 가이드](../../relational-databases/thread-and-task-architecture-guide.md)를 참조하세요.
 
 ## <a name="permissions"></a>사용 권한
-사용자에 `VIEW SERVER STATE` 게 서버에 대 한 권한이 있는 경우 사용자는 인스턴스에서 실행 중인 모든 세션을 볼 수 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 있습니다. 그렇지 않으면 사용자에 게 현재 세션만 표시 됩니다. `VIEW SERVER STATE`는 Azure SQL Database에서 부여할 수 없으므로 `sys.dm_exec_requests` 항상 현재 연결로 제한 됩니다.
+사용자에 `VIEW SERVER STATE` 게 서버에 대 한 권한이 있는 경우 사용자는 인스턴스에서 실행 중인 모든 세션을 볼 수 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 있습니다. 그렇지 않으면 사용자에 게 현재 세션만 표시 됩니다. `VIEW SERVER STATE` 는 Azure SQL Database에서 부여할 수 없으므로 `sys.dm_exec_requests` 항상 현재 연결로 제한 됩니다.
 
 Always On 시나리오에서 보조 복제본이 **읽기**전용으로 설정 된 경우 보조 복제본에 대 한 연결은를 추가 하 여 연결 문자열 매개 변수에 응용 프로그램 의도를 지정 해야 합니다 `applicationintent=readonly` . 그렇지 않으면 권한이 있는 경우에도에 대 한 액세스 검사는 `sys.dm_exec_requests` 가용성 그룹의 데이터베이스에 대해 전달 되지 않습니다 `VIEW SERVER STATE` .
 
@@ -186,7 +187,7 @@ FROM sys.dm_exec_requests AS req
 GO
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목
 [동적 관리 뷰 및 함수](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)     
 [실행 관련 동적 관리 뷰 및 함수](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)      
 [sys. dm_os_memory_clerks](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)     

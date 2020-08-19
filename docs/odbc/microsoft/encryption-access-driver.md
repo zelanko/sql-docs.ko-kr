@@ -1,4 +1,5 @@
 ---
+description: Encryption(Access 드라이버)
 title: 암호화 (Access 드라이버) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d868becd-8d3d-4285-863b-d1d0fcb04b88
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d121ec3dd5e50eab3bc00b255da9719f178595bc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f166a6f786372e2b562378361728e38be5af7ea9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303394"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483626"
 ---
 # <a name="encryption-access-driver"></a>Encryption(Access 드라이버)
 이 컨트롤은 버전 4 에서만 사용할 수 있습니다. *x* 형식이 선택 됩니다.  

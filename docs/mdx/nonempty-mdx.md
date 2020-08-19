@@ -1,4 +1,5 @@
 ---
+description: NonEmpty(MDX)
 title: 비어 있지 않음 (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 45daf970f69322cad36bbe5419bf1dc8cc8009b9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b887988327908f128633349de52f39a17d1e0978
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68088340"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483726"
 ---
 # <a name="nonempty-mdx"></a>NonEmpty(MDX)
 
@@ -43,7 +44,7 @@ NONEMPTY(set_expression1 [,set_expression2])
 > [!IMPORTANT]  
 >  비어 있지 않음 특성은 튜플 자체가 아니라 튜플에서 참조하는 셀의 특성입니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 쿼리는 **비어 있지**않은 간단한 예제를 보여 줍니다. 2001 1 월 1 일에 Internet Sales Amount에 대해 null이 아닌 값을 가진 모든 고객을 반환 합니다.  
   
  `SELECT [Measures].[Internet Sales Amount] ON 0,`  
@@ -86,7 +87,7 @@ NONEMPTY(set_expression1 [,set_expression2])
   
  `FROM [Adventure Works]`  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [DefaultMember &#40;MDX&#41;](../mdx/defaultmember-mdx.md)   
  [MDX &#40;필터&#41;](../mdx/filter-mdx.md)   
  [IsEmpty &#40;MDX&#41;](../mdx/isempty-mdx.md)   

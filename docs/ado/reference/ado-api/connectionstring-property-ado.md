@@ -1,4 +1,5 @@
 ---
+description: ConnectionString 속성(ADO)
 title: ConnectionString 속성 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3be75b75-4d36-4479-ab64-9a456869252a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 39eb67a98d710e27c051d77aa7843663c853b9e0
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 617ceace87a7f265d3d4db901b0a586481c19e32
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762634"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444455"
 ---
 # <a name="connectionstring-property-ado"></a>ConnectionString 속성(ADO)
 데이터 원본에 대 한 연결을 설정 하는 데 사용 되는 정보를 나타냅니다.  

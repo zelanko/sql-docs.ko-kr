@@ -1,4 +1,5 @@
 ---
+description: sys. pdw_nodes_tables (Transact-sql)
 title: sys. pdw_nodes_tables (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -12,23 +13,23 @@ ms.assetid: 473b5d14-171b-4a16-9195-acf36d3f786c
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 78af01169c643acfc82f7a3db035ae32518695bd
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: 7b50d1757371a1ca379a4cf8f79410ceaef9a614
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86196871"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475374"
 ---
 # <a name="syspdw_nodes_tables-transact-sql"></a>sys. pdw_nodes_tables (Transact-sql)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   보안 주체가 소유 하 고 있거나 일부 사용 권한이 부여 된 각 테이블 개체에 대 한 행을 포함 합니다.  
   
-|열 이름|데이터 형식|설명|범위|  
+|열 이름|데이터 형식|Description|범위|  
 |-----------------|---------------|-----------------|-----------|  
 |\<inherited columns>||이 뷰가 상속 하는 열 목록은 [sys. 개체](../system-catalog-views/sys-objects-transact-sql.md)를 참조 하세요.||  
 |lob_data_space_id|**int**||항상 0입니다.|  
-|filestream_data_space_id|**int**|FILESTREAM 파일 그룹의 데이터 공간 ID 또는[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|NULL|  
+|filestream_data_space_id|**int**|FILESTREAM 파일 그룹의 데이터 공간 ID 또는 [!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|NULL|  
 |max_column_id_used|**int**|이 테이블에 사용 되는 최대 열 ID입니다.||  
 |lock_on_bulk_load|**bit**|대량 로드 시 테이블이 잠깁니다.|TBD|  
 |uses_ansi_nulls|**bit**|테이블이 SET ANSI_NULLS 데이터베이스 옵션을 ON으로 설정하여 생성되었습니다.|1|  
