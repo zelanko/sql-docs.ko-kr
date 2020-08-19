@@ -1,4 +1,5 @@
 ---
+description: CHAR(Transact-SQL)
 title: CHAR(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/19/2018
@@ -27,12 +28,12 @@ ms.assetid: 955afe94-539c-465d-af22-16ec45da432a
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: af2e71a4b4851e61176235b5615f0b7adbd553e2
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: ba9bec3ce34e9d7aebc204c183f5ec24d92b065a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112155"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88367129"
 ---
 # <a name="char-transact-sql"></a>CHAR(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -68,7 +69,7 @@ CHAR ( integer_expression )
 |줄 바꿈|**char(10)**|  
 |캐리지 리턴|**char(13)**|  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-using-ascii-and-char-to-print-ascii-values-from-a-string"></a>A. ASCII 및 CHAR를 사용하여 문자열의 ASCII 값 인쇄  
 이 예에서는 `New Moon` 문자열에서 각 문자의 ASCII 값과 문자를 인쇄합니다.

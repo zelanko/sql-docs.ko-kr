@@ -1,4 +1,5 @@
 ---
+description: CERTENCODED(Transact-SQL)
 title: CERTENCODED(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 677a0719-7b9a-4f0b-bc61-41634563f924
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: a82e5c9a18f1bb21ac58d3158395881ee973a9a5
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: df0a107d49fb04588fb5f607058f57a94fdcc5bc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111659"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88367359"
 ---
 # <a name="certencoded-transact-sql"></a>CERTENCODED(Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -50,7 +51,7 @@ CERTENCODED ( cert_id )
 ## <a name="permissions"></a>사용 권한  
 **CERTENCODED**는 누구나 사용할 수 있습니다.
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="simple-example"></a>간단한 예  
 이 예에서는 이름이 `Shipping04`인 인증서를 만든 다음, **CERTENCODED** 함수를 사용하여 인증서의 이진 인코딩을 반환합니다. 이 예에서는 2040년 10월 31일을 인증서 만료 날짜로 설정합니다.

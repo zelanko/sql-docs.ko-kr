@@ -1,4 +1,5 @@
 ---
+description: CERTPROPERTY(Transact-SQL)
 title: CERTPROPERTY(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 966c09aa-bc4e-45b0-ba53-c8381871f638
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0323bb93388010c1ba9c20176893674aff03760a
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: bbba412b97f88d52afa9a304c3cbbb101f74772b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112161"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88367279"
 ---
 # <a name="certproperty-transact-sql"></a>CERTPROPERTY(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -84,7 +85,7 @@ int 데이터 형식의 인증서 ID 값입니다.
 ## <a name="permissions"></a>사용 권한  
 인증서에 대한 적절한 사용 권한이 필요하며 인증서에 대한 호출자의 VIEW 권한이 거부되지 않아야 합니다. 인증서 사용 권한에 대한 자세한 내용은 [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md) 및[GRANT CERTIFICATE PERMISSIONS &#40;Transact-SQL&#41;](../../t-sql/statements/grant-certificate-permissions-transact-sql.md)을 참조하세요.
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
 다음 예에서는 인증서 주체를 반환합니다.
   
 ```sql

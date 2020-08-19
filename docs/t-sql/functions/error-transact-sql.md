@@ -1,4 +1,5 @@
 ---
+description: '&#x40;&#x40;ERROR (Transact-SQL)'
 title: '@@ERROR(Transact-SQL) | Microsoft Docs'
 ms.custom: ''
 ms.date: 08/29/2017
@@ -20,12 +21,12 @@ ms.assetid: c8b43477-b6c0-49bf-a608-394a0b6cc7a2
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8cbc22ecc5bb912ad7f303c2551c076f6ce8393a
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 93fe08c7dcba1b9c45f9dfabd0c360b3db2c152f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111584"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88366259"
 ---
 # <a name="x40x40error-transact-sql"></a>&#x40;&#x40;ERROR (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -54,7 +55,7 @@ ms.locfileid: "87111584"
   
  TRY...CATCH 구문을 사용하여 오류를 처리하세요. 또한 TRY...CATCH는 @@ERROR보다 많은 오류 정보를 반환하는 추가 시스템 함수(ERROR_LINE, ERROR_MESSAGE, ERROR_PROCEDURE, ERROR_SEVERITY 및 ERROR_STATE)를 지원합니다. TRY...CATCH는 오류가 발생된 문 바로 다음 문의 오류 번호만 반환하도록 제한되지 않은 ERROR_NUMBER 함수도 지원합니다. 자세한 내용은 [TRY...CATCH&#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md)를 참조하세요.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-using-error-to-detect-a-specific-error"></a>A. @@ERROR를 사용하여 특정 오류 검색  
  다음 예에서는 `@@ERROR`를 사용하여 `UPDATE` 문에서 CHECK 제약 조건 위반(오류 #547)을 확인합니다.  
@@ -73,7 +74,7 @@ GO
 ```  
   
 ### <a name="b-using-error-to-conditionally-exit-a-procedure"></a>B. @@ERROR를 사용하여 조건부로 프로시저 종료  
- 다음 예에서는 `IF...ELSE` 문을 사용하여 저장 프로시저에서 `@@ERROR` 문 뒤의 `DELETE`를 테스트합니다. `@@ERROR` 변수의 값은 호출하는 프로그램으로 보내진 반환 코드를 결정하고 프로시저의 성공 여부를 나타냅니다.  
+ 다음 예에서는 `IF...ELSE` 문을 사용하여 저장 프로시저에서 `DELETE` 문 뒤의 `@@ERROR`를 테스트합니다. `@@ERROR` 변수의 값은 호출하는 프로그램으로 보내진 반환 코드를 결정하고 프로시저의 성공 여부를 나타냅니다.  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -170,7 +171,7 @@ GO
 ```  
 
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [TRY...CATCH&#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md)   
  [ERROR_LINE&#40;Transact-SQL&#41;](../../t-sql/functions/error-line-transact-sql.md)   
  [ERROR_MESSAGE&#40;Transact-SQL&#41;](../../t-sql/functions/error-message-transact-sql.md)   

@@ -1,4 +1,5 @@
 ---
+description: CERT_ID(Transact-SQL)
 title: CERT_ID(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 59cc06f5-272e-4936-8afe-afba7aba8eea
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 07c8a6220ae5c9b20b659bbb791407fc4dd1aa09
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 7954cf4571b459358792a13165483d2435787572
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111102"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88367469"
 ---
 # <a name="cert_id-transact-sql"></a>CERT_ID(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -56,7 +57,7 @@ Cert_ID ( 'cert_name' )
 ## <a name="permissions"></a>사용 권한  
 인증서에 대한 적절한 사용 권한이 필요하며 인증서에 대한 호출자의 VIEW DEFINITION 권한이 거부되지 않아야 합니다. 인증서 사용 권한에 대한 자세한 내용은 [CREATE CERTIFICATE&#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md#permissions)을 참조하세요.
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
 이 예에서는 `ABerglundCert3`이라는 인증서의 ID를 반환합니다.
   
 ```sql

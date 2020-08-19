@@ -1,4 +1,5 @@
 ---
+description: ENCRYPTBYKEY(Transact-SQL)
 title: ENCRYPTBYKEY(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 0e11f8c5-f79d-46c1-ab11-b68ef05d6787
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: da36a011f2999527218e668755a8c1d10c9ce692
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: c90d864c80c3e54b8ea0cf1e1efcc51881e9eb80
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112973"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88366469"
 ---
 # <a name="encryptbykey-transact-sql"></a>ENCRYPTBYKEY(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -96,7 +97,7 @@ EncryptByKey ( key_GUID , { 'cleartext' | @cleartext }
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 암호화 함수를 ANSI_PADDING OFF 설정과 함께 사용하면 암시적 변환으로 인해 데이터가 손실될 수 있습니다. ANSI_PADDING에 관한 자세한 내용은 [SET ANSI_PADDING &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md)을 참조하세요.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에 설명된 기능은 [방법: 데이터 열 암호화](../../relational-databases/security/encryption/encrypt-a-column-of-data.md)에서 생성된 키와 인증서에 의존합니다.  
   
 ### <a name="a-encrypting-a-string-with-a-symmetric-key"></a>A. 대칭 키로 문자열 암호화  
@@ -146,7 +147,7 @@ SET CardNumber_Encrypted = EncryptByKey(Key_GUID('CreditCards_Key11'),
 GO  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [DECRYPTBYKEY&#40;Transact-SQL&#41;](../../t-sql/functions/decryptbykey-transact-sql.md)   
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)   
  [ALTER SYMMETRIC KEY&#40;Transact-SQL&#41;](../../t-sql/statements/alter-symmetric-key-transact-sql.md)   

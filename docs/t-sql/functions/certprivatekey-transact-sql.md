@@ -1,4 +1,5 @@
 ---
+description: CERTPRIVATEKEY(Transact-SQL)
 title: CERTPRIVATEKEY(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 33e0f01e-39ac-46da-94ff-fe53b1116df4
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 4fd9302ae396ffd8c09dcd998e0827032b98d36b
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 8dc94ac93a79ceabef40b9972293c086bfdc3eac
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111653"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88367249"
 ---
 # <a name="certprivatekey-transact-sql"></a>CERTPRIVATEKEY(Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -66,7 +67,7 @@ CERTPRIVATEKEY
 ## <a name="permissions"></a>사용 권한  
 **CERTPRIVATEKEY**는 누구나 사용할 수 있습니다.
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ```sql
 CREATE DATABASE TEST1;  
@@ -81,7 +82,7 @@ GO
 SELECT CERTPRIVATEKEY(CERT_ID('Shipping04'), 'jklalkaa/; uia3dd');  
 ```  
   
-[CERTPRIVATEKEY](../../t-sql/functions/certencoded-transact-sql.md) 및 **CERTENCODED**를 사용하여 다른 데이터베이스로 인증서를 복사하는 더 복잡한 예는 **CERTENCODED &#40;Transact-SQL&#41;** 의 예 2를 참조하세요.
+**CERTPRIVATEKEY** 및 **CERTENCODED**를 사용하여 다른 데이터베이스로 인증서를 복사하는 더 복잡한 예는 [CERTENCODED &#40;Transact-SQL&#41;](../../t-sql/functions/certencoded-transact-sql.md)의 예 2를 참조하세요.
   
 ## <a name="see-also"></a>참고 항목
 [보안 함수&#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)  

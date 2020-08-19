@@ -1,5 +1,6 @@
 ---
-title: ERROR_LINE(Transact-SQL) | Microsoft Docs
+description: ERROR_LINE(Transact-SQL)
+title: ERROR_LINE(Transact-SQL)
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -22,29 +23,32 @@ helpviewer_keywords:
 ms.assetid: 47335734-0baf-45a6-8b3b-6c4fd80d2cb8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d9d1c16c94f51bdfd961c0173bea635e38da3acb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 928cdcd92ceb2bfc6ace1be7d5cd6b1c785d5f48
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85682025"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88366269"
 ---
 # <a name="error_line-transact-sql"></a>ERROR_LINE(Transact-SQL)
+
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 이 함수는 TRY...CATCH 구문의 CATCH 블록을 실행시키는 오류의 발생 줄 번호를 반환합니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
-## <a name="syntax"></a>구문  
-  
-```  
-ERROR_LINE ( )  
-```  
-  
-## <a name="return-type"></a>반환 형식  
-**int**  
-  
+## <a name="syntax"></a>구문
+
+```syntaxsql
+ERROR_LINE ( )
+```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="return-type"></a>반환 형식
+**int**
+
 ## <a name="return-value"></a>Return Value  
 CATCH 블록에서 호출된 경우 `ERROR_LINE`은 다음을 반환합니다.  
   
@@ -59,7 +63,7 @@ CATCH 블록에서 호출된 경우 `ERROR_LINE`은 다음을 반환합니다.
   
 중첩된 CATCH 블록에서 `ERROR_LINE`은 참조되는 CATCH 블록의 범위에 해당하는 오류 줄 번호를 반환합니다. 예를 들어 TRY...CATCH 구조의 CATCH 블록에는 중첩된 TRY...CATCH 구문이 포함될 수 있습니다. 중첩된 CATCH 블록 내에서 `ERROR_LINE`은 중첩된 CATCH 블록을 호출한 오류의 줄 번호를 반환합니다. `ERROR_LINE`이 외부 CATCH 블록에서 실행되는 경우 해당 특정 CATCH 블록을 호출한 오류의 줄 번호를 반환합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-using-error_line-in-a-catch-block"></a>A. CATCH 블록에서 ERROR_LINE 사용  
 이 코드 예에서는 0으로 나누기 오류를 일으키는 `SELECT` 문을 보여 줍니다. `ERROR_LINE`은 오류가 발생한 줄 번호를 반환합니다.  
@@ -122,7 +126,7 @@ END CATCH;
 GO  
 ``` 
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [TRY...CATCH&#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md)   
  [sys.messages&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)   
  [ERROR_NUMBER&#40;Transact-SQL&#41;](../../t-sql/functions/error-number-transact-sql.md)   

@@ -1,4 +1,5 @@
 ---
+description: '&#x40;&#x40;CONNECTIONS(Transact-SQL)'
 title: '@@CONNECTIONS(Transact-SQL) | Microsoft Docs'
 ms.custom: ''
 ms.date: 09/18/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: c59836a8-443c-4b9a-8b96-8863ada97ac7
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1865e3c12a468b8d9483e221f9aacaa2bca666c2
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 48279ffe9c454a32545d28c7ed74556ba3f93157
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111648"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88366929"
 ---
 # <a name="x40x40connections-transact-sql"></a>&#x40;&#x40;CONNECTIONS(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,11 +50,11 @@ ms.locfileid: "87111648"
 ## <a name="remarks"></a>설명  
 연결은 사용자와 다릅니다. 예를 들어 애플리케이션은 해당 연결을 관찰하는 사용자 없이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대한 여러 연결을 열 수 있습니다.
   
-연결 시도 횟수를 포함한 여러 **통계를 포함하는 보고서의 경우**sp_monitor[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 실행합니다.
+연결 시도 횟수를 포함한 여러 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 통계를 포함하는 보고서의 경우 **sp_monitor**를 실행합니다.
   
 @@MAX_CONNECTIONS는 서버에 대해 허용되는 최대 동시 연결 수입니다. @@CONNECTIONS는 로그인을 시도할 때마다 증가하므로 @@CONNECTIONS는 @@MAX_CONNECTIONS을 초과할 수 있습니다.
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
 이 예제에서는 로그인 시도 횟수를 현재 날짜 및 시간으로 반환합니다.
   
 ```sql
@@ -71,7 +72,7 @@ Today's Date and Time  Login Attempts
 ```  
   
 ## <a name="see-also"></a>참고 항목
-[시스템 통계 함수&#40;Transact-SQL&#41;](../../t-sql/functions/system-statistical-functions-transact-sql.md)  
+[시스템 통계 함수 &#40;Transact-SQL&#41;](../../t-sql/functions/system-statistical-functions-transact-sql.md)  
 [sp_monitor&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md)
   
   
