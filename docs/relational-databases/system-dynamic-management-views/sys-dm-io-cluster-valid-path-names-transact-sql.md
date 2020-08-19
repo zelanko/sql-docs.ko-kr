@@ -1,4 +1,5 @@
 ---
+description: sys.dm_io_cluster_valid_path_names(Transact-SQL)
 title: sys. dm_io_cluster_valid_path_names (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 5bc8a0e5-6c72-425b-8c58-f276eb9add2c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a47313e1fb9a97207f02abcc89bdb66bb791f9ea
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: 0f81bd26a6ec2a43e9f063466bfa77c793ac4d8b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442542"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419657"
 ---
 # <a name="sysdm_io_cluster_valid_path_names-transact-sql"></a>sys.dm_io_cluster_valid_path_names(Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]

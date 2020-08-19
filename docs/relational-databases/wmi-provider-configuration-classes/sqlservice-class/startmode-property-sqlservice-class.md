@@ -1,4 +1,5 @@
 ---
+description: StartMode 속성(SqlService 클래스)
 title: StartMode 속성 (SqlService)
 ms.custom: seo-lt-2019
 ms.date: 03/04/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: c0c2c7f8-d4ae-44f2-ad8e-aecfcb7c2878
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6c6aab858d98baa0404e4ef5f33adc16ece687d8
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 608214cf9d4eca2601c0f8bee7b82570ec936ea6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888327"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418759"
 ---
 # <a name="startmode-property-sqlservice-class"></a>StartMode 속성(SqlService 클래스)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -53,7 +54,7 @@ object.StartMode [= value]
  자동  
  값 = 2입니다. 시스템 시작 중 서비스 제어 관리자에 의해 자동으로 서비스가 시작됩니다.  
   
- 수동  
+ 설명서  
  값 = 3입니다. 프로세스에서 **StartService** 메서드를 호출할 때 컴퓨터 관리자에 의해 서비스가 시작 됩니다.  
   
  사용 안 함  

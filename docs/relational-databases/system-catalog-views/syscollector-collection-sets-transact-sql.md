@@ -1,4 +1,5 @@
 ---
+description: syscollector_collection_sets(Transact-SQL)
 title: syscollector_collection_sets (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: db0def92-f25b-45da-9709-eab972b33800
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b65cbb9596ff25e334609e978fdf61a89be41db4
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 902a8f7513bf30194ec40d7d27714e98f47b2cac
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896780"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419887"
 ---
 # <a name="syscollector_collection_sets-transact-sql"></a>syscollector_collection_sets(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -56,8 +57,8 @@ ms.locfileid: "85896780"
  데이터 수집기 API를 통해 사용자는 자신이 만든 컬렉션 집합만 변경 또는 삭제할 수 있습니다. 시스템에서 제공되는 컬렉션 집합은 수정 또는 삭제할 수 없지만 시스템 컬렉션 집합을 사용하거나 사용하지 않도록 설정하고 해당 구성을 변경할 수는 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;데이터 수집기 저장 프로시저](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
- [Transact-sql&#41;&#40;데이터 수집기 뷰](../../relational-databases/system-catalog-views/data-collector-views-transact-sql.md)   
- [데이터 수집](../../relational-databases/data-collection/data-collection.md)  
+ [데이터 수집기 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;데이터 수집기 뷰 ](../../relational-databases/system-catalog-views/data-collector-views-transact-sql.md)   
+ [데이터 컬렉션](../../relational-databases/data-collection/data-collection.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: DB2 스키마 변환 (DB2ToSQL)
 title: DB2 스키마 변환 (DB2ToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 7947efc3-ca86-4ec5-87ce-7603059c75a0
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 13afcabf85515b211d8493990a59950dc97d72f5
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 9dbf89c8027737a02d4eded9dc2e743e683b65e4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87933935"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418559"
 ---
 # <a name="converting-db2-schemas-db2tosql"></a>DB2 스키마 변환 (DB2ToSQL)
 DB2에 연결 하 고,에 연결 하 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 고, 프로젝트 및 데이터 매핑 옵션을 설정한 후 db2 데이터베이스 개체를 데이터베이스 개체로 변환할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -66,7 +67,7 @@ DB2에 연결 하 고,에 연결 하 [!INCLUDE[ssNoVersion](../../includes/ssnov
 |WHILE 문|가 매핑됩니다.|  
 |진단 문 가져오기|**SSMA 맵은 다음과 같은 예외를 사용 하 여 진단을 가져옵니다.**<br /><br />ROW_COUNT-매핑됩니다.<br /><br />DB2_RETURN_STATUS-매핑됩니다.<br /><br />MESSAGE_TEXT-매핑됩니다.<br /><br />DB2_SQL_NESTING_LEVEL-SQL Server 의미 체계에 매핑되지 않습니다.<br /><br />DB2_TOKEN_STRING-SQL Server 의미 체계에 매핑되지 않습니다.|  
 |커서|**SSMA는 다음과 같은 예외를 제외 하 고 커서를 매핑합니다.**<br /><br />CURSOR 문 할당-SQL Server 의미 체계에 매핑되지 않습니다.<br /><br />LOCATOR 문의 연결-SQL Server 의미 체계에 매핑되지 않습니다.<br /><br />DECLARE CURSOR 문-Returnability 절은 SQL server 의미 체계에 매핑되지 않습니다.<br /><br />FETCH 문-부분 매핑 변수는 target 으로만 지원 됩니다. SQLVAR 설명자가 SQL server 의미 체계에 매핑되지 않았습니다.|  
-|변수|매핑됩니다.|  
+|variables|매핑됩니다.|  
 |예외, 처리기 및 조건|**SSMA는 다음과 같은 예외를 제외 하 고 "예외 처리"를 매핑합니다.**<br /><br />종료 처리기-가 매핑됩니다.<br /><br />실행 취소 처리기-가 매핑됩니다.<br /><br />CONTINUE 처리기-매핑되지 않습니다.<br /><br />조건-SQL server 의미 체계에 매핑되지 않습니다.|  
 |동적 SQL|매핑되지 않았습니다.|  
 |별칭|매핑됩니다.|  
@@ -149,5 +150,5 @@ DB2 데이터베이스 개체를 변환 하려면 먼저 변환할 개체를 선
 마이그레이션 프로세스의 다음 단계는 [변환 된 개체를 SQL Server 로드](https://msdn.microsoft.com/f4ea1ced-9f9f-4a9d-88ab-81dbab64adc3)하는 것입니다.  
   
 ## <a name="see-also"></a>참고 항목  
-[DB2 데이터를 SQL Server &#40;DB2ToSQL&#41;로 마이그레이션](../../ssma/db2/migrating-db2-data-into-sql-server-db2tosql.md)  
+[DB2 데이터를 SQL Server &#40;DB2ToSQL&#41;로 마이그레이션 ](../../ssma/db2/migrating-db2-data-into-sql-server-db2tosql.md)  
   

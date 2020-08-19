@@ -1,4 +1,5 @@
 ---
+description: sys. pdw_diag_event_properties (Transact-sql)
 title: sys. pdw_diag_event_properties (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -12,12 +13,12 @@ ms.assetid: e3944f48-8074-43aa-9840-3d5230faedd3
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: fe8faae43cc5ed6e1767d47e4657ca167a6f377b
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 03d9b6d854374330762777e17703861af67c1a88
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396065"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420037"
 ---
 # <a name="syspdw_diag_event_properties-transact-sql"></a>sys. pdw_diag_event_properties (Transact-sql)
 [!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]

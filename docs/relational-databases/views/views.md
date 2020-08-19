@@ -1,4 +1,5 @@
 ---
+description: 보기
 title: 뷰 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,14 +14,14 @@ ms.assetid: ada83c28-e8b7-45d9-b53c-b3d67c8820c8
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6ef24d6eeb1739d40fb88eccd2fb18220ef6fea9
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: dda5e49aa6f51382beb390ae48a544565e2703d9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395712"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418927"
 ---
-# <a name="views"></a>뷰
+# <a name="views"></a>보기
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   뷰는 쿼리에 의해 내용이 정의되는 가상 테이블입니다. 테이블과 같이 뷰는 데이터의 명명된 열과 행 집합으로 구성됩니다. 인덱싱하지 않을 경우 뷰는 데이터베이스에 저장된 데이터 값 집합으로 존재하지 않습니다. 데이터 행과 열은 뷰를 정의하는 쿼리에서 참조하는 테이블에 있으며 뷰가 참조될 때 동적으로 생성됩니다.  
   

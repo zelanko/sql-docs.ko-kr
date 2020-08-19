@@ -1,4 +1,5 @@
 ---
+description: managed_backup. fn_get_health_status (Transact-sql)
 title: managed_backup. fn_get_health_status (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -20,11 +21,12 @@ helpviewer_keywords:
 ms.assetid: b376711d-444a-4b5e-b483-8df323b4e31f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f5f155837f1e5dd9057c376152ceae56bce33d74
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: 4aa10efc95af42c7793fb37b49a72061353b0ee0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86053439"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419557"
 ---
 # <a name="managed_backupfn_get_health_status-transact-sql"></a>managed_backup. fn_get_health_status (Transact-sql)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -42,7 +44,7 @@ ms.locfileid: "86053439"
 managed_backup.fn_get_health_status([@begin_time = ] 'time_1' , [ @end_time = ] 'time_2')  
 ```  
   
-##  <a name="arguments"></a><a name="Arguments"></a>인수의  
+##  <a name="arguments"></a><a name="Arguments"></a> 인수  
  [@begin_time]  
  집계된 오류 수가 계산되는 기간의 시작입니다.  @begin_time매개 변수가 DATETIME입니다. 기본값은 NULL입니다. 값이 NULL인 경우 함수는 현재 시간 30분 전부터 보고된 이벤트를 처리합니다.  
   
@@ -51,7 +53,7 @@ managed_backup.fn_get_health_status([@begin_time = ] 'time_1' , [ @end_time = ] 
   
 ## <a name="table-returned"></a>반환된 테이블  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |number_of_storage_connectivity_errors|int|프로그램이 Azure storage 계정에 연결 하는 경우 연결 오류 횟수입니다.|  
 |number_of_sql_errors|int|프로그램에서 SQL Server 엔진에 연결할 때 반환되는 오류 수입니다.|  

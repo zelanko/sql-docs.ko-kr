@@ -1,4 +1,5 @@
 ---
+description: PARAMETERS(Transact-SQL)
 title: PARAMETERS (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -19,11 +20,12 @@ ms.assetid: 06ded0ca-7d21-4400-864a-b801e855b257
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3ba42e693487fdf2bc9c7cb9565ee2448d6b3f9b
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: cf2d4b38a1bf29b129345c35f5d9bbb1e9a3c5f6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000433"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419387"
 ---
 # <a name="parameters-transact-sql"></a>PARAMETERS(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -55,19 +57,19 @@ ms.locfileid: "86000433"
 |**NUMERIC_PRECISION_RADIX**|**smallint**|근사 숫자 데이터, 정확한 숫자 데이터, 정수 데이터 또는 통화 데이터의 전체 자릿수 기수입니다. 다른 데이터 형식에 대해서는 NULL을 반환합니다.|  
 |**NUMERIC_SCALE**|**tinyint**|근사 숫자 데이터, 정확한 숫자 데이터, 정수 데이터 또는 통화 데이터의 소수 자릿수입니다. 다른 데이터 형식에 대해서는 NULL을 반환합니다.|  
 |**DATETIME_PRECISION**|**smallint**|매개 변수 형식이 **datetime** 또는 **smalldatetime**인 경우 소수 자릿수 초의 전체 자릿수 (초)입니다. 다른 데이터 형식에 대해서는 NULL을 반환합니다.|  
-|**INTERVAL_TYPE**|**nvarchar (** 30 **)**|NULL 다음에 사용하도록 예약됩니다.|  
-|**INTERVAL_PRECISION**|**smallint**|NULL 다음에 사용하도록 예약됩니다.|  
-|**USER_DEFINED_TYPE_CATALOG**|**nvarchar (** 128 **)**|NULL 다음에 사용하도록 예약됩니다.|  
-|**USER_DEFINED_TYPE_SCHEMA**|**nvarchar (** 128 **)**|NULL 다음에 사용하도록 예약됩니다.|  
-|**USER_DEFINED_TYPE_NAME**|**nvarchar (** 128 **)**|NULL 다음에 사용하도록 예약됩니다.|  
-|**SCOPE_CATALOG**|**nvarchar (** 128 **)**|NULL 다음에 사용하도록 예약됩니다.|  
-|**SCOPE_SCHEMA**|**nvarchar (** 128 **)**|NULL 다음에 사용하도록 예약됩니다.|  
-|**SCOPE_NAME**|**nvarchar (** 128 **)**|NULL 다음에 사용하도록 예약됩니다.|  
+|**INTERVAL_TYPE**|**nvarchar (** 30 **)**|NULL 나중에 사용하기 위해 예약되어 있습니다.|  
+|**INTERVAL_PRECISION**|**smallint**|NULL 나중에 사용하기 위해 예약되어 있습니다.|  
+|**USER_DEFINED_TYPE_CATALOG**|**nvarchar (** 128 **)**|NULL 나중에 사용하기 위해 예약되어 있습니다.|  
+|**USER_DEFINED_TYPE_SCHEMA**|**nvarchar (** 128 **)**|NULL 나중에 사용하기 위해 예약되어 있습니다.|  
+|**USER_DEFINED_TYPE_NAME**|**nvarchar (** 128 **)**|NULL 나중에 사용하기 위해 예약되어 있습니다.|  
+|**SCOPE_CATALOG**|**nvarchar (** 128 **)**|NULL 나중에 사용하기 위해 예약되어 있습니다.|  
+|**SCOPE_SCHEMA**|**nvarchar (** 128 **)**|NULL 나중에 사용하기 위해 예약되어 있습니다.|  
+|**SCOPE_NAME**|**nvarchar (** 128 **)**|NULL 나중에 사용하기 위해 예약되어 있습니다.|  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;시스템 뷰](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
- [Transact-sql&#41;&#40;정보 스키마 뷰](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   
- [&#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
+ [Transact-sql&#41;&#40;시스템 뷰 ](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
+ [Transact-sql&#41;&#40;정보 스키마 뷰 ](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   
+ [sys.columns&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
  [sys. 개체 &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
  [sys.parameters &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md)  
   

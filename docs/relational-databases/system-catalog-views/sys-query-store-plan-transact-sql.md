@@ -1,4 +1,5 @@
 ---
+description: sys.query_store_plan(Transact-SQL)
 title: sys. query_store_plan (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/23/2019
@@ -21,12 +22,12 @@ ms.assetid: b4d05439-6360-45db-b1cd-794f4a64935e
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 25272b586e84b498cfaa9da17a772692dad6f48a
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 355cd29ab98fd93dbee853532bf82f2c875fddf3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87393996"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420057"
 ---
 # <a name="sysquery_store_plan-transact-sql"></a>sys.query_store_plan(Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]

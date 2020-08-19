@@ -1,4 +1,5 @@
 ---
+description: sysmail_delete_principalprofile_sp(Transact-SQL)
 title: sysmail_delete_principalprofile_sp (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8fc14700-e17a-4073-9a96-7fc23e775c69
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 84d3fd2ccef7edec750d675f634b015b16f99232
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1cf4424f440ff8d03aa63933dbc4e661556e2106
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890954"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419307"
 ---
 # <a name="sysmail_delete_principalprofile_sp-transact-sql"></a>sysmail_delete_principalprofile_sp(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,13 +41,13 @@ sysmail_delete_principalprofile_sp  { [ @principal_id = ] principal_id | [ @prin
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @principal_id = ] principal_id`삭제할 연결의 **msdb** 데이터베이스에 있는 데이터베이스 사용자 또는 역할의 ID입니다. *principal_id* 은 **int**이며 기본값은 NULL입니다. 공개 프로필을 개인 프로필로 만들려면 보안 주체 ID **0** 또는 보안 주체 이름 **' public '** 을 제공 합니다. *Principal_id* 또는 *principal_name* 를 지정 해야 합니다.  
+`[ @principal_id = ] principal_id` 삭제할 연결의 **msdb** 데이터베이스에 있는 데이터베이스 사용자 또는 역할의 ID입니다. *principal_id* 은 **int**이며 기본값은 NULL입니다. 공개 프로필을 개인 프로필로 만들려면 보안 주체 ID **0** 또는 보안 주체 이름 **' public '** 을 제공 합니다. *Principal_id* 또는 *principal_name* 를 지정 해야 합니다.  
   
-`[ @principal_name = ] 'principal_name'`삭제할 연결의 **msdb** 데이터베이스에 있는 데이터베이스 사용자 또는 역할의 이름입니다. *principal_name* 는 **sysname**이며 기본값은 NULL입니다. 공개 프로필을 개인 프로필로 만들려면 보안 주체 ID **0** 또는 보안 주체 이름 **' public '** 을 제공 합니다. *Principal_id* 또는 *principal_name* 를 지정 해야 합니다.  
+`[ @principal_name = ] 'principal_name'` 삭제할 연결의 **msdb** 데이터베이스에 있는 데이터베이스 사용자 또는 역할의 이름입니다. *principal_name* 는 **sysname**이며 기본값은 NULL입니다. 공개 프로필을 개인 프로필로 만들려면 보안 주체 ID **0** 또는 보안 주체 이름 **' public '** 을 제공 합니다. *Principal_id* 또는 *principal_name* 를 지정 해야 합니다.  
   
-`[ @profile_id = ] profile_id`삭제할 연결에 대 한 프로필의 ID입니다. *profile_id* 은 **int**이며 기본값은 NULL입니다. *Profile_id* 또는 *profile_name* 를 지정 해야 합니다.  
+`[ @profile_id = ] profile_id` 삭제할 연결에 대 한 프로필의 ID입니다. *profile_id* 은 **int**이며 기본값은 NULL입니다. *Profile_id* 또는 *profile_name* 를 지정 해야 합니다.  
   
-`[ @profile_name = ] 'profile_name'`삭제할 연결에 대 한 프로필의 이름입니다. *profile_name* 는 **sysname**이며 기본값은 NULL입니다. *Profile_id* 또는 *profile_name* 를 지정 해야 합니다.  
+`[ @profile_name = ] 'profile_name'` 삭제할 연결에 대 한 프로필의 이름입니다. *profile_name* 는 **sysname**이며 기본값은 NULL입니다. *Profile_id* 또는 *profile_name* 를 지정 해야 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -61,7 +62,7 @@ sysmail_delete_principalprofile_sp  { [ @principal_id = ] principal_id | [ @prin
 ## <a name="permissions"></a>사용 권한  
  이 프로시저에 대 한 실행 권한은 기본적으로 **sysadmin** 고정 서버 역할의 멤버로 사용 됩니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 **msdb** 데이터베이스에서 프로필 **AdventureWorks 관리자** 와 로그인 **applicationuser** 간의 연결을 삭제 하는 방법을 보여 줍니다.  
   
 ```  
@@ -73,6 +74,6 @@ EXECUTE msdb.dbo.sysmail_delete_principalprofile_sp
 ## <a name="see-also"></a>참고 항목  
  [데이터베이스 메일](../../relational-databases/database-mail/database-mail.md)   
  [데이터베이스 메일 구성 개체](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
- [Transact-sql&#41;&#40;저장 프로시저 데이터베이스 메일](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [Transact-sql&#41;&#40;저장 프로시저 데이터베이스 메일 ](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

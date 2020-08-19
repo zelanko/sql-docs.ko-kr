@@ -1,4 +1,5 @@
 ---
+description: sysmail_allitems(Transact-SQL)
 title: sysmail_allitems (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 21fb8432-7677-4435-902f-64a58bba4cbb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4ba169522f0deac50dd840a5eeceff63c9eb178e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0c5a41e6f0c150638eeed8e1c7cdd4fbb3c6bf2b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891964"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419917"
 ---
 # <a name="sysmail_allitems-transact-sql"></a>sysmail_allitems(Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -38,7 +39,7 @@ ms.locfileid: "85891964"
 |**사람과**|**varchar(max)**|메시지를 받는 사람의 전자 메일 주소입니다.|  
 |**copy_recipients**|**varchar(max)**|메시지 복사본을 받는 사람의 전자 메일 주소입니다.|  
 |**blind_copy_recipients**|**varchar(max)**|메시지 복사본을 받지만 메시지 머리글에 이름이 표시되지 않는 사람의 전자 메일 주소입니다.|  
-|**제목**|**nvarchar (510)**|메시지의 제목 줄입니다.|  
+|**subject**|**nvarchar (510)**|메시지의 제목 줄입니다.|  
 |**body**|**varchar(max)**|메시지의 본문입니다.|  
 |**body_format**|**varchar (20)**|메시지 본문의 형식입니다. 가능한 값은 TEXT 및 HTML입니다.|  
 |**importance**|**varchar (6)**|메시지의 **중요도** 매개 변수입니다.|  
@@ -56,7 +57,7 @@ ms.locfileid: "85891964"
 |**send_request_date**|**datetime**|메시지가 메일 큐에 추가된 날짜와 시간입니다.|  
 |**send_request_user**|**sysname**|메시지를 보낸 사용자입니다. 메시지의 보낸 사람: 필드가 아니라 데이터베이스 메일 프로시저의 사용자 컨텍스트입니다.|  
 |**sent_account_id**|**int**|메시지를 보내는 데 사용되는 데이터베이스 메일 계정의 식별자입니다.|  
-|**sent_status**|**varchar (8)**|메일의 상태입니다. 가능한 값은<br /><br /> **sent** -메일을 보냈습니다.<br /><br /> **보내지** 않은 데이터베이스 메일이 여전히 메시지를 보내려고 시도 하 고 있습니다.<br /><br /> 다시 **시도** 하는 중 데이터베이스 메일 메시지를 보내지 못했지만 다시 보내려고 시도 하는 중입니다.<br /><br /> **실패** -데이터베이스 메일에서 메시지를 보낼 수 없습니다.|  
+|**sent_status**|**varchar (8)**|메일의 상태입니다. 가능한 값은 다음과 같습니다.<br /><br /> **sent** -메일을 보냈습니다.<br /><br /> **보내지** 않은 데이터베이스 메일이 여전히 메시지를 보내려고 시도 하 고 있습니다.<br /><br /> 다시 **시도** 하는 중 데이터베이스 메일 메시지를 보내지 못했지만 다시 보내려고 시도 하는 중입니다.<br /><br /> **실패** -데이터베이스 메일에서 메시지를 보낼 수 없습니다.|  
 |**sent_date**|**datetime**|메시지를 보낸 날짜와 시간입니다.|  
 |**last_mod_date**|**datetime**|행을 마지막으로 수정한 날짜와 시간입니다.|  
 |**last_mod_user**|**sysname**|행을 마지막으로 수정한 사용자입니다.|  

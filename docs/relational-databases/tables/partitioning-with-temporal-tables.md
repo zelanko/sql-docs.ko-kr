@@ -1,4 +1,5 @@
 ---
+description: 임시 테이블을 사용하여 분할
 title: 임시 테이블을 사용하여 분할 | Microsoft 문서
 ms.custom: ''
 ms.date: 04/26/2016
@@ -11,12 +12,12 @@ ms.assetid: 313714b8-4ad1-4c14-93a3-7f628a334a51
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fc76e2a2aaee2d3bc8474c8cec06b7ee85a31971
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 634cfc71f7b96cd5ec2acbff6c264792cfe6469a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555888"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419067"
 ---
 # <a name="partitioning-with-temporal-tables"></a>Temporal 테이블을 사용하여 분할
 

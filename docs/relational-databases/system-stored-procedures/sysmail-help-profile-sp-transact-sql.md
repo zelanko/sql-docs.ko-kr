@@ -1,4 +1,5 @@
 ---
+description: sysmail_help_profile_sp(Transact-SQL)
 title: sysmail_help_profile_sp (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d7169a8e-92b1-49eb-9124-3b2f69755ddb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 947038e26a4367425576261594befff032f6eeea
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: 372f2309176b9fcf9cbb36fbcaf89d710393bb44
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87122745"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419297"
 ---
 # <a name="sysmail_help_profile_sp-transact-sql"></a>sysmail_help_profile_sp(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,9 +40,9 @@ sysmail_help_profile_sp  [   [ @profile_id = ] profile_id | [ @profile_name = ] 
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @profile_id = ] profile_id`정보를 반환할 프로필 id입니다. *profile_id* 은 **int**이며 기본값은 NULL입니다.  
+`[ @profile_id = ] profile_id` 정보를 반환할 프로필 id입니다. *profile_id* 은 **int**이며 기본값은 NULL입니다.  
   
-`[ @profile_name = ] 'profile_name'`정보를 반환할 프로필 이름입니다. *profile_name* 는 **sysname**이며 기본값은 NULL입니다.  
+`[ @profile_name = ] 'profile_name'` 정보를 반환할 프로필 이름입니다. *profile_name* 는 **sysname**이며 기본값은 NULL입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -63,7 +64,7 @@ sysmail_help_profile_sp  [   [ @profile_id = ] profile_id | [ @profile_name = ] 
 ## <a name="permissions"></a>사용 권한  
  이 프로시저에 대 한 실행 권한은 기본적으로 **sysadmin** 고정 서버 역할의 멤버로 사용 됩니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  **1. 모든 프로필 나열**  
   
  다음 예에서는 인스턴스에 있는 모든 프로필을 나열합니다.  
@@ -100,6 +101,6 @@ profile_id  name                          description
   
 ## <a name="see-also"></a>참고 항목  
  [데이터베이스 메일](../../relational-databases/database-mail/database-mail.md)   
- [Transact-sql&#41;&#40;저장 프로시저 데이터베이스 메일](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [Transact-sql&#41;&#40;저장 프로시저 데이터베이스 메일 ](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

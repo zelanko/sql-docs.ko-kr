@@ -1,4 +1,5 @@
 ---
+description: sys.fulltext_semantic_language_statistics_database(Transact-SQL)
 title: sys. fulltext_semantic_language_statistics_database (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -19,12 +20,12 @@ ms.assetid: 32e95614-ed88-4068-8c37-1e21544717bc
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: 0decfac8cf28727a3ba3f4bf5ad54e8f9ff8bee9
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 5c9ec62588251c908b32c4f51d72cc1b8efee4eb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85902182"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420117"
 ---
 # <a name="sysfulltext_semantic_language_statistics_database-transact-sql"></a>sys.fulltext_semantic_language_statistics_database(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +37,7 @@ ms.locfileid: "85902182"
   
 ||||  
 |-|-|-|  
-|**열 이름**|**Type**|**설명**|  
+|**열 이름**|**형식**|**설명**|  
 |**database_id**|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 내에서 고유한 데이터베이스 ID입니다.|  
 |**register_date**|**datetime**|의미 체계 처리를 위해 데이터베이스가 등록된 날짜입니다.|  
 |**registered_by**|**int**|의미 체계 처리를 위해 데이터베이스를 등록한 서버 보안 주체의 ID입니다.|  
@@ -53,7 +54,7 @@ ms.locfileid: "85902182"
 ### <a name="permissions"></a>사용 권한  
  사용자가 소유하고 있거나 사용 권한을 부여 받은 보안 개체에 대해서만 카탈로그 뷰의 메타데이터를 볼 수 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 현재 인스턴스에 등록 된 의미 체계 언어 통계 데이터베이스에 대 한 정보를 얻기 위해 **fulltext_semantic_language_statistics_database** 를 쿼리 하는 방법을 보여 줍니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ```  

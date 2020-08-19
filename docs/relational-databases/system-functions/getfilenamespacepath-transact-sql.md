@@ -1,4 +1,5 @@
 ---
+description: GetFileNamespacePath(Transact-SQL)
 title: GetFileNamespacePath (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b393ecef-baa8-4d05-a268-b2f309fce89a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 43b89ff4421f7e015ae2320aca94b0c19d5dde52
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 046ff4071ae4ac45338d45916afeb9d2491d2d6d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760268"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419577"
 ---
 # <a name="getfilenamespacepath-transact-sql"></a>GetFileNamespacePath(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +46,7 @@ ms.locfileid: "85760268"
  *is_full_path*  
  상대 경로를 반환할지 절대 경로를 반환할지 지정하는 정수 식입니다. *is_full_path* 는 다음 값 중 하나를 사용할 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**0**|데이터베이스 수준 디렉터리 내에서의 상대 경로를 반환합니다.<br /><br /> 기본값입니다.|  
 |**1**|`\\computer_name`으로 시작하는 전체 UNC 경로를 반환합니다.|  
@@ -53,9 +54,9 @@ ms.locfileid: "85760268"
  *\@option*  
  경로에 있는 서버 구성 요소의 형식을 지정하는 방법을 정의하는 정수 식입니다. * \@ 옵션* 은 다음 값 중 하나를 사용할 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
-|**0**|NetBIOS 형식으로 변환된 서버 이름을 반환합니다. 예를 들면 다음과 같습니다.<br /><br /> `\\SERVERNAME\MSSQLSERVER\MyDocumentDatabase`<br /><br /> 기본값입니다.|  
+|**0**|NetBIOS 형식으로 변환된 서버 이름을 반환합니다. 예를 들면 다음과 같습니다.<br /><br /> `\\SERVERNAME\MSSQLSERVER\MyDocumentDatabase`<br /><br /> 이것은 기본값입니다.|  
 |**1**|서버 이름을 변환하지 않고 반환합니다. 예를 들면 다음과 같습니다.<br /><br /> `\\ServerName\MSSQLSERVER\MyDocumentDatabase`|  
 |**2**|전체 서버 경로를 반환합니다. 예를 들면 다음과 같습니다.<br /><br /> `\\ServerName.MyDomain.com\MSSQLSERVER\MyDocumentDatabase`|  
   

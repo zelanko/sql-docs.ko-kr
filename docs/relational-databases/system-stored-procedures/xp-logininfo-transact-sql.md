@@ -1,4 +1,5 @@
 ---
+description: xp_logininfo(Transact-SQL)
 title: xp_logininfo (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ee7162b5-e11f-4a0e-a09c-1878814dbbbd
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: b5a1a7067e1ebda150d0236020288514eb90a8fc
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 44b76081c7ec5fdd3496b670b1884347d1a84d1f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890735"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419217"
 ---
 # <a name="xp_logininfo-transact-sql"></a>xp_logininfo(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,12 +42,12 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @acctname = ] 'account_name'`는에 대 한 액세스 권한이 부여 된 Windows 사용자 또는 그룹의 이름입니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *account_name* 는 **sysname**이며 기본값은 NULL입니다. *Account_name* 지정 하지 않으면 로그인 권한이 명시적으로 부여 된 모든 windows 그룹 및 windows 사용자가 보고 됩니다. *account_name* 정규화 되어야 합니다. 정규화된 이름이어야 합니다.  
+`[ @acctname = ] 'account_name'` 는에 대 한 액세스 권한이 부여 된 Windows 사용자 또는 그룹의 이름입니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *account_name* 는 **sysname**이며 기본값은 NULL입니다. *Account_name* 지정 하지 않으면 로그인 권한이 명시적으로 부여 된 모든 windows 그룹 및 windows 사용자가 보고 됩니다. *account_name* 정규화 되어야 합니다. 정규화된 이름이어야 합니다.  
   
  **' 모두 '**  |  **' members '**  
  계정에 대한 모든 사용 권한 경로에 관한 정보를 보고할 것인지 Windows 그룹의 멤버에 관한 정보를 보고할 것인지 지정합니다. ** \@ 옵션** 은 **varchar (10)** 이며 기본값은 NULL입니다. **All** 을 지정 하지 않으면 첫 번째 권한 경로만 표시 됩니다.  
   
-`[ @privilege = ] variable_name`는 지정 된 Windows 계정의 권한 수준을 반환 하는 출력 매개 변수입니다. *variable_name* 는 **varchar (10)** 이며 기본값은 ' Not '이 됩니다. 반환 된 권한 수준은 **user**, **admin**또는 **null**입니다.  
+`[ @privilege = ] variable_name` 는 지정 된 Windows 계정의 권한 수준을 반환 하는 출력 매개 변수입니다. *variable_name* 는 **varchar (10)** 이며 기본값은 ' Not '이 됩니다. 반환 된 권한 수준은 **user**, **admin**또는 **null**입니다.  
   
  OUTPUT  
  이 매개 변수를 지정 하면 출력 매개 변수에 *variable_name* 을 배치 합니다.  
@@ -78,7 +79,7 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
 ## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할의 멤버 자격 또는 EXECUTE 권한이 부여 된 **master** 데이터베이스의 **public** 고정 데이터베이스 역할의 멤버 자격이 필요 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 Windows 그룹에 대 한 정보를 표시 합니다 `BUILTIN\Administrators` .  
   
 ```  
@@ -89,7 +90,7 @@ EXEC xp_logininfo 'BUILTIN\Administrators';
  [Transact-sql&#41;sp_denylogin &#40;](../../relational-databases/system-stored-procedures/sp-denylogin-transact-sql.md)   
  [Transact-sql&#41;sp_grantlogin &#40;](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
  [Transact-sql&#41;sp_revokelogin &#40;](../../relational-databases/system-stored-procedures/sp-revokelogin-transact-sql.md)   
- [Transact-sql&#41;&#40;시스템 저장 프로시저](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;시스템 저장 프로시저 ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Transact-sql&#41;일반 확장 저장 프로시저 &#40;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)  
   
   

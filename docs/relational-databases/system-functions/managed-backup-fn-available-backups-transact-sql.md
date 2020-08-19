@@ -1,4 +1,5 @@
 ---
+description: managed_backup. fn_available_backups (Transact-sql)
 title: managed_backup. fn_available_backups (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,11 +21,12 @@ helpviewer_keywords:
 ms.assetid: 7aa84474-16e5-49bd-a703-c8d1408ef107
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 8c9cbad2124420f62f50c8497fcc5baa21720634
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: 23c7f7cb176bf91494b41cf8b81435b287d261fd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86052890"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419537"
 ---
 # <a name="managed_backupfn_available_backups-transact-sql"></a>managed_backup. fn_available_backups (Transact-sql)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -39,7 +41,7 @@ ms.locfileid: "86052890"
 managed_backup.fn_available_backups ([@database_name = ] 'database name')  
 ```  
   
-##  <a name="arguments"></a><a name="Arguments"></a>인수의  
+##  <a name="arguments"></a><a name="Arguments"></a> 인수  
  @database_name  
  데이터베이스의 이름입니다. 는 @database_name NVARCHAR (512)입니다.  
   

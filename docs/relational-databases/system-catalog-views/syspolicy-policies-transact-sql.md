@@ -1,4 +1,5 @@
 ---
+description: syspolicy_policies(Transact-SQL)
 title: syspolicy_policies (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: aecf35bb-187e-4f80-870f-48081b88974e
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 49ef90e030c2899e49adcb69e8765a57f623ace7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e56ab498d2502bcb7130ab2406a390d8bbd1055a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900588"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419807"
 ---
 # <a name="syspolicy_policies-transact-sql"></a>syspolicy_policies(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

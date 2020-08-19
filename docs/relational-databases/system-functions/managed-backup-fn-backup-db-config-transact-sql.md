@@ -1,4 +1,5 @@
 ---
+description: managed_backup. fn_backup_db_config (Transact-sql)
 title: managed_backup. fn_backup_db_config (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -20,11 +21,12 @@ helpviewer_keywords:
 ms.assetid: 7c755d8a-64dd-44b2-be5e-735d30758900
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 4147d01936fbdd3a14e479a7b560d5368a5110ec
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: 551e66e532cb42b5db906f1a87f19107c022fcc1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86053713"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419547"
 ---
 # <a name="managed_backupfn_backup_db_config-transact-sql"></a>managed_backup. fn_backup_db_config (Transact-sql)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -41,13 +43,13 @@ ms.locfileid: "86053713"
 managed_backup.fn_backup_db_config ('database_name' | '' | NULL)  
 ```  
   
-##  <a name="arguments"></a><a name="Arguments"></a>인수의  
+##  <a name="arguments"></a><a name="Arguments"></a> 인수  
  @db_name  
  데이터베이스의 이름입니다. @db_name매개 변수는 **SYSNAME**입니다. 빈 문자열 또는 NULL 값이 이 매개 변수에 전달되면 SQL Server 인스턴스의 모든 데이터베이스에 대한 정보가 반환됩니다.  
   
 ## <a name="table-returned"></a>반환된 테이블  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |db_name|SYSNAME|데이터베이스 이름|  
 |db_guid|UNIQUEIDENTIFIER|데이터베이스를 고유하게 식별하는 식별자입니다.|  

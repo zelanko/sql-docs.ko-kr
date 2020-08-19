@@ -1,4 +1,5 @@
 ---
+description: sys.dm_os_memory_cache_entries(Transact-SQL)
 title: sys. dm_os_memory_cache_entries (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/18/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: dd32be6b-10d1-4059-b4fd-0bf817f40d54
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a12283f510231344915817634cbfd6cb7cce3450
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e772e02c5c5477e7b4eaff2b66c29aaae9b9d5de
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898703"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419667"
 ---
 # <a name="sysdm_os_memory_cache_entries-transact-sql"></a>sys.dm_os_memory_cache_entries(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,7 +52,7 @@ ms.locfileid: "85898703"
 |**pages_kb**|**bigint**|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상<br /><br /> 이 캐시 항목에서 사용하는 메모리 양(KB)입니다.  Null을 허용하지 않습니다.|  
 |**entry_data**|**nvarchar(2048)**|캐시된 항목의 직렬화된 표현입니다. 이 정보는 캐시 저장소에 따라 달라집니다. Null을 허용합니다.|  
 |**pool_id**|**int**|**적용 대상**: [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 이상<br /><br /> 항목과 연관된 리소스 풀 ID입니다. Null을 허용합니다.<br /><br /> katmai 아님|  
-|**pdw_node_id**|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포가 설정 된 노드의 식별자입니다.|  
+|**pdw_node_id**|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포가 설정 된 노드의 식별자입니다.|  
   
 ## <a name="permissions"></a>사용 권한 
 
@@ -60,7 +61,7 @@ ms.locfileid: "85898703"
 
 ## <a name="see-also"></a>참고 항목  
  
-  [Transact-sql&#41;&#40;운영 체제 관련 동적 관리 뷰 SQL Server](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
+  [Transact-sql&#41;&#40;운영 체제 관련 동적 관리 뷰 SQL Server ](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
   
   
 

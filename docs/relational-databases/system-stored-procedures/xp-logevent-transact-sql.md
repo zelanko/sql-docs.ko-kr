@@ -1,4 +1,5 @@
 ---
+description: xp_logevent(Transact-SQL)
 title: xp_logevent (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7b379ad0-5b12-4d2e-9c52-62465df1fdbd
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 08fbf39390a7a81fc3ce3e8563c3699ba77b833c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 7001b9d29a96dd192e044ddfe779b8f39a581a94
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890765"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419277"
 ---
 # <a name="xp_logevent-transact-sql"></a>xp_logevent(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -62,7 +63,7 @@ xp_logevent { error_number , 'message' } [ , 'severity' ]
 ## <a name="permissions"></a>사용 권한  
  master 데이터베이스에서 db_owner 고정 데이터베이스 역할의 멤버이거나 sysadmin 고정 서버 역할의 멤버 자격이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예는 메시지로 전달된 변수와 함께 메시지를 Windows 이벤트 뷰어에 로깅합니다.  
   
 ```  
@@ -79,7 +80,7 @@ EXEC xp_logevent 60000, @@MESSAGE, informational;
 ## <a name="see-also"></a>참고 항목  
  [PRINT&#40;Transact-SQL&#41;](../../t-sql/language-elements/print-transact-sql.md)   
  [RAISERROR&#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)   
- [Transact-sql&#41;&#40;시스템 저장 프로시저](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;시스템 저장 프로시저 ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Transact-sql&#41;일반 확장 저장 프로시저 &#40;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: managed_backup. fn_get_parameter (Transact-sql)
 title: managed_backup. fn_get_parameter (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/03/2016
@@ -20,11 +21,12 @@ helpviewer_keywords:
 ms.assetid: ed94e54d-4516-4806-a8ce-f013d3a04122
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 63894f891d633e5b8c2f32f32b1be6573bb97baa
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: da8c646cca92a5ef25fd12322fd8a6bd222a1c9e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86053431"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419517"
 ---
 # <a name="managed_backupfn_get_parameter-transact-sql"></a>managed_backup. fn_get_parameter (Transact-sql)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -43,13 +45,13 @@ ms.locfileid: "86053431"
 managed_backup.fn_get_parameter ('parameter_name' | '' | NULL )  
 ```  
   
-##  <a name="arguments"></a><a name="Arguments"></a>인수의  
+##  <a name="arguments"></a><a name="Arguments"></a> 인수  
  parameter_name  
  매개 변수의 이름입니다. parameter_name은 **NVARCHAR (128)** 입니다. 함수에 NULL 또는 빈 문자열이 인수로 제공된 경우 구성된 모든 스마트 관리 매개 변수에 대한 이름-값 쌍이 반환됩니다.  
   
 ## <a name="table-returned"></a>반환된 테이블  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |parameter_name|NVARCHAR(128)|매개 변수의 이름입니다. 다음은 반환되는 현재 매개 변수 목록입니다.<br/><br/>**FileRetentionDebugXevent**<br/><br/>**SSMBackup2WADebugXevent**<br/><br/>**SSMBackup2WANotificationEmailIds**<br/><br/>**SSMBackup2WAEnableUserDefinedPolicy**<br/><br/>**SSMBackup2WAEverConfigured**<br/><br/>**StorageOperationDebugXevent**|  
 |parameter_value|NVARCHAR(128)|매개 변수의 현재 설정 값입니다.|  

@@ -1,4 +1,5 @@
 ---
+description: sysssispackages(Transact-SQL)
 title: sysssispackages (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 66155dcd-dcdb-4e33-a242-1625828ad8d2
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 1fa0f587fc5939135b3d88b15066de29be6d8a7c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d1a1bda3bfea233f7a586a8147f268fbdb1e6ade
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889245"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419037"
 ---
 # <a name="sysssispackages-transact-sql"></a>sysssispackages(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "85889245"
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|패키지의 고유 식별자입니다.|  
 |**id**|**uniqueidentifier**|패키지의 GUID입니다.|  
-|**한**|**nvarchar**|패키지에 대한 설명(옵션)입니다.|  
+|**description**|**nvarchar**|패키지에 대한 설명(옵션)입니다.|  
 |**createdate**|**datetime**|패키지를 만든 날짜입니다.|  
 |**folderid**|**uniqueidentifier**|[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 패키지를 나열하는 논리적 폴더의 GUID입니다.|  
 |**ownersid**|**varbinary**|패키지를 만든 사용자의 고유 보안 식별자입니다.|  

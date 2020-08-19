@@ -1,4 +1,5 @@
 ---
+description: PropertyIndex 속성(SqlServiceAdvancedProperty 클래스)
 title: PropertyIndex 속성 (SqlServiceAdvancedProperty)
 ms.custom: seo-lt-2019
 ms.date: 03/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b18b45a2-e187-44f5-a8c9-26fd9828b6c6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f36e1beffa864edefc8dd156375deddd74718fe4
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 6fa6b6e50524e567f97c0475210c059fbdc88ec0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85880551"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418689"
 ---
 # <a name="propertyindex-property-sqlserviceadvancedproperty-class"></a>PropertyIndex 속성(SqlServiceAdvancedProperty 클래스)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

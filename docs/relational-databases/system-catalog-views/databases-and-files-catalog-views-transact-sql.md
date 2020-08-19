@@ -1,4 +1,5 @@
 ---
+description: 데이터베이스 및 파일 카탈로그 뷰(Transact-SQL)
 title: 데이터베이스 및 파일 카탈로그 뷰 (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2016
@@ -18,12 +19,12 @@ ms.assetid: 60a05111-c542-45b5-a0cb-433ddcf6286a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 32e9c66c459b1f3563ab724d8a91b0df40af9cda
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 0c685eed4e8a6753f26546ddf53c23bb9f2eea95
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914190"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420157"
 ---
 # <a name="databases-and-files-catalog-views-transact-sql"></a>데이터베이스 및 파일 카탈로그 뷰(Transact-SQL)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -55,6 +56,6 @@ ms.locfileid: "86914190"
 
 ## <a name="see-also"></a>참고 항목  
  [카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Transact-sql&#41;&#40;시스템 뷰](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
+ [Transact-sql&#41;&#40;시스템 뷰 ](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
   
   

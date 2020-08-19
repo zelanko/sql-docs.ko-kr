@@ -1,4 +1,5 @@
 ---
+description: sysmail_event_log(Transact-SQL)
 title: sysmail_event_log (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 440bc409-1188-4175-afc4-c68e31e44fed
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 68ef84e8efb3606042afbcf8579cf285a2077ab7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 3f104ab706e269fb7e14c9783777384aee9db090
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901046"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419827"
 ---
 # <a name="sysmail_event_log-transact-sql"></a>sysmail_event_log(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "85901046"
 |**Log_id**|**int**|로그의 항목 식별자입니다.|  
 |**event_type**|**varchar (11)**|로그에 삽입되는 알림 유형입니다. 가능한 값은 오류, 경고, 정보 메시지, 성공 메시지 및 추가 내부 메시지입니다.|  
 |**log_date**|**datetime**|로그 항목이 만들어진 날짜와 시간입니다.|  
-|**한**|**nvarchar(max)**|기록할 메시지 텍스트입니다.|  
+|**description**|**nvarchar(max)**|기록할 메시지 텍스트입니다.|  
 |**process_id**|**int**|데이터베이스 메일 외부 프로그램의 프로세스 ID입니다. 이 값은 일반적으로 데이터베이스 메일 외부 프로그램이 시작될 때마다 변경됩니다.|  
 |**mailitem_id**|**int**|메일 큐의 메일 항목 식별자입니다. 메시지가 특정 전자 메일 항목과 관련이 없으면 NULL입니다.|  
 |**account_id**|**int**|이벤트와 관련 된 계정의 **account_id** 입니다. 메시지가 계정과 관련이 없으면 NULL입니다.|  

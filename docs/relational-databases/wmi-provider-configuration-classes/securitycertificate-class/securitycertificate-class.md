@@ -1,4 +1,5 @@
 ---
+description: SecurityCertificate 클래스
 title: SecurityCertificate 클래스
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d772da67-e04e-4499-9f80-7a5e94829b5c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2153724ef3e8a7ea31c2b99c344c6f824318a982
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e6c069ff49e235bb7a23b5117f31e481af932f06
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888803"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418867"
 ---
 # <a name="securitycertificate-class"></a>SecurityCertificate 클래스
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

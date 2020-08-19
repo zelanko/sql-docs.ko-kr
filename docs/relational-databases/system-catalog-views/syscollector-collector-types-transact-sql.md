@@ -1,4 +1,5 @@
 ---
+description: syscollector_collector_types(Transact-SQL)
 title: syscollector_collector_types (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: d5cd30bb-89fd-4814-a7e8-9074f043f90f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d1ff2329d0070d554f87e405a6030b744e98d23a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f7e0a45066cdc159f12ae9e6568be8d2d131b639
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896752"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419847"
 ---
 # <a name="syscollector_collector_types-transact-sql"></a>syscollector_collector_types(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -58,8 +59,8 @@ ms.locfileid: "85896752"
 |**Upload_package_path** 열에 대 한 데이터 형식을 수정 하 고 값이 null을 허용 한다는 것을 나타내기 위해 설명을 업데이트 했습니다.|  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;데이터 수집기 저장 프로시저](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
- [Transact-sql&#41;&#40;데이터 수집기 뷰](../../relational-databases/system-catalog-views/data-collector-views-transact-sql.md)   
- [데이터 수집](../../relational-databases/data-collection/data-collection.md)  
+ [데이터 수집기 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;데이터 수집기 뷰 ](../../relational-databases/system-catalog-views/data-collector-views-transact-sql.md)   
+ [데이터 컬렉션](../../relational-databases/data-collection/data-collection.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: sys.dm_sql_referenced_entities(Transact-SQL)
 title: sys. dm_sql_referenced_entities (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/01/2019
@@ -20,12 +21,12 @@ ms.assetid: 077111cb-b860-4d61-916f-bac5d532912f
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5acf2b0afd2285025112d6e3f224a5f44241a0b8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f219091eb016dddbf0f38932146a57cbd0a0a7b3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85634940"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419607"
 ---
 # <a name="sysdm_sql_referenced_entities-transact-sql"></a>sys.dm_sql_referenced_entities(Transact-SQL)
 
@@ -127,10 +128,10 @@ sys.dm_sql_referenced_entities (
 |CLR 저장 프로시저|예|예|  
 |[!INCLUDE[tsql](../../includes/tsql-md.md)] 사용자 정의 함수|예|예|  
 |CLR 사용자 정의 함수|예|예|  
-|CLR 트리거(DML 및 DDL)|아니요|아니요|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] DML 트리거|예|아니요|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] 데이터베이스 수준 DDL 트리거|예|아니요|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] 서버 수준 DDL 트리거|예|아니요|  
+|CLR 트리거(DML 및 DDL)|예|예|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] DML 트리거|예|예|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 데이터베이스 수준 DDL 트리거|예|예|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 서버 수준 DDL 트리거|예|예|  
 |확장된 저장 프로시저|예|예|  
 |큐|예|예|  
 |동의어|예|예|  
@@ -139,7 +140,7 @@ sys.dm_sql_referenced_entities (
 |파티션 함수|예|예|  
 | &nbsp; | &nbsp; | &nbsp; |
 
- \*테이블은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 계산 열, CHECK 제약 조건 또는 DEFAULT 제약 조건 정의에서 모듈, 사용자 정의 형식 또는 XML 스키마 컬렉션을 참조 하는 경우에만 참조 엔터티로 추적 됩니다.  
+ \* 테이블은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 계산 열, CHECK 제약 조건 또는 DEFAULT 제약 조건 정의에서 모듈, 사용자 정의 형식 또는 XML 스키마 컬렉션을 참조 하는 경우에만 참조 엔터티로 추적 됩니다.  
   
  ** 정수 값 1보다 큰 번호가 있는 저장 프로시저는 참조 엔터티나 참조된 엔터티로 추적되지 않습니다.  
   

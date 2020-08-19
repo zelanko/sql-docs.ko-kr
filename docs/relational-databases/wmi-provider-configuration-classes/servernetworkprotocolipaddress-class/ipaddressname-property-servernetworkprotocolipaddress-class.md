@@ -1,4 +1,5 @@
 ---
+description: IpAddressName 속성(ServerNetworkProtocolIPAddress 클래스)
 title: IpAddressName 속성 (ServerNetworkProtocolIPAddress)
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1df24fe2-0873-4cd1-9151-2306d08418bc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 60eb83750d42da4aea3e486c6bdc2884e782e3e9
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c993778f5ceb42367cfafcb3343fb00677851dde
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888685"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418749"
 ---
 # <a name="ipaddressname-property-servernetworkprotocolipaddress-class"></a>IpAddressName 속성(ServerNetworkProtocolIPAddress 클래스)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

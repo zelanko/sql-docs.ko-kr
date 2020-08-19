@@ -1,4 +1,5 @@
 ---
+description: sysschemaarticles(Transact-SQL)
 title: sysschemaarticles (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 67a1c039-c283-4a9c-bacc-b9b3973590c3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 89a9c9e8034fecad29cdd1f1c6c469e40c613436
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f82f2a75d33eab462385f063ccba404781ed531a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881289"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419057"
 ---
 # <a name="sysschemaarticles-transact-sql"></a>sysschemaarticles(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -33,7 +34,7 @@ ms.locfileid: "85881289"
 |-----------------|---------------|-----------------|  
 |**artid**|**int**|아티클 ID입니다.|  
 |**creation_script**|**nvarchar(255)**|대상 테이블을 만드는 데 사용하는 아티클 스키마 스크립트의 경로 및 이름입니다.|  
-|**한**|**nvarchar(255)**|아티클에 대한 설명 항목입니다.|  
+|**description**|**nvarchar(255)**|아티클에 대한 설명 항목입니다.|  
 |**dest_object**|**sysname**|아티클이 저장 프로시저, 뷰, UDF 등의 스키마 전용 아티클인 경우 구독 데이터베이스의 개체 이름입니다.|  
 |**name**|**sysname**|게시 내 스키마 전용 아티클의 이름입니다.|  
 |**objid**|**int**|아티클 기준 개체의 개체 식별자입니다. 프로시저, 뷰, 인덱싱된 뷰 UDF 등의 개체 식별자일 수 있습니다.|  
@@ -45,7 +46,7 @@ ms.locfileid: "85881289"
 |**dest_owner**|**sysname**|대상 데이터베이스에 있는 테이블의 소유자입니다.|  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;복제 테이블](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Transact-sql&#41;&#40;복제 테이블 ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [복제 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

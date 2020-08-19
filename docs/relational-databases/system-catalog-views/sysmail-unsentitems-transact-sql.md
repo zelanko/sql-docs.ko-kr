@@ -1,4 +1,5 @@
 ---
+description: sysmail_unsentitems(Transact-SQL)
 title: sysmail_unsentitems (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 993c12da-41e5-4e53-a188-0323feb70c67
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3f1fd96f8a9809f102bfb8fe8650513fd8eb01e5
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0f17a4cc00724bab836c74ed1622d383d3969b16
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900985"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419867"
 ---
 # <a name="sysmail_unsentitems-transact-sql"></a>sysmail_unsentitems(Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -48,7 +49,7 @@ ms.locfileid: "85900985"
 |**사람과**|**varchar(max)**|메시지를 받는 사람의 전자 메일 주소입니다.|  
 |**copy_recipients**|**varchar(max)**|메시지 복사본을 받는 사람의 전자 메일 주소입니다.|  
 |**blind_copy_recipients**|**varchar(max)**|메시지 복사본을 받지만 메시지 머리글에 이름이 표시되지 않는 사람의 전자 메일 주소입니다.|  
-|**제목**|**nvarchar (510)**|메시지의 제목 줄입니다.|  
+|**subject**|**nvarchar (510)**|메시지의 제목 줄입니다.|  
 |**body**|**varchar(max)**|메시지의 본문입니다.|  
 |**body_format**|**varchar (20)**|메시지 본문의 형식입니다. 가능한 값은 **TEXT** 및 **HTML**입니다.|  
 |**importance**|**varchar (6)**|메시지의 **중요도** 매개 변수입니다.|  

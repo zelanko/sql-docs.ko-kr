@@ -1,4 +1,5 @@
 ---
+description: 메모리 액세스에 최적화된 시스템 버전 임시 테이블 모니터링
 title: 메모리 액세스에 최적화된 시스템 버전 임시 테이블 모니터링 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/28/2016
@@ -11,12 +12,12 @@ ms.assetid: 7a06785d-dbcb-44de-b95c-26b131471bee
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f6e00ccde6b0b0788c9007a26cb922ccfcecdc21
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 57ef17e8580246a56ce0582e4a0fa69a013de2d5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555898"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418987"
 ---
 # <a name="monitoring-memory-optimized-system-versioned-temporal-tables"></a>메모리 액세스에 최적화된 시스템 버전 임시 테이블 모니터링
 

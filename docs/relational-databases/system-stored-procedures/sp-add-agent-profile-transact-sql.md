@@ -1,4 +1,5 @@
 ---
+description: sp_add_agent_profile(Transact-SQL)
 title: sp_add_agent_profile (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5c246a33-2c21-4a77-9c2a-a2c9f0c5dda1
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: de61da8e636ff3f6e38dac6fe85d45eaff75df3c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 379e418cbca4b93fe38bf640f62cd357ef6b5a48
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783867"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419397"
 ---
 # <a name="sp_add_agent_profile-transact-sql"></a>sp_add_agent_profile(Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -42,11 +43,11 @@ sp_add_agent_profile [ [ @profile_id= ] profile_id OUTPUT ]
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @profile_id = ] profile_id`새로 삽입 된 프로필과 연결 된 ID입니다. *profile_id* 는 **INT** 이며 선택적 출력 매개 변수입니다. 지정한 경우 값이 새 프로필 ID로 설정됩니다.  
+`[ @profile_id = ] profile_id` 새로 삽입 된 프로필과 연결 된 ID입니다. *profile_id* 는 **INT** 이며 선택적 출력 매개 변수입니다. 지정한 경우 값이 새 프로필 ID로 설정됩니다.  
   
-`[ @profile_name = ] 'profile_name'`프로필의 이름입니다. *profile_name* 는 **sysname**이며 기본값은 없습니다.  
+`[ @profile_name = ] 'profile_name'` 프로필의 이름입니다. *profile_name* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @agent_type = ] 'agent_type'`복제 에이전트의 유형입니다. *agent_type* 은 **int**이며 기본값은 없고 다음 값 중 하나일 수 있습니다.  
+`[ @agent_type = ] 'agent_type'` 복제 에이전트의 유형입니다. *agent_type* 은 **int**이며 기본값은 없고 다음 값 중 하나일 수 있습니다.  
   
 |값|Description|  
 |-----------|-----------------|  
@@ -56,11 +57,11 @@ sp_add_agent_profile [ [ @profile_id= ] profile_id OUTPUT ]
 |**4**|병합 에이전트|  
 |**9**|큐 판독기 에이전트|  
   
-`[ @profile_type = ] profile_type`프로필의 유형입니다. *profile_type* 은 **int**이며 기본값은 **1**입니다.  
+`[ @profile_type = ] profile_type` 프로필의 유형입니다. *profile_type* 은 **int**이며 기본값은 **1**입니다.  
   
  **0** 은 시스템 프로필을 나타냅니다. **1** 은 사용자 지정 프로필을 나타냅니다. 이 저장 프로시저를 사용 하 여 사용자 지정 프로필을 만들 수 있습니다. 따라서 유일 하 게 유효한 값은 **1**입니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템 프로필만 만듭니다.  
   
-`[ @description = ] 'description'`프로필에 대 한 설명입니다. *description* 은 **nvarchar (3000)** 이며 기본값은 없습니다.  
+`[ @description = ] 'description'` 프로필에 대 한 설명입니다. *description* 은 **nvarchar (3000)** 이며 기본값은 없습니다.  
   
 `[ @default = ] default`프로필이 *agent_type * ** 에 대 한 기본값 인지 여부를 나타냅니다. *기본값* 은 **bit**이며 기본값은 **0**입니다. **1** 은 추가 중인 프로필이 *agent_type*에서 지정 된 에이전트에 대 한 새 기본 프로필이 될 것임을 나타냅니다.  
   

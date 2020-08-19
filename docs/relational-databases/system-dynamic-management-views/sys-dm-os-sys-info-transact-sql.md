@@ -1,4 +1,5 @@
 ---
+description: sys.dm_os_sys_info(Transact-SQL)
 title: sys. dm_os_sys_info (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/24/2018
@@ -22,12 +23,12 @@ ms.assetid: 20f6bc9c-839a-4fa4-b3f3-a6c47d1b69af
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4ce8584d48a20f35b090b957b1455c444e5b4b83
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 9350ed24d2f82930ff6852b950ee15ff0421ae6e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87928704"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419647"
 ---
 # <a name="sysdm_os_sys_info-transact-sql"></a>sys.dm_os_sys_info(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -75,7 +76,7 @@ ms.locfileid: "87928704"
 |**process_physical_affinity**|**nvarchar (3072)** |**적용 대상:** 부터 시작 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 합니다.<br /><br />아직 정보를 얻을 수 없습니다. |
 |**sql_memory_model**|**int**|**적용 대상:** [!INCLUDE[sssql11](../../includes/sssql11-md.md)] SP4, [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 이상.<br /><br />에서 메모리를 할당 하는 데 사용 하는 메모리 모델을 지정 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Null을 허용하지 않습니다.<br /><br />1 = 기본 메모리 모델<br />2 = 메모리의 페이지 잠금<br /> 3 = 메모리의 많은 페이지|
 |**sql_memory_model_desc**|**nvarchar(120)**|**적용 대상:** [!INCLUDE[sssql11](../../includes/sssql11-md.md)] SP4, [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 이상.<br /><br />에서 메모리를 할당 하는 데 사용 하는 메모리 모델을 지정 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Null을 허용하지 않습니다.<br /><br />**CONVENTIONAL**  =  기본 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 기본 메모리 모델을 사용 하 여 메모리를 할당 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]시작 하는 동안 서비스 계정에 메모리의 잠금 페이지가 없는 경우 기본 sql 메모리 모델입니다.<br />**LOCK_PAGES**  =  LOCK_PAGES [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 메모리의 페이지 잠금을 사용 하 여 메모리를 할당 합니다. SQL Server 시작 하는 동안 서비스 계정에 메모리의 페이지 잠금 권한이 SQL Server 때 기본 sql 메모리 관리자입니다.<br /> **LARGE_PAGES**  =  LARGE_PAGES [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 메모리를 할당 하기 위해 메모리의 많은 페이지를 사용 하 고 있습니다. SQL Server는 서버를 시작 하는 동안 및 추적 플래그 834가 설정 된 경우 SQL Server 서비스 계정에 메모리의 페이지 잠금 권한이 있는 경우에만 Large Pages 할당자를 사용 하 여 Enterprise edition에 메모리를 할당 합니다.|
-|**pdw_node_id**|**int**|**적용 대상:** [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포가 설정 된 노드의 식별자입니다.|  
+|**pdw_node_id**|**int**|**적용 대상:** [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포가 설정 된 노드의 식별자입니다.|  
 |**socket_count** |**int** | **적용 대상:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 이상.<br /><br />시스템에서 사용할 수 있는 프로세서 소켓 수를 지정 합니다. |  
 |**cores_per_socket** |**int** | **적용 대상:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 이상.<br /><br />시스템에서 사용할 수 있는 소켓 당 프로세서 수를 지정 합니다. |  
 |**numa_node_count** |**int** | **적용 대상:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 이상.<br /><br />시스템에서 사용할 수 있는 numa 노드 수를 지정 합니다. 이 열에는 실제 numa 노드 뿐만 아니라 소프트 numa 노드도 포함 됩니다. |  
@@ -87,7 +88,7 @@ ms.locfileid: "87928704"
 
 ## <a name="see-also"></a>참고 항목  
  [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Transact-sql&#41;&#40;운영 체제 관련 동적 관리 뷰 SQL Server](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
+ [Transact-sql&#41;&#40;운영 체제 관련 동적 관리 뷰 SQL Server ](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
   
   
 

@@ -1,4 +1,5 @@
 ---
+description: xp_grantlogin(Transact-SQL)
 title: xp_grantlogin (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: c851c1ab-3b29-4b99-9902-78c2665a844b
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 6a97af7eea83e8022b30e70b5b6ccbe887469e08
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 185532cdcade18b6902fe1c3e8d1c8ab3eb568b7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890797"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419267"
 ---
 # <a name="xp_grantlogin-transact-sql"></a>xp_grantlogin(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85890797"
   Windows 그룹 또는 사용자에게 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대한 액세스 권한을 부여합니다.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]대신 [CREATE LOGIN](../../t-sql/statements/create-login-transact-sql.md) 을 사용 해야 합니다.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 대신 [CREATE LOGIN](../../t-sql/statements/create-login-transact-sql.md) 을 사용 해야 합니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,9 +43,9 @@ xp_grantlogin {[@loginame = ] 'login'} [,[@logintype = ] 'logintype']
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @loginame = ] 'login'`추가할 Windows 사용자 또는 그룹의 이름입니다. Windows 사용자 또는 그룹은 *도메인*사용자 형식의 windows 도메인 이름으로 한정 되어야 합니다 \\ *User*. *login* 은 **sysname**이며 기본값은 없습니다.  
+`[ @loginame = ] 'login'` 추가할 Windows 사용자 또는 그룹의 이름입니다. Windows 사용자 또는 그룹은 *도메인*사용자 형식의 windows 도메인 이름으로 한정 되어야 합니다 \\ *User*. *login* 은 **sysname**이며 기본값은 없습니다.  
   
-`[ @logintype = ] 'logintype'`액세스 권한을 부여 받은 로그인의 보안 수준입니다. *logintype* 은 **varchar (5)** 이며 기본값은 NULL입니다. **관리자** 만 지정할 수 있습니다. **Admin** 이 지정 된 경우 *로그인* 에 대 한 액세스 권한이 부여 되 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 고 **sysadmin** 고정 서버 역할의 멤버로 추가 됩니다.  
+`[ @logintype = ] 'logintype'` 액세스 권한을 부여 받은 로그인의 보안 수준입니다. *logintype* 은 **varchar (5)** 이며 기본값은 NULL입니다. **관리자** 만 지정할 수 있습니다. **Admin** 이 지정 된 경우 *로그인* 에 대 한 액세스 권한이 부여 되 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 고 **sysadmin** 고정 서버 역할의 멤버로 추가 됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -58,7 +59,7 @@ xp_grantlogin {[@loginame = ] 'login'} [,[@logintype = ] 'logintype']
 ## <a name="see-also"></a>참고 항목  
  [Transact-sql&#41;sp_denylogin &#40;](../../relational-databases/system-stored-procedures/sp-denylogin-transact-sql.md)   
  [Transact-sql&#41;sp_grantlogin &#40;](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
- [Transact-sql&#41;&#40;시스템 저장 프로시저](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;시스템 저장 프로시저 ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Transact-sql&#41;일반 확장 저장 프로시저 &#40;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)   
  [Transact-sql&#41;xp_enumgroups &#40;](../../relational-databases/system-stored-procedures/xp-enumgroups-transact-sql.md)   
  [Transact-sql&#41;xp_loginconfig &#40;](../../relational-databases/system-stored-procedures/xp-loginconfig-transact-sql.md)   

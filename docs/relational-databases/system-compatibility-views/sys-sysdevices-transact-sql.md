@@ -1,4 +1,5 @@
 ---
+description: sys.sysdevices(Transact-SQL)
 title: sys.sys장치 (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: ac5bcaf4-8fb6-4855-8856-d7643f469361
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 56196f6a9e4ce1929bd7fd9b65a9853d3794da4d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 6bcc481e595dc2c061d736a6bee12da6d918b7e8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883750"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419797"
 ---
 # <a name="syssysdevices-transact-sql"></a>sys.sysdevices(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

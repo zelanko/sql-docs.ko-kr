@@ -1,4 +1,5 @@
 ---
+description: sys. fn_stmt_sql_handle_from_sql_stmt (Transact-sql)
 title: sys. fn_stmt_sql_handle_from_sql_stmt (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,11 +14,12 @@ ms.assetid: 6794e073-0895-4507-aba3-c3545acc843f
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9ffc1ca0ec2e44377012f4149255bca80bce6af7
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 809670e98a7d67a5a078939fdddc600ca0116ad1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002994"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419497"
 ---
 # <a name="sysfn_stmt_sql_handle_from_sql_stmt-transact-sql"></a>sys. fn_stmt_sql_handle_from_sql_stmt (Transact-sql)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -41,7 +43,7 @@ sys.fn_stmt_sql_handle_from_sql_stmt
  핸들을 원하는 쿼리 저장소의 쿼리 텍스트입니다. *query_sql_text* 은 **nvarchar (max)** 이며 기본값은 없습니다.  
   
  *query_param_type*  
- 쿼리의 매개 변수 형식입니다. *query_param_type* 는 **tinyint**입니다. 가능한 값은  
+ 쿼리의 매개 변수 형식입니다. *query_param_type* 는 **tinyint**입니다. 가능한 값은 다음과 같습니다.  
   
 -   NULL-기본값은 0입니다.  
   
@@ -56,7 +58,7 @@ sys.fn_stmt_sql_handle_from_sql_stmt
 ## <a name="columns-returned"></a>반환되는 열  
  다음 표에서는 fn_stmt_sql_handle_from_sql_stmt에서 반환 하는 열을 나열 합니다.  
   
-|열 이름|Type|Description|  
+|열 이름|Type|설명|  
 |-----------------|----------|-----------------|  
 |**statement_sql_handle**|**varbinary(64)**|SQL 핸들입니다.|  
 |**query_sql_text**|**nvarchar(max)**|[!INCLUDE[tsql](../../includes/tsql-md.md)]문의 텍스트입니다.|  
@@ -67,10 +69,10 @@ sys.fn_stmt_sql_handle_from_sql_stmt
   
 ## <a name="remarks"></a>설명  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  데이터베이스에 대 한 **EXECUTE** 권한과 쿼리 저장소 카탈로그 뷰에 대 한 **삭제** 권한이 필요 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 문을 실행 한 다음를 사용 하 여 `sys.fn_stmt_sql_handle_from_sql_stmt` 해당 문의 SQL 핸들을 반환 합니다.  
   
 ```  
@@ -98,7 +100,7 @@ JOIN sys.dm_exec_query_stats AS qs
  [Transact-sql&#41;sp_query_store_reset_exec_stats &#40;](../../relational-databases/system-stored-procedures/sp-query-store-reset-exec-stats-transact-sql.md)   
  [Transact-sql&#41;sp_query_store_flush_db &#40;](../../relational-databases/system-stored-procedures/sp-query-store-flush-db-transact-sql.md)   
  [Transact-sql&#41;sp_query_store_remove_query &#40;](../../relational-databases/system-stored-procedures/sp-query-store-remove-query-transact-sql.md)   
- [Transact-sql&#41;&#40;카탈로그 뷰 쿼리 저장소](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)   
+ [Transact-sql&#41;&#40;카탈로그 뷰 쿼리 저장소 ](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)   
  [쿼리 저장소를 사용하여 성능 모니터링](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)  
   
   

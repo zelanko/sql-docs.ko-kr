@@ -1,4 +1,5 @@
 ---
+description: sys. pdw_diag_sessions (Transact-sql)
 title: sys. pdw_diag_sessions (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -11,12 +12,12 @@ ms.assetid: 4d23688a-cddb-4eed-8231-ecde2a0b0e65
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6ae00a9b691deac38ebe3ea3ad4ed67ca3fd4dbe
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 4615bce79c1a748a76a9af02d1991585e4550e12
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396083"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420027"
 ---
 # <a name="syspdw_diag_sessions-transact-sql"></a>sys. pdw_diag_sessions (Transact-sql)
 [!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]

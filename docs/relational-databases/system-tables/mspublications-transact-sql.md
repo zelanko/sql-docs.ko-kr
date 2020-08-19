@@ -1,4 +1,5 @@
 ---
+description: MSpublications(Transact-SQL)
 title: MSpublications (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7a0b3457-7265-4f24-a255-7f055d908f20
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b26ba7da6099f402aa8902a6ce2dafda8a4d2d71
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 99cf9a95cb61cc0efcd40c29019c038248b6102d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889580"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419137"
 ---
 # <a name="mspublications-transact-sql"></a>MSpublications(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +43,7 @@ ms.locfileid: "85889580"
 |**allow_push**|**bit**|지정된 게시에 대해 밀어넣기 구독을 만들 수 있는지 여부를 나타냅니다.|  
 |**allow_pull**|**bit**|지정된 게시에 대해 끌어오기 구독을 만들 수 있는지 여부를 나타냅니다.|  
 |**allow_anonymous**|**bit**|지정된 게시에 대해 익명 구독을 만들 수 있는지 여부를 나타냅니다.|  
-|**한**|**nvarchar(255)**|게시에 대한 설명입니다.|  
+|**description**|**nvarchar(255)**|게시에 대한 설명입니다.|  
 |**vendor_name**|**nvarchar (100)**|게시자가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스가 아닌 경우의 공급업체 이름입니다.|  
 |**보존**|**int**|게시 보존 기간(시간)입니다.|  
 |**sync_method**|**int**|동기화 메서드<br /><br /> **0** = 네이티브 (모든 테이블의 기본 모드 대량 복사 출력 생성)<br /><br /> **1** = 문자 (모든 테이블의 문자 모드 대량 복사 출력을 생성)<br /><br /> **3** = 동시 (모든 테이블의 기본 모드 대량 복사 출력을 생성 하지만 스냅숏을 실행 하는 동안 테이블을 잠그지 않음)<br /><br /> **4** = Concurrent_c (모든 테이블의 문자 모드 대량 복사 출력을 생성 하지만 스냅숏을 실행 하는 동안 테이블을 잠그지 않음)<br /><br /> 값 **3** 과 **4** 는 트랜잭션 복제 및 병합 복제에 사용할 수 있지만 스냅숏 복제에 대해서는 사용할 수 없습니다.|  
@@ -52,7 +53,7 @@ ms.locfileid: "85889580"
 |**options**|**int**|이 릴리스에서는 사용할 수 없는 정보입니다.|  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;복제 테이블](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Transact-sql&#41;&#40;복제 테이블 ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [복제 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: dbo.sysalerts(Transact-SQL)
 title: dbo.sys경고 (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/24/2016
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: a2c2f50d-61f3-4951-996a-add5ad092cc2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6113a7d05c7128df4b7691bd7f72d09ba8f0548b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 509e401f70aadc8f4dc2eb625fb5b9cf1dcda5d8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890529"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419247"
 ---
 # <a name="dbosysalerts-transact-sql"></a>dbo.sysalerts(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,8 +37,8 @@ ms.locfileid: "85890529"
 |**id**|**int**|경고 ID입니다.|  
 |**name**|**sysname**|경고 이름입니다.|  
 |**event_source**|**nvarchar (100)**|이벤트의 원본: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
-|**event_category_id**|**int**|다음에 사용하도록 예약됩니다.|  
-|**event_id**|**int**|다음에 사용하도록 예약됩니다.|  
+|**event_category_id**|**int**|나중에 사용하기 위해 예약되어 있습니다.|  
+|**event_id**|**int**|나중에 사용하기 위해 예약되어 있습니다.|  
 |**message_id**|**int**|이 경고를 트리거하는 사용자 정의 메시지 ID 또는 **sysmessages** 메시지에 대 한 참조입니다.|  
 |**severity**|**int**|경고를 트리거한 심각도입니다.|  
 |**사용**|**tinyint**|경고의 상태입니다.<br /><br /> **0** = 사용 안 함<br /><br /> **1** = 사용|  

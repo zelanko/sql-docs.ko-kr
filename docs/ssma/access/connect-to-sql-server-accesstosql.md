@@ -1,4 +1,5 @@
 ---
+description: SQL Server에 연결 (AccessToSQL)
 title: SQL Server에 연결 (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ceb77a97-d6d5-4a92-90a6-342e97d12b54
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: e35c73855e88c05a5c98743371ba5de88a1f86ee
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 06a305d705e404a2045525e584faddf6b9530cb3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87939151"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418599"
 ---
 # <a name="connect-to-sql-server-accesstosql"></a>SQL Server에 연결 (AccessToSQL)
 **SQL Server에 연결** 대화 상자를 사용 하 여 마이그레이션하려는 인스턴스에 연결 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 합니다. **SQL Server에 연결** 대화 상자에 액세스 하려면 **파일** 메뉴에서 **SQL Server에 연결**을 클릭 합니다.  
@@ -32,7 +33,7 @@ ms.locfileid: "87939151"
 **서버 포트**  
 인스턴스가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기본 포트 (1433)에서 연결을 허용 하도록 구성 되지 않은 경우 포트 번호를 입력 합니다. 그렇지 않으면이 값을 비워 둡니다.  
   
-**데이터베이스**  
+**Database**  
 개체 및 데이터를 마이그레이션할 데이터베이스를 지정 합니다. 에 다시 연결 하는 경우에는이 옵션을 사용할 수 없습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 **인증**  

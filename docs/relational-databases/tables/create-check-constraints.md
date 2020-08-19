@@ -1,4 +1,5 @@
 ---
+description: CHECK 제약 조건 만들기
 title: CHECK 제약 조건 만들기 | Microsoft 문서
 ms.custom: ''
 ms.date: 06/28/2017
@@ -17,12 +18,12 @@ ms.assetid: b8756304-9454-4d39-996a-64516831b7df
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b3c631e4c733c87662ab1a582f1388913f0c2b3f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 177caf959cd9f957525dd50a0b63a0dc2b304115
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85753830"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419047"
 ---
 # <a name="create-check-constraints"></a>CHECK 제약 조건 만들기
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -77,7 +78,7 @@ ms.locfileid: "85753830"
   
 6.  **테이블 디자이너** 범주에서는 제약 조건을 적용하는 경우를 설정할 수 있습니다.  
   
-    |**받는 사람:**|**다음 필드에서 예 선택:**|  
+    |**다음으로 변경:**|**다음 필드에서 예 선택:**|  
     |-------------|---------------------------------------------|  
     |제약 조건을 만들기 전에 존재한 데이터에 대한 제약 조건 테스트|**만들거나 활성화할 때 기존 데이터 검사**|  
     |이 테이블에서 복제 작업이 수행될 때마다 제약 조건 적용|**복제에 적용**|  

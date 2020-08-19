@@ -1,4 +1,5 @@
 ---
+description: sys.dm_os_loaded_modules(Transact-SQL)
 title: sys. dm_os_loaded_modules (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/18/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 56c7743a-b568-4943-bd3b-73c57d9d641c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ecf9858f1cc37290cf9079470498d3ad1ecbdc84
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d5678c74d6fbbb703e6f6fd0a93b205bc2903059
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898764"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419687"
 ---
 # <a name="sysdm_os_loaded_modules-transact-sql"></a>sys.dm_os_loaded_modules(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +46,7 @@ ms.locfileid: "85898764"
 |**special_build**|**bit**|1 = 로드된 모듈의 특수 빌드입니다.|  
 |**language**|**int**|모듈 버전 정보의 언어입니다.|  
 |**회사가**|**nvarchar(256)**|모듈을 만든 회사의 이름입니다.|  
-|**한**|**nvarchar(256)**|모듈에 대한 설명입니다.|  
+|**description**|**nvarchar(256)**|모듈에 대한 설명입니다.|  
 |**name**|**nvarchar(255)**|모듈의 이름입니다. 모듈의 전체 경로가 포함됩니다.|  
 |**pdw_node_id**|**int**|**적용 대상**: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포가 설정 된 노드의 식별자입니다.|  
   
@@ -53,7 +54,7 @@ ms.locfileid: "85898764"
  을 실행하려면 서버에 대해 VIEW SERVER STATE 권한이 필요합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;동적 관리 뷰 및 함수](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Transact-sql&#41;&#40;운영 체제 관련 동적 관리 뷰 SQL Server](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
+ [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Transact-sql&#41;&#40;운영 체제 관련 동적 관리 뷰 SQL Server ](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
   
   

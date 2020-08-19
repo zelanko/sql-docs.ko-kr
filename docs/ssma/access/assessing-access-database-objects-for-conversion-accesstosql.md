@@ -1,4 +1,5 @@
 ---
+description: 변환을 위해 Access 데이터베이스 개체를 평가 하는 방법 (AccessToSQL)
 title: 변환을 위해 Access 데이터베이스 개체를 평가 하는 방법 (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 8b9e23d6-da62-437a-8c05-8ad2628b9441
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: d45df17f82bf52d6d059b2efbf69a39cedb949f0
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 6bf9144249bc8707bce9c812da19a07bacc43c68
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934104"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418609"
 ---
 # <a name="assessing-access-database-objects-for-conversion-accesstosql"></a>변환을 위해 Access 데이터베이스 개체를 평가 하는 방법 (AccessToSQL)
 개체를 로드 하 고 데이터를 또는 SQL Azure로 마이그레이션하려면 먼저 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 마이그레이션의 양과 변환에 소요 되는 기간을 결정 해야 합니다. SSMA는 성공적으로 변환 된 개체의 비율을 표시 하는 평가 보고서를 만들거나, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 마이그레이션을 수행 하기 위한 구문 및 시간 추정치를 SQL Azure 수 있습니다. SSMA를 사용 하 여 변환 실패를 일으킨 특정 문제를 확인할 수도 있습니다.  

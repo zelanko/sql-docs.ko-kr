@@ -1,4 +1,5 @@
 ---
+description: MSdbms_datatype(Transact-SQL)
 title: MSdbms_datatype (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 606168cc-79a8-442f-ab43-936f8f884d72
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 62efb2fa9bf434af4cb9b237b133d3f705eaa7eb
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 3fcda5b5d0283f764fa2347b51d8f34dfb4cc53e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890022"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419117"
 ---
 # <a name="msdbms_datatype-transact-sql"></a>MSdbms_datatype(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +43,7 @@ ms.locfileid: "85890022"
 ## <a name="see-also"></a>참고 항목  
  [다른 유형의 데이터베이스 복제](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
  [Oracle 게시자에 대 한 데이터 형식 매핑 지정](../../relational-databases/replication/publish/specify-data-type-mappings-for-an-oracle-publisher.md)   
- [Transact-sql&#41;&#40;복제 테이블](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Transact-sql&#41;&#40;복제 테이블 ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [복제 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

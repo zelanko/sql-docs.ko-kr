@@ -1,4 +1,5 @@
 ---
+description: logmarkhistory(Transact-SQL)
 title: logmarkhistory (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5c1becc5-f34e-4869-bf69-dfafab684540
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0b295105b76711e0e7305374cdd0ce380cd3abea
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d52c161baa58924a21966ed4c354fa614e677062
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890110"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419157"
 ---
 # <a name="logmarkhistory-transact-sql"></a>logmarkhistory(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "85890110"
 |-----------------|---------------|-----------------|  
 |**database_name**|**nvarchar(128)**|표시된 트랜잭션이 일어나는 로컬 데이터베이스입니다.|  
 |**mark_name**|**nvarchar(128)**|표시된 트랜잭션에 대한 사용자 제공 이름입니다.|  
-|**한**|**nvarchar(255)**|표시된 트랜잭션의 사용자 제공 설명입니다. NULL일 수 있습니다.|  
+|**description**|**nvarchar(255)**|표시된 트랜잭션의 사용자 제공 설명입니다. NULL일 수 있습니다.|  
 |**user_name**|**nvarchar(128)**|표시된 트랜잭션을 실행하는 데이터베이스 사용자 이름입니다. NULL일 수 있습니다.|  
 |**lsn**|**numeric(25,0)**|표시되는 트랜잭션 레코드의 로그 시퀀스 번호입니다.|  
 |**mark_time**|**datetime**|표시된 트랜잭션의 커밋 시간입니다(현지 시간).|  

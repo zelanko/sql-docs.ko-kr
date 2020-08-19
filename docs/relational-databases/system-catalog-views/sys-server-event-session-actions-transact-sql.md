@@ -1,4 +1,5 @@
 ---
+description: sys.server_event_session_actions(Transact-SQL)
 title: sys. server_event_session_actions (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 1d8c604e-4361-4846-8661-14cfd1c44f63
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a204858e7d2fcf78505e41de95d5301b2382b23a
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: e03838505119082f2b382546ec774ee5ca4fbed5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442476"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419997"
 ---
 # <a name="sysserver_event_session_actions-transact-sql"></a>sys.server_event_session_actions(Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -46,14 +47,14 @@ ms.locfileid: "87442476"
 ## <a name="remarks"></a>설명  
  이 뷰는 다음과 같은 관계 카디널리티를 가집니다.  
   
-| From | 받는 사람 | 관계 |
+| 보낸 사람 | 대상 | 관계 |
 | ---- | -- | ------------ |
 |sys.server_event_session_actions.event_session_id|sys.sys.server_event_sessions.event_session_id|다 대 일|  
 |sys.server_event_session_actions.event_id<br /><br /> sys.server_event_session_actions.event_session_id|sys.server_event_session_events.event_session_id<br /><br /> sys.server_event_session_events.event_id|다 대 일|  
   
 ## <a name="see-also"></a>참고 항목  
  [카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Transact-sql&#41;&#40;확장 이벤트 카탈로그 뷰](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md)   
+ [Transact-sql&#41;&#40;확장 이벤트 카탈로그 뷰 ](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md)   
  [확장 이벤트](../../relational-databases/extended-events/extended-events.md)  
   
   

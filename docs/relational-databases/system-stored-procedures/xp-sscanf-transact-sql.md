@@ -1,4 +1,5 @@
 ---
+description: xp_sscanf(Transact-SQL)
 title: xp_sscanf (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 619a9df1-7008-407e-a75a-bc6f851454a8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a980f048d6a8f5fae333381f07be3c889ad70366
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d121e9a0c1540ec42ee5c9becb0facc24d49c287
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890705"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419167"
 ---
 # <a name="xp_sscanf-transact-sql"></a>xp_sscanf(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -65,7 +66,7 @@ xp_sscanf { string OUTPUT , format } [ ,argument [ ,...n ] ]
 ## <a name="permissions"></a>사용 권한  
  **public** 역할의 멤버 자격이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `xp_sscanf`를 사용하여 원본 문자열 포맷의 해당 위치를 기반으로 한 원본 문자열에서 두 값을 추출합니다.  
   
 ```  
@@ -83,7 +84,7 @@ products10.tmp        random
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;시스템 저장 프로시저](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;시스템 저장 프로시저 ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Transact-sql&#41;일반 확장 저장 프로시저 &#40;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)   
  [Transact-sql&#41;xp_sprintf &#40;](../../relational-databases/system-stored-procedures/xp-sprintf-transact-sql.md)  
   

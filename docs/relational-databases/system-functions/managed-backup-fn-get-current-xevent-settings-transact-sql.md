@@ -1,4 +1,5 @@
 ---
+description: managed_backup. fn_get_current_xevent_settings (Transact-sql)
 title: managed_backup. fn_get_current_xevent_settings (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -20,11 +21,12 @@ helpviewer_keywords:
 ms.assetid: 95d3adaa-bb9d-4833-b8b4-3d9fd4f9c82a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: cff78d30f768360c55b212742770d8caded6f5ee
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: 164038c2009f273ae922e65c922c1d962a72b7d2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86053455"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419527"
 ---
 # <a name="managed_backupfn_get_current_xevent_settings-transact-sql"></a>managed_backup. fn_get_current_xevent_settings (Transact-sql)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -41,13 +43,13 @@ ms.locfileid: "86053455"
 smart_admin.fn_get_current_xevent_settings ()   
 ```  
   
-##  <a name="arguments"></a><a name="Arguments"></a>인수의  
+##  <a name="arguments"></a><a name="Arguments"></a> 인수  
  이 함수에는 인수가 없습니다.  
   
 ## <a name="table-returned"></a>반환된 테이블  
  확장 이벤트의 Admin, Analytic 및 Operational 채널은 기본적으로 사용하도록 설정되며 구성할 수 없습니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |Event_name|NVARCHAR(128)|확장 이벤트 유형|  
 |is_configurable|NVARCHAR(128)|이 이벤트는 이벤트를 구성할 수 있는 경우 **True** 로 설정 되 고, 그렇지 않으면 **False**로 설정 됩니다.|  

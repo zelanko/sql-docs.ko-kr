@@ -1,4 +1,5 @@
 ---
+description: IHarticles(Transact-SQL)
 title: IHarticles (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 773ef9b7-c993-4629-9516-70c47b9dcf65
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 252b68ea2f6512f2acbc9bbb7555eae172a641ef
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1ef51387b774f8961cb7abe30f2af4615adc0973
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890334"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419237"
 ---
 # <a name="iharticles-transact-sql"></a>IHarticles(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -53,7 +54,7 @@ ms.locfileid: "85890334"
 |**tablespace_name**|**nvarchar(255)**|아티클에 대한 로깅 테이블에서 사용하는 테이블스페이스를 식별합니다.|  
 |**objid**|**int**|이 열은 사용 되지 않으며 **IHarticles** 테이블의 [sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md) 뷰가 SQL Server 아티클에 사용 되는 [sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md) 뷰 ([sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md))와 호환 되도록 하기 위해서만 포함 됩니다.|  
 |**sync_objid**|**int**|이 열은 사용 되지 않으며 **IHarticles** 테이블의 [sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md) 뷰가 SQL Server 아티클에 사용 되는 [sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md) 뷰 ([sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md))와 호환 되도록 하기 위해서만 포함 됩니다.|  
-|**한**|**nvarchar(255)**|아티클에 대한 설명 항목입니다.|  
+|**description**|**nvarchar(255)**|아티클에 대한 설명 항목입니다.|  
 |**publisher_status**|**int**|게시 된 아티클을 정의 하는 뷰가 [sp_articleview](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)를 호출 하 여 정의 되었는지 여부를 나타내는 데 사용 됩니다.<br /><br /> **0**  =  [sp_articleview](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md) 가 호출 되었습니다.<br /><br /> **1**  =  [sp_articleview](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md) 가 호출 되지 않았습니다.|  
 |**article_view_owner**|**nvarchar(255)**|로그 판독기 에이전트에서 사용하는 게시자에 있는 동기화 개체의 소유자입니다.|  
 |**article_view**|**nvarchar(255)**|로그 판독기 에이전트에서 사용하는 게시자에 있는 동기화 개체입니다.|  
@@ -67,8 +68,8 @@ ms.locfileid: "85890334"
   
 ## <a name="see-also"></a>참고 항목  
  [다른 유형의 데이터베이스 복제](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
- [Transact-sql&#41;&#40;복제 테이블](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Transact-sql&#41;&#40;복제 뷰](../../relational-databases/system-views/replication-views-transact-sql.md)   
+ [Transact-sql&#41;&#40;복제 테이블 ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Transact-sql&#41;&#40;복제 뷰 ](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [Transact-sql&#41;sp_addarticle &#40;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
  [sp_changearticle&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)  
   

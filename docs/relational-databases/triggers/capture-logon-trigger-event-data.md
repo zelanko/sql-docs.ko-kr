@@ -1,4 +1,5 @@
 ---
+description: LOGON 트리거 이벤트 데이터 캡처
 title: LOGON 트리거 이벤트 데이터 캡처 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/06/2017
@@ -10,16 +11,16 @@ ms.assetid: e05b1ab4-c10b-402a-9591-f6ec1e3db8c0
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1566d1404b7be2af520d26c557550ffb1c3feca7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8511e1021383921d52a190cb9df80b3d5939060a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72689861"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418907"
 ---
 # <a name="capture-logon-trigger-event-data"></a>LOGON 트리거 이벤트 데이터 캡처
 [!INCLUDE[tsql-appliesto-ss2008-appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
-  LOGON 트리거 내에서 사용할 LOGON 이벤트에 대한 XML 데이터를 캡처하려면 [EVENTDATA](../../t-sql/functions/eventdata-transact-sql.md) 함수를 사용합니다. LOGON 이벤트는 다음 이벤트 데이터 스키마를 반환합니다.  
+   LOGON 트리거 내에서 사용할 LOGON 이벤트에 대한 XML 데이터를 캡처하려면 [EVENTDATA](../../t-sql/functions/eventdata-transact-sql.md) 함수를 사용합니다. LOGON 이벤트는 다음 이벤트 데이터 스키마를 반환합니다.  
   
  `<EVENT_INSTANCE>`  
   

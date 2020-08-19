@@ -1,4 +1,5 @@
 ---
+description: sys.dm_db_file_space_usage(Transact-SQL)
 title: sys. dm_db_file_space_usage (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -20,11 +21,12 @@ ms.assetid: 148a5276-a8d5-49d2-8146-3c63d24c2144
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f1a40bf72c3bb49747b1f7ce0dd5fed41c3f18fe
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 77ec20858f3bf98deec88d24a9fd66e411a54c1b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012893"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419757"
 ---
 # <a name="sysdm_db_file_space_usage-transact-sql"></a>sys.dm_db_file_space_usage(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -47,8 +49,8 @@ ms.locfileid: "86012893"
 |internal_object_reserved_page_count|**bigint**|파일에서 내부 개체에 대해 할당된 단일 익스텐트의 총 페이지 수입니다. 할당된 익스텐트에서 사용되지 않은 페이지도 포함됩니다.<br /><br /> IAM 페이지는 항상 혼합 익스텐트에서 할당되기 때문에 포함되지 않습니다. PFS 페이지는 단일 익스텐트에서 할당된 경우에 포함됩니다.<br /><br /> 각 내부 개체의 페이지 수를 반환하는 카탈로그 뷰나 동적 관리 개체는 없습니다.|  
 |mixed_extent_page_count|**bigint**|파일에서 할당된 혼합 익스텐트의 할당된 페이지와 할당되지 않은 페이지의 총 수입니다. 혼합 익스텐트에는 여러 다른 개체에 할당된 페이지가 포함됩니다. 이 값에는 파일에 있는 모든 IAM 페이지가 포함됩니다.|
 |modified_extent_page_count|**bigint**|**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 이상.<br /><br />마지막 전체 데이터베이스 백업 이후 파일의 할당 된 범위에서 수정 된 총 페이지 수입니다. 수정 된 페이지 수를 사용 하 여 차등 백업이 필요한 지 여부를 결정 하기 위해 마지막 전체 백업 이후 데이터베이스의 차등 변경 내용을 추적할 수 있습니다.|
-|pdw_node_id|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포가 설정 된 노드의 식별자입니다.|  
-|distribution_id|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 분포와 연결 된 고유 숫자 id입니다.|  
+|pdw_node_id|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포가 설정 된 노드의 식별자입니다.|  
+|distribution_id|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 분포와 연결 된 고유 숫자 id입니다.|  
   
 ## <a name="remarks"></a>설명  
  페이지 수는 항상 익스텐트 수준에 대한 값입니다. 따라서 페이지 수는 항상 8의 배수입니다. GAM(Global Allocation Map) 및 SGAM(Shared Global Allocation Map) 할당 페이지를 포함하는 익스텐트는 할당된 단일 익스텐트로, 앞서 설명된 페이지 수에 포함되지 않습니다. 페이지 및 익스텐트에 대 한 자세한 내용은 [페이지 및 익스텐트 아키텍처 가이드](../../relational-databases/pages-and-extents-architecture-guide.md)를 참조 하세요. 
@@ -83,16 +85,16 @@ ms.locfileid: "86012893"
   
 ## <a name="relationship-cardinalities"></a>관계 카디널리티  
   
-|시작|대상|관계|  
+|보낸 사람|대상|관계|  
 |----------|--------|------------------|  
 |sys.dm_db_file_space_usage.database_id, file_id|sys.dm_io_virtual_file_stats.database_id, file_id|일 대 일|  
   
-## <a name="permissions"></a>권한
+## <a name="permissions"></a>사용 권한
 
 에 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 는 `VIEW SERVER STATE` 권한이 필요 합니다.   
 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium 계층에서는 데이터베이스에 대 한 권한이 필요 합니다 `VIEW DATABASE STATE` . [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]표준 및 기본 계층에서는 **서버 관리자** 또는 **Azure Active Directory 관리자** 계정이 필요 합니다.   
 
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="determing-the-amount-of-free-space-in-tempdb"></a>tempdb의 빈 공간 확인  
  다음 쿼리는 **tempdb**의 모든 데이터 파일에서 사용할 수 있는 총 사용 가능한 페이지 수와 사용 가능한 총 공간 (mb)을 반환 합니다.  
@@ -117,7 +119,7 @@ FROM sys.dm_db_file_space_usage;
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;동적 관리 뷰 및 함수](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Transact-sql&#41;&#40;데이터베이스 관련 동적 관리 뷰](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
+ [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Transact-sql&#41;&#40;데이터베이스 관련 동적 관리 뷰 ](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
  [dm_db_task_space_usage &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-task-space-usage-transact-sql.md)   
  [sys.dm_db_session_space_usage&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql.md)  

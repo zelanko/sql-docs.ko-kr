@@ -1,4 +1,5 @@
 ---
+description: core.sp_remove_collector_type(Transact-SQL)
 title: core. sp_remove_collector_type (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 88ceba25-e41a-405f-a416-bb68918a0024
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8c14d41dabfb8b587b3baaaaec9cb11ac3ac9d8f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ef7ad117692b259bb9de4cb595ce7782cac7fdf8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898180"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419327"
 ---
 # <a name="coresp_remove_collector_type-transact-sql"></a>core.sp_remove_collector_type(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -53,7 +54,7 @@ core.sp_remove_collector_type [ @collector_type_uid = ] 'collector_type_uid'
 ## <a name="permissions"></a>사용 권한  
  **Mdw_admin** (실행 권한 포함) 고정 데이터베이스 역할의 멤버 자격이 필요 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 core.supported_collector_types 뷰에서 일반 T-SQL 쿼리 수집기 유형을 제거합니다.  
   
 ```  
@@ -66,8 +67,8 @@ EXECUTE @RC = core.sp_remove_collector_type @collector_type_uid;
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;시스템 저장 프로시저](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Transact-sql&#41;&#40;데이터 수집기 저장 프로시저](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;시스템 저장 프로시저 ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [데이터 수집기 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
  [관리 데이터 웨어하우스](../../relational-databases/data-collection/management-data-warehouse.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: xp_loginconfig(Transact-SQL)
 title: xp_loginconfig (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d380e799-2857-408a-bcbf-5e73a8e6aa5a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: afef091db5038a6ca302c07a6171557577d46797
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9e86352f992698387334531398bafc5bdfdc2d61
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890738"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419257"
 ---
 # <a name="xp_loginconfig-transact-sql"></a>xp_loginconfig(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -74,7 +75,7 @@ xp_loginconfig ['config_name']
 ## <a name="permissions"></a>사용 권한  
  **Master** 데이터베이스에 대 한 CONTROL 권한이 필요 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-how-to-report-all-configuration-values"></a>A. 모든 구성 값을 보고하는 방법  
  다음 예에서는 현재 구성된 모든 설정을 표시합니다.  
@@ -95,7 +96,7 @@ GO
 ## <a name="see-also"></a>참고 항목  
  [Transact-sql&#41;sp_denylogin &#40;](../../relational-databases/system-stored-procedures/sp-denylogin-transact-sql.md)   
  [Transact-sql&#41;sp_grantlogin &#40;](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
- [Transact-sql&#41;&#40;시스템 저장 프로시저](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;시스템 저장 프로시저 ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Transact-sql&#41;sp_revokelogin &#40;](../../relational-databases/system-stored-procedures/sp-revokelogin-transact-sql.md)   
  [Transact-sql&#41;xp_logininfo &#40;](../../relational-databases/system-stored-procedures/xp-logininfo-transact-sql.md)  
   

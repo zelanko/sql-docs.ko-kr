@@ -1,4 +1,5 @@
 ---
+description: managed_backup. fn_is_master_switch_on (Transact-sql)
 title: managed_backup. fn_is_master_switch_on (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -20,11 +21,12 @@ helpviewer_keywords:
 ms.assetid: e8c2108d-b104-46cb-9645-a15f46112c86
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a697cff22257c49774c91dc0b5c646034e34fba1
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: b73778128e18d2937e2866ba697ab297698f6574
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86053419"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419477"
 ---
 # <a name="managed_backupfn_is_master_switch_on-transact-sql"></a>managed_backup. fn_is_master_switch_on (Transact-sql)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -42,8 +44,8 @@ ms.locfileid: "86053419"
 managed_backup.fn_is_master_switch_on ()  
 ```  
   
-##  <a name="arguments"></a><a name="Arguments"></a>인수의  
- 없음  
+##  <a name="arguments"></a><a name="Arguments"></a> 인수  
+ None  
   
 ## <a name="return-type"></a>반환 형식  
  **조금**  

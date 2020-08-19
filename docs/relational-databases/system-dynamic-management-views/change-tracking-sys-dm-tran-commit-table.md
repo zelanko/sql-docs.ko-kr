@@ -1,4 +1,5 @@
 ---
+description: 변경 내용 추적 dm_tran_commit_table
 title: sys. dm_tran_commit_table (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -20,12 +21,12 @@ ms.assetid: 732d23c5-1f6c-4e96-bc85-8f29b520cf0e
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 863da6499e788b07576066a1890c4532f3a06456
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 315821ac129c0702fd0de1c91ba258c07edb359b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720372"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419817"
 ---
 # <a name="change-tracking---sysdm_tran_commit_table"></a>변경 내용 추적 dm_tran_commit_table
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -42,10 +43,10 @@ ms.locfileid: "85720372"
 |commit_lbn|**bigint**|트랜잭션의 커밋 로그 레코드를 포함하는 로그 블록 수입니다.|  
 |commit_csn|**bigint**|트랜잭션의 인스턴스별 커밋 시퀀스 번호입니다.|  
 |commit_time|**smalldatetime**|트랜잭션이 커밋된 시간입니다.|  
-|pdw_node_id|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포가 설정 된 노드의 식별자입니다.|  
+|pdw_node_id|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포가 설정 된 노드의 식별자입니다.|  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;동적 관리 뷰 및 함수](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [변경 내용 추적 정보&#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-tracking-sql-server.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: 리소스 관리자 관련 동적 관리 뷰(Transact-SQL)
 title: Resource Governor 관련 동적 관리 뷰 (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/28/2018
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fae5d600-586d-45fa-9d6d-03224cc13304
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4d01fbd3183042adcc1085d767d10773534b20f0
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: 8c7bcd99f35edc7c15863a08b4bab4aa88c82a8e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942159"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419787"
 ---
 # <a name="resource-governor-related-dynamic-management-views-transact-sql"></a>리소스 관리자 관련 동적 관리 뷰(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,7 +47,7 @@ ms.locfileid: "86942159"
 :::row-end:::
 
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;카탈로그 뷰 Resource Governor](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md)   
+ [Transact-sql&#41;&#40;카탈로그 뷰 Resource Governor ](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md)   
  [리소스 관리자](../../relational-databases/resource-governor/resource-governor.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: 카탈로그 저장 프로시저(Transact-SQL)
 title: 카탈로그 저장 프로시저 (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 6190b070-a3ba-4925-bbe7-79229205dac7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ab5a056beff9f0b384acbb2667770543ac145ce4
-ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
+ms.openlocfilehash: 068b347f6e92f91de007e2d21c1fe809fd3c5c03
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86977643"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419347"
 ---
 # <a name="catalog-stored-procedures-transact-sql"></a>카탈로그 저장 프로시저(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

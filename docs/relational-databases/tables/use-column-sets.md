@@ -1,4 +1,5 @@
 ---
+description: 열 집합 사용
 title: 열 집합 사용 | Microsoft 문서
 ms.custom: ''
 ms.date: 07/30/2015
@@ -14,12 +15,12 @@ ms.assetid: a4f9de95-dc8f-4ad8-b957-137e32bfa500
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a45bfb98fa5b8d5a9ce5c640d07c3c13ab7d5284
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 6082c8ffbdf2a2eaba1d24f64a85cfcbed393984
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396176"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418977"
 ---
 # <a name="use-column-sets"></a>열 집합 사용
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
@@ -112,7 +113,7 @@ GO
 ## <a name="using-the-sql_variant-data-type"></a>sql_variant 데이터 형식 사용  
  **sql_variant** 데이터 형식은 **int**, **char**및 **date**와 같은 여러 다른 데이터 형식을 저장할 수 있습니다. 열 집합은 **sql_variant** 값에 연결된 소수 자릿수, 전체 자릿수 및 로캘 정보와 같은 데이터 형식 정보를 생성된 XML 열에서 특성으로 출력합니다. 사용자 지정하여 생성된 XML 문에 있는 이러한 특성을 열 집합의 삽입 또는 업데이트 작업에 대한 입력으로 제공하려는 경우에는 이 특성 중 일부가 필요하여 이러한 일부 특성에 기본값이 할당됩니다. 다음 표에서는 데이터 형식과 값이 제공되지 않은 경우 서버에서 생성하는 기본값을 나열합니다.  
   
-|데이터 형식|localeID*|sqlCompareOptions|sqlCollationVersion|SqlSortId|최대 길이|자릿수|확장|  
+|데이터 형식|localeID*|sqlCompareOptions|sqlCollationVersion|SqlSortId|최대 길이|전체 자릿수|확장|  
 |---------------|----------------|-----------------------|-------------------------|---------------|--------------------|---------------|-----------|  
 |**char**, **varchar**, **binary**|-1|'기본값'|0|0|8000|해당 사항 없음**|해당 없음|  
 |**nvarchar**|-1|'기본값'|0|0|4000|해당 없음|해당 없음|  

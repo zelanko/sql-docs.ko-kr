@@ -1,4 +1,5 @@
 ---
+description: REFERENTIAL_CONSTRAINTS(Transact-SQL)
 title: REFERENTIAL_CONSTRAINTS (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -19,12 +20,12 @@ ms.assetid: 5d358f18-0a85-4b55-af4b-98d5f4cd1020
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 89f9db258d03c44452fc05701b25f56a972fe54e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1aba08a8dba31db47372b15f0356b32e71b41d34
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85784854"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419357"
 ---
 # <a name="referential_constraints-transact-sql"></a>REFERENTIAL_CONSTRAINTS(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -46,9 +47,9 @@ ms.locfileid: "85784854"
 |**DELETE_RULE**|**varchar (** 11 **)**|[!INCLUDE[tsql](../../includes/tsql-md.md)] 문이 현재 제약 조건에서 정의한 참조 무결성을 위반하는 경우에 수행되는 동작입니다. 다음 중 하나를 반환합니다. <br />NO ACTION<br />CASCADE<br />SET NULL<br />SET DEFAULT<br /><br /> 현재 제약 조건의 ON DELETE에 대해 NO ACTION이 지정된 경우에는 제약 조건에서 참조되는 기본 키에 대한 삭제가 외래 키로 전파되지 않습니다. 적어도 하나의 외래 키가 같은 값을 포함하여 기본 키의 해당 삭제가 참조 무결성을 위반하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 부모 테이블 및 참조하는 테이블에 대해 어떠한 변경 사항도 적용하지 않습니다. 또한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 오류가 발생합니다.<br /><br /> 현재 제약 조건의 ON DELETE에 대해 CASCADE가 지정된 경우에는 기본 키 값에 대한 모든 변경 사항이 자동으로 외래 키 값으로 전파됩니다.|  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;시스템 뷰](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
- [Transact-sql&#41;&#40;정보 스키마 뷰](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   
- [sys.debug &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
+ [Transact-sql&#41;&#40;시스템 뷰 ](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
+ [Transact-sql&#41;&#40;정보 스키마 뷰 ](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   
+ [sys.indexes&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
  [sys. 개체 &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
  [foreign_keys &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-foreign-keys-transact-sql.md)  
   

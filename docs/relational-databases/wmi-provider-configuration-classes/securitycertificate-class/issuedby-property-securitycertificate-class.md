@@ -1,4 +1,5 @@
 ---
+description: IssuedBy 속성(SecurityCertificate 클래스)
 title: IssuedBy 속성 (SecurityCertificate)
 ms.custom: seo-lt-2019
 ms.date: 03/04/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9fcf9c62-01a8-4be2-9d10-5b1b796b397c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 54932f9bc2ebd8c1ddcfd4589e3df863bf6be433
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: bad30b00ec6ac87b9f0784456a5d99457c153c88
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85880939"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418857"
 ---
 # <a name="issuedby-property-securitycertificate-class"></a>IssuedBy 속성(SecurityCertificate 클래스)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

@@ -1,4 +1,5 @@
 ---
+description: AccessToSQL (액세스 인벤토리 스키마)
 title: 액세스 인벤토리 스키마 (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -36,12 +37,12 @@ helpviewer_keywords:
 ms.assetid: fdd3cff2-4d62-4395-8acf-71ea8f17f524
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: caf6c1045b02a84cf2dec0aba56c5c1c050277c1
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 593c36c193b95d1484f3d478018992ea130d5417
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934154"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418639"
 ---
 # <a name="access-inventory-schemas-accesstosql"></a>AccessToSQL (액세스 인벤토리 스키마)
 다음 섹션에서는에 액세스 스키마를 내보낼 때 SSMA에서 만드는 테이블에 대해 설명 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

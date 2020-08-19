@@ -1,4 +1,5 @@
 ---
+description: Azure SQL Database에 연결 (AccessToSQL)
 title: Azure SQL Database에 연결 (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: bf44b236-d9be-41ae-a5fd-bd73038e505f
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: f67bb072ce30117ebab93c3165545b13b6513df9
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 15882852544113881b52f3641e0c85ec684add22
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87938872"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418569"
 ---
 # <a name="connect-to-azure-sql-database-accesstosql"></a>Azure SQL Database에 연결 (AccessToSQL)
 SQL Azure 연결 대화 상자를 사용 하 여 마이그레이션하려는 Azure SQL Database 데이터베이스에 연결할 수 있습니다.  
@@ -27,7 +28,7 @@ SQL Azure 연결 대화 상자를 사용 하 여 마이그레이션하려는 Azu
   
 SQL Azure에 연결 하기 위한 서버 이름을 선택 하거나 입력 합니다.  
   
-**데이터베이스**  
+**Database**  
   
 을 선택 하 고 데이터베이스 이름을 입력 하거나 **검색** 합니다.  
   

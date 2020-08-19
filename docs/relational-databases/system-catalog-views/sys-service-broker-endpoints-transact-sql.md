@@ -1,4 +1,5 @@
 ---
+description: sys.service_broker_endpoints(Transact-SQL)
 title: sys. service_broker_endpoints (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 6979ec9b-0043-411e-aafb-0226fa26c5ba
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 86a7fb5a83fe8e12f6721328e69c45e40e57eb46
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1fd6a01ea9b6936edc90a64e70a2c310750d2b85
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897902"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419957"
 ---
 # <a name="sysservice_broker_endpoints-transact-sql"></a>sys.service_broker_endpoints(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
