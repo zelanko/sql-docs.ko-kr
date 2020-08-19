@@ -1,4 +1,5 @@
 ---
+description: VAR(Transact-SQL)
 title: VAR(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2017
@@ -20,12 +21,12 @@ ms.assetid: 71dfc339-16c8-42f9-8555-ad45400f7f9b
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7a7e64d73c44bf76d45dd672970f1216f88412c6
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 45c786bf165a26fe4e5d4b9f2461a98615af655d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111306"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88362479"
 ---
 # <a name="var-transact-sql"></a>VAR(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,7 +37,7 @@ ms.locfileid: "87111306"
   
 ## <a name="syntax"></a>구문  
   
-```    
+```syntaxsql    
 -- Aggregate Function Syntax   
 VAR ( [ ALL | DISTINCT ] expression )  
   
@@ -54,7 +55,7 @@ VAR ([ ALL ] expression) OVER ( [ partition_by_clause ] order_by_clause)
  각 고유 값을 고려하도록 지정합니다.  
   
  *expression*  
- [bit](../../t-sql/language-elements/expressions-transact-sql.md) 데이터 형식을 제외한 정확한 수치 또는 근사치 데이터 형식 범주의 **expression**입니다. 집계 함수와 하위 쿼리는 허용되지 않습니다.  
+ **bit** 데이터 형식을 제외한 정확한 수치 또는 근사치 데이터 형식 범주의 [expression](../../t-sql/language-elements/expressions-transact-sql.md)입니다. 집계 함수와 하위 쿼리는 허용되지 않습니다.  
   
  OVER **(** [ _partition\_by\_clause_ ] _order\_by\_clause_ **)**  
  *partition_by_clause*는 FROM 절이 생성한 결과 집합을 함수가 적용되는 파티션으로 나눕니다. 지정하지 않을 경우 쿼리 결과 집합의 모든 행이 단일 그룹으로 취급됩니다. _order\_by\_clause_는 작업이 수행되는 논리적 순서를 결정합니다. _order\_by\_clause_는 필수입니다. 자세한 내용은 [OVER 절&#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)을 참조하세요.  
@@ -67,12 +68,12 @@ VAR ([ ALL ] expression) OVER ( [ partition_by_clause ] order_by_clause)
   
  VAR은 OVER 및 ORDER BY 절 없이 사용되는 경우 결정적 함수이고, OVER 및 ORDER BY 절과 함께 지정되는 경우 비결정적 함수입니다. 자세한 내용은 [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)을 참조하세요.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
-### <a name="a-using-var"></a>1\. VAR 사용하기  
- 다음은 `SalesPerson` 데이터베이스에서 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 테이블에 있는 모든 보너스 값의 모집단에 대한 분산을 반환하는 예입니다.  
+### <a name="a-using-var"></a>1. VAR 사용하기  
+ 다음은 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에서 `SalesPerson` 테이블에 있는 모든 보너스 값의 모집단에 대한 분산을 반환하는 예입니다.  
   
-```  
+```sql  
 SELECT VAR(Bonus)  
 FROM Sales.SalesPerson;  
 GO  
@@ -80,10 +81,10 @@ GO
   
 ## <a name="examples-sssdwfull-and-sspdw"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="b-using-var"></a>2\. VAR 사용하기  
+### <a name="b-using-var"></a>2. VAR 사용하기  
  다음 예에서는 테이블 `dbo.FactSalesQuota`의 판매 할당량 값의 통계적 분산을 반환합니다. 첫 번째 열은 모든 고유 값의 분산을 포함하고 두 번째 열은 중복 값을 포함한 모든 값의 분산을 포함합니다.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT VAR(DISTINCT SalesAmountQuota)AS Distinct_Values, VAR(SalesAmountQuota) AS All_Values  
@@ -101,7 +102,7 @@ Distinct_Values   All_Values
 ### <a name="c-using-var-with-over"></a>C. OVER와 함께 VAR 사용하기  
  다음 예에서는 한 해의 각 분기에 대한 판매 할당량 값의 통계적 분산을 반환합니다. OVER 절에서 ORDER BY는 통계적 분산과 SELECT 문의 ORDER BY를 결과 집합으로 정렬합니다.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT CalendarYear AS Year, CalendarQuarter AS Quarter, SalesAmountQuota AS SalesQuota,  

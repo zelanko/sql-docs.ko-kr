@@ -1,4 +1,5 @@
 ---
+description: 보안 함수(Transact-SQL)
 title: 보안 함수(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 7773a87d-2f1b-4951-a225-baf159a7291b
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 6a97e7cde856f9f1cf6f7892a9f6cac9c03e338a
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: daed4bd7a6f8d64fd6e78e77a95693e06226cba3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87248495"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88363159"
 ---
 # <a name="security-functions-transact-sql"></a>보안 함수(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,7 +52,7 @@ ms.locfileid: "87248495"
         [CURRENT_USER &#40;Transact-SQL&#41;](../../t-sql/functions/current-user-transact-sql.md)
     :::column-end:::
     :::column:::
-        [SCHEMA_ID &#40;Transact-SQL&#41;](../../t-sql/functions/schema-id-transact-sql.md)
+        [SCHEMA_ID&#40;Transact-SQL&#41;](../../t-sql/functions/schema-id-transact-sql.md)
     :::column-end:::
 :::row-end:::
 :::row:::
@@ -64,7 +65,7 @@ ms.locfileid: "87248495"
 :::row-end:::
 :::row:::
     :::column:::
-        [sys.fn_builtin_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)
+        [sys.fn_builtin_permissions&#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)
     :::column-end:::
     :::column:::
         [SESSION_USER &#40;Transact-SQL&#41;](../../t-sql/functions/session-user-transact-sql.md)
@@ -99,7 +100,7 @@ ms.locfileid: "87248495"
         [IS_MEMBER&#40;Transact-SQL&#41;](../../t-sql/functions/is-member-transact-sql.md)
     :::column-end:::
     :::column:::
-        [SYSTEM_USER&#40;Transact-SQL&#41;](../../t-sql/functions/system-user-transact-sql.md)
+        [SYSTEM_USER &#40;Transact-SQL&#41;](../../t-sql/functions/system-user-transact-sql.md)
     :::column-end:::
 :::row-end:::
 :::row:::
@@ -123,7 +124,7 @@ ms.locfileid: "87248495"
         [ORIGINAL_LOGIN &#40;Transact-SQL&#41;](../../t-sql/functions/original-login-transact-sql.md)
     :::column-end:::
     :::column:::
-        [USER_NAME&#40;Transact-SQL&#41;](../../t-sql/functions/user-name-transact-sql.md)
+        [USER_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/user-name-transact-sql.md)
     :::column-end:::
 :::row-end:::
 :::row:::
@@ -138,7 +139,7 @@ ms.locfileid: "87248495"
   
  Windows 그룹의 구성원 자격에 대한 자세한 내용은 [xp_logininfo &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/xp-logininfo-transact-sql.md) 및 [xp_enumgroups &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/xp-enumgroups-transact-sql.md)를 참조하세요.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [Security Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [암호화 함수&#40;Transact-SQL&#41;](../../t-sql/functions/cryptographic-functions-transact-sql.md)   
  [기본 제공 함수s&#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   

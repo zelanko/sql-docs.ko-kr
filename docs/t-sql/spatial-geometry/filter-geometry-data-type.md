@@ -1,4 +1,5 @@
 ---
+description: Filter(geometry 데이터 형식)
 title: Filter(geometry 데이터 형식) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 3d629a39-157e-4159-a3ca-a3c2e0ed4160
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 5cbfa37a468fcc600b4092340d9f58365954294a
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 11092f892c9e6e756849f368a44db3ec7f3d0a61
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86556031"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88359259"
 ---
 # <a name="filter-geometry-data-type"></a>Filter(geometry 데이터 형식)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -55,7 +56,7 @@ ms.locfileid: "86556031"
 ## <a name="remarks"></a>설명  
  이 메서드는 비결정적이고 정확하지 않습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `Filter()`를 사용하여 두 `geometry` 인스턴스가 서로 교차하는지 확인합니다.  
   
 ```  
@@ -76,7 +77,7 @@ FROM sample
 WHERE g.Filter(geometry::Parse('POLYGON((-1 -1, 1 -1, 1 1, -1 1, -1 -1))')) = 1;  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [Geometry 인스턴스의 확장 메서드](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)   
  [STIntersects&#40;geometry 데이터 형식&#41;](../../t-sql/spatial-geometry/stintersects-geometry-data-type.md)  
   

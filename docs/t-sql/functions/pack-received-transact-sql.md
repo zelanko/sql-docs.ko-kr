@@ -1,4 +1,5 @@
 ---
+description: '&#x40;&#x40;PACK_RECEIVED (Transact-SQL)'
 title: '@@PACK_RECEIVED(Transact-SQL) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 5c0b3d36-bfad-4f0b-abb8-e8f6391b32cd
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 235308a339c1e1e668a2243acfadefeb1323480f
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 3fea7af807dee5ff6307817992fe2f034ca00e78
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110360"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88363489"
 ---
 # <a name="x40x40pack_received-transact-sql"></a>&#x40;&#x40;PACK_RECEIVED (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,7 +48,7 @@ ms.locfileid: "87110360"
 ## <a name="remarks"></a>설명  
  보낸 패킷과 받은 패킷을 포함하여 여러 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 통계가 들어 있는 보고서를 표시하려면 **sp_monitor**를 실행합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `@@PACK_RECEIVED`의 사용법을 보여 줍니다.  
   
 ```  
@@ -62,7 +63,7 @@ Packets Received
 128  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [@@PACK_SENT](../../t-sql/functions/pack-sent-transact-sql.md)   
  [sp_monitor](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md)   
  [시스템 통계 함수](../../t-sql/functions/system-statistical-functions-transact-sql.md)  

@@ -1,4 +1,5 @@
 ---
+description: MIN(Transact-SQL)
 title: MIN(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2017
@@ -20,12 +21,12 @@ ms.assetid: 56cf6ec5-34f5-47e3-a402-7129039d4429
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0a22e8ff95677c51faeec59b19e0c6321abb9e77
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 0223be182fc7e29466f0a8a676cea6dc94eb915b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112915"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88364099"
 ---
 # <a name="min-transact-sql"></a>MIN(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -72,7 +73,7 @@ MIN ( [ ALL ] expression ) OVER ( [ <partition_by_clause> ] [ <order_by_clause> 
   
  MIN은 OVER 및 ORDER BY 절 없이 사용되는 경우 결정적 함수이고, OVER 및 ORDER BY 절과 함께 지정되는 경우 비결정적 함수입니다. 자세한 내용은 [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)을 참조하세요.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-simple-example"></a>A. 간단한 예  
  다음 예에서는 가장 낮은(최소) 세율이 반환됩니다. 이 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스를 사용합니다.  
@@ -94,7 +95,7 @@ GO
  ```  
   
 ### <a name="b-using-the-over-clause"></a>B. OVER 절 사용  
- 다음 예에서는 OVER 절과 함께 MIN, MAX, AVG 및 COUNT 함수를 사용하여 `HumanResources.Department` 데이터베이스의 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 테이블에서 각 부서에 대한 집계 값을 제공합니다.  
+ 다음 예에서는 OVER 절과 함께 MIN, MAX, AVG 및 COUNT 함수를 사용하여 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 `HumanResources.Department` 테이블에서 각 부서에 대한 집계 값을 제공합니다.  
   
 ```  
 SELECT DISTINCT Name  

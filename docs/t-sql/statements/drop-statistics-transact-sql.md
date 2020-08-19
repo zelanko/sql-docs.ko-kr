@@ -1,4 +1,5 @@
 ---
+description: DROP STATISTICS(Transact-SQL)
 title: DROP STATISTICS(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/22/2016
@@ -24,12 +25,12 @@ ms.assetid: 222806b7-4e45-445b-8cd0-bd5461f3ca4a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d10b55c020bcd037f82eb841fba549c17a707992
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 0da570526f14e6055883ce93838c2f2acfa68eac
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483974"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88358859"
 ---
 # <a name="drop-statistics-transact-sql"></a>DROP STATISTICS(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -72,12 +73,12 @@ DROP STATISTICS [ schema_name . ] table_name.statistics_name
 ## <a name="permissions"></a>사용 권한  
  테이블이나 뷰에 대한 ALTER 권한이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-dropping-statistics-from-a-table"></a>A. 테이블에서 통계 삭제  
  다음 예에서는 두 테이블의 통계 그룹(컬렉션)을 삭제하는 방법을 보여 줍니다. `VendorCredit` 테이블의 `Vendor` 통계 그룹(컬렉션)과 `CustomerTotal` 테이블의 `SalesOrderHeader` 통계(컬렉션)가 삭제됩니다.  
   
-```  
+```sql  
 -- Create the statistics groups.  
 USE AdventureWorks2012;  
 GO  
@@ -89,7 +90,6 @@ CREATE STATISTICS CustomerTotal
     WITH FULLSCAN;  
 GO  
 DROP STATISTICS Purchasing.Vendor.VendorCredit, Sales.SalesOrderHeader.CustomerTotal;  
-  
 ```  
   
 ## <a name="examples-sssdwfull-and-sspdw"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
@@ -97,10 +97,9 @@ DROP STATISTICS Purchasing.Vendor.VendorCredit, Sales.SalesOrderHeader.CustomerT
 ### <a name="b-dropping-statistics-from-a-table"></a>B. 테이블에서 통계 삭제  
  다음 예에서는 `CustomerStats1` 테이블에서 통계 `Customer`를 삭제합니다.  
   
-```  
+```sql  
 DROP STATISTICS Customer.CustomerStats1;  
 DROP STATISTICS dbo.Customer.CustomerStats1;  
-  
 ```  
   
 ## <a name="see-also"></a>참고 항목  

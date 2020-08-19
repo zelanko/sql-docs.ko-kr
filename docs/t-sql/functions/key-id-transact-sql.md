@@ -1,4 +1,5 @@
 ---
+description: KEY_ID(Transact-SQL)
 title: KEY_ID(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: d7309542-dbbe-41dc-b42e-5d9a1c8b4838
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: a20c9f8e3df230c2c7799fcbed740385fc324db0
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 0570217612782af00b29f307ee9dd2dacc34ed46
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113394"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88364129"
 ---
 # <a name="key_id-transact-sql"></a>KEY_ID(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -56,7 +57,7 @@ Key_ID ( 'Key_Name' )
 ## <a name="permissions"></a>사용 권한  
  임시 키는 생성된 세션에서만 사용할 수 있으므로 액세스 권한이 필요 없습니다. 임시 키가 아닌 키에 액세스하려면 호출자는 이 키에 대한 사용 권한이 필요하며 VIEW 권한이 거부된 경험이 없어야 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-returning-the-id-of-a-symmetric-key"></a>A. 대칭 키의 ID 반환  
  다음은 `ABerglundKey1`이라는 키의 ID를 반환하는 예입니다.  
@@ -72,7 +73,7 @@ SELECT KEY_ID('ABerglundKey1');
 SELECT KEY_ID('#ABerglundKey2');  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [KEY_GUID &#40;Transact-SQL&#41;](../../t-sql/functions/key-guid-transact-sql.md)   
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)   
  [sys.symmetric_keys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)   

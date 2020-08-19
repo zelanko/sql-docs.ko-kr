@@ -1,4 +1,5 @@
 ---
+description: BufferWithCurves(geography 데이터 형식)
 title: BufferWithCurves(geography 데이터 형식) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/11/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: abf0a11c-c99c-4faa-bf80-3ae8e04d7bfb
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 614e099ef075ac4bb4ce5ad4755eded9860c6b7b
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 4f4c5943dd69d651a9038e5e8e27798115911a9c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555508"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88360469"
 ---
 # <a name="bufferwithcurves-geography-data-type"></a>BufferWithCurves(geography 데이터 형식)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -71,7 +72,7 @@ ms.locfileid: "86555508"
   
  **string** 매개 변수가 메서드에 전달되면 **float**로 변환되거나 `ArgumentException`가 발생합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-calling-bufferwithcurves-with-a-parameter-value--0-on-one-dimensional-geography-instance"></a>A. 1차원 geography 인스턴스에서 매개 변수 값 < 0인 BufferWithCurves() 호출  
  다음 예에서는 빈 `GeometryCollection` 인스턴스를 반환합니다.  
@@ -141,7 +142,7 @@ ms.locfileid: "86555508"
   
  위의 두 예에서는 문자열 리터럴이 `BufferWithCurves()` 메서드에 전달됩니다. 첫 번째 예는 문자열 리터럴을 숫자 값으로 변환할 수 있으므로 정상적으로 작동하지만, 두 번째 예에서는 `ArgumentException`이 발생합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [지리 인스턴스의 확장 메서드](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
  [BufferWithCurves &#40;geometry 데이터 형식&#41;](../../t-sql/spatial-geometry/bufferwithcurves-geometry-data-type.md)  
   

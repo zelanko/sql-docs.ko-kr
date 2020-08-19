@@ -1,4 +1,5 @@
 ---
+description: ORIGINAL_LOGIN(Transact-SQL)
 title: ORIGINAL_LOGIN(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: ddfb0991-cde3-4b97-a5b7-ee450133f160
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 04a86234b478ccc27011d7549f3610a031451cf9
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: f2df0bdf310b0096d1bad89d6815ed4dd1aa65bb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110376"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88363819"
 ---
 # <a name="original_login-transact-sql"></a>ORIGINAL_LOGIN(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -51,7 +52,7 @@ ORIGINAL_LOGIN( )
  이 함수는 원래 연결 컨텍스트의 ID를 감사하는 데 유용할 수 있습니다. [SESSION_USER](../../t-sql/functions/session-user-transact-sql.md) 및 [CURRENT_USER](../../t-sql/functions/current-user-transact-sql.md)와 같은 함수가 현재 실행 중인 컨텍스트를 반환하는 반면에 ORIGINAL_LOGIN은 해당 세션에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 해당 인스턴스에 최초로 연결한 로그인의 ID를 반환합니다.  
  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 현재 세션의 실행 컨텍스트를 문의 호출자에서 `login1`로 전환합니다. `SUSER_SNAME` 및 `ORIGINAL_LOGIN` 함수를 사용하여 현재 세션 사용자(컨텍스트가 전환되는 대상 사용자)와 원래 로그인 계정을 반환할 수 있습니다. 
  
   >[!NOTE]
@@ -82,7 +83,7 @@ DROP USER user1;
 GO  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [EXECUTE AS&#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-transact-sql.md)   
  [REVERT &#40;Transact-SQL&#41;](../../t-sql/statements/revert-transact-sql.md)  
   

@@ -1,4 +1,5 @@
 ---
+description: BEGIN TRANSACTION(Transact-SQL)
 title: BEGIN TRANSACTION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -30,12 +31,12 @@ ms.assetid: c6258df4-11f1-416a-816b-54f98c11145e
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 338f096584e6f48b2f70fdd5e37402e275f1e725
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 717398446aaaa7e6283c6f967bda53bc6e31b1cc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394631"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88361469"
 ---
 # <a name="begin-transaction-transact-sql"></a>BEGIN TRANSACTION(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -70,7 +71,7 @@ BEGIN { TRAN | TRANSACTION }
  *transaction_name*  
  **적용 대상:** SQL Server(2008부터), Azure SQL Database
  
- 트랜잭션에 할당된 이름입니다. *transaction_name*은 식별자 규칙을 따라야 하지만 32자보다 긴 식별자는 허용되지 않습니다. 중첩된 BEGIN...COMMIT 또는 BEGIN...ROLLBACK 문의 가장 바깥쪽 쌍에서만 트랜잭션 이름을 사용합니다. *인스턴스에서 대/소문자를 구분하지 않는 경우에도*transaction_name[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]은 항상 대/소문자를 구분합니다.  
+ 트랜잭션에 할당된 이름입니다. *transaction_name*은 식별자 규칙을 따라야 하지만 32자보다 긴 식별자는 허용되지 않습니다. 중첩된 BEGIN...COMMIT 또는 BEGIN...ROLLBACK 문의 가장 바깥쪽 쌍에서만 트랜잭션 이름을 사용합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 대/소문자를 구분하지 않는 경우에도 *transaction_name*은 항상 대/소문자를 구분합니다.  
   
  @*tran_name_variable*  
  **적용 대상:** SQL Server(2008부터), Azure SQL Database
@@ -144,7 +145,7 @@ COMMIT TRAN T1;
 ## <a name="permissions"></a>사용 권한  
  public 역할의 멤버 자격이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-using-an-explicit-transaction"></a>A. 명시적 트랜잭션 사용
 **적용 대상:** SQL Server(2008 이상), Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse

@@ -1,4 +1,5 @@
 ---
+description: OPEN SYMMETRIC KEY(Transact-SQL)
 title: OPEN SYMMETRIC KEY(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: ff019a7c-c373-46c7-ac43-ffb7e2ee60b3
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0855dd1c7e57827d99bdeaa78813fa54b75e2fb8
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: cdcee07d25c05ca8571071dfe8f98b00c9259f9c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484516"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88357859"
 ---
 # <a name="open-symmetric-key-transact-sql"></a>OPEN SYMMETRIC KEY(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -89,7 +90,7 @@ OPEN SYMMETRIC KEY Key_name DECRYPTION BY <decryption_mechanism>
   
 -   DECRYPTION BY PASSWORD: 대칭 키를 암호화하는 데 사용된 암호 중 하나를 알고 있어야 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-opening-a-symmetric-key-by-using-a-certificate"></a>A. 인증서를 사용하여 대칭 키 열기  
  다음 예에서는 `SymKeyMarketing3` 대칭 키를 열고 `MarketingCert9` 인증서의 프라이빗 키를 사용하여 해독합니다.  
@@ -115,7 +116,7 @@ OPEN SYMMETRIC KEY MarketingKey11
 GO   
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)   
  [ALTER SYMMETRIC KEY&#40;Transact-SQL&#41;](../../t-sql/statements/alter-symmetric-key-transact-sql.md)   
  [CLOSE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/close-symmetric-key-transact-sql.md)   
