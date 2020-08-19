@@ -1,4 +1,5 @@
 ---
+description: 결과 자세히 보기 대화 상자
 title: 결과 자세히 보기 대화 상자 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,16 +14,16 @@ f1_keywords:
 ms.assetid: 366f0ff8-722a-40a9-934f-854147e4933d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5b9681bc22ea07ed3bed1d218ba752c2d4d6a666
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 38102297ee7ac0a29bbe37e83d1bfe834d9faaa4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716848"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88380739"
 ---
 # <a name="results-detailed-view-dialog-box"></a>결과 자세히 보기 대화 상자
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  **정책 실행** 대화 상자를 사용하여 정책을 실행하고 **실행**을 클릭하면 정책 평가 결과가 이 대화 상자에 표시됩니다. 이 대화 상자는 읽기 전용이며 속성 식에서 실패할 수 있는 부분을 이해하는 데 도움이 됩니다.  
+  **정책 평가** 대화 상자를 사용하여 정책을 실행하고 **평가**를 클릭하면 정책 평가 결과가 이 대화 상자에 표시됩니다. 이 대화 상자는 읽기 전용이며 속성 식에서 실패할 수 있는 부분을 이해하는 데 도움이 됩니다.  
   
 ## <a name="options"></a>옵션  
  **AndOr**  
@@ -49,7 +50,7 @@ ms.locfileid: "85716848"
  **추가 도움말**  
  이 정책과 관련된 웹 페이지를 열려면 하이퍼링크를 클릭합니다. 추가 도움말 하이퍼링크는 정책이 만들어질 때 구성되지만 비어 있거나 사용하지 못할 수 있습니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [정책 관리 노드&#40;개체 탐색기&#41;](../../relational-databases/policy-based-management/policy-management-node-object-explorer.md)   
  [정책 기반 관리를 사용하여 서버 관리](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
   

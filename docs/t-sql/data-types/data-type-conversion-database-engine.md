@@ -1,4 +1,5 @@
 ---
+description: 데이터 형식 변환(데이터베이스 엔진)
 title: 데이터 형식 변환(데이터베이스 엔진) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/23/2017
@@ -21,12 +22,12 @@ ms.assetid: ffacf45e-a488-48d0-9bb0-dcc7fd365299
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 656f76bfb0b015742824b02e8d7f2f09c8bfe098
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: e778bdf4adc24b95d5ffa1d8eb438222117c07c3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008103"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88368559"
 ---
 # <a name="data-type-conversion-database-engine"></a>데이터 형식 변환(데이터베이스 엔진)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -109,11 +110,11 @@ SELECT @notastring + '1'
  - [decimal 및 numeric&#40;Transact-SQL&#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)  
  - [sql_variant&#40;Transact-SQL&#41;](../../t-sql/data-types/sql-variant-transact-sql.md)  
  - [date&#40;Transact-SQL&#41;](../../t-sql/data-types/date-transact-sql.md)  
- - [float 및 real&#40;Transact-SQL&#41;](../../t-sql/data-types/float-and-real-transact-sql.md)  
+ - [float 및 real &#40;Transact-SQL&#41;](../../t-sql/data-types/float-and-real-transact-sql.md)  
  - [time &#40;Transact-SQL&#41;](../../t-sql/data-types/time-transact-sql.md)  
  - [datetime &#40;Transact-SQL&#41;](../../t-sql/data-types/datetime-transact-sql.md)  
  - [int, bigint, smallint 및 tinyint &#40;Transact-SQL&#41;](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)  
- - [uniqueidentifier &#40;Transact-SQL&#41;](../../t-sql/data-types/uniqueidentifier-transact-sql.md)  
+ - [uniqueidentifier&#40;Transact-SQL&#41;](../../t-sql/data-types/uniqueidentifier-transact-sql.md)  
   
 ###  <a name="converting-data-types-by-using-ole-automation-stored-procedures"></a>OLE Automation 저장 프로시저를 사용하여 데이터 형식 변환  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 데이터 형식을 사용하고 OLE Automation은 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 데이터 형식을 사용하므로 OLE Automation 저장 프로시저는 이들 간에 전달되는 데이터를 변환해야 합니다.
@@ -129,10 +130,10 @@ SELECT @notastring + '1'
 |**int**|**Long**|  
 |**smallint**|**정수**|  
 |**tinyint**|**Byte**|  
-|**float**|**Double**|  
-|**real**|**단일**|  
+|**float**|**double**|  
+|**real**|**Single**|  
 |**money**, **smallmoney**|**통화**|  
-|**datetime**, **smalldatetime**|**Date**|  
+|**datetime**, **smalldatetime**|**날짜**|  
 |NULL로 설정된 모든 것|**Variant**가 null로 설정되었습니다|  
   
 단일 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 값은 **binary**, **varbinary** 및 **이미지** 값을 제외하고 모두 단일 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 값으로 변환됩니다. 이러한 값은 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]의 1차원 **Byte()** 배열로 변환됩니다. 이 배열에는 **Byte(** 0에서 _length_ 1까지 **)** 의 범위가 포함됩니다. 여기서 *length*는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **binary**, **varbinary** 또는 **image** 값의 바이트 수입니다.
@@ -144,7 +145,7 @@ SELECT @notastring + '1'
 |**Long**, **Integer**, **Byte**, **Boolean**, **Object**|**int**|  
 |**Double**, **Single**|**float**|  
 |**통화**|**money**|  
-|**Date**|**datetime**|  
+|**날짜**|**datetime**|  
 |4000자 이하의 **문자열**|**varchar**/**nvarchar**|  
 |4000자를 초과하는 **문자열**|**text**/**ntext**|  
 |8000바이트 이하의 1차원 **Byte()** 배열|**varbinary**|  

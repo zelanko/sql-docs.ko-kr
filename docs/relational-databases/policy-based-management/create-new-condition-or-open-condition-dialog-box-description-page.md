@@ -1,4 +1,5 @@
 ---
+description: 새 조건 만들기 또는 조건 열기 대화 상자, 설명 페이지
 title: 새 조건 만들기 또는 조건 열기 대화 상자, 설명 페이지 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ f1_keywords:
 ms.assetid: 2ef0a556-9566-4af8-849e-ab038b9279cc
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 11868bd313afa40e371cf37a74214b627f5548ea
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 49bd9755e1ad9725b06a3cc891f192ff5d1d86d0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85749495"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88380859"
 ---
 # <a name="create-new-condition-or-open-condition-dialog-box-description-page"></a>새 조건 만들기 또는 조건 열기 대화 상자, 설명 페이지
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +41,7 @@ ms.locfileid: "85749495"
  **수정한 사람**  
  조건을 가장 최근에 변경한 사람의 로그인 정보입니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [정책 기반 관리를 사용하여 서버 관리](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
   
   

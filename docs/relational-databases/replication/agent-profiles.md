@@ -1,4 +1,5 @@
 ---
+description: 에이전트 프로필
 title: 에이전트 프로필 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/01/2017
@@ -15,12 +16,12 @@ ms.assetid: 0422e99c-e688-419b-bb4c-c7bebeef1d8d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: e90b24ea20076a8af4622c144358e50e7b998ad1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 71c77753c578b825ca04ff26fbe172f9a990db16
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85739116"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88380439"
 ---
 # <a name="agent-profiles"></a>에이전트 프로필
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -36,7 +37,7 @@ ms.locfileid: "85739116"
  **이름**  
  프로필의 이름입니다.  
   
- **형식**  
+ **유형**  
  프로필 유형: **사용자** (사용자 정의 프로필) 또는 **시스템** (미리 정의된 프로필)입니다.  
   
  **속성 (...)**  
