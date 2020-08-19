@@ -1,4 +1,5 @@
 ---
+description: SSMA 콘솔의 명령줄 옵션(OracleToSQL)
 title: SSMA 콘솔의 명령줄 옵션 (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -15,12 +16,12 @@ ms.assetid: bf4a9313-349e-4ebf-9c89-9f5bb515f9ff
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 6bddaddeda73133b83d6a7669c98fd89af96cd2c
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 1a950ff2e2870519ae7063bfc0df615fd971187b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934992"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468842"
 ---
 # <a name="command-line-options-in-ssma-console-oracletosql"></a>SSMA 콘솔의 명령줄 옵션(OracleToSQL)
 Microsoft에서는 SSMA 활동을 실행 하 고 제어 하는 강력한 set 명령줄 옵션을 제공 합니다. 결과 섹션에서 자세히 설명 합니다.  

@@ -1,4 +1,5 @@
 ---
+description: DrillupMember(MDX)
 title: DrillupMember (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 5dfdec16d20173639cc92a80b1ca546f44b70334
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9db34a9117bf7405511b86e8e989d2e002cb12d2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68049194"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494946"
 ---
 # <a name="drillupmember-mdx"></a>DrillupMember(MDX)
 
@@ -40,7 +41,7 @@ DrillupMember(Set_Expression1, Set_Expression2)
  첫 번째 집합에는 멤버 대신 튜플이 포함될 수 있습니다. 튜플 드릴다운은 멤버 대신 튜플 집합을 반환하는 OLE DB의 확장 기능입니다.  
   
 > [!IMPORTANT]  
->  바로 다음에 자식 또는 하위 항목이 오는 멤버만 드릴업됩니다. 집합의 멤버 순서는 함수 드릴 다운\* 및 Drillup\* 패밀리 모두에 대해 중요 합니다. **Hierarchize** 함수를 사용 하 여 첫 번째 집합의 멤버 순서를 적절 하 게 조정 하는 것이 좋습니다.  
+>  바로 다음에 자식 또는 하위 항목이 오는 멤버만 드릴업됩니다. 집합의 멤버 순서는 함수 드릴 다운 \* 및 Drillup 패밀리 모두에 대해 중요 합니다 \* . **Hierarchize** 함수를 사용 하 여 첫 번째 집합의 멤버 순서를 적절 하 게 조정 하는 것이 좋습니다.  
   
 ## <a name="example"></a>예제  
  다음 세 예제는 두 번째 집합을 제외하고는 동일합니다. 첫 번째 예제에서 두 번째 집합은 United States입니다. 따라서 Colorado는 결과 집합에서 제외되었습니다. Colorado는 United States의 하위 항목입니다.  

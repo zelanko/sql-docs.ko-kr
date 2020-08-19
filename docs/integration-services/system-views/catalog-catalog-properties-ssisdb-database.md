@@ -1,4 +1,5 @@
 ---
+description: catalog.catalog_properties(SSISDB 데이터베이스)
 title: catalog.catalog_properties(SSISDB 데이터베이스) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/11/2018
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: e604a382-95c8-4764-b268-742eb5c6d4cf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f0932ef80cd6bfba4b752c130e4f69155dc316c9
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 7aa744bd7dd3d0330dc3e996b2af90d500be9d55
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912696"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495320"
 ---
 # <a name="catalogcatalog_properties-ssisdb-database"></a>catalog.catalog_properties(SSISDB 데이터베이스)
 

@@ -1,4 +1,5 @@
 ---
+description: 스크립트 디버깅
 title: 스크립트 디버깅 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fddf57d8-8607-4f88-85a0-1b683087b491
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0ef0288f71cba036e9118b9d9d80f2370d0b1221
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f0101138e953559103a4d75b0b4a3da34efb1a48
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86900194"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495185"
 ---
 # <a name="debugging-script"></a>스크립트 디버깅
 

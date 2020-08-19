@@ -1,5 +1,6 @@
 ---
-title: ROLLBACK WORK(Transact-SQL) | Microsoft Docs
+description: ROLLBACK WORK(Transact-SQL)
+title: ROLLBACK WORK(Transact-SQL)
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,14 +21,14 @@ helpviewer_keywords:
 - rolling back transactions, ROLLBACK WORK
 - savepoints [SQL Server]
 ms.assetid: 2071dbd3-53d5-4510-be8d-26e80f2553b4
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: 31a95060be1802cbbef306d039f1f2da61a972a2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 38388c9d697bc3f7d2fddd8d6ff162ff7b306f08
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85706195"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459312"
 ---
 # <a name="rollback-work-transact-sql"></a>ROLLBACK WORK(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,11 +41,12 @@ ms.locfileid: "85706195"
 ## <a name="syntax"></a>구문  
   
 ```syntaxsql
-  
 ROLLBACK [ WORK ]  
 [ ; ]  
 ```  
-  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="remarks"></a>설명  
  ROLLBACK TRANSACTION이 사용자 정의 트랜잭션 이름을 허용하는 것을 제외하면 이 문은 ROLLBACK TRANSACTION과 동일한 기능을 수행합니다. ROLLBACK 구문은 선택적으로 지정할 수 있는 WORK 키워드와 함께 ISO와 호환됩니다.  
   

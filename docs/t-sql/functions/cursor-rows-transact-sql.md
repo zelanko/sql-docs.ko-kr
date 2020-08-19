@@ -1,4 +1,5 @@
 ---
+description: '&#x40;&#x40;CURSOR_ROWS(Transact SQL)'
 title: '@@CURSOR_ROWS(Transact-SQL) | Microsoft Docs'
 ms.custom: ''
 ms.date: 08/18/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 31bd7a97-7f28-42a8-ba24-24d16d22973d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a35f2e2e75b29a28ed56fc7c5cdaa3e9c2244d6d
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: ea10c7ada51794a26fd08cf265bfa78953856abc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112074"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422807"
 ---
 # <a name="x40x40cursor_rows-transact-sql"></a>&#x40;&#x40;CURSOR_ROWS(Transact SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -47,7 +48,7 @@ ms.locfileid: "87112074"
   
 ## <a name="return-value"></a>Return Value  
   
-|반환 값|Description|  
+|반환 값|설명|  
 |---|---|
 |-*m*|커서가 비동기식으로 채워집니다. 반환되는 값(-*m*)은 현재 키 집합에 있는 행의 개수입니다.|  
 |-1|동적 커서입니다. 동적 커서는 모든 변경 사항을 반영하므로 커서가 한정하는 행의 수는 계속 변합니다. 커서가 반드시 한정된 모든 행을 검색하는 것은 아닙니다.|  
@@ -57,7 +58,7 @@ ms.locfileid: "87112074"
 ## <a name="remarks"></a>설명  
 `@@CURSOR_ROWS`는 마지막 커서가 비동기적으로 열린 경우 음수를 반환합니다. 키 집합-드라이버 또는 정적 커서는 sp_configure cursor threshold 값이 0보다 크고 커서 결과 집합에 있는 행의 수가 커서 임계값보다 크면 비동기식으로 열립니다.
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
 이 예에서는 먼저 커서를 선언한 후 `SELECT`를 사용하여 `@@CURSOR_ROWS`의 값을 표시합니다. 커서가 열리기 전에는 설정의 값이 `0`이며 커서가 열리면 커서 키 집합이 비동기식으로 채워졌음을 나타내는 값인 `-1`로 변경됩니다.
   
 ```sql

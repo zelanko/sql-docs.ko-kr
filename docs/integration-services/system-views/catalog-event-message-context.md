@@ -1,4 +1,5 @@
 ---
+description: catalog.event_message_context
 title: catalog.event_message_context | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 273a54f8-b107-4f36-9461-2b475644760d
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: efba3eecba580293397848a52bce40980f42987f
-ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
+ms.openlocfilehash: e8728d1ddbc8ae7643d0ee660266357d42125c89
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87472205"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495331"
 ---
 # <a name="catalogevent_message_context"></a>catalog.event_message_context 
 
@@ -41,11 +42,11 @@ ms.locfileid: "87472205"
 ## <a name="remarks"></a>설명  
  다음 표에서는 컨텍스트 유형을 나열합니다.  
   
-|컨텍스트 유형 값|유형 이름|Description|  
+|컨텍스트 유형 값|유형 이름|설명|  
 |-|-|-|  
 |10|Task|오류가 발생할 당시의 태스크 상태입니다.|  
 |20|파이프라인|파이프라인 구성 요소의 오류: 원본, 대상 또는 변환 구성 요소.|  
-|30|시퀀스|시퀀스의 상태입니다.|  
+|30|순서|시퀀스의 상태입니다.|  
 |40|For 루프|For Loop의 상태입니다.|  
 |50|Foreach 루프|Foreach Loop의 상태입니다.|  
 |60|패키지|오류가 발생할 당시의 패키지 상태입니다.|  

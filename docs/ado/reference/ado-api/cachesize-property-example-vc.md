@@ -1,4 +1,5 @@
 ---
+description: CacheSize 속성 예제(VC++)
 title: CacheSize 속성 예제 (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e0e7b7ba-3943-43cb-a2cd-0e4667187973
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 68cea9dc78bbb2fa895dc8fb697404e462c1bc07
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 79cc1b0b69914e8f2a00c3e8cf4557ac89c54c6d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762840"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451075"
 ---
 # <a name="cachesize-property-example-vc"></a>CacheSize 속성 예제(VC++)
 이 예에서는 [CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md) 속성을 사용 하 여 30 레코드 캐시 없이 수행 된 작업의 성능 차이를 표시 합니다.  

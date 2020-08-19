@@ -1,4 +1,5 @@
 ---
+description: 진단
 title: 진단 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 450abd88-90a1-4fbc-b417-8efbdd8e1dea
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a09f46d3fd6aa2f9b9c7310af6d3ddc90f78389f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 918dce41ca1c7e7b43c1a6d25de2c75a83312715
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305154"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476715"
 ---
 # <a name="diagnostics"></a>진단
 ODBC의 함수는 두 가지 방법으로 진단 정보를 반환 합니다. 반환 코드는 함수에 대 한 자세한 정보를 제공 하는 반면 진단 레코드는 함수의 전체 성공 또는 실패를 나타냅니다. 함수가 성공 하는 경우에도 하나 이상의 진단 레코드 (헤더 레코드)가 반환 됩니다.  

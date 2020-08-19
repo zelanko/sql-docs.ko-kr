@@ -1,4 +1,5 @@
 ---
+description: MDX 예약어
 title: MDX 예약어 | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: d2b47a6860d73e72be54dbe9caa1f18ab95c6cff
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: b5405241a99c931c1f9e9354214f097645941efb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87362783"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429755"
 ---
 # <a name="mdx-reserved-words"></a>MDX 예약어
 
@@ -62,7 +63,7 @@ ms.locfileid: "87362783"
         COLUMN  
         COLUMNS  
         CORRELATION  
-        개수  
+        COUNT  
         COUSIN  
         COVARIANCE  
         COVARIANCEN  
@@ -144,13 +145,13 @@ ms.locfileid: "87362783"
         LINREGSLOPE  
         LINREGVARIANCE  
         LOOKUPCUBE  
-        최대  
+        MAX  
         MEASURE  
         MEDIAN  
         MEMBER  
         MEMBERS  
         MEMBERTOSTR  
-        최소  
+        MIN  
         MTD  
         NAME  
         NAMETOSET  
@@ -208,7 +209,7 @@ ms.locfileid: "87362783"
         STRTOVAL  
         STRTOVALUE  
         SUBSET  
-        합계  
+        SUM  
         TAIL  
         THIS  
         TOGGLEDRILLSTATE  

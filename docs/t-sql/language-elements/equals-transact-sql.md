@@ -1,4 +1,5 @@
 ---
+description: =(같음)(Transact-SQL)
 title: =(같음)(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/06/2016
@@ -21,12 +22,12 @@ ms.assetid: 18885245-5f55-4831-8f0b-7f2a3e82e246
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 140545235928e356d143aa2a5164c0b054adf0f9
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 6acac2a2a67974945c6e934994c7823fc3d75bde
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918984"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422517"
 ---
 # <a name="-equals-transact-sql"></a>=(같음)(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -62,7 +63,7 @@ expression = expression
  결과적으로 UNKNOWN이 되는 부울 식은 모두는 아니지만 대부분의 경우 비슷하게 FALSE로 동작합니다. 자세한 내용은 [NULL 및 UNKNOWN &#40;Transact-SQL&#41;](../../t-sql/language-elements/null-and-unknown-transact-sql.md) 및 [NOT &#40;Transact-SQL&#41;](../../t-sql/language-elements/not-transact-sql.md)을 참조하세요.  
   
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-using--in-a-simple-query"></a>A. 간단한 쿼리에서 = 사용  
  다음 예에서는 Equals 연산자(=)를 사용하여 `HumanResources.Department` 열의 값이 'Manufacturing' 단어와 같은 `GroupName` 테이블의 모든 행을 반환합니다.  

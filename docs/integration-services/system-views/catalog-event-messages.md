@@ -1,4 +1,5 @@
 ---
+description: catalog.event_messages
 title: catalog.event_messages | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: a31a654f-31e9-4da1-aabf-182b07848e36
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2e19ca7fac23979ecd691ed6cab45fa2cfec9564
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 29fcb7e924f444b44435b6c46dcdf76a88ebeec5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912634"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495266"
 ---
 # <a name="catalogevent_messages"></a>catalog.event_messages 
 
@@ -48,7 +49,7 @@ ms.locfileid: "86912634"
 ## <a name="remarks"></a>설명  
  이 뷰는 다음과 같은 메시지 원본 유형을 표시합니다.  
   
-|**message_source_type**|Description|  
+|**message_source_type**|설명|  
 |-------------------------------|-----------------|  
 |10|T-SQL 및 CLR 저장 프로시저와 같은 API 항목|  
 |20|패키지(ISServerExec.exe)를 실행하는 데 사용되는 외부 프로세스|  

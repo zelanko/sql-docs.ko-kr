@@ -1,4 +1,5 @@
 ---
+description: MDX 및 DAX의 VBA 함수
 title: MDX 및 DAX의 VBA 함수 | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 39a0db181f3b1d1a40af1a5fa27ba78366a9d2b3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 10658daae1321ac7e22af337ef946f5cfb6004cd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68135017"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429705"
 ---
 # <a name="vba-functions-in-mdx-and-dax"></a>MDX 및 DAX의 VBA 함수
 
@@ -25,7 +26,7 @@ ms.locfileid: "68135017"
 |함수 이름|지원됨|메모|  
 |-------------------|---------------|-----------|  
 |Abs|DAX, MDX||  
-|배열|지원되지 않음||  
+|Array|지원되지 않음||  
 |Asc|MDX만||  
 |AscW|MDX만||  
 |Atn|MDX만||  
@@ -51,7 +52,7 @@ ms.locfileid: "68135017"
 |CVar|MDX만||  
 |CVErr|지원되지 않음||  
 |Date|MDX만|**경고** DAX는 이름이 같은 다른 함수를 구현 합니다. 지정 된 인수에서 날짜 유형 값을 생성 하는 데 사용 되는 DATE (Year, Month, Day) 함수|  
-|DateAdd|MDX만|**경고** DAX는 이름이 같은 다른 함수를 구현 합니다. 지정 된 날짜\<를 지정 된 간격 만큼 이동 하\<는 데 사용 되는 DATEADD (dates>, <number_of_intervals>, interval>) 함수입니다.|  
+|DateAdd|MDX만|**경고** DAX는 이름이 같은 다른 함수를 구현 합니다. 지정 된 \<dates> \<interval> 날짜를 지정 된 간격 만큼 이동 하는 데 사용 되는 DATEADD (, <number_of_intervals>,) 함수|  
 |DateDiff|MDX만||  
 |DatePart|MDX만||  
 |DateSerial|MDX만||  
@@ -62,13 +63,13 @@ ms.locfileid: "68135017"
 |DoEvents|지원되지 않음||  
 |Environ|지원되지 않음||  
 |EOF|지원되지 않음||  
-|Error|지원되지 않음||  
+|오류|지원되지 않음||  
 |Exp|DAX, MDX||  
 |FileAttr|지원되지 않음||  
 |FileDateTime|지원되지 않음||  
 |FileLen|지원되지 않음||  
-|Assert|지원되지 않음|**경고** MDX는 이름이 같은 다른 함수를 구현 합니다. FILTER (Set_Expression, Logical_Expression) 함수는 지정 된 인수의 검색 조건에 따라 지정 된 집합을 필터링 한 결과 집합을 반환 합니다.<br /><br /> **경고** DAX는 이름이 같은 다른 함수를 구현 합니다. FILTER (\<table>,\<filter>) 함수는 지정 된 인수에서 다른 테이블이 나 식의 하위 집합을 나타내는 테이블을 반환 합니다.|  
-|Fix|MDX만||  
+|필터|지원되지 않음|**경고** MDX는 이름이 같은 다른 함수를 구현 합니다. FILTER (Set_Expression, Logical_Expression) 함수는 지정 된 인수의 검색 조건에 따라 지정 된 집합을 필터링 한 결과 집합을 반환 합니다.<br /><br /> **경고** DAX는 이름이 같은 다른 함수를 구현 합니다. FILTER ( \<table> , \<filter> ) 함수는 지정 된 인수에서 다른 테이블이 나 식의 하위 집합을 나타내는 테이블을 반환 합니다.|  
+|수정|MDX만||  
 |Format(Visual Basic for Applications)|DAX, MDX||  
 |FormatCurrency|지원되지 않음||  
 |FormatDateTime|지원되지 않음||  
@@ -81,7 +82,7 @@ ms.locfileid: "68135017"
 |GetObject|지원되지 않음||  
 |GetSetting|지원되지 않음||  
 |Hex|MDX만||  
-|Hour|DAX, MDX||  
+|시간|DAX, MDX||  
 |Iif|MDX만|**경고** DAX는 name: IF (logical_test, value_if_true, value_if_false) 함수를 사용 하 여 유사한 함수를 구현 합니다.|  
 |IMEStatus|지원되지 않음||  
 |입력|지원되지 않음||  
@@ -102,7 +103,7 @@ ms.locfileid: "68135017"
 |Join|지원되지 않음||  
 |LBound|지원되지 않음||  
 |LCase|MDX만||  
-|Left|DAX, MDX||  
+|왼쪽|DAX, MDX||  
 |Len|DAX, MDX||  
 |Loc|지원되지 않음||  
 |LOF|지원되지 않음||  
@@ -126,9 +127,9 @@ ms.locfileid: "68135017"
 |PV|MDX만||  
 |QBColor|MDX만||  
 |비용|MDX만||  
-|Replace|지원되지 않음||  
+|바꾸기|지원되지 않음||  
 |RGB|MDX만||  
-|Right|DAX, MDX||  
+|오른쪽|DAX, MDX||  
 |Rnd|MDX만||  
 |Round|DAX, MDX||  
 |RTrim|MDX만||  
@@ -136,7 +137,7 @@ ms.locfileid: "68135017"
 |Seek|지원되지 않음||  
 |Sgn|DAX, MDX||  
 |셸|지원되지 않음||  
-|Sin|MDX만||  
+|사인|MDX만||  
 |SLN|MDX만||  
 |Space|MDX만||  
 |Spc|지원되지 않음||  
@@ -152,7 +153,7 @@ ms.locfileid: "68135017"
 |탭|지원되지 않음||  
 |Tan|MDX만||  
 |시간|지원되지 않음||  
-|Timer|MDX만||  
+|타이머|MDX만||  
 |TimeSerial|MDX만||  
 |TimeValue|DAX, MDX||  
 |Trim|DAX, MDX||  

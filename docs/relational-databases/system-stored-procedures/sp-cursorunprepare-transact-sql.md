@@ -1,4 +1,5 @@
 ---
+description: sp_cursorunprepare(Transact-SQL)
 title: sp_cursorunprepare (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b46d4813-c4a9-4f9d-9979-2b5082ecf06a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8c7db4e004f3a350454e25ceefb6c195839e2f6f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0662e6f600e9627c3d3498144425f34917d6cfb0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85868424"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486142"
 ---
 # <a name="sp_cursorunprepare-transact-sql"></a>sp_cursorunprepare(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

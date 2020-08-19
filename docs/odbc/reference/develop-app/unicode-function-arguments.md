@@ -1,4 +1,5 @@
 ---
+description: 유니코드 함수 인수
 title: 유니코드 함수 인수 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: eafe8c7e-f6d2-44d7-99ee-cf2148a30f4f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 40ef9f63345572b5613942c1174ceeecadd146ee
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: d2d59cad60855c670f7c7e2b189ad3c97a3027b9
+ms.sourcegitcommit: 19ae05bc69edce1e3b3d621d7fdd45ea5f74969d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84529742"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88564041"
 ---
 # <a name="unicode-function-arguments"></a>유니코드 함수 인수
 ODBC 3.5 이상 드라이버 관리자는 해당 인수에서 문자 문자열 또는 SQLPOINTER에 대 한 포인터를 허용 하는 모든 함수의 ANSI 및 유니코드 버전을 모두 지원 합니다. 유니코드 함수는 매크로가 아니라 함수 ( *W*접두사 포함)로 구현 됩니다. *의 접미사*를 사용 하거나 사용 하지 않고 호출할 수 있는 ANSI 함수는 현재 ODBC API 함수와 동일 합니다.  
@@ -36,7 +37,7 @@ ODBC 3.5 이상 드라이버 관리자는 해당 인수에서 문자 문자열 �
 |**SQLColAttribute**|**SQLGetInfo**|  
 |**SQLColAttributes**|**SQLGetStmtAttr**|  
 |**SQLColumnPrivileges**|**SQLGetTypeInfo**|  
-|**SQLColumns**|**SQLNativeSQL**|  
+|**SQLColumns**|**SQLNativeSql**|  
 |**SQLConnect**|**SQLPrepare**|  
 |**SQLDataSources**|**SQLPrimaryKeys**|  
 |**SQLDescribeCol**|**SQLProcedureColumns**|  

@@ -1,4 +1,5 @@
 ---
+description: 바인딩 매개 변수 표식
 title: 바인딩 매개 변수 표식 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: fe88c1c2-4ee4-45e0-8500-b8c25c047815
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: be99bc884a8baa66f3d632ee4731985f0cc85732
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 259faf84e0388f74662471583657da1fd95bb007
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306394"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476855"
 ---
 # <a name="binding-parameter-markers"></a>바인딩 매개 변수 표식
 응용 프로그램은 **SQLBindParameter**를 호출 하 여 매개 변수를 바인딩합니다. **SQLBindParameter** 는 한 번에 하나의 매개 변수를 바인딩합니다. 응용 프로그램은 다음을 지정 합니다.  

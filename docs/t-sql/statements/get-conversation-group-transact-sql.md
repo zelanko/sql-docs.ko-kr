@@ -1,4 +1,5 @@
 ---
+description: GET CONVERSATION GROUP(Transact-SQL)
 title: GET CONVERSATION GROUP(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/26/2017
@@ -24,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 4da8a855-33c0-43b2-a49d-527487cb3b5c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 58d29c1979dc97b43dd6ccb82c5bad4c875995e6
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: c6dc77084c32b88d507cf8216cf901359268252f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484914"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88415759"
 ---
 # <a name="get-conversation-group-transact-sql"></a>GET CONVERSATION GROUP(Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -79,7 +80,7 @@ ms.locfileid: "86484914"
 ## <a name="remarks"></a>설명  
   
 > [!IMPORTANT]  
->  GET CONVERSATION GROUP 문이 일괄 처리 또는 저장 프로시저에서 첫 번째 문이 아닌 경우 이전 문은  **문 종결자인 세미콜론(** ;[!INCLUDE[tsql](../../includes/tsql-md.md)])으로 종결되어야 합니다.  
+>  GET CONVERSATION GROUP 문이 일괄 처리 또는 저장 프로시저에서 첫 번째 문이 아닌 경우 이전 문은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 종결자인 세미콜론(**;**)으로 종결되어야 합니다.  
   
  GET CONVERSATION GROUP 문에 지정된 큐를 사용할 수 없으면 [!INCLUDE[tsql](../../includes/tsql-md.md)] 오류가 발생하여 문이 실패합니다.  
   
@@ -100,7 +101,7 @@ ms.locfileid: "86484914"
 ## <a name="permissions"></a>사용 권한  
  큐에서 대화 그룹 식별자를 가져오려면 현재 사용자가 큐에 대한 RECEIVE 권한을 가져야 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-getting-a-conversation-group-waiting-indefinitely"></a>A. 무한 대기하여 대화 그룹 가져오기  
  다음 예에서는 `@conversation_group_id`를 `ExpenseQueue`에 있는 사용 가능한 다음 메시지의 대화 그룹 식별자로 설정합니다. 명령은 메시지를 사용할 수 있게 될 때까지 대기합니다.  

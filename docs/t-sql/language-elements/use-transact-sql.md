@@ -1,4 +1,5 @@
 ---
+description: USE(Transact-SQL)
 title: USE(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/28/2016
@@ -21,12 +22,12 @@ ms.assetid: c05acac8-c063-4770-8e36-d7f71d500b10
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7caad003adea93200121b052d4d47612a5c04cf6
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 9653304e80d78aad1e5fb787abf0221c5f4d46cd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916155"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422457"
 ---
 # <a name="use-transact-sql"></a>USE(Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -58,7 +59,7 @@ USE { database_name }
 ## <a name="permissions"></a>사용 권한  
  대상 데이터베이스에 대한 CONNECT 권한이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `AdventureWorks2012` 데이터베이스로 데이터베이스 컨텍스트를 변경합니다.  
   
 ```  

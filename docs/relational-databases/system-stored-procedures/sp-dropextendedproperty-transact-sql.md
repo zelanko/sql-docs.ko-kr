@@ -1,4 +1,5 @@
 ---
+description: sp_dropextendedproperty(Transact-SQL)
 title: sp_dropextendedproperty (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4851865a-86ca-4823-991a-182dd1934075
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 60f15f6917297a10c6fb3d988d5b497056c93aee
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2ca7e41849cbb55b16be6dcd50a19595e26a1ae0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85859869"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486087"
 ---
 # <a name="sp_dropextendedproperty-transact-sql"></a>sp_dropextendedproperty(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -89,7 +90,7 @@ sp_dropextendedproperty
   
  사용자는 자신이 소유하고 있거나 ALTER 또는 CONTROL 권한을 가지고 있는 개체에 대한 확장 속성을 삭제할 수 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-dropping-an-extended-property-on-a-column"></a>A. 열의 확장 속성 삭제  
  다음 예에서는 `caption` 스키마에 포함되어 있는 `id` 테이블의 `T1` 열에서 `dbo` 속성을 제거합니다.  
@@ -132,7 +133,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;저장 프로시저 데이터베이스 엔진](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;저장 프로시저 데이터베이스 엔진 ](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [fn_listextendedproperty &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-listextendedproperty-transact-sql.md)   
  [Transact-sql&#41;sp_addextendedproperty &#40;](../../relational-databases/system-stored-procedures/sp-addextendedproperty-transact-sql.md)   
  [Transact-sql&#41;sp_updateextendedproperty &#40;](../../relational-databases/system-stored-procedures/sp-updateextendedproperty-transact-sql.md)   

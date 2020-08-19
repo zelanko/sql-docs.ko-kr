@@ -1,4 +1,5 @@
 ---
+description: LinRegSlope(MDX)
 title: LinRegSlope (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 6d43d2ccc961e465c5430c525fd6178d74e29ca9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5443718e83084285983f3d22ff99d5931f82bad9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67905541"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429815"
 ---
 # <a name="linregslope-mdx"></a>LinRegSlope(MDX)
 

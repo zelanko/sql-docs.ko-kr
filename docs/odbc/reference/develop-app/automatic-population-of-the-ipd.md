@@ -1,4 +1,5 @@
 ---
+description: IPD의 자동 채우기
 title: IPD 자동 채우기 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1184a7d8-d557-4140-843b-6633ae6deacc
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1998ea1992ee7f14d87d01e348d955b017166088
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 73c0456f1c78ccc19f1ff55a1ab288baedae2e14
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81285073"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476885"
 ---
 # <a name="automatic-population-of-the-ipd"></a>IPD의 자동 채우기
 일부 드라이버는 매개 변수가 있는 쿼리를 준비한 후 IPD의 필드를 설정할 수 있습니다. 설명자 필드는 데이터 형식, 전체 자릿수, 소수 자릿수 및 기타 특성을 포함 하 여 매개 변수에 대 한 정보로 자동으로 채워집니다. 이는 **SQLDescribeParam**를 지 원하는 것과 같습니다. 응용 프로그램에서 알지 못하는 매개 변수를 사용 하 여 임시 쿼리를 수행 하는 경우와 같이이 정보는 응용 프로그램에서 다른 방법으로 검색할 수 없는 경우에 특히 유용할 수 있습니다.  

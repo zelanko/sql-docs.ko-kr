@@ -1,4 +1,5 @@
 ---
+description: LinRegR2(MDX)
 title: LinRegR2 (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 2e38df1a24b76ee40aae3a5ab3c28dd9bca2b310
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 748b332d7925313c5b5d8c1d3dfe868e3eb3e9cd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67905527"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429825"
 ---
 # <a name="linregr2-mdx"></a>LinRegR2(MDX)
 

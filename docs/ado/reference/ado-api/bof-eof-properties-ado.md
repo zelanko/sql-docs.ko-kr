@@ -1,4 +1,5 @@
 ---
+description: BOF, EOF 속성(ADO)
 title: BOF, EOF 속성 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 36c31ab2-f3b6-4281-89b6-db7e04e38fd2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9496a4e2115cb686764981e8a5fae3ecfe59401e
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: a10ef4731db0e469743d09d9e3b35463d03e7020
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82748739"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451134"
 ---
 # <a name="bof-eof-properties-ado"></a>BOF, EOF 속성(ADO)
 -   **BOF** 현재 레코드 위치가 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체의 첫 번째 레코드 앞에 있음을 나타냅니다.  
@@ -49,7 +50,7 @@ ms.locfileid: "82748739"
   
 ||MoveFirst<br /><br /> MoveLast|MovePrevious<br /><br /> Move < 0|0 이동|MoveNext<br /><br /> Move > 0|  
 |------|-----------------------------|---------------------------------|------------|-----------------------------|  
-|**BOF** = **True**, **EOF** = **False**|허용됨|Error|Error|허용됨|  
+|**BOF** = **True**, **EOF** = **False**|허용|Error|Error|허용|  
 |**BOF** = **False**, **EOF** = **True**|허용됨|허용됨|Error|Error|  
 |모두 **True**|Error|Error|Error|Error|  
 |모두 **False**|허용됨|허용됨|허용됨|허용됨|  

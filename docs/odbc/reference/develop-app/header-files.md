@@ -1,4 +1,5 @@
 ---
+description: 헤더 파일
 title: 헤더 파일 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: b4a03273-5e30-4d7b-826e-02f8f28ba078
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 62364d828e7b1f1ed8c70cae7ae1fc7dc3bc33fc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ec8eede80f88f10e0b1ca43696e75dddec121ffe
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300193"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476655"
 ---
 # <a name="header-files"></a>헤더 파일
 Sql .h 헤더 파일에는 핵심 ODBC 인터페이스 규칙 수준의 함수 및 기능에 대 한 프로토타입이 포함 되어 있습니다. Sqlext .h 헤더 파일에는 수준 1 및 수준 2 API 규칙 수준의 함수 및 기능에 대 한 프로토타입이 포함 되어 있습니다. Sqltypes 헤더 파일에는 SQL 데이터 형식에 대 한 형식 정의와 표시기가 포함 되어 있습니다.  

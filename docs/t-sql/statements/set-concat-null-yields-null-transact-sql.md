@@ -1,4 +1,5 @@
 ---
+description: SET CONCAT_NULL_YIELDS_NULL(Transact-SQL)
 title: SET CONCAT_NULL_YIELDS_NULL(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -23,12 +24,12 @@ ms.assetid: 3091b71c-6518-4eb4-88ab-acae49102bc5
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fb0bd39f63162511ba0541ecf4c218da2e18bc11
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: cdca657421c2508ed05a25302f85e4bba365891d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87392651"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88415239"
 ---
 # <a name="set-concat_null_yields_null-transact-sql"></a>SET CONCAT_NULL_YIELDS_NULL(Transact-SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
@@ -54,7 +55,9 @@ SET CONCAT_NULL_YIELDS_NULL { ON | OFF }
 SET CONCAT_NULL_YIELDS_NULL ON    
 ```  
   
-## <a name="remarks"></a>설명  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="remarks"></a>설명
  SET CONCAT_NULL_YIELDS_NULL 옵션이 ON일 경우 NULL 값을 문자열과 연결하면 결과가 NULL 값입니다. 예를 들어 `SELECT 'abc' + NULL`은 `NULL`를 생성합니다. SET CONCAT_NULL_YIELDS_NULL 옵션이 OFF일 경우, NULL 값을 문자열과 연결하면 그 결과가 문자열 자체(NULL 값은 빈 문자열로 처리됨)가 됩니다. 예를 들어 `SELECT 'abc' + NULL`은 `abc`를 생성합니다.  
   
  SET CONCAT_NULL_YIELDS_NULL이 지정되지 않은 경우 **CONCAT_NULL_YIELDS_NULL** 데이터베이스 옵션의 설정이 적용됩니다.  
@@ -76,7 +79,7 @@ IF ( (4096 & @@OPTIONS) = 4096 ) SET @CONCAT_SETTING = 'ON';
 SELECT @CONCAT_SETTING AS CONCAT_NULL_YIELDS_NULL; 
 ```  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 두 `SET CONCAT_NULL_YIELDS_NULL` 설정을 사용하는 방법을 보여 줍니다.  
   
 ```sql

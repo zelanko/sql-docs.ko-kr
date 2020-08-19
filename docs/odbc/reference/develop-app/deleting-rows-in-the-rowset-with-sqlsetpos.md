@@ -1,4 +1,5 @@
 ---
+description: SQLSetPos를 사용하여 행 집합에서 행 삭제
 title: SQLSetPos를 사용 하 여 행 집합의 행 삭제 Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3117a47d-e179-4f76-89d0-656582f1c9bb
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 940bcc3e2ee6a042394797d6038028cce64862f1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 42b61aa9af15526420b6f2d4ef7e8c945e0da105
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305954"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476775"
 ---
 # <a name="deleting-rows-in-the-rowset-with-sqlsetpos"></a>SQLSetPos를 사용하여 행 집합에서 행 삭제
 **SQLSetPos** 의 삭제 작업은 데이터 원본에서 하나 이상의 선택 된 테이블 행을 삭제 합니다. **Sqlsetpos**를 사용 하 여 행을 삭제 하기 위해 응용 프로그램은 *작업* 을 SQL_DELETE로 설정 하 고 *RowNumber* 를 삭제할 행 번호로 설정 하 여 **SQLSetPos** 를 호출 합니다. *RowNumber* 가 0 이면 행 집합의 모든 행이 삭제 됩니다.  

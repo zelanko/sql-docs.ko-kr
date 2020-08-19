@@ -1,4 +1,5 @@
 ---
+description: DataSource 속성(ADO)
 title: DataSource 속성 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 300a702a-3544-48c5-b759-83b511fe97e0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cbaff4a2bf03e524018c0c8d1b163925aa40b3ea
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 8b85f163ddb3f1fc31116966127bc01efa17a262
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763474"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444225"
 ---
 # <a name="datasource-property-ado"></a>DataSource 속성(ADO)
 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체로 표시할 데이터를 포함 하는 개체를 나타냅니다.  
@@ -32,7 +33,7 @@ ms.locfileid: "82763474"
   
  참조 되는 개체는 **IDataSource** 인터페이스를 구현 해야 하며 **IRowset** 인터페이스를 포함 해야 합니다.  
   
-## <a name="usage"></a>사용량  
+## <a name="usage"></a>사용  
   
 ```  
 Dim rs as New ADODB.Recordset  

@@ -1,4 +1,5 @@
 ---
+description: 책갈피 형식
 title: 책갈피 유형 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: cb2e7443-0260-4d1a-930f-0154db447979
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 26d0297cd9dc57e9f30945a9248b235ae469da3e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e85d50a5fe3c21707a78ac2572d8a96166745319
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306334"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476815"
 ---
 # <a name="bookmark-types"></a>책갈피 형식
 ODBC 3.x의 모든 책갈피는 가변 길이 책갈피 *입니다.* 이렇게 하면 테이블에 연결 된 기본 키 또는 고유 인덱스를 책갈피로 사용할 수 있습니다. 또한 ODBC 2.x에서 사용 된 것 처럼 책갈피는 32 비트 값일 수 *있습니다.* 커서와 함께 책갈피를 사용 하도록 지정 하기 *위해 ODBC 2.x* 응용 프로그램은 SQL_ATTR_USE_BOOKMARK statement 특성을 SQL_UB_VARIABLE 설정 합니다. 가변 길이 책갈피가 자동으로 사용 됩니다.  

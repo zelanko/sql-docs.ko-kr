@@ -1,4 +1,5 @@
 ---
+description: MDX 데이터 조작 - SELECT
 title: SELECT 문 (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: f56d5cbbc8e6653b4844e1b5e48b08911307395a
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: 623d798a3794da7577cf036cb8a32b2cf9cd7b84
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87362793"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477015"
 ---
 # <a name="mdx-data-manipulation---select"></a>MDX 데이터 조작 - SELECT
 
@@ -88,7 +89,7 @@ FROM
  *Set_Expression*  
  집합을 반환하는 유효한 MDX 식입니다.  
   
- *Integer*  
+ *정수*  
  0에서 127 사이의 정수입니다.  
   
  *Cube_Name*  
@@ -393,7 +394,7 @@ WHERE
   
  결과는 다음과 같습니다.  
   
-|비즈니스 유형 + 범주|All Products|액세서리|Clothing|  
+|비즈니스 유형 + 범주|All Products|Accessories|Clothing|  
 |-|-|-|-|  
 |**All Resellers**|**$80,450,596.98**|**$571,297.93**|**$1,777,840.84**|  
 |**Value Added Reseller**|**$34,967,517.33**|**$175,002.81**|**$592,385.71**|  
@@ -419,7 +420,7 @@ WHERE
   
  위 쿼리는 다음과 같은 결과를 생성합니다.  
   
-|비즈니스 유형 + 범주|All Products|액세서리|Clothing|  
+|비즈니스 유형 + 범주|All Products|Accessories|Clothing|  
 |-|-|-|-|  
 |All Resellers|$73,694,430.80|$506,172.45|$1,524,906.93|  
 |Value Added Reseller|$34,967,517.33|$175,002.81|$592,385.71|  

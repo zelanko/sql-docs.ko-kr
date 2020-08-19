@@ -1,4 +1,5 @@
 ---
+description: CRYPT_GEN_RANDOM(Transact-SQL)
 title: CRYPT_GEN_RANDOM(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b74bd9d4-758e-4b94-89a0-76dcda6d8c42
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 35fed704434a533f3c2aeddc8b2bcabcf9e6981f
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: d0cdca25e14d58270185d4605287d22d1af5e0d2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110491"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468178"
 ---
 # <a name="crypt_gen_random-transact-sql"></a>CRYPT_GEN_RANDOM(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -52,7 +53,7 @@ CRYPT_GEN_RANDOM ( length [ , seed ] )
 ## <a name="permissions"></a>사용 권한  
 이 함수는 공개 함수이며 특별한 사용 권한이 필요하지 않습니다.
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-generating-a-random-number"></a>A. 난수 생성  
 이 함수는 길이 50바이트인 임의의 수를 생성합니다.

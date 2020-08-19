@@ -1,4 +1,5 @@
 ---
+description: sp_check_subset_filter(Transact-SQL)
 title: sp_check_subset_filter (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 525cfcfc-f317-478d-ba84-72e62285f160
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f006cba8bfe0abecce995753863944f7d5bf0b71
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 55b5160842e5be4bda385fd23afd22d304dc2dae
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771309"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486185"
 ---
 # <a name="sp_check_subset_filter-transact-sql"></a>sp_check_subset_filter(Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -44,11 +45,11 @@ sp_check_subset_filter [ @filtered_table = ] 'filtered_table'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @filtered_table = ] 'filtered_table'`필터링 된 테이블의 이름입니다. *filtered_table* 은 **nvarchar (400)** 이며 기본값은 없습니다.  
+`[ @filtered_table = ] 'filtered_table'` 필터링 된 테이블의 이름입니다. *filtered_table* 은 **nvarchar (400)** 이며 기본값은 없습니다.  
   
-`[ @subset_filterclause = ] 'subset_filterclause'`테스트 중인 필터 절입니다. *subset_filterclause* 는 **nvarchar (1000)** 이며 기본값은 없습니다.  
+`[ @subset_filterclause = ] 'subset_filterclause'` 테스트 중인 필터 절입니다. *subset_filterclause* 는 **nvarchar (1000)** 이며 기본값은 없습니다.  
   
-`[ @has_dynamic_filters = ] has_dynamic_filters`필터 절이 매개 변수가 있는 행 필터 인지 여부입니다. *has_dynamic_filters* 은 **bit**이며 기본값은 NULL이 고 출력 매개 변수입니다. 필터 절이 매개 변수가 있는 행 필터 이면 값 **1** 을 반환 합니다.  
+`[ @has_dynamic_filters = ] has_dynamic_filters` 필터 절이 매개 변수가 있는 행 필터 인지 여부입니다. *has_dynamic_filters* 은 **bit**이며 기본값은 NULL이 고 출력 매개 변수입니다. 필터 절이 매개 변수가 있는 행 필터 이면 값 **1** 을 반환 합니다.  
   
 ## <a name="result-sets"></a>결과 집합  
   

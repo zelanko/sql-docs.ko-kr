@@ -1,4 +1,5 @@
 ---
+description: 슬래시 별(주석 블록)(Transact-SQL)
 title: 슬래시 별(주석 블록)(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/27/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 4d9ab1b2-4bbb-4c16-beb1-cafc1af7417c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d2407e539d30c3467c4fa6d8b87d831c190a9d00
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 481701a7d2167e1d45f5aa77f715a380a63e97af
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912377"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459235"
 ---
 # <a name="slash-star-block-comment-transact-sql"></a>슬래시 별(주석 블록)(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -83,7 +84,7 @@ GO
   
 ```  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 코드 섹션에서 수행되는 작업을 설명하기 위해 주석을 사용합니다.  
   
 ```  

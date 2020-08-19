@@ -1,4 +1,5 @@
 ---
+description: 수치 연산 함수(Transact-SQL)
 title: 수치 연산 함수(Transact SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/06/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 46495a2e-81d0-4677-9d72-9db083cd1023
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7aa1c4d0b5107aa433574a33271a851a21870d24
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 7d3f3d6cc5bbd7730e229df06724635f707034b2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86010871"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422707"
 ---
 # <a name="mathematical-functions-transact-sql"></a>수치 연산 함수(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

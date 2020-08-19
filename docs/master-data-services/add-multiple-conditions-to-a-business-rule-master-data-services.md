@@ -1,4 +1,5 @@
 ---
+description: 비즈니스 규칙에 여러 조건 추가(Master Data Services)
 title: 비즈니스 규칙에 조건 추가
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5f0f6958-6cf2-444b-bdcd-05b887637a0b
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: dca2f4877a172b7fd75025e226459c699ea7d13b
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: a3ecfda6bd7b2bbd885cc8cc4b12917289dd3142
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812080"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495083"
 ---
 # <a name="add-multiple-conditions-to-a-business-rule-master-data-services"></a>비즈니스 규칙에 여러 조건 추가(Master Data Services)
 
@@ -28,7 +29,7 @@ ms.locfileid: "85812080"
 > [!NOTE]  
 >  **OR** 연산자를 사용하는 비즈니스 규칙을 만드는 경우 개별적으로 평가할 수 있는 각 조건 문에 대해 개별 규칙을 만드는 것을 고려해 보십시오. 그런 다음 필요에 따라 규칙을 제외시키면 유연성이 향상되고 더 쉽게 문제를 해결할 수 있습니다.  
   
-## <a name="prerequisites"></a>전제 조건  
+## <a name="prerequisites"></a>사전 요구 사항  
  이 절차를 수행하려면  
   
 -   **시스템 관리** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  
@@ -63,7 +64,7 @@ ms.locfileid: "85812080"
   
 12. 모든 필수 필드에 내용을 입력합니다.  
   
-13. **Save**을 클릭합니다. 새 행이 **If** 표에 추가됩니다.  
+13. **저장**을 클릭합니다. 새 행이 **If** 표에 추가됩니다.  
   
 14. 필요에 따라 조건을 더 추가하려면 8~13단계를 완료합니다.  
   
@@ -75,7 +76,7 @@ ms.locfileid: "85812080"
   
 ## <a name="see-also"></a>참고 항목  
  [비즈니스 규칙 &#40;MDS(Master Data Services)&#41;](../master-data-services/business-rules-master-data-services.md)   
- [비즈니스 규칙 이름 &#40;MDS(Master Data Services)&#41;변경](../master-data-services/change-a-business-rule-name-master-data-services.md)   
+ [비즈니스 규칙 이름 &#40;MDS(Master Data Services)&#41;변경 ](../master-data-services/change-a-business-rule-name-master-data-services.md)   
  [알림을 보내도록 비즈니스 규칙 구성&#40;Master Data Services&#41;](../master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)  
   
   

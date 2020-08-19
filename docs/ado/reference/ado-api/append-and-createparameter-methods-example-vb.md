@@ -1,4 +1,5 @@
 ---
+description: Append 및 CreateParameter 메서드 예제(VB)
 title: Append 및 CreateParameter 메서드 예제 (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 46908cbd-434f-43e7-a794-ed0be0e0c0a7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 72964e1c3c44b389d8aabee9b794fb3dc5e1fd36
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: bb26d148aff616f36f3244cbe65b315378573278
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82746976"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451285"
 ---
 # <a name="append-and-createparameter-methods-example-vb"></a>Append 및 CreateParameter 메서드 예제(VB)
 이 예에서는 [Append](../../../ado/reference/ado-api/append-method-ado.md) 및 [createparameter](../../../ado/reference/ado-api/createparameter-method-ado.md) 메서드를 사용 하 여 입력 매개 변수를 사용 하 여 저장 프로시저를 실행 합니다.  

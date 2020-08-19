@@ -1,4 +1,5 @@
 ---
+description: CHECKPOINT(Transact-SQL)
 title: CHECKPOINT(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/27/2017
@@ -26,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: ccdfc689-ad4e-44c0-83f7-0f2cfcfb6406
 author: juliemsft
 ms.author: jrasnick
-ms.openlocfilehash: ec484e698234dc71282a11b07555be73cd2c694d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: da05183ae2b331f78f9692acc6aaff66a9455092
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923377"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459409"
 ---
 # <a name="checkpoint-transact-sql"></a>CHECKPOINT(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -64,12 +65,12 @@ CHECKPOINT [ checkpoint_duration ]
 ##  <a name="security"></a><a name="Security"></a> 보안  
   
 ### <a name="permissions"></a>사용 권한  
- CHECKPOINT 권한은 기본적으로 **sysadmin** 고정 서버 역할과 **db_owner** 및 **db_backupoperator** 고정 데이터베이스 역할의 멤버에게 부여되며, 양도할 수 없습니다.  
+ CHECKPOINT 권한은 **sysadmin** 고정 서버 역할과 **db_owner** 및 **db_backupoperator** 고정 데이터베이스 역할의 구성원이 기본값이며 전송할 수 없습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [ALTER DATABASE &#40;Transact-SQL &#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [데이터베이스 검사점&#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md)   
  [recovery interval 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md)   
- [SHUTDOWN&#40;Transact-SQL&#41;](../../t-sql/language-elements/shutdown-transact-sql.md)  
+ [SHUTDOWN &#40;Transact-SQL&#41;](../../t-sql/language-elements/shutdown-transact-sql.md)  
   
   

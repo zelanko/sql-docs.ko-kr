@@ -1,4 +1,5 @@
 ---
+description: sp_changesubscription(Transact-SQL)
 title: sp_changesubscription (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/28/2015
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f9d91fe3-47cf-4915-b6bf-14c9c3d8a029
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b33103bc84e6354e99ac04e73fa20a0f99725a6a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 57844d95977ed2a56324698037fb576678b0f8fc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771390"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486252"
 ---
 # <a name="sp_changesubscription-transact-sql"></a>sp_changesubscription(Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -48,17 +49,17 @@ sp_changesubscription [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @publication = ] 'publication'`변경할 게시의 이름입니다. *게시*는 **sysname**이며 기본값은 없습니다.  
+`[ @publication = ] 'publication'` 변경할 게시의 이름입니다. *게시*는 **sysname**이며 기본값은 없습니다.  
   
-`[ @article = ] 'article'`변경할 아티클의 이름입니다. *article* 은 **sysname**이며 기본값은 없습니다.  
+`[ @article = ] 'article'` 변경할 아티클의 이름입니다. *article* 은 **sysname**이며 기본값은 없습니다.  
   
-`[ @subscriber = ] 'subscriber'`구독자의 이름입니다. *구독자* 는 **sysname**이며 기본값은 없습니다.  
+`[ @subscriber = ] 'subscriber'` 구독자의 이름입니다. *구독자* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @destination_db = ] 'destination_db'`구독 데이터베이스의 이름입니다. *destination_db* 는 **sysname**이며 기본값은 없습니다.  
+`[ @destination_db = ] 'destination_db'` 구독 데이터베이스의 이름입니다. *destination_db* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @property = ] 'property'`지정 된 구독에 대해 변경할 속성입니다. *속성* 은 **nvarchar (30)** 이며 테이블의 값 중 하나일 수 있습니다.  
+`[ @property = ] 'property'` 지정 된 구독에 대해 변경할 속성입니다. *속성* 은 **nvarchar (30)** 이며 테이블의 값 중 하나일 수 있습니다.  
   
-`[ @value = ] 'value'`지정 된 *속성*의 새 값입니다. *value* 는 **nvarchar (4000)** 이며 테이블에 있는 값 중 하나일 수 있습니다.  
+`[ @value = ] 'value'` 지정 된 *속성*의 새 값입니다. *value* 는 **nvarchar (4000)** 이며 테이블에 있는 값 중 하나일 수 있습니다.  
   
 |속성|값|설명|  
 |--------------|-----------|-----------------|  
@@ -78,7 +79,7 @@ sp_changesubscription [ @publication = ] 'publication'
 ||**3**|OLE DB 공급자|  
 |**memory_optimized**|**bit**|구독에서 메모리 액세스에 최적화 된 테이블을 지원함을 나타냅니다. *memory_optimized* 는 **bit**입니다. 여기서 1은 true (구독에서 메모리 액세스에 최적화 된 테이블을 지원함)입니다.|  
   
-`[ @publisher = ] 'publisher'`이외 게시자를 지정 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *publisher* 는 **sysname**이며 기본값은 NULL입니다.  
+`[ @publisher = ] 'publisher'` 이외 게시자를 지정 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *publisher* 는 **sysname**이며 기본값은 NULL입니다.  
   
 > [!NOTE]  
 >  게시자에 대해 *게시자* 를 지정 하면 안 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -96,7 +97,7 @@ sp_changesubscription [ @publication = ] 'publication'
 ## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할 또는 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_changesubscription**을 실행할 수 있습니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [Transact-sql&#41;sp_addsubscription &#40;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
  [Transact-sql&#41;sp_dropsubscription &#40;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)  
   

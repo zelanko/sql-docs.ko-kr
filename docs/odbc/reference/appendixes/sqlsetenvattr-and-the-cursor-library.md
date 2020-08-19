@@ -1,4 +1,5 @@
 ---
+description: SQLSetEnvAttr 및 커서 라이브러리
 title: SQLSetEnvAttr 및 커서 라이브러리 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 59cc8eae-09ae-4796-869a-c5806488ae83
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 42d6804bf8a3544de44c03266ce28712e1b04d90
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 97751c4735ed7357b87a3b50df5f116f7bb38c7d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300523"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476935"
 ---
 # <a name="sqlsetenvattr-and-the-cursor-library"></a>SQLSetEnvAttr 및 커서 라이브러리
 > [!IMPORTANT]  

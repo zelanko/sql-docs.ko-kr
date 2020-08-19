@@ -1,4 +1,5 @@
 ---
+description: 프로젝트 설정(변환)(SybaseToSQL)
 title: 프로젝트 설정 (변환) (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: eeb80fa5-f530-4f21-beee-25f5a4b8ace6
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 1d2f1c02b9a9400236381cdd30fb3deb570500c1
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 61795be0d1f851792846f2ede8c38eca1f3801b0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934659"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468808"
 ---
 # <a name="project-settings-conversion-sybasetosql"></a>프로젝트 설정(변환)(SybaseToSQL)
 **프로젝트 설정** 대화 상자의 변환 페이지에는 Ssma에서 Sybase (Sybase Server Enterprise) 구문을 또는 SQL Azure 구문으로 변환 하는 방법을 사용자 지정 하는 설정이 포함 되어 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -241,9 +242,9 @@ SSMA는 *format_string* 인수를 발견할 경우 변수를 사용 하 여 문�
 **프로시저에 정의 된 임시 개체 저장**  
 이 설정은 프로시저에 표시 되는 임시 개체 정의를 변환 하는 동안 원본 메타 데이터에 저장 해야 하는지 여부를 지정 합니다.  
   
--   메타 데이터에 저장 하려면 **예** 를 선택 합니다.  
+-   메타 데이터에 저장 하려면 **예**  를 선택 합니다.  
   
--   개체를 저장 하지 않아도 되는 경우 **아니요** 를 선택 합니다.  
+-   개체를 저장 하지 않아도 되는 경우 **아니요**  를 선택 합니다.  
   
 **기본/최적 모드:** 예로  
   
@@ -261,7 +262,7 @@ ASE 프록시 테이블이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.
 **기본/최적/전체 모드:** 오류로 표시  
   
 **RAISERROR 기준 메시지 번호**  
-ASE 사용자 메시지는 각 데이터베이스에 저장 됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]사용자 메시지는 중앙에서 저장 되며, **메시지** 카탈로그 뷰를 통해 사용할 수 있게 됩니다. 또한 ASE 사용자 메시지는 2만에서 시작 하지만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 메시지는 50001에서 시작 합니다.  
+ASE 사용자 메시지는 각 데이터베이스에 저장 됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용자 메시지는 중앙에서 저장 되며, **메시지** 카탈로그 뷰를 통해 사용할 수 있게 됩니다. 또한 ASE 사용자 메시지는 2만에서 시작 하지만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 메시지는 50001에서 시작 합니다.  
   
 이 설정은 ASE 사용자 메시지 번호에 추가 하 여 사용자 메시지로 변환 하는 번호를 지정 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 에서 사용자 메시지를 사용 하는 경우에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이 값을 큰 값으로 변경 해야 할 수 있습니다. **sys.messages** 이는 변환 된 메시지 번호가 기존 메시지 번호와 충돌 하지 않도록 하기 위한 것입니다.  
   
@@ -324,7 +325,7 @@ ASE에서 CHARINDEX는 모든 입력 식이 NULL 인 경우에만 NULL을 반환
 **전체 모드:** Replace 함수  
   
 **DATALENGTH 함수**  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]DATALENGTH 함수에서 반환 하는 값은 값이 단일 공간이 면/SQL Azure와 ASE는 다릅니다. 이 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] /SQL Azure는 0을 반환 하 고 ASE는 1을 반환 합니다.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DATALENGTH 함수에서 반환 하는 값은 값이 단일 공간이 면/SQL Azure와 ASE는 다릅니다. 이 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] /SQL Azure는 0을 반환 하 고 ASE는 1을 반환 합니다.  
   
 -   ASE 동작을 사용 하려면 **바꾸기 함수**를 선택 합니다. DATALENGTH 함수에 대 한 모든 호출은 Sybase ASE 동작을 에뮬레이트하는 CASE 식으로 대체 됩니다.  
   
@@ -444,6 +445,6 @@ ASE에서 함수는 `SUBSTRING(expression, start, length)` 식의 문자 수보�
 > [!NOTE]  
 > SQL Azure에 연결 된 경우 기본적으로 True입니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
 [사용자 인터페이스 참조 &#40;SybaseToSQL&#41;](../../ssma/sybase/user-interface-reference-sybasetosql.md)  
   

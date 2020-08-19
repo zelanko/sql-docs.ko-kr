@@ -1,4 +1,5 @@
 ---
+description: CursorOptionEnum
 title: CursorOptionEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4e10cda7-ce81-4466-94c2-844d38191cf1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d7ac2825c5b700c7c9855f554cdd76cfd28547bd
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 35846bf873ff98ff15e2581c36e1963b7ddcd08c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763522"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444275"
 ---
 # <a name="cursoroptionenum"></a>CursorOptionEnum
 에서 [지원](../../../ado/reference/ado-api/supports-method.md) 되는 메서드가 테스트할 기능을 지정 합니다.  

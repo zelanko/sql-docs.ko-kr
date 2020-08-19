@@ -1,4 +1,5 @@
 ---
+description: CancelBatch 메서드(ADO)
 title: CancelBatch 메서드 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: dbdc2574-e44e-4d95-b03d-4a5d9e9adf3c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c2e9f3b57137b4c113b9e177e9fecefec4070ac0
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: f8fa4d02dd10325726c83a6b645ebdd5b94397f9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763174"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451035"
 ---
 # <a name="cancelbatch-method-ado"></a>CancelBatch 메서드(ADO)
 보류 중인 일괄 처리 업데이트를 취소 합니다.  

@@ -1,4 +1,5 @@
 ---
+description: 패키지 개체 보기
 title: 패키지 개체 보기 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/02/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: a85c0245-0a68-4eb0-83b1-9b11df80bd10
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 67e178d43f07a7b2b2e9f2af822cee74ac49e1f7
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: a4d277642cb45ce56bdabf2c98d21aeb3f948ca4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86900113"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495095"
 ---
 # <a name="view-package-objects"></a>패키지 개체 보기
 

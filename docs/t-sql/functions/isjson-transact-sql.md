@@ -1,4 +1,5 @@
 ---
+description: ISJSON(Transact-SQL)
 title: ISJSON(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/03/2020
@@ -16,12 +17,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: jroth
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: cdf9f8c9f79ec7bf286eb1d29a9274baf9a1887f
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 5504e67b20a4e4cdb0afdacb779234e56dd9c8d3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395368"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422667"
 ---
 # <a name="isjson-transact-sql"></a>ISJSON(Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -36,8 +37,6 @@ ms.locfileid: "87395368"
 ISJSON ( expression )  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## <a name="arguments"></a>인수
  *expression*  
  테스트할 문자열입니다.  
@@ -50,7 +49,7 @@ ISJSON ( expression )
 ## <a name="remarks"></a>설명  
  **ISJSON**은 동일한 수준에서 키의 고유성을 확인하지 않습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="example-1"></a>예 1  
 다음 예제에서는 매개 변수 값 `@param`에 유효한 JSON이 포함되어 있으면 조건부로 명령문 블록을 실행합니다.  

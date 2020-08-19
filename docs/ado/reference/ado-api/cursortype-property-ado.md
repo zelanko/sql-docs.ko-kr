@@ -1,4 +1,5 @@
 ---
+description: CursorType 속성(ADO)
 title: CursorType 속성 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b62c66ca-58d5-430e-9257-eb38c65e48c2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5bf0790307ec8f8f739d3975620967a8671c3fcb
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 7eae60dc133734edb666737356a214af5bd9ea8c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763504"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444255"
 ---
 # <a name="cursortype-property-ado"></a>CursorType 속성(ADO)
 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체에 사용 되는 커서 유형을 나타냅니다.  

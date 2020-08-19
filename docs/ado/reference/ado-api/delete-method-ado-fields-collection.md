@@ -1,4 +1,5 @@
 ---
+description: Delete 메서드(ADO 필드 컬렉션)
 title: Delete 메서드 (ADO Fields Collection) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 25bedc25-c51c-4cab-96ce-930b959965d9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 691ad580825e4d22cef8bea4f30c737415cfc6b3
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: fb60cea6ef2e741103e94f38955bb2afc688e228
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82757389"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444175"
 ---
 # <a name="delete-method-ado-fields-collection"></a>Delete 메서드(ADO 필드 컬렉션)
 [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) 컬렉션에서 개체를 삭제 합니다.  

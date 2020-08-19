@@ -1,4 +1,5 @@
 ---
+description: 하드 코딩된 SQL 문
 title: 하드 코드 된 SQL 문 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e355f5f1-4f1a-4933-8c74-ee73e90d2d19
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c7a092742e5f0151b7b08f434b453645cbd804a5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 341dc642f0529fd779eccf9f2d1d1b50a4977479
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300203"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476665"
 ---
 # <a name="hard-coded-sql-statements"></a>하드 코딩된 SQL 문
 고정 태스크를 수행 하는 응용 프로그램은 일반적으로 하드 코드 된 SQL 문을 포함 합니다. 예를 들어 주문 입력 시스템은 다음 호출을 사용 하 여 오픈 판매 주문을 나열할 수 있습니다.  

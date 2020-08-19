@@ -1,4 +1,5 @@
 ---
+description: Error(MDX)
 title: 오류 (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 91d07c6bbb4eb4731c9a802e47cd8f4c71aa5aeb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f95ee71586f5571d91221fe8889198a44a1252b3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68031231"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494926"
 ---
 # <a name="error-mdx"></a>Error(MDX)
 
@@ -31,7 +32,7 @@ Error( [ Error_Text ] )
  *Error_Text*  
  반환할 오류 메시지가 들어 있는 유효한 문자열 식입니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 쿼리에서는 계산 측정값 내에서 **Error** 함수를 사용 하는 방법을 보여 줍니다.  
   
  `WITH MEMBER MEASURES.ERRORDEMO AS ERROR("THIS IS AN ERROR")`  

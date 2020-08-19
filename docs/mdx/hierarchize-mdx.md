@@ -1,4 +1,5 @@
 ---
+description: Hierarchize(MDX)
 title: Hierarchize (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 8ab2c866f201c53684c316282a143b4f672cb8e9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3c1683819420d150e2f9b330ba94bc9e228d167f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68105430"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429915"
 ---
 # <a name="hierarchize-mdx"></a>Hierarchize(MDX)
 
@@ -58,7 +59,7 @@ ON 0
 FROM [Adventure Works]  
 ```  
   
- 다음 예에서는 **놀이 Works** 큐브에서 `Date` 차원에 `Measures.[Order Quantity]` 포함 된 2003의 처음 9 개월 동안 집계 된 멤버의 합계를 반환 합니다. **PeriodsToDate** 함수는 집계 함수가 작동 하는 집합의 튜플을 정의 합니다. **Hierarchize** 함수는 Product 차원의 지정 된 멤버 집합의 멤버를 계층적 순서로 구성 합니다.  
+ 다음 예에서는 `Measures.[Order Quantity]` `Date` **놀이 Works** 큐브에서 차원에 포함 된 2003의 처음 9 개월 동안 집계 된 멤버의 합계를 반환 합니다. **PeriodsToDate** 함수는 집계 함수가 작동 하는 집합의 튜플을 정의 합니다. **Hierarchize** 함수는 Product 차원의 지정 된 멤버 집합의 멤버를 계층적 순서로 구성 합니다.  
   
 ```  
 WITH MEMBER Measures.[Declining Reseller Sales] AS Count  

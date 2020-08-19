@@ -1,4 +1,5 @@
 ---
+description: CacheSize 속성 예제(JScript)
 title: CacheSize 속성 예제 (JScript) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3675f641-b4b1-48ff-ba33-8d9ea064cd04
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9aad983c315aae76dc30cbbbef645c25b9302bdf
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 6f161c3e8e8b693b4a5be474406213116feae8ae
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758909"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451095"
 ---
 # <a name="cachesize-property-example-jscript"></a>CacheSize 속성 예제(JScript)
 이 예에서는 [CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md) 속성을 사용 하 여 30 레코드 캐시 없이 수행 된 작업의 성능 차이를 표시 합니다. 다음 코드를 잘라내어 메모장 또는 다른 텍스트 편집기에 붙여 넣고 **CacheSizeJS**로 저장 합니다.  

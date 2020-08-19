@@ -1,4 +1,5 @@
 ---
+description: COMPRESS(Transact SQL)
 title: COMPRESS(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/11/2018
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c2bfe9b8-57a4-48b4-b028-e1a3ed5ece88
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6edda04e2520ec915a6c4767751130f091668e85
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 51cf2e37ae548383d7c02b3ba4028b9327857928
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394298"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468192"
 ---
 # <a name="compress-transact-sql"></a>COMPRESS(Transact SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -35,8 +36,6 @@ ms.locfileid: "87394298"
 COMPRESS ( expression )  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## <a name="arguments"></a>인수
 *expression*  
 A
@@ -64,7 +63,7 @@ expression. 자세한 내용은 [식 &#40;Transact-SQL&#41;](../../t-sql/languag
   
 `COMPRESS` 함수는 입력된 식 데이터를 압축합니다. 압축하려면 각 데이터 섹션에 대해 이 함수를 호출해야 합니다. 행 또는 페이지 레벨에서 스토리지 중 자동 데이터 압축에 대한 자세한 정보는 [데이터 압축](../../relational-databases/data-compression/data-compression.md)을 참조하세요.
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-compress-data-during-the-table-insert"></a>A. 테이블 삽입 중에 데이터 압축  
 이 예에서는 테이블에 삽입된 데이터를 압축하는 방법을 보여줍니다.

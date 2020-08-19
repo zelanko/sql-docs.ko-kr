@@ -1,4 +1,5 @@
 ---
+description: YEAR(Transact-SQL)
 title: YEAR(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -23,12 +24,12 @@ ms.assetid: 74aa7ccc-8575-4018-80cf-14aeca379687
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d5ce9bf9bc9c1e9c03e86ff696a8684c9f54bafc
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: f3f8ad5bd4d39b0fc55fad2dd68b43552bf15ab8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111776"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422587"
 ---
 # <a name="year-transact-sql"></a>YEAR(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -41,7 +42,7 @@ ms.locfileid: "87111776"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```syntaxsql  
 YEAR ( date )  
 ```  
   
@@ -62,20 +63,20 @@ YEAR ( date )
 ## <a name="examples"></a>예  
  다음 문은 `2010`을 반환합니다. 이는 연도입니다.  
   
-```  
+```sql  
 SELECT YEAR('2010-04-30T01:01:01.1234567-07:00');  
 ```  
   
  다음 문은 `1900, 1, 1`을 반환합니다. *date*의 인수는 숫자 `0`입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 `0`을 1900년 1월 1일로 해석합니다.  
   
-```  
+```sql 
 SELECT YEAR(0), MONTH(0), DAY(0);  
 ```  
   
 ## <a name="examples-sssdwfull-and-sspdw"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  다음 문은 `1900, 1, 1`을 반환합니다. *date*의 인수는 숫자 `0`입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 `0`을 1900년 1월 1일로 해석합니다.  
   
-```  
+```sql  
 SELECT TOP 1 YEAR(0), MONTH(0), DAY(0);  
 ```  
   

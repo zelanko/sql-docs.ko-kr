@@ -1,4 +1,5 @@
 ---
+description: sp_check_for_sync_trigger(Transact-SQL)
 title: sp_check_for_sync_trigger (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 54a1e2fd-c40a-43d4-ac64-baed28ae4637
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6fd7af5a486928e0dca9f5b2281e0b53c5038e74
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1e55fd24c9d4df46cb4703af31d2eda802a458ca
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771335"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486213"
 ---
 # <a name="sp_check_for_sync_trigger-transact-sql"></a>sp_check_for_sync_trigger(Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -52,7 +53,7 @@ sp_check_for_sync_trigger [ @tabid = ] 'tabid'
 |**영구히**|DELETE 트리거|  
 |NULL(기본값)||  
   
-`[ @fonpublisher = ] fonpublisher`저장 프로시저가 실행 되는 위치를 지정 합니다. *fonpublisher* 는 **bit**이며 기본값은 0입니다. 값이 0인 경우 구독자에서 실행되며 값이 1인 경우 게시자에서 실행됩니다.  
+`[ @fonpublisher = ] fonpublisher` 저장 프로시저가 실행 되는 위치를 지정 합니다. *fonpublisher* 는 **bit**이며 기본값은 0입니다. 값이 0인 경우 구독자에서 실행되며 값이 1인 경우 게시자에서 실행됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0은 저장 프로시저가 즉시 트리거 업데이트의 컨텍스트 내에서 호출되지 않고 있음을 의미합니다. 1은 즉시 업데이트 트리거의 컨텍스트 내에서 호출 되 고 * \@ trigger_op*에서 반환 되는 트리거의 유형 임을 나타냅니다.  

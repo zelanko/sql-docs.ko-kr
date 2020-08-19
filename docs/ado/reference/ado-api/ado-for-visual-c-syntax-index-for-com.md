@@ -1,4 +1,5 @@
 ---
+description: COM용 Visual C++ 구문 인덱스에 대한 ADO
 title: COM의 Visual C++ 구문 인덱스에 대 한 ADO | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d02b199e-1e52-4cc9-b118-750952ae7f63
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 044dcc2fb10463e592a953725afc2413c3a5880f
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 1c5febeb8727348525a9fe4a4dd5f8e22a17678b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82747306"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451415"
 ---
 # <a name="ado-for-visual-c-syntax-index-for-com"></a>COM용 Visual C++ 구문 인덱스에 대한 ADO
 이 인덱스는 Microsoft Visual C++ 기반으로 하는 ADO 언어 참조에 대 한 상호 참조입니다.  
@@ -50,6 +51,6 @@ ms.locfileid: "82747306"
   
 -   [Stream 개체](../../../ado/reference/ado-api/stream-ado-for-visual-c-syntax.md)  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [#Import를 사용 하는 Visual C++ 구문 인덱스에 대 한 ADO](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-with-sharpimport.md)   
  [Microsoft ADO(ActiveX Data Objects)](../../../ado/microsoft-activex-data-objects-ado.md)

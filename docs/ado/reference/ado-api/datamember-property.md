@@ -1,4 +1,5 @@
 ---
+description: DataMember 속성
 title: DataMember 속성 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2c8fb09e-10ad-49b5-ab41-2603771780d9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 87d525907edde2e3dc99b78eb827c571c604d8b7
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: f698c4a20fb76839460ca0930d45b8d18b2738be
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763484"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444235"
 ---
 # <a name="datamember-property"></a>DataMember 속성
 [DataSource](../../../ado/reference/ado-api/datasource-property-ado.md) 속성이 참조 하는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 에서 검색 되는 데이터 멤버의 이름을 나타냅니다.  
@@ -35,7 +36,7 @@ ms.locfileid: "82763484"
   
  **DataMember** 속성은 **DataSource** 속성으로 지정 되는 개체를 **레코드 집합** 개체로 나타낼지 여부를 결정 합니다. 이 속성을 설정 하려면 먼저 **레코드 집합** 개체를 닫아야 합니다. **Datasource 속성이 datasource** 속성 **앞에 설정** 되어 있지 않거나 **datasource** 속성에 지정 된 개체에서 **datamember** 이름이 인식 되지 않는 경우 오류가 생성 됩니다.  
   
-## <a name="usage"></a>사용량  
+## <a name="usage"></a>사용  
   
 ```  
 Dim rs as New ADODB.Recordset  

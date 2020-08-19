@@ -1,4 +1,5 @@
 ---
+description: 메타데이터 저장(SybaseToSQL)
 title: 메타 데이터 저장 (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: b2517735-dd19-449f-8cee-08e68ca89d3a
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 8321c6e8a63eb4baabde580a911dccec6ab9ff3e
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 8b43cbdcac7a983047d8c454e5bfc9e3a31ce102
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87930345"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468724"
 ---
 # <a name="save-metadata--sybasetosql"></a>메타데이터 저장(SybaseToSQL)
 **메타 데이터 저장** 대화 상자에 메타 데이터를 저장 하기 전에 ssma 프로젝트에 로드 하 라는 메시지가 표시 됩니다. 이를 통해 오프 라인으로 사용 하 고 기술 지원 담당자와 같은 다른 사람에 게 보낼 수 있는 전체 프로젝트 파일을 사용할 수 있습니다.  

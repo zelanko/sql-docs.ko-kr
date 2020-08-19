@@ -1,4 +1,5 @@
 ---
+description: 추적 옵션 설정
 title: 추적 옵션 설정 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 44404a79-b716-4bc1-9ffb-70cd8239d237
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 21bee5d903459423a134389e62db844f5f63c9c1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 72e3805eded00b1bfa0c984d5ff0ace1ae1494fc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307202"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476955"
 ---
 # <a name="setting-tracing-options"></a>추적 옵션 설정
 **Odbc 데이터 원본 관리자** 대화 상자의 **추적** 탭에서는 odbc 함수 호출을 추적 하는 방법을 구성할 수 있습니다.  
@@ -42,7 +43,7 @@ ms.locfileid: "81307202"
   
 2.  관리 도구에서 ODBC 데이터 원본 관리자를 엽니다.  
   
-3.  **추적** 탭을 클릭 합니다.  
+3.  **추적** 탭을 클릭합니다.  
   
 4.  **모든 사용자 id에 대 한 시스템 수준 추적** 을 사용 하 여 추적 모드 구성 확인란:  
   

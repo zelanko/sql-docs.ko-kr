@@ -1,4 +1,5 @@
 ---
+description: AppendChunk 메서드(ADO)
 title: AppendChunk 메서드 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: c648b5a8-d4f1-4d16-836e-3957feb03617
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9e3d58ae93285accc9cf7a71e43579be4f54b21d
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 290155a3e6ea7e8ec0110d2bc2672cc74f6895b2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242463"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451235"
 ---
 # <a name="appendchunk-method-ado"></a>AppendChunk 메서드(ADO)
 대량 텍스트 또는 이진 데이터 [필드](../../../ado/reference/ado-api/field-object.md)또는 [매개 변수](../../../ado/reference/ado-api/parameter-object.md) 개체에 데이터를 추가 합니다.  

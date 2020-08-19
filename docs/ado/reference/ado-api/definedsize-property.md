@@ -1,4 +1,5 @@
 ---
+description: DefinedSize 속성
 title: DefinedSize 속성 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3ee27314-a305-4fbc-8433-9ee9a909afd6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 08a7842a2fbfb2bd34f02ad2e45871132111a68f
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: fa6b01afc3a8643f7e4f28917ebaa8283bf1876e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82757399"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444185"
 ---
 # <a name="definedsize-property"></a>DefinedSize 속성
 [필드](../../../ado/reference/ado-api/field-object.md) 개체의 데이터 용량을 나타냅니다.  

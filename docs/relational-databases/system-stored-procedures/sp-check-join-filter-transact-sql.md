@@ -1,4 +1,5 @@
 ---
+description: sp_check_join_filter(Transact-SQL)
 title: sp_check_join_filter (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: e9699d59-c8c9-45f6-a561-f7f95084a540
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8e06efc20893454c4057b85ae2f3ca6d45cd150c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: daf5b155aa4319a20a3005687515fbafa8702e6c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771325"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486214"
 ---
 # <a name="sp_check_join_filter-transact-sql"></a>sp_check_join_filter(Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -45,11 +46,11 @@ sp_check_join_filter [ @filtered_table = ] 'filtered_table'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @filtered_table = ] 'filtered_table'`필터링 된 테이블의 이름입니다. *filtered_table* 은 **nvarchar (400)** 이며 기본값은 없습니다.  
+`[ @filtered_table = ] 'filtered_table'` 필터링 된 테이블의 이름입니다. *filtered_table* 은 **nvarchar (400)** 이며 기본값은 없습니다.  
   
 `[ @join_table = ] 'join_table'`*Filtered_table*에 조인 되는 테이블의 이름입니다. *join_table* 은 **nvarchar (400)** 이며 기본값은 없습니다.  
   
-`[ @join_filterclause = ] 'join_filterclause'`테스트 중인 조인 필터 절입니다. *join_filterclause* 는 **nvarchar (1000)** 이며 기본값은 없습니다.  
+`[ @join_filterclause = ] 'join_filterclause'` 테스트 중인 조인 필터 절입니다. *join_filterclause* 는 **nvarchar (1000)** 이며 기본값은 없습니다.  
   
 ## <a name="result-sets"></a>결과 집합  
   

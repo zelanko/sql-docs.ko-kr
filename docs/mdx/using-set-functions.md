@@ -1,4 +1,5 @@
 ---
+description: 집합 함수 사용
 title: Set 함수 사용 | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 52e0c140acb944a774f5ab167bb81c662e3e32d7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1325055017eeee392cd098d9168dd247a2664aa4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68038056"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476985"
 ---
 # <a name="using-set-functions"></a>집합 함수 사용
 
@@ -22,7 +23,7 @@ ms.locfileid: "68038056"
   
  집합 함수는 멤버 함수 및 튜플 함수와 마찬가지로 Analysis Services에서 사용되는 다차원 구조를 처리하는 데 필수적입니다. 집합 식은 MDX(Multidimensional Expressions) 쿼리의 축을 정의하므로 MDX 쿼리의 결과를 얻는 데도 필수적입니다.  
   
- 가장 일반적인 set 함수 중 하나는 [MDX&#41;함수&#41; &#40;설정 &#40;멤버](../mdx/members-set-mdx.md) 입니다 .이 함수는 차원, 계층 또는 수준의 모든 멤버를 포함 하는 집합을 검색 합니다. 다음은 쿼리 내에서 집합 함수를 사용하는 예입니다.  
+ 가장 일반적인 set 함수 중 하나는 [MDX&#41;함수&#41; &#40;설정 &#40;멤버 ](../mdx/members-set-mdx.md) 입니다 .이 함수는 차원, 계층 또는 수준의 모든 멤버를 포함 하는 집합을 검색 합니다. 다음은 쿼리 내에서 집합 함수를 사용하는 예입니다.  
   
  `SELECT`  
   

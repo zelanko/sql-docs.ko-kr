@@ -1,4 +1,5 @@
 ---
+description: Error 개체
 title: Error 개체 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a175d453-fa55-4f49-9ede-a26d83177919
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 717a3af4bec62725cc4cf5da8621163f24c2ab3f
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 0f243fba25a185025c51fb53c030a360a062ef78
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764534"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443975"
 ---
 # <a name="error-object"></a>Error 개체
 공급자와 관련 된 단일 작업과 관련 된 데이터 액세스 오류에 대 한 세부 정보를 포함 합니다.  

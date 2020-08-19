@@ -1,4 +1,5 @@
 ---
+description: 이름으로 매개 변수 바인딩(명명된 매개 변수)
 title: 이름으로 매개 변수 바인딩 (명명 된 매개 변수) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e2c3da5a-6c10-4dd5-acf9-e951eea71a6b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a1e214f50488c4600ed39f76e91618cc5ce53de4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 75227b26b5f9f060089e6568e233d327e3f7faa7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306374"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476845"
 ---
 # <a name="binding-parameters-by-name-named-parameters"></a>이름으로 매개 변수 바인딩(명명된 매개 변수)
 응용 프로그램에서는 특정 Dbms를 사용 하 여 프로시저 호출에서 위치가 아닌 이름으로 저장 프로시저에 대 한 매개 변수를 지정할 수 있습니다. 이러한 매개 변수를 *명명 된 매개 변수*라고 합니다. ODBC에서는 명명 된 매개 변수를 사용할 수 있습니다. ODBC에서 명명 된 매개 변수는 저장 프로시저에 대 한 호출에만 사용 되며 다른 SQL 문에서 사용할 수 없습니다.  
@@ -38,7 +39,7 @@ ms.locfileid: "81306374"
 CREATE PROCEDURE test @title_id int = 1, @quote char(30) AS <blah>  
 ```  
   
- 이 절차에서 첫 번째 매개 변수인 @title_id의 기본값은 1입니다. 응용 프로그램은 다음 코드를 사용 하 여 하나의 동적 매개 변수만 지정 하도록이 프로시저를 호출할 수 있습니다. 이 매개 변수는 이름이 "\@quote" 인 명명 된 매개 변수입니다.  
+ 이 절차에서 첫 번째 매개 변수인의 @title_id 기본값은 1입니다. 응용 프로그램은 다음 코드를 사용 하 여 하나의 동적 매개 변수만 지정 하도록이 프로시저를 호출할 수 있습니다. 이 매개 변수는 이름이 "quote" 인 명명 된 매개 변수입니다 \@ .  
   
 ```  
 // Prepare the procedure invocation statement.  

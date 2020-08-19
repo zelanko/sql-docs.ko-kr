@@ -1,4 +1,5 @@
 ---
+description: 기본 ODBC 애플리케이션 단계
 title: 기본 ODBC 응용 프로그램 단계 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a92d1f78-c669-47ad-88c4-0b1a93503dfc
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 29abb0ec5bbfa9b423290e3354d9455b639f8f59
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c1590714b8b376f4a69f9a2a3e3bf42796c5fe62
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306054"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476875"
 ---
 # <a name="basic-odbc-application-steps"></a>기본 ODBC 애플리케이션 단계
 이 섹션에서는 ODBC 응용 프로그램의 일반적인 흐름에 대해 설명 합니다. 응용 프로그램에서 이러한 모든 함수를 정확 하 게이 순서 대로 호출할 가능성은 거의 없습니다. 그러나 대부분의 응용 프로그램에서는 이러한 단계의 일부 변형을 사용 합니다. 다음 그림에는 기본 응용 프로그램 단계가 나와 있습니다.  

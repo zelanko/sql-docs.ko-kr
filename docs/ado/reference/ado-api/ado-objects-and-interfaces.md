@@ -1,4 +1,5 @@
 ---
+description: ADO 개체 및 인터페이스
 title: ADO 개체 및 인터페이스 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d0b7e254-c89f-4406-b846-a060ef038c30
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6deb8166c775fcdcfe8fb0975662dda0be3b3581
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 80a47336bb6453033a28b2d62eeda3700431594a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242853"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451375"
 ---
 # <a name="ado-objects-and-interfaces"></a>ADO 개체 및 인터페이스
 이러한 개체 간의 관계는 [ADO 개체 모델](../../../ado/reference/ado-api/ado-object-model.md)에 표시 됩니다.  
@@ -37,12 +38,12 @@ ms.locfileid: "87242853"
 |[오류](../../../ado/reference/ado-api/error-object.md)|공급자와 관련 된 단일 작업과 관련 된 데이터 액세스 오류에 대 한 세부 정보를 포함 합니다.<br /><br /> **Error** 개체는 스크립팅에 안전 하지 않습니다.|  
 |[필드](../../../ado/reference/ado-api/field-object.md)|공통 데이터 형식으로 데이터의 열을 나타냅니다.|  
 |[매개 변수](../../../ado/reference/ado-api/parameter-object.md)|매개 변수가 있는 쿼리 또는 저장 프로시저를 기반으로 **Command** 개체와 연결 된 매개 변수 또는 인수를 나타냅니다.<br /><br /> **매개 변수** 개체는 스크립팅에 안전 하지 않습니다.|  
-|[속성](../../../ado/reference/ado-api/property-object-ado.md)|공급자에 의해 정의 된 ADO 개체의 동적 특성을 나타냅니다.|  
+|[Property](../../../ado/reference/ado-api/property-object-ado.md)|공급자에 의해 정의 된 ADO 개체의 동적 특성을 나타냅니다.|  
 |[레코드](../../../ado/reference/ado-api/record-object-ado.md)|**레코드 집합**의 행 또는 파일 시스템의 디렉터리 또는 파일을 나타냅니다. **Record** 개체는 스크립팅에 안전 합니다.|  
 |[레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)|기본 테이블의 레코드 집합 또는 실행 된 명령의 결과를 나타냅니다. 언제 든 지 **레코드 집합** 개체는 집합 내의 단일 레코드만 현재 레코드로 참조 합니다.<br /><br /> **레코드 집합** 개체는 스크립팅에 안전 합니다.|  
 |[스트림](../../../ado/reference/ado-api/stream-object-ado.md)|데이터의 이진 스트림을 나타냅니다.<br /><br /> **Stream** 개체는 스크립팅에 안전 합니다.|  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [ADO API 참조](../../../ado/reference/ado-api/ado-api-reference.md)   
  [ADO 컬렉션](../../../ado/reference/ado-api/ado-collections.md)   
  [ADO 동적 속성](../../../ado/reference/ado-api/ado-dynamic-properties.md)   

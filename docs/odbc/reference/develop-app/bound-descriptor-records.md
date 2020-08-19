@@ -1,4 +1,5 @@
 ---
+description: 바인딩된 설명자 레코드
 title: 바인딩된 설명자 레코드 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 55d09344-6682-40f6-b634-036b134ff650
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 155ef4951abddc7a73d9d4abfbc45248f33d653c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fcf88374967b5a9d8426d16c9e92c06e4eef32cb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306310"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476805"
 ---
 # <a name="bound-descriptor-records"></a>바인딩된 설명자 레코드
 응용 프로그램에서 설명자 레코드의 SQL_DESC_DATA_PTR 필드를 설정 하 여 더 이상 null 값을 포함 하지 않도록 하려면 레코드가 *바인딩되어*있다고 합니다.  

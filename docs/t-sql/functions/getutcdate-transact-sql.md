@@ -1,4 +1,5 @@
 ---
+description: GETUTCDATE(Transact-SQL)
 title: GETUTCDATE(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/02/2015
@@ -35,12 +36,12 @@ ms.assetid: 48a5b230-102e-4a89-bb2a-fcf0cac862bb
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0979bf4241c24477274d7a220f7a4687339ab1e4
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: e0c03a89535dded3c17f556c4b048bbdb1840c1c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112692"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422767"
 ---
 # <a name="getutcdate-transact-sql"></a>GETUTCDATE(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -70,7 +71,7 @@ GETUTCDATE()
   
  GETUTCDATE는 비결정적 함수입니다. 열에서 이 함수를 참조하는 뷰와 식은 인덱싱될 수 없습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 현재 날짜 및 시간을 반환하는 6개의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템 함수를 사용하여 시간, 날짜 또는 두 가지 모두 반환합니다. 값은 순차적으로 반환되므로 소수 자릿수 초가 서로 다를 수 있습니다.  
   
 ### <a name="a-getting-the-current-system-date-and-time"></a>A. 현재 시스템의 날짜 및 시간 가져오기  

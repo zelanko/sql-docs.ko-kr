@@ -1,4 +1,5 @@
 ---
+description: ADO - WFC 구문 인덱스
 title: ADO-WFC 구문 인덱스 | Microsoft Docs
 ms.technology: connectivity
 ms.custom: ''
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a14bbc36-87ec-409d-97b3-393b66b1b8e3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2ae2ddf07e2e687aec0b507b9ff9f2640087ef74
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: b6e5c4fd54b5784e76067231096752a68dd52a6a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764544"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451345"
 ---
 # <a name="ado---wfc-syntax-index"></a>ADO - WFC 구문 인덱스
 ADO 언어 참조에서는 Microsoft Visual Basic 프로그래밍 언어를 사용 하 여 ADO 메서드와 속성 구문을 보여 줍니다. 이 인덱스는 Windows Foundation 클래스에 대 한 ADO (ADO/WFC)를 기반으로 하는 ADO 언어 참조 항목에 대 한 상호 참조입니다. 구문의 차이가 발생 하는 경우 언어 참조 항목의 구문 목록과 달리이 인덱스의 함수 시그니처를 사용 합니다.  

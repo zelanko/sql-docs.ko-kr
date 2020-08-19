@@ -1,4 +1,5 @@
 ---
+description: SQLSetConnectOption 매핑
 title: SQLSetConnectOption 매핑 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a1b325cf-0c42-41c1-b141-b5a4fee7e708
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 757b50c7e18133e02b4cf6addaa327b2053f5439
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6c1f1379bfd2bbc2faccf719d68009ed63b350fd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81287473"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476965"
 ---
 # <a name="sqlsetconnectoption-mapping"></a>SQLSetConnectOption 매핑
 ODBC 2 인 경우 *x* 응용 프로그램은 ODBC 3.x 드라이버를 통해 **SQLSetConnectOption** 를 호출 합니다 *.*  

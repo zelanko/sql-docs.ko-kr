@@ -1,4 +1,5 @@
 ---
+description: 영향을 받는 개체 선택 및 구성(SybaseToSQL)
 title: 영향을 받는 개체 선택 및 구성 (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: a219df74-543a-4aec-aeeb-79f90ac3e2ee
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: c9efc329f80e880a58ec9926db677c4a71604e2c
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 793430d548053b8d4c1cbf8dd07dd4e7d691c6d3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87930444"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468745"
 ---
 # <a name="selecting-and-configuring-affected-objects-sybasetosql"></a>영향을 받는 개체 선택 및 구성(SybaseToSQL)
 이 페이지에서 테이블 및 외래 키를 선택할 수 있으며, SSMA가 이전 단계에서 선택한 개체의 실행 결과를 확인할 때 이러한 변경 내용을 비교 해야 합니다. 또한 확인 매개 변수를 사용자 지정할 수 있습니다.  
@@ -39,7 +40,7 @@ SSMA 테스터가 이러한 개체를 확인할 수 없는 경우 개체 트리 
   
 -   규칙  
   
--   Default  
+-   기본값  
   
 -   ID  
   

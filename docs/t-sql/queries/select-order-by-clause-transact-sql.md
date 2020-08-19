@@ -1,4 +1,5 @@
 ---
+description: SELECT - ORDER BY 절(Transact-SQL)
 title: ORDER BY 절(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/24/2018
@@ -39,12 +40,12 @@ ms.assetid: bb394abe-cae6-4905-b5c6-8daaded77742
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ebb1f9b6a1d2b9651b26c8649db89c0ca89fc5fa
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 8fe16aee48a1fac52943559c2f35e3fb5a2b20ac
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554758"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459129"
 ---
 # <a name="select---order-by-clause-transact-sql"></a>SELECT - ORDER BY 절(Transact-SQL)
 
@@ -201,7 +202,7 @@ ORDER BY SchemaName + ''; -- wrong
   
 ## <a name="examples"></a>예  
   
-|Category|중요한 구문 요소|  
+|범주|중요한 구문 요소|  
 |--------------|------------------------------|  
 |[기본 구문](#BasicSyntax)|ORDER BY|  
 |[오름차순 또는 내림차순 지정](#SortOrder)|DESC • ASC|  

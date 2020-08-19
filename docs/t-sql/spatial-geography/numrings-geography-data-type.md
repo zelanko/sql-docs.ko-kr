@@ -1,4 +1,5 @@
 ---
+description: NumRings(geography 데이터 형식)
 title: NumRings(geography 데이터 형식) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0e4e4fa2-b608-4cc4-98ba-0845ddb4214c
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 0b85a8842a7bc33753394c5de96582ca41b9d635
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: fddcc951ae438b054c68d6e9755e62388fb098e3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86552501"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422327"
 ---
 # <a name="numrings-geography-data-type"></a>NumRings(geography 데이터 형식)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -46,7 +47,7 @@ ms.locfileid: "86552501"
 ## <a name="remarks"></a>설명  
  이 메서드는 인스턴스가 **Polygon** 인스턴스가 아니면 NULL을 반환하고 인스턴스가 비어 있으면 0을 반환합니다. 이 메서드는 정확합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 두 개의 링이 있는 `Polygon` 인스턴스를 만들고 링이 두 개인지 확인합니다.  
   
 ```  
