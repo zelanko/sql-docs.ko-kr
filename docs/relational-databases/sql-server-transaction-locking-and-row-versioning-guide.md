@@ -1,4 +1,5 @@
 ---
+description: 트랜잭션 잠금 및 행 버전 관리 지침
 title: 트랜잭션 잠금 및 행 버전 관리 지침
 ms.custom: seo-dt-2019
 ms.date: 03/10/2020
@@ -19,12 +20,12 @@ ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb7
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d1323c8736934a46fdb4ef8c4d8752364f8ae38d
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 12d986004250f40acb9dc99d225fc30c015ac734
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87239485"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88403059"
 ---
 # <a name="transaction-locking-and-row-versioning-guide"></a>트랜잭션 잠금 및 행 버전 관리 지침
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -526,7 +527,7 @@ GO
 |**내재된 공유(IS)(IS)**|예|예|예|예|예|예|  
 |**공유(S)**|예|예|예|예|예|예|  
 |**업데이트(U)**|예|예|예|예|예|예|  
-|**의도 배타(IX)**|예|예|예|예|예|예|  
+|**의도 배타(IX)**|예|예|아니요|예|예|예|  
 |**의도 배타 공유(SIX)**|예|예|예|예|예|예|  
 |**배타적(X)**|예|예|예|예|예|예|  
   
@@ -567,11 +568,11 @@ GO
 |------|---------------------------|------|------|------|------|------|------|  
 |**요청 모드**|**S**|**U**|**X**|**RangeS-S**|**RangeS-U**|**RangeI-N**|**RangeX-X**|  
 |**공유(S)**|예|예|예|예|예|예|예|  
-|**업데이트(U)**|예|예|예|예|예|예|예|  
+|**업데이트(U)**|예|예|아니요|예|아니요|예|예|  
 |**배타적(X)**|예|예|예|예|예|예|예|  
-|**RangeS-S**|예|예|예|예|예|예|예|  
+|**RangeS-S**|예|예|아니요|예|예|예|예|  
 |**RangeS-U**|예|예|예|예|예|예|예|  
-|**RangeI-N**|예|예|예|예|예|예|예|  
+|**RangeI-N**|예|예|예|예|아니요|예|예|  
 |**RangeX-X**|예|예|예|예|예|예|예|  
   
 #### <a name="conversion-locks"></a><a name="lock_conversion"></a> 변환 잠금  
@@ -1343,9 +1344,9 @@ BEGIN TRANSACTION
   
  **Version Store Size (KB)** . 모든 버전 저장소의 크기(KB)를 모니터링합니다. 이 정보를 통해 tempdb 데이터베이스의 버전 저장소에 필요한 공간을 결정할 수 있습니다. 이 카운터를 지속적으로 모니터링하면 tempdb에 필요한 추가 공간을 예측할 수 있습니다.  
   
- `Version Generation rate (KB/s)`입니다. 모든 버전 저장소의 버전 생성 속도(KB/초)를 모니터링합니다.  
+ `Version Generation rate (KB/s)`. 모든 버전 저장소의 버전 생성 속도(KB/초)를 모니터링합니다.  
   
- `Version Cleanup rate (KB/s)`입니다. 모든 버전 저장소의 버전 정리 속도(KB/초)를 모니터링합니다.  
+ `Version Cleanup rate (KB/s)`. 모든 버전 저장소의 버전 정리 속도(KB/초)를 모니터링합니다.  
   
 > [!NOTE]  
 > Version Generation rate (KB/s) 및 Version Cleanup rate (KB/s)에서 제공하는 정보를 통해 tempdb에 필요한 공간을 예측할 수 있습니다.  
@@ -1362,11 +1363,11 @@ BEGIN TRANSACTION
   
  **트랜잭션**. 활성 트랜잭션의 총 수를 모니터링합니다. 시스템 트랜잭션은 포함되지 않습니다.  
   
- `Snapshot Transactions`입니다. 활성 스냅샷 트랜잭션의 총 수를 모니터링합니다.  
+ `Snapshot Transactions`. 활성 스냅샷 트랜잭션의 총 수를 모니터링합니다.  
   
- `Update Snapshot Transactions`입니다. 업데이트 작업을 수행하는 활성 스냅샷 트랜잭션의 총 수를 모니터링합니다.  
+ `Update Snapshot Transactions`. 업데이트 작업을 수행하는 활성 스냅샷 트랜잭션의 총 수를 모니터링합니다.  
   
- `NonSnapshot Version Transactions`입니다. 버전 레코드를 생성하는 활성 비스냅샷 트랜잭션의 총 수를 모니터링합니다.  
+ `NonSnapshot Version Transactions`. 버전 레코드를 생성하는 활성 비스냅샷 트랜잭션의 총 수를 모니터링합니다.  
   
 > [!NOTE]  
 > Update Snapshot Transactions와 NonSnapshot Version Transactions의 합은 버전 생성에 참여하는 트랜잭션의 총 수를 나타냅니다. Snapshot Transactions와 Update Snapshot Transactions 값의 차이를 보고 읽기 전용 스냅샷 트랜잭션의 수를 알 수 있습니다.  

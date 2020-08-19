@@ -1,4 +1,5 @@
 ---
+description: 스냅샷 폴더 보안 설정
 title: 스냅샷 폴더 보안 설정 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ ms.assetid: 3cd877d1-ffb8-48fd-a72b-98eb948aad27
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 6225b7dadf93b57eb29782c208b8e978461afa4c
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 8296f49540b474c3cc0e8c7cfc29c21639d66427
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923949"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88404509"
 ---
 # <a name="secure-the-snapshot-folder"></a>스냅샷 폴더 보안 설정
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]

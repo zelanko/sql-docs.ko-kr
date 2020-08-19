@@ -1,4 +1,5 @@
 ---
+description: 저장 프로시저를 사용하여 수동 추적 만들기
 title: 저장 프로시저를 사용하여 수동 추적 만들기
 ms.custom: seo-dt-2019
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: f6f47fa2-7c17-41d4-9f69-9be144d56832
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 84006b6585af92291e330a1ac486e44b13f9868a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d19212c30d7c9789b8e2ab3d42ccd3d4ac00bc0c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85751018"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88402709"
 ---
 # <a name="create-manual-traces-using-stored-procedures"></a>저장 프로시저를 사용하여 수동 추적 만들기
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

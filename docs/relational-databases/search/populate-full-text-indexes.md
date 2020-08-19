@@ -1,4 +1,5 @@
 ---
+description: 전체 텍스트 인덱스 채우기
 title: 전체 텍스트 인덱스 채우기 | Microsoft 문서
 ms.date: 03/14/2017
 ms.prod: sql
@@ -24,12 +25,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 90224fd31bcb4592055ca22890dd63996eadba34
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 77e6331623da6672b0b39ec7ca432201cd9a482b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85629267"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88404139"
 ---
 # <a name="populate-full-text-indexes"></a>전체 텍스트 인덱스 채우기
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

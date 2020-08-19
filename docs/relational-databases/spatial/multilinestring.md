@@ -1,4 +1,5 @@
 ---
+description: MultiLineString
 title: MultiLineString | Microsoft 문서
 ms.date: 03/03/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ ms.assetid: 95deeefe-d6c5-4a11-b347-379e4486e7b7
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5d357ccd46daa402d43d66df76d4955f9dc6349d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c7193675df9f142977325a1c198343497b9b7501
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85751085"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88403271"
 ---
 # <a name="multilinestring"></a>MultiLineString
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -78,7 +79,7 @@ SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid(), @g4.STIsValid();
   
 `@g4` 는 두 번째 **LineString** 인스턴스가 일정 간격으로 첫 번째 **LineString** 인스턴스와 겹치므로 유효하지 않습니다. 즉, 이 두 인스턴스는 무한한 점에서 접합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
 다음 예제에서는 SRID 0으로 두 개의 `geometry``MultiLineString` 요소를 포함하는 단순한 `LineString` 인스턴스를 만듭니다.  
   
 ```sql  
@@ -94,7 +95,7 @@ SET @g = geometry::Parse('MULTILINESTRING((0 2, 1 1), (1 0, 1 1))');
 SET @g.STSrid = 13;  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [STLength&#40;geometry 데이터 형식&#41;](../../t-sql/spatial-geometry/stlength-geometry-data-type.md)   
  [STIsClosed&#40;geometry 데이터 형식&#41;](../../t-sql/spatial-geometry/stisclosed-geometry-data-type.md)   
  [LineString](../../relational-databases/spatial/linestring.md)   

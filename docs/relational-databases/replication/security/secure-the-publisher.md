@@ -1,4 +1,5 @@
 ---
+description: 게시자 보안 설정
 title: 게시자 보안 설정 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ ms.assetid: 4513a18d-dd6e-407a-b009-49dc9432ec7e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: fee1586bc275aefa0100d072a02a8b1195f2aef1
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: feb4cf5708605303bfdb04fda3a8ce50b5339b7c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915160"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88404719"
 ---
 # <a name="secure-the-publisher"></a>게시자 보안 설정
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]

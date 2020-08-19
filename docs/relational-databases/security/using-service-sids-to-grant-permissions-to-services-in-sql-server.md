@@ -1,4 +1,5 @@
 ---
+description: 서비스 SID를 사용하여 SQL Server의 서비스에 사용 권한 부여
 title: 서비스 SID를 사용하여 서비스에 사용 권한 부여
 ms.custom: seo-dt-2019
 author: randomnote1
@@ -7,12 +8,12 @@ ms.date: 05/02/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.openlocfilehash: aeb813feb46c5895352e4da3ea748a3e2f12c1e2
-ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
+ms.openlocfilehash: f366af08581accf5ef1f1c8fc00830f6cc592537
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83807620"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88403569"
 ---
 # <a name="using-service-sids-to-grant-permissions-to-services-in-sql-server"></a>서비스 SID를 사용하여 SQL Server의 서비스에 사용 권한 부여
 
@@ -44,7 +45,7 @@ SQL Server는 [서비스별 보안 식별자(SID)](https://support.microsoft.com
 
 서비스 SID를 사용하면 특정 서비스에 사용 권한을 부여할 수 있습니다. 이 서비스는 실행 중일 때 권한이 부여된 리소스에만 액세스할 수 있습니다. 예를 들어 `HealthService`가 `LocalSystem`으로 실행 중이고 `View Server State`가 부여된 경우 `LocalSystem` 계정은 `HealthService`의 컨텍스트에서 실행 중일 때 `View Server State`에 대한 권한만 가집니다. 다른 프로세스가 SQL의 서버 상태에 `LocalSystem`으로 액세스하려고 하면 액세스가 거부됩니다.
 
-## <a name="examples"></a>예
+## <a name="examples"></a>예제
 
 ### <a name="a-create-a-service-sid"></a>A. 서비스 SID 만들기
 

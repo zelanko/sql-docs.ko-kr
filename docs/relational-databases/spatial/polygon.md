@@ -1,4 +1,5 @@
 ---
+description: Polygon
 title: Polygon | Microsoft 문서
 ms.date: 03/07/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ ms.assetid: b6a21c3c-fdb8-4187-8229-1c488454fdfb
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3522345ce61af05d3934bff0fb240f8b5100987a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 61062aae61a7653ea226ee56ecca51f0d99bb11a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85666893"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88403179"
 ---
 # <a name="polygon"></a>Polygon
 
@@ -106,7 +107,7 @@ SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid(), @g4.STIsValid(), @g5.S
   
  `@g1` 이 유효하지 않습니다. `@g2` 가 유효하지 않습니다. `@g3` 이 두 내부 링이 여러 연속 점에서 접하기 때문에 유효하지 않습니다. `@g4` 가 유효하지 않습니다. `@g5` 가 유효하지 않습니다. `@g6` 이 유효하지 않습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
 ### <a name="example-a"></a>예 A.  
 다음 예제에서는 간격이 있고 SRID가 10인 단순한 `geometry` `Polygon` 인스턴스를 만듭니다.
   
@@ -155,7 +156,7 @@ SELECT @g.ToString()
   
 위에서 반환된 geometry 인스턴스는 `Point(1 3)`입니다.  지정한 `Polygon` 이 `POLYGON((1 3, 1 5, 1 3, 1 3))` 이면 `MakeValid()` 에서 `LINESTRING(1 3, 1 5)`를 반환합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [STArea&#40;geometry 데이터 형식&#41;](../../t-sql/spatial-geometry/starea-geometry-data-type.md)   
  [STExteriorRing&#40;geometry 데이터 형식&#41;](../../t-sql/spatial-geometry/stexteriorring-geometry-data-type.md)   
  [STNumInteriorRing&#40;geometry 데이터 형식&#41;](../../t-sql/spatial-geometry/stnuminteriorring-geometry-data-type.md)   

@@ -1,4 +1,5 @@
 ---
+description: MultiPolygon
 title: MultiPolygon | Microsoft 문서
 ms.date: 03/03/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ ms.assetid: 2c5db358-2a16-49d9-aac5-a74e86813932
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b3f7ad93673d874c6627d495c23a89218fb7d08c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 34b9fb91eb57977c1d42c6edd157e25bd445d053
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85640378"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88403199"
 ---
 # <a name="multipolygon"></a>MultiPolygon
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -76,7 +77,7 @@ SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid();
   
 `@g2` 는 두 **Polygon** 인스턴스가 탄젠트 점에서만 접하므로 유효합니다. `@g3` 은 두 **Polygon** 인스턴스의 내부가 서로 겹치므로 유효하지 않습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
 ### <a name="example-a"></a>예 A.
 다음 예제에서는 `geometry``MultiPolygon` 인스턴스를 만드는 방법을 보여 주고 두 번째 구성 요소의 WKT(Well-Known Text)를 반환합니다.  
   
@@ -94,7 +95,7 @@ DECLARE @g geometry;
 SET @g = geometry::Parse('MULTIPOLYGON EMPTY');  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [Polygon](../../relational-databases/spatial/polygon.md)   
  [STArea&#40;geometry 데이터 형식&#41;](../../t-sql/spatial-geometry/starea-geometry-data-type.md)   
  [STCentroid&#40;geometry 데이터 형식&#41;](../../t-sql/spatial-geometry/stcentroid-geometry-data-type.md)   

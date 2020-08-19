@@ -1,4 +1,5 @@
 ---
+description: 의미 체계 검색 설치 및 구성
 title: 의미 체계 검색 설치 및 구성 | Microsoft 문서
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ ms.assetid: 2cdd0568-7799-474b-82fb-65d79df3057c
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: 50686881f950d16fb0fc7b5f8bb2dc5a3c63c1c1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 089d8f5a3c39cd29e04a342e19c29bfbafc7b712
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85629390"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88404079"
 ---
 # <a name="install-and-configure-semantic-search"></a>의미 체계 검색 설치 및 구성
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -91,7 +92,7 @@ GO
   
  이 코드 예제에서는 데이터베이스를 기본 위치에서 새 위치로 이동했다고 가정합니다.  
   
- **3. 의미 체계 언어 통계 데이터베이스를 등록합니다.** 
+ **3. 의미 체계 언어 통계 데이터베이스 등록** 
   
  저장 프로시저 [sp_fulltext_semantic_register_language_statistics_db&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-semantic-register-language-statistics-db-transact-sql.md)를 호출하고 연결 시 데이터베이스에 지정한 이름을 제공합니다.  
   

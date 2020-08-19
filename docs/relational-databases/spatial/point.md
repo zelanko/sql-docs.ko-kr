@@ -1,4 +1,5 @@
 ---
+description: Point
 title: 점 | Microsoft 문서
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ ms.assetid: 2a596ec4-8b2f-4962-bcb4-e5c8f77edad5
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2170d3a0f31fbeacc82e465743c1bc4c57427a09
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1b6f192756d89554b2592671b322434e3c1f7d81
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85640339"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88403109"
 ---
 # <a name="point"></a>Point
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85640339"
 ## <a name="geometry-data-type"></a>Geometry 데이터 형식  
  Geometry 데이터 형식의 점 유형은 *X* 와 *Y* 가 각각 생성 중인 지점의 X 및 Y 좌표를 나타내는 단일 위치를 나타냅니다. *SRID* 는 반환할 **geometry** 인스턴스의 Spatial Reference ID를 나타냅니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
 ### <a name="example-a"></a>예 A.
 다음 예제에서는 SRID가 0인 점(3, 4)을 나타내는 `geometry Point`인스턴스를 만듭니다.  
   
@@ -65,7 +66,7 @@ DECLARE @g geometry;
 SET @g = geometry::Parse('POINT(3 4 NULL NULL)');  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [MultiPoint](../../relational-databases/spatial/multipoint.md)   
  [STX&#40;geometry 데이터 형식&#41;](../../t-sql/spatial-geometry/stx-geometry-data-type.md)   
  [STY&#40;geometry 데이터 형식&#41;](../../t-sql/spatial-geometry/sty-geometry-data-type.md)   
