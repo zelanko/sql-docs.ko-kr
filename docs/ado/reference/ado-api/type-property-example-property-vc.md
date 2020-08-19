@@ -1,4 +1,5 @@
 ---
+description: Type 속성 예제(속성)(VC++)
 title: Type 속성 예제 (속성) (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a4e23508-fbf3-4468-be55-212e7238802b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 16f3e7152c939567b6fdcccf670a7df26334d588
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 00c0121f7418fa63280950191c445ff499dcb133
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759549"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441685"
 ---
 # <a name="type-property-example-property-vc"></a>Type 속성 예제(속성)(VC++)
 이 예제에서는 [Type](../../../ado/reference/ado-api/type-property-ado.md) 속성을 보여 줍니다. [속성](../../../ado/reference/ado-api/properties-collection-ado.md), [필드](../../../ado/reference/ado-api/fields-collection-ado.md)등과 같은 컬렉션의 이름 및 형식을 나열 하는 유틸리티의 모델입니다.  

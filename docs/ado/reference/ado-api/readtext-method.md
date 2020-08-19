@@ -1,4 +1,5 @@
 ---
+description: ReadText 메서드
 title: ReadText 메서드 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: be5a409e-cf87-4859-9ea5-713401755a77
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8afabd90ee6251be650036b285de0f08a3776723
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 1c36e4dde000e89b3fe19b258f5d307232b2cb69
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82754241"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442535"
 ---
 # <a name="readtext-method"></a>ReadText 메서드
 텍스트 [스트림](../../../ado/reference/ado-api/stream-object-ado.md) 개체에서 지정 된 수의 문자를 읽습니다.  

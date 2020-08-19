@@ -1,4 +1,5 @@
 ---
+description: Save 및 Open 메서드 예제 (VC + +)
 title: Save 및 Open 메서드 예제 (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 334ae655-8cac-48e6-8d00-1d28f3436e1e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 90360589fb15e9b71bdd8776a709d1464db428ff
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: e7de7de37cf298005e7a8bdf58d1712d8cb46919
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82755905"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442205"
 ---
 # <a name="save-and-open-methods-example-vc"></a>Save 및 Open 메서드 예제 (VC + +)
 다음 세 가지 예제에서는 [Save](../../../ado/reference/ado-api/save-method.md) 및 **Open** 메서드를 함께 사용할 수 있는 방법을 보여 줍니다.  

@@ -1,4 +1,5 @@
 ---
+description: SkipLine 메서드
 title: SkipLine 메서드 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0abc00fe-ee09-4c8e-b1f2-48ee9c5f3329
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f983646fd87be27fe9861f3a37b0e852a05ba06b
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 463de3740ce29b859732c5ddb7ba69d58069f93f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759879"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442104"
 ---
 # <a name="skipline-method"></a>SkipLine 메서드
 텍스트 [스트림을](../../../ado/reference/ado-api/stream-object-ado.md)읽을 때 한 줄 전체를 건너뜁니다.  

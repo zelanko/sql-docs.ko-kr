@@ -1,4 +1,5 @@
 ---
+description: ADO 용어 설명
 title: ADO 용어집 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0b6bd1cb1f5b0461236c0604bb5818d9dcbadd2a
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: aa3afd41a64b35cca0e3ffc4e676939dd2920ee9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765304"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441435"
 ---
 # <a name="ado-glossary"></a>ADO 용어 설명
 이 항목에서는 ADO와 관련 된 용어를 정의 합니다.  
@@ -100,7 +101,7 @@ ms.locfileid: "82765304"
  비교 연산자  
  두 식을 비교 하 고 부울 값을 반환 하는 연산자입니다.  
   
- ">" (보다 큼), " \< " (보다 작음), "=" (같음), ">=" (크거나 같음), "<=" (작거나 같음), "<>" (같지 않음) 또는 "like" (패턴 일치)로 표현 될 수 있는 조건 매개 변수입니다.  
+ ">" (보다 큼), " \<" (less than), "=" (equal), "> =" (크거나 같음), "<=" (작거나 같음), "<>" (같지 않음) 또는 "like" (패턴 일치)로 표현 될 수 있는 조건 매개 변수입니다.  
   
  구성 요소  
  데이터와 코드를 모두 캡슐화 하 고 공개적으로 사용 가능한 서비스의 잘 지정 된 집합을 제공 하는 개체입니다.  
@@ -160,7 +161,7 @@ ms.locfileid: "82765304"
   
 ## <a name="e"></a>E  
  열거형  
- 이름이 지정된 상수의 목록입니다. 열거 값은 고유할 필요가 없습니다. 그러나 각 값의 이름은 열거가 정의 된 범위 내에서 고유 해야 합니다. ADO에서는 숫자 매개 변수 및 반환 값에 대 한 열거형을 사용 하 여 ADO 코드에 의미를 추가 하 고 버전에서 버전으로 변경 될 수 있는 숫자 값을 개발자에 게 보호 합니다. 예를 들어 정적 **레코드 집합**을 열려면 **adopenstatic** 열거형 값을 사용 합니다.`Recordset.Open ,,adOpenStatic`  
+ 이름이 지정된 상수의 목록입니다. 열거 값은 고유할 필요가 없습니다. 그러나 각 값의 이름은 열거가 정의 된 범위 내에서 고유 해야 합니다. ADO에서는 숫자 매개 변수 및 반환 값에 대 한 열거형을 사용 하 여 ADO 코드에 의미를 추가 하 고 버전에서 버전으로 변경 될 수 있는 숫자 값을 개발자에 게 보호 합니다. 예를 들어 정적 **레코드 집합**을 열려면 **adopenstatic** 열거형 값을 사용 합니다. `Recordset.Open ,,adOpenStatic`  
   
  *열거 상수*라고도 합니다. *상수*도 참조 하세요.  
   
@@ -186,7 +187,7 @@ ms.locfileid: "82765304"
  ISAPI (인터넷 서버 응용 프로그래밍 인터페이스)  
  IIS (Microsoft® 인터넷 정보 서비스)를 실행 하는 Windows NT® Server/Windows 2000 서버와 같은 인터넷 서버용 함수 집합입니다.  
   
- Key  
+ 키  
  행을 고유 하 게 식별 하는 테이블의 열입니다. 테이블을 인덱싱하는 데 자주 사용 됩니다.  
   
 ## <a name="m"></a>M  

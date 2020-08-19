@@ -1,4 +1,5 @@
 ---
+description: Positions 컬렉션(ADO MD)
 title: 위치 컬렉션 (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5b9e7545-cf30-464d-80ef-5c99c8306bab
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 28d0305daa755a501ff1214103b77a94bccff7ea
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 80e1e50fbfa6697f3f05a8cc9cf7a9ada98b9031
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765024"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440705"
 ---
 # <a name="positions-collection-ado-md"></a>Positions 컬렉션(ADO MD)
 축의 점을 정의 하는 [위치](../../../ado/reference/ado-md-api/position-object-ado-md.md) 개체를 포함 합니다.  

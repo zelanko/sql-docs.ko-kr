@@ -1,4 +1,5 @@
 ---
+description: Type 속성 예제(속성)(VB)
 title: Type 속성 예제 (속성) (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2ee8e4c5-1d66-4a77-8892-6dad7e07e611
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b2308d02f5e220a315cfa97d3b24172fccc5d5bf
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 3f9c49ba9456af1f602fa5d2f399fc5172a5f1a4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82755601"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441695"
 ---
 # <a name="type-property-example-property-vb"></a>Type 속성 예제(속성)(VB)
 이 예제에서는 [Type](../../../ado/reference/ado-api/type-property-ado.md) 속성을 보여 줍니다. [속성](../../../ado/reference/ado-api/properties-collection-ado.md), [필드](../../../ado/reference/ado-api/fields-collection-ado.md)등과 같은 컬렉션의 이름 및 형식을 나열 하는 유틸리티의 모델입니다.  

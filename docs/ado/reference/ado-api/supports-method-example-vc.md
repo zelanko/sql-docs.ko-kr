@@ -1,4 +1,5 @@
 ---
+description: Supports 메서드 예제(VC++)
 title: 지원 메서드 예제 (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6e174179-9d95-41b9-b72b-6cdbdca6e255
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 242b9888239ee2261014e47a13a347cb3bfcd421
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 03f01a5b8e9779687effd7fad1f3f96cd6cdcfd4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765374"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441765"
 ---
 # <a name="supports-method-example-vc"></a>Supports 메서드 예제(VC++)
 이 예제에서는 [Supports](../../../ado/reference/ado-api/supports-method.md) 메서드를 사용 하 여 다른 커서 유형으로 열린 레코드 집합에서 지원 되는 옵션을 표시 합니다. 이 예제를 실행 하려면 DisplaySupport 함수가 필요 합니다.  

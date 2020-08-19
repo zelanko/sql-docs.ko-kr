@@ -1,4 +1,5 @@
 ---
+description: WillChangeRecord 및 RecordChangeComplete 이벤트(ADO)
 title: WillChangeRecord 및 RecordChangeComplete 이벤트 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: cbc369fd-63af-4a7d-96ae-efa91b78ca69
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c34aa614b7e152f21479e09a16fd2ed9d22febfc
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 0a6cb124e51c232b0a3a26e9eb84316e3bde7ecd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764484"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441525"
 ---
 # <a name="willchangerecord-and-recordchangecomplete-events-ado"></a>WillChangeRecord 및 RecordChangeComplete 이벤트(ADO)
 **WillChangeRecord** 이벤트는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 의 하나 이상의 레코드 (행)가 변경 되기 전에 호출 됩니다. **RecordChangeComplete** 이벤트는 하나 이상의 레코드가 변경 된 후에 호출 됩니다.  

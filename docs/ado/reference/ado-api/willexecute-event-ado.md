@@ -1,4 +1,5 @@
 ---
+description: WillExecute 이벤트(ADO)
 title: WillExecute 이벤트 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: dd755e46-f589-48a3-93a9-51ff998d44b5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ef47b4bac626d82754ce01685504b4a48303a4b4
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: dd217597018b4cb5aa4764955fdd1795371a040c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764454"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441475"
 ---
 # <a name="willexecute-event-ado"></a>WillExecute 이벤트(ADO)
 **WillExecute** 이벤트는 연결에서 보류 중인 명령이 실행 되기 직전에 호출 됩니다.  
@@ -34,7 +35,7 @@ WillExecute Source, CursorType, LockType, Options, adStatus, pCommand, pRecordse
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- *소스*  
+ *원본*  
  SQL 명령이 나 저장 프로시저 이름이 포함 된 **문자열** 입니다.  
   
  *CursorType*  
@@ -43,7 +44,7 @@ WillExecute Source, CursorType, LockType, Options, adStatus, pCommand, pRecordse
  *LockType*  
  열 **레코드 집합** 의 잠금 유형을 포함 하는 [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md) 입니다. 이 매개 변수를 사용 하면 **RecordsetOpen** 작업을 수행 하는 동안 잠금을 모든 형식으로 변경할 수 있습니다. 다른 작업의 경우에는 *LockType* 가 무시 됩니다.  
   
- *Options*  
+ *옵션*  
  명령을 실행 하거나 **레코드 집합**을 여는 데 사용할 수 있는 옵션을 나타내는 **Long** 값입니다.  
   
  *adStatus*  
@@ -59,7 +60,7 @@ WillExecute Source, CursorType, LockType, Options, adStatus, pCommand, pRecordse
  이 이벤트 알림이 적용 되는 [연결 개체 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md) 개체입니다.  
   
 ## <a name="remarks"></a>설명  
- **WillExecute** 이벤트는 연결로 인해 발생할 수 있습니다.  [Execute 메서드 (Ado 연결)](../../../ado/reference/ado-api/execute-method-ado-connection.md), [EXECUTE 메서드 (ado 명령)](../../../ado/reference/ado-api/execute-method-ado-command.md)또는 [Open 메서드 (Ado 레코드 집합)](../../../ado/reference/ado-api/open-method-ado-recordset.md) 메서드 *pconnection* 매개 변수는 항상 **연결** 개체에 대 한 유효한 참조를 포함 해야 합니다. 이벤트가 **Execute**로 인해 발생 한 경우 *Precordset* 및 *Precordset* 매개 변수는 **Nothing**으로 설정 됩니다. 이 이벤트가 **레코드 집합**으로 인 한 것 이면 *precordset* 매개 변수는 **레코드 집합** 개체를 참조 하 고 *precordset* 매개 변수는 **Nothing**으로 설정 됩니다. **명령이 Execute**로 인해 발생 한 경우 *pcommand* 매개 변수는 **command** 개체를 참조 하 고 *pcommand* 매개 변수는 **Nothing**으로 설정 됩니다.  
+ **WillExecute** 이벤트는 연결로 인해 발생할 수 있습니다.  [Execute 메서드 (Ado 연결)](../../../ado/reference/ado-api/execute-method-ado-connection.md), [EXECUTE 메서드 (ado 명령)](../../../ado/reference/ado-api/execute-method-ado-command.md)또는 [Open 메서드 (Ado 레코드 집합)](../../../ado/reference/ado-api/open-method-ado-recordset.md) 메서드 *pconnection* 매개 변수는 항상 **연결** 개체에 대 한 유효한 참조를 포함 해야 합니다. 이벤트가 **Connection.Exe귀여운**때문 인 경우 *Precordset* 및 *Precordset* 매개 변수는 **Nothing**으로 설정 됩니다. 이 이벤트가 **레코드 집합**으로 인 한 것 이면 *precordset* 매개 변수는 **레코드 집합** 개체를 참조 하 고 *precordset* 매개 변수는 **Nothing**으로 설정 됩니다. **Command.Exe귀여운**인해 이벤트가 발생 하는 경우 *pcommand* 매개 변수는 **Command** 개체를 참조 하 고 *pcommand* 매개 변수는 **Nothing**으로 설정 됩니다.  
   
  **WillExecute** 를 사용 하면 보류 중인 실행 매개 변수를 검사 하 고 수정할 수 있습니다. 이 이벤트는 보류 중인 명령이 취소 된 요청을 반환할 수 있습니다.  
   

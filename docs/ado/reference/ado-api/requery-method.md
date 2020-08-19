@@ -1,4 +1,5 @@
 ---
+description: Requery 메서드
 title: Requery 메서드 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d81ab76f-1aa8-4ccf-92ec-b65254dc3ea1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 29b2d0cba996e3f41a12df93babe8d9b86a8fbeb
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: b13d618bf5b9b2c17a4fd93b08f3a861cb958178
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82756521"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442325"
 ---
 # <a name="requery-method"></a>Requery 메서드
 개체의 기반이 되는 쿼리를 다시 실행 하 여 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체의 데이터를 업데이트 합니다.  
@@ -34,7 +35,7 @@ recordset.Requery Options
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- *Options*  
+ *옵션*  
  (선택 사항) 이 작업에 영향을 주는 [Executeoptionenum](../../../ado/reference/ado-api/executeoptionenum.md) 및 [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) 값이 포함 된 비트 마스크입니다.  
   
 > [!NOTE]

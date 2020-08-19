@@ -1,4 +1,5 @@
 ---
+description: ResyncEnum
 title: ResyncEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d3df2c90-e570-4c40-a79a-25b3448a009c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a53d2c64e961c1b46b2d170de712493cc06f3910
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: c379ca2a3f68b195c0020d0e89009d2715da5850
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82756236"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442255"
 ---
 # <a name="resyncenum"></a>ResyncEnum
 다시 [동기화](../../../ado/reference/ado-api/resync-method.md)를 호출 하 여 기본 값을 덮어쓸지 여부를 지정 합니다.  

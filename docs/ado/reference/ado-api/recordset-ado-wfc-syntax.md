@@ -1,4 +1,5 @@
 ---
+description: 레코드 집합(ADO - WFC 구문)
 title: 레코드 집합 (ADO-WFC 구문) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: bd1f571e-007f-432e-ada1-5c3e436c1a22
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ab3bdd34945eb83b375b4c77968dc9408ed0f448
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: a1c116d2cece30da93cf167e7952096dbf019666
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761881"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442435"
 ---
 # <a name="recordset-ado---wfc-syntax"></a>레코드 집합(ADO - WFC 구문)
 ## <a name="package-commswfcdata"></a>package com.  

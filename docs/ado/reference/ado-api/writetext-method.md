@@ -1,4 +1,5 @@
 ---
+description: WriteText 메서드
 title: WriteText 메서드 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7a669048-13f4-4574-a2b1-985e089729d5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3ee7f4b99b40b6aec3e384f9f5739f8f5d2280f4
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: b561c8d798236fa0c6df262e2fc2db4c4729cb90
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764414"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441495"
 ---
 # <a name="writetext-method"></a>WriteText 메서드
 지정 된 텍스트 문자열을 [스트림](../../../ado/reference/ado-api/stream-object-ado.md) 개체에 씁니다.  
@@ -37,7 +38,7 @@ Stream.WriteText Data, Options
  *Data*  
  쓸 문자 텍스트를 포함 하는 **문자열** 값입니다.  
   
- *Options*  
+ *옵션*  
  (선택 사항) 지정 된 문자열의 끝에 줄 구분 기호 문자를 써야 하는지 여부를 지정 하는 [Streamwriteenum](../../../ado/reference/ado-api/streamwriteenum.md) 값입니다.  
   
 ## <a name="remarks"></a>설명  

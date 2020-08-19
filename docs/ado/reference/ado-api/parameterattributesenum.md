@@ -1,4 +1,5 @@
 ---
+description: ParameterAttributesEnum
 title: ParameterAttributesEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7ef6c728-5eda-4bde-8052-02d2db1d2cfe
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 174cbfc9ded88e4c5465ef640a23d17c9edb5ac6
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: e97ec8a7b969311cec0a535a69a259c495d93f0e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763414"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442775"
 ---
 # <a name="parameterattributesenum"></a>ParameterAttributesEnum
 [매개 변수](../../../ado/reference/ado-api/parameter-object.md) 개체의 특성을 지정 합니다.  

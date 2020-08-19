@@ -1,4 +1,5 @@
 ---
+description: Version 속성 예제(VC++)
 title: Version 속성 예제 (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2440b6ff-2536-497c-a5f4-41db0cf1945e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5b2ed55f02e3cbabfa1e14aadf7c53d923d85523
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 7ddac29da277027f1cc89a8c078ac4d072c369b6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758599"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441545"
 ---
 # <a name="version-property-example-vc"></a>Version 속성 예제(VC++)
 이 예에서는 [Connection](../../../ado/reference/ado-api/connection-object-ado.md) 개체의 [Version](../../../ado/reference/ado-api/version-property-ado.md) 속성을 사용 하 여 현재 ADO 버전을 표시 합니다. 또한 다음과 같은 몇 가지 동적 속성을 사용 하 여 표시 합니다.  

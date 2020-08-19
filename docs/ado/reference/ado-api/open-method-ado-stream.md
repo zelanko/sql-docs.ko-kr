@@ -1,4 +1,5 @@
 ---
+description: Open 메서드(ADO 스트림)
 title: Open 메서드 (ADO 스트림) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d26f48fb-904e-4932-a245-3b4332ca1600
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d59fcbbd7edea7ac87b2c080d27160cb98732759
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: baa3cb3eb5b2284a606362e31e0f185ab768c5f8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762161"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442955"
 ---
 # <a name="open-method-ado-stream"></a>Open 메서드(ADO 스트림)
 이진 또는 텍스트 데이터 스트림을 조작 하는 [Stream](../../../ado/reference/ado-api/stream-object-ado.md) 개체를 엽니다.  
@@ -34,7 +35,7 @@ Stream.Open Source, Mode , OpenOptions, UserName, Password
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- *소스*  
+ *원본*  
  (선택 사항) **스트림에**대 한 데이터 원본을 지정 하는 **변형** 값입니다. *원본* 에는 전자 메일 또는 파일 시스템과 같이 잘 알려진 트리 구조의 기존 노드를 가리키는 절대 URL 문자열이 포함 될 수 있습니다. Url은 url 키워드 ("url =*체계*://*서버* / *폴더*")를 사용 하 여 지정 해야 합니다. 또는 *원본* 에 이미 열려 있는 [record](../../../ado/reference/ado-api/record-object-ado.md) 개체에 대 한 참조가 포함 되어 있을 수 있습니다. 그러면 **레코드**와 연결 된 기본 스트림이 열립니다. *Source* 가 지정 되지 않은 경우 기본적으로 기본 소스와 연결 된 **스트림이** 인스턴스화되고 열립니다. URL 스키마 및 연결 된 공급자에 대 한 자세한 내용은 [절대 및 상대 url](../../../ado/guide/data/absolute-and-relative-urls.md)을 참조 하세요.  
   
  *모드*  
@@ -43,7 +44,7 @@ Stream.Open Source, Mode , OpenOptions, UserName, Password
  *OpenOptions*  
  (선택 사항) [StreamOpenOptionsEnum](../../../ado/reference/ado-api/streamopenoptionsenum.md) 값입니다. 기본값은 **Adopenstreamunspecified 되지 않음**입니다.  
   
- *이름*  
+ *UserName*  
  (선택 사항) 필요한 경우 **스트림** 개체에 액세스 하는 사용자 id를 포함 하는 **문자열** 값입니다.  
   
  *암호*  

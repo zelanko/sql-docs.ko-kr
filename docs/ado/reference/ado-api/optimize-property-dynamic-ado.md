@@ -1,4 +1,5 @@
 ---
+description: Optimize 속성-동적(ADO)
 title: Optimize 속성-동적 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a491c4ce-2b04-4c84-be83-3846bde8d16b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8d27195b00d1e1867f6bf037cd6c20500ec35e84
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 9ce2367d550cc8e420c4a1a9bf9fd10fff9e94e7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762086"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442915"
 ---
 # <a name="optimize-property-dynamic-ado"></a>Optimize 속성-동적(ADO)
 [필드](../../../ado/reference/ado-api/field-object.md)에 인덱스를 만들지 여부를 지정 합니다.  
@@ -33,7 +34,7 @@ ms.locfileid: "82762086"
   
  **Optimize** 는 [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) 속성이 **AdUseClient**로 설정 된 경우 [Field](../../../ado/reference/ado-api/field-object.md) object [Properties](../../../ado/reference/ado-api/properties-collection-ado.md) 컬렉션에 추가 되는 동적 속성입니다.  
   
-## <a name="usage"></a>사용량  
+## <a name="usage"></a>사용  
   
 ```  
 Dim rs As New Recordset  

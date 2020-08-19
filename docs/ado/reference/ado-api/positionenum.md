@@ -1,4 +1,5 @@
 ---
+description: PositionEnum
 title: PositionEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e69af0a5-3405-4b72-9c6e-6b188ff746fd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6a61dae9888628302da3326a1465f4182c49e39c
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 326fc4f1b9b77c8a4470fedc7d55f2d379aff6f3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243224"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442715"
 ---
 # <a name="positionenum"></a>PositionEnum
 레코드 [집합](../../../ado/reference/ado-api/recordset-object-ado.md)내에서 레코드 포인터의 현재 위치를 지정 합니다.  

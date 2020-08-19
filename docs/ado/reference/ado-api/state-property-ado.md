@@ -1,4 +1,5 @@
 ---
+description: State 속성(ADO)
 title: State 속성 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0b993bac-2653-40b1-bcbb-5b57b6aae2bf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f4fa19bf21764437d3713c434e288b3bb3a3d25d
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: ca8a2421f15e5999347b0b7879f3faf707598ba2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242573"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441985"
 ---
 # <a name="state-property-ado"></a>State 속성(ADO)
 개체의 상태가 열리거나 닫혀 있는지 여부에 관계 없이 모든 개체를 나타냅니다. 개체가 비동기 메서드를 실행 하는 경우 개체의 현재 상태에서 연결, 실행 또는 검색 하는지 여부를 나타냅니다.  

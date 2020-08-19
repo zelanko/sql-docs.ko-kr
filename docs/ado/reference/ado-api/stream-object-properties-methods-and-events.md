@@ -1,4 +1,5 @@
 ---
+description: Stream 개체 속성, 메서드 및 이벤트
 title: Stream 개체 속성, 메서드 및 이벤트 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9b0eed90-c38c-4aa6-9040-5827f8c46b94
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c79f2b1e35b263c61f9af5b3e309b9b72a930d53
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: bf7ccf7af3dfb99845a61c45d0329e28b5570ebf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759629"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441855"
 ---
 # <a name="stream-object-properties-methods-and-events"></a>Stream 개체 속성, 메서드 및 이벤트
 ## <a name="properties"></a>속성  

@@ -1,4 +1,5 @@
 ---
+description: 레코드 집합 (#import를 사용 하는 Visual C++ 구문 인덱스)
 title: 레코드 집합 (#import를 사용 하는 Visual C++ 구문 인덱스) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: fe41da71-b607-4329-94da-60964b8efcdc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 59e2205ccedd2b68194a92d30291e225ab7cc0b5
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: b4fd33dedfaa68b77cfb1dcb71e8931f3b8f496f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761851"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442405"
 ---
 # <a name="recordset-visual-c-syntax-index-with-import"></a>레코드 집합 (#import를 사용 하는 Visual C++ 구문 인덱스)
 ## <a name="methods"></a>메서드  

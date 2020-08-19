@@ -1,4 +1,5 @@
 ---
+description: ADO MD 속성
 title: ADO MD 속성 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 11ca7e42-ab6a-47da-ab32-55abab663069
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 70153e52186ac4f15629b32cca0c303fc81209a9
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: e05befd8346dd66337be0b876d493b9b5a6fed19
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242533"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441337"
 ---
 # <a name="ado-md-properties"></a>ADO MD 속성
 
-|속성|Description|  
+|속성|설명|  
 |-|-|  
 |[ActiveConnection](../../../ado/reference/ado-md-api/activeconnection-property-ado-md.md)|현재 셀 집합 또는 카탈로그가 현재 속해 있는 ADO **연결** 개체를 나타냅니다.|  
 |[캡션](../../../ado/reference/ado-md-api/caption-property-ado-md.md)|**수준** 또는 **멤버** 개체를 표시할 때 사용할 텍스트 캡션을 나타냅니다.|  
@@ -45,8 +46,8 @@ ms.locfileid: "87242533"
 |[Parent](../../../ado/reference/ado-md-api/parent-property-ado-md.md)|계층에서 현재 멤버의 부모인 멤버를 나타냅니다.|  
 |[ParentSameAsPrev](../../../ado/reference/ado-md-api/parentsameasprev-property-ado-md.md)|이 위치 멤버의 부모가 바로 앞에 있는 멤버의 부모와 같은지 여부를 나타냅니다.|  
 |[원본](../../../ado/reference/ado-md-api/source-property-ado-md.md)|셀 집합의 데이터 원본을 나타냅니다.|  
-|[상태](../../../ado/reference/ado-md-api/state-property-ado-md.md)|셀 집합의 현재 상태를 나타냅니다.|  
-|[형식](../../../ado/reference/ado-md-api/type-property-ado-md.md)|현재 멤버의 형식을 나타냅니다.|  
+|[State](../../../ado/reference/ado-md-api/state-property-ado-md.md)|셀 집합의 현재 상태를 나타냅니다.|  
+|[유형](../../../ado/reference/ado-md-api/type-property-ado-md.md)|현재 멤버의 형식을 나타냅니다.|  
 |[UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md)|현재 개체의 모호 하지 않은 이름을 나타냅니다.|  
 |[값](../../../ado/reference/ado-md-api/value-property-ado-md.md)|현재 셀의 값을 나타냅니다.|  
   

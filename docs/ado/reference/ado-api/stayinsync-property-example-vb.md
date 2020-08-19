@@ -1,4 +1,5 @@
 ---
+description: StayInSync 속성 예제(VB)
 title: StayInSync 속성 예제 (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b682bcc3-04b3-42b0-86f4-c17e0cd29baf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5fa4c09a56f164ca8c0d2b6d6222b9d827c1ee45
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 13e1026b95386cb051aba0468d371937c4ed52d6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759679"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441915"
 ---
 # <a name="stayinsync-property-example-vb"></a>StayInSync 속성 예제(VB)
 이 예에서는 [StayInSync](../../../ado/reference/ado-api/stayinsync-property.md) 속성을 통해 계층적 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)의 행에 쉽게 액세스 하는 방법을 보여 줍니다.  

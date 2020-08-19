@@ -1,4 +1,5 @@
 ---
+description: Write 메서드
 title: Write 메서드 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 02982e6a-ac5f-4af2-b82e-ce12534b84b2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 911a9dfb21c054dc95c54d9fb429d628d8e01fa4
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: b43e0f505a3c4455768c32abd93dbc89afe04a82
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764434"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441465"
 ---
 # <a name="write-method"></a>Write 메서드
 [스트림](../../../ado/reference/ado-api/stream-object-ado.md) 개체에 이진 데이터를 씁니다.  
@@ -34,7 +35,7 @@ Stream.Write Buffer
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- *버퍼*  
+ *Buffer*  
  쓸 바이트 배열을 포함 하는 **Variant** 입니다.  
   
 ## <a name="remarks"></a>설명  

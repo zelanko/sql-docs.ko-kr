@@ -1,4 +1,5 @@
 ---
+description: StringFormatEnum
 title: StringFormatEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 28f7d1ec-092b-4323-a39d-d3f882c6c81a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 67814e1236bc10e9b008d1684586796dd62950b4
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: d7831d7be2df28d31c88216e67e16efbf611b858
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759559"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441785"
 ---
 # <a name="stringformatenum"></a>StringFormatEnum
 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 을 문자열로 검색할 때 형식을 지정 합니다.  

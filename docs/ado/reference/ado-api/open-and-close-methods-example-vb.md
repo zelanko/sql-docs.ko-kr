@@ -1,4 +1,5 @@
 ---
+description: Open 및 Close 메서드 예제(VB)
 title: Open 및 Close 메서드 예제 (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1311d561-0e86-40f5-8cbc-ad8f13e626d1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b9d46d7ec04d5b19331ecda3b887e59862cdcf48
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: bbfd00f1cda9fcfc38a7b13b39e1f3e08a24b209
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762291"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443015"
 ---
 # <a name="open-and-close-methods-example-vb"></a>Open 및 Close 메서드 예제(VB)
 이 예에서는 열려 있는 [레코드 집합과](../../../ado/reference/ado-api/recordset-object-ado.md) [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체 모두에서 **Open** 및 [Close](../../../ado/reference/ado-api/close-method-ado.md) 메서드를 사용 합니다.  

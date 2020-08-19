@@ -1,4 +1,5 @@
 ---
+description: 속성 개체(ADO)
 title: Property 개체 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b2a4767c-03c7-4935-a3bc-df3e1a38a009
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d2f4a8b6cdeabcbab0802a0052ed697af70ef45a
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 8901f4b0f5372063b8aff88a47a7fddae13e66d7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759969"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442625"
 ---
 # <a name="property-object-ado"></a>속성 개체(ADO)
 공급자에 의해 정의 된 ADO 개체의 동적 특성을 나타냅니다.  

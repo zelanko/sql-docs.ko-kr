@@ -1,4 +1,5 @@
 ---
+description: Open 및 Close 메서드 예제(VBScript)
 title: Open 및 Close 메서드 예제 (VBScript) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 66eca011-e258-4d8f-bd67-e017bcf0871b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 04273e3aec32e45b49e1ad9addc3cd9467579bf3
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: bb26a778e3d484ba024a5a38564d9e3abc0a3ef0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762271"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443005"
 ---
 # <a name="open-and-close-methods-example-vbscript"></a>Open 및 Close 메서드 예제(VBScript)
 이 예에서는 열려 있는 [레코드 집합과](../../../ado/reference/ado-api/recordset-object-ado.md) [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체 모두에서 [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) 및 [Close](../../../ado/reference/ado-api/close-method-ado.md) 메서드를 사용 합니다.  

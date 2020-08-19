@@ -1,4 +1,5 @@
 ---
+description: Save 및 Open 메서드 예제(VB)
 title: Save 및 Open 메서드 예제 (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ddccdf58-9c57-4c9b-8b7f-0cf193f955fb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 37237094c3778fad9c45a2ccad3eebdce02a62bc
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 048fbb83c8a6b9de150642f6094a1f07e0c1e11e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82755922"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442225"
 ---
 # <a name="save-and-open-methods-example-vb"></a>Save 및 Open 메서드 예제(VB)
 다음 세 가지 예제에서는 [Save](../../../ado/reference/ado-api/save-method.md) 및 [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) 메서드를 함께 사용할 수 있는 방법을 보여 줍니다.  
@@ -84,7 +85,7 @@ End Sub
 'EndSaveVB  
 ```  
   
- 이 시점에서 대상에 도달 했습니다. 연결 되지 않은 로컬 **레코드 집합**으로 ***Authors*** 테이블에 액세스 합니다. 저장 된 파일에 액세스 하는 데 사용 하는 컴퓨터에 **Mspersist** 공급자 (a:\Pubs.xml.)가 있어야 합니다.  
+ 이 시점에서 대상에 도달 했습니다. 연결 되지 않은 로컬 **레코드 집합**으로 ***Authors*** 테이블에 액세스 합니다. a:\Pubs.xml 저장 된 파일에 액세스 하는 데 사용 하는 컴퓨터에 **Mspersist** 공급자가 있어야 합니다.  
   
 ```  
 Attribute VB_Name = "Save"  

@@ -1,4 +1,5 @@
 ---
+description: ADO MD 열거 상수
 title: ADO MD 열거 상수 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: d9e66999-96f3-48ec-93b2-d9442da56d9b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 450f1d8748b6f9300a353892f3ca321c82732602
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 77706fca8df07e35acb2c03f79af8a6684531d21
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765264"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441385"
 ---
 # <a name="ado-md-enumerated-constants"></a>ADO MD 열거 상수
 디버깅을 지원 하기 위해 ADO MD 열거형 상수에는 각 상수에 대 한 값이 나열 됩니다. 그러나이 값은 전적으로 advise 이며 ADO MD의 릴리스 간에 변경 될 수 있습니다. 코드는 열거 상수의 실제 값이 아닌 이름에만 의존 해야 합니다.  

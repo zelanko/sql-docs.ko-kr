@@ -1,4 +1,5 @@
 ---
+description: PersistFormatEnum
 title: PersistFormatEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ebe1a2ab-e9f1-43a2-8f94-b190c9613d70
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 909fd5a292f5f071ec287aba9c8e3f6dc3881ef3
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: c5730ca6a0d0bae791dce9327e365a9a38a9857f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763364"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442735"
 ---
 # <a name="persistformatenum"></a>PersistFormatEnum
 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)을 저장할 형식을 지정 합니다.  
@@ -38,7 +39,7 @@ ms.locfileid: "82763364"
 |상수|  
 |--------------|  
 |AdoEnums. ADTG|  
-|AdoEnums|  
+|AdoEnums.PersistFormat.XML|  
   
 ## <a name="applies-to"></a>적용 대상  
  [Save 메서드](../../../ado/reference/ado-api/save-method.md)

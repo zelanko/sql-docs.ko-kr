@@ -1,4 +1,5 @@
 ---
+description: SearchDirectionEnum
 title: SearchDirectionEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 81272ae3-2165-4f4e-adfe-9ede0368cb17
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7e2928f1817b994c3101182677b5b2fcad9a4b1d
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 918261998fec061f8f977a8a2dfc614166f564f6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82755781"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442165"
 ---
 # <a name="searchdirectionenum"></a>SearchDirectionEnum
 레코드 [집합](../../../ado/reference/ado-api/recordset-object-ado.md)내에서 레코드 검색 방향을 지정 합니다.  

@@ -1,4 +1,5 @@
 ---
+description: Cellset 개체(ADO MD)
 title: Cellset 개체 (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5e2452c0-cac0-49b2-8099-836c35794d50
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e50fb60fbde205171c066380a2c2023d485a5a09
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 2f30243440d9b09194bd3cd1c7ed5a162ad8de34
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761771"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441215"
 ---
 # <a name="cellset-object-ado-md"></a>Cellset 개체(ADO MD)
 다차원 쿼리 결과를 나타냅니다. 큐브 또는 다른 셀 집합에서 선택 된 셀의 컬렉션입니다.  

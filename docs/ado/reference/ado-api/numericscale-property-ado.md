@@ -1,4 +1,5 @@
 ---
+description: NumericScale 속성(ADO)
 title: NumericScale 속성 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 29a02992-64be-4fcd-be13-445cba205893
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 38a44aeac4a2238e7d0087ec458df9f77086aa0c
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: ce13556c013c527ec16f183001b6042ed501398d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242633"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443055"
 ---
 # <a name="numericscale-property-ado"></a>NumericScale 속성(ADO)
 [매개 변수](../../../ado/reference/ado-api/parameter-object.md) 또는 [필드](../../../ado/reference/ado-api/field-object.md) 개체에서 숫자 값의 소수 자릿수를 나타냅니다.  

@@ -1,4 +1,5 @@
 ---
+description: Parent 속성(ADO MD)
 title: Parent 속성 (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 32c278c1-d8e1-4bb7-9ecd-2fbfdffee34b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 94e6e920d6ab44265c42b9ca26e2410c43c3659e
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 4c599bd75388dc0b2ea7e4a5c16f495817f917ba
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765054"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440795"
 ---
 # <a name="parent-property-ado-md"></a>Parent 속성(ADO MD)
 계층에서 현재 [멤버](../../../ado/reference/ado-md-api/member-object-ado-md.md) 의 부모인 멤버를 나타냅니다.  

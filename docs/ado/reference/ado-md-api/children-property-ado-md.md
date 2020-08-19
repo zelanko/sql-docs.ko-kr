@@ -1,4 +1,5 @@
 ---
+description: Children 속성(ADO MD)
 title: Children 속성 (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 61d36468-1ccd-467a-9cb5-17d0bfacc766
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7e52923ae428ab7b0e633049594781bd4456f9df
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 144e230b10ac6a73f88be7ab85e779bcda5f2cd0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764394"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441185"
 ---
 # <a name="children-property-ado-md"></a>Children 속성(ADO MD)
 현재 [멤버가](../../../ado/reference/ado-md-api/member-object-ado-md.md) 계층의 부모인 [멤버](../../../ado/reference/ado-md-api/members-collection-ado-md.md) 컬렉션을 반환 합니다.  

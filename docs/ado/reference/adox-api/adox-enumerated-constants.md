@@ -1,4 +1,5 @@
 ---
+description: ADOX 열거 상수
 title: ADOX 열거 상수 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9d91f511-d46f-44ef-97ef-77bf93836186
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 84a03af49152bc305f62aceb149d904ef0acf9a0
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 555c1a83946cdb764f77085b31e83935e4fa2a2d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764144"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440595"
 ---
 # <a name="adox-enumerated-constants"></a>ADOX 열거 상수
 디버깅을 지원 하기 위해 ADOX 열거 상수에는 각 상수에 대 한 값이 나열 됩니다. 그러나이 값은 전적으로 advise 이며 ADOX의 한 릴리스에서 다른 릴리스로 변경 될 수 있습니다. 코드는 열거 상수의 실제 값이 아닌 이름에만 의존 해야 합니다.  

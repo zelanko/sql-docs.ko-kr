@@ -1,4 +1,5 @@
 ---
+description: Supports 메서드 예제(VB)
 title: Supports 메서드 예제 (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 135aab26-ff5c-4fd9-910f-65cdead0b47e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e5b9fd4327a25af3faf87b966c510d1d4016c89d
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 4042f1a7bffc935333232a6267d06d905a34545f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765384"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441775"
 ---
 # <a name="supports-method-example-vb"></a>Supports 메서드 예제(VB)
 이 예제에서는 [Supports](../../../ado/reference/ado-api/supports-method.md) 메서드를 사용 하 여 다른 커서 유형으로 열린 레코드 집합에서 지원 되는 옵션을 표시 합니다. 이 절차를 실행 하려면 DisplaySupport 절차가 필요 합니다.  

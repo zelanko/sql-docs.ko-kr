@@ -1,4 +1,5 @@
 ---
+description: ADO MD 컬렉션
 title: ADO MD 컬렉션 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 01c53429-ccc9-4077-b738-d3c1f43bd76c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f04c25b012ba8ae84a9012beba7d3a664fbaa4d4
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 39991f68305c1769201dd927caf79b6cc91975a0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243144"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441395"
 ---
 # <a name="ado-md-collections"></a>ADO MD 컬렉션
 

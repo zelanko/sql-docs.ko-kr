@@ -1,4 +1,5 @@
 ---
+description: Properties 컬렉션(ADO)
 title: Properties 컬렉션 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1d539aa8-ce0d-4418-ab03-8d0a3c1e9d82
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9d3d6d019d00f683826a417aa73c216e8fca9565
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 4b9915366d96975ffd02f6fae7ddd25ce35c81f4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759989"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442655"
 ---
 # <a name="properties-collection-ado"></a>Properties 컬렉션(ADO)
 개체의 특정 인스턴스에 대 한 모든 [속성](../../../ado/reference/ado-api/property-object-ado.md) 개체를 포함 합니다.  

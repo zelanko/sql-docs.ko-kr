@@ -1,4 +1,5 @@
 ---
+description: Stream 속성
 title: Stream 속성 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 4a44f9f6-0265-4c00-8def-d85b6af923b1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cdcd6d9fb734f50c110a3e59e9d24874ea71b974
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 7b00d145dfd718c64bbd3a87d6df353114afcb2d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759601"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441845"
 ---
 # <a name="stream-property"></a>Stream 속성
 **ADOStreamConstruction** 개체의/에서 OLE DB **Stream** 개체를 가져오거나 설정 합니다.  

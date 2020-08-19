@@ -1,4 +1,5 @@
 ---
+description: NumericScale 및 Precision 속성 ADO 코드 예제 (VB)
 title: NumericScale 및 Precision 속성 ADO 코드 예제 (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9c1e2322-c225-49d1-a120-a343f23cea73
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3a5f34efc7063e4c644734f770bd3fe80f2b51de
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: 0fdeaafe1a6f4362eb6a4bc912ce9267d179fe9c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942505"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443065"
 ---
 # <a name="numericscale-and-precision-properties-example-vb"></a>NumericScale 및 Precision 속성 예제(VB)
 이 예에서는 [NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md) 및 [precision](../../../ado/reference/ado-api/precision-property-ado.md) 속성을 사용 하 여 ***Pubs*** 데이터베이스의 ***할인율*** 테이블에 있는 필드의 숫자 소수 자릿수와 전체 자릿수를 표시 합니다.  

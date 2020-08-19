@@ -1,4 +1,5 @@
 ---
+description: Status 속성(ADO 필드)
 title: Status 속성 (ADO 필드) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8cd1f7f4-0a3a-4f07-b8ba-6582e70140ad
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b2880c63e42c1d64526db053a61f2824e6ac8305
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 9ef4e7b00823dcf9ce9da341ced08418a55a4bc8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759719"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441955"
 ---
 # <a name="status-property-ado-field"></a>Status 속성(ADO 필드)
 [필드](../../../ado/reference/ado-api/field-object.md) 개체의 상태를 나타냅니다.  

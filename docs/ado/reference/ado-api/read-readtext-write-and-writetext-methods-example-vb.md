@@ -1,4 +1,5 @@
 ---
+description: Read, ReadText, Write 및 WriteText 메서드 예제 (VB)
 title: Read, ReadText, Write 및 WriteText 메서드 예제 (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 699b73f7-04f9-4d46-94b2-6cb12be6de56
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a2a35d2f8e584843aa4395e63112de0211a70a7d
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: de640c5348b43fa7da5ad7e10b2dfa404f9ff4b9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82754244"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442545"
 ---
 # <a name="read-readtext-write-and-writetext-methods-example-vb"></a>Read, ReadText, Write 및 WriteText 메서드 예제 (VB)
 이 예제에서는 텍스트 상자의 내용을 텍스트 [스트림과](../../../ado/reference/ado-api/stream-object-ado.md) 이진 **스트림으로**읽는 방법을 보여 줍니다. 표시 되는 다른 속성 및 메서드에는 [위치](../../../ado/reference/ado-api/position-property-ado.md), [크기](../../../ado/reference/ado-api/size-property-ado-parameter.md), [문자 집합](../../../ado/reference/ado-api/charset-property-ado.md)및 [SetEOS](../../../ado/reference/ado-api/seteos-method.md)있습니다.  

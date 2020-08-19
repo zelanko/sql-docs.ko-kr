@@ -1,4 +1,5 @@
 ---
+description: ADOX 코드 예제
 title: ADOX 코드 예제 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 438e4369-f7e8-4dca-a709-dd501a3ca83f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8de0ecf246e05a6cdbb65df1f0e457ad7b65086c
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 9a101c511d480a89ea0ec8ce1f67e14f800de329
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764164"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440615"
 ---
 # <a name="adox-code-examples"></a>ADOX 코드 예제
 다음 코드 예제를 사용 하 여 ADOX 개체, 메서드, 속성 및 이벤트를 사용 하는 방법을 배울 수 있습니다.  

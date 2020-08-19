@@ -1,4 +1,5 @@
 ---
+description: Source 속성 예제(VB)
 title: Source 속성 예제 (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7c83eb01-71c7-4c5d-9778-6270471c8164
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3f652b23e65b4f5669c6d369595933df4c5c6b9a
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 635f091b668c8b0a0a8d654a65055e72c835d987
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759799"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442025"
 ---
 # <a name="source-property-example-vb"></a>Source 속성 예제(VB)
 이 예에서는 다른 데이터 원본을 기반으로 세 개의 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체를 열어 [원본](../../../ado/reference/ado-api/source-property-ado-recordset.md) 속성을 보여 줍니다.  

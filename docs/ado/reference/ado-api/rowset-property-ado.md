@@ -1,4 +1,5 @@
 ---
+description: Rowset 속성(ADO)
 title: Rowset 속성 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 7d359294-4ff2-47e0-8111-0c221b24d80e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3eb383bb0e5cadf557ff67a1e97d1b6b5a6bf988
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 8f6342de5be5b2c6ba6e1bf58408cfabc6e31088
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82756000"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442235"
 ---
 # <a name="rowset-property-ado"></a>Rowset 속성(ADO)
 **ADORecordsetConstruction** 개체에서/에 대 한 OLE DB **행 집합** 개체를 가져오거나 설정 합니다. Put_Rowset 사용 하는 경우 행 집합은 ADO **레코드 집합** 개체로 전환 됩니다.  

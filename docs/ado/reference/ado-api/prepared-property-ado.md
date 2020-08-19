@@ -1,4 +1,5 @@
 ---
+description: 준비된 속성(ADO)
 title: 준비 된 속성 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 11ca8825-765e-4bb4-a6ce-3f6564ad8755
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 58cce35e57116618137f4ee776901dba2a44eff4
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 050651b5c25fcfdfa6723936659b9a11772c2b03
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761961"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442695"
 ---
 # <a name="prepared-property-ado"></a>준비된 속성(ADO)
 실행 전에 [명령의](../../../ado/reference/ado-api/command-object-ado.md) 컴파일된 버전을 저장할지 여부를 나타냅니다.  

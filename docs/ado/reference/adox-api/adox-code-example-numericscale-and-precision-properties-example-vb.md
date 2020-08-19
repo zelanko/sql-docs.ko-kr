@@ -1,4 +1,5 @@
 ---
+description: 'ADOX 코드 예제: NumericScale 및 Precision 속성 예제(VB)'
 title: NumericScale 및 Precision 속성 ADOX 코드 예제 (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ea2ec614-34c8-41b7-8ebd-063798bd56b4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2d7a9f2ccb99d8ef442a45f6739efa5046620449
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: 919ad2763a711382cc9f472f34c791807cdd29e2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942735"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440647"
 ---
 # <a name="adox-code-example-numericscale-and-precision-properties-example-vb"></a>ADOX 코드 예제: NumericScale 및 Precision 속성 예제(VB)
 이 예에서는 [Column](../../../ado/reference/adox-api/column-object-adox.md) 개체의 [NumericScale](../../../ado/reference/adox-api/numericscale-property-adox.md) 및 [Precision](../../../ado/reference/adox-api/precision-property-adox.md) 속성을 보여 줍니다. 이 코드는 *Northwind* 데이터베이스의 **Order Details** 테이블에 대 한 값을 표시 합니다.  

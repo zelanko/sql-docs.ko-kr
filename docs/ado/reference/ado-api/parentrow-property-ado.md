@@ -1,4 +1,5 @@
 ---
+description: ParentRow 속성(ADO)
 title: ParentRow 속성 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5ea8029b-eda4-490b-ae84-2ad036fb582f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 54d89c536145f413513fa67a8e76f7f00cf8322c
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: b81fc704c78b620c1319aa592336aba0489a3d37
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763374"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442745"
 ---
 # <a name="parentrow-property-ado"></a>ParentRow 속성(ADO)
 **ADORecordConstruction** 개체에 대 한 OLE DB **row** 개체의 컨테이너를 설정 하 여 행의 부모를 ADO **Record** 개체로 설정 합니다.  

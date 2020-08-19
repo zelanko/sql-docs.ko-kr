@@ -1,4 +1,5 @@
 ---
+description: Update Resync 속성 - 동적(ADO)
 title: 업데이트 다시 동기화 속성-동적 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8a3bb608-66d7-4128-a3ef-84cb0556de0d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e9d000150cc86a8c838ac5dea827b5c376f3a79f
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 43657b3dddcf53f9aa9df507c646b7f23088f0ef
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759489"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441635"
 ---
 # <a name="update-resync-property-dynamic-ado"></a>Update Resync 속성 - 동적(ADO)
 [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) 메서드 뒤에 암시적 다시 [동기화](../../../ado/reference/ado-api/resync-method.md) 메서드 작업이 오고 그 뒤에 해당 작업의 범위가 있는지 여부를 지정 합니다.  

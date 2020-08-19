@@ -1,4 +1,5 @@
 ---
+description: Close 메서드(ADO MD)
 title: Close 메서드 (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: a3aa594d-f9d4-4654-8625-ec20153ff5d9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a0c2b9236ba60902fe53727be722723e7138aba0
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 5a0cff50bbbb238febdf5f187e6bf99cf88a4762
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764384"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441175"
 ---
 # <a name="close-method-ado-md"></a>Close 메서드(ADO MD)
 열린 셀 집합을 닫습니다.  

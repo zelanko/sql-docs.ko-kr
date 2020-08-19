@@ -1,4 +1,5 @@
 ---
+description: Open 메서드(ADO 레코드)
 title: Open 메서드 (ADO 레코드) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: ab79a623-88a9-40b6-a017-a658bf19b778
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 723d42cda8ac741f697dec7be4a2c4f5ad662508
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: d7661c142263a785565a7dabc92d9b7f31c93739
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762194"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442975"
 ---
 # <a name="open-method-ado-record"></a>Open 메서드(ADO 레코드)
 기존 [record](../../../ado/reference/ado-api/record-object-ado.md) 개체를 열거나 파일이 나 디렉터리와 같이 **레코드가**나타내는 새 항목을 만듭니다.  
@@ -34,7 +35,7 @@ Open Source, ActiveConnection, Mode, CreateOptions, Options, UserName, Password
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- *소스*  
+ *원본*  
  (선택 사항) 이 **Record** 개체, **명령**, 열린 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 또는 다른 **레코드** 개체, SQL SELECT 문 또는 테이블 이름이 포함 된 문자열을 나타내는 엔터티의 URL을 나타낼 수 있는 **Variant** 입니다.  
   
  *ActiveConnection*  
@@ -46,10 +47,10 @@ Open Source, ActiveConnection, Mode, CreateOptions, Options, UserName, Password
  *CreateOptions*  
  (선택 사항) 기존 파일 또는 디렉터리를 열어야 하는지 아니면 새 파일 또는 디렉터리를 만들어야 하는지를 지정 하는 [RecordCreateOptionsEnum](../../../ado/reference/ado-api/recordcreateoptionsenum.md) 값입니다. 기본값은 **Adfailifnotexists**입니다. 이 값을 기본값으로 설정 하면 [모드](../../../ado/reference/ado-api/mode-property-ado.md) 속성에서 액세스 모드를 가져옵니다. *원본* 매개 변수에 URL이 포함 되어 있지 않으면이 매개 변수는 무시 됩니다.  
   
- *Options*  
+ *옵션*  
  (선택 사항) **레코드**열기 옵션을 지정 하는 [RecordOpenOptionsEnum](../../../ado/reference/ado-api/recordopenoptionsenum.md) 값입니다. 기본값은 **Adopenrecordunspecified 되지 않음**입니다. 이러한 값은 결합할 수 있습니다.  
   
- *이름*  
+ *UserName*  
  (선택 사항) 필요한 경우 *소스*에 대 한 액세스 권한을 부여 하는 사용자 ID를 포함 하는 **문자열** 값입니다.  
   
  *암호*  
@@ -58,7 +59,7 @@ Open Source, ActiveConnection, Mode, CreateOptions, Options, UserName, Password
 ## <a name="remarks"></a>설명  
  *소스* 는 다음과 같을 수 있습니다.  
   
--   URL입니다. URL의 프로토콜이 http 인 경우 기본적으로 인터넷 공급자가 호출 됩니다. URL이 실행 가능한 스크립트를 포함 하는 노드 (예:)를 가리키는 경우입니다. ASP 페이지)를 실행 하면 기본적으로 실행 되는 내용 대신 원본이 포함 된 **레코드가** 열립니다. *옵션* 인수를 사용 하 여이 동작을 수정할 수 있습니다.  
+-   URL. URL의 프로토콜이 http 인 경우 기본적으로 인터넷 공급자가 호출 됩니다. URL이 실행 가능한 스크립트를 포함 하는 노드 (예:)를 가리키는 경우입니다. ASP 페이지)를 실행 하면 기본적으로 실행 되는 내용 대신 원본이 포함 된 **레코드가** 열립니다. *옵션* 인수를 사용 하 여이 동작을 수정할 수 있습니다.  
   
 -   **Record** 개체입니다. 다른 **레코드** 에서 연 **record** 개체는 원래 **record** 개체를 복제 합니다.  
   

@@ -1,4 +1,5 @@
 ---
+description: Dimension 개체(ADO MD)
 title: Dimension 개체 (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 66adbbd2-23a3-4c19-a91b-84c31309aa1b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2d5b475600ef211d8203a64a1a2c6d917bb99914
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: fc3661ef36c0b763ca6b0f04f52e4713d59b9a19
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764304"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441115"
 ---
 # <a name="dimension-object-ado-md"></a>Dimension 개체(ADO MD)
 하나 이상의 멤버 계층을 포함 하는 다차원 큐브의 차원 중 하나를 나타냅니다.  
@@ -38,7 +39,7 @@ ms.locfileid: "82764304"
   
  **속성** 컬렉션에는 공급자가 제공한 속성이 포함 되어 있습니다. 다음 표에서는 사용할 수 있는 속성을 보여 줍니다. 실제 속성 목록은 공급자의 구현에 따라 다를 수 있습니다. 사용 가능한 속성의 전체 목록은 공급자 설명서를 참조 하세요.  
   
-|이름|설명|  
+|Name|설명|  
 |----------|-----------------|  
 |CatalogName|이 큐브가 속한 카탈로그의 이름입니다.|  
 |CubeName|큐브 이름입니다.|  
@@ -47,7 +48,7 @@ ms.locfileid: "82764304"
 |DimensionCaption|차원과 연결 된 레이블 또는 캡션입니다.|  
 |DimensionCardinality|차원의 멤버 수입니다.|  
 |DimensionGUID|차원의 GUID입니다.|  
-|DimensionName|차원의 이름입니다.|  
+|DimensionName|크기의 이름입니다.|  
 |DimensionOrdinal|큐브를 구성 하는 차원 그룹 간의 차원 서 수입니다.|  
 |DimensionType|차원 유형입니다.|  
 |DimensionUniqueName|차원의 명확 하지 않은 이름입니다.|  

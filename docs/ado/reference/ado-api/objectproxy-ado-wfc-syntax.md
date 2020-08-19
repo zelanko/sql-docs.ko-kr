@@ -1,4 +1,5 @@
 ---
+description: ObjectProxy(ADO - WFC 구문)
 title: ObjectProxy (ADO-WFC 구문) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f68f58bc-ad28-46cc-9fb3-099e1a678397
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ff9cd79b4ac787987ef44ea3f73cbd9fb102ae43
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 7809c1b9ce4d090ed63465061045ea04000f47dc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762322"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443035"
 ---
 # <a name="objectproxy-ado---wfc-syntax"></a>ObjectProxy(ADO - WFC 구문)
 **ObjectProxy** 개체는 서버를 나타내며 [, 해당 개체](../../../ado/reference/rds-api/dataspace-object-rds.md) 의 **createObject** 메서드에서이를 반환 합니다. ObjectProxy 클래스에는 서버에서 메서드를 호출 하 고 해당 호출로 인해 발생 하는 **개체를 반환할**수 있는 메서드 하나가 있습니다.  

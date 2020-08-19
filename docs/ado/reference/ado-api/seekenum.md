@@ -1,4 +1,5 @@
 ---
+description: SeekEnum
 title: SeekEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f0ec0c92-8253-47c6-9a14-e5dbccbad219
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dca33c975b3d25347b0cb9bb804b852ec5f93d7d
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 1bea36687e0fbe8aea4768386f4435ceece621bb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765394"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442115"
 ---
 # <a name="seekenum"></a>SeekEnum
 실행할 [검색](../../../ado/reference/ado-api/seek-method.md) 유형을 지정 합니다.  

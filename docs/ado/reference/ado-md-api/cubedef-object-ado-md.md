@@ -1,4 +1,5 @@
 ---
+description: CubeDef 개체(ADO MD)
 title: CubeDef 개체 (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: feb2581c-fc41-471c-bb69-29f8a55fda70
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 25dd4d6a9c8a5518c8c2b637af63b39e7b992557
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: cf8de68674ee1cc33f0ba16c9a0b3604418d0332
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764354"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441155"
 ---
 # <a name="cubedef-object-ado-md"></a>CubeDef 개체(ADO MD)
 관련 차원 집합을 포함 하는 다차원 스키마의 큐브를 나타냅니다.  
@@ -38,7 +39,7 @@ ms.locfileid: "82764354"
   
  **속성** 컬렉션에는 공급자가 제공한 속성이 포함 되어 있습니다. 다음 표에서는 사용할 수 있는 속성을 보여 줍니다. 실제 속성 목록은 공급자의 구현에 따라 다를 수 있습니다. 사용 가능한 속성의 전체 목록은 공급자 설명서를 참조 하세요.  
   
-|이름|설명|  
+|Name|설명|  
 |----------|-----------------|  
 |CatalogName|이 큐브가 속한 카탈로그의 이름입니다.|  
 |Adventureworks.createdon|큐브를 만든 날짜와 시간입니다.|  

@@ -1,4 +1,5 @@
 ---
+description: Provider 및 DefaultDatabase 속성 예제 (VB)
 title: Provider 및 DefaultDatabase 속성 예제 (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 677e1dbe-bcf6-4028-a62c-e99b1c88bf7b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d1c72fd2e84bfe8c39570181a7f975c70140d91c
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: db5e40a1f82f95e7b4d78f4e6e3ce7703305abb0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759929"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442595"
 ---
 # <a name="provider-and-defaultdatabase-properties-example-vb"></a>Provider 및 DefaultDatabase 속성 예제 (VB)
 이 예에서는 다른 공급자를 사용 하 여 세 개의 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체를 열어 [공급자](../../../ado/reference/ado-api/provider-property-ado.md) 속성을 보여 줍니다. 또한 [defaultdatabase](../../../ado/reference/ado-api/defaultdatabase-property.md) 속성을 사용 하 여 Microsoft ODBC 공급자에 대 한 기본 데이터베이스를 설정 합니다.  

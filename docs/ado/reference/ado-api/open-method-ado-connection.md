@@ -1,4 +1,5 @@
 ---
+description: Open 메서드(ADO 연결)
 title: Open 메서드 (ADO 연결) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 663defab-5545-4973-9036-24d5882c9737
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 31ce05ce069e0eb3e7d6431b296f40824a8acd3a
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 1cfba7ddf3192d8bbc81d051e1c29ac27303ef68
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762204"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442985"
 ---
 # <a name="open-method-ado-connection"></a>Open 메서드(ADO 연결)
 데이터 원본에 대 한 연결을 엽니다.  
@@ -38,13 +39,13 @@ connection.Open ConnectionString, UserID, Password, Options
  *ConnectionString*  
  (선택 사항) 연결 정보를 포함 하는 **문자열** 값입니다. 유효한 설정에 대 한 자세한 내용은 [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) 속성을 참조 하세요.  
   
- *Id*  
+ *UserID*  
  (선택 사항) 연결을 설정할 때 사용할 사용자 이름을 포함 하는 **문자열** 값입니다.  
   
  *암호*  
  (선택 사항) 연결을 설정할 때 사용할 암호를 포함 하는 **문자열** 값입니다.  
   
- *Options*  
+ *옵션*  
  (선택 사항) 이 메서드가 연결을 설정한 후 (동기적으로) 또는 이전 (비동기적으로) 된 후에 반환 해야 하는지 여부를 결정 하는 [ConnectOptionEnum](../../../ado/reference/ado-api/connectoptionenum.md) 값입니다.  
   
 ## <a name="remarks"></a>설명  

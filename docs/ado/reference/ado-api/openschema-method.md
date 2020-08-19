@@ -1,4 +1,5 @@
 ---
+description: OpenSchema 메서드
 title: OpenSchema 메서드 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 850cf3ce-f18f-4e7c-8597-96c1dc504866
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 716eec332690d1a6e9df1f16d67d82afc1a30985
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 1b0a92e7079338e290f228603767d6d15a3a351e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762104"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442925"
 ---
 # <a name="openschema-method"></a>OpenSchema 메서드
 공급자에서 데이터베이스 스키마 정보를 가져옵니다.  

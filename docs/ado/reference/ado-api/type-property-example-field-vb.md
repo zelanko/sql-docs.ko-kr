@@ -1,4 +1,5 @@
 ---
+description: Type 속성 예제(필드)(VB)
 title: Type 속성 예제 (필드) (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: accb72f5-a3bd-4a7e-92b6-6da0783b4b75
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1d3f13b0f76884f4b5e0077bdebef0c009d7b546
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 94eeb6eb22e72b6db45d178c9d19ced33009be8e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765354"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441725"
 ---
 # <a name="type-property-example-field-vb"></a>Type 속성 예제(필드)(VB)
 이 예에서는 ***Employees*** 테이블에 있는 모든 [Field](../../../ado/reference/ado-api/field-object.md) 개체의 [type](../../../ado/reference/ado-api/type-property-ado.md) 속성 값에 해당 하는 상수의 이름을 표시 하 여 [Type](../../../ado/reference/ado-api/type-property-ado.md) 속성을 보여 줍니다. FieldType 함수는이 프로시저를 실행 하는 데 필요 합니다.  

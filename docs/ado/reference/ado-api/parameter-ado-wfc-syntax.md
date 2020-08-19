@@ -1,4 +1,5 @@
 ---
+description: 매개 변수(ADO - WFC 구문)
 title: Parameter (ADO-WFC 구문) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d00d1e1e-14b1-41a2-a00f-2a3cb7396f15
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5c3d60374102b92249062cbc705dc55c6d217537
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 6fc5226da0ceeefc6ae961b2a3d358d1dc1955b0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765454"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442825"
 ---
 # <a name="parameter-ado---wfc-syntax"></a>매개 변수(ADO - WFC 구문)
 ## <a name="package-commswfcdata"></a>package com.  

@@ -1,4 +1,5 @@
 ---
+description: State 속성(ADO MD)
 title: State 속성 (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 06d480ca-9eb6-4570-a45d-a73539bddd32
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9722bdc585920fb5dcc70ac95afcf2e854a0fa50
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 5ef7a26ae4b1f45476fb8074402a84a97d3aace8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764984"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440745"
 ---
 # <a name="state-property-ado-md"></a>State 속성(ADO MD)
 셀 집합의 현재 상태를 나타냅니다.  

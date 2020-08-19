@@ -1,4 +1,5 @@
 ---
+description: Sort 속성
 title: Sort 속성 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 3683ffa0-6f93-4906-9533-ef6942f24f39
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3dc6f7799e28fff65a1b6e60329ba9fb94d84824
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: a8ec5c6812e2800825677cd844756d1dd9325729
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759839"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442065"
 ---
 # <a name="sort-property"></a>Sort 속성
 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 을 정렬 하는 하나 이상의 필드 이름과 각 필드가 오름차순으로 정렬 되는지 또는 내림차순으로 정렬 되는지 나타냅니다.  

@@ -1,4 +1,5 @@
 ---
+description: Provider 속성(ADO)
 title: Provider 속성 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 0ff70e72-0061-4ffc-90fb-e3ea23129bb2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: af95544a998963ffd81b4ebf9098089cc1a9915f
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: c4e8b5f57a9d6ba15a12c8da8bb4e85012b53da9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759909"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442585"
 ---
 # <a name="provider-property-ado"></a>Provider 속성(ADO)
 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체에 대 한 공급자의 이름을 나타냅니다.  

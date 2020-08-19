@@ -1,4 +1,5 @@
 ---
+description: WillMove 및 MoveComplete 이벤트(ADO)
 title: WillMove 및 MoveComplete 이벤트 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 1a3d1042-4f30-4526-a0c7-853c242496db
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a714b0c8f6d41060dfe66e898f01d7ce1037e516
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 4c992f95ae9caf96708f5fcde0c255ff8c7c6f11
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764444"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441505"
 ---
 # <a name="willmove-and-movecomplete-events-ado"></a>WillMove 및 MoveComplete 이벤트(ADO)
 **WillMove** 이벤트는 보류 중인 작업이 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)의 현재 위치를 변경 하기 전에 호출 됩니다. **MoveComplete** 이벤트는 **레코드 집합** 의 현재 위치가 변경 된 후에 호출 됩니다.  

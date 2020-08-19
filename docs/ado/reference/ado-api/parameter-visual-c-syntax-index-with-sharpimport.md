@@ -1,4 +1,5 @@
 ---
+description: 매개 변수 (#import를 사용 하는 Visual C++ 구문 인덱스)
 title: 매개 변수 (#import를 사용 하는 Visual C++ 구문 인덱스) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6b43cf70-9695-47b0-9e68-f36898859b6b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0b998aa20df1110c6708bf857d39e679ed871e68
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 678e7cb1ce09539bfc1c73989fde2702649c2070
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763424"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442795"
 ---
 # <a name="parameter-visual-c-syntax-index-with-import"></a>매개 변수 (#import를 사용 하는 Visual C++ 구문 인덱스)
 ## <a name="methods"></a>메서드  

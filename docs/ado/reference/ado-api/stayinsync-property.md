@@ -1,4 +1,5 @@
 ---
+description: StayInSync 속성
 title: StayInSync 속성 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 502d69b5-dc9a-455d-b115-a03bd39a552b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f36eace18280cd810341c5eeeec1fb294999e6ec
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 7bd35cbd24dadef9d6a9468f65bc85f95169d0cb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759639"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441885"
 ---
 # <a name="stayinsync-property"></a>StayInSync 속성
 부모 행 위치가 변경 될 때 계층 구조 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체에서 기본 자식 레코드에 대 한 참조 (즉, *장*)가 변경 되는지 여부를 나타냅니다.  

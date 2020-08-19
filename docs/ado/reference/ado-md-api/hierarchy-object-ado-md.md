@@ -1,4 +1,5 @@
 ---
+description: Hierarchy 개체(ADO MD)
 title: Hierarchy 개체 (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 034af340-ac79-494e-ba5e-2b57da1cb9de
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1232d228d597188364cb20a7f60dfaa11c8af21a
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 757de54d56b5220b2759e670584e432c595fc45f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82753967"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440985"
 ---
 # <a name="hierarchy-object-ado-md"></a>Hierarchy 개체(ADO MD)
 [차원의](../../../ado/reference/ado-md-api/dimension-object-ado-md.md) 멤버를 집계 하거나 "롤업" 할 수 있는 한 가지 방법을 나타냅니다. 하나 이상의 계층 구조를 따라 차원을 집계할 수 있습니다.  
@@ -38,7 +39,7 @@ ms.locfileid: "82753967"
   
  **속성** 컬렉션에는 공급자가 제공한 속성이 포함 되어 있습니다. 다음 표에서는 사용할 수 있는 속성을 보여 줍니다. 실제 속성 목록은 공급자의 구현에 따라 다를 수 있습니다. 사용 가능한 속성의 전체 목록은 공급자 설명서를 참조 하세요.  
   
-|이름|설명|  
+|Name|설명|  
 |----------|-----------------|  
 |AllMember|계층에서 가장 높은 수준의 롤업 멤버입니다.|  
 |CatalogName|이 큐브가 속한 카탈로그의 이름입니다.|  
@@ -50,7 +51,7 @@ ms.locfileid: "82753967"
 |HierarchyCaption|계층과 연결된 레이블 또는 캡션입니다.|  
 |HierarchyCardinality|계층의 멤버 수입니다.|  
 |계층 Guid|계층의 GUID입니다.|  
-|HierarchyName|계층 이름입니다.|  
+|HierarchyName|계층 구조의 이름입니다.|  
 |HierarchyUniqueName|계층의 모호 하지 않은 이름입니다.|  
 |SchemaName|이 큐브가 속한 스키마의 이름입니다.|  
   

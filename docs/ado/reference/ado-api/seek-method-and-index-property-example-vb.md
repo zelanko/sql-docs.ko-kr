@@ -1,4 +1,5 @@
 ---
+description: Seek 메서드 및 인덱스 속성 예제 (VB)
 title: Seek 메서드 및 인덱스 속성 예제 (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 337c9eda-9ddf-49ac-94d3-b33114ba6224
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a9d82cda586f5694b9f7644ca01eff781ea3e79d
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 88121d2f736d76eec80146c49c727cd0d27399b7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765424"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442145"
 ---
 # <a name="seek-method-and-index-property-example-vb"></a>Seek 메서드 및 인덱스 속성 예제 (VB)
 이 예에서는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체의 [Seek](../../../ado/reference/ado-api/seek-method.md) 메서드 및 [인덱스](../../../ado/reference/ado-api/index-property.md) 속성을 지정 된 ***직원 ID***와 함께 사용 하 여 Nwind 데이터베이스의 ***Employees*** 테이블에서 직원의 이름을 찾습니다.  

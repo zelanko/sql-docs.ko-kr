@@ -1,4 +1,5 @@
 ---
+description: Axis 개체(ADO MD)
 title: Axis 개체 (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5f498c9a-b1e7-4e6e-9ae6-71eadaf9aada
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c251355637c5d57729a7d4aa737f2face1c9ace2
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 733a2962e381a7b8918fccfd076f44dbbc23da1e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765184"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441285"
 ---
 # <a name="axis-object-ado-md"></a>Axis 개체(ADO MD)
 하나 이상의 차원에서 선택한 멤버를 포함 하는 셀 집합의 위치 또는 필터 축을 나타냅니다.  

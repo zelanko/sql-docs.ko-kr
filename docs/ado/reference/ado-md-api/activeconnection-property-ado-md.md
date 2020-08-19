@@ -1,4 +1,5 @@
 ---
+description: ActiveConnection 속성(ADO MD)
 title: ActiveConnection 속성 (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 2509b32c-a995-4364-9152-d8c83129bdd8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5e504b442116f0a137d40a0932b00e51753deae5
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 3f226f9687f1bce3def616739f43f4d283d019ea
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243154"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441445"
 ---
 # <a name="activeconnection-property-ado-md"></a>ActiveConnection 속성(ADO MD)
 현재 셀 집합 또는 카탈로그가 현재 속해 있는 ADO [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체를 나타냅니다.  

@@ -1,4 +1,5 @@
 ---
+description: ParameterDirectionEnum
 title: ParameterDirectionEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c66aa6e6-d4f0-4f0f-9640-e08ae6cfdef3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c109ea1c44fc44a4cdbb585e2c612ebf8c9b2909
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 8c586b4e7ce2e18411d147e8aafb4eb144e01e6f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242609"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442785"
 ---
 # <a name="parameterdirectionenum"></a>ParameterDirectionEnum
 [매개 변수가](../../../ado/reference/ado-api/parameter-object.md) 입력 매개 변수, 출력 매개 변수, 입력 및 출력 매개 변수 또는 저장 프로시저의 반환 값을 나타내는지 여부를 지정 합니다.  

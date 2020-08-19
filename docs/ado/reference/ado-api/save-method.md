@@ -1,4 +1,5 @@
 ---
+description: Save 메서드
 title: Save 메서드 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: ed3d9678-5c28-4e61-8bb3-7dfb66d99cf5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: db4b5d86c59e35ac3a7aa66684115668d19ead42
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 09b8ce2c2b8f6388e300a0034c0ea72b795bded1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243204"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442215"
 ---
 # <a name="save-method"></a>Save 메서드
 파일 또는 [스트림](../../../ado/reference/ado-api/stream-object-ado.md) 개체에 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 을 저장 합니다.  

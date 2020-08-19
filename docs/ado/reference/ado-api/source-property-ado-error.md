@@ -1,4 +1,5 @@
 ---
+description: Source 속성(ADO 오류)
 title: Source 속성 (ADO 오류) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4044ba15-f013-4c4c-9fe1-b4410fe9a778
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 95b000db970bc3da925319bbe6e273557a8787ca
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: fa7fc5c5098b6e429960e5d72702111abab55ac2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759829"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442055"
 ---
 # <a name="source-property-ado-error"></a>Source 속성(ADO 오류)
 원래 오류를 생성 한 개체 또는 응용 프로그램의 이름을 나타냅니다.  

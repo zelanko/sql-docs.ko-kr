@@ -1,4 +1,5 @@
 ---
+description: WillConnect 이벤트(ADO)
 title: WillConnect 이벤트 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: da561d58-eb58-446c-a4fd-1838c76073c0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 73798796af7629e70dda86bd0e264ec325be8a0e
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: d7c9bc68b33e9a8ed8878e153b5fb2eb11d27ba2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764464"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441485"
 ---
 # <a name="willconnect-event-ado"></a>WillConnect 이벤트(ADO)
 **WillConnect** 이벤트는 연결을 시작 하기 전에 호출 됩니다.  
@@ -39,13 +40,13 @@ WillConnect ConnectionString, UserID, Password, Options, adStatus, pConnection
  *ConnectionString*  
  보류 중인 연결에 대 한 연결 정보를 포함 하는 **문자열** 입니다.  
   
- *Id*  
+ *UserID*  
  보류 중인 연결에 대 한 사용자 이름을 포함 하는 **문자열** 입니다.  
   
  *암호*  
  보류 중인 연결에 대 한 암호를 포함 하는 **문자열** 입니다.  
   
- *Options*  
+ *옵션*  
  공급자가 *ConnectionString*을 평가 하는 방법을 나타내는 **Long** 값입니다. 유일한 옵션은 **adAsyncOpen**입니다.  
   
  *adStatus*  

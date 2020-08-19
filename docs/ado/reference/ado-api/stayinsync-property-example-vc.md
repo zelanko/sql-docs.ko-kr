@@ -1,4 +1,5 @@
 ---
+description: StayInSync 속성 예제(VC++)
 title: StayInSync 속성 예제 (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3a5db5f0-094b-46e1-939b-d9fa9417a406
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4e8b3c6da84e0b439671adcc4516acde22fd2adf
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 20145847731b831bcfb21ca27c0229b064e33286
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759669"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441895"
 ---
 # <a name="stayinsync-property-example-vc"></a>StayInSync 속성 예제(VC++)
 이 예에서는 [StayInSync](../../../ado/reference/ado-api/stayinsync-property.md) 속성을 통해 계층적 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)의 행에 쉽게 액세스 하는 방법을 보여 줍니다.  

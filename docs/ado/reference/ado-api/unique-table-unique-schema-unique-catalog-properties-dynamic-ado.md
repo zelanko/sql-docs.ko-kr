@@ -1,4 +1,5 @@
 ---
+description: 고유 테이블, 고유 스키마, 고유 카탈로그 속성-동적 (ADO)
 title: 레코드 집합 기본 테이블의 변경 내용 제어 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d0e775d8-e353-46a1-ad10-ed4cc240dfaa
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ac7fa0cf50a92b2738d3e83d5e7b9d5fac46fd9b
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 5c3f5bdb8a52f686ae336aa51986591788669979
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759519"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441675"
 ---
 # <a name="unique-table-unique-schema-unique-catalog-properties-dynamic-ado"></a>고유 테이블, 고유 스키마, 고유 카탈로그 속성-동적 (ADO)
 를 사용 하면 여러 기본 테이블에 대 한 조인 작업으로 구성 된 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 의 특정 기본 테이블에 대 한 수정을 엄격 하 게 제어할 수 있습니다.  

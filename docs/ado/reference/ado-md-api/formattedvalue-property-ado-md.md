@@ -1,4 +1,5 @@
 ---
+description: FormattedValue 속성(ADO MD)
 title: FormattedValue 속성 (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5c06451e-06ec-4da6-9a87-2d043469248a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1acc577b1822beb69826120034ffa4872e60c60b
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 99509ff8d72a8ad5ec587674b6c35f96a674e4db
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764244"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441025"
 ---
 # <a name="formattedvalue-property-ado-md"></a>FormattedValue 속성(ADO MD)
 [셀](../../../ado/reference/ado-md-api/cell-object-ado-md.md) 값의 형식이 지정 된 표시를 나타냅니다.  

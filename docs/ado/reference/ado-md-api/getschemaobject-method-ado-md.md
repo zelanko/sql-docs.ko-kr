@@ -1,4 +1,5 @@
 ---
+description: GetSchemaObject 메서드(ADO MD)
 title: GetSchemaObject 메서드 (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 36b754b4-6b17-4dd1-a925-bca46938b7c4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a8853e967a75a67aadccc7e48d684ab92819a71d
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 19af2bf0e7058a8f483da25c0db926ebc19807c6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764214"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441015"
 ---
 # <a name="getschemaobject-method-ado-md"></a>GetSchemaObject 메서드(ADO MD)
 [UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md)에 의해 ADO MD 스키마 개체 ([차원](../../../ado/reference/ado-md-api/dimension-object-ado-md.md), [계층](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md), [수준](../../../ado/reference/ado-md-api/level-object-ado-md.md)또는 [멤버](../../../ado/reference/ado-md-api/member-object-ado-md.md))를 검색 합니다.  

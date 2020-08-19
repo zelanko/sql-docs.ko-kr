@@ -1,4 +1,5 @@
 ---
+description: Open 및 Close 메서드 예제(VC++)
 title: Open 및 Close 메서드 예제 (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f74a81fd-cbcc-4143-b9f8-774c88dd4fad
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3c7aa6605cb613a8cc3f3a6b41c50747d96991f8
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: cabdbee513ab42111710520358a66f5f42122f77
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762214"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442995"
 ---
 # <a name="open-and-close-methods-example-vc"></a>Open 및 Close 메서드 예제(VC++)
 이 예에서는 열려 있는 [레코드 집합과](../../../ado/reference/ado-api/recordset-object-ado.md) [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체 모두에서 **Open** 및 [Close](../../../ado/reference/ado-api/close-method-ado.md) 메서드를 사용 합니다.  
