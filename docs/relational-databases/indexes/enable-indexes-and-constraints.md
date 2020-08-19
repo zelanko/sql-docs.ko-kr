@@ -1,4 +1,5 @@
 ---
+description: 인덱스 및 제약 조건 활성화
 title: 인덱스 및 제약 조건 활성화 | Microsoft 문서
 ms.custom: ''
 ms.date: 02/17/2017
@@ -18,12 +19,12 @@ ms.assetid: c55c8865-322e-4ab0-ba04-ea1f56735353
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 32d0516d8f3227a3fbf18d8649b0a79bdd60c790
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4b0bdb3d9edca685e3b939c5f9a3ab1a0ec68846
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85629624"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88382489"
 ---
 # <a name="enable-indexes-and-constraints"></a>인덱스 및 제약 조건 활성화
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

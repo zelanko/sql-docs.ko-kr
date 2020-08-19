@@ -1,4 +1,5 @@
 ---
+description: 데이터베이스 메일을 사용하도록 SQL Server 에이전트 메일 구성
 title: 데이터베이스 메일을 사용하도록 SQL Server 에이전트 메일 구성
 ms.date: 08/05/2016
 ms.prod: sql
@@ -12,12 +13,12 @@ ms.assetid: 4b8b61bd-4bd1-43cd-b6e5-c6ed2e101dce
 author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 1e2443340670272324445f7c09b7c5c475064ea1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 318ba0af0be327cbe938fd9498dcbce9e418650d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85694927"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88385809"
 ---
 # <a name="configure-sql-server-agent-mail-to-use-database-mail"></a>데이터베이스 메일을 사용하도록 SQL Server 에이전트 메일 구성
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

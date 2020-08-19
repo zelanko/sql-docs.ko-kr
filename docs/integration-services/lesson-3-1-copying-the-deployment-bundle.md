@@ -1,4 +1,5 @@
 ---
+description: 3-1단원 - 배포 번들 복사
 title: '1단계: 배포 번들 복사 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: b6ef1e56-d278-4a24-afd3-68d8e0595cbb
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: eac15d46e1530d0a742a3161e0622233c05ac3da
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c8f3f026833037c66581ffa95e2e1a736b07091c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918156"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88390319"
 ---
 # <a name="lesson-3-1---copying-the-deployment-bundle"></a>3-1단원 - 배포 번들 복사
 

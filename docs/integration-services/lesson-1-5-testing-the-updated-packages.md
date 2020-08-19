@@ -1,4 +1,5 @@
 ---
+description: 1-5단원 - 업데이트된 패키지 테스트
 title: '5단계: 업데이트된 패키지 테스트 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: 683e52e5-1c7e-49ab-9ffe-6a450a1c5776
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b00453b2bd6bf49db66f93e6c536d4f75033d35e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 2a8179b40407e0f2ed012b1b493a5a39434f5cb9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917359"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88390749"
 ---
 # <a name="lesson-1-5---testing-the-updated-packages"></a>1-5단원 - 업데이트된 패키지 테스트
 

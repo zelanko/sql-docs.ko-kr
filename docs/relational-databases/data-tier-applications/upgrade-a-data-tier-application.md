@@ -1,4 +1,5 @@
 ---
+description: 데이터 계층 애플리케이션 업그레이드
 title: 데이터 계층 애플리케이션 업그레이드 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/14/2017
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: c117df94-f02b-403f-9383-ec5b3ac3763c
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: ed1b1698fb945d92fce7cb2a0d1a9d0e2713afb5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0cba55e7c9f979098b9f761fbc43cad7a8edc2b5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85781621"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88386449"
 ---
 # <a name="upgrade-a-data-tier-application"></a>데이터 계층 애플리케이션 업그레이드
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "85781621"
   
 -   **시작하기 전 주의 사항:**  [DAC 업그레이드 옵션 선택](#ChoseDACUpgOptions), [제한 사항](#LimitationsRestrictions), [필수 구성 요소](#Prerequisites), [보안](#Security), [사용 권한](#Permissions)  
   
--   **DAC를 업그레이드하려면 다음을 사용합니다.**  [데이터 계층 애플리케이션 업그레이드 마법사](#UsingDACUpgradeWizard), [PowerShell](#UpgradeDACPowerShell)  
+-   **DAC를 업그레이드하려면:**  [데이터 계층 애플리케이션 업그레이드 마법사](#UsingDACUpgradeWizard), [PowerShell](#UpgradeDACPowerShell)  
   
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
  DAC 업그레이드는 기존 데이터베이스의 스키마를 새 DAC 버전에 정의된 스키마와 일치하도록 변경하는 전체 업그레이드 프로세스입니다. 새 버전의 DTS가 DAC 패키지 파일에 제공됩니다. DAC 패키지를 만드는 방법은 [데이터 계층 애플리케이션](../../relational-databases/data-tier-applications/data-tier-applications.md)을 참조하세요.  

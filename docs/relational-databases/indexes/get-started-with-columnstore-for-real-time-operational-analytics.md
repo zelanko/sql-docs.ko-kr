@@ -1,4 +1,5 @@
 ---
+description: 실시간 운영 분석을 위한 Columnstore 시작
 title: 실시간 운영 분석을 위한 Columnstore 시작 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2016
@@ -11,12 +12,12 @@ ms.assetid: e1328615-6b59-4473-8a8d-4f360f73187d
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c64987fdec19374787bf86f0905fbf65c1dbe1f9
-ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
+ms.openlocfilehash: 24ecd09d3f649e0a18e76db87c05ee2be79c0cb9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2020
-ms.locfileid: "86279093"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88381986"
 ---
 # <a name="get-started-with-columnstore-for-real-time-operational-analytics"></a>실시간 운영 분석을 위한 Columnstore 시작
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

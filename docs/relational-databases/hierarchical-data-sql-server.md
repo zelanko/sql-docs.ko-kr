@@ -1,4 +1,5 @@
 ---
+description: 계층적 데이터(SQL Server)
 title: 계층적 데이터(SQL Server) | Microsoft 문서
 ms.custom: ''
 ms.date: 10/04/2019
@@ -18,12 +19,12 @@ ms.assetid: 19aefa9a-fbc2-4b22-92cf-67b8bb01671c
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 137557b633b80067205be1cdea9f0b7c6cfd82bb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1638e581a384f79842109c83352fc7292fa15de7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85640764"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88382529"
 ---
 # <a name="hierarchical-data-sql-server"></a>계층적 데이터(SQL Server)
 
@@ -191,7 +192,7 @@ GO
 ```  
   
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="simple-example"></a>간단한 예  
  다음 예제는 시작하는 데 도움을 주기 위해 의도적으로 단순화된 것입니다. 먼저 일부 지리 데이터를 보유하는 테이블을 만듭니다.  
@@ -538,9 +539,9 @@ GO
 ```  
   
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [hierarchyid 데이터 형식 메서드 참조](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)   
- [Tutorial: Using the hierarchyid Data Type](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)   
+ [자습서: hierarchyid 데이터 형식 사용](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)   
  [hierarchyid&#40;Transact-SQL&#41;](../t-sql/data-types/hierarchyid-data-type-method-reference.md)  
   
   

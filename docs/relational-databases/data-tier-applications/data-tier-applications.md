@@ -1,4 +1,5 @@
 ---
+description: 데이터 계층 애플리케이션
 title: 데이터 계층 애플리케이션 | Microsoft 문서
 ms.custom: ''
 ms.date: 08/12/2016
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a04a2aba-d07a-4423-ab8a-0a31658f6317
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 7e7f5fb29c15fbd8532a6852477ed9376df92f72
-ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
+ms.openlocfilehash: 8d4425da7d337a6628ae6197bedbe03d84897910
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87988778"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88386939"
 ---
 # <a name="data-tier-applications"></a>데이터 계층 애플리케이션
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
