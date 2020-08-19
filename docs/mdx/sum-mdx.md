@@ -1,4 +1,5 @@
 ---
+description: Sum(MDX)
 title: 합계 (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: eb4e9d55ef2228404dd9113170066e4a3612a0a1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f65525836157f5ac106cfa7ba0d5458689583def
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68036668"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449625"
 ---
 # <a name="sum-mdx"></a>Sum(MDX)
 
@@ -40,7 +41,7 @@ Sum( Set_Expression [ , Numeric_Expression ] )
 > [!NOTE]  
 >  Analysis Services는 숫자 집합의 합을 계산할 때 Null을 무시합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 2001년 및 2002년의 Product.Category 특성 계층에 대한 모든 멤버의 Reseller Sales Amount 합계를 반환합니다.  
   
 ```  

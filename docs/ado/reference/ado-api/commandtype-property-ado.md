@@ -1,4 +1,5 @@
 ---
+description: CommandType 속성(ADO)
 title: CommandType 속성 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ca44809c-8647-48b6-a7fb-0be70a02f53e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bbc90dc2d818ca880a9f712d551fd6a98fb9ecf3
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 435e2c0562abcccbb6ec6e139491af280e976cfd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760429"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450815"
 ---
 # <a name="commandtype-property-ado"></a>CommandType 속성(ADO)
 [명령](../../../ado/reference/ado-api/command-object-ado.md) 개체의 유형을 나타냅니다.  

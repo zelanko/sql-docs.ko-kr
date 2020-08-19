@@ -1,4 +1,5 @@
 ---
+description: Variance(MDX)
 title: 분산 (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 01929ff721deff4011bcd1b53351c06463481491
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a3241625bafe7b4436470c3f74e82fd43cf0cd2f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68037917"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449605"
 ---
 # <a name="variance-mdx"></a>Variance(MDX)
 

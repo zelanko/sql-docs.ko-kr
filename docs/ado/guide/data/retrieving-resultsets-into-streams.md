@@ -1,4 +1,5 @@
 ---
+description: 스트림으로 결과 집합 검색
 title: 결과 집합을 스트림으로 검색 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 996c1321-c926-4f57-8297-85c8c20de974
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b20363f3ffae96750046ab98bd623ea44d68a8e2
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 53dcb66eb2abb311b1114928a8696c6502454770
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760929"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452925"
 ---
 # <a name="retrieving-resultsets-into-streams"></a>스트림으로 결과 집합 검색
 기존 **Recordset** 개체에서 결과를 수신 하는 대신 ADO는 대신 스트림에 쿼리 결과를 검색할 수 있습니다. ADO **Stream** 개체 또는 ASP **요청** 및 **응답** 개체와 같은 COM **IStream** 인터페이스를 지 원하는 다른 개체를 사용 하 여 이러한 결과를 포함할 수 있습니다. 이 기능을 사용 하는 한 가지 방법은 XML 형식의 결과를 검색 하는 것입니다. 예를 들어 SQL Server를 사용 하는 경우 FOR XML 절을 SQL SELECT 쿼리와 함께 사용 하거나 XPath 쿼리를 사용 하는 등의 여러 가지 방법으로 XML 결과를 반환할 수 있습니다.  

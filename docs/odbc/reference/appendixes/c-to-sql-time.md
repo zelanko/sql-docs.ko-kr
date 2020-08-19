@@ -1,4 +1,5 @@
 ---
+description: 'C에서 SQL로: 시간'
 title: 'C에서 SQL로: 시간 | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a8da43c9-d9a5-45e5-bd9a-1dd633db2ee0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 264ce7751072b79163923f0c141542680f7b02bb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e1711d6a5acffa73a640a0e25f647c53b3daa868
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304766"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449045"
 ---
 # <a name="c-to-sql-time"></a>C에서 SQL로: 시간
 ODBC C 데이터 형식의 시간에 대 한 식별자는 다음과 같습니다.  

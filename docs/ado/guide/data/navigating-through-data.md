@@ -1,4 +1,5 @@
 ---
+description: 데이터 탐색
 title: 데이터 탐색 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8d88c9aa-8ec8-4969-8fa1-1663fd29bfc4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 66079842d950e108a3cdc4e6ad52ad1feff6ab2a
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 93ea157cd3982046ccc44d10e4fbb8d712c80d7c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82748438"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453135"
 ---
 # <a name="navigating-through-data"></a>데이터 탐색
 **레코드 집합** 은 다양 한 메서드 및 속성을 지원 하 여 결과 데이터 집합을 탐색 합니다. 샘플 **레코드 집합** 개체를 사용 하 여 몇 가지 시나리오를 진행 하 여이 기능을 검토 합니다.  

@@ -1,4 +1,5 @@
 ---
+description: 1-2단원 - 배포 프로젝트 만들기
 title: '2단계: 배포 프로젝트 만들기 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: 59990fe2-7036-4e9c-8efc-6ece9e66eda7
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e202a3b3429057418456618a08d7333994199a36
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 025e601dfb6f062246d1edcb1799c1daf2b69886
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917424"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449702"
 ---
 # <a name="lesson-1-2---creating-the-deployment-project"></a>1-2단원 - 배포 프로젝트 만들기
 

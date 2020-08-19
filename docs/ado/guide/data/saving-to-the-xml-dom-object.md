@@ -1,4 +1,5 @@
 ---
+description: XML DOM 개체에 저장
 title: XML DOM 개체에 저장 하는 중 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4d20fd28-aaf8-4232-83ce-f9d1e5f93dae
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2360d9886fa718034bdf3fcc4ed1cacd459b2788
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: c608abbae59244e2d0982328534b1cabcf1b903e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760909"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452905"
 ---
 # <a name="saving-to-the-xml-dom-object"></a>XML DOM 개체에 저장
 다음 Visual Basic 코드와 같이 XML 형식의 레코드 집합을 MSXML DOM 개체의 인스턴스에 저장할 수 있습니다.  
@@ -35,5 +36,5 @@ rsXML.Save xDOM, adPersistADO   'Save Recordset directly into a DOM tree.
 ...  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [XML 형식으로 레코드 유지](../../../ado/guide/data/persisting-records-in-xml-format.md)

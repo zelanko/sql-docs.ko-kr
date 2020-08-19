@@ -1,4 +1,5 @@
 ---
+description: '1-3단원: OLE DB 연결 관리자 추가 및 구성'
 title: '3단계: OLE DB 연결 관리자 추가 및 구성 | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/03/2019
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: e7b74cba-a0e5-4478-af12-3f81b9484e9e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 65ddfa851cce882d4106408ea99700d2cc57457c
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 33eeb6e462c096505fc4fbd1088e7f5b36b37618
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917420"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449703"
 ---
 # <a name="lesson-1-3-add-and-configure-an-ole-db-connection-manager"></a>1-3단원: OLE DB 연결 관리자 추가 및 구성
 

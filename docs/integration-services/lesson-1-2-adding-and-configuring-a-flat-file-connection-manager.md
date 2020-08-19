@@ -1,4 +1,5 @@
 ---
+description: '1-2단원: 플랫 파일 연결 관리자 추가 및 구성'
 title: '2단계: 플랫 파일 연결 관리자 추가 및 구성 | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/03/2019
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: 9a77dd32-d8c2-4961-ad37-2a971f9d6043
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d03808293d5edbc9ae0be48b28f86df725304059
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d83b2c6a19b7a73be4293dcb66edc6cbc22909d9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917432"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449737"
 ---
 # <a name="lesson-1-2-add-and-configure-a-flat-file-connection-manager"></a>1-2단원: 플랫 파일 연결 관리자 추가 및 구성
 
@@ -77,7 +78,7 @@ ms.locfileid: "86917432"
   
     [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]는 처음 200개의 데이터 행을 기반으로 적합한 데이터 형식을 자동으로 제안합니다. 또한 이러한 제안 옵션을 변경하여 더 많거나 적은 데이터를 샘플링하거나 정수 또는 부울 데이터의 기본 데이터 형식을 지정하거나 공백을 안쪽 여백으로 문자열 열에 추가할 수 있습니다.  
   
-    지금은 **열 유형 제안** 대화 상자의 옵션을 변경하지 않고 **확인**을 선택하여 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]에서 열의 데이터 형식을 제안하게 합니다. 이 작업을 통해 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]에서 제안하는 열 데이터 형식을 볼 수 있는  **플랫 파일 연결 관리자 편집기** 대화 상자의 **고급** 창으로 돌아갑니다. 또는 **취소**를 선택하면 열 메타데이터에 대한 제안이 생성되지 않고 기본 문자열(DT_STR) 데이터 형식이 사용됩니다.  
+    지금은 **열 유형 제안** 대화 상자의 옵션을 변경하지 않고 **확인**을 선택하여 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]에서 열의 데이터 형식을 제안하게 합니다. 이 작업을 통해 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]에서 제안하는 열 데이터 형식을 볼 수 있는 ** 플랫 파일 연결 관리자 편집기** 대화 상자의 **고급** 창으로 돌아갑니다. 또는 **취소**를 선택하면 열 메타데이터에 대한 제안이 생성되지 않고 기본 문자열(DT_STR) 데이터 형식이 사용됩니다.  
   
     이 자습서에서 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 는 SampleCurrencyData.txt 파일 데이터에 대해 다음 테이블의 두 번째 열에 표시된 데이터 형식을 제안합니다. 네 번째 열은 후속 단계에서 정의된 대상의 열에 필요한 데이터 형식을 제공합니다.  
   

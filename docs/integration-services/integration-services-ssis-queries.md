@@ -1,4 +1,5 @@
 ---
+description: Integration Services(SSIS) 쿼리
 title: Integration Services(SSIS) 쿼리 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8822bd29-4575-46c8-92a0-1a39bc2604c1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 01a292229c29720b91d66d1f607b375b759e75fe
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 79d6e93c536828e0de44c77ebd1377fab5021d69
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917499"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449805"
 ---
 # <a name="integration-services-ssis-queries"></a>Integration Services(SSIS) 쿼리
 
@@ -100,7 +101,7 @@ ms.locfileid: "86917499"
 |**표 형태 창 표시/숨기기**|**표 형태** 창을 표시하거나 숨깁니다.|  
 |**SQL 창 표시/숨기기**|**SQL** 창을 표시하거나 숨깁니다.|  
 |**결과 창 표시/숨기기**|**결과** 창을 표시하거나 숨깁니다.|  
-|**실행**|쿼리를 실행합니다. 결과는 결과 창에 표시됩니다.|  
+|**Run**|쿼리를 실행합니다. 결과는 결과 창에 표시됩니다.|  
 |**SQL 검증**|SQL 문이 유효한지 여부를 확인합니다.|  
 |**오름차순 정렬**|표 형태 창에서 선택한 열의 출력 행을 오름차순으로 정렬합니다.|  
 |**내림차순 정렬**|표 형태 창에서 선택한 열의 출력 행을 내림차순으로 정렬합니다.|  

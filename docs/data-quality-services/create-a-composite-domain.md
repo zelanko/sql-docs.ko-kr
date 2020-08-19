@@ -1,4 +1,5 @@
 ---
+description: 복합 도메인 만들기
 title: 복합 도메인 만들기
 ms.date: 11/22/2011
 ms.prod: sql
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: c7f0bd84-a02e-4a81-885d-985e6415c499
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 4af1fc255fd5691b3caaf3f5ce92a28740d1b7b1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2ea7a9297f7a2f5e05a23bcab32b10922847882b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900483"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449899"
 ---
 # <a name="create-a-composite-domain"></a>복합 도메인 만들기
 
@@ -39,7 +40,7 @@ ms.locfileid: "85900483"
 ####  <a name="permissions"></a><a name="Permissions"></a> 권한  
  복합 도메인을 만들려면 DQS_MAIN 데이터베이스에 대한 dqs_kb_editor 또는 dqs_administrator 역할이 있어야 합니다.  
   
-##  <a name="create-a-composite-domain-in-the-knowledge-discovery-activity"></a><a name="ParsingKnowledgeDiscoveryActivity"></a>기술 자료 검색 작업에서 복합 도메인 만들기  
+##  <a name="create-a-composite-domain-in-the-knowledge-discovery-activity"></a><a name="ParsingKnowledgeDiscoveryActivity"></a> 기술 자료 검색 작업에서 복합 도메인 만들기  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Data Quality Client 응용 프로그램을 실행](../data-quality-services/run-the-data-quality-client-application.md)합니다.  
   
@@ -55,7 +56,7 @@ ms.locfileid: "85900483"
   
 7.  **복합 도메인 만들기** 아이콘을 클릭합니다.  
   
-##  <a name="create-a-composite-domain-in-the-domain-management-activity"></a><a name="DomainManagementActivity"></a>도메인 관리 작업에서 복합 도메인 만들기  
+##  <a name="create-a-composite-domain-in-the-domain-management-activity"></a><a name="DomainManagementActivity"></a> 도메인 관리 작업에서 복합 도메인 만들기  
   
 1.  Data Quality Services 클라이언트 홈 페이지에서 **기술 자료 열기** 를 클릭한 다음 기술 자료를 선택하거나 **새 기술 자료** 를 클릭하고 새 기술 자료의 속성을 입력합니다.  
   
@@ -71,7 +72,7 @@ ms.locfileid: "85900483"
   
 7.  **확인**을 클릭합니다.  
   
-##  <a name="set-composite-domain-properties"></a><a name="CompositeDomainProperties"></a>복합 도메인 속성 설정  
+##  <a name="set-composite-domain-properties"></a><a name="CompositeDomainProperties"></a> 복합 도메인 속성 설정  
   
 1.  **복합 도메인 만들기** 대화 상자에서 기술 자료에 고유한 이름과 설명(최대 256자)을 입력합니다.  
   
@@ -91,10 +92,10 @@ ms.locfileid: "85900483"
   
 6.  **마침** 을 클릭하여 [도메인 관리 작업 종료](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)에 설명된 대로 도메인 관리 작업을 완료합니다.  
   
-##  <a name="follow-up-after-creating-a-composite-domain"></a><a name="FollowUp"></a>후속 작업: 복합 도메인을 만든 후  
+##  <a name="follow-up-after-creating-a-composite-domain"></a><a name="FollowUp"></a> 후속 작업: 복합 도메인을 만든 후  
  복합 도메인을 만든 후 도메인에 대해 다른 도메인 관리 태스크를 수행하거나, 기술 자료 검색을 수행하여 도메인에 정보를 추가하거나, 도메인에 일치 정책을 추가할 수 있습니다. 자세한 내용은 [기술 자료 검색 수행](../data-quality-services/perform-knowledge-discovery.md), [도메인 관리](../data-quality-services/managing-a-domain.md) 또는 [일치 정책 만들기](../data-quality-services/create-a-matching-policy.md)를 참조하세요.  
   
-##  <a name="knowledge-based-parsing"></a><a name="KnowledgeBaseParsing"></a>지식 기반 구문 분석  
+##  <a name="knowledge-based-parsing"></a><a name="KnowledgeBaseParsing"></a> 지식 기반 구문 분석  
  Data Quality Services를 사용하면 구분 기호나 순서뿐 아니라 기술 자료를 기반으로 데이터를 구문 분석할 수 있습니다. 기술 자료 구문 분석은 복잡한 원본 데이터가 복합 도메인에 매핑되어 있고 참조 데이터 서비스를 사용하지 않는 경우에 사용됩니다. 기술 자료 구문 분석을 사용하여 데이터 원본에서 관련 단일 도메인으로 데이터를 구문 분석할 수 있습니다. 기술 자료 구문 분석을 사용하는 경우 DQS에서는 먼저 기술 자료를 사용하여 복잡한 데이터를 단일 도메인으로 구문 분석합니다. 가능한 경우 문자열의 일부를 하나 이상의 도메인으로 식별하여 문자열을 여러 도메인으로 구문 분석합니다. 예를 들어 "John B. Doe"를 전체 이름 복합 도메인으로 표시된 전체 이름 필드의 복잡한 값으로 가정합니다. DQS에서 "John"을 이름 도메인으로, "Doe"를 성 도메인으로 식별한 경우 도메인 기술 자료에 따라 "B."를 중간 이름 도메인에 추가합니다.  
   
  기술 자료 구문 분석은 구분 기호 기반 구문 분석을 선택한 경우에만 사용할 수 있습니다. 기술 자료 구문 분석은 구분 기호 구문 분석을 대체하는 것이 아니라 향상시킵니다. 구문 분석에 사용할 기술 자료가 없는 경우에만 DQS에서 구분 기호를 사용하여 구문 분석을 수행합니다. 경우에 따라 DQS에서 기술 자료 구문 분석으로 일부 구문 분석을 확인한 후 구분 기호 기반 구문 분석으로 다른 구문 분석을 확인할 수도 있습니다.  

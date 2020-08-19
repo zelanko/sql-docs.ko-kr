@@ -1,4 +1,5 @@
 ---
+description: Integration Services 트랜잭션
 title: Integration Services 트랜잭션 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3c78bb26-ddce-4831-a5f8-09d4f4fd53cc
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 46c42deda5b2b66d2979136ad6a82e0ad80042be
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: eee7131c831215278a8754efa913add075cfb57d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917479"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449785"
 ---
 # <a name="integration-services-transactions"></a>Integration Services 트랜잭션
 
@@ -159,7 +160,7 @@ ms.locfileid: "86917479"
   
 ## <a name="external-resources"></a>외부 리소스  
   
--   www.mssqltips.com 의 블로그 항목 - [SQL Server Integration Services SSIS에서 트랜잭션을 사용하는 방법](https://go.microsoft.com/fwlink/?LinkId=157783)  
+-    www.mssqltips.com 의 블로그 항목 - [SQL Server Integration Services SSIS에서 트랜잭션을 사용하는 방법](https://go.microsoft.com/fwlink/?LinkId=157783)  
   
 ## <a name="see-also"></a>참고 항목  
  [상속된 트랜잭션](https://msdn.microsoft.com/library/90db5564-d41e-4cfe-8c9e-4e68d41eff1c)   

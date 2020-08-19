@@ -1,4 +1,5 @@
 ---
+description: SQLFreeStmt(커서 라이브러리)
 title: SQLFreeStmt (커서 라이브러리) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 47bfbd4d-9453-4609-958d-1e05794cb223
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d78075593926c15dbaeb1904603b08e990f64983
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9bc9ba1bc747f2c4408c308b13924afc8b3ba875
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302024"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448993"
 ---
 # <a name="sqlfreestmt-cursor-library"></a>SQLFreeStmt(커서 라이브러리)
 > [!IMPORTANT]  

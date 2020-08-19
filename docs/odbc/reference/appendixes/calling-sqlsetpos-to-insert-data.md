@@ -1,4 +1,5 @@
 ---
+description: SQLSetPos를 호출하여 데이터 삽입
 title: SQLSetPos를 호출 하 여 데이터 삽입 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 03e5c4d0-2bb3-4649-9781-89cab73f78eb
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: cb374b2506d55b400207c8f60bdf42bb6bb4065e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 215d02e9b5bd92f6a22f7e45c8c29c7c5a0a6a4c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306604"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449015"
 ---
 # <a name="calling-sqlsetpos-to-insert-data"></a>SQLSetPos를 호출하여 데이터 삽입
 Odbc 2.x 드라이버를 사용 하 여 작업 하 *는 odbc* *2.x 응용 프로그램이* SQL_ADD의 *작업* 인수를 사용 하 여 **SQLSetPos** 를 호출 하면 드라이버 관리자는이 호출을 **SQLBulkOperations**에 매핑하지 않습니다. ODBC 3.x 드라이버가 SQL_ADD를 사용 하 여 **SQLSetPos** 를 호출 하는 응용 프로그램에서 작동 해야 하는 경우 드라이버에서 해당 작업을 지원 해야 *합니다.*  

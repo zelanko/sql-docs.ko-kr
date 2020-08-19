@@ -1,4 +1,5 @@
 ---
+description: 공급자 오류
 title: 공급자 오류 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: cc7d6ff9-2034-45c6-9d61-90b177010054
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2fce89dd6df633f8cdcf78271c63336b3ecc7b05
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 9588ddddf094f391f442dd7ad9c4172cce70970e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760999"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453025"
 ---
 # <a name="provider-errors"></a>공급자 오류
 공급자 오류가 발생 하면-2147467259의 런타임 오류가 반환 됩니다. 이 오류가 표시 되 면 활성 **연결** 개체의 **오류** 컬렉션을 확인 합니다 .이 컬렉션에는 발생 한 작업을 설명 하는 하나 이상의 오류가 포함 됩니다.  
@@ -69,8 +70,8 @@ End Function
 |**설명**|발생 한 오류에 대 한 텍스트 설명입니다.|  
 |**HelpContext, HelpFile**|발생 한 오류에 대 한 설명이 포함 된 도움말 항목 및 도움말 파일을 참조 하세요.|  
 |**NativeError**|공급자별 오류 번호입니다.|  
-|**수많은**|발생 한 오류의 숫자 ( **Errorvalueenum**에 나열 됨)를 나타내는 정수 (Long)입니다.|  
-|**소스**|오류를 생성 한 개체 또는 응용 프로그램의 이름을 나타냅니다.|  
+|**Number**|발생 한 오류의 숫자 ( **Errorvalueenum**에 나열 됨)를 나타내는 정수 (Long)입니다.|  
+|**원본**|오류를 생성 한 개체 또는 응용 프로그램의 이름을 나타냅니다.|  
 |**SQLState**|SQL 문 프로세스 중에 공급자가 반환 하는 다섯 문자 오류 코드입니다.|  
   
  ADO **Error** 개체는 표준 Visual Basic **Err** 개체와 매우 비슷합니다. 해당 속성은 발생 한 오류를 설명 합니다. 오류 수 외에도 관련 된 두 가지 정보를 받을 수 있습니다. **NativeError** 속성에는 사용 중인 공급자와 관련 된 오류 번호가 포함 되어 있습니다. 이전 예제에서 공급자는 SQL Server에 대 한 Microsoft OLE DB 공급자 이므로 **NativeError** 는 SQL Server 관련 된 오류를 포함 합니다. **SQLState** 속성에는 SQL 문의 오류를 설명 하는 5 자리 코드가 있습니다.  

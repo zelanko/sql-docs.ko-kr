@@ -1,4 +1,5 @@
 ---
+description: 셰이프 COMPUTE 절
 title: Shape COMPUTE 절 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3fdfead2-b5ab-4163-9b1d-3d2143a5db8c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 44ccd2c978cb0356a2fcab75daa860db0f4f77f5
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 9513666eca4d9e191b74b8a1a25dd8a9da051ee8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760849"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452845"
 ---
 # <a name="shape-compute-clause"></a>셰이프 COMPUTE 절
 Shape COMPUTE 절은 열이 자식 **레코드 집합**에 대 한 참조로 구성 된 부모 **레코드 집합**을 생성 합니다. 내용에 장, 새 열 또는 계산 된 열 또는 자식 **레코드** 집합에 대 한 집계 함수를 실행 한 결과 또는 이전에 지정한 **레코드 집합**에서 집계 함수를 실행 한 결과 선택적 BY 절에 나열 된 자식 **레코드 집합** 의 모든 열  
@@ -61,7 +62,7 @@ SHAPE child-command [AS] child-alias
   
  BY 절을 생략 하면 전체 자식 **레코드 집합이** 단일 그룹으로 처리 되 고 부모 **레코드 집합** 에는 정확히 한 개의 행이 포함 됩니다. 해당 행은 전체 하위 **레코드 집합**을 참조 합니다. BY 절을 생략 하면 전체 하위 **레코드 집합**에 대 한 "총합계" 집계를 계산할 수 있습니다.  
   
- 다음은 그 예입니다.  
+ 예를 들어:  
   
 ```  
 SHAPE {select * from Orders} AS orders             COMPUTE orders, SUM(orders.OrderAmount) as TotalSales         
@@ -69,14 +70,14 @@ SHAPE {select * from Orders} AS orders             COMPUTE orders, SUM(orders
   
  계산 또는 추가를 사용 하 여 부모 **레코드 집합** 을 구성 하는 방법에 관계 없이 자식 **레코드 집합**에 연결 하는 데 사용 되는 챕터 열이 포함 됩니다. 원하는 경우 부모 **레코드 집합** 에 자식 행에 대 한 집계 (SUM, MIN, MAX 등)가 포함 된 열이 포함 될 수도 있습니다. 부모 및 자식 **레코드 집합** 모두에는 **레코드 집합**의 행에 식이 포함 된 열이 포함 될 수 있으며 처음에는 비어 있는 열도 포함 될 수 있습니다.  
   
-## <a name="operation"></a>작업(Operation)  
+## <a name="operation"></a>작업  
  자식 *명령은* 공급자에 게 실행 되어 자식 **레코드 집합**을 반환 합니다.  
   
  COMPUTE 절은 부모 **레코드 집합**의 열을 지정 합니다 .이 열은 자식 **레코드 집합**, 하나 이상의 집계, 계산 식 또는 새 열에 대 한 참조일 수 있습니다. BY 절이 있는 경우 정의 하는 열도 부모 **레코드 집합**에 추가 됩니다. BY 절은 자식 **레코드 집합** 의 행을 그룹화 하는 방법을 지정 합니다.  
   
  예를 들어 상태, 구/군/시 및 인구 필드로 구성 된 인구 통계 라는 테이블이 있다고 가정 합니다. (테이블의 채우기 수치는 한 가지 예로만 제공 됩니다.)  
   
-|주|City|모집단|  
+|시스템 상태|도시|모집단|  
 |-----------|----------|----------------|  
 |WA|Seattle|70만|  
 |또는|Medford|200,000|  
@@ -104,7 +105,7 @@ rst.Open  "SHAPE {select * from demographics} AS rs "  & _
   
 ### <a name="parent"></a>Parent  
   
-|합계 (rs. 표본의|rs|주|  
+|합계 (rs. 표본의|rs|시스템 상태|  
 |---------------------------|--------|-----------|  
 |130만|자식 1에 대 한 참조|CA|  
 |120만|자식 2에 대 한 참조|WA|  
@@ -112,27 +113,27 @@ rst.Open  "SHAPE {select * from demographics} AS rs "  & _
   
 ## <a name="child1"></a>Child1  
   
-|주|City|모집단|  
+|시스템 상태|도시|모집단|  
 |-----------|----------|----------------|  
 |CA|Los Angeles|80만|  
 |CA|샌디에이고|60만|  
   
 ## <a name="child2"></a>Child2  
   
-|주|City|모집단|  
+|시스템 상태|도시|모집단|  
 |-----------|----------|----------------|  
 |WA|Seattle|70만|  
 |WA|Tacoma|500,000|  
   
 ## <a name="child3"></a>Child3  
   
-|주|City|모집단|  
+|시스템 상태|도시|모집단|  
 |-----------|----------|----------------|  
 |또는|Medford|200,000|  
 |또는|Portland|400,000|  
 |또는|Corvallis|300,000|  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [계층적 레코드 집합의 행 액세스](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   
  [데이터 셰이핑 개요](../../../ado/guide/data/data-shaping-overview.md)   
  [Field 개체](../../../ado/reference/ado-api/field-object.md)   

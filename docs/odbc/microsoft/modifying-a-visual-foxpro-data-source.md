@@ -1,4 +1,5 @@
 ---
+description: Visual FoxPro 데이터 원본 수정
 title: Visual FoxPro 데이터 원본 수정 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d9c30b5a-9ddf-4044-a7c5-0bdb983fdda4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fc9ceb3bd250a25ce6d0166c55c43827758ea8ac
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f85fb847e57fb7f7dd043770ba3fedc93ece1a42
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81284803"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449415"
 ---
 # <a name="modifying-a-visual-foxpro-data-source"></a>Visual FoxPro 데이터 원본 수정
 ### <a name="to-modify-a-visual-foxpro-data-source"></a>Visual FoxPro 데이터 원본을 수정 하려면  

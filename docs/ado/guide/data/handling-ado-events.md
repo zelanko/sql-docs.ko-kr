@@ -1,4 +1,5 @@
 ---
+description: ADO 이벤트 처리
 title: ADO 이벤트 처리 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e9003457-0762-48b3-942f-0820266b158f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0628c0af52473c3b7eb7200cb4a06bfc45123a10
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 76af7a55c0f3a6e4de2caea7eb3da67e9c27c5cc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758879"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453315"
 ---
 # <a name="handling-ado-events"></a>ADO 이벤트 처리
 ADO 이벤트 모델은 작업이 시작 되기 전이나 완료 된 후에 *이벤트*또는 알림을 발행 하는 특정 동기 및 비동기 ADO 작업을 지원 합니다. 이벤트는 실제로 응용 프로그램에서 정의 하는 이벤트 처리기 루틴에 대 한 호출입니다.  

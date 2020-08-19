@@ -1,4 +1,5 @@
 ---
+description: 데이터 파일 및 서식 파일 사용
 title: 데이터 파일 및 서식 파일 사용 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,11 +19,12 @@ ms.assetid: c01b7155-3f0a-473d-90b7-87a97bc56ca5
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: aac8d380c6ea4eec67a0b1f98dbfc22ae71ac1c6
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 7a71502f608c1e283831bfb43f80aab6727bd77a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007158"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448626"
 ---
 # <a name="using-data-files-and-format-files"></a>데이터 파일 및 서식 파일 사용
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -53,7 +55,7 @@ ms.locfileid: "86007158"
   
  **Bcp_control** 함수는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 파일에서로의 대량 복사에 대 한 몇 가지 옵션을 제어 합니다. **bcp_control** 는 종료 전 최대 오류 수, 대량 복사를 시작할 파일의 행, 중지할 행 및 일괄 처리 크기와 같은 옵션을 설정 합니다.  
   
-## <a name="see-also"></a>참고 항목  
- [ODBC&#41;&#40;대량 복사 작업 수행](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)  
+## <a name="see-also"></a>관련 항목  
+ [ODBC&#41;&#40;대량 복사 작업 수행 ](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)  
   
   

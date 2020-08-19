@@ -1,4 +1,5 @@
 ---
+description: Integration Services(SSIS) 이벤트 처리기
 title: Integration Services(SSIS) 이벤트 처리기 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 6f60cf93-35dc-431c-908d-2049c4ab66ba
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7e70c3119d7c5058cf62a3194bc2c6a83f62c022
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 7e2c7fb36708d615bd19dfb2c5854748081a9dbb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917542"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449848"
 ---
 # <a name="integration-services-ssis-event-handlers"></a>Integration Services(SSIS) 이벤트 처리기
 
@@ -75,7 +76,7 @@ ms.locfileid: "86917542"
 ## <a name="run-time-events"></a>런타임 이벤트  
  다음 표에서는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서 제공되는 이벤트 처리기를 나열하고 이벤트 처리기를 실행하는 런타임 이벤트에 대해 설명합니다.  
   
-|이벤트 처리기|행사|  
+|이벤트 처리기|이벤트|  
 |-------------------|-----------|  
 |**OnError**|**OnError** 이벤트에 대한 이벤트 처리기입니다. 이 이벤트는 오류가 발생할 때 실행 개체에 의해 발생합니다.|  
 |**OnExecStatusChanged**|**OnExecStatusChanged** 이벤트에 대한 이벤트 처리기입니다. 이 이벤트는 실행 상태가 변경될 때 실행 개체에 의해 발생합니다.|  

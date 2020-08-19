@@ -1,4 +1,5 @@
 ---
+description: 데이터 셰이프에 필요한 공급자
 title: 데이터 셰이핑에 필요한 공급자 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d49d48d2-ac2d-4c11-895c-5a149b444620
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: abda9d7a275ce100636efa58430009dd430fac0b
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: e17ebe5f5e8deab776b88ce66df8636a28212394
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760949"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452945"
 ---
 # <a name="required-providers-for-data-shaping"></a>데이터 셰이프에 필요한 공급자
 데이터 셰이핑에는 일반적으로 두 개의 공급자가 필요 합니다. [OLE DB에 대 한 서비스 공급자, 데이터 셰이핑 서비스](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)는 데이터 셰이핑 기능을 제공 하 고 SQL Server 용 OLE DB 공급자와 같은 데이터 공급자는 셰이프 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)을 채울 데이터 행을 제공 합니다.  

@@ -1,4 +1,5 @@
 ---
+description: CompareBookmarks 메서드 예제(VC++)
 title: CompareBookmarks 메서드 예제 (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 24ab3f3a-29c5-4ee1-942e-2634c02d0778
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 52c11d385b6ae77208843d8eac430f65e18d3a35
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: ca1a9f62d293e3be0c7c27ce8dec8bc58e7d5c43
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760349"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450775"
 ---
 # <a name="comparebookmarks-method-example-vc"></a>CompareBookmarks 메서드 예제(VC++)
 이 예제에서는 [Comparebookmarks](../../../ado/reference/ado-api/comparebookmarks-method-ado.md) 메서드를 보여 줍니다. 특정 책갈피를 특수 한 경우를 제외 하 고는 책갈피의 상대 값이 거의 필요 하지 않습니다.  

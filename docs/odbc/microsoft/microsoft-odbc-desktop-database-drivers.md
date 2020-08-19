@@ -1,4 +1,5 @@
 ---
+description: Microsoft ODBC 데스크톱 데이터베이스 드라이버
 title: Microsoft ODBC Desktop Database 드라이버 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4e505c65-a8dd-4283-ae28-313d8a3aa046
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 99da8943f738d879a0a1bb66f6cfdbd6156c17ee
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e60052bda67b792cbba81447d6ae20ebdeb565bd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302984"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449435"
 ---
 # <a name="microsoft-odbc-desktop-database-drivers"></a>Microsoft ODBC 데스크톱 데이터베이스 드라이버
 ODBC는 데이터베이스 액세스 언어로 구조적 쿼리 언어 (SQL)를 사용 하는 API입니다. 응용 프로그램의 소스 코드에 직접 통합 되는 동일한 ODBC 소스 코드를 사용 하 여 다양 한 Dbms (데이터베이스 관리 시스템)에 액세스할 수 있습니다. Microsoft ODBC 데스크톱 데이터베이스 드라이버를 사용 하 여 ODBC 사용 응용 프로그램 사용자는 ODBC 인터페이스를 통해 데스크톱 데이터베이스를 열고 쿼리하고 업데이트할 수 있습니다.  
@@ -37,7 +38,7 @@ ODBC는 데이터베이스 액세스 언어로 구조적 쿼리 언어 (SQL)를 
   
 -   dBASE  
   
--   Text  
+-   텍스트  
   
  Microsoft Visual FoxPro® ODBC 드라이버에 대 한 자세한 설명서는 [Visual FOXPRO Odbc 드라이버](../../odbc/microsoft/visual-foxpro-odbc-driver.md) 를 참조 하십시오.  
   

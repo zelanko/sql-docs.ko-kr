@@ -1,4 +1,5 @@
 ---
+description: ODBC 구성 요소 파일
 title: ODBC 구성 요소 파일 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 300d387d-be03-4be3-8c7c-6caf56d678ce
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 33268b2973c6fd307a6f8730336c0ffa3603af2b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c5a3d5d0b8c9f47ed28d17109747607b489e1f34
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298153"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449365"
 ---
 # <a name="odbc-component-files"></a>ODBC 구성 요소 파일
 Odbc 드라이버 파일은 ODBC 데스크톱 데이터베이스 드라이버 4.0의 각 구성 요소에 필요 합니다.  

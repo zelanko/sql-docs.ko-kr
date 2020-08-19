@@ -1,4 +1,5 @@
 ---
+description: 설치 및 구성
 title: 설치 및 구성 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4202165e-b89c-47a5-ae59-0c98988caad5
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0184bc84a2a633b5c5b702a8f445615113a0614b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 76057ce89097efa4b54deea6080eb3a429707125
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299993"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449495"
 ---
 # <a name="installing-and-configuring"></a>설치 및 구성
 Visual FoxPro ODBC 드라이버를 다운로드 하려면 [Visual FOXPRO Odbc 드라이버 다운로드 사이트](https://go.microsoft.com/fwlink/?LinkId=121318)를 참조 하세요.  

@@ -1,4 +1,5 @@
 ---
+description: 레코드 집합을 반환하는 JScript 코드 예제
 title: 레코드 집합을 반환 하는 JScript 코드 예제 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 74aad8a6-06cc-4a2c-811a-d78f9b741d84
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0bffe36980f06bc187bdaf819b373cdb547ecc92
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: e6aea6b2e423dab4fb58b3e683081f7d3fdb6850
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82757799"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453205"
 ---
 # <a name="jscript-code-example-to-return-a-recordset"></a>레코드 집합을 반환하는 JScript 코드 예제
-## <a name="jscript-code-rsjs"></a>JScript 코드 (rs .js)  
+## <a name="jscript-code-rsjs"></a>JScript 코드 (rs.js)  
   
 ```  
 main();  
@@ -81,8 +82,8 @@ function alert(str)
   
 #### <a name="try-it"></a>실습  
   
-1.  위의 코드를 텍스트 파일에 저장 합니다. 파일을 rs .js로 저장 합니다.  
+1.  위의 코드를 텍스트 파일에 저장 합니다. rs.js로 파일을 저장 합니다.  
   
-2.  명령 프롬프트를 열고 JScript 파일 (rs .js)을 저장 한 디렉터리로 이동 합니다.  
+2.  명령 프롬프트를 열고 JScript 파일 (rs.js)을 저장 한 디렉터리로 이동 합니다.  
   
 3.  `CScript rs.js`명령 프롬프트에서을 입력 합니다.

@@ -1,4 +1,5 @@
 ---
+description: 1-1단원 - 작업 폴더 및 환경 변수 만들기
 title: '1단계: 작업 폴더 및 환경 변수 만들기 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: 45091ba2-ea3d-4399-9814-489d812b42cc
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 32e0f638af3978a0bf9b938b7131b7e86431f6a6
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c91be2fffde29a362dd73da41159b4a4658bce3e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917447"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449750"
 ---
 # <a name="lesson-1-1---creating-working-folders-and-environment-variables"></a>1-1단원 - 작업 폴더 및 환경 변수 만들기
 
@@ -38,7 +39,7 @@ ms.locfileid: "86917447"
   
 2.  **로컬 디스크(C:)** 를 클릭합니다.  
   
-3.  **파일** 메뉴에서 **새로 만들기**를 가리킨 다음 **폴더**를 클릭합니다.  
+3.  **파일** 메뉴에서 **새로 만들기**를 가리키고 **폴더**를 클릭합니다.  
   
 4.  새 폴더의 이름을 **DeploymentTutorial**로 바꿉니다.  
   

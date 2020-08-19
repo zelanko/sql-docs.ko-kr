@@ -1,4 +1,5 @@
 ---
+description: 데이터 유지
 title: 데이터 유지 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 21c162ca-2845-4dd8-a49d-e715aba8c461
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 60b3a9e036bb199b72373055b299f262862a5d16
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: a1487cdbba81677cd58e3f130f5d05a8b9337588
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759119"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453085"
 ---
 # <a name="persisting-data"></a>데이터 유지
 휴대용 컴퓨팅 (예: 랩톱 사용)은 연결 된 상태와 연결이 끊어진 상태에서 실행 될 수 있는 응용 프로그램에 대 한 필요성을 생성 했습니다. ADO는 개발자에 게 클라이언트 커서 **레코드 집합** 을 디스크에 저장 하 고 나중에 다시 로드할 수 있는 기능을 제공 하 여이에 대 한 지원을 추가 했습니다.  

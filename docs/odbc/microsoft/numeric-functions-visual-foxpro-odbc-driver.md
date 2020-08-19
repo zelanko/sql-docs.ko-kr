@@ -1,4 +1,5 @@
 ---
+description: 숫자 함수(Visual FoxPro ODBC 드라이버)
 title: 숫자 함수 (Visual FoxPro ODBC 드라이버) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7caab48e-cbb5-4bbc-a09b-5cf902e5bc45
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d3993a9a1b2412cb15229f2763c7c3b38f6b7862
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c8728446decd8a0ad04f08d88475ae08a7c69c5f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298163"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449375"
 ---
 # <a name="numeric-functions-visual-foxpro-odbc-driver"></a>숫자 함수(Visual FoxPro ODBC 드라이버)
 다음 표에서는 Visual FoxPro ODBC 드라이버에서 지 원하는 ODBC 숫자 함수에 대해 설명 합니다. 동일한 함수에 대 한 Visual FoxPro 문법이 ODBC 구문과 다를 경우 Visual FoxPro와 동일한 항목이 나열 됩니다.  

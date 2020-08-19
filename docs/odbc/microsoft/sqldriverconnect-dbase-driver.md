@@ -1,4 +1,5 @@
 ---
+description: SQLDriverConnect(dBASE 드라이버)
 title: SQLDriverConnect (dBASE 드라이버) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c837aa31-068e-4fa3-bc00-aae09bec21de
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 39d3d062ef8371ce37f812216cbb642d103eff98
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e15925b52c096acb1a1021c1a2f968c0863eacf0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302924"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449205"
 ---
 # <a name="sqldriverconnect-dbase-driver"></a>SQLDriverConnect(dBASE 드라이버)
 > [!NOTE]  
@@ -35,6 +36,6 @@ ms.locfileid: "81302924"
 > [!NOTE]  
 >  DBASEdriver에 대해 DBQ 또는 DefaultDir를 지정 하지 않으면 드라이버가 현재 디렉터리에 연결 됩니다.  
   
-|드라이버|필요한 키워드|예|  
+|드라이버|필요한 키워드|예제|  
 |------------|-----------------------|--------------|  
 |dBASE|드라이버, DriverID|Driver = {Microsoft dBASE Driver (* .dbf)}; DBQ = c:\temp; DriverID = 277|

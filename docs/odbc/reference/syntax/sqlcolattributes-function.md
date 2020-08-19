@@ -1,4 +1,5 @@
 ---
+description: SQLColAttributes 함수
 title: SQLColAttributes 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 3ece37af-db56-47fc-bc9d-6a7d0d8a00ec
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ef2dc0b9007542d5bf71f06a742cc58c0ae5f4ff
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0c404a4f8ef1dd9bef246e811e200eed3d431c29
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301283"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448799"
 ---
 # <a name="sqlcolattributes-function"></a>SQLColAttributes 함수
 **규칙**  
@@ -38,6 +39,6 @@ ms.locfileid: "81301283"
   
  응용 프로그램이 64 비트 운영 체제에서 실행 되는 경우 [ODBC 64 비트 정보](../../../odbc/reference/odbc-64-bit-information.md)를 참조 하세요.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [ODBC API 참조](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 헤더 파일](../../../odbc/reference/install/odbc-header-files.md)

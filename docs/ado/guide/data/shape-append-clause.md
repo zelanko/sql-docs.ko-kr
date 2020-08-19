@@ -1,4 +1,5 @@
 ---
+description: 셰이프 APPEND 절
 title: Shape APPEND 절 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f90fcf55-6b24-401d-94e1-d65bd24bd342
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d26f83985ce74edc0581ff9ff8fee31d5064c7e5
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: f2a04e532256de30295f2179f7b15386bceaa8b3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760869"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452865"
 ---
 # <a name="shape-append-clause"></a>셰이프 APPEND 절
 Shape command APPEND 절은 **레코드 집합**에 열을 추가 합니다. 이러한 열은 종종 자식 **레코드 집합**을 참조 하는 장 열입니다.  

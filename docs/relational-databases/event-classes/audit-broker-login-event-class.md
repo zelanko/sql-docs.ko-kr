@@ -1,4 +1,5 @@
 ---
+description: Audit Broker Login 이벤트 클래스
 title: Audit Broker Login 이벤트 클래스 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ ms.assetid: af9b1153-2791-40ef-a95c-50923cd0cc97
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9b78ae1ad6fafcf4be86cd2d32e936d2ef018ed8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d6c94dd09b37a0648f65f1d74d0b95abbb518a96
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85693641"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448694"
 ---
 # <a name="audit-broker-login-event-class"></a>Audit Broker Login 이벤트 클래스
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]

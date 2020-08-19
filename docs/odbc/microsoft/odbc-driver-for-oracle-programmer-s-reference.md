@@ -1,4 +1,5 @@
 ---
+description: Oracle 프로그래머를 위한 ODBC 드라이버&#39;s 참조
 title: Oracle 프로그래머를 위한 ODBC 드라이버&#39;s 참조 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,18 +11,18 @@ ms.topic: conceptual
 ms.assetid: d70e79a1-6403-49ad-8713-eda6e8aa287e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 763c9892836b262f308b82ef96794a03dc33fd12
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b409446da085e0d35b9f3580ba7da8df22ef6f03
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298123"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449345"
 ---
 # <a name="odbc-driver-for-oracle-programmer39s-reference"></a>Oracle 프로그래머를 위한 ODBC 드라이버&#39;s 참조
 > [!IMPORTANT]  
 >  이 기능은 이후 버전의 Windows에서 제거 될 예정입니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. 대신 Oracle에서 제공 하는 ODBC 드라이버를 사용 합니다.  
   
- 이 섹션에는 다음 토픽이 포함되어 있습니다.  
+ 이 단원에 포함된 항목은 다음과 같습니다.  
   
 -   [연결 문자열 형식 및 특성](../../odbc/microsoft/connection-string-format-and-attributes.md)  
   

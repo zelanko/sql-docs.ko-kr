@@ -1,4 +1,5 @@
 ---
+description: 레코드 및 공급자 제공 필드
 title: 레코드 및 공급자 제공 필드 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 77f95e0a-0cf2-411a-a792-593f77330fbd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: abfa226c5bc6c94613a5d45c48a351811235455f
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 6cd737ce36a53643503a5c76dfaafe2127c93f9b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764794"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453005"
 ---
 # <a name="records-and-provider-supplied-fields"></a>레코드 및 공급자 제공 필드
 [Record](../../../ado/reference/ado-api/record-object-ado.md) 개체를 열면 해당 원본은 열린 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체와 함께 열린 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)의 현재 행, 절대 url 또는 상대 url 일 수 있습니다.  
@@ -55,7 +56,7 @@ ms.locfileid: "82764794"
 ## <a name="resource-recordset-columns"></a>리소스 레코드 집합 열  
  *리소스 레코드 집합* 은 다음과 같은 열로 구성 됩니다.  
   
-|열 이름|형식|설명|  
+|열 이름|Type|설명|  
 |-----------------|----------|-----------------|  
 |RESOURCE_PARSENAME|AdVarWChar|읽기 전용입니다. 리소스의 URL을 나타냅니다.|  
 |RESOURCE_PARENTNAME|AdVarWChar|읽기 전용입니다. 부모 레코드의 절대 URL을 나타냅니다.|  

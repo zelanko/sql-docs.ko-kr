@@ -1,4 +1,5 @@
 ---
+description: SQLColAttribute 함수(SQLColAttribute Function)
 title: SQLColAttribute 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 8c45c598-cb01-4789-a571-e93619a18ed9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c94de3dfc7036277f8be56c401326cdab07a9606
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d5cc7020300fd9099b70ed6f33716f343d47d571
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301293"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448818"
 ---
 # <a name="sqlcolattribute-function"></a>SQLColAttribute 함수(SQLColAttribute Function)
 **규칙**  
@@ -68,7 +69,7 @@ SQLRETURN SQLColAttribute (
  *CharacterAttributePtr* 가 NULL 인 경우 *StringLengthPtr* 는 *CharacterAttributePtr*가 가리키는 버퍼에서 반환 될 수 있는 총 바이트 수 (문자 데이터의 NULL 종료 문자 제외)를 반환 합니다.  
   
  *BufferLength*  
- 입력 *FieldIdentifier* 가 ODBC 정의 필드이 고 *CharacterAttributePtr* 가 문자열 또는 이진 버퍼를 가리키는 경우이 인수는 \* *CharacterAttributePtr*의 길이 여야 합니다. *FieldIdentifier* 가 ODBC 정의 필드이 고 \* *CharacterAttribute*Ptr이 정수 이면이 필드는 무시 됩니다. CharacterAttributePtr가 유니코드 문자열이 면 ( **sqlcolattributew**를 호출할 때) *bufferlength* 인수는 짝수 여야 합니다. * \** *FieldIdentifier* 가 드라이버 정의 필드인 경우 응용 프로그램은 *bufferlength* 인수를 설정 하 여 필드의 특성을 드라이버 관리자에 게 표시 합니다. *Bufferlength* 에는 다음 값을 사용할 수 있습니다.  
+ 입력 *FieldIdentifier* 가 ODBC 정의 필드이 고 *CharacterAttributePtr* 가 문자열 또는 이진 버퍼를 가리키는 경우이 인수는 CharacterAttributePtr의 길이 여야 합니다 \* *CharacterAttributePtr*. *FieldIdentifier* 가 ODBC 정의 필드이 고 \* *CharacterAttribute*Ptr이 정수 이면이 필드는 무시 됩니다. * \* CharacterAttributePtr* 가 유니코드 문자열이 면 ( **sqlcolattributew**를 호출할 때) *bufferlength* 인수는 짝수 여야 합니다. *FieldIdentifier* 가 드라이버 정의 필드인 경우 응용 프로그램은 *bufferlength* 인수를 설정 하 여 필드의 특성을 드라이버 관리자에 게 표시 합니다. *Bufferlength* 에는 다음 값을 사용할 수 있습니다.  
   
 -   *CharacterAttributePtr* 가 포인터에 대 한 포인터인 경우 *bufferlength* 의 값은 SQL_IS_POINTER 이어야 합니다.  
   
@@ -81,7 +82,7 @@ SQLRETURN SQLColAttribute (
  *StringLengthPtr*  
  출력 **CharacterAttributePtr*에서 반환 하는 데 사용할 수 있는 총 바이트 수 (문자 데이터의 경우 null 종료 바이트 제외)를 반환할 버퍼에 대 한 포인터입니다.  
   
- 문자 데이터의 경우 반환할 수 있는 바이트 수가 *bufferlength*보다 크거나 같은 경우 \* *CharacterAttributePtr* 의 설명자 정보는 *bufferlength* 에서 null 종료 문자의 길이를 뺀 값으로 잘리고 드라이버에 의해 null로 종료 됩니다.  
+ 문자 데이터의 경우 반환할 수 있는 바이트 수가 *Bufferlength*보다 크거나 같은 경우 CharacterAttributePtr의 설명자 정보는 \* *CharacterAttributePtr* *bufferlength* 에서 null 종료 문자의 길이를 뺀 값으로 잘리고 드라이버에 의해 null로 종료 됩니다.  
   
  다른 모든 유형의 데이터에 대해 *Bufferlength* 값은 무시 되 고 드라이버는 **CharacterAttributePtr* 의 크기를 32 비트로 가정 합니다.  
   
@@ -94,7 +95,7 @@ SQLRETURN SQLColAttribute (
 ## <a name="diagnostics"></a>진단  
  **Sqlcolattribute** 가 SQL_ERROR 또는 SQL_SUCCESS_WITH_INFO를 반환 하는 경우 *HandleType* SQL_HANDLE_STMT의 및 *StatementHandle* *핸들* 을 사용 하 여 **SQLGetDiagRec** 를 호출 하 여 연결 된 SQLSTATE 값을 가져올 수 있습니다. 다음 표에서는 일반적으로 **Sqlcolattribute** 에서 반환 하는 SQLSTATE 값을 나열 하 고이 함수의 컨텍스트에서 각각에 대해 설명 합니다. "(DM)" 표기법은 드라이버 관리자에서 반환 된 SQLSTATEs의 설명 보다 앞에 나옵니다. 다른 설명이 없는 한 각 SQLSTATE 값과 연결 된 반환 코드는 SQL_ERROR 됩니다.  
   
-|SQLSTATE|Error|Description|  
+|SQLSTATE|오류|설명|  
 |--------------|-----------|-----------------|  
 |01000|일반 경고|드라이버 관련 정보 메시지입니다. 함수는 SQL_SUCCESS_WITH_INFO를 반환 합니다.|  
 |01004|문자열 데이터, 오른쪽이 잘렸습니다.|버퍼 \* *CharacterAttributePtr* 의 크기가 작아서 전체 문자열 값을 반환할 수 없으므로 문자열 값이 잘렸습니다. 잘리지 않는 문자열 값의 길이는 **StringLengthPtr*에서 반환 됩니다. 함수는 SQL_SUCCESS_WITH_INFO를 반환 합니다.|  
@@ -105,7 +106,7 @@ SQLRETURN SQLColAttribute (
 |HY008|작업 취소됨|*StatementHandle*에 대해 비동기 처리를 사용 하도록 설정 했습니다. 함수가 호출 되었으며 실행이 완료 되기 전에 **sqlcancel** 또는 **Sqlcancelhandle** 이 *StatementHandle*에 대해 호출 되었습니다. 그런 다음 *StatementHandle*에서 함수를 다시 호출 했습니다.<br /><br /> 함수가 호출 되 고 실행이 완료 되기 전에 **sqlcancel** 또는 **sqlcancelhandle** 이 다중 스레드 응용 프로그램의 다른 스레드에서 *StatementHandle* 호출 되었습니다.|  
 |HY010|함수 시퀀스 오류|(DM) *StatementHandle*연결 된 연결 핸들에 대해 비동기적으로 실행 되는 함수가 호출 되었습니다. SQLColAttribute가 호출 될 때이 aynchronous 함수는 계속 실행 중입니다.<br /><br /> (DM) **Sqlexecute**, **sqlexecdirect**또는 **SQLMoreResults** 가 *StatementHandle* 에 대해 호출 되 고 SQL_PARAM_DATA_AVAILABLE 반환 되었습니다. 이 함수는 모든 스트리밍된 매개 변수에 대 한 데이터를 검색 하기 전에 호출 되었습니다.<br /><br /> (DM) **Sqlprepare**, **sqlexecdirect**또는 *StatementHandle*에 대 한 카탈로그 함수를 호출 하기 전에 함수가 호출 되었습니다.<br /><br /> (DM) *StatementHandle* 에 대해 비동기적으로 실행 되는 함수 (이 함수 아님)가 호출 되었으며이 함수가 호출 될 때 계속 실행 중입니다.<br /><br /> (DM) **Sqlexecute**, **sqlexecdirect**, **SQLBulkOperations**또는 **SQLSetPos** 가 *StatementHandle* 에 대해 호출 되 고 SQL_NEED_DATA 반환 되었습니다. 이 함수는 모든 실행 시 데이터 매개 변수 또는 열에 대해 데이터를 보내기 전에 호출 되었습니다.|  
 |HY013|메모리 관리 오류|메모리 부족 상태로 인해 기본 메모리 개체에 액세스할 수 없기 때문에 함수 호출을 처리할 수 없습니다.|  
-|HY090|잘못 된 문자열 또는 버퍼 길이입니다.|(DM) * \*CharacterAttributePtr* 은 문자열이 고, *bufferlength* 는 0 보다 작지만 SQL_NTS와 같지 않습니다.|  
+|HY090|잘못 된 문자열 또는 버퍼 길이입니다.|(DM) * \* CharacterAttributePtr* 은 문자열이 고, *bufferlength* 는 0 보다 작지만 SQL_NTS와 같지 않습니다.|  
 |HY091|잘못 된 설명자 필드 식별자입니다.|*FieldIdentifier* 인수에 지정 된 값이 정의 된 값 중 하나가 아니고 구현에 정의 된 값이 아닙니다.|  
 |HY117|알 수 없는 트랜잭션 상태로 인해 연결이 일시 중단 되었습니다. 연결 끊기 및 읽기 전용 함수만 허용 됩니다.|(DM) 일시 중단 된 상태에 대 한 자세한 내용은 [Sqlendtran 함수](../../../odbc/reference/syntax/sqlendtran-function.md)를 참조 하세요.|  
 |HYC00|드라이버를 사용할 수 없음|*FieldIdentifier* 인수에 지정 된 값이 드라이버에서 지원 되지 않습니다.|  
@@ -121,13 +122,13 @@ SQLRETURN SQLColAttribute (
 ## <a name="comments"></a>주석  
  응용 프로그램이 **Sqlcolattribute**에서 반환 하는 정보를 사용 하는 방법에 대 한 자세한 내용은 [결과 집합 메타 데이터](../../../odbc/reference/develop-app/result-set-metadata.md)를 참조 하세요.  
   
- **Sqlcolattribute** 는 \* *NumericAttributePtr* 또는 \* *CharacterAttributePtr*에서 정보를 반환 합니다. 정수 정보는 \* *NumericAttributePtr* 에서 sqllen 값으로 반환 됩니다. 모든 다른 형식의 정보는 \* *CharacterAttributePtr*에서 반환 됩니다. \* *NumericAttributePtr*에서 정보가 반환 되 면 드라이버는 *CharacterAttributePtr*, *bufferlength*및 *StringLengthPtr*를 무시 합니다. \* *CharacterAttributePtr*에서 정보가 반환 되 면 드라이버는 *NumericAttributePtr*를 무시 합니다.  
+ **Sqlcolattribute** 는 \* *NumericAttributePtr* 또는 CharacterAttributePtr에서 정보를 반환 \* *CharacterAttributePtr*합니다. 정수 정보는 \* *NumericAttributePtr* 에서 sqllen 값으로 반환 됩니다. 다른 모든 정보 형식은 CharacterAttributePtr에서 반환 됩니다 \* *CharacterAttributePtr*. NumericAttributePtr에서 정보가 반환 되 면 \* *NumericAttributePtr*드라이버는 *CharacterAttributePtr*, *bufferlength*및 *StringLengthPtr*를 무시 합니다. CharacterAttributePtr에서 정보가 반환 되 면 \* *CharacterAttributePtr*드라이버는 *NumericAttributePtr*를 무시 합니다.  
   
  **Sqlcolattribute** 는 IRD의 설명자 필드에서 값을 반환 합니다. 함수는 설명자 핸들이 아니라 문 핸들을 사용 하 여 호출 됩니다. 이 섹션 뒷부분에 나열 된 *FieldIdentifier* 값에 대 한 **sqlcolattribute** 에서 반환 하는 값은 적절 한 IRD 핸들을 사용 하 여 **SQLGetDescField** 를 호출 하 여 검색할 수도 있습니다.  
   
  현재 정의 된 설명자 필드, 해당 필드에 대 한 정보가 반환 되는 인수 및이에 대 한 정보가 반환 되는 인수는이 섹션의 뒷부분에 나와 있습니다. 다른 데이터 원본을 활용 하기 위해 드라이버에서 추가 설명자 유형을 정의할 수 있습니다.  
   
- ODBC 3. *x* 드라이버는 각 설명자 필드에 대 한 값을 반환 해야 합니다. 설명자 필드가 드라이버 또는 데이터 원본에 적용 되지 않고 달리 지정 되지 않은 경우 드라이버는 \* *StringLengthPtr* 에서 0을 반환 하거나 **CharacterAttributePtr*에 빈 문자열을 반환 합니다.  
+ ODBC 3. *x* 드라이버는 각 설명자 필드에 대 한 값을 반환 해야 합니다. 설명자 필드가 드라이버 또는 데이터 원본에 적용 되지 않고 달리 지정 되지 않은 경우 드라이버는 StringLengthPtr에서 0을 반환 \* *StringLengthPtr* 하거나 **CharacterAttributePtr*에 빈 문자열을 반환 합니다.  
   
 ## <a name="backward-compatibility"></a>Backward Compatibility  
  ODBC 3. *x* 함수 **sqlcolattribute** 는 사용 되지 않는 ODBC 2를 대체 합니다. *x* 함수 **sqlcolattributes**. **Sqlcolattributes** 를 **sqlcolattributes** 에 매핑할 때 (ODBC 2* 인 경우) x* 응용 프로그램이 ODBC 3에서 작동 하 고 있습니다. *x* 드라이버)를 만들거나 **sqlcolattribute** 를 **sqlcolattribute** (ODBC 3 인 경우)에 매핑합니다.* x* 응용 프로그램에서 ODBC 2를 사용 하 고 있습니다. *x* 드라이버) 드라이버 관리자는 *FieldIdentifier* 값을를 통해 전달 하거나, 새 값에 매핑하거나, 다음과 같이 오류를 반환 합니다.  
@@ -145,7 +146,7 @@ SQLRETURN SQLColAttribute (
   
  다음 표에서는 **Sqlcolattribute**에서 반환 되는 설명자 유형을 나열 합니다. *NumericAttributePtr* 값의 형식은 **sqllen \* **입니다.  
   
-|*FieldIdentifier*|정보 산업<br /><br /> 반환 된|설명|  
+|*FieldIdentifier*|정보<br /><br /> 반환 된|설명|  
 |-----------------------|---------------------------------|-----------------|  
 |SQL_DESC_AUTO_UNIQUE_VALUE (ODBC 1.0)|*NumericAttributePtr*|열이 자동 증가 열인지 여부를 SQL_TRUE 합니다.<br /><br /> 열이 자동 증가 열이 아니거나 숫자가 아닌 경우 SQL_FALSE 합니다.<br /><br /> 이 필드는 숫자 데이터 형식 열에만 유효 합니다. 응용 프로그램은 autoincrement 열을 포함 하는 행에 값을 삽입할 수 있지만 일반적으로 열의 값을 업데이트할 수 없습니다.<br /><br /> Autoincrement 열에 삽입을 수행 하는 경우 삽입 시 열에 고유한 값이 삽입 됩니다. 증가값은 정의 되지 않지만 데이터 원본에만 해당 됩니다. 응용 프로그램에서는 autoincrement 열이 특정 지점에서 시작 하거나 특정 값 만큼 증가 하는 것으로 가정 하지 않아야 합니다.|  
 |SQL_DESC_BASE_COLUMN_NAME (ODBC 3.0)|*CharacterAttributePtr*|결과 집합 열의 기본 열 이름입니다. 식 열의 경우와 같이 기본 열 이름이 없는 경우이 변수에는 빈 문자열이 포함 됩니다.<br /><br /> 이 정보는 읽기 전용 필드인 IRD의 SQL_DESC_BASE_COLUMN_NAME 레코드 필드에서 반환 됩니다.|  
@@ -305,7 +306,7 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [ODBC API 참조](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 헤더 파일](../../../odbc/reference/install/odbc-header-files.md)   
  [샘플 ODBC 프로그램](../../../odbc/reference/sample-odbc-program.md)

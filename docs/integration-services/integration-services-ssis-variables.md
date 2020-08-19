@@ -1,4 +1,5 @@
 ---
+description: Integration Services(SSIS) 변수
 title: Integration Services(SSIS) 변수 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: c1e81ad6-628b-46d4-9b09-d2866517b6ca
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d4ee6dda0fbd91649a085cfda429ea3e554a83d4
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c27f3936edfc031f336b487d90e185a56d366363
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917489"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449778"
 ---
 # <a name="integration-services-ssis-variables"></a>Integration Services(SSIS) 변수
 
@@ -109,7 +110,7 @@ ms.locfileid: "86917489"
   
 **범위**    
  > [!NOTE]  
->  이 속성 설정은 **변수** 창에서 **변수 이동** 을 클릭한 경우에만 변경할 수 있습니다.  
+>   이 속성 설정은 **변수** 창에서 **변수 이동** 을 클릭한 경우에만 변경할 수 있습니다.  
   
  변수는 패키지의 범위나 패키지에 들어 있는 컨테이너, 태스크 또는 이벤트 처리기의 범위 내에서 생성됩니다. 패키지 컨테이너는 컨테이너의 최상위 계층에 있으므로 패키지 범위의 변수는 전역 변수와 같은 기능을 수행하며 패키지의 모든 컨테이너에서 사용될 수 있습니다. 이와 비슷하게 For 루프 컨테이너와 같은 컨테이너의 범위 내에서 정의된 변수는 해당 For 루프 컨테이너 내의 모든 태스크 또는 컨테이너에서 사용될 수 있습니다.  
   
@@ -135,7 +136,7 @@ ms.locfileid: "86917489"
 
 | 데이터 형식 | 기본값 |
 |---|---|
-| 부울 | False |
+| 부울 | 아니요 |
 | 숫자 및 이진 데이터 형식 | 0(영) |
 | 문자 및 문자열 데이터 형식 | (빈 문자열) |
 | Object | System.Object |
@@ -147,7 +148,7 @@ ms.locfileid: "86917489"
   
 **ValueType**    
  > [!NOTE]  
->  이 속성 값은 **변수** 창의 **데이터 형식** 열에 표시됩니다.  
+>   이 속성 값은 **변수** 창의 **데이터 형식** 열에 표시됩니다.  
   
  변수 값의 데이터 형식을 지정합니다.  
 

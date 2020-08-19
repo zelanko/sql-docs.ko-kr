@@ -1,4 +1,5 @@
 ---
+description: Integration Services 오류 및 메시지 참조
 title: Integration Services 오류 및 메시지 참조 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2020
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2c825c07-5074-42ad-90ea-0dc5a588dcf7
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 32d2870ed0c64919b325a5a267ce695323bf4e04
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c2e520aaf997bb5c03b84e8ed9df8b426972b5a2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917591"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449905"
 ---
 # <a name="integration-services-error-and-message-reference"></a>Integration Services 오류 및 메시지 참조
 
@@ -2324,7 +2325,7 @@ ms.locfileid: "86917591"
 |0xC8000002|-939524094|DTSBC_E_INCORRECTEXACTNUMBEROFTOTALOUTPUTS|출력 및 오류 출력의 총 수인 %1!lu!이(가) 잘못되었습니다. 정확하게 %2!lu!개가 있어야 합니다.|  
 |0xC8000003|-939524093|DTSBC_E_FAILEDTOGETOUTPUTBYINDEX|인덱스 %1!lu!(으)로 출력을 검색할 수 없습니다.|  
 |0xC8000005|-939524091|DTSBC_E_INCORRECTEXACTNUMBEROFERROROUTPUTS|오류 출력 수인 %1!lu!이(가) 잘못되었습니다. 정확하게 %2!lu!개가 있어야 합니다.|  
-|0xC8000006|-939524090|DTSBC_E_INVALIDVALIDATIONSTATUSVALUE|유효성 검사 상태 값 "%1!lu!"이(가) "에 지원되지 않는 데이터 형식이 있습니다.  DTSValidationStatus 열거에 있는 값 중 하나여야 합니다.|  
+|0xC8000006|-939524090|DTSBC_E_INVALIDVALIDATIONSTATUSVALUE|유효성 검사 상태 값 "%1!lu!"이(가) ".  DTSValidationStatus 열거에 있는 값 중 하나여야 합니다.|  
 |0xC8000007|-939524089|DTSBC_E_INPUTHASNOOUTPUT|입력 "%1!lu!"에 동기 오류 출력이 없습니다.|  
 |0xC8000008|-939524088|DTSBC_E_INPUTHASNOERROROUTPUT|입력 "%1!lu!"에 동기 오류 출력이 없습니다.|  
 |0xC8000009|-939524087|DTSBC_E_INVALIDHTPIVALUE|HowToProcessInput 값 %1!lu!이(가) 잘못되었습니다. HowToProcessInput 열거에 있는 값 중 하나여야 합니다.|  

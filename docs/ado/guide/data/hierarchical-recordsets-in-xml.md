@@ -1,4 +1,5 @@
 ---
+description: XML의 계층적 레코드 집합
 title: XML의 계층적 레코드 집합 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5d4b11c4-c94f-4910-b99b-5b9abc50d791
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 24a5303f4ecd43293508f117b795d389a7608285
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: cd1e9e9b2dd1dc3512c95100baed0c83745250bb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762744"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453265"
 ---
 # <a name="hierarchical-recordsets-in-xml"></a>XML의 계층적 레코드 집합
 ADO에서는 계층적 레코드 집합 개체를 XML로 지 속성을 사용할 수 있습니다. 계층적 레코드 집합 개체를 사용 하는 경우 부모 레코드 집합의 필드 값은 또 다른 레코드 집합입니다. 이러한 필드는 특성이 아니라 XML 스트림에 자식 요소로 표시 됩니다.  

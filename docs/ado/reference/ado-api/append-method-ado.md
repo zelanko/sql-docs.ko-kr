@@ -1,4 +1,5 @@
 ---
+description: Append 메서드(ADO)
 title: Append 메서드 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f8a9bbed-ba9c-4698-945d-317ad22d2e92
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4d0d94cf40a397ca030a9ea975a02962d6ab9489
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: dd3ee907aa2a7081ca7204dcc1b0b3b069581832
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82746921"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451265"
 ---
 # <a name="append-method-ado"></a>Append 메서드(ADO)
 컬렉션에 개체를 추가 합니다. 컬렉션이 [필드인](../../../ado/reference/ado-api/fields-collection-ado.md)경우 컬렉션에 추가 되기 전에 새 [필드](../../../ado/reference/ado-api/field-object.md) 개체를 만들 수 있습니다.  
@@ -46,7 +47,7 @@ fields.Append Name, Type, DefinedSize, Attrib, FieldValue
  *이름*  
  새 **Field** 개체의 이름을 포함 하는 **문자열** 값으로, *필드*의 다른 개체와 이름이 달라 야 합니다.  
   
- *Type*  
+ *유형*  
  새 필드의 데이터 형식을 지정 하는 [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) 값으로, 기본값은 **adEmpty**입니다. 다음 데이터 형식은 ADO에서 지원 되지 않으므로 [레코드 집합 개체 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)에 새 필드를 추가할 때 사용 하면 안 됩니다. **adIDispatch**, **adIUnknown**, **advariant**.  
   
  *DefinedSize*  

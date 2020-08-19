@@ -1,4 +1,5 @@
 ---
+description: SQLColumns 함수
 title: SQLColumns 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 4a3618b7-d2b8-43c6-a1fd-7a4e6fa8c7d0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 26d71bbe370e41683da44aafecd32c9e3050a223
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: d5fc96b275badf5eab68f78e863648c3a73eaab6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87362759"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448776"
 ---
 # <a name="sqlcolumns-function"></a>SQLColumns 함수
 **규칙**  
@@ -118,7 +119,7 @@ SQLRETURN SQLColumns(
 |IM017|비동기 알림 모드에서는 폴링을 사용할 수 없습니다.|알림 모델을 사용할 때마다 폴링은 사용 하지 않도록 설정 됩니다.|  
 |IM018|이 핸들에서 이전 비동기 작업을 완료 하기 위해 **SQLCompleteAsync** 가 호출 되지 않았습니다.|핸들에 대 한 이전 함수 호출이 SQL_STILL_EXECUTING을 반환 하 고 알림 모드가 설정 된 경우에는 핸들에 대해 **SQLCompleteAsync** 를 호출 하 여 사후 처리를 수행 하 고 작업을 완료 해야 합니다.|  
   
-## <a name="comments"></a>의견  
+## <a name="comments"></a>주석  
  이 함수는 일반적으로 문을 실행 하기 전에 데이터 원본의 카탈로그에서 테이블의 열에 대 한 정보를 검색 하는 데 사용 됩니다. **Sqlcolumns** 는 **sqlcolumns**에서 반환 하는 모든 유형의 항목에 대 한 데이터를 검색 하는 데 사용할 수 있습니다. 기본 테이블 외에도 뷰, 동의어, 시스템 테이블 등이 포함 될 수 있습니다. 반대로 **Sqlcolattribute** 및 **SQLDescribeCol** 함수는 결과 집합의 열을 설명 하 고 **sqlnumresultcols** 함수는 결과 집합의 열 수를 반환 합니다. 자세한 내용은 [카탈로그 데이터 사용](../../../odbc/reference/develop-app/uses-of-catalog-data.md)을 참조 하세요.  
   
 > [!NOTE]  
@@ -166,7 +167,7 @@ SQLRETURN SQLColumns(
 
  다음 표에서는 결과 집합의 열을 나열 합니다. 열 18 (IS_NULLABLE)을 초과 하는 추가 열은 드라이버에서 정의할 수 있습니다. 응용 프로그램은 명시적 서 수 위치를 지정 하는 대신 결과 집합의 끝에서 계산 하 여 드라이버별 열에 대 한 액세스 권한을 얻어야 합니다. 자세한 내용은 [Catalog 함수에서 반환 된 데이터](../../../odbc/reference/develop-app/data-returned-by-catalog-functions.md)를 참조 하세요.  
   
-|열 이름|열<br /><br /> 숫자|데이터 형식|의견|  
+|열 이름|열<br /><br /> number|데이터 형식|주석|  
 |-----------------|-----------------------|---------------|--------------|  
 |TABLE_CAT (ODBC 1.0)|1|Varchar|카탈로그 이름; 데이터 원본에 적용할 수 없는 경우 NULL입니다. 드라이버가 다른 Dbms에서 데이터를 검색 하는 경우와 같이 드라이버가 일부 테이블에 대해서만 카탈로그를 지원 하면 카탈로그가 없는 테이블에 대해 빈 문자열 ("")이 반환 됩니다.|  
 |TABLE_SCHEM (ODBC 1.0)|2|Varchar|스키마 이름; 데이터 원본에 적용할 수 없는 경우 NULL입니다. 드라이버가 다른 Dbms에서 데이터를 검색 하는 경우와 같이 드라이버가 일부 테이블에 대해서만 스키마를 지원 하지만 스키마가 없는 테이블에 대해 빈 문자열 ("")을 반환 합니다.|  
@@ -306,6 +307,6 @@ int main() {
 |데이터 원본에 있는 테이블 목록 반환|[SQLTables 함수](../../../odbc/reference/syntax/sqltables-function.md)|  
 |테이블 또는 테이블에 대 한 권한 반환|[SQLTablePrivileges 함수](../../../odbc/reference/syntax/sqltableprivileges-function.md)|  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [ODBC API 참조](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 헤더 파일](../../../odbc/reference/install/odbc-header-files.md)

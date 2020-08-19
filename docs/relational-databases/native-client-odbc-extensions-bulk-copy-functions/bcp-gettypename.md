@@ -1,4 +1,5 @@
 ---
+description: bcp_gettypename
 title: bcp_gettypename | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -18,11 +19,12 @@ ms.assetid: 65f036d1-f60e-4b8a-97b3-76fccf0dfed4
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b443a3ecd3e96740939a1cbef3f2a732a129d9a8
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: d8956677e62c3f4a824e704c0905c7970cf9e913
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86010090"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448584"
 ---
 # <a name="bcp_gettypename"></a>bcp_gettypename
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -65,31 +67,31 @@ RETCODE bcp_gettypename (
 |**SQLDATETIME**|여기서는|**datetime**|  
 |**SQLBITN**|여기서는|**bit-null**|  
 |**SQLBIT**|여기서는|**bit**|  
-|**SQLBIGCHAR**|아니요|**char**|  
-|**SQLCHARACTER**|아니요|**char**|  
-|**SQLBIGVARCHAR**|아니요|**varchar**|  
-|**SQLVARCHAR**|아니요|**varchar**|  
+|**SQLBIGCHAR**|예|**char**|  
+|**SQLCHARACTER**|예|**char**|  
+|**SQLBIGVARCHAR**|예|**varchar**|  
+|**SQLVARCHAR**|예|**varchar**|  
 |**SQLTEXT**|여기서는|**text**|  
-|**SQLBIGBINARY**|아니요|**binary**|  
-|**SQLBINARY**|아니요|**이진**|  
-|**SQLBIGVARBINARY**|아니요|**Varbinary**|  
-|**SQLVARBINARY**|아니요|**Varbinary**|  
+|**SQLBIGBINARY**|예|**binary**|  
+|**SQLBINARY**|예|**이진**|  
+|**SQLBIGVARBINARY**|예|**Varbinary**|  
+|**SQLVARBINARY**|예|**Varbinary**|  
 |**SQLIMAGE**|여기서는|**이미지**|  
 |**SQLINTN**|여기서는|**int-null**|  
 |**SQLDATETIMN**|여기서는|**datetime-null**|  
 |**SQLMONEYN**|여기서는|**money-null**|  
 |**SQLFLTN**|여기서는|**float-null**|  
-|**SQLAOPSUM**|여기서는|**총합**|  
-|**SQLAOPAVG**|여기서는|**매출**|  
-|**SQLAOPCNT**|여기서는|**개수**|  
-|**SQLAOPMIN**|여기서는|**일별**|  
-|**SQLAOPMAX**|여기서는|**최대값**|  
+|**SQLAOPSUM**|여기서는|**Sum**|  
+|**SQLAOPAVG**|여기서는|**Avg**|  
+|**SQLAOPCNT**|여기서는|**Count**|  
+|**SQLAOPMIN**|여기서는|**Min**|  
+|**SQLAOPMAX**|여기서는|**Max**|  
 |**SQLDATETIM4**|여기서는|**smalldatetime**|  
 |**SQLMONEY4**|여기서는|**Smallmoney**|  
 |**SQLFLT4**|여기서는|**실제로**|  
 |**SQLUNIQUEID**|여기서는|**uniqueidentifier**|  
-|**SQLNCHAR**|아니요|**Nchar**|  
-|**SQLNVARCHAR**|아니요|**Varchar**|  
+|**SQLNCHAR**|예|**Nchar**|  
+|**SQLNVARCHAR**|예|**Nvarchar**|  
 |**SQLNTEXT**|여기서는|**N**|  
 |**SQLVARIANT**|여기서는|**sql_variant**|  
 |**SQLINT8**|여기서는|**Bigint**|  
@@ -111,7 +113,7 @@ RETCODE bcp_gettypename (
   
  자세한 내용은 [ODBC&#41;&#40;날짜 및 시간 향상 ](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)을 참조 하세요.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [Bulk Copy Functions](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: 필터링된 계층적 레코드 집합 유지
 title: 필터링 된 및 계층 구조 레코드 집합 유지 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d01aeb4d-4e43-450b-b3f2-0c27eaaf9f86
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5fa3fdd55fb78f16629907c174b08aab64ceb86e
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: a69b491f4bb5834331b9cfa582b6f72d248ba317
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763114"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453065"
 ---
 # <a name="persisting-filtered-and-hierarchical-recordsets"></a>필터링된 계층적 레코드 집합 유지
 [필터](../../../ado/reference/ado-api/filter-property.md) 속성이 **레코드 집합**에 적용 되는 경우 필터에서 액세스할 수 있는 행만 저장 됩니다. **레코드 집합이** 계층적 이면 부모 **레코드**집합을 포함 하 여 현재 자식 **레코드 집합과** 해당 자식 항목이 저장 됩니다. 자식 **레코드 집합** 의 **Save** 메서드를 호출 하면 자식 및 모든 자식 항목이 저장 되지만 부모는 저장 되지 않습니다. 계층적 **레코드 집합**에 대 한 자세한 내용은 [데이터 셰이핑](../../../ado/guide/data/data-shaping.md)을 참조 하세요.  

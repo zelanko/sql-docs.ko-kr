@@ -1,4 +1,5 @@
 ---
+description: DQS 데이터베이스 백업 및 복원
 title: DQS 데이터베이스 백업 및 복원
 ms.date: 03/01/2017
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: f3091f62-2234-4a80-a615-cf14c2a1da85
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 5df48172681fef1ea75735702915ac1beedabee1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 03b58daec9def4e902e111719353110bfad1d69b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897559"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450009"
 ---
 # <a name="backing-up-and-restoring-dqs-databases"></a>DQS 데이터베이스 백업 및 복원
 
@@ -40,7 +41,7 @@ ms.locfileid: "85897559"
   
 -   DQS에서 실행 중인 작업을 종료하거나 실행 중인 프로세스를 중지하려면 DQS_MAIN 데이터베이스에 대한 dqs_administrator 역할이 있어야 합니다.  
   
-##  <a name="backup-and-restore-dqs-databases"></a><a name="BackupRestore"></a>DQS 데이터베이스 백업 및 복원  
+##  <a name="backup-and-restore-dqs-databases"></a><a name="BackupRestore"></a> DQS 데이터베이스 백업 및 복원  
   
 1.  Microsoft SQL Server Management Studio를 시작하고 적합한 SQL Server 인스턴스에 연결합니다.  
   

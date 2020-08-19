@@ -1,4 +1,5 @@
 ---
+description: 예약 키워드 제한 사항
 title: 예약어 제한 사항 | Microsoft Docs
 ms.custom: ''
 ms.date: 05/01/2018
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ed42f083-c9e8-4ee4-9d64-d879bf955c78
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: bf536e06556e6b2e7b27f220d09a51f91b44d23c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 07917cbe056b38be42e4697fcef52935bae3efe3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304011"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449295"
 ---
 # <a name="reserved-keyword-limitations"></a>예약 키워드 제한 사항
 

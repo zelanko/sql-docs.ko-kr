@@ -1,4 +1,5 @@
 ---
+description: 참조 데이터를 사용하도록 DQS 구성
 title: 참조 데이터를 사용하도록 DQS 구성
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ f1_keywords:
 ms.assetid: fae745e7-57a7-4cbc-8979-56ea8e392e4e
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 0e7a33369516adf7a7fdae9f0047ff7f434e9c16
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b20f19032a298805c8958d269adffd8a9600a58a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894200"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449996"
 ---
 # <a name="configure-dqs-to-use-reference-data"></a>참조 데이터를 사용하도록 DQS 구성
 
@@ -69,7 +70,7 @@ ms.locfileid: "85894200"
   
     3.  **범주** 상자에 새 다이렉트 참조 데이터 서비스 공급자가 제공한 데이터의 범주를 입력합니다.  
   
-    4.  스키마 상자에 다이렉트 참조 데이터 서비스 공급자에서 사용할 필드 문자열(열 이름)을 정의하는 스키마를 지정합니다. 필드 이름은 공백을 포함할 수 없으며, 필드는 쉼표로 구분되어야 합니다. 예를 들어 `FirstName, LastName, City, State`을 참조하십시오.  
+    4.  스키마 상자에 다이렉트 참조 데이터 서비스 공급자에서 사용할 필드 문자열(열 이름)을 정의하는 스키마를 지정합니다. 필드 이름은 공백을 포함할 수 없으며, 필드는 쉼표로 구분되어야 합니다. 예: `FirstName, LastName, City, State`  
   
     5.  **URI** 상자에 새 다이렉트 참조 데이터 서비스 공급자의 URI를 입력합니다. 보안 URI("https://"로 시작하는 주소)만 DQS에서 사용할 수 있습니다.  
   
@@ -81,7 +82,7 @@ ms.locfileid: "85894200"
   
  이제 DQS에서 새로 구성한 다이렉트 온라인 타사 참조 데이터 서비스 공급자의 참조 데이터 서비스를 사용할 준비가 완료되었습니다.  
   
-##  <a name="follow-up-after-configuring-dqs-to-use-reference-data"></a><a name="FollowUp"></a>후속 작업: 참조 데이터를 사용 하도록 DQS를 구성한 후  
+##  <a name="follow-up-after-configuring-dqs-to-use-reference-data"></a><a name="FollowUp"></a> 후속 작업: 참조 데이터를 사용 하도록 DQS를 구성한 후  
  이제 방금 구성한 데이터 공급자에서 사용할 수 있는 참조 데이터에 필요한 기술 자료 도메인을 매핑해야 합니다. 이렇게 하려면 [참조 데이터에 도메인 또는 복합 도메인 연결](../data-quality-services/attach-domain-or-composite-domain-to-reference-data.md)을 참조하세요.  
   
   

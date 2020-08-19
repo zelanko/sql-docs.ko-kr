@@ -1,4 +1,5 @@
 ---
+description: Integration Services(SSIS) 프로젝트 및 솔루션
 title: Integration Services(SSIS) 프로젝트 및 솔루션 | Microsoft Docs
 ms.custom: ''
 ms.date: 09/20/2019
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 28ea8120-0a79-4029-93f0-07d521b32bee
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e10adad56ee8a27555d6ac4d5bd3cdfbf31e9abf
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 623c423b50d589ce9e7964b436cba604dcb3203d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917515"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449839"
 ---
 # <a name="integration-services-ssis-projects-and-solutions"></a>Integration Services(SSIS) 프로젝트 및 솔루션
 
@@ -187,7 +188,7 @@ ms.locfileid: "86917515"
   
 2.  솔루션 탐색기에서 프로젝트를 마우스 오른쪽 단추로 클릭한 다음 **프로젝트 언로드**를 클릭합니다.  
   
-3.  **확인** 을 클릭하여 제거를 확인합니다.  
+3.  **확인**을 클릭하여 제거를 확인합니다.  
 
 ## <a name="add-an-item-to-a-project"></a>프로젝트에 항목 추가  
   

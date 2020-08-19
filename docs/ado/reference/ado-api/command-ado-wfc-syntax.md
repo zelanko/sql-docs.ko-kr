@@ -1,4 +1,5 @@
 ---
+description: 명령(ADO - WFC 구문)
 title: Command (ADO-WFC 구문) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 39d0aa06-03ac-4c9a-8400-83947756ef99
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 61b5a54778bb680b68e923d198831d770973d1a7
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: fcbe8174b2866f3edfd9676d7873216fd16f5751
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760449"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450895"
 ---
 # <a name="command-ado---wfc-syntax"></a>명령(ADO - WFC 구문)
 ## <a name="package-commswfcdata"></a>package com.  
@@ -44,7 +45,7 @@ public int executeUpdate(Object[] parameters, int options)
 public int executeUpdate()  
 ```  
   
- **Executeupdate** 메서드는 특정 매개 변수를 사용 하 여 기본 ADO **execute** 메서드를 호출 하는 특별 한 사례 메서드입니다. **Executeupdate** 메서드는 **레코드 집합** 개체의 반환을 지원 하지 않으므로 **execute** 메서드의 *options* 매개 변수는 ADOENUMS를 사용 하 여 수정 됩니다. **NORECORDS**. **Execute** 메서드가 완료 되 면 업데이트 된 *RecordsAffected* 매개 변수가 **executeupdate** 메서드로 다시 전달 되 고,이 메서드는 **int**로 반환 됩니다.  
+ **Executeupdate** 메서드는 특정 매개 변수를 사용 하 여 기본 ADO **execute** 메서드를 호출 하는 특별 한 사례 메서드입니다. **Executeupdate** 메서드는 **레코드 집합** 개체의 반환을 지원 하지 않으므로 **execute** 메서드의 *options* 매개 변수는 **AdoEnums.ExeNORECORDS**를 사용 하 여 수정 됩니다. **Execute** 메서드가 완료 되 면 업데이트 된 *RecordsAffected* 매개 변수가 **executeupdate** 메서드로 다시 전달 되 고,이 메서드는 **int**로 반환 됩니다.  
   
 ### <a name="properties"></a>속성  
   

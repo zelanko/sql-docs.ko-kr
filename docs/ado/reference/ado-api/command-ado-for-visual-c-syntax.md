@@ -1,4 +1,5 @@
 ---
+description: 명령(Visual C++ 구문에 대한 ADO)
 title: 명령 (Visual C++ 구문에 대 한 ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: cf12cbd1-25f7-4bb5-aa94-0fe823b3b6d6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2e804520e73df93993bc24c2db89191e9391bfdb
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 33857f9d88c9e46779aeaa8f22372485a77541b0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760489"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450905"
 ---
 # <a name="command-ado-for-visual-c-syntax"></a>명령(Visual C++ 구문에 대한 ADO)
 ## <a name="methods"></a>메서드  

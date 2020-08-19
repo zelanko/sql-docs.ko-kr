@@ -1,4 +1,5 @@
 ---
+description: CommandStream 속성(ADO)
 title: CommandStream 속성 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f78f61b6-87e0-48dc-961e-83d0e20da58e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 20d2cb62b51a73066da242b3446a4d991f3bc79b
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 07a16b00a4ec4381dc1dfa07fc57c2b599ed5ba1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760414"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450845"
 ---
 # <a name="commandstream-property-ado"></a>CommandStream 속성(ADO)
 [명령](../../../ado/reference/ado-api/command-object-ado.md) 개체에 대 한 입력으로 사용 되는 스트림을 나타냅니다.  

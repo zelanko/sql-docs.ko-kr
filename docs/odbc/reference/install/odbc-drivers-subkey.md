@@ -1,4 +1,5 @@
 ---
+description: ODBC 드라이버 하위 키
 title: ODBC 드라이버 하위 키 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8edbf68f-d05d-4d77-92f6-e9500008f520
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: dd1f8d3293e35a543cce6b5079d9c6e10a331a88
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b950a352c3da69a2a8de9a89f7bbebf87e0a597a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304034"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448923"
 ---
 # <a name="odbc-drivers-subkey"></a>ODBC 드라이버 하위 키
 ODBC 드라이버 하위 키 아래에 있는 값에는 설치 된 드라이버가 나열 됩니다. 이러한 값의 형식은 다음 표에 나와 있습니다.  

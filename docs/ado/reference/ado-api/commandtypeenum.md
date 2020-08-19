@@ -1,4 +1,5 @@
 ---
+description: CommandTypeEnum
 title: CommandTypeEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4b1feb9c-a855-40fe-a906-efe688687e9f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cc5d48ab323dd3e75ba40f406ec88505957153c7
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 861abb0066f4b9f32ff8f9071c1520a1dec73016
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242773"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450825"
 ---
 # <a name="commandtypeenum"></a>CommandTypeEnum
 명령 인수를 해석 하는 방법을 지정 합니다.  

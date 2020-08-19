@@ -1,4 +1,5 @@
 ---
+description: 데스크톱 데이터베이스 드라이버 성능 문제
 title: 데스크톱 데이터베이스 드라이버 성능 문제 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1a4c4b7e-9744-411f-9b6e-06dfdad92cf7
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a819d99a995fd7b287beb66b94f1df526e05f201
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 20c21c493d81df6afb4a338675f86ad96ccfab68
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303504"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449555"
 ---
 # <a name="desktop-database-driver-performance-issues"></a>데스크톱 데이터베이스 드라이버 성능 문제
 기존 ANSI 응용 프로그램과의 호환성을 보장 하기 위해 SQL_WCHAR, SQL_WVARCHAR 및 SQL_WLONGVARCHAR 데이터 형식은 Microsoft Access 4.0 이상의 데이터 원본에 대 한 SQL_CHAR, SQL_VARCHAR 및 SQL_LONGVARCHAR으로 노출 됩니다. 데이터 원본은 와이드 문자 데이터 형식을 반환 하지 않지만 데이터는 여전히 와이드 문자 형식으로 Jet에 전송 되어야 합니다. SQL_C_CHAR 매개 변수 또는 결과 열이 ANSI 응용 프로그램의 SQL_CHAR 데이터 형식에 바인딩된 경우에는 변환이 수행 됩니다.  

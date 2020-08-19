@@ -1,4 +1,5 @@
 ---
+description: 규칙, 트리거, 기본값 및 저장 프로시저 지원(Visual FoxPro ODBC 드라이버)
 title: 규칙, 트리거, 기본값 및 저장 프로시저에 대 한 지원 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -28,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: e449de20-d6ca-4902-9f8e-814eb6e86650
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a02aeea8f33e3a4d87fc771a7b0fa7b1a0067b6d
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: 56b1a2e50f26da8ce5ef581f8eda7c6a96afd741
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87363363"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449115"
 ---
 # <a name="support-for-rules-triggers-default-values-and-stored-procedures-visual-foxpro-odbc-driver"></a>규칙, 트리거, 기본값 및 저장 프로시저 지원(Visual FoxPro ODBC 드라이버)
 Visual foxpro 규칙, 트리거, 기본값 또는 저장 프로시저는 Visual FoxPro ODBC 드라이버를 사용 하 여 만들 수 없습니다. 그러나 응용 프로그램은 데이터베이스에 저장 된 Visual FoxPro 데이터를 삽입, 업데이트 또는 삭제할 때 기존 규칙, 트리거, 기본값 또는 저장 프로시저와 상호 작용할 수 있습니다.  

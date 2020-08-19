@@ -1,4 +1,5 @@
 ---
+description: 키 집합 커서
 title: 키 집합 커서 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 14b51b17-6fd9-4146-af45-ca4b0fe6d48a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3df797be676961227687117e1fd7bdb748370efd
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: ea25d5c85969b71836fec30085dd9a626a18d40a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82757749"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453175"
 ---
 # <a name="keyset-cursors"></a>키 집합 커서
 키 집합 커서는 정적 커서와 동적 커서 사이의 기능을 제공 하 여 변경 내용을 검색할 수 있습니다. 정적 커서처럼 항상 결과 집합의 멤버 자격과 순서에 대한 변경 내용을 검색하지는 못합니다. 동적 커서처럼 결과 집합의 행 값에 대한 변경 내용을 검색합니다.  

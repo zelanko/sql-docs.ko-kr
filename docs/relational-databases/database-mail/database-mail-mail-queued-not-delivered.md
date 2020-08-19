@@ -1,4 +1,5 @@
 ---
+description: '데이터베이스 메일: 메일이 지연되고 배달되지 않음'
 title: '데이터베이스 메일: 메일이 지연되고 배달되지 않음 | Microsoft Docs'
 ms.custom: ''
 ms.date: 04/22/2019
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - Database Mail [SQL Server], components
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8b35c244e086c32cf62882a5e3f09b8fcc410b23
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8e70b32c2cee28acf4b886f0bf738f4ed8857619
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726518"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448878"
 ---
 # <a name="database-mail-mail-queued-not-delivered"></a>데이터베이스 메일: 메일이 지연되고 배달되지 않음 
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

@@ -1,4 +1,5 @@
 ---
+description: BookmarkEnum
 title: 책갈피 열거형 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 55d273c4-ccee-48ef-ba90-8893d04313c8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1e71fd3a753da8d05e99f1cc8c9837323db61f03
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 47a35f2f0c756d1dfde36a42900d83e1e9677b43
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242443"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451131"
 ---
 # <a name="bookmarkenum"></a>BookmarkEnum
 작업을 시작할 위치를 나타내는 책갈피를 지정 합니다.  

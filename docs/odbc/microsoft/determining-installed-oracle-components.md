@@ -1,4 +1,5 @@
 ---
+description: 설치된 Oracle 구성 요소 확인
 title: 설치 된 Oracle 구성 요소 결정 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3b018f6a-9db0-4aa1-8ec4-afc5f76d7cad
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 73a406487ea6a4e1ab00e0320923b0b276a359a6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5d5361d087a7270d292ebad58567bf2dd4067f55
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303494"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449545"
 ---
 # <a name="determining-installed-oracle-components"></a>설치된 Oracle 구성 요소 확인
 > [!IMPORTANT]  

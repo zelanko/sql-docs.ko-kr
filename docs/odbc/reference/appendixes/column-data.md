@@ -1,4 +1,5 @@
 ---
+description: 열 데이터
 title: 열 데이터 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0425818c-9469-493f-9e3c-fc03d9411c5c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ff89566efa65c88325d98422fe17788f27d2c8ca
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5f4ea57de9dfefd21b6d71bb3b248d5aed5dd50d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306594"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449005"
 ---
 # <a name="column-data"></a>열 데이터
 > [!IMPORTANT]  

@@ -1,4 +1,5 @@
 ---
+description: SQLCancelHandle 함수
 title: SQLCancelHandle 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 16049b5b-22a7-4640-9897-c25dd0f19d21
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b3f9dcb6ccdef290b937b1317271758dddc0e848
-ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
+ms.openlocfilehash: 3f466f63d6da9aa9a96b9e929ea2b59a3e43491d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2020
-ms.locfileid: "86279603"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448853"
 ---
 # <a name="sqlcancelhandle-function"></a>SQLCancelHandle 함수
 **규칙**  
@@ -70,7 +71,7 @@ SQLRETURN SQLCancelHandle(
   
  *HandleType* 가 SQL_HANDLE_STMT로 설정 된 **sqlcancelhandle** 이 호출 되 면 **sqlcancel**함수에서 반환 될 수 있는 모든 SQLSTATE를 반환할 수 있습니다.  
   
-## <a name="comments"></a>설명  
+## <a name="comments"></a>주석  
  이 함수는 **Sqlcancel** 과 비슷하지만 문 핸들 뿐 아니라 연결 또는 문 핸들을 매개 변수로 사용할 수 있습니다. *HandleType* 가 SQL_HANDLE_STMT 경우 드라이버 관리자는 **Sqlcancelhandle** 호출을 **sqlcancel** 호출에 매핑합니다. 이렇게 하면 응용 프로그램에서 **Sqlcancelhandle** 을 사용 하 여 **sqlcancelhandle**을 구현 하지 않는 경우에도 문 작업을 취소할 수 있습니다.  
   
  문 작업을 취소 하는 방법에 대 한 자세한 내용은 [Sqlcancel 함수](../../../odbc/reference/syntax/sqlcancel-function.md)를 참조 하세요.  

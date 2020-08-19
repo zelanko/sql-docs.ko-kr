@@ -1,4 +1,5 @@
 ---
+description: Integration Services(SSIS) 패키지
 title: Integration Services(SSIS) 패키지 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/31/2016
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 9266bc64-7e1a-4e78-913b-a8deaa9843bf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 34da25ac87cbcfbeb815b4053d60c390a9140f5d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 666e61788f402d405354f21bf583aa3f2e0b8286
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917520"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449822"
 ---
 # <a name="integration-services-ssis-packages"></a>Integration Services(SSIS) 패키지
 
@@ -65,7 +66,7 @@ ms.locfileid: "86917520"
 ### <a name="logging-and-log-providers"></a>로깅 및 로그 공급자  
  로그는 패키지 실행 시 수집되는 패키지에 대한 정보 컬렉션입니다. 예를 들어 로그는 패키지 실행의 시작 시간과 종료 시간을 제공할 수 있습니다. 로그 공급자는 패키지와 해당 컨테이너 및 태스크가 런타임 정보를 기록하는 데 사용할 수 있는 대상 유형과 형식을 정의합니다. 로그는 패키지와 연결되지만 패키지의 태스크와 컨테이너는 임의의 패키지 로그에 정보를 기록할 수 있습니다. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에는 로깅을 위한 다양한 기본 제공 로그 공급자가 포함되어 있습니다. 예를 들어 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에 대한 로그 공급자와 텍스트 파일이 있습니다. 사용자 지정 로그 공급자를 만들어 로깅에 사용할 수도 있습니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 로깅](../integration-services/performance/integration-services-ssis-logging.md)을 참조하세요.  
   
-### <a name="variables"></a>variables  
+### <a name="variables"></a>변수  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 는 시스템 변수와 사용자 정의 변수를 지원합니다. 시스템 변수는 런타임 시 패키지 개체에 대한 유용한 정보를 제공하며 사용자 정의 변수는 패키지의 사용자 지정 시나리오를 지원합니다. 식, 스크립트 및 구성에 두 유형의 변수를 모두 사용할 수 있습니다.  
   
  패키지 수준 변수에는 패키지에 사용 가능한 미리 정의된 시스템 변수와 패키지 범위 내의 사용자 정의 변수가 포함됩니다. 자세한 내용은 [Integration Services(SSIS) 변수](../integration-services/integration-services-ssis-variables.md)를 참조하세요.  

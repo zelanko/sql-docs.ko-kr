@@ -1,4 +1,5 @@
 ---
+description: DQS 로그 파일에 대한 심각도 수준 구성
 title: DQS 로그 파일에 대한 심각도 수준 구성
 ms.date: 03/01/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 66ffcdec-4bf7-4dd5-a221-fd9baefeeef4
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 068ae31abe61fac86d740fe3e03787fd32dde465
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 6a23806f7b7def561d7cecc8e1592772c5675f58
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894222"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449915"
 ---
 # <a name="configure-severity-levels-for-dqs-log-files"></a>DQS 로그 파일에 대한 심각도 수준 구성
 
@@ -49,8 +50,8 @@ ms.locfileid: "85894222"
 ####  <a name="permissions"></a><a name="Permissions"></a> 권한  
  로그 심각도 설정을 구성하려면 DQS_MAIN 데이터베이스에 대한 dqs_administrator 역할이 있어야 합니다.  
   
-##  <a name="configure-severity-levels-at-activity-level"></a><a name="ConfigureActivity"></a>활동 수준에서 심각도 수준 구성  
- DQS에서 도메인 관리, 기술 자료 검색, 일치 정책, 데이터 정리, 데이터 일치 및 참조 데이터 서비스와 같은 작업에 대한 로그 심각도 설정을 구성할 수 있습니다. 이를 수행하려면:  
+##  <a name="configure-severity-levels-at-activity-level"></a><a name="ConfigureActivity"></a> 활동 수준에서 심각도 수준 구성  
+ DQS에서 도메인 관리, 기술 자료 검색, 일치 정책, 데이터 정리, 데이터 일치 및 참조 데이터 서비스와 같은 작업에 대한 로그 심각도 설정을 구성할 수 있습니다. 확인 방법은 다음과 같습니다.  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Data Quality Client 응용 프로그램을 실행](../data-quality-services/run-the-data-quality-client-application.md)합니다.  
   
@@ -65,7 +66,7 @@ ms.locfileid: "85894222"
   
 5.  **닫기**를 클릭합니다.  
   
-##  <a name="configure-severity-levels-at-module-level-advanced"></a><a name="ConfigureModule"></a>모듈 수준에서 심각도 구성 (고급)  
+##  <a name="configure-severity-levels-at-module-level-advanced"></a><a name="ConfigureModule"></a> 모듈 수준에서 심각도 구성 (고급)  
  **로그 설정** 탭의 **고급** 섹션을 사용하여 모듈 수준에서 로그 심각도 설정을 구성할 수 있습니다. 모듈은 DQS의 기능 내에 다양한 기능을 구현하는 DQS 시스템 어셈블리입니다. 예를 들어 도메인 관리 작업에는 도메인 규칙 정의, 규칙 조건 정의, 복합 도메인의 도메인 간 규칙 정의 등과 같은 다양한 기능이 포함됩니다.  
   
  때때로 작업 수준의 세분성 수준으로 충분하지 않은 경우가 있습니다. 한 작업 내 특정 모듈에서 발생한 문제를 조사해야 할 수 있습니다. 그러면 모듈 수준에서 로그 심각도를 구성하여 문제를 더 정확하게 격리하고 추적할 수 있습니다.  

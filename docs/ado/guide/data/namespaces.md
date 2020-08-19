@@ -1,4 +1,5 @@
 ---
+description: 네임스페이스
 title: 네임 스페이스 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: efff5569-db52-451d-a039-2e74870534da
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8f3261b7b68213205dbcc51e155832242aa42747
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: a4ab26dd8f767315a3392a2434689561fdb391d6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759149"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453145"
 ---
 # <a name="namespaces"></a>네임스페이스
 ADO의 XML 지 속성 형식은 다음 네 가지 네임 스페이스를 사용 합니다.  

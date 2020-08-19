@@ -1,4 +1,5 @@
 ---
+description: 연결 속성 지정
 title: 연결 속성 지정 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 49456201-b085-4851-9686-e814136b07be
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6fee9745bca206f00603b32a6c4cd29faab34eca
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 2e1f7a26e66eae550bc740f2f9be5a3606650dcb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760839"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452835"
 ---
 # <a name="specifying-connection-properties"></a>연결 속성 지정
 연결을 열기 전에 **연결 개체의** 속성을 설정 하 여 연결 [문자열](../../../ado/guide/data/creating-a-connection-string.md) 에 지정 된 많은 정보를 제공할 수 있습니다. 예를 들어 다음 코드를 사용 하 여 [연결 문자열을 만드는 데](../../../ado/guide/data/creating-a-connection-string.md) 설명 된 연결 문자열과 동일한 효과를 달성할 수 있습니다.  

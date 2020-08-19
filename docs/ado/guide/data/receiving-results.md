@@ -1,4 +1,5 @@
 ---
+description: 결과 수신
 title: 결과 받기 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,21 +14,21 @@ helpviewer_keywords:
 ms.assetid: 791aa26e-7aae-477e-9f05-5cd46e1de095
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0e05bd86b908c8c6d7ac08525e425333d3e2f1ad
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 3317441322d0f1be94ee1c897946d83f6291143c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759099"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452995"
 ---
 # <a name="receiving-results"></a>결과 수신
 ADO에서 대부분의 명령은 호출자에 게 일부 정보를 반환 합니다. 행 집합을 반환 하는 명령의 경우 결과는 ADO 개체에서 가장 많이 사용 되는 **레코드 집합** 개체로 수신 됩니다.  
   
  다음을 호출 하는 등의 여러 가지 방법으로 데이터 원본에서 **레코드 집합** 개체의 데이터를 받을 수 있습니다.  
   
--   [Connection Execute 메서드](../../../ado/guide/data/creating-and-executing-a-simple-command.md)  
+-   [Connection.Exe귀여운 메서드](../../../ado/guide/data/creating-and-executing-a-simple-command.md)  
   
--   [Command Execute 메서드](../../../ado/guide/data/creating-and-executing-a-simple-command.md)  
+-   [Command.Exe귀여운 메서드](../../../ado/guide/data/creating-and-executing-a-simple-command.md)  
   
 -   [Recordset. Open 메서드](../../../ado/guide/data/creating-and-executing-a-simple-command.md)  
   

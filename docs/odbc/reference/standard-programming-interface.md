@@ -1,4 +1,5 @@
 ---
+description: 표준 프로그래밍 인터페이스
 title: 표준 프로그래밍 인터페이스 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: a2fa727e-51f2-4123-ae25-0ee28e611231
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c7767f113d0f70569ce253f0200cd35cb83915a4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e8fd0e9e3901ea6b3dcf9a09366b13fe532f1198
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81279999"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448886"
 ---
 # <a name="standard-programming-interface"></a>표준 프로그래밍 인터페이스
 프로그래밍 인터페이스는 표준화를 위한 가장 명백한 후보가 될 수 있습니다. 실제로 ODBC를 개발 하는 경우 ANSI 및 ISO는 이미 포함 된 SQL 및 SQL 모듈에 대 한 표준을 제공 합니다. 데이터베이스 CLI에 대 한 표준이 없지만, SQL 액세스 그룹-데이터베이스 공급 업체의 업계 컨소시엄는 하나를 만들지 여부를 고려 하 고 있습니다. ODBC의 일부는 작업의 기반이 됩니다.  

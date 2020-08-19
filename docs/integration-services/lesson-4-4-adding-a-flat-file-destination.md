@@ -1,4 +1,5 @@
 ---
+description: '4-4단원: 플랫 파일 대상 추가'
 title: '4단계: 플랫 파일 대상 추가 | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/07/2019
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: f4088de3-16d8-419c-96a1-a2cd005d0a5b
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: da6900fe4c109dfaf96d22824fbd79dc45ab0916
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 99266f19a7bb1476f16b5896deb8dfa3602e4032
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922139"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449670"
 ---
 # <a name="lesson-4-4-add-a-flat-file-destination"></a>4-4단원: 플랫 파일 대상 추가
 

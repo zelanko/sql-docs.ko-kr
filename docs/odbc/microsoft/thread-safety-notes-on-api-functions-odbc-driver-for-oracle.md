@@ -1,4 +1,5 @@
 ---
+description: API 함수에 대한 스레드 안전 참고(Oracle용 ODBC 드라이버)
 title: API 함수에 대 한 스레드 안전 정보 (Oracle 용 ODBC 드라이버) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f0c9bdfd-f79d-4088-9ecb-afcd8ca7fb73
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 489f0e99ea53d419ff94dddfeb22e37573abb874
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8c7da346832e2682caa02bdbdae91a1133a9cbaa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303074"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449085"
 ---
 # <a name="thread-safety-notes-on-api-functions-odbc-driver-for-oracle"></a>API 함수에 대한 스레드 안전 참고(Oracle용 ODBC 드라이버)
 > [!IMPORTANT]  

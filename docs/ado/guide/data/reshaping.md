@@ -1,4 +1,5 @@
 ---
+description: 다시 셰이핑
 title: 모양 변경 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b1c965b7-3dad-4de6-9e0e-502ca8785be3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e0328b7a09f18cde0043cfbcc21d2dceb4893442
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 9b0173b04e64365d1dad08ecc5f8d26880d05504
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760939"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452935"
 ---
 # <a name="reshaping"></a>다시 셰이핑
 셰이프 명령의 절에서 만든 **레코드 집합** 에는 *별칭* 이름 (일반적으로 AS 키워드 사용)이 할당 될 수 있습니다. 모양이 지정 된 **레코드 집합** 의 별칭은 완전히 다른 명령에서 참조할 수 있습니다. 즉, 새 shape 명령에서 이전에 만든 **레코드 집합** 을 다시 사용 하거나 *변경할*수 있습니다. 이 기능을 지원 하기 위해 ADO는 [이름을 변경](../../../ado/reference/ado-api/reshape-name-property-dynamic-ado.md)하는 속성을 제공 합니다.  
@@ -36,10 +37,10 @@ rs2.Open "SHAPE {select * from Employees} " & _
          "APPEND (chapOrders RELATE EmployeeID to EmployeeID)", cn  
 ```  
   
- 두 번째 함수는 "셰이프 레코드 집합 이름 변경>" 구문을 사용 하 여 기존 자식 **레코드 집합** 개체에 대 한 장으로 연결 되지 않은 액세스를 사용 하도록 설정 하는 것입니다 \< .  
+ 두 번째 함수는 "SHAPE" 구문을 사용 하 여 기존 자식 **레코드 집합** 개체에 대 한 장으로 연결 되지 않은 액세스를 사용 하도록 설정 하는 것입니다 \<recordset reshape name> .  
   
 > [!NOTE]
 >  기존 **레코드 집합**에 열을 추가 하거나, 중간 COMPUTE 절에서 매개 변수가 있는 **레코드** 집합 또는 **레코드 집합** 개체의 모양을 변경 하거나, **레코드 집합** 의 모든 **레코드 집합** 하위 항목에 대해 집계 작업을 수행할 수 없습니다. **레코드 집합** 의 모양이 바뀔 때 새 shape 명령은 둘 다 동일한 [연결](../../../ado/reference/ado-api/connection-object-ado.md)을 사용 해야 합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [데이터 셰이핑 예제](../../../ado/guide/data/data-shaping-example.md)

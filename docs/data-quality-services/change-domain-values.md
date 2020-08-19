@@ -1,4 +1,5 @@
 ---
+description: 도메인 값 변경
 title: 도메인 값 변경
 ms.date: 11/08/2011
 ms.prod: sql
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: 8c90ab70-3aea-4eaf-a174-4159485c87d3
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: b07dd7b8d121d1be70a6522e716fc304bbf3d9f1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: eb96c88be0b92752e514eb34ac59233d4fae36a3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901111"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450035"
 ---
 # <a name="change-domain-values"></a>도메인 값 변경
 
@@ -44,7 +45,7 @@ ms.locfileid: "85901111"
 ####  <a name="permissions"></a><a name="Permissions"></a> 권한  
  도메인 값을 변경하려면 DQS_MAIN 데이터베이스에 대한 dqs_kb_editor 또는 dqs_administrator 역할이 있어야 합니다.  
   
-##  <a name="change-domain-values"></a><a name="Change"></a>도메인 값 변경  
+##  <a name="change-domain-values"></a><a name="Change"></a> 도메인 값 변경  
  **값** 테이블에는 단일 도메인의 기술 자료에 추가된 정보가 표시됩니다. 도메인 목록에서 언제든지 다른 도메인을 선택하여 해당 도메인의 값을 표시할 수 있습니다. 필드의 열은 다음과 같습니다.  
   
 -   **값** 열에는 검색 프로세스에서 데이터 예제의 필드에서 선택된 도메인에 추가한 모든 값이 표시됩니다. 오류가 있는 것으로 추정되는 모든 값은 올바른 것으로 추정되는 값의 동의어로 표시됩니다.  
@@ -133,7 +134,7 @@ ms.locfileid: "85901111"
   
 -   값 테이블 아래쪽에 도메인 값 컬렉션에 대한 최근의 변경 내용을 보여 주는 미리 보기 팝업을 표시하려면 **도메인 값 변경 기록 패널 표시/숨기기** 를 클릭합니다.  
   
-##  <a name="how-to-handle-null-equivalents"></a><a name="Null"></a>해당 하는 Null을 처리 하는 방법  
+##  <a name="how-to-handle-null-equivalents"></a><a name="Null"></a> 해당 하는 Null을 처리 하는 방법  
  **도메인 값** 탭의 각 값 테이블에 DQS_NULL 값이 포함되어 있습니다. 데이터 원본의 null은 값 테이블에서 SQL_NULL로 표시됩니다. null에 해당하는 값 하나 이상을 DQS_NULL에 대한 동의어로 설정할 수 있습니다. 이렇게 하면 모든 null 및 null에 해당하는 값이 DQS_NULL로 처리됩니다.  
   
   
