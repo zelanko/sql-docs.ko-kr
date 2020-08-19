@@ -1,4 +1,5 @@
 ---
+description: Replication System Stored Procedures Concepts
 title: 복제 시스템 저장 프로시저 개념 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ ms.assetid: 816d2bda-ed72-43ec-aa4d-7ee3dc25fd8a
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 2387a1ffa414feae48c52bbfcdcfc5a104e9ffe8
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 39f0033ead272fe448c6146fec502aa4a62d8469
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914720"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475655"
 ---
 # <a name="replication-system-stored-procedures-concepts"></a>Replication System Stored Procedures Concepts
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -51,7 +52,7 @@ ms.locfileid: "86914720"
   
 -   복제 마법사에 제공되는 스크립트 생성 기능을 사용하거나  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]입니다. 자세한 내용은 [Scripting Replication](../../../relational-databases/replication/scripting-replication.md)을 참조하세요.  
+-   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. 자세한 내용은 [Scripting Replication](../../../relational-databases/replication/scripting-replication.md)을 참조하세요.  
   
 -   RMO(복제 관리 개체)를 사용하여 RMO 개체를 만드는 스크립트를 프로그래밍 방식으로 생성합니다.  
   

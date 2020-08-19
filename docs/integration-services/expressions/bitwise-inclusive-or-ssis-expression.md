@@ -1,4 +1,5 @@
 ---
+description: '|(포괄적 비트 OR)(SSIS 식)'
 title: '|(포괄적 비트 OR)(SSIS 식) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: 4dce9eb2-3680-4adc-81a3-816ea52cef49
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 47a5ad352069006a43a3c2f24c89dae9caf09bc8
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 6736267708612a67314959b74cb4c91d0f6f39c1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923494"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430625"
 ---
 # <a name="-bitwise-inclusive-or-ssis-expression"></a>|(포괄적 비트 OR)(SSIS 식)
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-  두 정수 값의 비트 OR 연산을 수행합니다. 그런 후 첫 번째 피연산자의 각 비트를 두 번째 피연산자의 해당 비트와 비교합니다. 두 비트 중 하나가 1이면 해당 결과 비트가 1로 설정되고, 그렇지 않으면 해당 결과 비트가 0으로 설정됩니다.  
+  두 정수 값의 비트 OR 연산을 수행합니다. 그런 후 첫 번째 피연산자의 각 비트를 두 번째 피연산자의 해당 비트와 비교합니다. 어느 한쪽 비트가 1이면 해당 결과 비트는 1로 설정됩니다. 그렇지 않으면 해당 결과 비트가 0으로 설정됩니다.  
   
  두 조건이 모두 부호 있는 정수 데이터 형식이거나 두 조건이 모두 부호 없는 정수 데이터 형식이어야 합니다.  
   

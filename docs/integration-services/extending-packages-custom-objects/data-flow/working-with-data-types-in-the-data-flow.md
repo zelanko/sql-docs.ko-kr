@@ -1,4 +1,5 @@
 ---
+description: 데이터 흐름의 데이터 형식 작업
 title: 데이터 흐름의 데이터 형식 작업 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 941260d0-4ec3-4bf0-ab48-2b26733e6b24
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5563b1f77167a68a0c24deb74f63a699c0a75eb5
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 4d3ca770924ba29785c3bf662bfa5df8ef87f341
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86903369"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430595"
 ---
 # <a name="working-with-data-types-in-the-data-flow"></a>데이터 흐름의 데이터 형식 작업
 

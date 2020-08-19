@@ -1,4 +1,5 @@
 ---
+description: ResumeService 메서드(SqlService 클래스)
 title: ResumeService 메서드 (SqlService)
 ms.custom: seo-lt-2019
 ms.date: 03/04/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0b0a5f08-b95e-4626-bf81-309da7a0aacd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 259c5a1696203b06c0c67a87f6dedc00c29d66ce
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 7d1e5e368f9fc33898d251f3508f2bcaffd9622f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85880585"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460068"
 ---
 # <a name="resumeservice-method-sqlservice-class"></a>ResumeService 메서드(SqlService 클래스)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

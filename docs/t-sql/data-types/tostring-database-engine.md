@@ -1,4 +1,5 @@
 ---
+description: ToString(데이터베이스 엔진)
 title: ToString(데이터베이스 엔진)
 ms.custom: ''
 ms.date: 07/23/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5fc11ca5-c26d-4518-9512-67aa0270f110
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 9c1bf4c72881482ed1b4d99224554576f6a7a3cc
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 5f12eefb4f84b7ee936bfcbd736c3d22ba9162c7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555930"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459943"
 ---
 # <a name="tostring-database-engine"></a>ToString(데이터베이스 엔진)
 
@@ -31,19 +32,19 @@ ms.locfileid: "86555930"
 *this*를 논리적으로 표현한 문자열을 반환합니다. ToString은 **hierarchyid**에서 문자열 형식으로 변환될 때 암시적으로 호출됩니다. [Parse&#40;데이터베이스 엔진&#41;](../../t-sql/data-types/parse-database-engine.md)와 반대로 작동합니다.
   
 ## <a name="syntax"></a>구문  
-  
-```sql
--- Transact-SQL syntax  
-node.ToString  ( )   
+
+```syntaxsql
+-- Transact-SQL syntax
+node.ToString  ( )
 -- This is functionally equivalent to the following syntax  
 -- which implicitly calls ToString():  
 CAST(node AS nvarchar(4000))  
 ```  
   
-```sql
--- CLR syntax  
-string ToString  ( )   
-```  
+```syntaxsql
+-- CLR syntax
+string ToString  ( )
+```
 
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 

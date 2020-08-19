@@ -1,4 +1,5 @@
 ---
+description: 사용자 지정 개체를 사용한 패키지 확장
 title: 사용자 지정 개체를 사용한 패키지 확장 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -10,12 +11,12 @@ ms.topic: reference
 ms.assetid: 26616eb8-9e80-434d-b22a-ece1b00f449d
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d2c6aa25210cff5f5663c4684728caee1f01db01
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 3837f3fe73a3ee9d099199e959d65afd1df4e95b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86902591"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430575"
 ---
 # <a name="extending-packages-with-custom-objects"></a>사용자 지정 개체를 사용한 패키지 확장
 
@@ -61,7 +62,7 @@ ms.locfileid: "86902591"
  [스크립팅을 사용한 패키지 확장](../../integration-services/extending-packages-scripting/extending-packages-with-scripting.md)  
  스크립트 태스크를 사용하여 제어 흐름을 확장하는 방법이나 스크립트 구성 요소를 사용하여 데이터 흐름을 확장하는 방법에 대해 설명합니다.  
   
- [프로그래밍 방식으로 패키지 빌드](../../integration-services/building-packages-programmatically/building-packages-programmatically.md)  
+ [프로그래밍 방식으로 패키지 작성](../../integration-services/building-packages-programmatically/building-packages-programmatically.md)  
  프로그래밍 방식으로 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 만들고 구성, 로드, 저장 및 관리하는 방법에 대해 설명합니다.  
   
 ## <a name="see-also"></a>참고 항목  

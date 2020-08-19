@@ -1,4 +1,5 @@
 ---
+description: DBCC CHECKFILEGROUP(Transact-SQL)
 title: DBCC CHECKFILEGROUP(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/14/2017
@@ -25,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 8c70bf34-7570-4eb6-877a-e35064a1380a
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: b194f23779914961899cdf8b07c82a4d0986aa79
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 15b156950ff752e96dc332c4071dbc748013aa3f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485289"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459898"
 ---
 # <a name="dbcc-checkfilegroup-transact-sql"></a>DBCC CHECKFILEGROUP(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -94,7 +95,7 @@ DBCC CHECKFILEGROUP
 >  PHYSICAL_ONLY를 지정하면 DBCC CHECKFILEGROUP이 FILESTREAM 데이터에 대한 모든 검사를 건너뜁니다.  
   
  MAXDOP  
- **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 SP2에서 [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)까지  
+ **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 SP2 ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658).  
   
  명령문에 대한 **sp_configure**의 **최대 병렬 처리 수준** 구성 옵션을 재정의합니다. MAXDOP은 sp_configure로 구성한 값을 초과할 수 있습니다. MAXDOP가 Resource Governor로 구성한 값을 초과하면, 데이터베이스 엔진에서 ALTER WORKLOAD GROUP(Transact-SQL)에서 설명한 Resource Governor MAXDOP 값을 사용합니다. max degree of parallelism 구성 옵션에 사용된 모든 의미 체계 규칙을 MAXDOP 쿼리 힌트 사용 시 적용할 수 있습니다. 자세한 내용은 [max degree of parallelism 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)을 참조하세요.  
   
@@ -143,7 +144,7 @@ DBCC CHECKFILEGROUP 명령이 완료된 후 [!INCLUDE[ssNoVersion](../../include
 |5|알 수 없는 오류가 발생하여 DBCC 명령이 종료되었습니다.|  
   
 ## <a name="error-reporting"></a>오류 보고  
-DBCC CHECKFILEGROUP에서 손상 오류가 검색될 때마다  *LOG 디렉터리에 미니덤프 파일(SQLDUMP*nnnn[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].txt)이 만들어집니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대해 기능 사용량 현황 데이터 수집 및 오류 보고 기능을 설정하면 이 파일이 [!INCLUDE[msCoName](../../includes/msconame-md.md)]에 자동으로 전달됩니다. 수집된 데이터를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기능을 향상시킬 수 있습니다.
+DBCC CHECKFILEGROUP에서 손상 오류가 검색될 때마다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] LOG 디렉터리에 미니덤프 파일(SQLDUMP*nnnn*.txt)이 만들어집니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대해 기능 사용량 현황 데이터 수집 및 오류 보고 기능을 설정하면 이 파일이 [!INCLUDE[msCoName](../../includes/msconame-md.md)]에 자동으로 전달됩니다. 수집된 데이터를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기능을 향상시킬 수 있습니다.
 덤프 파일에는 DBCC CHECKFILEGROUP 명령의 결과 및 추가 진단 출력이 포함됩니다. 이 파일에는 제한된 DACL(임의 액세스 제어 목록)이 있습니다. 액세스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 계정 및 **sysadmin** 역할의 멤버로 제한됩니다. 기본적으로 **sysadmin** 역할에는 Windows BUILTIN\Administrators 그룹 및 로컬 관리자 그룹의 모든 멤버가 포함됩니다. 데이터 수집 프로세스가 실패해도 DBCC 명령은 실패하지 않습니다.
   
 ## <a name="resolving-errors"></a>오류 해결  
@@ -208,7 +209,7 @@ GO
 ```  
   
 ### <a name="b-checking-the-adventureworks-primary-filegroup-without-nonclustered-indexes"></a>B. 비클러스터형 인덱스를 제외한 AdventureWorks PRIMARY 파일 그룹 검사  
-다음 예제에서는 PRIMARY 파일 그룹의 ID 번호 및 `AdventureWorks2012`를 지정하여 `NOINDEX` 데이터베이스의 PRIMARY 파일 그룹(비클러스터형 인덱스 제외)을 검사합니다.
+다음 예제에서는 PRIMARY 파일 그룹의 ID 번호 및 `NOINDEX`를 지정하여 `AdventureWorks2012` 데이터베이스의 PRIMARY 파일 그룹(비클러스터형 인덱스 제외)을 검사합니다.
   
 ```sql  
 USE AdventureWorks2012;  

@@ -1,4 +1,5 @@
 ---
+description: DBCC CHECKALLOC(Transact-SQL)
 title: DBCC CHECKALLOC(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/14/2017
@@ -26,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: bc1218eb-ffff-44ce-8122-6e4fa7d68a79
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 3b85dbd8d97583b6895dfb61bf7d0f50197f0635
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: b4631e88e76aeb9657327d9dbe4d6300b36b70df
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485581"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459967"
 ---
 # <a name="dbcc-checkalloc-transact-sql"></a>DBCC CHECKALLOC(Transact-SQL)
 
@@ -126,7 +127,7 @@ DBCC CHECKALLOC 명령이 완료된 후 [!INCLUDE[ssNoVersion](../../includes/ss
 |5|알 수 없는 오류가 발생하여 DBCC 명령이 종료되었습니다.|  
   
 ## <a name="error-reporting"></a>오류 보고  
-DBCC CHECKALLOC 명령에서 손상 오류가 검색될 때마다  *LOG 디렉터리에 미니덤프 파일(SQLDUMP*nnnn[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].txt)이 생성됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대해 기능 사용량 현황 데이터 수집 및 오류 보고 기능을 설정하면 이 파일이 [!INCLUDE[msCoName](../../includes/msconame-md.md)]에 자동으로 전달됩니다. 수집된 데이터를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기능을 향상시킬 수 있습니다.
+DBCC CHECKALLOC 명령에서 손상 오류가 검색될 때마다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] LOG 디렉터리에 미니덤프 파일(SQLDUMP*nnnn*.txt)이 생성됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대해 기능 사용량 현황 데이터 수집 및 오류 보고 기능을 설정하면 이 파일이 [!INCLUDE[msCoName](../../includes/msconame-md.md)]에 자동으로 전달됩니다. 수집된 데이터를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기능을 향상시킬 수 있습니다.
 덤프 파일에는 DBCC CHECKALLOC 명령의 결과 및 추가 진단 출력이 포함됩니다. 이 파일에는 제한된 DACL(임의 액세스 제어 목록)이 있습니다. 액세스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 계정 및 sysadmin 역할의 멤버로 제한됩니다. 기본적으로 sysadmin 역할에는 Windows BUILTIN\Administrators 그룹 및 로컬 관리자 그룹의 모든 멤버가 포함됩니다. 데이터 수집 프로세스가 실패해도 DBCC 명령은 실패하지 않습니다.
   
 ## <a name="resolving-errors"></a>오류 해결  
@@ -153,7 +154,7 @@ DBCC CHECKALLOC이 오류를 보고하면 복구를 실행하는 대신 데이�
 |Partition ID|내부적으로만 사용됩니다.|  
 |Alloc unit ID|내부적으로만 사용됩니다.|  
 |행 내부 데이터|페이지에 인덱스 또는 힙 데이터가 포함됩니다.|  
-|LOB 데이터|페이지에 **varchar(max)** , **nvarchar(max)** , **varbinary(max)** , **text**, **ntext**, **xml** 및 **image** 데이터가 포함됩니다.|  
+|LOB 데이터|페이지에 **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **text**, **ntext**, **xml** 및 **image** 데이터가 포함됩니다.|  
 |행 오버플로 데이터|페이지에 행 외부로 밀어넣은 가변 길이 열 데이터가 포함됩니다.|  
   
 DBCC CHECKALLOC은 ESTIMATEONLY 또는 NO_INFOMSGS가 지정된 경우를 제외하고 다음 결과 집합(값은 변화 가능)을 반환합니다.
@@ -233,7 +234,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 ## <a name="permissions"></a>사용 권한  
 sysadmin 고정 서버 역할의 멤버 또는 db_owner 고정 데이터베이스 역할의 멤버여야 합니다.
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
 다음 예에서는 현재 데이터베이스 및 `DBCC CHECKALLOC` 데이터베이스에 대해 `AdventureWorks2012`를 실행합니다.
   
 ```sql  

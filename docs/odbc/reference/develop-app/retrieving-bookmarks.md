@@ -1,4 +1,5 @@
 ---
+description: 책갈피 검색
 title: 책갈피 검색 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a34c8f09-b786-4835-a44b-b7294c970aff
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3d146b2fb9bfc0e7294709e971f1b6752dc99ab3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 22fba0ccc900d221e915fea939736aa87b101e80
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300073"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429095"
 ---
 # <a name="retrieving-bookmarks"></a>책갈피 검색
 응용 프로그램에서 책갈피를 사용 하는 경우 문을 준비 하거나 실행 하기 전에 SQL_ATTR_USE_BOOKMARKS statement 특성을 SQL_UB_VARIABLE으로 설정 해야 합니다. 책갈피를 빌드하고 유지 관리 하는 작업은 비용이 많이 들 수 있으므로 응용 프로그램에서 적절 하 게 사용할 수 있는 경우에만 책갈피를 사용 하도록 설정 해야 합니다.  

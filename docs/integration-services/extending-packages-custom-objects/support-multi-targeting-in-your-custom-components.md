@@ -1,4 +1,5 @@
 ---
+description: 사용자 지정 구성 요소에서 멀티 타기팅 지원
 title: 사용자 지정 구성 요소에서 멀티 타기팅 지원 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ec611374-16bf-4a56-8fd9-45d3ddd7befc
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4020d295bc29fa3d240c0176611d446fcb427197
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 7bfd8409894c1f98fe4d63efcd122b4bf8025aae
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916391"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430465"
 ---
 # <a name="support-multi-targeting-in-your-custom-components"></a>사용자 지정 구성 요소에서 멀티 타기팅 지원
 
@@ -37,7 +38,7 @@ ms.locfileid: "86916391"
 -   로그 공급자
 -   데이터 흐름 구성 요소
 
-관리되는 확장의 경우 SSIS 디자이너는 지정된 대상 버전에 대한 확장 버전을 로드합니다. 다음은 그 예입니다.
+관리되는 확장의 경우 SSIS 디자이너는 지정된 대상 버전에 대한 확장 버전을 로드합니다. 예를 들면 다음과 같습니다.
 -   대상 버전이 SQL Server 2012인 경우 디자이너는 2012 버전의 확장을 로드합니다.
 -   대상 버전이 SQL Server 2016인 경우 디자이너는 2016 버전의 확장을 로드합니다.
 
@@ -93,7 +94,7 @@ public override void PerformDowngrade(int pipelineVersion, DTSTargetServerVersio
 }
 ```
 
-## <a name="common-errors"></a>일반 오류
+## <a name="common-errors"></a>일반적인 오류
 
 ### <a name="invalidcastexception"></a>InvalidCastException
 

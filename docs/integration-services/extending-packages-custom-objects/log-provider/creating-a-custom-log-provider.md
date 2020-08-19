@@ -1,4 +1,5 @@
 ---
+description: 사용자 지정 로그 공급자 만들기
 title: 사용자 지정 로그 공급자 만들기 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: fc20af96-9eb8-4195-8d3f-8a4d7c753f24
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5a4eaaf0e4c441fd4f08589d98c58cbac65b9e7f
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d12ea8d1c1289ef917c5781980af4f09eacfdf18
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916433"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430525"
 ---
 # <a name="creating-a-custom-log-provider"></a>사용자 지정 로그 공급자 만들기
 

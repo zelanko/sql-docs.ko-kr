@@ -1,4 +1,5 @@
 ---
+description: 피어 투 피어 토폴로지 구성 마법사
 title: 피어 투 피어 토폴로지 구성 마법사 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 44be3a38-fa2b-4136-9759-b218e212a0c8
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d0d79fcdfc0c65d73db7a52ac7b6f9adb1d39bb9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 39840c4d1c7e711339008bac4797bee7c186f6e7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85773989"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475574"
 ---
 # <a name="configure-peer-to-peer-topology-wizard"></a>피어 투 피어 토폴로지 구성 마법사
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

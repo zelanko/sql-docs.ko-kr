@@ -1,4 +1,5 @@
 ---
+description: 사용자 지정 개체 지속
 title: 사용자 지정 개체 지속 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 97c19716-6447-4c1c-b277-cc2e6c1e6a6c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f4f8558a766c7fa41adb3f2ec3cb769d0ee0db62
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: a8e86b0cee816bae92656da9de24648c24de1abc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916411"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430475"
 ---
 # <a name="persisting-custom-objects"></a>사용자 지정 개체 지속
 

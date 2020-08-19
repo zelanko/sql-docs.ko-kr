@@ -1,4 +1,5 @@
 ---
+description: 디바이스 드라이버 컨트롤 오류
 title: 디바이스 드라이버 컨트롤 오류 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7101d77a-84ca-4c00-af1c-17679234e9fb
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 2dd7ec5d8c7c321887d2553690e80dda12156203
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2631fc0d816766c175be0254b24fd47dd2a20e46
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85654585"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475625"
 ---
 # <a name="device-driver-control-error"></a>디바이스 드라이버 컨트롤 오류
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

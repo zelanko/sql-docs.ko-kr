@@ -1,4 +1,5 @@
 ---
+description: 스크립트 태스크를 사용하여 HTML 메일 메시지 보내기
 title: 스크립트 태스크를 사용하여 HTML 메일 메시지 보내기 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: dd2b1eef-b04f-4946-87ab-7bc56bb525ce
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8df42af0f45aaff966e05c66cde7b32feaddd088
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 6894402970f0d49c964553a12ec7ea5887568d50
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917141"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430375"
 ---
 # <a name="sending-an-html-mail-message-with-the-script-task"></a>스크립트 태스크를 사용하여 HTML 메일 메시지 보내기
 
@@ -40,7 +41,7 @@ ms.locfileid: "86917141"
   
 1.  `HtmlEmailTo`, `HtmlEmailFrom` 및 `HtmlEmailSubject`라는 문자열 변수를 만들고 이 변수에 올바른 테스트 메시지에 대한 적절한 값을 할당합니다.  
   
-2.  `HtmlEmailBody`라는 문자열 변수를 만들고 이 변수에 HTML 태그의 문자열을 할당합니다. 다음은 그 예입니다.  
+2.  `HtmlEmailBody`라는 문자열 변수를 만들고 이 변수에 HTML 태그의 문자열을 할당합니다. 예를 들면 다음과 같습니다.  
   
     ```  
     <html><body><h1>Testing</h1><p>This is a <b>test</b> message.</p></body></html>  
