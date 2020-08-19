@@ -1,4 +1,5 @@
 ---
+description: 후보 키 프로필 요청 옵션(데이터 프로파일링 태스크)
 title: 후보 키 프로필 요청 옵션(데이터 프로파일링 태스크) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8632dbc4-4394-4dc7-b19c-f9adeb21ba52
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 41f3c9d4fef15a99592421b3762515a15ef33b7b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 499f56a0ce11bc68ad046035ff0a43d80ae4bfe7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913988"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88431045"
 ---
 # <a name="candidate-key-profile-request-options-data-profiling-task"></a>후보 키 프로필 요청 옵션(데이터 프로파일링 태스크)
 
@@ -42,9 +43,9 @@ ms.locfileid: "86913988"
   
  예를 들어 열 A, B, C를 포함하는 예제 테이블의 경우 **KeyColumns**에 대해 다음과 같이 선택합니다.  
   
--   \*KeyColumns **에서 (** ) 및 열 C를 선택합니다. 태스크에서는 열 C의 키 수준을 계산한 다음 복합 키 후보 (A, C) 및 (B, C)의 키 수준을 계산합니다.  
+-   \*KeyColumns **에서 (**) 및 열 C를 선택합니다. 태스크에서는 열 C의 키 수준을 계산한 다음 복합 키 후보 (A, C) 및 (B, C)의 키 수준을 계산합니다.  
   
--   \*KeyColumns\*에서 ( **) 및 (** )를 선택합니다. 태스크에서는 개별 열 A, B, C의 키 수준을 계산한 다음 복합 키 후보 (A, B), (A, C) 및 (B, C)의 키 수준을 계산합니다.  
+-   \*KeyColumns\*에서 ( **) 및 (**)를 선택합니다. 태스크에서는 개별 열 A, B, C의 키 수준을 계산한 다음 복합 키 후보 (A, B), (A, C) 및 (B, C)의 키 수준을 계산합니다.  
   
 > [!NOTE]  
 >  (*)를 선택하는 경우 이 옵션으로 인해 계산이 많이 발생하여 태스크의 성능이 저하될 수 있습니다. 그러나 태스크에서 키의 임계값을 만족하는 하위 집합을 찾으면 추가 조합을 분석하지 않습니다. 예를 들어 위에서 설명한 예제 테이블의 태스크에서 열 C가 키임을 확인하면 복합 키 후보를 더 이상 분석하지 않습니다.  

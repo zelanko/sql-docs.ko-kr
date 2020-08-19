@@ -1,4 +1,5 @@
 ---
+description: MAX(Transact-SQL)
 title: MAX (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/23/2017
@@ -20,12 +21,12 @@ ms.assetid: 9b002b69-ab5e-472d-b12e-dc2fbe35ef42
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 63beea910b2598ffc014ebd508906aecfddd75b0
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: b344d71bb3bd526e0b49624de3176d5b203b8049
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112400"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467995"
 ---
 # <a name="max-transact-sql"></a>MAX(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -73,7 +74,7 @@ MAX ([ ALL ] expression) OVER ( [ <partition_by_clause> ] [ <order_by_clause> ] 
   
  MAX는 OVER 및 ORDER BY 절 없이 사용되는 경우 결정적 함수이고, OVER 및 ORDER BY 절과 함께 지정되는 경우 비결정적 함수입니다. 자세한 내용은 [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)을 참조하세요.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-simple-example"></a>A. 간단한 예  
  다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 가장 높은(최대) 세율을 반환합니다.  
@@ -95,7 +96,7 @@ GO
  ```  
   
 ### <a name="b-using-the-over-clause"></a>B. OVER 절 사용  
- 다음 예에서는 OVER 절과 함께 MIN, MAX, AVG 및 COUNT 함수를 사용하여 `HumanResources.Department` 데이터베이스의 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 테이블에서 각 부서에 대한 집계 값을 제공합니다.  
+ 다음 예에서는 OVER 절과 함께 MIN, MAX, AVG 및 COUNT 함수를 사용하여 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 `HumanResources.Department` 테이블에서 각 부서에 대한 집계 값을 제공합니다.  
   
 ```sql  
 SELECT DISTINCT Name  

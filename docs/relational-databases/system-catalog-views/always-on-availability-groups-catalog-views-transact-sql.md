@@ -1,4 +1,5 @@
 ---
+description: Always On 가용성 그룹 카탈로그 뷰 (Transact-sql)
 title: Always On 가용성 그룹 카탈로그 뷰 (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ff53e873-8ff6-4628-af84-4ec52fa4951c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b0291829a7524ad681cb3937b31cb8ff05f11a01
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b78167386734dd3c42a2900819ca9ccecbf53eba
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918059"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475455"
 ---
 # <a name="always-on-availability-groups-catalog-views-transact-sql"></a>Always On 가용성 그룹 카탈로그 뷰 (Transact-sql)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

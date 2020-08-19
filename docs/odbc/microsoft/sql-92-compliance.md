@@ -1,4 +1,5 @@
 ---
+description: SQL-92 호환성
 title: SQL-92 준수 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 50c8c7df-df01-4f4d-ad62-d059cf29d73a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9ac0ae5873e545afb8fcac9dd003c984b1ed303a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7d978b236c45d442732cd3602c3fbbb6d16dfd8f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300703"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483436"
 ---
 # <a name="sql-92-compliance"></a>SQL-92 호환성
 ODBC 데스크톱 데이터베이스 드라이버와 기본 Microsoft Jet 엔진은 SQL-92 규격이 아닙니다. SQL-92에 정의 된 많은 기능을 지원 합니다. 드라이버에서 지원 되는 일부 기능은 SQL-92에서 지원 되지 않습니다. 자세한 내용은 *Microsoft Jet 데이터베이스 엔진 프로그래머 가이드*를 참조 하세요. 다음은 두 가지 주요 차이점입니다.  

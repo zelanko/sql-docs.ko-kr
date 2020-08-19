@@ -1,4 +1,5 @@
 ---
+description: 비트 연산자(Transact-SQL)
 title: 비트 연산자(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/04/2019
@@ -17,12 +18,12 @@ ms.assetid: 2b994cf5-2daa-438a-b8c7-4bd8d451ac8d
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d96dbfc519a831508b7e56fad1b6909a37f672d3
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 15649f0ff6a9695b17af629f28156ea4860e4aa6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004006"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459441"
 ---
 # <a name="bitwise-operators-transact-sql"></a>비트 연산자(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -1,4 +1,5 @@
 ---
+description: 의미 체계 검색을 사용하여 유사하거나 관련된 문서 찾기
 title: 의미 체계 검색을 사용하여 유사하거나 관련된 문서 찾기
 ms.date: 03/06/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 42dc892fcf33a052105ccbfaeea6fbaf09a41895
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b0df002c1d170061d6db8b6ee1ba53611e869603
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730178"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498603"
 ---
 # <a name="find-similar-and-related-documents-with-semantic-search"></a>의미 체계 검색을 사용하여 유사하거나 관련된 문서 찾기
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -60,7 +61,7 @@ GO
 > [!IMPORTANT]  
 >  대상 열에는 전체 텍스트 및 의미 체계 인덱싱이 사용하도록 설정되어 있어야 합니다.  
   
-###  <a name="example-find-the-top-key-phrases-that-are-similar-between-documents"></a><a name="HowToSimilarPhrases"></a> Example: Find the top key phrases that are similar between documents  
+###  <a name="example-find-the-top-key-phrases-that-are-similar-between-documents"></a><a name="HowToSimilarPhrases"></a> 예제: 문서 간에 유사한 상위 키 구 찾기  
  다음 예에서는 AdventureWorks2012 예제 데이터베이스의 **HumanResources.JobCandidate** 테이블에서 지정된 입사 지원자 간에 유사성 점수가 가장 높은 5개의 키 구를 검색합니다.  
   
 ```sql  

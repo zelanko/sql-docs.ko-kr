@@ -1,4 +1,5 @@
 ---
+description: 새 정책 만들기 또는 정책 열기 대화 상자, 일반 페이지
 title: ‘새 정책 만들기’ 또는 ‘정책 열기’ 대화 상자, 일반 페이지
 descripton: Describes the 'General Page' of the 'Create New Policy' and 'Open Policy' dialog boxes for Policy-Based Management in SQL Server Management Studio (SSMS).
 ms.custom: seo-lt-2019
@@ -15,12 +16,12 @@ f1_keywords:
 ms.assetid: c00bebd0-d04b-4c64-840e-8b7a2c603436
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 110cdd1ac1a74986178b6d96803d20a1fc6284a1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 24d6ed05b1419c399f0a11d7de590a25f3d77077
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85749472"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475649"
 ---
 # <a name="create-new-policy-or-open-policy-dialog-box-general-page"></a>새 정책 만들기 또는 정책 열기 대화 상자, 일반 페이지
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +46,7 @@ ms.locfileid: "85749472"
  **요청 시** 평가 모드를 사용하여 실행되는 정책은 이 확인란을 사용하지 않습니다.  
   
  **조건 확인**  
- 이 정책이 사용하는 정책 기반 관리 조건을 선택합니다. 관련 정책 기반 관리 패싯에 대한 서버의 모든 조건이 나열됩니다. 새 조건을 만들려면 **새 조건** 을 클릭합니다. 조건을 수정하려면 줄임표 단추( **...** )를 클릭합니다.  
+ 이 정책이 사용하는 정책 기반 관리 조건을 선택합니다. 관련 정책 기반 관리 패싯에 대한 서버의 모든 조건이 나열됩니다. 새 조건을 만들려면 **새 조건** 을 클릭합니다. 조건을 수정하려면 줄임표 단추(**...**)를 클릭합니다.  
   
  **적용 대상**  
  이 패싯에서 필터 식을 완성하는 데 사용할 수 있는 대상 유형을 선택합니다.  
@@ -71,7 +72,7 @@ ms.locfileid: "85749472"
  **서버 제한**  
  이 정책에 적합한 서버 유형을 선택합니다. **없음** 을 선택하거나, 가능한 서버를 필터링하는 조건을 선택할 수 있습니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [정책 기반 관리를 사용하여 서버 관리](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
   
   

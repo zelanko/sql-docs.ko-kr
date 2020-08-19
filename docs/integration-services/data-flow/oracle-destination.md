@@ -1,4 +1,5 @@
 ---
+description: Oracle 대상
 title: Oracle 대상 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/14/2019
@@ -9,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f09d0cc0ad4a8d6ee1230bd846375b5b340cd4fe
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: e029637f90afbb27e4b27c79c8a515a2e3aad823
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913779"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430785"
 ---
 # <a name="oracle-destination"></a>Oracle 대상
 

@@ -1,4 +1,5 @@
 ---
+description: SQL 스크립트 생성(복제 개체)
 title: SQL 스크립트 생성(복제 개체) | Microsoft 문서
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ ms.assetid: b7ccc34e-1c22-44b8-8eb5-f6423af3164e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 33473f0d5309b3db41c65ad6c8d376ac6f75dc62
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c68c8e263f34d549980681e6031c8fcd412d88bf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85652918"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475581"
 ---
 # <a name="generate-sql-script-replication-objects"></a>SQL 스크립트 생성(복제 개체)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

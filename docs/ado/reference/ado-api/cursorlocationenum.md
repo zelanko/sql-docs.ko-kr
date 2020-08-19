@@ -1,4 +1,5 @@
 ---
+description: CursorLocationEnum
 title: CursorLocationEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: acb255ff-1734-4b70-89bb-aef862b4c63b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 278f69e504ed4af7589b7e2be2c281e5de5957fa
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 67cd645a7eca33d949055a1de6fd264bc7a4b942
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760179"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444295"
 ---
 # <a name="cursorlocationenum"></a>CursorLocationEnum
 커서 서비스의 위치를 지정 합니다.  

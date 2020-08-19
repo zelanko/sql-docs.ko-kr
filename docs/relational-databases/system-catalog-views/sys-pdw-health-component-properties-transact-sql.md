@@ -1,4 +1,5 @@
 ---
+description: sys. pdw_health_component_properties (Transact-sql)
 title: sys. pdw_health_component_properties (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.assetid: 66999c0c-dc43-4327-99fb-8366f465e69d
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 7c0366492dbf22364b04bc436262f7cb83fe8505
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: b39e099e2b76c740621fa6844409955d2452d936
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396052"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475399"
 ---
 # <a name="syspdw_health_component_properties-transact-sql"></a>sys. pdw_health_component_properties (Transact-sql)
 [!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]

@@ -1,4 +1,5 @@
 ---
+description: COUNT_BIG(Transact-SQL)
 title: COUNT_BIG(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2017
@@ -22,12 +23,12 @@ ms.assetid: f2e3601f-487e-4917-bb01-47b1047908cd
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 272f475b499d88f0a6fb44b39a46a6cb5bcbffb8
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 47d918b40002d877c667c675c5da7c49f98f267b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112531"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459820"
 ---
 # <a name="count_big-transact-sql"></a>COUNT_BIG(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -77,7 +78,7 @@ COUNT_BIG(DISTINCT *식*)은 그룹에 포함된 각 행의 *식*을 계산하�
   
 COUNT_BIG은 OVER 및 ORDER BY 절 **_없이_** 사용되는 경우 결정적 함수입니다. COUNT_BIG은 OVER 및 ORDER BY 절과 **_함께_** 사용되는 경우 비결정적 함수입니다. 자세한 내용은 [결정적 및 비결정 함수](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)를 참조하세요.
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
 예제는 [COUNT&#40;Transact-SQL&#41;](../../t-sql/functions/count-transact-sql.md)을 참조하세요.
   
 ## <a name="see-also"></a>참고 항목

@@ -1,4 +1,5 @@
 ---
+description: NextMember(MDX)
 title: NextMember (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: b852564510c6b5918c781e0c75e84e3b30aecd44
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 33824ba605fc3acd0a994d0e0a6b411afdda2306
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68088360"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483745"
 ---
 # <a name="nextmember-mdx"></a>NextMember(MDX)
 
@@ -42,7 +43,7 @@ SELECT [Date].[Calendar].[Month].[July 2001].NextMember ON 0
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [MDX 함수 참조&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

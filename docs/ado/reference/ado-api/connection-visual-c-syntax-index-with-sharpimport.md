@@ -1,4 +1,5 @@
 ---
+description: Connection (#import를 사용 하는 Visual C++ 구문 인덱스)
 title: Connection (#import를 사용 하는 Visual C++ 구문 인덱스) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 03f47eda-840d-4cab-83d9-ccddd873f342
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 350d8dc7a52aa5b906f57799d51297073cb588e6
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 9ee7e847b9e57b10520bfe8ac77af638214b5126
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760269"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444495"
 ---
 # <a name="connection-visual-c-syntax-index-with-import"></a>Connection (#import를 사용 하는 Visual C++ 구문 인덱스)
 ## <a name="methods"></a>메서드  

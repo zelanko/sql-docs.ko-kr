@@ -1,4 +1,5 @@
 ---
+description: AbsolutePage, PageCount 및 PageSize 속성 예제 (VC + +)
 title: AbsolutePage, PageCount 및 PageSize 속성 예제 (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 38ca4e1b-c109-4fba-b590-bdd6994f770e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 46b0b7c4eab855c33366550c981df8f03e9e1819
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: ce6c0042c92611c65bf243da7bbbf59bbeb748be
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82747575"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451805"
 ---
 # <a name="absolutepage-pagecount-and-pagesize-properties-example-vc"></a>AbsolutePage, PageCount 및 PageSize 속성 예제 (VC + +)
 이 예에서는 [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md), [PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md)및 [PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md) 속성을 사용 하 여 ***Employee*** 테이블에서 이름 및 채용 날짜를 표시 하 고 한 번에 5 개의 레코드를 고용 합니다.  

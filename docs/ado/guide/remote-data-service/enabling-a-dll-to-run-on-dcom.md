@@ -1,4 +1,5 @@
 ---
+description: DCOM에서 실행하도록 DLL 사용
 title: DLL을 DCOM에서 실행할 수 있도록 설정 Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5f1c2205-191c-4fb4-9bd9-84c878ea46ed
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 53dc804c4182aaf2574b4d37d49371c9293fa90f
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: d685e03834b1c8390ddd51a8e590f25cd6307efe
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82749600"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452205"
 ---
 # <a name="enabling-a-dll-to-run-on-dcom"></a>DCOM에서 실행하도록 DLL 사용
 > [!IMPORTANT]

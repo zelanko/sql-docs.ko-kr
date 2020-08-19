@@ -1,4 +1,5 @@
 ---
+description: ELSE(IF...ELSE)(Transact-SQL)
 title: ELSE(IF...ELSE)(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -20,12 +21,12 @@ ms.assetid: 6f2b4278-0dea-4603-bbd3-7cbad602a645
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 727361bf8d655ba1783782feeb324b0c5701c5c4
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b32f65b2dacb9f3a1c709df4f0a850fa08fec0ea
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918539"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459365"
 ---
 # <a name="else-ifelse-transact-sql"></a>ELSE(IF...ELSE)(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -55,7 +56,7 @@ IF Boolean_expression
 ## <a name="result-types"></a>결과 형식  
  **Boolean**  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-using-a-simple-boolean-expression"></a>A. 간단한 부울 식 사용  
  다음 예에 포함된 간단한 부울 식(`1=1`)의 결과는 true이므로 첫째 문이 출력됩니다.  
@@ -138,7 +139,7 @@ GO
   
 ## <a name="examples-sssdwfull-and-sspdw"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="e-using-a-query-as-part-of-a-boolean-expression"></a>E: 쿼리를 부울 식의 일부로 사용  
+### <a name="e-using-a-query-as-part-of-a-boolean-expression"></a>E. 쿼리를 부울 식의 일부로 사용  
  다음 예에서는 `IF...ELSE`를 사용하여 `DimProduct` 테이블에 있는 항목의 가중치에 따라 두 응답 중 사용자를 표시할 응답을 결정합니다.  
   
 ```sql

@@ -1,4 +1,5 @@
 ---
+description: DataReader 대상
 title: DataReader 대상 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -15,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: 56fcc4bf-c901-42c3-a71d-110039293431
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 16e98a1cd172f3d325023430cfa03c66b3834faa
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: cf921ace25411ba18fc59310b0ad44f996ed2247
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916791"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430895"
 ---
 # <a name="datareader-destination"></a>DataReader 대상
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-  DataReader 대상은 ADO.NET **DataReader** 인터페이스를 사용하여 데이터 흐름에 데이터를 제공합니다. 그러면 다른 애플리케이션에서 이 데이터를 사용할 수 있습니다. 예를 들어 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 패키지 실행 결과를 사용하도록 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 보고서의 데이터 원본을 구성할 수 있습니다. 이렇게 하려면 DataReader 대상을 구현하는 데이터 흐름을 만듭니다.  
+  DataReader 대상은 ADO.NET **DataReader** 인터페이스를 사용하여 데이터 흐름에 데이터를 제공합니다. 그러면 다른 애플리케이션에서 이 데이터를 사용할 수 있습니다. 예를 들어 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지 실행 결과를 사용하도록 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서의 데이터 원본을 구성할 수 있습니다. 이렇게 하려면 DataReader 대상을 구현하는 데이터 흐름을 만듭니다.  
   
  DataReader 대상의 값을 프로그래밍 방식으로 액세스하고 읽는 방법에 대한 자세한 내용은 [로컬 패키지의 출력 로드](../../integration-services/run-manage-packages-programmatically/loading-the-output-of-a-local-package.md)를 참조하세요.  
   

@@ -1,4 +1,5 @@
 ---
+description: RDS 애플리케이션 보안
 title: RDS 응용 프로그램 보안 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 82fb1330-d6c6-4c17-ad3e-d417ff822b25
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f785eed6124970d8c270492b98dc8e5ea815f18a
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 0e40d5739de285c0655e9ab45f14ba3f342a420f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758969"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451975"
 ---
 # <a name="securing-rds-applications"></a>RDS 애플리케이션 보안
 이 항목에서는 RDS에 대 한 보안 정보를 제공 합니다.  
@@ -29,7 +30,7 @@ ms.locfileid: "82758969"
  Microsoft Internet Explorer에 새로운 보안 기능이 추가 됨에 따라 일부 ADO 및 RDS 개체는 "안전" 모드 환경 에서만 실행 되도록 제한 됩니다. 이를 위해서는 여러 영역, 보안 수준, 제한적인 동작, 안전 하지 않은 작업 및 사용자 지정 된 보안 설정을 포함 하 여 이러한 문제를 알고 있어야 합니다.  
   
 ## <a name="security-and-your-web-server"></a>보안 및 웹 서버  
- 인터넷 웹 서버에서 [RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) 개체를 사용 하는 경우이로 인해 보안 위험이 발생할 수 있습니다. 유효한 DSN (데이터 원본 이름), 사용자 ID 및 암호 정보를 가져오는 외부 사용자는 해당 데이터 원본에 대 한 쿼리를 전송 하는 페이지를 작성할 수 있습니다. 데이터 원본에 대 한 액세스를 제한 하려는 경우 한 가지 옵션은 **RDSServer (DataFactory** 개체)의 등록을 취소 하 고 삭제 하는 것입니다 .이 경우에는 대신 하드 코드 된 쿼리를 사용 하 여 사용자 지정 비즈니스 개체를 사용 합니다.  
+ 인터넷 웹 서버에서 [RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) 개체를 사용 하는 경우이로 인해 보안 위험이 발생할 수 있습니다. 유효한 DSN (데이터 원본 이름), 사용자 ID 및 암호 정보를 가져오는 외부 사용자는 해당 데이터 원본에 대 한 쿼리를 전송 하는 페이지를 작성할 수 있습니다. 데이터 원본에 대 한 제한 된 액세스 권한을 원하는 경우 **RDSServer DataFactory** 개체 (msadcf.dll)를 등록 취소 하 고 삭제 한 다음 하드 코드 된 쿼리와 함께 사용자 지정 비즈니스 개체를 사용 하는 것이 한 가지 옵션입니다.  
   
  DataFactory 개체를 사용 하는 경우의 보안 문제에 대 한 자세한 내용은 microsoft 보안 웹 사이트의 Microsoft 보안 공지 MS99-025을 참조 하십시오 RDSServer.  
   

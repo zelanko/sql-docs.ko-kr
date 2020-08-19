@@ -1,4 +1,5 @@
 ---
+description: sys.dm_os_child_instances(Transact-SQL)
 title: sys. dm_os_child_instances (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/18/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 1bef3074-0ccc-48fa-8f3d-14f3d99df86b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 58830fc28bea6432e32629c43c103f2ba9cd7ad5
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a5bb2094b96ef90cd8fc05e6d8ace1afeec69de5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898808"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489893"
 ---
 # <a name="sysdm_os_child_instances-transact-sql"></a>sys.dm_os_child_instances(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -50,7 +51,7 @@ ms.locfileid: "85898808"
 |**os_process_id**|**정수**|이 사용자 인스턴스에 대한 Windows 프로세스의 프로세스 번호입니다.|  
 |**os_process_creation_date**|**날짜**|이 사용자 인스턴스 프로세스가 마지막으로 시작된 날짜 및 시간입니다.|  
 |**heart_beat**|**nvarchar (5)**|이 사용자 인스턴스의 현재 상태(연결 또는 연결 끊김)입니다.|  
-|**pdw_node_id**|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포가 설정 된 노드의 식별자입니다.|  
+|**pdw_node_id**|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포가 설정 된 노드의 식별자입니다.|  
   
 ## <a name="permissions"></a>사용 권한  
  을 실행하려면 서버에 대해 VIEW SERVER STATE 권한이 필요합니다.  

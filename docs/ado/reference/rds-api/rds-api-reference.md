@@ -1,4 +1,5 @@
 ---
+description: RDS API 참조
 title: RDS API 참조 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ca9fa99e-1a9f-4deb-80d4-6942555fb22a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c5caa1944cbc9246fed50d60557ea376082c0c78
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 0d531744fd5803181997a58c0e9a6d586a9af6a1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82751463"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438855"
 ---
 # <a name="rds-api-reference"></a>RDS API 참조
 > [!IMPORTANT]

@@ -1,4 +1,5 @@
 ---
+description: ALTER MINING STRUCTURE(DMX)
 title: ALTER 마이닝 구조 (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 8022ee6fd8cb9bf9de79a7a83d3ee0d6166606b5
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: ba2a5e81b7ae19b431f35b3fe0eac291718c4df3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87362223"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88431185"
 ---
 # <a name="alter-mining-structure-dmx"></a>ALTER MINING STRUCTURE(DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]

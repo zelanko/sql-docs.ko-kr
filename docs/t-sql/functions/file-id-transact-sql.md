@@ -1,4 +1,5 @@
 ---
+description: FILE_ID(Transact-SQL)
 title: FILE_ID (Transact-SQL)| Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 6a7382cf-a360-4d62-b9d2-5d747f56f076
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c3d6ced05acfdac106897b7fd5abf438d8eac6c7
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 5d3d2d24a9f6c3dc206c550fc780105ad36f4d39
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111568"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468052"
 ---
 # <a name="file_id-transact-sql"></a>FILE_ID(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,7 +50,7 @@ FILE_ID ( file_name )
 
 ## <a name="arguments"></a>인수
 *file_name*  
-반환될 파일 ID 값 **가 포함된 파일의 논리적 이름을 나타내는** sysname`FILE_ID`형식 식입니다.  
+반환될 파일 ID 값 `FILE_ID`가 포함된 파일의 논리적 이름을 나타내는 **sysname**형식 식입니다.  
   
 ## <a name="return-types"></a>반환 형식  
 **smallint**  
@@ -57,12 +58,12 @@ FILE_ID ( file_name )
 ## <a name="remarks"></a>설명  
 *file_name*은 sys.master_files 또는 sys.database_files 카탈로그 뷰의 name 열에 표시되는 논리적 파일 이름과 일치합니다.  
 
-`FILE_ID`file_name`NULL`이 현재 데이터베이스 구성 요소 파일의 논리적 이름과 일치하지 않으면 *는* 을 반환합니다.
+*file_name*이 현재 데이터베이스 구성 요소 파일의 논리적 이름과 일치하지 않으면 `FILE_ID`는 `NULL`을 반환합니다.
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 전체 텍스트 카탈로그에 할당되는 파일 ID 번호는 32767보다 큽니다. `FILE_ID` 함수는 **smallint** 반환 형식이므로 `FILE_ID`는 전체 텍스트 파일을 지원하지 않습니다. 대신 [FILE_IDEX](../../t-sql/functions/file-idex-transact-sql.md)를 사용하십시오.  
   
-## <a name="examples"></a>예  
-이 예에서는 `AdventureWorks_Data` 데이터베이스의 구성 요소 파일인 `ADVENTUREWORKS2012` 파일의 파일 ID 값을 반환합니다.  
+## <a name="examples"></a>예제  
+이 예에서는 `ADVENTUREWORKS2012` 데이터베이스의 구성 요소 파일인 `AdventureWorks_Data` 파일의 파일 ID 값을 반환합니다.  
 
 ```sql  
 USE AdventureWorks2012;  

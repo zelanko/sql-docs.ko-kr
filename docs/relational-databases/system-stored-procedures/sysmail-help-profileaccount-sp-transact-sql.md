@@ -1,4 +1,5 @@
 ---
+description: sysmail_help_profileaccount_sp(Transact-SQL)
 title: sysmail_help_profileaccount_sp (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3ea68271-0a6b-4d77-991c-4757f48f747a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: be5cfcdd06dfeea2215f3c65a2b672b68e28035f
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: f27384e614a929cc149d8ae48355fb75a4ce301b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87122708"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469130"
 ---
 # <a name="sysmail_help_profileaccount_sp-transact-sql"></a>sysmail_help_profileaccount_sp(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,13 +44,13 @@ sysmail_help_profileaccount_sp
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @profile_id = ] profile_id`나열할 프로필의 프로필 ID입니다. *profile_id* 은 **int**이며 기본값은 NULL입니다. *Profile_id* 또는 *profile_name* 를 지정 해야 합니다.  
+`[ @profile_id = ] profile_id` 나열할 프로필의 프로필 ID입니다. *profile_id* 은 **int**이며 기본값은 NULL입니다. *Profile_id* 또는 *profile_name* 를 지정 해야 합니다.  
   
-`[ @profile_name = ] 'profile_name'`나열할 프로필의 프로필 이름입니다. *profile_name* 는 **sysname**이며 기본값은 NULL입니다. *Profile_id* 또는 *profile_name* 를 지정 해야 합니다.  
+`[ @profile_name = ] 'profile_name'` 나열할 프로필의 프로필 이름입니다. *profile_name* 는 **sysname**이며 기본값은 NULL입니다. *Profile_id* 또는 *profile_name* 를 지정 해야 합니다.  
   
-`[ @account_id = ] account_id`나열할 계정 ID입니다. *account_id* 은 **int**이며 기본값은 NULL입니다. *Account_id* 및 *account_name* 모두 NULL 이면 프로필의 모든 계정을 나열 합니다.  
+`[ @account_id = ] account_id` 나열할 계정 ID입니다. *account_id* 은 **int**이며 기본값은 NULL입니다. *Account_id* 및 *account_name* 모두 NULL 이면 프로필의 모든 계정을 나열 합니다.  
   
-`[ @account_name = ] 'account_name'`나열할 계정의 이름입니다. *account_name* 는 **sysname**이며 기본값은 NULL입니다. *Account_id* 및 *account_name* 모두 NULL 이면 프로필의 모든 계정을 나열 합니다.  
+`[ @account_name = ] 'account_name'` 나열할 계정의 이름입니다. *account_name* 는 **sysname**이며 기본값은 NULL입니다. *Account_id* 및 *account_name* 모두 NULL 이면 프로필의 모든 계정을 나열 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -73,7 +74,7 @@ sysmail_help_profileaccount_sp
 ## <a name="permissions"></a>사용 권한  
  이 프로시저에 대 한 실행 권한은 기본적으로 **sysadmin** 고정 서버 역할의 멤버로 사용 됩니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  **1. 이름별로 특정 프로필에 대한 계정 나열**  
   
  다음 예에서는 프로필 이름을 지정하여 `AdventureWorks Administrator` 프로필에 대한 정보를 보여 줍니다.  
@@ -132,6 +133,6 @@ profile_id  profile_name                 account_id  account_name         sequen
  [데이터베이스 메일](../../relational-databases/database-mail/database-mail.md)   
  [데이터베이스 메일 계정 만들기](../../relational-databases/database-mail/create-a-database-mail-account.md)   
  [데이터베이스 메일 구성 개체](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
- [Transact-sql&#41;&#40;저장 프로시저 데이터베이스 메일](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [Transact-sql&#41;&#40;저장 프로시저 데이터베이스 메일 ](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

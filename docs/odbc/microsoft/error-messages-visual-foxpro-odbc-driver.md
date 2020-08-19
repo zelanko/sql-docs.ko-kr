@@ -1,4 +1,5 @@
 ---
+description: 오류 메시지(Visual FoxPro ODBC 드라이버)
 title: 오류 메시지 (Visual FoxPro ODBC 드라이버) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 58ea9734-4edf-44da-ba80-938aa7b340e4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 31f894e58da93fe6091dba306f8b765d14bac2cb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1b76ec8703ebee8aa597849b23a5a22323caa350
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81286403"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483606"
 ---
 # <a name="error-messages-visual-foxpro-odbc-driver"></a>오류 메시지(Visual FoxPro ODBC 드라이버)
 오류가 발생 하면 Visual FoxPro 드라이버에서 다음 정보를 반환 합니다.  

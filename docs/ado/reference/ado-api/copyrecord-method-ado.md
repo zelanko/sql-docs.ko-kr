@@ -1,4 +1,5 @@
 ---
+description: CopyRecord 메서드(ADO)
 title: CopyRecord 메서드 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b9bcf272-3c74-479f-95dd-0229a32e98fc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5fc8cfec5752f88909214301931c69dddfe89dc5
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: b6519ba504056966b8e237f73209e96855dd6c11
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758799"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444385"
 ---
 # <a name="copyrecord-method-ado"></a>CopyRecord 메서드(ADO)
 [레코드가](../../../ado/reference/ado-api/record-object-ado.md) 나타내는 엔터티를 다른 위치로 복사 합니다.  
@@ -34,22 +35,22 @@ Record.CopyRecord (Source, Destination, UserName, Password, Options, Async)
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- *소스*  
+ *원본*  
  (선택 사항) 복사할 엔터티 (예: 파일 또는 디렉터리)를 지정 하는 URL을 포함 하는 **문자열** 값입니다. *Source* 를 생략 하거나 빈 문자열을 지정 하면 현재 [레코드가](../../../ado/reference/ado-api/record-object-ado.md) 나타내는 파일이 나 디렉터리가 복사 됩니다.  
   
- *대상이*  
+ *대상*  
  (선택 사항) *원본이* 복사 될 위치를 지정 하는 URL을 포함 하는 **문자열** 값입니다.  
   
- *이름*  
+ *UserName*  
  (선택 사항) 필요한 경우 *대상*에 대 한 액세스 권한을 부여 하는 사용자 ID를 포함 하는 **문자열** 값입니다.  
   
  *암호*  
  (선택 사항) 필요한 경우 *사용자 이름을*확인 하는 암호를 포함 하는 **문자열** 값입니다.  
   
- *Options*  
+ *옵션*  
  (선택 사항) 기본값은 **adCopyUnspecified**인 [CopyRecordOptionsEnum](../../../ado/reference/ado-api/copyrecordoptionsenum.md) 값입니다. 이 메서드의 동작을 지정 합니다.  
   
- *동기화*  
+ *Async*  
  (선택 사항) **부울** 값입니다. **True**인 경우이 작업을 비동기로 지정 합니다.  
   
 ## <a name="return-value"></a>반환 값  

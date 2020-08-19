@@ -1,4 +1,5 @@
 ---
+description: sys.dm_database_replica_states(Azure SQL Database)
 title: dm_database_replica_states (Azure SQL Database) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/22/2019
@@ -18,12 +19,12 @@ helpviewer_keywords:
 - sys.dm_database_replica_states dynamic management view
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: dc81d2f5754052ae9fec57d7bd9d64b5337fdaba
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1a40c5ba80bc3e9929109d9acc5f58f454db243d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85754272"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490036"
 ---
 # <a name="sysdm_database_replica_states-azure-sql-database"></a>sys.dm_database_replica_states(Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -40,7 +41,7 @@ ms.locfileid: "85754272"
 |**replica_id**|**uniqueidentifier**|가용성 그룹 내 가용성 복제본의 식별자입니다.|  
 |**group_database_id**|**uniqueidentifier**|가용성 그룹 내 데이터베이스의 식별자입니다. 이 식별자는 이 데이터베이스가 조인되는 모든 복제본에서 동일합니다.|  
 |**is_local**|**bit**|가용성 데이터베이스가 로컬인지 여부를 나타나며 다음 중 하나입니다.<br /><br /> 0 = 데이터베이스가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 로컬이 아닙니다.<br /><br /> 1 = 데이터베이스가 서버 인스턴스에 로컬입니다.|  
-|**is_primary_replica**|**bit**|복제본이 주 복제본 이면 1을 반환 하 고 데이터베이스가 속한 가용성 그룹의 보조 복제본 인 경우 0을 반환 합니다. 분산 가용성 그룹 또는 활성 지역 복제 관계에서 주 데이터베이스 또는 보조 데이터베이스를 참조 하지 않습니다.<br /><br />**적용 대상:** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상.|  
+|**is_primary_replica**|**bit**|복제본이 주 복제본 이면 1을 반환 하 고 데이터베이스가 속한 가용성 그룹의 보조 복제본 인 경우 0을 반환 합니다. 분산 가용성 그룹 또는 활성 지역 복제 관계에서 주 데이터베이스 또는 보조 데이터베이스를 참조 하지 않습니다.<br /><br />**적용 대상:** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상|  
 |**synchronization_state**|**tinyint**|데이터 이동 상태 이며 다음 값 중 하나입니다.<br /><br /> 0 = 동기화 중이 아닙니다. 주 데이터베이스의 경우 데이터베이스에서 트랜잭션 로그를 해당 보조 데이터베이스와 동기화할 준비가 되지 않았음을 나타냅니다. 보조 데이터베이스의 경우 데이터베이스에서 연결 문제로 인해 로그 동기화를 시작하지 않았거나 데이터베이스가 일시 중지되었거나, 시작 중에 전환 상태를 진행하고 있거나 역할 전환 중임을 나타냅니다.<br /><br /> 1 = 동기화 중입니다. 주 데이터베이스의 경우 해당 데이터베이스가 보조 데이터베이스의 검색 요청을 받을 준비가 되었음을 나타냅니다. 보조 데이터베이스의 경우 데이터베이스에 대한 활성 데이터 이동이 수행되고 있음을 나타냅니다.<br /><br /> 2 = 동기화 됨 주 데이터베이스는 동기화 중 대신 동기화됨으로 표시됩니다. 동기 커밋 보조 데이터베이스는 로컬 캐시에 데이터베이스가 장애 조치(failover) 준비되고 동기화 중일 때 동기화됨으로 표시됩니다.<br /><br /> 3 = 되돌리기 보조 데이터베이스가 주 데이터베이스에서 페이지 가져오기를 현재 진행 중인 경우의 실행 취소 프로세스의 단계를 나타냅니다.<br />**주의:** 보조 복제본의 데이터베이스가 되돌리기 상태에 있는 경우 보조 복제본에 대 한 장애 조치를 강제로 실행 하면 데이터베이스가 주 데이터베이스로 시작 될 수 없는 상태로 유지 됩니다. 데이터베이스를 보조 데이터베이스로 다시 연결하거나 로그 백업에서 새 로그 레코드를 적용해야 합니다.<br /><br /> 4 = 초기화 하 고 있습니다. 보조 데이터베이스에서 실행 취소 LSN을 catch하는 데 필요한 트랜잭션 로그가 보조 복제본에서 제공되고 확정 중인 경우의 실행 취소 단계를 나타냅니다.<br />**주의:** 보조 복제본의 데이터베이스가 초기화 중 상태에 있는 경우 보조 복제본에 대 한 장애 조치를 강제로 실행 하면 데이터베이스가 주 데이터베이스로 시작 될 수 없는 상태로 유지 됩니다. 데이터베이스를 보조 데이터베이스로 다시 연결하거나 로그 백업에서 새 로그 레코드를 적용해야 합니다.|  
 |**synchronization_state_desc**|**nvarchar(60)**|데이터 이동 상태에 대한 설명이며 다음 중 하나입니다.<br /><br /> NOT SYNCHRONIZING<br /><br /> SYNCHRONIZING<br /><br /> SYNCHRONIZED<br /><br /> REVERTING<br /><br /> INITIALIZING|  
 |**is_commit_participant**|**bit**|0 = 트랜잭션 커밋이 이 데이터베이스에 대해 동기화되어 있지 않습니다.<br /><br /> 1 = 트랜잭션 커밋이 이 데이터베이스에 대해 동기화되어 있습니다.<br /><br /> 비동기 커밋 가용성 복제본의 데이터베이스에 대해서는 이 값이 항상 0입니다.<br /><br /> 동기 커밋 가용성 복제본의 데이터베이스에 대해서는 이 값이 주 데이터베이스에서만 정확합니다.|  
@@ -70,9 +71,9 @@ ms.locfileid: "85754272"
 |**last_commit_lsn**|**numeric(25,0)**|트랜잭션 로그의 마지막 커밋 레코드에 해당하는 실제 로그 시퀀스 번호입니다.<br /><br /> 주 데이터베이스에서 처리된 마지막 커밋 레코드에 해당합니다. 보조 데이터베이스에 대한 행에 보조 복제본이 주 복제본에 전송한 로그 시퀀스 번호가 표시됩니다.<br /><br /> 보조 데이터베이스에서 다시 실행된 마지막 커밋 레코드입니다.|  
 |**last_commit_time**|**datetime**|마지막 커밋 레코드에 해당하는 시간입니다.<br /><br /> 보조 데이터베이스에서 이 시간은 주 데이터베이스의 시간과 동일합니다.<br /><br /> 주 복제본에서 각 보조 데이터베이스 행에는 해당 보조 데이터베이스를 호스팅하는 보조 복제본이 주 복제본에 다시 보고된 시간이 표시됩니다. 주 데이터베이스 행과 지정 된 보조 데이터베이스 행 간의 시간 차이는 다시 실행 프로세스를 catch 하 고 진행률이 보조 복제본에 의해 주 복제본에 다시 보고 된 것으로 가정 하 여 대략 RPO (복구 지점 목표)를 나타냅니다.|  
 |**low_water_mark_for_ghosts**|**bigint**|주 데이터베이스에서 고스트 정리에 사용되는 하위 워터마크를 나타내는 데이터베이스에 대한 일정하게 증가하는 번호입니다. 시간이 지나도 이 번호가 증가하지 않으면 고스트 정리가 수행되지 않은 것을 의미합니다. 정리할 고스트 행을 결정하기 위해 주 복제본은 주 복제본을 포함한 모든 가용성 복제본에서 이 데이터베이스에 대한 이 열의 최소값을 사용합니다.|  
-|**secondary_lag_seconds**|**bigint**|동기화 중에 보조 복제본이 주 복제본의 뒤에 있는 시간 (초)입니다.<br /><br />**적용 대상:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상.|  
-|**quorum_commit_lsn**|**numeric(25,0)**|정보를 제공하기 위해서만 확인됩니다. 지원 안 됨 향후 호환성은 보장되지 않습니다.|
-|**quorum_commit_time**|**datetime**|정보를 제공하기 위해서만 확인됩니다. 지원 안 됨 향후 호환성은 보장되지 않습니다.|
+|**secondary_lag_seconds**|**bigint**|동기화 중에 보조 복제본이 주 복제본의 뒤에 있는 시간 (초)입니다.<br /><br />**적용 대상:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상|  
+|**quorum_commit_lsn**|**numeric(25,0)**|정보를 제공하기 위해서만 확인됩니다. 지원되지 않습니다. 향후 호환성은 보장되지 않습니다.|
+|**quorum_commit_time**|**datetime**|정보를 제공하기 위해서만 확인됩니다. 지원되지 않습니다. 향후 호환성은 보장되지 않습니다.|
 
 
 ## <a name="permissions"></a>사용 권한

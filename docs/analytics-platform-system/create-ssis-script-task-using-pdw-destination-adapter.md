@@ -1,4 +1,5 @@
 ---
+description: SSIS 병렬 데이터 웨어하우스 대상 어댑터를 사용 하는 스크립트 태스크 만들기
 title: SSIS PDW 대상 어댑터를 사용 하 여 스크립트 태스크 만들기
 desciption: This Integration Services (SSIS) package script code is a code example for using the SSIS PDW destination adaptor. The Integration Services Script Task allows you to perform virtually any operation that can be accomplished in a .Net application within the context of an SSIS control flow.
 author: mzaman1
@@ -9,12 +10,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 4bc719d44d9a19da5706d20f16fa519352a04a6b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 857dbc39906f57da39de623daecf18e5be0d28f2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401227"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438525"
 ---
 # <a name="create-a-script-task-that-uses-ssis-parallel-data-warehouse-destination-adapter"></a>SSIS 병렬 데이터 웨어하우스 대상 어댑터를 사용 하는 스크립트 태스크 만들기
 이 SSIS 패키지 스크립트 코드는 SSIS PDW 대상 어댑터를 사용 하는 코드 예제입니다.  Integration Services 스크립트 태스크를 사용 하면 SSIS 제어 흐름의 컨텍스트 내에서 .Net 응용 프로그램에서 수행할 수 있는 거의 모든 작업을 수행할 수 있습니다. 
@@ -27,7 +28,7 @@ ms.locfileid: "74401227"
   
 3.  아래에 제공 된 코드를 사용 하도록 스크립트를 편집 합니다. 다음과 같이 변경 하 여 사용자 환경에 맞게 스크립트를 사용자 지정 합니다.  
   
-    -   스크립트 태스크에서 만든 스크립트의 네임 스페이스를 유지 해야 합니다. 네임 스페이스 `namespace ST_<GUID>` 의 이름을 확인 하 고 스크립트 태스크의 원래 *GUID* 로 *ST_<GUID> * 를 변경 하 여 아래 스크립트를 편집 합니다.  
+    -   스크립트 태스크에서 만든 스크립트의 네임 스페이스를 유지 해야 합니다. 네임 스페이스의 이름을 확인 `namespace ST_<GUID>` 하 고 스크립트 태스크의 원래 *GUID* 로 *ST_ <GUID> * 를 변경 하 여 아래 스크립트를 편집 합니다.  
   
     -   자리 표시자 값의 네 번째 항목 *을 사용자* 환경 및 의도 한 작업에 적절 한 값으로 바꿉니다.  
   

@@ -1,4 +1,5 @@
 ---
+description: pdw_materialized_view_distribution_properties (Transact-sql) (미리 보기)
 title: sys. pdw_materialized_view_distribution_properties (Transact-sql)
 ms.custom: seo-dt-2019
 ms.date: 07/03/2019
@@ -12,12 +13,12 @@ ms.assetid: d62b0e25-3226-4f87-a10a-b3a0d9555e19
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: be817e164cfa26baf6264dc83e73fddba82ed435
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 9146e359bd200d688bc788a013392df407f0ba9e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395840"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490228"
 ---
 # <a name="syspdw_materialized_view_distribution_properties-transact-sql-preview"></a>pdw_materialized_view_distribution_properties (Transact-sql) (미리 보기)
 
@@ -39,7 +40,7 @@ VIEW DATABASE STATE 권한이 필요합니다.
 
 [CREATE MATERIALIZED VIEW AS SELECT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-materialized-view-as-select-transact-sql?view=azure-sqldw-latest)   
 [ALTER MATERIALIZED VIEW &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-materialized-view-transact-sql?view=azure-sqldw-latest)   
-[Transact-sql&#41;&#40;설명](/sql/t-sql/queries/explain-transact-sql?view=azure-sqldw-latest)   
+[Transact-sql&#41;&#40;설명 ](/sql/t-sql/queries/explain-transact-sql?view=azure-sqldw-latest)   
 [sys.pdw_materialized_view_mappings &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-pdw-materialized-view-mappings-transact-sql?view=azure-sqldw-latest)   
 [DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-pdw-showmaterializedviewoverhead-transact-sql?view=azure-sqldw-latest)   
 [SQL Data Warehouse 및 병렬 Data Warehouse 카탈로그 뷰](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   

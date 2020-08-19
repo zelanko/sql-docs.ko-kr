@@ -1,4 +1,5 @@
 ---
+description: sys.availability_group_listener_ip_addresses(Transact-SQL)
 title: sys. availability_group_listener_ip_addresses (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: e515fa6b-1354-4110-9b70-ab2e6164c992
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e4c3dce812a06b4b42b45d0baa3874f5cfa2ba3b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: dde9d0fcbf180ef3850901806e074516fcd24357
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733536"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490359"
 ---
 # <a name="sysavailability_group_listener_ip_addresses-transact-sql"></a>sys.availability_group_listener_ip_addresses(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,4 +1,5 @@
 ---
+description: Excel 파일에서 도메인으로 값 가져오기
 title: Excel 파일에서 도메인으로 값 가져오기
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ f1_keywords:
 ms.assetid: 04cde693-2043-477f-8417-fcc463ca7195
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 2ead2196e2eaa48ee1bdd76e1ca18c3e4e11085d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: bf2b2f9d6b2f3ad72121db25758b2258363d8566
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882809"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88431335"
 ---
 # <a name="import-values-from-an-excel-file-into-a-domain"></a>Excel 파일에서 도메인으로 값 가져오기
 
@@ -42,7 +43,7 @@ ms.locfileid: "85882809"
 ####  <a name="permissions"></a><a name="Permissions"></a> 권한  
  Excel 파일에서 도메인 값을 가져오려면 DQS_MAIN 데이터베이스의 dqs_kb_editor 또는 dqs_administrator 역할이 있어야 합니다.  
   
-##  <a name="import-values-from-an-excel-file-into-a-domain"></a><a name="Import"></a>Excel 파일에서 도메인으로 값 가져오기  
+##  <a name="import-values-from-an-excel-file-into-a-domain"></a><a name="Import"></a> Excel 파일에서 도메인으로 값 가져오기  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Data Quality Client 응용 프로그램을 실행](../data-quality-services/run-the-data-quality-client-application.md)합니다.  
   
@@ -72,10 +73,10 @@ ms.locfileid: "85882809"
   
 14. **마침** 을 클릭하여 기술 자료에 값을 추가합니다.  
   
-##  <a name="follow-up-after-importing-values-from-an-excel-file-into-a-domain"></a><a name="FollowUp"></a>후속 작업: Excel 파일에서 도메인으로 값을 가져온 후  
+##  <a name="follow-up-after-importing-values-from-an-excel-file-into-a-domain"></a><a name="FollowUp"></a> 후속 작업: Excel 파일에서 도메인으로 값을 가져온 후  
  값을 도메인으로 가져온 후 도메인에 대해 다른 도메인 관리 태스크를 수행하거나, 기술 자료 검색을 수행하여 도메인에 지식을 추가하거나, 도메인에 일치 정책을 추가할 수 있습니다. 자세한 내용은 [기술 자료 검색 수행](../data-quality-services/perform-knowledge-discovery.md), [도메인 관리](../data-quality-services/managing-a-domain.md) 또는 [일치 정책 만들기](../data-quality-services/create-a-matching-policy.md)를 참조하세요.  
   
-##  <a name="importing-synonyms"></a><a name="Synonyms"></a>동의어 가져오기  
+##  <a name="importing-synonyms"></a><a name="Synonyms"></a> 동의어 가져오기  
  동의어를 다음과 같이 가져올 수 있습니다.  
   
 -   첫째, 모든 값을 가져온 후 동의어 연결이 설정됩니다.  
@@ -90,7 +91,7 @@ ms.locfileid: "85882809"
   
 -   어떤 이유로든 애플리케이션에서 수동으로 값을 연결할 수 없으면 값이 가져오기 작업에 적용되지 않습니다.  
   
-##  <a name="how-the-import-works"></a><a name="How"></a>가져오기 작동 방법  
+##  <a name="how-the-import-works"></a><a name="How"></a> 가져오기 작동 방법  
  이 작업에서 다음 값을 가져옵니다.  
   
  가져오기 작업에서 DQS는 Excel 파일을 다음과 같이 가져옵니다.  

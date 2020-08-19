@@ -1,4 +1,5 @@
 ---
+description: 연결 옵션
 title: 연결 옵션 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: abfdc133-cb33-435f-a467-fbe15444f687
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 25cfe2a897b0c312f91cd0c1e41ad6fa11725ab8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 22326ca650f575c6a4f0503093306d8b68581475
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81281313"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483686"
 ---
 # <a name="connect-options"></a>연결 옵션
 > [!IMPORTANT]  
@@ -27,7 +28,7 @@ ms.locfileid: "81281313"
   
  이러한 옵션을 사용 하면 응용 프로그램 내에서 데이터베이스 연결을 사용자 지정할 수 있습니다.  
   
-|연결 옵션|참고|  
+|연결 옵션|메모|  
 |--------------------|-----------|  
 |SQL_AUTOCOMMIT|SQL_AUTOCOMMIT_OFF를 선택 하는 경우 응용 프로그램은 [Sqltransact](../../odbc/microsoft/core-level-api-functions-odbc-driver-for-oracle.md)을 사용 하 여 트랜잭션을 명시적으로 커밋하거나 롤백해야 합니다.|  
 |SQL_ODBC_CURSORS|이 연결 특성은 드라이버 관리자에서 구현 됩니다.|  

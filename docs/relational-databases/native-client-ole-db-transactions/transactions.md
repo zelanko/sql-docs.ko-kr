@@ -1,4 +1,5 @@
 ---
+description: SQL Server Native Client의 트랜잭션
 title: 트랜잭션 (Native Client OLE DB 공급자)
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ ms.assetid: 3b41e33a-c1ca-4b2a-9464-312b0ed3ca89
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b6f9f0f1e8cebdbfc8a586ee1192a820c141b790
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 7fe8c135b501f3083ae8d4cf639074ca8dbec7b6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395752"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499017"
 ---
 # <a name="transactions-in-sql-server-native-client"></a>SQL Server Native Client의 트랜잭션
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

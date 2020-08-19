@@ -1,4 +1,5 @@
 ---
+description: 스크립트 태스크를 사용하여 설치된 프린터 찾기
 title: 스크립트 태스크를 사용하여 설치된 프린터 찾기 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 50a55014-e2c3-4ecd-84e1-3e877c55a260
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: bb51bfe4ae9edb47203419f63a22ee61c12f71f7
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 9311883463a4c7ca1b065ab31dcdd84c1cac0ce6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923830"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430425"
 ---
 # <a name="finding-installed-printers-with-the-script-task"></a>스크립트 태스크를 사용하여 설치된 프린터 찾기
 
@@ -146,6 +147,6 @@ public void Main()
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [스크립트 태스크 예제](../../integration-services/extending-packages-scripting-task-examples/script-task-examples.md)  
+ [스크립트 태스크 예](../../integration-services/extending-packages-scripting-task-examples/script-task-examples.md)  
   
   

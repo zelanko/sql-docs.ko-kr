@@ -1,4 +1,5 @@
 ---
+description: 사용자 지정 ForEach 열거자의 사용자 인터페이스 개발
 title: 사용자 지정 ForEach 열거자의 사용자 인터페이스 개발 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8aa4aa80-c9ba-42b3-ba87-ae5ea5d3cac3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0ac765cc6b597fe569d687da3c4791169ce04a30
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 55e03f664f2c0b9c5664c6bcb308cad21d628f84
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915985"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430535"
 ---
 # <a name="developing-a-user-interface-for-a-custom-foreach-enumerator"></a>사용자 지정 ForEach 열거자의 사용자 인터페이스 개발
 

@@ -1,4 +1,5 @@
 ---
+description: ENCRYPTBYCERT(Transact-SQL)
 title: ENCRYPTBYCERT(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: ab66441f-e2d2-4e3a-bcae-bcc09e12f3c1
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 801d2af4bc83b974761c1bd11982e0943460cf92
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 6368b5a1e030a8abd5bc1512a653d5f05631ccda
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112990"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459751"
 ---
 # <a name="encryptbycert-transact-sql"></a>ENCRYPTBYCERT(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -46,7 +47,7 @@ EncryptByCert ( certificate_ID , { 'cleartext' | @cleartext } )
 _certificate\_ID_  
 데이터베이스에 있는 인증서 ID입니다. **int**  
   
-_cleartext_  
+_일반 텍스트(cleartext)_  
 인증서로 암호화될 데이터 문자열입니다.  
   
 **\@일반 텍스트(cleartext)**  

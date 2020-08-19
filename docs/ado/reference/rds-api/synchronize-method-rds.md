@@ -1,4 +1,5 @@
 ---
+description: Synchronize 메서드(RDS)
 title: Synchronize 메서드 (RDS) | Microsoft Docs
 ms.technology: connectivity
 ms.custom: ''
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7af42866-7db2-4174-8251-388a2cf741f2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 98254c2f26db08b7c5308248c596b7f70264f10c
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 0795131ef1765b1fd376355a46fe9cf53ba6eb66
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82750576"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438575"
 ---
 # <a name="synchronize-method-rds"></a>Synchronize 메서드(RDS)
 지정 된 레코드 집합을 ADO 2.5 이상에서 사용 하기 위해 연결 문자열에 지정 된 데이터베이스와 동기화 합니다.  
@@ -64,7 +65,7 @@ object.Synchronize(ConnectionString As String, HandlerString As String, lSynchro
  **Execute**에서 반환 된 정보 오류에 대 한 포인터입니다. NULL 인 경우에는 오류 정보가 반환 되지 않습니다.  
   
 ## <a name="remarks"></a>설명  
- *Handlerstring* 매개 변수는 null 일 수 있습니다. 이 경우에 발생 하는 상황은 RDS 서버를 구성 하는 방법에 따라 달라 집니다. "MSDFMAP. handler"의 처리기 문자열은 Microsoft에서 제공 하는 처리기 (Msdfmap .dll)를 사용 해야 함을 나타냅니다. "MASDFMAP, .sample"의 처리기 문자열은 Msdfmap .dll 처리기를 사용 해야 하며 "sample. .ini" 인수를 처리기에 전달 해야 함을 나타냅니다. 그러면 msdfmap .dll에서 .sample을 사용 하 여 연결 및 쿼리 문자열을 확인 하는 방향으로 인수를 해석 합니다.  
+ *Handlerstring* 매개 변수는 null 일 수 있습니다. 이 경우에 발생 하는 상황은 RDS 서버를 구성 하는 방법에 따라 달라 집니다. "MSDFMAP. handler"의 처리기 문자열은 Microsoft에서 제공 하는 처리기 (Msdfmap.dll)를 사용 해야 함을 나타냅니다. "MASDFMAP sample.ini" 처리기 문자열은 Msdfmap.dll 처리기를 사용 해야 하며 "sample.ini" 인수를 처리기에 전달 해야 함을 나타냅니다. 그러면 Msdfmap.dll는 sample.ini를 사용 하 여 연결 및 쿼리 문자열을 확인 하는 방향으로 인수를 해석 합니다.  
   
 ## <a name="applies-to"></a>적용 대상  
  [DataFactory 개체(RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)

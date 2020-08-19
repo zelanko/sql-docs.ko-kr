@@ -1,4 +1,5 @@
 ---
+description: RDS 속성
 title: RDS 속성 | Microsoft Docs
 ms.technology: connectivity
 ms.custom: ''
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e4e04cbd-21fc-44a1-9f21-49aa68746934
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8d868aaeb917c446e9f345924ab37c0b887dad3a
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: f4abe8e9f72ced67a23113bee61452f372bbb1e3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942995"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438775"
 ---
 # <a name="rds-properties"></a>RDS 속성
 > [!IMPORTANT]

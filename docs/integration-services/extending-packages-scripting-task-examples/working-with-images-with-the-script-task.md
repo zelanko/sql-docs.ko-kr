@@ -1,4 +1,5 @@
 ---
+description: 스크립트 태스크를 사용한 이미지 작업
 title: 스크립트 태스크를 사용한 이미지 작업 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 74aeb7ab-51b2-4b9f-84ee-0b46a7908ab9
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 35d6c312be1819d8f0e111566a909de0dd8b41c1
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 4f10b64a81d835a09216a7c8d232c91b13cd024c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918469"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430365"
 ---
 # <a name="working-with-images-with-the-script-task"></a>스크립트 태스크를 사용한 이미지 작업
 

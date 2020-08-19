@@ -1,4 +1,5 @@
 ---
+description: 정책 기반 관리 스토리지
 title: 정책 기반 관리 스토리지 | Microsoft 문서
 ms.custom: ''
 ms.date: 08/09/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: d0cbf214-fc2e-4917-8d31-1d71c9ffa61d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 7b927398f565720412bbd9f15b9520a17ef0a960
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: abd24579c34b11332e235d29a5f7b89a6dc183e3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727302"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475642"
 ---
 # <a name="policy-based-management-storage"></a>정책 기반 관리 스토리지
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

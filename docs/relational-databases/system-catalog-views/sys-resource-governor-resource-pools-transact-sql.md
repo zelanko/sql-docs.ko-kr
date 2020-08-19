@@ -1,4 +1,5 @@
 ---
+description: sys.resource_governor_resource_pools(Transact-SQL)
 title: sys. resource_governor_resource_pools (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 56793e9c-aa90-452e-88c6-d9b799239888
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b8f770243453f386c416018ae53251070b282db8
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b48957c69ee952e4239a8c4cd4709dca2ff19dd8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901226"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490174"
 ---
 # <a name="sysresource_governor_resource_pools-transact-sql"></a>sys.resource_governor_resource_pools(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -50,9 +51,9 @@ ms.locfileid: "85901226"
  내용을 보려면 VIEW ANY DEFINITION 권한이 필요하고, 내용을 변경하려면 CONTROL SERVER 권한이 필요합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;카탈로그 뷰 Resource Governor](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md)   
+ [Transact-sql&#41;&#40;카탈로그 뷰 Resource Governor ](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md)   
  [dm_resource_governor_resource_pools &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)   
  [리소스 관리자](../../relational-databases/resource-governor/resource-governor.md)   
- [sys.resource_governor_external_resource_pools&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-external-resource-pools-transact-sql.md)  
+ [sys.resource_governor_external_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-external-resource-pools-transact-sql.md)  
   
   

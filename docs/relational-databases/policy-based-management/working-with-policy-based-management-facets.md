@@ -1,4 +1,5 @@
 ---
+description: 정책 기반 관리 패싯 작업
 title: 정책 기반 관리 패싯 작업 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 88d025c4-07c2-4e4d-8634-204249a8c82c
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: f8853222158fd4a5397e60bdffe4171cd8d66694
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d785b99fd933cc0209df8ecb0674e65e0d340ea9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774085"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475599"
 ---
 # <a name="working-with-policy-based-management-facets"></a>정책 기반 관리 패싯 작업
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +39,7 @@ ms.locfileid: "85774085"
   
  [XML 파일로 정책 기반 관리 패싯 상태 복사](../../relational-databases/policy-based-management/copy-a-policy-based-management-facet-state-to-an-xml-file.md)  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [정책 기반 관리를 사용하여 서버 관리](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
   
   

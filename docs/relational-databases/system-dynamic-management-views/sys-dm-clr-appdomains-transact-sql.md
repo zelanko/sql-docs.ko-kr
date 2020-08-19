@@ -1,4 +1,5 @@
 ---
+description: sys.dm_clr_appdomains(Transact-SQL)
 title: sys. dm_clr_appdomains (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9fe0d4fd-950a-4274-a493-85e776278045
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2c3c0351bd541738e2540cc1a0624cf0ca9836c5
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2002b70dc0b949e3628f49e6b6bb9fa1fccbefb9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893984"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490048"
 ---
 # <a name="sysdm_clr_appdomains-transact-sql"></a>sys.dm_clr_appdomains(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "85893984"
   
  자세한 내용은 [응용 프로그램 도메인](https://go.microsoft.com/fwlink/p/?LinkId=299658)을 참조 하세요.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**appdomain_address**|**varbinary(8)**|**AppDomain**의 주소입니다. 사용자가 소유 하는 모든 관리 되는 데이터베이스 개체는 항상 동일한 **AppDomain**에 로드 됩니다. 이 열을 사용 하 여 **dm_clr_loaded_assemblies**에서이 **AppDomain** 에 현재 로드 된 모든 어셈블리를 조회할 수 있습니다.|  
 |**appdomain_id**|**int**|**AppDomain**의 ID입니다. 각 **AppDomain** 에는 고유한 ID가 있습니다.|  
@@ -74,7 +75,7 @@ ms.locfileid: "85893984"
   
 |시스템 상태|설명|  
 |-----------|-----------------|  
-|E_APPDOMAIN_UNLOADING|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 일반적으로 관리 되는 데이터베이스 개체를 포함 하는 어셈블리가 변경 되거나 삭제 되었기 때문에 CLR이 **AppDomain**을 언로드하기 위해 요청 했습니다.|  
+|E_APPDOMAIN_UNLOADING|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 일반적으로 관리 되는 데이터베이스 개체를 포함 하는 어셈블리가 변경 되거나 삭제 되었기 때문에 CLR이 **AppDomain**을 언로드하기 위해 요청 했습니다.|  
 |E_APPDOMAIN_UNLOADED|CLR이 **AppDomain**을 언로드 했습니다. 이는 일반적으로 **Threadabort**, **OutOfMemory**또는 사용자 코드의 처리 되지 않은 예외로 인 한 에스컬레이션 프로시저의 결과입니다.|  
 |E_APPDOMAIN_ENQUEUE_DESTROY|**AppDomain** 이 CLR에서 언로드 되었으며에 의해 소멸 되도록 설정 되었습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |E_APPDOMAIN_DESTROY|**AppDomain** 이에 의해 소멸 되 고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 있습니다.|  
@@ -83,7 +84,7 @@ ms.locfileid: "85893984"
 ## <a name="permissions"></a>사용 권한  
  데이터베이스에 대한 VIEW SERVER STATE 권한이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예제에서는 지정 된 어셈블리에 대 한 **AppDomain** 의 세부 정보를 보는 방법을 보여 줍니다.  
   
 ```  
@@ -108,7 +109,7 @@ from sys.dm_clr_appdomains
 where appdomain_id = 15);  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [dm_clr_loaded_assemblies &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-clr-loaded-assemblies-transact-sql.md)   
  [공용 언어 런타임 관련 동적 관리 뷰 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/common-language-runtime-related-dynamic-management-views-transact-sql.md)  
   

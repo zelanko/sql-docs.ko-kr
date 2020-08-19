@@ -1,4 +1,5 @@
 ---
+description: IN(Transact-SQL)
 title: IN(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/29/2016
@@ -23,12 +24,12 @@ ms.assetid: 4419de73-96b1-4dfe-8500-f4507915db04
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 207043037a5f75e71f4d385abec42dd296ea4528
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: a642ad617c1c466306f5beb3f11d41f9181b8458
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920659"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459381"
 ---
 # <a name="in-transact-sql"></a>IN(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -54,7 +55,7 @@ test_expression [ NOT ] IN
  *subquery*  
  하나의 열로 구성된 결과 집합을 갖는 하위 쿼리입니다. 이 열은 *test_expression*과 데이터 형식이 같아야 합니다.  
   
- *expression*[ **,** ... *n* ]  
+ *expression*[ **,**... *n* ]  
  일치 여부를 검사할 식의 목록입니다. 모든 식은 *test_expression*과 형식이 같아야 합니다.  
   
 ## <a name="result-types"></a>결과 형식  
@@ -79,7 +80,7 @@ test_expression [ NOT ] IN
   
  `Internal error: An expression services limit has been reached. Please look for potentially complex expressions in your query, and try to simplify them.`  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-comparing-or-and-in"></a>A. OR와 IN 비교  
  다음 예에서는 디자인 엔지니어, 툴 엔지니어 또는 마케팅 지원 담당 직원들의 이름 목록을 선택합니다.  
@@ -176,7 +177,7 @@ GO
 ## <a name="examples-sssdwfull-and-sspdw"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="d-using-in-and-not-in"></a>D. IN 및 NOT IN 사용  
- 다음 예제에서는 `FactInternetSales` 테이블의 `SalesReasonKey` 값에 일치하는 모든 항목을 `DimSalesReason` 테이블에서 찾습니다.  
+ 다음 예제에서는 `DimSalesReason` 테이블의 `SalesReasonKey` 값에 일치하는 모든 항목을 `FactInternetSales` 테이블에서 찾습니다.  
   
 ```  
 -- Uses AdventureWorks  
@@ -186,7 +187,7 @@ WHERE SalesReasonKey
 IN (SELECT SalesReasonKey FROM DimSalesReason);   
 ```  
   
- 다음 예제에서는 `FactInternetSalesReason` 테이블의 `SalesReasonKey` 값에 일치하지 않는 모든 항목을 `DimSalesReason` 테이블에서 찾습니다.  
+ 다음 예제에서는 `DimSalesReason` 테이블의 `SalesReasonKey` 값에 일치하지 않는 모든 항목을 `FactInternetSalesReason` 테이블에서 찾습니다.  
   
 ```  
 -- Uses AdventureWorks  
@@ -197,7 +198,7 @@ NOT IN (SELECT SalesReasonKey FROM DimSalesReason);
 ```  
   
 ### <a name="e-using-in-with-an-expression-list"></a>E. 식 목록과 함께 IN 사용  
- 다음 예제에서는 이름이 `DimEmployee` 또는 `Mike`인 직원을 위한 `Michael` 테이블에서 영업 사원의 모든 ID를 찾습니다.  
+ 다음 예제에서는 이름이 `Mike` 또는 `Michael`인 직원을 위한 `DimEmployee` 테이블에서 영업 사원의 모든 ID를 찾습니다.  
   
 ```  
 -- Uses AdventureWorks  

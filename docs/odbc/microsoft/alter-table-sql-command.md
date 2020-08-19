@@ -1,4 +1,5 @@
 ---
+description: ALTER TABLE - SQL 명령
 title: ALTER TABLE-SQL 명령 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3a01a291-f4d9-43bc-a725-5a95546ff364
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 587d721522503f9b392bb8be7433850fd7449efb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c72d03abff792ff103bf009cd12b718c74bd497d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304714"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483706"
 ---
 # <a name="alter-table---sql-command"></a>ALTER TABLE - SQL 명령
 테이블의 구조를 프로그래밍 방식으로 수정 합니다.  
@@ -191,6 +192,6 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
   
  수정한 테이블이 데이터베이스에 있는 경우 ALTER TABLE-SQL은 데이터베이스를 단독으로 사용 해야 합니다. 단독으로 사용할 데이터베이스를 열려면 OPEN DATABASE에 EXCLUSIVE를 포함 합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [CREATE TABLE SQL 명령](../../odbc/microsoft/create-table-sql-command.md)   
  [INDEX 명령](../../odbc/microsoft/index-command.md)

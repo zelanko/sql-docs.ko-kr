@@ -1,4 +1,5 @@
 ---
+description: SQL Server 테이블에 열 추가 (Native Client OLE DB 공급자)
 title: SQL Server 테이블에 열 추가 (Native Client OLE DB 공급자) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ ms.assetid: 22bae18a-bc9d-4617-8660-ed8b17a468d4
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2e2e63f8a82de0423a24fb7c3030065da5bce952
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 8e1e0b9d165b4c0a796ec385d834de0a0ea42445
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242004"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499056"
 ---
 # <a name="adding-a-column-to-a-table-in-sql-server-native-client"></a>SQL Server Native Client에서 테이블에 열 추가
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -32,7 +33,7 @@ ms.locfileid: "87242004"
   
 -   DBPROP_COL_AUTOINCREMENT가 VARIANT_TRUE이면 DBPROP_COL_NULLABLE은 VARIANT_FALSE여야 합니다.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **timestamp** 데이터 형식을 사용하여 열을 정의하는 경우 DBPROP_COL_NULLABLE은 VARIANT_FALSE여야 합니다.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**timestamp** 데이터 형식을 사용하여 열을 정의하는 경우 DBPROP_COL_NULLABLE은 VARIANT_FALSE여야 합니다.  
   
 -   다른 모든 열 정의에서 DBPROP_COL_NULLABLE은 VARIANT_TRUE여야 합니다.  
   

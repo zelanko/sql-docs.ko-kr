@@ -1,4 +1,5 @@
 ---
+description: SQLNumResultCols(Visual FoxPro ODBC 드라이버)
 title: SQLNumResultCols (Visual FoxPro ODBC 드라이버) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: a83d826c-6908-4115-b6e6-4d0615ff1738
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c8698545acac0077e78c3f58267ed96ba06a50c3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4fc4cf3ff1d71fdf8b1034cdb3ea3fee414eb1ad
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299483"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483356"
 ---
 # <a name="sqlnumresultcols-visual-foxpro-odbc-driver"></a>SQLNumResultCols(Visual FoxPro ODBC 드라이버)
 > [!NOTE]  

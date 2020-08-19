@@ -1,4 +1,5 @@
 ---
+description: KEY_NAME(Transact-SQL)
 title: KEY_NAME(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7b693e5d-2325-4bf9-9b45-ad6a23374b41
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 8d705bec832e5a0f131c242c41a29bc179c4732d
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 4083ba966aa24b8ec093e27afaeea80b267b939e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111929"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459752"
 ---
 # <a name="key_name-transact-sql"></a>KEY_NAME(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

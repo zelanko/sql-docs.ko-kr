@@ -1,4 +1,5 @@
 ---
+description: log_shipping_primary_secondaries(Transact-SQL)
 title: log_shipping_primary_secondaries (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4b315c70-7265-4acd-b35b-a4dbb7881d98
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 57c7ec652ff3a4c2643aa1a6cdf1dba2b7845ad2
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e731cf42d7ad0228d5746a315ffd70aa5862db85
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890147"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469081"
 ---
 # <a name="log_shipping_primary_secondaries-transact-sql"></a>log_shipping_primary_secondaries(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

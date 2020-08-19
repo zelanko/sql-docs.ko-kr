@@ -1,4 +1,5 @@
 ---
+description: SAP BW 원본 편집기(오류 출력 페이지)
 title: SAP BW 원본 편집기(오류 출력 페이지) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: b6e23b0c-949a-46d1-8424-4dc3d9035e79
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9114c301168b55a09859069b6052b67fb03ec6b2
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 85da6a04026b7ae9b0db9a7c22cdb926c6afbd1b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917832"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430725"
 ---
 # <a name="sap-bw-source-editor-error-output-page"></a>SAP BW 원본 편집기(오류 출력 페이지)
 

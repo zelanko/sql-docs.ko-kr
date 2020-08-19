@@ -1,4 +1,5 @@
 ---
+description: DROP REMOTE SERVICE BINDING(Transact-SQL)
 title: DROP REMOTE SERVICE BINDING(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 377789b4-bf94-488f-8c20-687d0bae447a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 12a51eb0e3cb86625b29263dc828a3713a93dce5
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: f35d18ea74041bf21b1f67010333ff73b3ef808c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483965"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444648"
 ---
 # <a name="drop-remote-service-binding-transact-sql"></a>DROP REMOTE SERVICE BINDING(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -52,7 +53,7 @@ DROP REMOTE SERVICE BINDING binding_name
 ## <a name="permissions"></a>사용 권한  
  원격 서비스 바인딩 삭제 권한은 기본적으로 해당 원격 서비스 바인딩의 소유자, db_owner 고정 데이터베이스 역할의 멤버 및 sysadmin 고정 서버 역할의 멤버로 설정됩니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 원격 서비스 바인딩 `APBinding`을 데이터베이스에서 삭제합니다.  
   
 ```  

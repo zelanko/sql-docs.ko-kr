@@ -1,4 +1,5 @@
 ---
+description: 주소록 데이터 바인딩 개체
 title: 주소록 데이터-바인딩 개체 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 080c1925-d453-4b89-92ac-c93591490518
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 71b1897830c4a5382e6903f5e05aa29d1ce37d1b
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: d9c9b8a4e64432b644b9d3bf66ce2f200f0c1de5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764734"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452345"
 ---
 # <a name="address-book-data-binding-object"></a>주소록 데이터 바인딩 개체
-주소록 응용 프로그램은 RDS를 사용 합니다 [. ](../../../ado/reference/rds-api/datacontrol-object-rds.md)응용 프로그램의 클라이언트 HTML 페이지에서 SQL Server 데이터베이스의 시각적 개체 (이 경우 DHTML 테이블)에 데이터를 바인딩하는 DataControl 개체입니다. 이벤트 기반 VBScript 프로그램 논리는 RDS를 사용 합니다 [. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) :  
+주소록 응용 프로그램은 RDS를 사용 합니다 [. ](../../../ado/reference/rds-api/datacontrol-object-rds.md) 응용 프로그램의 클라이언트 HTML 페이지에서 SQL Server 데이터베이스의 시각적 개체 (이 경우 DHTML 테이블)에 데이터를 바인딩하는 DataControl 개체입니다. 이벤트 기반 VBScript 프로그램 논리는 RDS를 사용 합니다 [. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) :  
   
 > [!IMPORTANT]
 >  Windows 8 및 Windows Server 2012부터 RDS 서버 구성 요소는 더 이상 Windows 운영 체제에 포함 되지 않습니다 (자세한 내용은 Windows 8 및 [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) 참조). 이후 버전의 Windows에서는 RDS 클라이언트 구성 요소가 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. RDS를 사용 하는 응용 프로그램은 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)로 마이그레이션해야 합니다.  
@@ -41,7 +42,7 @@ Initial Catalog=AddrBookDb;Integrated Security=SSPI;">
 </OBJECT>  
 ```  
   
- 개체 태그는 RDS를 정의 합니다 **. **프로그램의 DataControl 구성 요소입니다. 태그에는 두 가지 유형의 매개 변수가 포함 되어 있습니다.  
+ 개체 태그는 RDS를 정의 합니다 **. ** 프로그램의 DataControl 구성 요소입니다. 태그에는 두 가지 유형의 매개 변수가 포함 되어 있습니다.  
   
 -   제네릭 개체 태그와 연결 된 개체입니다.  
   
@@ -61,7 +62,7 @@ Initial Catalog=AddrBookDb;Integrated Security=SSPI;">
 |매개 변수|설명|  
 |---------------|-----------------|  
 |[서버인](../../../ado/reference/rds-api/server-property-rds.md)|HTTP를 사용 하는 경우이 값은 앞에 오는 서버 컴퓨터의 이름입니다 `https://` .|  
-|[연결할지](../../../ado/reference/rds-api/connect-property-rds.md)|RDS에 필요한 연결 정보를 제공 합니다 **. **SQL Server에 연결 하는 DataControl입니다.|  
+|[연결할지](../../../ado/reference/rds-api/connect-property-rds.md)|RDS에 필요한 연결 정보를 제공 합니다 **. ** SQL Server에 연결 하는 DataControl입니다.|  
 |[SQL](../../../ado/reference/rds-api/sql-property.md)|[레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)을 검색 하는 데 사용 되는 쿼리 문자열을 설정 하거나 반환 합니다.|  
   
 ## <a name="see-also"></a>참고 항목  

@@ -1,4 +1,5 @@
 ---
+description: sys.dm_os_job_object(Azure SQL Database)
 title: dm_os_job_object (Azure SQL Database) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/03/2020
@@ -19,12 +20,12 @@ ms.assetid: 6e76b39f-236e-4bbf-b0b5-38be190d81e8
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: e421efbd15f15d56b6446fc39f73bcba04478800
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 3ed298216393b59d723eb58cac783f9836ce93d0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87865281"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489872"
 ---
 # <a name="sysdm_os_job_object-azure-sql-database"></a>sys.dm_os_job_object(Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -54,7 +55,7 @@ ms.locfileid: "87865281"
 ## <a name="permissions"></a>사용 권한  
 SQL Managed Instance에는 `VIEW SERVER STATE` 권한이 필요 합니다. SQL Database에서 데이터베이스의 `VIEW DATABASE STATE` 권한이 필요합니다.  
  
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
 
 관리 되는 인스턴스에 대 한 자세한 내용은 [SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)를 참조 하세요.
   

@@ -1,4 +1,5 @@
 ---
+description: RDS 이벤트
 title: RDS 이벤트 | Microsoft Docs
 ms.technology: connectivity
 ms.custom: ''
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e03739e0-8169-46d6-9956-556b644a7645
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5407d84892174b0d7bfdd928b607707157954e55
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: 9c66bd5fc3c0274985dfcfc1ebbd323b6677b718
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942556"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438805"
 ---
 # <a name="rds-events"></a>RDS 이벤트
 > [!IMPORTANT]

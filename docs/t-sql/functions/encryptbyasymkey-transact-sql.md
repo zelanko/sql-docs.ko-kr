@@ -1,4 +1,5 @@
 ---
+description: ENCRYPTBYASYMKEY(Transact-SQL)
 title: ENCRYPTBYASYMKEY(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 86bb2588-ab13-4db2-8f3c-42c9f572a67b
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: b9695a2cec375cf2eb5a69bbe210478b9d0fa1e6
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: e2a0031163de085d6de07aaf7a0e707a5e5ac5dc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113540"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459783"
 ---
 # <a name="encryptbyasymkey-transact-sql"></a>ENCRYPTBYASYMKEY(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -45,7 +46,7 @@ EncryptByAsymKey ( Asym_Key_ID , { 'plaintext' | @plaintext } )
 *asym_key_ID*  
 데이터베이스에 있는 비대칭 키의 ID입니다. *asym_key_ID*는 **int** 데이터 형식을 갖습니다.  
   
-*cleartext*  
+*일반 텍스트(cleartext)*  
 `ENCRYPTBYASYMKEY`는 비대칭 키로 암호화할 데이터 문자열입니다. *cleartext*에는 다음이 있을 수 있습니다
  
 + **binary**

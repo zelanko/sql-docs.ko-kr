@@ -1,4 +1,5 @@
 ---
+description: 데이터베이스 및 트랜잭션 로그 백업 및 복원
 title: 데이터베이스 및 트랜잭션 로그 백업 및 복원
 ms.custom: seo-dt-2019
 ms.date: 08/06/2017
@@ -20,11 +21,12 @@ ms.assetid: 1d7bd180-fd6c-4b38-a87b-351496040542
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8302596d94cc0b6800919e8c0f72870754c4715c
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 75db6b66cfd3a2cd5c0260a00fa2f28b28da49b5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000286"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498600"
 ---
 # <a name="backing-up-and-restoring-databases-and-transaction-logs"></a>데이터베이스 및 트랜잭션 로그 백업 및 복원
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -35,7 +37,7 @@ ms.locfileid: "86000286"
   
  개체와 마찬가지로 개체 <xref:Microsoft.SqlServer.Management.Smo.Backup> 는 <xref:Microsoft.SqlServer.Management.Smo.Restore> 인스턴스에서 개체를 나타내지 않으므로 **Create** 메서드를 사용 하 여 만들 필요가 없습니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . <xref:Microsoft.SqlServer.Management.Smo.Restore> 개체는 데이터베이스 복원에 사용되는 일련의 속성과 메서드입니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  제공된 코드 예제를 사용하려면 애플리케이션을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 [Visual Studio .net에서 Visual C&#35; SMO 프로젝트 만들기](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)를 참조 하세요.  
   
 ## <a name="backing-up-databases-and-transaction-logs-in-visual-basic"></a>Visual Basic에서 데이터베이스 및 트랜잭션 로그 백업  

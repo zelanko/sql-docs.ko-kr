@@ -1,4 +1,5 @@
 ---
+description: 데이터 흐름 태스크
 title: 데이터 흐름 태스크 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: c27555c4-208c-43c8-b511-a4de2a8a3344
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4bc62cfc37e6a69f34faabf8a9622f5c0d79d5f8
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 21ef6f741ebfdd035630a40aba431c08a1ff9341
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919869"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88431035"
 ---
 # <a name="data-flow-task"></a>데이터 흐름 태스크
 

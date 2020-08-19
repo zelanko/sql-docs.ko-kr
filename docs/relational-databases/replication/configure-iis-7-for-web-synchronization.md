@@ -1,4 +1,5 @@
 ---
+description: 웹 동기화를 위한 IIS 7 구성
 title: 웹 동기화를 위한 IIS 7 구성 | Microsoft 문서
 ms.custom: ''
 ms.date: 09/12/2016
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c201fe2c-0a76-44e5-a233-05e14cd224a6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2f0cc59a51573931c742e4a6303b72e103e747d6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 77029691f3409da713b0c7f4390d21502961bd99
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774010"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475608"
 ---
 # <a name="configure-iis-7-for-web-synchronization"></a>웹 동기화를 위한 IIS 7 구성
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

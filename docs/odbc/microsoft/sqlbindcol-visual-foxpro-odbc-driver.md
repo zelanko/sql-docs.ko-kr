@@ -1,4 +1,5 @@
 ---
+description: SQLBindCol(Visual FoxPro ODBC 드라이버)
 title: SQLBindCol (Visual FoxPro ODBC 드라이버) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 984d6605-39ba-4d33-ac94-22625bfa6107
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1e5eda58c6dec31206de9ddb10e73bdf90272d0a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 515704a161d03dae89d1f112b37f255fd958910b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300643"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483386"
 ---
 # <a name="sqlbindcol-visual-foxpro-odbc-driver"></a>SQLBindCol(Visual FoxPro ODBC 드라이버)
 > [!NOTE]  

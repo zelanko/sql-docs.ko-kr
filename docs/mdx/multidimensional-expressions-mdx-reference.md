@@ -1,4 +1,5 @@
 ---
+description: MDX(Multidimensional Expressions) 참조
 title: MDX (Multidimensional Expressions) 참조 | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 65164f9560cb87e0bda1018469412bb4b793e3b7
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: e988f6864404cb7f1af4be77acc8ad0ab8e50562
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970034"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483786"
 ---
 # <a name="multidimensional-expressions-mdx-reference"></a>MDX(Multidimensional Expressions) 참조
 

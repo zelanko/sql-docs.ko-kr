@@ -1,4 +1,5 @@
 ---
+description: AbsolutePosition 속성(ADO)
 title: AbsolutePosition 속성 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 79f8ee5e-fc70-46d8-8c29-ebf943c66592
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 56b21fe8cddf4d855ec1655a83cea306c0a3000c
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: e406012b917dd6e1694f5914088bac09201ff99e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82747519"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451755"
 ---
 # <a name="absoluteposition-property-ado"></a>AbsolutePosition 속성(ADO)
 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체의 현재 레코드의 서 수 위치를 나타냅니다.  

@@ -1,4 +1,5 @@
 ---
+description: '1단계: 서버 프로그램 지정(RDS 자습서)'
 title: '1 단계: 서버 프로그램 지정 (RDS 자습서) | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: d8bb35b1-c02a-4231-8d55-016e56e53b95
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b7856a6a77720b4988c4a15afd86f24ff0070b28
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 4b5c76aebd80ff4a5706c9226abc051c03940707
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764694"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451955"
 ---
 # <a name="step-1-specify-a-server-program-rds-tutorial"></a>1단계: 서버 프로그램 지정(RDS 자습서)
 가장 일반적인 경우에는 RDS를 사용 합니다 [. 공간](../../../ado/reference/rds-api/dataspace-object-rds.md) 개체 [CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md) 방법 기본 서버 프로그램, [RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)또는 사용자 지정 서버 프로그램 (비즈니스 개체)을 지정 합니다. 서버 프로그램은 서버에서 인스턴스화되고 서버 프로그램 또는 *프록시*에 대 한 참조가 반환 됩니다.  
