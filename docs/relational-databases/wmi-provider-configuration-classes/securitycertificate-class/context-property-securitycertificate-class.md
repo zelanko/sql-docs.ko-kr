@@ -1,4 +1,5 @@
 ---
+description: Context 속성(SecurityCertificate 클래스)
 title: Context 속성 (SecurityCertificate)
 ms.custom: seo-lt-2019
 ms.date: 03/04/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 65dd737f-81ce-479e-8219-7b1b4d8f57c7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 03950f740e8e8f22144ef9bd4adcd791ac6a084e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2a39850d2b4dfa2e298e48baf42db2cc60615c95
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85880981"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460153"
 ---
 # <a name="context-property-securitycertificate-class"></a>Context 속성(SecurityCertificate 클래스)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

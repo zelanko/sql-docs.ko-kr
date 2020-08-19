@@ -1,4 +1,5 @@
 ---
+description: sys. pdw_nodes_columns (Transact-sql)
 title: sys. pdw_nodes_columns (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -12,22 +13,22 @@ ms.assetid: 268c77b7-1d71-4197-a2ed-5e2b2b8fc260
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 1b5e9e05e65a7121f30bfc0fc296229e943a8cd9
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: 32cd66ea386f2b07d910c9371c66036a4e162dfd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86197387"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490236"
 ---
 # <a name="syspdw_nodes_columns-transact-sql"></a>sys. pdw_nodes_columns (Transact-sql)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   사용자 정의 테이블 및 사용자 정의 뷰의 열을 표시 합니다.  
   
-|열 이름|데이터 형식|설명|범위|  
+|열 이름|데이터 형식|Description|범위|  
 |-----------------|---------------|-----------------|-----------|  
 |object_id|**int**|이 열이 속한 개체의 ID입니다.||  
-|이름|**sysname**|열의 이름입니다. 개체에서 고유 합니다.||  
+|name|**sysname**|열의 이름입니다. 개체에서 고유 합니다.||  
 |column_id|**int**|열의 ID입니다. 개체에서 고유 합니다.||  
 |system_type_id|**tinyint**|열의 시스템 유형 ID입니다.||  
 |user_type_id|**int**|열의 유형에 대한 사용자 정의 ID입니다.||  

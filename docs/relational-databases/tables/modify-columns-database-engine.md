@@ -1,4 +1,5 @@
 ---
+description: 열 수정(데이터베이스 엔진)
 title: 열 수정(데이터베이스 엔진) | Microsoft 문서
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ ms.assetid: b67b95c5-61ef-4bd8-9a3e-1640eb7583ac
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: baf0b580ab18334fcffbbe6b16ddd9e04cf42290
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 0f306dd339ed7e91a1d54195dc32346c9139c809
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394499"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460215"
 ---
 # <a name="modify-columns-database-engine"></a>열 수정(데이터베이스 엔진)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
@@ -59,7 +60,7 @@ ms.locfileid: "87394499"
   
 3.  **열 속성** 탭에서 **데이터 형식** 속성의 표 형태 셀을 클릭하고 드롭다운 목록에서 새 데이터 형식을 선택합니다.  
   
-4.  **파일** 메뉴에서 _테이블 이름_**저장**을 클릭합니다.  
+4.  **파일** 메뉴에서 ‘테이블 이름’ **저장**을 클릭합니다.__  
   
 > [!NOTE]  
 >  열의 데이터 형식을 수정하면 선택한 데이터 형식에 대해 이미 다른 길이를 지정했더라도 테이블 디자이너에서 해당 형식의 기본 길이가 적용됩니다. 데이터 형식을 지정한 후에 항상 데이터 형식 길이를 원하는 값으로 설정해야 합니다.  

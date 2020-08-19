@@ -1,4 +1,5 @@
 ---
+description: 일반 인수
 title: 일반 인수 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a18cdae1-6b85-41cb-875c-b5a01ec90aeb
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 97362f93e91ccd8b592b4c05a0714b7602c1ba94
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b6e4e7a30efe5735aa87665d7d0247bef06390ce
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81282470"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429175"
 ---
 # <a name="ordinary-arguments"></a>일반 인수
 카탈로그 함수 문자열 인수가 일반 인수인 경우 리터럴 문자열로 취급 됩니다. 일반 인수는 문자열 검색 패턴 또는 값 목록도 허용 하지 않습니다. 일반 인수의 경우는 의미가 있으며 문자열의 따옴표 문자는 문자 그대로 사용 됩니다. 이러한 인수는 SQL_ATTR_METADATA_ID statement 특성이 SQL_FALSE으로 설정 된 경우 일반 인수로 처리 됩니다. 이 특성이 SQL_TRUE로 설정 된 경우 대신 식별자 인수로 처리 됩니다.  

@@ -1,4 +1,5 @@
 ---
+description: FriendlyName 속성(SecurityCertificate 클래스)
 title: FriendlyName 속성 (SecurityCertificate)
 ms.custom: seo-lt-2019
 ms.date: 03/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ae3f26f9-141c-47cf-afe4-14f99b6b9567
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7dd3ce18dfe5b84655987a892d4cdc549b94c979
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 6c94c32e9a124a708ff5b399abd30702a0540fee
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85880987"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460122"
 ---
 # <a name="friendlyname-property-securitycertificate-class"></a>FriendlyName 속성(SecurityCertificate 클래스)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

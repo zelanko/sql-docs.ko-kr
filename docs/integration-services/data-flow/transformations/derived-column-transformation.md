@@ -1,4 +1,5 @@
 ---
+description: 파생 열 변환
 title: 파생 열 변환 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/02/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 8eba755e-8e48-4233-bd1e-09a46bf2692f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 82ef2a3959f1f3ae0d18aca2e8049f5a30f4a91f
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 93548684fb17ce59e5cee78e2a7a268dfce903ea
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919389"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430695"
 ---
 # <a name="derived-column-transformation"></a>파생 열 변환
 
@@ -109,7 +110,7 @@ ms.locfileid: "86919389"
  **정밀도**  
  새 열에 데이터를 추가하는 경우 **파생 열 변환 편집기** 대화 상자가 데이터 형식을 기반으로 숫자 데이터의 전체 자릿수를 자동으로 설정합니다. 이 열의 값은 읽기 전용입니다.  
   
- **규모**  
+ **크기 조정**  
  새 열에 데이터를 추가하는 경우 **파생 열 변환 편집기** 대화 상자가 데이터 형식을 기반으로 숫자 데이터의 소수 자릿수를 자동으로 설정합니다. 이 열의 값은 읽기 전용입니다.  
   
  **코드 페이지**  

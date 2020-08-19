@@ -1,4 +1,5 @@
 ---
+description: sp_helplinkedsrvlogin(Transact-SQL)
 title: sp_helplinkedsrvlogin (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a2b1eba0-bf71-47e7-a4c7-9f55feec82a3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8aa2ba45d45ee2518102d8e2ec7d60a3299fca88
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 86a77a797d8da80746410b9f8a697b747f93242c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891697"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469282"
 ---
 # <a name="sp_helplinkedsrvlogin-transact-sql"></a>sp_helplinkedsrvlogin(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,9 +41,9 @@ sp_helplinkedsrvlogin [ [ @rmtsrvname = ] 'rmtsrvname' ]
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @rmtsrvname = ] 'rmtsrvname'`로그인 매핑이 적용 되는 연결 된 서버의 이름입니다. *rmtsrvname* 는 **sysname**이며 기본값은 NULL입니다. NULL인 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 실행하고 있는 로컬 컴퓨터에서 정의된 모든 연결된 서버에 대해 정의된 로그인 매핑을 모두 반환합니다.  
+`[ @rmtsrvname = ] 'rmtsrvname'` 로그인 매핑이 적용 되는 연결 된 서버의 이름입니다. *rmtsrvname* 는 **sysname**이며 기본값은 NULL입니다. NULL인 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 실행하고 있는 로컬 컴퓨터에서 정의된 모든 연결된 서버에 대해 정의된 로그인 매핑을 모두 반환합니다.  
   
-`[ @locallogin = ] 'locallogin'`연결 된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서버 *rmtsrvname*에 대 한 매핑이 있는 로컬 서버의 로그인입니다. *locallogin* 은 **sysname**이며 기본값은 NULL입니다. NULL은 *rmtsrvname* 에 정의 된 모든 로그인 매핑이 반환 되도록 지정 합니다. NULL이 아닌 경우 *rmtsrvname* 에 대 한 *locallogin* 에 대 한 매핑이 이미 존재 해야 합니다. *locallogin* 은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 또는 Windows 사용자 일 수 있습니다. Windows 사용자는 직접적인 방법으로든 또는 액세스 권한이 있는 Windows 그룹의 멤버 자격을 이용한 방법으로든 반드시 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대한 액세스 권한을 보유해야 합니다.  
+`[ @locallogin = ] 'locallogin'` 연결 된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서버 *rmtsrvname*에 대 한 매핑이 있는 로컬 서버의 로그인입니다. *locallogin* 은 **sysname**이며 기본값은 NULL입니다. NULL은 *rmtsrvname* 에 정의 된 모든 로그인 매핑이 반환 되도록 지정 합니다. NULL이 아닌 경우 *rmtsrvname* 에 대 한 *locallogin* 에 대 한 매핑이 이미 존재 해야 합니다. *locallogin* 은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 또는 Windows 사용자 일 수 있습니다. Windows 사용자는 직접적인 방법으로든 또는 액세스 권한이 있는 Windows 그룹의 멤버 자격을 이용한 방법으로든 반드시 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대한 액세스 권한을 보유해야 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -51,7 +52,7 @@ sp_helplinkedsrvlogin [ [ @rmtsrvname = ] 'rmtsrvname' ]
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**연결된 서버**|**sysname**|연결된 서버 이름입니다.|  
+|**연결 된 서버**|**sysname**|연결된 서버 이름입니다.|  
 |**로컬 로그인**|**sysname**|매핑이 적용되는 로컬 로그인입니다.|  
 |**Is Self Mapping**|**smallint**|0 = **연결 된 서버**에 연결할 때 **로컬 로그인** 이 **원격 로그인** 에 매핑됩니다.<br /><br /> 1 = **연결 된 서버**에 연결할 때 **로컬 로그인** 이 동일한 로그인 및 암호에 매핑됩니다.|  
 |**Remote Login**|**sysname**|**IsSelfMapping** 가 0 일 때 **locallogin** 에 매핑된 **LinkedServer** 의 로그인 이름입니다. **IsSelfMapping** 가 1 이면 **REMOTELOGIN** 은 NULL입니다.|  
@@ -62,7 +63,7 @@ sp_helplinkedsrvlogin [ [ @rmtsrvname = ] 'rmtsrvname' ]
 ## <a name="permissions"></a>사용 권한  
  사용 권한을 확인하지 않습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-displaying-all-login-mappings-for-all-linked-servers"></a>A. 모든 연결된 서버에 관한 모든 로그인 매핑 표시  
  다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 실행하고 있는 로컬 컴퓨터에서 정의된 모든 연결된 서버에 관한 로그인 매핑을 모두 표시합니다.  
@@ -124,8 +125,8 @@ Sales            Mary          0               sa
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;보안 저장 프로시저](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [Transact-sql&#41;sp_addlinkedserver &#40;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
+ [Transact-sql&#41;&#40;보안 저장 프로시저 ](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [sp_addlinkedserver&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
  [Transact-sql&#41;sp_droplinkedsrvlogin &#40;](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

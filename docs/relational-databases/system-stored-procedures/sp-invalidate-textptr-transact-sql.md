@@ -1,4 +1,5 @@
 ---
+description: sp_invalidate_textptr(Transact-SQL)
 title: sp_invalidate_textptr (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: dd9920e1-7064-4c05-93d8-9303103fa1d6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 269a49f76bd583c2233cf3720818590ca132c6a3
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 4e14b6032da5d793631f75cd0617ee3a341d9196
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899405"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469240"
 ---
 # <a name="sp_invalidate_textptr-transact-sql"></a>sp_invalidate_textptr(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,7 @@ sp_invalidate_textptr [ [ @TextPtrValue = ] textptr_value ]
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @TextPtrValue = ] textptr_value`무효화 될 행 내부 텍스트 포인터입니다. *textptr_value* 는 **varbinary (** 16 **)** 이며 기본값은 NULL입니다. NULL 인 경우 **sp_invalidate_textptr** 는 트랜잭션의 모든 행 내부 텍스트 포인터를 무효화 합니다.  
+`[ @TextPtrValue = ] textptr_value` 무효화 될 행 내부 텍스트 포인터입니다. *textptr_value* 는 **varbinary (** 16 **)** 이며 기본값은 NULL입니다. NULL 인 경우 **sp_invalidate_textptr** 는 트랜잭션의 모든 행 내부 텍스트 포인터를 무효화 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -53,8 +54,8 @@ sp_invalidate_textptr [ [ @TextPtrValue = ] textptr_value ]
  **public** 역할의 멤버 자격이 필요합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;저장 프로시저 데이터베이스 엔진](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [Transact-sql&#41;&#40;시스템 저장 프로시저](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;저장 프로시저 데이터베이스 엔진 ](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;시스템 저장 프로시저 ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Transact-sql&#41;sp_tableoption &#40;](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)   
  [TEXTPTR &#40;Transact-sql&#41;](../../t-sql/functions/text-and-image-functions-textptr-transact-sql.md)   
  [TEXTVALID&#40;Transact-SQL&#41;](../../t-sql/functions/text-and-image-functions-textvalid-transact-sql.md)  

@@ -1,4 +1,5 @@
 ---
+description: sp_helpuser(Transact-SQL)
 title: sp_helpuser (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9c70b41d-ef4c-43df-92da-bd534c287ca1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 049b1183ad21e481ca47368b3dfe916d0ee41185
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: da6af8493f8646f19436501ab750455ebbe98558
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899460"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469252"
 ---
 # <a name="sp_helpuser-transact-sql"></a>sp_helpuser(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +43,7 @@ sp_helpuser [ [ @name_in_db = ] 'security_account' ]
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @name_in_db = ] 'security_account'`현재 데이터베이스에 있는 데이터베이스 사용자 또는 데이터베이스 역할의 이름입니다. *security_account* 는 현재 데이터베이스에 있어야 합니다. *security_account* 는 **sysname**이며 기본값은 NULL입니다. *Security_account* 지정 하지 않으면 **sp_helpuser** 모든 데이터베이스 보안 주체에 대 한 정보를 반환 합니다.  
+`[ @name_in_db = ] 'security_account'` 현재 데이터베이스에 있는 데이터베이스 사용자 또는 데이터베이스 역할의 이름입니다. *security_account* 는 현재 데이터베이스에 있어야 합니다. *security_account* 는 **sysname**이며 기본값은 NULL입니다. *Security_account* 지정 하지 않으면 **sp_helpuser** 모든 데이터베이스 보안 주체에 대 한 정보를 반환 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -52,12 +53,12 @@ sp_helpuser [ [ @name_in_db = ] 'security_account' ]
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**이름**|**sysname**|현재 데이터베이스의 사용자입니다.|  
+|**UserName**|**sysname**|현재 데이터베이스의 사용자입니다.|  
 |**RoleName**|**sysname**|**사용자 이름이** 속해 있는 역할입니다.|  
 |**LoginName**|**sysname**|**UserName**의 로그인입니다.|  
 |**DefDBName**|**sysname**|**사용자 이름의**기본 데이터베이스입니다.|  
 |**DefSchemaName**|**sysname**|데이터베이스 사용자의 기본 스키마입니다.|  
-|**Id**|**smallint**|현재 데이터베이스의 **사용자 이름** ID입니다.|  
+|**UserID**|**smallint**|현재 데이터베이스의 **사용자 이름** ID입니다.|  
 |**S**|**smallint**|사용자의 SID(보안 ID)입니다.|  
   
  다음 표에서는 사용자 계정이 지정되어 있지 않고 현재 데이터베이스에 별칭이 있는 경우의 결과 집합을 보여 줍니다.  
@@ -84,7 +85,7 @@ sp_helpuser [ [ @name_in_db = ] 'security_account' ]
   
  반환되는 정보는 메타데이터에 대한 액세스 제한 사항에 따라 달라집니다. 보안 주체에 사용 권한이 없는 엔터티는 나타나지 않습니다. 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-listing-all-users"></a>A. 모든 사용자 나열  
  다음 예에서는 현재 데이터베이스에 있는 사용자를 모두 나열합니다.  
@@ -108,12 +109,12 @@ EXEC sp_helpuser 'db_securityadmin';
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;보안 저장 프로시저](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [Transact-sql&#41;&#40;시스템 저장 프로시저](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;보안 저장 프로시저 ](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;시스템 저장 프로시저 ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [보안 주체&#40;데이터베이스 엔진&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
- [database_principals &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)   
- [database_role_members &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-database-role-members-transact-sql.md)   
- [server_principals &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
- [sys.server_role_members &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md)  
+ [sys.database_principals&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)   
+ [sys.database_role_members&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-role-members-transact-sql.md)   
+ [sys.server_principals&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
+ [sys.server_role_members&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md)  
   
   

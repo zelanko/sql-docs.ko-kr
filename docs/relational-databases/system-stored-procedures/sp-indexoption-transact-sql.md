@@ -1,4 +1,5 @@
 ---
+description: sp_indexoption(Transact-SQL)
 title: sp_indexoption (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 75f836be-d322-4a53-a45d-25bee6b42a52
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cc11f219d98e4b8018bc7d763345feb279790e13
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 509d58a28f768fe774c813a8235ae4c0d9cd718a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893244"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469256"
 ---
 # <a name="sp_indexoption-transact-sql"></a>sp_indexoption(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -32,7 +33,7 @@ ms.locfileid: "85893244"
  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]은 자동으로 페이지, 행 또는 테이블 수준의 잠금을 선택합니다. 이러한 옵션을 수동으로 설정할 필요는 없습니다. 특정 유형의 잠금이 항상 적절 하다는 확신을 알고 있는 전문가 사용자를 위해 **sp_indexoption** 제공 됩니다.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepNextAvoid](../../includes/ssnotedepnextavoid-md.md)]대신 [ALTER INDEX &#40;transact-sql&#41;](../../t-sql/statements/alter-index-transact-sql.md)를 사용 합니다.  
+>  [!INCLUDE[ssNoteDepNextAvoid](../../includes/ssnotedepnextavoid-md.md)] 대신 [ALTER INDEX &#40;transact-sql&#41;](../../t-sql/statements/alter-index-transact-sql.md)를 사용 합니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -46,9 +47,9 @@ sp_indexoption [ @IndexNamePattern = ] 'table_or_index_name'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @IndexNamePattern = ] 'table_or_index_name'`사용자 정의 테이블이 나 인덱스의 정규화 된 이름 또는 정규화 되지 않은 이름입니다. *table_or_index_name* 은 **nvarchar (1035)** 이며 기본값은 없습니다. 정규화된 인덱스 또는 테이블 이름을 지정할 경우에만 따옴표가 필요합니다. 데이터베이스 이름을 포함한 정규화된 테이블 이름인 경우 데이터베이스 이름이 반드시 현재 데이터베이스의 이름이어야 합니다. 테이블 이름이 인덱스 없이 지정된 경우 지정된 옵션 값은 해당 테이블의 모든 인덱스에 대해 설정되며 테이블에 클러스터형 인덱스가 없는 경우 테이블 자체에 대해 설정됩니다.  
+`[ @IndexNamePattern = ] 'table_or_index_name'` 사용자 정의 테이블이 나 인덱스의 정규화 된 이름 또는 정규화 되지 않은 이름입니다. *table_or_index_name* 은 **nvarchar (1035)** 이며 기본값은 없습니다. 정규화된 인덱스 또는 테이블 이름을 지정할 경우에만 따옴표가 필요합니다. 데이터베이스 이름을 포함한 정규화된 테이블 이름인 경우 데이터베이스 이름이 반드시 현재 데이터베이스의 이름이어야 합니다. 테이블 이름이 인덱스 없이 지정된 경우 지정된 옵션 값은 해당 테이블의 모든 인덱스에 대해 설정되며 테이블에 클러스터형 인덱스가 없는 경우 테이블 자체에 대해 설정됩니다.  
   
-`[ @OptionName = ] 'option_name'`인덱스 옵션 이름입니다. *option_name* 는 **varchar (35)** 이며 기본값은 없습니다. *option_name* 는 다음 값 중 하나를 사용할 수 있습니다.  
+`[ @OptionName = ] 'option_name'` 인덱스 옵션 이름입니다. *option_name* 는 **varchar (35)** 이며 기본값은 없습니다. *option_name* 는 다음 값 중 하나를 사용할 수 있습니다.  
   
 |값|설명|  
 |-----------|-----------------|  
@@ -82,7 +83,7 @@ sp_indexoption [ @IndexNamePattern = ] 'table_or_index_name'
 ## <a name="permissions"></a>사용 권한  
  테이블에 대한 ALTER 사용 권한이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-setting-an-option-on-a-specific-index"></a>A. 특정 인덱스에 대한 옵션 설정  
  다음 예에서는 테이블의 인덱스에 대 한 페이지 잠금을 허용 하지 `IX_Customer_TerritoryID` `Customer` 않습니다.  
@@ -139,8 +140,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [INDEXPROPERTY &#40;Transact-sql&#41;](../../t-sql/functions/indexproperty-transact-sql.md)   
- [Transact-sql&#41;&#40;시스템 저장 프로시저](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [INDEXPROPERTY&#40;Transact-SQL&#41;](../../t-sql/functions/indexproperty-transact-sql.md)   
+ [Transact-sql&#41;&#40;시스템 저장 프로시저 ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sys.indexes&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)  
   
   

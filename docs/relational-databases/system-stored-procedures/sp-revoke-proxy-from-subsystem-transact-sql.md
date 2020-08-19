@@ -1,4 +1,5 @@
 ---
+description: sp_revoke_proxy_from_subsystem(Transact-SQL)
 title: sp_revoke_proxy_from_subsystem (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b87bc8ba-3ea8-4aed-b54b-32c3d82d9d2a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5c8dc5e9a20c9a00b840ec51d3339299cc3756a3
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d58ec6db017fee031a2de2e242a18281eb3b7a68
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901385"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469249"
 ---
 # <a name="sp_revoke_proxy_from_subsystem-transact-sql"></a>sp_revoke_proxy_from_subsystem(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,11 +44,11 @@ sp_revoke_proxy_from_subsystem
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @proxy_id = ] id`액세스 권한을 취소할 프록시의 프록시 id입니다. *Proxy_id* 은 **int**이며 기본값은 NULL입니다. *Proxy_id* 또는 *proxy_name* 를 지정 해야 하지만 둘 다 지정할 수는 없습니다.  
+`[ @proxy_id = ] id` 액세스 권한을 취소할 프록시의 프록시 id입니다. *Proxy_id* 은 **int**이며 기본값은 NULL입니다. *Proxy_id* 또는 *proxy_name* 를 지정 해야 하지만 둘 다 지정할 수는 없습니다.  
   
-`[ @proxy_name = ] 'proxy_name'`액세스 권한을 취소할 프록시의 이름입니다. *Proxy_name* 는 **sysname**이며 기본값은 NULL입니다. *Proxy_id* 또는 *proxy_name* 를 지정 해야 하지만 둘 다 지정할 수는 없습니다.  
+`[ @proxy_name = ] 'proxy_name'` 액세스 권한을 취소할 프록시의 이름입니다. *Proxy_name* 는 **sysname**이며 기본값은 NULL입니다. *Proxy_id* 또는 *proxy_name* 를 지정 해야 하지만 둘 다 지정할 수는 없습니다.  
   
-`[ @subsystem_id = ] id`액세스 권한을 취소할 하위 시스템의 id 번호입니다. *Subsystem_id* 은 **int**이며 기본값은 NULL입니다. *Subsystem_id* 또는 *subsystem_name* 를 지정 해야 하지만 둘 다 지정할 수는 없습니다. 다음 표에서는 각 하위 시스템에 대한 값을 나열합니다.  
+`[ @subsystem_id = ] id` 액세스 권한을 취소할 하위 시스템의 id 번호입니다. *Subsystem_id* 은 **int**이며 기본값은 NULL입니다. *Subsystem_id* 또는 *subsystem_name* 를 지정 해야 하지만 둘 다 지정할 수는 없습니다. 다음 표에서는 각 하위 시스템에 대한 값을 나열합니다.  
   
 |값|설명|  
 |-----------|-----------------|  
@@ -63,7 +64,7 @@ sp_revoke_proxy_from_subsystem
 |**11**|[!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지 실행|  
 |**12**|PowerShell 스크립트|  
   
-`[ @subsystem_name = ] 'subsystem_name'`액세스 권한을 취소할 하위 시스템의 이름입니다. *Subsystem_name* 는 **sysname**이며 기본값은 NULL입니다. *Subsystem_id* 또는 *subsystem_name* 를 지정 해야 하지만 둘 다 지정할 수는 없습니다. 다음 표에서는 각 하위 시스템에 대한 값을 나열합니다.  
+`[ @subsystem_name = ] 'subsystem_name'` 액세스 권한을 취소할 하위 시스템의 이름입니다. *Subsystem_name* 는 **sysname**이며 기본값은 NULL입니다. *Subsystem_id* 또는 *subsystem_name* 를 지정 해야 하지만 둘 다 지정할 수는 없습니다. 다음 표에서는 각 하위 시스템에 대한 값을 나열합니다.  
   
 |값|설명|  
 |-----------|-----------------|  
@@ -71,7 +72,7 @@ sp_revoke_proxy_from_subsystem
 |CmdExec|운영 체제(CmdExec)|  
 |스냅샷|Replication Snapshot Agent|  
 |LogReader|복제 로그 판독기 에이전트|  
-|분포|복제 배포 에이전트|  
+|배포|복제 배포 에이전트|  
 |병합|Replication Merge Agent|  
 |QueueReader|복제 큐 판독기 에이전트|  
 |ANALYSISQUERY|Analysis Services 명령|  
@@ -88,7 +89,7 @@ sp_revoke_proxy_from_subsystem
 ## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할의 멤버만 **sp_revoke_proxy_from_subsystem**를 실행할 수 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 [!INCLUDE[ssIS](../../includes/ssis-md.md)]에 대한 `Catalog application proxy` 프록시의 액세스 권한을 해제합니다.  
   
 ```  
@@ -101,7 +102,7 @@ EXEC dbo.sp_revoke_proxy_from_subsystem
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;저장 프로시저 SQL Server 에이전트](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;저장 프로시저 SQL Server 에이전트 ](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
  [SQL Server 에이전트 보안 구현](../../ssms/agent/implement-sql-server-agent-security.md)   
  [Transact-sql&#41;sp_grant_proxy_to_subsystem &#40;](../../relational-databases/system-stored-procedures/sp-grant-proxy-to-subsystem-transact-sql.md)  
   

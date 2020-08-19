@@ -1,4 +1,5 @@
 ---
+description: 낙관적 동시성
 title: 낙관적 동시성 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9d71e09e-bc68-4c1f-9229-ed2a7be7d324
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 30eba3ea03b4c798a74a8cb928014b582846607b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dce1982edbb8f5a417404c6e24e8a40d25b58e0b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81282492"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429135"
 ---
 # <a name="optimistic-concurrency"></a>낙관적 동시성
 *낙관적 동시성* 은 트랜잭션 간의 충돌이 거의 발생 하지 않는다는 낙관적 가정에서 해당 이름을 파생 시킵니다. 현재 트랜잭션에서 읽은 시간과 업데이트 또는 삭제 시간 사이에 다른 트랜잭션이 데이터 행을 업데이트 하거나 삭제 하는 경우 충돌이 발생 한 것으로 간주 됩니다. 이는 응용 프로그램 개발자가 이러한 충돌이 발생 하는 것으로 판단 하는 *비관적 동시성* 또는 잠금과 반대입니다.  

@@ -1,4 +1,5 @@
 ---
+description: 기록 특성 옵션(느린 변경 차원 마법사)
 title: 기록 특성 옵션(느린 변경 차원 마법사) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: a176ec66-ec39-4c99-99d1-c1afa8450e1e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4dfa3579fb37fab94f8bc5731738ed024676018e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 9610a734543c9199e54d3f8489d86e03089f10ed
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919309"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430705"
 ---
 # <a name="historical-attribute-options-slowly-changing-dimension-wizard"></a>기록 특성 옵션(느린 변경 차원 마법사)
 

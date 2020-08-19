@@ -1,4 +1,5 @@
 ---
+description: sp_helprole(Transact-SQL)
 title: sp_helprole (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ ms.assetid: b023103f-ccf3-44e2-b418-4be9bdd49f4a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fc4cb9acc25255988d46e4e4bb5a922eb23a98fb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 36414885089de27fc06dc4029ee57ef341707912
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85749306"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469277"
 ---
 # <a name="sp_helprole-transact-sql"></a>sp_helprole(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +41,7 @@ sp_helprole [ [ @rolename = ] 'role' ]
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @rolename = ] 'role'`현재 데이터베이스에 있는 역할의 이름입니다. *role* 은 **sysname**이며 기본값은 NULL입니다. 현재 데이터베이스에 *역할이* 있어야 합니다. *Role* 을 지정 하지 않으면 현재 데이터베이스의 모든 역할에 대 한 정보가 반환 됩니다.  
+`[ @rolename = ] 'role'` 현재 데이터베이스에 있는 역할의 이름입니다. *role* 은 **sysname**이며 기본값은 NULL입니다. 현재 데이터베이스에 *역할이* 있어야 합니다. *Role* 을 지정 하지 않으면 현재 데이터베이스의 모든 역할에 대 한 정보가 반환 됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -59,7 +60,7 @@ sp_helprole [ [ @rolename = ] 'role' ]
 ## <a name="permissions"></a>사용 권한  
  **public** 역할의 멤버 자격이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 쿼리는 현재 데이터베이스의 모든 역할을 반환합니다.  
   
 ```  
@@ -67,7 +68,7 @@ EXEC sp_helprole
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;보안 저장 프로시저](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;보안 저장 프로시저 ](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [서버 수준 역할](../../relational-databases/security/authentication-access/server-level-roles.md)   
  [데이터베이스 수준 역할](../../relational-databases/security/authentication-access/database-level-roles.md)   
  [Transact-sql&#41;sp_addapprole &#40;](../../relational-databases/system-stored-procedures/sp-addapprole-transact-sql.md)   

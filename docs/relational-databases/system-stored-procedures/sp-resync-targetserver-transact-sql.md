@@ -1,4 +1,5 @@
 ---
+description: sp_resync_targetserver(Transact-SQL)
 title: sp_resync_targetserver (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 40e44df7-d3e3-44ee-b149-08aba629a21f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 868e203866890c1f13405ddc7ed3949487e821da
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 858c2ffe0740c43892ff2245047823c9cecbd12a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899246"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469230"
 ---
 # <a name="sp_resync_targetserver-transact-sql"></a>sp_resync_targetserver(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +41,7 @@ sp_resync_targetserver
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @server_name = ] 'server'`다시 동기화 할 서버의 이름입니다. *server* 은 **sysname**이며 기본값은 없습니다. **All** 을 지정 하면 모든 대상 서버가 다시 동기화 됩니다.  
+`[ @server_name = ] 'server'` 다시 동기화 할 서버의 이름입니다. *server* 은 **sysname**이며 기본값은 없습니다. **All** 을 지정 하면 모든 대상 서버가 다시 동기화 됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -54,7 +55,7 @@ sp_resync_targetserver
 ## <a name="permissions"></a>사용 권한  
  이 프로시저를 실행할 수 있는 권한은 기본적으로 **sysadmin** 고정 서버 역할의 멤버로 사용 됩니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `SEATTLE1` 대상 서버를 다시 동기화합니다.  
   
 ```  
