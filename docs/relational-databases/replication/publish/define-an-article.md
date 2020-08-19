@@ -1,4 +1,5 @@
 ---
+description: 아티클 정의
 title: 아티클 정의 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 220584d8-b291-43ae-b036-fbba3cc07a2e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: eeedc973254e9f7428f37eb8c1914d1ba03fbc23
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9a607c3e5d379bc935a94326a33b5fc2a9e1b3b5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897395"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88405819"
 ---
 # <a name="define-an-article"></a>아티클 정의
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

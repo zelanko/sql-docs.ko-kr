@@ -1,4 +1,5 @@
 ---
+description: 배포자 설정
 title: 배포자 설정 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,12 +16,12 @@ ms.assetid: 8276a521-bdd1-4783-bdb6-7ab43499c0ca
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 5fd12812dc7bafd03c542c8561182ff5ce82ac2b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8620cbc1dce63d4c2e14949866329d34207f7fc9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85653319"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88406409"
 ---
 # <a name="distributor-settings"></a>배포자 설정
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -45,7 +46,7 @@ ms.locfileid: "85653319"
  **새 그룹**  
  새 게시자 그룹을 만들려면 클릭합니다. 게시자 그룹을 사용하면 복제 모니터 내에서 게시자를 편리하게 구성할 수 있습니다. 그룹은 데이터 복제 또는 복제 토폴로지의 서버 간 관계에 영향을 주지 않습니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [복제 모니터 시작](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
  [복제 모니터링](../../relational-databases/replication/monitor/monitoring-replication.md)  
   

@@ -1,4 +1,5 @@
 ---
+description: Columnstore 인덱스 - 새로운 기능
 title: Columnstore 인덱스 - 새로운 기능 | Microsoft 문서
 ms.custom: ''
 ms.date: 05/11/2020
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e60e549a83440338eaef2624761af3b9cf2426f8
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 678d3b76d33babe7e2097eafefcd21ff78702f84
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246278"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88408639"
 ---
 # <a name="columnstore-indexes---what39s-new"></a>Columnstore 인덱스 - 새로운 기능
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

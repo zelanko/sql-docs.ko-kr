@@ -4,6 +4,8 @@
   href: ../sql-server/index.yml
 - name: SQL Server 드라이버
   href: ../connect/sql-connection-libraries.md
+- name: 드라이버 기능 지원 매트릭스
+  href: ../connect/driver-feature-matrix.md
 - name: SQL Server 드라이버 기록
   href: ../connect/connect-history.md
 - name: SQL 데이터 개발자
@@ -30,6 +32,10 @@
           href: ../connect/ado-net/introduction-microsoft-data-sqlclient-namespace.md
         - name: Microsoft SqlClient Data Provider for SQL Server 다운로드
           href: ../connect/ado-net/download-microsoft-sqlclient-data-provider.md
+        - name: SqlClient에서 이벤트 추적 사용
+          href: ../connect/ado-net/enable-eventsource-tracing.md
+        - name: SqlClient의 AppContext 스위치
+          href: ../connect/ado-net/appcontext-switches.md
         - name: SqlClient 드라이버 지원 기간
           href: ../connect/ado-net/sqlclient-driver-support-lifecycle.md
         - name: 추가 SqlClient 드라이버 정보 찾기
@@ -52,7 +58,7 @@
         - name: SQL Server 데이터 형식 및 ADO.NET
           href: ../connect/ado-net/sql/sql-server-data-types.md
           items:
-            - name: SqlTypes 및 데이터 세트
+            - name: SqlType 및 DataSet
               href: ../connect/ado-net/sql/sqltypes-dataset.md
             - name: NULL 값 처리
               href: ../connect/ado-net/sql/handle-null-values.md
@@ -92,6 +98,8 @@
                   href: ../connect/ado-net/sql/multiple-bulk-copy-operations.md
                 - name: 트랜잭션 및 대량 복사 작업
                   href: ../connect/ado-net/sql/transaction-bulk-copy-operations.md
+                - name: 대량 복사 작업을 위한 순서 힌트
+                  href: ../connect/ado-net/sql/bulk-copy-order-hints.md
             - name: MARS(Multiple Active Result Sets)
               href: ../connect/ado-net/sql/multiple-active-result-sets-mars.md
               items:
@@ -142,6 +150,15 @@
               href: ../connect/ado-net/sql/sqlclient-support-localdb.md
             - name: Always Encrypted에 대한 SqlClient 지원
               href: ../connect/ado-net/sql/sqlclient-support-always-encrypted.md
+              items:
+                - name: 보안 Enclave를 사용한 Always Encrypted로 .NET 애플리케이션 개발
+                  href: ado-net/sql/tutorial-always-encrypted-enclaves-develop-net-apps.md
+                - name: Always Encrypted와 Azure Key Vault 사용
+                  href: ado-net/sql/azure-key-vault-example.md
+                - name: 보안 Enclave를 사용한 Always Encrypted와 Azure Key Vault 사용
+                  href: ado-net/sql/azure-key-vault-enclave-example.md
+            - name: SqlClient의 데이터 검색 및 분류
+              href: ../connect/ado-net/sql/data-classification.md
 - name: JDBC
   items:
     - name: SQL Server용 Microsoft JDBC Driver
@@ -2631,8 +2648,8 @@
         - name: 상시 암호화와 JDBC 드라이버 사용
           href: ../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md
           items:
-            - name: 보안 Enclave를 사용한 Always Encrypted
-              href: ../connect/jdbc/always-encrypted-with-secure-enclaves.md
+            - name: JDBC 드라이버와 보안 Enclave를 사용한 Always Encrypted 사용
+              href: ../connect/jdbc/using-always-encrypted-with-secure-enclaves-with-the-jdbc-driver.md
         - name: 가이드 문서
           items:
             - name: SQL이 있는 문 사용
@@ -2747,6 +2764,8 @@
               href: ../connect/jdbc/using-sql-escape-sequences.md
             - name: 저장 프로시저가 있는 문 사용
               href: ../connect/jdbc/using-statements-with-stored-procedures.md
+            - name: 루프백 시나리오를 위한 클라이언트 인증서 인증
+              href: ../connect/jdbc/client-certification-authentication-for-loopback-scenarios.md
             - name: 7.0 및 다른 사용자에 대한 Azure Key Vault 샘플
               href: ../connect/jdbc/azure-key-vault-sample-version-7.0.md
               items:
@@ -2758,7 +2777,7 @@
   items:
     - name: SQL Server용 Node.js 드라이버
       href: ../connect/node-js/node-js-driver-for-sql-server.md
-    - name: '1단계: Node.js 개발을 위한 개발 환경 구성'
+    - name: '1단계:  Node.js 개발을 위한 개발 환경 구성'
       href: ../connect/node-js/step-1-configure-development-environment-for-node-js-development.md
     - name: '2단계: Node.js 개발을 위한 SQL 데이터베이스 만들기'
       href: ../connect/node-js/step-2-create-a-sql-database-for-node-js-development.md
@@ -2790,14 +2809,16 @@
               href: ../connect/odbc/linux-mac/programming-guidelines.md
             - name: 도구
               items:
-                - name: bcp.exe로 연결
+                - name: bcp를 사용하여 연결
                   href: ../connect/odbc/linux-mac/connecting-with-bcp.md
-                - name: sqlcmd.exe로 연결
+                - name: sqlcmd를 사용하여 연결
                   href: ../connect/odbc/linux-mac/connecting-with-sqlcmd.md
             - name: 통합 인증 사용
               href: ../connect/odbc/linux-mac/using-integrated-authentication.md
         - name: 릴리스 정보
           href: ../connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac.md
+        - name: 릴리스 정보(mssql-tools)
+          href: ../connect/odbc/linux-mac/release-notes-tools.md
         - name: 알려진 문제
           href: ../connect/odbc/linux-mac/known-issues-in-this-version-of-the-driver.md
         - name: ODBC Linux 및 macOS에 대한 FAQ(질문과 대답)
@@ -2836,7 +2857,7 @@
       items:
         - name: 사용자 지정 키 저장소 공급자
           href: ../connect/odbc/custom-keystore-providers.md
-        - name: DSN 연결 문자열 키워드 및 특성
+        - name: DSN 및 연결 문자열 키워드 및 특성
           href: ../connect/odbc/dsn-connection-string-attribute.md
         - name: Always Encrypted 사용
           href: ../connect/odbc/using-always-encrypted-with-the-odbc-driver.md
@@ -3557,7 +3578,7 @@
                           href: ../odbc/reference/develop-app/multithreading.md
                         - name: 맞춤
                           href: ../odbc/reference/develop-app/alignment.md
-                        - name: Unicode
+                        - name: 유니코드(Unicode)
                           href: ../odbc/reference/develop-app/unicode.md
                           items:
                             - name: 유니코드 함수 인수
@@ -4186,7 +4207,7 @@
                           href: ../odbc/reference/appendixes/executing-positioned-update-and-delete-statements.md
                         - name: 커서 라이브러리 코드 예제
                           href: ../odbc/reference/appendixes/cursor-library-code-example.md
-                        - name: 구현 참고 사항
+                        - name: 구현 노트
                           href: ../odbc/reference/appendixes/implementation-notes.md
                           items:
                             - name: 커서 라이브러리 캐시
@@ -5111,6 +5132,8 @@
           href: ../connect/oledb/features/using-large-value-types.md
         - name: MARS(Multiple Active Result Sets) 사용
           href: ../connect/oledb/features/using-multiple-active-result-sets-mars.md
+        - name: 투명 네트워크 IP 확인 사용
+          href: ../connect/oledb/features/using-transparent-network-ip-resolution.md
         - name: 사용자 정의 형식 사용
           href: ../connect/oledb/features/using-user-defined-types.md
         - name: XML 데이터 형식 사용
@@ -5500,7 +5523,7 @@
               href: ../connect/php/how-to-connect-on-a-specified-port.md
             - name: 연결 풀링
               href: ../connect/php/connection-pooling-microsoft-drivers-for-php-for-sql-server.md
-            - name: '방법: MARS(Multiple Active Resultsets)를 사용하지 않도록 설정'
+            - name: '방법: MARS(Multiple Active Result Set) 사용 안 함'
               href: ../connect/php/how-to-disable-multiple-active-resultsets-mars.md
             - name: 연결 옵션
               href: ../connect/php/connection-options.md
@@ -5572,7 +5595,7 @@
               href: ../connect/php/how-to-specify-sql-server-data-types-when-using-the-sqlsrv-driver.md
             - name: '방법: PHP 데이터 형식 지정'
               href: ../connect/php/how-to-specify-php-data-types.md
-            - name: 기본 제공 UTF-8 지원을 사용하여 UTF-8 데이터를 보내고 검색하는 방법
+            - name: '방법: 기본 제공 UTF-8 지원을 사용하여 UTF-8 데이터 보내기 및 검색'
               href: ../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md
             - name: '방법: Linux 및 macOS에서 ASCII 데이터 전송 및 검색'
               href: ../connect/php/how-to-send-and-retrieve-ascii-data-in-linux-mac.md
@@ -5723,9 +5746,9 @@
                   href: ../connect/php/pdostatement-setattribute.md
                 - name: 'PDOStatement::setFetchMode'
                   href: ../connect/php/pdostatement-setfetchmode.md
-    - name: 보안 고려사항
+    - name: 보안 고려 사항
       href: ../connect/php/security-considerations-for-php-sql-driver.md
-    - name: 코드 예제
+    - name: 코드 샘플
       href: ../connect/php/code-samples-for-php-sql-driver.md
       items:
         - name: 예제 애플리케이션(PDO_SQLSRV 드라이버)

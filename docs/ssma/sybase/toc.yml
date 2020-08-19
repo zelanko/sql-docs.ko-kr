@@ -20,7 +20,7 @@
   href: initializing-test-cases-sybasetosql.md
 - name: 샘플 콘솔 스크립트 파일 작업
   href: working-with-the-sample-console-script-files-sybasetosql.md
-- name: Sybase ASE 데이터베이스를 Azure SQL DB로 마이그레이션
+- name: Sybase ASE 데이터베이스를 Azure SQL Database로 마이그레이션
   href: migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md
 - name: 변환을 위해 Sybase ASE 데이터베이스 개체 평가
   href: assessing-sybase-ase-database-objects-for-conversion-sybasetosql.md
@@ -56,13 +56,13 @@
   href: connecting-to-sybase-ase-sybasetosql.md
 - name: 영향을 받는 개체 선택 및 구성
   href: selecting-and-configuring-affected-objects-sybasetosql.md
-- name: Azure SQL DB에 연결
+- name: Azure SQL Database에 연결
   href: connecting-to-azure-sql-db-sybasetosql.md
 - name: 암호 관리
   href: managing-passwords-sybasetosql.md
 - name: 프로젝트 옵션 설정
   href: setting-project-options-sybasetosql.md
-- name: Azure SQL DB에 연결
+- name: Azure SQL Database에 연결
   href: connect-to-azure-sql-db-sybasetosql.md
 - name: 데이터 마이그레이션 설정
   href: data-migration-settings-sybasetosql.md
@@ -76,7 +76,7 @@
   href: mapping-sybase-ase-and-sql-server-data-types-sybasetosql.md
 - name: SQL Server에 SSMA 구성 요소 설치
   href: installing-ssma-components-on-sql-server-sybasetosql.md
-- name: Sybase ASE 데이터를 Azure SQL DB로 마이그레이션
+- name: Sybase ASE 데이터를 Azure SQL Database로 마이그레이션
   href: migrating-sybase-ase-data-into-sql-server-azure-sql-db-sybasetosql.md
 - name: Sybase에 연결
   href: connect-to-sybase-sybasetosql.md
@@ -124,7 +124,7 @@
       href: project-settings-type-mapping-sybasetosql.md
     - name: 동기화
       href: project-settings-synchronization-sybasetosql.md
-    - name: Azure SQL DB
+    - name: Azure SQL Database
       href: project-settings-azure-sql-db-sybasetosql.md
     - name: (마이그레이션
       href: project-settings-migration-sybasetosql.md

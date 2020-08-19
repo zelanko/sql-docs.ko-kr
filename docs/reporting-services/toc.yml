@@ -1053,7 +1053,7 @@
           href: ../reporting-services/report-data/power-pivot-connection-type-ssrs.md
         - name: SharePoint 목록 연결 형식
           href: ../reporting-services/report-data/sharepoint-list-connection-type-ssrs.md
-        - name: SQL Azure 연결 형식
+        - name: Azure SQL 연결 형식
           href: ../reporting-services/report-data/sql-azure-connection-type-ssrs.md
         - name: OLE DB 연결 형식
           href: ../reporting-services/report-data/ole-db-connection-type-ssrs.md

@@ -1,4 +1,5 @@
 ---
+description: 구독 다시 초기화
 title: 구독 다시 초기화 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/01/2017
@@ -15,12 +16,12 @@ ms.assetid: fb13712b-e7ad-4f1f-b605-4554bad0cb60
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: f52645bd3890f070c712165aa55aef595604ebba
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7f1992be76777862078f029df44a73f7b3579dc2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85767673"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88405419"
 ---
 # <a name="reinitialize-subscriptions"></a>구독 다시 초기화
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -43,7 +44,7 @@ ms.locfileid: "85767673"
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], 저장 프로시저 또는 RMO(복제 관리 개체)를 사용하여 구독의 모든 아티클을 다시 초기화할 수 있습니다. 스냅샷 및 트랜잭션 게시의 개별 아티클을 다시 초기화하려면 저장 프로시저를 사용해야 합니다. 자세한 내용은 [Reinitialize a Subscription](../../relational-databases/replication/reinitialize-a-subscription.md)을 참조하세요.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [구독 초기화](../../relational-databases/replication/initialize-a-subscription.md)   
  [구독 만료 및 비활성화](../../relational-databases/replication/subscription-expiration-and-deactivation.md)  
   

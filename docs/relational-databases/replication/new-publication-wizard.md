@@ -1,4 +1,5 @@
 ---
+description: New Publication Wizard
 title: 새 게시 마법사 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/01/2017
@@ -40,12 +41,12 @@ helpviewer_keywords:
 ms.assetid: 57d65d16-90d1-4b4c-b68e-6418a7064e76
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b4585af3758327ea21834918a89142d8101b8745
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 679534bfdd567a0bbe48e43188d846b99e16e860
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85721228"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88405829"
 ---
 # <a name="new-publication-wizard"></a>New Publication Wizard
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -63,7 +64,7 @@ ms.locfileid: "85721228"
   
 -   [에이전트 보안&#40;새 게시 마법사&#41;](../../relational-databases/replication/agent-security-new-publication-wizard.md)  
   
--   [아티클](../../relational-databases/replication/articles.md)  
+-   [문서](../../relational-databases/replication/articles.md)  
   
 -   [아티클 문제](../../relational-databases/replication/article-issues.md)  
   

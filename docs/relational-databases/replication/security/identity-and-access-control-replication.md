@@ -1,4 +1,5 @@
 ---
+description: ID 및 Access Control(복제)
 title: ID 및 액세스 제어(복제) | Microsoft 문서
 ms.custom: ''
 ms.date: 11/20/2018
@@ -16,12 +17,12 @@ ms.assetid: 4da0e793-1ee4-4f69-a80b-45c6732a238d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: ea34f0b2b7e0a6ab2770178d926a5a9710f43575
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c44efad10aeade68f42e76d4aa5622807159110f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920740"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88404829"
 ---
 # <a name="identity-and-access-control-replication"></a>ID 및 Access Control(복제)
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -53,7 +54,7 @@ ms.locfileid: "86920740"
 
 gMSA(그룹 관리 서비스 계정)의 사용에 대한 지원은 SQL Server 2014에 도입되었습니다. 자세한 내용은 [복제 및 그룹 관리 서비스 계정](https://repltalk.com/2019/03/26/replication-and-group-managed-service-accounts/) 블로그를 참조하세요.
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [위협 요소 및 취약성 완화&#40;복제&#41;](../../../relational-databases/replication/security/threat-and-vulnerability-mitigation-replication.md) [복제 에이전트 보안 모델](../../../relational-databases/replication/security/replication-agent-security-model.md)   
  [복제 보안을 위한 최선의 구현 방법](../../../relational-databases/replication/security/replication-security-best-practices.md)   
 

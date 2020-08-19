@@ -1,4 +1,5 @@
 ---
+description: 배포자 보안 설정
 title: 배포자 보안 설정 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ ms.assetid: 76d78229-0ff2-4aa4-9b4e-ad97534c5296
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: d8d0563741e4b1c00e7caf00639e80a1a0d98118
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 0e0a8a7e42259553e2748d2e323b0322a877f01c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915150"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88405029"
 ---
 # <a name="secure-the-distributor"></a>배포자 보안 설정
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -46,7 +47,7 @@ ms.locfileid: "86915150"
 ## <a name="snapshot-folder-security"></a>스냅샷 폴더 보안  
  스냅샷 공유에 병합 에이전트(병합 게시의 경우)나 배포 에이전트(스냅샷 또는 트랜잭션 복제의 경우)가 실행되는 계정에 대한 읽기 권한이 있고 스냅샷 에이전트가 실행되는 계정에 대한 쓰기 권한이 있는지 확인합니다. 스냅샷 폴더에 대한 자세한 내용은 [스냅샷 폴더 보안 설정](../../../relational-databases/replication/security/secure-the-snapshot-folder.md)을 참조하세요.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [복제 보안 설정 보기 및 수정](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
  [데이터베이스 엔진에 암호화 연결 사용&#40;SQL Server 구성 관리자&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)   
  [Replication Security Best Practices](../../../relational-databases/replication/security/replication-security-best-practices.md)   

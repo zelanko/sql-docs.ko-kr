@@ -1,4 +1,5 @@
 ---
+description: 구독 다시 초기화 - 모든 구독
 title: 구독 다시 초기화 - 모든 구독 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/01/2017
@@ -15,12 +16,12 @@ ms.assetid: e1122018-9f74-43e3-8489-7eae33ff23d9
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 9da983b0f59625c6bd2404512e99d4f0928bff01
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: cee027fbc0e614e7aa6bbc14292b79141a9b4df1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85767693"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88405539"
 ---
 # <a name="reinitialize-subscriptions---all-subscriptions"></a>구독 다시 초기화 - 모든 구독
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -43,7 +44,7 @@ ms.locfileid: "85767693"
  **다시 초기화 표시**  
  각 구독을 다시 초기화로 표시하려면 클릭합니다. 유효한 스냅샷을 사용할 수 있으면 다음에 배포 에이전트 또는 병합 에이전트가 해당 구독에 대해 실행될 때 이 스냅샷이 구독자에 적용됩니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [구독 다시 초기화](../../relational-databases/replication/reinitialize-subscriptions.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: 네트워크 패킷 크기는 8060바이트를 초과할 수 없음
 title: 네트워크 패킷 크기는 8060바이트를 초과할 수 없음 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 86db5da1-afe4-4fbb-8bf8-33cedc7e4361
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 7800bf2c9724cec7ba8100e7268e1760e39d3afe
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ec56bc58723d14f0997da2ce5c69a2a81451a90c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85785069"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88406439"
 ---
 # <a name="network-packet-size-should-not-exceed-8060-bytes"></a>네트워크 패킷 크기는 8060바이트를 초과할 수 없음
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

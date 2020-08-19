@@ -8,13 +8,13 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
-ms.date: 7/17/2020
-ms.openlocfilehash: c0b701bb23b5ada0f3a4a58d23064bd79acd80ad
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.date: 8/12/2020
+ms.openlocfilehash: 29f5f31d999e96a17cd1653323c75251c8873572
+ms.sourcegitcommit: e4c36570c34cd7d7ae258061351bce6e54ea49f6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442389"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88147214"
 ---
 # <a name="download-and-install-azure-data-studio"></a>Azure Data Studio 다운로드 및 설치
 
@@ -27,9 +27,9 @@ Azure Data Studio는 Windows, macOS, Linux에서 실행됩니다.
 
 |플랫폼|다운로드|릴리스 날짜| 버전 |
 |:---|:---|:---|:---|
-| Windows | [사용자 설치 관리자(권장)](https://go.microsoft.com/fwlink/?linkid=2135512)<br>[시스템 설치 관리자](https://go.microsoft.com/fwlink/?linkid=2135513)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2135514) | 2020년 7월 17일 | 1.20.1 |
-| macOS | [.zip](https://go.microsoft.com/fwlink/?linkid=2135266) | 2020년 7월 17일 | 1.20.1 |
-| Linux | [.deb](https://go.microsoft.com/fwlink/?linkid=2135515)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2135268)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2135267) | 2020년 7월 17일| 1.20.1 |
+| Windows | [사용자 설치 관리자(권장)](https://go.microsoft.com/fwlink/?linkid=2138608)<br>[시스템 설치 관리자](https://go.microsoft.com/fwlink/?linkid=2138704)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2138705) | 2020년 8월 12일 | 1.21.0 |
+| macOS | [.zip](https://go.microsoft.com/fwlink/?linkid=2138609) | 2020년 8월 12일 | 1.21.0 |
+| Linux | [.deb](https://go.microsoft.com/fwlink/?linkid=2138508)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2138507)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2138706) | 2020년 8월 12일| 1.21.0 |
 
 최신 릴리스에 대한 자세한 내용은 [릴리스 정보](release-notes.md)를 참조하세요.
 
@@ -41,32 +41,32 @@ Azure Data Studio는 Windows, macOS, Linux에서 실행됩니다.
 
 **사용자 설치 관리자**(권장)
 
-1. [Windows용 [!INCLUDE[name-sos](../includes/name-sos-short.md)] ‘사용자’ 설치 관리자](https://go.microsoft.com/fwlink/?linkid=2135512)를 다운로드하여 실행합니다.
+1. [Windows용 [!INCLUDE[name-sos](../includes/name-sos-short.md)] ‘사용자’ 설치 관리자](https://go.microsoft.com/fwlink/?linkid=2138608)를 다운로드하여 실행합니다.
 2. [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] 앱을 시작합니다.
 
 **시스템 설치 관리자**
 
-1. [Windows용 [!INCLUDE[name-sos](../includes/name-sos-short.md)] ‘시스템’ 설치 관리자](https://go.microsoft.com/fwlink/?linkid=2135513)를 다운로드하여 실행합니다.
+1. [Windows용 [!INCLUDE[name-sos](../includes/name-sos-short.md)] ‘시스템’ 설치 관리자](https://go.microsoft.com/fwlink/?linkid=2138704)를 다운로드하여 실행합니다.
 2. [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] 앱을 시작합니다.
 
 **zip 파일**
 
-1. [Windows용 [!INCLUDE[name-sos](../includes/name-sos-short.md)] .zip](https://go.microsoft.com/fwlink/?linkid=2135514)을 다운로드합니다.
+1. [Windows용 [!INCLUDE[name-sos](../includes/name-sos-short.md)] .zip](https://go.microsoft.com/fwlink/?linkid=2138705)을 다운로드합니다.
 2. 다운로드한 파일로 이동하여 압축을 풉니다.
 3. `\azuredatastudio-windows\azuredatastudio.exe`을 실행합니다.
 
 ## <a name="get-azure-data-studio-for-macos"></a>macOS용 Azure Data Studio 다운로드
 
-1. [macOS용 [!INCLUDE[name-sos](../includes/name-sos-short.md)]](https://go.microsoft.com/fwlink/?linkid=2135266)를 다운로드합니다.
+1. [macOS용 [!INCLUDE[name-sos](../includes/name-sos-short.md)]](https://go.microsoft.com/fwlink/?linkid=2138609)를 다운로드합니다.
 2. zip의 내용을 펼치려면 두 번 클릭합니다.
 3. 실행 패드에서 Azure Data Studio를 사용할 수 있게 하려면 *Azure Data Studio.app* 을 *Applications* 폴더로 끌어 놓습니다.
 
 ## <a name="get-azure-data-studio-for-linux"></a>Linux용 Azure Data Studio 다운로드
 
 1. 설치 관리자 또는 tar.gz 보관 파일 하나를 사용하여 Linux용 [!INCLUDE[name-sos](../includes/name-sos-short.md)]를 다운로드합니다.
-    - [.deb](https://go.microsoft.com/fwlink/?linkid=2135515)
-    - [.rpm](https://go.microsoft.com/fwlink/?linkid=2135268)
-    - [.tar.gz](https://go.microsoft.com/fwlink/?linkid=2135267)
+    - [.deb](https://go.microsoft.com/fwlink/?linkid=2138508)
+    - [.rpm](https://go.microsoft.com/fwlink/?linkid=2138507)
+    - [.tar.gz](https://go.microsoft.com/fwlink/?linkid=2138706)
 1. 파일을 추출하고 [!INCLUDE[name-sos](../includes/name-sos-short.md)]를 시작하려면 새 터미널 창을 열고 다음 명령을 입력합니다.
 
    **Debian 설치:**

@@ -1,4 +1,5 @@
 ---
+description: Columnstore 인덱스 쿼리 성능
 title: Columnstore 인덱스 - 쿼리 성능 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/11/2019
@@ -11,12 +12,12 @@ ms.assetid: 83acbcc4-c51e-439e-ac48-6d4048eba189
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5310aa282e269e94fa394f529a680d778d662577
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: f2e5fe98b5ec7d6fc141b41869e0caef7f6cb665
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007495"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88408799"
 ---
 # <a name="columnstore-indexes---query-performance"></a>Columnstore 인덱스 쿼리 성능
 
@@ -111,10 +112,10 @@ ms.locfileid: "86007495"
 |merge join||아니요|아니요|아니요||    
 |다중 스레드 쿼리||예|예|예||    
 |중첩 루프||아니요|아니요|아니요||    
-|MAXDOP 1에서 실행되는 단일 스레드 쿼리||아니요|아니요|예||    
-|직렬 쿼리 계획을 사용하는 단일 스레드 쿼리||아니요|아니요|예||    
-|sort|columnstore 인덱스를 사용하여 SCAN 시 절을 기준으로 정렬합니다.|아니요|아니요|예||    
-|위쪽 정렬||아니요|아니요|예||    
+|MAXDOP 1에서 실행되는 단일 스레드 쿼리||아니요|no|예||    
+|직렬 쿼리 계획을 사용하는 단일 스레드 쿼리||아니요|no|예||    
+|sort|columnstore 인덱스를 사용하여 SCAN 시 절을 기준으로 정렬합니다.|아니요|no|예||    
+|위쪽 정렬||아니요|no|예||    
 |창 집계||해당 없음|해당 없음|예|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]의 새 연산자.|    
     
 <sup>1</sup>[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 프리미엄 계층, 표준 계층 - S3 이상 및 모든 vCore 계층 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에 적용    

@@ -1,4 +1,5 @@
 ---
+description: 클러스터형 인덱스 만들기
 title: 클러스터형 인덱스 만들기 | Microsoft 문서
 ms.custom: ''
 ms.date: 02/17/2017
@@ -17,12 +18,12 @@ ms.assetid: 47148383-c2c7-4f08-a9e4-7016bf2d1d13
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dd2576b845d1cb04d69f2eef2ab32b6289a14480
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5a343bbd9686856d6b8bdb27808673178336ee84
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760834"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88408499"
 ---
 # <a name="create-clustered-indexes"></a>클러스터형 인덱스 만들기
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -145,7 +146,7 @@ ms.locfileid: "85760834"
   
  자세한 내용은 [CREATE INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)를 참조하세요.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [기본 키 만들기](../../relational-databases/tables/create-primary-keys.md)   
  [UNIQUE 제약 조건 만들기](../../relational-databases/tables/create-unique-constraints.md)  
   

@@ -1,4 +1,5 @@
 ---
+description: Migrate to a Partially Contained Database
 title: 부분적으로 포함된 데이터베이스로 마이그레이션 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 90faac38-f79e-496d-b589-e8b2fe01c562
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: cb7fbdc8085fbf068ddc4f97587e919b1872971f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2a942af36a551498e81b3dbaeaa02686dec9c28b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726430"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88410999"
 ---
 # <a name="migrate-to-a-partially-contained-database"></a>Migrate to a Partially Contained Database
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

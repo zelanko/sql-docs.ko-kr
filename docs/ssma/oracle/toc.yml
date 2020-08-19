@@ -130,7 +130,7 @@
       href: project-settings-type-mapping-oracletosql.md
     - name: 마이그레이션
       href: project-settings-migration-oracletosql.md
-- name: 글로벌 설정
+- name: 전역 설정
   items:
     - name: 테스터
       href: global-settings-tester-oracletosql.md

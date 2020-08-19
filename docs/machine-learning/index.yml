@@ -9,13 +9,13 @@ metadata:
   ms.topic: landing-page
   author: dphansen
   ms.author: davidph
-  ms.date: 04/24/2020
-  ms.openlocfilehash: 41832dfd555df827e14182900a4faa07ad22ab1e
-  ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+  ms.date: 05/27/2020
+  ms.openlocfilehash: 72f9fc36ace86dda5c38b7713376d83dbe1e8230
+  ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
   ms.translationtype: HT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/19/2020
-  ms.locfileid: "83606827"
+  ms.lasthandoff: 07/20/2020
+  ms.locfileid: "86485304"
 landingContent:
 - title: SQL Server의 Machine Learning
   linkLists:
@@ -65,11 +65,47 @@ landingContent:
       url: tutorials/quickstart-r-train-score-model.md
   - linkListType: tutorial
     links:
-    - text: T-SQL에서 R 사용
-      url: tutorials/sqldev-in-database-r-for-sql-developers.md
-    - text: R 도구에서 Machine Learning Services 사용
-      url: tutorials/walkthrough-data-science-end-to-end-walkthrough.md
-- title: 빅 데이터 클러스터의 ML
+    - text: 의사 결정 트리를 사용하여 스키 임대 예측
+      url: tutorials/r-predictive-model-introduction.md
+    - text: k-means 클러스터링을 사용하여 고객 분류
+      url: tutorials/r-clustering-model-introduction.md
+- title: Azure SQL Managed Instance
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Azure SQL Managed Instance의 Machine Learning Services
+      url: /azure/azure-sql/managed-instance/machine-learning-services-overview
+    - text: Azure SQL Managed Instance와 SQL Server의 ML 간 주요 차이점
+      url: /azure/azure-sql/managed-instance/machine-learning-services-differences
+  - linkListType: how-to-guide
+    links:
+    - text: Azure SQL Managed Instance에서 ONNX 모델을 통한 배포 및 예측 수행
+      url: /azure/azure-sql-edge/deploy-onnx?context=/azure/azure-sql/managed-instance/context/ml-context
+- title: Azure SQL Database Edge
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: SQL Database Edge에서 ONNX를 통한 기계 학습 및 AI
+      url: /azure/sql-database-edge/onnx-overview
+  - linkListType: how-to-guide
+    links:
+    - text: SQL Database Edge에서 ONNX 모델을 사용하여 배포 및 예측 수행
+      url: /azure/sql-database-edge/deploy-onnx
+- title: Azure Data Studio ML 확장
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Azure Data Studio용 Machine Learning 확장은 무엇인가요?
+      url: ../azure-data-studio/machine-learning-extension.md
+  - linkListType: how-to-guide
+    links:
+    - text: 데이터베이스의 패키지 관리
+      url: ../azure-data-studio/machine-learning-extension-manage-packages.md
+    - text: 예측 만들기
+      url: ../azure-data-studio/machine-learning-extension-predictions.md
+    - text: 모델 가져오기 또는 보기
+      url: ../azure-data-studio/machine-learning-extension-import-view-models.md
+- title: SQL Server 빅 데이터 클러스터
   linkLists:
   - linkListType: overview
     links:
@@ -87,7 +123,7 @@ landingContent:
       url: ../big-data-cluster/sparklyr-from-rstudio.md
     - text: SQL Server와 Spark 통합
       url: ../big-data-cluster/spark-mssql-connector.md
-- title: Azure Synapse Analytics의 ML
+- title: Azure Synapse Analytics
   linkLists:
   - linkListType: overview
     links:
@@ -101,13 +137,3 @@ landingContent:
     links:
     - text: Azure Synapse Studio Notebook 만들기, 개발 및 유지 관리
       url: /azure/synapse-analytics/spark/apache-spark-development-using-notebooks
-- title: Azure SQL Database Edge의 ML
-  linkLists:
-  - linkListType: overview
-    links:
-    - text: SQL Database Edge에서 ONNX를 통한 기계 학습 및 AI
-      url: /azure/sql-database-edge/onnx-overview
-  - linkListType: how-to-guide
-    links:
-    - text: SQL Database Edge에서 ONNX 모델을 사용하여 배포 및 예측 수행
-      url: /azure/sql-database-edge/deploy-onnx

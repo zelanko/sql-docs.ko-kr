@@ -1,4 +1,5 @@
 ---
+description: Columnstore 인덱스 - 디자인 지침
 title: Columnstore 인덱스 - 디자인 지침 | Microsoft Docs
 ms.custom: ''
 ms.date: 12/01/2017
@@ -11,19 +12,19 @@ ms.assetid: fc3e22c2-3165-4ac9-87e3-bf27219c820f
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7831c441b553d92e205e4a51cf9d5dc6dbadee82
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: e601f2b89000902647631fda9ee46a90a92e5b39
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007516"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88409179"
 ---
 # <a name="columnstore-indexes---design-guidance"></a>Columnstore 인덱스 - 디자인 지침
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 columnstore 인덱스 디자인을 위한 고급 권장 사항입니다. 소수의 훌륭한 디자인 결정을 통해 columnstore 인덱스에서 제공하고자 하는 높은 데이터 압축 및 쿼리 성능을 얻을 수 있습니다. 
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>전제 조건
 
 이 문서에서는 columnstore 아키텍처 및 용어에 대해 잘 알고 있다고 가정합니다. 자세한 내용은 [Columnstore 인덱스 - 개요](../../relational-databases/indexes/columnstore-indexes-overview.md) 및 [Columnstore 인덱스 아키텍처](../../relational-databases/sql-server-index-design-guide.md#columnstore_index)를 참조하세요.
 
@@ -125,7 +126,7 @@ columnstore 인덱스는 데이터를 관리하고 보관하는 적합한 방법
 
 데이터 크기가 충분히 크지 않은 경우 columnstore 인덱스는 rowstore 인덱스에 사용할 수 있는 것보다 더 적은 파티션으로 최상의 성능을 얻을 수 있습니다. 파티션당 백만 개 이상의 행이 있지 않으면 대부분의 행이 columnstore 압축의 성능 혜택을 받지 못하는 deltastore로 이동할 수 있습니다. 예를 들어 10개의 파티션이 있는 테이블에 100만 개 행을 로드하고 각 파티션에서 100, 000개 행을 받으면 모든 행이 델타 행 그룹으로 이동합니다. 
 
-예제:
+예:
 * 1,000,000개 행을 하나의 파티션 또는 분할되지 않은 테이블에 로드합니다. 1,000,000개 행이 있는 압축된 행 그룹 하나를 받습니다. 높은 데이터 압축 및 빠른 쿼리 성능에 적합합니다.
 * 1,000,000개 행을 10개의 파티션에 균등하게 로드합니다. 각 파티션은 columnstore 압축의 최소 임계값보다 작은 100,000개 행을 받습니다. 결과적으로 columnstore 인덱스에는 각각 100,000개 행이 있는 10개의 델타 행 그룹이 생성됩니다. columnstore에 델타 행 그룹을 적용하는 방법이 있습니다. 그러나 columnstore 인덱스에 행만 있는 경우 압축된 행 그룹이 너무 작아서 최상의 압축 및 쿼리 성능을 제공할 수 없습니다.
 

@@ -1,4 +1,5 @@
 ---
+description: 복제 모니터, 주 페이지
 title: 복제 모니터, 주 페이지 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/07/2017
@@ -13,12 +14,12 @@ ms.assetid: 65ea76db-d809-439d-be64-08b6965aaea1
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: ff52e42beb47e69e3dab9af73573b42029f29710
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: bf9ee6397d9278017511f569be579438647759bf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716745"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88405199"
 ---
 # <a name="replication-monitor-main-page"></a>복제 모니터, 주 페이지
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -36,11 +37,11 @@ ms.locfileid: "85716745"
   
     -   [트랜잭션 복제에 대한 대기 시간 측정 및 연결 유효성 검사](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)  
   
-    -   [Set Thresholds and Warnings in Replication Monitor](../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)  
+    -   [복제 모니터에 임계값 및 경고 설정](../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)  
   
     -   [비관리자의 복제 모니터 사용 허용](../../relational-databases/replication/monitor/allow-non-administrators-to-use-replication-monitor.md)  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [복제 모니터 시작](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
  [복제 모니터링](../../relational-databases/replication/monitor/monitoring-replication.md)  
   

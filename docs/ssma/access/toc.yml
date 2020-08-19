@@ -18,7 +18,7 @@
   href: save-metadata-accesstosql.md
 - name: SQL Server에 연결
   href: connecting-to-sql-server-accesstosql.md
-- name: Access 데이터를 Azure SQL DB로 마이그레이션
+- name: Access 데이터를 Azure SQL Database로 마이그레이션
   href: migrating-access-data-into-sql-server-azure-sql-db-accesstosql.md
 - name: 프로젝트 만들기 및 관리
   href: creating-and-managing-projects-accesstosql.md
@@ -38,7 +38,7 @@
   href: new-project-ssma-accesstosql.md
 - name: SSMA 콘솔의 명령줄 옵션
   href: command-line-options-in-ssma-console-accesstosql.md
-- name: Azure SQL DB에 연결
+- name: Azure SQL Database에 연결
   href: connect-to-azure-sql-db-accesstosql.md
 - name: 평가 보고서
   href: assessment-report-accesstosql.md
@@ -60,7 +60,7 @@
   href: assessing-access-database-objects-for-conversion-accesstosql.md
 - name: 서버 연결 파일 만들기
   href: creating-the-server-connection-files-accesstosql.md
-- name: Access 애플리케이션을 Azure SQL DB에 연결
+- name: Access 애플리케이션을 Azure SQL Database에 연결
   href: linking-access-applications-to-sql-server-azure-sql-db-accesstosql.md
 - name: 변수 값 파일 만들기
   href: creating-variable-value-files-accesstosql.md
@@ -68,7 +68,7 @@
   href: edit-type-mapping-accesstosql.md
 - name: Access 인벤토리 내보내기
   href: exporting-an-access-inventory-accesstosql.md
-- name: Access 데이터베이스를 Azure SQL DB로 마이그레이션
+- name: Access 데이터베이스를 Azure SQL Database로 마이그레이션
   href: migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md
 - name: 원본 및 대상 데이터베이스 매핑
   href: mapping-source-and-target-databases-accesstosql.md
@@ -92,7 +92,7 @@
   href: find-databases-wizard-select-files-accesstosql.md
 - name: 바로 가기 키
   href: shortcut-keys-accesstosql.md
-- name: Azure SQL DB에 연결
+- name: Azure SQL Database에 연결
   href: connecting-to-azure-sql-db-accesstosql.md
 - name: 변환 및 마이그레이션 옵션 설정
   href: setting-conversion-and-migration-options-accesstosql.md
@@ -112,7 +112,7 @@
       href: project-settings-gui-accesstosql.md
     - name: 변환
       href: project-settings-conversion-accesstosql.md
-    - name: Azure SQL DB
+    - name: Azure SQL Database
       href: project-settings-azure-sql-db-accesstosql.md
     - name: Type-Mapping
       href: project-settings-type-mapping-accesstosql.md
