@@ -1,4 +1,5 @@
 ---
+description: 게시 유형
 title: 게시 유형 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ ms.assetid: 1b77a466-479c-4356-b539-a644cec507b5
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: c086fa93025d9c6263f14b7f1c1b0ea865f66c56
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 778d882fba9ebaf38e7e767dfa95f3865124ef87
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720854"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420417"
 ---
 # <a name="publication-type"></a>게시 유형
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

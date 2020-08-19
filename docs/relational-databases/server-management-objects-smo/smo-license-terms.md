@@ -1,4 +1,5 @@
 ---
+description: SMO(SQL Server 공유 관리 개체) 사용 조건
 title: SMO(SQL Server 공유 관리 개체) 사용 조건
 ms.date: 12/15/2019
 ms.prod: sql
@@ -9,11 +10,12 @@ ms.assetid: 8f3d273c-c663-4341-aa2f-5ed8ebcba5b0
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: aa65e16e3a0177bb2e054601bf02c398df74ca15
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 8939bfbec2f309c899a527288de35a3d3ea10d09
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012301"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420197"
 ---
 # <a name="sql-server-shared-management-objects-smo-license-terms"></a>SMO(SQL Server 공유 관리 개체) 사용 조건
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]

@@ -1,4 +1,5 @@
 ---
+description: 보안 enclave를 사용한 Always Encrypted용 키 관리
 title: 보안 enclave를 사용한 Always Encrypted용 키 관리 | Microsoft Docs
 ms.custom: ''
 ms.date: 10/30/2019
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 02d919934b8e918bf142dbcf4af8278a54608dfc
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: 8b70fba2edc9a3ba948afa653acbe79607b8eb51
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411079"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420317"
 ---
 # <a name="manage-keys-for-always-encrypted-with-secure-enclaves"></a>보안 enclave를 사용한 Always Encrypted용 키 관리
 [!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]

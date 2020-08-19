@@ -1,4 +1,5 @@
 ---
+description: 데이터 형식 사용
 title: 데이터 형식 작업 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
@@ -16,11 +17,12 @@ ms.assetid: 1e0e736a-c709-4d89-aeb2-b32dcfd641fa
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 533ea37ebfca2188d1fdf90e804f72d340240573
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 99ac0e206244404d1f4155acdd10c0a35df6e719
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008630"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420307"
 ---
 # <a name="working-with-data-types"></a>데이터 형식 사용
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -59,7 +61,7 @@ ms.locfileid: "86008630"
   
  <xref:Microsoft.SqlServer.Management.Smo.SqlDataType> 열거형에는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 지원되는 모든 데이터 형식 목록이 포함되어 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
 제공된 코드 예제를 사용하려면 애플리케이션을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 [Visual Studio .net에서 Visual C&#35; SMO 프로젝트 만들기](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)를 참조 하세요.  
   
   

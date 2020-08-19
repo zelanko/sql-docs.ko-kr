@@ -1,4 +1,5 @@
 ---
+description: 스냅샷 에이전트
 title: 스냅샷 에이전트 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/07/2017
@@ -15,12 +16,12 @@ ms.assetid: b715e621-2cd5-4a15-8f58-a341aa8ef5e4
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: bcd2ee4bc1f193716b084bf816d27a5107e27a84
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 532917bc211dcc281dd65ebb6229febc953d5805
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85767637"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420387"
 ---
 # <a name="snapshot-agent"></a>스냅샷 에이전트
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -35,13 +36,13 @@ ms.locfileid: "85767637"
  **상태**  
  스냅샷 에이전트의 상태입니다. 다음 목록에서는 가능한 상태 값을 보여 줍니다.  
   
--   Error  
+-   오류  
   
 -   실패한 명령 다시 시도 중  
   
 -   실행 중이 아님  
   
--   Completed  
+-   완료됨  
   
  **Start Time**  
  세션의 시작 시간입니다.  
@@ -49,7 +50,7 @@ ms.locfileid: "85767637"
  **종료 시간**  
  세션의 종료 시간입니다. 에이전트가 중지되지 않은 경우 이 필드는 비어 있습니다.  
   
- **Duration**  
+ **기간**  
  이 세션에서 스냅샷 에이전트가 실행된 시간입니다. 에이전트가 현재 실행되고 있는 경우 이 시간은 경과된 시간을 나타내고 에이전트 세션이 종료된 경우에는 총 세션 시간을 나타냅니다.  
   
  **오류 메시지**  

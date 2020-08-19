@@ -1,4 +1,5 @@
 ---
+description: 권한 부여, 취소 및 거부
 title: 권한 부여, 취소 및 거부
 ms.custom: seo-dt-2019
 ms.date: 08/06/2017
@@ -16,11 +17,12 @@ ms.assetid: b0eb0f60-3e56-4880-b645-138832b38a1e
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4516d94482e70fe704906dec6bd6ba3df36e108c
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: e9d8e391f69678ada618f50ab64d28513937e2ad
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001222"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420227"
 ---
 # <a name="granting-revoking-and-denying-permissions"></a>권한 부여, 취소 및 거부
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]

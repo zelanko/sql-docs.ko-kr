@@ -1,4 +1,5 @@
 ---
+description: 트리거 생성, 변경 및 제거
 title: 트리거 생성, 변경 및 제거
 ms.custom: seo-dt-2019
 ms.date: 08/06/2017
@@ -13,11 +14,12 @@ ms.assetid: 8ddbe23b-6e31-4f8e-8a70-17bd5072413e
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d173a916be37044718c962f84d1531a2c39cfa9b
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: f21a3d053513beaa131d4a7e781ee548f460a940
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001265"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420207"
 ---
 # <a name="creating-altering-and-removing-triggers"></a>트리거 생성, 변경 및 제거
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]

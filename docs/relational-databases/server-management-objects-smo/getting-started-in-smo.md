@@ -1,4 +1,5 @@
 ---
+description: SMO 시작
 title: SMO 시작 하기 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
@@ -14,11 +15,12 @@ ms.assetid: ecc62702-c0d5-4180-b3c2-16ec5030caa7
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 14c874cace96bddb95fbc650e3d4193800b5b8d5
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: c0f7d2983149cde889f857e61e17a7e7017eb17e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008612"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420217"
 ---
 # <a name="getting-started-in-smo"></a>SMO 시작
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]

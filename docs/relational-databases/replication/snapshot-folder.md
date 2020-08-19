@@ -1,4 +1,5 @@
 ---
+description: 스냅샷 폴더
 title: 스냅샷 폴더 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ ms.assetid: 3eb1b73f-ddb3-4d09-be6e-811c414698e9
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 21fe129f15022532e9e7c8613159cfc7617fd6e4
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: c754399380dfac4b267e4ff9c816ef2dc4e9f81f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87864870"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420367"
 ---
 # <a name="snapshot-folder"></a>스냅샷 폴더
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

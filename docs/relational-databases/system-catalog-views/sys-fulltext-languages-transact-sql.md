@@ -1,4 +1,5 @@
 ---
+description: sys.fulltext_languages(Transact-SQL)
 title: sys. fulltext_languages (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -21,12 +22,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 545b729a5d89a258c38d7eb180ee2f3400ebd67c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ab4f793c243671edeaf2684d40b87c40cddaf8cb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85764707"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420167"
 ---
 # <a name="sysfulltext_languages-transact-sql"></a>sys.fulltext_languages(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -41,7 +42,7 @@ ms.locfileid: "85764707"
 ## <a name="values-returned-for-default-languages"></a>기본 언어에 대해 반환되는 값  
  다음 표에서는 기본적으로 단어 분리기가 등록되는 언어의 값을 보여 줍니다.  
   
-|언어|LCID|  
+|Language|LCID|  
 |--------------|----------|  
 |아랍어|1025|  
 |벵골어(인도)|1093|  
@@ -91,7 +92,7 @@ ms.locfileid: "85764707"
 |타밀어|1097|  
 |텔루구어|1098|  
 |태국어|1054|  
-|중국어(번체)|1028|  
+|중국어 번체|1028|  
 |**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상<br /><br /> 터키어|1055|  
 |우크라이나어|1058|  
 |우르두어|1056|  

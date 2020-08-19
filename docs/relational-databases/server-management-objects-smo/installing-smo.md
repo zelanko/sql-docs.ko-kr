@@ -1,4 +1,5 @@
 ---
+description: SMO 설치
 title: SMO 설치 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
@@ -15,11 +16,12 @@ ms.assetid: 140e9971-4940-4866-89b9-5cec938e2a16
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1a0c23d91785a453bcbf7857211e524b15a4ec3f
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 1b98ce67e61c1fe6f9370508d34cecc8d9289a44
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008591"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420267"
 ---
 # <a name="installing-smo"></a>SMO 설치
 
@@ -42,5 +44,5 @@ Nuget 패키지 설치 및 사용에 대 한 지침과 예제는 [nuget 빠른 �
   
 ## <a name="system-requirements"></a>시스템 요구 사항
   
- SMO를 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 실행 하려면 4.0 또는 .Net Core 2.0이 필요 하므로이를 사용 하는 응용 프로그램은 클라이언트 컴퓨터에 해당 버전 이상이 설치 되어 있는지 확인 해야 합니다. NetFx SMO 라이브러리와 함께 설치 되는 일부 네이티브 이진 파일에는 VC 2013 runtime도 설치 해야 합니다. 해당 런타임은 패키지에 포함 되지 않습니다. 다음에서 대상 아키텍처에 적절 한 재배포 가능 패키지를 다운로드할 수 있습니다.https://www.microsoft.com/download/details.aspx?id=40784
+ SMO를 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 실행 하려면 4.0 또는 .Net Core 2.0이 필요 하므로이를 사용 하는 응용 프로그램은 클라이언트 컴퓨터에 해당 버전 이상이 설치 되어 있는지 확인 해야 합니다. NetFx SMO 라이브러리와 함께 설치 되는 일부 네이티브 이진 파일에는 VC 2013 runtime도 설치 해야 합니다. 해당 런타임은 패키지에 포함 되지 않습니다. 다음에서 대상 아키텍처에 적절 한 재배포 가능 패키지를 다운로드할 수 있습니다. https://www.microsoft.com/download/details.aspx?id=40784
   
