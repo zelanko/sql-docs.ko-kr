@@ -1,4 +1,5 @@
 ---
+description: sp_enum_login_for_proxy(Transact-SQL)
 title: sp_enum_login_for_proxy (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 62a75019-248a-44c8-a5cc-c79f55ea3acf
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: cd65937894956ff008a08ea6f15222d6d020ba2e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 7707843979bd0c741ade8e4ae6759d265eb13d06
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891951"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486063"
 ---
 # <a name="sp_enum_login_for_proxy-transact-sql"></a>sp_enum_login_for_proxy(Transact-SQL)
 
@@ -44,9 +45,9 @@ sp_enum_login_for_proxy
 ## <a name="arguments"></a>인수  
 `[ @name = ] 'name'`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]프록시를 나열할 보안 주체, 로그인, 서버 역할 또는 **msdb** 데이터베이스 역할의 이름입니다. 이름은 **nvarchar (256)** 이며 기본값은 NULL입니다.  
   
-`[ @proxy_id = ] id`정보를 나열할 프록시의 프록시 id입니다. *Proxy_id* 은 **int**이며 기본값은 NULL입니다. *Id* 또는 *proxy_name* 지정할 수 있습니다.  
+`[ @proxy_id = ] id` 정보를 나열할 프록시의 프록시 id입니다. *Proxy_id* 은 **int**이며 기본값은 NULL입니다. *Id* 또는 *proxy_name* 지정할 수 있습니다.  
   
-`[ @proxy_name = ] 'proxy_name'`정보를 나열할 프록시의 이름입니다. *Proxy_name* 는 **sysname**이며 기본값은 NULL입니다. *Id* 또는 *proxy_name* 지정할 수 있습니다.  
+`[ @proxy_name = ] 'proxy_name'` 정보를 나열할 프록시의 이름입니다. *Proxy_name* 는 **sysname**이며 기본값은 NULL입니다. *Id* 또는 *proxy_name* 지정할 수 있습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -73,7 +74,7 @@ sp_enum_login_for_proxy
 ## <a name="permissions"></a>사용 권한  
  이 프로시저에 대 한 실행 권한은 기본적으로 **sysadmin** 고정 서버 역할의 멤버로 사용 됩니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-listing-all-associations"></a>A. 모든 연결 나열  
  다음 예에서는 현재 인스턴스의 로그인과 프록시 간에 설정된 모든 사용 권한을 나열합니다.  

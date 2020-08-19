@@ -1,4 +1,5 @@
 ---
+description: ID 열 관리
 title: ID 열 관리 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ ms.assetid: 98892836-cf63-494a-bd5d-6577d9810ddf
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 4166c7320d12eda71b0c7594532075f0f33d2c6b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 7d0a169e6b160bc865c5ba3c115803fb690cbe68
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918484"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423487"
 ---
 # <a name="manage-identity-columns"></a>ID 열 관리
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]

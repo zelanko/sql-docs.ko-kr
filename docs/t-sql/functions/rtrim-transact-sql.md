@@ -1,4 +1,5 @@
 ---
+description: RTRIM(Transact-SQL)
 title: RTRIM(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/05/2017
@@ -21,12 +22,12 @@ ms.assetid: 52fd6e8d-650c-4f66-abcf-67765aa5aa83
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fc4e974d05305fcb5598f7dce7c98992073d5611
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: c32ad6071198cdb37f4f7c30310f6bc75400b2be
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111871"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422617"
 ---
 # <a name="rtrim-transact-sql"></a>RTRIM(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -52,7 +53,7 @@ RTRIM ( character_expression )
 ## <a name="return-types"></a>반환 형식  
  **varchar** 또는 **nvarchar**  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-simple-example"></a>A. 간단한 예  
  다음 예는 문장 끝에 공백이 있는 문자열을 받아 문장 끝에 공백이 없는 텍스트를 반환합니다.  
@@ -65,7 +66,7 @@ SELECT RTRIM('Removes trailing spaces.   ');
   
   `Removes trailing spaces.`  
   
-### <a name="b-simple-example"></a>2\. 간단한 예  
+### <a name="b-simple-example"></a>2. 간단한 예  
  다음 예에서는 `RTRIM`을 사용하여 후행 공백을 제거하는 방법을 보여 줍니다. 여기에서는 해당 공백이 제거되었음을 보여 주기 위해 첫 번째 문자열에 다른 문자열이 연결되어 있습니다.  
   
 ```sql  

@@ -1,4 +1,5 @@
 ---
+description: 변경 집합 만들기(Master Data Services)
 title: 변경 집합 만들기
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: cfad6f1c-9125-4896-b5f5-a4b9f9593cc4
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: db37dd8b4eed5c887cfceceb382fe57aa0d2fc33
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: ea6b6f0da9dc2660b91cd6432331256854a1d80c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812448"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495080"
 ---
 # <a name="create-a-changeset-master-data-services"></a>변경 집합 만들기(Master Data Services)
 
@@ -23,7 +24,7 @@ ms.locfileid: "85812448"
 
   변경 집합은 마스터 데이터에 대해 보류 중인 변경 내용의 컬렉션입니다. 엔터티 변경 시 승인이 필요한 경우 보류 중인 변경 내용을 변경 집합에 저장한 다음 관리자의 승인을 받기 위해 제출해야 합니다.  
   
-## <a name="prerequisites"></a>전제 조건  
+## <a name="prerequisites"></a>사전 요구 사항  
   
 -   탐색기 기능 영역에 액세스할 수 있는 권한이 있어야 합니다. 자세한 내용은 [기능 영역 권한 &#40;MDS(Master Data Services)](../master-data-services/functional-area-permissions-master-data-services.md) 를 참조 하세요&#41;  
   
@@ -59,7 +60,7 @@ ms.locfileid: "85812448"
  [변경 집합 적용 및 업데이트&#40;Master Data Services&#41;](../master-data-services/apply-and-update-a-changeset-master-data-services.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [MDS(Master Data Services)&#41;&#40;변경 집합 커밋 또는 제출](../master-data-services/commit-or-submit-a-changeset-master-data-services.md)   
+ [MDS(Master Data Services)&#41;&#40;변경 집합 커밋 또는 제출 ](../master-data-services/commit-or-submit-a-changeset-master-data-services.md)   
  [변경 집합 승인 또는 거부&#40;Master Data Services&#41;](../master-data-services/approve-or-reject-a-changeset-master-data-services.md)  
   
   

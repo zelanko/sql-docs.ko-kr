@@ -1,4 +1,5 @@
 ---
+description: ErrorValueEnum
 title: ErrorValueEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9469ba3a-5e4f-4a10-bbb8-a51a6c9660ea
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e0280faf3399c24015fd07ec2e62c688a3d8e799
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: f3dfcb5e806ad67a17a5899a4b930eedab0928f1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82755223"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443935"
 ---
 # <a name="errorvalueenum"></a>ErrorValueEnum
 ADO 런타임 오류의 유형을 지정 합니다.  

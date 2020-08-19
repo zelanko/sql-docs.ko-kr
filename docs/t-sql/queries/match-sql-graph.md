@@ -1,4 +1,5 @@
 ---
+description: MATCH (Transact-SQL)
 title: MATCH (SQL Graph) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/26/2019
@@ -19,12 +20,12 @@ helpviewer_keywords:
 author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ce954aaf4bab45b359bd57fea9af7b6e94933124
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 8a98fd2557655672389f5372009f3cf0adaa3ba9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555588"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459145"
 ---
 # <a name="match-transact-sql"></a>MATCH (Transact-SQL)
 [!INCLUDE[SQL Server 2017](../../includes/applies-to-version/sqlserver2017.md)]
@@ -142,7 +143,7 @@ MATCH 내 에지 이름을 반복할 수 없습니다.
 에지는 어느 방향이든 가리킬 수 있지만 명시적인 방향이어야 합니다.  
 OR 또는 NOT 연산자는 MATCH 패턴에서 지원되지 않습니다. MATCH는 WHERE 절에서 AND를 사용하여 다른 식과 결합할 수 있습니다. 그러나 OR나 NOT을 사용한 다른 식과의 결합은 지원되지 않습니다. 
 
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
 ### <a name="a--find-a-friend"></a>A.  친구 찾기 
  다음 예에서는 Person 노드 테이블 및 친구 Edge 테이블을 만들고 일부 데이터를 삽입한 다음, MATCH를 사용하여 그래프에 있는 사람인 Alice라는 친구를 찾습니다.
 

@@ -1,4 +1,5 @@
 ---
+description: 쿼리
 title: 쿼리 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -13,12 +14,12 @@ ms.assetid: 5ff02a32-e8d3-479c-ae8b-07581e41f5f8
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 008ea4f32b1cb159c67f77e449f1828397b628e8
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 921d626eaacb0cdfd6f14988cd41e39efc35339b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394742"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459136"
 ---
 # <a name="queries"></a>쿼리
 
@@ -81,7 +82,7 @@ ms.locfileid: "87394742"
 |[OUTPUT 절&#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md)|DELETE, INSERT, MERGE, UPDATE|  
 |[검색 조건&#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md)|DELETE, MERGE, SELECT, UPDATE|  
 |[테이블 값 생성자 &#40;Transact-SQL&#41;](../../t-sql/queries/table-value-constructor-transact-sql.md)|FROM, INSERT, MERGE|  
-|[TOP&#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md)|DELETE, INSERT, MERGE, SELECT, UPDATE|  
+|[TOP&#40;Transact SQL&#41;](../../t-sql/queries/top-transact-sql.md)|DELETE, INSERT, MERGE, SELECT, UPDATE|  
 |[WHERE&#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)|DELETE, SELECT, UPDATE, MATCH|  
 |[WITH common_table_expression&#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md)|DELETE, INSERT, MERGE, SELECT, UPDATE|  
 | &nbsp; | &nbsp; |

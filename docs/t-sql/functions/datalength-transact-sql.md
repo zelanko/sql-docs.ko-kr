@@ -1,4 +1,5 @@
 ---
+description: DATALENGTH(Transact-SQL)
 title: DATALENGTH(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/20/2019
@@ -22,12 +23,12 @@ ms.assetid: 00f377f1-cc3e-4eac-be47-b3e3f80267c9
 author: pmasl
 ms.author: pelopes
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ac8f7372833d70a46e5ea3cb343641b02aa05120
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 2bb43434dd528a7937f854ce287953f748d50076
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113085"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422817"
 ---
 # <a name="datalength-transact-sql"></a>DATALENGTH(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -52,7 +53,7 @@ DATALENGTH ( expression )
 임의 데이터 형식의 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다.
   
 ## <a name="return-types"></a>반환 형식
-**expression**의 데이터 형식이 *nvarchar(max)* , **varbinary(max)** 또는 **varchar(max)** 이면 **bigint**이고, 그렇지 않으면 **int**입니다.
+*expression*의 데이터 형식이 **nvarchar(max)**, **varbinary(max)** 또는 **varchar(max)** 이면 **bigint**이고, 그렇지 않으면 **int**입니다.
   
 ## <a name="remarks"></a>설명  
 `DATALENGTH`는 다음과 같이 가변 길이 데이터를 저장할 수 있는 데이터 형식과 함께 사용할 때 매우 유용합니다.

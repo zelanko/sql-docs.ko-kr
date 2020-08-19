@@ -1,4 +1,5 @@
 ---
+description: 파생 계층 삭제(Master Data Services)
 title: 파생 계층 삭제
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f46d660e-47f2-47ca-9372-1b5931540beb
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 93e9a09dd93fc8da3d62840fd2b7463c48c4ece1
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: b86680615b5c823d5e1db08860ddbdd5ff52bd80
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811584"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495062"
 ---
 # <a name="delete-a-derived-hierarchy-master-data-services"></a>파생 계층 삭제(Master Data Services)
 
@@ -29,7 +30,7 @@ ms.locfileid: "85811584"
 > [!NOTE]  
 >  파생 계층을 삭제해도 해당 계층의 기준이 되는 특성 관계에는 아무 영향이 없습니다.  
   
-## <a name="prerequisites"></a>전제 조건  
+## <a name="prerequisites"></a>사전 요구 사항  
  이 절차를 수행하려면  
   
 -   **시스템 관리** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  

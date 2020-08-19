@@ -1,4 +1,5 @@
 ---
+description: XACT_STATE(Transact-SQL)
 title: XACT_STATE(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -23,12 +24,12 @@ ms.assetid: e9300827-e793-4eb6-9042-ffa0204aeb50
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dc7a0495a9289d538e71397e96b9393e91c542e0
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: e871be5e42ff16f16b5f13152cc20fd18bb8dbcb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112580"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422547"
 ---
 # <a name="xact_state-transact-sql"></a>XACT_STATE(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -39,7 +40,7 @@ ms.locfileid: "87112580"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```syntaxsql  
 XACT_STATE()  
 ```  
 
@@ -62,7 +63,7 @@ XACT_STATE()
 ## <a name="examples"></a>예  
  다음 예에서는 `XACT_STATE` 구문의 `CATCH` 블록에서 `TRY...CATCH`를 사용하여 트랜잭션을 커밋 또는 롤백하는지를 확인합니다. `SET XACT_ABORT`가 `ON`으로 설정되어 있으므로 제약 조건 위반 오류가 발생하면 트랜잭션은 커밋할 수 없는 상태가 됩니다.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
   

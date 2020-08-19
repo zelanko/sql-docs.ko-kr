@@ -1,4 +1,5 @@
 ---
+description: MDX 데이터 정의 - CREATE SUBCUBE
 title: CREATE 하위 큐브 문 (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 1034d96ce0d683d38139636d53471d23581807a1
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: 24f8ade9255543fcb1d2c23b7959a5def93b21dd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87362803"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477025"
 ---
 # <a name="mdx-data-definition---create-subcube"></a>MDX 데이터 정의 - CREATE SUBCUBE
 
@@ -44,9 +45,9 @@ CREATE SUBCUBE Cube_Name AS Select_Statement
 |-----------------------------|-----------------------|---------------|----------------------------|  
 |Time.Year.All|예|{Time.Year.2003}|변경 내용 없음|  
 |시간. 연도. [1997]|예|{Time.Year.2003}|Time.Year.All|  
-|시간. 연도. [1997]|아니요|{Time.Year.2003}|시간. 연도. [2003]|  
+|시간. 연도. [1997]|예|{Time.Year.2003}|시간. 연도. [2003]|  
 |시간. 연도. [1997]|예|{Time.Year.2003, Time.Year.2004}|Time.Year.All|  
-|시간. 연도. [1997]|아니요|{Time.Year.2003, Time.Year.2004}|Time.Year.[2003] 또는<br /><br /> Time.Year.[2004]|  
+|시간. 연도. [1997]|예|{Time.Year.2003, Time.Year.2004}|Time.Year.[2003] 또는<br /><br /> Time.Year.[2004]|  
   
  [All] 멤버는 항상 하위 큐브에 존재합니다.  
   
@@ -89,7 +90,7 @@ SELECT [Geography].[Country].[Country].MEMBERS ON 0
   
  반환되는 결과는 다음과 같습니다.  
   
-|비즈니스 유형 + 범주|All Products|액세서리|Clothing|  
+|비즈니스 유형 + 범주|All Products|Accessories|Clothing|  
 |-|-|-|-|  
 |All Resellers|$2031079.39|$506,172.45|$1,524,906.93|  
 |Value Added Reseller|$767388.52|$175,002.81|$592,385.71|  
@@ -117,7 +118,7 @@ SELECT [Geography].[Country].[Country].MEMBERS ON 0
   
  다음과 같이 다른 결과가 반환됩니다.  
   
-|비즈니스 유형 + 범주|All Products|액세서리|Clothing|  
+|비즈니스 유형 + 범주|All Products|Accessories|Clothing|  
 |-|-|-|-|  
 |All Resellers|$80,450,596.98|$571,297.93|$1,777,840.84|  
 |Value Added Reseller|$34,967,517.33|$175,002.81|$592,385.71|  

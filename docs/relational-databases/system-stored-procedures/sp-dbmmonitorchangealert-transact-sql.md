@@ -1,4 +1,5 @@
 ---
+description: sp_dbmmonitorchangealert(Transact-SQL)
 title: sp_dbmmonitorchangealert (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 1b29f82b-9cf8-4539-8d5c-9a1024db8a50
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c5c520ff4b3e54f027f6afa5ca203c412f3f6291
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f4cfeffd28455b08b6ad3959f538f2eff95c6eb0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85866616"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486166"
 ---
 # <a name="sp_dbmmonitorchangealert-transact-sql"></a>sp_dbmmonitorchangealert(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -78,7 +79,7 @@ sp_dbmmonitorchangealert database_name
 >  보존 기간은 항상 사용됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
- 없음  
+ None  
   
 ## <a name="result-sets"></a>결과 집합  
  None  
@@ -94,7 +95,7 @@ sp_dbmmonitorchangealert database_name
 |1|보내지 않은 가장 오래된 트랜잭션|30분|예|  
 |2|보내지 않은 로그|1만 KB|예|  
 |3|복원되지 않은 로그|1만 KB|예|  
-|4|미러 커밋 오버헤드|1,000밀리초|아니요|  
+|4|미러 커밋 오버헤드|1,000밀리초|예|  
 |5|보존 기간|8시간|예|  
   
 ```  
@@ -106,7 +107,7 @@ EXEC sp_dbmmonitorchangealert AdventureWorks2012, 5, 8, 1 ;
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [데이터베이스 미러링 &#40;SQL Server&#41;모니터링](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
+ [데이터베이스 미러링 모니터링&#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
  [Transact-sql&#41;sp_dbmmonitorhelpalert &#40;](../../relational-databases/system-stored-procedures/sp-dbmmonitorhelpalert-transact-sql.md)   
  [sp_dbmmonitordropalert&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitordropalert-transact-sql.md)  
   

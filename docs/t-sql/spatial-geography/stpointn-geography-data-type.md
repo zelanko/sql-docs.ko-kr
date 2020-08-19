@@ -1,4 +1,5 @@
 ---
+description: STPointN(geography 데이터 형식)
 title: STPointN (geography Data Type) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 47670feb-b9e0-4b4b-af83-b9bba7da66ac
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 4bc3ce2749552ee5acca1ca3f2b50ebf007599de
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 00604f3066c746057e1ffaaefc0cffb00244d57b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86552465"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459005"
 ---
 # <a name="stpointn-geography-data-type"></a>STPointN(geography 데이터 형식)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -58,7 +59,7 @@ ms.locfileid: "86552465"
   
  인스턴스에 있는 점 개수보다 큰 값을 사용하여 이 메서드를 호출하면 이 메서드는 Null을 반환합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `LineString` 인스턴스를 만들고 `STPointN()`을 사용하여 인스턴스의 설명에 있는 두 번째 점을 검색합니다.  
   
 ```  
@@ -68,6 +69,6 @@ SELECT @g.STPointN(2).ToString();
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [지리 인스턴스의 OGC 메서드](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
+ [Geography 인스턴스의 OGC 메서드](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

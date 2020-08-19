@@ -1,4 +1,5 @@
 ---
+description: Execute 메서드(ADO 명령)
 title: Execute 메서드 (ADO 명령) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: f84a5ff3-0528-4ad7-9bea-9a15103378dd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3f595938fba37e2529f95b763d18dd91731c0b39
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: b33ada4ce6ac53c1caafbec80c19d1fd31deb6ab
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82755102"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443895"
 ---
 # <a name="execute-method-ado-command"></a>Execute 메서드(ADO 명령)
 [명령 개체](../../../ado/reference/ado-api/command-object-ado.md)의 [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) 또는 [commandstream](../../../ado/reference/ado-api/commandstream-property-ado.md) 속성에 지정 된 쿼리, SQL 문 또는 저장 프로시저를 실행 합니다.  
@@ -43,7 +44,7 @@ Set recordset = command.Execute( RecordsAffected, Parameters, Options )
  *매개 변수*  
  (선택 사항) **CommandText** 또는 **commandstream**에 지정 된 입력 문자열 또는 스트림과 함께 사용 되는 매개 변수 값의 **Variant** 배열입니다. 출력 매개 변수는이 인수에 전달 될 때 올바른 값을 반환 하지 않습니다.  
   
- *Options*  
+ *옵션*  
  (선택 사항) 공급자가 [명령](../../../ado/reference/ado-api/command-object-ado.md) 개체의 [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) 또는 [commandstream](../../../ado/reference/ado-api/commandstream-property-ado.md) 속성을 평가 하는 방법을 나타내는 **Long** 값입니다. [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) 및/또는 [executevalue 열거형](../../../ado/reference/ado-api/executeoptionenum.md) 값을 사용 하 여 만든 비트 마스크 값일 수 있습니다. 예를 들어 ADO에서 **CommandText** 속성의 값을 텍스트로 평가 하 고 명령 텍스트가 실행 될 때 생성 될 수 있는 레코드를 반환 하지 않아야 함을 나타내려면 **adcmdtext** 및 **adExecuteNoRecords** 를 조합 하 여 사용할 수 있습니다.  
   
 > [!NOTE]

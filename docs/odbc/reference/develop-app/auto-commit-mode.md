@@ -1,4 +1,5 @@
 ---
+description: 자동 커밋 모드
 title: 자동 커밋 모드 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: c8de5b60-d147-492d-b601-2eeae8511d00
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6f19053eec7a48eba7a51425b01744f3acd10015
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: af4b532a2163f0c30a3bdb792cfada6bdf806c43
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81285113"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476895"
 ---
 # <a name="auto-commit-mode"></a>자동 커밋 모드
 *자동 커밋 모드에서* 모든 데이터베이스 작업은 수행할 때 커밋된 트랜잭션입니다. 이 모드는 단일 SQL 문으로 구성 된 많은 실제 트랜잭션에 적합 합니다. 이러한 트랜잭션의 완료를 구분 하거나 지정 하는 것은 필요 하지 않습니다. 트랜잭션 지원이 없는 데이터베이스에서 자동 커밋 모드는 유일 하 게 지원 되는 모드입니다. 이러한 데이터베이스에서 문은 실행 될 때 커밋되고 롤백할 방법이 없습니다. 따라서 항상 자동 커밋 모드가 됩니다.  

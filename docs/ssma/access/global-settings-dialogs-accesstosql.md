@@ -1,4 +1,5 @@
 ---
+description: 전역 설정 (대화 상자) (AccessToSQL)
 title: 전역 설정 (대화 상자) (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 6c2204f2-d49e-49ba-9c0f-f14cf07fa561
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 5424bb29fa88b36e1cd12dd915586080d99d2e47
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 43158757be3b64cbd761e8fec8bc878dae4f68c3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87938443"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423027"
 ---
 # <a name="global-settings-dialogs-accesstosql"></a>전역 설정 (대화 상자) (AccessToSQL)
 **전역 설정** 대화 상자의 대화 상자 페이지를 사용 하 여 ssma의 기본 사용자 동작 및 경고 설정을 지정할 수 있습니다.  

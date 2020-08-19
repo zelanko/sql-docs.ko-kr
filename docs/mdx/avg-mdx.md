@@ -1,4 +1,5 @@
 ---
+description: Avg(MDX)
 title: Avg (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: aa8817e35a589def4631bd455637d05fc62d3a0f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e5cac19b597139274502d455fb5f8f4e5087c8a2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68017016"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477065"
 ---
 # <a name="avg-mdx"></a>Avg(MDX)
 
@@ -49,7 +50,7 @@ Avg( Set_Expression [ , Numeric_Expression ] )
   
  빈 셀을 강제로 포함 하려면 응용 프로그램이 [CoalesceEmpty](../mdx/coalesceempty-mdx.md) 함수를 사용 하거나 빈 값에 대해 0 값을 제공 하는 유효한 *Numeric_Expression* 를 지정 해야 합니다. 빈 셀에 대한 자세한 내용은 OLE DB 설명서를 참조하십시오.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 지정된 집합의 측정값 평균을 반환합니다. 측정값은 지정된 집합 멤버의 기본 측정값이나 지정된 측정값일 수 있습니다.  
   
  `WITH SET [NW Region] AS`  
@@ -80,7 +81,7 @@ Avg( Set_Expression [ , Numeric_Expression ] )
   
  `WHERE ([Geography].[Geography].[NW Region Avg])`  
   
- 다음 예에서는 **놀이 Works** 큐브에서 2003 회계 연도의 `Measures.[Gross Profit Margin]` 각 월 일에 계산 된 측정값의 일일 평균을 반환 합니다. **Avg** 함수는 `[Ship Date].[Fiscal Time]` 계층의 각 월에 포함 된 일 집합의 평균을 계산 합니다. 첫 번째 버전의 계산에서는 평균에서 매출을 기록하지 않은 일을 제외하는 기본 Avg 동작을 보여 주고, 두 번째 버전에서는 평균에 매출이 없는 일을 포함하는 방법을 보여 줍니다.  
+ 다음 예에서는 `Measures.[Gross Profit Margin]` **놀이 Works** 큐브에서 2003 회계 연도의 각 월 일에 계산 된 측정값의 일일 평균을 반환 합니다. **Avg** 함수는 계층의 각 월에 포함 된 일 집합의 평균을 계산 합니다 `[Ship Date].[Fiscal Time]` . 첫 번째 버전의 계산에서는 평균에서 매출을 기록하지 않은 일을 제외하는 기본 Avg 동작을 보여 주고, 두 번째 버전에서는 평균에 매출이 없는 일을 포함하는 방법을 보여 줍니다.  
   
  `WITH MEMBER Measures.[Avg Gross Profit Margin] AS`  
   
@@ -126,7 +127,7 @@ Avg( Set_Expression [ , Numeric_Expression ] )
   
  `WHERE([Product].[Product Categories].[Product].&[344])`  
   
- 다음 예에서는 **놀이 Works** 큐브에서 2003 회계 연도의 `Measures.[Gross Profit Margin]` 각 반기 일자에 대해 계산 된 측정값의 일일 평균을 반환 합니다.  
+ 다음 예에서는 `Measures.[Gross Profit Margin]` **놀이 Works** 큐브에서 2003 회계 연도의 각 반기 일자에 대해 계산 된 측정값의 일일 평균을 반환 합니다.  
   
 ```  
 WITH MEMBER Measures.[Avg Gross Profit Margin] AS  

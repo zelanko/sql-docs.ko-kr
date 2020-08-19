@@ -1,4 +1,5 @@
 ---
+description: 데이터를 C에서 SQL 데이터 형식으로 변환
 title: 데이터를 C에서 SQL 데이터 형식으로 변환 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: ee0afe78-b58f-4d34-ad9b-616bb23653bd
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8fb707e77df7d793277d4a23146adc980eede6fd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 56af1e376edffa0268a2e27c840f035e5cda9763
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304662"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429715"
 ---
 # <a name="converting-data-from-c-to-sql-data-types"></a>데이터를 C에서 SQL 데이터 형식으로 변환
 응용 프로그램에서 **Sqlexecute** 또는 **sqlexecdirect**를 호출 하면 드라이버는 응용 프로그램의 저장소 위치에서 **SQLBindParameter** 로 바인딩된 모든 매개 변수에 대 한 데이터를 검색 합니다. 응용 프로그램이 **SQLSetPos**를 호출 하면 드라이버는 **SQLBindCol**에 바인딩된 열에서 업데이트 또는 추가 작업에 대 한 데이터를 검색 합니다. 실행 시 데이터 매개 변수의 경우 응용 프로그램은 **Sqlputdata**를 사용 하 여 매개 변수 데이터를 보냅니다. 필요한 경우 드라이버는 **SQLBindParameter** 의 *ValueType* 인수에 지정 된 데이터를 **SQLBindParameter**의 *ParameterType* 인수에 지정 된 데이터 형식으로 변환한 다음 데이터를 데이터 원본으로 보냅니다.  
@@ -40,7 +41,7 @@ ms.locfileid: "81304662"
   
  **SQLBindParameter** 의 *ParameterType* 인수에 지정 된 C 데이터 형식에 대 한 테이블에 표시 되지 않는 ODBC SQL 데이터 형식의 식별자가 포함 된 경우 **SQLBindParameter** 는 SQLSTATE 07006 (제한 된 데이터 형식 특성 위반)을 반환 합니다. *ParameterType* 인수에 드라이버별 식별자가 포함 되어 있고 드라이버가 특정 ODBC C 데이터 형식에서 해당 드라이버별 SQL 데이터 형식으로의 변환을 지원 하지 않는 경우 **SQLBINDPARAMETER** 는 SQLSTATE HYC00 (선택적 기능이 구현 되지 않음)를 반환 합니다.  
   
- **SQLBindParameter** 에 지정 된 *Parametervalueptr* 및 *StrLen_or_IndPtr* 인수가 모두 NULL 포인터인 경우이 함수는 SQLSTATE HY009 (null 포인터 사용이 잘못 되었습니다)를 반환 합니다. 테이블에는 표시 되지 않지만 응용 프로그램은 **SQLBindParameter** 의 *StrLen_or_IndPtr* 인수가 가리키는 길이/표시 버퍼의 값을 설정 하거나 **sqlputdata** 의 *STRLEN_OR_INDPTR* 인수 값을 SQL_NULL_DATA 하 여 NULL SQL 데이터 값을 지정 합니다. *StrLen_or_IndPtr* 인수는 apd의 SQL_DESC_OCTET_LENGTH_PTR 필드에 해당 합니다. 응용 프로그램은 이러한 값을 SQL_NTS 설정 하 여 \* **sqlputdata** 에서 **SQLBindParameter** 또는 \* *dataptr* 의 *parametervalueptr* 에 있는 값 (apd의 SQL_DESC_DATA_PTR 필드가 가리키는)이 null로 끝나는 문자열 임을 지정 합니다.  
+ **SQLBindParameter** 에 지정 된 *Parametervalueptr* 및 *StrLen_or_IndPtr* 인수가 모두 NULL 포인터인 경우이 함수는 SQLSTATE HY009 (null 포인터 사용이 잘못 되었습니다)를 반환 합니다. 테이블에는 표시 되지 않지만 응용 프로그램은 **SQLBindParameter** 의 *StrLen_or_IndPtr* 인수가 가리키는 길이/표시 버퍼의 값을 설정 하거나 **sqlputdata** 의 *STRLEN_OR_INDPTR* 인수 값을 SQL_NULL_DATA 하 여 NULL SQL 데이터 값을 지정 합니다. *StrLen_or_IndPtr* 인수는 apd의 SQL_DESC_OCTET_LENGTH_PTR 필드에 해당 합니다. 응용 프로그램은 이러한 값을 SQL_NTS 설정 하 여 \* Sqlputdata에서 **SQLBindParameter** 또는 dataptr의 *parametervalueptr* 에 있는 값 \* *DataPtr* (apd의 SQL_DESC_DATA_PTR 필드가 가리키는)이 null로 끝나는 문자열 **SQLPutData** 임을 지정 합니다.  
   
  테이블에 사용 되는 용어는 다음과 같습니다.  
   
@@ -53,7 +54,7 @@ ms.locfileid: "81304662"
 -   **자릿수** -빼기 기호, 소수점 및 지수가 포함 된 숫자를 나타내는 데 사용 되는 문자 수입니다 (필요한 경우).  
   
 -   **단어**   
-     ***기울임꼴*** -SQL 문법의 요소입니다. 문법 요소의 구문은 [부록 C: SQL 문법](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)을 참조 하세요.  
+     ***기울임꼴***  -SQL 문법의 요소입니다. 문법 요소의 구문은 [부록 C: SQL 문법](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)을 참조 하세요.  
   
  이 섹션에서는 다음 항목을 다룹니다.  
   

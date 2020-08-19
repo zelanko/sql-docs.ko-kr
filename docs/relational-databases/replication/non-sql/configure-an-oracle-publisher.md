@@ -1,4 +1,5 @@
 ---
+description: Oracle 게시자 구성
 title: Oracle 게시자 구성 | Microsoft 문서
 ms.custom: ''
 ms.date: 09/05/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 240c8416-c8e5-4346-8433-07e0f779099f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0a8c86710cdfce8a56c6a122b069773a16365cc2
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: cd84ccd988869181df7acf940109b3858a51d1ed
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395852"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423467"
 ---
 # <a name="configure-an-oracle-publisher"></a>Oracle 게시자 구성
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -89,7 +90,7 @@ ms.locfileid: "87395852"
   
  Oracle Universal Installer에서 다음 정보를 제공해야 합니다.  
   
-|정보|설명|  
+|정보|Description|  
 |-----------------|-----------------|  
 |Oracle|Oracle 소프트웨어 설치를 위한 디렉터리 경로입니다. 기본값(C:\oracle\ora90 또는 유사한 경로)을 그대로 적용하거나 다른 경로를 입력합니다. Oracle 홈에 대한 자세한 내용은 이 항목의 뒷부분에 나오는 "Oracle 홈에 대한 고려 사항" 섹션을 참조하십시오.|  
 |Oracle 홈 이름|Oracle 홈 경로에 대한 별칭입니다.|  

@@ -1,4 +1,5 @@
 ---
+description: Charset 속성(ADO)
 title: Charset 속성 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e42507cb-9b46-4ce4-8191-2948eaf14ca2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a5750364a745cda43459ecba69ba42cbf6f3da40
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 9682664c87db42920c2ae78f338103c1d8c13d64
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763144"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451005"
 ---
 # <a name="charset-property-ado"></a>Charset 속성(ADO)
 **스트림** 개체의 내부 버퍼에서 저장소에 대해 텍스트 [스트림의](../../../ado/reference/ado-api/stream-object-ado.md) 내용을 변환 해야 하는 문자 집합을 나타냅니다.  

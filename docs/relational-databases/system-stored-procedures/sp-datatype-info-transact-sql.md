@@ -1,4 +1,5 @@
 ---
+description: sp_datatype_info(Transact-SQL)
 title: sp_datatype_info (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/25/2018
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 045f3b5d-6bb7-4748-8b4c-8deb4bc44147
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e88bc45995574dcde29427773e3e8d9bec62ed96
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: f35043a8886165431e42b4b8641a1abbcf0fb1cf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826217"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486103"
 ---
 # <a name="sp_datatype_info-transact-sql"></a>sp_datatype_info(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -40,12 +41,12 @@ sp_datatype_info [ [ @data_type = ] data_type ]
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @data_type = ] data_type`지정 된 데이터 형식에 대 한 코드 번호입니다. 모든 데이터 형식의 목록을 가져오려면 이 매개 변수를 생략하세요. *data_type* 은 **int**이며 기본값은 0입니다.  
+`[ @data_type = ] data_type` 지정 된 데이터 형식에 대 한 코드 번호입니다. 모든 데이터 형식의 목록을 가져오려면 이 매개 변수를 생략하세요. *data_type* 은 **int**이며 기본값은 0입니다.  
   
-`[ @ODBCVer = ] odbc_version`사용 되는 ODBC의 버전입니다. *odbc_version* 은 **tinyint**이며 기본값은 2입니다.  
+`[ @ODBCVer = ] odbc_version` 사용 되는 ODBC의 버전입니다. *odbc_version* 은 **tinyint**이며 기본값은 2입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
- 없음  
+ None  
   
 ## <a name="result-sets"></a>결과 집합  
   
@@ -59,7 +60,7 @@ sp_datatype_info [ [ @data_type = ] data_type ]
 |CREATE_PARAMS|**varchar (** 32 **)**|해당 데이터 형식에 대한 매개 변수 만들기에 대한 설명입니다. 예를 들어 **10 진수** 는 "precision, scale", **float** 는 NULL, **varchar** 는 "max_length"입니다.|  
 |NULLABLE|**smallint**|NULL 허용 여부를 지정합니다.<br /><br /> 1 = NULL 값을 허용합니다.<br /><br /> 0 = NULL 값을 허용하지 않습니다.|  
 |CASE_SENSITIVE|**smallint**|대/소문자 구분 여부를 지정합니다.<br /><br /> 1 = 이 형식의 열은 모두 데이터 정렬 시 대/소문자를 구분합니다.<br /><br /> 0 = 이 형식의 열은 모두 대/소문자를 구분하지 않습니다.|  
-|SEARCHABLE|**smallint**|열 형식에 대한 검색 기능을 지정합니다.<br /><br /> 1 = 검색할 수 없습니다.<br /><br /> 2 = LIKE를 사용하여 검색할 수 있습니다.<br /><br /> 3 = WHERE를 사용하여 검색할 수 있습니다.<br /><br /> 4 = WHERE 또는 LIKE를 사용하여 검색할 수 있습니다.|  
+|검색 가능|**smallint**|열 형식에 대한 검색 기능을 지정합니다.<br /><br /> 1 = 검색할 수 없습니다.<br /><br /> 2 = LIKE를 사용하여 검색할 수 있습니다.<br /><br /> 3 = WHERE를 사용하여 검색할 수 있습니다.<br /><br /> 4 = WHERE 또는 LIKE를 사용하여 검색할 수 있습니다.|  
 |UNSIGNED_ATTRIBUTE|**smallint**|데이터 형식의 서명 여부를 지정합니다.<br /><br /> 1 = 서명되지 않은 데이터 형식입니다.<br /><br /> 0 = 서명된 데이터 형식입니다.|  
 |MONEY|**smallint**|**Money** 데이터 형식을 지정 합니다.<br /><br /> 1 = **money** 데이터 형식입니다.<br /><br /> 0 = **money** 데이터 형식이 아닙니다.|  
 |AUTO_INCREMENT|**smallint**|자동 증가를 지정합니다.<br /><br /> 1 = 자동 증가입니다.<br /><br /> 0 = 자동 증가가 아닙니다.<br /><br /> NULL = 특성이 적용되지 않습니다.<br /><br /> 애플리케이션은 이 특성을 가진 열에 값을 삽입할 수는 있으나 열에 있는 값을 업데이트할 수 없습니다. **Bit** 데이터 형식을 제외 하 고 AUTO_INCREMENT은 정확한 수치 및 근사치 숫자 데이터 형식 범주에 속하는 데이터 형식에 대해서만 유효 합니다.|  
@@ -75,10 +76,10 @@ sp_datatype_info [ [ @data_type = ] data_type ]
 ## <a name="remarks"></a>설명  
  sp_datatype_info은 ODBC의 SQLGetTypeInfo와 동일 합니다. 반환되는 결과는 DATA_TYPE을 기준으로 정렬되며 데이터 형식의 근접한 정도에 따라 해당 ODBC SQL 데이터 형식에 매핑됩니다.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  public 역할의 멤버 자격이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는의 *data_type* 값을 지정 하 여 **sysname** 및 **nvarchar** 데이터 형식에 대 한 정보를 검색 합니다 `-9` .  
   
 ```  
@@ -89,7 +90,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;저장 프로시저 데이터베이스 엔진](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;저장 프로시저 데이터베이스 엔진 ](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [데이터 형식&#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

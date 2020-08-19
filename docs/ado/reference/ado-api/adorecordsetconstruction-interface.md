@@ -1,4 +1,5 @@
 ---
+description: ADORecordsetConstruction 인터페이스
 title: ADORecordsetConstruction 인터페이스 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 08386eba-f1f7-4879-8ffd-8733930ecb2f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 23ee532329e8104d3a0e02c9547d9ca7813b42a2
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 3dd1000dce8308ada4044eb9f043097f8767a9c0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242823"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451325"
 ---
 # <a name="adorecordsetconstruction-interface"></a>ADORecordsetConstruction 인터페이스
 **ADORecordsetConstruction** 인터페이스는 C/c + + 응용 프로그램의 OLE DB **ROWSET** 개체에서 ADO **레코드 집합** 개체를 생성 하는 데 사용 됩니다.  

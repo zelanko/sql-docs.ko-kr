@@ -1,4 +1,5 @@
 ---
+description: Append 및 CreateParameter 메서드 예제 (VC + +)
 title: Append 및 CreateParameter 메서드 예제 (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b57d144c-0a34-49c8-94cf-e5981edfcca6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0abc0742f3313e127d3c0478d9be600b0e02d908
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 832981161e0fcc6ec297186975de33c027cc694f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82746990"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451275"
 ---
 # <a name="append-and-createparameter-methods-example-vc"></a>Append 및 CreateParameter 메서드 예제 (VC + +)
 이 예에서는 [Append](../../../ado/reference/ado-api/append-method-ado.md) 및 [createparameter](../../../ado/reference/ado-api/createparameter-method-ado.md) 메서드를 사용 하 여 입력 매개 변수를 사용 하 여 저장 프로시저를 실행 합니다.  

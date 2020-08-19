@@ -1,4 +1,5 @@
 ---
+description: SET CURSOR_CLOSE_ON_COMMIT(Transact-SQL)
 title: SET CURSOR_CLOSE_ON_COMMIT(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/26/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 7b976154-98ce-4a06-bbae-7e59c34211f7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7226b42823ff51a00a22124b1fd1851c1943b97c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3b8353cb7043f3835149104f0ab277af6de2ed45
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765844"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88414829"
 ---
 # <a name="set-cursor_close_on_commit-transact-sql"></a>SET CURSOR_CLOSE_ON_COMMIT(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -44,7 +45,9 @@ ms.locfileid: "85765844"
 SET CURSOR_CLOSE_ON_COMMIT { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>설명  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="remarks"></a>설명
  CURSOR_CLOSE_ON_COMMIT 옵션이 ON이면 ISO에 따라 커밋 또는 롤백될 때 열려 있는 모든 커서를 닫습니다. SET CURSOR_CLOSE_ON_COMMIT 옵션이 OFF이면 트랜잭션이 커밋될 때 커서가 닫히지 않습니다.  
   
 > [!NOTE]  
@@ -71,7 +74,7 @@ SELECT @CURSOR_CLOSE AS CURSOR_CLOSE_ON_COMMIT;
 ## <a name="permissions"></a>사용 권한  
  **public** 역할의 멤버 자격이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 트랜잭션에서 커서를 정의하고 트랜잭션이 커밋된 후 커서 사용을 시도합니다.  
   
 ```sql
@@ -131,6 +134,6 @@ GO
  [COMMIT TransactION&#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-transaction-transact-sql.md)   
  [ROLLBACK TRANSACTION&#40;Transact-SQL&#41;](../../t-sql/language-elements/rollback-transaction-transact-sql.md)   
  [SET 문&#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [SET ANSI_DEFAULTS&#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-defaults-transact-sql.md)  
+ [SET ANSI_DEFAULTS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-defaults-transact-sql.md)  
   
   

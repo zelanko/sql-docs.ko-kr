@@ -1,4 +1,5 @@
 ---
+description: WAITFOR(Transact-SQL)
 title: WAITFOR (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -26,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: 8e896e73-af27-4cae-a725-7a156733f3bd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 87fc7c86277292cbce61e1a8f66b38b80b580996
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ea7d90c70b68111e6ed9f1f63986c955f7bb1055
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922999"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459206"
 ---
 # <a name="waitfor-transact-sql"></a>WAITFOR(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -106,7 +107,7 @@ WAITFOR
 > [!CAUTION]  
 >  WAITFOR를 포함하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로세스의 완료 속도가 저하되고 애플리케이션에서 시간 초과 메시지가 나타날 수 있습니다. 필요할 경우 애플리케이션 수준에서 연결에 대한 제한 시간 설정을 조정하세요.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-using-waitfor-time"></a>A. WAITFOR TIME 사용  
  다음 예에서는 msdb 데이터베이스에서 `sp_update_job` 저장 프로시저를 오후 10시 20분에 실행합니다. (`22:20`).  

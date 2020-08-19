@@ -1,4 +1,5 @@
 ---
+description: AffectEnum
 title: AffectEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1ab921a0-6c57-43b4-9291-701b2599f3e8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8c75c83fea1e6c8f4916180889635ddebd9cd915
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 551c2ec7b8351ed17841ed1a4073c1a411dc77d0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242803"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451295"
 ---
 # <a name="affectenum"></a>AffectEnum
 작업의 영향을 받는 레코드를 지정 합니다.  

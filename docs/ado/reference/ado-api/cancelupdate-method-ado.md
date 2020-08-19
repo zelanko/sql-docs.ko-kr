@@ -1,4 +1,5 @@
 ---
+description: CancelUpdate 메서드(ADO)
 title: CancelUpdate 메서드 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: eaa856cc-c786-462e-890c-c896261b1741
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0ecc08dde974826846058d4d8927df202367d28d
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 6482336ceed00e131da38b151a8b6ffe33b3638c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242410"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451025"
 ---
 # <a name="cancelupdate-method-ado"></a>CancelUpdate 메서드(ADO)
 [Update](../../../ado/reference/ado-api/update-method.md) 메서드를 호출 하기 전에 레코드 [집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체의 현재 행 또는 새 행 또는 [Record](../../../ado/reference/ado-api/record-object-ado.md) 개체의 [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) 컬렉션에 대 한 변경 내용을 취소 합니다.  

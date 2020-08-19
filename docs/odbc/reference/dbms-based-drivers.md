@@ -1,4 +1,5 @@
 ---
+description: DBMS 기반 드라이버
 title: DBMS 기반 드라이버 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e2208ee0-4cd6-4f0d-bb71-a0b54f7d9330
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4e7b7b153d0b0cb0a3e6a3d738908b0039b95679
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 844c25ca32bdf302312df6d23ca8e1d85fe198c7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306489"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476915"
 ---
 # <a name="dbms-based-drivers"></a>DBMS 기반 드라이버
 DBMS 기반 드라이버는 Oracle 또는 SQL Server와 같은 데이터 원본에 사용 되며 드라이버에서 사용할 수 있는 독립 실행형 데이터베이스 엔진을 제공 합니다. 이러한 드라이버는 독립 실행형 엔진을 통해 실제 데이터에 액세스 합니다. 즉,에 SQL 문을 전송 하 고 엔진에서 결과를 검색 합니다.  

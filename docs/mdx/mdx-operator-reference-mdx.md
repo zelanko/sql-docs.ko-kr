@@ -1,4 +1,5 @@
 ---
+description: MDX 연산자 참조(MDX)
 title: MDX 연산자 참조 (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: c026da3551448faf7cf204dbdde1e794d5b12967
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c6fe11ee3022c07560435b13a72273962ba6a4b5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68033913"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429775"
 ---
 # <a name="mdx-operator-reference-mdx"></a>MDX 연산자 참조(MDX)
 
@@ -22,14 +23,14 @@ ms.locfileid: "68033913"
   
 ## <a name="in-this-section"></a>섹션 내용  
   
-|항목|Description|  
+|항목|설명|  
 |-----------|-----------------|  
 |[-- &#40;설명&#41;&#40;MDX&#41;](../mdx/comment-mdx-operator-reference.md)|사용자가 제공한 주석 텍스트를 나타냅니다.|  
 |[-&#40;&#41; &#40;MDX를 제외 하 고&#41;](../mdx/except-mdx-operator.md)|중복된 멤버를 제거하고 두 집합 간의 차집합을 반환하는 집합 연산을 수행합니다.|  
 |[-&#40;음수&#41; &#40;MDX&#41;](../mdx/negative-mdx.md)|숫자 식의 음수 값을 반환하는 단항 연산을 수행합니다.|  
 |[-&#40;빼기&#41; &#40;MDX&#41;](../mdx/subtract-mdx.md)|한 수에서 다른 수를 빼는 산술 연산을 수행합니다.|  
 |[&#42; &#40;Crossjoin&#41; &#40;MDX&#41;](../mdx/crossjoin-mdx-operator-reference.md)|두 집합의 교차곱을 반환하는 집합 연산을 수행합니다.|  
-|[MDX&#41; &#40;&#42; &#40;곱하기&#41;](../mdx/multiply-mdx.md)|두 수를 곱하는 산술 연산을 수행합니다.|  
+|[ MDX&#41; &#40;&#42; &#40;곱하기&#41;](../mdx/multiply-mdx.md)|두 수를 곱하는 산술 연산을 수행합니다.|  
 |[&#40;&#41; &#40;MDX&#41;](../mdx/divide-mdx-operator-reference.md)|한 수를 다른 수로 나누는 산술 연산을 수행합니다.|  
 |[^ &#40;Power&#41; &#40;MDX&#41;](../mdx/power-mdx.md)|한 수에 다른 수를 제곱하는 산술 연산을 수행합니다.|  
 |[설명&#40;MDX&#41;](../mdx/comment-mdx.md)|사용자가 제공한 주석 텍스트를 나타냅니다.|  

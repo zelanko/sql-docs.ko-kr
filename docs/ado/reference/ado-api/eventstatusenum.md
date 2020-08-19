@@ -1,4 +1,5 @@
 ---
+description: EventStatusEnum
 title: EventStatusEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ebfd4cda-4017-4873-9d28-38b1c7db12a8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a1174538ec14eab150d5874b7d6b5b51bcd554ff
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 3d696d7b971b5f6624a85addb3f023f2090ac90d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242723"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443905"
 ---
 # <a name="eventstatusenum"></a>EventStatusEnum
 이벤트 실행의 현재 상태를 지정 합니다.  

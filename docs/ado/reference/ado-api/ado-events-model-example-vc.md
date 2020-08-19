@@ -1,4 +1,5 @@
 ---
+description: ADO 이벤트 모델 예제(VC++)
 title: ADO Events 모델 예제 (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 29530153-b963-4a7c-8665-2335f1d604a8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bce894f1e0cce8c8d8800b2633924f9cc5bc6bd9
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 2bdb668584a0a725add4decc0bd64217d5dacbb5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82747347"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451435"
 ---
 # <a name="ado-events-model-example-vc"></a>ADO 이벤트 모델 예제(VC++)
 [언어별 Ado 이벤트 인스턴스화](../../../ado/guide/data/ado-event-instantiation-by-language.md) 의 Visual C++ 섹션에서는 ado 이벤트 모델을 인스턴스화하는 방법에 대 한 일반적인 설명을 제공 합니다. 다음은 **#import** 지시문에 의해 만들어진 환경 내에서 이벤트 모델을 인스턴스화하는 특정 예제입니다.  

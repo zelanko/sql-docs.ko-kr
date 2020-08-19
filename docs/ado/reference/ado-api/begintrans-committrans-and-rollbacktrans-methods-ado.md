@@ -1,4 +1,5 @@
 ---
+description: BeginTrans, CommitTrans 및 RollbackTrans 메서드(ADO)
 title: BeginTrans, CommitTrans 및 RollbackTrans 메서드 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: d4683472-4120-4236-8640-fa9ae289e23e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a2a9f52b24ba4123db1b8e3a919b9fa25a030122
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 71dd02544e80d24e96d9cc64fa1e5947f38c685a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762899"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451195"
 ---
 # <a name="begintrans-committrans-and-rollbacktrans-methods-ado"></a>BeginTrans, CommitTrans 및 RollbackTrans 메서드(ADO)
 이러한 트랜잭션 메서드는 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체 내에서 트랜잭션 처리를 다음과 같이 관리 합니다.  

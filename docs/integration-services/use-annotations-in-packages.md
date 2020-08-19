@@ -1,4 +1,5 @@
 ---
+description: 패키지에서 주석 사용
 title: 패키지에서 주석 사용 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 48c8ed9a-b10d-490c-9ba7-4b77aa44e3dd
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 56bc48040555dbcc7a48f1ec6d1e6d7422a53aaa
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 5e25927358f87c63c2c7d6dcbfb92b565d02994e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913713"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495116"
 ---
 # <a name="use-annotations-in-packages"></a>패키지에서 주석 사용
 

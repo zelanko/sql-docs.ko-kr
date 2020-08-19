@@ -1,4 +1,5 @@
 ---
+description: catalog.execution_parameter_values(SSISDB 데이터베이스)
 title: catalog.execution_parameter_values(SSISDB 데이터베이스) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: ec93e67b-04ce-4aae-ab96-3ad20e9793ad
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 868f6bb8b1a0052e843ae9d0e93c1d9993febbfa
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 022d1d29438da9bebeb7e7544b01445f27803fce
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912585"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495236"
 ---
 # <a name="catalogexecution_parameter_values-ssisdb-database"></a>catalog.execution_parameter_values(SSISDB 데이터베이스)
 
@@ -35,7 +36,7 @@ ms.locfileid: "86912585"
 |parameter_name|**sysname**|매개 변수의 이름입니다.|  
 |parameter_value|**sql_variant**|매개 변수의 값입니다. sensitive가 `0`이면 일반 텍스트 값이 표시됩니다. sensitive가 `1`이면 **NULL** 값이 표시됩니다.|  
 |sensitive|**bit**|값이 `1`이면 매개 변수 값이 중요하고, 값이 `0`이면 매개 변수 값이 중요하지 않습니다.|  
-|required|**bit**|값이 `1`이면 실행을 시작하는 데 매개 변수 값이 필요하고, 값이 `0`이면 실행을 시작하는 데 매개 변수 값이 필요하지 않습니다.|  
+|필수|**bit**|값이 `1`이면 실행을 시작하는 데 매개 변수 값이 필요하고, 값이 `0`이면 실행을 시작하는 데 매개 변수 값이 필요하지 않습니다.|  
 |value_set|**bit**|값이 `1`이면 매개 변수 값이 할당되었고, 값이 `0`이면 매개 변수 값이 할당되지 않았습니다.|  
 |runtime_override|**bit**|값이 `1`이면 실행이 시작되기 전에 매개 변수 값이 원래 값에서 변경된 것이고, 값이 `0`이면 매개 변수 값이 원래 설정된 값입니다.|  
   

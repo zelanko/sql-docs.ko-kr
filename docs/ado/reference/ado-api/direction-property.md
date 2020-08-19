@@ -1,4 +1,5 @@
 ---
+description: Direction 속성
 title: Direction 속성 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d5732578-3434-4dcd-a9f7-db1abd1b3b94
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2e3f098c0f0351a4439b9bb6fb6256209ea3e1ad
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 37987e58829b1b6957b4fe1de440aaeb4aae1763
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82757179"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444055"
 ---
 # <a name="direction-property"></a>Direction 속성
 [매개](../../../ado/reference/ado-api/parameter-object.md) 변수가 입력 매개 변수, 출력 매개 변수, 입력 및 출력 매개 변수를 나타내는지, 아니면 저장 프로시저의 반환 값 인지를 나타냅니다.  

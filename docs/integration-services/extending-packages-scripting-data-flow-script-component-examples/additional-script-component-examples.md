@@ -1,4 +1,5 @@
 ---
+description: 추가 스크립트 구성 요소 예
 title: 추가 스크립트 구성 요소 예 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 849dd38a-abb5-4702-a413-882aae3980a5
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e4ec9ed7981299bfc5dc14804c7a3d8371e683e2
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 08651b089379a6b6a2365aa996dfd780f3d651dc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916317"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477323"
 ---
 # <a name="additional-script-component-examples"></a>추가 스크립트 구성 요소 예
 

@@ -1,4 +1,5 @@
 ---
+description: BOF, EOF 및 책갈피 속성 예제(VB)
 title: BOF, EOF 및 Bookmark 속성 예제 (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b6573c6e-fee8-4267-a722-fadaec6eafe6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6b0fafe895daecc4cfd7345299904c46ff7a1d5c
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 1d38d132e4e61f7b26d97450d41cc4f291789257
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762850"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451155"
 ---
 # <a name="bof-eof-and-bookmark-properties-example-vb"></a>BOF, EOF 및 책갈피 속성 예제(VB)
 이 예에서는 사용자가 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)의 첫 번째 또는 마지막 레코드를 지나서 이동 하려고 시도 하는 경우에는 [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) 및 [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) 속성을 사용 하 여 메시지를 표시 합니다. [책갈피](../../../ado/reference/ado-api/bookmark-property-ado.md) 속성을 사용 하 여 사용자가 레코드 **집합** 의 레코드에 플래그를 지정 하 고 나중에이 레코드로 돌아갈 수 있습니다.  

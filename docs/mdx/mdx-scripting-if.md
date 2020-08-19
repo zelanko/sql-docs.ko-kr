@@ -1,4 +1,5 @@
 ---
+description: IF 문 (MDX)
 title: IF 문 (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 41bd34fbd3d296f4aa38877e6d26e25eba9ae726
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 62b5a2e7d2ae04b7cd11bb08a3a65ddad903b6cc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68138687"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429735"
 ---
 # <a name="mdx-scripting---if"></a>MDX 스크립팅 - IF
 
@@ -37,7 +38,7 @@ IF expression THEN assignment END IF
 ## <a name="remarks"></a>설명  
  [IIf &#40;mdx&#41;](../mdx/iif-mdx.md) 함수와 달리 값 이나 개체를 반환 하는 데만 사용할 수 있는 [Mdx&#41;&#40;CASE 문과](../mdx/case-statement-mdx.md) 달리 제어 흐름에 if 문을 사용 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 Customers 차원에 있는 Customers Geography 계층의 Country 수준으로 범위를 제한합니다. 현재 측정값이 Internet Sales Amount이면 Internet Sales Amount는 10으로 설정됩니다.  
   
  `SCOPE ([Customer].[Customer Geography].[Country].MEMBERS);`  

@@ -1,4 +1,5 @@
 ---
+description: 매개 변수 설명
 title: 매개 변수 설명 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 118d0f47-2afd-4955-bb47-38b1e2c2f38f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f4d9284294707da0a469bf75ff9812ad5f7855bb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a41bee40403cc3562c41ccc13a15c706a0772e27
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305944"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476755"
 ---
 # <a name="describing-parameters"></a>매개 변수 설명
 **SQLBindParameter** 에는 매개 변수를 설명 하는 인수 (SQL 유형, 전체 자릿수 및 소수 자릿수)가 있습니다. 드라이버는이 정보 또는 *메타 데이터를* 사용 하 여 매개 변수 값을 데이터 원본에 필요한 형식으로 변환 합니다. 먼저 드라이버가 응용 프로그램 보다 매개 변수 메타 데이터를 알 수 있는 위치에 있는 것 처럼 보일 수 있습니다. 그 후 드라이버는 결과 집합 열에 대 한 메타 데이터를 쉽게 검색할 수 있습니다. 이 경우에는 그렇지 않습니다. 첫째, 대부분의 데이터 원본은 드라이버에서 매개 변수 메타 데이터를 검색할 수 있는 방법을 제공 하지 않습니다. 둘째, 대부분의 응용 프로그램은 메타 데이터를 이미 알고 있습니다.  

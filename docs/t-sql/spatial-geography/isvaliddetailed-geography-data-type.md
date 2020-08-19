@@ -1,4 +1,5 @@
 ---
+description: IsValidDetailed(geography 데이터 형식)
 title: IsValidDetailed(geography 데이터 형식) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f5f0b753-c825-43ce-987d-98655d8d8702
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 9022b3a86910ac8430b408de30dee3dfbcca4254
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 6e272d607592660c123a25847143a4aeff075fc7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555230"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422357"
 ---
 # <a name="isvaliddetailed-geography-data-type"></a>IsValidDetailed(geography 데이터 형식)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -46,7 +47,7 @@ ms.locfileid: "86555230"
 ## <a name="remarks"></a>설명  
  다음 표에는 가능한 반환 값이 있습니다.  
   
-|반환 값|Description|  
+|반환 값|설명|  
 |------------------|-----------------|  
 |24400|Valid|  
 |24401|유효하지 않으며 이유를 알 수 없습니다.|  
@@ -66,7 +67,7 @@ ms.locfileid: "86555230"
 |24415|일부 다각형이 잘못된 링 구조를 가지므로 유효하지 않습니다.|  
 |24416|{1} 지점에서 시작하는 {0} 곡선의 가장자리가 대척점이 있는 중복 제거 호이거나 선이므로 유효하지 않습니다.|  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 올바르지 않은 공간 개체의 예에서는 **IsValidDetailed()** 메서드가 동작하는 방법을 보여 줍니다.  
   
 ```sql  

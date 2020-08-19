@@ -1,4 +1,5 @@
 ---
+description: 동기 및 비동기 변환 이해
 title: 동기 및 비동기 변환 이해 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0bc2bda5-3f8a-49c2-aaf1-01dbe4c3ebba
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1c2748384a8ea4901a21ffa94498da5405043227
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 849f01ba00bddd67ca2de2c16b6953cff9b06c36
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913719"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495169"
 ---
 # <a name="understanding-synchronous-and-asynchronous-transformations"></a>동기 및 비동기 변환 이해
 

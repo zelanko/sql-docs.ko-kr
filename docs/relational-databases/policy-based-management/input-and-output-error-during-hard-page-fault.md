@@ -1,4 +1,5 @@
 ---
+description: Input and Output Error During Hard Page Fault
 title: 하드 페이지 폴트 중 입력 및 출력 오류 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: f17abdd4-5f34-403a-ade4-7857d3056b83
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 829b773fd61d41689a63629f9b91f7b5d2ef4dea
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d7a45f1cbc7bb08228a1ad07443b309fabe51998
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760501"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423707"
 ---
 # <a name="input-and-output-error-during-hard-page-fault"></a>Input and Output Error During Hard Page Fault
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

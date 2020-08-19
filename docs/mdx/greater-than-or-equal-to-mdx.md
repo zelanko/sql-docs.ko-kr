@@ -1,4 +1,5 @@
 ---
+description: '&gt;= (크거나 같음) (MDX)'
 title: '&gt;= (크거나 같음) (MDX) | Microsoft Docs'
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 0e8599378367dd47bd5858c09327795a25852105
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1e9ce7d9f7e372ac9193751c258af63ba6f300fb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68005844"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429935"
 ---
 # <a name="gt-greater-than-or-equal-to-mdx"></a>&gt;= (크거나 같음) (MDX)
 
@@ -31,7 +32,7 @@ MDX_Expression >= MDX_Expression
  *MDX_Expression*  
  유효한 MDX 식입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
  다음 조건을 기반으로 하는 부울 값입니다.  
   
 -   첫 번째 매개 변수의 값이 두 번째 매개 변수의 값 보다 크거나 같으면 **true** 입니다.  
@@ -40,7 +41,7 @@ MDX_Expression >= MDX_Expression
   
 -   두 매개 변수가 모두 null 이거나 한 매개 변수가 null이 고 다른 매개 변수가 0 이면 **true** 입니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 이 연산자의 사용 방법을 보여 줍니다.  
   
 ```  

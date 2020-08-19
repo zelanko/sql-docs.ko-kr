@@ -1,4 +1,5 @@
 ---
+description: 사용자 인터페이스 참조 (AccessToSQL)
 title: 사용자 인터페이스 참조 (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -13,12 +14,12 @@ ms.assetid: af24c303-4a41-449b-9c86-d6558a97e839
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 0366c4549c557d2e5f90733f5dadba61cecdc22c
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: db8dc2d233c76305a176e45e95ec7514354cf018
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87937775"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468925"
 ---
 # <a name="user-interface-reference-accesstosql"></a>사용자 인터페이스 참조 (AccessToSQL)
 이 섹션에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Access의 SSMA (Migration Assistant)에 대 한 도움말 항목이 포함 되어 있습니다.  
@@ -48,10 +49,10 @@ ms.locfileid: "87937775"
 |[프로젝트 설정(마이그레이션)](https://msdn.microsoft.com/4caebc9c-8680-4b99-a8fa-89c43161c95d)|**프로젝트 설정** 대화 상자의 마이그레이션 페이지를 사용 하 여 마이그레이션 일괄 처리 크기, 테이블 잠금, 제약 조건 확인, 삽입 트리거 발생, id 및 null 값 처리 및 범위를 벗어난 날짜를 처리 하는 방법을 지정할 수 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 있습니다.|  
 |[프로젝트 설정(형식 매핑)](https://msdn.microsoft.com/b87b9683-abed-4677-8c50-18bdba704655)|**프로젝트 설정** 대화 상자의 형식 매핑 페이지를 사용 하 여 ssma 프로젝트의 모든 데이터베이스 및 데이터베이스 개체에 대 한 기본 형식 매핑을 지정할 수 있습니다.|  
 |[프로젝트 설정 (SQL Azure)](https://msdn.microsoft.com/bbb8a204-d0e4-4f0b-9709-271feb1f136e)|**프로젝트 설정** 대화 상자의 SQL Azure 페이지를 사용 하 여 데이터베이스 접미사 및 하트 비트 시간 제한 간격을 지정할 수 있습니다.|  
-|[AccessToSQL&#41;&#40;메타 데이터 저장](../../ssma/access/save-metadata-accesstosql.md)|메타 데이터 **저장** 대화 상자는 메타 데이터가 없는 프로젝트를 저장할 때 나타납니다.|  
+|[AccessToSQL&#41;&#40;메타 데이터 저장 ](../../ssma/access/save-metadata-accesstosql.md)|메타 데이터 **저장** 대화 상자는 메타 데이터가 없는 프로젝트를 저장할 때 나타납니다.|  
   
 ## <a name="see-also"></a>참고 항목  
-[Access &#40;AccessToSQL&#41;에 대 한 SQL Server Migration Assistant 시작](../../ssma/access/getting-started-with-sql-server-migration-assistant-for-access-accesstosql.md)  
+[Access &#40;AccessToSQL&#41;에 대 한 SQL Server Migration Assistant 시작 ](../../ssma/access/getting-started-with-sql-server-migration-assistant-for-access-accesstosql.md)  
 [마이그레이션을 위해 Access 데이터베이스 준비](preparing-access-databases-for-migration-accesstosql.md)  
 [SQL Server로 Access 데이터베이스 마이그레이션](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
   

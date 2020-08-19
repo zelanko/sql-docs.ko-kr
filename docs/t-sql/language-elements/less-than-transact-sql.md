@@ -1,4 +1,5 @@
 ---
+description: '&lt;(보다 작음)(Transact-SQL)'
 title: '&lt;(보다 작음)(Transact-SQL) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/13/2017
@@ -23,12 +24,12 @@ ms.assetid: 54f50bdd-bb62-4593-9af9-4c49edecab75
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5acf733931022d3acf8725799c4fef987e7a2951
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 490c02198ebc9d5b1fd7c6b8f0ff91d1c3ccd014
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916619"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422487"
 ---
 # <a name="lt-less-than-transact-sql"></a>&lt;(보다 작음)(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -52,7 +53,7 @@ expression < expression
 ## <a name="result-types"></a>결과 형식  
  **Boolean**  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-using--in-a-simple-query"></a>A. 간단한 쿼리에서 < 사용  
  다음 예에서는 `HumanResources.Department` 테이블에서 `DepartmentID`의 값이 3보다 작은 모든 행을 반환합니다.  

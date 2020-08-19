@@ -1,4 +1,5 @@
 ---
+description: BottomPercent(MDX)
 title: BottomPercent (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: cbcf9086cedc9221c39832bd0b7d55e5f0814c7f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1b3ce341526270335564e9f67ccb89612854e098
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68016915"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494985"
 ---
 # <a name="bottompercent-mdx"></a>BottomPercent(MDX)
 
@@ -31,7 +32,7 @@ BottomPercent(Set_Expression, Percentage, Numeric_Expression)
  *Set_Expression*  
  집합을 반환하는 유효한 MDX 식입니다.  
   
- *백분율*  
+ *Percentage*  
  반환할 튜플의 백분율을 지정하는 유효한 숫자 식입니다.  
   
  *Numeric_Expression*  

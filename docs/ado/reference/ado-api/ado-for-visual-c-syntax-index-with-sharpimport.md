@@ -1,4 +1,5 @@
 ---
+description: '#Import를 사용 하는 Visual C++ 구문 인덱스에 대 한 ADO'
 title: '#Import을 사용 하는 Visual C++ 구문 인덱스를 위한 ADO Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5930ccd2-5bab-448a-b0bf-773b8a83e87c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 88be8dbcee4633fc8c0014088c7996f95f3e2f73
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: f93ee0d10c3de2bbfe36673c6b521c0f38111ff2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82747275"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451405"
 ---
 # <a name="ado-for-visual-c-syntax-index-with-import"></a>#Import를 사용 하는 Visual C++ 구문 인덱스에 대 한 ADO
 이 인덱스는 Microsoft Visual C++ 및 **#import** 지시문을 기반으로 하는 ADO 언어 참조에 대 한 상호 참조입니다.  
@@ -57,5 +58,5 @@ ms.locfileid: "82747275"
   
 -   [레코드 집합 이벤트](../../../ado/reference/ado-api/recordsetevents-visual-c-syntax-index-with-sharpimport.md)  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [COM용 Visual C++ 구문 인덱스에 대한 ADO](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-for-com.md)

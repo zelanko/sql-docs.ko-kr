@@ -1,4 +1,5 @@
 ---
+description: 오류 (#import를 사용 하는 Visual C++ 구문 인덱스)
 title: 오류 (#import를 사용 하는 Visual C++ 구문 인덱스) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1ee59754-59c8-48e2-a4fb-242fa788c1f9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c118bcc524aefb03f1f34f66cd595a83e21f72d9
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: f4802a03c6178dff720b67bbdc17f0ca339a4886
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758789"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443965"
 ---
 # <a name="error-visual-c-syntax-index-with-import"></a>오류 (#import를 사용 하는 Visual C++ 구문 인덱스)
 ## <a name="properties"></a>속성  

@@ -1,4 +1,5 @@
 ---
+description: SET STATISTICS TIME(Transact-SQL)
 title: SET STATISTICS TIME(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -24,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: eec2e1cd-a29d-4cf3-a271-be9d61506f15
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 12e5acfd9436a4295ded63e7db8572dd27ce6e39
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4d6a735e68b49216ea1e9f5604000cef2243c6ec
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765675"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88414819"
 ---
 # <a name="set-statistics-time-transact-sql"></a>SET STATISTICS TIME(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -45,12 +46,14 @@ ms.locfileid: "85765675"
 SET STATISTICS TIME { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>설명  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="remarks"></a>설명
  SET STATISTICS TIME 옵션을 ON으로 설정하면 문에 대한 시간 통계가 표시됩니다. OFF로 설정하면 시간 통계가 표시되지 않습니다.  
   
  SET STATISTICS TIME 옵션은 실행 시간 또는 런타임에 설정되며, 구문 분석 시에는 설정되지 않습니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]lightweight pooling**구성 옵션을 설정하면 활성화되는 파이버 모드에서는 Microsoft**가 정확한 통계를 제공할 수 없습니다.  
+ **lightweight pooling** 구성 옵션을 설정하면 활성화되는 파이버 모드에서는 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 정확한 통계를 제공할 수 없습니다.  
   
  SET STATISTICS TIME을 ON으로 설정해 쿼리를 실행하면 **sysprocesses** 테이블의 **cpu** 열만 업데이트됩니다. SET STATISTICS TIME이 OFF인 경우에는 **0**이 반환됩니다.  
   
@@ -59,7 +62,7 @@ SET STATISTICS TIME { ON | OFF }
 ## <a name="permissions"></a>사용 권한  
  SET STATISTICS TIME을 사용하려면 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 실행할 수 있는 적절한 권한이 있어야 합니다. SHOWPLAN 권한이 필요하지 않습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 서버 실행, 구문 분석 및 컴파일 시간을 보여 줍니다.  
   
 ```sql

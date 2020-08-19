@@ -1,4 +1,5 @@
 ---
+description: sp_cleanup_log_shipping_history(Transact-SQL)
 title: sp_cleanup_log_shipping_history (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 96d236a9-1d0e-4f83-a4d3-f825b7381e46
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d7b69c82e4e2043c8647ba19a8b40306d6836307
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 42edf059f077f0896cd3c62b1420658c982b3d5a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85871099"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486155"
 ---
 # <a name="sp_cleanup_log_shipping_history-transact-sql"></a>sp_cleanup_log_shipping_history(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,9 +42,9 @@ sp_cleanup_log_shipping_history
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @agent_id = ] 'agent_id',`백업에 대 한 주 ID 이거나 복사 또는 복원에 대 한 보조 ID입니다. *agent_id* 은 **uniqueidentifier** 이며 NULL 일 수 없습니다.  
+`[ @agent_id = ] 'agent_id',` 백업에 대 한 주 ID 이거나 복사 또는 복원에 대 한 보조 ID입니다. *agent_id* 은 **uniqueidentifier** 이며 NULL 일 수 없습니다.  
   
-`[ @agent_type = ] 'agent_type'`로그 전달 작업의 유형입니다. 0 = 백업, 1 = 복사, 2 = 복원입니다. *agent_type* 은 **tinyint** 이며 NULL 일 수 없습니다.  
+`[ @agent_type = ] 'agent_type'` 로그 전달 작업의 유형입니다. 0 = 백업, 1 = 복사, 2 = 복원입니다. *agent_type* 은 **tinyint** 이며 NULL 일 수 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  

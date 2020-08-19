@@ -1,4 +1,5 @@
 ---
+description: 설명자 핸들
 title: 설명자 핸들 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 7741035c-f3e7-4c89-901e-fe528392f67d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ed0595c97f3f4ad92d976c89327a01e25cb5b753
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 859071eacbfa65f360965cf5c5df17d4fbf6361d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305914"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476725"
 ---
 # <a name="descriptor-handles"></a>설명자 핸들
 *설명자* 는 응용 프로그램 또는 드라이버 ( *구현이*라고도 함)에서 볼 수 있는 것 처럼 SQL 문 또는 결과 집합의 열에 대 한 매개 변수를 설명 하는 메타 데이터의 컬렉션입니다. 따라서 설명자는 다음 네 가지 역할 중 하나를 채울 수 있습니다.  

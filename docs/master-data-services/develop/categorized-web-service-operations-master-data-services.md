@@ -1,4 +1,5 @@
 ---
+description: 범주별로 분류한 웹 서비스 작업(Master Data Services)
 title: 범주별로 분류한 웹 서비스 작업
 ms.custom: ''
 ms.date: 03/15/2017
@@ -10,12 +11,12 @@ ms.topic: reference
 ms.assetid: e3f346b5-7e26-481d-9821-1846e2e91289
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 942fe6319d0cd47bac0fd11037214f0142f13818
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: bd6c3db52323385712bb946c63254e11c45cd5f3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87362995"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495059"
 ---
 # <a name="categorized-web-service-operations-master-data-services"></a>범주별로 분류한 웹 서비스 작업(Master Data Services)
 

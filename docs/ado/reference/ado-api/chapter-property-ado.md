@@ -1,4 +1,5 @@
 ---
+description: Chapter 속성(ADO)
 title: 장 속성 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8aa90cb0-f588-4141-9dc9-3b22918394ee
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 04991b5246b338b89008e0188463dee580f81e3e
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: ae595351ed6882bf67f543d61dc583d3350e6ce1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763154"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451015"
 ---
 # <a name="chapter-property-ado"></a>Chapter 속성(ADO)
 [ADORecordsetConstruction Interface](../../../ado/reference/ado-api/adorecordsetconstruction-interface.md) 개체의/에서 OLE DB **챕터** 개체를 가져오거나 설정 합니다. **Put_Chapter** 를 사용 하 여 **챕터** 개체를 설정 하는 경우 행의 하위 집합이 ADO [레코드 집합 개체](../../../ado/reference/ado-api/recordset-object-ado.md) 개체로 설정 됩니다. 이는 **행 집합**개체의 현재 챕터를 설정 합니다. 이 속성은 읽기/쓰기가 가능합니다.  

@@ -1,4 +1,5 @@
 ---
+description: Field 개체
 title: Field 개체 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b10a72fc-3c4b-4186-a70b-993dc9f7a092
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8a50d9f3354f9d5eb5a7615c244d8a8990ffc0c9
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 9a4a0936ec7c8e9446892695728ed5b0a885c2ca
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758769"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443775"
 ---
 # <a name="field-object"></a>Field 개체
 공통 데이터 형식으로 데이터의 열을 나타냅니다.  

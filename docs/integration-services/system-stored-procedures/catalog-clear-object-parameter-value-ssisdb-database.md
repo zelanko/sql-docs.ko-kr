@@ -1,4 +1,5 @@
 ---
+description: catalog.clear_object_parameter_value(SSISDB 데이터베이스)
 title: catalog.clear_object_parameter_value(SSISDB 데이터베이스) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: dcbbb714-a051-4805-9e2b-2c2fb647c890
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3f9da77639358fbf154057789f8840cdefc1350d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 16435fdd9ccb57b648f8073290ead5eca6ae393b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86904576"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477175"
 ---
 # <a name="catalogclear_object_parameter_value-ssisdb-database"></a>catalog.clear_object_parameter_value(SSISDB 데이터베이스)
 
@@ -44,7 +45,7 @@ catalog.clear_object_parameter [ @folder_name = ] folder_name
  프로젝트의 이름입니다. *project_name*은 **nvarchar(128)** 입니다.  
   
  [ \@object_type = ] *object_type*  
- 개체의 유형입니다. 유효한 값은 프로젝트의 경우 `20`이고, 패키지의 경우 `30`입니다. *object_type*은 **smallInt**입니다.  
+ 개체의 형식입니다. 유효한 값은 프로젝트의 경우 `20`이고, 패키지의 경우 `30`입니다. *object_type*은 **smallInt**입니다.  
   
  [ \@ object _name = ] *object _name*  
  패키지의 이름입니다. *object _name*은 **nvarchar(260)** 입니다.  

@@ -1,4 +1,5 @@
 ---
+description: OPTION 절(Transact-SQL)
 title: OPTION 절(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -21,12 +22,12 @@ ms.assetid: f47e2f3f-9302-4711-9d66-16b1a2a7ffe3
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a33aa8ea63c5ac97e163ac75462242b49bb915a4
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 362909e9cd98536d97751787820a5df0c08ed101
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555598"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459161"
 ---
 # <a name="option-clause-transact-sql"></a>OPTION 절(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -68,7 +69,7 @@ OPTION ( <query_option> [ ,...n ] )
  *query_hint*  
  데이터베이스 엔진에서 최적화 프로그램 힌트를 사용하여 문을 처리하는 방법을 사용자 지정한다는 것을 나타내는 키워드입니다. 자세한 내용은 [쿼리 힌트&#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)를 참조하세요.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-using-an-option-clause-with-a-group-by-clause"></a>A. GROUP BY 절과 함께 OPTION 절 사용  
  다음 예에서는 `OPTION` 절과 함께 `GROUP BY` 절을 사용하는 방법을 보여 줍니다.  

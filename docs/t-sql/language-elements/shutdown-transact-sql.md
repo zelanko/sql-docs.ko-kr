@@ -1,4 +1,5 @@
 ---
+description: SHUTDOWN(Transact-SQL)
 title: SHUTDOWN(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: c8b03ff9-688c-4fe8-86e8-bd6bd401c9a4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: db543ba464af2c71ba3390cb4574797713b8c764
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 8d3d0bc74e2d928b81e00947095aa992669bcb54
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918781"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459262"
 ---
 # <a name="shutdown-transact-sql"></a>SHUTDOWN(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,7 +47,7 @@ SHUTDOWN [ WITH NOWAIT ]
 
 ## <a name="arguments"></a>인수
  WITH NOWAIT  
- (선택 사항) 모든 데이터베이스에서 검사점을 수행하지 않고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 종료합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 모든 사용자 프로세스를 종료한 후 종료됩니다. 서버를 다시 시작하면 완료되지 않은 트랜잭션에 대해 롤백 작업이 수행됩니다.  
+ 선택 사항입니다. 모든 데이터베이스에서 검사점을 수행하지 않고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 종료합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 모든 사용자 프로세스를 종료한 후 종료됩니다. 서버를 다시 시작하면 완료되지 않은 트랜잭션에 대해 롤백 작업이 수행됩니다.  
   
 ## <a name="remarks"></a>설명  
  WITHNOWAIT 옵션을 사용하지 않으면 SHUTDOWN은 다음을 수행하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 종료합니다.  

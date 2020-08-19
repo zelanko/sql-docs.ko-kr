@@ -1,4 +1,5 @@
 ---
+description: LinRegPoint(MDX)
 title: LinRegPoint (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 3719071beca4dbd8cc991befbb7b2b74f8982c89
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4f298d58b14f3005b86f8fa7773a4faef1c94c79
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67905569"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429845"
 ---
 # <a name="linregpoint-mdx"></a>LinRegPoint(MDX)
 

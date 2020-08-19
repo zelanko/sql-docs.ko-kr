@@ -1,4 +1,5 @@
 ---
+description: 특성 적합성
 title: 특성 규칙 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 34fea100-10f9-46d5-bc50-3aa867b70f24
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b2880a35f4bdc997cc037cdd0d60720267ff4a58
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 19c58dfe7f8c4219d134cd1662ce8d57b9c76de6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306404"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476905"
 ---
 # <a name="attribute-conformance"></a>특성 적합성
 다음 표는 잘 정의 된 각 ODBC 환경 특성의 규칙 수준을 나타냅니다.  
@@ -29,7 +30,7 @@ ms.locfileid: "81306404"
 |--------------|-----------------------|  
 |SQL_ATTR_CONNECTION_POOLING|--[1]|  
 |SQL_ATTR_CP_MATCH|--[1]|  
-|SQL_ATTR_ODBC_VER|코어|  
+|SQL_ATTR_ODBC_VER|핵심|  
 |SQL_ATTR_OUTPUT_NTS|--[1]|  
   
  [1]이 기능은 선택적 기능이 며 규칙 수준의 일부가 아닙니다.  
@@ -38,7 +39,7 @@ ms.locfileid: "81306404"
   
 |기능|규칙 수준|  
 |--------------|-----------------------|  
-|SQL_ATTR_ACCESS_MODE|코어|  
+|SQL_ATTR_ACCESS_MODE|핵심|  
 |SQL_ATTR_ASYNC_ENABLE|수준 1/수준 2 [1]|  
 |SQL_ATTR_AUTO_IPD|수준 2|  
 |SQL_ATTR_AUTOCOMMIT|수준 1|  
@@ -46,13 +47,13 @@ ms.locfileid: "81306404"
 |SQL_ATTR_CONNECTION_TIMEOUT|수준 2|  
 |SQL_ATTR_CURRENT_CATALOG|수준 2|  
 |SQL_ATTR_LOGIN_TIMEOUT|수준 2|  
-|SQL_ATTR_ODBC_CURSORS|코어|  
+|SQL_ATTR_ODBC_CURSORS|핵심|  
 |SQL_ATTR_PACKET_SIZE|수준 2|  
-|SQL_ATTR_QUIET_MODE|코어|  
-|SQL_ATTR_TRACE|코어|  
-|SQL_ATTR_TRACEFILE|코어|  
-|SQL_ATTR_TRANSLATE_LIB|코어|  
-|SQL_ATTR_TRANSLATE_OPTION|코어|  
+|SQL_ATTR_QUIET_MODE|핵심|  
+|SQL_ATTR_TRACE|핵심|  
+|SQL_ATTR_TRACEFILE|핵심|  
+|SQL_ATTR_TRANSLATE_LIB|핵심|  
+|SQL_ATTR_TRANSLATE_OPTION|핵심|  
 |SQL_ATTR_TXN_ISOLATION|수준 1/수준 2 [2]|  
   
  [1] 연결 수준 비동기를 지 원하는 응용 프로그램 (수준 1에 필요) **SQLSetConnectAttr**;를 호출 하 여이 특성을 SQL_TRUE로 설정 하는 것을 지원 해야 합니다. 특성은 **SQLSetStmtAttr**를 통해 기본값이 아닌 다른 값으로 설정할 필요가 없습니다. 문 수준 비동기 (수준 2에 필요)를 지 원하는 응용 프로그램은 두 함수를 사용 하 여이 특성을 SQL_TRUE로 설정 하는 것을 지원 해야 합니다.  
@@ -63,8 +64,8 @@ ms.locfileid: "81306404"
   
 |기능|규칙 수준|  
 |--------------|-----------------------|  
-|SQL_ATTR_APP_PARAM_DESC|코어|  
-|SQL_ATTR_APP_ROW_DESC|코어|  
+|SQL_ATTR_APP_PARAM_DESC|핵심|  
+|SQL_ATTR_APP_ROW_DESC|핵심|  
 |SQL_ATTR_ASYNC_ENABLE|수준 1/수준 2 [1]|  
 |SQL_ATTR_CONCURRENCY|수준 1/수준 2 [2]|  
 |SQL_ATTR_CURSOR_SCROLLABLE|수준 1|  
@@ -72,28 +73,28 @@ ms.locfileid: "81306404"
 |SQL_ATTR_CURSOR_TYPE|코어/수준 2 [3]|  
 |SQL_ATTR_ENABLE_AUTO_IPD|수준 2|  
 |SQL_ATTR_FETCH_BOOKMARK_PTR|수준 2|  
-|SQL_ATTR_IMP_PARAM_DESC|코어|  
-|SQL_ATTR_IMP_ROW_DESC|코어|  
+|SQL_ATTR_IMP_PARAM_DESC|핵심|  
+|SQL_ATTR_IMP_ROW_DESC|핵심|  
 |SQL_ATTR_KEYSET_SIZE|수준 2|  
 |SQL_ATTR_MAX_LENGTH|수준 1|  
 |SQL_ATTR_MAX_ROWS|수준 1|  
-|SQL_ATTR_METADATA_ID|코어|  
-|SQL_ATTR_NOSCAN|코어|  
-|SQL_ATTR_PARAM_BIND_OFFSET_PTR|코어|  
-|SQL_ATTR_PARAM_BIND_TYPE|코어|  
-|SQL_ATTR_PARAM_OPERATION_PTR|코어|  
-|SQL_ATTR_PARAM_STATUS_PTR|코어|  
-|SQL_ATTR_PARAMS_PROCESSED_PTR|코어|  
-|SQL_ATTR_PARAMSET_SIZE|코어|  
+|SQL_ATTR_METADATA_ID|핵심|  
+|SQL_ATTR_NOSCAN|핵심|  
+|SQL_ATTR_PARAM_BIND_OFFSET_PTR|핵심|  
+|SQL_ATTR_PARAM_BIND_TYPE|핵심|  
+|SQL_ATTR_PARAM_OPERATION_PTR|핵심|  
+|SQL_ATTR_PARAM_STATUS_PTR|핵심|  
+|SQL_ATTR_PARAMS_PROCESSED_PTR|핵심|  
+|SQL_ATTR_PARAMSET_SIZE|핵심|  
 |SQL_ATTR_QUERY_TIMEOUT|수준 2|  
 |SQL_ATTR_RETRIEVE_DATA|수준 1|  
-|SQL_ATTR_ROW_ARRAY_SIZE|코어|  
-|SQL_ATTR_ROW_BIND_OFFSET_PTR|코어|  
-|SQL_ATTR_ROW_BIND_TYPE|코어|  
+|SQL_ATTR_ROW_ARRAY_SIZE|핵심|  
+|SQL_ATTR_ROW_BIND_OFFSET_PTR|핵심|  
+|SQL_ATTR_ROW_BIND_TYPE|핵심|  
 |SQL_ATTR_ROW_NUMBER|수준 1|  
 |SQL_ATTR_ROW_OPERATION_PTR|수준 1|  
-|SQL_ATTR_ROW_STATUS_PTR|코어|  
-|SQL_ATTR_ROWS_FETCHED_PTR|코어|  
+|SQL_ATTR_ROW_STATUS_PTR|핵심|  
+|SQL_ATTR_ROWS_FETCHED_PTR|핵심|  
 |SQL_ATTR_SIMULATE_CURSOR|수준 2|  
 |SQL_ATTR_USE_BOOKMARKS|수준 2|  
   

@@ -1,4 +1,5 @@
 ---
+description: 사용자 지정 태스크에서 이벤트 발생 및 정의
 title: 사용자 지정 태스크에서 이벤트 발생 및 정의 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -24,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: e0898aa1-e90c-4c4e-99d4-708a76efddfd
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7a0cdd94e6ad739b24eccc5ce466a4e916850674
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 69f2f6c7f27f4a199ff96661595bb03b3eaafb62
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916327"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477381"
 ---
 # <a name="raising-and-defining-events-in-a-custom-task"></a>사용자 지정 태스크에서 이벤트 발생 및 정의
 

@@ -1,4 +1,5 @@
 ---
+description: sp_help_publication_access(Transact-SQL)
 title: sp_help_publication_access (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9408fa13-54a0-4cb1-8fb0-845e5536ef50
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 11571a7a3fb97a164291a3f3949d30205305daf7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5a40f12ade4dcbb08609da6184fa0a96ca9926cd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758806"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485986"
 ---
 # <a name="sp_help_publication_access-transact-sql"></a>sp_help_publication_access(Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -40,13 +41,13 @@ sp_help_publication_access [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @publication = ] 'publication'`액세스할 게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 없습니다.  
+`[ @publication = ] 'publication'` 액세스할 게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @return_granted = ] 'return_granted'`로그인 ID입니다. *return_granted* 은 **bit**이며 기본값은 1입니다. **0** 을 지정 하 고 인증을 사용 하는 경우 게시자에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 표시 되지만 배포자에는 표시 되지 않는 사용 가능한 로그인이 반환 됩니다. **0** 을 지정 하 고 Windows 인증을 사용 하는 경우 게시자 또는 배포자에서 특별히 액세스가 거부 되지 않은 로그인이 반환 됩니다.  
+`[ @return_granted = ] 'return_granted'` 로그인 ID입니다. *return_granted* 은 **bit**이며 기본값은 1입니다. **0** 을 지정 하 고 인증을 사용 하는 경우 게시자에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 표시 되지만 배포자에는 표시 되지 않는 사용 가능한 로그인이 반환 됩니다. **0** 을 지정 하 고 Windows 인증을 사용 하는 경우 게시자 또는 배포자에서 특별히 액세스가 거부 되지 않은 로그인이 반환 됩니다.  
   
-`[ @login = ] 'login'`표준 보안 로그인 ID입니다. *login* 은 **sysname**이며 기본값은 **%** 입니다.  
+`[ @login = ] 'login'` 표준 보안 로그인 ID입니다. *login* 은 **sysname**이며 기본값은 **%** 입니다.  
   
-`[ @initial_list = ] initial_list`게시 액세스 권한이 있는 모든 멤버를 반환할지 아니면 새 멤버가 목록에 추가 되기 전에 액세스 권한이 있는 사용자만 반환할지를 지정 합니다. *initial_list* 은 bit 이며 기본값은 **0**입니다.  
+`[ @initial_list = ] initial_list` 게시 액세스 권한이 있는 모든 멤버를 반환할지 아니면 새 멤버가 목록에 추가 되기 전에 액세스 권한이 있는 사용자만 반환할지를 지정 합니다. *initial_list* 은 bit 이며 기본값은 **0**입니다.  
   
  **1** 은 게시를 만들 때 사용 된 배포자에서 유효한 로그인과 함께 **sysadmin** 고정 서버 역할의 모든 멤버와 현재 로그인에 대 한 정보를 반환 합니다.  
   

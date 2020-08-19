@@ -1,4 +1,5 @@
 ---
+description: 버전 복사(Master Data Services)
 title: 버전 복사
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f4678a02-bbe9-4f21-9e32-627eae053fe7
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 412d86d140060aa640ed2e3c3b8b49b6f8f9e1ee
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: a0e6412b563bd9e33b513d0e70b7ed505138fcb6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85814055"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429995"
 ---
 # <a name="copy-a-version-master-data-services"></a>버전 복사(Master Data Services)
 
@@ -26,7 +27,7 @@ ms.locfileid: "85814055"
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 모델의 버전을 복사하여 새 버전을 만듭니다.  
   
-## <a name="prerequisites"></a>전제 조건  
+## <a name="prerequisites"></a>사전 요구 사항  
  이 절차를 수행하려면  
   
 -   **버전 관리** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  

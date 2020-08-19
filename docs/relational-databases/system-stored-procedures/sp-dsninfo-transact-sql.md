@@ -1,4 +1,5 @@
 ---
+description: sp_dsninfo(Transact-SQL)
 title: sp_dsninfo (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 34648615-814b-42bc-95a3-50e86b42ec4d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 59d0b995103ab01d3bf3b7ec5336ad16b97b1e6f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 378b50379ab03124db37c296be273f0a68db59d3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881747"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486079"
 ---
 # <a name="sp_dsninfo-transact-sql"></a>sp_dsninfo(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,9 +42,9 @@ sp_dsninfo [ @dsn =] 'dsn'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @dsn = ] 'dsn'`ODBC DSN 또는 OLE DB 연결 된 서버의 이름입니다. *dsn* 은 **varchar (128)** 이며 기본값은 없습니다.  
+`[ @dsn = ] 'dsn'` ODBC DSN 또는 OLE DB 연결 된 서버의 이름입니다. *dsn* 은 **varchar (128)** 이며 기본값은 없습니다.  
   
-`[ @infotype = ] 'info_type'`반환할 정보의 형식입니다. *Info_type* 지정 하지 않거나 NULL을 지정 하면 모든 정보 유형이 반환 됩니다. *info_type* 는 **varchar (128)** 이며 기본값은 NULL이 고 다음 값 중 하나일 수 있습니다.  
+`[ @infotype = ] 'info_type'` 반환할 정보의 형식입니다. *Info_type* 지정 하지 않거나 NULL을 지정 하면 모든 정보 유형이 반환 됩니다. *info_type* 는 **varchar (128)** 이며 기본값은 NULL이 고 다음 값 중 하나일 수 있습니다.  
   
 |값|설명|  
 |-----------|-----------------|  
@@ -52,11 +53,11 @@ sp_dsninfo [ @dsn =] 'dsn'
 |**DATABASE_NAME**|데이터베이스 이름을 나타냅니다.|  
 |**SQL_SUBSCRIBER**|데이터 원본이 구독자가 될 수 있는지를 나타냅니다.|  
   
-`[ @login = ] 'login'`데이터 원본에 대 한 로그인입니다. 데이터 원본에 로그인이 포함되어 있는 경우에는 NULL을 지정하거나 매개 변수를 생략하십시오. *login*은 **varchar (128)** 이며 기본값은 NULL입니다.  
+`[ @login = ] 'login'` 데이터 원본에 대 한 로그인입니다. 데이터 원본에 로그인이 포함되어 있는 경우에는 NULL을 지정하거나 매개 변수를 생략하십시오. *login*은 **varchar (128)** 이며 기본값은 NULL입니다.  
   
-`[ @password = ] 'password'`로그인에 대 한 암호입니다. 데이터 원본에 로그인이 포함되어 있는 경우에는 NULL을 지정하거나 매개 변수를 생략하십시오. *암호*는 **varchar (128)** 이며 기본값은 NULL입니다.  
+`[ @password = ] 'password'` 로그인에 대 한 암호입니다. 데이터 원본에 로그인이 포함되어 있는 경우에는 NULL을 지정하거나 매개 변수를 생략하십시오. *암호*는 **varchar (128)** 이며 기본값은 NULL입니다.  
   
-`[ @dso_type = ] dso_type`데이터 원본 유형입니다. *dso_type* 은 **int**이며 다음 값 중 하나일 수 있습니다.  
+`[ @dso_type = ] dso_type` 데이터 원본 유형입니다. *dso_type* 은 **int**이며 다음 값 중 하나일 수 있습니다.  
   
 |값|설명|  
 |-----------|-----------------|  

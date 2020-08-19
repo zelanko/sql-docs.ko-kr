@@ -1,4 +1,5 @@
 ---
+description: CONCAT(Transact-SQL)
 title: CONCAT(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2017
@@ -18,12 +19,12 @@ ms.assetid: fce5a8d4-283b-4c47-95e5-4946402550d5
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8fe0c77173c617bc4f1003c31724af5dca32af28
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: d0cf8a5da8735015aaabc9760abc08edcf5c3e15
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394268"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468233"
 ---
 # <a name="concat-transact-sql"></a>CONCAT(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -42,7 +43,7 @@ CONCAT ( string_value1, string_value2 [, string_valueN ] )
 
 ## <a name="arguments"></a>인수
 *string_value*  
-다른 값에 연결할 문자열 값입니다. `CONCAT` 함수에는 둘 이상의 *string_value* 인수와 254개 이하의 *string_value*  인수가 필요합니다.
+다른 값에 연결할 문자열 값입니다. `CONCAT` 함수에는 둘 이상의 *string_value* 인수와 254개 이하의 *string_value * 인수가 필요합니다.
   
 ## <a name="return-types"></a>반환 형식  
 *string_value*  
@@ -66,7 +67,7 @@ CONCAT ( string_value1, string_value2 [, string_valueN ] )
   
 CONCAT 함수는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 버전 이상의 연결된 서버에서 원격으로 실행할 수 있습니다. 이전 버전의 연결된 서버인 경우 연결된 서버에서 연결되지 않은 값을 반환한 후에 CONCAT 작업이 로컬로 수행됩니다.
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-using-concat"></a>A. CONCAT 사용  
   

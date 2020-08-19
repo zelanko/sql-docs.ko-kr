@@ -1,4 +1,5 @@
 ---
+description: Levels(MDX)
 title: 수준 (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 24e15602593f9116d499345ffca093f86ecfa135
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f3b0a7eaea166fdefbfd947faf95b58f74bdb8be
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67905641"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429875"
 ---
 # <a name="levels-mdx"></a>Levels(MDX)
 
@@ -49,7 +50,7 @@ Hierarchy_Expression.Levels( Level_Name )
 > [!NOTE]  
 >  사용자 정의 함수에 대해서는 문자열 식 구문을 사용합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 각 **수준의** 함수 구문을 보여 줍니다.  
   
 ### <a name="numeric"></a>숫자  

@@ -1,4 +1,5 @@
 ---
+description: Lat(geography 데이터 형식)
 title: Lat(geography 데이터 형식) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 051d66bc-04de-4c58-861c-760dc5b859b5
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: ede92951517dcbe8c5a58e27bb8db9573fd0354e
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: e6aff42dafc123d19fd8a2ea9a2ffa637cc54ee3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86552909"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422367"
 ---
 # <a name="lat-geography-data-type"></a>Lat(geography 데이터 형식)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,12 +41,12 @@ ms.locfileid: "86552909"
 ## <a name="return-types"></a>반환 형식
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 형식: **float**  
   
- CLR 형식: **SqlDouble**  
+ CLR 유형: **SqlDouble**  
   
 ## <a name="remarks"></a>설명  
  OpenGIS 모델에서 하나의 점으로 구성된 **geography** 인스턴스에 대해서만 Lat가 정의됩니다. **geography** 인스턴스에 둘 이상의 지점이 포함되어 있는 경우 이 속성은 NULL을 반환합니다. 이 속성은 정확하며 읽기 전용입니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  이 예에서는 지점을 만들고 지점의 위도를 반환합니다.  
   
 ```  
