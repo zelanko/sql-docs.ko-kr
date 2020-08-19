@@ -1,4 +1,5 @@
 ---
+description: 레코드 집합 대상 사용
 title: 레코드 집합 대상 사용 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: a7b143dc-8008-404f-83b0-b45ffbca6029
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 605cdbdc7b813fbbecb819bd31bde42f8f5afdc7
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 4d823048d128d8837c80c724064ea0d8afe1a5a7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916665"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425605"
 ---
 # <a name="use-a-recordset-destination"></a>레코드 집합 대상 사용
 
@@ -26,7 +27,7 @@ ms.locfileid: "86916665"
 
   레코드 집합 대상은 외부 데이터 원본에 데이터를 저장하지 않습니다. 대신 레코드 집합 대상은 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Object **데이터 형식의** 패키지 변수에 저장된 레코드 집합의 데이터를 메모리에 저장합니다. 레코드 집합 대상이 데이터를 저장한 후에는 일반적으로 Foreach 루프 컨테이너를 Foreach ADO 열거자와 함께 사용하여 레코드 집합의 행을 한 번에 하나씩 처리합니다. Foreach ADO 열거자는 현재 행의 각 열 값을 개별 패키지 변수에 저장합니다. 그러면 Foreach 루프 컨테이너 내에 구성한 태스크가 변수에서 이러한 값을 읽어 와서 이를 가지고 몇 가지 동작을 수행합니다.  
   
- 레코드 집합 대상은 다양한 시나리오에서 사용할 수 있습니다. 예를 들어 다음과 같은 노래를 선택할 수 있다.  
+ 레코드 집합 대상은 다양한 시나리오에서 사용할 수 있습니다. 다음은 몇 가지 예입니다.  
   
 -   메일 보내기 태스크와 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 식 언어를 사용하여 레코드 집합의 각 행에 대해 사용자 지정 전자 메일 메시지를 보낼 수 있습니다.  
   
@@ -157,7 +158,7 @@ ms.locfileid: "86916665"
   
     5.  **MessageSourceType**에 대해 **직접 입력**을 선택합니다.  
   
-5.  **메일 보내기 태스크 편집기** 의 **식**페이지에서 줄임표 단추( **...** )를 클릭하여 **속성 식 편집기**를 엽니다.  
+5.  **메일 보내기 태스크 편집기** 의 **식**페이지에서 줄임표 단추(**...**)를 클릭하여 **속성 식 편집기**를 엽니다.  
   
 6.  **속성 식 편집기**에서 다음 정보를 입력합니다.  
   

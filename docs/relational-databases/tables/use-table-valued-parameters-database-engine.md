@@ -1,4 +1,5 @@
 ---
+description: 테이블 반환 매개 변수 사용(데이터베이스 엔진)
 title: 테이블 반환 매개 변수 사용(데이터베이스 엔진) | Microsoft 문서
 ms.custom: ''
 ms.date: 03/16/2017
@@ -16,12 +17,12 @@ ms.assetid: 5e95a382-1e01-4c74-81f5-055612c2ad99
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c01f99fc2f1964e1a459de12d77f0bfc3ea40ca6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b6f2827a6defa8cc98f73660bc46eb0da23a42a2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72796644"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427415"
 ---
 # <a name="use-table-valued-parameters-database-engine"></a>테이블 반환 매개 변수 사용(데이터베이스 엔진)
 
@@ -114,7 +115,7 @@ INSERT INTO @LocationTVP (LocationName, CostRate)
 EXEC usp_InsertProductionLocation @LocationTVP;
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목
 
 - [CREATE TYPE](../../t-sql/statements/create-type-transact-sql.md)
 - [선언 @local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md)

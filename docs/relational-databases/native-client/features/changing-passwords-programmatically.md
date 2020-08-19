@@ -1,4 +1,5 @@
 ---
+description: 프로그래밍 방식으로 SQL Server Native Client 암호 변경
 title: 프로그래밍 방식으로 암호 변경 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -21,12 +22,12 @@ ms.assetid: 624ad949-5fed-4ce5-b319-878549f9487b
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 13d0e51b7b06acdfbe847976d093765203b51638
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 54eaac3f4b8a5e8cc8ab6de6c0b0c75fb54c22c3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245801"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428185"
 ---
 # <a name="changing-sql-server-native-client-passwords-programmatically"></a>프로그래밍 방식으로 SQL Server Native Client 암호 변경
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -41,15 +42,15 @@ ms.locfileid: "87245801"
   
 |SQL Server 오류 코드|오류 메시지|  
 |---------------------------|-------------------|  
-|15113|사용자 '%. * l s '이 (가) 로그인 하지 못했습니다. 이유: 암호 유효성 검사에 실패 했습니다. 계정이 잠겼습니다.|  
-|18463|사용자 '%.*ls'이(가) 로그인하지 못했습니다. 원인: 암호를 변경하지 못했습니다. 지금은 암호를 사용할 수 없습니다.|  
-|18464|사용자 '%.*ls'이(가) 로그인하지 못했습니다. 원인: 암호를 변경하지 못했습니다. 암호가 너무 짧아서 정책 요구 사항에 맞지 않습니다.|  
-|18465|사용자 '%.*ls'이(가) 로그인하지 못했습니다. 원인: 암호를 변경하지 못했습니다. 암호가 너무 길어서 정책 요구 사항에 맞지 않습니다.|  
-|18466|사용자 '%.*ls'이(가) 로그인하지 못했습니다. 원인: 암호를 변경하지 못했습니다. 암호가 복잡하지 않기 때문에 정책 요구 사항에 맞지 않습니다.|  
-|18467|사용자 '%.*ls'이(가) 로그인하지 못했습니다. 원인: 암호를 변경하지 못했습니다. 암호가 암호 필터 DLL의 요구 사항에 맞지 않습니다.|  
-|18468|사용자 '%.*ls'이(가) 로그인하지 못했습니다. 원인: 암호를 변경하지 못했습니다. 암호 유효성 검사 중에 오류가 발생했습니다.|  
-|18487|사용자 '%.*ls'이(가) 로그인하지 못했습니다. 원인: 계정의 암호가 만료되었습니다.|  
-|18488|사용자 '%.*ls'이(가) 로그인하지 못했습니다. 원인: 계정의 암호를 변경해야 합니다.|  
+|15113|사용자 '%.*ls'이(가) 로그인하지 못했습니다. 원인: 암호의 유효성을 검사하지 못했습니다. 계정이 잠겼습니다.|  
+|18463|사용자 '%.*ls'이(가) 로그인하지 못했습니다. 이유: 암호를 변경하지 못했습니다. 지금은 암호를 사용할 수 없습니다.|  
+|18464|사용자 '%.*ls'이(가) 로그인하지 못했습니다. 이유: 암호를 변경하지 못했습니다. 암호가 너무 짧아서 정책 요구 사항에 맞지 않습니다.|  
+|18465|사용자 '%.*ls'이(가) 로그인하지 못했습니다. 이유: 암호를 변경하지 못했습니다. 암호가 너무 길어서 정책 요구 사항에 맞지 않습니다.|  
+|18466|사용자 '%.*ls'이(가) 로그인하지 못했습니다. 이유: 암호를 변경하지 못했습니다. 암호가 복잡하지 않기 때문에 정책 요구 사항에 맞지 않습니다.|  
+|18467|사용자 '%.*ls'이(가) 로그인하지 못했습니다. 이유: 암호를 변경하지 못했습니다. 암호가 암호 필터 DLL의 요구 사항에 맞지 않습니다.|  
+|18468|사용자 '%.*ls'이(가) 로그인하지 못했습니다. 이유: 암호를 변경하지 못했습니다. 암호 유효성 검사 중에 오류가 발생했습니다.|  
+|18487|사용자 '%.*ls'이(가) 로그인하지 못했습니다. 이유: 계정의 암호가 만료되었습니다.|  
+|18488|사용자 '%.*ls'이(가) 로그인하지 못했습니다. 이유: 계정의 암호를 변경해야 합니다.|  
   
 ## <a name="sql-server-native-client-ole-db-provider"></a>SQL Server Native Client OLE DB 공급자  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB 공급자는 사용자 인터페이스를 통해 또는 프로그래밍 방식으로 암호 만료를 지원 합니다.  

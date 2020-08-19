@@ -1,4 +1,5 @@
 ---
+description: sp_kill_filestream_non_transacted_handles(Transact-SQL)
 title: sp_kill_filestream_non_transacted_handles (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7188353e-ab29-49a0-8f25-7fb8ab122589
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fdceccb1d11ce8818e9f26e46adf6b698e493cd4
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 3413aa4b4601701241aeae9474d92964cd21238c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898150"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427705"
 ---
 # <a name="sp_kill_filestream_non_transacted_handles-transact-sql"></a>sp_kill_filestream_non_transacted_handles(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -67,7 +68,7 @@ sp_kill_filestream_non_transacted_handles [[ @table_name = ] 'table_name', [[ @h
 ### <a name="permissions"></a>사용 권한  
  **Dm_FILESTREAM_non_transacted_handles** 동적 관리 뷰에서 파일 핸들을 가져오고 **sp_kill_filestream_non_transacted_handles**를 실행 하려면 **VIEW DATABASE STATE** 권한이 있어야 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 **sp_kill_filestream_non_transacted_handles** 를 호출 하 여 FileTable 데이터에 대 한 비트랜잭션 파일 핸들을 닫는 방법을 보여 줍니다.  
   
 ```sql  

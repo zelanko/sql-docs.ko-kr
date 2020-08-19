@@ -1,4 +1,5 @@
 ---
+description: 스파스 열 지원(ODBC)
 title: 스파스 열 지원 (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -11,11 +12,12 @@ ms.assetid: 11ae959f-2fb6-4b85-ac5d-1476a82136d4
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cb4c4311c4109209301b196be0aba76b1689dc29
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 35d45a5520b89589633d15b302c1beee92150385
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009707"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428115"
 ---
 # <a name="sparse-columns-support-odbc"></a>스파스 열 지원(ODBC)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

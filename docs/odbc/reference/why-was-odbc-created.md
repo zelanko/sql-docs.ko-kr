@@ -1,5 +1,6 @@
 ---
-title: ODBC가 만들어진 이유 | Microsoft 문서
+description: ODBC가 만들어진 이유
+title: ODBC가 만들어진 이유 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ba6eb993-316b-4650-bab8-d76583c00e53
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 22173b0ad3dd8abf2d168b41a16a03bc414022ce
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6ce24a4856c3bae6d271712a948e1ae5e2ceecbf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302784"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428795"
 ---
 # <a name="why-was-odbc-created"></a>ODBC가 만들어진 이유
 지금까지 회사에서는 단일 DBMS를 사용 했습니다. 모든 데이터베이스 액세스는 해당 시스템의 프런트 엔드 또는 해당 시스템 에서만 작동 하도록 작성 된 응용 프로그램을 통해 수행 됩니다. 그러나 컴퓨터의 사용이 증가 하 고 더 많은 컴퓨터 하드웨어 및 소프트웨어를 사용할 수 있게 되 면 회사에서 다른 Dbms를 획득 하기 시작 했습니다. 그 이유는 많은 사람들이 저렴 한 것, 가장 빠른 방법, 이미 알고 있는 것, 시장에서 최신 이었던 것, 단일 응용 프로그램에 대해 가장 잘 작동 하는 것 등이 있습니다. 다른 이유는 이전에 단일 DBMS가 있는 부서가 몇 가지를 재구성 및 합병입니다.  

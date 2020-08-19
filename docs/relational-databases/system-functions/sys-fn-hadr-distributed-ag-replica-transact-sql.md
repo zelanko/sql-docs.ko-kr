@@ -1,4 +1,5 @@
 ---
+description: sys. fn_hadr_distributed_ag_replica (Transact-sql)
 title: sys. fn_hadr_distributed_ag_replica (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -19,11 +20,12 @@ helpviewer_keywords:
 ms.assetid: a1e5f9cb-c350-4bb4-a04f-7394f6f25d62
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 49eabca032ab109be1f0aecb1d830c83d9305a7f
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: 6b7dc6aacf18415b11f5a32e464a57fbbadadc07
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86053619"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427775"
 ---
 # <a name="sysfn_hadr_distributed_ag_replica-transact-sql"></a>sys. fn_hadr_distributed_ag_replica (Transact-sql)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]

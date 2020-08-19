@@ -1,4 +1,5 @@
 ---
+description: sysmergearticles(Transact-SQL)
 title: sysmergearticles (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e9b1648e-4660-4688-9f56-18b2baf7228c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6b1678b9430127452fafa9e63cc2719efed088b8
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 677fc8a30daa3b9a921bb194c6f4d06635b43284
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881370"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427595"
 ---
 # <a name="sysmergearticles-transact-sql"></a>sysmergearticles(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +38,7 @@ ms.locfileid: "85881370"
 |**sync_objid**|**int**|동기화된 데이터 집합을 표시하는 뷰의 개체 ID입니다.|  
 |**view_type**|**tinyint**|뷰의 유형:<br /><br /> **0** = 뷰가 아닙니다. 모든 기본 개체를 사용 합니다.<br /><br /> **1** = 영구 뷰입니다.<br /><br /> **2** = 임시 뷰|  
 |**artid**|**uniqueidentifier**|지정된 아티클의 고유한 ID입니다.|  
-|**한**|**nvarchar(255)**|아티클에 대한 간단한 설명입니다.|  
+|**description**|**nvarchar(255)**|아티클에 대한 간단한 설명입니다.|  
 |**pre_creation_command**|**tinyint**|아티클이 구독 데이터베이스에서 생성될 때 수행할 기본 동작입니다.<br /><br /> **0 =** None-구독자에 테이블이 이미 있는 경우 아무 동작도 수행 되지 않습니다.<br /><br /> **1** = Drop-테이블을 다시 만들기 전에 테이블을 삭제 합니다.<br /><br /> **2** = delete-하위 집합 필터의 where 절을 기반으로 삭제를 실행 합니다.<br /><br /> **3** = Truncate- **2**와 동일 하지만 행 대신 페이지를 삭제 합니다. 단, WHERE 절은 사용하지 않습니다.|  
 |**pubid**|**uniqueidentifier**|현재 아티클이 속한 게시의 ID입니다.|  
 |**애칭**|**int**|아티클 ID에 대한 애칭 매핑입니다.|  
@@ -92,8 +93,8 @@ ms.locfileid: "85881370"
 |**preserve_rowguidcol**|**bit**|복제에 기존 rowguid 열이 사용되는지 여부를 나타냅니다. 값 **1** 은 기존 ROWGUIDCOL 열이 사용 됨을 의미 합니다. **0** 은 복제가 ROWGUIDCOL 열을 추가 했음을 의미 합니다.|  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;복제 테이블](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Transact-sql&#41;&#40;복제 뷰](../../relational-databases/system-views/replication-views-transact-sql.md)   
+ [Transact-sql&#41;&#40;복제 테이블 ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Transact-sql&#41;&#40;복제 뷰 ](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [Transact-sql&#41;sp_addmergearticle &#40;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)   
  [Transact-sql&#41;sp_changemergearticle &#40;](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)   
  [sp_helpmergearticle&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)  

@@ -1,4 +1,5 @@
 ---
+description: FILESTREAM 지원(OLE DB)
 title: FILESTREAM 지원 (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c2bd3dfd-6103-43d1-859e-8ed8d19c58d3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8fdc7912f08f7a2277fa5e5822420a0c8d0f287f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8dd62a70c60ff1242aa4ea8b81c85e9ae6046ea1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894113"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428075"
 ---
 # <a name="filestream-support-ole-db"></a>FILESTREAM 지원(OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

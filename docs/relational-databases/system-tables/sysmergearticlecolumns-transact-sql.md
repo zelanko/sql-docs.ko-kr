@@ -1,4 +1,5 @@
 ---
+description: sysmergearticlecolumns(Transact-SQL)
 title: sysmergearticlecolumns (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1ad8663f-a624-42a2-8641-fefac3433c97
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: dad22f0e389b9ad7c0c770f5990482e128c02201
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8bae31473976690ea60575b7ab3ce902f46d3c32
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889274"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427625"
 ---
 # <a name="sysmergearticlecolumns-transact-sql"></a>sysmergearticlecolumns(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -32,10 +33,10 @@ ms.locfileid: "85889274"
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**artid**|**int**|아티클을 식별합니다.|  
-|**colid**|**smallint**|아티클의 열을 식별합니다.|  
+|**id**|**smallint**|아티클의 열을 식별합니다.|  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;복제 테이블](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Transact-sql&#41;&#40;복제 테이블 ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [복제 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

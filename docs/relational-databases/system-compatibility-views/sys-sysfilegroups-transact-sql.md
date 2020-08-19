@@ -1,4 +1,5 @@
 ---
+description: sys.sysfilegroups(Transact-SQL)
 title: sys.sys파일 그룹 (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: e567fa07-31cd-43cc-b8c7-ba6108baca80
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 832521da1d7d23ed4b91c5d9c451c3ceb3b1e5b3
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: de9252c9a63b419a28f61aad2401471fa5f5c778
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897121"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427905"
 ---
 # <a name="syssysfilegroups-transact-sql"></a>sys.sysfilegroups(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

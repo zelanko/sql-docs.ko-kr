@@ -1,4 +1,5 @@
 ---
+description: SQLCancel
 title: SQLCancel | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,11 +14,12 @@ ms.assetid: d4c965ae-c1ac-4e9d-b4b9-32b561401106
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b55d569b124190d7c6248ed632839ae949af8d33
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: e062d0a0e62d42e4c7c639c35bbf9edc7e60f9ff
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004398"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428405"
 ---
 # <a name="sqlcancel"></a>SQLCancel
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

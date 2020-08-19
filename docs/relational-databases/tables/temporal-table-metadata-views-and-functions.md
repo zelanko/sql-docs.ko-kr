@@ -1,4 +1,5 @@
 ---
+description: 임시 테이블 메타데이터 뷰 및 함수
 title: 임시 테이블 메타데이터 뷰 및 함수 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/28/2016
@@ -11,12 +12,12 @@ ms.assetid: e5d23ec9-7d18-40f6-add4-bea13132d0b9
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 455305f89d22ba63884097b8a9fdcaa6e9386ac0
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 66873e27182013af7ac50dd8670b3b794e3d75ef
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554858"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427435"
 ---
 # <a name="temporal-table-metadata-views-and-functions"></a>임시 테이블 메타데이터 뷰 및 함수
 

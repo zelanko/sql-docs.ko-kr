@@ -1,4 +1,5 @@
 ---
+description: 일반 확장 저장 프로시저(Transact-SQL)
 title: 일반 확장 저장 프로시저 (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 9129f571-d162-42e6-a66b-340fbbf0acd1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4aa34ee1f519e95e74fd5fddcb144ef0d978ac50
-ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
+ms.openlocfilehash: 0b9f9ab9315eb04d21001a60c3c2b48d897f65a0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86977561"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427685"
 ---
 # <a name="general-extended-stored-procedures-transact-sql"></a>일반 확장 저장 프로시저(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,4 +1,5 @@
 ---
+description: 큰 CLR 사용자 정의 형식(ODBC)
 title: 대량 CLR 사용자 정의 형식 (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -14,11 +15,12 @@ ms.assetid: ddce337e-bb6e-4a30-b7cc-4969bb1520a9
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ec445a457f948c2fb75d26a6ad632633230f6fec
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 3f1beb11da79f41349ef0f01bb203d969654db07
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009758"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428165"
 ---
 # <a name="large-clr-user-defined-types-odbc"></a>큰 CLR 사용자 정의 형식(ODBC)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -135,7 +137,7 @@ ms.locfileid: "86009758"
 |SQL_C_BINARY|지원됨|  
 |SQL_C_CHAR|되지|  
   
- \*이진 데이터가 16 진수 문자열로 변환 됩니다.  
+ \* 이진 데이터가 16 진수 문자열로 변환 됩니다.  
   
  C에서 SQL 데이터 형식으로 지원되는 변환은 다음과 같습니다.  
   
@@ -145,7 +147,7 @@ ms.locfileid: "86009758"
 |SQL_C_BINARY|지원됨|  
 |SQL_C_CHAR|되지|  
   
- \*16 진수 문자열에서 이진 데이터로의 변환이 발생 합니다.  
+ \* 16 진수 문자열에서 이진 데이터로의 변환이 발생 합니다.  
   
 ## <a name="sql_variant-support-for-udts"></a>UDT에 대한 SQL_VARIANT 지원  
  UDT는 SQL_VARIANT 열에서 지원되지 않습니다.  

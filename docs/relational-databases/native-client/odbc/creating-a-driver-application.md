@@ -1,4 +1,5 @@
 ---
+description: 드라이버 애플리케이션 만들기
 title: 애플리케이션 만들기
 ms.custom: ''
 ms.date: 03/14/2017
@@ -24,18 +25,19 @@ ms.assetid: c83c36e2-734e-4960-bc7e-92235910bc6f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3bc45e8c1de97b5da2d393ceb3ef3794baf56595
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 6bcb65baaf591267d1c40b254bb23fe19e383192
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009773"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428195"
 ---
 # <a name="creating-a-driver-application"></a>드라이버 애플리케이션 만들기
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   ODBC 아키텍처에는 다음과 같은 기능을 수행하는 네 가지 구성 요소가 있습니다.  
   
-|구성 요소|함수|  
+|구성 요소|기능|  
 |---------------|--------------|  
 |애플리케이션|ODBC 데이터 원본과 통신하는 ODBC 함수를 호출하고, SQL 문을 전송하고, 결과 집합을 처리합니다.|  
 |드라이버 관리자|애플리케이션과 애플리케이션에서 사용하는 모든 ODBC 드라이버 사이의 통신을 관리합니다.|  
@@ -78,19 +80,19 @@ ms.locfileid: "86009773"
   
  Native Client ODBC 드라이버를 비롯 한 많은 ODBC 드라이버는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 드라이버별 ODBC 확장을 제공 합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native CLIENT ODBC 드라이버별 확장을 활용 하려면 응용 프로그램에 sqlncli 헤더 파일이 포함 되어야 합니다. 이 헤더 파일에는 다음과 같은 항목이 들어 있습니다.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client ODBC 드라이버별 연결 특성입니다.  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버별 연결 특성입니다.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client ODBC 드라이버별 문 특성  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버별 문 특성  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client ODBC 드라이버별 열 특성입니다.  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버별 열 특성입니다.  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]별 데이터 형식  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]별 사용자 정의 데이터 형식  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client ODBC 드라이버별 [SQLGetInfo](../../../relational-databases/native-client-odbc-api/sqlgetinfo.md) 형식입니다.  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버별 [SQLGetInfo](../../../relational-databases/native-client-odbc-api/sqlgetinfo.md) 형식입니다.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client ODBC 드라이버 진단 필드입니다.  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버 진단 필드입니다.  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]별 진단 동적 함수 코드  
   

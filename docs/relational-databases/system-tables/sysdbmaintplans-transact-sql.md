@@ -1,4 +1,5 @@
 ---
+description: sysdbmaintplans(Transact-SQL)
 title: sysdbmaintplans (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0363296a-3082-48a9-9eb5-a1020b2f541a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7eb84e9d50a797e52aca749cf590ca95b4f3e835
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2b99856c92b13ebfda086a8dea8f2a4bd26e86dd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881398"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427605"
 ---
 # <a name="sysdbmaintplans-transact-sql"></a>sysdbmaintplans(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

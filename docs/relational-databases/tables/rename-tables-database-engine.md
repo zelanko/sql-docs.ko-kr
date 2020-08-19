@@ -1,4 +1,5 @@
 ---
+description: 테이블 이름 바꾸기(데이터베이스 엔진)
 title: 테이블 이름 바꾸기(데이터베이스 엔진) | Microsoft 문서
 ms.custom: ''
 ms.date: 02/23/2018
@@ -15,12 +16,12 @@ helpviewer_keywords:
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: df3898847b0470b93e89ffdad46682bc9475f5b1
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 86a6b67d0393c9bac6e5ad3b9713c89796df3db4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011843"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427455"
 ---
 # <a name="rename-tables-database-engine"></a>테이블 이름 바꾸기(데이터베이스 엔진)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -68,7 +69,7 @@ Azure SQL Data Warehouse 또는 병렬 데이터 웨어하우스에서 테이블
   
 4.  이 동작을 취소하려면 이 필드를 나가기 전에 Esc 키를 누릅니다.  
   
-5.  **파일** 메뉴에서 ‘테이블 이름’ **저장**을 선택합니다.   
+5.  **파일** 메뉴에서 ‘테이블 이름’ **저장**을 선택합니다.  
 
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   

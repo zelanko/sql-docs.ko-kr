@@ -1,4 +1,5 @@
 ---
+description: SQLBrowseConnect
 title: SQLBrowseConnect | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,11 +15,12 @@ ms.assetid: 57faf388-c7ca-4696-9845-34e0a10cc5f7
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 690e853ceb908cb85d27831c0c9a4961591158f8
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 56b505e4c4dcaf00c77c31e5e0e55617106df0fd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012096"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428395"
 ---
 # <a name="sqlbrowseconnect"></a>SQLBrowseConnect
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -27,24 +29,24 @@ ms.locfileid: "86012096"
   
 ## <a name="level-1"></a>수준 1  
   
-|키워드|목록 반환 여부|선택 사항 여부|Description|  
+|키워드|목록 반환 여부|선택 사항 여부|설명|  
 |-------------|--------------------|---------------|-----------------|  
 |DSN|해당 없음|예|**Sqldatasources**원본에서 반환 되는 데이터 원본의 이름입니다. DRIVER 키워드가 사용되는 경우에는 DSN 키워드를 사용할 수 없습니다.|  
 |DRIVER|해당 없음|예|Microsoft® [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native CLIENT ODBC 드라이버 이름은 { [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native client 11}입니다. DSN 키워드가 사용되는 경우에는 DRIVER 키워드를 사용할 수 없습니다.|  
   
 ## <a name="level-2"></a>수준 2  
   
-|키워드|목록 반환 여부|선택 사항 여부|Description|  
+|키워드|목록 반환 여부|선택 사항 여부|설명|  
 |-------------|--------------------|---------------|-----------------|  
-|SERVER|예|아니요|데이터 원본이 있는 네트워크의 서버 이름입니다. "(로컬)"이란 용어를 서버로 입력할 수 있으며, 이 경우 네트워크로 연결되지 않은 버전인 경우에도 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 로컬 복사본을 사용할 수 있습니다.|  
-|UID|아니요|예|사용자 로그인 ID입니다.|  
-|PWD|아니요|예(사용자에 따라 달라짐)|사용자가 지정한 암호입니다.|  
-|APP|아니요|예|**SQLBrowseConnect**를 호출 하는 응용 프로그램의 이름입니다.|  
-|WSID|아니요|예|워크스테이션 ID입니다. 일반적으로 애플리케이션이 실행되는 컴퓨터의 네트워크 이름입니다.|  
+|SERVER|예|예|데이터 원본이 있는 네트워크의 서버 이름입니다. "(로컬)"이란 용어를 서버로 입력할 수 있으며, 이 경우 네트워크로 연결되지 않은 버전인 경우에도 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 로컬 복사본을 사용할 수 있습니다.|  
+|UID|예|예|사용자 로그인 ID입니다.|  
+|PWD|예|예(사용자에 따라 달라짐)|사용자가 지정한 암호입니다.|  
+|APP|예|예|**SQLBrowseConnect**를 호출 하는 응용 프로그램의 이름입니다.|  
+|WSID|예|예|워크스테이션 ID입니다. 일반적으로 애플리케이션이 실행되는 컴퓨터의 네트워크 이름입니다.|  
   
 ## <a name="level-3"></a>Level 3  
   
-|키워드|목록 반환 여부|선택 사항 여부|Description|  
+|키워드|목록 반환 여부|선택 사항 여부|설명|  
 |-------------|--------------------|---------------|-----------------|  
 |DATABASE|예|예|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 이름입니다.|  
 |LANGUAGE|예|예|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용하는 국가별 언어입니다.|  
@@ -53,7 +55,7 @@ ms.locfileid: "86012096"
   
  [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)를 호출 하 여 설정 되는 다음 특성은 **SQLBrowseConnect**에서 반환 하는 결과 집합을 결정 합니다.  
   
-|attribute|Description|  
+|attribute|설명|  
 |---------------|-----------------|  
 |SQL_COPT_SS_BROWSE_CONNECT|SQL_MORE_INFO_YES로 설정 된 경우 **SQLBrowseConnect** 는 서버 속성의 확장 문자열을 반환 합니다.<br /><br /> 다음은 **SQLBrowseConnect**에 의해 반환 되는 확장 문자열의 예입니다.<br /><br /> <br /><br /> `ServerName\InstanceName;Clustered:No;Version:8.00.131`<br /><br /> <br /><br /> 이 문자열에서 세미콜론은 서버에 대한 다양한 정보 부분을 구분합니다. 서로 다른 서버 인스턴스를 구분하려면 쉼표를 사용합니다.|  
 |SQL_COPT_SS_BROWSE_SERVER|서버 이름이 지정 된 경우 **SQLBrowseConnect** 는 지정 된 서버에 대 한 정보를 반환 합니다. SQL_COPT_SS_BROWSE_SERVER가 NULL로 설정 된 경우 **SQLBrowseConnect** 는 도메인에 있는 모든 서버에 대 한 정보를 반환 합니다.<br /><br /> <br /><br /> 네트워크 문제로 인해 **SQLBrowseConnect** 는 모든 서버에서 적시에 응답을 받지 못할 수 있습니다. 그러므로 반환되는 서버 목록은 각 요청이 있을 때마다 다를 수 있습니다.|  

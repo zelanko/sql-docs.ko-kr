@@ -1,4 +1,5 @@
 ---
+description: PropertyNumVal 속성(ServerNetworkProtocolProperty 클래스)
 title: PropertyNumVal 속성 (ServerNetworkProtocolProperty)
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 93fce2e8-adf5-48cf-8106-1fead7501a6f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6836060c0e928dc82662437c616d89801c2fd645
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 295794ae460a34f35fce493220cfa4768079ab96
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85880808"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427305"
 ---
 # <a name="propertynumval-property-servernetworkprotocolproperty-class"></a>PropertyNumVal 속성(ServerNetworkProtocolProperty 클래스)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

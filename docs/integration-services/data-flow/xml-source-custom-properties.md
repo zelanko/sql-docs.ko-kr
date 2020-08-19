@@ -1,4 +1,5 @@
 ---
+description: XML 원본 사용자 지정 속성
 title: XML 원본 사용자 지정 속성 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: eb29b28c-3159-41ec-b3d7-fce5b2f2be55
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d9d64d5b477ff31334bc6b60b88e1bbb01811d8d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 2f77a63b11636f2be16e3d7c81c5b902a95b2a84
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920309"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425595"
 ---
 # <a name="xml-source-custom-properties"></a>XML 원본 사용자 지정 속성
 
@@ -43,7 +44,7 @@ ms.locfileid: "86920309"
   
  자세한 내용은 [XML Source](../../integration-services/data-flow/xml-source.md)을 참조하세요.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
   

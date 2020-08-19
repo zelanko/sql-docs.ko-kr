@@ -1,4 +1,5 @@
 ---
+description: 프로젝트 설정 (변환) (DB2ToSQL)
 title: 프로젝트 설정 (변환) (DB2ToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 538c93cf-c5bb-43d5-b758-186d9fb00c19
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 998d8cc8e39599fd24994e241c1da02fa87b863e
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 165287fd2d699c56dc635d85fd58a1b081a497a4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87933714"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427035"
 ---
 # <a name="project-settings-conversion-db2tosql"></a>프로젝트 설정 (변환) (DB2ToSQL)
 **프로젝트 설정** 대화 상자의 변환 페이지에는 SSMA에서 DB2 구문을 구문으로 변환 하는 방법을 사용자 지정 하는 설정이 포함 되어 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -90,7 +91,7 @@ TOP을 사용 하려면 TOP 절 식이 정수로 계산 되어야 합니다. 정
 **기본/최적/전체 모드:** MERGE 문 사용  
   
 ### <a name="convert-calls-to-subprograms-that-use-default-arguments"></a>기본 인수를 사용 하는 subprograms 호출을 변환 합니다.  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]함수는 함수 호출에서 매개 변수의 생략을 지원 하지 않습니다. 또한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 함수 및 프로시저는 기본 매개 변수 값으로 식을 지원 하지 않습니다.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 함수는 함수 호출에서 매개 변수의 생략을 지원 하지 않습니다. 또한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 함수 및 프로시저는 기본 매개 변수 값으로 식을 지원 하지 않습니다.  
   
 -   **예** 를 선택 하 고 함수 호출에서 매개 변수를 생략 하는 경우 ssma는 함수에 **default** 키워드를 삽입 하 고 올바른 위치에서를 호출 합니다. 그런 다음 경고를 표시 하는 호출을 표시 합니다.  
   
@@ -105,7 +106,7 @@ TOP을 사용 하려면 TOP 절 식이 정수로 계산 되어야 합니다. 정
   
 -   **예**를 선택 하는 경우 SSMA는 COUNT의 모든 사용을 COUNT_BIG로 변환 합니다.  
   
--   **아니요**를 선택 하면 함수는 카운트로 유지 됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]함수에서 2<sup>31</sup>-1 보다 큰 값을 반환 하면에서 오류를 반환 합니다.  
+-   **아니요**를 선택 하면 함수는 카운트로 유지 됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 함수에서 2<sup>31</sup>-1 보다 큰 값을 반환 하면에서 오류를 반환 합니다.  
   
 **모드** 상자에서 변환 모드를 선택 하면 ssma가 다음 설정을 적용 합니다.  
   
@@ -127,7 +128,7 @@ SSMA가 PL/SQL collection 요소에서 FORALL 루프를 처리 하는 방법을 
 **전체 모드:** 예로  
   
 ### <a name="convert-foreign-keys-with-set-null-referential-action-on-column-that-is-not-null"></a>NULL이 아닌 열에 대해 SET NULL 참조 동작으로 외래 키 변환  
-D b 2에서는 foreign key 제약 조건을 만들 수 있습니다 .이 경우 NULL은 참조 된 열에서 허용 되지 않으므로 SET NULL 작업을 수행할 수 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 이러한 외래 키 구성을 허용 하지 않습니다.  
+D b 2에서는 foreign key 제약 조건을 만들 수 있습니다 .이 경우 NULL은 참조 된 열에서 허용 되지 않으므로 SET NULL 작업을 수행할 수 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 이러한 외래 키 구성을 허용 하지 않습니다.  
   
 -   **예**를 선택 하면 SSMA에서 DB2와 같이 참조 동작을 생성 하지만에 제약 조건을 로드 하기 전에 수동으로 변경 해야 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 합니다. 예를 들어 NULL 설정 대신 작업 안 함을 선택할 수 있습니다.  
   
@@ -216,7 +217,7 @@ SSMA는 다음과 같은 두 가지 방법으로 PL/SQL 하위 유형을 변환�
   
 -   **예**를 선택 하면 ssma가 하위 형식 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 사용자 정의 형식을 만들고이 하위 형식의 각 변수에 사용 합니다.  
   
--   **아니요**를 선택 하면 ssma는 하위 형식의 모든 원본 선언을 기본 형식으로 대체 하 고 일반적인 방식으로 결과를 변환 합니다. 이 경우에는 추가 형식이 생성 되지 않습니다.[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+-   **아니요**를 선택 하면 ssma는 하위 형식의 모든 원본 선언을 기본 형식으로 대체 하 고 일반적인 방식으로 결과를 변환 합니다. 이 경우에는 추가 형식이 생성 되지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 **모드** 상자에서 변환 모드를 선택 하면 ssma가 다음 설정을 적용 합니다.  
   
@@ -306,7 +307,7 @@ INTO 절이 있는 SELECT 문에서 행을 반환 하지 않으면 DB2는 NO_DAT
   
 -   **예**를 선택 하는 경우 ssma는 각 select 문 다음에 db_error_exact_one_row_check sysdb 프로시저에 대 한 호출을 추가 합니다. 이 프로시저는 NO_DATA_FOUND 및 TOO_MANY_ROWS 예외를 에뮬레이트합니다. 이것이 기본값 이며 DB2 동작을 최대한 가깝게 재현할 수 있습니다. 소스 코드에 이러한 오류를 처리 하는 예외 처리기가 있는 경우 항상 **예** 를 선택 해야 합니다. SELECT 문이 사용자 정의 함수 내에서 발생 하는 경우 저장 프로시저 실행 및 예외 발생이 함수 컨텍스트와 호환 되지 않기 때문에이 모듈은 저장 프로시저로 변환 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
--   **아니요**를 선택 하면 예외가 생성 되지 않습니다. 이는 SSMA에서 사용자 정의 함수를 변환 하 고 해당 함수를에서 함수를 유지 하려는 경우에 유용할 수 있습니다.[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+-   **아니요**를 선택 하면 예외가 생성 되지 않습니다. 이는 SSMA에서 사용자 정의 함수를 변환 하 고 해당 함수를에서 함수를 유지 하려는 경우에 유용할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 **모드** 상자에서 변환 모드를 선택 하면 ssma가 다음 설정을 적용 합니다.  
   
@@ -359,7 +360,7 @@ SSMA가 ROWID 생성 열에 고유 인덱스 열을 생성할지 여부를 지�
 **기본/최적/전체 모드:** 인라인  
   
 ### <a name="use-isnull-in-string-concatenation"></a>문자열 연결에 ISNULL 사용  
-D b 2 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 문자열 연결이 NULL 값을 포함 하는 경우 다른 결과를 반환 합니다. DB2는 빈 문자 집합과 같은 NULL 값을 처리 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]NULL을 반환 합니다.  
+D b 2 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 문자열 연결이 NULL 값을 포함 하는 경우 다른 결과를 반환 합니다. DB2는 빈 문자 집합과 같은 NULL 값을 처리 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NULL을 반환 합니다.  
   
 -   **예**를 선택 하면 SSMA에서 DB2 연결 문자 (| |)를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결 문자 (+)로 바꿉니다. 또한 SSMA는 NULL 값에 대 한 연결의 양쪽에 있는 식을 확인 합니다.  
   
@@ -419,7 +420,7 @@ ISNULL 문은 DB2 동작을 에뮬레이트하는 함수 호출에 사용 됩니
 ## <a name="returning-clause-conversion"></a>절 변환 반환  
   
 ### <a name="convert-returning-clause-in-delete-statement-to-output"></a>DELETE 문의 반환 절을 출력으로 변환  
-DB2는 삭제 된 값을 즉시 가져오는 방법으로 반환 절을 제공 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 OUTPUT 절을 사용 하 여 해당 기능을 제공 합니다.  
+DB2는 삭제 된 값을 즉시 가져오는 방법으로 반환 절을 제공 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 OUTPUT 절을 사용 하 여 해당 기능을 제공 합니다.  
   
 -   **예**를 선택 하면 DELETE 문의 반환 절이 OUTPUT 절로 변환 됩니다. 테이블의 트리거가 값을 변경할 수 있기 때문에 반환 된 값은 d b 2의 경우와 다를 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -430,7 +431,7 @@ DB2는 삭제 된 값을 즉시 가져오는 방법으로 반환 절을 제공 �
 **기본/최적/전체 모드:** 예로  
   
 ### <a name="convert-returning-clause-in-insert-statement-to-output"></a>INSERT 문의 반환 절을 출력으로 변환  
-DB2는 삽입 된 값을 즉시 가져오는 방법으로 반환 절을 제공 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 OUTPUT 절을 사용 하 여 해당 기능을 제공 합니다.  
+DB2는 삽입 된 값을 즉시 가져오는 방법으로 반환 절을 제공 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 OUTPUT 절을 사용 하 여 해당 기능을 제공 합니다.  
   
 -   **예**를 선택 하면 SSMA가 INSERT 문의 반환 절을 출력으로 변환 합니다. 테이블의 트리거가 값을 변경할 수 있기 때문에 반환 된 값은 d b 2의 경우와 다를 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -441,7 +442,7 @@ DB2는 삽입 된 값을 즉시 가져오는 방법으로 반환 절을 제공 �
 **기본/최적/전체 모드:** 예로  
   
 ### <a name="convert-returning-clause-in-update-statement-to-output"></a>UPDATE 문의 반환 절을 출력으로 변환  
-DB2는 업데이트 된 값을 즉시 가져오는 방법으로 반환 절을 제공 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 OUTPUT 절을 사용 하 여 해당 기능을 제공 합니다.  
+DB2는 업데이트 된 값을 즉시 가져오는 방법으로 반환 절을 제공 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 OUTPUT 절을 사용 하 여 해당 기능을 제공 합니다.  
   
 -   **예**를 선택 하면 SSMA가 UPDATE 문의 반환 절을 OUTPUT 절로 변환 합니다. 테이블의 트리거가 값을 변경할 수 있기 때문에 반환 된 값은 d b 2의 경우와 다를 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -477,6 +478,6 @@ SQL Server 2012 또는 SQL Server 2014로 변환할 때 기본 옵션은 SQL Ser
   
 -   **아니요**를 선택 하면 ssma는 변환 된 시퀀스의 외부 트리거에 대 한 모든 참조를 오류로 표시 합니다.  
   
-## <a name="see-also"></a>참고 항목  
-[DB2ToSQL&#41;&#40;사용자 인터페이스 참조](../../ssma/db2/user-interface-reference-db2tosql.md)  
+## <a name="see-also"></a>관련 항목  
+[DB2ToSQL&#41;&#40;사용자 인터페이스 참조 ](../../ssma/db2/user-interface-reference-db2tosql.md)  
   

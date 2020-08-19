@@ -1,4 +1,5 @@
 ---
+description: sysmail_faileditems(Transact-SQL)
 title: sysmail_faileditems (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a31562c5-358e-4cfc-a72d-b3faccc53851
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5fa83e2f49d97c6318944251f68da18f10646c04
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 60e6e4b4411c55467aab30359ae25f07237ceb12
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893222"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427895"
 ---
 # <a name="sysmail_faileditems-transact-sql"></a>sysmail_faileditems(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +39,7 @@ ms.locfileid: "85893222"
 |**사람과**|**varchar(max)**|메시지를 받는 사람의 전자 메일 주소입니다.|  
 |**copy_recipients**|**varchar(max)**|메시지 복사본을 받는 사람의 전자 메일 주소입니다.|  
 |**blind_copy_recipients**|**varchar(max)**|메시지 복사본을 받지만 메시지 머리글에 이름이 표시되지 않는 사람의 전자 메일 주소입니다.|  
-|**제목**|**nvarchar (510)**|메시지의 제목 줄입니다.|  
+|**subject**|**nvarchar (510)**|메시지의 제목 줄입니다.|  
 |**body**|**varchar(max)**|메시지의 본문입니다.|  
 |**body_format**|**varchar (20)**|메시지 본문의 형식입니다. 가능한 값은 TEXT 및 HTML입니다.|  
 |**importance**|**varchar (6)**|메시지의 **중요도** 매개 변수입니다.|  

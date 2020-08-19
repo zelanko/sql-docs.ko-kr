@@ -1,4 +1,5 @@
 ---
+description: sys.fn_cdc_map_lsn_to_time(Transact-SQL)
 title: sys. fn_cdc_map_lsn_to_time (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 405aa29c-8bd8-42d3-9f39-7494b643fc6f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b89925b781d94d84a22e744955d335e163875d2f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a699f9706c8dafff6d2500a1e41c080f461df6ab
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898351"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427865"
 ---
 # <a name="sysfn_cdc_map_lsn_to_time-transact-sql"></a>sys.fn_cdc_map_lsn_to_time(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,7 +55,7 @@ sys.fn_cdc_map_lsn_to_time ( lsn_value )
 ## <a name="permissions"></a>사용 권한  
  **public** 역할의 멤버 자격이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `sys.fn_cdc_map_lsn_to_time` 함수를 사용하여 `HumanResources_Employee` 캡처 인스턴스에 대해 지정된 LSN 간격에서 처리된 마지막 변경에 관련된 커밋 시간을 확인합니다.  
   
 ```  

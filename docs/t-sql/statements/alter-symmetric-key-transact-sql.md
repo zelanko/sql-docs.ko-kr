@@ -1,4 +1,5 @@
 ---
+description: ALTER SYMMETRIC KEY(Transact-SQL)
 title: ALTER SYMMETRIC KEY(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: d3c776a4-7d71-4e6f-84fc-1db47400c465
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 3574e981ad09555533a7dc96e8ede27c50f9339d
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+ms.openlocfilehash: 6bc807fe68e1e4ba8ca1e92fe40e048a82a6307f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86380956"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426855"
 ---
 # <a name="alter-symmetric-key-transact-sql"></a>ALTER SYMMETRIC KEY(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -94,7 +95,7 @@ ALTER SYMMETRIC KEY Key_name <alter_option>
 ## <a name="permissions"></a>사용 권한  
  대칭 키에 대한 ALTER 권한이 필요합니다. 인증서 또는 비대칭 키를 통해 암호화를 추가하는 경우 해당 인증서 또는 비대칭 키에 대한 VIEW DEFINITION 권한이 필요합니다. 인증서 또는 비대칭 키를 통해 암호화를 삭제하는 경우 해당 인증서 또는 비대칭 키에 대한 CONTROL 권한이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 대칭 키를 보호하는 데 사용되는 암호화 방법을 변경합니다. 대칭 키 `JanainaKey043`은 키가 만들어질 때 인증서 `Shipping04`를 사용하여 암호화됩니다. 키는 암호화되지 않은 상태로 저장될 수 없으므로 암호로 암호화를 추가한 다음 인증서별로 암호화를 제거합니다.  
   
 ```  

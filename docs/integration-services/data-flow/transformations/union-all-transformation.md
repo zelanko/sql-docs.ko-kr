@@ -1,4 +1,5 @@
 ---
+description: UNION ALL 변환
 title: UNION ALL 변환 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 942e4b90-9c41-4e9c-a6f3-80b3afe57f2f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 45b21ea454e7c40f7af28863802d1678b3095d50
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 9cb32c68f05e4be6b25d0fc20ae088aa6760bfd6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920347"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425625"
 ---
 # <a name="union-all-transformation"></a>UNION ALL 변환
 
@@ -32,7 +33,7 @@ ms.locfileid: "86920347"
 
   UNION ALL 변환은 여러 개의 입력을 하나의 출력으로 결합합니다. 예를 들어 5개 플랫 파일 원본의 출력이 UNION ALL 변환의 입력이 되어 하나의 출력으로 결합될 수 있습니다.  
   
-## <a name="inputs-and-outputs"></a>입/출력  
+## <a name="inputs-and-outputs"></a>입력 및 출력  
  변환 입력은 하나씩 변환 출력에 추가되며 행이 다시 정렬되지 않습니다. 패키지에 정렬된 출력이 필요할 경우 UNION ALL 변환 대신 병합 변환을 사용해야 합니다.  
   
  UNION ALL 변환에 연결한 첫 번째 입력이 변환 출력을 만드는 데 사용됩니다. 변환에 연결한 이후 입력 열은 변환 출력 열에 매핑됩니다.  

@@ -1,4 +1,5 @@
 ---
+description: ProtocolName 속성(ClientNetworkProtocol 클래스)
 title: ProtocolName 속성 (ClientNetworkProtocol)
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f8527121-fbcd-4d30-9b4a-1461149cb5a8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 17236b165dd76fa2713a9fed99e4fd3df58a6097
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 295295d4e6672187c2f33251cbff73d5062dbd4d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888990"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427335"
 ---
 # <a name="protocolname-property-clientnetworkprotocol-class"></a>ProtocolName 속성(ClientNetworkProtocol 클래스)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

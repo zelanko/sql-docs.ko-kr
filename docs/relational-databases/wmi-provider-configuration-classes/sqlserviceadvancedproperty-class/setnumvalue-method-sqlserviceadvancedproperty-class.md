@@ -1,4 +1,5 @@
 ---
+description: SetNumValue 메서드(SqlServiceAdvancedProperty 클래스)
 title: SetNumValue 메서드 (SqlServiceAdvancedProperty)
 ms.custom: seo-lt-2019
 ms.date: 03/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a5e1056b-0b75-4ad6-99c1-89246010d815
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 619b06f1279c36716538535050b4e2795724dad7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a67607dcf70b5d8a77eba098ba3090bd1ec552f8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888289"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427155"
 ---
 # <a name="setnumvalue-method-sqlserviceadvancedproperty-class"></a>SetNumValue 메서드(SqlServiceAdvancedProperty 클래스)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -51,7 +52,7 @@ object.SetNumValue(NumValue)
 ## <a name="remarks"></a>설명  
  속성을 숫자 값으로 설정하려면 속성 값 형식이 숫자여야 합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [서비스 시작 및 중지](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

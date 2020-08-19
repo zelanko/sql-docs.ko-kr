@@ -1,4 +1,5 @@
 ---
+description: 인덱싱된 뷰 만들기
 title: 인덱싱된 뷰 만들기 | Microsoft 문서
 ms.custom: ''
 ms.date: 11/19/2018
@@ -18,12 +19,12 @@ ms.assetid: f86dd29f-52dd-44a9-91ac-1eb305c1ca8d
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 03cff187ee251278274af6f7c97e4598235fde38
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: 409a097af866b76655c4693b29145d26a387690c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87363452"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427365"
 ---
 # <a name="create-indexed-views"></a>인덱싱된 뷰 만들기
 

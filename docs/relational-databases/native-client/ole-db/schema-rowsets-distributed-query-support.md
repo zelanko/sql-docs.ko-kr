@@ -1,4 +1,5 @@
 ---
+description: 스키마 행 집합-SQL Server Native Client의 분산 쿼리 지원
 title: 스키마 행 집합에서 분산 쿼리 지원 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ ms.assetid: 11354bb6-be42-4d8d-854c-42dd3dc38656
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bd4d2bb25f1f576c83e35fe57de4d3de99cc4bc4
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: a09330a2ce78c9282a0980897df65d65e10a73c6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243850"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428065"
 ---
 # <a name="schema-rowsets---distributed-query-support-in-sql-server-native-client"></a>스키마 행 집합-SQL Server Native Client의 분산 쿼리 지원
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -49,7 +50,7 @@ ms.locfileid: "87243850"
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB 공급자는 연결 된 서버로 등록 된 OLE DB 데이터 원본 목록을 반환 하는 스키마 행 집합 LINKEDSERVERS를 정의 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [스키마 행 집합 지원 &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/schema-rowset-support-ole-db.md)   
+ [스키마 행 집합 지원&#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/schema-rowset-support-ole-db.md)   
  [LINKEDSERVERS 행 집합&#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/schema-rowsets-linkedservers-rowset.md)  
   
   

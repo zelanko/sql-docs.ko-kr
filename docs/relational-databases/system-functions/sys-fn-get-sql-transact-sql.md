@@ -1,4 +1,5 @@
 ---
+description: sys.fn_get_sql(Transact-SQL)
 title: sys. fn_get_sql (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: d5fe49b5-0813-48f2-9efb-9187716b2fd4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a20cd13526bcee06e4f4ce3aa93c52a9fd156456
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 6f5e3f4af1cd1bae33f0a340333cb6afd3268158
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898336"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427805"
 ---
 # <a name="sysfn_get_sql-transact-sql"></a>sys.fn_get_sql(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -81,7 +82,7 @@ sys.fn_get_sql ( SqlHandle )
 ## <a name="permissions"></a>사용 권한  
  서버에 대한 VIEW SERVER STATE 권한이 있어야 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  데이터베이스 관리자는 다음 예에서처럼 fn_get_sql 함수를 사용하여 문제점 진단 프로세스에 도움을 줄 수 있습니다. 관리자는 문제점이 있는 세션 ID를 식별한 후에 해당 세션에 대한 SQL 핸들을 검색하고 해당 핸들을 사용하여 fn_get_sql 함수를 호출하고 시작 및 종료 오프셋을 사용하여 문제점이 있는 세션 ID의 SQL 텍스트를 확인할 수 있습니다.  
   
 ```  
@@ -95,7 +96,7 @@ GO
   
 ## <a name="see-also"></a>참고 항목  
  [DBCC INPUTBUFFER &#40;Transact-sql&#41;](../../t-sql/database-console-commands/dbcc-inputbuffer-transact-sql.md)   
- [Transact-sql&#41;&#40;프로세스sys.sys](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)   
+ [ Transact-sql&#41;&#40;프로세스sys.sys](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)   
  [sys.dm_exec_requests&#40;Transact-SQL&#41](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
   
   

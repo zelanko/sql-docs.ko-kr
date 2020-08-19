@@ -1,4 +1,5 @@
 ---
+description: sys. fn_net_changes_ &lt; capture_instance &gt; (transact-sql)
 title: sys. fn_net_changes_ &lt; capture_instance &gt; (transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 342fa030-9fd9-4b74-ae4d-49f6038a5073
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5f000c8d2dc4f0f2adc95814ba9ef687602403dc
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 59d8214083046510d9c4d71724d1aab1c96b1e1d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898326"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427765"
 ---
 # <a name="sysfn_net_changes_ltcapture_instancegt-transact-sql"></a>sys. fn_net_changes_ &lt; capture_instance &gt; (transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -95,7 +96,7 @@ fn_net_changes_<capture_instance> ('start_time', 'end_time', '<row_filter_option
   
 |열 이름|열 유형|설명|  
 |-----------------|-----------------|-----------------|  
-|\<columns from @column_list>|**잠기기**|래퍼를 만드는 스크립트를 생성 하기 위해 호출 될 때 sp_cdc_generate_wrapper_function에 대 한 **column_list** 인수에서 식별 되는 열입니다. *COLUMN_LIST* NULL 인 경우 추적 된 모든 원본 열이 결과 집합에 표시 됩니다.|  
+|\<columns from @column_list>|**다름**|래퍼를 만드는 스크립트를 생성 하기 위해 호출 될 때 sp_cdc_generate_wrapper_function에 대 한 **column_list** 인수에서 식별 되는 열입니다. *COLUMN_LIST* NULL 인 경우 추적 된 모든 원본 열이 결과 집합에 표시 됩니다.|  
 |__CDC_OPERATION|**nvarchar(2)**|행을 대상 환경에 적용하는 데 필요한 작업을 나타내는 작업 코드입니다. 작업은 다음 호출에서 제공 되는 *row_filter_option* 인수 값에 따라 달라 집니다.<br /><br /> *row_filter_option* = ' all ', ' all with mask '<br /><br /> 'D' - 삭제 작업<br /><br /> 'I' - 삽입 작업<br /><br /> 'UN' - 업데이트 작업<br /><br /> *row_filter_option* = ' all with merge '<br /><br /> 'D' - 삭제 작업<br /><br /> 'M' - 삭제 작업 또는 업데이트 작업|  
 |\<columns from @update_flag_list>|**bit**|_uflag를 열 이름에 추가하여 이름을 지정한 비트 플래그입니다. 플래그는 *row_filter_option* **= ' all with mask '** 및 _CDC_OPERATION = ' u n ' 인 경우에만 null이 아닌 값을 사용 \_ 합니다. **= 'UN'** 쿼리 창 내에서 해당 열이 수정된 경우 이 플래그는 1로 설정됩니다. 그렇지 않으면 0입니다.|  
   

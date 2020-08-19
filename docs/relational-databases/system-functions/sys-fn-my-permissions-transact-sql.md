@@ -1,4 +1,5 @@
 ---
+description: sys.fn_my_permissions(Transact-SQL)
 title: sys. fn_my_permissions (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 30f97f00-03d8-443a-9de9-9ec420b7699b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9bb57e2d01c4942955e838cf358444636bf7aedb
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 75ff0dfb3355158a3dedbc9d5e066dbce0ac441f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898347"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427755"
 ---
 # <a name="sysfn_my_permissions-transact-sql"></a>sys.fn_my_permissions(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,7 +52,7 @@ fn_my_permissions ( securable , 'securable_class' )
 ## <a name="columns-returned"></a>반환되는 열  
  다음 표에서는 **fn_my_permissions** 반환 하는 열을 나열 합니다. 반환되는 각 행은 해당 보안 개체에 대해 현재 보안 컨텍스트가 가지는 사용 권한을 설명합니다. 쿼리가 실패하는 경우 NULL을 반환합니다.  
   
-|열 이름|형식|설명|  
+|열 이름|Type|설명|  
 |-----------------|----------|-----------------|  
 |entity_name|**sysname**|나열된 사용 권한이 유효하게 부여되는 보안 개체의 이름입니다.|  
 |subentity_name|**sysname**|보안 개체가 열인 경우 열 이름이며 그렇지 않은 경우에는 NULL입니다.|  
@@ -82,7 +83,7 @@ GO
   
  기본값을 *보안* 개체 또는 *securable_class*값으로 제공 하면 값은 NULL로 해석 됩니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-listing-effective-permissions-on-the-server"></a>A. 서버에 대한 유효 사용 권한 나열  
  다음 예에서는 서버에 대한 호출자의 유효 사용 권한 목록을 반환합니다.  
@@ -160,12 +161,12 @@ GO
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;보안 함수](../../t-sql/functions/security-functions-transact-sql.md)   
- [권한 &#40;데이터베이스 엔진&#41;](../../relational-databases/security/permissions-database-engine.md)   
- [보안 개체](../../relational-databases/security/securables.md)   
- [데이터베이스 엔진&#41;&#40;사용 권한 계층](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
- [fn_builtin_permissions &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   
- [Transact-sql&#41;&#40;보안 카탈로그 뷰](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
+ [보안 함수&#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)   
+ [사용 권한&#40;데이터베이스 엔진&#41;](../../relational-databases/security/permissions-database-engine.md)   
+ [Securables](../../relational-databases/security/securables.md)   
+ [사용 권한 계층&#40;데이터베이스 엔진&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
+ [sys.fn_builtin_permissions&#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   
+ [보안 카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [EXECUTE AS &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-transact-sql.md)  
   
   

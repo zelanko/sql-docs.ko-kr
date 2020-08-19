@@ -1,4 +1,5 @@
 ---
+description: 필터 생성
 title: 필터 생성 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: be28515c-5d6d-467b-b933-d7c8d97a45b4
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 885772f790a6c53e2a9e3019923f801841d719ed
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5c124642da9b895522e35c80e5edf68f50335dc0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85653027"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428035"
 ---
 # <a name="generate-filters"></a>필터 생성
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

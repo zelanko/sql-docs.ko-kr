@@ -1,4 +1,5 @@
 ---
+description: sys. fn_db_backup_file_snapshots (Transact-sql)
 title: sys. fn_db_backup_file_snapshots (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/03/2015
@@ -12,11 +13,12 @@ dev_langs:
 ms.assetid: 45010ff2-219f-4086-9ea4-016a6c17cddd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d6944817524a339eb8e48aa223c291cef1de1879
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: 067a1d65b65c1e2cc9bde252e6f56951e87950a8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86052756"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427795"
 ---
 # <a name="sysfn_db_backup_file_snapshots-transact-sql"></a>sys. fn_db_backup_file_snapshots (Transact-sql)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]

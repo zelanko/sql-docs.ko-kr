@@ -1,4 +1,5 @@
 ---
+description: sys.fn_helpcollations(Transact-SQL)
 title: sys. fn_helpcollations (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/23/2017
@@ -20,11 +21,12 @@ ms.assetid: b5082e81-1fee-4e2c-b567-5412eaee41c1
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016|| = azure-sqldw-latest ||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d91ff0f85ba496397025ea99012509edea9dd865
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 66b0a9ad6c68e209cbcf21a05ef015f43535ec4e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000910"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427835"
 ---
 # <a name="sysfn_helpcollations-transact-sql"></a>sys.fn_helpcollations(Transact-SQL)
 
@@ -47,11 +49,11 @@ fn_helpcollations ()
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |Name|**sysname**|표준 데이터 정렬 이름입니다.|  
-|Description|**nvarchar(1000)**|데이터 정렬에 대한 설명입니다.|  
+|설명|**nvarchar(1000)**|데이터 정렬에 대한 설명입니다.|  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 Windows 데이터 정렬을 지원합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 지원 되는 Windows 데이터 정렬 전에 개발 된 데이터 정렬 (<80)의 제한 된 수 ()도 지원 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]데이터 정렬은 이전 버전과의 호환성을 위해 계속 지원 되지만 새로운 개발 작업에는 사용할 수 없습니다. Windows 데이터 정렬에 대한 자세한 내용은 [Windows Collation Name &#40;Transact-SQL&#41;](../../t-sql/statements/windows-collation-name-transact-sql.md)을 참조하세요. 데이터 정렬에 대한 자세한 내용은 [데이터 정렬 및 유니코드 지원](../../relational-databases/collations/collation-and-unicode-support.md)을 참조하세요.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 Windows 데이터 정렬을 지원합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 지원 되는 Windows 데이터 정렬 전에 개발 된 데이터 정렬 (<80)의 제한 된 수 ()도 지원 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 정렬은 이전 버전과의 호환성을 위해 계속 지원 되지만 새로운 개발 작업에는 사용할 수 없습니다. Windows 데이터 정렬에 대한 자세한 내용은 [Windows Collation Name &#40;Transact-SQL&#41;](../../t-sql/statements/windows-collation-name-transact-sql.md)을 참조하세요. 데이터 정렬에 대한 자세한 내용은 [데이터 정렬 및 유니코드 지원](../../relational-databases/collations/collation-and-unicode-support.md)을 참조하세요.  
   
-## <a name="examples"></a>예
+## <a name="examples"></a>예제
 
  다음 예에서는 `L` 문자로 시작하는 이진 정렬 방식의 모든 데이터 정렬 이름을 반환합니다.
 

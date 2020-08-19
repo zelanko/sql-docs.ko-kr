@@ -1,4 +1,5 @@
 ---
+description: Access 용 SSMA 콘솔 시작 (AccessToSQL)
 title: Access 용 SSMA 콘솔 시작 (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 8585ec16-7e0a-483a-b250-adab9b9232a3
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: e9ca0ef87aac60849d114d0e43dd349e063e8c83
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 1923323699282e40fcca8afa1a8079edd8163c09
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87938513"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426985"
 ---
 # <a name="getting-started-with-ssma-for-access-console-accesstosql"></a>Access 용 SSMA 콘솔 시작 (AccessToSQL)
 이 섹션에서는를 시작 하 고 액세스 콘솔 응용 프로그램을 시작 하는 절차에 대해 설명 합니다. 또한 여기에 나열 된 것은 일반적인 SSMA 콘솔 출력 창에서 사용 되는 규칙입니다.  
@@ -33,9 +34,9 @@ Windows 시스템에서 콘솔이 성공적으로 시작 된 후에는 다음 �
   
 1.  스크립트 파일을 통해 SSMA 콘솔을 구성 합니다. 이 섹션에 대 한 자세한 내용은 [스크립트 파일 만들기 &#40;AccessToSQL&#41;](../../ssma/access/creating-script-files-accesstosql.md)를 참조 하세요.  
   
-2.  [AccessToSQL&#41;&#40;변수 값 파일 만들기](../../ssma/access/creating-variable-value-files-accesstosql.md)  
+2.  [AccessToSQL&#41;&#40;변수 값 파일 만들기 ](../../ssma/access/creating-variable-value-files-accesstosql.md)  
   
-3.  [AccessToSQL&#41;&#40;서버 연결 파일 만들기](../../ssma/access/creating-the-server-connection-files-accesstosql.md)  
+3.  [AccessToSQL&#41;&#40;서버 연결 파일 만들기 ](../../ssma/access/creating-the-server-connection-files-accesstosql.md)  
   
 4.  프로젝트 요구 사항에 따라 [AccessToSQL&#41;&#40;SSMA 콘솔 실행](../../ssma/access/executing-the-ssma-console-accesstosql.md)  
   
@@ -54,13 +55,13 @@ SSMA 스크립트 명령 및 옵션을 실행 하면 콘솔 프로그램이 콘�
   
 |색|Description|  
 |---------|---------------|  
-|빨간색|실행 하는 동안 심각한 오류가 발생 했습니다.|  
+|빨강|실행 하는 동안 심각한 오류가 발생 했습니다.|  
 |회색|날짜 및 시간 스탬프, 사용자에 대 한 메시지|  
 |흰색|스크립트 파일 명령, 메시지 유형|  
 |노란색|경고|  
 |녹색|사용자 입력 확인|  
 |녹청|작업의 시작, 종료 및 결과|  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
 [액세스용 SQL Server Migration Assistant 설치](installing-sql-server-migration-assistant-for-access-accesstosql.md)  
   

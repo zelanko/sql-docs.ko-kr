@@ -1,4 +1,5 @@
 ---
+description: MSpublicationthresholds(Transact-SQL)
 title: MSpublicationthresholds (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9da3879f-b1f4-4ab4-abd4-a9a8ac395eba
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7b04ac935a66994fed18745b6fc6a5bd3c3ef46c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 799c068d066fdab518a355552ead5ed5a9fde8af
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889595"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427655"
 ---
 # <a name="mspublicationthresholds-transact-sql"></a>MSpublicationthresholds(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +39,7 @@ ms.locfileid: "85889595"
 |**isenabled**|**bit**|값 **1** 은이 복제 성능 메트릭에 대해 모니터링이 사용 하도록 설정 되어 있음을 나타냅니다.|  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;복제 테이블](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Transact-sql&#41;&#40;복제 테이블 ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [복제 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

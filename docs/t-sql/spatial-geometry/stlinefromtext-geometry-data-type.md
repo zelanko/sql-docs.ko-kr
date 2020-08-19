@@ -1,4 +1,5 @@
 ---
+description: STLineFromText(geometry 데이터 형식)
 title: STLineFromText(geometry 데이터 형식) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/11/2019
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 430508ad-207b-4dee-a4d1-4ddf25e6b4a9
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: d050440ae605b5bb43cb3ac5c423929088a48626
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 77d76ddaeab5952db35f6395d0d2b14a5b904290
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554637"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427045"
 ---
 # <a name="stlinefromtext-geometry-data-type"></a>STLineFromText(geometry 데이터 형식)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -55,7 +56,7 @@ STLineFromText ( 'linestring_tagged_text' , SRID )
 ## <a name="remarks"></a>설명  
 이 메서드는 입력이 잘못된 경우 **FormatException**을 throw합니다. Open Geospatial Consortium(OGC) Simple Features for SQL Specification 버전 1.2.1에서 제공하는 3차원 및 측정된 기하 도형 WKT 표기법은 지원되지 않습니다. Z(높이) 및 M(측정) 값에 지원되는 표현에 대한 예를 참조하세요.
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `STLineFromText()`를 사용하여 `geometry` 인스턴스를 만듭니다.
 
 ### <a name="example-1-two-dimension-geometry-wkt"></a>예제 1: 2차원 기하 도형 WKT

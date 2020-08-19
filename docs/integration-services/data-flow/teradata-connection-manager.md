@@ -1,4 +1,5 @@
 ---
+description: Teradata 연결 관리자 사용
 title: Teradata 연결 관리자 사용 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/22/2019
@@ -9,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a0aa51c868ae89062320640015ad01ef79134e8d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: e0181cb68a68e7788d59f70d25c9b6935478f248
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917759"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425815"
 ---
 # <a name="use-the-teradata-connection-manager"></a>Teradata 연결 관리자 사용
 

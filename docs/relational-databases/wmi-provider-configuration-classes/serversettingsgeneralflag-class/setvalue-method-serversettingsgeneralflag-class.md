@@ -1,4 +1,5 @@
 ---
+description: SetValue 메서드(ServerSettingsGeneralFlag 클래스)
 title: SetValue 메서드 (ServerSettingsGeneralFlag)
 ms.custom: seo-lt-2019
 ms.date: 03/04/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a889feac-c0e0-4635-b506-843863d86967
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b95664e8bb14ef5e66d76e7bb06140a0736a070b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e400d07a8e14bed9337cd0e889cb6ca13b44f674
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888562"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427275"
 ---
 # <a name="setvalue-method-serversettingsgeneralflag-class"></a>SetValue 메서드(ServerSettingsGeneralFlag 클래스)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

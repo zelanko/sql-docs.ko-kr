@@ -1,4 +1,5 @@
 ---
+description: ODBC 3.8의 새로운 기능&#39;
 title: ODBC 3.8의 새로운 기능&#39;| Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,19 +11,19 @@ ms.topic: conceptual
 ms.assetid: 854f0bb4-17e9-489b-9595-eefffb8ba99f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 65ba097629005598e6942577e3498813749fd91d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 324d7133a5d63b2b6322357be79daa0ce263e092
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302934"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428805"
 ---
 # <a name="what39s-new-in-odbc-38"></a>ODBC 3.8의 새로운 기능&#39;
 Windows 8에는 업데이트 된 버전의 ODBC 3.8이 포함 되어 있습니다. Windows 8의 ODBC 3.8에는 다음과 같은 기능이 포함 되어 있습니다.  
   
 -   [드라이버 인식 연결 풀링](../../odbc/reference/develop-app/driver-aware-connection-pooling.md)  
   
--   [비동기 실행 (알림 방법)](../../odbc/reference/develop-app/asynchronous-execution-notification-method.md)  
+-   [비동기 실행(알림 방법)](../../odbc/reference/develop-app/asynchronous-execution-notification-method.md)  
   
 -   [데이터 액세스 추적 (Windows 8)](https://msdn.microsoft.com/library/windows/desktop/hh829624.aspx)  
   

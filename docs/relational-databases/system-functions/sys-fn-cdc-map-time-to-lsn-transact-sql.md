@@ -1,4 +1,5 @@
 ---
+description: sys.fn_cdc_map_time_to_lsn(Transact-SQL)
 title: sys. fn_cdc_map_time_to_lsn (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,17 +21,17 @@ helpviewer_keywords:
 ms.assetid: 6feb051d-77ae-4c93-818a-849fe518d1d4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bba5095587b8ddbb4c06d3334ad60e16cb2f5e35
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 638bf2b99069c718e4e84ab0ccc888300a56bc68
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395746"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427885"
 ---
 # <a name="sysfn_cdc_map_time_to_lsn-transact-sql"></a>sys.fn_cdc_map_time_to_lsn(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  지정 된 시간 동안 [cdc. lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md) 시스템 테이블의 **START_LSN** 열에서 LSN (로그 시퀀스 번호) 값을 반환 합니다. 이 함수를 사용 하 여 날짜/시간 범위를 변경 데이터 캡처 열거 함수 cdc에 필요한 LSN 기반 범위에 체계적으로 매핑할 수 있습니다. [fn_cdc_get_all_changes_<capture_instance>](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md) 및 [cdc.](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md) fn_cdc_get_net_changes_<capture_instance>하 여 해당 범위 내에서 데이터 변경 내용을 반환 합니다.  
+  지정 된 시간 동안 [cdc. lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md) 시스템 테이블의 **START_LSN** 열에서 LSN (로그 시퀀스 번호) 값을 반환 합니다. 이 함수를 사용 하 여 날짜/시간 범위를 변경 데이터 캡처 열거 함수 cdc에 필요한 LSN 기반 범위에 체계적으로 매핑할 수 있습니다. [fn_cdc_get_all_changes_<capture_instance>](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md) 및 [cdc. ](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md) fn_cdc_get_net_changes_<capture_instance>하 여 해당 범위 내에서 데이터 변경 내용을 반환 합니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -80,7 +81,7 @@ sys.fn_cdc_map_time_to_lsn ( '<relational_operator>', tracking_time )
 ## <a name="permissions"></a>사용 권한  
  **public** 역할의 멤버 자격이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 함수를 사용 하 여 `sys.fn_cdc_map_time_lsn` [lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md) 테이블에 자정 보다 크거나 같은 **tran_end_time** 값이 있는 행이 있는지 여부를 확인 합니다. 예를 들어 이 쿼리는 캡처 프로세스가 전날 자정 때까지 커밋된 변경 내용을 이미 처리했는지 확인하여 해당 일의 변경 데이터 추출을 계속 진행하는 데 사용할 수 있습니다.  
   
 ```  

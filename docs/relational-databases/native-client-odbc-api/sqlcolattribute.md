@@ -1,4 +1,5 @@
 ---
+description: SQLColAttribute
 title: SQLColAttribute | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -14,11 +15,12 @@ ms.assetid: a5387d9e-a243-4cfe-b786-7fad5842b1d6
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1815a76dcfde42e45cb3b2ca1ffe4186ff52a238
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 86590239e22f19ba0858af583193675bc711a0ae
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012430"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428345"
 ---
 # <a name="sqlcolattribute"></a>SQLColAttribute
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -28,7 +30,7 @@ ms.locfileid: "86012430"
 > [!NOTE]  
 >  일부 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 결과 집합에는 ODBC 열 식별자 특성을 사용할 수 없습니다.  
   
-|필드 식별자|Description|  
+|필드 식별자|설명|  
 |----------------------|-----------------|  
 |SQL_COLUMN_TABLE_NAME|서버 커서를 생성하는 문에서 검색된 결과 집합 또는 FOR BROWSE 절을 포함하는 실행된 SELECT 문에서 사용할 수 있습니다.|  
 |SQL_DESC_BASE_COLUMN_NAME|서버 커서를 생성하는 문에서 검색된 결과 집합 또는 FOR BROWSE 절을 포함하는 실행된 SELECT 문에서 사용할 수 있습니다.|  
@@ -40,7 +42,7 @@ ms.locfileid: "86012430"
 |SQL_DESC_TABLE_NAME|서버 커서를 생성하는 문에서 검색된 결과 집합 또는 FOR BROWSE 절을 포함하는 실행된 SELECT 문에서 사용할 수 있습니다.|  
 |SQL_DESC_UNNAMED|열이 레이블 할당이 포함되지 않은 식의 결과인 경우를 제외하고는 결과 집합의 모든 열에 대해 SQL_NAMED입니다. SQL_DESC_UNNAMED가 SQL_UNNAMED를 반환하면 모든 ODBC 열 식별자 특성이 열에 대해 길이가 0인 문자열을 포함함을 나타냅니다.|  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC 드라이버는 SET FMTONLY 문을 사용 하 여 준비 되었지만 명령의 문에 대해 **Sqlcolattribute** 를 호출할 때 서버 오버 헤드를 줄입니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 SET FMTONLY 문을 사용 하 여 준비 되었지만 명령의 문에 대해 **Sqlcolattribute** 를 호출할 때 서버 오버 헤드를 줄입니다.  
   
  값 형식이 클 경우 **Sqlcolattribute** 는 다음 값을 반환 합니다.  
   
@@ -73,11 +75,11 @@ ms.locfileid: "86012430"
 |SQL_CA_SS_NUM_COMPUTES|현재 Transact-SQL SELECT 문에 지정된 COMPUTE 절의 수입니다.|  
 |SQL_CA_SS_NUM_ORDERS|ODBC 또는 Transact-SQL SELECT 문의 ORDER BY 절에 지정된 열의 수입니다.|  
   
- \*If 문 특성 SQL_SOPT_SS_HIDDEN_COLUMNS SQL_HC_ON로 설정 되어 있습니다.  
+ \*   If 문 특성 SQL_SOPT_SS_HIDDEN_COLUMNS SQL_HC_ON로 설정 되어 있습니다.  
   
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에는 각각 XML 스키마 컬렉션 이름, 스키마 이름 및 카탈로그 이름을 나타내는 추가 정보를 제공 하는 드라이버별 설명자 필드가 도입 되었습니다. 이러한 속성에는 영숫자가 아닌 문자가 포함된 경우 따옴표나 이스케이프 문자가 필요하지 않습니다. 다음 표에는 새로 도입된 설명자 필드가 나와 있습니다.  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 에는 각각 XML 스키마 컬렉션 이름, 스키마 이름 및 카탈로그 이름을 나타내는 추가 정보를 제공 하는 드라이버별 설명자 필드가 도입 되었습니다. 이러한 속성에는 영숫자가 아닌 문자가 포함된 경우 따옴표나 이스케이프 문자가 필요하지 않습니다. 다음 표에는 새로 도입된 설명자 필드가 나와 있습니다.  
   
-|열 이름|Type|Description|  
+|열 이름|Type|설명|  
 |-----------------|----------|-----------------|  
 |SQL_CA_SS_XML_SCHEMACOLLECTION_CATALOG_NAME|CharacterAttributePtr|XML 스키마 컬렉션 이름이 정의된 카탈로그의 이름입니다. 카탈로그 이름을 찾을 수 없는 경우 이 변수에는 빈 문자열이 포함됩니다.<br /><br /> 이 정보는 읽기/쓰기 필드인 IRD의 SQL_DESC_SS_XML_SCHEMACOLLECTION_CATALOG_NAME 레코드 필드에서 반환됩니다.|  
 |SQL_CA_SS_XML_SCHEMACOLLECTION_SCHEMA_NAME|CharacterAttributePtr|XML 스키마 컬렉션 이름이 정의된 스키마의 이름입니다. 스키마 이름을 찾을 수 없는 경우 이 변수에는 빈 문자열이 포함됩니다.<br /><br /> 이 정보는 읽기/쓰기 필드인 IRD의 SQL_DESC_SS_XML_SCHEMACOLLECTION_SCHEMA_NAME 레코드 필드에서 반환됩니다.|  
@@ -85,7 +87,7 @@ ms.locfileid: "86012430"
   
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에는 결과 집합의 UDT(사용자 정의 형식) 열 또는 저장 프로시저나 매개 변수가 있는 쿼리의 UDT 매개 변수에 대한 추가 정보를 제공하기 위한 새 드라이버 관련 설명자 필드도 도입되었습니다. 이러한 속성에는 영숫자가 아닌 문자가 포함된 경우 따옴표나 이스케이프 문자가 필요하지 않습니다. 다음 표에는 새로 도입된 설명자 필드가 나와 있습니다.  
   
-|열 이름|Type|Description|  
+|열 이름|Type|설명|  
 |-----------------|----------|-----------------|  
 |SQL_CA_SS_UDT_CATALOG_NAME|CharacterAttributePtr|UDT가 포함된 카탈로그의 이름입니다.|  
 |SQL_CA_SS_UDT_SCHEMA_NAME|CharacterAttributePtr|UDT가 포함된 스키마의 이름입니다.|  

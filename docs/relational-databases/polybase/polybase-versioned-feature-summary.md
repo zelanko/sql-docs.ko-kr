@@ -1,4 +1,5 @@
 ---
+description: PolyBase 기능 및 제한 사항
 title: PolyBase 기능 및 제한 사항 | Microsoft Docs
 descriptions: This article summarizes PolyBase features available for SQL Server products and services. It lists T-SQL operators supported for pushdown and known limitations.
 ms.date: 09/24/2018
@@ -10,12 +11,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1847c47622dc36bbdb92db675a90765ff6f197f6
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.openlocfilehash: 4d3d6021b34f5804f33cd784bc9b7fd38c7eb1f5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87332152"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427995"
 ---
 # <a name="polybase-features-and-limitations"></a>PolyBase 기능 및 제한 사항
 
@@ -36,8 +37,8 @@ ms.locfileid: "87332152"
 |Hadoop으로 쿼리 계산 푸시다운|yes|예|예|yes|  
 |Azure Blob 스토리지에서 데이터 가져오기|yes|예|yes|yes|
 |Azure Blob 스토리지로 데이터 내보내기|yes|예|yes|yes|  
-|Azure Data Lake Store에서 데이터 가져오기|예|예|yes|예|
-|Azure Data Lake Store에서 데이터 내보내기|예|예|yes|예|
+|Azure Data Lake Store에서 데이터 가져오기|예|예|예|예|
+|Azure Data Lake Store에서 데이터 내보내기|예|예|예|예|
 |Microsoft BI 도구에서 PolyBase 쿼리 실행|yes|예|yes|yes|
 
 ## <a name="pushdown-computation-supported-by-t-sql-operators"></a>T-SQL 연산자가 지원하는 푸시 다운 계산

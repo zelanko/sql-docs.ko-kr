@@ -1,4 +1,5 @@
 ---
+description: AcceptPause 속성(SqlService 클래스)
 title: AcceptPause 속성 (SqlService)
 ms.custom: seo-lt-2019
 ms.date: 03/04/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4339e903-35ee-4395-b005-ca58b3a24a84
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 80e68dada9ec917ed6c47d0ab1e38e6e608ce209
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: bed06aa139a6bee919f41bd8d9f9f01817ebde3f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888420"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427265"
 ---
 # <a name="acceptpause-property-sqlservice-class"></a>AcceptPause 속성(SqlService 클래스)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

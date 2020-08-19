@@ -1,4 +1,5 @@
 ---
+description: SetStrValue 메서드(SqlServiceAdvancedProperty 클래스)
 title: SetStrValue 메서드 (SqlServiceAdvancedProperty)
 ms.custom: seo-lt-2019
 ms.date: 03/06/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1fededc3-81ba-4b08-83f9-189b96140799
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8b7e2ffa75190d8699e0110664dd179ab3f096ae
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 86a0a552b8d6544a5ea42c175e04396d3dcc48a9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888279"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427125"
 ---
 # <a name="setstrvalue-method-sqlserviceadvancedproperty-class"></a>SetStrValue 메서드(SqlServiceAdvancedProperty 클래스)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -51,7 +52,7 @@ object.SetStrValue(StrValue)
 ## <a name="remarks"></a>설명  
  속성을 문자열 값으로 설정하려면 속성 값 형식이 *string* 이어야 합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [서비스 시작 및 중지](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: '자습서: OData 원본 사용'
 title: '자습서: OData 원본 사용 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,19 +11,19 @@ ms.topic: conceptual
 ms.assetid: 2c64cf8b-5edb-48df-8ffe-697096258f71
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 616a19e5c6af2c3818e3d9737e72b0f7cd7486e8
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: e12fe80482b6b6ffd96fe6e56e6dfad1a92362fc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916682"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425675"
 ---
 # <a name="tutorial-using-the-odata-source"></a>자습서: OData 원본 사용
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-  이 자습서에서는 샘플 **Northwind** OData 서비스(https://services.odata.org/V3/Northwind/Northwind.svc/) 에서 **Employees** 컬렉션을 추출한 다음, 플랫 파일로 로드하는 프로세스를 안내합니다.  
+  이 자습서에서는 샘플 **Northwind** OData 서비스(https://services.odata.org/V3/Northwind/Northwind.svc/)에서 **Employees** 컬렉션을 추출한 다음, 플랫 파일로 로드하는 프로세스를 안내합니다.  
   
 ## <a name="1-create-an-integration-services-project"></a>1. Integration Services 프로젝트 만들기  
   
@@ -58,7 +59,7 @@ ms.locfileid: "86916682"
   
 10. **컬렉션** 드롭다운 목록에서 **Employees**를 선택합니다.  
   
-11. **쿼리 옵션**에 대해 추가 OData 쿼리 옵션 또는 필터를 입력합니다. `$orderby=CompanyName&$top=100`)을 입력합니다. 이 자습서에서는 `$top=5`를 입력합니다.  
+11. **쿼리 옵션**에 대해 추가 OData 쿼리 옵션 또는 필터를 입력합니다. 예: `$orderby=CompanyName&$top=100`. 이 자습서에서는 `$top=5`를 입력합니다.  
   
 12. **미리 보기** 를 클릭해서 데이터를 미리 봅니다.  
   

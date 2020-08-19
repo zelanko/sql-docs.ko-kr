@@ -1,4 +1,5 @@
 ---
+description: 정책 보기 대화 상자
 title: 정책 보기 대화 상자 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 06b9b092-fceb-4be5-b712-5aff89b5ba92
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 93106e092c6f0b78f54a24af97ce5b0aa4101880
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 06ab429a5e3524485793bdf118f0c4039869f868
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774097"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428025"
 ---
 # <a name="view-policies-dialog-box"></a>정책 보기 대화 상자
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,7 +49,7 @@ ms.locfileid: "85774097"
  **마지막 실행**  
  정책이 마지막으로 실행된 날짜와 시간입니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [정책 기반 관리를 사용하여 서버 관리](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
   
   

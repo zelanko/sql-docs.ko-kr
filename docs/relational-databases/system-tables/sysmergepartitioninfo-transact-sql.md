@@ -1,4 +1,5 @@
 ---
+description: sysmergepartitioninfo(Transact-SQL)
 title: sysmergepartitioninfo (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7429ad2c-dd33-4f7d-89cc-700e083af518
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 44f44ede09eaf6eabfee9ef6b240e599c8eec744
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b987adef188e580b38f5f4df5b24b4f6ab22825b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889250"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427585"
 ---
 # <a name="sysmergepartitioninfo-transact-sql"></a>sysmergepartitioninfo(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,7 +50,7 @@ ms.locfileid: "85889250"
 |**partition_options**|**tinyint**|아티클의 데이터 분할 방식을 정의합니다. 데이터를 분할하면 모든 행이 하나의 파티션 또는 하나의 구독에만 속한 경우 성능을 최적화할 수 있습니다. *partition_options* 는 다음 값 중 하나일 수 있습니다.<br /><br /> **0** = 아티클에 대 한 필터링이 정적 이거나 각 파티션에 대 한 고유한 데이터 하위 집합을 생성 하지 않습니다. 즉, "겹치는" 파티션입니다.<br /><br /> **1** = 파티션이 중복 되며 구독자에서 DML 업데이트를 수행 하면 행이 속한 파티션이 변경 되지 않습니다.<br /><br /> **2** = 아티클을 필터링 하면 겹치지 않는 파티션이 생성 되지만 여러 구독자가 동일한 파티션을 받을 수 있습니다.<br /><br /> **3** = 아티클에 대 한 필터링은 각 구독에 고유한 겹치지 않는 파티션을 생성 합니다.|  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;복제 테이블](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Transact-sql&#41;&#40;복제 테이블 ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [복제 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   
