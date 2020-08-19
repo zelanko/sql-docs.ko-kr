@@ -1,4 +1,5 @@
 ---
+description: sp_restoremergeidentityrange(Transact-SQL)
 title: sp_restoremergeidentityrange (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7923e422-2748-40c0-b5a8-6410c48d5b70
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3051a630fe797e6856f110348af945a681bb83ad
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1858ef748ebf063fe3e541542003f46861821eeb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899254"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446815"
 ---
 # <a name="sp_restoremergeidentityrange-transact-sql"></a>sp_restoremergeidentityrange(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,9 +39,9 @@ sp_restoremergeidentityrange [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @publication = ] 'publication'`게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 **all**입니다. 지정한 경우 해당 게시에 대한 ID 범위만 복원됩니다.  
+`[ @publication = ] 'publication'` 게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 **all**입니다. 지정한 경우 해당 게시에 대한 ID 범위만 복원됩니다.  
   
-`[ @article = ] 'article'`아티클의 이름입니다. *article* 은 **sysname**이며 기본값은 **all**입니다. 지정한 경우 해당 아티클에 대한 ID 범위만 복원됩니다.  
+`[ @article = ] 'article'` 아티클의 이름입니다. *article* 은 **sysname**이며 기본값은 **all**입니다. 지정한 경우 해당 아티클에 대한 ID 범위만 복원됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -56,6 +57,6 @@ sp_restoremergeidentityrange [ [ @publication = ] 'publication' ]
 ## <a name="see-also"></a>참고 항목  
  [Transact-sql&#41;sp_addmergearticle &#40;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)   
  [Transact-sql&#41;sp_changemergearticle &#40;](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)   
- [Id 열 복제](../../relational-databases/replication/publish/replicate-identity-columns.md)  
+ [ID 열 복제](../../relational-databases/replication/publish/replicate-identity-columns.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: NextRecordset 메서드 예제(VB)
 title: NextRecordset 메서드 예제 (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b14806da-80d9-4da4-bb87-f558b36a6ac0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 78480bd71a1d96f5c5447022e3c7748814003bea
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 8a181482d7f0b2a1d6589209bc4b4e58ff11f9a4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762384"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443105"
 ---
 # <a name="nextrecordset-method-example-vb"></a>NextRecordset 메서드 예제(VB)
 이 예제에서는 [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md) 메서드를 사용 하 여 세 개의 개별 **SELECT** 문으로 구성 된 복합 명령 문을 사용 하는 레코드 집합의 데이터를 봅니다.  

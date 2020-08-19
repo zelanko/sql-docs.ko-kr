@@ -1,4 +1,5 @@
 ---
+description: sp_refreshview(Transact-SQL)
 title: sp_refreshview (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9ce1d07c-ee66-4a83-8c73-cd2cc104dd08
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: dbc12b5e9013e8cbb5fb223f473e68c2e1cab445
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 11b605bd505a88215258afc39c24735d95e56ab6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891513"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446919"
 ---
 # <a name="sp_refreshview-transact-sql"></a>sp_refreshview(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,7 @@ sp_refreshview [ @viewname = ] 'viewname'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @viewname = ] 'viewname'`뷰의 이름입니다. *viewname* 는 **nvarchar**이며 기본값은 없습니다. *viewname* 은 여러 부분으로 된 식별자가 될 수 있지만 현재 데이터베이스의 뷰만 참조할 수 있습니다.  
+`[ @viewname = ] 'viewname'` 뷰의 이름입니다. *viewname* 는 **nvarchar**이며 기본값은 없습니다. *viewname* 은 여러 부분으로 된 식별자가 될 수 있지만 현재 데이터베이스의 뷰만 참조할 수 있습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 0이 아닌 수(실패)  
@@ -50,7 +51,7 @@ sp_refreshview [ @viewname = ] 'viewname'
 ## <a name="permissions"></a>사용 권한  
  뷰에 대한 ALTER 권한이 필요하고 뷰 열이 참조하는 CLR(공용 언어 런타임) 사용자 정의 형식 및 XML 스키마 컬렉션에 대한 REFERENCES 권한이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-updating-the-metadata-of-a-view"></a>A. 뷰의 메타데이터 업데이트  
  다음 예에서는 `Sales.vIndividualCustomer` 뷰의 메타데이터를 새로 고칩니다.  
@@ -75,8 +76,8 @@ WHERE so.type = 'V' AND sed.referenced_id = OBJECT_ID('Person.Person');
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;저장 프로시저 데이터베이스 엔진](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [Transact-sql&#41;&#40;시스템 저장 프로시저](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;저장 프로시저 데이터베이스 엔진 ](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;시스템 저장 프로시저 ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sys.sql_expression_dependencies&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)   
  [Transact-sql&#41;sp_refreshsqlmodule &#40;](../../relational-databases/system-stored-procedures/sp-refreshsqlmodule-transact-sql.md)  
   

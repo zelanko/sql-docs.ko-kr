@@ -1,4 +1,5 @@
 ---
+description: GetChunk 메서드(ADO)
 title: GetChunk 메서드 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: fc268e22-205b-44a3-9038-ffed51e23e10
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8f41cd6a590c318f3268eb5292b2086685a36848
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 38e1375f0439cbc17d19c3a416bbc51cea01239b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760059"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443595"
 ---
 # <a name="getchunk-method-ado"></a>GetChunk 메서드(ADO)
 크게 텍스트 또는 이진 데이터 [필드](../../../ado/reference/ado-api/field-object.md) 개체의 내용 전체 또는 일부를 반환 합니다.  
@@ -37,7 +38,7 @@ variable = field.GetChunk(Size)
  **Variant**를 반환 합니다.  
   
 #### <a name="parameters"></a>매개 변수  
- *Size*  
+ *크기*  
  검색 하려는 바이트 또는 문자 수와 동일한 **Long** 식입니다.  
   
 ## <a name="remarks"></a>설명  

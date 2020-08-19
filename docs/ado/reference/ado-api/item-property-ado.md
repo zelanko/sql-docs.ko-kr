@@ -1,4 +1,5 @@
 ---
+description: Item 속성(ADO)
 title: Item 속성 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -45,12 +46,12 @@ helpviewer_keywords:
 ms.assetid: e11484bb-c5c7-42d8-9bb8-21572125d727
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2bc6cb28823a2b8faf79e4bf44fb405446e12514
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: d2581d0834325d56daa8ea1043ac3915942961eb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242663"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443405"
 ---
 # <a name="item-property-ado"></a>Item 속성(ADO)
 이름 또는 서 수를 기준으로 컬렉션의 특정 멤버를 나타냅니다.  

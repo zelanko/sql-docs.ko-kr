@@ -1,4 +1,5 @@
 ---
+description: IHpublications(Transact-SQL)
 title: IHpublications (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b519a101-fa53-44be-bd55-6ea79245b5d1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3297f557e170a9f9cb8f67d10b9339997fa184d4
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0192dc6d2d01900b58a8dcb5fde34d46384adc50
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890293"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446616"
 ---
 # <a name="ihpublications-transact-sql"></a>IHpublications(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -60,7 +61,7 @@ ms.locfileid: "85890293"
 |**queue_type**|**int**|사용할 큐의 유형을 지정합니다. 다음 값 중 하나를 사용할 수 있습니다.<br /><br /> **1** = msmq [!INCLUDE[msCoName](../../includes/msconame-md.md)] . 메시지 큐를 사용 하 여 트랜잭션을 저장 합니다.<br /><br /> **2** = sql-를 사용 하 여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 트랜잭션을 저장 합니다.<br /><br /> 이 열은 이외 게시자에서 사용 되지 않습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .<br /><br /> 참고: 메시지 큐 사용은 더 이상 사용 되지 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 않으며 더 이상 지원 되지 않습니다.<br /><br /> *이 열은 SQL 이외 게시자에 대해서는 지원 되지 않습니다.*|  
 |**ad_guidname**|**sysname**|게시를 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory에 게시할지 여부를 지정합니다. 유효한 GUID (globally unique identifier)는 게시를 Active Directory 게시 하 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 고 guid는 해당 하는 Active Directory 게시 개체 **objectGUID**임을 지정 합니다. NULL인 경우 게시는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory에 게시되지 않습니다. *SQL 게시자 이외에 대해서는 지원되지 않습니다.*|  
 |**backward_comp_level**|**int**|데이터베이스 호환성 수준으로 다음 값 중 하나일 수 있습니다.<br /><br /> **90**  =  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .<br /><br /> **100**  =  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] .<br /><br /> *SQL 게시자 이외에 대해서는 지원되지 않습니다.*|  
-|**한**|**nvarchar(255)**|게시에 대한 설명 항목입니다.|  
+|**description**|**nvarchar(255)**|게시에 대한 설명 항목입니다.|  
 |**independent_agent**|**bit**|해당 게시에 독립 실행형 배포 에이전트가 있는지 여부를 지정합니다.<br /><br /> **0** = 게시에서 공유 배포 에이전트를 사용 하며 각 게시자 데이터베이스/구독자 데이터베이스 쌍에 단일 공유 에이전트가 있습니다.<br /><br /> **1** =이 게시에 대 한 독립 실행형 배포 에이전트 있습니다.|  
 |**immediate_sync**|**bit**|스냅숏 에이전트 실행 될 때마다 동기화 파일을 만들지 아니면 다시 만들지를 나타냅니다. **1** 은 에이전트가 실행 될 때마다 생성 됨을 의미 합니다.|  
 |**allow_push**|**bit**|게시에서 밀어넣기 구독이 허용 되는지 여부를 나타냅니다. **1** 은 해당 구독이 허용 됨을 의미 합니다.|  
@@ -73,11 +74,11 @@ ms.locfileid: "85890293"
 |**options**|**int**|추가 게시 옵션을 지정하는 비트맵입니다. 이때 비트 옵션 값은 다음과 같습니다.<br /><br /> **0x1** -피어 투 피어 복제에 사용 됩니다.<br /><br /> **0x2** -로컬 변경 내용만 게시 합니다.<br /><br /> **0x4** -SQL Server 이외 구독자에 사용할 수 있습니다.|  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;복제 테이블](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Transact-sql&#41;&#40;복제 뷰](../../relational-databases/system-views/replication-views-transact-sql.md)   
+ [Transact-sql&#41;&#40;복제 테이블 ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Transact-sql&#41;&#40;복제 뷰 ](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [Transact-sql&#41;sp_addpublication &#40;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
  [Transact-sql&#41;sp_changepublication &#40;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)   
- [Transact-sql&#41;sp_helppublication &#40;](../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)   
+ [sp_helppublication&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)   
  [syspublications &#40;시스템 뷰&#41; &#40;Transact-sql&#41;](../../relational-databases/system-views/syspublications-system-view-transact-sql.md)   
  [syspublications &#40;Transact-sql&#41;](../../relational-databases/system-tables/syspublications-transact-sql.md)  
   

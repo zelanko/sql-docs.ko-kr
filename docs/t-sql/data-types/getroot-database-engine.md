@@ -1,4 +1,5 @@
 ---
+description: GetRoot(데이터베이스 엔진)
 title: GetRoot(데이터베이스 엔진) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/22/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 240b70f1-eeda-44ab-b4bb-9e4af80fa7c0
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 4dfb1988f2f1405b2e69459824ee47983295ad31
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: cdefe46b9e2baa546b76375af4c6a2272fe1f584
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86556218"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445936"
 ---
 # <a name="getroot-database-engine"></a>GetRoot(데이터베이스 엔진)
 
@@ -52,7 +53,7 @@ static SqlHierarchyId GetRoot ( )
 ## <a name="remarks"></a>설명  
 계층 트리의 루트 노드를 확인하는 데 사용됩니다.
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-transact-sql-example"></a>A. Transact-SQL 예  
 다음 예에서는 계층 트리의 루트를 반환합니다.

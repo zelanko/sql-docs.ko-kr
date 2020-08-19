@@ -1,4 +1,5 @@
 ---
+description: MaxRecords 속성(ADO)
 title: MaxRecords 속성 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 20c76571-8c9a-482c-a99e-726ab1d93f8b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b9e4beaaa4b38a26089d1136d1b32090ea12231f
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 905897cfa08591aaefce3aceb46e1892d41d3d7a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82754375"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443275"
 ---
 # <a name="maxrecords-property-ado"></a>MaxRecords 속성(ADO)
 쿼리에서 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 으로 반환할 최대 레코드 수를 나타냅니다.  

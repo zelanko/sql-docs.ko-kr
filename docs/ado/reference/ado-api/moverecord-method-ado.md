@@ -1,4 +1,5 @@
 ---
+description: MoveRecord 메서드(ADO)
 title: MoveRecord 메서드 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6d2807b0-b861-4583-bcaf-fb0b82e0f2d0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5e5c63bbd29bef1d7b0b7d7650c32fcfe2245f7a
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 270d93169c5c1d91c35a58a36be9a4577e25e7d6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762434"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443155"
 ---
 # <a name="moverecord-method-ado"></a>MoveRecord 메서드(ADO)
 [레코드로](../../../ado/reference/ado-api/record-object-ado.md) 표시 되는 엔터티를 다른 위치로 이동 합니다.  
@@ -34,22 +35,22 @@ Record.MoveRecord (Source, Destination, UserName, Password, Options, Async)
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- *소스*  
+ *원본*  
  (선택 사항) 이동할 **레코드** 를 식별 하는 URL을 포함 하는 **문자열** 값입니다. *Source* 를 생략 하거나 빈 문자열을 지정 하면이 **레코드가** 나타내는 개체가 이동 합니다. 예를 들어 **레코드가** 파일을 나타내는 경우 파일의 내용이 *Destination*에서 지정한 위치로 이동 합니다.  
   
- *대상이*  
+ *대상*  
  (선택 사항) *소스* 를 이동할 위치를 지정 하는 URL을 포함 하는 **문자열** 값입니다.  
   
- *이름*  
+ *UserName*  
  (선택 사항) 필요한 경우 *대상*에 대 한 액세스 권한을 부여 하는 사용자 ID를 포함 하는 **문자열** 값입니다.  
   
  *암호*  
  (선택 사항) 필요한 경우 *사용자 이름을*확인 하는 암호를 포함 하는 **문자열** 입니다.  
   
- *Options*  
+ *옵션*  
  (선택 사항) 기본값이 **Admoveunspecified 되지 않은** [MoveRecordOptionsEnum](../../../ado/reference/ado-api/moverecordoptionsenum.md) 값입니다. 이 메서드의 동작을 지정 합니다.  
   
- *동기화*  
+ *Async*  
  (선택 사항) **True**인 경우이 작업이 비동기가 되도록 지정 하는 **부울** 값입니다.  
   
 ## <a name="return-value"></a>반환 값  

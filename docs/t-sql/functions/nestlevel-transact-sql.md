@@ -1,4 +1,5 @@
 ---
+description: '&#x40;&#x40;NESTLEVEL (Transact-SQL)'
 title: '@@NESTLEVEL(Transact-SQL) | Microsoft Docs'
 ms.custom: ''
 ms.date: 09/17/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 8c0b2134-8616-44f6-addc-6583c432fb62
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: b161917c13cba013b06a292493b58dca23e35b97
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: a6c28eca6f0496e8e66deef9a26aa4e7ef45ea81
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110900"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445737"
 ---
 # <a name="x40x40nestlevel-transact-sql"></a>&#x40;&#x40;NESTLEVEL (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -49,7 +50,7 @@ ms.locfileid: "87110900"
   
  @@NESTLEVEL이 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문자열 내에서 실행되는 경우 현재 중첩 수준 + 1 값이 반환됩니다. @@NESTLEVEL이 sp_executesql을 사용하여 동적으로 실행되는 경우 현재 중첩 수준 + 2 값이 반환됩니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-using-nestlevel-in-a-procedure"></a>A. 프로 시저에서 @@NESTLEVEL 사용  
  다음 예에서는 다른 프로시저를 호출하는 프로시저와 각각의 `@@NESTLEVEL` 설정을 표시하는 프로시저를 만듭니다.  

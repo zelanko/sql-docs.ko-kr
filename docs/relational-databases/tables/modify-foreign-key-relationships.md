@@ -1,4 +1,5 @@
 ---
+description: 외래 키 관계 수정
 title: 외래 키 관계 수정 | Microsoft 문서
 ms.custom: ''
 ms.date: 07/25/2017
@@ -17,12 +18,12 @@ ms.assetid: 0c9ca80d-d79b-44c4-a21e-0fce39c398ec
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d0c35f9ed49e8b11faf515ab7d270d2737a22d97
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: cfad7e7107c5391280331846e9275ef10112adb4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007098"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446405"
 ---
 # <a name="modify-foreign-key-relationships"></a>외래 키 관계 수정
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -81,7 +82,7 @@ ms.locfileid: "86007098"
      **일반 범주**  
      확장하여 **만들거나 다시 활성화할 때 기존 데이터 검사** 와 **테이블 및 열 사양**을 표시합니다.  
   
-     **Check Existing Data on Creation or Re-Enabling**  
+     **만들거나 다시 활성화할 때 기존 데이터 검사**  
      제약 조건을 만들거나 다시 활성화하기 전부터 테이블에 있던 모든 데이터를 제약 조건에 대해 검사합니다.  
   
      **테이블 및 열 사양 범주**  
@@ -120,7 +121,7 @@ ms.locfileid: "86007098"
      **INSERT 및 UPDATE 사양 범주**  
      확장하여 관계의 **삭제 규칙** 및 **업데이트 규칙** 에 대한 정보를 표시합니다.  
   
-     **삭제 규칙**  
+     **규칙 삭제**  
      외래 키 관계를 맺고 있는 데이터가 포함된 행을 사용자가 삭제하려 할 때 적용할 결과를 지정합니다.  
   
     -   **동작 안 함** 삭제가 허용되지 않고 DELETE가 롤백된다는 오류 메시지가 나타납니다.  
@@ -142,7 +143,7 @@ ms.locfileid: "86007098"
   
     -   **기본값 설정** 테이블의 모든 외래 키 열에 기본값이 정의되어 있으면 열에 정의된 기본값으로 값을 설정합니다.  
   
-4.  **파일** 메뉴에서 _테이블 이름_**저장**을 클릭합니다.  
+4.  **파일** 메뉴에서 ‘테이블 이름’ **저장**을 클릭합니다.__  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
  **외래 키를 수정하려면**  

@@ -1,4 +1,5 @@
 ---
+description: LockTypeEnum
 title: LockTypeEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: d2894eaf-4450-4ace-aa51-c8b875fd3010
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e609a51d6b9f42cb6101ff485633302193757fbd
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 52a6e4af75ac8887c23dd245a58981b1bbfb7eb2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242653"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443335"
 ---
 # <a name="locktypeenum"></a>LockTypeEnum
 편집 하는 동안 레코드에 적용 되는 잠금 유형을 지정 합니다.  
   
-|상수|값|Description|  
+|상수|값|설명|  
 |--------------|-----------|-----------------|  
 |**adLockBatchOptimistic**|4|낙관적 일괄 처리 업데이트를 나타냅니다. 일괄 업데이트 모드에 필요 합니다.|  
 |**adLockOptimistic**|3|낙관적 잠금, 레코드 별로 기록을 나타냅니다. 공급자는 낙관적 잠금을 사용 하 고 [Update](../../../ado/reference/ado-api/update-method.md) 메서드를 호출 하는 경우에만 레코드를 잠급니다.|  

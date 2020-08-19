@@ -1,4 +1,5 @@
 ---
+description: ROUND(Transact-SQL)
 title: ROUND(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/14/2017
@@ -19,12 +20,12 @@ ms.assetid: 23921ed6-dd6a-4c9e-8c32-91c0d44fe4b7
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bdad5fc75a968a918b603ff118d7f2344379008d
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 36917cc26189938e06f36d41559b2339344217c3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110808"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445621"
 ---
 # <a name="round-transact-sql"></a>ROUND(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -74,14 +75,14 @@ ROUND ( numeric_expression , length [ ,function ] )
   
  *length*가 음수일 경우 ROUND는 데이터 형식에 관계없이 반올림된 *numeric_expression*을 반환합니다.  
   
-|예|결과|  
+|예제|결과|  
 |--------------|------------|  
 |ROUND(748.58, -1)|750.00|  
 |ROUND(748.58, -2)|700.00|  
 |ROUND(748.58, -3)|748.58은 기본적으로 10진수(5,2)로 1000.00을 반환할 수 없기 때문에 산술 오버플로가 발행합니다.|  
-|4자릿수까지 반올림하려면 입력 데이터 형식을 변경합니다. 다음은 그 예입니다.<br /><br /> `SELECT ROUND(CAST (748.58 AS decimal (6,2)),-3);`|1000.00|  
+|4자릿수까지 반올림하려면 입력 데이터 형식을 변경합니다. 예를 들면 다음과 같습니다.<br /><br /> `SELECT ROUND(CAST (748.58 AS decimal (6,2)),-3);`|1000.00|  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-using-round-and-estimates"></a>A. ROUND 및 어림값 사용  
  다음 예에서는 마지막 자릿수가 항상 어림값인 `ROUND`를 사용하는 두 개의 식을 보여 줍니다.  

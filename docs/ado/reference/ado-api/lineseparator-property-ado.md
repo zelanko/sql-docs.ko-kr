@@ -1,4 +1,5 @@
 ---
+description: LineSeparator 속성(ADO)
 title: LineSeparator 속성 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0b20fbb8-6b83-48ec-b442-f96c8a4bafbb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9248dcabb4c52ceceb6e4876b034480415e77963
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: e3571f6a01fc60377380c0dcc40c870dfc71276a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82754815"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443375"
 ---
 # <a name="lineseparator-property-ado"></a>LineSeparator 속성(ADO)
 텍스트 [스트림](../../../ado/reference/ado-api/stream-object-ado.md) 개체에서 줄 구분 기호로 사용할 이진 문자를 나타냅니다.  

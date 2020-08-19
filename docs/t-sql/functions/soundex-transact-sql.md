@@ -1,4 +1,5 @@
 ---
+description: SOUNDEX(Transact-SQL)
 title: SOUNDEX(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -22,12 +23,12 @@ ms.assetid: 8f1ed34e-8467-4512-a211-e0f43dee6584
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 95b62f8f0a3d81055900b3c304f5939c6f0f845c
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 2a3150d58bf9785bf865bbaa7ed8bd030900b23f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112274"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445582"
 ---
 # <a name="soundex-transact-sql"></a>SOUNDEX(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -69,7 +70,7 @@ SOUNDEX ( character_expression )
   
 -   SOUNDEX로 정의된 지속형 계산 열이 포함된 인덱스(인덱싱된 뷰 포함)는 `ALTER INDEX ALL ON <object> REBUILD` 문을 실행하여 인덱스를 다시 작성한 후에만 쿼리할 수 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 SOUNDEX 함수 및 관련된 DIFFERENCE 함수를 보여 줍니다. 첫 번째 예에서는 모든 자음에 대해 표준 `SOUNDEX` 값이 반환됩니다. `SOUNDEX` 및 `Smith`에 대해 `Smythe`를 반환하면 모든 모음, 문자 `y`, 이중 문자 및 문자 `h`가 포함되지 않으므로 똑같은 결과가 반환됩니다.  
   
 ```sql

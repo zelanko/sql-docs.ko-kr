@@ -1,4 +1,5 @@
 ---
+description: 시스템 기본 테이블
 title: 시스템 기본 테이블 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 31f2df90-651f-4699-8067-19f59b60904f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cd89fffb6513306c8877ce6b02a3fadfceb6f1cf
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c60aad12977f5260cc108697e52245bc8a37d9d3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889235"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446541"
 ---
 # <a name="system-base-tables"></a>시스템 기본 테이블
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,4 +1,5 @@
 ---
+description: Move 메서드(ADO)
 title: Move 메서드 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 13fe9381-d00b-4f4a-9162-83c3f21b3837
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 527e8c4f2f4c7c18163346f76029be539d1581d2
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: b39078235bffe15db40cfb0f25e13f984d5c5cf3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762504"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443245"
 ---
 # <a name="move-method-ado"></a>Move 메서드(ADO)
 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체에서 현재 레코드의 위치를 이동 합니다.  
@@ -37,7 +38,7 @@ recordset.Move NumRecords, Start
  *NumRecords*  
  현재 레코드 위치가 이동 하는 레코드 수를 지정 하는 부호 있는 **Long** 식입니다.  
   
- *Start*  
+ *시작*  
  (선택 사항) 책갈피를 반환 하는 **문자열** 값 또는 **변형** 입니다. [책갈피 열거형](../../../ado/reference/ado-api/bookmarkenum.md) 값을 사용할 수도 있습니다.  
   
 ## <a name="remarks"></a>설명  

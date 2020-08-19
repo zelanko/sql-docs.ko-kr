@@ -1,4 +1,5 @@
 ---
+description: OBJECTPROPERTY(Transact-SQL)
 title: OBJECTPROPERTY(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -22,12 +23,12 @@ ms.assetid: 27569888-f8b5-4cec-a79f-6ea6d692b4ae
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 762cfe49193118072bbd165556b6b35163dee15c
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: cae6d8b524e12a959ec373549a7be0af75aa16b5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111443"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445748"
 ---
 # <a name="objectproperty-transact-sql"></a>OBJECTPROPERTY(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -76,7 +77,7 @@ OBJECTPROPERTY ( id , property )
 |ExecIsLastInsertTrigger|트리거|테이블에 대해 INSERT가 실행될 때 마지막으로 실행되는 트리거입니다.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |ExecIsLastUpdateTrigger|트리거|테이블에 대해 UPDATE가 실행될 때 마지막으로 실행되는 트리거입니다.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |ExecIsQuotedIdentOn|[!INCLUDE[tsql](../../includes/tsql-md.md)] 함수, [!INCLUDE[tsql](../../includes/tsql-md.md)] 프로시저, [!INCLUDE[tsql](../../includes/tsql-md.md)] 트리거, 뷰|생성 시의 QUOTED_IDENTIFIER 설정입니다.<br /><br /> 1 = True<br /><br /> 0 = False|  
-|ExecIsStartup|절차|시작 프로시저입니다.<br /><br /> 1 = True<br /><br /> 0 = False|  
+|ExecIsStartup|프로시저|시작 프로시저입니다.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |ExecIsTriggerDisabled|트리거|비활성화된 트리거입니다.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |ExecIsTriggerNotForRepl|트리거|NOT FOR REPLICATION으로 정의된 트리거입니다.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |ExecIsUpdateTrigger|트리거|UPDATE 트리거입니다.<br /><br /> 1 = True<br /><br /> 0 = False|  
@@ -98,7 +99,7 @@ OBJECTPROPERTY ( id , property )
 |IsForeignKey|임의의 스키마 범위 개체|FOREIGN KEY 제약 조건입니다.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsIndexed|테이블, 뷰|인덱스가 있는 테이블 또는 뷰입니다.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsIndexable|테이블, 뷰|인덱스를 만들 수 있는 테이블 또는 뷰입니다.<br /><br /> 1 = True<br /><br /> 0 = False|  
-|IsInlineFunction|함수|인라인 함수입니다.<br /><br /> 1 = 인라인 함수<br /><br /> 0 = 비인라인 함수|  
+|IsInlineFunction|기능|인라인 함수입니다.<br /><br /> 1 = 인라인 함수<br /><br /> 0 = 비인라인 함수|  
 |IsMSShipped|임의의 스키마 범위 개체|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 설치하는 동안 만들어진 개체입니다.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsPrimaryKey|임의의 스키마 범위 개체|PRIMARY KEY 제약 조건입니다.<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> NULL = 함수가 아니거나 개체 ID가 유효하지 않습니다.|  
 |IsProcedure|임의의 스키마 범위 개체|프로시저입니다.<br /><br /> 1 = True<br /><br /> 0 = False|  
@@ -106,16 +107,16 @@ OBJECTPROPERTY ( id , property )
 |IsQueue|임의의 스키마 범위 개체|Service Broker 큐입니다.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsReplProc|임의의 스키마 범위 개체|복제 프로시저입니다.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsRule|임의의 스키마 범위 개체|바운드 규칙입니다.<br /><br /> 1 = True<br /><br /> 0 = False|  
-|IsScalarFunction|함수|스칼라 반환 함수입니다.<br /><br /> 1 = 스칼라 반환 함수<br /><br /> 0 = 스칼라 반환 함수 아님|  
+|IsScalarFunction|기능|스칼라 반환 함수입니다.<br /><br /> 1 = 스칼라 반환 함수<br /><br /> 0 = 스칼라 반환 함수 아님|  
 |IsSchemaBound|함수, 뷰|SCHEMABINDING을 사용하여 만든 스키마 바운드 함수 또는 뷰입니다.<br /><br /> 1 = 스키마 바운드<br /><br /> 0 = 스키마 바운드가 아닙니다.|  
 |IsSystemTable|테이블|시스템 테이블입니다.<br /><br /> 1 = True<br /><br /> 0 = False| 
 |IsSystemVerified|Object|SQL Server에서 개체의 결정성과 정확성 속성을 확인할 수 있습니다.<br /><br /> 1 = True<br /><br /> 0 = False| 
 |IsTable|테이블|테이블.<br /><br /> 1 = True<br /><br /> 0 = False|  
-|IsTableFunction|함수|테이블 반환 함수입니다.<br /><br /> 1 = 테이블 반환 함수<br /><br /> 0 = 테이블 반환 함수 아님|  
+|IsTableFunction|기능|테이블 반환 함수입니다.<br /><br /> 1 = 테이블 반환 함수<br /><br /> 0 = 테이블 반환 함수 아님|  
 |IsTrigger|임의의 스키마 범위 개체|트리거입니다.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsUniqueCnst|임의의 스키마 범위 개체|UNIQUE 제약 조건입니다.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsUserTable|테이블|사용자 정의 테이블입니다.<br /><br /> 1 = True<br /><br /> 0 = False|  
-|IsView|보기|뷰입니다.<br /><br /> 1 = True<br /><br /> 0 = False|  
+|IsView|View|뷰입니다.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |OwnerId|임의의 스키마 범위 개체|개체의 소유자입니다.<br /><br /> **참고:** 스키마 소유자가 반드시 개체 소유자일 필요는 없습니다. 예를 들어 자식 개체(*parent_object_id*가 Null이 아닌 개체)는 항상 부모 개체와 같은 소유자 ID를 반환합니다.<br /><br /> Null이 아닌 경우 = 개체 소유자의 데이터베이스 사용자 ID입니다.|  
 |SchemaId|임의의 스키마 범위 개체| 개체가 속한 스키마의 스키마 ID입니다.| 
 |TableDeleteTrigger|테이블|테이블에 DELETE 트리거가 있습니다.<br /><br /> >1 = 지정된 유형의 첫 번째 트리거 ID.|  
@@ -184,7 +185,7 @@ GO
   
  테이블이 생성될 때 QUOTED IDENTIFIER 옵션이 OFF로 설정된 경우에도 해당 테이블의 메타데이터에는 항상 ON으로 저장됩니다. 따라서 OBJECTPROPERTY(*table_id*, 'IsQuotedIdentOn')는 항상 값 1(true)을 반환합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-verifying-that-an-object-is-a-table"></a>A. 개체가 테이블인지 확인  
  다음 예에서는 `UnitMeasure`가 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에 있는 테이블인지 테스트하는 방법을 보여 줍니다.  
@@ -203,7 +204,7 @@ GO
 ```  
   
 ### <a name="b-verifying-that-a-scalar-valued-user-defined-function-is-deterministic"></a>B. 스칼라 반환 사용자 정의 함수가 결정적인지 확인  
- 다음 예에서는 `ufnGetProductDealerPrice`money**값을 반환하는 사용자 정의 스칼라 반환 함수**가 결정적인지 여부를 테스트하는 방법을 보여 줍니다.  
+ 다음 예에서는 **money** 값을 반환하는 사용자 정의 스칼라 반환 함수 `ufnGetProductDealerPrice`가 결정적인지 여부를 테스트하는 방법을 보여 줍니다.  
   
 ```  
 USE AdventureWorks2012;  
@@ -219,7 +220,7 @@ GO
 0
 ```  
   
-### <a name="c-finding-the-tables-that-belong-to-a-specific-schema"></a>3\. 특정 스키마에 속하는 테이블 찾기  
+### <a name="c-finding-the-tables-that-belong-to-a-specific-schema"></a>3. 특정 스키마에 속하는 테이블 찾기  
  다음 예에서는 dbo 스키마에 있는 모든 테이블을 반환합니다.  
   
 ```  
@@ -234,7 +235,7 @@ GO
   
 ## <a name="examples-sssdwfull-and-sspdw"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-verifying-that-an-object-is-a-table"></a>4\. 개체가 테이블인지 확인  
+### <a name="d-verifying-that-an-object-is-a-table"></a>4. 개체가 테이블인지 확인  
  다음 예에서는 `dbo.DimReseller`가 [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)] 데이터베이스에 있는 테이블인지 테스트하는 방법을 보여 줍니다.  
   
 ```  
@@ -253,7 +254,7 @@ GO
  [OBJECTPROPERTYEX&#40;Transact-SQL&#41;](../../t-sql/functions/objectpropertyex-transact-sql.md)   
  [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md)   
  [TYPEPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/typeproperty-transact-sql.md)   
- [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)  
+ [sys.objects&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)  
   
   
 

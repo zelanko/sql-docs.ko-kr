@@ -1,4 +1,5 @@
 ---
+description: Execute, Requery 및 Clear 메서드 예제 (VB)
 title: Execute, Requery 및 Clear 메서드 예제 (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: ed5e1b60-3769-4b26-a253-1d721e37941d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0ac9a84c9b4780ad149d3c614b9e3c52494ace8b
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 3e3a1690414f136adb9de3f54b48720b298f20c3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760169"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443875"
 ---
 # <a name="execute-requery-and-clear-methods-example-vb"></a>Execute, Requery 및 Clear 메서드 예제 (VB)
 이 예제에서는 [명령](../../../ado/reference/ado-api/command-object-ado.md) 개체와 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체 모두에서 실행 되는 경우 **Execute** 메서드를 보여 줍니다. 또한 [Requery](../../../ado/reference/ado-api/requery-method.md) 메서드를 사용 하 여 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)의 현재 데이터를 검색 하 고 [clear](../../../ado/reference/ado-api/clear-method-ado.md) 메서드를 사용 하 여 [Errors](../../../ado/reference/ado-api/errors-collection-ado.md) 컬렉션의 내용을 지웁니다. ( **Errors** 컬렉션은 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)의 [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) 속성의 **Connection** 개체를 통해 액세스 됩니다.) 이 프로시저를 실행 하려면 ExecuteCommand 및 PrintOutput 프로시저가 필요 합니다.  

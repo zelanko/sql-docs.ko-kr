@@ -1,4 +1,5 @@
 ---
+description: Filter 속성
 title: 필터 속성 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 80263a7a-5d21-45d1-84fc-34b7a9be4c22
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b69826fbbc45751247ce2eba6fe74ad251189dea
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: a97db427db3c0dc42e004e1b0fcd0a889c9d6c5b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242693"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443685"
 ---
 # <a name="filter-property"></a>Filter 속성
 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)의 데이터에 대 한 필터를 나타냅니다.  
@@ -56,7 +57,7 @@ ms.locfileid: "87242693"
 -   대신이 필터를 다음과 같이 생성 합니다.  
  `(LastName = 'Smith' AND FirstName = 'John') OR (LastName = 'Jones' AND FirstName = 'John')`  
   
--   **LIKE** 절에서는 패턴의 시작과 끝에 와일드 카드를 사용할 수 있습니다. 예를 들어 `LastName Like '*mit*'`를 사용할 수 있습니다. 또는 **LIKE** 를 사용 하는 경우 패턴의 끝에만 와일드 카드를 사용할 수 있습니다. 예: `LastName Like 'Smit*'`.  
+-   **LIKE** 절에서는 패턴의 시작과 끝에 와일드 카드를 사용할 수 있습니다. 예를 들어 `LastName Like '*mit*'`를 사용할 수 있습니다. 또는 **LIKE** 를 사용 하는 경우 패턴의 끝에만 와일드 카드를 사용할 수 있습니다. 예들 들어 `LastName Like 'Smit*'`입니다.  
   
  필터 상수를 사용 하면 예를 들어, 마지막 [UpdateBatch 메서드](../../../ado/reference/ado-api/updatebatch-method.md) 호출 중에 영향을 받은 레코드만 볼 수 있으므로 일괄 업데이트 모드에서 개별 레코드 충돌을 쉽게 해결할 수 있습니다.  
   

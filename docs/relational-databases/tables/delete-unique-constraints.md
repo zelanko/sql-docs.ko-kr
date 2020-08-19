@@ -1,4 +1,5 @@
 ---
+description: UNIQUE 제약 조건 삭제
 title: UNIQUE 제약 조건 삭제 | Microsoft 문서
 ms.custom: ''
 ms.date: 10/12/2016
@@ -17,12 +18,12 @@ ms.assetid: 71e563fc-f5d7-4c2e-a42f-f0695a831f32
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5bcd1b8b4cd08a3bb2cb0c8700c82de8d7657779
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 95234d86bc68c063d90226bb23e09533bea446ae
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002104"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446430"
 ---
 # <a name="delete-unique-constraints"></a>UNIQUE 제약 조건 삭제
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -68,7 +69,7 @@ ms.locfileid: "86002104"
   
 4.  **삭제**를 클릭합니다.  
   
-5.  **파일** 메뉴에서 ‘테이블 이름’ **저장**을 클릭합니다.   
+5.  **파일** 메뉴에서 ‘테이블 이름’ **저장을 클릭합니다.** __  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   

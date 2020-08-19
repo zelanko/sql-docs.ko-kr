@@ -1,4 +1,5 @@
 ---
+description: DECLARE CURSOR(Transact-SQL)
 title: DECLARE CURSOR (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -24,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 5a3a27aa-03e8-4c98-a27e-809282379b21
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3544d4a9530be4ff90609593e8335c725a4f1a22
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ecef1c20be4350646cb98fb96db8152074a97dda
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921482"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445508"
 ---
 # <a name="declare-cursor-transact-sql"></a>DECLARE CURSOR(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -67,7 +68,7 @@ DECLARE cursor_name CURSOR [ LOCAL | GLOBAL ]
  커서에서 사용할 데이터를 임시로 복사해 주는 커서를 정의합니다. 커서에 대한 모든 요청은 **tempdb**의 임시 테이블에서 응답하므로 기본 테이블에 대한 수정 내용은 해당 커서에 대한 인출에서 반환된 데이터에는 반영되지 않으며 이 커서는 수정을 허용하지 않습니다. ISO 구문을 사용할 때 `INSENSITIVE`를 생략하면 사용자가 기본 테이블에 커밋한 삭제 및 업데이트 내용이 후속 인출에 반영됩니다.  
   
  SCROLL  
- 모든 인출 옵션(`FIRST`, `LAST`, `PRIOR`, `NEXT`, `RELATIVE`, `ABSOLUTE`)을 사용할 수 있도록 지정합니다. ISO `SCROLL`에서 `DECLARE CURSOR`을 지정하지 않으면 `NEXT` 인출 옵션만 지원됩니다. `SCROLL`까지 지정한 경우 `FAST_FORWARD`을 지정할 수 없습니다. `SCROLL`이 지정되지 않으면 페치 옵션 `NEXT`만 사용할 수 있고 커서는 `FORWARD_ONLY`가 됩니다.
+ 모든 인출 옵션(`FIRST`, `LAST`, `PRIOR`, `NEXT`, `RELATIVE`, `ABSOLUTE`)을 사용할 수 있도록 지정합니다. ISO `DECLARE CURSOR`에서 `SCROLL`을 지정하지 않으면 `NEXT` 인출 옵션만 지원됩니다. `FAST_FORWARD`까지 지정한 경우 `SCROLL`을 지정할 수 없습니다. `SCROLL`이 지정되지 않으면 페치 옵션 `NEXT`만 사용할 수 있고 커서는 `FORWARD_ONLY`가 됩니다.
   
  *select_statement*  
  커서의 결과 세트를 정의하는 표준 `SELECT` 문입니다. `FOR BROWSE` 및 `INTO` 키워드는 커서 선언의 *select_statement* 내에서 허용되지 않습니다.  
@@ -75,9 +76,9 @@ DECLARE cursor_name CURSOR [ LOCAL | GLOBAL ]
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 *select_statement*의 절이 요청된 커서 유형의 기능과 충돌할 경우 커서를 다른 유형으로 암시적으로 변환합니다.  
   
  READ ONLY  
- 이 커서를 통한 업데이트를 방지합니다. `WHERE CURRENT OF` 또는 `UPDATE` 문의 `DELETE` 절에서 커서를 참조할 수 없습니다. 이 옵션은 업데이트할 커서의 기본 기능을 무시합니다.  
+ 이 커서를 통한 업데이트를 방지합니다. `UPDATE` 또는 `DELETE` 문의 `WHERE CURRENT OF` 절에서 커서를 참조할 수 없습니다. 이 옵션은 업데이트할 커서의 기본 기능을 무시합니다.  
   
- UPDATE [OF *column_name* [ **,** ...*n*]]  
+ UPDATE [OF *column_name* [**,**...*n*]]  
  커서 내에서 업데이트할 수 있는 열을 정의합니다. OF <column_name> [, <... n>]이 지정된 경우 나열된 열만 수정이 가능합니다. 열 목록 없이 `UPDATE`를 지정하면 모든 열을 업데이트할 수 있습니다.  
   
 *cursor_name*  
@@ -93,7 +94,7 @@ GLOBAL
 >  `GLOBAL` 또는 `LOCAL` 중 하나도 지정하지 않으면 기본값은 **default to local cursor** 데이터베이스 옵션의 설정에 따라 결정됩니다.  
   
 FORWARD_ONLY  
-커서가 앞으로만 이동하고 첫 번째 행에서 마지막 행까지 스크롤할 수 있도록 지정합니다. 유일하게 지원되는 인출 옵션은 `FETCH NEXT`입니다. 현재 사용자가 만들거나 다른 사용자가 커밋하여 결과 집합의 행에 영향을 주는 모든 삽입, 업데이트 및 삭제 문은 행을 페치할 때 볼 수 있습니다. 그러나 커서는 뒤로 스크롤할 수 없기 때문에 행이 페치된 후 데이터베이스 행의 변경 내용은 대부분 커서를 통해 볼 수 없습니다. 정방향 전용 커서는 기본적으로 동적이며, 이는 현재 행이 처리될 때 모든 변경 내용이 감지됨을 의미합니다. 이렇게 하면 커서가 더 빨리 열리고 결과 집합이 기본 테이블에 대한 업데이트를 표시하도록 설정할 수 있습니다. 정방향 전용 커서는 역방향 스크롤을 지원하지 않지만 애플리케이션은 커서를 닫았다가 다시 열면 결과 집합의 시작 부분으로 돌아갈 수 있습니다. `FORWARD_ONLY`, `STATIC` 또는 `KEYSET` 키워드를 사용하지 않고 `DYNAMIC`를 지정하면 커서는 동적 커서로 작동합니다. `FORWARD_ONLY` 또는 `SCROLL` 중 하나도 지정하지 않으면 `FORWARD_ONLY`, `STATIC` 또는 `KEYSET` 키워드를 지정하지 않는 이상 기본값은 `DYNAMIC`입니다. `STATIC`, `KEYSET` 및 `DYNAMIC` 커서는 기본적으로 `SCROLL`입니다. ODBC, ADO 등의 데이터베이스 API와는 달리, `FORWARD_ONLY`는 `STATIC`, `KEYSET` 및 `DYNAMIC` [!INCLUDE[tsql](../../includes/tsql-md.md)] 커서에서 지원됩니다.  
+커서가 앞으로만 이동하고 첫 번째 행에서 마지막 행까지 스크롤할 수 있도록 지정합니다. 유일하게 지원되는 인출 옵션은 `FETCH NEXT`입니다. 현재 사용자가 만들거나 다른 사용자가 커밋하여 결과 집합의 행에 영향을 주는 모든 삽입, 업데이트 및 삭제 문은 행을 페치할 때 볼 수 있습니다. 그러나 커서는 뒤로 스크롤할 수 없기 때문에 행이 페치된 후 데이터베이스 행의 변경 내용은 대부분 커서를 통해 볼 수 없습니다. 정방향 전용 커서는 기본적으로 동적이며, 이는 현재 행이 처리될 때 모든 변경 내용이 감지됨을 의미합니다. 이렇게 하면 커서가 더 빨리 열리고 결과 집합이 기본 테이블에 대한 업데이트를 표시하도록 설정할 수 있습니다. 정방향 전용 커서는 역방향 스크롤을 지원하지 않지만 애플리케이션은 커서를 닫았다가 다시 열면 결과 집합의 시작 부분으로 돌아갈 수 있습니다. `STATIC`, `KEYSET` 또는 `DYNAMIC` 키워드를 사용하지 않고 `FORWARD_ONLY`를 지정하면 커서는 동적 커서로 작동합니다. `FORWARD_ONLY` 또는 `SCROLL` 중 하나도 지정하지 않으면 `STATIC`, `KEYSET` 또는 `DYNAMIC` 키워드를 지정하지 않는 이상 기본값은 `FORWARD_ONLY`입니다. `STATIC`, `KEYSET` 및 `DYNAMIC` 커서는 기본적으로 `SCROLL`입니다. ODBC, ADO 등의 데이터베이스 API와는 달리, `FORWARD_ONLY`는 `STATIC`, `KEYSET` 및 `DYNAMIC` [!INCLUDE[tsql](../../includes/tsql-md.md)] 커서에서 지원됩니다.  
    
  STATIC  
 커서가 처음 열릴 때와 같은 결과 집합을 항상 표시하고 커서가 사용할 데이터의 임시 복사본을 만들도록 지정합니다. 커서에 대한 모든 요청은 **tempdb**의 이 임시 테이블에서 응답됩니다. 따라서 기본 테이블에 대한 삽입, 업데이트 및 삭제는 이 커서로 만들어진 페치에 의해 반환되는 데이터에 반영되지 않으며, 이 커서는 커서가 열린 후에 결과 집합의 멤버 자격, 순서 또는 값에 대한 변경 내용을 검색하지 못합니다. 정적 커서는 자체 업데이트, 삭제 및 삽입을 검색할 수 있지만 필수 사항은 아닙니다. 예를 들어 정적 커서가 행을 페치하고 다른 애플리케이션이 해당 행을 업데이트한다고 가정합니다. 애플리케이션이 정적 커서에서 행을 다시 페치하면 다른 애플리케이션에서 변경한 내용에도 불구하고 표시되는 값은 변경되지 않습니다. 모든 유형의 스크롤이 지원됩니다. 
@@ -111,19 +112,19 @@ DYNAMIC
 커서 내부 또는 커서 외부의 다른 사용자가 변경했는지에 관계없이 커서를 스크롤하고 새 코드를 가져올 때 결과 집합의 행에 대해 수행된 모든 데이터 변경 내용을 반영하는 커서를 정의합니다. 따라서 모든 사용자가 실행한 모든 삽입, 업데이트 및 삭제 문은 커서를 통해 볼 수 있습니다. 따라서 인출할 때마다 행의 데이터 값, 순서 및 멤버 자격이 변경될 수 있습니다. 동적 커서에서는 `ABSOLUTE` 페치 옵션이 지원되지 않습니다. 커서 외부에서 수행된 업데이트는 커밋될 때까지 볼 수 없습니다(커서 트랜잭션 격리 수준이 `UNCOMMITTED`로 설정되어 있지 않은 경우). 예를 들어 동적 커서가 두 행을 페치하고 다른 애플리케이션이 해당 행 중 하나를 업데이트하고 다른 행을 삭제한다고 가정합니다. 그런 다음, 동적 커서가 해당 행을 페치하는 경우, 삭제된 행을 찾을 수 없지만 업데이트된 행에 대한 새 값을 표시합니다. 
   
 FAST_FORWARD  
-성능 최적화가 설정된 `FORWARD_ONLY`, `READ_ONLY` 커서를 지정합니다. `FAST_FORWARD` 또는 `SCROLL`까지 지정한 경우 `FOR_UPDATE`을 지정할 수 없습니다. 이 유형의 커서는 커서 내부에서 데이터 수정을 허용하지 않습니다.  
+성능 최적화가 설정된 `FORWARD_ONLY`, `READ_ONLY` 커서를 지정합니다. `SCROLL` 또는 `FOR_UPDATE`까지 지정한 경우 `FAST_FORWARD`을 지정할 수 없습니다. 이 유형의 커서는 커서 내부에서 데이터 수정을 허용하지 않습니다.  
   
 > [!NOTE]  
 > `FAST_FORWARD` 및 `FORWARD_ONLY`를 같은 `DECLARE CURSOR` 문에 사용할 수 있습니다.  
   
 READ_ONLY  
-이 커서를 통한 업데이트를 방지합니다. `WHERE CURRENT OF` 또는 `UPDATE` 문의 `DELETE` 절에서 커서를 참조할 수 없습니다. 이 옵션은 업데이트할 커서의 기본 기능을 무시합니다.  
+이 커서를 통한 업데이트를 방지합니다. `UPDATE` 또는 `DELETE` 문의 `WHERE CURRENT OF` 절에서 커서를 참조할 수 없습니다. 이 옵션은 업데이트할 커서의 기본 기능을 무시합니다.  
   
 SCROLL_LOCKS  
-커서를 통해 현재 위치 업데이트 또는 삭제가 반드시 실행되도록 지정합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 커서에서 읽어 들이는 행을 잠가 나중에 수정할 때 사용할 수 있도록 합니다. `SCROLL_LOCKS` 또는 `FAST_FORWARD`까지 지정한 경우 `STATIC`을 지정할 수 없습니다.  
+커서를 통해 현재 위치 업데이트 또는 삭제가 반드시 실행되도록 지정합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 커서에서 읽어 들이는 행을 잠가 나중에 수정할 때 사용할 수 있도록 합니다. `FAST_FORWARD` 또는 `STATIC`까지 지정한 경우 `SCROLL_LOCKS`을 지정할 수 없습니다.  
   
 OPTIMISTIC  
-커서에서 읽어 들인 행이 업데이트된 경우 커서를 통해 지정된 위치에서 업데이트 또는 삭제가 실행되지 않도록 지정합니다. 이 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 커서로 행을 읽을 때 행을 잠그지 않습니다. 대신 **timestamp** 열 값을 비교하거나 테이블에 **timestamp** 열이 없을 경우 체크섬 값을 비교하여 커서로 읽은 행이 수정되었는지 여부를 확인합니다. 행이 수정된 경우 지정된 위치에서 업데이트나 삭제가 실행되지 않습니다. `OPTIMISTIC`까지 지정한 경우 `FAST_FORWARD`을 지정할 수 없습니다.  
+커서에서 읽어 들인 행이 업데이트된 경우 커서를 통해 지정된 위치에서 업데이트 또는 삭제가 실행되지 않도록 지정합니다. 이 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 커서로 행을 읽을 때 행을 잠그지 않습니다. 대신 **timestamp** 열 값을 비교하거나 테이블에 **timestamp** 열이 없을 경우 체크섬 값을 비교하여 커서로 읽은 행이 수정되었는지 여부를 확인합니다. 행이 수정된 경우 지정된 위치에서 업데이트나 삭제가 실행되지 않습니다. `FAST_FORWARD`까지 지정한 경우 `OPTIMISTIC`을 지정할 수 없습니다.  
   
  TYPE_WARNING  
  요청한 커서 형식이 다른 형식으로 암시적으로 변환된 경우 클라이언트에게 경고 메시지를 보내도록 지정합니다.  
@@ -132,21 +133,21 @@ OPTIMISTIC
  커서의 결과 집합을 정의하는 표준 SELECT 문입니다. `COMPUTE`, `COMPUTE BY`, `FOR BROWSE` 및 `INTO` 키워드는 커서 선언의 *select_statement* 내에서 허용되지 않습니다.  
   
 > [!NOTE]  
-> 커서 선언 내에 쿼리 힌트를 사용할 수 있습니다. 그러나 `FOR UPDATE OF` 절도 함께 사용하는 경우 `OPTION (<query_hint>)` 뒤에 `FOR UPDATE OF`를 지정하세요.  
+> 커서 선언 내에 쿼리 힌트를 사용할 수 있습니다. 그러나 `OPTION (<query_hint>)` 절도 함께 사용하는 경우 `FOR UPDATE OF` 뒤에 `FOR UPDATE OF`를 지정하세요.  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 *select_statement*의 절이 요청된 커서 유형의 기능과 충돌할 경우 커서를 다른 유형으로 암시적으로 변환합니다. 자세한 내용은 암시적 커서 변환을 참조하세요.  
   
-FOR UPDATE [OF *column_name* [ **,** ...*n*]]  
-커서 내에서 업데이트할 수 있는 열을 정의합니다. `OF <column_name> [, <... n>]`이 제공된 경우 나열된 열만 수정이 가능합니다. `UPDATE` 동시성 옵션이 지정되지 않은 경우 열 목록 없이 `READ_ONLY`를 지정하면 모든 열을 업데이트할 수 있습니다.  
+FOR UPDATE [OF *column_name* [**,**...*n*]]  
+커서 내에서 업데이트할 수 있는 열을 정의합니다. `OF <column_name> [, <... n>]`이 제공된 경우 나열된 열만 수정이 가능합니다. `READ_ONLY` 동시성 옵션이 지정되지 않은 경우 열 목록 없이 `UPDATE`를 지정하면 모든 열을 업데이트할 수 있습니다.  
   
 ## <a name="remarks"></a>설명  
 `DECLARE CURSOR`는 스크롤 동작, 커서가 작동하는 결과 세트를 구축하는 데 사용되는 쿼리 등 [!INCLUDE[tsql](../../includes/tsql-md.md)] 서버 커서의 특성을 정의합니다. `OPEN` 문은 결과 세트를 채우고 `FETCH`는 결과 세트에서 행을 반환합니다. `CLOSE` 문은 커서와 연결된 현재 결과 세트를 해제합니다. `DEALLOCATE` 문은 커서에서 사용된 리소스를 해제합니다.  
   
 `DECLARE CURSOR` 문의 첫 번째 형식은 커서 동작을 선언하기 위해 ISO 구문을 사용합니다. `DECLARE CURSOR` 문의 두 번째 형식은 ODBC 또는 ADO의 데이터베이스 API 커서 함수에서 사용된 것과 동일한 커서 형식을 사용하여 커서를 정의할 수 있는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 확장을 사용합니다.  
   
-위의 두 가지 형식을 함께 사용할 수는 없습니다. `SCROLL` 키워드 앞에 `INSENSITIVE` 또는 `CURSOR` 키워드를 지정하면 `CURSOR` 및 `FOR <select_statement>` 키워드 사이에 어떤 키워드도 사용할 수 없습니다. `CURSOR` 및 `FOR <select_statement>` 키워드 사이에 키워드를 지정하면 `SCROLL` 키워드 앞에 `INSENSITIVE` 또는 `CURSOR`를 지정할 수 없습니다.  
+위의 두 가지 형식을 함께 사용할 수는 없습니다. `CURSOR` 키워드 앞에 `SCROLL` 또는 `INSENSITIVE` 키워드를 지정하면 `CURSOR` 및 `FOR <select_statement>` 키워드 사이에 어떤 키워드도 사용할 수 없습니다. `CURSOR` 및 `FOR <select_statement>` 키워드 사이에 키워드를 지정하면 `CURSOR` 키워드 앞에 `SCROLL` 또는 `INSENSITIVE`를 지정할 수 없습니다.  
   
-`DECLARE CURSOR` 구문을 사용하는 [!INCLUDE[tsql](../../includes/tsql-md.md)]가 `READ_ONLY`, `OPTIMISTIC`,또는 `SCROLL_LOCKS`를 지정하지 않으면 기본값은 다음과 같습니다.  
+[!INCLUDE[tsql](../../includes/tsql-md.md)] 구문을 사용하는 `DECLARE CURSOR`가 `READ_ONLY`, `OPTIMISTIC`,또는 `SCROLL_LOCKS`를 지정하지 않으면 기본값은 다음과 같습니다.  
   
 -   권한 부족, 업데이트를 지원하지 않는 원격 테이블 액세스 등의 이유로 `SELECT` 문이 업데이트를 지원하지 않을 경우 커서는 `READ_ONLY`가 됩니다.  
   
@@ -174,7 +175,7 @@ FOR UPDATE [OF *column_name* [ **,** ...*n*]]
 
 클러스터형 columnstore 인덱스가 있는 테이블에서는 커서 또는 트리거를 사용할 수 없습니다. 비클러스터형 columnstore 인덱스에는 이러한 제한이 적용되지 않습니다. 즉 비클러스터형 columnstore 인덱스가 있는 테이블에서는 커서 및 트리거를 사용할 수 있습니다. 
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-using-simple-cursor-and-syntax"></a>A. 단순 커서 및 구문 사용  
 

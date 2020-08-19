@@ -1,4 +1,5 @@
 ---
+description: OBJECTPROPERTYEX(Transact-SQL)
 title: OBJECTPROPERTYEX(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -22,12 +23,12 @@ ms.assetid: be36b3e3-3309-4332-bfb5-c7e9cf8dc8bd
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5083f6e8bf8fd47dfca6f5191a8ed9702714461c
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 197b3c2f473a9711f2bf79e94d400f85224d8235
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113387"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445685"
 ---
 # <a name="objectpropertyex-transact-sql"></a>OBJECTPROPERTYEX(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -77,7 +78,7 @@ OBJECTPROPERTYEX ( id , property )
 |ExecIsLastInsertTrigger|트리거|테이블에 대해 INSERT가 실행될 때 마지막으로 실행되는 트리거입니다.<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 기본 데이터 형식: **int**|  
 |ExecIsLastUpdateTrigger|트리거|테이블에 대해 UPDATE가 실행될 때 마지막으로 실행되는 트리거입니다.<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 기본 데이터 형식: **int**|  
 |ExecIsQuotedIdentOn|[!INCLUDE[tsql](../../includes/tsql-md.md)] 함수, [!INCLUDE[tsql](../../includes/tsql-md.md)] 프로시저, [!INCLUDE[tsql](../../includes/tsql-md.md)] 트리거, 뷰|생성 시의 QUOTED_IDENTIFIER 설정입니다.<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 기본 데이터 형식: **int**|  
-|ExecIsStartup|절차|시작 프로시저입니다.<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 기본 데이터 형식: **int**|  
+|ExecIsStartup|프로시저|시작 프로시저입니다.<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 기본 데이터 형식: **int**|  
 |ExecIsTriggerDisabled|트리거|비활성화된 트리거입니다.<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 기본 데이터 형식: **int**|  
 |ExecIsTriggerNotForRepl|트리거|NOT FOR REPLICATION으로 정의된 트리거입니다.<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 기본 데이터 형식: **int**|  
 |ExecIsUpdateTrigger|트리거|UPDATE 트리거입니다.<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 기본 데이터 형식: **int**|  
@@ -99,7 +100,7 @@ OBJECTPROPERTYEX ( id , property )
 |IsForeignKey|임의의 스키마 범위 개체|FOREIGN KEY 제약 조건입니다.<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 기본 데이터 형식: **int**|  
 |IsIndexed|테이블, 뷰|인덱스가 있는 테이블 또는 뷰입니다.<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 기본 데이터 형식: **int**|  
 |IsIndexable|테이블, 뷰|인덱스를 만들 수 있는 테이블 또는 뷰입니다.<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 기본 데이터 형식: **int**|  
-|IsInlineFunction|함수|인라인 함수입니다.<br /><br /> 1 = 인라인 함수<br /><br /> 0 = 비인라인 함수<br /><br /> 기본 데이터 형식: **int**|  
+|IsInlineFunction|기능|인라인 함수입니다.<br /><br /> 1 = 인라인 함수<br /><br /> 0 = 비인라인 함수<br /><br /> 기본 데이터 형식: **int**|  
 |IsMSShipped|임의의 스키마 범위 개체|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 설치하는 동안 만들어진 개체입니다.<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 기본 데이터 형식: **int**|  
 |IsPrecise|계산 열, 함수, 사용자 정의 형식, 뷰|개체에 부동 소수점 연산 같이 정확하지 않은 계산이 있는지를 나타냅니다.<br /><br /> 1 = 정확<br /><br /> 0 = 정확하지 않음<br /><br /> 기본 데이터 형식: **int**|  
 |IsPrimaryKey|임의의 스키마 범위 개체|PRIMARY KEY 제약 조건입니다.<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 기본 데이터 형식: **int**|  
@@ -108,16 +109,16 @@ OBJECTPROPERTYEX ( id , property )
 |IsQueue|임의의 스키마 범위 개체|Service Broker 큐입니다.<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 기본 데이터 형식: **int**|  
 |IsReplProc|임의의 스키마 범위 개체|복제 프로시저입니다.<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 기본 데이터 형식: **int**|  
 |IsRule|임의의 스키마 범위 개체|바운드 규칙입니다.<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 기본 데이터 형식: **int**|  
-|IsScalarFunction|함수|스칼라 반환 함수입니다.<br /><br /> 1 = 스칼라 반환 함수<br /><br /> 0 = 스칼라 반환 함수 아님<br /><br /> 기본 데이터 형식: **int**|  
+|IsScalarFunction|기능|스칼라 반환 함수입니다.<br /><br /> 1 = 스칼라 반환 함수<br /><br /> 0 = 스칼라 반환 함수 아님<br /><br /> 기본 데이터 형식: **int**|  
 |IsSchemaBound|함수, 프로시저, 뷰|SCHEMABINDING을 사용하여 만든 스키마 바운드 함수 또는 뷰입니다.<br /><br /> 1 = 스키마 바운드<br /><br /> 0 = 스키마 바운드 아님<br /><br /> 기본 데이터 형식: **int**|  
 |IsSystemTable|테이블|시스템 테이블입니다.<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 기본 데이터 형식: **int**|  
 |IsSystemVerified|계산 열, 함수, 사용자 정의 형식, 뷰|개체의 전체 자릿수와 결정성은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 확인할 수 있습니다.<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 기본 데이터 형식: **int**|  
 |IsTable|테이블|테이블.<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 기본 데이터 형식: **int**|  
-|IsTableFunction|함수|테이블 반환 함수입니다.<br /><br /> 1 = 테이블 반환 함수<br /><br /> 0 = 테이블 반환 함수 아님<br /><br /> 기본 데이터 형식: **int**|  
+|IsTableFunction|기능|테이블 반환 함수입니다.<br /><br /> 1 = 테이블 반환 함수<br /><br /> 0 = 테이블 반환 함수 아님<br /><br /> 기본 데이터 형식: **int**|  
 |IsTrigger|임의의 스키마 범위 개체|트리거입니다.<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 기본 데이터 형식: **int**|  
 |IsUniqueCnst|임의의 스키마 범위 개체|UNIQUE 제약 조건입니다.<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 기본 데이터 형식: **int**|  
 |IsUserTable|테이블|사용자 정의 테이블입니다.<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 기본 데이터 형식: **int**|  
-|IsView|보기|뷰입니다.<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 기본 데이터 형식: **int**|  
+|IsView|View|뷰입니다.<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 기본 데이터 형식: **int**|  
 |OwnerId|임의의 스키마 범위 개체|개체의 소유자입니다.<br /><br /> **참고:** 스키마 소유자가 개체 소유자일 필요는 없습니다. 예를 들어 자식 개체(*parent_object_id*가 Null이 아닌 개체)는 항상 부모 개체와 같은 소유자 ID를 반환합니다.<br /><br /> Null이 아닌 경우 = 개체 소유자의 데이터베이스 사용자 ID입니다.<br /><br /> NULL = 지원되지 않는 개체 형식이거나 개체 ID가 잘못되었습니다.<br /><br /> 기본 데이터 형식: **int**|  
 |SchemaId|임의의 스키마 범위 개체|개체와 관련된 스키마의 ID입니다.<br /><br /> Null이 아닌 경우 = 개체의 스키마 ID입니다.<br /><br /> 기본 데이터 형식: **int**|  
 |SystemDataAccess|함수, 뷰|개체는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 로컬 인스턴스에서 시스템 데이터, 시스템 카탈로그 또는 가상 시스템 테이블에 액세스합니다.<br /><br /> 0 = 없음<br /><br /> 1 = 읽기<br /><br /> 기본 데이터 형식: **int**|  
@@ -127,8 +128,8 @@ OBJECTPROPERTYEX ( id , property )
 |TableFullTextBackgroundUpdateIndexOn|테이블|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상<br /><br /> 테이블의 전체 텍스트 백그라운드 업데이트 인덱스(변경 내용 자동 추적)가 활성화되었습니다.<br /><br /> 1 = TRUE<br /><br /> 0 = FALSE<br /><br /> 기본 데이터 형식: **int**|  
 |TableFulltextCatalogId|테이블|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상<br /><br /> 테이블의 전체 텍스트 인덱스 데이터가 있는 전체 텍스트 카탈로그 ID입니다.<br /><br /> 0이 아닌 값 = 전체 텍스트 인덱싱된 테이블의 행을 식별하는 고유 인덱스와 연결된 전체 텍스트 카탈로그 ID입니다.<br /><br /> 0 = 테이블에 전체 텍스트 인덱스가 없습니다.<br /><br /> 기본 데이터 형식: **int**|  
 |TableFullTextChangeTrackingOn|테이블|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상<br /><br /> 테이블의 전체 텍스트 변경 내용 추적이 활성화되었습니다.<br /><br /> 1 = TRUE<br /><br /> 0 = FALSE<br /><br /> 기본 데이터 형식: **int**|  
-|TableFulltextDocsProcessed|테이블|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상<br /><br /> 전체 텍스트 인덱싱이 시작된 이후에 처리된 행의 수입니다. 전체 텍스트 검색을 위해 인덱싱 중인 테이블에서 한 행의 모든 열은 인덱싱할 한 문서의 일부로 간주됩니다.<br /><br /> 0 = 활성 탐색 또는 전체 텍스트 인덱싱이 완료되지 않았습니다.<br /><br /> >0 = 다음 중 하나(A 또는 B): A) 전체, 증분 또는 수동 변경 내용 추적 채우기를 시작한 이래 삽입 또는 업데이트 작업으로 처리된 문서의 수, B) 백그라운드 업데이트 인덱스 채우기를 사용한 변경 내용 추적이 활성화된 이래 삽입 또는 업데이트 작업으로 처리된 행의 수, 변경된 전체 텍스트 인덱스 스키마, 다시 작성된 전체 텍스트 카탈로그 또는 다시 시작된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스 등.<br /><br /> NULL = 테이블에 전체 텍스트 인덱스가 없습니다.<br /><br /> 기본 데이터 형식: **int**<br /><br /> **Note** 이 속성은 모니터링하지 않으며 삭제된 행을 세지 않습니다.|  
-|TableFulltextFailCount|테이블|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상<br /><br /> 전체 텍스트 검색이 인덱싱되지 않은 행의 수입니다.<br /><br /> 0 = 채우기가 완료되었습니다.<br /><br /> >0 = 다음 중 하나(A 또는 B): A) 전체, 증분 및 수동 업데이트 변경 내용 추적 채우기를 시작한 이래 인덱싱되지 않은 문서의 수, B) 백그라운드 업데이트 인덱스를 사용한 변경 내용 추적의 경우 채우기를 시작하거나 채우기를 다시 시작한 이래 인덱싱되지 않은 행의 수. 이러한 결과는 스키마 변경, 카탈로그 다시 작성, 서버 다시 시작 등으로 인해 나타날 수 있습니다.<br /><br /> NULL = 테이블에 전체 텍스트 인덱스가 없습니다.<br /><br /> 기본 데이터 형식: **int**|  
+|TableFulltextDocsProcessed|테이블|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상<br /><br /> 전체 텍스트 인덱싱이 시작된 이후에 처리된 행의 수입니다. 전체 텍스트 검색을 위해 인덱싱 중인 테이블에서 한 행의 모든 열은 인덱싱할 한 문서의 일부로 간주됩니다.<br /><br /> 0 = 활성 탐색 또는 전체 텍스트 인덱싱이 완료되지 않았습니다.<br /><br /> > 0 = 다음 중 하나(A 또는 B)입니다. A) 전체, 증분 또는 수동 변경 내용 추적 채우기를 시작한 이래 삽입 또는 업데이트 작업으로 처리된 문서의 수, B) 백그라운드 업데이트 인덱스 채우기를 사용한 변경 내용 추적이 활성화된 이래 삽입 또는 업데이트 작업으로 처리된 행의 수, 변경된 전체 텍스트 인덱스 스키마, 다시 작성된 전체 텍스트 카탈로그 또는 다시 시작된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스 등.<br /><br /> NULL = 테이블에 전체 텍스트 인덱스가 없습니다.<br /><br /> 기본 데이터 형식: **int**<br /><br /> **Note** 이 속성은 모니터링하지 않으며 삭제된 행을 세지 않습니다.|  
+|TableFulltextFailCount|테이블|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상<br /><br /> 전체 텍스트 검색이 인덱싱되지 않은 행의 수입니다.<br /><br /> 0 = 채우기가 완료되었습니다.<br /><br /> >0 = 다음 중 하나(A 또는 B)입니다. A) 전체, 증분 및 수동 업데이트 변경 내용 추적 채우기를 시작한 이래 인덱싱되지 않은 문서의 수, B) 백그라운드 업데이트 인덱스를 사용한 변경 내용 추적의 경우 채우기를 시작하거나 채우기를 다시 시작한 이래 인덱싱되지 않은 행의 수. 이러한 결과는 스키마 변경, 카탈로그 다시 작성, 서버 다시 시작 등으로 인해 나타날 수 있습니다.<br /><br /> NULL = 테이블에 전체 텍스트 인덱스가 없습니다.<br /><br /> 기본 데이터 형식: **int**|  
 |TableFulltextItemCount|테이블|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상<br /><br /> Null이 아닌 경우 = 전체 텍스트가 인덱싱된 행의 수입니다.<br /><br /> NULL = 테이블에 전체 텍스트 인덱스가 없습니다.<br /><br /> 기본 데이터 형식: **int**|  
 |TableFulltextKeyColumn|테이블|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상<br /><br /> 전체 텍스트 인덱스와 의미 체계 인덱스 정의의 일부인 단일 열의 고유 인덱스와 관련된 열의 ID입니다.<br /><br /> 0 = 테이블에 전체 텍스트 인덱스가 없습니다.<br /><br /> 기본 데이터 형식: **int**|  
 |TableFulltextPendingChanges|테이블|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상<br /><br /> 처리할 보류 중인 변경 내용 추적 항목의 수입니다.<br /><br /> 0 = 변경 내용 추적이 활성화되지 않았습니다.<br /><br /> NULL = 테이블에 전체 텍스트 인덱스가 없습니다.<br /><br /> 기본 데이터 형식: **int**|  
@@ -190,7 +191,7 @@ GO
   
  메타데이터 표시 유형에 대한 제한 사항이 결과 집합에 적용됩니다. 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-finding-the-base-type-of-an-object"></a>A. 기본 개체 형식 찾기  
  다음 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스의 `MyEmployeeTable` 테이블에 대한 SYNONYM `Employee`을 만든 다음 SYNONYM에 대한 기본 유형을 반환합니다.  
@@ -239,7 +240,7 @@ GO
   
 ## <a name="examples-sssdwfull-and-sspdw"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-finding-the-base-type-of-an-object"></a>D: 기본 개체 형식 찾기  
+### <a name="d-finding-the-base-type-of-an-object"></a>4. 기본 개체 형식 찾기  
  다음 예에서는 기본 `dbo.DimReseller` 개체 형식을 반환합니다.  
   
 ```  

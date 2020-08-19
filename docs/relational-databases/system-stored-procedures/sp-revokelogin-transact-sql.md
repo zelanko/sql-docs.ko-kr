@@ -1,4 +1,5 @@
 ---
+description: sp_revokelogin(Transact-SQL)
 title: sp_revokelogin (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: cb1ab102-1ae0-4811-9144-9a8121ef2d7e
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 95727b3cb27e5ac72af38374da01b203f1a076cc
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f2ccd140079e9a585ee67ce1b7c2208b9926f963
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901329"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446775"
 ---
 # <a name="sp_revokelogin-transact-sql"></a>sp_revokelogin(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85901329"
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]CREATE login, **sp_grantlogin**또는 **sp_denylogin**를 사용 하 여 만든 Windows 사용자 또는 그룹에 대 한 로그인 항목을 제거 합니다.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]대신 [DROP LOGIN](../../t-sql/statements/drop-login-transact-sql.md) 을 사용 해야 합니다.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 대신 [DROP LOGIN](../../t-sql/statements/drop-login-transact-sql.md) 을 사용 해야 합니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,7 +43,7 @@ sp_revokelogin [ @loginame= ] 'login'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @loginame = ] 'login'`Windows 사용자 또는 그룹의 이름입니다. *login* 은 **sysname**이며 기본값은 없습니다. *로그인* 은 *컴퓨터 이름* \\ *사용자 또는 도메인* \\ *사용자*형식의 모든 기존 Windows 사용자 이름 또는 그룹 일 수 있습니다.  
+`[ @loginame = ] 'login'` Windows 사용자 또는 그룹의 이름입니다. *login* 은 **sysname**이며 기본값은 없습니다. *로그인* 은 *컴퓨터 이름* \\ *사용자 또는 도메인* \\ *사용자*형식의 모든 기존 Windows 사용자 이름 또는 그룹 일 수 있습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -65,7 +66,7 @@ sp_revokelogin [ADVWORKS\john]
 ## <a name="permissions"></a>사용 권한  
  서버에 대한 ALTER ANY LOGIN 권한이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 Windows 사용자에 대 한 로그인 항목을 제거 합니다 `Corporate\MollyA` .  
   
 ```  
@@ -79,7 +80,7 @@ EXEC sp_revokelogin [Corporate\MollyA];
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;보안 저장 프로시저](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;보안 저장 프로시저 ](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [DROP LOGIN &#40;Transact-sql&#41;](../../t-sql/statements/drop-login-transact-sql.md)   
  [Transact-sql&#41;sp_denylogin &#40;](../../relational-databases/system-stored-procedures/sp-denylogin-transact-sql.md)   
  [Transact-sql&#41;sp_droplogin &#40;](../../relational-databases/system-stored-procedures/sp-droplogin-transact-sql.md)   

@@ -1,4 +1,5 @@
 ---
+description: IpAddresses 속성(ServerNetworkProtocol 클래스)
 title: IpAddresses 속성 (ServerNetworkProtocol)
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e5d66f7e-9719-436e-b723-12d56f914a05
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 836c1a7c8354bc3eb36321d69d787ead8820df41
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d499e84bef9a88ddb094586f6ff61904ef6f42ea
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888745"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446225"
 ---
 # <a name="ipaddresses-property-servernetworkprotocol-class"></a>IpAddresses 속성(ServerNetworkProtocol 클래스)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

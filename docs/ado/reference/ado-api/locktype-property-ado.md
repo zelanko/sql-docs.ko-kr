@@ -1,4 +1,5 @@
 ---
+description: LockType 속성(ADO)
 title: LockType 속성 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9920c14e-033a-4de1-8149-0ce9737a3246
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4a8d0f94d4482649030561f2ac71ed6de1374e46
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 49fe91535b674bb5dbb6c4a75425cdcea1042fa8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82754482"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443345"
 ---
 # <a name="locktype-property-ado"></a>LockType 속성(ADO)
 편집 하는 동안 레코드에 적용 되는 잠금 유형을 나타냅니다.  

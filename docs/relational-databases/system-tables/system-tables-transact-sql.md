@@ -1,4 +1,5 @@
 ---
+description: 시스템 테이블(Transact-SQL)
 title: 시스템 테이블 (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 56b8ad51-930c-4e5c-8d99-8c939d5b70ac
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: bcd2869c583f51b5ab9d00a7bbb68e9dd47b534d
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: bb4aba7e3ad13edd1d71266b96d6ef956a162cba
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87122767"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446606"
 ---
 # <a name="system-tables-transact-sql"></a>시스템 테이블(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -55,7 +56,7 @@ ms.locfileid: "87122767"
 
 :::row:::
     :::column:::
-        [Transact-sql&#41;&#40;테이블 백업 및 복원](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)
+        [Transact-sql&#41;&#40;테이블 백업 및 복원 ](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)
 
         [변경 데이터 캡처 테이블&#40;Transact-SQL&#41;](../../relational-databases/system-tables/change-data-capture-tables-transact-sql.md)
 
@@ -63,14 +64,14 @@ ms.locfileid: "87122767"
 
         [SQL Server 확장 이벤트 테이블&#40;Transact-SQL&#41;](../../relational-databases/extended-events/xevents-references-system-objects.md#system-tables)
 
-        [Transact-sql&#41;&#40;테이블 Integration Services](../../relational-databases/system-tables/integration-services-tables-transact-sql.md)
+        [Transact-sql&#41;&#40;테이블 Integration Services ](../../relational-databases/system-tables/integration-services-tables-transact-sql.md)
     :::column-end:::
     :::column:::
         [로그 전달 테이블&#40;Transact-SQL&#41;](../../relational-databases/system-tables/log-shipping-tables-transact-sql.md)
 
         [복제 테이블&#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)
 
-        [Transact-sql&#41;&#40;테이블 SQL Server 에이전트](../../relational-databases/system-tables/sql-server-agent-tables-transact-sql.md)
+        [Transact-sql&#41;&#40;테이블 SQL Server 에이전트 ](../../relational-databases/system-tables/sql-server-agent-tables-transact-sql.md)
 
         [sys.sysoledbusers &#40;Transact-sql&#41;](../../relational-databases/system-compatibility-views/sys-sysoledbusers-transact-sql.md)
 
@@ -78,8 +79,8 @@ ms.locfileid: "87122767"
     :::column-end:::
 :::row-end:::
 
-## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;호환성 뷰](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)   
+## <a name="see-also"></a>관련 항목  
+ [Transact-sql&#41;&#40;호환성 뷰 ](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)   
  [카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
   

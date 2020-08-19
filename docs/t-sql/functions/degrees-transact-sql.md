@@ -1,4 +1,5 @@
 ---
+description: DEGREES(Transact-SQL)
 title: DEGREES(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -19,12 +20,12 @@ ms.assetid: 5208de3c-90a3-4f59-a7e3-10b01bf285bb
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b14fefc451ec334815e8921294616ad67a3a8913
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 4eba677197f76a27ed76d10a4a413e7de2a311b2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113551"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445821"
 ---
 # <a name="degrees-transact-sql"></a>DEGREES(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -43,12 +44,12 @@ DEGREES ( numeric_expression )
 
 ## <a name="arguments"></a>인수
  *numeric_expression*  
-[bit](../../t-sql/language-elements/expressions-transact-sql.md) 데이터 형식을 제외한 정확한 수치 또는 근사치 데이터 형식 범주의 **expression**입니다.  
+**bit** 데이터 형식을 제외한 정확한 수치 또는 근사치 데이터 형식 범주의 [expression](../../t-sql/language-elements/expressions-transact-sql.md)입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
 데이터 형식이 *numeric_expression* 데이터 형식과 일치하는 값을 반환합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
 이 예에서는 PI/2 라디안 각도를 도 단위로 반환합니다.  
   
 ```  

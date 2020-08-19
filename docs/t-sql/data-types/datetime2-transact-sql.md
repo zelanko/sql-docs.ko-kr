@@ -1,4 +1,5 @@
 ---
+description: datetime2(Transact-SQL)
 title: datetime2(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/23/2017
@@ -22,12 +23,12 @@ ms.assetid: 868017f3-214f-43ef-8536-cc1632a2288f
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9d9be8cfb561ec2e5857c2bd5699b46a5418c9df
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: cb7ef589270a5cdcd06d2eac18176ebbf529256d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008050"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446013"
 ---
 # <a name="datetime2-transact-sql"></a>datetime2(Transact-SQL)
 
@@ -40,11 +41,11 @@ ms.locfileid: "86008050"
 |속성|값|  
 |--------------|-----------|  
 |구문|**datetime2** [ (*초 소수 부분 자릿수*) ]|  
-|사용|DECLARE \@MyDatetime2 **datetime2(7)**<br /><br /> CREATE TABLE Table1 ( Column1 **datetime2(7)** )|  
+|사용량|DECLARE \@MyDatetime2 **datetime2(7)**<br /><br /> CREATE TABLE Table1 ( Column1 **datetime2(7)** )|  
 |기본 문자열 리터럴 형식<br /><br /> (하위 클라이언트에 대해 사용됨)|YYYY-MM-DD hh:mm:ss[.소수 자릿수 초]<br /><br /> 자세한 내용은 뒷부분에 나오는 "하위 클라이언트에 대한 이전 버전과의 호환성" 섹션을 참조하세요.|  
 |날짜 범위|0001-01-01부터 31.12.99까지<br /><br /> CE 1년 1월 1일부터 CE 9999년 12월 31일까지|  
 |시간 범위|00:00:00부터 23:59:59.9999999까지|  
-|표준 시간대 오프셋 범위|None|  
+|표준 시간대 오프셋 범위|없음|  
 |요소 범위|YYYY는 0001에서 9999 사이에 속하는 4자리 숫자로, 연도를 나타냅니다.<br /><br /> MM은 01에서 12 사이에 속하는 두 자리 숫자로, 지정된 연도의 월을 나타냅니다.<br /><br /> DD는 월에 따라 01에서 31 사이에 속하는 두 자리 숫자로, 특정 월의 일을 나타냅니다.<br /><br /> hh는 00에서 23 사이에 속하는 두 자리 숫자로, 시간을 나타냅니다.<br /><br /> Mm은 00에서 59 사이에 속하는 두 자리 숫자로, 분을 나타냅니다.<br /><br /> ss는 00에서 59 사이에 속하는 두 자리 숫자로, 초를 나타냅니다.<br /><br /> n*은 0에서 9999999 사이에 속하는 0 ~ 7 자리의 숫자로, 소수 자릿수 초를 나타냅니다. Informatica에서는 n > 3일 경우 초 소수 부분이 잘립니다.|  
 |문자 길이|최소 19자리(YYYY-MM-DD hh:mm:ss )부터 최대 27자리(YYYY-MM-DD hh:mm:ss.0000000)까지|  
 |전체 자릿수, 소수 자릿수|0 ~ 7자리, 정확도 100ns. 기본 전체 자릿수는 7자리입니다.|  
@@ -52,7 +53,7 @@ ms.locfileid: "86008050"
 |정확도|100나노초|  
 |기본값|1900-01-01 00:00:00|  
 |달력|일반 달력|  
-|사용자 정의 초 소수 부분 자릿수|yes|  
+|사용자 정의 초 소수 부분 자릿수|예|  
 |표준 시간대 오프셋 인식 및 유지|예|  
 |일광 절약 시간제 인식|예|  
 
@@ -179,7 +180,7 @@ SELECT @datetime2 AS '@datetime2', @datetime AS '@datetime';
 |TIME+TIMEZONE|DATE 부분의 기본값은 1900-1-1입니다. TIMEZONE 입력은 무시됩니다.|  
 |DATE+TIME+TIMEZONE|로컬 DATETIME이 사용됩니다.|  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
 다음 예에서는 문자열을 각 **date** 및 **time** 데이터 형식으로 캐스팅하는 결과를 비교합니다.
   
 ```sql

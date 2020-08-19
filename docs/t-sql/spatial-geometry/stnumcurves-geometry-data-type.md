@@ -1,4 +1,5 @@
 ---
+description: STNumCurves(geometry 데이터 형식)
 title: STNumCurves(geometry 데이터 형식) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 20c2fa0b-656b-4519-b34c-cc8f094290d4
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 95e43dfb8bad1dfc505fb65a28674f813418f5d4
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: fe3418284131577051e48f8300bd89df2abc0ec1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555974"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444968"
 ---
 # <a name="stnumcurves-geometry-data-type"></a>STNumCurves(geometry 데이터 형식)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -43,7 +44,7 @@ ms.locfileid: "86555974"
 ## <a name="remarks"></a>설명  
  빈 1차원 **geometry** 인스턴스는 0을 반환합니다. **geometry** 인스턴스가 1차원 인스턴스가 아니거나 초기화되지 않은 인스턴스일 경우 **NULL**이 반환됩니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-using-stnumcurves-on-a-circularstring-instance"></a>A. CircularString 인스턴스에 STNumCurves() 사용  
  다음 예에서는 `CircularString` 인스턴스의 곡선 수를 가져오는 방법을 보여 줍니다.  

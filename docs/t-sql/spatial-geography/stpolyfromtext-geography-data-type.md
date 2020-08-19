@@ -1,4 +1,5 @@
 ---
+description: STPolyFromText(geography 데이터 형식)
 title: STPolyFromText(geography 데이터 형식) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/30/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d7e6a2bb-d301-49fb-9202-c70a9d169b4d
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: a6fb63e1a853c96c972578a1be757dfcefd87751
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 154aff97ba24cf2dfd357a123e4075e78a534ecc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555376"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445162"
 ---
 # <a name="stpolyfromtext-geography-data-type"></a>STPolyFromText(geography 데이터 형식)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

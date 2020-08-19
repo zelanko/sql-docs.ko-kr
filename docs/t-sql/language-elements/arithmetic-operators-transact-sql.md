@@ -1,4 +1,5 @@
 ---
+description: 산술 연산자(Transact-SQL)
 title: 산술 연산자(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/06/2017
@@ -17,12 +18,12 @@ ms.assetid: a41b92a5-1061-4e4d-bb3b-a180b73c88fa
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b6fd33150c41b692c803348f3246a165b785f0a1
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: b51c473bb75f3f2e1c82f96dcd8af743597678fc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85990602"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445528"
 ---
 # <a name="arithmetic-operators-transact-sql"></a>산술 연산자(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "85990602"
 |[+(더하기)](../../t-sql/language-elements/add-transact-sql.md)|더하기|  
 |[-(빼기)](../../t-sql/language-elements/subtract-transact-sql.md)|빼기|  
 |[*(곱하기)](../../t-sql/language-elements/multiply-transact-sql.md)|곱하기|  
-|[/(나누기)](../../t-sql/language-elements/divide-transact-sql.md)|나누기|  
+|[/(나누기)](../../t-sql/language-elements/divide-transact-sql.md)|사업부|  
 |[%(모듈로)](../../t-sql/language-elements/modulo-transact-sql.md)|나누기의 정수 나머지를 반환합니다. 예를 들어 12를 5로 나누면 나머지가 2이므로 12 % 5 = 2를 반환합니다.|  
   
 더하기(+)와 빼기(-)는 **datetime** 및 **smalldatetime** 값에 산술 연산을 실행하는 데도 사용할 수 있습니다.  

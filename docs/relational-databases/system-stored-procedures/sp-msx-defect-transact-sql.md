@@ -1,4 +1,5 @@
 ---
+description: sp_msx_defect(Transact-SQL)
 title: sp_msx_defect (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0dfd963a-3bc5-4b58-94f7-aec976da2883
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5968f8ae8c44f5a20ca93b10c653c950c842cadc
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8ad8a12d53113f394e2df1a70456261867471ab5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893482"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446895"
 ---
 # <a name="sp_msx_defect-transact-sql"></a>sp_msx_defect(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +43,7 @@ sp_msx_defect [@forced_defection =] forced_defection
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @forced_defection = ] forced_defection`무효로 손상 된 **msdb** 데이터베이스로 인해 마스터 SQLServerAgent가 영구적으로 손실 되거나 **msdb** 데이터베이스 백업이 없는 경우 강제로 제거할지 여부를 지정 합니다. *forced_defection*은 **bit**이며 기본값은 **0**으로 강제 제거를 수행 하지 않음을 나타냅니다. 값 **1** 은 강제로 제거 합니다.  
+`[ @forced_defection = ] forced_defection` 무효로 손상 된 **msdb** 데이터베이스로 인해 마스터 SQLServerAgent가 영구적으로 손실 되거나 **msdb** 데이터베이스 백업이 없는 경우 강제로 제거할지 여부를 지정 합니다. *forced_defection*은 **bit**이며 기본값은 **0**으로 강제 제거를 수행 하지 않음을 나타냅니다. 값 **1** 은 강제로 제거 합니다.  
   
  **Sp_msx_defect**를 실행 하 여 강제로 제거 하 고 나 서 마스터 SQLServerAgent에서 **sysadmin** 고정 서버 역할의 멤버는 다음 명령을 실행 하 여 제거를 완료 해야 합니다.  
   

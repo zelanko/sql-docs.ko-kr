@@ -1,4 +1,5 @@
 ---
+description: CLR 트리거 만들기
 title: CLR 트리거 만들기 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/16/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 31f41703-134d-49fc-9850-76c297351c2c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f81446e6ea56fbb16570e6b5555b8b704e7c92be
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f3d7218b9d2524fd2312ea0364268821524eb926
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889083"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446380"
 ---
 # <a name="create-clr-triggers"></a>CLR 트리거 만들기
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

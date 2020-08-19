@@ -1,4 +1,5 @@
 ---
+description: 여러 행의 데이터를 처리하기 위한 DML 트리거 만들기
 title: 여러 행의 데이터를 처리하기 위한 DML 트리거 만들기
 ms.custom: seo-dt-2019
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ ms.assetid: d476c124-596b-4b27-a883-812b6b50a735
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ce1e904ac0d3d5b329fce676218e3133bda60d81
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4089c9cb747837e6d0e41c7af1c8d9fc0829e494
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85757695"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446354"
 ---
 # <a name="create-dml-triggers-to-handle-multiple-rows-of-data"></a>여러 행의 데이터를 처리하기 위한 DML 트리거 만들기
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -33,7 +34,7 @@ ms.locfileid: "85757695"
 > [!NOTE]  
 >  커서는 잠재적으로 성능을 저하시킬 수 있으므로 트리거에 사용하지 않는 것이 좋습니다. 다중 행에 영향을 주는 트리거를 디자인하려면 커서 대신 행 집합 기반 논리를 사용합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서 DML 트리거는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 예제 데이터베이스의 다른 테이블에 열의 누계를 저장하도록 디자인되어 있습니다.  
   
 ### <a name="a-storing-a-running-total-for-a-single-row-insert"></a>A. 단일 행 삽입의 누계 저장  

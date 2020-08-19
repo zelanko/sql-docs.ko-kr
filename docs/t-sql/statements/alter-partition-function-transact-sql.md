@@ -1,4 +1,5 @@
 ---
+description: ALTER PARTITION FUNCTION(Transact-SQL)
 title: ALTER PARTITION FUNCTION(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -25,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 70866dac-0a8f-4235-8108-51547949ada4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a8751da646792fc170b017039d6e5d1465e8b5ed
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+ms.openlocfilehash: efac16278bec7099024cb5f9e7cc2480013728cc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86381277"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444895"
 ---
 # <a name="alter-partition-function-transact-sql"></a>ALTER PARTITION FUNCTION(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -70,7 +71,7 @@ ALTER PARTITION SCHEME 문은 새 파티션을 포함할 파일 그룹을 추가
 동일한 파일 그룹에 모든 파티션을 만든 경우 파일 그룹은 초기에 자동으로 NEXT USED 파일 그룹이 되도록 할당됩니다. 그러나 분할 작업이 실행된 후에는 더 이상 선택된 NEXT USED 파일 그룹이 없습니다. ALTER PARTITION SCHEME을 사용하여 파일 그룹을 NEXT USED 파일 그룹으로 명시적으로 할당해야 합니다. 그렇지 않으면 후속 분할 작업은 실패하게 됩니다.  
   
 > [!NOTE]  
->  columnstore 인덱스 관련 제한 사항: 테이블에 columnstore 인덱스가 있는 경우에는 빈 파티션만 분할할 수 있습니다. 이 작업을 수행하기 전에 columnstore 인덱스를 삭제하거나 사용하지 않도록 설정해야 합니다.  
+>  columnstore 인덱스의 제한 사항: 테이블에 columnstore 인덱스가 있으면 빈 파티션만 분할할 수 있습니다. 이 작업을 수행하기 전에 columnstore 인덱스를 삭제하거나 사용하지 않도록 설정해야 합니다.  
   
 MERGE [ RANGE ( *boundary_value*) ]  
 파티션을 삭제하고 해당 파티션에 있는 모든 값을 나머지 파티션으로 병합합니다. RANGE(*boundary_value*)는 삭제된 파티션의 값을 병합하는 기존의 경계 값이어야 합니다. 원래 *boundary_value*를 포함한 파일 그룹을 나머지 파티션이 사용하거나 NEXT USED 속성으로 표시하지 않는 한 이 인수는 해당 파일 그룹을 파티션 구성표에서 제거합니다. 병합된 파티션은 처음에 *boundary_value*를 포함하지 않았던 파일 그룹에 있습니다. *boundary_value*는 변수(사용자 정의 형식 변수 포함) 또는 함수(사용자 정의 함수 포함)를 참조할 수 있는 상수 식입니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 식을 참조할 수 없습니다. *boundary_value*는 해당 분할 열의 데이터 형식과 일치하거나 이 데이터 형식으로의 암시적 변환되어야 합니다. *boundary_value*는 암시적인 변환 중에 값의 크기 및 소수 자릿수가 해당 *input_parameter_type*과 일치하지 않는 방식으로 자를 수도 없습니다.  
@@ -112,7 +113,7 @@ ALTER PARTITION FUNCTION을 실행하려면 다음 중 하나의 권한이 필�
   
 -   파티션 함수가 생성된 데이터베이스의 서버에 대한 CONTROL SERVER 또는 ALTER ANY DATABASE 권한  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-splitting-a-partition-of-a-partitioned-table-or-index-into-two-partitions"></a>A. 분할 테이블 또는 인덱스의 파티션을 두 개의 파티션으로 분할  
 다음 예에서는 테이블이나 인덱스를 4개의 파티션으로 분할하는 파티션 함수를 만듭니다. `ALTER PARTITION FUNCTION`은 파티션 중 하나를 둘로 분할하여 총 5개의 파티션을 만듭니다.  

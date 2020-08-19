@@ -1,4 +1,5 @@
 ---
+description: STIsClosed(geometry 데이터 형식)
 title: STIsClosed(geometry 데이터 형식) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 14edbb22-df7b-4b8a-b16c-ac477a5d32c1
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 61c72f4953bfad6d54c46b3b710d2f9c0b9f98d7
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: c92d311ba67c71f77fef8052bcfe8e5938d1f1b5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86552461"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445044"
 ---
 # <a name="stisclosed-geometry-data-type"></a>STIsClosed(geometry 데이터 형식)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -48,7 +49,7 @@ ms.locfileid: "86552461"
   
  모든 **Polygon** 인스턴스는 닫혀 있다고 간주됩니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `LineString` 인스턴스를 만들고 `STIsClosed()`를 사용하여 `LineString`이 닫혀 있는지 테스트합니다.  
   
 ```  

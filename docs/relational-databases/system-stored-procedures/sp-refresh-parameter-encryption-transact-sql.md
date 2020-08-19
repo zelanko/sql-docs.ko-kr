@@ -1,4 +1,5 @@
 ---
+description: sp_refresh_parameter_encryption (Transact-sql)
 title: sp_refresh_parameter_encryption (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/11/2017
@@ -19,11 +20,12 @@ ms.assetid: 00b44baf-fcf0-4095-aabe-49fa87e77316
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e4d6914ce4b46a7fc787b496ebf6b23036b9c21c
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 1af6c8584c9190bd4611eed4875ec146b6f3656b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002138"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446916"
 ---
 # <a name="sp_refresh_parameter_encryption-transact-sql"></a>sp_refresh_parameter_encryption (Transact-sql)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -45,9 +47,9 @@ sys.sp_refresh_parameter_encryption [ @name = ] 'module_name'
 
 ## <a name="arguments"></a>인수
 
-`[ @name = ] 'module_name'`저장 프로시저, 사용자 정의 함수, 뷰, DML 트리거, 데이터베이스 수준 DDL 트리거 또는 서버 수준 DDL 트리거의 이름입니다. *module_name* 은 clr (공용 언어 런타임) 저장 프로시저 또는 clr 함수가 될 수 없습니다. *module_name* 은 스키마 바인딩될 수 없습니다. *module_name* 는 이며 `nvarchar` 기본값은 없습니다. *module_name* 은 여러 부분으로 구성 된 식별자가 될 수 있지만 현재 데이터베이스의 개체만 참조할 수 있습니다.
+`[ @name = ] 'module_name'` 저장 프로시저, 사용자 정의 함수, 뷰, DML 트리거, 데이터베이스 수준 DDL 트리거 또는 서버 수준 DDL 트리거의 이름입니다. *module_name* 은 clr (공용 언어 런타임) 저장 프로시저 또는 clr 함수가 될 수 없습니다. *module_name* 은 스키마 바인딩될 수 없습니다. *module_name* 는 이며 `nvarchar` 기본값은 없습니다. *module_name* 은 여러 부분으로 구성 된 식별자가 될 수 있지만 현재 데이터베이스의 개체만 참조할 수 있습니다.
 
-`[ @namespace = ] ' < class > '`는 지정 된 모듈의 클래스입니다. *MODULE_NAME* DDL 트리거 인 경우 `<class>` 가 필요 합니다. `<class>`는 `nvarchar(20)` 입니다. 유효한 입력은 `DATABASE_DDL_TRIGGER` 및 `SERVER_DDL_TRIGGER` 입니다.    
+`[ @namespace = ] ' < class > '` 는 지정 된 모듈의 클래스입니다. *MODULE_NAME* DDL 트리거 인 경우 `<class>` 가 필요 합니다. `<class>`이(가) `nvarchar(20)`인 경우 유효한 입력은 `DATABASE_DDL_TRIGGER` 및 `SERVER_DDL_TRIGGER` 입니다.    
 
 ## <a name="return-code-values"></a>반환 코드 값  
 
@@ -62,14 +64,14 @@ sys.sp_refresh_parameter_encryption [ @name = ] 'module_name'
 
 테이블의 암호화 속성이 수정 된 경우에는 `sp_refresh_parameter_encryption` 테이블을 직접 또는 간접적으로 참조 하는 모든 모듈에 대해를 실행 해야 합니다. 이 저장 프로시저는 사용자가 호출자로 이동 하기 전에 먼저 내부 모듈을 새로 고치지 않아도 모든 순서로 해당 모듈에서 호출 될 수 있습니다.
 
-`sp_refresh_parameter_encryption`는 개체와 연결 된 사용 권한, 확장 속성 또는 옵션에는 영향을 주지 않습니다 `SET` . 
+`sp_refresh_parameter_encryption` 는 개체와 연결 된 사용 권한, 확장 속성 또는 옵션에는 영향을 주지 않습니다 `SET` . 
 
 서버 수준 DDL 트리거를 새로 고치려면 아무 데이터베이스 컨텍스트에서 이 저장 프로시저를 실행하세요.
 
 > [!NOTE]
 >  을 실행 하면 개체와 연결 된 모든 서명이 삭제 됩니다 `sp_refresh_parameter_encryption` .
 
-## <a name="permissions"></a>권한
+## <a name="permissions"></a>사용 권한
 
 `ALTER`모듈에 대 한 권한과 `REFERENCES` 개체에서 참조 하는 모든 CLR 사용자 정의 형식 및 XML 스키마 컬렉션에 대 한 사용 권한이 필요 합니다.   
 
@@ -79,7 +81,7 @@ sys.sp_refresh_parameter_encryption [ @name = ] 'module_name'
 
 절로 정의 된 모듈의 경우 `EXECUTE AS` `IMPERSONATE` 지정 된 보안 주체에 대 한 권한이 필요 합니다. 일반적으로를 사용 하 여 모듈을 정의 하지 않으면 개체를 새로 고치면 해당 보안 주체가 변경 되지 않으며 `EXECUTE AS` , `EXECUTE AS USER` 보안 주체의 사용자 이름이 모듈이 생성 될 때와 다른 사용자로 확인 됩니다.
  
-## <a name="examples"></a>예
+## <a name="examples"></a>예제
 
 다음 예에서는 테이블 및 테이블을 참조 하는 프로시저를 만들고 Always Encrypted 구성한 다음 테이블을 변경 하 고 프로시저를 실행 하는 방법을 보여 줍니다 `sp_refresh_parameter_encryption` .  
 

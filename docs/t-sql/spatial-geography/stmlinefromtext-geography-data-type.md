@@ -1,4 +1,5 @@
 ---
+description: STMLineFromText(geography 데이터 형식)
 title: STMLineFromText(geography 데이터 형식) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/30/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 66dfd722-a9bd-45d3-9788-f1946dd23e17
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 38f600215710efc1886e93a8eb4941f6996f195e
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: e4d58095c8db69a84562d13a30be317a06948ed4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86556076"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445180"
 ---
 # <a name="stmlinefromtext-geography-data-type"></a>STMLineFromText(geography 데이터 형식)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

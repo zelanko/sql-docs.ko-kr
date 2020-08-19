@@ -1,4 +1,5 @@
 ---
+description: Field (#import를 사용 하는 Visual C++ 구문 인덱스)
 title: Field (#import를 사용 하는 Visual C++ 구문 인덱스) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 90cb636a-9416-48a4-b4eb-bb11bbd40950
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 13e2c57f4e00b4a4dae03a11ee357dd8f1d6398e
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: c73bc04ebb334927ec7247afa1e38a598e9dc76e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758779"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443755"
 ---
 # <a name="field-visual-c-syntax-index-with-import"></a>Field (#import를 사용 하는 Visual C++ 구문 인덱스)
 ## <a name="methods"></a>메서드  

@@ -1,4 +1,5 @@
 ---
+description: sp_table_validation(Transact-SQL)
 title: sp_table_validation (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2016
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 31b25f9b-9b62-496e-a97e-441d5fd6e767
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 37e03d7552f1297fe4410d68e69bdc15ddeb47ed
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: 32d347fe40af8f2617f47291d749ef039b0838b3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442420"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446735"
 ---
 # <a name="sp_table_validation-transact-sql"></a>sp_table_validation(Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -45,13 +46,13 @@ sp_table_validation [ @table = ] 'table'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @table = ] 'table'`테이블의 이름입니다. *테이블* 은 **sysname**이며 기본값은 없습니다.  
+`[ @table = ] 'table'` 테이블의 이름입니다. *테이블* 은 **sysname**이며 기본값은 없습니다.  
   
-`[ @expected_rowcount = ] expected_rowcountOUTPUT`테이블의 예상 행 수를 반환할지 여부를 지정 합니다. *expected_rowcount* 은 **int**이며 기본값은 NULL입니다. NULL인 경우, 실제 행 개수가 출력 매개 변수로 반환됩니다. 값을 제공한 경우에는 해당 값을 실제 행 개수와 비교하여 차이를 확인합니다.  
+`[ @expected_rowcount = ] expected_rowcountOUTPUT` 테이블의 예상 행 수를 반환할지 여부를 지정 합니다. *expected_rowcount* 은 **int**이며 기본값은 NULL입니다. NULL인 경우, 실제 행 개수가 출력 매개 변수로 반환됩니다. 값을 제공한 경우에는 해당 값을 실제 행 개수와 비교하여 차이를 확인합니다.  
   
-`[ @expected_checksum = ] expected_checksumOUTPUT`테이블에 대해 예상 되는 체크섬을 반환할지 여부를 지정 합니다. *expected_checksum* 은 **숫자**이며 기본값은 NULL입니다. NULL인 경우, 실제 체크섬이 출력 매개 변수로 반환됩니다. 값을 제공한 경우에는 해당 값을 실제 체크섬과 비교하여 차이를 확인합니다.  
+`[ @expected_checksum = ] expected_checksumOUTPUT` 테이블에 대해 예상 되는 체크섬을 반환할지 여부를 지정 합니다. *expected_checksum* 은 **숫자**이며 기본값은 NULL입니다. NULL인 경우, 실제 체크섬이 출력 매개 변수로 반환됩니다. 값을 제공한 경우에는 해당 값을 실제 체크섬과 비교하여 차이를 확인합니다.  
   
-`[ @rowcount_only = ] type_of_check_requested`수행할 체크섬 또는 행 개수 유형을 지정 합니다. *type_of_check_requested* 은 **smallint**이며 기본값은 **1**입니다.  
+`[ @rowcount_only = ] type_of_check_requested` 수행할 체크섬 또는 행 개수 유형을 지정 합니다. *type_of_check_requested* 은 **smallint**이며 기본값은 **1**입니다.  
   
  **0**인 경우 rowcount 및 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 호환 체크섬을 수행 합니다.  
   
@@ -59,21 +60,21 @@ sp_table_validation [ @table = ] 'table'
   
  **2**인 경우 행 개수와 이진 체크섬을 수행 합니다.  
   
-`[ @owner = ] 'owner'`테이블 소유자의 이름입니다. *owner* 는 **sysname**이며 기본값은 NULL입니다.  
+`[ @owner = ] 'owner'` 테이블 소유자의 이름입니다. *owner* 는 **sysname**이며 기본값은 NULL입니다.  
   
-`[ @full_or_fast = ] full_or_fast`행 개수를 계산 하는 데 사용 되는 방법입니다. *full_or_fast* 은 **tinyint**이며 기본값은 **2**이 고 다음 값 중 하나일 수 있습니다.  
+`[ @full_or_fast = ] full_or_fast` 행 개수를 계산 하는 데 사용 되는 방법입니다. *full_or_fast* 은 **tinyint**이며 기본값은 **2**이 고 다음 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**0**|COUNT(*)를 사용하여 전체 개수를 계산합니다.|  
 |**1**|는 **sysindexes 행**에서 빠르게 계산 합니다. **Sysindexes** 에서 행을 계산 하는 것은 실제 테이블의 행 수를 계산 하는 것 보다 훨씬 빠릅니다. 그러나 **sysindexes** 는 지연 업데이트 되므로 행 개수가 정확 하지 않을 수 있습니다.|  
 |**2** (기본값)|먼저 빠른 방법을 시도함으로써 조건부로 빠른 계산 방법을 수행합니다. 빠른 방법의 결과에 차이점이 있는 경우 전체 방법으로 전환합니다. *Expected_rowcount* 가 NULL이 고 저장 프로시저를 사용 하 여 값을 가져오는 경우에는 항상 전체 개수 (*)가 사용 됩니다.|  
   
-`[ @shutdown_agent = ] shutdown_agent`배포 에이전트에서 **sp_table_validation**를 실행 하는 경우 배포 에이전트 유효성 검사가 완료 되 면 즉시 종료 해야 하는지 여부를 지정 합니다. *shutdown_agent* 은 **bit**이며 기본값은 **0**입니다. **0**인 경우 복제 에이전트가 종료 되지 않습니다. **1**인 경우 오류 20578가 발생 하 고 복제 에이전트가 종료 될 수 있습니다. 사용자가 **sp_table_validation** 를 직접 실행 하는 경우이 매개 변수는 무시 됩니다.  
+`[ @shutdown_agent = ] shutdown_agent` 배포 에이전트에서 **sp_table_validation**를 실행 하는 경우 배포 에이전트 유효성 검사가 완료 되 면 즉시 종료 해야 하는지 여부를 지정 합니다. *shutdown_agent* 은 **bit**이며 기본값은 **0**입니다. **0**인 경우 복제 에이전트가 종료 되지 않습니다. **1**인 경우 오류 20578가 발생 하 고 복제 에이전트가 종료 될 수 있습니다. 사용자가 **sp_table_validation** 를 직접 실행 하는 경우이 매개 변수는 무시 됩니다.  
   
-`[ @table_name = ] table_name`출력 메시지에 사용 되는 뷰의 테이블 이름입니다. *table_name* 는 **sysname**이며 기본값은 ** \@ table**입니다.  
+`[ @table_name = ] table_name` 출력 메시지에 사용 되는 뷰의 테이블 이름입니다. *table_name* 는 **sysname**이며 기본값은 ** \@ table**입니다.  
   
-`[ @column_list = ] 'column_list'`Checksum 함수에서 사용 해야 하는 열 목록입니다. *column_list* 은 **nvarchar (4000)** 이며 기본값은 NULL입니다. 계산 열 및 타임스탬프 열을 제외한 열 목록을 지정하려면 병합 아티클의 유효성 검사를 사용할 수 있도록 설정하십시오.  
+`[ @column_list = ] 'column_list'` Checksum 함수에서 사용 해야 하는 열 목록입니다. *column_list* 은 **nvarchar (4000)** 이며 기본값은 NULL입니다. 계산 열 및 타임스탬프 열을 제외한 열 목록을 지정하려면 병합 아티클의 유효성 검사를 사용할 수 있도록 설정하십시오.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  체크섬 유효성 검사를 수행 하는 경우 예상 체크섬이 테이블의 체크섬과 같으면 테이블에서 체크섬 유효성 검사를 통과 한 메시지를 **sp_table_validation** 반환 합니다. 그렇지 않은 경우에는 테이블이 동기화되지 않았다는 메시지를 반환하며 예상 행 개수 및 실제 행 개수의 차이를 보고합니다.  
@@ -92,7 +93,7 @@ sp_table_validation [ @table = ] 'table'
 ## <a name="permissions"></a>사용 권한  
  **Sp_table_validation**를 실행 하려면 유효성 검사 중인 테이블에 대 한 SELECT 권한이 있어야 합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [CHECKSUM &#40;Transact-sql&#41;](../../t-sql/functions/checksum-transact-sql.md)   
  [@@ROWCOUNT&#40;Transact-SQL&#41;](../../t-sql/functions/rowcount-transact-sql.md)   
  [Transact-sql&#41;sp_article_validation &#40;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)   

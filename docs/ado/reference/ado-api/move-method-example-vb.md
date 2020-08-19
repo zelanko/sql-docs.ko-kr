@@ -1,4 +1,5 @@
 ---
+description: Move 메서드 예제(VB)
 title: Move 메서드 예제 (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 55eb797a-0205-40d2-a797-55b216d1d3bb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 37befcf2e00ad4b3555e114a2c7584ae31e6ca64
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: ab6ea1b3a3b8f4d8ffa125bbc37a5e61dc7e1f96
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762494"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443235"
 ---
 # <a name="move-method-example-vb"></a>Move 메서드 예제(VB)
 이 예제에서는 [Move](../../../ado/reference/ado-api/move-method-ado.md) 메서드를 사용 하 여 사용자 입력을 기준으로 레코드 포인터를 배치 합니다.  

@@ -1,4 +1,5 @@
 ---
+description: dbo.sysproxies(Transact-SQL)
 title: dbo.sys프록시 (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: a73da875-be22-45fc-b5e2-ea7ebd48e2d6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f4bcebbdb3926b6444f647f57b3a82c1f9dcb622
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 40ffbc10351cf4ca0cccc54e810a358da9a3e9f2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890465"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446625"
 ---
 # <a name="dbosysproxies-transact-sql"></a>dbo.sysproxies(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +38,7 @@ ms.locfileid: "85890465"
 |**name**|**sysname**|프록시 계정의 이름입니다.|  
 |**credential_id**|**int**|프록시 계정이 사용하는 자격 증명의 ID입니다.|  
 |**사용**|**tinyint**|프록시 계정의 상태입니다.<br /><br /> **0** = 사용 안 함 **1** = 사용|  
-|**한**|**nvarchar(512)**|프록시 계정을 만들 때 사용자가 입력한 설명입니다.|  
+|**description**|**nvarchar(512)**|프록시 계정을 만들 때 사용자가 입력한 설명입니다.|  
 |**user_sid**|**varbinary(85)**|프록시 자격 증명과 연결 된 사용자 또는 그룹의 Microsoft Windows *security_identifier* 입니다.|  
 |**credential_date_created**|**datetime**|자격 증명을 작성한 날짜와 시간입니다.|  
   

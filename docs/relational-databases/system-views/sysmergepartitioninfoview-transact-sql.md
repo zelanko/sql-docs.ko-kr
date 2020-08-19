@@ -1,4 +1,5 @@
 ---
+description: sysmergepartitioninfoview(Transact-SQL)
 title: sysmergepartitioninfoview (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 714e2935-1bc7-4901-aea2-64b1bbda03d6
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 4b48506662283ab71516affa7665a6b0c0af9d3c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c194b2442762f2ec9373cc730cbc4835bce45983
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881241"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446523"
 ---
 # <a name="sysmergepartitioninfoview-transact-sql"></a>sysmergepartitioninfoview(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +38,7 @@ ms.locfileid: "85881241"
 |**sync_objid**|**int**|동기화된 데이터 집합을 표시하는 뷰의 개체 ID입니다.|  
 |**view_type**|**tinyint**|뷰의 유형:<br /><br /> **0** = 뷰가 아닙니다. 모든 기본 개체를 사용 합니다.<br /><br /> **1** = 영구 뷰입니다.<br /><br /> **2** = 임시 뷰|  
 |**artid**|**uniqueidentifier**|지정된 아티클의 고유한 ID입니다.|  
-|**한**|**nvarchar(255)**|아티클에 대한 간단한 설명입니다.|  
+|**description**|**nvarchar(255)**|아티클에 대한 간단한 설명입니다.|  
 |**pre_creation_command**|**tinyint**|아티클이 구독 데이터베이스에서 생성될 때 수행할 기본 동작입니다.<br /><br /> **0** = None-구독자에 테이블이 이미 있는 경우 아무 동작도 수행 되지 않습니다.<br /><br /> **1** = Drop-테이블을 다시 만들기 전에 삭제 합니다.<br /><br /> **2** = delete-하위 집합 필터의 where 절을 기반으로 삭제를 실행 합니다.<br /><br /> **3** = Truncate-2와 동일 하지만 행 대신 페이지를 삭제 합니다. 단, WHERE 절은 사용하지 않습니다.|  
 |**pubid**|**uniqueidentifier**|현재 아티클이 속한 게시의 ID입니다.|  
 |**애칭**|**int**|아티클 ID에 대한 애칭 매핑입니다.|  
@@ -106,10 +107,10 @@ ms.locfileid: "85881241"
 |**partition_options**|**tinyint**|아티클의 데이터 분할 방식을 정의합니다. 데이터를 분할하면 모든 행이 하나의 파티션 또는 하나의 구독에만 속한 경우 성능을 최적화할 수 있습니다. *Partition_options* 는 다음 값 중 하나일 수 있습니다.<br /><br /> **0** = 아티클에 대 한 필터링이 정적 이거나 각 파티션에 대 한 고유한 데이터 하위 집합을 생성 하지 않습니다. 즉, "겹치는" 파티션입니다.<br /><br /> **1** = 파티션이 중복 되며 구독자에서 DML 업데이트를 수행 하면 행이 속한 파티션이 변경 되지 않습니다.<br /><br /> **2** = 아티클을 필터링 하면 겹치지 않는 파티션이 생성 되지만 여러 구독자가 동일한 파티션을 받을 수 있습니다.<br /><br /> **3** = 아티클에 대 한 필터링은 각 구독에 고유한 겹치지 않는 파티션을 생성 합니다.|  
 |**name**|**sysname**|파티션의 이름입니다.|  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [매개 변수가 있는 필터를 사용 하 여 병합 게시에 대 한 파티션 관리](../../relational-databases/replication/publish/manage-partitions-for-a-merge-publication-with-parameterized-filters.md)   
- [Transact-sql&#41;&#40;복제 테이블](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Transact-sql&#41;&#40;복제 뷰](../../relational-databases/system-views/replication-views-transact-sql.md)   
+ [Transact-sql&#41;&#40;복제 테이블 ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Transact-sql&#41;&#40;복제 뷰 ](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [Transact-sql&#41;sp_addmergepartition &#40;](../../relational-databases/system-stored-procedures/sp-addmergepartition-transact-sql.md)   
  [Transact-sql&#41;sp_helpmergepartition &#40;](../../relational-databases/system-stored-procedures/sp-helpmergepartition-transact-sql.md)  
   

@@ -1,4 +1,5 @@
 ---
+description: SetCurrentCertificate 메서드(SInstance 클래스)
 title: SetCurrentCertificate 메서드 (SInstance)
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7349fb87-b973-4160-a2be-cab73abf5b31
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b28c8e5091aaaa0c0387e9cfdd8723dae5ddc908
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 3640d05ceee5c6cbc540cf054e00f027620a5748
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888506"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446494"
 ---
 # <a name="setcurrentcertificate-method-sinstance-class"></a>SetCurrentCertificate 메서드(SInstance 클래스)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +44,7 @@ object.SetCurrentCertificate(SHA)
   
 |매개 변수|설명|  
 |---------------|-----------------|  
-|*S*|현재 보안 인증서를 지정하는 문자열 값입니다.|  
+|*SHA*|현재 보안 인증서를 지정하는 문자열 값입니다.|  
   
 ## <a name="property-valuereturn-value"></a>속성 값/반환 값  
  **uint32** 값으로, 0은 서비스가 수정되었음을 나타내고 1은 요청이 지원되지 않음을 나타내며 다른 모든 숫자는 오류를 나타냅니다.  

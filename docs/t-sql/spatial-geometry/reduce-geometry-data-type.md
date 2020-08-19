@@ -1,4 +1,5 @@
 ---
+description: Reduce(geometry 데이터 형식)
 title: Reduce(geometry 데이터 형식) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 132184bf-c4d2-4a27-900d-8373445dce2a
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 16ac1ced9d2bfbfa8de4b2c8cc577aeb83d15be0
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 704df574cc67a4321faea90795b248adb2859123
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554705"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445098"
 ---
 # <a name="reduce-geometry-data-type"></a>Reduce(geometry 데이터 형식)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -60,7 +61,7 @@ ms.locfileid: "86554705"
   
  원호 세그먼트가 발견되면 근사값 알고리즘이 지정된 허용 오차 절반 이내에서 해당 현으로 어림할 수 있는지 여부를 확인합니다. 이 조건을 충족하는 현은 계산에서 원호가 현으로 바뀝니다. 현이 이 조건을 충족하지 못하면 원호가 유지되고 근사값 알고리즘이 나머지 세그먼트에 적용됩니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-using-reduce-to-simplify-a-linestring"></a>A. Reduce()를 사용하여 LineString 단순화  
  다음 예에서는 `LineString` 인스턴스를 만들고 `Reduce()`를 사용하여 인스턴스를 단순화합니다.  
@@ -81,7 +82,7 @@ SELECT @g.Reduce(.75).ToString();
  SELECT @g.Reduce(16).ToString();
  ```  
   
- 이 예에서 생성되는 출력은 다음과 같습니다.  
+ 이 예제는 다음과 같은 출력을 생성합니다.  
   
  ```
  CIRCULARSTRING (0 0, 8 8, 16 0, 20 -4, 24 0) 

@@ -1,4 +1,5 @@
 ---
+description: FieldEnum
 title: FieldEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: be4eda13-d4e4-4d6b-bb0d-3310b0a96fc2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 24d69ac1406363458c8dbd3168e6d25309cfa2c4
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: b562d480cfbebefdee82703e0c953854de07d064
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762574"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443745"
 ---
 # <a name="fieldenum"></a>FieldEnum
 [Record](../../../ado/reference/ado-api/record-object-ado.md) 개체의 [fields](../../../ado/reference/ado-api/fields-collection-ado.md) 컬렉션에서 참조 되는 특수 필드를 지정 합니다.  

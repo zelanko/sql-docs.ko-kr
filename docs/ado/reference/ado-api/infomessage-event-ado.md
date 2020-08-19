@@ -1,4 +1,5 @@
 ---
+description: InfoMessage 이벤트(ADO)
 title: InfoMessage 이벤트 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 468c87dd-e3bc-4084-9941-94d10743d4e9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c5fc0adfec791294bb6c680dab94078b8a63ec07
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: d3957c6cf6843ba27c54fb5a979901bd4a656c2e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758689"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443455"
 ---
 # <a name="infomessage-event-ado"></a>InfoMessage 이벤트(ADO)
 **InfoMessage** 이벤트는 **connectionevent** 작업 중에 경고가 발생할 때마다 호출 됩니다.  

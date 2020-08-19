@@ -1,4 +1,5 @@
 ---
+description: NCHAR(Transact-SQL)
 title: NCHAR(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2017
@@ -19,12 +20,12 @@ ms.assetid: 68cefc68-7c4f-4326-80c1-300f90cf19db
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dcd53208afaa16fdab638b854773163a6353bc05
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: c6964acd1127db3bcdb25d551116865073e43974
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111470"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445726"
 ---
 # <a name="nchar-transact-sql"></a>NCHAR(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -48,9 +49,9 @@ NCHAR ( integer_expression )
  데이터베이스의 데이터 정렬이 SC 플래그를 지원하는 경우 이 인수는 1에서 1114111(0~0x10FFFF) 사이의 양의 정수입니다. 이 범위 밖의 값을 지정한 경우 NULL이 반환됩니다.  
   
 ## <a name="return-types"></a>반환 형식  
- **nchar(1)** : 기본 데이터베이스 데이터 정렬이 보조 문자를 지원하지 않는 경우  
+ **nchar(1)**: 기본 데이터베이스 데이터 정렬이 보조 문자를 지원하지 않는 경우  
   
- **nvarchar(2)** : 기본 데이터베이스 데이터 정렬이 보조 문자를 지원하는 경우  
+ **nvarchar(2)**: 기본 데이터베이스 데이터 정렬이 보조 문자를 지원하는 경우  
   
  *integer_expression* 매개 변수가 0 - 0xFFFF 범위에 있을 경우 한 문자만 반환됩니다. 값이 더 높을 경우 NCHAR가 해당 서로게이트 쌍을 반환합니다. `NCHAR(<High surrogate>) + NCHAR(\<Low Surrogate>)`를 사용하여 서로게이트 쌍을 생성하지 마세요. 대신 보조 문자를 지원하는 데이터베이스 데이터 정렬을 사용한 다음 서로게이트 쌍에 대한 유니코드 코드 포인트를 지정합니다. 다음 예에서는 서로게이트 쌍을 생성하는 이전 스타일의 방법과 유니코드 코드 포인트를 지정하는 기본 방법을 모두 보여 줍니다.  
   
@@ -67,7 +68,7 @@ SELECT NCHAR(143743);
 SELECT NCHAR(UNICODE(@d));    
 ```  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-using-nchar-and-unicode"></a>A. NCHAR 및 UNICODE 사용  
  다음 예에서는 `UNICODE` 및 `NCHAR` 함수를 사용하여 `UNICODE` 문자열에 있는 두 번째 문자의 `NCHAR` 값과 `København`(유니코드 문자)를 인쇄하고 실제 두 번째 문자인 `ø`를 인쇄합니다.  

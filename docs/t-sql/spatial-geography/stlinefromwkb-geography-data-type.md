@@ -1,4 +1,5 @@
 ---
+description: STLineFromWKB(geography 데이터 형식)
 title: STLineFromWKB(geography 데이터 형식) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/30/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8ac2b772-6673-4ba1-a7ab-3b4b5841560b
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: a11b2e6c50e452d56001591d297922f6e2a65ca0
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: e90b8b95cfeee90bc6e582dc5a587d49ca313d40
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86556091"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445223"
 ---
 # <a name="stlinefromwkb-geography-data-type"></a>STLineFromWKB(geography 데이터 형식)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

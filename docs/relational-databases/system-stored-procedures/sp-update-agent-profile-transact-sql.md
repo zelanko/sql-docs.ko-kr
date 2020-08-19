@@ -1,4 +1,5 @@
 ---
+description: sp_update_agent_profile(Transact-SQL)
 title: sp_update_agent_profile (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: cc81f227-0df3-4151-bb4d-4f45ea997b71
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a529df241a5d827c277f3a39110ae04697a13e17
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 4695c5fdf07748937fdd1380170626e21942fd11
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891391"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446700"
 ---
 # <a name="sp_update_agent_profile-transact-sql"></a>sp_update_agent_profile(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +38,7 @@ sp_update_agent_profile [@agent_type=] agent_type, [ @agent_id= ] agent_id, [ @p
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @agent_type = ] 'agent_type'`에이전트의 유형입니다. *agent_type* 은 **int**이며 기본값은 없고 다음 값 중 하나일 수 있습니다.  
+`[ @agent_type = ] 'agent_type'` 에이전트의 유형입니다. *agent_type* 은 **int**이며 기본값은 없고 다음 값 중 하나일 수 있습니다.  
   
 |값|Description|  
 |-----------|-----------------|  
@@ -47,9 +48,9 @@ sp_update_agent_profile [@agent_type=] agent_type, [ @agent_id= ] agent_id, [ @p
 |**4**|병합 에이전트입니다.|  
 |**9**|큐 판독기 에이전트입니다.|  
   
-`[ @agent_id = ] 'agent_id'`에이전트의 ID입니다. *agent_id* 는 **int**이며 기본값은 없습니다.  
+`[ @agent_id = ] 'agent_id'` 에이전트의 ID입니다. *agent_id* 는 **int**이며 기본값은 없습니다.  
   
-`[ @profile_id = ] 'profile_id'`에이전트가 사용 해야 하는 프로필의 ID입니다. *profile_id* 는 **int**이며 기본값은 없습니다. 각 에이전트에 대해 정의 된 프로필 목록을 보려면 [transact-sql&#41;&#40;sp_help_agent_profile ](../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md)을 사용 합니다. 시스템 프로필에 대 한 자세한 내용은 [Replication Agent profiles](../../relational-databases/replication/agents/replication-agent-profiles.md)을 참조 하십시오.  
+`[ @profile_id = ] 'profile_id'` 에이전트가 사용 해야 하는 프로필의 ID입니다. *profile_id* 는 **int**이며 기본값은 없습니다. 각 에이전트에 대해 정의 된 프로필 목록을 보려면 [transact-sql&#41;&#40;sp_help_agent_profile ](../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md)을 사용 합니다. 시스템 프로필에 대 한 자세한 내용은 [Replication Agent profiles](../../relational-databases/replication/agents/replication-agent-profiles.md)을 참조 하십시오.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

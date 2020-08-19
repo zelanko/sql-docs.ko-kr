@@ -1,4 +1,5 @@
 ---
+description: RECONFIGURE(Transact-SQL)
 title: RECONFIGURE(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/20/2016
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 2e6e4eeb-b70b-4f45-a253-28ac4e595d75
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 44ccb855d3a9a4d545d2c882b1d3ff7b788419d2
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: bab30e48ce9b9452ab3e8c28ad409df30a6516aa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915623"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445475"
 ---
 # <a name="reconfigure-transact-sql"></a>RECONFIGURE(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -64,7 +65,7 @@ RECONFIGURE [ WITH OVERRIDE ]
 ## <a name="permissions"></a>사용 권한    
  RECONFIGURE 권한은 기본적으로 ALTER SETTINGS 권한의 피부여자로 설정됩니다. **sysadmin** 및 **serveradmin** 고정 서버 역할이 암시적으로 이 권한을 보유합니다.    
     
-## <a name="examples"></a>예    
+## <a name="examples"></a>예제    
  다음 예에서는 `recovery interval` 구성 옵션에 대한 상한값을 `75`분으로 설정하며 `RECONFIGURE WITH OVERRIDE`를 사용하여 설치합니다. 60분보다 긴 복구 간격은 권장되지 않으며 기본적으로 사용할 수 없습니다. 그러나 `WITH OVERRIDE` 옵션을 지정했기 때문에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 지정한 값(`75`)이 `recovery interval` 구성 옵션에 유효한 값인지 여부를 확인하지 않습니다.    
     
 ```    

@@ -1,4 +1,5 @@
 ---
+description: sp_reinitmergesubscription(Transact-SQL)
 title: sp_reinitmergesubscription (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 249a4048-e885-48e0-a92a-6577f59de751
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fbdcd6435b9fab8e65c39b97a6aaa1ac69a1e9dc
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8712640a1f5f1b2dd53e49d09610dd30b192b4cb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901403"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446856"
 ---
 # <a name="sp_reinitmergesubscription-transact-sql"></a>sp_reinitmergesubscription(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,13 +41,13 @@ sp_reinitmergesubscription [ [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @publication = ] 'publication'`게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 **all**입니다.  
+`[ @publication = ] 'publication'` 게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 **all**입니다.  
   
-`[ @subscriber = ] 'subscriber'`구독자의 이름입니다. *구독자* 는 **sysname**이며 기본값은 **all**입니다.  
+`[ @subscriber = ] 'subscriber'` 구독자의 이름입니다. *구독자* 는 **sysname**이며 기본값은 **all**입니다.  
   
-`[ @subscriber_db = ] 'subscriber_db'`구독자 데이터베이스의 이름입니다. *subscriber_db* 는 **sysname**이며 기본값은 **all**입니다.  
+`[ @subscriber_db = ] 'subscriber_db'` 구독자 데이터베이스의 이름입니다. *subscriber_db* 는 **sysname**이며 기본값은 **all**입니다.  
   
-`[ @upload_first = ] 'upload_first'`구독을 다시 초기화 하기 전에 구독자에서 변경 내용을 업로드 하는지 여부입니다. *upload_first* 은 **nvarchar (5)** 이며 기본값은 FALSE입니다. **True**이면 구독을 다시 초기화 하기 전에 변경 내용이 업로드 됩니다. **False**이면 변경 내용이 업로드 되지 않습니다.  
+`[ @upload_first = ] 'upload_first'` 구독을 다시 초기화 하기 전에 구독자에서 변경 내용을 업로드 하는지 여부입니다. *upload_first* 은 **nvarchar (5)** 이며 기본값은 FALSE입니다. **True**이면 구독을 다시 초기화 하기 전에 변경 내용이 업로드 됩니다. **False**이면 변경 내용이 업로드 되지 않습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

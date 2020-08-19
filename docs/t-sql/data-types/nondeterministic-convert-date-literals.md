@@ -1,4 +1,5 @@
 ---
+description: 날짜 값으로 리터럴 날짜 문자열의 비결정적 변환
 title: 날짜 리터럴의 비결정적 변환 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/19/2018
@@ -12,12 +13,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: eba0e28d8f2d5587a07308a4ffcbf5f7eaedf278
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4c1d50cc58995479aa61b4c62639f9d13de6f400
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68119847"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445871"
 ---
 # <a name="nondeterministic-conversion-of-literal-date-strings-into-date-values"></a>날짜 값으로 리터럴 날짜 문자열의 비결정적 변환
 
@@ -134,7 +135,7 @@ SQL Server 2000에서는 호환성 수준이 80이었습니다. 80 이하의 수
 
 SQL Server 2005 및 90의 호환성 수준부터 암시적 데이터 변환은 비결정적이 되었습니다. 날짜 변환은 SET LANGUAGE 및 수준 90으로 시작하는 SET DATEFORMAT에 따라 달라지게 되었습니다.
 
-#### <a name="unicode"></a>Unicode
+#### <a name="unicode"></a>유니코드(Unicode)
 
 <!-- The next live sentence needs an explanatory example!  N'somethingHere?'.
 -->

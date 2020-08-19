@@ -1,4 +1,5 @@
 ---
+description: FIRST_VALUE(Transact-SQL)
 title: FIRST_VALUE(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/10/2016
@@ -19,12 +20,12 @@ ms.assetid: 1990c3c7-dad2-48db-b2cd-3e8bd2c49d17
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5299ca65f1e47a76d7fa525b7210747be431d7c4
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 87c0804ba925600aabe2ac0487befd8cf5bf9363
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396970"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445785"
 ---
 # <a name="first_value-transact-sql"></a>FIRST_VALUE(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -56,7 +57,7 @@ FIRST_VALUE ( [scalar_expression ] )
 ## <a name="general-remarks"></a>일반적인 주의 사항  
  FIRST_VALUE는 비결정적입니다. 자세한 내용은 [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)을 참조하세요.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-using-first_value-over-a-query-result-set"></a>A. 쿼리 결과 집합에 FIRST_VALUE 사용  
  다음 예에서는 FIRST_VALUE를 사용하여 지정된 제품 범주에서 가격이 가장 저렴한 제품의 이름을 반환합니다.  

@@ -1,4 +1,5 @@
 ---
+description: 테이블에서 열 삭제
 title: 테이블에서 열 삭제 | Microsoft 문서
 ms.custom: ''
 ms.date: 04/11/2017
@@ -16,12 +17,12 @@ ms.assetid: 0d8f6e4f-bc71-4fa3-8615-74249c8e072d
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cdfb2aa26ccc46d7aca0b7b0a599552401f79741
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 2ad600234ac931f408cdf60ba5b2a855823f8151
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396555"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446459"
 ---
 # <a name="delete-columns-from-a-table"></a>테이블에서 열 삭제
 

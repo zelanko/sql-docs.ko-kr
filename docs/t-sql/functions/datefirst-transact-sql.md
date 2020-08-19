@@ -1,4 +1,5 @@
 ---
+description: '&#x40;&#x40;DATEFIRST(Transact-SQL)'
 title: '@@DATEFIRST(Transact-SQL) | Microsoft Docs'
 ms.custom: ''
 ms.date: 09/18/2017
@@ -32,12 +33,12 @@ ms.assetid: a178868e-49d5-4bd5-a5e2-1283409c8ce6
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 440a97921bc4a5f375158bcc9c1f0e1ac565ebb2
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 5851ae364665181ffe1db2abb2365499dc06272a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110598"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445842"
 ---
 # <a name="x40x40datefirst-transact-sql"></a>&#x40;&#x40;DATEFIRST(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -85,7 +86,7 @@ GO
 SELECT @@DATEFIRST;  
 ```  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
 이 예에서는 주의 시작 요일을 `5`(금요일)로 설정하고 현재 날짜인 `Today`를 토요일로 가정합니다. `SELECT` 문은 주의 현재 날짜의 `DATEFIRST` 값과 현재 날짜 번호를 반환합니다.
   
 ```sql

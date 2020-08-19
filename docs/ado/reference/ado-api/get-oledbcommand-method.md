@@ -1,4 +1,5 @@
 ---
+description: get_OLEDBCommand 메서드
 title: get_OLEDBCommand 메서드 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 23d551f5-3d5b-434b-ade6-fef15f1710e7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 043e432bfef39f90fbeb5b147487272c4d284bdb
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 562b10fa67b04926e512833248c99ecb7b55a1fd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760079"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443605"
 ---
 # <a name="get_oledbcommand-method"></a>get_OLEDBCommand 메서드
 먼저 ADO 명령에 설정 된 매개 변수 정보를 OLE DB 명령에 전파 하는 기본 OLE DB 명령을 반환 합니다.  

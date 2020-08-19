@@ -1,4 +1,5 @@
 ---
+description: STIsClosed(geography 데이터 형식)
 title: STIsClosed(geography 데이터 형식) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: eba1643f-07c4-4500-8643-b7e90f908147
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 06190fa6cc6a0377e49f423c50369a7ceb4b51d7
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 8c6643b37d421a5283cd8d44e3fadaf73ae69eab
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555790"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445222"
 ---
 # <a name="stisclosed-geography-data-type"></a>STIsClosed(geography 데이터 형식)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -52,7 +53,7 @@ ms.locfileid: "86555790"
   
  모든 **Polygon** 인스턴스는 닫혀 있다고 간주됩니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `Polygon` 인스턴스를 만들고 `STIsClosed()`를 사용하여 `Polygon`이 닫혀 있는지 테스트합니다.  
   
 ```  
@@ -62,6 +63,6 @@ SELECT @g.STIsClosed();
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [지리 인스턴스의 OGC 메서드](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
+ [Geography 인스턴스의 OGC 메서드](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

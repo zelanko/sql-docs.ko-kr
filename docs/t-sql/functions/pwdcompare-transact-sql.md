@@ -1,4 +1,5 @@
 ---
+description: PWDCOMPARE(Transact-SQL)
 title: PWDCOMPARE(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 5f84ff9e-c1ec-46aa-8501-50f854ebcc3a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ad59b8d81641999da674ca73db696c2f0c3ce1ef
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: c03a83ed2dbe499e9b65a07446c04f0f6466ce93
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111865"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445626"
 ---
 # <a name="pwdcompare-transact-sql"></a>PWDCOMPARE(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -46,13 +47,13 @@ PWDCOMPARE ( 'clear_text_password'
 
 ## <a name="arguments"></a>인수
  **'** *clear_text_password* **'**  
- 암호화되지 않은 암호입니다. *clear_text_password*는 **sysname**( **nvarchar(128)** )입니다.  
+ 암호화되지 않은 암호입니다. *clear_text_password*는 **sysname**(** nvarchar(128)**)입니다.  
   
  *password_hash*  
  암호의 암호화 해시입니다. *password_hash*는 **varbinary(128)** 입니다.  
   
  *version*  
- *password_hash*가 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 이상으로 마이그레이션되었지만 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 시스템으로 변환되지 않은 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 이전의 로그인 값을 나타내는 경우 1로 설정할 수 있으며 사용되지 않는 매개 변수입니다. *버전*은 **int**입니다.  
+ *password_hash*가 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상으로 마이그레이션되었지만 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 시스템으로 변환되지 않은 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 이전의 로그인 값을 나타내는 경우 1로 설정할 수 있으며 사용되지 않는 매개 변수입니다. *버전*은 **int**입니다.  
   
 > [!CAUTION]  
 >  이 매개 변수는 이전 버전과의 호환성을 위해 제공되지만 지금 암호 해시 BLOB이 해당 버전 설명을 포함하고 있으므로 무시됩니다. [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)]  
@@ -72,7 +73,7 @@ PWDCOMPARE ( 'clear_text_password'
   
  sys.sql_logins의 password_hash 열을 검사하려면 CONTROL SERVER 권한이 있어야 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-identifying-logins-that-have-no-passwords"></a>A. 암호가 없는 로그인 식별  
  다음 예에서는 암호가 없는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인을 식별합니다.  

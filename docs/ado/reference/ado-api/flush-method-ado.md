@@ -1,4 +1,5 @@
 ---
+description: Flush 메서드(ADO)
 title: Flush 메서드 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 938522b4-f836-4c80-8d27-a598a000f0ee
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c00f3c92d3d2bd3111201d6f1536884e3e9dceb5
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 67689683faa9d1c0f18049d5a55a83319a69fe4f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760089"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443615"
 ---
 # <a name="flush-method-ado"></a>Flush 메서드(ADO)
 ADO 버퍼에 남아 있는 [스트림의](../../../ado/reference/ado-api/stream-object-ado.md) 내용을 **스트림이** 연결 된 기본 개체에 강제로 적용 합니다.  

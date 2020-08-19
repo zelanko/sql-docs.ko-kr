@@ -1,4 +1,5 @@
 ---
+description: CONTEXT_INFO(Transact-SQL)
 title: CONTEXT_INFO(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2017
@@ -21,17 +22,17 @@ helpviewer_keywords:
 ms.assetid: 571320f5-7228-4b0e-9d01-ab732d2d1eab
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9b53dab8d51f251721b205b4da4171ca91188e97
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: c8b4f5b2fa72f6122f457f2b86ccfe7ec399e2bc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112521"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445883"
 ---
 # <a name="context_info--transact-sql"></a>CONTEXT_INFO(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-이 함수는 현재 세션 또는 일괄 처리에 대해 설정되거나 **SET CONTEXT_INFO** 문을 사용하여 파생된 [context_info](../../t-sql/statements/set-context-info-transact-sql.md) 값을 반환합니다.
+이 함수는 현재 세션 또는 일괄 처리에 대해 설정되거나 [SET CONTEXT_INFO](../../t-sql/statements/set-context-info-transact-sql.md) 문을 사용하여 파생된 **context_info** 값을 반환합니다.
   
 ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -59,7 +60,7 @@ MARS(Multiple Active Result Sets) 기능을 사용하면 애플리케이션이 �
 - **sys.dm_exec_sessions**
 - **sys.sysprocesses**
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
 이 간단한 예제에서는 **context_info** 값을 `0x1256698456`으로 설정한 다음, `CONTEXT_INFO` 함수를 사용하여 값을 검색합니다.
   
 ```sql

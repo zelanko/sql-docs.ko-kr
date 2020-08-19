@@ -1,4 +1,5 @@
 ---
+description: GetRows 메서드(ADO)
 title: GetRows 메서드 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 14b92860-4171-47d9-a413-dd60dd6a8880
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3e468e24506425d995320a8729272f87ac64943b
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 3a197cf085c4c1d741c19a55524313edbd4c5906
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760039"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443565"
 ---
 # <a name="getrows-method-ado"></a>GetRows 메서드(ADO)
 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체의 여러 레코드를 배열로 검색 합니다.  
@@ -40,7 +41,7 @@ array = recordset.GetRows(Rows, Start, Fields )
  *행*  
  (선택 사항) 검색할 레코드 수를 나타내는 [GetRowsOptionEnum](../../../ado/reference/ado-api/getrowsoptionenum.md) 값입니다. 기본값은 **adGetRowsRest**입니다.  
   
- *Start*  
+ *시작*  
  (선택 사항) **GetRows** 작업을 시작 해야 하는 레코드의 책갈피로 계산 되는 **문자열** 값 또는 **변형** 입니다. [책갈피 열거형](../../../ado/reference/ado-api/bookmarkenum.md) 값을 사용할 수도 있습니다.  
   
  *필드*  

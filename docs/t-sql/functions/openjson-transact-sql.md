@@ -1,4 +1,5 @@
 ---
+description: OPENJSON(Transact-SQL)
 title: OPENJSON(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/03/2020
@@ -17,12 +18,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: jroth
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: 27f83649fc0549854fa131bf1a859f0c20ebf65c
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 2f91b160ed5fc6dbab1c9d7ec225b479dc6b82d1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394798"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445672"
 ---
 # <a name="openjson-transact-sql"></a>OPENJSON(Transact-SQL)
 
@@ -64,8 +65,6 @@ OPENJSON( jsonExpression [ , path ] )  [ <with_clause> ]
 ![OPENJSON TVF의 WITH 절 구문](../../relational-databases/json/media/openjson-shema-syntax.png "OPENJSON WITH 구문")
 
 *with_clause*는 반환할 **OPENJSON**에 대한 열과 형식의 목록을 포함합니다. 기본적으로 **OPENJSON**은 *jsonExpression*의 키와 *with_clause*의 열 이름을 일치시킵니다(이 경우 matches 키는 대/소문자를 구분함을 의미). 열 이름이 키 이름과 일치하지 않으면 *jsonExpression* 내의 키를 참조하는 [JSON 경로 식](../../relational-databases/json/json-path-expressions-sql-server.md)인 선택적 *column_path*를 제공할 수 있습니다. 
-
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>인수
 

@@ -1,4 +1,5 @@
 ---
+description: NativeError 속성(ADO)
 title: NativeError 속성 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b9b47e57-18a4-4186-aef5-5bd18d7b1d74
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2b9bd2228b38af302d96cd3794cc00674449fcac
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: f26e8ab07a5ac51307d3b3da374e982ea5b6f469
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762404"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443115"
 ---
 # <a name="nativeerror-property-ado"></a>NativeError 속성(ADO)
 지정 된 [오류](../../../ado/reference/ado-api/error-object.md) 개체에 대 한 공급자별 오류 코드를 나타냅니다.  

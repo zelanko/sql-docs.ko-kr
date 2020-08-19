@@ -1,4 +1,5 @@
 ---
+description: NumberOfFlags 속성(ServerSettings 클래스)
 title: 번호 Off지연과 지연 속성 (ServerSettings)
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d720f093-0d67-4e6c-8231-78d9ab853a8f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7055dce60cc2eab862a14343bd1394ae13d1af7c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 478a91ae1d2d4e11cf11a7e1efb95f7db81fb522
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888576"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446163"
 ---
 # <a name="numberofflags-property-serversettings-class"></a>NumberOfFlags 속성(ServerSettings 클래스)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

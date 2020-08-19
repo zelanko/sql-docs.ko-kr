@@ -1,4 +1,5 @@
 ---
+description: Find 메서드(ADO)
 title: Find 메서드 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 55c9810a-d8ca-46c2-a9dc-80e7ee7aa188
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: acd6b92e6f22f5a345421e3070e530eb148ded5f
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: d4c633cd1296c9433fbb7dfc185146c8b65e686b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760129"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443655"
 ---
 # <a name="find-method-ado"></a>Find 메서드(ADO)
 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 에서 지정 된 조건을 만족 하는 행을 검색 합니다. 필요에 따라 검색의 방향, 시작 행 및 시작 행의 오프셋을 지정할 수 있습니다. 조건을 충족 하는 경우에는 현재 행 위치가 찾은 레코드에 대해 설정 됩니다. 그렇지 않으면 위치가 **레코드 집합**의 끝 (또는 시작)으로 설정 됩니다.  
@@ -43,13 +44,13 @@ Find (Criteria, SkipRows, SearchDirection, Start)
  *SearchDirection*  
  (선택 사항) 검색을 현재 행에서 시작할지 아니면 검색 방향으로 사용할 수 있는 다음 행으로 시작할지를 지정 하는 [SearchDirectionEnum](../../../ado/reference/ado-api/searchdirectionenum.md) 값입니다. 값이 **Adsearchforward**인 경우 **레코드 집합** 의 끝에서 실패 한 검색을 중지 합니다. 값이 **Adsearchbackward**인 경우 **레코드 집합** 의 시작 부분에서 실패 한 검색을 중지 합니다.  
   
- *Start*  
+ *시작*  
  (선택 사항) 검색의 시작 위치로 작동 하는 **변형** 책갈피입니다.  
   
 ## <a name="remarks"></a>설명  
  *조건*에는 단일 열 이름만 지정할 수 있습니다. 이 메서드는 다중 열 검색을 지원 하지 않습니다.  
   
- *조건의* 비교 연산자는 " **>** " (보다 큼), " **\<** " (보다 작음), "=" (같음), ">=" (크거나 같음), "<=" (작거나 같음), "<>" (같지 않음) 또는 "like" (패턴 일치) 일 수 있습니다.  
+ *조건의* 비교 연산자는 " **>** " (보다 큼), "* * \<**" (less than), "=" (equal), "> =" (크거나 같음), "<=" (작거나 같음), "<>" (같지 않음) 또는 "like" (패턴 일치) 일 수 있습니다.  
   
  *조건* 에 있는 값은 문자열, 부동 소수점 숫자 또는 날짜 일 수 있습니다. 문자열 값은 작은따옴표 또는 "#" (숫자 기호) 표시 (예: "state = ' WA '" 또는 "state = #WA #")로 구분 됩니다. 날짜 값은 "#" (숫자 기호) 표시 (예: "start_date > #7/22/97 #")로 구분 됩니다. 이러한 값에는 시간 스탬프를 나타내는 시간, 분, 초 등이 포함 될 수 있지만 밀리초를 포함 하거나 오류가 발생 합니다.  
   

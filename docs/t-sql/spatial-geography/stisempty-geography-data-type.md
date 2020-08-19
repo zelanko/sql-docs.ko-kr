@@ -1,4 +1,5 @@
 ---
+description: STIsEmpty(geography 데이터 형식)
 title: STIsEmpty(geography 데이터 형식) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4cbc66e3-9035-4ecf-8f5a-6301f168c26c
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 93adb83612e2d646a25740b13aad7294927377ff
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 63763ccf919aa0fc1a507dbab282a21cdec6f244
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86556130"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445215"
 ---
 # <a name="stisempty-geography-data-type"></a>STIsEmpty(geography 데이터 형식)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -43,7 +44,7 @@ ms.locfileid: "86556130"
   
  CLR 반환 형식: **SqlBoolean**  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 비어 있는 `geography` 인스턴스를 만들고 `STIsEmpty()`를 사용하여 인스턴스가 비어 있는지 확인합니다.  
   
 ```  
@@ -53,6 +54,6 @@ SELECT @g.STIsEmpty();
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [지리 인스턴스의 OGC 메서드](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
+ [Geography 인스턴스의 OGC 메서드](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

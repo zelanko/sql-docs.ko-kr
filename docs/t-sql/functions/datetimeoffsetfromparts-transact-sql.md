@@ -1,4 +1,5 @@
 ---
+description: DATETIMEOFFSETFROMPARTS(Transact-SQL)
 title: DATETIMEOFFSETFROMPARTS(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/29/2017
@@ -18,12 +19,12 @@ ms.assetid: 463da1f4-b4b6-45a3-9a95-ea1f99575542
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b0a383d6a9405d0aa80b8f0c1e4f3c2bc98c9667
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: bcb6fea31efdc42e95f28fba01b416b00cee7038
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396937"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445819"
 ---
 # <a name="datetimeoffsetfromparts-transact-sql"></a>DATETIMEOFFSETFROMPARTS(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -70,7 +71,7 @@ DATETIMEOFFSETFROMPARTS ( year, month, day, hour, minute, seconds, fractions, ho
 표준 시간대 오프셋의 분 부분을 지정하는 정수 식입니다.  
   
 *전체 자릿수*  
-**가 반환하는** datetimeoffset`DATETIMEOFFSETFROMPARTS` 값의 전체 자릿수를 지정하는 정수 리터럴 값입니다.  
+`DATETIMEOFFSETFROMPARTS`가 반환하는 **datetimeoffset** 값의 전체 자릿수를 지정하는 정수 리터럴 값입니다.  
   
 ## <a name="return-types"></a>반환 형식
 **datetimeoffset(** *precision* **)**  
@@ -83,7 +84,7 @@ DATETIMEOFFSETFROMPARTS ( year, month, day, hour, minute, seconds, fractions, ho
   
 이 함수는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 서버 이상에 대한 원격 처리를 지원합니다. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 이전 버전이 설치되어 있는 서버에 대해서는 원격 처리를 지원하지 않습니다.
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-an-example-without-fractions-of-a-second"></a>A. 소수 단위 초를 사용하지 않는 예  
   

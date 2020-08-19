@@ -1,4 +1,5 @@
 ---
+description: sp_revoke_publication_access(Transact-SQL)
 title: sp_revoke_publication_access (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 84ed9e77-991f-4fa5-a21f-7c6bfec1b3e3
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: cb9b695000cbeb359eb6b762c8d1800651aa963f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0be8037325faba0cecb0988903677c14260b8a47
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901371"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446794"
 ---
 # <a name="sp_revoke_publication_access-transact-sql"></a>sp_revoke_publication_access(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,9 +38,9 @@ sp_revoke_publication_access [ @publication = ] 'publication' , [ @login = ] 'lo
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @publication = ] 'publication'`액세스할 게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 없습니다.  
+`[ @publication = ] 'publication'` 액세스할 게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @login = ] 'login'`로그인 ID입니다. *login* 은 **sysname**이며 기본값은 없습니다.  
+`[ @login = ] 'login'` 로그인 ID입니다. *login* 은 **sysname**이며 기본값은 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

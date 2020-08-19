@@ -1,4 +1,5 @@
 ---
+description: STGeometryN(geography 데이터 형식)
 title: STGeometryN(geography 데이터 형식) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 53755f69-cd50-475b-b3b8-a1a9157cf03a
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 1deed4d716bbee62dac425a9d71780aec445602e
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 812a5e63f21de77028c1f00a08f1819c5a07be13
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555799"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445249"
 ---
 # <a name="stgeometryn-geography-data-type"></a>STGeometryN(geography 데이터 형식)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -49,7 +50,7 @@ ms.locfileid: "86555799"
 ## <a name="remarks"></a>설명  
  이 메서드는 매개 변수가 [STNumGeometries()](../../t-sql/spatial-geography/stnumgeometries-geography-data-type.md)의 결과보다 크면 Null을 반환하고 *expression* 매개 변수가 1보다 작으면 **ArgumentOutOfRangeException**을 throw합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `MultiPoint``geography` 인스턴스를 만들고 `STGeometryN()`을 사용하여 **GeometryCollection**의 두 번째 `geography` 인스턴스를 찾습니다.  
   
 ```  
@@ -59,6 +60,6 @@ SELECT @g.STGeometryN(2).ToString();
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [지리 인스턴스의 OGC 메서드](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
+ [Geography 인스턴스의 OGC 메서드](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

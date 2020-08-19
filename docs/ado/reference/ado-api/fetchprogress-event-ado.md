@@ -1,4 +1,5 @@
 ---
+description: FetchProgress 및(ADO)
 title: FetchProgress 이벤트 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 301716fd-81fc-40eb-8a04-221ef7ab410e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c5e75dd96a77261bfee44da0db9025fb02af6871
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 53f22936f17e70c02a7640355250cdb5f2bcea95
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82757119"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443815"
 ---
 # <a name="fetchprogress-event-ado"></a>FetchProgress 및(ADO)
 **Fetchprogress**이벤트는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)으로 현재 검색 된 행의 수를 보고 하는 긴 비동기 작업 중에 주기적으로 호출 됩니다.  
@@ -34,7 +35,7 @@ FetchProgress Progress, MaxProgress, adStatus, pRecordset
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- *이므로*  
+ *진행률*  
  인출 작업에서 현재 검색 된 레코드 수를 나타내는 **Long** 값입니다.  
   
  *MaxProgress*  

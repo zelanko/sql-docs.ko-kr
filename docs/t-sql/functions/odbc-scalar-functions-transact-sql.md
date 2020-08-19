@@ -1,4 +1,5 @@
 ---
+description: ODBC 스칼라 함수(Transact-SQL)
 title: ODBC 스칼라 함수(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -52,19 +53,19 @@ ms.assetid: a0df1ac2-6699-4ac0-8f79-f362f23496f1
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ebe21e82e6065aa28e4967b7d2f4d13f0fafe9d6
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 4ce160465056b18c7f6f347b0587603dd489fa06
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003824"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445696"
 ---
 # <a name="odbc-scalar-functions-transact-sql"></a>ODBC 스칼라 함수(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [ 문에서 ](https://go.microsoft.com/fwlink/?LinkID=88579)ODBC 스칼라 함수[!INCLUDE[tsql](../../includes/tsql-md.md)]를 사용할 수 있습니다. 이러한 문은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 해석되고, 저장 프로시저 및 사용자 정의 함수에 사용될 수 있습니다. 여기에는 문자열, 숫자, 시간, 날짜, 간격, 시스템 함수가 포함됩니다.  
   
-## <a name="usage"></a>사용  
+## <a name="usage"></a>사용량  
  `SELECT {fn <function_name> [ (<argument>,....n) ] }`  
   
 ## <a name="functions"></a>Functions  
@@ -72,7 +73,7 @@ ms.locfileid: "86003824"
   
 ### <a name="string-functions"></a>문자열 함수  
   
-|함수|Description|  
+|기능|Description|  
 |--------------|-----------------|  
 |BIT_LENGTH( string_exp ) (ODBC 3.0)|문자열 식의 길이(비트)를 반환합니다.<br /><br /> String_exp를 문자열로 변환하지 않고 지정된 데이터 형식의 내부 크기를 반환합니다.|  
 |CONCAT( string_exp1,string_exp2) (ODBC 1.0)|string_exp2와 string_exp1의 연결 결과인 문자열을 반환합니다. 결과 문자열은 DBMS에 종속됩니다. 예를 들어 string_exp1로 표시되는 열이 NULL 값을 포함할 경우 DB2는 NULL을 반환하지만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 NULL이 아닌 문자열을 반환합니다.|  
@@ -80,13 +81,13 @@ ms.locfileid: "86003824"
   
 ### <a name="numeric-function"></a>숫자 함수  
   
-|함수|Description|  
+|기능|Description|  
 |--------------|-----------------|  
 |TRUNCATE( numeric_exp, integer_exp) (ODBC 2.0)|소수점 이하 integer_exp 위치로 잘린 numeric_exp를 반환합니다. integer_exp가 음수인 경우 numeric_exp는 소수점 왼쪽의 &#124;integer_exp&#124; 위치로 잘립니다.|  
   
 ### <a name="time-date-and-interval-functions"></a>시간, 날짜 및 간격 함수  
   
-|함수|Description|  
+|기능|Description|  
 |--------------|-----------------|  
 |CURRENT_DATE( ) (ODBC 3.0)|현재 날짜를 반환합니다.|  
 |CURDATE( ) (ODBC 3.0)|현재 날짜를 반환합니다.|  
@@ -102,7 +103,7 @@ ms.locfileid: "86003824"
 |QUARTER( date_exp ) (ODBC 1.0)|date_exp의 분기를 1에서 4 사이의 정수 값으로 반환합니다. 이 경우 1은 1월 1일에서 3월 31일까지를 나타냅니다.|  
 |WEEK( date_exp ) (ODBC 1.0)|date_exp의 주 필드를 기준으로 해당 연도의 주를 1에서 53 사이의 정수 값으로 반환합니다.|  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-using-an-odbc-function-in-a-stored-procedure"></a>A. 저장 프로시저에서 ODBC 함수 사용  
  다음 예에서는 저장 프로시저에 ODBC 함수를 사용합니다.  

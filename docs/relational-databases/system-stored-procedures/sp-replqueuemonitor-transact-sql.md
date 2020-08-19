@@ -1,4 +1,5 @@
 ---
+description: sp_replqueuemonitor(Transact-SQL)
 title: sp_replqueuemonitor (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6909a3f1-43a2-4df5-a6a5-9e6f347ac841
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 73b999f1f6ee2ba49209f5763be6bb42e777ef78
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b8b0f11e5b0f62c1e874dbeba947ea136f7ee274
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85626930"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446835"
 ---
 # <a name="sp_replqueuemonitor-transact-sql"></a>sp_replqueuemonitor(Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -41,17 +42,17 @@ sp_replqueuemonitor [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @publisher = ] 'publisher'`게시자의 이름입니다. *publisher* 는 **sysname**이며 기본값은 NULL입니다. 해당 서버는 반드시 게시용으로 구성되어야 합니다. 모든 게시자에 대해 NULL입니다.  
+`[ @publisher = ] 'publisher'` 게시자의 이름입니다. *publisher* 는 **sysname**이며 기본값은 NULL입니다. 해당 서버는 반드시 게시용으로 구성되어야 합니다. 모든 게시자에 대해 NULL입니다.  
   
-`[ @publisherdb = ] 'publisher_db' ]`게시 데이터베이스의 이름입니다. *publisher_db* 는 **sysname**이며 기본값은 NULL입니다. 모든 게시 데이터베이스에 대해 NULL입니다.  
+`[ @publisherdb = ] 'publisher_db' ]` 게시 데이터베이스의 이름입니다. *publisher_db* 는 **sysname**이며 기본값은 NULL입니다. 모든 게시 데이터베이스에 대해 NULL입니다.  
   
-`[ @publication = ] 'publication' ]`게시의 이름입니다. *게시*는 **sysname**이며 기본값은 NULL입니다. 모든 게시에 대해 NULL입니다.  
+`[ @publication = ] 'publication' ]` 게시의 이름입니다. *게시*는 **sysname**이며 기본값은 NULL입니다. 모든 게시에 대해 NULL입니다.  
   
-`[ @tranid = ] 'tranid' ]`트랜잭션 ID입니다. *id*는 **sysname**이며 기본값은 NULL입니다. 모든 트랜잭션에 대해 NULL입니다.  
+`[ @tranid = ] 'tranid' ]` 트랜잭션 ID입니다. *id*는 **sysname**이며 기본값은 NULL입니다. 모든 트랜잭션에 대해 NULL입니다.  
   
-`[ @queuetype = ] 'queuetype' ]`트랜잭션을 저장 하는 큐의 유형입니다. *queuetype* 은 **tinyint** 이며 기본값은 **0**이 고 다음 값 중 하나일 수 있습니다.  
+`[ @queuetype = ] 'queuetype' ]` 트랜잭션을 저장 하는 큐의 유형입니다. *queuetype* 은 **tinyint** 이며 기본값은 **0**이 고 다음 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**0**|모든 유형의 큐입니다.|  
 |**1**|메시지 큐|  
@@ -67,7 +68,7 @@ sp_replqueuemonitor [ @publisher = ] 'publisher'
  **Sysadmin** 고정 서버 역할 또는 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_replqueuemonitor**을 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [트랜잭션 복제에 대 한 업데이트할 수 있는 구독](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   
+ [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

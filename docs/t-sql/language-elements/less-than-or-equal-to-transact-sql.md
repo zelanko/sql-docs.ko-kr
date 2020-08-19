@@ -1,4 +1,5 @@
 ---
+description: '&lt;=(작거나 같음)(Transact-SQL)'
 title: '&lt;=(작거나 같음)(Transact-SQL) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/13/2017
@@ -23,12 +24,12 @@ ms.assetid: 1f05474c-0377-48cb-b567-9d85d0c40479
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0b16b7fa8a30679192293a8e549e1e55dd5a9b5e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 0fa9e30938b77a27441e41999d5b65ddc3580a55
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918399"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445518"
 ---
 # <a name="lt-less-than-or-equal-to-transact-sql"></a>&lt;=(작거나 같음)(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -54,7 +55,7 @@ expression <= expression
 ## <a name="result-types"></a>결과 형식  
  **Boolean**  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-using--in-a-simple-query"></a>A. 간단한 쿼리에서 <= 사용  
  다음 예에서는 `HumanResources.Department` 테이블에서 `DepartmentID`의 값이 3보다 작거나 같은 모든 행을 반환합니다.  

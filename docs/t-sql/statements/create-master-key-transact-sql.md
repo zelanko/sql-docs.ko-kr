@@ -1,4 +1,5 @@
 ---
+description: CREATE MASTER KEY(Transact-SQL)
 title: CREATE MASTER KEY(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/12/2019
@@ -24,12 +25,12 @@ ms.assetid: 1710a305-1a4f-48ec-836c-11ffd0356d76
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2bd067638bdcf9ee624fa714334ff8c8a78c0e69
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: 1f9a640dff75d54a4377f512b3a1e17200f48377
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86393211"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444910"
 ---
 # <a name="create-master-key-transact-sql"></a>CREATE MASTER KEY(Transact-SQL)
 
@@ -73,7 +74,7 @@ SMK(서비스 마스터 키)와 DMK(데이터베이스 마스터 키)는 AES-256
 
 데이터베이스에 대한 CONTROL 권한이 필요합니다.
 
-## <a name="examples"></a>예
+## <a name="examples"></a>예제
 
 `master` 데이터베이스에 데이터베이스 마스터 키를 만들려면 다음 예제를 사용합니다. 이 키는 `23987hxJ#KL95234nl0zBe` 암호를 사용하여 암호화됩니다.
 
@@ -87,7 +88,7 @@ GO
 - [sys.symmetric_keys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)
 - [sys.databases&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)
 - [OPEN MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/open-master-key-transact-sql.md)
-- [ALTER MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md)
+- [ALTER MASTER KEY&#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md)
 - [DROP MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-master-key-transact-sql.md)
 - [CLOSE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/close-master-key-transact-sql.md)
 - [암호화 계층](../../relational-databases/security/encryption/encryption-hierarchy.md)

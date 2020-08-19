@@ -1,4 +1,5 @@
 ---
+description: sp_replshowcmds(Transact-SQL)
 title: sp_replshowcmds (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 199f5a74-e08e-4d02-a33c-b8ab0db20f44
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 67cf4522b88e9922027a671feeda02b3305dbfc3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: beb5ba1371c3a3e8748e5a4963106d659e7dd31f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718637"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446825"
 ---
 # <a name="sp_replshowcmds-transact-sql"></a>sp_replshowcmds(Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -37,7 +38,7 @@ sp_replshowcmds [ @maxtrans = ] maxtrans
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @maxtrans = ] maxtrans`정보를 반환할 트랜잭션의 수입니다. *maxtrans* 은 **int**이며 기본값은 **sp_replshowcmds** 정보를 반환 하는 복제 보류 중인 최대 트랜잭션 수를 지정 하는 **1**입니다.  
+`[ @maxtrans = ] maxtrans` 정보를 반환할 트랜잭션의 수입니다. *maxtrans* 은 **int**이며 기본값은 **sp_replshowcmds** 정보를 반환 하는 복제 보류 중인 최대 트랜잭션 수를 지정 하는 **1**입니다.  
   
 ## <a name="result-sets"></a>결과 집합  
  **sp_replshowcmds** 은 실행 되는 게시 데이터베이스에 대 한 정보를 반환 하는 진단 프로시저입니다.  
@@ -68,7 +69,7 @@ sp_replshowcmds [ @maxtrans = ] maxtrans
   
 ## <a name="see-also"></a>참고 항목  
  [오류 메시지](../../relational-databases/native-client-odbc-error-messages/error-messages.md)   
- [Transact-sql&#41;sp_replcmds &#40;](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)   
+ [sp_replcmds&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)   
  [Transact-sql&#41;sp_repldone &#40;](../../relational-databases/system-stored-procedures/sp-repldone-transact-sql.md)   
  [Transact-sql&#41;sp_replflush &#40;](../../relational-databases/system-stored-procedures/sp-replflush-transact-sql.md)   
  [Transact-sql&#41;sp_repltrans &#40;](../../relational-databases/system-stored-procedures/sp-repltrans-transact-sql.md)   

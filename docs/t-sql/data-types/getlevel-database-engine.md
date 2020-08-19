@@ -1,4 +1,5 @@
 ---
+description: GetLevel(데이터베이스 엔진)
 title: GetLevel(데이터베이스 엔진) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/22/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 81577d7e-8ff6-4e73-b7f4-94c03d4921e7
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f205c91f7375e52a944dbcc18c026edb9712d944
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: d2a8f93d51cd61e9a6a7654472fabbab95475913
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554482"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445928"
 ---
 # <a name="getlevel-database-engine"></a>GetLevel(데이터베이스 엔진)
 
@@ -54,7 +55,7 @@ SqlInt16 GetLevel ( )
   
 GetLevel은 너비 우선 검색 인덱스에 유용합니다. 자세한 내용은 [계층적 데이터&#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md)를 참조하세요.
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-returning-the-hierarchy-level-as-a-column"></a>A. 계층 수준을 열로 반환  
 다음 예에서는 **hierarchyid**의 텍스트 표현을 반환한 다음, 테이블의 모든 행에 대해 **EmpLevel** 열로 계층 수준을 반환합니다.

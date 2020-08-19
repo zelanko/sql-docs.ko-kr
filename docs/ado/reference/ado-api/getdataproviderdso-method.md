@@ -1,4 +1,5 @@
 ---
+description: GetDataProviderDSO 메서드
 title: GetDataProviderDSO 메서드 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5a4c6bd5-0c79-4f81-a977-0561392d8d50
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 55272fdbcd0aacfc8e98cb4e38ae19270b3b461a
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 1a45d78960b8b6b1ba2534e39f080a6c94fc0655
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760049"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443575"
 ---
 # <a name="getdataproviderdso-method"></a>GetDataProviderDSO 메서드
 셰이프 공급자에서 내부 OLE DB 데이터 소스 개체를 검색 합니다.  

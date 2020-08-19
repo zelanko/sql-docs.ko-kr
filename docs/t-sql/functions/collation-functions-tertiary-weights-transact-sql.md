@@ -1,4 +1,5 @@
 ---
+description: 데이터 정렬 함수 - TERTIARY_WEIGHTS(Transact-SQL)
 title: TERTIARY_WEIGHTS(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2017
@@ -20,12 +21,12 @@ ms.assetid: 7e1f5350-260b-4c61-8c84-69bb1a214f1f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f202d45b9c815154f252c0c016fe4931dbef069e
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 1a6cf4546193b02050c0559765fe3fa4ad368e02
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112144"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445899"
 ---
 # <a name="collation-functions---tertiary_weights-transact-sql"></a>데이터 정렬 함수 - TERTIARY_WEIGHTS(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -44,10 +45,10 @@ TERTIARY_WEIGHTS( non_Unicode_character_string_expression )
 
 ## <a name="arguments"></a>인수
 *non_Unicode_character_string_expression*  
-3차 SQL 데이터 정렬에 정의된 [char](../../t-sql/language-elements/expressions-transact-sql.md), **varchar** 또는 **varchar(max)** 형식의 문자열 **식**입니다. 이러한 데이터 정렬의 목록은 주의를 참조하세요.
+3차 SQL 데이터 정렬에 정의된 **char**, **varchar** 또는 **varchar(max)** 형식의 문자열 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다. 이러한 데이터 정렬의 목록은 주의를 참조하세요.
   
 ## <a name="return-types"></a>반환 형식
-`TERTIARY_WEIGHTS`는 **non_Unicode_character_string_expression**이 *char* 또는 **varchar**인 경우 **varbinary**를 반환하고, **non_Unicode_character_string_expression**이 *varchar(max)* 데이터 형식을 가진 경우 **varbinary(max)** 를 반환합니다.
+`TERTIARY_WEIGHTS`는 *non_Unicode_character_string_expression*이 **char** 또는 **varchar**인 경우 **varbinary**를 반환하고, *non_Unicode_character_string_expression*이 **varchar(max)** 데이터 형식을 가진 경우 **varbinary(max)** 를 반환합니다.
   
 ## <a name="remarks"></a>설명  
 `TERTIARY_WEIGHTS`는 SQL 3차 컬렉션이 *non_Unicode_character_string_expression*을 정의하지 않는 경우 NULL을 반환합니다. 이 표에서는 SQL 3차 데이터 정렬을 보여 줍니다.
@@ -87,9 +88,9 @@ TERTIARY_WEIGHTS( non_Unicode_character_string_expression )
 |185|SQL_SwedishStd_Pref_CP1_CI_AS|  
 |186|SQL_Icelandic_Pref_CP1_CI_AS|  
   
-`TERTIARY_WEIGHTS`char **,** varchar**또는**varchar(max)**열 값에 정의되는 계산 열 정의에**를 사용합니다. 계산 열과 **char**, **varchar** 또는 **varchar(max)** 열 모두에서 인덱스 정의는 쿼리의 ORDER BY 절이 해당 **char**, **varchar** 또는 **varchar(max)** 열을 지정하는 경우 성능을 향상시킬 수 있습니다.
+**char**, **varchar** 또는 **varchar(max)** 열 값에 정의되는 계산 열 정의에 `TERTIARY_WEIGHTS`를 사용합니다. 계산 열과 **char**, **varchar** 또는 **varchar(max)** 열 모두에서 인덱스 정의는 쿼리의 ORDER BY 절이 해당 **char**, **varchar** 또는 **varchar(max)** 열을 지정하는 경우 성능을 향상시킬 수 있습니다.
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
 이 예에서는 `TERTIARY_WEIGHTS` 함수를 `char` 열의 값에 적용하는 계산 열을 테이블에 만듭니다.
   
 ```sql

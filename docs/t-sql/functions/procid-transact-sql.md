@@ -1,4 +1,5 @@
 ---
+description: '&#x40;&#x40;PROCID (Transact-SQL)'
 title: '@@PROCID(Transact-SQL) | Microsoft Docs'
 ms.custom: ''
 ms.date: 09/18/2017
@@ -24,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 0d4882c7-edb8-49b1-a470-2c7497b8998f
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 76aed964e998448c558c7a9fa9a615ed05d4efaa
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: ca5a2c5fe01e67a4d2fb9486169e22c16d36f0a8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112330"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445652"
 ---
 # <a name="x40x40procid-transact-sql"></a>&#x40;&#x40;PROCID (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -49,7 +50,7 @@ ms.locfileid: "87112330"
 ## <a name="return-types"></a>반환 형식
  **int**  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `@@PROCID` 함수에서 입력 매개 변수로 `OBJECT_NAME`를 사용하여 `RAISERROR` 메시지에 있는 저장 프로시저의 이름을 반환합니다.  
   
 ```  

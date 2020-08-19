@@ -1,4 +1,5 @@
 ---
+description: FieldStatusEnum
 title: FieldStatusEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e06da1e2-303f-41b2-a3b0-61e233da152c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7ea1fc2d8347df28e983b412976c545327456ad8
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 06044b54be7066deb5cf7510f060716106816805
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82756813"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443715"
 ---
 # <a name="fieldstatusenum"></a>FieldStatusEnum
 [필드 개체](../../../ado/reference/ado-api/field-object.md)의 [상태](../../../ado/reference/ado-api/status-property-ado-field.md) 를 지정 합니다.  
