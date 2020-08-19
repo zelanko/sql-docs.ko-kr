@@ -1,4 +1,5 @@
 ---
+description: 기본 데이터 원본
 title: 기본 데이터 원본 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: dd473cc6-f051-4aa0-ab14-3dd1b37fe99e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 978362b7dfe92d1333f83be684f6326cf25dd69b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0aecd2ec64926a9d1a38d8e3d603124d45223004
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305994"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424718"
 ---
 # <a name="default-data-source"></a>기본 데이터 원본
 응용 프로그램에서 명시적으로 지정 하지 않는 특정 한 경우 드라이버는 기본 데이터 원본 이라는 데이터 원본을 선택할 수 있습니다.  

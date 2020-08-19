@@ -1,4 +1,5 @@
 ---
+description: Paradox에 대한 SQLGetInfo 반환 값
 title: Paradox에 대해 SQLGetInfo 반환 값 Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 543526fb-7c54-42f7-9371-926730ca5483
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8d53d912941079865328ab97fae0f0f814a76114
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 54f5386d2b9ae6d0e6f7c558e34bec6d43e46d20
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298533"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421707"
 ---
 # <a name="sqlgetinfo-returned-values-for-paradox"></a>Paradox에 대한 SQLGetInfo 반환 값
 다음 표에서는 *Finfotype* 인수의 C 언어 #defines와 **SQLGetInfo**에서 반환 된 해당 값을 보여 줍니다. 이 정보는 나열 된 C 언어 #defines을 *Finfotype* 인수의 **SQLGetInfo** 에 전달 하 여 검색할 수 있습니다. **SQLGetInfo**에서 반환 하는 값에 대 한 자세한 내용은 *ODBC 프로그래머 참조*를 참조 하세요.  
@@ -81,7 +82,7 @@ ms.locfileid: "81298533"
 |SQL_CURSOR_COMMIT_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_ROLLBACK_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_SENSITIVITY|SQL_UNSPECIFIED|  
-|SQL_DATA_SOURCE_NAME|Odbc .ini에서 DSN 또는 "" if DRIVER 키워드를 사용 하는 경우.|  
+|SQL_DATA_SOURCE_NAME|Odbc.ini의 DSN 또는 "" if DRIVER 키워드가 Odbc.ini에서 사용 되는 경우|  
 |SQL_DATA_SOURCE_READ_ONLY|"N" (데이터 소스에 따라 달라 짐)|  
 |SQL_DATABASE_NAME|현재 데이터베이스 디렉터리|  
 |SQL_DATETIME_LITERALS|0|  
@@ -94,7 +95,7 @@ ms.locfileid: "81298533"
 |SQL_DRIVER_HENV|드라이버 관리자에 의해 처리 됩니다.|  
 |SQL_DRIVER_HLIB|드라이버 관리자에 의해 처리 됩니다.|  
 |SQL_DRIVER_HSTMT|드라이버 관리자에 의해 처리 됩니다.|  
-|SQL_DRIVER_NAME|"OdbcJt32"|  
+|SQL_DRIVER_NAME|"OdbcJt32.dll"|  
 |SQL_DRIVER_ODBC_VER|"3.51.0000"|  
 |SQL_DRIVER_VER|"4.00-*nnnn*" (*nnnn* 은 빌드 날짜를 지정)|  
 |SQL_DROP_ASSERTION|0|  
@@ -111,7 +112,7 @@ ms.locfileid: "81298533"
 |SQL_GETDATA_EXTENSIONS|다중 값|  
 |SQL_GROUP_BY|SQL_GB_GROUP_BY_CONTAINS_SELECT|  
 |SQL_IDENTIFIER_CASE|SQL_IC_MIXED|  
-|SQL_IDENTIFIER_QUOTE_CHAR|"\`" (후방 따옴표)|  
+|SQL_IDENTIFIER_QUOTE_CHAR|" \` " (후방 따옴표)|  
 |SQL_KEYWORDS|다중 값|  
 |SQL_LIKE_ESCAPE_CLAUSE|"N"|  
 |SQL_MAX_BINARY_LITERAL_LEN|255|  
@@ -156,7 +157,7 @@ ms.locfileid: "81298533"
 |SQL_SCROLL_OPTIONS|다중 값|  
 |SQL_SEARCH_PATTERN_ESCAPE|"\\"|  
 |SQL_SERVER_NAME|PARADOX|  
-|SQL_SPECIAL_CHARACTERS|"~\`@ # $% ^& * _-+ =\\} {" ';:?/><,.! ' [] &#124; "|  
+|SQL_SPECIAL_CHARACTERS|"~ \` @ # $% ^& * _-+ = \\ } {" ';:?/><,.! ' [] &#124; "|  
 |SQL_STRING_FUNCTIONS|다중 값|  
 |SQL_SUBQUERIES|다중 값|  
 |SQL_SYSTEM_FUNCTIONS|0|  

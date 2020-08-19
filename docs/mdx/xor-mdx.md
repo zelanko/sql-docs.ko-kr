@@ -1,4 +1,5 @@
 ---
+description: XOR(MDX)
 title: XOR (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 1657d9e58a0ae729a67e179602cd9a886ae923b1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b74d4ec3d92469dc0372218bfe66375c0844384e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68125787"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421877"
 ---
 # <a name="xor-mdx"></a>XOR(MDX)
 
@@ -35,13 +36,13 @@ Expression1 XOR Expression2
  *Expression2*  
  숫자 값을 반환하는 유효한 MDX 식입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
  하나의 인수만 **true**로 평가 되는 경우 **true** 를 반환 하는 부울 값입니다. 그렇지 않으면 **false**입니다.  
   
 ## <a name="remarks"></a>설명  
  **XOR** 연산자는 연산자가 논리적 **제외를 수행**하기 전에 두 매개 변수를 모두 부울 값 (0, 0, 0, 0, 0)으로 처리 **합니다.** 다음 표에서는 **XOR** 연산자가 논리적 제외를 수행 하는 방법을 보여 줍니다.  
   
-|*Expression1*|*Expression2*|Return Value|  
+|*Expression1*|*Expression2*|반환 값|  
 |-------------------|-------------------|------------------|  
 |**true**|**true**|**false**|  
 |**true**|**false**|**true**|  

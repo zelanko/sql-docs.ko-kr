@@ -1,4 +1,5 @@
 ---
+description: 인터페이스 적합성 수준
 title: 인터페이스 규칙 수준 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2c470e54-0600-4b2b-b1f3-9885cb28a01a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fff555324746fcb92641126ddf11ea91ce5e3f89
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fb77ab0e77fc8a811acd956673a4ad4fe8664828
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304603"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424625"
 ---
 # <a name="interface-conformance-levels"></a>인터페이스 적합성 수준
 평준화의 목적은 드라이버에서 사용할 수 있는 기능을 응용 프로그램에 알리는 것입니다. 함수를 기반으로 하는 평준화 체계는이 목표를 달성 하는 데 충분 하지 않습니다. ODBC 3. *x*, 드라이버는 소유 하 고 있는 기능을 기준으로 분류 됩니다. 기능 지원에는 함수 지원이 포함 될 수 있습니다. 설명자 필드, 문 특성, **SQLGetInfo**에서 반환 하는 정보 형식에 대 한 "Y" 값 등을 지원 하기도 합니다.  

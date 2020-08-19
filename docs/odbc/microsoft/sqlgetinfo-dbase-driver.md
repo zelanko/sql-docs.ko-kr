@@ -1,4 +1,5 @@
 ---
+description: SQLGetInfo(dBASE 드라이버)
 title: SQLGetInfo (dBASE 드라이버) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 42ffdc9c-281b-4df5-ac6d-7b34f15ecd4c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9ac88f3b563ef7811d9112d8ef7169f533691938
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f650b44e81e56cef6fee910f6351da8b09dfccd0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298603"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421767"
 ---
 # <a name="sqlgetinfo-dbase-driver"></a>SQLGetInfo(dBASE 드라이버)
 > [!NOTE]  

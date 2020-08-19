@@ -1,4 +1,5 @@
 ---
+description: 식 작성기
 title: 식 작성기 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4717ce33-bd4e-44bc-81e0-002de075b4d1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0ebadab32a4f668cbcc523038634f171782602ec
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 6f8eb6c6771e2684d03380a721c7ef96dcb08488
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917049"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425525"
 ---
 # <a name="expression-builder"></a>식 작성기
 
@@ -50,7 +51,7 @@ ms.locfileid: "86917049"
 |**평가 값**|식의 평가 결과를 나열합니다.|  
 |**식 계산**|식의 계산 결과를 보려면 **식 계산** 을 클릭합니다.|  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [식 페이지](../../integration-services/expressions/expressions-page.md)   
  [속성 식 편집기](../../integration-services/expressions/property-expressions-editor.md)   
  [Integration Services&#40;SSIS&#41; 변수](../../integration-services/integration-services-ssis-variables.md)   

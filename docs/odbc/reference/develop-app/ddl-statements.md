@@ -1,4 +1,5 @@
 ---
+description: DDL 문
 title: DDL 문 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 96ac9859-5976-4b06-ae1f-2fec3231e266
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: cae06efe6dd11e651e8553fa5c1004c2fa145478
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 395abe3eed64f37c000ecff6f0b68a6e0cb1d076
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302994"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424735"
 ---
 # <a name="ddl-statements"></a>DDL 문
 DDL (데이터 정의 언어) 문은 Dbms 간에 크게 다릅니다. ODBC SQL은 테이블, 인덱스 및 뷰를 만들고 삭제 하는 가장 일반적인 데이터 정의 작업에 대 한 문을 정의 합니다. 테이블 변경 및 권한을 부여 하 고 취소 합니다. 다른 모든 DDL 문은 데이터 원본에만 적용 됩니다. 따라서 상호 운용 가능한 응용 프로그램은 일부 데이터 정의 작업을 수행할 수 없습니다. 일반적으로이는 문제가 되지 않습니다. 이러한 작업은 DBMS 마다 고유 하 고 대부분의 Dbms 또는 드라이버와 함께 제공 되는 설치 프로그램과 함께 제공 되는 독점 데이터베이스 관리 소프트웨어에 가장 적합 합니다.  

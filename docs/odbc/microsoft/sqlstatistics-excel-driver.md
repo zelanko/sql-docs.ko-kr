@@ -1,4 +1,5 @@
 ---
+description: SQLStatistics(Excel 드라이버)
 title: SQLStatistics (Excel 드라이버) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 02506664-8dcc-4bd0-a8bb-d49fcbdd5722
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 51b7e59fa811dd7b4ac69f1e9c8d39b4d482c437
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d6482de71907962fe9734f2167072a56a045a271
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299343"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421577"
 ---
 # <a name="sqlstatistics-excel-driver"></a>SQLStatistics(Excel 드라이버)
 > [!NOTE]  

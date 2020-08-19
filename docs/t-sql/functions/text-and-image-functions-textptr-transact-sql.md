@@ -1,4 +1,5 @@
 ---
+description: 텍스트 및 이미지 함수 - TEXTPTR (Transact-SQL)
 title: TEXTPTR(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/23/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 2672b8cb-f747-46f3-9358-9b49b3583b8e
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 0150b1b9dace457b76130b7b0b3f863471637970
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 510f2e6f0097b79cd458907a73ae094ff5cc637d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111806"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422597"
 ---
 # <a name="text-and-image-functions---textptr-transact-sql"></a>텍스트 및 이미지 함수 - TEXTPTR (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -67,15 +68,15 @@ TEXTPTR ( column )
 |PATINDEX<b>(‘</b> _%pattern%_ **’ ,** _expression_ **)**|**text** 또는 **ntext** 열에서 지정된 문자열의 문자 위치를 반환합니다.|  
 |DATALENGTH<b>(</b>_expression_ **)**|**text**, **ntext** 및 **image** 열의 데이터 길이를 반환합니다.|  
 |SET TEXTSIZE|SELECT 문으로 반환할 **text**, **ntext** 또는 **image** 데이터의 크기 제한(바이트)을 반환합니다.|  
-|SUBSTRING<b>(</b>_text_column_, _start_, _length_ **)**|지정한 **start** 오프셋과 *length*로 지정한 *varchar* 문자열을 반환합니다. 길이는 8KB보다 작아야 합니다.|  
+|SUBSTRING<b>(</b>_text_column_, _start_, _length_ **)**|지정한 *start* 오프셋과 *length*로 지정한 **varchar** 문자열을 반환합니다. 길이는 8KB보다 작아야 합니다.|  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 > [!NOTE]  
 >  다음 예를 실행하려면 **pubs** 데이터베이스를 설치해야 합니다.  
   
 ### <a name="a-using-textptr"></a>A. TEXTPTR 사용  
- 다음 예에서는 `TEXTPTR` 함수를 사용하여 **데이터베이스의** 테이블에서 `logo`와 관련된 `New Moon Books`image`pub_info` 열 `pubs`를 찾는 방법을 보여 줍니다. 텍스트 포인터는 지역 변수인 `@ptrval.`로 설정합니다.  
+ 다음 예에서는 `TEXTPTR` 함수를 사용하여 `pubs` 데이터베이스의 `pub_info` 테이블에서 `New Moon Books`와 관련된 **image** 열 `logo`를 찾는 방법을 보여 줍니다. 텍스트 포인터는 지역 변수인 `@ptrval.`로 설정합니다.  
   
 ```  
 USE pubs;  
@@ -165,7 +166,7 @@ This is sample text data for Lucerne Publishing, publisher 9999 in the pubs data
 ```  
   
 ### <a name="d-returning-specific-text-data"></a>D. 특정 텍스트 데이터 반환  
- 다음 예에서는 `text` 데이터베이스의 `pr_info` 테이블에서 `pub_id``0736`과 연관된 `pub_info` 열(`pubs`)을 찾는 방법을 보여 줍니다. 먼저 지역 변수 `@val`을 선언하고 텍스트 포인터(긴 이진 문자열)를 `@val`로 설정한 다음 `READTEXT` 문에 대한 매개 변수로 제공합니다. 이 문은 5번째 바이트(오프셋 4)에서 시작하여 10바이트를 반환합니다.  
+ 다음 예에서는 `pubs` 데이터베이스의 `pub_info` 테이블에서 `pub_id``0736`과 연관된 `text` 열(`pr_info`)을 찾는 방법을 보여 줍니다. 먼저 지역 변수 `@val`을 선언하고 텍스트 포인터(긴 이진 문자열)를 `@val`로 설정한 다음 `READTEXT` 문에 대한 매개 변수로 제공합니다. 이 문은 5번째 바이트(오프셋 4)에서 시작하여 10바이트를 반환합니다.  
   
 ```  
 USE pubs;  

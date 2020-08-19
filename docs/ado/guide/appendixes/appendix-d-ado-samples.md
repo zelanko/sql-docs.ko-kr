@@ -1,4 +1,5 @@
 ---
+description: '부록 D: Windows SDK의 ADO 샘플'
 title: '부록 D: ADO 샘플 | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1582e411-55ac-40f0-bd3d-9a10654e4b67
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f9c3e853910f0be04b8cd483f5a21264ca096e9e
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: ae72176eb0913ef8563612e0847fe346a60eadc2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760529"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422207"
 ---
 # <a name="appendix-d-ado-samples-in-the-windows-sdk"></a>부록 D: Windows SDK의 ADO 샘플
 Windows SDK에는 ADO 및 RDS 코드를 사용 하는 방법을 보여 주는 몇 가지 예제 응용 프로그램이 포함 되어 있습니다. 이러한 샘플은 ADO 및 RDS를 사용 하는 방법을 배우는 데 유용 하지만 프로덕션 서버에 배포 하기 위한 것이 아닙니다.
@@ -28,7 +29,7 @@ Windows SDK에는 ADO 및 RDS 코드를 사용 하는 방법을 보여 주는 �
 
  ADO 샘플을 찾으려면 C:\Program Files\Microsoft SDKs\Windows\v6.0.와 같은 Windows SDK 루트 폴더로 이동 합니다. 그런 다음 Samples\dataaccess\ADO 하위 폴더로 이동 합니다.
 
- ADO 및 RDS 샘플 응용 프로그램을 시작 하려면 ADO 및 RDS samples 폴더에서 각각 default.htm을 엽니다. 이러한 파일은 사용 가능한 각 샘플 응용 프로그램을 설명 하 고 샘플을 구성 하 고 실행 하는 방법에 대해 설명 합니다. 샘플 소스 코드를 찾아보는 방법
+ ADO 및 RDS 샘플 응용 프로그램을 시작 하려면 ADO 및 RDS samples 폴더에서 각각 default.htm를 엽니다. 이러한 파일은 사용 가능한 각 샘플 응용 프로그램을 설명 하 고 샘플을 구성 하 고 실행 하는 방법에 대해 설명 합니다. 샘플 소스 코드를 찾아보는 방법
 
  ADO 설명서에는이 온라인 도움말에 항목으로 포함 된 여러 언어의 코드 예제가 포함 되어 있습니다. 이러한 예제에 대 한 자세한 내용은 [ADO 코드 예제](../../../ado/reference/ado-api/ado-code-examples.md)를 참조 하세요.
 

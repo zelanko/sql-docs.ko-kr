@@ -1,4 +1,5 @@
 ---
+description: 문 준비 및 실행(ODBC)
 title: 문 준비 및 실행 (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -14,11 +15,12 @@ ms.assetid: 0adecc63-4da5-486c-bc48-09a004a2fae6
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a2ae98d59558738e4bcff979b38e341dd852661f
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 7a00b92a059014ff36ee1e0b473285641ef107c3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009466"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423773"
 ---
 # <a name="prepare-and-execute-a-statement-odbc"></a>문 준비 및 실행(ODBC)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

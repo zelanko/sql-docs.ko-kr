@@ -1,4 +1,5 @@
 ---
+description: SQLDriverConnect(Visual FoxPro ODBC 드라이버)
 title: SQLDriverConnect (Visual FoxPro ODBC 드라이버) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 10492c8f-3a18-4971-9db8-879e878083b9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 5e270f8c9be42dc109adeaa49acb84f29f2b9511
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bc985a5a56f54b1af8f9153bcd5129523233e2eb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307094"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421797"
 ---
 # <a name="sqldriverconnect-visual-foxpro-odbc-driver"></a>SQLDriverConnect(Visual FoxPro ODBC 드라이버)
 > [!NOTE]  

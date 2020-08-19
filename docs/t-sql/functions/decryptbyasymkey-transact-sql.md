@@ -1,4 +1,5 @@
 ---
+description: DECRYPTBYASYMKEY(Transact-SQL)
 title: DECRYPTBYASYMKEY(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: d9ebcd30-f01c-4cfe-b95e-ffe6ea13788b
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0b15b04368ad5b44d1c1adb91cc29367f9e344fc
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: b1c19a02d6cd965181f9ea94338e0669a3ec45df
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110470"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422787"
 ---
 # <a name="decryptbyasymkey-transact-sql"></a>DECRYPTBYASYMKEY(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -65,7 +66,7 @@ DecryptByAsymKey (Asym_Key_ID , { 'ciphertext' | @ciphertext }
 ## <a name="permissions"></a>사용 권한  
 `DECRYPTBYASYMKEY`는 비대칭 키에 대한 CONTROL 권한이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
 이 예제에서는 비대칭 키 `JanainaAsymKey02`로 원래 암호화된 암호 텍스트를 해독합니다. `AdventureWorks2012.ProtectedData04`는 이 비대칭 키를 저장했습니다. 이 예제에서는 비대칭 키 `JanainaAsymKey02`로 반환된 데이터를 암호 해독합니다. 예제에서는 암호 `pGFD4bb925DGvbd2439587y`를 사용하여 이 비대칭 키를 암호 해독했습니다. 예제에서는 반환된 일반 텍스트를 **nvarchar** 형식으로 변환했습니다.  
   
 ```  

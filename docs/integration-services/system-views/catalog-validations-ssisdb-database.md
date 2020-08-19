@@ -1,4 +1,5 @@
 ---
+description: catalog.validations(SSISDB 데이터베이스)
 title: catalog.validations(SSISDB 데이터베이스) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: dbafe110-b480-48f3-b45f-31d71ca68f62
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6847053a171fbfac422457de2411e8329e339ec8
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c4bfa8f9b0ba11574059e3dc05ef7b731d259999
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912472"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421977"
 ---
 # <a name="catalogvalidations-ssisdb-database"></a>catalog.validations(SSISDB 데이터베이스)
 
@@ -37,12 +38,12 @@ ms.locfileid: "86912472"
 |use32bitruntime|**bit**|64비트 운영 체제에서 32비트 런타임을 사용하여 패키지를 실행해야 하는지 여부를 나타냅니다. 값이 `1`이면 32비트 런타임으로 실행이 수행됩니다. 값이 `0`이면 64비트 런타임으로 실행이 수행됩니다.|  
 |reference_id|**bigint**|프로젝트에서 환경을 참조하는 데 사용된 프로젝트-환경 참조의 고유 ID입니다.|  
 |operation_type|**smallint**|작업의 유형입니다. 이 뷰에 표시되는 작업은 프로젝트 유효성 검사(`300`) 및 패키지 유효성 검사(`301`)입니다.|  
-|object_name|**nvarhcar(260)**|개체 이름입니다.|  
-|object_type|**smallint**|개체의 유형입니다. 개체는 프로젝트(`20`) 또는 패키지(`30`)일 수 있습니다.|  
+|object_name|**nvarhcar(260)**|개체의 이름입니다.|  
+|object_type|**smallint**|개체의 형식입니다. 개체는 프로젝트(`20`) 또는 패키지(`30`)일 수 있습니다.|  
 |object_id|**bigint**|작업의 영향을 받는 개체의 ID입니다.|  
 |start_time|**datetimeoffset(7)**|작업이 시작된 시간입니다.|  
 |end_time|**datetimeoffsset(7)**|작업이 종료된 시간입니다.|  
-|상태|**int**|작업의 상태. 가능한 값은 생성됨(`1`), 실행 중(`2`), 취소됨(`3`), 실패(`4`), 보류 중(`5`), 갑자기 종료됨(`6`), 성공(`7`), 중지 중(`8`) 및 완료(`9`)입니다.|  
+|상태|**int**|작업의 상태입니다. 가능한 값은 생성됨(`1`), 실행 중(`2`), 취소됨(`3`), 실패(`4`), 보류 중(`5`), 갑자기 종료됨(`6`), 성공(`7`), 중지 중(`8`) 및 완료(`9`)입니다.|  
 |caller_sid|**varbinary(85)**|Windows 인증을 사용하여 로그온한 사용자의 보안 ID(SID)입니다.|  
 |caller_name|**nvarchar(128)**|작업을 수행한 계정의 이름입니다.|  
 |process_id|**int**|외부 프로세스의 프로세스 ID입니다(해당되는 경우).|  

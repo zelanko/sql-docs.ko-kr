@@ -1,4 +1,5 @@
 ---
+description: catalog.master_properties(SSISDB 데이터베이스)
 title: catalog.master_properties(SSISDB 데이터베이스) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/16/2016
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 00bfa716-5390-48e3-b30c-d954d5e0be47
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: fbbb6599c4b50e30b566a9ec105b44d1b2853b9c
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 09e13f54b3e7ee92ed72b055246ea1235845448f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912519"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422057"
 ---
 # <a name="catalogmaster_properties-ssisdb-database"></a>catalog.master_properties(SSISDB 데이터베이스)
 

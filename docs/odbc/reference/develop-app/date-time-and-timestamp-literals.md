@@ -1,4 +1,5 @@
 ---
+description: 날짜, 시간, 타임스탬프 리터럴
 title: 날짜, 시간 및 타임 스탬프 리터럴 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2b42a52a-6353-494c-a179-3a7533cd729f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d899938be4689daab50a773f189219a797794006
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 10fb362a8ab61595a9b7205492de9c1115ae7013
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81288299"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424785"
 ---
 # <a name="date-time-and-timestamp-literals"></a>날짜, 시간, 타임스탬프 리터럴
 날짜, 시간 및 타임 스탬프 리터럴의 이스케이프 시퀀스는  
@@ -28,9 +29,9 @@ ms.locfileid: "81288299"
   
 |*리터럴 형식*|의미|*값* 의 형식|  
 |---------------------|-------------|-----------------------|  
-|**d**|Date|*yyyy*-*mm*mm-*dd*|  
+|**d**|Date|*yyyy* - *mm* - *dd*|  
 |**트**|런타임|*hh*:*mm*:*ss*[1]|  
-|**ts**|타임스탬프|*yyyy*-*mm*mm-*dd* *hh*:*mm*:*ss*[.* f ...*] 비슷합니다|  
+|**터미널**|타임스탬프|*yyyy* - *mm* - *dd* *hh*:*mm*:*ss*[.* f ...*] 비슷합니다|  
   
  [1] 초 구성 요소를 포함 하는 시간 또는 타임 스탬프 간격 리터럴에서 소수점 오른쪽에 있는 자릿수는 SQL_DESC_PRECISION 설명자 필드에 포함 된 초 전체 자릿수에 따라 달라 집니다. 자세한 내용은 [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)를 참조 하세요.  
   

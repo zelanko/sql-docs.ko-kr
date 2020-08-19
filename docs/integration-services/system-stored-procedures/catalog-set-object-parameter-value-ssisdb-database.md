@@ -1,4 +1,5 @@
 ---
+description: catalog.set_object_parameter_value(SSISDB 데이터베이스)
 title: catalog.set_object_parameter_value(SSISDB 데이터베이스) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: fb887543-f92f-404d-9495-a1dd23a6716e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3ee0158f8d04405aef6ea0fd70f6a63f942471a1
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: a6991d846ffd6dd4673f3faca443c1bd1578ecaf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912804"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422127"
 ---
 # <a name="catalogset_object_parameter_value-ssisdb-database"></a>catalog.set_object_parameter_value(SSISDB 데이터베이스)
 

@@ -1,4 +1,5 @@
 ---
+description: 설명자 필드 초기화
 title: 설명자 필드 초기화 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1da157cb-8ea9-4a56-983b-1c45650217c5
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e4ed6479a60f1d0695107c216b2f0c94a55f68ff
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2537e5e74c600c72368e46bda7640b881d9a34df
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300123"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424655"
 ---
 # <a name="initialization-of-descriptor-fields"></a>설명자 필드 초기화
 응용 프로그램 행 설명자를 할당 하면 해당 필드는 [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)에 표시 된 대로 초기 값을 받습니다. SQL_DESC_TYPE 필드의 초기 값은 SQL_DEFAULT입니다. 이를 통해 응용 프로그램에 표시 되는 데이터베이스 데이터의 표준 처리를 사용할 수 있습니다. 응용 프로그램은 설명자 레코드의 필드를 설정 하 여 다른 데이터 처리를 지정할 수 있습니다.  

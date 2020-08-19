@@ -1,4 +1,5 @@
 ---
+description: 뷰 (Integration Services 카탈로그)
 title: 뷰(Integration Services 카탈로그) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/16/2016
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: d0294d43-4852-46dc-9afa-d0c19ea9aa03
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 40d1d7e82ceb6c1654f116d289e2c201a1283c43
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d4dfe305d34435dd1b09dc825021995e1a9cb75d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915309"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421957"
 ---
 # <a name="views-integration-services-catalog"></a>뷰 (Integration Services 카탈로그)
 

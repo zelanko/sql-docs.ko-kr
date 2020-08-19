@@ -1,4 +1,5 @@
 ---
+description: 인덱스 및 제약 조건 비활성화
 title: 인덱스 및 제약 조건 비활성화 | Microsoft 문서
 ms.custom: ''
 ms.date: 02/17/2017
@@ -24,12 +25,12 @@ ms.assetid: 2198f1af-fa44-47e9-92df-f4fde322ba18
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f6a012fc4aca38401a7476b759a9a13995dad87b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 464b8069b09af65c86521878803fdf1bd7744548
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85629780"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424175"
 ---
 # <a name="disable-indexes-and-constraints"></a>인덱스 및 제약 조건 비활성화
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -126,7 +127,7 @@ ms.locfileid: "85629780"
  **Index Name**  
  인덱스 이름을 표시합니다. 실행하는 동안 이 열에는 상태를 나타내는 아이콘도 표시됩니다.  
   
- **테이블 이름**  
+ **Table Name**  
  인덱스가 생성된 테이블 또는 뷰의 이름을 표시합니다.  
   
  **인덱스 유형**  
@@ -155,7 +156,7 @@ ms.locfileid: "85629780"
   
      사용자가 작업을 중지하여 인덱스 비활성화가 완료되지 않았습니다.  
   
- **메시지**  
+ **Message**  
  비활성화 작업을 실행하는 동안 오류 메시지 텍스트를 제공합니다. 실행 중에는 오류 텍스트가 하이퍼링크로 표시됩니다. 하이퍼링크에는 오류 내용을 설명하는 텍스트가 표시됩니다. 대개의 경우 **메시지** 열에는 전체 메시지 텍스트의 일부만 표시됩니다. 다음과 같은 두 가지 방법으로 전체 텍스트를 볼 수 있습니다.  
   
 -   마우스 포인터를 메시지 셀 위로 이동하여 오류 텍스트가 나타나는 도구 설명을 봅니다.  

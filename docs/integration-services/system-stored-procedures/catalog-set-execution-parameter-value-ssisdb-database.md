@@ -1,4 +1,5 @@
 ---
+description: catalog.set_execution_parameter_value(SSISDB 데이터베이스)
 title: catalog.set_execution_parameter_value(SSISDB 데이터베이스) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 055d86c9-befd-4e63-acb1-6dfe833549d2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: da59f45f073f579a02b84727fad0e5ffef3faec5
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 7cc721f7f3568303d9fbb9f9a5f0724f8548207d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912841"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425115"
 ---
 # <a name="catalogset_execution_parameter_value-ssisdb-database"></a>catalog.set_execution_parameter_value(SSISDB 데이터베이스)
 
@@ -79,7 +80,7 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
   
 |값|Description|  
 |-----------|-----------------|  
-|0|None<br /><br /> 로깅이 해제됩니다. 패키지 실행 상태에만 기록됩니다.|  
+|0|없음<br /><br /> 로깅이 해제됩니다. 패키지 실행 상태에만 기록됩니다.|  
 |1|Basic<br /><br /> 사용자 지정 이벤트 및 진단 이벤트 외의 모든 이벤트가 기록됩니다. 이것은 기본값입니다.|  
 |2|성능<br /><br /> 성능 통계와 OnError 및 OnWarning 이벤트만 기록됩니다.|  
 |3|자세히<br /><br /> 사용자 지정 이벤트 및 진단 이벤트를 포함한 모든 이벤트가 기록됩니다. <br />사용자 지정 이벤트는 Integration Services 태스크에 의해 기록되는 이벤트를 포함합니다. 자세한 내용은 [사용자 지정된 로깅 메시지](../../integration-services/performance/integration-services-ssis-logging.md#custom_messages)를 참조하세요.|  

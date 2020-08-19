@@ -1,4 +1,5 @@
 ---
+description: 길이 및 표시기 값 사용
 title: 길이 및 표시기 값 사용 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 849792f1-cb1e-4bc2-b568-c0aff0b66199
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a0c878c9038b26aa996ed206c6b8adfe8d6c21e5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7e9c7feb463b2a92d716be24c76d00b64c69a860
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306764"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424405"
 ---
 # <a name="using-length-and-indicator-values"></a>길이 및 표시기 값 사용
 길이/표시기 버퍼는 데이터 버퍼의 데이터 바이트 길이 또는 데이터가 NULL 임을 나타내는 SQL_NULL_DATA와 같은 특수 표시기를 전달 하는 데 사용 됩니다. 사용 되는 함수에 따라 길이/표시기 버퍼가 SQLINTEGER 또는 SQLINTEGER로 정의 됩니다. 따라서이를 설명 하려면 단일 인수가 필요 합니다. 데이터 버퍼가 지연 되지 않은 입력 버퍼 이면이 인수는 데이터 자체의 바이트 길이 또는 표시기 값을 포함 합니다. 종종 이름이 *StrLen_or_Ind* 또는 유사한 이름입니다. 예를 들어 다음 코드는 **Sqlputdata** 를 호출 하 여 버퍼 전체에 데이터를 전달 합니다. 데이터 버퍼 (*Valueptr*)는 입력 버퍼 이므로 바이트*길이 (#*)가 직접 전달 됩니다.  

@@ -1,4 +1,5 @@
 ---
+description: 스크립트 구성 요소에서 변수 사용
 title: 스크립트 구성 요소에서 변수 사용 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 92d1881a-1ef1-43ae-b1ca-48d0536bdbc2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6ea2259b00be6f204b0507eaee3c5a12cb296a60
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 8e1e0b55183e2d1a2093d4726abdfd39f55f19ed
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913399"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425375"
 ---
 # <a name="using-variables-in-the-script-component"></a>스크립트 구성 요소에서 변수 사용
 

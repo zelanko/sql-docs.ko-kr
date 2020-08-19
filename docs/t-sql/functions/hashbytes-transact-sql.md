@@ -1,4 +1,5 @@
 ---
+description: HASHBYTES(Transact-SQL)
 title: HASHBYTES(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/29/2016
@@ -19,12 +20,12 @@ ms.assetid: 0ea6a4d1-313e-4f70-b939-dd2cd570f6d6
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c30f72c8b6fff2d22c3ff7b493d8ba126db91c6c
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 5c622d1c39668ee1e58c3eb1e60512d6f8d6f729
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113534"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422737"
 ---
 # <a name="hashbytes-transact-sql"></a>HASHBYTES(Transact-SQL)
 
@@ -69,9 +70,9 @@ HASHBYTES ( '<algorithm>', { @input | 'input' } )
 
 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 MD2, MD4, MD5, SHA 및 SHA1 알고리즘은 사용되지 않습니다. 대신에 SHA2_256 또는 SHA2_512를 사용합니다. 이전 알고리즘은 계속 작동하지만 사용 중단 이벤트가 발생합니다.
 
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
 ### <a name="return-the-hash-of-a-variable"></a>변수의 해시 반환  
- 다음 예에서는 변수 `SHA2_256`에 저장된 **nvarchar** 데이터의 `@HashThis` 해시를 반환합니다.  
+ 다음 예에서는 변수 `@HashThis`에 저장된 **nvarchar** 데이터의 `SHA2_256` 해시를 반환합니다.  
   
 ```sql  
 DECLARE @HashThis nvarchar(32);  

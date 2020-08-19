@@ -1,4 +1,5 @@
 ---
+description: 매개 변수 배열 사용
 title: 매개 변수 배열 사용 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5a28be88-e171-4f5b-bf4d-543c4383c869
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b584dc3d635e9fa8ce3228e4e89b0f24451fe165
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1a592131165e7dc2370ab1d22a3d9eba5f9609dd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306804"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424415"
 ---
 # <a name="using-arrays-of-parameters"></a>매개 변수 배열 사용
 매개 변수 배열을 사용 하기 위해 응용 프로그램은 SQL_ATTR_PARAMSET_SIZE의 *특성* 인수를 사용 하 여 **SQLSetStmtAttr** 를 호출 하 여 매개 변수 집합의 수를 지정 합니다. SQL_ATTR_PARAMS_PROCESSED_PTR의 *특성* 인수를 사용 하 여 **SQLSetStmtAttr** 를 호출 하 여 드라이버가 오류 집합을 포함 하 여 처리 된 매개 변수 집합의 수를 반환할 수 있는 변수의 주소를 지정 합니다. SQL_ATTR_PARAM_STATUS_PTR의 *특성* 인수를 사용 하는 **SQLSetStmtAttr** 를 호출 하 여 매개 변수 값의 각 행에 대 한 상태 정보를 반환 하는 배열을 가리킵니다. 이 드라이버는 문에 대해 유지 관리 되는 구조에 이러한 주소를 저장 합니다.  
@@ -28,7 +29,7 @@ ms.locfileid: "81306804"
   
  문을 실행 하기 전에 응용 프로그램은 각 바인딩된 배열의 각 요소에 대 한 값을 설정 합니다. 문이 실행 되 면 드라이버는 저장 된 정보를 사용 하 여 매개 변수 값을 검색 하 고 데이터 원본으로 보냅니다. 가능 하면 드라이버는 이러한 값을 배열로 전송 해야 합니다. 매개 변수 배열을 사용 하는 것은 데이터 원본에 대 한 단일 호출을 사용 하 여 배열의 모든 매개 변수를 사용 하 여 SQL 문을 실행 하는 것이 가장 좋습니다 .이 기능은 현재 Dbms에서 광범위 하 게 사용할 수 없습니다. 그러나 드라이버는 단일 매개 변수 집합을 사용 하 여 SQL 문을 여러 번 실행 하 여 시뮬레이션할 수 있습니다.  
   
- 응용 프로그램에서 매개 변수 배열을 사용 하기 전에 응용 프로그램에서 사용 하는 드라이버에서 매개 변수를 지원 하는지 알아야 합니다. 여기에는 두 가지 방법이 있습니다.  
+ 응용 프로그램에서 매개 변수 배열을 사용 하기 전에 응용 프로그램에서 사용 하는 드라이버에서 매개 변수를 지원 하는지 알아야 합니다. 이때 다음과 같은 두 가지 방법을 사용할 수 있습니다.  
   
 -   매개 변수 배열을 지 원하는 것으로 알려진 드라이버만 사용 합니다. 응용 프로그램은 이러한 드라이버의 이름을 하드 코딩 하거나 사용자에 게 이러한 드라이버만 사용 하도록 지시할 수 있습니다. 사용자 지정 응용 프로그램 및 수직 응용 프로그램은 일반적으로 제한 된 드라이버 집합을 사용 합니다.  
   

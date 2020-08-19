@@ -1,4 +1,5 @@
 ---
+description: DBCC FREESYSTEMCACHE(Transact-SQL)
 title: DBCC FREESYSTEMCACHE(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/25/2020
@@ -24,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 4b5c460b-e4ad-404a-b4ca-d65aba38ebbb
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 9c7ea9924a133194b089f4b0926731582f12c4fa
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 6edb71255096e8a3164361af07ca0d675f6a9e7d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483530"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422897"
 ---
 # <a name="dbcc-freesystemcache-transact-sql"></a>DBCC FREESYSTEMCACHE(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -69,7 +70,7 @@ DBCC FREESYSTEMCACHE는 다음을 반환합니다. “DBCC 실행이 완료되�
 ## <a name="permissions"></a>사용 권한  
 서버에 대한 ALTER SERVER STATE 권한이 필요합니다.
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-releasing-unused-cache-entries-from-a-resource-governor-pool-cache"></a>A. 리소스 관리자 풀 캐시에서 사용하지 않는 캐시 항목 해제  
 다음 예에서는 지정된 리소스 관리자 리소스 풀에만 사용되는 캐시를 정리하는 방법을 설명합니다.

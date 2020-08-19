@@ -1,4 +1,5 @@
 ---
+description: SQL 형식 식별자
 title: SQL 형식 식별자 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 22f6793b-2f43-4281-b35a-28f48e504dd8
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 95bf46844e9ed91aac1ec6cb93a298995f0901d6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 211cfdbe7805bade2875723a1cb62a02b5c876d3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299773"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424515"
 ---
 # <a name="sql-type-identifiers"></a>SQL 형식 식별자
 각 데이터 원본은 자체 SQL 데이터 형식을 정의 합니다. ODBC는 형식 식별자를 정의 하 고 각 형식 식별자에 매핑될 수 있는 SQL 데이터 형식의 일반 특성을 설명 합니다. 기본 데이터 원본의 각 데이터 형식이 ODBC의 SQL 형식 식별자에 매핑되는 방식에 대 한 드라이버 관련 방법입니다.  

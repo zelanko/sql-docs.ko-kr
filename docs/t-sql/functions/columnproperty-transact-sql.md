@@ -1,4 +1,5 @@
 ---
+description: COLUMNPROPERTY(Transact-SQL)
 title: COLUMNPROPERTY(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 2408c264-6eca-4120-bb71-df043c7c2792
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9d62953d88773c6f378590db64aeeb3f94d6fe22
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 360089db91ed52ba90f0566868b4f1c87eb2fd8c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111090"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417429"
 ---
 # <a name="columnproperty-transact-sql"></a>COLUMNPROPERTY(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -73,7 +74,7 @@ COLUMNPROPERTY ( id , column , property )
 |**IsSystemVerified**|[!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 열의 결정성과 전체 자릿수 속성을 확인할 수 있습니다. 이 속성은 계산 열과 뷰 열에만 적용됩니다.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL = 잘못된 입력|  
 |**IsXmlIndexable**|XML 인덱스에서 XML 열을 사용할 수 있습니다.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL = 잘못된 입력|  
 |**정밀도**|열 또는 매개 변수의 데이터 형식 길이입니다.|지정한 열 데이터 형식의 길이<br /><br /> -1 = **xml** 또는 큰 값 형식<br /><br /> NULL = 잘못된 입력|  
-|**규모**|열 또는 매개 변수 데이터 형식에 대한 소수 자릿수입니다.|소수 자릿수 값<br /><br /> NULL = 잘못된 입력|  
+|**크기 조정**|열 또는 매개 변수 데이터 형식에 대한 소수 자릿수입니다.|소수 자릿수 값<br /><br /> NULL = 잘못된 입력|  
 |**StatisticalSemantics**|열에 의미 체계 인덱싱을 사용하도록 설정되어 있습니다.|1: TRUE<br /><br /> 0: FALSE|  
 |**SystemDataAccess**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 시스템 카탈로그나 가상 시스템 테이블에 있는 데이터에 액세스하는 함수에서 열이 파생됩니다. 이 속성은 계산 열과 뷰 열에만 적용됩니다.|1 = TRUE(읽기 전용 액세스를 나타냄)<br /><br /> 0: FALSE<br /><br /> NULL = 잘못된 입력|  
 |**UserDataAccess**|뷰와 임시 테이블을 포함하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로컬 인스턴스에 저장된 사용자 테이블의 데이터에 액세스하는 함수에서 열이 파생됩니다. 이 속성은 계산 열과 뷰 열에만 적용됩니다.|1 = TRUE(읽기 전용 액세스를 나타냄)<br /><br /> 0: FALSE<br /><br /> NULL = 잘못된 입력|  

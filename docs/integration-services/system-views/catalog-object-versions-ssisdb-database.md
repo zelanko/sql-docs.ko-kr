@@ -1,4 +1,5 @@
 ---
+description: catalog.object_versions(SSISDB 데이터베이스)
 title: catalog.object_versions(SSISDB 데이터베이스) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 2fd8c020-1c77-4702-8e6b-efa6a348daab
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 59f757c4c3ae851131059bbac059decc643ec385
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 1a2371508c40e60ebacbe60d656d4d9ffa3f70ce
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912499"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422037"
 ---
 # <a name="catalogobject_versions-ssisdb-database"></a>catalog.object_versions(SSISDB 데이터베이스)
 
@@ -30,8 +31,8 @@ ms.locfileid: "86912499"
 |-----------------|---------------|-----------------|  
 |object_version_lsn|**bigint**|개체 버전의 고유 식별자(ID)입니다. 이 번호는 순차적이지 않을 수 있습니다.|  
 |object_id|**bigint**|개체의 고유 ID입니다.|  
-|object_type|**smallint**|개체의 유형입니다. 프로젝트의 경우 값 `20`이 표시됩니다.|  
-|object_name|**sysname(nvarchar(128))**|개체 이름입니다.|  
+|object_type|**smallint**|개체의 형식입니다. 프로젝트의 경우 값 `20`이 표시됩니다.|  
+|object_name|**sysname(nvarchar(128))**|개체의 이름입니다.|  
 |description|**nvarchar(1024)**|프로젝트에 대한 설명입니다.|  
 |created_by|**nvarchar(128)**|카탈로그에 개체를 추가한 사용자의 이름입니다.|  
 |created_time|**datetimeoffset**|개체가 카탈로그에 추가된 날짜 및 시간입니다.|  

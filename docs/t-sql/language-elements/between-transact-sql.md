@@ -1,4 +1,5 @@
 ---
+description: BETWEEN(Transact-SQL)
 title: BETWEEN(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/28/2017
@@ -23,12 +24,12 @@ ms.assetid: a5d5b050-203e-4355-ac85-e08ef5ca7823
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f5d3108c49eb60a478c375e2afed320ee965361d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 709af562247c040508627527c299ee6f5181da49
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919930"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417189"
 ---
 # <a name="between-transact-sql"></a>BETWEEN(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -47,7 +48,7 @@ test_expression [ NOT ] BETWEEN begin_expression AND end_expression
 
 ## <a name="arguments"></a>인수
  *test_expression*  
- [begin_expression](../../t-sql/language-elements/expressions-transact-sql.md) 및 *end_expression*에 정의된 범위에서 테스트할 *식*입니다. *test_expression*은 *begin_expression* 및 *end_expression* 모두와 동일한 데이터 형식이어야 합니다.  
+ *begin_expression* 및 *end_expression*에 정의된 범위에서 테스트할 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다. *test_expression*은 *begin_expression* 및 *end_expression* 모두와 동일한 데이터 형식이어야 합니다.  
   
  NOT  
  조건자의 결과를 부정합니다.  
@@ -65,14 +66,14 @@ test_expression [ NOT ] BETWEEN begin_expression AND end_expression
  **Boolean**  
   
 ## <a name="result-value"></a>결과 값  
- **test_expression**의 값이 *begin_expression*의 값보다 크거나 같고 *end_expression*의 값보다 작거나 같으면, BETWEEN에서 *TRUE*를 반환합니다.  
+ *test_expression*의 값이 *begin_expression*의 값보다 크거나 같고 *end_expression*의 값보다 작거나 같으면, BETWEEN에서 **TRUE**를 반환합니다.  
   
- **test_expression**의 값이 *begin_expression*의 값보다 작거나 *end_expression*의 값보다 크면, NOT BETWEEN에서 *TRUE*를 반환합니다.  
+ *test_expression*의 값이 *begin_expression*의 값보다 작거나 *end_expression*의 값보다 크면, NOT BETWEEN에서 **TRUE**를 반환합니다.  
   
 ## <a name="remarks"></a>설명  
  경계값이 포함되지 않는 범위를 지정하려면 보다 큼(>) 및 보다 작음 연산자(<)를 사용합니다. BETWEEN 또는 NOT BETWEEN 조건자에 입력한 값이 NULL이면 결과는 UNKNOWN이 됩니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-using-between"></a>A. BETWEEN 사용  
  다음 예제에서는 데이터베이스의 데이터베이스 역할에 대한 정보를 반환합니다. 첫 번째 쿼리는 모든 역할을 반환합니다. 두 번째 예제에서는 `BETWEEN` 절을 사용하여 역할을 지정한 `database_id` 값으로 제한합니다.  
@@ -180,7 +181,7 @@ WHERE RateChangeDate BETWEEN '20011212' AND '20020105';
  4           2002-01-05 00:00:00.000  
  ```  
  
- 쿼리의 날짜 값과 **열에 저장된**datetime`RateChangeDate` 값을 날짜의 시간 부분이 없이 지정했으므로 쿼리에서 예상되는 행을 검색합니다. 시간 부분을 지정하지 않으면 기본적으로 12:00 A.M.이 사용됩니다. 2002-01-05에서 12:00 A.M. 이후의 시간 부분이 포함된 행은 범위를 벗어났으므로 이 쿼리에서 반환되지 않습니다.  
+ 쿼리의 날짜 값과 `RateChangeDate` 열에 저장된 **datetime** 값을 날짜의 시간 부분이 없이 지정했으므로 쿼리에서 예상되는 행을 검색합니다. 시간 부분을 지정하지 않으면 기본적으로 12:00 A.M.이 사용됩니다. 2002-01-05에서 12:00 A.M. 이후의 시간 부분이 포함된 행은 범위를 벗어났으므로 이 쿼리에서 반환되지 않습니다.  
   
   
 ## <a name="see-also"></a>참고 항목  

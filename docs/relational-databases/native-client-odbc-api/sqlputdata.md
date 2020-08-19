@@ -1,4 +1,5 @@
 ---
+description: SQLPutData
 title: SQLPutData | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -14,11 +15,12 @@ ms.assetid: d39aaa5b-7fbc-4315-a7f2-5a7787e04f25
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8a9648fac10c5bc6d5e893bad123bbe02c38bc29
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: bd4bb999be51961d11dccf5cae107706dae9f6d6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009908"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423985"
 ---
 # <a name="sqlputdata"></a>SQLPutData
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -37,7 +39,7 @@ ms.locfileid: "86009908"
 ## <a name="diagnostics"></a>진단  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]SQLPutData에 대해 하나의 Native Client 특정 SQLSTATE가 있습니다.  
   
-|SQLSTATE|오류|Description|  
+|SQLSTATE|오류|설명|  
 |--------------|-----------|-----------------|  
 |22026|문자열 데이터, 길이가 일치하지 않음|전송할 데이터 길이 (바이트)를 응용 프로그램에서 지정 하는*경우 (예*SQL_LEN_DATA_AT_EXEC: *n* 이 0 보다 큰 경우)에는 sqlputdata를 통해 응용 프로그램에서 제공 하는 총 바이트 수가 지정 된 길이와 일치 해야 합니다.|  
   

@@ -1,4 +1,5 @@
 ---
+description: SQLGetInfo(Visual FoxPro ODBC 드라이버)
 title: SQLGetInfo (Visual FoxPro ODBC 드라이버) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: fbc39e3d-67d9-4331-bf5f-76dbd74c4c45
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2d4b976083b46bf632c4890c7fce3b0f13a9a761
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 370661a9a0ade5c5159f93a9af37c17b675032c3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81295193"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421677"
 ---
 # <a name="sqlgetinfo-visual-foxpro-odbc-driver"></a>SQLGetInfo(Visual FoxPro ODBC 드라이버)
 > [!NOTE]  
@@ -117,7 +118,7 @@ ms.locfileid: "81295193"
   
  SQL_DRIVER_HSTMT는 드라이버 관리자에 의해 구현 됩니다.  
   
- SQL_DRIVER_NAME "vfpodbc"를 반환 합니다.  
+ SQL_DRIVER_NAME "vfpodbc.dll"를 반환 합니다.  
   
  SQL_DRIVER_ODBC_VER "02.50" (SQL_SPEC_MAJOR, SQL_SPEC_MINOR)을 반환 합니다.  
   
@@ -221,7 +222,7 @@ ms.locfileid: "81295193"
   
  SQL_NULL_COLLATION SQL_NC_LOW를 반환 합니다.  
   
- SQL_NUMERIC_FUNCTIONS는 Visual FoxPro ODBC 드라이버에서 지원 하지 않는 SQL_FN_NUM_POWER를 제외한 모든 함수를 반환 합니다. 지원 되는 함수는 다음과 같습니다.  
+ SQL_NUMERIC_FUNCTIONS는 Visual FoxPro ODBC 드라이버에서 지원 하지 않는 SQL_FN_NUM_POWER를 제외한 모든 함수를 반환 합니다. 지원되는 함수는 다음과 같습니다.  
   
 -   SQL_FN_NUM_ABS  
   
@@ -298,7 +299,7 @@ ms.locfileid: "81295193"
 ## <a name="q"></a>Q  
  SQL_QUALIFIER_LOCATION SQL_QL_START를 반환 합니다.  
   
- SQL_QUALIFIER_NAME_SEPARATOR는 '! ' 또는 '\\'을 반환 합니다. 데이터베이스와 테이블 간의 구분 기호는 [데이터베이스](../../odbc/microsoft/visual-foxpro-terminology.md)에 연결 된 데이터 원본의 경우 '! '이 고\\, [사용 가능한 테이블](../../odbc/microsoft/visual-foxpro-terminology.md)의 디렉터리에 해당 하는 데이터 원본의 경우에는 ' '입니다.  
+ SQL_QUALIFIER_NAME_SEPARATOR는 '! ' 또는 ' \\ '을 반환 합니다. 데이터베이스와 테이블 간의 구분 기호는 [데이터베이스](../../odbc/microsoft/visual-foxpro-terminology.md)에 연결 된 데이터 원본의 경우 '! '이 고, \\ [사용 가능한 테이블](../../odbc/microsoft/visual-foxpro-terminology.md)의 디렉터리에 해당 하는 데이터 원본의 경우에는 ' '입니다.  
   
  SQL_QUALIFIER_TERM "database" 또는 "directory"를 반환 합니다. 한정자는 [데이터베이스](../../odbc/microsoft/visual-foxpro-terminology.md)에 연결 된 데이터 원본의 경우 "database"이 고, [사용 가능한 테이블](../../odbc/microsoft/visual-foxpro-terminology.md)의 디렉터리인 데이터 원본의 경우 "directory"입니다.  
   
@@ -314,7 +315,7 @@ ms.locfileid: "81295193"
   
  SQL_SCROLL_OPTIONS SQL_SO_STATIC 또는 SQL_SO_READONLY 반환 합니다.  
   
- SQL_SEARCH_PATTERN_ESCAPE "\\"를 반환 합니다.  
+ SQL_SEARCH_PATTERN_ESCAPE " \\ "를 반환 합니다.  
   
  SQL_SERVER_NAME ""를 반환 합니다.  
   
@@ -454,4 +455,4 @@ ms.locfileid: "81295193"
 ## <a name="u-z"></a>U-Z  
  SQL_UNION SQL_U_UNION 또는 SQL_U_UNION_ALL 반환 합니다.  
   
- SQL_USER_NAME 빈 \<> 반환 합니다.
+ SQL_USER_NAME 반환 \<blank> 됩니다.

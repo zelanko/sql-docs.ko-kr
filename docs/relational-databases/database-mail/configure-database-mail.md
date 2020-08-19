@@ -1,4 +1,5 @@
 ---
+description: 데이터베이스 메일 구성
 title: 데이터베이스 메일 구성 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/14/2017
@@ -39,12 +40,12 @@ f1_keywords:
 ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 3c52311482f8ad7107e384e3ed8e20100c094243
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ecf2233470afe15337c41a0a6051b41f18e0f40f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737633"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421087"
 ---
 # <a name="configure-database-mail"></a>데이터베이스 메일 구성
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -52,7 +53,7 @@ ms.locfileid: "85737633"
   
 -   **시작하기 전 주의 사항:**  [제한 사항](#Restrictions), [보안](#Security)  
   
--   **데이터베이스 메일을 구성하려면 다음을 사용합니다.**  [데이터베이스 메일 구성 마법사](#DBWizard), [템플릿 사용](#Template)  
+-   **데이터베이스 메일을 구성하려면:**  [데이터베이스 메일 구성 마법사](#DBWizard), [템플릿 사용](#Template)  
   
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
  **DatabaseMail XPs** 옵션을 사용하여 서버에서 데이터베이스 메일을 활성화할 수 있습니다. 자세한 내용은 [Database Mail XPs 서버 구성 옵션](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) 을 참조하세요.  
@@ -344,7 +345,7 @@ ms.locfileid: "85737633"
  **공용**  
  지정된 프로필을 공개 프로필로 지정하려면 이 옵션을 선택합니다.  
   
- **Profile Name**  
+ **프로필 이름**  
  프로필 이름을 표시합니다.  
   
  **기본 프로필**  
@@ -392,7 +393,7 @@ ms.locfileid: "85737633"
  첨부 파일의 최대 크기(바이트)입니다.  
   
  **금지할 첨부 파일 확장명**  
- 전자 메일 메시지에 대한 첨부 파일로 보낼 수 없는 쉼표로 구분된 확장명 목록입니다. 확장명을 추가하려면 찾아보기 단추( **...** )를 클릭합니다.  
+ 전자 메일 메시지에 대한 첨부 파일로 보낼 수 없는 쉼표로 구분된 확장명 목록입니다. 확장명을 추가하려면 찾아보기 단추(**...**)를 클릭합니다.  
   
  **데이터베이스 메일 실행 파일의 최소 수명(초)**  
  외부 메일 프로세스가 활성 상태로 유지되는 최소 시간(초)입니다. 데이터베이스 메일 큐에 전자 메일이 있는 한 프로세스는 활성 상태로 유지됩니다. 이 매개 변수는 처리할 메시지가 없을 경우 해당 프로세스를 활성 상태로 유지할 시간을 지정합니다.  

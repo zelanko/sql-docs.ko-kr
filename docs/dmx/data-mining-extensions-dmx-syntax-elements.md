@@ -1,4 +1,5 @@
 ---
+description: DMX(Data Mining Extensions) 구문 요소
 title: DMX (데이터 마이닝 확장) 구문 요소 | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 16d77e459cc472430081e52b485763b4e0c62f50
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: c0e61dfab45640f9f06362405c4c37dbb9b95181
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86971744"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422277"
 ---
 # <a name="data-mining-extensions-dmx-syntax-elements"></a>DMX(Data Mining Extensions) 구문 요소
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -39,7 +40,7 @@ ms.locfileid: "86971744"
  [DMX &#40;설명&#41;](../dmx/comments-dmx.md)  
  문의 용도를 설명하기 위해 DMX 문 또는 스크립트에 삽입할 수 있는 텍스트 요소입니다. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서 주석은 실행되지 않습니다.  
   
- [DMX&#41;&#40;예약 된 키워드](../dmx/reserved-keywords-dmx.md)  
+ [DMX&#41;&#40;예약 된 키워드 ](../dmx/reserved-keywords-dmx.md)  
  DMX에서 사용하도록 예약되어 있으므로 데이터베이스의 개체 이름으로 사용할 수 없는 단어입니다.  
   
  [콘텐츠 형식&#40;DMX&#41;](../dmx/content-types-dmx.md)  

@@ -1,4 +1,5 @@
 ---
+description: 트랜잭션 커밋 및 롤백
 title: 트랜잭션 커밋 및 롤백 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 800f2c1a-6f79-4ed1-830b-aa1a62ff5165
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1c272d60242d31622452c4dcb0f6a16c4838768f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b84be4d2734d9485748351c99ff2675bf3b54213
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299113"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424845"
 ---
 # <a name="committing-and-rolling-back-transactions"></a>트랜잭션 커밋 및 롤백
 수동 커밋 모드에서 트랜잭션을 커밋하거나 롤백하려면 응용 프로그램이 **Sqlendtran**을 호출 합니다. 트랜잭션을 지 원하는 Dbms 용 드라이버는 일반적으로 **COMMIT** 또는 **ROLLBACK** 문을 실행 하 여이 함수를 구현 합니다. 연결이 자동 커밋 모드일 때 드라이버 관리자는 **Sqlendtran** 을 호출 하지 않습니다. 응용 프로그램이 트랜잭션을 롤백하려고 시도 하는 경우에도 SQL_SUCCESS 반환 됩니다. 트랜잭션을 지원 하지 않는 Dbms 용 드라이버는 항상 자동 커밋 모드 이므로 아무것도 수행 하지 않거나 전혀 구현 하지 않고 SQL_SUCCESS 반환 하도록 **Sqlendtran** 을 구현할 수 있습니다.  

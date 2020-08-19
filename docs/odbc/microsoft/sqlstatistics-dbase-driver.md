@@ -1,4 +1,5 @@
 ---
+description: SQLStatistics(dBASE 드라이버)
 title: SQLStatistics (dBASE 드라이버) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 631cec1b-66b7-4103-b9a7-ffd81da3c442
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: deec1d7cff9ea1d0f8560b3c9b866cad79e69a25
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9285f78bbafb7594e3a9cbab2845cedeff0c1af9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299353"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421567"
 ---
 # <a name="sqlstatistics-dbase-driver"></a>SQLStatistics(dBASE 드라이버)
 > [!NOTE]  

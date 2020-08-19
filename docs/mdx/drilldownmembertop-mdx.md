@@ -1,4 +1,5 @@
 ---
+description: DrilldownMemberTop(MDX)
 title: DrilldownMemberTop (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 5bed7dfcf82b7f768ba1dc1e98128424665af6bd
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: fe58cf1c2793206c3217f4a0f7ea132d13a242ae
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970044"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421917"
 ---
 # <a name="drilldownmembertop-mdx"></a>DrilldownMemberTop(MDX)
 
@@ -34,7 +35,7 @@ DrillDownMemberTop(<Set_Expression1>, <Set_Expression2>, <Count> [,[<Numeric_Exp
  *Set_Expression2*  
  집합을 반환하는 유효한 MDX 식입니다.  
   
- *개수*  
+ *Count*  
  반환할 튜플 수를 지정하는 유효한 숫자 식입니다.  
   
  *Numeric_Expression*  

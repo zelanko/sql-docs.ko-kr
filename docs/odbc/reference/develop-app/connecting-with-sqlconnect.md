@@ -1,4 +1,5 @@
 ---
+description: SQLConnect로 연결
 title: SQLConnect를 사용 하 여 연결 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: b16319d2-2c2c-4341-abb5-caa9e17362b4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 25c1dca7324f73f6aacf472fb225a09424c73d3a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 96667de75dfbe9c521b5f5e74ec4c1b366da725d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81294653"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424835"
 ---
 # <a name="connecting-with-sqlconnect"></a>SQLConnect로 연결
 **SQLConnect** 는 가장 간단한 연결 함수입니다. 데이터 원본 이름이 필요 하며 선택적 사용자 ID와 암호를 허용 합니다. 데이터 원본 이름을 하드 코딩 하 고 사용자 ID 또는 암호가 필요 하지 않은 응용 프로그램에 적합 합니다. 또한 자체의 "모양과 느낌"을 제어 하거나 사용자 인터페이스가 없는 응용 프로그램에도 적합 합니다. 이러한 응용 프로그램은 **sqldatasources**원본을 사용 하 여 데이터 원본 목록을 작성 하 고 사용자에 게 데이터 원본, 사용자 ID 및 암호를 입력 하 라는 메시지를 표시 한 다음 **SQLConnect**를 호출할 수 있습니다.  

@@ -1,4 +1,5 @@
 ---
+description: 결과 집합 메타데이터
 title: 결과 집합 메타 데이터 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6d134515-e34d-4563-96d7-8ad7714818fd
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3b78cdeb4c8b3522f4677c0277401cd9395a36a5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 46738682900509d22df1eebaa22b13d3abfb729e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300083"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424595"
 ---
 # <a name="result-set-metadata"></a>결과 집합 메타데이터
 *메타* 데이터는 다른 데이터를 설명 하는 데이터입니다. 예를 들어 결과 집합 메타 데이터는 결과 집합의 열 수, 해당 열의 데이터 형식, 이름, 전체 자릿수, null 허용 여부 등의 결과 집합을 설명 합니다.  

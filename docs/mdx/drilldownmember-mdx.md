@@ -1,4 +1,5 @@
 ---
+description: DrilldownMember(MDX)
 title: DrilldownMember (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 1f387d0524ea22aca3c2bb7eb073af07bbdf0612
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 284456995d163c04bc315424ea04b76f17dc228e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970054"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421927"
 ---
 # <a name="drilldownmember-mdx"></a>DrilldownMember(MDX)
 
@@ -55,7 +56,7 @@ DrillDownMember(<Set_Expression1>, <Set_Expression2> [,[<Target_Hierarchy>]] [,[
 > [!IMPORTANT]  
 >  바로 다음에 자식 중 하나가 오는 멤버는 드릴다운되지 않습니다. 집합의 멤버 순서는 드릴 다운 * 및 Drillup 함수 패밀리 모두에 대해 중요 합니다 \* .  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 첫 번째 집합의 멤버 중 두 번째 집합에도 있는 멤버인 Australia로 드릴다운합니다.  
   
 ```  

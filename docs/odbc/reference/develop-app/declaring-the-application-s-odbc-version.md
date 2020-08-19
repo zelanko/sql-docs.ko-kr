@@ -1,4 +1,5 @@
 ---
+description: 응용 프로그램&#39;s ODBC 버전 선언
 title: 응용 프로그램&#39;s ODBC 버전 선언 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 083a1ef5-580a-4979-9cf3-50f4549a080a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ba346ed7f7a261446110c5513026d20a86fd3a19
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0ff41a7a8b56133b0a44947980805c5b46238bad
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81285233"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424724"
 ---
 # <a name="declaring-the-application39s-odbc-version"></a>응용 프로그램&#39;s ODBC 버전 선언
 응용 프로그램에서 연결을 할당 하기 전에 SQL_ATTR_ODBC_VERSION 환경 특성을 설정 해야 합니다. 이 특성은 다음 항목을 사용 하는 경우 응용 프로그램이 ODBC *2.x 또는 odbc* *2.x 사양을 따르는지* 여부를 명시 합니다.  

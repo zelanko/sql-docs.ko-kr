@@ -1,4 +1,5 @@
 ---
+description: 새 프로젝트 (SSMA) (AccessToSQL)
 title: 새 프로젝트 (SSMA) (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ca294f6d-eeb5-42ca-9306-156281a3f0f3
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 61c14895f2e464713661f74890b2eb1d5ccc79f5
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 042634d7b08d4aa37c8efccbec2055e984b057a7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87937918"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423017"
 ---
 # <a name="new-project-ssma-accesstosql"></a>새 프로젝트 (SSMA) (AccessToSQL)
 **새 프로젝트** 대화 상자를 사용 하 여 새 ssma 프로젝트를 만들 수 있습니다. **새 프로젝트** 대화 상자에 액세스 하려면 **파일** 메뉴에서 **새 프로젝트**를 클릭 합니다.  
@@ -40,7 +41,7 @@ ms.locfileid: "87937918"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016  
   

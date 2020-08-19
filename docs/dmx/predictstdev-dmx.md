@@ -1,4 +1,5 @@
 ---
+description: PredictStdev(DMX)
 title: PredictStdev (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 25dde754c2e71c6aa40d763d7e3a81c3edca6938
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 262533a9c5f4a799bad0f72aee51f1399ba2f483
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970712"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422247"
 ---
 # <a name="predictstdev-dmx"></a>PredictStdev(DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -36,7 +37,7 @@ PredictStdev(<scalar column reference>)
 ## <a name="remarks"></a>설명  
  열 참조가 불연속 이면 불연속 값에서 표준 편차를 계산할 수 없기 때문에 **Predictstdev** 는 0을 반환 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 자연 예측 조인을 사용하여 TM Decision Tree 트리 마이닝 모델을 기반으로 개별 고객이 자전거를 구입할 가능성이 있는지 여부를 확인하고 예측의 표준 편차도 확인합니다.  
   
 ```  

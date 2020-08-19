@@ -1,4 +1,5 @@
 ---
+description: 열 크기, 10 진수 숫자, 전송 옥텟 길이 및 표시 크기-ODBC
 title: 열 크기, 10 진수, 전송 옥텟 길이, 표시 크기 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 723107a1-be08-4ea3-a8c0-b2c45d38d1aa
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 55b8e9dd305764a89601e9ffd5a337e42a8d8db3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d00a23fb38bdece97ffcbde0974b7bdf893a5133
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306574"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421507"
 ---
 # <a name="column-size-decimal-digits-transfer-octet-length-and-display-size---odbc"></a>열 크기, 10 진수 숫자, 전송 옥텟 길이 및 표시 크기-ODBC
 데이터 형식은 열 (또는 매개 변수) 크기, 10 진수 숫자, 길이 및 표시 크기로 구분 됩니다. 다음 ODBC 함수는 SQL 문 또는 데이터 원본의 SQL 데이터 형식에 대 한 매개 변수에 대해 이러한 특성을 반환 합니다. 각 ODBC 함수는 다음과 같이 이러한 특성의 다른 집합을 반환 합니다.  

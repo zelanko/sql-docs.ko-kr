@@ -1,4 +1,5 @@
 ---
+description: datetimeoffset(Transact-SQL)
 title: datetimeoffset(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/23/2017
@@ -23,12 +24,12 @@ ms.assetid: a0455b71-ca25-476e-a7a8-0770f1860bb7
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 274af7a5c9a1e8f12f661305e1e2d1206bf64664
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: d58c0b86f5a3d46764d3be1e70444139b599172d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008040"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417669"
 ---
 # <a name="datetimeoffset-transact-sql"></a>datetimeoffset(Transact-SQL)
 
@@ -41,7 +42,7 @@ ms.locfileid: "86008040"
 |속성|값|  
 |---|---|
 |구문|**datetimeoffset** [ (*초 소수 부분 자릿수*) ]|  
-|사용|DECLARE \@MyDatetimeoffset **datetimeoffset(7)**<br /><br /> CREATE TABLE Table1( Column1 **datetimeoffset(7)** )|  
+|사용량|DECLARE \@MyDatetimeoffset **datetimeoffset(7)**<br /><br /> CREATE TABLE Table1( Column1 **datetimeoffset(7)** )|  
 |하위 클라이언트에 대해 사용되는 기본 문자열 리터럴 형식|YYYY-MM-DD hh:mm:ss[.nnnnnnn] [{+&#124;-}hh:mm]<br /><br /> 자세한 내용은 뒷부분에 나오는 "하위 클라이언트에 대한 이전 버전과의 호환성" 섹션을 참조하세요.|  
 |날짜 범위|0001-01-01부터 31.12.99까지<br /><br /> CE 1년 1월 1일부터 CE 9999년 12월 31일까지|  
 |시간 범위|00:00:00부터 23:59:59.9999999까지|  
@@ -53,8 +54,8 @@ ms.locfileid: "86008040"
 |정확도|100나노초|  
 |기본값|1900-01-01 00:00:00 00:00|  
 |달력|일반 달력|  
-|사용자 정의 초 소수 부분 자릿수|yes|  
-|표준 시간대 오프셋 인식 및 유지|yes|  
+|사용자 정의 초 소수 부분 자릿수|예|  
+|표준 시간대 오프셋 인식 및 유지|예|  
 |일광 절약 시간제 인식|예|  
   
 |지정한 소수 자릿수|결과(전체 자릿수, 소수 자릿수)|열 길이(바이트)|소수 자릿수 초의 전체 자릿수|  
@@ -236,7 +237,7 @@ SELECT
 |데이터 형식|출력|  
 |---|---|
 |**Time**|12:35:29. 1234567|  
-|**Date**|2007-05-08|  
+|**날짜**|2007-05-08|  
 |**Smalldatetime**|2007-05-08 12:35:00|  
 |**날짜/시간**|2007-05-08 12:35:29.123|  
 |**datetime2**|2007-05-08 12:35:29. 1234567|  

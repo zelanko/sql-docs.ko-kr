@@ -1,4 +1,5 @@
 ---
+description: 데이터 업데이트 개요
 title: 데이터 업데이트 개요 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 062036a4-cda6-4aaa-9765-f1ec3e0b31b1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9972ab61f041385ae4ca616df093ae63ad7a47d9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2b1755ea75426030a96ed7b349cc82f0fc7e282a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300389"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424425"
 ---
 # <a name="updating-data-overview"></a>데이터 업데이트 개요
 응용 프로그램은 SQL 문을 실행 하거나 **SQLSetPos** 또는 **SQLBulkOperations**를 호출 하 여 데이터를 업데이트할 수 있습니다. **UPDATE**, **DELETE**및 **INSERT** 문은 데이터 원본에서 직접 작동 하며 일반적으로 드라이버에서 지원 됩니다. 검색 된 update 및 delete 문에는 변경할 행 사양이 포함 되어 있습니다. 위치 지정 update 및 delete 문과 **SQLSetPos** 는 커서를 통해 데이터 원본에 대해 작동 하며 광범위 하 게 지원 됩니다.  

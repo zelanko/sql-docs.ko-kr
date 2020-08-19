@@ -1,4 +1,5 @@
 ---
+description: Excel 데이터 원본에 연결(SQL Server 가져오기 및 내보내기 마법사)
 title: Excel 데이터 원본에 연결(SQL Server 가져오기 및 내보내기 마법사) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/02/2018
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 43fbaca0-36d8-4583-9056-af7010209b87
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3a017d8de23da9297062e1d232ea86ad2aabb25a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 39ff753dec9f3f918fbd21dea3b04306feba307a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919999"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425305"
 ---
 # <a name="connect-to-an-excel-data-source-sql-server-import-and-export-wizard"></a>Excel 데이터 원본에 연결(SQL Server 가져오기 및 내보내기 마법사)
 
@@ -38,7 +39,7 @@ Excel 파일에 연결하려면 추가 파일을 다운로드하여 설치해야
 > 이 데이터 공급자에 대한 연결 옵션은 Excel이 원본 또는 대상인지 여부에 관계없이 동일합니다. 즉 마법사의 **데이터 원본 선택** 및 **대상 선택** 페이지 모두에서 동일한 옵션이 표시됩니다.
 
 **Excel 파일 경로**  
- Excel 파일의 경로와 파일 이름을 지정합니다. 다음은 그 예입니다.
+ Excel 파일의 경로와 파일 이름을 지정합니다. 예를 들면 다음과 같습니다.
 -   로컬 컴퓨터의 파일은 **C:\\MyData.xlsx**입니다.
 -   네트워크 공유의 파일은 **\\\\Sales\\Database\\Northwind.xlsx**입니다.
 

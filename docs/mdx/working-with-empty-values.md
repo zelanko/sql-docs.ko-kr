@@ -1,4 +1,5 @@
 ---
+description: 빈 값 작업
 title: 빈 값 사용 | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: ae8d6262f6502add09376b76a767a3076c830cb8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f497ba1ccf84ac642144340af4d5597d773dcadb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68125854"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421897"
 ---
 # <a name="working-with-empty-values"></a>빈 값 작업
 
@@ -54,7 +55,7 @@ WHERE([Date].[Calendar].[Calendar Year].&[2001])
   
 -   빈 셀 값이 문자열 연결 연산자(+)에 대한 피연산자인 경우 다른 피연산자가 비어 있지 않은 값이라면 빈 셀 값을 빈 문자열로 취급합니다. 두 피연산자 모두 빈 경우 문자열 연결 연산자는 빈 셀 값을 반환합니다.  
   
--   빈 셀 값이 임의의 비교 연산자(=, <>, >=, \<=, >, <), 빈 셀 값은 다른 피연산자의 데이터 형식이 숫자나 문자열 인지 여부에 따라 0 또는 빈 문자열로 처리 됩니다. 두 피연산자 모두 빈 경우 두 피연산자 모두 0으로 취급합니다.  
+-   빈 셀 값이 임의의 비교 연산자(=, <>, >=, \<=, > , <), 빈 셀 값은 다른 피연산자의 데이터 형식이 숫자나 문자열 인지 여부에 따라 0 또는 빈 문자열로 처리 됩니다. 두 피연산자 모두 빈 경우 두 피연산자 모두 0으로 취급합니다.  
   
 -   숫자 값을 정렬할 때는 빈 셀 값이 0과 동일한 위치에서 정렬됩니다. 빈 셀 값과 0 사이에서는 빈 셀이 0보다 앞에 정렬됩니다.  
   
@@ -122,23 +123,23 @@ WHERE([Date].[Calendar].[Calendar Year].&[2001])
   
 |AND|TRUE|EMPTY|FALSE|  
 |---------|----------|-----------|-----------|  
-|**TRUE**|TRUE|FALSE|FALSE|  
+|**TRUE**|true|FALSE|FALSE|  
 |**비우려면**|FALSE|EMPTY|FALSE|  
 |**FALSE**|FALSE|FALSE|FALSE|  
   
  이 테이블에서는 두 개의 부울 피연산자에 OR 연산자를 적용한 결과를 보여 줍니다.  
   
-|또는|TRUE|FALSE|  
+|또는|true|FALSE|  
 |--------|----------|-----------|  
 |**TRUE**|TRUE|TRUE|  
 |**비우려면**|TRUE|TRUE|  
-|**FALSE**|TRUE|FALSE|  
+|**FALSE**|true|FALSE|  
   
  이 테이블에서는 NOT 연산자가 부정하거나 반대로 바꾼 부울 연산자의 결과를 보여 줍니다.  
   
 |NOT 연산자를 적용할 부울 식|결과|  
 |-------------------------------------------------------------|------------------|  
-|TRUE|FALSE|  
+|true|FALSE|  
 |EMPTY|EMPTY|  
 |FALSE|TRUE|  
   

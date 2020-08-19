@@ -1,4 +1,5 @@
 ---
+description: CalculationPassValue(MDX)
 title: CalculationPassValue (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: ae667d2cecb65f2525aaf855d3d1b70d40a59b21
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 98d30326b709f7bd651b7941e48d412a7b875ffd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68016869"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425045"
 ---
 # <a name="calculationpassvalue-mdx"></a>CalculationPassValue(MDX)
 
@@ -54,7 +55,7 @@ CalculationPassValue(String_Expression ,Pass_Value [, ABSOLUTE | RELATIVE [,ALL]
   
  문자열 식이 제공 된 경우 함수는 지정 된 계산 패스에서 지정 된 MDX 문자열 식을 계산 하 고 선택적으로 액세스 플래그 및 액세스 플래그 한정자로 수정 하 여 문자열 값을 반환 합니다 *.*  
   
- 에서 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]자동 재귀 해결을 사용 하는 경우이 함수는 실제로 거의 사용 되지 않습니다.  
+ 에서 자동 재귀 해결을 사용 하는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 경우이 함수는 실제로 거의 사용 되지 않습니다.  
   
 > [!NOTE]  
 >  관리자만 MDX 스크립트 내에서 **CalculationPassValue** 함수를 사용할 수 있습니다. 이 함수가 포함된 MDX 스크립트가 관리자 권한이 없는 작업의 컨텍스트로 실행되면 오류가 발생합니다.  

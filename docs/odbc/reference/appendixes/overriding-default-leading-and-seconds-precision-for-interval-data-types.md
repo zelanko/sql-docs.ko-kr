@@ -1,4 +1,5 @@
 ---
+description: 간격 데이터 형식에 대한 기본 선행 및 초 전체 자릿수 재정의
 title: Interval 데이터 형식에 대 한 선행 및 초 전체 자릿수 재정의 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3d65493f-dce7-4d29-9f59-c63a4e47918c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1e60d5d8fc696ad8e2bd4cfb0c082ff214e066d0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 97375bf23a8530d78dea65dc75ce487cc4f807dd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303604"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425005"
 ---
 # <a name="overriding-default-leading-and-seconds-precision-for-interval-data-types"></a>간격 데이터 형식에 대한 기본 선행 및 초 전체 자릿수 재정의
 **SQLBindCol** 또는 SQLSetDescField를 호출 하 여 **SQLSetDescField**의 SQL_DESC_TYPE 필드가 datetime 또는 interval C 형식으로 설정 된 경우 간격 (초)의 전체 자릿수가 포함 된 SQL_DESC_PRECISION 필드가 다음 기본값으로 설정 됩니다.  

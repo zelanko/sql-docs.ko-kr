@@ -1,4 +1,5 @@
 ---
+description: SET CONTEXT_INFO(Transact-SQL)
 title: SET CONTEXT_INFO(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/26/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: a0b7b9f3-dbda-4350-a274-bd9ecd5c0a74
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e5deb7adf0be9de47cdd05e04280a1eb8b9f6678
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: bb9e8487303cb2d718eddc2052b453c55b520d97
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484707"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88414909"
 ---
 # <a name="set-context_info-transact-sql"></a>SET CONTEXT_INFO(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -64,7 +65,7 @@ SET CONTEXT_INFO { binary_str | @binary_var }
   
  저장 프로시저나 트리거에서 SET CONTEXT_INFO를 실행하면 다른 SET 문과 달리 저장 프로시저나 트리거가 완료된 후에도 컨텍스트 정보에 대해 설정된 새 값이 계속 유지됩니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-setting-context-information-by-using-a-constant"></a>A. 상수를 사용하여 컨텍스트 정보 설정  
  다음 예에서는 값을 설정하고 결과를 표시하여 `SET CONTEXT_INFO`를 보여 줍니다. `sys.dm_exec_sessions`을 쿼리하려면 SELECT 및 VIEW SERVER STATE 권한이 필요하지만 CONTEXT_INFO 함수를 사용하면 해당 권한이 필요하지 않습니다.  
@@ -94,6 +95,6 @@ GO
  [SET 문&#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
  [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
  [sys.dm_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)   
- [CONTEXT_INFO&#40;Transact-SQL&#41;](../../t-sql/functions/context-info-transact-sql.md)  
+ [CONTEXT_INFO  &#40;Transact-SQL&#41;](../../t-sql/functions/context-info-transact-sql.md)  
   
   

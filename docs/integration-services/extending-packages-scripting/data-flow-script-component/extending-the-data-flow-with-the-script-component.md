@@ -1,4 +1,5 @@
 ---
+description: 스크립트 구성 요소를 사용하여 데이터 흐름 확장
 title: 스크립트 구성 요소를 사용하여 데이터 흐름 확장 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -24,19 +25,19 @@ helpviewer_keywords:
 ms.assetid: 072bc4b8-363a-4131-87c3-240338e2fa5c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3f8818197bffefd42004dbd4d0cc4d1732d79029
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 82f34ab83935bee2972a4dbb2b007eb2632b9fba
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913419"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425395"
 ---
 # <a name="extending-the-data-flow-with-the-script-component"></a>스크립트 구성 요소를 사용하여 데이터 흐름 확장
 
 [!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-  스크립트 구성 요소는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic 또는 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] Visual C#으로 작성되고 패키지 런타임에 컴파일 및 실행되는 사용자 지정 코드를 사용하여 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 패키지의 데이터 흐름 기능을 확장합니다. 스크립트 구성 요소를 사용하면 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]에서 제공하는 원본, 변환 및 대상이 개발자의 요구 사항을 완전히 만족시키지 못하는 경우 사용자 지정 데이터 흐름 원본, 변환 또는 대상을 손쉽게 개발할 수 있습니다. 필요한 입력 및 출력으로 구성 요소를 구성한 후에는 이 구성 요소에서 필요한 모든 인프라 코드를 자동으로 작성하므로 개발자는 사용자 지정 처리에 필요한 코드에만 집중하면 됩니다.  
+  스크립트 구성 요소는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic 또는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#으로 작성되고 패키지 런타임에 컴파일 및 실행되는 사용자 지정 코드를 사용하여 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 패키지의 데이터 흐름 기능을 확장합니다. 스크립트 구성 요소를 사용하면 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]에서 제공하는 원본, 변환 및 대상이 개발자의 요구 사항을 완전히 만족시키지 못하는 경우 사용자 지정 데이터 흐름 원본, 변환 또는 대상을 손쉽게 개발할 수 있습니다. 필요한 입력 및 출력으로 구성 요소를 구성한 후에는 이 구성 요소에서 필요한 모든 인프라 코드를 자동으로 작성하므로 개발자는 사용자 지정 처리에 필요한 코드에만 집중하면 됩니다.  
   
  스크립트 구성 요소는 각각 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> 및 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer> 클래스의 인스턴스인 **ComponentWrapper** 및 **BufferWrapper** 프로젝트 항목의 자동 생성된 클래스를 통해 포함하는 패키지 및 데이터 흐름과 상호 작용합니다. 이러한 클래스는 연결, 변수 및 기타 패키지 항목을 형식화된 개체로 사용할 수 있도록 하고 입력과 출력을 관리합니다. 또한 스크립트 구성 요소에서는 사용자 지정 기능을 구현하는 데 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 네임스페이스 및 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 클래스 라이브러리뿐 아니라 사용자 지정 어셈블리도 사용합니다.  
   
@@ -74,7 +75,7 @@ ms.locfileid: "86913419"
  [추가 스크립트 구성 요소 예](../../../integration-services/extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md)  
  간단한 예를 통해 스크립트 구성 요소의 가능한 몇 가지 사용 방법을 설명하고 보여 줍니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [스크립트 구성 요소](../../../integration-services/data-flow/transformations/script-component.md)   
  [스크립트 태스크와 스크립트 구성 요소 비교](../../../integration-services/extending-packages-scripting/comparing-the-script-task-and-the-script-component.md)  
   

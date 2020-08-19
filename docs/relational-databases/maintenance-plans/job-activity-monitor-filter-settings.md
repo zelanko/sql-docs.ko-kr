@@ -1,4 +1,5 @@
 ---
+description: 작업 활동 모니터(필터 설정)
 title: 작업 활동 모니터(필터 설정) | Microsoft 문서
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 89cb0055-5262-447f-8464-7203d4caba78
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: d143c4c52c122c159e7c80dd58d8cee847849360
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f7533366a28517fcc2fdb8ca5c2e4ad0c0dd01c5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85666939"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424055"
 ---
 # <a name="job-activity-monitor-filter-settings"></a>작업 활동 모니터(필터 설정)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,7 +50,7 @@ ms.locfileid: "85666939"
  **범주**  
  작업 범주로 작업을 필터링합니다.  
   
- **예약됨**  
+ **예약**  
  일정이 있는 작업을 모두 표시하거나 일정이 없는 작업을 모두 표시합니다.  
   
  **상태**  

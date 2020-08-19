@@ -1,4 +1,5 @@
 ---
+description: OBJECT_ID(Transact-SQL)
 title: OBJECT_ID(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -26,12 +27,12 @@ ms.assetid: f89286db-440f-4218-a828-30881ce3077a
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f2ae4289776787d2e91b3c9c911629b38ced975d
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 34139155f6d5e7f58657a5f8e8adf6ac2d4ecbf3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112674"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417249"
 ---
 # <a name="object_id-transact-sql"></a>OBJECT_ID(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -57,7 +58,7 @@ OBJECT_ID ( '[ database_name . [ schema_name ] . | schema_name . ]
  사용할 개체입니다. *object_name*은 **varchar** 또는 **nvarchar**입니다. *object_name*이 **varchar**인 경우 암시적으로 **nvarchar**로 변환됩니다. 데이터베이스 및 스키마 이름 지정은 옵션입니다.  
   
  **'** *object_type* **'**  
- 스키마 범위 개체 형식입니다. *object_type*은 **varchar** 또는 **nvarchar**입니다. *object_type*이 **varchar**인 경우 암시적으로 **nvarchar**로 변환됩니다. 개체 형식의 목록은 **sys.objects &#40;Transact-SQL&#41;** 의 [type](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) 열을 참조하세요.  
+ 스키마 범위 개체 형식입니다. *object_type*은 **varchar** 또는 **nvarchar**입니다. *object_type*이 **varchar**인 경우 암시적으로 **nvarchar**로 변환됩니다. 개체 형식의 목록은 [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)의 **type** 열을 참조하세요.  
   
 ## <a name="return-types"></a>반환 형식  
  **int**  
@@ -79,7 +80,7 @@ OBJECT_ID ( '[ database_name . [ schema_name ] . | schema_name . ]
 ## <a name="examples"></a>예  
   
 ### <a name="a-returning-the-object-id-for-a-specified-object"></a>A. 지정한 개체의 개체 ID 반환  
- 다음 예에서는 `Production.WorkOrder` 데이터베이스의 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 테이블에 관한 개체 ID를 반환합니다.  
+ 다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 `Production.WorkOrder` 테이블에 관한 개체 ID를 반환합니다.  
   
 ```  
 USE master;  
@@ -100,7 +101,7 @@ GO
 ```  
   
 ### <a name="c-using-object_id-to-specify-the-value-of-a-system-function-parameter"></a>C. OBJECT_ID 사용하여 시스템 함수 매개 변수의 값을 지정  
- 다음 예제에서는 `Person.Address`sys.dm_db_index_operational_stats[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 함수를 사용하여 [ 데이터베이스에 있는 ](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md) 테이블의 모든 인덱스와 파티션에 대한 정보를 반환합니다.  
+ 다음 예제에서는 [sys.dm_db_index_operational_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md) 함수를 사용하여 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에 있는 `Person.Address` 테이블의 모든 인덱스와 파티션에 대한 정보를 반환합니다.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[tsql](../../includes/tsql-md.md)] 함수 DB_ID 및 OBJECT_ID를 사용하여 매개 변수 값이 반환된 경우 유효한 ID가 반환되는지 항상 확인합니다. 존재하지 않는 이름을 입력하거나 철자를 잘못 입력하는 등의 이유로 데이터베이스 또는 개체 이름을 찾을 수 없으면 두 함수 모두 NULL을 반환합니다. **sys.dm_db_index_operational_stats** 함수는 NULL을 모든 데이터베이스나 모든 개체를 지정하는 와일드카드 값으로 해석합니다. 이는 의도하지 않은 결과일 수 있으므로 이 섹션의 예에서는 안전하게 데이터베이스 및 개체 ID를 확인하는 방법을 보여 줍니다.  
@@ -128,7 +129,7 @@ GO
 ## <a name="examples-sssdwfull-and-sspdw"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="d-returning-the-object-id-for-a-specified-object"></a>D: 지정한 개체에 대한 개체 ID 반환  
- 다음 예에서는 `FactFinance` 데이터베이스의 [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)] 테이블에 관한 개체 ID를 반환합니다.  
+ 다음 예에서는 [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)] 데이터베이스의 `FactFinance` 테이블에 관한 개체 ID를 반환합니다.  
   
 ```  
 SELECT OBJECT_ID('AdventureWorksPDW2012.dbo.FactFinance') AS 'Object ID';  
@@ -139,7 +140,7 @@ SELECT OBJECT_ID('AdventureWorksPDW2012.dbo.FactFinance') AS 'Object ID';
  [sys.objects&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
  [sys.dm_db_index_operational_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)   
  [OBJECT_DEFINITION&#40;Transact-SQL&#41;](../../t-sql/functions/object-definition-transact-sql.md)   
- [OBJECT_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/object-name-transact-sql.md)  
+ [OBJECT_NAME&#40;Transact-SQL&#41;](../../t-sql/functions/object-name-transact-sql.md)  
   
   
 

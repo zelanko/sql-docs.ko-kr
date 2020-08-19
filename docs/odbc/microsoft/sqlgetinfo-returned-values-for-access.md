@@ -1,4 +1,5 @@
 ---
+description: Access에 대한 SQLGetInfo 반환 값
 title: 액세스를 위해 SQLGetInfo 반환 된 값 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: c551e07f-30c4-41a2-8991-6010a3511d76
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9119a87fa1f4cca25369d4dfb59a1987334c03cd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 27af9272132b2e7f2489def0d1e6720bfdeb4195
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298563"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421737"
 ---
 # <a name="sqlgetinfo-returned-values-for-access"></a>Access에 대한 SQLGetInfo 반환 값
 다음 표에서는 *Finfotype* 인수의 C 언어 #defines와 **SQLGetInfo**에서 반환 된 해당 값을 보여 줍니다. 이 정보는 나열 된 C 언어 #defines을 *Finfotype* 인수의 **SQLGetInfo** 에 전달 하 여 검색할 수 있습니다. **SQLGetInfo**에서 반환 하는 값에 대 한 자세한 내용은 *ODBC 프로그래머 참조*를 참조 하세요.  
@@ -81,7 +82,7 @@ ms.locfileid: "81298563"
 |SQL_CURSOR_COMMIT_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_ROLLBACK_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_SENSITIVITY|SQL_UNSPECIFIED|  
-|SQL_DATA_SOURCE_NAME|Odbc .ini에서 DSN 또는 "" if DRIVER 키워드를 사용 하는 경우.|  
+|SQL_DATA_SOURCE_NAME|Odbc.ini의 DSN 또는 "" if DRIVER 키워드가 Odbc.ini에서 사용 되는 경우|  
 |SQL_DATA_SOURCE_READ_ONLY|"N"|  
 |SQL_DATABASE_NAME|파일 이름|  
 |SQL_DATETIME_LITERALS|0|  
@@ -94,7 +95,7 @@ ms.locfileid: "81298563"
 |SQL_DRIVER_HENV|드라이버 관리자에 의해 처리 됩니다.|  
 |SQL_DRIVER_HLIB|드라이버 관리자에 의해 처리 됩니다.|  
 |SQL_DRIVER_HSTMT|드라이버 관리자에 의해 처리 됩니다.|  
-|SQL_DRIVER_NAME|"OdbcJt32"|  
+|SQL_DRIVER_NAME|"OdbcJt32.dll"|  
 |SQL_DRIVER_ODBC_VER|"3.51.0000"|  
 |SQL_DRIVER_VER|"4.00-*nnnn*" (*nnnn* 은 빌드 날짜를 지정)|  
 |SQL_DROP_ASSERTION|0|  
@@ -111,7 +112,7 @@ ms.locfileid: "81298563"
 |SQL_GETDATA_EXTENSIONS|다중 값|  
 |SQL_GROUP_BY|SQL_GB_GROUP_BY_CONTAINS_SELECT|  
 |SQL_IDENTIFIER_CASE|SQL_IC_MIXED|  
-|SQL_IDENTIFIER_QUOTE_CHAR|"\`" (후방 따옴표)|  
+|SQL_IDENTIFIER_QUOTE_CHAR|" \` " (후방 따옴표)|  
 |SQL_KEYWORDS|다중 값|  
 |SQL_LIKE_ESCAPE_CLAUSE|"N"|  
 |SQL_MAX_BINARY_LITERAL_LEN|255|  
@@ -156,7 +157,7 @@ ms.locfileid: "81298563"
 |SQL_SCROLL_OPTIONS|다중 값|  
 |SQL_SEARCH_PATTERN_ESCAPE|"\\"|  
 |SQL_SERVER_NAME|액세스|  
-|SQL_SPECIAL_CHARACTERS|"\`@#$%^&\*~\_} {"\';:?/><,.!-+=\\ \'[] &#124; "|  
+|SQL_SPECIAL_CHARACTERS|"~ \` @#$%^& \* \_ -+= \\ } {" \' ;:?/><,.! \' [] &#124; "|  
 |SQL_STRING_FUNCTIONS|다중 값|  
 |SQL_SUBQUERIES|다중 값|  
 |SQL_SYSTEM_FUNCTIONS|0|  

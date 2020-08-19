@@ -1,4 +1,5 @@
 ---
+description: 날짜/시간 데이터 형식 변경
 title: Datetime 데이터 형식 변경 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: c38c79f9-8bb0-4633-ac86-542366c09a95
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4f186047dd31aa2c4b66ec1ce73c8cb9fae31c04
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a36339f275ff03584a3682f9f57eeeb8445faf3b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304646"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424755"
 ---
 # <a name="datetime-data-type-changes"></a>날짜/시간 데이터 형식 변경
 *ODBC 3.x에서는 date*, time 및 timestamp SQL 데이터 형식에 대 한 식별자가 SQL_DATE, SQL_TIME 및 SQL_TIMESTAMP (헤더 파일의 **#define** 인스턴스를 사용 하 여 9, 10 및 11)에서 SQL_TYPE_DATE, SQL_TYPE_TIME 및 SQL_TYPE_TIMESTAMP (91, 92 및 93의 헤더 파일의 **#define** 인스턴스 사용)로 변경 되었습니다. 해당 C 형식 식별자는 SQL_C_DATE, SQL_C_TIME 및 SQL_C_TIMESTAMP에서 각각 SQL_C_TYPE_DATE, SQL_C_TYPE_TIME 및 SQL_C_TYPE_TIMESTAMP로 변경 되었습니다.  

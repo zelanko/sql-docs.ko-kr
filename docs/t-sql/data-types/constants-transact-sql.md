@@ -1,4 +1,5 @@
 ---
+description: 상수(Transact-SQL)
 title: 상수(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/22/2017
@@ -32,12 +33,12 @@ ms.assetid: 58ae3ff3-b1d5-41b2-9a2f-fc7ab8c83e0e
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8a63cfeca3d5843d29c68eece832fec4f8e330bf
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: cd464b8b08948d913dc003df0b488fd85f5bdda7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999203"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422937"
 ---
 # <a name="constants-transact-sql"></a>상수(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -61,7 +62,7 @@ ms.locfileid: "85999203"
 "O'Brien"  
 ```  
   
-빈 문자열은 두 개의 작은따옴표 사이에 아무 것도 없을 경우로 나타냅니다. 6\.x 호환성 모드에서 빈 문자열은 하나의 공백으로 처리됩니다.
+빈 문자열은 두 개의 작은따옴표 사이에 아무 것도 없을 경우로 나타냅니다. 6.x 호환성 모드에서 빈 문자열은 하나의 공백으로 처리됩니다.
   
 문자열 상수는 고급 데이터 정렬을 지원합니다.
   
@@ -74,7 +75,7 @@ ms.locfileid: "85999203"
 유니코드 문자열 상수는 고급 데이터 정렬을 지원합니다.
   
 > [!NOTE]  
->  8000 바이트보다 큰 유니 코드 상수는 **nvarchar(max)** 데이터로 입력됩니다.  
+>  8000 바이트보다 큰 유니 코드 상수는 ** nvarchar(max) ** 데이터로 입력됩니다.  
   
 ## <a name="binary-constants"></a>이진 상수
 이진 상수는 `0x` 접미사를 가지며 16진수로 구성된 문자열입니다. 이진 상수는 인용 부호로 묶지 않습니다.

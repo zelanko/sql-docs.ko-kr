@@ -1,4 +1,5 @@
 ---
+description: catalog.operation_messages(SSISDB 데이터베이스)
 title: catalog.operation_messages(SSISDB 데이터베이스) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0b3cbe38-ce24-47ca-83ef-6538a5299d1a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6e2dddde1f4c6ac3cf058e45b0c049bd89fb76bc
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c7b15cffb2f04217586e58fd53ff5b5224c66527
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912496"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422027"
 ---
 # <a name="catalogoperation_messages-ssisdb-database"></a>catalog.operation_messages(SSISDB 데이터베이스)
 
@@ -54,7 +55,7 @@ ms.locfileid: "86912496"
 |20|사후 유효성 검사|  
 |30|실행 전|  
 |40|실행 후|  
-|60|진행|  
+|60|진행률|  
 |50|StatusChange|  
 |100|QueryCancel|  
 |130|TaskFailed|  
@@ -66,7 +67,7 @@ ms.locfileid: "86912496"
   
  이 뷰는 다음과 같은 메시지 원본 유형을 표시합니다.  
   
-|**message_source_type**|Description|  
+|**message_source_type**|설명|  
 |-------------------------------|-----------------|  
 |10|T-SQL 및 CLR 저장 프로시저와 같은 API 항목|  
 |20|패키지(ISServerExec.exe)를 실행하는 데 사용되는 외부 프로세스|  

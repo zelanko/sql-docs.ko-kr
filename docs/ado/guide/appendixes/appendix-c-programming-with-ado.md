@@ -1,4 +1,5 @@
 ---
+description: '부록 C: 개발 환경에서 ADO를 사용한 프로그래밍'
 title: '부록 C: ADO를 사용한 프로그래밍 | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 40af6e70-2a37-480f-aadc-92095d450af7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7ed57bb3087378ac6529fc5bd8c8a0aa01e06cfa
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 4e2521c8c9c2f1104cde2d78d58783118ac61c0a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758529"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422237"
 ---
 # <a name="appendix-c-programming-with-ado-in-development-environments"></a>부록 C: 개발 환경에서 ADO를 사용한 프로그래밍
 ADO는 Microsoft Visual Basic, VBScript, JScript 및 Visual C++를 비롯 한 다양 한 프로그래밍 언어에 사용할 수 있는 COM 자동화 인터페이스 구성 요소입니다. 이러한 도구 및 기타 응용 프로그램 (예: Microsoft Office 및 Microsoft SQL Server)과 함께 ADO 버전이 설치 됩니다.

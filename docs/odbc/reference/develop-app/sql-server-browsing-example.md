@@ -1,4 +1,5 @@
 ---
+description: SQL Server 찾아보기 예제
 title: SQL Server 검색 예제 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6e0d5fd1-ec93-4348-a77a-08f5ba738bc6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7b15aa8e3d573660a312fceb5b9100a41f0384d2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 14016832989c6fcba1dc39bc64434e72b049c18a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301984"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424565"
 ---
 # <a name="sql-server-browsing-example"></a>SQL Server 찾아보기 예제
 다음 예에서는 **SQLBrowseConnect** 를 사용 하 여 SQL Server 드라이버에서 사용할 수 있는 연결을 검색 하는 방법을 보여 줍니다. 먼저 응용 프로그램에서 연결 핸들을 요청 합니다.  
@@ -38,7 +39,7 @@ SQLBrowseConnect(hdbc, "DRIVER={SQL Server};", SQL_NTS, BrowseResult,
  이는 **SQLBrowseConnect**에 대 한 첫 번째 호출 이므로 드라이버 관리자는 SQL Server 드라이버를 로드 하 고 응용 프로그램에서 받은 것과 동일한 인수를 사용 하 여 드라이버의 **SQLBrowseConnect** 함수를 호출 합니다.  
   
 > [!NOTE]  
->  Windows 인증을 지 원하는 데이터 원본 공급자에 연결 하는 경우 연결 문자열에 사용자 `Trusted_Connection=yes` ID 및 암호 정보를 지정 하는 대신를 지정 해야 합니다.  
+>  Windows 인증을 지 원하는 데이터 원본 공급자에 연결 하는 경우 `Trusted_Connection=yes` 연결 문자열에 사용자 ID 및 암호 정보를 지정 하는 대신를 지정 해야 합니다.  
   
  드라이버는 **SQLBrowseConnect** 에 대 한 첫 번째 호출을 확인 하 고 두 번째 수준의 연결 특성 (서버, 사용자 이름, 암호, 응용 프로그램 이름 및 워크스테이션 ID)을 반환 합니다. 서버 특성의 경우 유효한 서버 이름 목록을 반환 합니다. **SQLBrowseConnect** 의 반환 코드는 SQL_NEED_DATA 되었습니다. 찾아보기 결과 문자열은 다음과 같습니다.  
   

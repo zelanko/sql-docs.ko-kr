@@ -1,4 +1,5 @@
 ---
+description: SQLStatistics(Paradox 드라이버)
 title: SQLStatistics (Paradox 드라이버) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 886cab83-d599-4fbc-9c88-e8cb833aac4b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 5e9782eb22e4176a57aab7bdd3823982575a0d55
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cc76e6d2b076a9188850f9a41124311fd2658814
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299323"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421557"
 ---
 # <a name="sqlstatistics-paradox-driver"></a>SQLStatistics(Paradox 드라이버)
 > [!NOTE]  

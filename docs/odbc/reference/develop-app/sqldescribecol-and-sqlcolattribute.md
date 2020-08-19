@@ -1,4 +1,5 @@
 ---
+description: SQLDescribeCol 및 SQLColAttribute
 title: SQLDescribeCol 및 SQLColAttribute | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: c2ca442c-03a8-4e0f-9e67-b300bb15962f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8bd21010908473e4216a02a504b2de25578d5c84
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2de375ea207e8e393fa36c9795ebf0e3ca5f428b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299763"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424505"
 ---
 # <a name="sqldescribecol-and-sqlcolattribute"></a>SQLDescribeCol 및 SQLColAttribute
 **SQLDescribeCol** 및 **sqlcolattribute** 는 결과 집합 메타 데이터를 검색 하는 데 사용 됩니다. 이러한 두 함수 간의 차이점은 **SQLDescribeCol** 는 항상 동일한 5 가지 정보 (열 이름, 데이터 형식, 전체 자릿수, 소수 자릿수 및 null 허용 여부)를 반환 하는 반면 **sqlcolattribute** 는 응용 프로그램에서 요청 하는 단일 정보를 반환 한다는 것입니다. 그러나 **Sqlcolattribute** 는 열에서 대/소문자 구분, 표시 크기, 업데이트 가능성 및 높이려는을 포함 하 여 훨씬 더 다양 한 메타 데이터를 반환할 수 있습니다.  

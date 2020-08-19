@@ -1,4 +1,5 @@
 ---
+description: DBCC INPUTBUFFER(Transact-SQL)
 title: DBCC INPUTBUFFER(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/04/2018
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: a44d702b-b3fb-4950-8c8f-1adcf3f514ba
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 7b36dd3a0392a4054aa110e625f1ea5703f25b80
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: b8b4c308530099bb54bf7a447adb46b6faac7e5a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484277"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422857"
 ---
 # <a name="dbcc-inputbuffer-transact-sql"></a>DBCC INPUTBUFFER(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -101,7 +102,7 @@ SELECT @@spid;
   
 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 프리미엄 및 중요 비즈니스용 계층에서 데이터베이스에 대한 VIEW DATABASE STATE 권한이 필요합니다. [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 표준, 기본 및 범용 계층에서 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 관리자 계정이 필요합니다.
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
 다음 예에서는 이전 연결에서 긴 트랜잭션이 실행되는 동안 두 번째 연결에서 `DBCC INPUTBUFFER`를 실행합니다.
   
 ```sql

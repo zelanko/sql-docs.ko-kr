@@ -1,4 +1,5 @@
 ---
+description: POWER(Transact-SQL)
 title: POWER(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2017
@@ -18,12 +19,12 @@ ms.assetid: 0fd34494-90b9-4559-8011-a8c1b9f40239
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c11afa07f04e01919b51daf92025ed5d82902ee7
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 857ad909b2f471edaebf661ccab4cca0077bc099
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111895"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417319"
 ---
 # <a name="power-transact-sql"></a>POWER(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -42,7 +43,7 @@ POWER ( float_expression , y )
 
 ## <a name="arguments"></a>인수
  *float_expression*  
- [float](../../t-sql/language-elements/expressions-transact-sql.md) 형식 또는 **float**로 암시적으로 변환되는 형식의 **식**입니다.  
+ **float** 형식 또는 **float**로 암시적으로 변환되는 형식의 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다.  
   
  *y*  
  *float_expression*의 거듭제곱입니다. *y*는 **bit** 데이터 형식을 제외한 정확한 수치 또는 근사치 데이터 형식 범주의 식일 수 있습니다.  
@@ -61,7 +62,7 @@ POWER ( float_expression , y )
  
 결과가 반환 형식에 맞지 않으면 산술 오버플로 오류가 발생합니다.
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-using-power-to-return-the-cube-of-a-number"></a>A. POWER를 사용하여 숫자의 세제곱 반환  
  다음 예에서는 3의 승수로 거듭 제곱한 수(숫자의 세제곱)를 보여줍니다.  
@@ -150,8 +151,8 @@ GO
   
 ## <a name="examples-sssdwfull-and-sspdw"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-using-power-to-return-the-cube-of-a-number"></a>4\. POWER를 사용하여 숫자의 세제곱 반환  
- 다음 예에서는 `POWER`의 세제곱에 대한 `2.0` 결과를 반환합니다.  
+### <a name="d-using-power-to-return-the-cube-of-a-number"></a>4. POWER를 사용하여 숫자의 세제곱 반환  
+ 다음 예에서는 `2.0`의 세제곱에 대한 `POWER` 결과를 반환합니다.  
   
 ```  
 SELECT POWER(2.0, 3);  

@@ -1,4 +1,5 @@
 ---
+description: DrillupLevel(MDX)
 title: DrillupLevel (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: ef2f94eb843b3ffbfbb67eb6ca01f2114522e024
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cfdb8e77fcb92fe208e83f45c32a5c20c5d29615
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68049223"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421907"
 ---
 # <a name="drilluplevel-mdx"></a>DrillupLevel(MDX)
 

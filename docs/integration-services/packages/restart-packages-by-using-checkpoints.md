@@ -1,4 +1,5 @@
 ---
+description: 검사점을 사용하여 패키지 다시 시작
 title: 검사점을 사용하여 패키지 다시 시작 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 48f2fbb7-8964-484a-8311-5126cf594bfb
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: de6329a45f43d27dfcabb05252a17eb0ed3c6a2e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 090e89467a7916295abdc31305cbe993872ade60
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919184"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425245"
 ---
 # <a name="restart-packages-by-using-checkpoints"></a>검사점을 사용하여 패키지 다시 시작
 
@@ -72,7 +73,7 @@ ms.locfileid: "86919184"
   
 |값|Description|  
 |-----------|-----------------|  
-|**안 함**|검사점 파일을 사용하지 않고 패키지가 패키지 워크플로의 처음부터 시작되도록 지정합니다.|  
+|**Never**|검사점 파일을 사용하지 않고 패키지가 패키지 워크플로의 처음부터 시작되도록 지정합니다.|  
 |**항상**|검사점 파일을 항상 사용하고 패키지가 이전의 실행 오류 지점부터 다시 시작하도록 지정합니다. 검사점 파일을 찾을 수 없는 경우 패키지는 실패합니다.|  
 |**IfExists**|검사점 파일이 있는 경우 이를 사용하도록 지정합니다. 검사점 파일이 있으면 패키지는 이전 실행 오류 지점부터 다시 시작하고, 그렇지 않으면 패키지 워크플로의 처음부터 실행됩니다.|  
   

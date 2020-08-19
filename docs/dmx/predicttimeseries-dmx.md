@@ -1,4 +1,5 @@
 ---
+description: PredictTimeSeries(DMX)
 title: PredictTimeSeries (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: bf63bb1002e1e4ae467838b84314e1cbaaf93275
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 13655aadf5f95b776b83e48791e4f423d6ccc355
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87943257"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422267"
 ---
 # <a name="predicttimeseries-dmx"></a>PredictTimeSeries(DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -75,7 +76,7 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
 > [!NOTE]  
 >  새 데이터의 길이는 예측의 시작 지점에 영향을 미치지 않습니다. 따라서 새 데이터를 추가하고 새 예측도 수행하려면 예측 시작 지점을 새 데이터의 길이보다 큰 값으로 설정하거나 예측 종료 지점을 새 데이터 길이만큼 늘려야 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 기존 시계열 모델에 대해 예측을 수행하는 방법을 보여 줍니다.  
   
 -   첫 번째 예는 현재 모델을 기반으로 지정된 수만큼의 예측을 수행하는 방법을 보여 줍니다.  

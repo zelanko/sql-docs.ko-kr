@@ -1,4 +1,5 @@
 ---
+description: 기본 함수를 사용하여 JSON 데이터 유효성 검사, 쿼리, 변경(SQL Server)
 title: 기본 함수를 사용하여 JSON 데이터 유효성 검사, 쿼리, 변경
 ms.date: 06/03/2020
 ms.prod: sql
@@ -13,12 +14,12 @@ ms.author: jovanpop
 ms.reviewer: jroth
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9819b334dfa5b6c9d2b9a91fb80293a40b4a4e67
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 76644f677a03f34312e6731f5a973167313ad22a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725197"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424095"
 ---
 # <a name="validate-query-and-change-json-data-with-built-in-functions-sql-server"></a>기본 함수를 사용하여 JSON 데이터 유효성 검사, 쿼리, 변경(SQL Server)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -103,7 +104,7 @@ ORDER BY JSON_VALUE(f.doc, '$.address.city') DESC, JSON_VALUE(f.doc, '$.address.
 
 이 쿼리의 결과는 다음 표에 나와 있습니다.
 
-| 속성 | City | 국가 |
+| Name | City | 국가 |
 | --- | --- | --- |
 | AndersenFamily | NY | Manhattan |
 
@@ -143,7 +144,7 @@ FROM Families f
 
 이 쿼리의 결과는 다음 표에 나와 있습니다.
 
-| 속성 | City | givenName | grade |
+| Name | City | givenName | grade |
 | --- | --- | --- | --- |
 | AndersenFamily | NY | Jesse | 1 |
 | AndersenFamily | NY | Lisa | 8 |
@@ -174,7 +175,7 @@ FROM Families f
 | familyName | childGivenName | childFirstName | petName |
 | --- | --- | --- | --- |
 | AndersenFamily | Jesse | Merriam | Goofy |
-| AndersenFamily | Jesse | Merriam | Shadow |
+| AndersenFamily | Jesse | Merriam | 그림자 |
 | AndersenFamily | Lisa | Miller| `NULL` |
 
 루트 문서는 첫 번째 `OPENJSON(children)` 호출로 반환된 두 `children` 행과 조인되어 두 개의 행(또는 튜플)을 만듭니다. 그런 다음, 각 행이 `OUTER APPLY` 연산자를 사용하여 `OPENJSON(pets)`에서 생성된 새 행과 조인됩니다. Jesse에는 두 마리의 애완 동물이 있으므로 `(AndersenFamily, Jesse, Merriam)`이 Goofy 및 Shadow에 대해 생성된 두 개의 행과 조인됩니다. Lisa에게는 애완 동물이 없으므로 이 튜플에 대해 `OPENJSON(pets)`에서 반환되는 행이 없습니다. 그러나 `OUTER APPLY`를 사용하고 있기 때문에 열에 `NULL`이 반환됩니다. `OUTER APPLY` 대신, `CROSS APPLY`를 사용하는 경우 이 튜플에 조인할 수 있는 애완 동물 행이 없기 때문에 Lisa는 결과에 반환되지 않습니다.

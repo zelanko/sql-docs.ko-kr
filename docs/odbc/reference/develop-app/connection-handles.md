@@ -1,4 +1,5 @@
 ---
+description: 연결 핸들
 title: 연결 핸들 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 12222653-f04d-46d6-bdee-61348f5d550f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d5b03e0733e35984350d2a218b885dc148ca8f8f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a4457fa72c40892e208057ac013d3da1e557a6d1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299023"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424795"
 ---
 # <a name="connection-handles"></a>연결 핸들
 *연결은* 드라이버와 데이터 원본으로 구성 됩니다. 연결 핸들은 각 연결을 식별 합니다. 연결 핸들은 사용할 드라이버 뿐만 아니라 해당 드라이버에서 사용할 데이터 원본을 정의 합니다. ODBC (드라이버 관리자 또는 드라이버)를 구현 하는 코드 세그먼트 내에서 연결 핸들은 다음과 같이 연결 정보를 포함 하는 구조를 식별 합니다.  

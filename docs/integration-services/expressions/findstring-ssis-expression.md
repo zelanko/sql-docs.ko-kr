@@ -1,4 +1,5 @@
 ---
+description: FINDSTRING(SSIS 식)
 title: FINDSTRING(SSIS 식) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c83cb1b1-3c52-4496-b518-4c9253b9336d
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 765957c11bee784305ebc1a54c2de80ba7375d3d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 3c4da6f54ead49d01d9d691cc081ac9b9955c693
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917032"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425475"
 ---
 # <a name="findstring-ssis-expression"></a>FINDSTRING(SSIS 식)
 
@@ -80,7 +81,7 @@ FINDSTRING(Name, "n", 2)
 FINDSTRING(Name,Size,1)   
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [REPLACE&#40;SSIS 식&#41;](../../integration-services/expressions/replace-ssis-expression.md)   
  [함수&#40;SSIS 식&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   

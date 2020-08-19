@@ -1,4 +1,5 @@
 ---
+description: sys.syscomments(Transact-SQL)
 title: sys.sys주석 (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 767dd410-6bc9-4c4a-ab0f-6d2cf6163426
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 49473b85d6c0a52f9c7ec7ed4bab519b19b04693
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 3956dd945052a8977a2d9fccfefa6a34ea7b33fa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883482"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423357"
 ---
 # <a name="syssyscomments-transact-sql"></a>sys.syscomments(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,7 @@ ms.locfileid: "85883482"
 |-----------------|---------------|-----------------|  
 |**id**|**int**|해당 텍스트를 적용할 개체 ID입니다.|  
 |**number**|**smallint**|그룹화된 경우에 프로시저 그룹 내의 번호입니다.<br /><br /> 0  =  항목이 프로시저가 아닙니다.|  
-|**colid**|**smallint**|4,000자보다 긴 개체 정의의 행 시퀀스 번호입니다.|  
+|**id**|**smallint**|4,000자보다 긴 개체 정의의 행 시퀀스 번호입니다.|  
 |**status**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**ctext**|**varbinary(8000)**|SQL  정의 문의 원시 바이트입니다.|  
 |**texttype**|**smallint**|0  =  사용자 제공 설명<br /><br /> 1  =  시스템 제공 설명<br /><br /> 4  =  암호화된 설명|  

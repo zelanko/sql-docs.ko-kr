@@ -1,4 +1,5 @@
 ---
+description: 간격 리터럴
 title: 간격 리터럴 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f9e6c3c7-4f98-483f-89d8-ebc5680f021b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c1761ac0acb57b3f375a7d19e9371384c000eca5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dd065091127645a45b836781fc6edf6c701e6685
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304944"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425035"
 ---
 # <a name="interval-literals"></a>간격 리터럴
 ODBC에서는 모든 드라이버가 SQL_CHAR 또는 SQL_VARCHAR 데이터 형식에서 모든 C 간격 데이터 형식으로의 변환을 지원 해야 합니다. 그러나 기본 데이터 원본에서 간격 데이터 형식을 지원 하지 않는 경우 이러한 변환을 지원 하려면 드라이버에서 SQL_CHAR 필드의 값에 대 한 올바른 형식을 알고 있어야 합니다. 마찬가지로 ODBC에서는 SQL_CHAR 또는 SQL_VARCHAR로 변환할 모든 ODBC C 형식을 사용 해야 하므로, 드라이버는 문자 필드에 저장 된 간격의 형식을 알고 있어야 합니다. 이 섹션에서는 C interval 데이터 형식으로 변환 하는 동안 드라이버 작성자가 SQL_CHAR 필드의 유효성을 검사 하는 데 사용 해야 하는 간격 리터럴의 구문에 대해 설명 합니다.  
@@ -37,7 +38,7 @@ INTERVAL[<sign>] 'value' <interval qualifier>
   
  여기서 "INTERVAL"은 문자 리터럴이 간격 임을 나타냅니다. 부호는 더하기 또는 빼기 일 수 있습니다. 이는 간격 문자열의 외부에 있으며 선택적입니다.  
   
- 간격 한정자는 단일 날짜/시간 필드 이거나 두 개의 datetime 필드로 구성 될 수 있습니다. \< *선행 필드는 선행* \< *필드*>> 합니다.  
+ 간격 한정자는 단일 날짜/시간 필드 이거나 다음과 같은 형식으로 두 개의 datetime 필드로 구성 될 수 있습니다 \<*leading field*> \<*trailing field*> .  
   
 -   간격이 단일 필드로 구성 된 경우 단일 필드는 선택적인 선행 전체 자릿수가 괄호 안에 나타날 수 있는 두 번째 필드가 될 수 있습니다. 단일 날짜/시간 필드는 선택적인 선행 전체 자릿수, 선택적인 초 소수 부분 자릿수 (괄호) 또는 둘 다와 함께 사용할 수 있는 두 번째 필드가 될 수도 있습니다. 초 필드에 대해 선행 전체 자릿수와 소수 자릿수 초의 전체 자릿수가 모두 있는 경우 쉼표로 구분 됩니다. 초 필드의 전체 자릿수가 소수 자릿수 초의 전체 자릿수가 면 선행 정밀도도 있어야 합니다.  
   
@@ -45,7 +46,7 @@ INTERVAL[<sign>] 'value' <interval qualifier>
   
  *값* 의 간격 문자열은 작은따옴표로 묶여 있습니다. 연도-월 리터럴 또는 일 시간 리터럴이 될 수 있습니다. *값* 에 있는 문자열의 형식은 다음 규칙에 따라 결정 됩니다.  
   
--   문자열은> \< *간격* *한정자* 에 의해 암시 된 모든 필드에 대 한 10 진수 값을 포함 합니다.  
+-   문자열은에서 암시 하는 모든 필드에 대 한 10 진수 값을 포함 합니다 \<*interval* *qualifier*> .  
   
 -   간격 전체 자릿수가 YEAR와 MONTH 필드를 포함 하는 경우 이러한 필드의 값은 빼기 기호로 구분 됩니다.  
   

@@ -1,4 +1,5 @@
 ---
+description: 유니코드 드라이버
 title: 유니코드 드라이버 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3b4742d5-74fb-4aff-aa21-d83a0064d73d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: aabdd899d78c1141716725d57e343dc002dc96ad
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1acdb0c630fe5f4b1b22f51015e7ee94e7d8a56a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81284355"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424485"
 ---
 # <a name="unicode-drivers"></a>유니코드 드라이버
 드라이버가 유니코드 드라이버 인지 아니면 ANSI 드라이버가 데이터 원본의 특성에 따라 달라 지는 지를 나타냅니다. 데이터 원본에서 유니코드 데이터를 지 원하는 경우 드라이버는 유니코드 드라이버 여야 합니다. 데이터 원본에서 ANSI 데이터만 지 원하는 경우 드라이버는 ANSI 드라이버를 유지 해야 합니다.  

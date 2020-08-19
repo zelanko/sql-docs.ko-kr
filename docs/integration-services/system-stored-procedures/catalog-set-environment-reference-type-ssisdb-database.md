@@ -1,4 +1,5 @@
 ---
+description: catalog.set_environment_reference_type(SSISDB 데이터베이스)
 title: catalog.set_environment_reference_type(SSISDB 데이터베이스) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: b79e3a06-22c0-40e5-8933-1b3414db3329
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 31bba66b5c211449b862903c9e0a3592db239169
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 6af8fdff22031cd5f806cb3d6f640223414f3ac1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912883"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425075"
 ---
 # <a name="catalogset_environment_reference_type-ssisdb-database"></a>catalog.set_environment_reference_type(SSISDB 데이터베이스)
 

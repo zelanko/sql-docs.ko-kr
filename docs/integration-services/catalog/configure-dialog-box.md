@@ -1,4 +1,5 @@
 ---
+description: 구성 대화 상자
 title: 구성 대화 상자 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -14,12 +15,12 @@ f1_keywords:
 ms.assetid: 10183c8d-b1be-420f-972a-96ea97d4f4d8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 99a7166ecf231a49e566bbecb7390abe33e61853
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: cdbcc9b0a03b0afefe56152dc6b29c7ae59ea4cc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922676"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88395009"
 ---
 # <a name="configure-dialog-box"></a>구성 대화 상자
 

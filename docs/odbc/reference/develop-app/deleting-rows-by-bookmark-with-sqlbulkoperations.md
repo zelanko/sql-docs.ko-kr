@@ -1,4 +1,5 @@
 ---
+description: SQLBulkOperations로 책갈피별로 행 삭제
 title: SQLBulkOperations로 책갈피를 사용 하 여 행 삭제 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 46139ec9-7095-481a-bf45-20200a2fdc03
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6b6a4c1b24ee276c86175392eb45ac5ce0aa45e5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7dcb96180cdcee5987d8a1cbafeae117ec82bba0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305964"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424685"
 ---
 # <a name="deleting-rows-by-bookmark-with-sqlbulkoperations"></a>SQLBulkOperations로 책갈피별로 행 삭제
 책갈피를 사용 하 여 행을 삭제 하는 경우 **SQLBulkOperations** 는 데이터 원본이 테이블에서 하나 이상의 선택 된 행을 삭제 하도록 합니다. 행은 바인딩된 책갈피 열의 책갈피에 의해 식별 됩니다.  

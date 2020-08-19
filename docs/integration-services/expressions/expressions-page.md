@@ -1,4 +1,5 @@
 ---
+description: 식 페이지
 title: 식 페이지 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c9016ec6-11c1-4ebd-b2a7-0fa6631fd9e4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1fe673f96f3272c2f23005588f0ad49271e943fe
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 23afd7d406cc201615b696961f7c3fe1072f9ba9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917045"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425515"
 ---
 # <a name="expressions-page"></a>식 페이지
 

@@ -1,4 +1,5 @@
 ---
+description: SQL Server 에이전트 작업 실행 태스크(유지 관리 계획)
 title: SQL Server 에이전트 작업 실행 태스크(유지 관리 계획) | Microsoft 문서
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4ed75956-ebb8-4d8c-9c16-fc0eb00bd3a0
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 0cf96745f6b2b2c904262a4952f63b6ec37f263e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 890d691fdd3ff7ad9a20079edefeacbeb3672aac
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85667371"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424105"
 ---
 # <a name="execute-sql-server-agent-job-task-maintenance-plan"></a>SQL Server 에이전트 작업 실행 태스크(유지 관리 계획)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

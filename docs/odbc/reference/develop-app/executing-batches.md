@@ -1,4 +1,5 @@
 ---
+description: 일괄 처리 실행
 title: 일괄 처리 실행 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f082c717-4f82-4820-a2fa-ba607d8fd872
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0ce0c043fcfad41a624ad129a757a047d2c87fb6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b3bb923f95dfcfb731d472aad8ead7ff35053171
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305734"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424645"
 ---
 # <a name="executing-batches"></a>일괄 처리 실행
 응용 프로그램은 문 일괄 처리를 실행 하기 전에 먼저 지원 되는지 여부를 확인 해야 합니다. 이렇게 하기 위해 응용 프로그램은 SQL_BATCH_SUPPORT, SQL_PARAM_ARRAY_ROW_COUNTS 및 SQL_PARAM_ARRAY_SELECTS 옵션으로 **SQLGetInfo** 를 호출 합니다. 첫 번째 옵션은 행 개수 생성 및 결과 집합 생성 문이 명시적 일괄 처리 및 프로시저에서 지원 되는지 여부를 반환 하는 반면 후자 두 옵션은 매개 변수가 있는 실행에서 행 개수와 결과 집합의 가용성에 대 한 정보를 반환 합니다.  

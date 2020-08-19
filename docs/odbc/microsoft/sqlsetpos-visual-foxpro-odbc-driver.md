@@ -1,4 +1,5 @@
 ---
+description: SQLSetPos(Visual FoxPro ODBC 드라이버)
 title: SQLSetPos (Visual FoxPro ODBC 드라이버) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ec8e5a9d-7aac-4e7f-a75f-cf670c036f33
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 46a7620e998533bb5e60d48f322b7098d4aaf647
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6d4620c231024ea07603fe45db5e83db2fcf68f2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301474"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421657"
 ---
 # <a name="sqlsetpos-visual-foxpro-odbc-driver"></a>SQLSetPos(Visual FoxPro ODBC 드라이버)
 > [!NOTE]  

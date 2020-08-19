@@ -1,4 +1,5 @@
 ---
+description: catalog.set_worker_agent_property(SSISDB 데이터베이스)
 title: catalog.set_worker_agent_property(SSISDB 데이터베이스) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/02/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ddd2a534-6925-4d66-90e7-541c14f41de7
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 121c39ddc217cbdc178ca8ea8221081ce33eee4b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b5981431210ba98c950b56b7621f3f9cc50586c5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912797"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422117"
 ---
 # <a name="catalogset_worker_agent_property-ssisdb-database"></a>catalog.set_worker_agent_property(SSISDB 데이터베이스)
 
@@ -42,7 +43,7 @@ Scale Out Worker의 작업자 에이전트 ID입니다. *WorkerAgentId*는 **uni
 속성의 이름입니다. *PropertyName*은 **nvarchar(256)** 입니다.
 
 [@PropertyValue =] *PropertyValue*  
-속성의 값입니다. *PropertyValue*는 **nvarchar(max)** 입니다.
+속성 값입니다. *PropertyValue*는 **nvarchar(max)** 입니다.
 
 ## <a name="remarks"></a>설명
 유효한 속성 이름은 **DisplayName**, **Description**, **Tags**입니다.

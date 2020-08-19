@@ -1,4 +1,5 @@
 ---
+description: Integration Services(SSIS) 프로젝트 및 패키지 배포
 title: Integration Services(SSIS) 프로젝트 및 패키지 배포 | Microsoft Docs
 ms.custom: ''
 ms.date: 09/26/2019
@@ -18,12 +19,12 @@ f1_keywords:
 ms.assetid: bea8ce8d-cf63-4257-840a-fc9adceade8c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 962b1db12c1208ea70c7cb906eb904bf17538a64
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f31196ca74fa8aac69958ec47e084a3b63220ee7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920143"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425225"
 ---
 # <a name="deploy-integration-services-ssis-projects-and-packages"></a>Integration Services(SSIS) 프로젝트 및 패키지 배포
 
@@ -86,7 +87,7 @@ System.ComponentModel.Win32Exception: A required privilege is not held by the cl
 1.  **구성 요소 서비스** 콘솔을 엽니다(또는 Dcomcnfg.exe 실행).
 2.  **구성 요소 서비스** 콘솔에서 **구성 요소 서비스** > **컴퓨터** > **내 컴퓨터** > **DCOM 구성**을 차례로 확장합니다.
 3.  목록에서 사용 중인 SQL Server의 버전으로 **Microsoft SQL Server Integration Services xx.0**을 찾습니다. 예를 들어, SQL Server 2016은 버전 13입니다.
-4.  마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.
+4.  마우스 오른쪽 단추를 클릭하고 **속성**을 선택합니다.
 5.  **SQL Server Integration Services 13.0 속성** 대화 상자에서 **보안** 탭을 선택합니다.
 6.  시작, 활성화, 액세스 및 구성의 세 가지 권한 집합 각각에 대해 **사용자 지정**을 선택한 후 **편집**을 선택하여 **권한** 대화 상자를 엽니다.
 7.  **권한** 대화 상자에서 기본이 아닌 서비스 계정을 추가하고 필요에 따라 **허용** 권한을 부여합니다. 일반적으로 계정에는 **로컬 시작** 및 **로컬 활성화** 사용 권한이 있습니다.
@@ -298,9 +299,9 @@ static void Main()
 
  또는
 
- - SQL Server 설치 폴더에서 실행 파일 **ISDeploymentWizard.exe**를 검색합니다(예: "C:\Program Files (x86)\Microsoft SQL Server\130\DTS\Binn". 
+ - SQL Server 설치 폴더에서 실행 파일 **ISDeploymentWizard.exe**를 검색합니다(예: C:\Program Files (x86)\Microsoft SQL Server\130\DTS\Binn). 
  
- > **참고:** **소개** 페이지에서 **다음** 을 클릭하여 **원본 선택** 페이지로 전환합니다. 
+ > **참고:****소개** 페이지에서 **다음** 을 클릭하여 **원본 선택** 페이지로 전환합니다. 
  
  이 페이지의 설정은 각 배포 모델에서 서로 다릅니다. 이 페이지에서 선택한 모델에 따라 [Project Deployment Model](#ProjectModel) 섹션의 단계 또는 [Package Deployment Model](#PackageModel) 섹션의 단계를 따릅니다.  
   
@@ -609,7 +610,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **상태**  
  패키지를 프로젝트 배포 모델로 변환할 준비가 되었는지를 나타냅니다.  
   
- **메시지**  
+ **Message**  
  패키지와 연결된 메시지를 표시합니다.  
   
  **암호**  
@@ -674,7 +675,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **패키지**  
  패키지 파일을 나열합니다.  
   
- **형식**  
+ **유형**  
  XML 구성과 같은 구성 유형을 나열합니다.  
   
  **구성 문자열**  

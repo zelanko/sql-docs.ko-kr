@@ -1,4 +1,5 @@
 ---
+description: 행 상태
 title: 행 상태 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0f0b1fb6-f697-4ced-811c-2908e210bc71
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d4ae4169dc3f2a491663f4a86c564cfee5c2f4d6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8970e78d523ca86a50edb1e27b159ef15a1a1747
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305102"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424965"
 ---
 # <a name="row-status"></a>행 상태
 > [!IMPORTANT]  

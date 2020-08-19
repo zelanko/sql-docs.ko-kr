@@ -1,4 +1,5 @@
 ---
+description: 커서 설정
 title: 커서 설정 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b80afb0e-ef2f-408f-86f5-a392edd99a56
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 805d8076c853513d86f9a3a92d9342d1224226c9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 307245dc403167f5bd857005f084ed22498d3ee8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299803"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424585"
 ---
 # <a name="setting-up-the-cursor"></a>커서 설정
 응용 프로그램은 결과 집합을 만드는 문을 실행 하기 전에 커서 유형을 지정할 수 있습니다. SQL_ATTR_CURSOR_TYPE statement 특성을 사용 하 여이를 수행 합니다. 응용 프로그램에서 명시적으로 형식을 지정 하지 않은 경우에는 앞 으로만 이동 가능한 커서가 사용 됩니다. 혼합 커서를 가져오기 위해 응용 프로그램은 키 집합 커서를 지정 하지만 결과 집합 크기 보다 작은 키 집합 크기를 선언 합니다.  

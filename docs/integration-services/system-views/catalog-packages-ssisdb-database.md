@@ -1,4 +1,5 @@
 ---
+description: catalog.packages(SSISDB 데이터베이스)
 title: catalog.packages(SSISDB 데이터베이스) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a634e94d-f492-4dfd-9611-a35f545106a1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ce44ec234d17c64e357f3bd1a26de1a0c2bb6361
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 25e397e3c3b85f401857b58bd51df456b08fdb37
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912461"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422007"
 ---
 # <a name="catalogpackages-ssisdb-database"></a>catalog.packages(SSISDB 데이터베이스)
 

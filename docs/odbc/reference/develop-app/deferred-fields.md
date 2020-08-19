@@ -1,4 +1,5 @@
 ---
+description: 지연 필드
 title: 지연 필드 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5abeb9cc-4070-4f43-a80d-ad6a2004e5f3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 094aba353e10ed568e1959b1d655109296507dee
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f8b313f2d77270e95830de1a524706aa7fe36e33
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305974"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424695"
 ---
 # <a name="deferred-fields"></a>지연 필드
 *지연 된 필드* 값은 설정 될 때 사용 되지 않지만 드라이버는 지연 된 효과에 대 한 변수 주소를 저장 합니다. 응용 프로그램 매개 변수 설명자의 경우, 드라이버는 **Sqlexecdirect** 또는 **sqlexecute**를 호출할 때 변수의 내용을 사용 합니다. 응용 프로그램 행 설명자의 경우 드라이버는 인출 시 변수의 내용을 사용 합니다.  

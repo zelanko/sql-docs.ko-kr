@@ -1,4 +1,5 @@
 ---
+description: Axis(MDX)
 title: 축 (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: fa65c1531be29273c0a838b978109bbd1c8a2b18
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 47e0da231b0792e0099f5e6ee4fe8eda9fb45f9d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68016984"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421937"
 ---
 # <a name="axis-mdx"></a>Axis(MDX)
 
@@ -37,7 +38,7 @@ Axis(Axis_Number)
 > [!NOTE]  
 >  축은 이전 축만 참조할 수 있습니다. 예를 들어 `Axis(0)`은 ROW 또는 PAGE 축과 같이 COLUMNS 축이 계산된 다음에만 발생해야 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예제 쿼리에서는 Axis 함수를 사용하는 방법을 보여 줍니다.  
   
  `WITH MEMBER MEASURES.AXISDEMO AS`  

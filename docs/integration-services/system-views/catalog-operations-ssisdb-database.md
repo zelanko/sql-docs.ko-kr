@@ -1,4 +1,5 @@
 ---
+description: catalog.operations(SSISDB 데이터베이스)
 title: catalog.operations(SSISDB 데이터베이스) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9455c5b1-60ff-45fc-8599-cc3abbd6daf5
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 46f17290ddc026d66910e4a28c1ea36d7ad0286b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 231fa098ababe70c8a375e3f3f357bcbe90d6f09
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912479"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422017"
 ---
 # <a name="catalogoperations-ssisdb-database"></a>catalog.operations(SSISDB 데이터베이스)
 
@@ -36,8 +37,8 @@ ms.locfileid: "86912479"
 |created_time|**datetimeoffset**|작업이 생성된 시간입니다.|  
 |object_type|**smallint**|작업의 영향을 받는 개체의 유형입니다. 개체는 폴더(`10`), 프로젝트(`20`), 패키지(`30`), 환경(`40`) 또는 실행 인스턴스(`50`)일 수 있습니다.|  
 |object_id|**bigint**|작업의 영향을 받는 개체의 ID입니다.|  
-|object_name|**nvarchar(260)**|개체 이름입니다.|  
-|상태|**int**|작업의 상태. 가능한 값은 생성됨(`1`), 실행 중(`2`), 취소됨(`3`), 실패(`4`), 보류 중(`5`), 갑자기 종료됨(`6`), 성공(`7`), 중지 중(`8`) 및 완료(`9`)입니다.|  
+|object_name|**nvarchar(260)**|개체의 이름입니다.|  
+|상태|**int**|작업의 상태입니다. 가능한 값은 생성됨(`1`), 실행 중(`2`), 취소됨(`3`), 실패(`4`), 보류 중(`5`), 갑자기 종료됨(`6`), 성공(`7`), 중지 중(`8`) 및 완료(`9`)입니다.|  
 |start_time|**datetimeoffset**|작업이 시작된 시간입니다.|  
 |end_time|**datetimeoffsset**|작업이 종료된 시간입니다.|  
 |caller_sid|**varbinary(85)**|Windows 인증을 사용하여 로그온한 사용자의 보안 ID(SID)입니다.|  

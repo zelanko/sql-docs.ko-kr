@@ -1,4 +1,5 @@
 ---
+description: SET PATH 명령
 title: SET PATH 명령 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: db488d1e-0963-4f45-8c76-a23b9bde9e9d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e44093c3ea18bc995264a8974726f5af0abe3b3a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 36131e53d1a10d8af3e7ca226768a9c08a14ba77
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300823"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421837"
 ---
 # <a name="set-path-command"></a>SET PATH 명령
 파일 검색에 대 한 경로를 지정 합니다. 드라이버 관련 정보는 설명 부분을 참조 하십시오.  

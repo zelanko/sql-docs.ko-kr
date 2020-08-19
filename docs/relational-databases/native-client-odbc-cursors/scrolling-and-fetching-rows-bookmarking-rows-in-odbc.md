@@ -1,4 +1,5 @@
 ---
+description: 행 스크롤 및 페치 - ODBC에서 행에 책갈피 지정
 title: ODBC의 행 책갈피 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,11 +18,12 @@ ms.assetid: 9cfcd243-c9d4-4c2a-abc4-399dbabe5f6b
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 88541982e6d79fb1f81f942f58114d9ba25f692d
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: e183a969cb6208cebbeef0d5c0fc662f9a93381f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85998977"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423875"
 ---
 # <a name="scrolling-and-fetching-rows---bookmarking-rows-in-odbc"></a>행 스크롤 및 페치 - ODBC에서 행에 책갈피 지정
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

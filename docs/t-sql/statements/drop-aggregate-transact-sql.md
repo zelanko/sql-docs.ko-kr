@@ -1,4 +1,5 @@
 ---
+description: DROP AGGREGATE(Transact-SQL)
 title: DROP AGGREGATE(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/10/2017
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 84ffc4e7-c451-4f1f-9a67-7fc3a120e53f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3af850b4154726ea300688a0d155c39c1b262828
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 47abd647ce5b46986c665a1ed898232de2c0483c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483644"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88416829"
 ---
 # <a name="drop-aggregate-transact-sql"></a>DROP AGGREGATE(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -62,7 +63,7 @@ DROP AGGREGATE [ IF EXISTS ] [ schema_name . ] aggregate_name
 ## <a name="permissions"></a>사용 권한  
  DROP AGGREGATE를 실행하려면 최소한 사용자 정의 집계가 속한 스키마에 대한 ALTER 권한이나 집계에 대한 CONTROL 권한이 있어야 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 집계 `Concatenate`를 삭제합니다.  
   
 ```  

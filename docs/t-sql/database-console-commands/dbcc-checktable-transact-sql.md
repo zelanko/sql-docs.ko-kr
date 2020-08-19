@@ -1,4 +1,5 @@
 ---
+description: DBCC CHECKTABLE(Transact-SQL)
 title: DBCC CHECKTABLE (Transact-SQL) | Microsoft Docs
 ms.date: 11/14/2017
 ms.prod: sql
@@ -26,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: 0d6cb620-eb58-4745-8587-4133a1b16994
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: db4bc3e53cd5016cbf6f89c5f0a1d6951ce12c50
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 1c4563a10433d4cbead089da026d086f9c021ccb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485274"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422867"
 ---
 # <a name="dbcc-checktable-transact-sql"></a>DBCC CHECKTABLE(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -182,7 +183,7 @@ DBCC CHECKTABLE은 이러한 검사를 수행하기 위해 확보해야 하는 �
 ## <a name="understanding-dbcc-error-messages"></a>DBCC 오류 메시지 이해    
 DBCC CHECKTABLE 명령이 완료된 후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그에 메시지가 기록됩니다. DBCC 명령이 성공적으로 실행되면 메시지에 실행 완료 및 명령이 실행된 소요 시간이 표시됩니다. 오류로 인해 DBCC 명령이 검사를 완료하기 전에 중지되면 메시지에 명령 종료, 상태 값 및 명령이 실행된 소요 시간이 표시됩니다. 다음 표에서는 메시지에 포함될 수 있는 상태 값을 나열하고 설명합니다.
     
-|시스템 상태|Description|    
+|시스템 상태|설명|    
 |-----------|-----------------|    
 |0|오류 번호 8930이 발생했습니다. 메타데이터가 손상되어 DBCC 명령이 종료되었음을 나타냅니다.|    
 |1|오류 번호 8967이 발생했습니다. 내부 DBCC 오류가 있습니다.|    
@@ -221,7 +222,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 ## <a name="permissions"></a>사용 권한    
 사용자는 테이블을 소유하거나 sysadmin 고정 서버 역할, db_owner 고정 데이터베이스 역할 또는 db_ddladmin 고정 데이터베이스 역할의 멤버여야 합니다.    
     
-## <a name="examples"></a>예    
+## <a name="examples"></a>예제    
     
 ### <a name="a-checking-a-specific-table"></a>A. 특정 테이블 검사    
 다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 `HumanResources.Employee`테이블에 대한 데이터 페이지 무결성을 검사합니다.

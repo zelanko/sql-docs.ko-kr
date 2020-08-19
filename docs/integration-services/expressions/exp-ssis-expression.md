@@ -1,4 +1,5 @@
 ---
+description: EXP(SSIS 식)
 title: EXP(SSIS 식) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4cd96d3c-58c9-4a67-a6f6-b72758232912
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 79770c7de19581540fc92a9a7214b312b03d85be
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 09848aaee36990b8fd56e1f73cb4ba0f5c934095
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917063"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425485"
 ---
 # <a name="exp-ssis-expression"></a>EXP(SSIS 식)
 
@@ -53,13 +54,13 @@ EXP(numeric_expression)
 EXP(74)  
 ```  
   
- 1\.373382979540176E+32를 반환합니다.  
+ 1.373382979540176E+32를 반환합니다.  
   
 ```  
 EXP(-27)  
 ```  
   
- 1\.879528816539083E-12를 반환합니다.  
+ 1.879528816539083E-12를 반환합니다.  
   
 ```  
 EXP(0)  
@@ -67,7 +68,7 @@ EXP(0)
   
  1을 반환합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [LOG&#40;SSIS 식&#41;](../../integration-services/expressions/log-ssis-expression.md)   
  [함수&#40;SSIS 식&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   

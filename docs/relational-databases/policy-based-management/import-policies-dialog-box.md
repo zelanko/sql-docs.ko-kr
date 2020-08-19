@@ -1,4 +1,5 @@
 ---
+description: 정책 가져오기 대화 상자
 title: 정책 가져오기 대화 상자 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 78ab5f6e-2f13-4788-937e-8892ef4e2345
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: b7c5e5667222a7d7591c61670f2058276035c299
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8cd6f4223d3cf23d9ccd98f5b8e4f787872132f3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85749357"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423697"
 ---
 # <a name="import-policies-dialog-box"></a>정책 가져오기 대화 상자
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -25,7 +26,7 @@ ms.locfileid: "85749357"
   
 ## <a name="options"></a>옵션  
  **가져올 파일**  
- XML 파일에서 정책을 가져오려면 파일의 경로와 이름을 입력하거나 찾아보기 단추( **...** )를 사용합니다.  
+ XML 파일에서 정책을 가져오려면 파일의 경로와 이름을 입력하거나 찾아보기 단추(**...**)를 사용합니다.  
   
  **가져온 항목으로 중복 항목 바꾸기**  
  이 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에 이름이 같은 정책 또는 조건이 이미 있는 경우 기존 정책 또는 조건을 덮어쓰려면 선택합니다. 종속 정책이 있는 조건은 종속 정책도 덮어쓰지 않는 한 덮어쓸 수 없습니다. 이 옵션을 선택하지 않으면 같은 조건 식을 사용하는 기존 조건으로 인해 오류가 발생하지 않습니다.  

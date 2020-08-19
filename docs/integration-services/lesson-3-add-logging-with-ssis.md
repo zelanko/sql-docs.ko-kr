@@ -1,4 +1,5 @@
 ---
+description: '3단원: SSIS를 사용하여 로깅 추가'
 title: '3단원: SSIS를 사용하여 로깅 추가 | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/04/2019
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: 64cd24cc-ba8e-4bd7-b10b-6b80d8b04af6
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b55334e76b74bd873aa52e783e1047e913e6ba6a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 59065cf89a1b3f012e183eb062258bc20bbe6a1a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922194"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422227"
 ---
 # <a name="lesson-3-add-logging-with-ssis"></a>3단원: SSIS를 사용하여 로깅 추가
 

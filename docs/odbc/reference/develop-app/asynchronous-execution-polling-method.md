@@ -1,4 +1,5 @@
 ---
+description: 비동기 실행(폴링 메서드)
 title: 비동기 실행 (폴링 방법) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8cd21734-ef8e-4066-afd5-1f340e213f9c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a188c607c499e16652e314c67c37914f6cc9b85f
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: 17199fb610f707c77a6610d34c8b1a5f0166de13
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87362771"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424855"
 ---
 # <a name="asynchronous-execution-polling-method"></a>비동기 실행(폴링 메서드)
 ODBC 3.8 및 Windows 7 SDK 이전에는 문 함수 에서만 비동기 작업을 수행할 수 있었습니다. 자세한 내용은이 항목의 뒷부분에 나오는 **문 작업을 비동기적으로 실행**을 참조 하세요.  

@@ -1,4 +1,5 @@
 ---
+description: SQLGetInfo(Paradox 드라이버)
 title: SQLGetInfo (Paradox 드라이버) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 43aab762-68f4-4128-b8f5-8878ea5f1258
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 354fa7f08797ee1fbfb057bfc2f2c192a8c5eddc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c158c2d2afe7218bc6dd92666e3378381c9b2985
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298573"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421747"
 ---
 # <a name="sqlgetinfo-paradox-driver"></a>SQLGetInfo(Paradox 드라이버)
 > [!NOTE]  

@@ -1,4 +1,5 @@
 ---
+description: 커서 구현 방법
 title: 커서 구현 방법 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,11 +17,12 @@ ms.assetid: 2b1d7dd4-08a4-43fc-b3eb-70c183d0941f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8caf9e490ad457d4ae719464f99e5c74a04a72a2
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 44a6a9228c2b6d9914b1a6126b797736ffc4d72e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000628"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423945"
 ---
 # <a name="how-cursors-are-implemented"></a>커서 구현 방법
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -50,6 +52,6 @@ ms.locfileid: "86000628"
 -   [ODBC 커서 라이브러리](../../../relational-databases/native-client-odbc-cursors/implementation/odbc-cursor-library.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [ODBC&#41;&#40;커서 사용](../../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)  
+ [ODBC&#41;&#40;커서 사용 ](../../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: SQLBrowseConnect로 연결
 title: SQLBrowseConnect를 사용 하 여 연결 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6c2e9f76-b766-48df-b109-246bb05ae45d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e4d738d394bb3c507f6aa08f736016b51ac4fefb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d7ad54276f54155c68fbdbe984642dda4300a7c1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81294663"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424825"
 ---
 # <a name="connecting-with-sqlbrowseconnect"></a>SQLBrowseConnect로 연결
 **SQLDriverConnect**와 같은 **SQLBrowseConnect**는 연결 문자열을 사용 합니다. 그러나 **SQLBrowseConnect**을 사용 하면 응용 프로그램에서 런타임에 전체 연결 문자열을 생성할 수 있습니다. 이를 통해 애플리케이션에서는 다음 두 가지 작업이 가능해집니다.  

@@ -1,4 +1,5 @@
 ---
+description: Integration Services 컨테이너
 title: Integration Services 컨테이너 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1b725922-ec59-4a47-9d55-e079463058f3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 87d8f17c8aa5b2e80939be7da8cbf81592bdd279
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: cebc3b8d50578999fd59f42aa2d41f3d859cebac
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915444"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88393039"
 ---
 # <a name="integration-services-containers"></a>Integration Services 컨테이너
 
@@ -55,21 +56,21 @@ ms.locfileid: "86915444"
   
 |속성|Description|  
 |--------------|-----------------|  
-|**DelayValidation**|컨테이너의 유효성 검사가 런타임까지 지연되는지 여부를 나타내는 부울 값입니다. 이 속성의 기본값은 **False**입니다.<br /><br /> 자세한 내용은 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.DelayValidation%2A>을 참조하세요.|  
-|**설명**|컨테이너 설명입니다. 이 속성에는 문자열이 포함되지만 비워 둘 수 있습니다.<br /><br /> 자세한 내용은 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.Description%2A>을 참조하세요.|  
-|**사용 안함**|컨테이너가 실행되는지 여부를 나타내는 부울 값입니다. 이 속성의 기본값은 **False**입니다.<br /><br /> 자세한 내용은 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.Disable%2A>을 참조하세요.|  
+|**DelayValidation**|컨테이너의 유효성 검사가 런타임까지 지연되는지 여부를 나타내는 부울 값입니다. 이 속성의 기본값은 **False**입니다.<br /><br /> 자세한 내용은 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.DelayValidation%2A>를 참조하세요.|  
+|**설명**|컨테이너 설명입니다. 이 속성에는 문자열이 포함되지만 비워 둘 수 있습니다.<br /><br /> 자세한 내용은 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.Description%2A>를 참조하세요.|  
+|**사용 안 함**|컨테이너가 실행되는지 여부를 나타내는 부울 값입니다. 이 속성의 기본값은 **False**입니다.<br /><br /> 자세한 내용은 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.Disable%2A>를 참조하세요.|  
 |**DisableEventHandlers**|컨테이너와 연결된 이벤트 처리기가 실행되는지 여부를 나타내는 부울 값입니다. 이 속성의 기본값은 **False**입니다.|  
-|**FailPackageOnFailure**|컨테이너에서 오류가 발생하는 경우 패키지가 실패하는지 여부를 지정하는 부울 값입니다. 이 속성의 기본값은 **False**입니다.<br /><br /> 자세한 내용은 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.FailPackageOnFailure%2A>을 참조하세요.|  
-|**FailParentOnFailure**|컨테이너에서 오류가 발생하는 경우 부모 컨테이너가 실패하는지 여부를 지정하는 부울 값입니다. 이 속성의 기본값은 **False**입니다.<br /><br /> 자세한 내용은 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.FailParentOnFailure%2A>을 참조하세요.|  
-|**ForcedExecutionValue**|**ForceExecutionValue** 가 **True**로 설정된 경우 컨테이너의 선택적 실행 값을 포함하는 개체입니다. 이 속성의 기본값은 **0**입니다.<br /><br /> 자세한 내용은 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ForcedExecutionValue%2A>을 참조하세요.|  
+|**FailPackageOnFailure**|컨테이너에서 오류가 발생하는 경우 패키지가 실패하는지 여부를 지정하는 부울 값입니다. 이 속성의 기본값은 **False**입니다.<br /><br /> 자세한 내용은 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.FailPackageOnFailure%2A>를 참조하세요.|  
+|**FailParentOnFailure**|컨테이너에서 오류가 발생하는 경우 부모 컨테이너가 실패하는지 여부를 지정하는 부울 값입니다. 이 속성의 기본값은 **False**입니다.<br /><br /> 자세한 내용은 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.FailParentOnFailure%2A>를 참조하세요.|  
+|**ForcedExecutionValue**|**ForceExecutionValue** 가 **True**로 설정된 경우 컨테이너의 선택적 실행 값을 포함하는 개체입니다. 이 속성의 기본값은 **0**입니다.<br /><br /> 자세한 내용은 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ForcedExecutionValue%2A>를 참조하세요.|  
 |**ForcedExecutionValueType**|**ForcedExecutionValue**의 데이터 형식입니다. 이 속성의 기본값은 **Int32**입니다.|  
-|**ForceExecutionResult**|패키지 또는 컨테이너 강제 실행 결과를 지정하는 값입니다. 가능한 값은 **None**, **Success**, **Failure**및 **Completion**입니다. 이 속성의 기본값은 **None**입니다.<br /><br /> 자세한 내용은 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ForceExecutionResult%2A>을 참조하세요.|  
-|**ForceExecutionValue**|컨테이너의 선택적 실행 값에 특정 값이 포함되도록 강제해야 하는지 여부를 나타내는 부울 값입니다. 이 속성의 기본값은 **False**입니다.<br /><br /> 자세한 내용은 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ForceExecutionValue%2A>을 참조하세요.|  
-|**ID**|패키지를 만들 때 할당된 컨테이너 GUID입니다. 이 속성은 읽기 전용입니다.<br /><br /> <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ID%2A>입니다.|  
-|**IsolationLevel**|컨테이너 트랜잭션의 격리 수준입니다. 가능한 값은 **Unspecified**, **Chaos**, **ReadUncommitted**, **ReadCommitted**, **RepeatableRead**, **Serializable**및 **Snapshot**입니다. 이 속성의 기본값은 **Serializable**입니다. 자세한 내용은 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.IsolationLevel%2A>을 참조하세요.|  
-|**LocaleID**|Microsoft Win32 로캘입니다. 이 속성의 기본값은 로컬 컴퓨터 운영 체제의 로캘입니다.<br /><br /> 자세한 내용은 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.LocaleID%2A>을 참조하세요.|  
+|**ForceExecutionResult**|패키지 또는 컨테이너 강제 실행 결과를 지정하는 값입니다. 가능한 값은 **None**, **Success**, **Failure**및 **Completion**입니다. 이 속성의 기본값은 **None**입니다.<br /><br /> 자세한 내용은 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ForceExecutionResult%2A>를 참조하세요.|  
+|**ForceExecutionValue**|컨테이너의 선택적 실행 값에 특정 값이 포함되도록 강제해야 하는지 여부를 나타내는 부울 값입니다. 이 속성의 기본값은 **False**입니다.<br /><br /> 자세한 내용은 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ForceExecutionValue%2A>를 참조하세요.|  
+|**ID**|패키지를 만들 때 할당된 컨테이너 GUID입니다. 이 속성은 읽기 전용입니다.<br /><br /> <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ID%2A>.|  
+|**IsolationLevel**|컨테이너 트랜잭션의 격리 수준입니다. 가능한 값은 **Unspecified**, **Chaos**, **ReadUncommitted**, **ReadCommitted**, **RepeatableRead**, **Serializable**및 **Snapshot**입니다. 이 속성의 기본값은 **Serializable**입니다. 자세한 내용은 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.IsolationLevel%2A>를 참조하세요.|  
+|**LocaleID**|Microsoft Win32 로캘입니다. 이 속성의 기본값은 로컬 컴퓨터 운영 체제의 로캘입니다.<br /><br /> 자세한 내용은 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.LocaleID%2A>를 참조하세요.|  
 |**LoggingMode**|컨테이너의 로깅 동작을 지정하는 값입니다. 가능한 값은 **Disabled**, **Enabled**및 **UseParentSetting**입니다. 이 속성의 기본값은 **UseParentSetting**입니다. 자세한 내용은 <xref:Microsoft.SqlServer.Dts.Runtime.DTSLoggingMode>을 참조하세요.|  
-|**MaximumErrorCount**|컨테이너 실행이 중지될 때까지 발생할 수 있는 최대 오류 수입니다. 이 속성의 기본값은 **1**입니다.<br /><br /> 자세한 내용은 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.MaximumErrorCount%2A>을 참조하세요.|  
+|**MaximumErrorCount**|컨테이너 실행이 중지될 때까지 발생할 수 있는 최대 오류 수입니다. 이 속성의 기본값은 **1**입니다.<br /><br /> 자세한 내용은 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.MaximumErrorCount%2A>를 참조하세요.|  
 |**이름**|컨테이너의 이름입니다.<br /><br /> 자세한 내용은 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.Name%2A>을 참조하세요.|  
 |**TransactionOption**|컨테이너의 트랜잭션 참여 옵션입니다. 가능한 값은 **NotSupported**, **Supported**및 **Required**입니다. 이 속성의 기본값은 **Supported**입니다. 자세한 내용은 <xref:Microsoft.SqlServer.Dts.Runtime.DTSTransactionOption>을 참조하세요.|  
   
@@ -95,13 +96,13 @@ ms.locfileid: "86915444"
 ### <a name="event-handlers"></a>이벤트 처리기  
  컨테이너 수준의 이벤트 처리기는 컨테이너 또는 컨테이너에 포함된 개체에 의해 발생한 이벤트에 응답합니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 이벤트 처리기](../../integration-services/integration-services-ssis-event-handlers.md)를 참조하세요.  
   
-### <a name="variables"></a>variables  
+### <a name="variables"></a>변수  
  컨테이너에서 사용되는 변수는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서 제공하는 컨테이너 수준의 시스템 변수와 해당 컨테이너가 사용하는 사용자 정의 변수를 포함합니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 변수](../../integration-services/integration-services-ssis-variables.md)을 참조하세요.  
   
 ## <a name="break-points"></a>중단점  
  컨테이너의 중단점을 설정할 때 중단 조건이 **컨테이너가 OnVariableValueChanged 이벤트를 받는 경우 중단**인 경우 컨테이너 범위의 변수를 정의합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [제어 흐름](../../integration-services/control-flow/control-flow.md)  
   
   

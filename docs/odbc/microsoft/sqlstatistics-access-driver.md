@@ -1,4 +1,5 @@
 ---
+description: SQLStatistics(Access 드라이버)
 title: SQLStatistics (Access 드라이버) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6117ac77-1020-4f0c-8eed-e671c34c1f21
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f75f41bf63cbf224772955effa0f120b5d384111
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 67ea4e7f2553d85837c1ece30327f24298d94c97
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299363"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421587"
 ---
 # <a name="sqlstatistics-access-driver"></a>SQLStatistics(Access 드라이버)
 > [!NOTE]  

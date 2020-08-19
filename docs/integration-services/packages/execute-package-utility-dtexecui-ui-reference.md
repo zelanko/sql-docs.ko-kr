@@ -1,4 +1,5 @@
 ---
+description: 패키지 실행 유틸리티(dtexecui)
 title: 패키지 실행 유틸리티(dtexecui) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 3d71df39-126b-4c8e-bd77-128bbd5b0887
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 26e976ee2a62d29f8f14584159888de428431101
-ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
+ms.openlocfilehash: 630fea974e83507984cae8a4ec2b7938fc551d25
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87472518"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425285"
 ---
 # <a name="execute-package-utility-dtexecui"></a>패키지 실행 유틸리티(dtexecui)
 
@@ -248,7 +249,7 @@ ms.locfileid: "87472518"
  **정보**  
  정보 메시지를 보고하려면 선택합니다.  
   
- **자세한 정보**  
+ **Verbose**  
  자세한 정보를 보고하려면 선택합니다.  
   
  **콘솔 로깅**  
@@ -272,7 +273,7 @@ ms.locfileid: "87472518"
  **실행 GUID**  
  패키지 실행 인스턴스의 GUID를 보고하려면 선택합니다.  
   
- **메시지**  
+ **Message**  
  메시지를 보고하려면 선택합니다.  
   
  **시작/종료 시간**  
@@ -372,7 +373,7 @@ ms.locfileid: "87472518"
  **닫기**  
  **패키지 실행 유틸리티** 대화 상자를 닫으려면 클릭합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [dtexec 유틸리티](../../integration-services/packages/dtexec-utility.md)  
   
   

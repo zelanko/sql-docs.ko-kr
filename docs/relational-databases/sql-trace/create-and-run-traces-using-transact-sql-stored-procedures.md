@@ -1,4 +1,5 @@
 ---
+description: TRANSACT-SQL 저장 프로시저를 사용하여 추적 만들기 및 실행
 title: TRANSACT-SQL 저장 프로시저를 사용하여 추적 만들기 및 실행
 ms.custom: seo-dt-2019
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 80347417-338d-4bea-8885-91fae5181cfe
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ae33b8b69f3c6da6e6ad86a554c5eb0bf7af9535
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: eac3736784845b5dbae102bd91aa824b203a7ab8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85751031"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88402479"
 ---
 # <a name="create-and-run-traces-using-transact-sql-stored-procedures"></a>TRANSACT-SQL 저장 프로시저를 사용하여 추적 만들기 및 실행
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,7 +48,7 @@ ms.locfileid: "85751031"
 |[추적 파일 및 테이블 크기 제한](../../relational-databases/sql-trace/limit-trace-file-and-table-sizes.md)|추적 데이터가 기록되는 파일 및 테이블의 크기를 제한하는 방법을 설명합니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 에서만 테이블에 추적 정보를 쓸 수 있습니다.|  
 |[예약된 추적](../../relational-databases/sql-trace/schedule-traces.md)|추적 시작 시간 및 종료 시간을 설정하는 방법을 설명합니다.|  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [sp_trace_create&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md)   
  [sp_trace_setevent&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [sp_trace_setfilter&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)   

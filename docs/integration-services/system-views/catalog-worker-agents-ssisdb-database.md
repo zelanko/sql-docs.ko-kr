@@ -1,4 +1,5 @@
 ---
+description: catalog.worker_agents(SSISDB 데이터베이스)
 title: catalog.worker_agents(SSISDB 데이터베이스) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/16/2016
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 0bd0d827-e2f1-44fe-aa90-6bf922d68d16
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5f8c494e135764ddca11985f3036068c848f818b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 9048a56959de62791b0f952aff086ae513098be2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912429"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421947"
 ---
 # <a name="catalogworker_agents-ssisdb-database"></a>catalog.worker_agents(SSISDB 데이터베이스)
 
@@ -30,7 +31,7 @@ ms.locfileid: "86912429"
 |DisplayName|**nvarchar(256)**|Scale Out Worker의 표시 이름입니다.|
 |Description|**nvarchar(256)**|Scale Out Worker에 대한 설명입니다.|
 |MachineName|**nvarchar(256)**|Scale Out Worker의 컴퓨터 이름입니다.|
-|태그들|**nvarchar(max)**|Scale Out Worker의 태그입니다.|
+|태그|**nvarchar(max)**|Scale Out Worker의 태그입니다.|
 |UserAccount|**nvarchar(256)**|Scale Out Worker 서비스를 실행하는 사용자 계정입니다.|
 |LastOnlineTime|**datetimeoffset(7)**|Scale Out Worker가 마지막으로 온라인 상태인 시간입니다.|
 

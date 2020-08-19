@@ -1,4 +1,5 @@
 ---
+description: catalog.object_parameters(SSISDB 데이터베이스)
 title: catalog.object_parameters(SSISDB 데이터베이스) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: d7b04903-2d61-4159-9456-475942d1f732
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7ca6cf256e00c992e492c6d1a6d1a698a739c871
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 856676c6ad5330e6039711d7a391bdd264a2b062
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912509"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422047"
 ---
 # <a name="catalogobject_parameters-ssisdb-database"></a>catalog.object_parameters(SSISDB 데이터베이스)
 
@@ -34,7 +35,7 @@ ms.locfileid: "86912509"
 |object_name|**sysname**|해당 프로젝트 또는 패키지의 이름입니다.|  
 |parameter_name|**sysname(nvarchar(128))**|매개 변수의 이름입니다.|  
 |data_type|**nvarchar(128)**|매개 변수의 데이터 형식입니다.|  
-|required|**bit**|값이 `1`이면 실행을 시작하는 데 매개 변수 값이 필요하고, 값이 `0`이면 실행을 시작하는 데 매개 변수 값이 필요하지 않습니다.|  
+|필수|**bit**|값이 `1`이면 실행을 시작하는 데 매개 변수 값이 필요하고, 값이 `0`이면 실행을 시작하는 데 매개 변수 값이 필요하지 않습니다.|  
 |sensitive|**bit**|값이 `1`이면 매개 변수 값이 중요하고, 값이 `0`이면 매개 변수 값이 중요하지 않습니다.|  
 |description|**nvarchar(1024)**|패키지에 대한 설명(옵션)입니다.|  
 |design_default_value|**sql_variant**|프로젝트 또는 패키지 디자인 중에 할당된 매개 변수의 기본값입니다.|  

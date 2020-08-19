@@ -1,4 +1,5 @@
 ---
+description: 커서 옵션 설정(ODBC)
 title: 커서 옵션 설정 (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -13,18 +14,19 @@ ms.assetid: 0e72b48a-fc5a-4656-8cf5-39f57d8c1565
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 60b97e8b52d985aeb9ba97f95e39c5e94d3188fa
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 2622fc28743da2e2eed4224e7a2f0eb21c09e665
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009458"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423783"
 ---
 # <a name="set-cursor-options-odbc"></a>커서 옵션 설정(ODBC)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   커서 옵션을 설정 하려면 [SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) 를 호출 하 여 또는 [SQLGetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlgetstmtattr.md) 로 설정 하 여 커서 동작을 제어 하는 문 옵션을 가져옵니다.  
   
-|*특성*|설명|  
+|*Attribute*|설명|  
 |-----------------|---------------|  
 |SQL_ATTR_CURSOR_TYPE|커서 유형(정방향 전용, 정적, 동적 또는 키 집합)|  
 |SQL_ATTR_CONCURRENCY|동시성 제어 옵션(읽기 전용, 잠금, 타임스탬프를 사용한 낙관적 또는 값을 사용한 낙관적)|  

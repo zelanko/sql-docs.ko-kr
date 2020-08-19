@@ -1,4 +1,5 @@
 ---
+description: SQLRowCount(커서 라이브러리)
 title: SQLRowCount (커서 라이브러리) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 781cf5a5-325e-4523-8633-d96d9e98277c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: bf9fe597f54ecb4bc82439251e2228ac5fdc4ea3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 02c972d4847ef0736e6f9e9ac91f8f617e1d9df0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300593"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424883"
 ---
 # <a name="sqlrowcount-cursor-library"></a>SQLRowCount(커서 라이브러리)
 > [!IMPORTANT]  

@@ -1,4 +1,5 @@
 ---
+description: 기존 암호화된 열에 대해 보안 enclave를 사용한 Always Encrypted 사용
 title: 기존 암호화된 열에 대해 보안 enclave를 사용한 Always Encrypted 사용 | Microsoft Docs"
 ms.custom: ''
 ms.date: 10/30/2019
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3d7028cc1d1789d65da424e985e191f9217b9328
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: 4ef6fe83bd2d9671ccf43b4957497a8c1fc7a4cf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411409"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420337"
 ---
 # <a name="enable-always-encrypted-with-secure-enclaves-for-existing-encrypted-columns"></a>기존 암호화된 열에 대해 보안 enclave를 사용한 Always Encrypted 사용 
 [!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
@@ -26,8 +27,8 @@ enclave가 설정되지 않은 키로 암호화된 기존 열이 있는 경우 e
 
 다음과 같이 몇 가지 방법으로 기존 암호화된 열에 enclave 계산을 사용하도록 설정할 수 있습니다.
 
-- **범위/세분성:** 열 하위 집합 또는 지정된 열 마스터 키로 보호되는 모든 열의 enclave 기능을 사용하도록 설정하고 싶나요?
-- **데이터 크기:** enclave 사용 열로 지정하려는 열이 포함된 테이블의 크기는 얼마나 되나요?
+- **범위/세분성:** 열 하위 집합 또는 지정된 열 마스터 키로 보호되는 모든 열의 Enclave 기능을 사용하도록 설정하고 싶나요?
+- **데이터 크기:** Enclave 사용 열로 지정하려는 열이 포함된 테이블의 크기는 얼마나 되나요?
 - 열의 암호화 유형을 변경하고 싶나요? 임의 암호화만 리치 계산(패턴 일치, 비교 연산자)을 지원한다는 점에 유의합니다. 결정적 암호화를 사용하여 열을 암호화한 경우에도, 임의 암호화로 다시 암호화하여 리치 계산을 잠금 해제해야 합니다.
 
 다음 섹션에서는 기존 열에 대해 enclave를 사용하도록 설정하는 세 가지 방법에 대해 설명합니다.

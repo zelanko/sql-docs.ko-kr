@@ -1,4 +1,5 @@
 ---
+description: 병합 복제 성능 향상
 title: 병합 복제 성능 향상 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: f929226f-b83d-4900-a07c-a62f64527c7f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: eee65227e767ec92fbb6d2c9d0f304b29cbc6aaa
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 70399a3d0e21fc75014828837e7b4cb7738d9966
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897879"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423607"
 ---
 # <a name="enhance-merge-replication-performance"></a>병합 복제 성능 향상
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +43,7 @@ ms.locfileid: "85897879"
   
 -   LOB(Large Object) 데이터 형식을 포함하는 테이블을 너무 많이 정규화한 경우를 고려해 보십시오.  
   
-     동기화가 발생할 때 병합 에이전트는 게시자 또는 구독자에서 전체 데이터 행을 읽고 전송해야 합니다. 이 행에 LOB를 사용하는 열이 있다면 추가 메모리 할당이 필요하고 이러한 열이 업데이트되지 않았어도 성능에 부정적 영향을 미칠 수 있습니다. 이렇게 성능에 미칠 영향을 줄이려면 나머지 행 데이터에 대해 일 대 일 관계를 사용하여 LOB 열을 별개의 테이블에 두도록 합니다. **text**, **ntext**및 **image** 데이터 형식은 사용되지 않습니다. LOB를 포함시킬 경우 데이터 형식 **varchar(max)** , **nvarchar(max)** , **varbinary(max)** 를 각각 사용하는 것이 좋습니다.  
+     동기화가 발생할 때 병합 에이전트는 게시자 또는 구독자에서 전체 데이터 행을 읽고 전송해야 합니다. 이 행에 LOB를 사용하는 열이 있다면 추가 메모리 할당이 필요하고 이러한 열이 업데이트되지 않았어도 성능에 부정적 영향을 미칠 수 있습니다. 이렇게 성능에 미칠 영향을 줄이려면 나머지 행 데이터에 대해 일 대 일 관계를 사용하여 LOB 열을 별개의 테이블에 두도록 합니다. **text**, **ntext**및 **image** 데이터 형식은 사용되지 않습니다. LOB를 포함시킬 경우 데이터 형식 **varchar(max)**, **nvarchar(max)**, **varbinary(max)** 를 각각 사용하는 것이 좋습니다.  
   
 ## <a name="publication-design"></a>게시 디자인  
   

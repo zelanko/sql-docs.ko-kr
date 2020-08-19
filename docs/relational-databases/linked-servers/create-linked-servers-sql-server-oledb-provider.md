@@ -1,4 +1,5 @@
 ---
+description: 'Microsoft SQL Server 분산 쿼리: OLE DB 연결'
 title: 연결된 서버 공급자 만들기
 ms.date: 07/01/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ author: pmasl
 ms.author: pelopes
 manager: rothj
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 933a37dd4ef627796b7688510bd235c80db417be
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 528d1f6e1c7eea06b69fc60e2208eeb37ce3e36f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74095998"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420847"
 ---
 # <a name="microsoft-sql-server-distributed-queries-ole-db-connectivity"></a>Microsoft SQL Server 분산 쿼리: OLE DB 연결
 
@@ -190,26 +191,26 @@ sysadmin 역할의 멤버를 제외하고 기본적으로 임시 이름을 사�
 
    SQL Server는 분산 쿼리 평가에 사용할 여러 공급자 속성을 수집합니다. 이러한 속성은 `IDBProperties::GetProperties`를 호출하여 검색합니다. 이러한 속성은 모두 선택 사항입니다. 그러나 관련 속성을 모두 지원하면 SQL Server에서 공급자 기능을 완전히 활용할 수 있습니다. 예를 들어 `DBPROP_SQLSUPPORT`는 SQL Server에서 공급자에 쿼리를 보낼 수 있는지를 결정하는 데 필요합니다. 이 속성이 지원되지 않는 경우 SQL Server는 원격 공급자가 SQL 명령 공급자인 경우에도 SQL 명령 공급자로 사용하지 않습니다. 다음 표의 기본값 열에는 SQL Server에서 공급자가 속성을 지원하지 않는 경우에 사용하는 값이 표시됩니다.
 
-속성| 기본값| 사용 |
+속성| 기본값| 기능 |
 |:----|:----|:----|
-|`DBPROP_DBMSNAME`|None|오류 메시지에 사용됩니다.|
-|`DBPROP_DBMSVER` |None|오류 메시지에 사용됩니다.|
-|`DBPROP_PROVIDERNAME`|None|오류 메시지에 사용됩니다.|
-|`DBPROP_PROVIDEROLEDBVER1`|1.5|2\.0 기능의 가용성을 결정하는 데 사용됩니다.
-|`DBPROP_CONCATNULLBEHAVIOR`|None|공급자의 `NULL` 연결 동작이 SQL Server와 동일한지 여부를 결정하는 데 사용됩니다.|
-|`DBPROP_NULLCOLLATION`|None|`NULLCOLLATION`이 SQL Server 인스턴스 null 데이터 정렬 동작과 일치하는 경우에만 정렬/인덱스 사용을 허용합니다.|
-|`DBPROP_OLEOBJECTS`|None|공급자가 큰 데이터 개체 열에 대해 구조적 스토리지 인터페이스를 지원하는지를 결정합니다.|
-|`DBPROP_STRUCTUREDSTORAGE`|None|큰 개체 형식(`ILockBytes`, `Istream` 및 `ISequentialStream`)에 대해 지원되는 구조적 스토리지 인터페이스를 결정합니다.|
-|`DBPROP_MULTIPLESTORAGEOBJECTS`|False|둘 이상의 큰 개체 열을 동시에 열 수 있는지를 결정합니다.|
-|`DBPROP_SQLSUPPORT`|None|SQL 쿼리를 공급자에 보낼 수 있는지를 결정합니다.|
+|`DBPROP_DBMSNAME`|없음|오류 메시지에 사용됩니다.|
+|`DBPROP_DBMSVER` |없음|오류 메시지에 사용됩니다.|
+|`DBPROP_PROVIDERNAME`|없음|오류 메시지에 사용됩니다.|
+|`DBPROP_PROVIDEROLEDBVER1`|1.5|2.0 기능의 가용성을 결정하는 데 사용됩니다.
+|`DBPROP_CONCATNULLBEHAVIOR`|없음|공급자의 `NULL` 연결 동작이 SQL Server와 동일한지 여부를 결정하는 데 사용됩니다.|
+|`DBPROP_NULLCOLLATION`|없음|`NULLCOLLATION`이 SQL Server 인스턴스 null 데이터 정렬 동작과 일치하는 경우에만 정렬/인덱스 사용을 허용합니다.|
+|`DBPROP_OLEOBJECTS`|없음|공급자가 큰 데이터 개체 열에 대해 구조적 스토리지 인터페이스를 지원하는지를 결정합니다.|
+|`DBPROP_STRUCTUREDSTORAGE`|없음|큰 개체 형식(`ILockBytes`, `Istream` 및 `ISequentialStream`)에 대해 지원되는 구조적 스토리지 인터페이스를 결정합니다.|
+|`DBPROP_MULTIPLESTORAGEOBJECTS`|아니요|둘 이상의 큰 개체 열을 동시에 열 수 있는지를 결정합니다.|
+|`DBPROP_SQLSUPPORT`|없음|SQL 쿼리를 공급자에 보낼 수 있는지를 결정합니다.|
 |`DBPROP_CATALOGLOCATION`|`DBPROPVAL_CL_START`|여러 부분으로 구성된 테이블 이름을 생성하는 데 사용됩니다.
-|`SQLPROP_DYNAMICSQL`|False|SQL Server 특정 속성입니다. `VARIANT_TRUE`를 반환하는 경우 `?` 매개 변수 표식이 매개 변수가 있는 쿼리 실행에 대해 지원됨을 나타냅니다.
-|`SQLPROP_NESTEDQUERIES`|False|SQL Server 특정 속성입니다. `VARIANT_TRUE`를 반환하는 경우 공급자가 `FROM` 절에서 중첩된 `SELECT` 문을 지원함을 나타냅니다.
-|`SQLPROP_GROUPBY`|False|SQL Server 특정 속성입니다. `VARIANT_TRUE`를 반환하는 경우 공급자가 SQL-92 표준에 지정된 대로 `SELECT` 문에서 GROUP BY 절을 지원함을 나타냅니다.
-|`SQLPROP_DATELITERALS `|False|SQL Server 특정 속성입니다. `VARIANT_TRUE`를 반환하는 경우 공급자가 SQL Server Transact-SQL 구문을 기준으로 날짜/시간 리터럴을 지원함을 나타냅니다.
-|`SQLPROP_ANSILIKE `|False|SQL Server 특정 속성입니다. 이 속성은 SQL-Minimum 수준을 지원하는 공급자에서 중요하며, SQL-92 항목 수준(\'%\' 및 \'_\' 와일드카드 문자)을 기준으로 `LIKE` 연산자를 지원합니다.
-|`SQLPROP_SUBQUERIES `|False|SQL Server 속성입니다. 이 속성은 SQL-Minimum 수준을 지원하는 공급자에서 중요합니다. 이 속성은 공급자가 SQL-92 항목 수준에 지정된 대로 하위 쿼리를 지원함을 나타냅니다. 여기에는 상호 관련된 하위 쿼리, `IN`, `EXISTS`, `ALL` 및 `ANY` 연산자를 지원하는 `SELECT` 목록과 `WHERE` 절의 하위 쿼리가 포함됩니다.
-|`SQLPROP_INNERJOIN`|False|SQL Server 특정 속성입니다. 이 속성은 SQL-Minimum 수준을 지원하는 공급자에서 중요합니다. 이 속성은 `FROM` 절에서 여러 테이블을 사용하는 조인이 지원됨을 나타냅니다. ------ ---
+|`SQLPROP_DYNAMICSQL`|아니요|SQL Server 특정 속성입니다. `VARIANT_TRUE`를 반환하는 경우 `?` 매개 변수 표식이 매개 변수가 있는 쿼리 실행에 대해 지원됨을 나타냅니다.
+|`SQLPROP_NESTEDQUERIES`|아니요|SQL Server 특정 속성입니다. `VARIANT_TRUE`를 반환하는 경우 공급자가 `FROM` 절에서 중첩된 `SELECT` 문을 지원함을 나타냅니다.
+|`SQLPROP_GROUPBY`|아니요|SQL Server 특정 속성입니다. `VARIANT_TRUE`를 반환하는 경우 공급자가 SQL-92 표준에 지정된 대로 `SELECT` 문에서 GROUP BY 절을 지원함을 나타냅니다.
+|`SQLPROP_DATELITERALS `|아니요|SQL Server 특정 속성입니다. `VARIANT_TRUE`를 반환하는 경우 공급자가 SQL Server Transact-SQL 구문을 기준으로 날짜/시간 리터럴을 지원함을 나타냅니다.
+|`SQLPROP_ANSILIKE `|아니요|SQL Server 특정 속성입니다. 이 속성은 SQL-Minimum 수준을 지원하는 공급자에서 중요하며, SQL-92 항목 수준(\'%\' 및 \'_\' 와일드카드 문자)을 기준으로 `LIKE` 연산자를 지원합니다.
+|`SQLPROP_SUBQUERIES `|아니요|SQL Server 속성입니다. 이 속성은 SQL-Minimum 수준을 지원하는 공급자에서 중요합니다. 이 속성은 공급자가 SQL-92 항목 수준에 지정된 대로 하위 쿼리를 지원함을 나타냅니다. 여기에는 상호 관련된 하위 쿼리, `IN`, `EXISTS`, `ALL` 및 `ANY` 연산자를 지원하는 `SELECT` 목록과 `WHERE` 절의 하위 쿼리가 포함됩니다.
+|`SQLPROP_INNERJOIN`|아니요|SQL Server 특정 속성입니다. 이 속성은 SQL-Minimum 수준을 지원하는 공급자에서 중요합니다. 이 속성은 `FROM` 절에서 여러 테이블을 사용하는 조인이 지원됨을 나타냅니다. ------ ---
 
 `DBLITERAL_CATALOG_SEPARATOR`, `DBLITERAL_SCHEMA_SEPARATOR`(카탈로그, 스키마 및 개체 이름 부분이 지정된 경우 전체 개체 이름 생성) 및 `DBLITERAL_QUOTE`(공급자에 전송된 SQL 쿼리에서 식별자 이름에 따옴표 표시)의 세 가지 리터럴은 `IDBInfo::GetLiteralInfo`에서 검색됩니다.
 
@@ -274,7 +275,7 @@ OLE DB 공급자는 다음과 같은 배포 통계를 지원해야 합니다.
 
 - **필수**. `TABLE_STATISTICS` 스키마 행 집합을 지원해야 합니다. `TABLE_STATISTICS` 스키마 행 집합에는 지정된 데이터베이스에서 사용할 수 있는 통계가 나열됩니다. 또한 스키마 행 집합 자체의 열 및 튜플 카디널리티를 포함하며 특정 열에서 히스토그램이 지원되는지 여부를 나타냅니다. SQL Server에서 통계를 사용하려면 이 스키마 행 집합에 `TABLE_NAME`, `STATISTICS_NAME`, `STATISTICS_TYPE`, `COLUMN_NAME` 및 `ORDINAL_POSITION` 열이 필요합니다. `COLUMN_CARDINALITY` 또는 `TUPLE_CARDINALITY` 중 하나 이상이 필요합니다. 히스토그램이 지원되는 경우 `NO_OF_RANGES`도 필요합니다.
 
-- **선택 사항**. 필요에 따라 공급자가 히스토그램을 지원하는 경우 해당 통계의 `DBID`를 지정하여 히스토그램 행 집합을 열 수 있도록 하는 `IOpenRowset::OpenRowset` 메서드의 개선 사항을 지원해야 합니다.
+- **선택 사항입니다**. 필요에 따라 공급자가 히스토그램을 지원하는 경우 해당 통계의 `DBID`를 지정하여 히스토그램 행 집합을 열 수 있도록 하는 `IOpenRowset::OpenRowset` 메서드의 개선 사항을 지원해야 합니다.
 
 통계 인터페이스에 대한 자세한 내용은 OLE DB 2.6 사양을 참조하세요.
 
@@ -330,7 +331,7 @@ SQL Server 및 OLE DB 데이터 형식 매핑 테이블
 |`DBTYPE_ERROR`| |Error|
 |`DBTYPE_BOOL`| |`bit`|
 |`DBTYPE_VARIANT`*| |nvarchar|
-|`DBTYPE_IUNKNOWN`| |Error|
+|`DBTYPE_IUNKNOWN`| |오류|
 |`DBTYPE_GUID`| |`uniqueidentifier`|
 |`DBTYPE_BYTES`|`DBCOLUMNFLAGS_ISLONG=true` <br>또는<br> 최대 길이 > 8000|`image`|
 |`DBTYPE_BYTES`|`DBCOLUMNFLAGS_ISROWVER=true`, `DBCOLUMNFLAGS_ISFIXEDLENGTH=true`, 열 크기 = 8 <br>또는<br> 최대 길이가 보고되지 않음 | `timestamp` |
@@ -342,12 +343,12 @@ SQL Server 및 OLE DB 데이터 형식 매핑 테이블
 |`DBTYPE_WSTR`| `DBCOLUMNFLAGS_ISFIXEDLENGTH=true` |`nchar`|
 |`DBTYPE_WSTR` | `DBCOLUMNFLAGS_ISFIXEDLENGTH=false`|`nvarchar`|
 |`DBTYPE_WSTR`| `DBCOLUMNFLAGS_ISLONG=true` <br>또는<br> 최대 길이 > 4000자 <br>또는<br>   최대 길이가 보고되지 않음 | `ntext`|
-|`DBTYPE_UDT`| |Error|
+|`DBTYPE_UDT`| |오류|
 |`DBTYPE_DATE`* | | `datetime` |
 |`DBTYPE_DBDATE` | | `datetime`(명시적 변환 필요)|
 |`DBTYPE_DBTIME`| | `datetime`(명시적 변환 필요)|
 |`DBTYPE_DBTIMESTAMP`* | | `datetime`|
-|`DBTYPE_ARRAY` | |Error|
+|`DBTYPE_ARRAY` | |오류|
 |`DBTYPE_BYREF` | | 무시됨 |
 |`DBTYPE_VECTOR` | |Error|
 |`DBTYPE_RESERVED`| |Error|
@@ -433,7 +434,7 @@ SQL Server는 OLE DB에 지정된 OLE DB 오류 개체를 사용합니다. 개�
 
 이러한 매핑은 지정된 연결된 서버에 대해 사용자가 지정할 수 있으며, 시스템 저장 프로시저 `sp_addlinkedsrvlogin` 및 `sp_droplinkedsrvlogin`에서 설정하고 관리할 수 있습니다. `IDBProperties::SetProperties`를 통해 초기화 그룹 속성 DBPROP_AUTH_USERID 및 DBPROP_AUTH_PASSWORD를 설정하면 매핑에 따라 결정된 사용자 ID와 암호가 연결 시 공급자에 전달됩니다.
 
-클라이언트가 Windows 인증을 통해 SQL Server에 연결하는 경우 `sp_addlinkedsrvlogin`을 사용하여 로그인에 `self` 매핑이 설정되어 있으면 SQL Server는 클라이언트의 보안 컨텍스트를 가장하고 연결 시 공급자의 `DBPROP_AUTH_INTEGRATED` 속성을 설정합니다. 이 프로세스를 ‘위임’이라고 합니다. 
+클라이언트가 Windows 인증을 통해 SQL Server에 연결하는 경우 `sp_addlinkedsrvlogin`을 사용하여 로그인에 `self` 매핑이 설정되어 있으면 SQL Server는 클라이언트의 보안 컨텍스트를 가장하고 연결 시 공급자의 `DBPROP_AUTH_INTEGRATED` 속성을 설정합니다. 이 프로세스를 ‘위임’이라고 합니다.**
 
 연결에 사용되는 보안 컨텍스트를 확인한 후에 이 보안 컨텍스트의 인증과 데이터 원본의 데이터 개체에 대한 해당 컨텍스트의 사용 권한 확인은 전적으로 OLE DB 공급자의 책임입니다.
 
@@ -616,7 +617,7 @@ Microsoft SQL Server는 다른 유형의 데이터 원본에 있는 데이터에
 
 선택적 인터페이스의 경우, 지정된 인터페이스를 사용하는 여섯 가지 시나리오 중 하나 이상이 시나리오 열에 표시됩니다. 예를 들어 기본 테이블 행 집합의 `IRowsetChange` 인터페이스는 선택적 인터페이스입니다. 이 인터페이스는 `UPDATE` 및 DELETE 문과 `INSERT` 문 시나리오에서 사용됩니다. 이 인터페이스가 지원되지 않는 경우 해당 공급자에 대해 UPDATE, DELETE 및 `INSERT` 문을 지원할 수 없습니다. 다른 선택적 인터페이스 중 일부는 시나리오 열에서 \"성능\"으로 표시되어, 인터페이스의 일반 성능이 향상됨을 나타냅니다. 예를 들어 `IDBSchemaRowset` 인터페이스가 지원되지 않는 경우 SQL Server는 메타데이터와 쿼리 실행을 위해 각각 한 번씩, 행 집합을 두 번 열어야 합니다. `IDBSchemaRowset`를 지원하면 SQL Server 성능이 향상됩니다.
 
-|Object|인터페이스|필수|주석|시나리오|
+|Object|인터페이스|필수|의견|시나리오|
 |:-----|:-----|:-----|:-----|:-----|
 |Data Source 개체|`IDBInitialize`|예|데이터와 보안 컨텍스트를 초기화 및 설정합니다.| |
 | |`IDBCreateSession`|예|DB 세션 개체를 만듭니다.| |
@@ -648,7 +649,7 @@ Microsoft SQL Server는 다른 유형의 데이터 원본에 있는 데이터에
 | |`ICommandPrepare`|예|메타데이터를 가져오는 명령을 준비하는 데 사용합니다(사용 가능한 경우 통과 쿼리에 사용됨).|원격 쿼리, 성능|
 |Error 개체|`IErrorRecords`|예|단일 오류 레코드에 해당하는 `IErrorInfo` 인터페이스에 대한 포인터를 가져오는 데 사용합니다.| |
 | |`IErrorInfo`|예|단일 오류 레코드에 해당하는 `IErrorInfo` 인터페이스에 대한 포인터를 가져오는 데 사용합니다.| |
-|Any 개체|`ISupportErrorInfo`|예|지정된 인터페이스가 오류 개체를 지원하는지를 확인하는 데 사용합니다.| |
+|모든 개체|`ISupportErrorInfo`|예|지정된 인터페이스가 오류 개체를 지원하는지를 확인하는 데 사용합니다.| |
 |  |  |  |  |  |
 
 >[!NOTE]

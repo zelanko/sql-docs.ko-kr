@@ -1,4 +1,5 @@
 ---
+description: SQLGetInfo(Excel 드라이버)
 title: SQLGetInfo (Excel 드라이버) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: fed4aea2-6d3d-4199-a5db-3d033eb63927
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0a96b135bbd8d44b82e645fac59ddea795666f3f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4d2cb149601f9c34bb7f0c35ca980a847b7948f0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298583"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421757"
 ---
 # <a name="sqlgetinfo-excel-driver"></a>SQLGetInfo(Excel 드라이버)
 > [!NOTE]  
@@ -64,7 +65,7 @@ ms.locfileid: "81298583"
  31 (Excel 5.0/7.0/97)  
   
 ## <a name="sql_catalog_name_separator"></a>SQL_CATALOG_NAME_SEPARATOR  
- "\\" (Excel 3.0/4.0)  
+ " \\ " (Excel 3.0/4.0)  
   
  "." (Excel 5.0/7.0/97)  
   
