@@ -1,4 +1,5 @@
 ---
+description: sys.parameters(Transact-SQL)
 title: sys. parameters (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -21,11 +22,12 @@ ms.assetid: 24e2764b-c8e5-4322-97a4-7407d8b8a92b
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d8cc1175448ad9797484247a96df830b9b019da1
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 1a1d269c0bc247a1bb5d8afbc0aecb54bc9e7fd5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004794"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447941"
 ---
 # <a name="sysparameters-transact-sql"></a>sys.parameters(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -51,14 +53,14 @@ ms.locfileid: "86004794"
 |**is_readonly**|**bit**|1 = 매개 변수가 읽기 전용인 경우, 그렇지 않으면 0입니다.|  
 |**is_nullable**|**bit**|1 = 매개 변수가 null을 허용합니다. (기본값).<br /><br /> 0 = 고유하게 컴파일된 저장 프로시저를 보다 효율적으로 실행할 수 있도록 매개 변수가 null을 허용하지 않습니다.|  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;개체 카탈로그 뷰](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
- [Transact-sql&#41;&#40;카탈로그 뷰](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [개체 카탈로그 뷰 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [SQL Server 시스템 카탈로그 쿼리 FAQ](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
  [all_parameters &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-all-parameters-transact-sql.md)   
- [Transact-sql&#41;&#40;tem_parameterssys.sys](../../relational-databases/system-catalog-views/sys-system-parameters-transact-sql.md)  
+ [ Transact-sql&#41;&#40;tem_parameterssys.sys](../../relational-databases/system-catalog-views/sys-system-parameters-transact-sql.md)  
   
   

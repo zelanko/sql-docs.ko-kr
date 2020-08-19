@@ -1,4 +1,5 @@
 ---
+description: sp_help_jobactivity(Transact-SQL)
 title: sp_help_jobactivity (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d344864f-b4d3-46b1-8933-b81dec71f511
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 84dee2f945feaa59d96adb03fc6d531d7f2fd925
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 7dc9650d715468bb66b5594100b0ce605083328e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893707"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447086"
 ---
 # <a name="sp_help_jobactivity-transact-sql"></a>sp_help_jobactivity(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,14 +41,14 @@ sp_help_jobactivity { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @job_id = ] job_id`작업 id입니다. *job_id*은 **uniqueidentifier**이며 기본값은 NULL입니다.  
+`[ @job_id = ] job_id` 작업 id입니다. *job_id*은 **uniqueidentifier**이며 기본값은 NULL입니다.  
   
-`[ @job_name = ] 'job_name'`작업의 이름입니다. *job_name*는 **sysname**이며 기본값은 NULL입니다.  
+`[ @job_name = ] 'job_name'` 작업의 이름입니다. *job_name*는 **sysname**이며 기본값은 NULL입니다.  
   
 > [!NOTE]  
 >  *Job_id* 또는 *job_name* 를 지정 해야 하지만 둘 다 지정할 수는 없습니다.  
   
-`[ @session_id = ] session_id`정보를 보고할 세션 id입니다. *session_id* 은 **int**이며 기본값은 NULL입니다.  
+`[ @session_id = ] session_id` 정보를 보고할 세션 id입니다. *session_id* 은 **int**이며 기본값은 NULL입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -97,7 +98,7 @@ sp_help_jobactivity { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
   
  **Sysadmin** 의 멤버만 다른 사용자가 소유한 작업에 대 한 작업을 볼 수 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 현재 사용자가 볼 수 있는 권한을 가진 모든 작업의 동작을 나열합니다.  
   
 ```  
@@ -109,6 +110,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;저장 프로시저 SQL Server 에이전트](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)  
+ [Transact-sql&#41;&#40;저장 프로시저 SQL Server 에이전트 ](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)  
   
   

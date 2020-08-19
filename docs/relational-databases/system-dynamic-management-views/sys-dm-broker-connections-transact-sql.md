@@ -1,4 +1,5 @@
 ---
+description: sys.dm_broker_connections(Transact-SQL)
 title: sys. dm_broker_connections (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/08/2016
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: d9e20433-67fe-4fcc-80e3-b94335b2daef
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5dc4329cdd9b5ba5588a20a67aca8ae664f0041f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2e921c4bf0920f6586a7a837ccfea73c759f8b10
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894629"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447761"
 ---
 # <a name="sysdm_broker_connections-transact-sql"></a>sys.dm_broker_connections(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -68,12 +69,12 @@ ms.locfileid: "85894629"
   
 ## <a name="relationship-cardinalities"></a>관계 카디널리티  
   
-|시작|대상|관계|  
+|보낸 사람|대상|관계|  
 |----------|--------|------------------|  
 |**dm_broker_connections.connection_id**|**dm_exec_connections.connection_id**|일 대 일|  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;동적 관리 뷰 및 함수](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Service Broker 관련 동적 관리 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/service-broker-related-dynamic-management-views-transact-sql.md)  
   
   

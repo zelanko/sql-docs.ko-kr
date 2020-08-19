@@ -1,4 +1,5 @@
 ---
+description: sp_addextendedproc(Transact-SQL)
 title: sp_addextendedproc (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: c0d4b47b-a855-451e-90e5-5fb2d836ebfa
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 28711f289e86309baf6f2b54cf6c037d04d54d4d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a64b9b173b6b76429723c47bcf55fab4257b073c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85877997"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447413"
 ---
 # <a name="sp_addextendedproc-transact-sql"></a>sp_addextendedproc(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85877997"
   새 확장 저장 프로시저의 이름을에 등록 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 합니다.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]대신 [CLR 통합](../../relational-databases/clr-integration/common-language-runtime-integration-overview.md) 을 사용 하세요.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 대신 [CLR 통합](../../relational-databases/clr-integration/common-language-runtime-integration-overview.md) 을 사용 하세요.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,9 +44,9 @@ sp_addextendedproc [ @functname = ] 'procedure' ,
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @functname = ] 'procedure'`DLL (동적 연결 라이브러리)에서 호출할 함수의 이름입니다. *프로시저* 는 **nvarchar (517)** 이며 기본값은 없습니다. 필요한 경우 *프로시저* 는 owner *. 함수*형식으로 소유자 이름을 포함할 수 있습니다.  
+`[ @functname = ] 'procedure'` DLL (동적 연결 라이브러리)에서 호출할 함수의 이름입니다. *프로시저* 는 **nvarchar (517)** 이며 기본값은 없습니다. 필요한 경우 *프로시저* 는 owner *. 함수*형식으로 소유자 이름을 포함할 수 있습니다.  
   
-`[ @dllname = ] 'dll'`함수를 포함 하는 DLL의 이름입니다. *dll* 은 **varchar (255)** 이며 기본값은 없습니다. DLL의 전체 경로를 지정하는 것이 좋습니다.  
+`[ @dllname = ] 'dll'` 함수를 포함 하는 DLL의 이름입니다. *dll* 은 **varchar (255)** 이며 기본값은 없습니다. DLL의 전체 경로를 지정하는 것이 좋습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -66,7 +67,7 @@ sp_addextendedproc [ @functname = ] 'procedure' ,
 ## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할의 멤버만 **sp_addextendedproc**를 실행할 수 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 **xp_hello** 확장 저장 프로시저를 추가 합니다.  
   
 ```  
@@ -77,8 +78,8 @@ EXEC sp_addextendedproc xp_hello, 'c:\xp_hello.dll';
   
 ## <a name="see-also"></a>참고 항목  
  [EXECUTE&#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
- [Transact-sql&#41;&#40;권한 부여](../../t-sql/statements/grant-transact-sql.md)   
- [REVOKE &#40;Transact-sql&#41;](../../t-sql/statements/revoke-transact-sql.md)   
+ [GRANT&#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
+ [REVOKE&#40;Transact-SQL&#41;](../../t-sql/statements/revoke-transact-sql.md)   
  [Transact-sql&#41;sp_dropextendedproc &#40;](../../relational-databases/system-stored-procedures/sp-dropextendedproc-transact-sql.md)   
  [Transact-sql&#41;sp_helpextendedproc &#40;](../../relational-databases/system-stored-procedures/sp-helpextendedproc-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

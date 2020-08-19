@@ -1,4 +1,5 @@
 ---
+description: sp_get_query_template(Transact-SQL)
 title: sp_get_query_template (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 85e9bef7-2417-41a8-befa-fe75507d9bf2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b277a07075f8584cdb6a52dd6c221931b1685b6a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b6bef227f94188afe6f1eade92c54ff119982902
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881652"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447097"
 ---
 # <a name="sp_get_query_template-transact-sql"></a>sp_get_query_template(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -63,7 +64,7 @@ sp_get_query_template
 ## <a name="permissions"></a>사용 권한  
  public 데이터베이스 역할의 멤버여야 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 두 상수 리터럴 값이 포함된 쿼리를 매개 변수가 있는 형식으로 반환합니다.  
   
 ```  
@@ -113,8 +114,8 @@ SELECT @my_parameters;
 >  sp_get_query_template의 출력에서 매개 변수의 순서와 이름은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 QFE(Quick-Fix Engineering), 서비스 팩 및 버전 업그레이드에 따라 변경될 수 있습니다. 또한 업그레이드를 수행하면 다른 상수 리터럴 집합은 같은 쿼리에 대한 매개 변수가 있을 수 있고 두 출력 매개 변수의 결과에 다른 간격이 적용될 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;시스템 저장 프로시저](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Transact-sql&#41;&#40;저장 프로시저 데이터베이스 엔진](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;시스템 저장 프로시저 ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;저장 프로시저 데이터베이스 엔진 ](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [계획 지침을 사용하여 쿼리 매개 변수화 동작 지정](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md)  
   
   

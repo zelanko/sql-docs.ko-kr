@@ -1,4 +1,5 @@
 ---
+description: sys.resource_stats(Azure SQL Database)
 title: resource_stats (Azure SQL Database) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/13/2018
@@ -19,12 +20,12 @@ ms.assetid: 02379a1b-3622-4578-8c59-a1b8f1a17914
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: be336780f5bbfd45660ea376c0d689b577f052da
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+ms.openlocfilehash: 29862abf480aa5470314a531558839154886cc04
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87822924"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447859"
 ---
 # <a name="sysresource_stats-azure-sql-database"></a>sys.resource_stats(Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -49,7 +50,7 @@ ms.locfileid: "87822924"
 |max_session_percent|**decimal (5, 2)**|데이터베이스의 서비스 계층 한도를 기준으로 하는 최대 동시 세션 (백분율)입니다.<br /><br /> 현재 최대는 동시 세션 수의 15 초 샘플을 기준으로 5 분 간격으로 계산 됩니다.|  
 |dtu_limit|**int**|이 간격 동안이 데이터베이스에 대 한 현재 최대 데이터베이스 DTU 설정입니다. |
 |xtp_storage_percent|**decimal (5, 2)**|메모리 내 OLTP에 대 한 저장소 사용률 (보고 간격의 끝에 있는 서비스 계층의 제한 백분율) 여기에는 메모리 내 OLTP 개체를 저장 하는 데 사용 되는 메모리 (메모리 최적화 테이블, 인덱스 및 테이블 변수)가 포함 됩니다. 또한 ALTER TABLE 작업을 처리 하는 데 사용 되는 메모리가 포함 됩니다.<br /><br /> 데이터베이스에서 메모리 내 OLTP를 사용 하지 않는 경우 0을 반환 합니다.|
-|avg_login_rate_percent|**decimal (5, 2)**|정보를 제공하기 위해서만 확인됩니다. 지원 안 됨 향후 호환성은 보장되지 않습니다.|
+|avg_login_rate_percent|**decimal (5, 2)**|정보를 제공하기 위해서만 확인됩니다. 지원되지 않습니다. 향후 호환성은 보장되지 않습니다.|
 |avg_instance_cpu_percent|**decimal (5, 2)**|SQL Database 프로세스의 백분율로 나타낸 평균 데이터베이스 CPU 사용량입니다.|
 |avg_instance_memory_percent|**decimal (5, 2)**|SQL Database 프로세스의 백분율로 나타낸 평균 데이터베이스 메모리 사용량입니다.|
 |cpu_limit|**decimal (5, 2)**|이 간격 동안의이 데이터베이스에 대 한 vCores 수입니다. DTU 기반 모델을 사용 하는 데이터베이스의 경우이 열은 NULL입니다.|
@@ -68,7 +69,7 @@ ms.locfileid: "87822924"
   
  이 데이터에 대 한 자세한 보기를 보려면 사용자 데이터베이스에서 **dm_db_resource_stats** 동적 관리 뷰를 사용 합니다. 이 뷰는 15초마다 데이터를 캡처하고 1시간 동안 기록 데이터를 유지합니다.  자세한 내용은 [dm_db_resource_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database.md)를 참조 하세요.  
 
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 지난 1주일 동안 평균적으로 컴퓨팅 활용률의 80% 이상을 사용한 모든 데이터베이스를 반환합니다.  
   
 ```sql  

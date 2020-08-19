@@ -1,4 +1,5 @@
 ---
+description: sp_help_spatial_geometry_index_xml(Transact-SQL)
 title: sp_help_spatial_geometry_index_xml (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9668ae6d-9ed5-418e-bb9a-9e7b66f7dd16
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1f29fd66b10c9e1f18203693a2b1474781e8065a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a5f266f35096a57ef60f2c9b356639ad66cc36fa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720275"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447016"
 ---
 # <a name="sp_help_spatial_geometry_index_xml-transact-sql"></a>sp_help_spatial_geometry_index_xml(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -78,7 +79,7 @@ SELECT @x.value('(/Primary_Filter_Efficiency/text())[1]', 'float');
  [공간 인덱스 저장 프로시저](https://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)   
  [sp_help_spatial_geometry_index](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)   
  [공간 인덱스 개요](../../relational-databases/spatial/spatial-indexes-overview.md)   
- [공간 데이터 &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)   
+ [공간 데이터&#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)   
  [XQuery 기본 사항](../../xquery/xquery-basics.md)   
  [XQuery 언어 참조](../../xquery/xquery-language-reference-sql-server.md)  
   

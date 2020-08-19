@@ -1,4 +1,5 @@
 ---
+description: sp_add_proxy(Transact-SQL)
 title: sp_add_proxy (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: cb59df37-f103-439b-bec1-2871fb669a8b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 61b77197c46025974391b39dcf8114ec5a51eaef
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 67b7ec7a5ccb1e4a1ba022995f4912b77afc93ee
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85878615"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447489"
 ---
 # <a name="sp_add_proxy-transact-sql"></a>sp_add_proxy(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,17 +47,17 @@ sp_add_proxy
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @proxy_name = ] 'proxy_name'`만들 프록시의 이름입니다. *Proxy_name* 는 **sysname**이며 기본값은 NULL입니다. *PROXY_NAME* NULL 또는 빈 문자열인 경우 프록시 이름은 기본적으로 제공 되는 *user_name* 로 설정 됩니다.  
+`[ @proxy_name = ] 'proxy_name'` 만들 프록시의 이름입니다. *Proxy_name* 는 **sysname**이며 기본값은 NULL입니다. *PROXY_NAME* NULL 또는 빈 문자열인 경우 프록시 이름은 기본적으로 제공 되는 *user_name* 로 설정 됩니다.  
   
-`[ @enabled = ] is_enabled`프록시가 사용 되는지 여부를 지정 합니다. *Is_enabled* 플래그는 **tinyint**이며 기본값은 1입니다. *Is_enabled* 가 **0**이면 프록시가 사용 되지 않으며 작업 단계에서 사용할 수 없습니다.  
+`[ @enabled = ] is_enabled` 프록시가 사용 되는지 여부를 지정 합니다. *Is_enabled* 플래그는 **tinyint**이며 기본값은 1입니다. *Is_enabled* 가 **0**이면 프록시가 사용 되지 않으며 작업 단계에서 사용할 수 없습니다.  
   
-`[ @description = ] 'description'`프록시에 대 한 설명입니다. 설명은 **nvarchar (512)** 이며 기본값은 NULL입니다. 설명을 통해 프록시를 문서화할 수 있으며 그렇지 않을 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트에 사용되지 않습니다. 그러므로 이 인수는 선택 사항입니다.  
+`[ @description = ] 'description'` 프록시에 대 한 설명입니다. 설명은 **nvarchar (512)** 이며 기본값은 NULL입니다. 설명을 통해 프록시를 문서화할 수 있으며 그렇지 않을 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트에 사용되지 않습니다. 그러므로 이 인수는 선택 사항입니다.  
   
-`[ @credential_name = ] 'credential_name'`프록시에 대 한 자격 증명의 이름입니다. *Credential_name* 는 **sysname**이며 기본값은 NULL입니다. *Credential_name* 또는 *credential_id* 를 지정 해야 합니다.  
+`[ @credential_name = ] 'credential_name'` 프록시에 대 한 자격 증명의 이름입니다. *Credential_name* 는 **sysname**이며 기본값은 NULL입니다. *Credential_name* 또는 *credential_id* 를 지정 해야 합니다.  
   
-`[ @credential_id = ] credential_id`프록시에 대 한 자격 증명의 id입니다. *Credential_id* 은 **int**이며 기본값은 NULL입니다. *Credential_name* 또는 *credential_id* 를 지정 해야 합니다.  
+`[ @credential_id = ] credential_id` 프록시에 대 한 자격 증명의 id입니다. *Credential_id* 은 **int**이며 기본값은 NULL입니다. *Credential_name* 또는 *credential_id* 를 지정 해야 합니다.  
   
-`[ @proxy_id = ] id OUTPUT`성공적으로 만들어진 경우 프록시에 할당 된 프록시 id 번호입니다.  
+`[ @proxy_id = ] id OUTPUT` 성공적으로 만들어진 경우 프록시에 할당 된 프록시 id 번호입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -74,7 +75,7 @@ sp_add_proxy
   
  **Sysadmin** 고정 보안 역할의 멤버는 프록시를 사용 하는 작업 단계를 만들 수 있습니다. 저장 프로시저 [sp_grant_login_to_proxy &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-grant-login-to-proxy-transact-sql.md) 사용 하 여 다른 로그인에 프록시에 대 한 액세스 권한을 부여 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 자격 증명 `CatalogApplicationCredential`에 대한 프록시를 만듭니다. 이 코드는 자격 증명이 이미 있는 것으로 가정합니다. 자격 증명에 대 한 자세한 내용은 [CREATE CREDENTIAL &#40;transact-sql&#41;](../../t-sql/statements/create-credential-transact-sql.md)를 참조 하세요.  
   
 ```  
@@ -90,7 +91,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;자격 증명 &#40;만들기](../../t-sql/statements/create-credential-transact-sql.md)   
+ [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)   
  [Transact-sql&#41;sp_grant_login_to_proxy &#40;](../../relational-databases/system-stored-procedures/sp-grant-login-to-proxy-transact-sql.md)   
  [Transact-sql&#41;sp_revoke_login_from_proxy &#40;](../../relational-databases/system-stored-procedures/sp-revoke-login-from-proxy-transact-sql.md)  
   

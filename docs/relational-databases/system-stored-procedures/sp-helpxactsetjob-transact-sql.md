@@ -1,4 +1,5 @@
 ---
+description: sp_helpxactsetjob(Transact-SQL)
 title: sp_helpxactsetjob (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 242cea3e-e6ac-4f84-a072-b003b920eb33
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9f5a32c9706947471908966be59378a0d34147e1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 60d17af686d0ff289589d09dff0177b9696f17a4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899431"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446984"
 ---
 # <a name="sp_helpxactsetjob-transact-sql"></a>sp_helpxactsetjob(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +38,7 @@ sp_helpxactsetjob [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @publisher = ] 'publisher'`작업이 속하는 이외 게시자의 이름입니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *publisher* 는 **sysname**이며 기본값은 없습니다.  
+`[ @publisher = ] 'publisher'` 작업이 속하는 이외 게시자의 이름입니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *publisher* 는 **sysname**이며 기본값은 없습니다.  
   
 ## <a name="result-sets"></a>결과 집합  
   
@@ -69,7 +70,7 @@ sp_helpxactsetjob [ @publisher = ] 'publisher'
  **Sysadmin** 고정 서버 역할의 멤버만 **sp_helpxactsetjob**를 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Oracle 게시자 &#40;복제 Transact-sql 프로그래밍에 대 한 트랜잭션 집합 작업 구성&#41;](../../relational-databases/replication/administration/configure-the-transaction-set-job-for-an-oracle-publisher.md)   
+ [Oracle 게시자에 대한 트랜잭션 집합 작업 구성&#40;복제 Transact-SQL 프로그래밍&#41;](../../relational-databases/replication/administration/configure-the-transaction-set-job-for-an-oracle-publisher.md)   
  [Transact-sql&#41;sp_publisherproperty &#40;](../../relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql.md)  
   
   

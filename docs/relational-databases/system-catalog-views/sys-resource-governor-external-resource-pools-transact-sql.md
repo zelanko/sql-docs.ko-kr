@@ -1,4 +1,5 @@
 ---
+description: sys. resource_governor_external_resource_pools (Transact-sql)
 title: sys. resource_governor_external_resource_pools (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/13/2017
@@ -18,15 +19,16 @@ helpviewer_keywords:
 ms.assetid: 75063e36-a91b-496f-9936-88f3d57bd447
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 65fcc8dc4054c3aa7b55a543acb1aeebc9bd3bcd
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: 6e75047b9f65136a4b41f248ee948555fdb526e9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86052904"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447869"
 ---
 # <a name="sysresource_governor_external_resource_pools-transact-sql"></a>sys. resource_governor_external_resource_pools (Transact-sql)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
-**적용 대상:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] 및 [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
+**적용 대상:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)]및 [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)][!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
 
 에서 저장 된 외부 리소스 풀 구성을 반환 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 뷰의 각 행에 따라 풀의 구성이 결정됩니다.
   
@@ -43,11 +45,11 @@ ms.locfileid: "86052904"
 
 VIEW SERVER STATE 권한이 필요합니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [SQL Server에서 머신 러닝을 위한 리소스 거버넌스](../../machine-learning/administration/resource-governor.md)
 
-[Transact-sql&#41;&#40;카탈로그 뷰 Resource Governor](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md)
+[Transact-sql&#41;&#40;카탈로그 뷰 Resource Governor ](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md)
 
 [sys.dm_resource_governor_resource_pools&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)
 

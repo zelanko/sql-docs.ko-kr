@@ -1,4 +1,5 @@
 ---
+description: sp_get_redirected_publisher(Transact-SQL)
 title: sp_get_redirected_publisher (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -13,12 +14,12 @@ f1_keywords:
 ms.assetid: d47a9ab5-f2cc-42a8-8be9-a33895ce44f0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7ac8b37eb3c21a9dbe7fa69eb6805a502993b7b1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1019f42b7edb8a82a3f655632aee64a61fbbcb99
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85757897"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447112"
 ---
 # <a name="sp_get_redirected_publisher-transact-sql"></a>sp_get_redirected_publisher(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,11 +39,11 @@ sp_get_redirected_publisher
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @original_publisher = ] 'original_publisher'`원래 데이터베이스를 게시 한 SQL Server의 인스턴스 이름입니다. *original_publisher* 는 **sysname**이며 기본값은 없습니다.
+`[ @original_publisher = ] 'original_publisher'` 원래 데이터베이스를 게시 한 SQL Server의 인스턴스 이름입니다. *original_publisher* 는 **sysname**이며 기본값은 없습니다.
   
-`[ @publisher_db = ] 'publisher_db'`게시 되는 데이터베이스의 이름입니다. *publisher_db* 는 **sysname**이며 기본값은 없습니다.  
+`[ @publisher_db = ] 'publisher_db'` 게시 되는 데이터베이스의 이름입니다. *publisher_db* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @bypass_publisher_validation = ] [0 | 1 ]`리디렉션된 게시자의 유효성 검사를 무시 하는 데 사용 됩니다. 0 인 경우 유효성 검사가 수행 됩니다. 1인 경우 유효성 검사가 수행되지 않습니다. *bypass_publisher_validation* 은 **bit**이며 기본값은 0입니다.  
+`[ @bypass_publisher_validation = ] [0 | 1 ]` 리디렉션된 게시자의 유효성 검사를 무시 하는 데 사용 됩니다. 0 인 경우 유효성 검사가 수행 됩니다. 1인 경우 유효성 검사가 수행되지 않습니다. *bypass_publisher_validation* 은 **bit**이며 기본값은 0입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -61,7 +62,7 @@ sp_get_redirected_publisher
   
  유효성 검사가 요청 되지 않았거나 게시자 및 게시 데이터베이스에 대 한 항목이 존재 하지 않는 경우 *error_number* 및 *error_severity* 0을 반환 하 고 *error_message* 는 null을 반환 합니다.  
   
- 유효성 검사가 요청 되 면 [&#40;transact-sql&#41;sp_validate_redirected_publisher](../../relational-databases/system-stored-procedures/sp-validate-redirected-publisher-transact-sql.md) 유효성 검사 저장 프로시저를 호출 하 여 리디렉션 대상이 게시 데이터베이스에 적합 한 호스트 인지 확인 합니다. 유효성 검사에 성공 하면 **sp_get_redirected_publisher** 는 리디렉션된 게시자 이름을 반환 하 고, *error_number* 및 *error_severity* 열에 대해 0을 반환 하 고, *error_message* 열에 null을 반환 합니다.  
+ 유효성 검사가 요청 되 면 [&#40;transact-sql&#41;sp_validate_redirected_publisher ](../../relational-databases/system-stored-procedures/sp-validate-redirected-publisher-transact-sql.md) 유효성 검사 저장 프로시저를 호출 하 여 리디렉션 대상이 게시 데이터베이스에 적합 한 호스트 인지 확인 합니다. 유효성 검사에 성공 하면 **sp_get_redirected_publisher** 는 리디렉션된 게시자 이름을 반환 하 고, *error_number* 및 *error_severity* 열에 대해 0을 반환 하 고, *error_message* 열에 null을 반환 합니다.  
   
  요청된 유효성 검사에 실패한 경우에는 리디렉션된 게시자 이름이 오류 정보와 함께 반환됩니다.  
   
@@ -69,7 +70,7 @@ sp_get_redirected_publisher
  호출자는 **sysadmin** 고정 서버 역할의 멤버 이거나 배포 데이터베이스에 대 한 **db_owner** 고정 데이터베이스 역할의 멤버 이거나 게시자 데이터베이스에 연결 된 정의 된 게시에 대 한 게시 액세스 목록의 멤버 여야 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;를 &#40;하는 복제 저장 프로시저](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;를 &#40;하는 복제 저장 프로시저 ](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
  [Transact-sql&#41;sp_validate_redirected_publisher &#40;](../../relational-databases/system-stored-procedures/sp-validate-redirected-publisher-transact-sql.md)   
  [Transact-sql&#41;sp_redirect_publisher &#40;](../../relational-databases/system-stored-procedures/sp-redirect-publisher-transact-sql.md)   
  [Transact-sql&#41;sp_validate_replica_hosts_as_publishers &#40;](../../relational-databases/system-stored-procedures/sp-validate-replica-hosts-as-publishers-transact-sql.md)  

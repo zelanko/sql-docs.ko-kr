@@ -1,4 +1,5 @@
 ---
+description: sys.dm_os_nodes(Transact-SQL)
 title: sys. dm_os_nodes (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/13/2018
@@ -20,11 +21,12 @@ ms.assetid: c768b67c-82a4-47f5-850b-0ea282358d50
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 43cc81a77f697334b3afb557e7b2e26ac0184427
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 716b3c816bb5246f91c25869de7e2647a10bbc64
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008588"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447641"
 ---
 # <a name="sysdm_os_nodes-transact-sql"></a>sys.dm_os_nodes(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -42,7 +44,7 @@ SQLOS라는 내부 구성 요소는 하드웨어 프로세서 위치와 비슷�
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |node_id|**smallint**|노드의 ID입니다.|  
-|node_state_desc|**nvarchar(256)**|노드 상태에 대한 설명입니다. 함께 사용할 수 없는 값이 먼저 표시되고 함께 사용할 수 있는 값이 그 다음에 표시됩니다. 예를 들면 다음과 같습니다.<br /> Online, Thread Resources Low, Lazy Preemptive<br /><br />상호 배타적인 node_state_desc 값은 네 가지가 있습니다. 이러한 설명은 아래에 나와 있습니다.<br /><ul><li>온라인: 노드가 온라인 상태입니다.<li>오프 라인: 노드가 오프 라인 상태임<li>유휴 상태: 노드에 보류 중인 작업 요청이 없으며 유휴 상태를 입력 했습니다.<li>IDLE_READY: 노드에 보류 중인 작업 요청이 없으며 유휴 상태를 시작할 준비가 되었습니다.</li></ul><br />아래에는 결합할 수 있는 세 가지 node_state_desc 값이 설명 되어 있습니다.<br /><ul><li>DAC:이 노드는 [전용 관리 연결](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)에 대해 예약 되어 있습니다.<li>THREAD_RESOURCES_LOW: 메모리가 부족 하 여이 노드에서 새 스레드를 만들 수 없습니다.<li>핫 추가 됨: 핫 add CPU 이벤트에 대 한 응답으로 노드가 추가 되었음을 나타냅니다.</li></ul>|  
+|node_state_desc|**nvarchar(256)**|노드 상태에 대한 설명입니다. 함께 사용할 수 없는 값이 먼저 표시되고 함께 사용할 수 있는 값이 그 다음에 표시됩니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.<br /> Online, Thread Resources Low, Lazy Preemptive<br /><br />상호 배타적인 node_state_desc 값은 네 가지가 있습니다. 이러한 설명은 아래에 나와 있습니다.<br /><ul><li>온라인: 노드가 온라인 상태입니다.<li>오프 라인: 노드가 오프 라인 상태임<li>유휴 상태: 노드에 보류 중인 작업 요청이 없으며 유휴 상태를 입력 했습니다.<li>IDLE_READY: 노드에 보류 중인 작업 요청이 없으며 유휴 상태를 시작할 준비가 되었습니다.</li></ul><br />아래에는 결합할 수 있는 세 가지 node_state_desc 값이 설명 되어 있습니다.<br /><ul><li>DAC:이 노드는 [전용 관리 연결](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)에 대해 예약 되어 있습니다.<li>THREAD_RESOURCES_LOW: 메모리가 부족 하 여이 노드에서 새 스레드를 만들 수 없습니다.<li>핫 추가 됨: 핫 add CPU 이벤트에 대 한 응답으로 노드가 추가 되었음을 나타냅니다.</li></ul>|  
 |memory_object_address|**varbinary(8)**|이 노드와 연관된 메모리 개체의 주소입니다. [Dm_os_memory_objects](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md). memory_object_address에 대 한 일 대 일 관계입니다.|  
 |memory_clerk_address|**varbinary(8)**|이 노드와 연관된 메모리 클럭의 주소입니다. [Dm_os_memory_clerks](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md). memory_clerk_address에 대 한 일 대 일 관계입니다.|  
 |io_completion_worker_address|**varbinary(8)**|이 노드에 대한 IO 완료가 할당된 작업자의 주소입니다. [Dm_os_workers](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md). worker_address에 대 한 일 대 일 관계입니다.|  
@@ -58,14 +60,14 @@ SQLOS라는 내부 구성 요소는 하드웨어 프로세서 위치와 비슷�
 |online_scheduler_mask|**bigint**|이 노드에 대한 프로세스 선호도 마스크를 식별합니다.|  
 |processor_group|**smallint**|이 노드에 대한 프로세서 그룹을 식별합니다.|  
 |cpu_count |**int** |이 노드에 사용할 수 있는 Cpu 수입니다. |
-|pdw_node_id|**int**|이 배포가 설정 된 노드의 식별자입니다.<br /><br /> **적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]|  
+|pdw_node_id|**int**|이 배포가 설정 된 노드의 식별자입니다.<br /><br /> **적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]|  
   
-## <a name="permissions"></a>권한
+## <a name="permissions"></a>사용 권한
 
 에 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 는 `VIEW SERVER STATE` 권한이 필요 합니다.   
 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium 계층에서는 데이터베이스에 대 한 권한이 필요 합니다 `VIEW DATABASE STATE` . [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]표준 및 기본 계층에서는 **서버 관리자** 또는 **Azure Active Directory 관리자** 계정이 필요 합니다.   
 
-## <a name="see-also"></a>참고 항목    
- [Transact-sql&#41;&#40;운영 체제 관련 동적 관리 뷰 SQL Server](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
+## <a name="see-also"></a>관련 항목    
+ [Transact-sql&#41;&#40;운영 체제 관련 동적 관리 뷰 SQL Server ](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
  [Soft-NUMA&#40;SQL Server&#41;](../../database-engine/configure-windows/soft-numa-sql-server.md)  
   

@@ -1,4 +1,5 @@
 ---
+description: sp_describe_cursor_tables(Transact-SQL)
 title: sp_describe_cursor_tables (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 02c0f81a-54ed-4ca4-aa4f-bb7463a9ab9a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 68c8cd21de793dc34c2f601a9918db2224d3df03
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 01e7850faa83e6d8854b5ac1a0138cd4363adf4b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85861358"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447261"
 ---
 # <a name="sp_describe_cursor_tables-transact-sql"></a>sp_describe_cursor_tables(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -64,7 +65,7 @@ sp_describe_cursor_tables
  열린 커서와 연관된 커서 변수의 이름입니다. *input_cursor_variable* 은 **nvarchar (128)** 입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
- 없음  
+ None  
   
 ## <a name="cursors-returned"></a>반환되는 커서  
  sp_describe_cursor_tables는 해당 보고서를 [!INCLUDE[tsql](../../includes/tsql-md.md)] **커서** 출력 매개 변수로 캡슐화 합니다. 이로 인해 [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리, 저장 프로시저 및 한 번에 하나의 행만 출력 작업을 하는 트리거가 허용됩니다. 이는 API 함수에서 바로 프로시저를 호출할 수 없음을 의미하기도 합니다. **Cursor** output 매개 변수는 프로그램 변수에 바인딩되어야 하지만 api는 **cursor** 매개 변수 또는 변수 바인딩을 지원 하지 않습니다.  
@@ -88,7 +89,7 @@ sp_describe_cursor_tables
 ## <a name="permissions"></a>사용 권한  
  public 역할의 멤버 자격이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 전역 커서를 열고 `sp_describe_cursor_tables`를 사용하여 커서에 의해 참조되는 테이블을 보고합니다.  
   
 ```  
@@ -130,9 +131,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [커서로](../../relational-databases/cursors.md)   
+ [커서](../../relational-databases/cursors.md)   
  [Transact-sql&#41;CURSOR_STATUS &#40;](../../t-sql/functions/cursor-status-transact-sql.md)   
- [Transact-sql&#41;&#40;커서를 선언 합니다.](../../t-sql/language-elements/declare-cursor-transact-sql.md)   
+ [DECLARE CURSOR&#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-cursor-transact-sql.md)   
  [Transact-sql&#41;sp_cursor_list &#40;](../../relational-databases/system-stored-procedures/sp-cursor-list-transact-sql.md)   
  [Transact-sql&#41;sp_describe_cursor &#40;](../../relational-databases/system-stored-procedures/sp-describe-cursor-transact-sql.md)   
  [Transact-sql&#41;sp_describe_cursor_columns &#40;](../../relational-databases/system-stored-procedures/sp-describe-cursor-columns-transact-sql.md)   

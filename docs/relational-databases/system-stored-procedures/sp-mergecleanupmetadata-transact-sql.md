@@ -1,4 +1,5 @@
 ---
+description: sp_update_schedule(Transact-SQL)
 title: sp_mergecleanupmetadata (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 892f8628-4cbe-4cc3-b959-ed45ffc24064
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 385176695fe9600250eaa5b6a839ebd833910618
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 356c0aefb862d37d4c87af995e3b8d676a33e8a3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891626"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446948"
 ---
 # <a name="sp_mergecleanupmetadata-transact-sql"></a>sp_update_schedule(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 서비스 팩 1 이전의 버전을 실행 하는 서버를 포함 하는 복제 토폴로지에서만 사용 해야 합니다.** **관리자는 sp_mergecleanupmetadata를 사용 하 여 **MSmerge_genhistory**, **MSmerge_contents** 및 **MSmerge_tombstone** 시스템 테이블의 메타 데이터를 정리할 수 있습니다. 이 저장 프로시저는 게시 데이터베이스의 게시자에서 실행됩니다.  
+  는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 서비스 팩 1 이전의 버전을 실행 하는 서버를 포함 하는 복제 토폴로지에서만 사용 해야 합니다.** ** 관리자는 sp_mergecleanupmetadata를 사용 하 여 **MSmerge_genhistory**, **MSmerge_contents** 및 **MSmerge_tombstone** 시스템 테이블의 메타 데이터를 정리할 수 있습니다. 이 저장 프로시저는 게시 데이터베이스의 게시자에서 실행됩니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -38,9 +39,9 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @publication = ] 'publication'`게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 **%** 모든 게시에 대 한 메타 데이터를 정리 하는입니다. 명시적으로 지정된 경우에는 반드시 게시가 이미 존재하고 있어야 합니다.  
+`[ @publication = ] 'publication'` 게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 **%** 모든 게시에 대 한 메타 데이터를 정리 하는입니다. 명시적으로 지정된 경우에는 반드시 게시가 이미 존재하고 있어야 합니다.  
   
-`[ @reinitialize_subscriber = ] 'subscriber'`구독자를 다시 초기화할 지 여부를 지정 합니다. *구독자* 는 **nvarchar (5)** 이며 **true** 또는 **FALSE**일 수 있으며 기본값은 **true**입니다. **TRUE**이면 구독을 다시 초기화 하도록 표시 합니다. **FALSE**이면 구독을 다시 초기화 하도록 표시 하지 않습니다.  
+`[ @reinitialize_subscriber = ] 'subscriber'` 구독자를 다시 초기화할 지 여부를 지정 합니다. *구독자* 는 **nvarchar (5)** 이며 **true** 또는 **FALSE**일 수 있으며 기본값은 **true**입니다. **TRUE**이면 구독을 다시 초기화 하도록 표시 합니다. **FALSE**이면 구독을 다시 초기화 하도록 표시 하지 않습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -100,7 +101,7 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
     EXEC central..sp_changemergepublication @publication = 'dynpart_pubn', @property = 'status', @value = 'inactive'  
     ```  
   
- 실행 중인 **sp_mergecleanupmetadata**의 3 단계를 완료 한 후에는 중지 된 방법에 따라 연속 모드 병합을 다시 시작 합니다. 다음 중 한 방법으로 찾을 수 있습니다.  
+ 실행 중인 **sp_mergecleanupmetadata**의 3 단계를 완료 한 후에는 중지 된 방법에 따라 연속 모드 병합을 다시 시작 합니다. 다음 중 하나  
   
 -   병합 에이전트에 대 한 **연속** 매개 변수를 다시 추가 합니다.  
   

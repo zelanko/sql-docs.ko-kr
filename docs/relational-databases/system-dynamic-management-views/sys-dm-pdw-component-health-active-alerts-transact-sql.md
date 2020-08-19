@@ -1,4 +1,5 @@
 ---
+description: sys. dm_pdw_component_health_active_alerts (Transact-sql)
 title: sys. dm_pdw_component_health_active_alerts (Transact-sql
 ms.custom: seo-dt-2019
 ms.date: 03/07/2017
@@ -10,12 +11,12 @@ ms.assetid: c53e4a36-b841-424a-b8e2-255b1878deb6
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 0a8a1808e20accfadd3adc6f5a5c326f78870ed7
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 1dd5369c30de5ce70601b51c47cac2b7ad7f3014
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395204"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447503"
 ---
 # <a name="sysdm_pdw_component_health_active_alerts-transact-sql"></a>sys. dm_pdw_component_health_active_alerts (Transact-sql)
 [!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "87395204"
   
  이 뷰에서 유지 되는 최대 행에 대 한 자세한 내용은의 "최소 및 최대 값"을 참조 하십시오 [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)] .  
   
-## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;SQL Data Warehouse 및 병렬 데이터 웨어하우스 동적 관리 뷰](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
+## <a name="see-also"></a>관련 항목  
+ [Transact-sql&#41;&#40;SQL Data Warehouse 및 병렬 데이터 웨어하우스 동적 관리 뷰 ](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   

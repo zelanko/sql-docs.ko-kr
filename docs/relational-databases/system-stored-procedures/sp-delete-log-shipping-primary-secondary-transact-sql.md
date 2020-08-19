@@ -1,4 +1,5 @@
 ---
+description: sp_delete_log_shipping_primary_secondary(Transact-SQL)
 title: sp_delete_log_shipping_primary_secondary (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d6f71a12-f7b1-4a1c-9639-a533b8287b0c
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a9c714d2f43ecf53f048f57dcb049bfd8acd0f2e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 72d76081ac46d55bbb60843403b22a9ed4a9f9a6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85864042"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447308"
 ---
 # <a name="sp_delete_log_shipping_primary_secondary-transact-sql"></a>sp_delete_log_shipping_primary_secondary(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,11 +43,11 @@ sp_delete_log_shipping_primary_secondary
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @primary_database = ] 'primary_database'`주 서버에 있는 데이터베이스의 이름입니다. *primary_database* 는 **sysname**이며 기본값은 없습니다.  
+`[ @primary_database = ] 'primary_database'` 주 서버에 있는 데이터베이스의 이름입니다. *primary_database* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @secondary_server = ] 'secondary_server'`보조 서버의 이름입니다. *secondary_server* 는 **sysname**이며 기본값은 없습니다.  
+`[ @secondary_server = ] 'secondary_server'` 보조 서버의 이름입니다. *secondary_server* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @secondary_database = ] 'secondary_database'`보조 데이터베이스의 이름입니다. *secondary_database* 는 **sysname**이며 기본값은 없습니다.  
+`[ @secondary_database = ] 'secondary_database'` 보조 데이터베이스의 이름입니다. *secondary_database* 는 **sysname**이며 기본값은 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  

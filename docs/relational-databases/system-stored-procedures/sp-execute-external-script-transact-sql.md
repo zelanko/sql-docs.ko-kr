@@ -1,4 +1,5 @@
 ---
+description: sp_execute_external_script(Transact-SQL)
 title: sp_execute_external_script (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2020
@@ -20,12 +21,12 @@ ms.assetid: de4e1fcd-0e1a-4af3-97ee-d1becc7f04df
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 074836973123ae4f0f49acf72cf7bf6f56b17cf5
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: b820003b3039a8561dd299a7fb85c1d52b043bda
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180260"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447206"
 ---
 # <a name="sp_execute_external_script-transact-sql"></a>sp_execute_external_script(Transact-SQL)
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -49,7 +50,7 @@ Machine Learning Services의 경우 [Python](../../machine-learning/concepts/ext
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 **Sp_execute_external_script** 저장 프로시저는 프로시저에 대 한 입력 인수로 제공 된 스크립트를 실행 하 고 SQL Server 2016에서 [R Services](../../machine-learning/r/sql-server-r-services.md) 와 함께 사용 됩니다.
 
-R 서비스의 경우 [r](../../machine-learning/concepts/extension-r.md) 은 지원 되는 언어입니다.
+R 서비스의 경우  [r](../../machine-learning/concepts/extension-r.md) 은 지원 되는 언어입니다.
 
 **Sp_execute_external_script**를 실행 하려면 먼저 R Services를 설치 해야 합니다. 자세한 내용은 [Windows에서 SQL Server Machine Learning Services (Python 및 R) 설치](../../machine-learning/install/sql-r-services-windows-install.md)를 참조 하세요.
 ::: moniker-end
@@ -114,27 +115,27 @@ sp_execute_external_script
 
  ** \@ script** = N '*script*' 외부 언어 스크립트를 리터럴 또는 변수 입력으로 지정 했습니다. *스크립트* 는 **nvarchar (max)** 입니다.  
 
-`[ @input_data_1 =  N'input_data_1' ]`외부 스크립트에서 사용 하는 입력 데이터를 쿼리 형식으로 지정 합니다 [!INCLUDE[tsql](../../includes/tsql-md.md)] . *Input_data_1* 데이터 형식은 **nvarchar (max)** 입니다.
+`[ @input_data_1 =  N'input_data_1' ]` 외부 스크립트에서 사용 하는 입력 데이터를 쿼리 형식으로 지정 합니다 [!INCLUDE[tsql](../../includes/tsql-md.md)] . *Input_data_1* 데이터 형식은 **nvarchar (max)** 입니다.
 
-`[ @input_data_1_name = N'input_data_1_name' ]`에서 정의 된 쿼리를 나타내는 데 사용 되는 변수의 이름을 지정 합니다 @input_data_1 . 외부 스크립트에 있는 변수의 데이터 형식은 언어에 따라 달라 집니다. R의 경우 입력 변수는 데이터 프레임입니다. Python의 경우 입력은 테이블 형식 이어야 합니다. *input_data_1_name* 는 **sysname**입니다.  기본값은 *Inputdataset*입니다.  
+`[ @input_data_1_name = N'input_data_1_name' ]` 에서 정의 된 쿼리를 나타내는 데 사용 되는 변수의 이름을 지정 합니다 @input_data_1 . 외부 스크립트에 있는 변수의 데이터 형식은 언어에 따라 달라 집니다. R의 경우 입력 변수는 데이터 프레임입니다. Python의 경우 입력은 테이블 형식 이어야 합니다. *input_data_1_name* 는 **sysname**입니다.  기본값은 *Inputdataset*입니다.  
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-`[ @input_data_1_order_by_columns = N'input_data_1_order_by_columns' ]`파티션당 모델을 작성 하는 데 사용 됩니다. 결과 집합의 순서를 지정 하는 데 사용 되는 열의 이름을 지정 합니다. 예를 들어 제품 이름입니다. 외부 스크립트에 있는 변수의 데이터 형식은 언어에 따라 달라 집니다. R의 경우 입력 변수는 데이터 프레임입니다. Python의 경우 입력은 테이블 형식 이어야 합니다.
+`[ @input_data_1_order_by_columns = N'input_data_1_order_by_columns' ]` 파티션당 모델을 작성 하는 데 사용 됩니다. 결과 집합의 순서를 지정 하는 데 사용 되는 열의 이름을 지정 합니다. 예를 들어 제품 이름입니다. 외부 스크립트에 있는 변수의 데이터 형식은 언어에 따라 달라 집니다. R의 경우 입력 변수는 데이터 프레임입니다. Python의 경우 입력은 테이블 형식 이어야 합니다.
 
-`[ @input_data_1_partition_by_columns = N'input_data_1_partition_by_columns' ]`파티션당 모델을 작성 하는 데 사용 됩니다. 지리적 지역 또는 날짜와 같은 데이터를 분할 하는 데 사용 되는 열의 이름을 지정 합니다. 외부 스크립트에 있는 변수의 데이터 형식은 언어에 따라 달라 집니다. R의 경우 입력 변수는 데이터 프레임입니다. Python의 경우 입력은 테이블 형식 이어야 합니다. 
+`[ @input_data_1_partition_by_columns = N'input_data_1_partition_by_columns' ]` 파티션당 모델을 작성 하는 데 사용 됩니다. 지리적 지역 또는 날짜와 같은 데이터를 분할 하는 데 사용 되는 열의 이름을 지정 합니다. 외부 스크립트에 있는 변수의 데이터 형식은 언어에 따라 달라 집니다. R의 경우 입력 변수는 데이터 프레임입니다. Python의 경우 입력은 테이블 형식 이어야 합니다. 
 ::: moniker-end
 
 `[ @output_data_1_name =  N'output_data_1_name' ]`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]저장 프로시저 호출이 완료 될 때 반환 될 데이터를 포함 하는 외부 스크립트의 변수 이름을 지정 합니다. 외부 스크립트에 있는 변수의 데이터 형식은 언어에 따라 달라 집니다. R의 경우 출력은 데이터 프레임 이어야 합니다. Python의 경우 출력은 pandas 데이터 프레임 이어야 합니다. *output_data_1_name* 는 **sysname**입니다.  기본값은 *Outputdataset*입니다.  
 
-`[ @parallel = 0 | 1 ]`매개 변수를 1로 설정 하 여 R 스크립트의 병렬 실행을 사용 하도록 설정 `@parallel` 합니다. 이 매개 변수의 기본값은 0 (병렬 처리 없음)입니다. `@parallel = 1`및 출력을 클라이언트 컴퓨터로 직접 스트리밍하는 경우 `WITH RESULT SETS` 절이 필요 하며 출력 스키마를 지정 해야 합니다.  
+`[ @parallel = 0 | 1 ]` 매개 변수를 1로 설정 하 여 R 스크립트의 병렬 실행을 사용 하도록 설정 `@parallel` 합니다. 이 매개 변수의 기본값은 0 (병렬 처리 없음)입니다. `@parallel = 1`및 출력을 클라이언트 컴퓨터로 직접 스트리밍하는 경우 `WITH RESULT SETS` 절이 필요 하며 출력 스키마를 지정 해야 합니다.  
 
- + RevoScaleR 함수를 사용 하지 않는 R 스크립트의 경우 매개 변수를 사용 하면 `@parallel` 큰 데이터 집합을 처리 하는 데 도움이 될 수 있습니다 .이 경우 스크립트가 일반적으로 병렬 처리 될 수 있다고 가정 합니다. 예를 들어 모델에서 R 함수를 사용 하 여 `predict` 새 예측을 생성 하는 경우 `@parallel = 1` 쿼리 엔진에 대 한 힌트로를 설정 합니다. 쿼리를 병렬화 할 수 있는 경우 행은 **MAXDOP** 설정에 따라 분산 됩니다.  
+ + RevoScaleR 함수를 사용 하지 않는 R 스크립트의 경우 매개 변수를 사용 하면  `@parallel` 큰 데이터 집합을 처리 하는 데 도움이 될 수 있습니다 .이 경우 스크립트가 일반적으로 병렬 처리 될 수 있다고 가정 합니다. 예를 들어 모델에서 R 함수를 사용 하 여 `predict` 새 예측을 생성 하는 경우 `@parallel = 1` 쿼리 엔진에 대 한 힌트로를 설정 합니다. 쿼리를 병렬화 할 수 있는 경우 행은 **MAXDOP** 설정에 따라 분산 됩니다.  
   
  + RevoScaleR 함수를 사용 하는 R 스크립트의 경우 병렬 처리는 자동으로 처리 되며 `@parallel = 1` **sp_execute_external_script** 호출을 지정 하면 안 됩니다.  
   
-`[ @params = N'@parameter_name data_type [ OUT | OUTPUT ] [ ,...n ]' ]`외부 스크립트에서 사용 되는 입력 매개 변수 선언의 목록입니다.  
+`[ @params = N'@parameter_name data_type [ OUT | OUTPUT ] [ ,...n ]' ]` 외부 스크립트에서 사용 되는 입력 매개 변수 선언의 목록입니다.  
   
-`[ @parameter1 = 'value1' [ OUT | OUTPUT ] [ ,...n ] ]`외부 스크립트에서 사용 하는 입력 매개 변수에 대 한 값의 목록입니다.  
+`[ @parameter1 = 'value1' [ OUT | OUTPUT ] [ ,...n ] ]` 외부 스크립트에서 사용 하는 입력 매개 변수에 대 한 값의 목록입니다.  
 
 ## <a name="remarks"></a>설명
 
@@ -224,7 +225,7 @@ Float 값 (예: `+Inf` , `-Inf` , `NaN` )은 두 언어 모두 IEEE 754를 사�
 
 **EXECUTE ANY EXTERNAL SCRIPT** database 권한이 필요 합니다.  
 
-## <a name="examples"></a>예
+## <a name="examples"></a>예제
 
 이 섹션에서는를 사용 하 여이 저장 프로시저를 사용 하 여 R 또는 Python 스크립트를 실행 하는 방법의 예를 보여 줍니다 [!INCLUDE[tsql](../../includes/tsql-md.md)] .
 
@@ -326,7 +327,7 @@ Python을 사용하여 비슷한 모델을 생성하려면 언어 식별자를 `
 + [SQL machine learning](../../machine-learning/index.yml)
 + [언어 확장을 SQL Server](../../language-extensions/language-extensions-overview.md)합니다. 
 + [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
-+ [Transact-sql&#41;&#40;외부 라이브러리 만들기](../../t-sql/statements/create-external-library-transact-sql.md)  
++ [Transact-sql&#41;&#40;외부 라이브러리 만들기 ](../../t-sql/statements/create-external-library-transact-sql.md)  
 + [sp_prepare &#40;SQL&#41;](../../relational-databases/system-stored-procedures/sp-prepare-transact-sql.md)   
 + [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
 + [외부 스크립트 설정 서버 구성 옵션](../../database-engine/configure-windows/external-scripts-enabled-server-configuration-option.md)   

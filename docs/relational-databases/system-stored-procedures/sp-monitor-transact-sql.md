@@ -1,4 +1,5 @@
 ---
+description: sp_monitor(Transact-SQL)
 title: sp_monitor (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: cb628496-2f9b-40e4-b018-d0831c4cb018
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 400d6f484ee80d9b4b1244aad6b91c8836aa95d4
-ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
+ms.openlocfilehash: 6722a59873dcf672fe2c1b953931f44da4515a8e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86977719"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446995"
 ---
 # <a name="sp_monitor-transact-sql"></a>sp_monitor(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -67,7 +68,7 @@ sp_monitor
 ## <a name="permissions"></a>사용 권한  
  **sysadmin** 고정 서버 역할의 멤버 자격이 필요합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 얼마나 많이 사용되었는지에 대한 정보를 보고합니다.  
   
 ```console

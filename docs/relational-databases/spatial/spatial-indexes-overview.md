@@ -1,4 +1,5 @@
 ---
+description: 공간 인덱스 개요
 title: 공간 인덱스 개요 | Microsoft 문서
 ms.date: 09/12/2016
 ms.prod: sql
@@ -12,12 +13,12 @@ ms.assetid: b1ae7b78-182a-459e-ab28-f743e43f8293
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8ad5b6e9441eb9364ddeac03e13e5fe60542746f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4abd4b9c915a47318ccc8f13d67507af67f0e1d0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85666984"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448005"
 ---
 # <a name="spatial-indexes-overview"></a>공간 인덱스 개요
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -129,7 +130,7 @@ ms.locfileid: "85666984"
 >  [CREATE SPATIAL INDEX](../../t-sql/statements/create-spatial-index-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] 문의 USING (GEOMETRY_AUTO_GRID/GEOMETRY_GRID) 절을 사용하여 이 공간 분할(tessellation) 구성표를 명시적으로 지정할 수 있습니다.  
   
 ##### <a name="the-bounding-box"></a>경계 상자  
- 기하학적 데이터는 무한할 수 있는 평면을 차지합니다. 그러나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 공간 인덱스는 제한된 공간을 필요로 합니다. 분해를 위한 제한된 공간을 설정하려면 기하 도형 표 공간 분할 구성표에는 사각형 *경계 상자*가 필요합니다. 경계 상자는 **(** _x-min_ **,** _y-min_ **)** 및 **(** _x-max_ **,** _y-max_ **)** 라는 4개의 좌표로 정의되며 공간 인덱스의 속성으로 저장됩니다. 이러한 좌표는 다음을 나타냅니다.  
+ 기하학적 데이터는 무한할 수 있는 평면을 차지합니다. 그러나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 공간 인덱스는 제한된 공간을 필요로 합니다. 분해를 위한 제한된 공간을 설정하려면 기하 도형 표 공간 분할 구성표에는 사각형 *경계 상자*가 필요합니다. 경계 상자는 **(**_x-min_**,**_y-min_**)** 및 **(**_x-max_**,**_y-max_**)** 라는 4개의 좌표로 정의되며 공간 인덱스의 속성으로 저장됩니다. 이러한 좌표는 다음을 나타냅니다.  
   
 -   *x-min* 은 경계 상자의 왼쪽 아래 모퉁이의 X 좌표입니다.  
   
@@ -142,11 +143,11 @@ ms.locfileid: "85666984"
 > [!NOTE]  
 >  이러한 좌표는 [CREATE SPATIAL INDEX](../../t-sql/statements/create-spatial-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] 문의 BOUNDING_BOX 절에서 지정됩니다.  
   
- **(** _x-min_ **,** _y-min_ **)** 및 **(** _x-max_ **,** _y-max_ **)** 좌표에 따라 경계 상자의 배치 및 차원이 결정됩니다. 경계 상자 외부의 공간은 번호가 0으로 매겨진 단일 셀로 처리됩니다.  
+ **(**_x-min_**,**_y-min_**)** 및 **(**_x-max_**,**_y-max_**)** 좌표에 따라 경계 상자의 배치 및 차원이 결정됩니다. 경계 상자 외부의 공간은 번호가 0으로 매겨진 단일 셀로 처리됩니다.  
   
  공간 인덱스는 경계 상자 내부의 공간을 분해합니다. 표 계층 구조 수준-1 표가 경계 상자를 채웁니다. 표 계층 구조에서 기하학적 개체를 배치하기 위해 공간 인덱스에서는 개체 좌표와 경계 상자 좌표를 비교합니다.  
   
- 다음 그림에서는 경계 상자의 **(** _x-min_ **,** _y-min_ **)** 및 **(** _x-max_ **,** _y-max_ **)** 좌표로 정의되는 지점을 보여 줍니다. 표 계층 구조의 최상위 수준이 4x4 표로 표시됩니다. 이해하기 쉽도록 하위 수준은 생략되었습니다. 경계 상자 외부의 공간은 0으로 표시됩니다. 'A' 개체는 부분적으로 상자 밖으로 뻗어 있고 'B' 개체는 완전히 셀 0의 상자 바깥쪽에 있습니다.  
+ 다음 그림에서는 경계 상자의 **(**_x-min_**,**_y-min_**)** 및 **(**_x-max_**,**_y-max_**)** 좌표로 정의되는 지점을 보여 줍니다. 표 계층 구조의 최상위 수준이 4x4 표로 표시됩니다. 이해하기 쉽도록 하위 수준은 생략되었습니다. 경계 상자 외부의 공간은 0으로 표시됩니다. 'A' 개체는 부분적으로 상자 밖으로 뻗어 있고 'B' 개체는 완전히 셀 0의 상자 바깥쪽에 있습니다.  
   
  ![좌표 및 셀 0을 보여 주는 경계 상자](../../relational-databases/spatial/media/spndx-bb-4x4-objects.gif "좌표 및 셀 0을 보여 주는 경계 상자")  
   

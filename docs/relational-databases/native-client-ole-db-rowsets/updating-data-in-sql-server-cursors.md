@@ -1,4 +1,5 @@
 ---
+description: SQL Server Native Client에서 SQL Server 커서의 데이터 업데이트
 title: 커서의 데이터 업데이트 (Native Client OLE DB 공급자)
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ ms.assetid: 732dafee-f2d5-4aef-aad7-3a8bf3b1e876
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1d5c51d8956f2eea8f6be955c9daf1e6ed323f7d
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 7e00bf48c991d496e4425e665206b22a0ac3d32a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395824"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448325"
 ---
 # <a name="updating-data-in-sql-server-cursors-in-sql-server-native-client"></a>SQL Server Native Client에서 SQL Server 커서의 데이터 업데이트
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -1,4 +1,5 @@
 ---
+description: 이벤트 알림에 대한 대화 보안 구성
 title: 이벤트 알림에 대한 대화 보안 구성 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/09/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 12afbc84-2d2a-4452-935e-e1c70e8c53c1
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 98df2bd789a9f5ca4c81aa83b152c4170546594b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 85fbbe596954083015a0533995784f31609d1b90
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85773861"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448020"
 ---
 # <a name="configure-dialog-security-for-event-notifications"></a>이벤트 알림에 대한 대화 보안 구성
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,4 +1,5 @@
 ---
+description: sp_fulltext_load_thesaurus_file(Transact-SQL)
 title: sp_fulltext_load_thesaurus_file (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 73a309c3-6d22-42dc-a6fe-8a63747aa2e4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 105ce6682e17e30e010c4ab7c78aa078048609b8
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: de200151bf6c17119e9926ac848e33a5dd84751b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891871"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447153"
 ---
 # <a name="sp_fulltext_load_thesaurus_file-transact-sql"></a>sp_fulltext_load_thesaurus_file(Transact-SQL)
 
@@ -53,7 +54,7 @@ sys.sp_fulltext_load_thesaurus_file lcid [ , @loadOnlyIfNotLoaded  = action ]
 |1|아직 로드되지 않은 경우에만 동의어 사전 파일을 로드합니다.|  
   
 ## <a name="return-code-values"></a>반환 코드 값  
- 없음  
+ None  
   
 ## <a name="result-sets"></a>결과 집합  
  None  
@@ -68,7 +69,7 @@ sys.sp_fulltext_load_thesaurus_file lcid [ , @loadOnlyIfNotLoaded  = action ]
   
  동의어 사전 파일은 시스템 관리자만 업데이트, 수정 또는 삭제할 수 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-load-a-thesaurus-file-even-if-it-is-already-loaded"></a>A. 이미 로드되어 있더라도 동의어 사전 파일 로드  
  다음 예에서는 영어 동의어 사전 파일을 구문 분석하고 로드합니다.  

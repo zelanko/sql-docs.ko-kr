@@ -1,4 +1,5 @@
 ---
+description: sp_indexes(Transact-SQL)
 title: sp_indexes (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 25469e72-9d95-463f-912a-193471c8f5e2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5f7c88013f59e256c6b41aa392adb08f5fcdb495
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 6129240ab59b3629704a4d67fb80b4306d6bb621
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899456"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446973"
 ---
 # <a name="sp_indexes-transact-sql"></a>sp_indexes(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -89,7 +90,7 @@ sp_indexes [ @table_server = ] 'table_server'
 ## <a name="permissions"></a>사용 권한  
  스키마에 대한 SELECT 권한이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 연결된 서버 `Employees`에 있는 `AdventureWorks2012` 데이터베이스에서 `Seattle1` 테이블의 모든 인덱스 정보를 반환하는 방법을 보여 줍니다.  
   
 ```  
@@ -100,11 +101,11 @@ EXEC sp_indexes @table_server = 'Seattle1',
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;분산 쿼리 저장 프로시저](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;분산 쿼리 저장 프로시저 ](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)   
  [Transact-sql&#41;sp_catalogs &#40;](../../relational-databases/system-stored-procedures/sp-catalogs-transact-sql.md)   
  [Transact-sql&#41;sp_column_privileges &#40;](../../relational-databases/system-stored-procedures/sp-column-privileges-transact-sql.md)   
  [Transact-sql&#41;sp_foreignkeys &#40;](../../relational-databases/system-stored-procedures/sp-foreignkeys-transact-sql.md)   
- [Transact-sql&#41;sp_linkedservers &#40;](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)   
+ [sp_linkedservers&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)   
  [Transact-sql&#41;sp_tables_ex &#40;](../../relational-databases/system-stored-procedures/sp-tables-ex-transact-sql.md)   
  [Transact-sql&#41;sp_table_privileges &#40;](../../relational-databases/system-stored-procedures/sp-table-privileges-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

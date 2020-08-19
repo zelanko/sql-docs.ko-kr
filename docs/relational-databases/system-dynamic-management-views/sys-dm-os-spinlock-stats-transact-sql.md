@@ -1,4 +1,5 @@
 ---
+description: sys. dm_os_spinlock_stats (Transact-sql)
 title: sys. dm_os_spinlock_stats (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/03/2019
@@ -22,12 +23,12 @@ author: bluefooted
 ms.author: pamela
 ms.reviewer: maghan
 manager: amitban
-ms.openlocfilehash: 8343a5aa5d8e95474fb87c1b6a39e2a013323295
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: df183fe9b6ee5365f623e59dd1c94738afe5df8d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718779"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447595"
 ---
 # <a name="sysdm_os_spinlock_stats-transact-sql"></a>sys. dm_os_spinlock_stats (Transact-sql)
 
@@ -404,11 +405,11 @@ GO
  
 
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  
  [DBCC SQLPERF&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md)   
  
- [Transact-sql&#41;&#40;운영 체제 관련 동적 관리 뷰 SQL Server](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
+ [Transact-sql&#41;&#40;운영 체제 관련 동적 관리 뷰 SQL Server ](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
 
  [가 SQL Server의 CPU 사용률에 대 한 상당한 영향을 주는 경우](https://techcommunity.microsoft.com/t5/SQL-Server-Support/When-is-Spinlock-a-Significant-Driver-of-CPU-utilization-in-SQL/ba-p/530142)
 

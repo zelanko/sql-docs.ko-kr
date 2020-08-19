@@ -1,4 +1,5 @@
 ---
+description: SQL Server Express LocalDB 참조
 title: SQL Server Express LocalDB 참조 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/06/2017
@@ -10,12 +11,12 @@ ms.topic: reference
 ms.assetid: 25b71829-bdb1-46f4-ac36-80ddced52f3d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 465b78999808a8b44f05861251da43a2e6f0ee72
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b176dd15896cae3335ea606b4aa06cc95bb06df4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913929"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447960"
 ---
 # <a name="sql-server-express-localdb-reference"></a>SQL Server Express LocalDB 참조
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]

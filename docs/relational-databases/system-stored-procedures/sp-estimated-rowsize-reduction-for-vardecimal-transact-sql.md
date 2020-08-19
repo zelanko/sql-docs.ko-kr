@@ -1,4 +1,5 @@
 ---
+description: sp_estimated_rowsize_reduction_for_vardecimal(Transact-SQL)
 title: sp_estimated_rowsize_reduction_for_vardecimal (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 0fe45983-f9f2-4c7f-938a-0fd96e1cbe8d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 584723414da47dbb0696ae991860d8bed50a3a26
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 40347ef5e273b19a4ae04362a5e80b6f8d813e5f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881722"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447175"
 ---
 # <a name="sp_estimated_rowsize_reduction_for_vardecimal-transact-sql"></a>sp_estimated_rowsize_reduction_for_vardecimal(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,7 +47,7 @@ sp_estimated_rowsize_reduction_for_vardecimal [ [ @table_name = ] 'table'] [;]
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @table = ] 'table'`저장소 형식을 변경할 테이블의 세 부분으로 구성 된 이름입니다. *테이블* 은 **nvarchar (776)** 입니다.  
+`[ @table = ] 'table'` 저장소 형식을 변경할 테이블의 세 부분으로 구성 된 이름입니다. *테이블* 은 **nvarchar (776)** 입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -70,7 +71,7 @@ sp_estimated_rowsize_reduction_for_vardecimal [ [ @table_name = ] 'table'] [;]
 ## <a name="permissions"></a>사용 권한  
  테이블에 대한 CONTROL 권한이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `Production.WorkOrderRouting` 데이터베이스의 `AdventureWorks2012` 테이블이 압축된 경우의 행 크기 감소를 추정합니다.  
   
 ```  

@@ -1,4 +1,5 @@
 ---
+description: sys. dm_exec_compute_node_errors (Transact-sql)
 title: sys. dm_exec_compute_node_errors (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2019
@@ -22,23 +23,23 @@ ms.assetid: 9a03c039-70e4-4974-95d8-d3fa45984ffb
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5de36530fcf50a403558cb97fa72ad6a2d126e32
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 5a08f64df5f50fda1f23f4e3b30add9e96e0670e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830697"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447655"
 ---
 # <a name="sysdm_exec_compute_node_errors-transact-sql"></a>sys. dm_exec_compute_node_errors (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   PolyBase 계산 노드에서 발생 하는 오류를 반환 합니다.  
   
-|열 이름|데이터 형식|설명|범위|  
+|열 이름|데이터 형식|Description|범위|  
 |-----------------|---------------|-----------------|-----------|  
 |error_id|`nvarchar(36)`|오류와 연결 된 고유 숫자 id입니다.|시스템의 모든 쿼리 오류에서 고유|  
-|원본|`nvarchar(255)`|소스 스레드 또는 프로세스 설명||  
-|형식|`nvarchar(255)`|오류 유형입니다.||  
+|source|`nvarchar(255)`|소스 스레드 또는 프로세스 설명||  
+|type|`nvarchar(255)`|오류 유형입니다.||  
 |create_time|`datetime`|오류가 발생 한 시간입니다.||  
 |compute_node_id|`int`|특정 계산 노드의 식별자입니다.|Compute_node_id의 [dm_exec_compute_nodes &#40;transact-sql](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md) 을 참조 하세요&#41;|  
 |rexecution_id|`nvarchar(36)`|PolyBase 쿼리 (있는 경우)의 식별자입니다.||  
@@ -50,7 +51,7 @@ ms.locfileid: "82830697"
   
 ## <a name="see-also"></a>참고 항목  
  [동적 관리 뷰를 사용한 PolyBase 문제 해결](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
- [Transact-sql&#41;&#40;동적 관리 뷰 및 함수](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Transact-sql&#41;&#40;데이터베이스 관련 동적 관리 뷰](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
+ [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Transact-sql&#41;&#40;데이터베이스 관련 동적 관리 뷰 ](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
   
   

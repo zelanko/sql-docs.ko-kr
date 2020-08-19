@@ -1,4 +1,5 @@
 ---
+description: sys. dm_db_log_info (Transact-sql)
 title: sys. dm_db_log_info (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/24/2018
@@ -20,12 +21,12 @@ author: savjani
 ms.author: pariks
 manager: ajayj
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7cb87d2d5677085edc8e6bd998f20c3c45013823
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: aba965d4a0289db9ef7def58b90f15a1479cb485
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68262077"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447665"
 ---
 # <a name="sysdm_db_log_info-transact-sql"></a>sys. dm_db_log_info (Transact-sql)
 [!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-xxxx-xxx-md.md)]
@@ -44,11 +45,11 @@ sys.dm_db_log_info ( database_id )
  
  현재 데이터베이스의 VLF 정보를 반환 하려면 NULL을 지정 합니다.
 
- [DB_ID](../../t-sql/functions/db-id-transact-sql.md) 기본 제공 함수를 지정할 수 있습니다. 데이터베이스 이름을 `DB_ID` 지정 하지 않고를 사용 하는 경우 현재 데이터베이스의 호환성 수준은 90 이상 이어야 합니다.  
+ [DB_ID](../../t-sql/functions/db-id-transact-sql.md) 기본 제공 함수를 지정할 수 있습니다. `DB_ID`데이터베이스 이름을 지정 하지 않고를 사용 하는 경우 현재 데이터베이스의 호환성 수준은 90 이상 이어야 합니다.  
 
 ## <a name="table-returned"></a>반환된 테이블  
 
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |database_id|**int**|데이터베이스 ID입니다.|
 |file_id|**smallint**|트랜잭션 로그의 파일 id입니다.|  
@@ -63,12 +64,12 @@ sys.dm_db_log_info ( database_id )
 |vlf_encryptor_thumbprint|**varbinary(20)**| **적용 대상:** [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] <br><br> [투명한 데이터 암호화](../../relational-databases/security/encryption/transparent-data-encryption.md)를 사용 하 여 vlf가 암호화 된 경우 vlf의 암호기 지문을 표시 합니다. 그렇지 않으면 NULL입니다. |
 
 ## <a name="remarks"></a>설명
-`sys.dm_db_log_info` 동적 관리 함수는 `DBCC LOGINFO` 문을 대체 합니다.    
+`sys.dm_db_log_info`동적 관리 함수는 문을 대체 합니다 `DBCC LOGINFO` .    
  
 ## <a name="permissions"></a>사용 권한  
-데이터베이스에 `VIEW DATABASE STATE` 대 한 권한이 필요 합니다.  
+데이터베이스에 대 한 권한이 필요 합니다 `VIEW DATABASE STATE` .  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-determing-databases-in-a-sql-server-instance-with-high-number-of-vlfs"></a>A. Vlf 수가 많은 SQL Server 인스턴스의 데이터베이스 판단
 다음 쿼리는 데이터베이스 시작, 복원 및 복구 시간에 영향을 줄 수 있는 로그 파일의 Vlf가 100 이상인 데이터베이스를 결정 합니다.
@@ -81,7 +82,7 @@ GROUP BY [name]
 HAVING COUNT(l.database_id) > 100
 ```
 
-### <a name="b-determing-the-position-of-the-last-vlf-in-transaction-log-before-shrinking-the-log-file"></a>B. 로그 파일을 축소 하기 전에 `VLF` 트랜잭션 로그의 마지막 위치를 판단 합니다.
+### <a name="b-determing-the-position-of-the-last-vlf-in-transaction-log-before-shrinking-the-log-file"></a>B. `VLF`로그 파일을 축소 하기 전에 트랜잭션 로그의 마지막 위치를 판단 합니다.
 
 다음 쿼리를 사용 하면 트랜잭션 로그에서 shrinkfile를 실행 하기 전에 마지막 활성 VLF의 위치를 확인 하 여 트랜잭션 로그를 축소할 수 있는지 여부를 확인할 수 있습니다.
 
@@ -110,8 +111,8 @@ GO
 ```
 
 ## <a name="see-also"></a>참고 항목  
-[Transact-sql&#41;&#40;동적 관리 뷰 및 함수](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
-[Transact-sql&#41;&#40;데이터베이스 관련 동적 관리 뷰](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
-[dm_db_log_space_usage &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)   
+[동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+[Transact-sql&#41;&#40;데이터베이스 관련 동적 관리 뷰 ](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
+[sys.dm_db_log_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)   
 [sys.dm_db_log_stats&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-stats-transact-sql.md)
 

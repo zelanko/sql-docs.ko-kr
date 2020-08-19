@@ -1,4 +1,5 @@
 ---
+description: sys.dm_exec_query_parallel_workers(Transact-SQL)
 title: sys. dm_exec_query_parallel_workers (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
@@ -21,12 +22,12 @@ author: pelopes
 ms.author: pelopes
 manager: ajayj
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f91b5e1aa2995c2b51c43fc45216868a6f8c7798
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 0fc9e42e6803dcda6d9f2ccb54401c2d926dd48d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396305"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447618"
 ---
 # <a name="sysdm_exec_query_parallel_workers-transact-sql"></a>sys.dm_exec_query_parallel_workers(Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
@@ -47,7 +48,7 @@ ms.locfileid: "87396305"
 에 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 는 `VIEW SERVER STATE` 권한이 필요 합니다.   
 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium 계층에서는 데이터베이스에 대 한 권한이 필요 합니다 `VIEW DATABASE STATE` . [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]표준 및 기본 계층에서는 **서버 관리자** 또는 **Azure Active Directory 관리자** 계정이 필요 합니다.   
  
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-viewing-current-parallel-worker-availability"></a>A. 현재 병렬 작업자 가용성 보기  
 
@@ -57,5 +58,5 @@ SELECT * FROM sys.dm_exec_query_parallel_workers;
   
 ## <a name="see-also"></a>참고 항목  
  [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Transact-sql&#41;&#40;관련 동적 관리 뷰 및 함수 실행](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
+ [Transact-sql&#41;&#40;관련 동적 관리 뷰 및 함수 실행 ](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
  [dm_os_workers &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md)

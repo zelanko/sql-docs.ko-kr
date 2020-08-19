@@ -1,4 +1,5 @@
 ---
+description: sp_help_notification(Transact-SQL)
 title: sp_help_notification (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0273457f-9d2a-4a6f-9a16-6a6bf281cba0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b9fad9d93a1c0d4781f792fedfe3fe7649e17c98
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2e680c10037119020a1f667e40a7f77817a08cdf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891730"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447065"
 ---
 # <a name="sp_help_notification-transact-sql"></a>sp_help_notification(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,11 +45,11 @@ sp_help_notification
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @object_type = ] 'object_type'`반환 될 정보의 형식입니다. *object_type*은 **char (9)** 이며 기본값은 없습니다. *object_type* 은 제공 된 운영자 이름에 할당 된 경고를 나열 하는 경고*또는 제공* 된 경고 이름을 담당 하는 운영자를 나열 하는 연산자 일 수 있습니다 *.*  
+`[ @object_type = ] 'object_type'` 반환 될 정보의 형식입니다. *object_type*은 **char (9)** 이며 기본값은 없습니다. *object_type* 은 제공 된 운영자 이름에 할당 된 경고를 나열 하는 경고*또는 제공* 된 경고 이름을 담당 하는 운영자를 나열 하는 연산자 일 수 있습니다 *.*  
   
-`[ @name = ] 'name'`운영자 이름 ( *object_type* 가 OPERATORS 인 경우) 또는 경고 이름 ( *object_type* 가 ALERTS 인 경우)입니다. *name* 은 **sysname**이며 기본값은 없습니다.  
+`[ @name = ] 'name'` 운영자 이름 ( *object_type* 가 OPERATORS 인 경우) 또는 경고 이름 ( *object_type* 가 ALERTS 인 경우)입니다. *name* 은 **sysname**이며 기본값은 없습니다.  
   
-`[ @enum_type = ] 'enum_type'`반환 되는 *object_type*정보입니다. 대부분의 경우 *enum_type* 는 실제입니다. *enum_type*은 **char (10)** 이며 기본값은 없고 다음 값 중 하나일 수 있습니다.  
+`[ @enum_type = ] 'enum_type'` 반환 되는 *object_type*정보입니다. 대부분의 경우 *enum_type* 는 실제입니다. *enum_type*은 **char (10)** 이며 기본값은 없고 다음 값 중 하나일 수 있습니다.  
   
 |값|설명|  
 |-----------|-----------------|  
@@ -56,16 +57,16 @@ sp_help_notification
 |ALL|*이름*에 연결 되지 않은 object_types를 포함 하 여 모든*object_types* 을 나열 합니다.|  
 |TARGET|*이름과*의 연결에 관계 없이 제공 된 *target_name*일치 하는 *object_types* 나열 합니다.|  
   
-`[ @notification_method = ] notification_method`반환할 알림 방법 열을 결정 하는 숫자 값입니다. *notification_method* 은 **tinyint**이며 다음 값 중 하나일 수 있습니다.  
+`[ @notification_method = ] notification_method` 반환할 알림 방법 열을 결정 하는 숫자 값입니다. *notification_method* 은 **tinyint**이며 다음 값 중 하나일 수 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**1**|전자 메일: **use_email** 열만 반환 합니다.|  
 |**2**|Pager: **use_pager** 열만 반환 합니다.|  
 |**4**|NetSend: **use_netsend** 열만 반환 합니다.|  
 |**7**|All: 모든 열을 반환합니다.|  
   
-`[ @target_name = ] 'target_name'`검색할 경고 이름 ( *object_type* 가 ALERTS 인 경우) 또는 검색할 운영자 이름 ( *object_type* 가 OPERATORS 인 경우)입니다. *target_name* 은 *enum_type* 대상인 경우에만 필요 합니다. *target_name* 는 **sysname**이며 기본값은 NULL입니다.  
+`[ @target_name = ] 'target_name'` 검색할 경고 이름 ( *object_type* 가 ALERTS 인 경우) 또는 검색할 운영자 이름 ( *object_type* 가 OPERATORS 인 경우)입니다. *target_name* 은 *enum_type* 대상인 경우에만 필요 합니다. *target_name* 는 **sysname**이며 기본값은 NULL입니다.  
   
 ## <a name="return-code-valves"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -103,7 +104,7 @@ sp_help_notification
 ## <a name="permissions"></a>사용 권한  
  이 저장 프로시저를 실행하려면 사용자가 **sysadmin** 고정 서버 역할의 멤버여야 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-listing-alerts-for-a-specific-operator"></a>A. 특정 운영자에 대한 경고 나열  
  다음 예에서는 `François Ajenstat`라는 운영자가 받는 모든 종류의 알림에 관한 경고를 모두 반환합니다.  

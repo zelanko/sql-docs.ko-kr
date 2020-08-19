@@ -1,4 +1,5 @@
 ---
+description: sys.dm_exec_connections(Transact-SQL)
 title: sys. dm_exec_connections (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/16/2017
@@ -20,12 +21,12 @@ ms.assetid: 6bd46fe1-417d-452d-a9e6-5375ee8690d8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d128ee81a4465bdb24b9e6fde48d5dbe8cc8b8cc
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: a2e283d084fc5b76340e3b37253e3506ecd5ce3e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942366"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447645"
 ---
 # <a name="sysdm_exec_connections-transact-sql"></a>sys.dm_exec_connections(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -59,7 +60,7 @@ ms.locfileid: "86942366"
 |connection_id|**uniqueidentifier**|각 연결을 고유하게 식별합니다. Null을 허용하지 않습니다.|  
 |parent_connection_id|**uniqueidentifier**|MARS 세션이 사용하고 있는 주 연결을 식별합니다. Null을 허용합니다.|  
 |most_recent_sql_handle|**varbinary(64)**|이 연결에서 실행된 마지막 요청의 SQL 핸들입니다. most_recent_sql_handle 열은 항상 most_recent_session_id 열과 동기화됩니다. Null을 허용합니다.|  
-|pdw_node_id|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포가 설정 된 노드의 식별자입니다.|  
+|pdw_node_id|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포가 설정 된 노드의 식별자입니다.|  
   
 ## <a name="permissions"></a>사용 권한
 
@@ -77,7 +78,7 @@ ms.locfileid: "86942366"
 |dm_exec_requests.connection_id|dm_exec_connections.connection_id|다 대 일|  
 |dm_broker_connections.connection_id|dm_exec_connections.connection_id|일 대 일|  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  쿼리 자체 연결에 대한 정보를 수집하는 일반 쿼리입니다.  
   
 ```sql  

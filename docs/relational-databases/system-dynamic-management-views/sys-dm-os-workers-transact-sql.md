@@ -1,4 +1,5 @@
 ---
+description: sys.dm_os_workers(Transact-SQL)
 title: sys. dm_os_workers (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2017
@@ -20,11 +21,12 @@ ms.assetid: 4d5d1e52-a574-4bdd-87ae-b932527235e8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 38fcf821327fb0f7e95734f5d9a3ac47e41ac93c
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: a7b685cbbed2dad2c96d84e09e8921b56d8d7ed2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86010958"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447577"
 ---
 # <a name="sysdm_os_workers-transact-sql"></a>sys.dm_os_workers(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -57,11 +59,11 @@ ms.locfileid: "86010958"
 |exception_severity|**int**|이 작업자에 마지막으로 발생한 예외의 심각도입니다.|  
 |exception_address|**varbinary(8)**|예외가 발생한 코드 주소입니다.|  
 |affinity|**bigint**|작업자의 스레드 선호도입니다. [Dm_os_threads &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-threads-transact-sql.md)에서 스레드의 선호도와 일치 합니다.|  
-|state|**nvarchar(60)**|작업자 상태입니다. 다음 값 중 하나를 사용할 수 있습니다.<br /><br /> INIT = 작업자가 현재 초기화되고 있습니다.<br /><br /> RUNNING = 작업자가 현재 선점형 모드나 비선점형 모드로 실행되고 있습니다.<br /><br /> RUNNABLE = 스케줄러에서 작업자를 실행할 준비가 되었습니다.<br /><br /> SUSPENDED = 작업자가 현재 일시 중지되어 이벤트에서 신호를 보낼 때까지 기다리고 있습니다.|  
+|state|**nvarchar(60)**|작업자 상태입니다. 다음 값 중 하나일 수 있습니다.<br /><br /> INIT = 작업자가 현재 초기화되고 있습니다.<br /><br /> RUNNING = 작업자가 현재 선점형 모드나 비선점형 모드로 실행되고 있습니다.<br /><br /> RUNNABLE = 스케줄러에서 작업자를 실행할 준비가 되었습니다.<br /><br /> SUSPENDED = 작업자가 현재 일시 중지되어 이벤트에서 신호를 보낼 때까지 기다리고 있습니다.|  
 |start_quantum|**bigint**|이 작업자의 현재 실행이 시작된 시간(밀리초)입니다.|  
 |end_quantum|**bigint**|이 작업자의 현재 실행이 종료된 시간(밀리초)입니다.|  
 |last_wait_type|**nvarchar(60)**|마지막 대기의 유형입니다. 대기 유형 목록은 [dm_os_wait_stats &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)을 참조 하십시오.|  
-|return_code|**int**|마지막 대기에서 반환된 값입니다. 다음 값 중 하나를 사용할 수 있습니다.<br /><br /> 0 = 성공<br /><br /> 3 = 교착<br /><br /> 4 = 중간 시작<br /><br /> 258 = 시간 초과|  
+|return_code|**int**|마지막 대기에서 반환된 값입니다. 다음 값 중 하나일 수 있습니다.<br /><br /> 0 = 성공<br /><br /> 3 = 교착<br /><br /> 4 = 중간 시작<br /><br /> 258 = 시간 초과|  
 |quantum_used|**bigint**|내부적으로만 사용됩니다.|  
 |max_quantum|**bigint**|내부적으로만 사용됩니다.|  
 |boost_count|**int**|내부적으로만 사용됩니다.|  
@@ -73,18 +75,18 @@ ms.locfileid: "86010958"
 |signal_worker_address|**varbinary(8)**|이 개체에 마지막으로 신호를 보낸 작업자의 메모리 주소입니다. 자세한 내용은 [dm_os_workers](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md)를 참조 하세요.|  
 |scheduler_address|**varbinary(8)**|스케줄러의 메모리 주소입니다. 자세한 내용은 [dm_os_schedulers &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md)을 참조 하십시오.|  
 |processor_group|**smallint**|이 스레드에 할당된 프로세서 그룹 ID를 저장합니다.|  
-|pdw_node_id|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포가 설정 된 노드의 식별자입니다.|  
+|pdw_node_id|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포가 설정 된 노드의 식별자입니다.|  
   
 ## <a name="remarks"></a>설명  
  작업자 상태가 RUNNING이고 작업자가 비선점형 모드로 실행되고 있으면 작업자 주소가 sys.dm_os_schedulers의 active_worker_address와 일치합니다.  
   
  이벤트를 기다리고 있는 작업자가 신호를 받으면 해당 작업자가 실행 가능한 큐의 맨 처음에 배치됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 이 작업이 연속해서 1,000회 발생할 수 있습니다. 그런 다음 작업자가 큐 끝에 배치됩니다. 작업자를 큐 끝으로 이동하면 성능에 약간 영향을 줍니다.  
   
-## <a name="permissions"></a>권한
+## <a name="permissions"></a>사용 권한
 에 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 는 `VIEW SERVER STATE` 권한이 필요 합니다.   
 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium 계층에서는 데이터베이스에 대 한 권한이 필요 합니다 `VIEW DATABASE STATE` . [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]표준 및 기본 계층에서에는 `Server Admin` 역할 멤버 자격 또는 계정이 필요 합니다 `Azure Active Directory admin` .   
 
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 쿼리를 사용하여 SUSPENDED 또는 RUNNABLE 상태에서 작업자가 실행된 시간을 확인할 수 있습니다.  
   
 ```sql
@@ -134,7 +136,7 @@ SELECT
 
  출력에서 `w_runnable`과 `w_suspended`가 같으면 작업자가 SUSPENDED 상태에 있는 시간을 나타냅니다. 그렇지 않으면 `w_runnable`은 작업자가 RUNNABLE 상태에서 소요한 시간을 나타냅니다. 출력에서 세션 `52`는 `SUSPENDED` 밀리초 동안 `35,094`됩니다.  
   
-## <a name="see-also"></a>참고 항목  
-[Transact-sql&#41;&#40;운영 체제 관련 동적 관리 뷰 SQL Server](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)       
+## <a name="see-also"></a>관련 항목  
+[Transact-sql&#41;&#40;운영 체제 관련 동적 관리 뷰 SQL Server ](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)       
 [쿼리 처리 아키텍처 가이드](../../relational-databases/query-processing-architecture-guide.md#DOP)       
 [스레드 및 태스크 아키텍처 가이드](../../relational-databases/thread-and-task-architecture-guide.md)    

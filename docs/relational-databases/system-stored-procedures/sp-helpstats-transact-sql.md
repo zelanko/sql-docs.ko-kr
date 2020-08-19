@@ -1,4 +1,5 @@
 ---
+description: sp_helpstats(Transact-SQL)
 title: sp_helpstats (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ ms.assetid: 00ab3cfd-2736-4fc0-b1b2-16dd49fb2fe5
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cc07dec5878e0d31a325aa75af483ab4b1b04e58
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f88558a41c4a169ca61ec7cc615cd0ba5b991589
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85736973"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447053"
 ---
 # <a name="sp_helpstats-transact-sql"></a>sp_helpstats(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "85736973"
   지정된 테이블의 열과 인덱스에 대한 통계 정보를 반환합니다.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepNextAvoid](../../includes/ssnotedepnextavoid-md.md)]통계에 대 한 정보를 얻으려면 [sys.debug](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) 및 [stats_columns](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md) 카탈로그 뷰를 쿼리 합니다.  
+>  [!INCLUDE[ssNoteDepNextAvoid](../../includes/ssnotedepnextavoid-md.md)] 통계에 대 한 정보를 얻으려면 [sys.debug](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) 및 [stats_columns](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md) 카탈로그 뷰를 쿼리 합니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -44,9 +45,9 @@ sp_helpstats[ @objname = ] 'object_name'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @objname = ] 'object_name'`통계 정보를 제공할 테이블을 지정 합니다. *object_name* 은 **nvarchar (520)** 이며 null 일 수 없습니다. 한 부분 또는 두 부분으로 이루어진 이름을 지정할 수 있습니다.  
+`[ @objname = ] 'object_name'` 통계 정보를 제공할 테이블을 지정 합니다. *object_name* 은 **nvarchar (520)** 이며 null 일 수 없습니다. 한 부분 또는 두 부분으로 이루어진 이름을 지정할 수 있습니다.  
   
-`[ @results = ] 'value'`제공할 정보의 범위를 지정 합니다. 유효한 항목은 **ALL** 및 **STATS**입니다. **All** 은 모든 인덱스에 대 한 통계 및 해당 인덱스에 생성 된 통계를 포함 하는 열을 나열 합니다. **STATS** 는 인덱스와 연결 되지 않은 통계만 나열 합니다. *value* 는 **nvarchar (5)** 이며 기본값은 STATS입니다.  
+`[ @results = ] 'value'` 제공할 정보의 범위를 지정 합니다. 유효한 항목은 **ALL** 및 **STATS**입니다. **All** 은 모든 인덱스에 대 한 통계 및 해당 인덱스에 생성 된 통계를 포함 하는 열을 나열 합니다. **STATS** 는 인덱스와 연결 되지 않은 통계만 나열 합니다. *value* 는 **nvarchar (5)** 이며 기본값은 STATS입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -65,7 +66,7 @@ sp_helpstats[ @objname = ] 'object_name'
 ## <a name="permissions"></a>사용 권한  
  **public** 역할의 멤버 자격이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `sp_createstats`를 실행하여 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에 있는 모든 사용자 테이블에 대해 모든 해당 열에 관한 단일 열 통계를 만듭니다. 그 다음 `sp_helpstats`를 실행하여 `Customer` 테이블에서 생성된 통계 결과를 찾습니다.  
   
 ```  
@@ -99,7 +100,7 @@ EXEC sp_helpstats
  `PK_Customer_CustomerID        CustomerID`  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;시스템 저장 프로시저](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Transact-sql&#41;&#40;저장 프로시저 데이터베이스 엔진](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
+ [Transact-sql&#41;&#40;시스템 저장 프로시저 ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;저장 프로시저 데이터베이스 엔진 ](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
   
   

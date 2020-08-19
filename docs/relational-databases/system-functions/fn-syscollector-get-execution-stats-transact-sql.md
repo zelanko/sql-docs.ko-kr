@@ -1,4 +1,5 @@
 ---
+description: fn_syscollector_get_execution_stats(Transact-SQL)
 title: fn_syscollector_get_execution_stats (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 793ad72c-a992-4a8d-8584-bcb6b3b476f1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dad75f84dd7696364528fe215bcf2665d78562c0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d9d6bb073cc237fff2a859c37316a981e4b5d88f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734395"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447515"
 ---
 # <a name="fn_syscollector_get_execution_stats-transact-sql"></a>fn_syscollector_get_execution_stats(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -61,8 +62,8 @@ fn_syscollector_get_execution_stats ( log_id )
 ## <a name="permissions"></a>사용 권한  
  **Dc_operator**에 대 한 SELECT가 필요 합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [Transact-sql&#41;syscollector_execution_stats &#40;](../../relational-databases/system-catalog-views/syscollector-execution-stats-transact-sql.md)   
- [데이터 수집](../../relational-databases/data-collection/data-collection.md)  
+ [데이터 컬렉션](../../relational-databases/data-collection/data-collection.md)  
   
   

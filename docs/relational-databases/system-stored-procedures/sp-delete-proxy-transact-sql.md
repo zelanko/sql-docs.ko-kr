@@ -1,4 +1,5 @@
 ---
+description: sp_delete_proxy(Transact-SQL)
 title: sp_delete_proxy (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 44a1db13-b7f2-4dab-a1b5-b8dafb41737c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d037718577e57887e8ba27787fade5b8d08abc28
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: fe7fa16aa15e20be9419a3cb3705bc40d4bba9f3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85862532"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447302"
 ---
 # <a name="sp_delete_proxy-transact-sql"></a>sp_delete_proxy(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,9 +41,9 @@ sp_delete_proxy [ @proxy_id = ] id , [ @proxy_name = ] 'proxy_name'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @proxy_id = ] id`제거할 프록시의 프록시 id입니다. *Proxy_id* 은 **int**이며 기본값은 NULL입니다.  
+`[ @proxy_id = ] id` 제거할 프록시의 프록시 id입니다. *Proxy_id* 은 **int**이며 기본값은 NULL입니다.  
   
-`[ @proxy_name = ] 'proxy_name'`제거할 프록시의 이름입니다. *Proxy_name* 는 **sysname**이며 기본값은 NULL입니다.  
+`[ @proxy_name = ] 'proxy_name'` 제거할 프록시의 이름입니다. *Proxy_name* 는 **sysname**이며 기본값은 NULL입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -58,7 +59,7 @@ sp_delete_proxy [ @proxy_id = ] id , [ @proxy_name = ] 'proxy_name'
 ## <a name="permissions"></a>사용 권한  
  기본적으로 **sysadmin** 고정 서버 역할의 멤버만 **sp_delete_proxy**를 실행할 수 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `Catalog application proxy`라는 프록시를 삭제합니다.  
   
 ```  

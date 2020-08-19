@@ -1,4 +1,5 @@
 ---
+description: sp_migrate_user_to_contained(Transact-SQL)
 title: sp_migrate_user_to_contained (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/11/2019
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b3a49ff6-46ad-4ee7-b6fe-7e54213dc33e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d3faf15999e0c157859e3d2eee9c4119ab344844
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 95bd2aa7491b15b2e16172b0761c6dccc8eb5818
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727155"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446937"
 ---
 # <a name="sp_migrate_user_to_contained-transact-sql"></a>sp_migrate_user_to_contained(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -117,7 +118,7 @@ DEALLOCATE user_cursor ;
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [부분적으로 포함 된 데이터베이스로 마이그레이션](../../relational-databases/databases/migrate-to-a-partially-contained-database.md)   
+ [Migrate to a Partially Contained Database](../../relational-databases/databases/migrate-to-a-partially-contained-database.md)   
  [포함된 데이터베이스](../../relational-databases/databases/contained-databases.md)  
   
   

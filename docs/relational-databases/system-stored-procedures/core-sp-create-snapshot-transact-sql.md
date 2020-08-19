@@ -1,4 +1,5 @@
 ---
+description: core.sp_create_snapshot(Transact-SQL)
 title: core. sp_create_snapshot (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: ff297bda-0ee2-4fda-91c8-7000377775e3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6b3ffe874615e58d276428548cb1c2ad318f111d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 763421a7c6c774c02ca6a20eb7a495ce9afecd3b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898234"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447452"
 ---
 # <a name="coresp_create_snapshot-transact-sql"></a>core.sp_create_snapshot(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -82,7 +83,7 @@ core.sp_create_snapshot [ @collection_set_uid = ] 'collection_set_uid'
 ## <a name="permissions"></a>사용 권한  
  **Mdw_writer** (실행 권한 포함) 고정 데이터베이스 역할의 멤버 자격이 필요 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 디스크 사용량 컬렉션 집합의 스냅샷을 만들어 관리 데이터 웨어하우스에 추가한 다음 스냅샷 식별자를 반환합니다. 이 예에서는 기본 인스턴스가 사용됩니다.  
   
 ```  
@@ -98,8 +99,8 @@ EXEC core.sp_create_snapshot
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;시스템 저장 프로시저](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Transact-sql&#41;&#40;데이터 수집기 저장 프로시저](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;시스템 저장 프로시저 ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [데이터 수집기 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
  [관리 데이터 웨어하우스](../../relational-databases/data-collection/management-data-warehouse.md)  
   
   

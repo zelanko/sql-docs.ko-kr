@@ -1,4 +1,5 @@
 ---
+description: sys.resource_usage(Azure SQL Database)
 title: resource_usage (Azure SQL Database) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -19,12 +20,12 @@ ms.assetid: b90147a3-fd8e-408e-961d-5c7000e068ad
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 9ac9473dbdcc51a4c5313b27596ce38d0607d336
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d7f5a7aadb3a16a673bca0d8c0ba34108a158693
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85665265"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447818"
 ---
 # <a name="sysresource_usage-azure-sql-database"></a>sys.resource_usage(Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -42,7 +43,7 @@ ms.locfileid: "85665265"
   
  각 사용자 데이터베이스에 대해 한 시간에 한 개의 행이 지속적으로 있습니다. 해당 시간 동안 데이터베이스가 유휴 상태인 경우라도 행이 있으며 해당 데이터베이스의 usage_in_seconds 값이 0이 됩니다. 스토리지 사용량 및 SKU 정보는 해당 시간에 대해 적절하게 롤업됩니다.  
   
-|열|데이터 형식|Description|  
+|열|데이터 형식|설명|  
 |-------------|---------------|-----------------|  
 |time|**datetime**|시간 단위로 시간(UTC)입니다.|  
 |database_name|**nvarchar**|사용자 데이터베이스 이름입니다.|  

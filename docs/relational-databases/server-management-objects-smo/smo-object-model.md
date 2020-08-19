@@ -1,4 +1,5 @@
 ---
+description: SMO 개체 모델
 title: SMO 개체 모델 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,11 +16,12 @@ ms.assetid: bd6e59b6-ca46-42c0-adb2-c9d64cf6e00b
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 186343e4c9bc594593ff3efee40e6a09f68e5422
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 2b9be59abe6c107a415d045c268abdb4e2ac4efa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000303"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448053"
 ---
 # <a name="smo-object-model"></a>SMO 개체 모델
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]

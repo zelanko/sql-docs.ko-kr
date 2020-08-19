@@ -1,4 +1,5 @@
 ---
+description: sys.data_spaces(Transact-SQL)
 title: sys. data_spaces (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -20,12 +21,12 @@ ms.assetid: f39d55fe-2c0f-472d-a77f-cebc6fea95b5
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: df3dd7f9680860455ec6291e8ba4a945f4db2043
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: e434fc21dc38ea02d30f1022f905a6bda7d7a41c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394058"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447985"
 ---
 # <a name="sysdata_spaces-transact-sql"></a>sys.data_spaces(Transact-SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]

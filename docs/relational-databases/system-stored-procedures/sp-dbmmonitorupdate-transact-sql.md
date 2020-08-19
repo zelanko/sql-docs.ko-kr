@@ -1,4 +1,5 @@
 ---
+description: sp_dbmmonitorupdate(Transact-SQL)
 title: sp_dbmmonitorupdate (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9ceb9611-4929-44ee-a406-c39ba2720fd5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7e7247f5357ae02e0a81f3682d5d952d01584473
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 3d1feb50ba79c7d9cb33218db1a256796d762b5f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85865612"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447339"
 ---
 # <a name="sp_dbmmonitorupdate-transact-sql"></a>sp_dbmmonitorupdate(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,7 +48,7 @@ sp_dbmmonitorupdate [ database_name ]
  미러링 상태를 업데이트할 데이터베이스의 이름입니다. *Database_name* 지정 하지 않으면이 프로시저는 서버 인스턴스의 모든 미러된 데이터베이스에 대해 상태 테이블을 업데이트 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
- 없음  
+ None  
   
 ## <a name="result-sets"></a>결과 집합  
  None  
@@ -73,7 +74,7 @@ EXEC sp_dbmmonitorupdate AdventureWorks2012 ;
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [데이터베이스 미러링 &#40;SQL Server&#41;모니터링](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
+ [데이터베이스 미러링 모니터링&#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
  [Transact-sql&#41;sp_dbmmonitorchangealert &#40;](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangealert-transact-sql.md)   
  [Transact-sql&#41;sp_dbmmonitorchangemonitoring &#40;](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangemonitoring-transact-sql.md)   
  [Transact-sql&#41;sp_dbmmonitordropalert &#40;](../../relational-databases/system-stored-procedures/sp-dbmmonitordropalert-transact-sql.md)   

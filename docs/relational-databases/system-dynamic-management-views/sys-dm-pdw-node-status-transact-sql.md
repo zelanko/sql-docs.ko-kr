@@ -1,4 +1,5 @@
 ---
+description: sys. dm_pdw_node_status (Transact-sql)
 title: sys. dm_pdw_node_status (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
@@ -12,12 +13,12 @@ ms.assetid: 8e263b65-81d0-49d0-8873-62ef424369d6
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8e13043774528228eaa46e70abe5ee00f9e51ac9
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: b93d177ad3f73982386407e019629401d70ec57f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395938"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447501"
 ---
 # <a name="sysdm_pdw_node_status-transact-sql"></a>sys. dm_pdw_node_status (Transact-sql)
 [!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
@@ -41,7 +42,7 @@ ms.locfileid: "87395938"
 |received_time|**datetime**|이 노드에서 네트워크 패키지를 마지막으로 수신한 시간입니다.||  
 |error_id|**nvarchar (36)**|이 노드에서 발생 한 마지막 오류의 고유 식별자입니다.||  
   
-## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;SQL Data Warehouse 및 병렬 데이터 웨어하우스 동적 관리 뷰](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
+## <a name="see-also"></a>관련 항목  
+ [Transact-sql&#41;&#40;SQL Data Warehouse 및 병렬 데이터 웨어하우스 동적 관리 뷰 ](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   

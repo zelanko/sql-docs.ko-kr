@@ -1,4 +1,5 @@
 ---
+description: sys. dm_db_column_store_row_group_operational_stats (Transact-sql)
 title: sys. dm_db_column_store_row_group_operational_stats (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -13,11 +14,12 @@ ms.assetid: 31b71c68-50a0-4fd8-a7fe-2d2292be1163
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7cd826eac32d08e4933c1883f6b4cab3706aad2d
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 71b3ec2b02858555a58f2b89f4c2059b697c6f4f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85985122"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447691"
 ---
 # <a name="sysdm_db_column_store_row_group_operational_stats-transact-sql"></a>sys. dm_db_column_store_row_group_operational_stats (Transact-sql)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -40,7 +42,7 @@ ms.locfileid: "85985122"
 |**rowgroup_lock_wait_count**|**bigint**|마지막 SQL 다시 시작 이후 데이터베이스 엔진이이 행 그룹 잠금에서 대기한 누적 횟수입니다.|  
 |**rowgroup_lock_wait_in_ms**|**bigint**|마지막 SQL 다시 시작 이후 데이터베이스 엔진이이 행 그룹 잠금에서 대기한 누적 시간 (밀리초)입니다.|  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  다음 사용 권한이 필요합니다.  
   
 -   Object_id에 지정 된 테이블에 대 한 CONTROL 권한  
@@ -54,14 +56,14 @@ ms.locfileid: "85985122"
  자세한 내용은 [동적 관리 뷰 및 함수 &#40;transact-sql&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)를 참조 하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;동적 관리 뷰 및 함수](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [인덱스 관련 동적 관리 뷰 및 함수 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)   
  [성능 모니터링 및 튜닝](../../relational-databases/performance/monitor-and-tune-for-performance.md)   
  [sys.dm_db_index_physical_stats&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)   
  [dm_db_index_usage_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)   
  [dm_os_latch_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md)   
  [dm_db_partition_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)   
- [allocation_units &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
+ [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
  [sys.indexes&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: sys.internal_tables(Transact-SQL)
 title: sys. internal_tables (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2019
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: a5821c70-f150-4676-8476-3a31f7403dca
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 58e6166060c5e2099051403361b2eb2c51ad4c18
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 73be0af1fd81cfc415417ff2ff233bbfa5e6ca41
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898912"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447940"
 ---
 # <a name="sysinternal_tables-transact-sql"></a>sys.internal_tables(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +44,7 @@ ms.locfileid: "85898912"
 |**parent_id**|**int**|부모의 ID입니다(스키마 범위 여부에 관계없이). 부모가 없는 경우 0입니다.<br /><br /> **queue_messages**  =  큐의 **object_id**<br /><br /> **xml_index_nodes**  =  xml 인덱스의 **object_id**<br /><br /> **fulltext_catalog_freelist**  =  전체 텍스트 카탈로그의 **fulltext_catalog_id**<br /><br /> **fulltext_index_map**  =  전체 텍스트 인덱스의 **object_id** 입니다.<br /><br /> **query_notification**또는 **service_broker_map** = 0<br /><br /> **extended_indexes**  =  공간 인덱스와 같은 확장 된 인덱스의 **object_id**<br /><br /> 테이블 추적을 사용 하도록 설정 된 테이블의 **object_id** = **change_tracking**|  
 |**parent_minor_id**|**int**|부모의 보조 ID입니다.<br /><br /> **xml_index_nodes**  =  XML 인덱스의 **index_id**<br /><br /> **extended_indexes**  =  공간 인덱스와 같은 확장 된 인덱스의 **index_id**<br /><br /> 0 = **queue_messages**, **fulltext_catalog_freelist**, **fulltext_index_map**, **query_notification**, **service_broker_map**또는 **change_tracking**|  
 |**lob_data_space_id**|**int**|0이 아닌 값은 이 테이블의 LOB(Large Object) 데이터를 보관하는 데이터 공간(파일 그룹 또는 파티션 구성표)의 ID입니다.|  
-|**filestream_data_space_id**|**int**|다음에 사용하도록 예약됩니다.|  
+|**filestream_data_space_id**|**int**|나중에 사용하기 위해 예약되어 있습니다.|  
   
 ## <a name="permissions"></a>사용 권한  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
@@ -57,7 +58,7 @@ ms.locfileid: "85898912"
   
 -   XML 인덱스, 공간 인덱스 및 전체 텍스트 인덱스의 내부 테이블에 사용 되는 페이지는 **index_size** 열에 포함 됩니다. 테이블이 나 인덱싱된 뷰 이름을 지정 하면 해당 개체에 대 한 XML 인덱스, 공간 인덱스 및 전체 텍스트 인덱스에 대 한 페이지가 **예약** 된 열 및 **index_size**에 포함 됩니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 카탈로그 뷰를 사용하여 내부 테이블 메타데이터를 쿼리하는 방법을 보여 줍니다.  
   
 ### <a name="a-show-internal-tables-that-inherit-columns-from-the-sysobjects-catalog-view"></a>A. sys.objects 카탈로그 뷰에서 열을 상속하는 내부 테이블 표시  
@@ -174,7 +175,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;카탈로그 뷰](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [개체 카탈로그 뷰 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)  
   
   

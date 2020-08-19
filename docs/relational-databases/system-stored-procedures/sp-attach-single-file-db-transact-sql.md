@@ -1,4 +1,5 @@
 ---
+description: sp_attach_single_file_db(Transact-SQL)
 title: sp_attach_single_file_db (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 13bd1044-9497-4293-8390-1f12e6b8e952
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 87c001dbb7d6f43004e60b0e3b30415361caa866
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: bbaa3da6832ba3a7ec5bad2fc8eb2988f9984470
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85874476"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447379"
 ---
 # <a name="sp_attach_single_file_db-transact-sql"></a>sp_attach_single_file_db(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85874476"
   데이터 파일이 한 개만 있는 데이터베이스를 현재 서버에 연결합니다. **sp_attach_single_file_db** 는 여러 데이터 파일과 함께 사용할 수 없습니다.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]대신 CREATE DATABASE *database_name* 를 사용 하 여 연결 하는 것이 좋습니다. 자세한 내용은 [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)를 참조하세요. 복제 데이터베이스에는 이 프로시저를 사용하지 마십시오.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 대신 CREATE DATABASE *database_name* 를 사용 하 여 연결 하는 것이 좋습니다. 자세한 내용은 [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)를 참조하세요. 복제 데이터베이스에는 이 프로시저를 사용하지 마십시오.  
   
 > [!IMPORTANT]  
 >  알 수 없거나 신뢰할 수 없는 출처의 데이터베이스는 연결 또는 복원하지 않는 것이 좋습니다. 이러한 데이터베이스에 포함된 악성 코드가 의도하지 않은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드를 실행하거나 스키마 또는 물리적 데이터베이스 구조를 수정하여 오류가 발생할 수 있습니다. 알 수 없거나 신뢰할 수 없는 소스의 데이터베이스를 사용하기 전에 비프로덕션 서버의 데이터베이스에서 [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) 를 실행하여 데이터베이스에서 코드(예: 저장 프로시저 또는 다른 사용자 정의 코드)를 시험해 보세요.  
@@ -46,9 +47,9 @@ sp_attach_single_file_db [ @dbname= ] 'dbname'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @dbname = ] 'dbname'`서버에 연결할 데이터베이스의 이름입니다. 이름은 고유해야 합니다. *dbname* 은 **sysname**이며 기본값은 NULL입니다.  
+`[ @dbname = ] 'dbname'` 서버에 연결할 데이터베이스의 이름입니다. 이름은 고유해야 합니다. *dbname* 은 **sysname**이며 기본값은 NULL입니다.  
   
-`[ @physname = ] 'physical_name'`경로를 포함 한 데이터베이스 파일의 물리적 이름입니다. *physical_name* 은 **nvarchar (260)** 이며 기본값은 NULL입니다.  
+`[ @physname = ] 'physical_name'` 경로를 포함 한 데이터베이스 파일의 물리적 이름입니다. *physical_name* 은 **nvarchar (260)** 이며 기본값은 NULL입니다.  
   
 > [!NOTE]  
 >  이 인수는 CREATE DATABASE 문의 FILENAME 매개 변수에 매핑됩니다. 자세한 내용은 [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)를 참조하세요.  
@@ -74,7 +75,7 @@ sp_attach_single_file_db [ @dbname= ] 'dbname'
 ## <a name="permissions"></a>사용 권한  
  데이터베이스가 연결 될 때 사용 권한이 처리 되는 방법에 대 한 자세한 내용은 [CREATE database &#40;SQL Server transact-sql&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)를 참조 하세요.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]를 분리한 다음 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]의 파일 하나를 현재 서버에 연결합니다.  
   
 ```  

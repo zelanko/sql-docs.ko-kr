@@ -1,4 +1,5 @@
 ---
+description: sp_execute_remote(Azure SQL Database)
 title: sp_execute_remote (Azure SQL Database) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/01/2017
@@ -15,12 +16,12 @@ ms.assetid: ca89aa4c-c4c1-4c46-8515-a6754667b3e5
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 9d257f5b52c6dfea82868b69570f2655675bb7ca
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1642baedb44cc6eab4474616d03abd2f429f4276
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720285"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447165"
 ---
 # <a name="sp_execute_remote-azure-sql-database"></a>sp_execute_remote(Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -50,7 +51,7 @@ sp_execute_remote [ @data_source_name = ] datasourcename
  문이나 일괄 처리를 포함 하는 유니코드 문자열입니다 [!INCLUDE[tsql](../../includes/tsql-md.md)] . \@stmt는 유니코드 상수 또는 유니코드 변수 여야 합니다. + 연산자로 두 문자열을 연결한 식처럼 더 복잡한 유니코드 식은 사용할 수 없습니다. 문자 상수도 사용할 수 없습니다. 유니코드 상수를 지정 하는 경우에는 접두사 **N**을 접두사로 사용 해야 합니다. 예를 들어 유니코드 상수 **N ' sp_who '** 는 올바르지만 **' sp_who '** 문자 상수는 유효 하지 않습니다. 문자열의 크기는 사용 가능한 데이터베이스 서버 메모리의 용량에 따라서만 제한됩니다. 64 비트 서버에서 문자열 크기는 최대 **nvarchar (max)** 크기인 2gb로 제한 됩니다.  
   
 > [!NOTE]  
->  \@stmt는 변수 이름과 같은 형식의 매개 변수를 포함할 수 있습니다. 예를 들면 다음과 같습니다.`N'SELECT * FROM HumanResources.Employee WHERE EmployeeID = @IDParameter'`  
+>  \@stmt는 변수 이름과 같은 형식의 매개 변수를 포함할 수 있습니다. 예를 들면 다음과 같습니다. `N'SELECT * FROM HumanResources.Employee WHERE EmployeeID = @IDParameter'`  
   
  Stmt에 포함 된 각 매개 변수에는 \@ \@ params 매개 변수 정의 목록과 매개 변수 값 목록 모두에 해당 하는 항목이 있어야 합니다.  
   
@@ -58,7 +59,7 @@ sp_execute_remote [ @data_source_name = ] datasourcename
  Stmt에 포함 된 모든 매개 변수의 정의를 포함 하는 하나의 문자열입니다 \@ . 문자열은 유니코드 상수 또는 유니코드 변수 여야 합니다. 각 매개 변수의 정의는 매개 변수 이름과 데이터 형식으로 구성됩니다. *n* 은 추가 매개 변수 정의를 나타내는 자리 표시자입니다. Stmtmust에 지정 된 모든 매개 변수는 \@ params에 정의 되어 \@ 있습니다. [!INCLUDE[tsql](../../includes/tsql-md.md)]Stmt의 문 또는 일괄 처리에 \@ 매개 변수가 없는 경우 \@ params가 필요 하지 않습니다. 이 매개 변수의 기본값은 NULL입니다.  
   
  [ \@ param1 =] '*value1*'  
- 매개 변수 문자열에 정의된 첫 번째 매개 변수의 값입니다. 값은 유니코드 상수 또는 유니코드 변수가 될 수 있습니다. Stmt에 포함 된 모든 매개 변수에 대해 제공 되는 매개 변수 값이 있어야 합니다 \@ . [!INCLUDE[tsql](../../includes/tsql-md.md)]Stmt의 문 또는 일괄 처리에 매개 변수가 없는 경우에는 값이 필요 하지 않습니다 \@ .  
+ 매개 변수 문자열에 정의된 첫 번째 매개 변수의 값입니다. 값은 유니코드 상수 또는 유니코드 변수가 될 수 있습니다. Stmt에 포함 된 모든 매개 변수에 대해 제공 되는 매개 변수 값이 있어야 합니다 \@ . [!INCLUDE[tsql](../../includes/tsql-md.md)] Stmt의 문 또는 일괄 처리에 매개 변수가 없는 경우에는 값이 필요 하지 않습니다 \@ .  
   
  *n*  
  추가 매개 변수의 값에 대한 자리 표시자입니다. 값은 상수 또는 변수만 가능합니다. 함수 또는 연산자를 사용하여 작성한 식처럼 더 복잡한 식은 값으로 사용할 수 없습니다.  
@@ -73,11 +74,11 @@ sp_execute_remote [ @data_source_name = ] datasourcename
  `ALTER ANY EXTERNAL DATA SOURCE` 권한이 필요합니다.  
   
 ## <a name="remarks"></a>설명  
- `sp_execute_remote`위의 구문 섹션에 설명 된 대로 매개 변수를 특정 순서로 입력 해야 합니다. 매개 변수 순서가 잘못되면 오류 메시지가 나타납니다.  
+ `sp_execute_remote` 위의 구문 섹션에 설명 된 대로 매개 변수를 특정 순서로 입력 해야 합니다. 매개 변수 순서가 잘못되면 오류 메시지가 나타납니다.  
   
- `sp_execute_remote`는 일괄 처리 및 이름 범위와 관련 하 여 [&#40;transact-sql&#41;를 실행](../../t-sql/language-elements/execute-transact-sql.md) 하는 것과 동일한 동작을 수행 합니다. Sp_execute_remote * \@ stmt* 매개 변수의 transact-sql 문이나 일괄 처리는 sp_execute_remote 문을 실행할 때까지 컴파일되지 않습니다.  
+ `sp_execute_remote` 는 일괄 처리 및 이름 범위와 관련 하 여 [&#40;transact-sql&#41;를 실행 ](../../t-sql/language-elements/execute-transact-sql.md) 하는 것과 동일한 동작을 수행 합니다. Sp_execute_remote * \@ stmt* 매개 변수의 transact-sql 문이나 일괄 처리는 sp_execute_remote 문을 실행할 때까지 컴파일되지 않습니다.  
   
- `sp_execute_remote`행을 생성 한 원격 데이터베이스의 이름을 포함 하는 ' $ShardName ' 이라는 결과 집합에 추가 열을 추가 합니다.  
+ `sp_execute_remote` 행을 생성 한 원격 데이터베이스의 이름을 포함 하는 ' $ShardName ' 이라는 결과 집합에 추가 열을 추가 합니다.  
   
  `sp_execute_remote`[sp_executesql &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-executesql-transact-sql.md)와 유사 하 게 사용할 수 있습니다.  
   

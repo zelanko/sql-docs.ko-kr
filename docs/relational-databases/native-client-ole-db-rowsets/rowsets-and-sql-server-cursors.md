@@ -1,4 +1,5 @@
 ---
+description: 행 집합 및 SQL Server 커서 (Native Client OLE DB 공급자)
 title: 행 집합 및 SQL Server 커서 (Native Client OLE DB 공급자)
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ ms.assetid: 26a11e26-2a3a-451e-8f78-fba51e330ecb
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1829d375ad8a870f1d2d24a40bfd26f6e790e261
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 71c5f372ef0a985aaba3016eee398bb7183dcbb6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246840"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448371"
 ---
 # <a name="rowsets-and-sql-server-cursors-native-client-ole-db-provider"></a>행 집합 및 SQL Server 커서 (Native Client OLE DB 공급자)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -144,7 +145,7 @@ ms.locfileid: "87246840"
   
  특정 행 집합 속성 집합의 경우 선택되는 커서 모델은 다음과 같이 결정됩니다.  
   
- 지정한 행 집합 속성 컬렉션에서 앞의 표에 나열된 속성의 하위 집합을 가져옵니다. 각 행 집합 속성의 플래그 값(필수(T, F) 또는 옵션(-))에 따라 이러한 속성을 두 개의 하위 그룹으로 나눕니다. 각 커서 모델에 대해 첫 번째 테이블에서 시작 하 여 왼쪽에서 오른쪽으로 이동 합니다. 두 하위 그룹의 속성 값을 해당 열의 해당 속성 값과 비교 합니다. 필수 속성과 불일치하는 항목이 없고 옵션 속성과 불일치하는 항목 수가 최소인 커서 모델이 선택됩니다. 커서 모델이 두 개 이상 있으면 가장 왼쪽의 항목이 선택됩니다.  
+ 지정한 행 집합 속성 컬렉션에서 앞의 표에 나열된 속성의 하위 집합을 가져옵니다. 각 행 집합 속성의 플래그 값(필수(T, F) 또는 옵션(-))에 따라 이러한 속성을 두 개의 하위 그룹으로 나눕니다. 각 커서 모델에 대해 첫 번째 테이블에서 시작하여 왼쪽에서 오른쪽으로 이동합니다. 두 하위 그룹의 속성 값을 해당 열의 해당 속성 값과 비교합니다. 필수 속성과 불일치하는 항목이 없고 옵션 속성과 불일치하는 항목 수가 최소인 커서 모델이 선택됩니다. 커서 모델이 두 개 이상 있으면 가장 왼쪽의 항목이 선택됩니다.  
   
 ## <a name="sql-server-cursor-block-size"></a>SQL Server 커서 블록 크기  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]커서가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 행 집합을 지 원하는 경우 **IRowset:: GetNextRows** 또는 **IRowsetLocate:: GetRowsAt** 메서드의 행 핸들 배열 매개 변수에 있는 요소의 수는 커서 블록 크기를 정의 합니다. 배열의 핸들로 표시된 행이 커서 블록의 멤버입니다.  

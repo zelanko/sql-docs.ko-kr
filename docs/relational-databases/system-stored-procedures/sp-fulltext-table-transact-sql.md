@@ -1,4 +1,5 @@
 ---
+description: sp_fulltext_table(Transact-SQL)
 title: sp_fulltext_table (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -18,12 +19,12 @@ ms.assetid: a765f311-07fc-4af3-b74c-e9a027fbecce
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a906f17e655775308d72d04ed8917ca67b205b6a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 283fdb387e60eeed95cc33dc89711631f2465380
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833237"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447135"
 ---
 # <a name="sp_fulltext_table-transact-sql"></a>sp_fulltext_table(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -49,15 +50,15 @@ sp_fulltext_table
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @tabname = ] 'qualified_table_name'`는 한 부분 또는 두 부분으로 구성 된 테이블 이름입니다. 테이블은 반드시 현재 데이터베이스에 있어야 합니다. *qualified_table_name* 은 **nvarchar (517)** 이며 기본값은 없습니다.  
+`[ @tabname = ] 'qualified_table_name'` 는 한 부분 또는 두 부분으로 구성 된 테이블 이름입니다. 테이블은 반드시 현재 데이터베이스에 있어야 합니다. *qualified_table_name* 은 **nvarchar (517)** 이며 기본값은 없습니다.  
   
-`[ @action = ] 'action'`수행할 동작입니다. *action* 은 **nvarchar (50)** 이며 기본값은 없고 다음 값 중 하나일 수 있습니다.  
+`[ @action = ] 'action'` 수행할 동작입니다. *action* 은 **nvarchar (50)** 이며 기본값은 없고 다음 값 중 하나일 수 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**만들기**|*Qualified_table_name* 에서 참조 하는 테이블의 전체 텍스트 인덱스에 대 한 메타 데이터를 만들고이 테이블의 전체 텍스트 인덱스 데이터가 *fulltext_catalog_name*에 있어야 함을 지정 합니다. 또한이 작업은 *unique_index_name* 를 전체 텍스트 키 열로 사용 하도록 지정 합니다. 이 고유한 인덱스는 반드시 이미 존재해야 하며, 테이블의 한 열에서 정의되어야 합니다.<br /><br /> 전체 텍스트 카탈로그가 채워질 때까지는 해당 테이블에 대해 전체 텍스트 검색을 수행할 수 없습니다.|  
 |**그림자**|*Qualified_table_name*에 대 한 전체 텍스트 인덱스에 대 한 메타 데이터를 삭제 합니다. 전체 텍스트 인덱스가 활성화된 경우에는 삭제되기 전에 자동으로 비활성화됩니다. 전체 텍스트 인덱스를 삭제하기 전에 열을 제거할 필요는 없습니다.|  
-|**제품**|는 비활성화 된 후 *qualified_table_name*에 대해 전체 텍스트 인덱스 데이터를 수집 하는 기능을 활성화 합니다. 활성화되기 전에 전체 텍스트 인덱스에 참여하는 열이 적어도 하나 이상 있어야 합니다.<br /><br /> 전체 텍스트 인덱스는 인덱스에 첫 번째 열이 추가된 직후 채우기가 자동으로 활성화됩니다. 마지막 열이 인덱스에서 삭제되면 해당 인덱스는 비활성화됩니다. 변경 내용 추적이 진행 중인 경우 비활성화된 인덱스를 활성화하면 채우기가 새로 시작됩니다.<br /><br /> 이는 실제로 전체 텍스트 인덱스를 채우지는 않지만 파일 시스템의 전체 텍스트 카탈로그에 테이블을 등록 하기만 하면 다음 전체 텍스트 인덱스를 채울 때 *qualified_table_name* 의 행을 검색할 수 있습니다.|  
+|**활성화**|는 비활성화 된 후 *qualified_table_name*에 대해 전체 텍스트 인덱스 데이터를 수집 하는 기능을 활성화 합니다. 활성화되기 전에 전체 텍스트 인덱스에 참여하는 열이 적어도 하나 이상 있어야 합니다.<br /><br /> 전체 텍스트 인덱스는 인덱스에 첫 번째 열이 추가된 직후 채우기가 자동으로 활성화됩니다. 마지막 열이 인덱스에서 삭제되면 해당 인덱스는 비활성화됩니다. 변경 내용 추적이 진행 중인 경우 비활성화된 인덱스를 활성화하면 채우기가 새로 시작됩니다.<br /><br /> 이는 실제로 전체 텍스트 인덱스를 채우지는 않지만 파일 시스템의 전체 텍스트 카탈로그에 테이블을 등록 하기만 하면 다음 전체 텍스트 인덱스를 채울 때 *qualified_table_name* 의 행을 검색할 수 있습니다.|  
 |**Deactivate**|*Qualified_table_name*에 대해 전체 텍스트 인덱스 데이터를 더 이상 수집할 수 없도록 *qualified_table_name* 에 대 한 전체 텍스트 인덱스를 비활성화 합니다. 그러나 전체 텍스트 인덱스 메타데이터는 남아 있으며 테이블을 다시 활성화할 수 있습니다.<br /><br /> 변경 내용 추적이 진행 중인 경우 활성화된 인덱스를 비활성화하면 인덱스의 상태가 고정됩니다. 즉, 진행 중인 채우기가 모두 중지되고 변경 내용이 인덱스에 더 이상 전파되지 않습니다.|  
 |**start_change_tracking**|전체 텍스트 인덱스의 증분 채우기를 시작합니다. 테이블에 타임스탬프가 없는 경우에는 전체 텍스트 인덱스의 전체 채우기를 시작합니다. 테이블의 변경 내용 추적을 시작합니다.<br /><br /> 전체 텍스트 변경 내용 추적은 **image**, **text**또는 **ntext**형식의 전체 텍스트 인덱싱된 열에서 수행 되는 WRITETEXT 또는 UPDATETEXT 작업을 추적 하지 않습니다.|  
 |**stop_change_tracking**|테이블의 변경 내용 추적을 중단합니다.|  
@@ -90,7 +91,7 @@ sp_fulltext_table
 ## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할, **db_owner** 및 **db_ddladmin** 고정 데이터베이스 역할의 멤버 또는 전체 텍스트 카탈로그에 대 한 참조 권한이 있는 사용자만 **sp_fulltext_table**을 실행할 수 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-enabling-a-table-for-full-text-indexing"></a>A. 테이블을 전체 텍스트 인덱싱에 사용  
  다음 예에서는 `Document` 데이터베이스의 `AdventureWorks` 테이블에 대한 전체 텍스트 인덱스 메타데이터를 만듭니다. `Cat_Desc`는 전체 텍스트 카탈로그이고, `PK_Document_DocumentID`는 `Document`의 고유한 단일 열 인덱스입니다.  
@@ -128,12 +129,12 @@ GO
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [INDEXPROPERTY &#40;Transact-sql&#41;](../../t-sql/functions/indexproperty-transact-sql.md)   
- [OBJECTPROPERTY &#40;Transact-sql&#41;](../../t-sql/functions/objectproperty-transact-sql.md)   
+ [INDEXPROPERTY&#40;Transact-SQL&#41;](../../t-sql/functions/indexproperty-transact-sql.md)   
+ [OBJECTPROPERTY&#40;Transact-SQL&#41;](../../t-sql/functions/objectproperty-transact-sql.md)   
  [Transact-sql&#41;sp_help_fulltext_tables &#40;](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-transact-sql.md)   
  [Transact-sql&#41;sp_help_fulltext_tables_cursor &#40;](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-cursor-transact-sql.md)   
  [Transact-sql&#41;sp_helpindex &#40;](../../relational-databases/system-stored-procedures/sp-helpindex-transact-sql.md)   
- [Transact-sql&#41;&#40;시스템 저장 프로시저](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Transact-sql&#41;&#40;전체 텍스트 검색 및 의미 체계 검색 저장 프로시저](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)  
+ [Transact-sql&#41;&#40;시스템 저장 프로시저 ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;전체 텍스트 검색 및 의미 체계 검색 저장 프로시저 ](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)  
   
   

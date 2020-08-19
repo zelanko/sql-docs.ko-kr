@@ -1,4 +1,5 @@
 ---
+description: sys.routes(Transact-SQL)
 title: sys. 경로 (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/07/2018
@@ -20,12 +21,12 @@ ms.assetid: 8fc65915-8bd6-425b-95d9-6a8468cb1e48
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: b15dc8ebf9bbe9616ada47627a638b7d34d7c278
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 1ed6da90c7cfaa198e22d91d17be2ca88fc8457f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87862922"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447809"
 ---
 # <a name="sysroutes-transact-sql"></a>sys.routes(Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]

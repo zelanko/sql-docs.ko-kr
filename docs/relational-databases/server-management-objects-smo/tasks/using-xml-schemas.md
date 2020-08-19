@@ -1,4 +1,5 @@
 ---
+description: XML 스키마 사용
 title: XML 스키마 사용 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/11/2019
@@ -13,11 +14,12 @@ ms.assetid: 9d04de01-efeb-4b2d-8c28-3234bc7ff2f3
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e9871e067bd0d44f16f95799fad86e02e05bd3c7
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: fee01522731e38eeb830e08dd162901cf08efbb4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003098"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448042"
 ---
 # <a name="using-xml-schemas"></a>XML 스키마 사용
 

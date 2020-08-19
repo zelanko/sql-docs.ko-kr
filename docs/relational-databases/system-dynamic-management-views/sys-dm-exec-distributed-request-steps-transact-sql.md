@@ -1,4 +1,5 @@
 ---
+description: sys. dm_exec_distributed_request_steps (Transact-sql)
 title: sys. dm_exec_distributed_request_steps (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -22,19 +23,19 @@ ms.assetid: 1954541d-b716-4e03-8fcc-7022f428e01d
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2e5b2dcf0cf62d9fe6157284409d96bec8f105b4
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 64e2e63c3b2bd7696ec9915b21e726a82bce7b07
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833775"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447540"
 ---
 # <a name="sysdm_exec_distributed_request_steps-transact-sql"></a>sys. dm_exec_distributed_request_steps (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   지정 된 PolyBase 요청 또는 쿼리를 구성 하는 모든 단계에 대 한 정보를 저장 합니다. 쿼리 단계 별로 하나의 행을 나열 합니다.  
   
-|열 이름|데이터 형식|설명|범위|  
+|열 이름|데이터 형식|Description|범위|  
 |-----------------|---------------|-----------------|-----------|  
 |execution_id|**int**|execution_id 및 step_index이 보기에 대 한 키를 구성 합니다. 요청과 연결 된 고유 숫자 id입니다.|[Transact-sql&#41;dm_exec_requests &#40;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)ID를 참조 하십시오.|  
 |step_index|**int**|요청을 구성 하는 단계 시퀀스에서이 단계를 수행 하는 위치입니다.|n 단계가 포함 된 요청의 경우 0 ~ (n-1)입니다.|  
@@ -51,7 +52,7 @@ ms.locfileid: "82833775"
   
 ## <a name="see-also"></a>참고 항목  
  [동적 관리 뷰를 사용한 PolyBase 문제 해결](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
- [Transact-sql&#41;&#40;동적 관리 뷰 및 함수](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Transact-sql&#41;&#40;데이터베이스 관련 동적 관리 뷰](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
+ [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Transact-sql&#41;&#40;데이터베이스 관련 동적 관리 뷰 ](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: sys. dm_pdw_exec_requests (Transact-sql)
 title: sys. dm_pdw_exec_requests (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/05/2019
@@ -12,12 +13,12 @@ ms.assetid: 390225cc-23e8-4051-a5f6-221e33e4c0b4
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: a377c33424ae589fa796b6f382e936426ead006d
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: 2892e881434cad1fca2686b6522938584b221045
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86197071"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447473"
 ---
 # <a name="sysdm_pdw_exec_requests-transact-sql"></a>sys. dm_pdw_exec_requests (Transact-sql)
 
@@ -25,7 +26,7 @@ ms.locfileid: "86197071"
 
   현재 또는 최근에 활성 상태인 모든 요청에 대 한 정보를 저장 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 합니다. 요청/쿼리 당 한 개의 행을 나열 합니다.  
   
-|열 이름|데이터 형식|설명|범위|  
+|열 이름|데이터 형식|Description|범위|  
 |-----------------|---------------|-----------------|-----------|  
 |request_id|**nvarchar(32)**|이 보기의 키입니다. 요청과 연결 된 고유 숫자 ID입니다.|시스템의 모든 요청에 대해 고유 합니다.|  
 |session_id|**nvarchar(32)**|이 쿼리가 실행 된 세션과 연결 된 고유 숫자 ID입니다. [Dm_pdw_exec_sessions &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md)을 참조 하십시오.||  
@@ -65,7 +66,7 @@ ms.locfileid: "86197071"
 |-**0x40** (**-64**)|예상 결과 집합 >크기가 10GB로 설정 되어 결과 집합 캐싱이 사용 하지 않도록 설정 되었습니다.|  
 |-**0x80** (**-128**)|결과 집합에 크기가 큰 행 (>64kb)이 포함 되어 있으므로 결과 집합 캐싱이 사용 되지 않습니다.|  
   
-## <a name="permissions"></a>권한
+## <a name="permissions"></a>사용 권한
 
  VIEW SERVER STATE 권한이 필요합니다.  
   
@@ -76,6 +77,6 @@ ms.locfileid: "86197071"
 >[!WARNING]  
 >공격자는 보기 서버 상태 권한만 있고 데이터베이스 관련 사용 권한을가지고 있지 않기 때문에 특정 데이터베이스 개체에 대 한 정보를 검색 하는 데 dm_pdw_exec_requests를 사용할 수 있습니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목
 
- [Transact-sql&#41;&#40;SQL Data Warehouse 및 병렬 데이터 웨어하우스 동적 관리 뷰](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)
+ [Transact-sql&#41;&#40;SQL Data Warehouse 및 병렬 데이터 웨어하우스 동적 관리 뷰 ](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)

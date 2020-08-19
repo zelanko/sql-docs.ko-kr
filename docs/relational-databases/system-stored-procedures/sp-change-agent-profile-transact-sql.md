@@ -1,4 +1,5 @@
 ---
+description: sp_change_agent_profile(Transact-SQL)
 title: sp_change_agent_profile (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e73acf8d-0be8-4197-ba11-fe798d0e2820
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b0084338c2629b8ffeb208edc5ac7532105e1271
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 752cbdcb0e1908ace200ae769e7c42d85ad6d044
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715945"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447374"
 ---
 # <a name="sp_change_agent_profile-transact-sql"></a>sp_change_agent_profile(Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -39,17 +40,17 @@ sp_change_agent_profile [ @profile_id = ] profile_id
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @profile_id = ] profile_id`프로필의 ID입니다. *profile_id* 는 **int**이며 기본값은 없습니다.  
+`[ @profile_id = ] profile_id` 프로필의 ID입니다. *profile_id* 는 **int**이며 기본값은 없습니다.  
   
-`[ @property = ] 'property'`속성의 이름입니다. *속성* 은 **sysname**이며 기본값은 없습니다.  
+`[ @property = ] 'property'` 속성의 이름입니다. *속성* 은 **sysname**이며 기본값은 없습니다.  
   
-`[ @value = ] 'value'`속성의 새 값입니다. *value* 는 **nvarchar (3000)** 이며 기본값은 없습니다.  
+`[ @value = ] 'value'` 속성의 새 값입니다. *value* 는 **nvarchar (3000)** 이며 기본값은 없습니다.  
   
  이 표에서는 변경할 수 있는 프로필 속성에 대해 설명합니다.  
   
 |속성|설명|  
 |--------------|-----------------|  
-|**한**|프로필에 관한 설명입니다.|  
+|**description**|프로필에 관한 설명입니다.|  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

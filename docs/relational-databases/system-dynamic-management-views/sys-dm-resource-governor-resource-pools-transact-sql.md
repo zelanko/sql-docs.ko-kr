@@ -1,4 +1,5 @@
 ---
+description: sys.dm_resource_governor_resource_pools(Transact-SQL)
 title: sys. dm_resource_governor_resource_pools (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/24/2018
@@ -20,12 +21,12 @@ ms.assetid: 9bfc926e-d8bc-40f8-9229-ab1f8a1e69c5
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c4bf49fd0d828bd4f287431f2b95c47e07315448
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: f19c80cd75788a2bc0f5bad73e0eb0098f9a8315
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396728"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447546"
 ---
 # <a name="sysdm_resource_governor_resource_pools-transact-sql"></a>sys.dm_resource_governor_resource_pools(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -76,7 +77,7 @@ ms.locfileid: "87396728"
 |write_io_stall_queued_ms|**bigint**|**적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상<br /><br /> 쓰기 IO 도착과 완료 사이의 총 시간(밀리초)입니다. Null을 허용합니다. 리소스 풀에서 IO가 관리되지 않으면 Null입니다. 즉, 리소스 풀의 MIN_IOPS_PER_VOLUME 및 MAX_IOPS_PER_VOLUME 설정이 0입니다.<br /><br /> IO 리소스 관리로 인해 발생한 지연 시간입니다.|  
 |io_issue_violations_total|**int**|**적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상<br /><br /> 총 IO 실행 위반 수입니다. 즉, IO 실행 속도가 예약된 속도보다 낮았던 횟수입니다. Null을 허용합니다. 리소스 풀에서 IO가 관리되지 않으면 Null입니다. 즉, 리소스 풀의 MIN_IOPS_PER_VOLUME 및 MAX_IOPS_PER_VOLUME 설정이 0입니다.|  
 |io_issue_delay_total_ms|**bigint**|**적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상<br /><br /> 예약된 IO 실행과 실제 IO 실행 사이의 총 시간(밀리초)입니다. Null을 허용합니다. 리소스 풀에서 IO가 관리되지 않으면 Null입니다. 즉, 리소스 풀의 MIN_IOPS_PER_VOLUME 및 MAX_IOPS_PER_VOLUME 설정이 0입니다.|  
-|pdw_node_id|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포가 설정 된 노드의 식별자입니다.|  
+|pdw_node_id|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포가 설정 된 노드의 식별자입니다.|  
   
 ## <a name="remarks"></a>설명  
  리소스 관리자 작업 그룹 및 리소스 관리자 리소스 풀에는 다 대 일 매핑이 있습니다. 따라서 리소스 풀 통계의 대부분은 작업 그룹 통계에서 파생됩니다.  
@@ -86,7 +87,7 @@ ms.locfileid: "87396728"
 ## <a name="permissions"></a>사용 권한  
  VIEW SERVER STATE 권한이 필요합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [dm_resource_governor_workload_groups &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md)   
  [resource_governor_resource_pools &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-resource-pools-transact-sql.md)   

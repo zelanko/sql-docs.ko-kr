@@ -1,4 +1,5 @@
 ---
+description: sp_link_publication(Transact-SQL)
 title: sp_link_publication (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1945ed24-f9f1-4af6-94ca-16d8e864706e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9c3c414507b0dfe58cc4b13bc18c992e3a46bea9
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c1df8b2f62ce305b89b061526415c73e07a18511
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899414"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446959"
 ---
 # <a name="sp_link_publication-transact-sql"></a>sp_link_publication(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,25 +50,25 @@ sp_link_publication [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @publisher = ] 'publisher'`연결할 게시자의 이름입니다. *publisher* 는 **sysname**이며 기본값은 없습니다.  
+`[ @publisher = ] 'publisher'` 연결할 게시자의 이름입니다. *publisher* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @publisher_db = ] 'publisher_db'`연결할 게시자 데이터베이스의 이름입니다. *publisher_db* 는 **sysname**이며 기본값은 없습니다.  
+`[ @publisher_db = ] 'publisher_db'` 연결할 게시자 데이터베이스의 이름입니다. *publisher_db* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @publication = ] 'publication'`연결할 게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 없습니다.  
+`[ @publication = ] 'publication'` 연결할 게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @security_mode = ] security_mode`즉시 업데이트를 위해 구독자가 원격 게시자에 연결 하는 데 사용 하는 보안 모드입니다. *security_mode* 은 **int**이며 다음 값 중 하나일 수 있습니다. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+`[ @security_mode = ] security_mode` 즉시 업데이트를 위해 구독자가 원격 게시자에 연결 하는 데 사용 하는 보안 모드입니다. *security_mode* 은 **int**이며 다음 값 중 하나일 수 있습니다. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**0**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서이 저장 프로시저에 지정 된 로그인과 *암호*를 *login* 사용 하 여 인증을 사용 합니다.<br /><br /> 참고: 이전 버전의에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이 옵션은 동적 RPC (원격 프로시저 호출)를 지정 하는 데 사용 되었습니다.|  
 |**1**|구독자에서 변경하는 사용자의 보안 컨텍스트([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증 또는 Windows 인증)를 사용합니다.<br /><br /> 참고:이 계정은 권한이 있는 게시자에도 있어야 합니다. Windows 인증을 사용할 때는 보안 계정 위임이 지원되어야 합니다.|  
 |**2**|**Sp_link_publication**를 사용 하 여 만든 기존의 사용자 정의 연결 된 서버 로그인을 사용 합니다.|  
   
-`[ @login = ] 'login'`로그인입니다. *login*은 **sysname**이며 기본값은 NULL입니다. *Security_mode* 가 **0**인 경우이 매개 변수를 지정 해야 합니다.  
+`[ @login = ] 'login'` 로그인입니다. *login*은 **sysname**이며 기본값은 NULL입니다. *Security_mode* 가 **0**인 경우이 매개 변수를 지정 해야 합니다.  
   
-`[ @password = ] 'password'`암호입니다. *password* 는 **sysname**이며 기본값은 NULL입니다. *Security_mode* 가 **0**인 경우이 매개 변수를 지정 해야 합니다.  
+`[ @password = ] 'password'` 암호입니다. *password* 는 **sysname**이며 기본값은 NULL입니다. *Security_mode* 가 **0**인 경우이 매개 변수를 지정 해야 합니다.  
   
-`[ @distributor = ] 'distributor'`배포자의 이름입니다. *배포자* 는 **sysname**이며 기본값은 NULL입니다.  
+`[ @distributor = ] 'distributor'` 배포자의 이름입니다. *배포자* 는 **sysname**이며 기본값은 NULL입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

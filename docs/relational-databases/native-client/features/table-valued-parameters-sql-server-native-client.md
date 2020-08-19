@@ -1,4 +1,5 @@
 ---
+description: 테이블 반환 매개 변수(SQL Server Native Client)
 title: 테이블 반환 매개 변수
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,11 +14,12 @@ ms.assetid: 5ee6bdcd-0309-4a20-b5c2-0e6b6839f34f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b49d1afd2fbac4f10dc8120ba428c6392efb5b60
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: d1877852e7f8b210be10dd1f4a0a9045bbc0cb05
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009888"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448280"
 ---
 # <a name="table-valued-parameters-sql-server-native-client"></a>테이블 반환 매개 변수(SQL Server Native Client)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

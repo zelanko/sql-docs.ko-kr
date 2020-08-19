@@ -1,4 +1,5 @@
 ---
+description: sp_fkeys(Transact-SQL)
 title: sp_fkeys (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/08/2017
@@ -18,12 +19,12 @@ ms.assetid: 18110444-d38d-4cff-90d2-d1fc6236668b
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 18a4a5c25c791122191c07e5bb63a6fc6c32cba0
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: dce5453de0dc41f00e1b6c622397972e635df97e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180063"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447232"
 ---
 # <a name="sp_fkeys-transact-sql"></a>sp_fkeys(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -67,7 +68,7 @@ sp_fkeys [ @pktable_name = ] 'pktable_name'
  외래 키가 있는 테이블 한정자의 이름입니다. *fktable_qualifier* 는 **sysname**이며 기본값은 NULL입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 이 한정자는 데이터베이스 이름을 나타냅니다. 일부 제품에서는 테이블 데이터베이스 환경의 서버 이름을 나타냅니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
- 없음  
+ None  
   
 ## <a name="result-sets"></a>결과 집합  
   
@@ -103,7 +104,7 @@ sp_fkeys 저장 프로시저는 ODBC에서 SQLForeignKeys와 같습니다.
 ## <a name="permissions"></a>사용 권한  
  `SELECT`스키마에 대 한 권한이 필요 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `HumanResources.Department` 데이터베이스의 `AdventureWorks2012` 테이블에 대한 외래 키 목록을 검색합니다.  
   
 ```sql  
@@ -122,7 +123,7 @@ EXEC sp_fkeys @pktable_name = N'DimDate;
   
 ## <a name="see-also"></a>참고 항목  
  [Transact-sql&#41;카탈로그 저장 프로시저 &#40;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
- [Transact-sql&#41;&#40;시스템 저장 프로시저](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;시스템 저장 프로시저 ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Transact-sql&#41;sp_pkeys &#40;](../../relational-databases/system-stored-procedures/sp-pkeys-transact-sql.md)  
   
   

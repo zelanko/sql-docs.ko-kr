@@ -1,4 +1,5 @@
 ---
+description: sp_cursorfetch(Transact-SQL)
 title: sp_cursorfetch (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 14513c5e-5774-4e4c-92e1-75cd6985b6a3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f3729587261ab090548ad93f5a1000f621239557
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 7d68223e7ed12477b446934f01b600b840b6651a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85868953"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447362"
 ---
 # <a name="sp_cursorfetch-transact-sql"></a>sp_cursorfetch(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -55,7 +56,7 @@ sp_cursorfetch cursor
 |0x10|ABSOLUTE|*Rownum* 행부터 *nrows* 행의 버퍼를 인출 합니다.<br /><br /> 참고: FORWARD_ONLY는 한 방향 으로만 스크롤을 지원 하므로 동적 커서 또는 FORWARD_ONLY 커서에 대해 절대값을 사용 하 여 오류 메시지를 반환 합니다.|  
 |0x20|RELATIVE|현재 블록의 첫 번째 행에 있는 행의 *rownum* 값으로 지정 된 행부터 시작 하 여 *nrows* 행의 버퍼를 인출 합니다. 이 경우 *rownum* 은 음수일 수 있습니다.<br /><br /> 참고: FORWARD_ONLY는 한 방향 으로만 스크롤을 지원 하기 때문에 FORWARD_ONLY 커서에 대해 상대를 사용 하면 오류 메시지가 반환 됩니다.|  
 |0x80|REFRESH|기본 테이블의 버퍼를 다시 채웁니다.|  
-|0x100|정보|커서에 대한 정보를 검색합니다. 이 정보는 *rownum* 및 *nrows* 매개 변수를 사용 하 여 반환 됩니다. 따라서 INFO를 지정 하면 *rownum* 및 *nrows* 가 출력 매개 변수가 됩니다.|  
+|0x100|INFO|커서에 대한 정보를 검색합니다. 이 정보는 *rownum* 및 *nrows* 매개 변수를 사용 하 여 반환 됩니다. 따라서 INFO를 지정 하면 *rownum* 및 *nrows* 가 출력 매개 변수가 됩니다.|  
 |0x200|PREV_NOADJUST|PREV와 같이 사용되지만 결과 집합 맨 위가 중간에 나오면 결과가 달라질 수 있습니다.|  
 |0x400|SKIP_UPDT_CNCY|는 정보를 제외 하 고 다른 *fetchtype* 값 중 하 나와 함께 사용 해야 합니다.|  
   
@@ -153,7 +154,7 @@ sp_cursorfetch cursor
   
  커서의 선택 목록에 대한 메타데이터가 TDS 스트림에 반환되도록 요청하려면 RPC RETURN_METADATA 입력 플래그를 1로 설정합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-using-prev-to-change-a-cursor-position"></a>A. PREV를 사용하여 커서 위치 변경  
  h2 커서가 다음과 같은 내용의 결과 집합을 생성하며 현재 위치는 아래와 같다고 가정해 봅니다.  

@@ -1,4 +1,5 @@
 ---
+description: sys. dm_db_column_store_row_group_physical_stats (Transact-sql)
 title: sys. dm_db_column_store_row_group_physical_stats (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/05/2017
@@ -20,11 +21,12 @@ helpviewer_keywords:
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: db8bfa11e87e4a8f595c559444907aef3c3e3e81
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: cabadc5cd42afa7a001d27f55e22c138bb6f9002
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012884"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447700"
 ---
 # <a name="sysdm_db_column_store_row_group_physical_stats-transact-sql"></a>sys. dm_db_column_store_row_group_physical_stats (Transact-sql)
 
@@ -42,7 +44,7 @@ ms.locfileid: "86012884"
 |**row_group_id**|**int**|이 행 그룹의 ID입니다. 분할 된 테이블의 경우 값은 파티션 내에서 고유 합니다.<br /><br /> -메모리 내 꼬리의 경우-1입니다.|  
 |**delta_store_hobt_id**|**bigint**|델타 저장소의 행 그룹에 대 한 hobt_id입니다.<br /><br /> 행 그룹이 델타 저장소에 없는 경우 NULL입니다.<br /><br /> 메모리 내 테이블의 꼬리에 대해 NULL입니다.|  
 |**상태**|**tinyint**|*State_description*연결 된 ID 번호입니다.<br /><br /> 0 = INVISIBLE<br /><br /> 1 = OPEN<br /><br /> 2 = CLOSED<br /><br /> 3 = COMPRESSED<br /><br /> 4 = 삭제 표시<br /><br /> 압축은 메모리 내 테이블에 적용 되는 유일한 상태입니다.|  
-|**state_desc**|**nvarchar(60)**|행 그룹 상태에 대 한 설명입니다.<br /><br /> 0-보이지 않음-작성 중인 행 그룹입니다. 예를 들면 다음과 같습니다. <br />데이터를 압축 하는 동안 columnstore의 행 그룹은 표시 되지 않습니다. 압축이 완료 되 면 메타 데이터 스위치는 columnstore 행 그룹의 상태를 보이지 않음에서 압축 됨으로 변경 하 고 deltastore 행 그룹의 상태를 닫힘에서 삭제 표시로 변경 합니다.<br /><br /> 1-OPEN-새 행을 수락 하는 deltastore 행 그룹입니다. 열린 행 그룹은 columnstore 형식으로 압축되지 않았고 여전히 rowstore 형식입니다.<br /><br /> 2-닫힘-최대 행 수를 포함 하는 델타 저장소의 행 그룹으로, 튜플 이동 기 프로세스가 columnstore로 압축 될 때까지 대기 합니다.<br /><br /> 3-압축-columnstore 압축으로 압축 되 고 columnstore에 저장 되는 행 그룹입니다.<br /><br /> 4-삭제 표시-이전에 deltastore에 있던 행 그룹이 더 이상 사용 되지 않습니다.|  
+|**state_desc**|**nvarchar(60)**|행 그룹 상태에 대 한 설명입니다.<br /><br /> 0-보이지 않음-작성 중인 행 그룹입니다. 예를 들어 다음과 같은 가치를 제공해야 합니다. <br />데이터를 압축 하는 동안 columnstore의 행 그룹은 표시 되지 않습니다. 압축이 완료 되 면 메타 데이터 스위치는 columnstore 행 그룹의 상태를 보이지 않음에서 압축 됨으로 변경 하 고 deltastore 행 그룹의 상태를 닫힘에서 삭제 표시로 변경 합니다.<br /><br /> 1-OPEN-새 행을 수락 하는 deltastore 행 그룹입니다. 열린 행 그룹은 columnstore 형식으로 압축되지 않았고 여전히 rowstore 형식입니다.<br /><br /> 2-닫힘-최대 행 수를 포함 하는 델타 저장소의 행 그룹으로, 튜플 이동 기 프로세스가 columnstore로 압축 될 때까지 대기 합니다.<br /><br /> 3-압축-columnstore 압축으로 압축 되 고 columnstore에 저장 되는 행 그룹입니다.<br /><br /> 4-삭제 표시-이전에 deltastore에 있던 행 그룹이 더 이상 사용 되지 않습니다.|  
 |**total_rows**|**bigint**|행 그룹에 물리적으로 저장 된 행의 수입니다. 압축 된 행 그룹의 경우 삭제 된 것으로 표시 된 행을 포함 합니다.|  
 |**deleted_rows**|**bigint**|삭제되도록 표시된 압축된 행 그룹에 물리적으로 저장된 행의 수입니다.<br /><br /> 델타 저장소에 있는 행 그룹의 경우 0입니다.|  
 |**size_in_bytes**|**bigint**|이 행 그룹에 있는 모든 페이지의 조합 된 크기 (바이트)입니다. 이 크기에는 메타 데이터 또는 공유 사전을 저장 하는 데 필요한 크기가 포함 되지 않습니다.|  
@@ -59,10 +61,10 @@ ms.locfileid: "86012884"
 ## <a name="results"></a>결과  
  현재 데이터베이스의 각 행 그룹 한 개의 행을 반환 합니다.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
 `CONTROL`테이블에 대 한 권한과 `VIEW DATABASE STATE` 데이터베이스에 대 한 사용 권한이 필요 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-calculate-fragmentation-to-decide-when-to-reorganize-or-rebuild-a-columnstore-index"></a>A. 조각화를 계산 하 여 columnstore 인덱스를 다시 구성 하거나 다시 작성 하는 시기를 결정 합니다.  
  Columnstore 인덱스의 경우 삭제 된 행의 비율은 행 그룹의 조각화에 대해 좋은 척도입니다. 조각화가 20% 이상인 경우 삭제 된 행을 제거 합니다. 더 많은 예제는 [인덱스 다시 구성 및 다시 작성](~/relational-databases/indexes/reorganize-and-rebuild-indexes.md)을 참조 하세요.  
@@ -85,11 +87,11 @@ ORDER BY object_name(i.object_id), i.name, row_group_id;
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;개체 카탈로그 뷰](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
- [Transact-sql&#41;&#40;카탈로그 뷰](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)      
+ [개체 카탈로그 뷰 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)      
  [Columnstore 인덱스 아키텍처](../../relational-databases/sql-server-index-design-guide.md#columnstore_index)         
  [SQL Server 시스템 카탈로그 쿼리 FAQ](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
- [&#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
+ [sys.columns&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
  [all_columns &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-all-columns-transact-sql.md)   
  [computed_columns &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-computed-columns-transact-sql.md)  
  [column_store_dictionaries &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-column-store-dictionaries-transact-sql.md)   

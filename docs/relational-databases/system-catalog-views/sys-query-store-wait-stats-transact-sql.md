@@ -1,4 +1,5 @@
 ---
+description: sys. query_store_wait_stats (Transact-sql)
 title: sys. query_store_wait_stats (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/19/2019
@@ -19,12 +20,12 @@ ms.assetid: ccf7a57c-314b-450c-bd34-70749a02784a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5af0f04d9fce1fbcb455590d0e68a79bd98bdd73
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 41f66150a3a5c604889dc29d96abaea6d0418c6f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717621"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447848"
 ---
 # <a name="sysquery_store_wait_stats-transact-sql"></a>sys. query_store_wait_stats (Transact-sql)
 
@@ -46,7 +47,7 @@ ms.locfileid: "85717621"
 |**last_query_wait_time_ms**|**bigint**|집계 간격 및 대기 범주 (밀리초 단위로 보고) 내의 쿼리 계획에 대 한 마지막 대기 기간입니다.|
 |**min_query_wait_time_ms**|**bigint**|`CPU wait`집계 간격 및 대기 범주 (밀리초 단위로 보고) 내의 쿼리 계획에 대 한 최소 시간입니다.|
 |**max_query_wait_time_ms**|**bigint**|`CPU wait`집계 간격 및 대기 범주 (밀리초 단위로 보고) 내의 쿼리 계획에 대 한 최대 시간입니다.|
-|**stdev_query_wait_time_ms**|**float**|`Query wait`집계 간격 및 대기 범주 (밀리초 단위로 보고) 내의 쿼리 계획에 대 한 기간 표준 편차입니다.|
+|**stdev_query_wait_time_ms**|**float**|`Query wait` 집계 간격 및 대기 범주 (밀리초 단위로 보고) 내의 쿼리 계획에 대 한 기간 표준 편차입니다.|
 
 ## <a name="wait-categories-mapping-table"></a>대기 범주 매핑 테이블
 
@@ -70,11 +71,11 @@ ms.locfileid: "85717621"
 |**13**|**Service Broker**|BROKER_% **(BROKER_RECEIVE_WAITFOR 하지 않음)**|
 |**14**|**트랜잭션 로그 IO**|LOGMGR, LOGMGR, LOGMGR_RESERVE_APPEND, LOGMGR_FLUSH, LOGMGR_PMM_LOG, CHKPT, WRITELOG|
 |**15**|**네트워크 IO**|ASYNC_NETWORK_IO, NET_WAITFOR_PACKET, PROXY_NETWORK_IO, EXTERNAL_SCRIPT_NETWORK_IOF|
-|**16**|**병렬로**|CXPACKET, EXCHANGE, HT%, BMP%, BP%|
+|**16**|**Parallelism**|CXPACKET, EXCHANGE, HT%, BMP%, BP%|
 |**17**|**메모리**|RESOURCE_SEMAPHORE, CMEMTHREAD, CMEMTHREAD, EE_PMOLOCK, MEMORY_ALLOCATION_EXT, RESERVED_MEMORY_ALLOCATION_EXT, MEMORY_GRANT_UPDATE|
 |**개가**|**사용자 대기**|WAITFOR, WAIT_FOR_RESULTS, BROKER_RECEIVE_WAITFOR|
 |**mb**|**추적**|TRACEWRITE, SQLTRACE_LOCK, SQLTRACE_FILE_BUFFER, SQLTRACE_FILE_WRITE_IO_COMPLETION, SQLTRACE_FILE_READ_IO_COMPLETION, SQLTRACE_PENDING_BUFFER_WRITERS, SQLTRACE_SHUTDOWN, QUERY_TRACEOUT, TRACE_EVTNOTIFF|
-|**720**|**전체 텍스트 검색**|FT_RESTART_CRAWL, 전체 텍스트 GATHERER, MSSEARCH, FT_METADATA_MUTEX, FT_IFTSHC_MUTEX, FT_IFTSISM_MUTEX, FT_IFTS_RWLOCK, FT_COMPROWSET_RWLOCK, FT_MASTER_MERGE, FT_PROPERTYLIST_CACHE, FT_MASTER_MERGE_COORDINATOR|
+|**20**|**전체 텍스트 검색**|FT_RESTART_CRAWL, 전체 텍스트 GATHERER, MSSEARCH, FT_METADATA_MUTEX, FT_IFTSHC_MUTEX, FT_IFTSISM_MUTEX, FT_IFTS_RWLOCK, FT_COMPROWSET_RWLOCK, FT_MASTER_MERGE, FT_PROPERTYLIST_CACHE, FT_MASTER_MERGE_COORDINATOR|
 |**일**|**기타 디스크 IO**|ASYNC_IO_COMPLETION, IO_COMPLETION, BACKUPIO, WRITE_COMPLETION, IO_QUEUE_LIMIT, IO_RETRY|
 |**22**|**복제**|SE_REPL_%, REPL_%, HADR_% **(HADR_THROTTLE_LOG_RATE_GOVERNOR는 아님)**, PWAIT_HADR_%, REPLICA_WRITES, FCB_REPLICA_WRITE, FCB_REPLICA_READ, PWAIT_HADRSIM|
 |**23**|**로그 전송률 관리자**|LOG_RATE_GOVERNOR, POOL_LOG_RATE_GOVERNOR, HADR_THROTTLE_LOG_RATE_GOVERNOR, INSTANCE_LOG_RATE_GOVERNOR|

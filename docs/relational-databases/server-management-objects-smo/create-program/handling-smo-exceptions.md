@@ -1,4 +1,5 @@
 ---
+description: SMO 예외 처리
 title: SMO 예외 처리 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
@@ -16,11 +17,12 @@ ms.assetid: 4c725ff2-6588-44ca-b86a-87979e164153
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f2cab3702ef41e5ea4ed01ab60c3a3b949832f84
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 92167925e38e2029ac94d83b7ca4c9566e41527f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86006364"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448088"
 ---
 # <a name="handling-smo-exceptions"></a>SMO 예외 처리
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]

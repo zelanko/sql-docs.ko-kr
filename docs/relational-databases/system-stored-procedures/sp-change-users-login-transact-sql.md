@@ -1,4 +1,5 @@
 ---
+description: sp_change_users_login(Transact-SQL)
 title: sp_change_users_login (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/13/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1554b39f-274b-4ef8-898e-9e246b474333
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ecd2576cac046984394b093832769363968e637a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c82241030646e2ef20c978cb1905cf836f9a589b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715892"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447417"
 ---
 # <a name="sp_change_users_login-transact-sql"></a>sp_change_users_login(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85715892"
   기존 데이터베이스 사용자를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인에 매핑합니다. 
   
  > [!IMPORTANT]
- > [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]대신 [ALTER USER](../../t-sql/statements/alter-user-transact-sql.md) 를 사용 해야 합니다.  
+ > [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 대신 [ALTER USER](../../t-sql/statements/alter-user-transact-sql.md) 를 사용 해야 합니다.  
   
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -123,11 +124,11 @@ GO
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;보안 저장 프로시저](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [Transact-sql&#41;로그인 &#40;만들기](../../t-sql/statements/create-login-transact-sql.md)   
- [Transact-sql&#41;sp_adduser &#40;](../../relational-databases/system-stored-procedures/sp-adduser-transact-sql.md)   
+ [Transact-sql&#41;&#40;보안 저장 프로시저 ](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
+ [sp_adduser&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adduser-transact-sql.md)   
  [Transact-sql&#41;sp_helplogins &#40;](../../relational-databases/system-stored-procedures/sp-helplogins-transact-sql.md)   
- [Transact-sql&#41;&#40;시스템 저장 프로시저](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;시스템 저장 프로시저 ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sys.database_principals&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: sys. query_context_settings (Transact-sql)
 title: sys. query_context_settings (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/29/2018
@@ -20,12 +21,12 @@ ms.assetid: 3c1887df-6bd8-491e-82fc-d25ad9589faf
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2413e629e969fb0aa7dff93dc2959f1b7a007b10
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: fff1697d8452bac65f3af00dab1e373103f97f13
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394021"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447905"
 ---
 # <a name="sysquery_context_settings-transact-sql"></a>sys. query_context_settings (Transact-sql)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]

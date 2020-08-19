@@ -1,4 +1,5 @@
 ---
+description: sp_helpmergedeleteconflictrows(Transact-SQL)
 title: sp_helpmergedeleteconflictrows (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 222be651-5690-4341-9dfb-f9ec1d80c970
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4c0712dc9b72d9a515dce7f5948c81f49d509a49
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c4cda70ec894a50561cd62dc459bac915f437cc3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893552"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447045"
 ---
 # <a name="sp_helpmergedeleteconflictrows-transact-sql"></a>sp_helpmergedeleteconflictrows(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,13 +41,13 @@ sp_helpmergedeleteconflictrows [ [ @publication = ] 'publication']
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @publication = ] 'publication'`게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 **%** 입니다. 게시가 지정된 경우에는 해당 게시에 대한 모든 충돌이 반환됩니다.  
+`[ @publication = ] 'publication'` 게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 **%** 입니다. 게시가 지정된 경우에는 해당 게시에 대한 모든 충돌이 반환됩니다.  
   
-`[ @source_object = ] 'source_object'`원본 개체의 이름입니다. *source_object* 은 **nvarchar (386)** 이며 기본값은 NULL입니다.  
+`[ @source_object = ] 'source_object'` 원본 개체의 이름입니다. *source_object* 은 **nvarchar (386)** 이며 기본값은 NULL입니다.  
   
-`[ @publisher = ] 'publisher'`게시자의 이름입니다. *publisher* 는 **sysname**이며 기본값은 NULL입니다.  
+`[ @publisher = ] 'publisher'` 게시자의 이름입니다. *publisher* 는 **sysname**이며 기본값은 NULL입니다.  
   
-`[ @publisher_db = ] 'publisher_db'`게시자 데이터베이스의 이름입니다. *publisher_db* 는 **sysname**이며 기본값은 NULL입니다.  
+`[ @publisher_db = ] 'publisher_db'` 게시자 데이터베이스의 이름입니다. *publisher_db* 는 **sysname**이며 기본값은 NULL입니다.  
   
 ## <a name="result-sets"></a>결과 집합  
   

@@ -1,4 +1,5 @@
 ---
+description: sp_execute(Transact-SQL)
 title: sp_execute (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ ms.assetid: 2009acd3-0d92-435a-a8fb-057e50dc7146
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 12bfa6e7d37aae2a5ffc58828d47ace11d558487
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 4f98a4ea55123cbb3b74d476e13768b9aa5d9231
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87392999"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447163"
 ---
 # <a name="sp_execute-transact-sql"></a>sp_execute(Transact-SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
@@ -52,7 +53,7 @@ sp_execute handle OUTPUT
 >  *bound_param* 은 sp_prepare*params* 값에 의해 생성 된 선언과 일치 해야 하며 * @name = value* 또는 *value*형식으로 지정할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;시스템 저장 프로시저](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;시스템 저장 프로시저 ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sp_prepare &#40;SQL&#41;](../../relational-databases/system-stored-procedures/sp-prepare-transact-sql.md)  
   
   

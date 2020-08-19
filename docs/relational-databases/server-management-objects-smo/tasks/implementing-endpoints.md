@@ -1,4 +1,5 @@
 ---
+description: 엔드포인트 구현
 title: 엔드포인트 구현
 ms.custom: seo-dt-2019
 ms.date: 08/06/2017
@@ -13,11 +14,12 @@ ms.assetid: f8674dbb-9bc0-488f-9def-e9e0ce1ddf86
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ac9936e0bb42bc5c62e6f506aebdf50b9a210333
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 9d5f21bf8c3bcf9ca189097fd9c51c02df123a84
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008966"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448091"
 ---
 # <a name="implementing-endpoints"></a>엔드포인트 구현
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]

@@ -1,4 +1,5 @@
 ---
+description: sp_add_operator(Transact-SQL)
 title: sp_add_operator (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 817cd98a-4dff-4ed8-a546-f336c144d1e0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 466cff492c5547357409cee1b11c7a6542971ae5
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a22465af8c3d4e7e3bb0cabd76752d642c2f2423
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85878691"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447478"
 ---
 # <a name="sp_add_operator-transact-sql"></a>sp_add_operator(Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -52,20 +53,20 @@ sp_add_operator [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @name = ] 'name'`운영자 이름 (알림 받는 사람)입니다. 이 이름은 고유 해야 하며 백분율 () 문자를 포함할 수 없습니다 **%** . *name* 은 **sysname**이며 기본값은 없습니다.  
+`[ @name = ] 'name'` 운영자 이름 (알림 받는 사람)입니다. 이 이름은 고유 해야 하며 백분율 () 문자를 포함할 수 없습니다 **%** . *name* 은 **sysname**이며 기본값은 없습니다.  
   
-`[ @enabled = ] enabled`운영자의 현재 상태를 나타냅니다. *enabled* 는 **tinyint**이며 기본값은 **1** (사용)입니다. **0**인 경우에는 연산자를 사용할 수 없으며 알림이 수신 되지 않습니다.  
+`[ @enabled = ] enabled` 운영자의 현재 상태를 나타냅니다. *enabled* 는 **tinyint**이며 기본값은 **1** (사용)입니다. **0**인 경우에는 연산자를 사용할 수 없으며 알림이 수신 되지 않습니다.  
   
-`[ @email_address = ] 'email_address'`운영자의 전자 메일 주소입니다. 이 문자열은 전자 메일 시스템으로 직접 전달됩니다. *email_address* 은 **nvarchar (100)** 이며 기본값은 NULL입니다.  
+`[ @email_address = ] 'email_address'` 운영자의 전자 메일 주소입니다. 이 문자열은 전자 메일 시스템으로 직접 전달됩니다. *email_address* 은 **nvarchar (100)** 이며 기본값은 NULL입니다.  
   
- *Email_address*에 대 한 실제 전자 메일 주소나 별칭을 지정할 수 있습니다. 예를 들어:  
+ *Email_address*에 대 한 실제 전자 메일 주소나 별칭을 지정할 수 있습니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.  
   
  '**jdoe**' 또는 '**jdoe \@ xyz.com**'  
   
 > [!NOTE]  
 >  데이터베이스 메일에서는 전자 메일 주소를 사용해야 합니다.  
   
-`[ @pager_address = ] 'pager_address'`운영자의 호출기 주소입니다. 이 문자열은 전자 메일 시스템으로 직접 전달됩니다. *pager_address* 은 **nvarchar (100)** 이며 기본값은 NULL입니다.  
+`[ @pager_address = ] 'pager_address'` 운영자의 호출기 주소입니다. 이 문자열은 전자 메일 시스템으로 직접 전달됩니다. *pager_address* 은 **nvarchar (100)** 이며 기본값은 NULL입니다.  
   
 `[ @weekday_pager_start_time = ] weekday_pager_start_time`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에이전트가 월요일부터 금요일 까지의 평일에 지정 된 운영자에 게 호출기 알림을 보내는 시간입니다. *weekday_pager_start_time*는 **int**이며 기본값은 **090000**입니다 .이는 9:00 A.M.를 나타냅니다. 이때 시간은 HHMMSS 형식으로 입력해야 합니다.  
   
@@ -79,7 +80,7 @@ sp_add_operator [ @name = ] 'name'
   
 `[ @sunday_pager_end_time = ] sunday_pager_end_time`**SQLServerAgent** 서비스가 일요일에 지정 된 운영자에 게 호출기 알림을 더 이상 보내지 않는 시간입니다. *sunday_pager_end_time*는 **int**이며 기본값은 **18만**입니다 .이는 6:00 P.M.를 나타냅니다. 이때 시간은 HHMMSS 형식으로 입력해야 합니다.  
   
-`[ @pager_days = ] pager_days`지정 된 시작/종료 시간에 따라 운영자를 페이지에 사용할 수 있는 요일을 나타내는 숫자입니다. *pager_days*은 **tinyint**이며 기본값은 운영자가 페이지를 받을 수 없음을 나타내는 **0** 입니다. 유효한 값은 **0** 부터 **127**까지입니다. *pager_days*는 필요한 요일에 대 한 개별 값을 더하여 계산 됩니다. 예를 들어 월요일부터 금요일까지 **2** + **4** + **8** + **16** + **32**  =  **62**입니다. 다음 표에서는 각 요일에 대한 값을 나열합니다.  
+`[ @pager_days = ] pager_days` 지정 된 시작/종료 시간에 따라 운영자를 페이지에 사용할 수 있는 요일을 나타내는 숫자입니다. *pager_days*은 **tinyint**이며 기본값은 운영자가 페이지를 받을 수 없음을 나타내는 **0** 입니다. 유효한 값은 **0** 부터 **127**까지입니다. *pager_days*는 필요한 요일에 대 한 개별 값을 더하여 계산 됩니다. 예를 들어 월요일부터 금요일까지 **2** + **4** + **8** + **16** + **32**  =  **62**입니다. 다음 표에서는 각 요일에 대한 값을 나열합니다.  
   
 |값|Description|  
 |-----------|-----------------|  
@@ -91,9 +92,9 @@ sp_add_operator [ @name = ] 'name'
 |**32**|금요일|  
 |**64**|토요일|  
   
-`[ @netsend_address = ] 'netsend_address'`네트워크 메시지가 전송 되는 운영자의 네트워크 주소입니다. *netsend_address*은 **nvarchar (100)** 이며 기본값은 NULL입니다.  
+`[ @netsend_address = ] 'netsend_address'` 네트워크 메시지가 전송 되는 운영자의 네트워크 주소입니다. *netsend_address*은 **nvarchar (100)** 이며 기본값은 NULL입니다.  
   
-`[ @category_name = ] 'category'`이 연산자에 대 한 범주 이름입니다. *category* 는 **sysname**이며 기본값은 NULL입니다.  
+`[ @category_name = ] 'category'` 이 연산자에 대 한 범주 이름입니다. *category* 는 **sysname**이며 기본값은 NULL입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -111,7 +112,7 @@ sp_add_operator [ @name = ] 'name'
 ## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할의 멤버만 **sp_add_operator**를 실행할 수 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `danwi`에 대한 운영자 정보를 설정합니다. 운영자가 설정되어 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트는 월요일부터 금요일, 오전 8시부터 오후 5시까지 호출기 알림을 보냅니다.  
   
 ```  
@@ -129,7 +130,7 @@ EXEC dbo.sp_add_operator
 GO  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [Transact-sql&#41;sp_delete_operator &#40;](../../relational-databases/system-stored-procedures/sp-delete-operator-transact-sql.md)   
  [Transact-sql&#41;sp_help_operator &#40;](../../relational-databases/system-stored-procedures/sp-help-operator-transact-sql.md)   
  [Transact-sql&#41;sp_update_operator &#40;](../../relational-databases/system-stored-procedures/sp-update-operator-transact-sql.md)   

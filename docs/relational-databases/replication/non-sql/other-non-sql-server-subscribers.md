@@ -1,4 +1,5 @@
 ---
+description: 다른 SQL Server 이외 구독자
 title: 다른 SQL Server 이외 구독자 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/08/2016
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 96b8beb9-38e8-4ce4-97ca-c0f8656b73b4
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d7f6a8e580d89b9364d6c141dbacac8a405a0667
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e593b228d39cc84c35647e72135805e2994b305a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892220"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448141"
 ---
 # <a name="other-non-sql-server-subscribers"></a>다른 SQL Server 이외 구독자
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -115,6 +116,6 @@ ms.locfileid: "85892220"
  OLE DB 공급자에 대한 자세한 내용은 사용 중인 OLE DB 공급자와 함께 제공된 설명서를 참조하십시오.  
   
 ## <a name="see-also"></a>참고 항목  
- [SQL Server 이외 구독자](../../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)  
+ [Non-SQL Server Subscribers](../../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)  
   
   

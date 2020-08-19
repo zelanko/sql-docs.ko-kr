@@ -1,4 +1,5 @@
 ---
+description: sp_detach_schedule(Transact-SQL)
 title: sp_detach_schedule (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9a1fc335-1bef-4638-a33a-771c54a5dd19
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 19988c59d020d0f77d1f23bf0a210f2ae1488933
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 3f81a771e8dc40d6eb27cb68ea3a62e37c3b6b99
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85860817"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447270"
 ---
 # <a name="sp_detach_schedule-transact-sql"></a>sp_detach_schedule(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,21 +43,21 @@ sp_detach_schedule
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @job_id = ] job_id`일정을 제거할 작업의 id입니다. *job_id* 은 **uniqueidentifier**이며 기본값은 NULL입니다.  
+`[ @job_id = ] job_id` 일정을 제거할 작업의 id입니다. *job_id* 은 **uniqueidentifier**이며 기본값은 NULL입니다.  
   
-`[ @job_name = ] 'job_name'`일정을 제거할 작업의 이름입니다. *job_name* 는 **sysname**이며 기본값은 NULL입니다.  
+`[ @job_name = ] 'job_name'` 일정을 제거할 작업의 이름입니다. *job_name* 는 **sysname**이며 기본값은 NULL입니다.  
   
 > [!NOTE]  
 >  *Job_id* 또는 *job_name* 를 지정 해야 하지만 둘 다 지정할 수는 없습니다.  
   
-`[ @schedule_id = ] schedule_id`작업에서 제거할 일정의 일정 id입니다. *schedule_id* 은 **int**이며 기본값은 NULL입니다.  
+`[ @schedule_id = ] schedule_id` 작업에서 제거할 일정의 일정 id입니다. *schedule_id* 은 **int**이며 기본값은 NULL입니다.  
   
-`[ @schedule_name = ] 'schedule_name'`작업에서 제거할 일정의 이름입니다. *schedule_name* 는 **sysname**이며 기본값은 NULL입니다.  
+`[ @schedule_name = ] 'schedule_name'` 작업에서 제거할 일정의 이름입니다. *schedule_name* 는 **sysname**이며 기본값은 NULL입니다.  
   
 > [!NOTE]  
 >  *Schedule_id* 또는 *schedule_name* 를 지정 해야 하지만 둘 다 지정할 수는 없습니다.  
   
-`[ @delete_unused_schedule = ] delete_unused_schedule`사용 하지 않는 작업 일정을 삭제할지 여부를 지정 합니다. *delete_unused_schedule* 은 **bit**이며 기본값은 **0**입니다. 즉, 모든 일정을 참조 하는 작업이 없는 경우에도 모든 일정이 유지 됩니다. **1**로 설정 되 면 작업을 참조 하지 않는 경우 사용 하지 않는 작업 일정이 삭제 됩니다.  
+`[ @delete_unused_schedule = ] delete_unused_schedule` 사용 하지 않는 작업 일정을 삭제할지 여부를 지정 합니다. *delete_unused_schedule* 은 **bit**이며 기본값은 **0**입니다. 즉, 모든 일정을 참조 하는 작업이 없는 경우에도 모든 일정이 유지 됩니다. **1**로 설정 되 면 작업을 참조 하지 않는 경우 사용 하지 않는 작업 일정이 삭제 됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -79,7 +80,7 @@ sp_detach_schedule
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용자가 일정을 소유하는지 여부를 확인합니다. **Sysadmin** 고정 서버 역할의 멤버만 다른 사용자가 소유한 작업의 일정을 분리할 수 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `'NightlyJobs'` 일정과 `'BackupDatabase'` 작업 간 연결을 제거합니다.  
   
 ```  

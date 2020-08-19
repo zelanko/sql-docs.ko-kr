@@ -1,4 +1,5 @@
 ---
+description: sys.dm_exec_query_memory_grants(Transact-SQL)
 title: sys. dm_exec_query_memory_grants (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/19/2020
@@ -20,12 +21,12 @@ ms.assetid: 2c417747-2edd-4e0d-8a9c-e5f445985c1a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f39ef72cb01ecef7fca9d26cc87d003807089e16
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a8ecaeedccefc4d385cacaa1198dcb6dd9189998
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734760"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447578"
 ---
 # <a name="sysdm_exec_query_memory_grants-transact-sql"></a>sys.dm_exec_query_memory_grants(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -63,7 +64,7 @@ ms.locfileid: "85734760"
 |**pool_id**|**int**|이 작업 그룹이 속한 리소스 풀의 ID입니다.|  
 |**is_small**|**tinyint**|1로 설정되면 이 부여에서 작은 리소스 세마포를 사용합니다. 0으로 설정되면 일반 세마포가 사용됩니다.|  
 |**ideal_memory_kb**|**bigint**|실제 메모리에 적합하도록 부여된 메모리 크기(KB)입니다. 이 크기는 카디널리티 예측에 기반합니다.|  
-|**pdw_node_id**|**int**|이 배포가 설정 된 노드의 식별자입니다.<br /><br /> **적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] |  
+|**pdw_node_id**|**int**|이 배포가 설정 된 노드의 식별자입니다.<br /><br /> **적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] |  
 |**reserved_worker_count**|**bigint**|예약 된 [작업자 스레드](../../relational-databases/thread-and-task-architecture-guide.md#sql-server-task-scheduling)수입니다.<br /><br />**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] |  
 |**used_worker_count**|**bigint**|현재 사용 된 [작업자 스레드](../../relational-databases/thread-and-task-architecture-guide.md#sql-server-task-scheduling) 수입니다.<br /><br />**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
 |**max_used_worker_count**|**bigint**|현재까지 사용 된 최대 [작업자 스레드](../../relational-databases/thread-and-task-architecture-guide.md#sql-server-task-scheduling) 수입니다.<br /><br />**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
@@ -120,7 +121,7 @@ ms.locfileid: "85734760"
   
 ## <a name="see-also"></a>참고 항목  
  [dm_exec_query_resource_semaphores &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-resource-semaphores-transact-sql.md)     
- [dm_os_wait_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)     
- [Transact-sql&#41;&#40;관련 동적 관리 뷰 및 함수 실행](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)    
+ [sys.dm_os_wait_stats&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)     
+ [Transact-sql&#41;&#40;관련 동적 관리 뷰 및 함수 실행 ](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)    
  [스레드 및 태스크 아키텍처 가이드](../../relational-databases/thread-and-task-architecture-guide.md)   
   

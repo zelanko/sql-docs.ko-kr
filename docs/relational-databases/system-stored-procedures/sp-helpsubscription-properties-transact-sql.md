@@ -1,4 +1,5 @@
 ---
+description: sp_helpsubscription_properties(Transact-SQL)
 title: sp_helpsubscription_properties (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7a76a645-97eb-47ac-b3ea-e2d75012cbed
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ebef567c36028f63317be3e00ea4c8078a765b6f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fa2eb1c4389c6dd5f3f30b42967aa7cec82808d4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85719472"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446992"
 ---
 # <a name="sp_helpsubscription_properties-transact-sql"></a>sp_helpsubscription_properties(Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -40,13 +41,13 @@ sp_helpsubscription_properties [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @publisher = ] 'publisher'`게시자의 이름입니다. *publisher* 는 **sysname**이며 기본값은 **%** 모든 게시자에 대 한 정보를 반환 하는입니다.  
+`[ @publisher = ] 'publisher'` 게시자의 이름입니다. *publisher* 는 **sysname**이며 기본값은 **%** 모든 게시자에 대 한 정보를 반환 하는입니다.  
   
-`[ @publisher_db = ] 'publisher_db'`게시자 데이터베이스의 이름입니다. *publisher_db* 는 **sysname**이며 기본값은 **%** 모든 게시자 데이터베이스에 대 한 정보를 반환 하는입니다.  
+`[ @publisher_db = ] 'publisher_db'` 게시자 데이터베이스의 이름입니다. *publisher_db* 는 **sysname**이며 기본값은 **%** 모든 게시자 데이터베이스에 대 한 정보를 반환 하는입니다.  
   
-`[ @publication = ] 'publication'`게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 **%** 모든 게시에 대 한 정보를 반환 하는입니다.  
+`[ @publication = ] 'publication'` 게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 **%** 모든 게시에 대 한 정보를 반환 하는입니다.  
   
-`[ @publication_type = ] publication_type`게시의 유형입니다. *publication_type* 은 **int**이며 기본값은 NULL입니다. 제공 된 경우 *publication_type* 는 다음 값 중 하나 여야 합니다.  
+`[ @publication_type = ] publication_type` 게시의 유형입니다. *publication_type* 은 **int**이며 기본값은 NULL입니다. 제공 된 경우 *publication_type* 는 다음 값 중 하나 여야 합니다.  
   
 |값|설명|  
 |-----------|-----------------|  

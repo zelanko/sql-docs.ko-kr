@@ -1,4 +1,5 @@
 ---
+description: 'SQL Server Native Client에서 IRow:: GetColumns 사용'
 title: 'IRow:: GetColumns 사용 (Native Client OLE DB 공급자)'
 ms.custom: ''
 ms.date: 03/06/2017
@@ -18,12 +19,12 @@ ms.assetid: 1f5d2e03-e6fe-4ea1-b71d-55d02b5d59ae
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3cdb23620c2898aa32a6cf4d10d383767fcbc915
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: c40a0d54e3c8b7efa09933ae4998f66efc3ec32c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395762"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448295"
 ---
 # <a name="using-irowgetcolumns-in-sql-server-native-client"></a>SQL Server Native Client에서 IRow:: GetColumns 사용
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -33,6 +34,6 @@ ms.locfileid: "87395762"
  **IRow::GetColumns**를 여러 번 호출할 때 겹치지 않도록 해야 합니다. 예를 들어 **IRow::GetColumns**에 대한 첫 번째 호출에서 열 1, 2, 3을 검색하는 경우 **IRow::GetColumns**에 대한 두 번째 호출은 열 4, 5, 6에 대한 호출이어야 합니다. 나중에 **IRow::GetColumns**에 대한 호출이 겹치면 상태 플래그(DBCOLUMNACCESS의 dwstatus 필드)가 DBSTATUS_E_UNAVAILABLE로 설정됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [IRow를 사용하여 단일 행 인출](../../relational-databases/native-client-ole-db-rowsets/fetching-a-single-row-with-irow.md)  
+ [IRow를 사용하여 단일 행 페치](../../relational-databases/native-client-ole-db-rowsets/fetching-a-single-row-with-irow.md)  
   
   

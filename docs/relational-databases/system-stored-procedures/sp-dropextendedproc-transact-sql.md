@@ -1,4 +1,5 @@
 ---
+description: sp_dropextendedproc(Transact-SQL)
 title: sp_dropextendedproc (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/04/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: dd93af2c-1b7d-4e39-af23-2d21d270a381
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 032bca0112d1fb109ad96305426a55202d5349b9
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0bf9c7d760b059c5608d4af1c13a7758aaa428c3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85859966"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447233"
 ---
 # <a name="sp_dropextendedproc-transact-sql"></a>sp_dropextendedproc(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85859966"
   확장 저장 프로시저를 삭제합니다.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]대신 [CLR 통합](../../relational-databases/clr-integration/common-language-runtime-integration-overview.md) 을 사용 하세요.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 대신 [CLR 통합](../../relational-databases/clr-integration/common-language-runtime-integration-overview.md) 을 사용 하세요.  
   
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -42,7 +43,7 @@ sp_dropextendedproc [ @functname = ] 'procedure'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @functname = ] 'procedure'`삭제할 확장 저장 프로시저의 이름입니다. *프로시저* 는 **nvarchar (517)** 이며 기본값은 없습니다.  
+`[ @functname = ] 'procedure'` 삭제할 확장 저장 프로시저의 이름입니다. *프로시저* 는 **nvarchar (517)** 이며 기본값은 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -60,7 +61,7 @@ sp_dropextendedproc [ @functname = ] 'procedure'
 ## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할의 멤버만 **sp_dropextendedproc**를 실행할 수 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `xp_hello` 확장 저장 프로시저를 삭제합니다.  
   
 > [!NOTE]  

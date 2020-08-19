@@ -1,4 +1,5 @@
 ---
+description: sys.dm_fts_index_keywords_by_property(Transact-SQL)
 title: sys. dm_fts_index_keywords_by_property (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: fa41e052-a79a-4194-9b1a-2885f7828500
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: cffa7327162b4ae333719ad0e50c02002d0a4528
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: bcb2864644941786244b19f0a3aa08dc25f7dca6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734547"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447579"
 ---
 # <a name="sysdm_fts_index_keywords_by_property-transact-sql"></a>sys.dm_fts_index_keywords_by_property(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
