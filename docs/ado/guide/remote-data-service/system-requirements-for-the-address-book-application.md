@@ -1,4 +1,5 @@
 ---
+description: 주소록 애플리케이션에 대한 시스템 요구 사항
 title: 주소록 응용 프로그램에 대 한 시스템 요구 사항 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: da385405-1c9a-478b-9bf6-fba70015324c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8aec1ebbb5d83829431e1045e746c99f1569dc48
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 0c2eb347c7bd4b4bd39e6d85690e9646784077ae
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764634"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451895"
 ---
 # <a name="system-requirements-for-the-address-book-application"></a>주소록 애플리케이션에 대한 시스템 요구 사항
 주소록 샘플 응용 프로그램을 설정 하려면 다음 소프트웨어 및 데이터베이스 요구 사항을 충족 해야 합니다.  

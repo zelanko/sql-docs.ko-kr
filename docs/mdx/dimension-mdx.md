@@ -1,4 +1,5 @@
 ---
+description: Dimension(MDX)
 title: Dimension (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 58bee93a4cef37a8a5a71211b292a16392687f12
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9d4fff9d6ade52d4e8209e2a6e0cbecf99837d91
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67999953"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484036"
 ---
 # <a name="dimension-mdx"></a>Dimension(MDX)
 
@@ -45,7 +46,7 @@ Member_Expression.Dimension
  *Member_Expression*  
  멤버를 반환하는 유효한 MDX 식입니다.  
   
-### <a name="examples"></a>예  
+### <a name="examples"></a>예제  
  다음 예에서는 **이름** 함수와 함께 **Dimension** 함수를 사용 하 여 지정 된 멤버의 계층 이름을 반환 합니다.  
   
 ```  

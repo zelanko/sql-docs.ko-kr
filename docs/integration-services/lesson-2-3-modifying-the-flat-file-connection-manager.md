@@ -1,4 +1,5 @@
 ---
+description: '2-3단원: 플랫 파일 연결 관리자 수정'
 title: '3단계: 플랫 파일 연결 관리자 수정 | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/03/2019
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: 459e3995-2116-4f15-aaa2-32f26113869c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 348b7e9b948443f1cfd14390f30c58ab17d08ec6
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: bbe7698c4b97a11fd9b2b4dba581fbad5a8be8df
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921522"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484112"
 ---
 # <a name="lesson-2-3-modify-the-flat-file-connection-manager"></a>2-3단원: 플랫 파일 연결 관리자 수정
 

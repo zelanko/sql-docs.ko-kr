@@ -1,4 +1,5 @@
 ---
+description: ADO 메서드
 title: ADO 메서드 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a38c5670-ba28-44f3-bd5b-fcb46880e904
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a08f7c896b48f6cb76c9805d3bea9910a8f5bda8
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 10f9aaf7aefa87586df77dd0da5ac1be336d4f53
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242863"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451385"
 ---
 # <a name="ado-methods"></a>ADO 메서드
 
@@ -44,7 +45,7 @@ ms.locfileid: "87242863"
 |[DeleteRecord](../../../ado/reference/ado-api/deleterecord-method-ado.md)|파일이 나 디렉터리와 모든 하위 디렉터리를 삭제 합니다.|  
 |[Execute (ADO 명령)](../../../ado/reference/ado-api/execute-method-ado-command.md)|**CommandText** 속성에 지정 된 쿼리, SQL 문 또는 저장 프로시저를 실행 합니다.|  
 |[Execute (ADO 연결)](../../../ado/reference/ado-api/execute-method-ado-connection.md)|지정 된 쿼리, SQL 문, 저장 프로시저 또는 공급자별 텍스트를 실행 합니다.|  
-|[찾기](../../../ado/reference/ado-api/find-method-ado.md)|**레코드 집합** 에서 지정 된 조건을 만족 하는 행을 검색 합니다.|  
+|[찾아낼](../../../ado/reference/ado-api/find-method-ado.md)|**레코드 집합** 에서 지정 된 조건을 만족 하는 행을 검색 합니다.|  
 |[플러시](../../../ado/reference/ado-api/flush-method-ado.md)|ADO 버퍼에 남아 있는 **스트림의** 내용을 **스트림이** 연결 된 기본 개체에 강제로 적용 합니다.|  
 |[get_OLEDBCommand 메서드](../../../ado/reference/ado-api/get-oledbcommand-method.md)|먼저 ADO 명령에 설정 된 모든 매개 변수 정보를 OLEDB 명령에 전파 하는 기본 OLEDB 명령을 반환 합니다.|  
 |[GetChildren](../../../ado/reference/ado-api/getchildren-method-ado.md)|이 **레코드가**나타내는 디렉터리의 파일 및 하위 디렉터리를 나타내는 행을 포함 하는 **레코드 집합** 을 반환 합니다.|  
@@ -80,7 +81,7 @@ ms.locfileid: "87242863"
 |[쓰기](../../../ado/reference/ado-api/write-method.md)|**스트림** 개체에 이진 데이터를 씁니다.|  
 |[WriteText](../../../ado/reference/ado-api/writetext-method.md)|지정 된 텍스트 문자열을 **스트림** 개체에 씁니다.|  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [ADO API 참조](../../../ado/reference/ado-api/ado-api-reference.md)   
  [ADO 컬렉션](../../../ado/reference/ado-api/ado-collections.md)   
  [ADO 동적 속성](../../../ado/reference/ado-api/ado-dynamic-properties.md)   

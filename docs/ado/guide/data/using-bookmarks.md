@@ -1,4 +1,5 @@
 ---
+description: 책갈피 사용
 title: 책갈피 사용 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: cca244e6-84f8-4394-bca9-f7a819b8f4df
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ebf38cb9afaabef6d1af4e941cf02df1947c7b73
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 98c8f08d6d60a47da2cdf4de6459e90cee4d716e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763054"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452595"
 ---
 # <a name="using-bookmarks"></a>책갈피 사용
 모든 레코드를 스크롤하고 값을 비교할 필요 없이 **레코드 집합** 에서 이동한 후 특정 레코드로 직접 반환 하는 것이 유용한 경우가 많습니다. 예를 들어 **Find** 메서드를 사용 하 여 레코드를 검색 하려고 하지만 검색에서 레코드를 반환 하지 않는 경우에는 레코드 **집합**의 한쪽 끝에 자동으로 배치 됩니다. 공급자가 지 원하는 경우 사용자의 위치로 돌아갈 수 있도록 책갈피를 사용 하 여 **찾기** 방법을 사용 하기 전에 위치를 표시할 수 있습니다. 책갈피는 레코드 **집합** 개체의 레코드를 고유 하 게 식별 하는 **Variant** 형식 값입니다.  

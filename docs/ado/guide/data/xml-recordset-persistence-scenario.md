@@ -1,4 +1,5 @@
 ---
+description: XML 레코드 집합 지속성 시나리오
 title: XML 레코드 집합 지 속성 시나리오 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 353d569a-043a-4397-9ee6-564c4af8d5f6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4a1110db8505a2a721c3503e51276cfb895fb965
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 2c61663a1fc88f4e8efe464da0220df22133bdc2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82748310"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452505"
 ---
 # <a name="xml-recordset-persistence-scenario"></a>XML 레코드 집합 지속성 시나리오
 이 시나리오에서는 레코드 집합 개체의 내용을 ASP 응답 개체에 직접 저장 하는 ASP (Active Server Pages) 응용 프로그램을 만듭니다.  
@@ -38,7 +39,7 @@ ms.locfileid: "82748310"
 -   데이터 수신 및 표시  
   
 ## <a name="step-1-set-up-the-application"></a>1 단계: 응용 프로그램 설정  
- 스크립트 사용 권한을 사용 하 여 "XMLPersist" 라는 IIS 가상 디렉터리를 만듭니다. 가상 디렉터리가 가리키는 폴더에 두 개의 새 텍스트 파일을 만듭니다. 하나는 이름이 "XMLResponse. .asp"이 고 다른 하나는 "default.htm"입니다.  
+ 스크립트 사용 권한을 사용 하 여 "XMLPersist" 라는 IIS 가상 디렉터리를 만듭니다. 가상 디렉터리가 가리키는 폴더에 두 개의 새 텍스트 파일을 만듭니다. 하나는 이름이 "XMLResponse. .asp"이 고 다른 하나는 "Default.htm"입니다.  
   
 ## <a name="step-2-get-the-data"></a>2 단계: 데이터 가져오기  
  이 단계에서는 ADO 레코드 집합을 열고 클라이언트에 보낼 준비를 하는 코드를 작성 합니다. 메모장과 같은 텍스트 편집기를 사용 하 여 XMLResponse 파일을 열고 다음 코드를 삽입 합니다.  
@@ -110,7 +111,7 @@ ms.locfileid: "82748310"
 </HTML>  
 ```  
   
- Default.htm 파일을 닫고 XMLResponse .asp를 저장 한 폴더와 동일한 폴더에 저장 합니다. Internet Explorer 4.0 이상 버전을 사용 하 여 https://*sqlserver*/XMLPersist/default.htm URL을 열고 결과를 확인 합니다. 데이터는 바인딩된 DHTML 테이블에 표시 됩니다. 이제 URL https:// *sqlserver* /Xmlpersist/xmlresponse.xml을 열고 결과를 관찰 합니다. XML이 표시 됩니다.  
+ default.htm 파일을 닫고 XMLResponse .asp를 저장 한 폴더와 동일한 폴더에 저장 합니다. Internet Explorer 4.0 이상 버전을 사용 하 여 https://*sqlserver*/Xmlpersist/default.htm URL을 열고 결과를 관찰 합니다. 데이터는 바인딩된 DHTML 테이블에 표시 됩니다. 이제 URL https:// *sqlserver* /Xmlpersist/xmlresponse.xml을 열고 결과를 관찰 합니다. XML이 표시 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [Save 메서드](../../../ado/reference/ado-api/save-method.md)   

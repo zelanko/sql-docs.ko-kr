@@ -1,4 +1,5 @@
 ---
+description: 데이터 원본에 연결(Oracle용 ODBC 드라이버)
 title: 데이터 원본에 연결 (Oracle 용 ODBC 드라이버) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f724a9c5-342a-4f4e-a030-ec34f7378eaf
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6ef567c9e3c7b63e7f5044de699750de856f3e52
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6951dd89f3ad1a311d93aca460c61dc7317b2f30
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81281303"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483666"
 ---
 # <a name="connecting-to-a-data-source-odbc-driver-for-oracle"></a>데이터 원본에 연결(Oracle용 ODBC 드라이버)
 > [!IMPORTANT]  

@@ -1,4 +1,5 @@
 ---
+description: 드라이버 설정 DLL
 title: 드라이버 설치 DLL | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 49bab021-81fa-402e-b7a4-a5214f1fadc4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a0a2878591c92fe0b2070a295d9dc622c245c17e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 79fff6ce68e7860b444ebefa736cb959cd54576b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306424"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476209"
 ---
 # <a name="driver-setup-dll"></a>드라이버 설정 DLL
 > [!NOTE]  

@@ -1,4 +1,5 @@
 ---
+description: MDX 데이터 정의 - CREATE MEMBER
 title: CREATE MEMBER 문 (MDX) | Microsoft Docs
 ms.date: 07/22/2020
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 3ca2c664246dfeab8070337a0daf818fb0a3327c
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: e0317d67b62efb84a0447543ca59836da6717f33
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110158"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483906"
 ---
 # <a name="mdx-data-definition---create-member"></a>MDX 데이터 정의 - CREATE MEMBER
 

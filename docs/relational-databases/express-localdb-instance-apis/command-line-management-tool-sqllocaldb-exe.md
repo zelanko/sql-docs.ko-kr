@@ -1,4 +1,5 @@
 ---
+description: '명령줄 관리 도구: SqlLocalDB.exe'
 title: '명령줄 관리 도구: SqlLocalDB.exe | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/04/2017
@@ -12,12 +13,12 @@ apilocation:
 ms.assetid: dd0882b1-a8a9-447a-8bdf-0f9d7f36d336
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5c39272a1f8af7fce092f7aa31ac3a4f7ebd2263
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f58db3daf85ec6415e182d348e6be63460986776
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765253"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475885"
 ---
 # <a name="command-line-management-tool-sqllocaldbexe"></a>명령줄 관리 도구: SqlLocalDB.exe
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +44,7 @@ ms.locfileid: "85765253"
 |||  
 |`trace\|t on\|off`|추적을 설정하고 해제합니다.|  
   
- SqlLocalDB에서는 공백을 구분 기호로 처리하므로 공백 및 공백 문자가 포함된 인스턴스 이름은 따옴표로 묶어야 합니다. 예를 들어:  
+ SqlLocalDB에서는 공백을 구분 기호로 처리하므로 공백 및 공백 문자가 포함된 인스턴스 이름은 따옴표로 묶어야 합니다. 다음은 그 예입니다.  
   
  `SqlLocalDB create "My instance name with spaces"`  
   

@@ -1,4 +1,5 @@
 ---
+description: CREATE LOGIN(Transact-SQL)
 title: CREATE LOGIN(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/29/2020
@@ -27,12 +28,12 @@ ms.assetid: eb737149-7c92-4552-946b-91085d8b1b01
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0ff1117c601cc42d8fa14147df18b90a10fc97bd
-ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
+ms.openlocfilehash: 75866a02dee75aaaccb77e2f870b38222471d8c1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87987962"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444813"
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN(Transact-SQL)
 
@@ -676,7 +677,7 @@ SQL Server 규칙을 사용하여 \<loginname>@\<servername> 형식의 SQL Serve
 
 - **GRANT** 문을 사용하여 새 로그인 또는 해당 로그인을 포함한 역할에 서버 수준 권한을 부여합니다. 자세한 내용은 [GRANT](../../t-sql/statements/grant-transact-sql.md)를 참조하십시오.
 
-## <a name="examples"></a>예
+## <a name="examples"></a>예제
 
 ### <a name="a-creating-a-login-with-a-password"></a>A. 암호로 로그인 만들기
 

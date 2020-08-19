@@ -1,4 +1,5 @@
 ---
+description: SQLBindCol 함수
 title: SQLBindCol 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 41a37655-84cd-423f-9daa-e0b47b88dc54
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 90bb1c1aa4dbfa2614f689faa47eb0c41a6cecd6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 84793bdd1261c4a2f65b1bdb60eec4a516a1a1d6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298743"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476171"
 ---
 # <a name="sqlbindcol-function"></a>SQLBindCol 함수
 **규칙**  
@@ -69,7 +70,7 @@ SQLRETURN SQLBindCol(
  *BufferLength*  
  입력 \* *Targetvalueptr* 버퍼의 길이 (바이트)입니다.  
   
- 드라이버는 문자 또는 이진 데이터와 같은 가변 길이 데이터를 반환할 \*때 *targetvalueptr* 버퍼의 끝을 지나서 쓰기를 방지 하기 위해 *bufferlength* 를 사용 합니다. 드라이버는 문자 데이터를 \* *targetvalueptr*에 반환할 때 null 종료 문자를 계산 합니다. \*따라서 *Targetvalueptr* 은 null 종료 문자에 대 한 공간을 포함 해야 합니다. 그렇지 않으면 드라이버에서 데이터를 자릅니다.  
+ 드라이버는 *BufferLength* \* 문자 또는 이진 데이터와 같은 가변 길이 데이터를 반환할 때 *targetvalueptr* 버퍼의 끝을 지나서 쓰기를 방지 하기 위해 bufferlength를 사용 합니다. 드라이버는 문자 데이터를 \* *targetvalueptr*에 반환할 때 null 종료 문자를 계산 합니다. \*따라서 *Targetvalueptr* 은 null 종료 문자에 대 한 공간을 포함 해야 합니다. 그렇지 않으면 드라이버에서 데이터를 자릅니다.  
   
  드라이버가 정수 또는 날짜 구조와 같은 고정 길이 데이터를 반환 하는 경우 드라이버는 *Bufferlength* 를 무시 하 고 버퍼가 데이터를 저장할 수 있을 만큼 충분히 큰지 가정 합니다. 따라서 응용 프로그램이 고정 길이 데이터에 대해 충분 한 크기의 버퍼를 할당 하는 것이 중요 합니다. 그렇지 않으면 드라이버가 버퍼의 끝을 넘어 기록 됩니다.  
   
@@ -114,12 +115,12 @@ SQLRETURN SQLBindCol(
 ## <a name="diagnostics"></a>진단  
  **SQLBindCol** 가 SQL_ERROR 또는 SQL_SUCCESS_WITH_INFO를 반환 하는 경우 SQL_HANDLE_STMT의 *HandleType* 및 *StatementHandle* *핸들* 을 사용 하 여 **SQLGetDiagRec** 를 호출 하 여 연결 된 SQLSTATE 값을 얻을 수 있습니다. 다음 표에서는 일반적으로 **SQLBindCol** 에서 반환 하는 SQLSTATE 값을 나열 하 고이 함수의 컨텍스트에서 각 값에 대해 설명 합니다. "(DM)" 표기법은 드라이버 관리자에서 반환 된 SQLSTATEs의 설명 보다 앞에 나옵니다. 다른 설명이 없는 한 각 SQLSTATE 값과 연결 된 반환 코드는 SQL_ERROR 됩니다.  
   
-|SQLSTATE|Error|Description|  
+|SQLSTATE|오류|설명|  
 |--------------|-----------|-----------------|  
 |01000|일반 경고|드라이버 관련 정보 메시지입니다. 함수는 SQL_SUCCESS_WITH_INFO를 반환 합니다.|  
 |07006|제한 된 데이터 형식 특성 위반|(DM) *Columnnumber* 인수가 0이 고 *TargetType* 인수가 SQL_C_BOOKMARK 되지 않았거나 SQL_C_VARBOOKMARK.|  
 |07009|잘못 된 설명자 인덱스|인수 *Columnnumber* 에 지정 된 값이 결과 집합의 최대 열 개수를 초과 했습니다.|  
-|HY000|일반 오류|특정 SQLSTATE가 없고 구현 별 SQLSTATE가 정의 되지 않은 오류가 발생 했습니다. MessageText 버퍼에서 **SQLGetDiagRec** 에 의해 반환 되는 오류 메시지는 오류 및 해당 원인을 설명 합니다. * \**|  
+|HY000|일반 오류|특정 SQLSTATE가 없고 구현 별 SQLSTATE가 정의 되지 않은 오류가 발생 했습니다. * \* MessageText* 버퍼에서 **SQLGetDiagRec** 에 의해 반환 되는 오류 메시지는 오류 및 해당 원인을 설명 합니다.|  
 |HY001|메모리 할당 오류|드라이버가 실행 또는 함수의 완료를 지 원하는 데 필요한 메모리를 할당할 수 없습니다.|  
 |HY003|응용 프로그램 버퍼 유형이 잘못 되었습니다.|인수 *TargetType* 이 올바른 데이터 형식 또는 SQL_C_DEFAULT 아닙니다.|  
 |HY010|함수 시퀀스 오류|(DM) *StatementHandle*연결 된 연결 핸들에 대해 비동기적으로 실행 되는 함수가 호출 되었습니다. **SQLBindCol** 가 호출 될 때이 비동기 함수는 계속 실행 중입니다.<br /><br /> (DM) **Sqlexecute**, **sqlexecdirect**또는 **SQLMoreResults** 가 *StatementHandle* 에 대해 호출 되 고 SQL_PARAM_DATA_AVAILABLE 반환 되었습니다. 이 함수는 모든 스트리밍된 매개 변수에 대 한 데이터를 검색 하기 전에 호출 되었습니다.<br /><br /> (DM) *StatementHandle* 에 대해 비동기적으로 실행 되는 함수가 호출 되었으며이 함수가 호출 될 때 여전히 실행 되 고 있습니다.<br /><br /> (DM) **Sqlexecute**, **sqlexecdirect**, **SQLBulkOperations**또는 **SQLSetPos** 가 *StatementHandle* 에 대해 호출 되 고 SQL_NEED_DATA 반환 되었습니다. 이 함수는 모든 실행 시 데이터 매개 변수 또는 열에 대해 데이터를 보내기 전에 호출 되었습니다.|  
@@ -232,11 +233,11 @@ SQLRETURN SQLBindCol(
 ## <a name="buffer-addresses"></a>버퍼 주소  
  *버퍼 주소* 는 데이터 또는 길이/표시기 버퍼의 실제 주소입니다. 드라이버는 버퍼에 쓰기 직전에 버퍼 주소를 계산 합니다 (예: 인출 시간 동안). *Targetvalueptr* 에 지정 된 주소와 *StrLen_or_IndPtr* 인수, 바인딩 오프셋 및 행 번호를 사용 하는 다음 수식에서 계산 됩니다.  
   
- *바인딩된 주소* + *바인딩 오프셋* + ((*행 번호* -1) x *요소 크기*)  
+ *바인딩된 주소*  +  *바인딩 오프셋* + ((*행 번호* -1) x *요소 크기*)  
   
  여기서 수식의 변수는 다음 표에 설명 된 대로 정의 됩니다.  
   
-|변수|Description|  
+|변수|설명|  
 |--------------|-----------------|  
 |*바인딩된 주소*|데이터 버퍼의 경우 **SQLBindCol**의 *Targetvalueptr* 인수를 사용 하 여 지정 된 주소입니다.<br /><br /> 길이/표시기 버퍼의 경우 **SQLBindCol**의 *StrLen_or_IndPtr* 인수를 사용 하 여 지정 된 주소입니다. 자세한 내용은 "설명자 and SQLBindCol" 섹션의 "추가 주석"을 참조 하세요.<br /><br /> 바인딩된 주소가 0 이면 이전 수식에서 계산 된 주소가 0이 아닌 경우에도 데이터 값이 반환 되지 않습니다.|  
 |*바인딩 오프셋*|행 단위 바인딩을 사용 하는 경우 SQL_ATTR_ROW_BIND_OFFSET_PTR statement 특성으로 지정 된 주소에 저장 된 값입니다.<br /><br /> 열 단위 바인딩을 사용 하거나 SQL_ATTR_ROW_BIND_OFFSET_PTR statement 특성의 값이 null 포인터인 경우 *바인딩 오프셋* 은 0입니다.|  
@@ -388,6 +389,6 @@ int main() {
 |데이터 열의 일부 또는 전체를 가져오는 중|[SQLGetData 함수(SQLGetData Function)](../../../odbc/reference/syntax/sqlgetdata-function.md)|  
 |결과 집합 열 수 반환|[SQLNumResultCols 함수](../../../odbc/reference/syntax/sqlnumresultcols-function.md)|  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [ODBC API 참조](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 헤더 파일](../../../odbc/reference/install/odbc-header-files.md)

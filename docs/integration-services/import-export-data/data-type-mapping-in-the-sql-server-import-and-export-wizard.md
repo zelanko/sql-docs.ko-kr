@@ -1,4 +1,5 @@
 ---
+description: SQL Server 가져오기 및 내보내기 마법사에서 데이터 형식 매핑
 title: SQL Server 가져오기 및 내보내기 마법사의 데이터 형식 매핑 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/11/2017
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 669be403-cb17-4b12-bbbf-e7a74003c4b6
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 73c837f4bbdd8cb7c7a6060beaea6bc97eba0a02
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 946bb57a3d821186ebcca132539713cf515ab20f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922390"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484094"
 ---
 # <a name="data-type-mapping-in-the-sql-server-import-and-export-wizard"></a>SQL Server 가져오기 및 내보내기 마법사에서 데이터 형식 매핑
 

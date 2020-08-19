@@ -1,4 +1,5 @@
 ---
+description: DB-Library에서 ODBC 대량 복사로 변환
 title: DB-LIBRARY에서 ODBC 대량 복사로 변환 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -17,11 +18,12 @@ ms.assetid: 0bc15bdb-f19f-4537-ac6c-f249f42cf07f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 09726fbbbb1ba1ecd1516dc56ae084897aafff5c
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: ed2fce2e56d0d4bc8a1776bdc57f70446dc0919c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86006607"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475779"
 ---
 # <a name="converting-from-db-library-to-odbc-bulk-copy"></a>DB-Library에서 ODBC 대량 복사로 변환
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -108,7 +110,7 @@ ms.locfileid: "86006607"
 -   문자 형식으로 **money** 값을 출력 하는 경우 ODBC 대량 복사 함수는 네 자리 전체 자릿수를 제공 하 고 쉼표 구분 기호는 제공 하지 않습니다. DB-LIBRARY 버전은 두 자릿수의 전체 자릿수를 제공 하 고 쉼표 구분 기호를 포함 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [ODBC&#41;&#40;대량 복사 작업 수행](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)   
+ [ODBC&#41;&#40;대량 복사 작업 수행 ](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)   
  [Bulk Copy Functions](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

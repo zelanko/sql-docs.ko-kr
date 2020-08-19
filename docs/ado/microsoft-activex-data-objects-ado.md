@@ -1,4 +1,5 @@
 ---
+description: Microsoft ADO(ActiveX Data Objects)
 title: Microsoft ADO(ActiveX Data Objects) (ADO) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/08/2018
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2fa6237b-44b8-4b6c-9952-5acd80a54e20
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 18b9a6590ce777402456c8e9f8c8f28807ec5670
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+ms.openlocfilehash: 63307b7b0074cca482befd0dfa689684504f26f5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606615"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451835"
 ---
 # <a name="microsoft-activex-data-objects-ado"></a>Microsoft ADO(ActiveX Data Objects)
 
@@ -41,7 +42,7 @@ ADO(ActiveX Data Objects)은 지정 된 백 엔드 엔진에 종속 되지 않�
  RDS (원격 데이터 서비스)는 ADO의 기능으로, 서버에서 클라이언트 응용 프로그램이 나 웹 페이지로 데이터를 이동 하 고, 클라이언트에서 데이터를 조작 하 고, 단일 왕복으로 서버에 업데이트를 반환할 수 있습니다.  
   
 > [!IMPORTANT]
->  Windows 8 및 Windows Server 2012부터 RDS 서버 구성 요소는 더 이상 Windows 운영 체제에 포함 되지 않습니다 (자세한 내용은 Windows 8 및 [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) 참조). 이후 버전의 Windows에서는 RDS 클라이언트 구성 요소가 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. RDS를 사용 하는 응용 프로그램은 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)로 마이그레이션해야 합니다.  
+>  Windows 8 및 Windows Server 2012부터 RDS 서버 구성 요소는 더 이상 Windows 운영 체제에 포함 되지 않습니다 (자세한 내용은 Windows 8 및 [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) 참조). 이후 버전의 Windows에서는 RDS 클라이언트 구성 요소가 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. RDS를 사용 하는 응용 프로그램은  [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)로 마이그레이션해야 합니다.  
   
 ## <a name="adox"></a>ADOX  
  ADOX (데이터 정의 언어 및 보안)에 대 한 Microsoft ADO(ActiveX Data Objects) 확장은 ADO 개체 및 프로그래밍 모델에 대 한 확장입니다. ADOX에는 스키마를 만들고 수정할 뿐만 아니라 보안을 위한 개체가 포함 되어 있습니다. 스키마 조작을 위한 개체 기반 방법 이므로 네이티브 구문의 차이점에 관계 없이 다양 한 데이터 원본에 대해 작동 하는 코드를 작성할 수 있습니다.  
@@ -61,7 +62,7 @@ ADO(ActiveX Data Objects)은 지정 된 백 엔드 엔진에 종속 되지 않�
   
  [ADO 용어 설명](../ado/ado-glossary.md)  
   
-## <a name="support"></a>Support(지원)  
+## <a name="support"></a>지원  
  ADO 문제에 대 한 무료 도움말을 보려면 ADO 공용 뉴스 그룹에 게시 해 보세요. 이 뉴스 그룹은 ADO를 다루는 Microsoft PSS (기술 지원 서비스) 지원 전문가와 기타 숙련 된 ADO 개발자에 의해 모니터링 됩니다.  
   
  지원 옵션에 대 한 자세한 내용은 Microsoft 도움말 및 지원 웹 사이트에서 찾을 수 있습니다.

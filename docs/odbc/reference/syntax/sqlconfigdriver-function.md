@@ -1,4 +1,5 @@
 ---
+description: SQLConfigDriver 함수
 title: SQLConfigDriver 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 4f681961-ac9f-4d88-b065-5258ba112642
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0da15cef06e5d8392408108ce88b53f7885eb65e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 04ee54bba13730504ed08cfc1307858edea56282
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301248"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476159"
 ---
 # <a name="sqlconfigdriver-function"></a>SQLConfigDriver 함수
 **규칙**  
@@ -33,7 +34,7 @@ ms.locfileid: "81301248"
  **요약**  
  **SQLConfigDriver** 는 적절 한 드라이버 설치 DLL을 로드 하 고 **configdriver** 함수를 호출 합니다.  
   
- ODBCCONF를 사용 하 여 **SQLConfigDriver** 의 기능에 액세스할 수도 있습니다 [. EXE](../../../odbc/odbcconf-exe.md).  
+ [ODBCCONF.EXE](../../../odbc/odbcconf-exe.md)를 사용 하 여 **SQLConfigDriver** 의 기능에 액세스할 수도 있습니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -83,9 +84,9 @@ BOOL SQLConfigDriver(
  이 함수는 성공 하면 TRUE를 반환 하 고 실패 하면 FALSE를 반환 합니다.  
   
 ## <a name="diagnostics"></a>진단  
- **SQLConfigDriver** 가 FALSE를 반환 하면 **SQLInstallerError**을 호출 하 여 연결 된 * \*pfErrorCode* 값을 얻을 수 있습니다. 다음 표에서는 **SQLInstallerError** 에서 반환 될 수 있는 * \*pfErrorCode* 값을 나열 하 고이 함수의 컨텍스트에서 각 값에 대해 설명 합니다.  
+ **SQLConfigDriver** 가 FALSE를 반환 하면 **SQLInstallerError**을 호출 하 여 연결 된 * \* pfErrorCode* 값을 얻을 수 있습니다. 다음 표에서는 **SQLInstallerError** 에서 반환 될 수 있는 * \* pfErrorCode* 값을 나열 하 고이 함수의 컨텍스트에서 각 값에 대해 설명 합니다.  
   
-|*\*pfErrorCode*|Error|Description|  
+|*\*pfErrorCode*|오류|설명|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|일반 설치 관리자 오류|특정 설치 관리자 오류가 없는 오류가 발생 했습니다.|  
 |ODBC_ERROR_INVALID_BUFF_LEN|잘못 된 버퍼 길이|*LpszMsg* 인수가 잘못 되었습니다.|  

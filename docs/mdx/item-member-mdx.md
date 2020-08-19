@@ -1,4 +1,5 @@
 ---
+description: Item(멤버)(MDX)
 title: Item (Member) (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: d7afa88f9d6239c8da7cb9c406ef11f0764f8dcf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a374d1fcc7f972828832c2f82375acf640d45fb2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67905917"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483966"
 ---
 # <a name="item-member-mdx"></a>Item(멤버)(MDX)
 
@@ -31,7 +32,7 @@ Tuple_Expression.Item( Index )
  *Tuple_Expression*  
  튜플을 반환하는 유효한 MDX 식입니다.  
   
- *인덱스*  
+ *Index*  
  반환할 튜플 내의 위치로 특정 멤버를 지정하는 유효한 숫자 식입니다.  
   
 ## <a name="remarks"></a>설명  

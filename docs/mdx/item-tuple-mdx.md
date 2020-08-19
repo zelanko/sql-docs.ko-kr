@@ -1,4 +1,5 @@
 ---
+description: Item(튜플)(MDX)
 title: Item (튜플) (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 5740095752b482430cd718d0e2bff813449d92ef
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1e98e6901c018a6c8be5187024e5462cc8d19547
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68105219"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483956"
 ---
 # <a name="item-tuple-mdx"></a>Item(튜플)(MDX)
 
@@ -41,7 +42,7 @@ Set_Expression.Item(String_Expression1 [ ,String_Expression2,...n])
  *String_Expression2*  
  유효한 문자열 식으로서, 일반적으로 문자열로 표현된 튜플입니다.  
   
- *인덱스*  
+ *Index*  
  반환할 집합 내의 위치로 특정 튜플을 지정하는 유효한 숫자 식입니다.  
   
 ## <a name="remarks"></a>설명  
@@ -53,7 +54,7 @@ Set_Expression.Item(String_Expression1 [ ,String_Expression2,...n])
   
 -   정수를 지정 하면 **Item** 함수는 *인덱스*에 지정 된 위치 (0부터 시작)에 있는 튜플을 반환 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 ([1996],Sales)를 반환합니다.  
   
  `{([1996],Sales), ([1997],Sales), ([1998],Sales)}.Item(0)`  

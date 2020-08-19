@@ -1,4 +1,5 @@
 ---
+description: DATEFROMPARTS(Transact-SQL)
 title: DATEFROMPARTS(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/29/2017
@@ -18,12 +19,12 @@ ms.assetid: 5b885376-87aa-41f1-9e18-04987aead250
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: de5dc063f60743ac2be4dc2065cdab4c444b76fa
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: a6011848b93c955251c6f3635c366f3020b765f5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396960"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468067"
 ---
 # <a name="datefromparts-transact-sql"></a>DATEFROMPARTS(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -58,7 +59,7 @@ DATEFROMPARTS ( year, month, day )
   
 이 함수는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 서버 이상을 원격 처리할 수 있습니다. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이하 버전의 서버를 원격 처리할 수 없습니다.
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
 이 예제에서는 동작 중인 `DATEFROMPARTS` 함수를 보여줍니다.
   
 ```sql

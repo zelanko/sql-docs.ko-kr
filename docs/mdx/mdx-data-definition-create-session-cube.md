@@ -1,4 +1,5 @@
 ---
+description: MDX 데이터 정의 - CREATE SESSION CUBE
 title: CREATE SESSION CUBE 문 (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: ac95afcebcf07a5d691db5f2599b3290b9587d44
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 33cdbc4a018245249771ff350227d13f4e0f772e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68038364"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483876"
 ---
 # <a name="mdx-data-definition---create-session-cube"></a>MDX 데이터 정의 - CREATE SESSION CUBE
 
@@ -101,13 +102,13 @@ CREATE SESSION CUBE session_cube_name FROM <cube list> (<param list>)
  dimension_name  
  세션 큐브에 있는 차원의 이름입니다.  
   
- FROM \<dim from 절>  
+ FROM \<dim from clause>  
  파생된 차원 정의에 대해서만 유효한 지정입니다.  
   
  NOT_RELATED_TO_FACTS  
  파생된 차원 정의에 대해서만 유효한 지정입니다.  
   
- \<수준 유형>  
+ \<level type>  
  파생된 차원 정의에 대해서만 유효한 지정입니다.  
   
 ## <a name="remarks"></a>설명  
@@ -200,6 +201,6 @@ CREATE SESSION CUBE [Adventure Works_XL_GROUPING1]
   
 ## <a name="see-also"></a>참고 항목  
  [Mdx 데이터 정의 문은 MDX를 &#40;&#41;](../mdx/mdx-data-definition-statements-mdx.md)   
- [MDX&#41;&#40;전역 큐브 문 만들기](../mdx/mdx-data-definition-create-global-cube.md)  
+ [MDX&#41;&#40;전역 큐브 문 만들기 ](../mdx/mdx-data-definition-create-global-cube.md)  
   
   

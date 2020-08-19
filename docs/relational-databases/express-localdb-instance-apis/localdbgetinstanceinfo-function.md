@@ -1,4 +1,5 @@
 ---
+description: LocalDBGetInstanceInfo 함수
 title: LocalDBGetInstanceInfo 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ apitype: DLLExport
 ms.assetid: 231706f5-26c6-42eb-ab47-315df6b8f824
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b392098091a3a439271a6f01a28ae152405e17b7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f33e9f820eebd80680b4c2c631f30d74ca0f79da
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85789499"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475872"
 ---
 # <a name="localdbgetinstanceinfo-function"></a>LocalDBGetInstanceInfo 함수
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

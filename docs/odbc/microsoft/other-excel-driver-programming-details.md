@@ -1,4 +1,5 @@
 ---
+description: 기타 Excel 드라이버 프로그래밍 세부 정보
 title: 기타 Excel 드라이버 프로그래밍 세부 정보 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 92453ef5-86d6-4d13-bdd6-a4f5cf9c453f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d7a932d99ba30e84de0ccd4cfbcce1516cd2fad9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 71d7345bd5a85d0f8348e6e8674082ad2ae22c80
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81291003"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483496"
 ---
 # <a name="other-excel-driver-programming-details"></a>기타 Excel 드라이버 프로그래밍 세부 정보
 > [!NOTE]  

@@ -1,4 +1,5 @@
 ---
+description: 제한 사항
 title: 제한 사항 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b8d71c2a-23c8-4e9b-b5f7-aca51c5a4721
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 92605f083cb0e49381b7d309e05b2c93944d3c36
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d7fe340faaf8841b0674c8c2e7031a2d00cd78db
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302697"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483506"
 ---
 # <a name="limitations"></a>제한 사항
 이 섹션에서는 다음 항목과 관련 된 ODBC 데스크톱 데이터베이스 드라이버의 제한 사항을 설명 합니다.  
@@ -37,11 +38,11 @@ ms.locfileid: "81302697"
 ||[SELECT 문](../../odbc/microsoft/select-statement-limitations.md)|[FROM 절](../../odbc/microsoft/from-clause-limitations.md)|  
 ||[UPDATE 문](../../odbc/microsoft/update-statement-limitations.md)|[HAVING 절](../../odbc/microsoft/having-clause-limitations.md)|  
 |||[LIKE 조건자](../../odbc/microsoft/like-predicate-limitations.md)|  
-|||[NOT NULL](../../odbc/microsoft/not-null-limitations.md)|  
+|||[NULL이 아님](../../odbc/microsoft/not-null-limitations.md)|  
 |||[ORDER BY 절](../../odbc/microsoft/order-by-clause-limitations.md)|  
-|||[표 이름](../../odbc/microsoft/table-name-limitations.md)|  
+|||[Table Name](../../odbc/microsoft/table-name-limitations.md)|  
 |||[테이블 참조](../../odbc/microsoft/table-references-limitations.md)|  
-|||[보기](../../odbc/microsoft/views-limitations.md)|  
+|||[Views](../../odbc/microsoft/views-limitations.md)|  
 |||[WHERE 절](../../odbc/microsoft/where-clause-limitations.md)|  
 |||[WHERE CURRENT OF 절](../../odbc/microsoft/where-current-of-clause-limitations.md)|  
 |||[String](../../odbc/microsoft/string-limitations.md)|
