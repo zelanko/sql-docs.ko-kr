@@ -1,4 +1,5 @@
 ---
+description: Indexes 컬렉션(ADOX)
 title: Indexes 컬렉션 (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,22 +17,22 @@ helpviewer_keywords:
 ms.assetid: 184cf536-455c-42be-bf1c-a5c25bade961
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: af209229519470b121e3c69ba857b145c0874e73
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 916671fdf9722c7894ee122f3d68167a8047b72c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763855"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439915"
 ---
 # <a name="indexes-collection-adox"></a>Indexes 컬렉션(ADOX)
 테이블의 모든 [인덱스](../../../ado/reference/adox-api/index-object-adox.md) 개체를 포함 합니다.  
   
 ## <a name="remarks"></a>설명  
- **인덱스** 컬렉션에 대 한 [APPEND](../../../ado/reference/adox-api/append-method-adox-indexes.md) 메서드는 ADOX에 대해 고유 합니다. 다음을 수행할 수 있습니다.  
+ **인덱스** 컬렉션에 대 한 [APPEND](../../../ado/reference/adox-api/append-method-adox-indexes.md) 메서드는 ADOX에 대해 고유 합니다. 다음을 할 수 있습니다.  
   
 -   **Append** 메서드를 사용 하 여 컬렉션에 새 인덱스를 추가 합니다.  
   
- 나머지 속성 및 메서드는 ADO 컬렉션의 표준입니다. 다음을 수행할 수 있습니다.  
+ 나머지 속성 및 메서드는 ADO 컬렉션의 표준입니다. 다음을 할 수 있습니다.  
   
 -   [Item](../../../ado/reference/ado-api/item-property-ado.md) 속성을 사용 하 여 컬렉션의 인덱스에 액세스 합니다.  
   

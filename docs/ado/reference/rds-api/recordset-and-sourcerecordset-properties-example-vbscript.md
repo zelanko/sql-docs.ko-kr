@@ -1,4 +1,5 @@
 ---
+description: Recordset 및 SourceRecordset 속성 예제(VBScript)
 title: 레코드 집합 및 SourceRecordset 속성 예제 (VBScript) | Microsoft Docs
 ms.technology: connectivity
 ms.custom: ''
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 95175316-cd10-4cf7-96ba-2a226fd97701
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 64f83c8e7d8a281ff8bd9124d693d365cafd9181
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: d2c047ed21662335368f85273ad8c52bf4f5e70f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82751102"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438745"
 ---
 # <a name="recordset-and-sourcerecordset-properties-example-vbscript"></a>Recordset 및 SourceRecordset 속성 예제(VBScript)
 > [!IMPORTANT]
@@ -28,7 +29,7 @@ ms.locfileid: "82751102"
   
  다음 예에서는 런타임에 [RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) 기본 비즈니스 개체의 필수 매개 변수를 설정 하는 방법을 보여 줍니다.  
   
- 이 예를 테스트 하려면이 코드를 잘라내어 \< 본문>와 \<> 태그 사이에 붙여넣고 **RecordsetVBS**. ASP 스크립트는 서버를 식별 합니다.  
+ 이 예를 테스트 하려면 \<Body> \</Body> 일반 HTML 문서의 및 태그 사이에이 코드를 잘라내어 붙여넣고 **RecordsetVBS**로 이름을 다시 만듭니다. ASP 스크립트는 서버를 식별 합니다.  
   
 ```  
 <!-- BeginRecordSetVBS -->  

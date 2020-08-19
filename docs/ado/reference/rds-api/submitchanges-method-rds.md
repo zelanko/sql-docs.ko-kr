@@ -1,4 +1,5 @@
 ---
+description: SubmitChanges 메서드(RDS)
 title: SubmitChanges 메서드 (RDS) | Microsoft Docs
 ms.technology: connectivity
 ms.custom: ''
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 250062a4-13c4-4bed-807d-8b9ad81536d4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3291b5ca72ab984ecd8487612384ece6d5b76f9a
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: 0bd87e3e533168b2ff84f95fc9c6cf6275dd829e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942280"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438585"
 ---
 # <a name="submitchanges-method-rds"></a>SubmitChanges 메서드(RDS)
 로컬에서 캐시 하 고 업데이트할 수 있는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 의 보류 중인 변경 내용을 [Connect](../../../ado/reference/rds-api/connect-property-rds.md) 속성 또는 [URL](../../../ado/reference/rds-api/url-property-rds.md) 속성에 지정 된 데이터 원본에 전송 합니다.  

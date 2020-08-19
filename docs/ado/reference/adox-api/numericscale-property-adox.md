@@ -1,4 +1,5 @@
 ---
+description: NumericScale 속성(ADOX)
 title: NumericScale 속성 (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 573ee5d1-57c7-4a27-be79-a0e12944ad9b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a0a0090a24207e6faad1b14aa3cb5afd6091bc87
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 94b5a154bfed13485787d46c768a371e0cceb65e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763814"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439765"
 ---
 # <a name="numericscale-property-adox"></a>NumericScale 속성(ADOX)
 열에 있는 숫자 값의 소수 자릿수를 나타냅니다.  

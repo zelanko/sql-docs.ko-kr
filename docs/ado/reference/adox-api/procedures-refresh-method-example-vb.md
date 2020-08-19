@@ -1,4 +1,5 @@
 ---
+description: Procedures Refresh 메서드 예제(VB)
 title: 프로시저 Refresh 메서드 예제 (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 499679bd-287b-487d-bdfb-3803abffec1c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 162e6739a61b52922998a61c019225ef0f8d5216
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: d9f2d7f3d8ceb8d6d62a65382ee7084059c29bf8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82748600"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439585"
 ---
 # <a name="procedures-refresh-method-example-vb"></a>Procedures Refresh 메서드 예제(VB)
 다음 코드에서는 [카탈로그](../../../ado/reference/adox-api/catalog-object-adox.md)의 [프로시저](../../../ado/reference/adox-api/procedures-collection-adox.md) 컬렉션을 새로 고치는 방법을 보여 줍니다. **카탈로그** 의 [프로시저](../../../ado/reference/adox-api/procedure-object-adox.md) 개체에 액세스할 수 있으려면이 작업을 수행 해야 합니다.  

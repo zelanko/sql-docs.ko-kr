@@ -1,4 +1,5 @@
 ---
+description: Parameters 컬렉션, Command 속성 예제(VB)
 title: Parameters 컬렉션, Command 속성 예제 (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7df1089e-69b7-476e-9244-19947c087351
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4feb9c7ec12bbf560c874b15389adcd3a7eec04a
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: c82fc6388f1a7ad6582cc91ab2589afda2912f6a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763784"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439745"
 ---
 # <a name="parameters-collection-command-property-example-vb"></a>Parameters 컬렉션, Command 속성 예제(VB)
 다음 [코드에서는 command 개체와](../../../ado/reference/ado-api/command-object-ado.md) 함께 [command](../../../ado/reference/adox-api/command-property-adox.md) 속성을 사용 하 여 프로시저에 대 한 매개 변수 정보를 검색 하는 방법을 보여 줍니다.  

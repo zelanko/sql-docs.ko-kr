@@ -1,4 +1,5 @@
 ---
+description: 캐시의 위치
 title: 캐시 위치 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 240d6162-4da6-4b1f-96c7-f379f4ecb16f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 13510332ae8bfab07a13d7831f9f74a048551214
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 29a0c5507c1b8f581d85b0524784f8ccf1695a5f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81288621"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429625"
 ---
 # <a name="location-of-cache"></a>캐시의 위치
 > [!IMPORTANT]  

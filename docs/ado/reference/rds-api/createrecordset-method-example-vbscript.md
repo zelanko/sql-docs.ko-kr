@@ -1,4 +1,5 @@
 ---
+description: CreateRecordset 메서드 예제(VBScript)
 title: CreateRecordset 메서드 예제 (VBScript) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: cce0d8b5-e87b-4f7b-a8a0-37d5025a1f5d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 485413a9fee94998d76f24829298faffe00c8dab
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: c6fc0eca4668aeaff00b8add8532ce633517eb64
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758579"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439176"
 ---
 # <a name="createrecordset-method-example-vbscript"></a>CreateRecordset 메서드 예제(VBScript)
 > [!IMPORTANT]

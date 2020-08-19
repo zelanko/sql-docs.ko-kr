@@ -1,4 +1,5 @@
 ---
+description: onReadyStateChange 이벤트(RDS)
 title: onReadyStateChange 이벤트 (RDS) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: bf2ae3ac-bfe4-4709-b50a-ea7c282c3164
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 00eb7b7084506de78262f4df2a4606c6756bbacb
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 482f4376f8e33a185e3dcf8327f50321c6663172
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82751446"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438875"
 ---
 # <a name="onreadystatechange-event-rds"></a>onReadyStateChange 이벤트(RDS)
 **OnReadyStateChange** 이벤트는 [ReadyState](../../../ado/reference/rds-api/readystate-property-rds.md) 속성 값이 변경 될 때마다 호출 됩니다.  

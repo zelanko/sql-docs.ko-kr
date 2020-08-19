@@ -1,4 +1,5 @@
 ---
+description: 페치된 행 수 및 상태
 title: 인출 된 행 수 및 상태 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a069b979-5108-4905-932f-8ae8e7905ff2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 20e1632e8da765b0da2785bd846b67d13ebe01ed
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bc328aab77d6e59db258c463a7dae1554f7d4c11
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302364"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429215"
 ---
 # <a name="number-of-rows-fetched-and-status"></a>페치된 행 수 및 상태
 SQL_ATTR_ROWS_FETCHED_PTR statement 특성이 설정 된 경우 **Sqlfetch** 또는 **sqlfetchscroll**에 대 한 호출에서 인출 된 행 수를 반환 하는 버퍼와 오류 행을 지정 합니다. 이 수는 SQL_ROW_NO_ROWS 상태가 없는 모든 행의 수입니다. **SQLBulkOperations** 또는 **SQLSetPos**를 호출한 후에는 함수에 의해 수행 된 대량 작업의 영향을 받은 행 수가 버퍼에 포함 됩니다. SQL_ATTR_ROW_STATUS_PTR statement 특성이 설정 된 경우 **Sqlfetch** 또는 **sqlfetchscroll** 은 반환 된 각 행의 상태를 제공 하는 *행 상태 배열을* 반환 합니다. 이러한 필드가 가리키는 버퍼는 모두 응용 프로그램에 의해 할당 되 고 드라이버에 의해 채워집니다. 응용 프로그램은 커서가 닫힐 때까지 이러한 포인터가 유효한 상태로 남아 있는지 확인 해야 합니다.  

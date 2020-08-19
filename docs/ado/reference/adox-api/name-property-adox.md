@@ -1,4 +1,5 @@
 ---
+description: Name 속성(ADOX)
 title: Name 속성 (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -41,12 +42,12 @@ helpviewer_keywords:
 ms.assetid: 81b92baf-b6b9-4f4e-9f33-4503795518cd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 24d86b384a1eb2916e488c17c99e4b9b5962dd1a
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: dbd0d9088ea39d604c53c462448ae1c94b3a9052
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942725"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439785"
 ---
 # <a name="name-property-adox"></a>Name 속성(ADOX)
 개체의 이름을 나타냅니다.  

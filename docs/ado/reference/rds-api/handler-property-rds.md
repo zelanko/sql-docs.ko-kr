@@ -1,4 +1,5 @@
 ---
+description: Handler 속성(RDS)
 title: Handler 속성 (RDS) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: fdc34362-6d47-4727-b171-8d033159408e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 22e054a6f1723f32d81a4f00ec941a10f8212506
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: e80c140e5abab80e7c33199cb9401fe9d2774161
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82751945"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438955"
 ---
 # <a name="handler-property-rds"></a>Handler 속성(RDS)
 DataFactory의 기능과 *처리기*에서 사용 하는 매개 변수를 확장 하는 서버 쪽 사용자 지정 프로그램 (처리기)의 이름을 나타냅니다 [RDSServer.](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)  
@@ -47,7 +48,7 @@ DataControl.Handler = String
   
  처리기의 이름과 해당 매개 변수 (있는 경우)는 쉼표 (",")로 구분 됩니다. *문자열*내의 아무 곳에 나 세미콜론 (";")이 나타나면 예측할 수 없는 동작이 발생 합니다. **IDataFactoryHandler** 인터페이스를 지 원하는 경우 고유한 처리기를 작성할 수 있습니다.  
   
- 기본 처리기의 이름은 **Msdfmap입니다. 처리기**및 기본 매개 변수는 Msdfmap 이라는 사용자 지정 파일입니다 **. INI**. 서버 관리자가 만든 대체 사용자 지정 파일을 호출 하려면이 속성을 사용 합니다.  
+ 기본 처리기의 이름은 **Msdfmap입니다. 처리기**및 기본 매개 변수는 **MSDFMAP.INI**이라는 사용자 지정 파일입니다. 서버 관리자가 만든 대체 사용자 지정 파일을 호출 하려면이 속성을 사용 합니다.  
   
  **Handler** 속성을 설정 하는 대신 [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) 속성에 처리기와 매개 변수를 지정할 수 있습니다. 즉, "**Handler =**_handlerName, parameter1, parameter2,...;_"입니다.  
   

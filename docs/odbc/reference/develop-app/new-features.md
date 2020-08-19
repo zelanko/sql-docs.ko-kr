@@ -1,4 +1,5 @@
 ---
+description: 새로운 기능
 title: 새 기능 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: a8fcdd00-6cb3-4871-9489-6018b3d0d65f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b40803dac6c9f296043a8dcac50f9bc69036875a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2015d424e0c755352fa66f3ac67503b612b6982f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302401"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429235"
 ---
-# <a name="new-features"></a>새 기능
+# <a name="new-features"></a>새로운 기능
 ODBC 3.x에는 다음과 같은 새로운 기능이 도입 *되었습니다.* Odbc 2.x 드라이버를 사용 하 여 작업 하는 *odbc* *2.x 응용 프로그램* 은이 기능을 사용할 수 없습니다. Odbc 3.x *드라이버 관리자* *는 odbc 2.x* 드라이버로 작업할 때 이러한 기능을 매핑하지 않습니다.  
   
 -   **SQLSetDescField**, **SQLGetDescField**, **SQLSetDescRec**, **SQLGetDescRec**및 **sqlcopydesc**라는 인수로 설명자 핸들을 사용 하는 함수입니다.  

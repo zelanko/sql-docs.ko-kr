@@ -1,4 +1,5 @@
 ---
+description: Keys 컬렉션 속성, 메서드 및 이벤트
 title: Keys 컬렉션 속성, 메서드 및 이벤트 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: eeb3746d-1c75-4bb0-97b5-2c2d073c8c0e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d2a7b1a104c9ab68ef380f4318ed983e61113866
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 11ac84b96e9dee887da98683b9d88d4ced8a6332
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763844"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439805"
 ---
 # <a name="keys-collection-properties-methods-and-events"></a>Keys 컬렉션 속성, 메서드 및 이벤트
 ## <a name="properties"></a>속성  

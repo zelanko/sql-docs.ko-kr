@@ -1,4 +1,5 @@
 ---
+description: 'SQL에서 C로: 숫자'
 title: 'SQL에서 C로: Numeric | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2019
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 76f8b5d5-4bd0-4dcb-a90a-698340e0d36e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 36b24da4023a96b686742416b83bb5790e129278
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d48706eddabc71f28c84fae5623a8c9e440d8506
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81296413"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429565"
 ---
 # <a name="sql-to-c-numeric"></a>SQL에서 C로: 숫자
 
@@ -45,7 +46,7 @@ ms.locfileid: "81296413"
 |SQL_C_BIT|데이터가 0 또는 1 인 경우 [a]<br /><br /> 데이터가 0 보다 크고 2 보다 작고 1 [a]와 같지 않습니다.<br /><br /> 데이터가 0 보다 작거나 2 [a] 보다 크거나 같습니다.|데이터<br /><br /> 잘린 데이터<br /><br /> 정의되지 않음|1 [b]<br /><br /> 1 [b]<br /><br /> 정의되지 않음|해당 없음<br /><br /> 01S07<br /><br /> 22003|  
 |SQL_C_BINARY|데이터의 바이트 길이 <= *Bufferlength*<br /><br /> *Bufferlength* > 데이터의 바이트 길이|데이터<br /><br /> 정의되지 않음|데이터 길이<br /><br /> 정의되지 않음|해당 없음<br /><br /> 22003|  
 |SQL_C_INTERVAL_MONTH [c] SQL_C_INTERVAL_YEAR [c] SQL_C_INTERVAL_DAY [c] SQL_C_INTERVAL_HOUR [c] SQL_C_INTERVAL_MINUTE [c] SQL_C_INTERVAL_SECOND [c]|데이터가 잘리지 않음<br /><br /> 소수 자릿수 초 부분이 잘렸습니다.<br /><br /> 잘린 숫자의 전체 부분|데이터<br /><br /> 잘린 데이터<br /><br /> 정의되지 않음|데이터의 길이 (바이트)<br /><br /> 데이터의 길이 (바이트)<br /><br /> 정의되지 않음|해당 없음<br /><br /> 01S07<br /><br /> 22015|  
-|SQL_C_INTERVAL_YEAR_TO_MONTH SQL_C_INTERVAL_DAY_TO_HOUR SQL_C_INTERVAL_DAY_TO_MINUTE SQL_C_INTERVAL_DAY_TO_SECOND SQL_C_INTERVAL_HOUR_TO_MINUTE SQL_C_INTERVAL_HOUR_TO_SECOND|잘린 숫자의 전체 부분|정의되지 않음|정의되지 않음|22015|  
+|SQL_C_INTERVAL_YEAR_TO_MONTH SQL_C_INTERVAL_DAY_TO_HOUR SQL_C_INTERVAL_DAY_TO_MINUTE SQL_C_INTERVAL_DAY_TO_SECOND SQL_C_INTERVAL_HOUR_TO_MINUTE SQL_C_INTERVAL_HOUR_TO_SECOND|잘린 숫자의 전체 부분|Undefined|Undefined|22015|  
   
  [a]이 변환에서 *Bufferlength* 값은 무시 됩니다. 이 드라이버는 **Targetvalueptr* 의 크기가 C 데이터 형식의 크기인 것으로 가정 합니다.  
   

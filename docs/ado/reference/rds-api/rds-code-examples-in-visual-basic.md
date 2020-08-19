@@ -1,4 +1,5 @@
 ---
+description: Visual Basic의 RDS 코드 예제
 title: Visual Basic |의 RDS 코드 예제 Microsoft Docs
 ms.technology: connectivity
 ms.custom: ''
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d9cb84a1-4ec2-4d41-8f92-dec2e17cde67
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 50bc56df92ff8cda0eb3ddcbdc3463c58c4977bd
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: de6f23eb8f04bf8a71f828af9303c66d86859f10
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82751345"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438835"
 ---
 # <a name="rds-code-examples-in-visual-basic"></a>Visual Basic의 RDS 코드 예제
 > [!IMPORTANT]

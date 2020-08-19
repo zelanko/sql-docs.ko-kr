@@ -1,4 +1,5 @@
 ---
+description: ParentCatalog 속성(ADOX)
 title: ParentCatalog 속성 (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -40,12 +41,12 @@ helpviewer_keywords:
 ms.assetid: a0bb2ed8-d4cb-4f92-8de7-769bbe0e6273
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c4d3874ea1289dd086d70f06434adc666691f521
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: 93d15cdac3d8f7a47c74a783d176d806271f68a3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86943185"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439725"
 ---
 # <a name="parentcatalog-property-adox"></a>ParentCatalog 속성(ADOX)
 공급자별 속성에 대 한 액세스를 제공 하기 위해 테이블, 사용자 또는 열 개체의 부모 카탈로그를 지정 합니다.  

@@ -1,4 +1,5 @@
 ---
+description: RDS 코드 예제
 title: RDS 코드 예제 | Microsoft Docs
 ms.technology: connectivity
 ms.custom: ''
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 59030e99-de9c-4506-a450-67dfcb6f7c00
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0604cb512a4156ef84454889a8cd765a6b53ccd1
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 612d7dfd7b274b69f6ceeb3801d1a85e454d6d5f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758569"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438815"
 ---
 # <a name="rds-code-examples"></a>RDS 코드 예제
 > [!IMPORTANT]

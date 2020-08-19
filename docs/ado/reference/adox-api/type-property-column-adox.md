@@ -1,4 +1,5 @@
 ---
+description: Type 속성(열)(ADOX)
 title: Type 속성 (Column) (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 5c6718b6-f728-478a-8afb-5d17b0a91d1f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c819d5b58f0153db84a624c79cef829605e54df8
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 855c7aabd3ac94fff5250f4a6c1fab3d02a7ec65
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763264"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439435"
 ---
 # <a name="type-property-column-adox"></a>Type 속성(열)(ADOX)
 열의 데이터 형식을 나타냅니다.  

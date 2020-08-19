@@ -1,4 +1,5 @@
 ---
+description: 주석(DMX)
 title: 설명 (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 37e646df007684ee8e68f9d39119e42014415715
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 8069241656de868ae2165fa7348b549c8e3308e0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86969905"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88431125"
 ---
 # <a name="comments-dmx"></a>주석(DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "86969905"
   
 -   **--(이중 하이픈)** 이 주석 문자를 사용하여 실행 코드와 동일한 줄에 주석을 기록하거나 별도의 줄 전체에 주석을 기록할 수 있습니다. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에서는 이중 하이픈부터 해당 줄의 끝 사이에 있는 모든 내용을 주석으로 처리합니다. 여러 줄에 걸쳐 주석을 기록하려면 각 주석 줄 앞에 이중 하이픈을 입력합니다. 이 주석 문자에 대 한 자세한 내용은 [--&#40;설명&#41; &#40;DMX&#41; 요약](../dmx/comment-dmx-summary.md)을 참조 하세요.  
   
--   **/\*... \* /(슬래시-별표 문자 쌍).** 이 주석 문자를 사용하여 실행 코드와 동일한 줄에 주석을 기록하거나 별도의 줄 전체에 주석을 기록할 수 있고 실행 코드 안에도 주석을 기록할 수 있습니다. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]주석의 일부로 열린 주석 쌍 (/*)에서 닫는 주석 쌍 (/) 까지의 모든 항목을 평가 \* 합니다. 여러 줄로 된 주석을 만들려면 여는 주석 문자 쌍 (/)으로 주석을 시작 하 \* 고 닫는 주석 문자 쌍 (/)으로 주석을 종료 \* 합니다. 이 주석 줄에는 다른 주석 문자를 삽입해서는 안 됩니다. 이 주석 문자에 대 한 자세한 내용은 [&#41; &#40;DMX&#41;&#40;주석 ](../dmx/slash-star-comment-dmx.md)을 참조 하세요.  
+-   **/\* ... \* /(슬래시-별표 문자 쌍).** 이 주석 문자를 사용하여 실행 코드와 동일한 줄에 주석을 기록하거나 별도의 줄 전체에 주석을 기록할 수 있고 실행 코드 안에도 주석을 기록할 수 있습니다. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 주석의 일부로 열린 주석 쌍 (/*)에서 닫는 주석 쌍 (/) 까지의 모든 항목을 평가 \* 합니다. 여러 줄로 된 주석을 만들려면 여는 주석 문자 쌍 (/)으로 주석을 시작 하 \* 고 닫는 주석 문자 쌍 (/)으로 주석을 종료 \* 합니다. 이 주석 줄에는 다른 주석 문자를 삽입해서는 안 됩니다. 이 주석 문자에 대 한 자세한 내용은 [&#41; &#40;DMX&#41;&#40;주석 ](../dmx/slash-star-comment-dmx.md)을 참조 하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [DMX&#41; 참조 &#40;데이터 마이닝 확장](../dmx/data-mining-extensions-dmx-reference.md)   

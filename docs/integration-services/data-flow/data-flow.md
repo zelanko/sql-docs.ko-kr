@@ -1,4 +1,5 @@
 ---
+description: 데이터 흐름
 title: 데이터 흐름 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7a50de3c-4ca0-4922-8028-fdddeb47e5b0
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 757015f38213730973ec67c014f5b17d00fbce0b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: fa3fff63528c11e57c6517393c28a5deb2acfcfe
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916839"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430965"
 ---
 # <a name="data-flow"></a>데이터 흐름
 
@@ -70,7 +71,7 @@ ms.locfileid: "86916839"
   
  **데이터 흐름** 탭이 활성화된 경우 데이터 흐름에 추가할 수 있는 원본, 변환 및 대상이 도구 상자에 포함됩니다.  
   
-## <a name="expressions"></a>식  
+## <a name="expressions"></a>표현식  
  원본, 대상 및 변환의 여러 데이터 흐름 구성 요소에서는 해당 속성에 속성 식을 사용할 수 있습니다. 속성 식은 패키지가 로드되면 속성 값을 바꾸는 식입니다. 패키지는 런타임에 업데이트된 속성 값을 사용합니다. 식은 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 식 구문을 사용하여 작성되며 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 함수, 연산자, 식별자 및 변수를 포함할 수 있습니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 식](../../integration-services/expressions/integration-services-ssis-expressions.md), [Integration Services&#40;SSIS&#41; 식](../../integration-services/expressions/integration-services-ssis-expressions.md) 및 [패키지에서 속성 식 사용](../../integration-services/expressions/use-property-expressions-in-packages.md)을 참조하세요.  
   
  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 패키지를 구성하면 속성 식을 지원하는 데이터 흐름 구성 요소의 속성은 해당 속성이 속한 데이터 흐름 태스크에 표시됩니다. 데이터 흐름 구성 요소의 속성 식을 추가, 변경 및 제거하려면 데이터 흐름 태스크를 클릭하고 속성 창이나 태스크 편집기를 사용하여 속성 식을 추가, 변경 또는 삭제합니다. 데이터 흐름 태스크 자체의 속성 식은 속성 창에서 관리합니다.  
@@ -178,13 +179,13 @@ ms.locfileid: "86916839"
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트는 오프라인 모드를 제공합니다. 오프라인에서 작업할 때는 패키지에 사용되는 원본 또는 대상에 대한 연결이 구성되지 않으며 외부 열에 대한 메타데이터가 업데이트되지 않습니다.  
   
-## <a name="inputs-and-outputs"></a>입/출력  
+## <a name="inputs-and-outputs"></a>입력 및 출력  
  원본에는 출력이 포함되고, 대상에는 입력이 포함되고, 변환에는 입력과 출력이 모두 포함됩니다. 또한 여러 데이터 흐름 구성 요소는 하나의 오류 출력을 사용하도록 구성될 수 있습니다.  
   
 ### <a name="inputs"></a>입력  
  대상 및 변환에는 입력이 포함됩니다. 입력에는 데이터 흐름 구성 요소가 외부 열을 사용하도록 구성된 경우 이러한 외부 열을 참조할 수 있는 하나 이상의 입력 열이 포함됩니다. 입력은 데이터 흐름을 모니터링하고 제어하도록 구성될 수 있습니다. 예를 들어 구성 요소가 오류에 대한 응답으로 실패하거나, 오류를 무시하거나, 오류 행을 오류 출력으로 리디렉션하도록 지정할 수 있습니다. 또한 입력에 대한 설명을 할당하거나 입력 이름을 업데이트할 수 있습니다. [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 입력은 **고급 편집기** 대화 상자를 사용하여 구성됩니다. **고급 편집기** 에 대한 자세한 내용은 [Integration Services User Interface](../../integration-services/integration-services-user-interface.md)를 참조하십시오.  
   
-### <a name="outputs"></a>outputs  
+### <a name="outputs"></a>출력  
  원본 및 변환에는 항상 출력이 포함됩니다. 출력에는 데이터 흐름 구성 요소가 외부 열을 사용하도록 구성된 경우 이러한 외부 열을 참조할 수 있는 하나 이상의 출력 열이 포함됩니다. 출력은 데이터의 다운스트림 처리에 유용한 정보를 제공하도록 구성될 수 있습니다. 예를 들어 출력이 정렬되는지 여부를 나타낼 수 있습니다. 또한 출력에 대한 설명을 제공하거나 출력 이름을 업데이트할 수 있습니다. [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 출력은 **고급 편집기** 대화 상자를 사용하여 구성됩니다.  
   
 ### <a name="error-outputs"></a>오류 출력  

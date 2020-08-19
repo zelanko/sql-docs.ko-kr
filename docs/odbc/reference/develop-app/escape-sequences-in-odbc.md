@@ -1,4 +1,5 @@
 ---
+description: ODBC의 이스케이프 시퀀스
 title: ODBC의 이스케이프 시퀀스 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: cf229f21-6c38-4b5b-aca8-f1be0dfeb3d0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4d41b0c03ecbe6de63cba1a28a1f39f12a42dc86
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 62745b749870fa33151fc1a5f6bd3a1bfc344ad7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300423"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429315"
 ---
 # <a name="escape-sequences-in-odbc"></a>ODBC의 이스케이프 시퀀스
 외부 조인 및 스칼라 함수 호출과 같은 많은 언어 기능은 Dbms에서 일반적으로 구현 합니다. 그러나 이러한 기능에 대 한 구문은 표준 구문이 다양 한 표준 본문에서 정의 되는 경우에도 DBMS에 따라 달라 지는 경향이 있습니다. 따라서 ODBC는 다음과 같은 언어 기능에 대 한 표준 구문을 포함 하는 이스케이프 시퀀스를 정의 합니다.  
@@ -46,7 +47,7 @@ ms.locfileid: "81300423"
  이스케이프 시퀀스는 드라이버에 의해 인식 되 고 구문 분석 되어 이스케이프 시퀀스를 DBMS 별 문법으로 바꿉니다. 이스케이프 시퀀스 구문에 대 한 자세한 내용은 부록 C: SQL 문법의 [ODBC 이스케이프 시퀀스](../../../odbc/reference/appendixes/odbc-escape-sequences.md) 를 참조 하세요.  
   
 > [!NOTE]  
->  ODBC 2. *x*는 이스케이프 시퀀스의 표준 구문입니다. **-\*-(공급**업체 _-이름_**), 제품 (**_제품 이름_**)**_확장_ ** \*)--**  
+>  ODBC 2. *x*는 이스케이프 시퀀스의 표준 구문입니다. **--( \* 공급**업체 _-이름_**), 제품 (**_제품 이름_**)**_확장_ ** \* )--**  
 >   
 >  이 구문 외에도 줄임 구문은 **{**_extension_**}** 형식으로 정의 되었습니다.  
 >   

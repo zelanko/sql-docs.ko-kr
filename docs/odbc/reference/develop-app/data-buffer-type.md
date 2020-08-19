@@ -1,4 +1,5 @@
 ---
+description: 데이터 버퍼 형식
 title: 데이터 버퍼 유형 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 58bea3e9-d552-447f-b3ad-ce1dab213b72
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9b98ed2ab0865b98884f6dfa1ff20142540ff314
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a1a3edf66a8f3684fdf8389d16c08f62682907ca
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305249"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429355"
 ---
 # <a name="data-buffer-type"></a>데이터 버퍼 형식
 버퍼의 C 데이터 형식은 응용 프로그램에 의해 지정 됩니다. 단일 변수를 사용 하는 경우이는 응용 프로그램에서 변수를 할당할 때 발생 합니다. 일반 메모리, 즉 void 형식의 포인터가 가리키는 메모리-이는 응용 프로그램이 메모리를 특정 형식으로 캐스팅할 때 발생 합니다. 드라이버는 다음과 같은 두 가지 방법으로이 유형을 검색 합니다.  

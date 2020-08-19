@@ -1,4 +1,5 @@
 ---
+description: 대상 DBMS 및 드라이버 확인
 title: 대상 Dbms 및 드라이버 결정 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 23bee0f6-e12a-4598-b34e-df11a8086829
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f8811e4d289a8fc89c2c3773aab973df523025f5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8dfbc11e96577e9027d1cc6e17701a82b89061be
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305874"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429325"
 ---
 # <a name="determining-the-target-dbmss-and-drivers"></a>대상 DBMS 및 드라이버 확인
 고려할 다음 질문은, 응용 프로그램에 대 한 대상 Dbms 및 해당 Dbms를 지 원하는 사용 가능한 드라이버는 무엇 인가요? 제네릭 응용 프로그램의 상호 운용성이 매우 일반적 이기 때문에 대상 Dbms의 질문은 사용자 지정 및 수직 응용 프로그램에 가장 적합 합니다. 그러나 드라이버는 속도, 품질, 기능 지원 및 가용성에 따라 크게 달라 지므로 대상 드라이버의 질문은 모든 응용 프로그램에 적용 됩니다. 또한 응용 프로그램과 함께 드라이버를 재배포 하려면 라이선스 계획의 비용 및 가용성을 고려해 야 합니다.  

@@ -1,4 +1,5 @@
 ---
+description: 'SQL에서 C로: 타임스탬프'
 title: 'SQL에서 C로: 타임 스탬프 | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2019
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6a0617cf-d8c0-4316-8bb4-e6ddb45d7bf1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 552bab585e4480fd922c9b9a6b112830f5c11ad9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2a2904f01b5ecadbfc224d052366197e41163cd9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81296353"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429545"
 ---
 # <a name="sql-to-c-timestamp"></a>SQL에서 C로: 타임스탬프
 
@@ -50,4 +51,4 @@ Timestamp ODBC SQL 데이터 형식에 대 한 식별자는 다음과 같습니�
   
  [f] 해당 C 데이터 형식의 크기입니다.  
 
-Timestamp SQL 데이터가 문자 C 데이터로 변환 되는 경우 결과 문자열은 "*yyyy*-*mm*-*dd* *hh*:*mm*:*ss*[.* f ...*] " 형식. 소수 자릿수 초에는 최대 9 자리 숫자를 사용할 수 있습니다. 이 형식은 Windows® country 설정의 영향을 받지 않습니다. (소수점 및 소수 자릿수 초를 제외 하 고, timestamp SQL 데이터 형식의 전체 자릿수에 관계 없이 전체 형식을 사용 해야 합니다.)
+Timestamp SQL 데이터가 문자 C 데이터로 변환 되는 경우 결과 문자열은 "*yyyy* - *mm* - *dd* *hh*:*mm*:*ss*[.* f ...*] " 형식. 소수 자릿수 초에는 최대 9 자리 숫자를 사용할 수 있습니다. 이 형식은 Windows® country 설정의 영향을 받지 않습니다. (소수점 및 소수 자릿수 초를 제외 하 고, timestamp SQL 데이터 형식의 전체 자릿수에 관계 없이 전체 형식을 사용 해야 합니다.)

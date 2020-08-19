@@ -1,4 +1,5 @@
 ---
+description: SetPermissions 메서드(ADOX)
 title: SetPermissions 메서드 (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: b7f925d7-b05c-4376-bb49-f8d2c17b8b24
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4287e836dd46c579ee81a4baf0e175e8b49acf67
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: 3d5af996442e0451a80265b7fbd9fb31450f9475
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942641"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439525"
 ---
 # <a name="setpermissions-method-adox"></a>SetPermissions 메서드(ADOX)
 개체의 [그룹](../../../ado/reference/adox-api/group-object-adox.md) 또는 [사용자](../../../ado/reference/adox-api/user-object-adox.md) 에 대 한 사용 권한을 지정 합니다.  

@@ -1,4 +1,5 @@
 ---
+description: 대량 삽입 태스크
 title: 대량 삽입 태스크 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: c5166156-6b4c-4369-81ed-27c4ce7040ae
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 81ac32f8fff04a1a81d4397cc196c506eab164d2
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 1fc520e8c1f9044b86bea23ae226d14de4a3088e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923315"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88431065"
 ---
 # <a name="bulk-insert-task"></a>대량 삽입 태스크
 

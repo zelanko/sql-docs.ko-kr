@@ -1,4 +1,5 @@
 ---
+description: Query 메서드(RDS)
 title: Query 메서드 (RDS) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 20f2480f-3758-405d-a379-05a0dce74796
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b3025f37b47cd545e7e7cde127e96740077ab961
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: b4d883d9498622c5118ecfcaa418bd734e4356c9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82751492"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438865"
 ---
 # <a name="query-method-rds"></a>Query 메서드(RDS)
 는 유효한 SQL 쿼리 문자열을 사용 하 여 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)을 반환 합니다.  

@@ -1,4 +1,5 @@
 ---
+description: Indexes 컬렉션 속성, 메서드 및 이벤트
 title: Indexes 컬렉션 속성, 메서드 및 이벤트 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: b27b5c37-3db2-4831-a447-ee6442e24d87
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 769de1f1529555c539d43793dbcafb99bef01cbd
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: bcd274bd42235b489e017e7fd85bc3223008f57c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82746822"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439905"
 ---
 # <a name="indexes-collection-properties-methods-and-events"></a>Indexes 컬렉션 속성, 메서드 및 이벤트
 ## <a name="properties"></a>속성  

@@ -1,4 +1,5 @@
 ---
+description: SQL 속성
 title: SQL 속성 | Microsoft Docs
 ms.technology: connectivity
 ms.custom: ''
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e0dabf23-a159-4fe5-a962-3df544a21f5c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: eb860ed19386b73d90fc26dab8fa96f4b9672a73
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: c21e12d3601f40b1749067f04ce3d655ea0c1109
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82750726"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438605"
 ---
 # <a name="sql-property"></a>SQL 속성
 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)을 검색 하는 데 사용 되는 쿼리 문자열을 나타냅니다.  
@@ -37,7 +38,7 @@ Run time: DataControl.SQL = "QueryString"
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- *QueryString*  
+ *문자열*  
  유효한 SQL 데이터 요청을 포함 하는 **문자열** 값입니다.  
   
  *DataControl*  

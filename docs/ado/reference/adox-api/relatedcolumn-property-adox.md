@@ -1,4 +1,5 @@
 ---
+description: RelatedColumn 속성(ADOX)
 title: RelatedColumn 속성 (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 2f2ca019-c785-4c08-beb1-3a2d3b47823e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 666e18344a409ce66132108ef7de3afab82c2086
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: d59969ed52f7b26e1b104a8ee40ff3e16a49c4a1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82748545"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439575"
 ---
 # <a name="relatedcolumn-property-adox"></a>RelatedColumn 속성(ADOX)
 관련 테이블에 있는 ADOX (관련 [열 개체](../../../ado/reference/adox-api/column-object-adox.md) )의 이름을 나타냅니다 (키 열에만 해당).  

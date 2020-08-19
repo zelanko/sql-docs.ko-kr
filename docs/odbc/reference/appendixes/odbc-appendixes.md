@@ -1,4 +1,5 @@
 ---
+description: ODBC 부록
 title: ODBC 부록 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 3331aa89-24d0-4c0e-b377-c720c1107ad5
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 555dccd513c78c490eb647ea8227ed3843e8a4be
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c6439ecd5d19e4daf2eaf42009bae375bb9d20e7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299843"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429604"
 ---
 # <a name="odbc-appendixes"></a>ODBC 부록
 Microsoft ODBC 인터페이스와 관련 된 기술 세부 정보는 다음 부록에 포함 되어 있습니다.  

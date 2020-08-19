@@ -1,4 +1,5 @@
 ---
+description: Type 속성(테이블)(ADOX)
 title: Type 속성 (Table) (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7b6e14bb-fb69-4d74-aaca-f5d380f4d887
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 73035f65699f1a8e44ca55703ce88b7bfdf2b5dc
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 700be4586a1e7808113b6ff20bf5459af3cb1f81
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763244"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439425"
 ---
 # <a name="type-property-table-adox"></a>Type 속성(테이블)(ADOX)
 테이블의 유형을 나타냅니다.  

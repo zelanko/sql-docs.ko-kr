@@ -1,4 +1,5 @@
 ---
+description: SortOrderEnum
 title: SortOrderEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0b9d46e7-29d9-4ca1-a23a-056403106a71
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9fafb92dffa01e94a31a2301ac27bb055e98ef45
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: bd844ce2a7443180e9a16f3d3e7a392c09b7b8f2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762764"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439495"
 ---
 # <a name="sortorderenum"></a>SortOrderEnum
 인덱싱된 열에 대 한 정렬 순서를 지정 합니다.  

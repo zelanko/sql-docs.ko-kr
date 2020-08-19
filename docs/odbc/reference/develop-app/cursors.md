@@ -1,4 +1,5 @@
 ---
+description: 커서 (ODBC)
 title: 커서 (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 0b114352-3c63-4d33-9220-182ede90e4aa
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2457667e374587e5e91a4c758dfbe641a0b02f78
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 10dbd2517c29bcd02d1d39abe0b2caec1bf03312
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247123"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429405"
 ---
 # <a name="odbc-cursors"></a>ODBC 커서
 응용 프로그램은 *커서*를 사용 하 여 데이터를 인출 합니다. 커서는 결과 집합과 다릅니다. 결과 집합은 특정 검색 조건과 일치 하는 행 집합 이지만 커서는 응용 프로그램에 해당 행을 반환 하는 소프트웨어입니다. 데이터베이스에 적용 되는 이름 *커서* 는 컴퓨터 터미널의 깜박이는 커서에서 발생 했을 수 있습니다. 커서가 화면에서 현재 위치를 나타내고 입력 된 단어가 다음에 표시 되는 것 처럼 결과 집합의 커서는 결과 집합의 현재 위치 및 다음에 반환 되는 행을 나타냅니다.  

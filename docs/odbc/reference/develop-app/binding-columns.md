@@ -1,4 +1,5 @@
 ---
+description: 열 바인딩
 title: 열 바인딩 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c4407694-c8e1-4b0b-a39d-b007e6c3b54d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fca4cfb1455c91ca57f7b1769266e2040d6a3511
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8f3f02ec6487b34a6ca2c973c3115c3940ca8fa9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301824"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429435"
 ---
 # <a name="binding-columns"></a>열 바인딩
 데이터 원본에서 가져온 데이터는 응용 프로그램이이 목적을 위해 할당 한 변수의 응용 프로그램으로 반환 됩니다. 이 작업을 수행 하려면 응용 프로그램에서 이러한 변수를 결과 집합의 열에 연결 하거나 *바인딩해야*합니다. 개념적으로이 프로세스는 문 매개 변수에 응용 프로그램 변수를 바인딩하는 것과 같습니다. 응용 프로그램은 결과 집합 열에 변수를 바인딩할 때 해당 변수 주소, 데이터 형식 등을 드라이버에 설명 합니다. 드라이버는 해당 문에 대해 유지 관리 하는 구조에이 정보를 저장 하 고 정보를 사용 하 여 행이 인출 될 때 열에서 값을 반환 합니다.  

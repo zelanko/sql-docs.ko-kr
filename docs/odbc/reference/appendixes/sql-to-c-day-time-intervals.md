@@ -1,4 +1,5 @@
 ---
+description: 'SQL에서 C로: 날짜-시간 간격'
 title: 'SQL에서 C로: 날짜-시간 간격 | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2019
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8ea84d69-2292-4128-89a0-f184f68abb98
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1318da5285ba2384dd23e4c235e698aa72c7658e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f3c878434a6fc3b2dcbb8b09a4acfb41ecf44a84
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81296473"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429575"
 ---
 # <a name="sql-to-c-day-time-intervals"></a>SQL에서 C로: 날짜-시간 간격
 

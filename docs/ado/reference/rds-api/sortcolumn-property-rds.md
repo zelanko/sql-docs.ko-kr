@@ -1,4 +1,5 @@
 ---
+description: SortColumn 속성(RDS)
 title: SortColumn 속성 (RDS) | Microsoft Docs
 ms.technology: connectivity
 ms.custom: ''
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f6f80f67-f0fb-4e63-a5f5-8fdf312aac63
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 83975a46087f75d58be304c543f6e6a45b6db7e6
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 9e8ae929c5606de2a0f58981affb403948e81b4b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82750833"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438635"
 ---
 # <a name="sortcolumn-property-rds"></a>SortColumn 속성(RDS)
 레코드를 정렬 하는 기준이 되는 열을 나타냅니다.  

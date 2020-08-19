@@ -1,4 +1,5 @@
 ---
+description: DataFactory 개체(RDSServer) 속성, 메서드 및 이벤트
 title: RDSServer (DataFactory Object) 속성, 메서드 및 이벤트 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 36a1f49b-91f4-44f4-b6e2-52fc7ed06d7e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2ac5645910a4b5339e696d793c167222b80cc6c3
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: 43143be9bbe538059da8fac1bb44dedbb4b2ad64
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942857"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439115"
 ---
 # <a name="datafactory-object-rdsserver-properties-methods-and-events"></a>DataFactory 개체(RDSServer) 속성, 메서드 및 이벤트
 > [!IMPORTANT]

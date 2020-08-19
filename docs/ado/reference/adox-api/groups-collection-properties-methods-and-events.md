@@ -1,4 +1,5 @@
 ---
+description: Groups 컬렉션 속성, 메서드 및 이벤트
 title: 그룹 컬렉션 속성, 메서드 및 이벤트 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0776457f-bf78-4a79-96bf-a17136d45811
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 424a57e47b9e9f788126680a2090071f517abeeb
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 9489321120377a0ec5c53132a3e9b07224776e48
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761721"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439965"
 ---
 # <a name="groups-collection-properties-methods-and-events"></a>Groups 컬렉션 속성, 메서드 및 이벤트
 ## <a name="properties"></a>속성  

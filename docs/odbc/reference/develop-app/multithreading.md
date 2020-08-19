@@ -1,4 +1,5 @@
 ---
+description: 다중 스레딩
 title: 다중 스레딩 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: cdfebdf5-12ff-4e28-8055-41f49b77f664
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c10d1b401ac780d24184c4c2337199e99973e916
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 470a3d3a4d76ae038e3c80b9aa9b93dfd1d0ed79
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302420"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429245"
 ---
 # <a name="multithreading"></a>다중 스레딩
 다중 스레드 운영 체제에서 드라이버는 스레드로부터 안전 해야 합니다. 즉, 응용 프로그램에서 둘 이상의 스레드에서 동일한 핸들을 사용할 수 있어야 합니다. 이를 수행 하는 방법은 드라이버 마다 다르며, 두 개의 서로 다른 스레드에서 동일한 핸들을 동시에 사용 하려고 시도 하는 경우 드라이버에서 serialize 할 가능성이 높습니다.  

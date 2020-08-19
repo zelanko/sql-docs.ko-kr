@@ -1,4 +1,5 @@
 ---
+description: 'SQL에서 C로: 연-월 간격'
 title: 'SQL에서 C로: 년-월 간격 | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2019
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1233634b-8214-420f-b872-3b2630105ba4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ba79a4d6165a43676634a6b79db56b88f5bcc234
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 66134ca1dcd82fec5213f01ef33a1b5f050e8a8b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81296393"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429535"
 ---
 # <a name="sql-to-c-year-month-intervals"></a>SQL에서 C로: 연-월 간격
 

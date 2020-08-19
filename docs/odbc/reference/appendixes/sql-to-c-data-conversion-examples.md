@@ -1,4 +1,5 @@
 ---
+description: SQL에서 C로 데이터 변환 예제
 title: SQL에서 C로 데이터 변환 예제 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2019
@@ -13,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: 0190c76c-7f9b-42f4-be9d-cef7284840fd
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 96b10dd93c807aaa49a7e10e198f789fb47ccdeb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a7a3d70a6f74a814262ddad580b5e5a2b0d79927
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81296653"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429585"
 ---
 # <a name="sql-to-c-data-conversion-examples"></a>SQL에서 C로 데이터 변환 예제
 
 다음 표에 표시 된 예제에서는 드라이버가 SQL 데이터를 C 데이터로 변환 하는 방법을 보여 줍니다.  
   
-|SQL 유형<br /><br /> identifier|SQL data<br /><br /> value|C 형식<br /><br /> identifier|Buffer<br /><br /> length|**TargetValuePtr*|SQLSTATE|  
+|SQL 유형<br /><br /> identifier|SQL data<br /><br /> 값|C 형식<br /><br /> identifier|Buffer<br /><br /> length|**TargetValuePtr*|SQLSTATE|  
 |-----------------------------|------------------------|---------------------------|-----------------------|------------------------|--------------|  
 |SQL_CHAR|abcdef|SQL_C_CHAR|7|abcdef\0 [a]|해당 없음|  
 |SQL_CHAR|abcdef|SQL_C_CHAR|6|abcde\0 [a]|01004|  

@@ -1,4 +1,5 @@
 ---
+description: 데이터 형식 변환
 title: 데이터 형식 변환 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d311fe1c-d882-4136-9fa5-220a4121e04c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: cd888fe32692494e2b0ceadc1ed872dd96e244a9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 92c31cb12c7bb02cf8e108251ae5ebd6f12aed5e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305215"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429345"
 ---
 # <a name="data-type-conversions"></a>데이터 형식 변환
 다음 중 한 가지 방법으로 데이터를 한 형식에서 다른 형식으로 변환할 수 있습니다. 데이터를 한 응용 프로그램 변수에서 다른 응용 프로그램 변수 (C에서 C로)로 전송 하는 경우, 응용 프로그램 변수의 데이터가 문 매개 변수 (C에서 SQL로)로 전송 되 고, 결과 집합 열의 데이터가 응용 프로그램 변수 (SQL에서 C로)로 전송 되는 경우 및 데이터 원본 열 간에 데이터가 전송 될 때 (SQL에서 sql로)  

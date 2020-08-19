@@ -1,4 +1,5 @@
 ---
+description: 블록 커서와 함께 사용하기 위해 열 바인딩
 title: 블록 커서에 사용할 열 바인딩 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 231beede-cdfa-4e28-8b10-2760b983250f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: bc7e527658a7d6945921510de898c648075c41fc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a58e6359bd7b0ad5d44f75a3d844ef2e9872f2a8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81284903"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429445"
 ---
 # <a name="binding-columns-for-use-with-block-cursors"></a>블록 커서와 함께 사용하기 위해 열 바인딩
 블록 커서는 여러 행을 반환 하므로이를 사용 하는 응용 프로그램은 단일 변수가 아니라 각 열에 변수 배열을 바인딩해야 합니다. 이러한 배열을 집합적으로 *행 집합 버퍼*라고 합니다. 바인딩의 두 가지 스타일은 다음과 같습니다.  

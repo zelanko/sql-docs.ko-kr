@@ -1,4 +1,5 @@
 ---
+description: 테이블 개체(ADOX)
 title: Table 개체 (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a6d74000-0828-49ba-850a-63da865f8802
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bcebe14b7b989e584539dd3f92fd8ea676ebd48a
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: c9bbf6a33eeb76f406a6fd6dc87ef591a3d4f12a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763304"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439485"
 ---
 # <a name="table-object-adox"></a>테이블 개체(ADOX)
 열, 인덱스 및 키를 포함 하는 데이터베이스 테이블을 나타냅니다.  

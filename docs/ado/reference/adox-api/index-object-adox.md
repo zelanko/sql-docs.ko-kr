@@ -1,4 +1,5 @@
 ---
+description: 인덱스 개체(ADOX)
 title: Index 개체 (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6b9578c0-bc94-46b9-b801-c18e14b04b31
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 840484cbfcb1feeb56022835b6c1b3157101edb8
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 81f0bf8d07bbb89105a0ceab421d8433d52f1672
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763884"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439945"
 ---
 # <a name="index-object-adox"></a>인덱스 개체(ADOX)
 데이터베이스 테이블의 인덱스를 나타냅니다.  

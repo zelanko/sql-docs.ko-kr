@@ -1,4 +1,5 @@
 ---
+description: IRDSService 인터페이스(RDS)
 title: IRDSService 인터페이스 (RDS) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 01044c3a-ed38-4144-bc43-fe38a6d22d04
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a1759596c515b3bb41d1f52a5e8b0577314495bb
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: f6d3c38bd6b694f0bd5a8540bcc51f56ace86de5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82751810"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438905"
 ---
 # <a name="irdsservice-interface-rds"></a>IRDSService 인터페이스(RDS)
 개체의 지원 되는 버전에서 요청 된 인터페이스에 대 한 포인터를 반환 하는 데 사용 되는 [InvokeService (RDS)](../../../ado/reference/rds-api/invokeservice-rds.md) 메서드를 노출 합니다.  

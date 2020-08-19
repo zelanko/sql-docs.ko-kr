@@ -1,4 +1,5 @@
 ---
+description: URL 속성 예제(VBScript)
 title: URL 속성 예제 (VBScript) | Microsoft Docs
 ms.technology: connectivity
 ms.custom: ''
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6ae5ac50-c88c-4262-b7ab-f2b3de382a0b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6bfe2b4ecedc43ef5b8a01706981fb0704605594
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 25a0460aa93c51f841719b1318e1413a2dcf0d99
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82750521"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438545"
 ---
 # <a name="url-property-example-vbscript"></a>URL 속성 예제(VBScript)
 > [!IMPORTANT]

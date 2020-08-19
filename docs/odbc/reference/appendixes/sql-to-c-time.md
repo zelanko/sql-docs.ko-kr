@@ -1,4 +1,5 @@
 ---
+description: 'SQL에서 C로: 시간'
 title: 'SQL에서 C로: 시간 | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6dc59973-7bb5-40f1-87c8-5bf68b3bf2ee
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ebd146abf650861099a40bf91b2641df768b343d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0516cc970238e9535c340c14282be1640ba78513
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81296383"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429555"
 ---
 # <a name="sql-to-c-time"></a>SQL에서 C로: 시간
 Time ODBC SQL 데이터 형식에 대 한 식별자는 다음과 같습니다.  
@@ -30,8 +31,8 @@ Time ODBC SQL 데이터 형식에 대 한 식별자는 다음과 같습니다.
   
 |C 형식 식별자|테스트|**TargetValuePtr*|**StrLen_or_IndPtr*|SQLSTATE|  
 |-----------------------|----------|------------------------|----------------------------|--------------|  
-|SQL_C_CHAR|*Bufferlength* > 문자 바이트 길이입니다.<br /><br /> *9* <= *bufferlength* <= 문자 바이트 길이<br /><br /> *Bufferlength* < 9|데이터<br /><br /> 잘린 데이터 [a]<br /><br /> 정의되지 않음|데이터의 길이 (바이트)<br /><br /> 데이터의 길이 (바이트)<br /><br /> 정의되지 않음|해당 없음<br /><br /> 01004<br /><br /> 22003|  
-|SQL_C_WCHAR|*Bufferlength* > 문자 길이입니다.<br /><br /> *9* <= *bufferlength* <= 문자 길이<br /><br /> *Bufferlength* < 9|데이터<br /><br /> 잘린 데이터 [a]<br /><br /> 정의되지 않음|데이터의 길이 (문자)<br /><br /> 데이터의 길이 (문자)<br /><br /> 정의되지 않음|해당 없음<br /><br /> 01004<br /><br /> 22003|  
+|SQL_C_CHAR|*Bufferlength* > 문자 바이트 길이입니다.<br /><br /> *9*  <=  *Bufferlength* <= 문자 바이트 길이<br /><br /> *Bufferlength* < 9|데이터<br /><br /> 잘린 데이터 [a]<br /><br /> 정의되지 않음|데이터의 길이 (바이트)<br /><br /> 데이터의 길이 (바이트)<br /><br /> 정의되지 않음|해당 없음<br /><br /> 01004<br /><br /> 22003|  
+|SQL_C_WCHAR|*Bufferlength* > 문자 길이입니다.<br /><br /> *9*  <=  *Bufferlength* <= 문자 길이<br /><br /> *Bufferlength* < 9|데이터<br /><br /> 잘린 데이터 [a]<br /><br /> 정의되지 않음|데이터의 길이 (문자)<br /><br /> 데이터의 길이 (문자)<br /><br /> 정의되지 않음|해당 없음<br /><br /> 01004<br /><br /> 22003|  
 |SQL_C_BINARY|데이터의 바이트 길이 <= *Bufferlength*<br /><br /> *Bufferlength* > 데이터의 바이트 길이|데이터<br /><br /> 정의되지 않음|데이터의 길이 (바이트)<br /><br /> 정의되지 않음|해당 없음<br /><br /> 22003|  
 |SQL_C_TYPE_TIME|없음 [b]|데이터|6 [d]|해당 없음|  
 |SQL_C_TYPE_TIMESTAMP|없음 [b]|데이터 [c]|16 [d]|해당 없음|  

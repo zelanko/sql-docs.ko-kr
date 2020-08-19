@@ -1,4 +1,5 @@
 ---
+description: Views Append 메서드 예제(VB)
 title: Views Append 메서드 예제 (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b5b4c082-ac29-4f49-a8b8-e21b554c9b0d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e9fe8ce0f7db1057bf31506478ee423907ac12bc
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: a481db1f6b185c082dc26cc8ede030938bbfce9b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82752995"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439325"
 ---
 # <a name="views-append-method-example-vb"></a>Views Append 메서드 예제(VB)
 다음 코드에서는 [Command](../../../ado/reference/ado-api/command-object-ado.md) 개체 및 [Views](../../../ado/reference/adox-api/views-collection-adox.md) collection [Append](../../../ado/reference/adox-api/append-method-adox-views.md) 메서드를 사용 하 여 기본 데이터 원본에 새 뷰를 만드는 방법을 보여 줍니다.  

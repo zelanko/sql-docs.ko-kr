@@ -1,4 +1,5 @@
 ---
+description: Visual C++의 RDS 코드 예제
 title: Visual C++ |의 RDS 코드 예제 Microsoft Docs
 ms.technology: connectivity
 ms.custom: ''
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 380264da-e6bb-418c-b4af-3c22d35644b8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 390f735cc85088e977f9176e6a91653f32f7d4db
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 122e6dc070565116bb6140464b33fdafdf4dc489
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82751234"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438825"
 ---
 # <a name="rds-code-examples-in-visual-c"></a>Visual C++의 RDS 코드 예제
 다음 코드 예제를 사용 하 여 Microsoft Visual C++에서 작성할 때 RDS 속성을 사용 하는 방법을 알아봅니다.  

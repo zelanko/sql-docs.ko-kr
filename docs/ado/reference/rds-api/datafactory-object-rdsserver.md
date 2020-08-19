@@ -1,4 +1,5 @@
 ---
+description: DataFactory 개체(RDSServer)
 title: DataFactory 개체 (RDSServer) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e75240c2-b749-471e-b6ea-98cae232efbe
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 38b07258488539638729c55cef65770b0788a1c8
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 8a27d7911b00e5172941245ef5dcd587345aa1fc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82752612"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439105"
 ---
 # <a name="datafactory-object-rdsserver"></a>DataFactory 개체(RDSServer)
 > [!IMPORTANT]
@@ -28,7 +29,7 @@ ms.locfileid: "82752612"
   
  DataFactory 개체는 클라이언트 요청을 수신 하는 서버 쪽 자동화 개체로 설계 **RDSServer.** 인터넷 구현에서이는 웹 서버에 상주 하며 ADISAPI 구성 요소에 의해 인스턴스화됩니다. **RDSServer** 개체는 지정 된 데이터 원본에 대 한 읽기 및 쓰기 권한을 제공 하지만 유효성 검사 또는 비즈니스 규칙 논리를 포함 하지 않습니다.  
   
- DataFactory와 RDS 모두에서 사용할 수 있는 메서드를 사용 하는 경우 **RDSServer** . [ DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) 개체, 원격 데이터 서비스는 RDS를 사용 합니다 **. **기본적으로는 DataControl 버전이 있습니다. 기본값은 기본 프로그래밍 시나리오를 가정 합니다. 여기서 **RDSServer는 DataFactory** 가 일반 서버 쪽 비즈니스 개체로 사용 됩니다.  
+ DataFactory와 RDS 모두에서 사용할 수 있는 메서드를 사용 하는 경우 **RDSServer** . [ DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) 개체, 원격 데이터 서비스는 RDS를 사용 합니다 **. ** 기본적으로는 DataControl 버전이 있습니다. 기본값은 기본 프로그래밍 시나리오를 가정 합니다. 여기서 **RDSServer는 DataFactory** 가 일반 서버 쪽 비즈니스 개체로 사용 됩니다.  
   
  웹 응용 프로그램에서 작업 관련 서버 쪽 처리를 처리 하 게 하려면 DataFactory를 사용자 지정 비즈니스 개체로 **RDSServer.**  
   

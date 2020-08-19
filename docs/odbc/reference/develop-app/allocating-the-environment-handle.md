@@ -1,4 +1,5 @@
 ---
+description: 환경 핸들 할당
 title: 환경 핸들을 할당 하는 중 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,19 +19,19 @@ helpviewer_keywords:
 ms.assetid: 77b5d1d6-7eb7-428d-bf75-a5c5a325d25c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e33b850b2786960a368720deaf89a2203c7dd159
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 390d7f4248d43e6fc6cb7910be5f42cb286f37e9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303006"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429455"
 ---
 # <a name="allocating-the-environment-handle"></a>환경 핸들 할당
 ODBC 응용 프로그램에 대 한 첫 번째 작업은 드라이버 관리자를 로드 하는 것입니다. 이 작업을 수행 하는 방법은 운영 체제에 따라 다릅니다. 예를 들어 Microsoft® Windows NT® Server/Windows 2000 Server, Windows NT Workstation/Windows 2000 Professional 또는 Microsoft Windows® 95/98를 실행 하는 컴퓨터에서 응용 프로그램은 드라이버 관리자 라이브러리에 연결 하거나 **LoadLibrary** 를 호출 하 여 드라이버 관리자 DLL을 로드 합니다.  
   
  응용 프로그램이 다른 ODBC 함수를 호출 하기 전에 수행 해야 하는 다음 작업은 ODBC 환경을 초기화 하 고 다음과 같이 환경 핸들을 할당 하는 것입니다.  
   
-1.  응용 프로그램은 SQLHENV 형식의 변수를 선언 합니다. 그런 다음 **SQLAllocHandle** 를 호출 하 고이 변수 및 SQL_HANDLE_ENV 옵션의 주소를 전달 합니다. 예를 들면 다음과 같습니다.  
+1.  응용 프로그램은 SQLHENV 형식의 변수를 선언 합니다. 그런 다음 **SQLAllocHandle** 를 호출 하 고이 변수 및 SQL_HANDLE_ENV 옵션의 주소를 전달 합니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.  
   
     ```  
     SQLHENV henv1;  

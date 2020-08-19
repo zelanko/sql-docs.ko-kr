@@ -1,4 +1,5 @@
 ---
+description: Cancel 코드 예제(VBScript)
 title: Cancel 메서드 예제 (VBScript) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4ade106d-063d-486e-bc4d-a1a6b6e0bea9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7c71b52508861560571131e812e14393b10339ea
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: ad6b7e95f654482e7026e288420d2ad10f36ab71
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82752905"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439265"
 ---
 # <a name="cancel-method-example-vbscript"></a>Cancel 코드 예제(VBScript)
 > [!IMPORTANT]

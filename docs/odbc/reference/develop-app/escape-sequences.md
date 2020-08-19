@@ -1,4 +1,5 @@
 ---
+description: 이스케이프 시퀀스
 title: 이스케이프 시퀀스 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5913abfa-d280-43e4-a2f1-05a924388bf9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 5d9589230183b198cb7d59cf9739dab75625441e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 15c06fc08d78422502b8aea87c40ee2821a9620f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298713"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429305"
 ---
 # <a name="escape-sequences"></a>이스케이프 시퀀스
 ODBC는 날짜, 시간, 타임 스탬프 및 날짜/시간 간격 리터럴, 스칼라 함수 호출 **(예: 조건자 이스케이프** 문자, 외부 조인 및 프로시저 호출)에 대 한 표준 문법을 포함 하는 이스케이프 시퀀스를 정의 합니다. 상호 운용 가능한 응용 프로그램은 가능 하면 항상 이러한 시퀀스를 사용 해야 합니다.  

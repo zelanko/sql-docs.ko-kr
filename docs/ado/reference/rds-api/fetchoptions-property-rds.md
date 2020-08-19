@@ -1,4 +1,5 @@
 ---
+description: FetchOptions 속성(RDS)
 title: FetchOptions 속성 (RDS) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7b2e254a-9354-4541-bc98-bb185276388f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 448dbb4d6c669f136c1d26b3730d16af2f0e8e17
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 2d00dd737f6b775d9d46bfb6af96a5ce76aa3a8e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82752135"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439025"
 ---
 # <a name="fetchoptions-property-rds"></a>FetchOptions 속성(RDS)
 비동기 인출의 유형을 나타냅니다.  

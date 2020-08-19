@@ -1,4 +1,5 @@
 ---
+description: ObjectTypeEnum
 title: ObjectTypeEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3fdecfca-aa91-4596-ad98-610f1b7f840b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fe7d97909a2d38e548a072245b08110b1d61eb3c
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: 22b2c36ab87079c7bc984606a36397a98ea67af7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86943165"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439755"
 ---
 # <a name="objecttypeenum"></a>ObjectTypeEnum
 사용 권한이 나 소유권을 설정할 데이터베이스 개체의 유형을 지정 합니다.  

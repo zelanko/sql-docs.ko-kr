@@ -1,4 +1,5 @@
 ---
+description: DataControl 개체(RDS)
 title: DataControl 개체 (RDS) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d85ea4fc-451c-436e-97b8-58f92b149dd0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7bc9482c6626de36d9e45b2a2968b504b0793746
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 6643fe176ef6281afa39845310812f5f6981d16b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82746117"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439145"
 ---
 # <a name="datacontrol-object-rds"></a>DataControl 개체(RDS)
 텍스트 상자, 표 형태 컨트롤 또는 콤보 상자와 같은 하나 이상의 컨트롤에 데이터 쿼리 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 을 바인딩하여 웹 페이지에 **레코드 집합** 데이터를 표시 합니다.  
@@ -46,12 +47,12 @@ ms.locfileid: "82746117"
 > [!NOTE]
 >  오류가 발생 [하는 경우 ](../../../ado/reference/rds-api/dataspace-object-rds.md) **합니다. DataControl** 개체가 로드 되지 않습니다. 올바른 클래스 ID를 사용 하 고 있는지 확인 하십시오. 이러한 개체의 클래스 Id는 1.0 및 1.1 버전에서 변경 되었습니다. 또한 **RDS DataControl** 개체를 사용 하는 경우에도 nullable 열을 설정 해야 합니다.  
   
- 기본적인 시나리오의 경우 RDS의 **SQL**, **Connect**및 **서버** 속성만 설정 해야 합니다 **. **기본 비즈니스 개체 [RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)를 자동으로 호출 하는 DataControl 개체입니다.  
+ 기본적인 시나리오의 경우 RDS의 **SQL**, **Connect**및 **서버** 속성만 설정 해야 합니다 **. ** 기본 비즈니스 개체 [RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)를 자동으로 호출 하는 DataControl 개체입니다.  
   
- RDS의 모든 속성 ** **사용자 지정 비즈니스 개체가 해당 기능을 대체할 수 있으므로 DataControl은 선택 사항입니다.  
+ RDS의 모든 속성 ** ** 사용자 지정 비즈니스 개체가 해당 기능을 대체할 수 있으므로 DataControl은 선택 사항입니다.  
   
 > [!NOTE]
->  여러 결과를 쿼리 하는 경우 첫 번째 [레코드](../../../ado/reference/ado-api/recordset-object-ado.md) 집합만 반환 됩니다. 여러 결과 집합이 필요한 경우에는 각각의 **DataControl**에 할당 합니다. 여러 결과에 대 한 쿼리의 예는 다음과 같습니다.`"Select * from Authors, Select * from Topics"`  
+>  여러 결과를 쿼리 하는 경우 첫 번째 [레코드](../../../ado/reference/ado-api/recordset-object-ado.md) 집합만 반환 됩니다. 여러 결과 집합이 필요한 경우에는 각각의 **DataControl**에 할당 합니다. 여러 결과에 대 한 쿼리의 예는 다음과 같습니다. `"Select * from Authors, Select * from Topics"`  
   
  RDS를 사용할 때 연결 문자열에 "DFMode = 20;"을 추가 **합니다. DataControl** 개체는 데이터를 업데이트할 때 서버 성능을 향상 시킬 수 있습니다. 이 설정을 사용 하는 경우 서버의 **RDSServer DataFactory** 개체는 리소스를 많이 사용 하는 모드를 사용 합니다. 그러나이 구성에서는 다음과 같은 기능을 사용할 수 없습니다.  
   
@@ -83,17 +84,17 @@ ms.locfileid: "82746117"
 </OBJECT>  
 ```  
   
- 하나의 **RDS를 사용 합니다. **단일 쿼리의 결과를 하나 이상의 시각적 컨트롤에 연결 하는 DataControl 개체입니다. 예를 들어 이름, 거주지, 생년월일, 연령 및 우선 순위 고객 상태와 같은 고객 데이터를 요청 하는 쿼리를 코딩 한다고 가정 합니다. 단일 RDS를 사용할 수 있습니다 **. **3 개의 개별 텍스트 상자에 고객의 이름, 나이 및 지역을 표시 하는 DataControl 개체입니다. 확인란의 우선 순위 고객 상태 표 컨트롤의 모든 데이터입니다.  
+ 하나의 **RDS를 사용 합니다. ** 단일 쿼리의 결과를 하나 이상의 시각적 컨트롤에 연결 하는 DataControl 개체입니다. 예를 들어 이름, 거주지, 생년월일, 연령 및 우선 순위 고객 상태와 같은 고객 데이터를 요청 하는 쿼리를 코딩 한다고 가정 합니다. 단일 RDS를 사용할 수 있습니다 **. ** 3 개의 개별 텍스트 상자에 고객의 이름, 나이 및 지역을 표시 하는 DataControl 개체입니다. 확인란의 우선 순위 고객 상태 표 컨트롤의 모든 데이터입니다.  
   
- 다른 **RDS를 사용 합니다. **여러 쿼리 결과를 다양 한 시각적 컨트롤에 연결 하는 DataControl 개체입니다. 예를 들어 하나의 쿼리를 사용 하 여 고객에 대 한 정보를 얻고 고객이 구매한 상품에 대 한 정보를 가져오는 두 번째 쿼리를 사용 한다고 가정 합니다. 첫 번째 쿼리 결과를 세 개의 텍스트 상자와 하나의 확인란으로 표시 하 고 두 번째 쿼리의 결과를 grid 컨트롤에 표시 하려고 합니다. 기본 비즈니스 개체 (**RDSServer. DataFactory**)를 사용 하는 경우 다음을 수행 해야 합니다.  
+ 다른 **RDS를 사용 합니다. ** 여러 쿼리 결과를 다양 한 시각적 컨트롤에 연결 하는 DataControl 개체입니다. 예를 들어 하나의 쿼리를 사용 하 여 고객에 대 한 정보를 얻고 고객이 구매한 상품에 대 한 정보를 가져오는 두 번째 쿼리를 사용 한다고 가정 합니다. 첫 번째 쿼리 결과를 세 개의 텍스트 상자와 하나의 확인란으로 표시 하 고 두 번째 쿼리의 결과를 grid 컨트롤에 표시 하려고 합니다. 기본 비즈니스 개체 (**RDSServer. DataFactory**)를 사용 하는 경우 다음을 수행 해야 합니다.  
   
--   두 개의 **RDS를 추가 합니다. **웹 페이지에 대 한 DataControl 개체  
+-   두 개의 **RDS를 추가 합니다. ** 웹 페이지에 대 한 DataControl 개체  
   
 -   두 RDS의 각 **SQL** 속성에 대해 하나씩, 두 개의 쿼리를 작성 **합니다. DataControl** 개체. **RDS 하나 DataControl** 개체는 고객 정보를 요청 하는 SQL 쿼리를 포함 합니다. 두 번째는 고객이 구매한 상품 목록을 요청 하는 쿼리를 포함 합니다.  
   
 -   각 바인딩된 컨트롤의 개체 태그에서 DATAFLD 값을 지정 하 여 각 시각적 컨트롤에 표시 하려는 데이터의 값을 설정 합니다.  
   
- RDS 수에 대 한 개수 제한은 없습니다 **. **단일 웹 페이지에서 개체 태그를 사용 하 여 포함할 수 있는 DataControl 개체입니다.  
+ RDS 수에 대 한 개수 제한은 없습니다 **. ** 단일 웹 페이지에서 개체 태그를 사용 하 여 포함할 수 있는 DataControl 개체입니다.  
   
  RDS를 정의할 때 ** DataControl** 개체 웹 페이지의 0이 아닌 **높이** 및 **너비** 값 (추가 공간이 포함 되지 않도록 하려면 1)을 사용 합니다.  
   

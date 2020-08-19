@@ -1,4 +1,5 @@
 ---
+description: 속성 개체(ADOX)
 title: Property 개체 (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6a56def6-dbe6-4ccc-a491-8d076889f019
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7f866b20bb8157239a6deb7fd37a1ec044e27479
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 5a836b5b0778aea77732036d1951db81aa790198
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82748564"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439605"
 ---
 # <a name="property-object-adox"></a>속성 개체(ADOX)
 ADOX 개체의 특징을 나타냅니다.  

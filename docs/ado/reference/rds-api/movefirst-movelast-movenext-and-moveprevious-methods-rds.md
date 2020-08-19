@@ -1,4 +1,5 @@
 ---
+description: MoveFirst, MoveLast, MoveNext 및 MovePrevious 메서드(RDS)
 title: MoveFirst, MoveLast, MoveNext 및 MovePrevious 메서드 (RDS) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 45c80bb5-136f-4204-9df2-78740fa55574
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 096ad338f1ec9f039a6c63366984aee4d891c202
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 6221a608bd247852ed16e1d82c1b8b5994b50fe8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82751593"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438885"
 ---
 # <a name="movefirst-movelast-movenext-and-moveprevious-methods-rds"></a>MoveFirst, MoveLast, MoveNext 및 MovePrevious 메서드(RDS)
 지정 된 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체에서 첫 번째, 마지막, 다음 또는 이전 레코드로 이동 합니다.  
@@ -41,7 +42,7 @@ DataControl.Recordset.{MoveFirst | MoveLast | MoveNext | MovePrevious}
  RDS를 나타내는 개체 변수입니다 [. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) 개체입니다.  
   
 ## <a name="remarks"></a>설명  
- RDS와 함께 **Move** 메서드를 사용할 수 있습니다 **. **웹 페이지에 있는 데이터 바인딩된 컨트롤의 데이터 레코드를 탐색 하는 DataControl 개체입니다. 예를 들어, RDS에 바인딩하여 **레코드 집합** 을 표로 표시 한다고 가정 **합니다. DataControl** 개체입니다. 그런 다음 사용자가 클릭 하 여 표시 된 **레코드 집합**에서 첫 번째, 마지막, 다음 또는 이전 레코드로 이동 하는 데 사용할 수 있는 첫 번째, 마지막, 다음 및 이전 단추를 포함할 수 있습니다. 이렇게 하려면 RDS의 **MoveFirst**, **MoveLast**, **MoveNext**및 **MovePrevious** 메서드를 호출 합니다 **. **각각의 첫 번째, 마지막, 다음 및 이전 단추에 대 한 onClick 프로시저의 DataControl 개체입니다. 주소록 [예제](../../../ado/guide/remote-data-service/address-book-navigation-buttons.md) 에서는이 작업을 수행 하는 방법을 보여 줍니다.  
+ RDS와 함께 **Move** 메서드를 사용할 수 있습니다 **. ** 웹 페이지에 있는 데이터 바인딩된 컨트롤의 데이터 레코드를 탐색 하는 DataControl 개체입니다. 예를 들어, RDS에 바인딩하여 **레코드 집합** 을 표로 표시 한다고 가정 **합니다. DataControl** 개체입니다. 그런 다음 사용자가 클릭 하 여 표시 된 **레코드 집합**에서 첫 번째, 마지막, 다음 또는 이전 레코드로 이동 하는 데 사용할 수 있는 첫 번째, 마지막, 다음 및 이전 단추를 포함할 수 있습니다. 이렇게 하려면 RDS의 **MoveFirst**, **MoveLast**, **MoveNext**및 **MovePrevious** 메서드를 호출 합니다 **. ** 각각의 첫 번째, 마지막, 다음 및 이전 단추에 대 한 onClick 프로시저의 DataControl 개체입니다. 주소록 [예제](../../../ado/guide/remote-data-service/address-book-navigation-buttons.md) 에서는이 작업을 수행 하는 방법을 보여 줍니다.  
   
 ## <a name="applies-to"></a>적용 대상  
  [DataControl 개체(RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  

@@ -1,4 +1,5 @@
 ---
+description: FilterCriterion 속성(RDS)
 title: FilterCriterion 속성 (RDS) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 24eb03ba-ccfd-4353-b6af-03586b2da6fd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 88e1bbdb45b48e42d69bd921384056089b3a2241
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: b1e2c46549f680e248d5734efa58d949d83f3800
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82752033"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438995"
 ---
 # <a name="filtercriterion-property-rds"></a>FilterCriterion 속성(RDS)
 필터 값에 사용할 평가 연산자를 나타냅니다.  
@@ -38,7 +39,7 @@ DataControl.FilterCriterion = String
  RDS를 나타내는 개체 변수입니다 [. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) 개체입니다.  
   
  *String*  
- 레코드에 대 한 [Filtervalue](../../../ado/reference/rds-api/filtervalue-property-rds.md) 의 평가 연산자를 지정 하는 **문자열** 값입니다. 다음 중 하나일 수 있습니다. <, \< =, >, >=, = 또는 <>.  
+ 레코드에 대 한 [Filtervalue](../../../ado/reference/rds-api/filtervalue-property-rds.md) 의 평가 연산자를 지정 하는 **문자열** 값입니다. 는 다음 중 하나일 수 있습니다. <, \<=, > , >=, = 또는 <>.  
   
 ## <a name="remarks"></a>설명  
  [Sortcolumn](../../../ado/reference/rds-api/sortcolumn-property-rds.md), [SortDirection](../../../ado/reference/rds-api/sortdirection-property-rds.md), [filtervalue](../../../ado/reference/rds-api/filtervalue-property-rds.md), **filtervalue**및 [filtervalue](../../../ado/reference/rds-api/filtercolumn-property-rds.md) 속성은 클라이언트 쪽 캐시에 정렬 및 필터링 기능을 제공 합니다. 정렬 기능은 한 열의 값으로 레코드를 정렬 합니다. 필터링 기능은 찾기 조건에 따라 레코드의 하위 집합을 표시 하는 반면 전체 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 은 캐시에 유지 됩니다. [Reset](../../../ado/reference/rds-api/reset-method-rds.md) 메서드는 조건을 실행 하 고 현재 **레코드 집합** 을 업데이트할 수 있는 **레코드 집합**으로 바꿉니다.  

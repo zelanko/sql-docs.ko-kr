@@ -1,4 +1,5 @@
 ---
+description: Handler 속성 예제(VC++)
 title: Handler 속성 예제 (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d046d89c-622b-48bc-9d30-f454c3e13595
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 16e94fad7c5dfc85fcde7d835363e800ab5d3f46
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 5a570727ef9bdee2ac1411a1594dae518dd4fe36
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82751973"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438965"
 ---
 # <a name="handler-property-example-vc"></a>Handler 속성 예제(VC++)
 > [!IMPORTANT]
@@ -27,7 +28,7 @@ ms.locfileid: "82751973"
   
  이 예제에서는 [RDS DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) 개체 [처리기](../../../ado/reference/rds-api/handler-property-rds.md) 속성을 보여 줍니다. 자세한 내용은 [DataFactory 사용자 지정](../../../ado/guide/remote-data-service/datafactory-customization.md) 을 참조 하세요.  
   
- 서버에 있는 매개 변수 파일 Msdfmap. ini의 다음 섹션을 가정 합니다.  
+ 서버에 있는 Msdfmap.ini 매개 변수 파일에서 다음 섹션을 가정 합니다.  
   
 ```  
 [connect AuthorDataBase]  
@@ -37,7 +38,7 @@ Connect="DSN=Pubs"
 SQL="SELECT * FROM Authors WHERE au_id = ?"  
 ```  
   
- 코드는 다음과 같습니다. [SQL](../../../ado/reference/rds-api/sql-property.md) 속성에 할당 되는 명령은 ***AuthorById*** 식별자와 일치 하 고 author Michael O'Leary에 대 한 행을 검색 합니다. 코드의 [Connect](../../../ado/reference/rds-api/connect-property-rds.md) 속성이 Northwind 데이터 원본을 지정 하는 경우에도 해당 데이터 원본을 Msdfmap. ini *연결* 섹션에서 덮어쓰게 됩니다. **DataControl** 개체 [레코드 집합](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md) 속성은 코딩 편의를 위해 연결 되지 않은 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체에만 할당 됩니다.  
+ 코드는 다음과 같습니다. [SQL](../../../ado/reference/rds-api/sql-property.md) 속성에 할당 되는 명령은 ***AuthorById*** 식별자와 일치 하 고 author Michael O'Leary에 대 한 행을 검색 합니다. 코드의 [connect](../../../ado/reference/rds-api/connect-property-rds.md) 속성이 Northwind 데이터 원본을 지정 하는 경우에도 해당 데이터 원본은 Msdfmap.ini *연결* 섹션에 의해 덮어쓰여집니다. **DataControl** 개체 [레코드 집합](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md) 속성은 코딩 편의를 위해 연결 되지 않은 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체에만 할당 됩니다.  
   
 ```  
 // BeginHandlerCpp.cpp  

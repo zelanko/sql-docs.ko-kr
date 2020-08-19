@@ -1,4 +1,5 @@
 ---
+description: 사용되지 않는 함수 매핑
 title: 사용 되지 않는 함수 매핑 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ee462617-1d79-4c88-afeb-b129cff34cc6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a4e89cd9281520e70ec5fb289c6050e77ec6194c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9c990646c54fd0d0698482c5f8dc3f87df80fe93
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299883"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429615"
 ---
 # <a name="mapping-deprecated-functions"></a>사용되지 않는 함수 매핑
 이 섹션 *에서는 odbc 2.X 드라이버 관리자* 가 사용 되지 않는 함수를 사용 하 여 odbc 2.x 응용 프로그램에서 사용 되는 odbc *3.x 드라이버의* 이전 버전과의 호환성을 보장 하는 방법을 설명 *합니다.* 드라이버 관리자는 응용 프로그램의 버전에 관계 없이이 매핑을 수행 합니다. *Odbc 3.x 드라이버에서* 호출 하는 경우 다음 목록의 *각 odbc 2.x 함수는* 해당 odbc 2.x 함수에 *매핑되므로 odbc 2.x 드라이버는* *odbc 2.x 함수를* 구현할 필요가 없습니다. *x 함수는* 다음과 같습니다.  

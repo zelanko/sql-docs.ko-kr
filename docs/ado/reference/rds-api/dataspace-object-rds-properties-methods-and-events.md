@@ -1,4 +1,5 @@
 ---
+description: DataSpace 개체(RDS) 속성, 메서드 및 이벤트
 title: RDS (공간 개체) 속성, 메서드 및 이벤트 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c4a1f2e7-19ff-465e-9d9a-275ac0f4dc6a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 232a15a757ebf058c714e2cabdf2899e486d9e88
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 78422a819254281bac5f8d83b8169cd77a0af140
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82752578"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439095"
 ---
 # <a name="dataspace-object-rds-properties-methods-and-events"></a>DataSpace 개체(RDS) 속성, 메서드 및 이벤트
 > [!IMPORTANT]

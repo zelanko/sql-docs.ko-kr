@@ -1,4 +1,5 @@
 ---
+description: Connect 속성(RDS)
 title: Connect 속성 (RDS) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: dbad5e77-b213-4eb8-aecf-d60f203fdb59
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0f89e1097565c5b9841db69ac44e13c8d7138e64
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: eb3b5e535d2f4b6f6e4777c8c3ac1bbaaa3381c1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82755582"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439215"
 ---
 # <a name="connect-property-rds"></a>Connect 속성(RDS)
 쿼리 및 업데이트 작업이 실행 되는 데이터베이스 이름을 나타냅니다.  

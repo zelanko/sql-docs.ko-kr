@@ -1,4 +1,5 @@
 ---
+description: ODBC 동적 커서
 title: ODBC 동적 커서 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: de709fd3-9eb2-44e1-a2f0-786e2b9602a6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f94b83ef1458cd9f8368d1bea3a39682bd80b1a2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 19ae15a211329e07fdab13a5b6ff40e210e97cb5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302325"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429195"
 ---
 # <a name="odbc-dynamic-cursors"></a>ODBC 동적 커서
 동적 커서는 동적 커서입니다. 커서를 연 후 결과 집합의 멤버 자격, 순서 및 값에 대 한 변경 내용을 검색할 수 있습니다. 예를 들어 동적 커서가 두 행을 페치하고 다른 애플리케이션이 해당 행 중 하나를 업데이트하고 다른 행을 삭제한다고 가정합니다. 그런 다음 동적 커서는 이러한 행을 다시 페치 시도 하지만 삭제 된 행을 찾지는 않지만 업데이트 된 행의 새 값을 반환 합니다.  

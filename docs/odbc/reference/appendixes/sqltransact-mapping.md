@@ -1,4 +1,5 @@
 ---
+description: SQLTransact 매핑
 title: SQLTransact 매핑 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8a01041f-3572-46f9-8213-b817f3cf929c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6aaa056fca860a70f81ad7c3a4cd8539512bc25d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cf1298c9881a207c21074e03e8b0597ab8f11448
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304884"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429504"
 ---
 # <a name="sqltransact-mapping"></a>SQLTransact 매핑
 **Sqltransact** 은 이제 **sqlendtran**로 대체 되었습니다. 두 함수 간의 주요 차이점은 **Sqlendtran** 에는 수행할 작업의 범위를 지정 하는 *HandleType*인수가 포함 되어 있다는 것입니다. *HandleType* 인수는 환경 또는 연결 핸들을 지정할 수 있습니다. **Sqltransact**에 대 한 다음 호출입니다.  

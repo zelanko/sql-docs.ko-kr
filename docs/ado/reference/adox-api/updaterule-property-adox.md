@@ -1,4 +1,5 @@
 ---
+description: UpdateRule 속성(ADOX)
 title: UpdateRule 속성 (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: f4e21060-40cb-4790-8611-4086a092dda2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8f0d47428eab3bfe0f18901d24de33fd7b25acb2
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: e8fba97eb12a79c20322f53dbd8574165dc3dee1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762724"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439405"
 ---
 # <a name="updaterule-property-adox"></a>UpdateRule 속성(ADOX)
 기본 [키](../../../ado/reference/adox-api/key-object-adox.md) 를 업데이트할 때 수행 되는 동작을 나타냅니다.  

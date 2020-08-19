@@ -1,4 +1,5 @@
 ---
+description: ReadyState 속성 예제(VBScript)
 title: ReadyState 속성 예제 (VBScript) | Microsoft Docs
 ms.technology: connectivity
 ms.custom: ''
@@ -14,20 +15,20 @@ helpviewer_keywords:
 ms.assetid: e3e18da4-0511-4ece-a35d-699978bc28c6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7a3d39355a95b46170ab3f7a5b24cd43582ecac3
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 46ebc9a3d7419912f4e0c7e43beb08d2db57c0af
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82755520"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438765"
 ---
 # <a name="readystate-property-example-vbscript"></a>ReadyState 속성 예제(VBScript)
 > [!IMPORTANT]
 >  Windows 8 및 Windows Server 2012부터 RDS 서버 구성 요소는 더 이상 Windows 운영 체제에 포함 되지 않습니다 (자세한 내용은 Windows 8 및 [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) 참조). 이후 버전의 Windows에서는 RDS 클라이언트 구성 요소가 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. RDS를 사용 하는 응용 프로그램은 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)로 마이그레이션해야 합니다.  
   
- 다음 예제에서는 RDS의 [ReadyState](../../../ado/reference/rds-api/readystate-property-rds.md) 속성을 읽는 방법을 보여 줍니다 [. ](../../../ado/reference/rds-api/datacontrol-object-rds.md)VBScript 코드의 런타임에는 DataControl 개체입니다. **ReadyState** 는 읽기 전용 속성입니다.  
+ 다음 예제에서는 RDS의 [ReadyState](../../../ado/reference/rds-api/readystate-property-rds.md) 속성을 읽는 방법을 보여 줍니다 [. ](../../../ado/reference/rds-api/datacontrol-object-rds.md) VBScript 코드의 런타임에는 DataControl 개체입니다. **ReadyState** 는 읽기 전용 속성입니다.  
   
- 이 예를 테스트 하려면이 코드를 잘라내어 \< 본문>와 \<> 태그 사이에 붙여넣고 **RDSReadySt**. **찾기** 를 사용 하 여 Adovbs 파일을 찾은 다음 사용 하려는 디렉터리에 배치 합니다. ASP 스크립트는 서버를 식별 합니다.  
+ 이 예를 테스트 하려면 \<Body> \</Body> 일반 HTML 문서의 및 태그 사이에이 코드를 잘라내어 붙여넣고 **RDSReadySt**로 이름을 다시 만듭니다. **찾기** 를 사용 하 여 Adovbs 파일을 찾은 다음 사용 하려는 디렉터리에 배치 합니다. ASP 스크립트는 서버를 식별 합니다.  
   
 ```  
 <!-- BeginReadyStateVBS -->  

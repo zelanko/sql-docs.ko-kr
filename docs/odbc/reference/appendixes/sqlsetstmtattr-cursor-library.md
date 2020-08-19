@@ -1,4 +1,5 @@
 ---
+description: SQLSetStmtAttr(커서 라이브러리)
 title: SQLSetStmtAttr (커서 라이브러리) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6018a733-c2c8-4047-92ec-92cf85031767
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 366af9f48f709ec7414c1efc43000f1b565ff6d6
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: 96466e354875224c05bef4c94d72249bad9a4cff
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87363445"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429496"
 ---
 # <a name="sqlsetstmtattr-cursor-library"></a>SQLSetStmtAttr(커서 라이브러리)
 > [!IMPORTANT]  

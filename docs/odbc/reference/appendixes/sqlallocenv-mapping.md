@@ -1,4 +1,5 @@
 ---
+description: SQLAllocEnv 매핑
 title: SQLAllocEnv 매핑 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4bb51845-ee91-4b97-9dd4-2fab977f2aec
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: cb26e3443fabda2d6490c071b1f2668895e66b8d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5783eaa717b5716dd6021f34b7a904ba3994759d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304044"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429515"
 ---
 # <a name="sqlallocenv-mapping"></a>SQLAllocEnv 매핑
 응용 *프로그램이 ODBC 3.x* 드라이버를 통해 **sqlallocenv** 를 호출 하면 **sqlallocenv**(*phenv*)에 대 한 호출이 다음과 같이 **SQLAllocHandle** 에 매핑됩니다.  

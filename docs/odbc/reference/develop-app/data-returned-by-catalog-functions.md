@@ -1,4 +1,5 @@
 ---
+description: 카탈로그 함수에 의해 반환된 데이터
 title: 카탈로그 함수에서 반환 된 데이터 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 399e1a64-8766-4c44-81ff-445399b7a1de
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a0d9b63de04f79fd95c1b06d8e84d85c6f4fea02
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4c42319520696060cd52c14c46f968badee27e20
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305234"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429365"
 ---
 # <a name="data-returned-by-catalog-functions"></a>카탈로그 함수에 의해 반환된 데이터
 각 카탈로그 함수는 데이터를 결과 집합으로 반환 합니다. 이 결과 집합은 다른 결과 집합과 다르지 않습니다. 일반적으로 드라이버에서 하드 코딩 되거나 데이터 원본의 프로시저에 저장 된 미리 정의 된 매개 변수가 있는 **SELECT** 문에서 생성 됩니다. 결과 집합에서 데이터를 검색 하는 방법에 대 한 자세한 내용은 [생성 된 결과 집합을](../../../odbc/reference/develop-app/was-a-result-set-created.md)참조 하세요.  

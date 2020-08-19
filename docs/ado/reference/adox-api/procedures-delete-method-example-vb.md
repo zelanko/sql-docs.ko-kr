@@ -1,4 +1,5 @@
 ---
+description: Procedures Delete 메서드 예제(VB)
 title: 프로시저 Delete 메서드 예제 (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 94f1ac93-e778-4a40-a85e-94bce5316ac7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d270dbc8bc14ba0ce5fdde9a5c964117856e8f51
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: c3f7d26eded130f22bda4f707f451ddf78c4b3d7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82748634"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439615"
 ---
 # <a name="procedures-delete-method-example-vb"></a>Procedures Delete 메서드 예제(VB)
 다음 코드에서는 프로시저 컬렉션의 [delete](../../../ado/reference/adox-api/delete-method-adox-collections.md) 메서드를 사용 하 [여 프로시저를](../../../ado/reference/adox-api/procedures-collection-adox.md) 삭제 하는 방법을 보여 줍니다.  

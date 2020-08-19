@@ -1,4 +1,5 @@
 ---
+description: 보기 개체(ADOX)
 title: View 개체 (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 653421ce-7b94-43d0-9bc6-4900f8f2af45
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b468ccc3edc4cc5453b4f08371cd2b4b962f0c72
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 3cc635db04358417948e709a4c47605fae17669b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82753190"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439365"
 ---
 # <a name="view-object-adox"></a>보기 개체(ADOX)
 레코드 또는 가상 테이블의 필터링 된 집합을 나타냅니다. ADO [명령](../../../ado/reference/ado-api/command-object-ado.md) 개체와 함께 사용 하는 경우 **뷰** 개체를 사용 하 여 뷰를 추가, 삭제 또는 수정할 수 있습니다.  

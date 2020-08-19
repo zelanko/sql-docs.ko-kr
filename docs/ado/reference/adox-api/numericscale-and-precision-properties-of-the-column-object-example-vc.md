@@ -1,4 +1,5 @@
 ---
+description: Column 개체의 NumericScale 및 Precision 속성 예제(VC++)
 title: 열 예제의 NumericScale 및 Precision 속성 (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 69653366-ebd7-4ff6-a654-761772223b0c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3acf3c8c8533d6ac1c803c5bb42acd530c0b0df2
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 44fa488fe5f35f5287511ab09d7c2bb22b0f2369
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763804"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439775"
 ---
 # <a name="numericscale-and-precision-properties-of-the-column-object-example-vc"></a>Column 개체의 NumericScale 및 Precision 속성 예제(VC++)
 이 예에서는 [Column](../../../ado/reference/adox-api/column-object-adox.md) 개체의 [NumericScale](../../../ado/reference/adox-api/numericscale-property-adox.md) 및 [Precision](../../../ado/reference/adox-api/precision-property-adox.md) 속성을 보여 줍니다. 이 코드는 *Northwind* 데이터베이스의 **Order Details** 테이블에 대 한 값을 표시 합니다.  

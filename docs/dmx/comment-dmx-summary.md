@@ -1,4 +1,5 @@
 ---
+description: --(주석) (DMX) 요약
 title: --(주석) (DMX) 요약 | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 4f0f01b0dc3550c6b09e6c2342232e6b7c7fac8f
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 260a3f5c8a6d1badb90349396db6f2b716380aa7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86969914"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88431095"
 ---
 # <a name="---comment-dmx-summary"></a>--(주석) (DMX) 요약
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -39,7 +40,7 @@ ms.locfileid: "86969914"
  DMX에서 다양 한 종류의 주석을 사용 하는 방법에 대 한 자세한 내용은 [dmx &#40;dmx&#41;](../dmx/comments-dmx.md)를 참조 하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [DMX&#41; &#40;DMX&#41;&#40;주석](../dmx/slash-star-comment-dmx.md)   
+ [DMX&#41; &#40;DMX&#41;&#40;주석 ](../dmx/slash-star-comment-dmx.md)   
  [&#41; &#40;DMX &#40;주석&#41;](../dmx/double-slash-comment-dmx.md)   
  [데이터 마이닝 확장 &#40;DMX&#41; 연산자 참조](../dmx/data-mining-extensions-dmx-operator-reference.md)   
  [&#40;DMX&#41;](../dmx/operators-dmx.md)  

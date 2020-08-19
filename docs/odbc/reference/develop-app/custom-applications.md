@@ -1,4 +1,5 @@
 ---
+description: 사용자 지정 애플리케이션
 title: 사용자 지정 응용 프로그램 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f28178d9-ecd6-4e8c-9644-9bb624999dcb
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: df00a748ee4d5e3a63b32c95449417a1057b58e1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 56829c72264ba128554af0534e8a6bfa16254142
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305284"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429395"
 ---
 # <a name="custom-applications"></a>사용자 지정 애플리케이션
 사용자 지정 응용 프로그램은 일반적으로 몇 가지 Dbms에 대해 특정 작업을 수행 합니다. 예를 들어 응용 프로그램은 단일 DBMS에서 데이터를 검색 하 고 보고서를 생성 하거나 여러 Dbms 간에 데이터를 전송할 수 있습니다. 이러한 응용 프로그램이 일반적으로 적용 되는 것은 응용 프로그램을 작성 하기 전에 이러한 Dbms를 알 수 있으며 응용 프로그램의 수명 동안 변경 될 가능성은 거의 없습니다.  

@@ -1,4 +1,5 @@
 ---
+description: RightsEnum
 title: RightsEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 55ee67c7-a583-42aa-849a-78264b4cb614
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b49fbddab49266ee5a5d530867c281e72878b6d7
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: ead66b4c3215ef0d7a42e8ec029e97502dac2f4f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86943025"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439555"
 ---
 # <a name="rightsenum"></a>RightsEnum
 개체의 그룹 또는 사용자에 대 한 권한 또는 사용 권한을 지정 합니다.  

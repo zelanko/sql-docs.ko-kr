@@ -1,4 +1,5 @@
 ---
+description: RDS 개체
 title: RDS 개체 | Microsoft Docs
 ms.technology: connectivity
 ms.custom: ''
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f2ac8b3b-f968-41c4-a504-7aee3538b7c7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7ba592cd0bb0dc10c094784fbb7d41585d5b6dd6
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: 477db26b27b0b6222da55585661db1dc37d64b82
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942295"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438785"
 ---
 # <a name="rds-objects"></a>RDS 개체
 > [!IMPORTANT]

@@ -1,4 +1,5 @@
 ---
+description: Execute 메서드(RDS)
 title: Execute 메서드 (RDS) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2d9c30e9-ab5b-4920-91b8-48454c2fb5d8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b4c44e48c46abab1cc15e3fbf90592414fad7c9c
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: c04f910aa169d346868b3fec2f1eccb2e381176e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82752673"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439085"
 ---
 # <a name="execute-method-rds"></a>Execute 메서드(RDS)
 요청을 실행 하 고 ADO 2.5 이상에서 사용할 ADO 레코드 집합을 만듭니다.  
@@ -40,10 +41,10 @@ object.Execute(ConnectionString As String, HandlerString As String, QueryString 
  *HandlerString*  
  이 실행에 사용할 처리기를 식별 하는 두 부분으로 구성 된 문자열입니다. 문자열에는 두 부분이 포함 됩니다. 첫 번째 부분에는 사용할 처리기의 이름 (ProgID)이 포함 되어 있습니다. 두 번째 부분은 처리기에 전달할 인수를 포함 합니다. 인수 문자열을 해석 하는 방법에 대 한 세부 정보는 각 처리기와 관련이 있습니다. 문자열의 첫 번째 인스턴스는 두 부분으로 구분 됩니다. 인수 문자열에는 추가 쉼표를 사용할 수 있습니다. 인수는 선택 사항입니다.  
   
- *QueryString*  
+ *문자열*  
  연결 문자열에서 식별 된 OLE DB 공급자가 지 원하는 명령 언어의 명령입니다. SQL 기반 공급자의 경우 *QueryString* 은 transact-sql 명령 문을 포함할 수 있지만 sql이 아닌 공급자 (예: MSDataShape)의 경우 쿼리 문이 아닐 수 있습니다 [!INCLUDE[tsql](../../../includes/tsql-md.md)] .  
   
- 처리기를 사용 하는 경우 처리기는 여기에 지정 된 값을 변경 하거나 바꿀 수 있습니다. 예를 들어 처리기는 일반적으로 *QueryString* 파일의 쿼리 문자열로 QueryString을 대체 합니다. 기본적으로 Msdfmap .ini 파일이 사용 됩니다.  
+ 처리기를 사용 하는 경우 처리기는 여기에 지정 된 값을 변경 하거나 바꿀 수 있습니다. 예를 들어 처리기는 일반적으로 *QueryString* 파일의 쿼리 문자열로 QueryString을 대체 합니다. 기본적으로 Msdfmap.ini 파일이 사용 됩니다.  
   
  *lFetchOptions*  
  비동기 인출의 유형을 나타냅니다.  
@@ -78,7 +79,7 @@ object.Execute(ConnectionString As String, HandlerString As String, QueryString 
  Execute에서 반환 된 정보 오류에 대 한 포인터입니다. NULL 인 경우에는 오류 정보가 반환 되지 않습니다.  
   
 ## <a name="remarks"></a>설명  
- *Handlerstring* 매개 변수는 null 일 수 있습니다. 이 경우에 발생 하는 상황은 RDS 서버를 구성 하는 방법에 따라 달라 집니다. "MSDFMAP. handler"의 처리기 문자열은 Microsoft에서 제공 하는 처리기 (Msdfmap .dll)를 사용 해야 함을 나타냅니다. "MASDFMAP, .sample"의 처리기 문자열은 Msdfmap .dll 처리기를 사용 해야 하며 "sample. .ini" 인수를 처리기에 전달 해야 함을 나타냅니다. MSDFMAP .dll은이 인수를 샘플 .ini를 사용 하 여 연결 및 쿼리 문자열을 확인 하는 방향으로 해석 합니다.  
+ *Handlerstring* 매개 변수는 null 일 수 있습니다. 이 경우에 발생 하는 상황은 RDS 서버를 구성 하는 방법에 따라 달라 집니다. "MSDFMAP. handler"의 처리기 문자열은 Microsoft에서 제공 하는 처리기 (Msdfmap.dll)를 사용 해야 함을 나타냅니다. "MASDFMAP sample.ini" 처리기 문자열은 Msdfmap.dll 처리기를 사용 해야 하며 "sample.ini" 인수를 처리기에 전달 해야 함을 나타냅니다. MSDFMAP.dll은 sample.ini를 사용 하 여 연결 및 쿼리 문자열을 확인 하는 방향으로 인수를 해석 합니다.  
   
 ## <a name="applies-to"></a>적용 대상  
  [DataFactory 개체(RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)

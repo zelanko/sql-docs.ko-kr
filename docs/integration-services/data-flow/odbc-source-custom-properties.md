@@ -1,4 +1,5 @@
 ---
+description: ODBC Source Custom Properties
 title: ODBC 원본 사용자 지정 속성 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 362bbcd8-b7b0-4bab-8afe-1212b2ad1af9
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9fa4300180e7d3c6c5f637b4e81d92d70cfd20dc
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c0c01d66062747788bd9bf05ca8cf06e8e5088a6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914749"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430765"
 ---
 # <a name="odbc-source-custom-properties"></a>ODBC Source Custom Properties
 

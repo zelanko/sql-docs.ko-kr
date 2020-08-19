@@ -1,4 +1,5 @@
 ---
+description: Execute21 메서드(RDS)
 title: Execute21 메서드 (RDS) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9f131c8d-1497-416d-8209-abb481c38f7b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3e7f006d0a833b8c370e6d80045a873c4ca2b16b
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 412401ba2b1d5a676b5f5172c59c6e4ffc5cce7e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82752633"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439055"
 ---
 # <a name="execute21-method-rds"></a>Execute21 메서드(RDS)
 요청을 실행 하 고 ADO 2.1에 사용할 ADO 레코드 집합을 만듭니다.  
@@ -40,10 +41,10 @@ object.Execute21(ConnectionString As String, HandlerString As String, QueryStrin
  *HandlerString*  
  문자열은이 실행에 사용할 처리기를 식별 합니다. 문자열에는 두 부분이 포함 됩니다. 첫 번째 부분에는 사용할 처리기의 이름 (ProgID)이 포함 되어 있습니다. 문자열의 두 번째 부분에는 처리기에 전달 될 인수가 들어 있습니다. 인수 문자열을 해석 하는 방법은 handler와 관련이 있습니다. 인수 문자열에 추가 쉼표를 포함할 수는 있지만 두 부분은 문자열에 있는 첫 번째 인스턴스의 쉼표로 구분 됩니다. 인수는 선택 사항입니다.  
   
- *QueryString*  
+ *문자열*  
  연결 문자열에서 식별 된 OLE DB 공급자가 지 원하는 명령 언어의 명령입니다. SQL 기반 공급자의 경우 명령 문이 포함 될 수 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 있지만 sql 이외의 공급자 (예: MSDataShape)의 경우 쿼리 문이 아닐 수 있습니다 [!INCLUDE[tsql](../../../includes/tsql-md.md)] .  
   
- 또한 처리기를 사용 하는 경우 처리기를 사용 하는 것이 좋습니다. 처리기는 여기에 지정 된 값을 변경 하거나 바꿀 수 있습니다. 예를 들어 처리기는 일반적으로 *QueryString* 파일의 쿼리 문자열로 QueryString을 대체 합니다. 기본적으로 Msdfmap .ini 파일이 사용 됩니다.  
+ 또한 처리기를 사용 하는 경우 처리기를 사용 하는 것이 좋습니다. 처리기는 여기에 지정 된 값을 변경 하거나 바꿀 수 있습니다. 예를 들어 처리기는 일반적으로 *QueryString* 파일의 쿼리 문자열로 QueryString을 대체 합니다. 기본적으로 Msdfmap.ini 파일이 사용 됩니다.  
   
  *lMarshalOptions*  
  반환 되는 행 집합/레코드 집합에 대 한 마샬링 옵션을 설정 하는 데 사용 됩니다.  
@@ -70,7 +71,7 @@ object.Execute21(ConnectionString As String, HandlerString As String, QueryStrin
  매개 변수 정의의 안전 배열을 포함 하는 variant입니다. *Lexecuteoptions*에 *GetInfo* 옵션이 지정 된 경우이 매개 변수는 OLE DB 공급자에서 가져온 매개 변수 정의를 반환 하는 데 사용 됩니다. 그렇지 않으면이 매개 변수는 비어 있을 수 있습니다.  
   
 ## <a name="remarks"></a>설명  
- *Handlerstring* 매개 변수는 null 일 수 있습니다. 이 경우에 발생 하는 작업은 RDS 서버를 구성 하는 방법에 따라 달라 집니다. "MSDFMAP. handler"의 처리기 문자열은 Microsoft에서 제공 하는 처리기 (Msdfmap .dll)를 사용 해야 함을 나타냅니다. "MASDFMAP, .sample"의 처리기 문자열은 Msdfmap .dll 처리기를 사용 해야 하며 "sample. .ini" 인수를 처리기에 전달 해야 함을 나타냅니다. MSDFMAP .dll은이 인수를 샘플 .ini를 사용 하 여 연결 및 쿼리 문자열을 확인 하는 방향으로 해석 합니다.  
+ *Handlerstring* 매개 변수는 null 일 수 있습니다. 이 경우에 발생 하는 작업은 RDS 서버를 구성 하는 방법에 따라 달라 집니다. "MSDFMAP. handler"의 처리기 문자열은 Microsoft에서 제공 하는 처리기 (Msdfmap.dll)를 사용 해야 함을 나타냅니다. "MASDFMAP sample.ini" 처리기 문자열은 Msdfmap.dll 처리기를 사용 해야 하며 "sample.ini" 인수를 처리기에 전달 해야 함을 나타냅니다. MSDFMAP.dll은 sample.ini를 사용 하 여 연결 및 쿼리 문자열을 확인 하는 방향으로 인수를 해석 합니다.  
   
 > [!NOTE]
 >  **Execute21** 메서드는 [EXECUTE 메서드 (RDS)](../../../ado/reference/rds-api/execute-method-rds.md)의 버전입니다. **Execute** 메서드를 사용 하 여 ADO 2.1와 통신 해야 하는 경우 대신 **Execute21** 메서드를 호출할 수 있습니다. ADO 2.5 이상에서 **Execute** 메서드의 기능은 ado 2.1에서 동일한 메서드에 제공 되는 기능의 상위 집합입니다.  

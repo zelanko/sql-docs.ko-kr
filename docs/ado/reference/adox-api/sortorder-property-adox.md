@@ -1,4 +1,5 @@
 ---
+description: SortOrder 속성(ADOX)
 title: SortOrder 속성 (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 04510b19-9cb2-4895-b23b-f7790123eb04
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2026bcae8e0923159f6fb1044ab379d439993400
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 7fdc1c5aad0b07f19dc3f1b98b58ca322f7ae577
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762794"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439515"
 ---
 # <a name="sortorder-property-adox"></a>SortOrder 속성(ADOX)
 열에 대 한 정렬 순서를 나타냅니다 (인덱스 열에만 해당).  
