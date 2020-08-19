@@ -1,4 +1,5 @@
 ---
+description: INDEXKEY_PROPERTY(Transact-SQL)
 title: INDEXKEY_PROPERTY(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 87c0c385-6b2d-4716-ac8c-a3ce6e8d89e9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 631a2380d8a491fd495e5d60d52284a476c9aab7
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 722e8b7d7e818cb4bd9225f83f65aeb8b0090798
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110952"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88364689"
 ---
 # <a name="indexkey_property-transact-sql"></a>INDEXKEY_PROPERTY(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -73,7 +74,7 @@ INDEXKEY_PROPERTY ( object_ID ,index_ID ,key_ID ,property )
   
  사용자는 소유하고 있거나 사용 권한을 부여 받은 보안 개체의 메타데이터만 볼 수 있습니다. 즉, 사용자가 개체에 대한 사용 권한이 없으면 INDEXKEY_PROPERTY와 같은 메타데이터 내보내기 기본 제공 함수가 NULL을 반환합니다. 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `1` 테이블의 인덱스 ID `1`과 키 열 `Production.Location`에 대해 두 속성이 반환됩니다.  
   
 ```sql  
@@ -96,7 +97,7 @@ Column ID   Asc or Desc order
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [INDEX_COL&#40;Transact-SQL&#41;](../../t-sql/functions/index-col-transact-sql.md)   
  [INDEXPROPERTY&#40;Transact-SQL&#41;](../../t-sql/functions/indexproperty-transact-sql.md)   
  [sys.objects&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   

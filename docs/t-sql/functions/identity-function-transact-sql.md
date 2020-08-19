@@ -1,4 +1,5 @@
 ---
+description: IDENTITY(함수)(Transact-SQL)
 title: IDENTITY (Function) (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: ebec77eb-fc02-4feb-b6c5-f0098d43ccb6
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: daf9effbc4c130b4783500014554c4512b6581d1
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 6f8cd22140dd78ace01d685498306885b0081f21
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113454"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88365239"
 ---
 # <a name="identity-function-transact-sql"></a>IDENTITY(함수)(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -79,8 +80,8 @@ FROM OldTable;
   
 ```  
   
-## <a name="examples"></a>예  
- 다음 예는 `Contact` 데이터베이스의 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 테이블에 있는 모든 행을 `NewContact`라는 새 테이블에 삽입합니다. IDENTITY 함수는 `NewContact` 테이블에서 ID를 1 대신 100부터 시작하는 데 사용됩니다.  
+## <a name="examples"></a>예제  
+ 다음 예는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 `Contact` 테이블에 있는 모든 행을 `NewContact`라는 새 테이블에 삽입합니다. IDENTITY 함수는 `NewContact` 테이블에서 ID를 1 대신 100부터 시작하는 데 사용됩니다.  
   
 ```  
 USE AdventureWorks2012;  

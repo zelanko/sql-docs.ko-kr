@@ -1,4 +1,5 @@
 ---
+description: INDEX_COL(Transact-SQL)
 title: INDEX_COL(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 4db1fb3b-e46f-43fb-b269-a5b6e8b39ed0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e6144ba5cf5848beef7960debaaed6e12014d31b
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 29f6feeb045e3c8418bfb63fd28e784113dc629f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110448"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88364929"
 ---
 # <a name="index_col-transact-sql"></a>INDEX_COL(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -69,7 +70,7 @@ INDEX_COL ( '[ database_name . [ schema_name ] .| schema_name ]
   
  사용자는 소유하고 있거나 사용 권한을 부여 받은 보안 개체의 메타데이터만 볼 수 있습니다. 즉, 사용자가 개체에 대한 사용 권한이 없으면 INDEX_COL과 같은 메타데이터 내보내기 기본 제공 함수가 NULL을 반환합니다. 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-using-index_col-to-return-an-index-column-name"></a>A. INDEX_COL을 사용하여 인덱스 열 이름 반환  
  다음 예에서는 `PK_SalesOrderDetail_SalesOrderID_LineNumber` 인덱스에 있는 2개의 키 열 이름을 반환합니다.  

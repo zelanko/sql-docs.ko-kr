@@ -1,4 +1,5 @@
 ---
+description: IDENT_INCR(Transact-SQL)
 title: IDENT_INCR(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: e13b491f-4f1f-4cb6-8b63-5084120f98cf
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 4835b3d7ad39ff94b6b5173bb6c4540062d5cb46
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 4e51aa371646a3f193576f27ab362c3ce66915fc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113473"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88365839"
 ---
 # <a name="ident_incr-transact-sql"></a>IDENT_INCR(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -53,7 +54,7 @@ IDENT_INCR ( 'table_or_view' )
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용자는 소유하거나 권한을 가진 보안 개체의 메타데이터만 볼 수 있습니다. 사용자 개체 권한이 없으면 IDENT_INCR과 같은 메타데이터 내보내기 기본 제공 함수가 NULL을 반환할 수 있습니다. 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-returning-the-increment-value-for-a-specified-table"></a>A. 지정된 테이블에서 증가값 반환  
  다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 `Person.Address` 테이블에 대한 증가값을 반환합니다.  

@@ -1,4 +1,5 @@
 ---
+description: '&#x40;&#x40;IDLE(Transact-SQL)'
 title: '@@IDLE(Transact-SQL) | Microsoft Docs'
 ms.custom: ''
 ms.date: 09/18/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 8f49c62a-8da5-4afd-a5eb-4df8ef8be755
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4e1ab7318c390a657111db96b0b2054c4b8b9d0c
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 373f01d1d381cccc32d7247c1d576630c9b0ba88
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112679"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88365539"
 ---
 # <a name="x40x40idle-transact-sql"></a>&#x40;&#x40;IDLE(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -52,7 +53,7 @@ ms.locfileid: "87112679"
 ## <a name="remarks"></a>설명  
  여러 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 통계를 포함한 보고서를 표시하려면 **sp_monitor**를 실행합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 시작 시간과 현재 시간 사이에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 유휴 상태였던 시간을 밀리초 수로 보여 줍니다. 값을 마이크로초로 변환할 때 산술 오버플로가 발생하지 않도록 값 중 하나를 `float` 데이터 형식으로 변환합니다.  
   
 ```  
@@ -73,6 +74,6 @@ Idle microseconds  as of
  [@@CPU_BUSY&#40;Transact-SQL&#41;](../../t-sql/functions/cpu-busy-transact-sql.md)   
  [sp_monitor&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md)   
  [@@IO_BUSY&#40;Transact-SQL&#41;](../../t-sql/functions/io-busy-transact-sql.md)   
- [시스템 통계 함수&#40;Transact-SQL&#41;](../../t-sql/functions/system-statistical-functions-transact-sql.md)  
+ [시스템 통계 함수 &#40;Transact-SQL&#41;](../../t-sql/functions/system-statistical-functions-transact-sql.md)  
   
   

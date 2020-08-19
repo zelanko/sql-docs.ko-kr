@@ -1,4 +1,5 @@
 ---
+description: ENCRYPTBYPASSPHRASE(Transact-SQL)
 title: ENCRYPTBYPASSPHRASE(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: f8dbb9e6-94d6-40d7-8b38-6833a409d597
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5fc109c89fb32e42c97b5454bd67d41238d63835
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: c73f2fac57dbb73ce95a734a8382b8a8f7568edd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112475"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88366039"
 ---
 # <a name="encryptbypassphrase-transact-sql"></a>ENCRYPTBYPASSPHRASE(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -52,7 +53,7 @@ EncryptByPassPhrase ( { 'passphrase' | @passphrase }
  @passphrase  
  대칭 키를 생성하는 데 사용할 전달 구가 들어 있는 **nvarchar**, **char**, **varchar**, **binary**, **varbinary** 또는 **nchar** 형식의 변수입니다.  
   
- *cleartext*  
+ *일반 텍스트(cleartext)*  
  암호화할 일반 텍스트입니다.  
   
  @cleartext  
@@ -78,7 +79,7 @@ EncryptByPassPhrase ( { 'passphrase' | @passphrase }
   
  이 함수는 암호 복잡성은 확인하지 않습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `SalesCreditCard` 테이블의 한 레코드를 업데이트하고 기본 키를 인증자로 사용하여 `CardNumber_EncryptedbyPassphrase` 열에 저장된 신용 카드 번호 값을 암호화합니다.  
   
 ```  
@@ -102,7 +103,7 @@ WHERE CreditCardID = '3681';
 GO  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [DECRYPTBYPASSPHRASE&#40;Transact-SQL&#41;](../../t-sql/functions/decryptbypassphrase-transact-sql.md)   
  [암호화 계층](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   

@@ -1,4 +1,5 @@
 ---
+description: JSON_VALUE(Transact-SQL)
 title: JSON_VALUE(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/03/2020
@@ -17,12 +18,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: jroth
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: 066ad2fde09d0e3f108c88cbe4fa6fe74882da03
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: f22175349162bac226d41f63ca66743de0668b6e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395682"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88364419"
 ---
 # <a name="json_value-transact-sql"></a>JSON_VALUE(Transact-SQL)
 
@@ -40,8 +41,6 @@ ms.locfileid: "87395682"
 JSON_VALUE ( expression , path )  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## <a name="arguments"></a>인수
 
  *expression*  
@@ -104,7 +103,7 @@ SET @jsonInfo=N'{
 |$.info.none|NULL|Error|속성이 없습니다.|  
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="example-1"></a>예 1
  다음 예에서는 쿼리 결과에서 JSON 속성 `town` 및 `state`의 값을 사용합니다. **JSON_VALUE**는 원본의 데이터 정렬을 유지하므로 결과의 정렬 순서는 `jsonInfo` 열의 데이터 정렬에 따라 다릅니다. 

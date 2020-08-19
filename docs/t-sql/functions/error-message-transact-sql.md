@@ -1,5 +1,6 @@
 ---
-title: ERROR_MESSAGE(Transact-SQL) | Microsoft Docs
+description: ERROR_MESSAGE(Transact-SQL)
+title: ERROR_MESSAGE(Transact-SQL)
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -22,12 +23,12 @@ ms.assetid: f32877a6-5f17-418c-a32c-5a1a344b3c45
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8a6eac4fa014241d99824ce90b13ca9877a36e4a
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 71a281b8af7d4532701a09cf1da274f523350f9f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111615"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88366149"
 ---
 # <a name="error_message-transact-sql"></a>ERROR_MESSAGE(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -41,13 +42,13 @@ ms.locfileid: "87111615"
 ```  
 ERROR_MESSAGE ( )   
 ```  
-  
+
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="return-types"></a>반환 형식
  **nvarchar(4000)**  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
 CATCH 블록에서 호출된 경우 `ERROR_MESSAGE`는 `CATCH` 블록을 실행시키는 오류 메시지의 전체 텍스트를 반환합니다. 이 텍스트는 대체 가능한 매개 변수(예를 들어 길이, 개체 이름 또는 시간)에 제공된 값을 포함합니다.  
   
 `ERROR_MESSAGE`는 CATCH 블록 범위 밖에서 호출된 경우 NULL을 반환합니다.  
@@ -59,7 +60,7 @@ CATCH 블록에서 호출된 경우 `ERROR_MESSAGE`는 `CATCH` 블록을 실행�
   
 중첩된 `CATCH` 블록에서 `ERROR_MESSAGE`는 해당 `CATCH` 블록을 참조한 `CATCH` 블록의 범위에 관련된 오류 메시지를 반환합니다. 예를 들어 외부 TRY...CATCH 구문의 `CATCH` 블록에는 내부 `TRY...CATCH` 구문이 있을 수 있습니다. 해당 내부 `CATCH` 블록 내에서 `ERROR_MESSAGE`는 내부 `CATCH` 블록을 호출한 오류에서 메시지를 반환합니다. `ERROR_MESSAGE`가 외부 `CATCH` 블록에서 실행되는 경우 해당 외부 `CATCH` 블록을 호출한 오류에서 메시지를 반환합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-using-error_message-in-a-catch-block"></a>A. CATCH 블록에서 ERROR_MESSAGE 사용  
 이 예에서는 0으로 나누기 오류를 일으키는 `SELECT` 문을 보여 줍니다. `CATCH` 블록은 오류 메시지를 반환합니다.  

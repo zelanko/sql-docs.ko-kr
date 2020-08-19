@@ -1,4 +1,5 @@
 ---
+description: IDENT_CURRENT(Transact-SQL)
 title: IDENT_CURRENT(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 21517ced-39f5-4cd8-8d9c-0a0b8aff554a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: a9eddcb219b8b9e8b8b83f0f9e951da1e9531303
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 7fffc7d4a09e29066942c321fc65b48202d247ba
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113480"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88365479"
 ---
 # <a name="ident_current-transact-sql"></a>IDENT_CURRENT(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -70,7 +71,7 @@ IDENT_CURRENT 값이 NULL인 경우(테이블에 행이 포함된 적이 없거�
 > [!IMPORTANT]
 > IDENT_CURRENT를 사용하여 다음에 생성되는 ID 값을 예측할 때는 유의하세요. 다른 세션에서 삽입 작업을 수행하므로 실제로 생성된 값은 IDENT_CURRENT에 IDENT_INCR을 더한 값과 다를 수 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-returning-the-last-identity-value-generated-for-a-specified-table"></a>A. 지정된 테이블에 대해 마지막으로 생성된 ID 값 반환  
  다음 예에서는 `Person.Address` 데이터베이스의 `AdventureWorks2012` 테이블에 대해 마지막으로 생성된 ID 값을 반환합니다.  

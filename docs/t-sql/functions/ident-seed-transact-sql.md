@@ -1,4 +1,5 @@
 ---
+description: IDENT_SEED(Transact-SQL)
 title: IDENT_SEED(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: e4cb8eb8-affb-4810-a8a9-0110af3c247a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 4682d0ecd3b1eeeac2b92d5e76beb0ca2355f3f4
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 1c8ddbf1bd14e246741639a7e9eb11f4175c14d5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113460"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88365249"
 ---
 # <a name="ident_seed-transact-sql"></a>IDENT_SEED(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -53,7 +54,7 @@ IDENT_SEED ( 'table_or_view' )
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용자는 소유하거나 권한이 부여된 보안 개체의 메타데이터만 볼 수 있습니다. 이 보안은 사용자가 개체에 대한 사용 권한이 없으면 IDENT_SEED와 같은 메타데이터 내보내기 기본 제공 함수가 NULL을 반환할 수 있음을 의미합니다. 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-returning-the-seed-value-from-a-specified-table"></a>A. 지정된 테이블에서 초기값 반환  
  다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 `Person.Address` 테이블에 대한 초기값을 반환합니다.  
