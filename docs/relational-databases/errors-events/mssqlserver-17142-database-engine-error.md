@@ -1,4 +1,5 @@
 ---
+description: MSSQLSERVER_17142
 title: MSSQLSERVER_17142 | Microsoft 문서
 ms.custom: ''
 ms.date: 04/04/2017
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 83a53507-ac76-4cb9-b116-daf6f42aea1f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: dd9f95d863c101b2b8bdc0d502fcafe5773d589f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 096f9bddf09b1bc34282ec2db4f422c35e21b92f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85780852"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88411249"
 ---
 # <a name="mssqlserver_17142"></a>MSSQLSERVER_17142
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

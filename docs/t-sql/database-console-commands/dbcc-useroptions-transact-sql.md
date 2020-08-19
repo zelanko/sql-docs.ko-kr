@@ -1,4 +1,5 @@
 ---
+description: DBCC USEROPTIONS(Transact-SQL)
 title: DBCC USEROPTIONS(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/14/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 565ab112-7af1-4c18-a579-07cdb332f539
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 6332051518af2bfeaf27a5db4a25f081c2a6286e
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 0b5e147a87e6559d1d3bd2782d46bf09a783297a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484193"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417559"
 ---
 # <a name="dbcc-useroptions-transact-sql"></a>DBCC USEROPTIONS(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -78,7 +79,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 ## <a name="permissions"></a>사용 권한  
 **public** 역할의 멤버 자격이 필요합니다.
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
 다음 예에서는 현재 연결에 설정된 SET 옵션을 반환합니다.
   
 ```sql  

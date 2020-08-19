@@ -1,4 +1,5 @@
 ---
+description: Sybase 용 SSMA의 새로운 GUI 기능 (SybaseToSQL)
 title: Sybase 용 SSMA의 새로운 GUI 기능 (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: d3c60e8c-f0a7-4590-8ece-c68ceaeaea4a
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 70074acc0f3d3d1a586303cc6f9fd39afb2a7ef0
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 3573e93126679b3d675ece84f216875c54dd5c1f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934625"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418299"
 ---
 # <a name="new-gui-features-in-ssma-for-sybase-sybasetosql"></a>Sybase 용 SSMA의 새로운 GUI 기능 (SybaseToSQL)
 이 장에서는 SSMA 사용자 인터페이스의 새로운 기능에 대해 설명 합니다.  

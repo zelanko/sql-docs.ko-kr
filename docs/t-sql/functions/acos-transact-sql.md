@@ -1,4 +1,5 @@
 ---
+description: ACOS(Transact-SQL)
 title: ACOS(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2017
@@ -20,12 +21,12 @@ ms.assetid: 4ec6b46e-9438-4f0f-8b96-461edd84280a
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3c7c8ebd6256980842ca85f10f200518fe0bac2a
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 16c6a83f914c577fd239f3c28b6d302dfb2523f9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113207"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417569"
 ---
 # <a name="acos-transact-sql"></a>ACOS(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -44,12 +45,12 @@ ACOS ( float_expression )
 
 ## <a name="arguments"></a>인수
 *float_expression*  
-[float](../../t-sql/language-elements/expressions-transact-sql.md) 형식 또는 float로 암시적으로 변환할 수 있는 형식의 **식**입니다. -1.00에서 1.00까지의 값만 유효합니다. 값이 이 범위를 벗어나면 NULL이 반환되고 ASIN에서 도메인 오류가 보고됩니다.
+**float** 형식 또는 float로 암시적으로 변환할 수 있는 형식의 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다. -1.00에서 1.00까지의 값만 유효합니다. 값이 이 범위를 벗어나면 NULL이 반환되고 ASIN에서 도메인 오류가 보고됩니다.
   
 ## <a name="return-types"></a>반환 형식  
 **float**
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
 이 예에서는 지정된 수의 `ACOS` 값을 반환합니다.
   
 ```sql

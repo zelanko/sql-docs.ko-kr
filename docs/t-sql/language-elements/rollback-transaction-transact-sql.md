@@ -1,4 +1,5 @@
 ---
+description: ROLLBACK TRANSACTION(Transact-SQL)
 title: ROLLBACK TRANSACTION(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/12/2017
@@ -25,12 +26,12 @@ ms.assetid: 6882c5bc-ff74-476a-984b-164aeb036c66
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9eb54f4ecc659a3691ee7ed27a3330be8481e9e4
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: ca35aa4105bf3d54a84457fb51b48e9fc269ef72
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394155"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417129"
 ---
 # <a name="rollback-transaction-transact-sql"></a>ROLLBACK TRANSACTION(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -53,7 +54,7 @@ ROLLBACK { TRAN | TRANSACTION }
 
 ## <a name="arguments"></a>인수
  *transaction_name*  
- BEGIN TRANSACTION에서 트랜잭션에 할당된 이름입니다. *transaction_name*은 식별자 규칙을 따라야 하지만, 트랜잭션 이름의 처음 32자만 사용됩니다. 트랜잭션을 중첩하는 경우 *transaction_name*은 가장 바깥쪽 BEGIN TRANSACTION 문의 이름이어야 합니다. *인스턴스에서 대/소문자를 구분하지 않는 경우에도*transaction_name[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]은 항상 대/소문자를 구분합니다.  
+ BEGIN TRANSACTION에서 트랜잭션에 할당된 이름입니다. *transaction_name*은 식별자 규칙을 따라야 하지만, 트랜잭션 이름의 처음 32자만 사용됩니다. 트랜잭션을 중첩하는 경우 *transaction_name*은 가장 바깥쪽 BEGIN TRANSACTION 문의 이름이어야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 대/소문자를 구분하지 않는 경우에도 *transaction_name*은 항상 대/소문자를 구분합니다.  
   
  **@** *tran_name_variable*  
  유효한 트랜잭션 이름이 포함된 사용자 정의 변수의 이름입니다. 변수는 **char**, **varchar**, **nchar** 또는 **nvarchar** 데이터 형식으로 선언해야 합니다.  
@@ -105,7 +106,7 @@ ROLLBACK { TRAN | TRANSACTION }
 ## <a name="permissions"></a>사용 권한  
  **public** 역할의 멤버 자격이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 명명된 트랜잭션을 롤백한 결과를 보여 줍니다. 테이블이 만들어지면 다음 명령문은 명명된 트랜잭션을 시작하고, 두 개의 행을 삽입한 다음, @TransactionName 변수에 명명된 트랜잭션을 롤백합니다. 명명된 트랜잭션 외부의 또 다른 명령문은 두 개의 행을 삽입합니다. 쿼리에서 이전 명령문의 결과를 반환합니다.   
   
 ```sql    

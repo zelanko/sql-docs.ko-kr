@@ -1,4 +1,5 @@
 ---
+description: DBCC CLONEDATABASE(Transact-SQL)
 title: DBCC CLONEDATABASE(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/23/2019
@@ -37,12 +38,12 @@ ms.assetid: ''
 author: bluefooted
 ms.author: pamela
 manager: amitban
-ms.openlocfilehash: 453d514ba879c4567d16cca0acafc793bf721f48
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: b273762ea8218106a35a23f02f95d1b156b50ae9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485064"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417679"
 ---
 # <a name="dbcc-clonedatabase-transact-sql"></a>DBCC CLONEDATABASE(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

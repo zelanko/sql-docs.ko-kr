@@ -1,4 +1,5 @@
 ---
+description: OPENQUERY(Transact-SQL)
 title: OPENQUERY(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: b805e976-f025-4be1-bcb0-3a57b0c57717
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 9f4a7ce873c59268255a3ecd073e49d53877f12c
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: fcabdb207b1e15994323731c30c1a3516222c899
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112875"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417219"
 ---
 # <a name="openquery-transact-sql"></a>OPENQUERY(Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -54,7 +55,7 @@ OPENQUERY ( linked_server ,'query' )
 ## <a name="remarks"></a>설명  
  OPENQUERY는 변수를 인수로 받아들이지 않습니다.  
   
- OPENQUERY는 연결된 서버에서 확장 저장 프로시저를 실행하는 데 사용할 수 없습니다. 그러나 확장 저장 프로시저는 네 부분으로 된 이름을 사용하여 연결된 서버에서 실행할 수 있습니다. 다음은 그 예입니다.  
+ OPENQUERY는 연결된 서버에서 확장 저장 프로시저를 실행하는 데 사용할 수 없습니다. 그러나 확장 저장 프로시저는 네 부분으로 된 이름을 사용하여 연결된 서버에서 실행할 수 있습니다. 예를 들면 다음과 같습니다.  
   
 ```sql  
 EXEC SeattleSales.master.dbo.xp_msver  

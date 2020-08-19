@@ -1,4 +1,5 @@
 ---
+description: RETURN(Transact-SQL)
 title: RETURN(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -24,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 1d9c8247-fd89-4544-be9c-01c95b745db0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 89ccceece9d5d84faaae9b63c6846bfbd351f666
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 6ea26a56bf28b555123bf456d607f79e7e443597
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915629"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417089"
 ---
 # <a name="return-transact-sql"></a>RETURN(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -62,7 +63,7 @@ RETURN [ integer_expression ]
   
  현재 프로시저를 실행한 일괄 처리나 프로시저에 있는 후속 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에 반환 상태 값을 포함시킬 수 있지만 `EXECUTE @return_status = <procedure_name>` 형식으로 입력해야 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-returning-from-a-procedure"></a>A. 프로시저에서 반환  
  다음 예에서는 `findjobs`를 실행할 때 매개 변수로 사용자 이름을 지정하지 않은 경우 `RETURN`으로 사용자의 화면에 메시지를 보낸 다음 프로시저를 종료하는 방법을 보여 줍니다. 사용자 이름을 지정하면 현재 데이터베이스에서 이 사용자가 만든 모든 개체 이름을 해당 시스템 테이블에서 가져옵니다.  

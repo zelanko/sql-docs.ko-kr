@@ -1,4 +1,5 @@
 ---
+description: 다른 서버에서 데이터베이스를 사용할 수 있도록 할 때 메타데이터 관리
 title: 다른 서버에서 데이터베이스를 사용할 수 있도록 할 때 메타데이터 관리
 ms.date: 06/03/2020
 ms.prod: sql
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - extended stored procedures [SQL Server], metadata
 - credentials [SQL Server], metadata
 - copying databases
-ms.openlocfilehash: 0d0a777b42bc601d2f656cfbf3c31d488a3732e0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3dc93671874de47f45bd26ae12fa9ded44c9a4fd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726453"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88412849"
 ---
 # <a name="manage-metadata-when-making-a-database-available-on-another-server"></a>다른 서버에서 데이터베이스를 사용할 수 있도록 할 때 메타데이터 관리
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -129,7 +130,7 @@ ms.locfileid: "85726453"
   
  서버 인스턴스에서 데이터베이스 마스터 키의 자동 암호 해독을 설정하기 위해 서비스 마스터 키를 사용하여 이 키의 복사본을 암호화합니다. 이 암호화된 복사본은 해당 데이터베이스와 **master**에 모두 저장됩니다. 일반적으로 **master** 에 저장된 복사본은 마스터 키가 변경될 때마다 자동으로 업데이트됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 먼저 인스턴스의 서비스 마스터 키로 데이터베이스 마스터 키의 암호를 해독하려고 시도합니다. 암호 해독에 실패하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 마스터 키가 필요한 데이터베이스와 패밀리 GUID가 동일한 마스터 키 자격 증명을 자격 증명 저장소에서 검색합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 암호 해독이 성공하거나 남은 자격 증명이 없을 때까지 일치하는 각 자격 증명을 사용하여 데이터베이스 마스터 키의 암호화를 해독하려고 시도합니다. 서비스 마스터 키를 사용하여 암호화되지 않은 마스터 키는 OPEN MASTER KEY 문과 암호를 사용하여 열어야 합니다.  
   
- 암호화된 데이터베이스를 복사 또는 복원하거나 새로운 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 연결할 때는 서비스 마스터 키로 암호화된 데이터베이스 마스터 키의 복사본이 대상 서버 인스턴스의 **master** 에 저장되지 않습니다. 대상 서버 인스턴스에서 해당 데이터베이스의 마스터 키를 열어야 합니다. 마스터 키를 열려면 OPEN MASTER KEY DECRYPTION BY PASSWORD **='**_password_**'** 문을 실행합니다. 그런 다음, ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY 문을 실행하여 데이터베이스 마스터 키의 자동 암호 해독을 설정하는 것이 좋습니다. 이 ALTER MASTER KEY 문은 서비스 마스터 키로 암호화된 데이터베이스 마스터 키의 복사본을 서버 인스턴스에 제공합니다. 자세한 내용은 [OPEN MASTER KEY&#40;Transact-SQL&#41;](../../t-sql/statements/open-master-key-transact-sql.md) 및 [ALTER MASTER KEY&#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md)를 참조하세요.  
+ 암호화된 데이터베이스를 복사 또는 복원하거나 새로운 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 연결할 때는 서비스 마스터 키로 암호화된 데이터베이스 마스터 키의 복사본이 대상 서버 인스턴스의 **master** 에 저장되지 않습니다. 대상 서버 인스턴스에서 해당 데이터베이스의 마스터 키를 열어야 합니다. 마스터 키를 열려면 OPEN MASTER KEY DECRYPTION BY PASSWORD **='** _password_ **'** 문을 실행합니다. 그런 다음 ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY 문을 실행하여 데이터베이스 마스터 키의 자동 암호 해독을 설정하는 것이 좋습니다. 이 ALTER MASTER KEY 문은 서비스 마스터 키로 암호화된 데이터베이스 마스터 키의 복사본을 서버 인스턴스에 제공합니다. 자세한 내용은 [OPEN MASTER KEY&#40;Transact-SQL&#41;](../../t-sql/statements/open-master-key-transact-sql.md) 및 [ALTER MASTER KEY&#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md)를 참조하세요.  
   
  미러 데이터베이스의 데이터베이스 마스터 키 자동 암호 해독을 설정하는 방법은 [암호화된 미러 데이터베이스 설정](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md)을 참조하세요.  
   
@@ -193,7 +194,7 @@ ms.locfileid: "85726453"
   
  또한 원래 서버 인스턴스와 대상 서버 인스턴스에 있는 [단어 분리기 및 형태소 분석기](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md) 구성 요소 또는 [전체 텍스트 검색 필터](../../relational-databases/search/configure-and-manage-filters-for-search.md) 구성 요소의 버전이 서로 다르면 전체 텍스트 인덱스 및 쿼리가 다르게 동작할 수 있습니다. 또한 [동의어 사전](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md) 은 인스턴스별 파일에 저장됩니다. 이러한 파일의 복사본을 대상 서버 인스턴스의 해당 위치로 전송하거나 새 인스턴스에서 다시 만들어야 합니다.  
   
-> **참고:** [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 서버 인스턴스에 전체 텍스트 카탈로그 파일이 포함된 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 데이터베이스를 연결할 경우 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서와 같이 다른 데이터베이스 파일과 함께 이전 위치에서 카탈로그 파일이 연결됩니다. 자세한 내용은 [전체 텍스트 검색 업그레이드](../../relational-databases/search/upgrade-full-text-search.md)를 참조하세요.  
+> **참고:**[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 서버 인스턴스에 전체 텍스트 카탈로그 파일이 포함된 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 데이터베이스를 연결할 경우 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서와 같이 다른 데이터베이스 파일과 함께 이전 위치에서 카탈로그 파일이 연결됩니다. 자세한 내용은 [전체 텍스트 검색 업그레이드](../../relational-databases/search/upgrade-full-text-search.md)를 참조하세요.  
   
  자세한 내용은 다음 항목을 참조하십시오.  
   
@@ -242,7 +243,7 @@ ms.locfileid: "85726453"
   
 -   [sp_help_job&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)  
   
--   [작업 단계 정보 보기](../../ssms/agent/view-job-step-information.md)  
+-   [View Job Step Information](../../ssms/agent/view-job-step-information.md)  
   
 -   [dbo.sysjobs&#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysjobs-transact-sql.md)  
   

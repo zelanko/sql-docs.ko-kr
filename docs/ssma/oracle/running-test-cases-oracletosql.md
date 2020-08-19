@@ -1,4 +1,5 @@
 ---
+description: 테스트 사례 실행(OracleToSQL)
 title: 테스트 사례 실행 (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -10,12 +11,12 @@ ms.assetid: fc208cdb-7373-4f6b-8f6c-cdff9d3dcd02
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 429ad47c63393696492d8eb22919749ed03cd71b
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 9d44b04aba4d1ea1fa437bbd3b957178b361a4db
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87933054"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418439"
 ---
 # <a name="running-test-cases-oracletosql"></a>테스트 사례 실행(OracleToSQL)
 SSMA 테스터는 테스트 사례를 실행할 때 테스트를 위해 선택한 개체를 실행 하 고 확인 결과에 대 한 보고서를 만듭니다. 두 플랫폼에서 결과가 동일 하면 테스트에 성공 했습니다. Oracle과 간의 개체 대응은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 현재 SSMA 프로젝트의 스키마 매핑 설정에 따라 결정 됩니다.  
@@ -33,7 +34,7 @@ SSMA 테스터는 테스트 사례를 실행할 때 테스트를 위해 선택�
   
 ## <a name="test-case-execution-steps"></a>테스트 사례 실행 단계  
   
-### <a name="prerequisites"></a>필수 구성 요소  
+### <a name="prerequisites"></a>사전 요구 사항  
 SSMA 테스터는 테스트를 시작 하기 전에 테스트 실행에 대해 모든 필수 구성 요소가 충족 되는지 확인 합니다. 일부 조건이 충족 되지 않으면 오류 메시지가 나타납니다.  
   
 ### <a name="initialization"></a>초기화  
@@ -75,10 +76,10 @@ Ssmatesterdb 데이터베이스의에서 다음 개체가 만들어집니다 [!I
 종료 하는 동안에는 **초기화** 단계에서 생성 된 보조 개체를 정리 합니다.  
   
 ## <a name="next-step"></a>다음 단계  
-[OracleToSQL&#41;&#40;테스트 사례 보고서 보기](../../ssma/oracle/viewing-test-case-reports-oracletosql.md)  
+[OracleToSQL&#41;&#40;테스트 사례 보고서 보기 ](../../ssma/oracle/viewing-test-case-reports-oracletosql.md)  
   
 ## <a name="see-also"></a>참고 항목  
-[OracleToSQL&#41;&#40;테스트할 개체 선택 및 구성](../../ssma/oracle/selecting-and-configuring-objects-to-test-oracletosql.md)  
+[OracleToSQL&#41;&#40;테스트할 개체 선택 및 구성 ](../../ssma/oracle/selecting-and-configuring-objects-to-test-oracletosql.md)  
 [영향을 받는 개체 선택 및 구성 &#40;OracleToSQL&#41;](../../ssma/oracle/selecting-and-configuring-affected-objects-oracletosql.md)  
-[OracleToSQL&#41;&#40;마이그레이션된 데이터베이스 개체 테스트](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
+[OracleToSQL&#41;&#40;마이그레이션된 데이터베이스 개체 테스트 ](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
   

@@ -1,4 +1,5 @@
 ---
+description: master 데이터베이스
 title: master 데이터베이스 | Microsoft 문서
 ms.custom: ''
 ms.date: 01/28/2019
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 660e909f-61eb-406b-bbce-8864dd629ba0
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: e313c18ef81f298a7ebd802bcf2b2cc0f69a09dc
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 7be82eb5eaa61307cd5421033adc1634de9a946b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87863343"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88411369"
 ---
 # <a name="master-database"></a>master 데이터베이스
 
@@ -52,32 +53,32 @@ ms.locfileid: "87863343"
 |데이터베이스 옵션|기본값|수정 가능|  
 |---------------------|-------------------|---------------------|  
 |ALLOW_SNAPSHOT_ISOLATION|켜기|예|  
-|ANSI_NULL_DEFAULT|OFF|yes|  
-|ANSI_NULLS|OFF|yes|  
-|ANSI_PADDING|OFF|yes|  
-|ANSI_WARNINGS|OFF|yes|  
-|ARITHABORT|OFF|yes|  
+|ANSI_NULL_DEFAULT|OFF|예|  
+|ANSI_NULLS|OFF|예|  
+|ANSI_PADDING|OFF|예|  
+|ANSI_WARNINGS|OFF|예|  
+|ARITHABORT|OFF|예|  
 |AUTO_CLOSE|OFF|예|  
-|AUTO_CREATE_STATISTICS|켜기|yes|  
+|AUTO_CREATE_STATISTICS|켜기|예|  
 |AUTO_SHRINK|OFF|예|  
-|AUTO_UPDATE_STATISTICS|켜기|yes|  
-|AUTO_UPDATE_STATISTICS_ASYNC|OFF|yes|  
+|AUTO_UPDATE_STATISTICS|켜기|예|  
+|AUTO_UPDATE_STATISTICS_ASYNC|OFF|예|  
 |CHANGE_TRACKING|OFF|예|  
-|CONCAT_NULL_YIELDS_NULL|OFF|yes|  
-|CURSOR_CLOSE_ON_COMMIT|OFF|yes|  
-|CURSOR_DEFAULT|GLOBAL|yes|  
+|CONCAT_NULL_YIELDS_NULL|OFF|예|  
+|CURSOR_CLOSE_ON_COMMIT|OFF|예|  
+|CURSOR_DEFAULT|GLOBAL|예|  
 |데이터베이스 가용성 옵션|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|예<br /><br /> 예<br /><br /> 예|  
-|DATE_CORRELATION_OPTIMIZATION|OFF|yes|  
+|DATE_CORRELATION_OPTIMIZATION|OFF|예|  
 |DB_CHAINING|켜기|예|  
 |ENCRYPTION|OFF|예|  
 |MIXED_PAGE_ALLOCATION|켜기|예|  
-|NUMERIC_ROUNDABORT|OFF|yes|  
+|NUMERIC_ROUNDABORT|OFF|예|  
 |PAGE_VERIFY|CHECKSUM|yes|  
-|PARAMETERIZATION|SIMPLE|yes|  
-|QUOTED_IDENTIFIER|OFF|yes|  
+|PARAMETERIZATION|SIMPLE|예|  
+|QUOTED_IDENTIFIER|OFF|예|  
 |READ_COMMITTED_SNAPSHOT|OFF|예|  
 |RECOVERY|SIMPLE|yes|  
-|RECURSIVE_TRIGGERS|OFF|yes|  
+|RECURSIVE_TRIGGERS|OFF|예|  
 |Service Broker 옵션|DISABLE_BROKER|예|  
 |TRUSTWORTHY|OFF|yes|  
   

@@ -1,4 +1,5 @@
 ---
+description: DECRYPTBYKEYAUTOCERT(Transact-SQL)
 title: DECRYPTBYKEYAUTOCERT(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/09/2015
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6b45fa2e-ffaa-46f7-86ff-5624596eda4a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 34a6cda1b3c783b13feace96200a601a1f0de074
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 73aa01ab2817f9435791af4f2bb01ae81ef86fcc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112725"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417439"
 ---
 # <a name="decryptbykeyautocert-transact-sql"></a>DECRYPTBYKEYAUTOCERT(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -77,7 +78,7 @@ DecryptByKeyAutoCert ( cert_ID , cert_password
 ## <a name="permissions"></a>사용 권한  
 대칭 키에 대한 `VIEW DEFINITION` 권한 및 인증서에 대한 `CONTROL` 권한이 필요합니다.   
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
 이 예에서는 `DECRYPTBYKEYAUTOCERT`가 암호 해독 코드를 단순화하는 방법을 보여줍니다. 이 코드는 아직 데이터베이스 마스터 키가 없는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에서 실행해야 합니다.  
   
 ```  

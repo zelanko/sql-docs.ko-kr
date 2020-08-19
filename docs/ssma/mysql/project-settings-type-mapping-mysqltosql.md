@@ -1,4 +1,5 @@
 ---
+description: 프로젝트 설정(형식 매핑)(MySQLToSQL)
 title: 프로젝트 설정 (형식 매핑) (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 136fdf6d-657f-447b-af41-49bbc6e0e93e
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 79c86ee63638dcc520aa9bb590b8a616172cb1e4
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: a6f4bc99caceeb7011c932c86e636304941c459c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935178"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418489"
 ---
 # <a name="project-settings-type-mapping-mysqltosql"></a>프로젝트 설정(형식 매핑)(MySQLToSQL)
 형식 매핑 프로젝트 설정을 사용 하 여 SSMA 프로젝트에 대 한 기본 형식 매핑을 설정할 수 있습니다.  

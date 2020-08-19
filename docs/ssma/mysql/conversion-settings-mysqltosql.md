@@ -1,4 +1,5 @@
 ---
+description: 변환 설정(MySQLToSQL)
 title: 변환 설정 (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: f551cf6e-1575-4206-9cca-975b5b43a6b8
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: c34a379f2bd4fd47c31a4b664e8f56cc1ffba2be
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 7547984e97bb47a640c162743fe0b069b38f7dff
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935827"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418469"
 ---
 # <a name="conversion-settings-mysqltosql"></a>변환 설정(MySQLToSQL)
 사용자는 **' 설정 '** 탭에서 노드 수준 설정을 지정할 수 있습니다. 이 탭은 다음 메타 베이스 노드에서 사용할 수 있습니다.  
@@ -66,7 +67,7 @@ ms.locfileid: "87935827"
   
         -   예  
   
-        -   아니요  
+        -   예  
   
         -   프로젝트 설정에 따라 변환  
   

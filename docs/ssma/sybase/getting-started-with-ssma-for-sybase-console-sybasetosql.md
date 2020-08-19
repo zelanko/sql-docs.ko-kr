@@ -1,4 +1,5 @@
 ---
+description: Sybase 용 SSMA 콘솔 시작 (SybaseToSQL)
 title: Sybase 용 SSMA 콘솔 시작 (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/30/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 43219dbe-bcfa-427d-9242-f07b1455f15f
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: a577a2b187112dd0b80cedf50d42d13112208970
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: e59cb5565ca518dc927f29e684401bf8fc6d5822
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87931556"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418319"
 ---
 # <a name="getting-started-with-the-ssma-for-sybase-console-sybasetosql"></a>Sybase 용 SSMA 콘솔 시작 (SybaseToSQL)
 이 섹션에서는 Sybase 콘솔 응용 프로그램용 SSMA를 시작 하 고 시작 하는 절차에 대해 설명 합니다. 또한 일반적인 SSMA 콘솔 출력 창에서 사용 되는 규칙도 여기에 나와 있습니다.  
@@ -58,7 +59,7 @@ SSMA 스크립트 명령 및 옵션을 실행 하면 콘솔 프로그램은 콘�
   
 |색|Description|  
 |---------|---------------|  
-|빨간색|실행 하는 동안 심각한 오류가 발생 했습니다.|  
+|빨강|실행 하는 동안 심각한 오류가 발생 했습니다.|  
 |회색|날짜 및 시간 스탬프, 사용자에 대 한 메시지|  
 |흰색|스크립트 파일 명령, 메시지 유형|  
 |노란색|경고|  

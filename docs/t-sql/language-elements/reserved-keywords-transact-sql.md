@@ -1,4 +1,5 @@
 ---
+description: 예약어(Transact-SQL)
 title: 예약된 키워드 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ ms.assetid: ed8b3e27-6796-40f0-aef3-0cac5e0e2418
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f963294781eea57c7957000d0daa1d149be3cd89
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 70b2e52af1ae87f4cacdb2189609c3ead2e3bc4e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396361"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417109"
 ---
 # <a name="reserved-keywords-transact-sql"></a>예약어(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -601,7 +602,7 @@ ms.locfileid: "87396361"
         또는
     :::column-end:::
     :::column:::
-        VALUES
+        Values
     :::column-end:::
 :::row-end:::  
 :::row:::
@@ -628,7 +629,7 @@ ms.locfileid: "87396361"
 :::row-end:::  
 :::row:::
     :::column:::
-        END
+        End
     :::column-end:::
     :::column:::
         OVER
@@ -770,7 +771,7 @@ ms.locfileid: "87396361"
 :::row-end:::  
 :::row:::
     :::column:::
-        **ADD**
+        **추가**
     :::column-end:::
     :::column:::
         **외부**
@@ -1436,7 +1437,7 @@ ms.locfileid: "87396361"
         **NONE**
     :::column-end:::
     :::column:::
-        **USER**
+        **사용자**
     :::column-end:::
 :::row-end:::  
 :::row:::
@@ -1721,7 +1722,7 @@ ms.locfileid: "87396361"
         ASSERTION
     :::column-end:::
     :::column:::
-        INTEGER
+        정수
     :::column-end:::
     :::column:::
         SCROLL
@@ -1944,7 +1945,7 @@ ms.locfileid: "87396361"
         MATCH
     :::column-end:::
     :::column:::
-        STATE
+        상태
     :::column-end:::
 :::row-end:::  
 :::row:::
@@ -2469,7 +2470,7 @@ ms.locfileid: "87396361"
         FILTER
     :::column-end:::
     :::column:::
-        real
+        실수
     :::column-end:::
     :::column:::
         XMLEXISTS

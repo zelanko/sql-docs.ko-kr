@@ -1,4 +1,5 @@
 ---
+description: DBCC UPDATEUSAGE(Transact-SQL)
 title: DBCC UPDATEUSAGE(Transact-SQL)
 ms.custom: ''
 ms.date: 11/14/2017
@@ -33,12 +34,12 @@ helpviewer_keywords:
 ms.assetid: b8752ecc-db45-4e23-aee7-13b8bc3cbae2
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 2528ac49fb62a41bebe55cb50392cb306ec93edf
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 9014d7c8f2990997f9dff3a1c18cdbf1beb4f089
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484206"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417589"
 ---
 # <a name="dbcc-updateusage-transact-sql"></a>DBCC UPDATEUSAGE(Transact-SQL)
 
@@ -97,7 +98,7 @@ DBCC UPDATEUSAGE는 다음을 반환합니다(값은 상황에 따라 다름).
 ## <a name="permissions"></a>사용 권한  
 **sysadmin** 고정 서버 역할의 멤버 또는 **db_owner** 고정 데이터베이스 역할의 멤버여야 합니다.
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-updating-page-or-row-counts-or-both-for-all-objects-in-the-current-database"></a>A. 현재 데이터베이스의 모든 개체에 대한 페이지나 행 개수 또는 두 가지 모두 업데이트  
 다음 예에서는 데이터베이스 이름에 `0`을 지정하고 `DBCC UPDATEUSAGE`는 현재 데이터베이스에 대해 업데이트된 페이지 및 행 수 정보를 보고합니다.

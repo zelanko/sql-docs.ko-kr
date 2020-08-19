@@ -1,4 +1,5 @@
 ---
+description: BEGIN DISTRIBUTED TRANSACTION(Transact-SQL)
 title: BEGIN DISTRIBUTED TRANSACTION(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/29/2016
@@ -26,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: c3bc2716-39d3-4061-8c6a-8734899231ac
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e33ca36bc30cd5f2420ca67db94bba3163cc5156
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 04b4284795a48e15f56c99fee4c868e26250fd4f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923414"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417149"
 ---
 # <a name="begin-distributed-transaction-transact-sql"></a>BEGIN DISTRIBUTED TRANSACTION(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -81,7 +82,7 @@ BEGIN DISTRIBUTED { TRAN | TRANSACTION }
 ## <a name="permissions"></a>사용 권한  
  public 역할의 멤버 자격이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  이 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]의 로컬 인스턴스 및 원격 서버의 인스턴스에 있는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 데이터베이스에서 후보를 삭제합니다. 로컬 및 원격 데이터베이스는 모두 트랜잭션을 커밋하거나 롤백합니다.  
   
 > [!NOTE]  

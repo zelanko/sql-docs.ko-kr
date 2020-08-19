@@ -1,4 +1,5 @@
 ---
+description: APPROX_COUNT_DISTINCT(Transact-SQL)
 title: APPROX_COUNT_DISTINCT(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/12/2019
@@ -14,12 +15,12 @@ dev_langs:
 author: joesackmsft
 ms.author: josack
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 08beac97cd70045f073be53cfeb93e9d1e4ad67f
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: e77c9cb851921db306e52594b49d472902f36563
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113158"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417529"
 ---
 # <a name="approx_count_distinct-transact-sql"></a>APPROX_COUNT_DISTINCT(Transact-SQL)
 
@@ -50,7 +51,7 @@ APPROX_COUNT_DISTINCT ( expression )
 `APPROX_COUNT_DISTINCT( expression )`는 그룹의 각 행에 대한 식을 계산하고 그룹에 있는 고유한 null이 아닌 값의 대략적인 개수를 반환합니다. 이 함수는 절대적인 정밀도보다 응답성이 더 중요한 큰 데이터 집합을 기반으로 집계를 제공하도록 디자인되었습니다.  
 
 `APPROX_COUNT_DISTINCT`는 빅 데이터 시나리오에서 사용하도록 디자인되고 다음 조건에 최적화됩니다.
-- 수백만 개 이상의 행을 나타내는 데이터 집합의 액세스 *및*
+- 수백만 개 이상의 행을 나타내는 데이터 집합의 액세스 *및 *
 - 많은 고유 값이 포함된 열의 집계
 
 함수 구현은 최대 97% 확률 중에 최대 2% 오류 비율을 보장합니다. 
@@ -60,7 +61,7 @@ APPROX_COUNT_DISTINCT ( expression )
 > [!NOTE]
 > 데이터 정렬이 중요한 문자열을 사용하면 APPROX_COUNT_DISTINCT는 이진 일치를 사용하고 BIN2가 아닌 BIN 데이터 정렬에서 생성된 결과를 제공합니다. 
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-using-approx_count_distinct"></a>A. APPROX_COUNT_DISTINCT 사용 
 이 예제에서는 orders 테이블에서 다양한 주문 키의 대략적인 개수를 반환합니다.

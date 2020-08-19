@@ -1,4 +1,5 @@
 ---
+description: DROP CRYPTOGRAPHIC PROVIDER(Transact-SQL)
 title: DROP CRYPTOGRAPHIC PROVIDER(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 71c55c20-439e-4897-aef5-f20e556d668f
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: a215da933308ea271a7e900c13a3929311cae996
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 80c6b61bbded237a0eedb0ee39fc8d4a6f55700f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484014"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88416389"
 ---
 # <a name="drop-cryptographic-provider-transact-sql"></a>DROP CRYPTOGRAPHIC PROVIDER(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,7 +55,7 @@ DROP CRYPTOGRAPHIC PROVIDER provider_name
 ## <a name="permissions"></a>사용 권한  
  대칭 키에 대한 CONTROL 권한이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `SecurityProvider`라는 암호화 공급자를 삭제합니다.  
   
 ```  

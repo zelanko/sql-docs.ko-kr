@@ -1,4 +1,5 @@
 ---
+description: DROP COLUMN ENCRYPTION KEY(Transact-SQL)
 title: DROP COLUMN ENCRYPTION KEY(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/15/2019
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 86415302-1383-4d36-9fc7-f780831a2d37
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 2575bedc4c967bb4fc3227981cd52aca115a8d75
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 5bfe3fd136b5bed09b0de6dfcd35ff07425dbb46
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110657"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88416599"
 ---
 # <a name="drop-column-encryption-key-transact-sql"></a>DROP COLUMN ENCRYPTION KEY(Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -45,13 +46,13 @@ DROP COLUMN ENCRYPTION KEY key_name [;]
  *key_name*  
  데이터베이스에서 삭제될 열 암호화 키의 이름입니다.  
   
-## <a name="remarks"></a>설명  
+## <a name="remarks"></a>설명
  데이터베이스의 모든 열을 암호화 하는 데 사용되는 경우 열 암호화 키는 삭제할 수 없습니다. 열 암호화 키를 사용하여 모든 열을 먼저 삭제해야 합니다.  
   
 ## <a name="permissions"></a>사용 권한  
  데이터베이스에 대한 **ALTER ANY COLUMN ENCRYPTION KEY** 권한이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-dropping-a-column-encryption-key"></a>A. 열 암호화 키 제거  
  다음 예에서는 `MyCEK`이라고 하는 열 암호화 키를 삭제합니다.  

@@ -1,4 +1,5 @@
 ---
+description: 테스트 사례 만들기(OracleToSQL)
 title: 테스트 사례 만들기 (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -12,12 +13,12 @@ ms.assetid: 22f38901-ec35-4707-a911-784e6ad8dafb
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 270d904c11df5ab28062cd83672071319ca6f17f
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 4f7183089fd67f413515034a557e4b73388f950f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934956"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418389"
 ---
 # <a name="creating-test-cases-oracletosql"></a>테스트 사례 만들기(OracleToSQL)
 테스트 사례 마법사를 사용 하 여 테스트를 만듭니다. 이 마법사를 사용 하면 테스트 되 고 확인 된 개체를 선택 하 고 테스트 매개 변수를 지정 하 여 테스트 사례를 만들 수 있습니다.  
@@ -32,16 +33,16 @@ ms.locfileid: "87934956"
 ## <a name="overview-of-creating-test-cases-using-the-wizard"></a>마법사를 사용 하 여 테스트 사례 만들기 개요  
 테스트 사례를 만드는 프로세스는 다음 5 단계로 구성 됩니다.  
   
-1.  [OracleToSQL&#41;&#40;테스트 사례 초기화](../../ssma/oracle/initializing-test-cases-oracletosql.md)  
+1.  [OracleToSQL&#41;&#40;테스트 사례 초기화 ](../../ssma/oracle/initializing-test-cases-oracletosql.md)  
   
-2.  [OracleToSQL&#41;&#40;테스트할 개체 선택 및 구성](../../ssma/oracle/selecting-and-configuring-objects-to-test-oracletosql.md)  
+2.  [OracleToSQL&#41;&#40;테스트할 개체 선택 및 구성 ](../../ssma/oracle/selecting-and-configuring-objects-to-test-oracletosql.md)  
   
 3.  [영향을 받는 개체 선택 및 구성 &#40;OracleToSQL&#41;](../../ssma/oracle/selecting-and-configuring-affected-objects-oracletosql.md)  
   
 4.  [호출 순서 사용자 지정 &#40;OracleToSQL&#41;](../../ssma/oracle/customizing-calls-order-oracletosql.md)  
   
-5.  [OracleToSQL&#41;&#40;테스트 사례 준비 완료](../../ssma/oracle/finishing-test-case-preparation-oracletosql.md)  
+5.  [OracleToSQL&#41;&#40;테스트 사례 준비 완료 ](../../ssma/oracle/finishing-test-case-preparation-oracletosql.md)  
   
 ## <a name="see-also"></a>참고 항목  
-[OracleToSQL&#41;&#40;마이그레이션된 데이터베이스 개체 테스트](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
+[OracleToSQL&#41;&#40;마이그레이션된 데이터베이스 개체 테스트 ](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
   

@@ -1,4 +1,5 @@
 ---
+description: DROP EVENT SESSION(Transact-SQL)
 title: DROP EVENT SESSION(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 92eabe4b-24e2-43b1-978c-31a199964b90
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 9704a50205e901c50a1a25d47741a3336832fcdb
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 5c7472a6185dca4ca32bfd0ef639a674b82fc719
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483601"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88416519"
 ---
 # <a name="drop-event-session-transact-sql"></a>DROP EVENT SESSION(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,7 +52,7 @@ ON SERVER
 ## <a name="permissions"></a>사용 권한  
  `ALTER ANY EVENT SESSION` 권한이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
 다음 예에서는 이벤트 세션 삭제 방법을 보여 줍니다.  
   
 ```sql  

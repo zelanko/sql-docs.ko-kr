@@ -1,4 +1,5 @@
 ---
+description: STBuffer(geography 데이터 형식)
 title: STBuffer(지리 데이터 형식) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: cb4deab8-642b-44d9-b3d9-85114d64021e
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 55160039220f949f68837e71d75b11e916839378
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 9e869aa4f5f5056ef29968b6ad0d7446b0849a25
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554741"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417049"
 ---
 # <a name="stbuffer-geography-data-type"></a>STBuffer(geography 데이터 형식)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -66,7 +67,7 @@ ms.locfileid: "86554741"
   
  이론적 버퍼와 계산된 버퍼 간의 오차는 허용 오차 = 거리 \* .001인 max(허용 오차, 익스텐트 * 1.E-7)입니다. 익스텐트에 대한 자세한 내용은 [geometry 데이터 형식 메서드 참조](https://msdn.microsoft.com/library/028e6137-7128-4c74-90a7-f7bdd2d79f5e)를 확인하세요.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `LineString``geography` 인스턴스를 만듭니다. 그런 다음 `STBuffer()`를 사용하여 인스턴스에서 1미터 내에 있는 영역을 반환합니다.  
   
 ```  
@@ -77,6 +78,6 @@ SELECT @g.STBuffer(1).ToString();
   
 ## <a name="see-also"></a>참고 항목  
  [BufferWithTolerance &#40;geography 데이터 형식&#41;](../../t-sql/spatial-geography/bufferwithtolerance-geography-data-type.md)   
- [지리 인스턴스의 OGC 메서드](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
+ [geography 인스턴스의 OGC 메서드](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

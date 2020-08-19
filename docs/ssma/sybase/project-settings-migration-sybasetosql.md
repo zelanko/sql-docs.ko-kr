@@ -1,4 +1,5 @@
 ---
+description: 프로젝트 설정(마이그레이션)(SybaseToSQL)
 title: 프로젝트 설정 (마이그레이션) (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 82f8857f-7ab1-4738-ab6e-b1e95ea94924
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 5e8a8f9c88537d0dc807efe7baf387ea917468d3
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: b05bfa4cf77043ae172f23940d1b8f0244a1e30c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87930870"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418289"
 ---
 # <a name="project-settings-migration-sybasetosql"></a>프로젝트 설정(마이그레이션)(SybaseToSQL)
 **프로젝트 설정** 대화 상자의 마이그레이션 페이지에는 Ssma가 Sybase (Sybase Server Enterprise)에서로 데이터를 마이그레이션하는 방법을 사용자 지정 하는 설정이 포함 되어 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -29,7 +30,7 @@ ms.locfileid: "87930870"
   
 |용어|정의|  
 |--------|--------------|  
-|**지원 되지 않는 날짜 바꾸기**|SSMA에서 가장 이른 날짜 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **/시간** (01 년 1 월 1753) 이전의 날짜를 수정 해야 하는지 여부를 지정 합니다.<br /><br />현재 날짜 값을 유지 하려면 **아무 것도 안 함**을 선택 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 datetime 열에서 01 년 1 월 1753 일 이전 날짜를 수락 하지 않습니다. 이전 날짜를 사용 하는 경우에는 datetime 값을 문자 값으로 변환 해야 합니다.<br /><br />1753 년 1 월 1 일 이전 날짜를 NULL로 변환 하려면 **바꾸기를 null로 바꾸기**를 선택 합니다.<br /><br />지원 되는 날짜를 사용 하 여 01 년 1 월 1 1753 일 이전 날짜를 바꾸려면를 **지원 되는 가장 가까운 날짜로 바꿉니다**.<br /><br />**기본 모드**: 아무 작업도 수행 하지 않습니다.<br /><br />**낙관적 모드**: 아무 작업도 수행 하지 않음<br /><br />**전체 모드**: 지원 되는 가장 가까운 날짜로 바꿉니다.|  
+|**지원 되지 않는 날짜 바꾸기**|SSMA에서 가장 이른 날짜 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **/시간** (01 년 1 월 1753) 이전의 날짜를 수정 해야 하는지 여부를 지정 합니다.<br /><br />현재 날짜 값을 유지 하려면 **아무 것도 안 함**을 선택 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 datetime 열에서 01 년 1 월 1753 일 이전 날짜를 수락 하지 않습니다. 이전 날짜를 사용 하는 경우에는 datetime 값을 문자 값으로 변환 해야 합니다.<br /><br />1753 년 1 월 1 일 이전 날짜를 NULL로 변환 하려면 **바꾸기를 null로 바꾸기**를 선택 합니다.<br /><br />지원 되는 날짜를 사용 하 여 01 년 1 월 1 1753 일 이전 날짜를 바꾸려면를 **지원 되는 가장 가까운 날짜로 바꿉니다**.<br /><br />**기본 모드**: 아무 작업도 수행 하지 않습니다.<br /><br />**낙관적 모드**: 아무 작업도 수행 하지 않음<br /><br />**전체 모드**: 지원 되는 가장 가까운 날짜로 바꿉니다.|  
   
 ## <a name="migration-engine"></a>마이그레이션 엔진  
   

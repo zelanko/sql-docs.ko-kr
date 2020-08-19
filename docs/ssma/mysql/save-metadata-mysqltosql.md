@@ -1,4 +1,5 @@
 ---
+description: 메타데이터 저장(MySQLToSQL)
 title: 메타 데이터 저장 (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9bc6273f-e8b1-430b-81a5-14330a783562
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: c032cfd8707524e64b68f6fcb7cd0223342602bb
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: b19ba78707fb596fde5ab73f04003a9d2d3feb9b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935150"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418459"
 ---
 # <a name="save-metadata--mysqltosql"></a>메타데이터 저장(MySQLToSQL)
 **메타 데이터 저장** 대화 상자에 메타 데이터를 저장 하기 전에 ssma 프로젝트에 로드 하 라는 메시지가 표시 됩니다. 이를 통해 오프 라인으로 사용 하 고 기술 지원 담당자와 같은 다른 사람에 게 보낼 수 있는 전체 프로젝트 파일을 사용할 수 있습니다.  

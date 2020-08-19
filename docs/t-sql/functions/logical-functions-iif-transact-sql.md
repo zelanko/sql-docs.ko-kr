@@ -1,4 +1,5 @@
 ---
+description: 논리 함수 - IIF(Transact-SQL)
 title: IIF(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e3ccf8ed-1cec-43ac-90b7-d8597c24b050
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cda1db97174190f27f2de801c751045bffb61793
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 1b84e5749e7e217442e618d998cecf504d5be046
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112925"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417259"
 ---
 # <a name="logical-functions---iif-transact-sql"></a>논리 함수 - IIF(Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -60,7 +61,7 @@ IIF ( boolean_expression, true_value, false_value )
   
  IIF가 CASE로 변환된다는 점은 이 함수의 다른 동작에도 영향을 줍니다. CASE 문은 최대 10개 수준만 중첩될 수 있으므로 IIF 문도 최대 10개 수준만 중첩될 수 있습니다. 또한 IIF는 원격 실행되는 CASE 문과 모든 동작이 같으므로 다른 서버에 대해 기능적으로 동일한 CASE 문으로 원격 실행됩니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-simple-iif-example"></a>A. 간단한 IIF 예  
   

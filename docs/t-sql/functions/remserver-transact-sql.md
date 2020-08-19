@@ -1,4 +1,5 @@
 ---
+description: '&#x40;&#x40;REMSERVER (Transact-SQL)'
 title: '@@REMSERVER(Transact-SQL) | Microsoft Docs'
 ms.custom: ''
 ms.date: 09/18/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 0bb451a9-3866-4064-963d-b74a2f864049
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 0a0d2b5d50144ca96b9208dfa1c0d6844b456fe6
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 385f492a91e740dfea04f83b1da8c8a67861f05b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110835"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417209"
 ---
 # <a name="x40x40remserver-transact-sql"></a>&#x40;&#x40;REMSERVER (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,7 +52,7 @@ ms.locfileid: "87110835"
 ## <a name="remarks"></a>설명  
  @@REMSERVER에서 저장 프로시저는 프로시저가 실행되는 데이터베이스 서버의 이름을 확인할 수 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 원격 서버의 이름을 반환하는 `usp_CheckServer` 프로시저를 만듭니다.  
   
 ```  

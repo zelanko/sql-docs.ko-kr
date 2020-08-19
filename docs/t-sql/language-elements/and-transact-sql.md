@@ -1,4 +1,5 @@
 ---
+description: AND(Transact-SQL)
 title: AND(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -22,12 +23,12 @@ ms.assetid: b61d7f8d-5a51-49b7-91dd-f6190a5a0fb9
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b3d054610c1c44f5d3826c90b28bc8dd899c23c3
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: cf84d48b89218d4d37a7c1c1b9cf57df6a45775e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923019"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417169"
 ---
 # <a name="and-transact-sql"></a>AND(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -46,7 +47,7 @@ boolean_expression AND boolean_expression
 
 ## <a name="arguments"></a>인수
  *boolean_expression*  
- [TRUE](../../t-sql/language-elements/expressions-transact-sql.md), **FALSE** 또는 **UNKNOWN**의 부울 값을 반환하는 유효한 **식**입니다.  
+ **TRUE**, **FALSE** 또는 **UNKNOWN**의 부울 값을 반환하는 유효한 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다.  
   
 ## <a name="result-types"></a>결과 형식  
  **Boolean**  
@@ -57,9 +58,9 @@ boolean_expression AND boolean_expression
 ## <a name="remarks"></a>설명  
  다음 차트에서는 AND 연산자를 사용하여 TRUE와 FALSE 값을 비교한 결과를 보여 줍니다.  
   
-||TRUE|FALSE|UNKNOWN|  
+||true|FALSE|UNKNOWN|  
 |------|----------|-----------|-------------|  
-|**TRUE**|TRUE|FALSE|UNKNOWN|  
+|**TRUE**|true|FALSE|UNKNOWN|  
 |**FALSE**|FALSE|FALSE|FALSE|  
 |**UNKNOWN**|UNKNOWN|FALSE|UNKNOWN|  
   

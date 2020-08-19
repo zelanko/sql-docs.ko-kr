@@ -1,4 +1,5 @@
 ---
+description: BACPAC 파일을 가져와 새 사용자 데이터베이스 만들기
 title: BACPAC 파일을 가져와 새 사용자 데이터베이스 만들기
 ms.date: 06/03/2020
 ms.prod: sql
@@ -25,12 +26,12 @@ author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ed5a14278e9114b9408406a103553280dd9e4f8f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5e02041dd6801f5ab0b819f4bffd91ca8ba38e8b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85781676"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88412439"
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>BACPAC 파일을 가져와 새 사용자 데이터베이스 만들기
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -54,7 +55,7 @@ ms.locfileid: "85781676"
 ## <a name="limitations-and-restrictions"></a>제한 사항  
  [!INCLUDE[ssSDS](../../includes/sssds-md.md)]SP4(서비스 팩 4) 이상을 실행하는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스 또는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 에만 DAC를 가져올 수 있습니다. 이후 버전에서 DAC를 내보내는 경우 DAC에 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 지원되지 않는 개체가 포함될 수 있습니다. 이러한 DAC를 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]인스턴스에 배포할 수 없습니다.  
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>전제 조건  
  출처를 알 수 없거나 신뢰할 수 없는 DAC 내보내기 파일은 가져오지 않는 것이 좋습니다. 이러한 파일에 포함된 악성 코드가 의도하지 않은 Transact-SQL 코드를 실행하거나 스키마를 수정하여 오류가 발생할 수 있습니다. 출처를 알 수 없거나 신뢰할 수 없는 내보내기 파일을 사용하려면 먼저 DAC의 압축을 풀고 저장 프로시저 및 다른 사용자 정의 코드와 같은 코드를 검사하세요. 이러한 검사를 수행하는 방법은 [Validate a DAC Package](validate-a-dac-package.md)를 참조하세요.  
   
 ## <a name="security"></a>보안  
@@ -140,10 +141,10 @@ ms.locfileid: "85781676"
 ###  <a name="results-page"></a><a name="Results"></a> 결과 페이지  
  이 페이지에는 데이터베이스 가져오기 및 만들기 작업의 결과가 성공 또는 실패로 보고됩니다. 오류가 발생한 동작에는 모두 **결과** 열에 링크가 있습니다. 링크를 클릭하면 해당 동작의 오류에 대한 보고서가 표시됩니다.  
   
- **닫기** 를 클릭하여 마법사를 닫습니다.  
+ **닫기**를 클릭하여 마법사를 닫습니다.  
   
-## <a name="see-also"></a>참고 항목  
-[BACPAC 파일을 가져와 새 Azure SQL Database를 만들기](https://azure.microsoft.com/documentation/articles/sql-database-import/)  
+## <a name="see-also"></a>관련 항목  
+[BACPAC 파일을 가져와 새 Azure SQL Database 만들기](https://azure.microsoft.com/documentation/articles/sql-database-import/)  
  [데이터 계층 애플리케이션](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [데이터 계층 애플리케이션 내보내기](../../relational-databases/data-tier-applications/export-a-data-tier-application.md)  
   

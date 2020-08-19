@@ -1,4 +1,5 @@
 ---
+description: DROP SECURITY POLICY(Transact-SQL)
 title: DROP SECURITY POLICY(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/11/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 5bd3393d-2fa5-4db0-a69a-a1a72d638e9d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: f267dd39e02fa30614788ace04b803b55d1cd8fd
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 4e0e23c398cf6310c88edd73e5507801861c6aaf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112776"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88416109"
 ---
 # <a name="drop-security-policy-transact-sql"></a>DROP SECURITY POLICY(Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -52,7 +53,7 @@ DROP SECURITY POLICY [ IF EXISTS ] [schema_name. ] security_policy_name
  *security_policy_name*  
  보안 정책의 이름입니다. 보안 정책 이름은 식별자에 대한 규칙을 따라야 하며 데이터베이스에서 각 스키마별로 고유해야 합니다.  
   
-## <a name="remarks"></a>설명  
+## <a name="remarks"></a>설명
   
 ## <a name="permissions"></a>사용 권한  
  스키마에 대한 ALTER ANY SECURITY POLICY 권한 및 ALTER 권한이 필요합니다.  

@@ -1,4 +1,5 @@
 ---
+description: _ (와일드카드 - 문자 하나와 일치)(Transact-SQL)
 title: _(와일드카드 - 문자 하나와 일치)(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/06/2016
@@ -21,19 +22,19 @@ helpviewer_keywords:
 ms.assetid: 11a2ed36-9e21-4bdf-ae20-a31db1434b97
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e1d3e6c8d141f2923cb2fd9074999fde7c80dfcc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3699c5d71de477cca95b1ec8bacaa3b56b9e438d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731354"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417079"
 ---
 # <a name="_-wildcard---match-one-character-transact-sql"></a>_ (와일드카드 - 문자 하나와 일치)(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 밑줄 문자(_)를 사용하여 `LIKE` 및 `PATINDEX`와 같은 패턴 일치가 포함된 문자열 비교 작업에서 단일 문자와 일치하도록 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
 
 ## <a name="a-simple-example"></a>A: 간단한 예   
 

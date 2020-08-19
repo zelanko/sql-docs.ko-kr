@@ -1,4 +1,5 @@
 ---
+description: 영향을 받는 개체 선택 및 구성(OracleToSQL)
 title: 영향을 받는 개체 선택 및 구성 (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -13,12 +14,12 @@ ms.assetid: 545eeda2-9829-4187-a858-619a96b4b71d
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 619da90c19cf918b3f53ac6cd213b27e718b6a10
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 5cd9ca7c8789133fdbccc3367f3bda121d2499ed
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87932914"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418349"
 ---
 # <a name="selecting-and-configuring-affected-objects-oracletosql"></a>영향을 받는 개체 선택 및 구성(OracleToSQL)
 이 페이지에서 테이블 및 외래 키를 선택할 수 있으며, SSMA가 이전 단계에서 선택한 개체의 실행 결과를 확인할 때 이러한 변경 내용을 비교 해야 합니다. 또한 확인 매개 변수를 사용자 지정할 수 있습니다.  
@@ -41,7 +42,7 @@ SSMA 테스터가 이러한 개체를 확인할 수 없는 경우 개체 트리 
   
 -   규칙  
   
--   Default  
+-   기본값  
   
 -   ID  
   
@@ -110,7 +111,7 @@ SQL 탭에는 선택한 테이블의 "테이블 만들기" SQL이 포함 됩니�
 [호출 순서 사용자 지정 &#40;OracleToSQL&#41;](../../ssma/oracle/customizing-calls-order-oracletosql.md)  
   
 ## <a name="see-also"></a>참고 항목  
-[OracleToSQL&#41;&#40;테스트 사례 준비 완료](../../ssma/oracle/finishing-test-case-preparation-oracletosql.md)  
-[OracleToSQL&#41;&#40;테스트 사례 실행](../../ssma/oracle/running-test-cases-oracletosql.md)  
-[OracleToSQL&#41;&#40;마이그레이션된 데이터베이스 개체 테스트](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
+[OracleToSQL&#41;&#40;테스트 사례 준비 완료 ](../../ssma/oracle/finishing-test-case-preparation-oracletosql.md)  
+[OracleToSQL&#41;&#40;테스트 사례 실행 ](../../ssma/oracle/running-test-cases-oracletosql.md)  
+[OracleToSQL&#41;&#40;마이그레이션된 데이터베이스 개체 테스트 ](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
   

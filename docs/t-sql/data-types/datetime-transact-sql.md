@@ -1,4 +1,5 @@
 ---
+description: datetime(Transact-SQL)
 title: datetime(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/23/2017
@@ -22,12 +23,12 @@ ms.assetid: 9bd1cc5b-227b-4032-95d6-7581ddcc9924
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5fdd491296c9ba93e12421f46964016c0689a65c
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 689a494e12f9b31f88d3ea060fe2c1b4a5fb2a3b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008096"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417719"
 ---
 # <a name="datetime-transact-sql"></a>datetime(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -42,11 +43,11 @@ ms.locfileid: "86008096"
 |속성|값|  
 |---|---|
 |구문|**datetime**|  
-|사용|DECLARE \@MyDatetime **datetime**<br /><br /> CREATE TABLE Table1(Column1 **datetime**)|  
+|사용량|DECLARE \@MyDatetime **datetime**<br /><br /> CREATE TABLE Table1(Column1 **datetime**)|  
 |기본 문자열 리터럴 형식<br /><br /> (하위 클라이언트에 대해 사용됨)|해당 없음|  
 |날짜 범위|01.01.53부터 31.12.99까지|  
 |시간 범위|00:00:00부터 23:59:59.997까지|  
-|표준 시간대 오프셋 범위|None|  
+|표준 시간대 오프셋 범위|없음|  
 |요소 범위|YYYY는 1753부터 9999까지의 4자리 숫자로, 연도를 나타냅니다.<br /><br /> MM은 01에서 12 사이에 속하는 두 자리 숫자로, 지정한 연도의 월을 나타냅니다.<br /><br /> DD는 월에 따라 01에서 31 사이에 속하는 두 자리 숫자로, 지정한 월의 일을 나타냅니다.<br /><br /> hh는 00에서 23 사이에 속하는 두 자리 숫자로, 시를 나타냅니다.<br /><br /> mm은 00에서 59 사이에 속하는 두 자리 숫자로, 분을 나타냅니다.<br /><br /> ss는 00에서 59 사이에 속하는 두 자리 숫자로, 초를 나타냅니다.<br /><br /> n*은 0에서 999 사이에 속하는 세 자리 숫자로, 소수 자릿수 초를 나타냅니다.|  
 |문자 길이|최소 19자리부터 최대 23자리까지|  
 |스토리지 크기|8바이트|  

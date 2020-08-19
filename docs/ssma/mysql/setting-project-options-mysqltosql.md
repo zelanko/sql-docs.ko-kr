@@ -1,4 +1,5 @@
 ---
+description: 프로젝트 옵션 설정(MySQLToSQL)
 title: 프로젝트 옵션 설정 (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 08820d88-e157-4d49-9401-38580dd7ec2d
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: cf8ac834b014fe49a851d3887fb36e29f59e069e
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 642d6df01fc5855ece9bd06ea2860de076f754bf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935131"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418429"
 ---
 # <a name="setting-project-options-mysqltosql"></a>프로젝트 옵션 설정(MySQLToSQL)
 각 SSMA 프로젝트에 대해 프로젝트 수준 옵션을 설정할 수 있습니다. 이러한 옵션은 개체가 변환 되는 방법, 데이터를 마이그레이션하는 방법 및 원본 데이터 형식을 대상 데이터 형식에 매핑하는 방법을 지정 합니다.  개체를 SQL Server 또는 SQL Azure 데이터를 SQL Server 또는 SQL Azure로 변환 하기 전에 구성 옵션이 프로젝트에 적합 한지 확인 합니다.  
@@ -38,7 +39,7 @@ SSMA에는 5 개의 프로젝트 설정 집합이 있습니다.
   
 프로젝트 설정은 다음 네 가지 방법으로 구성할 수 있습니다.  
   
--   Default  
+-   기본값  
   
 -   Optimistic  
   
@@ -50,7 +51,7 @@ SSMA에는 5 개의 프로젝트 설정 집합이 있습니다.
   
 설정 및 설정 설정에 대 한 자세한 내용은 다음 항목을 참조 하십시오.  
   
--   [프로젝트 설정 &#40;MySQLToSQL&#41;&#41; &#40;변환](../../ssma/mysql/project-settings-conversion-mysqltosql.md)  
+-   [프로젝트 설정 &#40;MySQLToSQL&#41;&#41; &#40;변환 ](../../ssma/mysql/project-settings-conversion-mysqltosql.md)  
   
 -   [프로젝트 설정 &#40;마이그레이션&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-migration-mysqltosql.md)  
   
@@ -101,5 +102,5 @@ SSMA에서 모든 프로젝트에 대 한 기본 설정을 구성할 수 있습�
 -   그렇지 않으면 MySQL 데이터베이스 개체 정의를 SQL Server 또는 SQL Azure 개체 정의로 변환할 수 있습니다. 자세한 내용은 [&#40;MySQLToSQL&#41;MySQL 데이터베이스 변환](../../ssma/mysql/converting-mysql-databases-mysqltosql.md) (영문)을 참조 하세요.  
   
 ## <a name="see-also"></a>참고 항목  
-[MySQL 및 SQL Server 데이터 형식 &#40;MySQLToSQL&#41;매핑](../../ssma/mysql/mapping-mysql-and-sql-server-data-types-mysqltosql.md)  
+[MySQL 및 SQL Server 데이터 형식 &#40;MySQLToSQL&#41;매핑 ](../../ssma/mysql/mapping-mysql-and-sql-server-data-types-mysqltosql.md)  
   

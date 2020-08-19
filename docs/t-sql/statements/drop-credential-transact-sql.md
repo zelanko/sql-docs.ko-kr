@@ -1,4 +1,5 @@
 ---
+description: DROP CREDENTIAL(Transact-SQL)
 title: DROP CREDENTIAL(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/19/2015
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: df22c826-317d-45a6-b078-186acb65f71e
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: c86550e6854cbfcb547a8734f05e910e25df2b5a
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 1b28f91129bccf4c8005cd840d87f14f2a84b25e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485505"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88416549"
 ---
 # <a name="drop-credential-transact-sql"></a>DROP CREDENTIAL(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -60,7 +61,7 @@ DROP CREDENTIAL credential_name
 ## <a name="permissions"></a>사용 권한  
  ALTER ANY CREDENTIAL 권한이 필요합니다. 시스템 자격 증명을 삭제하는 경우 CONTROL SERVER 권한이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `Saddles`라는 자격 증명을 제거합니다.  
   
 ```  

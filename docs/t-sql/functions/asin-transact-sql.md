@@ -1,4 +1,5 @@
 ---
+description: ASIN(Transact-SQL)
 title: ASIN(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2017
@@ -20,12 +21,12 @@ ms.assetid: 6256dd7d-83d5-486e-a933-1d59afc7e417
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 79988d91775fb7ae1bda2734148e434e5c161723
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 43905f174185f45cb2d56d3e9325bf0098cfb4e5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113141"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417549"
 ---
 # <a name="asin-transact-sql"></a>ASIN(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -44,12 +45,12 @@ ASIN ( float_expression )
 
 ## <a name="arguments"></a>인수
 *float_expression*  
-[float](../../t-sql/language-elements/expressions-transact-sql.md) 형식 또는 float로 암시적으로 변환할 수 있는 형식의 **식**입니다. -1.00에서 1.00까지의 값만 유효합니다. 값이 이 범위를 벗어나면 NULL이 반환되고 ASIN에서 도메인 오류가 보고됩니다.
+**float** 형식 또는 float로 암시적으로 변환할 수 있는 형식의 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다. -1.00에서 1.00까지의 값만 유효합니다. 값이 이 범위를 벗어나면 NULL이 반환되고 ASIN에서 도메인 오류가 보고됩니다.
   
 ## <a name="return-types"></a>반환 형식
 **float**
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
 이 예에서는 **float** 식을 받아서 지정된 각도의 ASIN 값을 반환합니다.
   
 ```sql

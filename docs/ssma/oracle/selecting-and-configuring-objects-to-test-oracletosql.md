@@ -1,4 +1,5 @@
 ---
+description: 테스트할 개체 선택 및 구성(OracleToSQL)
 title: 테스트할 개체 선택 및 구성 (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -12,12 +13,12 @@ ms.assetid: 29fb6542-5c1f-4b14-a822-87700beb7623
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: fd5a65e50889d461b0922fa255680a76863ca0a4
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: deb482c041dd290db3d2a7c911fb7d3663aa819a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87932764"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418339"
 ---
 # <a name="selecting-and-configuring-objects-to-test-oracletosql"></a>테스트할 개체 선택 및 구성(OracleToSQL)
 이 단계에서는 테스트할 개체를 선택 하 고 프로시저의 반환 값 뿐만 아니라 프로시저의 출력 매개 변수 및 함수를 비교 하기 위한 설정을 구성 합니다.  
@@ -83,5 +84,5 @@ SSMA 테스터는 테스트를 위해 선택한 개체를 지원 하지 않는 �
 [영향을 받는 개체 선택 및 구성 &#40;OracleToSQL&#41;](../../ssma/oracle/selecting-and-configuring-affected-objects-oracletosql.md)  
   
 ## <a name="see-also"></a>참고 항목  
-[OracleToSQL&#41;&#40;마이그레이션된 데이터베이스 개체 테스트](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
+[OracleToSQL&#41;&#40;마이그레이션된 데이터베이스 개체 테스트 ](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
   

@@ -1,4 +1,5 @@
 ---
+description: NEXT VALUE FOR(Transact-SQL)
 title: NEXT VALUE FOR(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/19/2016
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 92632ed5-9f32-48eb-be28-a5e477ef9076
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: cb3fd2d18f5602030de6231a0dbbcc92a200a5fc
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 8d383cc1530835635cc4c25957c25221a653dbfa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112900"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417279"
 ---
 # <a name="next-value-for-transact-sql"></a>NEXT VALUE FOR(Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -96,9 +97,9 @@ NEXT VALUE FOR [ database_name . ] [ schema_name . ]  sequence_name
   
 -   **NEXT VALUE FOR**...없이 **ORDER BY** 절을 사용하는 명령문에서 사용할 경우 **OVER**(**ORDER BY**...)를 사용할 경우  
   
--   다음 절에서 다음을 수행합니다. **FETCH**, **OVER**, **OUTPUT**, **ON**, **PIVOT**, **UNPIVOT**, **GROUP BY**, **HAVING**, **COMPUTE**, **COMPUTE BY** 또는 **FOR XML**.  
+-   **FETCH**, **OVER**, **OUTPUT**, **ON**, **PIVOT**, **UNPIVOT**, **GROUP BY**, **HAVING**, **COMPUTE**, **COMPUTE BY** 또는 **FOR XML** 절에서 사용할 경우  
   
--   **CASE**, **CHOOSE**, **COALESCE**, **IIF**, **ISNULL** 또는  **NULLIF**를 사용하는 조건식에서 사용할 경우  
+-   **CASE**, **CHOOSE**, **COALESCE**, **IIF**, **ISNULL** 또는 ** NULLIF**를 사용하는 조건식에서 사용할 경우  
   
 -   **INSERT** 문의 일부가 아닌 **VALUES** 절에 사용할 경우  
   
@@ -168,7 +169,7 @@ NEXT VALUE FOR [ database_name . ] [ schema_name . ]  sequence_name
 ### <a name="audit"></a>감사  
  **NEXT VALUE FOR** 함수를 감사하려면 SCHEMA_OBJECT_ACCESS_GROUP을 모니터링합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  시퀀스를 만들고 **NEXT VALUE FOR** 함수를 사용하여 시퀀스 번호를 생성하는 방법에 대한 예는 [시퀀스 번호](../../relational-databases/sequence-numbers/sequence-numbers.md)를 참조하세요.  
   
  다음 예에서는 `CountBy1`라는 스키마의 `Test`이라는 시퀀스를 사용합니다. `Test.CountBy1` 시퀀스를 만들려면 다음 문을 실행합니다. 예 3과 4에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스를 사용하여 `CountBy1` 시퀀스를 만듭니다.  

@@ -1,4 +1,5 @@
 ---
+description: STExteriorRing(geometry 데이터 형식)
 title: STExteriorRing(geometry 데이터 형식) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b402b36f-05bf-4c6d-8cd6-76c0fff19db2
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: a70e75cb86187c01f37738efbae8d5ead6bd35e8
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 7bdf05ddaa39a225bf77538fd492387c481c4749
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554334"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88416919"
 ---
 # <a name="stexteriorring-geometry-data-type"></a>STExteriorRing(geometry 데이터 형식)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

@@ -1,4 +1,5 @@
 ---
+description: TRANSLATE(Transact-SQL)
 title: TRANSLATE(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/16/2020
@@ -16,12 +17,12 @@ ms.assetid: 0426fa90-ef6d-4d19-8207-02ee59f74aec
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e1fbd5285ff4b794ea90ad3f8513e24ac166c0be
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 49a16c2b5f18eeda3a6abd1396650131543ead4f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112590"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417139"
 ---
 # <a name="translate-transact-sql"></a>TRANSLATE(Transact-SQL)
 
@@ -51,7 +52,7 @@ TRANSLATE ( inputString, characters, translations)
 
 ## <a name="remarks"></a>설명
 
-`TRANSLATE`characters*와* translations*식이 다른 경우*는 오류를 반환합니다. 인수 중에 NULL이 있는 경우 `TRANSLATE`는 NULL을 반환합니다.  
+*characters*와 *translations* 식이 다른 경우 `TRANSLATE`는 오류를 반환합니다. 인수 중에 NULL이 있는 경우 `TRANSLATE`는 NULL을 반환합니다.  
 
 `TRANSLATE` 함수의 동작은 [REPLACE](../../t-sql/functions/replace-transact-sql.md) 함수를 여러 개 사용할 때와 유사합니다. 그러나 `TRANSLATE`는 `inputString`의 개별 문자를 두 번 이상 바꾸지는 않습니다. `characters` 매개 변수의 단일 값은 `inputString`의 여러 문자를 바꿀 수 있습니다. 
 
@@ -59,7 +60,7 @@ TRANSLATE ( inputString, characters, translations)
 
 `TRANSLATE`은 언제나 SC 데이터 정렬을 인식합니다.
 
-## <a name="examples"></a>예
+## <a name="examples"></a>예제
 
 ### <a name="a-replace-square-and-curly-braces-with-regular-braces"></a>A. 대괄호 및 중괄호를 일반 괄호로 대체합니다.
 

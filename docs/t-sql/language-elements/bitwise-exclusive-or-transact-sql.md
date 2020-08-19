@@ -1,4 +1,5 @@
 ---
+description: ^(배타적 비트 OR)(Transact-SQL)
 title: ^(배타적 비트 OR)(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/10/2017
@@ -25,12 +26,12 @@ ms.assetid: f38f0ad4-46d0-40ea-9851-0f928fda5293
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2e9014cd3bb989f853ab7ffddb4f030a3e8c202f
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: fe64aa29987ee280a79afd66faed94cbbc89540e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86902405"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417179"
 ---
 # <a name="-bitwise-exclusive-or-transact-sql"></a>^(배타적 비트 OR)(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -64,7 +65,7 @@ expression ^ expression
 ## <a name="remarks"></a>설명  
  **^** 비트 연산자는 양쪽 연산에 해당 비트를 받아서 두 식 간에 배타적 비트 논리 OR를 수행합니다. 결과 비트는 입력 식에 있는 두 비트(확인 중인 현재 비트) 중 하나의 값이 1이면 1로 설정됩니다. 양쪽 비트 값이 모두 0 또는 1이면 결과 비트는 0으로 처리됩니다.  
   
- 왼쪽과 오른쪽 식의 정수 데이터 형식이 서로 다르면(예: 왼쪽 *식*은 **smallint**이고 오른쪽 *식*은 **int**임) 더 작은 데이터 형식의 인수가 더 큰 데이터 형식으로 변환됩니다. 이 경우에 **smallint** _식_이 **int**로 변환됩니다.  
+ 왼쪽과 오른쪽 식의 정수 데이터 형식이 서로 다르면(예: 왼쪽 *식*은 **smallint**이고 오른쪽 *식*은 **int**임) 더 작은 데이터 형식의 인수가 더 큰 데이터 형식으로 변환됩니다. 이 경우에 **smallint** 식이 **int**로 변환됩니다.  
   
 ## <a name="examples"></a>예제  
  다음 예에서는 원래 값을 저장하기 위해 **int** 데이터 형식을 사용하여 원래 값을 저장하는 테이블을 만들고 한 행에 두 개의 값을 삽입합니다.  

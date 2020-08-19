@@ -1,4 +1,5 @@
 ---
+description: APPLOCK_TEST(Transact-SQL)
 title: APPLOCK_TEST(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 4ea33d04-f8e9-46ff-ae61-985bd3eaca2c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 05a4130eada097acc754f4392927db76b8bfc079
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: fa4c73e5a6830b3274e3e388679dd4e5f935f17c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113170"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417539"
 ---
 # <a name="applock_test-transact-sql"></a>APPLOCK_TEST(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -63,13 +64,13 @@ APPLOCK_TEST ( 'database_principal' , 'resource_name' , 'lock_mode' , 'lock_owne
 지정된 소유자에게 잠금을 허용할 수 없는 경우 0, 잠금을 허용할 수 있는 경우 1을 반환합니다.
   
 ## <a name="function-properties"></a>함수 속성
-**Nondeterministic**
+**비결정적**
   
 **Nonindexable**
   
 **Nonparallelizable**
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
 별도의 세션을 갖는 두 명의 사용자(**사용자 A**와 **사용자 B**)가 다음의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 명령문 시퀀스를 실행합니다.
   
 **사용자 A**가 다음을 실행합니다.

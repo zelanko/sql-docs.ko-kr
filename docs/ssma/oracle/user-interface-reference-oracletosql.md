@@ -1,4 +1,5 @@
 ---
+description: 사용자 인터페이스 참조(OracleToSQL)
 title: 사용자 인터페이스 참조 (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -10,12 +11,12 @@ ms.assetid: 160d4784-d108-4705-932d-763558912804
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: f0fa992181878a185fc6ba12719f3b2edc5fa9ae
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 2d234e907cc8839219b942cc841aed02f45e3fbe
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87932944"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418419"
 ---
 # <a name="user-interface-reference-oracletosql"></a>사용자 인터페이스 참조(OracleToSQL)
 이 섹션에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Oracle 용 SSMA (Migration Assistant)에 대 한 도움말 항목이 포함 되어 있습니다.  
@@ -27,7 +28,7 @@ ms.locfileid: "87932944"
 |-|-|  
 |[고급 개체 선택 &#40;OracleToSQL&#41;](../../ssma/oracle/advanced-object-selection-oracletosql.md)|**고급 개체 선택** 대화 상자를 사용 하 여 필터 조건을 사용 하 여 데이터베이스 개체를 찾은 다음 해당 개체를 선택 하거나 선택 취소 합니다.|  
 |[평가 보고서 &#40;OracleToSQL&#41;](../../ssma/oracle/assessment-report-oracletosql.md)|평가 보고서를 사용 하 여 Oracle 개체를 구문으로 변환 하는 결과를 확인 하 [!INCLUDE[tsql](../../includes/tsql-md.md)] 고로 마이그레이션하는 시간과 복잡성을 예측할 수 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 있습니다.|  
-|[Oracle &#40;OracleToSQL&#41;에 연결](../../ssma/oracle/connect-to-oracle-oracletosql.md)|**Oracle에 연결** 대화 상자를 사용 하 여 마이그레이션하려는 oracle 데이터베이스에 연결 합니다.|  
+|[Oracle &#40;OracleToSQL&#41;에 연결 ](../../ssma/oracle/connect-to-oracle-oracletosql.md)|**Oracle에 연결** 대화 상자를 사용 하 여 마이그레이션하려는 oracle 데이터베이스에 연결 합니다.|  
 |[SQL Server &#40;OracleToSQL에 연결&#41;](../../ssma/oracle/connect-to-sql-server-oracletosql.md)|**SQL Server 연결** 대화 상자를 사용 하 여 마이그레이션하려는 인스턴스에 연결할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |[데이터 마이그레이션 보고서 &#40;OracleToSQL&#41;](../../ssma/oracle/data-migration-report-oracletosql.md)|Oracle에서로 데이터를 마이그레이션한 결과를 표시 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |[데이터 마이그레이션 설정](data-migration-settings-oracletosql.md)|**확장 데이터 마이그레이션 설정** 탭을 사용 하 여 데이터 마이그레이션에 대 한 사용자 지정 쿼리를 작성할 수 있습니다.|  
@@ -42,12 +43,12 @@ ms.locfileid: "87932944"
 |[프로젝트 설정 &#40;GUI&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-gui-oracletosql.md)|**프로젝트 설정** 대화 상자의 GUI 페이지를 사용 하 여 **데이터** 탭에 표시할 데이터의 양을 지정할 수 있습니다.|  
 |[마이그레이션&#41; &#40;OracleToSQL 프로젝트 설정 &#40;&#41;](../../ssma/oracle/project-settings-migration-oracletosql.md)|**프로젝트 설정** 대화 상자의 마이그레이션 페이지를 사용 하 여 oracle의 데이터를 oracle에서로 마이그레이션하는 방법을 사용자 지정할 수 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 있습니다.|  
 |[프로젝트 설정&#40;동기화&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-synchronization-oracletosql.md)|**프로젝트 설정** 대화 상자의 동기화 페이지를 사용 하 여 ORACLE의 ssma에서 마이그레이션된 데이터베이스 개체를 만들거나 변경 하는 방법을 사용자 지정할 수 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 있습니다.|  
-|[프로젝트 설정&#40;&#41; &#40;OracleToSQL&#41;시스템 개체를 로드 하는 중](../../ssma/oracle/project-settings-loading-system-objects-oracletosql.md)|**프로젝트 설정** 대화 상자의 시스템 개체 로드 페이지를 사용 하 여 ssma가 변환 하 고 로드 하는 Oracle 시스템 개체를 지정할 수 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 있습니다.|  
+|[프로젝트 설정&#40;&#41; &#40;OracleToSQL&#41;시스템 개체를 로드 하는 중 ](../../ssma/oracle/project-settings-loading-system-objects-oracletosql.md)|**프로젝트 설정** 대화 상자의 시스템 개체 로드 페이지를 사용 하 여 ssma가 변환 하 고 로드 하는 Oracle 시스템 개체를 지정할 수 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 있습니다.|  
 |[프로젝트 설정 &#40;형식 매핑&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-type-mapping-oracletosql.md)|**프로젝트 설정** 대화 상자의 형식 매핑 페이지를 사용 하 여 ORACLE 용 ssma 프로젝트의 모든 데이터베이스 및 데이터베이스 개체에 대 한 기본 형식 매핑을 지정할 수 있습니다.|  
-|[데이터베이스 &#40;OracleToSQL&#41;에서 새로 고침](../../ssma/oracle/refresh-from-database-oracletosql.md)|**데이터베이스에서 새로 고침** 대화 상자를 사용 하 여 Oracle 데이터베이스에서 새로 고칠 개체를 선택할 수 있습니다.|  
-|[OracleToSQL&#41;&#40;메타 데이터 저장](../../ssma/oracle/save-metadata-oracletosql.md)|메타 데이터 **저장** 대화 상자는 메타 데이터가 없는 프로젝트를 저장할 때 나타납니다.|  
+|[데이터베이스 &#40;OracleToSQL&#41;에서 새로 고침 ](../../ssma/oracle/refresh-from-database-oracletosql.md)|**데이터베이스에서 새로 고침** 대화 상자를 사용 하 여 Oracle 데이터베이스에서 새로 고칠 개체를 선택할 수 있습니다.|  
+|[OracleToSQL&#41;&#40;메타 데이터 저장 ](../../ssma/oracle/save-metadata-oracletosql.md)|메타 데이터 **저장** 대화 상자는 메타 데이터가 없는 프로젝트를 저장할 때 나타납니다.|  
   
 ## <a name="see-also"></a>참고 항목  
-[Oracle &#40;OracleToSQL&#41;에 대 한 SSMA 시작](../../ssma/oracle/getting-started-with-ssma-for-oracle-oracletosql.md)  
-[Oracle 데이터베이스를 SQL Server &#40;OracleToSQL&#41;로 마이그레이션](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
+[Oracle &#40;OracleToSQL&#41;에 대 한 SSMA 시작 ](../../ssma/oracle/getting-started-with-ssma-for-oracle-oracletosql.md)  
+[Oracle 데이터베이스를 SQL Server &#40;OracleToSQL&#41;로 마이그레이션 ](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
   

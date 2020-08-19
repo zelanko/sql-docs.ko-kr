@@ -1,4 +1,5 @@
 ---
+description: ASCII(Transact-SQL)
 title: ASCII(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/14/2019
@@ -21,12 +22,12 @@ ms.assetid: 45c2044a-0593-4805-8bae-0fad4bde2e6b
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3101a78ba29e12997048683bdada7e7d53aa7bd6
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: d0169bc8dd5ed25e6f1689802e9a431df34fe457
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113166"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417499"
 ---
 # <a name="ascii-transact-sql"></a>ASCII(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -45,13 +46,13 @@ ASCII ( character_expression )
 
 ## <a name="arguments"></a>인수
 *character_expression*  
-[char](../../t-sql/language-elements/expressions-transact-sql.md) 또는 **varchar** 형식의 **식**입니다.
+**char** 또는 **varchar** 형식의 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다.
   
 ## <a name="return-types"></a>반환 형식
  **int**  
   
 ## <a name="remarks"></a>설명
-ASCII는 **A**merican **S**tandard **C**ode for **I**nformation **I**nterchange를 나타냅니다. 최신 컴퓨터에 대한 문자 인코딩 표준으로 사용합니다. ASCII 문자 목록은 **ASCII**의 [인쇄 가능 문자](https://www.wikipedia.org/wiki/ASCII) 섹션을 참조하세요.
+ASCII는 **A**merican **S**tandard **C**ode for **I**nformation **I**nterchange를 나타냅니다. 최신 컴퓨터에 대한 문자 인코딩 표준으로 사용합니다. ASCII 문자 목록은 [ASCII](https://www.wikipedia.org/wiki/ASCII)의 **인쇄 가능 문자** 섹션을 참조하세요.
 
 ASCII는 7비트 문자 집합입니다. 확장 ASCII 또는 상위 ASCII는 `ASCII` 함수에서 처리하지 않는 8비트 문자 집합입니다. 
 

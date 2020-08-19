@@ -1,4 +1,5 @@
 ---
+description: HAS_PERMS_BY_NAME(Transact-SQL)
 title: HAS_PERMS_BY_NAME(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/29/2017
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: eaf8cc82-1047-4144-9e77-0e1095df6143
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 7ca0bb9b4fb03cc3f567c6c642a3593d23963993
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: e2fa743ae09dc8a09a8edbc8e4a6e3b5cf8415db
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113524"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417349"
 ---
 # <a name="has_perms_by_name-transact-sql"></a>HAS_PERMS_BY_NAME(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -62,7 +63,7 @@ HAS_PERMS_BY_NAME ( securable , securable_class , permission
  사용 권한이 테스트되는 대상 보안 개체 하위 엔터티의 이름을 나타내는 **sysname** 형식의 선택적 스칼라 식입니다. 기본값은 NULL입니다.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이상 버전에서는 하위 보안 개체에 **'[** _sub name_ **]'** 형식의 대괄호를 사용할 수 없습니다. 대신 **'** _sub name_ **'** 을 사용하세요.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이상 버전에서는 하위 보안 개체에 **'[**_sub name_**]'** 형식의 대괄호를 사용할 수 없습니다. 대신 **'** _sub name_ **'** 을 사용하세요.  
   
  *sub-securable_class*  
  사용 권한이 테스트되는 대상 보안 개체 하위 엔터티의 클래스를 나타내는 **nvarchar(60)** 형식의 선택적 스칼라 식입니다. 기본값은 NULL입니다.  
@@ -103,7 +104,7 @@ SELECT class_desc FROM sys.fn_builtin_permissions(default);
   
 -   열 수준 확인에는 'ANY'를 사용할 수 없습니다. 적절한 사용 권한을 지정해야 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-do-i-have-the-server-level-view-server-state-permission"></a>A. 서버 수준 VIEW SERVER STATE 권한이 있는지 확인  
   

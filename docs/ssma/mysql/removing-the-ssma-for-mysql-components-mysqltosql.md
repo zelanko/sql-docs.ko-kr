@@ -1,4 +1,5 @@
 ---
+description: MySQL용 SSMA 구성 요소 제거(MySQLToSql)
 title: MySQL 용 SSMA 구성 요소 제거 (MySQLToSql) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 87cdbd49-a0c9-4b00-8a93-34188b18d11a
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 27c1ab67a6d62bceb31bb036978f65b3494e4f19
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 3a7932d79c414fb79dfc29074c1b8a5888c85827
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935242"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418509"
 ---
 # <a name="removing-the-ssma-for-mysql-components-mysqltosql"></a>MySQL용 SSMA 구성 요소 제거(MySQLToSql)
 MySQL에서로 데이터베이스 마이그레이션을 마치면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SSMA 구성 요소를 제거 하는 것이 좋습니다. 언제 든 지 클라이언트 구성 요소를 제거할 수 있습니다. 그러나에서 확장 팩을 제거 하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SSMA에서 서버 쪽 데이터 마이그레이션 엔진을 사용 하 여 MySQL에서 대상 데이터베이스로의 데이터 마이그레이션 (SQL Server/SQL Azure)을 더 이상 지원 하지 않습니다.  
@@ -57,6 +58,6 @@ MySQL에서로 데이터베이스 마이그레이션을 마치면 [!INCLUDE[ssNo
 제거 프로세스가 완료 된 후에는를 사용 하 여 **sysdb. ssma_MySQL** 스키마의 개체와 전체 **sysdb** 데이터베이스가 제거 되었는지 확인할 수 있습니다 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . 그러나 다른 SSMA 제품을 사용 하는 경우 **sysdb** 데이터베이스도 사용 합니다. 데이터베이스가 존재 하 고이 데이터베이스의 개체를 참조 하는 다른 데이터베이스가 없는 경우 데이터베이스를 분리할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
-[MySQLToSQL&#41;&#40;MySQL 용 SSMA 클라이언트 설치](../../ssma/mysql/installing-ssma-for-mysql-client-mysqltosql.md)  
+[MySQLToSQL&#41;&#40;MySQL 용 SSMA 클라이언트 설치 ](../../ssma/mysql/installing-ssma-for-mysql-client-mysqltosql.md)  
 [SQL Server에 SSMA 구성 요소 설치](installing-ssma-components-on-sql-server-mysqltosql.md)  
   

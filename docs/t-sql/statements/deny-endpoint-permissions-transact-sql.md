@@ -1,4 +1,5 @@
 ---
+description: DENY 엔드포인트 사용 권한(Transact-SQL)
 title: DENY Endpoint Permissions(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/15/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3ac40457-7529-4eda-95a4-5247345cc8cf
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: b1a6c119e8091cf91269aae8a2c0d3ef3335c489
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 9b4af50e021520c1333e0dbffb8cc3c654b6f0fb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484804"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88416839"
 ---
 # <a name="deny-endpoint-permissions-transact-sql"></a>DENY 엔드포인트 사용 권한(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
