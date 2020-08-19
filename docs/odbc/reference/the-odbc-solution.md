@@ -1,4 +1,5 @@
 ---
+description: ODBC 솔루션
 title: ODBC 솔루션 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 34b80790-e010-4b90-8eaa-03189f5d8986
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2b35883ff4d621f0ecc092020ad744455281dd63
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f1a1c216dc67c33eadc9a058263087978f176297
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81286756"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428865"
 ---
 # <a name="the-odbc-solution"></a>ODBC 솔루션
 그런 다음 ODBC는 데이터베이스 액세스를 표준화 하는 방법입니다. 아키텍처 요구 사항은 다음 두 가지입니다.  

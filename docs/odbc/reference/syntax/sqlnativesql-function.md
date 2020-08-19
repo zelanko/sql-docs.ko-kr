@@ -1,4 +1,5 @@
 ---
+description: SQLNativeSql 함수(SQLNativeSql Function)
 title: SQLNativeSql 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: b8efc247-27ab-4a00-92b6-1400785783fe
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9666bc767affb3b6bb624c416614079193d4b921
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cbdf43d1120065f981d43e58490e328c6ef7691c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304724"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428905"
 ---
 # <a name="sqlnativesql-function"></a>SQLNativeSql 함수(SQLNativeSql Function)
 **규칙**  
@@ -62,10 +63,10 @@ SQLRETURN SQLNativeSql(
  *OutStatementText* 가 NULL 인 경우 *TextLength2Ptr* 는 *OutStatementText*가 가리키는 버퍼에서 반환 하는 데 사용할 수 있는 문자 데이터의 NULL 종료 문자를 제외한 총 문자 수를 반환 합니다.  
   
  *BufferLength*  
- 입력 \* *OutStatementText* 버퍼의 문자 수입니다. **SQLNativeSqlW**를 호출 하는 경우에 호출 된 * \*atementtext* 에서 반환 된 값이 유니코드 문자열이 면 *bufferlength* 인수는 짝수 여야 합니다.  
+ 입력 OutStatementText 버퍼의 문자 수 \* *OutStatementText* 입니다. **SQLNativeSqlW**를 호출 하는 경우에 호출 된 * \* atementtext* 에서 반환 된 값이 유니코드 문자열이 면 *bufferlength* 인수는 짝수 여야 합니다.  
   
  *TextLength2Ptr*  
- 출력 \* *OutStatementText*에서 반환 하는 데 사용할 수 있는 총 문자 수 (null 종료 제외)를 반환할 버퍼에 대 한 포인터입니다. 반환할 수 있는 문자 수가 *bufferlength*보다 크거나 같은 경우 \* *OutStatementText* 의 변환 된 SQL 문자열은 *bufferlength* 에서 null 종료 문자의 길이를 뺀 값으로 잘립니다.  
+ 출력 OutStatementText에서 반환 하는 데 사용할 수 있는 총 문자 수 (null 종료 제외)를 반환할 버퍼에 대 한 포인터입니다 \* *OutStatementText*. 반환할 수 있는 문자 수가 *Bufferlength*보다 크거나 같은 경우 OutStatementText의 변환 된 SQL 문자열은 \* *OutStatementText* *bufferlength* 에서 null 종료 문자의 길이를 뺀 값으로 잘립니다.  
   
 ## <a name="returns"></a>반환  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR 또는 SQL_INVALID_HANDLE입니다.  
@@ -73,7 +74,7 @@ SQLRETURN SQLNativeSql(
 ## <a name="diagnostics"></a>진단  
  **SQLNativeSql** 가 SQL_ERROR 또는 SQL_SUCCESS_WITH_INFO를 반환할 때 SQL_HANDLE_DBC의 *HandleType* 및 *ConnectionHandle* *핸들* 을 사용 하 여 **SQLGetDiagRec** 를 호출 하 여 연결 된 SQLSTATE 값을 얻을 수 있습니다. 다음 표에서는 일반적으로 **SQLNativeSql** 에서 반환 하는 SQLSTATE 값을 나열 하 고이 함수의 컨텍스트에서 각 항목에 대해 설명 합니다. "(DM)" 표기법은 드라이버 관리자에서 반환 된 SQLSTATEs의 설명 보다 앞에 나옵니다. 다른 설명이 없는 한 각 SQLSTATE 값과 연결 된 반환 코드는 SQL_ERROR 됩니다.  
   
-|SQLSTATE|Error|Description|  
+|SQLSTATE|오류|설명|  
 |--------------|-----------|-----------------|  
 |01000|일반 경고|드라이버 관련 정보 메시지입니다. 함수는 SQL_SUCCESS_WITH_INFO를 반환 합니다.|  
 |01004|문자열 데이터, 오른쪽이 잘렸습니다.|버퍼 \* *OutStatementText* 는 전체 sql 문자열을 반환 하기에 충분 하지 않아 sql 문자열이 잘렸습니다. 잘리지 않는 SQL 문자열의 길이는 **TextLength2Ptr*에서 반환 됩니다. 함수는 SQL_SUCCESS_WITH_INFO를 반환 합니다.|  
@@ -81,7 +82,7 @@ SQLRETURN SQLNativeSql(
 |08S01|통신 연결 오류|드라이버가 연결 된 드라이버와 데이터 원본 간의 통신 연결이 함수 처리를 완료 하기 전에 실패 했습니다.|  
 |22007|날짜/시간 형식이 잘못 되었습니다.|*사용 중인 *Atementtext* 에 잘못 된 날짜, 시간 또는 타임 스탬프 값을 가진 이스케이프 절이 포함 되어 있습니다.|  
 |24000|잘못된 커서 상태|문에서 참조 되는 커서가 결과 집합의 시작 앞 이나 결과 집합의 끝 앞에 배치 되었습니다. 기본 DBMS 커서 구현이 있는 드라이버에서는이 오류가 반환 되지 않을 수 있습니다.|  
-|HY000|일반 오류|특정 SQLSTATE가 없고 구현 별 SQLSTATE가 정의 되지 않은 오류가 발생 했습니다. MessageText 버퍼에서 **SQLGetDiagRec** 에 의해 반환 되는 오류 메시지는 오류 및 해당 원인을 설명 합니다. * \**|  
+|HY000|일반 오류|특정 SQLSTATE가 없고 구현 별 SQLSTATE가 정의 되지 않은 오류가 발생 했습니다. * \* MessageText* 버퍼에서 **SQLGetDiagRec** 에 의해 반환 되는 오류 메시지는 오류 및 해당 원인을 설명 합니다.|  
 |HY001|메모리 할당 오류|드라이버에서 함수 실행 또는 완료를 지 원하는 데 필요한 메모리를 할당할 수 없습니다.|  
 |HY009|Null 포인터 사용이 잘못 되었습니다.|(DM) * on*Atementtext* 가 null 포인터입니다.|  
 |HY010|함수 시퀀스 오류|(DM) *ConnectionHandle* 에 대해 비동기적으로 실행 되는 함수가 호출 되었으며이 함수가 호출 될 때 여전히 실행 되 고 있습니다.|  

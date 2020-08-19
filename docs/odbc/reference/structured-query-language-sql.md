@@ -1,4 +1,5 @@
 ---
+description: SQL(구조적 쿼리 언어)(Structured Query Language)
 title: 구조적 쿼리 언어 (SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bebfd93e-0dc0-46b3-a531-518beb7ea976
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c669b4424271fc1a3c91dea37159474fb52b97cd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c68f14bd3e1ae5df29f52332d29393bf15c3b665
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81293393"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428975"
 ---
 # <a name="structured-query-language-sql"></a>SQL(구조적 쿼리 언어)(Structured Query Language)
 일반적인 DBMS를 사용 하면 사용자가 구성 된 효율적인 방식으로 데이터를 저장, 액세스 및 수정할 수 있습니다. 원래 Dbms의 사용자는 프로그래머 였습니다. COBOL과 같은 프로그래밍 언어로 프로그램을 작성 하는 데 필요한 저장 된 데이터에 액세스 합니다. 이러한 프로그램은 종종 사용자에 게 친숙 한 사용자에 게 친숙 한 인터페이스를 제공 하기 위해 작성 되었지만, 데이터 자체에 대 한 액세스는 전문 프로그래머의 서비스에 필요 합니다. 데이터에 대 한 액세스는 실용적이 지 않습니다.  

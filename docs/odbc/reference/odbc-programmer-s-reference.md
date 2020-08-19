@@ -1,4 +1,5 @@
 ---
+description: ODBC 프로그래머&#39;s 참조
 title: ODBC 프로그래머&#39;s 참조 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: b33c3c43-ae66-44a3-be17-9cd82624dd96
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6a9ca32627b9703465dcfca554fdc32ae01442e7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 09d79d9a71b1eaeadf6fd649e7433cf5133de403
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81280513"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428995"
 ---
 # <a name="odbc-programmer39s-reference"></a>ODBC 프로그래머&#39;s 참조
 *ODBC 프로그래머 참조* 에는 다음과 같은 섹션이 포함 되어 있습니다.  
@@ -47,7 +48,7 @@ ms.locfileid: "81280513"
   
  다음과 같은 모양 표기 규칙이 사용 됩니다.  
   
-|형식|사용 목적|  
+|서식|사용 대상|  
 |------------|--------------|  
 |SELECT * FROM|대문자는 운영 체제 명령 수준에서 사용 되는 SQL 문, 매크로 이름 및 용어를 의미 합니다.|  
 |`RETCODE SQLFetch(hdbc)`|고정 폭 글꼴은 샘플 명령줄 및 프로그램 코드에 사용 됩니다.|  

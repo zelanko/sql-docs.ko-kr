@@ -1,5 +1,6 @@
 ---
-title: 데이터 소스유형 | 마이크로 소프트 문서
+description: 데이터 원본 형식
+title: 데이터 원본 유형 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: a5e3f966-3357-4827-afbc-6153682d26bc
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 69ac838bebcbe9581cf2424a99b6b503af526fe7
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.openlocfilehash: 46662096833dddf4a094282ad453a7a0696f28b4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81286735"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428855"
 ---
 # <a name="types-of-data-sources"></a>데이터 원본 형식
-데이터 원본에는 컴퓨터 데이터 원본과 파일 데이터 원본의 두 가지 유형이 있습니다. 둘 다 데이터 원본에 대한 유사한 정보를 포함하지만 이 정보가 저장되는 방식은 다릅니다. 이러한 차이 때문에, 그들은 다소 다른 방식으로 사용됩니다.  
+데이터 원본에는 컴퓨터 데이터 원본 및 파일 데이터 원본의 두 가지 유형이 있습니다. 둘 다 데이터 원본에 대 한 유사한 정보를 포함 하지만이 정보가 저장 되는 방식과 다릅니다. 이러한 차이로 인해 약간 다른 방식의 사용 됩니다.  
   
  이 섹션에서는 다음 항목을 다룹니다.  
   

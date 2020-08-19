@@ -1,5 +1,6 @@
 ---
-title: ODBC란? | Microsoft 문서
+description: ODBC란?
+title: ODBC란? | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: badf3a45-f941-44ae-a31d-393116f68a18
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ea0aa81188e5e58d3a66032af38700ece2d4e5b4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 23badedad64ac836f07e3d9f7832fcfa6c33b0b9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81286503"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428825"
 ---
 # <a name="what-is-odbc"></a>ODBC란?
 ODBC에 대 한 많은 오해 컴퓨팅 환경에 있습니다. 최종 사용자에 게는 Microsoft® Windows® 제어판의 아이콘이 있습니다. 응용 프로그램 프로그래머는 데이터 액세스 루틴이 포함 된 라이브러리입니다. 다른 많은 데이터베이스 액세스 문제에 대 한 답입니다.  

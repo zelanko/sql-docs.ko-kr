@@ -1,4 +1,5 @@
 ---
+description: 정적 SQL
 title: 정적 SQL | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 667d92ec-fed9-4028-81d4-bb9ba867356a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 55710d8ea734cba86ae5e4daa725f75e94e65a64
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 19c4ec3454a5d5891a87203fe8c7aeaff21b239b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81279905"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428985"
 ---
 # <a name="static-sql"></a>정적 SQL
 [EMBEDDED Sql 예제](../../odbc/reference/embedded-sql-example.md) 에 표시 된 포함 된 sql을 정적 sql 이라고 합니다. 이는 프로그램의 SQL 문이 정적 이므로 정적 SQL 이라고 합니다. 즉, 프로그램이 실행 될 때마다 변경 되지 않습니다. 이전 섹션에서 설명한 대로 이러한 문은 프로그램의 나머지 부분이 컴파일될 때 컴파일됩니다.  

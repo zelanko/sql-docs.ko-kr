@@ -1,4 +1,5 @@
 ---
+description: 관리 프로그램
 title: 관리 프로그램 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a6c8248a-7a01-42e7-aaed-99dc94d50028
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d8a2a8363371d6f6c3644c2b7b49aa77644d496e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5aef5e00fa69fd1f699228b2c0ac82b2a8041962
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306644"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429035"
 ---
 # <a name="administration-program"></a>관리 프로그램
 > [!NOTE]  

@@ -1,4 +1,5 @@
 ---
+description: ODBC 아키텍처
 title: ODBC 아키텍처 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2604f492-587b-4a51-9876-59a7870b3ef2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 07435dc1a5fbe800f2260e914f315cfe93dd8d1b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3afeb698d7eff9d09161a091e3de0194fea93ec2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305134"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429005"
 ---
 # <a name="odbc-architecture"></a>ODBC 아키텍처
 ODBC 아키텍처에는 다음과 같은 네 가지 구성 요소가 있습니다.  
@@ -41,4 +42,4 @@ ODBC 아키텍처에는 다음과 같은 네 가지 구성 요소가 있습니�
   
 -   [드라이버](../../odbc/reference/drivers.md)  
   
--   [데이터 소스](../../odbc/reference/data-sources.md)
+-   [데이터 원본](../../odbc/reference/data-sources.md)

@@ -1,4 +1,5 @@
 ---
+description: 데이터 수집기의 속성 구성
 title: 데이터 수집기의 속성 구성 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: cf98f57d-5a6d-4bc3-bf10-783e460fc63d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 630bbbdfe62e19897ce625af92b1c16069443abe
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 19d0107e21e71c8330e3990d4fe937e030ecd0e7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733881"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428965"
 ---
 # <a name="configure-properties-of-a-data-collector"></a>데이터 수집기의 속성 구성
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

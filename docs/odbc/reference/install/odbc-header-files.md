@@ -1,4 +1,5 @@
 ---
+description: ODBC 헤더 파일
 title: ODBC 헤더 파일 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 96f97ba3-7e73-4196-abfb-036c5f6d1903
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0e3a4b550660b0f669b0b7dd790ab2fbb5fbdd33
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 64acc34333803d3c555d85b596d0e34c17fa2647
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81288933"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429015"
 ---
 # <a name="odbc-header-files"></a>ODBC 헤더 파일
 > [!NOTE]  

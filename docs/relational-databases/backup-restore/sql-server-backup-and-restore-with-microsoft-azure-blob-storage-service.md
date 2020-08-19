@@ -1,4 +1,5 @@
 ---
+description: Microsoft Azure Blob Storage Service로 SQL Server 백업 및 복원
 title: Azure Blob Storage를 사용하여 백업 및 복원
 storage: Learn about SQL Server backup to and restore from Azure Blob storage, including the benefits of using Azure Blob storage to store SQL Server backups.
 ms.custom: seo-lt-2019
@@ -11,12 +12,12 @@ ms.topic: conceptual
 ms.assetid: 6a0c9b6a-cf71-4311-82f2-12c445f63935
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e24d91db6845d862b88457d72f2f4bc04c9062d4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 41c11b596017f9dfeab7d62cfbe517e764f733ba
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85786464"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428925"
 ---
 # <a name="sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service"></a>Microsoft Azure Blob Storage Service로 SQL Server 백업 및 복원
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -68,8 +69,8 @@ ms.locfileid: "85786464"
 
 [시스템 데이터베이스 백업 및 복원&#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)   
 
-[자습서: SQL Server 2016 데이터베이스와 함께 Microsoft Azure Blob Storage 서비스 사용](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)
+[자습서: SQL Server 2016 데이터베이스와 함께 Microsoft Azure Blob 스토리지 서비스 사용](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)
 
-[URL에 SQL Server Backup](../../relational-databases/backup-restore/sql-server-backup-to-url.md)  
+[URL에 대한 SQL Server 백업](../../relational-databases/backup-restore/sql-server-backup-to-url.md)  
   
   

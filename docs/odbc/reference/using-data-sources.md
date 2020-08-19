@@ -1,4 +1,5 @@
 ---
+description: 데이터 원본 사용
 title: 데이터 원본 사용 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: d5550619-22b2-4b16-bd08-fbabb6554c40
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: df9b09e4c5519e0fff44902bd83b8e3d92a67ca8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 162f1c2bf8d75757ac2c29d60f675ac07ba8b00d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81286554"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428836"
 ---
 # <a name="using-data-sources"></a>데이터 원본 사용
 데이터 원본은 일반적으로 최종 사용자 또는 기술 자가 *ODBC 관리자*라는 프로그램을 사용 하 여 만듭니다. ODBC 관리자는 사용자에 게 드라이버를 사용 하 라는 메시지를 표시 한 다음 해당 드라이버를 호출 합니다. 드라이버는 데이터 원본에 연결 하는 데 필요한 정보를 요청 하는 대화 상자를 표시 합니다. 사용자가 정보를 입력 하면 드라이버는 시스템에 해당 정보를 저장 합니다.  
