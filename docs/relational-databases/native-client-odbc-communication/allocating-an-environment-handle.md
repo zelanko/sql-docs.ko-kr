@@ -1,4 +1,5 @@
 ---
+description: 환경 핸들 할당
 title: 환경 핸들 할당 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -16,11 +17,12 @@ ms.assetid: 15c1b428-ea6d-4672-894c-f0e289e2da3f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d36f0f2c1f2b98ef70f3a7460c5565307cc0a3d7
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 071709dbb5500aa503d732e8c9f46362c6102cfa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007137"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420697"
 ---
 # <a name="allocating-an-environment-handle"></a>환경 핸들 할당
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -30,6 +32,6 @@ ms.locfileid: "86007137"
  애플리케이션은 환경 핸들을 할당한 후 환경 특성을 설정하여 사용할 ODBC 함수 호출 버전을 지정해야 합니다. ODBC 3을 사용 합니다. *x* 함수를 사용 하 여 [SQLSetEnvAttr](../../relational-databases/native-client-odbc-api/sqlsetenvattr.md) 를 호출 합니다. 여기서 *특성* 매개 변수는 SQL_ATTR_ODBC_VERSION *로 설정 되 고,* 는 SQL_OV_ODBC3로 설정 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [SQL Server &#40;ODBC&#41;와 통신](../../relational-databases/native-client-odbc-communication/communicating-with-sql-server-odbc.md)  
+ [SQL Server &#40;ODBC&#41;와 통신 ](../../relational-databases/native-client-odbc-communication/communicating-with-sql-server-odbc.md)  
   
   

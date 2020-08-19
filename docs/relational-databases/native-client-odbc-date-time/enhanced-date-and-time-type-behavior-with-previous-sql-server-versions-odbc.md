@@ -1,4 +1,5 @@
 ---
+description: 이전 버전 SQL Server에 대한 향상된 날짜 및 시간 형식 동작(ODBC)
 title: SQL 버전의 날짜 시간 (ODBC)
 ms.custom: ''
 ms.date: 12/18/2019
@@ -13,11 +14,12 @@ ms.assetid: cd4e137f-dc5e-4df7-bc95-51fe18c587e0
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b96e7807fd29e417616f2aec406d6a07f37ccf6f
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 83616c86aec74aa7d30c71d9347722d89f1448e5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004340"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420617"
 ---
 # <a name="enhanced-date-and-time-type-behavior-with-previous-sql-server-versions-odbc"></a>이전 버전 SQL Server에 대한 향상된 날짜 및 시간 형식 동작(ODBC)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -35,7 +37,7 @@ ms.locfileid: "86004340"
   
 |SQL Server 2005 형식|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)](또는 이후 버전) 형식|ODBC 클라이언트 형식|결과 변환(SQL에서 C로 변환)|매개 변수 변환(C에서 SQL로 변환)|  
 |--------------------------|----------------------------------------------|----------------------|------------------------------------|---------------------------------------|  
-|DateTime|날짜|SQL_C_TYPE_DATE|정상|확인 (1)|  
+|DateTime|Date|SQL_C_TYPE_DATE|정상|확인 (1)|  
 |||SQL_C_TYPE_TIMESTAMP|시간 필드가 0으로 설정됩니다.|정상(2)<br /><br /> 시간 필드가 0 이외의 값이면 실패합니다. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 작동합니다.|  
 ||Time(0)|SQL_C_TYPE_TIME|정상|확인 (1)|  
 |||SQL_C_TYPE_TIMESTAMP|날짜 필드가 현재 날짜로 설정됩니다.|정상(2)<br /><br /> 날짜가 무시됩니다. 초 소수 부분이 0 이외의 값이면 실패합니다. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 작동합니다.|  
@@ -43,11 +45,11 @@ ms.locfileid: "86004340"
 |||SQL_C_TYPE_TIMESTAMP|실패-시간 리터럴이 잘못 되었습니다.|확인 (1)|  
 ||Datetime2 (3)|SQL_C_TYPE_TIMESTAMP|정상|확인 (1)|  
 ||Datetime2 (7)|SQL_C_TYPE_TIMESTAMP|정상|클라이언트 변환 시 값이 1/300초로 반올림됩니다.|  
-|Smalldatetime|날짜|SQL_C_TYPE_DATE|정상|정상|  
+|Smalldatetime|Date|SQL_C_TYPE_DATE|확인|확인|  
 |||SQL_C_TYPE_TIMESTAMP|시간 필드가 0으로 설정됩니다.|정상(2)<br /><br /> 시간 필드가 0 이외의 값이면 실패합니다. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 작동합니다.|  
-||Time(0)|SQL_C_TYPE_TIME|정상|정상|  
+||Time(0)|SQL_C_TYPE_TIME|확인|확인|  
 |||SQL_C_TYPE_TIMESTAMP|날짜 필드가 현재 날짜로 설정됩니다.|정상(2)<br /><br /> 날짜가 무시됩니다. 초 소수 부분이 0 이외의 값이면 실패합니다.<br /><br /> [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 작동합니다.|  
-||Datetime2(0)|SQL_C_TYPE_TIMESTAMP|정상|정상|  
+||Datetime2(0)|SQL_C_TYPE_TIMESTAMP|확인|확인|  
 |||||
 
 ## <a name="key-to-symbols"></a>기호 설명  
@@ -97,7 +99,7 @@ ms.locfileid: "86004340"
 |CREATE_PARAMS|NULL|NULL|NULL|NULL|NULL|NULL|  
 |NULLABLE|SQL_NULLABLE|SQL_NULLABLE|SQL_NULLABLE|SQL_NULLABLE|SQL_NULLABLE|SQL_NULLABLE|  
 |CASE_SENSITIVE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|  
-|SEARCHABLE|SQL_PRED_SEARCHABLE|SQL_PRED_SEARCHABLE|SQL_PRED_SEARCHABLE|SQL_PRED_SEARCHABLE|SQL_PRED_SEARCHABLE|SQL_PRED_SEARCHABLE|  
+|검색 가능|SQL_PRED_SEARCHABLE|SQL_PRED_SEARCHABLE|SQL_PRED_SEARCHABLE|SQL_PRED_SEARCHABLE|SQL_PRED_SEARCHABLE|SQL_PRED_SEARCHABLE|  
 |UNSIGNED_ATTRIBUTE|NULL|NULL|NULL|NULL|NULL|NULL|  
 |FXED_PREC_SCALE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|  
 |AUTO_UNIQUE_VALUE|NULL|NULL|NULL|NULL|NULL|NULL|  
@@ -115,4 +117,4 @@ ms.locfileid: "86004340"
  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]보다 이전 버전의 서버 인스턴스에 연결되어 있는 경우 새로운 서버 형식 또는 관련된 메타데이터 코드 및 설명자 필드를 사용하려고 하면 SQL_ERROR가 반환됩니다. SQLSTATE HY004 및 "연결에서 서버 버전의 SQL 데이터 형식이 잘못되었습니다."라는 메시지가 포함된 진단 레코드 또는 07006 및 "제한된 데이터 형식 특성을 위반했습니다."라는 메시지가 포함된 진단 레코드가 생성됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [ODBC&#41;&#40;날짜 및 시간 기능 향상](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
+ [ODBC&#41;&#40;날짜 및 시간 기능 향상 ](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  

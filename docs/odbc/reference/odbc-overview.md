@@ -1,4 +1,5 @@
 ---
+description: ODBC 개요
 title: ODBC 개요 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 233315bd-2b7f-4b20-9978-e920e1ea9a07
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0a0515a882cd7d1c97a60e9262942bd7c397b0b2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 13f34a1ef329957854a8b33916b6b29506fc0ad9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298293"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421317"
 ---
 # <a name="odbc-overview"></a>ODBC 개요
 ODBC (Open Database Connectivity)는 데이터베이스 액세스를 위해 널리 사용 되는 API (응용 프로그래밍 인터페이스)입니다. Open Group의 CLI (호출 수준 인터페이스) 사양과 데이터베이스 Api에 대 한 ISO/IEC를 기반으로 하며, 구조적 쿼리 언어 (SQL)를 데이터베이스 액세스 언어로 사용 합니다.  

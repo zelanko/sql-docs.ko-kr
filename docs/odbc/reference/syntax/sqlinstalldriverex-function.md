@@ -1,4 +1,5 @@
 ---
+description: SQLInstallDriverEx 함수
 title: SQLInstallDriverEx 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,23 +20,23 @@ helpviewer_keywords:
 ms.assetid: 1dd74544-f4e9-46e1-9b5f-c11d84fdab4c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 054e8b6b9eae26bd5f973f3d46d7ef37363a8e79
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2c200615c9d3bc71ccb146d3b898517611b53eed
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302125"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421187"
 ---
 # <a name="sqlinstalldriverex-function"></a>SQLInstallDriverEx 함수
 **규칙**  
  소개 된 버전: ODBC 3.0  
   
  **요약**  
- **Sqlinstalldriverex** 는 시스템 정보의 odbcinst.ini 항목에 드라이버에 대 한 정보를 추가 하 고 드라이버의 *usagecount* 를 1 씩 증가 시킵니다. 그러나 드라이버의 버전이 이미 있지만 드라이버에 대 한 *Usagecount* 값이 없는 경우 새 *usagecount* 값은 2로 설정 됩니다.  
+ **Sqlinstalldriverex** 는 시스템 정보의 Odbcinst.ini 항목에 드라이버에 대 한 정보를 추가 하 고 드라이버의 *usagecount* 를 1 씩 증가 시킵니다. 그러나 드라이버의 버전이 이미 있지만 드라이버에 대 한 *Usagecount* 값이 없는 경우 새 *usagecount* 값은 2로 설정 됩니다.  
   
  이 함수는 실제로 파일을 복사 하지 않습니다. 드라이버의 파일을 대상 디렉터리에 올바르게 복사 하는 것은 호출 프로그램의 책임입니다.  
   
- ODBCCONF를 사용 하 여 **Sqlinstalldriverex** 의 기능에 액세스할 수도 있습니다 [. EXE](../../../odbc/odbcconf-exe.md).  
+ [ODBCCONF.EXE](../../../odbc/odbcconf-exe.md)를 사용 하 여 **Sqlinstalldriverex** 의 기능에 액세스할 수도 있습니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -83,9 +84,9 @@ BOOL SQLInstallDriverEx(
  이 함수는 성공 하면 TRUE를 반환 하 고 실패 하면 FALSE를 반환 합니다.  
   
 ## <a name="diagnostics"></a>진단  
- **Sqlinstalldriverex** 가 FALSE를 반환 하는 경우 **SQLInstallerError**를 호출 하 여 연결 된 * \*pfErrorCode* 값을 얻을 수 있습니다. 다음 표에서는 **SQLInstallerError** 에서 반환 될 수 있는 * \*pfErrorCode* 값을 나열 하 고이 함수의 컨텍스트에서 각 값에 대해 설명 합니다.  
+ **Sqlinstalldriverex** 가 FALSE를 반환 하는 경우 **SQLInstallerError**를 호출 하 여 연결 된 * \* pfErrorCode* 값을 얻을 수 있습니다. 다음 표에서는 **SQLInstallerError** 에서 반환 될 수 있는 * \* pfErrorCode* 값을 나열 하 고이 함수의 컨텍스트에서 각 값에 대해 설명 합니다.  
   
-|*\*pfErrorCode*|Error|Description|  
+|*\*pfErrorCode*|오류|설명|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|일반 설치 관리자 오류|특정 설치 관리자 오류가 없는 오류가 발생 했습니다.|  
 |ODBC_ERROR_INVALID_BUFF_LEN|잘못 된 버퍼 길이|*LpszPathOut* 인수가 출력 경로를 포함할 만큼 크지 않습니다. 버퍼는 잘린 경로를 포함 합니다.<br /><br /> *Cbpathoutmax* 인수가 0이 고 *frequest* 가 ODBC_INSTALL_COMPLETE 되었습니다.|  
@@ -99,9 +100,9 @@ BOOL SQLInstallDriverEx(
 ## <a name="comments"></a>주석  
  *LpszDriver* 인수는 키워드-값 쌍 형식의 특성 목록입니다. 각 쌍은 null 바이트로 종료 되며 전체 목록이 null 바이트로 종료 됩니다. 즉, 두 개의 null 바이트가 목록의 끝을 표시 합니다. 이 목록의 형식은 다음과 같습니다.  
   
- _드라이버-desc_ **\\**0driver**=**_driver-dll-filename_**\\**0 [설치**=**_프로그램-dll-파일 이름_<b>\\</b>0]  
+ _드라이버-desc_ **\\** 0Driver **=** _드라이버-dll-filename_ **\\** 0 [설치 **=** _프로그램-dll-파일 이름_ <b>\\</b> 0]  
   
- [_driver-keyword1_**=**_value1_<b>\\</b>0] [_driver-attr-keyword2_**=**_value2_<b>\\</b>0] ... <b>\\</b>0  
+ [_드라이버-특성-keyword1_ **=** _value1_ <b>\\</b> 0] [_driver-keyword2_ **=** _value2_ <b>\\</b> 0] ... <b>\\</b> 0  
   
  여기서 \ 0은 null 바이트이 고 *driver-keywordn* 은 any driver attribute 키워드입니다. 키워드는 지정 된 순서 대로 표시 되어야 합니다. 예를 들어 포맷 된 텍스트 파일용 드라이버에 별도의 드라이버와 설치 Dll이 있고 .txt 및 .csv 확장명을 가진 파일을 사용할 수 있다고 가정 합니다. 이 드라이버에 대 한 *lpszDriver* 인수는 다음과 같을 수 있습니다.  
   
@@ -116,7 +117,7 @@ FileExtns=*.txt,*.csv\0\0
 SQL Server\0Driver=SQLSRVR.DLL\0\0  
 ```  
   
- **Sqlinstalldriverex** 가 *lpszDriver* 인수에서 드라이버에 대 한 정보를 검색 한 후 시스템 정보에 있는 ODBCINST.INI 항목의 [ODBC Drivers] 섹션에 드라이버 설명을 추가 합니다. 그런 다음 드라이버의 설명으로 섹션을 만들고 드라이버 DLL 및 설치 DLL의 전체 경로를 추가 합니다. 마지막으로 설치 된 대상 디렉터리의 경로를 반환 하지만 드라이버 파일을 복사 하지 않습니다. 호출 프로그램은 실제로 드라이버 파일을 대상 디렉터리에 복사 해야 합니다.  
+ **Sqlinstalldriverex** 가 *lpszDriver* 인수에서 드라이버에 대 한 정보를 검색 한 후 시스템 정보에 있는 Odbcinst.ini 항목의 [ODBC Drivers] 섹션에 드라이버 설명을 추가 합니다. 그런 다음 드라이버의 설명으로 섹션을 만들고 드라이버 DLL 및 설치 DLL의 전체 경로를 추가 합니다. 마지막으로 설치 된 대상 디렉터리의 경로를 반환 하지만 드라이버 파일을 복사 하지 않습니다. 호출 프로그램은 실제로 드라이버 파일을 대상 디렉터리에 복사 해야 합니다.  
   
  **Sqlinstalldriverex** 는 설치 된 드라이버에 대 한 구성 요소 사용 횟수를 1 씩 증가 시킵니다. 드라이버의 버전이 이미 있지만 드라이버의 구성 요소 사용 횟수가 없는 경우 새 구성 요소 사용 횟수 값은 2로 설정 됩니다.  
   

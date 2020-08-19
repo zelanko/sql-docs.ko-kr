@@ -1,4 +1,5 @@
 ---
+description: 유지 관리 계획(보고 및 로깅 페이지)
 title: 유지 관리 계획(보고 및 로깅 페이지) | Microsoft 문서
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 3a30b17a-3deb-446f-900a-62f88934a90f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: db045eeb48bc04abb415bb5ac14a7872fc805b09
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 05db1c0f8c2eacd2a30e1e1e50b08e090ca6e9c4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85754532"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420867"
 ---
 # <a name="maintenance-plan-reporting-and-logging-page"></a>유지 관리 계획(보고 및 로깅 페이지)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -28,7 +29,7 @@ ms.locfileid: "85754532"
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 텍스트 파일 보고서를 기록하도록 할지 여부를 지정합니다.  
   
  **새 파일 만들기**  
- 유지 관리 계획이 실행될 때마다 새 보고서 파일을 만듭니다. 기본적으로 보고서 파일은 해당 유지 관리 계획이 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 호스팅하는 컴퓨터의 기본 로그 폴더에 기록됩니다. 기본 로그 폴더는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 중 설정합니다. 다른 폴더를 지정하려면 **폴더** 입력란에 전체 폴더 경로를 입력하거나 찾아보기 단추( **...** )를 클릭하고 원하는 폴더를 탐색합니다.  
+ 유지 관리 계획이 실행될 때마다 새 보고서 파일을 만듭니다. 기본적으로 보고서 파일은 해당 유지 관리 계획이 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 호스팅하는 컴퓨터의 기본 로그 폴더에 기록됩니다. 기본 로그 폴더는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 중 설정합니다. 다른 폴더를 지정하려면 **폴더** 입력란에 전체 폴더 경로를 입력하거나 찾아보기 단추(**...**)를 클릭하고 원하는 폴더를 탐색합니다.  
   
  **파일에 추가**  
  각각의 계획을 실행하여 생성된 보고서를 **파일 이름** 입력란에 지정된 파일에 추가합니다. 찾아보기 단추를 클릭하고 대화 상자에서 파일을 선택하여 파일을 지정할 수도 있습니다.  

@@ -1,4 +1,5 @@
 ---
+description: 유지 관리 계획(서버)
 title: 유지 관리 계획(서버) | Microsoft 문서
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ f1_keywords:
 ms.assetid: ac24d1a8-dd2f-4162-b804-c0df1fc1e61d
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: b94b427f2523dce7057e835aeae48b2d40d24e83
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1a991404f0acaba448958773f54a4836032ecd07
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85754522"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420857"
 ---
 # <a name="maintenance-plan-servers"></a>유지 관리 계획(서버)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

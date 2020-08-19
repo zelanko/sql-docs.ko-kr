@@ -1,4 +1,5 @@
 ---
+description: SQLSetEnvAttr
 title: SQLSetEnvAttr | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -14,11 +15,12 @@ ms.assetid: d4114571-feca-4330-b2e4-7bfd1050b812
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 315a34127e5ff7d9a23f24fd37de23eb7dffef8a
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 4b6bcc13a62a052e31777b1fa4044a9c5ba56c96
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012393"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420797"
 ---
 # <a name="sqlsetenvattr"></a>SQLSetEnvAttr
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

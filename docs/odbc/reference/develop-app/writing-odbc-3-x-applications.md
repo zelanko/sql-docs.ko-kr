@@ -1,4 +1,5 @@
 ---
+description: ODBC 3.x 애플리케이션 작성
 title: ODBC 3.x 응용 프로그램 작성 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 19c54fc5-9dd6-49b6-8c9f-a38961b40a65
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3ba48d76babcaa5fcc49a541088f7c4cc349b569
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7df97b99df10e613ee45aaa3c01174b46160e740
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81288991"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421357"
 ---
 # <a name="writing-odbc-3x-applications"></a>ODBC 3.x 애플리케이션 작성
 *Odbc 2.x 응용 프로그램* *을 odbc 2.x*로 업그레이드 하는 *경우 odbc 2.x 및 2.x* 드라이버 모두에서 작동 하도록 작성 해야 *합니다.* 응용 프로그램 *은 ODBC 3.x* 기능을 최대한 활용 하기 위해 조건부 코드를 통합 해야 합니다.  

@@ -1,4 +1,5 @@
 ---
+description: 향상된 날짜 및 시간 기능에 대한 ODBC API 지원
 title: 날짜 시간에 대 한 ODBC API
 ms.custom: ''
 ms.date: 12/18/2019
@@ -13,11 +14,12 @@ ms.assetid: 430c029d-f8c1-4de7-a9dd-330e9b6bfc20
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: abc3d2ad07703d6c3fa2792b7dbb4136f8c6074b
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: a592f8d15503b176193caa755a6b9d187a164429
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86010692"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420627"
 ---
 # <a name="odbc-api-support-for-enhanced-date-and-time-features"></a>향상된 날짜 및 시간 기능에 대한 ODBC API 지원
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -71,6 +73,6 @@ ms.locfileid: "86010692"
 -   [bcp_setcolfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-setcolfmt.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [ODBC&#41;&#40;날짜 및 시간 기능 향상](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
+ [ODBC&#41;&#40;날짜 및 시간 기능 향상 ](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
   
   

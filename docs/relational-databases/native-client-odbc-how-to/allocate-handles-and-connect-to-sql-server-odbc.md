@@ -1,4 +1,5 @@
 ---
+description: 핸들 할당 및 SQL Server에 연결(ODBC)
 title: 핸들을 할당 하 고 SQL Server에 연결 (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -15,11 +16,12 @@ ms.assetid: 6172cd52-9c9a-467d-992f-def07f3f3bb1
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 99f6e265696fd257dde93e86c835eaa514570e65
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 2bb6b097a811bc134a94ede766cc5774df5dfc3b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86010003"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420557"
 ---
 # <a name="allocate-handles-and-connect-to-sql-server-odbc"></a>핸들 할당 및 SQL Server에 연결(ODBC)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -56,7 +58,7 @@ ms.locfileid: "86010003"
   
      연결 문자열이 완전 하지 않은 경우 **SQLDriverConnect** 는 필요한 정보를 묻는 메시지를 표시할 수 있습니다. *Drivercompletion* 매개 변수에 지정 된 값으로 제어 됩니다.  
   
-     \- 또는 -  
+     \- 또는-  
   
      [SQLBrowseConnect](../../relational-databases/native-client-odbc-api/sqlbrowseconnect.md) 를 반복적으로 여러 번 호출 하 여 연결 문자열을 작성 하 고에 연결 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 합니다.  
   
@@ -71,7 +73,7 @@ ms.locfileid: "86010003"
 13. **HandleType** of SQL_HANDLE_ENV로 **sqlfreehandle** 을 호출 하 여 환경 핸들을 해제 합니다.  
   
 > [!IMPORTANT]  
->  가능하면 Windows 인증을 사용하세요. Windows 인증을 사용할 수 없으면 런타임에 사용자에게 자격 증명을 입력하라는 메시지를 표시합니다. 자격 증명은 파일에 저장하지 않는 것이 좋습니다. 자격 증명을 유지 해야 하는 경우에는 [Win32 CRYPTO API](https://go.microsoft.com/fwlink/?LinkId=64532)를 사용 하 여 자격 증명을 암호화 해야 합니다.  
+>  가능하면 Windows 인증을 사용하세요. Windows 인증을 사용할 수 없으면 런타임에 사용자에게 자격 증명을 입력하라는 메시지를 표시합니다. 자격 증명은 파일에 저장하지 않는 것이 좋습니다. 자격 증명을 유지하려면 [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532)를 사용하여 자격 증명을 암호화해야 합니다.  
   
 ## <a name="example"></a>예제  
  이 예에서는 **SQLDriverConnect** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기존 ODBC 데이터 원본을 요구 하지 않고 인스턴스에 연결 하기 위해 SQLDriverConnect를 호출 하는 방법을 보여 줍니다. **SQLDriverConnect**에 불완전 한 연결 문자열을 전달 하면 ODBC 드라이버가 누락 된 정보를 입력 하 라는 메시지를 표시 합니다.  

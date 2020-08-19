@@ -1,4 +1,5 @@
 ---
+description: 오류 메시지
 title: 오류 메시지 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,11 +17,12 @@ ms.assetid: 46c0c22e-d105-4d5b-bb9d-5694472e8651
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 72c17f0417bf0b3115d1c8c69d208dfafb361e7b
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: edc77084715eaa05dda8364159918668d7ce1078
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86006016"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420527"
 ---
 # <a name="error-messages"></a>오류 메시지
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

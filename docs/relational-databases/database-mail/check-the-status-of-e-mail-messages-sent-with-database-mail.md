@@ -1,4 +1,5 @@
 ---
+description: 데이터베이스 메일을 통해 보낸 전자 메일 메시지의 상태 확인
 title: 데이터베이스 메일을 통해 보낸 메일 메시지의 상태
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ ms.assetid: eb290f24-b52f-46bc-84eb-595afee6a5f3
 author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 72111583066aa73d94ccf70905f26cc35a359344
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 245a50951896f923165e011fc51c09abd00f96e4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737641"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421247"
 ---
 # <a name="check-the-status-of-e-mail-messages-sent-with-database-mail"></a>데이터베이스 메일을 통해 보낸 전자 메일 메시지의 상태 확인
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -28,7 +29,7 @@ ms.locfileid: "85737641"
   
 -   **시작하기 전 주의 사항:**  
   
--   **다음을 사용하여 데이터베이스 메일을 통해 전송된 메일의 상태 보기:**  [Transact-SQL](#TsqlProcedure)  
+-   **데이터베이스 메일을 사용하여 보낸 전자 메일의 상태를 보려면:**  [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
  데이터베이스 메일은 보내는 전자 메일 메시지의 복사본을 유지하고 **msdb**데이터베이스의 **sysmail_allitems**, **sysmail_sentitems**, **sysmail_unsentitems** , **sysmail_faileditems** 뷰에 표시합니다. 데이터베이스 메일 외부 프로그램은 작업을 기록하고 Windows 애플리케이션 이벤트 로그와 **msdb** 데이터베이스의 **sysmail_event_log** 뷰를 통해 로그를 표시합니다. 전자 메일 메시지의 상태를 확인하려면 이 뷰에 대한 쿼리를 실행하세요. 전자 메일 메시지에는 **sent**, **unsent**, **retrying**및 **failed**의 4가지 가능한 상태 중 하나가 있습니다.  

@@ -1,4 +1,5 @@
 ---
+description: 결과 집합이 생성되었나요?
 title: 결과 집합이 생성되었나요? | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4a83b8cb-2d57-4e64-b497-80bd587ee1f9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c171a154dd16a291c5dbe1dcade8c01ea95fb084
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 57b65c254f48d9c3f5078c3b2c1f576ae54d4740
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81294551"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421387"
 ---
 # <a name="was-a-result-set-created"></a>결과 집합이 생성되었나요?
 대부분의 경우 응용 프로그램 프로그래머는 응용 프로그램에서 실행 되는 문이 결과 집합을 생성 하는지 여부를 알 수 있습니다. 이는 응용 프로그램이 프로그래머가 작성 한 하드 코드 된 SQL 문을 사용 하는 경우에 해당 합니다. 일반적으로 응용 프로그램에서 런타임에 SQL 문을 생성 하는 경우입니다. 프로그래머는 **SELECT** 문 또는 **INSERT** 문이 생성 되 고 있는지 여부를 플래그 지정 하는 코드를 쉽게 포함할 수 있습니다. 몇 가지 상황에서 프로그래머는 문이 결과 집합을 만들지 여부를 알 수 없습니다. 응용 프로그램에서 사용자가 SQL 문을 입력 하 고 실행 하는 방법을 제공 하는 경우에도 마찬가지입니다. 응용 프로그램에서 런타임에 문을 생성 하 여 프로시저를 실행 하는 경우에도 마찬가지입니다.  

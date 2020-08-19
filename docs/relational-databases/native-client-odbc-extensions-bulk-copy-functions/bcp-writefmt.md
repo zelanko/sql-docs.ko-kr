@@ -1,4 +1,5 @@
 ---
+description: bcp_writefmt
 title: bcp_writefmt | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,11 +19,12 @@ ms.assetid: cb4c1d37-667d-4bcd-b13c-eb638bcc9b69
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: eee4ef190de97572dad0b36dfc6b6f3e9bf370f7
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 65a8fab194f57ed7c1e42f8fd17fa8900b7c4172
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86010027"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420577"
 ---
 # <a name="bcp_writefmt"></a>bcp_writefmt
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -1,4 +1,5 @@
 ---
+description: SQLSetDescField
 title: SQLSetDescField | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -13,11 +14,12 @@ ms.assetid: de4bed15-15be-4825-994c-1046255e725a
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 203d9b35f6d62258317018883036bf6e047170aa
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 244a56d88cddbe91de581714f59b931fbc7b6229
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012414"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420767"
 ---
 # <a name="sqlsetdescfield"></a>SQLSetDescField
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -46,7 +48,7 @@ ms.locfileid: "86012414"
   
  자세한 내용은 [스파스 열 지원 &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md)를 참조 하세요.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [SQLSetDescField](https://go.microsoft.com/fwlink/?LinkId=80705)   
  [ODBC API 구현 정보](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   

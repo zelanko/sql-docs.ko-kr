@@ -1,4 +1,5 @@
 ---
+description: SQLSetDescField 함수
 title: SQLSetDescField 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2019
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 8c544388-fe9d-4f94-a0ac-fa0b9c9c88a5
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 122d4b26d1d75811d4a8e252378ce8f81ca2c66b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2c21d3a21e863d62a3cc8d685e81c6e3265c1551
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299553"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421137"
 ---
 # <a name="sqlsetdescfield-function"></a>SQLSetDescField 함수
 
@@ -79,22 +80,22 @@ SQLRETURN SQLSetDescField(
 ## <a name="diagnostics"></a>진단  
  **SQLSetDescField** 가 SQL_ERROR 또는 SQL_SUCCESS_WITH_INFO를 반환 하는 경우 SQL_HANDLE_DESC의 *HandleType* 및 *DescriptorHandle* *핸들* 을 사용 하 여 **SQLGetDiagRec** 를 호출 하 여 연결 된 SQLSTATE 값을 얻을 수 있습니다. 다음 표에서는 일반적으로 **SQLSetDescField** 에서 반환 하는 SQLSTATE 값을 나열 하 고이 함수의 컨텍스트에서 각 항목에 대해 설명 합니다. "(DM)" 표기법은 드라이버 관리자에서 반환 된 SQLSTATEs의 설명 보다 앞에 나옵니다. 다른 설명이 없는 한 각 SQLSTATE 값과 연결 된 반환 코드는 SQL_ERROR 됩니다.  
   
-|SQLSTATE|Error|Description|  
+|SQLSTATE|오류|설명|  
 |--------------|-----------|-----------------|  
 |01000|일반 경고|드라이버 관련 정보 메시지입니다. 함수는 SQL_SUCCESS_WITH_INFO를 반환 합니다.|  
-|01 S 02|옵션 값 변경 됨|드라이버가 지정 * \** 된 값을 지원 하지 않았습니다. (값 *eptr* 이 *포인터인 경우)* *또는 (값 eptr이* 정수 값 인 경우) * \** 에는 값이 구현 작업 조건으로 인해 잘못 된 것으로 처리 되므로 드라이버는 유사한 값을 대체 합니다. 함수는 SQL_SUCCESS_WITH_INFO를 반환 합니다.|  
-|07009|잘못 된 설명자 인덱스|*FieldIdentifier* 인수는 레코드 필드이 고, 인수 *는 0* 이며, *DescriptorHandle* 인수는 IPD 핸들을 참조 합니다.<br /><br /> 인수 *인수가 0* 보다 작고 *DescriptorHandle* 인수는가 나 apd를 참조 합니다.<br /><br /> 인수 *인수가 데이터* 원본이 지원할 수 있는 열 또는 매개 변수의 최대 개수 보다 크거나 apd 또는 *DescriptorHandle* 인수를 참조 합니다.<br /><br /> (DM) *FieldIdentifier* 인수가 SQL_DESC_COUNT 되었으며, * \*eptr* 인수가 0 보다 작은 경우<br /><br /> *DescriptorHandle* *인수는 0* 과 같고 암시적으로 할당 된 apd 인수를 참조 합니다. 명시적으로 할당 된 응용 프로그램 설명자는 명시적으로 할당 된 응용 프로그램 설명자가 APD 인지 아니면 실행 시간이 될 때까지이를 알 수 없기 때문에 명시적으로 할당 된 응용 프로그램 설명자에서는이 오류가 발생 하지 않습니다.|  
+|01 S 02|옵션 값 변경 됨|드라이버가 지정 된 값을 지원 하지 않았습니다. * \* (값* *eptr* 이 *포인터인 경우)* *또는 (값 eptr이* 정수 값 인 경우)에는 * \* 값이 구현* 작업 조건으로 인해 잘못 된 것으로 처리 되므로 드라이버는 유사한 값을 대체 합니다. 함수는 SQL_SUCCESS_WITH_INFO를 반환 합니다.|  
+|07009|잘못 된 설명자 인덱스|*FieldIdentifier* 인수는 레코드 필드이 고, 인수 *는 0* 이며, *DescriptorHandle* 인수는 IPD 핸들을 참조 합니다.<br /><br /> 인수 *인수가 0* 보다 작고 *DescriptorHandle* 인수는가 나 apd를 참조 합니다.<br /><br /> 인수 *인수가 데이터* 원본이 지원할 수 있는 열 또는 매개 변수의 최대 개수 보다 크거나 apd 또는 *DescriptorHandle* 인수를 참조 합니다.<br /><br /> (DM) FieldIdentifier 인수가 SQL_DESC_COUNT 되었으며, *FieldIdentifier* * \* eptr* 인수가 0 보다 작은 경우<br /><br /> *DescriptorHandle* *인수는 0* 과 같고 암시적으로 할당 된 apd 인수를 참조 합니다. 명시적으로 할당 된 응용 프로그램 설명자는 명시적으로 할당 된 응용 프로그램 설명자가 APD 인지 아니면 실행 시간이 될 때까지이를 알 수 없기 때문에 명시적으로 할당 된 응용 프로그램 설명자에서는이 오류가 발생 하지 않습니다.|  
 |08S01|통신 연결 오류|드라이버가 연결 된 드라이버와 데이터 원본 간의 통신 연결이 함수 처리를 완료 하기 전에 실패 했습니다.|  
 |22001|문자열 데이터, 오른쪽이 잘렸습니다.|*FieldIdentifier* 인수가 SQL_DESC_NAME 되었으며 *bufferlength* 인수가 SQL_MAX_IDENTIFIER_LEN 보다 큰 값입니다.|  
-|HY000|일반 오류|특정 SQLSTATE가 없고 구현 별 SQLSTATE가 정의 되지 않은 오류가 발생 했습니다. MessageText 버퍼에서 **SQLGetDiagRec** 에 의해 반환 되는 오류 메시지는 오류 및 해당 원인을 설명 합니다. * \**|  
+|HY000|일반 오류|특정 SQLSTATE가 없고 구현 별 SQLSTATE가 정의 되지 않은 오류가 발생 했습니다. * \* MessageText* 버퍼에서 **SQLGetDiagRec** 에 의해 반환 되는 오류 메시지는 오류 및 해당 원인을 설명 합니다.|  
 |HY001|메모리 할당 오류|드라이버에서 함수 실행 또는 완료를 지 원하는 데 필요한 메모리를 할당할 수 없습니다.|  
 |HY010|함수 시퀀스 오류|(DM) *DescriptorHandle* 가이 함수를 호출 하지 않고 비동기적으로 실행 되는 함수를 호출 하 고이 함수가 호출 될 때 여전히 실행 되는 *StatementHandle* 와 연결 되었습니다.<br /><br /> (DM) **Sqlexecute**, **sqlexecdirect**, **SQLBulkOperations**또는 **SQLSetPos** 는 *DescriptorHandle* 가 연결 되 고 SQL_NEED_DATA 반환 된 *StatementHandle* 에 대해 호출 되었습니다. 이 함수는 모든 실행 시 데이터 매개 변수 또는 열에 대해 데이터를 보내기 전에 호출 되었습니다.<br /><br /> (DM) *DescriptorHandle*연결 된 연결 핸들에 대해 비동기적으로 실행 되는 함수가 호출 되었습니다. **SQLSetDescField** 함수가 호출 될 때이 비동기 함수는 계속 실행 중입니다.<br /><br /> (DM) **Sqlexecute**, **Sqlexecdirect**또는 **SQLMoreResults** 가 *DescriptorHandle* 와 연결 된 문 핸들 중 하나에 대해 호출 되 고 SQL_PARAM_DATA_AVAILABLE 반환 되었습니다. 이 함수는 모든 스트리밍된 매개 변수에 대 한 데이터를 검색 하기 전에 호출 되었습니다.|  
 |HY013|메모리 관리 오류|메모리 부족 상태로 인해 기본 메모리 개체에 액세스할 수 없기 때문에 함수 호출을 처리할 수 없습니다.|  
 |HY016|구현 행 설명자를 수정할 수 없습니다.|*DescriptorHandle* 인수가 IRD와 연결 되어 있고 *FieldIdentifier* 인수가 SQL_DESC_ARRAY_STATUS_PTR 되지 않았거나 SQL_DESC_ROWS_PROCESSED_PTR.|  
 |HY021|일관 되지 않은 설명자 정보|SQL_DESC_TYPE 및 SQL_DESC_DATETIME_INTERVAL_CODE 필드는 올바른 ODBC SQL 유형 또는 올바른 드라이버별 SQL 유형 (IPDs의 경우) 또는 유효한 ODBC C 유형 (APDs 또는 ARDs의 경우)이 아닙니다.<br /><br /> 일관성 확인 중에 확인 된 설명자 정보가 일치 하지 않습니다. **SQLSetDescRec**의 "일관성 확인"을 참조 하십시오.|  
-|HY090|잘못 된 문자열 또는 버퍼 길이입니다.|( * \*DM)는* 문자열입니다. *bufferlength* 는 0 보다 작지만 SQL_NTS와 같지 않습니다.<br /><br /> (DM) 드라이버가 ODBC*2.x 드라이버이* 고, 설명자가 되었고, *columnnumber* 인수를 0으로 설정 하 고, 인수 *bufferlength* 에 지정 된 값이 4와 같지 않습니다.|  
+|HY090|잘못 된 문자열 또는 버퍼 길이입니다.|( *DM)는 \* 문자열* 입니다. *bufferlength* 는 0 보다 작지만 SQL_NTS와 같지 않습니다.<br /><br /> (DM) 드라이버가 ODBC*2.x 드라이버이* 고, 설명자가 되었고, *columnnumber* 인수를 0으로 설정 하 고, 인수 *bufferlength* 에 지정 된 값이 4와 같지 않습니다.|  
 |HY091|잘못 된 설명자 필드 식별자입니다.|*FieldIdentifier* 인수에 지정 된 값이 ODBC 정의 필드가 아니고 구현에서 정의 된 값이 아닙니다.<br /><br /> *FieldIdentifier* 인수가 *DescriptorHandle* 인수에 적합 하지 않습니다.<br /><br /> *FieldIdentifier* 인수는 읽기 전용 ODBC 정의 필드입니다.|  
-|HY092|특성/옵션 식별자가 잘못 되었습니다.|*FieldIdentifier* * \*인수에 대 한 값이 잘못* 되었습니다.<br /><br /> *FieldIdentifier* 인수가 SQL_DESC_UNNAMED 되었으며,이 인수 *를 SQL_NAMED 했습니다.*|  
+|HY092|특성/옵션 식별자가 잘못 되었습니다.|*FieldIdentifier* *인수에 대 한 값이 잘못 \* * 되었습니다.<br /><br /> *FieldIdentifier* 인수가 SQL_DESC_UNNAMED 되었으며,이 인수 *를 SQL_NAMED 했습니다.*|  
 |HY105|매개 변수 형식이 잘못 되었습니다.|(DM) SQL_DESC_PARAMETER_TYPE 필드에 지정 된 값이 잘못 되었습니다. 자세한 내용은 **SQLBindParameter**의 "*inputoutputtype* 인수" 섹션을 참조 하세요.|  
 |HY117|알 수 없는 트랜잭션 상태로 인해 연결이 일시 중단 되었습니다. 연결 끊기 및 읽기 전용 함수만 허용 됩니다.|(DM) 일시 중단 된 상태에 대 한 자세한 내용은 [ODBC 3.8의 새로운 기능](../../../odbc/reference/what-s-new-in-odbc-3-8.md)을 참조 하십시오.|  
 |HYT01|연결 제한 시간이 만료 되었습니다.|데이터 원본이 요청에 응답 하기 전에 연결 제한 시간이 만료 되었습니다. 연결 제한 시간은 **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT을 통해 설정 됩니다.|  
@@ -139,7 +140,7 @@ SQLRETURN SQLSetDescField(
   
  헤더 필드의 초기화는 다음 표에 설명 되어 있습니다.  
   
-|헤더 필드 이름|유형|R/W|기본값|  
+|헤더 필드 이름|형식|R/W|기본값|  
 |-----------------------|----------|----------|-------------|  
 |SQL_DESC_ALLOC_TYPE|SQLSMALLINT|작업: R APD: R IRD: R IPD: R|작업: 암시적 또는 SQL_DESC_ALLOC_USER에 대 한 SQL_DESC_ALLOC_AUTO입니다.<br /><br /> APD: explicit 또는 SQL_DESC_ALLOC_USER에 대 한 SQL_DESC_ALLOC_AUTO<br /><br /> IRD: SQL_DESC_ALLOC_AUTO<br /><br /> IPD: SQL_DESC_ALLOC_AUTO|  
 |SQL_DESC_ARRAY_SIZE|SQLULEN|사용: R/W APD: R/W IRD: 사용 되지 않는 IPD: 사용 안 함|사용: [1] APD: [1] IRD: 사용 되지 않는 IPD: 사용 안 함|  
@@ -153,7 +154,7 @@ SQLRETURN SQLSetDescField(
   
  레코드 필드의 초기화는 다음 표에 나와 있는 것과 같습니다.  
   
-|레코드 필드 이름|유형|R/W|기본값|  
+|레코드 필드 이름|형식|R/W|기본값|  
 |-----------------------|----------|----------|-------------|  
 |SQL_DESC_AUTO_UNIQUE_VALUE|SQLINTEGER|사용: 사용 되지 않는 APD: 사용 되지 않는 IRD: R IPD: 사용 안 함|사용: 사용 되지 않는 APD: 사용 되지 않는 IRD: D IPD: 사용 되지 않음|  
 |SQL_DESC_BASE_COLUMN_NAME|SQLCHAR|사용: 사용 되지 않는 APD: 사용 되지 않는 IRD: R IPD: 사용 안 함|사용: 사용 되지 않는 APD: 사용 되지 않는 IRD: D IPD: 사용 되지 않음|  
@@ -310,7 +311,7 @@ SQLRETURN SQLSetDescField(
  이 필드의 레코드 수에는 바인딩된 책갈피 열이 포함 되지 않습니다. 책갈피 열을 바인딩 해제 하는 유일한 방법은 SQL_DESC_DATA_PTR 필드를 null 포인터로 설정 하는 것입니다.  
   
  **SQL_DESC_ROWS_PROCESSED_PTR [구현 설명자]**  
- IRD \* 에서이 SQLULEN 헤더 필드는 **Sqlfetch** 또는 **sqlulen**을 호출한 후 인출 된 행 수 또는 오류 행을 포함 하 여 **SQLBulkOperations** 또는 **SQLSetPos**를 호출 하 여 수행 된 대량 작업에서 영향을 받는 행 수를 포함 하는 버퍼를 가리킵니다.  
+ IRD에서이 SQLULEN \* 헤더 필드는 **sqlfetch** 또는 **sqlulen**을 호출한 후 인출 된 행 수 또는 오류 행을 포함 하 여 **SQLBulkOperations** 또는 **SQLSetPos**를 호출 하 여 수행 된 대량 작업에서 영향을 받는 행 수를 포함 하는 버퍼를 가리킵니다.  
   
  IPD에서이 SQLUINTEGER * 헤더 필드는 오류 집합을 포함 하 여 처리 된 매개 변수 집합의 수를 포함 하는 버퍼를 가리킵니다. Null 포인터인 경우에는 숫자가 반환 되지 않습니다.  
   
@@ -546,6 +547,6 @@ SQLRETURN SQLSetDescField(
 |여러 설명자 필드 가져오기|[SQLGetDescRec 함수](../../../odbc/reference/syntax/sqlgetdescrec-function.md)|  
 |여러 설명자 필드 설정|[SQLSetDescRec 함수](../../../odbc/reference/syntax/sqlsetdescrec-function.md)|  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [ODBC 헤더 파일](../../../odbc/reference/install/odbc-header-files.md)   
  [ODBC API 참조](../../../odbc/reference/syntax/odbc-api-reference.md)

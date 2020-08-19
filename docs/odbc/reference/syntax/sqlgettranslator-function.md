@@ -1,4 +1,5 @@
 ---
+description: SQLGetTranslator 함수
 title: SQLGetTranslator 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 33879db3-5ef9-4585-9be5-69376157e017
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: bcd5aeebab8539b8b94db56ff30892f4a7dbbac1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d30268c846af4e95298d00edcd13def97c20c77d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303274"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421227"
 ---
 # <a name="sqlgettranslator-function"></a>SQLGetTranslator 함수
 **규칙**  
@@ -77,9 +78,9 @@ BOOL SQLGetTranslator(
  이 함수는 성공 하면 TRUE를 반환 하 고, 실패 하면 FALSE를 반환 하 고, 사용자가 대화 상자를 취소 합니다.  
   
 ## <a name="diagnostics"></a>진단  
- **SQLGetTranslator** 가 FALSE를 반환 하면 **SQLInstallerError**을 호출 하 여 연결 된 * \*pfErrorCode* 값을 얻을 수 있습니다. 다음 표에서는 **SQLInstallerError** 에서 반환 될 수 있는 * \*pfErrorCode* 값을 나열 하 고이 함수의 컨텍스트에서 각 값에 대해 설명 합니다.  
+ **SQLGetTranslator** 가 FALSE를 반환 하면 **SQLInstallerError**을 호출 하 여 연결 된 * \* pfErrorCode* 값을 얻을 수 있습니다. 다음 표에서는 **SQLInstallerError** 에서 반환 될 수 있는 * \* pfErrorCode* 값을 나열 하 고이 함수의 컨텍스트에서 각 값에 대해 설명 합니다.  
   
-|*\*pfErrorCode*|Error|Description|  
+|*\*pfErrorCode*|오류|설명|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|일반 설치 관리자 오류|특정 설치 관리자 오류가 없는 오류가 발생 했습니다.|  
 |ODBC_ERROR_INVALID_BUFF_LEN|잘못 된 버퍼 길이|*CbNameMax* 또는 *cbpathmax* 인수가 0 보다 작거나 같습니다.|  
@@ -94,9 +95,9 @@ BOOL SQLGetTranslator(
   
  ![변환기 선택 대화 상자](../../../odbc/reference/syntax/media/ch23j.gif "CH23J")  
   
- *LpszName* 에 올바른 번역기 이름이 포함 된 경우이를 선택 합니다. 그렇지 않으면 \<번역기> 선택 되지 않습니다.  
+ *LpszName* 에 올바른 번역기 이름이 포함 된 경우이를 선택 합니다. 그렇지 않으면 \<No Translator> 이 선택 됩니다.  
   
- 사용자가> 번역기 \<를 선택 하지 않으면 *lpszName*, *lpszPath*및 *pvOption* 의 내용이 처리 되지 않습니다. **SQLGetTranslator** 는 *pcbnameout* 및 *pcbnameout* 을 0으로 설정 하 고 TRUE를 반환 합니다.  
+ 사용자가를 선택 하는 경우 \<No Translator> *lpszName*, *lpszPath*및 *pvOption* 의 내용은 작업 하지 않습니다. **SQLGetTranslator** 는 *pcbnameout* 및 *pcbnameout* 을 0으로 설정 하 고 TRUE를 반환 합니다.  
   
  사용자가 번역기를 선택 하는 경우 **SQLGetTranslator** 은 변환기의 설치 DLL에서 **configtranslator** 를 호출 합니다. **Configtranslator** 가 FALSE를 반환 하는 경우 **SQLGetTranslator** 는 해당 대화 상자로 돌아갑니다. **Configtranslator** 가 true를 반환 하는 경우 **SQLGetTranslator** 는 선택한 번역기 이름, 경로 및 번역 옵션과 함께 true를 반환 합니다.  
   

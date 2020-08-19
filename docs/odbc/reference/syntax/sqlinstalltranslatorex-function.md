@@ -1,4 +1,5 @@
 ---
+description: SQLInstallTranslatorEx 함수
 title: SQLInstallTranslatorEx 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,21 +20,21 @@ helpviewer_keywords:
 ms.assetid: a0630602-53c1-4db0-98ce-70d160aedf8d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 5cf52c26bf9e4a26f13a27a0e763fbaa30bd18ec
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7957a04e0dafaeb2177401f775c5cdbb75135569
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302094"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421147"
 ---
 # <a name="sqlinstalltranslatorex-function"></a>SQLInstallTranslatorEx 함수
 **규칙**  
  소개 된 버전: ODBC 3.0  
   
  **요약**  
- **SQLInstallTranslatorEx** 시스템 정보의 odbcinst.ini 섹션에 변환기에 대 한 정보를 추가 합니다 (HKEY_LOCAL_MACHINE \software\odbc\odbcinst. INI\ODBC 번역가 레지스트리 키).  
+ **SQLInstallTranslatorEx** 시스템 정보의 Odbcinst.ini 섹션에 변환기에 대 한 정보를 추가 합니다 (HKEY_LOCAL_MACHINE\SOFTWARE\ODBC\ODBCINST.INI \odbc 번역기 레지스트리 키).  
   
- ODBCCONF를 사용 하 여 **SQLInstallTranslatorEx** 의 기능에 액세스할 수도 있습니다 [. EXE](../../../odbc/odbcconf-exe.md).  
+ [ODBCCONF.EXE](../../../odbc/odbcconf-exe.md)를 사용 하 여 **SQLInstallTranslatorEx** 의 기능에 액세스할 수도 있습니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -85,9 +86,9 @@ BOOL SQLInstallTranslatorEx(
  이 함수는 성공 하면 TRUE를 반환 하 고 실패 하면 FALSE를 반환 합니다.  
   
 ## <a name="diagnostics"></a>진단  
- **SQLInstallTranslatorEx** 가 FALSE를 반환 하면 **SQLInstallerError**을 호출 하 여 연결 된 * \*pfErrorCode* 값을 얻을 수 있습니다. 다음 표에서는 **SQLInstallerError** 에서 반환 될 수 있는 * \*pfErrorCode* 값을 나열 하 고이 함수의 컨텍스트에서 각 값에 대해 설명 합니다.  
+ **SQLInstallTranslatorEx** 가 FALSE를 반환 하면 **SQLInstallerError**을 호출 하 여 연결 된 * \* pfErrorCode* 값을 얻을 수 있습니다. 다음 표에서는 **SQLInstallerError** 에서 반환 될 수 있는 * \* pfErrorCode* 값을 나열 하 고이 함수의 컨텍스트에서 각 값에 대해 설명 합니다.  
   
-|*\*pfErrorCode*|Error|Description|  
+|*\*pfErrorCode*|오류|설명|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|일반 설치 관리자 오류|특정 설치 관리자 오류가 없는 오류가 발생 했습니다.|  
 |ODBC_ERROR_INVALID_BUFF_LEN|잘못 된 버퍼 길이|*LpszPathOut* 인수가 출력 경로를 포함할 만큼 크지 않습니다. 버퍼는 잘린 경로를 포함 합니다.<br /><br /> *Cbpathoutmax* 인수가 0이 고 *frequest* 인수가 ODBC_INSTALL_COMPLETE 되었습니다.|  

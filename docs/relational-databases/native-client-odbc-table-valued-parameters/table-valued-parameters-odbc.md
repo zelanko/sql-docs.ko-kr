@@ -1,4 +1,5 @@
 ---
+description: 테이블 반환 매개 변수(ODBC)
 title: 테이블 반환 매개 변수 (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -14,11 +15,12 @@ ms.assetid: ef06cd13-18e2-4c65-8ede-c3955d820e54
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 290678e11a292304d8c7b3ed3493a66870b52b29
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: f263b0ade88e21f79182f2667714de2e1a105155
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999736"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420507"
 ---
 # <a name="table-valued-parameters-odbc"></a>테이블 반환 매개 변수(ODBC)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -1,4 +1,5 @@
 ---
+description: SQLInstallDriverManager 함수
 title: SQLInstallDriverManager 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: aebc439b-fffd-4d98-907a-0163f79aee8d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0788de0493439a360c0446733b31606a02e12422
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b39e2c9304fd47394617d48f22ac91284af1b45d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302114"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421177"
 ---
 # <a name="sqlinstalldrivermanager-function"></a>SQLInstallDriverManager 함수
 **규칙**  
@@ -57,9 +58,9 @@ BOOL SQLInstallDriverManager(
  이 함수는 성공 하면 TRUE를 반환 하 고 실패 하면 FALSE를 반환 합니다.  
   
 ## <a name="diagnostics"></a>진단  
- **Sqlinstalldrivermanager** 가 FALSE를 반환 하는 경우 **SQLInstallerError**를 호출 하 여 연결 된 * \*pfErrorCode* 값을 얻을 수 있습니다. 다음 표에서는 **SQLInstallerError** 에서 반환 될 수 있는 * \*pfErrorCode* 값을 나열 하 고이 함수의 컨텍스트에서 각 값에 대해 설명 합니다.  
+ **Sqlinstalldrivermanager** 가 FALSE를 반환 하는 경우 **SQLInstallerError**를 호출 하 여 연결 된 * \* pfErrorCode* 값을 얻을 수 있습니다. 다음 표에서는 **SQLInstallerError** 에서 반환 될 수 있는 * \* pfErrorCode* 값을 나열 하 고이 함수의 컨텍스트에서 각 값에 대해 설명 합니다.  
   
-|*\*pfErrorCode*|Error|Description|  
+|*\*pfErrorCode*|오류|설명|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|일반 설치 관리자 오류|특정 설치 관리자 오류가 없는 오류가 발생 했습니다.|  
 |ODBC_ERROR_INVALID_BUFF_LEN|잘못 된 버퍼 길이|*LpszPath* 인수가 출력 경로를 포함할 만큼 크지 않습니다. 버퍼는 잘린 경로를 포함 합니다.<br /><br /> *Cbpathmax* 인수가 _MAX_PATH 보다 작은 경우|  

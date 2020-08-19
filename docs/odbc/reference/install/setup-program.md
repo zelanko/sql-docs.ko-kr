@@ -1,4 +1,5 @@
 ---
+description: 설치 프로그램
 title: 설치 프로그램 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/31/2016
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9cc5d75d-b293-41e5-927c-10f4af2e7af1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b89cae70db65bd2aa54b8e9789a5c2b35696923e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4cd4858214ff084a037002abd3bd34035160496b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81296153"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421327"
 ---
 # <a name="setup-program"></a>설치 프로그램
 > **참고:** Windows XP 및 Windows Server 2003부터 **ODBC는 windows 운영 체제에 포함 되어**있습니다. ODBC는 이전 버전의 Windows에만 명시적으로 설치 해야 합니다.  

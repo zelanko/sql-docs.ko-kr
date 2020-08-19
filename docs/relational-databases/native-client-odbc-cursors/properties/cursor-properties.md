@@ -1,4 +1,5 @@
 ---
+description: 커서 속성
 title: 커서 속성 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -16,11 +17,12 @@ ms.assetid: e70960e1-2085-46ed-9d55-aeb8c3532c84
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c5115a9e943976e38c84e5df1663a32a7afbc482
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 26235dfc37f894a6afe51e7779e15dc77fe2bc24
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86006512"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420687"
 ---
 # <a name="cursor-properties"></a>커서 속성
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -34,6 +36,6 @@ ms.locfileid: "86006512"
 -   [커서 트랜잭션 격리 수준](../../../relational-databases/native-client-odbc-cursors/properties/cursor-transaction-isolation-level.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [ODBC&#41;&#40;커서 사용](../../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)  
+ [ODBC&#41;&#40;커서 사용 ](../../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)  
   
   

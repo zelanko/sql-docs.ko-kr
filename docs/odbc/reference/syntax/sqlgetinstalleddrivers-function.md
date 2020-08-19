@@ -1,4 +1,5 @@
 ---
+description: SQLGetInstalledDrivers 함수
 title: SQLGetInstalledDrivers 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: a1983a2e-0edf-422e-bd1b-ec5db40a34bc
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 24793473bf4f25253ac11673df852d10cfb2c558
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0599cb187dee9d3b860f619538b1e0dc148ad58d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303330"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421267"
 ---
 # <a name="sqlgetinstalleddrivers-function"></a>SQLGetInstalledDrivers 함수
 **규칙**  
@@ -57,9 +58,9 @@ BOOL SQLGetInstalledDrivers(
  이 함수는 성공 하면 TRUE를 반환 하 고 실패 하면 FALSE를 반환 합니다.  
   
 ## <a name="diagnostics"></a>진단  
- **SQLGetInstalledDrivers** 가 FALSE를 반환 하면 **SQLInstallerError**을 호출 하 여 연결 된 * \*pfErrorCode* 값을 얻을 수 있습니다. 다음 표에서는 **SQLInstallerError** 에서 반환 될 수 있는 * \*pfErrorCode* 값을 나열 하 고이 함수의 컨텍스트에서 각 값에 대해 설명 합니다.  
+ **SQLGetInstalledDrivers** 가 FALSE를 반환 하면 **SQLInstallerError**을 호출 하 여 연결 된 * \* pfErrorCode* 값을 얻을 수 있습니다. 다음 표에서는 **SQLInstallerError** 에서 반환 될 수 있는 * \* pfErrorCode* 값을 나열 하 고이 함수의 컨텍스트에서 각 값에 대해 설명 합니다.  
   
-|*\*pfErrorCode*|Error|Description|  
+|*\*pfErrorCode*|오류|설명|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|일반 설치 관리자 오류|특정 설치 관리자 오류가 없는 오류가 발생 했습니다.|  
 |ODBC_ERROR_INVALID_BUFF_LEN|잘못 된 버퍼 길이|*LpszBuf* 인수가 NULL 이거나 잘못 되었거나, *Cbbufmax* 인수가 0 보다 작거나 같습니다.|  

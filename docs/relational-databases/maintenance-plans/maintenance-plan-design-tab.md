@@ -1,4 +1,5 @@
 ---
+description: 유지 관리 계획(디자인 탭)
 title: 유지 관리 계획(디자인 탭) | Microsoft 문서
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ f1_keywords:
 ms.assetid: 6d20d4d4-5b3f-454a-8a05-f0aac803c5ad
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1bffeed97e9c56420750ce022c4fa5ec0a56f574
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e56d4d52cee3ac75354acd17d7496d062bc3ed73
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85666974"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420877"
 ---
 # <a name="maintenance-plan-design-tab"></a>유지 관리 계획(디자인 탭)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -90,7 +91,7 @@ ms.locfileid: "85666974"
  **편집**  
  태스크의 속성 대화 상자를 엽니다.  
   
- **사용 안함**  
+ **사용 안 함**  
  태스크를 임시로 사용할 수 없게 합니다.  
   
  **사용**  
@@ -102,7 +103,7 @@ ms.locfileid: "85666974"
  **그룹 해제**  
  그룹에서 태스크를 제거합니다.  
   
- **크기 자동 조정**  
+ **자동 크기 조정(Autosize)**  
  각 태스크의 크기를 해당 작업에 대한 최적의 크기로 설정합니다.  
   
  **축소**  
@@ -111,7 +112,7 @@ ms.locfileid: "85666974"
  **확장**  
  이전에 **축소**를 사용하여 숨긴 그룹 내의 태스크를 표시합니다.  
   
- **Zoom**  
+ **확대/축소**  
  디자인 화면에서 태스크의 크기를 변경합니다.  
   
 ## <a name="see-also"></a>참고 항목  

@@ -1,4 +1,5 @@
 ---
+description: 커서 트랜잭션 격리 수준
 title: 커서 트랜잭션 격리 수준 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,11 +18,12 @@ ms.assetid: 0c6663a4-5a25-44aa-8fe4-e35af9bf4a83
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 39dafa9cfde7f11b39e83596929189accb24eae8
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 0d790761bc0536768cadc8402777c9d1c122d684
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85998985"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420677"
 ---
 # <a name="cursor-transaction-isolation-level"></a>커서 트랜잭션 격리 수준
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

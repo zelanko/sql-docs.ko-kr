@@ -1,4 +1,5 @@
 ---
+description: SQLGetPrivateProfileString 함수
 title: SQLGetPrivateProfileString 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: b72ca065-4d67-48df-baac-e18379a8320a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c12fc8d08535960cbb239c14e017b2ad5faa6c0e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b2223d46d507df2a9cf82e7feb800caf5b8f82cc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303295"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421237"
 ---
 # <a name="sqlgetprivateprofilestring-function"></a>SQLGetPrivateProfileString 함수
 **규칙**  
@@ -69,17 +70,17 @@ int SQLGetPrivateProfileString(
  **SQLGetPrivateProfileString** 는 읽은 문자 수를 나타내는 정수 값을 반환 합니다.  
   
 ## <a name="diagnostics"></a>진단  
- **SQLGetPrivateProfileString** 에 대 한 호출이 실패 하면 **SQLInstallerError**을 호출 하 여 연결 된 * \*pfErrorCode* 값을 얻을 수 있습니다. 다음 표에서는 **SQLInstallerError** 에서 반환 될 수 있는 * \*pfErrorCode* 값을 나열 하 고이 함수의 컨텍스트에서 각 값에 대해 설명 합니다.  
+ **SQLGetPrivateProfileString** 에 대 한 호출이 실패 하면 **SQLInstallerError**을 호출 하 여 연결 된 * \* pfErrorCode* 값을 얻을 수 있습니다. 다음 표에서는 **SQLInstallerError** 에서 반환 될 수 있는 * \* pfErrorCode* 값을 나열 하 고이 함수의 컨텍스트에서 각 값에 대해 설명 합니다.  
   
-|*\*pfErrorCode*|Error|Description|  
+|*\*pfErrorCode*|오류|설명|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|일반 설치 관리자 오류|특정 설치 관리자 오류가 없는 오류가 발생 했습니다.|  
 |ODBC_ERROR_OUT_OF_MEM|메모리가 부족합니다.|메모리가 부족 하 여 설치 관리자가 함수를 수행할 수 없습니다.|  
   
 ## <a name="comments"></a>주석  
- **SQLGetPrivateProfileString** 는 Microsoft® windows®에서 MICROSOFT windows NT®/windows 2000으로 드라이버 및 드라이버 설치 dll을 이식 하는 간단한 방법으로 제공 됩니다. Odbc .ini 파일에서 프로필 문자열을 검색 하는 **GetPrivateProfileString** 에 대 한 호출은 **SQLGetPrivateProfileString**에 대 한 호출로 대체 되어야 합니다. **SQLGetPrivateProfileString** 는 WIN32® API의 함수를 호출 하 여 시스템 정보의 Odbc .ini 하위 키 값에 해당 하는 값 또는 데이터의 요청 된 이름을 검색 합니다.  
+ **SQLGetPrivateProfileString** 는 Microsoft® windows®에서 MICROSOFT windows NT®/windows 2000으로 드라이버 및 드라이버 설치 dll을 이식 하는 간단한 방법으로 제공 됩니다. Odbc.ini 파일에서 프로필 문자열을 검색 하는 **GetPrivateProfileString** 에 대 한 호출은 **SQLGetPrivateProfileString**에 대 한 호출로 바꾸어야 합니다. **SQLGetPrivateProfileString** 는 WIN32® API의 함수를 호출 하 여 시스템 정보의 Odbc.ini 하위 키 값에 해당 하는 값 또는 데이터의 요청 된 이름을 검색 합니다.  
   
- 구성 모드 ( **SQLSetConfigMode**에 의해 설정 됨)는 DSN 값을 나열 하는 Odbc .ini 항목이 시스템 정보에 있는지를 나타냅니다. DSN이 사용자 DSN (구성 모드 USERDSN_ONLY) 인 경우 함수는 HKEY_CURRENT_USER의 Odbc .ini 항목에서 읽습니다. DSN이 시스템 DSN (SYSTEMDSN_ONLY) 인 경우 함수는 HKEY_LOCAL_MACHINE의 Odbc .ini 항목에서 읽습니다. 구성 모드가 BOTHDSN 인 경우 HKEY_CURRENT_USER 시도 하 고 실패 하면 HKEY_LOCAL_MACHINE 사용 됩니다.  
+ 구성 모드 ( **SQLSetConfigMode**에 의해 설정 됨)는 DSN 값을 나열 하는 Odbc.ini 항목이 시스템 정보에 있는지 여부를 나타냅니다. DSN이 사용자 DSN 인 경우 (구성 모드 USERDSN_ONLY) 함수는 HKEY_CURRENT_USER의 Odbc.ini 항목에서 읽습니다. DSN이 시스템 DSN (SYSTEMDSN_ONLY) 인 경우 함수는 HKEY_LOCAL_MACHINE의 Odbc.ini 항목에서 읽습니다. 구성 모드가 BOTHDSN 인 경우 HKEY_CURRENT_USER 시도 하 고 실패 하면 HKEY_LOCAL_MACHINE 사용 됩니다.  
   
 ## <a name="related-functions"></a>관련 함수  
   

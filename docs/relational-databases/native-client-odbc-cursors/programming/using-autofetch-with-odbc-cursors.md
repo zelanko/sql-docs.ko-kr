@@ -1,4 +1,5 @@
 ---
+description: ODBC 커서로 자동 인출 사용
 title: ODBC 커서와 함께 자동 인출 사용 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,11 +16,12 @@ ms.assetid: 57bd55f4-8945-4d8d-9f58-d30c81d2a514
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f02fab661eca50716dffa06d529ccd8c747c1d01
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 60f044aa6568d73364e6adf56cff54354c5e82f6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001708"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420717"
 ---
 # <a name="using-autofetch-with-odbc-cursors"></a>ODBC 커서로 자동 인출 사용
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -29,6 +31,6 @@ ms.locfileid: "86001708"
  애플리케이션은 드라이버별 SQL_SOPT_SS_CURSOR_OPTIONS 문 특성을 SQL_CO_AF로 설정하여 자동 인출을 요청합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [ODBC&#41;&#40;커서 프로그래밍 정보](../../../relational-databases/native-client-odbc-cursors/programming/cursor-programming-details-odbc.md)  
+ [ODBC&#41;&#40;커서 프로그래밍 정보 ](../../../relational-databases/native-client-odbc-cursors/programming/cursor-programming-details-odbc.md)  
   
   

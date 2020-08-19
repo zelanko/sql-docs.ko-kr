@@ -1,4 +1,5 @@
 ---
+description: SQLTables
 title: SQLTables | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,11 +15,12 @@ ms.assetid: 77b6c15c-9cf7-4019-b3f0-3d27d23ef656
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2ec74b3f034e989c6991515e458cfb986c656e34
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 735a0fa33e894f6642b6183a517da0d61123a6a8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012346"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420747"
 ---
 # <a name="sqltables"></a>SQLTables
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

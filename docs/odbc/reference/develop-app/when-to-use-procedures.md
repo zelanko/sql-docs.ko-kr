@@ -1,4 +1,5 @@
 ---
+description: 프로시저 사용 시기
 title: 프로시저를 사용 하는 경우 Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7dc9e327-dd54-4b10-9f66-9ef5c074f122
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 31aeea226bc8c8aa41f748d1d9a97d55147c4d67
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7268e8650b0de17edab8776eaaf644ece60100bf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81289100"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421377"
 ---
 # <a name="when-to-use-procedures"></a>프로시저 사용 시기
 프로시저를 사용 하면 SQL 문이 응용 프로그램에서 데이터 원본으로 이동 한다는 사실을 기반으로 하는 여러 가지 이점이 있습니다. 응용 프로그램의 남은 사항은 상호 운용 가능한 프로시저 호출입니다. 이러한 이점은 다음과 같습니다.  

@@ -1,4 +1,5 @@
 ---
+description: 병합 아티클 해결 프로그램 지정
 title: 병합 아티클 해결 프로그램 지정 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a40083b3-4f7b-4a25-a5a3-6ef67bdff440
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: cf9ee7fc22e29e7e757b2c615b398a9233d0ad7a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 85d2cc7ca6ee5e362ebfabdf44dd3289be933753
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85880253"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420437"
 ---
 # <a name="specify-a-merge-article-resolver"></a>병합 아티클 해결 프로그램 지정
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

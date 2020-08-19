@@ -1,4 +1,5 @@
 ---
+description: SQL Server 이외 게시자
 title: SQL Server 이외 게시자 | Microsoft 문서
 ms.custom: ''
 ms.date: 08/29/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 08a160a6-33be-46b5-bc7b-d53180d8bdf1
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9114317fde7ff4145c1008ccaf51bb5f0cec855f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9560875e4db3a644644238b0140fadb33cf1877d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893292"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420447"
 ---
 # <a name="non-sql-server-publishers"></a>SQL Server 이외 게시자  
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -48,7 +49,7 @@ ms.locfileid: "85893292"
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이외 데이터베이스에서 게시 작업은 다음과 같은 시나리오에서 유용합니다.  
   
-|시나리오|Description|  
+|시나리오|설명|  
 |--------------|-----------------|  
 |[!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework 애플리케이션 배포|[!INCLUDE[msCoName](../../../includes/msconame-md.md)] 이외 데이터베이스에서 복제한 데이터 작업 시 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Visual Studio 및[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 를 사용하여 개발합니다.|  
 |데이터 웨어하우징 준비 서버(staging server)|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 준비 데이터베이스와[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이외 데이터베이스의 동기화를 유지합니다.|  

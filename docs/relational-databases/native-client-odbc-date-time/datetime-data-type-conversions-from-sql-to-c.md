@@ -1,4 +1,5 @@
 ---
+description: 날짜/시간 데이터 형식을 SQL에서 C로 변환
 title: SQL에서 C로 변환 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ ms.assetid: 059431e2-a65c-4587-ba4a-9929a1611e96
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5bd8bff34cca52da2e865a020ff97211b09d9882
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.openlocfilehash: b317f23ef9e960fe407e68ef108f31ba0fcfa2c6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87331067"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420637"
 ---
 # <a name="datetime-data-type-conversions-from-sql-to-c"></a>날짜/시간 데이터 형식을 SQL에서 C로 변환
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -67,6 +68,6 @@ ms.locfileid: "87331067"
  이 항목의 표에서는 클라이언트로 반환된 형식과 바인딩 형식 간의 변환에 대해 설명합니다. 출력 매개 변수의 경우 SQLBindParameter에 지정 된 서버 형식이 서버의 실제 형식과 일치 하지 않으면 서버에 의해 암시적 변환이 수행 되며 클라이언트로 반환 되는 형식은 SQLBindParameter를 통해 지정 된 형식과 일치 합니다. 따라서 서버의 변환 규칙이 앞의 표에 나열 된 것과 다를 경우 예기치 않은 변환 결과가 발생할 수 있습니다. 예를 들어 기본 날짜를 입력해야 하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 현재 날짜를 사용하지 않고 1900-1-1을 사용합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [ODBC&#41;&#40;날짜 및 시간 기능 향상](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
+ [ODBC&#41;&#40;날짜 및 시간 기능 향상 ](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
   
   

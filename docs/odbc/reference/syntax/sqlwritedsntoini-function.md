@@ -1,4 +1,5 @@
 ---
+description: SQLWriteDSNToIni 함수
 title: SQLWriteDSNToIni 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: dc7018b2-18d4-4657-96d0-086479a47474
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b8bb141c8f54c49ca3a5c6fc4bc15d434f91795c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 08a1094d29bbba9dc52974bd1cef5cd6645aa5dc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81286963"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421017"
 ---
 # <a name="sqlwritedsntoini-function"></a>SQLWriteDSNToIni 함수
 **규칙**  
@@ -53,9 +54,9 @@ BOOL SQLWriteDSNToIni(
  이 함수는 성공 하면 TRUE를 반환 하 고 실패 하면 FALSE를 반환 합니다.  
   
 ## <a name="diagnostics"></a>진단  
- **Sqlwritedsntoini** 가 FALSE를 반환 하는 경우 **SQLInstallerError**를 호출 하 여 연결 된 * \*pfErrorCode* 값을 얻을 수 있습니다. 다음 표에서는 **SQLInstallerError** 에서 반환 될 수 있는 * \*pfErrorCode* 값을 나열 하 고이 함수의 컨텍스트에서 각 값에 대해 설명 합니다.  
+ **Sqlwritedsntoini** 가 FALSE를 반환 하는 경우 **SQLInstallerError**를 호출 하 여 연결 된 * \* pfErrorCode* 값을 얻을 수 있습니다. 다음 표에서는 **SQLInstallerError** 에서 반환 될 수 있는 * \* pfErrorCode* 값을 나열 하 고이 함수의 컨텍스트에서 각 값에 대해 설명 합니다.  
   
-|*\*pfErrorCode*|Error|Description|  
+|*\*pfErrorCode*|오류|설명|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|일반 설치 관리자 오류|특정 설치 관리자 오류가 없는 오류가 발생 했습니다.|  
 |ODBC_ERROR_INVALID_DSN|잘못 된 DSN|*LpszDSN* 인수에 DSN에 대해 잘못 된 문자열이 포함 되어 있습니다.|  

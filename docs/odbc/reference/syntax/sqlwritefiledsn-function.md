@@ -1,4 +1,5 @@
 ---
+description: SQLWriteFileDSN 함수
 title: SQLWriteFileDSN 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 9e18f56f-1061-416b-83d4-ffeec42ab5a9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e781f1be79e0079f33b3d0800c665f5f5e9fda4d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4bd63c368f4055821df41faceb7b9c33cf20bde3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81286893"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421007"
 ---
 # <a name="sqlwritefiledsn-function"></a>SQLWriteFileDSN 함수
 **규칙**  
@@ -61,9 +62,9 @@ BOOL SQLWriteFileDSN(
  이 함수는 성공 하면 TRUE를 반환 하 고 실패 하면 FALSE를 반환 합니다.  
   
 ## <a name="diagnostics"></a>진단  
- **Sqlwritefiledsn** 이 FALSE를 반환 하는 경우 **SQLInstallerError**를 호출 하 여 연결 된 * \*pfErrorCode* 값을 가져올 수 있습니다. 다음 표에서는 **SQLInstallerError** 에서 반환 될 수 있는 * \*pfErrorCode* 값을 나열 하 고이 함수의 컨텍스트에서 각 값에 대해 설명 합니다.  
+ **Sqlwritefiledsn** 이 FALSE를 반환 하는 경우 **SQLInstallerError**를 호출 하 여 연결 된 * \* pfErrorCode* 값을 가져올 수 있습니다. 다음 표에서는 **SQLInstallerError** 에서 반환 될 수 있는 * \* pfErrorCode* 값을 나열 하 고이 함수의 컨텍스트에서 각 값에 대해 설명 합니다.  
   
-|*\*pfErrorCode*|Error|Description|  
+|*\*pfErrorCode*|오류|설명|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|일반 설치 관리자 오류|특정 설치 관리자 오류가 없는 오류가 발생 했습니다.|  
 |ODBC_ERROR_INVALID_PATH|잘못 된 설치 경로|*LpszFileName* 인수에 지정 된 파일 이름의 경로가 잘못 되었습니다.|  

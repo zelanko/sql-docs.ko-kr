@@ -1,4 +1,5 @@
 ---
+description: SQLSetDescRec
 title: SQLSetDescRec | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -13,12 +14,12 @@ ms.assetid: 203d02a2-aa09-462b-a489-a2cdd6f6023b
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b51fce31e0fb94348eb20bab4d507cf842fd1fe9
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.openlocfilehash: 0f0bd2a767a3ee99d1ffa1609d87e62b05c5af30
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87332192"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420817"
 ---
 # <a name="sqlsetdescrec"></a>SQLSetDescRec
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -32,11 +33,11 @@ ms.locfileid: "87332192"
   
 |매개 변수|테이블 반환 매개 변수 열을 포함 하 여 비 테이블 반환 매개 변수 형식에 대 한 관련 특성|테이블 반환 매개 변수에 대한 관련 특성|  
 |---------------|--------------------------------------------------------------------------------------------------------|----------------------------------------------------|  
-|*형식*|SQL_DESC_TYPE|SQL_SS_TABLE|  
+|*유형*|SQL_DESC_TYPE|SQL_SS_TABLE|  
 |*하위 형식*|무시됨|SQL_DATETIME 또는 SQL_INTERVAL 유형의 레코드에 대해 이 값을 SQL_DESC_DATETIME_INTERVAL_CODE로 설정합니다.|  
 |*길이*|SQL_DESC_OCTET_LENGTH|테이블 반환 매개 변수 유형 이름의 길이입니다. 유형 이름이 null로 끝나는 경우 SQL_NTS이고, 테이블 반환 매개 변수 유형 이름이 필요하지 않은 경우 0입니다.|  
 |*정밀도*|SQL_DESC_PRECISION|SQL_DESC_ARRAY_SIZE|  
-|*규모*|SQL_DESC_SCALE|사용되지 않습니다. 이 매개 변수는 0이어야 합니다.|  
+|*크기 조정*|SQL_DESC_SCALE|사용되지 않습니다. 이 매개 변수는 0이어야 합니다.|  
 |*DataPtr*|APD의 SQL_DESC_DATA_PTR|SQL_CA_SS_TYPE_NAME<br /><br /> 저장 프로시저 호출에서 이 매개 변수는 선택 사항이며, 필요하지 않은 경우 NULL을 지정할 수 있습니다. 프로시저 호출이 아닌 SQL 문에 대해서는 이 매개 변수를 지정해야 합니다.<br /><br /> *Dataptr* 은 가변 행 바인딩이 사용 될 때 응용 프로그램에서이 테이블 반환 매개 변수를 식별 하는 데 사용할 수 있는 고유 값으로도 사용 됩니다.|  
 |*StringLengthPtr*|SQL_DESC_OCTET_LENGTH_PTR|SQL_DESC_OCTET_LENGTH_PTR<br /><br /> 테이블 반환 매개 변수의 경우 이 값은 전송할 행 수나 SQL_DATA_AT_EXEC입니다. SQLExecDirect를 사용 하 여 전송할 행 수를 보유 하는 값에 대 한 포인터입니다.|  
 |*IndicatorPtr*|SQL_DESC_INDICATOR_PTR|SQL_DESC_INDICATOR_PTR|  
@@ -46,7 +47,7 @@ ms.locfileid: "87332192"
 ## <a name="sqlsetdescrec-support-for-enhanced-date-and-time-features"></a>향상된 날짜 및 시간 기능에 대한 SQLSetDescRec 지원  
  날짜/시간 유형에 대해 허용되는 값은 다음과 같습니다.  
   
-| attribute | *형식* | *하위 형식* | *길이* | *정밀도* | *규모* |
+| attribute | *유형* | *하위 형식* | *길이* | *정밀도* | *크기 조정* |
 | --------- | ------ | --------- | -------- | ----------- | ------- |
 |Datetime|SQL_DATETIME|SQL_CODE_TIMESTAMP|4|3|3|  
 |smalldatetime|SQL_SQL_DATETIME|SQL_CODE_TIMESTAMP|8|0|0|  

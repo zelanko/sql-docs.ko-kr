@@ -1,4 +1,5 @@
 ---
+description: SQLGetInfo 함수
 title: SQLGetInfo 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 05/28/2020
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 49dceccc-d816-4ada-808c-4c6138dccb64
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9a88eb1a4aff7d166a81bbf6ec64ae2b878fd5fa
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: b60dcdd90c71e1790464f24cd34dedfaa22e7c61
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87363383"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421277"
 ---
 # <a name="sqlgetinfo-function"></a>SQLGetInfo 함수
 
@@ -97,7 +98,7 @@ SQLRETURN SQLGetInfo(
 |HYT01|연결 제한 시간이 만료 되었습니다.|데이터 원본이 요청에 응답 하기 전에 연결 제한 시간이 만료 되었습니다. 연결 제한 시간은 **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT을 통해 설정 됩니다.|  
 |IM001|드라이버가이 기능을 지원 하지 않습니다.|(DM) *ConnectionHandle* 에 해당 하는 드라이버는 함수를 지원 하지 않습니다.|  
   
-## <a name="comments"></a>의견  
+## <a name="comments"></a>주석  
 
  현재 정의 된 정보 형식은이 섹션의 뒷부분에 나오는 "정보 형식"에 표시 됩니다. 다른 데이터 원본을 활용 하기 위해 더 많은 것이 정의 되어야 합니다. 정보 유형 범위는 ODBC에서 예약 됩니다. 드라이버 개발자는 Open Group에서 고유한 드라이버별 사용에 대 한 값을 예약 해야 합니다. **SQLGetInfo** 는 유니코드 변환 또는 *썽킹* 을 수행 하지 않습니다 (부록 A: *Odbc 프로그래머 참조*의 [odbc 오류 코드](../appendixes/appendix-a-odbc-error-codes.md) 참조 *).* 자세한 내용은 [드라이버별 데이터 형식, 설명자 형식, 정보 형식, 진단 유형 및 특성](../develop-app/driver-specific-data-types-descriptor-information-diagnostic.md)을 참조 하세요. \* *Infovalueptr* 에서 반환 되는 정보의 형식은 요청 된 *InfoType* 에 따라 달라 집니다. **SQLGetInfo** 는 다음 5 가지 형식 중 하나로 정보를 반환 합니다.  
   
@@ -676,7 +677,7 @@ else
  데이터 원본의 데이터 형식에 대 한 정보 반환  
  [SQLGetTypeInfo 함수](sqlgettypeinfo-function.md)  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
 
  [ODBC API 참조](odbc-api-reference.md)  
  [ODBC 헤더 파일](../install/odbc-header-files.md)

@@ -1,4 +1,5 @@
 ---
+description: SQLGetDiagRec 및 SQLGetDiagField 사용
 title: SQLGetDiagRec 및 SQLGetDiagField 사용 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4f486bb1-fad8-4064-ac9d-61f2de85b68b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 69a17086253b40469b0ed98cb6f870f319f03f52
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 402cb326ac91e13db0d3ab5421bd5ddb097fb3db
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306754"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421437"
 ---
 # <a name="using-sqlgetdiagrec-and-sqlgetdiagfield"></a>SQLGetDiagRec 및 SQLGetDiagField 사용
 응용 프로그램은 **SQLGetDiagRec** 또는 **SQLGetDiagField** 를 호출 하 여 진단 정보를 검색 합니다. 이러한 함수는 환경, 연결, 문 또는 설명자 핸들을 수락 하 고 해당 핸들을 마지막으로 사용한 함수에서 진단을 반환 합니다. 해당 핸들을 사용 하 여 새 함수를 호출 하면 특정 핸들에 기록 된 진단이 삭제 됩니다. 함수가 여러 진단 레코드를 반환 하는 경우 응용 프로그램은 이러한 함수를 여러 번 호출 합니다. 상태 레코드의 총 수는 SQL_DIAG_NUMBER 옵션을 사용 하 여 헤더 레코드 (레코드 0)에 대해 **SQLGetDiagField** 를 호출 하 여 검색 합니다.  

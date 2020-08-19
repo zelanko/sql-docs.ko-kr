@@ -1,4 +1,5 @@
 ---
+description: 연결 핸들 할당
 title: 연결 핸들 할당 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -21,11 +22,12 @@ ms.assetid: 471d8a31-199c-4f92-bb10-004fc7733b35
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7aee78c5b9f9b151710e3dc5feb662347b588f08
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: b7c477627f8f4d8a4e060dcd29ab4c7fa97629d7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007141"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420707"
 ---
 # <a name="allocating-a-connection-handle"></a>연결 핸들 할당
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -41,6 +43,6 @@ ms.locfileid: "86007141"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC 드라이버에는 응용 프로그램에서 기능을 향상 시키기 위해 사용할 수 있는 여러 가지 확장 된 연결 특성이 있습니다. 이러한 특성 중 일부는 데이터 원본에 지정할 수 있는 것과 동일한 옵션을 제어하며, 데이터 원본에 설정된 옵션을 무시하는 데 사용됩니다. 예를 들어 애플리케이션에서 따옴표 붙은 식별자를 사용하는 경우 드라이버별 특성 SQL_COPT_SS_QUOTED_IDENT를 SQL_QI_ON으로 설정하여 데이터 원본의 설정에 관계없이 이 옵션이 항상 설정되도록 할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [SQL Server &#40;ODBC&#41;와 통신](../../relational-databases/native-client-odbc-communication/communicating-with-sql-server-odbc.md)  
+ [SQL Server &#40;ODBC&#41;와 통신 ](../../relational-databases/native-client-odbc-communication/communicating-with-sql-server-odbc.md)  
   
   

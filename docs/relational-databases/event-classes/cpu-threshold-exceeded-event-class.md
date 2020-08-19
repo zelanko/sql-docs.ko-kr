@@ -1,4 +1,5 @@
 ---
+description: CPU Threshold Exceeded 이벤트 클래스
 title: CPU Threshold Exceeded 이벤트 클래스 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/04/2017
@@ -12,12 +13,12 @@ ms.assetid: eb106f7d-baa3-4a2b-96b2-f9fe0844057d
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f4bb1db4d281574f8292ec3bd752389142b8fdb5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7573d02c1c89ed198a612f920e72b4e140ad8873
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85762960"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420987"
 ---
 # <a name="cpu-threshold-exceeded-event-class"></a>CPU Threshold Exceeded 이벤트 클래스
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
@@ -30,13 +31,13 @@ ms.locfileid: "85762960"
   
 |데이터 열 이름|데이터 형식|Description|열 ID|필터 가능|  
 |----------------------|---------------|-----------------|---------------|----------------|  
-|CPU|**int**|CPU 사용량(밀리초)입니다.|18|yes|  
+|CPU|**int**|CPU 사용량(밀리초)입니다.|18|예|  
 |EventClass|**int**|214|27|예|  
-|EventSubClass|**int**|CPU 제한 위반입니다.|21|yes|  
-|GroupID|**int**|위반이 발생한 그룹 ID입니다.|66|yes|  
-|OwnerID|**int**|위반을 발생시킨 프로세스의 SPID입니다.|58|yes|  
-|SPID|**int**|이 이벤트를 발생시키는 서버 프로세스의 ID입니다.<br /><br /> 참고: 이 ID는 시스템 스레드가 CPU 사용량의 유효성을 백그라운드 태스크로 검사할 경우 실제 사용자 SPID와 다를 수 있습니다.|12|yes|  
-|StartTime|**datetime**|이 이벤트가 발생한 시간입니다.|14|yes|  
+|EventSubClass|**int**|CPU 제한 위반입니다.|21|예|  
+|GroupID|**int**|위반이 발생한 그룹 ID입니다.|66|예|  
+|OwnerID|**int**|위반을 발생시킨 프로세스의 SPID입니다.|58|예|  
+|SPID|**int**|이 이벤트를 발생시키는 서버 프로세스의 ID입니다.<br /><br /> 참고: 이 ID는 시스템 스레드가 CPU 사용량의 유효성을 백그라운드 태스크로 검사할 경우 실제 사용자 SPID와 다를 수 있습니다.|12|예|  
+|StartTime|**datetime**|이 이벤트가 발생한 시간입니다.|14|예|  
   
 ## <a name="see-also"></a>참고 항목  
  [sp_trace_setevent&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  

@@ -1,4 +1,5 @@
 ---
+description: Objects Created on the Oracle Publisher
 title: Oracle 게시자에 생성되는 개체 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c58a124b-4da7-46e2-9292-af8ce9e6664b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 405deb86567c596372777dff5e6ccb9dd2e95fb1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 744cf1e5878382e1eae804b4705e21d1fa21d098
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901238"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420457"
 ---
 # <a name="objects-created-on-the-oracle-publisher"></a>Objects Created on the Oracle Publisher
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -36,18 +37,18 @@ ms.locfileid: "85901238"
 |HREPL_SchemaFilter|테이블|새 게시 마법사를 통해 게시할 때 표시되지 않는 스키마를 포함하는 테이블입니다.|  
 |HREPL_XactsetCreateTimes|테이블|각 트랜잭션 집합과 연결된 작성 시간을 식별하는 테이블입니다.|  
 |HREPL_XactsetJob|테이블|Xactset 작업에 대한 현재 매개 변수 설정을 포함하는 테이블입니다.|  
-|HREPL_Pollid|시퀀스|폴링 ID를 생성하는 데 사용되는 시퀀스입니다.|  
-|HREPL_Seq|시퀀스|명령 변경의 순서를 지정하는 데 사용되는 시퀀스입니다.|  
-|HREPL_Stmt|시퀀스|문 ID를 생성하는 데 사용되는 시퀀스입니다.|  
+|HREPL_Pollid|순서|폴링 ID를 생성하는 데 사용되는 시퀀스입니다.|  
+|HREPL_Seq|순서|명령 변경의 순서를 지정하는 데 사용되는 시퀀스입니다.|  
+|HREPL_Stmt|순서|문 ID를 생성하는 데 사용되는 시퀀스입니다.|  
 |HREPL|패키지 및 패키지 본문|게시자에서 생성된 게시자 지원 코드의 패키지입니다.|  
 |MSSQLSERVERDISTRIBUTOR|공용 동의어|HREPL_Distributor 테이블에 대한 공용 동의어입니다. Oracle 게시자와 함께 사용하도록 배포자를 구성하면 이 동의어가 이미 데이터베이스에 있는 경우 동의어가 삭제되고 다시 생성됩니다.<br /><br /> CASCADE 옵션으로 공용 동의어와 구성된 Oracle 복제 사용자를 삭제하면 Oracle 게시자에서 모든 복제 개체가 제거됩니다.|  
-|HREPL_Len_I_J_K|함수|Oracle 게시 패키지 코드 외부에 정의되어 LONG 열의 길이에 대한 쿼리에 사용되는 함수입니다. 게시된 LONG 열이 있는 테이블에 대한 매개 변수가 있는 명령을 생성할 때 사용됩니다. LONG 열이 있는 게시된 각 테이블에 대해 함수가 생성됩니다.|  
-|HREPL_DropPublisher|절차|Oracle 게시 패키지 코드 외부에 정의되어 Oracle 게시자를 삭제하는 데 사용되는 프로시저입니다.|  
-|HREPL_ExecuteCommand|절차|Oracle 게시 패키지 코드 외부에 정의되어 게시자에서 명령을 실행하는 데 사용되는 프로시저입니다.|  
+|HREPL_Len_I_J_K|기능|Oracle 게시 패키지 코드 외부에 정의되어 LONG 열의 길이에 대한 쿼리에 사용되는 함수입니다. 게시된 LONG 열이 있는 테이블에 대한 매개 변수가 있는 명령을 생성할 때 사용됩니다. LONG 열이 있는 게시된 각 테이블에 대해 함수가 생성됩니다.|  
+|HREPL_DropPublisher|프로시저|Oracle 게시 패키지 코드 외부에 정의되어 Oracle 게시자를 삭제하는 데 사용되는 프로시저입니다.|  
+|HREPL_ExecuteCommand|프로시저|Oracle 게시 패키지 코드 외부에 정의되어 게시자에서 명령을 실행하는 데 사용되는 프로시저입니다.|  
 |HREPL_ArticleN_Trigger_Row|트리거|게시된 각 테이블에 대해 생성되어 행 변경 내용을 추적하는 데 사용되는 트리거입니다.|  
 |HREPL_ArticleN_Trigger_Stmt|트리거|게시된 각 테이블에 대해 생성되어 문 수준 변경 내용을 추적하는 데 사용되는 트리거입니다.|  
-|HREPL_Article_I_J|보기|게시된 각 테이블에 대해 생성되어 게시된 테이블을 쿼리하는 데 사용되는 뷰입니다.|  
-|HREPL_Log_I_J_K|보기|게시된 각 테이블에 대해 생성되어 변경 내용 추적 테이블을 쿼리하는 데 사용되는 뷰입니다.|  
+|HREPL_Article_I_J|View|게시된 각 테이블에 대해 생성되어 게시된 테이블을 쿼리하는 데 사용되는 뷰입니다.|  
+|HREPL_Log_I_J_K|View|게시된 각 테이블에 대해 생성되어 변경 내용 추적 테이블을 쿼리하는 데 사용되는 뷰입니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [Oracle 게시자 구성](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   

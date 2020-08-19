@@ -1,4 +1,5 @@
 ---
+description: SQLSetDescRec 함수
 title: SQLSetDescRec 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 07/18/2019
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: bf55256c-7eb7-4e3f-97ef-b0fee09ba829
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b29879ff7635d6eb7d5a0f7489ff3994758d4a35
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e8f0e423de06acf82e6c883531514c57c29d9407
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299533"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421127"
 ---
 # <a name="sqlsetdescrec-function"></a>SQLSetDescRec 함수
 **규칙**  
@@ -58,7 +59,7 @@ SQLRETURN SQLSetDescRec(
  *RecNumber*  
  입력 설정할 필드가 포함 된 설명자 레코드를 나타냅니다. 설명자 레코드의 번호는 0에서, 레코드 번호 0은 책갈피 레코드입니다. 이 인수는 0 보다 크거나 같아야 합니다. 값 *이 SQL_DESC_COUNT* 값 보다 크면 SQL_DESC_COUNTis 값으로 변경 됩니다. *RecNumber*  
   
- *Type*  
+ *유형*  
  입력 설명자 레코드에 대 한 SQL_DESC_TYPE 필드를 설정 하는 데 사용할 값입니다.  
   
  *하위 형식*  
@@ -70,7 +71,7 @@ SQLRETURN SQLSetDescRec(
  *정밀도*  
  입력 설명자 레코드에 대 한 SQL_DESC_PRECISION 필드를 설정 하는 데 사용할 값입니다.  
   
- *규모*  
+ *크기 조정*  
  입력 설명자 레코드에 대 한 SQL_DESC_SCALE 필드를 설정 하는 데 사용할 값입니다.  
   
  *DataPtr*  
@@ -90,12 +91,12 @@ SQLRETURN SQLSetDescRec(
 ## <a name="diagnostics"></a>진단  
  **SQLSetDescRec** 가 SQL_ERROR 또는 SQL_SUCCESS_WITH_INFO를 반환 하는 경우 SQL_HANDLE_DESC의 *HandleType* 및 *DescriptorHandle* *핸들* 을 사용 하 여 **SQLGetDiagRec** 를 호출 하 여 연결 된 SQLSTATE 값을 얻을 수 있습니다. 다음 표에서는 일반적으로 **SQLSetDescRec** 에서 반환 하는 SQLSTATE 값을 나열 하 고이 함수의 컨텍스트에서 각 항목에 대해 설명 합니다. "(DM)" 표기법은 드라이버 관리자에서 반환 된 SQLSTATEs의 설명 보다 앞에 나옵니다. 다른 설명이 없는 한 각 SQLSTATE 값과 연결 된 반환 코드는 SQL_ERROR 됩니다.  
   
-|SQLSTATE|Error|Description|  
+|SQLSTATE|오류|설명|  
 |--------------|-----------|-----------------|  
 |01000|일반 경고|드라이버 관련 정보 메시지입니다. 함수는 SQL_SUCCESS_WITH_INFO를 반환 합니다.|  
 |07009|잘못 된 설명자 인덱스|DescriptorHandle *인수는* 0으로 설정 되 고, IPD 핸들 *DescriptorHandle* 을 참조 합니다.<br /><br /> 인수 *인수가* 0 보다 작은 경우<br /><br /> DescriptorHandle *인수가 데이터* 원본이 지원할 수 있는 열 또는 매개 변수의 최대 개수 보다 크고,이 인수는 APD, IPD 또는 *DescriptorHandle* 입니다.<br /><br /> *DescriptorHandle* *인수는 0* 과 같고 암시적으로 할당 된 apd 인수를 참조 합니다. (이 오류는 명시적으로 할당 된 응용 프로그램 설명자가 명시적으로 할당 된 응용 프로그램 설명자가 실행 시간을 초과 하는지 여부를 알 수 없기 때문에 명시적으로 할당 된 응용 프로그램 설명자에서 발생 하지 않습니다.)|  
 |08S01|통신 연결 오류|드라이버가 연결 된 드라이버와 데이터 원본 간의 통신 연결이 함수 처리를 완료 하기 전에 실패 했습니다.|  
-|HY000|일반 오류|특정 SQLSTATE가 없고 구현 별 SQLSTATE가 정의 되지 않은 오류가 발생 했습니다. MessageText 버퍼에서 **SQLGetDiagRec** 에 의해 반환 되는 오류 메시지는 오류 및 해당 원인을 설명 합니다. * \**|  
+|HY000|일반 오류|특정 SQLSTATE가 없고 구현 별 SQLSTATE가 정의 되지 않은 오류가 발생 했습니다. * \* MessageText* 버퍼에서 **SQLGetDiagRec** 에 의해 반환 되는 오류 메시지는 오류 및 해당 원인을 설명 합니다.|  
 |HY001|메모리 할당 오류|드라이버에서 함수 실행 또는 완료를 지 원하는 데 필요한 메모리를 할당할 수 없습니다.|  
 |HY010|함수 시퀀스 오류|(DM) *DescriptorHandle* 가이 함수를 호출 하지 않고 비동기적으로 실행 되는 함수를 호출 하 고이 함수가 호출 될 때 여전히 실행 되는 *StatementHandle* 와 연결 되었습니다.<br /><br /> (DM) **Sqlexecute**, **sqlexecdirect**, **SQLBulkOperations**또는 **SQLSetPos** 는 *DescriptorHandle* 가 연결 되 고 SQL_NEED_DATA 반환 된 *StatementHandle* 에 대해 호출 되었습니다. 이 함수는 모든 실행 시 데이터 매개 변수 또는 열에 대해 데이터를 보내기 전에 호출 되었습니다.<br /><br /> (DM) *DescriptorHandle*연결 된 연결 핸들에 대해 비동기적으로 실행 되는 함수가 호출 되었습니다. **SQLSetDescRec** 함수가 호출 될 때이 aynchronous 함수는 계속 실행 중입니다.<br /><br /> (DM) **Sqlexecute**, **Sqlexecdirect**또는 **SQLMoreResults** 가 *DescriptorHandle* 와 연결 된 문 핸들 중 하나에 대해 호출 되 고 SQL_PARAM_DATA_AVAILABLE 반환 되었습니다. 이 함수는 모든 스트리밍된 매개 변수에 대 한 데이터를 검색 하기 전에 호출 되었습니다.|  
 |HY013|메모리 관리 오류|메모리 부족 상태로 인해 기본 메모리 개체에 액세스할 수 없기 때문에 함수 호출을 처리할 수 없습니다.|  
@@ -160,6 +161,6 @@ SQLRETURN SQLSetDescRec(
 |여러 설명자 필드 가져오기|[SQLGetDescRec 함수](../../../odbc/reference/syntax/sqlgetdescrec-function.md)|  
 |단일 설명자 필드 설정|[SQLSetDescField 함수](../../../odbc/reference/syntax/sqlsetdescfield-function.md)|  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [ODBC API 참조](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 헤더 파일](../../../odbc/reference/install/odbc-header-files.md)

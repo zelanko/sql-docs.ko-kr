@@ -1,4 +1,5 @@
 ---
+description: 수직 애플리케이션
 title: 수직 응용 프로그램 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d50ea3e6-7a9e-4fb6-8cd8-1d429d2f7b3c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: cc88f38fd1ffe8b2ee0033ad0a2abc4f15fd5cf3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a12be9247af3f273526dd08ee99ff7cc301af822
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300378"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421407"
 ---
 # <a name="vertical-applications"></a>수직 애플리케이션
 수직 응용 프로그램은 일반적으로 단일 DBMS에 대해 잘 정의 된 작업을 수행 합니다. 예를 들어 주문 입력 응용 프로그램은 회사의 주문을 추적 합니다. 이러한 유형의 응용 프로그램은 일반적으로 응용 프로그램 개발자가 디자인 하지만 응용 프로그램은 여러 다른 Dbms를 사용 하 여 작업할 수 있지만 단일 고객에 대해 단일 DBMS로 작동 합니다.  

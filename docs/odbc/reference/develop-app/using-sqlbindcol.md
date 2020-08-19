@@ -1,4 +1,5 @@
 ---
+description: SQLBindCol 사용
 title: SQLBindCol 사용 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 17277ab3-33ad-44d3-a81c-a26b5e338512
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: da49ad4db80b93d02534a0c4ecacdc2621c9cf8d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f68aa647f600709dd1a4b989cdab8153775f0aaa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81294633"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421447"
 ---
 # <a name="using-sqlbindcol"></a>SQLBindCol 사용
 응용 프로그램은 **SQLBindCol**를 호출 하 여 열을 바인딩합니다. 이 함수는 한 번에 하나의 열을 바인딩합니다. 응용 프로그램은 다음을 지정 합니다.  

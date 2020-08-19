@@ -1,4 +1,5 @@
 ---
+description: SQLGetData(커서 라이브러리)
 title: SQLGetData (커서 라이브러리) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ff40c9c0-b847-4426-a099-1bff47e6e872
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 07200d48f439c97003da7062fc218cd2f3081d1b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5288c46dc731f1bee8727e3825c95ccae663f871
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307844"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421467"
 ---
 # <a name="sqlgetdata-cursor-library"></a>SQLGetData(커서 라이브러리)
 > [!IMPORTANT]  

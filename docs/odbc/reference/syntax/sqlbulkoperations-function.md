@@ -1,4 +1,5 @@
 ---
+description: SQLBulkOperations 함수
 title: SQLBulkOperations 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 07/18/2019
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 7029d0da-b0f2-44e6-9114-50bd96f47196
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 61f4f294a6d84856bc3065b599a370bb5658e3ca
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e065bc06150c3b12e469489c4d115d02c2142f14
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301333"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421297"
 ---
 # <a name="sqlbulkoperations-function"></a>SQLBulkOperations 함수
 **규칙**  
@@ -62,7 +63,7 @@ SQLRETURN SQLBulkOperations(
   
  SQL_SUCCESS_WITH_INFO 또는 SQL_ERROR (01xxx SQLSTATEs 제외)를 반환할 수 있는 모든 SQLSTATEs의 경우 하나 이상의 행 작업에서 오류가 발생 하는 경우 SQL_SUCCESS_WITH_INFO가 반환 되 고 단일 행 작업에서 오류가 발생 하면 SQL_ERROR 반환 됩니다.  
   
-|SQLSTATE|Error|Description|  
+|SQLSTATE|오류|설명|  
 |--------------|-----------|-----------------|  
 |01000|일반 경고|드라이버 관련 정보 메시지입니다. 함수는 SQL_SUCCESS_WITH_INFO를 반환 합니다.|  
 |01004|문자열 데이터 오른쪽 잘림|*작업* 인수가 SQL_FETCH_BY_BOOKMARK 되었거나 데이터 형식이 SQL_C_CHAR 또는 SQL_C_BINARY 인 열에 대해 반환 된 문자열 또는 이진 데이터가 비어 있지 않은 문자 또는 NULL이 아닌 이진 데이터를 잘렸습니다.|  
@@ -83,7 +84,7 @@ SQLRETURN SQLBulkOperations(
 |40003|문 완료를 알 수 없음|이 함수를 실행 하는 동안 연결 된 연결에 실패 하 여 트랜잭션의 상태를 확인할 수 없습니다.|  
 |42000|구문 오류 또는 액세스 위반|드라이버에서 *작업* 인수에 요청 된 작업을 수행 하는 데 필요한 행을 잠글 수 없습니다.|  
 |44000|WITH CHECK OPTION 위반|*Operation* 인수는 SQL_ADD 또는 SQL_UPDATE_BY_BOOKMARK 되었으며 **WITH CHECK OPTION**을 지정 하 여 만든 표시 된 테이블 (또는 표시 된 테이블에서 파생 된 테이블)에서 삽입 또는 업데이트가 수행 되었습니다. 이러한 방식으로 insert 또는 update의 영향을 받는 하나 이상의 행이 표시 된 테이블에 더 이상 표시 되지 않습니다.|  
-|HY000|일반 오류|특정 SQLSTATE가 없고 구현 별 SQLSTATE가 정의 되지 않은 오류가 발생 했습니다. MessageText 버퍼에서 **SQLGetDiagRec** 에 의해 반환 되는 오류 메시지는 오류 및 해당 원인을 설명 합니다. * \**|  
+|HY000|일반 오류|특정 SQLSTATE가 없고 구현 별 SQLSTATE가 정의 되지 않은 오류가 발생 했습니다. * \* MessageText* 버퍼에서 **SQLGetDiagRec** 에 의해 반환 되는 오류 메시지는 오류 및 해당 원인을 설명 합니다.|  
 |HY001|메모리 할당 오류|드라이버에서 함수 실행 또는 완료를 지 원하는 데 필요한 메모리를 할당할 수 없습니다.|  
 |HY008|작업 취소됨|*StatementHandle*에 대해 비동기 처리를 사용 하도록 설정 했습니다. 함수가 호출 되었으며 실행이 완료 되기 전에 **sqlcancel** 또는 **Sqlcancelhandle** 이 *StatementHandle*에 대해 호출 되었습니다. 그런 다음 *StatementHandle*에서 함수를 다시 호출 했습니다.<br /><br /> 함수가 호출 되 고 실행이 완료 되기 전에 **sqlcancel** 또는 **sqlcancelhandle** 이 다중 스레드 응용 프로그램의 다른 스레드에서 *StatementHandle* 호출 되었습니다.|  
 |HY010|함수 시퀀스 오류|(DM) *StatementHandle*연결 된 연결 핸들에 대해 비동기적으로 실행 되는 함수가 호출 되었습니다. **SQLBulkOperations** 함수가 호출 될 때이 비동기 함수는 계속 실행 중입니다.<br /><br /> (DM) **Sqlexecute**, **sqlexecdirect**또는 **SQLMoreResults** 가 *StatementHandle* 에 대해 호출 되 고 SQL_PARAM_DATA_AVAILABLE 반환 되었습니다. 이 함수는 모든 스트리밍된 매개 변수에 대 한 데이터를 검색 하기 전에 호출 되었습니다.<br /><br /> (DM) 지정한 *StatementHandle* 가 실행 된 상태가 아닙니다. 함수가 먼저 **Sqlexecdirect**, **sqlexecute**또는 catalog 함수를 호출 하지 않고 호출 되었습니다.<br /><br /> (DM) *StatementHandle* 에 대해 비동기적으로 실행 되는 함수 (이 함수 아님)가 호출 되었으며이 함수가 호출 될 때 계속 실행 중입니다.<br /><br /> (DM) **Sqlexecute**, **sqlexecdirect**또는 **SQLSetPos** 가 *StatementHandle* 에 대해 호출 되 고 SQL_NEED_DATA 반환 되었습니다. 이 함수는 모든 실행 시 데이터 매개 변수 또는 열에 대해 데이터를 보내기 전에 호출 되었습니다.<br /><br /> (DM) 드라이버가 ODBC 2 였습니다. **Sqlfetchscroll** 또는 **sqlfetch** 가 호출 되기 *전에 StatementHandle* 에 대 한 *x* 드라이버 및 **SQLBulkOperations** 가 호출 되었습니다.<br /><br /> (DM) **SQLBulkOperations** 가 *StatementHandle*에서 **sqlextendedfetch** 를 호출한 후에 호출 되었습니다.|  
@@ -230,20 +231,20 @@ SQLRETURN SQLBulkOperations(
 ## <a name="providing-long-data-for-bulk-inserts-and-updates"></a>대량 삽입 및 업데이트를 위한 긴 데이터 제공  
  **SQLBulkOperations**에 대 한 호출에 의해 수행 되는 대량 삽입 및 업데이트에 대해 Long 데이터를 제공할 수 있습니다. 긴 데이터를 삽입 하거나 업데이트 하기 위해 응용 프로그램은이 항목의 앞부분에 나오는 "대량 삽입 수행" 및 "책갈피를 사용 하 여 대량 업데이트 수행" 섹션에 설명 된 단계 외에 다음 단계를 수행 합니다.  
   
-1.  **SQLBindCol**를 사용 하 여 데이터를 바인딩할 때 응용 프로그램은 실행 시 데이터 열에 대 한 * \*targetvalueptr* 버퍼에 열 번호와 같은 응용 프로그램 정의 값을 배치 합니다. 나중에이 값을 사용 하 여 열을 식별할 수 있습니다.  
+1.  **SQLBindCol**를 사용 하 여 데이터를 바인딩할 때 응용 프로그램은 실행 시 데이터 열에 대 한 * \* targetvalueptr* 버퍼에 열 번호와 같은 응용 프로그램 정의 값을 배치 합니다. 나중에이 값을 사용 하 여 열을 식별할 수 있습니다.  
   
-     응용 프로그램은 SQL_LEN_DATA_AT_EXEC (*길이*) 매크로의 결과를 * \*StrLen_or_IndPtr* 버퍼에 저장 합니다. 열의 SQL 데이터 형식이 SQL_LONGVARBINARY, SQL_LONGVARCHAR 또는 long 데이터 원본 관련 데이터 형식이 고 드라이버에서 **SQLGetInfo**의 SQL_NEED_LONG_DATA_LEN 정보 형식에 대해 "Y"를 반환 하는 경우 *길이* 는 매개 변수에 대해 전송 되는 데이터 바이트 수입니다. 그렇지 않으면 음수가 아닌 값 이어야 하며 무시 됩니다.  
+     응용 프로그램은 SQL_LEN_DATA_AT_EXEC (*길이*) 매크로의 결과를 * \* StrLen_or_IndPtr* 버퍼에 저장 합니다. 열의 SQL 데이터 형식이 SQL_LONGVARBINARY, SQL_LONGVARCHAR 또는 long 데이터 원본 관련 데이터 형식이 고 드라이버에서 **SQLGetInfo**의 SQL_NEED_LONG_DATA_LEN 정보 형식에 대해 "Y"를 반환 하는 경우 *길이* 는 매개 변수에 대해 전송 되는 데이터 바이트 수입니다. 그렇지 않으면 음수가 아닌 값 이어야 하며 무시 됩니다.  
   
 2.  **SQLBulkOperations** 가 호출 될 때 실행 시 데이터 열이 있는 경우 함수는 SQL_NEED_DATA을 반환 하 고 다음에 나오는 3 단계로 진행 합니다. 실행 시 데이터 열이 없으면 프로세스가 완료 된 것입니다.  
   
-3.  응용 프로그램은 **sqlparamdata** 를 호출 하 여 처리할 첫 번째 실행 시 데이터 열에 대 한 * \*targetvalueptr* 버퍼의 주소를 검색 합니다. **Sqlparamdata** 는 SQL_NEED_DATA를 반환 합니다. 응용 프로그램이 * \*targetvalueptr* 버퍼에서 응용 프로그램 정의 값을 검색 합니다.  
+3.  응용 프로그램은 **Sqlparamdata** 를 호출 하 여 처리할 첫 번째 실행 시 데이터 열에 대 한 * \* targetvalueptr* 버퍼의 주소를 검색 합니다. **Sqlparamdata** 는 SQL_NEED_DATA를 반환 합니다. 응용 프로그램이 * \* targetvalueptr* 버퍼에서 응용 프로그램 정의 값을 검색 합니다.  
   
     > [!NOTE]  
     >  실행 시 데이터 매개 변수는 실행 시 데이터 열과 비슷하지만 **Sqlparamdata** 에서 반환 되는 값은 서로 다릅니다.  
   
      실행 시 데이터 열은 **SQLBulkOperations**를 사용 하 여 행을 업데이트 하거나 삽입할 때 **sqlputdata** 를 사용 하 여 데이터를 전송 하는 행 집합의 열입니다. **SQLBindCol**와 바인딩됩니다. **Sqlparamdata** 에서 반환 되는 값은 처리 중인 **Targetvalueptr* 버퍼의 행 주소입니다.  
   
-4.  응용 프로그램은 **Sqlputdata** 를 한 번 이상 호출 하 여 열에 대 한 데이터를 보냅니다. **Sqlputdata**에 지정 된 * \*targetvalueptr* 버퍼에 모든 데이터 값을 반환할 수 없는 경우에는 둘 이상의 호출이 필요 합니다. 문자, 이진 또는 데이터 원본 관련 데이터 형식이 있는 열에 문자 C 데이터를 전송 하거나 문자, 이진 또는 데이터 원본 관련 데이터 형식이 있는 열에 이진 C 데이터를 보내는 경우에만 동일한 열에 대 한 **Sqlputdata** 를 여러 번 호출할 수 있습니다.  
+4.  응용 프로그램은 **Sqlputdata** 를 한 번 이상 호출 하 여 열에 대 한 데이터를 보냅니다. **Sqlputdata**에 지정 된 * \* targetvalueptr* 버퍼에 모든 데이터 값을 반환할 수 없는 경우에는 둘 이상의 호출이 필요 합니다. 문자, 이진 또는 데이터 원본 관련 데이터 형식이 있는 열에 문자 c 데이터를 전송 하거나 문자, 이진 또는 데이터 원본 관련 데이터 형식이 있는 열에 이진 c 데이터를 보내는 경우에만 동일한 열에 대 한 **sqlputdata** 를 여러 번 호출할 수 있습니다.  
   
 5.  응용 프로그램은 **Sqlparamdata** 를 다시 호출 하 여 열에 대해 모든 데이터가 전송 되었음을 알립니다.  
   
@@ -461,6 +462,6 @@ int main() {
 |커서 위치 지정, 행 집합의 데이터 새로 고침 또는 행 집합의 데이터 업데이트 또는 삭제|[SQLSetPos 함수](../../../odbc/reference/syntax/sqlsetpos-function.md)|  
 |문 특성 설정|[SQLSetStmtAttr 함수](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)|  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [ODBC API 참조](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 헤더 파일](../../../odbc/reference/install/odbc-header-files.md)

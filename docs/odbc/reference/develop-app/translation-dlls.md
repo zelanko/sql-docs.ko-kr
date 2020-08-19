@@ -1,4 +1,5 @@
 ---
+description: 변환 DLL
 title: 변환 Dll | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 38975059-b346-410f-bb27-326f3f7bbf39
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3dad12bcd71434c1013b4fde5b4bd0231e56016f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 88e0fc6879db7e4b370acc62b2d0102b3ef0a375
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81297948"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421457"
 ---
 # <a name="translation-dlls"></a>변환 DLL
 응용 프로그램 및 데이터 원본은 데이터를 다른 문자 집합에 저장 하는 경우가 많습니다. ODBC는 드라이버에서 문자 집합 간에 데이터를 변환 하는 데 사용할 수 있는 일반 메커니즘을 제공 합니다. **SQLDriverToDataSource** 및 **SQLDataSourceToDriver**변환 함수를 구현 하는 DLL로 구성 되며,이는 드라이버에서 데이터 원본 및 드라이버 사이의 모든 데이터를 변환 하기 위해 호출 하는 함수입니다. 이 DLL은 응용 프로그램 개발자, 드라이버 개발자 또는 제 3 자에 의해 작성 될 수 있습니다.  

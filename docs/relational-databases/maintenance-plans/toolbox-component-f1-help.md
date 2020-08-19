@@ -1,4 +1,5 @@
 ---
+description: 도구 상자 구성 요소 F1 도움말
 title: 도구 상자 구성 요소 F1 도움말 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: d8401ecc-7d47-49df-aae5-22a148eeb23f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 67681c110015ae119c9f5a28812f9fba68f968a5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b2cc50fc56b82ac8e98a6bcbb4b31f7db5beb81c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715327"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420757"
 ---
 # <a name="toolbox-component-f1-help"></a>도구 상자 구성 요소 F1 도움말
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -26,7 +27,7 @@ ms.locfileid: "85715327"
  **도구 상자** 항목은 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 코드 편집기 또는 디자인 보기로 끌어 놓거나 복사하여 붙여 넣을 수 있습니다.  
   
 ## <a name="how-the-toolbox-works"></a>도구 상자의 작동 방식  
- 도구 상자는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 탐색기와 비슷하게 작동하지만 표나 연결선이 없는 슬라이드 트리 컨트롤입니다. 탭이라고 하는 **도구 상자** 의 여러 부분은 동시에 확장할 수 있으며 전체 트리는 **도구 상자** 창 내에서 스크롤됩니다. **도구 상자**의 탭을 확장하려면 탭 이름 옆에 있는 더하기 기호( **+** )를 클릭합니다. 확장된 탭을 축소하려면 탭 이름 옆에 있는 빼기 기호( **-** )를 클릭합니다.  
+ 도구 상자는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 탐색기와 비슷하게 작동하지만 표나 연결선이 없는 슬라이드 트리 컨트롤입니다. 탭이라고 하는 **도구 상자** 의 여러 부분은 동시에 확장할 수 있으며 전체 트리는 **도구 상자** 창 내에서 스크롤됩니다. **도구 상자**의 탭을 확장하려면 탭 이름 옆에 있는 더하기 기호(**+**)를 클릭합니다. 확장된 탭을 축소하려면 탭 이름 옆에 있는 빼기 기호( **-** )를 클릭합니다.  
   
  편집기 또는 디자이너로 돌아올 때마다 **도구 상자** 가 자동으로 가장 최근에 선택한 탭 및 항목으로 스크롤됩니다. 포커스를 다른 편집기나 디자이너로 옮기면 **도구 상자** 의 현재 선택 사항이 그대로 해당 편집기 또는 디자이너에 적용됩니다.  
   

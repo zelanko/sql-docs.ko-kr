@@ -1,4 +1,5 @@
 ---
+description: SQLValidDSN 함수
 title: Sql유효한 Dsn 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 930d1d89-337a-4429-85a2-84ee10555ac9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6dfafca22d0b04f2147b1af24b53e787493efe67
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4919887a6e0bad4526959d0cd31205019a597a0f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81286973"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421027"
 ---
 # <a name="sqlvaliddsn-function"></a>SQLValidDSN 함수
 **규칙**  
@@ -49,9 +50,9 @@ BOOL SQLValidDSN(
  함수는 데이터 원본 이름이 유효한 경우 TRUE를 반환 합니다. 데이터 원본 이름이 잘못 되었거나 함수 호출이 실패 한 경우 FALSE를 반환 합니다.  
   
 ## <a name="diagnostics"></a>진단  
- **Sql유효한 dsn** 이 FALSE를 반환 하는 경우 **SQLInstallerError**를 호출 하 여 연결 된 * \*pfErrorCode* 값을 얻을 수 있습니다. PfErrorCode는 함수 호출이 실패 한 경우에만 반환 됩니다. 데이터 원본 이름이 잘못 되어 FALSE가 반환 된 경우에만 반환 됩니다. * \** 다음 표에서는 **SQLInstallerError** 에서 반환 될 수 있는 * \*pfErrorCode* 값을 나열 하 고이 함수의 컨텍스트에서 각 값에 대해 설명 합니다.  
+ **Sql유효한 dsn** 이 FALSE를 반환 하는 경우 **SQLInstallerError**를 호출 하 여 연결 된 * \* pfErrorCode* 값을 얻을 수 있습니다. * \* PfErrorCode* 는 함수 호출이 실패 한 경우에만 반환 됩니다. 데이터 원본 이름이 잘못 되어 FALSE가 반환 된 경우에만 반환 됩니다. 다음 표에서는 **SQLInstallerError** 에서 반환 될 수 있는 * \* pfErrorCode* 값을 나열 하 고이 함수의 컨텍스트에서 각 값에 대해 설명 합니다.  
   
-|*\*pfErrorCode*|Error|Description|  
+|*\*pfErrorCode*|오류|설명|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|일반 설치 관리자 오류|특정 설치 관리자 오류가 없는 오류가 발생 했습니다.|  
 |ODBC_ERROR_OUT_OF_MEM|메모리가 부족합니다.|메모리가 부족 하 여 설치 관리자가 함수를 수행할 수 없습니다.|  

@@ -1,4 +1,5 @@
 ---
+description: 날짜/시간 데이터 형식을 C에서 SQL로 변환
 title: C에서 SQL로 변환 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ ms.assetid: 7ac098db-9147-4883-8da9-a58ab24a0d31
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 298e16b814251cf0068436cb5c1a6331aef8c1b4
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.openlocfilehash: e6fa65cd3bdfd8b6054be31f91eef811d7db4aac
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87332419"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420657"
 ---
 # <a name="datetime-data-type-conversions-from-c-to-sql"></a>날짜/시간 데이터 형식을 C에서 SQL로 변환
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -80,7 +81,7 @@ ms.locfileid: "87332419"
   
     |   | 암시된 소수 자릿수 | 암시된 소수 자릿수 |
     | - | ------------- | ------------- |
-    | **형식** | 0 | 1.9 |  
+    | **유형** | 0 | 1.9 |  
     |**SQL_C_TYPE_TIMESTAMP** |19|21..29|  
   
      그러나 SQL_C_TYPE_TIMESTAMP의 경우에는 소수 자릿수 초를 데이터 손실 없이 3자리로 나타낼 수 있고 열 크기가 23 이상인 경우 소수 자릿수 초의 자릿수는 정확히 3자리로 생성됩니다. 이 동작은 이전 ODBC 드라이버를 사용하여 개발된 애플리케이션과의 호환성을 보장합니다.  
@@ -92,6 +93,6 @@ ms.locfileid: "87332419"
 -   **N/A**: 기존 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 동작과 이전 동작이 유지 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [ODBC&#41;&#40;날짜 및 시간 기능 향상](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
+ [ODBC&#41;&#40;날짜 및 시간 기능 향상 ](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
   
   

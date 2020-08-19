@@ -1,4 +1,5 @@
 ---
+description: SQLGetTypeInfo 함수(SQLGetTypeInfo Function)
 title: SQLGetTypeInfo 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: bdedb044-8924-4ca4-85f3-8b37578e0257
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 47273c75a005f11b33e9929977b57607b36898de
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 47ff65a1c7912aef196c79b9b26c8286fb05fef2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303264"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421197"
 ---
 # <a name="sqlgettypeinfo-function"></a>SQLGetTypeInfo 함수(SQLGetTypeInfo Function)
 **규칙**  
@@ -58,7 +59,7 @@ SQLRETURN SQLGetTypeInfo(
 ## <a name="diagnostics"></a>진단  
  **SQLGetTypeInfo** 가 SQL_ERROR 또는 SQL_SUCCESS_WITH_INFO를 반환 하는 경우 SQL_HANDLE_STMT의 *HandleType* 및 *StatementHandle* *핸들* 을 사용 하 여 **SQLGetDiagRec** 를 호출 하 여 연결 된 SQLSTATE 값을 얻을 수 있습니다. 다음 표에서는 일반적으로 **SQLGetTypeInfo** 에서 반환 하는 SQLSTATE 값을 나열 하 고이 함수의 컨텍스트에서 각 항목에 대해 설명 합니다. "(DM)" 표기법은 드라이버 관리자에서 반환 된 SQLSTATEs의 설명 보다 앞에 나옵니다. 다른 설명이 없는 한 각 SQLSTATE 값과 연결 된 반환 코드는 SQL_ERROR 됩니다.  
   
-|SQLSTATE|Error|Description|  
+|SQLSTATE|오류|설명|  
 |--------------|-----------|-----------------|  
 |01000|일반 경고|드라이버 관련 정보 메시지입니다. 함수는 SQL_SUCCESS_WITH_INFO를 반환 합니다.|  
 |01 S 02|옵션 값 변경 됨|구현 작업 조건 때문에 지정 된 문 특성이 잘못 되었습니다. 따라서 유사한 값이 일시적으로 대체 되었습니다. ( **SQLGetStmtAttr** 를 호출 하 여 임시로 대체 된 값을 확인 합니다.) 대체 값은 커서가 닫힐 때까지 *StatementHandle* 에 대해 유효 합니다. 변경할 수 있는 문 특성은 SQL_ATTR_CONCURRENCY, SQL_ATTR_CURSOR_TYPE, SQL_ATTR_KEYSET_SIZE, SQL_ATTR_MAX_LENGTH, SQL_ATTR_MAX_ROWS, SQL_ATTR_QUERY_TIMEOUT, SQL_ATTR_SIMULATE_CURSOR입니다. 함수는 SQL_SUCCESS_WITH_INFO를 반환 합니다.|  
@@ -66,7 +67,7 @@ SQLRETURN SQLGetTypeInfo(
 |24000|잘못된 커서 상태|*StatementHandle* 에서 커서가 열려 있고 **Sqlfetch** 또는 **sqlfetchscroll** 이 호출 되었습니다. 이 오류는 **sqlfetch** 또는 **sqlfetchscroll** 이 SQL_NO_DATA 반환 되지 않은 경우 드라이버 관리자에 의해 반환 되 고, **Sqlfetch** 또는 **sqlfetchscroll** 에서 SQL_NO_DATA를 반환한 경우 드라이버에서 반환 됩니다.<br /><br /> *StatementHandle*에 대 한 결과 집합이 열려 있지만 **Sqlfetch** 또는 **sqlfetchscroll** 을 호출 하지 않았습니다.|  
 |40001|Serialization 오류|다른 트랜잭션과의 리소스 교착 상태 때문에 트랜잭션이 롤백 되었습니다.|  
 |40003|문 완료를 알 수 없음|이 함수를 실행 하는 동안 연결 된 연결에 실패 하 여 트랜잭션의 상태를 확인할 수 없습니다.|  
-|HY000|일반 오류|특정 SQLSTATE가 없고 구현 별 SQLSTATE가 정의 되지 않은 오류가 발생 했습니다. MessageText 버퍼에서 **SQLGetDiagRec** 에 의해 반환 되는 오류 메시지는 오류 및 해당 원인을 설명 합니다. * \**|  
+|HY000|일반 오류|특정 SQLSTATE가 없고 구현 별 SQLSTATE가 정의 되지 않은 오류가 발생 했습니다. * \* MessageText* 버퍼에서 **SQLGetDiagRec** 에 의해 반환 되는 오류 메시지는 오류 및 해당 원인을 설명 합니다.|  
 |HY001|메모리 할당 오류|드라이버에서 함수 실행 또는 완료를 지 원하는 데 필요한 메모리를 할당할 수 없습니다.|  
 |HY004|잘못 된 SQL 데이터 형식|인수 *데이터* 형식에 지정 된 값이 올바른 ODBC SQL 데이터 형식 식별자 또는 드라이버에서 지 원하는 드라이버별 데이터 형식 식별자가 아닙니다.|  
 |HY008|작업 취소됨|비동기 처리가 *StatementHandle*에 대해 사용 하도록 설정 된 다음 함수를 호출 하 고 실행을 완료 하기 전에 *StatementHandle*에서 **Sqlcancel** 또는 **sqlcancelhandle** 이 호출 되었습니다. 그런 다음 *StatementHandle*에서 함수를 다시 호출 했습니다.<br /><br /> 함수가 호출 되 고 실행이 완료 되기 전에 **sqlcancel** 또는 **sqlcancelhandle** 이 다중 스레드 응용 프로그램의 다른 스레드에서 *StatementHandle* 호출 되었습니다.|  
@@ -146,6 +147,6 @@ SQLRETURN SQLGetTypeInfo(
 |정방향 전용 방향으로 단일 행 또는 데이터 블록 페치|[SQLFetch 함수](../../../odbc/reference/syntax/sqlfetch-function.md)|  
 |드라이버 또는 데이터 원본에 대 한 정보 반환|[SQLGetInfo 함수](../../../odbc/reference/syntax/sqlgetinfo-function.md)|  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [ODBC API 참조](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 헤더 파일](../../../odbc/reference/install/odbc-header-files.md)
