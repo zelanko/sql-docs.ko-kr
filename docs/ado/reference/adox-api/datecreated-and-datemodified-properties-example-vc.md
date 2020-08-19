@@ -1,4 +1,5 @@
 ---
+description: DateCreated 및 DateModified 속성 예제(VC++)
 title: DateCreated 및 DateModified 속성 예제 (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b964beee-83c7-4f91-8255-3ba864c9adfd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 63ff7406b192bc8ecb759a5fe234efd1397cf11b
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 19f8f15f35cae97d4c6882df90889513ce0eb430
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759229"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440195"
 ---
 # <a name="datecreated-and-datemodified-properties-example-vc"></a>DateCreated 및 DateModified 속성 예제(VC++)
 이 예에서는 기존 [테이블](../../../ado/reference/adox-api/table-object-adox.md) 에 새 [열](../../../ado/reference/adox-api/column-object-adox.md) 을 추가 하 고 새 **테이블**을 만들어 [DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md) 및 [DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md) 속성을 보여 줍니다. 이 예제를 실행 하려면 DateOutput 프로시저가 필요 합니다.  

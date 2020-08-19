@@ -1,4 +1,5 @@
 ---
+description: Command 속성(ADOX)
 title: Command 속성 (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: bcc9146f-586f-4e69-9c10-863440c9cffa
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6be0b6193c925ae7fc25ca400181d9f9077f3dfa
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: ec710b0ea9a208963efec64e75dc826d8d0e6b01
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86943175"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440245"
 ---
 # <a name="command-property-adox"></a>Command 속성(ADOX)
 프로시저를 만들거나 실행 하는 데 사용할 수 있는 ADO [명령](../../../ado/reference/ado-api/command-object-ado.md) 개체를 지정 합니다.  

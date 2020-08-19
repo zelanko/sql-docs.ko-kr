@@ -1,4 +1,5 @@
 ---
+description: DateCreated 속성(ADOX)
 title: DateCreated 속성 (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 2bf4b00d-045c-444e-8af7-8af6297ed418
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2a94ea4d86d727bc2258b853285eaa7ebc1e48bc
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: 37101d33e8a0efcda56dae5df13d7afd299f6f23
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942436"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440165"
 ---
 # <a name="datecreated-property-adox"></a>DateCreated 속성(ADOX)
 개체를 만든 날짜를 나타냅니다.  

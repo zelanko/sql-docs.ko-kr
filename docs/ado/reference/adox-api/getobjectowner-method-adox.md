@@ -1,4 +1,5 @@
 ---
+description: GetObjectOwner 메서드(ADOX)
 title: GetObjectOwner 메서드 (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8965adf0-9075-4125-8142-73eb700029c3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7c9892ddc3be28e63dae0f3f6440cc4a668498e3
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: f4acea759ba213eac4365d79fa040c20e5a673cc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764910"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440045"
 ---
 # <a name="getobjectowner-method-adox"></a>GetObjectOwner 메서드(ADOX)
 [카탈로그](../../../ado/reference/adox-api/catalog-object-adox.md)에 있는 개체의 소유자를 반환 합니다.  

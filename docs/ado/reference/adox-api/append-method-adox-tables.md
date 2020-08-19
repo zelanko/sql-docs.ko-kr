@@ -1,4 +1,5 @@
 ---
+description: Append 메서드(ADOX 테이블)
 title: Append 메서드 (ADOX Tables) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: a362ed51-314c-4783-9598-538dbf755f3d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 19617c65b350527753895ed613f671c3ac0f88e8
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 6069b3d99e021be01d8fd2d724b7c25868167bd3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764014"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440475"
 ---
 # <a name="append-method-adox-tables"></a>Append 메서드(ADOX 테이블)
 [Tables](../../../ado/reference/adox-api/tables-collection-adox.md) 컬렉션에 새 [Table](../../../ado/reference/adox-api/table-object-adox.md) 개체를 추가 합니다.  

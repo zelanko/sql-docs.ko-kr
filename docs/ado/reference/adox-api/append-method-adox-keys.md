@@ -1,4 +1,5 @@
 ---
+description: Append 메서드(ADOX 키)
 title: Append 메서드 (ADOX 키) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 215a5391-f422-42ec-99ea-4e6fbb5d3d64
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5d4797344958391dca278e23be2efafa6d1b3f69
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 7ae3ef035594b696b829f0f1898e1749a2c33f11
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764034"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440535"
 ---
 # <a name="append-method-adox-keys"></a>Append 메서드(ADOX 키)
 [키](../../../ado/reference/adox-api/keys-collection-adox.md) 컬렉션에 새 [키](../../../ado/reference/adox-api/key-object-adox.md) 개체를 추가 합니다.  
@@ -34,7 +35,7 @@ Keys.Append Key [,KeyType] [,Column] [,RelatedTable] [,RelatedColumn]
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- *키*  
+ *Key*  
  추가할 **키** 개체 또는 만들고 추가할 키의 이름입니다.  
   
  *KeyType*  

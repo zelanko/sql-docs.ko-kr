@@ -1,4 +1,5 @@
 ---
+description: Append 메서드(ADOX 사용자)
 title: Append 메서드 (ADOX 사용자) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b80bc5d5-78ca-4f75-956b-2ac658029cc7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c010b291468432544a037d15fbaa790fc3ee789d
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: e774ab590e3f405cab157293405eba5e575ecb52
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764024"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440465"
 ---
 # <a name="append-method-adox-users"></a>Append 메서드(ADOX 사용자)
 [사용자](../../../ado/reference/adox-api/users-collection-adox.md) 컬렉션에 새 [사용자](../../../ado/reference/adox-api/user-object-adox.md) 개체를 추가 합니다.  

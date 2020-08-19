@@ -1,4 +1,5 @@
 ---
+description: Columns 컬렉션(ADOX)
 title: Columns 컬렉션 (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -18,22 +19,22 @@ helpviewer_keywords:
 ms.assetid: 23b9fea8-4f76-4a51-95ce-1a6ce4560b34
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 46168e694f87c4a8a827420f8b395b843da1d29b
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 01598bb9c9b7258b33f66df6bf00db9b892f4ec5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759339"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440285"
 ---
 # <a name="columns-collection-adox"></a>Columns 컬렉션(ADOX)
 테이블, 인덱스 또는 키의 모든 [열](../../../ado/reference/adox-api/column-object-adox.md) 개체를 포함 합니다.  
   
 ## <a name="remarks"></a>설명  
- **Columns** 컬렉션에 대 한 [APPEND](../../../ado/reference/adox-api/append-method-adox-columns.md) 메서드는 ADOX에 대해 고유 합니다. 다음을 수행할 수 있습니다.  
+ **Columns** 컬렉션에 대 한 [APPEND](../../../ado/reference/adox-api/append-method-adox-columns.md) 메서드는 ADOX에 대해 고유 합니다. 다음을 할 수 있습니다.  
   
 -   **Append** 메서드를 사용 하 여 컬렉션에 새 열을 추가 합니다.  
   
- 나머지 속성 및 메서드는 ADO 컬렉션의 표준입니다. 다음을 수행할 수 있습니다.  
+ 나머지 속성 및 메서드는 ADO 컬렉션의 표준입니다. 다음을 할 수 있습니다.  
   
 -   [Item](../../../ado/reference/ado-api/item-property-ado.md) 속성을 사용 하 여 컬렉션의 열에 액세스 합니다.  
   

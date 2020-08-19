@@ -1,4 +1,5 @@
 ---
+description: ADOX 속성 개체 속성, 메서드 및 이벤트
 title: ADOX 속성 개체 속성, 메서드 및 이벤트 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 640780dc-5733-4f0c-9c11-6f43c1db5901
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d17bb9ac5e443606b54f2f9c606083397e4f0583
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 6a97292cc702dc675aaf14ae34c4b792b541f758
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764094"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440515"
 ---
 # <a name="adox-property-object-properties-methods-and-events"></a>ADOX 속성 개체 속성, 메서드 및 이벤트
 ## <a name="properties"></a>속성  

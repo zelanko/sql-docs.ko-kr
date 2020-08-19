@@ -1,4 +1,5 @@
 ---
+description: GetPermissions 메서드(ADOX)
 title: GetPermissions 메서드 (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: df201c1f-c76a-465d-98f0-83b7fc36e6e3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 221b340cd8df2a9bfc2bfdb19e3e46b18d3a2c57
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: b4ab1ff4d032a1e9aa1bc617d8664b377ac391f2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942705"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440025"
 ---
 # <a name="getpermissions-method-adox"></a>GetPermissions 메서드(ADOX)
 개체 또는 개체 컨테이너의 [그룹](../../../ado/reference/adox-api/group-object-adox.md) 또는 [사용자](../../../ado/reference/adox-api/user-object-adox.md) 에 대 한 권한을 반환 합니다.  

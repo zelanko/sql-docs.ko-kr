@@ -1,4 +1,5 @@
 ---
+description: Create 메서드 예제(VC++)
 title: Create 메서드 예제 (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 57fcb0eb-5d40-4ad4-996d-380732de8a3d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1e89a9fa34b4388fbfb283b223d637dde7fdf636
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 50cb2ca388b078fbd1adc044e28d523aa80a7522
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759249"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440175"
 ---
 # <a name="create-method-example-vc"></a>Create 메서드 예제(VC++)
 다음 코드에서는 [create](../../../ado/reference/adox-api/create-method-adox.md) 메서드를 사용 하 여 새 Microsoft Jet 데이터베이스를 만드는 방법을 보여 줍니다.  

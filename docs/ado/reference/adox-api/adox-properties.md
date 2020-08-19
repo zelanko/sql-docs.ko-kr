@@ -1,4 +1,5 @@
 ---
+description: ADOX 속성
 title: ADOX 속성 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2ddf19e4-312e-4d21-8053-a6fc4b738ad4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6441c637b371cb059ebaad94380d6bfd4f24c8f9
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: 2bb02d47575eaaa2e1eee4a443f86a7d103dabca
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942818"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440555"
 ---
 # <a name="adox-properties"></a>ADOX 속성
 
@@ -26,9 +27,9 @@ ms.locfileid: "86942818"
 |-|-|  
 |[ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md)|카탈로그가 속한 ADO **연결** 개체를 나타냅니다.|  
 |[특성](../../../ado/reference/adox-api/attributes-property-adox.md)|열 특징을 설명 합니다.|  
-|[클러스터형](../../../ado/reference/adox-api/clustered-property-adox.md).|인덱스가 클러스터형 인지 여부를 나타냅니다.|  
+|[클러스터형](../../../ado/reference/adox-api/clustered-property-adox.md)|인덱스가 클러스터형 인지 여부를 나타냅니다.|  
 |[명령](../../../ado/reference/adox-api/command-property-adox.md)|프로시저를 만들거나 실행 하는 데 사용할 수 있는 ADO **명령** 개체를 지정 합니다.|  
-|[개수](../../../ado/reference/ado-api/count-property-ado.md)|컬렉션의 개체 수를 나타냅니다.|  
+|[Count](../../../ado/reference/ado-api/count-property-ado.md)|컬렉션의 개체 수를 나타냅니다.|  
 |[DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md)|개체를 만든 날짜를 나타냅니다.|  
 |[DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md)|개체가 마지막으로 수정 된 날짜를 나타냅니다.|  
 |[DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md)|열의 최대 크기를 나타냅니다.|  

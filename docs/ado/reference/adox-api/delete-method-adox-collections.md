@@ -1,4 +1,5 @@
 ---
+description: Delete 메서드(ADOX 컬렉션)
 title: Delete 메서드 (ADOX Collections) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -30,12 +31,12 @@ helpviewer_keywords:
 ms.assetid: e6b6e3a4-8952-4d79-81f4-51019c338374
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dd9992804702a3b968e0a42b3a50a777f0690d35
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: 7345337ab35f4154fd9dc53f749e04dba96dad48
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942482"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440115"
 ---
 # <a name="delete-method-adox-collections"></a>Delete 메서드(ADOX 컬렉션)
 컬렉션에서 개체를 제거 합니다.  

@@ -1,4 +1,5 @@
 ---
+description: DeleteRule 속성(ADOX)
 title: DeleteRule 속성 (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 87bd4c0a-cae3-4007-a939-4193acaa00ac
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 508225919ae71461ef2e122171beede5cb7141c0
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 23262afa30ca28c226964ebc17d4a3ac52971d5c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763894"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440075"
 ---
 # <a name="deleterule-property-adox"></a>DeleteRule 속성(ADOX)
 기본 키가 삭제 될 때 수행 되는 동작을 나타냅니다.  

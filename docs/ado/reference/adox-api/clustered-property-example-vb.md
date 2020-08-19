@@ -1,4 +1,5 @@
 ---
+description: Clustered 속성 예제(VB)
 title: Clustered 속성 예제 (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1cd30769-c8af-43e7-be27-12ed0434daa1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 91f2f3bc8793a82cd7fd7eee16e259868bdad915
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 647fe236ad7a616cbce54986f6a3ce3aba0db163
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759409"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440355"
 ---
 # <a name="clustered-property-example-vb"></a>Clustered 속성 예제(VB)
 이 예에서는 [인덱스](../../../ado/reference/adox-api/index-object-adox.md)의 [클러스터형](../../../ado/reference/adox-api/clustered-property-adox.md) 속성을 보여 줍니다. Microsoft Jet 데이터베이스는 클러스터형 인덱스를 지원 하지 않으므로이 예에서는 **Northwind** 데이터베이스에 있는 모든 인덱스의 **클러스터형** 속성에 대해 **False** 를 반환 합니다.  

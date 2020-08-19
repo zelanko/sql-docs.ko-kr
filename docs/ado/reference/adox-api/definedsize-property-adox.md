@@ -1,4 +1,5 @@
 ---
+description: DefinedSize 속성(ADOX)
 title: DefinedSize 속성 (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 762b8937-c31c-4e90-bb85-506d991e8280
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6a13a0ef430404735d15303549dfd6f812864f81
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 2f122574ba5aa405ca4493b498bb0179249cccf1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759199"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440145"
 ---
 # <a name="definedsize-property-adox"></a>DefinedSize 속성(ADOX)
 열의 최대 크기를 나타냅니다.  
