@@ -1,4 +1,5 @@
 ---
+description: time(Transact-SQL)
 title: time(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/07/2017
@@ -22,12 +23,12 @@ ms.assetid: 30a6c681-8190-48e4-94d0-78182290a402
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9ce15115e059018e7065f2a3fefc6943a110cf97
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: fe87d9a583c60ba6d627168ade3eef07a47467b5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007984"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88368259"
 ---
 # <a name="time-transact-sql"></a>time(Transact-SQL)
 
@@ -43,7 +44,7 @@ ms.locfileid: "86007984"
 |속성|값|  
 |--------------|-----------|  
 |구문|**time** [ (*소수 자릿수 초*) ]|  
-|사용|DECLARE \@MyTime **time(7)**<br /><br /> CREATE TABLE Table1( Column1 **time(7)** )|  
+|사용량|DECLARE \@MyTime **time(7)**<br /><br /> CREATE TABLE Table1( Column1 **time(7)** )|  
 |*소수 자릿수 초*|초의 소수 부분 자릿수를 지정합니다.<br /><br /> 0에서 7 사이의 정수를 지정할 수 있습니다. Informatica의 경우 0에서 3 사이의 정수를 지정할 수 있습니다.<br /><br /> 기본 소수 자릿수는 7(100ns)입니다.|  
 |기본 문자열 리터럴 형식<br /><br /> (하위 클라이언트에 대해 사용됨)|Informatica의 경우 hh:mm:ss[.nnnnnnn])<br /><br /> 자세한 내용은 [하위 클라이언트에 대한 이전 버전과의 호환성](#BackwardCompatibilityforDownlevelClients) 섹션을 참조하세요.|  
 |범위|00:00:00.0000000부터 23:59:59.9999999까지(Informatica의 경우 00:00:00.000부터 23:59:59.999까지)|  
@@ -57,7 +58,7 @@ ms.locfileid: "86007984"
 |표준 시간대 오프셋 인식 및 유지|예|  
 |일광 절약 시간제 인식|예|  
   
-|지정한 소수 자릿수|결과(전체 자릿수, 소수 자릿수)|열 길이(바이트)|소수 자릿수<br /><br /> 초<br /><br /> 자릿수|  
+|지정한 소수 자릿수|결과(전체 자릿수, 소수 자릿수)|열 길이(바이트)|소수 자릿수<br /><br /> 초<br /><br /> 정밀도|  
 |---------------------|---------------------------------|-----------------------------|------------------------------------------|  
 |**time**|(16,7) [Informatica에서 (12,3)]|5(Informatica에서 4)|7(Informatica에서 3)|  
 |**time(0)**|(8,0)|3|0-2|  
@@ -76,11 +77,11 @@ ms.locfileid: "86007984"
 |----------------|-----------------|  
 |hh:mm[:ss][:fractional seconds][AM][PM]<br /><br /> hh:mm[:ss][.fractional seconds][AM][PM]<br /><br /> hhAM[PM]<br /><br /> hh AM[PM]|시간 값 0은 AM 지정 여부와 관계없이 자정(AM) 이후 시간을 나타냅니다. 시간이 0일 경우 PM을 지정할 수 없습니다.<br /><br /> 01부터 11까지의 시간 값은 AM 또는 PM을 지정하지 않는 경우 오전을 나타냅니다. AM을 지정하면 이 값은 오전을 나타내고 PM을 지정하면 오후를 나타냅니다.<br /><br /> 시간 값 12는 AM 또는 PM을 지정하지 않는 경우 정오 이후의 시간을 나타냅니다. AM을 지정하면 이 값은 자정 이후의 시간을 나타내고 PM을 지정하면 정오 이후의 시간을 나타냅니다. 예를 들어 12:01은 12:01 PM과 마찬가지로 정오에서 1분 지난 시간이고 12:01 AM은 자정에서 1분 지난 시간입니다. 12:01 AM을 지정하는 것은 00:01 또는 00:01 AM을 지정하는 것과 같습니다.<br /><br /> 13부터 23까지의 시간 값은 AM 또는 PM을 지정하지 않는 경우 정오 이후의 시간을 나타냅니다. 또한 PM을 지정하는 경우에도 이 값은 정오 이후의 시간을 나타냅니다. 13부터 23까지의 시간 값을 사용할 경우 AM을 지정할 수 없습니다.<br /><br /> 시간 값 24는 유효하지 않습니다. 자정을 나타내려면 12:00 AM 또는 00:00을 사용하세요.<br /><br /> 밀리초 앞에는 콜론(:) 또는 마침표(.)가 올 수 있습니다. 콜론을 사용하면 숫자는 1/1000초를 의미합니다. 마침표를 사용하면 자릿수 하나는 1/10초를 의미하고 자릿수 두 개는 1/100초를 의미하며 자릿수 세 개는 1/1000초를 의미합니다. 예를 들어 12:30:20:1은 12:30분에서 20과 1/1000초가 지난 시간을 의미하고 12:30:20.1은 12:30분에서 20과 1/10초가 지난 시간을 의미합니다.|  
   
-|ISO 8601|메모|  
+|ISO 8601|참고|  
 |--------------|-----------|  
 |hh:mm:ss<br /><br /> hh:mm[:ss][.fractional seconds]|hh는 0에서 23 사이에 속하는 두 자리 숫자로, 표준 시간대 오프셋의 시간(시간)을 나타냅니다.<br /><br /> mm은 0에서 59 사이에 속하는 두 자리 숫자로, 표준 시간대 오프셋의 추가 시간(분)을 나타냅니다.|  
   
-|ODBC|메모|  
+|ODBC|참고|  
 |----------|-----------|  
 |{t 'hh:mm:ss[.fractional seconds]'}|ODBC API에 따라 다릅니다.|  
   
@@ -215,7 +216,7 @@ SELECT @datetime2 AS '@datetime2', @time AS '@time';
 |TIME+TIMEZONE|입력 문자열의 TIME 부분이 사용됩니다.|  
 |DATE+TIME+TIMEZONE|로컬 DATETIME의 TIME 부분이 사용됩니다.|  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-comparing-date-and-time-data-types"></a>A. 날짜 및 시간 데이터 형식 비교  
  다음 예에서는 문자열을 각 **date** 및 **time** 데이터 형식으로 캐스팅하는 결과를 비교합니다.  

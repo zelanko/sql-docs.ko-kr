@@ -1,4 +1,5 @@
 ---
+description: DBCC FREEPROCCACHE(Transact-SQL)
 title: DBCC FREEPROCCACHE(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/13/2017
@@ -25,12 +26,12 @@ ms.assetid: 0e09d210-6f23-4129-aedb-3d56b2980683
 author: pmasl
 ms.author: umajay
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 84f0dd9a38f118d71ca7417e2a241a03426e6753
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: d8b3b9733500dc56f4994dd13fd42939b0885a02
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483544"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88367789"
 ---
 # <a name="dbcc-freeproccache-transact-sql"></a>DBCC FREEPROCCACHE(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
