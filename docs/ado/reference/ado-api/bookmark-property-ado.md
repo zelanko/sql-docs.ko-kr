@@ -1,4 +1,5 @@
 ---
+description: Bookmark 속성(ADO)
 title: Bookmark 속성 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 481dcc93-487b-490e-ac58-a1e9b2ebfd43
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6b1c27eb728c3cd368b4d2acc10609785c06514a
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: b3ab83bb44bca7598074eb81d832ca9ed9b954d2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82748615"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451115"
 ---
 # <a name="bookmark-property-ado"></a>Bookmark 속성(ADO)
 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체의 현재 레코드를 고유 하 게 식별 하거나 **레코드 집합** 개체의 현재 레코드를 유효한 책갈피로 식별 되는 레코드로 설정 하는 책갈피를 나타냅니다.  

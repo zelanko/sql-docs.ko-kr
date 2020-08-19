@@ -1,5 +1,6 @@
 ---
-title: '&gt;(보다 큼) (MDX) | Microsoft Docs'
+description: '&gt; (보다 큼) MDX'
+title: '&gt; (보다 큼) (MDX) | Microsoft Docs'
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,14 +9,14 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: bb4f04e623096857cce9dd27f0cddc77f6a59798
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 54be7523c074b2242bd740ec0b1665eb8dfb81fd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67906033"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429945"
 ---
-# <a name="gt-greater-than-mdx"></a>&gt;(보다 큼) MDX
+# <a name="gt-greater-than-mdx"></a>&gt; (보다 큼) MDX
 
 
   하나의 MDX 식의 값이 다른 MDX 식의 값보다 큰지 확인하는 비교 연산을 수행합니다.  
@@ -31,7 +32,7 @@ MDX_Expression > MDX_Expression
  *MDX_Expression*  
  유효한 MDX 식입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
  다음 조건을 기반으로 하는 부울 값입니다.  
   
 -   두 매개 변수가 모두 null이 아니고 첫 번째 매개 변수의 값이 두 번째 매개 변수의 값 보다 큰 경우 **true** 입니다.  
@@ -40,7 +41,7 @@ MDX_Expression > MDX_Expression
   
 -   매개 변수 중 하나가 Null이거나 둘 다 Null인 경우 Null입니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예제 쿼리에서는 이 연산자의 사용 방법을 보여 줍니다.  
   
 ```  

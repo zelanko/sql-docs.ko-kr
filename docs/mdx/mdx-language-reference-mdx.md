@@ -1,4 +1,5 @@
 ---
+description: MDX 언어 참조(MDX)
 title: Mdx 언어 참조 (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: b1a542ffba5f24ec1ed3cfbad0b6a084b81b74d3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 53e4847a6cf85d56d1a877ea4f835da6e77438d0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68003500"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429785"
 ---
 # <a name="mdx-language-reference-mdx"></a>MDX 언어 참조(MDX)
 

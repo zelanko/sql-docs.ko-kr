@@ -1,4 +1,5 @@
 ---
+description: BottomSum(MDX)
 title: BottomSum (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 2e49fc5a7ffd4c0adff38628a143ded695785e29
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 51be20fdd7378b361cd8d962941e55532503e4e1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68016877"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494966"
 ---
 # <a name="bottomsum-mdx"></a>BottomSum(MDX)
 
@@ -43,7 +44,7 @@ BottomSum(Set_Expression, Value, Numeric_Expression)
 > [!IMPORTANT]  
 >  [TopSum](../mdx/topsum-mdx.md) 함수와 마찬가지로 **BottomSum** 함수는 항상 계층 구조를 중단 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 2003 회계 연도 동안 Bike 범주에서 Geography 차원의 Geography 계층에 속하는 City 수준의 멤버 집합 중 Reseller Sales Amount 측정값을 사용한 누적 합계가 50,000 이상이 되는 가능한 한 작은 집합을 반환합니다. 이 집합은 판매량이 가장 적은 멤버부터 정렬됩니다.  
   
  `SELECT`  

@@ -1,4 +1,5 @@
 ---
+description: ADO 열거 상수
 title: ADO 열거 상수 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c97ed131-1a93-463c-9e61-22f029b0c474
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 74d3cc347d14a1d02ae5953b7762513b252493e6
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 7d126d0783e448dab786a228b4e10a8ec7c0f840
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242883"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451445"
 ---
 # <a name="ado-enumerated-constants"></a>ADO 열거 상수
 디버깅을 지원 하기 위해 ADO 열거형에는 각 상수에 대 한 값이 나열 됩니다. 그러나이 값은 전적으로 advise 이며 ADO의 릴리스 간에 변경 될 수 있습니다. 코드는 열거 된 각 상수의 실제 값이 아닌 이름에만 의존 해야 합니다.  
@@ -77,7 +78,7 @@ ms.locfileid: "87242883"
 |[StringFormatEnum](../../../ado/reference/ado-api/stringformatenum.md)|**레코드 집합** 을 문자열로 검색할 때 형식을 지정 합니다. **Connection** 개체의 트랜잭션 특성을 지정 합니다.|  
 |[XactAttributeEnum](../../../ado/reference/ado-api/xactattributeenum.md)|**Connection** 개체의 트랜잭션 특성을 지정 합니다.|  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [ADO API 참조](../../../ado/reference/ado-api/ado-api-reference.md)   
  [ADO 컬렉션](../../../ado/reference/ado-api/ado-collections.md)   
  [ADO 동적 속성](../../../ado/reference/ado-api/ado-dynamic-properties.md)   

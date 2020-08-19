@@ -1,4 +1,5 @@
 ---
+description: ADO 코드 예제 VBScript
 title: ADO 코드 예제 VBScript | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 78bb9a95-7ac4-44b6-818b-d1787f952ed7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3289f97d4dd7d397d7eb4378e63ff0e6928d5524
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 68a63c48615dabb7bc33e71818e4e03eee214b4e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762964"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451505"
 ---
 # <a name="ado-code-examples-vbscript"></a>ADO 코드 예제 VBScript
 다음 코드 예제를 사용 하 여 Microsoft® Visual Basic® Scripting Edition (VBScript)에서 작성할 때 ADO 메서드를 사용 하는 방법을 알아봅니다.  

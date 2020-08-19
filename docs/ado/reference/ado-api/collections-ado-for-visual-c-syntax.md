@@ -1,4 +1,5 @@
 ---
+description: 컬렉션(Visual C++ 구문에 대한 ADO)
 title: 컬렉션 (Visual C++ 구문에 대 한 ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6a0109a0-f2d9-4f7c-8e1e-42763f9acaea
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dc708e467c226440b861057b0498ed3bd80135d1
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: b3740b6ff922204d7f68f507c75011819de8ccfc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82748874"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450935"
 ---
 # <a name="collections-ado-for-visual-c-syntax"></a>컬렉션(Visual C++ 구문에 대한 ADO)
 ## <a name="parameters"></a>매개 변수  

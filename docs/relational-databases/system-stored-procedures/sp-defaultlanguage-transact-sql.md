@@ -1,4 +1,5 @@
 ---
+description: sp_defaultlanguage(Transact-SQL)
 title: sp_defaultlanguage (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 908d01cc-e704-45d9-9e85-d2df6da3e6f5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fc4a45ab8a2241e719fd71598461fa6deb43814c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1f9b108d3435678e3a0f3a3d95f0b6e67639f7a3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85865002"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486118"
 ---
 # <a name="sp_defaultlanguage-transact-sql"></a>sp_defaultlanguage(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85865002"
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인의 기본 언어를 변경합니다.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]대신 [ALTER LOGIN](../../t-sql/statements/alter-login-transact-sql.md) 을 사용 해야 합니다.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 대신 [ALTER LOGIN](../../t-sql/statements/alter-login-transact-sql.md) 을 사용 해야 합니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,9 +44,9 @@ sp_defaultlanguage [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @loginame = ] 'login'`로그인 이름입니다. *login* 은 **sysname**이며 기본값은 없습니다. *로그인* 은 기존 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 이나 Windows 사용자 또는 그룹이 될 수 있습니다.  
+`[ @loginame = ] 'login'` 로그인 이름입니다. *login* 은 **sysname**이며 기본값은 없습니다. *로그인* 은 기존 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 이나 Windows 사용자 또는 그룹이 될 수 있습니다.  
   
-`[ @language = ] 'language'`로그인의 기본 언어입니다. *language* 는 **sysname**이며 기본값은 NULL입니다. *언어* 는 서버에서 유효한 언어 여야 합니다. *Language* 를 지정 하지 않으면 *language* 가 서버 기본 언어로 설정 됩니다. 기본 언어는 **sp_configure** 구성 변수 **기본 언어로**정의 됩니다. 서버의 기본 언어를 변경해도 기존 로그인의 기본 언어는 변경되지 않습니다.  
+`[ @language = ] 'language'` 로그인의 기본 언어입니다. *language* 는 **sysname**이며 기본값은 NULL입니다. *언어* 는 서버에서 유효한 언어 여야 합니다. *Language* 를 지정 하지 않으면 *language* 가 서버 기본 언어로 설정 됩니다. 기본 언어는 **sp_configure** 구성 변수 **기본 언어로**정의 됩니다. 서버의 기본 언어를 변경해도 기존 로그인의 기본 언어는 변경되지 않습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -62,7 +63,7 @@ sp_defaultlanguage [ @loginame = ] 'login'
 ## <a name="permissions"></a>사용 권한  
  ALTER ANY LOGIN 권한이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `ALTER LOGIN`을 사용하여 `Fathima` 로그인의 기본 언어를 아랍어로 변경합니다. 이는 선호되는 방법입니다.  
   
 ```  
@@ -71,8 +72,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;보안 저장 프로시저](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [ALTER LOGIN &#40;Transact-sql&#41;](../../t-sql/statements/alter-login-transact-sql.md)   
+ [Transact-sql&#41;&#40;보안 저장 프로시저 ](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)   
  [@@LANGUAGE&#40;Transact-SQL&#41;](../../t-sql/functions/language-transact-sql.md)   
  [SET 문&#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
  [sys.sys언어 &#40;Transact-sql&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)   

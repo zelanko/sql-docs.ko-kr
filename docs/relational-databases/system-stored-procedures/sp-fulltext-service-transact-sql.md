@@ -1,4 +1,5 @@
 ---
+description: sp_fulltext_service(Transact-SQL)
 title: sp_fulltext_service (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 17a91433-f9b6-4a40-88c4-8c704ec2de9f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 435d2e2a5b290e8307b322831a96a1e55847339b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 33610db3883facdc6dfb198cfe8947ef965baa82
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881691"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486049"
 ---
 # <a name="sp_fulltext_service-transact-sql"></a>sp_fulltext_service(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,9 +43,9 @@ sp_fulltext_service [ [@action=] 'action'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @action = ] 'action'`변경 하거나 다시 설정할 속성입니다. *action* 은 **nvarchar (100)** 이며 기본값은 없습니다. *C*속성의 목록, 해당 설명 및 설정할 수 있는 값에 대해서는 *값* 인수 아래에 있는 표를 참조 하십시오. 이 인수는 데이터 형식, 현재 실행 값, 최소값 또는 최대값, 사용 중단 상태(해당되는 경우)와 같은 속성을 반환합니다.  
+`[ @action = ] 'action'` 변경 하거나 다시 설정할 속성입니다. *action* 은 **nvarchar (100)** 이며 기본값은 없습니다. *C*속성의 목록, 해당 설명 및 설정할 수 있는 값에 대해서는 *값* 인수 아래에 있는 표를 참조 하십시오. 이 인수는 데이터 형식, 현재 실행 값, 최소값 또는 최대값, 사용 중단 상태(해당되는 경우)와 같은 속성을 반환합니다.  
   
-`[ @value = ] value`지정 된 속성의 값입니다. *값* 은 **sql_variant**이며 기본값은 NULL입니다. @value가 null 이면 **sp_fulltext_service** 현재 설정을 반환 합니다. 이 표에서는 동작 속성, 설명 및 설정할 수 있는 값 목록을 보여 줍니다.  
+`[ @value = ] value` 지정 된 속성의 값입니다. *값* 은 **sql_variant**이며 기본값은 NULL입니다. @value가 null 이면 **sp_fulltext_service** 현재 설정을 반환 합니다. 이 표에서는 동작 속성, 설명 및 설정할 수 있는 값 목록을 보여 줍니다.  
   
 > [!NOTE]  
 >  다음 작업은의 이후 릴리스에서 제거 될 예정입니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . **clean_up**, **connect_timeout**, **data_timeout**및 **resource_usage**. 향후 개발 작업에서는 이러한 동작을 사용하지 않도록 하고 현재 이러한 동작을 사용하는 애플리케이션은 수정하십시오.  
@@ -71,7 +72,7 @@ sp_fulltext_service [ [@action=] 'action'
 ## <a name="permissions"></a>사용 권한  
  **Serveradmin** 고정 서버 역할의 멤버 또는 시스템 관리자만 **sp_fulltext_service**을 실행할 수 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-updating-the-list-of-registered-languages"></a>A. 등록된 언어 목록 업데이트  
  다음 예에서는 전체 텍스트 검색에 등록된 언어 목록을 업데이트합니다.  

@@ -1,4 +1,5 @@
 ---
+description: InstanceOf(geography 데이터 형식)
 title: InstanceOf(geography 데이터 형식) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1eaed0e4-1c72-45a9-9926-5b513335cf33
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 09d468b4f39ba50a0c195287961f3c3dc76e0ccd
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 384539d8978dd8ae169ae5cfb2b7b5abcf394686
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86552928"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422387"
 ---
 # <a name="instanceof-geography-data-type"></a>InstanceOf(geography 데이터 형식)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -58,7 +59,7 @@ CLR 반환 형식: **SqlBoolean**
   
 이 메서드는 정확하지 않습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
 다음 예에서는 `MultiPoint` 인스턴스를 만들고 `InstanceOf()`를 사용하여 인스턴스가 `GeometryCollection`인지 확인합니다.  
   
 ```sql  

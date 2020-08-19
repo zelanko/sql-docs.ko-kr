@@ -1,4 +1,5 @@
 ---
+description: ADO 코드 예제
 title: ADO 코드 예제 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: eb16724f-6fca-4873-b005-68626a8999b2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3671bb7ffcb1d51f6bb7582d8cce50e5e28e330a
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: d8e9550a0b410964d88d0755832350a9346048b6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82749368"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451485"
 ---
 # <a name="ado-code-examples"></a>ADO 코드 예제
 다음 코드 예제를 사용 하 여 ADO 개체, 메서드, 속성 및 이벤트를 사용 하는 방법을 배울 수 있습니다.  

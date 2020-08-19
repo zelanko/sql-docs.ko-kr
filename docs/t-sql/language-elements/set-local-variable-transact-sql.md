@@ -1,4 +1,5 @@
 ---
+description: SET @local_variable(Transact-SQL)
 title: SET @local_variable(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -18,12 +19,12 @@ ms.assetid: d410e06e-061b-4c25-9973-b2dc9b60bd85
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f2393d6e51eb7c5b0df6ff1d710829a772b58dfd
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f60866f303302b45092592124fb5cb6ff9bdb118
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918831"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459318"
 ---
 # <a name="set-local_variable-transact-sql"></a>SET @local_variable(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -81,7 +82,7 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
 CLR(공용 언어 런타임) 사용자 정의 형식의 이름입니다.  
   
 `{ . | :: }`  
-CLR 사용자 정의 형식의 메서드를 지정합니다. 비정적 인스턴스 메서드의 경우 마침표( **.** )를 사용합니다. 정적 메서드의 경우 두 개의 콜론( **::** )을 사용합니다. CLR 사용자 정의 형식의 메서드, 속성 또는 필드를 호출하려면 해당 형식에 대해 EXECUTE 권한이 있어야 합니다.  
+CLR 사용자 정의 형식의 메서드를 지정합니다. 비정적 인스턴스 메서드의 경우 마침표(**.**)를 사용합니다. 정적 메서드의 경우 두 개의 콜론(**::**)을 사용합니다. CLR 사용자 정의 형식의 메서드, 속성 또는 필드를 호출하려면 해당 형식에 대해 EXECUTE 권한이 있어야 합니다.  
   
 _method_name_ **(** _argument_ [ **,** ... *n* ] **)**  
 하나 이상의 인수를 사용하여 한 형식의 인스턴스 상태를 수정하는 사용자 정의 형식 메서드입니다. 정적 메서드는 공용이어야 합니다.  
@@ -168,7 +169,7 @@ READ ONLY
 이 커서를 통해 업데이트할 수 없습니다. UPDATE 또는 DELETE 문의 WHERE CURRENT OF 절에서는 이 커서를 참조할 수 없습니다. 이 옵션은 업데이트할 커서의 기본 기능을 무시합니다. 이 키워드는 READ와 ONLY 사이에 밑줄 대신 공백이 있어 앞의 READ_ONLY와는 다른 키워드입니다.  
   
 `UPDATE [OF column_name[ ,... n ] ]`  
-커서 내에서 업데이트할 수 있는 열을 정의합니다. OF *column_name* [ **,** ...*n*]이 제공되면 나열된 열만 수정할 수 있습니다. 커서가 READ_ONLY로 정의되어 있지 않은 경우 목록을 제공하지 않으면 모든 열을 업데이트할 수 있습니다.  
+커서 내에서 업데이트할 수 있는 열을 정의합니다. OF *column_name* [**,**...*n*]이 제공되면 나열된 열만 수정할 수 있습니다. 커서가 READ_ONLY로 정의되어 있지 않은 경우 목록을 제공하지 않으면 모든 열을 업데이트할 수 있습니다.  
   
 ## <a name="remarks"></a>설명  
 변수를 선언하면 이 변수는 NULL로 초기화됩니다. SET 문을 사용하여 NULL이 아닌 값을 선언된 변수에 할당할 수 있습니다. 변수에 값을 할당한 SET 문은 단일 값을 반환합니다. 여러 변수를 초기화할 때는 지역 변수마다 별도의 SET 문을 사용합니다.  
@@ -188,7 +189,7 @@ SET **@** _cursor_variable_ 구문 규칙에는 LOCAL 및 GLOBAL 키워드가 �
 ## <a name="permissions"></a>사용 권한  
 public 역할의 멤버 자격이 필요합니다. 모든 사용자는 SET **@** _local_variable_을 사용할 수 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-printing-the-value-of-a-variable-initialized-by-using-set"></a>A. SET을 사용하여 초기화된 변수 값 인쇄  
 다음 예제에서는 `@myvar` 변수를 만들고, 문자열 값을 변수에 넣고, `@myvar` 변수 값을 출력합니다.  
@@ -290,7 +291,7 @@ GO
 ```  
   
 ### <a name="h-assigning-a-value-to-a-user-defined-type-variable-by-invoking-a-method-of-the-type"></a>H. 사용자 정의 형식의 메서드를 호출하여 사용자 정의 형식 변수에 값 할당  
-다음 예제에서는 형식의 **메서드를 호출하여**point`SetXY` 사용자 정의 형식의 값을 설정합니다.  
+다음 예제에서는 형식의 `SetXY` 메서드를 호출하여 **point** 사용자 정의 형식의 값을 설정합니다.  
   
 ```  
 DECLARE @p Point;  

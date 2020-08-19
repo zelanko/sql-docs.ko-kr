@@ -1,4 +1,5 @@
 ---
+description: HAS_DBACCESS(Transact-SQL)
 title: HAS_DBACCESS(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/23/2017
@@ -25,12 +26,12 @@ ms.assetid: 99b43a72-0722-4a7b-a493-bdee1c74c7b9
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: db54afb7b29ed485a1b08071ece1448915c733b5
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 488d2833727f68ec5df9f9ccc9f0ef36b019c7ef
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396206"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422777"
 ---
 # <a name="has_dbaccess-transact-sql"></a>HAS_DBACCESS(Transact-SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
@@ -64,7 +65,7 @@ HAS_DBACCESS ( 'database_name' )
 ## <a name="permissions"></a>사용 권한  
  public 역할의 멤버 자격이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 현재 사용자가 `AdventureWorks2012` 데이터베이스에 액세스할 수 있는지 테스트하는 방법을 보여 줍니다.  
   
 ```  

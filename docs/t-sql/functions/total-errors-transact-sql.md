@@ -1,4 +1,5 @@
 ---
+description: '&#x40;&#x40;TOTAL_ERRORS(Transact-SQL)'
 title: '@@TOTAL_ERRORS(Transact-SQL) | Microsoft Docs'
 ms.custom: ''
 ms.date: 09/18/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 09e62428-ee0e-4ef5-b969-da9d255f1199
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 9fd94216bcb95eaa4a21a3d96a949d3a6ea67318
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 946ae7898322ec80c237fdf52ac86489bad93eff
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110719"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422577"
 ---
 # <a name="x40x40total_errors-transact-sql"></a>&#x40;&#x40;TOTAL_ERRORS(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -68,6 +69,6 @@ Errors      As of
   
 ## <a name="see-also"></a>참고 항목  
  [sp_monitor&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md)   
- [시스템 통계 함수&#40;Transact-SQL&#41;](../../t-sql/functions/system-statistical-functions-transact-sql.md)  
+ [시스템 통계 함수 &#40;Transact-SQL&#41;](../../t-sql/functions/system-statistical-functions-transact-sql.md)  
   
   

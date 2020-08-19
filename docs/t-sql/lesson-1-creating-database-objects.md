@@ -1,4 +1,5 @@
 ---
+description: 'T-SQL 자습서: 데이터베이스 개체 만들기 및 쿼리'
 title: 'T-SQL 자습서: 데이터베이스 개체 만들기 및 쿼리 | Microsoft Docs'
 ms.custom: ''
 ms.date: 07/30/2018
@@ -10,12 +11,12 @@ ms.assetid: 9fb8656b-0e4e-4ada-b404-4db4d3eea995
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5a8691ed6a84fce3eb12c8e13b2235356486c42f
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 3a489da04d7a65bf854cebf06e8103e22c1abc12
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87248706"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459179"
 ---
 # <a name="lesson-1-create-and-query-database-objects"></a>1단원: 데이터베이스 개체 만들기 및 쿼리
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "87248706"
   
 [!INCLUDE[tsql](../includes/tsql-md.md)] 에서 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]문을 실행하려면 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 를 열고 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]인스턴스에 연결합니다.  
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>전제 조건
 이 자습서를 완료하려면 SQL Server Management Studio 및 SQL Server 인스턴스에 대한 액세스 권한이 필요합니다. 
 
 - [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)를 설치합니다.
@@ -101,7 +102,7 @@ SQL Server 인스턴스가 없는 경우 새로 만듭니다. 새로 만들려�
 ## <a name="insert-and-update-data-in-a-table"></a>테이블에서 데이터 삽입 및 업데이트
 이제 **Products** 테이블을 만들었으므로 INSERT 문을 사용하여 테이블에 데이터를 삽입할 준비가 되었습니다. 데이터가 삽입된 후 UPDATE 문을 사용하여 행 내용을 변경합니다. UPDATE 문의 WHERE 절을 사용하여 업데이트를 단일 행으로 제한합니다. 4개의 문이 다음 데이터를 입력합니다.  
   
-|ProductID|ProductName|Price|ProductDescription|  
+|ProductID|ProductName|가격|ProductDescription|  
 |-------------|---------------|---------|----------------------|  
 |1|Clamp|12.48|Workbench clamp|  
 |50|Screwdriver|3.17|Flat head|  

@@ -1,4 +1,5 @@
 ---
+description: 데이터 원본 또는 드라이버 연결 끊기
 title: 데이터 원본 또는 드라이버에서 연결을 끊는 중 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 83dbf0bf-b400-41fb-8537-9b016050dc3c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 154a571bce3a337d539216ce89c32420ab981bd8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fc14ca0ebf29a2ab203a4408db4b5681ad667497
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300463"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476695"
 ---
 # <a name="disconnecting-from-a-data-source-or-driver"></a>데이터 원본 또는 드라이버 연결 끊기
 응용 프로그램이 데이터 원본 사용을 마치면 **Sqldisconnect**를 호출 합니다. **Sqldisconnect** 는 연결에 할당 된 모든 문을 해제 하 고 데이터 원본에서 드라이버의 연결을 끊습니다. 트랜잭션이 진행 중인 경우 오류를 반환 합니다.  

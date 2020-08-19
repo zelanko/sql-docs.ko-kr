@@ -1,4 +1,5 @@
 ---
+description: sp_help_targetserver(Transact-SQL)
 title: sp_help_targetserver (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f841d3bd-901a-4980-ad0b-1c6eeba3f717
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a8b29b5d7698fdaceced322e30048c6c789f076e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b997402b52469342ebd8a034f6fb306dc389cee0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891676"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485976"
 ---
 # <a name="sp_help_targetserver-transact-sql"></a>sp_help_targetserver(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +41,7 @@ sp_help_targetserver
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @server_name = ] 'server_name'`정보를 반환할 서버의 이름입니다. *server_name* 은 **nvarchar (30)** 이며 기본값은 NULL입니다.  
+`[ @server_name = ] 'server_name'` 정보를 반환할 서버의 이름입니다. *server_name* 은 **nvarchar (30)** 이며 기본값은 NULL입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -65,7 +66,7 @@ sp_help_targetserver
 ## <a name="permissions"></a>사용 권한  
  이 저장 프로시저를 실행하려면 사용자가 **sysadmin** 고정 서버 역할의 멤버여야 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-listing-information-for-all-registered-target-servers"></a>A. 등록된 모든 대상 서버에 대한 정보 나열  
  다음 예에서는 등록된 모든 대상 서버에 대한 정보를 나열합니다.  

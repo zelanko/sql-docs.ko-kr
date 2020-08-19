@@ -1,4 +1,5 @@
 ---
+description: BottomCount(MDX)
 title: BottomCount (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: bd09c823e09270ebf7c9851b3c6760baf720db39
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e331a84efe36cef11951afac3f304957e4ffcb00
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68016952"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494982"
 ---
 # <a name="bottomcount-mdx"></a>BottomCount(MDX)
 

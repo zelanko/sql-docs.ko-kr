@@ -1,4 +1,5 @@
 ---
+description: Cancel 메서드(ADO)
 title: Cancel 메서드 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: e0db4e15-6787-41e2-8f13-9e9b524d620a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 25b6de609d286847fe7458353203dd7f4b9c7b4b
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 24d4beba2c703d2c8e21f51dd5bac9d06444a651
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242429"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451065"
 ---
 # <a name="cancel-method-ado"></a>Cancel 메서드(ADO)
 보류 중인 비동기 메서드 호출의 실행을 취소 합니다.  
@@ -43,7 +44,7 @@ object.Cancel
   
 |*개체가* 인 경우|이 메서드에 대 한 마지막 비동기 호출이 종료 되었습니다.|  
 |----------------------|-------------------------------------------------------------|  
-|[명령](../../../ado/reference/ado-api/command-object-ado.md)|[실행](../../../ado/reference/ado-api/execute-method-ado-command.md)|  
+|[명령](../../../ado/reference/ado-api/command-object-ado.md)|[실행할](../../../ado/reference/ado-api/execute-method-ado-command.md)|  
 |[연결](../../../ado/reference/ado-api/connection-object-ado.md)|[실행](../../../ado/reference/ado-api/execute-method-ado-connection.md) 또는 [열기](../../../ado/reference/ado-api/open-method-ado-connection.md)|  
 |[레코드](../../../ado/reference/ado-api/record-object-ado.md)|[Copyrecord](../../../ado/reference/ado-api/copyrecord-method-ado.md), [DeleteRecord](../../../ado/reference/ado-api/deleterecord-method-ado.md), [MoveRecord](../../../ado/reference/ado-api/moverecord-method-ado.md)또는 [Open](../../../ado/reference/ado-api/open-method-ado-record.md)|  
 |[레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)|[열기](../../../ado/reference/ado-api/open-method-ado-recordset.md)|  

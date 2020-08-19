@@ -1,4 +1,5 @@
 ---
+description: ADO 속성
 title: ADO 속성 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 0ac0d1a7-6c7a-4f4c-b115-428935e0f98b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ef825848ee0e2c43a1a70441009a590c41ce5526
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 72a14ac3114a3b27a7570bc5961b9bd6ffff51cd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242843"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451365"
 ---
 # <a name="ado-properties"></a>ADO 속성
 
-|속성|Description|  
+|속성|설명|  
 |-|-|  
 |[AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)|현재 레코드가 있는 페이지를 나타냅니다.|  
 |[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)|**레코드 집합** 개체에 대 한 현재 레코드의 서 수 위치를 나타냅니다.|  
@@ -75,7 +76,7 @@ ms.locfileid: "87242843"
 |[Position](../../../ado/reference/ado-api/position-property-ado.md)|**스트림** 개체 내의 현재 위치를 나타냅니다.|  
 |[정밀도](../../../ado/reference/ado-api/precision-property-ado.md)|**매개 변수** 개체 또는 숫자 **필드** 개체의 숫자 값에 대 한 전체 자릿수를 나타냅니다.|  
 |[Prepared](../../../ado/reference/ado-api/prepared-property-ado.md)|실행 전에 명령의 컴파일된 버전을 저장할지 여부를 나타냅니다.|  
-|[공급 기업](../../../ado/reference/ado-api/provider-property-ado.md)|**연결** 개체에 대 한 공급자의 이름을 나타냅니다.|  
+|[공급자](../../../ado/reference/ado-api/provider-property-ado.md)|**연결** 개체에 대 한 공급자의 이름을 나타냅니다.|  
 |[RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)|레코드 **집합** 개체의 레코드 수를 나타냅니다.|  
 |[RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md)|**Record** 개체의 유형을 나타냅니다.|  
 |[행](../../../ado/reference/ado-api/row-property-ado.md)|**ADORecordConstruction** 개체에서/에 대 한 OLE DB **행** 개체를 가져오거나 설정 합니다.|  
@@ -85,18 +86,18 @@ ms.locfileid: "87242843"
 |[원본 (ADO 레코드)](../../../ado/reference/ado-api/source-property-ado-record.md)|**Record** 개체가 나타내는 엔터티를 나타냅니다.|  
 |[원본 (ADO 레코드 집합)](../../../ado/reference/ado-api/source-property-ado-recordset.md)|**레코드 집합** 개체의 데이터 원본을 나타냅니다.|  
 |[SQLState](../../../ado/reference/ado-api/sqlstate-property.md)|특정 **오류** 개체에 대 한 SQL 상태를 나타냅니다.|  
-|[상태](../../../ado/reference/ado-api/state-property-ado.md)|개체의 상태가 열리거나 닫혀 있는지 여부에 관계 없이 모든 개체를 나타냅니다. 비동기 메서드를 실행 하는 모든 개체 (개체의 현재 상태에 연결, 실행 또는 검색)가 있는지 여부를 나타냅니다.|  
+|[State](../../../ado/reference/ado-api/state-property-ado.md)|개체의 상태가 열리거나 닫혀 있는지 여부에 관계 없이 모든 개체를 나타냅니다. 비동기 메서드를 실행 하는 모든 개체 (개체의 현재 상태에 연결, 실행 또는 검색)가 있는지 여부를 나타냅니다.|  
 |[상태 (ADO 필드)](../../../ado/reference/ado-api/status-property-ado-field.md)|**필드** 개체의 상태를 나타냅니다.|  
 |[상태 (ADO 레코드 집합)](../../../ado/reference/ado-api/status-property-ado-recordset.md)|일괄 업데이트 또는 기타 대량 작업과 관련 된 현재 레코드의 상태를 나타냅니다.|  
 |[StayInSync](../../../ado/reference/ado-api/stayinsync-property.md)|부모 행 위치가 변경 될 때 계층 구조 **레코드 집합** 개체에서 기본 자식 레코드에 대 한 참조 (즉, *장*)가 변경 되는지 여부를 나타냅니다.|  
 |[Stream 속성](../../../ado/reference/ado-api/stream-property.md)|**ADOStreamConstruction** 개체의/에서 OLE DB **Stream** 개체를 가져오거나 설정 합니다.|  
-|[형식](../../../ado/reference/ado-api/type-property-ado.md)|**매개 변수**, **필드**또는 **속성** 개체의 작동 유형 또는 데이터 형식을 나타냅니다.|  
+|[유형](../../../ado/reference/ado-api/type-property-ado.md)|**매개 변수**, **필드**또는 **속성** 개체의 작동 유형 또는 데이터 형식을 나타냅니다.|  
 |[형식 (ADO 스트림)](../../../ado/reference/ado-api/type-property-ado-stream.md)|**스트림에** 포함 된 데이터의 형식 (이진 또는 텍스트)을 나타냅니다.|  
 |[UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md)|**필드** 개체에 대 한 데이터베이스의 현재 값을 나타냅니다.|  
 |[값](../../../ado/reference/ado-api/value-property-ado.md)|**필드**, **매개 변수**또는 **속성** 개체에 할당 된 값을 나타냅니다.|  
-|[Version](../../../ado/reference/ado-api/version-property-ado.md)|ADO 버전 번호를 나타냅니다.|  
+|[버전](../../../ado/reference/ado-api/version-property-ado.md)|ADO 버전 번호를 나타냅니다.|  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [ADO API 참조](../../../ado/reference/ado-api/ado-api-reference.md)   
  [ADO 컬렉션](../../../ado/reference/ado-api/ado-collections.md)   
  [ADO 동적 속성](../../../ado/reference/ado-api/ado-dynamic-properties.md)   

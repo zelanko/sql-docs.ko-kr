@@ -1,4 +1,5 @@
 ---
+description: AddNew 메서드 예제(VBScript)
 title: AddNew 메서드 예제 (VBScript) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: dcdcaf0a-b9b0-4d81-8728-43c38c4c853b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fd5d6a54bd36b62c9aec6492a66e4a451ead25f5
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 74734bd5518f7691107fff873379879b2edd2fa8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760619"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451555"
 ---
 # <a name="addnew-method-example-vbscript"></a>AddNew 메서드 예제(VBScript)
 이 예제에서는 [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) 메서드를 사용 하 여 지정 된 이름의 새 레코드를 만듭니다.  

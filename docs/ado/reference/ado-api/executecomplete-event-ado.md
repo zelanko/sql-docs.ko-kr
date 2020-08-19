@@ -1,4 +1,5 @@
 ---
+description: ExecuteComplete 이벤트(ADO)
 title: ExecuteComplete 이벤트 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 62470d42-e511-494c-bec4-ad4591734b7b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ae8b426a0e4b95498cb0d4f9a4590c3aaf30196d
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 4e7b800f7dba925230ade048f3792020ad8a44ec
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760139"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443845"
 ---
 # <a name="executecomplete-event-ado"></a>ExecuteComplete 이벤트(ADO)
 **ExecuteComplete** 이벤트는 명령 실행이 완료 된 후 호출 됩니다.  
@@ -46,7 +47,7 @@ ExecuteComplete RecordsAffected, pError, adStatus, pCommand, pRecordset, pConnec
  이 이벤트가 반환 되기 전에이 매개 변수를 **adStatusUnwantedEvent** 로 설정 하 여 후속 알림이 발생 하지 않도록 합니다.  
   
  *pCommand*  
- 실행 된 [명령](../../../ado/reference/ado-api/command-object-ado.md) 개체입니다. **Connection. Execute** 또는 Recordset을 호출 하는 경우에도 **command** 개체를 포함 합니다. **명령을**명시적으로 만들지 않고를 **엽니다.** 이 경우 **명령** 개체는 ADO에서 내부적으로 생성 됩니다.  
+ 실행 된 [명령](../../../ado/reference/ado-api/command-object-ado.md) 개체입니다. **Connection.Exe귀여운** 또는 Recordset을 호출 하는 경우에도 **명령** 개체를 포함 합니다. **명령을**명시적으로 만들지 않고를 **엽니다.** 이 경우 **명령** 개체는 ADO에서 내부적으로 생성 됩니다.  
   
  *pRecordset*  
  실행 된 명령의 결과인 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체입니다. 이 **레코드 집합** 은 비어 있을 수 있습니다. 이 이벤트 처리기 내에서이 레코드 집합 개체를 삭제 하면 안 됩니다. 이렇게 하면 ADO에서 더 이상 존재 하지 않는 개체에 액세스 하려고 할 때 액세스 위반이 발생 합니다.  

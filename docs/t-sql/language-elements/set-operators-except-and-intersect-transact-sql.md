@@ -1,4 +1,5 @@
 ---
+description: 집합 연산자 - EXCEPT 및 INTERSECT(Transact-SQL)
 title: EXCEPT 및 INTERSECT(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -23,12 +24,12 @@ ms.assetid: b1019300-171a-4a1a-854f-e1e751de3565
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cf59a6245de8c1520dcd8196cc207fe2761d84c6
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 06029c531fbdebfd74d3a2314221725a41647853
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918810"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459306"
 ---
 # <a name="set-operators---except-and-intersect-transact-sql"></a>집합 연산자 - EXCEPT 및 INTERSECT(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -84,7 +85,7 @@ EXCEPT 또는 INTERSECT에 의해 반환된 결과 집합의 열에 대한 Null 
   
 EXCEPT 또는 INTERSECT가 식에서 다른 연산자와 함께 사용되는 경우 컨텍스트에서 다음 우선 순위에 따라 계산됩니다.  
   
-1.  괄호가 있는 식  
+1.  괄호를 사용한 식  
   
 2.  INTERSECT 연산자  
   
@@ -100,7 +101,7 @@ EXCEPT 또는 INTERSECT 작업에 사용될 때 결과 집합에서 빠른 정�
   
 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 그래픽 실행 계획 기능을 사용하여 EXCEPT 연산이 표시되면, 이 연산은 [Left Anti Semi Join](../../relational-databases/showplan-logical-and-physical-operators-reference.md)으로 나타나고, INTERSECT 연산은 [Left Semi Join](../../relational-databases/showplan-logical-and-physical-operators-reference.md)으로 나타납니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
 다음 예제에서는 `INTERSECT` 및 `EXCEPT` 연산자를 사용하는 방법을 보여 줍니다. 첫 번째 쿼리는 해당 결과를 `Production.Product` 및 `INTERSECT`와 비교하기 위해 `EXCEPT` 테이블의 모든 값을 반환합니다.  
   
 ```sql

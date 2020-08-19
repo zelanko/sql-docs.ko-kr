@@ -1,4 +1,5 @@
 ---
+description: Generate(MDX)
 title: 생성 (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: c7a6008129d6b0a4c59412428c31f6e5de625f1f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9746d83589464f75bbc951c20dc15d04b7b2037d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68005899"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429955"
 ---
 # <a name="generate-mdx"></a>Generate(MDX)
 
@@ -49,7 +50,7 @@ Generate( Set_Expression1 ,  String_Expression [ ,Delimiter ]  )
   
  문자열 식이 지정 된 경우 **생성** 함수는 첫 번째 집합의 각 튜플에 대해 지정 된 문자열 식을 계산한 다음 결과를 연결 하 여 생성 된 문자열을 반환 합니다. 연결된 문자열에서 각 결과를 구분하여 문자열을 구분할 수도 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="set"></a>설정  
  다음 예에서 [Date].[Calendar Year].[Calendar Year].MEMBERS 집합에 4개의 멤버가 있으므로 쿼리는 Internet Sales Amount 측정값을 포함하는 집합을 4번 반환합니다.  
@@ -104,7 +105,7 @@ ON 1
 FROM [Adventure Works]  
 ```  
   
-### <a name="string"></a>문자열  
+### <a name="string"></a>String  
  다음 예에서는 **생성** 을 사용 하 여 문자열을 반환 하는 방법을 보여 줍니다.  
   
 ```  

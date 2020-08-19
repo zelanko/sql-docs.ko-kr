@@ -1,4 +1,5 @@
 ---
+description: sp_copysubscription(Transact-SQL)
 title: sp_copysubscription (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3c56cd62-2966-4e87-a986-44cb3fd0b760
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 80927c19376e97b25c21af1f93faedd5637eb8bb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d157cd75c3443c9a74a3bab6affe8fca75fb4db8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771205"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486197"
 ---
 # <a name="sp_copysubscription-transact-sql"></a>sp_copysubscription(Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -43,9 +44,9 @@ sp_copysubscription [ @filename = ] 'file_name'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @filename = ] 'file_name'`데이터 파일 (.mdf)의 복사본을 저장할 파일 이름을 포함 한 전체 경로를 지정 하는 문자열입니다. *파일 이름은* **nvarchar (260)** 이며 기본값은 없습니다.  
+`[ @filename = ] 'file_name'` 데이터 파일 (.mdf)의 복사본을 저장할 파일 이름을 포함 한 전체 경로를 지정 하는 문자열입니다. *파일 이름은* **nvarchar (260)** 이며 기본값은 없습니다.  
   
-`[ @temp_dir = ] 'temp_dir'`임시 파일이 포함 된 디렉터리의 이름입니다. *temp_dir* 은 **nvarchar (260)** 이며 기본값은 NULL입니다. NULL 인 경우 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기본 데이터 디렉터리가 사용 됩니다. 디렉터리에는 모든 구독자 데이터베이스 파일을 저장할 수 있는 충분한 공간이 있어야 합니다.  
+`[ @temp_dir = ] 'temp_dir'` 임시 파일이 포함 된 디렉터리의 이름입니다. *temp_dir* 은 **nvarchar (260)** 이며 기본값은 NULL입니다. NULL 인 경우 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기본 데이터 디렉터리가 사용 됩니다. 디렉터리에는 모든 구독자 데이터베이스 파일을 저장할 수 있는 충분한 공간이 있어야 합니다.  
   
 `[ @overwrite_existing_file = ] 'overwrite_existing_file'`** \@ Filename**에 지정 된 동일한 이름의 기존 파일을 덮어쓸지 여부를 지정 하는 선택적 부울 플래그입니다. *overwrite_existing_file*은 **bit**이며 기본값은 **0**입니다. 1 인 경우 ** \@ filename**에 지정 된 파일 (있는 경우 **)** 을 덮어씁니다. **0**인 경우 파일이 있는 경우 저장 프로시저가 실패 하 고 파일을 덮어쓰지 않습니다.  
   

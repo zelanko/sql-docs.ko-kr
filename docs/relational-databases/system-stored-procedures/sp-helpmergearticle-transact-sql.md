@@ -1,4 +1,5 @@
 ---
+description: sp_helpmergearticle(Transact-SQL)
 title: sp_helpmergearticle (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0fb9986a-3c33-46ef-87bb-297396ea5a6a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 814ed354c296d1f9860b3abf92a7208cdecdacf7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ec07e77bcc2dbf3c0503e348b509848880705424
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899806"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485966"
 ---
 # <a name="sp_helpmergearticle-transact-sql"></a>sp_helpmergearticle(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,9 +39,9 @@ sp_helpmergearticle [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @publication = ] 'publication'`정보를 검색할 게시의 이름입니다. *게시*는 **sysname**이며 기본값은 **%** 현재 데이터베이스의 모든 게시에 포함 된 모든 병합 아티클에 대 한 정보를 반환 하는입니다.  
+`[ @publication = ] 'publication'` 정보를 검색할 게시의 이름입니다. *게시*는 **sysname**이며 기본값은 **%** 현재 데이터베이스의 모든 게시에 포함 된 모든 병합 아티클에 대 한 정보를 반환 하는입니다.  
   
-`[ @article = ] 'article'`정보를 반환할 아티클의 이름입니다. *article*은 **sysname**이며 기본값은 지정 된 **%** 게시의 모든 병합 아티클에 대 한 정보를 반환 하는입니다.  
+`[ @article = ] 'article'` 정보를 반환할 아티클의 이름입니다. *article*은 **sysname**이며 기본값은 지정 된 **%** 게시의 모든 병합 아티클에 대 한 정보를 반환 하는입니다.  
   
 ## <a name="result-set"></a>결과 집합  
   
@@ -52,7 +53,7 @@ sp_helpmergearticle [ [ @publication = ] 'publication' ]
 |**source_object**|**sysname**|아티클을 추가할 출처가 되는 원본 개체의 이름입니다.|  
 |**sync_object_owner**|**sysname**|게시된 아티클을 정의하는 뷰의 소유자 이름입니다.|  
 |**sync_object**|**sysname**|파티션에 대한 초기 데이터를 설정하는 데 사용하는 사용자 지정 개체의 이름입니다.|  
-|**한**|**nvarchar(255)**|아티클에 대한 설명입니다.|  
+|**description**|**nvarchar(255)**|아티클에 대한 설명입니다.|  
 |**status**|**tinyint**|아티클의 상태이며 다음 중 하나일 수 있습니다.<br /><br /> **1** = 비활성<br /><br /> **2** = 활성<br /><br /> **5** = DDL (데이터 정의 언어) 작업 보류 중<br /><br /> **6** = 새로 생성 된 스냅숏을 사용 하는 DDL 작업<br /><br /> 참고: 아티클이 다시 초기화 되 면 **5** 와 **6** 의 값이 **2**로 변경 됩니다.|  
 |**creation_script**|**nvarchar(255)**|구독 데이터베이스에서 아티클을 만드는 데 사용된 선택적 아티클 스키마 스크립트의 경로 및 이름입니다.|  
 |**conflict_table**|**nvarchar (270)**|삽입 또는 업데이트 충돌을 저장하고 있는 테이블의 이름입니다.|  

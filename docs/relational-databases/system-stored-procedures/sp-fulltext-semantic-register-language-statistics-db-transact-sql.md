@@ -1,4 +1,5 @@
 ---
+description: sp_fulltext_semantic_register_language_statistics_db(Transact-SQL)
 title: sp_fulltext_semantic_register_language_statistics_db (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: bef1b104-5a44-4327-9ae4-45eae3000f7e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0f95ba436a40bc6bf864c6be9a8f4b944e688b5b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 7bca458ae688762c45d365a2d65b92106288952a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881699"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486052"
 ---
 # <a name="sp_fulltext_semantic_register_language_statistics_db-transact-sql"></a>sp_fulltext_semantic_register_language_statistics_db(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +42,7 @@ EXEC sp_fulltext_semantic_register_language_statistics_db
 GO  
 ```  
   
-##  <a name="arguments"></a><a name="Arguments"></a>인수의  
+##  <a name="arguments"></a><a name="Arguments"></a> 인수  
  [ @dbname =] '*database_name*'  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 현재 인스턴스에 대해 등록할 의미 체계 언어 통계 데이터베이스의 이름입니다. 데이터베이스가 연결되어 있어야 합니다. *database_name* 는 **sysname**이며 NULL 일 수 없습니다.  
   
@@ -80,7 +81,7 @@ GO
 ### <a name="permissions"></a>사용 권한  
  CONTROL SERVER 권한이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 **sp_fulltext_semantic_register_language_statistics_db**를 호출 하 여 의미 체계 언어 통계 데이터베이스를 등록 하는 방법을 보여 줍니다.  
   
 ```sql  

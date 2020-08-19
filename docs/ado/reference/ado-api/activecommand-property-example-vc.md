@@ -1,4 +1,5 @@
 ---
+description: ActiveCommand 속성 예제(VC++)
 title: ActiveCommand 속성 예제 (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8269ea29-912a-4d20-9360-f48b3746081f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f0f0b39b26fb349222a3ad04cd1414d9cf3ddafe
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: c36744944fb88be4da22642246b54908809145cc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760769"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451715"
 ---
 # <a name="activecommand-property-example-vc"></a>ActiveCommand 속성 예제(VC++)
 이 예제에서는 [ActiveCommand](../../../ado/reference/ado-api/activecommand-property-ado.md) 속성을 보여 줍니다.  

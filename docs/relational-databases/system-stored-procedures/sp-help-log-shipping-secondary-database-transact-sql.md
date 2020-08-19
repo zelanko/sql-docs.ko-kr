@@ -1,4 +1,5 @@
 ---
+description: sp_help_log_shipping_secondary_database(Transact-SQL)
 title: sp_help_log_shipping_secondary_database (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/02/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 11ce42ca-d3f1-44c8-9cac-214ca8896b9a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 215ad3a4a38abd962f43756ecb4c724c625f251d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ac291d5c829c1ddc4022a7d0d59f65348daa859a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893637"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486000"
 ---
 # <a name="sp_help_log_shipping_secondary_database-transact-sql"></a>sp_help_log_shipping_secondary_database(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,9 +44,9 @@ sp_help_log_shipping_secondary_database
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @secondary_database = ] 'secondary_database'`보조 데이터베이스의 이름입니다. *secondary_database* 는 **sysname**이며 기본값은 없습니다.  
+`[ @secondary_database = ] 'secondary_database'` 보조 데이터베이스의 이름입니다. *secondary_database* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @secondary_id = ] 'secondary_id'`로그 전달 구성의 보조 서버에 대 한 ID입니다. *secondary_id* 은 **uniqueidentifier** 이며 NULL 일 수 없습니다.  
+`[ @secondary_id = ] 'secondary_id'` 로그 전달 구성의 보조 서버에 대 한 ID입니다. *secondary_id* 은 **uniqueidentifier** 이며 NULL 일 수 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  

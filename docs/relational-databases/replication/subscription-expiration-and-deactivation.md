@@ -1,4 +1,5 @@
 ---
+description: 구독 만료 및 비활성화
 title: 구독 만료 및 비활성화 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/07/2017
@@ -21,12 +22,12 @@ ms.assetid: 4d03f5ab-e721-4f56-aebc-60f6a56c1e07
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 507c80dc80ca144028ad7ef928173a826b5d042a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 64fb9d21457558d2d0f3373b926f426808b9105d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85729373"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423407"
 ---
 # <a name="subscription-expiration-and-deactivation"></a>구독 만료 및 비활성화
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "85729373"
  보존 기간을 설정하려면 [구독에 대한 만료 기간 설정](../../relational-databases/replication/publish/set-the-expiration-period-for-subscriptions.md), [Set the Distribution Retention Period for Transactional Publications &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/set-distribution-retention-period-for-transactional-publications.md)(트랜잭션 게시에 대한 배포 보존 기간 설정&#40;SQL Server Management Studio&#41;) 및 [게시 및 배포 구성](../../relational-databases/replication/configure-publishing-and-distribution.md)을 참조하세요.  
   
 ## <a name="transactional-replication"></a>트랜잭션 복제  
- 트랜잭션 복제는 최대 배포 보존 기간[sp_adddistributiondb&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md)의 `@max_distretention` 매개 변수)과 게시 보존 기간([sp_addpublication&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)의 `@retention` 매개 변수)을 사용합니다.  
+ 트랜잭션 복제는 최대 배포 보존 기간([sp_adddistributiondb&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md)의 `@max_distretention` 매개 변수)과 게시 보존 기간([sp_addpublication&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)의 `@retention` 매개 변수)을 사용합니다.  
   
 -   구독이 최대 배포 보존 기간(기본값: 72시간) 내에 동기화되지 않고 구독자에게 배달되지 않은 변경 내용이 배포 데이터베이스에 있는 경우 해당 구독은 배포자에서 실행되는 **배포 정리** 작업에 의해 비활성화된 상태로 표시됩니다. 구독을 다시 초기화해야 합니다.  
   
@@ -44,7 +45,7 @@ ms.locfileid: "85729373"
      밀어넣기 구독이 만료되면 완전히 제거되지만 끌어오기 구독은 그렇지 않습니다. 끌어오기 구독은 구독자에서 정리해야 합니다. 자세한 내용은 [Delete a Pull Subscription](../../relational-databases/replication/delete-a-pull-subscription.md)을(를) 참조하세요.  
   
 ## <a name="merge-replication"></a>병합 복제  
- 병합 복제는 게시 보존 기간([sp_addmergepublication&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)의 `@retention` 및 `@retention_period_unit` 매개 변수)을 사용합니다. 구독이 만료되면 구독에 대한 메타데이터가 제거되므로 구독을 다시 초기화해야 합니다. 다시 초기화되지 않은 구독은 게시자에서 실행되는 **만료된 구독 정리** 작업에 의해 삭제됩니다. 기본적으로 이 작업은 매일 실행됩니다. 이 작업을 통해 게시 보존 기간의 2배에 해당하는 기간 동안 동기화되지 않은 모든 밀어넣기 구독이 제거됩니다. 다음은 그 예입니다.  
+ 병합 복제는 게시 보존 기간([sp_addmergepublication&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)의 `@retention` 및 `@retention_period_unit` 매개 변수)을 사용합니다. 구독이 만료되면 구독에 대한 메타데이터가 제거되므로 구독을 다시 초기화해야 합니다. 다시 초기화되지 않은 구독은 게시자에서 실행되는 **만료된 구독 정리** 작업에 의해 삭제됩니다. 기본적으로 이 작업은 매일 실행됩니다. 이 작업을 통해 게시 보존 기간의 2배에 해당하는 기간 동안 동기화되지 않은 모든 밀어넣기 구독이 제거됩니다. 예를 들면 다음과 같습니다.  
   
 -   게시의 보존 기간이 14일이면 14일 이내에 동기화되지 않은 구독은 만료될 수 있습니다.  
   

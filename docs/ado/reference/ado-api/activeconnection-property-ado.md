@@ -1,4 +1,5 @@
 ---
+description: ActiveConnection 속성(ADO)
 title: ActiveConnection 속성 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 52d0a96c-14fb-4ad9-b004-4d821bc0a6db
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 375f0a0b81f71294b67200f8137ee381a638b8ac
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 058f1e16c6bdd84978c1131c436764f584fd80c3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242913"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451675"
 ---
 # <a name="activeconnection-property-ado"></a>ActiveConnection 속성(ADO)
 지정 된 [명령](../../../ado/reference/ado-api/command-object-ado.md), [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)또는 [Record](../../../ado/reference/ado-api/record-object-ado.md) 개체가 현재 속해 있는 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체를 나타냅니다.  

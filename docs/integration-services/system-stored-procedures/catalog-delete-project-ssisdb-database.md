@@ -1,4 +1,5 @@
 ---
+description: catalog.delete_project(SSISDB 데이터베이스)
 title: catalog.delete_project(SSISDB 데이터베이스) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: f3431445-8dd2-443b-813e-b99db893977e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f23b9eb8b082b69486130e147d92bc16b63e13c2
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 40e9a9a404c17b1a86b48fef45cdc32bf399ace3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913085"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495450"
 ---
 # <a name="catalogdelete_project-ssisdb-database"></a>catalog.delete_project(SSISDB 데이터베이스)
 

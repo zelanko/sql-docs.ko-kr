@@ -1,4 +1,5 @@
 ---
+description: CURRENT_USER(Transact-SQL)
 title: CURRENT_USER(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2017
@@ -22,12 +23,12 @@ ms.assetid: 29248949-325b-4063-9f55-5a445fb35c6e
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4f3d5c0b94e7b4154498f39dd7f2a2f247cf94f4
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 567c4049aaca763c249482e9340c7b424452e82b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112735"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468146"
 ---
 # <a name="current_user-transact-sql"></a>CURRENT_USER(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -48,11 +49,11 @@ CURRENT_USER
 **sysname**
   
 ## <a name="remarks"></a>설명  
-`CURRENT_USER`는 현재 보안 컨텍스트의 이름을 반환합니다. `CURRENT_USER`에 대한 호출로 컨텍스트가 전환된 후 `EXECUTE AS`가 실행되면 `CURRENT_USER`가 가장된 컨텍스트의 이름을 반환합니다. Windows 보안 주체가 그룹 멤버 자격으로 데이터베이스에 액세스한 경우 `CURRENT_USER`는 그룹 이름 대신 Windows 보안 주체의 이름을 반환합니다.
+`CURRENT_USER`는 현재 보안 컨텍스트의 이름을 반환합니다. `EXECUTE AS`에 대한 호출로 컨텍스트가 전환된 후 `CURRENT_USER`가 실행되면 `CURRENT_USER`가 가장된 컨텍스트의 이름을 반환합니다. Windows 보안 주체가 그룹 멤버 자격으로 데이터베이스에 액세스한 경우 `CURRENT_USER`는 그룹 이름 대신 Windows 보안 주체의 이름을 반환합니다.
   
 현재 사용자의 로그인을 반환하는 방법에 대해 알아보려면 [SUSER_NAME&#40;Transact-SQL&#41;](../../t-sql/functions/suser-name-transact-sql.md) 및 [SYSTEM_USER&#40;Transact- SQL&#41;](../../t-sql/functions/system-user-transact-sql.md)를 참조하세요.
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-using-current_user-to-return-the-current-user-name"></a>A. CURRENT_USER를 사용하여 현재 사용자 이름 반환  
 이 예에서는 현재 사용자의 이름을 반환합니다.
@@ -63,7 +64,7 @@ GO
 ```  
   
 ### <a name="b-using-current_user-as-a-default-constraint"></a>B. CURRENT_USER를 DEFAULT 제약 조건으로 사용  
-이 예에서는 판매 행의 `CURRENT_USER` 열에 대한 `DEFAULT` 제약 조건으로 `order_person`를 사용하는 테이블을 만듭니다.
+이 예에서는 판매 행의 `order_person` 열에 대한 `DEFAULT` 제약 조건으로 `CURRENT_USER`를 사용하는 테이블을 만듭니다.
   
 ```sql
 USE AdventureWorks2012;  
@@ -136,8 +137,8 @@ Wanida
 ```
   
 ## <a name="see-also"></a>참고 항목
-[USER_NAME&#40;Transact-SQL&#41;](../../t-sql/functions/user-name-transact-sql.md)  
-[SYSTEM_USER&#40;Transact-SQL&#41;](../../t-sql/functions/system-user-transact-sql.md)  
+[USER_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/user-name-transact-sql.md)  
+[SYSTEM_USER &#40;Transact-SQL&#41;](../../t-sql/functions/system-user-transact-sql.md)  
 [sys.database_principals&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)  
 [ALTER TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
 [CREATE TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)  

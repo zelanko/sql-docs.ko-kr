@@ -1,4 +1,5 @@
 ---
+description: ADO API 참조
 title: ADO API 참조 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: bfd96a4b-c913-45aa-9e4c-ec86ac364f3a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ee4fc69164dcfc5d19643fc9e6ce496a5b3489c6
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 760510fba2f7a06a28e0c0804670d609b8ddc91d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760599"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451535"
 ---
 # <a name="ado-api-reference"></a>ADO API 참조
 ADO 설명서의이 섹션에는 각 ADO 개체, 컬렉션, 속성, 동적 속성, 메서드, 이벤트 및 열거형에 대 한 항목이 포함 되어 있습니다. 또한 Microsoft Visual C++ 및 WFC (Windows Foundation 클래스)에서 사용할 ADO 구문 인덱스 목록을 포함 합니다.  

@@ -1,4 +1,5 @@
 ---
+description: Delete 메서드(ADO 매개 변수 컬렉션)
 title: Delete 메서드 (ADO Parameters Collection) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 160c575e-df63-4ade-a2d3-5fd8f72e70cc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 19fb69e51e04a2e15c60767981bc32e4dfe77141
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: a76353f62fc2b30ea8e7eae16c97469027a98110
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82757379"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444165"
 ---
 # <a name="delete-method-ado-parameters-collection"></a>Delete 메서드(ADO 매개 변수 컬렉션)
 [Parameters](../../../ado/reference/ado-api/parameters-collection-ado.md) 컬렉션에서 개체를 삭제 합니다.  
@@ -34,7 +35,7 @@ Parameters.Delete Index
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- *인덱싱할*  
+ *Index*  
  삭제할 개체의 이름 또는 컬렉션의 개체의 서 수 위치 (인덱스)를 포함 하는 **문자열** 값입니다.  
   
 ## <a name="remarks"></a>설명  

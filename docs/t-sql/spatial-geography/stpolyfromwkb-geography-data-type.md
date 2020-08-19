@@ -1,4 +1,5 @@
 ---
+description: STPolyFromWKB(geography 데이터 형식)
 title: STPolyFromWKB(geography 데이터 형식) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/30/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d236e0ea-dabe-4341-a6eb-ecc210d1f056
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 1f83894fc743a9d1d9c779dc44c1243eb27696da
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: caa7913e9971a11413933ad2998f0d6042c9f4ca
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555381"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422337"
 ---
 # <a name="stpolyfromwkb-geography-data-type"></a>STPolyFromWKB(geography 데이터 형식)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

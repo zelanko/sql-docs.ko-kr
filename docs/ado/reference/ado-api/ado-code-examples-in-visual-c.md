@@ -1,4 +1,5 @@
 ---
+description: Visual C++의 ADO 코드 예제
 title: Visual C++ |의 ADO 코드 예제 Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: af30b764-398f-4918-aaa7-3952226cf544
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ac6e639001c84142604ca54664784922da05d682
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 94821a930458d9b3a9c9deed6e9dd076243bae1d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760569"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451495"
 ---
 # <a name="ado-code-examples-in-visual-c"></a>Visual C++의 ADO 코드 예제
 다음 코드 예제를 사용 하 여 Microsoft Visual C++에서 작성할 때 ADO 메서드, 속성 및 이벤트를 사용 하는 방법을 배울 수 있습니다.  

@@ -1,4 +1,5 @@
 ---
+description: ODBC 커서 라이브러리
 title: ODBC 커서 라이브러리 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,11 +20,12 @@ ms.assetid: 3c610d3d-6e06-49cf-9a40-05b6a1c83a32
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e936b0f62e8d12f95e8c08f88ffcb681f0f6aeaa
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 5aad8e51d4f3e13612242bd80cd6882d7f0c1533
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000616"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423935"
 ---
 # <a name="odbc-cursor-library"></a>ODBC 커서 라이브러리
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

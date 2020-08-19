@@ -1,4 +1,5 @@
 ---
+description: sp_dropdistpublisher(Transact-SQL)
 title: sp_dropdistpublisher (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c0bdd3de-3be0-455c-898a-98d4660e7ce3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cfac0b293e4bf564ef334cd0dc1ef5c3d5395364
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f1473db94c3defdcdd525409046e72f6d3cd5459
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85786977"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486106"
 ---
 # <a name="sp_dropdistpublisher-transact-sql"></a>sp_dropdistpublisher(Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -39,15 +40,15 @@ sp_dropdistpublisher [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @publisher = ] 'publisher'`삭제할 게시자입니다. *publisher* 는 **sysname**이며 기본값은 없습니다.  
+`[ @publisher = ] 'publisher'` 삭제할 게시자입니다. *publisher* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @no_checks = ] no_checks`게시자가 서버를 배포자로 제거 했는지 여부를 확인 **sp_dropdistpublisher** 여부를 지정 합니다. *no_checks* 은 **bit**이며 기본값은 **0**입니다.  
+`[ @no_checks = ] no_checks` 게시자가 서버를 배포자로 제거 했는지 여부를 확인 **sp_dropdistpublisher** 여부를 지정 합니다. *no_checks* 은 **bit**이며 기본값은 **0**입니다.  
   
  **0**인 경우 복제는 원격 게시자가 로컬 서버를 배포자로 제거 했는지 확인 합니다. 게시자가 로컬인 경우에는 복제 시 로컬 서버에 게시 또는 배포 개체가 남아 있지 않음을 확인합니다.  
   
  **1**인 경우에는 원격 게시자에 연결할 수 없는 경우에도 배포 게시자와 연결 된 모든 복제 개체가 삭제 됩니다. 이 작업을 수행한 후 원격 게시자는 ** \@ ignore_distributor**1과 [sp_dropdistributor](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md) 를 사용 하 여 복제를 제거 해야 합니다  =  **1**.  
   
-`[ @ignore_distributor = ] ignore_distributor`게시자를 제거할 때 배포 개체가 배포자에 남아 있는지 여부를 지정 합니다. *ignore_distributor* **비트** 이며 다음 값 중 하나일 수 있습니다.  
+`[ @ignore_distributor = ] ignore_distributor` 게시자를 제거할 때 배포 개체가 배포자에 남아 있는지 여부를 지정 합니다. *ignore_distributor* **비트** 이며 다음 값 중 하나일 수 있습니다.  
   
  **1** = *게시자* 에 속하는 배포 개체가 배포자에 남아 있습니다.  
   
@@ -71,7 +72,7 @@ sp_dropdistpublisher [ @publisher = ] 'publisher'
  [게시 및 배포 해제](../../relational-databases/replication/disable-publishing-and-distribution.md)   
  [Transact-sql&#41;sp_adddistpublisher &#40;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
  [Transact-sql&#41;sp_changedistpublisher &#40;](../../relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql.md)   
- [Transact-sql&#41;sp_helpdistpublisher &#40;](../../relational-databases/system-stored-procedures/sp-helpdistpublisher-transact-sql.md)   
+ [sp_helpdistpublisher&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistpublisher-transact-sql.md)   
  [복제 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

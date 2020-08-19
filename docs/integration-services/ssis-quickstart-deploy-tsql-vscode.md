@@ -1,4 +1,5 @@
 ---
+description: Transact-SQL을 사용하여 Visual Studio Code에서 SSIS 프로젝트 배포
 title: Transact-SQL(VS Code)을 사용하여 SSIS 프로젝트 배포 | Microsoft Docs
 ms.date: 05/21/2018
 ms.topic: quickstart
@@ -8,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: af19358906b70cad15103913eebf45507f449410
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: dec289a898c25900afb7f5dd30ec2aa2fe9e34f1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921879"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495426"
 ---
 # <a name="deploy-an-ssis-project-from-visual-studio-code-with-transact-sql"></a>Transact-SQL을 사용하여 Visual Studio Code에서 SSIS 프로젝트 배포
 
@@ -30,7 +31,7 @@ Visual Studio Code는 Microsoft SQL Server, Azure SQL Database 또는 Azure SQL 
 -   [Visual Studio Code 다운로드](https://code.visualstudio.com/Download)
 -   [mssql 확장](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql)
 
-## <a name="supported-platforms"></a>지원 플랫폼
+## <a name="supported-platforms"></a>지원되는 플랫폼
 
 이 빠른 시작의 정보를 사용하여 다음과 같은 플랫폼에 SSIS 프로젝트를 배포할 수 있습니다.
 

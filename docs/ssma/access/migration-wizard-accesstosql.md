@@ -1,4 +1,5 @@
 ---
+description: 마이그레이션 마법사 (AccessToSQL)
 title: 마이그레이션 마법사 (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 5bab5914-b2ae-4795-8cf5-83e42d64bef2
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 8413487d4b367426c22795f7e82e58ec029706c3
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 8f2e2308cbee8aea34f8fa4b33de50ee69a2fdb5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87938012"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423037"
 ---
 # <a name="migration-wizard-accesstosql"></a>마이그레이션 마법사 (AccessToSQL)
 마이그레이션 마법사는 하나 이상의 데이터베이스를에 대 한 액세스에서 또는 SQL Azure로 마이그레이션하는 과정을 안내 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 마법사를 사용 하 여 프로젝트를 만들고, 프로젝트에 데이터베이스를 추가 하 고, 마이그레이션할 개체를 선택 하 고, SQL Azure에 연결 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 합니다. 또한 액세스 스키마와 데이터를 변환, 로드 및 마이그레이션합니다. 필요에 따라 액세스 테이블을 또는 SQL Azure 테이블에 연결할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -98,7 +99,7 @@ SQL Azure에 연결 페이지에서 연결 속성을 지정 하 고 SQL Azure에
 이 페이지에 대 한 자세한 내용은 [변환, 로드 및 마이그레이션](https://msdn.microsoft.com/4ec83e96-88a5-4b7b-8d5a-f3429d9a936b) 을 참조 하세요.  
   
 ## <a name="see-also"></a>참고 항목  
-[Access &#40;AccessToSQL&#41;에 대 한 SQL Server Migration Assistant 시작](../../ssma/access/getting-started-with-sql-server-migration-assistant-for-access-accesstosql.md)  
+[Access &#40;AccessToSQL&#41;에 대 한 SQL Server Migration Assistant 시작 ](../../ssma/access/getting-started-with-sql-server-migration-assistant-for-access-accesstosql.md)  
 [SQL Server로 Access 데이터베이스 마이그레이션](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
 [사용자 인터페이스 참조 (액세스)](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
   

@@ -1,4 +1,5 @@
 ---
+description: IsDescendantOf(데이터베이스 엔진)
 title: IsDescendantOf(데이터베이스 엔진) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/22/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: edc80444-b697-410f-9419-0f63c9b5618d
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 263531ea638b7d5430d563cf6e7e94e5292185c8
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: f4183269c17190dec01c80e7870f0143e1320463
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86556207"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468275"
 ---
 # <a name="isdescendantof-database-engine"></a>IsDescendantOf(데이터베이스 엔진)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -57,7 +58,7 @@ IsDescendantOf 테스트를 수행해야 하는 **hierarchyid** 노드입니다.
   
 부모는 자신의 하위 항목으로 간주됩니다.
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-using-isdescendantof-in-a-where-clause"></a>A. WHERE 절에서 IsDescendantOf 사용  
 다음 예에서는 관리자와 관리자에게 보고하는 직원을 반환합니다.

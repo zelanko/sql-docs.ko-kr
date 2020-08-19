@@ -1,4 +1,5 @@
 ---
+description: EnvelopeAggregate(geometry 데이터 형식)
 title: EnvelopeAggregate(geometry 데이터 형식) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c4c15abe-0fe9-441d-9d42-6572e264869c
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 3aee28aab0c847f86a247531c1529068412aa0bc
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 240df782e2175d22d9f00e38427c39a2b7115213
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86552464"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459053"
 ---
 # <a name="envelopeaggregate-geometry-data-type"></a>EnvelopeAggregate(geometry 데이터 형식)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -53,7 +54,7 @@ EnvelopeAggregate ( geometry_operand )
 > [!NOTE]  
 >  이 메서드는 모든 입력 값이 **null**인 경우 **null**을 반환합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 테이블 변수 열에 있는 개체 집합에 대한 경계 상자를 반환합니다.  
   
  ```

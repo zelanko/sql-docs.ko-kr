@@ -1,4 +1,5 @@
 ---
+description: 사용자 지정 파일 이해
 title: 사용자 지정 파일 이해 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 136f74bf-8d86-4a41-be66-c86cbcf81548
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2edcfaaae08da97eccfe7b9a570716a2dfedfc2c
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 59c0f32f7e5ba467fd1b90a348a78432a16621ba
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764614"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451875"
 ---
 # <a name="understanding-the-customization-file"></a>사용자 지정 파일 이해
 사용자 지정 파일의 각 섹션 헤더는 형식 및 매개 변수를 포함 하는 대괄호 (**[]**)로 구성 됩니다. 네 가지 섹션 형식은 **connect**, **sql**, **userlist**또는 **logs**리터럴 문자열로 표시 됩니다. 매개 변수는 리터럴 문자열, 기본값, 사용자 지정 식별자 또는 nothing입니다.  
@@ -41,7 +42,7 @@ identifier
   
  섹션 헤더에는 다음과 같은 부분이 있습니다.  
   
-|부분|Description|  
+|부분|설명|  
 |----------|-----------------|  
 |**connect**|연결 문자열을 수정 하는 리터럴 문자열입니다.|  
 |**sql**|명령 문자열을 수정 하는 리터럴 문자열입니다.|  

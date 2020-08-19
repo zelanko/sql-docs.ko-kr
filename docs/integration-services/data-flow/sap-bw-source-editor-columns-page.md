@@ -1,4 +1,5 @@
 ---
+description: SAP BW 원본 편집기(열 페이지)
 title: SAP BW 원본 편집기(열 페이지) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: c2ec8bb7-be9b-4783-ad88-32512de784b0
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 60b888d1a17d56c41b586a0ffa0d2b869aa2ab4f
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: dab03a43269739bbf77101f8ded9dac68ff2b8f3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923234"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495766"
 ---
 # <a name="sap-bw-source-editor-columns-page"></a>SAP BW 원본 편집기(열 페이지)
 
