@@ -1,4 +1,5 @@
 ---
+description: 조회 변환 전체 캐시 모드 - OLE DB 연결 관리자
 title: 조회 변환 전체 캐시 모드 - OLE DB 연결 관리자 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c4150e1b-bdff-4f7a-af4c-3401c34def83
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c1b663d20972a8c4a788c9a12f6b9b5dcdf01307
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: df4cde828997d68b15869000f111a99479369e55
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923132"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88394209"
 ---
 # <a name="lookup-transformation-full-cache-mode---ole-db-connection-manager"></a>조회 변환 전체 캐시 모드 - OLE DB 연결 관리자
 
@@ -85,7 +86,7 @@ ms.locfileid: "86923132"
   
 13. 조회 변환의 변경 내용을 저장한 다음 패키지를 실행하려면 **확인** 을 클릭합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [캐시 연결 관리자 변환을 사용하여 전체 캐시 모드에서 조회 변환 구현](../../integration-services/connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md)   
  [캐시 없음 또는 부분 캐시 모드로 조회 구현](../../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)   
  [Integration Services 변환](../../integration-services/data-flow/transformations/integration-services-transformations.md)  

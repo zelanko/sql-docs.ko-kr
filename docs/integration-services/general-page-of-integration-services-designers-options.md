@@ -1,4 +1,5 @@
 ---
+description: Integration Services 디자이너 옵션의 일반 페이지
 title: Integration Services 디자이너 옵션의 일반 페이지 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: d695690a-923b-4036-945e-7621e8651deb
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 70f263d2df8e81f379857c88615b6056bc884b81
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 9dfbe2a36695d3fcb776d9993243f9210df8082c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914729"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88391119"
 ---
 # <a name="general-page-of-integration-services-designers-options"></a>Integration Services 디자이너 옵션의 일반 페이지
 
@@ -57,7 +58,7 @@ ms.locfileid: "86914729"
  **새 패키지 ID 만들기**  
  [!INCLUDE[ssISversion2005](../includes/ssisversion2005-md.md)] 패키지를 업그레이드할 때 업그레이드된 버전의 패키지에 대해 새 패키지 ID를 만듭니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [보안 개요&#40;Integration Services&#41;](../integration-services/security/security-overview-integration-services.md)   
  [스크립팅을 사용한 패키지 확장](../integration-services/extending-packages-scripting/extending-packages-with-scripting.md)  
   

@@ -1,4 +1,5 @@
 ---
+description: 식별자(SSIS)
 title: 식별자(SSIS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 56af984d-88b4-4db8-b6a2-6b07315a699e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2ae07f10db51458fed1836a4f815107a27c55304
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 34d66b1dd07bfc167c71c97de51474cc6c63dd2d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914590"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88391229"
 ---
 # <a name="identifiers-ssis"></a>식별자(SSIS)
 

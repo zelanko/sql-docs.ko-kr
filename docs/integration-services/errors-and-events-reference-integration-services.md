@@ -1,4 +1,5 @@
 ---
+description: 오류 및 이벤트 참조(Integration Services)
 title: 오류 및 이벤트 참조(Integration Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: cf4f0f14-8087-42d7-9b67-e4929228abd6
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4a35fad106dfac49d0e2f227c506658d91c420b2
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 814c5bb9915e448f97f0c769033d5fd695f76d95
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914399"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88391709"
 ---
 # <a name="errors-and-events-reference-integration-services"></a>오류 및 이벤트 참조(Integration Services)
 
@@ -55,7 +56,7 @@ ms.locfileid: "86914399"
 ## <a name="events-sqlispackage"></a>이벤트(SQLISPackage)  
  자세한 내용은 [Integration Services 패키지에서 기록하는 이벤트](../integration-services/performance/events-logged-by-an-integration-services-package.md)를 참조하세요.  
   
-|행사|Description|  
+|이벤트|Description|  
 |-----------|-----------------|  
 |SQLISPackage_12288|패키지가 시작되었음을 나타냅니다.|  
 |SQLISPackage_12289|패키지가 성공적으로 실행되었음을 나타냅니다.|  
@@ -69,7 +70,7 @@ ms.locfileid: "86914399"
 ## <a name="events-sqlisservice"></a>이벤트(SQLISService)  
  자세한 내용은 [Integration Services 서비스에서 기록하는 이벤트](../integration-services/service/events-logged-by-the-integration-services-service.md)를 참조하세요.  
   
-|행사|Description|  
+|이벤트|Description|  
 |-----------|-----------------|  
 |SQLISService_256|시비스가 시작되려고 함을 나타냅니다.|  
 |SQLISService_257|시비스가 시작되었음을 나타냅니다.|  
@@ -80,7 +81,7 @@ ms.locfileid: "86914399"
 |SQLISService_273|구성 파일을 읽을 수 없거나 구성 파일이 유효하지 않음을 나타냅니다.|  
 |SQLISService_274|구성 파일의 위치가 포함된 레지스트리 항목이 없거나 비어 있음을 나타냅니다.|  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [Integration Services 오류 및 메시지 참조](../integration-services/integration-services-error-and-message-reference.md)  
   
   

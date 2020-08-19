@@ -1,4 +1,5 @@
 ---
+description: Hadoop 파일 시스템 태스크
 title: Hadoop 파일 시스템 태스크 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 594aaf5d-7703-4788-897d-fb95aca798c5
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 006c9d5ae0ade37cc3ecbe4d7912c49eafbf4069
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 60e2f94ab41aafe0b23af470555870ba4a93b918
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918214"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88393139"
 ---
 # <a name="hadoop-file-system-task"></a>Hadoop 파일 시스템 태스크
 
@@ -43,7 +44,7 @@ ms.locfileid: "86918214"
 |**로컬 파일 연결**|기존 파일 연결 관리자를 지정하거나 새 파일 연결 관리자를 만듭니다. 이 연결 관리자는 원본 파일이 호스트되는 위치를 나타냅니다.|  
 |**재귀**|모든 하위 폴더를 재귀적으로 복사할지 여부를 지정합니다.|  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [Hadoop 연결 관리자](../../integration-services/connection-manager/hadoop-connection-manager.md)   
  [파일 연결 관리자](../../integration-services/connection-manager/file-connection-manager.md)  
   

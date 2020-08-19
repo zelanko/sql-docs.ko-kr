@@ -1,4 +1,5 @@
 ---
+description: Attunity의 Oracle용 Change Data Capture의 알려진 오류 및 해결 방법
 title: Attunity의 Oracle용 Change Data Capture의 알려진 오류 및 해결 방법 | Microsoft Docs
 ms.date: 07/23/2019
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.technology: ''
 ms.topic: reference
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ee1e8f3ae65b4a906d42a4b00644456d89f9b900
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c6841092edcb5eac4005d0a068f31c768aedf5bf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71713428"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88394389"
 ---
 # <a name="known-errors-and-resolutions-with-change-data-capture-for-oracle-by-attunity"></a>Attunity의 Oracle용 Change Data Capture의 알려진 오류 및 해결 방법
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdbmi-xxxx-xxx-md.md)]

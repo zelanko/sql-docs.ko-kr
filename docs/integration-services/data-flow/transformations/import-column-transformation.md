@@ -1,4 +1,5 @@
 ---
+description: 열 가져오기 변환
 title: 열 가져오기 변환 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ac3b74c1-ef54-4297-8062-1734324fffcc
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1db13057275f9a255ad247bd5f86ca35d7bd29d3
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: bce31855c0ddd8825401eefd2253172538159cdc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919274"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88391919"
 ---
 # <a name="import-column-transformation"></a>열 가져오기 변환
 
@@ -56,7 +57,7 @@ ms.locfileid: "86919274"
 ## <a name="related-tasks"></a>관련 작업  
  이 구성 요소의 속성을 설정하는 방법에 대한 자세한 내용은 [데이터 흐름 구성 요소의 속성 설정](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)을 참조하세요.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [열 내보내기 변환](../../../integration-services/data-flow/transformations/export-column-transformation.md)   
  [데이터 흐름](../../../integration-services/data-flow/data-flow.md)   
  [Integration Services 변환](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  

@@ -1,4 +1,5 @@
 ---
+description: 유지 관리 정리 태스크
 title: 유지 관리 정리 태스크 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 73ad3cd6-9a6d-44cf-905f-c56aa658bf42
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7a25aa0d58500f5a51a1ae64983d6d4f8f221f97
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 7b24e6085e255e6e6a66d499b6c23e4cba91cf7a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915419"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88392549"
 ---
 # <a name="maintenance-cleanup-task"></a>유지 관리 정리 태스크
 

@@ -1,4 +1,5 @@
 ---
+description: 감사 변환
 title: 감사 변환 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8c143682-9c81-4150-83d6-1d9678151d37
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2e0f716564eee0d867081576a36eba81735966c5
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: e04af79dc2020a2273717785fca57aac5e4de451
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915757"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88392279"
 ---
 # <a name="audit-transformation"></a>감사 변환
 
@@ -80,6 +81,6 @@ ms.locfileid: "86915757"
 |**컴퓨터 이름**|패키지가 시작된 컴퓨터 이름을 삽입합니다.|  
 |**사용자 이름**|패키지를 시작한 사용자의 로그인 이름을 삽입합니다.|  
 |**작업 이름**|감사 변환이 연결된 데이터 흐름 태스크의 이름을 삽입합니다.|  
-|**태스크 ID**|감사 변환이 연결된 데이터 흐름 태스크를 고유하게 식별하는 GUID를 삽입합니다.|  
+|**작업 ID**|감사 변환이 연결된 데이터 흐름 태스크를 고유하게 식별하는 GUID를 삽입합니다.|  
   
   

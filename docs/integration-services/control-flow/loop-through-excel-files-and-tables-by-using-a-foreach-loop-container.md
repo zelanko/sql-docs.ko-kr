@@ -1,4 +1,5 @@
 ---
+description: Foreach 루프 컨테이너를 사용하여 Excel 파일 및 테이블 반복
 title: Foreach 루프 컨테이너를 사용하여 Excel 파일 및 테이블 반복 | Microsoft Docs
 ms.custom: ''
 ms.date: 05/15/2018
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a5393c1a-cc37-491a-a260-7aad84dbff68
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6bdcfd84f1b12c48e31bd9d56fe6db3e4155c543
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 0eaa6b0cbe19656096cdb47a31ec73b5fd4ade7d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915429"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88392629"
 ---
 # <a name="loop-through-excel-files-and-tables-with-a-foreach-loop-container"></a>Foreach 루프 컨테이너를 사용하여 Excel 파일 및 테이블 반복
 
@@ -97,7 +98,7 @@ ms.locfileid: "86915429"
   
 9. Excel 연결 관리자를 사용하는 Foreach 루프 컨테이너 내에 태스크를 만들어 지정된 통합 문서의 각 Excel 테이블에 같은 작업을 수행합니다. 스크립트 태스크를 사용하여 열거된 테이블 이름을 검사하거나 각 테이블을 작업할 경우에는 스크립트 태스크의 ReadOnlyVariables 속성에 문자열 변수를 추가해야 합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [SSIS(SQL Server Integration Services)를 통해 Excel에서 데이터 로드](../load-data-to-from-excel-with-ssis.md)  
  [Foreach 루프 컨테이너 구성](https://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)   
  [속성 식 추가 또는 변경](../../integration-services/expressions/add-or-change-a-property-expression.md)   

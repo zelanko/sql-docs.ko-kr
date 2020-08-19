@@ -1,4 +1,5 @@
 ---
+description: Hadoop 하이브 태스크
 title: Hadoop 하이브 태스크 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 10ff37c0-9f3f-442a-889b-c351afbdc74c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9a6a0bcdfcaa6e1ac287ef22c8515eef92c123d1
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: e8b6d1e651d6854fba575460a141f9e325e7f12f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918208"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88393259"
 ---
 # <a name="hadoop-hive-task"></a>Hadoop 하이브 태스크
 
@@ -41,7 +42,7 @@ ms.locfileid: "86918208"
 |**HadoopScriptFilePath**|**SourceType** 의 값이 **ScriptFile**일 때 Hadoop의 스크립트 파일 경로를 지정합니다.|  
 |**TimeoutInMinutes**|제한 시간 값을 분 단위로 지정합니다. Hadoop 작업은 제한 시간이 경과할 때까지 완료되지 않은 경우 중지됩니다. Hadoop 작업이 비동기적으로 실행되도록 예약하려면 값으로 0을 지정합니다.|  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [Hadoop 연결 관리자](../../integration-services/connection-manager/hadoop-connection-manager.md)  
   
   

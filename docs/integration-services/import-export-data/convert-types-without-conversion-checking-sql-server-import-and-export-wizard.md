@@ -1,4 +1,5 @@
 ---
+description: 변환 검사를 수행하지 않고 형식 변환(SQL Server 가져오기 및 내보내기 마법사)
 title: 변환 검사를 수행하지 않고 형식 변환(SQL Server 가져오기-내보내기 마법사) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/11/2017
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: 87d9d3e5-477f-4117-a37f-bff53ea3e14d
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9e94009fd87412d9d015158e9a3cc4f3edde1ede
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 5d7c53d4117d7634b6651069260c289657f82315
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922419"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88391469"
 ---
 # <a name="convert-types-without-conversion-checking-sql-server-import-and-export-wizard"></a>변환 검사를 수행하지 않고 형식 변환(SQL Server 가져오기 및 내보내기 마법사)
 
@@ -37,7 +38,7 @@ ms.locfileid: "86922419"
 
 이 페이지의 정보에는 누락된 매핑 파일의 이름이 포함되지 않습니다. 마법사에서 지정된 데이터 공급자에 대한 파일이 있는지 여부를 모르므로 누락된 파일의 이름을 제공할 수 없습니다.
 
-## <a name="whats-next"></a>다음 단계  
+## <a name="whats-next"></a>다음 작업  
  **다음** 을 클릭하여 데이터 형식 변환의 성공 여부를 확인하지 않고 계속할 경우 다음 페이지는 **패키지 저장 및 실행**입니다. 이 페이지에서는 복사 작업을 즉시 실행할지 여부를 지정합니다. 구성에 따라 마법사에서 만든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 저장하여 사용자 지정하고 나중에 다시 사용할 수도 있습니다. 자세한 내용은 [패키지 저장 및 실행](../../integration-services/import-export-data/save-and-run-package-sql-server-import-and-export-wizard.md)을 참조하세요.  
 
 ## <a name="see-also"></a>참고 항목

@@ -1,4 +1,5 @@
 ---
+description: 함수 종속성 프로필 요청 옵션(데이터 프로파일링 태스크)
 title: 함수 종속성 프로필 요청 옵션(데이터 프로파일링 태스크) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6eb853aa-8016-490c-be4f-06ab8d7f5021
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b2f4f0f63aa108f16a8649007c200d8f93261367
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 1fa83e2b75860730f4e3d9b419a2ca8ca374ba31
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918223"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88393429"
 ---
 # <a name="functional-dependency-profile-request-options-data-profiling-task"></a>함수 종속성 프로필 요청 옵션(데이터 프로파일링 태스크)
 
@@ -123,7 +124,7 @@ ms.locfileid: "86918223"
  **MaxNumberOfViolations**  
  출력에 보고할 최대 함수 종속성 위반 수를 지정합니다. 이 속성의 기본값은 100입니다. **Exact** 가 **ThresholdSetting**으로 선택된 경우 이 옵션을 사용할 수 없습니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [데이터 프로파일링 태스크 편집기&#40;일반 페이지&#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
  [단일 테이블 빠른 프로필 형식&#40;데이터 프로파일링 태스크&#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
   

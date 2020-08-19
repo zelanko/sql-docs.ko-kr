@@ -1,4 +1,5 @@
 ---
+description: Integration Services 태스크
 title: Integration Services 태스크 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -26,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: 75c8901d-6966-4af3-abe5-10af6dd9313b
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b36f709ecde7aa2fb4d47b2b1f092bc92bde682c
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d54d80276714bdc1427c2c01be0f9620acc32c8f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915449"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88392649"
 ---
 # <a name="integration-services-tasks"></a>Integration Services 태스크
 
@@ -42,7 +43,7 @@ ms.locfileid: "86915449"
   
  COM을 지원하는 Visual Basic 등의 프로그래밍 언어와 C#과 같은 .NET 프로그래밍 언어를 사용하여 사용자 지정 태스크를 작성할 수도 있습니다.  
   
- [!INCLUDE[ssIS](../../includes/ssis-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 패키지 작업용 그래픽 도구인 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 디자이너는 패키지 제어 흐름을 만들기 위한 디자인 화면과 태스크 구성을 위한 사용자 지정 편집기를 제공합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 개체 모델을 프로그래밍하여 프로그래밍 방식으로 패키지를 만들 수도 있습니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]의 패키지 작업용 그래픽 도구인 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너는 패키지 제어 흐름을 만들기 위한 디자인 화면과 태스크 구성을 위한 사용자 지정 편집기를 제공합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 개체 모델을 프로그래밍하여 프로그래밍 방식으로 패키지를 만들 수도 있습니다.  
   
 ## <a name="types-of-tasks"></a>태스크 유형  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에는 다음 유형의 태스크가 포함되어 있습니다.  

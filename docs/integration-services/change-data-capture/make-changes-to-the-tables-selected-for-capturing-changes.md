@@ -1,4 +1,5 @@
 ---
+description: 변경 캡처를 위해 선택된 테이블 변경
 title: 변경 캡처를 위해 선택된 테이블 변경 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: a309f82a-c6ef-464d-a6ef-df555bfb609a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 71122a2b6ffca4e5b1080ed1cef8321cfd4bef04
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b6caa3f5d6d1abe5a8d4a197391da18a74942f00
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922539"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88394489"
 ---
 # <a name="make-changes-to-the-tables-selected-for-capturing-changes"></a>변경 캡처를 위해 선택된 테이블 변경
 

@@ -1,4 +1,5 @@
 ---
+description: ODBC 원본
 title: ODBC 원본 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -15,12 +16,12 @@ f1_keywords:
 ms.assetid: abcf34eb-9140-4100-82e6-b85bccd22abe
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7382675ca38ecaabd685d68e0dc31f09e94be6ad
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 800c3e0b8af863cd7947e6847d3c8fe2e1ccab44
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914995"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88392119"
 ---
 # <a name="odbc-source"></a>ODBC 원본
 
@@ -87,7 +88,7 @@ ms.locfileid: "86914995"
   
 -   [ODBC 원본을 사용하여 데이터 추출](../../integration-services/data-flow/extract-data-by-using-the-odbc-source.md)  
   
--   [ODBC 원본 사용자 지정 속성](../../integration-services/data-flow/odbc-source-custom-properties.md)  
+-   [ODBC Source Custom Properties](../../integration-services/data-flow/odbc-source-custom-properties.md)  
   
 ## <a name="odbc-source-editor-connection-manager-page"></a>ODBC 원본 편집기(연결 관리자 페이지)
   **ODBC 원본 편집기** 대화 상자의 **연결 관리자** 페이지를 사용하여 원본의 ODBC 연결 관리자를 선택할 수 있습니다. 이 페이지를 사용하면 데이터베이스에서 테이블이나 뷰를 선택할 수도 있습니다.  

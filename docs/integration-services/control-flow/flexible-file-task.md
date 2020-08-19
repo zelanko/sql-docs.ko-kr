@@ -1,4 +1,5 @@
 ---
+description: 유연한 파일 작업
 title: 유연한 파일 작업 | Microsoft Docs
 ms.custom: ''
 ms.date: 05/22/2019
@@ -12,12 +13,12 @@ f1_keywords:
 - SQL14.DTS.DESIGNER.AFPEXTFILETASK.F1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 14850ea141db133fe7d3bdfe879ad0e6d47111b8
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 4a84bfa9b7aa9fc50d16268005ac02868f11784b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917889"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88393556"
 ---
 # <a name="flexible-file-task"></a>유연한 파일 작업
 

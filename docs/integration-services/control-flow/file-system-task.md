@@ -1,4 +1,5 @@
 ---
+description: 파일 시스템 태스크
 title: 파일 시스템 태스크 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7dd79a6a-e066-4028-a385-1d40f31056f8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 77a347078f86299118f80c9cae55d9dd04795a9d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: dea2596647ab9c5ac69befde2336ac126a84f2ef
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917899"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88393779"
 ---
 # <a name="file-system-task"></a>파일 시스템 태스크
 
