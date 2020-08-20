@@ -1,4 +1,5 @@
 ---
+description: sys.sysservers(Transact-SQL)
 title: sys.sysservers (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: d02f186f-c00f-44a6-b38d-dc78a3d2145b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0fa61b7122849a1c3d380a39beb4da947d52d35f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ea79d90f7ccb75243246cc64713c746e05c8996c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893970"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475135"
 ---
 # <a name="syssysservers-transact-sql"></a>sys.sysservers(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,7 +49,7 @@ ms.locfileid: "85893970"
 |**schemadate**|**datetime**|해당 행이 마지막으로 업데이트된 날짜입니다.|  
 |**topologyx**|**int**|사용되지 않습니다.|  
 |**topologyy**|**int**|사용되지 않습니다.|  
-|**카탈로그**|**sysname**|OLE DB 공급자에 연결할 때 사용하는 카탈로그입니다.|  
+|**catalog**|**sysname**|OLE DB 공급자에 연결할 때 사용하는 카탈로그입니다.|  
 |**srvcollation**|**sysname**|서버의 데이터 정렬입니다.|  
 |**connecttimeout**|**int**|서버 연결의 제한 시간 설정입니다.|  
 |**querytimeout**|**int**|서버에 대한 쿼리의 제한 시간 설정입니다.|  

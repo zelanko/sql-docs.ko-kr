@@ -1,4 +1,5 @@
 ---
+description: sp_changemergepullsubscription(Transact-SQL)
 title: sp_changemergepullsubscription (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5e0d04f2-6175-44a2-ad96-a8e2986ce4c9
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 349fecb1324d0af0e6d6d7b099064781e6f8aeb1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 904db034372ce3be7b4f3bf3e1f7dc4a95d8383d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85872550"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474436"
 ---
 # <a name="sp_changemergepullsubscription-transact-sql"></a>sp_changemergepullsubscription(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,20 +42,20 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @publication = ] 'publication'`게시의 이름입니다. *게시* 는 **sysname**이며 기본값 은%입니다.  
+`[ @publication = ] 'publication'` 게시의 이름입니다. *게시* 는 **sysname**이며 기본값 은%입니다.  
   
-`[ @publisher = ] 'publisher'`게시자의 이름입니다. *publisher*는 **sysname**이며 기본값 은%입니다.  
+`[ @publisher = ] 'publisher'` 게시자의 이름입니다. *publisher*는 **sysname**이며 기본값 은%입니다.  
   
-`[ @publisher_db = ] 'publisher_db'`게시자 데이터베이스의 이름입니다. *publisher_db*는 **sysname**이며 기본값 은%입니다.  
+`[ @publisher_db = ] 'publisher_db'` 게시자 데이터베이스의 이름입니다. *publisher_db*는 **sysname**이며 기본값 은%입니다.  
   
-`[ @property = ] 'property'`변경할 속성의 이름입니다. *속성* 은 **sysname**이며 테이블의 값 중 하나일 수 있습니다.  
+`[ @property = ] 'property'` 변경할 속성의 이름입니다. *속성* 은 **sysname**이며 테이블의 값 중 하나일 수 있습니다.  
   
-`[ @value = ] 'value'`지정 된 속성의 새 값입니다. *value*는 **nvarchar (255)** 이며 테이블에 있는 값 중 하나일 수 있습니다.  
+`[ @value = ] 'value'` 지정 된 속성의 새 값입니다. *value*는 **nvarchar (255)** 이며 테이블에 있는 값 중 하나일 수 있습니다.  
   
 |속성|값|설명|  
 |--------------|-----------|-----------------|  
 |**alt_snapshot_folder**||기본 위치가 아니거나 기본 위치에 추가된 위치일 경우 스냅샷 폴더가 저장되는 위치입니다.|  
-|**한**||해당 병합 끌어오기 구독에 관한 설명입니다.|  
+|**description**||해당 병합 끌어오기 구독에 관한 설명입니다.|  
 |**총판**||배포자의 이름입니다.|  
 |**distributor_login**||배포자에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증에 사용되는 로그인 ID입니다.|  
 |**distributor_password**||배포자에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증에 사용되는 암호입니다.|  

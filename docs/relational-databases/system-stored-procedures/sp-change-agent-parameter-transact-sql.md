@@ -1,4 +1,5 @@
 ---
+description: sp_change_agent_parameter(Transact-SQL)
 title: sp_change_agent_parameter (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f1fbecc7-e64f-405c-8067-6b38c1f3c0a0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 86a450e69eb72724b64b9a2861e3cd282ebf87a7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a934a171c7bfbe6a80c3540defde8e6861ca0ad6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715953"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474466"
 ---
 # <a name="sp_change_agent_parameter-transact-sql"></a>sp_change_agent_parameter(Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -37,9 +38,9 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @profile_id = ] profile_id,`프로필의 ID입니다. *profile_id* 는 **int**이며 기본값은 없습니다.  
+`[ @profile_id = ] profile_id,` 프로필의 ID입니다. *profile_id* 는 **int**이며 기본값은 없습니다.  
   
-`[ @parameter_name = ] 'parameter_name'`매개 변수의 이름입니다. *parameter_name* 는 **sysname**이며 기본값은 없습니다. 시스템 프로필의 경우 변경될 수 있는 매개 변수는 에이전트의 유형에 따라 달라집니다 이 *profile_id* 나타내는 에이전트 유형을 확인 하려면 **Msagent_profiles** 테이블에서 *profile_id* 열을 찾아 *agent_type* 값을 확인 합니다.  
+`[ @parameter_name = ] 'parameter_name'` 매개 변수의 이름입니다. *parameter_name* 는 **sysname**이며 기본값은 없습니다. 시스템 프로필의 경우 변경될 수 있는 매개 변수는 에이전트의 유형에 따라 달라집니다 이 *profile_id* 나타내는 에이전트 유형을 확인 하려면 **Msagent_profiles** 테이블에서 *profile_id* 열을 찾아 *agent_type* 값을 확인 합니다.  
   
 > [!NOTE]  
 >  매개 변수가 지정 된 *agent_type*에 대해 지원 되지만 에이전트 프로필에 정의 되지 않은 경우 오류가 반환 됩니다. 에이전트 프로필에 매개 변수를 추가 하려면 [sp_add_agent_parameter](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md)를 실행 해야 합니다.  
@@ -216,7 +217,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **UseInprocLoader**  
   
--   **유효화**  
+-   **유효성 검사**  
   
 -   **ValidateInterval**  
   
@@ -240,7 +241,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
  지정 된 프로필에 대해 정의 된 매개 변수를 보려면 **sp_help_agent_profile** 를 실행 하 고 *profile_id*와 연결 된 *profile_name* 를 확인 합니다. 적절 한 *profile_id*를 사용 하 여 **sp_help_agent_parameters** 다음 실행 sp_help_agent_parameters *profile_id* 사용 하 여 프로필에 연결 된 매개 변수를 확인 합니다. [Sp_add_agent_parameter](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md)를 실행 하 여 프로필에 매개 변수를 추가할 수 있습니다.  
   
-`[ @parameter_value = ] 'parameter_value'`매개 변수의 새 값입니다. *parameter_value* 은 **nvarchar (255)** 이며 기본값은 없습니다.  
+`[ @parameter_value = ] 'parameter_value'` 매개 변수의 새 값입니다. *parameter_value* 은 **nvarchar (255)** 이며 기본값은 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -253,11 +254,11 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 ## <a name="see-also"></a>참고 항목  
  [복제 에이전트 프로필](../../relational-databases/replication/agents/replication-agent-profiles.md)   
- [복제 배포 에이전트](../../relational-databases/replication/agents/replication-distribution-agent.md)   
- [복제 로그 판독기 에이전트](../../relational-databases/replication/agents/replication-log-reader-agent.md)   
- [복제 병합 에이전트](../../relational-databases/replication/agents/replication-merge-agent.md)   
+ [Replication Distribution Agent](../../relational-databases/replication/agents/replication-distribution-agent.md)   
+ [Replication Log Reader Agent](../../relational-databases/replication/agents/replication-log-reader-agent.md)   
+ [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md)   
  [복제 큐 판독기 에이전트](../../relational-databases/replication/agents/replication-queue-reader-agent.md)   
- [복제 스냅숏 에이전트](../../relational-databases/replication/agents/replication-snapshot-agent.md)   
+ [Replication Snapshot Agent](../../relational-databases/replication/agents/replication-snapshot-agent.md)   
  [Transact-sql&#41;sp_add_agent_parameter &#40;](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md)   
  [Transact-sql&#41;sp_drop_agent_parameter &#40;](../../relational-databases/system-stored-procedures/sp-drop-agent-parameter-transact-sql.md)   
  [Transact-sql&#41;sp_help_agent_parameter &#40;](../../relational-databases/system-stored-procedures/sp-help-agent-parameter-transact-sql.md)   

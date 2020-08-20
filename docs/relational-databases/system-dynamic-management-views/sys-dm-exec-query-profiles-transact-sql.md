@@ -1,4 +1,5 @@
 ---
+description: sys.dm_exec_query_profiles(Transact-SQL)
 title: sys. dm_exec_query_profiles (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/25/2019
@@ -20,12 +21,12 @@ ms.assetid: 54efc6cb-eea8-4f6d-a4d0-aa05eeb54081
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 51dd6f1d831931fcd8e14e38a3ca94ae440dae1a
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 4cbb0c5bb226842aeb9767fd4ac9c3a8122dc790
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87865371"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474985"
 ---
 # <a name="sysdm_exec_query_profiles-transact-sql"></a>sys.dm_exec_query_profiles(Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -79,11 +80,11 @@ ms.locfileid: "87865371"
   
  이 DMV에서 보고 하는 i/o 관련 카운터는 `SET STATISTICS IO` 다음 두 가지 방법으로에서 보고 되는 것 보다 더 세분화 됩니다.  
   
--   `SET STATISTICS IO`지정 된 테이블에 대 한 모든 i/o의 카운터를 그룹화 합니다. 이 DMV를 사용 하 여 테이블에 i/o를 수행 하는 쿼리 계획의 모든 노드에 대해 별도의 카운터를 가져옵니다.  
+-   `SET STATISTICS IO` 지정 된 테이블에 대 한 모든 i/o의 카운터를 그룹화 합니다. 이 DMV를 사용 하 여 테이블에 i/o를 수행 하는 쿼리 계획의 모든 노드에 대해 별도의 카운터를 가져옵니다.  
   
 -   병렬 스캔이 있는 경우 이 DMV는 스캔에 대해 작동하는 각 병렬 스레드의 카운터를 보고합니다.
  
-S p 1 부터는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] *표준 쿼리 실행 통계를 프로 파일링* 하는 것이 *경량 쿼리 실행 통계 프로 파일링 인프라*와 나란히 있습니다. `SET STATISTICS XML ON`및는 `SET STATISTICS PROFILE ON` 항상 *표준 쿼리 실행 통계 프로 파일링 인프라*를 사용 합니다. 를 `sys.dm_exec_query_profiles` 채우도록 쿼리 프로 파일링 인프라 중 하나를 사용 하도록 설정 해야 합니다. 자세한 내용은 [쿼리 프로파일링 인프라](../../relational-databases/performance/query-profiling-infrastructure.md)를 참조하세요.    
+S p 1 부터는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] *표준 쿼리 실행 통계를 프로 파일링* 하는 것이 *경량 쿼리 실행 통계 프로 파일링 인프라*와 나란히 있습니다. `SET STATISTICS XML ON` 및는 `SET STATISTICS PROFILE ON` 항상 *표준 쿼리 실행 통계 프로 파일링 인프라*를 사용 합니다. 를 `sys.dm_exec_query_profiles` 채우도록 쿼리 프로 파일링 인프라 중 하나를 사용 하도록 설정 해야 합니다. 자세한 내용은 [쿼리 프로파일링 인프라](../../relational-databases/performance/query-profiling-infrastructure.md)를 참조하세요.    
 
 >[!NOTE]
 > 조사 중인 쿼리는 쿼리 프로 파일링 인프라를 사용 하도록 설정한 **후** 시작 해야 합니다. 쿼리를 시작한 후에 사용 하도록 설정 하면에서 결과가 생성 되지 않습니다 `sys.dm_exec_query_profiles` . 쿼리 프로 파일링 인프라를 사용 하도록 설정 하는 방법에 대 한 자세한 내용은 [쿼리 프로 파일링 인프라](../../relational-databases/performance/query-profiling-infrastructure.md)를 참조 하세요.
@@ -92,7 +93,7 @@ S p 1 부터는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] *표준 쿼리
 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]및 AZURE SQL Managed Instance에는 `VIEW DATABASE STATE` 데이터베이스 역할의 권한 및 멤버 자격이 필요 `db_owner` 합니다.   
 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]Premium 계층에서는 데이터베이스에 대 한 권한이 필요 합니다 `VIEW DATABASE STATE` . [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]표준 및 기본 계층에서는 **서버 관리자** 또는 **Azure Active Directory 관리자** 계정이 필요 합니다.   
    
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  1 단계: 분석할 쿼리를 실행 하려는 세션에 로그인 `sys.dm_exec_query_profiles` 합니다. 프로 파일링 사용을 위해 쿼리를 구성 `SET STATISTICS PROFILE ON` 합니다. 동일한 세션에서 쿼리를 실행합니다.  
   
 ```sql  

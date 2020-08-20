@@ -1,4 +1,5 @@
 ---
+description: sp_add_maintenance_plan_db(Transact-SQL)
 title: sp_add_maintenance_plan_db (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 76f4fefa-5b99-4deb-beed-e198987a45a9
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8b3f28d23925e76383b30a82e907394e05b2b7ed
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 5d8369e3cdd8ad7d7c943e715361cbd26d99bb00
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85879737"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474636"
 ---
 # <a name="sp_add_maintenance_plan_db-transact-sql"></a>sp_add_maintenance_plan_db(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,9 +46,9 @@ sp_add_maintenance_plan_db [ @plan_id = ] 'plan_id' ,
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @plan_id = ] 'plan_id'`유지 관리 계획의 계획 ID를 지정 합니다. *plan_id* 은 **UNIQUEIDENTIFIER**이며 유효한 id 여야 합니다.  
+`[ @plan_id = ] 'plan_id'` 유지 관리 계획의 계획 ID를 지정 합니다. *plan_id* 은 **UNIQUEIDENTIFIER**이며 유효한 id 여야 합니다.  
   
-`[ @db_name = ] 'database_name'`유지 관리 계획에 추가할 데이터베이스의 이름을 지정 합니다. 계획에 추가하기 전에 데이터베이스를 만들거나 데이터베이스가 이미 있어야 합니다. *database_name*은 **sysname**입니다.  
+`[ @db_name = ] 'database_name'` 유지 관리 계획에 추가할 데이터베이스의 이름을 지정 합니다. 계획에 추가하기 전에 데이터베이스를 만들거나 데이터베이스가 이미 있어야 합니다. *database_name*은 **sysname**입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -58,7 +59,7 @@ sp_add_maintenance_plan_db [ @plan_id = ] 'plan_id' ,
 ## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할의 멤버만 **sp_add_maintenance_plan_db**를 실행할 수 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  이 예에서는 **sp_add_maintenance_plan**에서 만든 유지 관리 계획에 **AdventureWorks2012** 데이터베이스를 추가 합니다.  
   
 ```  

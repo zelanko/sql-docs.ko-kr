@@ -1,4 +1,5 @@
 ---
+description: ODBC 드라이버에서 연결 풀 인식 개발
 title: ODBC 드라이버에서 연결 풀 인식 개발 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: c63d5cae-24fc-4fee-89a9-ad0367cddc3e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f77fea1d8439ac9ce7374b7dd47db5665686cfbc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 519a2b64f6a5330b8c8fde458323c6c900941025
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81283433"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476275"
 ---
 # <a name="developing-connection-pool-awareness-in-an-odbc-driver"></a>ODBC 드라이버에서 연결 풀 인식 개발
 이 항목에서는 드라이버에서 연결 풀링 서비스를 제공 하는 방법에 대 한 정보가 포함 된 ODBC 드라이버 개발에 대 한 세부 정보를 설명 합니다.  

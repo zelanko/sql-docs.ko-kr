@@ -1,4 +1,5 @@
 ---
+description: 데이터베이스에 지속형 로그 버퍼 추가
 title: 데이터베이스에 지속형 로그 버퍼 추가
 ms.custom: ''
 ms.date: 10/30/2019
@@ -18,12 +19,12 @@ ms.assetid: 8ead516a-1334-4f40-84b2-509d0a8ffa45
 author: briancarrig
 ms.author: brcarrig
 manager: amitban
-ms.openlocfilehash: c325713cff5ad96d88b2cf3a3e54cc8759fcc968
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: cf3289d9d233da56c22739d3912045c2cdaa7554
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727587"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476240"
 ---
 # <a name="add-persisted-log-buffer-to-a-database"></a>데이터베이스에 지속형 로그 버퍼 추가
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

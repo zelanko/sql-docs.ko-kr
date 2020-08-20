@@ -1,4 +1,5 @@
 ---
+description: sp_addlinkedserver(Transact-SQL)
 title: sp_addlinkedserver (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/12/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: fed3adb0-4c15-4a1a-8acd-1b184aff558f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 401fd85dec1370f81845b77de6e078ea18269891
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+ms.openlocfilehash: 5bb18a45998661d3252c41da4222dfd24a585237
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87823338"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474561"
 ---
 # <a name="sp_addlinkedserver-transact-sql"></a>sp_addlinkedserver(Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -89,13 +90,13 @@ sp_addlinkedserver [ @server= ] 'server' [ , [ @srvproduct= ] 'product_name' ]
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 공급자|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] <sup>1</sup> (기본값)||||||  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 공급자||**SQLNCLI**|기본 인스턴스에 대한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 네트워크 이름|||데이터베이스 이름(옵션)|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 공급자||**SQLNCLI**|*서버 이름* \\ *instancename* (특정 인스턴스의 경우)|||데이터베이스 이름(옵션)|  
-|Oracle 버전 8 이상|Oracle Provider for OLE DB|임의의 값|**OraOLEDB.Oracle**|Oracle 데이터베이스의 별칭||||  
-|Access/Jet|Microsoft OLE DB Provider for Jet|임의의 값|**Microsoft.Jet.OLEDB.4.0**|Jet 데이터베이스 파일의 전체 경로||||  
-|ODBC 데이터 원본|ODBC용 Microsoft OLE DB 공급자|임의의 값|**MSDASQL**|ODBC 데이터 원본의 시스템 DSN||||  
-|ODBC 데이터 원본|ODBC용 [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB 공급자|임의의 값|**MSDASQL**|||ODBC 연결 문자열||  
-|파일 시스템|[!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for Indexing Service|임의의 값|**MSIDXS**|인덱싱 서비스 카탈로그 이름||||  
-|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 스프레드시트|[!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for Jet|임의의 값|**Microsoft.Jet.OLEDB.4.0**|Excel 파일의 전체 경로||Excel 5.0||  
-|IBM DB2 데이터베이스|[!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for DB2|임의의 값|**DB2OLEDB**|||[!INCLUDE[msCoName](../../includes/msconame-md.md)]OLE DB Provider FOR DB2 설명서를 참조 하세요.|DB2 데이터베이스의 카탈로그 이름|  
+|Oracle 버전 8 이상|Oracle Provider for OLE DB|모두|**OraOLEDB.Oracle**|Oracle 데이터베이스의 별칭||||  
+|Access/Jet|Microsoft OLE DB Provider for Jet|모두|**Microsoft.Jet.OLEDB.4.0**|Jet 데이터베이스 파일의 전체 경로||||  
+|ODBC 데이터 원본|ODBC용 Microsoft OLE DB 공급자|모두|**MSDASQL**|ODBC 데이터 원본의 시스템 DSN||||  
+|ODBC 데이터 원본|ODBC용 [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB 공급자|모두|**MSDASQL**|||ODBC 연결 문자열||  
+|파일 시스템|[!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for Indexing Service|모두|**MSIDXS**|인덱싱 서비스 카탈로그 이름||||  
+|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 스프레드시트|[!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for Jet|모두|**Microsoft.Jet.OLEDB.4.0**|Excel 파일의 전체 경로||Excel 5.0||  
+|IBM DB2 데이터베이스|[!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for DB2|모두|**DB2OLEDB**|||[!INCLUDE[msCoName](../../includes/msconame-md.md)]OLE DB Provider FOR DB2 설명서를 참조 하세요.|DB2 데이터베이스의 카탈로그 이름|  
   
  <sup>1</sup> 연결 된 서버를 설정 하는이 방법은 연결 된 서버의 이름을 원격 인스턴스의 네트워크 이름과 동일 하 게 강제 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *Data_source* 를 사용 하 여 서버를 지정 합니다.  
   
@@ -115,7 +116,7 @@ sp_addlinkedserver [ @server= ] 'server' [ , [ @srvproduct= ] 'product_name' ]
 ## <a name="permissions"></a>사용 권한  
  `sp_addlinkedserver`문에 `ALTER ANY LINKED SERVER` 권한이 필요 합니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]( **새 연결 된 서버** 대화 상자는 고정 서버 역할의 멤버 자격이 필요한 방식으로 구현 됩니다 `sysadmin` .  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-using-the-microsoft-sql-server-ole-db-provider"></a>A. Microsoft SQL Server OLE DB 공급자 사용  
  다음 예에서는 `SEATTLESales`라는 연결된 서버를 만듭니다. 제품 이름은 `SQL Server`이고 공급자 이름은 사용하지 않았습니다.  
@@ -325,13 +326,13 @@ SELECT * FROM myLinkedServer.myDatabase.dbo.myTable
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;분산 쿼리 저장 프로시저](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;분산 쿼리 저장 프로시저 ](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)   
  [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
  [Transact-sql&#41;sp_addserver &#40;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
  [Transact-sql&#41;sp_dropserver &#40;](../../relational-databases/system-stored-procedures/sp-dropserver-transact-sql.md)   
  [Transact-sql&#41;sp_serveroption &#40;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)   
  [Transact-sql&#41;sp_setnetname &#40;](../../relational-databases/system-stored-procedures/sp-setnetname-transact-sql.md)   
- [Transact-sql&#41;&#40;시스템 저장 프로시저](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;시스템 저장 프로시저 ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [시스템 테이블&#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
   
   

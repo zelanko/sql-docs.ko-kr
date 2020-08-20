@@ -1,4 +1,5 @@
 ---
+description: sp_autostats(Transact-SQL)
 title: sp_autostats (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ ms.assetid: d1df8c15-ee73-49eb-9d13-6e98943c3e38
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ef219cd00c8603fce6c03e92bb5f540bd954e81a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 113b17db3bd06b8855b91bea2b67b96831b42ac1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716160"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474478"
 ---
 # <a name="sp_autostats-transact-sql"></a>sp_autostats(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -44,9 +45,9 @@ sp_autostats [ @tblname = ] 'table_or_indexed_view_name'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @tblname = ] 'table_or_indexed_view_name'`AUTO_UPDATE_STATISTICS 옵션을 표시할 테이블 또는 인덱싱된 뷰의 이름입니다. *table_or_indexed_view_name* 은 **nvarchar (776)** 이며 기본값은 없습니다.  
+`[ @tblname = ] 'table_or_indexed_view_name'` AUTO_UPDATE_STATISTICS 옵션을 표시할 테이블 또는 인덱싱된 뷰의 이름입니다. *table_or_indexed_view_name* 은 **nvarchar (776)** 이며 기본값은 없습니다.  
   
-`[ @flagc = ] 'stats_flag'`AUTO_UPDATE_STATISTICS 옵션을 다음 값 중 하나로 업데이트 합니다.  
+`[ @flagc = ] 'stats_flag'` AUTO_UPDATE_STATISTICS 옵션을 다음 값 중 하나로 업데이트 합니다.  
   
  **ON** = ON  
   
@@ -54,7 +55,7 @@ sp_autostats [ @tblname = ] 'table_or_indexed_view_name'
   
  *Stats_flag* 지정 되지 않은 경우 현재 AUTO_UPDATE_STATISTICS 설정을 표시 합니다. *stats_flag* 는 **varchar (10)** 이며 기본값은 NULL입니다.  
   
-`[ @indname = ] 'statistics_name'`AUTO_UPDATE_STATISTICS 옵션을 표시 하거나 업데이트할 통계의 이름입니다. 인덱스에 대한 통계를 표시하려면 인덱스 이름을 사용하면 됩니다. 인덱스와 해당 통계 개체는 동일한 이름을 갖습니다.  
+`[ @indname = ] 'statistics_name'` AUTO_UPDATE_STATISTICS 옵션을 표시 하거나 업데이트할 통계의 이름입니다. 인덱스에 대한 통계를 표시하려면 인덱스 이름을 사용하면 됩니다. 인덱스와 해당 통계 개체는 동일한 이름을 갖습니다.  
   
  *statistics_name* 는 **sysname**이며 기본값은 NULL입니다.  
   
@@ -117,12 +118,12 @@ GO
 ## <a name="see-also"></a>참고 항목  
  [통계](../../relational-databases/statistics/statistics.md)   
  [ALTER DATABASE SET 옵션&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
- [Transact-sql&#41;&#40;저장 프로시저 데이터베이스 엔진](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [Transact-sql&#41;&#40;통계 만들기](../../t-sql/statements/create-statistics-transact-sql.md)   
- [DBCC SHOW_STATISTICS &#40;Transact-sql&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
- [DROP STATISTICS &#40;Transact-sql&#41;](../../t-sql/statements/drop-statistics-transact-sql.md)   
+ [Transact-sql&#41;&#40;저장 프로시저 데이터베이스 엔진 ](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [CREATE STATISTICS&#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)   
+ [DBCC SHOW_STATISTICS&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
+ [DROP STATISTICS&#40;Transact-SQL&#41;](../../t-sql/statements/drop-statistics-transact-sql.md)   
  [Transact-sql&#41;sp_createstats &#40;](../../relational-databases/system-stored-procedures/sp-createstats-transact-sql.md)   
- [Transact-sql&#41;&#40;통계 업데이트](../../t-sql/statements/update-statistics-transact-sql.md)   
+ [UPDATE STATISTICS&#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

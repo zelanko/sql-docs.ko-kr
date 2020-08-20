@@ -1,4 +1,5 @@
 ---
+description: sp_changemergepublication(Transact-SQL)
 title: sp_changemergepublication (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 81fe1994-7678-4852-980b-e02fedf1e796
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ba7a6785952152632a9435269bc7b4a9b236ad38
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 46fef8eff54b4a27957191e2456df90ff77f72c4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85872514"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474495"
 ---
 # <a name="sp_changemergepublication-transact-sql"></a>sp_changemergepublication(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,11 +42,11 @@ sp_changemergepublication [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @publication = ] 'publication'`게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 없습니다.  
+`[ @publication = ] 'publication'` 게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @property = ] 'property'`지정 된 게시에 대해 변경할 속성입니다. *속성* 은 **sysname**이며 다음 표에 나열 된 값 중 하나일 수 있습니다.  
+`[ @property = ] 'property'` 지정 된 게시에 대해 변경할 속성입니다. *속성* 은 **sysname**이며 다음 표에 나열 된 값 중 하나일 수 있습니다.  
   
-`[ @value = ] 'value'`지정 된 속성의 새 값입니다. *value* 는 **nvarchar (255)** 이며 다음 표에 나열 된 값 중 하나일 수 있습니다.  
+`[ @value = ] 'value'` 지정 된 속성의 새 값입니다. *value* 는 **nvarchar (255)** 이며 다음 표에 나열 된 값 중 하나일 수 있습니다.  
   
  이 표에서는 변경할 수 있는 게시의 속성 및 그 속성의 값에 대한 제한에 대해 설명합니다.  
   
@@ -53,7 +54,7 @@ sp_changemergepublication [ @publication= ] 'publication'
 |--------------|-----------|-----------------|  
 |**allow_anonymous**|**true**|익명 구독을 허용합니다.|  
 ||**false**|익명 구독을 허용하지 않습니다.|  
-|**allow_partition_realignment**|**true**|더 이상 구독자의 파티션에 속하지 않는 데이터를 제거하여 파티션 변경 결과를 반영할 수 있도록 구독자로 삭제 내용을 보냅니다. 이것은 기본적인 동작입니다.|  
+|**allow_partition_realignment**|**true**|더 이상 구독자의 파티션에 속하지 않는 데이터를 제거하여 파티션 변경 결과를 반영할 수 있도록 구독자로 삭제 내용을 보냅니다. 기본 동작입니다.|  
 ||**false**|이전 파티션의 데이터가 구독자에 남습니다. 게시자에서 이 데이터에 대해 변경한 내용은 구독자로 복제되지 않습니다. 대신 구독자에서 변경한 내용이 게시자로 복제됩니다. 기록 목적으로 이전 파티션의 데이터에 액세스해야 하는 경우 구독에 해당 데이터를 보존하기 위해 사용합니다.|  
 |**allow_pull**|**true**|지정된 게시에 대해 끌어오기 구독을 허용합니다.|  
 ||**false**|지정된 게시에 대해 끌어오기 구독을 허용하지 않습니다.|  
@@ -78,7 +79,7 @@ sp_changemergepublication [ @publication= ] 'publication'
 ||**구독자**|충돌 레코드가 충돌을 발생시킨 구독자에 저장됩니다. 구독자에 대해서는 지원 되지 않습니다 [!INCLUDE[ssEW](../../includes/ssew-md.md)] *.*|  
 ||**양방향**|충돌 레코드가 게시자와 구독자 둘 다에 저장됩니다.|  
 |**conflict_retention**||충돌을 보존할 보존 기간 (일)을 지정 하는 **int** 입니다. *Conflict_retention* 를 **0** 으로 설정 하면 충돌 정리가 필요 하지 않습니다.|  
-|**한**||게시에 대한 설명입니다.|  
+|**description**||게시에 대한 설명입니다.|  
 |**dynamic_filters**|**true**|동적 절에 따라 게시를 필터링합니다.|  
 ||**false**|게시를 동적으로 필터링하지 않습니다.|  
 |**enabled_for_internet**|**true**|인터넷에서 게시를 사용할 수 있습니다. FTP(파일 전송 프로토콜)를 사용하여 구독자로 스냅샷을 전송할 수 있습니다. _게시에 대한 동기화 파일은 C:\Program Files\Microsoft SQL Server\MSSQL\Repldata\ftp 디렉터리에 저장됩니다.|  
@@ -120,7 +121,7 @@ sp_changemergepublication [ @publication= ] 'publication'
 |**web_synchronization_url**||웹 동기화에 사용되는 인터넷 URL의 기본값입니다.|  
 |NULL(기본값)||*속성*에 대해 지원 되는 값 목록을 반환 합니다.|  
   
-`[ @force_invalidate_snapshot = ] force_invalidate_snapshot`이 저장 프로시저가 수행한 동작으로 인해 기존 스냅숏이 무효화 될 수 있음을 승인 합니다. *force_invalidate_snapshot* 은 **bit**이며 기본값은 **0**입니다.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` 이 저장 프로시저가 수행한 동작으로 인해 기존 스냅숏이 무효화 될 수 있음을 승인 합니다. *force_invalidate_snapshot* 은 **bit**이며 기본값은 **0**입니다.  
   
  **0** 은 게시를 변경 해도 스냅숏이 무효화 되지 않도록 지정 합니다. 저장 프로시저가 새 스냅샷을 필요로 하는 변경을 감지하면 오류가 발생하며 변경이 수행되지 않습니다.  
   
@@ -128,7 +129,7 @@ sp_changemergepublication [ @publication= ] 'publication'
   
  변경 시 새 스냅샷을 생성해야 하는 속성에 대해서는 주의 섹션을 참조하십시오.  
   
-`[ @force_reinit_subscription = ] force_reinit_subscription`이 저장 프로시저가 수행한 동작으로 인해 기존 구독을 다시 초기화 해야 할 수도 있습니다. *force_reinit_subscription* 은 **bit** 이며 기본값은 **0**입니다.  
+`[ @force_reinit_subscription = ] force_reinit_subscription` 이 저장 프로시저가 수행한 동작으로 인해 기존 구독을 다시 초기화 해야 할 수도 있습니다. *force_reinit_subscription* 은 **bit** 이며 기본값은 **0**입니다.  
   
  **0** 은 게시를 변경 하면 구독을 다시 초기화할 필요가 없음을 지정 합니다. 저장 프로시저가 기존 구독을 다시 초기화해야 하는 변경을 감지하면 오류가 발생하며 변경이 수행되지 않습니다.  
   
@@ -191,7 +192,7 @@ sp_changemergepublication [ @publication= ] 'publication'
  [게시 및 아티클 속성 변경](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
  [Transact-sql&#41;sp_addmergepublication &#40;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)   
  [Transact-sql&#41;sp_dropmergepublication &#40;](../../relational-databases/system-stored-procedures/sp-dropmergepublication-transact-sql.md)   
- [Transact-sql&#41;sp_helpmergepublication &#40;](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)   
+ [sp_helpmergepublication&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)   
  [복제 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

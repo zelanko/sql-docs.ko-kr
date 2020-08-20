@@ -1,4 +1,5 @@
 ---
+description: sp_dbmmonitorresults(Transact-SQL)
 title: sp_dbmmonitorresults (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: d575e624-7d30-4eae-b94f-5a7b9fa5427e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d90b4d76be9d75bbad28053a1e61ffb1c12212fa
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d302c6c592dda3dc4612310a3af8cabc0113aef6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85865672"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474428"
 ---
 # <a name="sp_dbmmonitorresults-transact-sql"></a>sp_dbmmonitorresults(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -76,7 +77,7 @@ sp_dbmmonitorresults database_name
  1 = 결과를 계산 하기 전에 **sp_dbmmonitorupdate** 를 호출 하 여 데이터베이스의 상태를 업데이트 합니다. 그러나 상태 테이블이 이전 15 초 내에 업데이트 되었거나 사용자가 **sysadmin** 고정 서버 역할의 멤버가 아닌 경우에는 상태를 업데이트 하지 않고 **sp_dbmmonitorresults** 실행 됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
- 없음  
+ None  
   
 ## <a name="result-sets"></a>결과 집합  
  지정한 데이터베이스에 대해 요청된 개수의 기록 상태 행을 반환합니다. 각 행에는 다음 정보가 들어 있습니다.  
@@ -108,7 +109,7 @@ sp_dbmmonitorresults database_name
 > [!NOTE]  
 >  **Sp_dbmmonitorupdate** 처음 실행 될 때 **msdb** 데이터베이스에 **dbm_monitor** 고정 데이터베이스 역할을 만듭니다. **Sysadmin** 고정 서버 역할의 멤버는 **dbm_monitor** 고정 데이터베이스 역할에 사용자를 추가할 수 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 데이터베이스의 상태를 업데이트하지 않고 이전 2시간 동안 기록된 행을 반환합니다.  
   
 ```  
@@ -117,7 +118,7 @@ EXEC sp_dbmmonitorresults AdventureWorks2012, 2, 0;
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [데이터베이스 미러링 &#40;SQL Server&#41;모니터링](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
+ [데이터베이스 미러링 모니터링&#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
  [Transact-sql&#41;sp_dbmmonitorchangemonitoring &#40;](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangemonitoring-transact-sql.md)   
  [Transact-sql&#41;sp_dbmmonitoraddmonitoring &#40;](../../relational-databases/system-stored-procedures/sp-dbmmonitoraddmonitoring-transact-sql.md)   
  [Transact-sql&#41;sp_dbmmonitordropmonitoring &#40;](../../relational-databases/system-stored-procedures/sp-dbmmonitordropmonitoring-transact-sql.md)   

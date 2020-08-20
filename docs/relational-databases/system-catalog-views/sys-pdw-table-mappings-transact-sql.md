@@ -1,4 +1,5 @@
 ---
+description: sys. pdw_table_mappings (Transact-sql)
 title: sys. pdw_table_mappings (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/01/2018
@@ -12,12 +13,12 @@ ms.assetid: 1af14fe0-e562-4f48-a7f0-783f300a88ac
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 01420356b4097fc7126eabd964b22173b91b38cd
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 50d2a8869ea5eec3f8a0dcd560f1fa7ef0be59e1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394023"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475345"
 ---
 # <a name="syspdw_table_mappings-transact-sql"></a>sys. pdw_table_mappings (Transact-sql)
 [!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]

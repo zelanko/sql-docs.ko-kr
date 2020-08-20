@@ -1,4 +1,5 @@
 ---
+description: sp_addlogin(Transact-SQL)
 title: sp_addlogin (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 030f19c3-a5e3-4b53-bfc4-de4bfca0fddc
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 477393f34743ba0643384762164697b845cadde4
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 585461904b68f26d3ea71e255b24e9ed6d38786a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85877385"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474565"
 ---
 # <a name="sp_addlogin-transact-sql"></a>sp_addlogin(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85877385"
   사용자가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결할 수 있도록 하는 새 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인을 만듭니다.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]대신 [CREATE LOGIN](../../t-sql/statements/create-login-transact-sql.md) 을 사용 해야 합니다.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 대신 [CREATE LOGIN](../../t-sql/statements/create-login-transact-sql.md) 을 사용 해야 합니다.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
@@ -74,7 +75,7 @@ sp_addlogin [ @loginame = ] 'login'
   
 |값|Description|  
 |-----------|-----------------|  
-|NULL|암호를 일반 텍스트로 전달합니다. 기본값입니다.|  
+|NULL|암호를 일반 텍스트로 전달합니다. 이것이 기본값입니다.|  
 |**skip_encryption**|암호가 이미 해시되어 있습니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 다시 해시하지 않고 값을 저장합니다.|  
 |**skip_encryption_old**|제공된 암호가 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 의해 해시되었습니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 다시 해시하지 않고 값을 저장합니다. 이 옵션은 업그레이드 목적으로만 제공됩니다.|  
   
@@ -96,7 +97,7 @@ sp_addlogin [ @loginame = ] 'login'
   
  다음 표에서는 sp_addlogin과 함께 사용하는 몇 가지 저장 프로시저를 보여 줍니다.  
   
-|저장 프로시저|설명|  
+|저장 프로시저|Description|  
 |----------------------|-----------------|  
 |[sp_grantlogin](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)|Windows 사용자 또는 그룹을 추가합니다.|  
 |[sp_password](../../relational-databases/system-stored-procedures/sp-password-transact-sql.md)|사용자의 암호를 변경합니다.|  
@@ -106,7 +107,7 @@ sp_addlogin [ @loginame = ] 'login'
 ## <a name="permissions"></a>사용 권한  
  ALTER ANY LOGIN 권한이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-creating-a-sql-server-login"></a>A. SQL Server 로그인 만들기  
  다음 예에서는 `Victoria`라는 사용자에 대한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인을 만듭니다. 암호는 `B1r12-36`이며 기본 데이터베이스는 지정하지 않습니다.  
@@ -139,7 +140,7 @@ EXEC sp_addlogin 'Michael', 'B548bmM%f6', 'AdventureWorks2012', 'us_english', 0x
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;로그인 &#40;만들기](../../t-sql/statements/create-login-transact-sql.md)   
+ [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
  [Transact-sql&#41;sp_droplogin &#40;](../../relational-databases/system-stored-procedures/sp-droplogin-transact-sql.md)   
  [Transact-sql&#41;sp_helpuser &#40;](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)   
  [Transact-sql&#41;sp_revokelogin &#40;](../../relational-databases/system-stored-procedures/sp-revokelogin-transact-sql.md)   

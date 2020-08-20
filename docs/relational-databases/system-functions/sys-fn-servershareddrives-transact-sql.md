@@ -1,4 +1,5 @@
 ---
+description: sys.fn_servershareddrives(Transact-SQL)
 title: sys. fn_servershareddrives (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: ff01eff7-8cb6-460c-ba7a-6a52bda6d471
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fa0b61680108d669ce023797b787ccb0e1d9c840
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d3fa98a1e24e20469da6fd39bf64db61451582d3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898318"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474631"
 ---
 # <a name="sysfn_servershareddrives-transact-sql"></a>sys.fn_servershareddrives(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -57,7 +58,7 @@ fn_servershareddrives()
 ## <a name="permissions"></a>사용 권한  
  사용자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 VIEW SERVER STATE 권한이 있어야 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `fn_servershareddrives`를 사용하여 클러스터형 서버 인스턴스에서 쿼리합니다.  
   
 ```  

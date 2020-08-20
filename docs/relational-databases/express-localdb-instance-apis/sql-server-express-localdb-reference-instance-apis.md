@@ -1,4 +1,5 @@
 ---
+description: SQL Server Express LocalDB 참조 - 인스턴스 API
 title: SQL Server Express LocalDB 인스턴스 API 참조 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -10,12 +11,12 @@ ms.topic: reference
 ms.assetid: faec46da-0536-4de3-96f3-83e607c8a8b6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2122ff4cddd045b3d73567af660ddc925d4152ee
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8a7d1f9461e766ec76ab5c17051143b67fd7914c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85767789"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475821"
 ---
 # <a name="sql-server-express-localdb-reference---instance-apis"></a>SQL Server Express LocalDB 참조 - 인스턴스 API
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

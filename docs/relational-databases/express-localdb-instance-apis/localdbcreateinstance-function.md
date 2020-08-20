@@ -1,4 +1,5 @@
 ---
+description: LocalDBCreateInstance 함수
 title: LocalDBCreateInstance 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ apitype: DLLExport
 ms.assetid: 3eebb485-8a53-4a79-82a9-57b8de9f8e84
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7e06c3c309b29f52d68b765210999469973331ce
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9bf1d0f11ce3030ead3adb012211460227b8c17e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85789507"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475925"
 ---
 # <a name="localdbcreateinstance-function"></a>LocalDBCreateInstance 함수
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

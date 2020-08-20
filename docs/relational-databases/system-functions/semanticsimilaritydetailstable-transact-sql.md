@@ -1,4 +1,5 @@
 ---
+description: semanticsimilaritydetailstable(Transact-SQL)
 title: semanticsimilaritydetailstable (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 038d751a-fca5-4b4c-9129-cba741a4e173
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 4b264f5276ad9d9f411fcdd14550130eb412a1b0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fa94a6c16eaaf2548b3c0375d43848d5e03a7f12
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771559"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474590"
 ---
 # <a name="semanticsimilaritydetailstable-transact-sql"></a>semanticsimilaritydetailstable(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,7 +47,7 @@ SEMANTICSIMILARITYDETAILSTABLE
     )  
 ```  
   
-##  <a name="arguments"></a><a name="Arguments"></a>인수의  
+##  <a name="arguments"></a><a name="Arguments"></a> 인수  
  **table**  
  전체 텍스트 및 의미 체계 인덱싱을 사용하도록 설정된 테이블의 이름입니다.  
   
@@ -71,7 +72,7 @@ SEMANTICSIMILARITYDETAILSTABLE
 ## <a name="table-returned"></a>반환된 테이블  
  다음 표에서는 이 행 집합 함수가 반환하는 키 구에 대해 설명합니다.  
   
-|Column_name|형식|설명|  
+|Column_name|Type|설명|  
 |------------------|----------|-----------------|  
 |**키 구**|**VARCHAR**|원본 문서와 대응 문서 간의 유사성에 기여하는 키 구.|  
 |**점수**|**실제로**|두 문서 간에 유사성이 있는 다른 모든 키 구를 기준으로 한 이 키 구의 상대적 값입니다.<br /><br /> 이 값은 [0.0, 1.0] 범위의 소수 10진수 값입니다. 점수가 높을수록 유사성이 높으며 1.0이 최대 점수입니다.|  

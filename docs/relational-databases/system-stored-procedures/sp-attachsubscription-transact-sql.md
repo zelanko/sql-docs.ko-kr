@@ -1,4 +1,5 @@
 ---
+description: sp_attachsubscription(Transact-SQL)
 title: sp_attachsubscription (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b9bbda36-a46a-4327-a01e-9cd632e4791b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c039ce9a5f54f3c0498ef613df15353217d91036
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f30b8e2577238dd0514c96709f0ed1d9b7c9a24a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923467"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474545"
 ---
 # <a name="sp_attachsubscription-transact-sql"></a>sp_attachsubscription(Transact-SQL)
 [!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]
@@ -53,51 +54,51 @@ sp_attachsubscription [ @dbname = ] 'dbname'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @dbname = ] 'dbname'`이름으로 대상 구독 데이터베이스를 지정 하는 문자열입니다. *dbname* 은 **sysname**이며 기본값은 없습니다.  
+`[ @dbname = ] 'dbname'` 이름으로 대상 구독 데이터베이스를 지정 하는 문자열입니다. *dbname* 은 **sysname**이며 기본값은 없습니다.  
   
-`[ @filename = ] 'filename'`기본 MDF (**master** 데이터 파일)의 이름 및 물리적 위치입니다. *filename* 은 **nvarchar (260)** 이며 기본값은 없습니다.  
+`[ @filename = ] 'filename'` 기본 MDF (**master** 데이터 파일)의 이름 및 물리적 위치입니다. *filename* 은 **nvarchar (260)** 이며 기본값은 없습니다.  
   
-`[ @subscriber_security_mode = ] 'subscriber_security_mode'`동기화 시 구독자에 연결할 때 사용할 구독자의 보안 모드입니다. *subscriber_security_mode* 은 **int**이며 기본값은 NULL입니다.  
+`[ @subscriber_security_mode = ] 'subscriber_security_mode'` 동기화 시 구독자에 연결할 때 사용할 구독자의 보안 모드입니다. *subscriber_security_mode* 은 **int**이며 기본값은 NULL입니다.  
   
 > [!NOTE]  
 >  Windows 인증을 사용해야 합니다. *Subscriber_security_mode* **1** (Windows 인증)이 아니면 오류가 반환 됩니다.  
   
-`[ @subscriber_login = ] 'subscriber_login'`동기화 시 구독자에 연결할 때 사용할 구독자 로그인 이름입니다. *subscriber_login* 는 **sysname**이며 기본값은 NULL입니다.  
+`[ @subscriber_login = ] 'subscriber_login'` 동기화 시 구독자에 연결할 때 사용할 구독자 로그인 이름입니다. *subscriber_login* 는 **sysname**이며 기본값은 NULL입니다.  
   
 > [!NOTE]  
 >  이 매개 변수는 더 이상 사용되지 않으며 이전 버전 스크립트와의 호환성을 위해서만 유지 관리됩니다. *Subscriber_security_mode* **1** 이 아니고 *subscriber_login* 를 지정 하면 오류가 반환 됩니다.  
   
-`[ @subscriber_password = ] 'subscriber_password'`구독자 암호입니다. *subscriber_password* 는 **sysname**이며 기본값은 NULL입니다.  
+`[ @subscriber_password = ] 'subscriber_password'` 구독자 암호입니다. *subscriber_password* 는 **sysname**이며 기본값은 NULL입니다.  
   
 > [!NOTE]  
 >  이 매개 변수는 더 이상 사용되지 않으며 이전 버전 스크립트와의 호환성을 위해서만 유지 관리됩니다. *Subscriber_security_mode* **1** 이 아니고 *subscriber_password* 를 지정 하면 오류가 반환 됩니다.  
   
-`[ @distributor_security_mode = ] distributor_security_mode`동기화 할 때 배포자에 연결할 때 사용 하는 보안 모드입니다. *distributor_security_mode* 은 **int**이며 기본값은 **0**입니다. **0** 은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 지정 합니다. **1** 은 Windows 인증을 지정 합니다. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+`[ @distributor_security_mode = ] distributor_security_mode` 동기화 할 때 배포자에 연결할 때 사용 하는 보안 모드입니다. *distributor_security_mode* 은 **int**이며 기본값은 **0**입니다. **0** 은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 지정 합니다. **1** 은 Windows 인증을 지정 합니다. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
-`[ @distributor_login = ] 'distributor_login'`동기화 할 때 배포자에 연결 하는 데 사용 하는 배포자 로그인입니다. *distributor_security_mode* 가 **0**으로 설정 된 경우 *distributor_login* 필요 합니다. *distributor_login* 는 **sysname**이며 기본값은 NULL입니다.  
+`[ @distributor_login = ] 'distributor_login'` 동기화 할 때 배포자에 연결 하는 데 사용 하는 배포자 로그인입니다. *distributor_security_mode* 가 **0**으로 설정 된 경우 *distributor_login* 필요 합니다. *distributor_login* 는 **sysname**이며 기본값은 NULL입니다.  
   
-`[ @distributor_password = ] 'distributor_password'`배포자 암호입니다. *distributor_security_mode* 가 **0**으로 설정 된 경우 *distributor_password* 필요 합니다. *distributor_password* 는 **sysname**이며 기본값은 NULL입니다. *Distributor_password* 값은 120 유니코드 문자 미만 이어야 합니다.  
-  
-> [!IMPORTANT]  
->  빈 암호를 사용하지 마세요. 강력한 암호를 사용하세요. 가능한 경우 런타임 시 사용자에게 보안 자격 증명을 입력하라는 메시지가 표시됩니다. 자격 증명을 스크립트 파일에 저장해야 하는 경우에는 파일에 무단으로 액세스하지 못하도록 보안을 설정해야 합니다.  
-  
-`[ @publisher_security_mode = ] publisher_security_mode`동기화 시 게시자에 연결할 때 사용 하는 보안 모드입니다. *publisher_security_mode* 은 **int**이며 기본값은 **1**입니다. **0**인 경우 인증을 지정 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . **1**인 경우 Windows 인증을 지정 합니다. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
-  
-`[ @publisher_login = ] 'publisher_login'`동기화 시 게시자에 연결할 때 사용 하는 로그인입니다. *publisher_login* 는 **sysname**이며 기본값은 NULL입니다.  
-  
-`[ @publisher_password = ] 'publisher_password'`게시자에 연결할 때 사용 되는 암호입니다. *publisher_password* 는 **sysname**이며 기본값은 NULL입니다. *Publisher_password* 값은 120 유니코드 문자 미만 이어야 합니다.  
+`[ @distributor_password = ] 'distributor_password'` 배포자 암호입니다. *distributor_security_mode* 가 **0**으로 설정 된 경우 *distributor_password* 필요 합니다. *distributor_password* 는 **sysname**이며 기본값은 NULL입니다. *Distributor_password* 값은 120 유니코드 문자 미만 이어야 합니다.  
   
 > [!IMPORTANT]  
 >  빈 암호를 사용하지 마세요. 강력한 암호를 사용하세요. 가능한 경우 런타임 시 사용자에게 보안 자격 증명을 입력하라는 메시지가 표시됩니다. 자격 증명을 스크립트 파일에 저장해야 하는 경우에는 파일에 무단으로 액세스하지 못하도록 보안을 설정해야 합니다.  
   
-`[ @job_login = ] 'job_login'`에이전트가 실행 되는 Windows 계정의 로그인입니다. *job_login* 은 **nvarchar (257)** 이며 기본값은 없습니다. 이 Windows 계정은 에이전트가 배포자에 연결할 때 항상 사용됩니다.  
+`[ @publisher_security_mode = ] publisher_security_mode` 동기화 시 게시자에 연결할 때 사용 하는 보안 모드입니다. *publisher_security_mode* 은 **int**이며 기본값은 **1**입니다. **0**인 경우 인증을 지정 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . **1**인 경우 Windows 인증을 지정 합니다. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
-`[ @job_password = ] 'job_password'`에이전트를 실행 하는 Windows 계정의 암호입니다. *job_password* 는 **sysname**이며 기본값은 없습니다. *Job_password* 값은 120 유니코드 문자 미만 이어야 합니다.  
+`[ @publisher_login = ] 'publisher_login'` 동기화 시 게시자에 연결할 때 사용 하는 로그인입니다. *publisher_login* 는 **sysname**이며 기본값은 NULL입니다.  
+  
+`[ @publisher_password = ] 'publisher_password'` 게시자에 연결할 때 사용 되는 암호입니다. *publisher_password* 는 **sysname**이며 기본값은 NULL입니다. *Publisher_password* 값은 120 유니코드 문자 미만 이어야 합니다.  
+  
+> [!IMPORTANT]  
+>  빈 암호를 사용하지 마세요. 강력한 암호를 사용하세요. 가능한 경우 런타임 시 사용자에게 보안 자격 증명을 입력하라는 메시지가 표시됩니다. 자격 증명을 스크립트 파일에 저장해야 하는 경우에는 파일에 무단으로 액세스하지 못하도록 보안을 설정해야 합니다.  
+  
+`[ @job_login = ] 'job_login'` 에이전트가 실행 되는 Windows 계정의 로그인입니다. *job_login* 은 **nvarchar (257)** 이며 기본값은 없습니다. 이 Windows 계정은 에이전트가 배포자에 연결할 때 항상 사용됩니다.  
+  
+`[ @job_password = ] 'job_password'` 에이전트를 실행 하는 Windows 계정의 암호입니다. *job_password* 는 **sysname**이며 기본값은 없습니다. *Job_password* 값은 120 유니코드 문자 미만 이어야 합니다.  
   
 > [!IMPORTANT]  
 >  가능한 경우 런타임 시 사용자에게 보안 자격 증명을 입력하라는 메시지가 표시됩니다. 자격 증명을 스크립트 파일에 저장해야 하는 경우에는 파일에 무단으로 액세스하지 못하도록 보안을 설정해야 합니다.  
   
-`[ @db_master_key_password = ] 'db_master_key_password'`사용자 정의 데이터베이스 마스터 키의 암호입니다. *db_master_key_password* 은 **nvarchar (524)** 이며 기본값은 NULL입니다. *Db_master_key_password* 지정 하지 않으면 기존 데이터베이스 마스터 키가 삭제 되 고 다시 생성 됩니다.  
+`[ @db_master_key_password = ] 'db_master_key_password'` 사용자 정의 데이터베이스 마스터 키의 암호입니다. *db_master_key_password* 은 **nvarchar (524)** 이며 기본값은 NULL입니다. *Db_master_key_password* 지정 하지 않으면 기존 데이터베이스 마스터 키가 삭제 되 고 다시 생성 됩니다.  
   
 > [!IMPORTANT]  
 >  가능한 경우 런타임 시 사용자에게 보안 자격 증명을 입력하라는 메시지가 표시됩니다. 자격 증명을 스크립트 파일에 저장해야 하는 경우에는 파일에 무단으로 액세스하지 못하도록 보안을 설정해야 합니다.  

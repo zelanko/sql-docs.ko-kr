@@ -1,4 +1,5 @@
 ---
+description: sp_addmergealternatepublisher(Transact-SQL)
 title: sp_addmergealternatepublisher (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: de46e0b1-d946-4021-bff6-2d8e3187656d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e6ef8e5152fb715172f6c04854e342c46b759f25
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 11e06e0dacb97d7c52b34874d90a1398561cc7dd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85757975"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474533"
 ---
 # <a name="sp_addmergealternatepublisher-transact-sql"></a>sp_addmergealternatepublisher(Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -45,21 +46,21 @@ sp_addmergealternatepublisher [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @publisher = ] 'publisher'`게시자의 이름입니다. *publisher* 는 **sysname**이며 기본값은 없습니다.  
+`[ @publisher = ] 'publisher'` 게시자의 이름입니다. *publisher* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @publisher_db = ] 'publisher_db'`게시 데이터베이스의 이름입니다. *publisher_db* 는 **sysname**이며 기본값은 없습니다.  
+`[ @publisher_db = ] 'publisher_db'` 게시 데이터베이스의 이름입니다. *publisher_db* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @publication = ] 'publication'`게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 없습니다.  
+`[ @publication = ] 'publication'` 게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @alternate_publisher = ] 'alternate_synchronization_partner'`대체 게시자의 이름입니다. *alternate_synchronization_partner* 는 **sysname**이며 기본값은 없습니다.  
+`[ @alternate_publisher = ] 'alternate_synchronization_partner'` 대체 게시자의 이름입니다. *alternate_synchronization_partner* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @alternate_publisher_db = ] 'alternate_publisher_db'`대체 게시자에 있는 게시 데이터베이스의 이름입니다. *alternate_publisher_db* 는 **sysname**이며 기본값은 없습니다.  
+`[ @alternate_publisher_db = ] 'alternate_publisher_db'` 대체 게시자에 있는 게시 데이터베이스의 이름입니다. *alternate_publisher_db* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @alternate_publication = ] 'alternate_synchronization_partner'`대체 동기화 파트너에 있는 게시의 이름입니다. *alternate_synchronization_partner* 는 **sysname**이며 기본값은 없습니다.  
+`[ @alternate_publication = ] 'alternate_synchronization_partner'` 대체 동기화 파트너에 있는 게시의 이름입니다. *alternate_synchronization_partner* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @alternate_distributor = ] 'alternate_distributor'`대체 동기화 파트너에 대 한 배포자의 이름입니다. *alternate_distributor* 는 **sysname**이며 기본값은 없습니다.  
+`[ @alternate_distributor = ] 'alternate_distributor'` 대체 동기화 파트너에 대 한 배포자의 이름입니다. *alternate_distributor* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @friendly_name = ] 'friendly_name'`대체 동기화 파트너를 구성 하는 게시자, 게시 및 배포자의 연결을 식별할 수 있는 표시 이름입니다. *friendly_name* 는 **nvarchar (255)** 이며 기본값은 NULL입니다.  
+`[ @friendly_name = ] 'friendly_name'` 대체 동기화 파트너를 구성 하는 게시자, 게시 및 배포자의 연결을 식별할 수 있는 표시 이름입니다. *friendly_name* 는 **nvarchar (255)** 이며 기본값은 NULL입니다.  
   
 `[ @reserved = ] 'reserved'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   

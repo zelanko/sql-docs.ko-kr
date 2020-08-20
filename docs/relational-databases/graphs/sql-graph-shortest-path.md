@@ -1,4 +1,5 @@
 ---
+description: SHORTEST_PATH (Transact-sql)
 title: 최단 경로 (SQL 그래프) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/01/2020
@@ -18,11 +19,12 @@ helpviewer_keywords:
 author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-ver15||=sqlallproducts-allversions||=azuresqldb-mi-current
-ms.openlocfilehash: 334b4ee83df73284abe7d20cdff66675d42039d5
-ms.sourcegitcommit: e6c260a139326f5a400a57ece812d39ef8b820bd
+ms.openlocfilehash: a77835335aa2fe3e9b5d4436dcac07556e9a3c26
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86032566"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475847"
 ---
 # <a name="shortest_path-transact-sql"></a>SHORTEST_PATH (Transact-sql)
 [!INCLUDE[tsql-appliesto-SQL 19-SQL DB-SQL MI](../../includes/applies-to-version/sqlserver2019-asdb-asdbmi.md)]
@@ -86,25 +88,25 @@ STRING_AGG 함수는 식과 구분 기호를 입력으로 사용 하 고 문자�
 
 **마지막 노드**: 마지막 노드는 일치 조건자의 화살표 방향에 관계 없이 트래버스 된 경로에서 마지막으로 표시 되는 노드를 참조 합니다. 예: `MATCH(SHORTEST_PATH(n(-(e)->p)+) )` 여기서 경로의 마지막 노드는 마지막으로 방문한 P 노드가 됩니다. 
 
-반면 마지막 노드는이 패턴에 대 한 출력 그래프 경로의 마지막 n 번째 노드입니다.`MATCH(SHORTEST_PATH((n<-(e)-)+p))`    
+반면 마지막 노드는이 패턴에 대 한 출력 그래프 경로의 마지막 n 번째 노드입니다. `MATCH(SHORTEST_PATH((n<-(e)-)+p))`    
 
-### <a name="sum"></a>합계
+### <a name="sum"></a>SUM
 이 함수는 트래버스하 경로에 나타난 제공 된 노드/가장자리 특성 값 또는 식의 합계를 반환 합니다.
 
-### <a name="count"></a>개수
+### <a name="count"></a>COUNT
 이 함수는 경로에서 원하는 node/edge 특성의 null이 아닌 값의 개수를 반환 합니다. COUNT 함수는 \* 노드 또는에 지 테이블 별칭이 있는 ' ' 연산자를 지원 합니다. 노드 또는에 지 테이블 별칭이 없으면의 사용법이 \* 모호 하 고 오류가 발생 합니다.
 
 ```syntaxsql
 {  COUNT( <expression> | <node_or_edge_alias>.* )  <order_clause>  }
 ```
 
-### <a name="avg"></a>평균
+### <a name="avg"></a>AVG
 제공 된 노드/가장자리 특성 값 또는 트래버스 된 경로에 나타난 식의 평균을 반환 합니다.
 
-### <a name="min"></a>최소
+### <a name="min"></a>MIN
 제공 된 노드/가장자리 특성 값 또는 트래버스 된 경로에 나타난 식의 최소값을 반환 합니다.
 
-### <a name="max"></a>최대
+### <a name="max"></a>MAX
 제공 된 노드/가장자리 특성 값 또는 트래버스 된 경로에 나타난 식의 최대값을 반환 합니다.
 
 ## <a name="remarks"></a>설명  
@@ -114,7 +116,7 @@ LAST_NODE은 shortest_path 내 에서만 지원 됩니다.
 경우에 따라 홉 수가 더 많은 쿼리에 대해 잘못 된 계획이 생성 될 수 있으며이로 인해 쿼리 실행 시간이 더 높아질 수 있습니다. Hash join 힌트를 사용 하면 도움이 될 수 있습니다.    
 
 
-## <a name="examples"></a>예 
+## <a name="examples"></a>예제 
 여기에 표시 된 예제 쿼리의 경우 [SQL Graph 샘플](./sql-graph-sample.md) 에서 만든 노드와에 지 테이블을 사용 합니다.
 
 ### <a name="a--find-shortest-path-between-2-people"></a>A.  2 명 사이의 최단 경로 찾기

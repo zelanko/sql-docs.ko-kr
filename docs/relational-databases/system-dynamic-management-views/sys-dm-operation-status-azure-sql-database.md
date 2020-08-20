@@ -1,4 +1,5 @@
 ---
+description: sys.dm_operation_status
 title: sys. dm_operation_status | Microsoft Docs
 ms.custom: ''
 ms.date: 06/05/2017
@@ -19,12 +20,12 @@ ms.assetid: cc847784-7f61-4c69-8b78-5f971bb24d61
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 080d12cdcf945fe34a2c8f1ab9ea7414e714da8c
-ms.sourcegitcommit: bc10ec0be5ddfc5f0bc220a9ac36c77dd6b80f1d
+ms.openlocfilehash: ef9d5634a9520ce0d71fce1c866c32f46c5b3793
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87544386"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474844"
 ---
 # <a name="sysdm_operation_status"></a>sys.dm_operation_status
 
@@ -32,14 +33,14 @@ ms.locfileid: "87544386"
 
   [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 서버의 데이터베이스에 대해 수행된 작업 정보를 반환합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |session_activity_id|**uniqueidentifier**|작업의 ID입니다. Null이 아닙니다.|  
 |resource_type|**int**|작업이 수행된 리소스의 유형을 나타냅니다. Null이 아닙니다. 현재 릴리스에서 이 뷰는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에서 수행된 작업을 추적하며 해당 정수 값은 0입니다.|  
 |resource_type_desc|**nvarchar(2048)**|작업이 수행된 리소스 유형에 대한 설명입니다. 현재 릴리스에서 이 뷰는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에서만 수행된 작업을 추적합니다.|  
 |major_resource_id|**sql_variant**|작업이 수행된 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]의 이름입니다. Null이 아닙니다.|  
 |minor_resource_id|**sql_variant**|내부 전용입니다. Null이 아닙니다.|  
-|operation(작업)|**nvarchar(60)**|CREATE 또는 ALTER와 같이 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에서 수행된 작업입니다.|  
+|operation|**nvarchar(60)**|CREATE 또는 ALTER와 같이 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에서 수행된 작업입니다.|  
 |state|**tinyint**|작업의 상태입니다.<br /><br /> 0 = 보류 중<br />1 = 진행 중<br />2 = 완료됨<br />3 = 실패<br />4 = 취소됨|  
 |state_desc|**nvarchar(120)**|PENDING = 작업이 리소스나 할당량을 사용할 수 있을 때까지 대기 중입니다.<br /><br /> IN_PROGRESS = 작업이 시작되었고 진행 중입니다.<br /><br /> COMPLETED = 작업이 성공적으로 완료되었습니다.<br /><br /> FAILED = 작업이 실패했습니다. 자세한 내용은 **error_desc** 열을 참조 하세요.<br /><br /> CANCELLED = 작업이 사용자 요청으로 중지되었습니다.|  
 |percent_complete|**int**|완료된 작업의 백분율입니다. 값은 연속 되지 않으며 유효한 값은 아래에 나열 됩니다. NULL이 아닙니다.<br/><br/>0 = 작업이 시작 되지 않음<br/>50 = 작업 진행 중<br/>100 = 작업 완료|  

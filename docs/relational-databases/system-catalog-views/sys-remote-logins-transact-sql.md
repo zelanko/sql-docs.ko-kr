@@ -1,4 +1,5 @@
 ---
+description: sys.remote_logins(Transact-SQL)
 title: sys. remote_logins (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 38477e91-d084-4df7-b1de-b930c5580189
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 587e117ce58ca0beff93adc8be864bcf6777b416
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9c1dc75f4a790d93d13a998e56fb32cf2ad5ddfb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85880010"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475311"
 ---
 # <a name="sysremote_logins-transact-sql"></a>sys.remote_logins(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

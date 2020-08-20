@@ -1,4 +1,5 @@
 ---
+description: sp_changemergesubscription(Transact-SQL)
 title: sp_changemergesubscription (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: fd820f35-c189-4e2d-884d-b60c1c469f58
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a51ae948e546d616e6fd17a5b37501f112907560
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 388d33f9d812534ecee54dac41cfe7ad852e139d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85871857"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474471"
 ---
 # <a name="sp_changemergesubscription-transact-sql"></a>sp_changemergesubscription(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,19 +43,19 @@ sp_changemergesubscription [ [ @publication= ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @publication = ] 'publication'`변경할 게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 NULL입니다. 게시는 이미 존재하고 있어야 하며 식별자에 적용되는 규칙을 준수해야 합니다.  
+`[ @publication = ] 'publication'` 변경할 게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 NULL입니다. 게시는 이미 존재하고 있어야 하며 식별자에 적용되는 규칙을 준수해야 합니다.  
   
-`[ @subscriber = ] 'subscriber'`구독자의 이름입니다. *구독자* 는 **sysname**이며 기본값은 NULL입니다.  
+`[ @subscriber = ] 'subscriber'` 구독자의 이름입니다. *구독자* 는 **sysname**이며 기본값은 NULL입니다.  
   
-`[ @subscriber_db = ] 'subscriber_db'`구독 데이터베이스의 이름입니다. *subscriber_db*는 **sysname**이며 기본값은 NULL입니다.  
+`[ @subscriber_db = ] 'subscriber_db'` 구독 데이터베이스의 이름입니다. *subscriber_db*는 **sysname**이며 기본값은 NULL입니다.  
   
-`[ @property = ] 'property'`지정 된 게시에 대해 변경할 속성입니다. *속성* 은 **sysname**이며 테이블의 값 중 하나일 수 있습니다.  
+`[ @property = ] 'property'` 지정 된 게시에 대해 변경할 속성입니다. *속성* 은 **sysname**이며 테이블의 값 중 하나일 수 있습니다.  
   
-`[ @value = ] 'value'`지정 된 *속성*의 새 값입니다. *value* 는 **nvarchar (255)** 이며 테이블에 있는 값 중 하나일 수 있습니다.  
+`[ @value = ] 'value'` 지정 된 *속성*의 새 값입니다. *value* 는 **nvarchar (255)** 이며 테이블에 있는 값 중 하나일 수 있습니다.  
   
 |속성|값|설명|  
 |--------------|-----------|-----------------|  
-|**한**||해당 병합 구독에 관한 설명입니다.|  
+|**description**||해당 병합 구독에 관한 설명입니다.|  
 |**priority**||구독 우선 순위입니다. 우선 순위는 기본 해결 프로그램이 충돌을 감지했을 때 먼저 적용할 항목을 선택하는 데 사용합니다.|  
 |**merge_job_login**||에이전트가 실행되는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 계정의 로그인입니다.|  
 |**merge_job_password**||에이전트가 실행되는 Windows 계정의 암호입니다.|  

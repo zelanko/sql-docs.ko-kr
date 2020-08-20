@@ -1,4 +1,5 @@
 ---
+description: SQLFetchScroll 함수(SQLFetchScroll Function)
 title: SQLFetchScroll 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 07/18/2019
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: c0243667-428c-4dda-ae91-3c307616a1ac
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b6c65ef71f5c2cb9202ab788cac5e00357674f4a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e3c725e11c889765c18c2ff14625b6bde4705051
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81285883"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476088"
 ---
 # <a name="sqlfetchscroll-function"></a>SQLFetchScroll 함수(SQLFetchScroll Function)
 **규칙**  
@@ -84,7 +85,7 @@ SQLRETURN SQLFetchScroll(
   
  SQL_SUCCESS_WITH_INFO 또는 SQL_ERROR (01xxx SQLSTATEs 제외)를 반환할 수 있는 모든 SQLSTATEs의 경우 하나 이상의 행 작업에서 오류가 발생 하는 경우 SQL_SUCCESS_WITH_INFO가 반환 되 고 단일 행 작업에서 오류가 발생 하면 SQL_ERROR 반환 됩니다.  
   
-|SQLSTATE|Error|Description|  
+|SQLSTATE|오류|설명|  
 |--------------|-----------|-----------------|  
 |01000|일반 경고|드라이버 관련 정보 메시지입니다. 함수는 SQL_SUCCESS_WITH_INFO를 반환 합니다.|  
 |01004|문자열 데이터, 오른쪽이 잘렸습니다.|열에 대해 반환 된 문자열 또는 이진 데이터로 인해 비어 있지 않은 문자 또는 NULL이 아닌 이진 데이터가 잘렸습니다. 문자열 값인 경우 오른쪽이 잘렸습니다.|  
@@ -104,7 +105,7 @@ SQLRETURN SQLFetchScroll(
 |24000|잘못된 커서 상태|*StatementHandle* 가 실행 된 상태 이지만 결과 집합이 *StatementHandle*와 연결 되지 않았습니다.|  
 |40001|Serialization 오류|반입이 실행 된 트랜잭션이 교착 상태를 방지 하기 위해 종료 되었습니다.|  
 |40003|문 완료를 알 수 없음|이 함수를 실행 하는 동안 연결 된 연결에 실패 하 여 트랜잭션의 상태를 확인할 수 없습니다.|  
-|HY000|일반 오류|특정 SQLSTATE가 없고 구현 별 SQLSTATE가 정의 되지 않은 오류가 발생 했습니다. MessageText 버퍼에서 **SQLGetDiagRec** 에 의해 반환 되는 오류 메시지는 오류 및 해당 원인을 설명 합니다. * \**|  
+|HY000|일반 오류|특정 SQLSTATE가 없고 구현 별 SQLSTATE가 정의 되지 않은 오류가 발생 했습니다. * \* MessageText* 버퍼에서 **SQLGetDiagRec** 에 의해 반환 되는 오류 메시지는 오류 및 해당 원인을 설명 합니다.|  
 |HY001|메모리 할당 오류|드라이버에서 함수 실행 또는 완료를 지 원하는 데 필요한 메모리를 할당할 수 없습니다.|  
 |HY008|작업 취소됨|*StatementHandle*에 대해 비동기 처리를 사용 하도록 설정 했습니다. 함수가 호출 되었으며 실행이 완료 되기 전에 **sqlcancel** 또는 **Sqlcancelhandle** 이 *StatementHandle*에 대해 호출 되었습니다. 그런 다음 *StatementHandle*에서 함수를 다시 호출 했습니다.<br /><br /> 함수가 호출 되 고 실행이 완료 되기 전에 **sqlcancel** 또는 **sqlcancelhandle** 이 다중 스레드 응용 프로그램의 다른 스레드에서 *StatementHandle* 호출 되었습니다.|  
 |HY010|함수 시퀀스 오류|(DM) *StatementHandle*연결 된 연결 핸들에 대해 비동기적으로 실행 되는 함수가 호출 되었습니다. 이 비동기 함수는 **Sqlfetchscroll** 함수가 호출 될 때 실행 되 고 있습니다.<br /><br /> (DM) **Sqlexecute**, **sqlexecdirect**또는 **SQLMoreResults** 가 *StatementHandle* 에 대해 호출 되 고 SQL_PARAM_DATA_AVAILABLE 반환 되었습니다. 이 함수는 모든 스트리밍된 매개 변수에 대 한 데이터를 검색 하기 전에 호출 되었습니다.<br /><br /> (DM) 지정한 *StatementHandle* 가 실행 된 상태가 아닙니다. 함수가 먼저 **Sqlexecdirect**, **sqlexecute** 또는 catalog 함수를 호출 하지 않고 호출 되었습니다.<br /><br /> (DM) *StatementHandle* 에 대해 비동기적으로 실행 되는 함수 (이 함수 아님)가 호출 되었으며이 함수가 호출 될 때 계속 실행 중입니다.<br /><br /> (DM) **Sqlexecute**, **sqlexecdirect**, **SQLBulkOperations**또는 **SQLSetPos** 가 *StatementHandle* 에 대해 호출 되 고 SQL_NEED_DATA 반환 되었습니다. 이 함수는 모든 실행 시 데이터 매개 변수 또는 열에 대해 데이터를 보내기 전에 호출 되었습니다.<br /><br /> **Sqlextendedfetch** 가 호출 된 후 *StatementHandle* 옵션을 사용 하 SQL_CLOSE는 **SQLFREESTMT** 가 호출 되기 전에 DM () **sqlfetch** 가 호출 되었습니다.|  
@@ -164,7 +165,7 @@ SQLRETURN SQLFetchScroll(
 |조건|새 행 집합의 첫 번째 행|  
 |---------------|-----------------------------|  
 |*시작 하기 전*|1|  
-|*CurrRowsetStart + RowsetSize*[1] * \<= lastresultrow*|*CurrRowsetStart + RowsetSize*[1]|  
+|*CurrRowsetStart + RowsetSize*[1] * \< = lastresultrow*|*CurrRowsetStart + RowsetSize*[1]|  
 |*CurrRowsetStart + RowsetSize*[1]*> lastresultrow*|*종료 후*|  
 |*종료 후*|*종료 후*|  
   
@@ -182,7 +183,7 @@ SQLRETURN SQLFetchScroll(
 |*END 및 LastResultRow < RowsetSize* <sup>[2]</sup>|*1* <sup>[1]</sup>|  
 |*END 및 LastResultRow >= RowsetSize* <sup>[2]</sup>|*Lastresultrow-RowsetSize + 1* <sup>[2]</sup>|  
   
- [1] **Sqlfetchscroll** 은 SQLSTATE 01S06 (결과 집합에서 첫 번째 행 집합을 반환 하기 전에 인출 시도)를 반환 하 고 SQL_SUCCESS_WITH_INFO 합니다.  
+ [1]   **Sqlfetchscroll** 은 SQLSTATE 01S06 (결과 집합에서 첫 번째 행 집합을 반환 하기 전에 인출 시도)를 반환 하 고 SQL_SUCCESS_WITH_INFO 합니다.  
   
  [2] 인출 행에 대 한 이전 호출 이후 행 집합 크기가 변경 된 경우 새 행 집합 크기입니다.  
   
@@ -196,13 +197,13 @@ SQLRETURN SQLFetchScroll(
 |*CurrRowsetStart = 1 및 FetchOffset < 0*|*시작 하기 전*|  
 |*CurrRowsetStart > 1 및 CurrRowsetStart + fetchoffset < 1 및 &#124; fetchoffset &#124; > RowsetSize* <sup>[3]</sup>|*시작 하기 전*|  
 |*CurrRowsetStart > 1 및 CurrRowsetStart + fetchoffset < 1 및 &#124; fetchoffset &#124; <= RowsetSize* <sup>[3]</sup>|*1* <sup>[2]</sup>|  
-|*1 <= CurrRowsetStart + FetchOffset \<= lastresultrow*|*CurrRowsetStart + FetchOffset*|  
+|*1 <= CurrRowsetStart + FetchOffset \< = lastresultrow*|*CurrRowsetStart + FetchOffset*|  
 |*CurrRowsetStart + FetchOffset > LastResultRow*|*종료 후*|  
 |*End 및 FetchOffset >= 0*|*종료 후*|  
   
- [1] ***Sqlfetchscroll*** 은 SQL_FETCH_ABSOLUTE로 설정 된 fetchorientation로 호출 된 것과 동일한 행 집합을 반환 합니다. 자세한 내용은 "SQL_FETCH_ABSOLUTE" 섹션을 참조 하세요.  
+ [1]   ***Sqlfetchscroll*** 은 SQL_FETCH_ABSOLUTE로 설정 된 fetchorientation로 호출 된 것과 동일한 행 집합을 반환 합니다. 자세한 내용은 "SQL_FETCH_ABSOLUTE" 섹션을 참조 하세요.  
   
- [2] **Sqlfetchscroll** 은 SQLSTATE 01S06 (결과 집합에서 첫 번째 행 집합을 반환 하기 전에 인출 시도)를 반환 하 고 SQL_SUCCESS_WITH_INFO 합니다.  
+ [2]   **Sqlfetchscroll** 은 SQLSTATE 01S06 (결과 집합에서 첫 번째 행 집합을 반환 하기 전에 인출 시도)를 반환 하 고 SQL_SUCCESS_WITH_INFO 합니다.  
   
  [3] 인출 행에 대 한 이전 호출 이후 행 집합 크기가 변경 된 경우 새 행 집합 크기입니다.  
   
@@ -215,10 +216,10 @@ SQLRETURN SQLFetchScroll(
 |*Fetchoffset < 0 및 &#124; fetchoffset &#124; > LastResultRow 및 &#124; fetchoffset &#124; > RowsetSize* <sup>[2]</sup>|*시작 하기 전*|  
 |*Fetchoffset < 0 및 &#124; fetchoffset &#124; > LastResultRow 및 &#124; fetchoffset &#124; <= RowsetSize* <sup>[2]</sup>|*1* <sup>[1]</sup>|  
 |*FetchOffset = 0*|*시작 하기 전*|  
-|*1 <= FetchOffset \<= lastresultrow*|*FetchOffset*|  
+|*1 <= FetchOffset \< = lastresultrow*|*FetchOffset*|  
 |*FetchOffset > LastResultRow*|*종료 후*|  
   
- [1] **Sqlfetchscroll** 은 SQLSTATE 01S06 (결과 집합에서 첫 번째 행 집합을 반환 하기 전에 인출 시도)를 반환 하 고 SQL_SUCCESS_WITH_INFO 합니다.  
+ [1]   **Sqlfetchscroll** 은 SQLSTATE 01S06 (결과 집합에서 첫 번째 행 집합을 반환 하기 전에 인출 시도)를 반환 하 고 SQL_SUCCESS_WITH_INFO 합니다.  
   
  [2] 인출 행에 대 한 이전 호출 이후 행 집합 크기가 변경 된 경우 새 행 집합 크기입니다.  
   
@@ -247,7 +248,7 @@ SQLRETURN SQLFetchScroll(
 |조건|새 행 집합의 첫 번째 행|  
 |---------------|-----------------------------|  
 |*책갈피 행 + FetchOffset < 1*|*시작 하기 전*|  
-|*1 <= 책갈피 행 + FetchOffset \<= lastresultrow*|*책갈피 행 + FetchOffset*|  
+|*1 <= 책갈피 행 + FetchOffset \< = lastresultrow*|*책갈피 행 + FetchOffset*|  
 |*책갈피 행 + FetchOffset > LastResultRow*|*종료 후*|  
   
  책갈피에 대 한 자세한 내용은 [책갈피 (ODBC)](../../../odbc/reference/develop-app/bookmarks-odbc.md)를 참조 하세요.  
@@ -257,7 +258,7 @@ SQLRETURN SQLFetchScroll(
   
  커서에서 결과 집합에 추가 된 행을 검색 하거나 결과 집합에서 삭제 된 행을 제거 하는 경우 데이터를 인출할 때만 이러한 변경 내용을 검색 하는 것 처럼 나타납니다. 여기에는 FetchOrientation SQL_FETCH_RELATIVE로 설정 되 고 FetchOffset이 0으로 설정 되어 동일한 행 집합을 다시 페치 하는 **Sqlfetchscroll** 이 호출 되 고, foption을 SQL_REFRESH로 설정 하 여 SQLSetPos가 호출 되는 경우는 포함 되지 않습니다. 후자의 경우 행 집합 버퍼의 데이터는 새로 고쳐지지만 반환 되 고, 삭제 된 행은 결과 집합에서 제거 되지 않습니다. 따라서 행을 삭제 하거나 현재 행 집합에 삽입 하면 커서는 행 집합 버퍼를 수정 하지 않습니다. 대신 이전에 삭제 된 행을 포함 한 행 집합을 인출 하거나 삽입 된 행을 포함 하는 행 집합을 가져오는 경우 변경 내용을 검색 합니다.  
   
- 예를 들면 다음과 같습니다.  
+ 예를 들어 다음과 같은 가치를 제공해야 합니다.  
   
 ```cpp  
 // Fetch the next rowset.  
@@ -277,7 +278,7 @@ SQLFetchScroll(hstmt, SQL_FETCH_RELATIVE, 0);
   
  예를 들어 현재 행 집합이 21 ~ 30 행으로 구성 되 고 행 집합 크기가 10 이면 커서는 결과 집합에서 삭제 된 행을 제거 하 고 결과 집합에 추가 된 행을 검색 합니다. 다음 표에서는 다양 한 상황에서 **Sqlfetchscroll** 이 반환 하는 행을 보여 줍니다.  
   
-|변화|인출 유형|FetchOffset|새 행 집합 [1]|  
+|변경|인출 유형|FetchOffset|새 행 집합 [1]|  
 |------------|----------------|-----------------|---------------------|  
 |행 삭제 21|NEXT|0|31 ~ 40|  
 |행 31 삭제|NEXT|0|32 ~ 41|  
@@ -364,6 +365,6 @@ SQLFetchScroll(hstmt, SQL_FETCH_RELATIVE, 0);
 |커서 위치를 지정 하거나, 행 집합의 데이터를 새로 고치거 나, 결과 집합에서 데이터를 업데이트 하거나 삭제 합니다.|[SQLSetPos 함수](../../../odbc/reference/syntax/sqlsetpos-function.md)|  
 |문 특성 설정|[SQLSetStmtAttr 함수](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)|  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [ODBC API 참조](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 헤더 파일](../../../odbc/reference/install/odbc-header-files.md)

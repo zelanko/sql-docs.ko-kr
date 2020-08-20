@@ -1,4 +1,5 @@
 ---
+description: 드라이버 형식
 title: 드라이버 유형 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 864c53c1-b68a-48b6-b6bc-5ecb520bb9dc
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: de6d8e1473f127d28c69969e0fc298afd69d3023
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4ae3ab2b0172e97a221b446107ccbf4b6ae4eb7b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304874"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476297"
 ---
 # <a name="types-of-drivers"></a>드라이버 형식
 ODBC 드라이버는 다음과 같이 분류할 수 있습니다.  

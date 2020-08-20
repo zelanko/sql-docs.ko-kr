@@ -1,4 +1,5 @@
 ---
+description: sys. dm_pdw_exec_connections (Transact-sql)
 title: sys. dm_pdw_exec_connections (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ ms.assetid: 2625466b-d0ef-4c71-bedc-6d13491a8351
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 74cfb2819cd462a2e3cf695cbb0daf92b4dac5a3
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.openlocfilehash: 25b5edb0d1c89042b876fc0cefac278b867fb5ac
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87332386"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474786"
 ---
 # <a name="sysdm_pdw_exec_connections-transact-sql"></a>sys. dm_pdw_exec_connections (Transact-sql)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -38,7 +39,7 @@ ms.locfileid: "87332386"
   
 ## <a name="relationship-cardinalities"></a>관계 카디널리티  
   
-| From | 받는 사람 | 관계 |
+| 보낸 사람 | 대상 | 관계 |
 | ---- | -- | ------------ |
 |dm_pdw_exec_sessions session_id|dm_pdw_exec_connections session_id|일 대 일|  
 |dm_pdw_exec_requests connection_id|dm_pdw_exec_connections connection_id|다 대 일|  
@@ -58,7 +59,7 @@ WHERE c.session_id = SESSION_ID();
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;SQL Data Warehouse 및 병렬 데이터 웨어하우스 동적 관리 뷰](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
+ [Transact-sql&#41;&#40;SQL Data Warehouse 및 병렬 데이터 웨어하우스 동적 관리 뷰 ](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   
 

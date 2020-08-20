@@ -1,4 +1,5 @@
 ---
+description: sys. dm_pdw_dms_workers (Transact-sql)
 title: sys. dm_pdw_dms_workers (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
@@ -12,26 +13,26 @@ ms.assetid: 0a284d18-3c46-4ffa-bcc9-689e660ee8b4
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 43b471634efc60a2beb4abd982b04437bdebb2af
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: 886b96bebe2d7535694dc724d7ad236ae1c2b5f7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86197115"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474784"
 ---
 # <a name="sysdm_pdw_dms_workers-transact-sql"></a>sys. dm_pdw_dms_workers (Transact-sql)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   DMS 단계를 완료 하는 모든 작업자에 대 한 정보를 저장 합니다.  
   
-|열 이름|데이터 형식|설명|범위|  
+|열 이름|데이터 형식|Description|범위|  
 |-----------------|---------------|-----------------|-----------|  
 |request_id|**nvarchar(32)**|이 DMS 작업자를 포함 하는 쿼리입니다.<br /><br /> 이 보기의 키를 request_id, step_index 및 dms_step_index 구성 합니다.|[Dm_pdw_exec_requests &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md)에서 request_id를 참조 하세요.|  
 |step_index|**int**|이 DMS 작업자의 일부인 쿼리 단계입니다.<br /><br /> 이 보기의 키를 request_id, step_index 및 dms_step_index 구성 합니다.|[Dm_pdw_request_steps &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md)에서 step_index를 참조 하세요.|  
 |dms_step_index|**int**|이 작업자를 실행 하는 DMS 계획의 단계입니다.<br /><br /> 이 보기의 키를 request_id, step_index 및 dms_step_index 구성 합니다.||  
 |pdw_node_id|**int**|Worker가 실행 되는 노드입니다.|[Dm_pdw_nodes &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md)에서 node_id를 참조 하세요.|  
 |distribution_id|**정수**|작업자 (있는 경우)가 실행 되 고 있는 배포입니다.|[Pdw_distributions &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-pdw-distributions-transact-sql.md)에서 distribution_id를 참조 하세요.|  
-|형식|**nvarchar(32)**|이 항목이 나타내는 DMS 작업자 스레드의 형식입니다.|' DIRECT_CONVERTER ', ' DIRECT_READER ', ' FILE_READER ', ' HASH_CONVERTER ', ' HASH_READER ', ' ROUNDROBIN_CONVERTER ', ' EXPORT_READER ', ' EXTERNAL_READER ', ' EXTERNAL_WRITER ', ' PARALLEL_COPY_READER ', ' REJECT_WRITER ', ' WRITER '|  
+|type|**nvarchar(32)**|이 항목이 나타내는 DMS 작업자 스레드의 형식입니다.|' DIRECT_CONVERTER ', ' DIRECT_READER ', ' FILE_READER ', ' HASH_CONVERTER ', ' HASH_READER ', ' ROUNDROBIN_CONVERTER ', ' EXPORT_READER ', ' EXTERNAL_READER ', ' EXTERNAL_WRITER ', ' PARALLEL_COPY_READER ', ' REJECT_WRITER ', ' WRITER '|  
 |상태|**nvarchar(32)**|DMS 작업자의 상태입니다.|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
 |bytes_per_sec|**bigint**|마지막 1 초 동안 읽기 또는 쓰기 처리량입니다.|0 보다 크거나 같습니다. Worker가 실행 되기 전에 쿼리가 취소 되거나 실패 한 경우 NULL입니다.|  
 |bytes_processed|**bigint**|이 작업자에서 처리 한 총 바이트 수입니다.|0 보다 크거나 같습니다. Worker가 실행 되기 전에 쿼리가 취소 되거나 실패 한 경우 NULL입니다.|  
@@ -51,6 +52,6 @@ ms.locfileid: "86197115"
  이 뷰에서 유지 되는 최대 행에 대 한 자세한 내용은 [용량 제한](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) 항목에서 메타 데이터 섹션을 참조 하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;SQL Data Warehouse 및 병렬 데이터 웨어하우스 동적 관리 뷰](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
+ [Transact-sql&#41;&#40;SQL Data Warehouse 및 병렬 데이터 웨어하우스 동적 관리 뷰 ](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   

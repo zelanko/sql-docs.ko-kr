@@ -1,4 +1,5 @@
 ---
+description: fn_syscollector_get_execution_details(Transact-SQL)
 title: fn_syscollector_get_execution_details (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d59ddf0c-72c0-4c57-bc83-aef260e4e105
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2442148dbb8f9db45f5b80ba8b2a4fdd90ef5c29
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 615dd195f9553242b92b8830462036ab6384b665
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898462"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474672"
 ---
 # <a name="fn_syscollector_get_execution_details-transact-sql"></a>fn_syscollector_get_execution_details(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -64,6 +65,6 @@ fn_syscollector_get_execution_details ( log_id )
   
 ## <a name="see-also"></a>참고 항목  
  [SQL Server Data Tools에서 패키지 로깅 사용](../../integration-services/performance/integration-services-ssis-logging.md#server_logging)   
- [데이터 수집](../../relational-databases/data-collection/data-collection.md)  
+ [데이터 컬렉션](../../relational-databases/data-collection/data-collection.md)  
   
   

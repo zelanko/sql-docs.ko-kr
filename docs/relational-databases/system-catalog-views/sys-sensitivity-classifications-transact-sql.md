@@ -1,4 +1,5 @@
 ---
+description: sys.sensitivity_classifications(Transact-SQL)
 title: sys. sensitivity_classifications (Transact-sql) | Microsoft Docs
 ms.date: 03/25/2019
 ms.reviewer: ''
@@ -23,11 +24,12 @@ helpviewer_keywords:
 - information types
 - rank
 monikerRange: '>= sql-server-ver15 || = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 9962a7fbcb3b308862db7e8813ee2733155950ed
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 5f1dfa43dba7848732e57acf4abf8cfa915be255
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004780"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475321"
 ---
 # <a name="syssensitivity_classifications-transact-sql"></a>sys.sensitivity_classifications(Transact-SQL)
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -53,7 +55,7 @@ ms.locfileid: "86004780"
 - 이 보기는 데이터베이스의 분류 상태에 대 한 가시성을 제공 합니다. 데이터베이스 분류를 관리 하는 데 사용할 수 있으며 보고서를 생성 하는 데에도 사용할 수 있습니다.
 - 현재 데이터베이스 열의 분류만 지원 됩니다.
  
-## <a name="examples"></a>예
+## <a name="examples"></a>예제
 
 ### <a name="a-listing-all-classified-columns-and-their-corresponding-classification"></a>A. 모든 분류 된 열 및 해당 분류 나열
 
@@ -74,7 +76,7 @@ left join sys.all_columns on sys.sensitivity_classifications.major_id = sys.all_
                          and sys.sensitivity_classifications.minor_id = sys.all_columns.column_id
 ```
 
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  **민감도 분류 보기** 권한이 필요 합니다. 
  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  

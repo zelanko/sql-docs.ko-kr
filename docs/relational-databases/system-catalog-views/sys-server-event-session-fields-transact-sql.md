@@ -1,4 +1,5 @@
 ---
+description: sys.server_event_session_fields(Transact-SQL)
 title: sys. server_event_session_fields (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 7109f9fb-8a1f-432c-92d1-6f8af3e96af1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3b87440f9f5e1afc6ea1ede20054e4f34db8087d
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: ffead368e1c89d9e2d963eb4fb3f806c4bde327a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442471"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475298"
 ---
 # <a name="sysserver_event_session_fields-transact-sql"></a>sys.server_event_session_fields(Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -36,8 +37,8 @@ ms.locfileid: "87442471"
 |-----------------|---------------|-----------------|  
 |event_session_id|**int**|이벤트 세션의 ID입니다. Null을 허용하지 않습니다.|  
 |object_id|**int**|이 필드와 관련된 개체의 ID입니다. Null을 허용하지 않습니다.|  
-|name|**sysname**|필드 이름입니다. Null을 허용하지 않습니다.|  
-|값|**sql_variant**|필드 값입니다. Null을 허용하지 않습니다.|  
+|name|**sysname**|필드의 이름입니다. Null을 허용하지 않습니다.|  
+|값|**sql_variant**|필드의 값입니다. Null을 허용하지 않습니다.|  
   
 ## <a name="permissions"></a>사용 권한  
  을 실행하려면 서버에 대해 VIEW SERVER STATE 권한이 필요합니다.  
@@ -45,7 +46,7 @@ ms.locfileid: "87442471"
 ## <a name="remarks"></a>설명  
  이 뷰는 다음과 같은 관계 카디널리티를 가집니다.  
   
-| From | 받는 사람 | 관계 |
+| 보낸 사람 | 대상 | 관계 |
 | ---- | -- | ------------ |
 |sys.server_event_session_actions.event_session_id|server_event_sessions. event_session_id|다 대 일|  
 |sys.server_event_session_actions.event_id<br /><br /> sys.server_event_session_actions.object_id<br /><br /> sys.server_event_session_actions.event_session_id|sys.server_event_session_events.event_session_id<br /><br /> sys.server_event_session_events.event_id|다 대 일|  
@@ -53,7 +54,7 @@ ms.locfileid: "87442471"
   
 ## <a name="see-also"></a>참고 항목  
  [카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Transact-sql&#41;&#40;확장 이벤트 카탈로그 뷰](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md)   
+ [Transact-sql&#41;&#40;확장 이벤트 카탈로그 뷰 ](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md)   
  [확장 이벤트](../../relational-databases/extended-events/extended-events.md)  
   
   

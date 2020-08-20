@@ -1,4 +1,5 @@
 ---
+description: SQLSetPos를 사용하여 데이터 업데이트
 title: SQLSetPos를 사용 하 여 데이터 업데이트 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e9625b59-06a0-4883-b155-b932ba7528d9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 16476a1e1007905f34ec2e70ce6032eb8d81fe7a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: eccc08e7af81b2b2b13dd50b2cfb0f5701174e70
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81286163"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476285"
 ---
 # <a name="updating-data-with-sqlsetpos"></a>SQLSetPos를 사용하여 데이터 업데이트
 응용 프로그램은 **SQLSetPos**를 사용 하 여 행 집합의 모든 행을 업데이트 하거나 삭제할 수 있습니다. **SQLSetPos** 호출은 SQL 문을 생성 하 고 실행 하는 편리한 대안입니다. 데이터 원본에서 위치가 지정 된 SQL 문을 지원 하지 않는 경우에도 ODBC 드라이버에서 위치 지정 업데이트를 지원할 수 있습니다. 함수 호출을 통해 전체 데이터베이스 액세스를 달성 하는 패러다임의 일부입니다.  

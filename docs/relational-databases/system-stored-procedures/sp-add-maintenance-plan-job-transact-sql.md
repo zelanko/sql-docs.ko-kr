@@ -1,4 +1,5 @@
 ---
+description: sp_add_maintenance_plan_job(Transact-SQL)
 title: sp_add_maintenance_plan_job (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7205855c-964f-4f55-bf75-39a55f6fe7bd
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 89f9f2c1ac1982a1e86d0f48dbf7e1e0c9d26301
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 710a151e6e965b523b26a67e82814d4b23091aba
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85879702"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474637"
 ---
 # <a name="sp_add_maintenance_plan_job-transact-sql"></a>sp_add_maintenance_plan_job(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,9 +45,9 @@ sp_add_maintenance_plan_job [ @plan_id = ] 'plan_id' , [ @job_id = ] 'job_id'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @plan_id = ] 'plan_id'`유지 관리 계획의 ID를 지정 합니다. *plan_id* 은 **UNIQUEIDENTIFIER**이며 유효한 id 여야 합니다.  
+`[ @plan_id = ] 'plan_id'` 유지 관리 계획의 ID를 지정 합니다. *plan_id* 은 **UNIQUEIDENTIFIER**이며 유효한 id 여야 합니다.  
   
-`[ @job_id = ] 'job_id'`유지 관리 계획과 관련 된 작업의 ID를 지정 합니다. *job_id* 은 **UNIQUEIDENTIFIER**이며 유효한 id 여야 합니다. 작업을 만들려면 **sp_add_job**를 실행 하거나 SQL Server Management Studio를 사용 합니다.  
+`[ @job_id = ] 'job_id'` 유지 관리 계획과 관련 된 작업의 ID를 지정 합니다. *job_id* 은 **UNIQUEIDENTIFIER**이며 유효한 id 여야 합니다. 작업을 만들려면 **sp_add_job**를 실행 하거나 SQL Server Management Studio를 사용 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -57,7 +58,7 @@ sp_add_maintenance_plan_job [ @plan_id = ] 'plan_id' , [ @job_id = ] 'job_id'
 ## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할의 멤버만 **sp_add_maintenance_plan_job**를 실행할 수 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  이 예에서는 **sp_add_maintenance_plan_job**를 사용 하 여 만든 유지 관리 계획에 "B8FCECB1-E22C-11D2-AA64-00C04F688EAE" 작업을 추가 합니다.  
   
 ```  

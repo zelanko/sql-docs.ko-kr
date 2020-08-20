@@ -1,4 +1,5 @@
 ---
+description: SQLExtendedFetch 함수
 title: SQLExtendedFetch 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 07/18/2019
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 940b5cf7-581c-4ede-8533-c67d5e9ef488
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: dc832e5a20b1d3c0a1ad63b3e2a070563de2b46d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ac19d017baf4a3f0e873be64cd2eb812ca1b05e0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81285983"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476113"
 ---
 # <a name="sqlextendedfetch-function"></a>SQLExtendedFetch 함수
 **규칙**  
@@ -75,7 +76,7 @@ SQLRETURN SQLExtendedFetch(
 ## <a name="diagnostics"></a>진단  
  **Sqlextendedfetch** 가 SQL_ERROR 또는 SQL_SUCCESS_WITH_INFO를 반환할 때 **SQLError**를 호출 하 여 연결 된 SQLSTATE 값을 얻을 수 있습니다. 다음 표에서는 **Sqlextendedfetch** 에서 일반적으로 반환 하는 SQLSTATE 값을 나열 하 고이 함수의 컨텍스트에서 각 항목에 대해 설명 합니다. "(DM)" 표기법은 드라이버 관리자에서 반환 된 SQLSTATEs의 설명 보다 앞에 나옵니다. 다른 설명이 없는 한 각 SQLSTATE 값과 연결 된 반환 코드는 SQL_ERROR 됩니다. 단일 열에서 오류가 발생 하는 경우 **SQLGetDiagField** 는 SQL_DIAG_COLUMN_NUMBER *DiagIdentifier* 를 호출 하 여 오류가 발생 한 열을 확인할 수 있습니다. **SQLGetDiagField** 를 SQL_DIAG_ROW_NUMBER *DiagIdentifier* 로 호출 하 여 해당 열이 포함 된 행을 확인할 수 있습니다.  
   
-|SQLSTATE|Error|Description|  
+|SQLSTATE|오류|설명|  
 |--------------|-----------|-----------------|  
 |01000|일반 경고|드라이버 관련 정보 메시지입니다. 함수는 SQL_SUCCESS_WITH_INFO를 반환 합니다.|  
 |01004|문자열 데이터, 오른쪽이 잘렸습니다.|열에 대해 반환 된 문자열 또는 이진 데이터로 인해 비어 있지 않은 문자 또는 NULL이 아닌 이진 데이터가 잘렸습니다. 문자열 값인 경우 오른쪽이 잘렸습니다. 숫자 값 이면 숫자의 소수 부분이 잘렸습니다.  함수는 SQL_SUCCESS_WITH_INFO를 반환 합니다.|  
@@ -92,7 +93,7 @@ SQLRETURN SQLExtendedFetch(
 |22015|간격 필드 오버플로입니다.|정확한 숫자 또는 간격 SQL 형식을 interval C 형식으로 할당 하면 선행 필드에 유효 자릿수가 손실 됩니다.<br /><br /> Interval C 유형에 서 데이터를 인출 하는 경우 간격 C 유형에 서 SQL 유형의 값을 표시 하지 않았습니다.<br /><br /> 함수는 SQL_SUCCESS_WITH_INFO를 반환 합니다.|  
 |22018|캐스트 사양에 대 한 문자 값이 잘못 되었습니다.|C 형식은 정확한 수치 또는 근사치, datetime 또는 interval 데이터 형식입니다. 열의 SQL 형식이 문자 데이터 형식입니다. 열에 있는 값이 바인딩된 C 형식의 올바른 리터럴이 아닙니다.<br /><br /> 함수는 SQL_SUCCESS_WITH_INFO를 반환 합니다.|  
 |24000|잘못된 커서 상태|*StatementHandle* 가 실행 된 상태 이지만 *StatementHandle*과 연결 된 결과 집합이 없습니다.|  
-|HY000|일반 오류|특정 SQLSTATE가 없고 구현 별 SQLSTATE가 정의 되지 않은 오류가 발생 했습니다. MessageText 버퍼에서 **SQLError** 에 의해 반환 되는 오류 메시지는 오류 및 해당 원인을 설명 합니다. * \**|  
+|HY000|일반 오류|특정 SQLSTATE가 없고 구현 별 SQLSTATE가 정의 되지 않은 오류가 발생 했습니다. * \* MessageText* 버퍼에서 **SQLError** 에 의해 반환 되는 오류 메시지는 오류 및 해당 원인을 설명 합니다.|  
 |HY001|메모리 할당 오류|드라이버에서 함수 실행 또는 완료를 지 원하는 데 필요한 메모리를 할당할 수 없습니다.|  
 |HY008|작업 취소됨|*StatementHandle*에 대해 비동기 처리를 사용 하도록 설정 했습니다. 함수가 호출 되었으며 실행이 완료 되기 전에 *StatementHandle*에서 **Sqlcancel** 또는 **Sqlcancelhandle** 이 호출 되 고 *StatementHandle*에서 함수가 다시 호출 되었습니다.<br /><br /> 함수가 호출 되 고 실행이 완료 되기 전에 **sqlcancel** 또는 **sqlcancelhandle** 이 다중 스레드 응용 프로그램의 다른 스레드에서 *StatementHandle* 호출 되었습니다.|  
 |HY010|함수 시퀀스 오류|(DM) *StatementHandle*연결 된 연결 핸들에 대해 비동기적으로 실행 되는 함수가 호출 되었습니다. 이 비동기 함수는 **Sqlextendedfetch** 함수가 호출 될 때 실행 되 고 있습니다.<br /><br /> (DM) **Sqlexecute**, **sqlexecdirect**또는 **SQLMoreResults** 가 *StatementHandle* 에 대해 호출 되 고 SQL_PARAM_DATA_AVAILABLE 반환 되었습니다. 이 함수는 모든 스트리밍된 매개 변수에 대 한 데이터를 검색 하기 전에 호출 되었습니다.<br /><br /> (DM) 지정한 *StatementHandle* 가 실행 된 상태가 아닙니다. 함수가 먼저 **Sqlexecdirect**, **sqlexecute**또는 catalog 함수를 호출 하지 않고 호출 되었습니다.<br /><br /> (DM) *StatementHandle* 에 대해 비동기적으로 실행 되는 함수 (이 함수 아님)가 호출 되었으며이 함수가 호출 될 때 계속 실행 중입니다.<br /><br /> (DM) **Sqlexecute**, **sqlexecdirect**, **SQLBulkOperations**또는 **SQLSetPos** 가 *StatementHandle* 에 대해 호출 되 고 SQL_NEED_DATA 반환 되었습니다. 이 함수는 모든 실행 시 데이터 매개 변수 또는 열에 대해 데이터를 보내기 전에 호출 되었습니다.<br /><br /> Sqlfetch 또는 **Sqlextendedfetch** 이 호출 된 후 *StatementHandle* 옵션 **SQLFetch** 을 SQL_CLOSE 사용 하 여 **SQLFreeStmt** 가 호출 되기 전에 DM () **sqlextendedfetch** 가 호출 되었습니다.<br /><br /> (DM) **SQLBulkOperations** 는 **sqlfetch**, **Sqlfetchscroll**또는 **sqlextendedfetch** 가 호출 되기 전에 문에 대해 호출 된 후 **Sqlextendedfetch** 는 SQL_CLOSE 옵션을 사용 하 여 **SQLFreeStmt** 를 호출 하기 전에 호출 되었습니다.|  
@@ -109,7 +110,7 @@ SQLRETURN SQLExtendedFetch(
 ## <a name="comments"></a>주석  
  **Sqlextendedfetch** 의 동작은 **sqlextendedfetch**의 동작과 동일 하지만 다음과 같은 예외가 있습니다.  
   
--   **Sqlextendedfetch** 및 **sqlextendedfetch** 은 다른 메서드를 사용 하 여 인출 된 행 수를 반환 합니다. **Sqlextendedfetch** 는 * \*rowcountptr*에서 인출 된 행 수를 반환 합니다. **Sqlfetchscroll** 은 SQL_ATTR_ROWS_FETCHED_PTR에서 가리키는 버퍼로 직접 인출 된 행 수를 반환 합니다. 자세한 내용은 *Rowcountptr* 인수를 참조 하세요.  
+-   **Sqlextendedfetch** 및 **sqlextendedfetch** 은 다른 메서드를 사용 하 여 인출 된 행 수를 반환 합니다. **Sqlextendedfetch** 는 * \* rowcountptr*에서 인출 된 행 수를 반환 합니다. **Sqlfetchscroll** 은 SQL_ATTR_ROWS_FETCHED_PTR에서 가리키는 버퍼로 직접 인출 된 행 수를 반환 합니다. 자세한 내용은 *Rowcountptr* 인수를 참조 하세요.  
   
 -   **Sqlextendedfetch** 및 **sqlextendedfetch** 은 각 행의 상태를 서로 다른 배열로 반환 합니다. 자세한 내용은 *Rowstatusarray* 인수를 참조 하세요.  
   
@@ -141,6 +142,6 @@ SQLRETURN SQLExtendedFetch(
 |커서 위치를 지정 하거나, 행 집합의 데이터를 새로 고치거 나, 결과 집합에서 데이터를 업데이트 하거나 삭제 합니다.|[SQLSetPos 함수](../../../odbc/reference/syntax/sqlsetpos-function.md)|  
 |문 특성 설정|[SQLSetStmtAttr 함수](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)|  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [ODBC API 참조](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 헤더 파일](../../../odbc/reference/install/odbc-header-files.md)

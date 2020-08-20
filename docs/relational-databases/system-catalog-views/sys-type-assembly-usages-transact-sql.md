@@ -1,4 +1,5 @@
 ---
+description: sys.type_assembly_usages(Transact-SQL)
 title: sys. type_assembly_usages (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 79b8bf25-6e4e-4a07-ae93-7a4e44f65171
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 65acbc32713b6aab432deac0941081e05836d677
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 59b995ded43678d92db2b5630765b0c25bd370fe
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895897"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475175"
 ---
 # <a name="systype_assembly_usages-transact-sql"></a>sys.type_assembly_usages(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +43,7 @@ ms.locfileid: "85895897"
  **public** 역할의 멤버 자격이 필요합니다. 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;스칼라 형식 카탈로그 뷰](../../relational-databases/system-catalog-views/scalar-types-catalog-views-transact-sql.md)   
+ [Transact-sql&#41;&#40;스칼라 형식 카탈로그 뷰 ](../../relational-databases/system-catalog-views/scalar-types-catalog-views-transact-sql.md)   
  [카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
   

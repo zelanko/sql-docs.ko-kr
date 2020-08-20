@@ -1,4 +1,5 @@
 ---
+description: SQLDriverConnect 함수(SQLDriverConnect Function)
 title: SQLDriverConnect 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: e299be1d-5c74-4ede-b6a3-430eb189134f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 88ec70d68b46beca97fd6b0d758e21aab5d4f4b2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6abdafe0a01d5c8182c5427c45545930c84e08e4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302774"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476146"
 ---
 # <a name="sqldriverconnect-function"></a>SQLDriverConnect 함수(SQLDriverConnect Function)
 **규칙**  
@@ -82,7 +83,7 @@ SQLRETURN SQLDriverConnect(
  입력 **Outconnectionstring* 버퍼의 길이 (문자)입니다.  
   
  *StringLength2Ptr*  
- 출력 \* *Outconnectionstring*에서 반환 하는 데 사용할 수 있는 총 문자 수 (null 종결 문자 제외)를 반환할 버퍼에 대 한 포인터입니다. 반환할 수 있는 문자 수가 *bufferlength*보다 크거나 같은 경우 \* *outconnectionstring* 의 완료 된 연결 문자열은 *bufferlength* 에서 null 종료 문자의 길이를 뺀 값으로 잘립니다.  
+ 출력 Outconnectionstring에서 반환 하는 데 사용할 수 있는 총 문자 수 (null 종결 문자 제외)를 반환할 버퍼에 대 한 포인터 \* *OutConnectionString*입니다. 반환할 수 있는 문자 수가 *Bufferlength*보다 크거나 같은 경우 outconnectionstring의 완료 된 연결 문자열은 \* *OutConnectionString* *bufferlength* 에서 null 종료 문자의 길이를 뺀 값으로 잘립니다.  
   
  *DriverCompletion*  
  입력 드라이버 관리자 또는 드라이버에서 추가 연결 정보를 확인 해야 하는지 여부를 나타내는 플래그입니다.  
@@ -97,20 +98,20 @@ SQLRETURN SQLDriverConnect(
 ## <a name="diagnostics"></a>진단  
  **SQLDriverConnect** 에서 SQL_ERROR 또는 SQL_SUCCESS_WITH_INFO 반환 하는 경우 SQLGetDiagRec의 SQL_HANDLE_DBC *fHandleType* 및 *ConnectionHandle*의 *hhandle* 으로 **SQLGetDiagRec** 를 호출 하 여 연결 된 SQLSTATE 값을 얻을 수 있습니다. 다음 표에서는 일반적으로 **SQLDriverConnect** 에서 반환 하는 SQLSTATE 값을 나열 하 고이 함수의 컨텍스트에서 각 항목에 대해 설명 합니다. "(DM)" 표기법은 드라이버 관리자에서 반환 된 SQLSTATEs의 설명 보다 앞에 나옵니다. 다른 설명이 없는 한 각 SQLSTATE 값과 연결 된 반환 코드는 SQL_ERROR 됩니다.  
   
-|SQLSTATE|Error|Description|  
+|SQLSTATE|오류|설명|  
 |--------------|-----------|-----------------|  
 |01000|일반 경고|드라이버 관련 정보 메시지입니다. 함수는 SQL_SUCCESS_WITH_INFO를 반환 합니다.|  
 |01004|문자열 데이터, 오른쪽이 잘렸습니다.|버퍼 \* *outconnectionstring* 이 전체 연결 문자열을 반환할 만큼 크지 않아 연결 문자열이 잘렸습니다. 잘린 연결 문자열의 길이는 **StringLength2Ptr*에서 반환 됩니다. 함수는 SQL_SUCCESS_WITH_INFO를 반환 합니다.|  
 |01S00|잘못 된 연결 문자열 특성|연결 문자열 (*Inconnectionstring*)에 잘못 된 특성 키워드가 지정 되었지만 드라이버에서 데이터 원본에 연결할 수 있습니다. 함수는 SQL_SUCCESS_WITH_INFO를 반환 합니다.|  
 |01 S 02|옵션 값 변경 됨|드라이버에서 **SQLSetConnectAttr** 의 *valueptr* 인수가 가리키는 지정 된 값을 지원 하지 않고 유사한 값으로 대체 했습니다. 함수는 SQL_SUCCESS_WITH_INFO를 반환 합니다.|  
-|01S08|파일 DSN을 저장 하는 동안 오류 발생|* \*Inconnectionstring* 의 문자열은 **filedsn** 키워드를 포함 하지만 dsn 파일은 저장 되지 않았습니다. 함수는 SQL_SUCCESS_WITH_INFO를 반환 합니다.|  
-|01S09|잘못 된 키워드|(DM) * \*inconnectionstring* 의 문자열은 **SAVEFILE** 키워드를 포함 하지만 **드라이버** 또는 **filedsn** 키워드는 포함 하지 않습니다. 함수는 SQL_SUCCESS_WITH_INFO를 반환 합니다.|  
+|01S08|파일 DSN을 저장 하는 동안 오류 발생|* \* Inconnectionstring* 의 문자열은 **filedsn** 키워드를 포함 하지만 dsn 파일은 저장 되지 않았습니다. 함수는 SQL_SUCCESS_WITH_INFO를 반환 합니다.|  
+|01S09|잘못 된 키워드|(DM) * \* inconnectionstring* 의 문자열은 **SAVEFILE** 키워드를 포함 하지만 **드라이버** 또는 **filedsn** 키워드는 포함 하지 않습니다. 함수는 SQL_SUCCESS_WITH_INFO를 반환 합니다.|  
 |08001|클라이언트에서 연결을 설정할 수 없음|드라이버가 데이터 원본과의 연결을 설정할 수 없습니다.|  
 |08002|사용 중인 연결 이름|(DM) 지정한 *ConnectionHandle* 는 이미 데이터 원본과의 연결을 설정 하는 데 사용 되었으며 연결이 아직 열려 있습니다.|  
 |08004|서버에서 연결을 거부 했습니다.|데이터 소스에서 구현 정의 이유에 대 한 연결 설정을 거부 했습니다.|  
 |08S01|통신 연결 오류|드라이버가 연결을 시도 하는 드라이버와 데이터 원본 간의 통신 연결이 **SQLDriverConnect** 함수 처리가 완료 되기 전에 실패 했습니다.|  
 |28000|잘못 된 권한 부여 사양|연결 문자열 (*Inconnectionstring*)에 지정 된 사용자 id 또는 권한 부여 문자열 또는 둘 다가 데이터 원본에 의해 정의 된 제한을 위반 했습니다.|  
-|HY000|일반 오류|특정 SQLSTATE가 없고 구현 별 SQLSTATE가 정의 되지 않은 오류가 발생 했습니다. SzMessageText 버퍼에서 **SQLGetDiagRec** 에 의해 반환 되는 오류 메시지는 오류 및 해당 원인을 설명 합니다. * \**|  
+|HY000|일반 오류|특정 SQLSTATE가 없고 구현 별 SQLSTATE가 정의 되지 않은 오류가 발생 했습니다. * \* SzMessageText* 버퍼에서 **SQLGetDiagRec** 에 의해 반환 되는 오류 메시지는 오류 및 해당 원인을 설명 합니다.|  
 |HY000|일반 오류: 파일 dsn이 잘못 되었습니다.|(DM) **Inconnectionstring* 의 문자열이 FILEDSN 키워드를 포함 하지만 dsn 파일의 이름을 찾을 수 없습니다.|  
 |HY000|일반 오류: 파일 버퍼를 만들 수 없습니다.|(DM) **Inconnectionstring* 의 문자열이 FILEDSN 키워드를 포함 하지만 dsn 파일을 읽을 수 없습니다.|  
 |HY001|메모리 할당 오류|드라이버 관리자가 **SQLDriverConnect** 함수의 실행 또는 완료를 지 원하는 데 필요한 메모리를 할당할 수 없습니다.<br /><br /> 드라이버에서 함수 실행 또는 완료를 지 원하는 데 필요한 메모리를 할당할 수 없습니다.|  
@@ -134,7 +135,7 @@ SQLRETURN SQLDriverConnect(
 |IM009|변환 DLL을 로드할 수 없습니다.|드라이버가 데이터 원본 또는 연결에 대해 지정 된 변환 DLL을 로드할 수 없습니다.|  
 |IM010|데이터 원본 이름이 너무 깁니다.|(DM) DSN 키워드에 대 한 특성 값이 SQL_MAX_DSN_LENGTH 자 보다 깁니다.|  
 |IM011|드라이버 이름이 너무 깁니다.|(DM) **DRIVER** 키워드의 특성 값이 255 자 보다 깁니다.|  
-|IM012|드라이버 키워드 구문 오류|(DM) **DRIVER** 키워드에 대 한 키워드-값 쌍에 구문 오류가 포함 되어 있습니다.<br /><br /> (DM) * \*inconnectionstring* 의 문자열이 **filedsn** 키워드를 포함 하 고 있지만 dsn 파일에 **드라이버** 키워드나 **dsn** 키워드가 포함 되지 않았습니다.|  
+|IM012|드라이버 키워드 구문 오류|(DM) **DRIVER** 키워드에 대 한 키워드-값 쌍에 구문 오류가 포함 되어 있습니다.<br /><br /> (DM) * \* inconnectionstring* 의 문자열이 **filedsn** 키워드를 포함 하 고 있지만 Dsn 파일에 **드라이버** 키워드나 **dsn** 키워드가 포함 되지 않았습니다.|  
 |IM014|지정 된 DSN에 드라이버와 응용 프로그램 간의 아키텍처가 일치 하지 않습니다.|(DM) 32 비트 응용 프로그램은 64 비트 드라이버에 연결 하는 DSN을 사용 합니다. 또는 그 반대의 경우도 마찬가지입니다.|  
 |IM015|SQL_HANDLE_DBC_INFO_HANDLE에서 드라이버의 SQLDriverConnect 실패|드라이버가 SQL_ERROR을 반환 하는 경우 드라이버 관리자는 응용 프로그램에 SQL_ERROR을 반환 하 고 연결에 실패 합니다.<br /><br /> SQL_HANDLE_DBC_INFO_TOKEN에 대 한 자세한 내용은 [ODBC 드라이버에서 연결 풀 인식 개발](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)을 참조 하세요.|  
 |IM017|비동기 알림 모드에서는 폴링을 사용할 수 없습니다.|알림 모델을 사용할 때마다 폴링은 사용 하지 않도록 설정 됩니다.|  
@@ -146,7 +147,7 @@ SQLRETURN SQLDriverConnect(
   
  *연결 문자열* :: = *빈 문자열*[;] &#124; *특성*[;] &#124; *특성*; *연결 문자열*  
   
- *빈 문자열* :: =*attribute* :: = *특성-키워드*=*특성-값* &#124; DRIVER = [{]*특성-값*[}]  
+ *빈 문자열* :: =*attribute* :: = *특성-키워드* = *특성-값* &#124; DRIVER = [{]*특성-값*[}]  
   
  *특성-keyword* :: = DSN &#124; UID &#124; PWD &#124; *드라이버-정의 된 특성-키워드*  
   
@@ -156,11 +157,11 @@ SQLRETURN SQLDriverConnect(
   
  여기서 *문자 문자열* 에는 0 자 이상의 문자가 있습니다. *식별자* 에 하나 이상의 문자가 있습니다. *특성-키워드* 는 대/소문자를 구분 하지 않습니다. *특성-값* 은 대/소문자를 구분 합니다. 그리고 **DSN** 키워드 값은 공백으로만 구성 되지 않습니다.  
   
- 연결 문자열 및 초기화 파일 문법을 포함 하 여 **[]{}(),;? 문자를 포함 하는 키워드 및 특성 값 = \*! @** 중괄호로 묶지 않아야 합니다. **DSN** 키워드의 값은 공백으로만 구성 될 수 없으며 선행 공백을 포함할 수 없습니다. 시스템 정보의 문법 때문에 키워드와 데이터 원본 이름에는 백슬래시 (\\) 문자를 사용할 수 없습니다.  
+ 연결 문자열 및 초기화 파일 문법을 포함 하 여 **[] {} (),;? \* 문자를 포함 하는 키워드 및 특성 값 =! @** 중괄호로 묶지 않아야 합니다. **DSN** 키워드의 값은 공백으로만 구성 될 수 없으며 선행 공백을 포함할 수 없습니다. 시스템 정보의 문법 때문에 키워드와 데이터 원본 이름에는 백슬래시 () 문자를 사용할 수 없습니다 \\ .  
   
  특성에 세미콜론 (;)이 포함 된 경우를 제외 하 고, 응용 프로그램에서는 **드라이버** 키워드 뒤에 중괄호를 추가할 필요가 없습니다. 단,이 경우에는 중괄호가 필요 합니다. 드라이버가 수신 하는 특성 값에 중괄호가 포함 된 경우 드라이버는 제거 하지 않아야 하지만 반환 된 연결 문자열의 일부 여야 합니다.  
   
- {} **[]{}(),;? 문자를 포함 하는 중괄호 ()로 묶인 DSN 또는 연결 문자열 값입니다. = \*! @** 은 드라이버에 그대로 전달 됩니다. 그러나 키워드에 이러한 문자를 사용 하는 경우 드라이버 관리자는 파일 Dsn을 사용할 때 오류를 반환 하지만 일반 연결 문자열의 경우 연결 문자열을 드라이버에 전달 합니다. 키워드 값에는 포함 된 중괄호를 사용 하지 마십시오.  
+ {} **[] {} (),;? \* 문자를 포함 하는 중괄호 ()로 묶인 DSN 또는 연결 문자열 값입니다. =! @** 은 드라이버에 그대로 전달 됩니다. 그러나 키워드에 이러한 문자를 사용 하는 경우 드라이버 관리자는 파일 Dsn을 사용할 때 오류를 반환 하지만 일반 연결 문자열의 경우 연결 문자열을 드라이버에 전달 합니다. 키워드 값에는 포함 된 중괄호를 사용 하지 마십시오.  
   
  연결 문자열에는 원하는 수의 드라이버 정의 키워드가 포함 될 수 있습니다. **Driver** 키워드는 시스템 정보의 정보를 사용 하지 않으므로 드라이버가 연결 문자열의 정보만 사용 하 여 데이터 원본에 연결할 수 있도록 충분 한 키워드를 정의 해야 합니다. 자세한 내용은이 섹션의 뒷부분에 나오는 "드라이버 지침"을 참조 하십시오. 드라이버는 데이터 원본에 연결 하는 데 필요한 키워드를 정의 합니다.  
   
@@ -226,7 +227,7 @@ SQLRETURN SQLDriverConnect(
   
     -   새 연결 문자열에서 **Filedsn** 키워드를 제거 합니다.  
   
-4.  레지스트리 항목 HKEY_LOCAL_MACHINE \SOFTWARE\ODBC\ODBCINST.를 검색 하 여 드라이버를 로드 합니다. INI\\<드라이버 이름\>\driver \< **(드라이버 이름> 드라이버 키워드로 지정** 됩니다.  
+4.  <드라이버 이름 \Driver HKEY_LOCAL_MACHINE\SOFTWARE\ODBC\ODBCINST.INI레지스트리 항목을 확인 하 여 드라이버를 로드 합니다 \\ \> \<Driver Name> . 여기서은 **driver** 키워드에 의해 지정 됩니다.  
   
 5.  드라이버에 새 연결 문자열을 전달 합니다.  
   
@@ -256,7 +257,7 @@ SQLRETURN SQLDriverConnect(
   
  드라이버는 *Drivercompletion*값을 기준으로 사용자 ID 및 암호와 같은 연결 정보를 묻는 메시지를 표시 하 고 데이터 원본에 연결 합니다.  
   
--   SQL_DRIVER_PROMPT: 드라이버는 연결 문자열 및 시스템 정보 (있는 경우)의 값을 초기 값으로 사용 하 여 대화 상자를 표시 합니다. 사용자가 대화 상자를 종료 하면 드라이버가 데이터 원본에 연결 됩니다. 또한 \* *inconnectionstring* 의 **DSN** 또는 **DRIVER** 키워드 값에서 연결 문자열을 생성 하 고 대화 상자에서 반환 되는 정보를 생성 합니다. 이 연결 문자열을 **Outconnectionstring* 버퍼에 배치 합니다.  
+-   SQL_DRIVER_PROMPT: 드라이버는 연결 문자열 및 시스템 정보 (있는 경우)의 값을 초기 값으로 사용 하 여 대화 상자를 표시 합니다. 사용자가 대화 상자를 종료 하면 드라이버가 데이터 원본에 연결 됩니다. 또한 inconnectionstring의 **DSN** 또는 **DRIVER** 키워드 값에서 연결 문자열을 생성 \* *InConnectionString* 하 고 대화 상자에서 반환 되는 정보를 생성 합니다. 이 연결 문자열을 **Outconnectionstring* 버퍼에 배치 합니다.  
   
 -   SQL_DRIVER_COMPLETE 또는 SQL_DRIVER_COMPLETE_REQUIRED: 연결 문자열이 충분 한 정보를 포함 하 고 해당 정보가 올바르면 드라이버는 데이터 원본에 연결 하 고 \* *inconnectionstring* 을 \* *outconnectionstring*에 복사 합니다. 누락 되거나 잘못 된 정보가 있는 경우 드라이버는 *drivercompletion* 이 SQL_DRIVER_PROMPT 때와 동일한 작업을 수행 합니다. 단, *drivercompletion* 이 SQL_DRIVER_COMPLETE_REQUIRED 경우 드라이버는 데이터 원본에 연결 하는 데 필요 하지 않은 정보에 대 한 컨트롤을 사용 하지 않도록 설정 합니다.  
   
@@ -366,6 +367,6 @@ int main() {
 |핸들 해제|[SQLFreeHandle 함수](../../../odbc/reference/syntax/sqlfreehandle-function.md)|  
 |연결 특성 설정|[SQLSetConnectAttr 함수](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [ODBC API 참조](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 헤더 파일](../../../odbc/reference/install/odbc-header-files.md)

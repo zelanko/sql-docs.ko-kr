@@ -1,4 +1,5 @@
 ---
+description: sp_add_maintenance_plan(Transact-SQL)
 title: sp_add_maintenance_plan (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 01ab1834-6260-47cb-a1b7-20722217b062
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a37600763a02b4ed2fa49cddac0b514c80618f22
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a26b25a4c6484363ede0435b58febf894f13481f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85879691"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474607"
 ---
 # <a name="sp_add_maintenance_plan-transact-sql"></a>sp_add_maintenance_plan(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +46,7 @@ sp_add_maintenance_plan [ @plan_name = ] 'plan_name' ,
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @plan_name = ] 'plan_name'`추가할 유지 관리 계획의 이름을 지정 합니다. *plan_name* 는 **varchar (128)** 입니다.  
+`[ @plan_name = ] 'plan_name'` 추가할 유지 관리 계획의 이름을 지정 합니다. *plan_name* 는 **varchar (128)** 입니다.  
   
  ** @plan_id = '** *plan_id* **'**  
  유지 관리 계획의 ID를 지정합니다. **uniqueidentifier** *plan_id* 입니다.  
@@ -59,7 +60,7 @@ sp_add_maintenance_plan [ @plan_name = ] 'plan_name' ,
 ## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할의 멤버만 **sp_add_maintenance_plan**를 실행할 수 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  Myplan이라는 유지 관리 계획을 만듭니다.  
   
 ```  

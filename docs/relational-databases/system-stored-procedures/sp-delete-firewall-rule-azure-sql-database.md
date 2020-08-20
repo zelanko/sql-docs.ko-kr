@@ -1,4 +1,5 @@
 ---
+description: sp_delete_firewall_rule(Azure SQL Database)
 title: sp_delete_firewall_rule
 titleSuffix: Azure SQL Database
 ms.date: 07/27/2016
@@ -19,12 +20,12 @@ author: VanMSFT
 ms.author: vanto
 ms.custom: seo-dt-2019
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 41f4e779ccbab41557cb9ba20b5aa02c65e45919
-ms.sourcegitcommit: bc10ec0be5ddfc5f0bc220a9ac36c77dd6b80f1d
+ms.openlocfilehash: f1af7d5fa3395be32840266656ffc4fccd3d3414
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87544416"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474374"
 ---
 # <a name="sp_delete_firewall_rule-azure-sql-database"></a>sp_delete_firewall_rule(Azure SQL Database)
 [!INCLUDE [asdb-asa](../../includes/applies-to-version/asdb-asa.md)]

@@ -1,4 +1,5 @@
 ---
+description: 트랜잭션 지원
 title: 트랜잭션 지원 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: d56e1458-8da2-4d73-a777-09e045c30a33
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a5b9d731d12329a4ef663b1ea66cdc59a0b153fa
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0218941606752ccd93c7bc9bdfe31096682c6d87
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81297981"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476332"
 ---
 # <a name="transaction-support"></a>트랜잭션 지원
 트랜잭션에 대 한 지원 수준은 드라이버에 정의 되어 있습니다. ODBC는 데이터에 대 한 여러 업데이트를 관리할 필요가 없는 단일 사용자 또는 데스크톱 데이터베이스에서 구현 되도록 설계 되었습니다. 또한 트랜잭션을 지 원하는 일부 데이터베이스는 SQL의 DML (데이터 조작 언어) 문에 대해서만 수행 합니다. 트랜잭션이 활성 상태일 때 DDL (데이터 정의 언어) 사용과 관련 된 제한 사항 또는 특별 한 트랜잭션 의미 체계가 있습니다. 즉, 테이블에 대 한 여러 동시 업데이트에 대 한 트랜잭션 지원이 있을 수 있으며 트랜잭션 중에 테이블의 수와 정의를 변경할 수 없습니다.  

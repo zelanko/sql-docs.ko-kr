@@ -1,4 +1,5 @@
 ---
+description: sys.dm_os_volume_stats(Transact-SQL)
 title: sys. dm_os_volume_stats (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/06/2019
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: fa1c58ad-8487-42ad-956c-983f2229025f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 17bf3d47fe394407f848f4d9536fb202652e04db
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 75e6753328857be7f677a253fde790dd51defc51
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829327"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474815"
 ---
 # <a name="sysdm_os_volume_stats-transact-sql"></a>sys.dm_os_volume_stats(Transact-SQL)
 [!INCLUDE[tsql-appliesto-2008R2SP1-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-2008R2sp1-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +39,7 @@ ms.locfileid: "82829327"
 sys.dm_os_volume_stats (database_id, file_id)  
 ```  
   
-##  <a name="arguments"></a><a name="Arguments"></a>인수의  
+##  <a name="arguments"></a><a name="Arguments"></a> 인수  
  *database_id*  
  데이터베이스의 ID입니다. *database_id*는 **int**이며 기본값은 없습니다. NULL이 될 수 없습니다.  
   
@@ -69,7 +70,7 @@ sys.dm_os_volume_stats (database_id, file_id)
 ### <a name="permissions"></a>사용 권한  
  `VIEW SERVER STATE` 권한이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-return-total-space-and-available-space-for-all-database-files"></a>A. 모든 데이터베이스 파일에 대해 전체 공간과 사용 가능한 공간 반환  
  다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 모든 데이터베이스 파일에 대해 전체 공간과 사용 가능한 공간(바이트)을 반환합니다.  

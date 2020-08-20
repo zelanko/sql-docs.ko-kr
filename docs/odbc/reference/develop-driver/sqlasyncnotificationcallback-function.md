@@ -1,4 +1,5 @@
 ---
+description: SQLAsyncNotificationCallback 함수
 title: SQLAsyncNotificationCallback 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: c56aedc9-f7f7-4641-b605-f0f98ed4400c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e6c182c48b8e5ddb70204ddd3a94d9651f97595d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b9d03e8a3fa7e62c19dd09a210dca3a56348c692
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81294540"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476232"
 ---
 # <a name="sqlasyncnotificationcallback-function"></a>SQLAsyncNotificationCallback 함수
 **규칙**  
@@ -53,10 +54,10 @@ typedef SQLRETURN (SQL_API *SQL_ASYNC_NOTIFICATION_CALLBACK)(
 ## <a name="diagnostics"></a>진단  
  **Sqlasyncnotificationcallback** 은 다음 두 가지 상황에 대 한 SQL_ERROR를 반환할 수 있습니다 .이는 드라이버 또는 드라이버 관리자의 구현 문제를 의미 합니다.  
   
-|Error|Description|  
+|오류|설명|  
 |-----------|-----------------|  
 |연결 또는 문이 알림을 요청 하지 않았습니다.||  
 |잘못 된 *핸들*|드라이버가 잘못 된 핸들을 전달 하 여 내부 드라이버 관리자 유효성 검사 테스트에 실패 했습니다.|  
   
-## <a name="see-also"></a>참고 항목  
- [비동기 실행(폴링 메서드)](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md)
+## <a name="see-also"></a>관련 항목  
+ [비동기 실행 (폴링 방법)](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md)

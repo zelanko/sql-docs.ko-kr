@@ -1,4 +1,5 @@
 ---
+description: sys.trusted_assemblies(Transact-SQL)
 title: sys. trusted_assemblies (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
@@ -18,12 +19,12 @@ ms.assetid: ''
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c8144e6a134edf3331b34f5c91f6d676e6a9302f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e4eee138db35efe4b8f9b01f88d07b52141ab9a1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733398"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475167"
 ---
 # <a name="systrusted_assemblies-transact-sql"></a>sys.trusted_assemblies(Transact-SQL)  
 [!INCLUDE[SQL Server 2017](../../includes/applies-to-version/sqlserver2017.md)]

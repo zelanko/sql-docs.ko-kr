@@ -1,4 +1,5 @@
 ---
+description: 'IBCPSession2:: Bcpset대량 모드 (Native Client OLE DB 공급자)'
 title: 'IBCPSession2:: Bcpset대량 모드 (Native Client OLE DB 공급자) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/16/2017
@@ -13,12 +14,12 @@ ms.assetid: babba19f-e67b-450c-b0e6-523a0f9d23ab
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dc8b48c6a9dab071df8fa3df1977f62afb91659d
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 001eae4473b25c440dc3db54a5936e351f5566c1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247709"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475722"
 ---
 # <a name="ibcpsession2bcpsetbulkmode-native-client-ole-db-provider"></a>IBCPSession2:: Bcpset대량 모드 (Native Client OLE DB 공급자)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -72,7 +73,7 @@ HRESULT BCPSetBulkMode (
   
  다음 표에서는 *property* 매개 변수에 대한 상수를 나열합니다.  
   
-|속성|설명|  
+|속성|Description|  
 |--------------|-----------------|  
 |BCP_OUT_CHARACTER_MODE|문자 출력 모드를 지정합니다.<br /><br /> BCP.EXE의 -c 옵션에 해당하며, *eUserDataType* 속성이 **BCP_TYPE_SQLCHARACTER**로 설정된 IBCPSession::BCPColFmt에 해당합니다.|  
 |BCP_OUT_WIDE_CHARACTER_MODE|유니코드 출력 모드를 지정합니다.<br /><br /> BCP.EXE의 -w 옵션에 해당하며, *eUserDataType* 속성이 **BCP_TYPE_SQLNCHAR**로 설정된 IBCPSession::BCPColFmt에 해당합니다.|  

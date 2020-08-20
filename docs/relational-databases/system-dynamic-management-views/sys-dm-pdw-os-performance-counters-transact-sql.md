@@ -1,4 +1,5 @@
 ---
+description: sys. dm_pdw_os_performance_counters (Transact-sql)
 title: sys. dm_pdw_os_performance_counters (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
@@ -12,12 +13,12 @@ ms.assetid: 0673a8f8-8bed-41eb-8959-a9e3e9e03a65
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 72164d23d8f2dbd27bb30f1341b288c96ab44cc0
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 08ef29f6fe47099bcbbdeb87fce0dfb5aa25a42a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396612"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474745"
 ---
 # <a name="sysdm_pdw_os_performance_counters-transact-sql"></a>sys. dm_pdw_os_performance_counters (Transact-sql)
 [!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
@@ -34,6 +35,6 @@ ms.locfileid: "87396612"
 |last_update_time|**Datetime2 (3)**|값이 마지막으로 업데이트 된 시간의 타임 스탬프입니다.||  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;SQL Data Warehouse 및 병렬 데이터 웨어하우스 동적 관리 뷰](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
+ [Transact-sql&#41;&#40;SQL Data Warehouse 및 병렬 데이터 웨어하우스 동적 관리 뷰 ](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   

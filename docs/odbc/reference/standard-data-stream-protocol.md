@@ -1,4 +1,5 @@
 ---
+description: 표준 데이터 스트림 프로토콜
 title: 표준 데이터 스트림 프로토콜 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/14/2018
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1d234d17-2927-4c98-9fae-550c1370f829
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0e959170ea5df50786451acb6a574ea2765298af
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9ad7c5e07e0fc5a59edc68fa6cbe70d7bd5fc76b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81280212"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476197"
 ---
 # <a name="standard-data-stream-protocol"></a>표준 데이터 스트림 프로토콜
 표준 데이터 스트림 프로토콜은 유형이 다른 Dbms의 데이터에 액세스 하는 한 가지 방법입니다. 사실 표준 데이터 스트림 프로토콜은 이미 있습니다.

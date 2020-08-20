@@ -1,4 +1,5 @@
 ---
+description: 전체 텍스트 Search 및 의미 체계 Search 함수(Transact-SQL)
 title: 전체 텍스트 검색 및 의미 체계 검색 함수 (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a61a3694-7604-4583-962e-fc30f771c6fa
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: cdf480d27a0cc0a1b1b646a5c902d7994ad88b5e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: deb790da4e4e263318717c3ee81cc8ee8d467ae6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734368"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474652"
 ---
 # <a name="full-text-search-and-semantic-search-functions-transact-sql"></a>전체 텍스트 Search 및 의미 체계 Search 함수(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,4 +1,5 @@
 ---
+description: SQLExecDirect 함수
 title: SQLExecDirect 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 985fcee1-f204-425c-bdd1-deb0e7d7bbd9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 5739e397467deb684a4cd6c7b13a507f30b53fa7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0e6f2c3ed2334915d941aa9bffa898627b4dfc2e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81286113"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476135"
 ---
 # <a name="sqlexecdirect-function"></a>SQLExecDirect 함수
 **규칙**  
@@ -59,17 +60,17 @@ SQLRETURN SQLExecDirect(
 ## <a name="diagnostics"></a>진단  
  **Sqlexecdirect** 가 SQL_ERROR 또는 SQL_SUCCESS_WITH_INFO를 반환 하는 경우 *HandleType* SQL_HANDLE_STMT의 및 *StatementHandle* *핸들* 을 사용 하 여 **SQLGetDiagRec** 를 호출 하 여 연결 된 SQLSTATE 값을 가져올 수 있습니다. 다음 표에서는 일반적으로 **Sqlexecdirect** 에서 반환 하는 SQLSTATE 값을 나열 하 고이 함수의 컨텍스트에서 각 항목을 설명 합니다. "(DM)" 표기법은 드라이버 관리자에서 반환 된 SQLSTATEs의 설명 보다 앞에 나옵니다. 다른 설명이 없는 한 각 SQLSTATE 값과 연결 된 반환 코드는 SQL_ERROR 됩니다.  
   
-|SQLSTATE|Error|Description|  
+|SQLSTATE|오류|설명|  
 |--------------|-----------|-----------------|  
 |01000|일반 경고|드라이버 관련 정보 메시지입니다. 함수는 SQL_SUCCESS_WITH_INFO를 반환 합니다.|  
 |01001|커서 작업 충돌|\**StatementText* 에는 위치 지정 update 또는 delete 문이 포함 되어 있고 행 또는 행을 두 개 이상 업데이트 하거나 삭제 하지 않았습니다. 하나 이상의 행에 대 한 업데이트에 대 한 자세한 내용은 **SQLSetStmtAttr**의 SQL_ATTR_SIMULATE_CURSOR *특성* 에 대 한 설명을 참조 하십시오.<br /><br /> 함수는 SQL_SUCCESS_WITH_INFO를 반환 합니다.|  
 |01003|Set 함수에서 NULL 값이 제거 되었습니다.|인수 *StatementText* 에는 set 함수 (예: **AVG**, **MAX**, **MIN**등)가 포함 되어 있지만 **COUNT** set 함수는 포함 되지 않으며 NULL 인수 값은 함수를 적용 하기 전에 제거 되었습니다. 함수는 SQL_SUCCESS_WITH_INFO를 반환 합니다.|  
 |01004|문자열 데이터, 오른쪽이 잘렸습니다.|입/출력 또는 출력 매개 변수에 대해 반환 된 문자열 또는 이진 데이터 때문에 비어 있지 않은 문자 또는 NULL이 아닌 이진 데이터가 잘렸습니다. 문자열 값인 경우 오른쪽이 잘렸습니다. 함수는 SQL_SUCCESS_WITH_INFO를 반환 합니다.|  
 |01006|권한 해지 안 됨|\**StatementText* 에 **REVOKE** 문이 포함 되어 있으며 사용자에 게 지정 된 권한이 없습니다. 함수는 SQL_SUCCESS_WITH_INFO를 반환 합니다.|  
-|01007|권한이 부여 되지 않음|StatementText가 **GRANT** 문이 고 사용자에 게 지정 된 권한을 부여할 수 없습니다. * \**|  
+|01007|권한이 부여 되지 않음|* \* StatementText* 가 **GRANT** 문이 고 사용자에 게 지정 된 권한을 부여할 수 없습니다.|  
 |01 S 02|옵션 값 변경 됨|구현 작업 조건 때문에 지정 된 문 특성이 잘못 되었습니다. 따라서 유사한 값이 일시적으로 대체 되었습니다. (**SQLGetStmtAttr** 를 호출 하 여 임시로 대체 된 값을 확인할 수 있습니다.) 대체 값은 커서가 닫힐 때까지 *StatementHandle* 에 유효 합니다 .이 시점에서 statement 특성은 이전 값으로 되돌아갑니다. 변경할 수 있는 문 특성은 다음과 같습니다.<br /><br /> SQL_ ATTR_CONCURRENCY SQL_ ATTR_CURSOR_TYPE SQL_ ATTR_KEYSET_SIZE SQL_ ATTR_MAX_LENGTH SQL_ ATTR_MAX_ROWS SQL_ ATTR_QUERY_TIMEOUT SQL_<br /><br /> 함수는 SQL_SUCCESS_WITH_INFO를 반환 합니다.|  
 |01S07|소수 잘림|입력/출력 또는 출력 매개 변수에 대해 반환 된 데이터가 잘렸습니다 .이는 숫자 데이터 형식의 소수 부분이 잘렸거나 시간, 타임 스탬프 또는 interval 데이터 형식에 대 한 시간 구성 요소의 소수 부분이 잘린 것입니다.<br /><br /> 함수는 SQL_SUCCESS_WITH_INFO를 반환 합니다.|  
-|07002|COUNT 필드가 잘못 되었습니다.|**SQLBindParameter** 에 지정 된 매개 변수 개수가 \* *StatementText*에 포함 된 SQL 문의 매개 변수 개수 보다 낮습니다.<br /><br /> **SQLBindParameter** 가 null 포인터로 *설정 되지* 않은 *StrLen_or_IndPtr* SQL_NULL_DATA 또는 SQL_DATA_AT_EXEC으로 설정 되지 않고 *inputoutputtype* 이 SQL_PARAM_OUTPUT로 설정 되지 않은 상태에서 **SQLBindParameter** 에 지정 된 매개 변수 개수가 **StatementText*에 포함 된 SQL 문의 매개 변수 개수 보다 큰지 여부를 호출 했습니다.|  
+|07002|COUNT 필드가 잘못 되었습니다.|**SQLBindParameter** 에 지정 된 매개 변수 개수가 StatementText에 포함 된 SQL 문의 매개 변수 개수 보다 낮습니다 \* *StatementText*.<br /><br /> **SQLBindParameter** 가 null 포인터로 *설정 되지* 않은 *StrLen_or_IndPtr* SQL_NULL_DATA 또는 SQL_DATA_AT_EXEC으로 설정 되지 않고 *inputoutputtype* 이 SQL_PARAM_OUTPUT로 설정 되지 않은 상태에서 **SQLBindParameter** 에 지정 된 매개 변수 개수가 **StatementText*에 포함 된 SQL 문의 매개 변수 개수 보다 큰지 여부를 호출 했습니다.|  
 |07006|제한 된 데이터 형식 특성 위반|바인딩된 매개 변수에 대 한 **SQLBindParameter** 의 *ValueType* 인수에 의해 식별 되는 데이터 값을 **SQLBindParameter**의 *ParameterType* 인수로 식별 된 데이터 형식으로 변환할 수 없습니다.<br /><br /> SQL_PARAM_INPUT_OUTPUT 또는 SQL_PARAM_OUTPUT로 바인딩된 매개 변수에 대해 반환 된 데이터 값을 **SQLBindParameter**의 *ValueType* 인수로 식별 된 데이터 형식으로 변환할 수 없습니다.<br /><br /> 하나 이상의 행에 대 한 데이터 값을 변환할 수 없지만 하나 이상의 행이 성공적으로 반환 된 경우이 함수는 SQL_SUCCESS_WITH_INFO을 반환 합니다.|  
 |07007|제한 된 매개 변수 값 위반|매개 변수 형식 SQL_PARAM_INPUT_OUTPUT_STREAM는 파트에서 데이터를 보내고 받는 매개 변수에만 사용 됩니다. 이 매개 변수 형식에는 입력 바인딩된 버퍼를 사용할 수 없습니다.<br /><br /> 이 오류는 매개 변수 형식이 SQL_PARAM_INPUT_OUTPUT 되 고 \* **SQLBindParameter** 에 지정 된 *StrLen_or_IndPtr* SQL_NULL_DATA, SQL_DEFAULT_PARAM, SQL_LEN_DATA_AT_EXEC (LEN) 또는 SQL_DATA_AT_EXEC와 같지 않은 경우에 발생 합니다.|  
 |07S01|기본 매개 변수 사용이 잘못 되었습니다.|**SQLBindParameter**로 설정 된 매개 변수 값이 SQL_DEFAULT_PARAM 되었으며 해당 매개 변수에 기본값이 없습니다.|  
@@ -82,8 +83,8 @@ SQLRETURN SQLExecDirect(
 |22007|날짜/시간 형식이 잘못 되었습니다.|**StatementText* 에는 날짜, 시간 또는 타임 스탬프 구조를 바인딩된 매개 변수로 포함 하 고 매개 변수는 각각 잘못 된 날짜, 시간 또는 타임 스탬프를 포함 하는 SQL 문이 포함 되어 있습니다.<br /><br /> Input/output 또는 output 매개 변수는 날짜, 시간 또는 타임 스탬프 C 구조에 바인딩되고 반환 된 매개 변수의 값은 각각 잘못 된 날짜, 시간 또는 타임 스탬프입니다. 함수는 SQL_SUCCESS_WITH_INFO를 반환 합니다.|  
 |22008|Datetime 필드 오버플로|**StatementText* 에는 계산 시 잘못 된 날짜, 시간 또는 타임 스탬프 구조가 생성 된 datetime 식을 포함 하는 SQL 문이 포함 되어 있습니다.<br /><br /> 입/출력 또는 출력 매개 변수에 대해 계산 된 datetime 식이 잘못 된 날짜, 시간 또는 타임 스탬프 C 구조를 가져왔습니다.|  
 |22012|0으로 나누었습니다.|**StatementText* 에 0으로 나누기를 발생 시킨 산술 식이 포함 된 SQL 문이 포함 되어 있습니다.<br /><br /> 입/출력 또는 출력 매개 변수에 대해 계산 된 산술 식의 결과로 0으로 나누었습니다.|  
-|22015|간격 필드 오버플로입니다.|StatementText에는 interval SQL 데이터 형식으로 변환 될 때 유효 자릿수가 손실 되는 정확한 숫자 또는 간격 매개 변수가 포함 되어 있습니다. * \**<br /><br /> StatementText에는 열에서 숫자 데이터 형식으로 변환 될 때 숫자 데이터 형식에 표시 되지 않는 필드를 두 개 이상 포함 하는 interval 매개 변수가 포함 되어 있습니다. * \**<br /><br /> StatementText에 interval sql 형식에 할당 된 매개 변수 데이터가 포함 되어 있으며 interval sql 형식에 C 형식의 값이 표시 되지 않았습니다. * \**<br /><br /> 정확한 숫자 또는 간격 SQL 형식의 입력/출력 또는 출력 매개 변수를 interval C 유형에 할당 하면 유효 자릿수가 손실 됩니다.<br /><br /> Input/output 또는 output 매개 변수가 interval C 구조에 할당 된 경우 interval 데이터 구조에 데이터가 표시 되지 않습니다.|  
-|22018|캐스트 사양에 대 한 문자 값이 잘못 되었습니다.|StatementText에는 정확히 또는 근사 숫자, datetime 또는 interval 데이터 형식인 C 형식이 포함 되어 있습니다. * \** 열의 SQL 형식이 문자 데이터 형식입니다. 열에 있는 값이 바인딩된 C 형식의 올바른 리터럴이 아닙니다.<br /><br /> 입/출력 또는 출력 매개 변수가 반환 된 경우 SQL 유형은 정확한 수치 또는 근사치, datetime 또는 interval 데이터 형식입니다. C 형식이 SQL_C_CHAR 되었습니다. 열 값이 바인딩된 SQL 형식의 올바른 리터럴이 아닙니다.|  
+|22015|간격 필드 오버플로입니다.|* \* StatementText* 에는 interval SQL 데이터 형식으로 변환 될 때 유효 자릿수가 손실 되는 정확한 숫자 또는 간격 매개 변수가 포함 되어 있습니다.<br /><br /> * \* StatementText* 에는 열에서 숫자 데이터 형식으로 변환 될 때 숫자 데이터 형식에 표시 되지 않는 필드를 두 개 이상 포함 하는 interval 매개 변수가 포함 되어 있습니다.<br /><br /> * \* StatementText* 에 interval sql 형식에 할당 된 매개 변수 데이터가 포함 되어 있으며 interval Sql 형식에 C 형식의 값이 표시 되지 않았습니다.<br /><br /> 정확한 숫자 또는 간격 SQL 형식의 입력/출력 또는 출력 매개 변수를 interval C 유형에 할당 하면 유효 자릿수가 손실 됩니다.<br /><br /> Input/output 또는 output 매개 변수가 interval C 구조에 할당 된 경우 interval 데이터 구조에 데이터가 표시 되지 않습니다.|  
+|22018|캐스트 사양에 대 한 문자 값이 잘못 되었습니다.|* \* StatementText* 에는 정확한 수치 또는 근사치 데이터 형식으로 된 C 형식이 포함 되어 있습니다. 열의 SQL 형식은 문자 데이터 형식이 고, 열의 값은 바인딩된 c 형식의 올바른 리터럴이 아닙니다.<br /><br /> 입/출력 또는 출력 매개 변수가 반환 된 경우 SQL 유형은 정확한 수치 또는 근사치, datetime 또는 interval 데이터 형식입니다. C 형식이 SQL_C_CHAR 되었습니다. 열 값이 바인딩된 SQL 형식의 올바른 리터럴이 아닙니다.|  
 |22019|잘못 된 이스케이프 문자|\**StatementText* 에는 **Where** 절에 **이스케이프** 를 사용 하 여 **LIKE** 조건자를 포함 하는 SQL 문이 포함 되어 있으며 **이스케이프** 문자 다음의 길이가 1과 같지 않습니다.|  
 |22025|이스케이프 시퀀스가 잘못 되었습니다.|\**StatementText* 에 **WHERE** 절에 "**LIKE** _pattern value_ **이스케이프** _이스케이프 문자_"가 포함 된 SQL 문이 포함 되어 있고 패턴 값의 이스케이프 문자 다음에 오는 문자가 "%" 또는 "_" 중 하나가 아닙니다.|  
 |23000|무결성 제약 조건 위반|**StatementText* 에는 매개 변수 또는 리터럴이 포함 된 SQL 문이 포함 되어 있습니다. 연결 된 테이블 열에서 NOT NULL로 정의 된 열에 대 한 매개 변수 값이 NULL입니다. 고유 값만 포함 하도록 제한 된 열에 중복 값이 제공 되었거나 일부 다른 무결성 제약 조건을 위반 했습니다.|  
@@ -101,7 +102,7 @@ SQLRETURN SQLExecDirect(
 |42S21|열이 이미 있습니다.|\**StatementText* 에 **ALTER TABLE** 문이 포함 되어 있고 **ADD** 절에 지정 된 열이 고유 하지 않거나 기본 테이블의 기존 열을 식별 합니다.|  
 |42S22|열을 찾을 수 없음|\**StatementText* 에 **CREATE INDEX** 문이 포함 되어 있고 열 목록에 지정 된 열 이름 중 하나 이상이 존재 하지 않습니다.<br /><br /> \**StatementText* 에 **GRANT** 또는 **REVOKE** 문이 포함 되어 있고 지정한 열 이름이 없습니다.<br /><br /> \**StatementText* 에 **SELECT**, **DELETE**, **INSERT**또는 **UPDATE** 문이 포함 되어 있고 지정한 열 이름이 없습니다.<br /><br /> \**StatementText* 에 **CREATE TABLE** 문이 포함 되어 있으며 제약 조건에 지정 된 열 (생성 되는 열이 아닌 테이블 참조)이 없습니다.<br /><br /> \**StatementText* 에 **CREATE SCHEMA** 문이 포함 되어 있고 지정한 열 이름이 없습니다.|  
 |44000|WITH CHECK OPTION 위반|*StatementText* 인수에는 **insert** 문의 영향을 받는 하나 이상의 행이 더 이상 표시 되는 테이블에 표시 되지 않도록 **WITH CHECK OPTION**을 지정 하 여 만든 표시 된 테이블 또는 표시 된 테이블에서 파생 된 테이블에서 수행 된 **insert** 문이 포함 됩니다.<br /><br /> *StatementText* 인수에는 표시 된 테이블에 대해 수행 된 **Update** 문 또는 **WITH CHECK OPTION**을 지정 하 여 만든 표시 된 테이블에서 파생 된 테이블이 포함 되어 있습니다 .이 경우 **update** 문의 영향을 받는 하나 이상의 행이 표시 된 테이블에 더 이상 표시 되지 않습니다.|  
-|HY000|일반 오류|특정 SQLSTATE가 없고 구현 별 SQLSTATE가 정의 되지 않은 오류가 발생 했습니다. MessageText 버퍼에서 **SQLGetDiagRec** 에 의해 반환 되는 오류 메시지는 오류 및 해당 원인을 설명 합니다. * \**|  
+|HY000|일반 오류|특정 SQLSTATE가 없고 구현 별 SQLSTATE가 정의 되지 않은 오류가 발생 했습니다. * \* MessageText* 버퍼에서 **SQLGetDiagRec** 에 의해 반환 되는 오류 메시지는 오류 및 해당 원인을 설명 합니다.|  
 |HY001|메모리 할당 오류|드라이버에서 함수 실행 또는 완료를 지 원하는 데 필요한 메모리를 할당할 수 없습니다.|  
 |HY008|작업 취소됨|*StatementHandle*에 대해 비동기 처리를 사용 하도록 설정 했습니다. 함수가 호출 되었으며 실행이 완료 되기 전에 **sqlcancel** 또는 **Sqlcancelhandle** 이 *StatementHandle*에 대해 호출 되었습니다. 그런 다음 *StatementHandle*에서 함수를 다시 호출 했습니다.<br /><br /> 함수가 호출 되 고 실행이 완료 되기 전에 **sqlcancel** 또는 **sqlcancelhandle** 이 다중 스레드 응용 프로그램의 다른 스레드에서 *StatementHandle* 호출 되었습니다.|  
 |HY009|Null 포인터 사용이 잘못 되었습니다.|(DM) **StatementText* 가 null 포인터입니다.|  
@@ -161,6 +162,6 @@ SQLRETURN SQLExecDirect(
 |커서 이름 설정|[SQLSetCursorName 함수](../../../odbc/reference/syntax/sqlsetcursorname-function.md)|  
 |문 특성 설정|[SQLSetStmtAttr 함수](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)|  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [ODBC API 참조](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 헤더 파일](../../../odbc/reference/install/odbc-header-files.md)

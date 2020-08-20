@@ -1,4 +1,5 @@
 ---
+description: sys.dm_io_virtual_file_stats(Transact-SQL)
 title: sys. dm_io_virtual_file_stats (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/11/2017
@@ -20,12 +21,12 @@ ms.assetid: fa3e321f-6fe5-45ff-b397-02a0dd3d6b7d
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a2110eea5c008f06f7bdd6637dda7222ad5f50d2
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 71cdc5b88a525e88e79ccebd0b61f20d2c391c6d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396294"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474880"
 ---
 # <a name="sysdm_io_virtual_file_stats-transact-sql"></a>sys.dm_io_virtual_file_stats(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -78,7 +79,7 @@ sys.dm_pdw_nodes_io_virtual_file_stats
 |**database_name**|**sysname**|데이터베이스 이름</br></br>SQL Data Warehouse의 경우 pdw_node_id에 의해 식별 되는 노드에 저장 된 데이터베이스의 이름입니다. 각 노드에는 파일 13 개를 포함 하는 tempdb 데이터베이스가 하나 있습니다. 또한 각 노드에는 배포 당 하나의 데이터베이스가 있으며 각 배포 데이터베이스에는 5 개의 파일이 있습니다. 예를 들어 각 노드에 4 개의 분포가 포함 된 경우 결과는 pdw_node_id 당 배포 데이터베이스 파일 20 개를 표시 합니다. 
 |**database_id**|**smallint**|데이터베이스의 ID입니다.|  
 |**file_id**|**smallint**|파일의 ID입니다.|  
-|**sample_ms**|**bigint**|컴퓨터가 시작된 이후로 경과한 시간(밀리초)입니다. 이 열은 이 함수의 다양한 출력을 비교하는 데 사용할 수 있습니다.</br></br>데이터 형식은 **정수** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 형식입니다.[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
+|**sample_ms**|**bigint**|컴퓨터가 시작된 이후로 경과한 시간(밀리초)입니다. 이 열은 이 함수의 다양한 출력을 비교하는 데 사용할 수 있습니다.</br></br>데이터 형식은 **정수** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 형식입니다. [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
 |**num_of_reads**|**bigint**|파일에 대해 읽기가 실행된 횟수입니다.|  
 |**num_of_bytes_read**|**bigint**|파일에 대해 실행된 읽기의 총 바이트 수입니다.|  
 |**io_stall_read_ms**|**bigint**|사용자가 파일에 대한 읽기가 실행될 때까지 대기한 총 시간(밀리초)입니다.|  
@@ -123,7 +124,7 @@ WHERE database_name = 'tempdb' AND file_id = 2;
 
 ## <a name="see-also"></a>참고 항목  
  [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Transact-sql&#41;&#40;동적 관리 뷰 및 함수](../../relational-databases/system-dynamic-management-views/i-o-related-dynamic-management-views-and-functions-transact-sql.md)   
+ [Transact-sql&#41;&#40;동적 관리 뷰 및 함수 ](../../relational-databases/system-dynamic-management-views/i-o-related-dynamic-management-views-and-functions-transact-sql.md)   
  [sys.database_files&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
  [sys.master_files&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  
   

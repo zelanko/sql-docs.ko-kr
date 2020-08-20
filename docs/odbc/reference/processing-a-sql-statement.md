@@ -1,4 +1,5 @@
 ---
+description: SQL 문 처리
 title: SQL 문 처리 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 96270c4f-2efd-4dc1-a985-ed7fd5658db2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 349a62034d598c1bfb44b891b91359d5ff184b7e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b4ce614f6dcf4c1fe0ab1e1c806b966b4267e7fe
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81280523"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476220"
 ---
 # <a name="processing-a-sql-statement"></a>SQL 문 처리
 SQL을 프로그래밍 방식으로 사용 하는 방법에 대해 설명 하기 전에 SQL 문을 처리 하는 방법을 설명 해야 합니다. 각 기술이 각기 다른 시간에 수행 하는 경우에도 관련 된 단계는 세 가지 기술 모두에 공통적입니다. 다음 그림은이 섹션의 나머지 부분에서 설명 하는 SQL 문 처리와 관련 된 단계를 보여 줍니다.  

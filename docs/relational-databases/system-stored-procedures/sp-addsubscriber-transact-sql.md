@@ -1,4 +1,5 @@
 ---
+description: sp_addsubscriber(Transact-SQL)
 title: sp_addsubscriber (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b8a584ea-2a26-4936-965b-b84f026e39c0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f83d85ab2a79a4f5f27143de655f7748fe7f0fd4
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 6e9c6ac18d6d7752baab05ea1d9fa9a65fc86b2c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915301"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474524"
 ---
 # <a name="sp_addsubscriber-transact-sql"></a>sp_addsubscriber(Transact-SQL)
 [!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]
@@ -60,9 +61,9 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @subscriber = ] 'subscriber'`이 서버의 게시에 유효한 구독자로 추가 되는 서버의 이름입니다. *구독자* 는 **sysname**이며 기본값은 없습니다.  
+`[ @subscriber = ] 'subscriber'` 이 서버의 게시에 유효한 구독자로 추가 되는 서버의 이름입니다. *구독자* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @type = ] type`구독자의 유형입니다. *type* 은 **tinyint**이며 다음 값 중 하나일 수 있습니다.  
+`[ @type = ] type` 구독자의 유형입니다. *type* 은 **tinyint**이며 다음 값 중 하나일 수 있습니다.  
   
 |값|Description|  
 |-----------|-----------------|  
@@ -71,12 +72,12 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 |**2**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Jet 데이터베이스|  
 |**3**|OLE DB 공급자|  
   
-`[ @login = ] 'login'`인증에 대 한 로그인 ID입니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *login*은 **sysname**이며 기본값은 NULL입니다.  
+`[ @login = ] 'login'` 인증에 대 한 로그인 ID입니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *login*은 **sysname**이며 기본값은 NULL입니다.  
   
 > [!NOTE]  
 >  이 매개 변수는 더 이상 사용되지 않으며 이전 버전 스크립트와의 호환성을 위해 유지 관리됩니다. 속성은 이제 [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)를 실행할 때 구독 별로 지정 됩니다. 값을 지정하면 해당 값은 이 구독자에서 구독을 만들 때 기본값으로 사용되며 경고 메시지가 반환됩니다.  
   
-`[ @password = ] 'password'`인증에 대 한 암호입니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *password* 는 **nvarchar (524)** 이며 기본값은 NULL입니다.  
+`[ @password = ] 'password'` 인증에 대 한 암호입니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *password* 는 **nvarchar (524)** 이며 기본값은 NULL입니다.  
   
 > [!IMPORTANT]  
 >  빈 암호를 사용하지 마세요. 강력한 암호를 사용하세요.  
@@ -84,24 +85,24 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 > [!NOTE]  
 >  이 매개 변수는 더 이상 사용되지 않으며 이전 버전 스크립트와의 호환성을 위해 유지 관리됩니다. 속성은 이제 [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)를 실행할 때 구독 별로 지정 됩니다. 값을 지정하면 해당 값은 이 구독자에서 구독을 만들 때 기본값으로 사용되며 경고 메시지가 반환됩니다.  
   
-`[ @commit_batch_size = ] commit_batch_size`이 매개 변수는 더 이상 사용 되지 않으며 스크립트의 이전 버전과의 호환성을 위해 유지 관리 됩니다.  
+`[ @commit_batch_size = ] commit_batch_size` 이 매개 변수는 더 이상 사용 되지 않으며 스크립트의 이전 버전과의 호환성을 위해 유지 관리 됩니다.  
   
 > [!NOTE]  
 >  값을 지정하면 해당 값은 이 구독자에서 구독을 만들 때 기본값으로 사용되며 경고 메시지가 반환됩니다.  
   
-`[ @status_batch_size = ] status_batch_size`이 매개 변수는 더 이상 사용 되지 않으며 스크립트의 이전 버전과의 호환성을 위해 유지 관리 됩니다.  
+`[ @status_batch_size = ] status_batch_size` 이 매개 변수는 더 이상 사용 되지 않으며 스크립트의 이전 버전과의 호환성을 위해 유지 관리 됩니다.  
   
 > [!NOTE]  
 >  값을 지정하면 해당 값은 이 구독자에서 구독을 만들 때 기본값으로 사용되며 경고 메시지가 반환됩니다.  
   
-`[ @flush_frequency = ] flush_frequency`이 매개 변수는 더 이상 사용 되지 않으며 스크립트의 이전 버전과의 호환성을 위해 유지 관리 됩니다.  
+`[ @flush_frequency = ] flush_frequency` 이 매개 변수는 더 이상 사용 되지 않으며 스크립트의 이전 버전과의 호환성을 위해 유지 관리 됩니다.  
   
 > [!NOTE]  
 >  값을 지정하면 해당 값은 이 구독자에서 구독을 만들 때 기본값으로 사용되며 경고 메시지가 반환됩니다.  
   
-`[ @frequency_type = ] frequency_type`복제 에이전트를 예약 하는 빈도입니다. *frequency_type* 은 **int**이며 다음 값 중 하나일 수 있습니다.  
+`[ @frequency_type = ] frequency_type` 복제 에이전트를 예약 하는 빈도입니다. *frequency_type* 은 **int**이며 다음 값 중 하나일 수 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**1**|한 번|  
 |**2**|주문형|  
@@ -120,12 +121,12 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 > [!NOTE]  
 >  이 매개 변수는 더 이상 사용되지 않으며 이전 버전 스크립트와의 호환성을 위해 유지 관리됩니다. 속성은 이제 [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)를 실행할 때 구독 별로 지정 됩니다. 값을 지정하면 해당 값은 이 구독자에서 구독을 만들 때 기본값으로 사용되며 경고 메시지가 반환됩니다.  
   
-`[ @frequency_relative_interval = ] frequency_relative_interval`복제 에이전트의 날짜입니다. 이 매개 변수는 *frequency_type* 이 **32** (매월 상대적)로 설정 된 경우에 사용 됩니다. *frequency_relative_interval* 은 **int**이며 다음 값 중 하나일 수 있습니다.  
+`[ @frequency_relative_interval = ] frequency_relative_interval` 복제 에이전트의 날짜입니다. 이 매개 변수는 *frequency_type* 이 **32** (매월 상대적)로 설정 된 경우에 사용 됩니다. *frequency_relative_interval* 은 **int**이며 다음 값 중 하나일 수 있습니다.  
   
 |값|설명|  
 |-----------|-----------------|  
-|**1** (기본값)|첫 번째|  
-|**2**|Second|  
+|**1** (기본값)|처음|  
+|**2**|초|  
 |**4**|세 번째|  
 |**8**|넷째|  
 |**16**|마지막|  
@@ -138,13 +139,13 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 > [!NOTE]  
 >  이 매개 변수는 더 이상 사용되지 않으며 이전 버전 스크립트와의 호환성을 위해 유지 관리됩니다. 속성은 이제 [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)를 실행할 때 구독 별로 지정 됩니다. 값을 지정하면 해당 값은 이 구독자에서 구독을 만들 때 기본값으로 사용되며 경고 메시지가 반환됩니다.  
   
-`[ @frequency_subday = ] frequency_subday`정의 된 기간 동안 다시 예약 하는 빈도입니다. *frequency_subday* 은 **int**이며 다음 값 중 하나일 수 있습니다.  
+`[ @frequency_subday = ] frequency_subday` 정의 된 기간 동안 다시 예약 하는 빈도입니다. *frequency_subday* 은 **int**이며 다음 값 중 하나일 수 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**1**|한 번|  
-|**2**|Second|  
-|**4** (기본값)|분|  
+|**2**|초|  
+|**4** (기본값)|Minute|  
 |**8**|시간|  
   
 > [!NOTE]  
@@ -155,36 +156,36 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 > [!NOTE]  
 >  이 매개 변수는 더 이상 사용되지 않으며 이전 버전 스크립트와의 호환성을 위해 유지 관리됩니다. 속성은 이제 [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)를 실행할 때 구독 별로 지정 됩니다. 값을 지정하면 해당 값은 이 구독자에서 구독을 만들 때 기본값으로 사용되며 경고 메시지가 반환됩니다.  
   
-`[ @active_start_time_of_day = ] active_start_time_of_day`하루 중에서 복제 에이전트가 처음으로 시작 되도록 예약 된 시간이 며 HHMMSS 형식으로 표시 됩니다. *active_start_time_of_day* 은 **int**이며 기본값은 **0**입니다.  
+`[ @active_start_time_of_day = ] active_start_time_of_day` 하루 중에서 복제 에이전트가 처음으로 시작 되도록 예약 된 시간이 며 HHMMSS 형식으로 표시 됩니다. *active_start_time_of_day* 은 **int**이며 기본값은 **0**입니다.  
   
 > [!NOTE]  
 >  이 매개 변수는 더 이상 사용되지 않으며 이전 버전 스크립트와의 호환성을 위해 유지 관리됩니다. 속성은 이제 [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)를 실행할 때 구독 별로 지정 됩니다. 값을 지정하면 해당 값은 이 구독자에서 구독을 만들 때 기본값으로 사용되며 경고 메시지가 반환됩니다.  
   
-`[ @active_end_time_of_day = ] active_end_time_of_day`하루 중에서 복제 에이전트가 중지 되도록 예약 된 시간이 며 HHMMSS 형식으로 표시 됩니다. *active_end_time_of_day*은 **int**이며 기본값은 235959입니다 .이는 11:59:59 오후을 의미 합니다. 235959입니다.  
+`[ @active_end_time_of_day = ] active_end_time_of_day` 하루 중에서 복제 에이전트가 중지 되도록 예약 된 시간이 며 HHMMSS 형식으로 표시 됩니다. *active_end_time_of_day*은 **int**이며 기본값은 235959입니다 .이는 11:59:59 오후을 의미 합니다. 235959입니다.  
   
 > [!NOTE]  
 >  이 매개 변수는 더 이상 사용되지 않으며 이전 버전 스크립트와의 호환성을 위해 유지 관리됩니다. 속성은 이제 [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)를 실행할 때 구독 별로 지정 됩니다. 값을 지정하면 해당 값은 이 구독자에서 구독을 만들 때 기본값으로 사용되며 경고 메시지가 반환됩니다.  
   
-`[ @active_start_date = ] active_start_date`복제 에이전트가 처음으로 예약 된 날짜 이며 YYYYMMDD 형식으로 표시 됩니다. *active_start_date* 은 **int**이며 기본값은 0입니다.  
+`[ @active_start_date = ] active_start_date` 복제 에이전트가 처음으로 예약 된 날짜 이며 YYYYMMDD 형식으로 표시 됩니다. *active_start_date* 은 **int**이며 기본값은 0입니다.  
   
 > [!NOTE]  
 >  이 매개 변수는 더 이상 사용되지 않으며 이전 버전 스크립트와의 호환성을 위해 유지 관리됩니다. 속성은 이제 [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)를 실행할 때 구독 별로 지정 됩니다. 값을 지정하면 해당 값은 이 구독자에서 구독을 만들 때 기본값으로 사용되며 경고 메시지가 반환됩니다.  
   
-`[ @active_end_date = ] active_end_date`복제 에이전트가 마지막으로 예약 된 날짜 이며 YYYYMMDD 형식으로 표시 됩니다. *active_end_date* 는 **int**이며 기본값은 9999 년 12 월 31 일을 의미 하는 99991231입니다.  
+`[ @active_end_date = ] active_end_date` 복제 에이전트가 마지막으로 예약 된 날짜 이며 YYYYMMDD 형식으로 표시 됩니다. *active_end_date* 는 **int**이며 기본값은 9999 년 12 월 31 일을 의미 하는 99991231입니다.  
   
 > [!NOTE]  
 >  이 매개 변수는 더 이상 사용되지 않으며 이전 버전 스크립트와의 호환성을 위해 유지 관리됩니다. 속성은 이제 [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)를 실행할 때 구독 별로 지정 됩니다. 값을 지정하면 해당 값은 이 구독자에서 구독을 만들 때 기본값으로 사용되며 경고 메시지가 반환됩니다.  
   
-`[ @description = ] 'description'`구독자에 대 한 텍스트 설명입니다. *description* 은 **nvarchar (255)** 이며 기본값은 NULL입니다.  
+`[ @description = ] 'description'` 구독자에 대 한 텍스트 설명입니다. *description* 은 **nvarchar (255)** 이며 기본값은 NULL입니다.  
   
-`[ @security_mode = ] security_mode`는 구현 된 보안 모드입니다. *security_mode* 은 **int**이며 기본값은 1입니다. **0** 은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 지정 합니다. **1** 은 Windows 인증을 지정 합니다.  
+`[ @security_mode = ] security_mode` 는 구현 된 보안 모드입니다. *security_mode* 은 **int**이며 기본값은 1입니다. **0** 은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 지정 합니다. **1** 은 Windows 인증을 지정 합니다.  
   
 > [!NOTE]  
 >  이 매개 변수는 더 이상 사용되지 않으며 이전 버전 스크립트와의 호환성을 위해 유지 관리됩니다. 속성은 이제 [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)를 실행할 때 구독 별로 지정 됩니다. 값을 지정하면 해당 값은 이 구독자에서 구독을 만들 때 기본값으로 사용되며 경고 메시지가 반환됩니다.  
   
-`[ @encrypted_password = ] encrypted_password`이 매개 변수는 더 이상 사용 되지 않으며 이전 버전과의 호환성을 위해서만 *encrypted_password* 값에 대해 제공 되지만 **0** 으로 설정 하면 오류가 발생 합니다.  
+`[ @encrypted_password = ] encrypted_password` 이 매개 변수는 더 이상 사용 되지 않으며 이전 버전과의 호환성을 위해서만 *encrypted_password* 값에 대해 제공 되지만 **0** 으로 설정 하면 오류가 발생 합니다.  
   
-`[ @publisher = ] 'publisher'`이외 게시자를 지정 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *publisher* 는 **sysname**이며 기본값은 NULL입니다.  
+`[ @publisher = ] 'publisher'` 이외 게시자를 지정 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *publisher* 는 **sysname**이며 기본값은 NULL입니다.  
   
 > [!NOTE]  
 >  게시자에서 게시할 때는 *게시자* 를 사용 하면 안 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

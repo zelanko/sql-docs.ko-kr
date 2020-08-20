@@ -1,4 +1,5 @@
 ---
+description: SQLFetch 함수
 title: SQLFetch 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 07/18/2019
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 6c6611d2-bc6a-4390-87c9-1c5dd9cfe07c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: bc7e2da6996d8d6b2ee66befdc90794efec5617b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f13aabcf19968873683bf12bcde5bb006422e260
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81285973"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476101"
 ---
 # <a name="sqlfetch-function"></a>SQLFetch 함수
 **규칙**  
@@ -54,7 +55,7 @@ SQLRETURN SQLFetch(
   
  SQL_SUCCESS_WITH_INFO 또는 SQL_ERROR (01xxx SQLSTATEs 제외)를 반환할 수 있는 모든 SQLSTATEs의 경우 하나 이상의 행 작업에서 오류가 발생 하는 경우 SQL_SUCCESS_WITH_INFO가 반환 되 고 단일 행 작업에서 오류가 발생 하면 SQL_ERROR 반환 됩니다.  
   
-|SQLSTATE|Error|Description|  
+|SQLSTATE|오류|설명|  
 |--------------|-----------|-----------------|  
 |01000|일반 경고|드라이버 관련 정보 메시지입니다. 함수는 SQL_SUCCESS_WITH_INFO를 반환 합니다.|  
 |01004|문자열 데이터, 오른쪽이 잘렸습니다.|열에 대해 반환 된 문자열 또는 이진 데이터로 인해 비어 있지 않은 문자 또는 NULL이 아닌 이진 데이터가 잘렸습니다. 문자열 값인 경우 오른쪽이 잘렸습니다.|  
@@ -73,9 +74,9 @@ SQLRETURN SQLFetch(
 |24000|잘못된 커서 상태|*StatementHandle* 가 실행 된 상태 이지만 결과 집합이 *StatementHandle*와 연결 되지 않았습니다.|  
 |40001|Serialization 오류|반입이 실행 된 트랜잭션이 교착 상태를 방지 하기 위해 종료 되었습니다.|  
 |40003|문 완료를 알 수 없음|이 함수를 실행 하는 동안 연결 된 연결에 실패 하 여 트랜잭션의 상태를 확인할 수 없습니다.|  
-|HY000|일반 오류|특정 SQLSTATE가 없고 구현 별 SQLSTATE가 정의 되지 않은 오류가 발생 했습니다. MessageText 버퍼에서 **SQLGetDiagRec** 에 의해 반환 되는 오류 메시지는 오류 및 해당 원인을 설명 합니다. * \**|  
+|HY000|일반 오류|특정 SQLSTATE가 없고 구현 별 SQLSTATE가 정의 되지 않은 오류가 발생 했습니다. * \* MessageText* 버퍼에서 **SQLGetDiagRec** 에 의해 반환 되는 오류 메시지는 오류 및 해당 원인을 설명 합니다.|  
 |HY001|메모리 할당 오류|드라이버가 실행 또는 함수의 완료를 지 원하는 데 필요한 메모리를 할당할 수 없습니다.|  
-|HY008|작업 취소됨|*StatementHandle*에 대해 비동기 처리를 사용 하도록 설정 했습니다. **Sqlfetch** 함수가 호출 되었으며 실행이 완료 되기 전에 *StatementHandle*에서 **Sqlfetch** 또는 **sqlcancelhandle** 이 호출 되었습니다. 그런 다음 *StatementHandle*에서 **sqlfetch** 함수를 다시 호출 했습니다.<br /><br /> 또는 **Sqlfetch** 함수를 호출 하 고 실행을 완료 하기 전에 다중 스레드 응용 프로그램의 다른 스레드에서 **Sqlfetch** 또는 **sqlcancelhandle** 이 *StatementHandle* 에 대해 호출 되었습니다.|  
+|HY008|작업 취소됨|*StatementHandle*에 대해 비동기 처리를 사용 하도록 설정 했습니다. **Sqlfetch** 함수가 호출 되었으며 실행이 완료 되기 전에 *StatementHandle*에서 **Sqlfetch** 또는 **sqlcancelhandle** 이 호출 되었습니다. 그런 다음 *StatementHandle*에서 **sqlfetch** 함수를 다시 호출 했습니다.<br /><br /> 또는  **Sqlfetch** 함수를 호출 하 고 실행을 완료 하기 전에 다중 스레드 응용 프로그램의 다른 스레드에서 **Sqlfetch** 또는 **sqlcancelhandle** 이 *StatementHandle* 에 대해 호출 되었습니다.|  
 |HY010|함수 시퀀스 오류|(DM) *StatementHandle*연결 된 연결 핸들에 대해 비동기적으로 실행 되는 함수가 호출 되었습니다. 이 비동기 함수는 **Sqlfetch** 함수가 호출 될 때 여전히 실행 되 고 있습니다.<br /><br /> (DM) **Sqlexecute**, **sqlexecdirect**또는 **SQLMoreResults** 가 *StatementHandle* 에 대해 호출 되 고 SQL_PARAM_DATA_AVAILABLE 반환 되었습니다. 이 함수는 모든 스트리밍된 매개 변수에 대 한 데이터를 검색 하기 전에 호출 되었습니다.<br /><br /> (DM) 지정한 *StatementHandle* 가 실행 된 상태가 아닙니다. 함수가 먼저 **Sqlexecdirect**, **sqlexecute** 또는 catalog 함수를 호출 하지 않고 호출 되었습니다.<br /><br /> (DM) *StatementHandle* 에 대해 비동기적으로 실행 되는 함수 (이 함수 아님)가 호출 되었으며이 함수가 호출 될 때 계속 실행 중입니다.<br /><br /> (DM) **Sqlexecute**, **sqlexecdirect**, **SQLBulkOperations**또는 **SQLSetPos** 가 *StatementHandle* 에 대해 호출 되 고 SQL_NEED_DATA 반환 되었습니다. 이 함수는 모든 실행 시 데이터 매개 변수 또는 열에 대해 데이터를 보내기 전에 호출 되었습니다.<br /><br /> **Sqlextendedfetch** 가 호출 된 후 *StatementHandle* 옵션을 사용 하 SQL_CLOSE는 **SQLFREESTMT** 가 호출 되기 전에 DM () **sqlfetch** 가 호출 되었습니다.|  
 |HY013|메모리 관리 오류|메모리 부족 상태로 인해 기본 메모리 개체에 액세스할 수 없기 때문에 함수 호출을 처리할 수 없습니다.|  
 |HY090|잘못 된 문자열 또는 버퍼 길이입니다.|SQL_ATTR_USE_BOOKMARK statement 특성이 SQL_UB_VARIABLE로 설정 되었으며 열 0이이 결과 집합에 대 한 책갈피의 최대 길이와 같지 않은 버퍼에 바인딩 되었습니다. 이 길이는 IRD의 SQL_DESC_OCTET_LENGTH 필드에서 사용할 수 있으며 **SQLDescribeCol**, **sqlcolattribute**또는 **SQLGetDescField**를 호출 하 여 가져올 수 있습니다.|  
@@ -107,8 +108,8 @@ SQLRETURN SQLFetch(
 |조건|새 행 집합의 첫 번째 행|  
 |---------------|-----------------------------|  
 |시작 하기 전|1|  
-|*CurrRowsetStart* \<CurrRowsetStart =  *lastresultrow-RowsetSize*[1]|*CurrRowsetStart* + *RowsetSize*[2]|  
-|*CurrRowsetStart* > *lastresultrow-RowsetSize*[1]|종료 후|  
+|*CurrRowsetStart* \< CurrRowsetStart =  *Lastresultrow-RowsetSize*[1]|*CurrRowsetStart*  +  *RowsetSize*[2]|  
+|*CurrRowsetStart*  >  *Lastresultrow-RowsetSize*[1]|종료 후|  
 |종료 후|종료 후|  
   
  [1] 인출 사이에 행 집합 크기가 변경 되는 경우 이전 인출에 사용 된 행 집합 크기입니다.  
@@ -191,7 +192,7 @@ SQLRETURN SQLFetch(
   
  [2] 일부 드라이버는 데이터에 대 한 업데이트를 검색할 수 없으므로이 값을 반환할 수 없습니다. 드라이버가 refetched 형 행의 업데이트를 검색할 수 있는지 여부를 확인 하기 위해 응용 프로그램은 SQL_ROW_UPDATES 옵션으로 **SQLGetInfo** 를 호출 합니다.  
   
- [3] **Sqlfetch** 는 **sqlfetchscroll**에 대 한 호출과 혼합 되어 있는 경우에만이 값을 반환할 수 있습니다. 이는 **Sqlfetch** 가 결과 집합을 통해 앞으로 이동 하 고 독점적으로 사용 되는 경우는 행을 다시 페치 않기 때문입니다. Refetched 행이 없으므로 **Sqlfetch** 는 이전에 인출 된 행의 변경 내용을 검색 하지 않습니다. 그러나 **Sqlfetchscroll** 이 이전에 인출 된 행 및 **sqlfetch** 를 사용 하 여 해당 행을 인출 하기 전에 커서를 배치 하면 **sqlfetch** 에서 해당 행에 대 한 변경 내용을 검색할 수 있습니다.  
+ [3]   **Sqlfetch** 는 **sqlfetchscroll**에 대 한 호출과 혼합 되어 있는 경우에만이 값을 반환할 수 있습니다. 이는 **Sqlfetch** 가 결과 집합을 통해 앞으로 이동 하 고 독점적으로 사용 되는 경우는 행을 다시 페치 않기 때문입니다. Refetched 행이 없으므로 **Sqlfetch** 는 이전에 인출 된 행의 변경 내용을 검색 하지 않습니다. 그러나 **Sqlfetchscroll** 이 이전에 인출 된 행 및 **sqlfetch** 를 사용 하 여 해당 행을 인출 하기 전에 커서를 배치 하면 **sqlfetch** 에서 해당 행에 대 한 변경 내용을 검색할 수 있습니다.  
   
  [4]은 (는) SQLBulkOperations에 의해서만 반환 됩니다. **Sqlfetch** 또는 **sqlfetchscroll**에 의해 설정 되지 않았습니다.  
   
@@ -232,16 +233,16 @@ SQLRETURN SQLFetch(
   
 |설명자 필드|설명.|필드의|설정|  
 |----------------------|-----------|--------------|-----------------|  
-|SQL_DESC_ARRAY_SIZE|카드|머리글|SQL_ATTR_ROW_ARRAY_SIZE statement 특성|  
-|SQL_DESC_ARRAY_STATUS_PTR|IRD|머리글|SQL_ATTR_ROW_STATUS_PTR statement 특성|  
-|SQL_DESC_BIND_OFFSET_PTR|카드|머리글|SQL_ATTR_ROW_BIND_OFFSET_PTR statement 특성|  
-|SQL_DESC_BIND_TYPE|카드|머리글|SQL_ATTR_ROW_BIND_TYPE statement 특성|  
-|SQL_DESC_COUNT|카드|머리글|**SQLBindCol** 의 *columnnumber* 인수|  
+|SQL_DESC_ARRAY_SIZE|카드|header|SQL_ATTR_ROW_ARRAY_SIZE statement 특성|  
+|SQL_DESC_ARRAY_STATUS_PTR|IRD|header|SQL_ATTR_ROW_STATUS_PTR statement 특성|  
+|SQL_DESC_BIND_OFFSET_PTR|카드|header|SQL_ATTR_ROW_BIND_OFFSET_PTR statement 특성|  
+|SQL_DESC_BIND_TYPE|카드|header|SQL_ATTR_ROW_BIND_TYPE statement 특성|  
+|SQL_DESC_COUNT|카드|header|**SQLBindCol** 의 *columnnumber* 인수|  
 |SQL_DESC_DATA_PTR|카드|레코드|**SQLBindCol** 의 *Targetvalueptr* 인수|  
 |SQL_DESC_INDICATOR_PTR|카드|레코드|**SQLBindCol** 의 *StrLen_or_IndPtr* 인수|  
 |SQL_DESC_OCTET_LENGTH|카드|레코드|**SQLBindCol** 의 *bufferlength* 인수|  
 |SQL_DESC_OCTET_LENGTH_PTR|카드|레코드|**SQLBindCol** 의 *StrLen_or_IndPtr* 인수|  
-|SQL_DESC_ROWS_PROCESSED_PTR|IRD|머리글|SQL_ATTR_ROWS_FETCHED_PTR statement 특성|  
+|SQL_DESC_ROWS_PROCESSED_PTR|IRD|header|SQL_ATTR_ROWS_FETCHED_PTR statement 특성|  
 |SQL_DESC_TYPE|카드|레코드|**SQLBindCol** 의 *TargetType* 인수|  
   
  **SQLSetDescField**를 통해 모든 설명자 필드를 설정할 수도 있습니다.  
@@ -269,6 +270,6 @@ SQLRETURN SQLFetch(
 |결과 집합 열 수 반환|[SQLNumResultCols 함수](../../../odbc/reference/syntax/sqlnumresultcols-function.md)|  
 |실행을 위한 문 준비|[SQLPrepare 함수](../../../odbc/reference/syntax/sqlprepare-function.md)|  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [ODBC API 참조](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 헤더 파일](../../../odbc/reference/install/odbc-header-files.md)
