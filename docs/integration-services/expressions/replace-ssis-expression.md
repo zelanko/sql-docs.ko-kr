@@ -1,4 +1,5 @@
 ---
+description: REPLACE(SSIS 식)
 title: REPLACE(SSIS 식) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a6837043-ea70-4c6a-9c7a-6868b02b2adc
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8ef16c9c83419d6b404affc49e7200a739ab65f7
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: fe1fae03a09aace19069d3aaeba55f0fbb4b36ba
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919067"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477491"
 ---
 # <a name="replace-ssis-expression"></a>REPLACE(SSIS 식)
 

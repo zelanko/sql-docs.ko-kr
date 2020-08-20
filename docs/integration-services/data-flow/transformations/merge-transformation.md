@@ -1,4 +1,5 @@
 ---
+description: 병합 변환
 title: 병합 변환 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: cff8690c-07ac-46a0-aab5-20bd4848c677
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a444abac97c69755e234e39a9c6e3ae623af8d89
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 7d8ed9805a62095f732f3f4621d3c133793ac7bf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919589"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477640"
 ---
 # <a name="merge-transformation"></a>병합 변환
 

@@ -1,4 +1,5 @@
 ---
+description: OLE DB 명령 변환
 title: OLE DB 명령 변환 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: baa6735c-5acf-4759-b077-1216aca16c6c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3e85168ae32063ba938205f2612c5af6a95eed4d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 5cde3dc6eb7805f412ed7e820fb4946cf0c20c1a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919553"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477647"
 ---
 # <a name="ole-db-command-transformation"></a>OLE DB 명령 변환
 

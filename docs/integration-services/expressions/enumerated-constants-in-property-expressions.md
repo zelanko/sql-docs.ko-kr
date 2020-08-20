@@ -1,4 +1,5 @@
 ---
+description: 속성 식의 열거 상수
 title: 속성 식의 열거 상수 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a4418315-38e2-4ad3-8784-576163b25d6f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c233d75beabca847937f85977acfd0e2230dc7c2
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 692e2e19b86b5d47d207c32c3024365675603c07
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922785"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477588"
 ---
 # <a name="enumerated-constants-in-property-expressions"></a>속성 식의 열거 상수
 
@@ -75,7 +76,7 @@ ms.locfileid: "86922785"
 |---------------------------------------|-------------------|  
 |기본값|0|  
 |AboveNormal|1|  
-|정상|2|  
+|보통|2|  
 |BelowNormal|3|  
 |유휴 상태|4|  
   
@@ -207,7 +208,7 @@ ms.locfileid: "86922785"
   
 |DTSFileSystemAttributes의 이름|숫자 값|  
 |----------------------------------------------|-------------------|  
-|정상|0|  
+|보통|0|  
 |보관|1|  
 |숨김|2|  
 |ReadOnly|4|  
@@ -267,7 +268,7 @@ ms.locfileid: "86922785"
 |MailPriority의 이름|숫자 값|  
 |-----------------------------------|-------------------|  
 |높음|1|  
-|정상|3|  
+|보통|3|  
 |낮음|5|  
   
 ### <a name="transfer-database-task"></a>데이터베이스 전송 태스크  
@@ -292,7 +293,7 @@ ms.locfileid: "86922785"
 |-------------------------------------|-------------------|  
 |FailTask|0|  
 |Overwrite|1|  
-|Skip|2|  
+|건너뛰기|2|  
   
 ### <a name="transfer-jobs-task"></a>작업 전송 태스크  
  **IfObjectExists** 속성 - **IfObjectExists** 열거 값을 사용하여 설정합니다.  
@@ -301,7 +302,7 @@ ms.locfileid: "86922785"
 |-------------------------------------|-------------------|  
 |FailTask|0|  
 |Overwrite|1|  
-|Skip|2|  
+|건너뛰기|2|  
   
 ### <a name="transfer-logins-task"></a>로그인 전송 태스크  
  **IfObjectExists** 속성 - **IfObjectExists** 열거 값을 사용하여 설정합니다.  
@@ -310,7 +311,7 @@ ms.locfileid: "86922785"
 |-------------------------------------|-------------------|  
 |FailTask|0|  
 |Overwrite|1|  
-|Skip|2|  
+|건너뛰기|2|  
   
  **LoginsToTransfer** 속성 - **LoginsToTransfer** 열거 값을 사용하여 설정합니다.  
   
@@ -327,15 +328,15 @@ ms.locfileid: "86922785"
 |-------------------------------------|-------------------|  
 |FailTask|0|  
 |Overwrite|1|  
-|Skip|2|  
+|건너뛰기|2|  
   
 ### <a name="transfer-sql-server-objects-task"></a>SQL Server 개체 전송 태스크  
  **ExistingData** 속성 - **ExistingData** 열거 값을 사용하여 설정합니다.  
   
 |ExistingData의 이름|숫자 값|  
 |-----------------------------------|-------------------|  
-|Replace|0|  
-|추가|1|  
+|바꾸기|0|  
+|Append|1|  
   
 ### <a name="web-service-task"></a>웹 서비스 태스크  
  **OutputType** 속성 - **DTSOutputType** 열거 값을 사용하여 설정합니다.  
@@ -475,9 +476,9 @@ ms.locfileid: "86922785"
   
 |DTSXMLDiffAlgorithm의 이름|숫자 값|  
 |------------------------------------------|-------------------|  
-|Auto|0|  
+|자동|0|  
 |빠름|1|  
-|정확|2|  
+|정밀|2|  
   
 ##  <a name="maintenance-plan-tasks"></a><a name="MaintenancePlanTasks"></a> 유지 관리 계획 태스크  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에는 유지 관리 계획 및 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지에서 사용할 SQL Server 태스크를 수행하는 태스크 집합이 포함되어 있습니다.  
@@ -510,7 +511,7 @@ ms.locfileid: "86922785"
 |ObjectType의 이름|숫자 값|  
 |---------------------------------|-------------------|  
 |테이블|0|  
-|보기|1|  
+|View|1|  
 |TableView|2|  
   
 ### <a name="back-up-database-task"></a>데이터베이스 백업 태스크  
@@ -518,14 +519,14 @@ ms.locfileid: "86922785"
   
 |DestinationType의 이름|숫자 값|  
 |--------------------------------------|-------------------|  
-|Auto|0|  
+|자동|0|  
 |설명서|1|  
   
  **ExistingBackupsAction** 속성 - **ActionForExistingBackups** 열거 값을 사용하여 설정합니다.  
   
 |ActionForExistingBackups의 이름|숫자 값|  
 |-----------------------------------------------|-------------------|  
-|추가|0|  
+|Append|0|  
 |Overwrite|1|  
   
  **BackupAction** 속성 - **BackupTaskType** 열거 값을 사용하여 설정합니다. 이 속성은 **BackupIsIncremental** 속성과 함께 사용하여 태스크가 수행하는 백업 유형을 정의합니다.  
@@ -533,7 +534,7 @@ ms.locfileid: "86922785"
 |BackupTaskType의 이름|숫자 값|  
 |-------------------------------------|-------------------|  
 |데이터베이스|0|  
-|파일|1|  
+|Files|1|  
 |로그|2|  
   
  **BackupDevice** 속성 - SMO([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects) **DeviceType** 열거 값을 사용하여 설정합니다.  
@@ -541,9 +542,9 @@ ms.locfileid: "86922785"
 |DeviceType의 이름|숫자 값|  
 |---------------------------------|-------------------|  
 |LogicalDevice|0|  
-|Tape|1|  
+|테이프|1|  
 |파일|2|  
-|Pipe|3|  
+|파이프|3|  
 |VirtualDevice|4|  
   
 ### <a name="maintenance-cleanup-task"></a>유지 관리 정리 태스크  
@@ -559,8 +560,8 @@ ms.locfileid: "86922785"
 |TimeUnitType의 이름|숫자 값|  
 |-----------------------------------|-------------------|  
 |일|0|  
-|Week|1|  
-|Month|2|  
+|주|1|  
+|월|2|  
 |Year|3|  
   
 ### <a name="update-statistics-task"></a>통계 업데이트 태스크  

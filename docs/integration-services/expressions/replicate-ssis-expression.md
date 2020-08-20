@@ -1,4 +1,5 @@
 ---
+description: REPLICATE(SSIS 식)
 title: REPLICATE(SSIS 식) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e7a37b93-6d1d-42d5-9a65-de1790abf6a5
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: baed2f92c1419731aec68ce8def41007842f7d9a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 66560e6c72a0b6a5d36a2eee744d81eb1c232fda
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913257"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477450"
 ---
 # <a name="replicate-ssis-expression"></a>REPLICATE(SSIS 식)
 

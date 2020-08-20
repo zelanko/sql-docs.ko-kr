@@ -1,4 +1,5 @@
 ---
+description: Merge Join Transformation
 title: 병합 조인 변환 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: cd8b0412-f83b-4bd2-b227-e53dcfd941a8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8aaed0cb230867a7eb7b7ad640e9535975dd34d9
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: fab9313b76527744a53af64203794f7ec1b696d6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86906287"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477657"
 ---
 # <a name="merge-join-transformation"></a>Merge Join Transformation
 
@@ -79,7 +80,7 @@ ms.locfileid: "86906287"
  **입력 바꾸기**  
  **입력 바꾸기** 단추를 사용하여 입력 간에 순서를 바꿉니다. 왼쪽 우선 외부 조인 옵션과 함께 사용하면 유용합니다.  
   
- **Input**  
+ **입력**  
  먼저 사용 가능한 입력 목록에서 병합된 출력에 포함할 각 열에 대한 입력을 선택합니다.  
   
  입력은 별도의 두 테이블에 따로 표시됩니다. 출력에 포함할 열을 선택합니다. 열을 끌어 테이블 간에 조인을 만듭니다. 조인을 삭제하려면 조인을 선택한 다음 Delete 키를 누릅니다.  

@@ -1,4 +1,5 @@
 ---
+description: 피벗 변환
 title: 피벗 변환 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 55f5db6e-6777-435f-8a06-b68c129f8437
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7a4a969e44fde0abaf221592ed32a48cd233fc9e
-ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
+ms.openlocfilehash: 5f09d86cc1bf5ba9301de4da8e869b3a054d55ee
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87472543"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477671"
 ---
 # <a name="pivot-transformation"></a>피벗 변환
 

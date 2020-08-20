@@ -1,4 +1,5 @@
 ---
+description: 멀티캐스트 변환
 title: 멀티캐스트 변환 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 32194784-1684-40cd-9f91-1aba4d8360d3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c353401a2182461452e086da05d8f4e155a3ac2a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 2eb7f7274075450c3372f264f4f78c36f0059524
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919562"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477626"
 ---
 # <a name="multicast-transformation"></a>멀티캐스트 변환
 
@@ -50,7 +51,7 @@ ms.locfileid: "86919562"
   **멀티캐스트 변환 편집기** 대화 상자를 사용하여 각 변환 출력에 대한 속성을 보고 설정할 수 있습니다.  
   
 ### <a name="options"></a>옵션  
- **Outputs**  
+ **출력**  
  왼쪽에서 출력을 선택하여 오른쪽에 있는 테이블에서 해당 속성을 확인합니다.  
   
  **속성**  

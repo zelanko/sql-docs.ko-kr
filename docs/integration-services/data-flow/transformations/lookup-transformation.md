@@ -1,4 +1,5 @@
 ---
+description: 조회 변환
 title: 조회 변환 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: de1cc8de-e7af-4727-b5a5-a1f0a739aa09
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b1c65cf892c36f04ac0669d5e011c6c54c434c09
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 6c37948d8af3aac4b78055f50e29aeb88f238bab
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919289"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477706"
 ---
 # <a name="lookup-transformation"></a>조회 변환
 
@@ -61,7 +62,7 @@ ms.locfileid: "86919289"
   
 -   DB2  
   
- 조회 변환은 변환 입력 값과 참조 데이터 세트 값 간에 동등 조인을 수행합니다. (동등 조인을 사용하는 경우 변환 입력의 각 행이 참조 데이터 세트의 행과 하나 이상 일치해야 합니다.) 동등 조인을 사용할 수 없는 경우 조회 변환은 다음 동작 중 하나를 수행합니다.  
+ 조회 변환은 변환 입력 값과 참조 데이터 세트 값 간에 동등 조인을 수행합니다. 동등 조인을 사용하는 경우 변환 입력의 각 행이 참조 데이터 세트의 행과 하나 이상 일치해야 합니다. 동등 조인을 사용할 수 없는 경우 조회 변환은 다음 동작 중 하나를 수행합니다.  
   
 -   참조 데이터 세트에 일치하는 항목이 없으면 조인이 발생하지 않습니다. 기본적으로 조회 변환은 일치하는 항목이 없는 행을 오류로 간주합니다. 하지만 이러한 행을 불일치 항목 출력으로 리디렉션하도록 조회 변환을 구성할 수 있습니다.  
   
@@ -134,7 +135,7 @@ ms.locfileid: "86919289"
   
 ## <a name="related-content"></a>관련 내용  
   
--   MSDN Library의 비디오 - [방법: 전체 캐시 모드에서 조회 변환 구현](https://go.microsoft.com/fwlink/?LinkId=131031)  
+-   msdn.microsoft.com의 비디오 - [방법: 전체 캐시 모드에서 조회 변환 구현](https://go.microsoft.com/fwlink/?LinkId=131031)  
   
 -   blogs.msdn.com의 블로그 항목 - [조회 변환 캐시 모드를 사용하는 최선의 구현 방법(Best Practices for Using the Lookup Transformation Cache Modes)](https://go.microsoft.com/fwlink/?LinkId=146623)  
   
@@ -277,7 +278,7 @@ ms.locfileid: "86919289"
 ### <a name="external-resources"></a>외부 리소스  
  blogs.msdn.com의 블로그 항목 - [조회 캐시 모드](https://go.microsoft.com/fwlink/?LinkId=219518)  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [유사 항목 조회 변환](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation.md)   
  [용어 조회 변환](../../../integration-services/data-flow/transformations/term-lookup-transformation.md)   
  [데이터 흐름](../../../integration-services/data-flow/data-flow.md)   

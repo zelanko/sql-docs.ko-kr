@@ -1,4 +1,5 @@
 ---
+description: MONTH(SSIS 식)
 title: MONTH(SSIS 식) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b5a47a11-c2ef-49bd-bd70-235632ff7bf6
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ed9229a514045f303c651dd71a5ab8837a31632e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 24ab080c25e240ce62260ff708d8cfee137f462f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915231"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477575"
 ---
 # <a name="month-ssis-expression"></a>MONTH(SSIS 식)
 
@@ -70,7 +71,7 @@ MONTH(ModifiedDate)
 MONTH(GETDATE())  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [DATEADD&#40;SSIS 식&#41;](../../integration-services/expressions/dateadd-ssis-expression.md)   
  [DATEDIFF&#40;SSIS 식&#41;](../../integration-services/expressions/datediff-ssis-expression.md)   
  [DATEPART&#40;SSIS 식&#41;](../../integration-services/expressions/datepart-ssis-expression.md)   

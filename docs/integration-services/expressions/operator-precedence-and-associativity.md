@@ -1,4 +1,5 @@
 ---
+description: 연산자 우선 순위 및 계산 방향
 title: 연산자 우선 순위 및 계산 방향 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5094164f-dabc-45b5-b611-384feb2b3fe3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 801f0358ce5dd6b68e42aff37e7135ec813b3bc0
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: cda01c12856bff3e28b06c9cfddccb368e6a3e6b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86901297"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477509"
 ---
 # <a name="operator-precedence-and-associativity"></a>연산자 우선 순위 및 계산 방향
 
@@ -29,15 +30,15 @@ ms.locfileid: "86901297"
   
  다음 표에서는 연산자의 우선 순위를 높은 순서부터 낮은 순서로 보여 줍니다. 동일한 수준의 연산자는 우선 순위가 같습니다.  
   
-|연산자 기호|연산 유형|계산 방향|  
+|연산자 기호|연산 유형|associativity|  
 |---------------------|-----------------------|-------------------|  
 |( )|식|왼쪽에서 오른쪽|  
-|-, !, ~|단항 연산자|오른쪽에서 왼쪽|  
-|casts|단항 연산자|오른쪽에서 왼쪽|  
-|*, / ,%|곱셈|왼쪽에서 오른쪽|  
-|+, -|가산적|왼쪽에서 오른쪽|  
-|\<, >, \<=, >=|관계형|왼쪽에서 오른쪽|  
-|==, !=|등호|왼쪽에서 오른쪽|  
+|-, !, ~|단항|오른쪽에서 왼쪽|  
+|casts|단항|오른쪽에서 왼쪽|  
+|*, / ,%|곱하기|왼쪽에서 오른쪽|  
+|+, -|더하기|왼쪽에서 오른쪽|  
+|\<, >, \<=, >=|관계|왼쪽에서 오른쪽|  
+|==, !=|같음|왼쪽에서 오른쪽|  
 |&|비트 AND|왼쪽에서 오른쪽|  
 |^|배타적 비트 OR|왼쪽에서 오른쪽|  
 |&#124;|포괄적 비트 OR|왼쪽에서 오른쪽|  

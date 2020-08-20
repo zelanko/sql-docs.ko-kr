@@ -1,4 +1,5 @@
 ---
+description: 숫자, 문자열 및 부울 리터럴
 title: 리터럴(SSIS) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/16/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a980cd52-54ef-4b9c-b00c-e6807cf8e01f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f8405bd4cb76470eb415dc058caff3931a6b4624
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 2ae5d096a90d4e755a57842fb9fb242f7d863eee
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918630"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477525"
 ---
 # <a name="numeric-string-and-boolean-literals"></a>숫자, 문자열 및 부울 리터럴
 
@@ -104,8 +105,8 @@ ms.locfileid: "86918630"
 |---------------------|-----------------|  
 |\a|경고|  
 |\b|백스페이스|  
-|\f|용지 공급|  
-|\n|새 줄|  
+|\f|폼 피드|  
+|\n|줄 바꿈|  
 |\r|캐리지 리턴|  
 |\t|가로 탭|  
 |\v|세로 탭|  

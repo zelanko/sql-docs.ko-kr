@@ -1,4 +1,5 @@
 ---
+description: 행 개수 변환
 title: 행 개수 변환 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: b68293b9-a68c-40be-9d81-77342da1be29
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 16aee7cbbcfe102ba7c03fd910f3e34e5d8a85f6
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 8a538c99d7f10e7bde271ed0ea622e05b4944a22
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919529"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477625"
 ---
 # <a name="row-count-transformation"></a>행 개수 변환
 

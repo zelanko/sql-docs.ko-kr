@@ -1,4 +1,5 @@
 ---
+description: UNION ALL 변환을 사용하여 데이터 병합
 title: UNION ALL 변환을 사용하여 데이터 병합 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 78304403-a81c-4101-b87e-ec80ddfdac98
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 18ae2128e0f0bcbec5f3fb78a63778f44f260bf5
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b2a9d5efdab61c28194ed75ac436d5faab325abc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915244"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477701"
 ---
 # <a name="merge-data-by-using-the-union-all-transformation"></a>UNION ALL 변환을 사용하여 데이터 병합
 
