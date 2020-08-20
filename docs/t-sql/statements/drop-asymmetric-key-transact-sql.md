@@ -1,4 +1,5 @@
 ---
+description: DROP ASYMMETRIC KEY(Transact-SQL)
 title: DROP ASYMMETRIC KEY(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: bf94ac07-9b62-4318-b55b-1eed8f3a1ac6
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 9f0ab3341c71500c915b39bb69c28542751ed9b6
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 49260a78ef3012f022a6d523bc2cc1d7ea1b128f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484734"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478908"
 ---
 # <a name="drop-asymmetric-key-transact-sql"></a>DROP ASYMMETRIC KEY(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -63,7 +64,7 @@ DROP ASYMMETRIC KEY key_name [ REMOVE PROVIDER KEY ]
 ## <a name="permissions"></a>사용 권한  
  비대칭 키에 대한 CONTROL 권한이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `MirandaXAsymKey6` 데이터베이스에서 `AdventureWorks2012` 비대칭 키를 제거합니다.  
   
 ```  
@@ -75,6 +76,6 @@ DROP ASYMMETRIC KEY MirandaXAsymKey6;
  [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
  [ALTER ASYMMETRIC KEY&#40;Transact-SQL&#41;](../../t-sql/statements/alter-asymmetric-key-transact-sql.md)   
  [암호화 계층](../../relational-databases/security/encryption/encryption-hierarchy.md)   
- [ALTER SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-symmetric-key-transact-sql.md)  
+ [ALTER SYMMETRIC KEY&#40;Transact-SQL&#41;](../../t-sql/statements/alter-symmetric-key-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: STIntersection(geometry 데이터 형식)
 title: STIntersection(geometry 데이터 형식) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 354843f5-cc14-478c-974a-04f363f9530f
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: bbb66fd5a2436b8852172db17612330e4a1ccf07
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 6365d94822d8d291951de3e59c7c71fbed487163
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555675"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479255"
 ---
 # <a name="stintersection-geometry-data-type"></a>STIntersection(geometry 데이터 형식)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -50,7 +51,7 @@ ms.locfileid: "86555675"
 ## <a name="remarks"></a>설명  
  `STIntersection()`는 **geometry** 인스턴스의 SRID(spatial Reference ID)가 일치하지 않으면 항상 Null을 반환합니다. 입력 인스턴스에 원호 세그먼트가 있을 경우에만 결과에 원호 세그먼트가 포함될 수 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-using-stintersection-on-polygon-instances"></a>A. Polygon 인스턴스에 STIntersection() 사용  
  다음 예에서는 `STIntersection()`을 사용하여 두 다각형의 교차점을 컴퓨팅합니다.  

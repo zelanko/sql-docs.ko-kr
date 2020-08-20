@@ -1,4 +1,5 @@
 ---
+description: ALTER FULLTEXT STOPLIST(Transact-SQL)
 title: ALTER FULLTEXT STOPLIST(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: f6ad87d5-6a34-435a-8456-8244947c5c83
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e22cb4fcd9d87c68b54d071d5877f564a2c72540
-ms.sourcegitcommit: e08d28530e0ee93c78a4eaaee8800fd687babfcc
+ms.openlocfilehash: 8a7105e0f5360144594d215063b6a2f91590e54c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86301849"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479113"
 ---
 # <a name="alter-fulltext-stoplist-transact-sql"></a>ALTER FULLTEXT STOPLIST(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -65,11 +66,11 @@ ALTER FULLTEXT STOPLIST stoplist_name
   
  *language_term*은 다음과 같이 언어의 LCID(로캘 ID)에 해당하는 문자열, 정수 또는 16진수 값으로 지정할 수 있습니다.  
   
-|형식|Description|  
+|서식|Description|  
 |------------|-----------------|  
 |String|*language_term*은 [sys.syslanguages (Transact-SQL)](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) 호환성 뷰의 **alias** 열 값에 해당합니다. 문자열은 **'***language_term***'** 과 같이 작은따옴표로 묶어야 합니다.|  
 |정수|*language_term*은 언어의 LCID입니다.|  
-|Hexadecimal|*language_term*은 0x로 시작하는 16진수 LCID 값입니다. 16진수 값은 앞에 오는 0을 포함하여 8자리 수를 초과할 수 없습니다. 값이 DBCS(더블바이트 문자 집합) 형식인 경우 SQL Server에서는 값을 유니코드로 변환합니다.|  
+|16진수|*language_term*은 0x로 시작하는 16진수 LCID 값입니다. 16진수 값은 앞에 오는 0을 포함하여 8자리 수를 초과할 수 없습니다. 값이 DBCS(더블바이트 문자 집합) 형식인 경우 SQL Server에서는 값을 유니코드로 변환합니다.|  
   
  ADD **'***stopword***'** LANGUAGE *language_term*  
  LANGUAGE *language_term*으로 지정된 언어의 중지 목록에 중지 단어를 추가합니다.  
@@ -94,7 +95,7 @@ ALTER FULLTEXT STOPLIST stoplist_name
 ## <a name="permissions"></a>사용 권한  
  중지 목록을 데이터베이스의 기본 중지 목록으로 지정하려면 ALTER DATABASE 사용 권한이 필요합니다. 그렇지 않고 중지 목록을 변경하려면 중지 목록의 소유자이거나 **db_owner** 또는 **db_ddladmin** 고정 데이터베이스 역할의 멤버 자격이 있어야 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `CombinedFunctionWordList`라는 중지 목록에서 먼저 스페인어에 단어 "en"을 추가한 다음 프랑스어에 단어 'en'을 추가합니다.  
   
 ```  

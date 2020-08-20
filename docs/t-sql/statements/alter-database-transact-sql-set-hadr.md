@@ -1,4 +1,5 @@
 ---
+description: ALTER DATABASE SET HADR(Transact-SQL)
 title: ALTER DATABASE SET HADR (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 20e6e803-d6d5-48d5-b626-d1e0a73d174c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 132989905006dbf6640473a808998a94f9216f97
-ms.sourcegitcommit: e08d28530e0ee93c78a4eaaee8800fd687babfcc
+ms.openlocfilehash: 3afe9d34563d8c414f662d3dbbf57c44231ea420
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86301932"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479221"
 ---
 # <a name="alter-database-transact-sql-set-hadr"></a>ALTER DATABASE(Transact-SQL) SET HADR 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -133,7 +134,7 @@ ALTER DATABASE database_name
 ### <a name="permissions"></a>사용 권한  
  데이터베이스에 대한 ALTER 권한이 필요합니다. 데이터베이스를 가용성 그룹에 조인하려면 **db_owner** 고정 데이터베이스 역할의 멤버여야 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `AccountsDb1`이라는 보조 데이터베이스를 `AccountsAG` 가용성 그룹의 로컬 보조 복제본에 조인합니다.  
   
 ```  

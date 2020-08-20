@@ -1,4 +1,5 @@
 ---
+description: DBCC SHRINKDATABASE(Transact-SQL)
 title: DBCC SHRINKDATABASE(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/17/2017
@@ -28,12 +29,12 @@ ms.assetid: fc976afd-1edb-4341-bf41-c4a42a69772b
 author: pmasl
 ms.author: umajay
 monikerRange: = azuresqldb-current ||>= sql-server-2016 ||>= sql-server-linux-2017||=azure-sqldw-latest||= sqlallproducts-allversions
-ms.openlocfilehash: ebe438104f953d657ef79042994cc87f4d8637a3
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 48181379c0ad20f5e9d8dc1ac8a9dd304fbc5e81
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483534"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479818"
 ---
 # <a name="dbcc-shrinkdatabase-transact-sql"></a>DBCC SHRINKDATABASE(Transact-SQL)
 [!INCLUDE [sql-asdb-asa.md](../../includes/applies-to-version/sql-asdb-asa.md)]
@@ -167,7 +168,7 @@ timestamp 15 or with timestamps older than 109 to finish.
 ## <a name="permissions"></a>사용 권한  
 **sysadmin** 고정 서버 역할의 멤버 또는 **db_owner** 고정 데이터베이스 역할의 멤버여야 합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 ### <a name="a-shrinking-a-database-and-specifying-a-percentage-of-free-space"></a>A. 데이터베이스 축소 및 여유 공간의 백분율 지정  
 다음 예제에서는 `UserDB` 사용자 데이터베이스의 데이터 및 로그 파일 크기를 줄여서 데이터베이스에 10%의 여유 공간을 허용합니다.  

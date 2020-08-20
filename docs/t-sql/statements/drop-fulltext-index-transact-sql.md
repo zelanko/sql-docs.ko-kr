@@ -1,4 +1,5 @@
 ---
+description: DROP FULLTEXT INDEX(Transact-SQL)
 title: DROP FULLTEXT INDEX(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 7443a4ab-1d43-4a22-bbba-a07f620892cb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9e421f99d3ba6542ed0cd30e4f821d5ac5a48f9f
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 111b04595ee418b277b5284452787fe1307a233b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484002"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478839"
 ---
 # <a name="drop-fulltext-index-transact-sql"></a>DROP FULLTEXT INDEX(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -54,7 +55,7 @@ DROP FULLTEXT INDEX ON table_name
 ## <a name="permissions"></a>사용 권한  
  사용자는 테이블 또는 인덱싱된 뷰에 대한 ALTER 권한을 가지고 있거나 **sysadmin** 고정 서버 역할, **db_owner** 또는 **db_ddladmin** 고정 데이터베이스 역할의 멤버여야 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `JobCandidate` 테이블에 있는 전체 텍스트 인덱스를 삭제합니다.  
   
 ```  

@@ -1,4 +1,5 @@
 ---
+description: ALTER FULLTEXT CATALOG(Transact-SQL)
 title: ALTER FULLTEXT CATALOG(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 31a47aaf-6c7f-48a4-a86a-d57aec66c9cb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7fd19ebcedda06703058d96313ab477d660393d5
-ms.sourcegitcommit: e08d28530e0ee93c78a4eaaee8800fd687babfcc
+ms.openlocfilehash: 4f7bba432c31146e9bec8bdfc54ea3bee63e9bc4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86301885"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479130"
 ---
 # <a name="alter-fulltext-catalog-transact-sql"></a>ALTER FULLTEXT CATALOG(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -59,12 +60,12 @@ ALTER FULLTEXT CATALOG catalog_name
  WITH ACCENT_SENSITIVITY = {ON|OFF}  
  변경할 카탈로그의 전체 텍스트 인덱싱 및 쿼리에 대한 악센트 구분 여부를 지정합니다.  
   
- 전체 텍스트 카탈로그의 현재 악센트 구분 속성 설정을 확인하려면 **catalog_name**에 대해 *accentsensitivity* 속성 값을 가진 FULLTEXTCATALOGPROPERTY 함수를 사용합니다. 함수가 '1'을 반환하면 전체 텍스트 카탈로그가 악센트를 구분하고, '0'을 반환하면 악센트를 구분하지 않습니다.  
+ 전체 텍스트 카탈로그의 현재 악센트 구분 속성 설정을 확인하려면 *catalog_name*에 대해 **accentsensitivity** 속성 값을 가진 FULLTEXTCATALOGPROPERTY 함수를 사용합니다. 함수가 '1'을 반환하면 전체 텍스트 카탈로그가 악센트를 구분하고, '0'을 반환하면 악센트를 구분하지 않습니다.  
   
  카탈로그와 데이터베이스의 악센트 구분 기본값은 동일합니다.  
   
  REORGANIZE  
- 인덱싱 과정에서 만들어진 작은 인덱스를 하나의 큰 인덱스로 병합하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]master merge*을 수행하도록* 에 알려줍니다. 전체 텍스트 인덱스 조각을 병합하면 성능이 향상되고 디스크 및 메모리 리소스를 확보할 수 있습니다. 전체 텍스트 카탈로그를 자주 변경하는 경우에는 이 명령을 주기적으로 사용하여 전체 텍스트 카탈로그를 다시 구성할 수 있습니다.  
+ 인덱싱 과정에서 만들어진 작은 인덱스를 하나의 큰 인덱스로 병합하는 *master merge*을 수행하도록 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 알려줍니다. 전체 텍스트 인덱스 조각을 병합하면 성능이 향상되고 디스크 및 메모리 리소스를 확보할 수 있습니다. 전체 텍스트 카탈로그를 자주 변경하는 경우에는 이 명령을 주기적으로 사용하여 전체 텍스트 카탈로그를 다시 구성할 수 있습니다.  
   
  REORGANIZE는 내부 인덱스 및 카탈로그 구조도 최적화합니다.  
   
@@ -79,7 +80,7 @@ ALTER FULLTEXT CATALOG catalog_name
 > [!NOTE]  
 >  ALTER FULLTEXT CATALOG AS DEFAULT를 사용하려면 사용자에게 전체 텍스트 카탈로그에 대한 ALTER 권한과 데이터베이스에 대한 CREATE FULLTEXT CATALOG 권한이 있어야 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 악센트가 구분되는 기본 전체 텍스트 카탈로그 `accentsensitivity`의 `ftCatalog` 속성을 변경합니다.  
   
 ```  
@@ -95,7 +96,7 @@ GO
 --Returned 0, which means the catalog is not accent sensitive.  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [sys.fulltext_catalogs&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)   
  [CREATE FULLTEXT CATALOG&#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)   
  [DROP FULLTEXT CATALOG &#40;Transact-SQL&#41;](../../t-sql/statements/drop-fulltext-catalog-transact-sql.md)   

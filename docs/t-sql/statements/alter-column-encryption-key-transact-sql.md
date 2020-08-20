@@ -1,4 +1,5 @@
 ---
+description: ALTER COLUMN ENCRYPTION KEY(Transact-SQL)
 title: ALTER COLUMN ENCRYPTION KEY(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/15/2019
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: c79a220d-e178-4091-a330-c924cc0f0ae0
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 2296050c41b774e2180532c79b816d112c6e2a7c
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 4fcda824e7d64bc5eb769f1f1e322430f7f2bb91
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110251"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479180"
 ---
 # <a name="alter-column-encryption-key-transact-sql"></a>ALTER COLUMN ENCRYPTION KEY(Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -60,8 +61,8 @@ ALTER COLUMN ENCRYPTION KEY key_name
   
 > [!WARNING]  
 >  이 문의 일반 텍스트 CEK 값은 절대 전달하지 마십시오. 그럴 경우 이 기능의 이점을 구성하게 됩니다.  
-  
-## <a name="remarks"></a>설명  
+
+## <a name="remarks"></a>설명
 일반적으로 열 암호화 키는 단 하나의 암호화된 값으로 만들어집니다. 열 마스터 키가 회전할 필요가 있는 경우(지금의 열 마스터 키는 새 열 마스터 키로 교체해야 합니다) 새 열 마스터 키로 암호화된 열 암호화 키의 새 값을 추가할 수 있습니다. 이 워크플로를 사용하면 클라이언트 애플리케이션이 열 암호화 키로 암호화된 데이터에 액세스할 수 있게 하는 동시에 새 열 마스터 키가 클라이언트 애플리케이션에 사용할 수 있게 됩니다. 새 마스터 키에 액세스 권한이 없는 클라이언트 애플리케이션에서 Always Encrypted 기반 드라이버는 민감한 데이터에 액세스하기 위해 이전 열 마스터 키로 암호화된 열 암호화 키 값을 사용할 수 있습니다. Always Encrypted 지원 암호화 알고리즘은 256비트를 가진 일반 텍스트 값을 요구합니다. 
  
 SSMS(SQL Server Management Studio) 또는 PowerShell과 같은 도구를 사용하여 열 마스터 키를 순환하는 것이 좋습니다. [SQL Server Management Studio를 사용하여 Always Encrypted 키 순환](../../relational-databases/security/encryption/rotate-always-encrypted-keys-using-ssms.md) 및 [PowerShell을 사용하여 Always Encrypted 키 순환](../../relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md)을 참조하세요.

@@ -1,4 +1,5 @@
 ---
+description: Filter(geography 데이터 형식)
 title: Filter(geography 데이터 형식) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 82a8f54a-3a47-4e20-b13a-b148029c5448
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: feb6c65ca3263e1ca5c26db21a1350285539d785
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 4a5e5ff41504184bd8c1aa0805267f38566b5162
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555213"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479361"
 ---
 # <a name="filter-geography-data-type"></a>Filter(geography 데이터 형식)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -55,7 +56,7 @@ ms.locfileid: "86555213"
 ## <a name="remarks"></a>설명  
  이 메서드는 비결정적이고 정확하지 않습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `Filter()`를 사용하여 두 `geography` 인스턴스가 서로 교차하는지 확인합니다.  
   
 ```  

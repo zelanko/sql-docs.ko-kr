@@ -1,4 +1,5 @@
 ---
+description: DROP LOGIN(Transact-SQL)
 title: DROP LOGIN(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/11/2017
@@ -22,12 +23,12 @@ ms.assetid: acb5c3dc-7aa2-49f6-9330-573227ba9b1a
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: df4d622a85d1da13b3a47d7358f142c161795094
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: c841d8ec30915cd1494624c34eba77f893e4d901
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483838"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478943"
 ---
 # <a name="drop-login-transact-sql"></a>DROP LOGIN(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -58,7 +59,7 @@ DROP LOGIN login_name
 ## <a name="permissions"></a>사용 권한  
  서버에 대한 ALTER ANY LOGIN 권한이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-dropping-a-login"></a>A. 로그인 매핑  
  다음 예에서는 `WilliJo` 로그인을 삭제합니다.  

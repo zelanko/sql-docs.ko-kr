@@ -1,4 +1,5 @@
 ---
+description: RESTORE 문 - FILELISTONLY(Transact-SQL)
 title: RESTORE FILELISTONLY(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/30/2018
@@ -22,12 +23,12 @@ ms.assetid: 0b4b4d11-eb9d-4f3e-9629-6c79cec7a81a
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: a81543096bb698bfba3ab7561ca65de73914692d
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: f72bc6a3a67f73fc7ab44e94514f7db7b6a905a4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635734"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478766"
 ---
 # <a name="restore-statements---filelistonly-transact-sql"></a>RESTORE 문 - FILELISTONLY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -120,7 +121,7 @@ FROM <backup_device>
 ### <a name="permissions"></a>사용 권한  
  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터는 백업 세트나 백업 디바이스에 대한 정보를 얻으려면 CREATE DATABASE 권한이 필요합니다. 자세한 내용은 [GRANT 데이터베이스 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-permissions-transact-sql.md)을 참조하세요.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `AdventureWorksBackups`라는 백업 디바이스에서 정보를 반환합니다. 이 예에서는 `FILE` 옵션을 사용하여 디바이스에 두 번째 백업 세트를 지정합니다.  
   
 ```  

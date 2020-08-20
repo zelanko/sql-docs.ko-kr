@@ -1,4 +1,5 @@
 ---
+description: DROP EXTERNAL FILE FORMAT(Transact-SQL)
 title: DROP EXTERNAL FILE FORMAT(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
@@ -13,12 +14,12 @@ ms.assetid: 8cf9009b-59f9-4aac-bef1-dcf2cf0708b2
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a18bb7c90e241b42a627ec1753642942c412ff77
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 2b5a652162f8dc80c7406913bb17c6c23119153b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632848"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478854"
 ---
 # <a name="drop-external-file-format-transact-sql"></a>DROP EXTERNAL FILE FORMAT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -42,7 +43,7 @@ DROP EXTERNAL FILE FORMAT external_file_format_name
 ## <a name="metadata"></a>메타데이터  
  외부 파일 형식 목록을 보려면 [sys.external_file_formats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-external-file-formats-transact-sql.md) 시스템보기를 사용합니다.  
   
-```  
+```sql  
 SELECT * FROM sys.external_file_formats;  
 ```  
   
@@ -55,11 +56,11 @@ SELECT * FROM sys.external_file_formats;
 ## <a name="locking"></a>잠금  
  외부 파일 형식 개체에 대해 공유 잠금을 적용합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-using-basic-syntax"></a>A. 기본 구문 사용  
   
-```  
+```sql  
 DROP EXTERNAL FILE FORMAT myfileformat;  
 ```  
   

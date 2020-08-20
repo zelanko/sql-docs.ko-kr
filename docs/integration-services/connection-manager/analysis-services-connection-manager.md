@@ -1,4 +1,5 @@
 ---
+description: Analysis Services 연결 관리자
 title: Analysis Services 연결 관리자 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/25/2019
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9f9cadad-a1d0-4db5-98f5-df5dbbec1be4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a30051a5fe50030df7dc784e123c266b96cabf5c
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 6fc6be0059b1e49c5db9cf2ced79e66c6b523b5c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918573"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478275"
 ---
 # <a name="analysis-services-connection-manager"></a>Analysis Services 연결 관리자
 

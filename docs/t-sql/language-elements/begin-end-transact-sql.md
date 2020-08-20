@@ -1,4 +1,5 @@
 ---
+description: BEGIN...END(Transact-SQL)
 title: BEGIN...END(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -24,12 +25,12 @@ ms.assetid: fc2c7f76-f1f9-4f91-beef-bc8ef0da2feb
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a3b1dc0297d0700c412ee1f490ca9a33743684ea
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d81979dbd592e38cc7765e6719e975ea53a88dfe
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923413"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479495"
 ---
 # <a name="beginend-transact-sql"></a>BEGIN...END(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -57,7 +58,7 @@ END
   
  BEGIN...END 블록 내의 모든 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문이 유효해도 특정 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 동일한 일괄 처리 또는 문 블록 내에 그룹화할 수 없습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서 `BEGIN` 및 `END`는 함께 실행되는 일련의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 정의합니다. `BEGIN...END` 블록이 포함되지 않은 경우 두 `ROLLBACK TRANSACTION` 문이 실행되고 두 `PRINT` 메시지가 반환됩니다.  
   
 ```sql
@@ -95,7 +96,7 @@ BEGIN
 END
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [ALTER TRIGGER&#40;Transact-SQL&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)   
  [흐름 제어 언어 &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md)   
  [CREATE TRIGGER&#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   

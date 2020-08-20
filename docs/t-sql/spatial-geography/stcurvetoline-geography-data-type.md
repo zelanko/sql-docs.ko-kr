@@ -1,4 +1,5 @@
 ---
+description: STCurveToLine(geography 데이터 형식)
 title: STCurveToLine(geography 데이터 형식) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 2f863a85-6168-465a-b32f-bb5e3de58dee
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 2d0c930d7963cfe6ec712a72e1c2d0d3496f1007
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 2c8674e1e7ccafd59fa550fca690553050f68ffb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86552487"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479311"
 ---
 # <a name="stcurvetoline-geography-data-type"></a>STCurveToLine(geography 데이터 형식)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -52,7 +53,7 @@ ms.locfileid: "86552487"
   
  SQL MM 사양과 달리 이 메서드는 다각형 근사값을 계산할 때 z 좌표 값을 사용하지 않습니다. **geography** 인스턴스를 호출할 때 제공되는 모든 z-좌표 값은 무시됩니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `LineString` 인스턴스의 다각형 근사값인 `CircularString` 인스턴스를 반환합니다.  
   
 ```

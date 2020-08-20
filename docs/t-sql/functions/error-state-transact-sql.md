@@ -1,5 +1,6 @@
 ---
-title: ERROR_STATE(Transact-SQL) | Microsoft Docs
+description: ERROR_STATE(Transact-SQL)
+title: ERROR_STATE(Transact-SQL)
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -23,14 +24,15 @@ ms.assetid: 6059af00-83fe-409f-ab7c-daad111bc671
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 56e08b872179ba09c130326b957f2c86b4b8c0db
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 9426f7d3717a32a473628ea82e789c4e8fd580fe
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87393990"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479766"
 ---
 # <a name="error_state-transact-sql"></a>ERROR_STATE(Transact-SQL)
+
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
 
   TRY...CATCH 구문의 CATCH 블록을 실행시킨 오류의 상태 번호를 반환합니다.  
@@ -43,7 +45,9 @@ ms.locfileid: "87393990"
 ERROR_STATE ( )  
 ```  
   
-## <a name="return-types"></a>반환 형식  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="return-types"></a>반환 형식
  **int**  
   
 ## <a name="return-value"></a>Return Value  
@@ -52,7 +56,7 @@ ERROR_STATE ( )
  CATCH 블록 범위 밖에서 호출된 경우 NULL을 반환합니다.  
   
 ## <a name="remarks"></a>설명  
- 일부 오류 메시지는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 코드의 여러 곳에서 발생할 수 있습니다. 예를 들어 "1105" 오류는 여러 가지 다른 오류 상황에서 발생합니다. 오류를 발생시키는 특정 조건은 각각 고유한 상태 코드를 할당합니다.  
+ 일부 오류 메시지는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]코드의 여러 곳에서 발생할 수 있습니다. 예를 들어 "1105" 오류는 여러 가지 다른 오류 상황에서 발생합니다. 오류를 발생시키는 특정 조건은 각각 고유한 상태 코드를 할당합니다.  
   
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 기술 자료 등을 사용하여 데이터베이스의 알려진 문제를 확인하는 경우 상태 번호를 사용하여 기록된 문제가 실제로 발생한 오류와 동일한 것인지 판단할 수 있습니다. 예를 들어 기술 자료 문서에서 상태가 2인 1105 오류 메시지를 다루고 있고 실제로 수신한 1105 오류 메시지의 상태가 3인 경우 이 오류는 기술 자료 문서에 보고된 것과 다른 원인에서 비롯되었을 수 있습니다.  
   
@@ -64,7 +68,7 @@ ERROR_STATE ( )
   
  중첩된 CATCH 블록 내의 ERROR_STATE는 참조되는 CATCH 블록의 범위에 한정된 오류 상태를 반환합니다. 예를 들어 외부 TRY...CATCH 구문의 CATCH 블록에는 중첩된 TRY...CATCH 구문이 있을 수 있습니다. 중첩된 CATCH 블록 내의 ERROR_STATE는 중첩된 CATCH 블록을 호출한 오류에서 상태를 반환합니다. ERROR_STATE가 외부 CATCH 블록에서 실행되는 경우 해당 CATCH 블록을 호출한 오류에서 상태를 반환합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-using-error_state-in-a-catch-block"></a>A. CATCH 블록에서 ERROR_STATE 사용  
  다음 예에서는 0으로 나누기 오류를 일으키는 `SELECT` 문을 보여 줍니다. 오류의 상태가 반환됩니다.  

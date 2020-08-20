@@ -1,4 +1,5 @@
 ---
+description: DENY 서버 보안 주체 사용 권한(Transact-SQL)
 title: DENY Server Principal Permissions(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/09/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 859affa7-0567-47d1-9490-57c1abbd619b
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 4ae4a7c20902299362e1001246d76364cbbb368b
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 0b3dbb2766d1e42fd1812e9eba5d92c40b324a25
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483625"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478933"
 ---
 # <a name="deny-server-principal-permissions-transact-sql"></a>DENY 서버 보안 주체 사용 권한(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

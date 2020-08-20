@@ -1,4 +1,5 @@
 ---
+description: FLOOR(Transact-SQL)
 title: FLOOR(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -20,12 +21,12 @@ ms.assetid: 4f26c784-9240-491f-b854-754be3fccae4
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3dbce5ca4606e44b3c6e548e82d3266890c7c449
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: f429b2cf8b581cf005f1ff88b4fa329432040cee
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110462"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479695"
 ---
 # <a name="floor-transact-sql"></a>FLOOR(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -44,12 +45,12 @@ FLOOR ( numeric_expression )
 
 ## <a name="arguments"></a>인수
  *numeric_expression*  
- **bit** 데이터 형식을 제외한 정확한 수치 또는 근사치 데이터 형식 범주의 식입니다.  
+ bit 데이터 형식을 제외한 정확한 수치 또는 근사치 데이터 형식 범주의 **expression**입니다.  
   
 ## <a name="return-types"></a>반환 형식  
  *numeric_expression*과 같은 유형을 반환합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `FLOOR` 함수의 인수로 양수, 음수 및 통화 값을 넣고 계산합니다.  
   
 ```  

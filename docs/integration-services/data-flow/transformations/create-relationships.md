@@ -1,4 +1,5 @@
 ---
+description: 관계 만들기
 title: 관계 만들기 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 6ebd305f-ffd2-4a1d-b24c-e28c151b94f5
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b961f1d97430b87343832710c27d79e1e329c6bf
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 67dcda91fa83869c927b10d769af3866b8bcd146
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918854"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477725"
 ---
 # <a name="create-relationships"></a>관계 만들기
 
@@ -27,7 +28,7 @@ ms.locfileid: "86918854"
   **관계 만들기** 대화 상자를 사용하여 유사 항목 조회 변환 편집기, 조회 변환 편집기 및 용어 조회 변환 편집기에서 구성한 원본 열과 조회 테이블 열 간의 매핑을 편집할 수 있습니다.  
   
 > [!NOTE]  
->  용어 조회 변환 편집기에서 호출하는 경우 **관계 만들기** 대화 상자는 **입력 열** 및 **조회 열** 목록만 표시합니다.  
+>   용어 조회 변환 편집기에서 호출하는 경우 **관계 만들기** 대화 상자는 **입력 열** 및 **조회 열** 목록만 표시합니다.  
   
  **관계 만들기** 대화 상자를 사용하는 변환에 대한 자세한 내용은 [Fuzzy Lookup Transformation](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation.md), [Lookup Transformation](../../../integration-services/data-flow/transformations/lookup-transformation.md)및 [Term Lookup Transformation](../../../integration-services/data-flow/transformations/term-lookup-transformation.md)을 참조하십시오.  
   

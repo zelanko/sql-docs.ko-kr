@@ -1,4 +1,5 @@
 ---
+description: DROP DEFAULT(Transact-SQL)
 title: DROP DEFAULT(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/10/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: d2d3af25-8877-46ba-95d9-1844961d97ee
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 976037fc77274b5b2fc6d43a4dc1a177ca6f73a9
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 1146be44b4ae2d02c1fcd94c4b0f2d53f52e55e9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485214"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478886"
 ---
 # <a name="drop-default-transact-sql"></a>DROP DEFAULT(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -63,7 +64,7 @@ DROP DEFAULT [ IF EXISTS ] { [ schema_name . ] default_name } [ ,...n ] [ ; ]
 ## <a name="permissions"></a>사용 권한  
  DROP DEFAULT를 실행하려면 적어도 기본값이 속한 스키마에 대한 ALTER 권한을 가지고 있어야 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-dropping-a-default"></a>A. 기본값 삭제  
  기본값이 열 또는 별칭 데이터 형식에 바인딩되지 않은 경우 단순히 DROP DEFAULT를 사용하여 삭제할 수 있습니다. 다음은 사용자가 만든 `datedflt`라는 기본값을 제거하는 예입니다.  

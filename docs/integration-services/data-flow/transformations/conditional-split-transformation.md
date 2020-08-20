@@ -1,4 +1,5 @@
 ---
+description: 조건부 분할 변환
 title: 조건부 분할 변환 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3f8b5825-226f-413c-ba8f-0bb931ca3770
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: bb286721fac9e90a5e1d34bfb8a30ac9ac52032f
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 0e63cd4f6c045d00ef3835f2207d8d8001ff1b27
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923218"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477779"
 ---
 # <a name="conditional-split-transformation"></a>조건부 분할 변환
 
@@ -79,7 +80,7 @@ ms.locfileid: "86923218"
 >  조건부 분할 변환에서는 각 입력 행을 하나의 출력에만 전송합니다. 여러 조건을 입력하는 경우 조건부 분할 변환에서는 각 행을 조건이 True가 되는 첫 번째 출력으로 전송하고 해당 행에 대한 다른 조건은 무시합니다. 여러 조건을 연속적으로 평가해야 하는 경우 조건부 분할 변환을 데이터 흐름에서 연결해야 합니다.  
   
 ### <a name="options"></a>옵션  
- **Order**  
+ **주문**  
  행을 선택하고 오른쪽의 화살표 키를 사용하여 식을 평가하는 순서를 변경합니다.  
   
  **출력 이름**  

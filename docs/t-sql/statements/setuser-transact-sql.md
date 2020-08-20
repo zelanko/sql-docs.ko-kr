@@ -1,4 +1,5 @@
 ---
+description: SETUSER(Transact-SQL)
 title: SETUSER(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/26/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 7acfac5c-9ad6-4226-b874-7add36c4ea43
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 78e081b5f684751e23efab27acac38e5413f9845
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: e542bb0ef16017744c7f5f61d7358ec66149e1e8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483902"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478673"
 ---
 # <a name="setuser-transact-sql"></a>SETUSER(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -66,7 +67,7 @@ SETUSER [ 'username' [ WITH NORESET ] ]
 ## <a name="permissions"></a>사용 권한  
  **sysadmin** 고정 서버 역할의 멤버이거나 데이터베이스의 소유자여야 합니다. **db_owner** 고정 데이터베이스 역할의 멤버 자격이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 데이터베이스 소유자가 다른 소유자 ID로 가장하는 방법을 보여 줍니다. 사용자 `mary`가 `computer_types`라는 테이블을 만듭니다. 데이터베이스 소유자는 SETUSER를 사용하여 `mary`로 가장한 다음 사용자 `joe`에게 `computer_types` 테이블에 대한 액세스 권한을 부여하고 다시 원래 ID로 돌아옵니다.  
   
 ```sql

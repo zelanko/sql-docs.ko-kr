@@ -1,4 +1,5 @@
 ---
+description: DROP PARTITION FUNCTION(Transact-SQL)
 title: DROP PARTITION FUNCTION(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: a4bb055a-a538-4db9-a6fb-550d1eabfa18
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ae5aa5282e80b251f3a52479f8a7dc3437fd9a52
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: ea740dbe07a8700baa9ae8db8b188cf9854cd58a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483975"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478849"
 ---
 # <a name="drop-partition-function-transact-sql"></a>DROP PARTITION FUNCTION(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -60,7 +61,7 @@ DROP PARTITION FUNCTION partition_function_name [ ; ]
   
 -   파티션 함수가 생성된 데이터베이스의 서버에 대한 CONTROL SERVER 또는 ALTER ANY DATABASE 권한  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 현재 데이터베이스에 파티션 함수 `myRangePF`가 이미 있는 것으로 가정합니다.  
   
 ```  

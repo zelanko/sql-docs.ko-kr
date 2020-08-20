@@ -1,4 +1,5 @@
 ---
+description: DROP MESSAGE TYPE(Transact-SQL)
 title: DROP MESSAGE TYPE(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 805e8ad5-8a93-49f0-88e5-e6fca8814dd5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0f4bebe01b180c4ea1bc2fe8ee75711529d1df6f
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: b93b022ed1937b3923a44d5c13b62ff2038df958
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484680"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478836"
 ---
 # <a name="drop-message-type-transact-sql"></a>DROP MESSAGE TYPE(Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -55,7 +56,7 @@ DROP MESSAGE TYPE message_type_name
 ## <a name="remarks"></a>설명  
  계약이 메시지 유형을 참조하는 경우에는 메시지 유형을 삭제할 수 없습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `//Adventure-Works.com/Expenses/SubmitExpense` 메시지 유형을 데이터베이스에서 삭제합니다.  
   
 ```  

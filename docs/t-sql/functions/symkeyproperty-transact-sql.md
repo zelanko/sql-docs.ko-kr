@@ -1,4 +1,5 @@
 ---
+description: SYMKEYPROPERTY(Transact-SQL)
 title: SYMKEYPROPERTY(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3d1f7075-3a3c-4660-8cd0-ed938b86fecd
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: c7314bbddfcc7cdd86a3dc0e4000119ff7aab8a2
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 1bd4e00191e7200bcdd5c8d38ac7fa008eeda0dc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111815"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479569"
 ---
 # <a name="symkeyproperty-transact-sql"></a>SYMKEYPROPERTY(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -53,7 +54,7 @@ SYMKEYPROPERTY ( Key_ID , 'algorithm_desc' | 'string_sid' | 'sid' )
 ## <a name="permissions"></a>사용 권한  
  대칭 키에 대한 일부 사용 권한이 필요하며 대칭 키에 대한 호출자의 VIEW 권한이 거부되지 않아야 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 Key_ID가 256인 대칭 키의 알고리즘을 반환합니다.  
   
 ```  

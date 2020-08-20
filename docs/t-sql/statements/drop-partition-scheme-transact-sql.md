@@ -1,4 +1,5 @@
 ---
+description: DROP PARTITION SCHEME(Transact-SQL)
 title: DROP PARTITION SCHEME(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 6efbc87c-1c92-4e43-96a7-e0f30f1db185
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 37d39425489c99853b57bbf1f41cb2bd460b62d8
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 5d8b2a228bbe2405c4cfb0738193bcd0d770c277
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484402"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478813"
 ---
 # <a name="drop-partition-scheme-transact-sql"></a>DROP PARTITION SCHEME(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
@@ -60,7 +61,7 @@ DROP PARTITION SCHEME partition_scheme_name [ ; ]
   
 -   파티션 구성표가 생성된 데이터베이스의 서버에 대한 CONTROL SERVER 또는 ALTER ANY DATABASE 권한  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 현재 데이터베이스에서 `myRangePS1` 파티션 스키마를 삭제하는 방법을 보여 줍니다.  
   
 ```  

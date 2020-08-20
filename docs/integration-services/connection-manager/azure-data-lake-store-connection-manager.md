@@ -1,4 +1,5 @@
 ---
+description: Azure Data Lake Store 연결 관리자
 title: Azure Data Lake Store 연결 관리자 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/02/2017
@@ -12,12 +13,12 @@ ms.assetid: f4c44553-0f08-4731-ac47-7534990b8c8d
 author: Lingxi-Li
 ms.author: lingxl
 ms.reviewer: maghan
-ms.openlocfilehash: 64f79fc33e3dc5436df4a01e5398d0a262914d48
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: e128b510c9bd40eedd89f7750c65bbd03a7d8670
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913667"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477987"
 ---
 # <a name="azure-data-lake-store-connection-manager"></a>Azure Data Lake Store 연결 관리자
 

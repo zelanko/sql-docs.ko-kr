@@ -1,4 +1,5 @@
 ---
+description: 레코드 집합 대상 사용자 지정 속성
 title: 레코드 집합 대상 사용자 지정 속성 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 1568ed6a-022c-4839-b73e-4eb49558bbc2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3cc9691c3ed3f894a5231e76870f8075d6d08f4b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 2d8494479e14516ac9448498e8ec09301c6493aa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916019"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477872"
 ---
 # <a name="recordset-destination-custom-properties"></a>레코드 집합 대상 사용자 지정 속성
 
@@ -34,7 +35,7 @@ ms.locfileid: "86916019"
   
  자세한 내용은 [Recordset Destination](../../integration-services/data-flow/recordset-destination.md)을 참조하세요.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
   

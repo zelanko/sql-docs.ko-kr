@@ -1,4 +1,5 @@
 ---
+description: DECOMPRESS(Transact-SQL)
 title: DECOMPRESS(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/11/2018
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 738d56be-3870-4774-b112-3dce27becc11
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a4c4309a12f3db14af0d38f9e98e73b7e8c4e6b1
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: f6390d157ab7d352e7ecb355fec4c16114333ea0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396702"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479715"
 ---
 # <a name="decompress-transact-sql"></a>DECOMPRESS(Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -35,8 +36,6 @@ ms.locfileid: "87396702"
 DECOMPRESS ( expression )  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## <a name="arguments"></a>인수
  *expression*  
 **varbinary(** _n_ **)** , **varbinary(max)** 또는 **binary(** _n_ **)** 값 자세한 내용은 [식 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)을 참조하세요.  
@@ -46,7 +45,7 @@ DECOMPRESS ( expression )
   
 ## <a name="remarks"></a>설명  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-decompress-data-at-query-time"></a>A. 쿼리 시간에 데이터 압축 해제  
 이 예제에서는 압축된 테이블 데이터를 반환하는 방법을 보여줍니다.  

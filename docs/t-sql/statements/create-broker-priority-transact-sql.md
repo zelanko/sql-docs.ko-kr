@@ -1,4 +1,5 @@
 ---
+description: CREATE BROKER PRIORITY(Transact-SQL)
 title: CREATE BROKER PRIORITY(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -25,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: e0bbebfa-b7c3-4825-8169-7281f7e6de98
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: adcf67cf64888101f2a5a7d704cbe91785791133
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: c753f9dc977f94064161ee340ebced685dd9f6c7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86393161"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478985"
 ---
 # <a name="create-broker-priority-transact-sql"></a>CREATE BROKER PRIORITY(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -163,7 +164,7 @@ FOR CONVERSATION
 ## <a name="permissions"></a>사용 권한  
  대화 우선 순위를 만들 수 있는 권한은 기본적으로 db_ddladmin 또는 db_owner 고정 데이터베이스 역할 및 sysadmin 고정 서버 역할의 멤버에게 있습니다. 데이터베이스에 대한 ALTER 권한이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-assigning-a-priority-level-to-both-directions-of-a-conversation"></a>A. 대화의 양쪽 방향에 우선 순위 수준 할당  
  다음 두 대화 우선 순위는 `SimpleContract`와 `TargetService` 사이에서 `InitiatorAService`를 사용하는 모든 작업에 우선 순위 수준 3을 할당합니다.  

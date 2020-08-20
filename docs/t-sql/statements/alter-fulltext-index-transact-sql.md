@@ -1,4 +1,5 @@
 ---
+description: ALTER FULLTEXT INDEX(Transact-SQL)
 title: ALTER FULLTEXT INDEX(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: b6fbe9e6-3033-4d1b-b6bf-1437baeefec3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fa8594033c004bed2f37204d9de96a75bcfb83f3
-ms.sourcegitcommit: e08d28530e0ee93c78a4eaaee8800fd687babfcc
+ms.openlocfilehash: 0f8b215f3e90822fe285b93274b7d93a7e1ee8b5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86301851"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479145"
 ---
 # <a name="alter-fulltext-index-transact-sql"></a>ALTER FULLTEXT INDEX(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -294,7 +295,7 @@ ALTER FULLTEXT INDEX ON table_name
 > [!NOTE]  
 >  public에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 제공된 기본 중지 목록에 대한 REFERENCES 권한이 부여됩니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-setting-manual-change-tracking"></a>A. 수동 변경 내용 추적 설정  
  다음 예에서는 `JobCandidate` 테이블에서 전체 텍스트 인덱스에 대한 수동 변경 내용 추적을 설정합니다.  

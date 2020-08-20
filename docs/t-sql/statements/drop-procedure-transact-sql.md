@@ -1,4 +1,5 @@
 ---
+description: DROP PROCEDURE(Transact-SQL)
 title: DROP PROCEDURE(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/11/2017
@@ -25,12 +26,12 @@ ms.assetid: 1c2d7235-7b9b-4336-8f17-429e7d82c2c3
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c97f61aa00ba7242f6d02920fda91949adbff1c6
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: a47efce8d5daf789088b8beca4ad9576e1651958
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484128"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478870"
 ---
 # <a name="drop-procedure-transact-sql"></a>DROP PROCEDURE(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -78,23 +79,23 @@ DROP { PROC | PROCEDURE } { [ schema_name. ] procedure_name }
 ### <a name="permissions"></a>사용 권한  
  프로시저에 대한 **CONTROL** 권한, 프로시저가 속한 스키마에 대한 **ALTER** 권한 또는 **db_ddladmin** 고정 서버 역할의 멤버 자격이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 현재 데이터베이스의 `dbo.uspMyProc` 저장 프로시저를 제거합니다.  
   
-```  
+```sql  
 DROP PROCEDURE dbo.uspMyProc;  
 GO  
 ```  
   
  다음 예에서는 현재 데이터베이스의 여러 저장 프로시저를 제거합니다.  
   
-```  
+```sql  
 DROP PROCEDURE dbo.uspGetSalesbyMonth, dbo.uspUpdateSalesQuotes, dbo.uspGetSalesByYear;  
 ```  
   
  다음 예제에서는 프로시저가 존재하지만 해당 프로시저가 없어도 오류가 발생하지 않으면 현재 데이터베이스에서 `dbo.uspMyProc` 저장 프로시저를 제거합니다. 이 구문은 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]의 새로운 구문입니다.  
   
-```  
+```sql  
 DROP PROCEDURE IF EXISTS dbo.uspMyProc;  
 GO  
 ```  

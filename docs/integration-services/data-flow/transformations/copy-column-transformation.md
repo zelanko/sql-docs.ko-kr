@@ -1,4 +1,5 @@
 ---
+description: 열 복사 변환
 title: 열 복사 변환 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1c72a313-9026-46bc-a57f-c6b3f47346f8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: af29ab26c4bd67bdb4ac00eadcfa59bb61bbb7ba
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 129cbbbc4c119a865f55567edc93900466013e39
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914606"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477753"
 ---
 # <a name="copy-column-transformation"></a>열 복사 변환
 

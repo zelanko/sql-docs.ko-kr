@@ -1,4 +1,5 @@
 ---
+description: TRIM(Transact-SQL)
 title: TRIM(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/27/2019
@@ -18,12 +19,12 @@ ms.assetid: a00245aa-32c7-4ad4-a0d1-64f3d6841153
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azure-sqldw-latest||=azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3d17b3012e68e08af24ea1fe2b93cb02f206a69a
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 8d0f81ad846185978a73bfcc1de75f33b83c5ca0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113290"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479509"
 ---
 # <a name="trim-transact-sql"></a>TRIM(Transact-SQL)
 
@@ -59,7 +60,7 @@ TRIM ( string )
 
 기본적으로 `TRIM` 함수는 문자열의 시작과 끝에서 공백 문자를 제거합니다. 이 동작은 `LTRIM(RTRIM(@string))`과 동일합니다.
 
-## <a name="examples"></a>예
+## <a name="examples"></a>예제
 
 ### <a name="a--removes-the-space-character-from-both-sides-of-string"></a>A.  문자열의 양쪽에서 공백 문자를 제거합니다.
 

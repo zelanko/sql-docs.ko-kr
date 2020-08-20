@@ -1,4 +1,5 @@
 ---
+description: DROP QUEUE(Transact-SQL)
 title: DROP QUEUE(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: fd866520-ca00-477d-b2e9-0110e9610ed4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7f335af8eaeb9c217b252b6b683d3652ebac999c
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 28269fcc3c3b4e43e1343bb13abb72d1716a5b0a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484099"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478808"
 ---
 # <a name="drop-queue-transact-sql"></a>DROP QUEUE(Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -64,7 +65,7 @@ DROP QUEUE <object>
 ## <a name="permissions"></a>사용 권한  
  큐를 삭제할 수 있는 권한은 기본적으로 큐의 소유자, **db_ddladmin** 또는 **db_owner** 고정 데이터베이스 역할의 멤버 및 **sysadmin** 고정 서버 역할의 멤버로 설정됩니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 현재 데이터베이스에서 **ExpenseQueue** 큐를 삭제합니다.  
   
 ```  

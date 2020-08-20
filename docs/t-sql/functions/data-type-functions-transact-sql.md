@@ -1,4 +1,5 @@
 ---
+description: 데이터 형식 함수(Transact-SQL)
 title: 데이터 형식 함수(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/29/2017
@@ -12,12 +13,12 @@ dev_langs:
 ms.assetid: 0a6e4985-9601-4877-942a-cf53f6932958
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a85418df5f41d3d3b0796ffc626deb311e2f18ce
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0c260e732041a22e3b00d6c2c7bf962b770a263f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85732417"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479725"
 ---
 # <a name="data-type-functions-transact-sql"></a>데이터 형식 함수(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,4 +1,5 @@
 ---
+description: OBJECT_SCHEMA_NAME(Transact-SQL)
 title: OBJECT_SCHEMA_NAME(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/25/2018
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 5ba90bb9-d045-4164-963e-e9e96c0b1e8b
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 5453bfb7efb79b2b60a3855d28e195b0bcedb81f
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: f68dea4c08218aeafd60c8cb4d951b60c8e1cdfa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394811"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479674"
 ---
 # <a name="object_schema_name-transact-sql"></a>OBJECT_SCHEMA_NAME(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -83,7 +84,7 @@ FROM master.sys.objects;
   
 ```  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-returning-the-object-schema-name-and-object-name"></a>A. 개체 스키마 이름 및 개체 이름 반환  
  다음 예에서는 임시 문이나 준비된 문이 아닌 모든 캐시된 쿼리 계획에 대한 개체 스키마 이름, 개체 이름 및 SQL 텍스트를 반환합니다.  
@@ -113,7 +114,7 @@ FROM sys.dm_db_index_operational_stats(null, null, null, null);
 GO  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [메타데이터 함수&#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
  [OBJECT_DEFINITION&#40;Transact-SQL&#41;](../../t-sql/functions/object-definition-transact-sql.md)   
  [OBJECT_ID&#40;Transact-SQL&#41;](../../t-sql/functions/object-id-transact-sql.md)   

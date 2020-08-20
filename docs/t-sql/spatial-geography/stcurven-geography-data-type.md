@@ -1,4 +1,5 @@
 ---
+description: STCurveN(geography 데이터 형식)
 title: STCurveN(geography 데이터 형식) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 99ef7100-2c4b-4f07-8d66-b343da94b023
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: cca9963b6f8ad6690190de8d3da551c6536c92ed
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 18d3a992b3f3d5eeecb09a16ce3fb6d582ee2fb2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86552523"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479368"
 ---
 # <a name="stcurven-geography-data-type"></a>STCurveN(geography 데이터 형식)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -61,7 +62,7 @@ ms.locfileid: "86552523"
   
 -   **geography** 인스턴스의 차원이 동일하지 않습니다([STDimension &#40;geography 데이터 형식&#41;](../../t-sql/spatial-geography/stdimension-geography-data-type.md) 참조).  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-using-stcurven-on-a-circularstring"></a>A. CircularString에 STCurveN() 사용  
  다음 예제에서는 **CircularString** 인스턴스에 두 번째 곡선을 반환합니다.  
@@ -116,6 +117,6 @@ ms.locfileid: "86552523"
   ```  
   
 ## <a name="see-also"></a>참고 항목  
- [지리 인스턴스의 OGC 메서드](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
+ [Geography 인스턴스의 OGC 메서드](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

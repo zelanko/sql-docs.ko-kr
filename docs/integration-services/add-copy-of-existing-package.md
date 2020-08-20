@@ -1,4 +1,5 @@
 ---
+description: 기존 패키지의 복사본 추가
 title: 기존 패키지의 복사본 추가 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ed530b0d-438d-4c93-8e91-13f2b2b6a8b2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f88355c8c2242d6dee36d52b7fb26e6016201ff4
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c76e0178aa21a91cbbbb479aaf46e901fdd11992
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923762"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478185"
 ---
 # <a name="add-copy-of-existing-package"></a>기존 패키지의 복사본 추가
 

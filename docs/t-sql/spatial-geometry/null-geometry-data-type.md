@@ -1,4 +1,5 @@
 ---
+description: Null(geometry 데이터 형식)
 title: Null(geometry 데이터 형식) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 67a4b019-9091-4443-85cc-f4836d0cb509
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 9e93cb4a8e079d54098ff0a7c466de0227965487
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 616ce209c7f2a047223267165fafd675455b3d47
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555109"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479285"
 ---
 # <a name="null-geometry-data-type"></a>Null(geometry 데이터 형식)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -46,7 +47,7 @@ Null
   
 ## <a name="remarks"></a>설명  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 Null `geometry` 인스턴스를 검색합니다.  
   
 ```  

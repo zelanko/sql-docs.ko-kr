@@ -1,4 +1,5 @@
 ---
+description: CREATE SEARCH PROPERTY LIST(Transact-SQL)
 title: CREATE SEARCH PROPERTY LIST(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/10/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 5440cbb8-3403-4d27-a2f9-8e1f5a1bc12b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c1443f941f4399e0df24cd69ccc62040b06564ca
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: 2d4a08bba695a115322dfd530ecb43f5cd09a39e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86391698"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478970"
 ---
 # <a name="create-search-property-list-transact-sql"></a>CREATE SEARCH PROPERTY LIST(Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -83,7 +84,7 @@ CREATE SEARCH PROPERTY LIST new_list_name
   
  **목록에서 속성을 추가하거나 제거하려면**  
   
--   [ALTER SEARCH PROPERTY LIST&#40;Transact-SQL&#41;](../../t-sql/statements/alter-search-property-list-transact-sql.md)  
+-   [ALTER SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](../../t-sql/statements/alter-search-property-list-transact-sql.md)  
   
 -   **속성 목록을 삭제하려면**  
   
@@ -95,7 +96,7 @@ CREATE SEARCH PROPERTY LIST new_list_name
 > [!NOTE]  
 >  목록을 전체 텍스트 인덱스와 연결하려면 REFERENCES 권한이 필요합니다. 속성을 추가 및 제거하거나 목록을 삭제하려면 CONTROL 권한이 필요합니다. 속성 목록 소유자는 목록에 대한 REFERENCES 또는 CONTROL 권한을 부여할 수 있습니다. CONTROL 권한을 가진 사용자는 다른 사용자에게 REFERENCES 권한을 부여할 수도 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-creating-an-empty-property-list-and-associating-it-with-an-index"></a>A. 빈 속성 목록을 만들고 인덱스와 연결  
  다음 예에서는 `DocumentPropertyList`라는 새 검색 속성 목록을 만듭니다. 그런 다음, 이 예에서는 채우기를 시작하지 않고 [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md) 문을 사용하여 새 속성 목록을 `AdventureWorks` 데이터베이스에 있는 `Production.Document` 테이블의 전체 텍스트 인덱스와 연결합니다.  
@@ -126,7 +127,7 @@ GO
   
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [ALTER SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](../../t-sql/statements/alter-search-property-list-transact-sql.md)   
  [DROP SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](../../t-sql/statements/drop-search-property-list-transact-sql.md)   
  [sys.registered_search_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-registered-search-properties-transact-sql.md)   

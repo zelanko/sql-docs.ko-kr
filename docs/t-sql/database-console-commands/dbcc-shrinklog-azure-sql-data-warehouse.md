@@ -1,4 +1,5 @@
 ---
+description: DBCC SHRINKLOG(병렬 데이터 웨어하우스)
 title: DBCC SHRINKLOG(병렬 데이터 웨어하우스)
 ms.custom: ''
 ms.date: 03/16/2018
@@ -11,12 +12,12 @@ dev_langs:
 author: pmasl
 ms.author: umajay
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 70b6d2237042a5d69be8e1076d72b7b0b5c87958
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: dcf3a2f48eab092cf12d229685aa05f9e5e42f69
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396242"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479802"
 ---
 # <a name="dbcc-shrinklog-parallel-data-warehouse"></a>DBCC SHRINKLOG(병렬 데이터 웨어하우스)
 

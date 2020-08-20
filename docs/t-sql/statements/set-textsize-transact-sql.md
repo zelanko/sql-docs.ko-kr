@@ -1,4 +1,5 @@
 ---
+description: SET TEXTSIZE(Transact-SQL)
 title: SET TEXTSIZE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/12/2016
@@ -24,20 +25,20 @@ ms.assetid: 787154a6-39a6-4dd6-a6d0-67b4364f95d5
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0d2bc5f425655b7c1163648c1331c51efb0730c0
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 55de9c8c10e1827797d730736db6d0fe99704622
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484864"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478716"
 ---
 # <a name="set-textsize-transact-sql"></a>SET TEXTSIZE(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  SELECT 문에서 반환된 **varchar(max)** , **nvarchar(max)** , **varbinary(max)** , **text**, **ntext** 및 **image** 데이터의 크기를 지정합니다.  
+  SELECT 문에서 반환된 **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **text**, **ntext** 및 **image** 데이터의 크기를 지정합니다.  
   
 > [!IMPORTANT]
->  **ntext**, **text** 및 **image** 데이터 형식은 이후 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 제거됩니다. 향후 개발 작업에서는 이 데이터 형식을 사용하지 않도록 하고 현재 이 데이터 형식을 사용하는 애플리케이션은 수정하세요. 대신 **nvarchar(max)** , **varchar(max)** 및 **varbinary(max)** 를 사용합니다.  
+>  **ntext**, **text** 및 **image** 데이터 형식은 이후 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 제거됩니다. 향후 개발 작업에서는 이 데이터 형식을 사용하지 않도록 하고 현재 이 데이터 형식을 사용하는 애플리케이션은 수정하세요. 대신 **nvarchar(max)**, **varchar(max)** 및 **varbinary(max)** 를 사용합니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,11 +52,11 @@ SET TEXTSIZE { number }
 
 ## <a name="arguments"></a>인수
  *number*  
- **varchar(max)** , **nvarchar(max)** , **varbinary(max)** , **text**, **ntext** 또는 **image** 데이터의 길이를 바이트 단위로 표시합니다. *숫자*는 최대 값이 2147483647(2GB)인 정수입니다.  값 -1은 무제한 크기를 나타냅니다. 값 0은 크기를 기본값(4KB)으로 다시 설정됩니다.  
+ **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **text**, **ntext** 또는 **image** 데이터의 길이를 바이트 단위로 표시합니다. *숫자*는 최대 값이 2147483647(2GB)인 정수입니다.  값 -1은 무제한 크기를 나타냅니다. 값 0은 크기를 기본값(4KB)으로 다시 설정됩니다.  
   
  연결할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client(10.0 이상) 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 용 ODBC 드라이버가 자동으로 `-1`(무제한)을 지정합니다.  
   
- **2008년보다 오래된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 드라이버:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자(버전 9)는 연결될 때 TEXTSIZE를 2147483647로 자동으로 설정합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2008년보다 오래된 ** 드라이버:**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자(버전 9)는 연결될 때 TEXTSIZE를 2147483647로 자동으로 설정합니다.  
   
 ## <a name="remarks"></a>설명  
  SET TEXTSIZE 설정은 @@TEXTSIZE 함수에 영향을 줍니다.  

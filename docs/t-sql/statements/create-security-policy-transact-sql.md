@@ -1,4 +1,5 @@
 ---
+description: CREATE SECURITY POLICY(Transact-SQL)
 title: CREATE SECURITY POLICY(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/10/2017
@@ -25,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: d6ab70ee-0fa2-469c-96f6-a3c16d673bc8
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: de5ab7ebb06a6ba51241b06a3ee6f618378bc635
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: da7b906f774bb3cf56acdb8c60587146fa98ae50
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110675"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478975"
 ---
 # <a name="create-security-policy-transact-sql"></a>CREATE SECURITY POLICY(Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -88,7 +89,8 @@ CREATE SECURITY POLICY [schema_name. ] security_policy_name
  [*table_schema_name*.] *table_name*  
  보안 조건자를 적용할 대상 테이블입니다. 사용되지 않도록 설정된 보안 정책은 여러 개가 단일 테이블을 대상으로 할 수 있지만 지정된 시간에 하나만 사용하도록 설정할 수 있습니다.  
   
-## <a name="remarks"></a>설명  
+
+## <a name="remarks"></a>설명
  메모리 최적화된 테이블을 갖춘 조건자 함수를 사용하는 경우 **SCHEMABINDING**를 포함하고 **WITH NATIVE_COMPILATION** 컴파일 힌트을 사용해야 합니다.  
   
  차단 조건자는 해당 DML 작업이 실행된 후 평가됩니다. 따라서 READ UNCOMMITTED 쿼리는 롤백될 임시 값을 볼 수 있습니다.  

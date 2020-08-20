@@ -1,4 +1,5 @@
 ---
+description: 확장 정적 기하 도형 메서드
 title: 확장 정적 기하 도형 메서드 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 04c02af0-5243-4d53-b35a-ddc4113ee8f6
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: bf1eb5767f02e3b6d97ae0ff8392e13732fd46f5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1c0de5ee8e55dee1a7edab464a5a8550f72aa1ba
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85736053"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479315"
 ---
 # <a name="extended-static-geometry-methods"></a>확장 정적 기하 도형 메서드
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +41,7 @@ ms.locfileid: "85736053"
   
 -   [Null](../../t-sql/spatial-geometry/null-geometry-data-type.md)  
   
--   [구문 분석](../../t-sql/spatial-geometry/parse-geometry-data-type.md)  
+-   [Parse](../../t-sql/spatial-geometry/parse-geometry-data-type.md)  
   
 -   [Point](../../t-sql/spatial-geometry/point-geometry-data-type.md)  
   

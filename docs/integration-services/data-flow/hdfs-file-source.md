@@ -1,4 +1,5 @@
 ---
+description: HDFS 파일 원본
 title: HDFS 파일 원본 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: f8cda200-c389-4a2e-8ee9-5d59b326aac1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3be6be9e43d6e9e643ea76c4d4a08cd5b370b343
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b015d1d62e42b5b453c273d899c387a222c3fe2e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920283"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477811"
 ---
 # <a name="hdfs-file-source"></a>HDFS 파일 원본
 

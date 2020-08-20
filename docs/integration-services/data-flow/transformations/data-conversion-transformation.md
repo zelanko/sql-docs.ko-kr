@@ -1,4 +1,5 @@
 ---
+description: 데이터 변환
 title: 데이터 변환 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: fd515bbc-6f49-4d0c-ae7f-6ea3c3f24a1c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e43b29fadf9c4fe36775616a8ddf7a82a29eae4e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: cdd281be64879d56ec8c81eacc52ea3631fe0867
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912319"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477715"
 ---
 # <a name="data-conversion-transformation"></a>데이터 변환
 
@@ -80,7 +81,7 @@ ms.locfileid: "86912319"
  **정밀도**  
  숫자 데이터의 전체 자릿수를 설정합니다.  
   
- **규모**  
+ **크기 조정**  
  숫자 데이터의 소수 자릿수를 설정합니다.  
   
  **코드 페이지**  

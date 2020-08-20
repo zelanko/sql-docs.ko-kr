@@ -1,4 +1,5 @@
 ---
+description: BINARY_CHECKSUM(Transact-SQL)
 title: BINARY_CHECKSUM(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2017
@@ -19,12 +20,12 @@ ms.assetid: 07fece4d-58e3-446e-a3b5-92fe24d2d1fb
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dbf7006b435dc9012fc98fcd103a88e03471d65f
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 922f1da9e2988f5bf6a316101bad175dbe46b2b0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87397126"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479743"
 ---
 # <a name="binary_checksum--transact-sql"></a>BINARY_CHECKSUM(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -80,7 +81,7 @@ BINARY_CHECKSUM ( * | expression [ ,...n ] )
  
 `BINARY_CHECKSUM`은 길이 제한 없는 **varbinary(max)** 형식과 최대 255자의 **nvarchar(max)** 형식을 지원합니다.
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
 이 예에서는 `BINARY_CHECKSUM`을 사용하여 테이블 행의 변경 내용을 검색합니다.
   
 ```sql

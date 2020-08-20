@@ -1,4 +1,5 @@
 ---
+description: DROP ASSEMBLY(Transact-SQL)
 title: DROP ASSEMBLY(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/10/2017
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 452d181a-a8e6-44a3-975d-29966d01b18d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 61dc0f3a7af65386d2568f5389674b6d781562e8
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 96c9142b0a6906606529807ab245c6a397c8b5aa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484771"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478953"
 ---
 # <a name="drop-assembly-transact-sql"></a>DROP ASSEMBLY(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -70,7 +71,7 @@ DROP ASSEMBLY [ IF EXISTS ] assembly_name [ ,...n ]
 ## <a name="permissions"></a>사용 권한  
  어셈블리 소유권이나 어셈블리에 대한 CONTROL 권한이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `HelloWorld` 어셈블리가 이미 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 생성된 것으로 가정합니다.  
   
 ```  

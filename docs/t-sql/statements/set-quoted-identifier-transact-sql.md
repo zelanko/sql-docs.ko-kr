@@ -1,4 +1,5 @@
 ---
+description: SET QUOTED_IDENTIFIER(Transact-SQL)
 title: SET QUOTED_IDENTIFIER(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/21/2019
@@ -25,12 +26,12 @@ ms.assetid: 10f66b71-9241-4a3a-9292-455ae7252565
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8933c07f0cfcc70131738ba2936b4262fb7ae249
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: f216887909893d91384fa91479820588dfdae1a1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002434"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478750"
 ---
 # <a name="set-quoted_identifier-transact-sql"></a>SET QUOTED_IDENTIFIER(Transact-SQL)
 
@@ -53,6 +54,8 @@ SET QUOTED_IDENTIFIER { ON | OFF }
 
 SET QUOTED_IDENTIFIER ON
 ```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="remarks"></a>설명
 `SET QUOTED_IDENTIFIER`가 ON(기본값)이면, 식별자는 큰따옴표(“ ”)로 구분할 수 있고 리터럴은 작은따옴표(‘ ’)로 구분해야 합니다. 큰따옴표로 구분되는 모든 문자열은 개체 식별자로 해석됩니다. 따라서 따옴표 붙은 식별자는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 식별자 규칙을 따르지 않아도 됩니다. 따옴표 붙은 식별자는 예약 키워드일 수 있으며 [!INCLUDE[tsql](../../includes/tsql-md.md)] 식별자에서 일반적으로 허용되지 않는 문자를 포함할 수 있습니다. 큰따옴표로는 리터럴 문자열 식을 구분할 수 없습니다. 리터럴 문자열을 묶으려면 작은따옴표를 사용해야 합니다. 리터럴 문자열에 작은따옴표(‘)가 포함되어 있으면, 두 개의 작은따옴표(‘’)로 나타낼 수 있습니다. 데이터베이스의 개체 이름에 예약된 키워드를 사용하는 경우 `SET QUOTED_IDENTIFIER`를 ON으로 설정해야 합니다.

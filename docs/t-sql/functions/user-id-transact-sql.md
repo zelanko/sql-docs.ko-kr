@@ -1,4 +1,5 @@
 ---
+description: USER_ID(Transact-SQL)
 title: USER_ID(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 67fd29bc-eda9-4d4d-b148-5d3659181a43
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 646ed2166a7519c12fd7695ef49bfe3aca7c0738
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 472a56ce6adf6b4020178ba8195642d88665d9d7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113271"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479487"
 ---
 # <a name="user_id-transact-sql"></a>USER_ID(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -62,7 +63,7 @@ USER_ID ( [ 'user' ] )
   
  USER_ID는 SELECT 목록, WHERE 절 및 식을 사용할 수 있는 곳이면 어디에서나 사용할 수 있습니다. 자세한 내용은 [식&#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)을 참조하세요.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `AdventureWorks2012` 사용자인 `Harold`의 ID를 반환합니다.  
   
 ```  

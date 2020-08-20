@@ -1,4 +1,5 @@
 ---
+description: UPDATE - 트리거 함수(Transact-SQL)
 title: UPDATE()(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -25,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 8e3be25b-2e3b-4d1f-a610-dcbbd8d72084
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 528f02ccc8e341700b64cc0a73e0e3185d16a8ee
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: e9764fc038eba85f9f31a68bd101c2f079d75069
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113263"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479550"
 ---
 # <a name="update---trigger-functions-transact-sql"></a>UPDATE - 트리거 함수(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -50,7 +51,7 @@ UPDATE ( column )
 
 ## <a name="arguments"></a>인수
  *column*  
- INSERT 또는 UPDATE 동작 중 하나에 관해 테스트할 열의 이름입니다. 테이블 이름은 트리거의 ON 절에 지정되므로 열 이름 앞에 테이블 이름을 사용하지 마세요. 열에는 [에서 지원되는 모든 ](../../t-sql/data-types/data-types-transact-sql.md)데이터 형식[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]을 지정할 수 있습니다. 단, 계산 열은 이 컨텍스트에서 사용할 수 없습니다.  
+ INSERT 또는 UPDATE 동작 중 하나에 관해 테스트할 열의 이름입니다. 테이블 이름은 트리거의 ON 절에 지정되므로 열 이름 앞에 테이블 이름을 사용하지 마세요. 열에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 지원되는 모든 [데이터 형식](../../t-sql/data-types/data-types-transact-sql.md)을 지정할 수 있습니다. 단, 계산 열은 이 컨텍스트에서 사용할 수 없습니다.  
   
 ## <a name="return-types"></a>반환 형식  
  부울  
@@ -69,7 +70,7 @@ UPDATE ( column )
  
 트리거가 열에 적용되면 열 값이 변경되지 않는 경우에도 `UPDATED` 값은 `true` 또는 `1`로 반환됩니다. 이는 의도적으로 설계된 것이며 트리거는 삽입/업데이트/삭제 작업이 허용되는지 여부를 결정하는 비즈니스 논리를 구현해야 합니다. 
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 사용자가 `StateProvinceID` 테이블의 `PostalCode` 또는 `Address` 열을 업데이트하려고 하면 클라이언트에게 메시지를 출력하는 트리거를 만듭니다.  
   
 ```sql  

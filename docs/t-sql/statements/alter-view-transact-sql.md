@@ -1,4 +1,5 @@
 ---
+description: ALTER VIEW(Transact-SQL)
 title: ALTER VIEW(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/25/2018
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 03eba220-13e2-49e3-bd9d-ea9df84dc28c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2b12802ee2d4c8e9263b1a8c5ca284d134e56d59
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+ms.openlocfilehash: fe90ae1099c350c4e323a7229ca980d94f0eac24
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86380836"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479098"
 ---
 # <a name="alter-view-transact-sql"></a>ALTER VIEW(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -116,7 +117,7 @@ AS <select_statement>
 ## <a name="permissions"></a>사용 권한  
  ALTER VIEW를 실행하려면 최소 OBJECT에 대한 ALTER 권한이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 모든 직원 및 이들의 채용일을 포함하는 `EmployeeHireDate`라는 뷰를 만듭니다. 해당 뷰에 권한이 부여되었지만 채용일이 특정 날짜 이전인 직원을 선택하도록 요구 사항이 변경됩니다. 그러면 `ALTER VIEW`를 사용하여 기존 뷰를 바꿉니다.  
   
 ```  

@@ -1,4 +1,5 @@
 ---
+description: 캐시 연결 관리자
 title: 캐시 연결 관리자 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bdc92038-3720-4795-8a5c-79b963f2c952
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 21cc4725f69d35043734da6d9210bac0a6b65e4d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c546eee3e6dfe71d3e554f28c467407fc5baea16
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920829"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477950"
 ---
 # <a name="cache-connection-manager"></a>캐시 연결 관리자
 
@@ -115,7 +116,7 @@ ms.locfileid: "86920829"
 > [!NOTE]  
 >  조회 변환은 캐시 연결 관리자를 사용하도록 구성된 경우 참조 데이터 세트의 인덱스 열만 입력 열에 매핑할 수 있습니다. 또한 모든 인덱스 열을 매핑해야 합니다.  
   
- **형식**  
+ **유형**  
  열의 데이터 형식을 지정합니다.  
   
  **길이**  
@@ -124,7 +125,7 @@ ms.locfileid: "86920829"
  **정밀도**  
  특정 열 데이터 형식에 대한 전체 자릿수를 지정합니다. 전체 자릿수는 숫자의 모든 자릿수이고 데이터 형식에 적용 가능한 경우 **Precision**를 업데이트할 수 있습니다.  
   
- **규모**  
+ **크기 조정**  
  특정 열 데이터 형식에 대한 소수 자릿수를 지정합니다. 소수 자릿수는 숫자에서 소수점 오른쪽에 있는 자릿수입니다. 데이터 형식에 적용 가능한 경우 **Scale**를 업데이트할 수 있습니다.  
   
  **코드 페이지**  

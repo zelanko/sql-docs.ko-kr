@@ -1,4 +1,5 @@
 ---
+description: DBCC SHRINKFILE(Transact-SQL)
 title: DBCC SHRINKFILE(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/14/2017
@@ -29,12 +30,12 @@ helpviewer_keywords:
 ms.assetid: e02b2318-bee9-4d84-a61f-2fddcf268c9f
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 32ce225096e6a232c824a9fc360cb2c3a282f4b2
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 203b53928ee41dcc75194cef6171959cdc08dd71
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484247"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479797"
 ---
 # <a name="dbcc-shrinkfile-transact-sql"></a>DBCC SHRINKFILE(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -163,7 +164,7 @@ transaction with timestamp 15 and other snapshot transactions linked to
 timestamp 15 or with timestamps older than 109 to finish.  
 ```  
   
-이 메시지는 축소 작업이 완료된 마지막 트랜잭션인 109보다 오래된 타임스탬프가 있는 스냅샷 트랜잭션이 축소 작업을 차단하고 있음을 의미합니다. 또한 **sys.dm_tran_active_snapshot_database_transactions** 동적 관리 뷰의 **transaction_sequence_num** 또는 [first_snapshot_sequence_num](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-snapshot-database-transactions-transact-sql.md) 열에 15인 값이 포함되어 있음을 나타냅니다. **transaction_sequence_num** 또는 **first_snapshot_sequence_num** 뷰 열에 축소 작업의 마지막으로 완료된 트랜잭션(109)보다 작은 숫자가 포함되면 축소 작업은 해당 트랜잭션이 완료될 때까지 기다립니다.
+이 메시지는 축소 작업이 완료된 마지막 트랜잭션인 109보다 오래된 타임스탬프가 있는 스냅샷 트랜잭션이 축소 작업을 차단하고 있음을 의미합니다. 또한 [sys.dm_tran_active_snapshot_database_transactions](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-snapshot-database-transactions-transact-sql.md) 동적 관리 뷰의 **transaction_sequence_num** 또는 **first_snapshot_sequence_num** 열에 15인 값이 포함되어 있음을 나타냅니다. **transaction_sequence_num** 또는 **first_snapshot_sequence_num** 뷰 열에 축소 작업의 마지막으로 완료된 트랜잭션(109)보다 작은 숫자가 포함되면 축소 작업은 해당 트랜잭션이 완료될 때까지 기다립니다.
   
 문제를 해결하려면 다음 태스크 중 하나를 수행하십시오.
 -   축소 작업을 차단하는 트랜잭션을 종료합니다.
@@ -173,10 +174,10 @@ timestamp 15 or with timestamps older than 109 to finish.
 ## <a name="permissions"></a>사용 권한  
 **sysadmin** 고정 서버 역할의 멤버 또는 **db_owner** 고정 데이터베이스 역할의 멤버여야 합니다.
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="shrinking-a-data-file-to-a-specified-target-size"></a>데이터 파일을 지정한 대상 크기로 축소  
-다음 예제에서는 `DataFile1` 사용자 데이터베이스의 `UserDB`이라는 데이터 파일의 크기를 7MB로 축소합니다.
+다음 예제에서는 `UserDB` 사용자 데이터베이스의 `DataFile1`이라는 데이터 파일의 크기를 7MB로 축소합니다.
   
 ```sql  
 USE UserDB;  

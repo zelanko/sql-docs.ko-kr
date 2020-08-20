@@ -1,4 +1,5 @@
 ---
+description: LOGINPROPERTY(Transact-SQL)
 title: LOGINPROPERTY(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -32,12 +33,12 @@ helpviewer_keywords:
 ms.assetid: b34df777-79b0-49a5-88db-b99998479a5d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 20b67d4b1913cd896d3c4473b0c0f161b833154f
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: c3014a8d57602dc80b7faeec26dbc85d43f91c44
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111907"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479621"
 ---
 # <a name="loginproperty-transact-sql"></a>LOGINPROPERTY(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -119,7 +120,7 @@ LOGINPROPERTY ( 'login_name' , 'property_name' )
 ## <a name="permissions"></a>사용 권한  
  로그인에 대한 VIEW 권한이 필요합니다. 암호 해시를 요청하는 경우 CONTROL SERVER 권한도 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-checking-whether-a-login-must-change-its-password"></a>A. 로그인이 해당 암호를 변경해야 하는지 여부 확인  
  다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 `John3`이 다음에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결할 때 해당 암호를 변경해야 하는지 여부를 확인합니다.  

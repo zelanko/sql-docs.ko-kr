@@ -1,4 +1,5 @@
 ---
+description: 유연한 파일 대상
 title: 유연한 파일 대상 | Microsoft Docs
 ms.custom: ''
 ms.date: 05/22/2019
@@ -12,12 +13,12 @@ f1_keywords:
 - sql14.dts.designer.afpextfiledest.f1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9c5e53ba85af16c65161857d9f93c50e5105fa50
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 72bc4d08685f411cb07194234e37f20e5bdbaac4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915001"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477834"
 ---
 # <a name="flexible-file-destination"></a>유연한 파일 대상
 

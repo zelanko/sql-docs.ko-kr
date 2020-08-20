@@ -1,4 +1,5 @@
 ---
+description: Excel 사용자 지정 속성
 title: Excel 사용자 지정 속성 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: bdcc72b8-8950-47bd-88bf-5db6d48cc6bf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: edc0454c0c0f8becd165b03d5bb893f8bb141ac4
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 18143ae1765ce4d2b306f43fd9756666629309df
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915909"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477895"
 ---
 # <a name="excel-custom-properties"></a>Excel 사용자 지정 속성
 
@@ -64,7 +65,7 @@ ms.locfileid: "86915909"
   
  자세한 내용은 [Excel Destination](../../integration-services/data-flow/excel-destination.md)을 참조하세요.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
  [SSIS(SQL Server Integration Services)를 통해 Excel에서 데이터 로드](../load-data-to-from-excel-with-ssis.md)
   

@@ -1,4 +1,5 @@
 ---
+description: '&#x40;&#x40;PACK_SENT(Transact-SQL)'
 title: '@@PACK_SENT(Transact-SQL) | Microsoft Docs'
 ms.custom: ''
 ms.date: 09/18/2017
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 8a322162-24c9-48e9-bfa4-c060e4e11dba
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: da77f0255a67c175537dd6ba5ea6030555f31c68
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 7e25d074aa561b81d5b6ea981787964eebbac189
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110858"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479625"
 ---
 # <a name="x40x40pack_sent-transact-sql"></a>&#x40;&#x40;PACK_SENT(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -50,7 +51,7 @@ ms.locfileid: "87110858"
 ## <a name="remarks"></a>설명  
  보낸 패킷과 받은 패킷을 포함하여 여러 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 통계가 들어 있는 보고서를 표시하려면 **sp_monitor**를 실행합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `@@PACK_SENT`의 사용법을 보여 줍니다.  
   
 ```sql
@@ -68,6 +69,6 @@ Pack Sent
 ## <a name="see-also"></a>참고 항목  
  [@@PACK_RECEIVED&#40;Transact-SQL&#41;](../../t-sql/functions/pack-received-transact-sql.md)   
  [sp_monitor&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md)   
- [시스템 통계 함수&#40;Transact-SQL&#41;](../../t-sql/functions/system-statistical-functions-transact-sql.md)  
+ [시스템 통계 함수 &#40;Transact-SQL&#41;](../../t-sql/functions/system-statistical-functions-transact-sql.md)  
   
   

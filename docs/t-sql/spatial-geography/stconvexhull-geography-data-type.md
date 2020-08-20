@@ -1,4 +1,5 @@
 ---
+description: STConvexHull(geography 데이터 형식)
 title: STConvexHull(geography 데이터 형식) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fb435db7-31bb-4243-9d8b-35379184cfb4
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: efdde1449a16862b93c52c9b9b205d0d82fa89b4
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 0db7ad59585b2ff0c57526ca40f7caa3576e99fc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86556138"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479341"
 ---
 # <a name="stconvexhull-geography-data-type"></a>STConvexHull(geography 데이터 형식)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -47,7 +48,7 @@ ms.locfileid: "86556138"
   
  초기화되지 않은 **geography** 인스턴스에 대해 **null**을 반환합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-using-stconvexhull-on-an-uninitialized-geography-instance"></a>A. 초기화되지 않은 인스턴스에 STConvexHull() 사용  
  다음 예에서는 초기화되지 않은 **geography** 인스턴스에 `STConvexHull()`을 사용합니다.  

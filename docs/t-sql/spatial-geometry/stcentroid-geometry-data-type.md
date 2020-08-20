@@ -1,4 +1,5 @@
 ---
+description: STCentroid(geometry 데이터 형식)
 title: STCentroid(geometry 데이터 형식) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4dc5a004-7a53-4cce-81dd-9f5e1dd0db78
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 716f26e14e5d97701965cc57e8d304eb25b89b6f
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 5bcdb5f682ebd279af1d5314917f61290a88b07e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555078"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479271"
 ---
 # <a name="stcentroid-geometry-data-type"></a>STCentroid(geometry 데이터 형식)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -48,7 +49,7 @@ ms.locfileid: "86555078"
 ## <a name="remarks"></a>설명  
  `STCentroid()`는 **geometry** 인스턴스가 **Polygon, CurvePolygon** 또는 **MultiPolygon** 형식이 아니면 null을 반환합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-computing-the-centroid-of-a-polygon-instance"></a>A. Polygon 인스턴스의 중심 계산  
  다음 예에서는 `STCentroid()`를 사용하여 `polygon``geometry` 인스턴스의 중심을 컴퓨팅합니다.  

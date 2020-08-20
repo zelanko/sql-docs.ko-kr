@@ -1,4 +1,5 @@
 ---
+description: ALTER INDEX(선택적 XML 인덱스)
 title: ALTER INDEX(선택적 XML 인덱스) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/01/2017
@@ -12,12 +13,12 @@ dev_langs:
 ms.assetid: cca96a8f-7737-42d2-bbcc-03d5f858dcc1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ce6f6005e3e2b6966a4bc9e457b1ee552ea017f1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 11aa4f80e391644c796280e2d236c710e70bee2a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85761869"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479122"
 ---
 # <a name="alter-index-selective-xml-indexes"></a>ALTER INDEX(선택적 XML 인덱스)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -137,7 +138,9 @@ identifier
  [WITH **(** \<index_options> **)** ]  
  FOR 절 없이 ALTER INDEX를 사용할 때는 \<index_options>만 지정할 수 있습니다. ALTER INDEX를 사용하여 인덱스에서 경로를 추가 또는 제거할 때는 인덱스 옵션이 잘못된 인수가 아닙니다. 인덱스 옵션에 대한 자세한 내용은 [CREATE XML INDEX&#40;선택적 XML 인덱스&#41;](../../t-sql/statements/create-xml-index-selective-xml-indexes.md)를 참조하세요.  
   
-## <a name="remarks"></a>설명  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="remarks"></a>설명
   
 > [!IMPORTANT]  
 >  ALTER INDEX 문을 실행하면 선택적 XML 인덱스가 항상 다시 작성됩니다. 이 프로세스가 서버 리소스에 미치는 영향을 고려해야 합니다.  
