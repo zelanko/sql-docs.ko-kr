@@ -1,4 +1,5 @@
 ---
+description: SQLBindCol(커서 라이브러리)
 title: SQLBindCol (커서 라이브러리) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: f4dd546a-0a6c-4397-8ee7-fafa6b9da543
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1c29909a96f147a0f5ebc2140a68072dfe544255
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f3b3968687f1c9062457a16ec7c5bc11cb32d3a9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305474"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456482"
 ---
 # <a name="sqlbindcol-cursor-library"></a>SQLBindCol(커서 라이브러리)
 > [!IMPORTANT]  

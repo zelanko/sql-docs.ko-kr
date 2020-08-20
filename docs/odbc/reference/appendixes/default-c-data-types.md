@@ -1,4 +1,5 @@
 ---
+description: 기본 C 데이터 형식
 title: 기본 C 데이터 형식 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 229140ae-af8f-4ec8-9ccf-1e92360e0bac
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fdb787580e1c79df805f468416ab8993a1d32a26
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7d0ed42971405ca23d5f69f47cbb6ac02e8e5675
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307054"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456609"
 ---
 # <a name="default-c-data-types"></a>기본 C 데이터 형식
 응용 프로그램에서 **SQLBindCol**, **SQLGetData**또는 **SQLBindParameter**의 SQL_C_DEFAULT 지정 하는 경우 드라이버는 출력 또는 입력 버퍼의 C 데이터 형식이 버퍼가 바인딩된 열 또는 매개 변수의 SQL 데이터 형식에 해당 하는 것으로 가정 합니다.  

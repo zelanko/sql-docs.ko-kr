@@ -1,4 +1,5 @@
 ---
+description: SQL Server 2017 Integration Services의 새로운 기능
 title: SQL Server 2017 Integration Services의 새로운 기능 | Microsoft Docs
 ms.custom: ''
 ms.date: 09/28/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: e26d7884-e772-46fa-bfdc-38567fe976a1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e373ce2ab1d5b9f45c169b287b5fea2447dd1113
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b7d0f0a75c924151b2548a71a2f52389abc95577
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922305"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456908"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2017"></a>SQL Server 2017 Integration Services의 새로운 기능
 

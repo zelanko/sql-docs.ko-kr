@@ -1,4 +1,5 @@
 ---
+description: sys.dm_db_incremental_stats_properties (Transact-SQL)
 title: sys. dm_db_incremental_stats_properties (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/18/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: aa0db893-34d1-419c-b008-224852e71307
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 20e4f7f015cc5d1ced1802e192c36f6c86471f0b
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: f6661c9dd7f581bb7c8dccc62b0b11547a73b4fa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442924"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460447"
 ---
 # <a name="sysdm_db_incremental_stats_properties-transact-sql"></a>sys.dm_db_incremental_stats_properties (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -88,7 +89,7 @@ SELECT * FROM sys.dm_db_incremental_stats_properties (object_id('PartitionTable'
 ## <a name="see-also"></a>참고 항목  
  [DBCC SHOW_STATISTICS&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
  [sys.stats&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)   
- [Transact-sql&#41;&#40;개체 관련 동적 관리 뷰 및 함수](../../relational-databases/system-dynamic-management-views/object-related-dynamic-management-views-and-functions-transact-sql.md)   
+ [Transact-sql&#41;&#40;개체 관련 동적 관리 뷰 및 함수 ](../../relational-databases/system-dynamic-management-views/object-related-dynamic-management-views-and-functions-transact-sql.md)   
  [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
  [sys. dm_db_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)   
  [sys.dm_db_stats_histogram (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md) 

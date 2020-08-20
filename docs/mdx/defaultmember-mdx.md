@@ -1,4 +1,5 @@
 ---
+description: DefaultMember(MDX)
 title: DefaultMember (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: a0b5039ae62eac25d698442d4aeb92ad3c4ebc3a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6037d5089b9d0fa67599728ce35082432b0a570c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68892906"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456673"
 ---
 # <a name="defaultmember-mdx"></a>DefaultMember(MDX)
 

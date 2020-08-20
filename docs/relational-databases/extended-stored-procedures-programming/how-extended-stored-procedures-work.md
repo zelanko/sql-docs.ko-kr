@@ -1,4 +1,5 @@
 ---
+description: 확장 저장 프로시저 작동 원리
 title: 확장 저장 프로시저의 작동 방식 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6e946d8c-3268-4b59-8a1c-1637909cd701
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 02a1c64974fdcab5a686a61ac35a3a2175e16314
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 49c5f3491d93ee71a0ce118a5f4ba387da770f1c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758087"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460820"
 ---
 # <a name="how-extended-stored-procedures-work"></a>확장 저장 프로시저 작동 원리
 

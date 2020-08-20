@@ -1,4 +1,5 @@
 ---
+description: ODBC 흐름 구성 요소
 title: ODBC 흐름 구성 요소 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: cf751f1e-2348-4a77-904c-bd92c0d7d0ae
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 339d8c68dcafba40b73edbc8c003376a20ae8822
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c2ae72b5e59c56c976632fdc5572dcfae030f689
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914763"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457350"
 ---
 # <a name="odbc-flow-components"></a>ODBC 흐름 구성 요소
 
@@ -104,7 +105,7 @@ ms.locfileid: "86914763"
   
 ODBC 3.8 사양에 설명된 대로 확장 가능한 C 형식에 대한 데이터 형식 지원은 없습니다. 다음 표에서는 각 ODBC SQL 형식에 사용되는 SSIS 데이터 형식을 설명합니다. SSIS 개발자는 필요한 데이터 변환 작업의 성능에 영향을 주지 않으면서 기본 매핑을 무시하고 입력/출력 열에 다른 SSIS 데이터 형식을 지정할 수 있습니다.  
   
-|ODBC SQL 형식|SSIS 데이터 형식|주석|  
+|ODBC SQL 형식|SSIS 데이터 형식|의견|  
 |-----------------|------------------|------------|  
 |SQL_BIT|DT_BOOL||  
 |SQL_TINYINT|DT_I1<br /><br />DT_UI1|ODBC 드라이버가 해당 SQL 데이터 형식에 대해 UNSIGNED_ATTRIBUTE를 SQL_TRUE로 설정하면 SQL 데이터 형식이 SSIS 부호 없는 형식(DT_UI1, DT_UI2, DT_UI4, DT_UI8)에 매핑됩니다.|  

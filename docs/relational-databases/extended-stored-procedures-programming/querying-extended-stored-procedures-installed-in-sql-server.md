@@ -1,4 +1,5 @@
 ---
+description: SQL Server에 설치된 확장 저장 프로시저 쿼리
 title: 확장 저장 프로시저 쿼리
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ ms.assetid: e02348e6-dba6-438a-98b6-684244bb034d
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 8413f071cfb36f5cad9130d3e2b56327d9b3bf45
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: edd5bb4fe5284552642a838ea2b5dcafef601061
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758090"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460825"
 ---
 # <a name="querying-extended-stored-procedures-installed-in-sql-server"></a>SQL Server에 설치된 확장 저장 프로시저 쿼리
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

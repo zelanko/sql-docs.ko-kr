@@ -1,4 +1,5 @@
 ---
+description: ALTER ENDPOINT(Transact-SQL)
 title: ALTER ENDPOINT(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 70f35566-30cf-47c6-8394-dfe5d71629d3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: eed0eb24fc38f3ff2856d8b9693265d888d5a8e2
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: 9c800a8f2a915c1ab10134b2f665bb767a18e4f9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442716"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458915"
 ---
 # <a name="alter-endpoint-transact-sql"></a>ALTER ENDPOINT(Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -96,7 +97,9 @@ FOR DATABASE_MIRRORING (
   
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
   
 > [!NOTE]  
 >  다음은 ALTER ENDPOINT 관련 인수입니다. 나머지 인수에 대한 설명은 [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/create-endpoint-transact-sql.md)를 참조하세요.  

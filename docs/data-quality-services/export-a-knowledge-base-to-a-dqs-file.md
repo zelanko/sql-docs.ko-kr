@@ -1,4 +1,5 @@
 ---
+description: .dqs 파일로 기술 자료 내보내기
 title: .dqs 파일로 기술 자료 내보내기
 ms.date: 03/01/2017
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: a324ead5-c8aa-4e26-abe3-ef415add00f8
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 1ebfecaead83e845bc95dd9e8fa32316e1d2e9c1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 946b1192b314c5303cd529c176e93ebf1fb0204f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895337"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457956"
 ---
 # <a name="export-a-knowledge-base-to-a-dqs-file"></a>.dqs 파일로 기술 자료 내보내기
 
@@ -36,7 +37,7 @@ ms.locfileid: "85895337"
 ####  <a name="permissions"></a><a name="Permissions"></a> 권한  
  기술 자료를 .dqs 데이터 파일로 내보내려면 DQS_MAIN 데이터베이스에 대한 dqs_kb_editor 또는 dqs_administrator 역할이 있어야 합니다.  
   
-##  <a name="export-a-knowledge-base-to-a-dqs-file"></a><a name="Export"></a>기술 자료를 dqs 파일로 내보내기  
+##  <a name="export-a-knowledge-base-to-a-dqs-file"></a><a name="Export"></a> 기술 자료를 dqs 파일로 내보내기  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Data Quality Client 응용 프로그램을 실행](../data-quality-services/run-the-data-quality-client-application.md)합니다.  
   
@@ -48,7 +49,7 @@ ms.locfileid: "85895337"
   
 5.  **기술 자료 내보내기** 대화 상자에서 상태 줄에 내보내기가 완료되었다고 표시되는지 확인합니다. **확인**을 클릭합니다.  
   
-##  <a name="follow-up-after-exporting-a-domain-to-a-dqs-file"></a><a name="FollowUp"></a>후속 작업: 도메인을 dqs 파일로 내보낸 후  
+##  <a name="follow-up-after-exporting-a-domain-to-a-dqs-file"></a><a name="FollowUp"></a> 후속 작업: 도메인을 dqs 파일로 내보낸 후  
  기술 자료를 .dqs 파일로 내보낸 후 기술 자료를 동일한 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] (새 이름 적용) 또는 다른 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]로 가져올 수 있습니다.  
   
   

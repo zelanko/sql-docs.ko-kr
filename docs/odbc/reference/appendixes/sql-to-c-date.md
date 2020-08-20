@@ -1,4 +1,5 @@
 ---
+description: 'SQL에서 C로: 날짜'
 title: 'SQL에서 C로: 날짜 | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 703c7960-9cf4-4d7a-9920-53b29c184f97
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fe9656c0c02c0ff5a10029525da3d38280530cc3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a5bab301c7a4bc55289006df1c9df5498629f317
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81296533"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456519"
 ---
 # <a name="sql-to-c-date"></a>SQL에서 C로: 날짜
 ODBC SQL 데이터 형식에 대 한 식별자는 다음과 같습니다.  
@@ -42,4 +43,4 @@ ODBC SQL 데이터 형식에 대 한 식별자는 다음과 같습니다.
   
  [c] 해당 C 데이터 형식의 크기입니다.  
   
- 날짜 SQL 데이터가 문자 C 데이터로 변환 되는 경우 결과 문자열은 "*yyyy*-*mm*-*dd*" 형식입니다. 이 형식은 Windows® country 설정의 영향을 받지 않습니다.
+ 날짜 SQL 데이터가 문자 C 데이터로 변환 되는 경우 결과 문자열은 "*yyyy* - *mm* - *dd*" 형식입니다. 이 형식은 Windows® country 설정의 영향을 받지 않습니다.

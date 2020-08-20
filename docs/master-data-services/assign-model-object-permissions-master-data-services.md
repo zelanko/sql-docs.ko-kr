@@ -1,4 +1,5 @@
 ---
+description: 모델 개체 사용 권한 할당(Master Data Services)
 title: 모델 개체 사용 권한 할당
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4b80148d-2318-415c-9479-28c240e48bcd
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 0b134629e732934d44f219edc9be368234911a5d
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 9b79a9428df0dc528190281070ea33b3a2c21b25
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812814"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456748"
 ---
 # <a name="assign-model-object-permissions-master-data-services"></a>모델 개체 사용 권한 할당(Master Data Services)
 
@@ -29,7 +30,7 @@ ms.locfileid: "85812814"
 > [!NOTE]  
 >  모델에 사용 권한을 할당하면 다른 모든 모델에 대한 사용 권한이 암시적으로 거부됩니다. 모델 개체 사용 권한을 할당하지 않으면 사용자나 그룹이 **탐색기**에서 데이터에 액세스할 수 없습니다.  
   
-## <a name="prerequisites"></a>전제 조건  
+## <a name="prerequisites"></a>사전 요구 사항  
  이 절차를 수행하려면  
   
 -   **사용자 및 그룹 권한** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  
@@ -56,7 +57,7 @@ ms.locfileid: "85812814"
   
 9. 사용자 모델 관리자를 만들어야 하는 경우 최상위 모델 수준에서 **Admin** 을 선택합니다.  
   
-10. **Save**을 클릭합니다.  
+10. **저장**을 클릭합니다.  
   
 ## <a name="next-steps"></a>다음 단계  
   

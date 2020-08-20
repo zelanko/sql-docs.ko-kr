@@ -1,4 +1,5 @@
 ---
+description: 트랜잭션 데이터용 InfoCube 만들기
 title: 트랜잭션 데이터용 InfoCube 만들기 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 673cea01-a260-4fce-a1a0-f73839289805
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7cc7e124f0220a5d7dcd1a146479a82801f83a3d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 18d7f3f10a2d7179d31e08e5a8e255df7295ca67
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923579"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457399"
 ---
 # <a name="create-infocube-for-transaction-data"></a>트랜잭션 데이터용 InfoCube 만들기
 
@@ -61,13 +62,13 @@ ms.locfileid: "86923579"
  **InfoObject**  
  데이터 흐름 열과 연결된 InfoObject의 이름을 표시합니다.  
   
- **형식**  
+ **유형**  
  데이터 흐름 열과 연결된 InfoObject의 유형을 표시합니다. 다음 표에서는 유형에 사용할 수 있는 값을 나열합니다.  
   
 |값|Description|  
 |-----------|-----------------|  
 |CHA|특징|  
-|UNI|Units|  
+|UNI|단위|  
 |KYF|주요 수치|  
 |TIM|시간 특징|  
   

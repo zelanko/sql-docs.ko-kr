@@ -1,4 +1,5 @@
 ---
+description: 시스템 관리 기능 영역(마스터 데이터 관리자)
 title: 시스템 관리 기능 영역
 ms.custom: ''
 ms.date: 04/01/2016
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 4254e825-d76a-4daf-961f-087b961644a7
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: a43fa563892d1c48941c016e661f52e899989daf
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 7a9061ad704647aeb94282ab18e0fcb18377a4cc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813219"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456729"
 ---
 # <a name="system-administration-functional-area-master-data-manager"></a>시스템 관리 기능 영역(마스터 데이터 관리자)
 

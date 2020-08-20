@@ -1,4 +1,5 @@
 ---
+description: catalog.delete_folder(SSISDB 데이터베이스)
 title: catalog.delete_folder(SSISDB 데이터베이스) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: b9c08992-500c-447e-bc19-1eb13c9b0293
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9e22bb36904b63d2fbe2832443992342606ae074
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 1257d1751798046dc176aa8969541f92ec0a215b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913091"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456903"
 ---
 # <a name="catalogdelete_folder-ssisdb-database"></a>catalog.delete_folder(SSISDB 데이터베이스)
 
@@ -37,7 +38,7 @@ catalog.delete_folder [ @folder_name = ] folder_name
  삭제할 폴더의 이름입니다. *folder_name*은 **nvarchar(128)** 입니다.  
   
 ## <a name="return-code-value"></a>반환 코드 값  
- None  
+ 없음  
   
 ## <a name="result-sets"></a>결과 집합  
  None  

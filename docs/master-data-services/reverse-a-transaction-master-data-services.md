@@ -1,4 +1,5 @@
 ---
+description: 트랜잭션 되돌리기(Master Data Services)
 title: 트랜잭션 되돌리기
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6f7c3f07-0f64-4283-8c9c-93facd00a046
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: a4228f34fea725d2be8cdaff94613fa734771ce2
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: eb92a6d663fa37efa718b88ed04a842e46389e2b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811449"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456707"
 ---
 # <a name="reverse-a-transaction-master-data-services"></a>트랜잭션 되돌리기(Master Data Services)
 
@@ -25,7 +26,7 @@ ms.locfileid: "85811449"
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 동작을 취소해야 할 경우 관리자가 트랜잭션을 되돌릴 수 있습니다. 트랜잭션의 예로 특성 값 변경, 계층 이동 또는 멤버 삭제가 있습니다. 이 항목은 트랜잭션 로그 유형이 "특성"인 엔터티의 트랜잭션에만 적용됩니다. 트랜잭션 로그 유형이 "멤버"인 엔터티의 트랜잭션 기록을 보려면 엔터티 탐색기 페이지로 이동하세요.  
   
-## <a name="prerequisites"></a>전제 조건  
+## <a name="prerequisites"></a>사전 요구 사항  
   
 -   **버전 관리** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  
   

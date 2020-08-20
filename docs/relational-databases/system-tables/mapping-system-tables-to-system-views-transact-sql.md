@@ -1,4 +1,5 @@
 ---
+description: 시스템 테이블을 시스템 뷰로 매핑(Transact-SQL)
 title: 시스템 테이블을 시스템 뷰로 매핑 (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: a616fce9-b4c1-49da-87a7-9d6f74911d8f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 424dda2a57b51f6486cabcadadce7342c0a0eb0d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 84493da61303f1ac383eb009e07198d495a9846d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890103"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460379"
 ---
 # <a name="mapping-system-tables-to-system-views-transact-sql"></a>시스템 테이블을 시스템 뷰로 매핑(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,13 +44,13 @@ ms.locfileid: "85890103"
 |syslockinfo|[sys.dm_tran_locks](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)|동적 관리 뷰|  
 |syslocks|[sys.dm_tran_locks](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)|동적 관리 뷰|  
 |syslogins|[sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)<br /><br /> [sys.sql_logins](../../relational-databases/system-catalog-views/sys-sql-logins-transact-sql.md)|카탈로그 뷰|  
-|sysmessages|[sys. 메시지](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)|카탈로그 뷰|  
+|sysmessages|[sys.messages](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)|카탈로그 뷰|  
 |sysoledbusers|[sys.linked_logins](../../relational-databases/system-catalog-views/sys-linked-logins-transact-sql.md)|카탈로그 뷰|  
 |sysopentapes|[sys.dm_io_backup_tapes](../../relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql.md)|동적 관리 뷰|  
 |sysperfinfo|[sys.dm_os_performance_counters](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md)|동적 관리 뷰|  
 |sysprocesses|[sys.dm_exec_connections](../../relational-databases/system-dynamic-management-views/sys-dm-exec-connections-transact-sql.md)<br /><br /> [sys.dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)<br /><br /> [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)|동적 관리 뷰<br /><br /> 동적 관리 뷰<br /><br /> 동적 관리 뷰|  
-|sysremotelogins|[sys.remote_logins](../../relational-databases/system-catalog-views/sys-remote-logins-transact-sql.md)|카탈로그 뷰|  
-|sysservers|[sys.servers](../../relational-databases/system-catalog-views/sys-servers-transact-sql.md)|카탈로그 뷰|  
+|sysremotelogins|[sys. remote_logins](../../relational-databases/system-catalog-views/sys-remote-logins-transact-sql.md)|카탈로그 뷰|  
+|sysservers|[sys. 서버](../../relational-databases/system-catalog-views/sys-servers-transact-sql.md)|카탈로그 뷰|  
   
  다음 표에서는 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]의 모든 데이터베이스에 있는 시스템 테이블 또는 함수를 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]의 해당 시스템 뷰 또는 함수로 매핑합니다.  
   
@@ -72,11 +73,11 @@ ms.locfileid: "85890103"
 |sysreferences|[sys.foreign_keys](../../relational-databases/system-catalog-views/sys-foreign-keys-transact-sql.md)|카탈로그 뷰|  
 |systypes|[sys.types](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)|카탈로그 뷰|  
 |sysusers|[sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)|카탈로그 뷰|  
-|sysfulltextcatalogs|[sys.fulltext_catalogs](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)|카탈로그 뷰|  
+|sysfulltextcatalogs|[sys. fulltext_catalogs](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)|카탈로그 뷰|  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;카탈로그 뷰](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Transact-sql&#41;&#40;동적 관리 뷰 및 함수](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [시스템 테이블&#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
   
   

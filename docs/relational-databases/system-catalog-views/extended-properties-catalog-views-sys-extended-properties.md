@@ -1,4 +1,5 @@
 ---
+description: 확장 속성 카탈로그 뷰-sys. extended_properties
 title: sys. extended_properties (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -20,11 +21,12 @@ ms.assetid: 439b7299-dce3-4d26-b1c7-61be5e0df82a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5328e930d5200184c6db15dc6ac7083a61967464
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 76a910b12f744aa0620ba81c3db872db3d63b3d2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85977685"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460743"
 ---
 # <a name="extended-properties-catalog-views---sysextended_properties"></a>확장 속성 카탈로그 뷰-sys. extended_properties
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -40,12 +42,12 @@ ms.locfileid: "85977685"
 |name|**sysname**|고유한 class, major_id 및 minor_id를 가진 속성 이름입니다.|  
 |값|**sql_variant**|확장 속성의 값입니다.|  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;카탈로그 뷰](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Transact-sql&#41;&#40;확장 속성 카탈로그 뷰](https://msdn.microsoft.com/library/f39fd324-efd4-4468-884c-bf77ed1a026f)   
+ [카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Transact-sql&#41;&#40;확장 속성 카탈로그 뷰 ](https://msdn.microsoft.com/library/f39fd324-efd4-4468-884c-bf77ed1a026f)   
  [fn_listextendedproperty &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-listextendedproperty-transact-sql.md)   
  [Transact-sql&#41;sp_addextendedproperty &#40;](../../relational-databases/system-stored-procedures/sp-addextendedproperty-transact-sql.md)   
  [Transact-sql&#41;sp_dropextendedproperty &#40;](../../relational-databases/system-stored-procedures/sp-dropextendedproperty-transact-sql.md)   

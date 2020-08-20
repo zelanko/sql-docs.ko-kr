@@ -1,4 +1,5 @@
 ---
+description: CREATE SCHEMA(Transact-SQL)
 title: CREATE SCHEMA(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/01/2016
@@ -24,12 +25,12 @@ ms.assetid: df74fc36-20da-4efa-b412-c4e191786695
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f06c3e2b95fa571b26404a69653471738d7648ee
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: eef5bd9a0cd3c1a42797c9ca334f9efc4745f824
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86393001"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458799"
 ---
 # <a name="create-schema-transact-sql"></a>CREATE SCHEMA(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -146,7 +147,7 @@ CREATE SCHEMA schema_name [ AUTHORIZATION owner_name ] [;]
 ### <a name="a-creating-a-schema-and-granting-permissions"></a>A. 스키마 만들기 및 사용 권한 부여  
  다음 예에서는 `Sprockets`가 소유하고 `Annik` 테이블을 포함하는 `NineProngs` 스키마를 만듭니다. 이 문에서는 `SELECT`에게 `Mandar` 권한을 부여하고 `SELECT`에게는 `Prasanna` 권한을 거부합니다. `Sprockets` 및 `NineProngs`는 단일 문으로 생성됩니다.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 CREATE SCHEMA Sprockets AUTHORIZATION Annik  
@@ -161,13 +162,13 @@ GO
 ### <a name="b-creating-a-schema-and-a-table-in-the-schema"></a>B. 스키마 및 스키마에 테이블 만들기  
  다음 예에서는 `Sales` 스키마를 만든 다음, 해당 스키마에 `Sales.Region` 테이블을 만듭니다.  
   
-```  
+```sql  
 CREATE SCHEMA Sales;  
 GO
   
 CREATE TABLE Sales.Region   
-(Region_id int NOT NULL,  
-Region_Name char(5) NOT NULL)  
+(Region_id INT NOT NULL,  
+Region_Name CHAR(5) NOT NULL)  
 WITH (DISTRIBUTION = REPLICATE);  
 GO  
 ```  
@@ -175,7 +176,7 @@ GO
 ### <a name="c-setting-the-owner-of-a-schema"></a>C. 스키마 소유자 설정  
  다음 예에서는 `Mary`가 소유한 `Production` 스키마를 만듭니다.  
   
-```  
+```sql  
 CREATE SCHEMA Production AUTHORIZATION [Contoso\Mary];  
 GO  
 ```  

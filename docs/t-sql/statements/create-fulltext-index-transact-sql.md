@@ -1,4 +1,5 @@
 ---
+description: CREATE FULLTEXT INDEX(Transact-SQL)
 title: CREATE FULLTEXT INDEX (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/05/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 8b80390f-5f8b-4e66-9bcc-cabd653c19fd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0b385e3c69156bf7be9d806fa73ece30b2433f3a
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: 134f2c83a7564ab8132d5078650aaac030a13a11
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86392901"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458779"
 ---
 # <a name="create-fulltext-index-transact-sql"></a>CREATE FULLTEXT INDEX(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -182,7 +183,7 @@ OFF
 > [!NOTE]  
 > public에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 기본 중지 목록에 대한 REFERENCE 권한이 부여됩니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-creating-a-unique-index-a-full-text-catalog-and-a-full-text-index"></a>A. 고유 인덱스, 전체 텍스트 카탈로그 및 전체 텍스트 인덱스 만들기  
  다음 예에서는 `JobCandidateID` 예제 데이터베이스의 `HumanResources.JobCandidate` 테이블에 있는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 열에 대해 고유 인덱스를 만듭니다. 그런 다음 기본 전체 텍스트 카탈로그 `ft`를 만듭니다. 마지막으로 `Resume` 카탈로그 및 시스템 중지 목록을 사용하여 `ft` 열에 대한 전체 텍스트 인덱스를 만듭니다.  

@@ -1,4 +1,5 @@
 ---
+description: SQL 최소 문법
 title: SQL 최소 문법 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4f36d785-104f-4fec-93be-f201203bc7c7
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 20eee34feadb8e3140f25019ec6b0d036ff02e14
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 07adcbb100fa28a941be4fdac6efabb445ffb9ca
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304994"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456566"
 ---
 # <a name="sql-minimum-grammar"></a>SQL 최소 문법
 이 섹션에서는 ODBC 드라이버가 지원 해야 하는 최소 SQL 구문에 대해 설명 합니다. 이 섹션에서 설명 하는 구문은 SQL-92의 항목 수준 구문 하위 집합입니다.  

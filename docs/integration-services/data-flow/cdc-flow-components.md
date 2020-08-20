@@ -1,4 +1,5 @@
 ---
+description: CDC 흐름 구성 요소
 title: CDC 흐름 구성 요소 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 5ae69ddf-27c3-467c-9af1-c89ec383f661
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0dc246a311a8c5488d78067adb6772bd0b399988
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 65836425e0f6cfa1533dfe28db8f8df483c74465
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915525"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457441"
 ---
 # <a name="cdc-flow-components"></a>CDC 흐름 구성 요소
 
@@ -32,7 +33,7 @@ ms.locfileid: "86915525"
   
  **CDC 제어 흐름 구성 요소**:  
   
- [CDC 제어 태스크](../../integration-services/control-flow/cdc-control-task.md)  
+ [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)  
   
  **CDC 데이터 흐름 구성 요소**:  
   
@@ -56,7 +57,7 @@ SSIS용 CDC 구성 요소는 지원되는 모든 버전의 Microsoft SQL Server�
 SSIS용 CDC 구성 요소는 다음 운영 체제 및 플랫폼에서 지원됩니다.  
   
 -   Windows 8 및 8.1
--   윈도우 10  
+-   Windows 10  
 -   Windows Server 2012 및 2012 R2
 -   Windows Server 2016
   
@@ -137,7 +138,7 @@ CDC 구성 요소를 설치한 후 SQL [!INCLUDE[ssBIDevStudio](../../includes/s
   
  CDC 상태 변수의 값은 영구 스토리지에서 유지 관리되어야 합니다. CDC 처리를 시작하기 전에 읽어야 하며 처리 완료 후 현재 상태로 저장되어야 합니다. CDC 상태를 로드 및 저장하는 태스크는 SSIS 개발자가 처리할 수 있지만 CDC 제어 구성 요소가 CDC 상태 값을 데이터베이스 테이블에서 유지 관리하여 이 태스크를 자동화할 수 있습니다.  
   
-## <a name="security-considerations"></a>보안 고려사항  
+## <a name="security-considerations"></a>보안 고려 사항  
  이 섹션에서는 SSIS에서 CDC 구성 요소 사용과 관련된 몇 가지 보안 고려 사항을 보여 줍니다.  
   
 ### <a name="access-authorization-to-change-data"></a>변경 데이터에 대한 액세스 권한 부여  
@@ -219,6 +220,6 @@ CDC 구성 요소를 설치한 후 SQL [!INCLUDE[ssBIDevStudio](../../includes/s
 -   technet.microsoft.com의 비디오, [CDC for Oracle Databases using SQL Server Integration Services 2012 (SQL Server Video)](https://technet.microsoft.com/sqlserver/jj218898)(SQL Server Integration Services 2012를 사용하는 Oracle 데이터베이스에 대한 CDC(SQL Server 비디오))  
   
 ## <a name="see-also"></a>참고 항목  
- [CDC 제어 태스크](../../integration-services/control-flow/cdc-control-task.md)  
+ [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: SQL Server 연결 CDC Service에 필요한 권한
 title: SQL Server 연결 CDC Service에 필요한 권한 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: d9e968f9-180c-4fa0-a849-98f2b1942330
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2332ccdc6e14734c6caed1e09b4dfa70b79e035d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 2d82481f723c03f72d7e6572c3ad64b7e3ccdb36
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86910966"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457641"
 ---
 # <a name="sql-server-connection-required-permissions-for-the-cdc-service"></a>SQL Server 연결 CDC Service에 필요한 권한
 

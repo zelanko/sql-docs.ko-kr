@@ -1,4 +1,5 @@
 ---
+description: ALTER MATERIALIZED VIEW(Transact-SQL)
 title: ALTER MATERIALIZED VIEW(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/03/2019
@@ -20,12 +21,12 @@ helpviewer_keywords:
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: c9c9ae639a3dce3e697eded9f55af3485118506c
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: bc7f7f07656f2dc187de013fcb56eada5a997b52
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395388"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458871"
 ---
 # <a name="alter-materialized-view-transact-sql"></a>ALTER MATERIALIZED VIEW(Transact-SQL)  
 
@@ -57,13 +58,13 @@ ALTER MATERIALIZED VIEW [ schema_name . ] view_name
 구체화된 뷰를 다시 시작합니다.
 
 *DISABLE*   
-메타데이터 및 사용 권한을 유지하면서 구체화된 뷰의 유지 관리를 일시 중단합니다.  사용 안 함 상태의 구체화된 뷰에 대한 모든 쿼리는 기본 테이블을 확인합니다.
+메타데이터 및 사용 권한을 유지하면서 구체화된 뷰의 유지 관리를 일시 중단합니다.사용 안 함 상태의 구체화된 뷰에 대한 모든 쿼리는 기본 테이블을 확인합니다.
   
 ## <a name="permissions"></a>사용 권한
 
 테이블이나 뷰에 대한 ALTER 권한이 필요합니다.
   
-## <a name="examples"></a>예
+## <a name="examples"></a>예제
 
 이 예제에서는 구체화된 뷰를 사용하지 않도록 설정하고 일시 중단 모드에 둡니다.
   

@@ -1,4 +1,5 @@
 ---
+description: 데이터베이스 유지 관리 계획 테이블(Transact-SQL)
 title: 데이터베이스 유지 관리 계획 테이블 (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: f264554c-5514-4df2-aadb-6dcdc2dfcfea
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4a561a2b6a00c87d213a08390ef3f12ab596d0c6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3c29bede925a84fda9d538c7f474ad6cebdf7c83
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85762620"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460394"
 ---
 # <a name="database-maintenance-plan-tables-transact-sql"></a>데이터베이스 유지 관리 계획 테이블(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

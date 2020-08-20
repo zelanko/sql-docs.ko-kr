@@ -1,4 +1,5 @@
 ---
+description: 계층 멤버 권한 할당(Master Data Services)
 title: 계층 멤버 권한 할당
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e1b8b46a-7cd1-4a7d-9345-dd7df081e145
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 02b84362699375c82b4e7eead7ad632c03a76c87
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 6201fa319ef3f0ae35f1fecd0643954ab814b085
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812470"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456785"
 ---
 # <a name="assign-hierarchy-member-permissions-master-data-services"></a>계층 멤버 권한 할당(Master Data Services)
 
@@ -28,7 +29,7 @@ ms.locfileid: "85812470"
   
  계층 멤버 권한은 선택 사항으로서 필수 모델 개체 사용 권한을 보다 세부적으로 지정합니다.  
   
-## <a name="prerequisites"></a>전제 조건  
+## <a name="prerequisites"></a>사전 요구 사항  
  이 절차를 수행하려면  
   
 -   **사용자 및 그룹 권한** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  
@@ -57,13 +58,13 @@ ms.locfileid: "85812470"
   
 10. 메뉴에서 **만들기**, **읽기, 업데이트** 및 **삭제** 권한의 조합을 선택하거나 사용 권한을 **거부** 합니다.  
   
-11. **Save**을 클릭합니다.  
+11. **저장**을 클릭합니다.  
   
     > [!NOTE]  
     >  계층 멤버 권한은 즉시 적용되지 않습니다. 자세한 내용은 [멤버 권한 즉시 적용&#40;Master Data Services&#41;](../master-data-services/immediately-apply-member-permissions-master-data-services.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [MDS(Master Data Services)&#41;&#40;계층 멤버 권한 삭제](../master-data-services/delete-hierarchy-member-permissions-master-data-services.md)   
+ [MDS(Master Data Services)&#41;&#40;계층 멤버 권한 삭제 ](../master-data-services/delete-hierarchy-member-permissions-master-data-services.md)   
  [모델 개체 사용 권한 할당 &#40;MDS(Master Data Services)&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)   
  [계층 멤버 권한&#40;Master Data Services&#41;](../master-data-services/hierarchy-member-permissions-master-data-services.md)  
   

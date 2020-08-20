@@ -1,4 +1,5 @@
 ---
+description: 프로그래밍 방식으로 데이터 흐름 구성 요소 추가
 title: 프로그래밍 방식으로 데이터 흐름 구성 요소 추가 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: c06065cf-43e5-4b6b-9824-7309d7f5e35e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9a293e7d3151341753cdf1228f7a3d6958a8e3b3
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: e0c43fc088fbf6ed8f95fdd418b50dc93563b662
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917259"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457885"
 ---
 # <a name="adding-data-flow-components-programmatically"></a>프로그래밍 방식으로 데이터 흐름 구성 요소 추가
 

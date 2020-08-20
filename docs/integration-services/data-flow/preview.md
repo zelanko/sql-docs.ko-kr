@@ -1,4 +1,5 @@
 ---
+description: 미리 보기
 title: 미리 보기 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 551494c4-9e27-4592-9200-c6bf19e80c9a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: fa7874b999ac36ba4aef18f8d5f12738eaa4872f
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d6d3404eecd7c1a054f82442263802784c35c4d2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916077"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457301"
 ---
 # <a name="preview"></a>미리 보기 
 

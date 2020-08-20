@@ -1,4 +1,5 @@
 ---
+description: 프로그래밍 방식으로 입력 열 선택
 title: 프로그래밍 방식으로 입력 열 선택 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: b53b110a-dcf4-4464-ae98-81e892ab74c3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3b3ca6d61a853d9dbe76dba44f8d0e790cd37954
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: fec6d63405ab439a27d6b25ca85f2efcd974d38d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922689"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457780"
 ---
 # <a name="selecting-input-columns-programmatically"></a>프로그래밍 방식으로 입력 열 선택
 

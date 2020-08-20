@@ -1,4 +1,5 @@
 ---
+description: 데이터 흐름에서 구성 요소 추가 또는 삭제
 title: 데이터 흐름에서 구성 요소 추가 또는 삭제 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d99124f9-0994-4f40-a48e-fdca6a4383e7
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 93353b31ff84d1fc48c88c4fdaec1c105d0d5e44
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 38ca8342ac6cbdab99c3314b49cac4c28408fee3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923239"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457498"
 ---
 # <a name="add-or-delete-a-component-in-a-data-flow"></a>데이터 흐름에서 구성 요소 추가 또는 삭제
 

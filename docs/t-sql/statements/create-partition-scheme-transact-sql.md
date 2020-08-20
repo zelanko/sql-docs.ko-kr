@@ -1,4 +1,5 @@
 ---
+description: CREATE PARTITION SCHEME(Transact-SQL)
 title: CREATE PARTITION SCHEME(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/10/2017
@@ -28,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: 5b21c53a-b4f4-4988-89a2-801f512126e4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b13706909d12d4fb27e981008aeca9e0b3e8ac2a
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: dd662f06ceff6ac917e8c56b830f7dd1241084fb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86392981"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458815"
 ---
 # <a name="create-partition-scheme-transact-sql"></a>CREATE PARTITION SCHEME(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -69,7 +70,7 @@ AS PARTITION partition_function_name
  *file_group_name* |  **[** PRIMARY **]** [ **,** _...n_]  
  *partition_function_name*에 지정된 파티션을 보유할 파일 그룹의 이름을 지정합니다. *file_group_name*은 데이터베이스에 이미 있어야 합니다.  
   
- **[** PRIMARY **]** 를 지정하면 파티션은 주 파일 그룹에 저장됩니다. ALL을 지정하면 하나의 *file_group_name*만 지정할 수 있습니다. [ **,** _...n_]에 나열된 파일 그룹의 순서대로 1번 파티션부터 시작하여 파티션을 파일 그룹에 할당합니다. [ *,* **...n**]에서 같은 _file_group_name_을 두 번 이상 지정할 수 있습니다. *n*이 *partition_function_name*에서 지정된 만큼의 파티션 수를 보유하기에 부족한 경우 CREATE PARTITION SCHEME은 오류가 발생하고 실패합니다.  
+ **[** PRIMARY **]** 를 지정하면 파티션은 주 파일 그룹에 저장됩니다. ALL을 지정하면 하나의 *file_group_name*만 지정할 수 있습니다. [ **,** _...n_]에 나열된 파일 그룹의 순서대로 1번 파티션부터 시작하여 파티션을 파일 그룹에 할당합니다. [ **,** _...n_]에서 같은 *file_group_name*을 두 번 이상 지정할 수 있습니다. *n*이 *partition_function_name*에서 지정된 만큼의 파티션 수를 보유하기에 부족한 경우 CREATE PARTITION SCHEME은 오류가 발생하고 실패합니다.  
   
  *partition_function_name*이 파일 그룹보다 적은 파티션을 생성한 경우 할당되지 않은 첫 번째 파일 그룹이 NEXT USED로 표시되고 정보 메시지가 NEXT USED 파일 그룹에 표시됩니다. ALL을 지정하면 하나의 *file_group_name*만이 해당 *partition_function_name*의 NEXT USED 속성을 유지합니다. ALTER PARTITION FUNCTION 문에서 파티션을 생성한 경우 NEXT USED 파일 그룹이 추가 파티션을 받습니다. 할당되지 않은 파일 그룹을 추가로 만들어 새 파티션을 보유하려면 ALTER PARTITION SCHEME을 사용하십시오.  
   
@@ -86,7 +87,7 @@ AS PARTITION partition_function_name
   
 -   파티션 구성표가 생성된 데이터베이스의 서버에 대한 CONTROL SERVER 또는 ALTER ANY DATABASE 권한  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-creating-a-partition-scheme-that-maps-each-partition-to-a-different-filegroup"></a>A. 각 파티션을 다른 파일 그룹에 매핑하는 파티션 구성표 만들기  
  다음 예에서는 테이블이나 인덱스를 4개의 파티션으로 분할하는 파티션 함수를 만듭니다. 4개의 파티션 각각을 보유하도록 파일 그룹을 지정하는 파티션 구성표를 만듭니다. 이 예에서는 데이터베이스에 이미 파일 그룹이 있다고 가정합니다.  
@@ -100,7 +101,7 @@ AS PARTITION myRangePF1
 TO (test1fg, test2fg, test3fg, test4fg);  
 ```  
   
- `myRangePF1`col1**분할 열에** 파티션 함수를 사용하는 테이블의 파티션은 다음 표와 같이 할당됩니다.  
+ **col1** 분할 열에 `myRangePF1` 파티션 함수를 사용하는 테이블의 파티션은 다음 표와 같이 할당됩니다.  
   
 ||||||  
 |-|-|-|-|-|  
@@ -120,7 +121,7 @@ AS PARTITION myRangePF2
 TO ( test1fg, test1fg, test1fg, test2fg );  
 ```  
   
- `myRangePF2`col1**분할 열에** 파티션 함수를 사용하는 테이블의 파티션은 다음 표와 같이 할당됩니다.  
+ **col1** 분할 열에 `myRangePF2` 파티션 함수를 사용하는 테이블의 파티션은 다음 표와 같이 할당됩니다.  
   
 ||||||  
 |-|-|-|-|-|  

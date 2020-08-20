@@ -1,4 +1,5 @@
 ---
+description: SQLBindParam 매핑
 title: Sqlbindparam 함수와 매핑 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 375f8f24-36de-4946-916e-c75abc6f070d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c1df595722297c91dc75398470912188e109e278
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f998fd30716e479cb4dd0650af53c5a24483f2f5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305443"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456464"
 ---
 # <a name="sqlbindparam-mapping"></a>SQLBindParam 매핑
 **Sqlbindparam 함수와** 는 ODBC에 없기 때문에 실제로는 사용 되지 않는 것으로 호출할 수 없습니다. 그러나 여전히 중복 된 기능을 나타냅니다. ISO 및 오픈 그룹 규격 응용 프로그램에서이 기능을 사용 하기 때문에 드라이버 관리자가 내보내야 합니다. **SQLBindParameter** 에는 **sqlbindparam 함수와**의 모든 기능이 포함 되어 있기 때문에 **sqlbindparam 함수와** 는 **SQLBindParameter** 의 맨 위에 매핑됩니다 (기본 *드라이버가 ODBC 3.x* 드라이버 인 경우). ODBC 3.x 드라이버는 **sqlbindparam 함수와**를 구현할 필요가 *없습니다.*  

@@ -1,4 +1,5 @@
 ---
+description: 연결 핸들 ODBC 할당
 title: ODBC 연결 핸들을 할당 하는 중 Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,17 +19,17 @@ helpviewer_keywords:
 ms.assetid: c99a8159-7693-4f97-8dcf-401336550e77
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 12e9f65ee81612e269c1f86ebabd049588443cb8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c6c17003ed3746f2953eb167f2dc3d944659e352
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81288523"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456439"
 ---
 # <a name="allocating-a-connection-handle-odbc"></a>연결 핸들 ODBC 할당
 응용 프로그램은 데이터 원본 또는 드라이버에 연결 하기 전에 다음과 같이 연결 핸들을 할당 해야 합니다.  
   
-1.  응용 프로그램은 SQLHDBC 형식의 변수를 선언 합니다. 그런 다음 **SQLAllocHandle** 를 호출 하 고이 변수의 주소, 연결을 할당할 환경의 핸들 및 SQL_HANDLE_DBC 옵션을 전달 합니다. 예를 들면 다음과 같습니다.  
+1.  응용 프로그램은 SQLHDBC 형식의 변수를 선언 합니다. 그런 다음 **SQLAllocHandle** 를 호출 하 고이 변수의 주소, 연결을 할당할 환경의 핸들 및 SQL_HANDLE_DBC 옵션을 전달 합니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.  
   
     ```  
     SQLHDBC hdbc1;  

@@ -1,4 +1,5 @@
 ---
+description: 날짜/시간 데이터 형식
 title: Datetime 데이터 형식 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 6b9363c9-04bf-4492-a210-7aa15dea4af8
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 10626c4f0bf2e33c70322a0eb49af6c3e01e4303
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a908ab61741ad46ec00a341552a15db44cd5b603
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307064"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456630"
 ---
 # <a name="datetime-data-types"></a>날짜/시간 데이터 형식
 *ODBC 3.x에서는 date*, time 및 timestamp SQL 데이터 형식에 대 한 식별자가 SQL_DATE, SQL_TIME 및 SQL_TIMESTAMP (헤더 파일의 **#define** 인스턴스를 사용 하 여 9, 10 및 11)에서 SQL_TYPE_DATE, SQL_TYPE_TIME 및 SQL_TYPE_TIMESTAMP (91, 92 및 93의 헤더 파일의 **#define** 인스턴스 사용)로 변경 되었습니다. 해당 C 형식 식별자가 SQL_C_DATE, SQL_C_TIME 및 SQL_C_TIMESTAMP에서 각각 SQL_C_TYPE_DATE, SQL_C_TYPE_TIME 및 SQL_C_TYPE_TIMESTAMP으로 변경 되었으며 그에 따라 **#define** 인스턴스가 변경 되었습니다.  

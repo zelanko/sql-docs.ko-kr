@@ -1,4 +1,5 @@
 ---
+description: CDC Designer 콘솔 소개
 title: CDC Designer 콘솔 소개 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 45298179-4ac1-4723-8b3c-56f5926be40a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a00271fd569f65b0adb94bba4d035d4fc3f3849f
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b956269df3d887800587d80fbcd0e5a1699dcca3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921286"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457595"
 ---
 # <a name="the-cdc-designer-console-introduction"></a>CDC Designer 콘솔 소개
 
@@ -33,7 +34,7 @@ ms.locfileid: "86921286"
  CDC Designer 콘솔은 다음과 같은 Windows 환경에서 실행될 수 있습니다.  
   
 -   Windows 8 및 8.1  
--   윈도우 10  
+-   Windows 10  
 -   Windows Server 2012 및 2012 R2
 -   Windows Server 2016
 

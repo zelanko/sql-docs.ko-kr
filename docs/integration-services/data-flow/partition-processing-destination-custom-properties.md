@@ -1,4 +1,5 @@
 ---
+description: 파티션 처리 대상 사용자 지정 속성
 title: 파티션 처리 대상 사용자 지정 속성 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 3eac4413-0c90-4b06-8f7e-d0d72f4d869d
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e9bd6dff6e35b4fa78d69dc1c6703ca6a098f6c5
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 87f70b54a0f43252bd6ebc2f28b32371715760cd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920416"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457340"
 ---
 # <a name="partition-processing-destination-custom-properties"></a>파티션 처리 대상 사용자 지정 속성
 
@@ -44,7 +45,7 @@ ms.locfileid: "86920416"
   
  자세한 내용은 [Partition Processing Destination](../../integration-services/data-flow/partition-processing-destination.md)을 참조하세요.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
   

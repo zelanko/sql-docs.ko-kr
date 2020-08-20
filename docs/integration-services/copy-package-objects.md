@@ -1,4 +1,5 @@
 ---
+description: 패키지 개체 복사
 title: 패키지 개체 복사 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 99b85e5c-d6bd-4e7c-afe4-51f6ce151c2f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7cab8f7b6d3214a3ab49eb6fe062b4235954aa87
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: eedc9c3758764840afbbeefd765cf0caa52f5e2d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923259"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457539"
 ---
 # <a name="copy-package-objects"></a>패키지 개체 복사
 

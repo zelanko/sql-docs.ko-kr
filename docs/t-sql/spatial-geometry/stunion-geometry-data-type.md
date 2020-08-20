@@ -1,4 +1,5 @@
 ---
+description: STUnion(geometry 데이터 형식)
 title: STUnion(geometry 데이터 형식) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5b168118-137d-402f-9173-fee3f365a89c
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: ad2ad92952a3848982c9cf8873f70217db654ee8
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 857428b0dee48336ae41f22e79c82a02f2f7b241
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554925"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458925"
 ---
 # <a name="stunion-geometry-data-type"></a>STUnion(geometry 데이터 형식)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -50,7 +51,7 @@ ms.locfileid: "86554925"
 ## <a name="remarks"></a>설명  
  이 메서드는 **geometry** 인스턴스의 SRID(spatial Reference ID)가 일치하지 않으면 항상 Null을 반환합니다. 입력 인스턴스에 원호 세그먼트가 있을 경우에만 결과에 원호 세그먼트가 포함될 수 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-computing-the-union-of-two-polygon-instances"></a>A. 두 Polygon 인스턴스의 통합 계산  
  다음 예에서는 `STUnion()`을 사용하여 두 `Polygon` 인스턴스의 통합을 컴퓨팅합니다.  

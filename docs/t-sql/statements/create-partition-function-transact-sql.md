@@ -1,4 +1,5 @@
 ---
+description: CREATE PARTITION FUNCTION(Transact-SQL)
 title: CREATE PARTITION FUNCTION(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/19/2018
@@ -27,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: 9dfe8b76-721e-42fd-81ae-14e22258c4f2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 55269acfdb6f739c398a8f71712d34d7cb62f816
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: 73e9ea60c35fd82d6927901e719aedb2e1745d34
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86392701"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458760"
 ---
 # <a name="create-partition-function-transact-sql"></a>CREATE PARTITION FUNCTION(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -57,7 +58,7 @@ FOR VALUES ( [ boundary_value [ ,...n ] ] )
  파티션 함수의 이름입니다. 파티션 함수의 이름은 데이터베이스 내에서 고유해야 하며 [식별자](../../relational-databases/databases/database-identifiers.md)에 대한 규칙을 따라야 합니다.  
   
  *input_parameter_type*  
- 분할에 사용되는 열의 데이터 형식입니다. **text**, **ntext**, **image**, **xml**, **timestamp**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** , 별칭 데이터 형식 또는 CLR 사용자 정의 데이터 형식을 제외한 모든 데이터 형식은 분할 열로 사용할 수 있습니다.  
+ 분할에 사용되는 열의 데이터 형식입니다. **text**, **ntext**, **image**, **xml**, **timestamp**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, 별칭 데이터 형식 또는 CLR 사용자 정의 데이터 형식을 제외한 모든 데이터 형식은 분할 열로 사용할 수 있습니다.  
   
  분할 열이라고 하는 실제 열은 CREATE TABLE 또는 CREATE INDEX 문에 지정됩니다.  
   
@@ -75,7 +76,7 @@ FOR VALUES ( [ boundary_value [ ,...n ] ] )
  *boundary_value*에 제공된 값 개수가 14,999개를 초과하지 않도록 지정합니다. 생성되는 파티션 수는 *n* + 1개입니다. 값은 순서대로 나열되지 않아도 됩니다. 값이 순서대로 나열되지 않은 경우 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 값을 정렬하여 함수를 만들고 값이 순서대로 제공되지 않았다는 경고를 반환합니다. *n*에 중복 값이 있는 경우 데이터베이스 엔진에서 오류를 반환합니다.  
   
  **LEFT** | RIGHT  
- *에서 간격 값을 왼쪽에서 오른쪽으로 오름차순으로 정렬할 때* boundary_value **[** ,  ...n[!INCLUDE[ssDE](../../includes/ssde-md.md)] ]이 각 경계 값 간격의 왼쪽과 오른쪽 중 어느 쪽에 속하는지 지정합니다. 지정하지 않은 경우 LEFT가 기본값입니다.  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 간격 값을 왼쪽에서 오른쪽으로 오름차순으로 정렬할 때 *boundary_value* [ **,** _...n_ ]이 각 경계 값 간격의 왼쪽과 오른쪽 중 어느 쪽에 속하는지 지정합니다. 지정하지 않은 경우 LEFT가 기본값입니다.  
   
 ## <a name="remarks"></a>설명  
  파티션 함수의 범위는 함수가 생성된 데이터베이스로 제한됩니다. 해당 데이터베이스 내에서 파티션 함수는 다른 함수와 서로 다른 네임스페이스에 있습니다.  

@@ -1,4 +1,5 @@
 ---
+description: SQL Server Data Tools에서 패키지 만들기
 title: SQL Server Data Tools에서 패키지 만들기 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bb3c085b-1458-49fa-8348-6a76b6e97ea6
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8366969291ce3c8e970986376d7f3938fdb174b1
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 521bc0dd4a454472586c18f108a42e4393498323
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923249"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457568"
 ---
 # <a name="create-packages-in-sql-server-data-tools"></a>SQL Server Data Tools에서 패키지 만들기
 

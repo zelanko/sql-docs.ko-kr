@@ -1,4 +1,5 @@
 ---
+description: 문자열 데이터 비교
 title: 문자열 데이터 비교 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 93aeb5bd-e208-46b7-8979-dea2dcd37d4c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 76f3cdcde9b84b5e1bed3c421045f1a38742f1c6
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 7aa3d507527ea18e9d9296ee9b9cd10989932d5a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920032"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457387"
 ---
 # <a name="comparing-string-data"></a>문자열 데이터 비교
 
@@ -87,6 +88,6 @@ ms.locfileid: "86920032"
 ## <a name="see-also"></a>참고 항목  
  [Integration Services 데이터 형식](../../integration-services/data-flow/integration-services-data-types.md)   
  [빠른 구문 분석](https://msdn.microsoft.com/library/6688707d-3c5b-404e-aa2f-e13092ac8d95)   
- [표준 구문 분석](https://msdn.microsoft.com/library/dfe835b1-ea52-4e18-a23a-5188c5b6f013)  
+ [Standard Parse](https://msdn.microsoft.com/library/dfe835b1-ea52-4e18-a23a-5188c5b6f013)  
   
   

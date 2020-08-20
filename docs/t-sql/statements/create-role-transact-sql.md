@@ -1,4 +1,5 @@
 ---
+description: CREATE ROLE(Transact-SQL)
 title: CREATE ROLE(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/10/2017
@@ -27,12 +28,12 @@ ms.assetid: b0cd54ad-e81d-4d71-acec-8a6d7261ca08
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 234fe7a9d26c91bc5b390997f56c9dcb050561aa
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: e0ca6f481b84cfd1453359e3b77d47bb5a6b52b5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86392861"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458803"
 ---
 # <a name="create-role-transact-sql"></a>CREATE ROLE(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -75,7 +76,7 @@ CREATE ROLE role_name [ AUTHORIZATION owner_name ]
   
 -   애플리케이션 역할에 역할의 소유권을 할당하려면 애플리케이션 역할에 대한 ALTER 권한이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
 다음 예에서는 모두 AdventureWorks 데이터베이스를 사용합니다.   
 
 ### <a name="a-creating-a-database-role-that-is-owned-by-a-database-user"></a>A. 데이터베이스 사용자가 소유하는 데이터베이스 역할 만들기  

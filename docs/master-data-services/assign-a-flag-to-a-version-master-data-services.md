@@ -1,4 +1,5 @@
 ---
+description: 버전에 플래그 할당(Master Data Services)
 title: 버전에 플래그 할당
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6629ec7e-32e7-4a1e-8b31-eb43c5923766
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 90ffe973c15df9d17eb1080f0e6b681791485681
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: add695750bb5caae36f5c5e6cf0d605709976730
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85814034"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456799"
 ---
 # <a name="assign-a-flag-to-a-version-master-data-services"></a>버전에 플래그 할당(Master Data Services)
 
@@ -29,7 +30,7 @@ ms.locfileid: "85814034"
 > [!NOTE]  
 >  버전 플래그는 한 번에 한 버전에만 할당할 수 있습니다. 다른 버전에 이미 할당되어 있는 플래그를 할당하는 경우에는 플래그가 선택한 버전으로 이동됩니다.  
   
-## <a name="prerequisites"></a>전제 조건  
+## <a name="prerequisites"></a>사전 요구 사항  
  이 절차를 수행하려면  
   
 -   **버전 관리** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  

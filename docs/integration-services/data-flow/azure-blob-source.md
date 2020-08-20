@@ -1,4 +1,5 @@
 ---
+description: Azure Blob 원본
 title: Azure Blob 원본 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/20/2018
@@ -13,12 +14,12 @@ f1_keywords:
 ms.assetid: 80645c5c-88c8-4fb0-8607-de1bb7bffcbb
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 253f08e1d9a06c5aaba41c9612c2f537a2e109d2
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ce39fed32923ae46bd499c32d5b58660db5dcd8b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922787"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457485"
 ---
 # <a name="azure-blob-source"></a>Azure Blob 원본
 

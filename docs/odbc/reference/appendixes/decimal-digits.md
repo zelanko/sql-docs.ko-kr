@@ -1,4 +1,5 @@
 ---
+description: 십진수
 title: 10 진수 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 07f3d1fc-b4ee-4693-b342-330b2231b6d0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4921a6162b6d711e657f223b5be5783dfa37bca8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0c56d0d4cdd4c40c2174085d80618bbcc58af14e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81285163"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456620"
 ---
 # <a name="decimal-digits"></a>십진수
 Decimal 및 numeric 데이터 형식의 *10* 진수는 소수점 오른쪽의 최대 자릿수 또는 데이터의 소수 자릿수로 정의 됩니다. 근사 부동 소수점 수 열 또는 매개 변수의 경우 소수점 오른쪽의 자릿수가 고정 되어 있지 않으므로 소수 자릿수가 정의 되지 않습니다. 초 구성 요소를 포함 하는 날짜/시간 또는 간격 데이터의 경우 10 진수는 데이터의 초 구성 요소에서 소수점 오른쪽의 자릿수를 지정 합니다.  

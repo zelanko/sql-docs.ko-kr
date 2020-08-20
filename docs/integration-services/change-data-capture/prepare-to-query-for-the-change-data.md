@@ -1,4 +1,5 @@
 ---
+description: 변경 데이터에 대한 쿼리 준비
 title: 변경 데이터에 대한 쿼리 준비 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9ea2db7a-3dca-4bbf-9903-cccd2d494b5f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f2ab217d81620b28ced334842dcff3643f686a98
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b0b2f12bf0ad4b5166e7a206b30264782992f144
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921757"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457695"
 ---
 # <a name="prepare-to-query-for-the-change-data"></a>변경 데이터에 대한 쿼리 준비
 

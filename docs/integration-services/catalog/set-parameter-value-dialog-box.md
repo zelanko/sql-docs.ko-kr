@@ -1,4 +1,5 @@
 ---
+description: 매개 변수 값 설정 대화 상자
 title: 매개 변수 값 설정 대화 상자 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ce9c2201-4e9a-4495-948f-b68deeaa7955
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a157124ed1167ecafa977de573cfdca8d275281f
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f75e25778f7a38f0f096a0929286be2a3fd8ba26
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922588"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457763"
 ---
 # <a name="set-parameter-value-dialog-box"></a>매개 변수 값 설정 대화 상자
 
@@ -46,7 +47,7 @@ ms.locfileid: "86922588"
  **매개 변수**  
  매개 변수 이름을 나열합니다.  
   
- **형식**  
+ **유형**  
  매개 변수 값의 데이터 형식을 나열합니다.  
   
  **설명**  

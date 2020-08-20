@@ -1,4 +1,5 @@
 ---
+description: 기능 영역 권한 할당(Master Data Services)
 title: 기능 영역 권한 할당
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: af6fe2f3-37d0-4413-ab27-b3a0fb95eb50
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 0f7e4e7bc0118849f452d4bccbb7d07706a4c411
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: fe973a6b5c67a9550a9c7cf687c4be0060be9da4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812799"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456809"
 ---
 # <a name="assign-functional-area-permissions-master-data-services"></a>기능 영역 권한 할당(Master Data Services)
 
@@ -26,7 +27,7 @@ ms.locfileid: "85812799"
 
   기능 영역 권한을 할당하여 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]의 기능 영역에 대한 액세스 권한을 사용자나 그룹에 부여합니다.  
   
-## <a name="prerequisites"></a>전제 조건  
+## <a name="prerequisites"></a>사전 요구 사항  
  이 절차를 수행하려면  
   
 -   **사용자 및 그룹 권한** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  

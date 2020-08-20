@@ -1,4 +1,5 @@
 ---
+description: 특성 값 요구(Master Data Services)
 title: 특성 값 요구
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a360ef13-0c34-43b8-a87e-2f5d8732d30e
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: dea2c4f9392cbc70d73d1eb383e7e0e2d306a1d3
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 74893d2d64a6de182206313a3d227c3a7db2f1de
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811893"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456759"
 ---
 # <a name="require-attribute-values-master-data-services"></a>특성 값 요구(Master Data Services)
 
@@ -29,7 +30,7 @@ ms.locfileid: "85811893"
 > [!NOTE]  
 >  도메인 기반 특성 값이 없는 멤버는 이러한 관계를 기반으로 하는 파생 계층에 표시되지 않습니다.  
   
-## <a name="prerequisites"></a>전제 조건  
+## <a name="prerequisites"></a>사전 요구 사항  
  이 절차를 수행하려면  
   
 -   **시스템 관리** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  
@@ -60,9 +61,9 @@ ms.locfileid: "85811893"
   
 11. **특성** 드롭다운 목록에서 특성을 선택합니다.  
   
-12. **Save**을 클릭합니다. 새 행이 **Then** 표에 추가됩니다.  
+12. **저장**을 클릭합니다. 새 행이 **Then** 표에 추가됩니다.  
   
-13. **Save**을 클릭합니다.  
+13. **저장**을 클릭합니다.  
   
 14. **모두 게시**를 클릭합니다.  
   

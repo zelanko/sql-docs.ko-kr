@@ -1,4 +1,5 @@
 ---
+description: 커서 유형
 title: 커서 유형 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,11 +17,12 @@ ms.assetid: 3a916cc7-f352-42cb-8b83-f78e06cef991
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 030a793b949c0e3b94cbee2b35a24bde46dfee2f
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: a7459f8a312cbfbb960d6cfdf87e64d5b8015429
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000637"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460805"
 ---
 # <a name="cursor-types"></a>커서 유형
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -38,6 +40,6 @@ ms.locfileid: "86000637"
 -   동적 커서는 정적 커서의 반대 개념입니다. 동적 커서는 행의 모든 변경 내용을 결과 집합에 반영합니다. 따라서 인출할 때마다 결과 집합에서 행의 데이터 값, 순서 및 멤버 자격이 변경될 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [ODBC&#41;&#40;커서 사용](../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)  
+ [ODBC&#41;&#40;커서 사용 ](../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)  
   
   

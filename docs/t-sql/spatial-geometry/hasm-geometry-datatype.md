@@ -1,4 +1,5 @@
 ---
+description: HasM(geometry 데이터 형식)
 title: HasM(geometry 데이터 형식) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/05/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 15540837-c4bf-4d18-b380-13ae31f3226f
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 0a9b2b7cfd94dbca4b2bfeb5d4abee8719b4cd4d
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: fa0f82d9ee71c8fb5174a4ee4d48c706315f97e0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86552863"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458982"
 ---
 # <a name="hasm-geometry-datatype"></a>HasM(geometry 데이터 형식)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -42,7 +43,7 @@ ms.locfileid: "86552863"
   
 ## <a name="remarks"></a>설명  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ```sql  
 DECLARE @p GEOMETRY = 'Point(1 1 1 1)'  

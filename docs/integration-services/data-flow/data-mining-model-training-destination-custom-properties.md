@@ -1,4 +1,5 @@
 ---
+description: 데이터 마이닝 모델 학습 대상 사용자 지정 속성
 title: 데이터 마이닝 모델 학습 대상 사용자 지정 속성 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: f0a70216-fdac-44ae-af29-35f65626217c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2ffa0b82f393172f92b17e7bbe78302372c9b8ca
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 6427b808d31c9b1938b093da2bdf14d59bec90cc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916797"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457367"
 ---
 # <a name="data-mining-model-training-destination-custom-properties"></a>데이터 마이닝 모델 학습 대상 사용자 지정 속성
 
@@ -36,7 +37,7 @@ ms.locfileid: "86916797"
   
  자세한 내용은 [Data Mining Model Training Destination](../../integration-services/data-flow/data-mining-model-training-destination.md)을 참조하세요.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
   

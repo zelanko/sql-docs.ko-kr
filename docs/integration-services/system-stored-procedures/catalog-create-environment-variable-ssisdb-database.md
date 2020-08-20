@@ -1,4 +1,5 @@
 ---
+description: catalog.create_environment_variable(SSISDB 데이터베이스)
 title: catalog.create_environment_variable(SSISDB 데이터베이스) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 91ed017b-6567-4bf2-b9f1-e2b5c70a5343
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3875650317c76b0b54608272eef0c56a7e11987d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 367f16f137bdb09de610ce8b0b8a2ab125ce25ad
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921395"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456975"
 ---
 # <a name="catalogcreate_environment_variable-ssisdb-database"></a>catalog.create_environment_variable(SSISDB 데이터베이스)
 
@@ -49,7 +50,7 @@ catalog.create_environment_variable [ @folder_name = ] folder_name
  환경 변수의 이름입니다. *variable_name*은 **nvarchar(128)** 입니다.  
   
  [@data_type =] *data_type*  
- 변수의 데이터 형식입니다. 지원되는 환경 변수 데이터 형식은 **Boolean**, **Byte**, **DateTime**, **Double**, **Int16**, **Int32**, **Int64**, **Single**, **String**, **UInt32** 및  **UInt64**입니다. 지원되지 않는 환경 변수 데이터 형식은 **Char**, **DBNull**, **Object** 및 **Sbyte**입니다. *data_type* 매개 변수의 데이터 형식은 **nvarchar(128)** 입니다.  
+ 변수의 데이터 형식입니다. 지원되는 환경 변수 데이터 형식은 **Boolean**, **Byte**, **DateTime**, **Double**, **Int16**, **Int32**, **Int64**, **Single**, **String**, **UInt32** 및 ** UInt64**입니다. 지원되지 않는 환경 변수 데이터 형식은 **Char**, **DBNull**, **Object** 및 **Sbyte**입니다. *data_type* 매개 변수의 데이터 형식은 **nvarchar(128)** 입니다.  
   
  [@sensitive =] *sensitive*  
  변수에 중요한 값이 포함되었는지 여부를 나타냅니다. 환경 변수 값이 중요함을 나타내려면 값 `1`을 사용하고, 그렇지 않음을 나타내려면 값 `0`을 사용합니다. 중요한 값은 저장될 때 암호화되고, 중요하지 않은 값은 일반 텍스트로 저장됩니다. *sensitive*는 **bit**입니다.  
@@ -99,11 +100,11 @@ catalog.create_environment_variable [ @folder_name = ] folder_name
 |**Boolean**|**bit**|  
 |**Byte**|**binary**, **varbinary**|  
 |**DateTime**|**datetime**, **datetime2**, **datetimeoffset**, **smalldatetime**|  
-|**Double**|정밀 숫자: **decimal**, **numeric**, 근사 숫자: **float**, **real**|  
+|**double**|정밀 숫자: **decimal**, **numeric**, 근사 숫자: **float**, **real**|  
 |**Int16**|**smallint**|  
 |**Int32**|**int**|  
 |**Int64**|**bigint**|  
-|**단일**|정밀 숫자: **decimal**, **numeric**, 근사 숫자: **float**, **real**|  
+|**Single**|정밀 숫자: **decimal**, **numeric**, 근사 숫자: **float**, **real**|  
 |**String**|**varchar**, **nvarchar**, **char**|  
 |**UInt32**|**int**(**int**는 **Uint32**에 사용할 수 있는 가장 가까운 매핑입니다.)|  
 |**UInt64**|**bigint**(**int**는 **Uint64**에 사용할 수 있는 가장 가까운 매핑입니다.)|  

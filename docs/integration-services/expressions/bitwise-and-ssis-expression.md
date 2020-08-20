@@ -1,4 +1,5 @@
 ---
+description: '&amp; (비트 AND)(SSIS 식)'
 title: '&amp; (비트 AND)(SSIS 식) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
@@ -14,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: 06d2958e-66a5-44d8-8bc4-56209ebe1ff2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0efbf3b36ad21e7800533069e4fafefaa0b77900
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c4cb70565c38518c76a614e32a3aad55c939e4a2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923527"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457305"
 ---
 # <a name="amp-bitwise-and-ssis-expression"></a>&amp; (비트 AND)(SSIS 식)
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-  두 정수 값의 비트 AND 연산을 수행합니다. 그런 후 첫 번째 피연산자의 각 비트를 두 번째 피연산자의 해당 비트와 비교합니다. 두 비트가 모두 1이면 해당 결과 비트가 1로 설정되고, 그렇지 않으면 해당 결과 비트가 0으로 설정됩니다.  
+  두 정수 값의 비트 AND 연산을 수행합니다. 그런 후 첫 번째 피연산자의 각 비트를 두 번째 피연산자의 해당 비트와 비교합니다. 양쪽 비트가 모두 1이면 해당 결과 비트는 1로 설정됩니다. 그렇지 않으면 해당 결과 비트는 0으로 설정됩니다.  
   
  두 조건이 모두 부호 있는 정수 유형이거나 또는 부호 없는 정수 유형이어야 합니다.  
   

@@ -1,4 +1,5 @@
 ---
+description: Cluster(DMX)
 title: 클러스터 (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 0cd7b2e0a78f2d47349de2701572b2f9dc4b0095
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: e0722e53752cfa01ffee086cb8cf1f6a84f82fd4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86969927"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457858"
 ---
 # <a name="cluster-dmx"></a>Cluster(DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -38,7 +39,7 @@ Cluster()
 ## <a name="remarks"></a>설명  
  **클러스터** 를 `<` `>` **PredictHistogram** 함수에 대 한 클러스터 열 참조로 사용할 수도 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 [PredictHistogram &#40;DMX&#41;](../dmx/predicthistogram-dmx.md) 및 클러스터 함수에서 단일 쿼리를 사용 하 여 TM 클러스터링 마이닝 모델의 각 클러스터에서 개별 사례의 거리와 개별 사례가 각 클러스터에 존재 하는 확률을 반환 합니다.  
   
 ```  

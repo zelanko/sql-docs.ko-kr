@@ -1,4 +1,5 @@
 ---
+description: Azure Blob 대상
 title: Azure Blob 대상 | Microsoft Docs
 ms.custom: ''
 ms.date: 07/25/2016
@@ -13,12 +14,12 @@ f1_keywords:
 ms.assetid: 820a1e7a-7182-4c7b-ab56-5b4097a7e042
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3463ccc985330dedb399ccf3a9071681d2f4f302
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 2f7db713ef6aa1c18c3506a842624bfd514c4807
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918880"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457515"
 ---
 # <a name="azure-blob-destination"></a>Azure Blob 대상
 

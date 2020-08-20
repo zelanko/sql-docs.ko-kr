@@ -1,4 +1,5 @@
 ---
+description: CREATE COLUMN ENCRYPTION KEY(Transact-SQL)
 title: CREATE COLUMN ENCRYPTION KEY(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/15/2019
@@ -28,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: 517fe745-d79b-4aae-99a7-72be45ea6acb
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 473d41dcc61113a331597a6de8f103517378bfdd
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 9527007eb54e07747f3e6d12b9fdf98bc50ed3cb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110691"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458811"
 ---
 # <a name="create-column-encryption-key-transact-sql"></a>CREATE COLUMN ENCRYPTION KEY(Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -74,8 +75,8 @@ _varbinary\_literal_
   
 > [!WARNING]  
 >  이 문의 일반 텍스트 열 암호화 키 값은 절대 전달하지 마세요. 그럴 경우 이 기능의 이점을 구성하게 됩니다.  
-  
-## <a name="remarks"></a>설명  
+
+## <a name="remarks"></a>설명
 `CREATE COLUMN ENCRYPTION KEY` 문에는 적어도 한 개 또는 두 개의 값이 포함되어 있어야 합니다. [ALTER COLUMN ENCRYPTION KEY(Transact-SQL)](alter-column-encryption-key-transact-sql.md). `ALTER COLUMN ENCRYPTION KEY` 문을 사용하여 값을 제거할 수도 있습니다.  
   
 일반적으로 열 암호화 키는 단 하나의 암호화된 값으로 만들어집니다. 열 마스터 키를 회전시켜 현재 열 마스터 키를 새 열 마스터 키로 바꿔야 하는 경우도 있습니다. 키를 회전시켜야 하는 경우 새 열 마스터 키로 암호화된 열 암호화 키의 새 값을 추가합니다. 회전을 통해 클라이언트 애플리케이션은 열 암호화 키로 암호화된 데이터에 액세스할 수 있을 뿐만 아니라 새 열 마스터 키를 사용할 수 있게 됩니다. 새 마스터 키에 액세스할 권한이 없는 클라이언트 애플리케이션의 Always Encrypted 지원 드라이버는 이전 열 마스터 키로 암호화된 열 암호화 키 값을 사용하여 중요한 데이터에 액세스합니다.  
@@ -92,7 +93,7 @@ SSMS(SQL Server Management Studio) 또는 PowerShell과 같은 도구를 사용�
 ## <a name="permissions"></a>사용 권한  
 **ALTER ANY COLUMN ENCRYPTION KEY** 권한을 요구합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-creating-a-column-encryption-key"></a>A. 열 암호화 키 만들기  
 다음 예에서는 `MyCEK`라는 열 암호화 키를 만듭니다.  

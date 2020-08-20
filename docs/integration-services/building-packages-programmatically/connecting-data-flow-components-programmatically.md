@@ -1,4 +1,5 @@
 ---
+description: 프로그래밍 방식으로 데이터 흐름 구성 요소 연결
 title: 프로그래밍 방식으로 데이터 흐름 구성 요소 연결 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 404ecab7-7698-447b-93d6-dd256beb11ff
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 004e697e4d890b615f078e4005f18bdbf4fc5417
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f6e577a267121a4e0ed42743b38ab5b5b27f4ebb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914029"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457820"
 ---
 # <a name="connecting-data-flow-components-programmatically"></a>프로그래밍 방식으로 데이터 흐름 구성 요소 연결
 

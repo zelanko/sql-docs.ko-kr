@@ -1,4 +1,5 @@
 ---
+description: MSsnapshot_history(Transact-SQL)
 title: MSsnapshot_history (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 56bf4128-1689-4963-9343-432dd0898d31
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fedcf6dd9d4b30b92a6a98d97f49c0b3361f38ca
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 7dcc8a6e5a35ca9062bf97dd4dece2afca078fb2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889401"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460331"
 ---
 # <a name="mssnapshot_history-transact-sql"></a>MSsnapshot_history(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,12 +40,12 @@ ms.locfileid: "85889401"
 |**주석만**|**nvarchar(255)**|메시지 텍스트입니다.|  
 |**delivered_transactions**|**int**|세션 중에 전달된 총 트랜잭션 수입니다.|  
 |**delivered_commands**|**int**|초당 전달된 명령 수입니다.|  
-|**delivery_rate**|**float (53)**|초당 전달된 평균 명령 수입니다.|  
+|**delivery_rate**|**float(53)**|초당 전달된 평균 명령 수입니다.|  
 |**error_id**|**int**|[MSrepl_errors](../../relational-databases/system-tables/msrepl-errors-transact-sql.md) 시스템 테이블에 있는 오류의 ID입니다.|  
 |**timestamp**|**timestamp**|이 테이블의 타임스탬프 열입니다.|  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;복제 테이블](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Transact-sql&#41;&#40;복제 테이블 ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [복제 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

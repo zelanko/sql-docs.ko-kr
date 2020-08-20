@@ -1,4 +1,5 @@
 ---
+description: 열 값 분포 프로필 요청 옵션(데이터 프로파일링 태스크)
 title: 열 값 분포 프로필 요청 옵션(데이터 프로파일링 태스크) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c1e5f5de-04f5-4d00-a9f0-55817186bdf9
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: eacd467eed8a9c0a80be5e94f8495176ac134633
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 608dbbb804c8e7a2dbfdf5673b0070ef77b6ce60
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922495"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457585"
 ---
 # <a name="column-value-distribution-profile-request-options-data-profiling-task"></a>열 값 분포 프로필 요청 옵션(데이터 프로파일링 태스크)
 

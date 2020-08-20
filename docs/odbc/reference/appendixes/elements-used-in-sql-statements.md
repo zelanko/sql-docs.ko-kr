@@ -1,4 +1,5 @@
 ---
+description: SQL 문에 사용되는 요소
 title: SQL 문에 사용 되는 요소 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 85777525-1555-4731-8309-63a464c6b43a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 49a1cd54957426d4d14d84d43df670c8c3d96189
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5c24f5dd55530e38ea47ed9a2b846d549bb26d56
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307024"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456576"
 ---
 # <a name="elements-used-in-sql-statements"></a>SQL 문에 사용되는 요소
 다음 요소는 앞에 나열 된 SQL 문에서 사용 됩니다.  
@@ -41,7 +42,7 @@ ms.locfileid: "81307024"
   
  *열 이름* :: = [*테이블 이름*.] *열 식별자*  
   
- *비교-operator* :: = < &#124; > &#124; \<= &#124; >= &#124; = &#124; <>  
+ *비교-operator* :: = < &#124; > &#124; = \<= &#124; > &#124; = &#124; <>  
   
  *비교-조건자* :: = *식* 비교 연산자 식  
   
@@ -53,7 +54,7 @@ ms.locfileid: "81307024"
   
  *expression* :: = term &#124; expression {+&#124;-} term  
   
- *factor* :: = [*+*&#124;*-*]*기본*  
+ *factor* :: = [ *+*&#124;*-* ]*기본*  
   
  *삽입 값* :: =  
   
@@ -97,7 +98,7 @@ ms.locfileid: "81307024"
   
  *테이블-참조-목록* :: = *테이블-참조* [,*테이블 참조*] ...  
   
- *term* :: = *factor* &#124; *term* {\*&#124;*/*} *factor*  
+ *term* :: = *factor* &#124; *term* { \*&#124;*/* } *factor*  
   
  *unsigned-integer* :: = {*digit*}  
   

@@ -1,4 +1,5 @@
 ---
+description: Oracle 데이터베이스 속성 편집
 title: Oracle 데이터베이스 속성 편집 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 58dc99f1-ee6b-4508-bb66-2bc589611ff7
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 071d8dd634af79bcb041cbf7336fa4cc20555dc5
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b1d5eb987c5dfd62a67bbe6b536b4c2258463741
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921656"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457730"
 ---
 # <a name="edit-the-oracle-database-properties"></a>Oracle 데이터베이스 속성 편집
 

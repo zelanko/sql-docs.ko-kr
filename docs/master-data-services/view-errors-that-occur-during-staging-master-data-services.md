@@ -1,4 +1,5 @@
 ---
+description: 준비 과정에서 발생하는 오류 보기(Master Data Services)
 title: 준비 과정에서 발생한 오류 보기
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6d2bff84-624b-47fc-a4a5-d9ea01d13412
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: af131613399fd45dd363f21f9f92216556be456b
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: dea75b433d96aca750f941ef5dda8bb6b2951420
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812308"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456784"
 ---
 # <a name="view-errors-that-occur-during-staging-master-data-services"></a>준비 과정에서 발생하는 오류 보기(Master Data Services)
 
@@ -29,7 +30,7 @@ ms.locfileid: "85812308"
   
 -   stg.viw_name_RelationshipErrorDetails 뷰는 계층 관계 업데이트를 표시합니다.  
   
-## <a name="prerequisites"></a>전제 조건  
+## <a name="prerequisites"></a>사전 요구 사항  
  이 절차를 수행하려면  
   
 -   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스에서 stg.viw_name_MemberErrorDetails 또는 stg.viw_name_RelationshipErrorDetails 뷰에 대한 SELECT 권한이 있어야 합니다.  

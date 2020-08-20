@@ -1,4 +1,5 @@
 ---
+description: SQL Server 변경 데이터베이스 만들기
 title: SQL Server 변경 데이터베이스 만들기 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 4f79c24a-e99a-4a06-8637-51eeec406259
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a4e5e945b1d6a43829d1e9cb3998335559808480
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b49e099d675aec6158048d8a2a0fb4fe1c0ba64a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918761"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457752"
 ---
 # <a name="create-the-sql-server-change-database"></a>SQL Server 변경 데이터베이스 만들기
 

@@ -1,4 +1,5 @@
 ---
+description: '2단원: 계층적 테이블의 데이터 만들기 및 관리'
 title: '2단원: 계층적 테이블의 데이터 만들기 및 관리 | Microsoft 문서'
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,25 +13,25 @@ helpviewer_keywords:
 ms.assetid: 95f55cff-4abb-4c08-97b3-e3ae5e8b24e2
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: b54f60e71344bc04271378fbd84214b31bd9503c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0a774ce3918388e8df23de43a01b8b0930f9336d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85692496"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460234"
 ---
 # <a name="lesson-2-create-and-manage-data-in-a-hierarchical-table"></a>2단원: 계층적 테이블의 데이터 만들기 및 관리
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-1단원에서는 **hierarchyid** 데이터 형식을 사용하여 기존 테이블을 수정한 다음 기존 데이터 표현으로 **hierarchyid** 열을 채웠습니다. 이 단원에서는 계층 메서드를 사용하여 새 테이블에 처음부터 데이터를 삽입합니다. 그런 다음 계층 메서드를 사용하여 데이터를 쿼리하고 조작합니다. 
+ 1단원에서는 **hierarchyid** 데이터 형식을 사용하여 기존 테이블을 수정한 다음 기존 데이터 표현으로 **hierarchyid** 열을 채웠습니다. 이 단원에서는 계층 메서드를 사용하여 새 테이블에 처음부터 데이터를 삽입합니다. 그런 다음 계층 메서드를 사용하여 데이터를 쿼리하고 조작합니다. 
 
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>필수 구성 요소  
 이 자습서를 완료하려면 SQL Server Management Studio, SQL Server를 실행하는 서버에 대한 액세스 및 AdventureWorks 데이터베이스가 필요합니다.
 
 - [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)를 설치합니다.
 - [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)을 설치합니다.
 - [AdventureWorks2017 샘플 데이터베이스](https://docs.microsoft.com/sql/samples/adventureworks-install-configure)를 다운로드합니다.
 
-SSMS에서 데이터베이스를 복원하기 위한 지침은 여기: [데이터베이스 복원](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)에 있습니다.   
+SSMS에서 데이터베이스를 복원하기 위한 지침은 [데이터베이스 복원](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)을 참조하세요.   
   
 ## <a name="create-a-table-using-the-hierarchyid-data-type"></a>hierarchyid 데이터 형식을 사용하여 테이블 만들기
 다음 예에서는 직원 데이터와 보고 계층을 포함하는 EmployeeOrg라는 테이블을 만듭니다. 이 예제에서는 AdventureWorks2017 데이터베이스에 테이블을 만들지만 이는 선택 사항입니다. 예를 간단히 유지하기 위해 테이블에는 다음 5개 열만 포함합니다.  
@@ -292,7 +293,7 @@ Marketing Assistant인 **Wanida** (**EmployeeID** 269)는 **Sariya**에게 보�
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 계층을 다시 구성하는 것은 일반적인 유지 관리 태스크입니다. 이 태스크에서는 UPDATE 문을 [GetReparentedValue](../../t-sql/data-types/getreparentedvalue-database-engine.md) 메서드와 함께 사용하여 먼저 단일 행을 계층의 새 위치로 이동합니다. 그런 다음 전체 하위 트리를 새 위치로 이동합니다.  
   
-`GetReparentedValue` 메서드는 두 개의 인수를 사용합니다. 첫 번째 인수는 수정할 계층 부분을 설명합니다. 예를 들어 계층이 **/1/4/2/3/** 인 경우 **/1/4/** 섹션을 변경하여 계층을 **/2/1/2/3/** 으로 만들고 마지막 두 노드(**2/3/** )는 변경하지 않으려면 변경되는 노드( **/1/4/** )를 첫 번째 인수로 제공해야 합니다. 두 번째 인수는 새 계층 구조 수준(이 예제의 경우 **/2/1/** )을 제공합니다. 두 인수의 수준 수가 같을 필요는 없습니다.  
+`GetReparentedValue` 메서드는 두 개의 인수를 사용합니다. 첫 번째 인수는 수정할 계층 부분을 설명합니다. 예를 들어 계층이 **/1/4/2/3/** 인 경우 **/1/4/** 섹션을 변경하여 계층을 **/2/1/2/3/** 으로 만들고 마지막 두 노드(**2/3/**)는 변경하지 않으려면 변경되는 노드(**/1/4/**)를 첫 번째 인수로 제공해야 합니다. 두 번째 인수는 새 계층 구조 수준(이 예제의 경우 **/2/1/**)을 제공합니다. 두 인수의 수준 수가 같을 필요는 없습니다.  
   
 ### <a name="move-a-single-row-to-a-new-location-in-the-hierarchy"></a>단일 행을 계층의 새 위치로 이동  
   

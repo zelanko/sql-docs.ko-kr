@@ -1,4 +1,5 @@
 ---
+description: sys.dm_db_missing_index_groups(Transact-SQL)
 title: sys. dm_db_missing_index_groups (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -21,12 +22,12 @@ ms.assetid: 9cc00acd-d83d-49f8-be72-5b2aebed246b
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a5ca04c0774e639edb06edac4762ed6beeb7af58
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: de673925756a51f10f39a1b280f245f484012a81
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718810"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460437"
 ---
 # <a name="sysdm_db_missing_index_groups-transact-sql"></a>sys.dm_db_missing_index_groups(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

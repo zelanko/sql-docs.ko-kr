@@ -1,4 +1,5 @@
 ---
+description: 프로그래밍 방식으로 패키지 작성
 title: 프로그래밍 방식으로 패키지 작성 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -10,12 +11,12 @@ ms.topic: reference
 ms.assetid: 7474b1f4-7607-4f28-a6fd-67f7db1dd3f8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 18b1405699a93380447535a9f0f5f7ab7f94113a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c6b35aa78b98a681ae7312db2bd9a7b1fb18f482
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86905593"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457809"
 ---
 # <a name="building-packages-programmatically"></a>프로그래밍 방식으로 패키지 작성
 
@@ -52,7 +53,7 @@ ms.locfileid: "86905593"
  [프로그래밍 방식으로 연결 추가](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)  
  패키지에 연결 관리자를 추가하는 방법에 대해 설명합니다.  
   
- [프로그래밍 방식으로 변수 작업](../../integration-services/building-packages-programmatically/working-with-variables-programmatically.md)  
+ [프로그래밍 방식으로 변수 사용](../../integration-services/building-packages-programmatically/working-with-variables-programmatically.md)  
  패키지 실행 중 변수를 추가하고 사용하는 방법에 대해 설명합니다.  
   
  [프로그래밍 방식으로 이벤트 처리](../../integration-services/building-packages-programmatically/handling-events-programmatically.md)  
@@ -95,7 +96,7 @@ ms.locfileid: "86905593"
   
 ## <a name="external-resources"></a>외부 리소스  
   
--   www.codeplex.com/MSFTISProdSamples 의 CodePlex 예제 - [Integration Services 제품 예제](https://go.microsoft.com/fwlink/?LinkID=131204)  
+-   [www.codeplex.com/MSFTISProdSamples](www.codeplex.com/MSFTISProdSamples) 의 CodePlex 예제 - [Integration Services 제품 예제](https://go.microsoft.com/fwlink/?LinkID=131204)  
   
 -   blogs.msdn.com의 블로그 항목 - [사용자 지정 확장 프로그램 성능 프로파일링](https://go.microsoft.com/fwlink/?LinkId=238831)  
 

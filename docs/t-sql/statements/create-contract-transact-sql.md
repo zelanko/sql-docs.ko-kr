@@ -1,4 +1,5 @@
 ---
+description: CREATE CONTRACT(Transact-SQL)
 title: CREATE CONTRACT(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 494cbfa6-8e93-4161-a64d-90d681915211
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c6fef1834b3e5b6afeda1df4c67e3403a6dd6d79
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: 6f4b7360fa3429a621e364c27776c4f6a8f0a946
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86391728"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458750"
 ---
 # <a name="create-contract-transact-sql"></a>CREATE CONTRACT(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -95,8 +96,8 @@ CREATE CONTRACT contract_name
   
  CREATE CONTRACT 문을 실행하는 사용자에게는 지정된 모든 메시지 유형에 대한 REFERENCES 권한이 있어야 합니다.  
   
-## <a name="examples"></a>예  
- **A. 계약 만들기**  
+## <a name="examples"></a>예제  
+ **1. 계약 만들기**  
   
  다음 예에서는 세 메시지 유형을 기반으로 경비 변제 계약을 만듭니다.  
   

@@ -1,4 +1,5 @@
 ---
+description: 변경 내용을 캡처할 Oracle 테이블 선택
 title: 변경 내용을 캡처할 Oracle 테이블 선택 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 2e295dc8-999d-4c4d-96cc-1519674b47a4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7a8e210af11fbb79a63fb5406bda2ac434c21c81
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 5417245afb872fac5ffc144c0d7a8b946e677e8b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923882"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457644"
 ---
 # <a name="select-oracle-tables-for-capturing-changes"></a>변경 내용을 캡처할 Oracle 테이블 선택
 

@@ -1,4 +1,5 @@
 ---
+description: CDC 분할자
 title: CDC 분할자 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 167bc5c6-fa36-439d-987c-b20acd1a77e2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2015303f77a3ae7ba4f77758432f51bd84f0b811
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 38ecdd11aa4527fee14b558deb05dcfe578f4d84
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917153"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457413"
 ---
 # <a name="cdc-splitter"></a>CDC 분할자
 
@@ -33,7 +34,7 @@ ms.locfileid: "86917153"
 |3|업데이트|업데이트 전 행( **이전 값이 포함된 모두** CDC 모드를 사용하는 경우에만 제공됨)|  
 |4|업데이트|업데이트 후 행(업데이트 전을 따름)|  
 |5|업데이트|병합 행( **병합을 사용한 순 변경 내용** CDC 모드를 사용하는 경우에만 제공됨)|  
-|기타|Error||  
+|기타|오류||  
   
  분할자를 사용하여 미리 정의된 삽입, 삭제 및 업데이트 출력에 연결하여 해당 출력을 추가적으로 처리할 수 있습니다.  
   

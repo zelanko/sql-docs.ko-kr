@@ -1,4 +1,5 @@
 ---
+description: 실행 중인 패키지 및 기타 작업 모니터링
 title: 실행 중인 패키지 및 기타 작업 모니터링 | Microsoft Docs
 ms.custom: supportability
 ms.date: 06/04/2018
@@ -13,12 +14,12 @@ f1_keywords:
 ms.assetid: cbbcd79f-ab9b-46ec-84cb-4821c1d16b99
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4506f95337319d0b4a8fa4f63c99a182360cfa2b
-ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
+ms.openlocfilehash: 50c651fac37223ad157ea4ee04c9842a0ee7083c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87472508"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457115"
 ---
 # <a name="monitor-running-packages-and-other-operations"></a>실행 중인 패키지 및 기타 작업 모니터링
 

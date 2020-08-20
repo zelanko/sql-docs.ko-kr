@@ -1,4 +1,5 @@
 ---
+description: SQL Server 2016 Integration Services의 새로운 기능
 title: SQL Server 2016 Integration Services의 새로운 기능 | Microsoft Docs
 ms.custom:
 - SQL2016_New_Updated
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: da6999c7-e5e3-4a59-a284-1da635995af1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a715409dddf2c2de19624f2f5f0b770e0202c9b8
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 386e58e63ee0f629baf5c9ad3009c678a1a966d1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922327"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456875"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>SQL Server 2016 Integration Services의 새로운 기능
 
@@ -225,7 +226,7 @@ ms.locfileid: "86922327"
   
  GetIdentificationStringByLineageID 메서드 이름이 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130.GetIdentificationStringByID%2A>에서 추가되거나 업데이트된 기능에 대해 설명합니다. 자세한 내용은 [데이터 흐름의 오류에 대한 열 이름](#ErrorColumn)를 참조하십시오.  
   
- 이러한 변경 및 오류 열 개선에 대한 자세한 내용은 업데이트된 다음 블로그 게시물을 참조하세요. [Error Column Improvements for SSIS Data Flow (Updated for CTP3.3)](https://techcommunity.microsoft.com/t5/sql-server-integration-services/error-column-improvements-for-ssis-data-flow-updated-for-rc2/ba-p/388253)  
+ 이러한 변경 및 오류 열 개선에 대한 자세한 내용은 업데이트된 다음 블로그 게시물을 참조하세요. [Error Column Improvements for SSIS Data Flow (Updated for CTP3.3)(SSIS 데이터 흐름에 대해 향상된 오류 열 기능(CTP3.3용으로 업데이트됨))](https://techcommunity.microsoft.com/t5/sql-server-integration-services/error-column-improvements-for-ssis-data-flow-updated-for-rc2/ba-p/388253)  
   
 > [!NOTE]  
 >  RC0에서 이 메서드는 새 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130> 인터페이스로 이동되었습니다. 자세한 내용은 [API의 새로운 IDTSComponentMetaData130 인터페이스](#CMD130)를 참조하세요.  
@@ -375,4 +376,4 @@ SQL Server 2016 서비스 팩 1을 설치하면 이제 OData 원본 및 OData �
 
 ## <a name="see-also"></a>참고 항목  
  [SQL Server 2016의 새로운 기능](../sql-server/what-s-new-in-sql-server-2016.md)   
- [SQL Server 2016의 버전과 지원하는 기능](../sql-server/editions-and-supported-features-for-sql-server-2016.md)
+ [SQL Server 2016의 버전 및 지원하는 기능](../sql-server/editions-and-supported-features-for-sql-server-2016.md)

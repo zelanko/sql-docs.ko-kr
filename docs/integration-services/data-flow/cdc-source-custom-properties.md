@@ -1,4 +1,5 @@
 ---
+description: CDC 원본 사용자 지정 속성
 title: CDC 원본 사용자 지정 속성 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 744e9357-94a9-4202-abe8-1d3d202697e9
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 187e05e82f3f7452a1a4d542188ab9e96073adac
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 05315d64b3edfdc994141f6480f81960af39ed01
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915485"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457455"
 ---
 # <a name="cdc-source-custom-properties"></a>CDC 원본 사용자 지정 속성
 

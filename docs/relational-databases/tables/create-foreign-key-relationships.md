@@ -1,4 +1,5 @@
 ---
+description: 외래 키 관계 만들기
 title: 외래 키 관계 만들기 | Microsoft 문서
 ms.custom: ''
 ms.date: 06/19/2020
@@ -13,12 +14,12 @@ ms.assetid: 867a54b8-5be4-46e6-9702-49ae6dabf67c
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4d38aba87edf5737e93d9477abfadddcc969c55f
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 135f69682ace78d20b21c23c23d32b3610b4887a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002177"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460293"
 ---
 # <a name="create-foreign-key-relationships"></a>외래 키 관계 만들기
 

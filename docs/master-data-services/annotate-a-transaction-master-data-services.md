@@ -1,4 +1,5 @@
 ---
+description: 트랜잭션에 주석 추가(Master Data Services)
 title: 트랜잭션에 주석 추가
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: f5a6b2ca-56de-4e42-9da8-fba0ac3e8d92
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 140342398d35dfb7ad38940d0e2a2e7726e8375b
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 90ca7f628206e54a284866eaae4a18c3dfe54094
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811868"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456856"
 ---
 # <a name="annotate-a-transaction-master-data-services"></a>트랜잭션에 주석 추가(Master Data Services)
 
@@ -28,7 +29,7 @@ ms.locfileid: "85811868"
 > [!NOTE]  
 >  주석은 삭제할 수 없습니다.  
   
-## <a name="prerequisites"></a>전제 조건  
+## <a name="prerequisites"></a>사전 요구 사항  
   
 -   만든 트랜잭션에 주석을 추가하려면 **탐색기** 기능 영역에 대한 액세스 권한과 주석을 추가할 모델 개체에 대한 **업데이트** 이상의 사용 권한이 있어야 합니다.  
   

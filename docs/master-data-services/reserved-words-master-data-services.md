@@ -1,4 +1,5 @@
 ---
+description: 예약어(Master Data Services)
 title: 예약어
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 88afd0d0-4362-4394-8357-4e65388fc0fc
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 78dcf9320312f93dd08495f21bf0f6cc1b71516b
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 5eff7f5f2db1d1b155b94818083ddad11f23890e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811468"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456718"
 ---
 # <a name="reserved-words-master-data-services"></a>예약어(Master Data Services)
 
@@ -29,7 +30,7 @@ ms.locfileid: "85811468"
 > [!NOTE]  
 >  또한 특수 문자(기호, 하이픈 등) 사용을 제한해야 합니다.  
   
--   [모델](../master-data-services/reserved-words-master-data-services.md#models)  
+-   [Models](../master-data-services/reserved-words-master-data-services.md#models)  
   
 -   [엔터티](../master-data-services/reserved-words-master-data-services.md#entities)  
   
@@ -39,16 +40,16 @@ ms.locfileid: "85811468"
   
 -   [멤버](../master-data-services/reserved-words-master-data-services.md#members)  
   
-##  <a name="models"></a><a name="models"></a>모델인  
+##  <a name="models"></a><a name="models"></a> 모델인  
  이름이 **Name** 또는 **Code**로 설정된 모델을 만드는 경우 **Name** 또는 **Code** 를 엔터티 이름으로 사용할 수 없으므로 **모델과 이름이 같은 엔터티 만들기** 를 선택하지 마십시오.  
   
-##  <a name="entities"></a><a name="entities"></a>엔터티  
+##  <a name="entities"></a><a name="entities"></a> 엔터티  
  엔터티 이름의 경우 **Name** 또는 **Code**를 사용할 수 없습니다.  
   
-##  <a name="explicit-hierarchies"></a><a name="exhierarchies"></a>명시적 계층  
+##  <a name="explicit-hierarchies"></a><a name="exhierarchies"></a> 명시적 계층  
  명시적 계층 이름의 경우 **Name** 또는 **Code**를 사용할 수 없습니다.  
   
-##  <a name="attributes"></a><a name="attributes"></a>특성  
+##  <a name="attributes"></a><a name="attributes"></a> 특성  
   
 -   **ID**  
   
@@ -76,7 +77,7 @@ ms.locfileid: "85811468"
   
 -   **Version_ID**  
   
-##  <a name="members"></a><a name="members"></a>멤버  
+##  <a name="members"></a><a name="members"></a> 멤버  
  멤버의 경우 **코드**특성 값에 대해 **MDMMemberStatus**, **MDMUnused** 또는 **ROOT** 을 사용할 수 없습니다.  
   
 ## <a name="see-also"></a>참고 항목  

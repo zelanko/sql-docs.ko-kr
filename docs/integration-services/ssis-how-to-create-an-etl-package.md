@@ -1,4 +1,5 @@
 ---
+description: SSIS ETL 패키지를 만드는 방법
 title: SSIS에서 ETL 패키지를 만드는 방법 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/20/2018
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d6d5bb1f-4cb1-4605-9cd6-f60b858382c4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d0365939d33b1ef6e0a4c179cdedddb4c3981763
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f83cb45dc060bc2877cf316e4d19baa073a9e6e0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921966"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457057"
 ---
 # <a name="ssis-how-to-create-an-etl-package"></a>SSIS ETL 패키지를 만드는 방법
 
@@ -41,12 +42,12 @@ ms.locfileid: "86921966"
 ## <a name="what-you-learn"></a>학습 내용  
 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서 사용할 수 있는 새 도구, 컨트롤 및 기능에 익숙해지는 가장 좋은 방법은 실제로 사용해 보는 것입니다. 이 자습서에서는 [!INCLUDE[ssIS](../includes/ssis-md.md)] 디자이너를 사용하여 루핑, 구성, 오류 흐름 논리 및 로깅을 포함하는 간단한 ETL 패키지를 만드는 과정을 안내합니다.  
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>전제 조건  
 이 자습서는 기본적인 데이터베이스 작업에는 익숙하지만, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]의 새 기능은 많이 접해 보지 못한 사용자를 위한 것입니다.  
 
 이 자습서를 실행하려면 다음 구성 요소를 설치해야 합니다.  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] SQL Server 및 SSIS를 설치하려면 [Integration Services 설치](install-windows/install-integration-services.md)를 참조하세요.
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]와 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]을 참조하세요. SQL Server 및 SSIS를 설치하려면 [Integration Services 설치](install-windows/install-integration-services.md)를 참조하세요.
 
 -   **AdventureWorksDW2012** 샘플 데이터베이스. **AdventureWorksDW2012** 데이터베이스를 다운로드하려면 [AdventureWorks 샘플 데이터베이스](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)에서 `AdventureWorksDW2012.bak`를 다운로드하고 백업을 복원하세요.  
 

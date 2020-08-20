@@ -1,4 +1,5 @@
 ---
+description: ALTER ROLE(Transact-SQL)
 title: ALTER ROLE(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2018
@@ -22,12 +23,12 @@ ms.assetid: e1e83caa-17cc-4871-b2db-2711339fb64f
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d4b00464aaa9651f353a3c525cdf43badf72b88c
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: cc9f49a8a21ef4582f6f951a9301f33fe66002aa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395546"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458898"
 ---
 # <a name="alter-role-transact-sql"></a>ALTER ROLE(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -63,14 +64,16 @@ ALTER ROLE role_name
 [;]  
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
  *role_name*  
- **적용 대상:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)](2008부터), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+ **적용 대상:**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)](2008부터), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  변경할 데이터베이스 역할을 지정합니다.  
   
  ADD MEMBER *database_principal*  
- **적용 대상:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)](2012부터), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+ **적용 대상:**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)](2012부터), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  데이터베이스 보안 주체를 데이터베이스 역할의 멤버 자격에 추가하도록 지정합니다.  
   
@@ -79,7 +82,7 @@ ALTER ROLE role_name
 -   *database_principal*은 고정 데이터베이스 역할 또는 서버 보안 주체일 수 없습니다.  
   
 DROP MEMBER *database_principal*  
- **적용 대상:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)](2012부터), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+ **적용 대상:**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)](2012부터), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  데이터베이스 역할의 멤버 자격에서 데이터베이스 보안 주체를 제거하도록 지정합니다.  
   
@@ -88,7 +91,7 @@ DROP MEMBER *database_principal*
 -   *database_principal*은 고정 데이터베이스 역할 또는 서버 보안 주체일 수 없습니다.  
   
 WITH NAME = *new_name*  
- **적용 대상:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)](2008부터), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+ **적용 대상:**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)](2008부터), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  사용자 정의 데이터베이스 역할의 이름을 변경하도록 지정합니다. 새 이름은 데이터베이스에 없는 이름이어야 합니다.  
   
@@ -115,10 +118,10 @@ WITH NAME = *new_name*
   
 -   [sys.database_principals&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-change-the-name-of-a-database-role"></a>A. 데이터베이스 역할의 이름 변경  
- **적용 대상:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)](2008부터), [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
+ **적용 대상:**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)](2008부터), [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
   
  다음 예에서는 `buyers` 역할의 이름을 `purchasing`으로 변경합니다.   이 예제에서는 [AdventureWorks](https://msftdbprodsamples.codeplex.com/) 예제 데이터베이스에서 실행할 수 있습니다.
   
@@ -127,7 +130,7 @@ ALTER ROLE buyers WITH NAME = purchasing;
 ```  
   
 ### <a name="b-add-or-remove-role-members"></a>B. 역할 멤버 추가 또는 제거  
- **적용 대상:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)](2012부터), [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
+ **적용 대상:**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)](2012부터), [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
   
  다음 예에서는 `Sales`라는 데이터베이스 역할을 만듭니다. Barry라는 데이터베이스 사용자를 멤버 자격에 추가한 다음, Barry라는 멤버를 제거하는 방법을 보여줍니다.   이 예제에서는 [AdventureWorks](https://msftdbprodsamples.codeplex.com/) 예제 데이터베이스에서 실행할 수 있습니다.
   

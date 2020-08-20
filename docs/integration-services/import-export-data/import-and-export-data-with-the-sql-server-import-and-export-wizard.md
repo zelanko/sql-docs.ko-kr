@@ -1,4 +1,5 @@
 ---
+description: SQL Server 가져오기 및 내보내기 마법사를 사용하여 데이터 가져오기 및 내보내기
 title: SQL Server 가져오기 및 내보내기 마법사를 사용하여 데이터 가져오기 및 내보내기 | Microsoft Docs
 ms.custom: ''
 ms.date: 10/17/2017
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: c0e4d867-b2a9-4b2a-844b-2fe45be88f81
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 40ea51fdaaadc7d6a3d9505e2f972c9f26a78471
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: cdb761ce5ea9b0a64b21880ef2945c0ff85876ad
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86909619"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457196"
 ---
 # <a name="import-and-export-data-with-the-sql-server-import-and-export-wizard"></a>SQL Server 가져오기 및 내보내기 마법사를 사용하여 데이터 가져오기 및 내보내기
 
@@ -65,7 +66,7 @@ ms.locfileid: "86909619"
 -   [Excel에 연결](../../integration-services/import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard.md)
 -   [Access에 연결](../../integration-services/import-export-data/connect-to-an-access-data-source-sql-server-import-and-export-wizard.md)
 -   [Azure Blob Storage에 연결](../../integration-services/import-export-data/connect-to-azure-blob-storage-sql-server-import-and-export-wizard.md)
--   [ODBC를 사용하여 연결](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md)
+-   [ODBC로 연결](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md)
 -   [PostgreSQL에 연결](../../integration-services/import-export-data/connect-to-a-postgresql-data-source-sql-server-import-and-export-wizard.md)
 -   [MySQL에 연결](../../integration-services/import-export-data/connect-to-a-mysql-data-source-sql-server-import-and-export-wizard.md)
 
@@ -96,7 +97,7 @@ ms.locfileid: "86909619"
 
 SSIS에 대한 자세한 내용은 [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)를 참조하세요.
 
-## <a name="whats-next"></a>다음 단계  
+## <a name="whats-next"></a>다음 작업  
  마법사를 시작합니다. 자세한 내용은 [SQL Server 가져오기 및 내보내기 마법사 시작](../../integration-services/import-export-data/start-the-sql-server-import-and-export-wizard.md)을 참조하세요.  
 
 ## <a name="see-also"></a>참고 항목

@@ -1,4 +1,5 @@
 ---
+description: 파티션 처리 대상
 title: 파티션 처리 대상 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 36c592ff-3f78-4a58-b496-31c1c8eee131
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 50513545bf2737a8b331153c686acad7ebaf4bd2
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ba6441215b1f1462195b83a99ce040da11d694fb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916096"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457323"
 ---
 # <a name="partition-processing-destination"></a>파티션 처리 대상
 

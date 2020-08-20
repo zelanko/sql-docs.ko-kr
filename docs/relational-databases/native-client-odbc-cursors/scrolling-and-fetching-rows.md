@@ -1,4 +1,5 @@
 ---
+description: 행 스크롤 및 인출
 title: 행 스크롤 및 페치 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -21,11 +22,12 @@ ms.assetid: 9109f10d-326b-4a6d-8c97-831f60da8c4c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d5c7e2612094b9067c4902481937a2f93505bcc1
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 9648f17ccd3688e166612f3d753d3208a83ebb52
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85998966"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460791"
 ---
 # <a name="scrolling-and-fetching-rows"></a>행 스크롤 및 인출
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -61,6 +63,6 @@ ms.locfileid: "85998966"
 -   [ODBC의 행 집합에 책갈피 설정](../../relational-databases/native-client-odbc-cursors/scrolling-and-fetching-rows-bookmarking-rows-in-odbc.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [ODBC&#41;&#40;커서 사용](../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)  
+ [ODBC&#41;&#40;커서 사용 ](../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)  
   
   

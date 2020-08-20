@@ -1,4 +1,5 @@
 ---
+description: 트랜잭션 ODBC
 title: 트랜잭션 ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b4ca861a-c164-4e87-8672-d5de15e3823c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a40c34b2abeb346c7a718994ba2484bfc728e2b1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c40c51fa2b0154d90d5ea08952266997d175e3e3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81297958"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456427"
 ---
 # <a name="transactions-odbc"></a>트랜잭션 ODBC
 *트랜잭션은* 단일 원자성 작업으로 수행 되는 작업 단위입니다. 즉, 작업이 성공 하거나 전체적으로 실패 합니다. 예를 들어 한 은행 계좌에서 다른 은행 계좌로 돈을 전송 하는 것이 좋습니다. 여기에는 첫 번째 계정에서 money를 입출금 계좌 두 번째 단계가 포함 됩니다. 두 단계가 모두 성공 해야 합니다. 한 단계가 성공 하거나 실패 하는 것은 허용 되지 않습니다. 트랜잭션을 지 원하는 데이터베이스는이를 보장할 수 있습니다.  

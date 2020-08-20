@@ -1,4 +1,5 @@
 ---
+description: ALTER MASTER KEY(Transact-SQL)
 title: ALTER MASTER KEY(Transact-SQL) | Microsoft Docs
 ms.custom: fasttrack-edit
 ms.date: 02/21/2019
@@ -27,12 +28,12 @@ ms.assetid: 8ac501c3-4280-4d5b-b58a-1524fa715b50
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4a069116263c0c03131cf26c950de7726830e08c
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 02c4d4eb6b3e96a65af77bf0c0d5ca749d2d201b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395545"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458921"
 ---
 # <a name="alter-master-key-transact-sql"></a>ALTER MASTER KEY(Transact-SQL)
 
@@ -96,6 +97,8 @@ ALTER MASTER KEY <alter_option>
     DROP ENCRYPTION BY SERVICE MASTER KEY
 ```
 
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="arguments"></a>인수
 
 PASSWORD ='*password*' 데이터베이스 마스터 키를 암호화하거나 암호 해독할 때 사용할 암호를 지정합니다. *password*는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 실행하는 컴퓨터의 Windows 암호 정책 요구 사항을 충족해야 합니다.
@@ -116,7 +119,7 @@ ADD ENCRYPTION BY SERVICE MASTER KEY를 사용하면 마스터 키 복사본이 
 
 데이터베이스에 대한 CONTROL 권한이 필요합니다. 데이터베이스 마스터 키가 암호로 암호화된 경우 해당 암호도 알고 있어야 합니다.
 
-## <a name="examples"></a>예
+## <a name="examples"></a>예제
 
 다음 예에서는 `AdventureWorks`에 대한 새 데이터베이스 마스터 키를 만들고 암호화 계층에서 아래에 있는 키를 다시 암호화합니다.
 

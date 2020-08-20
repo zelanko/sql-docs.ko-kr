@@ -1,4 +1,5 @@
 ---
+description: 성능 카운터
 title: 성능 카운터 | Microsoft Docs
 ms.custom: supportability
 ms.date: 08/27/2016
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 11e17f4e-72ed-44d7-a71d-a68937a78e4c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 431c88eb4f341b55060c23a06b06cf5e599c38e0
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 8cb194e8da7b64bef3cf6f33e65a5a5ee1ab136c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918313"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457100"
 ---
 # <a name="performance-counters"></a>성능 카운터
 

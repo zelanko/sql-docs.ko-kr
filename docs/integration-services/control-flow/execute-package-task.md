@@ -1,4 +1,5 @@
 ---
+description: 패키지 실행 태스크
 title: 패키지 실행 태스크 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4e8e6b9a30146aff61464f4aeda46cc49f07abe7
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 3307c81165731907f8252c99ebb03b057ca6af74
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920702"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457555"
 ---
 # <a name="execute-package-task"></a>패키지 실행 태스크
 

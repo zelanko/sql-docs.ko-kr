@@ -1,4 +1,5 @@
 ---
+description: '4-3단원: 오류 흐름 리디렉션 추가'
 title: '3단계: 오류 흐름 리디렉션 추가 | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/07/2019
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: 5683a45d-9e73-4cd5-83ca-fae8b26b488c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 852a614576780e27512e5fb234fd0905ef41a9ca
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: daade3348f7384ed83365923bf94af7b211d6422
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922163"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457137"
 ---
 # <a name="lesson-4-3-add-error-flow-redirection"></a>4-3단원: 오류 흐름 리디렉션 추가
 

@@ -1,4 +1,5 @@
 ---
+description: 패키지 속성 설정
 title: 패키지 속성 설정 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -25,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 13f81c3e-2b18-4f83-b445-a2f4a2c560aa
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: dd679e14920099a6383a414772bc162cdf470645
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 1e1c63721be4575f49a6f72e2eeb8d6520cda9af
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921989"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457028"
 ---
 # <a name="set-package-properties"></a>패키지 속성 설정
 

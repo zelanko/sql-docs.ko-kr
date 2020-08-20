@@ -1,4 +1,5 @@
 ---
+description: 원시 파일 사용자 지정 속성
 title: 원시 파일 사용자 지정 속성 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 7e81f7e1-fac0-4b57-b145-8f1b9e4720bf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ed2bc817f446481d228806f5f2ffb3222b79ecf0
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 45e439343713ac98dfd293a21af90d75e1275847
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916061"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457281"
 ---
 # <a name="raw-file-custom-properties"></a>원시 파일 사용자 지정 속성
 
@@ -56,7 +57,7 @@ ms.locfileid: "86916061"
   
  자세한 내용은 [Raw File Destination](../../integration-services/data-flow/raw-file-destination.md)을 참조하세요.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
   
