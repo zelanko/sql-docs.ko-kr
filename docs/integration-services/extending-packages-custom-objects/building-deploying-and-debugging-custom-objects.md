@@ -1,4 +1,5 @@
 ---
+description: 사용자 지정 개체 빌드, 배포 및 디버깅
 title: 사용자 지정 개체 빌드, 배포 및 디버깅 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: b03685bc-5398-4c3f-901a-1219c1098fbe
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9aa5cd37713971e8b785da4ba71bf03a7fc58efe
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 2a33786e4ffb5029cc2bf56baa9c77d6bd73b3e4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920192"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484334"
 ---
 # <a name="building-deploying-and-debugging-custom-objects"></a>사용자 지정 개체 빌드, 배포 및 디버깅
 

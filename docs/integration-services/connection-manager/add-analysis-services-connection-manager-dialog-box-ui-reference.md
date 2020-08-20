@@ -1,4 +1,5 @@
 ---
+description: Analysis Services 연결 관리자 추가 대화 상자 UI 참조
 title: Analysis Services 연결 관리자 추가 대화 상자 UI 참조 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9d5e1bb1-adda-4985-80f6-56e14d5d295c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ffc3d2786ff20ec500fed130dcf6058c9f3f627d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: e64a5d03e7f5e8998e2273f6dcf5b695b08b14b9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918619"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484633"
 ---
 # <a name="add-analysis-services-connection-manager-dialog-box-ui-reference"></a>Analysis Services 연결 관리자 추가 대화 상자 UI 참조
 

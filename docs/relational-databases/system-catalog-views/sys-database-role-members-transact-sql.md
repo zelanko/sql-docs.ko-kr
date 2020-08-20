@@ -1,4 +1,5 @@
 ---
+description: sys.database_role_members(Transact-SQL)
 title: sys. database_role_members (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/31/2017
@@ -20,11 +21,12 @@ ms.assetid: ed1b019d-ca48-4db3-85df-cf6d2db591cf
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9669462c83252af8c4526ddda0f155cdcb6b8a92
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 443df263f534d6f15648caacb5a810a0c15e555a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011984"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482147"
 ---
 # <a name="sysdatabase_role_members-transact-sql"></a>sys.database_role_members(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,7 +38,7 @@ ms.locfileid: "86011984"
 |**role_principal_id**|**int**|역할의 데이터베이스 보안 주체 ID입니다.|  
 |**member_principal_id**|**int**|멤버의 데이터베이스 보안 주체 ID입니다.|  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  모든 사용자는 자신의 역할 멤버 자격을 볼 수 있습니다. 다른 역할 멤버 자격을 보려면 `db_securityadmin` 고정 데이터베이스 역할 또는 데이터베이스의 멤버 자격이 필요 합니다 `VIEW DEFINITION` .  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
@@ -57,7 +59,7 @@ ORDER BY DP1.name;
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;보안 카탈로그 뷰](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
+ [보안 카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [보안 주체&#40;데이터베이스 엔진&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
 [ALTER ROLE (Transact-sql-SQLL)](../../t-sql/statements/alter-role-transact-sql.md)      

@@ -1,4 +1,5 @@
 ---
+description: IsSibling(MDX)
 title: IsSibling (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 15c80cec67b0a40c8ac4c436a45a4551132858f1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dc43d132e9fca9f691ab76aa43851aadf6c52b47
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68105356"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483976"
 ---
 # <a name="issibling-mdx"></a>IsSibling(MDX)
 

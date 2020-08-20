@@ -1,4 +1,5 @@
 ---
+description: 뷰를 통해 데이터 수정
 title: 뷰를 통해 데이터 수정 | Microsoft 문서
 ms.custom: ''
 ms.date: 10/05/2016
@@ -15,12 +16,12 @@ ms.assetid: 410e2812-4ebe-48b2-b95f-c7784f1c4336
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 15d1e7061cee981c24d247c925510b2a8865bd19
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 5ffc0703257542807d88f011a8522b18e3b5e48e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396416"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485356"
 ---
 # <a name="modify-data-through-a-view"></a>뷰를 통해 데이터 수정
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

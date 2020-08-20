@@ -1,4 +1,5 @@
 ---
+description: FileName 속성(ClientNetLibInfo 클래스)
 title: FileName 속성 (ClientNetLibInfo)
 ms.custom: seo-lt-2019
 ms.date: 03/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5b478582-9389-4923-a914-0df2d8333b0e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3b9a1af2378098e382f229b01e3c2a6f517d5d8f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 5d2a408da446e1a3b710c9e1966bb7ba85150e1f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881163"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485294"
 ---
 # <a name="filename-property-clientnetlibinfo-class"></a>FileName 속성(ClientNetLibInfo 클래스)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

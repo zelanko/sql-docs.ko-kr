@@ -1,4 +1,5 @@
 ---
+description: 마법사 완료(SQL Server 가져오기 및 내보내기 마법사)
 title: 마법사 완료(SQL Server 가져오기 및 내보내기 마법사) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: fbf0aa37-fd9e-47e1-82b4-26c1359ec3da
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2e37b76232b76590593c384da8e83bc099ce6c11
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 3d3499b501a27c878aa6633cc667a8bd9d588a83
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913357"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484174"
 ---
 # <a name="complete-the-wizard-sql-server-import-and-export-wizard"></a>마법사 완료(SQL Server 가져오기 및 내보내기 마법사)
 
@@ -38,7 +39,7 @@ ms.locfileid: "86913357"
 -   패키지를 저장할지 여부입니다.
 -   패키지를 즉시 실행할지 여부입니다.  
   
-## <a name="whats-next"></a>다음 단계  
+## <a name="whats-next"></a>다음 작업  
  마법사에서 수행한 선택 항목을 검토하고 **마침**을 클릭한 후 다음 페이지는 **작업 수행**입니다. 이 페이지에는 이전 페이지에서 구성한 작업의 진행률 및 결과가 표시됩니다. 자세한 내용은 [작업 수행](../../integration-services/import-export-data/performing-operation-sql-server-import-and-export-wizard.md)을 참조하세요.
  
 ## <a name="see-also"></a>참고 항목

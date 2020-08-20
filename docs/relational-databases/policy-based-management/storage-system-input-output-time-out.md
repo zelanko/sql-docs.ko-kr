@@ -1,4 +1,5 @@
 ---
+description: 스토리지 시스템 입/출력 시간 초과
 title: 스토리지 시스템 입/출력 시간 초과 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ff921952-b935-4bb0-b587-bba6cd15a090
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 97dccd39e74cdadad30edee265d8ec2183b183be
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d212a0ae0f42877340ff16acdb8e3b0adc00bb83
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774153"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482559"
 ---
 # <a name="storage-system-input-output-time-out"></a>스토리지 시스템 입/출력 시간 초과
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

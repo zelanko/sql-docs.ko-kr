@@ -1,4 +1,5 @@
 ---
+description: 오류 및 이벤트 참조(복제)
 title: 오류 및 이벤트 참조(복제) | Microsoft 문서
 ms.custom: ''
 ms.date: 03/03/2017
@@ -17,12 +18,12 @@ ms.assetid: e67d1bab-47b6-441d-ab9c-251a2ca499e1
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 273caba1a25efbfd30bb856f6ebaf157b9bf5a03
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 10d2073949de158c0773876adef0ba06d6e587eb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85652990"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482426"
 ---
 # <a name="errors-and-events-reference-replication"></a>오류 및 이벤트 참조(복제)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -78,7 +79,7 @@ ms.locfileid: "85652990"
 |MSSQL_ENG021642. [Troubleshooting Oracle Publishers](../../relational-databases/replication/non-sql/troubleshooting-oracle-publishers.md)을 참조하세요.|유형이 다른 게시자에는 연결된 서버가 필요합니다. 이름이 '%s'인 연결된 서버가 이미 있습니다. 연결된 서버를 제거하거나 다른 게시자 이름을 선택하십시오.|  
 |MSSQL_ENG021663. [Troubleshooting Oracle Publishers](../../relational-databases/replication/non-sql/troubleshooting-oracle-publishers.md)을 참조하세요.|원본 테이블 [%s].[%s]에 대해 올바른 기본 키를 찾을 수 없습니다.|  
 |MSSQL_ENG021684. [Troubleshooting Oracle Publishers](../../relational-databases/replication/non-sql/troubleshooting-oracle-publishers.md)을 참조하세요.|Oracle 게시자 '%s'의 관리자 로그인과 연관된 사용 권한이 충분하지 않습니다.|  
-|[MSSQL_ENG021797](../../relational-databases/replication/mssql-eng021797.md)|'%s'은(는) '컴퓨터\\로그인' 또는 '도메인\\로그인' 형식의 올바른 Windows 로그인이어야 합니다. '%s'에 대한 설명서를 참조하십시오.|  
+|[MSSQL_ENG021797](../../relational-databases/replication/mssql-eng021797.md)|‘%s’은(는) '머신\\로그인' 또는 '도메인\\로그인' 형식의 올바른 Windows 로그인이어야 합니다. '%s'에 대한 설명서를 참조하십시오.|  
 |[MSSQL_ENG021798](../../relational-databases/replication/mssql-eng021798.md)|계속하려면 먼저 '%s'을(를) 통해 '%s' 에이전트 작업을 추가해야 합니다. '%s'에 대한 설명서를 참조하십시오.|  
 |[MSSQL_REPL020011](../../relational-databases/replication/mssql-repl020011.md)|'%2'에서 '%1'을(를) 실행할 수 없습니다.|  
 |[MSSQL_REPL027056](../../relational-databases/replication/mssql-repl027056.md)|병합 프로세스에서 '%1'의 생성 기록을 변경할 수 없습니다. 문제를 해결하려면 자세한 기록 로깅으로 동기화를 다시 시작하고 기록할 출력 파일을 지정하십시오.|  

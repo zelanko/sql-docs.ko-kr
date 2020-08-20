@@ -1,4 +1,5 @@
 ---
+description: 분할-MDX 연산자 참조
 title: 나누면 (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 8dd20a0b60e105ac48a54d533055717e3f07a006
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a0d6947e1e0b4dc45d56980b734c2de98d8ad24c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68049317"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484026"
 ---
 # <a name="divide---mdx-operator-reference"></a>분할-MDX 연산자 참조
 
@@ -31,10 +32,10 @@ Dividend / Divisor
  *배당*  
  숫자 값을 반환하는 유효한 MDX 식입니다.  
   
- *Divisor*  
+ *나누기*  
  숫자 값을 반환하는 유효한 MDX 식입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
  우선 순위가 더 높은 매개 변수의 데이터 형식을 갖는 값입니다.  
   
 ## <a name="remarks"></a>설명  
@@ -42,7 +43,7 @@ Dividend / Divisor
   
  두 식이 모두 동일한 데이터 형식으로 되어 있거나 식 하나가 암시적으로 다른 식의 데이터 형식으로 변환될 수 있어야 합니다. *제수가* null 값으로 계산 되는 경우 연산자는 오류를 발생 시킵니다. *제* 수와 *피제수* 가 모두 null 값으로 계산 되는 경우 연산자는 null 값을 반환 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 이 연산자의 사용 방법을 보여 줍니다.  
   
 ```  

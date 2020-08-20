@@ -1,4 +1,5 @@
 ---
+description: 집계 변환을 사용하여 데이터 세트의 값 집계
 title: 집계 변환을 사용하여 데이터 세트의 값 집계 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 01b81c0f-d5e0-483b-81b2-73800a6945ac
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7290cc15e5721918af9eaa3507465db222f812cf
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 6c53ac2228a7ddbef51473ba42c9688566e9dbfb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915776"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484453"
 ---
 # <a name="aggregate-values-in-a-dataset-with-the-aggregate-transformation"></a>집계 변환을 사용하여 데이터 세트의 값 집계
 

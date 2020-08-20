@@ -1,4 +1,5 @@
 ---
+description: 사용자 정의 집계 만들기
 title: 사용자 정의 집계 만들기 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/16/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c278b746-6323-4b32-b460-239915acc067
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d66db5586f5f80f8f0e8954d041befbcd4c5eba4
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: 6a27c30c836b314260f8a7b5c238a8ce0a88e178
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86053639"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485333"
 ---
 # <a name="create-user-defined-aggregates"></a>사용자 정의 집계 만들기
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -52,7 +53,7 @@ ms.locfileid: "86053639"
   
 -   [CREATE AGGREGATE&#40;Transact-SQL&#41;](../../t-sql/statements/create-aggregate-transact-sql.md)  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [CLR&#40;공용 언어 런타임&#41; 통합 프로그래밍 개요](../../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md)  
   
   

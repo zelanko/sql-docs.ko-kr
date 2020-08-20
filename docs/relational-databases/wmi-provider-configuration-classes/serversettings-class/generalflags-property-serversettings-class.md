@@ -1,4 +1,5 @@
 ---
+description: GeneralFlags 속성(ServerSettings 클래스)
 title: 일반 Flags 속성 (ServerSettings)
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 129bff8d-d2bc-4297-952f-d0a919d169f7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a0de38cfc0e7796be36c76c7a8412a3f635c7149
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 10e9e8bb6167626eea89f9037c50b875f9707496
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888615"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485146"
 ---
 # <a name="generalflags-property-serversettings-class"></a>GeneralFlags 속성(ServerSettings 클래스)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

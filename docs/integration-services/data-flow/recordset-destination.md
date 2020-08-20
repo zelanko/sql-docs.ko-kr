@@ -1,4 +1,5 @@
 ---
+description: 레코드 집합 대상
 title: 레코드 집합 대상 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: be973cf1-c4ff-49f8-987e-314c08ef98e4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: bb6f5361b6ad2f967bc57838ac5df785733d9aa8
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 75027180045921b52377567bd90c0fa10c5fed1a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916024"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484589"
 ---
 # <a name="recordset-destination"></a>레코드 집합 대상
 

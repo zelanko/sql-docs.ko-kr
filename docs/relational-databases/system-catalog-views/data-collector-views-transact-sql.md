@@ -1,4 +1,5 @@
 ---
+description: 데이터 수집기 뷰(Transact-SQL)
 title: 데이터 수집기 뷰 (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a005e885-7813-4c7e-b332-b01d9e9d4054
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 69ae9f64a47283d001fbb6a210f530034b21f228
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b35f12b1ff06e417a01fafe6f4de1c012ee8f9fe
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918049"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482218"
 ---
 # <a name="data-collector-views-transact-sql"></a>데이터 수집기 뷰(Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -1,4 +1,5 @@
 ---
+description: 동기 출력을 사용하여 사용자 지정 변환 구성 요소 개발
 title: 동기 출력을 사용하여 사용자 지정 변환 구성 요소 개발 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: b694d21f-9919-402d-9192-666c6449b0b7
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0b4c465ddb7efab8c5e2398facc51e89425389cb
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 755fdbcd3ecf01e0b76548f728d77c66ebe011a3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920219"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484316"
 ---
 # <a name="developing-a-custom-transformation-component-with-synchronous-outputs"></a>동기 출력을 사용하여 사용자 지정 변환 구성 요소 개발
 
@@ -115,7 +116,7 @@ End Class
   
  열의 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn100.DataType%2A>은 다른 속성에 대해 설정되는 값을 결정합니다. 다음 표에서는 각 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn100.DataType%2A>의 종속 속성에 대한 요구 사항을 보여 줍니다. 이 목록에 포함되지 않은 데이터 형식의 종속 속성은 0으로 설정됩니다.  
   
-|DataType|길이|확장|자릿수|CodePage|  
+|DataType|길이|확장|전체 자릿수|CodePage|  
 |--------------|------------|-----------|---------------|--------------|  
 |DT_DECIMAL|0|0보다 크고 28보다 작거나 같습니다.|0|0|  
 |DT_CY|0|0|0|0|  

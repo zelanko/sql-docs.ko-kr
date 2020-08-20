@@ -1,4 +1,5 @@
 ---
+description: 데이터베이스 전송 태스크
 title: 데이터베이스 전송 태스크 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: b9a2e460-cdbc-458f-8df8-06b8b2de3d67
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9aafd57717c2ac90757393ae8d0d75e569b88942
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 919b6b31618b1fcf36f0834aa6a3c5c2436c198b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913998"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484532"
 ---
 # <a name="transfer-database-task"></a>데이터베이스 전송 태스크
 

@@ -1,4 +1,5 @@
 ---
+description: sys.filetable_system_defined_objects(Transact-SQL)
 title: sys. filetable_system_defined_objects (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 62022e6b-46f6-495f-b14b-53f41e040361
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0232a635267dc97f53f67309fb59d06651d918ce
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7076e365989a9ceeac69ed9025f579edd8071a1f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85786433"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482126"
 ---
 # <a name="sysfiletable_system_defined_objects-transact-sql"></a>sys.filetable_system_defined_objects(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

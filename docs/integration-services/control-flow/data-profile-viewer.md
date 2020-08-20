@@ -1,4 +1,5 @@
 ---
+description: 데이터 프로필 뷰어(Data Profile Viewer)
 title: 데이터 프로필 뷰어 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b9043428-ce26-45bb-910c-588d07579565
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4197d1acc7a7faaa8414b6ff73e7d6876610cece
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: a2ee5f6f01a098c2e8a67b09e915a947010d5758
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919817"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484655"
 ---
 # <a name="data-profile-viewer"></a>데이터 프로필 뷰어(Data Profile Viewer)
 

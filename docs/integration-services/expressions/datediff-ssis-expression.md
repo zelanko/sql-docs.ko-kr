@@ -1,4 +1,5 @@
 ---
+description: DATEDIFF(SSIS 식)
 title: DATEDIFF(SSIS 식) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 449b327f-47c7-4709-8bc6-4ee9a35cc330
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2f869de30e8f6b6c65d01cc3189d9e63abfb57e7
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 3e7133fffcea2afe188e00f2c80aa51d6825386c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914741"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484436"
 ---
 # <a name="datediff-ssis-expression"></a>DATEDIFF(SSIS 식)
 
@@ -54,14 +55,14 @@ DATEDIFF(datepart, startdate, endate)
 |--------------|-------------------|  
 |Year|yy, yyyy|  
 |Quarter|qq, q|  
-|Month|mm, m|  
+|월|mm, m|  
 |Dayofyear|dy, y|  
 |일|dd, d|  
-|Week|wk, ww|  
+|주|wk, ww|  
 |요일|dw, w|  
-|Hour|Hh|  
+|시간|Hh|  
 |Minute|mi, n|  
-|초|ss, s|  
+|Second|ss, s|  
 |Millisecond|Ms|  
   
  인수가 Null이면 DATEDIFF 결과도 Null입니다.  
@@ -91,7 +92,7 @@ DATEDIFF("mm", (DT_DBTIMESTAMP)"8/1/2003",GETDATE())
 DATEDIFF("Week", ModifiedDate,@YearEndDate)  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [DATEADD&#40;SSIS 식&#41;](../../integration-services/expressions/dateadd-ssis-expression.md)   
  [DATEPART&#40;SSIS 식&#41;](../../integration-services/expressions/datepart-ssis-expression.md)   
  [DAY&#40;SSIS 식&#41;](../../integration-services/expressions/day-ssis-expression.md)   

@@ -1,4 +1,5 @@
 ---
+description: sys.sysremotelogins(Transact-SQL)
 title: sys.sysremotelogins (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: b7ffcfa6-aed8-41d4-8b70-845439ab813d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f1f9d077cb06e2b2686f5913676a2fc35b8a35f6
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 39cf5ae09d0857acf7d0d89b2be789162a751b64
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894744"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482061"
 ---
 # <a name="syssysremotelogins-transact-sql"></a>sys.sysremotelogins(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

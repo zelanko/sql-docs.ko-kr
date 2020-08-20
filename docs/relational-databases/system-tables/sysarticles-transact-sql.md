@@ -1,4 +1,5 @@
 ---
+description: sysarticles(Transact-SQL)
 title: sysarticles (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9d9d5d51-6d8f-4e42-84a9-82e58eb0301e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 055e2c7999b2dddf7bb0561e912652ad9046b53e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 174d8adeaced4a98639e8474184ba3e1359f79cb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889288"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485420"
 ---
 # <a name="sysarticles-transact-sql"></a>sysarticles(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "85889288"
 |**artid**|**int**|아티클에 대해 고유한 ID를 제공하는 ID 열입니다.|  
 |**creation_script**|**nvarchar(255)**|아티클에 대한 스키마 스크립트입니다.|  
 |**del_cmd**|**nvarchar(255)**|삭제를 복제할 때 테이블 아티클에서 사용되는 복제 명령 유형입니다. 자세한 내용은 [트랜잭션 아티클에 대한 변경 내용을 전파하는 방법 지정](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)을 참조하세요.|  
-|**한**|**nvarchar(255)**|아티클에 대한 설명 항목입니다.|  
+|**description**|**nvarchar(255)**|아티클에 대한 설명 항목입니다.|  
 |**dest_table**|**sysname**|대상 테이블의 이름입니다.|  
 |**필터가**|**int**|수평 분할에 사용하는 저장 프로시저 ID입니다.|  
 |**filter_clause**|**ntext**|행 필터링에 사용하는 아티클의 WHERE 절입니다.|  
@@ -56,8 +57,8 @@ ms.locfileid: "85889288"
 |**fire_triggers_on_snapshot**|**bit**|복제된 트리거를 스냅샷이 적용될 때 실행할지 여부를 나타냅니다. 다음 값 중 하나일 수 있습니다.<br /><br /> **0** = 트리거가 실행 되지 않습니다.<br /><br /> **1** = 트리거가 실행 됩니다.|  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;복제 테이블](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Transact-sql&#41;&#40;복제 뷰](../../relational-databases/system-views/replication-views-transact-sql.md)   
+ [Transact-sql&#41;&#40;복제 테이블 ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Transact-sql&#41;&#40;복제 뷰 ](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [Transact-sql&#41;sp_addarticle &#40;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
  [Transact-sql&#41;sp_changearticle &#40;](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)   
  [sp_helparticle&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)  

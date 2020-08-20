@@ -1,4 +1,5 @@
 ---
+description: 사용자 지정 원본 구성 요소 개발
 title: 사용자 지정 원본 구성 요소 개발 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 4dc0f631-8fd6-4007-b573-ca67f58ca068
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ea134d0ec6ca3a7868e21577d033a53b6a8e4f11
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ba5222b35e6e55329e746f316a0503c27092441a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920251"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484354"
 ---
 # <a name="developing-a-custom-source-component"></a>사용자 지정 원본 구성 요소 개발
 
@@ -173,7 +174,7 @@ End Sub
   
  열의 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn100.DataType%2A>은 다른 속성에 대해 설정되는 값을 결정합니다. 다음 표에서는 각 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn100.DataType%2A>의 종속 속성에 대한 요구 사항을 보여 줍니다. 이 목록에 포함되지 않은 데이터 형식의 종속 속성은 0으로 설정됩니다.  
   
-|DataType|길이|확장|자릿수|CodePage|  
+|DataType|길이|확장|전체 자릿수|CodePage|  
 |--------------|------------|-----------|---------------|--------------|  
 |DT_DECIMAL|0|0보다 크고 28보다 작거나 같습니다.|0|0|  
 |DT_CY|0|0|0|0|  

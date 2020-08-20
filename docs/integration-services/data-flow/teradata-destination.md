@@ -1,4 +1,5 @@
 ---
+description: Teradata 대상
 title: Teradata 대상 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/22/2019
@@ -9,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2091999bce0fbacb99083239a7eb209fa8939505
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: caa6cc656e37f4718e06c9af010b458dfa1b738d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912387"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484522"
 ---
 # <a name="teradata-destination"></a>Teradata 대상
 

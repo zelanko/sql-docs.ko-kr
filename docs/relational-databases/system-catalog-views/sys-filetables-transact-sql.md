@@ -1,4 +1,5 @@
 ---
+description: sys.filetables(Transact-SQL)
 title: filetable (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: a740be59-cd52-4707-9ad2-5203669a63ac
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d83b58f8ff153583775e2e321c5524b43b205745
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7ac470d0cdc64860721f045a3108c0221d20e219
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85738767"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482204"
 ---
 # <a name="sysfiletables-transact-sql"></a>sys.filetables(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,4 +1,5 @@
 ---
+description: 유효성 검사 대화 상자
 title: 유효성 검사 대화 상자 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ f1_keywords:
 ms.assetid: 134e14ce-4f8d-4a20-889a-918014c841d8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d261c049ab59459d81a26d8f9cf23c7268ce53e8
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: a65f5d8114907472eb03aa06e428927aa1408b7b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922564"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484936"
 ---
 # <a name="validate-dialog-box"></a>유효성 검사 대화 상자
 

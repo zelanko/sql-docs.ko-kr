@@ -1,4 +1,5 @@
 ---
+description: DrilldownLevel(MDX)
 title: DrilldownLevel (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 6fdbc6ef265d51484160ab57a87e5672362326cc
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: bc939e8aa055a2a36216a6c94fd032e561cbabf5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970074"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484006"
 ---
 # <a name="drilldownlevel-mdx"></a>DrilldownLevel(MDX)
 
@@ -33,13 +34,13 @@ DrilldownLevel(Set_Expression [,[Level_Expression] ,[Index]] [,INCLUDE_CALC_MEMB
  집합을 반환하는 유효한 MDX 식입니다.  
   
  *Level_Expression*  
- (선택 사항) 드릴다운할 수준을 명시적으로 식별하는 MDX 식입니다. 수준 식을 지정하는 경우 아래의 인덱스 인수를 건너뛰세요.  
+ (선택 사항). 드릴다운할 수준을 명시적으로 식별하는 MDX 식입니다. 수준 식을 지정하는 경우 아래의 인덱스 인수를 건너뛰세요.  
   
  *Index*  
- (선택 사항) 집합 내에서 드릴다운할 대상 계층 번호를 지정하는 유효한 숫자 식입니다. Level_Expression 대신 인덱스 수준을 사용하여 드릴다운할 수준을 명시적으로 식별할 수 있습니다.  
+ (선택 사항). 집합 내에서 드릴다운할 대상 계층 번호를 지정하는 유효한 숫자 식입니다. Level_Expression 대신 인덱스 수준을 사용하여 드릴다운할 수준을 명시적으로 식별할 수 있습니다.  
   
  *Include_Calc_Members*  
- (선택 사항) 드릴다운 수준에서 계산된 구성원 포함 여부(존재하는 경우)를 나타내는 플래그입니다.  
+ (선택 사항). 드릴다운 수준에서 계산된 구성원 포함 여부(존재하는 경우)를 나타내는 플래그입니다.  
   
 ## <a name="remarks"></a>설명  
  **DrilldownLevel** 함수는 지정 된 집합에 포함 된 멤버를 기반으로 하는 자식 멤버 집합을 계층적 순서로 반환 합니다. 이때 함수의 결과 집합에 포함되는 모든 자식 구성원이 해당 부모 구성원 바로 아래에 포함된다는 점만 제외하고 지정된 집합의 원래 구성원 순서가 유지됩니다.  
@@ -54,7 +55,7 @@ DrilldownLevel(Set_Expression [,[Level_Expression] ,[Index]] [,INCLUDE_CALC_MEMB
   
  XMLA 속성 MdpropMdxDrillFunctions를 쿼리하면 서버에서 드릴링 함수에 대해 제공 하는 지원 수준을 확인할 수 있습니다. 자세한 내용은 [지원 되는 Xmla 속성 &#40;xmla&#41;](https://docs.microsoft.com/analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) 를 참조 하세요.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  Adventure Works 큐브를 사용하여 SSMS의 MX 쿼리 창에서 다음 예를 시도할 수 있습니다.  
   
  **예 1-최소 구문을 보여 줍니다.**  

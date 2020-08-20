@@ -1,4 +1,5 @@
 ---
+description: MDX 데이터 정의 - CREATE SET
 title: CREATE SET 문 (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 6f8d522f7832a280aa8b280bbe912640b566974a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d1712d109f7aa984e4b7b2b2a5512ce043869aad
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68893739"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483889"
 ---
 # <a name="mdx-data-definition---create-set"></a>MDX 데이터 정의 - CREATE SET
 
@@ -92,12 +93,12 @@ SELECT [Core Products] ON 0
  큐브를 쿼리하는 사용자에게 집합을 표시하지 않도록 지정합니다.  
   
 ## <a name="standard-properties"></a>표준 속성  
- 각 집합에는 기본 속성 집합이 있습니다. 클라이언트 응용 프로그램이에 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]연결 된 경우 관리자가 선택 하는 대로 기본 속성이 지원 되거나 지원 될 수 있습니다.  
+ 각 집합에는 기본 속성 집합이 있습니다. 클라이언트 응용 프로그램이에 연결 된 경우 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 관리자가 선택 하는 대로 기본 속성이 지원 되거나 지원 될 수 있습니다.  
   
 |속성 식별자|의미|  
 |-------------------------|-------------|  
 |CAPTION|클라이언트 애플리케이션이 집합에 대한 캡션으로 사용하는 문자열입니다.|  
-|DISPLAY_FOLDER|클라이언트 애플리케이션이 집합을 표시하기 위해 사용하는 표시 폴더의 경로를 식별하는 문자열입니다. 폴더 수준 구분 기호는 클라이언트 애플리케이션에서 정의합니다. 에서 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]제공 하는 도구 및 클라이언트의 경우 백슬래시 (\\)는 수준 구분 기호입니다. 정의 집합에 대해 여러 표시 폴더를 제공하려면 세미콜론(;)을 사용하여 폴더를 구분하십시오.|  
+|DISPLAY_FOLDER|클라이언트 애플리케이션이 집합을 표시하기 위해 사용하는 표시 폴더의 경로를 식별하는 문자열입니다. 폴더 수준 구분 기호는 클라이언트 애플리케이션에서 정의합니다. 에서 제공 하는 도구 및 클라이언트의 경우 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 백슬래시 ( \\ )는 수준 구분 기호입니다. 정의 집합에 대해 여러 표시 폴더를 제공하려면 세미콜론(;)을 사용하여 폴더를 구분하십시오.|  
   
 ## <a name="see-also"></a>참고 항목  
  [DROP SET 문이 MDX를 &#40;&#41;](../mdx/mdx-data-definition-drop-set.md)   

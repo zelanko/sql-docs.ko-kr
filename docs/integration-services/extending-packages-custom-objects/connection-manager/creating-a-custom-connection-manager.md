@@ -1,4 +1,5 @@
 ---
+description: 사용자 지정 연결 관리자 만들기
 title: 사용자 지정 연결 관리자 만들기 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e83f8e02-ace4-42e0-b979-2f6be1460985
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c137a62711ad824772b1845776cd383b3ee235ce
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 55eafedfd05ce1dde2468bfda62b515057ea4bb6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919469"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484271"
 ---
 # <a name="creating-a-custom-connection-manager"></a>사용자 지정 연결 관리자 만들기
 

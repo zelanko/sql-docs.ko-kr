@@ -1,4 +1,5 @@
 ---
+description: 분할된 테이블 및 인덱스 만들기
 title: 분할된 테이블 및 인덱스 만들기 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/14/2017
@@ -29,12 +30,12 @@ ms.assetid: 7641df10-1921-42a7-ba6e-4cb03b3ba9c8
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 147a5490d2940caebc9184e8049e7c430959b081
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a22807e98d887504cb1700e7bc3497984b699059
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787547"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482537"
 ---
 # <a name="create-partitioned-tables-and-indexes"></a>분할된 테이블 및 인덱스 만들기
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -117,7 +118,7 @@ ms.locfileid: "85787547"
   
 3.  **분할 열 선택** 페이지의 **사용 가능한 분할 열** 표에서 테이블을 분할할 열을 선택합니다. 데이터를 분할하는 데 사용할 수 있는 데이터 형식을 가진 열만 **사용 가능한 분할 열** 표에 표시됩니다. 계산 열을 분할 열로 선택하면 해당 열은 지속형 열로 지정되어야 합니다.  
   
-     분할 열과 값 범위를 선택할 때는 논리적 방법으로 데이터를 그룹화할 수 있는 정도를 고려해야 합니다. 예를 들어 월 또는 연도의 분기에 따라 논리적 그룹으로 데이터를 분할하도록 선택할 수 있습니다. 데이터에 대해 만들게 될 쿼리에 따라 이 논리적 그룹이 테이블 파티션을 관리하기에 충분한지 여부가 결정됩니다. **text**, **ntext**, **image**, **xml**, **timestamp**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** , 별칭 데이터 형식 또는 CLR 사용자 정의 데이터 형식을 제외한 모든 데이터 형식은 분할 열로 사용할 수 있습니다.  
+     분할 열과 값 범위를 선택할 때는 논리적 방법으로 데이터를 그룹화할 수 있는 정도를 고려해야 합니다. 예를 들어 월 또는 연도의 분기에 따라 논리적 그룹으로 데이터를 분할하도록 선택할 수 있습니다. 데이터에 대해 만들게 될 쿼리에 따라 이 논리적 그룹이 테이블 파티션을 관리하기에 충분한지 여부가 결정됩니다. **text**, **ntext**, **image**, **xml**, **timestamp**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, 별칭 데이터 형식 또는 CLR 사용자 정의 데이터 형식을 제외한 모든 데이터 형식은 분할 열로 사용할 수 있습니다.  
   
      이 페이지에서는 다음과 같은 옵션을 추가로 선택할 수 있습니다.  
   
@@ -203,7 +204,7 @@ ms.locfileid: "85787547"
   
                 -   **매(Day)** 를 선택한 경우 작업 일정을 실행할 날짜와 작업 일정을 반복할 월 수를 모두 입력합니다. 예를 들어 작업 일정을 격월로 15일에 실행하려면 **매(Day)** 를 선택하고 첫 번째 상자에 "15", 두 번째 상자에 "2"를 입력합니다. 두 번째 상자에 허용되는 가장 큰 숫자는 "99"입니다.  
   
-                -   **매(The)** 를 선택한 경우 작업 일정을 실행할 요일 및 작업 일정을 반복할 월 수를 입력합니다. 예를 들어 작업 일정을 격월로 마지막 평일에 실행하려면 **매(Day)** 를 선택하고 첫 번째 목록에서 **마지막**, 두 번째 목록에서 **평일**을 선택한 다음, 마지막 상자에 "2"를 입력합니다. 처음 두 목록에서 **첫 번째**, **두 번째**, **세 번째**또는 **네 번째**및 특정 평일(예: 일요일 또는 수요일)을 선택할 수도 있습니다. 마지막 상자에 허용되는 가장 큰 숫자는 "99"입니다.  
+                -   **매(The)** 를 선택한 경우 작업 일정을 실행할 요일 및 작업 일정을 반복할 월 수를 입력합니다. 예를 들어 작업 일정을 격월로 마지막 평일에 실행하려면 **매(Day)** 를 선택하고 첫 번째 목록에서 **마지막**, 두 번째 목록에서 **평일**을 선택한 다음, 마지막 상자에 "2"를 입력합니다. **첫 번째**, **두 번째**, **세 번째** 또는 **네 번째** 또는 특정 평일(예: 일요일 또는 수요일)을 선택할 수도 있습니다. 마지막 상자에 허용되는 가장 큰 숫자는 "99"입니다.  
   
         2.  **일별 빈도**에서 작업 일정이 실행되는 날에 작업 일정을 반복하는 빈도를 지정합니다.  
   
@@ -384,7 +385,7 @@ ms.locfileid: "85787547"
   
 #### <a name="to-determine-the-partition-column-for-a-partitioned-table"></a>분할된 테이블에 대한 파티션 열을 확인하려면  
   
-1.  다음 쿼리는 테이블에 대한 분할 열의 이름을 반환합니다. `PartitionTable`입니다.  
+1.  다음 쿼리는 테이블에 대한 분할 열의 이름을 반환합니다. `PartitionTable`.  
   
     ```  
     SELECT   

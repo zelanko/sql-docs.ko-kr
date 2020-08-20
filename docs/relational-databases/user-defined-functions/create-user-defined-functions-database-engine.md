@@ -1,4 +1,5 @@
 ---
+description: 사용자 정의 함수 만들기(데이터베이스 엔진)
 title: 사용자 정의 함수 만들기(데이터베이스 엔진) | Microsoft 문서
 ms.custom: ''
 ms.date: 11/09/2017
@@ -19,12 +20,12 @@ ms.assetid: f0d5dd10-73fd-4e05-9177-07f56552bdf7
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1cd1d720f5f5e9a9896e341a31d604405ae7d0d3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9739c1c5476b189cce41d14190165c9b82587f93
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722879"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485351"
 ---
 # <a name="create-user-defined-functions-database-engine"></a>사용자 정의 함수 만들기(데이터베이스 엔진)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -204,7 +205,7 @@ FROM dbo.ufn_FindReports(1);
 > [!NOTE]  
 > 저장 프로시저나 사용자 정의 함수에 매개 변수를 전달할 때 또는 일괄 처리 문에서 변수를 선언하고 설정할 때 ANSI_WARNINGS는 인식되지 않습니다. 예를 들어 변수가 **char(3)** 로 정의된 경우 3자보다 큰 값으로 설정하면 해당 데이터가 정의된 크기로 잘리고 `INSERT` 또는 `UPDATE` 문은 성공합니다.
 
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [사용자 정의 함수](../../relational-databases/user-defined-functions/user-defined-functions.md)     
  [CREATE FUNCTION&#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md)    
  [ALTER FUNCTION&#40;Transact-SQL&#41;](../../tools/sql-server-profiler/start-sql-server-profiler.md)    

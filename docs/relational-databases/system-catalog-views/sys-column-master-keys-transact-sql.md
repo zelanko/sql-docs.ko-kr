@@ -1,4 +1,5 @@
 ---
+description: sys.column_master_keys(Transact-SQL)
 title: sys. column_master_keys (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/15/2019
@@ -25,11 +26,12 @@ ms.assetid: fbec2efa-5fe9-4121-9b34-60497b0b2aca
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e28fae709bc81a10c6ad23228d12532172841488
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 8a0192fd9a323e750a2fd8f635da93f4c4f549ca
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003074"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482145"
 ---
 # <a name="syscolumn_master_keys-transact-sql"></a>sys.column_master_keys(Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -49,14 +51,14 @@ ms.locfileid: "86003074"
 
 
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  **VIEW ANY COLUMN MASTER KEY** 권한이 필요 합니다.  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;열 마스터 키 만들기](../../t-sql/statements/create-column-master-key-transact-sql.md)   
- [Transact-sql&#41;&#40;보안 카탈로그 뷰](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
+ [Transact-sql&#41;&#40;열 마스터 키 만들기 ](../../t-sql/statements/create-column-master-key-transact-sql.md)   
+ [보안 카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [sys.column_encryption_key_values &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md)  
  [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
  [Always Encrypted 키 관리 개요](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)   

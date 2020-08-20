@@ -1,4 +1,5 @@
 ---
+description: OLE DB 테이블 반환 매개 변수 형식 지원 (Native Client OLE DB 공급자)
 title: 테이블 반환 매개 변수 형식 지원 (Native Client OLE DB 공급자)
 ms.custom: ''
 ms.date: 03/06/2017
@@ -13,12 +14,12 @@ ms.assetid: 147036a0-260e-4f81-8b3b-89209e023a32
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fd9c434ea94c2861f0031aadc2ead229b31d743f
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 6852ac833d45f132d514f9e707e6a3c2103c82b5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246780"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482602"
 ---
 # <a name="ole-db-table-valued-parameter-type-support-native-client-ole-db-provider"></a>OLE DB 테이블 반환 매개 변수 형식 지원 (Native Client OLE DB 공급자)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -63,7 +64,7 @@ CoType RowsetTVP
  테이블 반환 매개 변수를 지원하는 OLE DB 속성에 관한 자세한 내용은 [OLE DB 테이블 반환 매개 변수 형식 지원&#40;속성&#41;](../../relational-databases/native-client-ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-properties.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [테이블 반환 매개 변수 OLE DB &#40;&#41;](../../relational-databases/native-client-ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)   
+ [테이블 반환 매개 변수&#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)   
  [테이블 반환 매개 변수&#40;OLE DB&#41; 사용](../../relational-databases/native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: 다중 파일 연결 관리자
 title: 다중 파일 연결 관리자 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 10bdc56e-c5cd-4ddb-b2f7-375fe57fe8b2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5d84724471eba8f1b5215a976e51e8c498352e05
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 62f034f56006b8a1eb417d7b9c2ea6d0bd2436cf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923151"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484659"
 ---
 # <a name="multiple-files-connection-manager"></a>다중 파일 연결 관리자
 

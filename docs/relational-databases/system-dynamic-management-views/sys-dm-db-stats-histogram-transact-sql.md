@@ -1,4 +1,5 @@
 ---
+description: sys.dm_db_stats_histogram (Transact-SQL)
 title: sys. dm_db_stats_histogram (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,12 +21,12 @@ ms.assetid: 1897fd4a-8d51-461e-8ef2-c60be9e563f2
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 35f9272b3b11e5c29fe0e2f9068ad458bd5becfa
-ms.sourcegitcommit: 95be98587f6a3730ca75a77676dd952c45e4f53a
+ms.openlocfilehash: 783a7033e9db323ea774b4456c2159670104fecb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88046891"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482006"
 ---
 # <a name="sysdm_db_stats_histogram-transact-sql"></a>sys.dm_db_stats_histogram (Transact-SQL)
 
@@ -92,7 +93,7 @@ sys.dm_db_stats_histogram (object_id, stats_id)
 
 사용자가 통계 열에 대한 select 권한이 있거나 테이블을 소유하거나 `sysadmin` 고정 서버 역할, `db_owner` 고정 데이터베이스 역할, 또는 `db_ddladmin` 고정 데이터베이스 역할의 멤버여야 합니다.
 
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
 
 ### <a name="a-simple-example"></a>A. 간단한 예    
 다음 예에서는 간단한 테이블을 만들고 채웁니다. 는 열에 대 한 통계를 만듭니다 `Country_Name` .

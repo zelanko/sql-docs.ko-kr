@@ -1,4 +1,5 @@
 ---
+description: Min(MDX)
 title: Min (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 83061ff3e9923e65f231675c1bc5b1913a5156fb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c93abf0f98b04994f028379b8bd576deff4b7ea1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68114384"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483816"
 ---
 # <a name="min-mdx"></a>Min(MDX)
 

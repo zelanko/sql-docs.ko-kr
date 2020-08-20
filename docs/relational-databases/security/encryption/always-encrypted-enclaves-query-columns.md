@@ -1,4 +1,5 @@
 ---
+description: 보안 Enclave를 사용한 Always Encrypted를 이용하는 열 쿼리
 title: 보안 Enclave를 사용한 Always Encrypted를 이용하는 열 쿼리 | Microsoft Docs
 ms.custom: ''
 ms.date: 10/31/2019
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: bf127e7aa40e538bb3dee390f3661ae5d74413f3
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: 8daabf320e0f736bcfabc5addb8508320b10bb8f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411499"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482226"
 ---
 # <a name="query-columns-using-always-encrypted-with-secure-enclaves"></a>보안 Enclave를 사용한 Always Encrypted를 이용하는 열 쿼리
 [!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]

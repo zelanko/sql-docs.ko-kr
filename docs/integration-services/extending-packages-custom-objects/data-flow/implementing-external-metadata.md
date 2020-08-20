@@ -1,4 +1,5 @@
 ---
+description: 외부 메타데이터 구현
 title: 외부 메타데이터 구현 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 8f5bd3ed-3e79-43a4-b6c1-435e4c2cc8cc
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 65757d974c6deb690248343140a157e81e083a70
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 76296ff7dc7c5084a2c62613182c4d3e0fa6f80b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919673"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484205"
 ---
 # <a name="implementing-external-metadata"></a>외부 메타데이터 구현
 
@@ -112,7 +113,7 @@ Public  Overrides Function Validate() As DTSValidationStatus
 End Function  
 ```  
 
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [데이터 흐름](../../../integration-services/data-flow/data-flow.md)  
   
   

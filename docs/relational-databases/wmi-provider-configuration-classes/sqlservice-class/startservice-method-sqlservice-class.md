@@ -1,4 +1,5 @@
 ---
+description: StartService 메서드(SqlService 클래스)
 title: StartService 메서드 (SqlService)
 ms.custom: seo-lt-2019
 ms.date: 03/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 83dfb6bd-dbd5-45d8-aad2-a11926317f91
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0a6b3048ae439cdca6727f1547c2aa956bca325f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 5add2aebb0a2a148b803fadbab454d2d72c2bf3b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888314"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485081"
 ---
 # <a name="startservice-method-sqlservice-class"></a>StartService 메서드(SqlService 클래스)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -43,10 +44,10 @@ object.StartService()
  다음 시작 상태 중 하나를 지정하는 uint32 값입니다.  
   
  0  
- 성공. 요청이 수락되었습니다.  
+ 성공했습니다. 요청이 수락되었습니다.  
   
  1  
- 지원되지 않음 요청이 지원되지 않습니다.  
+ 지원되지 않습니다. 요청이 지원되지 않습니다.  
   
  2  
  액세스가 거부되었습니다.)가 나타납니다. 사용자에게 적절한 액세스 권한이 없습니다.  

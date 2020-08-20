@@ -1,4 +1,5 @@
 ---
+description: sys.sysconfigures(Transact-SQL)
 title: sys.sys구성 (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 146bf10a-c898-4676-a2a1-673fb1cee7a2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 213c4ec07b733b355de8cd7cdb0ae0b14f165584
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f67d5742c5de1f806194090ebe366693cc8c9457
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900525"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482203"
 ---
 # <a name="syssysconfigures-transact-sql"></a>sys.sysconfigures(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

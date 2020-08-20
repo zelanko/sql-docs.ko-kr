@@ -1,4 +1,5 @@
 ---
+description: 집계 변환
 title: 집계 변환 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 2871cf2a-fbd3-41ba-807d-26ffff960e81
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e1e643fdbf50bee27763395430c24cabd9e47816
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 69db57924486ea2cf1e02c76f78a2ed75a559fd6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912326"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484493"
 ---
 # <a name="aggregate-transformation"></a>집계 변환
 
@@ -178,7 +179,7 @@ ms.locfileid: "86912326"
   
 |작업(Operation)|Description|  
 |---------------|-----------------|  
-|**Group By**|데이터 세트를 그룹으로 나눕니다. 모든 데이터 형식의 열을 그룹화할 수 있습니다. 자세한 내용은 GROUP BY를 참조하십시오.|  
+|**GroupBy**|데이터 세트를 그룹으로 나눕니다. 모든 데이터 형식의 열을 그룹화할 수 있습니다. 자세한 내용은 GROUP BY를 참조하십시오.|  
 |**Sum**|열에 있는 값의 합계를 계산합니다. 숫자 데이터 형식의 열만 합계를 계산할 수 있습니다. 자세한 내용은 SUM을 참조하십시오.|  
 |**평균**|열에 있는 열 값의 평균을 반환합니다. 숫자 데이터 형식의 열만 평균을 계산할 수 있습니다. 자세한 내용은 AVG를 참조하십시오.|  
 |**Count**|그룹의 항목 개수를 반환합니다. 자세한 내용은 COUNT를 참조하십시오.|  

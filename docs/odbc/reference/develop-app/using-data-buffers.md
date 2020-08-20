@@ -1,4 +1,5 @@
 ---
+description: 데이터 버퍼 사용
 title: 데이터 버퍼 사용 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 06b9f603-b395-497c-979b-d3ec3d6db375
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 510d3a6728efb63c3c352e5215e54d1bf7c4e025
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0ac3967aad256715ad27e113b64a97b8253e57e0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306774"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482780"
 ---
 # <a name="using-data-buffers"></a>데이터 버퍼 사용
 데이터 버퍼는 세 가지 정보, 즉 형식, 주소 및 바이트 길이로 설명 됩니다. 함수가 이러한 정보 중 하나를 필요로 하 고 아직 알지 못하는 경우에는 응용 프로그램에서 전달 하는 인수를 포함 합니다.  

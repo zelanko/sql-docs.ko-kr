@@ -1,4 +1,5 @@
 ---
+description: SQL Server Native Client에서 OLE DB 테이블 반환 매개 변수 형식 지원 (속성)
 title: OLE DB 테이블 반환 매개 변수 형식 (속성)
 ms.custom: ''
 ms.date: 03/06/2017
@@ -13,12 +14,12 @@ ms.assetid: b9c4e6ed-fe4f-4ef8-9bc8-784d80d44039
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b9a79a82eaf8f3623435bd2330d87686eb9834c7
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 96fdbd152eacf5a23f530f5bd5caa7cebb801980
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246746"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482624"
 ---
 # <a name="ole-db-table-valued-parameter-type-support-in-sql-server-native-client-properties"></a>SQL Server Native Client에서 OLE DB 테이블 반환 매개 변수 형식 지원 (속성)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -47,7 +48,7 @@ ms.locfileid: "87246746"
 |DBPROP_DELAYSTORAGEOBJECTS|VARIANT_FALSE|  
 |DBPROP_IAccessor<br /><br /> DBPROP_IColumnsInfo<br /><br /> DBPROP_IConvertType<br /><br /> DBPROP_IRowset<br /><br /> DBPROP_IRowsetInfo<br /><br /> DBPROP_IColumnsRowset|VARIANT_TRUE|  
 |DBPROP_IConnectionPointContainer<br /><br /> DBPROP_IMultipleResults<br /><br /> DBPROP_IRowsetUpdate<br /><br /> DBPROP_IRowsetIdentity<br /><br /> DBPROP_IRowsetLocate<br /><br /> DBPROP_IRowsetScroll<br /><br /> DBPROP_IRowsetResynch|VARIANT_FALSE|  
-|DBPROP_IRowsetChange|VARIANT_TRUE<br /><br /> 참고: 테이블 반환 매개 변수 행 집합 개체는 IRowsetChange 인터페이스를 지원 합니다.<br /><br /> DBPROP_IRowsetChange = VARIANT_TRUE를 사용하여 만들어진 행 집합은 즉시 업데이트 모드 동작을 나타냅니다.<br /><br /> 그러나 BLOB 열이 ISequentialStream 개체로 바인딩된 경우 소비자는 테이블 반환 매개 변수 행 집합 개체가 사용되는 동안 열을 유지해야 합니다.|  
+|DBPROP_IRowsetChange|VARIANT_TRUE<br /><br /> 참고: 테이블 반환 매개 변수 행 집합 개체는 IRowsetChange 인터페이스를 지원합니다.<br /><br /> DBPROP_IRowsetChange = VARIANT_TRUE를 사용하여 만들어진 행 집합은 즉시 업데이트 모드 동작을 나타냅니다.<br /><br /> 그러나 BLOB 열이 ISequentialStream 개체로 바인딩된 경우 소비자는 테이블 반환 매개 변수 행 집합 개체가 사용되는 동안 열을 유지해야 합니다.|  
 |DBPROP_ISupportErrorInfo|VARIANT_TRUE|  
 |DBPROP_ISequentialStream|VARIANT_TRUE|  
 |DBPROP_IMMOBILEROWS|VARIANT_TRUE|  
@@ -92,11 +93,11 @@ ms.locfileid: "87246746"
   
 |속성 ID|속성 값|  
 |-----------------|--------------------|  
-|SSPROP_PARAM_TYPE_TYPENAME|R/W: 읽기/쓰기<br /><br /> 기본값: VT_EMPTY<br /><br /> 유형: VT_BSTR<br /><br /> 설명: 소비자는 이 속성을 사용하여 테이블 반환 매개 변수 형식 이름을 가져오거나 설정합니다.<br /><br /> 이 속성은 CLR 사용자 정의 형식에도 사용할 수 있습니다.<br /><br /> 이 속성은 필요한 경우 테이블 반환 매개 변수의 테이블 형식 이름을 제공하기 위해 지정할 수 있습니다(ODBC 호출 구문 명령의 경우). 매개 변수가 있는 임시 SQL 쿼리에는 이 속성을 반드시 지정해야 합니다.|  
-|SSPROP_PARAM_TYPE_SCHEMANAME|R/W: 읽기/쓰기<br /><br /> 기본값: VT_EMPTY<br /><br /> 유형: VT_BSTR<br /><br /> 설명: 소비자는 이 속성을 사용하여 테이블 반환 매개 변수 형식의 스키마 이름을 가져오거나 설정합니다.<br /><br /> 이 속성은 CLR 사용자 정의 형식에도 사용할 수 있습니다.|  
-|SSPROP_PARAM_TYPE_CATALOGNAME|R/W: 읽기 전용<br /><br /> 기본값: VT_EMPTY<br /><br /> 유형: VT_BSTR<br /><br /> 설명: 소비자는 이 속성을 사용하여 테이블 반환 매개 변수 형식 카탈로그 이름을 가져오거나 설정합니다.<br /><br /> 이 속성은 CLR 사용자 정의 형식에도 사용할 수 있습니다. 이 속성을 설정하면 오류가 발생합니다. 사용자 정의 테이블 형식은 해당 형식을 사용하는 테이블 반환 매개 변수와 같은 데이터베이스에 있어야 합니다.|  
-|SSPROP_PARAM_TABLE_DEFAULT_COLUMNS|R/W: 읽기/쓰기<br /><br /> 기본값: VT_EMPTY<br /><br /> 형식: VT_UI2 &#124; VT_ARRAY<br /><br /> 설명: 소비자는 이 속성을 사용하여 행 집합에서 기본값으로 취급할 열 집합을 지정할 수 있습니다. 이러한 열에 대해서는 값이 전송되지 않습니다. 공급자가 소비자 행 집합 개체에서 데이터를 인출하는 동안 이러한 열에 대해서는 바인딩이 필요하지 않습니다.<br /><br /> 배열의 각 요소는 행 집합 개체에서 열의 순서를 나타내는 서수여야 합니다. 잘못된 서수를 지정하면 명령 실행 시 오류가 발생합니다.|  
-|SSPROP_PARAM_TABLE_COLUMN_ORDER|R/W: 읽기/쓰기<br /><br /> 기본값: VT_EMPTY<br /><br /> 형식: VT_UI2 &#124; VT_ARRAY<br /><br /> 설명: 이 속성은 소비자가 열 데이터의 정렬 순서를 나타내는 힌트를 서버에 제공하는 데 사용합니다. 공급자는 소비자가 지정된 사양을 따른다고 가정하고 어떠한 유효성 검사도 수행하지 않습니다. 서버에서는 이 속성을 사용하여 최적화를 수행합니다.<br /><br /> 각 열에 대한 열 순서 정보는 배열에서 한 쌍의 요소로 나타납니다. 이 쌍의 첫 번째 요소는 열 번호이고 두 번째 요소는 오름차순의 경우 1이고 내림차순의 경우 2입니다.|  
+|SSPROP_PARAM_TYPE_TYPENAME|R/W: 읽기/쓰기<br /><br /> Default: VT_EMPTY<br /><br /> 유형: VT_BSTR<br /><br /> 설명: 소비자는 이 속성을 사용하여 테이블 반환 매개 변수 형식 이름을 가져오거나 설정합니다.<br /><br /> 이 속성은 CLR 사용자 정의 형식에도 사용할 수 있습니다.<br /><br /> 이 속성은 필요한 경우 테이블 반환 매개 변수의 테이블 형식 이름을 제공하기 위해 지정할 수 있습니다(ODBC 호출 구문 명령의 경우). 매개 변수가 있는 임시 SQL 쿼리에는 이 속성을 반드시 지정해야 합니다.|  
+|SSPROP_PARAM_TYPE_SCHEMANAME|R/W: 읽기/쓰기<br /><br /> Default: VT_EMPTY<br /><br /> 유형: VT_BSTR<br /><br /> 설명: 소비자는 이 속성을 사용하여 테이블 반환 매개 변수 형식 스키마 이름을 가져오거나 설정합니다.<br /><br /> 이 속성은 CLR 사용자 정의 형식에도 사용할 수 있습니다.|  
+|SSPROP_PARAM_TYPE_CATALOGNAME|R/W: 읽기 전용<br /><br /> Default: VT_EMPTY<br /><br /> 유형: VT_BSTR<br /><br /> 설명: 소비자는 이 속성을 사용하여 테이블 반환 매개 변수 형식 카탈로그 이름을 가져오거나 설정합니다.<br /><br /> 이 속성은 CLR 사용자 정의 형식에도 사용할 수 있습니다. 이 속성을 설정하면 오류가 발생합니다. 사용자 정의 테이블 형식은 해당 형식을 사용하는 테이블 반환 매개 변수와 같은 데이터베이스에 있어야 합니다.|  
+|SSPROP_PARAM_TABLE_DEFAULT_COLUMNS|R/W: 읽기/쓰기<br /><br /> Default: VT_EMPTY<br /><br /> 유형: VT_UI2 &#124; VT_ARRAY<br /><br /> 설명: 소비자는 이 속성을 사용하여 행 집합에서 기본값으로 취급할 열 집합을 지정할 수 있습니다. 이러한 열에 대해서는 값이 전송되지 않습니다. 공급자가 소비자 행 집합 개체에서 데이터를 인출하는 동안 이러한 열에 대해서는 바인딩이 필요하지 않습니다.<br /><br /> 배열의 각 요소는 행 집합 개체에서 열의 순서를 나타내는 서수여야 합니다. 잘못된 서수를 지정하면 명령 실행 시 오류가 발생합니다.|  
+|SSPROP_PARAM_TABLE_COLUMN_ORDER|R/W: 읽기/쓰기<br /><br /> Default: VT_EMPTY<br /><br /> 유형: VT_UI2 &#124; VT_ARRAY<br /><br /> 설명: 이 속성은 소비자가 열 데이터의 정렬 순서를 나타내는 힌트를 서버에 제공하는 데 사용합니다. 공급자는 소비자가 지정된 사양을 따른다고 가정하고 어떠한 유효성 검사도 수행하지 않습니다. 서버에서는 이 속성을 사용하여 최적화를 수행합니다.<br /><br /> 각 열에 대한 열 순서 정보는 배열에서 한 쌍의 요소로 나타납니다. 이 쌍의 첫 번째 요소는 열 번호이고 두 번째 요소는 오름차순의 경우 1이고 내림차순의 경우 2입니다.|  
 |||
 
 ## <a name="see-also"></a>참고 항목  

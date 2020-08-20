@@ -1,4 +1,5 @@
 ---
+description: sys.dm_exec_plan_attributes(Transact-SQL)
 title: sys. dm_exec_plan_attributes (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/20/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: dacf3ab3-f214-482e-aab5-0dab9f0a3648
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9b616e6186e9d5e19f353df1053d479e0d0afdd6
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 46c41c4bf06082e36df1ea48165520afbc4a3210
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898896"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481986"
 ---
 # <a name="sysdm_exec_plan_attributes-transact-sql"></a>sys.dm_exec_plan_attributes(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -52,7 +53,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
 
 위의 표에서 **특성** 에는 다음 값을 사용할 수 있습니다.
 
-|특성|데이터 형식|Description|  
+|attribute|데이터 형식|Description|  
 |---------------|---------------|-----------------|  
 |set_options|**int**|계획을 컴파일할 때 사용하는 옵션 값을 나타냅니다.|  
 |objectid|**int**|캐시에서 개체를 찾는 데 사용되는 기본 키 중 하나입니다. 이는 데이터베이스 개체 (프로시저, 뷰, 트리거 등)에 대해 [sys. 개체](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) 에 저장 된 개체 ID입니다. 계획 유형이 "임시" 또는 "준비됨"일 경우 일괄 처리 텍스트의 내부 해시입니다.|  
@@ -111,7 +112,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
 |DATEFORMAT|32768|  
 |LanguageID|65536|  
 |UPON<br /><br /> 계획을 컴파일할 때 데이터베이스 옵션 PARAMETERIZATION이 FORCED로 설정됨을 나타냅니다.|131072|  
-|ROWCOUNT|**적용 대상:** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 받는 사람[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 262144|  
+|ROWCOUNT|**적용 대상:** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 받는 사람 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 262144|  
   
 ## <a name="cursors"></a>커서  
  비활성 커서가 컴파일된 계획에서 캐시되어 커서의 동시 사용자가 커서 저장에 사용된 메모리를 다시 사용할 수 있습니다. 예를 들어 일괄 처리가 커서를 할당 취소하지 않고 선언 및 사용한다고 가정합니다. 두 사용자가 동일한 일괄 처리를 실행하는 경우에는 두 활성 커서가 있습니다. 커서가 다른 일괄 처리에서 잠재적으로 할당 취소되면 커서 저장에 사용된 메모리가 캐시되고 해제되지 않습니다. 이 비활성 커서 목록은 컴파일된 계획에서 유지됩니다. 이후에 사용자가 일괄 처리를 실행하면 캐시된 커서 메모리가 다시 사용되고 활성 커서로 적절히 초기화됩니다.  
@@ -138,7 +139,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
 |IN PLACE|8192|  
 |FOR *select_statement*|16384|  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-returning-the-attributes-for-a-specific-plan"></a>A. 특정 계획에 대한 특성 반환  
  다음 예에서는 지정된 계획에 대한 모든 계획 특성을 반환합니다. 지정된 계획에 대한 계획 핸들을 얻기 위해 먼저 `sys.dm_exec_cached_plans` 동적 관리 뷰가 쿼리됩니다. 두 번째 쿼리에서는 `<plan_handle>`을 첫 번째 쿼리의 계획 핸들 값으로 대체합니다.  
@@ -167,9 +168,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;동적 관리 뷰 및 함수](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Transact-sql&#41;&#40;관련 동적 관리 뷰 및 함수 실행](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
- [dm_exec_cached_plans &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)   
+ [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Transact-sql&#41;&#40;관련 동적 관리 뷰 및 함수 실행 ](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
+ [sys.dm_exec_cached_plans&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)   
  [sys.databases&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [sys.objects&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)  
   

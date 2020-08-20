@@ -1,4 +1,5 @@
 ---
+description: 트랜잭션 복제를 위한 아티클 옵션
 title: 트랜잭션 복제를 위한 아티클 옵션 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/01/2017
@@ -14,12 +15,12 @@ ms.assetid: 3469b185-0ea5-4690-a71c-717230d886b6
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 61e8bad960da0ff90f77e0253f39c6257ddb9c2c
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 085f991a1adc9a19c5d308ccf1e522ef1f73143e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86904079"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482306"
 ---
 # <a name="article-options-for-transactional-replication"></a>트랜잭션 복제를 위한 아티클 옵션
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]

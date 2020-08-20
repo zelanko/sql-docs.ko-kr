@@ -1,4 +1,5 @@
 ---
+description: 아티클 속성 보기 및 수정
 title: 아티클 속성 보기 및 수정 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/14/2017
@@ -22,12 +23,12 @@ ms.assetid: e71831fa-3d39-4e4a-9706-4d3a497082cc
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 9c94ac08036d7544b7aa48f8628b0a2fc3476fcc
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b05251b3c5e63f3af65b91f361083b5473ff8bf2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923656"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482340"
 ---
 # <a name="view-and-modify-article-properties"></a>아티클 속성 보기 및 수정
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]

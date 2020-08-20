@@ -1,4 +1,5 @@
 ---
+description: 오류 메시지 카탈로그 뷰 - sys.messages
 title: sys. messages (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 8c16ecdf-68f4-4a2a-b594-086e3344e58a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6f54b68f7775910a7e25b858bd7579e751a75b98
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 572e29d83a63b97484f6c59a139375d4a18d3384
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897131"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482191"
 ---
 # <a name="messages-for-errors-catalog-views---sysmessages"></a>오류 메시지 카탈로그 뷰 - sys.messages
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,10 +47,10 @@ ms.locfileid: "85897131"
   
 ## <a name="see-also"></a>참고 항목  
  [THROW &#40;Transact-SQL&#41;](../../t-sql/language-elements/throw-transact-sql.md)   
- [Transact-sql&#41;&#40;카탈로그 뷰](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Transact-sql&#41;&#40;&#41; 카탈로그 뷰의 오류에 대 한 메시지 &#40;](https://msdn.microsoft.com/library/8ac78c53-7b97-41b3-9cbd-5f97c179f1f2)   
  [예외 메시지 상자 프로그래밍](https://msdn.microsoft.com/library/0b1ba514-6959-4e69-bfd2-3cf3c1ac4b9c)   
  [오류 메시지](../../relational-databases/native-client-odbc-error-messages/error-messages.md)   
- [이벤트 및 오류 데이터베이스 엔진](../../relational-databases/errors-events/database-engine-events-and-errors.md)  
+ [데이터베이스 엔진 이벤트 및 오류](../../relational-databases/errors-events/database-engine-events-and-errors.md)  
   
   

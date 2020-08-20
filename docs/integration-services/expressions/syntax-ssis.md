@@ -1,4 +1,5 @@
 ---
+description: 구문(SSIS)
 title: 구문(SSIS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 61c053c5-1182-4ad0-b804-51cbd19aa0ba
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 50e6319c78bedccb0b34cd48a2d09e6b6cc0ba3a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 3262135632cc10036bf03c93edd448de16fbbc79
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913506"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484400"
 ---
 # <a name="syntax-ssis"></a>구문(SSIS)
 
@@ -65,7 +66,7 @@ ms.locfileid: "86913506"
 ###### <a name="logical-operators"></a>논리 연산자  
  식 언어는 논리적 NOT 연산자를 나타내는 ! 문자를 지원합니다. Transact-SQL에서는 ! 연산자가 관계형 연산자 집합에 포함되어 있습니다. 예를 들어 Transact-SQL은 > 및 !> 연산자를 제공합니다. [!INCLUDE[ssIS](../../includes/ssis-md.md)] 식 언어는 ! 연산자와 다른 연산자의 조합을 지원하지 않습니다. 예를 들어 ! 연산자와 > 연산자를 !> 연산자로 결합할 수 없습니다. 그러나 식 언어는 같지 않음 비교를 나타내는 != 문자 조합을 기본적으로 지원합니다.  
   
-###### <a name="equality-operators"></a>등가 연산자  
+###### <a name="equality-operators"></a>같음 연산자  
  식 계산기 문법에서는 == 등가 연산자를 제공합니다. 이 연산자는 Transact-SQL의 = 연산자 및 C#의 == 연산자에 해당합니다.  
   
 ## <a name="functions"></a>Functions  

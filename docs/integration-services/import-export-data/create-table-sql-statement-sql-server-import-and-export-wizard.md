@@ -1,4 +1,5 @@
 ---
+description: 테이블 생성 SQL 문(SQL Server 가져오기 및 내보내기 마법사)
 title: 테이블 생성 SQL 문(SQL Server 가져오기 및 내보내기 마법사) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/16/2017
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: 0d6f6b3b-d023-4770-a8a9-65b2977c8d05
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b877689bbccb0ea4ab206e403b54d15ce189fb79
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 7854a8121c16d263da900ffc3f8475a4fe4dddff
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922399"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484141"
 ---
 # <a name="create-table-sql-statement-sql-server-import-and-export-wizard"></a>테이블 생성 SQL 문(SQL Server 가져오기 및 내보내기 마법사)
 
@@ -55,7 +56,7 @@ CREATE TABLE 문과 구문에 대한 자세한 내용은 [CREATE TABLE&#40;Trans
 
 구문에 대한 자세한 내용은 [CREATE TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)을 참조하세요. FILESTREAM에 대한 자세한 내용은 [Blob&#40;Binary Large Object&#41; 데이터&#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)를 참조하세요.  
   
-## <a name="whats-next"></a>다음 단계  
+## <a name="whats-next"></a>다음 작업  
  CREATE TABLE 명령을 검토 및 사용자 지정하고 **확인**을 클릭하면 **테이블 생성 SQL 문** 대화 상자가 **열 매핑** 대화 상자로 돌아갑니다. 자세한 내용은 [열 매핑](../../integration-services/import-export-data/column-mappings-sql-server-import-and-export-wizard.md)을 참조하세요.
  
  ## <a name="see-also"></a>참고 항목

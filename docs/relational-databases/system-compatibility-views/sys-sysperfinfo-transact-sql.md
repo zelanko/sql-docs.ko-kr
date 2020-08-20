@@ -1,4 +1,5 @@
 ---
+description: sys.sysperfinfo(Transact-SQL)
 title: sys.sysperfinfo (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: e22a81cd-27de-4690-9443-6aad6393bd3c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a2cdadb112dbceb6a3b031707b8ba8b889bad822
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1122c224e21fa633c2c04cd156a49878fefc7daa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895855"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482106"
 ---
 # <a name="syssysperfinfo-transact-sql"></a>sys.sysperfinfo(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

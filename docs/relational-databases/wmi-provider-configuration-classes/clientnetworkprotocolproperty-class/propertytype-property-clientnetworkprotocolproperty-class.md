@@ -1,4 +1,5 @@
 ---
+description: PropertyType 속성(ClientNetworkProtocolProperty 클래스)
 title: PropertyType 속성 (ClientNetworkProtocolProperty)
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: fc0e4725-979f-4517-a8f5-25436b87f5c2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 43351d9a43f53726042b19b624665eb30e6837e0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f05a8c7802389cdc89eef44e59e6bb2a263479cd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888955"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485194"
 ---
 # <a name="propertytype-property-clientnetworkprotocolproperty-class"></a>PropertyType 속성(ClientNetworkProtocolProperty 클래스)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

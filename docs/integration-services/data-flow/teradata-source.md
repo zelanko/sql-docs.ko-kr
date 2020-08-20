@@ -1,4 +1,5 @@
 ---
+description: Teradata 원본에 연결
 title: Teradata 원본에 연결 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/22/2019
@@ -9,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 16c534788803c2c29fc36817fb63e112c8c84b1f
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 5c1595b8212f5232155d77c3dc82ab1393a397b6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912339"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484489"
 ---
 # <a name="connect-to-the-teradata-source"></a>Teradata 원본에 연결
 
@@ -98,7 +99,7 @@ Teradata 원본의 사용자 지정 속성은 다음 표에 나열되어 있습�
 
 **새로 만들기**
 
-* **새로 만들기**를 선택합니다. **Teradata 연결 관리자 편집기** 창이 열립니다. 이 창에서 새 연결 관리자를 만들 수 있습니다.
+* **새 단계**를 선택합니다. **Teradata 연결 관리자 편집기** 창이 열립니다. 이 창에서 새 연결 관리자를 만들 수 있습니다.
 
 **데이터 액세스 모드**
 

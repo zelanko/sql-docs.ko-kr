@@ -1,4 +1,5 @@
 ---
+description: 간결한 함수 사용
 title: 간결한 함수 사용 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 31ac070f-8c59-4fd5-bd5a-466bb27dbca0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 63313e3dfaec8dbcd91f3bb084bbaab46da40c6e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b0dcd16c1380c95921d5e4bb58831e2dd939ecf1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306784"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482799"
 ---
 # <a name="using-concise-functions"></a>간결한 함수 사용
 일부 ODBC 함수는 설명자에 대 한 암시적 액세스 권한을 얻습니다. 응용 프로그램 작성자가 **SQLSetDescField** 또는 **SQLGetDescField**를 호출 하는 것 보다 더 편리할 수 있습니다. 이러한 함수는 설명자 필드 설정 또는 가져오기를 포함 하 여 다양 한 함수를 수행 하기 때문에 *간결한* 함수 라고 합니다. 일부 간결한 함수를 사용 하면 응용 프로그램이 단일 함수 호출에서 여러 관련 설명자 필드를 설정 하거나 검색할 수 있습니다.  

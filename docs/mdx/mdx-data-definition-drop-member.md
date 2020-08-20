@@ -1,4 +1,5 @@
 ---
+description: MDX 데이터 정의 - DROP MEMBER
 title: DROP MEMBER 문 (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 4e8e38a3ff3f40f44c911a277f99ab9b629c7c87
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f71232997c24a1bdca9a1294a804e8b30660d704
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68038189"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483856"
 ---
 # <a name="mdx-data-definition---drop-member"></a>MDX 데이터 정의 - DROP MEMBER
 

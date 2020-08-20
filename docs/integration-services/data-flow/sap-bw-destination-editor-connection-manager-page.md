@@ -1,4 +1,5 @@
 ---
+description: SAP BW 대상 편집기(연결 관리자 페이지)
 title: SAP BW 대상 편집기(연결 관리자 페이지) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 04ae38f8-5287-45a3-826a-8aac5dd15a91
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2df00ea414e24b1863fcae16832b5f3bbb1f5b79
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ccd18ea2d13b643899b5492b0151984b275b8c80
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913610"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484579"
 ---
 # <a name="sap-bw-destination-editor-connection-manager-page"></a>SAP BW 대상 편집기(연결 관리자 페이지)
 
@@ -62,7 +63,7 @@ ms.locfileid: "86913610"
  **InfoSource**  
  InfoSource의 이름을 입력합니다.  
   
- **형식**  
+ **유형**  
  InfoSource의 유형을 식별하는 단일 문자를 입력합니다. 다음 표에서는 허용 가능한 단일 문자 값을 나열합니다.  
   
 |값|Description|  

@@ -1,4 +1,5 @@
 ---
+description: 검색을 위해 단어 분리기와 형태소 분석기 구성 및 관리(SQL Server)
 title: 검색을 위해 단어 분리기와 형태소 분석기 구성 및 관리
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,20 +22,20 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 8ae5dbc9652ed690edc6964db38cc8e0d5536625
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7a33d02cb6ca1cbc100a458d254cf962d2d0d34b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85629530"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482304"
 ---
 # <a name="configure--manage-word-breakers--stemmers-for-search-sql-server"></a>검색을 위해 단어 분리기와 형태소 분석기 구성 및 관리(SQL Server)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 단어 분리기와 형태소 분석기는 모든 전체 텍스트 인덱싱된 데이터에 대해 언어 분석을 수행합니다. 언어 분석에서는 다음 두 작업을 수행합니다.
 
--   **단어 경계 찾기(단어 분리)** . *단어 분리기*는 해당 언어의 어휘 규칙을 기준으로 단어의 경계를 결정하는 개별 단어를 식별합니다. 각 단어( *토큰*이라고도 함)는 압축된 표현으로 크기를 줄여 전체 텍스트 인덱스에 삽입됩니다.
+-   **단어 경계 찾기(단어 분리)**. *단어 분리기*는 해당 언어의 어휘 규칙을 기준으로 단어의 경계를 결정하는 개별 단어를 식별합니다. 각 단어( *토큰*이라고도 함)는 압축된 표현으로 크기를 줄여 전체 텍스트 인덱스에 삽입됩니다.
 
--   **켤레 동사(형태소 분석)** . *형태소 분석기* 는 해당 언어의 규칙에 따라 특정 단어의 굴절형을 생성합니다. 예를 들어 "running", "ran" 및 "runner"는 "run"이라는 단어의 여러 가지 형태입니다.
+-   **켤레 동사(형태소 분석)**. *형태소 분석기* 는 해당 언어의 규칙에 따라 특정 단어의 굴절형을 생성합니다. 예를 들어 "running", "ran" 및 "runner"는 "run"이라는 단어의 여러 가지 형태입니다.
 
 ## <a name="word-breakers-and-stemmers-are-language-specific"></a>단어 분리기 및 형태소 분석기는 언어별로 제공됩니다.
 

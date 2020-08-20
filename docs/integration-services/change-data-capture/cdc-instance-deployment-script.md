@@ -1,4 +1,5 @@
 ---
+description: CDC 인스턴스 배포 스크립트
 title: CDC 인스턴스 배포 스크립트 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 8fa82822-ac99-48ef-a18d-f4f3a77105b4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 34e5b1872c23d28a59ae0a9ac762c470fc297ee0
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b53daf02f3fae88f2ab9dd17e7be14373a774d45
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921198"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484758"
 ---
 # <a name="cdc-instance-deployment-script"></a>CDC 인스턴스 배포 스크립트
 
@@ -37,7 +38,7 @@ ms.locfileid: "86921198"
  **다른 이름으로 저장**  
  원하는 위치에 저장할 수 있는 텍스트 파일로 스크립트를 저장합니다. 스크립트를 포함하는 파일을 다른 서버에 복사하여 해당 서버에서 실행할 수 있습니다.  
   
- **Copy**  
+ **복사**  
  스크립트를 클립보드에 복사합니다. 그런 다음 스크립트를 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 텍스트 편집기에 붙여넣어 나중에 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

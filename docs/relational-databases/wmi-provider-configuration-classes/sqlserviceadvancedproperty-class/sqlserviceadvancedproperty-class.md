@@ -1,4 +1,5 @@
 ---
+description: SqlServiceAdvancedProperty 클래스
 title: SqlServiceAdvancedProperty 클래스
 ms.custom: ''
 ms.date: 03/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a5d06bde-6058-464c-a4aa-444d83f2331f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 601cb2d42848d91258de22db6db0648ad7030596
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 7f215ef377153d9c38d2447db70eda4c23292ab8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888270"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485061"
 ---
 # <a name="sqlserviceadvancedproperty-class"></a>SqlServiceAdvancedProperty 클래스
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

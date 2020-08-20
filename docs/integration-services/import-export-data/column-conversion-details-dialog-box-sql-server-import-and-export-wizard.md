@@ -1,4 +1,5 @@
 ---
+description: 열 변환 정보 대화 상자(SQL Server 가져오기 및 내보내기 마법사)
 title: 열 변환 정보 대화 상자(SQL Server 가져오기 및 내보내기 마법사) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/16/2017
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: e2d00a39-dfbd-4821-a4d8-a5bd1164ed4d
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 742e3aef907a5537ef6ac158fd3219251bc7762e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 18e512c1834a74be5c45ce81fd859eaebb375be5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913379"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484154"
 ---
 # <a name="column-conversion-details-dialog-box-sql-server-import-and-export-wizard"></a>열 변환 정보 대화 상자(SQL Server 가져오기 및 내보내기 마법사)
 
@@ -39,7 +40,7 @@ ms.locfileid: "86913379"
   
  ![가져오기 및 내보내기 마법사의 열 전환 페이지](../../integration-services/import-export-data/media/column-conversion.png "가져오기 및 내보내기 마법사의 열 전환 페이지") 
   
-## <a name="whats-next"></a>다음 단계  
+## <a name="whats-next"></a>다음 작업  
  열 변환 정보를 검토하고 **확인**을 클릭하면 **열 변환 정보** 대화 상자에서 **데이터 형식 매핑 검토** 페이지를 표시합니다. 자세한 내용은 [데이터 형식 매핑 검토](../../integration-services/import-export-data/review-data-type-mapping-sql-server-import-and-export-wizard.md)를 참조하세요.  
 
 ## <a name="see-also"></a>참고 항목

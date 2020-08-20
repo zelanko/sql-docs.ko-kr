@@ -1,4 +1,5 @@
 ---
+description: 시스템 호환성 뷰 (Transact-sql)
 title: 시스템 호환성 뷰 (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 8e4624f5-9d36-4ce7-9c9e-1fe010fa2122
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9eb123194e6ea69a6260f9eed4f02a07a9e819ed
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3eb92654dfb25a0e66d2e071040e487e6a404366
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85652210"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482051"
 ---
 # <a name="system-compatibility-views-transact-sql"></a>시스템 호환성 뷰 (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -61,7 +62,7 @@ ms.locfileid: "85652210"
  예: 사용자가 사용자 데이터베이스에서 **sys.syslanguages** 라는 사용자 테이블을 만드는 경우 SQL Server 2008에서 `SELECT * from dbo.syslanguages;` 해당 데이터베이스의 문은 사용자 테이블의 값을 반환 합니다. SQL Server 2012부터이 연습에서는 시스템 뷰 **sys.sys언어**의 데이터를 반환 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;카탈로그 뷰](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [시스템 테이블을 시스템 뷰로 매핑 &#40;Transact-sql&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)  
   
   

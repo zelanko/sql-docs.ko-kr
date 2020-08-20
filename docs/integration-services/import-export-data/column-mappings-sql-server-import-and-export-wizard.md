@@ -1,4 +1,5 @@
 ---
+description: 열 매핑(SQL Server 가져오기 및 내보내기 마법사)
 title: 열 매핑(SQL Server 가져오기 및 내보내기 마법사) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: eadc54a6-f936-4ffc-91d7-fbfd2bdcab93
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 144476d52d8577d59691a42b12a276f5cfc080b2
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 9b74aaec705f3de493f105218adedffb173090ac
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913369"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484140"
 ---
 # <a name="column-mappings-sql-server-import-and-export-wizard"></a>열 매핑(SQL Server 가져오기 및 내보내기 마법사)
 
@@ -96,7 +97,7 @@ ms.locfileid: "86913369"
     
     원본 테이블의 모든 열을 복사할 필요가 없습니다. 복사하지 않을 열에 대해서는 **대상** 를 선택하여 열의 하위 집합만 복사할 수 있습니다. 열을 매핑하기 전에 매핑하지 않을 열은 모두 무시해야 합니다.  
   
--   **형식**  
+-   **유형**  
     대상 열의 데이터 형식을 보거나 다른 데이터 형식을 선택합니다.
   
 -   **Null 허용**  
@@ -108,10 +109,10 @@ ms.locfileid: "86913369"
 -    **정밀도**  
     해당하는 경우 대상 열의 숫자 데이터에 대한 정밀도, 즉 자릿수를 지정합니다.  
   
- -   **규모**  
+ -   **크기 조정**  
     해당하는 경우 대상 열의 숫자 데이터에 대한 소수 자릿수, 즉 소수점 이하의 자릿수를 지정합니다.  
   
-## <a name="whats-next"></a>다음 단계  
+## <a name="whats-next"></a>다음 작업  
  원본 열에서 검토한 데이터를 받을 대상 열을 지정하고 구성한 후 **확인**을 클릭하면, **열 매핑** 대화 상자에서 **원본 테이블 및 뷰 선택** 페이지 또는 **플랫 파일 대상 구성** 페이지를 반환합니다. 자세한 내용은 [원본 테이블 및 뷰 선택](../../integration-services/import-export-data/select-source-tables-and-views-sql-server-import-and-export-wizard.md) 또는 [플랫 파일 대상 구성](../../integration-services/import-export-data/configure-flat-file-destination-sql-server-import-and-export-wizard.md)을 참조하세요.  
   
  **매핑** 목록에서 성공하지 않을 수 있는 매핑을 지정한 경우 **열 매핑** 대화 상자가 **데이터 형식 매핑 검토** 페이지를 표시합니다. 이 페이지에서는 경고를 검토하고 변환 옵션을 지정하고 오류 처리 방법도 지정합니다. 자세한 내용은 [데이터 형식 매핑 검토](../../integration-services/import-export-data/review-data-type-mapping-sql-server-import-and-export-wizard.md)를 참조하세요.  

@@ -1,4 +1,5 @@
 ---
+description: sys.sysprotects(Transact-SQL)
 title: sys.sys보호 (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 49c9658d-fb51-4c77-94a0-fba699b0102d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bfda1be56b5fc373d0ae1b9e8d5141ac046b717e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 811bdae3c05bbb934a6f135269147c8678fa7654
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85884475"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482068"
 ---
 # <a name="syssysprotects-transact-sql"></a>sys.sysprotects(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
