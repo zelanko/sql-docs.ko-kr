@@ -1,4 +1,5 @@
 ---
+description: sp_certify_removable(Transact-SQL)
 title: sp_certify_removable (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ca12767f-0ae5-4652-b523-c23473f100a1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d1ba13cd3ae77a13e329c39fea22a9ee9550ed47
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9f5bf1f0fd8a73948c2cc85937af4bc4c5ec7ffc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85873158"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493419"
 ---
 # <a name="sp_certify_removable-transact-sql"></a>sp_certify_removable(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,9 +44,9 @@ sp_certify_removable [ @dbname= ] 'dbname'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @dbname = ] 'dbname'`확인할 데이터베이스를 지정 합니다. *dbname* 은 **sysname**입니다.  
+`[ @dbname = ] 'dbname'` 확인할 데이터베이스를 지정 합니다. *dbname* 은 **sysname**입니다.  
   
-`[ @autofix = ] 'auto'`는 데이터베이스 및 모든 데이터베이스 개체의 소유권을 시스템 관리자에 게 제공 하 고 사용자가 만든 데이터베이스 사용자 및 기본 권한이 아닌 권한을 모두 삭제 합니다. *auto* 는 **nvarchar (4)** 이며 기본값은 NULL입니다.  
+`[ @autofix = ] 'auto'` 는 데이터베이스 및 모든 데이터베이스 개체의 소유권을 시스템 관리자에 게 제공 하 고 사용자가 만든 데이터베이스 사용자 및 기본 권한이 아닌 권한을 모두 삭제 합니다. *auto* 는 **nvarchar (4)** 이며 기본값은 NULL입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -82,7 +83,7 @@ sp_certify_removable [ @dbname= ] 'dbname'
 ## <a name="permissions"></a>사용 권한  
  Execute 권한은 **sysadmin** 고정 서버 역할의 멤버로 제한 됩니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `inventory` 데이터베이스를 제거할 준비가 되었음을 증명합니다.  
   
 ```  

@@ -1,4 +1,5 @@
 ---
+description: sp_defaultdb(Transact-SQL)
 title: sp_defaultdb (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 663b859f-c6da-4942-95a6-60b93d05654e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c153f9de2f5f1db662c851926a83d51ed4b8b515
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 649f107e29f68d03e47daa07251a2da40a4c2e55
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85865134"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493359"
 ---
 # <a name="sp_defaultdb-transact-sql"></a>sp_defaultdb(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85865134"
   로그인에 대 한 기본 데이터베이스를 변경 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 합니다.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]대신 [ALTER LOGIN](../../t-sql/statements/alter-login-transact-sql.md) 을 사용 해야 합니다.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 대신 [ALTER LOGIN](../../t-sql/statements/alter-login-transact-sql.md) 을 사용 해야 합니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,9 +43,9 @@ sp_defaultdb [ @loginame = ] 'login', [ @defdb = ] 'database'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @loginame = ] 'login'`로그인 이름입니다. *login* 은 **sysname**이며 기본값은 없습니다. *로그인* 은 기존 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 이나 Windows 사용자 또는 그룹이 될 수 있습니다. Windows 사용자 또는 그룹에 대한 로그인이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 없으면 자동으로 추가됩니다.  
+`[ @loginame = ] 'login'` 로그인 이름입니다. *login* 은 **sysname**이며 기본값은 없습니다. *로그인* 은 기존 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 이나 Windows 사용자 또는 그룹이 될 수 있습니다. Windows 사용자 또는 그룹에 대한 로그인이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 없으면 자동으로 추가됩니다.  
   
-`[ @defdb = ] 'database'`새 기본 데이터베이스의 이름입니다. *데이터베이스* 는 **sysname**이며 기본값은 없습니다. *데이터베이스가* 이미 있어야 합니다.  
+`[ @defdb = ] 'database'` 새 기본 데이터베이스의 이름입니다. *데이터베이스* 는 **sysname**이며 기본값은 없습니다. *데이터베이스가* 이미 있어야 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -57,17 +58,17 @@ sp_defaultdb [ @loginame = ] 'login', [ @defdb = ] 'database'
 ## <a name="permissions"></a>사용 권한  
  ALTER ANY LOGIN 권한이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 `Victoria`에 대한 기본 데이터베이스로 설정합니다.  
   
 ```  
 EXEC sp_defaultdb 'Victoria', 'AdventureWorks2012';  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;보안 저장 프로시저](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [ALTER LOGIN &#40;Transact-sql&#41;](../../t-sql/statements/alter-login-transact-sql.md)   
- [Transact-sql&#41;sp_addlogin &#40;](../../relational-databases/system-stored-procedures/sp-addlogin-transact-sql.md)   
+## <a name="see-also"></a>관련 항목  
+ [Transact-sql&#41;&#40;보안 저장 프로시저 ](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)   
+ [sp_addlogin&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlogin-transact-sql.md)   
  [Transact-sql&#41;sp_droplogin &#40;](../../relational-databases/system-stored-procedures/sp-droplogin-transact-sql.md)   
  [Transact-sql&#41;sp_grantdbaccess &#40;](../../relational-databases/system-stored-procedures/sp-grantdbaccess-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

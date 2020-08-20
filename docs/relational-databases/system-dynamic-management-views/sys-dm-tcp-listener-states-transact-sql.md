@@ -1,4 +1,5 @@
 ---
+description: sys.dm_tcp_listener_states(Transact-SQL)
 title: sys. dm_tcp_listener_states (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 9997ffed-a4c1-428f-8bac-3b9e4b16d7cf
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 185a125c2197a7f5788c69a432315b46b1969369
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c313a61e673bb6885e1a6f0f8ecacf53bcda3f36
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716635"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493567"
 ---
 # <a name="sysdm_tcp_listener_states-transact-sql"></a>sys.dm_tcp_listener_states(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +42,7 @@ ms.locfileid: "85716635"
 |**ip_address**|**nvarchar (48)**|온라인 상태이고 현재 수신 중인 수신기 IP 주소입니다. IPv4 및 IPv6가 허용됩니다. 수신기에서 두 주소 유형을 모두 처리하는 경우 별도로 나열됩니다. IPv4 와일드 카드는 "0.0.0.0"으로 표시 됩니다. IPv6 와일드 카드는 "::"으로 표시 됩니다.<br /><br /> Null을 허용하지 않습니다.|  
 |**is_ipv4**|**bit**|IP 주소 유형<br /><br /> 1 = IPv4<br /><br /> 0 = IPv6|  
 |**port**|**int**|수신기가 수신 중인 포트 번호입니다. Null을 허용하지 않습니다.|  
-|**type**|**tinyint**|수신기 유형이며 다음 중 하나입니다.<br /><br /> 0 =[!INCLUDE[tsql](../../includes/tsql-md.md)]<br /><br /> 1 = Service Broker<br /><br /> 2 = 데이터베이스 미러링<br /><br /> Null을 허용하지 않습니다.|  
+|**type**|**tinyint**|수신기 유형이며 다음 중 하나입니다.<br /><br /> 0 = [!INCLUDE[tsql](../../includes/tsql-md.md)]<br /><br /> 1 = Service Broker<br /><br /> 2 = 데이터베이스 미러링<br /><br /> Null을 허용하지 않습니다.|  
 |**type_desc**|**nvarchar (20)**|**형식**에 대 한 설명 이며 다음 중 하나입니다.<br /><br /> TSQL<br /><br /> SERVICE_BROKER<br /><br /> DATABASE_MIRRORING<br /><br /> Null을 허용하지 않습니다.|  
 |**상태**|**tinyint**|가용성 그룹 수신기의 상태이며 다음 중 하나입니다.<br /><br /> 1 = 온라인. 수신기가 요청을 수신 및 처리 중입니다.<br /><br /> 2 = 다시 시작 보류 중. 수신기가 오프라인 상태이며 다시 시작을 보류 중입니다.<br /><br /> 가용성 그룹 수신기가 서버 인스턴스와 동일한 포트를 수신 중인 경우 두 수신기의 상태는 항상 동일합니다.<br /><br /> Null을 허용하지 않습니다.<br /><br /> 참고:이 열의 값은 TSD_listener 개체에서 제공 됩니다. TDS_listener가 오프라인 상태이면 상태에 대해 쿼리할 수 없으므로 이 열은 오프라인 상태를 지원하지 않습니다.|  
 |**state_desc**|**nvarchar (16)**|**상태**에 대 한 설명 이며 다음 중 하나입니다.<br /><br /> ONLINE<br /><br /> PENDING_RESTART<br /><br /> Null을 허용하지 않습니다.|  
@@ -54,7 +55,7 @@ ms.locfileid: "85716635"
   
 ## <a name="see-also"></a>참고 항목  
  [SQL Server 시스템 카탈로그 쿼리 FAQ](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
- [Transact-sql&#41;&#40;Always On 가용성 그룹 카탈로그 뷰](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)   
+ [AlwaysOn 가용성 그룹 카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)   
  [Always On 가용성 그룹 동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/always-on-availability-groups-dynamic-management-views-functions.md)  
   
   

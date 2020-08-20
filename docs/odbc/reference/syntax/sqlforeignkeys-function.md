@@ -1,4 +1,5 @@
 ---
+description: SQLForeignKeys 함수
 title: SQLForeignKeys 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 07f3f645-f643-4d39-9a10-70a72f24e608
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 5f2769fb378a5ee989fb6a0351537edb3de03469
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 802153837d53c6886b44511fbdffe6efa6b83281
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81285863"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491306"
 ---
 # <a name="sqlforeignkeys-function"></a>SQLForeignKeys 함수
 **규칙**  
@@ -117,14 +118,14 @@ SQLRETURN SQLForeignKeys(
 ## <a name="diagnostics"></a>진단  
  **SQLForeignKeys** 가 SQL_ERROR 또는 SQL_SUCCESS_WITH_INFO를 반환 하는 경우 SQL_HANDLE_STMT의 *HandleType* 및 *StatementHandle* *핸들* 을 사용 하 여 **SQLGetDiagRec** 를 호출 하 여 연결 된 SQLSTATE 값을 얻을 수 있습니다. 다음 표에서는 일반적으로 **SQLForeignKeys** 에서 반환 하는 SQLSTATE 값을 나열 하 고이 함수의 컨텍스트에서 각 값에 대해 설명 합니다. "(DM)" 표기법은 드라이버 관리자에서 반환 된 SQLSTATEs의 설명 보다 앞에 나옵니다. 다른 설명이 없는 한 각 SQLSTATE 값과 연결 된 반환 코드는 SQL_ERROR 됩니다.  
   
-|SQLSTATE|Error|Description|  
+|SQLSTATE|오류|설명|  
 |--------------|-----------|-----------------|  
 |01000|일반 경고|드라이버 관련 정보 메시지입니다. 함수는 SQL_SUCCESS_WITH_INFO를 반환 합니다.|  
 |08S01|통신 연결 오류|드라이버가 연결 된 드라이버와 데이터 원본 간의 통신 연결이 함수 처리를 완료 하기 전에 실패 했습니다.|  
 |24000|잘못된 커서 상태|*StatementHandle*에서 커서가 열려 있고 **Sqlfetch** 또는 **sqlfetchscroll** 이 호출 되었습니다. 이 오류는 **sqlfetch** 또는 **sqlfetchscroll** 이 SQL_NO_DATA 반환 되지 않은 경우 드라이버 관리자에 의해 반환 되 고, **Sqlfetch** 또는 **sqlfetchscroll** 에서 SQL_NO_DATA를 반환한 경우 드라이버에서 반환 됩니다.<br /><br /> *StatementHandle*에서 커서가 열려 있지만 **Sqlfetch** 또는 **sqlfetchscroll** 을 호출 하지 않았습니다.|  
 |40001|Serialization 오류|다른 트랜잭션과의 리소스 교착 상태가 발생 하 여 트랜잭션이 롤백 되었습니다.|  
 |40003|문 완료를 알 수 없음|이 함수를 실행 하는 동안 연결 된 연결에 실패 하 여 트랜잭션의 상태를 확인할 수 없습니다.|  
-|HY000|일반 오류|특정 SQLSTATE가 없고 구현 별 SQLSTATE가 정의 되지 않은 오류가 발생 했습니다. MessageText 버퍼에서 **SQLGetDiagRec** 에 의해 반환 되는 오류 메시지는 오류 및 해당 원인을 설명 합니다. * \**|  
+|HY000|일반 오류|특정 SQLSTATE가 없고 구현 별 SQLSTATE가 정의 되지 않은 오류가 발생 했습니다. * \* MessageText* 버퍼에서 **SQLGetDiagRec** 에 의해 반환 되는 오류 메시지는 오류 및 해당 원인을 설명 합니다.|  
 |HY001|메모리 할당 오류|드라이버가 실행 또는 함수의 완료를 지 원하는 데 필요한 메모리를 할당할 수 없습니다.|  
 |HY008|작업 취소됨|*StatementHandle*에 대해 비동기 처리를 사용 하도록 설정 했습니다. 함수가 호출 되었으며 실행이 완료 되기 전에 *StatementHandle*에서 **Sqlcancel** 또는 **Sqlcancelhandle** 이 호출 되 고 *StatementHandle*에서 함수가 다시 호출 되었습니다.<br /><br /> 함수가 호출 되 고 실행이 완료 되기 전에 **sqlcancel** 또는 **sqlcancelhandle** 이 다중 스레드 응용 프로그램의 다른 스레드에서 *StatementHandle* 호출 되었습니다.|  
 |HY009|Null 포인터 사용이 잘못 되었습니다.|(DM) *Pktablename* 및 *FKTableName* 인수가 모두 null 포인터입니다.<br /><br /> SQL_ATTR_METADATA_ID statement 특성이 SQL_TRUE로 설정 되 고, *FKCatalogName* 또는 *PKCatalogName* 인수가 null 포인터이 고, SQL_CATALOG_NAME *InfoType* 는 카탈로그 이름이 지원 됨을 반환 합니다.<br /><br /> (DM) SQL_ATTR_METADATA_ID statement 특성이 SQL_TRUE로 설정 되었고 *FKSchemaName*, *pkschemaname*, *FKTableName*또는 *pkschemaname* 인수가 null 포인터입니다.|  
@@ -148,7 +149,7 @@ SQLRETURN SQLForeignKeys(
   
  \* *FKTableName* 에 테이블 이름이 포함 된 경우 **SQLForeignKeys** 는 지정 된 테이블에서 다른 테이블의 기본 키를 가리키는 모든 외래 키와 해당 키가 참조 하는 다른 테이블의 기본 키를 포함 하는 결과 집합을 반환 합니다. 지정 된 테이블의 외래 키 목록에 다른 테이블의 unique 제약 조건을 참조 하는 외래 키가 포함 되어 있지 않습니다.  
   
- \* *Pktablename* 과 \* *FKTableName* 에 모두 테이블 이름이 포함 된 경우 **SQLForeignKeys** 는 \* *FKTableName* 에 지정 된 테이블에서 **pktablename*에 지정 된 테이블의 기본 키를 참조 하는 외래 키를 반환 합니다. 이는 하나의 키 여야 합니다.  
+ \* *Pktablename* 과 \* *FKTableName* 에 모두 테이블 이름이 포함 된 경우 **SQLForeignKeys** 는 FKTableName에 지정 된 테이블에서 \* *FKTableName* **pktablename*에 지정 된 테이블의 기본 키를 참조 하는 외래 키를 반환 합니다. 이는 하나의 키 여야 합니다.  
   
 > [!NOTE]  
 >  ODBC 카탈로그 함수의 일반 사용, 인수 및 반환 데이터에 대 한 자세한 내용은 [카탈로그 함수](../../../odbc/reference/develop-app/catalog-functions.md)를 참조 하세요.  
@@ -329,6 +330,6 @@ SQLFreeStmt(hstmt, SQL_DROP);
 |기본 키 열 반환|[SQLPrimaryKeys 함수](../../../odbc/reference/syntax/sqlprimarykeys-function.md)|  
 |테이블 통계 및 인덱스 반환|[SQLStatistics 함수](../../../odbc/reference/syntax/sqlstatistics-function.md)|  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [ODBC API 참조](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 헤더 파일](../../../odbc/reference/install/odbc-header-files.md)

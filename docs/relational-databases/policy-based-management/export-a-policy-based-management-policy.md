@@ -1,4 +1,5 @@
 ---
+description: 정책 기반 관리 정책 내보내기
 title: 정책 기반 관리 정책 내보내기 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: f0001b33-9078-4432-8460-496736fb325a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: c97684af46e58625c7bd63e7e07fd33c6f3ce39d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 62fff3bda286f50b2220dbb1ea4732547e98829f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760525"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494023"
 ---
 # <a name="export-a-policy-based-management-policy"></a>정책 기반 관리 정책 내보내기
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

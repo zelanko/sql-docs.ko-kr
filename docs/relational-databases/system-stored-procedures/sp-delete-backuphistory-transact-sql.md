@@ -1,4 +1,5 @@
 ---
+description: sp_delete_backuphistory(Transact-SQL)
 title: sp_delete_backuphistory (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: bdb56834-616e-47e4-b942-e895d2325e97
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 172d50a126ff0c12d55e9566e5bb7b9213c38fe8
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: be5b2d16d3a6131d6c579a7f4f3c422ac003da73
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85865022"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493384"
 ---
 # <a name="sp_delete_backuphistory-transact-sql"></a>sp_delete_backuphistory(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +43,7 @@ sp_delete_backuphistory [ @oldest_date = ] 'oldest_date'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @oldest_date = ] 'oldest\_date'`백업 및 복원 기록 테이블에 보존 되는 가장 오래 된 날짜입니다. *oldest_date* 은 **datetime**이며 기본값은 없습니다.  
+`[ @oldest_date = ] 'oldest\_date'` 백업 및 복원 기록 테이블에 보존 되는 가장 오래 된 날짜입니다. *oldest_date* 은 **datetime**이며 기본값은 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -74,7 +75,7 @@ sp_delete_backuphistory [ @oldest_date = ] 'oldest_date'
 ## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할의 멤버 자격이 필요 하지만 다른 사용자에 게 사용 권한을 부여할 수 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 백업 및 복원 기록 테이블에서 2010년 1월 14일 오전 12시 이전의 모든 항목을 삭제합니다.  
   
 ```  
@@ -83,7 +84,7 @@ GO
 EXEC sp_delete_backuphistory @oldest_date = '01/14/2010';  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [Transact-sql&#41;sp_delete_database_backuphistory &#40;](../../relational-databases/system-stored-procedures/sp-delete-database-backuphistory-transact-sql.md)   
  [백업 기록 및 헤더 정보&#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md)  
   

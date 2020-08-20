@@ -1,4 +1,5 @@
 ---
+description: sp_addserver(Transact-SQL)
 title: sp_addserver (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 160a6b29-5e80-44ab-80ec-77d4280f627c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8d6040c3806723d07396fe7af3a0d50f49bb7e9a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9483b0629ca0a58b6583bee369987eb7d85a91f5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85876327"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493513"
 ---
 # <a name="sp_addserver-transact-sql"></a>sp_addserver(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,17 +45,17 @@ sp_addserver [ @server = ] 'server' ,
 ```
 
 ## <a name="arguments"></a>인수
-`[ @server = ] 'server'`서버 이름입니다. 서버 이름은 고유해야 하며 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 컴퓨터 이름에 관한 규칙을 준수해야 합니다. 단, 공백은 사용할 수 없습니다. *server* 은 **sysname**이며 기본값은 없습니다.
+`[ @server = ] 'server'` 서버 이름입니다. 서버 이름은 고유해야 하며 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 컴퓨터 이름에 관한 규칙을 준수해야 합니다. 단, 공백은 사용할 수 없습니다. *server* 은 **sysname**이며 기본값은 없습니다.
 
  컴퓨터에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 여러 개 설치되어 있으면 각 인스턴스는 별개의 서버에 있는 것처럼 작동합니다. *서버* 를 *servername\instancename*로 참조 하 여 명명 된 인스턴스를 지정 합니다.
 
-`[ @local = ] 'LOCAL'`로컬 서버로 추가 되는 서버를 지정 합니다. ** \@ local** 은 **varchar (10)** 이며 기본값은 NULL입니다. Local as **local** 을 지정 하면 ** \@ server** 가 로컬 서버의 이름으로 정의 되 고 @ ** \@ ** @SERVERNAME 함수가 *서버*값을 반환 합니다.
+`[ @local = ] 'LOCAL'` 로컬 서버로 추가 되는 서버를 지정 합니다. ** \@ local** 은 **varchar (10)** 이며 기본값은 NULL입니다. Local as **local** 을 지정 하면 ** \@ server** 가 로컬 서버의 이름으로 정의 되 고 @ ** \@ ** @SERVERNAME 함수가 *서버*값을 반환 합니다.
 
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램은 설치 중에 이 변수를 컴퓨터 이름으로 설정합니다. 기본적으로 이 컴퓨터 이름을 사용하면 추가 구성 없이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결할 수 있습니다.
 
  로컬 정의는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 을 다시 시작해야 적용됩니다. 각 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에서 로컬 서버는 하나만 정의할 수 있습니다.
 
-`[ @duplicate_ok = ] 'duplicate_OK'`중복 된 서버 이름을 사용할 수 있는지 여부를 지정 합니다. ** \@ duplicate_OK** 는 **varchar (13)** 이며 기본값은 NULL입니다. ** \@ duplicate_OK** 은 **duplicate_OK** 또는 NULL 값만 가질 수 있습니다. **Duplicate_OK** 를 지정 하 고 추가 하려는 서버 이름이 이미 있는 경우 오류가 발생 하지 않습니다. 명명 된 매개 변수가 사용 되지 않는 경우 ** \@ local** 을 지정 해야 합니다.
+`[ @duplicate_ok = ] 'duplicate_OK'` 중복 된 서버 이름을 사용할 수 있는지 여부를 지정 합니다. ** \@ duplicate_OK** 는 **varchar (13)** 이며 기본값은 NULL입니다. ** \@ duplicate_OK** 은 **duplicate_OK** 또는 NULL 값만 가질 수 있습니다. **Duplicate_OK** 를 지정 하 고 추가 하려는 서버 이름이 이미 있는 경우 오류가 발생 하지 않습니다. 명명 된 매개 변수가 사용 되지 않는 경우 ** \@ local** 을 지정 해야 합니다.
 
 ## <a name="return-code-values"></a>반환 코드 값
  0(성공) 또는 1(실패)
@@ -69,14 +70,14 @@ sp_addserver [ @server = ] 'server' ,
 ## <a name="permissions"></a>사용 권한
  **setupadmin** 고정 서버 역할의 멤버 자격이 필요합니다.
 
-## <a name="examples"></a>예
+## <a name="examples"></a>예제
  다음 예에서는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 를 호스팅하는 컴퓨터 이름의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 항목을 `ACCOUNTS`로 변경합니다.
 
 ```
 sp_addserver 'ACCOUNTS', 'local';
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목
  [&#41;&#40;sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) [SQL Server의 독립 실행형 인스턴스를 호스팅하는 컴퓨터의 이름을 바꿉니다](../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md) . transact-sql sp_dropserver [&#40;&#41;transact-sql](../../relational-databases/system-stored-procedures/sp-dropserver-transact-sql.md) [Sp_helpserver &#40;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)&#41;Transact-sql &#40;[시스템 저장 프로시저](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)&#41;transact-sql &#40;[보안 저장 프로시저](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)&#41;transact-sql
 
 

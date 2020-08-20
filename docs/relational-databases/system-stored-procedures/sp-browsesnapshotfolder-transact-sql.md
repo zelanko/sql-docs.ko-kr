@@ -1,4 +1,5 @@
 ---
+description: sp_browsesnapshotfolder(Transact-SQL)
 title: sp_browsesnapshotfolder (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0872edf2-4038-4bc1-a68d-05ebfad434d2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0ea912014440191f1d5e200ed583366ad43ecb27
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 11605b404e846db81cd364eac2e9223bf563e3a0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716002"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493430"
 ---
 # <a name="sp_browsesnapshotfolder-transact-sql"></a>sp_browsesnapshotfolder(Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -39,11 +40,11 @@ sp_browsesnapshotfolder [@publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @publication = ] 'publication'`아티클이 포함 된 게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 없습니다.  
+`[ @publication = ] 'publication'` 아티클이 포함 된 게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @subscriber = ] 'subscriber'`구독자의 이름입니다. *구독자* 는 **sysname**이며 기본값은 NULL입니다.  
+`[ @subscriber = ] 'subscriber'` 구독자의 이름입니다. *구독자* 는 **sysname**이며 기본값은 NULL입니다.  
   
-`[ @subscriber_db = ] 'subscriber_db'`구독 데이터베이스의 이름입니다. *subscriber_db* 는 **sysname**이며 기본값은 NULL입니다.  
+`[ @subscriber_db = ] 'subscriber_db'` 구독 데이터베이스의 이름입니다. *subscriber_db* 는 **sysname**이며 기본값은 NULL입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

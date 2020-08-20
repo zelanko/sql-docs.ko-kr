@@ -1,4 +1,5 @@
 ---
+description: 구독자 속성
 title: 구독자 속성 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,16 +16,16 @@ ms.assetid: 32aa0347-64e4-4aa4-ac57-6bd3e5d52070
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 9aa569f9e96dea8bbc5788ec1de0a47ed4e67628
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 366740d950e249d6ad18e97af3094208d4d849fd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110484"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493898"
 ---
 # <a name="subscriber-properties"></a>구독자 속성
 [!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]
-  **구독자 속성** 대화 상자에는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]를 실행 중인 구독자와 관련된 정보가 포함되어 있습니다.  
+  **구독자 속성** 대화 상자에는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이전 버전의 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 실행 중인 구독자와 관련된 정보가 포함되어 있습니다.  
 
 [!INCLUDE[azure-sql-db-replication-supportability-note](../../includes/azure-sql-db-replication-supportability-note.md)]
 

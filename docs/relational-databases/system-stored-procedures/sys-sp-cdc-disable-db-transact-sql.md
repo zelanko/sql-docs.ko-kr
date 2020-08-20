@@ -1,4 +1,5 @@
 ---
+description: sys.sp_cdc_disable_db(Transact-SQL)
 title: sys. sp_cdc_disable_db (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -21,19 +22,19 @@ helpviewer_keywords:
 ms.assetid: 420fb99e-e60f-445b-b568-da96471f1e8f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 23b8676f6bc1f2bfea8d2c2d974996ec77f5e78d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 5fb6f277e372a574b7884881d3895c1f96e90724
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891152"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492845"
 ---
 # <a name="syssp_cdc_disable_db-transact-sql"></a>sys.sp_cdc_disable_db(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   현재 데이터베이스에 대해 변경 데이터 캡처를 비활성화합니다. 변경 데이터 캡처는 일부 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 사용할 수 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 지원되는 기능 목록은 [SQL Server 2016 버전에서 지원하는 기능](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요.  
   
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

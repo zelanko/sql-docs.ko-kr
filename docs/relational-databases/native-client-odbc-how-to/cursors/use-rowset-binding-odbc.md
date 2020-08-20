@@ -1,4 +1,5 @@
 ---
+description: 행 집합 바인딩 사용(ODBC)
 title: 행 집합 바인딩 사용 (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -13,11 +14,12 @@ ms.assetid: a7be05f0-6b11-4b53-9fbc-501e591eef09
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 86fd861f50b86b502c52b916c2944a9719424798
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 763477caaba41016b5137463c6d607f548d1d5a5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009490"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494069"
 ---
 # <a name="use-rowset-binding-odbc"></a>행 집합 바인딩 사용(ODBC)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -74,6 +76,6 @@ ms.locfileid: "86009490"
 ## <a name="see-also"></a>참고 항목  
  [커서 사용 방법 항목 ODBC&#41;&#40;](../../../relational-databases/native-client-odbc-how-to/cursors/using-cursors-how-to-topics-odbc.md)   
  [커서 구현 방법](../../../relational-databases/native-client-odbc-cursors/implementation/how-cursors-are-implemented.md)   
- [ODBC&#41;&#40;커서 사용](../../../relational-databases/native-client-odbc-how-to/cursors/use-cursors-odbc.md)  
+ [ODBC&#41;&#40;커서 사용 ](../../../relational-databases/native-client-odbc-how-to/cursors/use-cursors-odbc.md)  
   
   

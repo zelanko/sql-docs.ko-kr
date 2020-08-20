@@ -1,4 +1,5 @@
 ---
+description: 프로젝트 옵션 설정(OracleToSQL)
 title: 프로젝트 옵션 설정 (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -12,12 +13,12 @@ ms.assetid: a324d07d-cfdf-43bd-98a0-acf332c5a4db
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: e104c2ed456567074b796d68d5a82769ac67e5ac
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 89460a8efb6278d8e4aaa4def6310d6dec687429
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87932964"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492367"
 ---
 # <a name="setting-project-options-oracletosql"></a>프로젝트 옵션 설정(OracleToSQL)
 각 SSMA 프로젝트에 대해 프로젝트 수준 옵션을 설정할 수 있습니다. 이러한 옵션은 개체 변환, 개체 로드, 사용자 인터페이스 및 데이터 마이그레이션 설정을 지정 합니다. 개체를로 변환 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 하거나 데이터를로 마이그레이션하기 전에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 옵션이 프로젝트에 적합 한지 확인 합니다.  
@@ -39,7 +40,7 @@ SSMA에는 5 개의 프로젝트 설정 집합이 있습니다.
   
 또한 이러한 설정을 구성 하는 네 가지 모드가 있습니다.  
   
--   Default  
+-   기본값  
   
 -   Optimistic  
   
@@ -100,5 +101,5 @@ SSMA에서 모든 프로젝트에 대 한 기본 설정을 구성할 수 있습�
 -   그렇지 않으면 Oracle 데이터베이스 개체 정의를 개체 정의로 변환할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 자세한 내용은 [Oracle 스키마 변환 &#40;OracleToSQL&#41;](../../ssma/oracle/converting-oracle-schemas-oracletosql.md)을 참조 하세요.  
   
 ## <a name="see-also"></a>참고 항목  
-[Oracle 및 SQL Server 데이터 형식 &#40;OracleToSQL&#41;매핑](../../ssma/oracle/mapping-oracle-and-sql-server-data-types-oracletosql.md)  
+[Oracle 및 SQL Server 데이터 형식 &#40;OracleToSQL&#41;매핑 ](../../ssma/oracle/mapping-oracle-and-sql-server-data-types-oracletosql.md)  
   

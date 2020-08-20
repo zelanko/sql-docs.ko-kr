@@ -1,4 +1,5 @@
 ---
+description: sp_linkedservers(Transact-SQL)
 title: sp_linkedservers (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d8f82f78-8a1f-4831-bcee-7c36c6e7dfbb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3f289fa0d82c9174fc31d6e08888ab0da97912f0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a20fe8ad07a365c8d041794d9f4236abc03f3e93
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899425"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493140"
 ---
 # <a name="sp_linkedservers-transact-sql"></a>sp_linkedservers(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -65,7 +66,7 @@ sp_linkedservers
  [Transact-sql&#41;sp_primarykeys &#40;](../../relational-databases/system-stored-procedures/sp-primarykeys-transact-sql.md)   
  [Transact-sql&#41;sp_table_privileges &#40;](../../relational-databases/system-stored-procedures/sp-table-privileges-transact-sql.md)   
  [Transact-sql&#41;sp_tables_ex &#40;](../../relational-databases/system-stored-procedures/sp-tables-ex-transact-sql.md)   
- [Transact-sql&#41;&#40;시스템 저장 프로시저](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Transact-sql&#41;&#40;분산 쿼리 저장 프로시저](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)  
+ [Transact-sql&#41;&#40;시스템 저장 프로시저 ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;분산 쿼리 저장 프로시저 ](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: 고급 개체 선택(MySQLToSQL)
 title: 고급 개체 선택 (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 390ef0c2-107c-4443-9495-80f35f22d168
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 02dd86ea36cc06529e5bce9c36924e40204bfbe3
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 58f322d0e5be41a41c38b84c76cf7bb77ae1618f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87936219"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492479"
 ---
 # <a name="advanced-object-selection--mysqltosql"></a>고급 개체 선택(MySQLToSQL)
 **고급 개체 섹션** 대화 상자를 사용 하 여 개체 이름에서 문자열과 부분 문자열을 사용 하 여 데이터베이스 개체를 필터링 한 다음 해당 개체를 선택 하거나 선택 취소할 수 있습니다. SSMA는 선택한 개체에 대해 변환 및 마이그레이션 작업을 수행 합니다.  

@@ -1,4 +1,5 @@
 ---
+description: Descendants(MDX)
 title: 하위 항목 (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 2a981595c19c321ab498fe9eb65b8570eb17f3ee
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b883d1ce73a7259b285748e5a66f283a7d830424
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67999992"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491442"
 ---
 # <a name="descendants-mdx"></a>Descendants(MDX)
 
@@ -48,7 +49,7 @@ Descendants(Set_Expression [ , Distance [ ,Desc_Flag ] ] )
  *Level_Expression*  
  수준을 반환하는 유효한 MDX 식입니다.  
   
- *Distance*  
+ *거리*  
  지정된 멤버와의 거리를 지정하는 유효한 숫자 식입니다.  
   
  *Desc_Flag*  
@@ -61,7 +62,7 @@ Descendants(Set_Expression [ , Distance [ ,Desc_Flag ] ] )
   
  집합 식이 지정 된 경우 **하위 항목** 함수는 집합의 각 멤버에 대해 개별적으로 확인 되 고 집합은 다시 생성 됩니다. 즉, **하위 항목** 함수에 사용 되는 구문은 MDX [Generate](../mdx/generate-mdx.md) 함수와 기능적으로 동일 합니다.  
   
- 수준 또는 거리가 지정 되지 않은 경우 함수에 사용 되는 수준의 기본값은 [수준](../mdx/level-mdx.md) 함수 (<\<멤버>>를 호출 하 여 결정 됩니다. Level)를 지정 합니다. 즉, 멤버가 지정 된 경우 지정 된 집합의 각 멤버에 대해 수준 함수를 호출 하 여 지정 된 집합의 각 멤버에 대해 **수준** 함수를 호출 합니다. 수준 식, 거리 또는 플래그가 지정되지 않은 경우 이 함수가 수행하는 작업은 다음 구문이 사용된 경우와 같습니다.  
+ 수준 또는 거리가 지정 되지 않은 경우 함수에 사용 되는 수준의 기본값은 [수준](../mdx/level-mdx.md) 함수 (<>를 호출 하 여 결정 됩니다 \<Member> . Level)를 지정 합니다. 즉, 멤버가 지정 된 경우 지정 된 집합의 각 멤버에 대해 수준 함수를 호출 하 여 지정 된 집합의 각 멤버에 대해 **수준** 함수를 호출 합니다. 수준 식, 거리 또는 플래그가 지정되지 않은 경우 이 함수가 수행하는 작업은 다음 구문이 사용된 경우와 같습니다.  
   
  `Descendants`  
   
@@ -102,7 +103,7 @@ Descendants(Set_Expression [ , Distance [ ,Desc_Flag ] ] )
 |SELF_BEFORE_AFTER|지정된 멤버의 수준에 종속된 모든 수준의 하위 멤버를 반환하며, 지정된 멤버를 포함합니다.|  
 |LEAVES|지정된 멤버와 지정된 수준 사이에 있거나 지정된 거리에 있는 리프 하위 멤버를 반환합니다.|  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 지정된 멤버(United States)와 지정된 수준(City)의 이전 수준 멤버 사이에 있는 멤버와 지정된 멤버(United States)를 반환합니다. 이 예에서는 지정된 멤버(United States)와 State-Province 수준(City 수준의 이전 수준)의 멤버를 반환합니다. 이 예에는 이 함수의 다른 인수를 쉽게 테스트할 수 있도록 주석으로 처리된 인수가 포함되어 있습니다.  
   
 ```  
@@ -123,7 +124,7 @@ SELECT Descendants
 FROM [Adventure Works]   
 ```  
   
- 다음 예에서는 **놀이 Works** 큐브에서 2003 회계 연도의 `Measures.[Gross Profit Margin]` 각 월 일에 계산 된 측정값의 일일 평균을 반환 합니다. **하위 항목** 함수는 `[Date].[Fiscal]` 계층의 현재 멤버에서 확인 된 일 집합을 반환 합니다.  
+ 다음 예에서는 `Measures.[Gross Profit Margin]` **놀이 Works** 큐브에서 2003 회계 연도의 각 월 일에 계산 된 측정값의 일일 평균을 반환 합니다. **하위 항목** 함수는 계층의 현재 멤버에서 확인 된 일 집합을 반환 합니다 `[Date].[Fiscal]` .  
   
 ```  
 WITH MEMBER Measures.[Avg Gross Profit Margin] AS Avg  

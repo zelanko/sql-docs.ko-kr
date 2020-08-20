@@ -1,4 +1,5 @@
 ---
+description: 주의 대상 페이지가 있는 데이터베이스의 무결성 검사
 title: 주의 대상 페이지가 있는 데이터베이스의 무결성 검사 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3b1ec9fe-f6c5-46f7-aa63-6e671be1572d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: f37964a92e08e342be3d18213d47d634891fc30b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 297b61dad13abbc4ab327d2e5432b73961ae443b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85654919"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494030"
 ---
 # <a name="check-integrity-of-database-with-suspect-pages"></a>주의 대상 페이지가 있는 데이터베이스의 무결성 검사
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

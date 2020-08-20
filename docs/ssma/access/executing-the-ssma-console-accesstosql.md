@@ -1,4 +1,5 @@
 ---
+description: SSMA 콘솔 실행 (AccessToSQL)
 title: SSMA 콘솔 실행 (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: aa1bf665-8dc0-4259-b36f-46ae67197a43
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: c10360a252847aec9f65b9e6e1709b9fbffecce4
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 655b6f64391ebf8c7fd28d179000753ed4f95faa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87933954"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492516"
 ---
 # <a name="executing-the-ssma-console-accesstosql"></a>SSMA 콘솔 실행 (AccessToSQL)
 Microsoft는 SSMA 활동을 실행 하 고 제어 하는 강력한 스크립트 파일 명령 및 명령줄 옵션 집합을 제공 합니다. 결과 섹션에서 자세히 설명 합니다.  
@@ -28,13 +29,13 @@ Microsoft는 SSMA 활동을 실행 하 고 제어 하는 강력한 스크립트 
   
 **스크립트**  
   
--   `project-folder`생성 되는 프로젝트의 폴더를 나타냅니다.  
+-   `project-folder` 생성 되는 프로젝트의 폴더를 나타냅니다.  
   
--   `project-name`프로젝트의 이름을 나타냅니다. {string}  
+-   `project-name` 프로젝트의 이름을 나타냅니다. {string}  
   
 -   `overwrite-if-exists`기존 프로젝트를 덮어쓸지 여부를 나타내는 선택적 특성입니다. 부울  
   
--   `project-type`는 선택적 특성입니다.  프로젝트 형식에 사용할 수 있는 옵션은 다음과 같습니다.  
+-   `project-type` 는 선택적 특성입니다.  프로젝트 형식에 사용할 수 있는 옵션은 다음과 같습니다.  
   
     -   sql-서버-2005  
   
@@ -75,9 +76,9 @@ Microsoft는 SSMA 활동을 실행 하 고 제어 하는 강력한 스크립트 
   
 **스크립트**  
   
--   `project-folder`생성 되는 프로젝트의 폴더를 나타냅니다. 지정 된 폴더가 존재 하지 않으면 명령이 실패 합니다.  {string}  
+-   `project-folder` 생성 되는 프로젝트의 폴더를 나타냅니다. 지정 된 폴더가 존재 하지 않으면 명령이 실패 합니다.  {string}  
   
--   `project-name`프로젝트의 이름을 나타냅니다. 지정 된 프로젝트가 없는 경우 명령이 실패 합니다.  {string}  
+-   `project-name` 프로젝트의 이름을 나타냅니다. 지정 된 프로젝트가 없는 경우 명령이 실패 합니다.  {string}  
   
 **구문 예제:**  
   
@@ -266,25 +267,25 @@ SQL Azure에 연결 하는 경우에는 **windows 인증** 및 **포트** 매개
   
 **스크립트**
 
-- `assessment-report-folder:`평가 보고서를 저장할 수 있는 폴더를 지정 합니다. (선택적 특성)  
+- `assessment-report-folder:` 평가 보고서를 저장할 수 있는 폴더를 지정 합니다. (선택적 특성)  
   
-- `object-name:`평가 보고서 생성에 사용할 개체를 지정 합니다. 개별 개체 이름이 나 그룹 개체 이름이 있을 수 있습니다.  
+- `object-name:` 평가 보고서 생성에 사용할 개체를 지정 합니다. 개별 개체 이름이 나 그룹 개체 이름이 있을 수 있습니다.  
   
-- `object-type:`개체 이름 특성에 지정 된 개체의 유형을 지정 합니다. 개체 범주가 지정 된 경우 개체 유형은 "category"가 됩니다.  
+- `object-type:` 개체 이름 특성에 지정 된 개체의 유형을 지정 합니다. 개체 범주가 지정 된 경우 개체 유형은 "category"가 됩니다.  
   
-- `assessment-report-overwrite:`평가 보고서 폴더가 이미 있는 경우 덮어쓸지 여부를 지정 합니다.  
+- `assessment-report-overwrite:` 평가 보고서 폴더가 이미 있는 경우 덮어쓸지 여부를 지정 합니다.  
   
     **기본값:** false (선택적 특성)  
   
-- `write-summary-report-to:`보고서가 생성 될 경로를 지정 합니다.  
+- `write-summary-report-to:` 보고서가 생성 될 경로를 지정 합니다.  
   
     폴더 경로만 언급 하는 경우 파일 이름 **AssessmentReport &lt; n &gt; . XML** 이 생성 됩니다. (선택적 특성)  
   
     보고서 만들기에는 다음 두 개의 하위 범주가 있습니다.  
   
-    - `report-errors`(= "true/false", 기본값은 "false" (옵션 특성))  
+    - `report-errors` (= "true/false", 기본값은 "false" (옵션 특성))  
   
-    - `verbose`(= "true/false", 기본값은 "false" (옵션 특성))  
+    - `verbose` (= "true/false", 기본값은 "false" (옵션 특성))  
   
 **구문 예제:**  
   
@@ -341,25 +342,25 @@ SQL Azure에 연결 하는 경우에는 **windows 인증** 및 **포트** 매개
   
 **스크립트**
 
-- `conversion-report-folder:`평가 보고서를 저장할 수 있는 폴더를 지정 합니다. (선택적 특성)  
+- `conversion-report-folder:` 평가 보고서를 저장할 수 있는 폴더를 지정 합니다. (선택적 특성)  
   
-- `object-name:`스키마 변환에 고려 되는 원본 개체를 지정 합니다 .이 개체에는 개별 개체 이름이 나 그룹 개체 이름이 있을 수 있습니다.  
+- `object-name:` 스키마 변환에 고려 되는 원본 개체를 지정 합니다 .이 개체에는 개별 개체 이름이 나 그룹 개체 이름이 있을 수 있습니다.  
   
-- `object-type:`개체 이름 특성에 지정 된 개체의 유형을 지정 합니다. 개체 범주가 지정 된 경우 개체 유형은 "category"가 됩니다.  
+- `object-type:` 개체 이름 특성에 지정 된 개체의 유형을 지정 합니다. 개체 범주가 지정 된 경우 개체 유형은 "category"가 됩니다.  
   
-- `conversion-report-overwrite:`평가 보고서 폴더가 이미 있는 경우 덮어쓸지 여부를 지정 합니다.  
+- `conversion-report-overwrite:` 평가 보고서 폴더가 이미 있는 경우 덮어쓸지 여부를 지정 합니다.  
   
     **기본값:** false (선택적 특성)  
   
-- `write-summary-report-to:`보고서가 생성 될 경로를 지정 합니다.  
+- `write-summary-report-to:` 보고서가 생성 될 경로를 지정 합니다.  
   
     폴더 경로만 언급 하는 경우 파일 이름 **SchemaConversionReport &lt; n &gt; . XML** 이 생성 됩니다. (선택적 특성)  
   
     보고서 만들기에는 다음 두 개의 하위 범주가 있습니다.  
   
-    - `report-errors`(= "true/false", 기본값은 "false" (옵션 특성))  
+    - `report-errors` (= "true/false", 기본값은 "false" (옵션 특성))  
   
-    - `verbose`(= "true/false", 기본값은 "false" (옵션 특성))  
+    - `verbose` (= "true/false", 기본값은 "false" (옵션 특성))  
   
 **구문 예제:**  
   
@@ -406,19 +407,19 @@ SQL Azure에 연결 하는 경우에는 **windows 인증** 및 **포트** 매개
   
 **스크립트**
   
-- `object-name:`데이터 마이그레이션에 고려 되는 원본 개체를 지정 합니다. 개별 개체 이름이 나 그룹 개체 이름이 있을 수 있습니다.  
+- `object-name:` 데이터 마이그레이션에 고려 되는 원본 개체를 지정 합니다. 개별 개체 이름이 나 그룹 개체 이름이 있을 수 있습니다.  
   
-- `object-type:`개체 이름 특성에 지정 된 개체의 유형을 지정 합니다. 개체 범주가 지정 된 경우 개체 유형은 "category"가 됩니다.  
+- `object-type:` 개체 이름 특성에 지정 된 개체의 유형을 지정 합니다. 개체 범주가 지정 된 경우 개체 유형은 "category"가 됩니다.  
   
-- `write-summary-report-to:`보고서가 생성 될 경로를 지정 합니다.  
+- `write-summary-report-to:` 보고서가 생성 될 경로를 지정 합니다.  
   
     폴더 경로만 언급 하는 경우 파일 이름 **DataMigrationReport &lt; n &gt; . XML** 이 생성 됩니다. (선택적 특성)  
   
     보고서 만들기에는 다음 두 개의 하위 범주가 있습니다.  
   
-    - `report-errors`(= "true/false", 기본값은 "false" (옵션 특성))  
+    - `report-errors` (= "true/false", 기본값은 "false" (옵션 특성))  
   
-    - `verbose`(= "true/false", 기본값은 "false" (옵션 특성))  
+    - `verbose` (= "true/false", 기본값은 "false" (옵션 특성))  
   
 **구문 예제:**  
   
@@ -524,9 +525,9 @@ SQL Azure에 연결 하는 경우에는 **windows 인증** 및 **포트** 매개
   
 **스크립트**
   
-- `source-schema`마이그레이션하려는 원본 스키마를 지정 합니다.  
+- `source-schema` 마이그레이션하려는 원본 스키마를 지정 합니다.  
   
-- `sql-server-schema`마이그레이션할 대상 스키마를 지정 합니다.  
+- `sql-server-schema` 마이그레이션할 대상 스키마를 지정 합니다.  
   
 **구문 예제:**  
   
@@ -554,11 +555,11 @@ SQL Azure에 연결 하는 경우에는 **windows 인증** 및 **포트** 매개
   
 **스크립트**
   
-- `object-name:`대상 데이터베이스와 동기화 하는 데 사용 되는 대상 개체를 지정 합니다. 개별 개체 이름이 나 그룹 개체 이름이 있을 수 있습니다.  
+- `object-name:` 대상 데이터베이스와 동기화 하는 데 사용 되는 대상 개체를 지정 합니다. 개별 개체 이름이 나 그룹 개체 이름이 있을 수 있습니다.  
   
-- `object-type:`개체 이름 특성에 지정 된 개체의 유형을 지정 합니다. 개체 범주가 지정 된 경우 개체 유형은 "category"가 됩니다.  
+- `object-type:` 개체 이름 특성에 지정 된 개체의 유형을 지정 합니다. 개체 범주가 지정 된 경우 개체 유형은 "category"가 됩니다.  
   
-- `on-error:`동기화 오류를 경고 또는 오류로 지정 하는지 여부를 지정 합니다. 오류 시 사용 가능한 옵션:  
+- `on-error:` 동기화 오류를 경고 또는 오류로 지정 하는지 여부를 지정 합니다. 오류 시 사용 가능한 옵션:  
   
     - 보고-전체 경고  
   
@@ -566,7 +567,7 @@ SQL Azure에 연결 하는 경우에는 **windows 인증** 및 **포트** 매개
   
     - fail-스크립트  
   
-- `report-errors-to:`동기화 작업에 대 한 오류 보고서의 위치를 지정 합니다 (옵션 특성). 폴더 경로만 지정 된 경우 이름으로 파일 **TargetSynchronizationReport.XML** 만들어집니다.  
+- `report-errors-to:` 동기화 작업에 대 한 오류 보고서의 위치를 지정 합니다 (옵션 특성). 폴더 경로만 지정 된 경우 이름으로 파일 **TargetSynchronizationReport.XML** 만들어집니다.  
   
 **구문 예제:**  
   
@@ -622,11 +623,11 @@ SQL Azure에 연결 하는 경우에는 **windows 인증** 및 **포트** 매개
   
 하나 또는 여러 메타 베이스 노드가 명령줄 매개 변수로 필요 합니다.  
   
-- `object-name:`원본 데이터베이스에서 새로 고치는 것으로 간주 되는 원본 개체를 지정 합니다. 여기에는 개별 개체 이름이 나 그룹 개체 이름이 있을 수 있습니다.  
+- `object-name:` 원본 데이터베이스에서 새로 고치는 것으로 간주 되는 원본 개체를 지정 합니다. 여기에는 개별 개체 이름이 나 그룹 개체 이름이 있을 수 있습니다.  
   
-- `object-type:`개체 이름 특성에 지정 된 개체의 유형을 지정 합니다. 개체 범주가 지정 된 경우 개체 유형은 "category"가 됩니다.  
+- `object-type:` 개체 이름 특성에 지정 된 개체의 유형을 지정 합니다. 개체 범주가 지정 된 경우 개체 유형은 "category"가 됩니다.  
   
-- `on-error:`새로 고침 오류를 경고 또는 오류로 지정 하는지 여부를 지정 합니다. 오류 시 사용 가능한 옵션:  
+- `on-error:` 새로 고침 오류를 경고 또는 오류로 지정 하는지 여부를 지정 합니다. 오류 시 사용 가능한 옵션:  
   
     - 보고-전체 경고  
   
@@ -634,7 +635,7 @@ SQL Azure에 연결 하는 경우에는 **windows 인증** 및 **포트** 매개
   
     - fail-스크립트  
   
-- `report-errors-to:`폴더 경로만 지정 된 경우 새로 고침 작업 (옵션 특성)에 대 한 오류 보고서의 위치를 지정 합니다. 그런 다음 이름으로 파일 **SourceDBRefreshReport.XML** 만들어집니다.  
+- `report-errors-to:` 폴더 경로만 지정 된 경우 새로 고침 작업 (옵션 특성)에 대 한 오류 보고서의 위치를 지정 합니다. 그런 다음 이름으로 파일 **SourceDBRefreshReport.XML** 만들어집니다.  
   
 **구문 예제:**  
   
@@ -688,15 +689,15 @@ SQL Azure에 연결 하는 경우에는 **windows 인증** 및 **포트** 매개
   
 하나 또는 여러 메타 베이스 노드가 명령줄 매개 변수로 필요 합니다.  
   
-- `object-name:`스크립트를 저장할 개체를 지정 합니다. (개별 개체 이름 또는 그룹 개체 이름이 있을 수 있음)  
+- `object-name:` 스크립트를 저장할 개체를 지정 합니다. (개별 개체 이름 또는 그룹 개체 이름이 있을 수 있음)  
   
-- `object-type:`개체 이름 특성에 지정 된 개체의 유형을 지정 합니다. 개체 범주가 지정 된 경우 개체 유형은 "category"가 됩니다.  
+- `object-type:` 개체 이름 특성에 지정 된 개체의 유형을 지정 합니다. 개체 범주가 지정 된 경우 개체 유형은 "category"가 됩니다.  
   
-- `metabase:`원본 또는 대상 메타 베이스 인지 여부를 지정 합니다.  
+- `metabase:` 원본 또는 대상 메타 베이스 인지 여부를 지정 합니다.  
   
-- `destination:`스크립트를 저장 해야 하는 경로 또는 폴더를 지정 합니다. 파일 이름을 지정 하지 않은 경우 형식 (object_name 특성 값)의 파일 이름입니다.  
+- `destination:` 스크립트를 저장 해야 하는 경로 또는 폴더를 지정 합니다. 파일 이름을 지정 하지 않은 경우 형식 (object_name 특성 값)의 파일 이름입니다.  
   
-- `overwrite:`true 이면 동일한 파일 이름이 있는 경우 덮어씁니다. 값 (true/false)이 있을 수 있습니다.  
+- `overwrite:` true 이면 동일한 파일 이름이 있는 경우 덮어씁니다. 값 (true/false)이 있을 수 있습니다.  
   
 **구문 예제:**  
   

@@ -1,4 +1,5 @@
 ---
+description: sp_delete_schedule(Transact-SQL)
 title: sp_delete_schedule (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 18b2c985-47b8-49c8-82d1-8a4af3d7d33a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8fe6f851ffb3ab15781d5a2ffbbcaca3bf15829f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0746a5039d27cb03edd379b5dee9b69525125156
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85862797"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493309"
 ---
 # <a name="sp_delete_schedule-transact-sql"></a>sp_delete_schedule(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,15 +41,15 @@ sp_delete_schedule { [ @schedule_id = ] schedule_id | [ @schedule_name = ] 'sche
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @schedule_id = ] schedule_id`삭제할 일정의 일정 id 번호입니다. *schedule_id* 은 **int**이며 기본값은 NULL입니다.  
+`[ @schedule_id = ] schedule_id` 삭제할 일정의 일정 id 번호입니다. *schedule_id* 은 **int**이며 기본값은 NULL입니다.  
   
 > **참고:** *Schedule_id* 또는 *schedule_name* 를 지정 해야 하지만 둘 다 지정할 수는 없습니다.  
   
-`[ @schedule_name = ] 'schedule_name'`삭제할 일정의 이름입니다. *schedule_name* 는 **sysname**이며 기본값은 NULL입니다.  
+`[ @schedule_name = ] 'schedule_name'` 삭제할 일정의 이름입니다. *schedule_name* 는 **sysname**이며 기본값은 NULL입니다.  
   
 > **참고:** *Schedule_id* 또는 *schedule_name* 를 지정 해야 하지만 둘 다 지정할 수는 없습니다.  
   
-`[ @force_delete = ] force_delete`작업에 일정을 연결 하는 경우 프로시저의 실패 여부를 지정 합니다. *Force_delete* 은 bit 이며 기본값은 **0**입니다. *Force_delete* **0**인 경우 일정을 작업에 연결 하면 저장 프로시저가 실패 합니다. *Force_delete* **1**이면 일정이 작업에 연결 되었는지 여부에 관계 없이 일정이 삭제 됩니다.  
+`[ @force_delete = ] force_delete` 작업에 일정을 연결 하는 경우 프로시저의 실패 여부를 지정 합니다. *Force_delete* 은 bit 이며 기본값은 **0**입니다. *Force_delete* **0**인 경우 일정을 작업에 연결 하면 저장 프로시저가 실패 합니다. *Force_delete* **1**이면 일정이 작업에 연결 되었는지 여부에 관계 없이 일정이 삭제 됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -74,7 +75,7 @@ sp_delete_schedule { [ @schedule_id = ] schedule_id | [ @schedule_name = ] 'sche
   
  **Sysadmin** 역할의 멤버만 다른 사용자가 소유한 작업 일정을 삭제할 수 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-deleting-a-schedule"></a>A. 일정 삭제  
  다음 예에서는 `NightlyJobs`이라는 일정을 삭제합니다. 이 예에서는 작업에 연결된 일정을 삭제하지 않습니다.  

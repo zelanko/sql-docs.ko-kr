@@ -1,4 +1,5 @@
 ---
+description: 전역 설정(로깅)(SybaseToSQL)
 title: 전역 설정 (로깅) (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4cb4da20-3b99-4aae-8c80-329ee23e796e
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 10a0b901a8e3681e4d74eccbe31e74119ad1ad6e
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: bc71ae0d44048d656bfba1a81ba19b9cb0ee0269
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87931618"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492282"
 ---
 # <a name="global-settings-logging-sybasetosql"></a>전역 설정(로깅)(SybaseToSQL)
 **전역 설정** 대화 상자를 사용 하 여 ssma의 로깅 설정을 지정할 수 있습니다. 일반적으로 제품 지원에 대 한 작업을 수행 하는 경우에만 이러한 설정을 변경할 수 있습니다.  

@@ -1,4 +1,5 @@
 ---
+description: sys.dm_tran_database_transactions(Transact-SQL)
 title: sys. dm_tran_database_transactions (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/09/2017
@@ -20,11 +21,12 @@ ms.assetid: 82a44295-4cbc-4a5b-891a-8ebaf307b8f5
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1e7e0f6716eeabaead05a8d980034474033b3e9b
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: f067c85797b87875f9673b49ad56537c21077195
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005212"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493593"
 ---
 # <a name="sysdm_tran_database_transactions-transact-sql"></a>sys.dm_tran_database_transactions(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -55,17 +57,17 @@ ms.locfileid: "86005212"
 |database_transaction_commit_lsn|**numeric(25,0)**|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상<br /><br /> 데이터베이스 로그에서 트랜잭션 커밋 로그 레코드의 LSN입니다.|  
 |database_transaction_last_rollback_lsn|**numeric(25,0)**|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상<br /><br /> 가장 최근에 롤백된 LSN입니다. 롤백이 수행 되지 않은 경우 값은 MaxLSN입니다.|  
 |database_transaction_next_undo_lsn|**numeric(25,0)**|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상<br /><br /> 실행 취소할 다음 레코드의 LSN입니다.|  
-|pdw_node_id|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포가 설정 된 노드의 식별자입니다.|  
+|pdw_node_id|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포가 설정 된 노드의 식별자입니다.|  
   
-## <a name="permissions"></a>권한
+## <a name="permissions"></a>사용 권한
 
 에 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 는 `VIEW SERVER STATE` 권한이 필요 합니다.   
 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium 계층에서는 데이터베이스에 대 한 권한이 필요 합니다 `VIEW DATABASE STATE` . [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]표준 및 기본 계층에서는 **서버 관리자** 또는 **Azure Active Directory 관리자** 계정이 필요 합니다.   
 
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [dm_tran_active_transactions &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-transactions-transact-sql.md)   
  [dm_tran_session_transactions &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-session-transactions-transact-sql.md)   
- [Transact-sql&#41;&#40;동적 관리 뷰 및 함수](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [트랜잭션 관련 동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   

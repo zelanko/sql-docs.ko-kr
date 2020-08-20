@@ -1,4 +1,5 @@
 ---
+description: sp_change_subscription_properties(Transact-SQL)
 title: sp_change_subscription_properties (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: cf8137f9-f346-4aa1-ae35-91a2d3c16f17
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 35943489c707d5a1b84313bb7ef6eca9113e36ed
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: da197fc6b4cc8b253b3597981a6973e9b77891bb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715899"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493436"
 ---
 # <a name="sp_change_subscription_properties-transact-sql"></a>sp_change_subscription_properties(Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -42,17 +43,17 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @publisher = ] 'publisher'`게시자의 이름입니다. *publisher* 는 **sysname**이며 기본값은 없습니다.  
+`[ @publisher = ] 'publisher'` 게시자의 이름입니다. *publisher* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @publisher_db = ] 'publisher_db'`게시자 데이터베이스의 이름입니다. *publisher_db* 는 **sysname**이며 기본값은 없습니다.  
+`[ @publisher_db = ] 'publisher_db'` 게시자 데이터베이스의 이름입니다. *publisher_db* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @publication = ] 'publication'`게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 없습니다.  
+`[ @publication = ] 'publication'` 게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @property = ] 'property'`변경할 속성입니다. *속성이* **sysname**입니다.  
+`[ @property = ] 'property'` 변경할 속성입니다. *속성이* **sysname**입니다.  
   
-`[ @value = ] 'value'`속성의 새 값입니다. *value* 는 **nvarchar (1000)** 이며 기본값은 없습니다.  
+`[ @value = ] 'value'` 속성의 새 값입니다. *value* 는 **nvarchar (1000)** 이며 기본값은 없습니다.  
   
-`[ @publication_type = ] publication_type`게시의 복제 유형을 지정 합니다. *publication_type* 은 **int**이며 다음 값 중 하나일 수 있습니다.  
+`[ @publication_type = ] publication_type` 게시의 복제 유형을 지정 합니다. *publication_type* 은 **int**이며 다음 값 중 하나일 수 있습니다.  
   
 |값|게시 유형|  
 |-----------|----------------------|  

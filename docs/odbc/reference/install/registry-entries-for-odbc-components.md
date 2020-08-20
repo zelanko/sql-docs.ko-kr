@@ -1,4 +1,5 @@
 ---
+description: ODBC 구성 요소에 대한 레지스트리 항목
 title: ODBC 구성 요소에 대 한 레지스트리 항목 Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: c90aa8a4-6ece-48de-901c-17d23739a9ff
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: bead63f11b253342cd444e1d5bd0697ee00cfbc1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e3364f2b38fdb0c41ae0493b545740b17ee712bf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81296183"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491338"
 ---
 # <a name="registry-entries-for-odbc-components"></a>ODBC 구성 요소에 대한 레지스트리 항목
 > [!NOTE]  
@@ -33,7 +34,7 @@ ms.locfileid: "81296183"
  HKEY_LOCAL_MACHINE\SOFTWARE\ODBC\Odbcinst.ini
  ```
 
- Odbcinst.ini는 HKEY_LOCAL_MACHINE 트리의 하위 키 이므로 컴퓨터의 모든 사용자가 ODBC 구성 요소에 대 한 정보를 사용할 수 있습니다.  
+ Odbcinst.ini은 HKEY_LOCAL_MACHINE 트리의 하위 키 이므로 컴퓨터의 모든 사용자가 ODBC 구성 요소에 대 한 정보를 사용할 수 있습니다.  
   
  이 섹션에서는 다음 항목을 다룹니다.  
   

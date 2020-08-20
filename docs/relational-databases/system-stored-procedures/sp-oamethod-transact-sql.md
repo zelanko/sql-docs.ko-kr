@@ -1,4 +1,5 @@
 ---
+description: sp_OAMethod(Transact-SQL)
 title: sp_OAMethod (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1dfaebe2-c7cf-4041-a586-5d04faf2e25e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9dced2e79df59117a0ae17e0cee2a1429ebd1d0c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 98e487f2393aba0c33f91fba6a41dd096cb61368
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899318"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493121"
 ---
 # <a name="sp_oamethod-transact-sql"></a>sp_OAMethod(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -64,7 +65,7 @@ sp_OAMethod objecttoken , methodname
   
 -   메서드가 배열을 출력 매개 변수로서 반환합니다.  
   
-`[ _@parametername = ] parameter[ OUTPUT ]`는 메서드 매개 변수입니다. 지정 된 경우 *매개 변수* 는 적절 한 데이터 형식의 값 이어야 합니다.  
+`[ _@parametername = ] parameter[ OUTPUT ]` 는 메서드 매개 변수입니다. 지정 된 경우 *매개 변수* 는 적절 한 데이터 형식의 값 이어야 합니다.  
   
  출력 매개 변수의 반환 값을 가져오려면 *매개 변수* 는 적절 한 데이터 형식의 지역 변수 여야 하며 **output** 을 지정 해야 합니다. 상수 매개 변수를 지정 하거나 **output** 을 지정 하지 않은 경우 출력 매개 변수의 모든 반환 값은 무시 됩니다.  
   
@@ -105,9 +106,9 @@ sp_OAMethod objecttoken , methodname
  **Sp_OAMethod** 를 사용 하 여 속성 값을 가져올 수도 있습니다.  
   
 ## <a name="permissions"></a>사용 권한  
- **Sysadmin** 고정 서버 역할의 멤버 자격 또는이 저장 프로시저에 대 한 execute 권한이 필요 합니다. `Ole Automation Procedures`OLE 자동화와 관련 된 시스템 프로시저를 사용 하려면 구성을 사용 하도록 **설정** 해야 합니다.  
+ **Sysadmin** 고정 서버 역할의 멤버 자격 또는이 저장 프로시저에 대 한 execute 권한이 필요 합니다. `Ole Automation Procedures` OLE 자동화와 관련 된 시스템 프로시저를 사용 하려면 구성을 사용 하도록 **설정** 해야 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-calling-a-method"></a>A. 메서드 호출  
  다음 예에서는 `Connect` 이전에 만든 **SQLServer** 개체의 메서드를 호출 합니다.  
@@ -137,7 +138,7 @@ PRINT @property;
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;OLE 자동화 저장 프로시저](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;OLE 자동화 저장 프로시저 ](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
  [OLE 자동화 예제 스크립트](../../relational-databases/stored-procedures/ole-automation-sample-script.md)  
   
   

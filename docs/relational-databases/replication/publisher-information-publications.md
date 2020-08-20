@@ -1,4 +1,5 @@
 ---
+description: 게시자 정보, 게시
 title: 게시자 정보, 게시 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ ms.assetid: 0b2e3d4e-03b7-4c31-8f96-48648d750010
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: f5d897beb238b53e632044aee838f5ee6295ef48
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8d321f41871469284b3ce8dd3402cc16eee385d1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85719532"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493887"
 ---
 # <a name="publisher-information-publications"></a>게시자 정보, 게시
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -72,7 +73,7 @@ ms.locfileid: "85719532"
   
  성능 등급은 다음 값 중 하나입니다.  
   
--   최고  
+-   우수  
   
 -   좋음  
   

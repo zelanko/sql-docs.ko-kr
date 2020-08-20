@@ -1,4 +1,5 @@
 ---
+description: 게시자 정보, 에이전트
 title: 게시자 정보, 에이전트 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/07/2017
@@ -13,12 +14,12 @@ ms.assetid: 2346c00d-c269-45a1-af14-68e7fd7ebd7e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 1430ec2b8ea281beeece3edbb6ef8be1dac75fef
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 97c971a25a10c232f3ae9301caa45bb6b2123acb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728277"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493908"
 ---
 # <a name="publisher-information-agents"></a>게시자 정보, 에이전트
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -65,13 +66,13 @@ ms.locfileid: "85728277"
  **상태**  
  에이전트의 상태입니다. 다음 목록에서는 가능한 상태 값을 보여 줍니다.  
   
--   Error  
+-   오류  
   
--   다시 시도  
+-   재시도  
   
 -   실행 중  
   
--   Completed  
+-   완료됨  
   
  **게시**  
  에이전트와 연결된 게시의 이름입니다.  
@@ -98,9 +99,9 @@ ms.locfileid: "85728277"
  **상태**  
  에이전트의 상태입니다. 다음 목록에서는 가능한 상태 값을 보여 줍니다.  
   
--   Error  
+-   오류  
   
--   다시 시도  
+-   재시도  
   
 -   실행 중  
   
@@ -137,9 +138,9 @@ ms.locfileid: "85728277"
  **상태**  
  에이전트의 상태입니다. 다음 목록에서는 가능한 상태 값을 보여 줍니다.  
   
--   Error  
+-   오류  
   
--   다시 시도  
+-   재시도  
   
 -   실행 중  
   
@@ -176,9 +177,9 @@ ms.locfileid: "85728277"
  **상태**  
  각 작업의 상태입니다. 다음 목록에서는 가능한 상태 값을 보여 줍니다.  
   
--   Error  
+-   오류  
   
--   다시 시도  
+-   재시도  
   
 -   실행 중  
   

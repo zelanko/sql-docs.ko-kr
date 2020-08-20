@@ -1,4 +1,5 @@
 ---
+description: sys.dm_cryptographic_provider_properties(Transact-SQL)
 title: sys. dm_cryptographic_provider_properties (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 024b0095-6766-4189-a39a-d316c5ec2874
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2c588e2c87783bfaeaf09b70350ec00c50c3b1f4
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 562c2884b0eda3488b436c1007c188ec7c64425b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894583"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493796"
 ---
 # <a name="sysdm_cryptographic_provider_properties-transact-sql"></a>sys.dm_cryptographic_provider_properties(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,11 +52,11 @@ ms.locfileid: "85894583"
 ## <a name="remarks"></a>설명  
  sys.dm_cryptographic_provider_properties 뷰는 누구든지 볼 수 있습니다.  
   
-## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;보안 카탈로그 뷰](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
+## <a name="see-also"></a>관련 항목  
+ [보안 카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [암호화 계층](../../relational-databases/security/encryption/encryption-hierarchy.md)   
- [EKM&#41;&#40;확장 가능 키 관리](../../relational-databases/security/encryption/extensible-key-management-ekm.md)   
- [Transact-sql&#41;&#40;암호화 공급자 만들기](../../t-sql/statements/create-cryptographic-provider-transact-sql.md)   
+ [확장 가능 키 관리 &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)   
+ [CREATE CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](../../t-sql/statements/create-cryptographic-provider-transact-sql.md)   
  [보안 관련 동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/security-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: sp_unregistercustomresolver(Transact-SQL)
 title: sp_unregistercustomresolver (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 08bd20c8-c6be-4be2-be9f-2b5e1d7bee43
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 935796cb328807eb4413991eeac97a95bd9b9384
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e1d5957d830b322be2b4c32030a514988583522f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891385"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492918"
 ---
 # <a name="sp_unregistercustomresolver-transact-sql"></a>sp_unregistercustomresolver(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +38,7 @@ sp_unregistercustomresolver [ @article_resolver = ] 'article_resolver'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @article_resolver = ] 'article_resolver'`등록을 취소할 사용자 지정 비즈니스 논리의 이름을 지정 합니다. *article_resolver* 은 **nvarchar (255)** 이며 기본값은 없습니다. 제거될 비즈니스 논리가 COM 구성 요소인 경우 이 매개 변수는 해당 구성 요소의 이름입니다. 비즈니스 논리가 .NET Framework 어셈블리인 경우 이 매개 변수는 해당 어셈블리의 이름입니다.  
+`[ @article_resolver = ] 'article_resolver'` 등록을 취소할 사용자 지정 비즈니스 논리의 이름을 지정 합니다. *article_resolver* 은 **nvarchar (255)** 이며 기본값은 없습니다. 제거될 비즈니스 논리가 COM 구성 요소인 경우 이 매개 변수는 해당 구성 요소의 이름입니다. 비즈니스 논리가 .NET Framework 어셈블리인 경우 이 매개 변수는 해당 어셈블리의 이름입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -50,7 +51,7 @@ sp_unregistercustomresolver [ @article_resolver = ] 'article_resolver'
 ## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할 또는 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_unregistercustomresolver**을 실행할 수 있습니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [Transact-sql&#41;sp_lookupcustomresolver &#40;](../../relational-databases/system-stored-procedures/sp-lookupcustomresolver-transact-sql.md)   
  [Transact-sql&#41;sp_registercustomresolver &#40;](../../relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

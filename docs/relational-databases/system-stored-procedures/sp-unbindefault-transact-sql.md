@@ -1,4 +1,5 @@
 ---
+description: sp_unbindefault(Transact-SQL)
 title: sp_unbindefault (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: c96a6c5e-f3ca-4c1e-b64b-0d8ef6986af8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d8ca77607b6b83f437792800060c368db91ae3bf
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2a78e7ac859e4750f543befd2e574214dae35386
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891415"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493002"
 ---
 # <a name="sp_unbindefault-transact-sql"></a>sp_unbindefault(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85891415"
   현재 데이터베이스의 열에서 또는 별칭 데이터 형식에서 기본값의 바인딩을 해제(제거)합니다.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)]대신 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) 또는 [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) 문에 default 키워드를 사용 하 여 기본 정의를 만드는 것이 좋습니다.  
+>  [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)] 대신 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) 또는 [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) 문에 default 키워드를 사용 하 여 기본 정의를 만드는 것이 좋습니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,14 +44,14 @@ sp_unbindefault [ @objname = ] 'object_name'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @objname = ] 'object_name'`기본값을 해제할 테이블 및 열의 이름 또는 별칭 데이터 형식입니다. *object_name* 은 **nvarchar (776)** 이며 기본값은 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 열 이름과 별칭 데이터 형식 순으로 두 부분의 식별자를 확인합니다.  
+`[ @objname = ] 'object_name'` 기본값을 해제할 테이블 및 열의 이름 또는 별칭 데이터 형식입니다. *object_name* 은 **nvarchar (776)** 이며 기본값은 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 열 이름과 별칭 데이터 형식 순으로 두 부분의 식별자를 확인합니다.  
   
  별칭 데이터 형식에서 기본값의 바인딩을 해제하는 경우 같은 기본값을 가진 이 데이터 형식의 열에 대한 바인딩도 해제됩니다. 기본값을 직접 바인딩한 이 데이터 형식의 열은 영향을 받지 않습니다.  
   
 > [!NOTE]  
 >  *object_name* 대괄호 **([])** 를 구분 식별자 문자로 사용할 수 있습니다. 자세한 내용은 [Database Identifiers](../../relational-databases/databases/database-identifiers.md)을 참조하세요.  
   
-`[ @futureonly = ] 'futureonly_flag'`는 별칭 데이터 형식에서 기본값의 바인딩을 해제 하는 경우에만 사용 됩니다. *futureonly_flag* 는 **varchar (15)** 이며 기본값은 NULL입니다. *Futureonly_flag* 이 **futureonly**경우 데이터 형식의 기존 열은 지정 된 기본값을 잃게 됩니다.  
+`[ @futureonly = ] 'futureonly_flag'` 는 별칭 데이터 형식에서 기본값의 바인딩을 해제 하는 경우에만 사용 됩니다. *futureonly_flag* 는 **varchar (15)** 이며 기본값은 NULL입니다. *Futureonly_flag* 이 **futureonly**경우 데이터 형식의 기존 열은 지정 된 기본값을 잃게 됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -61,7 +62,7 @@ sp_unbindefault [ @objname = ] 'object_name'
 ## <a name="permissions"></a>사용 권한  
  테이블 열에서 기본값의 바인딩을 해제하려면 테이블에 대한 ALTER 사용 권한이 필요합니다. 별칭 데이터 형식에서 기본값의 바인딩을 해제하려면 유형에 대한 CONTROL 사용 권한 또는 유형이 속한 스키마에 대한 ALTER 사용 권한이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-unbinding-a-default-from-a-column"></a>A. 열에서 기본값 바인딩 해제  
  다음 예에서는 `hiredate` 테이블의 `employees` 열에서 기본값의 바인딩을 해제합니다.  
@@ -99,9 +100,9 @@ EXEC sp_bindefault 'default2', '[t.3].c1' ;
 EXEC sp_unbindefault '[t.3].c1';  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;시스템 저장 프로시저](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Transact-sql&#41;&#40;저장 프로시저 데이터베이스 엔진](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>관련 항목  
+ [Transact-sql&#41;&#40;시스템 저장 프로시저 ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;저장 프로시저 데이터베이스 엔진 ](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [CREATE DEFAULT&#40;Transact-SQL&#41;](../../t-sql/statements/create-default-transact-sql.md)   
  [DROP DEFAULT &#40;Transact-sql&#41;](../../t-sql/statements/drop-default-transact-sql.md)   
  [Transact-sql&#41;sp_bindefault &#40;](../../relational-databases/system-stored-procedures/sp-bindefault-transact-sql.md)   

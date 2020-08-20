@@ -1,4 +1,5 @@
 ---
+description: sp_delete_job(Transact-SQL)
 title: sp_delete_job (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b85db6e4-623c-41f1-9643-07e5ea38db09
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f8e4abbb2620931f8d58ced30ae4658a9c0d15bb
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f11bf53f9663893c2d678e7a7af904b70b4fc1cc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85864108"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493348"
 ---
 # <a name="sp_delete_job-transact-sql"></a>sp_delete_job(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,20 +43,20 @@ sp_delete_job { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @job_id = ] job_id`삭제할 작업의 id입니다. *job_id* 은 **uniqueidentifier**이며 기본값은 NULL입니다.  
+`[ @job_id = ] job_id` 삭제할 작업의 id입니다. *job_id* 은 **uniqueidentifier**이며 기본값은 NULL입니다.  
   
-`[ @job_name = ] 'job_name'`삭제할 작업의 이름입니다. *job_name* 는 **sysname**이며 기본값은 NULL입니다.  
+`[ @job_name = ] 'job_name'` 삭제할 작업의 이름입니다. *job_name* 는 **sysname**이며 기본값은 NULL입니다.  
   
 > [!NOTE]  
 >  *Job_id* 또는 *job_name*를 지정 해야 합니다. 둘 다 지정할 수 없습니다.  
   
-`[ @originating_server = ] 'server'`내부용입니다.  
+`[ @originating_server = ] 'server'` 내부용입니다.  
   
-`[ @delete_history = ] delete_history`작업 기록을 삭제할지 여부를 지정 합니다. *delete_history* 은 **bit**이며 기본값은 **1**입니다. *Delete_history* **1**이면 작업의 작업 기록이 삭제 됩니다. *Delete_history* **0**이면 작업 기록이 삭제 되지 않습니다.  
+`[ @delete_history = ] delete_history` 작업 기록을 삭제할지 여부를 지정 합니다. *delete_history* 은 **bit**이며 기본값은 **1**입니다. *Delete_history* **1**이면 작업의 작업 기록이 삭제 됩니다. *Delete_history* **0**이면 작업 기록이 삭제 되지 않습니다.  
   
  작업이 삭제 되 고 기록이 삭제 되지 않은 경우에는 해당 작업에 대 한 기록 정보가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 그래픽 사용자 인터페이스 작업 기록에 표시 되지 않지만 해당 정보는 **msdb** 데이터베이스의 **sysjobhistory** 테이블에 계속 저장 됩니다.  
   
-`[ @delete_unused_schedule = ] delete_unused_schedule`이 작업에 연결 된 일정이 다른 작업에 연결 되어 있지 않은 경우 해당 일정을 삭제할지 여부를 지정 합니다. *delete_unused_schedule* 은 **bit**이며 기본값은 **1**입니다. *Delete_unused_schedule* **1**인 경우 해당 일정을 참조 하는 다른 작업이 없으면이 작업에 연결 된 일정이 삭제 됩니다. *Delete_unused_schedule* **0**인 경우 일정은 삭제 되지 않습니다.  
+`[ @delete_unused_schedule = ] delete_unused_schedule` 이 작업에 연결 된 일정이 다른 작업에 연결 되어 있지 않은 경우 해당 일정을 삭제할지 여부를 지정 합니다. *delete_unused_schedule* 은 **bit**이며 기본값은 **1**입니다. *Delete_unused_schedule* **1**인 경우 해당 일정을 참조 하는 다른 작업이 없으면이 작업에 연결 된 일정이 삭제 됩니다. *Delete_unused_schedule* **0**인 경우 일정은 삭제 되지 않습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -85,7 +86,7 @@ sp_delete_job { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
   
  **sysadmin** 고정 서버 역할의 멤버만 **sp_delete_job** 을 실행하여 모든 작업을 삭제할 수 있습니다. **sysadmin** 고정 서버 역할의 멤버가 아닌 사용자는 해당 사용자가 소유한 작업만 삭제할 수 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `NightlyBackups` 작업을 삭제합니다.  
   
 ```  
@@ -98,7 +99,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;sp_add_job &#40;](../../relational-databases/system-stored-procedures/sp-add-job-transact-sql.md)   
+ [sp_add_job&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-job-transact-sql.md)   
  [Transact-sql&#41;sp_help_job &#40;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
  [Transact-sql&#41;sp_update_job &#40;](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

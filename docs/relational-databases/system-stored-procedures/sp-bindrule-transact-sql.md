@@ -1,4 +1,5 @@
 ---
+description: sp_bindrule(Transact-SQL)
 title: sp_bindrule (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/25/2015
@@ -18,12 +19,12 @@ ms.assetid: 2606073e-c52f-498d-a923-5026b9d97e67
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f2d068c18f692009f29ee7e8d6450c4f013c6906
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c06a99b6c4e5f248df477e147f45b10c7f566f04
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716122"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493508"
 ---
 # <a name="sp_bindrule-transact-sql"></a>sp_bindrule(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "85716122"
   열 또는 별칭 데이터 형식에 규칙을 바인딩합니다.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]대신[Unique 제약 조건 및 Check 제약 조건을](../../relational-databases/tables/unique-constraints-and-check-constraints.md) 사용 해야 합니다. CHECK 제약 조건은 [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) 또는 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) 문의 check 키워드를 사용 하 여 만듭니다.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 대신[Unique 제약 조건 및 Check 제약 조건을](../../relational-databases/tables/unique-constraints-and-check-constraints.md) 사용 해야 합니다. CHECK 제약 조건은 [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) 또는 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) 문의 check 키워드를 사용 하 여 만듭니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,9 +46,9 @@ sp_bindrule [ @rulename = ] 'rule' ,
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @rulename = ] 'rule'`CREATE RULE 문에 의해 생성 된 규칙의 이름입니다. *rule* 은 **nvarchar (776)** 이며 기본값은 없습니다.  
+`[ @rulename = ] 'rule'` CREATE RULE 문에 의해 생성 된 규칙의 이름입니다. *rule* 은 **nvarchar (776)** 이며 기본값은 없습니다.  
   
-`[ @objname = ] 'object_name'`규칙을 바인딩할 테이블 및 열 또는 별칭 데이터 형식입니다. 규칙은 **text**, **ntext**, **image**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **xml**, CLR 사용자 정의 형식 또는 **timestamp** 열에 바인딩할 수 없습니다. 계산 열에 규칙을 바인딩할 수 없습니다.  
+`[ @objname = ] 'object_name'` 규칙을 바인딩할 테이블 및 열 또는 별칭 데이터 형식입니다. 규칙은 **text**, **ntext**, **image**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **xml**, CLR 사용자 정의 형식 또는 **timestamp** 열에 바인딩할 수 없습니다. 계산 열에 규칙을 바인딩할 수 없습니다.  
   
  *object_name* 은 **nvarchar (776)** 이며 기본값은 없습니다. *Object_name* 한 부분으로 구성 된 이름인 경우 별칭 데이터 형식으로 확인 됩니다. 두 부분이나 세 부분으로 된 이름이면 먼저 테이블 및 열로 확인된 다음 확인이 실패하면 별칭 데이터 형식으로 확인됩니다. 기본적으로 별칭 데이터 형식의 기존 열은 규칙이 열에 직접 바인딩된 경우를 제외 하 고 *규칙* 을 상속 합니다.  
   
@@ -57,7 +58,7 @@ sp_bindrule [ @rulename = ] 'rule' ,
 > [!NOTE]  
 >  별칭 데이터 형식을 사용하는 식에 대해 만든 규칙을 열이나 별칭 데이터 형식에 바인딩할 수 있지만 이들 규칙을 참조할 때 컴파일할 수 없습니다. 별칭 데이터 형식에 대해 만든 규칙을 사용하지 마십시오.  
   
-`[ @futureonly = ] 'futureonly_flag'`는 규칙을 별칭 데이터 형식에 바인딩하는 경우에만 사용 됩니다. *future_only_flag* 는 **varchar (15)** 이며 기본값은 NULL입니다. 이 매개 변수를 **futureonly** 로 설정 하면 별칭 데이터 형식의 기존 열이 새 규칙을 상속 하지 않습니다. *FUTUREONLY_FLAG* NULL 인 경우에는 현재 규칙이 없거나 별칭 데이터 형식의 기존 규칙을 사용 하는 별칭 데이터 형식의 열에 새 규칙이 바인딩됩니다.  
+`[ @futureonly = ] 'futureonly_flag'` 는 규칙을 별칭 데이터 형식에 바인딩하는 경우에만 사용 됩니다. *future_only_flag* 는 **varchar (15)** 이며 기본값은 NULL입니다. 이 매개 변수를 **futureonly** 로 설정 하면 별칭 데이터 형식의 기존 열이 새 규칙을 상속 하지 않습니다. *FUTUREONLY_FLAG* NULL 인 경우에는 현재 규칙이 없거나 별칭 데이터 형식의 기존 규칙을 사용 하는 별칭 데이터 형식의 열에 새 규칙이 바인딩됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -118,8 +119,8 @@ EXEC sp_bindrule rule1, '[t.2].c1' ;
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;시스템 저장 프로시저](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Transact-sql&#41;&#40;저장 프로시저 데이터베이스 엔진](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;시스템 저장 프로시저 ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;저장 프로시저 데이터베이스 엔진 ](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [CREATE RULE&#40;Transact-SQL&#41;](../../t-sql/statements/create-rule-transact-sql.md)   
  [DROP RULE &#40;Transact-sql&#41;](../../t-sql/statements/drop-rule-transact-sql.md)   
  [Transact-sql&#41;sp_unbindrule &#40;](../../relational-databases/system-stored-procedures/sp-unbindrule-transact-sql.md)   

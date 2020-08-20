@@ -1,4 +1,5 @@
 ---
+description: sp_helpextendedproc(Transact-SQL)
 title: sp_helpextendedproc (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7e1f017e-c898-4225-b375-6a73ef9aac7b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: bf7e95f30eb4a6abdc61b47b5f64b20f0ed4b27a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 68bc88bdaddc873c0f272ffef37d6465cddb45af
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881582"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493238"
 ---
 # <a name="sp_helpextendedproc-transact-sql"></a>sp_helpextendedproc(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85881582"
   현재 정의되어 있는 확장 저장 프로시저와 프로시저(함수)가 속한 DLL(동적 링크 라이브러리)의 이름을 보고합니다.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]대신 [CLR 통합](../../relational-databases/clr-integration/common-language-runtime-integration-overview.md) 을 사용 하세요.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 대신 [CLR 통합](../../relational-databases/clr-integration/common-language-runtime-integration-overview.md) 을 사용 하세요.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,14 +43,14 @@ sp_helpextendedproc [ [@funcname = ] 'procedure' ]
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @funcname = ] 'procedure'`정보가 보고 되는 확장 저장 프로시저의 이름입니다. *프로시저* 는 **sysname**이며 기본값은 NULL입니다.  
+`[ @funcname = ] 'procedure'` 정보가 보고 되는 확장 저장 프로시저의 이름입니다. *프로시저* 는 **sysname**이며 기본값은 NULL입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|확장 저장 프로시저의 이름입니다.|  
 |**gdiplus.dll**|**nvarchar(255)**|DLL의 이름입니다.|  
@@ -60,7 +61,7 @@ sp_helpextendedproc [ [@funcname = ] 'procedure' ]
 ## <a name="permissions"></a>사용 권한  
  **Sp_helpextendedproc** 를 실행할 수 있는 권한은 **public**에 부여 됩니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-reporting-help-on-all-extended-stored-procedures"></a>A. 모든 확장 저장 프로시저에 관한 도움말 보고  
  다음 예에서는 모든 확장 저장 프로시저에 관해 보고합니다.  

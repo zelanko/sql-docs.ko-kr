@@ -1,4 +1,5 @@
 ---
+description: VIEW_COLUMN_USAGE(Transact-SQL)
 title: VIEW_COLUMN_USAGE (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -19,11 +20,12 @@ ms.assetid: fc0b3608-a7e8-4532-8215-32235d6670f1
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bac8cda9a01e97d0f0b6746b15e55e6560ac541d
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 897b626664976746a3e2048796fc31bbc7610c78
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86006208"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493594"
 ---
 # <a name="view_column_usage-transact-sql"></a>VIEW_COLUMN_USAGE(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -35,16 +37,16 @@ ms.locfileid: "86006208"
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**VIEW_CATALOG**|**nvarchar (** 128 **)**|뷰 한정자입니다.|  
-|**VIEW_SCHEMA**|**nvarchar (** 128 **)**|뷰가 포함된 스키마의 이름입니다.<br /><br /> **&#42;&#42; 중요 한 것** 은 개체의 스키마를 찾는 신뢰할 수 있는 방법 으로만 &#42;&#42;하 여 개체의 카탈로그 뷰를 쿼리 하는 것입니다.|  
+|**VIEW_SCHEMA**|**nvarchar (** 128 **)**|뷰가 포함된 스키마의 이름입니다.<br /><br /> **&#42;&#42; 중요 한 것 **  은 개체의 스키마를 찾는 신뢰할 수 있는 방법 으로만 &#42;&#42;하 여 개체의 카탈로그 뷰를 쿼리 하는 것입니다.|  
 |**VIEW_NAME**|**sysname**|뷰 이름입니다.|  
 |**TABLE_CATALOG**|**nvarchar (** 128 **)**|테이블 한정자입니다.|  
-|**TABLE_SCHEMA**|**nvarchar (** 128 **)**|테이블이 포함된 스키마의 이름입니다.<br /><br /> **&#42;&#42; 중요 한 것** 은 개체의 스키마를 찾는 신뢰할 수 있는 방법 으로만 &#42;&#42;하 여 개체의 카탈로그 뷰를 쿼리 하는 것입니다.|  
+|**TABLE_SCHEMA**|**nvarchar (** 128 **)**|테이블이 포함된 스키마의 이름입니다.<br /><br /> **&#42;&#42; 중요 한 것 **  은 개체의 스키마를 찾는 신뢰할 수 있는 방법 으로만 &#42;&#42;하 여 개체의 카탈로그 뷰를 쿼리 하는 것입니다.|  
 |**TABLE_NAME**|**sysname**|기본 테이블입니다.|  
 |**COLUMN_NAME**|**sysname**|열 이름입니다.|  
   
-## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;시스템 뷰](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
- [Transact-sql&#41;&#40;정보 스키마 뷰](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   
+## <a name="see-also"></a>관련 항목  
+ [Transact-sql&#41;&#40;시스템 뷰 ](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
+ [Transact-sql&#41;&#40;정보 스키마 뷰 ](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   
  [sql_dependencies &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-sql-dependencies-transact-sql.md)   
  [sys.objects&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)  
   

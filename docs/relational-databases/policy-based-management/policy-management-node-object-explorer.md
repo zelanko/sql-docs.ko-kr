@@ -1,4 +1,5 @@
 ---
+description: 정책 관리 노드(개체 탐색기)
 title: 정책 관리 노드(개체 탐색기) | Microsoft 문서
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: 7f5dfdc1-6693-4b0d-8691-2d6f06913ed9
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 7fcd37d6584b38c50b35248124ade0a146af956d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8bdc9732ab9623d4053ee0408873cc533c4564b2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730257"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494007"
 ---
 # <a name="policy-management-node-object-explorer"></a>정책 관리 노드(개체 탐색기)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  이 섹션에서는 **에 있는 개체 탐색기의** 정책 관리 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]노드에 대한 다음 F1 도움말 항목을 제공합니다.  
+   이 섹션에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에 있는 개체 탐색기의 **PolicyManagement** 노드에 대한 다음 F1 도움말 항목을 제공합니다.  
   
 -   [새 조건 만들기 또는 조건 열기 대화 상자, 일반 페이지](../../relational-databases/policy-based-management/create-new-condition-or-open-condition-dialog-box-general-page.md)  
   
@@ -55,7 +56,7 @@ ms.locfileid: "85730257"
   
 -   [정책 가져오기 대화 상자](../../relational-databases/policy-based-management/import-policies-dialog-box.md)  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [정책 기반 관리를 사용하여 서버 관리](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
   
   

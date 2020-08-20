@@ -1,4 +1,5 @@
 ---
+description: sys.dm_os_buffer_pool_extension_configuration(Transact-SQL)
 title: sys. dm_os_buffer_pool_extension_configuration (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/09/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: d52cc481-4d29-4f33-b63d-231ec35d092f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0654796ace5d5026539fc50f514b0407362633fc
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: 463ca3dcf57856a2dae6fff308dba857e40fcd7c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442742"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493656"
 ---
 # <a name="sysdm_os_buffer_pool_extension_configuration-transact-sql"></a>sys.dm_os_buffer_pool_extension_configuration(Transact-SQL)
 

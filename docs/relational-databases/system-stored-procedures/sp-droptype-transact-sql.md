@@ -1,4 +1,5 @@
 ---
+description: sp_droptype(Transact-SQL)
 title: sp_droptype (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e78464ac-2370-4c4e-9cc0-06aebc07cec5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f6417edeacfd9462e5619e2844d4a162976d038b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a20b3522e7e477af826e17d7fb654e3cd99220a6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783763"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493271"
 ---
 # <a name="sp_droptype-transact-sql"></a>sp_droptype(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,7 @@ sp_droptype [ @typename = ] 'type'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @typename = ] 'type'`소유 하 고 있는 별칭 데이터 형식의 이름입니다. *형식은* **sysname**이며 기본값은 없습니다.  
+`[ @typename = ] 'type'` 소유 하 고 있는 별칭 데이터 형식의 이름입니다. *형식은* **sysname**이며 기본값은 없습니다.  
   
 ## <a name="return-code-type"></a>반환 코드 유형  
  0(성공) 또는 1(실패)  
@@ -70,7 +71,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;저장 프로시저 데이터베이스 엔진](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;저장 프로시저 데이터베이스 엔진 ](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [Transact-sql&#41;sp_addtype &#40;](../../relational-databases/system-stored-procedures/sp-addtype-transact-sql.md)   
  [sp_rename&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

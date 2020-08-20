@@ -1,4 +1,5 @@
 ---
+description: backupfile(Transact-SQL)
 title: backupfile (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: f1a7fc0a-f4b4-47eb-9138-eebf930dc9ac
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c5c304cfafc04d9f7c0ec77dc5faedc75ada79df
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 4a4caafa49aca29e1093ffb6304b292bcd5c7735
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890696"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492823"
 ---
 # <a name="backupfile-transact-sql"></a>backupfile(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -65,7 +66,7 @@ ms.locfileid: "85890696"
  이 테이블의 행 수와 다른 백업 및 기록 테이블의 행 수를 줄이려면 [sp_delete_backuphistory](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md) 저장 프로시저를 실행 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;테이블 백업 및 복원](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)   
+ [Transact-sql&#41;&#40;테이블 백업 및 복원 ](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)   
  [backupfilegroup&#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupfilegroup-transact-sql.md)   
  [backupmediafamily&#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupmediafamily-transact-sql.md)   
  [backupmediaset&#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupmediaset-transact-sql.md)   

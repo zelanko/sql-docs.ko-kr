@@ -1,4 +1,5 @@
 ---
+description: sp_help_fulltext_system_components(Transact-SQL)
 title: sp_help_fulltext_system_components (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ ms.assetid: ac1fc7a0-7f46-4a12-8c5c-8d378226a8ce
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e6239ac1bb413d2291b94e7ac05b445c770e5f13
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0686017e612b5d9d7d2c1f932321a965b7f1448a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827657"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493209"
 ---
 # <a name="sp_help_fulltext_system_components-transact-sql"></a>sp_help_fulltext_system_components(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -45,7 +46,7 @@ sp_help_fulltext_system_components
  'all'  
  전체 텍스트 구성 요소에 대한 정보를 반환합니다.  
   
-`[ @component_type = ] component_type`구성 요소의 유형을 지정 합니다. *component_type* 다음 중 하나일 수 있습니다.  
+`[ @component_type = ] component_type` 구성 요소의 유형을 지정 합니다. *component_type* 다음 중 하나일 수 있습니다.  
   
 -   **필터나**  
   
@@ -57,7 +58,7 @@ sp_help_fulltext_system_components
   
  전체 경로를 지정하는 경우 구성 요소 DLL의 전체 경로에도 *param* 을 지정해야 하며 그렇지 않으면 오류 메시지가 반환됩니다.  
   
-`[ @param = ] param`구성 요소 유형에 따라 LCID (로캘 id), "." 접두사가 있는 파일 확장명, 프로토콜 처리기의 전체 구성 요소 이름 또는 구성 요소 DLL의 전체 경로 중 하나를 사용 합니다.  
+`[ @param = ] param` 구성 요소 유형에 따라 LCID (로캘 id), "." 접두사가 있는 파일 확장명, 프로토콜 처리기의 전체 구성 요소 이름 또는 구성 요소 DLL의 전체 경로 중 하나를 사용 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -72,7 +73,7 @@ sp_help_fulltext_system_components
 |**가**|**uniqueidentifier**|구성 요소의 클래스 식별자입니다.|  
 |**fullpath**|**nvarchar(256)**|구성 요소 위치에 대한 경로입니다.<br /><br /> NULL = 호출자가 **serveradmin** 고정 서버 역할의 멤버가 아닙니다.|  
 |**version**|**nvarchar(30)**|구성 요소 버전입니다.|  
-|**manufacturer**|**sysname**|구성 요소 제조업체의 이름입니다.|  
+|**제조업체**|**sysname**|구성 요소 제조업체의 이름입니다.|  
   
  다음 결과 집합은 *component_type*를 사용 하는 하나 이상의 전체 텍스트 카탈로그가 있는 경우에만 반환 됩니다.  
   
@@ -81,13 +82,13 @@ sp_help_fulltext_system_components
 |**dbid**|**int**|데이터베이스의 ID입니다.|  
 |**ftcatid**|**int**|전체 텍스트 카탈로그의 ID입니다.|  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  **Public** 역할의 멤버 자격이 필요 합니다. 그러나 사용자는 VIEW DEFINITION 권한이 있는 전체 텍스트 카탈로그에 대 한 정보만 볼 수 있습니다. **serveradmin** 고정 서버 역할의 멤버만 **fullpath** 열의 값을 볼 수 있습니다.  
   
 ## <a name="remarks"></a>설명  
  이 메서드는 업그레이드를 준비할 때 특히 중요합니다. 특정 데이터베이스 내에서 저장 프로시저를 실행하고, 출력을 사용하여 특정 카탈로그가 업그레이드에 영향을 받는지 여부를 지정합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-listing-all-full-text-system-components"></a>A. 모든 전체 텍스트 시스템 구성 요소 나열  
  다음 예에서는 서버 인스턴스에 등록된 모든 전체 텍스트 시스템 구성 요소를 나열합니다.  
@@ -139,6 +140,6 @@ GO
  [등록 된 필터와 단어 분리기 보기 또는 변경](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md)   
  [검색을 위해 단어 분리기와 형태소 분석기 구성 및 관리](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
  [검색 필터 구성 및 관리](../../relational-databases/search/configure-and-manage-filters-for-search.md)   
- [Transact-sql&#41;&#40;전체 텍스트 검색 및 의미 체계 검색 저장 프로시저](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)  
+ [Transact-sql&#41;&#40;전체 텍스트 검색 및 의미 체계 검색 저장 프로시저 ](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)  
   
   

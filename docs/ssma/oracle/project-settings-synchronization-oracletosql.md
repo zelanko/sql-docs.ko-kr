@@ -1,4 +1,5 @@
 ---
+description: 프로젝트 설정(동기화)(OracleToSQL)
 title: 프로젝트 설정 (동기화) (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -10,12 +11,12 @@ ms.assetid: e223fb7d-05ec-4fa5-8973-d845c33a23dd
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 697bf746f438d45731e78c0c39d28677c3be6ddd
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 6b27143bca2e5b2a2ef9d844fc5f2fc8208734a5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87933207"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492394"
 ---
 # <a name="project-settingssynchronization-oracletosql"></a>프로젝트 설정(동기화)(OracleToSQL)
 **프로젝트 설정** 대화 상자의 동기화 페이지에는에서 테이블 및 저장 프로시저와 같은 데이터베이스 개체를 로드 하 고 새로 고치는 방법을 사용자 지정 하는 설정이 포함 되어 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

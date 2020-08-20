@@ -1,4 +1,5 @@
 ---
+description: 가속 데이터베이스 복구
 title: 가속 데이터베이스 복구 | Microsoft Docs
 ms.date: 05/20/2020
 ms.prod: sql
@@ -12,12 +13,12 @@ author: mashamsft
 ms.author: mathoma
 ms.reviewer: kfarlee
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: fc137d1f94ad1919c41e3f25eb38829941d99023
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: da1baba9e50007358bd7a0f4d550282ee130e4a7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86010168"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491476"
 ---
 # <a name="accelerated-database-recovery"></a>가속 데이터베이스 복구
 

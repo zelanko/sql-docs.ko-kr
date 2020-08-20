@@ -1,4 +1,5 @@
 ---
+description: sys.sp_cdc_cleanup_change_table(Transact-SQL)
 title: sys. sp_cdc_cleanup_change_table (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 02295794-397d-4445-a3e3-971b25e7068d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ac10ff9accd4cac39caef8139406319701026e79
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: fe0e83a4a74be15c405da6b9a95456b71b46e2c2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891175"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492874"
 ---
 # <a name="syssp_cdc_cleanup_change_table-transact-sql"></a>sys.sp_cdc_cleanup_change_table(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,4 +1,5 @@
 ---
+description: SQLSetPos 함수
 title: SQLSetPos 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 07/18/2019
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 80190ee7-ae3b-45e5-92a9-693eb558f322
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: abeb377b614619e8c6359db7ae1d5b388cf2dd82
-ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
+ms.openlocfilehash: 55741fba1dca898e087f4a992dfd7affbf3bcfcb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2020
-ms.locfileid: "86279554"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491233"
 ---
 # <a name="sqlsetpos-function"></a>SQLSetPos 함수
 **규칙**  
@@ -120,7 +121,7 @@ SQLRETURN SQLSetPos(
 |IM017|비동기 알림 모드에서는 폴링을 사용할 수 없습니다.|알림 모델을 사용할 때마다 폴링은 사용 하지 않도록 설정 됩니다.|  
 |IM018|이 핸들에서 이전 비동기 작업을 완료 하기 위해 **SQLCompleteAsync** 가 호출 되지 않았습니다.|핸들에 대 한 이전 함수 호출이 SQL_STILL_EXECUTING을 반환 하 고 알림 모드가 설정 된 경우에는 핸들에 대해 **SQLCompleteAsync** 를 호출 하 여 사후 처리를 수행 하 고 작업을 완료 해야 합니다.|  
   
-## <a name="comments"></a>설명  
+## <a name="comments"></a>주석  
   
 > [!CAUTION]
 >  문에 대 한 자세한 내용은에서 **SQLSetPos** 를 호출 하 *고 ODBC 2.x* 응용 프로그램과의 호환성을 위해 수행 해야 하는 작업을 참조 하세요. [블록 커서, 스크롤 가능 커서 및 이전 버전과의 호환성](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md)을 참조 하세요.  
@@ -312,7 +313,7 @@ SQLRETURN SQLSetPos(
 ## <a name="ignoring-a-column-in-a-bulk-operation"></a>대량 작업에서 열 무시  
  하나 이상의 읽기 전용 열에 대 한 업데이트를 시도 하 여 발생 하는 불필요 한 처리 진단을 방지 하기 위해 응용 프로그램은 바인딩된 길이/표시기 버퍼의 값을 SQL_COLUMN_IGNORE로 설정할 수 있습니다. 자세한 내용은 [SQLBindCol](../../../odbc/reference/syntax/sqlbindcol-function.md)를 참조 하세요.  
   
-## <a name="code-example"></a>코드 예제  
+## <a name="code-example"></a>코드 예  
  다음 예제에서 응용 프로그램을 사용 하면 사용자가 ORDERS 테이블을 검색 하 고 주문 상태를 업데이트할 수 있습니다. 커서는 행 집합 크기가 20 인 키 집합을 기반으로 하며 행 버전을 비교 하는 낙관적 동시성 제어를 사용 합니다. 각 행 집합을 인출 하면 응용 프로그램에서 해당 행 집합을 출력 하 고 사용자가 주문 상태를 선택 하 고 업데이트할 수 있습니다. 응용 프로그램은 **SQLSetPos** 를 사용 하 여 커서를 선택한 행에 배치 하 고 해당 행의 위치 업데이트를 수행 합니다. 명확 하 게 하기 위해 오류 처리는 생략 됩니다.  
   
 ```cpp  
@@ -379,6 +380,6 @@ while ((retcode == SQLFetchScroll(hstmtS, SQL_FETCH_NEXT, 0)) != SQL_ERROR) {
 |설명자의 여러 필드 설정|[SQLSetDescRec 함수](../../../odbc/reference/syntax/sqlsetdescrec-function.md)|  
 |문 특성 설정|[SQLSetStmtAttr 함수](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)|  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [ODBC API 참조](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 헤더 파일](../../../odbc/reference/install/odbc-header-files.md)

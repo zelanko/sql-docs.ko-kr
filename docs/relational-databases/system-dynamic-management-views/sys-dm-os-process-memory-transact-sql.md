@@ -1,4 +1,5 @@
 ---
+description: sys.dm_os_process_memory(Transact-SQL)
 title: sys. dm_os_process_memory (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -20,12 +21,12 @@ ms.assetid: e838130c-95d4-4605-9e3b-eb0ab71cd250
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8dfc95a68ca765db74e143e5efd7233d312387f7
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: d7910830dc463fd29af7d0fa3cfe1b32a1e28cf6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396319"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493638"
 ---
 # <a name="sysdm_os_process_memory-transact-sql"></a>sys.dm_os_process_memory(Transact-SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
@@ -53,7 +54,7 @@ ms.locfileid: "87396319"
 |**available_commit_limit_kb**|**bigint**|프로세스에서 커밋할 수 있는 메모리의 양을 나타냅니다. Null을 허용하지 않습니다.|  
 |**process_physical_memory_low**|**bit**|프로세스가 물리적 메모리 부족 알림에 응답함을 나타냅니다. Null을 허용하지 않습니다.|  
 |**process_virtual_memory_low**|**bit**|가상 메모리 공간이 부족한 것으로 감지되었음을 나타냅니다. Null을 허용하지 않습니다.|  
-|**pdw_node_id**|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포가 설정 된 노드의 식별자입니다.|  
+|**pdw_node_id**|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포가 설정 된 노드의 식별자입니다.|  
   
 ## <a name="permissions"></a>사용 권한  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 서버에 대한 VIEW SERVER STATE 권한이 필요합니다.  
@@ -63,7 +64,7 @@ ms.locfileid: "87396319"
   
 ## <a name="see-also"></a>참고 항목  
  [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Transact-sql&#41;&#40;운영 체제 관련 동적 관리 뷰 SQL Server](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
+ [Transact-sql&#41;&#40;운영 체제 관련 동적 관리 뷰 SQL Server ](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
   
   
 

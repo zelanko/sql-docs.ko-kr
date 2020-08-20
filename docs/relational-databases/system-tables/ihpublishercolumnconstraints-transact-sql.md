@@ -1,4 +1,5 @@
 ---
+description: IHpublishercolumnconstraints(Transact-SQL)
 title: IHpublishercolumnconstraints (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d7a41da6-e067-430a-8da2-3f6745b8a4f3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cddbf1eda989fc46a8d74af22648aa62c3d4bad4
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e683c32184ffa781fbd3e0b3a11d4e96343ee189
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890282"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492810"
 ---
 # <a name="ihpublishercolumnconstraints-transact-sql"></a>IHpublishercolumnconstraints(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,7 @@ ms.locfileid: "85890282"
   
 ## <a name="see-also"></a>참고 항목  
  [다른 유형의 데이터베이스 복제](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
- [Transact-sql&#41;&#40;복제 테이블](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Transact-sql&#41;&#40;복제 테이블 ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [복제 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

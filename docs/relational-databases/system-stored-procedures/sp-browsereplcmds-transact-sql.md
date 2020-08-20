@@ -1,4 +1,5 @@
 ---
+description: sp_browsereplcmds(Transact-SQL)
 title: sp_browsereplcmds (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 30abcb41-1d18-4f43-a692-4c80914c0450
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 695a45248185fe2c064cf94a9cf616efce475ecf
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a3e84bf24563d8d22728cb0b09f348829f6c0e02
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716065"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493471"
 ---
 # <a name="sp_browsereplcmds-transact-sql"></a>sp_browsereplcmds(Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -44,19 +45,19 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @xact_seqno_start = ] 'xact_seqno_start'`반환할 가장 작은 값의 정확한 시퀀스 번호를 지정 합니다. *xact_seqno_start* 은 **nchar (22)** 이며 기본값은은 x 00000000000000000000입니다.  
+`[ @xact_seqno_start = ] 'xact_seqno_start'` 반환할 가장 작은 값의 정확한 시퀀스 번호를 지정 합니다. *xact_seqno_start* 은 **nchar (22)** 이며 기본값은은 x 00000000000000000000입니다.  
   
-`[ @xact_seqno_end = ] 'xact_seqno_end'`반환할 가장 높은 정확한 시퀀스 번호를 지정 합니다. *xact_seqno_end* 은 **nchar (22)** 이며 기본값은 0xffffffffffffffffffff입니다.  
+`[ @xact_seqno_end = ] 'xact_seqno_end'` 반환할 가장 높은 정확한 시퀀스 번호를 지정 합니다. *xact_seqno_end* 은 **nchar (22)** 이며 기본값은 0xffffffffffffffffffff입니다.  
   
-`[ @originator_id = ] 'originator_id'`지정 된 *originator_id* 의 명령이 반환 되는지 여부를 지정 합니다. *originator_id* 은 **int**이며 기본값은 NULL입니다.  
+`[ @originator_id = ] 'originator_id'` 지정 된 *originator_id* 의 명령이 반환 되는지 여부를 지정 합니다. *originator_id* 은 **int**이며 기본값은 NULL입니다.  
   
-`[ @publisher_database_id = ] 'publisher_database_id'`지정 된 *publisher_database_id* 의 명령이 반환 되는지 여부를 지정 합니다. *publisher_database_id* 은 **int**이며 기본값은 NULL입니다.  
+`[ @publisher_database_id = ] 'publisher_database_id'` 지정 된 *publisher_database_id* 의 명령이 반환 되는지 여부를 지정 합니다. *publisher_database_id* 은 **int**이며 기본값은 NULL입니다.  
   
-`[ @article_id = ] 'article_id'`지정 된 *article_id* 의 명령이 반환 되는지 여부를 지정 합니다. *article_id* 은 **int**이며 기본값은 NULL입니다.  
+`[ @article_id = ] 'article_id'` 지정 된 *article_id* 의 명령이 반환 되는지 여부를 지정 합니다. *article_id* 은 **int**이며 기본값은 NULL입니다.  
   
-`[ @command_id = ] command_id`는 디코딩할 [transact-sql&#41;&#40;MSrepl_commands](../../relational-databases/system-tables/msrepl-commands-transact-sql.md) 의 명령 위치입니다. *command_id* 은 **int**이며 기본값은 NULL입니다. 지정 된 경우 다른 모든 매개 변수를 지정 해야 하 고 *xact_seqno_start* *xact_seqno_end*와 동일 해야 합니다.  
+`[ @command_id = ] command_id` 는 디코딩할 [transact-sql&#41;&#40;MSrepl_commands ](../../relational-databases/system-tables/msrepl-commands-transact-sql.md) 의 명령 위치입니다. *command_id* 은 **int**이며 기본값은 NULL입니다. 지정 된 경우 다른 모든 매개 변수를 지정 해야 하 고 *xact_seqno_start* *xact_seqno_end*와 동일 해야 합니다.  
   
-`[ @agent_id = ] agent_id`특정 복제 에이전트에 대 한 명령만 반환 하도록 지정 합니다. *agent_id* 은 **int**이며 기본값은 NULL입니다.  
+`[ @agent_id = ] agent_id` 특정 복제 에이전트에 대 한 명령만 반환 하도록 지정 합니다. *agent_id* 은 **int**이며 기본값은 NULL입니다.  
   
 `[ @compatibility_level = ] compatibility_level`Compatibility_level int 인 버전 이며 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기본값은 *compatibility_level* 900만입니다 **int**.  
   
@@ -89,7 +90,7 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
  배포 데이터베이스에서 **sysadmin** 고정 서버 역할의 멤버 또는 **db_owner** 또는 **replmonitor** 고정 데이터베이스 역할의 멤버만 **sp_browsereplcmds**을 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;sp_replcmds &#40;](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)   
+ [sp_replcmds&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)   
  [Transact-sql&#41;sp_replshowcmds &#40;](../../relational-databases/system-stored-procedures/sp-replshowcmds-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

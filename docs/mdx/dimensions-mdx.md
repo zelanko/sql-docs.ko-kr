@@ -1,4 +1,5 @@
 ---
+description: Dimensions(MDX)
 title: 차원 (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 84d5ab0caa22c6f35f3e7b790dbfb3348df8ceb1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c98167516f9e01525ecd351389c885c48626636e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67999970"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491420"
 ---
 # <a name="dimensions-mdx"></a>Dimensions(MDX)
 
@@ -44,9 +45,9 @@ Dimensions(Hierarchy_Name)
  계층 이름이 지정 된 경우 **차원** 함수는 지정 된 계층을 반환 합니다. 일반적으로 사용자 정의 함수를 사용 하 여이 문자열 버전의 **차원** 함수를 사용 합니다.  
   
 > [!NOTE]  
->  **측정값** 차원은 항상로 `Dimensions(0)`표시 됩니다.  
+>  **측정값** 차원은 항상로 표시 됩니다 `Dimensions(0)` .  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 **차원** 함수를 사용 하 여 숫자 식과 문자열 식을 모두 사용 하 여 지정 된 계층의 이름, 수준 수 및 멤버 수를 반환 합니다.  
   
 ```  

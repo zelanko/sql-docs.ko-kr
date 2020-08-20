@@ -1,4 +1,5 @@
 ---
+description: 전체 텍스트 인덱스 만들기 및 관리
 title: 전체 텍스트 인덱스 만들기 및 관리 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/31/2020
@@ -13,12 +14,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6d51f0b31729d6b061c7e8cfd82b5047796c6daa
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 347f59a7498e34ac1b99956990507559363813c0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758074"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493859"
 ---
 # <a name="create-and-manage-full-text-indexes"></a>전체 텍스트 인덱스 만들기 및 관리
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

@@ -1,4 +1,5 @@
 ---
+description: sp_dropmergesubscription(Transact-SQL)
 title: sp_dropmergesubscription (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 34244ae6-bd98-4a6a-bbd3-85f50edfcdc0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b6e2a01f60f982d3803fbad72cfbad6202b90315
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 4d5b3726aecea192501255efedf0be970549e612
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881813"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493270"
 ---
 # <a name="sp_dropmergesubscription-transact-sql"></a>sp_dropmergesubscription(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,13 +43,13 @@ sp_dropmergesubscription [ [ @publication= ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @publication = ] 'publication'`게시 이름입니다. *게시* 는 **sysname**이며 기본값은 NULL입니다. 게시는 이미 존재하고 있어야 하며 식별자에 적용되는 규칙을 준수해야 합니다.  
+`[ @publication = ] 'publication'` 게시 이름입니다. *게시* 는 **sysname**이며 기본값은 NULL입니다. 게시는 이미 존재하고 있어야 하며 식별자에 적용되는 규칙을 준수해야 합니다.  
   
-`[ @subscriber = ] 'subscriber'`구독자의 이름입니다. *구독자* 는 **sysname**이며 기본값은 NULL입니다.  
+`[ @subscriber = ] 'subscriber'` 구독자의 이름입니다. *구독자* 는 **sysname**이며 기본값은 NULL입니다.  
   
-`[ @subscriber_db = ] 'subscriber_db'`구독 데이터베이스의 이름입니다. *subscription_database*는 **sysname**이며 기본값은 NULL입니다.  
+`[ @subscriber_db = ] 'subscriber_db'` 구독 데이터베이스의 이름입니다. *subscription_database*는 **sysname**이며 기본값은 NULL입니다.  
   
-`[ @subscription_type = ] 'subscription_type'`구독의 유형입니다. *subscription_type*은 **nvarchar (15)** 이며 다음 값 중 하나일 수 있습니다.  
+`[ @subscription_type = ] 'subscription_type'` 구독의 유형입니다. *subscription_type*은 **nvarchar (15)** 이며 다음 값 중 하나일 수 있습니다.  
   
 |값|설명|  
 |-----------|-----------------|  
@@ -58,9 +59,9 @@ sp_dropmergesubscription [ [ @publication= ] 'publication' ]
 |**서브스크립션을**|끌어오기 구독입니다.|  
 |**모두** (기본값)|밀어넣기 및 끌어오기 구독 모두입니다.|  
   
-`[ @ignore_distributor = ] ignore_distributor`이 저장 프로시저가 배포자에 연결 되지 않고 실행 되는지 여부를 나타냅니다. *ignore_distributor* 은 **bit**이며 기본값은 **0**입니다. 이 매개 변수는 배포자에서 정리 태스크를 수행하지 않고 게시를 삭제하는 데 사용할 수 있습니다. 또한 배포자를 다시 설치해야 하는 경우에도 유용합니다.  
+`[ @ignore_distributor = ] ignore_distributor` 이 저장 프로시저가 배포자에 연결 되지 않고 실행 되는지 여부를 나타냅니다. *ignore_distributor* 은 **bit**이며 기본값은 **0**입니다. 이 매개 변수는 배포자에서 정리 태스크를 수행하지 않고 게시를 삭제하는 데 사용할 수 있습니다. 또한 배포자를 다시 설치해야 하는 경우에도 유용합니다.  
   
-`[ @reserved = ] reserved`는 나중에 사용 하도록 예약 되어 있습니다. *reserved* 는 **bit**이며 기본값은 **0**입니다.  
+`[ @reserved = ] reserved` 는 나중에 사용 하도록 예약 되어 있습니다. *reserved* 는 **bit**이며 기본값은 **0**입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -74,7 +75,7 @@ sp_dropmergesubscription [ [ @publication= ] 'publication' ]
 ## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할 또는 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_dropmergesubscription**을 실행할 수 있습니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [밀어넣기 구독 삭제](../../relational-databases/replication/delete-a-push-subscription.md)   
  [끌어오기 구독 삭제](../../relational-databases/replication/delete-a-pull-subscription.md)   
  [Transact-sql&#41;sp_addmergesubscription &#40;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)   

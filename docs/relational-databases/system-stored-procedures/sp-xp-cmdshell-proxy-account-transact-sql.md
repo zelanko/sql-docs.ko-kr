@@ -1,4 +1,5 @@
 ---
+description: sp_xp_cmdshell_proxy_account(Transact-SQL)
 title: sp_xp_cmdshell_proxy_account (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -19,12 +20,12 @@ ms.assetid: f807c373-7fbc-4108-a2bd-73b48a236003
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6f465a27aeac13a8c0a0e810d52aacccc6022133
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 700a33f9d91cce6e7cc8488f5bde687baa741ad9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722970"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492910"
 ---
 # <a name="sp_xp_cmdshell_proxy_account-transact-sql"></a>sp_xp_cmdshell_proxy_account(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -82,11 +83,11 @@ EXEC sp_xp_cmdshell_proxy_account NULL;
 GO  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [Transact-sql&#41;xp_cmdshell &#40;](../../relational-databases/system-stored-procedures/xp-cmdshell-transact-sql.md)   
- [Transact-sql&#41;자격 증명 &#40;만들기](../../t-sql/statements/create-credential-transact-sql.md)   
- [sys. 자격 증명 &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)   
- [Transact-sql&#41;&#40;시스템 저장 프로시저](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)   
+ [sys.credentials&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)   
+ [Transact-sql&#41;&#40;시스템 저장 프로시저 ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [보안 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)  
   
   

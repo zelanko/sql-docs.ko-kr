@@ -1,4 +1,5 @@
 ---
+description: 프로젝트 설정(변환)(MySQLToSQL)
 title: 프로젝트 설정 (변환) (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 7ad5fe44-6445-4ba8-a457-5af792631f11
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 378bc98dd24eff758e6f4e368f4e97e211d1f2a8
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 4c2c4c093fec21723584538dfb5585a74e15c8fb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935222"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492436"
 ---
 # <a name="project-settings-conversion-mysqltosql"></a>프로젝트 설정(변환)(MySQLToSQL)
 **프로젝트 설정** 대화 상자의 변환 페이지에는 Ssma가 MySQL 구문을 SQL Server 또는 SQL Azure 구문으로 변환 하는 방법을 사용자 지정 하는 설정이 포함 되어 있습니다.  
@@ -89,7 +90,7 @@ ms.locfileid: "87935222"
 |**공간 인덱스에 대 한 기본 경계 상자 {XMAX&#124;XMAX&#124;YMAX&#124;YMIN}**|공간 인덱스에 사용 되는 경계 상자의 {XMAX&#124;XMAX&#124;YMAX&#124;YMIN} 매개 변수에 대 한 기본값을 정의 합니다.<br /><br />**기본 모드**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX: 100<br /><br />YMIN: 0<br /><br />**낙관적 모드**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX: 100<br /><br />YMIN: 0<br /><br />**전체 모드**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX: 100<br /><br />YMIN: 0|  
 |**공간 인덱스에 대 한 기본 표 밀도**|공간 인덱스에 사용 되는 표 밀도의 LEVEL_1, LEVEL_2, LEVEL_3 및 LEVEL_4에 대 한 기본값을 정의 합니다.<br /><br />**기본 모드**<br /><br />LEVEL_1: 기본값<br /><br />LEVEL_2: 기본값<br /><br />LEVEL_3: 기본값<br /><br />LEVEL_4: 기본값<br /><br />**낙관적 모드**<br /><br />LEVEL_1: 기본값<br /><br />LEVEL_2: 기본값<br /><br />LEVEL_3: 기본값<br /><br />LEVEL_4: 기본값<br /><br />**전체 모드**<br /><br />LEVEL_1: 기본값<br /><br />LEVEL_2: 기본값<br /><br />LEVEL_3: 기본값<br /><br />LEVEL_4: 기본값|  
   
-### <a name="transactions"></a>의  
+### <a name="transactions"></a>트랜잭션  
   
 |||  
 |-|-|  
@@ -110,6 +111,6 @@ ms.locfileid: "87935222"
 |**정밀도가 38를 초과 하는 숫자 리터럴**|정밀도가 38를 초과 하는 숫자 리터럴을 변환 하는 방법을 지정 합니다.<br /><br />**기본 모드**: 가능한 경우 Round<br /><br />**낙관적 모드**: 가능한 경우 반올림<br /><br />**전체 모드**: 가능한 경우 반올림|  
 |**NULL이 아닌 열의 0 날짜**|0 일, 0 일 또는 잘못 된 날짜/시간 값의 NULL이 아닌 열에 대 한 할당을 처리 하는 방법을 지정 합니다.<br /><br />**기본 모드**: GETDATE ()<br /><br />**낙관적 모드**: GETDATE ()<br /><br />**전체 모드**: GETDATE ()|  
   
-## <a name="see-also"></a>참고 항목  
-[MySQLToSQL&#41;&#40;사용자 인터페이스 참조](../../ssma/mysql/user-interface-reference-mysqltosql.md)  
+## <a name="see-also"></a>관련 항목  
+[MySQLToSQL&#41;&#40;사용자 인터페이스 참조 ](../../ssma/mysql/user-interface-reference-mysqltosql.md)  
   

@@ -1,4 +1,5 @@
 ---
+description: sp_set_firewall_rule(Azure SQL Database)
 title: sp_set_firewall_rule (Azure SQL Database) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/28/2016
@@ -19,12 +20,12 @@ ms.assetid: a974a561-5382-4039-8499-3a56767bcefe
 author: VanMSFT
 ms.author: vanto
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: c64e9a9773ae01d4714e5c36d49097ae4f4856f2
-ms.sourcegitcommit: bc10ec0be5ddfc5f0bc220a9ac36c77dd6b80f1d
+ms.openlocfilehash: 372aad3acb06910c3c905a12486a6ece4adbd6ce
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87544406"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493054"
 ---
 # <a name="sp_set_firewall_rule-azure-sql-database"></a>sp_set_firewall_rule(Azure SQL Database)
 [!INCLUDE [asdb-asa](../../includes/applies-to-version/asdb-asa.md)]
@@ -44,7 +45,7 @@ sp_set_firewall_rule [@name =] 'name',
 ## <a name="arguments"></a>인수  
  다음 표에서는에서 지원 되는 인수와 옵션을 보여 줍니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] .  
   
-|이름|데이터 형식|Description|  
+|Name|데이터 형식|설명|  
 |----------|--------------|-----------------|  
 |[ @name =] ' name '|**NVARCHAR (128)**|서버 수준의 방화벽 설정을 설명하고 구분하는 데 사용된 이름입니다.|  
 |[ @start_ip_address =] ' start_ip_address '|**VARCHAR (50)**|서버 수준 방화벽 설정 범위에서 가장 낮은 IP 주소입니다. 이 값보다 크거나 같은 IP 주소는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 서버에 연결을 시도할 수 있습니다. 가능한 가장 낮은 IP 주소는 `0.0.0.0`입니다.|  

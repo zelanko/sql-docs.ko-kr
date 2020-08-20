@@ -1,4 +1,5 @@
 ---
+description: sp_setdefaultdatatypemapping(Transact-SQL)
 title: sp_setdefaultdatatypemapping (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7394e8ca-4ce1-4e99-a784-205007c2c248
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 96e4959ffa88e96d6236b460d515353d6817f656
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d31d4f44d7b1b60c527a5fa8abcf1e9736b1f674
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901310"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493026"
 ---
 # <a name="sp_setdefaultdatatypemapping-transact-sql"></a>sp_setdefaultdatatypemapping(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,9 +55,9 @@ sp_setdefaultdatatypemapping [ [ @mapping_id = ] mapping_id ]
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @mapping_id = ] mapping_id`기존 데이터 형식 매핑을 식별 합니다.  *mapping_id* 은 **int**이며 기본값은 NULL입니다. *Mapping_id*지정 하는 경우 나머지 매개 변수는 필요 하지 않습니다.  
+`[ @mapping_id = ] mapping_id` 기존 데이터 형식 매핑을 식별 합니다.  *mapping_id* 은 **int**이며 기본값은 NULL입니다. *Mapping_id*지정 하는 경우 나머지 매개 변수는 필요 하지 않습니다.  
   
-`[ @source_dbms = ] 'source_dbms'`데이터 형식이 매핑되는 DBMS의 이름입니다. *source_dbms* 는 **sysname**이며 다음 값 중 하나일 수 있습니다.  
+`[ @source_dbms = ] 'source_dbms'` 데이터 형식이 매핑되는 DBMS의 이름입니다. *source_dbms* 는 **sysname**이며 다음 값 중 하나일 수 있습니다.  
   
 |값|설명|  
 |-----------|-----------------|  
@@ -66,25 +67,25 @@ sp_setdefaultdatatypemapping [ [ @mapping_id = ] mapping_id ]
   
  *MAPPING_ID* NULL 인 경우이 매개 변수를 지정 해야 합니다.  
   
-`[ @source_version = ] 'source_version'`원본 DBMS의 버전 번호입니다. *source_version* 는 **varchar (10)** 이며 기본값은 NULL입니다.  
+`[ @source_version = ] 'source_version'` 원본 DBMS의 버전 번호입니다. *source_version* 는 **varchar (10)** 이며 기본값은 NULL입니다.  
   
-`[ @source_type = ] 'source_type'`원본 DBMS의 데이터 형식입니다. *source_type* 는 **sysname**입니다. *MAPPING_ID* NULL 인 경우이 매개 변수를 지정 해야 합니다.  
+`[ @source_type = ] 'source_type'` 원본 DBMS의 데이터 형식입니다. *source_type* 는 **sysname**입니다. *MAPPING_ID* NULL 인 경우이 매개 변수를 지정 해야 합니다.  
   
-`[ @source_length_min = ] source_length_min`원본 DBMS에 있는 데이터 형식의 최소 길이입니다. *source_length_min* 는 **bigint**이며 기본값은 NULL입니다.  
+`[ @source_length_min = ] source_length_min` 원본 DBMS에 있는 데이터 형식의 최소 길이입니다. *source_length_min* 는 **bigint**이며 기본값은 NULL입니다.  
   
-`[ @source_length_max = ] source_length_max`원본 DBMS에 있는 데이터 형식의 최대 길이입니다. *source_length_max* 는 **bigint**이며 기본값은 NULL입니다.  
+`[ @source_length_max = ] source_length_max` 원본 DBMS에 있는 데이터 형식의 최대 길이입니다. *source_length_max* 는 **bigint**이며 기본값은 NULL입니다.  
   
-`[ @source_precision_min = ] source_precision_min`원본 DBMS에 있는 데이터 형식의 최소 전체 자릿수입니다. *source_precision_min* 는 **bigint**이며 기본값은 NULL입니다.  
+`[ @source_precision_min = ] source_precision_min` 원본 DBMS에 있는 데이터 형식의 최소 전체 자릿수입니다. *source_precision_min* 는 **bigint**이며 기본값은 NULL입니다.  
   
-`[ @source_precision_max = ] source_precision_max`원본 DBMS에 있는 데이터 형식의 최대 전체 자릿수입니다. *source_precision_max* 는 **bigint**이며 기본값은 NULL입니다.  
+`[ @source_precision_max = ] source_precision_max` 원본 DBMS에 있는 데이터 형식의 최대 전체 자릿수입니다. *source_precision_max* 는 **bigint**이며 기본값은 NULL입니다.  
   
-`[ @source_scale_min = ] source_scale_min`원본 DBMS에 있는 데이터 형식의 최소 소수 자릿수입니다. *source_scale_min* 은 **int**이며 기본값은 NULL입니다.  
+`[ @source_scale_min = ] source_scale_min` 원본 DBMS에 있는 데이터 형식의 최소 소수 자릿수입니다. *source_scale_min* 은 **int**이며 기본값은 NULL입니다.  
   
-`[ @source_scale_max = ] source_scale_max`원본 DBMS에 있는 데이터 형식의 최대 소수 자릿수입니다. *source_scale_max* 은 **int**이며 기본값은 NULL입니다.  
+`[ @source_scale_max = ] source_scale_max` 원본 DBMS에 있는 데이터 형식의 최대 소수 자릿수입니다. *source_scale_max* 은 **int**이며 기본값은 NULL입니다.  
   
-`[ @source_nullable = ] source_nullable`원본 DBMS의 데이터 형식이 NULL 값을 지원 하는지 여부입니다. *source_nullable* 은 **bit**이며 기본값은 NULL입니다. **1** 은 NULL 값이 지원 됨을 의미 합니다.  
+`[ @source_nullable = ] source_nullable` 원본 DBMS의 데이터 형식이 NULL 값을 지원 하는지 여부입니다. *source_nullable* 은 **bit**이며 기본값은 NULL입니다. **1** 은 NULL 값이 지원 됨을 의미 합니다.  
   
-`[ @destination_dbms = ] 'destination_dbms'`대상 DBMS의 이름입니다. *destination_dbms* 는 **sysname**이며 다음 값 중 하나일 수 있습니다.  
+`[ @destination_dbms = ] 'destination_dbms'` 대상 DBMS의 이름입니다. *destination_dbms* 는 **sysname**이며 다음 값 중 하나일 수 있습니다.  
   
 |값|설명|  
 |-----------|-----------------|  
@@ -94,17 +95,17 @@ sp_setdefaultdatatypemapping [ [ @mapping_id = ] mapping_id ]
 |**SYBASE**|대상은 Sybase 데이터베이스입니다.|  
 |NULL(기본값)||  
   
-`[ @destination_version = ] 'destination_version'`대상 DBMS의 제품 버전입니다. *destination_version* 는 **varchar (10)** 이며 기본값은 NULL입니다.  
+`[ @destination_version = ] 'destination_version'` 대상 DBMS의 제품 버전입니다. *destination_version* 는 **varchar (10)** 이며 기본값은 NULL입니다.  
   
-`[ @destination_type = ] 'destination_type'`대상 DBMS에 나열 된 데이터 형식입니다. *destination_type* 는 **sysname**이며 기본값은 NULL입니다.  
+`[ @destination_type = ] 'destination_type'` 대상 DBMS에 나열 된 데이터 형식입니다. *destination_type* 는 **sysname**이며 기본값은 NULL입니다.  
   
-`[ @destination_length = ] destination_length`대상 DBMS에 있는 데이터 형식의 길이입니다. *destination_length* 는 **bigint**이며 기본값은 NULL입니다.  
+`[ @destination_length = ] destination_length` 대상 DBMS에 있는 데이터 형식의 길이입니다. *destination_length* 는 **bigint**이며 기본값은 NULL입니다.  
   
-`[ @destination_precision = ] destination_precision`대상 DBMS에 있는 데이터 형식의 전체 자릿수입니다. *destination_precision* 는 **bigint**이며 기본값은 NULL입니다.  
+`[ @destination_precision = ] destination_precision` 대상 DBMS에 있는 데이터 형식의 전체 자릿수입니다. *destination_precision* 는 **bigint**이며 기본값은 NULL입니다.  
   
-`[ @destination_scale = ] destination_scale`대상 DBMS에 있는 데이터 형식의 소수 자릿수입니다. *destination_scale* 은 **int**이며 기본값은 NULL입니다.  
+`[ @destination_scale = ] destination_scale` 대상 DBMS에 있는 데이터 형식의 소수 자릿수입니다. *destination_scale* 은 **int**이며 기본값은 NULL입니다.  
   
-`[ @destination_nullable = ] destination_nullable`대상 DBMS의 데이터 형식이 NULL 값을 지원 하는지 여부입니다. *destination_nullable* 은 **bit**이며 기본값은 NULL입니다. **1** 은 NULL 값이 지원 됨을 의미 합니다.  
+`[ @destination_nullable = ] destination_nullable` 대상 DBMS의 데이터 형식이 NULL 값을 지원 하는지 여부입니다. *destination_nullable* 은 **bit**이며 기본값은 NULL입니다. **1** 은 NULL 값이 지원 됨을 의미 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

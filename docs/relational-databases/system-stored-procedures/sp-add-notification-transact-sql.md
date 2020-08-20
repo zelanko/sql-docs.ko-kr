@@ -1,4 +1,5 @@
 ---
+description: sp_add_notification(Transact-SQL)
 title: sp_add_notification (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 7492c9cd086d63a00909fc64bde87c39aaf2c096
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0c009cd32cf3fdd92fbb638a00d5f1f4a024a1b8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85879389"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493544"
 ---
 # <a name="sp_add_notification-transact-sql"></a>sp_add_notification(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,11 +41,11 @@ sp_add_notification [ @alert_name = ] 'alert' ,
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @alert_name = ] 'alert'`이 알림에 대 한 경고입니다. *경고* 는 **sysname**이며 기본값은 없습니다.  
+`[ @alert_name = ] 'alert'` 이 알림에 대 한 경고입니다. *경고* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @operator_name = ] 'operator'`경고가 발생할 때 알림을 받을 운영자입니다. *연산자* 는 **sysname**이며 기본값은 없습니다.  
+`[ @operator_name = ] 'operator'` 경고가 발생할 때 알림을 받을 운영자입니다. *연산자* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @notification_method = ] notification_method`운영자에 게 알리는 방법입니다. *notification_method* 은 **tinyint**이며 기본값은 없습니다. *notification_method* 는 **or** 논리 연산자와 함께 사용할 수 있는 값 중 하나 이상이 될 수 있습니다.  
+`[ @notification_method = ] notification_method` 운영자에 게 알리는 방법입니다. *notification_method* 은 **tinyint**이며 기본값은 없습니다. *notification_method* 는 **or** 논리 연산자와 함께 사용할 수 있는 값 중 하나 이상이 될 수 있습니다.  
   
 |값|Description|  
 |-----------|-----------------|  
@@ -70,7 +71,7 @@ sp_add_notification [ @alert_name = ] 'alert' ,
 ## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할의 멤버만 **sp_add_notification**를 실행할 수 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 지정된 경고(`Test Alert`)에 전자 메일 알림을 추가합니다.  
   
 > **참고:** 이 예에서는가 `Test Alert` 이미 존재 하며이는 `François Ajenstat` 유효한 연산자 이름 이라고 가정 합니다.  

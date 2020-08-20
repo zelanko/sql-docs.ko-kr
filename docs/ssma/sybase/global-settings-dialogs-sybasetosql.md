@@ -1,4 +1,5 @@
 ---
+description: 전역 설정 (대화 상자) (SybaseToSQL)
 title: 전역 설정 (대화 상자) (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e11452b7-ba94-4367-a745-5ccf1764acec
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 4dc7bf9bf6b8f2e20fb8254a3a27ca2e293a0174
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 5f9ddd2c746acc7b10f893e6ac167e030c9cf689
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87931464"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492209"
 ---
 # <a name="global-settings-dialogs--sybasetosql"></a>전역 설정 (대화 상자) (SybaseToSQL)
 **전역 설정** 대화 상자의 대화 상자 페이지를 사용 하 여 ssma의 기본 사용자 동작 및 경고 설정을 지정할 수 있습니다.  

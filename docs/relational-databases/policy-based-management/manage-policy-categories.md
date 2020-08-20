@@ -1,4 +1,5 @@
 ---
+description: 정책 범주 관리
 title: 정책 범주 관리 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: d188a819-731f-4029-98aa-780d3299a0ce
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0bf099a705615826202a273a1c245c7b5537ee30
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 26b15222f570304f321337a4b3574c3fa2f3b945
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716866"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494016"
 ---
 # <a name="manage-policy-categories"></a>정책 범주 관리
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

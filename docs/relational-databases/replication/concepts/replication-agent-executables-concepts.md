@@ -1,4 +1,5 @@
 ---
+description: 복제 에이전트 실행 파일 개념
 title: 복제 에이전트 실행 파일 개념 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ ms.assetid: cba476df-d4ea-44c9-bb86-81488971e328
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 3d7c330823951444afe33c78cbfd88d0c5bb002c
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: a7a27ed17835067fd3d98eaa1651993fec8488d6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914234"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494026"
 ---
 # <a name="replication-agent-executables-concepts"></a>복제 에이전트 실행 파일 개념
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -49,7 +50,7 @@ ms.locfileid: "86914234"
   
  복제 에이전트를 호출할 때 성능 프로필을 사용하여 에이전트 실행 파일에 정의된 매개 변수 집합을 자동으로 전달할 수 있습니다. 자세한 내용은 [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md)을 참조하세요.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 명령 프롬프트에서 복제 에이전트를 호출하는 방법을 보여 줍니다. RMO(복제 관리 개체)를 사용하여 복제 에이전트를 호출할 수도 있습니다. 자세한 내용은 [구독 동기화&#40;복제&#41;](../../../relational-databases/replication/synchronize-data.md)를 참조하세요.  
   
 > [!NOTE]  

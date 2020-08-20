@@ -1,4 +1,5 @@
 ---
+description: 공간 인덱스 저장 프로시저의 인수 및 속성
 title: 공간 인덱스 저장 프로시저의 인수 및 속성 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ee26082b-c0ed-40ff-b5ad-f5f6b00f0475
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3001731959da3b253ee10f43c333b0c2a8b85380
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9525434eb17f33700f819ef45a8be4392bbfd69a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85626588"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492892"
 ---
 # <a name="spatial-index-stored-procedures---arguments-and-properties"></a>공간 인덱스 저장 프로시저-인수 및 속성
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,13 +41,13 @@ ms.locfileid: "85626588"
 -   [Transact-sql&#41;sp_help_spatial_geography_index_xml &#40;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-xml-transact-sql.md)  
   
 ## <a name="arguments"></a>인수  
-`[ @tabname = ] 'tabname'`공간 인덱스가 지정 된 테이블의 정규화 된 이름 또는 정규화 되지 않은 이름입니다.  
+`[ @tabname = ] 'tabname'` 공간 인덱스가 지정 된 테이블의 정규화 된 이름 또는 정규화 되지 않은 이름입니다.  
   
  따옴표는 정규화된 테이블이 지정된 경우에만 필요합니다. 데이터베이스 이름을 포함한 정규화된 이름인 경우 반드시 현재 데이터베이스의 이름을 사용해야 합니다. *tabname* 은 **nvarchar**(776) 이며 기본값은 없습니다.  
   
-`[ @indexname = ] 'indexname'`지정 된 공간 인덱스의 이름입니다. *indexname* 는 **sysname** 이며 기본값은 없습니다.  
+`[ @indexname = ] 'indexname'` 지정 된 공간 인덱스의 이름입니다. *indexname* 는 **sysname** 이며 기본값은 없습니다.  
   
-`[ @verboseoutput = ] 'verboseoutput'`반환 될 속성 이름 및 값의 범위입니다.  
+`[ @verboseoutput = ] 'verboseoutput'` 반환 될 속성 이름 및 값의 범위입니다.  
   
  0 = 핵심 속성  
   
@@ -54,9 +55,9 @@ ms.locfileid: "85626588"
   
  *verboseoutput* 은 **tinyint** 이며 기본값은 없습니다.  
   
-`[ @query_sample = ] 'query_sample'`는 인덱스의 유용성을 테스트 하는 데 사용할 수 있는 대표적인 쿼리 샘플입니다. 대표 개체 또는 쿼리 창일 수 있습니다. *query_sample* 은 **geometry** 이며 기본값은 없습니다.  
+`[ @query_sample = ] 'query_sample'` 는 인덱스의 유용성을 테스트 하는 데 사용할 수 있는 대표적인 쿼리 샘플입니다. 대표 개체 또는 쿼리 창일 수 있습니다. *query_sample* 은 **geometry** 이며 기본값은 없습니다.  
   
-`[ @xml_output = ] 'xml_output'`는 XML 조각에서 결과 집합을 반환 하는 출력 매개 변수입니다. *xml_output* 은 **xml** 이며 기본값은 없습니다.  
+`[ @xml_output = ] 'xml_output'` 는 XML 조각에서 결과 집합을 반환 하는 출력 매개 변수입니다. *xml_output* 은 **xml** 이며 기본값은 없습니다.  
   
 ## <a name="properties"></a>속성  
  아래 표에 표시 된 것 처럼 ** \@ verboseoutput** = 0을 설정 하 여 핵심 속성을 반환 합니다. ** \@ verboseoutput** 는 0을 > 하 여 공간 인덱스의 모든 속성을 반환 합니다.  

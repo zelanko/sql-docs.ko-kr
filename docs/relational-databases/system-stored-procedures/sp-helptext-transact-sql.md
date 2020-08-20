@@ -1,4 +1,5 @@
 ---
+description: sp_helptext(Transact-SQL)
 title: sp_helptext (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ ms.assetid: 24135456-05f0-427c-884b-93cf38dd47a8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0ae5b287b7740566681da141ecc2225426a7e6c2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6d8b8d14449a266022506c13c1c2b1cd6c5fad5b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85736931"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493186"
 ---
 # <a name="sp_helptext-transact-sql"></a>sp_helptext(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,9 +41,9 @@ sp_helptext [ @objname = ] 'name' [ , [ @columnname = ] computed_column_name ]
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @objname = ] 'name'`사용자 정의 스키마 범위 개체의 정규화 된 이름 또는 정규화 되지 않은 이름입니다. 따옴표는 정규화된 개체를 지정하는 경우에만 필요합니다. 데이터베이스 이름을 포함한 정규화된 이름인 경우 반드시 현재 데이터베이스의 이름을 사용해야 합니다. 개체는 반드시 현재 데이터베이스에 있어야 합니다. *name* 은 **nvarchar (776)** 이며 기본값은 없습니다.  
+`[ @objname = ] 'name'` 사용자 정의 스키마 범위 개체의 정규화 된 이름 또는 정규화 되지 않은 이름입니다. 따옴표는 정규화된 개체를 지정하는 경우에만 필요합니다. 데이터베이스 이름을 포함한 정규화된 이름인 경우 반드시 현재 데이터베이스의 이름을 사용해야 합니다. 개체는 반드시 현재 데이터베이스에 있어야 합니다. *name* 은 **nvarchar (776)** 이며 기본값은 없습니다.  
   
-`[ @columnname = ] 'computed_column_name'`정의 정보를 표시할 계산 열의 이름입니다. 열이 포함 된 테이블을 *이름*으로 지정 해야 합니다. *column_name* 는 **sysname**이며 기본값은 없습니다.  
+`[ @columnname = ] 'computed_column_name'` 정의 정보를 표시할 계산 열의 이름입니다. 열이 포함 된 테이블을 *이름*으로 지정 해야 합니다. *column_name* 는 **sysname**이며 기본값은 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -57,7 +58,7 @@ sp_helptext [ @objname = ] 'name' [ , [ @columnname = ] computed_column_name ]
  sp_helptext는 여러 행에 개체를 만드는 데 사용하는 정의를 표시합니다. 각 행은 255자의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 정의를 포함합니다. 정의는 [sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) 카탈로그 뷰의 **정의** 열에 있습니다.  
   
 ## <a name="permissions"></a>사용 권한  
- **public** 역할의 멤버 자격이 필요합니다. 시스템 개체 정의는 공개적으로 표시됩니다. 개체 소유자나 ALTER, CONTROL, TAKE OWNERSHIP 또는 VIEW DEFINITION 권한 중 하나를 부여받은 사람은 사용자 개체의 정의를 볼 수 있습니다.  
+ **public** 역할의 멤버 자격이 필요합니다. 시스템 개체 정의는 공개적으로 표시됩니다. 개체 소유자나 ALTER, CONTROL, TAKE OWNERSHIP 또는 VIEW DEFINITION 권한 중 하나를 부여 받은 사람은 사용자 개체의 정의를 볼 수 있습니다.  
   
 ## <a name="examples"></a>예제  
   
@@ -90,8 +91,8 @@ GO
  `(isnull(([SubTotal]+[TaxAmt])+[Freight],(0)))`  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;저장 프로시저 데이터베이스 엔진](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [Transact-sql&#41;OBJECT_DEFINITION &#40;](../../t-sql/functions/object-definition-transact-sql.md)   
+ [Transact-sql&#41;&#40;저장 프로시저 데이터베이스 엔진 ](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [OBJECT_DEFINITION&#40;Transact-SQL&#41;](../../t-sql/functions/object-definition-transact-sql.md)   
  [sp_help&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)   
  [sys.sql_modules&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

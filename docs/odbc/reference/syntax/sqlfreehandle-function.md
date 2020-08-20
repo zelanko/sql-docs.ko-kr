@@ -1,4 +1,5 @@
 ---
+description: SQLFreeHandle 함수
 title: SQLFreeHandle 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 07/18/2019
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 17a6fcdc-b05a-4de7-be93-a316f39696a1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0b136dec98a19676aa67c78615d8fe931f62aafa
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e90be541b73e0a5fefb7a082bad27f29c3a6d2a4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81285774"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491274"
 ---
 # <a name="sqlfreehandle-function"></a>SQLFreeHandle 함수
 **규칙**  
@@ -75,9 +76,9 @@ SQLRETURN SQLFreeHandle(
 ## <a name="diagnostics"></a>진단  
  **Sqlfreehandle** 이 SQL_ERROR을 반환 하는 경우 **sqlfreehandle** 에서 해제 하려고 했지만 실패 한 핸들의 진단 데이터 구조에서 연결 된 SQLSTATE 값을 가져올 수 있습니다. 다음 표에서는 일반적으로 **Sqlfreehandle** 에서 반환 하는 SQLSTATE 값을 나열 하 고이 함수의 컨텍스트에서 각 값에 대해 설명 합니다. "(DM)" 표기법은 드라이버 관리자에서 반환 된 SQLSTATEs의 설명 보다 앞에 나옵니다. 다른 설명이 없는 한 각 SQLSTATE 값과 연결 된 반환 코드는 SQL_ERROR 됩니다.  
   
-|SQLSTATE|Error|Description|  
+|SQLSTATE|오류|설명|  
 |--------------|-----------|-----------------|  
-|HY000|일반 오류|특정 SQLSTATE가 없고 구현 별 SQLSTATE가 정의 되지 않은 오류가 발생 했습니다. MessageText 버퍼에서 **SQLGetDiagRec** 에 의해 반환 되는 오류 메시지는 오류 및 해당 원인을 설명 합니다. * \**|  
+|HY000|일반 오류|특정 SQLSTATE가 없고 구현 별 SQLSTATE가 정의 되지 않은 오류가 발생 했습니다. * \* MessageText* 버퍼에서 **SQLGetDiagRec** 에 의해 반환 되는 오류 메시지는 오류 및 해당 원인을 설명 합니다.|  
 |HY001|메모리 할당 오류|드라이버가 실행 또는 함수의 완료를 지 원하는 데 필요한 메모리를 할당할 수 없습니다.|  
 |HY010|함수 시퀀스 오류|(DM) *HandleType* 인수가 SQL_HANDLE_ENV 되었으며 하나 이상의 연결이 할당 되거나 연결 된 상태입니다. SQL_HANDLE_ENV *HandleType* 의 SQL_HANDLE_DBC *HandleType* 를 사용 하 여 **sqlfreehandle** 을 호출 하기 전에 각 연결에 대해 **sqldisconnect** 및 **sqlfreehandle** 을 호출 해야 합니다.<br /><br /> (DM) *HandleType* 인수가 SQL_HANDLE_DBC 되었으며 연결에 대해 **sqldisconnect** 를 호출 하기 전에 함수가 호출 되었습니다.<br /><br /> (DM) *HandleType* 인수가 SQL_HANDLE_DBC 되었습니다. 이 함수가 호출 될 때 *핸들* 을 사용 하 여 비동기적으로 실행 되는 함수가 호출 되었으며 함수가 여전히 실행 되 고 있습니다.<br /><br /> (DM) *HandleType* 인수가 SQL_HANDLE_STMT 되었습니다. **Sqlexecute**, **sqlexecdirect**, **SQLBulkOperations**또는 **SQLSetPos** 가 문 핸들을 사용 하 여 호출 되 고 SQL_NEED_DATA 반환 되었습니다. 이 함수는 모든 실행 시 데이터 매개 변수 또는 열에 대해 데이터를 보내기 전에 호출 되었습니다.<br /><br /> (DM) *HandleType* 인수가 SQL_HANDLE_STMT 되었습니다. 비동기 방식으로 실행 되는 함수가 문 핸들 또는 연결 된 연결 핸들에서 호출 되 고 함수가 호출 될 때 함수가 여전히 실행 되 고 있습니다.<br /><br /> (DM) *HandleType* 인수가 SQL_HANDLE_DESC 되었습니다. 연결 된 연결 핸들에 대해 비동기적으로 실행 되는 함수가 호출 되었습니다. 이 함수가 호출 될 때 함수는 계속 실행 중입니다.<br /><br /> (DM) **Sqlfreehandle** 을 호출 하기 전에 모든 자회사 핸들 및 기타 리소스가 해제 되지 않았습니다.<br /><br /> (DM) **Sqlexecute**, **sqlexecdirect**또는 **SQLMoreResults** 가 *핸들과* 연결 된 문 핸들 중 하나에 대해 호출 되었으며 *HandleType* 가 SQL_HANDLE_STMT 또는 SQL_HANDLE_DESC SQL_PARAM_DATA_AVAILABLE 반환 되도록 설정 되었습니다. 이 함수는 모든 스트리밍된 매개 변수에 대 한 데이터를 검색 하기 전에 호출 되었습니다.|  
 |HY013|메모리 관리 오류|*HandleType* 인수는 SQL_HANDLE_STMT 되었거나 SQL_HANDLE_DESC, 기본 메모리 개체에 액세스할 수 없기 때문에 함수 호출을 처리할 수 없습니다. 메모리가 부족 하기 때문일 수 있습니다.|  
@@ -181,7 +182,7 @@ int main() {
 |문 처리 취소|[SQLCance Functionl](../../../odbc/reference/syntax/sqlcancel-function.md)|  
 |커서 이름 설정|[SQLSetCursorName 함수](../../../odbc/reference/syntax/sqlsetcursorname-function.md)|  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [ODBC API 참조](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 헤더 파일](../../../odbc/reference/install/odbc-header-files.md)   
  [샘플 ODBC 프로그램](../../../odbc/reference/sample-odbc-program.md)

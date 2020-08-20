@@ -1,4 +1,5 @@
 ---
+description: 변환된 데이터베이스 개체를 SQL Server로 로드(SybaseToSQL)
 title: 변환 된 데이터베이스 개체를 SQL Server으로 로드 (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4c59256f-99a8-4351-9559-a455813dbd06
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: a6eccefe78840973f0275bd8453872a675e2d9ae
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 8cf1c6af1a526efe771ccbd3b0f02f35670a1130
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87931689"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492171"
 ---
 # <a name="loading-converted-database-objects-into-sql-server-sybasetosql"></a>변환된 데이터베이스 개체를 SQL Server로 로드(SybaseToSQL)
 Sybase ASE (Server Enterprise) 데이터베이스 개체를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure 변환 하면 결과 데이터베이스 개체를 또는 SQL Azure에 로드할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . SSMA에서 개체를 만들거나 개체를 스크립팅 하 고 스크립트를 직접 실행할 수 있습니다. 또한 SSMA를 사용 하면의 실제 내용으로 대상 메타 데이터를 업데이트 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 하거나 Azure SQL Database 수 있습니다.  
@@ -44,7 +45,7 @@ SSMA를 사용 하 여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
   
 3.  또는 SQL Azure 메타 데이터 탐색기에서 처리할 개체를 선택한 후 데이터베이스 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 마우스 오른쪽 단추로 클릭 **Databases**하 고 **데이터베이스와 동기화**를 클릭 합니다.  
   
-    개체 또는 해당 부모 폴더를 마우스 오른쪽 단추로 클릭 한 다음 **데이터베이스와 동기화**를 클릭 하 여 개별 개체 또는 개체 범주를 동기화 할 수도 있습니다.  
+    개체 또는 해당 부모 폴더를 마우스 오른쪽 단추로 클릭 한 다음  **데이터베이스와 동기화**를 클릭 하 여 개별 개체 또는 개체 범주를 동기화 할 수도 있습니다.  
   
     그런 다음, SSMA는 두 개의 항목 그룹을 볼 수 있는 **데이터베이스와 동기화** 대화 상자를 표시 합니다. 왼쪽에서 SSMA는 트리로 표시 되는 선택한 데이터베이스 개체를 표시 합니다. 오른쪽에서 SSMA 메타 데이터의 동일한 개체를 나타내는 트리를 볼 수 있습니다. 오른쪽 또는 왼쪽 ' + ' 단추를 클릭 하 여 트리를 확장할 수 있습니다. 동기화 방향은 두 트리 사이에 배치 된 작업 열에 표시 됩니다.  
   
@@ -110,5 +111,5 @@ SSMA를 사용 하 여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 마이그레이션 프로세스의 다음 단계는 [SYBASE ASE 데이터를 SQL Server/SQL Azure (SybaseToSQL)로 마이그레이션하](https://msdn.microsoft.com/54a39f5e-9250-4387-a3ae-eae47c799811)는 것입니다.  
   
 ## <a name="see-also"></a>참고 항목  
-[Sybase ASE 데이터베이스를 SQL Server-Azure SQL Database &#40;SybaseToSQL&#41;로 마이그레이션](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
+[Sybase ASE 데이터베이스를 SQL Server-Azure SQL Database &#40;SybaseToSQL&#41;로 마이그레이션 ](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   

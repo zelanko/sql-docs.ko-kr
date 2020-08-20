@@ -1,4 +1,5 @@
 ---
+description: 테스트할 개체 선택 및 구성(SybaseToSQL)
 title: 테스트할 개체 선택 및 구성 (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 89c23aad-bfee-4917-bc16-175288390ac0
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 31cc868cfe2d6fa7cc87e3fc6f89c868c43d17c3
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: c6bcddffdbb524e10a0686e6e9a82f4abcd30db8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934642"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492146"
 ---
 # <a name="selecting-and-configuring-objects-to-test-sybasetosql"></a>테스트할 개체 선택 및 구성(SybaseToSQL)
 이 단계에서는 테스트할 개체를 선택 하 고 프로시저의 반환 값 뿐만 아니라 프로시저의 출력 매개 변수 및 함수를 비교 하기 위한 설정을 구성 합니다.  

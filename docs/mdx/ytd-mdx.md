@@ -1,4 +1,5 @@
 ---
+description: Ytd(MDX)
 title: Ytd (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 2e3fcd823dea5d651cd7be9295fa4c6bba25380c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 14f286a304e03624a9ce20c1bd7b045dffc38688
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68125758"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491371"
 ---
 # <a name="ytd-mdx"></a>Ytd(MDX)
 
@@ -37,7 +38,7 @@ Ytd( [ Member_Expression ] )
  **Ytd** 함수는 수준을 기반으로 하는 특성 계층의 Type 속성이 *Years*로 설정 된 [PeriodsToDate](../mdx/periodstodate-mdx.md) 함수에 대 한 바로 가기 함수입니다. 즉, `Ytd(Member_Expression)`은 `PeriodsToDate(Year_Level_Expression,Member_Expression)`과 동일합니다. Type 속성이 *fiscalyears 유형의*로 설정 된 경우에는이 함수가 작동 하지 않습니다.  
   
 ## <a name="example"></a>예제  
- 다음 예에서는 **놀이 Works** 큐브에서 `Date` 차원에 `Measures.[Order Quantity]` 포함 된 2003 년의 첫 8 개월 동안 집계 된 멤버의 합계를 반환 합니다.  
+ 다음 예에서는 `Measures.[Order Quantity]` `Date` **놀이 Works** 큐브에서 차원에 포함 된 2003 년의 첫 8 개월 동안 집계 된 멤버의 합계를 반환 합니다.  
   
 ```  
 WITH MEMBER [Date].[Calendar].[First8MonthsCY2003] AS  

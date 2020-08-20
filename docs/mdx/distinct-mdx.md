@@ -1,4 +1,5 @@
 ---
+description: Distinct(MDX)
 title: Distinct (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 283f1c10f4030ea2efc23ee237a61b402cefb396
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6d3139623d0eca7986f6bcef1d27a3475b5f371a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67999893"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491430"
 ---
 # <a name="distinct-mdx"></a>Distinct(MDX)
 
@@ -34,7 +35,7 @@ Distinct(Set_Expression)
 ## <a name="remarks"></a>설명  
  **Distinct** 함수가 지정 된 집합에서 중복 튜플을 찾은 경우이 함수는 중복 튜플의 첫 번째 인스턴스만 유지 하 고 집합의 순서는 그대로 유지 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예제 쿼리에서는 Distinct 함수를 명명된 집합과 함께 사용하는 방법과 이 함수를 Count 함수와 함께 사용하여 집합에서 중복 제외 튜플 수를 찾는 방법을 보여 줍니다.  
   
  `WITH SET MySet AS`  

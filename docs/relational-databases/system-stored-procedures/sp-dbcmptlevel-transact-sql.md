@@ -1,4 +1,5 @@
 ---
+description: sp_dbcmptlevel(Transact-SQL)
 title: sp_dbcmptlevel (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 508c686d-2bd4-41ba-8602-48ebca266659
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2c5200a785b533a4d013f7e9b24eed2fac863ba7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b1571beb279f20cd5f887589b11c8fc72bec41a5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85867260"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493401"
 ---
 # <a name="sp_dbcmptlevel-transact-sql"></a>sp_dbcmptlevel(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85867260"
   특정 데이터베이스 동작이 지정된 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 호환되도록 설정합니다.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]대신 [ALTER Database 호환성 수준을](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)사용 해야 합니다.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 대신 [ALTER Database 호환성 수준을](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)사용 해야 합니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,9 +44,9 @@ sp_dbcmptlevel [ [ @dbname = ] name ]
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @dbname = ] name`호환성 수준을 변경할 데이터베이스의 이름입니다. 데이터베이스 이름은 식별자에 대한 규칙을 따라야 합니다. *name* 은 **sysname**이며 기본값은 NULL입니다.  
+`[ @dbname = ] name` 호환성 수준을 변경할 데이터베이스의 이름입니다. 데이터베이스 이름은 식별자에 대한 규칙을 따라야 합니다. *name* 은 **sysname**이며 기본값은 NULL입니다.  
   
-`[ @new_cmptlevel = ] version`데이터베이스가 호환 되도록 설정할의 버전입니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *version* 은 **tinyint**이며 기본값은 NULL입니다. 값은 다음 중 하나여야 합니다.  
+`[ @new_cmptlevel = ] version` 데이터베이스가 호환 되도록 설정할의 버전입니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *version* 은 **tinyint**이며 기본값은 NULL입니다. 값은 다음 중 하나여야 합니다.  
   
  **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]  
   
@@ -72,7 +73,7 @@ sp_dbcmptlevel [ [ @dbname = ] name ]
  데이터베이스 소유자, **sysadmin** 고정 서버 역할의 멤버 및 고정 데이터베이스 역할 **db_owner** (현재 데이터베이스를 변경 하는 경우)에만이 프로시저를 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;저장 프로시저 데이터베이스 엔진](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;저장 프로시저 데이터베이스 엔진 ](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [ALTER DATABASE &#40;Transact-SQL &#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [예약 키워드&#40;Transact-SQL&#41;](../../t-sql/language-elements/reserved-keywords-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

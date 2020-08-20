@@ -1,4 +1,5 @@
 ---
+description: MStracer_history(Transact-SQL)
 title: MStracer_history (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 97237a0c-d574-4b17-8a94-1a8730b31d98
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8c9f554d57935921c068ad25cb51991c47cdbd2a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: cc21b23e670c13de44fbbb6485bc1d977a23d79f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881485"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492725"
 ---
 # <a name="mstracer_history-transact-sql"></a>MStracer_history(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +37,7 @@ ms.locfileid: "85881485"
 |**subscriber_commit**|**datetime**|구독자에서 추적 프로그램 토큰 레코드를 접수한 날짜 및 시각입니다.|  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;복제 테이블](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Transact-sql&#41;&#40;복제 테이블 ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [복제 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

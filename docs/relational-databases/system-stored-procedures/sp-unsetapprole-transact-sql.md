@@ -1,4 +1,5 @@
 ---
+description: sp_unsetapprole(Transact-SQL)
 title: sp_unsetapprole (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4c4033d3-1a34-4dfb-835d-e3293d1a442d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 18fe415653a912bda012e786b0a65e5f5b30dd3c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 03535e2aa88b0387f0d475531576034135ad142b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891365"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492907"
 ---
 # <a name="sp_unsetapprole-transact-sql"></a>sp_unsetapprole(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -56,7 +57,7 @@ sp_unsetapprole @cookie
 ## <a name="permissions"></a>사용 권한  
  **Public** 의 멤버 자격이 필요 하 고 응용 프로그램 역할이 활성화 되었을 때 저장 된 쿠키에 대 한 지식이 필요 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="activating-an-application-role-with-a-cookie-then-reverting-to-the-previous-context"></a>쿠키를 사용하여 애플리케이션 역할을 활성화한 다음 이전 컨텍스트로 되돌리기  
  다음 예에서는 `Sales11` 암호로 `fdsd896#gfdbfdkjgh700mM` 애플리케이션 역할을 활성화하고 쿠키를 만듭니다. 이 예에서는 현재 사용자의 이름을 반환 하 고 **sp_unsetapprole**를 실행 하 여 원래 컨텍스트로 되돌립니다.  
@@ -77,11 +78,11 @@ SELECT USER_NAME();
 GO   
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [Transact-sql&#41;sp_setapprole &#40;](../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md)   
- [Transact-sql&#41;&#40;시스템 저장 프로시저](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Transact-sql&#41;&#40;보안 저장 프로시저](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [Transact-sql&#41;&#40;응용 프로그램 역할 만들기](../../t-sql/statements/create-application-role-transact-sql.md)   
+ [Transact-sql&#41;&#40;시스템 저장 프로시저 ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;보안 저장 프로시저 ](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [CREATE APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
  [DROP APPLICATION ROLE&#40;Transact-SQL&#41;](../../t-sql/statements/drop-application-role-transact-sql.md)  
   
   

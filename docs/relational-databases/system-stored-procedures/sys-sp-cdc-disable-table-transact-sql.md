@@ -1,4 +1,5 @@
 ---
+description: sys.sp_cdc_disable_table(Transact-SQL)
 title: sys. sp_cdc_disable_table (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: da2156c0-504e-4d76-b9a0-4448becf9bda
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9d8f258662f9dddb4f1a0ecdb1c375666fc18cb4
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e1dcc5dffd4c9a718227c85ce8f421b8cb45bbd8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891165"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492850"
 ---
 # <a name="syssp_cdc_disable_table-transact-sql"></a>sys.sp_cdc_disable_table(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,15 +47,15 @@ sys.sp_cdc_disable_table
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @source_schema = ] 'source\_schema'`원본 테이블이 포함 된 스키마의 이름입니다. *source_schema* 는 **sysname**이며 기본값은 없고 NULL 일 수 없습니다.  
+`[ @source_schema = ] 'source\_schema'` 원본 테이블이 포함 된 스키마의 이름입니다. *source_schema* 는 **sysname**이며 기본값은 없고 NULL 일 수 없습니다.  
   
  *source_schema* 는 현재 데이터베이스에 있어야 합니다.  
   
-`[ @source_name = ] 'source\_name'`변경 데이터 캡처가 비활성화 되는 원본 테이블의 이름입니다. *source_name* 는 **sysname**이며 기본값은 없고 NULL 일 수 없습니다.  
+`[ @source_name = ] 'source\_name'` 변경 데이터 캡처가 비활성화 되는 원본 테이블의 이름입니다. *source_name* 는 **sysname**이며 기본값은 없고 NULL 일 수 없습니다.  
   
  *source_name* 는 현재 데이터베이스에 있어야 합니다.  
   
-`[ @capture_instance = ] 'capture\_instance' | 'all'`지정 된 원본 테이블에 대해 사용 하지 않도록 설정할 캡처 인스턴스의 이름입니다. *capture_instance* 는 **sysname** 이며 NULL 일 수 없습니다.  
+`[ @capture_instance = ] 'capture\_instance' | 'all'` 지정 된 원본 테이블에 대해 사용 하지 않도록 설정할 캡처 인스턴스의 이름입니다. *capture_instance* 는 **sysname** 이며 NULL 일 수 없습니다.  
   
  ' A l l '을 지정 하면 *source_name* 에 대해 정의 된 모든 캡처 인스턴스가 비활성화 됩니다.  
   
@@ -70,7 +71,7 @@ sys.sp_cdc_disable_table
 ## <a name="permissions"></a>사용 권한  
  **Db_owner** 고정 데이터베이스 역할의 멤버 자격이 필요 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `HumanResources.Employee` 테이블에 대해 변경 데이터 캡처를 비활성화합니다.  
   
 ```  

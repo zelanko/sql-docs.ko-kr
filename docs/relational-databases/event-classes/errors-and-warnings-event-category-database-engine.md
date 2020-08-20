@@ -1,4 +1,5 @@
 ---
+description: Errors and Warnings 이벤트 범주(데이터베이스 엔진)
 title: Errors and Warnings 이벤트 범주
 ms.date: 06/03/2020
 ms.prod: sql
@@ -14,12 +15,12 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: d31361a5512a93620d6ae2fbab34ff918a0837ee
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8243110252460d8838897139903f306937caf57f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716940"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491117"
 ---
 # <a name="errors-and-warnings-event-category-database-engine"></a>Errors and Warnings 이벤트 범주(데이터베이스 엔진)
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]

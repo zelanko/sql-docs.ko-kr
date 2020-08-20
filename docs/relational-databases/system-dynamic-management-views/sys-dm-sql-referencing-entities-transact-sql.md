@@ -1,4 +1,5 @@
 ---
+description: sys.dm_sql_referencing_entities(Transact-SQL)
 title: sys. dm_sql_referencing_entities (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -20,12 +21,12 @@ ms.assetid: c16f8f0a-483f-4feb-842e-da90426045ae
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a467a445dda5f4d950c5bf4813f5ec69606df487
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: 03848d99d6af31e1ceb04e10f97af26fac58011f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86943068"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493588"
 ---
 # <a name="sysdm_sql_referencing_entities-transact-sql"></a>sys.dm_sql_referencing_entities(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -60,15 +61,15 @@ sys.dm_sql_referencing_entities (
 ```  
   
 ## <a name="arguments"></a>인수  
- `schema_name.referenced_entity_name`참조 된 엔터티의 이름입니다.  
+ `schema_name.referenced_entity_name` 참조 된 엔터티의 이름입니다.  
   
  `schema_name`은 참조된 클래스가 PARTITION_FUNCTION일 경우를 제외하고 필요합니다.  
   
- `schema_name.referenced_entity_name`는 **nvarchar (517)** 입니다.  
+ `schema_name.referenced_entity_name` 는 **nvarchar (517)** 입니다.  
   
- `<referenced_class> ::= { OBJECT  | TYPE | XML_SCHEMA_COLLECTION | PARTITION_FUNCTION }`는 참조 된 엔터티의 클래스입니다. 각 문에는 하나의 클래스만 지정할 수 있습니다.  
+ `<referenced_class> ::= { OBJECT  | TYPE | XML_SCHEMA_COLLECTION | PARTITION_FUNCTION }` 는 참조 된 엔터티의 클래스입니다. 각 문에는 하나의 클래스만 지정할 수 있습니다.  
   
- `<referenced_class>`은 **nvarchar**(60)입니다.  
+ `<referenced_class>` 은 **nvarchar**(60)입니다.  
   
 ## <a name="table-returned"></a>반환된 테이블  
   
@@ -100,23 +101,23 @@ sys.dm_sql_referencing_entities (
 |엔터티 유형|참조 엔터티|참조된 엔터티|  
 |-----------------|------------------------|-----------------------|  
 |테이블|예*|예|  
-|View|yes|yes|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저**|yes|yes|  
+|보기|예|예|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저**|예|예|  
 |CLR 저장 프로시저|예|예|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] 사용자 정의 함수|yes|yes|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 사용자 정의 함수|예|예|  
 |CLR 사용자 정의 함수|예|예|  
-|CLR 트리거(DML 및 DDL)|아니요|아니요|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] DML 트리거|예|아니요|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] 데이터베이스 수준 DDL 트리거|예|아니요|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] 서버 수준 DDL 트리거|예|아니요|  
-|확장된 저장 프로시저|아니요|예|  
-|큐|아니요|예|  
-|동의어|아니요|예|  
-|형식(별칭 및 CLR 사용자 정의 형식)|아니요|예|  
-|XML 스키마 컬렉션|아니요|예|  
-|파티션 함수|아니요|예|  
+|CLR 트리거(DML 및 DDL)|예|예|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] DML 트리거|예|예|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 데이터베이스 수준 DDL 트리거|예|예|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 서버 수준 DDL 트리거|예|예|  
+|확장된 저장 프로시저|예|예|  
+|큐|예|예|  
+|동의어|예|예|  
+|형식(별칭 및 CLR 사용자 정의 형식)|예|예|  
+|XML 스키마 컬렉션|예|예|  
+|파티션 함수|예|예|  
   
- \*테이블은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 계산 열, CHECK 제약 조건 또는 DEFAULT 제약 조건 정의에서 모듈, 사용자 정의 형식 또는 XML 스키마 컬렉션을 참조 하는 경우에만 참조 엔터티로 추적 됩니다.  
+ \* 테이블은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 계산 열, CHECK 제약 조건 또는 DEFAULT 제약 조건 정의에서 모듈, 사용자 정의 형식 또는 XML 스키마 컬렉션을 참조 하는 경우에만 참조 엔터티로 추적 됩니다.  
   
  ** 정수 값 1보다 큰 번호가 있는 저장 프로시저는 참조 엔터티나 참조된 엔터티로 추적되지 않습니다.  
   

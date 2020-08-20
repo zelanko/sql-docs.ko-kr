@@ -1,4 +1,5 @@
 ---
+description: Oracle용 SSMA 구성 요소 제거(OracleToSQL)
 title: Oracle 용 SSMA 구성 요소 제거 (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -12,12 +13,12 @@ ms.assetid: 8b527a56-4e52-487a-9ac9-2320388e6d7d
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 4fbac66cfd7cf549a6321534901ca8a33900f986
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 263d04b401146ce2975a810b084e4957f1daf718
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87933154"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492412"
 ---
 # <a name="removing-ssma--for-oracle-components-oracletosql"></a>Oracle용 SSMA 구성 요소 제거(OracleToSQL)
 Oracle에서로 데이터베이스 마이그레이션을 완료 한 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SSMA 구성 요소를 제거 하는 것이 좋습니다. 언제 든 지 클라이언트 구성 요소를 제거할 수 있습니다. 그러나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 마이그레이션된 데이터베이스가 **sysdb** 데이터베이스의 **ssma_oracle** 스키마에서 함수를 더 이상 사용 하지 않는 경우에는에서 확장 팩을 제거 하면 안 됩니다.  
@@ -56,7 +57,7 @@ Oracle에서로 데이터베이스 마이그레이션을 완료 한 경우 [!INC
   
 제거 후에는를 사용 하 여 **ssma_oracle** 스키마 및 전체 **sysdb** 데이터베이스의 개체가 제거 되었는지 확인할 수 있습니다 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . 그러나 다른 SSMA 제품을 사용 하는 경우 **sysdb** 데이터베이스도 사용 합니다. 데이터베이스가 있고 다른 데이터베이스에서이 데이터베이스의 개체를 참조 하지 않는 경우 데이터베이스를 분리할 수 있습니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
 [Oracle 용 SSMA 클라이언트 &#40;설치 OracleToSQL&#41;](../../ssma/oracle/installing-ssma-for-oracle-client-oracletosql.md)  
-[SQL Server &#40;OracleToSQL&#41;에 SSMA 구성 요소 설치](../../ssma/oracle/installing-ssma-components-on-sql-server-oracletosql.md)  
+[SQL Server &#40;OracleToSQL&#41;에 SSMA 구성 요소 설치 ](../../ssma/oracle/installing-ssma-components-on-sql-server-oracletosql.md)  
   

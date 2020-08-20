@@ -1,4 +1,5 @@
 ---
+description: sp_setapprole(Transact-SQL)
 title: sp_setapprole (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/12/2018
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: cf0901c0-5f90-42d4-9d5b-8772c904062d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ba0a1d118ce62912e082b0553f000018e5d8233e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4e8680d0f122d2b89c199172866a40dd55981a00
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783721"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493082"
 ---
 # <a name="sp_setapprole-transact-sql"></a>sp_setapprole(Transact-SQL)
 
@@ -45,24 +46,24 @@ sp_setapprole [ @rolename = ] 'role',
 
 ## <a name="arguments"></a>인수
 
-`[ @rolename = ] 'role'`현재 데이터베이스에 정의 된 응용 프로그램 역할의 이름입니다. *role* 은 **sysname**이며 기본값은 없습니다. 현재 데이터베이스에 *역할이* 있어야 합니다.  
+`[ @rolename = ] 'role'` 현재 데이터베이스에 정의 된 응용 프로그램 역할의 이름입니다. *role* 은 **sysname**이며 기본값은 없습니다. 현재 데이터베이스에 *역할이* 있어야 합니다.  
   
-`[ @password = ] { encrypt N'password' }`응용 프로그램 역할을 활성화 하는 데 필요한 암호입니다. *password* 는 **sysname**이며 기본값은 없습니다. ODBC **encrypt** 함수를 사용 하 여 *암호* 를 난독 처리 할 수 있습니다. **Encrypt** 함수를 사용 하는 경우 첫 번째 따옴표 앞에 **N** 을 추가 하 여 암호를 유니코드 문자열로 변환 해야 합니다.  
+`[ @password = ] { encrypt N'password' }` 응용 프로그램 역할을 활성화 하는 데 필요한 암호입니다. *password* 는 **sysname**이며 기본값은 없습니다. ODBC **encrypt** 함수를 사용 하 여 *암호* 를 난독 처리 할 수 있습니다. **Encrypt** 함수를 사용 하는 경우 첫 번째 따옴표 앞에 **N** 을 추가 하 여 암호를 유니코드 문자열로 변환 해야 합니다.  
   
  **SqlClient**를 사용 하는 연결에서는 encrypt 옵션이 지원 되지 않습니다.  
   
 > [!IMPORTANT]  
 > ODBC **encrypt** 함수는 암호화를 제공 하지 않습니다. 이 함수를 사용해서는 네트워크로 전송되는 암호를 보호할 수 없습니다. 이 정보가 네트워크를 통해 전송 되는 경우 TLS 또는 IPSec을 사용 합니다.
   
- **@encrypt= ' 없음 '**  
- 난독 처리가 사용되지 않도록 지정합니다. 암호는 일반 텍스트로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 전달됩니다. 기본값입니다.  
+ **@encrypt = ' 없음 '**  
+ 난독 처리가 사용되지 않도록 지정합니다. 암호는 일반 텍스트로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 전달됩니다. 이것이 기본값입니다.  
   
  **@encrypt= ' odbc '**  
  Odbc **암호화** 기능을 사용 하 여에 암호를 보내기 전에 odbc에서 암호를 난독 처리 하도록 지정 합니다 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . 이 값은 ODBC 클라이언트 또는 SQL Server용 OLE DB 공급자를 사용하는 경우에만 지정할 수 있습니다.  
   
-`[ @fCreateCookie = ] true | false`쿠키를 만들지 여부를 지정 합니다. **true** 는 암시적으로 1로 변환 됩니다. **false** 는 암시적으로 0으로 변환 됩니다.  
+`[ @fCreateCookie = ] true | false` 쿠키를 만들지 여부를 지정 합니다. **true** 는 암시적으로 1로 변환 됩니다. **false** 는 암시적으로 0으로 변환 됩니다.  
   
-`[ @cookie = ] @cookie OUTPUT`쿠키를 포함 하는 출력 매개 변수를 지정 합니다. 쿠키는 ** \@ fCreateCookie** 의 값이 **true**인 경우에만 생성 됩니다. **varbinary(8000)**  
+`[ @cookie = ] @cookie OUTPUT` 쿠키를 포함 하는 출력 매개 변수를 지정 합니다. 쿠키는 ** \@ fCreateCookie** 의 값이 **true**인 경우에만 생성 됩니다. **varbinary(8000)**  
   
 > [!NOTE]  
 > 현재 **sp_setapprole** 에 대한 쿠키 **OUTPUT** 매개 변수는 정확한 최대 길이인 **varbinary(8000)** 로 정의되어 있습니다. 그러나 현재 구현은 **varbinary(50)** 입니다. 애플리케이션은 계속해서 **varbinary(8000)** 를 예약하여 후속 릴리스에서 쿠키 반환 크기가 늘어날 경우에도 애플리케이션이 제대로 작동할 수 있도록 해야 합니다.

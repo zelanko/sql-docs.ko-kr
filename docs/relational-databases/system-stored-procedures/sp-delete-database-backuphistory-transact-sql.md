@@ -1,4 +1,5 @@
 ---
+description: sp_delete_database_backuphistory(Transact-SQL)
 title: sp_delete_database_backuphistory (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4c237944-453d-49fb-8d0e-4596945ac147
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4d1600578197545628c1b43fb80787f6565ba7c8
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8a820a9a1da8a3938835f02a68d481b5f88790d4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85864370"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493329"
 ---
 # <a name="sp_delete_database_backuphistory-transact-sql"></a>sp_delete_database_backuphistory(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,7 @@ sp_delete_database_backuphistory [ @database_name = ] 'database_name'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @database_name = ] database_name`백업 및 복원 작업에 관련 된 데이터베이스의 이름을 지정 합니다. *database_name* 는 **sysname**이며 기본값은 없습니다.  
+`[ @database_name = ] database_name` 백업 및 복원 작업에 관련 된 데이터베이스의 이름을 지정 합니다. *database_name* 는 **sysname**이며 기본값은 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -81,7 +82,7 @@ EXEC sp_delete_database_backuphistory @database_name = 'AdventureWorks2012';
   
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [Transact-sql&#41;sp_delete_backuphistory &#40;](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md)   
  [백업 기록 및 헤더 정보&#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md)  
   

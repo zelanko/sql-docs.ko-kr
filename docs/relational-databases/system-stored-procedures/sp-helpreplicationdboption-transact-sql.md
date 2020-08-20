@@ -1,4 +1,5 @@
 ---
+description: sp_helpreplicationdboption(Transact-SQL)
 title: sp_helpreplicationdboption (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 143ce689-108b-49d7-9892-fd3a86897f38
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0376653d2466bf756ba76575f90841f78956ade7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8a09f31e6dca74e00248cb13801d9c5acec11bb4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718680"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493151"
 ---
 # <a name="sp_helpreplicationdboption-transact-sql"></a>sp_helpreplicationdboption(Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -39,9 +40,9 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @dbname = ] 'dbname'`데이터베이스의 이름입니다. *dbname* 은 **sysname**이며 기본값은 **%** 입니다. 이면 **%** 결과 집합에 게시자의 모든 데이터베이스가 포함 되 고, 그렇지 않으면 지정 된 데이터베이스에 대 한 정보만 반환 됩니다. 아래에 설명된 바와 같이 사용자가 적절한 권한을 가지고 있지 않은 데이터베이스에 대해서는 정보가 반환되지 않습니다.  
+`[ @dbname = ] 'dbname'` 데이터베이스의 이름입니다. *dbname* 은 **sysname**이며 기본값은 **%** 입니다. 이면 **%** 결과 집합에 게시자의 모든 데이터베이스가 포함 되 고, 그렇지 않으면 지정 된 데이터베이스에 대 한 정보만 반환 됩니다. 아래에 설명된 바와 같이 사용자가 적절한 권한을 가지고 있지 않은 데이터베이스에 대해서는 정보가 반환되지 않습니다.  
   
-`[ @type = ] 'type'`지정 된 복제 옵션 *유형* 값이 설정 된 데이터베이스만 포함 하도록 결과 집합을 제한 합니다. *형식은* **sysname**이며 다음 값 중 하나일 수 있습니다.  
+`[ @type = ] 'type'` 지정 된 복제 옵션 *유형* 값이 설정 된 데이터베이스만 포함 하도록 결과 집합을 제한 합니다. *형식은* **sysname**이며 다음 값 중 하나일 수 있습니다.  
   
 |값|설명|  
 |-----------|-----------------|  
@@ -49,7 +50,7 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
 |**merge publish**|병합 복제가 허용됩니다.|  
 |**복제 허용** (기본값)|트랜잭션 또는 병합 복제가 허용됩니다.|  
   
-`[ @reserved = ] reserved`기존 게시 및 구독에 대 한 정보를 반환할지 여부를 지정 합니다. *reserved* 는 **bit**이며 기본값은 0입니다. **1**인 경우 지정한 데이터베이스에 기존 게시 또는 구독이 있는지 여부에 대 한 정보가 결과 집합에 포함 됩니다.  
+`[ @reserved = ] reserved` 기존 게시 및 구독에 대 한 정보를 반환할지 여부를 지정 합니다. *reserved* 는 **bit**이며 기본값은 0입니다. **1**인 경우 지정한 데이터베이스에 기존 게시 또는 구독이 있는지 여부에 대 한 정보가 결과 집합에 포함 됩니다.  
   
 ## <a name="result-sets"></a>결과 집합  
   

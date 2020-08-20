@@ -1,4 +1,5 @@
 ---
+description: sp_table_privileges_ex(Transact-SQL)
 title: sp_table_privileges_ex (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b58d4a07-5c40-4f17-b66e-6d6b17188dda
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3e8529a1a3be2bed8ddbea1ff475b21801a34424
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2e748ece19ff0d4dadaf966529ed40e0ac9a69be
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892640"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492964"
 ---
 # <a name="sp_table_privileges_ex-transact-sql"></a>sp_table_privileges_ex(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,18 +44,18 @@ sp_table_privileges_ex [ @table_server = ] 'table_server'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @table_server = ] 'table_server'`정보를 반환할 연결 된 서버의 이름입니다. *table_server* 는 **sysname**이며 기본값은 없습니다.  
+`[ @table_server = ] 'table_server'` 정보를 반환할 연결 된 서버의 이름입니다. *table_server* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @table_name = ] 'table_name']`테이블 권한 정보를 제공할 테이블의 이름입니다. *table_name* 는 **sysname**이며 기본값은 NULL입니다.  
+`[ @table_name = ] 'table_name']` 테이블 권한 정보를 제공할 테이블의 이름입니다. *table_name* 는 **sysname**이며 기본값은 NULL입니다.  
   
-`[ @table_schema = ] 'table_schema'`테이블 스키마입니다. 일부 DBMS 환경에서는 테이블 소유자입니다. *table_schema* 는 **sysname**이며 기본값은 NULL입니다.  
+`[ @table_schema = ] 'table_schema'` 테이블 스키마입니다. 일부 DBMS 환경에서는 테이블 소유자입니다. *table_schema* 는 **sysname**이며 기본값은 NULL입니다.  
   
-`[ @table_catalog = ] 'table_catalog'`지정 된 *table_name* 이 있는 데이터베이스의 이름입니다. *table_catalog* 는 **sysname**이며 기본값은 NULL입니다.  
+`[ @table_catalog = ] 'table_catalog'` 지정 된 *table_name* 이 있는 데이터베이스의 이름입니다. *table_catalog* 는 **sysname**이며 기본값은 NULL입니다.  
   
-`[ @fUsePattern = ] 'fUsePattern'`문자 ' _ ', '% ', ' [' 및 '] '가 와일드 카드 문자로 해석 되는지 여부를 결정 합니다. 유효한 값은 0(패턴 일치 해제)과 1(패턴 일치 설정)입니다. *fUsePattern* 는 **bit**이며 기본값은 1입니다.  
+`[ @fUsePattern = ] 'fUsePattern'` 문자 ' _ ', '% ', ' [' 및 '] '가 와일드 카드 문자로 해석 되는지 여부를 결정 합니다. 유효한 값은 0(패턴 일치 해제)과 1(패턴 일치 설정)입니다. *fUsePattern* 는 **bit**이며 기본값은 1입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
- 없음  
+ None  
   
 ## <a name="result-sets"></a>결과 집합  
   
@@ -74,7 +75,7 @@ sp_table_privileges_ex [ @table_server = ] 'table_server'
 ## <a name="permissions"></a>사용 권한  
  스키마에 대한 SELECT 권한이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 지정한 연결된 서버 `Product`의 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에서 `Seattle1`로 시작되는 이름을 가진 테이블에 대한 권한 정보를 반환합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 연결 된 서버로 가정 됩니다.  
   
 ```  
@@ -84,9 +85,9 @@ EXEC sp_table_privileges_ex @table_server = 'Seattle1',
    @table_catalog ='AdventureWorks2012';  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [Transact-sql&#41;sp_column_privileges_ex &#40;](../../relational-databases/system-stored-procedures/sp-column-privileges-ex-transact-sql.md)   
- [Transact-sql&#41;&#40;시스템 저장 프로시저](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Transact-sql&#41;&#40;분산 쿼리 저장 프로시저](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)  
+ [Transact-sql&#41;&#40;시스템 저장 프로시저 ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;분산 쿼리 저장 프로시저 ](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)  
   
   

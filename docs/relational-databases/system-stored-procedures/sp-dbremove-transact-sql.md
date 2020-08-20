@@ -1,4 +1,5 @@
 ---
+description: sp_dbremove(Transact-SQL)
 title: sp_dbremove (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a8513f4a-c025-49c8-99c3-4c83cb7f51ed
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ea4bc440b6a06c8133fe2ebd618f4838478322f4
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ac926a35cb7e1c15460bdb5afa7bee3ad3bbc205
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85865406"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493403"
 ---
 # <a name="sp_dbremove-transact-sql"></a>sp_dbremove(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85865406"
   데이터베이스 및 이에 연관된 모든 파일을 제거합니다.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]대신 [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md) 를 사용 하는 것이 좋습니다.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 대신 [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md) 를 사용 하는 것이 좋습니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,9 +43,9 @@ sp_dbremove [ @dbname = ] 'database' [ , [ @dropdev = ] 'dropdev' ]
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @dbname = ] 'database'`제거할 데이터베이스의 이름입니다. *데이터베이스* 는 **sysname**이며 기본값은 NULL입니다.  
+`[ @dbname = ] 'database'` 제거할 데이터베이스의 이름입니다. *데이터베이스* 는 **sysname**이며 기본값은 NULL입니다.  
   
-`[ @dropdev = ] 'dropdev'`이전 버전과의 호환성을 위해서만 제공 되며 현재는 무시 되는 플래그입니다. *dropdev* 에는 **dropdev**값이 있습니다.  
+`[ @dropdev = ] 'dropdev'` 이전 버전과의 호환성을 위해서만 제공 되며 현재는 무시 되는 플래그입니다. *dropdev* 에는 **dropdev**값이 있습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  

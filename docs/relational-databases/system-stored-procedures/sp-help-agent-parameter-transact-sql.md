@@ -1,4 +1,5 @@
 ---
+description: sp_help_agent_parameter(Transact-SQL)
 title: sp_help_agent_parameter (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8fb4a9c3-19af-4a34-8004-572729ba3d15
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 638706d8d49088d381fbefe54610b11486100226
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: cfb61e7c3bbfcbb3bd1c93bff3d650912f7ebd01
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85757863"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493248"
 ---
 # <a name="sp_help_agent_parameter-transact-sql"></a>sp_help_agent_parameter(Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

@@ -1,4 +1,5 @@
 ---
+description: 업데이트할 수 있는 구독에 대한 로그인
 title: 업데이트할 수 있는 구독에 대한 로그인 | Microsoft 문서
 ms.custom: ''
 ms.date: 08/25/2016
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 301ea227-0455-40ba-9009-d38f8676b325
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d242fc31411bc0fdb05cca1f65355f49acec575a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 81a455310e419eaac0136721d021e700fa29f136
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85640430"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493939"
 ---
 # <a name="login-for-updatable-subscriptions"></a>업데이트할 수 있는 구독에 대한 로그인
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

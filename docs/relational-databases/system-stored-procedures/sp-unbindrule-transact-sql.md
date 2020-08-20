@@ -1,4 +1,5 @@
 ---
+description: sp_unbindrule(Transact-SQL)
 title: sp_unbindrule (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f54ee155-c3c9-4f1a-952e-632a8339f0cc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3988bd0d9197b675c41115ba2b384b10cb35e851
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: fc4f3d41644ae3aaaebbccac4d39257e950af194
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892585"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492958"
 ---
 # <a name="sp_unbindrule-transact-sql"></a>sp_unbindrule(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85892585"
   현재 데이터베이스의 열에서 또는 별칭 데이터 형식에서 규칙을 바인딩 해제합니다.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)]대신 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) 또는 [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) 문에 default 키워드를 사용 하 여 기본 정의를 만드는 것이 좋습니다.  
+>  [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)] 대신 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) 또는 [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) 문에 default 키워드를 사용 하 여 기본 정의를 만드는 것이 좋습니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,12 +44,12 @@ sp_unbindrule [ @objname = ] 'object_name'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @objname = ] 'object_name'`규칙의 바인딩 해제 기준이 되는 테이블 및 열의 이름 또는 별칭 데이터 형식입니다. *object_name* 은 **nvarchar (776)** 이며 기본값은 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 열 이름과 별칭 데이터 형식 순으로 두 부분의 식별자를 확인합니다. 별칭 데이터 형식에서 규칙을 바인딩 해제하는 경우 같은 규칙을 가진 데이터 형식의 열 또한 바인딩 해제됩니다. 규칙이 직접 바인딩된 이 데이터 형식의 열은 영향을 받지 않습니다.  
+`[ @objname = ] 'object_name'` 규칙의 바인딩 해제 기준이 되는 테이블 및 열의 이름 또는 별칭 데이터 형식입니다. *object_name* 은 **nvarchar (776)** 이며 기본값은 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 열 이름과 별칭 데이터 형식 순으로 두 부분의 식별자를 확인합니다. 별칭 데이터 형식에서 규칙을 바인딩 해제하는 경우 같은 규칙을 가진 데이터 형식의 열 또한 바인딩 해제됩니다. 규칙이 직접 바인딩된 이 데이터 형식의 열은 영향을 받지 않습니다.  
   
 > [!NOTE]  
 >  *object_name* 대괄호 **([])** 를 구분 식별자 문자로 사용할 수 있습니다. 자세한 내용은 [Database Identifiers](../../relational-databases/databases/database-identifiers.md)을 참조하세요.  
   
-`[ @futureonly = ] 'futureonly_flag'`는 별칭 데이터 형식에서 규칙의 바인딩을 해제 하는 경우에만 사용 됩니다. *futureonly_flag* 는 **varchar (15)** 이며 기본값은 NULL입니다. *Futureonly_flag* 이 **futureonly**경우 해당 데이터 형식의 기존 열은 지정 된 규칙을 잃게 됩니다.  
+`[ @futureonly = ] 'futureonly_flag'` 는 별칭 데이터 형식에서 규칙의 바인딩을 해제 하는 경우에만 사용 됩니다. *futureonly_flag* 는 **varchar (15)** 이며 기본값은 NULL입니다. *Futureonly_flag* 이 **futureonly**경우 해당 데이터 형식의 기존 열은 지정 된 규칙을 잃게 됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -63,7 +64,7 @@ sp_unbindrule [ @objname = ] 'object_name'
 ## <a name="permissions"></a>사용 권한  
  테이블 열에서 규칙을 바인딩 해제하려면 테이블에 대한 ALTER 권한이 필요합니다. 별칭 데이터 형식에서 규칙을 바인딩 해제하려면 형식에 대한 CONTROL 권한 또는 형식이 속한 스키마에 대한 ALTER 권한이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-unbinding-a-rule-from-a-column"></a>A. 열에서 규칙 바인딩 해제  
  다음 예에서는 `startdate` 테이블의 `employees` 열에서 규칙을 바인딩 해제합니다.  
@@ -102,9 +103,9 @@ GO
 EXEC sp_unbindrule '[t.4].c1';  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;시스템 저장 프로시저](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Transact-sql&#41;&#40;저장 프로시저 데이터베이스 엔진](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>관련 항목  
+ [Transact-sql&#41;&#40;시스템 저장 프로시저 ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;저장 프로시저 데이터베이스 엔진 ](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [CREATE RULE&#40;Transact-SQL&#41;](../../t-sql/statements/create-rule-transact-sql.md)   
  [DROP RULE &#40;Transact-sql&#41;](../../t-sql/statements/drop-rule-transact-sql.md)   
  [Transact-sql&#41;sp_bindrule &#40;](../../relational-databases/system-stored-procedures/sp-bindrule-transact-sql.md)   

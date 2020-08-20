@@ -1,4 +1,5 @@
 ---
+description: cdc.ddl_history(Transact-SQL)
 title: cdc. ddl_history (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: cb97ea71-da2f-441a-bbd2-db1f5f48ab49
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b3332c82cdfefad09c4230ae52560f7bdf4e65b3
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 212c97116aa3b37f78dca22af1b5e1ad58c24801
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890624"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492808"
 ---
 # <a name="cdcddl_history-transact-sql"></a>cdc.ddl_history(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

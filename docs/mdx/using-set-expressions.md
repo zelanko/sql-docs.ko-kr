@@ -1,4 +1,5 @@
 ---
+description: 집합 식 사용
 title: 집합 식 사용 | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 1588d955e728830da4417160591a5c2b6c231473
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d47372f2e90f96aca99eb05bd6a2565c08567611
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68893500"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491387"
 ---
 # <a name="using-set-expressions"></a>집합 식 사용
 
@@ -22,7 +23,7 @@ ms.locfileid: "68893500"
   
  집합의 전체 식은 중괄호로 묶인 0개 이상의 명시적으로 지정된 튜플로 구성됩니다.  
   
- {[{ *Tuple_expression* | *Member_expression* } [, { *Tuple_expression* | *Member_expression* }] ...]}  
+ {[{ *Tuple_expression*  |  *Member_expression* } [, { *Tuple_expression*  |  *Member_expression* }] ...]}  
   
  집합 식에서 지정된 멤버 식은 멤버가 하나인 튜플 식으로 변환됩니다.  
   

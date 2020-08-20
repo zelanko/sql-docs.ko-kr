@@ -1,4 +1,5 @@
 ---
+description: sys.sp_cdc_add_job(Transact-SQL)
 title: sys. sp_cdc_add_job (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: c4458738-ed25-40a6-8294-a26ca5a05bd9
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 53bc390e3e95ac49554826ad6ed96b8c4138ca10
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: e301fe1ef2251a5c5814074864ccf566791ccc8b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88172902"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492922"
 ---
 # <a name="syssp_cdc_add_job-transact-sql"></a>sys.sp_cdc_add_job(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,19 +49,19 @@ sys.sp_cdc_add_job [ @job_type = ] 'job_type'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @job_type = ] 'job\_type'`추가할 작업 유형입니다. *job_type* 은 **nvarchar (20)** 이며 NULL 일 수 없습니다. 유효한 입력은 **' capture '** 및 **' cleanup '** 입니다.  
+`[ @job_type = ] 'job\_type'` 추가할 작업 유형입니다. *job_type* 은 **nvarchar (20)** 이며 NULL 일 수 없습니다. 유효한 입력은 **' capture '** 및 **' cleanup '** 입니다.  
   
-`[ @start_job = ] start_job`작업을 추가한 직후에 작업을 시작할지 여부를 나타내는 플래그입니다. *start_job* 은 **bit** 이며 기본값은 1입니다.  
+`[ @start_job = ] start_job` 작업을 추가한 직후에 작업을 시작할지 여부를 나타내는 플래그입니다. *start_job* 은 **bit** 이며 기본값은 1입니다.  
   
-`[ @maxtrans ] = max_trans`각 검색 주기에서 처리할 최대 트랜잭션 수입니다. *max_trans* 는 **int** 이며 기본값은 500입니다. 지정된 경우 값은 양의 정수여야 합니다.  
+`[ @maxtrans ] = max_trans` 각 검색 주기에서 처리할 최대 트랜잭션 수입니다. *max_trans* 는 **int** 이며 기본값은 500입니다. 지정된 경우 값은 양의 정수여야 합니다.  
   
  *max_trans* 는 캡처 작업에 대해서만 유효 합니다.  
   
-`[ @maxscans ] = max\_scans_`로그에서 모든 행을 추출 하기 위해 실행할 최대 검색 주기 수입니다. *max_scans* 은 **int** 이며 기본값은 10입니다.  
+`[ @maxscans ] = max\_scans_` 로그에서 모든 행을 추출 하기 위해 실행할 최대 검색 주기 수입니다. *max_scans* 은 **int** 이며 기본값은 10입니다.  
   
  *max_scan* 는 캡처 작업에 대해서만 유효 합니다.  
   
-`[ @continuous ] = continuous_`캡처 작업을 계속 실행할지 (1), 아니면 한 번만 실행 (0) 할지를 나타냅니다. *연속* 은 **bit** 이며 기본값은 1입니다.  
+`[ @continuous ] = continuous_` 캡처 작업을 계속 실행할지 (1), 아니면 한 번만 실행 (0) 할지를 나타냅니다. *연속* 은 **bit** 이며 기본값은 1입니다.  
   
  *연속* = 1 인 경우 [sp_cdc_scan](../../relational-databases/system-stored-procedures/sys-sp-cdc-scan-transact-sql.md) 작업은 로그를 검색 하 고 최대 (*max_trans* \* *max_scans*) 트랜잭션을 처리 합니다. 그런 다음, 다음 로그 검색을 시작 하기 전에 *polling_interval* 에 지정 된 시간 (초) 동안 대기 합니다.  
   
@@ -68,15 +69,15 @@ sys.sp_cdc_add_job [ @job_type = ] 'job_type'
   
  *연속* 은 캡처 작업에 대해서만 유효 합니다.  
   
-`[ @pollinginterval ] = polling\_interval_`로그 검색 주기 사이의 시간 (초)입니다. *polling_interval* 는 **bigint** 이며 기본값은 5입니다.  
+`[ @pollinginterval ] = polling\_interval_` 로그 검색 주기 사이의 시간 (초)입니다. *polling_interval* 는 **bigint** 이며 기본값은 5입니다.  
   
  *연속* 이 1로 설정 된 경우 *polling_interval* 는 캡처 작업에 대해서만 유효 합니다. 지정 된 경우 값은 0 보다 크거나 같고 24 시간 (최대: 86399 초) 보다 작아야 합니다. 값 0이 지정된 경우 로그 검색 간에 대기 시간이 없습니다.  
   
-`[ @retention ] = retention_`변경 테이블에 변경 데이터 행이 보관 되는 시간 (분)입니다. *보존* 은 **bigint** 이며 기본값은 4320 (72 시간)입니다. 최대값은 52494800(100년)입니다. 지정된 경우 값은 양의 정수여야 합니다.  
+`[ @retention ] = retention_` 변경 테이블에 변경 데이터 행이 보관 되는 시간 (분)입니다. *보존* 은 **bigint** 이며 기본값은 4320 (72 시간)입니다. 최대값은 52494800(100년)입니다. 지정된 경우 값은 양의 정수여야 합니다.  
   
  *보존* 은 정리 작업에 대해서만 유효 합니다.  
   
-`[ @threshold = ] 'delete\_threshold'`정리 시 단일 문을 사용 하 여 삭제할 수 있는 삭제 항목의 최대 수입니다. *delete_threshold* 는 **bigint** 이며 기본값은 5000입니다.  
+`[ @threshold = ] 'delete\_threshold'` 정리 시 단일 문을 사용 하 여 삭제할 수 있는 삭제 항목의 최대 수입니다. *delete_threshold* 는 **bigint** 이며 기본값은 5000입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -96,7 +97,7 @@ sys.sp_cdc_add_job [ @job_type = ] 'job_type'
 ## <a name="permissions"></a>사용 권한  
  **Db_owner** 고정 데이터베이스 역할의 멤버 자격이 필요 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-creating-a-capture-job"></a>A. 캡처 작업 만들기  
  다음 예에서는 캡처 작업을 만듭니다. 이 예에서는 기존 정리 작업이 명시적으로 삭제되어 다시 만들어야 한다고 가정합니다. 작업은 기본값을 사용하여 만들어집니다.  
@@ -120,7 +121,7 @@ EXEC sys.sp_cdc_add_job
     ,@retention = 5760;  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [cdc_jobs &#40;Transact-sql&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)   
  [sp_cdc_enable_table &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)   
  [변경 데이터 캡처 정보&#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)  

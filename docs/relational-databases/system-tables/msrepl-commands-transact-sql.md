@@ -1,4 +1,5 @@
 ---
+description: MSrepl_commands(Transact-SQL)
 title: MSrepl_commands (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 53b9f9cd-9429-47a0-aba2-908fc60e7036
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6d4dcbee03f1d5514e2b24520409804b1f27cefe
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 65b6e3924202153ff061da018bcce40ec9de0524
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889519"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492766"
 ---
 # <a name="msrepl_commands-transact-sql"></a>MSrepl_commands(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,8 +44,8 @@ ms.locfileid: "85889519"
 |**originator_lsn**|**varbinary(16)**|원본 게시에서 명령의 LSN을 식별합니다. 피어 투 피어 트랜잭션 복제에 사용됩니다.|  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;복제 테이블](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Transact-sql&#41;&#40;복제 뷰](../../relational-databases/system-views/replication-views-transact-sql.md)   
+ [Transact-sql&#41;&#40;복제 테이블 ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Transact-sql&#41;&#40;복제 뷰 ](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [sp_replcmds&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)  
   
   

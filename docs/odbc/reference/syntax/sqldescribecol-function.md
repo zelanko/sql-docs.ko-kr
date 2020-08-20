@@ -1,4 +1,5 @@
 ---
+description: SQLDescribeCol 함수
 title: SQLDescribeCol 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: eddef353-83f3-4a3c-8f24-f9ed888890a4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c727f6b36930b0d2ad0d5a61592b83bcd4995426
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4007d5edbd400e65ea92d8c5dcab947a53779ec4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301173"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491328"
 ---
 # <a name="sqldescribecol-function"></a>SQLDescribeCol 함수
 **규칙**  
@@ -65,14 +66,14 @@ SQLRETURN SQLDescribeCol(
  입력 **ColumnName* 버퍼의 길이 (문자)입니다.  
   
  *NameLengthPtr*  
- 출력 \* *ColumnName*에서 반환 하는 데 사용할 수 있는 총 문자 수 (null 종료 제외)를 반환할 버퍼에 대 한 포인터입니다. 반환할 수 있는 문자 수가 *bufferlength*보다 크거나 같은 경우 \* *ColumnName* 의 열 이름은 *bufferlength* 에서 null 종료 문자의 길이를 뺀 값으로 잘립니다.  
+ 출력 ColumnName에서 반환 하는 데 사용할 수 있는 총 문자 수 (null 종료 제외)를 반환할 버퍼에 대 한 포인터 \* *ColumnName*입니다. 반환할 수 있는 문자 수가 *Bufferlength*보다 크거나 같은 경우 ColumnName의 열 이름은 \* *ColumnName* *bufferlength* 에서 null 종료 문자의 길이를 뺀 값으로 잘립니다.  
   
  *DataTypePtr*  
  출력 열의 SQL 데이터 형식을 반환할 버퍼에 대 한 포인터입니다. IRD의 SQL_DESC_CONCISE_TYPE 필드에서이 값을 읽습니다. 이 값은 [Sql 데이터 형식](../../../odbc/reference/appendixes/sql-data-types.md)또는 드라이버별 sql 데이터 형식의 값 중 하나입니다. 데이터 형식을 확인할 수 없는 경우 드라이버는 SQL_UNKNOWN_TYPE을 반환 합니다.  
   
- ODBC 3. *x*, SQL_TYPE_DATE, SQL_TYPE_TIME 또는 SQL_TYPE_TIMESTAMP는 각각 날짜, 시간 또는 타임 스탬프 데이터에 대해 * \*DataTypePtr* 로 반환 됩니다. ODBC 2. *x*, SQL_DATE, SQL_TIME 또는 SQL_TIMESTAMP 반환 됩니다. 드라이버 관리자는 ODBC 2를 사용할 때 필요한 매핑을 수행 합니다. *x* 응용 프로그램이 ODBC 3에서 작동 하 고 있습니다. *x* 드라이버 또는 ODBC 3 인 경우 *x* 응용 프로그램에서 ODBC 2를 사용 하 고 있습니다. *x* 드라이버.  
+ ODBC 3. *x*, SQL_TYPE_DATE, SQL_TYPE_TIME 또는 SQL_TYPE_TIMESTAMP는 각각 날짜, 시간 또는 타임 스탬프 데이터에 대해 * \* DataTypePtr* 로 반환 됩니다 (ODBC 2* 의 경우). x*, SQL_DATE, SQL_TIME 또는 SQL_TIMESTAMP 반환 됩니다. 드라이버 관리자는 ODBC 2를 사용할 때 필요한 매핑을 수행 합니다. *x* 응용 프로그램이 ODBC 3에서 작동 하 고 있습니다. *x* 드라이버 또는 ODBC 3 인 경우 *x* 응용 프로그램에서 ODBC 2를 사용 하 고 있습니다. *x* 드라이버.  
   
- *Columnnumber* 가 0과 같을 때 (책갈피 열) SQL_BINARY 가변 길이 책갈피에 대 한 * \*DataTypePtr* 에서 반환 됩니다. ODBC 3에서 책갈피를 사용 하는 경우 SQL_INTEGER 반환 됩니다. ODBC 2를 사용 하 여 작동 하는 *x* 응용 프로그램 *x* 드라이버 또는 ODBC 2. ODBC 3에서 작동 하는 *x* 응용 프로그램입니다. *x* 드라이버)  
+ *Columnnumber* 가 0과 같을 때 (책갈피 열) SQL_BINARY 가변 길이 책갈피에 대 한 * \* DataTypePtr* 에서 반환 됩니다. ODBC 3에서 책갈피를 사용 하는 경우 SQL_INTEGER 반환 됩니다. ODBC 2를 사용 하 여 작동 하는 *x* 응용 프로그램 *x* 드라이버 또는 ODBC 2. ODBC 3에서 작동 하는 *x* 응용 프로그램입니다. *x* 드라이버)  
   
  이러한 데이터 형식에 대 한 자세한 내용은 부록 D: 데이터 형식에서 [SQL 데이터 형식](../../../odbc/reference/appendixes/sql-data-types.md) 을 참조 하세요. 드라이버별 SQL 데이터 형식에 대 한 자세한 내용은 드라이버 설명서를 참조 하십시오.  
   
@@ -97,14 +98,14 @@ SQLRETURN SQLDescribeCol(
 ## <a name="diagnostics"></a>진단  
  **SQLDescribeCol** 가 SQL_ERROR 또는 SQL_SUCCESS_WITH_INFO를 반환할 때 SQL_HANDLE_STMT의 *HandleType* 및 *StatementHandle* *핸들* 을 사용 하 여 **SQLGetDiagRec** 를 호출 하 여 연결 된 SQLSTATE 값을 얻을 수 있습니다. 다음 표에서는 일반적으로 **SQLDescribeCol** 에서 반환 하는 SQLSTATE 값을 나열 하 고이 함수의 컨텍스트에서 각 항목에 대해 설명 합니다. "(DM)" 표기법은 드라이버 관리자에서 반환 된 SQLSTATEs의 설명 보다 앞에 나옵니다. 다른 설명이 없는 한 각 SQLSTATE 값과 연결 된 반환 코드는 SQL_ERROR 됩니다.  
   
-|SQLSTATE|Error|Description|  
+|SQLSTATE|오류|설명|  
 |--------------|-----------|-----------------|  
 |01000|일반 경고|드라이버 관련 정보 메시지입니다. 함수는 SQL_SUCCESS_WITH_INFO를 반환 합니다.|  
 |01004|문자열 데이터, 오른쪽이 잘렸습니다.|버퍼 \* *ColumnName* 이 전체 열 이름을 반환 하기에 충분히 크지 않아 열 이름이 잘렸습니다. 잘린 열 이름의 길이가 **NameLengthPtr*에서 반환 됩니다. 함수는 SQL_SUCCESS_WITH_INFO를 반환 합니다.|  
 |07005|준비 된 문이 *커서 사양이* 아닙니다.|*StatementHandle* 와 연결 된 문에서 결과 집합을 반환 하지 않았습니다. 설명 하는 열이 없습니다.|  
 |07009|잘못 된 설명자 인덱스|(DM) 인수 *Columnnumber* 에 지정 된 값이 0이 고 SQL_ATTR_USE_BOOKMARKS 문 옵션이 SQL_UB_OFF 되었습니다.<br /><br /> 인수 *Columnnumber* 에 지정 된 값이 결과 집합의 열 수보다 큽니다.|  
 |08S01|통신 연결 오류|드라이버가 연결 된 드라이버와 데이터 원본 간의 통신 연결이 함수 처리를 완료 하기 전에 실패 했습니다.|  
-|HY000|일반 오류|특정 SQLSTATE가 없고 구현 별 SQLSTATE가 정의 되지 않은 오류가 발생 했습니다. MessageText 버퍼에서 **SQLGetDiagRec** 에 의해 반환 되는 오류 메시지는 오류 및 해당 원인을 설명 합니다. * \**|  
+|HY000|일반 오류|특정 SQLSTATE가 없고 구현 별 SQLSTATE가 정의 되지 않은 오류가 발생 했습니다. * \* MessageText* 버퍼에서 **SQLGetDiagRec** 에 의해 반환 되는 오류 메시지는 오류 및 해당 원인을 설명 합니다.|  
 |HY001|메모리 할당 실패|드라이버에서 함수 실행 또는 완료를 지 원하는 데 필요한 메모리를 할당할 수 없습니다.|  
 |HY008|작업 취소됨|*StatementHandle*에 대해 비동기 처리를 사용 하도록 설정 했습니다. 함수가 호출 되었으며 실행이 완료 되기 전에 **sqlcancel** 또는 **Sqlcancelhandle** 이 *StatementHandle*에 대해 호출 되었습니다. 그런 다음 *StatementHandle*에서 함수를 다시 호출 했습니다.<br /><br /> 함수가 호출 되 고 실행이 완료 되기 전에 **sqlcancel** 또는 **sqlcancelhandle** 이 다중 스레드 응용 프로그램의 다른 스레드에서 *StatementHandle* 호출 되었습니다.|  
 |HY010|함수 시퀀스 오류|(DM) *StatementHandle*연결 된 연결 핸들에 대해 비동기적으로 실행 되는 함수가 호출 되었습니다. **SQLDescribeCol** 가 호출 될 때이 비동기 함수는 계속 실행 중입니다.<br /><br /> (DM) **Sqlexecute**, **sqlexecdirect**또는 **SQLMoreResults** 가 *StatementHandle* 에 대해 호출 되 고 SQL_PARAM_DATA_AVAILABLE 반환 되었습니다. 이 함수는 모든 스트리밍된 매개 변수에 대 한 데이터를 검색 하기 전에 호출 되었습니다.<br /><br /> (DM) *StatementHandle* 에 대해 비동기적으로 실행 되는 함수 (이 함수 아님)가 호출 되었으며이 함수가 호출 될 때 계속 실행 중입니다.<br /><br /> (DM) 함수는 문 핸들에서 **Sqlprepare**, **sqlprepare**또는 catalog 함수를 호출 하기 전에 호출 되었습니다.<br /><br /> (DM) **Sqlexecute**, **sqlexecdirect**, **SQLBulkOperations**또는 **SQLSetPos** 가 *StatementHandle* 에 대해 호출 되 고 SQL_NEED_DATA 반환 되었습니다. 이 함수는 모든 실행 시 데이터 매개 변수 또는 열에 대해 데이터를 보내기 전에 호출 되었습니다.|  
@@ -139,6 +140,6 @@ SQLRETURN SQLDescribeCol(
 |결과 집합 열 수 반환|[SQLNumResultCols](../../../odbc/reference/syntax/sqlnumresultcols-function.md)|  
 |실행을 위한 문 준비|[SQLPrepare](../../../odbc/reference/syntax/sqlprepare-function.md)|  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [ODBC API 참조](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 헤더 파일](../../../odbc/reference/install/odbc-header-files.md)

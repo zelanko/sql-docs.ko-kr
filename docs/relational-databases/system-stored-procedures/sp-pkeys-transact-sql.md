@@ -1,4 +1,5 @@
 ---
+description: sp_pkeys(Transact-SQL)
 title: sp_pkeys (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ ms.assetid: e614c75d-847b-4726-8f6f-cd18de688eda
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d5e7f0d0d3495abcd716fb5763b29d7e26192f60
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 7a291d4b76a7fe141234a43c458b865a1d956381
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173194"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493108"
 ---
 # <a name="sp_pkeys-transact-sql"></a>sp_pkeys(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -54,7 +55,7 @@ sp_pkeys [ @table_name = ] 'name'
  테이블 식별자입니다. *한정자* 는 **sysname**이며 기본값은 NULL입니다. 다양 한 DBMS 제품에서 테이블에 대해 세 부분으로 구성 되는 이름 (_한정자_)을 지원**합니다.** _소유자_**.** _이름_). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 이 열은 데이터베이스 이름을 나타냅니다. 일부 제품에서는 테이블 데이터베이스 환경의 서버 이름을 나타냅니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
- 없음  
+ None  
   
 ## <a name="result-sets"></a>결과 집합  
   
@@ -75,7 +76,7 @@ sp_pkeys [ @table_name = ] 'name'
 ## <a name="permissions"></a>사용 권한  
  스키마에 대한 SELECT 권한이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `HumanResources.Department` 데이터베이스에 있는 `AdventureWorks2012` 테이블의 기본 키를 검색합니다.  
   
 ```sql  

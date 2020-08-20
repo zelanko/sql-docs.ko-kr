@@ -1,4 +1,5 @@
 ---
+description: sp_delete_category(Transact-SQL)
 title: sp_delete_category (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 63ea7d0d-a567-456e-a778-bee99e21d16c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6962e4bb4387cad22e16d62176ced10ad8e82205
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1d3441ae51bd674f41cce42fe17393bbcb6983df
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85864349"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493341"
 ---
 # <a name="sp_delete_category-transact-sql"></a>sp_delete_category(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +41,7 @@ sp_delete_category [ @class = ] 'class' , [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @class = ] 'class'`범주의 클래스입니다. *클래스* 는 **varchar (8)** 이며 기본값은 없으며 다음 값 중 하나를 사용 해야 합니다.  
+`[ @class = ] 'class'` 범주의 클래스입니다. *클래스* 는 **varchar (8)** 이며 기본값은 없으며 다음 값 중 하나를 사용 해야 합니다.  
   
 |값|설명|  
 |-----------|-----------------|  
@@ -48,7 +49,7 @@ sp_delete_category [ @class = ] 'class' , [ @name = ] 'name'
 |**오류**|경고 범주를 제거합니다.|  
 |**연산자**|연산자 범주를 제거합니다.|  
   
-`[ @name = ] 'name'`제거할 범주의 이름입니다. *name* 은 **sysname**이며 기본값은 없습니다.  
+`[ @name = ] 'name'` 제거할 범주의 이름입니다. *name* 은 **sysname**이며 기본값은 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -64,7 +65,7 @@ sp_delete_category [ @class = ] 'class' , [ @name = ] 'name'
 ## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할의 멤버만이 프로시저를 실행할 수 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `AdminJobs`라는 작업 범주를 삭제합니다.  
   
 ```  

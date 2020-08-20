@@ -1,4 +1,5 @@
 ---
+description: sys.dm_exec_cursors(Transact-SQL)
 title: sys. dm_exec_cursors (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: f520b63c-36af-40f1-bf71-6901d6331d3d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f2482e9af7451463c03bb5deb2e63c7261ec5361
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 4243bd6395095a586ceffab1c4b00f8cf99a220b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882038"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493718"
 ---
 # <a name="sysdm_exec_cursors-transact-sql"></a>sys.dm_exec_cursors(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -64,8 +65,8 @@ dm_exec_cursors (session_id | 0 )
 |**fetch_buffer_start**|**int**|FAST_FORWARD 및 DYNAMIC 커서의 경우, 커서가 열려 있지 않거나 첫 번째 행 앞에 있으면 0을 반환합니다. 그렇지 않으면 -1을 반환합니다.<br /><br /> STATIC 및 KEYSET 커서의 경우, 커서가 열려 있지 않으면 0을 반환하고 커서가 마지막 행 뒤에 있으면 -1을 반환합니다.<br /><br /> 그렇지 않으면 커서가 있는 행 번호를 반환합니다.|  
 |**ansi_position**|**int**|인출 버퍼 내의 커서 위치입니다.|  
 |**worker_time**|**bigint**|이 커서를 실행하는 작업자가 사용한 시간(마이크로초)입니다.|  
-|**reads**|**bigint**|커서에 의해 수행된 읽기 수입니다.|  
-|**writes**|**bigint**|커서에 의해 수행된 쓰기 수입니다.|  
+|**나타납니다**|**bigint**|커서에 의해 수행된 읽기 수입니다.|  
+|**쓰므로**|**bigint**|커서에 의해 수행된 쓰기 수입니다.|  
 |**dormant_duration**|**bigint**|이 커서에 대한 마지막 쿼리(열기 또는 인출)가 시작된 이후 경과한 시간(밀리초)입니다.|  
   
 ## <a name="permissions"></a>사용 권한  
@@ -98,12 +99,12 @@ dm_exec_cursors (session_id | 0 )
   
  다음 표에서는 커서 범위에 대한 정보를 제공하고 속성 열에 나올 수 있는 값을 보여 줍니다.  
   
-|범위|Description|  
+|범위|설명|  
 |-----------|-----------------|  
 |로컬|커서 범위를 커서가 생성된 일괄 처리, 저장 프로시저, 트리거에 대해 로컬로 지정합니다.|  
 |전역|커서 범위를 연결에 대해 전역으로 지정합니다.|  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-detecting-old-cursors"></a>A. 오래된 커서 검색  
  다음 예에서는 지정한 36시간을 초과하여 서버에서 열려 있는 커서에 대한 정보를 반환합니다.  
@@ -116,9 +117,9 @@ WHERE DATEDIFF(hh, c.creation_time, GETDATE()) > 36;
 GO  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;동적 관리 뷰 및 함수](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Transact-sql&#41;&#40;관련 동적 관리 뷰 및 함수 실행](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
+## <a name="see-also"></a>관련 항목  
+ [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Transact-sql&#41;&#40;관련 동적 관리 뷰 및 함수 실행 ](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
  [sys.dm_exec_sessions&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)  
   
   

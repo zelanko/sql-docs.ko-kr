@@ -1,4 +1,5 @@
 ---
+description: sp_mergesubscription_cleanup(Transact-SQL)
 title: sp_mergesubscription_cleanup (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bfad414f-2bda-4bf5-9507-56a1e743dfc4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: feb13050f5b508298ec45d5fde4ffde9aa510c9d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 00646091e10c1979484d2fe0c3174427841e9bbd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891593"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493177"
 ---
 # <a name="sp_mergesubscription_cleanup-transact-sql"></a>sp_mergesubscription_cleanup(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -28,7 +29,7 @@ ms.locfileid: "85891593"
   게시자에서 지정 된 병합 밀어넣기 구독을 제거한 후 **sysmergesubscriptions** 및 **sysmergearticles** 에서 트리거와 항목과 같은 메타 데이터를 제거 합니다. 이 저장 프로시저는 구독 데이터베이스의 구독자에서 실행됩니다.  
   
 > [!NOTE]  
->  끌어오기 구독의 경우 [transact-sql&#41;&#40;sp_dropmergepullsubscription](../../relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql.md) 실행 될 때 메타 데이터가 제거 됩니다.  
+>  끌어오기 구독의 경우 [transact-sql&#41;&#40;sp_dropmergepullsubscription ](../../relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql.md) 실행 될 때 메타 데이터가 제거 됩니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,11 +43,11 @@ sp_mergesubscription_cleanup [ @publisher =] 'publisher'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @publisher = ] 'publisher'`게시자의 이름입니다. *publisher* 는 **sysname**이며 기본값은 없습니다.  
+`[ @publisher = ] 'publisher'` 게시자의 이름입니다. *publisher* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @publisher_db = ] 'publisher_db'`게시자 데이터베이스의 이름입니다. *publisher_db* 는 **sysname**이며 기본값은 없습니다.  
+`[ @publisher_db = ] 'publisher_db'` 게시자 데이터베이스의 이름입니다. *publisher_db* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @publication = ] 'publication'`게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 없습니다.  
+`[ @publication = ] 'publication'` 게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

@@ -1,4 +1,5 @@
 ---
+description: 프로젝트 설정 (형식 매핑) (DB2ToSQL)
 title: 프로젝트 설정 (형식 매핑) (DB2ToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: cf426c69-6a8e-4d19-951d-6661d5ae2562
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: f56ae792c632928f05a8733b27074779352a37db
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: fc7abeb4eec6d25e183db5ffcf1923185016b913
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87936740"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492547"
 ---
 # <a name="project-settings-type-mapping-db2tosql"></a>프로젝트 설정 (형식 매핑) (DB2ToSQL)
 **프로젝트 설정** 대화 상자의 형식 매핑 페이지에는 SSMA에서 DB2 데이터 형식을 데이터 형식으로 변환 하는 방법을 사용자 지정 하는 설정이 포함 되어 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -87,7 +88,7 @@ D b 2 용 SSMA에서 인수, 열, 지역 변수 및 반환 값에 대 한 사용
 |국가별 문자 변경<sup>\*</sup>|nvarchar(max)|  
 |nchar|nvarchar(max)|  
 |nclob|nvarchar(max)|  
-|숫자|float [53]|  
+|number|float [53]|  
 |numeric|float [53]|  
 |nvarchar2|nvarchar(max)|  
 |pls_integer|int|  
@@ -105,9 +106,9 @@ D b 2 용 SSMA에서 인수, 열, 지역 변수 및 반환 값에 대 한 사용
 |varchar2|varchar(max)|  
 |xmltype|Xml|  
   
-<sup>\*</sup>반환 값 형식 매핑에만 적용 됩니다.  
+<sup>\*</sup> 반환 값 형식 매핑에만 적용 됩니다.  
   
-<sup>\*\*</sup>인수 형식 매핑에만 적용 됩니다.  
+<sup>\*\*</sup> 인수 형식 매핑에만 적용 됩니다.  
   
 ### <a name="default-column-type-mapping"></a>기본 열 유형 매핑  
 다음 표에서는 열에 대 한 기본 형식 매핑을 포함 합니다.  
@@ -154,7 +155,7 @@ D b 2 용 SSMA에서 인수, 열, 지역 변수 및 반환 값에 대 한 사용
 |nchar|nchar|  
 |nchar [ \* ]|nchar [ \* ]|  
 |nclob|nvarchar(max)|  
-|숫자|float [53]|  
+|number|float [53]|  
 |number [ \* .. \* ]|numeric [ \* ]|  
 |number [ \* .. \* ] [\*..\*]|숫자 [ \* ] [ \* ]|  
 |numeric|numeric|  
@@ -233,7 +234,7 @@ D b 2 용 SSMA에서 인수, 열, 지역 변수 및 반환 값에 대 한 사용
 |nchar 변경 [ \* .. 4000]|nvarchar [ \* ]|  
 |nchar 변경 [4001.. \* ]|nvarchar(max)|  
 |Nclob|nvarchar(max)|  
-|번호|float [53]|  
+|Number|float [53]|  
 |number [ \* .. \* ]|numeric [ \* ]|  
 |number [ \* .. \* ] [\*..\*]|숫자 [ \* ] [ \* ]|  
 |숫자|숫자 [38] [0]|  
@@ -264,6 +265,6 @@ D b 2 용 SSMA에서 인수, 열, 지역 변수 및 반환 값에 대 한 사용
 |varchar2 [8001 \* ]|varcha (max)|  
 |Xmltype|Xml|  
   
-## <a name="see-also"></a>참고 항목  
-[DB2ToSQL&#41;&#40;사용자 인터페이스 참조](../../ssma/db2/user-interface-reference-db2tosql.md)  
+## <a name="see-also"></a>관련 항목  
+[DB2ToSQL&#41;&#40;사용자 인터페이스 참조 ](../../ssma/db2/user-interface-reference-db2tosql.md)  
   

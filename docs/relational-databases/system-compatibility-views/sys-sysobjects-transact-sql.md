@@ -1,4 +1,5 @@
 ---
+description: sys.sysobjects(Transact-SQL)
 title: sys.sysobjects (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -21,12 +22,12 @@ ms.assetid: 44fdc387-67b0-4139-8bf5-ed26cf640cd1
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5984d36c1cd23bbc89f57eb7e48b76ba07c0fea5
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: feb83b82a131d731129285fb4c9b5fea7b201b9f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87393843"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493763"
 ---
 # <a name="syssysobjects-transact-sql"></a>sys.sysobjects(Transact-SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
@@ -51,7 +52,7 @@ ms.locfileid: "87393843"
 |ftcatid|**smallint**|전체 텍스트 인덱싱을 위해 등록된 모든 사용자 테이블의 경우 전체 텍스트 카탈로그 식별자이며, 등록되지 않은 모든 사용자 테이블의 경우 0입니다.|  
 |schema_ver|**int**|테이블의 스키마가 변경될 때마다 증가하는 버전 번호입니다. 항상 0을 반환합니다.|  
 |stats_schema_ver|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|type|**char(2)**|개체 유형입니다. 다음 값 중 하나를 사용할 수 있습니다.<br /><br /> AF = 집계 함수(CLR)<br /><br /> C = CHECK 제약 조건<br /><br /> D = 기본값 또는 DEFAULT 제약 조건<br /><br /> F = FOREIGN KEY 제약 조건<br /><br /> FN = 스칼라 함수<br /><br /> FS = 어셈블리(CLR) 스칼라 함수<br /><br /> FT = 어셈블리(CLR) 테이블 반환 함수 IF = 인라인 테이블 함수<br /><br /> IT = 내부 테이블<br /><br /> K = PRIMARY KEY 또는 UNIQUE 제약 조건<br /><br /> L = 로그<br /><br /> P = 저장 프로시저<br /><br /> PC = 어셈블리(CLR) 저장 프로시저<br /><br /> R = 규칙<br /><br /> RF = 복제 필터 저장 프로시저<br /><br /> S = 시스템 테이블<br /><br /> SN = 동의어<br /><br /> SQ = 서비스 큐<br /><br /> TA = 어셈블리(CLR) DML 트리거<br /><br /> TF = 테이블 함수<br /><br /> TR = SQL DML 트리거<br /><br /> TT = 테이블 유형<br /><br /> U = 사용자 테이블<br /><br /> V = 뷰<br /><br /> X = 확장 저장 프로시저|  
+|type|**char(2)**|개체 유형입니다. 다음 값 중 하나일 수 있습니다.<br /><br /> AF = 집계 함수(CLR)<br /><br /> C = CHECK 제약 조건<br /><br /> D = 기본값 또는 DEFAULT 제약 조건<br /><br /> F = FOREIGN KEY 제약 조건<br /><br /> FN = 스칼라 함수<br /><br /> FS = 어셈블리(CLR) 스칼라 함수<br /><br /> FT = 어셈블리(CLR) 테이블 반환 함수 IF = 인라인 테이블 함수<br /><br /> IT = 내부 테이블<br /><br /> K = PRIMARY KEY 또는 UNIQUE 제약 조건<br /><br /> L = 로그<br /><br /> P = 저장 프로시저<br /><br /> PC = 어셈블리(CLR) 저장 프로시저<br /><br /> R = 규칙<br /><br /> RF = 복제 필터 저장 프로시저<br /><br /> S = 시스템 테이블<br /><br /> SN = 동의어<br /><br /> SQ = 서비스 큐<br /><br /> TA = 어셈블리(CLR) DML 트리거<br /><br /> TF = 테이블 함수<br /><br /> TR = SQL DML 트리거<br /><br /> TT = 테이블 유형<br /><br /> U = 사용자 테이블<br /><br /> V = 뷰<br /><br /> X = 확장 저장 프로시저|  
 |userstat|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |sysstat|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |indexdel|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
@@ -64,7 +65,7 @@ ms.locfileid: "87393843"
 |category|**int**|게시, 제약 조건 및 ID에 사용됩니다.|  
 |캐시|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [시스템 테이블을 시스템 뷰로 매핑 &#40;Transact-sql&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
  [호환성 뷰&#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   

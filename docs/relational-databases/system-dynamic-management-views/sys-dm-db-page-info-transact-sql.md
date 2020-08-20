@@ -1,4 +1,5 @@
 ---
+description: sys.dm_db_page_info(Transact SQL)
 title: sys. dm_db_page_info (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/18/2018
@@ -20,21 +21,21 @@ author: bluefooted
 ms.author: pamela
 manager: amitban
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 0802f3013af11814586634f890bb8ddddeadeec6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 60df2ed8bf279bf7da8193282768124815aa6ab3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68841600"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493696"
 ---
 # <a name="sysdm_db_page_info-transact-sql"></a>sys.dm_db_page_info(Transact SQL)
 
 [!INCLUDE[tsql-appliesto-ssver15-asdb-xxxx-xxx](../../includes/tsql-appliesto-ssver15-asdb-xxxx-xxx.md)]
 
-데이터베이스의 페이지에 대 한 정보를 반환 합니다.  함수는 `object_id`, `index_id`및 `partition_id`를 포함 하 여 페이지의 헤더 정보를 포함 하는 하나의 행을 반환 합니다.  이 함수를 사용하면 대부분의 경우에서 `DBCC PAGE`를 사용할 필요가 없습니다.
+데이터베이스의 페이지에 대 한 정보를 반환 합니다.  함수는, 및를 포함 하 여 페이지의 헤더 정보를 포함 하는 하나의 행을 반환 합니다 `object_id` `index_id` `partition_id` .  이 함수를 사용하면 대부분의 경우에서 `DBCC PAGE`를 사용할 필요가 없습니다.
 
 > [!NOTE]
-> `sys.dm_db_page_info`는 현재 이상 에서만 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 지원 됩니다.
+> `sys.dm_db_page_info` 는 현재 이상 에서만 지원 됩니다 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] .
 
 
 ## <a name="syntax"></a>구문   
@@ -114,22 +115,22 @@ sys.dm_db_page_info ( DatabaseId, FileId, PageId, Mode )
 ||||
 
 ## <a name="remarks"></a>설명
-`sys.dm_db_page_info` 동적 관리 함수는 페이지 머리글에 표시 `page_id`되 `file_id`는 `index_id`, `object_id` , 등의 페이지 정보를 반환 합니다. 이 정보는 다양 한 성능 (잠금 및 래치 경합) 및 손상 문제를 해결 하 고 디버깅 하는 데 유용 합니다.
+`sys.dm_db_page_info`동적 관리 함수는 `page_id` `file_id` `index_id` `object_id` 페이지 머리글에 표시 되는,, 등의 페이지 정보를 반환 합니다. 이 정보는 다양 한 성능 (잠금 및 래치 경합) 및 손상 문제를 해결 하 고 디버깅 하는 데 유용 합니다.
 
-`sys.dm_db_page_info`는 대부분의 경우 `DBCC PAGE` 문 대신 사용할 수 있지만 페이지의 본문이 아닌 페이지 헤더 정보만 반환 합니다. `DBCC PAGE`는 페이지의 전체 내용이 필요한 사용 사례에도 필요 합니다.
+`sys.dm_db_page_info` 는 `DBCC PAGE` 대부분의 경우 문 대신 사용할 수 있지만 페이지의 본문이 아닌 페이지 헤더 정보만 반환 합니다. `DBCC PAGE` 는 페이지의 전체 내용이 필요한 사용 사례에도 필요 합니다.
 
 ## <a name="using-in-conjunction-with-other-dmvs"></a>다른 Dmv와 함께 사용
-의 `sys.dm_db_page_info` 중요 한 사용 사례 중 하나는 페이지 정보를 노출 하는 다른 dmv와 조인 하는 것입니다.  이 사용 사례를 용이 하 게 하기 위해 라는 `page_resource` 새 열이 추가 되어 페이지 정보를 8 바이트 16 진수 형식으로 노출 합니다. 이 열은 및 `sys.dm_exec_requests` `sys.sysprocesses` 에 추가 되었으며 나중에 필요에 따라 다른 dmv에 추가 될 예정입니다.
+의 중요 한 사용 사례 중 하나는 `sys.dm_db_page_info` 페이지 정보를 노출 하는 다른 dmv와 조인 하는 것입니다.  이 사용 사례를 용이 하 게 하기 위해 라는 새 열이 `page_resource` 추가 되어 페이지 정보를 8 바이트 16 진수 형식으로 노출 합니다. 이 열은 및에 추가 `sys.dm_exec_requests` 되었으며 `sys.sysprocesses` 나중에 필요에 따라 다른 dmv에 추가 될 예정입니다.
 
-새 함수인 `sys.fn_PageResCracker`는 `page_resource` 를 입력으로 사용 하 고, 및 `database_id` `file_id` `page_id`를 포함 하는 단일 행을 출력 합니다.  그런 다음이 함수를 사용 하 여 또는 `sys.dm_exec_requests` `sys.sysprocesses` 와 `sys.dm_db_page_info`간의 조인을 편리 하 게 수행할 수 있습니다.
+새 함수인는를 `sys.fn_PageResCracker` `page_resource` 입력으로 사용 하 고 `database_id` , 및를 포함 하는 단일 행을 출력 합니다 `file_id` `page_id` .  그런 다음이 함수를 사용 하 여 또는와 간의 조인을 편리 하 게 수행할 수 있습니다 `sys.dm_exec_requests` `sys.sysprocesses` `sys.dm_db_page_info` .
 
 ## <a name="permissions"></a>사용 권한  
-데이터베이스에 `VIEW DATABASE STATE` 대 한 권한이 필요 합니다.  
+데이터베이스에 대 한 권한이 필요 합니다 `VIEW DATABASE STATE` .  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-displaying-all-the-properties-of-a-page"></a>A. 페이지의 모든 속성 표시
-다음 쿼리는 지정 `database_id` `file_id` `page_id` 된에 대 한 모든 페이지 정보를 포함 하는 하나의 행을 기본 모드 (' 제한 됨 ')와 함께 반환 합니다.
+다음 쿼리는 지정 된에 대 한 모든 페이지 정보를 포함 하는 하나의 행을 `database_id` `file_id` `page_id` 기본 모드 (' 제한 됨 ')와 함께 반환 합니다.
 
 ```sql
 SELECT *  
@@ -138,7 +139,7 @@ FROM sys.dm_db_page_info (5, 1, 15, DEFAULT)
 
 ### <a name="b-using-sysdm_db_page_info-with-other-dmvs"></a>B. 다른 Dmv와 함께 dm_db_page_info 사용 
 
-다음 쿼리는 행이 null이 `wait_resource` 아닌 값 `sys.dm_exec_requests` 을 포함 하는 경우에 의해 노출 된 한 행을 반환 합니다.`page_resource`
+다음 쿼리는 행이 null이 `wait_resource` 아닌 값 `sys.dm_exec_requests` 을 포함 하는 경우에 의해 노출 된 한 행을 반환 합니다. `page_resource`
 
 ```sql
 SELECT page_info.* 
@@ -147,10 +148,10 @@ CROSS APPLY sys.fn_PageResCracker (d.page_resource) AS r
 CROSS APPLY sys.dm_db_page_info(r.db_id, r.file_id, r.page_id, 'LIMITED') AS page_info
 ```
 
-## <a name="see-also"></a>참고 항목  
-[Transact-sql&#41;&#40;동적 관리 뷰 및 함수](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
-[Transact-sql&#41;&#40;데이터베이스 관련 동적 관리 뷰](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
-[dm_exec_requests &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)     
+## <a name="see-also"></a>관련 항목  
+[동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+[Transact-sql&#41;&#40;데이터베이스 관련 동적 관리 뷰 ](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
+[sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)     
 [sys.fn_PageResCracker](../../relational-databases/system-functions/sys-fn-pagerescracker-transact-sql.md)
 
 

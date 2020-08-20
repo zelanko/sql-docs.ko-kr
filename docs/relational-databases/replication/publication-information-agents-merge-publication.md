@@ -1,4 +1,5 @@
 ---
+description: 게시 정보, 에이전트(병합 게시)
 title: 게시 정보, 에이전트(병합 게시) | Microsoft 문서
 ms.custom: ''
 ms.date: 03/07/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 73ff590a-20da-4f10-b592-c60b7226d22b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2aa581588367a96036c62704c47f6ac6924fef5c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ce84b55a553b26e6fe9141601987f1e743584699
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720998"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493899"
 ---
 # <a name="publication-information-agents-merge-publication"></a>게시 정보, 에이전트(병합 게시)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,13 +40,13 @@ ms.locfileid: "85720998"
  **상태**  
  스냅샷 에이전트의 상태입니다. 다음 목록에서는 가능한 상태 값을 보여 줍니다.  
   
--   Error  
+-   오류  
   
 -   실패한 명령 다시 시도 중  
   
 -   실행 중이 아님  
   
--   Completed  
+-   완료됨  
   
  **에이전트**  
  스냅샷 에이전트 이 에이전트는 병합 게시와 연결된 유일한 에이전트입니다. 병합 에이전트는 이 게시에 대한 구독과 연결되어 있습니다. 자세한 내용은 [복제 모니터를 사용하여 정보 보기 및 태스크 수행](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)을 참조하세요.  

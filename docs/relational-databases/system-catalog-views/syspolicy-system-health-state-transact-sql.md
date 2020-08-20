@@ -1,4 +1,5 @@
 ---
+description: syspolicy_system_health_state(Transact-SQL)
 title: syspolicy_system_health_state (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 00815106-9fe4-481d-a9e1-a256101887f4
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 500688f04715513bd0fe3849b095296e59bab747
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 66a99f117b9c6d8de7a92d328da812869a594f73
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900549"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493777"
 ---
 # <a name="syspolicy_system_health_state-transact-sql"></a>syspolicy_system_health_state(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

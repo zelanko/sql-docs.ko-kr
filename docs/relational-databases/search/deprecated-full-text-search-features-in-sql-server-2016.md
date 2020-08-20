@@ -1,4 +1,5 @@
 ---
+description: SQL Server 2016에서 사용되지 않는 전체 텍스트 검색 기능
 title: SQL Server 2016에서 사용되지 않는 전체 텍스트 검색 기능
 ms.date: 08/19/2016
 ms.prod: sql
@@ -15,12 +16,12 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: f74c1a7f5dbae4ce7d3fb1fe874cfb6ee170063e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: edfea50f0970f9d868ec36fe80d5ecc18c0e4a8d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758051"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493830"
 ---
 # <a name="deprecated-full-text-search-features-in-sql-server-2016"></a>SQL Server 2016에서 사용되지 않는 전체 텍스트 검색 기능
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -41,7 +42,7 @@ ms.locfileid: "85758051"
 |sp_fulltext_service 동작 값: clean_up, connect_timeout 및 data_timeout은 0을 반환합니다.|None|sp_fulltext_service @action=clean_up<br /><br /> sp_fulltext_service @action=connect_timeout<br /><br /> sp_fulltext_service @action=data_timeout|116<br /><br /> 117<br /><br /> 118|  
 |sys.dm_fts_active_catalogs 열:<br /><br /> is_paused<br /><br /> previous_status<br /><br /> previous_status_description<br /><br /> row_count_in_thousands<br /><br /> 상태<br /><br /> status_description<br /><br /> worker_count|없음|dm_fts_active_catalogs.is_paused<br /><br /> dm_fts_active_catalogs.previous_status<br /><br /> dm_fts_active_catalogs.previous_status_description<br /><br /> dm_fts_active_catalogs.row_count_in_thousands<br /><br /> dm_fts_active_catalogs.status<br /><br /> dm_fts_active_catalogs.status_description<br /><br /> dm_fts_active_catalogs.worker_count|218<br /><br /> 221<br /><br /> 222<br /><br /> 224<br /><br /> 219<br /><br /> 220<br /><br /> 223|  
 |sys.dm_fts_memory_buffers 열:<br /><br /> row_count|없음|dm_fts_memory_buffers.row_count|225|  
-|sys.fulltext_catalogs 열:<br /><br /> 경로<br /><br /> data_space_id<br /><br /> file_id 열|없음|fulltext_catalogs.path<br /><br /> fulltext_catalogs.data_space_id<br /><br /> fulltext_catalogs.file_id|215<br /><br /> 216<br /><br /> 217|  
+|sys.fulltext_catalogs 열:<br /><br /> path<br /><br /> data_space_id<br /><br /> file_id 열|없음|fulltext_catalogs.path<br /><br /> fulltext_catalogs.data_space_id<br /><br /> fulltext_catalogs.file_id|215<br /><br /> 216<br /><br /> 217|  
   
 ## <a name="features-not-supported-in-a-future-version-of-sql-server"></a>이후 버전의 SQL Server에서 지원되지 않는 기능  
  아래 전체 텍스트 검색 기능은 다음 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 지원되지만 이후 버전에서는 제거될 예정입니다. 어떤 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 제거될지는 결정되지 않았습니다.  

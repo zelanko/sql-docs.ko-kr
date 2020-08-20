@@ -1,4 +1,5 @@
 ---
+description: backupset(Transact-SQL)
 title: backupset (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -20,11 +21,12 @@ ms.assetid: 6ff79bbf-4acf-4f75-926f-38637ca8a943
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5cd91cd99d70a90e3aaec5972ddcdccf472a18f1
-ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
+ms.openlocfilehash: f5bea32ebd5269ae57d7b754cf20d12a0d695109
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86091864"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492858"
 ---
 # <a name="backupset-transact-sql"></a>backupset(Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -49,7 +51,7 @@ ms.locfileid: "86091864"
 |**expiration_date**|**datetime**|백업 세트가 만료되는 날짜 및 시간입니다. NULL일 수 있습니다.|  
 |**software_vendor_id**|**int**|백업 미디어 헤더를 기록하는 소프트웨어 공급업체의 ID입니다. NULL일 수 있습니다.|  
 |**name**|**nvarchar(128)**|백업 세트의 이름입니다. NULL일 수 있습니다.|  
-|**한**|**nvarchar(255)**|백업 세트에 관한 설명입니다. NULL일 수 있습니다.|  
+|**description**|**nvarchar(255)**|백업 세트에 관한 설명입니다. NULL일 수 있습니다.|  
 |**user_name**|**nvarchar(128)**|백업 작업을 수행하는 사용자의 이름입니다. NULL일 수 있습니다.|  
 |**software_major_version**|**tinyint**|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]주 버전 번호입니다. NULL일 수 있습니다.|  
 |**software_minor_version**|**tinyint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 부 버전 번호입니다. NULL일 수 있습니다.|  
@@ -66,7 +68,7 @@ ms.locfileid: "86091864"
 |**type**|**char (1)**|백업 유형입니다. 다음 값 중 하나일 수 있습니다.<br /><br /> D = 데이터베이스<br /><br /> I = 차등 데이터베이스<br /><br /> L = 로그<br /><br /> F = 파일 또는 파일 그룹<br /><br /> G =차등 파일<br /><br /> P = 부분<br /><br /> Q = 차등 부분<br /><br /> NULL일 수 있습니다.|  
 |**sort_order**|**smallint**|백업 작업을 수행하는 서버의 정렬 순서입니다. NULL일 수 있습니다. 정렬 순서 및 데이터 정렬에 대 한 자세한 내용은 [데이터 정렬 및 유니코드 지원](../../relational-databases/collations/collation-and-unicode-support.md)을 참조 하세요.|  
 |**code_page**|**smallint**|백업 작업을 수행하는 서버의 코드 페이지입니다. NULL일 수 있습니다. 코드 페이지에 대 한 자세한 내용은 [데이터 정렬 및 유니코드 지원](../../relational-databases/collations/collation-and-unicode-support.md)을 참조 하세요.|  
-|**compatibility_level**|**tinyint**|데이터베이스에 대한 호환성 수준 설정입니다. 다음 값 중 하나일 수 있습니다.<br /><br /> 90 =[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> 100 =[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]<br /><br /> 110 =[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]<br /><br /> 120 =[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]<br /><br /> NULL일 수 있습니다.<br /><br /> 호환성 수준에 대한 자세한 내용은 [ALTER DATABASE 호환성 수준&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)을 참조하세요.|  
+|**compatibility_level**|**tinyint**|데이터베이스에 대한 호환성 수준 설정입니다. 다음 값 중 하나일 수 있습니다.<br /><br /> 90 = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> 100 = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]<br /><br /> 110 = [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]<br /><br /> 120 = [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]<br /><br /> NULL일 수 있습니다.<br /><br /> 호환성 수준에 대한 자세한 내용은 [ALTER DATABASE 호환성 수준&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)을 참조하세요.|  
 |**database_version**|**int**|데이터베이스 버전 번호입니다. NULL일 수 있습니다.|  
 |**backup_size**|**numeric(20,0)**|백업 세트의 크기(바이트)입니다. NULL일 수 있습니다. VSS 백업의 경우 예상 값은 backup_size입니다.|  
 |**database_name**|**nvarchar(128)**|백업 작업과 연관된 데이터베이스의 이름입니다. NULL일 수 있습니다.|  
@@ -98,7 +100,7 @@ ms.locfileid: "86091864"
 |**compressed_backup_size**|**숫자 (20, 0)**|디스크에 저장된 백업의 총 바이트 수입니다.<br /><br /> 압축 비율을 계산 하려면 **compressed_backup_size** 와 **backup_size**를 사용 합니다.<br /><br /> **Msdb** 를 업그레이드 하는 동안이 값은 NULL로 설정 됩니다. 백업이 압축되지 않았음을 나타냅니다.|  
 |**key_algorithm**|**nvarchar(32)**|백업을 암호화하는 데 사용되는 암호화 알고리즘입니다. NO_Encryption 값은 백업이 암호화되지 않았음을 나타냅니다.|  
 |**encryptor_thumbprint**|**varbinary(20)**|데이터베이스에서 인증서나 비대칭 키를 찾는 데 사용할 수 있는 암호기의 지문입니다. 백업이 암호화되지 않은 경우 이 값은 NULL입니다.|  
-|**encryptor_type**|**nvarchar(32)**|사용한 암호기 유형: 인증서 또는 비대칭 키입니다. . 백업이 암호화되지 않은 경우 이 값은 NULL입니다.|  
+|**encryptor_type**|**nvarchar(32)**|사용되는 암호기 유형으로 인증서 또는 비대칭 키를 반환합니다. . 백업이 암호화되지 않은 경우 이 값은 NULL입니다.|  
   
 ## <a name="remarks"></a>설명  
  LOADHISTORY를 사용 하는 *backup_device* 에서만 RESTORE verifyonly는 **backupmediaset** 테이블의 열을 미디어 세트 헤더의 적절 한 값으로 채웁니다.  
@@ -106,7 +108,7 @@ ms.locfileid: "86091864"
  이 테이블의 행 수와 다른 백업 및 기록 테이블의 행 수를 줄이려면 [sp_delete_backuphistory](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md) 저장 프로시저를 실행 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;테이블 백업 및 복원](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)   
+ [Transact-sql&#41;&#40;테이블 백업 및 복원 ](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)   
  [backupfile&#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupfile-transact-sql.md)   
  [backupfilegroup&#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupfilegroup-transact-sql.md)   
  [backupmediafamily&#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupmediafamily-transact-sql.md)   
@@ -115,6 +117,6 @@ ms.locfileid: "86091864"
  [미디어 세트, 미디어 패밀리 및 백업 세트&#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)   
  [복구 모델&#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)   
  [RESTORE HEADERONLY&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)   
- [Transact-sql&#41;&#40;테이블 백업 및 복원](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)  
+ [Transact-sql&#41;&#40;테이블 백업 및 복원 ](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)  
   
   

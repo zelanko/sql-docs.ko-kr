@@ -1,4 +1,5 @@
 ---
+description: IHpublishercolumns(Transact-SQL)
 title: IHpublishercolumns (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a5347750-224c-40d9-ae12-57e7213b7db9
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 221586cec5acaf94954454076fcf948cc62cf577
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b5d3f4b833d6d5183c888dba9a4a3a39ac42598d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890267"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492784"
 ---
 # <a name="ihpublishercolumns-transact-sql"></a>IHpublishercolumns(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,8 +48,8 @@ ms.locfileid: "85890267"
   
 ## <a name="see-also"></a>참고 항목  
  [다른 유형의 데이터베이스 복제](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
- [Transact-sql&#41;&#40;복제 테이블](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Transact-sql&#41;&#40;복제 뷰](../../relational-databases/system-views/replication-views-transact-sql.md)   
+ [Transact-sql&#41;&#40;복제 테이블 ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Transact-sql&#41;&#40;복제 뷰 ](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [sysarticlecolumns &#40;시스템 뷰&#41; &#40;Transact-sql&#41;](../../relational-databases/system-views/sysarticlecolumns-system-view-transact-sql.md)   
  [sysarticlecolumns &#40;Transact-sql&#41;](../../relational-databases/system-tables/sysarticlecolumns-transact-sql.md)  
   

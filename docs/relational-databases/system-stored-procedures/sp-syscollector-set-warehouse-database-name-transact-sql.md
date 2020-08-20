@@ -1,4 +1,5 @@
 ---
+description: sp_syscollector_set_warehouse_database_name(Transact-SQL)
 title: sp_syscollector_set_warehouse_database_name (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: a85aca1b-8135-4c81-9a05-da5aec76f1ed
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 86b5037b1aa581dd99385c9be13ea58ee8a571dd
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f1a1ef892a3b00f847269f10d151fcc26f1d821c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892850"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493006"
 ---
 # <a name="sp_syscollector_set_warehouse_database_name-transact-sql"></a>sp_syscollector_set_warehouse_database_name(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,7 +55,7 @@ sp_syscollector_set_warehouse_database_name [ @database_name = ] 'database_name'
 ## <a name="permissions"></a>사용 권한  
  이 프로시저를 실행하려면 dc_admin(EXECUTE 권한 있음) 고정 데이터베이스 역할의 멤버 자격이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 관리 데이터 웨어하우스의 이름을 `RemoteMDW`로 설정합니다.  
   
 ```  
