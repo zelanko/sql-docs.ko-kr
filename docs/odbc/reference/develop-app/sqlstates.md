@@ -1,4 +1,5 @@
 ---
+description: SQLSTATE
 title: SQLSTATEs | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f29fff2e-3d09-4a8c-a2f9-2059062cbebf
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: be4bca929b8d48c301c6e71917503387004a6ec5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b32a965779da1669452e9361e38723e29cfb11ca
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299730"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476395"
 ---
 # <a name="sqlstates"></a>SQLSTATE
 SQLSTATEs는 경고나 오류의 원인에 대 한 자세한 정보를 제공 합니다. 이 설명서의 SQLSTATEs는 ISO/IEF CLI 사양에 있는 것을 기반으로 하며, IM으로 시작 하는 SQLSTATEs는 ODBC와 관련이 있습니다.  

@@ -1,4 +1,5 @@
 ---
+description: LIKE 조건자 이스케이프 문자
 title: LIKE 조건자 이스케이프 문자 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 185d6109-48cf-4981-bc40-ec2a4a90cafc
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2e4f04b12911145eede3354532736cb92f1ae413
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5304068e21dd6faf0e737a94add0cce177c4dabc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306154"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476555"
 ---
 # <a name="like-predicate-escape-character"></a>LIKE 조건자 이스케이프 문자
 **LIKE** 조건자에서 백분율 기호 (%) 는 임의의 문자를 0 개 이상 찾지만 밑줄 (_)은 임의의 문자 하나에 대응 합니다. **LIKE** 조건자에서 실제 백분율 기호 또는 밑줄을 일치 시키려면 이스케이프 문자가 백분율 부호 또는 밑줄 앞에와 야 합니다. **LIKE** 조건자 이스케이프 문자를 정의 하는 이스케이프 시퀀스는 다음과 같습니다.  

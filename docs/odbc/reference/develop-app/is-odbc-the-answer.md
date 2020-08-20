@@ -1,5 +1,6 @@
 ---
-title: ODBC가 응답입니까? | Microsoft 문서
+description: ODBC가 응답입니까?
+title: ODBC가 응답입니까? | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: bfa5e6ee-5979-42a9-be6f-a84d1ee7a54c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f3716acbcc1b8ea648b5edc03e277983936da557
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7a51c4248a041d65f00ec1846f60788cded68f7b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81288094"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476605"
 ---
 # <a name="is-odbc-the-answer"></a>ODBC가 응답입니까?
 상호 운용성에 대 한 질문을 살펴보기 전에 다음 질문을 고려해 야 합니다. 응용 프로그램에서 ODBC를 사용 해야 하나요? 이는 ODBC에 대 한 가이드를 요청 하는 이상한 질문 일 수 있지만 실제로 합법적인 것입니다. ODBC는 네이티브 데이터베이스 Api를 완전히 대체 하도록 설계 되지 않았고 모든 상황에서 데이터베이스 액세스를 제공 하도록 설계 되었습니다. 이는 데이터베이스에 대 한 공통 인터페이스를 제공 하도록 설계 되었으며 응용 프로그램 프로그래머가 여러 데이터베이스에 대 한 링크를 학습 하 고 유지 관리할 필요가 없습니다.  

@@ -1,4 +1,5 @@
 ---
+description: 스크립트 구성 요소를 사용하여 동기 변환 만들기
 title: 스크립트 구성 요소를 사용하여 동기 변환 만들기 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: aa1bee1a-ab06-44d8-9944-4bff03d73016
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 43629b22e6aca90065c139fb35d460384ad1ef1b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d5a3e10574188f4d365ed93b9e1e765b96b6dcba
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923861"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477225"
 ---
 # <a name="creating-a-synchronous-transformation-with-the-script-component"></a>스크립트 구성 요소를 사용하여 동기 변환 만들기
 

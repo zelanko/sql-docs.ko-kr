@@ -1,4 +1,5 @@
 ---
+description: 수준 1 인터페이스 적합성
 title: 수준 1 인터페이스 규칙 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ee3f5c08-0583-4f3b-8354-ef71b6086a7e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 29f59cf06eac1ce0f6589ad9c7cba8491e8383b5
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: e92b68c9e8864e79c495c9405f905fa5a4f37acf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87363427"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476575"
 ---
 # <a name="level-1-interface-conformance"></a>수준 1 인터페이스 적합성
 수준 1 인터페이스 규칙 수준에는 OLTP 관계형 DBMS에서 일반적으로 사용할 수 있는 핵심 인터페이스 규칙 수준 기능 및 트랜잭션과 같은 추가 기능이 포함 됩니다. 수준 1 인터페이스 준수 드라이버를 통해 응용 프로그램은 핵심 인터페이스 규칙 수준의 기능 외에도 다음 작업을 수행할 수 있습니다.  

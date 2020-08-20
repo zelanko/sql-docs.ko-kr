@@ -1,4 +1,5 @@
 ---
+description: 스크립트 구성 요소를 사용하여 원본 만들기
 title: 스크립트 구성 요소를 사용하여 원본 만들기 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 547c4179-ea82-4265-8c6f-04a2aa77a3c0
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7e936a0afefa71969cf9e27c2c222d8780532610
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 0e1d40b856409ab1e4d7859c818f1259133dc60b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914149"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477263"
 ---
 # <a name="creating-a-source-with-the-script-component"></a>스크립트 구성 요소를 사용하여 원본 만들기
 

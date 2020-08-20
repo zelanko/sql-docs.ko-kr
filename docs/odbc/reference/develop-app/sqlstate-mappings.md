@@ -1,4 +1,5 @@
 ---
+description: SQLSTATE 매핑(SQLSTATE Mappings)
 title: SQLSTATE 매핑 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6e6cabcf-a204-40eb-b77d-8a0c4a5e8524
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ec58c0e41869529bbba5fd31ad534976923a990d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 14be1946b34433b0ff094cb79e2a1ec2ee849cd3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299743"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476405"
 ---
 # <a name="sqlstate-mappings"></a>SQLSTATE 매핑(SQLSTATE Mappings)
 이 항목 *에서는 odbc* *2.x 및 ODBC* 3.x의 SQLSTATE 값에 대해 설명 합니다. ODBC *3(sp3)* 의 SQLSTATE 값에 대 한 자세한 내용은 [부록 a: odbc 오류 코드](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)를 참조 하세요.  

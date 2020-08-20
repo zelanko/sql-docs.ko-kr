@@ -1,4 +1,5 @@
 ---
+description: 수준 2 인터페이스 적합성
 title: 수준 2 인터페이스 규칙 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2dc87840-f2fe-43dd-9d7b-bd95523081d9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3b8c18a77cfd843a6bb7b70494e62dcb9efc4582
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: 31b7148b05d3870a7f23a51167fffeb1860c26d8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87363393"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476565"
 ---
 # <a name="level-2-interface-conformance"></a>수준 2 인터페이스 적합성
 수준 2 인터페이스 규칙 수준은 수준 1 인터페이스 규칙 수준 기능 및 다음 기능을 포함 합니다.  

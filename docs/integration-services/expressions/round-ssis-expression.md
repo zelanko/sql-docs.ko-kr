@@ -1,4 +1,5 @@
 ---
+description: ROUND(SSIS 식)
 title: ROUND(SSIS 식) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 376f1947-4fc5-4611-ad86-823e4db1b468
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: fc0453e960c1e1c204adda680b4e380e62c78342
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c1c278aaa5dd1d3b48d6e279b7f142750e4e77ad
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914961"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477430"
 ---
 # <a name="round-ssis-expression"></a>ROUND(SSIS 식)
 

@@ -1,4 +1,5 @@
 ---
+description: 직접 실행 ODBC
 title: ODBC 직접 실행 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: dd00a535-b136-494f-913b-410838e3de7e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: bc5d942ac0c2af54168248d8e416ca233b2c69e6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9be03c4f20a82e134481f8fd9bb849ffd830567a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305164"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476705"
 ---
 # <a name="direct-execution-odbc"></a>직접 실행 ODBC
 직접 실행은 문을 실행 하는 가장 간단한 방법입니다. 실행을 위해 문이 전송 되 면 데이터 원본에서 액세스 계획으로 컴파일한 다음 해당 액세스 계획을 실행 합니다.  

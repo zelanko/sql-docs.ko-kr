@@ -1,4 +1,5 @@
 ---
+description: 상태 전환
 title: 상태 전환 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: fc741611-6535-43cc-8156-6d897d04664e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3a480b7ff8953ef94f0efc4886a09731730a61b7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 947be49fc0a77f94c1641bb7c735db3276b49f58
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299696"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476365"
 ---
 # <a name="state-transitions"></a>상태 전환
 ODBC는 각 환경, 각 연결 및 각 문에 대 한 불연속 *상태* 를 정의 합니다. 예를 들어 환경에는 할당 되지 않음 (환경이 할당 되지 않음), 할당 됨 (환경이 할당 되었지만 연결이 할당 되지 않음) 및 연결 (환경 및 하나 이상의 연결이 할당 됨)의 세 가지 상태가 있습니다. 연결에는 7 개의 가능한 상태가 있습니다. 문의 가능한 상태는 13입니다.  

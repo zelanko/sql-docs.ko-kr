@@ -1,4 +1,5 @@
 ---
+description: 상호 운용성
 title: 상호 운용성 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 43b7c849-9d59-4002-9977-9e2c8730b859
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 31b20a696c601ff91c591e4c717f468beca34e36
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a404ee6de56cbd8b5605eca640fdf0e065f16d79
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306224"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476615"
 ---
 # <a name="interoperability"></a>상호 운용성
 *상호 운용성* 은 여러 dbms로 작동 하는 단일 응용 프로그램의 기능입니다. 상호 운용 가능한 제네릭 응용 프로그램을 작성 해야 하는 것은 ODBC 개발에 가장 중요 한 요소 중 하나 였습니다. 그러나 상호 운용성은 단순한 경로와 "상호 운용할 수 없습니다"에서 "완전히 상호 운용 가능"으로 진행 되지 않습니다. 경로에는 여러 분기가 있으며 각 분기에는 기능, 속도, 코드 복잡성 및 개발 시간 간의 장단점이 필요 합니다.  

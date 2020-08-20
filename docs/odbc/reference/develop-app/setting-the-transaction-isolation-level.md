@@ -1,4 +1,5 @@
 ---
+description: 트랜잭션 격리 수준 설정
 title: 트랜잭션 격리 수준 설정 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 64a037f0-5065-4f45-9669-6710404a540c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 80401b276355a47469355cb6921d768d168398ae
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f871ef9e25cb5745987079a4d94272d2f430dfaf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299813"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476415"
 ---
 # <a name="setting-the-transaction-isolation-level"></a>트랜잭션 격리 수준 설정
 응용 프로그램은 트랜잭션 격리 수준을 설정 하기 위해 SQL_ATTR_TXN_ISOLATION 연결 특성을 사용 합니다. 데이터 원본에서 요청 된 격리 수준을 지원 하지 않는 경우 드라이버 또는 데이터 원본에서 더 높은 수준을 설정할 수 있습니다. 데이터 원본에서 지 원하는 트랜잭션 격리 수준과 기본 격리 수준을 확인 하기 위해 응용 프로그램은 각각 SQL_TXN_ISOLATION_OPTION 및 SQL_DEFAULT_TXN_ISOLATION 옵션으로 **SQLGetInfo** 를 호출 합니다.  

@@ -1,4 +1,5 @@
 ---
+description: 사용자 지정 태스크의 사용자 인터페이스 개발
 title: 사용자 지정 태스크의 사용자 인터페이스 개발 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 1e940cd1-c5f8-4527-b678-e89ba5dc398a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ef58fe4cdc604f0b23d97d5b4538cb1ffb629a35
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 2819e52dfe651cb7fde80560c3edd28745376179
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916339"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477402"
 ---
 # <a name="developing-a-user-interface-for-a-custom-task"></a>사용자 지정 태스크의 사용자 인터페이스 개발
 
@@ -58,7 +59,7 @@ ms.locfileid: "86916339"
 |<xref:Microsoft.SqlServer.Dts.Runtime.Localization.DtsLocalizableAttribute.DisplayName%2A>|제어 흐름 도구 상자에 태스크 이름을 표시합니다.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.Localization.DtsLocalizableAttribute.Description%2A>|<xref:Microsoft.SqlServer.Dts.Runtime.Localization.DtsLocalizableAttribute>에서 상속된 태스크 설명입니다. 이 속성은 도구 설명에 표시됩니다.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute.IconResource%2A>|[!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너에 표시되는 아이콘입니다.|  
-|<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute.RequiredProductLevel%2A>|사용되는 경우 이 속성은 <xref:Microsoft.SqlServer.Dts.Runtime.DTSProductLevel> 열거형의 값 중 하나로 설정합니다. `RequiredProductLevel = DTSProductLevel.None`)을 입력합니다.|  
+|<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute.RequiredProductLevel%2A>|사용되는 경우 이 속성은 <xref:Microsoft.SqlServer.Dts.Runtime.DTSProductLevel> 열거형의 값 중 하나로 설정합니다. 예: `RequiredProductLevel = DTSProductLevel.None`.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute.TaskContact%2A>|태스크에 기술 지원이 필요한 경우를 위해 연락처 정보를 포함합니다.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute.TaskType%2A>|태스크에 유형을 할당합니다.|  
 |Attribute.TypeId|파생 클래스에서 구현된 경우 이 특성에 대한 고유 식별자를 가져옵니다. 자세한 내용은 .NET Framework 클래스 라이브러리의 **Attribute.TypeID** 속성을 참조하세요.|  

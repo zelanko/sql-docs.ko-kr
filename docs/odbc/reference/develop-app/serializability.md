@@ -1,4 +1,5 @@
 ---
+description: 직렬화 가능성
 title: 순차성 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 142e4ac0-2977-4a2b-96ae-c9e5bd2c448a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0557e011578d313765614c05a2a9cf1b975bbc08
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b627d24b16e0bae4a117dba38de8cc1755feadac
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304164"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476445"
 ---
 # <a name="serializability"></a>직렬화 가능성
 이상적으로는 트랜잭션을 *직렬화*할 수 있어야 합니다. 트랜잭션이 동시에 실행 된 결과와 동일 하 게 실행 되는 경우 트랜잭션을 직렬화 할 수 있는 것으로 간주 합니다. 즉, 트랜잭션을 차례로 실행 한 결과와 동일 합니다. 트랜잭션이 먼저 실행 되는 것은 중요 하지 않으며 결과가 트랜잭션 혼합을 반영 하지 않습니다.  

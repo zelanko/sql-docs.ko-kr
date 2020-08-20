@@ -1,4 +1,5 @@
 ---
+description: Long 데이터 전송
 title: Long 데이터 전송 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ea989084-a8e6-4737-892e-9ec99dd49caf
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: aeeeb716aa2f9a72338f3aeb586dffce86f84069
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f6a0ec1a7e8dc703d3e7a3ed5332d20e6539eafe
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304184"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476465"
 ---
 # <a name="sending-long-data"></a>Long 데이터 전송
 Dbms는 *긴 데이터* 를 254 문자와 같이 특정 크기의 문자 또는 이진 데이터로 정의 합니다. 항목이 긴 텍스트 문서 또는 비트맵을 나타내는 경우 처럼 긴 데이터의 전체 항목을 메모리에 저장 하지 못할 수 있습니다. 이러한 데이터는 단일 버퍼에 저장할 수 없기 때문에 문이 실행 될 때 데이터 원본에서 **Sqlputdata** 를 사용 하 여 해당 데이터를 드라이버에 드라이버로 보냅니다. 실행 시 데이터를 전송 하는 매개 변수를 *실행 시 데이터 매개 변수*라고 합니다.  

@@ -1,4 +1,5 @@
 ---
+description: 데이터베이스 만들기(SQL Server 가져오기 및 내보내기 마법사)
 title: 데이터베이스 만들기(SQL Server 가져오기 및 내보내기 마법사) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/17/2017
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: 56a8a79f-086c-4bdc-8888-0045bb4b0cbf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f3616da1034fa0c590a4544691e22ffd054eaa10
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 5c9788c6a7e23759352f22acd543358305ad0a9a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922409"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477291"
 ---
 # <a name="create-database-sql-server-import-and-export-wizard"></a>데이터베이스 만들기(SQL Server 가져오기 및 내보내기 마법사)
 
@@ -90,6 +91,6 @@ SQL Server 명명 규칙에 따라 데이터베이스의 이름을 지정해야 
 ### <a name="more-info"></a>추가 정보
 이 페이지에 표시되는 파일 크기 옵션에 대한 자세한 내용은 [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)를 참조하세요. 
 
-## <a name="whats-next"></a>다음 단계  
+## <a name="whats-next"></a>다음 작업  
  마법사에서 만들 새 데이터베이스의 이름을 지정하고 **확인**을 클릭하면 **데이터베이스 만들기** 대화 상자에서 **대상 선택** 페이지로 돌아갑니다. 자세한 내용은 [대상 선택](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)을 참조하세요.  
 

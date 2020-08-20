@@ -1,4 +1,5 @@
 ---
+description: 스크립트 구성 요소를 사용하여 비표준 텍스트 파일 형식의 구문 분석
 title: 스크립트 구성 요소를 사용하여 비표준 텍스트 파일 형식의 구문 분석 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1fda034d-09e4-4647-9a9f-e8d508c2cc8f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: fba18c5524c0d46438bc36d4856c02b7c5af7b83
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ac791960040a0bceb46e129b2f48a8410e953258
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919224"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477294"
 ---
 # <a name="parsing-non-standard-text-file-formats-with-the-script-component"></a>스크립트 구성 요소를 사용하여 비표준 텍스트 파일 형식의 구문 분석
 
@@ -29,7 +30,7 @@ ms.locfileid: "86919224"
 
   원본 데이터가 비표준 형식으로 정렬된 경우 여러 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 변환을 함께 결합하는 것보다 모든 구문 분석 논리를 단일 스크립트에 통합하는 것이 더 쉬울 수 있습니다.  
   
- [예제 1: 행으로 구분된 레코드에 대한 구문 분석](#example1)  
+ [예제 1: 행으로 구분된 레코드의 구문 분석](#example1)  
   
  [예제 2: 부모 레코드와 자식 레코드 분할](#example2)  
   
@@ -104,7 +105,7 @@ ms.locfileid: "86919224"
   
     -   LastName  
   
-    -   제목  
+    -   Title  
   
     -   City  
   

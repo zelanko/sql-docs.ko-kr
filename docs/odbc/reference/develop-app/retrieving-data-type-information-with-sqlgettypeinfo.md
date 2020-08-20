@@ -1,4 +1,5 @@
 ---
+description: SQLGetTypeInfo를 사용하여 데이터 형식 정보 검색
 title: SQLGetTypeInfo를 사용 하 여 데이터 형식 정보 검색 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d4f8b152-ab9e-4d05-a720-d10a08a6df81
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4ec2bbba824eaf3d74133cf9754eca2593c9fb79
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d7135a6d149646c43eb93218d2ce8952930748c6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300063"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476525"
 ---
 # <a name="retrieving-data-type-information-with-sqlgettypeinfo"></a>SQLGetTypeInfo를 사용하여 데이터 형식 정보 검색
 기본 SQL 데이터 형식에서 ODBC 형식 식별자로의 매핑은 근사값 이므로 ODBC는 드라이버에서 데이터 원본의 각 SQL 데이터 형식을 완전히 설명할 수 있는 함수 (**SQLGetTypeInfo**)를 제공 합니다. 이 함수는 이름, 형식 식별자, 전체 자릿수, 소수 자릿수 및 null 허용 여부와 같은 단일 데이터 형식의 특징을 설명 하는 각 행의 결과 집합을 반환 합니다.  

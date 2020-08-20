@@ -1,4 +1,5 @@
 ---
+description: 스크립트 구성 요소를 사용하여 대상 만들기
 title: 스크립트 구성 요소를 사용하여 대상 만들기 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 214e22e8-7e7d-4876-b690-c138e5721b81
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: fb6991c66aba8561c3f886f6f1f605e9d93a10f5
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 416f9721802690688d82838bd477aa028e1301fe
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922462"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477276"
 ---
 # <a name="creating-a-destination-with-the-script-component"></a>스크립트 구성 요소를 사용하여 대상 만들기
 
@@ -101,7 +102,7 @@ ms.locfileid: "86922462"
   
 4.  필요한 경우 외부 데이터 원본과의 연결을 끊고 필요한 다른 모든 정리 작업을 수행하도록 **PostExecute** 메서드를 재정의합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예제에서는 **ScriptMain** 클래스에서 대상 구성 요소를 만드는 데 필요한 코드를 보여 줍니다.  
   
 > [!NOTE]

@@ -1,4 +1,5 @@
 ---
+description: 스크롤 가능 커서
 title: 스크롤 가능 커서 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2c8a5f50-9b37-452f-8160-05f42bc4d97e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2762ffc7fa179fc6a68f92c23f92ca12803f5ab7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9c347dcb130a2f1f899f2e1b83ae28289ff0a923
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304214"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476485"
 ---
 # <a name="scrollable-cursors"></a>스크롤 가능 커서
 최신 화면 기반 응용 프로그램에서는 사용자가 앞뒤로 스크롤하고 데이터를 전달 합니다. 이러한 응용 프로그램의 경우 이전에 인출 된 행으로 돌아가는 것은 문제가 됩니다. 커서를 닫았다가 다시 연 다음 커서가 필요한 행에 도달할 때까지 행을 인출 하는 것이 한 가지 가능성은 있습니다. 또 다른 가능성은 결과 집합을 읽고, 로컬로 캐시 하 고, 응용 프로그램에서 스크롤을 구현 하는 것입니다. 두 경우 모두 작은 결과 집합에 대해서만 작동 하며, 후자의 경우에는 구현 하기가 어렵습니다. 더 나은 방법은 *스크롤 가능한 커서를* 사용 하는 것입니다 .이 커서는 결과 집합에서 앞뒤로 이동할 수 있습니다.  

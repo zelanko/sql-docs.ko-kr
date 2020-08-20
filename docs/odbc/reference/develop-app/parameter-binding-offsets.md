@@ -1,4 +1,5 @@
 ---
+description: 매개 변수 바인딩 오프셋
 title: 매개 변수 바인딩 오프셋 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 309339e9-9ccd-4a58-8aa4-b6dc88f4eb7c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: de67b230883f3cf8a582e73ce82e8c4bd7d21ad0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 71b4958e77d01c613e33386ec1b2b21ed91f0a67
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81282498"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476545"
 ---
 # <a name="parameter-binding-offsets"></a>매개 변수 바인딩 오프셋
 응용 프로그램에서는 **Sqlexecdirect** 또는 **sqlexecute** 를 호출할 때 바인딩된 매개 변수 버퍼 주소와 해당 길이/표시기 버퍼 주소에 오프셋을 추가 하도록 지정할 수 있습니다. 이러한 추가의 결과로 이러한 작업에 사용 되는 주소가 결정 됩니다.  

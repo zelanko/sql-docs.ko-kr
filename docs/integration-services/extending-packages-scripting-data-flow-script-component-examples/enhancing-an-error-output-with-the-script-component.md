@@ -1,4 +1,5 @@
 ---
+description: 스크립트 구성 요소를 사용하여 오류 출력 향상
 title: 스크립트 구성 요소를 사용하여 오류 출력 향상 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/04/2019
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f7c02709-f1fa-4ebd-b255-dc8b81feeaa5
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 163e6e4876d99e36ed4a3590f8210b258cfd7630
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: e6150c8b80b29575cbb08c4cd88ebe342a55da79
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916322"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477309"
 ---
 # <a name="enhancing-an-error-output-with-the-script-component"></a>스크립트 구성 요소를 사용하여 오류 출력 향상
 
@@ -49,7 +50,7 @@ ms.locfileid: "86916322"
   
 4.  **스크립트 변환 편집기**를 열고 **스크립트** 페이지의 **ScriptLanguage** 속성에서 스크립트 언어를 선택합니다.  
   
-5.  **스크립트 편집**을 클릭하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] VSTA([!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications) IDE를 열고 아래에 표시된 샘플 코드를 추가합니다.  
+5.  **스크립트 편집**을 클릭하여  VSTA([!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications) IDE를 열고 아래에 표시된 샘플 코드를 추가합니다.  
   
 6.  VSTA를 닫습니다.  
   

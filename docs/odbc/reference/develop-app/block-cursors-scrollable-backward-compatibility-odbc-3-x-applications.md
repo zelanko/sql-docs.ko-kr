@@ -1,4 +1,5 @@
 ---
+description: ODBC 3.x 애플리케이션의 블록 커서, 스크롤 가능 커서 및 이전 버전과의 호환성
 title: ODBC 3.x의 블록 및 스크롤 가능 커서 호환성 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 82f6cf68-cfde-4417-9788-d6382ca14bf8
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c526eff6e19014c923f05ad91551a7d7c66f5294
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 96645f91d52f4141aacf4f2e171ef809a639f73c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306344"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476835"
 ---
 # <a name="block-cursors-scrollable-cursors-and-backward-compatibility-for-odbc-3x-applications"></a>ODBC 3.x 애플리케이션의 블록 커서, 스크롤 가능 커서 및 이전 버전과의 호환성
 **Sqlfetchscroll** 및 **sqlfetchscroll** 는 모두 응용 프로그램에서 호출 하는 함수 집합인 API (응용 프로그래밍 인터페이스)와 드라이버에서 구현 하는 함수 집합인 SPI (서비스 공급자 인터페이스) 사이에서 ODBC의 첫 번째 명확한 분할을 나타냅니다. 이러한 분할은 **Sqlfetchscroll**을 사용 하 여 표준에 맞게 정렬 하 고 **sqlfetchscroll** *를 사용 하는 odbc 2.x*와 호환 되도록 하는 odbc *3(sp3)* 의 요구 사항을 분산 하는 데 필요 합니다.  

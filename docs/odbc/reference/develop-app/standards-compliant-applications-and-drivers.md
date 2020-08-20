@@ -1,4 +1,5 @@
 ---
+description: 표준 준수 애플리케이션 및 드라이버
 title: 표준 규격 응용 프로그램 및 드라이버 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a1145c4c-3094-4f3f-8cc2-e6bb1a930ab1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4b4daf2e777b20b1b84c090757d0d84796a4cae1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e6733afa5281f86d8dd425e6157832ee0680d34b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299720"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476385"
 ---
 # <a name="standards-compliant-applications-and-drivers"></a>표준 준수 애플리케이션 및 드라이버
 표준 규격 응용 프로그램 또는 드라이버는 Open Group CAE Specification "데이터 관리: SQL 호출 수준 인터페이스 (CLI)" 및 ISO/IEC 9075-3:1995 (E) 호출 수준 인터페이스 (SQL/CLI)를 준수 하는 응용 프로그램 또는 드라이버입니다.  

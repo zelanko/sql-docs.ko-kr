@@ -1,4 +1,5 @@
 ---
+description: 행 스크롤 및 페치(ODBC)
 title: 행 스크롤 및 페치 (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c43764cb-5841-4b89-9dc0-984a7488b3c1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 72d262bf73e69388f65ff281e62235d2d831669e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b6fcdd2cd635a7da66a5d81c4beb24088f96382b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304204"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476495"
 ---
 # <a name="scrolling-and-fetching-rows-odbc"></a>행 스크롤 및 페치(ODBC)
 스크롤 가능 커서를 사용 하는 경우 응용 프로그램은 **Sqlfetchscroll** 을 호출 하 여 커서를 배치 하 고 행을 인출 합니다. **Sqlfetchscroll** 은 상대 스크롤 (다음, 이전 및 상대 *n* 행), 절대 스크롤 (first, last 및 row *n*)을 지원 하 고 책갈피를 기준으로 위치를 지정 합니다. **Sqlfetchscroll** 의 *Fetchorientation* 및 *fetchorientation* 인수는 다음 다이어그램에 표시 된 것 처럼 페치할 행 집합을 지정 합니다.  

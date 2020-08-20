@@ -1,4 +1,5 @@
 ---
+description: 블록 커서
 title: 블록 커서 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1a92b5d8-7c6e-4ce5-8c99-600a387026aa
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fa35888ef93da9648fe6422bdc35ebf9da3a0525
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5dece0e3ecfc5ef4f3116361a202cfa2d10863ed
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306354"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476825"
 ---
 # <a name="block-cursors"></a>블록 커서
 많은 응용 프로그램에서 네트워크를 통해 데이터를 가져오는 데 상당한 시간이 소요 됩니다. 이 시간의 일부는 네트워크를 통해 실제로 데이터를 가져오는 데 소비 되 고 일부는 네트워크 오버 헤드 (예: 드라이버에서 데이터 행을 요청 하기 위해 수행 하는 호출)에 소요 됩니다. 응용 프로그램에서 *블록* 또는 *fat* *커서를* 효율적으로 사용 하 여 한 번에 두 개 이상의 행을 반환할 수 있는 경우에는 후자의 시간이 줄어들 수 있습니다.  

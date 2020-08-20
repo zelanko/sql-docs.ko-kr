@@ -1,4 +1,5 @@
 ---
+description: 스크립트 구성 요소를 사용하여 ODBC 대상 만들기
 title: 스크립트 구성 요소를 사용하여 ODBC 대상 만들기 | Microsoft Docs
 ms.custom: ''
 ms.date: 10/10/2018
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d198c866-78f4-4a50-ae15-333160645815
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8c1b434486cb27d5a001e0b185ed6c637e1ca45d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: dd25e6cf4816b0ff39ed1129a1d98f9de5603d2c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916324"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477322"
 ---
 # <a name="creating-an-odbc-destination-with-the-script-component"></a>스크립트 구성 요소를 사용하여 ODBC 대상 만들기
 

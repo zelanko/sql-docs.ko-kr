@@ -1,4 +1,5 @@
 ---
+description: 제품 주기의 길이
 title: 제품 주기의 길이 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4d08d886-6d8b-40fd-8544-13032f4bf6c7
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3d235146ffe1b4699f0064c5772407bcf40ae962
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d1484079a09d10864e0563db95208e926a959d6d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306196"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476585"
 ---
 # <a name="length-of-the-product-cycle"></a>제품 주기의 길이
 상호 운용성에 대 한 최종 질문은 시간입니다. 상호 운용 가능한 응용 프로그램을 개발 하는 작업은 일반적으로 상호 운용할 필요가 없는 응용 프로그램을 개발 하는 그 이유는 응용 프로그램에서 DBMS 기능을 확인 하 고, Dbms 마다 동일한 작업을 수행 하 고, 일부 Dbms에서 지 원하는 기능을 해결 하는 등의 작업을 수행 해야 하기 때문입니다.  

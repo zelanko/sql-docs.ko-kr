@@ -1,4 +1,5 @@
 ---
+description: 파일 데이터 원본을 사용하여 연결
 title: 파일 데이터 원본을 사용 하 여 연결 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3003f8c2-8be6-41cc-8d9c-612e9bd0f3ae
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8c752fc3b09c06c68dcc216cacac63744dc3101b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0ab210a77d1d6516b6b54ba25767d859ff9102fb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81287413"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476765"
 ---
 # <a name="connecting-using-file-data-sources"></a>파일 데이터 원본을 사용하여 연결
 파일 데이터 원본에 대 한 연결 정보는 dsn 파일에 저장 됩니다. 따라서 단일 사용자가 연결 문자열을 반복 해 서 사용 하거나 적절 한 드라이버가 설치 된 경우 여러 사용자 간에 공유할 수 있습니다. 파일에는 드라이버 이름 (또는 unshareable 파일 데이터 원본의 경우 다른 데이터 원본 이름)이 포함 되 고, 선택적으로 **SQLDriverConnect**에서 사용할 수 있는 연결 문자열이 포함 됩니다. 드라이버 관리자는 **SQLDriverConnect** 에 대 한 호출에 대 한 연결 문자열을 dsn 파일의 키워드에서 빌드합니다.  

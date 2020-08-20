@@ -1,5 +1,6 @@
 ---
-title: 메타데이터는 어떻게 사용되나요? | Microsoft 문서
+description: 메타데이터는 어떻게 사용되나요?
+title: 메타데이터는 어떻게 사용되나요? | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 70fb976c-9342-4edd-b066-1140696fd0fa
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fbbba96fa2e99a2ccc0618f31e3b29e7d479f703
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ca61677b0001ba4c39f81f80f6e3cbce26f27910
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300173"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476635"
 ---
 # <a name="how-is-metadata-used"></a>메타데이터는 어떻게 사용되나요?
 애플리케이션에서는 대부분의 결과 집합 작업에 대해 메타데이터를 요구합니다. 예를 들어 애플리케이션에서는 열의 데이터 형식을 사용하여 해당 열에 바인딩할 변수의 종류를 확인하고 문자 열의 바이트 길이를 사용 하 여 해당 열의 데이터를 표시 하는 데 필요한 공간의 크기를 결정 합니다. 애플리케이션에서 열의 메타데이터를 확인하는 방법은 애플리케이션 종류에 따라 다릅니다.  

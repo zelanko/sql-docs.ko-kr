@@ -1,4 +1,5 @@
 ---
+description: .NET 앱에서 C# 코드가 있는 SSIS 패키지 실행
 title: .NET 코드가 있는 SSIS 프로젝트 실행(C#) | Microsoft Docs
 ms.date: 05/21/2018
 ms.topic: quickstart
@@ -8,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: dbc0cfc7a5ef22487a22ade0f65cbf76ac78645c
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 03be806b29fa46c04b38bab822c848f96a0c516d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921862"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477219"
 ---
 # <a name="run-an-ssis-package-with-c-code-in-a-net-app"></a>.NET 앱에서 C# 코드가 있는 SSIS 패키지 실행
 
@@ -24,7 +25,7 @@ ms.locfileid: "86921862"
 
 Visual Studio, Visual Studio Code 또는 원하는 다른 도구를 사용하여 C# 앱을 만들 수 있습니다.
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>전제 조건
 
 시작하기 전에 Visual Studio 또는 Visual Studio Code가 설치되어 있는지 확인합니다. [Visual Studio 다운로드](https://www.visualstudio.com/downloads/)에서 Visual Studio Community Edition 버전 평가판 또는 Visual Studio Code 평가판을 다운로드합니다.
 
@@ -114,7 +115,7 @@ namespace run_ssis_package
 
 ## <a name="run-the-code"></a>코드 실행
 
-1. 애플리케이션을 실행하려면 **F5** 키를 누릅니다.
+1. 응용 프로그램을 실행하려면 **F5** 키를 누릅니다.
 2. 패키지가 예상대로 실행되었는지 확인한 다음 애플리케이션 창을 닫습니다.
 
 ## <a name="next-steps"></a>다음 단계

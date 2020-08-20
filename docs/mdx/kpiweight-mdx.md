@@ -1,4 +1,5 @@
 ---
+description: KPIWeight(MDX)
 title: KPIWeight (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 47e68a956595a1f2ac42cfbfe28d0b93a1e7a694
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fe85fd9c7c9c11d944bad9154021dd4ba7c07055
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67905812"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477055"
 ---
 # <a name="kpiweight-mdx"></a>KPIWeight(MDX)
 

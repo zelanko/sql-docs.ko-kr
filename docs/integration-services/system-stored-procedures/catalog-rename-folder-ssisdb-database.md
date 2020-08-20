@@ -1,4 +1,5 @@
 ---
+description: catalog.rename_folder(SSISDB 데이터베이스)
 title: catalog.rename_folder(SSISDB 데이터베이스) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 336ab467-c32f-4d2e-a79c-174dc6fab75e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e37cbc4e6d0faa35b72e3f4bdc809d41bb39f586
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 65b913576b68e5c84037eac57205b23b81d53f95
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912935"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477135"
 ---
 # <a name="catalogrename_folder-ssisdb-database"></a>catalog.rename_folder(SSISDB 데이터베이스)
 
