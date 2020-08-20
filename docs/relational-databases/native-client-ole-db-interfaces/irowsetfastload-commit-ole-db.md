@@ -1,4 +1,5 @@
 ---
+description: 'IRowsetFastLoad:: Commit (Native Client OLE DB 공급자)'
 title: 'IRowsetFastLoad:: Commit (Native Client OLE DB 공급자) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ ms.assetid: 19de9128-b91a-4626-847f-af721edaa24e
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e2fae107876ae517a8f13670ddba92ff379803ca
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 152ae0916dd5d01bc72526a5ef2494bc6bb04e93
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243938"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455657"
 ---
 # <a name="irowsetfastloadcommit-native-client-ole-db-provider"></a>IRowsetFastLoad:: Commit (Native Client OLE DB 공급자)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

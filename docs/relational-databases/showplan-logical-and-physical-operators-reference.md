@@ -1,4 +1,5 @@
 ---
+description: 실행 계획 논리 및 물리 연산자 참조
 title: 실행 계획 논리 및 물리 연산자 참조
 ms.custom: seo-dt-2019
 ms.date: 10/12/2017
@@ -137,12 +138,12 @@ ms.assetid: e43fd0fe-5ea7-4ffe-8d52-759ef6a7c361
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a3fd29114074ea0e83e04b7c434264d1666efb59
-ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
+ms.openlocfilehash: 93640502582b244c4b6e36473a087d84f53423c8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86091560"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455499"
 ---
 # <a name="showplan-logical-and-physical-operators-reference"></a>실행 계획 논리 및 물리 연산자 참조
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]

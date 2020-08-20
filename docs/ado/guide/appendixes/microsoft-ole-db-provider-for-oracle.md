@@ -1,4 +1,5 @@
 ---
+description: Microsoft OLE DB Provider for Oracle 개요
 title: Microsoft OLE DB Provider for Oracle | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 44fae9dd-5585-4cd6-8bbd-3248a78931b4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e956ca5486485c3dde8079f6b9067a8fef7e2f3a
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 5a81f8b3e8acbe09fed0bac975158a9d5ef26a9e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761641"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454055"
 ---
 # <a name="microsoft-ole-db-provider-for-oracle-overview"></a>Microsoft OLE DB Provider for Oracle 개요
 > [!IMPORTANT]
@@ -70,5 +71,5 @@ MSDAORA
 |**프롬프트**|연결을 설정 하는 동안 사용자에 게 메시지를 표시할지 여부를 나타냅니다.|
 |**확장 속성**|공급자별 확장 연결 정보를 포함 하는 문자열입니다. 속성 메커니즘을 통해 설명할 수 없는 공급자별 연결 정보에 대해서만이 속성을 사용 합니다.|
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목
  [ConnectionString 속성 (ado)](../../../ado/reference/ado-api/connectionstring-property-ado.md) [공급자 속성 (](../../../ado/reference/ado-api/provider-property-ado.md) Ado) [레코드 집합 개체 (ado)](../../../ado/reference/ado-api/recordset-object-ado.md)

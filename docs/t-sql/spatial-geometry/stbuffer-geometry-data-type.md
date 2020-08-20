@@ -1,4 +1,5 @@
 ---
+description: STBuffer(geometry 데이터 형식)
 title: STBuffer(geometry 데이터 형식) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ca6bf2dc-1d38-4503-b87e-f2ea033d36ba
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: b461b711ba7e91e4c29a362523b3ebb4a1228004
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: c916977259dc82638117b800e5fc6c2d306edf04
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86552836"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454278"
 ---
 # <a name="stbuffer-geometry-data-type"></a>STBuffer(geometry 데이터 형식)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -70,7 +71,7 @@ ms.locfileid: "86552836"
   
  이론적 버퍼와 계산된 버퍼 간의 오차는 허용 오차 = 거리 \* .001인 max(허용 오차, 익스텐트 * 1.E-7)입니다. 익스텐트에 대한 자세한 내용은 [geometry 데이터 형식 메서드 참조](https://msdn.microsoft.com/library/d88e632b-6b2f-4466-a15f-9fbef1a347a7)를 참조하세요.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-calling-stbuffer-with-parameter_value--0-on-one-dimensional-geometry-instance"></a>A. 1차원 geometry 인스턴스에서 parameter_value < 0을 사용하여 STBuffer() 호출  
  다음 예에서는 빈 `GeometryCollection` 인스턴스를 반환합니다.  

@@ -1,4 +1,5 @@
 ---
+description: geometry 인스턴스 만들기, 구성 및 쿼리
 title: geometry 인스턴스 만들기, 구성 및 쿼리 | Microsoft 문서
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,16 +14,16 @@ ms.assetid: c6b5c852-37d2-48d0-a8ad-e43bb80d6514
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ed268a5b8097b637c8a7e51eecf2e088aad58e04
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6d6a82ad07670a714cb701498224cb20d0207862
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85751127"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455437"
 ---
 # <a name="create-construct-and-query-geometry-instances"></a>geometry 인스턴스 만들기, 구성 및 쿼리
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  평면 공간 데이터 형식 **geometry**는 유클리드(평면) 좌표계의 데이터를 나타냅니다. 이 형식은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 CLR(공용 언어 런타임) 데이터 형식으로 구현됩니다.  
+   평면 공간 데이터 형식 **geometry**는 유클리드(평면) 좌표계의 데이터를 나타냅니다. 이 형식은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 CLR(공용 언어 런타임) 데이터 형식으로 구현됩니다.  
   
  **geometry** 형식은 각 데이터베이스에서 미리 정의되고 사용할 수 있습니다. 다른 CLR 형식을 사용할 때와 동일한 방식으로 **geometry** 형식의 테이블 열을 만들고 **geometry** 데이터에 대한 작업을 수행할 수 있습니다.  
   

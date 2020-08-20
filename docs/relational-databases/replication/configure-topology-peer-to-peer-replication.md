@@ -1,4 +1,5 @@
 ---
+description: 토폴로지 구성(피어 투 피어 복제)
 title: 토폴로지 구성(피어 투 피어 복제) | Microsoft 문서
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 5377c59f-2e25-4852-a306-c87ae3dca9fd
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e06e271f8f75fea1cf98c9d8f9697cbfe49c412e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 632cdd88b0f56b0518789f1887b13facaed07e1f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85773983"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455641"
 ---
 # <a name="configure-topology-peer-to-peer-replication"></a>토폴로지 구성(피어 투 피어 복제)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

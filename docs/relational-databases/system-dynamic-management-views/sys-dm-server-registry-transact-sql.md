@@ -1,4 +1,5 @@
 ---
+description: sys.dm_server_registry(Transact-SQL)
 title: sys. dm_server_registry (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9b3e0c74-2e99-4996-a383-104d51831e97
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e4de0271647e20a56942e17b8ba52520d1a169f0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 89e74d60a8b3ea72881aec2c9230f1cd296ea301
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898632"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454841"
 ---
 # <a name="sysdm_server_registry-transact-sql"></a>sys.dm_server_registry(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +42,7 @@ ms.locfileid: "85898632"
 ### <a name="permissions"></a>사용 권한  
  을 실행하려면 서버에 대해 VIEW SERVER STATE 권한이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-display-the-sql-server-services"></a>A. SQL Server 서비스 표시  
  다음 예에서는 SQL Server의 현재 인스턴스에 대한 SQL Server 및 SQL Server 에이전트 서비스의 레지스트리 키 값을 반환합니다.  

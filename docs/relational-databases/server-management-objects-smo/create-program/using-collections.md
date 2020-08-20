@@ -1,4 +1,5 @@
 ---
+description: 컬렉션 사용
 title: 컬렉션 사용 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
@@ -15,11 +16,12 @@ ms.assetid: 209eb175-2514-4de1-bc32-b2e6a469d945
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4468e9819504efef135fd0dce689d4e6e126a366
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 018b0ebdf80ffe69b35ffca1bbee1f5a2cd710bc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008658"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455528"
 ---
 # <a name="using-collections"></a>컬렉션 사용
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -28,7 +30,7 @@ ms.locfileid: "86008658"
   
  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] **For...Each** 문 또는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] **foreach** 문을 사용하여 컬렉션의 각 멤버를 반복할 수 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
 제공된 코드 예제를 사용하려면 애플리케이션을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 [Visual Studio .net에서 Visual C&#35; SMO 프로젝트 만들기](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)를 참조 하세요.  
   
 ## <a name="referencing-an-object-by-using-a-collection-in-visual-basic"></a>Visual Basic에서 컬렉션을 사용하여 개체 참조  

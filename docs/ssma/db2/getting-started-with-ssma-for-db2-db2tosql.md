@@ -1,4 +1,5 @@
 ---
+description: D b 2 용 SSMA 시작 (DB2ToSQL)
 title: D b 2 용 SSMA 시작 (DB2ToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 48ca32fc-1830-4d1f-add7-480ba5ad02e8
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 3789062cbbb98b46bb0485cf810ccb85fd04bc7e
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 7cb317fc73f32a8795fe5ce4e5be9af776edf938
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87933904"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454267"
 ---
 # <a name="getting-started-with-ssma-for-db2-db2tosql"></a>D b 2 용 SSMA 시작 (DB2ToSQL)
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]DB2 용 SSMA (Migration Assistant)를 사용 하면 DB2 데이터베이스 스키마를 스키마로 신속 하 게 변환 하 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 고, 결과 스키마를에 업로드 하 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 고, db2에서로 데이터를 마이그레이션할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DB2 용 SSMA (Migration Assistant)를 사용 하면 DB2 데이터베이스 스키마를 스키마로 신속 하 게 변환 하 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 고, 결과 스키마를에 업로드 하 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 고, db2에서로 데이터를 마이그레이션할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 이 항목에서는 설치 프로세스를 소개 하 고 SSMA 사용자 인터페이스를 숙지 하는 방법을 설명 합니다.  
   
@@ -54,7 +55,7 @@ DB2 메타 데이터 탐색기는 DB2 스키마에 대 한 정보를 표시 합�
 -   데이터 마이그레이션을 위한 테이블을 선택 하 고 해당 테이블의 데이터를로 마이그레이션합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 자세한 내용은 [DB2 데이터베이스를 SQL Server &#40;DB2ToSQL&#41;로 마이그레이션 ](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)을 참조 하세요.  
   
 #### <a name="sql-server-metadata-explorer"></a>메타 데이터 탐색기 SQL Server  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]메타 데이터 탐색기에는 인스턴스에 대 한 정보가 표시 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 됩니다. 인스턴스에 연결 하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ssma가 해당 인스턴스에 대 한 메타 데이터를 검색 하 여 프로젝트 파일에 저장 합니다.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 메타 데이터 탐색기에는 인스턴스에 대 한 정보가 표시 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 됩니다. 인스턴스에 연결 하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ssma가 해당 인스턴스에 대 한 메타 데이터를 검색 하 여 프로젝트 파일에 저장 합니다.  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]메타 데이터 탐색기를 사용 하 여 변환 된 DB2 데이터베이스 개체를 선택한 다음 해당 개체를 인스턴스와 동기화 할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -93,7 +94,7 @@ SSMA에는 프로젝트 도구 모음과 마이그레이션 도구 모음 이라
 |**최근에 사용한 파일**|에는 프로젝트 작업, d b 2에 연결 및 연결에 대 한 명령이 포함 되어 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |**편집**|SQL 세부 정보 창에서 복사와 같이 세부 정보 페이지에서 텍스트를 찾고 사용 하는 명령이 포함 되어 있습니다 [!INCLUDE[tsql](../../includes/tsql-md.md)] . 또한에는 기존 책갈피 목록을 볼 수 있는 **책갈피 관리** 옵션도 포함 되어 있습니다. 대화 상자의 오른쪽에 있는 단추를 사용 하 여 책갈피를 관리할 수 있습니다.|  
 |**보기**|**메타 데이터 탐색기 동기화** 명령을 포함 합니다. DB2 메타 데이터 탐색기와 메타 데이터 탐색기 간에 개체를 동기화 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 에는 **출력** 및 **오류 목록** 창 및 레이아웃을 관리 하는 옵션 **레이아웃** 을 표시 하 고 숨기는 명령도 포함 됩니다.|  
-|**도구**|보고서를 만들고 개체와 데이터를 마이그레이션하는 명령을 포함 합니다. 또한 **전역 설정** 및 **프로젝트 설정** 대화 상자에 대 한 액세스를 제공 합니다.|  
+|**Tools**|보고서를 만들고 개체와 데이터를 마이그레이션하는 명령을 포함 합니다. 또한 **전역 설정** 및 **프로젝트 설정** 대화 상자에 대 한 액세스를 제공 합니다.|  
 |**도움말**|SSMA 도움말과 정보 대화 상자에 대 **한** 액세스를 제공 합니다.|  
   
 ### <a name="output-pane-and-error-list-pane"></a>출력 창 및 오류 목록 창  
@@ -104,6 +105,6 @@ SSMA에는 프로젝트 도구 모음과 마이그레이션 도구 모음 이라
 -   오류 목록 창에는 정렬 가능한 목록에서 오류, 경고 및 정보 메시지가 표시 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
-[DB2 데이터를 SQL Server &#40;DB2ToSQL&#41;로 마이그레이션](../../ssma/db2/migrating-db2-data-into-sql-server-db2tosql.md)  
-[DB2ToSQL&#41;&#40;사용자 인터페이스 참조](../../ssma/db2/user-interface-reference-db2tosql.md)  
+[DB2 데이터를 SQL Server &#40;DB2ToSQL&#41;로 마이그레이션 ](../../ssma/db2/migrating-db2-data-into-sql-server-db2tosql.md)  
+[DB2ToSQL&#41;&#40;사용자 인터페이스 참조 ](../../ssma/db2/user-interface-reference-db2tosql.md)  
   

@@ -1,4 +1,5 @@
 ---
+description: ADO 기본 사항
 title: ADO 기본 사항 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: d6a66928-e68f-4c38-b87a-838c5de50a28
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e6571ee28b9b069613ecb6aa9df991751118ca74
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 02574be8fc8333e357e31fe1e1425d6e237871a1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761299"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453775"
 ---
 # <a name="ado-fundamentals"></a>ADO 기본 사항
 ADO는 개발자에 게 OLE DB 시스템 인터페이스를 통해 다양 한 데이터 소스의 데이터를 프로그래밍 방식으로 액세스, 편집 및 업데이트할 수 있는 강력한 논리 개체 모델을 제공 합니다. ADO의 가장 일반적인 사용법은 관계형 데이터베이스의 테이블을 쿼리하고, 결과를 검색 하 여 응용 프로그램에 표시 하 고, 사용자가 데이터를 변경 하 고 변경 내용을 저장할 수 있도록 하는 것입니다. 다른 작업에는 다음이 포함 됩니다.  

@@ -1,4 +1,5 @@
 ---
+description: IMultipleResults를 사용 하 여 SQL Server Native Client에서 여러 결과 집합 처리
 title: IMultipleResults, 여러 결과 집합
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ ms.assetid: 754d3f30-7d94-4b67-8dac-baf2699ce9c6
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a9ad3e29da828e22a656b151659062149a65bf42
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 885ec9a1130c7e1f3db6bbbbebbe9a0190bd2ec4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242277"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455790"
 ---
 # <a name="using-imultipleresults-to-process-multiple-result-sets-in-sql-server-native-client"></a>IMultipleResults를 사용 하 여 SQL Server Native Client에서 여러 결과 집합 처리
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

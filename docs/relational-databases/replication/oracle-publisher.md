@@ -1,4 +1,5 @@
 ---
+description: Oracle 게시자
 title: Oracle 게시자 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 019b7c49-dcca-445d-8969-5982a8ccbc1a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 123fe0cfb6233eb640befb6521720b8cdeebf6e6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fb2b2f519ed8b548c6c1f149a72f28528d9fd26f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85721048"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455566"
 ---
 # <a name="oracle-publisher"></a>Oracle 게시자
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

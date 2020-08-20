@@ -1,4 +1,5 @@
 ---
+description: managed_backup. sp_backup_master_switch (Transact-sql)
 title: managed_backup. sp_backup_master_switch (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -20,11 +21,12 @@ helpviewer_keywords:
 ms.assetid: 1ed2b2b2-c897-41cc-bed5-1c6bc47b9dd2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: eb140e5ff831373d2725bca82c70655c5745a658
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: 193125f68cb5282e2aece4b00a3d41e1d3690464
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86053539"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454771"
 ---
 # <a name="managed_backupsp_backup_master_switch-transact-sql"></a>managed_backup. sp_backup_master_switch (Transact-sql)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -44,7 +46,7 @@ EXEC managed_backup.sp_backup_master_switch
                      [@new_state = ] { 0 | 1}  
 ```  
   
-##  <a name="arguments"></a><a name="Arguments"></a>인수의  
+##  <a name="arguments"></a><a name="Arguments"></a> 인수  
  @state  
  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]의 상태를 설정합니다. @state매개 변수가 **비트**입니다. 값을 0으로 설정하면 작업이 일시 중지되고 1로 설정하면 작업이 다시 시작됩니다.  
   

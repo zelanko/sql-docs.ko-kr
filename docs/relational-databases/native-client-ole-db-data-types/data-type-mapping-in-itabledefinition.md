@@ -1,4 +1,5 @@
 ---
+description: ITableDefinition의 데이터 형식 매핑 (Native Client OLE DB 공급자)
 title: ITableDefinition의 데이터 형식 매핑 (Native Client OLE DB 공급자) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ ms.assetid: 13292d1f-c17e-4d11-bf98-3460a10cbb18
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5fa2776bf9e14ccd42a3aecb871dbdbce817448d
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 19637a541f052a1af5e76a83651a8b8b1a358997
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245940"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455716"
 ---
 # <a name="sql-server-native-client-data-type-mapping-in-itabledefinition"></a>ITableDefinition의 SQL Server Native Client 데이터 형식 매핑
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -55,6 +56,6 @@ ms.locfileid: "87245940"
 >  새 테이블을 만들 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 위 표에 지정된 OLE DB 데이터 형식 열거형 값만 매핑합니다. 다른 OLE DB 데이터 형식의 열로 테이블을 만들려고 하면 오류가 생성됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [데이터 형식&#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-data-types/data-types-ole-db.md)  
+ [데이터 형식 &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-data-types/data-types-ole-db.md)  
   
   

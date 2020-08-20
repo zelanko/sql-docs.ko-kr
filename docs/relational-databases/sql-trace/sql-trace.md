@@ -1,4 +1,5 @@
 ---
+description: SQL 추적
 title: SQL 추적 | Microsoft 문서
 ms.custom: ''
 ms.date: 11/27/2018
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 83c6d1d9-19ce-43fe-be9a-45aaa31f20cb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9941f85f14d5b1f820ad7166a7bb106db4bf0fb1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7368f8e10c38008836d86d7dea14d2ab8add4a93
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750927"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455333"
 ---
 # <a name="sql-trace"></a>SQL 추적
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -116,7 +117,7 @@ SQL 추적은 추적 출력의 데이터 열을 통해 추적이 실행될 때 �
 |**OwnerID**|58|잠금 이벤트 전용입니다. 잠금을 소유한 개체의 유형을 나타냅니다.|  
 |**OwnerName**|37|개체 소유자의 데이터베이스 사용자 이름입니다.|  
 |**ParentName**|59|개체가 속해 있는 스키마의 이름입니다.|  
-|**권한**|19|확인한 사용 권한의 유형을 나타내는 정수 값입니다. 값은 다음과 같습니다.<br /><br /> **1** = SELECT ALL<br /><br /> **2** = UPDATE ALL<br /><br /> **4** = REFERENCES ALL<br /><br /> **8** = INSERT<br /><br /> **16** = DELETE<br /><br /> **32** = EXECUTE(프로시저에만 해당)<br /><br /> **4096** = SELECT ANY(하나 이상의 열)<br /><br /> **8192** = UPDATE ANY<br /><br /> **16384** = REFERENCES ANY|  
+|**권한**|19|확인한 사용 권한의 유형을 나타내는 정수 값입니다. 값:<br /><br /> **1** = SELECT ALL<br /><br /> **2** = UPDATE ALL<br /><br /> **4** = REFERENCES ALL<br /><br /> **8** = INSERT<br /><br /> **16** = DELETE<br /><br /> **32** = EXECUTE(프로시저에만 해당)<br /><br /> **4096** = SELECT ANY(하나 이상의 열)<br /><br /> **8192** = UPDATE ANY<br /><br /> **16384** = REFERENCES ANY|  
 |**ProviderName**|46|OLE DB 공급자 이름입니다.|  
 |**Reads**|16|이벤트에 대해 서버에서 수행한 논리적 디스크 읽기 작업의 수입니다. 이 읽기 작업에는 해당 문 실행 중의 모든 테이블 및 버퍼 읽기가 포함됩니다.|  
 |**RequestID**|49|문을 포함하는 요청의 ID입니다.|  
@@ -124,13 +125,13 @@ SQL 추적은 추적 출력의 데이터 열을 통해 추적이 실행될 때 �
 |**RowCounts**|48|일괄 처리에 있는 행 수입니다.|  
 |**데이터 열이 추적에서 캡처되고 서버를 사용할 수 있으면**|26|추적되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이름입니다.|  
 |**SessionLoginName**|64|세션을 시작한 사용자의 로그인 이름입니다. 예를 들어 사용자가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Login1 **을 사용하여** 에 연결하고 **Login2**로 문을 실행하는 경우 **SessionLoginName** 은 **Login1**을 표시하고 **LoginName** 은 **Login2**를 표시합니다. 이 데이터 열은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 Windows 로그인을 모두 표시합니다.|  
-|**Severity**|20|예외 이벤트의 심각도 수준입니다.|  
+|**심각도**|20|예외 이벤트의 심각도 수준입니다.|  
 |**SourceDatabaseID**|62|개체 원본이 있는 데이터베이스의 ID입니다.|  
 |**SPID**|12|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 클라이언트와 연결된 프로세스에 할당한 SPID(서버 프로세스 ID)입니다.|  
 |**SqlHandle**|63|임시 쿼리 또는 데이터베이스의 텍스트 및 SQL 개체의 개체 ID를 기반으로 하는 64비트 해시입니다. 이 값은 **sys.dm_exec_sql_text()** 에 전달되어 연관된 SQL 텍스트를 검색할 수 있습니다.|  
 |**StartTime**|14|이벤트가 시작된 시간입니다(사용 가능한 경우).|  
 |**State**|30|오류 상태 코드|  
-|**Success**|23|이벤트가 성공적이었는지를 나타냅니다. 다음과 같은 값이 올 수 있습니다.<br /><br /> **1** = 성공,<br /><br /> **0** = 실패.<br /><br /> 예를 들어 **1** 은 권한 확인에 성공했음을 의미하며 **0** 은 확인에 실패했음을 의미합니다.|  
+|**Success**|23|이벤트가 성공적이었는지를 나타냅니다. 값은 다음과 같습니다.<br /><br /> **1** = 성공,<br /><br /> **0** = 실패.<br /><br /> 예를 들어 **1** 은 권한 확인에 성공했음을 의미하며 **0** 은 확인에 실패했음을 의미합니다.|  
 |**TargetLoginName**|42|로그인을 대상으로 하는 동작(예: 새 로그인 추가)의 경우 대상 로그인의 이름입니다.|  
 |**TargetLoginSid**|43|로그인을 대상으로 하는 동작(예: 새 로그인 추가)의 경우 대상 로그인의 SID입니다.|  
 |**TargetUserName**|39|데이터베이스 사용자를 대상으로 하는 동작(예: 사용자에게 권한 부여)의 경우 해당 사용자의 이름입니다.|  
@@ -148,7 +149,7 @@ SQL 추적은 추적 출력의 데이터 열을 통해 추적이 실행될 때 �
   
 |태스크 설명|항목|  
 |----------------------|-----------|  
-|TRANSACT-SQL 저장 프로시저를 사용하여 추적을 만들고 실행하는 방법을 설명합니다.|[Transact-SQL 저장 프로시저를 사용하여 추적 만들기 및 실행](../../relational-databases/sql-trace/create-and-run-traces-using-transact-sql-stored-procedures.md)|  
+|TRANSACT-SQL 저장 프로시저를 사용하여 추적을 만들고 실행하는 방법을 설명합니다.|[TRANSACT-SQL 저장 프로시저를 사용하여 추적 만들기 및 실행](../../relational-databases/sql-trace/create-and-run-traces-using-transact-sql-stored-procedures.md)|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]인스턴스에서 저장 프로시저를 사용하여 수동 추적을 만드는 방법을 설명합니다.|[저장 프로시저를 사용하여 수동 추적 만들기](../../relational-databases/sql-trace/create-manual-traces-using-stored-procedures.md)|  
 |추적 결과가 기록되는 파일에 추적 결과를 저장하는 방법을 설명합니다.|[파일에 추적 결과 저장](../../relational-databases/sql-trace/save-trace-results-to-a-file.md)|  
 |**temp** 디렉터리의 공간을 사용하여 추적 데이터에 대한 액세스를 개선하는 방법을 설명합니다.|[추적 데이터에 대한 액세스 향상](../../relational-databases/sql-trace/improve-access-to-trace-data.md)|  

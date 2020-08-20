@@ -1,4 +1,5 @@
 ---
+description: sys. dm_resource_governor_external_resource_pools (Transact-sql)
 title: sys. dm_resource_governor_external_resource_pools (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2020
@@ -20,12 +21,12 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: bfc975662e2efef22957bb78b03125d67d2188d5
-ms.sourcegitcommit: cd1a5d152d05aeee3252ce313e63d396734f85bd
+ms.openlocfilehash: 32df69f207de0e1c604c10d58f4d28b4a3a34aa5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88239211"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454860"
 ---
 # <a name="sysdm_resource_governor_external_resource_pools-transact-sql"></a>sys. dm_resource_governor_external_resource_pools (Transact-sql)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]

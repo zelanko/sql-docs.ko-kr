@@ -1,4 +1,5 @@
 ---
+description: 메타 데이터 저장 (AccessToSQL)
 title: 메타 데이터 저장 (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: fa4ce8ad-9935-4195-90f9-3fdac587a4ee
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 7f0f9b22d571e4ac89fcd0db464a1e79ae91a28b
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 49114b457535d46785571e16c3b27889b6bf2365
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87933917"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454248"
 ---
 # <a name="save-metadata-accesstosql"></a>메타 데이터 저장 (AccessToSQL)
 **메타 데이터 저장** 대화 상자에 메타 데이터를 저장 하기 전에 ssma 프로젝트에 로드 하 라는 메시지가 표시 됩니다. 이를 통해 오프 라인으로 사용 하 고 기술 지원 담당자와 같은 다른 사람에 게 보낼 수 있는 전체 프로젝트 파일을 사용할 수 있습니다.  

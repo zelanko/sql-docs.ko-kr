@@ -1,4 +1,5 @@
 ---
+description: geography 인스턴스 만들기, 구성 및 쿼리
 title: geography 인스턴스 만들기, 구성 및 쿼리 | Microsoft 문서
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ ms.assetid: b585851e-d15b-411f-adeb-aeabeb777c0b
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e2ab74d3cb24118b147743165d6db221ea337629
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 271e1135cddfb775432660c1d4385753e95fbf16
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730813"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455477"
 ---
 # <a name="create-construct-and-query-geography-instances"></a>geography 인스턴스 만들기, 구성 및 쿼리
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -33,10 +34,10 @@ ms.locfileid: "85730813"
  **geography** 데이터 형식은 수많은 기본 메서드를 제공합니다. 이러한 메서드를 사용하여 기존 인스턴스를 기반하여 새 **geography** 인스턴스를 만들 수 있습니다.  
   
  **지리의 버퍼를 만들려면**  
- [STBuffer&#40;geography 데이터 형식&#41;](../../t-sql/spatial-geography/stbuffer-geography-data-type.md)  
+ [STBuffer &#40;geography 데이터 형식&#41;](../../t-sql/spatial-geography/stbuffer-geography-data-type.md)  
   
  **허용 오차를 허용하는 지리의 버퍼를 만들려면**  
- [BufferWithTolerance&#40;geography 데이터 형식&#41;](../../t-sql/spatial-geography/bufferwithtolerance-geography-data-type.md)  
+ [BufferWithTolerance &#40;geography 데이터 형식&#41;](../../t-sql/spatial-geography/bufferwithtolerance-geography-data-type.md)  
   
  **두 geography 인스턴스의 교집합에서 지리를 만들려면**  
  [STIntersection&#40;geography 데이터 형식&#41;](../../t-sql/spatial-geography/stintersection-geography-data-type.md)  
@@ -150,7 +151,7 @@ ms.locfileid: "85730813"
  모든 비어 있지 않은 **geography** 인스턴스는 *점*으로 구성됩니다. 이러한 점은 **geography** 인스턴스가 그려지는 지구의 위도 및 경도 좌표를 나타냅니다. **geography** 데이터 형식은 인스턴스의 점을 쿼리하는 데 필요한 수많은 기본 메서드를 제공합니다.  
   
  **인스턴스를 구성하는 점 개수를 반환하려면**  
- [STNumPoints&#40;geography 데이터 형식&#41;](../../t-sql/spatial-geography/stnumpoints-geography-data-type.md)  
+ [STNumPoints &#40;geography 데이터 형식&#41;](../../t-sql/spatial-geography/stnumpoints-geography-data-type.md)  
   
  **인스턴스의 특정 점을 반환하려면**  
  [STPointN&#40;geometry 데이터 형식&#41;](../../t-sql/spatial-geometry/stpointn-geometry-data-type.md)  
@@ -168,7 +169,7 @@ ms.locfileid: "85730813"
  [STDimension&#40;geography 데이터 형식&#41;](../../t-sql/spatial-geography/stdimension-geography-data-type.md)  
   
  **인스턴스의 길이를 반환하려면**  
- [STLength&#40;geography 데이터 형식&#41;](../../t-sql/spatial-geography/stlength-geography-data-type.md)  
+ [STLength &#40;geography 데이터 형식&#41;](../../t-sql/spatial-geography/stlength-geography-data-type.md)  
   
  **인스턴스의 영역을 반환하려면**  
  [STArea&#40;geography 데이터 형식&#41;](../../t-sql/spatial-geography/starea-geography-data-type.md)  

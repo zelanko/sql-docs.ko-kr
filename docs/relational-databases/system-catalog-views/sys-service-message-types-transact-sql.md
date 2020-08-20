@@ -1,4 +1,5 @@
 ---
+description: sys.service_message_types(Transact-SQL)
 title: sys. service_message_types (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 6a38709a-60fe-46f6-89da-718f74f15600
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 02f210ddee531fe48e7bf2861fe353b1b04ac442
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b56665ff1a780cdcf8052c063f817b542e65ac3c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883190"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455185"
 ---
 # <a name="sysservice_message_types-transact-sql"></a>sys.service_message_types(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +38,7 @@ ms.locfileid: "85883190"
 |**message_type_id**|**int**|데이터베이스 내에서 고유한 메시지 유형의 ID입니다. NULL을 허용하지 않습니다.|  
 |**principal_id**|**int**|해당 메시지 유형을 소유하는 데이터베이스 보안 주체의 ID입니다. NULL을 허용합니다.|  
 |**유효성 검사**|**char(2)**|해당 유형의 메시지를 보내기 전에 Service Broker가 수행하는 유효성 검사입니다. NULL을 허용하지 않습니다. 다음 중 하나:<br /><br /> N = 없음<br /><br /> X = XML<br /><br /> E = 비어 있음|  
-|**validation_desc**|**nvarchar(60)**|해당 유형의 메시지를 보내기 전에 Service Broker가 수행하는 유효성 검사에 대한 설명입니다. NULL을 허용합니다. 다음 중 하나:<br /><br /> NONE<br /><br /> XML<br /><br /> EMPTY|  
+|**validation_desc**|**nvarchar(60)**|해당 유형의 메시지를 보내기 전에 Service Broker가 수행하는 유효성 검사에 대한 설명입니다. NULL을 허용합니다. 다음 중 하나:<br /><br /> 없음<br /><br /> XML<br /><br /> EMPTY|  
 |**xml_collection_id**|**int**|XML 스키마를 사용하는 유효성 검사의 경우 스키마 컬렉션의 ID를 사용합니다.<br /><br /> 그렇지 않으면 NULL입니다.|  
   
 ## <a name="permissions"></a>사용 권한  

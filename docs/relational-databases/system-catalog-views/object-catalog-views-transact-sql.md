@@ -1,4 +1,5 @@
 ---
+description: 개체 카탈로그 뷰(Transact-SQL)
 title: 개체 카탈로그 뷰 (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2019
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e8670a6b-e15c-4126-8d2d-c9cfb968a12d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fa974bf24ccb811743aea1c4ed2c07c934be3d1f
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: 787f323c21b3cb14b2323870c4b702ca10ac2244
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442611"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455285"
 ---
 # <a name="object-catalog-views-transact-sql"></a>개체 카탈로그 뷰(Transact-SQL)
 

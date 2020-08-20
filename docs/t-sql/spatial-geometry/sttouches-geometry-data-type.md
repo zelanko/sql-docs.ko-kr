@@ -1,4 +1,5 @@
 ---
+description: STTouches(geometry 데이터 형식)
 title: STTouches(geometry 데이터 형식) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: af3650b4-26da-4600-9cc2-1be71dd76a14
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 40363a9c7f3f7a59f5da35930990c16eedf753f8
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 792ea213b39a8b38787c1ed674aa03fc084ea591
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554601"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454317"
 ---
 # <a name="sttouches-geometry-data-type"></a>STTouches(geometry 데이터 형식)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -52,7 +53,7 @@ ms.locfileid: "86554601"
   
  이 메서드는 **geometry** 인스턴스의 SRID(spatial Reference ID)가 일치하지 않으면 항상 Null을 반환합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `STTouches()`를 사용하여 두 `geometry` 인스턴스가 만나는지 테스트합니다.  
   
 ```  
@@ -63,7 +64,7 @@ SET @h = geometry::STGeomFromText('POINT(1 1)', 0);
 SELECT @g.STTouches(@h);  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [공간 인덱스 개요](../../relational-databases/spatial/spatial-indexes-overview.md)   
  [geometry 인스턴스의 OGC 메서드](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   

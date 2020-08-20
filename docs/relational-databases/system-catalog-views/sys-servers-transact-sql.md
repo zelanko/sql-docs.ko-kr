@@ -1,4 +1,5 @@
 ---
+description: sys.servers(Transact-SQL)
 title: sys. servers (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/16/2020
@@ -20,12 +21,12 @@ ms.assetid: 4e774ed9-4e83-4726-9f1d-8efde8f9feff
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: c4ebbcdb8fa1f13d7c0d40c4ac66ac1d3453dffb
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f588f0c472432cc4dc68819d32ee57cf65a59358
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894937"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455196"
 ---
 # <a name="sysservers-transact-sql"></a>sys.servers(Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -41,7 +42,7 @@ ms.locfileid: "85894937"
 |**data_source**|**nvarchar(4000)**|OLE DB 데이터 원본 연결 속성입니다.|  
 |**location**|**nvarchar(4000)**|OLE DB 위치 연결 속성입니다. 이 속성이 없으면 NULL입니다.|  
 |**provider_string**|**nvarchar(4000)**|OLE DB 공급자 문자열 연결 속성입니다.<br /><br /> 호출자에 게 권한이 없는 경우는 NULL입니다 `ALTER ANY LINKED SERVER` .|  
-|**카탈로그**|**sysname**|카탈로그 연결 속성을 OLE DB 합니다. 이 속성이 없으면 NULL입니다.|  
+|**catalog**|**sysname**|카탈로그 연결 속성을 OLE DB 합니다. 이 속성이 없으면 NULL입니다.|  
 |**connect_timeout**|**int**|연결 제한 시간(초)이며 제한 시간이 없으면 0입니다.|  
 |**query_timeout**|**int**|쿼리 제한 시간(초)이며 제한 시간이 없으면 0입니다.|  
 |**is_linked**|**bit**|0 = 다른 RPC 및 분산 트랜잭션 동작을 통해 **sp_addserver**를 사용 하 여 추가 된 이전 스타일의 서버입니다.<br /><br /> 1 = 표준 연결된 서버입니다.|  
@@ -74,9 +75,9 @@ ms.locfileid: "85894937"
 - **Setupadmin** 또는 **sysadmin** 고정 서버 역할의 멤버 자격  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;카탈로그 뷰](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [연결 된 서버 카탈로그 뷰 &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/linked-servers-catalog-views-transact-sql.md)   
- [Transact-sql&#41;sp_addlinkedsrvlogin &#40;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
+ [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
  [sp_addremotelogin&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addremotelogin-transact-sql.md)  
   
  

@@ -1,4 +1,5 @@
 ---
+description: 전역 설정 (로깅) (DB2ToSQL)
 title: 전역 설정 (로깅) (DB2ToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: d314a2ca-ea2e-46e0-ae5e-8774841da91b
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 020eebfe3d6ae509516eaedd8a891b0ee481bc83
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 632d71f69f164ea221f9d11604e6fb07528fd583
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87933794"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454218"
 ---
 # <a name="global-settings-logging-db2tosql"></a>전역 설정 (로깅) (DB2ToSQL)
 **전역 설정** 대화 상자를 사용 하 여 ssma의 로깅 설정을 지정할 수 있습니다. 일반적으로 제품 지원에 대 한 작업을 수행 하는 경우에만 이러한 설정을 변경할 수 있습니다.  

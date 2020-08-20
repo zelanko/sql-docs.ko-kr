@@ -1,4 +1,5 @@
 ---
+description: 공간 인덱스 만들기, 수정 및 삭제
 title: 공간 인덱스 만들기, 수정 및 삭제 | Microsoft 문서
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ ms.assetid: 00c1b927-8ec5-44cf-87c2-c8de59745735
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f1bd6350c31b29855915de1be8288ec1fcbe2a56
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4aeb545a92ef4eca7bdb7542b951021336de9800
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85751110"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455461"
 ---
 # <a name="create-modify-and-drop-spatial-indexes"></a>공간 인덱스 만들기, 수정 및 삭제
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

@@ -1,4 +1,5 @@
 ---
+description: Microsoft OLE DB Remoting 공급자 (ADO 서비스 공급자)
 title: Microsoft OLE DB Remoting 공급자 (ADO 서비스 공급자) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: a4360ed4-b70f-4734-9041-4025d033346b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e3ad2ebe195bdcdf97548f040f3ef7dcc1fb1a38
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 1576cedd9352b5f134f3886ee901d40cebeccb33
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761611"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454035"
 ---
 # <a name="microsoft-ole-db-remoting-provider-overview"></a>Microsoft OLE DB Remoting 공급자 개요
 Microsoft OLE DB Remoting 공급자는 클라이언트 컴퓨터의 로컬 사용자가 원격 컴퓨터에서 데이터 공급자를 호출할 수 있도록 합니다. 원격 컴퓨터의 로컬 사용자 인 경우와 같이 원격 컴퓨터에 대 한 데이터 공급자 매개 변수를 지정 합니다. 원격 컴퓨터에 액세스 하기 위해 원격 공급자에서 사용 하는 매개 변수를 지정 합니다. 그런 다음 로컬 사용자 인 것 처럼 원격 컴퓨터에 액세스할 수 있습니다.
 
 > [!IMPORTANT]
->  Windows 8 및 Windows Server 2012부터 RDS 서버 구성 요소는 더 이상 Windows 운영 체제에 포함 되지 않습니다 (자세한 내용은 Windows 8 및 [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) 참조). 이후 버전의 Windows에서는 RDS 클라이언트 구성 요소가 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. RDS를 사용 하는 응용 프로그램은 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)로 마이그레이션해야 합니다.
+>  Windows 8 및 Windows Server 2012부터 RDS 서버 구성 요소는 더 이상 Windows 운영 체제에 포함 되지 않습니다 (자세한 내용은 Windows 8 및 [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) 참조). 이후 버전의 Windows에서는 RDS 클라이언트 구성 요소가 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. RDS를 사용 하는 응용 프로그램은  [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)로 마이그레이션해야 합니다.
 
 ## <a name="provider-keyword"></a>Provider 키워드
  OLE DB Remoting 공급자를 호출 하려면 연결 문자열에 다음 키워드 및 값을 지정 합니다. 공급자 이름의 빈 공간을 확인 합니다.
@@ -90,5 +91,5 @@ rs.UpdateBatch     'Equivalent of RDS SubmitChanges
 ...
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목
  [OLE DB 원격 공급자 개요](https://msdn.microsoft.com/4083b72f-68c4-4252-b366-abb70db5ca2b)

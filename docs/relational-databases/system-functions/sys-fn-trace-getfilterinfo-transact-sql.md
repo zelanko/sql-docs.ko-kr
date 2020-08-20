@@ -1,4 +1,5 @@
 ---
+description: sys.fn_trace_getfilterinfo(Transact-SQL)
 title: sys. fn_trace_getfilterinfo (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 09fe4a28-ff8a-4655-9da1-4654d5bc514d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 79b86365703160ef6f15f8fd89805961997a61e4
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a76efe75df29423c1f788ace0f8dde8b158c6a0b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898295"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454785"
 ---
 # <a name="sysfn_trace_getfilterinfo-transact-sql"></a>sys.fn_trace_getfilterinfo(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -65,7 +66,7 @@ fn_trace_getfilterinfo ( trace_id )
 ## <a name="permissions"></a>사용 권한  
  서버에 대한 ALTER TRACE 권한이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 추적 번호 2에 대한 모든 필터 정보를 반환합니다.  
   
 ```  
@@ -75,14 +76,14 @@ GO
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;추적 만들기](../../relational-databases/sql-trace/create-a-trace-transact-sql.md)   
+ [Transact-sql&#41;&#40;추적 만들기 ](../../relational-databases/sql-trace/create-a-trace-transact-sql.md)   
  [Transact-sql&#41;sp_trace_setfilter &#40;](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)   
  [Transact-sql&#41;sp_trace_create &#40;](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md)   
  [Transact-sql&#41;sp_trace_generateevent &#40;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
- [Transact-sql&#41;sp_trace_setevent &#40;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
+ [sp_trace_setevent&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [Transact-sql&#41;sp_trace_setstatus &#40;](../../relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql.md)   
  [fn_trace_geteventinfo &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
- [fn_trace_getinfo &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)   
+ [sys.fn_trace_getinfo&#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)   
  [fn_trace_gettable &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-trace-gettable-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: Microsoft OLE DB 단순 공급자 개요
 title: Microsoft OLE DB 단순 공급자 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1e7dc6f0-482c-4103-8187-f890865e40fc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6e36648fe42024502316d65e3cf27412b907ffc2
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 9ed83809ec1bf3fd4ba55552f4ecac1d55cfb8d7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761601"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454025"
 ---
 # <a name="microsoft-ole-db-simple-provider-overview"></a>Microsoft OLE DB 단순 공급자 개요
 Microsoft OSP (OLE DB Simple Provider)를 사용 하면 ADO에서 [osp (OLE DB Simple provider) 도구 키트](https://msdn.microsoft.com/6e7b7931-9e4a-4151-ae51-672abd3f84a6)를 사용 하 여 공급자가 작성 된 모든 데이터에 액세스할 수 있습니다. 단순 공급자는 메모리 내 배열 또는 XML 문서와 같이 기본적인 OLE DB 지원만 필요한 데이터 원본에 액세스 하기 위한 것입니다.
@@ -50,9 +51,9 @@ MSDAOSP
 |**데이터 원본**|서버의 이름을 지정합니다.|
 
 ## <a name="xml-document-example"></a>XML 문서 예제
- MDAC 2.7 이상 및 windows DAC (Windows Data Access Components)의 OLE DB 단순 공급자 (OSP)는 임의의 XML 파일에 대 한 계층적 ADO **레코드 집합** 열기를 지원 하도록 향상 되었습니다. 이러한 XML 파일에는 ADO XML 지 속성 스키마가 포함 될 수 있지만 반드시 필요한 것은 아닙니다. 이는 **msxml2.dll**에 OSP를 연결 하 여 구현 되었습니다. 따라서 **msxml2.dll** 이상이 필요 합니다.
+ MDAC 2.7 이상 및 windows DAC (Windows Data Access Components)의 OLE DB 단순 공급자 (OSP)는 임의의 XML 파일에 대 한 계층적 ADO **레코드 집합** 열기를 지원 하도록 향상 되었습니다. 이러한 XML 파일에는 ADO XML 지 속성 스키마가 포함 될 수 있지만 반드시 필요한 것은 아닙니다. 이는 **MSXML2.DLL**에 OSP를 연결 하 여 구현 되었습니다. 따라서 **MSXML2.DLL** 이상이 필요 합니다.
 
- 다음 예제에 사용 된 **포트폴리오 .xml** 파일에는 다음 트리가 포함 되어 있습니다.
+ 다음 예제에 사용 된 **portfolio.xml** 파일에는 다음 트리가 포함 되어 있습니다.
 
 ```console
 Portfolio

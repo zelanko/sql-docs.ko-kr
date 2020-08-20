@@ -1,4 +1,5 @@
 ---
+description: GeometryCollection
 title: GeometryCollection | Microsoft 문서
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ ms.assetid: 4445c0d9-a66b-4d7c-88e4-a66fa6f7d9fd
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ac76c82401a1f9796ce411d2eb15303f8f7013c6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c2c7be1815002208ffea6e08ea4b7200579a78e1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85751070"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455405"
 ---
 # <a name="geometrycollection"></a>GeometryCollection
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -56,7 +57,7 @@ SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid(), @g4.STIsValid();
   
  허용되는 인스턴스와 유효한 인스턴스에 대한 자세한 내용은 [Point](../../relational-databases/spatial/point.md), [MultiPoint](../../relational-databases/spatial/multipoint.md), [LineString](../../relational-databases/spatial/linestring.md), [MultiLineString](../../relational-databases/spatial/multilinestring.md), [Polygon](../../relational-databases/spatial/polygon.md)및 [MultiPolygon](../../relational-databases/spatial/multipolygon.md)을 참조하십시오.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예제에서는 `geometry``GeometryCollection` 인스턴스 및 `Point` 인스턴스가 들어 있는 SRID 1의 Z 값으로 `Polygon` 을 인스턴스화합니다.  
   
 ```sql  

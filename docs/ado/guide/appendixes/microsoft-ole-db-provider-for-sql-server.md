@@ -1,4 +1,5 @@
 ---
+description: SQL Server 용 Microsoft OLE DB 공급자 개요
 title: SQL Server 용 Microsoft OLE DB 공급자 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 99bc40c4-9181-4ca1-a06f-9a1a914a0b7b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f1b66cf9d8e2e284dba2eea888ddc1eda061dabb
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: a39166406be321d01ab6d0dc2acd2488d7b64da5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761621"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454045"
 ---
 # <a name="microsoft-ole-db-provider-for-sql-server-overview"></a>SQL Server 용 Microsoft OLE DB 공급자 개요
 SQL Server에 대 한 Microsoft OLE DB 공급자 SQLOLEDB를 사용 하면 ADO에서 Microsoft SQL Server에 액세스할 수 있습니다.
@@ -288,7 +289,7 @@ EXECUTE SalesByCategory 'Produce', '1995'
 |삽입 된 행 변경|DBPROP_CHANGEINSERTEDROWS|
 |열 권한|DBPROP_COLUMNRESTRICT|
 |열 집합 알림|DBPROP_NOTIFYCOLUMNSET|
-|콘텐츠 형식|SSPROP_STREAM_CONTENTTYPE|
+|콘텐츠 유형|SSPROP_STREAM_CONTENTTYPE|
 |커서 자동 인출|SSPROP_CURSORAUTOFETCH|
 |열 지연|DBPROP_DEFERRED|
 |지연 준비|SSPROP_DEFERPREPARE|
@@ -357,5 +358,5 @@ EXECUTE SalesByCategory 'Produce', '1995'
 
  Microsoft SQL Server OLE DB 공급자에 대 한 특정 구현 세부 정보 및 기능 정보는 [SQL Server 공급자](https://msdn.microsoft.com/adf1d6c4-5930-444a-9248-ff1979729635)를 참조 하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목
  [ConnectionString 속성 (ado)](../../../ado/reference/ado-api/connectionstring-property-ado.md) [공급자 속성 (](../../../ado/reference/ado-api/provider-property-ado.md) Ado) [레코드 집합 개체 (ado)](../../../ado/reference/ado-api/recordset-object-ado.md)

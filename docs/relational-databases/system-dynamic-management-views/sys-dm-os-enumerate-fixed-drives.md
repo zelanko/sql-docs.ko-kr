@@ -1,4 +1,5 @@
 ---
+description: sys. dm_os_enumerate_fixed_drives (Transact-sql)
 title: sys. dm_os_enumerate_fixed_drives (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/18/2019
@@ -16,18 +17,18 @@ helpviewer_keywords:
 ms.assetid: 2e27489e-cf69-4a89-9036-77723ac3de66
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c8b243a269454bb1480051f50ab52d83d5fde80b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 6be0f2083a39bad3d232fd3105fa94c92fb71640
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898770"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454954"
 ---
 # <a name="sysdm_os_enumerate_fixed_drives-transact-sql"></a>sys. dm_os_enumerate_fixed_drives (Transact-sql)
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-SQL Server 2019에서 도입 되었습니다.
+SQL Server 2019에서 도입되었습니다.
 
 과 같은 드라이브 문자에 탑재 된 볼륨을 열거 `C:\` 합니다.
 
@@ -44,5 +45,5 @@ SQL Server 2019에서 도입 되었습니다.
 
 ## <a name="see-also"></a>참고 항목  
 
- [Transact-sql&#41;&#40;동적 관리 뷰 및 함수](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Transact-sql&#41;&#40;i/o 관련 동적 관리 뷰 및 함수](../../relational-databases/system-dynamic-management-views/i-o-related-dynamic-management-views-and-functions-transact-sql.md)  
+ [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Transact-sql&#41;&#40;i/o 관련 동적 관리 뷰 및 함수 ](../../relational-databases/system-dynamic-management-views/i-o-related-dynamic-management-views-and-functions-transact-sql.md)  

@@ -1,4 +1,5 @@
 ---
+description: 개요(SMO)
 title: 개요 (SMO) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
@@ -11,11 +12,12 @@ ms.assetid: e988f9e8-6801-41d1-8069-726f487244d5
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1ecc29d8e2fabe6c67db5e45833c45dd74d47bb3
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: f567277dd128095222633c0694412fd477bc623b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012326"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455544"
 ---
 # <a name="overview-smo"></a>개요(SMO)
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -102,7 +104,7 @@ ms.locfileid: "86012326"
   
  실행 캡처를 사용하면 일반적으로 실행할 수 있는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리를 캡처할 수 있습니다. 이 기능을 사용하면 SMO 프로그래머가 스크립트를 지연시키거나, 나중에 실행할 수 있도록 저장하거나, 최종 사용자에게 미리 보기를 제공할 수 있습니다. 예를 들어 **create database**, **create table**및 **create index** 문을 한 번에 전송한 다음 세 개의 순차적 단계로 실행할 수 있습니다. 이 기능은 사용자가 <xref:Microsoft.SqlServer.Management.Smo.Server.%23ctor%2A> 개체를 사용하여 제어합니다.  
   
- **WMI Provider**  
+ **WMI 공급자**  
   
  WMI 공급자 개체는 SMO로 래핑됩니다. 따라서 SMO 프로그래머는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] WMI 공급자의 네임스페이스와 세부 정보로 표현되는 프로그래밍 모델을 이해하지 못한 상태에서도 SMO 클래스와 매우 유사한 간단한 개체 모델을 사용할 수 있습니다. WMI 공급자를 사용하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스, 별칭, 그리고 클라이언트 및 서버 네트워크 라이브러리를 구성할 수 있습니다.  
   

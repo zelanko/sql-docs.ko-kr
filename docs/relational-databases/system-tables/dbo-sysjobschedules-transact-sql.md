@@ -1,4 +1,5 @@
 ---
+description: dbo.sysjobschedules(Transact-SQL)
 title: dbo.sysjobschedules (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: ccdafec7-2a9b-4356-bffb-1caa3a12db59
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1404af2beddd9cd3c5e5c65420cbe248396dd09c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: bc479eb35d345c11a767b9e6fba410504751c662
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890479"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454727"
 ---
 # <a name="dbosysjobschedules-transact-sql"></a>dbo.sysjobschedules(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,6 +42,6 @@ ms.locfileid: "85890479"
 |**next_run_time**|**int**|작업을 실행하도록 예약된 시간입니다. 시간 형식은 HHMMSS이며 24시간제를 사용합니다.|  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;dbo.sys일정](../../relational-databases/system-tables/dbo-sysschedules-transact-sql.md)  
+ [ Transact-sql&#41;&#40;dbo.sys일정 ](../../relational-databases/system-tables/dbo-sysschedules-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: Topologies for Web Synchronization
 title: 웹 동기화를 위한 토폴로지 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 59444faf-bcb6-4421-a3df-8715753e453b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8da7a2f89bbe0a63cb438b464a217805cfa97db6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 287392a3328574c9c673c3b3ce04228e8b520654
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85719503"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455581"
 ---
 # <a name="topologies-for-web-synchronization"></a>Topologies for Web Synchronization
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

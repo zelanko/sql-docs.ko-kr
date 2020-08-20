@@ -1,4 +1,5 @@
 ---
+description: sys.dm_fts_parser(Transact-SQL)
 title: sys. dm_fts_parser (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -19,12 +20,12 @@ ms.assetid: 2736d376-fb9d-4b28-93ef-472b7a27623a
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: 171d63913c0d46b1d344082a5784c7507111a39b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 3005c1d843796bfa9206750134d7be1c4f4546fb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898841"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454962"
 ---
 # <a name="sysdm_fts_parser-transact-sql"></a>sys.dm_fts_parser(Transact-SQL)
 
@@ -69,12 +70,12 @@ sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)
 |-----------------|---------------|-----------------|  
 |키워드(keyword)|**varbinary(128)**|단어 분리기에서 반환된 특정 키워드의 16진수 표현입니다. 이러한 표현은 키워드를 전체 텍스트 인덱스에 저장하는 데 사용됩니다. 이 값은 사람이 읽을 수 없지만, 지정 된 키워드를 전체 텍스트 인덱스의 내용을 반환 하는 다른 동적 관리 뷰 (예: [dm_fts_index_keywords](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-transact-sql.md) 및 [dm_fts_index_keywords_by_document](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md))에서 반환 되는 출력에 사용할 경우 유용 합니다.<br /><br /> **참고:** OxFF는 파일이 나 데이터 집합의 끝을 나타내는 특수 문자를 나타냅니다.|  
 |group_id|**int**|지정된 용어가 생성된 논리 그룹을 차별화하는 데 유용한 정수 값을 포함합니다. 예를 들어 '`Server AND DB OR FORMSOF(THESAURUS, DB)"`'는 다음 group_id 값을 영어로 생성합니다.<br /><br /> 1: 서버<br />2: DB<br />3: DB|  
-|phrase_id|**int**|단어 분리기에서 full-text와 같은 복합 단어의 대체 형태가 실행되는 경우를 차별화하는 데 유용한 정수 값을 포함합니다. 경우에 따라 복합 단어('multi-million')가 있으면 단어 분리기에서 대체 형태가 실행되기도 하는데, 이러한 대체 형태(구)는 차별화해야 하는 경우가 있습니다.<br /><br /> 예를 들어 '`multi-million`'은 다음 phrase_id 값을 영어로 생성합니다.<br /><br /> 에 대해 1`multi`<br />에 대해 1`million`<br />2의 경우`multimillion`|  
-|occurrence|**int**|구문 분석 결과에 있는 각 용어의 순서를 나타냅니다. 예를 들어 "`SQL Server query processor`" 구의 경우 occurrence에 이 구의 용어에 대해 다음 occurrence 값이 영어로 포함될 수 있습니다.<br /><br /> 에 대해 1`SQL`<br />2의 경우`Server`<br />3의 경우`query`<br />4의 경우`processor`|  
+|phrase_id|**int**|단어 분리기에서 full-text와 같은 복합 단어의 대체 형태가 실행되는 경우를 차별화하는 데 유용한 정수 값을 포함합니다. 경우에 따라 복합 단어('multi-million')가 있으면 단어 분리기에서 대체 형태가 실행되기도 하는데, 이러한 대체 형태(구)는 차별화해야 하는 경우가 있습니다.<br /><br /> 예를 들어 '`multi-million`'은 다음 phrase_id 값을 영어로 생성합니다.<br /><br /> 에 대해 1 `multi`<br />에 대해 1 `million`<br />2의 경우 `multimillion`|  
+|occurrence|**int**|구문 분석 결과에 있는 각 용어의 순서를 나타냅니다. 예를 들어 "`SQL Server query processor`" 구의 경우 occurrence에 이 구의 용어에 대해 다음 occurrence 값이 영어로 포함될 수 있습니다.<br /><br /> 에 대해 1 `SQL`<br />2의 경우 `Server`<br />3의 경우 `query`<br />4의 경우 `processor`|  
 |special_term|**nvarchar(4000)**|단어 분리기에서 실행되는 용어의 특징에 대한 정보를 포함합니다. 예를 들면 다음과 같습니다.<br /><br /> 정확하게 일치<br /><br /> 의미 없는 단어<br /><br /> 문장의 끝<br /><br /> 단락의 끝<br /><br /> 장의 끝|  
 |display_term|**nvarchar(4000)**|사람이 인식할 수 있는 키워드 형식을 포함합니다. 전체 텍스트 인덱스의 내용에 액세스하도록 디자인된 함수를 사용하기 때문에 표시된 용어가 비정규화 제한으로 인해 원래 용어와 동일하지 않을 수 있지만, 원래 입력에서 식별할 수 있을 만큼은 정확해야 합니다.|  
 |expansion_type|**int**|지정된 용어의 확장 특성에 대한 정보를 포함합니다. 예를 들면 다음과 같습니다.<br /><br /> 0 = 단일 단어<br /><br /> 2 = 활용 형태상의 확장<br /><br /> 4 = 동의어 사전 확장/대체<br /><br /> 예를 들어 동의어 사전이 다음과 같이 run을 `jog`의 확장으로 정의하는 경우를 고려해 보십시오.<br /><br /> `<expansion>`<br /><br /> `<sub>run</sub>`<br /><br /> `<sub>jog</sub>`<br /><br /> `</expansion>`<br /><br /> `FORMSOF (FREETEXT, run)` 용어는 다음 출력을 생성합니다.<br /><br /> `run`, expansion_type=0<br /><br /> `runs`, expansion_type=2<br /><br /> `running`, expansion_type=2<br /><br /> `ran`, expansion_type=2<br /><br /> `jog`, expansion_type=4|  
-|source_term|**nvarchar(4000)**|지정된 용어가 생성되거나 구문 분석되는 용어 또는 구입니다. 예를 들어 '"`word breakers" AND stemmers'`에 대한 쿼리는 다음 source_term 값을 영어로 생성합니다.<br /><br /> `word breakers`display_term`word`<br />`word breakers`display_term`breakers`<br />`stemmers`display_term`stemmers`|  
+|source_term|**nvarchar(4000)**|지정된 용어가 생성되거나 구문 분석되는 용어 또는 구입니다. 예를 들어 '"`word breakers" AND stemmers'`에 대한 쿼리는 다음 source_term 값을 영어로 생성합니다.<br /><br /> `word breakers` display_term`word`<br />`word breakers` display_term`breakers`<br />`stemmers` display_term`stemmers`|  
   
 ## <a name="remarks"></a>설명  
  CONTAINSTABLE은 [CONTAINS](../../t-sql/queries/contains-transact-sql.md) 및 [FREETEXT](../../t-sql/queries/freetext-transact-sql.md)와 같은 전체 텍스트 조건자의 구문 및 기능과 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 및 [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md)와 같은 함수를 지원 합니다. **dm_fts_parser**  
@@ -126,7 +127,7 @@ sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)
 ## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할의 멤버 자격과 지정 된 중지 목록에 대 한 액세스 권한이 필요 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-displaying-the-output-of-a-given-word-breaker-for-a-keyword-or-phrase"></a>A. 키워드 또는 구에 대해 지정된 단어 분리기의 출력 표시  
  다음 예에서는 아래의 쿼리 문자열에 대해 LCID가 1033인 영어 단어 분리기를 사용하여 출력을 반환합니다. 여기서 중지 목록은 사용되지 않습니다.  

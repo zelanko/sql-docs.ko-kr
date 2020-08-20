@@ -1,4 +1,5 @@
 ---
+description: sys.dm_resource_governor_configuration(Transact-SQL)
 title: sys. dm_resource_governor_configuration (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: c89aab6a-0434-4ce6-af8c-f8a1a3284e38
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4b2a8e13035e04b67fb510570914bcb5fddfcac6
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: eeae5dc43fcdb0c13c789fa1aa36f6597030a992
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898650"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454879"
 ---
 # <a name="sysdm_resource_governor_configuration-transact-sql"></a>sys.dm_resource_governor_configuration(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -65,7 +66,7 @@ go
  VIEW SERVER STATE 권한이 필요합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;동적 관리 뷰 및 함수](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [resource_governor_configuration &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-configuration-transact-sql.md)   
  [리소스 관리자](../../relational-databases/resource-governor/resource-governor.md)  
   

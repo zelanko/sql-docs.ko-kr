@@ -1,4 +1,5 @@
 ---
+description: STSrid(geometry 데이터 형식)
 title: STSrid(geometry 데이터 형식) | Miciosoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5e0de983-a0fe-48b7-9e08-30588d7271e2
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: ee8dcb533b2949a671fc8d90e9d3d20a89688cd7
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: e7f66e25e09d02e506da762909ec80ff7a98114e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554958"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454258"
 ---
 # <a name="stsrid-geometry-data-type"></a>STSrid(geometry 데이터 형식)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -45,7 +46,7 @@ STSrid
   
  CLR 형식: **SqlInt32**  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  첫 번째 예제에서는 SRID 값이 13인 **geometry** 인스턴스를 만들고 `STSrid`를 사용하여 SRID를 확인합니다.  
   
 ```  

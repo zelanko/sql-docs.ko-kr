@@ -1,4 +1,5 @@
 ---
+description: sys.dm_cryptographic_provider_keys(Transact-SQL)
 title: sys. dm_cryptographic_provider_keys (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 5a8c1421-c56b-44b5-96e5-4f01782a0c7c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: de485c134c918a1f6f85b7b38bffc872003ddd7e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 010d79bf9e5c04e7d7aa0c23ad205224122c5c01
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894617"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455048"
 ---
 # <a name="sysdm_cryptographic_provider_keys-transact-sql"></a>sys.dm_cryptographic_provider_keys(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -60,7 +61,7 @@ dm_cryptographic_provider_keys ( provider_id )
   
  사용자가 EKM 공급자로 인증할 수 없으면 키 정보가 반환되지 않습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예제에서는 ID 번호 `1234567`과 함께 공급자에 대한 키 속성을 표시합니다.  
   
 ```  

@@ -1,4 +1,5 @@
 ---
+description: MSreplication_subscriptions(Transact-SQL)
 title: MSreplication_subscriptions (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: fd0c5843-4e9b-4448-8bfb-0a4067d1d8d1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4d0ec6418e25b59afb3a82ed8b6b97f4e2ceadc6
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1f8af3b4666556e41da1e48917c584e41dbddedd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889467"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454613"
 ---
 # <a name="msreplication_subscriptions-transact-sql"></a>MSreplication_subscriptions(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +39,7 @@ ms.locfileid: "85889467"
 |**subscription_type**|**int**|구독 유형은 다음과 같습니다.<br /><br /> 0 = 밀어넣기<br /><br /> 1 = 끌어오기<br /><br /> 2 = 익명|  
 |**distribution_agent**|**sysname**|배포 에이전트의 이름입니다.|  
 |**Time**|**smalldatetime**|배포 에이전트가 마지막으로 업데이트한 시간입니다.|  
-|**한**|**nvarchar(255)**|게시에 대한 설명입니다.|  
+|**description**|**nvarchar(255)**|게시에 대한 설명입니다.|  
 |**transaction_timestamp**|**varbinary(16)**|내부적으로만 사용됩니다.|  
 |**update_mode**|**tinyint**|업데이트의 유형입니다.|  
 |**agent_id**|**binary(16)**|에이전트의 ID입니다.|  
@@ -47,8 +48,8 @@ ms.locfileid: "85889467"
 |**immediate_sync**|**bit**|스냅샷 에이전트가 실행될 때마다 동기화 파일을 만들거나 다시 만들지 여부를 나타냅니다.|  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;복제 테이블](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Transact-sql&#41;&#40;복제 뷰](../../relational-databases/system-views/replication-views-transact-sql.md)   
+ [Transact-sql&#41;&#40;복제 테이블 ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Transact-sql&#41;&#40;복제 뷰 ](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [Transact-sql&#41;sp_helpsubscription &#40;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)  
   
   

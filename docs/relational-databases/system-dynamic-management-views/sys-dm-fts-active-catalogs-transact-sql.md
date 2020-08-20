@@ -1,4 +1,5 @@
 ---
+description: sys.dm_fts_active_catalogs(Transact-SQL)
 title: sys. dm_fts_active_catalogs (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/29/2017
@@ -20,12 +21,12 @@ ms.assetid: 40ab5453-040c-4d2e-bb49-e340cf90c3ee
 author: pmasl
 ms.author: pelopes
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3a7b691103a32b49ab7ef017a9820500b7ab0526
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4545e37733448d1c26b19567c05463b014482d10
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734583"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454936"
 ---
 # <a name="sysdm_fts_active_catalogs-transact-sql"></a>sys.dm_fts_active_catalogs(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -68,7 +69,7 @@ ms.locfileid: "85734583"
   
 ## <a name="relationship-cardinalities"></a>관계 카디널리티  
   
-|시작|대상|관계|  
+|보낸 사람|대상|관계|  
 |----------|--------|------------------|  
 |dm_fts_active_catalogs.database_id|dm_fts_index_population.database_id|일 대 일|  
 |dm_fts_active_catalogs.catalog_id|dm_fts_index_population.catalog_id|일 대 일|  

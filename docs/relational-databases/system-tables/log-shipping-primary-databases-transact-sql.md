@@ -1,4 +1,5 @@
 ---
+description: log_shipping_primary_databases(Transact-SQL)
 title: log_shipping_primary_databases (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 56888756-a798-42be-9b5e-0f9aa05a2cc6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d8e30d848b640db73f4402f8a887381de524e4bf
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: bf0c1f654514ba0fb29bf7a4081b98753af7e441
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890150"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454715"
 ---
 # <a name="log_shipping_primary_databases-transact-sql"></a>log_shipping_primary_databases(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +43,7 @@ ms.locfileid: "85890150"
 |**last_backup_file**|**nvarchar (500)**|가장 최근 트랜잭션 로그 백업의 절대 경로입니다.|  
 |**last_backup_date**|**datetime**|마지막 로그 백업 작업의 시간과 날짜입니다.|  
 |**user_specified_monitor**|**bit**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> **sp_help_log_shipping_primary_database** 및 **sp_help_log_shipping_secondary_primary** 이 열을 사용 하 여에서 모니터 설정의 표시를 제어 합니다 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .<br /><br /> 0 = 이러한 두 저장 프로시저 중 하나를 호출할 때 사용자가 ** \@ monitor_server** 매개 변수에 대 한 명시적 값을 지정 하지 않았습니다.<br /><br /> 1 = 사용자가 명시적 값을 지정했습니다.|  
-|**backup_compression**|**tinyint**|로그 전달 구성이 서버 수준 백업 압축 동작을 재정의하는지 여부를 나타냅니다.<br /><br /> 0 = 사용 안 함. 서버에 구성된 백업 압축 설정에 관계없이 로그 백업이 압축되지 않습니다.<br /><br /> 1 = 사용. 서버에 구성된 백업 압축 설정에 관계없이 로그 백업이 항상 압축됩니다.<br /><br /> 2 = [백업 압축 기본값 서버 구성 옵션](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md) 서버 구성 옵션의 서버 구성을 사용 합니다. 기본값입니다.<br /><br /> 백업 압축은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition에서만 지원됩니다.|  
+|**backup_compression**|**tinyint**|로그 전달 구성이 서버 수준 백업 압축 동작을 재정의하는지 여부를 나타냅니다.<br /><br /> 0 = 사용 안 함. 서버에 구성된 백업 압축 설정에 관계없이 로그 백업이 압축되지 않습니다.<br /><br /> 1 = 사용. 서버에 구성된 백업 압축 설정에 관계없이 로그 백업이 항상 압축됩니다.<br /><br /> 2 = [백업 압축 기본값 서버 구성 옵션](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md) 서버 구성 옵션의 서버 구성을 사용 합니다. 이것은 기본값입니다.<br /><br /> 백업 압축은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition에서만 지원됩니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [로그 전달 정보&#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   

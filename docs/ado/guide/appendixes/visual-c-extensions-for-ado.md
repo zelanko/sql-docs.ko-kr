@@ -1,4 +1,5 @@
 ---
+description: ADO용 Visual C++ 확장
 title: ADO 용 Visual C++ 확장 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2952ece0-7217-4448-bb09-f6b64f43b7e2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f623bd3eb0c0c4cdde47c6fea7e7cd8af2ad0de6
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: f9fa962d4710811cf376634dcc299707f6b0e654
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761521"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453935"
 ---
 # <a name="visual-c-extensions-for-ado"></a>ADO용 Visual C++ 확장
 Visual C++를 사용 하 여 ADO를 프로그래밍 하는 기본 방법은 [Ado 프로그래밍 Microsoft Visual C++](../../../ado/guide/appendixes/visual-c-ado-programming.md)에서 설명한 대로 **#import** 지시어를 사용 하는 것입니다. 그러나 Visual C++를 사용 하 여 다른 프로그래밍 방법으로 제공 되는 이전 버전의 ADO에는 Visual C++ 확장이 있습니다. 이 섹션에서는 Visual C++ 확장 코드를 유지 관리 해야 하는 사용자를 위해이 기능을 설명 하지만 #**import**를 사용 하 여 새 ADO 코드를 작성 해야 합니다.

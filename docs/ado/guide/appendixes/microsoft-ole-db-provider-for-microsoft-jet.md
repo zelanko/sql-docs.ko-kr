@@ -1,4 +1,5 @@
 ---
+description: Microsoft Jet 용 microsoft OLE DB 공급자 개요
 title: Microsoft Jet 용 microsoft OLE DB 공급자 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fd956da1-5203-40af-aa7e-fc13a6c6581f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 204aca25a330dd912e1a9354adc92bbb7c58f847
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 822c9f6ef6aebe5e32bb37e4c89a9bb4e6d7db68
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763214"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454075"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-jet-overview"></a>Microsoft Jet 용 microsoft OLE DB 공급자 개요
 Microsoft Jet 용 OLE DB 공급자를 사용 하 여 ADO에서 Microsoft Jet 데이터베이스에 액세스할 수 있습니다.
@@ -42,7 +43,7 @@ Microsoft.Jet.OLEDB.4.0
 
  문자열은 다음과 같은 키워드로 구성 됩니다.
 
-|키워드|Description|
+|키워드|설명|
 |-------------|-----------------|
 |**공급자**|Microsoft Jet의 OLE DB 공급자를 지정 합니다.|
 |**데이터 원본**|데이터베이스 경로와 파일 이름을 지정 합니다 (예: `c:\Northwind.mdb` ).|
@@ -146,7 +147,7 @@ Microsoft.Jet.OLEDB.4.0
 |최대 행 크기|DBPROP_MAXROWSIZE|
 |최대 행 크기에 BLOB 포함|DBPROP_MAXROWSIZEINCLUDESBLOB|
 |SELECT의 최대 테이블|DBPROP_MAXTABLESINSELECT|
-|모드|DBPROP_INIT_MODE|
+|Mode|DBPROP_INIT_MODE|
 |여러 매개 변수 집합|DBPROP_MULTIPLEPARAMSETS|
 |여러 결과|DBPROP_MULTIPLERESULTS|
 |여러 저장소 개체|DBPROP_MULTIPLESTORAGEOBJECTS|

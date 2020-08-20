@@ -1,4 +1,5 @@
 ---
+description: sys. dm_exec_function_stats (Transact-sql)
 title: sys. dm_exec_function_stats (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/30/2019
@@ -18,12 +19,12 @@ ms.assetid: 4c3d6a02-08e4-414b-90be-36b89a0e5a3a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 25ec8e19343d707fefdda9049428280b1dfddb80
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: baa8bd4e62d66812d6f2ba32e4c94bc1b80da99f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396787"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454943"
 ---
 # <a name="sysdm_exec_function_stats-transact-sql"></a>sys. dm_exec_function_stats (Transact-sql)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -33,7 +34,7 @@ ms.locfileid: "87396787"
  [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에서 동적 관리 뷰는 데이터베이스 포함에 영향을 줄 수 있는 정보 또는 사용자가 액세스할 수 있는 다른 데이터베이스 정보를 노출할 수 없습니다. 이 정보를 노출 하지 않도록 하기 위해 연결 된 테 넌 트에 속하지 않는 데이터를 포함 하는 모든 행이 필터링 됩니다.  
   
 > [!NOTE]
-> 데이터는 완료 된 쿼리만 반영 하 고 아직 진행 중인 쿼리는 반영 하지 않으므로, **dm_exec_function_stats** 의 결과는 각 실행에 따라 달라질 수 있습니다. 
+> 데이터는 완료 된 쿼리만 반영 하 고 아직 진행 중인 쿼리는 반영 하지 않으므로, **dm_exec_function_stats**  의 결과는 각 실행에 따라 달라질 수 있습니다. 
 
   
 |열 이름|데이터 형식|Description|  
@@ -77,7 +78,7 @@ ms.locfileid: "87396787"
 에 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 는 `VIEW SERVER STATE` 권한이 필요 합니다.   
 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium 계층에서는 데이터베이스에 대 한 권한이 필요 합니다 `VIEW DATABASE STATE` . [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]표준 및 기본 계층에서는 **서버 관리자** 또는 **Azure Active Directory 관리자** 계정이 필요 합니다.   
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 평균 경과 시간으로 식별 된 상위 10 개의 함수에 대 한 정보를 반환 합니다.  
   
 ```  
@@ -90,7 +91,7 @@ ORDER BY [total_worker_time] DESC;
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;관련 동적 관리 뷰 및 함수 실행](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
+ [Transact-sql&#41;&#40;관련 동적 관리 뷰 및 함수 실행 ](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
  [dm_exec_sql_text &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
  [sys.dm_exec_query_stats&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   
  

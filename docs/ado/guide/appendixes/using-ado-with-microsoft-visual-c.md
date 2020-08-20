@@ -1,4 +1,5 @@
 ---
+description: Microsoft Visual C++으로 ADO 사용
 title: Microsoft Visual C++에서 ADO 사용 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 07d25fc0-4958-4e12-b616-36257ead812b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 952bfcc5359d088e9e3e2557b990f803a4c3aafd
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: d4c383eec4ac09c41aef6953f63e5accbab40ff7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761581"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454005"
 ---
 # <a name="using-ado-with-microsoft-visual-c"></a>Microsoft Visual C++으로 ADO 사용
 Visual C++에서 ADO를 사용 하는 방법에 대 한 자세한 내용은 다음 섹션을 참조 하십시오.  
@@ -34,7 +35,7 @@ Visual C++에서 ADO를 사용 하는 방법에 대 한 자세한 내용은 다�
   
 -   [Visual C++ 확장 예제](../../../ado/guide/appendixes/visual-c-extensions-example.md)  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [Microsoft ADO(ActiveX Data Objects) (ADO)](../../../ado/microsoft-activex-data-objects-ado.md)   
  [COM의 Visual C++ 구문 인덱스에 대 한 ADO](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-for-com.md)   
  [#Import를 사용 하는 Visual C++ 구문 인덱스에 대 한 ADO](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-with-sharpimport.md)   

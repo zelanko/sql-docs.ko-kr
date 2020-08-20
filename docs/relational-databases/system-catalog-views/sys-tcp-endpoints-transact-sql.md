@@ -1,4 +1,5 @@
 ---
+description: sys.tcp_endpoints(Transact-SQL)
 title: sys. tcp_endpoints (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 43cc3afa-cced-4463-8e97-fbfdaf2e4fa8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9355cc5c9aeafc6da302a12af3e276d8f5b35c97
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e433372f8c1c5748b7ae4cfe1b355517e8b75d77
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899026"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455160"
 ---
 # <a name="systcp_endpoints-transact-sql"></a>sys.tcp_endpoints(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "85899026"
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**상속 된 열<>**||는 [sys. 끝점](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)에서 열을 상속 합니다.|  
+|** 상속 된 열<>**||는 [sys. 끝점](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)에서 열을 상속 합니다.|  
 |**port**|int|엔드포인트가 수신 중인 포트 번호입니다. Null을 허용하지 않습니다.|  
 |**is_dynamic_port**|bit|1 = 포트 번호가 동적으로 할당되었는지 여부를 나타냅니다.<br /><br /> Null을 허용하지 않습니다.|  
 |**ip_address**|**nvarchar (45)**|LISTENER_IP 절에서 지정한 수신기 IP 주소입니다. Null을 허용합니다.|  
@@ -59,7 +60,7 @@ LEFT JOIN sys.dm_exec_connections AS dec
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;카탈로그 뷰](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [엔드포인트 카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: 모든 구독 유효성 검사
 title: 모든 구독 유효성 검사 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/01/2017
@@ -15,12 +16,12 @@ ms.assetid: 32e31469-36e4-42d9-a57a-12388bfd229d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 27b324de43f1aa9bc330057ca9159ccf78d0ce1b
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: f2302499c6ea6a17e165f647823b3dfb6a48895f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87107455"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455554"
 ---
 # <a name="validate-all-subscriptions"></a>모든 구독 유효성 검사
 [!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]

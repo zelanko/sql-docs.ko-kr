@@ -1,4 +1,5 @@
 ---
+description: sys.memory_optimized_tables_internal_attributes(TRANSACT-SQL)
 title: sys. memory_optimized_tables_internal_attributes (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
@@ -20,11 +21,12 @@ ms.assetid: 78ef5807-0504-4de8-9a01-ede6c03c7ff1
 author: jodebrui
 ms.author: jodebrui
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 636bacd800bc75d0b7a087683e1aef34584d596e
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: fc11ec8d075d52643f06eb91f0a55a1b6948c88c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004801"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455251"
 ---
 # <a name="sysmemory_optimized_tables_internal_attributes-transact-sql"></a>sys.memory_optimized_tables_internal_attributes(TRANSACT-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -35,14 +37,14 @@ ms.locfileid: "86004801"
 | :------ |:----------| :-----|
 |object_id  |**int**|       사용자 테이블의 ID입니다. 사용자 테이블을 지원하는 데 필요한 내부 메모리 최적화 테이블(예: Hk/Columnstore 조합의 경우 행 외부 스토리지 또는 삭제된 행)에는 부모와 동일한 object_id가 있습니다. |
 |xtp_object_id  |**bigint**|    사용자 테이블을 지원하는 데 사용되는 내부 메모리 최적화 테이블에 해당되는 메모리 내 OLTP의 개체 ID입니다. 데이터베이스 내에서 고유하며 개체의 수명 주기 동안 변경할 수 있습니다. 
-|형식|  **int** |   내부 테이블의 형식입니다.<br/><br/> 0 => DELETED_ROWS_TABLE <br/> 1 => USER_TABLE <br/> 2 => DICTIONARIES_TABLE<br/>3 => SEGMENTS_TABLE<br/>4 => ROW_GROUPS_INFO_TABLE<br/>5 => INTERNAL OFF-ROW DATA TABLE<br/>252 => INTERNAL_TEMPORAL_HISTORY_TABLE | 
+|type|  **int** |   내부 테이블의 형식입니다.<br/><br/> 0 => DELETED_ROWS_TABLE <br/> 1 => USER_TABLE <br/> 2 => DICTIONARIES_TABLE<br/>3 => SEGMENTS_TABLE<br/>4 => ROW_GROUPS_INFO_TABLE<br/>5 => INTERNAL OFF-ROW DATA TABLE<br/>252 => INTERNAL_TEMPORAL_HISTORY_TABLE | 
 |type_desc| **nvarchar(60)**|   유형에 대한 설명<br/><br/>DELETED_ROWS_TABLE -> columnstore 인덱스에 대해 삭제된 행을 추적하는 내부 테이블<br/>USER_TABLE-> 행 내부 사용자 데이터를 포함한 테이블<br/>DICTIONARIES_TABLE -> columnstore 인덱스에 대한 사전<br/>SEGMENTS_TABLE -> columnstore 인덱스에 대해 압축된 세그먼트<br/>ROW_GROUPS_INFO_TABLE -> columnstore 인덱스의 압축된 행 그룹에 대한 메타데이터<br/>INTERNAL OFF-ROW DATA TABLE -&gt; 행 외부 열 스토리지에 사용되는 내부 테이블. 이 경우 minor_id는 column_id를 반영합니다.<br/>INTERNAL_TEMPORAL_HISTORY_TABLE -> 디스크 기반 이력 테이블의 핫 테일(Hot tail) 기록에 삽입할 행이 먼저 이 내부 메모리 최적화 테이블에 삽입됩니다. 내부 테이블의 행이 디스크 기반 기록 테이블로 비동기적으로 이동하는 백그라운드 작업이 있습니다. |
 |minor_id|  **int**|    0은 사용자 또는 내부 테이블을 나타냅니다.<br/><br/>0이 아니면 행 외부에 저장된 열 ID를 나타냅니다. sys.columns의 column_id와 조인합니다.<br/><br/>행 외부에서 저장된 각 열에는 이 시스템 보기에 해당하는 열이 있습니다.|
 
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-returning-all-columns-that-are-stored-off-row"></a>A. 행 외부에서 저장된 모든 열 반환
 

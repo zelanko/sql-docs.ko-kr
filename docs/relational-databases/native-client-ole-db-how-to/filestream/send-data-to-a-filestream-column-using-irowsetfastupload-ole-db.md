@@ -1,4 +1,5 @@
 ---
+description: IRowsetFastUpload SQL Server Native Client (OLE DB)를 사용 하 여 FILESTREAM 열에 데이터 보내기
 title: 데이터 FILESTREAM, IRowsetFastUpload (OLE DB)
 ms.custom: ''
 ms.date: 03/14/2017
@@ -11,12 +12,12 @@ ms.assetid: fdb47319-83bc-4ff2-b46d-8d8ccfeb5bab
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8dd0a5edb17e50283a6260d7ba2c14f1ff0b450f
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: ce03739c3ae8e1dfb7adc8e2c1cf8eab500159f7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247842"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455743"
 ---
 # <a name="send-data-to-a-filestream-column-using-irowsetfastupload-sql-server-native-client-ole-db"></a>IRowsetFastUpload SQL Server Native Client (OLE DB)를 사용 하 여 FILESTREAM 열에 데이터 보내기
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

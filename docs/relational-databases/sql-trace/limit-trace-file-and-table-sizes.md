@@ -1,4 +1,5 @@
 ---
+description: 추적 파일 및 테이블 크기 제한
 title: 추적 파일 및 테이블 크기 제한 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 88c31b02-f44c-4a14-be8b-437f2097de12
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: fe7c390f650a505ff79eb0be5bdfdac2eb9d9186
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2c455930e6adf93419dcb0d0934ca6ac7608c4c4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750972"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455383"
 ---
 # <a name="limit-trace-file-and-table-sizes"></a>추적 파일 및 테이블 크기 제한
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,4 +1,5 @@
 ---
+description: 복제 관련 동적 관리 뷰(Transact-SQL)
 title: 복제 관련 동적 관리 뷰 (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2bf5e145-3c4c-4fb6-afa0-197342dba038
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4c5ec934f0b89d62a944bb99863be9bba17acd9b
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: 0cc444e857f74ce419a64ccec099372f2c05752c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942455"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455088"
 ---
 # <a name="replication-related-dynamic-management-views-transact-sql"></a>복제 관련 동적 관리 뷰(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

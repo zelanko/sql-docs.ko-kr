@@ -1,4 +1,5 @@
 ---
+description: SMO 프로그래밍 - Visual C# .NET 시작
 title: 'Visual c # .NET 시작 | Microsoft Docs'
 ms.custom: ''
 ms.date: 08/02/2016
@@ -11,16 +12,17 @@ ms.assetid: 37a22721-546c-453d-bc6f-238c13d7505d
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4bbaf0300bd77191145a26056e00fa8a8ffbd4d9
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 6b1a57c4d100dee30868357224dbf1c8392011c9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012274"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455585"
 ---
 # <a name="smo-programming---getting-started-in-visual-c-net"></a>SMO 프로그래밍 - Visual C# .NET 시작
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
-  [!INCLUDE[csprcs](../../includes/csprcs-md.md)].NET은 .Net의 CLR (공용 언어 런타임)에서 지 원하는 관리 되는 프로그래밍 언어 중 하나입니다 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] . C# 언어에 대한 자세한 내용은 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .NET 설명서를 참조하십시오. [!INCLUDE[vsprvslong](../../includes/vsprvslong-md.md)] 및 [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)] 를 사용하여 SMO 애플리케이션을 개발할 수 있습니다.  
+  [!INCLUDE[csprcs](../../includes/csprcs-md.md)] .NET은 .Net의 CLR (공용 언어 런타임)에서 지 원하는 관리 되는 프로그래밍 언어 중 하나입니다 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] . C# 언어에 대한 자세한 내용은 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .NET 설명서를 참조하십시오. [!INCLUDE[vsprvslong](../../includes/vsprvslong-md.md)] 및 [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)] 를 사용하여 SMO 애플리케이션을 개발할 수 있습니다.  
   
 ## <a name="references-and-imports"></a>참조 및 가져오기  
  [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 프로젝트를 시작한 후 SMO 어셈블리에 대한 참조를 추가해야 합니다. 그런 다음 프로그램에서 SMO 형식을 인식할 수 있도록 필요한 네임스페이스를 가져옵니다.  

@@ -1,4 +1,5 @@
 ---
+description: SQL Server Native Client 데이터 원본 개체 (OLE DB)
 title: 데이터 원본 개체 (Native Client OLE DB 공급자) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -19,21 +20,21 @@ ms.assetid: c1d4ed20-ad3b-4e33-a26b-38d7517237b7
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7d0fb6b31376118fca3f2458c21b61c35beec618
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: abcad20ac1866e33f07d3b65f3a804949da9e2fd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242267"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455789"
 ---
 #  <a name="sql-server-native-client-data-source-objects-ole-db"></a>SQL Server Native Client 데이터 원본 개체 (OLE DB)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client는와 같은 데이터 저장소에 대 한 링크를 설정 하는 데 사용 되는 OLE DB 인터페이스 집합에 대해 데이터 원본 이라는 용어를 사용 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 합니다. Native Client 소비자의 첫 번째 작업은 공급자의 데이터 원본 개체의 인스턴스를 만드는 것입니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client는와 같은 데이터 저장소에 대 한 링크를 설정 하는 데 사용 되는 OLE DB 인터페이스 집합에 대해 데이터 원본 이라는 용어를 사용 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 합니다. Native Client 소비자의 첫 번째 작업은 공급자의 데이터 원본 개체의 인스턴스를 만드는 것입니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  각 OLE DB 공급자는 자체적으로 사용할 CLSID(클래스 식별자)를 선언합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 공급자의 CLSID는 C/c + + GUID CLSID_SQLNCLI10입니다. 기호 SQLNCLI_CLSID은 사용자가 참조 하는 SQLNCLI 파일의 올바른 progid로 확인 됩니다. CLSID가 있으면 소비자는 OLE **CoCreateInstance** 함수를 사용하여 데이터 원본 개체의 인스턴스를 만듭니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client는 in-process 서버입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 공급자 개체의 인스턴스는 CLSCTX_INPROC_SERVER 매크로를 사용 하 여 실행 컨텍스트를 나타내는 데 사용 됩니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client는 in-process 서버입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 공급자 개체의 인스턴스는 CLSCTX_INPROC_SERVER 매크로를 사용 하 여 실행 컨텍스트를 나타내는 데 사용 됩니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 공급자 데이터 원본 개체는 소비자가 기존 데이터베이스에 연결할 수 있도록 하는 OLE DB 초기화 인터페이스를 제공 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   

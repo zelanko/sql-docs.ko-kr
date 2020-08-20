@@ -1,4 +1,5 @@
 ---
+description: sys.dm_server_services(Transact-SQL)
 title: sys. dm_server_services (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/07/2018
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 3f0defd0-478d-4e7f-96be-8795c9de4e3f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 728eb088f02d338d5ac9d22f2b0cb5f2127450e6
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d281809133228d4af21c92ed06544a6143509e12
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898610"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454807"
 ---
 # <a name="sysdm_server_services-transact-sql"></a>sys.dm_server_services(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

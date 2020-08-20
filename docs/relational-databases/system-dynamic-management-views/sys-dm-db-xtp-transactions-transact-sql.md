@@ -1,4 +1,5 @@
 ---
+description: sys.dm_db_xtp_transactions(Transact-SQL)
 title: sys. dm_db_xtp_transactions (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/29/2016
@@ -20,12 +21,12 @@ ms.assetid: 5c1a0a7a-e851-4b6f-8dfd-c9655fbf5a51
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b5bfd506f1baa20a4edd36701e37c78847881089
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: b1769cb338c75329b56c440b7278ca648ef8c4f3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442867"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454994"
 ---
 # <a name="sysdm_db_xtp_transactions-transact-sql"></a>sys.dm_db_xtp_transactions(Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

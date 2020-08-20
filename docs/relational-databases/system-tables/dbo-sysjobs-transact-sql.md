@@ -1,4 +1,5 @@
 ---
+description: dbo.sysjobs(Transact-SQL)
 title: dbo.sys작업 (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: e244a6a5-54c2-47a6-8039-dd1852b0ae59
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 00bab120cd8d0e931f0aba77ce7aee694126339c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 71fc80a0c847957f52b85344139c75a397b8e6c8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890494"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454750"
 ---
 # <a name="dbosysjobs-transact-sql"></a>dbo.sysjobs(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +38,7 @@ ms.locfileid: "85890494"
 |**originating_server_id**|**int**|작업을 가져온 서버의 ID입니다.|  
 |**name**|**sysname**|작업의 이름입니다.|  
 |**사용**|**tinyint**|작업을 실행할 수 있는지를 표시합니다.|  
-|**한**|**nvarchar(512)**|작업 설명입니다.|  
+|**description**|**nvarchar(512)**|작업 설명입니다.|  
 |**start_step_id**|**int**|실행을 시작해야 하는 작업 단계의 ID입니다.|  
 |**category_id**|**int**|작업 범주의 ID입니다.|  
 |**owner_sid**|**varbinary(85)**|작업 소유자의 보안 ID(SID)입니다.|  

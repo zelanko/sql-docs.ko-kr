@@ -1,4 +1,5 @@
 ---
+description: MSsnapshotdeliveryprogress(Transact-SQL)
 title: MSsnapshotdeliveryprogress (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9164bfe2-6fc4-4b52-946a-09ea3cf67041
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f4cd21fcc026e48c0e0f4ca68ada16bf55855662
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: dd50e23578c8da3ca9d0e96a5ad7480f9af6acb4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889390"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454611"
 ---
 # <a name="mssnapshotdeliveryprogress-transact-sql"></a>MSsnapshotdeliveryprogress(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +38,7 @@ ms.locfileid: "85889390"
 |**progress_timestamp**|**datetime**|스냅숏 파일이 성공적으로 전달 된 시간을 나타내는 **datetime** 값입니다.|  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;복제 테이블](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Transact-sql&#41;&#40;복제 테이블 ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [복제 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

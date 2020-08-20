@@ -1,4 +1,5 @@
 ---
+description: VBScript ADO 프로그래밍
 title: VBScript ADO 프로그래밍 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6aaaf6d0-1376-4473-bea6-b81f2645a9ac
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2029b6d661e520a4ed18631c611ed9e283e4aa7c
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 8bea576e55537d2b4ee75fb8e7a0fcdebea4847e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761541"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453965"
 ---
 # <a name="vbscript-ado-programming"></a>VBScript ADO 프로그래밍
 ## <a name="creating-an-ado-project"></a>ADO 프로젝트 만들기  
@@ -81,6 +82,6 @@ Response.Write("Success!")
   
 -   VBScript는 여러 유형의 데이터를 보유할 수 있는 Variant 데이터 형식만 지원 합니다. 필요한 데이터를 Variant 데이터 형식에 저장할 수 있으며 VBScript에서 수행 하는 캐스팅으로 인해 데이터가 제대로 작동 합니다. ADO에서 요구 하는 형식을 인식 하 고이에 따라 변형의 값을 변환 합니다.  
   
--   VBScript 내에서 **오류 goto \< 레이블>를** 사용할 수 없습니다.  
+-   VBScript 내 **에서는 오류 발생 시 \<label> goto를** 사용할 수 없습니다.  
   
 -   VBScript는 **Msgbox**, **Date**및 **IsNumeric**와 같은 일부 기본 제공 Visual Basic 기능을 지원 합니다. 그러나 VBScript는 Visual Basic의 하위 집합 이기 때문에 일부 기본 제공 함수는 지원 되지 않습니다. 예를 들어 VBScript는 **Format** 함수 및 파일 i/o 함수를 지원 하지 않습니다.

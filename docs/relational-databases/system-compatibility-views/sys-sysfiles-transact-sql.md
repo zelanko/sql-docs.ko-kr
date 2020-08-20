@@ -1,4 +1,5 @@
 ---
+description: sys.sysfiles(Transact-SQL)
 title: sys.sys파일 (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 3b47f38d-1cff-404d-89d3-9342c451c802
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: eff8f4bcb5b14c0099c6d9d907a978f96fe1536e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: dfc6430023a4123e029ebdec4f2fca56491b3632
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883772"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455116"
 ---
 # <a name="syssysfiles-transact-sql"></a>sys.sysfiles(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +42,7 @@ ms.locfileid: "85883772"
 |**groupid**|**smallint**|파일 그룹의 ID입니다.|  
 |**size**|**int**|8KB 페이지 단위로 나타낸 파일의 크기입니다.|  
 |**크기**|**int**|8KB 페이지 단위로 나타낸 최대 파일 크기입니다.<br /><br /> 0 = 증가하지 않습니다.<br /><br /> -1 = 디스크가 꽉 찰 때까지 파일이 증가합니다.<br /><br /> 268435456 = 로그 파일이 최대 2TB까지 증가합니다.<br /><br /> 참고: 무제한 로그 파일 크기로 업그레이드 된 데이터베이스는 로그 파일의 최대 크기에 대해-1을 보고 합니다.|  
-|**growth**|**int**|데이터베이스의 증가 크기입니다. **상태**값에 따라 페이지의 수 또는 파일 크기의 백분율이 될 수 있습니다.<br /><br /> 0 = 증가하지 않습니다.|  
+|**성장은**|**int**|데이터베이스의 증가 크기입니다. **상태**값에 따라 페이지의 수 또는 파일 크기의 백분율이 될 수 있습니다.<br /><br /> 0 = 증가하지 않습니다.|  
 |**status**|**int**|메가바이트 (MB) 또는 킬로바이트 (KB)의 **증가** 값에 대 한 상태 비트입니다.<br /><br /> 0x2 = 디스크 파일<br /><br /> 0x40 = 로그 파일<br /><br /> 0x100000 = 증가율 이 값은 백분율이며 페이지 수가 아닙니다.|  
 |**성능**|**int**|예약되어 있습니다.|  
 |**name**|**sysname**|파일의 논리적 이름입니다.|  

@@ -1,4 +1,5 @@
 ---
+description: 데이터베이스 미러링 모니터 서버 카탈로그 뷰-sys. database_mirroring_witnesses
 title: sys. database_mirroring_witnesses (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 0dd5b794-733b-4a3c-b5a4-62f9f1f0f22d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 303fe8085ae4d103ede7715dcbb46e456db8f01f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6c27dc5a6caacf7a1cde44a54fe6383fc36ea516
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85752944"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455306"
 ---
 # <a name="database-mirroring-witness-catalog-views---sysdatabase_mirroring_witnesses"></a>데이터베이스 미러링 모니터 서버 카탈로그 뷰-sys. database_mirroring_witnesses
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +42,7 @@ ms.locfileid: "85752944"
 |**principal_server_name**|**sysname**|현재 주 데이터베이스 역할을 하는 데이터베이스 사본을 가진 파트너 서버의 이름입니다.|  
 |**mirror_server_name**|**sysname**|현재 미러 데이터베이스 역할을 하는 데이터베이스 사본을 가진 파트너 서버의 이름입니다.|  
 |**safety_level**|**tinyint**|미러 데이터베이스 업데이트를 위한 트랜잭션 보안 설정입니다.<br /><br /> 0 = 알 수 없는 상태<br /><br /> 1 = 해제(비동기)<br /><br /> 2 = 완전(동기)<br /><br /> 자동 장애 조치(Failover)에 미러링 모니터를 사용하려면 완전 트랜잭션 보안(기본값)이 필요합니다.|  
-|**safety_level_desc**|**nvarchar(60)**|미러 데이터베이스 업데이트의 보안 설정에 대한 설명입니다.<br /><br /> 알 수 없음<br /><br /> OFF<br /><br /> FULL|  
+|**safety_level_desc**|**nvarchar(60)**|미러 데이터베이스 업데이트의 보안 설정에 대한 설명입니다.<br /><br /> UNKNOWN<br /><br /> OFF<br /><br /> FULL|  
 |**safety_sequence_number**|**int**|**Safety_level**변경에 대 한 시퀀스 번호를 업데이트 합니다.|  
 |**role_sequence_number**|**int**|미러링 파트너의 주/미러 역할 변경에 따라 시퀀스 번호를 업데이트합니다.|  
 |**mirroring_guid**|**uniqueidentifier**|미러링 파트너 관계의 식별자입니다.|  
@@ -57,7 +58,7 @@ ms.locfileid: "85752944"
 ## <a name="see-also"></a>참고 항목  
  [데이터베이스 미러링 모니터 서버](../../database-engine/database-mirroring/database-mirroring-witness.md)   
  [database_mirroring &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md)   
- [database_mirroring_endpoints &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md)   
+ [sys.database_mirroring_endpoints&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md)   
  [SQL Server 시스템 카탈로그 쿼리에 대한 질문과 대답](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
   
   

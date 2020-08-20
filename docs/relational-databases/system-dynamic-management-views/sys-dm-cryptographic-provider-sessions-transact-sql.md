@@ -1,4 +1,5 @@
 ---
+description: sys.dm_cryptographic_provider_sessions(Transact-SQL)
 title: sys. dm_cryptographic_provider_sessions (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9a4de02b-1a07-4850-979a-0861fddb7f9d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 852566e9f337536717273c18b8034f3854fd7d48
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 37a8854da08439c4dc3984bcdfc61a8695467c2b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894567"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455019"
 ---
 # <a name="sysdm_cryptographic_provider_sessions-transact-sql"></a>sys.dm_cryptographic_provider_sessions(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -58,9 +59,9 @@ sys.dm_cryptographic_provider_sessions(session_identifier)
  현재 연결에 대 한 **dm_cryptographic_provider_sessions** 뷰가 public에 표시 됩니다. 모든 암호화 연결을 보려면 **CONTROL** server 권한이 있어야 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;보안 카탈로그 뷰](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
- [EKM&#41;&#40;확장 가능 키 관리](../../relational-databases/security/encryption/extensible-key-management-ekm.md)   
- [Transact-sql&#41;&#40;암호화 공급자 만들기](../../t-sql/statements/create-cryptographic-provider-transact-sql.md)   
+ [보안 카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
+ [확장 가능 키 관리 &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)   
+ [CREATE CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](../../t-sql/statements/create-cryptographic-provider-transact-sql.md)   
  [암호화 계층](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   
   

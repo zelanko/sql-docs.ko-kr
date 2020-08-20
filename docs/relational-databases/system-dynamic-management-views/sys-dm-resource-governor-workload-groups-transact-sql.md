@@ -1,4 +1,5 @@
 ---
+description: sys.dm_resource_governor_workload_groups(Transact-SQL)
 title: sys. dm_resource_governor_workload_groups (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/15/2020
@@ -20,12 +21,12 @@ ms.assetid: f63c4914-1272-43ef-b135-fe1aabd953e0
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1940c42143eb2a1b4112eb2dea789196938e18ed
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: dfcbcaceeb4e60a88f1ba00fa7a116629945c7e5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87397142"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454885"
 ---
 # <a name="sysdm_resource_governor_workload_groups-transact-sql"></a>sys.dm_resource_governor_workload_groups(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -66,7 +67,7 @@ ms.locfileid: "87397142"
 |effective_max_dop|**int**|**적용 대상**:부터 시작 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 합니다.<br /><br />작업 그룹에 대 한 효율적인 최대 병렬 처리 수준입니다. Null을 허용하지 않습니다.| 
 |total_cpu_usage_preemptive_ms|**bigint**|**적용 대상**:부터 시작 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 합니다.<br /><br />작업 그룹에 대 한 선점형 모드 예약에 사용 된 총 CPU 시간 (밀리초 단위로 측정)입니다. Null을 허용하지 않습니다.<br /><br />[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 외부의 코드(예: 확장 저장 프로시저 및 분산 쿼리)를 실행하려면 비선점형 스케줄러의 제어를 벗어나서 스레드를 실행해야 합니다. 작업자는 이 작업을 수행하기 위해 선점형 모드로 전환합니다.| 
 |request_max_memory_grant_percent_numeric|**float**|**적용 대상**:부터 시작 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 합니다.<br /><br />단일 요청에 대한 최대 메모리 부여의 현재 설정(%)입니다. Null을 허용하지 않습니다.| 
-|pdw_node_id|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포가 설정 된 노드의 식별자입니다.|  
+|pdw_node_id|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포가 설정 된 노드의 식별자입니다.|  
   
 ## <a name="remarks"></a>설명  
  이 동적 관리 뷰는 인-메모리 구성을 표시합니다. 저장 된 구성 메타 데이터를 보려면 [resource_governor_workload_groups &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-workload-groups-transact-sql.md) 카탈로그 뷰를 사용 합니다.  

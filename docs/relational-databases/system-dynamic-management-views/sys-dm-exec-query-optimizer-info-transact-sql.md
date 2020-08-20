@@ -1,4 +1,5 @@
 ---
+description: sys.dm_exec_query_optimizer_info(Transact-SQL)
 title: sys. dm_exec_query_optimizer_info (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -20,11 +21,12 @@ ms.assetid: 1d72cef1-22d8-4ae0-91db-6694fe918c9e
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6febd2233e15794bd72874bd92aab6e31c0266f1
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 6ca14221b1d7c8555c03cfc2a976cd09ec562687
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005221"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455005"
 ---
 # <a name="sysdm_exec_query_optimizer_info-transact-sql"></a>sys.dm_exec_query_optimizer_info(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -39,9 +41,9 @@ ms.locfileid: "86005221"
 |**counter**|**nvarchar(4000)**|최적화 프로그램 통계 이벤트의 이름입니다.|  
 |**occurrence**|**bigint**|이 카운터에 대한 최적화 이벤트의 발생 횟수입니다.|  
 |**value**|**float**|이벤트 발생당 평균 속성 값입니다.|  
-|**pdw_node_id**|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포가 설정 된 노드의 식별자입니다.|  
+|**pdw_node_id**|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포가 설정 된 노드의 식별자입니다.|  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
 
 에 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 는 `VIEW SERVER STATE` 권한이 필요 합니다.   
 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium 계층에서는 데이터베이스에 대 한 권한이 필요 합니다 `VIEW DATABASE STATE` . [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]표준 및 기본 계층에서는 **서버 관리자** 또는 **Azure Active Directory 관리자** 계정이 필요 합니다.   
@@ -51,7 +53,7 @@ ms.locfileid: "86005221"
   
 |카운터|발생 빈도|값|  
 |-------------|----------------|-----------|  
-|optimizations|총 최적화 수입니다.|해당 사항 없음|  
+|optimizations|총 최적화 수입니다.|해당 없음|  
 |elapsed time|총 최적화 수입니다.|개별 문(쿼리)의 최적화당 평균 경과 시간(초)입니다.|  
 |final cost|총 최적화 수입니다.|최적화된 계획의 평균 예상 비용(내부 비용 단위)입니다.|  
 |trivial plan|내부 전용|내부 전용|  
@@ -70,28 +72,28 @@ ms.locfileid: "86005221"
 |gain stage 1 to stage 2|내부 전용|내부 전용|  
 |시간 제한|내부 전용|내부 전용|  
 |memory limit exceeded|내부 전용|내부 전용|  
-|insert stmt|INSERT 문에 대한 최적화 수입니다.|해당 사항 없음|  
-|delete stmt|DELETE 문에 대한 최적화 수입니다.|해당 사항 없음|  
-|update stmt|UPDATE 문에 대한 최적화 수입니다.|해당 사항 없음|  
-|contains subquery|하나 이상의 하위 쿼리를 포함하는 쿼리에 대한 최적화 수입니다.|해당 사항 없음|  
+|insert stmt|INSERT 문에 대한 최적화 수입니다.|해당 없음|  
+|delete stmt|DELETE 문에 대한 최적화 수입니다.|해당 없음|  
+|update stmt|UPDATE 문에 대한 최적화 수입니다.|해당 없음|  
+|contains subquery|하나 이상의 하위 쿼리를 포함하는 쿼리에 대한 최적화 수입니다.|해당 없음|  
 |unnest failed|내부 전용|내부 전용|  
 |테이블|총 최적화 수입니다.|최적화된 쿼리당 참조된 평균 테이블 수입니다.|  
-|힌트|일부 힌트가 지정된 횟수입니다. 힌트는 JOIN, GROUP, UNION 및 FORCE ORDER 쿼리 힌트, FORCE PLAN set 옵션 및 조인 힌트를 포함 합니다.|해당 사항 없음|  
-|order hint|FORCE ORDER 힌트가 지정된 횟수입니다.|해당 사항 없음|  
-|join hint|조인 힌트를 통해 조인 알고리즘이 강제 적용된 횟수입니다.|해당 사항 없음|  
-|view reference|쿼리에서 뷰가 참조된 횟수입니다.|해당 사항 없음|  
-|remote query|쿼리에서 네 부분으로 된 이름이나 OPENROWSET 결과가 있는 테이블 등의 원격 데이터 원본을 하나 이상 참조한 최적화 수입니다.|해당 사항 없음|  
+|힌트|일부 힌트가 지정된 횟수입니다. 힌트는 JOIN, GROUP, UNION 및 FORCE ORDER 쿼리 힌트, FORCE PLAN set 옵션 및 조인 힌트를 포함 합니다.|해당 없음|  
+|order hint|FORCE ORDER 힌트가 지정된 횟수입니다.|해당 없음|  
+|join hint|조인 힌트를 통해 조인 알고리즘이 강제 적용된 횟수입니다.|해당 없음|  
+|view reference|쿼리에서 뷰가 참조된 횟수입니다.|해당 없음|  
+|remote query|쿼리에서 네 부분으로 된 이름이나 OPENROWSET 결과가 있는 테이블 등의 원격 데이터 원본을 하나 이상 참조한 최적화 수입니다.|해당 없음|  
 |maximum DOP|총 최적화 수입니다.|최적화된 계획에 대한 평균 유효 MAXDOP 값입니다. 기본적으로 유효 MAXDOP는 **최대 병렬 처리 수준** 서버 구성 옵션에 따라 결정 되며 MAXDOP 쿼리 힌트 값을 기준으로 특정 쿼리에 대해 재정의 될 수 있습니다.|  
 |maximum recursion level|0보다 큰 MAXRECURSION 수준이 쿼리 힌트와 함께 지정된 최적화 수입니다.|최대 재귀 수준이 쿼리 힌트와 함께 지정되는 최적화의 평균 MAXRECURSION 수준입니다.|  
 |indexed views loaded|내부 전용|내부 전용|  
 |indexed views matched|하나 이상의 인덱싱된 뷰가 일치된 최적화 수입니다.|일치된 평균 뷰 수입니다.|  
 |indexed views used|일치된 후 하나 이상의 인덱싱된 뷰가 출력 계획에 사용되는 최적화 수입니다.|사용된 평균 뷰 수입니다.|  
 |indexed views updated|하나 이상의 인덱싱된 뷰를 유지 관리하는 계획을 생성하는 DML 문의 최적화 수입니다.|유지 관리된 평균 뷰 수입니다.|  
-|dynamic cursor request|동적 커서 요청이 지정된 최적화 수입니다.|해당 사항 없음|  
-|fast forward cursor request|빠른 전진 커서 요청이 지정된 최적화 수입니다.|해당 사항 없음|  
-|merge stmt|MERGE 문에 대한 최적화 수입니다.|해당 사항 없음|  
+|dynamic cursor request|동적 커서 요청이 지정된 최적화 수입니다.|해당 없음|  
+|fast forward cursor request|빠른 전진 커서 요청이 지정된 최적화 수입니다.|해당 없음|  
+|merge stmt|MERGE 문에 대한 최적화 수입니다.|해당 없음|  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-viewing-statistics-on-optimizer-execution"></a>A. 최적화 프로그램 실행 통계 보기  
  이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 현재 최적화 프로그램 실행 통계를 확인할 수 있습니다.  
@@ -127,7 +129,7 @@ SELECT (SELECT CAST (occurrence AS float) FROM sys.dm_exec_query_optimizer_info 
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;동적 관리 뷰 및 함수](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [실행 관련 동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: 추적 필터 설정(Transact-SQL)
 title: 추적 필터 설정(Transact-SQL) | Microsoft 문서
 ms.custom: ''
 ms.date: 03/06/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7b976a84-7381-43a6-a828-ba83ada71cbe
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 98d18b704ff407064cd18083b79f80f901d21903
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 59c44a69bbe994ee7df7337213d26b4a789f5a11
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750937"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455332"
 ---
 # <a name="set-a-trace-filter-transact-sql"></a>추적 필터 설정(Transact-SQL)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "85750937"
 2.  **sp_trace_setfilter** 를 실행하여 추적할 이벤트에서 검색할 정보 유형을 구성합니다.  
 
 > [!IMPORTANT]  
->  일반적인 저장 프로시저와 달리 모든 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 저장 프로시저의 매개 변수(**sp_trace\__xx_** )는 정확하게 입력되어야 하며 데이터 형식 자동 변환을 지원하지 않습니다. 이러한 매개 변수가 정확한 입력 매개 변수 데이터 형식으로 호출되지 않으면 인수 설명에서 지정한 대로 저장 프로시저는 오류를 반환합니다.  
+>  일반적인 저장 프로시저와 달리 모든 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 저장 프로시저의 매개 변수(**sp_trace\__xx_**)는 정확하게 입력되어야 하며 데이터 형식 자동 변환을 지원하지 않습니다. 이러한 매개 변수가 정확한 입력 매개 변수 데이터 형식으로 호출되지 않으면 인수 설명에서 지정한 대로 저장 프로시저는 오류를 반환합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [추적 필터링](../../relational-databases/sql-trace/filter-a-trace.md)   

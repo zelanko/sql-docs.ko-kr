@@ -1,4 +1,5 @@
 ---
+description: sys. dm_resource_governor_external_resource_pool_affinity (Transact-sql)
 title: sys. dm_resource_governor_external_resource_pool_affinity (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/13/2017
@@ -19,15 +20,16 @@ helpviewer_keywords:
 ms.assetid: e32fac49-5161-47c0-8540-af3fe730c00c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6d583ec570c7532fbafc354d4d5c70016a8cebd1
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: 0ff51fc11dd2b74c2a8e83d4a42cd83d403282d5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86053236"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454826"
 ---
 # <a name="sysdm_resource_governor_external_resource_pool_affinity-transact-sql"></a>sys. dm_resource_governor_external_resource_pool_affinity (Transact-sql)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
-**적용 대상:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] 및 [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
+**적용 대상:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)]및 [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)][!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
 
 현재 외부 리소스 풀 구성에 대 한 CPU 선호도 정보를 반환 합니다.
   
@@ -45,7 +47,7 @@ ms.locfileid: "86053236"
 
 `VIEW SERVER STATE` 권한이 필요합니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [SQL Server에서 머신 러닝을 위한 리소스 거버넌스](../../machine-learning/administration/resource-governor.md)
 

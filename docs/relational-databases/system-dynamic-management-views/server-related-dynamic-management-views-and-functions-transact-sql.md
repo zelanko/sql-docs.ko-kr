@@ -1,4 +1,5 @@
 ---
+description: 서버 관련 동적 관리 뷰 및 함수(Transact-SQL)
 title: 서버 관련 동적 관리 뷰 및 함수 (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -11,12 +12,12 @@ dev_langs:
 ms.assetid: d8f4e155-c2fb-4a1f-aa0d-e9790bdab925
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e58d81bef57daac6da9cad6e4d943068b618db28
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: a856a1d9dc0f7968c7603fd104d8d3ef4796aa0f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942185"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455039"
 ---
 # <a name="server-related-dynamic-management-views-and-functions-transact-sql"></a>서버 관련 동적 관리 뷰 및 함수(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,4 +1,5 @@
 ---
+description: 절대 및 상대 URL
 title: 절대 및 상대 Url | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6a34a7ef-50cc-4c3d-82f7-106b9a8f3caf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8787d293c349ea921f9f0edd293e77a075e5f7a3
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 43fc1a32428f54682b8fde5dea0f0140568c482e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761481"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453915"
 ---
 # <a name="absolute-and-relative-urls"></a>절대 및 상대 URL
 URL은 로컬 또는 네트워크에 저장 된 컴퓨터에 저장 된 대상의 위치를 지정 합니다. 대상은 파일, 디렉터리, HTML 페이지, 이미지, 프로그램 등이 될 수 있습니다.  
@@ -32,16 +33,16 @@ URL은 로컬 또는 네트워크에 저장 된 컴퓨터에 저장 된 대상�
   
  상대 URL은 일반적으로 *경로로*만 구성 *되며 필요에* 따라 *리소스로*만 구성 *됩니다.* 다음 표에서는 전체 URL 형식의 개별 부분을 정의 합니다.  
   
- *체계가*  
+ *scheme*  
  *리소스* 에 액세스 하는 방법을 지정 합니다.  
   
- *서버인*  
+ *server*  
  *리소스가* 있는 컴퓨터의 이름을 지정 합니다.  
   
  *path*  
  대상으로 이어지는 디렉터리 시퀀스를 지정 합니다. *리소스* 를 생략 하면 대상은 *경로*에서 마지막 디렉터리입니다.  
   
- *리소스*  
+ *리소스나*  
  포함 되는 경우 *리소스* 는 대상 이며 일반적으로 파일의 이름입니다. 단일 이진 바이트를 포함 하는 *간단한 파일* 이거나 하나 이상의 저장소 및 이진 바이트 스트림을 포함 하는 *구조화 된 문서* 일 수 있습니다.  
   
 ## <a name="url-scheme-registration"></a>URL 체계 등록  
@@ -64,7 +65,7 @@ URL은 로컬 또는 네트워크에 저장 된 컴퓨터에 저장 된 대상�
   
  상대 URL은 *CommandText* 또는 *Source* 매개 변수에 지정할 수 있습니다. 상대 URL은 실제로 SQL 명령과 같은 명령을 표시 하지 않습니다. 단지 매개 변수만 지정 합니다. 활성 연결의 컨텍스트는 절대 URL 이어야 하 고 *Option* 매개 변수는 **adCmdTableDirect**로 설정 해야 합니다.  
   
- 예를 들어 다음 코드 샘플은 Winnt/system32 디렉터리의 Readme25 파일에서 **레코드 집합** 을 여는 방법을 보여 줍니다.  
+ 예를 들어 다음 코드 샘플은 Winnt/system32 디렉터리의 Readme25.txt 파일에서 **레코드 집합** 을 여는 방법을 보여 줍니다.  
   
 ```  
 recordset.Open "system32/Readme25.txt", "URL=https://YourServer/Winnt/",,,adCmdTableDirect  

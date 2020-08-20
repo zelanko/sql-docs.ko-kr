@@ -1,4 +1,5 @@
 ---
+description: OLE DB 용 Microsoft 데이터 셰이핑 서비스 (ADO 서비스 공급자)
 title: OLE DB 용 Microsoft 데이터 셰이핑 서비스 (ADO 서비스 공급자) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 523009ce-e01b-4e2d-a7df-816d7688aff0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 68ed3899311d970da47e627fe844fe05ccd37c78
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 3c61e40220b99bd68c92e2651d58ea13ee10be29
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758479"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454105"
 ---
 # <a name="microsoft-data-shaping-service-for-ole-db-overview"></a>OLE DB에 대 한 Microsoft 데이터 셰이핑 서비스 개요
 > [!IMPORTANT]

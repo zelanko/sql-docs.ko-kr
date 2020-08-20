@@ -1,4 +1,5 @@
 ---
+description: ADO 연결 및 레코드 집합 이벤트
 title: ADO 이벤트 처리기 요약 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b34f4472-5e04-4a2c-ab64-38d6eca31a69
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 78c3b19c63025bc77862e7f88f6c4d83350c0313
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 92d1dcd202c4e115cda4198f90e3410c2cb44319
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761369"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453845"
 ---
 # <a name="ado-connection-and-recordset-events"></a>ADO 연결 및 레코드 집합 이벤트
 두 ADO 개체는 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체와 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체와 같은 이벤트를 발생 시킬 수 있습니다. **Connectionevent** Family는 **연결** 개체에 대 한 작업과 관련 되며 **RecordsetEvent** 패밀리는 **레코드 집합** 개체에 대 한 작업과 관련이 있습니다.

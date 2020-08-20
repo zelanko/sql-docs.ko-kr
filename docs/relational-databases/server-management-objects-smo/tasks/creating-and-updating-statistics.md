@@ -1,4 +1,5 @@
 ---
+description: 통계 만들기 및 업데이트
 title: 통계 만들기 및 업데이트
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,11 +14,12 @@ ms.reviewer: matteot
 ms.custom: seo-dt-2019
 ms.date: 06/04/2020
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8f916833f97db69370a4a01eb7d796d4016c00c9
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 3939942c7655206a448797f0258d883eac904fef
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001236"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455510"
 ---
 # <a name="create-and-update-statistics"></a>통계 만들기 및 업데이트
 

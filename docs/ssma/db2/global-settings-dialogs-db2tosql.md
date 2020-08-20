@@ -1,4 +1,5 @@
 ---
+description: 전역 설정 (대화 상자) (DB2ToSQL)
 title: 전역 설정 (대화 상자) (DB2ToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 360e01bb-6347-4e2b-acda-0daa161ed33b
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 10039fcd13a50a85b92b83598e17f1a821a14672
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: b157d1764889b287cd2150468af943bbe11e610b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87933764"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454215"
 ---
 # <a name="global-settings-dialogs-db2tosql"></a>전역 설정 (대화 상자) (DB2ToSQL)
 **전역 설정** 대화 상자의 대화 상자 페이지를 사용 하 여 ssma의 기본 사용자 동작 및 경고 설정을 지정할 수 있습니다.  

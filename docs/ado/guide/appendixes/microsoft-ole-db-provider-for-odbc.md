@@ -1,4 +1,5 @@
 ---
+description: ODBC 용 Microsoft OLE DB 공급자 개요
 title: ODBC 용 Microsoft OLE DB 공급자 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2dc0372d-e74d-4d0f-9c8c-04e5a168c148
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2b84ce6679071cc3ea90ce23b4dcd9f8e1894bb2
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 7ce793d1b7f62a565a19fa8efe8d11292ae5642f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761631"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454065"
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>ODBC 용 Microsoft OLE DB 공급자 개요
 ADO 또는 RDS 프로그래머는 모든 데이터 원본이 OLE DB 인터페이스를 노출 하는 것이 가장 좋습니다. 그러면 ADO에서 데이터 소스를 직접 호출할 수 있습니다. 점점 더 많은 데이터베이스 공급 업체가 OLE DB 인터페이스를 구현 하지만 일부 데이터 원본은 아직 이러한 방식으로 노출 되지 않습니다. 그러나 현재 사용 중인 대부분의 DBMS 시스템은 ODBC를 통해 액세스할 수 있습니다.
@@ -49,7 +50,7 @@ MSDASQL
 
  문자열은 다음과 같은 키워드로 구성 됩니다.
 
-|키워드|Description|
+|키워드|설명|
 |-------------|-----------------|
 |**공급자**|ODBC에 대 한 OLE DB 공급자를 지정 합니다.|
 |**DSN**|데이터 원본 이름을 지정 합니다.|
@@ -190,9 +191,9 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |[PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md)|읽기/쓰기|사용할 수 없음|읽기 전용|읽기 전용|
 |[PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md)|읽기/쓰기|읽기/쓰기|읽기/쓰기|읽기/쓰기|
 |[RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)|읽기/쓰기|사용할 수 없음|읽기 전용|읽기 전용|
-|[소스](../../../ado/reference/ado-api/source-property-ado-recordset.md)|읽기/쓰기|읽기/쓰기|읽기/쓰기|읽기/쓰기|
+|[원본](../../../ado/reference/ado-api/source-property-ado-recordset.md)|읽기/쓰기|읽기/쓰기|읽기/쓰기|읽기/쓰기|
 |[State](../../../ado/reference/ado-api/state-property-ado.md)|읽기 전용|읽기 전용|읽기 전용|읽기 전용|
-|[Status](../../../ado/reference/ado-api/status-property-ado-recordset.md)|읽기 전용|읽기 전용|읽기 전용|읽기 전용|
+|[상태](../../../ado/reference/ado-api/status-property-ado-recordset.md)|읽기 전용|읽기 전용|읽기 전용|읽기 전용|
 
  [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md) 및 [ABSOLUTEPAGE](../../../ado/reference/ado-api/absolutepage-property-ado.md) 속성은 ADO가 MICROSOFT OLE DB Provider for ODBC의 1.0 버전에서 사용 되는 경우 쓰기 전용입니다.
 
@@ -204,9 +205,9 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |[취소](../../../ado/reference/ado-api/cancel-method-ado.md)|예|예|예|예|
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|예|예|예|예|
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|예|예|예|예|
-|[복제](../../../ado/reference/ado-api/clone-method-ado.md)|아니요|예|예|예|
+|[복제](../../../ado/reference/ado-api/clone-method-ado.md)|예|예|예|예|
 |[닫기](../../../ado/reference/ado-api/close-method-ado.md)|예|예|예|예|
-|[삭제](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|예|예|예|예|
+|[Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|예|예|예|예|
 |[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|예|예|예|예|
 |[이동](../../../ado/reference/ado-api/move-method-ado.md)|예|예|예|예|
 |[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|예|예|예|예|
@@ -216,9 +217,9 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)*|예|예|예|예|
 |[열기](../../../ado/reference/ado-api/open-method-ado-recordset.md)|예|예|예|예|
 |[매크로](../../../ado/reference/ado-api/requery-method.md)|예|예|예|예|
-|[다시 동기화](../../../ado/reference/ado-api/resync-method.md)|아니요|예|예|예|
+|[다시 동기화](../../../ado/reference/ado-api/resync-method.md)|예|예|예|예|
 |[지원](../../../ado/reference/ado-api/supports-method.md)|예|예|예|예|
-|[업데이트](../../../ado/reference/ado-api/update-method.md)|예|예|예|예|
+|[Update](../../../ado/reference/ado-api/update-method.md)|예|예|예|예|
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|예|예|예|예|
 
  * Microsoft Access 데이터베이스에 대해서는 지원 되지 않습니다.
@@ -260,7 +261,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |최대 행 크기|DBPROP_MAXROWSIZE|
 |최대 행 크기에 BLOB 포함|DBPROP_MAXROWSIZEINCLUDESBLOB|
 |SELECT의 최대 테이블|DBPROP_MAXTABLESINSELECT|
-|모드|DBPROP_INIT_MODE|
+|Mode|DBPROP_INIT_MODE|
 |여러 매개 변수 집합|DBPROP_MULTIPLEPARAMSETS|
 |여러 결과|DBPROP_MULTIPLERESULTS|
 |여러 저장소 개체|DBPROP_MULTIPLESTORAGEOBJECTS|
@@ -430,5 +431,5 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 
  Microsoft OLE DB Provider for ODBC에 대 한 특정 구현 및 기능 정보에 대 한 자세한 내용은 [OLE DB 프로그래머 참조](https://msdn.microsoft.com/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8) 를 참조 하거나 MSDN에서 데이터 액세스 및 저장소 개발자 센터 웹 사이트를 방문 하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목
  [명령 개체 (](../../../ado/reference/ado-api/command-object-ado.md) ado) [CommandText 속성 (](../../../ado/reference/ado-api/commandtext-property-ado.md) ado) [연결 개체 (](../../../ado/reference/ado-api/connection-object-ado.md) ado) ConnectionString 속성 (ado) [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) 속성 [(ado)](../../../ado/reference/ado-api/execute-method-ado-command.md) [Open 메서드 (ado 레코드 집합)](../../../ado/reference/ado-api/open-method-ado-recordset.md) [Parameters 컬렉션](../../../ado/reference/ado-api/parameters-collection-ado.md) (ado) [속성 컬렉션](../../../ado/reference/ado-api/properties-collection-ado.md) (ado) [공급자 속성 (](../../../ado/reference/ado-api/provider-property-ado.md) [ado)](../../../ado/reference/ado-api/recordset-object-ado.md) [지원 메서드](../../../ado/reference/ado-api/supports-method.md)

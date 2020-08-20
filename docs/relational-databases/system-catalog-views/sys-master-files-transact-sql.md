@@ -1,4 +1,5 @@
 ---
+description: sys.master_files(Transact-SQL)
 title: sys. master_files (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/10/2016
@@ -20,11 +21,12 @@ ms.assetid: 803b22f2-0016-436b-a561-ce6f023d6b6a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1c30a4bba2eed0e8709b7d99d745dd51607080b9
-ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
+ms.openlocfilehash: 52cbf9cab6e8a9d77e7bdb0d079f5c3341ec0fed
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86091817"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455275"
 ---
 # <a name="sysmaster_files-transact-sql"></a>sys.master_files(Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -36,7 +38,7 @@ ms.locfileid: "86091817"
 |database_id|**int**|이 파일을 적용할 데이터베이스의 ID입니다. Masterdatabase_id은 항상 1입니다.|  
 |file_id|**int**|데이터베이스 내 파일의 ID입니다. 주 file_id는 항상 1입니다.|  
 |file_guid|**uniqueidentifier**|파일의 고유 식별자입니다.<br /><br /> NULL = 데이터베이스가 이전 버전의에서 업그레이드 되었습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQL Server 2005 이전 버전의 경우 유효).|  
-|형식|**tinyint**|파일 유형입니다.<br /><br /> 0 = 행<br /><br /> 1 = 로그<br /><br /> 2 = FILESTREAM<br /><br /> 3 =[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 4 = 전체 텍스트([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이전의 전체 텍스트 카탈로그. [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상으로 업그레이드되었거나 여기서 만들어진 전체 텍스트 카탈로그는 파일 유형 0을 보고함)|  
+|type|**tinyint**|파일 유형입니다.<br /><br /> 0 = 행<br /><br /> 1 = 로그<br /><br /> 2 = FILESTREAM<br /><br /> 3 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 4 = 전체 텍스트([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이전의 전체 텍스트 카탈로그. [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상으로 업그레이드되었거나 여기서 만들어진 전체 텍스트 카탈로그는 파일 유형 0을 보고함)|  
 |type_desc|**nvarchar(60)**|파일 유형에 대한 설명입니다.<br /><br /> ROWS<br /><br /> LOG<br /><br /> FILESTREAM<br /><br /> FULLTEXT([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이전의 전체 텍스트 카탈로그)|  
 |data_space_id|**int**|이 파일이 속한 데이터 공간의 ID입니다. 데이터 공간은 파일 그룹입니다.<br /><br /> 0 = 로그 파일|  
 |name|**sysname**|데이터베이스에서 파일의 논리적 이름입니다.|  
@@ -72,10 +74,10 @@ ms.locfileid: "86091817"
  해당 행을 보는 데 필요한 최소 권한은 CREATE DATABASE, ALTER ANY DATABASE 또는 VIEW ANY DEFINITION입니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [데이터베이스 및 파일 카탈로그 뷰 &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)   
+ [데이터베이스 및 파일 카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)   
  [파일 상태](../../relational-databases/databases/file-states.md)   
  [sys.databases&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
- [database_files &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
+ [sys.database_files&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
  [데이터베이스 파일 및 파일 그룹](../../relational-databases/databases/database-files-and-filegroups.md)  
   
   

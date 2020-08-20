@@ -1,4 +1,5 @@
 ---
+description: OLE Automation 저장 프로시저(Transact-SQL)
 title: OLE 자동화 저장 프로시저 (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ff16a833-01fe-4877-8aa6-55b72603ec2e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5c768306710201fb62be3d352cacf90bb1f1e0fe
-ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
+ms.openlocfilehash: 820a100a4da0ed62fd22bb64b22bf83daacee490
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86977536"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454765"
 ---
 # <a name="ole-automation-stored-procedures-transact-sql"></a>OLE Automation 저장 프로시저(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,7 +50,7 @@ ms.locfileid: "86977536"
 :::row-end:::
 
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;시스템 저장 프로시저](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;시스템 저장 프로시저 ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Ole Automation Procedures 서버 구성 옵션](../../database-engine/configure-windows/ole-automation-procedures-server-configuration-option.md)  
   
   

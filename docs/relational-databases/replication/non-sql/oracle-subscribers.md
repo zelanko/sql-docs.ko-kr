@@ -1,4 +1,5 @@
 ---
+description: Oracle 구독자
 title: Oracle 구독자 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 591c0313-82ce-4689-9fc1-73752ff122cf
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 40942d92f30790f896888bd71cf4523a14d1cc48
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 3e7b6abc6b235950fef107a870e53d827dee6f5e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883037"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455605"
 ---
 # <a name="oracle-subscribers"></a>Oracle 구독자
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -86,7 +87,7 @@ ms.locfileid: "85883037"
   
     -   빈 문자열이 게시된 테이블에 열 값으로 삽입되지 않았는지 확인합니다.  
   
-    -   오류에 대한 알림을 배포 에이전트 기록 로그에 받은 다음, 계속 처리하도록 허용되는 경우 배포 에이전트에 **–SkipErrors** 매개 변수를 사용합니다. Oracle 오류 코드 1400( **-SkipErrors1400**)을 지정합니다.  
+    -   오류에 대한 알림을 배포 에이전트 기록 로그에 받은 다음, 계속 처리하도록 허용되는 경우 배포 에이전트에 **–SkipErrors** 매개 변수를 사용합니다. Oracle 오류 코드 1400(**-SkipErrors1400**)을 지정합니다.  
   
     -   빈 문자열과 연결된 가능성이 있는 모든 문자 열에서 NOT NULL 특성을 제거하여 생성된 테이블 생성 스크립트를 수정하고 @creation_script sp_addarticle [의](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)매개 변수를 사용하여 수정된 스크립트를 아티클에 대한 사용자 지정 생성 스크립트로 제공합니다.  
   
@@ -124,7 +125,7 @@ ms.locfileid: "85883037"
 |**nvarchar(1-1000)**|VARCHAR2(1-2000)|  
 |**nvarchar(1001-4000)**|NCLOB|  
 |**nvarchar(max)**|NCLOB|  
-|**real**|real|  
+|**real**|실수|  
 |**smalldatetime**|DATE|  
 |**smallint**|NUMBER(5,0)|  
 |**smallmoney**|NUMBER(10,4)|  
@@ -143,7 +144,7 @@ ms.locfileid: "85883037"
 |**varchar(max)**|CLOB|  
 |**xml**|NCLOB|  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [Non-SQL Server Subscribers](../../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)   
  [게시 구독](../../../relational-databases/replication/subscribe-to-publications.md)  
   

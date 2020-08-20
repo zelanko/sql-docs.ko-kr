@@ -1,4 +1,5 @@
 ---
+description: Visual C++ ADO 프로그래밍
 title: Visual C++ ADO 프로그래밍 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 11233b96-e05c-4221-9aed-5f20944b0f1c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3c7b428e1127ac2431f6e0988774315c12ebd74f
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: ae93db522b465b85feefe85cd94df4be3d29f062
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761531"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453955"
 ---
 # <a name="visual-c-ado-programming"></a>Visual C++ ADO 프로그래밍
 ADO API 참조는 Microsoft Visual Basic와 비슷한 구문을 사용 하 여 ADO API (응용 프로그래밍 인터페이스)의 기능을 설명 합니다. 대상 사용자가 모든 사용자 이기는 하지만 ADO 프로그래머는 Visual Basic, Visual C++ ( **#import** 지시문 포함 및 제외) 및 Visual j + + (ADO/WFC 클래스 패키지 사용)와 같은 다양 한 언어를 사용 합니다.  
@@ -35,7 +36,7 @@ ADO API 참조는 Microsoft Visual Basic와 비슷한 구문을 사용 하 여 A
  다음 섹션에서는 ADO 및 **#import** 지시어를 사용 하는 c 및 c + + 프로그래머에 대 한 세부 정보를 요약 합니다. COM (**Variant**, **BSTR**및 **SafeArray**)에 특정 한 데이터 형식 및 오류 처리 (_com_error)에 중점을 둘 수 있습니다.  
   
 ## <a name="using-the-import-compiler-directive"></a>#Import 컴파일러 지시문 사용  
- **#Import** Visual C++ 컴파일러 지시문은 ADO 메서드 및 속성을 사용 하 여 작업을 간소화 합니다. 지시문은 Msado15.dll (예: ADO.NET)와 같은 형식 라이브러리를 포함 하는 파일의 이름을 사용 하 고, typedef 선언이 포함 된 헤더 파일, 인터페이스에 대 한 스마트 포인터 및 열거 된 상수를 생성 합니다. 각 인터페이스는 클래스에 캡슐화 되거나 래핑됩니다.  
+ **#Import** Visual C++ 컴파일러 지시문은 ADO 메서드 및 속성을 사용 하 여 작업을 간소화 합니다. 지시문은 Msado15.dll ()와 같은 형식 라이브러리를 포함 하는 파일의 이름을 사용 하 고, typedef 선언, 인터페이스에 대 한 스마트 포인터 및 열거 된 상수를 포함 하는 헤더 파일을 생성 합니다. 각 인터페이스는 클래스에 캡슐화 되거나 래핑됩니다.  
   
  클래스 내의 각 작업 (즉, 메서드 또는 속성 호출)에 대해 작업을 직접 호출 하는 선언 (즉, 작업의 "원시" 형식) 및 작업을 성공적으로 실행 하지 못한 경우에는 원시 작업을 호출 하 고 COM 오류를 throw 하는 선언이 있습니다. 작업이 속성 인 경우 일반적으로 Visual Basic와 같은 구문이 있는 작업에 대 한 대체 구문을 만드는 컴파일러 지시문이 있습니다.  
   
@@ -116,7 +117,7 @@ rs->Fields->Item["au_fname"]->Value = "value";
   
  이 규칙에 대 한 예외는 COM에 한정 된 **Variant**, **BSTR**및 **SafeArray**의 데이터 형식입니다.  
   
-### <a name="variant"></a>변형  
+### <a name="variant"></a>Variant  
  **변형은** 값 멤버 및 데이터 형식 멤버를 포함 하는 구조화 된 데이터 형식입니다. **Variant** 에는 다른 VARIANT, BSTR, Boolean, IDispatch 또는 IUnknown 포인터, 통화, 날짜 등을 비롯 한 다양 한 데이터 형식이 포함 될 수 있습니다. 또한 COM은 한 데이터 형식을 다른 데이터 형식으로 쉽게 변환할 수 있게 해 주는 메서드를 제공 합니다.  
   
  **_Variant_t** 클래스는 **variant** 데이터 형식을 캡슐화 하 고 관리 합니다.  
@@ -326,7 +327,7 @@ End Sub
   
  다음 Visual C++ 예제에서는 **_variant_t**에서 사용 되는 **SafeArray** 를 사용 하는 방법을 보여 줍니다.  
   
-#### <a name="notes"></a>참고  
+#### <a name="notes"></a>메모  
  다음 메모는 코드 예제의 주석 처리 된 섹션에 해당 합니다.  
   
 1.  다시 한 번 TESTHR () 인라인 함수를 정의 하 여 기존 오류 처리 메커니즘을 활용 합니다.  
@@ -435,7 +436,7 @@ End Sub
   
  이 Visual C++ 예제에서는 **Get** / **Put** / **putref**_속성_을 보여 줍니다.  
   
-#### <a name="notes"></a>참고  
+#### <a name="notes"></a>메모  
  다음 메모는 코드 예제의 주석 처리 된 섹션에 해당 합니다.  
   
 1.  이 예제에서는 두 가지 형식의 누락 된 문자열 인수를 사용 합니다. 명시적 상수, **Strmissing**및 컴파일러가 **Open** 메서드의 범위에 대해 존재 하는 임시 **_bstr_t** 을 만드는 데 사용 하는 문자열입니다.  
@@ -554,7 +555,7 @@ void main() {
 ### <a name="casting-ado-object-pointers-with-idispatch-"></a>를 사용 하 여 ADO 개체 포인터 캐스팅 (IDispatch *)  
  다음 Visual C++ 예제에서는 (IDispatch *)를 사용 하 여 ADO 개체 포인터를 캐스팅 하는 방법을 보여 줍니다.  
   
-#### <a name="notes"></a>참고  
+#### <a name="notes"></a>메모  
  다음 메모는 코드 예제의 주석 처리 된 섹션에 해당 합니다.  
   
 1.  명시적으로 코딩 된 **Variant**에서 열린 **연결** 개체를 지정 합니다. (IDispatch)로 캐스팅 하면 \* 올바른 생성자가 호출 됩니다. 또한 두 번째 **_variant_t** 매개 변수를 기본값인 **true**로 명시적으로 설정 하면 **Recordset:: Open** 작업이 종료 될 때 개체 참조 개수가 올바릅니다.  

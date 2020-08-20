@@ -1,4 +1,5 @@
 ---
+description: 새 프로젝트 (DB2ToSQL)
 title: 새 프로젝트 (DB2ToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 66437b45-4686-4fc7-a91b-ebde45e0f1b0
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 987e66832ac994e47b313ba82d4a24c4a37d6c52
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: cab3c278ff1c011758a61ef88f1aef38fc9560b1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87933754"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454175"
 ---
 # <a name="new-project-db2tosql"></a>새 프로젝트 (DB2ToSQL)
 **새 프로젝트** 대화 상자를 사용 하 여 새 ssma 프로젝트를 만들 수 있습니다. **새 프로젝트** 대화 상자에 액세스 하려면 **파일** 메뉴에서 **새 프로젝트**를 클릭 합니다.  
@@ -31,7 +32,7 @@ ms.locfileid: "87933754"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016  
   

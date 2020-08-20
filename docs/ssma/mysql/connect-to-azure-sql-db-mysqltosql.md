@@ -1,4 +1,5 @@
 ---
+description: Azure SQL Database에 연결 (MySQLToSQL)
 title: Azure SQL Database에 연결 (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 81623d27-25af-444f-9779-1edb8c6fb470
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 7180e123572016661fa4de4a2b38a12f8480d89c
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: cf3112f6b431fae9149df76464ed576f89a51dd1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935992"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454135"
 ---
 # <a name="connect-to-azure-sql-database-mysqltosql"></a>Azure SQL Database에 연결 (MySQLToSQL)
 SQL Azure 연결 대화 상자를 사용 하 여 마이그레이션하려는 Azure SQL Database 데이터베이스에 연결할 수 있습니다.  
@@ -26,7 +27,7 @@ SQL Azure 연결 대화 상자를 사용 하 여 마이그레이션하려는 Azu
   
 SQL Azure에 연결 하기 위한 서버 이름을 선택 하거나 입력 합니다.  
   
-**데이터베이스**  
+**Database**  
   
 을 선택 하 고 데이터베이스 이름을 입력 하거나 **검색** 합니다.  
   

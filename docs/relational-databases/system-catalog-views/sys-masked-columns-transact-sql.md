@@ -1,4 +1,5 @@
 ---
+description: sys. masked_columns (Transact-sql)
 title: sys. masked_columns (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/25/2016
@@ -18,11 +19,12 @@ ms.assetid: 671577e4-d757-4b8d-9aa9-0fc8d51ea9ca
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bdd6815ab43d8bb36877038485774a8d61714e36
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 28946de442b72309f3284338e6f426c655a4d0f8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004816"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455264"
 ---
 # <a name="sysmasked_columns-transact-sql"></a>sys. masked_columns (Transact-sql)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -40,7 +42,7 @@ ms.locfileid: "86004816"
   
 ## <a name="remarks"></a>설명  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  이 뷰는 사용자에 게 테이블에 대 한 일부 사용 권한이 있거나 사용자에 게 VIEW ANY DEFINITION 권한이 있는 경우 테이블에 대 한 정보를 반환 합니다.  
   
 ## <a name="example"></a>예제  

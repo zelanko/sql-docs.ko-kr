@@ -1,4 +1,5 @@
 ---
+description: 사용자 인터페이스 참조 (DB2ToSQL)
 title: 사용자 인터페이스 참조 (DB2ToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 98ecc4ff-9416-48a2-af0f-86852cf69dab
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: c01e871490f5362e610339c6626252c700eea3f6
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: fa7ecb8749fb0b5a6f9a105393e3cb20a41456a0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87936582"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454167"
 ---
 # <a name="user-interface-reference-db2tosql"></a>사용자 인터페이스 참조 (DB2ToSQL)
 이 섹션에는 d b 2 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 용 SSMA (Migration Assistant)에 대 한 도움말 항목이 포함 되어 있습니다.  
@@ -26,7 +27,7 @@ ms.locfileid: "87936582"
 |-|-|  
 |[고급 개체 선택 &#40;DB2ToSQL&#41;](../../ssma/db2/advanced-object-selection-db2tosql.md)|**고급 개체 선택** 대화 상자를 사용 하 여 필터 조건을 사용 하 여 데이터베이스 개체를 찾은 다음 해당 개체를 선택 하거나 선택 취소 합니다.|  
 |[평가 보고서 &#40;DB2ToSQL&#41;](../../ssma/db2/assessment-report-db2tosql.md)|평가 보고서를 사용 하 여 DB2 개체를 구문으로 변환한 결과를 보고 [!INCLUDE[tsql](../../includes/tsql-md.md)] 로 마이그레이션하는 시간과 복잡성을 예측할 수 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 있습니다.|  
-|[DB2 데이터베이스 &#40;DB2ToSQL&#41;에 연결 하는 중](../../ssma/db2/connecting-to-db2-database-db2tosql.md)|**Db2에 연결** 대화 상자를 사용 하 여 마이그레이션할 db2 데이터베이스에 연결 합니다.|  
+|[DB2 데이터베이스 &#40;DB2ToSQL&#41;에 연결 하는 중 ](../../ssma/db2/connecting-to-db2-database-db2tosql.md)|**Db2에 연결** 대화 상자를 사용 하 여 마이그레이션할 db2 데이터베이스에 연결 합니다.|  
 |[SQL Server &#40;DB2ToSQL에 연결&#41;](../../ssma/db2/connect-to-sql-server-db2tosql.md)|**SQL Server 연결** 대화 상자를 사용 하 여 마이그레이션하려는 인스턴스에 연결할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |[데이터 마이그레이션 보고서 &#40;DB2ToSQL&#41;](../../ssma/db2/data-migration-report-db2tosql.md)|DB2에서로 데이터를 마이그레이션한 결과를 표시 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |[데이터 마이그레이션 설정](https://msdn.microsoft.com/573e673e-a194-4cb2-9aba-aaac6e1a225c)|**확장 데이터 마이그레이션 설정** 탭을 사용 하 여 데이터 마이그레이션에 대 한 사용자 지정 쿼리를 작성할 수 있습니다.|  
@@ -40,12 +41,12 @@ ms.locfileid: "87936582"
 |[프로젝트 설정 &#40;GUI&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-gui-db2tosql.md)|**프로젝트 설정** 대화 상자의 GUI 페이지를 사용 하 여 **데이터** 탭에 표시할 데이터의 양을 지정할 수 있습니다.|  
 |[마이그레이션&#41; &#40;DB2ToSQL 프로젝트 설정 &#40;&#41;](../../ssma/db2/project-settings-migration-db2tosql.md)|**프로젝트 설정** 대화 상자의 마이그레이션 페이지를 사용 하 여 d b 2의 데이터를 db2에서로 마이그레이션하는 방법을 사용자 지정할 수 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 있습니다.|  
 |[프로젝트 설정&#40;동기화&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-synchronization-db2tosql.md)|**프로젝트 설정** 대화 상자의 동기화 페이지를 사용 하 여 d b 2 용 ssma에서 마이그레이션된 데이터베이스 개체를 만들거나 변경 하는 방법을 사용자 지정할 수 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 있습니다.|  
-|[프로젝트 설정&#40;&#41; &#40;DB2ToSQL&#41;시스템 개체를 로드 하는 중](../../ssma/db2/project-settings-loading-system-objects-db2tosql.md)|**프로젝트 설정** 대화 상자의 시스템 개체 로드 페이지를 사용 하 여 ssma가 변환 하 고 로드할 DB2 시스템 개체를 지정할 수 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 있습니다.|  
+|[프로젝트 설정&#40;&#41; &#40;DB2ToSQL&#41;시스템 개체를 로드 하는 중 ](../../ssma/db2/project-settings-loading-system-objects-db2tosql.md)|**프로젝트 설정** 대화 상자의 시스템 개체 로드 페이지를 사용 하 여 ssma가 변환 하 고 로드할 DB2 시스템 개체를 지정할 수 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 있습니다.|  
 |[프로젝트 설정 &#40;형식 매핑&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-type-mapping-db2tosql.md)|**프로젝트 설정** 대화 상자의 형식 매핑 페이지를 사용 하 여 d b 2 용 ssma 프로젝트의 모든 데이터베이스 및 데이터베이스 개체에 대 한 기본 형식 매핑을 지정할 수 있습니다.|  
-|[데이터베이스 &#40;DB2ToSQL&#41;에서 새로 고침](../../ssma/db2/refresh-from-database-db2tosql.md)|**데이터베이스에서 새로 고침** 대화 상자를 사용 하 여 DB2 데이터베이스에서 새로 고칠 개체를 선택할 수 있습니다.|  
-|[DB2ToSQL&#41;&#40;메타 데이터 저장](../../ssma/db2/save-metadata-db2tosql.md)|메타 데이터 **저장** 대화 상자는 메타 데이터가 없는 프로젝트를 저장할 때 나타납니다.|  
+|[데이터베이스 &#40;DB2ToSQL&#41;에서 새로 고침 ](../../ssma/db2/refresh-from-database-db2tosql.md)|**데이터베이스에서 새로 고침** 대화 상자를 사용 하 여 DB2 데이터베이스에서 새로 고칠 개체를 선택할 수 있습니다.|  
+|[DB2ToSQL&#41;&#40;메타 데이터 저장 ](../../ssma/db2/save-metadata-db2tosql.md)|메타 데이터 **저장** 대화 상자는 메타 데이터가 없는 프로젝트를 저장할 때 나타납니다.|  
   
 ## <a name="see-also"></a>참고 항목  
-[D b 2 용 SSMA &#40;DB2ToSQL&#41;시작](../../ssma/db2/getting-started-with-ssma-for-db2-db2tosql.md)  
-[DB2 데이터베이스를 SQL Server &#40;DB2ToSQL&#41;로 마이그레이션](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
+[D b 2 용 SSMA &#40;DB2ToSQL&#41;시작 ](../../ssma/db2/getting-started-with-ssma-for-db2-db2tosql.md)  
+[DB2 데이터베이스를 SQL Server &#40;DB2ToSQL&#41;로 마이그레이션 ](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
   

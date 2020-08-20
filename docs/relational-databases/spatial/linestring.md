@@ -1,4 +1,5 @@
 ---
+description: LineString
 title: LineString | Microsoft 문서
 ms.date: 03/03/2017
 ms.prod: sql
@@ -13,16 +14,16 @@ ms.assetid: e50d0b86-8b31-4285-be71-ad05c7712cbd
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3f739a8344eacaaa3e0057608b79bf60c88d1b29
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0e1a16547649ce07eadf15942da8cb548e8e10bb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85751065"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455395"
 ---
 # <a name="linestring"></a>LineString
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  **LineString** 은 일련의 점과 이 점을 연결하는 선분을 나타내는 1차원 개체입니다.  
+  **LineString**은 일련의 점과 이 점을 연결하는 선분을 나타내는 1차원 개체입니다.  
   
 ## <a name="linestring-instances"></a>LineString 인스턴스  
  다음 그림에서는 **LineString** 인스턴스의 예를 보여 줍니다.  
@@ -84,7 +85,7 @@ SELECT @g1.STIsValid(), @g2.STIsValid();
 > [!WARNING]  
 > **LineString** 의 겹침 여부가 정확하지 않은 부동 소수점 계산을 기준으로 검색됩니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
 ### <a name="example-a"></a>예 A.    
 다음 예에서는 세 점이 있고 SRID가 0인 `geometry``LineString` 인스턴스를 만드는 방법을 보여 줍니다.  
   

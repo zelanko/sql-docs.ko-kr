@@ -1,4 +1,5 @@
 ---
+description: Visual C++ 확장 헤더
 title: Visual C++ 확장 헤더 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e492d307-24cb-489c-a5b0-99cdc09b07da
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2c5b4e7a3bc960882830fa447f58f74e6728a559
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 25a435b2fd4739710f208e50c1265db441d54f7e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761501"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453925"
 ---
 # <a name="visual-c-extensions-header"></a>Visual C++ 확장 헤더
 다음 헤더 **icrsint**는 클라이언트가 **레코드 집합** 의 필드를 **CADORecordBinding**에서 파생 된 클래스에 정의 된 변수로 검색할 수 있도록 하는 인터페이스에 대해 자세히 설명 합니다. 액세스 하려는 각 필드에 대해 ADO 바인딩 매크로를 지정 해야 합니다.  

@@ -1,4 +1,5 @@
 ---
+description: sysmail_update_profile_sp(Transact-SQL)
 title: sysmail_update_profile_sp (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: eaedf7ce-a8d5-4ab9-99e0-d77d5be19e90
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: c795b604538a26fc7602ea245bd4d1d8c9c52d33
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 78a123514e990499f191cbc6742870647adebc5e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890815"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454756"
 ---
 # <a name="sysmail_update_profile_sp-transact-sql"></a>sysmail_update_profile_sp(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,11 +41,11 @@ sysmail_update_profile_sp [ [ @profile_id = ] profile_id , ] [ [ @profile_name =
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @profile_id = ] profile_id`업데이트할 프로필 id입니다. *profile_id* 은 **int**이며 기본값은 NULL입니다. *Profile_id* 또는 *profile_name* 중 하나 이상을 지정 해야 합니다. 둘 다 지정하면 프로시저에서 프로필의 이름을 변경합니다.  
+`[ @profile_id = ] profile_id` 업데이트할 프로필 id입니다. *profile_id* 은 **int**이며 기본값은 NULL입니다. *Profile_id* 또는 *profile_name* 중 하나 이상을 지정 해야 합니다. 둘 다 지정하면 프로시저에서 프로필의 이름을 변경합니다.  
   
-`[ @profile_name = ] 'profile_name'`업데이트할 프로필의 이름 또는 프로필의 새 이름입니다. *profile_name* 는 **sysname**이며 기본값은 NULL입니다. *Profile_id* 또는 *profile_name* 중 하나 이상을 지정 해야 합니다. 둘 다 지정하면 프로시저에서 프로필의 이름을 변경합니다.  
+`[ @profile_name = ] 'profile_name'` 업데이트할 프로필의 이름 또는 프로필의 새 이름입니다. *profile_name* 는 **sysname**이며 기본값은 NULL입니다. *Profile_id* 또는 *profile_name* 중 하나 이상을 지정 해야 합니다. 둘 다 지정하면 프로시저에서 프로필의 이름을 변경합니다.  
   
-`[ @description = ] 'description'`프로필에 대 한 새 설명입니다. *description* 은 **nvarchar (256)** 이며 기본값은 NULL입니다.  
+`[ @description = ] 'description'` 프로필에 대 한 새 설명입니다. *description* 은 **nvarchar (256)** 이며 기본값은 NULL입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -57,7 +58,7 @@ sysmail_update_profile_sp [ [ @profile_id = ] profile_id , ] [ [ @profile_name =
 ## <a name="permissions"></a>사용 권한  
  이 프로시저에 대 한 실행 권한은 기본적으로 **sysadmin** 고정 서버 역할의 멤버로 사용 됩니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  **1. 프로필 설명 변경**  
   
  다음 예에서는 `AdventureWorks Administrator` **msdb** 데이터베이스에 있는 라는 프로필에 대 한 설명을 변경 합니다.  
@@ -83,6 +84,6 @@ EXECUTE msdb.dbo.sysmail_update_profile_sp
  [데이터베이스 메일](../../relational-databases/database-mail/database-mail.md)   
  [데이터베이스 메일 구성 개체](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
  [데이터베이스 메일 계정 만들기](../../relational-databases/database-mail/create-a-database-mail-account.md)   
- [Transact-sql&#41;&#40;저장 프로시저 데이터베이스 메일](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [Transact-sql&#41;&#40;저장 프로시저 데이터베이스 메일 ](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

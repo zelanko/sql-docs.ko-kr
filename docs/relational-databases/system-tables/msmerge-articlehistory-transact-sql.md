@@ -1,4 +1,5 @@
 ---
+description: MSmerge_articlehistory(Transact-SQL)
 title: MSmerge_articlehistory (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 2870e7ea-dbec-4636-9171-c2cee96018ac
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 86f2432073b580dfa59b92683d4401cb53296b02
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b12fea643b97bda83758288459681ff98e9423cf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889883"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454657"
 ---
 # <a name="msmerge_articlehistory-transact-sql"></a>MSmerge_articlehistory(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

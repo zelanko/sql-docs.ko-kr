@@ -1,4 +1,5 @@
 ---
+description: 세션 (Native Client OLE DB 공급자)
 title: 세션 (Native Client OLE DB 공급자)
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ ms.assetid: 3a980816-675c-4fba-acc9-429297d85bbd
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9f75c9fec32105561ce3c07ba29aeec9b4779324
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: ce9c18021d474bfcb4af0e1418e432d779b9376a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245972"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455737"
 ---
 # <a name="sessions-native-client-ole-db-provider"></a>세션 (Native Client OLE DB 공급자)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -181,7 +182,7 @@ EXIT:
 }  
 ```  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 공급자 세션 개체를 인스턴스에 연결 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 하면 세션 개체를 지속적으로 만들고 해제 하는 응용 프로그램에 대해 상당한 오버 헤드가 발생할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 공급자 세션 개체를 효율적으로 관리 하면 오버 헤드를 최소화할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 공급자 응용 프로그램은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체의 인터페이스 하나 이상에 대 한 참조를 유지 하 여 세션 개체의 연결을 활성 상태로 유지할 수 있습니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 공급자 세션 개체를 인스턴스에 연결 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 하면 세션 개체를 지속적으로 만들고 해제 하는 응용 프로그램에 대해 상당한 오버 헤드가 발생할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 공급자 세션 개체를 효율적으로 관리 하면 오버 헤드를 최소화할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 응용 프로그램은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체의 인터페이스 하나 이상에 대 한 참조를 유지 하 여 세션 개체의 연결을 활성 상태로 유지할 수 있습니다.  
   
  예를 들어 명령 만들기 개체 참조 풀을 유지 관리하면 풀에 포함된 이러한 세션 개체에 대해 활성 연결이 유지됩니다. 세션 개체가 필요하면 풀 유지 관리 코드에서 유효한 **IDBCreateCommand** 인터페이스 포인터를 세션이 필요한 애플리케이션 메서드로 전달합니다. 애플리케이션 메서드에 더 이상 세션이 필요하지 않으면 메서드에서 명령 만들기 개체에 대한 애플리케이션 참조를 해제하는 대신 인터페이스 포인터를 다시 풀 유지 관리 코드로 반환합니다.  
   

@@ -1,4 +1,5 @@
 ---
+description: SSMA 프로젝트 작업 (DB2ToSQL)
 title: SSMA 프로젝트 작업 (DB2ToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 07abef8a-28e8-4a66-927c-c9a5b8c938ef
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: d3835e8988a04082d0f4666e0564029de3f767a9
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 2454ec9d594977a89ddf867645bc7e2d8fe26e57
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87933514"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454155"
 ---
 # <a name="working-with-ssma-projects-db2tosql"></a>SSMA 프로젝트 작업 (DB2ToSQL)
 DB2 데이터베이스를로 마이그레이션하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 먼저 SSMA 프로젝트를 만듭니다. 프로젝트는 다음 정보를 포함 하는 파일입니다.  
@@ -23,7 +24,7 @@ DB2 데이터베이스를로 마이그레이션하려면 [!INCLUDE[ssNoVersion](
   
 -   마이그레이션된 개체와 데이터를 받을의 대상 인스턴스에 대 한 메타 데이터 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 입니다.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]연결 정보입니다.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결 정보입니다.  
   
 -   프로젝트 설정.  
   
@@ -71,7 +72,7 @@ DB2 데이터베이스에서로 데이터를 마이그레이션하려면 [!INCLU
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014  
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016  
   
@@ -118,7 +119,7 @@ DB2 데이터베이스에서로 데이터를 마이그레이션하려면 [!INCLU
 마이그레이션 프로세스의 다음 단계는 [DB2 데이터베이스에 연결](https://msdn.microsoft.com/5eb5801d-f0c3-4127-97c0-0b1ef49f4844)하는 것입니다.  
   
 ## <a name="see-also"></a>참고 항목  
-[DB2 데이터베이스를 SQL Server &#40;DB2ToSQL&#41;로 마이그레이션](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
-[DB2 데이터베이스 &#40;DB2ToSQL&#41;에 연결 하는 중](../../ssma/db2/connecting-to-db2-database-db2tosql.md)  
-[SQL Server &#40;DB2eToSQL&#41;에 연결 하는 중](../../ssma/db2/connecting-to-sql-server-db2etosql.md)  
+[DB2 데이터베이스를 SQL Server &#40;DB2ToSQL&#41;로 마이그레이션 ](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
+[DB2 데이터베이스 &#40;DB2ToSQL&#41;에 연결 하는 중 ](../../ssma/db2/connecting-to-db2-database-db2tosql.md)  
+[SQL Server &#40;DB2eToSQL&#41;에 연결 하는 중 ](../../ssma/db2/connecting-to-sql-server-db2etosql.md)  
   

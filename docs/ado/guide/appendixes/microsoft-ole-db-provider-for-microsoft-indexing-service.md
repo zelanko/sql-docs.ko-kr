@@ -1,4 +1,5 @@
 ---
+description: Microsoft 인덱싱 서비스에 대 한 microsoft OLE DB 공급자 개요
 title: Microsoft 인덱싱 서비스용 microsoft OLE DB 공급자 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f86a0598-5097-471b-8318-d2c859d085f2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e4bc6669f961e712ced994a590348604e7bd3274
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: dd6e4c3a60cd0c052fec7b474154684ef6c03127
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760479"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454085"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-indexing-service-overview"></a>Microsoft 인덱싱 서비스에 대 한 microsoft OLE DB 공급자 개요
 Microsoft OLE DB Provider for Microsoft 인덱싱 서비스는 파일 시스템에 대 한 읽기 전용 액세스와 Microsoft 인덱싱 서비스에서 인덱싱된 웹 데이터에 대 한 읽기 전용 액세스를 제공 합니다. ADO 응용 프로그램은 SQL 쿼리를 실행 하 여 콘텐츠 및 파일 속성 정보를 검색할 수 있습니다.
@@ -85,9 +86,9 @@ MSIDXS
 |[PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md)|읽기 전용|
 |[PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md)|읽기/쓰기|
 |[RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)|읽기 전용|
-|[소스](../../../ado/reference/ado-api/source-property-ado-recordset.md)|읽기/쓰기|
+|[원본](../../../ado/reference/ado-api/source-property-ado-recordset.md)|읽기/쓰기|
 |[State](../../../ado/reference/ado-api/state-property-ado.md)|읽기 전용|
-|[Status](../../../ado/reference/ado-api/status-property-ado-recordset.md)|읽기 전용|
+|[상태](../../../ado/reference/ado-api/status-property-ado-recordset.md)|읽기 전용|
 
  \*이 기능이 **레코드 집합**에 존재 하려면 공급자에서 책갈피를 사용 하도록 설정 해야 합니다.
 
@@ -95,13 +96,13 @@ MSIDXS
 
 |메서드|사용 가능 여부|
 |------------|----------------|
-|[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|아니요|
+|[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|예|
 |[취소](../../../ado/reference/ado-api/cancel-method-ado.md)|예|
-|[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|아니요|
-|[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|아니요|
+|[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|예|
+|[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|예|
 |[복제](../../../ado/reference/ado-api/clone-method-ado.md)|예|
 |[닫기](../../../ado/reference/ado-api/close-method-ado.md)|예|
-|[삭제](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|아니요|
+|[Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|예|
 |[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|예|
 |[이동](../../../ado/reference/ado-api/move-method-ado.md)|예|
 |[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|예|
@@ -110,8 +111,8 @@ MSIDXS
 |[매크로](../../../ado/reference/ado-api/requery-method.md)|예|
 |[다시 동기화](../../../ado/reference/ado-api/resync-method.md)|예|
 |[지원](../../../ado/reference/ado-api/supports-method.md)|예|
-|[업데이트](../../../ado/reference/ado-api/update-method.md)|아니요|
-|[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|아니요|
+|[Update](../../../ado/reference/ado-api/update-method.md)|예|
+|[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|예|
 
  Microsoft 인덱싱 서비스용 Microsoft OLE DB 공급자에 대 한 특정 구현 세부 정보 및 기능 정보는 [OLE DB 프로그래머 가이드](https://msdn.microsoft.com/library/windows/desktop/ms713643.aspx)를 참조 하거나 Windows NT Server 웹 사이트의 웹 서비스 페이지를 방문 하십시오.
 

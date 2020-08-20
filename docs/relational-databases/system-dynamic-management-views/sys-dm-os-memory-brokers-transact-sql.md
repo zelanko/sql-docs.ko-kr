@@ -1,4 +1,5 @@
 ---
+description: sys.dm_os_memory_brokers(Transact-SQL)
 title: sys. dm_os_memory_brokers (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/18/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 48dd6ad9-0d36-4370-8a12-4921d0df4b86
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f6d59886a480f38ce9e734e8dae7baa7604922c8
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: edf0cd2ad0dae2acc6c89be4942c753d33d4c46d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898758"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454895"
 ---
 # <a name="sysdm_os_memory_brokers-transact-sql"></a>sys.dm_os_memory_brokers(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,7 +49,7 @@ ms.locfileid: "85898758"
 |**future_allocations_kb**|**bigint**|다음 몇 초 동안 완료되는 예상 할당 수(LB)입니다.|  
 |**overall_limit_kb**|**bigint**|브로커가 할당할 수 있는 최대 메모리 양 (KB)입니다.|  
 |**last_notification**|**nvarchar(60)**|현재 설정 및 사용량 패턴에 따라 권장되는 메모리 사용량입니다. 유효한 값은 다음과 같습니다.<br /><br /> 증가<br /><br /> 축소<br /><br /> 안정|  
-|**pdw_node_id**|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포가 설정 된 노드의 식별자입니다.|  
+|**pdw_node_id**|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포가 설정 된 노드의 식별자입니다.|  
   
 ## <a name="permissions"></a>사용 권한  
 
@@ -57,7 +58,7 @@ ms.locfileid: "85898758"
   
 ## <a name="see-also"></a>참고 항목  
 
-  [Transact-sql&#41;&#40;운영 체제 관련 동적 관리 뷰 SQL Server](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
+  [Transact-sql&#41;&#40;운영 체제 관련 동적 관리 뷰 SQL Server ](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
   
   
 

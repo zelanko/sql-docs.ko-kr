@@ -1,4 +1,5 @@
 ---
+description: sys.dm_db_stats_properties(Transact-SQL)
 title: sys. dm_db_stats_properties (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/18/2017
@@ -20,12 +21,12 @@ ms.assetid: 8a54889d-e263-4881-9fcb-b1db410a9453
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f7a88ef6865575d8e5c505cd563b463637dd8070
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 241fe5283d5d843bbfb84bec4809dbe5d2c5dc62
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85738703"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455069"
 ---
 # <a name="sysdm_db_stats_properties-transact-sql"></a>sys.dm_db_stats_properties(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -59,7 +60,7 @@ sys.dm_db_stats_properties (object_id, stats_id)
 |modification_counter|**bigint**|통계를 마지막으로 업데이트한 이후 선행 통계 열(히스토그램이 작성된 열)의 총 수정 개수입니다.<br /><br /> 메모리 액세스에 최적화 된 테이블: 시작 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 이 열에는 마지막으로 통계가 업데이트 되었거나 데이터베이스가 다시 시작 된 이후 총 테이블 수정 수가 포함 됩니다.|  
 |persisted_sample_percent|**float**|샘플링 비율을 명시적으로 지정하지 않은 통계 업데이트에 사용되는 샘플 비율을 유지합니다. 값이 0이면 이 통계에 대해 지속 된 샘플 백분율이 설정되지 않습니다.<br /><br /> **적용 대상:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4|  
   
-## <a name="remarks"></a><a name="Remarks"></a> 주의 사항  
+## <a name="remarks"></a><a name="Remarks"></a> 주의  
  **dm_db_stats_properties** 는 다음 조건 중 하나에서 빈 행 집합을 반환 합니다.  
   
 -   **object_id** 또는 **stats_id** 가 NULL입니다.    
@@ -105,9 +106,9 @@ WHERE modification_counter > 1000;
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [DBCC SHOW_STATISTICS &#40;Transact-sql&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
- [sys.debug &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)   
- [Transact-sql&#41;&#40;개체 관련 동적 관리 뷰 및 함수](../../relational-databases/system-dynamic-management-views/object-related-dynamic-management-views-and-functions-transact-sql.md)   
+ [DBCC SHOW_STATISTICS&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
+ [sys.stats&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)   
+ [Transact-sql&#41;&#40;개체 관련 동적 관리 뷰 및 함수 ](../../relational-databases/system-dynamic-management-views/object-related-dynamic-management-views-and-functions-transact-sql.md)   
  [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
  [sys.dm_db_incremental_stats_properties (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-incremental-stats-properties-transact-sql.md)  
  [sys.dm_db_stats_histogram (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md) 

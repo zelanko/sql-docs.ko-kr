@@ -1,4 +1,5 @@
 ---
+description: sys.dm_exec_cached_plans(Transact-SQL)
 title: sys. dm_exec_cached_plans (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/18/2017
@@ -20,12 +21,12 @@ ms.assetid: 95b707d3-3a93-407f-8e88-4515d4f2039d
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 214c5aed0447fe63b941e32a13a4306b1a0209a3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 378d6c50e6842c2bd954427a2583b2c016393231
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85676844"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454965"
 ---
 # <a name="sysdm_exec_cached_plans-transact-sql"></a>sys.dm_exec_cached_plans(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -48,7 +49,7 @@ ms.locfileid: "85676844"
 |objtype|**nvarchar (16)**|개체의 유형입니다. 다음은 가능한 값과 해당 설명입니다.<br /><br /> Proc: 저장 프로시저<br />준비 됨: 준비 된 문<br />임시: 임시 쿼리 [!INCLUDE[tsql](../../includes/tsql-md.md)]는 원격 프로시저 호출 대신 **osql** 또는 **sqlcmd** 를 사용 하 여 언어 이벤트로 제출 된를 나타냅니다.<br />ReplProc: Replication-filter-프로시저<br />트리거: 트리거<br />보기: 보기<br />기본값: 기본값<br />UsrTab: 사용자 테이블<br />SysTab: 시스템 테이블<br />Check: CHECK 제약 조건<br />규칙: 규칙|  
 |plan_handle|**varbinary(64)**|메모리 내 계획의 식별자입니다. 이 식별자는 일시적이며 계획이 캐시에 있는 동안에만 일정하게 유지됩니다. 이 값은 다음 동적 관리 함수와 함께 사용할 수 있습니다.<br /><br /> [sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)<br /><br /> [sys.dm_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)<br /><br /> [sys.dm_exec_plan_attributes](../../relational-databases/system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql.md)|  
 |pool_id|**int**|이 계획 메모리 사용량이 계산된 리소스 풀의 ID입니다.|  
-|pdw_node_id|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포가 설정 된 노드의 식별자입니다.|  
+|pdw_node_id|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포가 설정 된 노드의 식별자입니다.|  
   
  <sup>1</sup>  
   
@@ -112,8 +113,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;동적 관리 뷰 및 함수](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Transact-sql&#41;&#40;관련 동적 관리 뷰 및 함수 실행](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
+ [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Transact-sql&#41;&#40;관련 동적 관리 뷰 및 함수 실행 ](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
  [dm_exec_query_plan &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)   
  [dm_exec_plan_attributes &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql.md)   
  [dm_exec_sql_text &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
