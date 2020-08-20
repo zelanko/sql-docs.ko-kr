@@ -1,4 +1,5 @@
 ---
+description: ALTER DATABASE(Transact-SQL)
 title: ALTER DATABASE(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/21/2020
@@ -26,12 +27,12 @@ ms.assetid: 15f8affd-8f39-4021-b092-0379fc6983da
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 0c45877355d5cb47b8c9ba4ee86784c17d30a816
-ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
+ms.openlocfilehash: 553d84c62dfb9de6bc1bd18cde7b09965bfdf0d9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87988294"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467335"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE(Transact-SQL)
 
@@ -452,7 +453,7 @@ MODIFY (MAXSIZE **=** [100MB \| 500MB \| 1 \| 1024...4096]GB) 데이터베이스
 |500GB|해당 없음|√|√|√ (D)|√|
 |750GB|해당 없음|√|√|√|√|
 |1024GB|해당 없음|√|√|√|√ (D)|
-|1024GB에서 최대 4096GB(256 GB*로 증분)|해당 없음|N/A|N/A|해당 없음|√|
+|1024GB에서 최대 4096GB(256 GB*로 증분)|N/A|N/A|해당 없음|해당 없음|√|
 
 \* P11과 P15는 기본 크기인 1024를 사용하여 MAXSIZE를 최대 4TB까지 허용합니다. P11 및 P15는 추가 비용 없이 최대 4TB가 포함된 스토리지를 사용할 수 있습니다. 프리미엄 계층에서 1TB 초과 MAXSIZE는 현재 다음 지역에서 사용할 수 있습니다. 미국 동부2, 미국 서부, US Gov 버지니아, 서유럽, 독일 중부, 동남 아시아, 일본 동부, 오스트레일리아 동부, 캐나다 중부 및 캐나다 동부. DTU 모델에 대한 리소스 제한에 관한 자세한 내용은 [DTU 리소스 제한](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits)을 참조하세요.
 

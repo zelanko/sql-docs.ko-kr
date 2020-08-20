@@ -1,4 +1,5 @@
 ---
+description: CREATE TABLE(SQL Server)
 title: CREATE TABLE(SQL Graph) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/09/2019
@@ -32,12 +33,12 @@ ms.assetid: ''
 author: shkale-msft
 ms.author: shkale
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 06a5284d057467ad687a503af0f70be8b01c2154
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 0653d3be257c77ab0eba1410104818d72c810c77
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483797"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467201"
 ---
 # <a name="create-table-sql-graph"></a>CREATE TABLE(SQL Server)
 [!INCLUDE[SQL Server 2017](../../includes/applies-to-version/sqlserver2017.md)]
@@ -136,7 +137,7 @@ Stretch Database는 노드 또는 에지 테이블에서 지원되지 않습니�
 분할되지 않은 그래프 노드/에지 테이블은 분할된 그래프 노드/에지 테이블로 변경할 수 없습니다. 
   
  
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-create-a-node-table"></a>A. `NODE` 테이블 만들기
  다음 예에서는 `NODE` 테이블을 만드는 방법을 보여 줍니다.

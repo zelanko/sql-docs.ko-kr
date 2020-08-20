@@ -1,4 +1,5 @@
 ---
+description: CREATE TABLE AS SELECT(Azure SQL Data Warehouse)
 title: CREATE TABLE AS SELECT(Azure SQL Data Warehouse) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/07/2016
@@ -11,12 +12,12 @@ ms.assetid: d1e08f88-64ef-4001-8a66-372249df2533
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 6da86a89421fcee2c60bd0a46392dc1acc4cdd46
-ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
+ms.openlocfilehash: a3d851f7b9f2b1d6414d5c29d79983655a13fd3d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2020
-ms.locfileid: "86279519"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467203"
 ---
 # <a name="create-table-as-select-azure-sql-data-warehouse"></a>CREATE TABLE AS SELECT(Azure SQL Data Warehouse)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -175,29 +176,29 @@ CTAS를 사용하여 테이블을 만드는데 성능이 중요하지 않은 경
 ```sql
 CREATE TABLE FactInternetSales
 (
-    ProductKey int NOT NULL,
-    OrderDateKey int NOT NULL,
-    DueDateKey int NOT NULL,
-    ShipDateKey int NOT NULL,
-    CustomerKey int NOT NULL,
-    PromotionKey int NOT NULL,
-    CurrencyKey int NOT NULL,
-    SalesTerritoryKey int NOT NULL,
-    SalesOrderNumber nvarchar(20) NOT NULL,
-    SalesOrderLineNumber tinyint NOT NULL,
-    RevisionNumber tinyint NOT NULL,
-    OrderQuantity smallint NOT NULL,
-    UnitPrice money NOT NULL,
-    ExtendedAmount money NOT NULL,
-    UnitPriceDiscountPct float NOT NULL,
-    DiscountAmount float NOT NULL,
-    ProductStandardCost money NOT NULL,
-    TotalProductCost money NOT NULL,
-    SalesAmount money NOT NULL,
-    TaxAmt money NOT NULL,
-    Freight money NOT NULL,
-    CarrierTrackingNumber nvarchar(25),
-    CustomerPONumber nvarchar(25)
+    ProductKey INT NOT NULL,
+    OrderDateKey INT NOT NULL,
+    DueDateKey INT NOT NULL,
+    ShipDateKey INT NOT NULL,
+    CustomerKey INT NOT NULL,
+    PromotionKey INT NOT NULL,
+    CurrencyKey INT NOT NULL,
+    SalesTerritoryKey INT NOT NULL,
+    SalesOrderNumber NVARCHAR(20) NOT NULL,
+    SalesOrderLineNumber TINYINT NOT NULL,
+    RevisionNumber TINYINT NOT NULL,
+    OrderQuantity SMALLINT NOT NULL,
+    UnitPrice MONEY NOT NULL,
+    ExtendedAmount MONEY NOT NULL,
+    UnitPriceDiscountPct FLOAT NOT NULL,
+    DiscountAmount FLOAT NOT NULL,
+    ProductStandardCost MONEY NOT NULL,
+    TotalProductCost MONEY NOT NULL,
+    SalesAmount MONEY NOT NULL,
+    TaxAmt MONEY NOT NULL,
+    Freight MONEY NOT NULL,
+    CarrierTrackingNumber NVARCHAR(25),
+    CustomerPONumber NVARCHAR(25)
 );
 ```
 
@@ -242,11 +243,11 @@ DROP TABLE FactInternetSales_old;
 
 이 예제에서는 CTAS를 사용하여 DimCustomer2 테이블의 여러 열에 대해 데이터 형식, NULL 허용 여부 및 데이터 정렬을 변경합니다.  
   
-```  
+```sql  
 -- Original table 
 CREATE TABLE [dbo].[DimCustomer2] (  
-    [CustomerKey] int NOT NULL,  
-    [GeographyKey] int NULL,  
+    [CustomerKey] INT NOT NULL,  
+    [GeographyKey] INT NULL,  
     [CustomerAlternateKey] nvarchar(15) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL  
 )  
 WITH (CLUSTERED COLUMNSTORE INDEX, DISTRIBUTION = HASH([CustomerKey]));  
@@ -270,15 +271,15 @@ FROM [dbo].[DimCustomer2]
   
 -- Resulting table 
 CREATE TABLE [dbo].[test] (
-    [CustomerKeyNoChange] int NOT NULL, 
-    [CustomerKeyChangeNullable] int NULL, 
-    [CustomerKeyChangeDataTypeNullable] decimal(10, 2) NULL, 
-    [CustomerKeyChangeDataTypeNotNullable] decimal(10, 2) NOT NULL, 
-    [GeographyKeyNoChange] int NULL, 
-    [GeographyKeyChangeNotNullable] int NOT NULL, 
-    [CustomerAlternateKeyNoChange] nvarchar(15) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL, 
-    [CustomerAlternateKeyNullable] nvarchar(15) COLLATE SQL_Latin1_General_CP1_CI_AS NULL, 
-    [CustomerAlternateKeyChangeCollation] nvarchar(15) COLLATE Latin1_General_CS_AS_KS_WS NOT NULL
+    [CustomerKeyNoChange] INT NOT NULL, 
+    [CustomerKeyChangeNullable] INT NULL, 
+    [CustomerKeyChangeDataTypeNullable] DECIMAL(10, 2) NULL, 
+    [CustomerKeyChangeDataTypeNotNullable] DECIMAL(10, 2) NOT NULL, 
+    [GeographyKeyNoChange] INT NULL, 
+    [GeographyKeyChangeNotNullable] INT NOT NULL, 
+    [CustomerAlternateKeyNoChange] NVARCHAR(15) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL, 
+    [CustomerAlternateKeyNullable] NVARCHAR(15) COLLATE SQL_Latin1_General_CP1_CI_AS NULL, 
+    [CustomerAlternateKeyChangeCollation] NVARCHAR(15) COLLATE Latin1_General_CS_AS_KS_WS NOT NULL
 )
 WITH (DISTRIBUTION = ROUND_ROBIN);
 ```
@@ -307,7 +308,7 @@ DROP TABLE DimCustomer2_old;
 
 이 예에서는 AdventureWorksDW 예제 데이터베이스를 사용합니다. SQL Data Warehouse 버전을 로드하는 방법은 [SQL Data Warehouse에 샘플 데이터 로드](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-load-sample-databases/)를 참조하세요.
  
-```
+```sql
 -- DimSalesTerritory is hash-distributed.
 -- Copy it to a round-robin table.
 CREATE TABLE [dbo].[myTable]   
@@ -324,11 +325,10 @@ RENAME OBJECT [dbo].[DimSalesTerritory] to [DimSalesTerritory_old];
 RENAME OBJECT [dbo].[myTable] TO [DimSalesTerritory];
 
 DROP TABLE [dbo].[DimSalesTerritory_old];
-
 ```  
 다음으로 이 테이블을 다시 해시 배포 테이블로 변경합니다.
 
-```
+```sql
 -- You just made DimSalesTerritory a round-robin table.
 -- Change it back to the original hash-distributed table. 
 CREATE TABLE [dbo].[myTable]   
@@ -354,7 +354,7 @@ DROP TABLE [dbo].[DimSalesTerritory_old];
 
 이 예제는 라운드 로빈 또는 해시 배포 테이블을 복제된 테이블로 변환하는 경우에 적용됩니다. 이 특정 예제에서는 이전의 배포 유형 변경 방법을 선택하고 한 단계를 더 실행합니다.  DimSalesTerritory는 하나의 차원이고 더 작은 테이블일 가능성이 있으므로 다른 테이블에 조인할 때 데이터 이동을 방지하기 위해 테이블을 복제본으로 다시 만드는 방법을 선택할 수 있습니다. 
 
-```
+```sql
 -- DimSalesTerritory is hash-distributed.
 -- Copy it to a replicated table.
 CREATE TABLE [dbo].[myTable]   
@@ -378,7 +378,7 @@ DROP TABLE [dbo].[DimSalesTerritory_old];
 
 다음 예제에서는 `myTable (c, ln)`이라는 라운드 로빈 배포 테이블을 만듭니다. 새 테이블은 열을 두 개만 포함하며 SELECT 문에 열 이름으로 열 별칭을 사용합니다.  
   
-```  
+```sql  
 CREATE TABLE myTable  
 WITH   
   (   
@@ -386,8 +386,7 @@ WITH
     DISTRIBUTION = ROUND_ROBIN  
   )  
 AS SELECT CustomerKey AS c, LastName AS ln  
-    FROM dimCustomer;  
-  
+    FROM dimCustomer; 
 ```  
 
 <a name="examples-query-hints-bk"></a>
@@ -401,7 +400,7 @@ AS SELECT CustomerKey AS c, LastName AS ln
   
 이 쿼리는 CTAS 문에 쿼리 조인 힌트를 사용하는 기본 구문을 보여줍니다. 쿼리가 제출된 후 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]는 각 개별 배포에 대한 쿼리 계획을 생성할 때 해시 조인 방법을 적용합니다. 해시 조인 쿼리 힌트에 대한 자세한 내용은 [OPTION 절 &#40;Transact-SQL&#41;](../../t-sql/queries/option-clause-transact-sql.md)을 참조하세요.  
   
-```  
+```sql  
 CREATE TABLE dbo.FactInternetSalesNew  
 WITH   
   (   
@@ -426,13 +425,13 @@ OPTION ( HASH JOIN );
   
  다음 예제에서는 Azure Blob Storage 계정의 데이터에 대한 외부 테이블을 정의합니다. 그런 다음, CREATE TABLE AS SELECT를 사용하여 외부 테이블에서 선택합니다. 그러면 Azure Blob Storage의 텍스트로 분리된 파일의 데이터를 가져와서 새 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 테이블에 저장합니다.  
   
-```  
+```sql  
 --Use your own processes to create the text-delimited files on Azure blob storage.  
 --Create the external table called ClickStream.  
 CREATE EXTERNAL TABLE ClickStreamExt (   
-    url varchar(50),  
-    event_date date,  
-    user_IP varchar(50)  
+    url VARCHAR(50),  
+    event_date DATE,  
+    user_IP VARCHAR(50)  
 )  
 WITH (  
     LOCATION='/logs/clickstream/2015/',  
@@ -461,12 +460,12 @@ AS SELECT * FROM ClickStreamExt
   
  다음 예제에서는 Hadoop 클러스터에 외부 테이블을 정의합니다. 그런 다음, CREATE TABLE AS SELECT를 사용하여 외부 테이블에서 선택합니다. 이렇게 해서 Hadoop의 텍스트로 분리된 파일의 데이터를 가져와서 새 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 테이블에 저장합니다.  
   
-```  
+```sql  
 -- Create the external table called ClickStream.  
 CREATE EXTERNAL TABLE ClickStreamExt (   
-    url varchar(50),  
-    event_date date,  
-    user_IP varchar(50)  
+    url VARCHAR(50),  
+    event_date DATE,  
+    user_IP VARCHAR(50)  
 )  
 WITH (  
     LOCATION = 'hdfs://MyHadoop:5000/tpch1GB/employee.tbl',  
@@ -538,8 +537,8 @@ ANSI 조인 구문을 사용하여 UPDATE 또는 DELETE를 수행하여 두 개 
 ```sql
 CREATE TABLE [dbo].[AnnualCategorySales]
 (   [EnglishProductCategoryName]    NVARCHAR(50)    NOT NULL
-,   [CalendarYear]                  SMALLINT        NOT NULL
-,   [TotalSalesAmount]              MONEY           NOT NULL
+,   [CalendarYear]          SMALLINT    NOT NULL
+,   [TotalSalesAmount]      MONEY       NOT NULL
 )
 WITH
 (
@@ -684,8 +683,8 @@ RENAME OBJECT dbo.[DimProduct_upsert]  TO [DimProduct];
 SQL Server 코드를 SQL Data Warehouse로 마이그레이션하는 경우 이 형식의 코딩 패턴을 발견할 것입니다.
 
 ```sql
-DECLARE @d decimal(7,2) = 85.455
-,       @f float(24)    = 85.455
+DECLARE @d DECIMAL(7,2) = 85.455
+,       @f FLOAT(24)    = 85.455
 
 CREATE TABLE result
 (result DECIMAL(7,2) NOT NULL
@@ -702,8 +701,8 @@ SELECT @d*@f
 다음 코드는 동일한 결과를 산출하지 않습니다.
 
 ```sql
-DECLARE @d decimal(7,2) = 85.455
-,       @f float(24)    = 85.455
+DECLARE @d DECIMAL(7,2) = 85.455
+,       @f FLOAT(24)    = 85.455
 ;
 
 CREATE TABLE ctas_r
@@ -740,8 +739,8 @@ from ctas_r
 아래 예제는 이 코드를 올바르게 수정하는 방법을 보여줍니다.
 
 ```sql
-DECLARE @d decimal(7,2) = 85.455
-,       @f float(24)    = 85.455
+DECLARE @d DECIMAL(7,2) = 85.455
+,       @f FLOAT(24)    = 85.455
 
 CREATE TABLE ctas_r
 WITH (DISTRIBUTION = ROUND_ROBIN)

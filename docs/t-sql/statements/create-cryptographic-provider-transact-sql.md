@@ -1,4 +1,5 @@
 ---
+description: CREATE CRYPTOGRAPHIC PROVIDER(Transact-SQL)
 title: CREATE CRYPTOGRAPHIC PROVIDER(Transact-SQL) | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 059a39a6-9d32-4d3f-965b-0a1ce75229c7
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 10d3716351aecc982ad060cd9795c029401a48a3
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: b1a12f2c53409148854b806f1141bf46acad8a4e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86392821"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467266"
 ---
 # <a name="create-cryptographic-provider-transact-sql"></a>CREATE CRYPTOGRAPHIC PROVIDER(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -69,7 +70,7 @@ CREATE CRYPTOGRAPHIC PROVIDER provider_name
 ## <a name="permissions"></a>사용 권한  
  CONTROL SERVER 권한 또는 **sysadmin** 고정 서버 역할의 멤버 자격이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 .dll 파일로부터 `SecurityProvider`라는 암호화 공급자를 만듭니다. .dll 파일의 이름은 `c:\SecurityProvider\SecurityProvider_v1.dll`이고 이 파일은 서버에 설치됩니다. 먼저 공급자의 인증서가 서버에 설치되어 있어야 합니다.  
   
 ```  

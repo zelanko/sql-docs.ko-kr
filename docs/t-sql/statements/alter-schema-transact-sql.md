@@ -1,4 +1,5 @@
 ---
+description: ALTER SCHEMA(Transact-SQL)
 title: ALTER SCHEMA(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2020
@@ -22,12 +23,12 @@ ms.assetid: 0a760138-460e-410a-a3c1-d60af03bf2ed
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 47df9b8bb3d6beb5706bff8869d92b351e855f5b
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+ms.openlocfilehash: f473f450b97d86b0b9435d833c3674dfe8c0a2f9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86380986"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467388"
 ---
 # <a name="alter-schema-transact-sql"></a>ALTER SCHEMA(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -104,7 +105,7 @@ ALTER SCHEMA schema_name
 ### <a name="a-transferring-ownership-of-a-table"></a>A. 테이블의 소유권 이전  
  다음 예제에서는 `Address` 테이블을 `Person` 스키마에서 ‘HumanResources’ 스키마로 이동하여 `HumanResources` 스키마를 수정합니다.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 ALTER SCHEMA HumanResources TRANSFER Person.Address;  
@@ -114,11 +115,11 @@ GO
 ### <a name="b-transferring-ownership-of-a-type"></a>B. 형식의 소유권 이전  
  다음 예에서는 `Production` 스키마에 형식을 만든 다음 해당 형식을 `Person` 스키마로 전송합니다.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
   
-CREATE TYPE Production.TestType FROM [varchar](10) NOT NULL ;  
+CREATE TYPE Production.TestType FROM [VARCHAR](10) NOT NULL ;  
 GO  
   
 -- Check the type owner.  
@@ -145,10 +146,10 @@ GO
 ### <a name="c-transferring-ownership-of-a-table"></a>C. 테이블의 소유권 이전  
  다음 예는 `dbo` 스키마에 `Region` 테이블을 만들고, `Sales` 스키마를 만든 다음, `Region` 스키마에서 `dbo` 스키마로 `Sales` 테이블을 이동합니다.  
   
-```  
+```sql  
 CREATE TABLE dbo.Region   
-    (Region_id int NOT NULL,  
-    Region_Name char(5) NOT NULL)  
+    (Region_id INT NOT NULL,  
+    Region_Name CHAR(5) NOT NULL)  
 WITH (DISTRIBUTION = REPLICATE);  
 GO  
   

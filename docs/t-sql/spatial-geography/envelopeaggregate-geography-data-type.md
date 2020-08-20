@@ -1,4 +1,5 @@
 ---
+description: EnvelopeAggregate(geography 데이터 형식)
 title: EnvelopeAggregate(geography 데이터 형식) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/30/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4947797f-edb8-490f-beca-37df9ec06954
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 5e90ae8b7716c3ede90a2a80f5c904f0d02216a5
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 9b14db5a616f41049b5cabc845cd822356e34522
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555466"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467533"
 ---
 # <a name="envelopeaggregate-geography-data-type"></a>EnvelopeAggregate(geography 데이터 형식)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -55,7 +56,7 @@ EnvelopeAggregate ( geography_operand )
 > [!NOTE]  
 >  이 메서드는 모든 입력 값이 **null**인 경우 **null**을 반환합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 한 도시 안의 **geography** 위치 지점 집합에서 `EnvelopeAggregate`를 수행합니다.  
   
  ```

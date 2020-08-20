@@ -1,4 +1,5 @@
 ---
+description: 트랜잭션 격리 수준
 title: 트랜잭션 격리 수준 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 02bb71fa-1e92-4782-a9cf-6e256cc1f3ea
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f1532197e46e0ad6ea314ec83acb46b841ed7b72
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f9c3d400f67f42f206c9b6924f3d2ea90445d023
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731385"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467565"
 ---
 # <a name="transaction-isolation-levels"></a>트랜잭션 격리 수준
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,7 +52,7 @@ ms.locfileid: "85731385"
 |격리 수준|지원됨|보장됨|  
 |---------------------|---------------|-------------|  
 |READ UNCOMMITTED|예|보장되지 않음|  
-|READ COMMITTED|yes|yes|  
+|READ COMMITTED|yes|예|  
 |REPEATABLE READ|예|예|  
 |SNAPSHOT ISOLATION|예|예|  
 |직렬화 가능|예|예|  

@@ -1,4 +1,5 @@
 ---
+description: OPEN(Transact-SQL)
 title: OPEN(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -21,17 +22,17 @@ helpviewer_keywords:
 ms.assetid: fd1c5e3b-6045-4a42-b646-3fca76e874c1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 73199a9dba314f845c8dbb4268da0cc4fd0f4af4
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 478c8c846f075c6d9a9705e978a53236a65e3536
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919917"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467594"
 ---
 # <a name="open-transact-sql"></a>OPEN(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  DECLARE CURSOR 또는 SET [!INCLUDE[tsql](../../includes/tsql-md.md)]cursor_variable[!INCLUDE[tsql](../../includes/tsql-md.md)] 문에 지정된 *문을 실행하여* 서버 커서를 열고 커서를 채웁니다.  
+  DECLARE CURSOR 또는 SET *cursor_variable* 문에 지정된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 실행하여 [!INCLUDE[tsql](../../includes/tsql-md.md)] 서버 커서를 열고 커서를 채웁니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -62,7 +63,7 @@ OPEN { { [ GLOBAL ] cursor_name } | cursor_variable_name }
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 키 집합 커서 또는 정적 [!INCLUDE[tsql](../../includes/tsql-md.md)] 커서를 비동기식으로 생성할 수 없습니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 커서 작업은 일괄 처리되므로 [!INCLUDE[tsql](../../includes/tsql-md.md)] 커서를 비동기식으로 생성하지 않아도 됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 각 커서 작업의 클라이언트 왕복 때문에 짧은 대기 시간 OPEN이 문제가 되는 비동기 키 집합 기반 또는 정적 API(애플리케이션 프로그래밍 인터페이스) 서버 커서를 계속 지원합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 커서를 열고 모든 행을 인출합니다.  
   
 ```  
@@ -88,6 +89,6 @@ DEALLOCATE Employee_Cursor;
  [@@CURSOR_ROWS&#40;Transact-SQL&#41;](../../t-sql/functions/cursor-rows-transact-sql.md)   
  [DEALLOCATE &#40;Transact-SQL&#41;](../../t-sql/language-elements/deallocate-transact-sql.md)   
  [DECLARE CURSOR&#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-cursor-transact-sql.md)   
- [FETCH&#40;Transact-SQL&#41;](../../t-sql/language-elements/fetch-transact-sql.md)  
+ [FETCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/fetch-transact-sql.md)  
   
   

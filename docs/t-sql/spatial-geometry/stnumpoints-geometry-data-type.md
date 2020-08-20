@@ -1,4 +1,5 @@
 ---
+description: STNumPoints(geometry 데이터 형식)
 title: STNumPoints(geometry 데이터 형식) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a19520fc-7f91-4a2c-856f-4d8b99a7e496
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 32770e46a7df18e588d5afe9de17a63e2eee4b91
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 60c48dd009ed98e4faf5229f9f005f3bd5fb6ad9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86552806"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467390"
 ---
 # <a name="stnumpoints-geometry-data-type"></a>STNumPoints(geometry 데이터 형식)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -46,7 +47,7 @@ ms.locfileid: "86552806"
 ## <a name="remarks"></a>설명  
  이 메서드는 **geometry** 인스턴스의 설명에 있는 점을 셉니다. 중복 점도 개수에 포함됩니다. 이 인스턴스가 **collection** 형식인 경우 이 메서드는 컬렉션의 각 요소에 있는 점의 총 개수를 반환합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `LineString` 인스턴스를 만들고 `STNumPoints()`를 사용하여 인스턴스의 설명에 사용된 점의 수를 확인합니다.  
   
 ```  

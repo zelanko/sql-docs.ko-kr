@@ -1,4 +1,5 @@
 ---
+description: Long(geography 데이터 형식)
 title: Long(geography 데이터 형식) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/02/2016
@@ -17,22 +18,22 @@ helpviewer_keywords:
 ms.assetid: bedbeced-70b8-4569-84f3-f86bfb04ce50
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 7c3a5096426aa6fbfa69da1eacab3d0cd80f72ed
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 774ea7421e7616976bcedc1c848620accf8c07d7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86556178"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467501"
 ---
 # <a name="long-geography-data-type"></a>Long(geography 데이터 형식)
+
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   **geography** 인스턴스의 경도 속성을 반환합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
-  
+```syntaxsql
 .Long  
 ```  
 
@@ -41,12 +42,12 @@ ms.locfileid: "86556178"
 ## <a name="return-value"></a>Return Value  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 형식: **float**  
   
- CLR 형식: **SqlDouble**  
+ CLR 유형: **SqlDouble**  
   
 ## <a name="remarks"></a>설명  
  OpenGIS 모델에서는 하나의 점으로 구성된 **geography** 인스턴스에 대해서만 Long이 정의됩니다. **geography** 인스턴스에 둘 이상의 지점이 포함되어 있는 경우 이 속성은 NULL을 반환합니다. 이 속성은 정확하며 읽기 전용입니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 **Point** 인스턴스를 만들고 점의 경도를 검색합니다.  
   
 ```  

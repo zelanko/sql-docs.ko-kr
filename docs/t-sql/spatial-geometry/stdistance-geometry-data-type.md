@@ -1,4 +1,5 @@
 ---
+description: STDistance(geometry 데이터 형식)
 title: STDistance(geometry 데이터 형식) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ac815bc7-5342-4cc4-af40-c80a1c4c8b68
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 5bcb10fc64d6bac02b8ecc6faba0c8d7662b0adc
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 48ae04bdc272bcb7513fe4c2ac1d474406b4ba04
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555038"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467377"
 ---
 # <a name="stdistance-geometry-data-type"></a>STDistance(geometry 데이터 형식)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -50,7 +51,7 @@ ms.locfileid: "86555038"
 ## <a name="remarks"></a>설명  
  `STDistance()`는 **geometry** 인스턴스의 SRID(spatial Reference ID)가 일치하지 않으면 항상 Null을 반환합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ```  
 DECLARE @g geometry;  

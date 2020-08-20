@@ -1,4 +1,5 @@
 ---
+description: ALTER SEARCH PROPERTY LIST(Transact-SQL)
 title: ALTER SEARCH PROPERTY LIST (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/10/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 0436e4a8-ca26-4d23-93f1-e31e2a1c8bfb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 840ae1f66eb9bbc8d578a677f743df679d08eb83
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+ms.openlocfilehash: b4a16ec827c742bd99cbc543c57c4e3c7b13c247
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86380996"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467314"
 ---
 # <a name="alter-search-property-list-transact-sql"></a>ALTER SEARCH PROPERTY LIST(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -74,7 +75,7 @@ SELECT name FROM sys.registered_search_property_lists;
  *property_name*  
  전체 텍스트 쿼리에서 속성을 식별하는 데 사용할 이름을 지정합니다. *property_name*은 속성 집합 내에서 해당 속성을 고유하게 식별해야 합니다. 속성 이름은 내부에 공백을 포함할 수 있습니다. *property_name*의 최대 길이는 256자입니다. "작성자"나 "집 주소"와 같은 친숙한 단어 또는 **System.Author**나 **System.Contact.HomeAddress**와 같은 Windows 정식 속성 이름을 이 이름에 사용할 수 있습니다.  
   
- 개발자는 *CONTAINS* 조건자에 있는 속성을 식별하기 위해 [property_name](../../t-sql/queries/contains-transact-sql.md)에 지정된 값을 사용해야 합니다. 따라서 속성을 추가할 때는 지정된 속성 집합 GUID(*property_set_guid*) 및 속성 식별자(*property_int_id*)로 정의된 속성을 의미 있게 나타내는 값을 지정해야 합니다. 속성 이름에 대한 자세한 내용은 이 항목의 뒷부분에 나오는 "주의"를 참조하십시오.  
+ 개발자는 [CONTAINS](../../t-sql/queries/contains-transact-sql.md) 조건자에 있는 속성을 식별하기 위해 *property_name*에 지정된 값을 사용해야 합니다. 따라서 속성을 추가할 때는 지정된 속성 집합 GUID(*property_set_guid*) 및 속성 식별자(*property_int_id*)로 정의된 속성을 의미 있게 나타내는 값을 지정해야 합니다. 속성 이름에 대한 자세한 내용은 이 항목의 뒷부분에 나오는 "주의"를 참조하십시오.  
   
  현재 데이터베이스의 검색 속성 목록에 현재 존재하는 속성의 이름을 보려면 다음과 같이 [sys.registered_search_properties](../../relational-databases/system-catalog-views/sys-registered-search-properties-transact-sql.md) 카탈로그 뷰를 사용하십시오.  
   
@@ -158,7 +159,7 @@ GO
 ## <a name="related-references"></a>관련 참조  
  **속성 목록을 만들려면**  
   
--   [CREATE SEARCH PROPERTY LIST&#40;Transact-SQL&#41;](../../t-sql/statements/create-search-property-list-transact-sql.md)  
+-   [CREATE SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](../../t-sql/statements/create-search-property-list-transact-sql.md)  
   
  **속성 목록을 삭제하려면**  
   
@@ -175,7 +176,7 @@ GO
 ##  <a name="permissions"></a><a name="Permissions"></a> 권한  
  속성 목록에 대한 CONTROL 권한이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-adding-a-property"></a>A. 속성 추가  
  다음 예제에서는 `Title`, `Author` 및 `Tags`와 같은 여러 속성을 `DocumentPropertyList`라는 속성 목록에 추가합니다.  

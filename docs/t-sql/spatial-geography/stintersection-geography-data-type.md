@@ -1,4 +1,5 @@
 ---
+description: STIntersection(geography 데이터 형식)
 title: STIntersection(geography 데이터 형식) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7e09468f-499f-4a38-ba4b-bb30b8821e3b
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 9107a97c775aaf5b249ee0a16e8e916c700d00a4
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 26df98e23bc24c0f1c112ffa2a07600cc753cb1d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554398"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467489"
 ---
 # <a name="stintersection-geography-data-type"></a>STIntersection(geography 데이터 형식)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -56,7 +57,7 @@ ms.locfileid: "86554398"
   
  입력 인스턴스에 원호 세그먼트가 있을 경우에만 결과에 원호 세그먼트가 포함될 수 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-computing-the-intersection-of-a-polygon-and-a-linestring"></a>A. Polygon 및 LineString의 교집합 계산  
  다음 예에서는 `STIntersection()`을 사용하여 `Polygon`과 `LineString`의 교차점을 컴퓨팅합니다.  
@@ -89,6 +90,6 @@ SELECT @g.STIntersection('FULLGLOBE').ToString();
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [지리 인스턴스의 OGC 메서드](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
+ [geography 인스턴스의 OGC 메서드](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

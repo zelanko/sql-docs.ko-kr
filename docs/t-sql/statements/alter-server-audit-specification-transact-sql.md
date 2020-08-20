@@ -1,4 +1,5 @@
 ---
+description: ALTER SERVER AUDIT SPECIFICATION(Transact-SQL)
 title: ALTER SERVER AUDIT SPECIFICATION(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/01/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 9cac288b-940e-4c16-88d6-de06aeed2b47
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 3b955c95df0af36bac4f249aab547310d46a6220
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+ms.openlocfilehash: fd2163114fb0b2ad6d21ca2ed827db160819c8ff
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86381207"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467280"
 ---
 # <a name="alter-server-audit-specification-transact-sql"></a>ALTER SERVER AUDIT SPECIFICATION(Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -70,8 +71,8 @@ ALTER SERVER AUDIT SPECIFICATION audit_specification_name
   
  만들어진 서버 감사 사양은 CONTROL SERVER 또는 ALTER ANY SERVER AUDIT 권한이 있는 보안 주체, sysadmin 계정 또는 감사에 대한 명시적인 액세스가 있는 보안 주체가 볼 수 있습니다.  
   
-## <a name="examples"></a>예  
- 다음 예에서는 `HIPAA_Audit_Specification`이라는 서버 감사 사양을 만듭니다. 이 예에서는 실패한 로그인에 대한 감사 동작 그룹을 삭제하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]라는 `HIPAA_Audit` Audit에 대해 데이터베이스 개체 액세스에 대한 감사 동작 그룹을 추가합니다.  
+## <a name="examples"></a>예제  
+ 다음 예에서는 `HIPAA_Audit_Specification`이라는 서버 감사 사양을 만듭니다. 이 예에서는 실패한 로그인에 대한 감사 동작 그룹을 삭제하고 `HIPAA_Audit`라는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit에 대해 데이터베이스 개체 액세스에 대한 감사 동작 그룹을 추가합니다.  
   
 ```  
 ALTER SERVER AUDIT SPECIFICATION HIPAA_Audit_Specification  
@@ -85,7 +86,7 @@ GO
  감사를 만드는 방법에 대한 전체 예에 대해서는 [SQL Server Audit &#40;Database Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)를 참조하십시오.  
   
 
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   
  [ALTER SERVER AUDIT  &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-transact-sql.md)   
  [DROP SERVER AUDIT  &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-transact-sql.md)   

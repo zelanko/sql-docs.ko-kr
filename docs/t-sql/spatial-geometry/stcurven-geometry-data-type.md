@@ -1,4 +1,5 @@
 ---
+description: STCurveN(geometry 데이터 형식)
 title: STCurveN(geometry 데이터 형식) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 64adf1a1-3a41-41fb-b7d1-44390c3e4ea9
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 7905da990bf06b79641f19823f954abe201139ad
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: e182b7c5670bd86e0d684d1d8caaea563a2ff456
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555072"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467395"
 ---
 # <a name="stcurven-geometry-data-type"></a>STCurveN(geometry 데이터 형식)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -58,7 +59,7 @@ ms.locfileid: "86555072"
   
 -   **geometry** 인스턴스가 **Point**, **MultiPoint**, **Polygon**, **CurvePolygon** 또는 **MultiPolygon**인 경우  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-using-stcurven-on-a-circularstring-instance"></a>A. CircularString 인스턴스에 STCurveN() 사용  
  다음 예에서는 `CircularString` 인스턴스에 두 번째 곡선을 반환합니다.  

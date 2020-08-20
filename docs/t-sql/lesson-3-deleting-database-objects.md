@@ -1,4 +1,5 @@
 ---
+description: 'T-SQL 자습서: 데이터베이스 개체 삭제'
 title: 'T-SQL 자습서: 데이터베이스 개체 삭제 | Microsoft Docs'
 ms.custom: ''
 ms.date: 07/30/2018
@@ -12,12 +13,12 @@ ms.assetid: ecf26dd5-4535-4ed6-86fc-c73f9d9dedec
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 36b68bb833c5c95beeb65b792b9621f2f9bb9c4f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1a032737a39cf22e1b2d5516c615ced9d59dfc43
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68031574"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467534"
 ---
 # <a name="lesson-3-delete-database-objects"></a>3단원: 데이터베이스 개체 삭제
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]

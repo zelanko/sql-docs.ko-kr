@@ -1,4 +1,5 @@
 ---
+description: STDisjoint(geography 데이터 형식)
 title: STDisjoint(geography 데이터 형식) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 98328a02-e018-47d6-aa93-de162b8aef62
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: fb82d9ff68f8de003d08c8d88caf8e0d06d42b52
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 14dcdd0581f88897f10160d2be70eb01bbd2b018
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555177"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467473"
 ---
 # <a name="stdisjoint-geography-data-type"></a>STDisjoint(geography 데이터 형식)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -52,7 +53,7 @@ ms.locfileid: "86555177"
   
  이 메서드는 **geography** 인스턴스의 SRID(spatial Reference ID)가 일치하지 않으면 항상 Null을 반환합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `STDisjoint()`를 사용하여 두 `geography` 인스턴스가 공간적으로 분리되어 있는지 테스트합니다.  
   
 ```  
@@ -64,6 +65,6 @@ SELECT @g.STDisjoint(@h);
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [지리 인스턴스의 OGC 메서드](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
+ [geography 인스턴스의 OGC 메서드](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

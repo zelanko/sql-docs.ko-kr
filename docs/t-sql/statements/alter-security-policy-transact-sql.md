@@ -1,4 +1,5 @@
 ---
+description: ALTER SECURITY POLICY(Transact-SQL)
 title: ALTER SECURITY POLICY(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/01/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: a8efc37e-113d-489c-babc-b914fea2c316
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0696b96e83aac5ca66b43d38c11adceab702c10f
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: d8267b7583827dce34e46c8f3605912fe72ea72b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112562"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467295"
 ---
 # <a name="alter-security-policy-transact-sql"></a>ALTER SECURITY POLICY(Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -88,7 +89,7 @@ NOT FOR REPLICATION
 table_schema_name.table_name  
 적용된 보안 조건자의 대상 테이블입니다. 사용되지 않도록 설정된 보안 정책은 여러 개가 단일 테이블을 대상으로 할 수 있지만 지정된 시간에 하나만 사용하도록 설정할 수 있습니다.  
   
-## <a name="remarks"></a>설명  
+## <a name="remarks"></a>설명
 ALTER SECURITY POLICY 문은 트랜잭션 범위 내에 있습니다. 트랜잭션이 롤백되면 이 문도 롤백됩니다.  
   
 메모리 최적화 테이블에서 조건자 함수를 사용하는 경우, 보안 정책에 **SCHEMABINDING**를 포함하고 **WITH NATIVE_COMPILATION** 컴파일 힌트를 사용해야 합니다. SCHEMABINDING 인수는 모든 조건자에 적용되므로 ALTER 문으로 변경할 수 없습니다. 스키마 바인딩을 변경하려면 보안 정책을 삭제하고 다시 만들어야 합니다.  
