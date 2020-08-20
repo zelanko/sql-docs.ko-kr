@@ -1,4 +1,5 @@
 ---
+description: sp_detach_db(Transact-SQL)
 title: sp_detach_db (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/30/2015
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: abcb1407-ff78-4c76-b02e-509c86574462
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ee5261834a0eeb11b4f7f6a21ab5110c0d42fd48
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 66f3e4543e3090d3a2bb0fee7179abaf2e017503
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85861117"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474305"
 ---
 # <a name="sp_detach_db-transact-sql"></a>sp_detach_db(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,13 +46,13 @@ sp_detach_db [ @dbname= ] 'database_name'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @dbname = ] 'database_name'`분리할 데이터베이스의 이름입니다. *database_name* 는 **sysname** 값 이며 기본값은 NULL입니다.  
+`[ @dbname = ] 'database_name'` 분리할 데이터베이스의 이름입니다. *database_name* 는 **sysname** 값 이며 기본값은 NULL입니다.  
   
-`[ @skipchecks = ] 'skipchecks'`업데이트 통계를 건너뛸지 아니면 실행할지를 지정 합니다. *skipchecks가* 는 **nvarchar (10)** 값 이며 기본값은 NULL입니다. 업데이트 통계를 건너뛰려면 **true**를 지정 합니다. 업데이트 통계를 명시적으로 실행 하려면 **false**를 지정 합니다.  
+`[ @skipchecks = ] 'skipchecks'` 업데이트 통계를 건너뛸지 아니면 실행할지를 지정 합니다. *skipchecks가* 는 **nvarchar (10)** 값 이며 기본값은 NULL입니다. 업데이트 통계를 건너뛰려면 **true**를 지정 합니다. 업데이트 통계를 명시적으로 실행 하려면 **false**를 지정 합니다.  
   
  기본적으로 UPDATE STATISTICS는 테이블과 인덱스에 있는 데이터에 관한 정보를 업데이트하기 위해 수행됩니다. UPDATE STATISTICS는 읽기 전용 미디어로 이동할 데이터베이스에 수행하면 유용합니다.  
   
-`[ @keepfulltextindexfile = ] 'KeepFulltextIndexFile'`분리 되는 데이터베이스와 연결 된 전체 텍스트 인덱스 파일이 데이터베이스 분리 작업 동안 삭제 되지 않도록 지정 합니다. *KeepFulltextIndexFile* 은 **nvarchar (10)** 값 이며 기본값은 **true**입니다. *KeepFulltextIndexFile* 가 **false**이면 데이터베이스가 읽기 전용이 아니면 데이터베이스와 연결 된 전체 텍스트 인덱스 파일과 전체 텍스트 인덱스의 메타 데이터가 모두 삭제 됩니다. NULL 또는 **true**이면 전체 텍스트 관련 메타 데이터를 유지 합니다.  
+`[ @keepfulltextindexfile = ] 'KeepFulltextIndexFile'` 분리 되는 데이터베이스와 연결 된 전체 텍스트 인덱스 파일이 데이터베이스 분리 작업 동안 삭제 되지 않도록 지정 합니다. *KeepFulltextIndexFile* 은 **nvarchar (10)** 값 이며 기본값은 **true**입니다. *KeepFulltextIndexFile* 가 **false**이면 데이터베이스가 읽기 전용이 아니면 데이터베이스와 연결 된 전체 텍스트 인덱스 파일과 전체 텍스트 인덱스의 메타 데이터가 모두 삭제 됩니다. NULL 또는 **true**이면 전체 텍스트 관련 메타 데이터를 유지 합니다.  
   
 > [!IMPORTANT]
 >  ** \@ Keepfulltextindexfile** 매개 변수는의 이후 버전에서 제거 될 예정 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 입니다. 새 개발 작업에서는 이 매개 변수를 사용하지 말고 현재 이 매개 변수를 사용하는 애플리케이션은 가능한 한 빨리 수정하십시오.  
@@ -68,7 +69,7 @@ sp_detach_db [ @dbname= ] 'database_name'
 > [!NOTE]  
 >  모든 로그인 계정의 기본 데이터베이스를 보는 방법에 대 한 자세한 내용은 [sp_helplogins &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helplogins-transact-sql.md)을 참조 하십시오. 필요한 권한이 있는 경우 [ALTER login](../../t-sql/statements/alter-login-transact-sql.md) 을 사용 하 여 새 기본 데이터베이스를 로그인에 할당할 수 있습니다.  
   
-## <a name="restrictions"></a>제한 사항  
+## <a name="restrictions"></a>제한  
  다음 중 하나라도 해당하는 경우 데이터베이스를 분리할 수 없습니다.  
   
 -   데이터베이스가 현재 사용되고 있는 경우. 자세한 내용은 이 항목의 뒷부분에 나오는 "배타적 액세스 권한 얻기"를 참조하십시오.  
@@ -120,7 +121,7 @@ GO
 ## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할의 멤버 자격 또는 데이터베이스의 **db_owner** 역할의 멤버 자격이 필요 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] *skipchecks가* 가 true로 설정 된 데이터베이스를 분리 합니다.  
   
 ```  

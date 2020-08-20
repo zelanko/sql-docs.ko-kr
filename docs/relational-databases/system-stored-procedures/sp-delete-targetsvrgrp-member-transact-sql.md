@@ -1,4 +1,5 @@
 ---
+description: sp_delete_targetsvrgrp_member(Transact-SQL)
 title: sp_delete_targetsvrgrp_member (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 178a38d9-9b19-4648-95d7-e1397110d14c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 51846fabc42e99ab82bd3a9d6312ba6316c9c651
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2b5bfbe079f5004f7d0da8b42093068ebb57ea74
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85861911"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474322"
 ---
 # <a name="sp_delete_targetsvrgrp_member-transact-sql"></a>sp_delete_targetsvrgrp_member(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,9 +40,9 @@ sp_delete_targetsvrgrp_member [ @group_name = ] 'group_name' , [ server_name = ]
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @group_name = ] 'group_name'`그룹의 이름입니다. *group_name* 는 **sysname**이며 기본값은 없습니다.  
+`[ @group_name = ] 'group_name'` 그룹의 이름입니다. *group_name* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @server_name = ] 'server_name'`지정 된 그룹에서 제거할 서버의 이름입니다. *server_name* 은 **nvarchar (30)** 이며 기본값은 없습니다.  
+`[ @server_name = ] 'server_name'` 지정 된 그룹에서 제거할 서버의 이름입니다. *server_name* 은 **nvarchar (30)** 이며 기본값은 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -52,7 +53,7 @@ sp_delete_targetsvrgrp_member [ @group_name = ] 'group_name' , [ server_name = ]
 ## <a name="permissions"></a>사용 권한  
  이 저장 프로시저를 실행 하려면 사용자에 게 **sysadmin** 고정 서버 역할을 부여 해야 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 Servers Maintaining Customer Information 그룹에서 `LONDON1` 서버를 제거합니다.  
   
 ```  

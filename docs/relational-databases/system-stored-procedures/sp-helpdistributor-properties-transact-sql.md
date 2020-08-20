@@ -1,4 +1,5 @@
 ---
+description: sp_helpdistributor_properties(Transact-SQL)
 title: sp_helpdistributor_properties (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ee267724-3244-49eb-84c9-f38dbefdd639
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: eca0c3f3c03438c9bcc6a715bf06b4aa58f8690a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5760625f8316eeddaa9cf1d3dd429e91932e0d4e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733243"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474065"
 ---
 # <a name="sp_helpdistributor_properties-transact-sql"></a>sp_helpdistributor_properties(Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

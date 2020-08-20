@@ -1,4 +1,5 @@
 ---
+description: sp_delete_log_shipping_alert_job(Transact-SQL)
 title: sp_delete_log_shipping_alert_job (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5d6c7f07-a163-48fa-8c1f-abc252043dde
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: cd6fe49ce56f5df6dffd8616b1ddc6015ed25fb1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ad73b718f2f8f59a4ae7dedd5f5f1cf1e4ee1504
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85863640"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474393"
 ---
 # <a name="sp_delete_log_shipping_alert_job-transact-sql"></a>sp_delete_log_shipping_alert_job(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,7 +55,7 @@ sp_delete_log_shipping_alert_job
 ## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할의 멤버만이 프로시저를 실행할 수 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  이 예제에서는 경고 작업을 삭제 하 **sp_delete_log_shipping_alert_job** 를 실행 하는 방법을 보여 줍니다.  
   
 ```  

@@ -1,4 +1,5 @@
 ---
+description: sp_helpdistpublisher(Transact-SQL)
 title: sp_helpdistpublisher (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f207c22d-8fb2-4756-8a9d-6c51d6cd3470
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ada6e3bd06cdc915f8d34b18434994e9cc662a5e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: cb9bfd2bebe5220d992b92251c79df957f3d7077
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85749329"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474088"
 ---
 # <a name="sp_helpdistpublisher-transact-sql"></a>sp_helpdistpublisher(Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -38,7 +39,7 @@ sp_helpdistpublisher [ [ @publisher=] 'publisher']
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @publisher = ] 'publisher'`속성이 반환 되는 게시자입니다. *publisher* 는 **sysname**이며 기본값은 **%** 입니다.  
+`[ @publisher = ] 'publisher'` 속성이 반환 되는 게시자입니다. *publisher* 는 **sysname**이며 기본값은 **%** 입니다.  
   
 `[ @check_user = ] check_user` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   

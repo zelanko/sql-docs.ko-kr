@@ -1,4 +1,5 @@
 ---
+description: sp_helptrigger(Transact-SQL)
 title: sp_helptrigger (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ ms.assetid: e486d39b-771d-488d-a786-7136433a2203
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 546e980aeb021f57a0267d1f668f7acd181b4dcf
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5e79a0a06b812fedd98ed558c17f00d026bae8ec
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85719273"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473976"
 ---
 # <a name="sp_helptrigger-transact-sql"></a>sp_helptrigger(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -41,9 +42,9 @@ sp_helptrigger [ @tabname = ] 'table'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @tabname = ] 'table'`트리거 정보를 반환할 현재 데이터베이스의 테이블 이름입니다. *테이블* 은 **nvarchar (776)** 이며 기본값은 없습니다.  
+`[ @tabname = ] 'table'` 트리거 정보를 반환할 현재 데이터베이스의 테이블 이름입니다. *테이블* 은 **nvarchar (776)** 이며 기본값은 없습니다.  
   
-`[ @triggertype = ] 'type'`정보를 반환할 DML 트리거의 유형입니다. *type* 은 **char (6)** 이며 기본값은 NULL이 고 다음 값 중 하나일 수 있습니다.  
+`[ @triggertype = ] 'type'` 정보를 반환할 DML 트리거의 유형입니다. *type* 은 **char (6)** 이며 기본값은 NULL이 고 다음 값 중 하나일 수 있습니다.  
   
 |값|설명|  
 |-----------|-----------------|  
@@ -81,7 +82,7 @@ EXEC sp_helptrigger 'Person.Person';
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;저장 프로시저 데이터베이스 엔진](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;저장 프로시저 데이터베이스 엔진 ](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [ALTER TRIGGER&#40;Transact-SQL&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)   
  [CREATE TRIGGER&#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [DROP TRIGGER&#40;Transact-SQL&#41;](../../t-sql/statements/drop-trigger-transact-sql.md)   

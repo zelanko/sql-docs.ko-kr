@@ -1,4 +1,5 @@
 ---
+description: sp_helpdb(Transact-SQL)
 title: sp_helpdb (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4c3e3302-6cf1-4b2b-8682-004049b578c3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3fda6aba2ce361e814a0196db6138b38f13ce359
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c94db417a7257d38f5b607854beeeb5663c30ea7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899574"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474137"
 ---
 # <a name="sp_helpdb-transact-sql"></a>sp_helpdb(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,7 @@ sp_helpdb [ [ @dbname= ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @dbname = ] 'name'`정보를 보고할 대상 데이터베이스의 이름입니다. *name* 은 **sysname**이며 기본값은 없습니다. *Name* 을 지정 하지 않으면은 (는) **sys.debug** 카탈로그 뷰의 모든 데이터베이스에 대 한 보고서를 **sp_helpdb** 합니다.  
+`[ @dbname = ] 'name'` 정보를 보고할 대상 데이터베이스의 이름입니다. *name* 은 **sysname**이며 기본값은 없습니다. *Name* 을 지정 하지 않으면은 (는) **sys.debug** 카탈로그 뷰의 모든 데이터베이스에 대 한 보고서를 **sp_helpdb** 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -66,7 +67,7 @@ sp_helpdb [ [ @dbname= ] 'name' ]
 |**그룹별로**|**nvarchar(128)**|파일이 속한 파일 그룹입니다.<br /><br /> NULL = 로그 파일이며 파일 그룹에 속하지 않습니다.|  
 |**size**|**nvarchar (18)**|파일 크기(MB)입니다.|  
 |**크기**|**nvarchar (18)**|파일이 증가할 수 있는 최대 크기입니다. 이 필드 값이 UNLIMITED이면 디스크가 꽉 찰 때까지 파일이 증가할 수 있음을 의미합니다.|  
-|**growth**|**nvarchar (18)**|파일의 증가분입니다. 공간이 새로 필요할 때마다 파일에 추가되는 공간의 양입니다.|  
+|**성장은**|**nvarchar (18)**|파일의 증가분입니다. 공간이 새로 필요할 때마다 파일에 추가되는 공간의 양입니다.|  
 |**보려면**|**varchar (9)**|파일의 용도입니다. 데이터 파일의 경우 값은 **' 데이터 전용 '** 이 고, 로그 파일의 경우 값은 **' 로그 전용 '** 입니다.|  
   
 ## <a name="remarks"></a>설명  
@@ -77,7 +78,7 @@ sp_helpdb [ [ @dbname= ] 'name' ]
   
  데이터베이스에 액세스할 수 없는 경우 **sp_helpdb** 오류 메시지 15622 및 가능한 데이터베이스에 대 한 정보를 표시 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-returning-information-about-a-single-database"></a>A. 단일 데이터베이스에 대한 정보 반환  
  다음 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에 대한 정보를 표시합니다.  
@@ -95,12 +96,12 @@ GO
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;저장 프로시저 데이터베이스 엔진](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;저장 프로시저 데이터베이스 엔진 ](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [ALTER DATABASE &#40;Transact-SQL &#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
  [sys.databases&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
- [database_files &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
- [sys. 파일 그룹 &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
+ [sys.database_files&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
+ [sys.filegroups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
  [master_files &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

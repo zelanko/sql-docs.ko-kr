@@ -1,4 +1,5 @@
 ---
+description: sp_help_jobserver(Transact-SQL)
 title: sp_help_jobserver (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 57971787-f9f5-4199-9f64-c2b61a308906
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 93511eedfe434419270cccf6c5b4c3c685a8eeef
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8f0093529c27d8dae022e005f92eeaf4f84e99b8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893673"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474182"
 ---
 # <a name="sp_help_jobserver-transact-sql"></a>sp_help_jobserver(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,14 +43,14 @@ sp_help_jobserver
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @job_id = ] job_id`정보를 반환할 작업 id입니다. *job_id* 은 **uniqueidentifier**이며 기본값은 NULL입니다.  
+`[ @job_id = ] job_id` 정보를 반환할 작업 id입니다. *job_id* 은 **uniqueidentifier**이며 기본값은 NULL입니다.  
   
-`[ @job_name = ] 'job_name'`정보를 반환할 작업 이름입니다. *job_name* 는 **sysname**이며 기본값은 NULL입니다.  
+`[ @job_name = ] 'job_name'` 정보를 반환할 작업 이름입니다. *job_name* 는 **sysname**이며 기본값은 NULL입니다.  
   
 > [!NOTE]  
 >  *Job_id* 또는 *job_name* 를 지정 해야 하지만 둘 다 지정할 수는 없습니다.  
   
-`[ @show_last_run_details = ] show_last_run_details`마지막 실행 정보가 결과 집합의 일부 인지 여부입니다. *show_last_run_details* 은 **tinyint**이며 기본값은 **0**입니다. **0** 은 마지막 실행 정보를 포함 하지 않으며 **1** 은입니다.  
+`[ @show_last_run_details = ] show_last_run_details` 마지막 실행 정보가 결과 집합의 일부 인지 여부입니다. *show_last_run_details* 은 **tinyint**이며 기본값은 **0**입니다. **0** 은 마지막 실행 정보를 포함 하지 않으며 **1** 은입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -86,7 +87,7 @@ sp_help_jobserver
   
  **SQLAgentUserRole** 의 멤버는 자신이 소유 하 고 있는 작업에 대 한 정보만 볼 수 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 마지막 실행 정보를 포함하여 `NightlyBackups` 작업에 대한 정보를 반환합니다.  
   
 ```  
@@ -99,7 +100,7 @@ EXEC dbo.sp_help_jobserver
 GO  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [Transact-sql&#41;sp_add_jobserver &#40;](../../relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql.md)   
  [Transact-sql&#41;sp_delete_jobserver &#40;](../../relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

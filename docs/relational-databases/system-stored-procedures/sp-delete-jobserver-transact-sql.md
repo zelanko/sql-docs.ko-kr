@@ -1,4 +1,5 @@
 ---
+description: sp_delete_jobserver(Transact-SQL)
 title: sp_delete_jobserver (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6d63ed32-68cf-4d8f-aa40-05a3826e05b8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: bf97ac7ffd72cf6f3d8b0d04987fa1eacce47835
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ef3896c2e425d1b85c80bd4b7fa057df4f8b5df4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85864045"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474351"
 ---
 # <a name="sp_delete_jobserver-transact-sql"></a>sp_delete_jobserver(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,14 +41,14 @@ sp_delete_jobserver { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @job_id = ] job_id`지정 된 대상 서버를 제거할 작업의 id입니다. *job_id* 은 **uniqueidentifier**이며 기본값은 NULL입니다.  
+`[ @job_id = ] job_id` 지정 된 대상 서버를 제거할 작업의 id입니다. *job_id* 은 **uniqueidentifier**이며 기본값은 NULL입니다.  
   
-`[ @job_name = ] 'job_name'`지정 된 대상 서버를 제거할 작업의 이름입니다. *job_name* 는 **sysname**이며 기본값은 NULL입니다.  
+`[ @job_name = ] 'job_name'` 지정 된 대상 서버를 제거할 작업의 이름입니다. *job_name* 는 **sysname**이며 기본값은 NULL입니다.  
   
 > [!NOTE]  
 >  *Job_id* 또는 *job_name* 를 지정 해야 합니다. 둘 다 지정할 수 없습니다.  
   
-`[ @server_name = ] 'server'`지정 된 작업에서 제거할 대상 서버의 이름입니다. *서버* 는 **nvarchar (30)** 이며 기본값은 없습니다. *서버* 는 **(LOCAL)** 또는 원격 대상 서버의 이름일 수 있습니다.  
+`[ @server_name = ] 'server'` 지정 된 작업에서 제거할 대상 서버의 이름입니다. *서버* 는 **nvarchar (30)** 이며 기본값은 없습니다. *서버* 는 **(LOCAL)** 또는 원격 대상 서버의 이름일 수 있습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -58,7 +59,7 @@ sp_delete_jobserver { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
 ## <a name="permissions"></a>사용 권한  
  이 저장 프로시저를 실행 하려면 사용자가 **sysadmin** 고정 서버 역할의 멤버 여야 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 작업 처리에서 서버를 제거 합니다 `SEATTLE2` `Weekly Sales Backups` .  
   
 > [!NOTE]  

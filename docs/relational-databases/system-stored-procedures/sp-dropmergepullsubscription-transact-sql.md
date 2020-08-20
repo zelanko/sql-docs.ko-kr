@@ -1,4 +1,5 @@
 ---
+description: sp_dropmergepullsubscription(Transact-SQL)
 title: sp_dropmergepullsubscription (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9301dd80-72f7-4adb-9b13-87e7f9114248
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 84fbed9341d01c8fe7d1c2d4e57df16aa027711a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1dab181e38d9c072f5e25dc8db490a7538bbe615
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881803"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474260"
 ---
 # <a name="sp_dropmergepullsubscription-transact-sql"></a>sp_dropmergepullsubscription(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,13 +41,13 @@ sp_dropmergepullsubscription [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @publication = ] 'publication'`게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 NULL입니다. 이 매개 변수는 필수입니다. 모든 게시에 대 한 구독을 제거 하려면 **all** 값을 지정 합니다.  
+`[ @publication = ] 'publication'` 게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 NULL입니다. 이 매개 변수는 필수입니다. 모든 게시에 대 한 구독을 제거 하려면 **all** 값을 지정 합니다.  
   
-`[ @publisher = ] 'publisher'`게시자의 이름입니다. *publisher*는 **sysname**이며 기본값은 NULL입니다. 이 매개 변수는 필수입니다.  
+`[ @publisher = ] 'publisher'` 게시자의 이름입니다. *publisher*는 **sysname**이며 기본값은 NULL입니다. 이 매개 변수는 필수입니다.  
   
-`[ @publisher_db = ] 'publisher_db'`게시자 데이터베이스의 이름입니다. *publisher_db*는 **sysname**이며 기본값은 NULL입니다. 이 매개 변수는 필수입니다.  
+`[ @publisher_db = ] 'publisher_db'` 게시자 데이터베이스의 이름입니다. *publisher_db*는 **sysname**이며 기본값은 NULL입니다. 이 매개 변수는 필수입니다.  
   
-`[ @reserved = ] 'reserved'`는 나중에 사용 하도록 예약 되어 있습니다. *reserved* 는 **bit**이며 기본값은 **0**입니다.  
+`[ @reserved = ] 'reserved'` 는 나중에 사용 하도록 예약 되어 있습니다. *reserved* 는 **bit**이며 기본값은 **0**입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

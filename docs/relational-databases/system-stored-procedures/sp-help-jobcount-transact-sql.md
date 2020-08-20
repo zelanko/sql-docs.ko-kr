@@ -1,4 +1,5 @@
 ---
+description: sp_help_jobcount(Transact-SQL)
 title: sp_help_jobcount (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ae8ef851-646c-4889-bc11-c8ec78762572
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a697489367d085714fd9ab1ab5c6245ca04b9ee1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 86d4c7ebeac06589e7f80f0a01adb0b996a1d3bf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893682"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474198"
 ---
 # <a name="sp_help_jobcount-transact-sql"></a>sp_help_jobcount(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,9 +42,9 @@ sp_help_jobcount
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @schedule_id = ] schedule_id`나열할 일정의 식별자입니다. *schedule_id* 는 **int**이며 기본값은 없습니다. *Schedule_id* 또는 *schedule_name* 를 지정할 수 있습니다.  
+`[ @schedule_id = ] schedule_id` 나열할 일정의 식별자입니다. *schedule_id* 는 **int**이며 기본값은 없습니다. *Schedule_id* 또는 *schedule_name* 를 지정할 수 있습니다.  
   
-`[ @schedule_name = ] 'schedule_name'`나열할 일정의 이름입니다. *schedule_name* 는 **sysname**이며 기본값은 없습니다. *Schedule_id* 또는 *schedule_name* 를 지정할 수 있습니다.  
+`[ @schedule_name = ] 'schedule_name'` 나열할 일정의 이름입니다. *schedule_name* 는 **sysname**이며 기본값은 없습니다. *Schedule_id* 또는 *schedule_name* 를 지정할 수 있습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -71,7 +72,7 @@ sp_help_jobcount
   
  **Sysadmin** 의 멤버만 다른 사용자가 소유한 작업의 수를 볼 수 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `NightlyJobs` 일정에 연결된 작업 수를 나열합니다.  
   
 ```  
@@ -83,8 +84,8 @@ EXEC sp_help_jobcount
 GO  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;저장 프로시저 SQL Server 에이전트](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>관련 항목  
+ [Transact-sql&#41;&#40;저장 프로시저 SQL Server 에이전트 ](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
  [Transact-sql&#41;sp_add_schedule &#40;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
  [Transact-sql&#41;sp_attach_schedule &#40;](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)   
  [Transact-sql&#41;sp_delete_schedule &#40;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   

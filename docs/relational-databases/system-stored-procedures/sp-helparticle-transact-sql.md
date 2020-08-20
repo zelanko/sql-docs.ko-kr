@@ -1,4 +1,5 @@
 ---
+description: sp_helparticle(Transact-SQL)
 title: sp_helparticle (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9c4a1a88-56f1-45a0-890c-941b8e0f0799
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e863c10b3f2086d6318d6c53b599c7ad186572c6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ca400eb6fc015acff452ca4ae6a7658a05145f8a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85634230"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474165"
 ---
 # <a name="sp_helparticle-transact-sql"></a>sp_helparticle(Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -41,18 +42,18 @@ sp_helparticle [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @publication = ] 'publication'`게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 없습니다.  
+`[ @publication = ] 'publication'` 게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @article = ] 'article'`게시에 있는 아티클의 이름입니다. *article* 은 **sysname**이며 기본값은 **%** 입니다. *문서* 를 제공 하지 않으면 지정 된 게시에 대 한 모든 아티클에 대 한 정보가 반환 됩니다.  
+`[ @article = ] 'article'` 게시에 있는 아티클의 이름입니다. *article* 은 **sysname**이며 기본값은 **%** 입니다. *문서* 를 제공 하지 않으면 지정 된 게시에 대 한 모든 아티클에 대 한 정보가 반환 됩니다.  
   
-`[ @returnfilter = ] returnfilter`필터 절을 반환할지 여부를 지정 합니다. *returnfilter* 는 **bit**이며 기본값은 필터 절을 반환 하는 **1**입니다.  
+`[ @returnfilter = ] returnfilter` 필터 절을 반환할지 여부를 지정 합니다. *returnfilter* 는 **bit**이며 기본값은 필터 절을 반환 하는 **1**입니다.  
   
-`[ @publisher = ] 'publisher'`이외 게시자를 지정 합니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *publisher* 는 **sysname**이며 기본값은 NULL입니다.  
+`[ @publisher = ] 'publisher'` 이외 게시자를 지정 합니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *publisher* 는 **sysname**이며 기본값은 NULL입니다.  
   
 > [!NOTE]  
 >  게시자가 게시 한 아티클에 대 한 정보를 요청할 때 *게시자* 를 지정 하면 안 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-`[ @found = ] found OUTPUT`내부용 으로만 사용 됩니다.  
+`[ @found = ] found OUTPUT` 내부용 으로만 사용 됩니다.  
   
 ## <a name="result-sets"></a>결과 집합  
   
@@ -66,7 +67,7 @@ sp_helparticle [ @publication = ] 'publication'
 |**type**|**smallint**|아티클의 유형입니다.<br /><br /> **1** = 로그를 기반으로 합니다.<br /><br /> **3** = 수동 필터를 사용 하 여 로그 기반<br /><br /> **5** = 수동 뷰를 사용 하 여 로그를 기반으로 합니다.<br /><br /> **7** = 수동 필터 및 수동 보기를 사용 하 여 로그를 기반으로 합니다.<br /><br /> **8** = 저장 프로시저 실행<br /><br /> **24** = serialize 할 수 있는 저장 프로시저 실행<br /><br /> **32** = 저장 프로시저 (스키마 전용)입니다.<br /><br /> **64** = 뷰 (스키마 전용)입니다.<br /><br /> **96** = 집계 함수 (스키마 전용)입니다.<br /><br /> **128** = 함수 (스키마 전용)입니다.<br /><br /> **257** = 로그 기반 인덱싱된 뷰입니다.<br /><br /> **259** = 수동 필터가 있는 로그 기반 인덱싱된 뷰입니다.<br /><br /> **261** = 수동 뷰가 있는 로그 기반 인덱싱된 뷰입니다.<br /><br /> **263** = 수동 필터 및 수동 뷰가 있는 로그 기반의 인덱싱된 뷰입니다.<br /><br /> **320** = 인덱싱된 뷰 (스키마 전용)입니다.<br /><br />|  
 |**status**|**tinyint**|하나 이상의 아티클 속성의 [& (비트 and)](../../t-sql/language-elements/bitwise-and-transact-sql.md) 일 수 있습니다.<br /><br /> **0x00** = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> **0x01** = 아티클이 활성 상태입니다.<br /><br /> **0x08** = insert 문에 열 이름을 포함 합니다.<br /><br /> **0x16** = 매개 변수가 있는 문을 사용 합니다.<br /><br /> **0x32** = 매개 변수가 있는 문을 사용 하 고 insert 문에 열 이름을 포함 합니다.|  
 |**필터가**|**nvarchar (257)**|테이블을 행 필터링하는 데 사용하는 저장 프로시저입니다. 이 저장 프로시저는 FOR REPLICATION 절을 사용하여 만들어야 합니다.|  
-|**한**|**nvarchar(255)**|아티클에 대한 설명 항목입니다.|  
+|**description**|**nvarchar(255)**|아티클에 대한 설명 항목입니다.|  
 |**insert_command**|**nvarchar(255)**|삽입을 복제할 때 테이블 아티클에서 사용되는 복제 명령 유형입니다. 자세한 내용은 [트랜잭션 아티클에 대한 변경 내용을 전파하는 방법 지정](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)을 참조하세요.|  
 |**update_command**|**nvarchar(255)**|업데이트를 복제할 때 테이블 아티클에서 사용되는 복제 명령 유형입니다. 자세한 내용은 [트랜잭션 아티클에 대한 변경 내용을 전파하는 방법 지정](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)을 참조하세요.|  
 |**delete_command**|**nvarchar(255)**|삭제를 복제할 때 테이블 아티클에서 사용되는 복제 명령 유형입니다. 자세한 내용은 [트랜잭션 아티클에 대한 변경 내용을 전파하는 방법 지정](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)을 참조하세요.|  

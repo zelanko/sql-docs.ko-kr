@@ -1,4 +1,5 @@
 ---
+description: sp_helpmergepartition(Transact-SQL)
 title: sp_helpmergepartition (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 184188cc-f519-445d-97ce-aae38f1eb550
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 276e1a886a999858585533ee35b6c5f3cf109657
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e7824eb6e547b8bacec2cae297e5f236376d0aa0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881528"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474038"
 ---
 # <a name="sp_helpmergepartition-transact-sql"></a>sp_helpmergepartition(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,14 +40,14 @@ sp_helpmergepartition [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @publication = ] 'publication'`게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 없습니다.  
+`[ @publication = ] 'publication'` 게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @suser_sname = ] 'suser_sname'`파티션을 정의 하는 데 사용 되는 SUSER_SNAME 값입니다. *suser_sname* 는 **sysname**이며 기본값은 NULL입니다. SUSER_SNAME이 제공된 값을 확인하는 파티션으로만 결과 집합을 제한하려면 이 매개 변수를 제공하십시오.  
+`[ @suser_sname = ] 'suser_sname'` 파티션을 정의 하는 데 사용 되는 SUSER_SNAME 값입니다. *suser_sname* 는 **sysname**이며 기본값은 NULL입니다. SUSER_SNAME이 제공된 값을 확인하는 파티션으로만 결과 집합을 제한하려면 이 매개 변수를 제공하십시오.  
   
 > [!NOTE]  
 >  *Suser_sname* 제공 되는 경우 *host_name* 은 NULL 이어야 합니다.  
   
-`[ @host_name = ] 'host_name'`파티션을 정의 하는 데 사용 되는 HOST_NAME 값입니다. *host_name* 는 **sysname**이며 기본값은 NULL입니다. HOST_NAME이 제공된 값을 확인하는 파티션으로만 결과 집합을 제한하려면 이 매개 변수를 제공하십시오.  
+`[ @host_name = ] 'host_name'` 파티션을 정의 하는 데 사용 되는 HOST_NAME 값입니다. *host_name* 는 **sysname**이며 기본값은 NULL입니다. HOST_NAME이 제공된 값을 확인하는 파티션으로만 결과 집합을 제한하려면 이 매개 변수를 제공하십시오.  
   
 > [!NOTE]  
 >  *Suser_sname* 제공 되는 경우 *host_name* 은 NULL 이어야 합니다.  

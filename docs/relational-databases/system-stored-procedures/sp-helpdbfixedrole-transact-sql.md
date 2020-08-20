@@ -1,4 +1,5 @@
 ---
+description: sp_helpdbfixedrole(Transact-SQL)
 title: sp_helpdbfixedrole (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ad87e9a0-b901-4e37-9950-aa517d680fc3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8b029430388e1f58a725e5eb15795fa47380eda7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9f7d2518a14ba15a7cd91ea4c9a41d6710d9572e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899540"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474087"
 ---
 # <a name="sp_helpdbfixedrole-transact-sql"></a>sp_helpdbfixedrole(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,7 @@ sp_helpdbfixedrole [ [ @rolename = ] 'role' ]
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @rolename = ] 'role'`고정 데이터베이스 역할의 이름입니다. *role* 은 **sysname**이며 기본값은 NULL입니다. *Role* 을 지정 하면 해당 역할에 대 한 정보만 반환 됩니다. 그렇지 않으면 모든 고정 데이터베이스 역할에 대 한 목록 및 설명이 반환 됩니다.  
+`[ @rolename = ] 'role'` 고정 데이터베이스 역할의 이름입니다. *role* 은 **sysname**이며 기본값은 NULL입니다. *Role* 을 지정 하면 해당 역할에 대 한 정보만 반환 됩니다. 그렇지 않으면 모든 고정 데이터베이스 역할에 대 한 목록 및 설명이 반환 됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -79,7 +80,7 @@ sp_helpdbfixedrole [ [ @rolename = ] 'role' ]
   
  반환되는 정보는 메타데이터에 대한 액세스 제한 사항에 따라 달라집니다. 보안 주체에 사용 권한이 없는 엔터티는 나타나지 않습니다. 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 모든 고정 데이터베이스 역할의 목록을 보여 줍니다.  
   
 ```  
@@ -88,7 +89,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;보안 저장 프로시저](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;보안 저장 프로시저 ](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [Transact-sql&#41;sp_addrolemember &#40;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)   
  [Transact-sql&#41;sp_dbfixedrolepermission &#40;](../../relational-databases/system-stored-procedures/sp-dbfixedrolepermission-transact-sql.md)   
  [Transact-sql&#41;sp_droprolemember &#40;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   

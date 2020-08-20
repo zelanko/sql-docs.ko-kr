@@ -1,4 +1,5 @@
 ---
+description: sp_deletepeerrequesthistory(Transact-SQL)
 title: sp_deletepeerrequesthistory (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 63a4ec6e-ce79-4bf1-9d37-5ac88f8d6beb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fe3a7edbb00eb7d3a4da1aa78689685a54e56277
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 11773aa1e2a03ccc9b729c902a99cda10088c718
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85861422"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474357"
 ---
 # <a name="sp_deletepeerrequesthistory-transact-sql"></a>sp_deletepeerrequesthistory(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,11 +40,11 @@ sp_deletepeerrequesthistory [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @publication = ] 'publication'`상태 요청이 수행 된 게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 없습니다.  
+`[ @publication = ] 'publication'` 상태 요청이 수행 된 게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @request_id = ] request_id`이 요청에 대 한 모든 응답을 삭제 하도록 개별 상태 요청을 지정 합니다. *request_id* 은 **int**이며 기본값은 NULL입니다.  
+`[ @request_id = ] request_id` 이 요청에 대 한 모든 응답을 삭제 하도록 개별 상태 요청을 지정 합니다. *request_id* 은 **int**이며 기본값은 NULL입니다.  
   
-`[ @cutoff_date = ] cutoff_date`이전의 모든 응답 레코드를 삭제 하기 전 까지의 구분 날짜를 지정 합니다. *cutoff_date* 은 **datetime**이며 기본값은 NULL입니다.  
+`[ @cutoff_date = ] cutoff_date` 이전의 모든 응답 레코드를 삭제 하기 전 까지의 구분 날짜를 지정 합니다. *cutoff_date* 은 **datetime**이며 기본값은 NULL입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

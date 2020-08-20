@@ -1,4 +1,5 @@
 ---
+description: sp_dropdevice(Transact-SQL)
 title: sp_dropdevice (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: c8b07189-7c35-414b-acc1-45bd6e7e17c3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9be64080f6e1c56daa0901dbdc174c83d40cf541
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: dd4c4a02e581b743b780db715b61f06ef7f22413
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85859989"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474300"
 ---
 # <a name="sp_dropdevice-transact-sql"></a>sp_dropdevice(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +44,7 @@ sp_dropdevice [ @logicalname = ] 'device'
 ## <a name="arguments"></a>인수  
 `[ @logicalname = ] 'device'`**master.dbo.sysdevices.name**에 나열 된 데이터베이스 장치 또는 백업 장치의 논리적 이름입니다. *장치* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @delfile = ] 'delfile'`물리적 백업 장치 파일을 삭제할지 여부를 지정 합니다. *delfile* 은 **varchar (7)** 입니다. **Delfile**로 지정 하면 물리적 백업 장치 디스크 파일이 삭제 됩니다.  
+`[ @delfile = ] 'delfile'` 물리적 백업 장치 파일을 삭제할지 여부를 지정 합니다. *delfile* 은 **varchar (7)** 입니다. **Delfile**로 지정 하면 물리적 백업 장치 디스크 파일이 삭제 됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -57,16 +58,16 @@ sp_dropdevice [ @logicalname = ] 'device'
 ## <a name="permissions"></a>사용 권한  
  **diskadmin** 고정 서버 역할의 멤버 자격이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `tapedump1` 테이프 덤프 디바이스를 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 삭제합니다.  
   
 ```  
 EXEC sp_dropdevice 'tapedump1';  
 ```  
   
-## <a name="see-also"></a>참조  
+## <a name="see-also"></a>참고 항목  
  [백업 디바이스&#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)   
- [SQL Server&#41;&#40;백업 장치 삭제](../../relational-databases/backup-restore/delete-a-backup-device-sql-server.md)   
+ [SQL Server&#41;&#40;백업 장치 삭제 ](../../relational-databases/backup-restore/delete-a-backup-device-sql-server.md)   
  [sp_addumpdevice&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)   
  [Transact-sql&#41;sp_helpdb &#40;](../../relational-databases/system-stored-procedures/sp-helpdb-transact-sql.md)   
  [Transact-sql&#41;sp_helpdevice &#40;](../../relational-databases/system-stored-procedures/sp-helpdevice-transact-sql.md)   

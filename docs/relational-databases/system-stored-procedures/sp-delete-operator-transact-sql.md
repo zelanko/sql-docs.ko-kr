@@ -1,4 +1,5 @@
 ---
+description: sp_delete_operator(Transact-SQL)
 title: sp_delete_operator (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ff6c2c4b-e9fe-4d0c-bbc2-a2ddcc1acb95
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c584dceb9306d6a74575b548bfd9d8548acb47a5
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 22fcae3edb3d882826e80bdb7a359726eac930fb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85862480"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474329"
 ---
 # <a name="sp_delete_operator-transact-sql"></a>sp_delete_operator(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,9 +41,9 @@ sp_delete_operator [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @name = ] 'name'`삭제할 운영자의 이름입니다. *name* 은 **sysname**이며 기본값은 없습니다.  
+`[ @name = ] 'name'` 삭제할 운영자의 이름입니다. *name* 은 **sysname**이며 기본값은 없습니다.  
   
-`[ @reassign_to_operator = ] 'reassign_operator'`지정 된 운영자의 경고를 재할당할 수 있는 운영자의 이름입니다. *reassign_operator* 는 **sysname**이며 기본값은 NULL입니다.  
+`[ @reassign_to_operator = ] 'reassign_operator'` 지정 된 운영자의 경고를 재할당할 수 있는 운영자의 이름입니다. *reassign_operator* 는 **sysname**이며 기본값은 NULL입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -56,7 +57,7 @@ sp_delete_operator [ @name = ] 'name'
 ## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할의 멤버는 **sp_delete_operator**를 실행할 수 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 운영자 `François Ajenstat`를 삭제합니다.  
   
 ```  

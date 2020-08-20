@@ -1,4 +1,5 @@
 ---
+description: sp_help_schedule(Transact-SQL)
 title: sp_help_schedule (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b2fc4ce1-0a8e-44d2-b206-7dc7b258d8c9
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5f0539e4281d58744b18a4f9ca522c52952032c0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 516314123b6555f7e079471b88384e586bdc5cba
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893590"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474206"
 ---
 # <a name="sp_help_schedule-transact-sql"></a>sp_help_schedule(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,13 +44,13 @@ sp_help_schedule
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @schedule_id = ] id`나열할 일정의 식별자입니다. *schedule_name* 는 **int**이며 기본값은 없습니다. *Schedule_id* 또는 *schedule_name* 를 지정할 수 있습니다.  
+`[ @schedule_id = ] id` 나열할 일정의 식별자입니다. *schedule_name* 는 **int**이며 기본값은 없습니다. *Schedule_id* 또는 *schedule_name* 를 지정할 수 있습니다.  
   
-`[ @schedule_name = ] 'schedule_name'`나열할 일정의 이름입니다. *schedule_name* 는 **sysname**이며 기본값은 없습니다. *Schedule_id* 또는 *schedule_name* 를 지정할 수 있습니다.  
+`[ @schedule_name = ] 'schedule_name'` 나열할 일정의 이름입니다. *schedule_name* 는 **sysname**이며 기본값은 없습니다. *Schedule_id* 또는 *schedule_name* 를 지정할 수 있습니다.  
   
-`[ @attached_schedules_only = ] attached_schedules_only ]`작업이 연결 된 일정만 표시할지 여부를 지정 합니다. *attached_schedules_only* 은 **bit**이며 기본값은 **0**입니다. *Attached_schedules_only* **0**이면 모든 일정이 표시 됩니다. *Attached_schedules_only* **1**이면 결과 집합에는 작업에 연결 된 일정만 포함 됩니다.  
+`[ @attached_schedules_only = ] attached_schedules_only ]` 작업이 연결 된 일정만 표시할지 여부를 지정 합니다. *attached_schedules_only* 은 **bit**이며 기본값은 **0**입니다. *Attached_schedules_only* **0**이면 모든 일정이 표시 됩니다. *Attached_schedules_only* **1**이면 결과 집합에는 작업에 연결 된 일정만 포함 됩니다.  
   
-`[ @include_description = ] include_description`결과 집합에 설명을 포함할지 여부를 지정 합니다. *include_description* 은 **bit**이며 기본값은 **0**입니다. *Include_description* 가 **0**이면 결과 집합의 *schedule_description* 열에 자리 표시 자가 포함 됩니다. *Include_description* **1**이면 일정에 대 한 설명이 결과 집합에 포함 됩니다.  
+`[ @include_description = ] include_description` 결과 집합에 설명을 포함할지 여부를 지정 합니다. *include_description* 은 **bit**이며 기본값은 **0**입니다. *Include_description* 가 **0**이면 결과 집합의 *schedule_description* 열에 자리 표시 자가 포함 됩니다. *Include_description* **1**이면 일정에 대 한 설명이 결과 집합에 포함 됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -93,7 +94,7 @@ sp_help_schedule
   
  **SQLAgentUserRole** 의 멤버는 자신이 소유한 일정만 볼 수 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-listing-information-for-all-schedules-in-the-instance"></a>A. 인스턴스의 모든 일정에 대한 정보 나열  
  다음 예에서는 인스턴스에 있는 모든 일정에 대한 정보를 나열합니다.  
@@ -118,7 +119,7 @@ EXEC dbo.sp_help_schedule
 GO  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [Transact-sql&#41;sp_add_schedule &#40;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
  [Transact-sql&#41;sp_attach_schedule &#40;](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)   
  [Transact-sql&#41;sp_delete_schedule &#40;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   

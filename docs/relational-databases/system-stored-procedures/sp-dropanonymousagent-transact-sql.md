@@ -1,4 +1,5 @@
 ---
+description: sp_dropanonymousagent(Transact-SQL)
 title: sp_dropanonymousagent (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4cb96efa-9358-44a3-a8ee-a7e181bed089
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: acf909be9ca1185ea441acf27a60409e1c868328
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d6e687976dab6d526a2413260d2ad2f980001086
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85859977"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474285"
 ---
 # <a name="sp_dropanonymousagent-transact-sql"></a>sp_dropanonymousagent(Transact-SQL)
 
@@ -37,9 +38,9 @@ sp_dropanonymousagent [ @subid= ] sub_id    , [ @type= ] type
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @subid = ] sub_id`익명 구독의 전역 식별자입니다. *sub_id* 은 **uniqueidentifier**이며 기본값은 없습니다. 이 식별자는 **sp_helppullsubscription**을 사용 하 여 구독자에서 검색할 수 있습니다. 반환 된 결과 집합의 **subid** 필드 값은이 전역 식별자입니다.  
+`[ @subid = ] sub_id` 익명 구독의 전역 식별자입니다. *sub_id* 은 **uniqueidentifier**이며 기본값은 없습니다. 이 식별자는 **sp_helppullsubscription**을 사용 하 여 구독자에서 검색할 수 있습니다. 반환 된 결과 집합의 **subid** 필드 값은이 전역 식별자입니다.  
   
-`[ @type = ] type`구독의 유형입니다. *형식은* **int**이며 기본값은 없습니다. 유효한 값은 **1** 또는 **2**입니다. 배포 에이전트를 사용 하는 스냅숏 복제 또는 트랜잭션 복제 인 경우 **1**을 지정 합니다. 병합 에이전트를 사용 하는 병합 복제의 경우 **2**를 지정 합니다.  
+`[ @type = ] type` 구독의 유형입니다. *형식은* **int**이며 기본값은 없습니다. 유효한 값은 **1** 또는 **2**입니다. 배포 에이전트를 사용 하는 스냅숏 복제 또는 트랜잭션 복제 인 경우 **1**을 지정 합니다. 병합 에이전트를 사용 하는 병합 복제의 경우 **2**를 지정 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

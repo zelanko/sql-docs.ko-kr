@@ -1,4 +1,5 @@
 ---
+description: sp_dropremotelogin(Transact-SQL)
 title: sp_dropremotelogin (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9f097652-a286-40b2-be73-568d77ada698
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: 183e7ce052e4ec9b5eba625f5e5e21fb16f1a5e7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 6ccb8f6c4bbf5795784c8ad3712c5fe8163ff0e5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881779"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474231"
 ---
 # <a name="sp_dropremotelogin-transact-sql"></a>sp_dropremotelogin(Transact-SQL)
 
@@ -44,11 +45,11 @@ sp_dropremotelogin [ @remoteserver = ] 'remoteserver'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @remoteserver = ] 'remoteserver'`제거할 원격 로그인에 매핑된 원격 서버의 이름입니다. *remoteserver* 는 **sysname**이며 기본값은 없습니다. *remoteserver* 가 이미 있어야 합니다.  
+`[ @remoteserver = ] 'remoteserver'` 제거할 원격 로그인에 매핑된 원격 서버의 이름입니다. *remoteserver* 는 **sysname**이며 기본값은 없습니다. *remoteserver* 가 이미 있어야 합니다.  
   
-`[ @loginame = ] 'login'`원격 서버와 연결 된 로컬 서버의 선택적 로그인 이름입니다. *login*은 **sysname**이며 기본값은 NULL입니다. 지정 된 경우 *로그인* 이 이미 존재 해야 합니다.  
+`[ @loginame = ] 'login'` 원격 서버와 연결 된 로컬 서버의 선택적 로그인 이름입니다. *login*은 **sysname**이며 기본값은 NULL입니다. 지정 된 경우 *로그인* 이 이미 존재 해야 합니다.  
   
-`[ @remotename = ] 'remote_name'`원격 서버에서 로그인 할 때 *로그인* 에 매핑된 원격 로그인의 선택적 이름입니다. *remote_name* 는 **sysname**이며 기본값은 NULL입니다.  
+`[ @remotename = ] 'remote_name'` 원격 서버에서 로그인 할 때 *로그인* 에 매핑된 원격 로그인의 선택적 이름입니다. *remote_name* 는 **sysname**이며 기본값은 NULL입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -65,7 +66,7 @@ sp_dropremotelogin [ @remoteserver = ] 'remoteserver'
 ## <a name="permissions"></a>사용 권한  
  **Sysadmin** 또는 **securityadmin** 고정 서버 역할의 멤버 자격이 필요 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-dropping-all-remote-logins-for-a-remote-server"></a>A. 원격 서버에 대한 모든 원격 로그인 삭제  
  다음 예에서는 `ACCOUNTS`라는 원격 서버의 항목을 제거하여 로컬 서버의 로그인과 원격 서버의 원격 로그인 간의 모든 매핑을 제거합니다.  
@@ -89,9 +90,9 @@ EXEC sp_dropremotelogin 'ACCOUNTS', 'salesmgr', 'Chris';
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;보안 저장 프로시저](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [Transact-sql&#41;sp_addlinkedsrvlogin &#40;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
- [Transact-sql&#41;sp_addlogin &#40;](../../relational-databases/system-stored-procedures/sp-addlogin-transact-sql.md)   
+ [Transact-sql&#41;&#40;보안 저장 프로시저 ](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
+ [sp_addlogin&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlogin-transact-sql.md)   
  [Transact-sql&#41;sp_addremotelogin &#40;](../../relational-databases/system-stored-procedures/sp-addremotelogin-transact-sql.md)   
  [Transact-sql&#41;sp_addserver &#40;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
  [Transact-sql&#41;sp_droplinkedsrvlogin &#40;](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md)   

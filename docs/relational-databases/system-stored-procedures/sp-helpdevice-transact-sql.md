@@ -1,4 +1,5 @@
 ---
+description: sp_helpdevice(Transact-SQL)
 title: sp_helpdevice (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1a5eafa7-384e-4691-ba05-978eb73bbefb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cda03415378577a061bb308c0b19e7fcd0659d49
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0da4ef24647edd8de4bda1c412afb1410f9d3c14
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893603"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474127"
 ---
 # <a name="sp_helpdevice-transact-sql"></a>sp_helpdevice(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +43,7 @@ sp_helpdevice [ [ @devname = ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @devname = ] 'name'`정보가 보고 되는 백업 장치의 이름입니다. *Name* 값은 항상 **sysname**입니다.  
+`[ @devname = ] 'name'` 정보가 보고 되는 백업 장치의 이름입니다. *Name* 값은 항상 **sysname**입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -53,7 +54,7 @@ sp_helpdevice [ [ @devname = ] 'name' ]
 |-----------------|---------------|-----------------|  
 |**device_name**|**sysname**|논리적 디바이스 이름입니다.|  
 |**physical_name**|**nvarchar(260)**|물리적 파일 이름입니다.|  
-|**한**|**nvarchar(255)**|디바이스의 설명입니다.|  
+|**description**|**nvarchar(255)**|디바이스의 설명입니다.|  
 |**status**|**int**|**설명** 열의 상태 설명에 해당 하는 숫자입니다.|  
 |**cntrltype**|**smallint**|디바이스의 컨트롤러 유형입니다.<br /><br /> 2 = 디스크 디바이스<br /><br /> 5 = 테이프 디바이스|  
 |**size**|**int**|디바이스 크기(2KB 페이지)입니다.|  
@@ -66,7 +67,7 @@ sp_helpdevice [ [ @devname = ] 'name' ]
 ## <a name="permissions"></a>사용 권한  
  **public** 역할의 멤버 자격이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 모든 덤프 디바이스에 관한 정보를 보고합니다.  
   
 ```  
@@ -76,7 +77,7 @@ EXEC sp_helpdevice;
 ## <a name="see-also"></a>참고 항목  
  [sp_addumpdevice&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)   
  [sp_dropdevice&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdevice-transact-sql.md)   
- [Transact-sql&#41;&#40;저장 프로시저 데이터베이스 엔진](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;저장 프로시저 데이터베이스 엔진 ](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

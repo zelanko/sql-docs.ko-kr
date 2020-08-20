@@ -1,4 +1,5 @@
 ---
+description: sp_dropmessage(Transact-SQL)
 title: sp_dropmessage (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 17287a15-cdde-43d1-bb18-9f920bc15db8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c8c9ac233cdc71d8886224182c2c3b91cd871450
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 46c95708903063b4fade98e3d45e29e184e93efd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881791"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474246"
 ---
 # <a name="sp_dropmessage-transact-sql"></a>sp_dropmessage(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,9 +41,9 @@ sp_dropmessage [ @msgnum = ] message_number
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @msgnum = ] message_number`삭제할 메시지 번호입니다. *message_number* 는 메시지 번호가 5만 보다 큰 사용자 정의 메시지 여야 합니다. *message_number* 은 **int**이며 기본값은 NULL입니다.  
+`[ @msgnum = ] message_number` 삭제할 메시지 번호입니다. *message_number* 는 메시지 번호가 5만 보다 큰 사용자 정의 메시지 여야 합니다. *message_number* 은 **int**이며 기본값은 NULL입니다.  
   
-`[ @lang = ] 'language'`삭제할 메시지의 언어입니다. **All** 을 지정 하면 *message_number* 의 모든 언어 버전이 삭제 됩니다. *language* 는 **sysname**이며 기본값은 NULL입니다.  
+`[ @lang = ] 'language'` 삭제할 메시지의 언어입니다. **All** 을 지정 하면 *message_number* 의 모든 언어 버전이 삭제 됩니다. *language* 는 **sysname**이며 기본값은 NULL입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -56,7 +57,7 @@ sp_dropmessage [ @msgnum = ] message_number
 ## <a name="remarks"></a>설명  
  *Language*에 대해 **all** 을 지정 하지 않은 경우 미국 영어 버전의 메시지를 삭제 하려면 먼저 모든 지역화 된 버전의 메시지를 삭제 해야 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-dropping-a-user-defined-message"></a>A. 사용자 정의 메시지 삭제  
  다음 예에서는 `50001` **sys. 메시지**의 사용자 정의 메시지 번호를 삭제 합니다.  

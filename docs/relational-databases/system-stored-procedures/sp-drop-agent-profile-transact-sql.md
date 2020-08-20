@@ -1,4 +1,5 @@
 ---
+description: sp_drop_agent_profile(Transact-SQL)
 title: sp_drop_agent_profile (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b884f9ef-ae89-4cbc-a917-532c3ff6ed41
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 94687e1da630f4bd8bfa153e5bcd16d316b68d74
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d69f685fce04f3a4355fae3dab31900cde4a1c56
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85860408"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474339"
 ---
 # <a name="sp_drop_agent_profile-transact-sql"></a>sp_drop_agent_profile(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +38,7 @@ sp_drop_agent_profile [ @profile_id = ] profile_id
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @profile_id = ] profile_id`삭제할 프로필의 ID입니다. *profile_id* 는 **int**이며 기본값은 없습니다.  
+`[ @profile_id = ] profile_id` 삭제할 프로필의 ID입니다. *profile_id* 는 **int**이며 기본값은 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
