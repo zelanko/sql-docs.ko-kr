@@ -1,4 +1,5 @@
 ---
+description: sp_serveroption(Transact-SQL)
 title: sp_serveroption (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/11/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 47d04a2b-dbf0-4f15-bd9b-81a2efc48131
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ddaed4baff5685f4ebf7bf4083c9264c895cdd32
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c9235c9307c679d80aa869990c6f43ca5ef301dc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893209"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481046"
 ---
 # <a name="sp_serveroption-transact-sql"></a>sp_serveroption(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,9 +43,9 @@ sp_serveroption [@server = ] 'server'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @server = ] 'server'`옵션을 설정할 서버의 이름입니다. *server* 은 **sysname**이며 기본값은 없습니다.  
+`[ @server = ] 'server'` 옵션을 설정할 서버의 이름입니다. *server* 은 **sysname**이며 기본값은 없습니다.  
   
-`[ @optname = ] 'option_name'`지정 된 서버에 대해 설정할 수 있는 옵션입니다. *option_name* 는 **varchar (** 35 **)** 이며 기본값은 없습니다. *option_name* 은 다음 값 중 하나일 수 있습니다.  
+`[ @optname = ] 'option_name'` 지정 된 서버에 대해 설정할 수 있는 옵션입니다. *option_name* 는 **varchar (** 35 **)** 이며 기본값은 없습니다. *option_name* 은 다음 값 중 하나일 수 있습니다.  
   
 |값|설명|  
 |-----------|-----------------|  
@@ -76,7 +77,7 @@ sp_serveroption [@server = ] 'server'
 ## <a name="permissions"></a>사용 권한  
  서버에 대한 ALTER ANY LINKED SERVER 권한이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스인 `SEATTLE3`에 해당하는 연결된 서버를 구성하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 로컬 인스턴스와 데이터 정렬이 호환되도록 합니다.  
   
 ```sql  
@@ -85,11 +86,11 @@ EXEC sp_serveroption 'SEATTLE3', 'collation compatible', 'true';
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;분산 쿼리 저장 프로시저](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;분산 쿼리 저장 프로시저 ](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)   
  [Transact-sql&#41;sp_adddistpublisher &#40;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
- [Transact-sql&#41;sp_addlinkedserver &#40;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
+ [sp_addlinkedserver&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
  [Transact-sql&#41;sp_dropdistpublisher &#40;](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md)   
- [Transact-sql&#41;sp_helpserver &#40;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
+ [sp_helpserver&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

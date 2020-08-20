@@ -1,4 +1,5 @@
 ---
+description: sp_droppullsubscription(Transact-SQL)
 title: sp_droppullsubscription (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7352d94a-f8f2-42ea-aaf1-d08c3b5a0e76
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 12215e39e90586bf8346c96cde3f0f3f5f386e6a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0451fcee1d17a2838af12f782498be61b8431586
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783801"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481305"
 ---
 # <a name="sp_droppullsubscription-transact-sql"></a>sp_droppullsubscription(Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -40,11 +41,11 @@ sp_droppullsubscription [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @publisher = ] 'publisher'`원격 서버 이름입니다. *publisher* 는 **sysname**이며 기본값은 없습니다. **All**인 경우 모든 게시자에서 구독이 삭제 됩니다.  
+`[ @publisher = ] 'publisher'` 원격 서버 이름입니다. *publisher* 는 **sysname**이며 기본값은 없습니다. **All**인 경우 모든 게시자에서 구독이 삭제 됩니다.  
   
-`[ @publisher_db = ] 'publisher_db'`게시자 데이터베이스의 이름입니다. *publisher_db* 는 **sysname**이며 기본값은 없습니다. **all** 은 모든 게시자 데이터베이스를 의미 합니다.  
+`[ @publisher_db = ] 'publisher_db'` 게시자 데이터베이스의 이름입니다. *publisher_db* 는 **sysname**이며 기본값은 없습니다. **all** 은 모든 게시자 데이터베이스를 의미 합니다.  
   
-`[ @publication = ] 'publication'`게시 이름입니다. *게시* 는 **sysname**이며 기본값은 없습니다. **All**인 경우 모든 게시에 대 한 구독이 삭제 됩니다.  
+`[ @publication = ] 'publication'` 게시 이름입니다. *게시* 는 **sysname**이며 기본값은 없습니다. **All**인 경우 모든 게시에 대 한 구독이 삭제 됩니다.  
   
 `[ @reserved = ] reserved` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   

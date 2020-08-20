@@ -1,4 +1,5 @@
 ---
+description: sp_help_maintenance_plan(Transact-SQL)
 title: sp_help_maintenance_plan (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e972a510-960e-41d6-93c5-c71cd581a585
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a14767d15891ae970269feda6e712bf490ff5420
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 85a2f93384dbca55e26a38933ab9afd730da9f76
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893615"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481211"
 ---
 # <a name="sp_help_maintenance_plan-transact-sql"></a>sp_help_maintenance_plan(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,10 +45,10 @@ sp_help_maintenance_plan [ [ @plan_id = ] 'plan_id' ]
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @plan_id = ] 'plan\_id'`유지 관리 계획의 계획 ID를 지정 합니다. **UNIQUEIDENTIFIER** *plan_id* 입니다. 기본값은 NULL입니다.  
+`[ @plan_id = ] 'plan\_id'` 유지 관리 계획의 계획 ID를 지정 합니다. **UNIQUEIDENTIFIER** *plan_id* 입니다. 기본값은 NULL입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
- 없음  
+ None  
   
 ## <a name="result-sets"></a>결과 집합  
  *Plan_id* 지정 하면 **sp_help_maintenance_plan** 는 계획, 데이터베이스 및 작업의 세 가지 테이블을 반환 합니다.  
@@ -76,7 +77,7 @@ sp_help_maintenance_plan [ [ @plan_id = ] 'plan_id' ]
   
 ### <a name="job-table"></a>작업 테이블  
   
-|열 이름|설명|  
+|열 이름|Description|  
 |-----------------|-----------------|  
 |**job_id**|유지 관리 계획과 연관된 모든 작업의 ID입니다. **uniqueidentifier** *job_id* 입니다.|  
   
@@ -86,7 +87,7 @@ sp_help_maintenance_plan [ [ @plan_id = ] 'plan_id' ]
 ## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할의 멤버만 **sp_help_maintenance_plan**를 실행할 수 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 유지 관리 계획 FAD6F2AB-3571-11D3-9D4A-00C04FB925FC에 대한 정보를 보여 줍니다.  
   
 ```  

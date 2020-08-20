@@ -1,4 +1,5 @@
 ---
+description: 변환할 DB2 스키마를 평가 하는 방법 (DB2ToSQL)
 title: 변환할 DB2 스키마를 평가 하는 방법 (DB2ToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 8892f5a4-72ba-4406-8649-7a9d67f4c1d9
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: b889b896a70fa43ee3909ff251a3d91125e878b8
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 7516b8abce9e5a3d147796ec0acb101a92fc18f0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87937472"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480531"
 ---
 # <a name="assessing-db2-schemas-for-conversion-db2tosql"></a>변환할 DB2 스키마를 평가 하는 방법 (DB2ToSQL)
 개체를 로드 하 고로 데이터를 마이그레이션하려면 먼저 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 마이그레이션의 복잡성과 마이그레이션에 소요 되는 시간을 결정 해야 합니다. SSMA는 성공적으로 변환 되는 개체의 비율을 보여 주는 평가 보고서를 만들 수 있습니다. SSMA를 사용 하면 변환 오류를 발생 시키는 특정 문제를 확인할 수도 있습니다.  
@@ -77,8 +78,8 @@ ms.locfileid: "87937472"
     -   마이그레이션할 때 개체를 제외할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]메타 데이터 탐색기 및 Db2 메타 데이터 탐색기에서 항목 옆에 있는 확인란의 선택을 취소 하 고 d b 2 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 데이터를 마이그레이션합니다.  
   
 ## <a name="next-step"></a>다음 단계  
-[DB2 스키마 &#40;DB2ToSQL&#41;변환](../../ssma/db2/converting-db2-schemas-db2tosql.md)  
+[DB2 스키마 &#40;DB2ToSQL&#41;변환 ](../../ssma/db2/converting-db2-schemas-db2tosql.md)  
   
 ## <a name="see-also"></a>참고 항목  
-[DB2 데이터베이스를 SQL Server &#40;DB2ToSQL&#41;로 마이그레이션](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
+[DB2 데이터베이스를 SQL Server &#40;DB2ToSQL&#41;로 마이그레이션 ](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
   

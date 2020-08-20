@@ -1,4 +1,5 @@
 ---
+description: sp_add_targetservergroup(Transact-SQL)
 title: sp_add_targetservergroup (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: acb69343-d766-46ff-b771-0c7655c5231a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 550f09426f294ecef58398a2bd3b5f03028e0eef
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c0c4d50b224de77f4bc794227b583dea6aa5f512
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85878567"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481585"
 ---
 # <a name="sp_add_targetservergroup-transact-sql"></a>sp_add_targetservergroup(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,7 @@ sp_add_targetservergroup [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @name = ] 'name'`만들 서버 그룹의 이름입니다. *name* 은 **sysname**이며 기본값은 없습니다. *이름* 에는 쉼표를 사용할 수 없습니다.  
+`[ @name = ] 'name'` 만들 서버 그룹의 이름입니다. *name* 은 **sysname**이며 기본값은 없습니다. *이름* 에는 쉼표를 사용할 수 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -53,7 +54,7 @@ sp_add_targetservergroup [ @name = ] 'name'
 ## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할의 멤버만이 프로시저를 실행할 수 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `Servers Processing Customer Orders`라는 대상 서버 그룹을 만듭니다.  
   
 ```  

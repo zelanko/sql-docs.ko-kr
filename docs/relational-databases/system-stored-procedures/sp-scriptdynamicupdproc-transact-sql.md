@@ -1,4 +1,5 @@
 ---
+description: sp_scriptdynamicupdproc(Transact-SQL)
 title: sp_scriptdynamicupdproc (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b4c18863-ed92-4aa2-a04f-7ed832fc9e07
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6c6d6639f22963c1b058a1b9a20ed5758c00c417
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 381e2b7ad6c8b463cb410b6d40a6cd6c6b3addec
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901326"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481131"
 ---
 # <a name="sp_scriptdynamicupdproc-transact-sql"></a>sp_scriptdynamicupdproc(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +38,7 @@ sp_scriptdynamicupdproc [ @artid =] artid
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @artid = ] artid`아티클 ID입니다. *artid* 는 **int**이며 기본값은 없습니다.  
+`[ @artid = ] artid` 아티클 ID입니다. *artid* 는 **int**이며 기본값은 없습니다.  
   
 ## <a name="result-sets"></a>결과 집합  
  단일 **nvarchar (4000)** 열로 구성 된 결과 집합을 반환 합니다. 결과 집합은 사용자 지정 저장 프로시저를 만드는 데 사용되는 완전한 CREATE PROCEDURE 문을 형성합니다.  
@@ -48,7 +49,7 @@ sp_scriptdynamicupdproc [ @artid =] artid
 ## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할 또는 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_scriptdynamicupdproc**을 실행할 수 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  이 예에서는 **pubs** 데이터베이스의 **authors** 테이블에 *artid* 가 **1**로 설정 된 아티클을 만들고 UPDATE 문이 실행할 사용자 지정 프로시저 임을 지정 합니다.  
   
 ```  

@@ -1,4 +1,5 @@
 ---
+description: sp_tables_ex(Transact-SQL)
 title: sp_tables_ex (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 33755c33-7e1e-4ef7-af14-a9cebb1e2ed4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3e986d5d998864a343eab31e238a8f7df56a5d0c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c195e3fa5e932bd1eb844ca5231d67747bc67486
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892623"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480989"
 ---
 # <a name="sp_tables_ex-transact-sql"></a>sp_tables_ex(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,22 +45,22 @@ sp_tables_ex [ @table_server = ] 'table_server'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @table_server = ] 'table_server'`테이블 정보를 반환할 연결 된 서버의 이름입니다. *table_server* 는 **sysname**이며 기본값은 없습니다.  
+`[ @table_server = ] 'table_server'` 테이블 정보를 반환할 연결 된 서버의 이름입니다. *table_server* 는 **sysname**이며 기본값은 없습니다.  
   
-``[ , [ @table_name = ] 'table_name']``데이터 형식 정보를 반환할 테이블의 이름입니다. *table_name*는 **sysname**이며 기본값은 NULL입니다.  
+``[ , [ @table_name = ] 'table_name']`` 데이터 형식 정보를 반환할 테이블의 이름입니다. *table_name*는 **sysname**이며 기본값은 NULL입니다.  
   
-`[ @table_schema = ] 'table_schema']`테이블 스키마입니다. *table_schema*는 **sysname**이며 기본값은 NULL입니다.  
+`[ @table_schema = ] 'table_schema']` 테이블 스키마입니다. *table_schema*는 **sysname**이며 기본값은 NULL입니다.  
   
-`[ @table_catalog = ] 'table_catalog'`지정 된 *table_name* 이 있는 데이터베이스의 이름입니다. *table_catalog* 는 **sysname**이며 기본값은 NULL입니다.  
+`[ @table_catalog = ] 'table_catalog'` 지정 된 *table_name* 이 있는 데이터베이스의 이름입니다. *table_catalog* 는 **sysname**이며 기본값은 NULL입니다.  
   
-`[ @table_type = ] 'table_type'`반환할 테이블의 유형입니다. *table_type* 는 **sysname**이며 기본값은 NULL이 고 다음 값 중 하나를 사용할 수 있습니다.  
+`[ @table_type = ] 'table_type'` 반환할 테이블의 유형입니다. *table_type* 는 **sysname**이며 기본값은 NULL이 고 다음 값 중 하나를 사용할 수 있습니다.  
   
 |값|설명|  
 |-----------|-----------------|  
 |**앤티앨리어스**|별칭 이름입니다.|  
 |**GLOBAL TEMPORARY**|시스템 전반적으로 사용 가능한 임시 테이블 이름입니다.|  
 |**LOCAL TEMPORARY**|현재 작업에만 사용 가능한 임시 테이블 이름입니다.|  
-|**SYNONYM**|동의어 이름입니다.|  
+|**동의어가**|동의어 이름입니다.|  
 |**시스템 테이블**|시스템 테이블 이름입니다.|  
 |**시스템 뷰**|시스템 뷰 이름입니다.|  
 |**테이블**|사용자 테이블 이름입니다.|  
@@ -68,7 +69,7 @@ sp_tables_ex [ @table_server = ] 'table_server'
 `[ @fUsePattern = ] 'fUsePattern'`**_**, **%** , **[** 및 **]** 문자를 와일드 카드 문자로 해석할지 여부를 결정 합니다. 유효한 값은 0(패턴 일치 해제)과 1(패턴 일치 설정)입니다. *fUsePattern* 는 **bit**이며 기본값은 1입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
- 없음  
+ None  
   
 ## <a name="result-sets"></a>결과 집합  
   
@@ -88,7 +89,7 @@ sp_tables_ex [ @table_server = ] 'table_server'
 ## <a name="permissions"></a>사용 권한  
  스키마에 대한 SELECT 권한이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 연결된 서버 `HumanResources`에서 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스의 `LONDON2` 스키마에 포함되어 있는 테이블에 관한 정보를 반환합니다.  
   
 ```  
@@ -99,13 +100,13 @@ EXEC sp_tables_ex @table_server = 'LONDON2',
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;분산 쿼리 저장 프로시저](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;분산 쿼리 저장 프로시저 ](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)   
  [Transact-sql&#41;sp_catalogs &#40;](../../relational-databases/system-stored-procedures/sp-catalogs-transact-sql.md)   
  [Transact-sql&#41;sp_columns_ex &#40;](../../relational-databases/system-stored-procedures/sp-columns-ex-transact-sql.md)   
  [Transact-sql&#41;sp_column_privileges &#40;](../../relational-databases/system-stored-procedures/sp-column-privileges-transact-sql.md)   
  [Transact-sql&#41;sp_foreignkeys &#40;](../../relational-databases/system-stored-procedures/sp-foreignkeys-transact-sql.md)   
  [Transact-sql&#41;sp_indexes &#40;](../../relational-databases/system-stored-procedures/sp-indexes-transact-sql.md)   
- [Transact-sql&#41;sp_linkedservers &#40;](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)   
+ [sp_linkedservers&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)   
  [Transact-sql&#41;sp_table_privileges &#40;](../../relational-databases/system-stored-procedures/sp-table-privileges-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

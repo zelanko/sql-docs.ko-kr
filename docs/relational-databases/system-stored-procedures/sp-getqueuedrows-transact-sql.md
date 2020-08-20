@@ -1,4 +1,5 @@
 ---
+description: sp_getqueuedrows(Transact-SQL)
 title: sp_getqueuedrows (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 139e834f-1988-4b4d-ac81-db1f89ea90e8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 57e4551743a535c78e33b4682f8ea19132bc75a9
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 6948964a224d0dfe1d36324971608e649ec45d4e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881586"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481269"
 ---
 # <a name="sp_getqueuedrows-transact-sql"></a>sp_getqueuedrows(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,11 +40,11 @@ sp_getqueuedrows [ @tablename = ] 'tablename'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @tablename = ] 'tablename'`테이블의 이름입니다. *tablename* 은 **sysname**이며 기본값은 없습니다. 테이블은 지연 구독의 일부여야 합니다.  
+`[ @tablename = ] 'tablename'` 테이블의 이름입니다. *tablename* 은 **sysname**이며 기본값은 없습니다. 테이블은 지연 구독의 일부여야 합니다.  
   
-`[ @owner = ] 'owner'`구독 소유자입니다. *owner* 는 **sysname**이며 기본값은 NULL입니다.  
+`[ @owner = ] 'owner'` 구독 소유자입니다. *owner* 는 **sysname**이며 기본값은 NULL입니다.  
   
-`[ @tranid = ] 'transaction_id'`트랜잭션 ID로 출력을 필터링 할 수 있습니다. *transaction_id* 은 **nvarchar (70)** 이며 기본값은 NULL입니다. 지정된 경우 큐에 있는 명령과 연결된 트랜잭션 ID를 표시합니다. NULL인 경우 큐에 있는 모든 명령을 표시합니다.  
+`[ @tranid = ] 'transaction_id'` 트랜잭션 ID로 출력을 필터링 할 수 있습니다. *transaction_id* 은 **nvarchar (70)** 이며 기본값은 NULL입니다. 지정된 경우 큐에 있는 명령과 연결된 트랜잭션 ID를 표시합니다. NULL인 경우 큐에 있는 모든 명령을 표시합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -67,7 +68,7 @@ sp_getqueuedrows [ @tablename = ] 'tablename'
  **sp_getqueuedrows** 에는 *tablename*에 지정 된 테이블에 대 한 SELECT 권한이 필요 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [트랜잭션 복제에 대 한 업데이트할 수 있는 구독](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   
+ [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   
  [지연 업데이트 충돌 감지 및 해결](../../relational-databases/replication/transactional/updatable-subscriptions-queued-updating-conflict-resolution.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

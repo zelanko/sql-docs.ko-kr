@@ -1,4 +1,5 @@
 ---
+description: sp_table_privileges(Transact-SQL)
 title: sp_table_privileges (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0512e688-4fc0-4557-8dc8-016672c1e3fe
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3024de2e45f8d4fe6b7a8521f24e9fe44424d5f1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9eb21300720f43d68dc00953e5b760489596145d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85753981"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481035"
 ---
 # <a name="sp_table_privileges-transact-sql"></a>sp_table_privileges(Transact-SQL)
 
@@ -58,7 +59,7 @@ sp_table_privileges [ @table_name = ] 'table_name'
  밑줄 (_), 백분율 (%) 및 대괄호 ([또는]) 문자를 와일드 카드 문자로 해석할지 여부를 결정 합니다. 유효한 값은 0(패턴 일치 해제)과 1(패턴 일치 설정)입니다. *fUsePattern* 는 **bit**이며 기본값은 1입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
- 없음  
+ None  
   
 ## <a name="result-sets"></a>결과 집합  
   

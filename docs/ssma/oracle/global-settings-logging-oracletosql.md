@@ -1,4 +1,5 @@
 ---
+description: 전역 설정(로깅)(OracleToSQL)
 title: 전역 설정 (로깅) (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -10,12 +11,12 @@ ms.assetid: 12dbcd77-2b90-4fa1-9cf9-239231ea5773
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: ebb39ea8b86ac20e49d49387b981969a9366dd9e
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: fbc74e9129c642ea1b6655deb4e01ee04d92d0ee
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934840"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480515"
 ---
 # <a name="global-settings-logging-oracletosql"></a>전역 설정(로깅)(OracleToSQL)
 **전역 설정** 대화 상자를 사용 하 여 ssma의 로깅 설정을 지정할 수 있습니다. 일반적으로 제품 지원에 대 한 작업을 수행 하는 경우에만 이러한 설정을 변경할 수 있습니다.  

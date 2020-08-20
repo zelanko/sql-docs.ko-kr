@@ -1,4 +1,5 @@
 ---
+description: sp_column_privileges(Transact-SQL)
 title: sp_column_privileges (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ ms.assetid: a3784301-2517-4b1d-bbd9-47404483fad0
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b362d3d3d839a624a7a04b0c2189446094387fea
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 23dc67e25bdc6d57d2fc487e78dc988924dc800f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771266"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481479"
 ---
 # <a name="sp_column_privileges-transact-sql"></a>sp_column_privileges(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -90,8 +91,8 @@ EXEC sp_column_privileges @table_name = 'Employee'
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;권한 부여](../../t-sql/statements/grant-transact-sql.md)   
- [REVOKE &#40;Transact-sql&#41;](../../t-sql/statements/revoke-transact-sql.md)   
+ [GRANT&#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
+ [REVOKE&#40;Transact-SQL&#41;](../../t-sql/statements/revoke-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

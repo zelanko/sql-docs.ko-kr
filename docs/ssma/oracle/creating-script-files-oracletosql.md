@@ -1,4 +1,5 @@
 ---
+description: 스크립트 파일 만들기(OracleToSQL)
 title: 스크립트 파일 만들기 (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -14,12 +15,12 @@ ms.assetid: 55e5bc68-3040-4f07-bb00-0408a17c9821
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: ce9479bd7cb7be5516cd1c87a5f6a2c20649347f
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 0c6bca3c9c185f4b6affea004e59c996f214a1e5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934980"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480495"
 ---
 # <a name="creating-script-files-oracletosql"></a>스크립트 파일 만들기(OracleToSQL)
 SSMA 콘솔 응용 프로그램을 시작 하기 전의 첫 번째 단계는 스크립트 파일을 만드는 것이 고, 필요한 경우 변수 값 파일 및 서버 연결 파일을 만드는 것입니다.  
@@ -400,5 +401,5 @@ SSMA 콘솔 응용 프로그램을 시작 하기 전의 첫 번째 단계는 스
 콘솔 운영의 다음 단계에서는 [OracleToSQL&#41;&#40;변수 값 파일을 만듭니다 ](../../ssma/oracle/creating-variable-value-files-oracletosql.md).  
   
 ## <a name="see-also"></a>참고 항목  
-[OracleToSQL&#41;&#40;변수 값 파일 만들기](../../ssma/oracle/creating-variable-value-files-oracletosql.md)  
+[OracleToSQL&#41;&#40;변수 값 파일 만들기 ](../../ssma/oracle/creating-variable-value-files-oracletosql.md)  
   

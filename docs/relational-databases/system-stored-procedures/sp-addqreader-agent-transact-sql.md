@@ -1,4 +1,5 @@
 ---
+description: sp_addqreader_agent(Transact-SQL)
 title: sp_addqreader_agent (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: dc9f591a-e67e-4ba8-bf47-defd5eda0822
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1758f6cd269c911ea582577721d29e6534910e91
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 998a8c27af1a44bc477ab232f3b263a5ea70688f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716457"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481514"
 ---
 # <a name="sp_addqreader_agent-transact-sql"></a>sp_addqreader_agent(Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -42,14 +43,14 @@ sp_addqreader_agent [ @job_login = ] 'job_login'
 ## <a name="arguments"></a>인수  
 `[ @job_login = ] 'job_login'`[!INCLUDE[msCoName](../../includes/msconame-md.md)]에이전트가 실행 되는 Windows 계정의 로그인입니다. *job_login* 은 **nvarchar (257)** 이며 기본값은 없습니다. 이 Windows 계정은 에이전트가 배포자에 연결할 때 항상 사용됩니다.  
   
-`[ @job_password = ] 'job_password'`에이전트를 실행 하는 Windows 계정의 암호입니다. *job_password* 는 **sysname**이며 기본값은 없습니다.  
+`[ @job_password = ] 'job_password'` 에이전트를 실행 하는 Windows 계정의 암호입니다. *job_password* 는 **sysname**이며 기본값은 없습니다.  
   
 > [!IMPORTANT]  
 >  스크립트 파일에 인증 정보를 저장하지 않도록 합니다. 최상의 보안을 위해 런타임에 로그인 이름과 암호를 제공해야 합니다.  
   
-`[ @job_name = ] 'job_name'`기존 에이전트 작업의 이름입니다. *job_name* 는 **sysname**이며 기본값은 NULL입니다. 이 매개 변수는 새로 만든 작업(기본값) 대신 기존 작업을 사용하여 에이전트가 만들어지는 경우에만 지정됩니다.  
+`[ @job_name = ] 'job_name'` 기존 에이전트 작업의 이름입니다. *job_name* 는 **sysname**이며 기본값은 NULL입니다. 이 매개 변수는 새로 만든 작업(기본값) 대신 기존 작업을 사용하여 에이전트가 만들어지는 경우에만 지정됩니다.  
   
-`[ @frompublisher = ] frompublisher`프로시저가 게시자에서 실행 되 고 있는지 여부를 지정 합니다. *frompublisher* 는 bit 이며 기본값은 **0**입니다. 값 **1** 은 게시 데이터베이스의 게시자에서 프로시저가 실행 되 고 있음을 의미 합니다.  
+`[ @frompublisher = ] frompublisher` 프로시저가 게시자에서 실행 되 고 있는지 여부를 지정 합니다. *frompublisher* 는 bit 이며 기본값은 **0**입니다. 값 **1** 은 게시 데이터베이스의 게시자에서 프로시저가 실행 되 고 있음을 의미 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -66,8 +67,8 @@ sp_addqreader_agent [ @job_login = ] 'job_login'
   
 ## <a name="see-also"></a>참고 항목  
  [트랜잭션 게시에 대 한 구독 업데이트 설정](../../relational-databases/replication/publish/enable-updating-subscriptions-for-transactional-publications.md)   
- [복제 스크립트를 업그레이드 &#40;복제 Transact-sql 프로그래밍&#41;](../../relational-databases/replication/administration/upgrade-replication-scripts-replication-transact-sql-programming.md)   
- [트랜잭션 복제에 대 한 업데이트할 수 있는 구독](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   
+ [복제 스크립트 업그레이드&#40;복제 Transact-SQL 프로그래밍&#41;](../../relational-databases/replication/administration/upgrade-replication-scripts-replication-transact-sql-programming.md)   
+ [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   
  [Transact-sql&#41;sp_changeqreader_agent &#40;](../../relational-databases/system-stored-procedures/sp-changeqreader-agent-transact-sql.md)   
  [Transact-sql&#41;sp_helpqreader_agent &#40;](../../relational-databases/system-stored-procedures/sp-helpqreader-agent-transact-sql.md)  
   

@@ -1,4 +1,5 @@
 ---
+description: Filestream 및 FileTable 함수(Transact-SQL)
 title: Filestream 및 FileTable 함수 (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 71f729df-d340-4cf9-9a6d-305fcb39b009
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 595c4a12b32c6c456a1de27f8164c0ebf3629691
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0ba0d5777ad63262dda102f0f7be1f2269ba0be9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898484"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481808"
 ---
 # <a name="filestream-and-filetable-functions-transact-sql"></a>Filestream 및 FileTable 함수(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,4 +1,5 @@
 ---
+description: sp_foreignkeys(Transact-SQL)
 title: sp_foreignkeys (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 935fe385-19ff-41a4-8d0b-30618966991d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 04df50dc8378dc346079c807f8e517f1e6bbecdd
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8f7d3fe93965bcfcb516e79452b6725940c1e68c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891886"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481292"
 ---
 # <a name="sp_foreignkeys-transact-sql"></a>sp_foreignkeys(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,22 +46,22 @@ sp_foreignkeys [ @table_server = ] 'table_server'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @table_server = ] 'table_server'`테이블 정보를 반환할 연결 된 서버의 이름입니다. *table_server* 는 **sysname**이며 기본값은 없습니다.  
+`[ @table_server = ] 'table_server'` 테이블 정보를 반환할 연결 된 서버의 이름입니다. *table_server* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @pktab_name = ] 'pktab_name'`기본 키가 있는 테이블의 이름입니다. *pktab_name* 는 **sysname**이며 기본값은 NULL입니다.  
+`[ @pktab_name = ] 'pktab_name'` 기본 키가 있는 테이블의 이름입니다. *pktab_name* 는 **sysname**이며 기본값은 NULL입니다.  
   
-`[ @pktab_schema = ] 'pktab_schema'`기본 키가 있는 스키마의 이름입니다. *pktab_schema*는 **sysname**이며 기본값은 NULL입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 여기에 소유자 이름이 포함됩니다.  
+`[ @pktab_schema = ] 'pktab_schema'` 기본 키가 있는 스키마의 이름입니다. *pktab_schema*는 **sysname**이며 기본값은 NULL입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 여기에 소유자 이름이 포함됩니다.  
   
-`[ @pktab_catalog = ] 'pktab_catalog'`기본 키가 있는 카탈로그의 이름입니다. *pktab_catalog*는 **sysname**이며 기본값은 NULL입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 여기에 데이터베이스 이름이 포함됩니다.  
+`[ @pktab_catalog = ] 'pktab_catalog'` 기본 키가 있는 카탈로그의 이름입니다. *pktab_catalog*는 **sysname**이며 기본값은 NULL입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 여기에 데이터베이스 이름이 포함됩니다.  
   
-`[ @fktab_name = ] 'fktab_name'`외래 키가 있는 테이블의 이름입니다. *fktab_name*는 **sysname**이며 기본값은 NULL입니다.  
+`[ @fktab_name = ] 'fktab_name'` 외래 키가 있는 테이블의 이름입니다. *fktab_name*는 **sysname**이며 기본값은 NULL입니다.  
   
-`[ @fktab_schema = ] 'fktab_schema'`외래 키가 있는 스키마의 이름입니다. *fktab_schema*는 **sysname**이며 기본값은 NULL입니다.  
+`[ @fktab_schema = ] 'fktab_schema'` 외래 키가 있는 스키마의 이름입니다. *fktab_schema*는 **sysname**이며 기본값은 NULL입니다.  
   
-`[ @fktab_catalog = ] 'fktab_catalog'`외래 키가 있는 카탈로그의 이름입니다. *fktab_catalog*는 **sysname**이며 기본값은 NULL입니다.  
+`[ @fktab_catalog = ] 'fktab_catalog'` 외래 키가 있는 카탈로그의 이름입니다. *fktab_catalog*는 **sysname**이며 기본값은 NULL입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
- 없음  
+ None  
   
 ## <a name="result-sets"></a>결과 집합  
  다양 한 DBMS 제품에서 테이블에 대해 세 부분으로 구성 되는 이름 (_카탈로그_)을 지원**합니다.** _스키마_**.** _테이블_)을 반환 합니다.  
@@ -90,7 +91,7 @@ sp_foreignkeys [ @table_server = ] 'table_server'
 ## <a name="permissions"></a>사용 권한  
  스키마에 대한 SELECT 권한이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 연결된 서버 `Department`의 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에 있는 `Seattle1` 테이블에 대한 외래 키 정보를 반환합니다.  
   
 ```  
@@ -103,7 +104,7 @@ EXEC sp_foreignkeys @table_server = N'Seattle1',
  [Transact-sql&#41;sp_catalogs &#40;](../../relational-databases/system-stored-procedures/sp-catalogs-transact-sql.md)   
  [Transact-sql&#41;sp_column_privileges &#40;](../../relational-databases/system-stored-procedures/sp-column-privileges-transact-sql.md)   
  [Transact-sql&#41;sp_indexes &#40;](../../relational-databases/system-stored-procedures/sp-indexes-transact-sql.md)   
- [Transact-sql&#41;sp_linkedservers &#40;](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)   
+ [sp_linkedservers&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)   
  [Transact-sql&#41;sp_primarykeys &#40;](../../relational-databases/system-stored-procedures/sp-primarykeys-transact-sql.md)   
  [Transact-sql&#41;sp_tables_ex &#40;](../../relational-databases/system-stored-procedures/sp-tables-ex-transact-sql.md)   
  [Transact-sql&#41;sp_table_privileges &#40;](../../relational-databases/system-stored-procedures/sp-table-privileges-transact-sql.md)   

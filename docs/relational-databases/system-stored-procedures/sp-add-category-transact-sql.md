@@ -1,4 +1,5 @@
 ---
+description: sp_add_category(Transact-SQL)
 title: sp_add_category (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6cca32cd-d941-4378-aed6-a7c90cb7520a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 323a86b4efbaa63d8858341c68908e30258d4889
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 40ce855f929a19f9dbcd757b0e1ea8774fbe2cb3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87865291"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481695"
 ---
 # <a name="sp_add_category-transact-sql"></a>sp_add_category(Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -45,7 +46,7 @@ sp_add_category
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @class = ] 'class'`추가할 범주의 클래스입니다. *클래스* 는 기본값은 JOB이 고 다음 값 중 하나일 수 있는 **varchar (8)** 입니다.  
+`[ @class = ] 'class'` 추가할 범주의 클래스입니다. *클래스* 는 기본값은 JOB이 고 다음 값 중 하나일 수 있는 **varchar (8)** 입니다.  
   
 |값|설명|  
 |-----------|-----------------|  
@@ -53,7 +54,7 @@ sp_add_category
 |ALERT|경고 범주를 추가합니다.|  
 |OPERATOR|운영자 범주를 추가합니다.|  
   
-`[ @type = ] 'type'`추가할 범주의 유형입니다. *type* 은 **varchar (12)** 이며 기본값은 **LOCAL**이 고 다음 값 중 하나일 수 있습니다.  
+`[ @type = ] 'type'` 추가할 범주의 유형입니다. *type* 은 **varchar (12)** 이며 기본값은 **LOCAL**이 고 다음 값 중 하나일 수 있습니다.  
   
 |값|설명|  
 |-----------|-----------------|  
@@ -61,7 +62,7 @@ sp_add_category
 |다중 서버|다중 서버 작업 범주|  
 |없음|JOB이 아닌 다른 클래스에 대 한 범주입니다 **.**|  
   
-`[ @name = ] 'name'`추가할 범주의 이름입니다. 이름은 지정한 클래스 내에서 고유해야 합니다. *name* 은 **sysname**이며 기본값은 없습니다.  
+`[ @name = ] 'name'` 추가할 범주의 이름입니다. 이름은 지정한 클래스 내에서 고유해야 합니다. *name* 은 **sysname**이며 기본값은 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -75,7 +76,7 @@ sp_add_category
 ## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할의 멤버만 **sp_add_category**를 실행할 수 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `AdminJobs`라는 로컬 작업 범주를 만듭니다.  
   
 ```  
@@ -93,7 +94,7 @@ GO
  [Transact-sql&#41;sp_delete_category &#40;](../../relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md)   
  [Transact-sql&#41;sp_help_category &#40;](../../relational-databases/system-stored-procedures/sp-help-category-transact-sql.md)   
  [Transact-sql&#41;sp_update_category &#40;](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)   
- [Transact-sql&#41;&#40;작업dbo.sys](../../relational-databases/system-tables/dbo-sysjobs-transact-sql.md)   
+ [ Transact-sql&#41;&#40;작업dbo.sys](../../relational-databases/system-tables/dbo-sysjobs-transact-sql.md)   
  [dbo.sysjobservers &#40;Transact-sql&#41;](../../relational-databases/system-tables/dbo-sysjobservers-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

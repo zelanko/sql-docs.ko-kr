@@ -1,4 +1,5 @@
 ---
+description: sp_add_schedule(Transact-SQL)
 title: sp_add_schedule (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9060aae3-3ddd-40a5-83bb-3ea7ab1ffbd7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d4ee3f039613865aab68860f93ab74279068a7da
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: aed71a51ab9852272c16e193367c12df77bb76a9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87865311"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481595"
 ---
 # <a name="sp_add_schedule-transact-sql"></a>sp_add_schedule(Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -54,11 +55,11 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @schedule_name = ] 'schedule_name'`일정의 이름입니다. *schedule_name* 는 **sysname**이며 기본값은 없습니다.  
+`[ @schedule_name = ] 'schedule_name'` 일정의 이름입니다. *schedule_name* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @enabled = ] enabled`일정의 현재 상태를 나타냅니다. *enabled* 는 **tinyint**이며 기본값은 **1** (사용)입니다. **0**인 경우 일정을 사용할 수 없습니다. 일정을 사용할 수 없는 경우 이 일정에 따라 어떠한 작업도 실행되지 않습니다.  
+`[ @enabled = ] enabled` 일정의 현재 상태를 나타냅니다. *enabled* 는 **tinyint**이며 기본값은 **1** (사용)입니다. **0**인 경우 일정을 사용할 수 없습니다. 일정을 사용할 수 없는 경우 이 일정에 따라 어떠한 작업도 실행되지 않습니다.  
   
-`[ @freq_type = ] freq_type`작업이 실행 될 시기를 나타내는 값입니다. *freq_type* 은 **int**이며 기본값은 **0**이 고 다음 값 중 하나일 수 있습니다.  
+`[ @freq_type = ] freq_type` 작업이 실행 될 시기를 나타내는 값입니다. *freq_type* 은 **int**이며 기본값은 **0**이 고 다음 값 중 하나일 수 있습니다.  
   
 |값|Description|  
 |-----------|-----------------|  
@@ -70,7 +71,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 |**64**|SQL 에이전트 서비스를 시작할 때 실행|  
 |**128**|컴퓨터가 유휴 상태일 때 실행 ( [AZURE SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)에서 지원 되지 않음) |  
   
-`[ @freq_interval = ] freq_interval`작업이 실행 되는 요일입니다. *freq_interval* 은 **int**이며 기본값은 **1**이 고 *freq_type*의 값에 따라 달라 집니다.  
+`[ @freq_interval = ] freq_interval` 작업이 실행 되는 요일입니다. *freq_interval* 은 **int**이며 기본값은 **1**이 고 *freq_type*의 값에 따라 달라 집니다.  
   
 |*Freq_type* 의 값|*Freq_interval* 에 대 한 영향|  
 |---------------------------|--------------------------------|  
@@ -91,37 +92,37 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 |**0x4**|분|  
 |**0x8**|시간|  
   
-`[ @freq_subday_interval = ] freq_subday_interval`각 작업 실행 사이에 발생 하는 *freq_subday_type* 기간 수입니다. *freq_subday_interval* 은 **int**이며 기본값은 **0**입니다. 참고: 간격은 10 초 보다 길어야 합니다. *freq_subday_type* 가 **1**과 같은 경우 *freq_subday_interval* 은 무시 됩니다.  
+`[ @freq_subday_interval = ] freq_subday_interval` 각 작업 실행 사이에 발생 하는 *freq_subday_type* 기간 수입니다. *freq_subday_interval* 은 **int**이며 기본값은 **0**입니다. 참고: 간격은 10 초 보다 길어야 합니다. *freq_subday_type* 가 **1**과 같은 경우 *freq_subday_interval* 은 무시 됩니다.  
   
 `[ @freq_relative_interval = ] freq_relative_interval`*Freq_interval* 32 (매월 상대적) 인 경우 매월 *freq_interval* 작업의 발생입니다. *freq_relative_interval* 은 **int**이며 기본값은 **0**이 고 다음 값 중 하나일 수 있습니다. *freq_type* 32와 같지 않은 경우에는 *freq_relative_interval* 무시 됩니다.  
   
 |값|설명(단위)|  
 |-----------|--------------------------|  
-|**1**|First|  
+|**1**|처음|  
 |**2**|초|  
 |**4**|세 번째|  
 |**8**|넷째|  
 |**16**|마지막|  
   
-`[ @freq_recurrence_factor = ] freq_recurrence_factor`예약 된 작업 실행 사이에 발생 하는 주 또는 월 수입니다. *freq_recurrence_factor* 는 *freq_type* 이 **8**, **16**또는 **32**인 경우에만 사용 됩니다. *freq_recurrence_factor* 은 **int**이며 기본값은 **0**입니다.  
+`[ @freq_recurrence_factor = ] freq_recurrence_factor` 예약 된 작업 실행 사이에 발생 하는 주 또는 월 수입니다. *freq_recurrence_factor* 는 *freq_type* 이 **8**, **16**또는 **32**인 경우에만 사용 됩니다. *freq_recurrence_factor* 은 **int**이며 기본값은 **0**입니다.  
   
-`[ @active_start_date = ] active_start_date`작업 실행을 시작할 수 있는 날짜입니다. *active_start_date* 은 **int**이며 기본값은 오늘 날짜를 나타내는 NULL입니다. 날짜 형식은 YYYYMMDD입니다. *ACTIVE_START_DATE* NULL이 아닌 경우 날짜는 19900101 보다 크거나 같아야 합니다.  
+`[ @active_start_date = ] active_start_date` 작업 실행을 시작할 수 있는 날짜입니다. *active_start_date* 은 **int**이며 기본값은 오늘 날짜를 나타내는 NULL입니다. 날짜 형식은 YYYYMMDD입니다. *ACTIVE_START_DATE* NULL이 아닌 경우 날짜는 19900101 보다 크거나 같아야 합니다.  
   
  일정을 만든 다음 시작 날짜를 검토하여 날짜가 제대로 되어 있는지 확인하십시오. 자세한 내용은 [작업에 대 한 일정 만들기 및 연결](../../ssms/agent/create-and-attach-schedules-to-jobs.md)의 "시작 날짜 예약" 섹션을 참조 하세요.  
   
  주별 또는 월별 일정의 경우 에이전트는 active_start_date가 과거 날짜인 경우 이를 무시하고 대신 현재 날짜를 사용합니다. sp_add_schedule을 사용하여 SQL 에이전트 일정을 만드는 경우 작업 실행이 시작되는 날짜인 active_start_date 매개 변수를 지정할 수 있습니다. 일정 유형이 주별이거나 월별이고 active_start_date 매개 변수가 과거 날짜로 설정되는 경우 active_start_date 매개 변수는 무시되고 현재 날짜가 active_start_date로 사용됩니다.  
   
-`[ @active_end_date = ] active_end_date`작업 실행을 중지할 수 있는 날짜입니다. *active_end_date* 는 **int**이며 기본값은 9999 년 12 월 31 일을 나타내는 **99991231**입니다. 날짜 형식은 YYYYMMDD입니다.  
+`[ @active_end_date = ] active_end_date` 작업 실행을 중지할 수 있는 날짜입니다. *active_end_date* 는 **int**이며 기본값은 9999 년 12 월 31 일을 나타내는 **99991231**입니다. 날짜 형식은 YYYYMMDD입니다.  
   
 `[ @active_start_time = ] active_start_time`*Active_start_date* 와 *active_end_date* 사이의 모든 날짜에서 작업 실행을 시작할 시간입니다. *active_start_time* 는 **int**이며 기본값은 **000000**이며 오전 12:00:00을 나타냅니다. 이때 시간은 HHMMSS 형식으로 입력해야 합니다.  
   
 `[ @active_end_time = ] active_end_time`*Active_start_date* 와 *active_end_date* 사이의 모든 날짜에 대 한 시간으로, 작업의 실행을 종료 합니다. *active_end_time* 는 **int**이며 기본값은 **235959**입니다 .이는 11:59:59 P.M.를 나타냅니다. 이때 시간은 HHMMSS 형식으로 입력해야 합니다.  
   
-`[ @owner_login_name = ] 'owner_login_name'`일정을 소유 하는 서버 보안 주체의 이름입니다. *owner_login_name* 는 **sysname**이며 기본값은 작성자가 일정을 소유 하 고 있음을 나타내는 NULL입니다.  
+`[ @owner_login_name = ] 'owner_login_name'` 일정을 소유 하는 서버 보안 주체의 이름입니다. *owner_login_name* 는 **sysname**이며 기본값은 작성자가 일정을 소유 하 고 있음을 나타내는 NULL입니다.  
   
-`[ @schedule_uid = ] _schedule_uidOUTPUT`일정의 고유 식별자입니다. *schedule_uid* 은 **uniqueidentifier**형식의 변수입니다.  
+`[ @schedule_uid = ] _schedule_uidOUTPUT` 일정의 고유 식별자입니다. *schedule_uid* 은 **uniqueidentifier**형식의 변수입니다.  
   
-`[ @schedule_id = ] _schedule_idOUTPUT`일정의 식별자입니다. *schedule_id* 은 **int**형식의 변수입니다.  
+`[ @schedule_id = ] _schedule_idOUTPUT` 일정의 식별자입니다. *schedule_id* 은 **int**형식의 변수입니다.  
   
 `[ @originating_server = ] server_name` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
@@ -145,7 +146,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
   
  이러한 역할의 사용 권한에 대한 자세한 내용은 [SQL Server 에이전트 고정 데이터베이스 역할](../../ssms/agent/sql-server-agent-fixed-database-roles.md)을 참조하세요.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-creating-a-schedule"></a>A. 일정 만들기  
  다음 예에서는 `RunOnce`라는 일정을 만듭니다. 일정은 일정이 생성된 날짜의 `23:30`에 한 번 실행됩니다.  
@@ -194,7 +195,7 @@ GO
  [일정을 만들고 작업에 연결](../../ssms/agent/create-and-attach-schedules-to-jobs.md)   
  [작업 예약](../../ssms/agent/schedule-a-job.md)   
  [일정 만들기](../../ssms/agent/create-a-schedule.md)   
- [Transact-sql&#41;&#40;저장 프로시저 SQL Server 에이전트](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;저장 프로시저 SQL Server 에이전트 ](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
  [Transact-sql&#41;sp_add_jobschedule &#40;](../../relational-databases/system-stored-procedures/sp-add-jobschedule-transact-sql.md)   
  [Transact-sql&#41;sp_update_schedule &#40;](../../relational-databases/system-stored-procedures/sp-update-schedule-transact-sql.md)   
  [Transact-sql&#41;sp_delete_schedule &#40;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   

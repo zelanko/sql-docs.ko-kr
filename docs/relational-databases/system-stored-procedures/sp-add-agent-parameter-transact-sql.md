@@ -1,4 +1,5 @@
 ---
+description: sp_add_agent_parameter(Transact-SQL)
 title: sp_add_agent_parameter (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 055f4765-0574-47c3-bf7d-6ef6e9bd8b34
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: cf8704f4106cd701c5c5d2bbeab324ed2f75e731
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: abd0a36fe9699c3fc72db4848d08ad6469ae3dc0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731765"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481659"
 ---
 # <a name="sp_add_agent_parameter-transact-sql"></a>sp_add_agent_parameter(Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -51,7 +52,7 @@ sp_add_agent_parameter [ @profile_id = ] profile_id
 |**4**|병합 에이전트|  
 |**9**|큐 판독기 에이전트|  
   
-`[ @parameter_name = ] 'parameter_name'`매개 변수의 이름입니다. *parameter_name* 는 **sysname**이며 기본값은 없습니다. 시스템 프로필에 이미 정의 된 매개 변수 목록은 [복제 에이전트 프로필](../../relational-databases/replication/agents/replication-agent-profiles.md)을 참조 하세요. 각 에이전트에 대해 유효한 매개 변수의 전체 목록은 다음 항목을 참조하십시오.  
+`[ @parameter_name = ] 'parameter_name'` 매개 변수의 이름입니다. *parameter_name* 는 **sysname**이며 기본값은 없습니다. 시스템 프로필에 이미 정의 된 매개 변수 목록은 [복제 에이전트 프로필](../../relational-databases/replication/agents/replication-agent-profiles.md)을 참조 하세요. 각 에이전트에 대해 유효한 매개 변수의 전체 목록은 다음 항목을 참조하십시오.  
   
 -   [Replication Snapshot Agent](../../relational-databases/replication/agents/replication-snapshot-agent.md)  
   
@@ -63,7 +64,7 @@ sp_add_agent_parameter [ @profile_id = ] profile_id
   
 -   [Replication Queue Reader Agent](../../relational-databases/replication/agents/replication-queue-reader-agent.md)  
   
-`[ @parameter_value = ] 'parameter_value'`매개 변수에 할당할 값입니다. *parameter_value* 은 **nvarchar (255)** 이며 기본값은 없습니다.  
+`[ @parameter_value = ] 'parameter_value'` 매개 변수에 할당할 값입니다. *parameter_value* 은 **nvarchar (255)** 이며 기본값은 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

@@ -1,4 +1,5 @@
 ---
+description: sp_scriptsubconflicttable(Transact-SQL)
 title: sp_scriptsubconflicttable (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 13867145-3dad-47a4-8d50-a65175418479
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 93656ff6bec2acc3c3f6f7ee189b1c45db75a7d6
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e1c6d2a6ea66f0e2d937e1564d4abed36bd4af44
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899194"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481061"
 ---
 # <a name="sp_scriptsubconflicttable-transact-sql"></a>sp_scriptsubconflicttable(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,9 +38,9 @@ sp_scriptsubconflicttable [@publication =] 'publication'    , [@article =] 'arti
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @publication = ] 'publication'`아티클이 포함 된 게시의 이름입니다. 이 이름은 데이터베이스에서 고유해야 합니다. *게시* 는 **sysname**이며 기본값은 없습니다.  
+`[ @publication = ] 'publication'` 아티클이 포함 된 게시의 이름입니다. 이 이름은 데이터베이스에서 고유해야 합니다. *게시* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @article = ] 'article'`구독 아티클의 이름입니다. *article* 은 **sysname**이며 기본값은 없습니다.  
+`[ @article = ] 'article'` 구독 아티클의 이름입니다. *article* 은 **sysname**이며 기본값은 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

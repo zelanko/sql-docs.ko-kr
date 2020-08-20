@@ -1,4 +1,5 @@
 ---
+description: 서버 연결 파일 만들기 (AccessToSQL)
 title: 서버 연결 파일 만들기 (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 829153be-aa8e-4162-87e8-69882feecf19
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: b74cf86e6a68653a2047aebefc7ca86ab6868475
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 207aa406df3f426658afa569d434ea71db5eba1e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87933984"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480509"
 ---
 # <a name="creating-the-server-connection-files-accesstosql"></a>서버 연결 파일 만들기 (AccessToSQL)
 서버 정보는 스크립트 파일의 서버 섹션에서 지정할 수 있습니다. 서버 정보는 별도의 서버 연결 파일에도 지정할 수 있습니다. 서버 연결 파일에 대 한 명령줄 매개 변수는 `-c <serverconnectionfile>` 입니다. 스크립트 및 서버 연결 파일에 동일한 서버 id가 있는 경우 스크립트 파일의 서버 정의가 고려 됩니다.  

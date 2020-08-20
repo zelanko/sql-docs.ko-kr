@@ -1,4 +1,5 @@
 ---
+description: sp_deletemergeconflictrow(Transact-SQL)
 title: sp_deletemergeconflictrow (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 64cf1186-28b8-4cd9-88f1-a7808a9c8d60
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9ab3528c496722877310c13d073158bd20969bc4
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d65a0b2b039d94ca425bb6e93a067e8fcc0ddd2b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85861779"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481342"
 ---
 # <a name="sp_deletemergeconflictrow-transact-sql"></a>sp_deletemergeconflictrow(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,15 +42,15 @@ sp_deletemergeconflictrow [ [ @conflict_table = ] 'conflict_table' ]
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @conflict_table = ] 'conflict_table'`충돌 테이블의 이름입니다. *conflict_table* 는 **sysname**이며 기본값은 **%** 입니다. *CONFLICT_TABLE* NULL 또는로 지정 된 경우 **%** 충돌은 삭제 충돌로 간주 되며 *rowguid* 와 *origin_datasource* 및 *Source_object* 일치 하는 행이 [MSmerge_conflicts_info &#40;transact-sql&#41;](../../relational-databases/system-tables/msmerge-conflicts-info-transact-sql.md) 테이블에서 삭제 됩니다.  
+`[ @conflict_table = ] 'conflict_table'` 충돌 테이블의 이름입니다. *conflict_table* 는 **sysname**이며 기본값은 **%** 입니다. *CONFLICT_TABLE* NULL 또는로 지정 된 경우 **%** 충돌은 삭제 충돌로 간주 되며 *rowguid* 와 *origin_datasource* 및 *Source_object* 일치 하는 행이 [MSmerge_conflicts_info &#40;transact-sql&#41;](../../relational-databases/system-tables/msmerge-conflicts-info-transact-sql.md) 테이블에서 삭제 됩니다.  
   
-`[ @source_object = ] 'source_object'`원본 테이블의 이름입니다. *source_object* 은 **nvarchar (386)** 이며 기본값은 NULL입니다.  
+`[ @source_object = ] 'source_object'` 원본 테이블의 이름입니다. *source_object* 은 **nvarchar (386)** 이며 기본값은 NULL입니다.  
   
-`[ @rowguid = ] 'rowguid'`삭제 충돌에 대 한 행 식별자입니다. *rowguid* 는 **uniqueidentifier**이며 기본값은 없습니다.  
+`[ @rowguid = ] 'rowguid'` 삭제 충돌에 대 한 행 식별자입니다. *rowguid* 는 **uniqueidentifier**이며 기본값은 없습니다.  
   
-`[ @origin_datasource = ] 'origin_datasource'`충돌의 원점입니다. *origin_datasource* 는 **varchar (255)** 이며 기본값은 없습니다.  
+`[ @origin_datasource = ] 'origin_datasource'` 충돌의 원점입니다. *origin_datasource* 는 **varchar (255)** 이며 기본값은 없습니다.  
   
-`[ @drop_table_if_empty = ] 'drop_table_if_empty'`가 비어 있는 경우 *conflict_table* 삭제 됨을 나타내는 플래그입니다. *drop_table_if_empty* 는 **varchar (10)** 이며 기본값은 FALSE입니다.  
+`[ @drop_table_if_empty = ] 'drop_table_if_empty'` 가 비어 있는 경우 *conflict_table* 삭제 됨을 나타내는 플래그입니다. *drop_table_if_empty* 는 **varchar (10)** 이며 기본값은 FALSE입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

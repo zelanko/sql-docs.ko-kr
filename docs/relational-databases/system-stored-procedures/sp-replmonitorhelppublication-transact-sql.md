@@ -1,4 +1,5 @@
 ---
+description: sp_replmonitorhelppublication(Transact-SQL)
 title: sp_replmonitorhelppublication (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7928c50c-617f-41c5-9e0f-4e42e8be55dc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6468bcb1c97b6f995afadfe422e11dec98463620
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6ab914a76ba3aa4a5205631727242d3983cef68d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720203"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481136"
 ---
 # <a name="sp_replmonitorhelppublication-transact-sql"></a>sp_replmonitorhelppublication(Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -41,13 +42,13 @@ sp_replmonitorhelppublication [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @publisher = ] 'publisher'`상태를 모니터링 하는 게시자의 이름입니다. *publisher* 는 **sysname**이며 기본값은 NULL입니다. **Null**인 경우 배포자를 사용 하는 모든 게시자에 대해 정보가 반환 됩니다.  
+`[ @publisher = ] 'publisher'` 상태를 모니터링 하는 게시자의 이름입니다. *publisher* 는 **sysname**이며 기본값은 NULL입니다. **Null**인 경우 배포자를 사용 하는 모든 게시자에 대해 정보가 반환 됩니다.  
   
-`[ @publisher_db = ] 'publisher_db'`게시 된 데이터베이스의 이름입니다. *publisher_db* 는 **sysname**이며 기본값은 NULL입니다. NULL인 경우 게시자에 게시된 모든 데이터베이스에 대한 정보가 반환됩니다.  
+`[ @publisher_db = ] 'publisher_db'` 게시 된 데이터베이스의 이름입니다. *publisher_db* 는 **sysname**이며 기본값은 NULL입니다. NULL인 경우 게시자에 게시된 모든 데이터베이스에 대한 정보가 반환됩니다.  
   
-`[ @publication = ] 'publication'`모니터링 되는 게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 NULL입니다.  
+`[ @publication = ] 'publication'` 모니터링 되는 게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 NULL입니다.  
   
-`[ @publication_type = ] publication_type`게시의 유형입니다. *publication_type* 은 **int**이며 다음 값 중 하나일 수 있습니다.  
+`[ @publication_type = ] publication_type` 게시의 유형입니다. *publication_type* 은 **int**이며 다음 값 중 하나일 수 있습니다.  
   
 |값|설명|  
 |-----------|-----------------|  
@@ -56,7 +57,7 @@ sp_replmonitorhelppublication [ @publisher = ] 'publisher'
 |**2**|병합 게시|  
 |NULL(기본값)|복제에서 게시 유형을 확인하려고 합니다.|  
   
-`[ @refreshpolicy = ] refreshpolicy`내부용 으로만 사용 됩니다.  
+`[ @refreshpolicy = ] refreshpolicy` 내부용 으로만 사용 됩니다.  
   
 ## <a name="result-sets"></a>결과 집합  
   

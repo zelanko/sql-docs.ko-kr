@@ -1,4 +1,5 @@
 ---
+description: sp_add_targetsvrgrp_member(Transact-SQL)
 title: sp_add_targetsvrgrp_member (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5021ed5b-acca-4f8b-b9db-18733059c359
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f18af2207069ab3a4d8b8a05c9c0a5b7a3fe6deb
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 347f9581db7da96d93d69a25625af1bc40260f0b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85878242"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481575"
 ---
 # <a name="sp_add_targetsvrgrp_member-transact-sql"></a>sp_add_targetsvrgrp_member(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,9 +40,9 @@ sp_add_targetsvrgrp_member [ @group_name = ] 'group_name' , [ @server_name = ] '
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @group_name = ] 'group_name'`그룹의 이름입니다. *group_name* 는 **sysname**이며 기본값은 없습니다.  
+`[ @group_name = ] 'group_name'` 그룹의 이름입니다. *group_name* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @server_name = ] 'server_name'`지정 된 그룹에 추가 해야 하는 서버의 이름입니다. *server_name* 은 **nvarchar (30)** 이며 기본값은 없습니다.  
+`[ @server_name = ] 'server_name'` 지정 된 그룹에 추가 해야 하는 서버의 이름입니다. *server_name* 은 **nvarchar (30)** 이며 기본값은 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -55,7 +56,7 @@ sp_add_targetsvrgrp_member [ @group_name = ] 'group_name' , [ @server_name = ] '
 ## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할의 멤버만이 프로시저를 실행할 수 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `Servers Maintaining Customer Information` 그룹을 추가하고 해당 그룹에 `LONDON1` 서버를 추가합니다.  
   
 ```  

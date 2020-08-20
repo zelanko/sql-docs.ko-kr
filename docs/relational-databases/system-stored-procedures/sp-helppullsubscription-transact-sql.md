@@ -1,4 +1,5 @@
 ---
+description: sp_helppullsubscription(Transact-SQL)
 title: sp_helppullsubscription (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a0d9c3f1-1fe9-497c-8e2f-5b74f47a7346
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3b12ffb31836bfde3cb29cf240dbfc5d9da66eac
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 163cd14235fd5364f42c8e9a722341c96a03290f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85729211"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481165"
 ---
 # <a name="sp_helppullsubscription-transact-sql"></a>sp_helppullsubscription(Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -40,13 +41,13 @@ sp_helppullsubscription [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @publisher = ] 'publisher'`원격 서버의 이름입니다. *publisher* 는 **sysname**이며 기본값은 **%** 모든 게시자에 대 한 정보를 반환 하는입니다.  
+`[ @publisher = ] 'publisher'` 원격 서버의 이름입니다. *publisher* 는 **sysname**이며 기본값은 **%** 모든 게시자에 대 한 정보를 반환 하는입니다.  
   
-`[ @publisher_db = ] 'publisher_db'`게시자 데이터베이스의 이름입니다. *publisher_db* 는 **sysname**이며 기본값은 **%** 모든 게시자 데이터베이스를 반환 하는입니다.  
+`[ @publisher_db = ] 'publisher_db'` 게시자 데이터베이스의 이름입니다. *publisher_db* 는 **sysname**이며 기본값은 **%** 모든 게시자 데이터베이스를 반환 하는입니다.  
   
-`[ @publication = ] 'publication'`게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 **%** 모든 게시를 반환 하는입니다. 이 매개 변수가 ALL과 같으면 independent_agent = **0** 인 끌어오기 구독만 반환 됩니다.  
+`[ @publication = ] 'publication'` 게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 **%** 모든 게시를 반환 하는입니다. 이 매개 변수가 ALL과 같으면 independent_agent = **0** 인 끌어오기 구독만 반환 됩니다.  
   
-`[ @show_push = ] 'show_push'`모든 밀어넣기 구독을 반환할지 여부입니다. *show_push*은 **nvarchar (5)** 이며 기본값은 밀어넣기 구독을 반환 하지 않는 FALSE입니다.  
+`[ @show_push = ] 'show_push'` 모든 밀어넣기 구독을 반환할지 여부입니다. *show_push*은 **nvarchar (5)** 이며 기본값은 밀어넣기 구독을 반환 하지 않는 FALSE입니다.  
   
 ## <a name="result-sets"></a>결과 집합  
   

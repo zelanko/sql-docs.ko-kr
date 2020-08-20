@@ -1,4 +1,5 @@
 ---
+description: 프로젝트 설정 (마이그레이션) (AccessToSQL)
 title: 프로젝트 설정 (마이그레이션) (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4caebc9c-8680-4b99-a8fa-89c43161c95d
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 973a957f3c2c758aaf83116d9cba1cc8f50a3adc
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 94bd5cc9a8cb0db9079db981ec50a5fa6af7b20c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87937768"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480535"
 ---
 # <a name="project-settings-migration-accesstosql"></a>프로젝트 설정 (마이그레이션) (AccessToSQL)
 마이그레이션 프로젝트 설정을 사용 하 여 데이터를 마이그레이션하는 방법을 구성 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 하거나 SQL Azure 수 있습니다.  
@@ -77,7 +78,7 @@ ms.locfileid: "87937768"
 **지원 되지 않는 날짜 바꾸기**  
 SSMA에서 가장 이른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 날짜/시간 날짜 (01 년 1 월 1753) 이전의 액세스 날짜를 수정 해야 하는지 여부를 지정 합니다.  
   
--   현재 날짜 값을 유지 하려면 **아무 것도 안 함**을 선택 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 datetime 열에서 01 년 1 월 1753 일 이전 날짜를 수락 하지 않습니다. 이전 날짜를 사용 하는 경우에는 datetime 값을 문자 값으로 변환 해야 합니다.  
+-   현재 날짜 값을 유지 하려면 **아무 것도 안 함**을 선택 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 datetime 열에서 01 년 1 월 1753 일 이전 날짜를 수락 하지 않습니다. 이전 날짜를 사용 하는 경우에는 datetime 값을 문자 값으로 변환 해야 합니다.  
   
 -   1753 년 1 월 1 일 이전 날짜를 NULL로 변환 하려면 **바꾸기를 null로 바꾸기**를 선택 합니다.  
   

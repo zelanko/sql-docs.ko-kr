@@ -1,4 +1,5 @@
 ---
+description: sp_trace_setevent(Transact-SQL)
 title: sp_trace_setevent (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7662d1d9-6d0f-443a-b011-c901a8b77a44
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f96efdec6878691c4c3b3a3efbeb1cd2d6324f3d
-ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
+ms.openlocfilehash: 9f176957bb975ee08ac6ef508a187b189a6123b4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87472669"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480965"
 ---
 # <a name="sp_trace_setevent-transact-sql"></a>sp_trace_setevent(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,9 +46,9 @@ sp_trace_setevent [ @traceid = ] trace_id
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @traceid = ] trace_id`수정할 추적의 ID입니다. *trace_id* 는 **int**이며 기본값은 없습니다. 사용자는이 *trace_id* 값을 사용 하 여 추적을 식별, 수정 및 제어할 수 있습니다.  
+`[ @traceid = ] trace_id` 수정할 추적의 ID입니다. *trace_id* 는 **int**이며 기본값은 없습니다. 사용자는이 *trace_id* 값을 사용 하 여 추적을 식별, 수정 및 제어할 수 있습니다.  
   
-`[ @eventid = ] event_id`설정할 이벤트의 ID입니다. *event_id* 는 **int**이며 기본값은 없습니다.  
+`[ @eventid = ] event_id` 설정할 이벤트의 ID입니다. *event_id* 는 **int**이며 기본값은 없습니다.  
   
  다음 표에서는 추적에서 추가 또는 제거될 수 있는 이벤트를 보여 줍니다.  
   
@@ -236,11 +237,11 @@ sp_trace_setevent [ @traceid = ] trace_id
 |218|Plan Guide Unsuccessful|SQL Server에서 계획 지침이 포함된 쿼리 또는 일괄 처리에 대한 실행 계획을 생성하지 못했음을 나타냅니다. SQL Server에서 계획 지침을 적용하지 않고 이 쿼리 또는 일괄 처리의 실행 계획을 생성하려고 했습니다. 이러한 문제는 계획 지침이 잘못되어 발생할 수 있습니다. sys.fn_validate_plan_guide 시스템 함수를 사용하여 계획 지침의 유효성을 검사할 수 있습니다.|  
 |235|Audit Fulltext||  
   
-`[ @columnid = ] column_id`이벤트에 대해 추가할 열의 ID입니다. *column_id* 는 **int**이며 기본값은 없습니다.  
+`[ @columnid = ] column_id` 이벤트에 대해 추가할 열의 ID입니다. *column_id* 는 **int**이며 기본값은 없습니다.  
   
  다음 표에서는 이벤트에 추가될 수 있는 열을 나열합니다.  
   
-|열 번호|열 이름|Description|  
+|열 번호|열 이름|설명|  
 |-------------------|-----------------|-----------------|  
 |1|**TextData**|추적에서 캡처한 이벤트 클래스에 의존하는 텍스트 값입니다.|  
 |2|**BinaryData**|추적에서 캡처된 이벤트 클래스에 의존하는 이진 값입니다.|  
@@ -271,7 +272,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |27|**EventClass**|기록되고 있는 이벤트 클래스의 유형입니다.|  
 |28|**ObjectType**|개체 유형(테이블, 함수 또는 저장 프로시저 등)|  
 |29|**NestLevel**|이 저장 프로시저가 실행하고 있는 중첩 수준입니다. [@ @NESTLEVEL &#40;transact-sql&#41;](../../t-sql/functions/nestlevel-transact-sql.md)을 참조 하세요.|  
-|30|**상태**|오류 발생 시의 서버 상태입니다.|  
+|30|**State**|오류 발생 시의 서버 상태입니다.|  
 |31|**오류**|오류 번호입니다.|  
 |32|**모드**|획득된 잠금의 잠금 모드입니다. 이 열은 **Lock: Released** 이벤트로 채워지지 않습니다.|  
 |33|**Handle**|이벤트에 참조된 개체의 핸들입니다.|  
@@ -298,7 +299,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |54|**GUID**|추적에서 캡처된 이벤트 클래스에 따라 달라지는 GUID 값입니다.|  
 |55|**IntegerData2**|추적에서 캡처된 이벤트 클래스에 따라 달라지는 정수 값입니다.|  
 |56|**ObjectID2**|관련 개체 또는 엔터티의 ID입니다(사용 가능한 경우).|  
-|57|**형식**|추적에서 캡처된 이벤트 클래스에 따라 달라지는 정수 값입니다.|  
+|57|**유형**|추적에서 캡처된 이벤트 클래스에 따라 달라지는 정수 값입니다.|  
 |58|**OwnerID**|잠금을 소유하는 개체의 유형입니다. 잠금 이벤트 전용입니다.|  
 |59|**ParentName**|개체가 포함된 스키마의 이름입니다.|  
 |60|**IsSystem**|이벤트가 시스템 프로세스에서 발생했는지 아니면 사용자 프로세스에서 발생했는지를 나타냅니다.<br /><br /> **1** = 시스템<br /><br /> **0** = 사용자|  
@@ -358,7 +359,7 @@ sp_trace_setevent [ @traceid = ] trace_id
   
 ## <a name="see-also"></a>참고 항목  
  [fn_trace_geteventinfo &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
- [fn_trace_getinfo &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)   
+ [sys.fn_trace_getinfo&#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)   
  [Transact-sql&#41;sp_trace_generateevent &#40;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
  [SQL Server 이벤트 클래스 참조](../../relational-databases/event-classes/sql-server-event-class-reference.md)   
  [SQL 추적](../../relational-databases/sql-trace/sql-trace.md)  

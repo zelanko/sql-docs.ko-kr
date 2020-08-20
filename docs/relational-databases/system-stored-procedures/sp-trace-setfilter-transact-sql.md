@@ -1,4 +1,5 @@
 ---
+description: sp_trace_setfilter(Transact-SQL)
 title: sp_trace_setfilter (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 11e7c7ac-a581-4a64-bb15-9272d5c1f7ac
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 36cb1003bcb0884bce069a7f41b3264d045e86e1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: cf2b3eb0d8d71ce85ac7a5de4fddcd5a34ae97a7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891449"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480988"
 ---
 # <a name="sp_trace_setfilter-transact-sql"></a>sp_trace_setfilter(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  추적에 필터를 적용합니다. **sp_trace_setfilter** 는 중지 된 기존 추적 에서만 실행할 수 있습니다 (*상태* **0**). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]존재 하지 않거나 *상태가* **0**이 아닌 추적에서이 저장 프로시저를 실행 하는 경우 오류를 반환 합니다.  
+  추적에 필터를 적용합니다. **sp_trace_setfilter** 는 중지 된 기존 추적 에서만 실행할 수 있습니다 (*상태* **0**). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 존재 하지 않거나 *상태가* **0**이 아닌 추적에서이 저장 프로시저를 실행 하는 경우 오류를 반환 합니다.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 확장 이벤트를 대신 사용하세요.  
@@ -46,13 +47,13 @@ sp_trace_setfilter [ @traceid = ] trace_id
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @traceid = ] trace_id`필터가 설정 된 추적의 ID입니다. *trace_id* 는 **int**이며 기본값은 없습니다. 사용자는이 *trace_id* 값을 사용 하 여 추적을 식별, 수정 및 제어할 수 있습니다.  
+`[ @traceid = ] trace_id` 필터가 설정 된 추적의 ID입니다. *trace_id* 는 **int**이며 기본값은 없습니다. 사용자는이 *trace_id* 값을 사용 하 여 추적을 식별, 수정 및 제어할 수 있습니다.  
   
-`[ @columnid = ] column_id`필터가 적용 되는 열의 ID입니다. *column_id* 는 **int**이며 기본값은 없습니다. *Column_id* 가 NULL 이면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 지정 된 추적에 대 한 모든 필터를 지웁니다.  
+`[ @columnid = ] column_id` 필터가 적용 되는 열의 ID입니다. *column_id* 는 **int**이며 기본값은 없습니다. *Column_id* 가 NULL 이면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 지정 된 추적에 대 한 모든 필터를 지웁니다.  
   
-`[ @logical_operator = ] logical_operator`AND (**0**) 또는 or (**1**) 연산자를 적용할지 여부를 지정 합니다. *logical_operator* 는 **int**이며 기본값은 없습니다.  
+`[ @logical_operator = ] logical_operator` AND (**0**) 또는 or (**1**) 연산자를 적용할지 여부를 지정 합니다. *logical_operator* 는 **int**이며 기본값은 없습니다.  
   
-`[ @comparison_operator = ] comparison_operator`비교할 유형을 지정 합니다. *comparison_operator* 는 **int**이며 기본값은 없습니다. 비교 연산자 및 나타내는 값이 표에 나와 있습니다.  
+`[ @comparison_operator = ] comparison_operator` 비교할 유형을 지정 합니다. *comparison_operator* 는 **int**이며 기본값은 없습니다. 비교 연산자 및 나타내는 값이 표에 나와 있습니다.  
   
 |값|비교 연산자|  
 |-----------|-------------------------|  
@@ -65,7 +66,7 @@ sp_trace_setfilter [ @traceid = ] trace_id
 |**6**|LIKE|  
 |**7**|유사하지 않음|  
   
-`[ @value = ] value`필터링 할 값을 지정 합니다. *값* 의 데이터 형식은 필터링 할 열의 데이터 형식과 일치 해야 합니다. 예를 들어, 필터가 **int** 데이터 유형인 개체 ID 열에 대해 설정 된 경우 *값* 은 **int**여야 합니다. *Value* 가 **nvarchar** 또는 **varbinary**이면 최대 길이가 8000 일 수 있습니다.  
+`[ @value = ] value` 필터링 할 값을 지정 합니다. *값* 의 데이터 형식은 필터링 할 열의 데이터 형식과 일치 해야 합니다. 예를 들어, 필터가 **int** 데이터 유형인 개체 ID 열에 대해 설정 된 경우 *값* 은 **int**여야 합니다. *Value* 가 **nvarchar** 또는 **varbinary**이면 최대 길이가 8000 일 수 있습니다.  
   
  비교 연산자가 LIKE 또는 NOT LIKE일 경우 논리 연산자는 "%" 또는 LIKE 연산에 적합한 다른 필터를 포함할 수 있습니다.  
   
@@ -101,7 +102,7 @@ sp_trace_setfilter [ @traceid = ] trace_id
 ## <a name="permissions"></a>사용 권한  
  사용자는 ALTER TRACE 권한이 있어야 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 추적 `1`에 필터 3개를 설정합니다. `N'SQLT%'` 및 `N'MS%'` 필터는 한 열(`AppName`, 값 `10`)에서 "`LIKE`" 비교 연산자를 사용하여 실행됩니다. `N'joe'` 필터는 다른 열(`UserName`, 값 `11`)에서 "`EQUAL`" 비교 연산자를 사용하여 실행됩니다.  
   
 ```  
@@ -112,7 +113,7 @@ sp_trace_setfilter  1, 11, 0, 0, N'joe';
   
 ## <a name="see-also"></a>참고 항목  
  [fn_trace_getfilterinfo &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-trace-getfilterinfo-transact-sql.md)   
- [fn_trace_getinfo &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)   
+ [sys.fn_trace_getinfo&#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)   
  [SQL 추적](../../relational-databases/sql-trace/sql-trace.md)  
   
   

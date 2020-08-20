@@ -1,4 +1,5 @@
 ---
+description: sys.fn_check_object_signatures(Transact-SQL)
 title: sys. fn_check_object_signatures (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -20,11 +21,12 @@ ms.assetid: 47509566-d3d7-46a9-89c1-91b4895d56b9
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 497e27859a299fbee1a9ab91ac3d0f7625d04afe
-ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
+ms.openlocfilehash: e7dc2f5c8700bef804b77e97917250152988baf7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86091519"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481832"
 ---
 # <a name="sysfn_check_object_signatures-transact-sql"></a>sys.fn_check_object_signatures(Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]

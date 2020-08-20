@@ -1,4 +1,5 @@
 ---
+description: 법적 고지 사항(Oracle용 SSMA)
 title: 법적 고 지 사항 (Oracle 용 SSMA) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -10,12 +11,12 @@ ms.assetid: 12f7b46f-9228-46d8-9877-cc6a7948c64b
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 913ca29a043d6422d818221f5d13dea3029a21e8
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 93ef937ac81df75eebc0845381383c7a2d0a4cdd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934742"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480475"
 ---
 # <a name="legal-notice-ssma-for-oracle"></a>법적 고지 사항(Oracle용 SSMA)
 포함된 예제 애플리케이션을 포함하여 이 설명서는 정보 제공의 목적으로만 제공되며 Microsoft 및 그 공급자는 이 설명서에 대해서 어떠한 명시적이거나 묵시적인 보증도 하지 않습니다. URL 및 기타 인터넷 웹 사이트 참조를 포함하여, 이 설명서의 내용은 예고 없이 변경될 수 있습니다. 이 설명서의 사용이나 사용 결과에 따른 책임은 전적으로 사용자에게 있습니다.  

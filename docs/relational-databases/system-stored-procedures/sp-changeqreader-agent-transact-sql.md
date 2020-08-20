@@ -1,4 +1,5 @@
 ---
+description: sp_changeqreader_agent(Transact-SQL)
 title: sp_changeqreader_agent (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d3fe79c5-31ef-4565-bf38-b476b5fb16f7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e3ecfc002a04cb499898b63976e7a094b4a05fd5
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 99dcccc85577d854996b37743ee8f8cdd32bbebe
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85871379"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481441"
 ---
 # <a name="sp_changeqreader_agent-transact-sql"></a>sp_changeqreader_agent(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,9 +42,9 @@ sp_changeqreader_agent [ [ @job_login = ] 'job_login' ]
 ## <a name="arguments"></a>인수  
 `[ @job_login = ] 'job_login'`[!INCLUDE[msCoName](../../includes/msconame-md.md)]에이전트가 실행 되는 Windows 계정의 로그인입니다. *job_login* 은 **nvarchar (257)** 이며 기본값은 NULL입니다.  
   
-`[ @job_password = ] 'job_password'`에이전트를 실행 하는 Windows 계정의 암호입니다. *job_password* 는 **sysname**이며 기본값은 NULL입니다.  
+`[ @job_password = ] 'job_password'` 에이전트를 실행 하는 Windows 계정의 암호입니다. *job_password* 는 **sysname**이며 기본값은 NULL입니다.  
   
-`[ @frompublisher = ] frompublisher`프로시저가 게시자에서 실행 되 고 있는지 여부입니다. *frompublisher* 는 bit 이며 기본값은 **0**입니다. 값 **1** 은 게시 데이터베이스의 게시자에서 프로시저가 실행 되 고 있음을 의미 합니다.  
+`[ @frompublisher = ] frompublisher` 프로시저가 게시자에서 실행 되 고 있는지 여부입니다. *frompublisher* 는 bit 이며 기본값은 **0**입니다. 값 **1** 은 게시 데이터베이스의 게시자에서 프로시저가 실행 되 고 있음을 의미 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

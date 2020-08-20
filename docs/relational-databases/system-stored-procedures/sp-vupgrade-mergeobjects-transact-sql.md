@@ -1,4 +1,5 @@
 ---
+description: sp_vupgrade_mergeobjects(Transact-SQL)
 title: sp_vupgrade_mergeobjects (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 73257c2e-cc4c-48e7-9d66-7ef045bdd4f5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2e2237feb8ba1be19df876cedc480b15cc430a30
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: da875b534164230609015492e88b10986808c5de
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891222"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480903"
 ---
 # <a name="sp_vupgrade_mergeobjects-transact-sql"></a>sp_vupgrade_mergeobjects(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,11 +46,11 @@ sp_vupgrade_mergeobjects [ [@login = ] 'login' ]
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @login = ] 'login'`배포 데이터베이스에서 새 시스템 개체를 만들 때 사용할 시스템 관리자 로그인입니다. *login*은 **sysname**이며 기본값은 NULL입니다. 이 매개 변수는 Windows 인증용 *security_mode* **1**로 설정 된 경우에는 필요 하지 않습니다.  
+`[ @login = ] 'login'` 배포 데이터베이스에서 새 시스템 개체를 만들 때 사용할 시스템 관리자 로그인입니다. *login*은 **sysname**이며 기본값은 NULL입니다. 이 매개 변수는 Windows 인증용 *security_mode* **1**로 설정 된 경우에는 필요 하지 않습니다.  
   
-`[ @password = ] 'password'`배포 데이터베이스에서 새 시스템 개체를 만들 때 사용할 시스템 관리자 암호입니다. *password* 는 **sysname**이며 기본값은 **' '** (빈 문자열)입니다. 이 매개 변수는 Windows 인증용 *security_mode* **1**로 설정 된 경우에는 필요 하지 않습니다.  
+`[ @password = ] 'password'` 배포 데이터베이스에서 새 시스템 개체를 만들 때 사용할 시스템 관리자 암호입니다. *password* 는 **sysname**이며 기본값은 **' '** (빈 문자열)입니다. 이 매개 변수는 Windows 인증용 *security_mode* **1**로 설정 된 경우에는 필요 하지 않습니다.  
   
-`[ @security_mode = ] 'security_mode'`배포 데이터베이스에서 새 시스템 개체를 만들 때 사용할 로그인 보안 모드입니다. *security_mode* 은 **bit** 이며 기본값은 **1**입니다. **0**인 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증이 사용 됩니다. **1**인 경우 Windows 인증이 사용 됩니다. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+`[ @security_mode = ] 'security_mode'` 배포 데이터베이스에서 새 시스템 개체를 만들 때 사용할 로그인 보안 모드입니다. *security_mode* 은 **bit** 이며 기본값은 **1**입니다. **0**인 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증이 사용 됩니다. **1**인 경우 Windows 인증이 사용 됩니다. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -60,8 +61,8 @@ sp_vupgrade_mergeobjects [ [@login = ] 'login' ]
 ## <a name="permissions"></a>사용 권한  
  **sysadmin** 고정 서버 역할의 멤버 자격이 필요합니다.  
   
-## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;를 &#40;하는 복제 저장 프로시저](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>관련 항목  
+ [Transact-sql&#41;를 &#40;하는 복제 저장 프로시저 ](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
  [복제된 데이터베이스 업그레이드](../../database-engine/install-windows/upgrade-replicated-databases.md)  
   
   

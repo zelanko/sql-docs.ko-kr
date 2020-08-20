@@ -1,4 +1,5 @@
 ---
+description: sp_changelogreader_agent(Transact-SQL)
 title: sp_changelogreader_agent (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/15/2018
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 929b2fa7-1267-41d0-8b69-e9ab26a62c0f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5a46432317ebf320af3e3860c1c1973fc04119b5
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 40356a67f13cc3c83a1a8555bd967b5092ecc65d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87864970"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481528"
 ---
 # <a name="sp_changelogreader_agent-transact-sql"></a>sp_changelogreader_agent(Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -43,26 +44,26 @@ sp_changelogreader_agent [ [ @job_login = ] 'job_login' ]
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @job_login = ] 'job_login'`에이전트를 실행 하는 계정에 대 한 로그인입니다. *job_login* 은 **nvarchar (257)** 이며 기본값은 NULL입니다. Azure SQL Managed Instance에서 SQL Server 계정을 사용 합니다. *이를 변경할* [!INCLUDE[msCoName](../../includes/msconame-md.md)] 수 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *게시자.*  
+`[ @job_login = ] 'job_login'` 에이전트를 실행 하는 계정에 대 한 로그인입니다. *job_login* 은 **nvarchar (257)** 이며 기본값은 NULL입니다. Azure SQL Managed Instance에서 SQL Server 계정을 사용 합니다. *이를 변경할* [!INCLUDE[msCoName](../../includes/msconame-md.md)] 수 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *게시자.*  
   
-`[ @job_password = ] 'job_password'`에이전트를 실행 하는 계정의 암호입니다. *job_password* 는 **sysname**이며 기본값은 NULL입니다.  
+`[ @job_password = ] 'job_password'` 에이전트를 실행 하는 계정의 암호입니다. *job_password* 는 **sysname**이며 기본값은 NULL입니다.  
   
 > [!IMPORTANT]  
 >  가능한 경우 런타임 시 사용자에게 보안 자격 증명을 입력하라는 메시지가 표시됩니다. 자격 증명을 스크립트 파일에 저장해야 하는 경우에는 파일에 무단으로 액세스하지 못하도록 보안을 설정해야 합니다.  
   
-`[ @publisher_security_mode = ] publisher_security_mode`게시자에 연결할 때 에이전트가 사용 하는 보안 모드입니다. *publisher_security_mode* 은 **smallint**이며 기본값은 NULL입니다. **0** 은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 지정 하 고, **1** 은 Windows 인증을 지정 합니다.  
+`[ @publisher_security_mode = ] publisher_security_mode` 게시자에 연결할 때 에이전트가 사용 하는 보안 모드입니다. *publisher_security_mode* 은 **smallint**이며 기본값은 NULL입니다. **0** 은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 지정 하 고, **1** 은 Windows 인증을 지정 합니다.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
-`[ @publisher_login = ] 'publisher_login'`게시자에 연결할 때 사용 되는 로그인입니다. *publisher_login* 는 **sysname**이며 기본값은 NULL입니다. *publisher_security_mode* **0**인 경우 *publisher_login* 를 지정 해야 합니다. *Publisher_login* 가 NULL이 고 *publisher_security_mode* 가 **1**이면 게시자에 연결할 때 *job_login* 에 지정 된 Windows 계정이 사용 됩니다.  
+`[ @publisher_login = ] 'publisher_login'` 게시자에 연결할 때 사용 되는 로그인입니다. *publisher_login* 는 **sysname**이며 기본값은 NULL입니다. *publisher_security_mode* **0**인 경우 *publisher_login* 를 지정 해야 합니다. *Publisher_login* 가 NULL이 고 *publisher_security_mode* 가 **1**이면 게시자에 연결할 때 *job_login* 에 지정 된 Windows 계정이 사용 됩니다.  
   
-`[ @publisher_password = ] 'publisher_password'`게시자에 연결할 때 사용 되는 암호입니다. *publisher_password* 는 **sysname**이며 기본값은 NULL입니다.  
+`[ @publisher_password = ] 'publisher_password'` 게시자에 연결할 때 사용 되는 암호입니다. *publisher_password* 는 **sysname**이며 기본값은 NULL입니다.  
   
 > [!IMPORTANT]  
 >  빈 암호를 사용하지 마세요. 강력한 암호를 사용하세요. 가능한 경우 런타임 시 사용자에게 보안 자격 증명을 입력하라는 메시지가 표시됩니다. 자격 증명을 스크립트 파일에 저장해야 하는 경우에는 파일에 무단으로 액세스하지 못하도록 보안을 설정해야 합니다.  
   
-`[ @publisher = ] 'publisher'`게시자의 이름입니다. *publisher* 는 **sysname**이며 기본값은 NULL입니다. 이 매개 변수는 SQL Server 이외 게시자용으로만 지원됩니다.  
+`[ @publisher = ] 'publisher'` 게시자의 이름입니다. *publisher* 는 **sysname**이며 기본값은 NULL입니다. 이 매개 변수는 SQL Server 이외 게시자용으로만 지원됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

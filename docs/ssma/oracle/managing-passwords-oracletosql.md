@@ -1,4 +1,5 @@
 ---
+description: 암호 관리(OracleToSQL)
 title: 암호 관리 (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -13,12 +14,12 @@ ms.assetid: 8c7d9f8e-06bb-476c-bbd2-15b61d5bba3c
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: b96c7cff343c1c0f00c0e324961d633c4255f2a9
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 3ffcc42e790e6eb0f26ffa96ec8e3bcf7503ca3d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934712"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480455"
 ---
 # <a name="managing-passwords-oracletosql"></a>암호 관리(OracleToSQL)
 이 섹션에서는 데이터베이스 암호를 보호 하는 방법과 서버에서 데이터베이스를 가져오거나 내보내는 절차에 대해 설명 합니다.
@@ -70,7 +71,7 @@ SSMA를 사용 하면 데이터베이스의 암호를 보호할 수 있습니다
   
         를 사용 하 여를 실행 하 `SSMAforOracleConsole.exe` `-securepassword` 고 `-remove` 명령줄에서 서버 id를 전달 하는 스위치를 사용 하 여 로컬 컴퓨터에 있는 보호 된 저장소 파일에서 암호화 된 암호를 제거 합니다.  
         
-        예:  
+        예제:  
 
         ```console
         C:\SSMA\SSMAforOracleConsole.EXE -securepassword -remove all
@@ -81,7 +82,7 @@ SSMA를 사용 하면 데이터베이스의 암호를 보호할 수 있습니다
   
         를 사용 하 여를 실행 하 `SSMAforOracleConsole.exe` `-securepassword` 고 `-list` 명령줄에서 스위치를 사용 하 여 암호가 암호화 된 모든 서버 id를 나열 합니다.  
   
-        예:  
+        예제:  
 
         ```console
         C:\SSMA\SSMAforOracleConsole.EXE -securepassword -list  

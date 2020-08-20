@@ -1,4 +1,5 @@
 ---
+description: sp_help_category(Transact-SQL)
 title: sp_help_category (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8cad1dcc-b43e-43bd-bea0-cb0055c84169
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2e753d9296c873f6092d2ae15f001f8deeec4ad4
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0db25b095536c06e03c87b3bc21dacc5f8c7d0f9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901519"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481286"
 ---
 # <a name="sp_help_category-transact-sql"></a>sp_help_category(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +43,7 @@ sp_help_category [ [ @class = ] 'class' ]
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @class = ] 'class'`정보를 요청 하는 클래스입니다. *클래스* 는 **varchar (8)** 이며 기본값은 **JOB**입니다. *클래스* 는 다음 값 중 하나일 수 있습니다.  
+`[ @class = ] 'class'` 정보를 요청 하는 클래스입니다. *클래스* 는 **varchar (8)** 이며 기본값은 **JOB**입니다. *클래스* 는 다음 값 중 하나일 수 있습니다.  
   
 |값|설명|  
 |-----------|-----------------|  
@@ -50,17 +51,17 @@ sp_help_category [ [ @class = ] 'class' ]
 |**오류**|경고 범주에 관한 정보를 제공합니다.|  
 |**연산자**|운영자 범주에 관한 정보를 제공합니다.|  
   
-`[ @type = ] 'type'`정보가 요청 되는 범주의 유형입니다. *type* 은 **varchar (12)** 이며 기본값은 NULL이 고 다음 값 중 하나일 수 있습니다.  
+`[ @type = ] 'type'` 정보가 요청 되는 범주의 유형입니다. *type* 은 **varchar (12)** 이며 기본값은 NULL이 고 다음 값 중 하나일 수 있습니다.  
   
 |값|설명|  
 |-----------|-----------------|  
-|**로컬**|로컬 작업 범주입니다.|  
+|**LOCAL**|로컬 작업 범주입니다.|  
 |**MULTI -SERVER**|다중 서버 작업 범주입니다.|  
 |**NONE**|**JOB**이 아닌 다른 클래스에 대 한 범주입니다.|  
   
-`[ @name = ] 'name'`정보를 요청 하는 범주의 이름입니다. *name* 은 **sysname**이며 기본값은 NULL입니다.  
+`[ @name = ] 'name'` 정보를 요청 하는 범주의 이름입니다. *name* 은 **sysname**이며 기본값은 NULL입니다.  
   
-`[ @suffix = ] suffix`결과 집합의 **category_type** 열이 ID 인지 아니면 이름 인지를 지정 합니다. *접미사* 는 **bit**이며 기본값은 **0**입니다. **1** 은 **category_type** 를 이름으로 표시 하 고 **0** 은 ID로 표시 합니다.  
+`[ @suffix = ] suffix` 결과 집합의 **category_type** 열이 ID 인지 아니면 이름 인지를 지정 합니다. *접미사* 는 **bit**이며 기본값은 **0**입니다. **1** 은 **category_type** 를 이름으로 표시 하 고 **0** 은 ID로 표시 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -98,7 +99,7 @@ sp_help_category [ [ @class = ] 'class' ]
   
  이러한 역할의 사용 권한에 대한 자세한 내용은 [SQL Server 에이전트 고정 데이터베이스 역할](../../ssms/agent/sql-server-agent-fixed-database-roles.md)을 참조하세요.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-returning-local-job-information"></a>A. 로컬 작업 정보 반환  
  다음 예에서는 로컬로 관리되는 작업에 대한 정보를 반환합니다.  

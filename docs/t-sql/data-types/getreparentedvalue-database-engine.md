@@ -1,4 +1,5 @@
 ---
+description: GetReparentedValue(데이터베이스 엔진)
 title: GetReparentedValue(데이터베이스 엔진) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/22/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f47f8e25-08ef-498b-84f4-a317aca1f358
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 5a1b6700c10a73a2b3f0ab59dbad7f0a5d2c435c
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: b0381cc90ff6a69c8d8cd91d9ce141e8a13707c4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554480"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479892"
 ---
 # <a name="getreparentedvalue-database-engine"></a>GetReparentedValue(데이터베이스 엔진)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

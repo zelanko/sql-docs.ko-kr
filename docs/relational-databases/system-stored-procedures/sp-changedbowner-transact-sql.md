@@ -1,4 +1,5 @@
 ---
+description: sp_changedbowner(Transact-SQL)
 title: sp_changedbowner (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 516ef311-e83b-45c9-b9cd-0e0641774c04
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 51f0e6107068f28f1c03c357564f131c133fec9e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 648ac83b7c0af68e0ead64ed7a0868ea5777c389
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85872479"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481560"
 ---
 # <a name="sp_changedbowner-transact-sql"></a>sp_changedbowner(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85872479"
   현재 데이터베이스의 소유자를 변경합니다.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]대신 [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md) 을 사용 해야 합니다.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 대신 [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md) 을 사용 해야 합니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -66,7 +67,7 @@ sp_changedbowner [ @loginame = ] 'login'
 ## <a name="permissions"></a>사용 권한  
  데이터베이스에 대한 TAKE OWNERSHIP 권한이 필요합니다. 새 소유자에 상응하는 사용자가 데이터베이스에 있으면 로그인에 대한 IMPERSONATE 권한이 필요하고, 그렇지 않으면 서버에 대한 CONTROL SERVER 권한이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `Albert` 로그인을 현재 데이터베이스의 소유자로 만듭니다.  
   
 ```  
@@ -74,10 +75,10 @@ EXEC sp_changedbowner 'Albert';
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;보안 저장 프로시저](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;보안 저장 프로시저 ](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
  [Transact-sql&#41;sp_dropalias &#40;](../../relational-databases/system-stored-procedures/sp-dropalias-transact-sql.md)   
- [Transact-sql&#41;sp_dropuser &#40;](../../relational-databases/system-stored-procedures/sp-dropuser-transact-sql.md)   
+ [sp_dropuser&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropuser-transact-sql.md)   
  [Transact-sql&#41;sp_helpdb &#40;](../../relational-databases/system-stored-procedures/sp-helpdb-transact-sql.md)   
  [Transact-sql&#41;sp_helplogins &#40;](../../relational-databases/system-stored-procedures/sp-helplogins-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

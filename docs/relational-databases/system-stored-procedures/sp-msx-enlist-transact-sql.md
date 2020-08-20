@@ -1,4 +1,5 @@
 ---
+description: sp_msx_enlist(Transact-SQL)
 title: sp_msx_enlist (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ceb3b2bc-0cc4-48d8-9bdc-6a809556e35f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 551d0796ce534f77d4994064a9af032f34f81f04
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 024aa764c6df0fa4e42a006cb6b6d855c32e3573
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893470"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481159"
 ---
 # <a name="sp_msx_enlist-transact-sql"></a>sp_msx_enlist(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,9 +44,9 @@ sp_msx_enlist [@msx_server_name =] 'msx_server'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @msx_server_name = ] 'msx_server'`다중 서버 관리 (마스터) 서버의 이름입니다. *msx_server* 는 **sysname**이며 기본값은 없습니다.  
+`[ @msx_server_name = ] 'msx_server'` 다중 서버 관리 (마스터) 서버의 이름입니다. *msx_server* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @location = ] 'location'`추가할 대상 서버의 위치입니다. *location* 은 **nvarchar (100)** 이며 기본값은 NULL입니다.  
+`[ @location = ] 'location'` 추가할 대상 서버의 위치입니다. *location* 은 **nvarchar (100)** 이며 기본값은 NULL입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -56,7 +57,7 @@ sp_msx_enlist [@msx_server_name =] 'msx_server'
 ## <a name="permissions"></a>사용 권한  
  이 프로시저를 실행할 수 있는 권한은 기본적으로 **sysadmin** 고정 서버 역할의 멤버로 사용 됩니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 현재 서버를 `AdventureWorks1` 마스터 서버에 참여시킵니다. 현재 서버의 위치는 `Building 21, Room 309, Rack 5`입니다.  
   
 ```  
@@ -70,7 +71,7 @@ GO
   
 ## <a name="see-also"></a>참고 항목  
  [Transact-sql&#41;sp_msx_defect &#40;](../../relational-databases/system-stored-procedures/sp-msx-defect-transact-sql.md)   
- [Transact-sql&#41;&#40;시스템 저장 프로시저](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;시스템 저장 프로시저 ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Transact-sql&#41;xp_cmdshell &#40;](../../relational-databases/system-stored-procedures/xp-cmdshell-transact-sql.md)  
   
   

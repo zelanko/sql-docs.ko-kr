@@ -1,4 +1,5 @@
 ---
+description: sp_syspolicy_rename_policy(Transact-SQL)
 title: sp_syspolicy_rename_policy (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ce2b07f5-23b1-4f49-8e7b-c18cf3f3d45b
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: e157090ba5fb9b6c3c9da7fb88d0aa0612d2f727
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 782128b1d41f94c63f4e9de22e618378c4ec6e6a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892691"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481026"
 ---
 # <a name="sp_syspolicy_rename_policy-transact-sql"></a>sp_syspolicy_rename_policy(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,11 +42,11 @@ sp_syspolicy_rename_policy { [ @name = ] 'name' | [ @policy_id = ] policy_id }
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @name = ] 'name'`이름을 바꿀 정책의 이름입니다. *name* 은 **SYSNAME**이며 *policy_id* NULL 인 경우에는 반드시 지정 해야 합니다.  
+`[ @name = ] 'name'` 이름을 바꿀 정책의 이름입니다. *name* 은 **SYSNAME**이며 *policy_id* NULL 인 경우에는 반드시 지정 해야 합니다.  
   
-`[ @policy_id = ] policy_id`이름을 바꿀 정책의 식별자입니다. *policy_id* 은 **INT**이며 *이름이* NULL 인 경우에는 반드시 지정 해야 합니다.  
+`[ @policy_id = ] policy_id` 이름을 바꿀 정책의 식별자입니다. *policy_id* 은 **INT**이며 *이름이* NULL 인 경우에는 반드시 지정 해야 합니다.  
   
-`[ @new_name = ] 'new_name'`정책의 새 이름입니다. *new_name* 는 **sysname**이며 필수입니다. NULL 또는 빈 문자열일 수 없습니다.  
+`[ @new_name = ] 'new_name'` 정책의 새 이름입니다. *new_name* 는 **sysname**이며 필수입니다. NULL 또는 빈 문자열일 수 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -61,7 +62,7 @@ sp_syspolicy_rename_policy { [ @name = ] 'name' | [ @policy_id = ] policy_id }
 > [!IMPORTANT]  
 >  자격 증명의 승격 가능: Policy관리자 역할 역할의 사용자는 서버 트리거를 만들고 인스턴스 작업에 영향을 줄 수 있는 정책 실행을 예약할 수 있습니다 [!INCLUDE[ssDE](../../includes/ssde-md.md)] . 예를 들어 PolicyAdministratorRole 역할의 사용자는 대부분의 개체가 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 생성되지 않도록 할 수 있는 정책을 만들 수 있습니다. 이렇게 자격 증명을 승격할 수 있기 때문에 PolicyAdministratorRole 역할은 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 구성을 제어할 수 있도록 신뢰할 수 있는 사용자에게만 부여되어야 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 'Test Policy 1'이라는 정책의 이름을 'Test Policy 2'로 바꿉니다.  
   
 ```  
@@ -72,6 +73,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;정책 기반 관리 저장 프로시저](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)  
+ [Transact-sql&#41;&#40;정책 기반 관리 저장 프로시저 ](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)  
   
   

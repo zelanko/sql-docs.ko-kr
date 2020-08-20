@@ -1,4 +1,5 @@
 ---
+description: sp_changesubscriptiondtsinfo(Transact-SQL)
 title: sp_changesubscriptiondtsinfo (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 64fc085f-f81b-493b-b59a-ee6192d9736d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d721bf729d99a60a32693ddbe609cfcee01ba701
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 296eb0e4d6cb9aa838c32851d29125358bde0e29
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771363"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481477"
 ---
 # <a name="sp_changesubscriptiondtsinfo-transact-sql"></a>sp_changesubscriptiondtsinfo(Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -40,16 +41,16 @@ sp_changesubscriptiondtsinfo [ [ @job_id = ] job_id ]
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @job_id = ] job_id`밀어넣기 구독에 대 한 배포 에이전트의 작업 ID입니다. *job_id* 는 **varbinary (16)** 이며 기본값은 없습니다. 배포 작업 ID를 찾으려면 **sp_helpsubscription** 또는 **sp_helppullsubscription**를 실행 합니다.  
+`[ @job_id = ] job_id` 밀어넣기 구독에 대 한 배포 에이전트의 작업 ID입니다. *job_id* 는 **varbinary (16)** 이며 기본값은 없습니다. 배포 작업 ID를 찾으려면 **sp_helpsubscription** 또는 **sp_helppullsubscription**를 실행 합니다.  
   
-`[ @dts_package_name = ] 'dts_package_name'`DTS 패키지의 이름을 지정 합니다. *dts_package_name* 는 **sysname**이며 기본값은 NULL입니다. 예를 들어 **DTSPub_Package**패키지를 지정 하려면를 지정 `@dts_package_name = N'DTSPub_Package'` 합니다.  
+`[ @dts_package_name = ] 'dts_package_name'` DTS 패키지의 이름을 지정 합니다. *dts_package_name* 는 **sysname**이며 기본값은 NULL입니다. 예를 들어 **DTSPub_Package**패키지를 지정 하려면를 지정 `@dts_package_name = N'DTSPub_Package'` 합니다.  
   
-`[ @dts_package_password = ] 'dts_package_password'`패키지에 대 한 암호를 지정 합니다. *dts_package_password* 는 **sysname** 이며 기본값은 암호 속성이 변경 되지 않은 상태로 유지 되도록 지정 하는 NULL입니다.  
+`[ @dts_package_password = ] 'dts_package_password'` 패키지에 대 한 암호를 지정 합니다. *dts_package_password* 는 **sysname** 이며 기본값은 암호 속성이 변경 되지 않은 상태로 유지 되도록 지정 하는 NULL입니다.  
   
 > [!NOTE]  
 >  DTS 패키지에는 암호가 있어야 합니다.  
   
-`[ @dts_package_location = ] 'dts_package_location'`패키지 위치를 지정 합니다. *dts_package_location* 은 **nvarchar (12)** 이며 기본값은 패키지 위치를 변경 되지 않은 상태로 유지 하도록 지정 하는 NULL입니다. 패키지의 위치를 **배포자** 또는 **구독자로**변경할 수 있습니다.  
+`[ @dts_package_location = ] 'dts_package_location'` 패키지 위치를 지정 합니다. *dts_package_location* 은 **nvarchar (12)** 이며 기본값은 패키지 위치를 변경 되지 않은 상태로 유지 하도록 지정 하는 NULL입니다. 패키지의 위치를 **배포자** 또는 **구독자로**변경할 수 있습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

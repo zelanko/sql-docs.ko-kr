@@ -1,4 +1,5 @@
 ---
+description: sp_schemafilter(Transact-SQL)
 title: sp_schemafilter (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 199e869b-2cd2-44ee-b2ee-69edb06a1bc4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 116dde1f0fd62f96e31a164ff06472de5b527938
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ad023dd248b3849e4bb900e1891bd655087a51f7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901343"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481102"
 ---
 # <a name="sp_schemafilter-transact-sql"></a>sp_schemafilter(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,16 +40,16 @@ sp_schemafilter [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @publisher = ] 'publisher'`이외 게시자의 이름입니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *publisher* 는 **sysname**이며 기본값은 없습니다.  
+`[ @publisher = ] 'publisher'` 이외 게시자의 이름입니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *publisher* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @schema = ] 'schema'`스키마의 이름입니다. *schema* 는 **sysname**이며 기본값은 NULL입니다.  
+`[ @schema = ] 'schema'` 스키마의 이름입니다. *schema* 는 **sysname**이며 기본값은 NULL입니다.  
   
-`[ @operation = ] 'operation'`이 스키마에 대해 수행할 작업입니다. *연산은* **nvarchar (4)** 이며 다음 값 중 하나일 수 있습니다.  
+`[ @operation = ] 'operation'` 이 스키마에 대해 수행할 작업입니다. *연산은* **nvarchar (4)** 이며 다음 값 중 하나일 수 있습니다.  
   
 |값|설명|  
 |-----------|-----------------|  
 |**add**|지정된 스키마를 게시에 적합하지 않은 스키마 목록에 추가합니다.|  
-|**그림자**|지정된 스키마를 게시에 적합하지 않은 스키마 목록에서 삭제합니다.|  
+|**drop**|지정된 스키마를 게시에 적합하지 않은 스키마 목록에서 삭제합니다.|  
 |**help**|게시에 적합하지 않은 스키마 목록을 반환합니다.|  
   
 ## <a name="result-sets"></a>결과 집합  

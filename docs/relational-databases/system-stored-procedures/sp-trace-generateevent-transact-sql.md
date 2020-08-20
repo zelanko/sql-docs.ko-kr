@@ -1,4 +1,5 @@
 ---
+description: sp_trace_generateevent(Transact-SQL)
 title: sp_trace_generateevent (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3ef05bfb-b467-4403-89cc-6e77ef9247dd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 00952b8059aed7325fdeab449bbb29e302a0373f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ebb89cf26de4d5f9dd8020c71d0870f038242b98
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891424"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481009"
 ---
 # <a name="sp_trace_generateevent-transact-sql"></a>sp_trace_generateevent(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,16 +45,16 @@ sp_trace_generateevent [ @eventid = ] event_id
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @eventid = ] event_id`설정할 이벤트의 ID입니다. *event_id* 는 **int**이며 기본값은 없습니다. ID는 [sp_trace_setevent](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)설정 된 사용자 정의 이벤트를 나타내는 82에서 91 까지의 이벤트 번호 중 하나 여야 합니다.  
+`[ @eventid = ] event_id` 설정할 이벤트의 ID입니다. *event_id* 는 **int**이며 기본값은 없습니다. ID는 [sp_trace_setevent](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)설정 된 사용자 정의 이벤트를 나타내는 82에서 91 까지의 이벤트 번호 중 하나 여야 합니다.  
   
-`[ @userinfo = ] 'user_info'`이벤트의 이유를 식별 하는 선택적 사용자 정의 문자열입니다. *user_info* 은 **nvarchar (128)** 이며 기본값은 NULL입니다.  
+`[ @userinfo = ] 'user_info'` 이벤트의 이유를 식별 하는 선택적 사용자 정의 문자열입니다. *user_info* 은 **nvarchar (128)** 이며 기본값은 NULL입니다.  
   
-`[ @userdata = ] user_data`이벤트에 대 한 선택적 사용자 지정 데이터입니다. *user_data* 은 **varbinary (8000)** 이며 기본값은 NULL입니다.  
+`[ @userdata = ] user_data` 이벤트에 대 한 선택적 사용자 지정 데이터입니다. *user_data* 은 **varbinary (8000)** 이며 기본값은 NULL입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  아래 표에서는 저장 프로시저가 완료된 후 사용자가 얻을 수 있는 코드 값을 설명합니다.  
   
-|반환 코드|Description|  
+|반환 코드|설명|  
 |-----------------|-----------------|  
 |**0**|오류가 없습니다.|  
 |**1**|알 수 없는 오류입니다.|  
@@ -70,7 +71,7 @@ sp_trace_generateevent [ @eventid = ] event_id
 ## <a name="permissions"></a>사용 권한  
  사용자는 ALTER TRACE 권한이 있어야 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 예제 테이블에 사용자 구성 이벤트를 만듭니다.  
   
 ```  
@@ -94,9 +95,9 @@ you were capturing the event id=82, you will see it in the Profiler output.
 INSERT INTO user_config_test VALUES(1, 'abc');  
 ```  
   
-## <a name="see-also"></a>참조  
+## <a name="see-also"></a>참고 항목  
  [fn_trace_geteventinfo &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
- [Transact-sql&#41;sp_trace_setevent &#40;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
+ [sp_trace_setevent&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [SQL 추적](../../relational-databases/sql-trace/sql-trace.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: sp_deletetracertokenhistory(Transact-SQL)
 title: sp_deletetracertokenhistory (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9ae1be14-0d2f-40b1-9d6e-22d79726abf4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 26a9c4a3001d2a5b4f5709311e23c0023307ce92
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4912611e79e4d6d3431cce7facb04af06a206211
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85692809"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481351"
 ---
 # <a name="sp_deletetracertokenhistory-transact-sql"></a>sp_deletetracertokenhistory(Transact-SQL)
 
@@ -75,7 +76,7 @@ sp_deletetracertokenhistory [ @publication = ] 'publication'
 
 **Sp_deletetracertokenhistory** 를 실행 하 여 추적 프로그램 토큰 메타 데이터를 삭제 하는 경우 정기적으로 예약 된 기록 정리가 수행 될 때 정보가 삭제 됩니다.
 
-추적 프로그램 토큰 Id는 [transact-sql&#41;&#40;sp_helptracertokens](../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md) 실행 [MStracer_tokens 하거나 transact-sql &#40;](../../relational-databases/system-tables/mstracer-tokens-transact-sql.md) 시스템 테이블을&#41;하 여 확인할 수 있습니다.
+추적 프로그램 토큰 Id는 [transact-sql&#41;&#40;sp_helptracertokens ](../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md) 실행 [MStracer_tokens 하거나 transact-sql &#40;](../../relational-databases/system-tables/mstracer-tokens-transact-sql.md) 시스템 테이블을&#41;하 여 확인할 수 있습니다.
 
 ## <a name="permissions"></a>사용 권한
 

@@ -1,4 +1,5 @@
 ---
+description: sp_changepublication(Transact-SQL)
 title: sp_changepublication (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/29/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c36e5865-25d5-42b7-b045-dc5036225081
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1b2fb1031c3090046bc509acc3c0cd1779db1836
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3bf49c2e7b09e7c0ac3bcaaaf7692889f684875b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771428"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481527"
 ---
 # <a name="sp_changepublication-transact-sql"></a>sp_changepublication(Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -41,11 +42,11 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @publication = ] 'publication'`게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 NULL입니다.  
+`[ @publication = ] 'publication'` 게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 NULL입니다.  
   
-`[ @property = ] 'property'`변경할 게시 속성입니다. *속성* 은 **nvarchar (255)** 입니다.  
+`[ @property = ] 'property'` 변경할 게시 속성입니다. *속성* 은 **nvarchar (255)** 입니다.  
   
-`[ @value = ] 'value'`새 속성 값입니다. *value* 는 **nvarchar (255)** 이며 기본값은 NULL입니다.  
+`[ @value = ] 'value'` 새 속성 값입니다. *value* 는 **nvarchar (255)** 이며 기본값은 NULL입니다.  
   
  이 표에서는 변경할 수 있는 게시의 속성 및 그 속성의 값에 대한 제한에 대해 설명합니다.  
   
@@ -72,7 +73,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ||**sub reinit**|구독자를 업데이트할 때 충돌이 발생하면 구독은 다시 초기화됩니다. 이 속성은 활성 구독이 없을 경우에만 변경될 수 있습니다. Oracle 게시자에 대해서는 지원되지 않습니다.|  
 ||**sub wins**|충돌 시 구독자 내용이 적용되는 구독자를 업데이트하기 위한 충돌 해결 정책입니다. 이 속성은 활성 구독이 없을 경우에만 변경될 수 있습니다. Oracle 게시자에 대해서는 지원되지 않습니다.|  
 |**conflict_retention**||충돌 보존 기간 (일)을 지정 하는 **int** 입니다. 기본 보존 기간은 14일입니다. **0** 은 충돌 정리가 필요 하지 않음을 의미 합니다. Oracle 게시자에 대해서는 지원되지 않습니다.|  
-|**한**||게시에 관해 설명하는 선택적인 항목입니다.|  
+|**description**||게시에 관해 설명하는 선택적인 항목입니다.|  
 |**enabled_for_het_sub**|**true**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 구독자를 지원하도록 게시를 설정합니다. 게시에 대 한 구독이 있는 경우에는 **enabled_for_het_sub** 를 변경할 수 없습니다. **Enabled_for_het_sub** 을 true로 설정 하기 전에 다음 요구 사항을 준수 하기 위해 [복제 저장 프로시저 (transact-sql)](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) 를 실행 해야 할 수 있습니다.<br /> - **allow_queued_tran** 은 **false**여야 합니다.<br /> - **allow_sync_tran** 은 **false**여야 합니다.<br /> **Enabled_for_het_sub** 를 **true** 로 변경 하면 기존 게시 설정이 변경 될 수 있습니다. 자세한 내용은 [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)을(를) 참조하세요. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 게시의 경우에는 이 속성을 변경할 수 없습니다.|  
 ||**false**|게시는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 구독자를 지원하지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 게시의 경우에는 이 속성을 변경할 수 없습니다.|  
 |**enabled_for_internet**|**true**|인터넷에서 게시를 사용할 수 있으며 FTP(파일 전송 프로토콜)를 사용하여 구독자로 스냅샷 파일을 전송할 수 있습니다. 게시에 대 한 동기화 파일은 C:\Program Files\Microsoft SQL Server\MSSQL\Repldata\ftp. 디렉터리에 저장 됩니다. *ftp_address* 는 NULL 일 수 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 게시의 경우에는 이 속성을 변경할 수 없습니다.|  
@@ -115,7 +116,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ||**false**|`DROP TABLE`트랜잭션 복제의 일부인 아티클에 대해 DLL 지원을 사용 하지 않도록 설정 합니다. 이 값은이 속성의 **기본값** 입니다.|
 |**NULL** (기본값)||*속성*에 대해 지원 되는 값 목록을 반환 합니다.|  
   
-`[ @force_invalidate_snapshot = ] force_invalidate_snapshot`이 저장 프로시저가 수행한 동작으로 인해 기존 스냅숏이 무효화 될 수 있음을 승인 합니다. *force_invalidate_snapshot* 은 **bit**이며 기본값은 **0**입니다.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` 이 저장 프로시저가 수행한 동작으로 인해 기존 스냅숏이 무효화 될 수 있음을 승인 합니다. *force_invalidate_snapshot* 은 **bit**이며 기본값은 **0**입니다.  
   - **0** 은 아티클에 대 한 변경으로 인해 스냅숏이 무효화 되지 않도록 지정 합니다. 저장 프로시저가 새 스냅샷을 필요로 하는 변경을 감지하면 오류가 발생하며 변경이 수행되지 않습니다.  
   - **1** 은 아티클에 대 한 변경으로 인해 스냅숏이 무효화 될 수 있음을 지정 합니다. 기존 구독에 새 스냅샷이 필요한 경우 이 값은 기존 스냅샷을 사용되지 않는 것으로 표시하고 새 스냅샷을 생성할 수 있는 권한을 부여합니다.   
 변경 시 새 스냅샷의 생성을 필요로 하는 속성에 대해서는 주의 섹션을 참조하십시오.  
@@ -125,7 +126,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
   - **0** 은 아티클에 대 한 변경으로 인해 구독이 다시 초기화 되지 않도록 지정 합니다. 저장 프로시저가 기존 구독을 다시 초기화해야 하는 변경을 감지하면 오류가 발생하며 변경이 수행되지 않습니다.  
   - **1** 은 아티클에 대 한 변경으로 인해 기존 구독이 다시 초기화 되도록 지정 하며 구독을 다시 초기화할 수 있는 권한을 부여 합니다.  
   
-`[ @publisher = ] 'publisher'`이외 게시자를 지정 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *publisher* 는 **sysname**이며 기본값은 NULL입니다.  
+`[ @publisher = ] 'publisher'` 이외 게시자를 지정 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *publisher* 는 **sysname**이며 기본값은 NULL입니다.  
   
   > [!NOTE]  
   >  게시자에 대 한 아티클 속성을 변경할 때는 *게시자* 를 사용 하면 안 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -168,7 +169,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
  [게시 및 아티클 속성 변경](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
  [Transact-sql&#41;sp_addpublication &#40;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
  [Transact-sql&#41;sp_droppublication &#40;](../../relational-databases/system-stored-procedures/sp-droppublication-transact-sql.md)   
- [Transact-sql&#41;sp_helppublication &#40;](../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)   
+ [sp_helppublication&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)   
  [복제 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

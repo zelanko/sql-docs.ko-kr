@@ -1,4 +1,5 @@
 ---
+description: sysmail_add_profile_sp(Transact-SQL)
 title: sysmail_add_profile_sp (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a828e55c-633a-41cf-9769-a0698b446e6c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2ae569ea3623c81e99bac6dd5a163393c07c0301
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f78f4ea075f04c4deb447ad9b68e3707b4e19ffb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891010"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480875"
 ---
 # <a name="sysmail_add_profile_sp-transact-sql"></a>sysmail_add_profile_sp(Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -41,14 +42,14 @@ sysmail_add_profile_sp [ @profile_name = ] 'profile_name'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @profile_name = ] 'profile\_name'`새 프로필의 이름입니다. *profile_name* 는 **sysname**이며 기본값은 없습니다.  
+`[ @profile_name = ] 'profile\_name'` 새 프로필의 이름입니다. *profile_name* 는 **sysname**이며 기본값은 없습니다.  
  
    > [!NOTE]
    > Azure SQL Managed Instance SQL 에이전트를 사용 하는 프로필 이름을 호출 해야 합니다 **AzureManagedInstance_dbmail_profile**
   
-`[ @description = ] 'description'`새 프로필에 대 한 선택적 설명입니다. *description* 은 **nvarchar (256)** 이며 기본값은 없습니다.  
+`[ @description = ] 'description'` 새 프로필에 대 한 선택적 설명입니다. *description* 은 **nvarchar (256)** 이며 기본값은 없습니다.  
   
-`[ @profile_id = ] _new\_profile\_id OUTPUT`새 프로필의 ID를 반환 합니다. *new_profile_id* 은 **int**이며 기본값은 NULL입니다.  
+`[ @profile_id = ] _new\_profile\_id OUTPUT` 새 프로필의 ID를 반환 합니다. *new_profile_id* 은 **int**이며 기본값은 NULL입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -65,7 +66,7 @@ sysmail_add_profile_sp [ @profile_name = ] 'profile_name'
 ## <a name="permissions"></a>사용 권한  
  이 프로시저에 대 한 실행 권한은 기본적으로 **sysadmin** 고정 서버 역할의 멤버로 사용 됩니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  **1. 새 프로필 작성**  
   
  다음 예에서는 `AdventureWorks Administrator`라는 새 데이터베이스 메일 프로필을 만듭니다.  
@@ -91,10 +92,10 @@ EXECUTE msdb.dbo.sysmail_add_profile_sp
 SELECT @profileId ;  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [데이터베이스 메일](../../relational-databases/database-mail/database-mail.md)   
  [데이터베이스 메일 계정 만들기](../../relational-databases/database-mail/create-a-database-mail-account.md)   
  [데이터베이스 메일 구성 개체](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
- [Transact-sql&#41;&#40;저장 프로시저 데이터베이스 메일](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [Transact-sql&#41;&#40;저장 프로시저 데이터베이스 메일 ](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

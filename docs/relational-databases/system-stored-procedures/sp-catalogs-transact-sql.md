@@ -1,4 +1,5 @@
 ---
+description: sp_catalogs(Transact-SQL)
 title: sp_catalogs (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ebb29ee2-be65-4e09-9c53-e3c6d12633e1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 02ced681f1ae950ae9fadbce4c3f481e4e7e0e55
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 47b618a6a8f1dfd960a60902d7dc3f5f62599f7f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85873717"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481503"
 ---
 # <a name="sp_catalogs-transact-sql"></a>sp_catalogs(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,7 @@ sp_catalogs [ @server_name = ] 'linked_svr'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @server_name = ] 'linked_svr'`연결 된 서버의 이름입니다. *linked_svr* 는 **sysname**이며 기본값은 없습니다.  
+`[ @server_name = ] 'linked_svr'` 연결 된 서버의 이름입니다. *linked_svr* 는 **sysname**이며 기본값은 없습니다.  
   
 ## <a name="result-sets"></a>결과 집합  
   
@@ -51,7 +52,7 @@ sp_catalogs [ @server_name = ] 'linked_svr'
 ## <a name="permissions"></a>사용 권한  
  스키마에 대한 SELECT 권한이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `OLE DB ODBC Linked Server #3`이라는 연결된 서버에 대한 카탈로그 정보를 반환합니다.  
   
 > [!NOTE]  
@@ -64,12 +65,12 @@ EXEC sp_catalogs 'OLE DB ODBC Linked Server #3';
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;sp_addlinkedserver &#40;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
+ [sp_addlinkedserver&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
  [Transact-sql&#41;sp_columns_ex &#40;](../../relational-databases/system-stored-procedures/sp-columns-ex-transact-sql.md)   
  [Transact-sql&#41;sp_column_privileges &#40;](../../relational-databases/system-stored-procedures/sp-column-privileges-transact-sql.md)   
  [Transact-sql&#41;sp_foreignkeys &#40;](../../relational-databases/system-stored-procedures/sp-foreignkeys-transact-sql.md)   
  [Transact-sql&#41;sp_indexes &#40;](../../relational-databases/system-stored-procedures/sp-indexes-transact-sql.md)   
- [Transact-sql&#41;sp_linkedservers &#40;](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)   
+ [sp_linkedservers&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)   
  [Transact-sql&#41;sp_primarykeys &#40;](../../relational-databases/system-stored-procedures/sp-primarykeys-transact-sql.md)   
  [Transact-sql&#41;sp_tables_ex &#40;](../../relational-databases/system-stored-procedures/sp-tables-ex-transact-sql.md)   
  [Transact-sql&#41;sp_table_privileges &#40;](../../relational-databases/system-stored-procedures/sp-table-privileges-transact-sql.md)   

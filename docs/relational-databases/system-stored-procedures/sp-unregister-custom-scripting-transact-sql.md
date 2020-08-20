@@ -1,4 +1,5 @@
 ---
+description: sp_unregister_custom_scripting(Transact-SQL)
 title: sp_unregister_custom_scripting (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b6e9e0d2-9144-434d-88af-4874f2582399
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9cd0ff590213b5dd687235328696d4956b0bb224
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0247061b99b53cb53e12fa4e5e3a1284430287e4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892559"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480940"
 ---
 # <a name="sp_unregister_custom_scripting-transact-sql"></a>sp_unregister_custom_scripting(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,18 +40,18 @@ sp_unregister_custom_scripting [ @type  = ] 'type'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @type = ] 'type'`제거할 사용자 지정 저장 프로시저 또는 스크립트의 유형입니다. *type* 은 **varchar (16)** 이며 기본값은 없고 다음 값 중 하나일 수 있습니다.  
+`[ @type = ] 'type'` 제거할 사용자 지정 저장 프로시저 또는 스크립트의 유형입니다. *type* 은 **varchar (16)** 이며 기본값은 없고 다음 값 중 하나일 수 있습니다.  
   
 |값|설명|  
 |-----------|-----------------|  
-|**넣거나**|INSERT 문이 복제될 때 실행되는 등록된 사용자 지정 저장 프로시저 또는 스크립트입니다.|  
+|**insert**|INSERT 문이 복제될 때 실행되는 등록된 사용자 지정 저장 프로시저 또는 스크립트입니다.|  
 |**update**|UPDATE 문이 복제될 때 실행되는 등록된 사용자 지정 저장 프로시저 또는 스크립트입니다.|  
 |**delete**|DELETE 문이 복제될 때 실행되는 등록된 사용자 지정 저장 프로시저 또는 스크립트입니다.|  
 |**custom_script**|DDL(데이터 정의 언어) 트리거 끝에서 실행되는 등록된 사용자 지정 저장 프로시저 또는 스크립트입니다.|  
   
-`[ @publication = ] 'publication'`사용자 지정 저장 프로시저 또는 스크립트가 제거 되는 게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 NULL입니다.  
+`[ @publication = ] 'publication'` 사용자 지정 저장 프로시저 또는 스크립트가 제거 되는 게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 NULL입니다.  
   
-`[ @article = ] 'article'`사용자 지정 저장 프로시저 또는 스크립트가 제거 되는 아티클의 이름입니다. *article* 은 **sysname**이며 기본값은 NULL입니다.  
+`[ @article = ] 'article'` 사용자 지정 저장 프로시저 또는 스크립트가 제거 되는 아티클의 이름입니다. *article* 은 **sysname**이며 기본값은 NULL입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

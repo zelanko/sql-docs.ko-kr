@@ -1,4 +1,5 @@
 ---
+description: cdc.change_tables(Transact-SQL)
 title: cdc. change_tables (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3525a5f5-8d8b-46a8-b334-4b7cd9fb7c21
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c5cada1c85156a1f6e3c0822813fb79825a7d1c0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 6938dffda791dc77e8e304e25e705189b82e2ee7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890635"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480870"
 ---
 # <a name="cdcchange_tables-transact-sql"></a>cdc.change_tables(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +46,7 @@ ms.locfileid: "85890635"
 |**create_date**|**datetime**|원본 테이블이 사용되도록 설정된 날짜입니다.|  
 |**partition_switch**|**bit**|변경 데이터 캡처가 설정 된 테이블에 대해 **ALTER table** 의 **SWITCH PARTITION** 명령을 실행할 수 있는지 여부를 나타냅니다. 0은 파티션 전환이 차단되었음을 나타냅니다. 분할되지 않은 테이블은 항상 1을 반환합니다.|  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [sp_cdc_help_change_data_capture &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)  
   
   

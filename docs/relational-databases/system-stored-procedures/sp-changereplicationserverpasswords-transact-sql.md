@@ -1,4 +1,5 @@
 ---
+description: sp_changereplicationserverpasswords(Transact-SQL)
 title: sp_changereplicationserverpasswords (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9333da96-3a1c-4adb-9a74-5dac9ce596df
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: d3f992fefc04de89fcfa9e077d01641fa538ea40
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0d0e07afbf3837768ac2b57e3dfaa7d0c8c0d0af
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771407"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481485"
 ---
 # <a name="sp_changereplicationserverpasswords-transact-sql"></a>sp_changereplicationserverpasswords(Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -40,20 +41,20 @@ sp_changereplicationserverpasswords [ @login_type = ] login_type
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @login_type = ] login_type`제공 된 자격 증명에 대 한 인증 유형입니다. *login_type* 은 **tinyint**이며 기본값은 없습니다.  
+`[ @login_type = ] login_type` 제공 된 자격 증명에 대 한 인증 유형입니다. *login_type* 은 **tinyint**이며 기본값은 없습니다.  
   
  **1** = Windows 통합 인증  
   
  **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증  
   
-`[ @login = ] 'login'`변경할 Windows 계정 또는 로그인의 이름입니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *login* 은 **nvarchar (257)** 이며 기본값은 없습니다.  
+`[ @login = ] 'login'` 변경할 Windows 계정 또는 로그인의 이름입니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *login* 은 **nvarchar (257)** 이며 기본값은 없습니다.  
   
-`[ @password = ] 'password'`지정 된 *로그인*에 대해 저장할 새 암호입니다. *password* 는 **sysname**이며 기본값은 없습니다.  
+`[ @password = ] 'password'` 지정 된 *로그인*에 대해 저장할 새 암호입니다. *password* 는 **sysname**이며 기본값은 없습니다.  
   
 > [!NOTE]  
 >  복제 암호를 변경한 후 해당 암호를 사용하는 각 에이전트를 중지한 다음 다시 시작해야 에이전트에 변경 내용이 적용됩니다.  
   
-`[ @server = ] 'server'`저장 된 암호를 변경할 서버 연결입니다. *서버* 는 **sysname**이며 다음 값 중 하나일 수 있습니다.  
+`[ @server = ] 'server'` 저장 된 암호를 변경할 서버 연결입니다. *서버* 는 **sysname**이며 다음 값 중 하나일 수 있습니다.  
   
 |값|설명|  
 |-----------|-----------------|  

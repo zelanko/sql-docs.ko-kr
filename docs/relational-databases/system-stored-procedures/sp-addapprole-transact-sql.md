@@ -1,4 +1,5 @@
 ---
+description: sp_addapprole(Transact-SQL)
 title: sp_addapprole (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 24200295-9a54-4cab-9922-fb2e88632721
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 4c3420396f1a8149a7c5811f1c7422a6fb960f13
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: fa68e8b0d965fae3a1c27f5ca2705bc003d7b616
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85877904"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481559"
 ---
 # <a name="sp_addapprole-transact-sql"></a>sp_addapprole(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85877904"
   현재 데이터베이스에 애플리케이션 역할을 추가합니다.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]대신 [CREATE APPLICATION ROLE](../../t-sql/statements/create-application-role-transact-sql.md) 을 사용 해야 합니다.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 대신 [CREATE APPLICATION ROLE](../../t-sql/statements/create-application-role-transact-sql.md) 을 사용 해야 합니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,11 +43,11 @@ sp_addapprole [ @rolename = ] 'role' , [ @password = ] 'password'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @rolename = ] 'role'`새 응용 프로그램 역할의 이름입니다. *role* 은 **sysname**이며 기본값은 없습니다. *role* 은 올바른 식별자 여야 하며 현재 데이터베이스에 이미 존재할 수 없습니다.  
+`[ @rolename = ] 'role'` 새 응용 프로그램 역할의 이름입니다. *role* 은 **sysname**이며 기본값은 없습니다. *role* 은 올바른 식별자 여야 하며 현재 데이터베이스에 이미 존재할 수 없습니다.  
   
  애플리케이션 역할 이름은 문자, 기호 및 숫자를 비롯하여 1자에서 128자까지의 문자를 포함할 수 있습니다. 역할 이름은 백슬래시 ()를 포함 \\ 하거나 NULL 또는 빈 문자열 (' ') 일 수 없습니다.  
   
-`[ @password = ] 'password'`응용 프로그램 역할을 활성화 하는 데 필요한 암호입니다. *password* 는 **sysname**이며 기본값은 없습니다. *암호* 는 NULL 일 수 없습니다.  
+`[ @password = ] 'password'` 응용 프로그램 역할을 활성화 하는 데 필요한 암호입니다. *password* 는 **sysname**이며 기본값은 없습니다. *암호* 는 NULL 일 수 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -72,7 +73,7 @@ sp_addapprole [ @rolename = ] 'role' , [ @password = ] 'password'
 ## <a name="permissions"></a>사용 권한  
  데이터베이스에 대한 ALTER ANY APPLICATION ROLE 권한이 필요합니다. 새 역할과 이름 및 소유자가 같은 스키마가 아직 없으면 데이터베이스에 대한 CREATE SCHEMA 권한도 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `SalesApp` 현재 데이터베이스에 암호를 사용 하 여 새 응용 프로그램 역할을 추가 합니다 `x97898jLJfcooFUYLKm387gf3` .  
   
 ```  

@@ -1,4 +1,5 @@
 ---
+description: sp_help_jobschedule(Transact-SQL)
 title: sp_help_jobschedule (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 2cded902-9272-4667-ac4b-a4f95a9f008e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 07a07efac0a8908d0916049df594c273594ed4d4
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 002534c38b5060dca0457d0c704194db037b93b2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893661"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481294"
 ---
 # <a name="sp_help_jobschedule-transact-sql"></a>sp_help_jobschedule(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,18 +44,18 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @job_id = ] job_id`작업 id입니다. *job_id*은 **uniqueidentifier**이며 기본값은 NULL입니다.  
+`[ @job_id = ] job_id` 작업 id입니다. *job_id*은 **uniqueidentifier**이며 기본값은 NULL입니다.  
   
-`[ @job_name = ] 'job_name'`작업의 이름입니다. *job_name*는 **sysname**이며 기본값은 NULL입니다.  
+`[ @job_name = ] 'job_name'` 작업의 이름입니다. *job_name*는 **sysname**이며 기본값은 NULL입니다.  
   
 > [!NOTE]
 > *Job_id* 또는 *job_name* 를 지정 해야 하지만 둘 다 지정할 수는 없습니다.
 
-`[ @schedule_name = ] 'schedule_name'`작업에 대 한 일정 항목의 이름입니다. *schedule_name*는 **sysname**이며 기본값은 NULL입니다.  
+`[ @schedule_name = ] 'schedule_name'` 작업에 대 한 일정 항목의 이름입니다. *schedule_name*는 **sysname**이며 기본값은 NULL입니다.  
   
-`[ @schedule_id = ] schedule_id`작업에 대 한 일정 항목의 id 번호입니다. *schedule_id*은 **int**이며 기본값은 NULL입니다.  
+`[ @schedule_id = ] schedule_id` 작업에 대 한 일정 항목의 id 번호입니다. *schedule_id*은 **int**이며 기본값은 NULL입니다.  
   
-`[ @include_description = ] include_description`결과 집합에 일정에 대 한 설명을 포함할지 여부를 지정 합니다. *include_description* 은 **bit**이며 기본값은 **0**입니다. *Include_description* **0**이면 일정에 대 한 설명이 결과 집합에 포함 되지 않습니다. *Include_description* **1**이면 일정에 대 한 설명이 결과 집합에 포함 됩니다.  
+`[ @include_description = ] include_description` 결과 집합에 일정에 대 한 설명을 포함할지 여부를 지정 합니다. *include_description* 은 **bit**이며 기본값은 **0**입니다. *Include_description* **0**이면 일정에 대 한 설명이 결과 집합에 포함 되지 않습니다. *Include_description* **1**이면 일정에 대 한 설명이 결과 집합에 포함 됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -101,7 +102,7 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
   
  **SQLAgentUserRole** 의 멤버는 자신이 소유한 작업 일정 속성만 볼 수 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-returning-the-job-schedule-for-a-specific-job"></a>A. 특정 작업에 대한 작업 일정 반환  
  다음 예에서는 `BackupDatabase`라는 작업에 관한 일정 정보를 반환합니다.  

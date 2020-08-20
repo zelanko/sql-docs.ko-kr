@@ -1,4 +1,5 @@
 ---
+description: MSqreader_history(Transact-SQL)
 title: MSqreader_history (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: c5c91d39-513c-4a77-870b-c8ef74a1cd6b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8ee889df3e29f486c12393870858fa0af2ea6546
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 64e6041c37c70359c645f1a0f6027503b185772c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889552"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480795"
 ---
 # <a name="msqreader_history-transact-sql"></a>MSqreader_history(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,15 +43,15 @@ ms.locfileid: "85889552"
 |**transaction_status**|**int**|트랜잭션의 상태입니다.|  
 |**transactions_processed**|**int**|세션에서 처리된 트랜잭션의 총 수입니다.|  
 |**commands_processed**|**int**|세션에서 처리된 명령의 총 수입니다.|  
-|**delivery_rate**|**float (53)**|전달된 명령의 초 당 평균 수입니다.|  
-|**transaction_rate**|**float (53)**|처리된 트랜잭션 비율입니다.|  
+|**delivery_rate**|**float(53)**|전달된 명령의 초 당 평균 수입니다.|  
+|**transaction_rate**|**float(53)**|처리된 트랜잭션 비율입니다.|  
 |**구독자**|**sysname**|구독자 이름입니다.|  
 |**subscriberdb**|**sysname**|구독 데이터베이스의 이름입니다.|  
 |**error_id**|**int**|0이 아니면 숫자는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 메시지를 나타냅니다.|  
 |**timestamp**|**timestamp**|테이블의 타임스탬프 열입니다.|  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;복제 테이블](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Transact-sql&#41;&#40;복제 테이블 ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [복제 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: managed_backup. sp_get_backup_diagnostics (Transact-sql)
 title: managed_backup. sp_get_backup_diagnostics (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -20,19 +21,19 @@ helpviewer_keywords:
 ms.assetid: 2266a233-6354-464b-91ec-824ca4eb9ceb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7ce40edcea8e734aae84b5f24ec5f0e71890c7d6
-ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
+ms.openlocfilehash: 54e81df3d503b5c520ed812fefec8601d4979cd2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86977517"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481620"
 ---
 # <a name="managed_backupsp_get_backup_diagnostics-transact-sql"></a>managed_backup. sp_get_backup_diagnostics (Transact-sql)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   스마트 관리에 기록된 확장 이벤트를 반환합니다.  
   
- 이 저장 프로시저를 사용 하 여 Smart Admin에서 기록한 확장 이벤트를 모니터링 합니다. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]이벤트는이 시스템에 기록 되며,이 저장 프로시저를 사용 하 여 검토 하 고 모니터링할 수 있습니다.  
+ 이 저장 프로시저를 사용 하 여 Smart Admin에서 기록한 확장 이벤트를 모니터링 합니다. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 이벤트는이 시스템에 기록 되며,이 저장 프로시저를 사용 하 여 검토 하 고 모니터링할 수 있습니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -61,14 +62,14 @@ managed_backup.sp_get_backup_diagnostics [@xevent_channel = ] 'event type' [, [@
 | ----------- | --------- | ----------- |
 |event_type|NVARCHAR (512)|확장 이벤트 유형|  
 |이벤트|NVARCHAR (512)|이벤트 로그의 요약입니다.|  
-|Timestamp|timestamp|이벤트 발생 시 표시되는 이벤트의 타임스탬프입니다.|  
+|타임스탬프|timestamp|이벤트 발생 시 표시되는 이벤트의 타임스탬프입니다.|  
   
 ## <a name="security"></a>보안  
   
 ### <a name="permissions"></a>사용 권한  
  저장 프로시저에 대 한 **EXECUTE** 권한이 필요 합니다. 또한이 권한이 필요한 다른 시스템 개체를 내부적으로 호출 하기 때문에 **VIEW SERVER STATE** 권한도 필요 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 이전 30분 동안 기록된 모든 이벤트를 반환합니다.  
   
 ```  

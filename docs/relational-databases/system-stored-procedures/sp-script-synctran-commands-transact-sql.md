@@ -1,4 +1,5 @@
 ---
+description: sp_script_synctran_commands(Transact-SQL)
 title: sp_script_synctran_commands (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f132694a-dd05-405b-9d84-21acce9e564a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 697cba4e04483e28fe0099096916391057c1568a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8e49e8cd0155ca5266e9953628799a132c7f7608
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899211"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481075"
 ---
 # <a name="sp_script_synctran_commands-transact-sql"></a>sp_script_synctran_commands(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,9 +39,9 @@ sp_script_synctran_commands [@publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @publication = ] 'publication'`스크립팅할 게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 없습니다.  
+`[ @publication = ] 'publication'` 스크립팅할 게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @article = ] 'article'`스크립팅할 아티클의 이름입니다. *article* 은 **sysname**이며 기본값은 모든 아티클을 스크립팅 하도록 지정 하는 **all**입니다.  
+`[ @article = ] 'article'` 스크립팅할 아티클의 이름입니다. *article* 은 **sysname**이며 기본값은 모든 아티클을 스크립팅 하도록 지정 하는 **all**입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

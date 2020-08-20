@@ -1,4 +1,5 @@
 ---
+description: sp_help_operator(Transact-SQL)
 title: sp_help_operator (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/01/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: caedc43d-44b8-415a-897e-92923f6de3b8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a8ce38772655172a9c5e22d3dfdba9cb7fd8f4b5
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d86d691c33fdfc09ce60d3ef7059c823527f9494
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891719"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481215"
 ---
 # <a name="sp_help_operator-transact-sql"></a>sp_help_operator(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,9 +43,9 @@ sp_help_operator
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @operator_name = ] 'operator_name'`운영자 이름입니다. *operator_name* 는 **sysname**입니다. *Operator_name* 지정 하지 않으면 모든 연산자에 대 한 정보가 반환 됩니다.  
+`[ @operator_name = ] 'operator_name'` 운영자 이름입니다. *operator_name* 는 **sysname**입니다. *Operator_name* 지정 하지 않으면 모든 연산자에 대 한 정보가 반환 됩니다.  
   
-`[ @operator_id = ] operator_id`정보를 요청 하는 운영자의 id입니다. *operator_id*은 **int**이며 기본값은 NULL입니다.  
+`[ @operator_id = ] operator_id` 정보를 요청 하는 운영자의 id입니다. *operator_id*은 **int**이며 기본값은 NULL입니다.  
   
 > [!NOTE]  
 >  *Operator_id* 또는 *operator_name* 를 지정 해야 하지만 둘 다 지정할 수는 없습니다.  
@@ -91,7 +92,7 @@ sp_help_operator
   
  이러한 역할의 사용 권한에 대한 자세한 내용은 [SQL Server 에이전트 고정 데이터베이스 역할](../../ssms/agent/sql-server-agent-fixed-database-roles.md)을 참조하세요.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `François Ajenstat`라는 운영자에 관한 정보를 보고합니다.  
   
 ```  
@@ -103,7 +104,7 @@ EXEC dbo.sp_help_operator
 GO  
 ```  
   
-## <a name="see-also"></a>참조  
+## <a name="see-also"></a>참고 항목  
  [Transact-sql&#41;sp_add_operator &#40;](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   
  [Transact-sql&#41;sp_delete_operator &#40;](../../relational-databases/system-stored-procedures/sp-delete-operator-transact-sql.md)   
  [Transact-sql&#41;sp_update_operator &#40;](../../relational-databases/system-stored-procedures/sp-update-operator-transact-sql.md)   

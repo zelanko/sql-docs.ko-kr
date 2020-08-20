@@ -1,4 +1,5 @@
 ---
+description: sp_dropmergealternatepublisher(Transact-SQL)
 title: sp_dropmergealternatepublisher (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a7dee4e2-2a60-41da-9d1d-6f991d7e2c5e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 684a11fd102d7404543377afebb31780752ecd95
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: feaecea81d5d92cfa5fb8e5bf171edc6ea05d99d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85884113"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481315"
 ---
 # <a name="sp_dropmergealternatepublisher-transact-sql"></a>sp_dropmergealternatepublisher(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,17 +38,17 @@ sp_dropmergealaternatepublisher [ @publisher = ] 'publisher'    , [ @publisher_d
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @publisher = ] 'publisher'`현재 게시자의 이름입니다. *publisher*는 **sysname**이며 기본값은 없습니다.  
+`[ @publisher = ] 'publisher'` 현재 게시자의 이름입니다. *publisher*는 **sysname**이며 기본값은 없습니다.  
   
-`[ @publisher_db = ] 'publisher_db'`현재 게시 데이터베이스의 이름입니다. *publisher_db*는 **sysname**이며 기본값은 없습니다.  
+`[ @publisher_db = ] 'publisher_db'` 현재 게시 데이터베이스의 이름입니다. *publisher_db*는 **sysname**이며 기본값은 없습니다.  
   
-`[ @publication = ] 'publication'`현재 게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 없습니다.  
+`[ @publication = ] 'publication'` 현재 게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @alternate_publisher = ] 'alternate_publisher'`대체 동기화 파트너로 서 삭제할 대체 게시자의 이름입니다. *alternate_publisher*는 **sysname**이며 기본값은 없습니다.  
+`[ @alternate_publisher = ] 'alternate_publisher'` 대체 동기화 파트너로 서 삭제할 대체 게시자의 이름입니다. *alternate_publisher*는 **sysname**이며 기본값은 없습니다.  
   
-`[ @alternate_publisher_db = ] 'alternate_publisher_db'`대체 동기화 파트너 게시 데이터베이스로 삭제할 게시 데이터베이스의 이름입니다. *alternate_publisher_db*는 **sysname**이며 기본값은 없습니다.  
+`[ @alternate_publisher_db = ] 'alternate_publisher_db'` 대체 동기화 파트너 게시 데이터베이스로 삭제할 게시 데이터베이스의 이름입니다. *alternate_publisher_db*는 **sysname**이며 기본값은 없습니다.  
   
-`[ @alternate_publication = ] 'alternate_publication'`대체 동기화 파트너 게시로 삭제할 게시의 이름입니다. *alternate_publication*는 **sysname**이며 기본값은 없습니다.  
+`[ @alternate_publication = ] 'alternate_publication'` 대체 동기화 파트너 게시로 삭제할 게시의 이름입니다. *alternate_publication*는 **sysname**이며 기본값은 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

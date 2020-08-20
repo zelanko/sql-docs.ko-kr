@@ -1,4 +1,5 @@
 ---
+description: sp_cursor(Transact-SQL)
 title: sp_cursor (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 41ade0ca-5f11-469d-bd4d-c8302ccd93b3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a92b502368756fd86fc4facda7c0726260d88fea
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 75a3d3f6c38b6d63ad8127966cba118f4c3455dc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85869690"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481382"
 ---
 # <a name="sp_cursor-transact-sql"></a>sp_cursor(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -129,7 +130,7 @@ sp_cursor  cursor, optype, rownum, table
   
 2.  매개 변수를 사용 하 여 전체 UPDATE 또는 INSERT 문을 제출 하거나, 여러 매개 변수를 사용 하 여 UPDATE 또는 INSERT 문의 여러 부분을 제출할 수 있습니다. 그러면 SQL Server는 전체 문으로 작성 됩니다. 이 작업의 예는 이 항목 뒷부분의 예 섹션에 나와 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="alternative-value-parameter-uses"></a>다른 value 매개 변수 사용 방식  
  UPDATE의 경우:  

@@ -1,4 +1,5 @@
 ---
+description: sp_copymergesnapshot(Transact-SQL)
 title: sp_copymergesnapshot (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: eaecd6e0-8486-4e5d-ace7-8ae75768c0a8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 64d4a6bb067c53b13592074fc1c08b2e35fc4830
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 13e7be3229332ece6a95966de84ef5ed59e28289
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771227"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481415"
 ---
 # <a name="sp_copymergesnapshot-transact-sql"></a>sp_copymergesnapshot(Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -37,9 +38,9 @@ sp_copymergesnapshot [ @publication = ] 'publication', [ @destination_folder = ]
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @publication = ] 'publication'`스냅숏 내용을 복사할 게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 없습니다.  
+`[ @publication = ] 'publication'` 스냅숏 내용을 복사할 게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @destination_folder = ] 'destination_folder'`게시 스냅숏의 내용을 복사할 대상 폴더의 이름입니다. *destination_folder*은 **nvarchar (255)** 이며 기본값은 없습니다. *Destination_folder* 는 다른 서버, 네트워크 드라이브 또는 이동식 미디어 (cd-rom 또는 이동식 디스크 등)와 같은 대체 위치가 될 수 있습니다.  
+`[ @destination_folder = ] 'destination_folder'` 게시 스냅숏의 내용을 복사할 대상 폴더의 이름입니다. *destination_folder*은 **nvarchar (255)** 이며 기본값은 없습니다. *Destination_folder* 는 다른 서버, 네트워크 드라이브 또는 이동식 미디어 (cd-rom 또는 이동식 디스크 등)와 같은 대체 위치가 될 수 있습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

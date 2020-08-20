@@ -1,4 +1,5 @@
 ---
+description: sp_getmergedeletetype(Transact-SQL)
 title: sp_getmergedeletetype (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 64450e4d-844d-4176-874e-f3845536f7d2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 406eb51a43b350a5e6f0f2d4723baab40a62ce5e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e430a763a5922a38c23fda241fd207edc3c91fa3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881613"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481272"
 ---
 # <a name="sp_getmergedeletetype-transact-sql"></a>sp_getmergedeletetype(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,11 +38,11 @@ sp_getmergedeletetype [ @source_object = ] 'source_object', [ @rowguid =] 'rowgu
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @source_object = ] 'source_object'`원본 개체의 이름입니다. *source_object* 은 **nvarchar (386)** 이며 기본값은 없습니다.  
+`[ @source_object = ] 'source_object'` 원본 개체의 이름입니다. *source_object* 은 **nvarchar (386)** 이며 기본값은 없습니다.  
   
-`[ @rowguid = ] 'rowguid'`삭제 유형에 대 한 행 식별자입니다. *rowguid* 는 **uniqueidentifier**이며 기본값은 없습니다.  
+`[ @rowguid = ] 'rowguid'` 삭제 유형에 대 한 행 식별자입니다. *rowguid* 는 **uniqueidentifier**이며 기본값은 없습니다.  
   
-`[ @delete_type = ] delete_type OUTPUT`삭제 유형을 나타내는 코드입니다. *delete_type* 는 **int**이며 기본값은 없습니다. 또한 *delete_type* 는 출력 매개 변수 이며 다음 값 중 하나일 수 있습니다.  
+`[ @delete_type = ] delete_type OUTPUT` 삭제 유형을 나타내는 코드입니다. *delete_type* 는 **int**이며 기본값은 없습니다. 또한 *delete_type* 는 출력 매개 변수 이며 다음 값 중 하나일 수 있습니다.  
   
 |값|Description|  
 |-----------|-----------------|  

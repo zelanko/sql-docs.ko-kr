@@ -1,4 +1,5 @@
 ---
+description: sp_validname(Transact-SQL)
 title: sp_validname (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ ms.assetid: d51c53c2-1332-407f-b725-4983f2e710eb
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 86b1c7ec67a19e18dcc5daa6d14e55acc9b34c64
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8b448493ada2d6ec5d1073f194053463b463807b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722982"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480964"
 ---
 # <a name="sp_validname-transact-sql"></a>sp_validname(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -41,9 +42,9 @@ sp_validname [@name =] 'name'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @name = ] 'name'`유효성을 검사할 [식별자](../../relational-databases/databases/database-identifiers.md) 의 이름입니다. *name* 은 **sysname**이며 기본값은 없습니다. *이름은* NULL 일 수 없으며, 빈 문자열일 수 없으며, 이진수 0 문자를 포함할 수 없습니다.  
+`[ @name = ] 'name'` 유효성을 검사할 [식별자](../../relational-databases/databases/database-identifiers.md) 의 이름입니다. *name* 은 **sysname**이며 기본값은 없습니다. *이름은* NULL 일 수 없으며, 빈 문자열일 수 없으며, 이진수 0 문자를 포함할 수 없습니다.  
   
-`[ @raise_error = ] raise_error`오류를 발생시킬지 여부를 지정 합니다. *raise_error* 은 **bit**이며 기본값은 1입니다. 이 값은 오류가 표시됨을 의미합니다. 0으로 설정하면 오류 메시지가 발생하지 않습니다.  
+`[ @raise_error = ] raise_error` 오류를 발생시킬지 여부를 지정 합니다. *raise_error* 은 **bit**이며 기본값은 1입니다. 이 값은 오류가 표시됨을 의미합니다. 0으로 설정하면 오류 메시지가 발생하지 않습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -51,8 +52,8 @@ sp_validname [@name =] 'name'
 ## <a name="permissions"></a>사용 권한  
  **public** 역할의 멤버 자격이 필요합니다.  
   
-## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;저장 프로시저 데이터베이스 엔진](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>관련 항목  
+ [Transact-sql&#41;&#40;저장 프로시저 데이터베이스 엔진 ](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [데이터 형식&#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [NCHAR &#40;Transact-sql&#41;](../../t-sql/functions/nchar-transact-sql.md)   
  [nchar 및 nvarchar &#40;Transact-sql&#41;](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)   

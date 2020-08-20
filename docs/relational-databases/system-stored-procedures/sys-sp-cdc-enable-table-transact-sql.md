@@ -1,4 +1,5 @@
 ---
+description: sys.sp_cdc_enable_table(Transact-SQL)
 title: sys. sp_cdc_enable_table (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 26150c09-2dca-46ad-bb01-3cb3165bcc5d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cb3fc807a0c0af8c27f6464571a7556615a1797d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 79f3a9bc854a198ae43c75442b064a12ded97031
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891109"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480858"
 ---
 # <a name="syssp_cdc_enable_table-transact-sql"></a>sys.sp_cdc_enable_table(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,23 +55,23 @@ sys.sp_cdc_enable_table
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @source_schema = ] 'source_schema'`원본 테이블이 속한 스키마의 이름입니다. *source_schema* 는 **sysname**이며 기본값은 없고 NULL 일 수 없습니다.  
+`[ @source_schema = ] 'source_schema'` 원본 테이블이 속한 스키마의 이름입니다. *source_schema* 는 **sysname**이며 기본값은 없고 NULL 일 수 없습니다.  
   
-`[ @source_name = ] 'source_name'`변경 데이터 캡처를 사용할 원본 테이블의 이름입니다. *source_name* 는 **sysname**이며 기본값은 없고 NULL 일 수 없습니다.  
+`[ @source_name = ] 'source_name'` 변경 데이터 캡처를 사용할 원본 테이블의 이름입니다. *source_name* 는 **sysname**이며 기본값은 없고 NULL 일 수 없습니다.  
   
  *source_name* 는 현재 데이터베이스에 있어야 합니다. **Cdc** 스키마의 테이블은 변경 데이터 캡처를 사용 하도록 설정할 수 없습니다.  
   
-`[ @role_name = ] 'role_name'`변경 데이터에 대 한 액세스를 게이트 하는 데 사용 되는 데이터베이스 역할의 이름입니다. *role_name* 는 **sysname** 이며 반드시 지정 해야 합니다. 명시적으로 NULL로 설정하면 변경 데이터에 대한 액세스를 제어하는 데 제어 역할이 사용되지 않습니다.  
+`[ @role_name = ] 'role_name'` 변경 데이터에 대 한 액세스를 게이트 하는 데 사용 되는 데이터베이스 역할의 이름입니다. *role_name* 는 **sysname** 이며 반드시 지정 해야 합니다. 명시적으로 NULL로 설정하면 변경 데이터에 대한 액세스를 제어하는 데 제어 역할이 사용되지 않습니다.  
   
  현재 역할이 있는 경우 해당 역할이 사용됩니다. 역할이 없는 경우 지정된 이름의 데이터베이스 역할이 생성됩니다. 역할을 생성하기 전에 역할 이름 문자열의 오른쪽에 있는 공백은 잘립니다. 호출자에게 데이터베이스 내에서 역할을 생성할 권한이 없는 경우 저장 프로시저 작업은 실패합니다.  
   
-`[ @capture_instance = ] 'capture_instance'`인스턴스별 변경 데이터 캡처 개체의 이름을 지정 하는 데 사용 되는 캡처 인스턴스의 이름입니다. *capture_instance* 는 **sysname** 이며 NULL 일 수 없습니다.  
+`[ @capture_instance = ] 'capture_instance'` 인스턴스별 변경 데이터 캡처 개체의 이름을 지정 하는 데 사용 되는 캡처 인스턴스의 이름입니다. *capture_instance* 는 **sysname** 이며 NULL 일 수 없습니다.  
   
  지정 하지 않으면 이름이 *schemaname_sourcename*형식으로 원본 스키마 이름에 원본 테이블 이름을 붙인 이름이 파생 됩니다. *capture_instance* 는 100 자를 초과할 수 없으며 데이터베이스 내에서 고유 해야 합니다. 지정 된 또는 파생 된 *capture_instance* 문자열의 오른쪽에 있는 공백을 잘라냅니다.  
   
  원본 테이블은 최대 두 개의 캡처 인스턴스를 가질 수 있습니다. 자세한 내용은 [sp_cdc_help_change_data_capture &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)을 참조 하십시오.  
   
-`[ @supports_net_changes = ] supports_net_changes`이 캡처 인스턴스에서 순 변경 쿼리에 대 한 지원을 사용 하도록 설정할지 여부를 나타냅니다. 테이블에 기본 키가 있거나 매개 변수를 사용 하 여 식별 된 고유 인덱스가 테이블에 있는 경우 *supports_net_changes* 은 **bit** 이며 기본값은 1입니다 @index_name . 그렇지 않으면 이 매개 변수의 기본값은 0입니다.  
+`[ @supports_net_changes = ] supports_net_changes` 이 캡처 인스턴스에서 순 변경 쿼리에 대 한 지원을 사용 하도록 설정할지 여부를 나타냅니다. 테이블에 기본 키가 있거나 매개 변수를 사용 하 여 식별 된 고유 인덱스가 테이블에 있는 경우 *supports_net_changes* 은 **bit** 이며 기본값은 1입니다 @index_name . 그렇지 않으면 이 매개 변수의 기본값은 0입니다.  
   
  0인 경우 모든 변경을 쿼리하는 지원 함수만 생성됩니다.  
   
@@ -78,9 +79,9 @@ sys.sp_cdc_enable_table
   
  *Supports_net_changes* 1로 설정 된 경우 *index_name* 을 지정 해야 합니다. 그렇지 않으면 원본 테이블에 정의 된 기본 키가 있어야 합니다.  
   
-`[ @index_name = ] 'index_name_'`원본 테이블에서 행을 고유 하 게 식별 하는 데 사용할 고유 인덱스의 이름입니다. *index_name* 는 **sysname** 이며 NULL 일 수 있습니다. 지정 하는 경우 *index_name* 은 원본 테이블의 유효한 고유 인덱스 여야 합니다. *Index_name* 지정 하면 식별 된 인덱스 열이 테이블의 고유 행 식별자로 정의 된 기본 키 열 보다 우선적으로 적용 됩니다.  
+`[ @index_name = ] 'index_name_'` 원본 테이블에서 행을 고유 하 게 식별 하는 데 사용할 고유 인덱스의 이름입니다. *index_name* 는 **sysname** 이며 NULL 일 수 있습니다. 지정 하는 경우 *index_name* 은 원본 테이블의 유효한 고유 인덱스 여야 합니다. *Index_name* 지정 하면 식별 된 인덱스 열이 테이블의 고유 행 식별자로 정의 된 기본 키 열 보다 우선적으로 적용 됩니다.  
   
-`[ @captured_column_list = ] 'captured_column_list'`변경 테이블에 포함 될 원본 테이블 열을 식별 합니다. *captured_column_list* 은 **nvarchar (MAX)** 이며 NULL 일 수 있습니다. NULL이면 모든 열이 변경 테이블에 포함됩니다.  
+`[ @captured_column_list = ] 'captured_column_list'` 변경 테이블에 포함 될 원본 테이블 열을 식별 합니다. *captured_column_list* 은 **nvarchar (MAX)** 이며 NULL 일 수 있습니다. NULL이면 모든 열이 변경 테이블에 포함됩니다.  
   
  열 이름은 원본 테이블의 유효한 열이어야 합니다. 기본 키 인덱스에 정의 된 열 또는 *index_name* 에서 참조 하는 인덱스에 정의 된 열이 포함 되어야 합니다.  
   
@@ -88,11 +89,11 @@ sys.sp_cdc_enable_table
   
  *captured_column_list* 에는 다음 예약 된 열 이름을 사용할 수 없습니다. **__ $ start_lsn**, **__ $ end_lsn**, **__ $ seqval**, **__ $ operation**, **__ $ update_mask**.  
   
-`[ @filegroup_name = ] 'filegroup_name'`캡처 인스턴스에 대해 생성 된 변경 테이블에 사용할 파일 그룹입니다. *filegroup_name* 는 **sysname** 이며 NULL 일 수 있습니다. 지정 된 경우 현재 데이터베이스에 대해 *filegroup_name* 를 정의 해야 합니다. NULL이면 기본 파일 그룹이 사용됩니다.  
+`[ @filegroup_name = ] 'filegroup_name'` 캡처 인스턴스에 대해 생성 된 변경 테이블에 사용할 파일 그룹입니다. *filegroup_name* 는 **sysname** 이며 NULL 일 수 있습니다. 지정 된 경우 현재 데이터베이스에 대해 *filegroup_name* 를 정의 해야 합니다. NULL이면 기본 파일 그룹이 사용됩니다.  
   
  변경 데이터 캡처 변경 테이블에 대해서는 별도의 파일 그룹을 만드는 것이 좋습니다.  
   
-`[ @allow_partition_switch = ] 'allow_partition_switch'`변경 데이터 캡처가 설정 된 테이블에 대해 ALTER TABLE의 SWITCH PARTITION 명령을 실행할 수 있는지 여부를 나타냅니다. *allow_partition_switch* 은 **bit**이며 기본값은 1입니다.  
+`[ @allow_partition_switch = ] 'allow_partition_switch'` 변경 데이터 캡처가 설정 된 테이블에 대해 ALTER TABLE의 SWITCH PARTITION 명령을 실행할 수 있는지 여부를 나타냅니다. *allow_partition_switch* 은 **bit**이며 기본값은 1입니다.  
   
  분할되지 않은 테이블의 경우 스위치 설정은 항상 1이고 실제 설정은 무시됩니다. 분할되지 않은 테이블에 대해 스위치를 명시적으로 0으로 설정하면 스위치 설정이 무시되었음을 나타내는 경고 22857이 발생합니다. 분할된 테이블에 대해 스위치를 명시적으로 0으로 설정하면 원본 테이블에서 파티션 전환 작업이 허용되지 않음을 나타내는 경고 22356이 발생합니다. 마지막으로 스위치 설정을 명시적으로 1로 설정하거나 기본적으로 1로 설정되도록 허용한 경우 설정된 테이블이 분할된 테이블이면 파티션 전환이 차단되지 않음을 나타내는 경고 22855가 발생합니다. 파티션 전환이 발생해도 변경 데이터 캡처는 전환으로 인한 변경 내용을 추적하지 않습니다. 따라서 변경 데이터가 사용될 때 데이터 불일치가 발생합니다.  
   
@@ -122,7 +123,7 @@ sys.sp_cdc_enable_table
 ## <a name="permissions"></a>사용 권한  
  **Db_owner** 고정 데이터베이스 역할의 멤버 자격이 필요 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-enabling-change-data-capture-by-specifying-only-required-parameters"></a>A. 필요한 매개 변수만 지정하여 변경 데이터 캡처 활성화  
  다음 예에서는 `HumanResources.Employee` 테이블에 대해 변경 데이터 캡처를 활성화합니다. 필요한 매개 변수만 지정됩니다.  
@@ -155,7 +156,7 @@ EXEC sys.sp_cdc_enable_table
 GO  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [sp_cdc_disable_table &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-table-transact-sql.md)   
  [sp_cdc_help_change_data_capture &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)   
  [fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-sql&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)   

@@ -1,4 +1,5 @@
 ---
+description: 시퀀스 (Transact-sql)
 title: 시퀀스 (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/30/2019
@@ -17,12 +18,12 @@ helpviewer_keywords:
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5ad17bb63dc60accb220799d62a81e625f20d5c7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: db4fb9d06a6e2197b16ee7c2eee99029ae09d2a2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716614"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481708"
 ---
 # <a name="sequences-transact-sql"></a>시퀀스 (Transact-sql)
 
@@ -58,5 +59,5 @@ SELECT * FROM test.INFORMATION_SCHEMA.SEQUENCES;
 
 ## <a name="see-also"></a>참고 항목
 
-- [Transact-sql&#41;&#40;정보 스키마 뷰](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)
+- [Transact-sql&#41;&#40;정보 스키마 뷰 ](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)
 - [sys.sequences&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sequences-transact-sql.md)

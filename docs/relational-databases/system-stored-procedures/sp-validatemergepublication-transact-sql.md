@@ -1,4 +1,5 @@
 ---
+description: s sp_validatemergepublication(Transact-SQL)
 title: sp_validatemergepublication (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5a862f1a-2be1-4758-9954-4cdc8c77d149
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d2082ee586087458244ecd268b069804e4efc3ac
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f5120e6976291f9d064346891334b2d23b15aec8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891245"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480997"
 ---
 # <a name="sp_validatemergepublication-transact-sql"></a>s sp_validatemergepublication(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +42,7 @@ sp_validatemergepublication [@publication=] 'publication'
  [** \@ 게시 =**] **'***게시***'**  
  게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @level = ] level`수행할 유효성 검사의 유형입니다. *level* 은 **tinyint**이며 기본값은 없습니다. 수준은 다음 값 중 하나일 수 있습니다.  
+`[ @level = ] level` 수행할 유효성 검사의 유형입니다. *level* 은 **tinyint**이며 기본값은 없습니다. 수준은 다음 값 중 하나일 수 있습니다.  
   
 |수준 값|Description|  
 |-----------------|-----------------|  
@@ -59,7 +60,7 @@ sp_validatemergepublication [@publication=] 'publication'
  **Sysadmin** 고정 서버 역할의 멤버만 **sp_validatemergepublication**를 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;시스템 저장 프로시저](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;시스템 저장 프로시저 ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [복제 된 데이터의 유효성 검사](../../relational-databases/replication/validate-data-at-the-subscriber.md)   
  [Transact-sql&#41;sp_validatemergesubscription &#40;](../../relational-databases/system-stored-procedures/sp-validatemergesubscription-transact-sql.md)  
   

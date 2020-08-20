@@ -1,4 +1,5 @@
 ---
+description: 암호 관리(SybaseToSQL)
 title: 암호 관리 (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/07/2020
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9b6a70f9-6840-4140-a059-bb7bd7ccc67c
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 2d32e4d6129aa566d34c566f11cb7dde735f3783
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 81a31e8aa6b7c395fc623357a2bc56ebb5a037da
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87931061"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480378"
 ---
 # <a name="managing-passwords-sybasetosql"></a>암호 관리(SybaseToSQL)
 이 섹션에서는 데이터베이스 암호를 보호 하는 방법과 서버에서 데이터베이스를 가져오거나 내보내는 절차에 대해 설명 합니다.
@@ -70,7 +71,7 @@ SSMA를 사용 하면 데이터베이스의 암호를 보호할 수 있습니다
   
         를 사용 하 여를 실행 하 `SSMAforSybaseConsole.exe` `-securepassword` 고 `-remove` 명령줄에서 서버 id를 전달 하는 스위치를 사용 하 여 로컬 컴퓨터에 있는 보호 된 저장소 파일에서 암호화 된 암호를 제거 합니다.  
   
-        예:  
+        예제:  
         
         ```console
             C:\SSMA\SSMAforSybaseConsole.EXE -securepassword -remove all
@@ -81,7 +82,7 @@ SSMA를 사용 하면 데이터베이스의 암호를 보호할 수 있습니다
   
         를 사용 하 여를 실행 하 `SSMAforSybaseConsole.exe` `-securepassword` 고 `-list` 명령줄에서 스위치를 사용 하 여 암호가 암호화 된 모든 서버 id를 나열 합니다.  
   
-        예:  
+        예제:  
 
         ```console
             C:\SSMA\SSMAforSybaseConsole.EXE -securepassword -list  

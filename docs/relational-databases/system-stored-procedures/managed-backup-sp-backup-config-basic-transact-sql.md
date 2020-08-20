@@ -1,4 +1,5 @@
 ---
+description: managed_backup.sp_backup_config_basic(Transact-SQL)
 title: managed_backup. sp_backup_config_basic (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/03/2016
@@ -20,11 +21,12 @@ helpviewer_keywords:
 ms.assetid: 3ad73051-ae9a-4e41-a889-166146e5508f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 67ed480e1d34e688413cd7242bd25501dcd3074a
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: 90ca851e5056b5c592b5cab67fc695f598b67ed1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86052939"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481679"
 ---
 # <a name="managed_backupsp_backup_config_basic-transact-sql"></a>managed_backup.sp_backup_config_basic(Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -44,7 +46,7 @@ EXEC managed_backup.sp_backup_config_basic
     ,[@retention_days = ] 'retention_period_in_days'    ,[@credential_name = ] 'sql_credential_name'  
 ```  
   
-##  <a name="arguments"></a><a name="Arguments"></a>인수의  
+##  <a name="arguments"></a><a name="Arguments"></a> 인수  
  @enable_backup  
  지정한 데이터베이스에 대해 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]을 사용하거나 사용하지 않습니다. 는 @enable_backup **BIT**입니다. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]의 첫 번째 인스턴스를 구성할 때 필요한 매개 변수 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 입니다. 기존 구성을 변경 하는 경우 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 이 매개 변수는 선택 사항입니다. 이 경우 지정 되지 않은 모든 구성 값은 기존 값을 유지 합니다.  
   
@@ -61,7 +63,7 @@ EXEC managed_backup.sp_backup_config_basic
  백업 파일의 보존 기간(일)입니다. 는 @storage_url INT입니다. 이 매개 변수는 인스턴스에서 처음으로를 구성할 때 필수 매개 변수입니다 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 구성을 변경 하는 동안 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 이 매개 변수는 선택 사항입니다. 지정하지 않은 경우 기존 구성 값이 유지됩니다.  
   
  @credential_name  
- Azure 저장소 계정에 인증 하는 데 사용 되는 SQL 자격 증명의 이름입니다. @credentail_name는 **SYSNAME**입니다. 이를 지정 하면 백업이 페이지 blob에 저장 됩니다. 이 매개 변수가 NULL 이면 백업은 블록 blob으로 저장 됩니다. 페이지 blob에 대 한 백업은 더 이상 사용 되지 않으므로 새 블록 blob 백업 기능을 사용 하는 것이 좋습니다. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 구성 변경에 사용하는 경우 이 매개 변수는 선택 사항입니다. 지정 하지 않으면 기존 구성 값이 유지 됩니다.  
+ Azure 저장소 계정에 인증 하는 데 사용 되는 SQL 자격 증명의 이름입니다. @credentail_name 는 **SYSNAME**입니다. 이를 지정 하면 백업이 페이지 blob에 저장 됩니다. 이 매개 변수가 NULL 이면 백업은 블록 blob으로 저장 됩니다. 페이지 blob에 대 한 백업은 더 이상 사용 되지 않으므로 새 블록 blob 백업 기능을 사용 하는 것이 좋습니다. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 구성 변경에 사용하는 경우 이 매개 변수는 선택 사항입니다. 지정 하지 않으면 기존 구성 값이 유지 됩니다.  
   
 > [!WARNING]
 >  지금은 ** \@ credential_name** 매개 변수가 지원 되지 않습니다. 블록 blob에 대 한 백업만 지원 됩니다 .이 매개 변수는 NULL 이어야 합니다.  

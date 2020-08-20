@@ -1,4 +1,5 @@
 ---
+description: rowversion(Transact-SQL)
 title: rowversion(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/22/2017
@@ -26,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: 65c9cf0e-3e8a-45f8-87b3-3460d96afb0b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f2962d457ce079bd0ec2164f9fdd2a982b983f14
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 087e3e1d67bce5d8f46f03cdb1cad05578b39b46
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85638134"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479904"
 ---
 # <a name="rowversion-transact-sql"></a>rowversion(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

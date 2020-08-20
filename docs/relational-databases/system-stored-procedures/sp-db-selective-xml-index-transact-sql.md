@@ -1,4 +1,5 @@
 ---
+description: sp_db_selective_xml_index(Transact-SQL)
 title: sp_db_selective_xml_index (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 017301a2-4a23-4e68-82af-134f3d4892b3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: eeed1432c6f3c3ba4f6dcd80608c2c40bd0db374
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 787750b0b69f70989d6a060f82e754573189d708
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728208"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481408"
 ---
 # <a name="sp_db_selective_xml_index-transact-sql"></a>sp_db_selective_xml_index(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85728208"
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에서 선택적 XML 인덱스 기능을 설정 및 해제합니다. 매개 변수 없이 호출할 경우, 특정 데이터베이스에서 선택적 XML 인덱스가 설정되어 있으면 저장 프로시저에서 1을 반환합니다.  
   
 > [!NOTE]  
->  이 저장 프로시저를 사용 하 여 선택적 XML 인덱스를 사용 하지 않도록 설정 하려면 [transact-sql&#41;명령 &#40;ALTER DATABASE SET 옵션](../../t-sql/statements/alter-database-transact-sql-set-options.md) 을 사용 하 여 데이터베이스를 단순 복구 모드로 설정 해야 합니다.  
+>  이 저장 프로시저를 사용 하 여 선택적 XML 인덱스를 사용 하지 않도록 설정 하려면 [transact-sql&#41;명령 &#40;ALTER DATABASE SET 옵션 ](../../t-sql/statements/alter-database-transact-sql-set-options.md) 을 사용 하 여 데이터베이스를 단순 복구 모드로 설정 해야 합니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,9 +44,9 @@ ms.locfileid: "85728208"
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @ db_name = ] 'db_name'`선택적 XML 인덱스를 사용 하거나 사용 하지 않도록 설정할 데이터베이스의 이름입니다. *DB_NAME* NULL 인 경우 현재 데이터베이스를 가정 합니다.  
+`[ @ db_name = ] 'db_name'` 선택적 XML 인덱스를 사용 하거나 사용 하지 않도록 설정할 데이터베이스의 이름입니다. *DB_NAME* NULL 인 경우 현재 데이터베이스를 가정 합니다.  
   
-`[ @action = ] 'action'`인덱스를 사용 하거나 사용 하지 않을 지 여부를 결정 합니다. ' On ', ' true ', ' off ' 또는 ' f a l s e '를 제외한 다른 값이 전달 되 면 오류가 발생 합니다.  
+`[ @action = ] 'action'` 인덱스를 사용 하거나 사용 하지 않을 지 여부를 결정 합니다. ' On ', ' true ', ' off ' 또는 ' f a l s e '를 제외한 다른 값이 전달 되 면 오류가 발생 합니다.  
   
 ```  
   

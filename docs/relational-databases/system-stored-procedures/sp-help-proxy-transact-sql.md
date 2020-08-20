@@ -1,4 +1,5 @@
 ---
+description: sp_help_proxy(Transact-SQL)
 title: sp_help_proxy (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a2fce164-2b64-40c2-8f35-6eeb7844abf1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 051f41139627420e825feffb292a02905917705d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ab6a1a976dd70e991b36f51429a96d0be425b152
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891700"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481188"
 ---
 # <a name="sp_help_proxy-transact-sql"></a>sp_help_proxy(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,11 +44,11 @@ sp_help_proxy
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @proxy_id = ] id`정보를 나열할 프록시의 프록시 id입니다. *Proxy_id* 은 **int**이며 기본값은 NULL입니다. *Id* 또는 *proxy_name* 지정할 수 있습니다.  
+`[ @proxy_id = ] id` 정보를 나열할 프록시의 프록시 id입니다. *Proxy_id* 은 **int**이며 기본값은 NULL입니다. *Id* 또는 *proxy_name* 지정할 수 있습니다.  
   
-`[ @proxy_name = ] 'proxy_name'`정보를 나열할 프록시의 이름입니다. *Proxy_name* 는 **sysname**이며 기본값은 NULL입니다. *Id* 또는 *proxy_name* 지정할 수 있습니다.  
+`[ @proxy_name = ] 'proxy_name'` 정보를 나열할 프록시의 이름입니다. *Proxy_name* 는 **sysname**이며 기본값은 NULL입니다. *Id* 또는 *proxy_name* 지정할 수 있습니다.  
   
-`[ @subsystem_name = ] 'subsystem_name'`프록시를 나열할 하위 시스템의 이름입니다. *Subsystem_name* 는 **sysname**이며 기본값은 NULL입니다. *Subsystem_name* 지정 된 경우에도 *이름을* 지정 해야 합니다.  
+`[ @subsystem_name = ] 'subsystem_name'` 프록시를 나열할 하위 시스템의 이름입니다. *Subsystem_name* 는 **sysname**이며 기본값은 NULL입니다. *Subsystem_name* 지정 된 경우에도 *이름을* 지정 해야 합니다.  
   
  다음 표에서는 각 하위 시스템에 대한 값을 나열합니다.  
   
@@ -57,7 +58,7 @@ sp_help_proxy
 |CmdExec|운영 체제(CmdExec)|  
 |스냅샷|Replication Snapshot Agent|  
 |LogReader|복제 로그 판독기 에이전트|  
-|분포|복제 배포 에이전트|  
+|배포|복제 배포 에이전트|  
 |병합|Replication Merge Agent|  
 |QueueReader|복제 큐 판독기 에이전트|  
 |ANALYSISQUERY|Analysis Services 명령|  
@@ -78,7 +79,7 @@ sp_help_proxy
 |**name**|**sysname**|프록시 이름입니다.|  
 |**credential_identity**|**sysname**|프록시와 연관된 자격 증명의 Microsoft Windows 도메인 이름 및 사용자 이름입니다.|  
 |**사용**|**tinyint**|이 프록시가 사용되는지 여부입니다. { **0** = 사용 안 함, **1** = 사용}|  
-|**한**|**nvarchar(1024)**|이 프록시에 대한 설명입니다.|  
+|**description**|**nvarchar(1024)**|이 프록시에 대한 설명입니다.|  
 |**user_sid**|**varbinary(85)**|이 프록시에 대한 Windows 사용자의 Windows 보안 ID입니다.|  
 |**credential_id**|**int**|이 프록시와 연관된 자격 증명의 식별자입니다.|  
 |**credential_identity_exists**|**int**|credential_identity가 있는지 여부입니다. { 0 = 없음, 1 = 있음 }|  
@@ -96,7 +97,7 @@ sp_help_proxy
 > [!NOTE]  
 >  **Sysadmin** 의 멤버가이 저장 프로시저를 실행 하는 경우에만 **credential_identity** 및 **user_sid** 열이 결과 집합에 반환 됩니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-listing-information-for-all-proxies"></a>A. 모든 프록시에 대한 정보 나열  
  다음 예에서는 인스턴스의 모든 프록시에 대한 정보를 나열합니다.  
@@ -122,7 +123,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;저장 프로시저 SQL Server 에이전트](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;저장 프로시저 SQL Server 에이전트 ](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
  [Transact-sql&#41;sp_add_proxy &#40;](../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md)   
  [Transact-sql&#41;sp_delete_proxy &#40;](../../relational-databases/system-stored-procedures/sp-delete-proxy-transact-sql.md)  
   

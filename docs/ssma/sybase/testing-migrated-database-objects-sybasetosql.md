@@ -1,4 +1,5 @@
 ---
+description: 마이그레이션된 데이터베이스 개체 테스트(SybaseToSQL)
 title: 마이그레이션된 데이터베이스 개체 테스트 (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4937f6b4-86bd-4070-88df-3d216306c33a
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 360325063258b2bc208115f91357f341c68b7150
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: cfe57d436eac38052542eb2ed6c2133aab7ca07b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934602"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480400"
 ---
 # <a name="testing-migrated-database-objects-sybasetosql"></a>마이그레이션된 데이터베이스 개체 테스트(SybaseToSQL)
 Sybase 테스터 (SSMA 테스터)의 Microsoft SQL Server Migration Assistant는 데이터베이스 개체 변환과 SSMA에서 수행한 데이터 마이그레이션을 자동으로 테스트 합니다. 모든 SSMA 마이그레이션 단계를 완료 한 후 SSMA 테스터를 사용 하 여 변환 된 개체가 동일한 방식으로 작동 하 고 모든 데이터가 제대로 전송 되었는지 확인 합니다.  
@@ -45,7 +46,7 @@ SSMA 테스터는 Sybase에서 테스트 하기 위해 선택한 개체와 SQL S
 > [!NOTE]  
 > 주의! 프로덕션 시스템에서는 SSMA 테스터를 사용 하지 마세요. 테스터를 실행 하는 동안 원본 스키마와 데이터가 수정 됩니다. 한편, 일부 형식의 테스트 된 코드에서는 원래 상태의 전체 복원을 수행할 수 없습니다.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>사전 요구 사항  
 SSMA 테스터를 사용 하려는 경우에는 **테스터 데이터베이스 설치** 옵션이 설정 된 상태로 Ssma Sybase 확장 팩을 설치 합니다.  
   
 또한 다음을 확인 합니다.  
@@ -57,9 +58,9 @@ SSMA 테스터를 사용 하려는 경우에는 **테스터 데이터베이스 �
 현재 버전의 SSMA 테스터는 동일한 원본 또는 대상 서버에 있는 다른 사용자의 병렬 실행을 지원 하지 않습니다.  
   
 ## <a name="getting-started"></a>시작하기  
-[&#40;SybaseToSQL&#41;테스트 사례 만들기](../../ssma/sybase/creating-test-cases-sybasetosql.md)  
+[&#40;SybaseToSQL&#41;테스트 사례 만들기 ](../../ssma/sybase/creating-test-cases-sybasetosql.md)  
   
 ## <a name="see-also"></a>참고 항목  
-[SQL Server &#40;SybaseToSQL&#41;에 SSMA 구성 요소 설치](../../ssma/sybase/installing-ssma-components-on-sql-server-sybasetosql.md)  
+[SQL Server &#40;SybaseToSQL&#41;에 SSMA 구성 요소 설치 ](../../ssma/sybase/installing-ssma-components-on-sql-server-sybasetosql.md)  
 [프로젝트 설정 &#40;변환&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-conversion-sybasetosql.md)  
   

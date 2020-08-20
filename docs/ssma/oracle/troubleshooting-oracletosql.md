@@ -1,4 +1,5 @@
 ---
+description: 문제 해결(OracleToSQL)
 title: 문제 해결 (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -10,12 +11,12 @@ ms.assetid: 1dfd6ebb-9fcc-4588-8052-7b8219602132
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: bdc600dd84dad777f54ca41bd7f4c76db9434b5d
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 30983c2468a4e0f4a2969084c9043cff48c6bfe9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87932644"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480392"
 ---
 # <a name="troubleshooting-oracletosql"></a>문제 해결(OracleToSQL)
 콘솔 스크립트나 명령을 실행 하는 중간에 마이그레이션하는 문제가 발생 하는 것은 일반적이 지 않습니다.  

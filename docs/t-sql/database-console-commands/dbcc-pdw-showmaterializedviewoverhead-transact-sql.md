@@ -1,4 +1,5 @@
 ---
+description: DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD(Transact-SQL)
 title: DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD(Transact-SQL)
 ms.custom: seo-dt-2019
 ms.date: 07/03/2019
@@ -12,12 +13,12 @@ dev_langs:
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 5c3dd051156178572a03eeff23052e2c103d9555
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 2a849fdf387361bdf217e1b40a81aa8c600931d3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395890"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479858"
 ---
 # <a name="dbcc-pdw_showmaterializedviewoverhead-transact-sql"></a>DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD(Transact-SQL)  
 
@@ -44,9 +45,9 @@ DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD ( " [ schema_name .] materialized_view_nam
 
 ## <a name="remarks"></a>설명
 
-구체화된 뷰를 기본 테이블의 데이터 변경 내용으로 계속 새로 고치기 위해 데이터 웨어하우스 엔진은 영향을 받는 각 뷰에 추적 행을 추가하여 변경 내용을 반영합니다. 구체화된 뷰에서 선택하면 뷰의 클러스터형 columnstore 인덱스 검색과 증분 변경 내용 적용이 포함됩니다.  사용자가 구체화된 뷰를 다시 빌드할 때까지 추적 행(TOTAL_ROWS-BASE_VIEW_ROWS)은 제거되지 않습니다.  
+구체화된 뷰를 기본 테이블의 데이터 변경 내용으로 계속 새로 고치기 위해 데이터 웨어하우스 엔진은 영향을 받는 각 뷰에 추적 행을 추가하여 변경 내용을 반영합니다. 구체화된 뷰에서 선택하면 뷰의 클러스터형 columnstore 인덱스 검색과 증분 변경 내용 적용이 포함됩니다.사용자가 구체화된 뷰를 다시 빌드할 때까지 추적 행(TOTAL_ROWS-BASE_VIEW_ROWS)은 제거되지 않습니다.  
 
-overhead_ratio는 TOTAL_ROWS/MAX(1, BASE_VIEW_ROWS)로 계산됩니다.  비율이 높으면 SELECT 성능이 저하됩니다.  사용자는 구체화된 뷰를 다시 빌드하여 오버헤드 비율을 줄일 수 있습니다.
+overhead_ratio는 TOTAL_ROWS/MAX(1, BASE_VIEW_ROWS)로 계산됩니다.  비율이 높으면 SELECT 성능이 저하됩니다.사용자는 구체화된 뷰를 다시 빌드하여 오버헤드 비율을 줄일 수 있습니다.
 
 ## <a name="permissions"></a>사용 권한  
   

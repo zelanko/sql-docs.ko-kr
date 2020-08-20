@@ -1,4 +1,5 @@
 ---
+description: 로그 전달 테이블(Transact-SQL)
 title: 로그 전달 테이블 (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f8910aae-2013-4645-880c-134577cbcbe0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a6e34caa87f529edcac10ea77bf3346d3f276fc5
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 372aa4850633f3fec9789f233fbacba16f960196
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890089"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480780"
 ---
 # <a name="log-shipping-tables-transact-sql"></a>로그 전달 테이블(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

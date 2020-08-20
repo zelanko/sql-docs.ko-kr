@@ -1,4 +1,5 @@
 ---
+description: sp_trace_setstatus(Transact-SQL)
 title: sp_trace_setstatus (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 29e7a7d7-b9c1-414a-968a-fc247769750d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 16c47007b5b6b2d31f4cc575e9ad2b8b50526a4a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 464bf489f8e0d62ea0096b917b29d1bcc099c811
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891407"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480939"
 ---
 # <a name="sp_trace_setstatus-transact-sql"></a>sp_trace_setstatus(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,13 +43,13 @@ sp_trace_setstatus [ @traceid = ] trace_id , [ @status = ] status
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @traceid = ] trace_id`수정할 추적의 ID입니다. *trace_id* 는 **int**이며 기본값은 없습니다. 사용자는이 *trace_id* 값을 사용 하 여 추적을 식별, 수정 및 제어할 수 있습니다. *Trace_id*를 검색 하는 방법에 대 한 자세한 내용은 [fn_trace_getinfo &#40;transact-sql&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)를 참조 하세요.  
+`[ @traceid = ] trace_id` 수정할 추적의 ID입니다. *trace_id* 는 **int**이며 기본값은 없습니다. 사용자는이 *trace_id* 값을 사용 하 여 추적을 식별, 수정 및 제어할 수 있습니다. *Trace_id*를 검색 하는 방법에 대 한 자세한 내용은 [fn_trace_getinfo &#40;transact-sql&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)를 참조 하세요.  
   
-`[ @status = ] status`추적에 대해 구현할 동작을 지정 합니다. *status* 는 **int**이며 기본값은 없습니다.  
+`[ @status = ] status` 추적에 대해 구현할 동작을 지정 합니다. *status* 는 **int**이며 기본값은 없습니다.  
   
  다음 표에서는 지정할 수 있는 상태를 보여 줍니다.  
   
-|Status|Description|  
+|상태|설명|  
 |------------|-----------------|  
 |**0**|지정한 추적을 중지합니다.|  
 |**1**|지정한 추적을 시작합니다.|  
@@ -60,7 +61,7 @@ sp_trace_setstatus [ @traceid = ] trace_id , [ @status = ] status
 ## <a name="return-code-values"></a>반환 코드 값  
  아래 표에서는 저장 프로시저가 완료된 후 사용자가 얻을 수 있는 코드 값을 설명합니다.  
   
-|반환 코드|Description|  
+|반환 코드|설명|  
 |-----------------|-----------------|  
 |**0**|오류가 없습니다.|  
 |**1**|알 수 없는 오류입니다.|  
@@ -82,7 +83,7 @@ sp_trace_setstatus [ @traceid = ] trace_id , [ @status = ] status
  [fn_trace_geteventinfo &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
  [fn_trace_getfilterinfo &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-trace-getfilterinfo-transact-sql.md)   
  [Transact-sql&#41;sp_trace_generateevent &#40;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
- [Transact-sql&#41;sp_trace_setevent &#40;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
+ [sp_trace_setevent&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [Transact-sql&#41;sp_trace_setfilter &#40;](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)   
  [SQL 추적](../../relational-databases/sql-trace/sql-trace.md)  
   

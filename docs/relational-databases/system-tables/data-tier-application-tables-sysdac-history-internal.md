@@ -1,4 +1,5 @@
 ---
+description: 데이터 계층 애플리케이션 테이블 - sysdac_history_internal
 title: sysdac_history_internal (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 774a1678-0b27-42be-8adc-a6d7a4a56510
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a5095dbc6dae56a8e8ebf534cdd196b3785b43bf
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: f77fee435a076b4d4f6b8a56dc028c55fd3a623f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87123024"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480860"
 ---
 # <a name="data-tier-application-tables---sysdac_history_internal"></a>데이터 계층 애플리케이션 테이블 - sysdac_history_internal
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -80,7 +81,7 @@ WHERE instance_id NOT IN
   
 ## <a name="see-also"></a>참고 항목  
  [데이터 계층 애플리케이션](../../relational-databases/data-tier-applications/data-tier-applications.md)   
- [Transact-sql&#41;&#40;dac_instancesdbo.sys](../../relational-databases/system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md)   
+ [ Transact-sql&#41;&#40;dac_instancesdbo.sys](../../relational-databases/system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md)   
  [Transact-sql&#41;sysdac_instances_internal &#40;](../../relational-databases/system-tables/data-tier-application-tables-sysdac-instances-internal.md)  
   
   

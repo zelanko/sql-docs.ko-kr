@@ -1,4 +1,5 @@
 ---
+description: sys. dm_pdw_component_health_status (Transact-sql)
 title: sys. dm_pdw_component_health_status (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
@@ -10,12 +11,12 @@ ms.assetid: 68cc3f7a-693c-4d5d-a76b-455352af8d7f
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1c930309046994abfe1b5bc729f75097fdc41483
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: e68972138ece8587c81be1de3d9f3cf66b998022
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395959"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481879"
 ---
 # <a name="sysdm_pdw_component_health_status-transact-sql"></a>sys. dm_pdw_component_health_status (Transact-sql)
 [!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
@@ -32,6 +33,6 @@ ms.locfileid: "87395959"
 |update_time|**datetime**|메트릭이 마지막으로 업데이트 된 시간입니다.|NOT NULL|  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;SQL Data Warehouse 및 병렬 데이터 웨어하우스 동적 관리 뷰](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
+ [Transact-sql&#41;&#40;SQL Data Warehouse 및 병렬 데이터 웨어하우스 동적 관리 뷰 ](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   

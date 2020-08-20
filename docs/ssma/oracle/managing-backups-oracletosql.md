@@ -1,4 +1,5 @@
 ---
+description: 백업 관리(OracleToSQL)
 title: 백업 관리 (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -13,12 +14,12 @@ ms.assetid: a1a03ef9-b6e8-4127-bad0-eae261251472
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: b9e091db3e04eb0b82458e60f860dfb829076863
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: c0505913f29e473f4687454b8622becb01389519
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934724"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480465"
 ---
 # <a name="managing-backups-oracletosql"></a>백업 관리(OracleToSQL)
 Oracle 백업 관리를 사용 하면 테스트를 실행 하기 전이나 후에 테이블 데이터를 백업 및 복원할 수 있습니다. 백업 콘텐츠 관리 대화 상자를 사용 하 여 백업 콘텐츠를 관리할 수도 있습니다.  
@@ -95,5 +96,5 @@ SQL Server 백업 관리를 사용 하면 테스트를 실행 하기 전이나 �
 -   **닫기** 단추를 클릭 하 여 대화 상자를 닫습니다.  
   
 ## <a name="see-also"></a>참고 항목  
-[OracleToSQL&#41;&#40;마이그레이션된 데이터베이스 개체 테스트](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
+[OracleToSQL&#41;&#40;마이그레이션된 데이터베이스 개체 테스트 ](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
   
