@@ -1,4 +1,5 @@
 ---
+description: 단일 사용자 모드로 데이터베이스 설정
 title: 단일 사용자 모드로 데이터베이스 설정 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: fb5254eb-b635-4b39-8361-136fd36f2b1f
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: ba2485d34df61b931afef75d68cddbde6b01289f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 591a2d22a603c51f44bdfa16d4072e6b9ad36c73
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85763380"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471157"
 ---
 # <a name="set-a-database-to-single-user-mode"></a>단일 사용자 모드로 데이터베이스 설정
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,4 +1,5 @@
 ---
+description: Microsoft IIS(인터넷 정보 서비스) 사용
 title: Microsoft 인터넷 정보 서비스 사용 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3328f2f1-b34a-472f-82cf-ad49768ff061
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0c71babf933c2615e6c2464696c1023ccaf53dd7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5e20a15aad4409f535d83e813fdfbd911ca80674
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81282471"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471335"
 ---
 # <a name="using-microsoft-internet-information-services"></a>Microsoft IIS(인터넷 정보 서비스) 사용
 > [!IMPORTANT]  

@@ -1,4 +1,5 @@
 ---
+description: 데이터베이스 이름 바꾸기
 title: 데이터베이스 이름 바꾸기 | Microsoft 문서
 ms.custom: ''
 ms.date: 10/02/2018
@@ -14,12 +15,12 @@ ms.assetid: 44c69d35-abcb-4da3-9370-5e0bc9a28496
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8ff09925b3fd51debbdeda647cd1ae7255f5fa0d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0d6131b3481be154cda88aee47bd226ce293613e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728389"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471186"
 ---
 # <a name="rename-a-database"></a>데이터베이스 이름 바꾸기
 
@@ -40,7 +41,7 @@ ms.locfileid: "85728389"
   
      [Transact-SQL](#rename-a-database-using-transact-sql)  
   
-- **후속 작업:**  [데이터베이스의 이름을 바꾼 후](#backup-after-renaming-a-database)  
+- **Follow Up:**  [After renaming a database](#backup-after-renaming-a-database)  
 
 > [!NOTE]
 > Azure SQL Data Warehouse 또는 Parallel Data Warehouse에서 데이터베이스의 이름을 바꾸려면 [RENAME(Transact-SQL)](../../t-sql/statements/rename-transact-sql.md) 문을 사용합니다.
@@ -128,7 +129,7 @@ GO
 ```
 
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목
 
 - [ALTER DATABASE(Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)
 - [데이터베이스 식별자](../../relational-databases/databases/database-identifiers.md)  

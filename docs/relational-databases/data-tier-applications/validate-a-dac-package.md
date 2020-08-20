@@ -1,4 +1,5 @@
 ---
+description: DAC 패키지 유효성 검사
 title: DAC 패키지 유효성 검사 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 726ffcc2-9221-424a-8477-99e3f85f03bd
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 62ea7a75bc9ed691f282aa0d886f64d006deb94b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 717d81dd0f6f7f55af78ec4264b4f3b9fb329583
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85781633"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471452"
 ---
 # <a name="validate-a-dac-package"></a>DAC 패키지 유효성 검사
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -28,7 +29,7 @@ ms.locfileid: "85781633"
   
 1.  **시작하기 전 주의 사항:**  [필수 구성 요소](#Prerequisites)  
   
-2.  **DAC를 업그레이드하려면 다음을 사용합니다.**  [DAC 내용 보기](#ViewDACContents), [데이터베이스 변경 내용 보기](#ViewDBChanges), [업그레이드 동작 보기](#ViewUpgradeActions), [DAC 비교](#CompareDACs)  
+2.  **DAC를 업그레이드하려면**  [DAC 내용 보기](#ViewDACContents), [데이터베이스 변경 내용 보기](#ViewDBChanges), [업그레이드 동작 보기](#ViewUpgradeActions), [Compare DACs](#CompareDACs)  
 
 ##  <a name="prerequisites"></a><a name="Prerequisites"></a> 필수 조건  
  출처를 알 수 없거나 신뢰할 수 없는 DAC 패키지는 배포하지 않는 것이 좋습니다. 이러한 DAC에 포함된 악성 코드가 의도하지 않은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드를 실행하거나 스키마를 수정하여 오류가 발생할 수 있습니다. 출처를 알 수 없거나 신뢰할 수 없는 DAC를 사용하기 전에 격리된 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 테스트 인스턴스에 이를 배포하고, 해당 데이터베이스에 대해 [DBCC CHECKDB&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)를 실행하며, 저장 프로시저 또는 다른 사용자 정의 코드 같은 데이터베이스의 코드도 검사하세요.  

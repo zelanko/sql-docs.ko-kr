@@ -1,4 +1,5 @@
 ---
+description: 보조 데이터베이스 설정
 title: 보조 데이터베이스 설정 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: f992ffc9-ee42-43fe-acec-512032f0ded1
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: ce372206ab771679eb002e051dd78e1c6be60940
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d6db17f4c7930e03e65412c9addaef5340ec4645
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85759012"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471137"
 ---
 # <a name="secondary-database-settings"></a>보조 데이터베이스 설정
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

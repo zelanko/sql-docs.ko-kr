@@ -1,4 +1,5 @@
 ---
+description: SQLSetPos를 사용하여 행 집합의 행 업데이트
 title: SQLSetPos를 사용 하 여 행 집합의 행 업데이트 Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d83a8c2a-5aa8-4f19-947c-79a817167ee1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4851d4ba741379fc188b2b88c895a378ef3bb80d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d1b1b50007a03ee1973d92acafbe8f2be1022f52
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298973"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471218"
 ---
 # <a name="updating-rows-in-the-rowset-with-sqlsetpos"></a>SQLSetPos를 사용하여 행 집합의 행 업데이트
 **SQLSetPos** 의 업데이트 작업을 수행 하면 데이터 원본에서 각 바인딩된 열에 대해 응용 프로그램 버퍼의 데이터를 사용 하 여 하나 이상의 선택 된 행을 업데이트 합니다 (길이/지표 버퍼의 값이 SQL_COLUMN_IGNORE 되지 않은 경우). 바인딩되지 않은 열은 업데이트 되지 않습니다.  

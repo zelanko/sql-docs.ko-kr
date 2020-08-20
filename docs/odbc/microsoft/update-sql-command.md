@@ -1,4 +1,5 @@
 ---
+description: UPDATE - SQL 명령
 title: UPDATE-SQL 명령 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ff1e0331-c060-4304-b280-039725b45f63
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 818811c18ed52cef5bdb1c4d97f947bb86e67422
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6aa25f786448a14da47321c0f5ce1825716c03d2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307644"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471413"
 ---
 # <a name="update---sql-command"></a>UPDATE - SQL 명령
 테이블의 레코드를 새 값으로 업데이트 합니다.  
@@ -40,7 +41,7 @@ SET Column_Name1 = eExpression1
   
  *DatabaseName1!* 테이블을 포함 하는 데이터 원본에 지정 된 데이터베이스가 아닌 데이터베이스의 이름을 지정 합니다. 데이터베이스가 현재 데이터베이스가 아닌 경우 테이블이 포함 된 데이터베이스의 이름을 포함 해야 합니다. 데이터베이스 이름과 테이블 이름 앞에 느낌표 (!) 구분 기호를 포함 합니다.  
   
- SET *Column_Name1*= *eExpression1*[, *Column_Name2*= *eExpression2*  
+ SET *Column_Name1* =  *eExpression1*[, *Column_Name2* =  *eExpression2*  
  업데이트 되는 열과 새 값을 지정 합니다. WHERE 절을 생략 하면 열의 모든 행이 동일한 값으로 업데이트 됩니다.  
   
  WHERE *FilterCondition1*[AND &#124; OR *FilterCondition2*...]  

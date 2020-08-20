@@ -1,4 +1,5 @@
 ---
+description: 데이터베이스를 데이터베이스 스냅샷으로 되돌리기
 title: 데이터베이스를 데이터베이스 스냅샷으로 되돌리기 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/09/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8f74dd31-c9ca-4537-8760-0c7648f0787d
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 1a9c34408dd1f7731579830802fd8ac62d1f0bae
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0d4551044d0db95cfa8abaf177d683626c666dcf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85759030"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471151"
 ---
 # <a name="revert-a-database-to-a-database-snapshot"></a>데이터베이스를 데이터베이스 스냅샷으로 되돌리기
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -32,7 +33,7 @@ ms.locfileid: "85759030"
   
      [보안](#Security)  
   
--   **데이터베이스를 데이터베이스 스냅샷으로 되돌리려면 다음을 사용합니다.**  [Transact-SQL](#TsqlProcedure)  
+-   **데이터베이스를 데이터베이스 스냅샷으로 되돌리려면:**  [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
@@ -90,7 +91,7 @@ ms.locfileid: "85759030"
 > [!NOTE]  
 >  이 프로시저의 예는 이 섹션의 뒷부분에 나오는 [예제(Transact-SQL)](#TsqlExample)을 참조하세요.  
   
-1.  데이터베이스를 되돌릴 데이터베이스 스냅샷을 식별합니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 데이터베이스의 스냅샷을 확인할 수 있습니다([데이터베이스 스냅샷 보기&#40;SQL Server&#41;](../../relational-databases/databases/view-a-database-snapshot-sql-server.md) 참조). 또한 **sys.databases&amp;#40;Transact-SQL&amp;#41;** 카탈로그 뷰의 [sys.databases&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 열에서 뷰의 원본 데이터베이스를 식별할 수 있습니다.  
+1.  데이터베이스를 되돌릴 데이터베이스 스냅샷을 식별합니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 데이터베이스의 스냅샷을 확인할 수 있습니다([데이터베이스 스냅샷 보기&#40;SQL Server&#41;](../../relational-databases/databases/view-a-database-snapshot-sql-server.md) 참조). 또한 **sys.databases&#40;Transact-SQL&#41;** 카탈로그 뷰의 [sys.databases&amp;#40;Transact-SQL&amp;#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 열에서 뷰의 원본 데이터베이스를 식별할 수 있습니다.  
   
 2.  다른 모든 데이터베이스 스냅샷을 삭제합니다.  
   
@@ -100,7 +101,7 @@ ms.locfileid: "85759030"
   
      되돌리기 작업을 수행하려면 원본 데이터베이스에 대해 RESTORE DATABASE 권한이 필요합니다. 데이터베이스를 되돌리려면 다음과 같은 Transact-SQL 문을 사용합니다.  
   
-     RESTORE DATABASE *database_name* FROM DATABASE_SNAPSHOT **=** _database_snapshot_name_  
+     RESTORE DATABASE *database_name* FROM DATABASE_SNAPSHOT **=**_database_snapshot_name_  
   
      여기서 *database_name* 은 원본 데이터베이스이고 *database_snapshot_name* 은 데이터베이스를 되돌리려는 스냅샷의 이름입니다. 이 문에서 백업 디바이스가 아닌 스냅샷 이름을 지정해야 합니다.  
   

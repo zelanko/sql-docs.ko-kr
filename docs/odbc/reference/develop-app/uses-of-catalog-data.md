@@ -1,4 +1,5 @@
 ---
+description: 카탈로그 데이터의 용도
 title: 카탈로그 데이터의 사용 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d5915d0c-eec3-4382-850e-bd863763c99a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 429d42d4a82d0f9f34e33eb4f5f3293100505da9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7e03dff0a8c5715a86f1bcdff65b74f55409889a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306814"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471200"
 ---
 # <a name="uses-of-catalog-data"></a>카탈로그 데이터의 용도
 응용 프로그램은 다양 한 방법으로 카탈로그 데이터를 사용 합니다. 몇 가지 일반적인 용도는 다음과 같습니다.  

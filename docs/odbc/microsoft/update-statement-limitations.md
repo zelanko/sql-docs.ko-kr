@@ -1,4 +1,5 @@
 ---
+description: UPDATE 문 제한 사항
 title: 문 제약 조건 업데이트 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 14700aac-e135-4dc0-9138-4b01224461d5
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8ddf19c0b672901b2e778833f8bf624996d4ced3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b7c1ea2e5e9d887005084cdb5454dcf9b5e8fa24
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307624"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471402"
 ---
 # <a name="update-statement-limitations"></a>UPDATE 문 제한 사항
 Paradox 드라이버에서 테이블을 업데이트 하려면 테이블에 고유 인덱스 (Paradox 기본 키)가 있어야 합니다. Borland 데이터베이스 엔진를 구현 하지 않고 Paradox 드라이버를 사용 하는 경우에는 Paradox 테이블을 업데이트할 수 없습니다.  

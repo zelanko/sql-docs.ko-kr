@@ -1,4 +1,5 @@
 ---
+description: SQLGetInfo 지원
 title: SQLGetInfo 지원 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: 57326f57-daba-46b6-b0be-6c97213b9ef1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a21c035a14814f51d4344894ef253b2cc844f4c2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cff18a23c7d8c4526fc86904d75375ed5aaaf5a7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307804"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471234"
 ---
 # <a name="sqlgetinfo-support"></a>SQLGetInfo 지원
 ODBC 2 인 경우 *x* 응용 프로그램은 **SQLGetInfo** 를 ODBC 3.x*드라이버에* 호출 하 고 다음 표에 있는 *InfoType* 인수를 지원 해야 합니다.  
   
 |*InfoType*|반환|  
 |----------------|-------------|  
-|SQL_ALTER_TABLE (ODBC 2.0) **참고:** 이 정보 형식은 더 이상 사용 되지 않습니다. 오른쪽에 있는 열의 비트 마스크는 사용 되지 않습니다.|데이터 원본에서 지 원하는 **ALTER TABLE** 문의 절을 열거 하는 sqlinteger 비트 마스크입니다.<br /><br /> 지원 되는 절을 결정 하는 데 사용 되는 비트 마스크는 다음과 같습니다.<br /><br /> SQL_AT_DROP_COLUMN = 열을 삭제 하는 기능이 지원 됩니다. 이로 인해 cascade 또는 restrict 동작이 적용 되는지 여부는 드라이버에 의해 정의 됩니다. (ODBC 2.0)<br /><br /> SQL_AT_ADD_COLUMN = 단일 ALTER TABLE 문에 여러 열을 추가 하는 기능이 지원 됩니다. 이 비트는 다른 SQL_AT_ADD_COLUMN_XXX 비트 또는 SQL_AT_CONSTRAINT_XXX 비트와 함께 사용 되지 않습니다. (ODBC 2.0)|  
+|SQL_ALTER_TABLE (ODBC 2.0) **참고:**  이 정보 형식은 더 이상 사용 되지 않습니다. 오른쪽에 있는 열의 비트 마스크는 사용 되지 않습니다.|데이터 원본에서 지 원하는 **ALTER TABLE** 문의 절을 열거 하는 sqlinteger 비트 마스크입니다.<br /><br /> 지원 되는 절을 결정 하는 데 사용 되는 비트 마스크는 다음과 같습니다.<br /><br /> SQL_AT_DROP_COLUMN = 열을 삭제 하는 기능이 지원 됩니다. 이로 인해 cascade 또는 restrict 동작이 적용 되는지 여부는 드라이버에 의해 정의 됩니다. (ODBC 2.0)<br /><br /> SQL_AT_ADD_COLUMN = 단일 ALTER TABLE 문에 여러 열을 추가 하는 기능이 지원 됩니다. 이 비트는 다른 SQL_AT_ADD_COLUMN_XXX 비트 또는 SQL_AT_CONSTRAINT_XXX 비트와 함께 사용 되지 않습니다. (ODBC 2.0)|  
 |SQL_FETCH_DIRECTION (ODBC 1.0)<br /><br /> 정보 유형은 ODBC 1.0에서 도입 되었습니다. 각 비트 마스크는 도입 된 버전으로 레이블이 지정 됩니다.|지원 되는 fetch 방향 옵션을 열거 하는 SQLINTEGER 비트 마스크입니다.<br /><br /> 다음 비트 마스크는 플래그와 함께 사용 되어 지원 되는 옵션을 결정 합니다.<br /><br /> SQL_FD_FETCH_NEXT (ODBC 1.0) SQL_FD_FETCH_FIRST (ODBC 1.0) SQL_FD_FETCH_LAST (ODBC 1.0) SQL_FD_FETCH_PRIOR (ODBC 1.0) SQL_FD_FETCH_ABSOLUTE (ODBC 1.0) SQL_FD_FETCH_RELATIVE (ODBC 1.0) SQL_FD_FETCH_BOOKMARK (ODBC 2.0) (ODBC)|  
 |SQL_LOCK_TYPES (ODBC 2.0)|**SQLSetPos**의 *fLock* 인수에 대해 지원 되는 잠금 유형을 열거 하는 sqlinteger 비트 마스크입니다.<br /><br /> 다음 비트 마스크는 플래그와 함께 사용 되어 지원 되는 잠금 유형을 결정 합니다.<br /><br /> SQL_LCK_NO_CHANGE SQL_LCK_EXCLUSIVE SQL_LCK_UNLOCK|  
 |SQL_ODBC_API_CONFORMANCE (ODBC 1.0)|ODBC 규칙의 수준을 나타내는 SQLSMALLINT 값입니다.<br /><br /> SQL_OAC_NONE = 없음<br /><br /> SQL_OAC_LEVEL1 = 수준 1 지원 됨<br /><br /> SQL_OAC_LEVEL2 = 수준 2 지원 됨|  

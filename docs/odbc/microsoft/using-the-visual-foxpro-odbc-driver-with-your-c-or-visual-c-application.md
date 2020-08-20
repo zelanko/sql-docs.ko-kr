@@ -1,4 +1,5 @@
 ---
+description: C 또는 Visual C++ 응용 프로그램과 함께 Visual FoxPro ODBC 드라이버 사용
 title: C 또는 Visual C++ 응용 프로그램에서 Visual FoxPro ODBC 드라이버 사용 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: beb11a68-849e-4fe0-b217-d3722b1b1389
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e2f3a87503a94da75acc824a0937b92631c01bde
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d8e7dcbc0d14dfddb4aa8a2318d424dc6c7222e5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81292633"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471295"
 ---
 # <a name="use-the-visual-foxpro-odbc-driver-with-your-c-or-visual-c-application"></a>C 또는 Visual C++ 응용 프로그램과 함께 Visual FoxPro ODBC 드라이버 사용
 C 또는 c + + 응용 프로그램은 Visual foxpro에 [Sqlexecute](../../odbc/microsoft/sqlexecute-visual-foxpro-odbc-driver.md) 또는 [sqlexecdirect](../../odbc/microsoft/sqlexecdirect-visual-foxpro-odbc-driver.md) 문을 전송 하 여 visual foxpro 데이터와 통신 합니다. 이 문에는 다음이 포함 될 수 있습니다.  

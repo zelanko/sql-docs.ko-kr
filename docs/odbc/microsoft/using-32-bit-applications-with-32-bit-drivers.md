@@ -1,4 +1,5 @@
 ---
+description: 32비트 드라이버와 32비트 애플리케이션 사용
 title: 32 비트 드라이버에서 32 비트 응용 프로그램 사용 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0cdd5788-5642-4280-8d53-b4ec461aafa1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 31512f9339b9d46225bb4f1198cb617a48509acb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 69005071c83047471e76f38160265bc35cdccd4b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307604"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471367"
 ---
 # <a name="using-32-bit-applications-with-32-bit-drivers"></a>32비트 드라이버와 32비트 애플리케이션 사용
 32 비트 드라이버를 사용 하 여 32 비트 응용 프로그램을 실행할 수 있습니다. 32 비트 응용 프로그램 및 32 비트 드라이버는 Win32® API를 사용 합니다.  
@@ -39,8 +40,8 @@ ms.locfileid: "81307604"
   
 |파일 이름|Description|  
 |---------------|-----------------|  
-|위한 odbc32.dll|32 비트 드라이버 관리자|  
-|Odbccp32|32 비트 설치 관리자 DLL|  
+|Odbc32.dll|32 비트 드라이버 관리자|  
+|Odbccp32.dll|32 비트 설치 관리자 DLL|  
 |Odbcad32.exe|32 비트 ODBC 관리자 프로그램|  
 |Odbcinst.ini|설치 관리자 도움말 파일|  
 |Msvcrt40.dll|C 런타임 라이브러리|

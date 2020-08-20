@@ -1,4 +1,5 @@
 ---
+description: msdb 데이터베이스
 title: msdb 데이터베이스 | Microsoft 문서
 ms.custom: ''
 ms.date: 11/10/2016
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5032cb2d-65a0-40dd-b569-4dcecdd58ceb
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: e1117deac53e93f208e7f93af9f20ae38e603fe3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 02632ce64dbd7b10571e559daf8fde4475a4e37b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728422"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471208"
 ---
 # <a name="msdb-database"></a>msdb 데이터베이스
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -50,33 +51,33 @@ ms.locfileid: "85728422"
 |데이터베이스 옵션|기본값|수정 가능|  
 |---------------------|-------------------|---------------------|  
 |ALLOW_SNAPSHOT_ISOLATION|켜기|예|  
-|ANSI_NULL_DEFAULT|OFF|yes|  
-|ANSI_NULLS|OFF|yes|  
-|ANSI_PADDING|OFF|yes|  
-|ANSI_WARNINGS|OFF|yes|  
-|ARITHABORT|OFF|yes|  
-|AUTO_CLOSE|OFF|yes|  
-|AUTO_CREATE_STATISTICS|켜기|yes|  
-|AUTO_SHRINK|OFF|yes|  
-|AUTO_UPDATE_STATISTICS|켜기|yes|  
-|AUTO_UPDATE_STATISTICS_ASYNC|OFF|yes|  
+|ANSI_NULL_DEFAULT|OFF|예|  
+|ANSI_NULLS|OFF|예|  
+|ANSI_PADDING|OFF|예|  
+|ANSI_WARNINGS|OFF|예|  
+|ARITHABORT|OFF|예|  
+|AUTO_CLOSE|OFF|예|  
+|AUTO_CREATE_STATISTICS|켜기|예|  
+|AUTO_SHRINK|OFF|예|  
+|AUTO_UPDATE_STATISTICS|켜기|예|  
+|AUTO_UPDATE_STATISTICS_ASYNC|OFF|예|  
 |CHANGE_TRACKING|OFF|예|  
-|CONCAT_NULL_YIELDS_NULL|OFF|yes|  
-|CURSOR_CLOSE_ON_COMMIT|OFF|yes|  
-|CURSOR_DEFAULT|GLOBAL|yes|  
-|데이터베이스 가용성 옵션|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|예<br /><br /> yes<br /><br /> yes|  
-|DATE_CORRELATION_OPTIMIZATION|OFF|yes|  
-|DB_CHAINING|켜기|yes|  
+|CONCAT_NULL_YIELDS_NULL|OFF|예|  
+|CURSOR_CLOSE_ON_COMMIT|OFF|예|  
+|CURSOR_DEFAULT|GLOBAL|예|  
+|데이터베이스 가용성 옵션|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|예<br /><br /> yes<br /><br /> 예|  
+|DATE_CORRELATION_OPTIMIZATION|OFF|예|  
+|DB_CHAINING|켜기|예|  
 |ENCRYPTION|OFF|예|  
 |MIXED_PAGE_ALLOCATION|켜기|예|  
-|NUMERIC_ROUNDABORT|OFF|yes|  
+|NUMERIC_ROUNDABORT|OFF|예|  
 |PAGE_VERIFY|CHECKSUM|yes|  
-|PARAMETERIZATION|SIMPLE|yes|  
-|QUOTED_IDENTIFIER|OFF|yes|  
+|PARAMETERIZATION|SIMPLE|예|  
+|QUOTED_IDENTIFIER|OFF|예|  
 |READ_COMMITTED_SNAPSHOT|OFF|예|  
 |RECOVERY|SIMPLE|yes|  
-|RECURSIVE_TRIGGERS|OFF|yes|  
-|Service Broker 옵션|ENABLE_BROKER|yes|  
+|RECURSIVE_TRIGGERS|OFF|예|  
+|Service Broker 옵션|ENABLE_BROKER|예|  
 |TRUSTWORTHY|켜기|yes|  
   
  이러한 데이터베이스 옵션에 대한 자세한 내용은 [ALTER DATABASE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)를 참조하세요.  

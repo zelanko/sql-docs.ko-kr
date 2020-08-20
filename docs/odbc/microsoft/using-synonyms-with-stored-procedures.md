@@ -1,4 +1,5 @@
 ---
+description: 저장 프로시저와 동의어 사용
 title: 저장 프로시저에서 동의어 사용 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8620b039-a086-4534-8710-cc8b1787dc80
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6d3758aeb954427f333c5a22298d6675c04acdb5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6c0f210aad903dec6b29df2ca1bd121b569c4335
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81292763"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471305"
 ---
 # <a name="using-synonyms-with-stored-procedures"></a>저장 프로시저와 동의어 사용
 > [!IMPORTANT]  

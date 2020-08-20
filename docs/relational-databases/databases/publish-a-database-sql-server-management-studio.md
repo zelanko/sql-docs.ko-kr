@@ -1,4 +1,5 @@
 ---
+description: 데이터베이스 게시(SQL Server Management Studio)
 title: 데이터베이스 게시(SQL Server Management Studio) | Microsoft 문서
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: 98b2914e-7147-40af-ba7d-87253bbe8bf9
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 4e865731f65b58ab47bbab9a169917f377fa8cd9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 503fe13d4f2d24c1795993bea84f2e04fb4ba0e1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728410"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471181"
 ---
 # <a name="publish-a-database-sql-server-management-studio"></a>데이터베이스 게시(SQL Server Management Studio)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  **스크립트 생성 및 게시 마법사** 를 사용하여 전체 데이터베이스 또는 개별 데이터베이스 개체를 웹 호스팅 공급자에 게시할 수 있습니다.  
+  **스크립트 생성 및 게시 마법사**를 사용하여 전체 데이터베이스 또는 개별 데이터베이스 개체를 웹 호스팅 공급자에 게시할 수 있습니다.  
   
 > [!NOTE]  
 >  이 항목에서 설명하는 기능은 데이터베이스 게시 마법사에서 제공했던 기능입니다. 게시 기능이 스크립트 생성 및 게시 마법사에 추가되었고 데이터베이스 게시 마법사는 더 이상 사용되지 않습니다.  
@@ -41,11 +42,11 @@ ms.locfileid: "85728410"
   
     2.  고급 게시 옵션을 지정하려면 **웹 서비스에 게시** 섹션에서 **고급** 단추를 선택합니다.  
   
-4.  **요약** 페이지에서 선택 항목을 검토합니다. 선택 항목을 변경하려면 **이전** 을 클릭합니다. 선택한 개체를 게시하려면 **다음** 을 클릭합니다.  
+4.  **요약** 페이지에서 선택 내용을 검토합니다. 선택 항목을 변경하려면 **이전** 을 클릭합니다. 선택한 개체를 게시하려면 **다음** 을 클릭합니다.  
   
 5.  **스크립트 저장 또는 게시** 페이지에서 게시 진행률을 모니터링합니다.  
 
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [스크립트 생성&#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/generate-scripts-sql-server-management-studio.md)   
  [데이터베이스를 다른 서버로 복사](../../relational-databases/databases/copy-databases-to-other-servers.md)  
   
