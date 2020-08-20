@@ -1,4 +1,5 @@
 ---
+description: Microsoft ODBC(Open Database Connectivity)
 title: Microsoft ODBC (Open Database Connectivity) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,19 +11,19 @@ ms.topic: conceptual
 ms.assetid: 278cf36e-9817-4ee3-842e-dbd149f15273
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c51822e347c606d586238f84711797e63f6aa563
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2ccf7a5ceb15d61bc61bf3434a239c130bc5fcf0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307164"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494796"
 ---
 # <a name="microsoft-open-database-connectivity-odbc"></a>Microsoft ODBC(Open Database Connectivity)
 Microsoft ODBC (Open Database Connectivity) 인터페이스는 응용 프로그램에서 다양 한 Dbms (데이터베이스 관리 시스템)의 데이터에 액세스할 수 있도록 하는 C 프로그래밍 언어 인터페이스입니다. ODBC는 관계형 데이터 저장소를 위해 특별히 설계 된 낮은 수준의 고성능 인터페이스입니다.  
   
  ODBC 인터페이스는 최대 상호 운용성을 허용 합니다. 응용 프로그램은 단일 인터페이스를 통해 다양 한 Dbms의 데이터에 액세스할 수 있습니다. 또한 해당 응용 프로그램은 데이터에 액세스 하는 DBMS와는 독립적입니다. 응용 프로그램의 사용자는 드라이버 라는 소프트웨어 구성 요소를 추가할 수 있습니다 .이 구성 요소는 응용 프로그램과 특정 DBMS 간의 인터페이스입니다.  
   
-## <a name="documentation"></a>문서화  
+## <a name="documentation"></a>설명서  
  [ODBC 프로그래머 참조](../odbc/reference/odbc-programmer-s-reference.md)  
   
  ODBC 인터페이스 및 메서드에 대 한 설명서입니다.  
@@ -43,7 +44,7 @@ Microsoft ODBC (Open Database Connectivity) 인터페이스는 응용 프로그�
   
  ODBC와 관련 된 용어를 정의 합니다.  
   
- [ODBCCONF. CONVERT.EXE](../odbc/odbcconf-exe.md)  
+ [ODBCCONF.EXE](../odbc/odbcconf-exe.md)  
   
  드라이버 및 데이터 원본 이름을 구성 하는 명령줄 유틸리티에 대해 설명 합니다.  
   

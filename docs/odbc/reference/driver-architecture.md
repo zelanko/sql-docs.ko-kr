@@ -1,4 +1,5 @@
 ---
+description: 드라이버 아키텍처
 title: 드라이버 아키텍처 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c5003413-0cc1-4f41-b877-a64e2f5ab118
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ffe2023f028357468700b9bd995d22129ba06817
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 530940cef233b8a6b6a3f5c0575dd154998126cd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81294223"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494616"
 ---
 # <a name="driver-architecture"></a>드라이버 아키텍처
 드라이버 아키텍처는 SQL 문을 처리 하는 소프트웨어에 따라 다음과 같은 두 가지 범주로 나뉩니다.  

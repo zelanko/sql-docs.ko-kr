@@ -1,4 +1,5 @@
 ---
+description: Visual FoxPro 데이터 원본 추가
 title: Visual FoxPro 데이터 원본 추가 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1487e188-52c8-4f48-b4fe-25a650dd9e97
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1fd0c0f929ca00b7cf731dc92f07f69b6503f884
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 22ac95b51d543ca223148b169b53acb9c334d9f2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307144"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494806"
 ---
 # <a name="adding-a-visual-foxpro-data-source"></a>Visual FoxPro 데이터 원본 추가
 응용 프로그램에서 Visual FoxPro 데이터에 액세스 하려면 데이터 원본이 있어야 합니다. 다음과 같이 데이터 소스를 만들 수 있습니다.  

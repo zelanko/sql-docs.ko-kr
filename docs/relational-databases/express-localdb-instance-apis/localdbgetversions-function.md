@@ -1,4 +1,5 @@
 ---
+description: LocalDBGetVersions 함수
 title: LocalDBGetVersions 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ apitype: DLLExport
 ms.assetid: 033a9c6b-0d7f-4f8a-ab60-33cd6fee0d33
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1548b23aceb5eb4f622ada1289df88ff790c8645
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0ddc76949165266656558a7f99c959fc0942d005
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85640850"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494243"
 ---
 # <a name="localdbgetversions-function"></a>LocalDBGetVersions 함수
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

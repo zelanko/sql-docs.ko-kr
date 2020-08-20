@@ -1,4 +1,5 @@
 ---
+description: 위치 지정 업데이트(ODBC)
 title: 위치 지정 업데이트 (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -19,11 +20,12 @@ ms.assetid: ff404e02-630f-474d-b5d4-06442b756991
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: acb20b5d7677706554b901e4ab132782dcb71461
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 9989fae3cdb02994c1555a82050cf6fba0b2f49c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86006558"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494131"
 ---
 # <a name="positioned-updates-odbc"></a>위치 지정 업데이트(ODBC)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -81,6 +83,6 @@ ms.locfileid: "86006558"
  서버 커서를 사용 하는 경우 현재 위치 보다 **SQLSetPos** 를 사용 하는 것이 좋습니다. ODBC 커서 라이브러리에 업데이트 가능한 정적 커서를 사용하면 커서 라이브러리가 기본 테이블의 키 값을 통해 WHERE 절을 추가하는 방법으로 WHERE CURRENT OF 업데이트를 구현합니다. 이 경우 테이블의 키가 고유하지 않으면 불필요한 업데이트가 수행될 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [ODBC&#41;&#40;커서 사용](../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)  
+ [ODBC&#41;&#40;커서 사용 ](../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)  
   
   

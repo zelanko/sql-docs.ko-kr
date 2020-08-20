@@ -1,4 +1,5 @@
 ---
+description: catalog.update_logdb_info(SSISDB 데이터베이스)
 title: catalog.update_logdb_info(SSISDB 데이터베이스) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/18/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 author: haoqian
 ms.author: haoqian
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: d887660fae681eb7cdceeb674a6762a1060688be
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 78a720f0ac29337dd7752fc72fe93ea3a3f91018
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912769"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495378"
 ---
 # <a name="catalogupdate_logdb_info-ssisdb-database"></a>catalog.update_logdb_info(SSISDB 데이터베이스)
 

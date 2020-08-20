@@ -1,4 +1,5 @@
 ---
+description: 데이터베이스 메일로 테스트 이메일 보내기
 title: 데이터베이스 메일로 테스트 이메일 보내기 | Microsoft Docs
 ms.custom: ''
 ms.date: 04/22/2019
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - Database Mail [SQL Server], components
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a689daf33baece845ddf81c09b99fc61c96509a2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b715e65e4dfaa623f56b0caa2a78b03231819deb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726505"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494543"
 ---
 # <a name="send-a-test-email-with-database-mail"></a>데이터베이스 메일로 테스트 이메일 보내기  
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "85726505"
 
 테스트 이메일 보내기 대화 상자를 사용하려면 sysadmin 고정 서버 역할의 멤버여야 합니다. sysadmin 고정 서버 역할의 멤버가 아닌 사용자는 [sp_send_dbmail](../system-stored-procedures/sp-send-dbmail-transact-sql.md) 프로시저를 사용하여 데이터베이스 메일을 테스트할 수 있습니다.
 
-## <a name="procedure"></a>절차
+## <a name="procedure"></a>프로시저
 
 1. [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md)에서 개체 탐색기를 사용하여 데이터베이스 메일을 구성한 SQL Server Database Engine 인스턴스에 연결하고 관리를 확장한 다음, 데이터베이스 메일을 마우스 오른쪽 단추로 클릭하고 테스트 이메일 보내기를 클릭합니다. 데이터베이스 메일 프로필이 없으면 프로필을 만들지 묻는 메시지가 나타나고 데이터베이스 메일 구성 마법사가 열립니다.
 1. <instance name> 대화 상자의 **테스트 이메일 보내기**에 있는 데이터베이스 메일 프로필 상자에서 테스트할 프로필을 선택합니다.

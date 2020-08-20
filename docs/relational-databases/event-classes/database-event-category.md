@@ -1,4 +1,5 @@
 ---
+description: Database 이벤트 범주
 title: Database 이벤트 범주 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/01/2017
@@ -14,12 +15,12 @@ ms.assetid: b61af738-f144-4992-b0b2-d44cb7240991
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ab59cc2304ff35edf24fd86539ba2a145f5d9477
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9bf211c6028f24d84a6281d31c29df94b814239e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85767810"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494349"
 ---
 # <a name="database-event-category"></a>Database 이벤트 범주
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]

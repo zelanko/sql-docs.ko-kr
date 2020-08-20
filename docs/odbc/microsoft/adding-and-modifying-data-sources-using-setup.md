@@ -1,4 +1,5 @@
 ---
+description: 설정을 사용하여 데이터 원본 추가 및 수정
 title: 설치 프로그램을 사용 하 여 데이터 원본 추가 및 수정 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 54b2d61d-6ce5-45af-a776-e03180470ecf
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ae76abc902e4687e5d9891871d7d5d60598b3abc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8592c01897e691cdb6702c4efdfca6054655a793
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81281413"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494743"
 ---
 # <a name="adding-and-modifying-data-sources-using-setup"></a>설정을 사용하여 데이터 원본 추가 및 수정
 > [!IMPORTANT]  
@@ -57,7 +58,7 @@ ms.locfileid: "81281413"
   
 1.  Oracle 용 ODBC 드라이버 설치에 대 한 추가 사양 만들기 옵션을 클릭 합니다.  
   
-    -   **번역** -로드 된 데이터 변환기를 선택 하려면 선택을 클릭 합니다. 기본값은 변환기 \<> 없습니다.  
+    -   **번역** -로드 된 데이터 변환기를 선택 하려면 선택을 클릭 합니다. 기본값은 \<No Translator>입니다.  
   
     -   **성능** -카탈로그 함수에 설명 포함 확인란은 드라이버가 [sqlcolumns](../../odbc/microsoft/level-1-api-functions-odbc-driver-for-oracle.md) 결과 집합에 대 한 설명 열을 반환 하는지 여부를 지정 합니다. Oracle 용 ODBC 드라이버는이 값이 설정 되지 않은 경우 더 빠른 액세스를 제공 합니다.  
   

@@ -1,4 +1,5 @@
 ---
+description: MDX 데이터 정의 - CREATE GLOBAL CUBE
 title: CREATE GLOBAL CUBE 문 (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: d678622c67a83c279cce094b849829e668af30cb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1bc5a787f6bc1b214aa60ef54b5b8172f07c11a5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68892157"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494866"
 ---
 # <a name="mdx-data-definition---create-global-cube"></a>MDX 데이터 정의 - CREATE GLOBAL CUBE
 
@@ -104,13 +105,13 @@ FROM source_cube_name (<param list>)
  dimension_name  
  로컬 큐브에 있는 차원의 이름입니다.  
   
- FROM \<dim from 절>  
+ FROM \<dim from clause>  
  파생된 차원 정의에 대해서만 유효한 지정입니다.  
   
  NOT_RELATED_TO_FACTS  
  파생된 차원 정의에 대해서만 유효한 지정입니다.  
   
- \<수준 유형>  
+ \<level type>  
  파생된 차원 정의에 대해서만 유효한 지정입니다.  
   
 ## <a name="remarks"></a>설명  

@@ -1,4 +1,5 @@
 ---
+description: DAC로 데이터베이스 등록
 title: DAC로 데이터베이스 등록 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/01/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 08e52aa6-12f3-41dd-a793-14b99a083fd5
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 431745d461d6977cf873cbdb83eebe5929694043
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b328f2fc32cf784caef1192bc8143b3ed9d1ffbf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85781656"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494786"
 ---
 # <a name="register-a-database-as-a-dac"></a>DAC로 데이터베이스 등록
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

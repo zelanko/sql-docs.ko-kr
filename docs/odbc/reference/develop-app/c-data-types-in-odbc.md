@@ -1,4 +1,5 @@
 ---
+description: ODBC의 C 데이터 형식
 title: ODBC의 C 데이터 형식 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c91bef31-3794-4736-966a-d50997b2233c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 5e1efba2187e2c1f2d813d43640fc9259ad4f2b3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 395f60860dd3179326687a6c2fb10bbaf027ca3a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306298"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494763"
 ---
 # <a name="c-data-types-in-odbc"></a>ODBC의 C 데이터 형식
 ODBC는 응용 프로그램 변수 및 해당 형식 식별자에 사용 되는 C 데이터 형식을 정의 합니다. 이러한 매개 변수는 결과 집합 열 및 문 매개 변수에 바인딩된 버퍼에 사용 됩니다. 예를 들어 응용 프로그램이 결과 집합 열에서 문자 형식으로 데이터를 검색 하려고 한다고 가정 합니다. SQLCHAR * 데이터 형식을 사용 하 여 변수를 선언 하 고이 변수를 형식 식별자가 SQL_C_CHAR 인 결과 집합 열에 바인딩합니다. C 데이터 형식 및 형식 식별자의 전체 목록은 [부록 D: 데이터 형식](../../../odbc/reference/appendixes/appendix-d-data-types.md)을 참조 하세요.  

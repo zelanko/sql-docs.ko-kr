@@ -1,4 +1,5 @@
 ---
+description: 동적 SQL
 title: 동적 SQL | Microsoft Docs
 ms.custom: ''
 ms.date: 06/03/2020
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0bfb9ab7-9c15-4433-93bc-bad8b6c9d287
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fa4ac69602761f7c2a8d28e56db76bbfc39fc753
-ms.sourcegitcommit: dc6ea6665cd2fb58a940c722e86299396b329fec
+ms.openlocfilehash: de711543748a91015a9aa0d4cb8aadb011744306
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84423257"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494584"
 ---
 # <a name="dynamic-sql"></a>동적 SQL
 정적 SQL은 많은 상황에서 잘 작동 하지만 데이터 액세스를 미리 확인할 수 없는 응용 프로그램 클래스가 있습니다. 예를 들어 스프레드시트를 사용 하 여 스프레드시트에서 데이터를 검색 하기 위해 DBMS로 보내는 쿼리를 입력할 수 있습니다. 스프레드시트 프로그램을 작성할 때 프로그래머에 게이 쿼리의 내용을 명확히 알 수 없습니다.  

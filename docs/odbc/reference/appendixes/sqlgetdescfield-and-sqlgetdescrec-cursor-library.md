@@ -1,4 +1,5 @@
 ---
+description: SQLGetDescField 및 SQLGetDescRec(커서 라이브러리)
 title: SQLGetDescField 및 SQLGetDescRec (커서 라이브러리) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1a801f22-6fea-48aa-a723-3187a2ad852b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 49ceea6b6180e1b51f2f103f74412c3e2b4cbe02
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f13b3ff5ed7e54a127089b74b5a45081900edf55
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307834"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494753"
 ---
 # <a name="sqlgetdescfield-and-sqlgetdescrec-cursor-library"></a>SQLGetDescField 및 SQLGetDescRec(커서 라이브러리)
 > [!IMPORTANT]  

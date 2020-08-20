@@ -1,4 +1,5 @@
 ---
+description: 기본 드라이버 하위 키
 title: 기본 드라이버 하위 키 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9e58b24f-ebfc-4286-a272-0843b4d6f2d5
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: bb134d670964e352d94c13474d8a72fa4bd494ba
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d78cc54253d002c54510fdc47f46f10de9281b65
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301056"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494556"
 ---
 # <a name="default-driver-subkey"></a>기본 드라이버 하위 키
 기본 하위 키에는 기본 데이터 원본에서 사용 하는 드라이버를 설명 하는 단일 값이 포함 됩니다. 이 값의 형식은 다음 표에 나와 있습니다.  

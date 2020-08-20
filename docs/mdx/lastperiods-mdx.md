@@ -1,4 +1,5 @@
 ---
+description: LastPeriods(MDX)
 title: LastPeriods (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 6a9337e925da40f148bbe0d2c77fb1cf4f5f1a99
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 60e8adf1dba453fb536f95a4fa113e16f6950f62
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67905775"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494886"
 ---
 # <a name="lastperiods-mdx"></a>LastPeriods(MDX)
 
@@ -28,7 +29,7 @@ LastPeriods(Index [ ,Member_Expression ] )
 ```  
   
 ## <a name="arguments"></a>인수  
- *인덱스*  
+ *Index*  
  여러 기간을 지정하는 유효한 숫자 식입니다.  
   
  *Member_Expression*  
@@ -43,7 +44,7 @@ LastPeriods(Index [ ,Member_Expression ] )
   
  멤버가 지정 되지 않은 경우 **Lastperiods** 함수는 **Time. currentmember**를 사용 합니다. 차원이 시간 차원으로 표시되지 않은 경우 이 함수는 오류 없이 구문 분석되고 실행되지만 클라이언트 애플리케이션에서는 셀 오류가 발생합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 2002 회계 연도의 2분기, 3분기 및 4분기의 기본 측정값을 반환합니다.  
   
 ```  

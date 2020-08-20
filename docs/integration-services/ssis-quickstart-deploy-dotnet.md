@@ -1,4 +1,5 @@
 ---
+description: .NET 앱에 C# 코드가 있는 SSIS 프로젝트 배포
 title: .NET 코드를 사용하여 SSIS 프로젝트 배포(C#) | Microsoft Docs
 ms.date: 05/21/2018
 ms.topic: quickstart
@@ -8,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a4928f4394169987d4e3d06b6ddc9f4a4a33837c
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 70bca79279d8db0bad18e1ee7ce9e4648dfb3c36
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921954"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495482"
 ---
 # <a name="deploy-an-ssis-project-with-c-code-in-a-net-app"></a>.NET 앱에 C# 코드가 있는 SSIS 프로젝트 배포
 
@@ -30,7 +31,7 @@ C# 앱을 만들려면 Visual Studio, Visual Studio Code 또는 원하는 다른
 
 Azure SQL Database 서버는 포트 1433에서 수신 대기합니다. 회사 방화벽 내에서 Azure SQL Database 서버에 성공적으로 연결하려면 이 포트가 회사 방화벽에서 열려 있어야 합니다.
 
-## <a name="supported-platforms"></a>지원 플랫폼
+## <a name="supported-platforms"></a>지원되는 플랫폼
 
 이 빠른 시작의 정보를 사용하여 다음과 같은 플랫폼에 SSIS 프로젝트를 배포할 수 있습니다.
 
@@ -128,7 +129,7 @@ namespace deploy_ssis_project
 
 ## <a name="run-the-code"></a>코드 실행
 
-1. 애플리케이션을 실행하려면 **F5** 키를 누릅니다.
+1. 응용 프로그램을 실행하려면 **F5** 키를 누릅니다.
 2. SSMS에서 프로젝트가 배포되었는지 확인합니다.
 
 ## <a name="next-steps"></a>다음 단계

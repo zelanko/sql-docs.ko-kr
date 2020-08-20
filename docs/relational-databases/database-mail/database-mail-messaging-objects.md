@@ -1,4 +1,5 @@
 ---
+description: 데이터베이스 메일 메시징 개체
 title: 데이터베이스 메일 메시징 개체 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5aa2886e-1db1-4066-85df-57ccf4538c54
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 9df112777d7005479e515082859375d95d62839c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e627bd6505d43737061d8fab34cc819d52c22106
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726484"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494576"
 ---
 # <a name="database-mail-messaging-objects"></a>데이터베이스 메일 메시징 개체
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -33,7 +34,7 @@ ms.locfileid: "85726484"
   
  이러한 개체는 메일 호스트 데이터베이스 내에서 데이터베이스 메일에 대한 인터페이스입니다. 위에 나열된 개체에서 제공하는 기능을 구현하도록 다른 개체가 설치됩니다. 그러나 해당 개체는 내부 사용을 위해 예약됩니다.  
   
-|속성|Type|Description|  
+|Name|Type|Description|  
 |----------|----------|-----------------|  
 |[sysmail_allitems&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md)|**보기**|데이터베이스 메일에 제출된 모든 메시지를 나열합니다.|  
 |[sysmail_event_log&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-event-log-transact-sql.md)|**보기**|[Database Mail External Program](../../relational-databases/database-mail/database-mail-external-program.md)의 동작에 대한 메시지를 나열합니다.|  

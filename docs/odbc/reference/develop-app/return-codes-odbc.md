@@ -1,4 +1,5 @@
 ---
+description: 반환 코드 ODBC
 title: 반환 코드 ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e893b719-4392-476f-911a-5ed6da6f7e94
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 15e434025ed1201ca61371c2fb88e70143e131a5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 79a06ad170f747c3841c42eadef0288af6fef39a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304314"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494639"
 ---
 # <a name="return-codes-odbc"></a>반환 코드 ODBC
 ODBC의 각 함수는 *반환 코드* 라고 하는 코드를 반환 합니다 .이 코드는 함수의 전체 성공 또는 실패를 나타냅니다. 프로그램 논리는 일반적으로 반환 코드에 기반을 둡니다.  

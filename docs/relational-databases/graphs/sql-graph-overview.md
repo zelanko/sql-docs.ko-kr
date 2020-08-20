@@ -1,4 +1,5 @@
 ---
+description: SQL Server 및 Azure SQL Database를 사용한 Graph 처리
 title: 그래프 처리 중
 titleSuffix: SQL Server and Azure SQL Database
 ms.date: 06/26/2019
@@ -15,17 +16,17 @@ author: shkale-msft
 ms.author: shkale
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dbe223d890d443508cd32f6ab73c039848c4372a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 40acaf67fedc76495f52aced7b7d0f61b76cb530
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85776469"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494202"
 ---
 # <a name="graph-processing-with-sql-server-and-azure-sql-database"></a>SQL Server 및 Azure SQL Database를 사용한 Graph 처리
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]다대다 관계를 모델링 하는 그래프 데이터베이스 기능을 제공 합니다. 그래프 관계는에 통합 되며를 기본 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 관리 시스템으로 사용 하는 이점을 제공 합니다.
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 다대다 관계를 모델링 하는 그래프 데이터베이스 기능을 제공 합니다. 그래프 관계는에 통합 되며를 기본 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 관리 시스템으로 사용 하는 이점을 제공 합니다.
 
 
 ## <a name="what-is-a-graph-database"></a>그래프 데이터베이스란?  
@@ -42,12 +43,12 @@ ms.locfileid: "85776469"
 -    응용 프로그램에 복잡 한 다 대 다 관계가 있습니다. 응용 프로그램이 진화 함에 따라 새 관계가 추가 됩니다.
 -    상호 연결된 데이터 및 관계를 분석해야 합니다.
 
-## <a name="graph-features-introduced-in-sssqlv14"></a>에서 도입 된 그래프 기능[!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] 
+## <a name="graph-features-introduced-in-sssqlv14"></a>에서 도입 된 그래프 기능 [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] 
 그래프 데이터를 보다 쉽게 저장 하 고 쿼리할 수 있도록 SQL Server에 그래프 확장을 추가 하기 시작 합니다. 첫 번째 릴리스에서는 다음과 같은 기능이 도입 되었습니다. 
 
 
 ### <a name="create-graph-objects"></a>그래프 개체 만들기
-[!INCLUDE[tsql-md](../../includes/tsql-md.md)]확장을 통해 사용자는 노드 또는에 지 테이블을 만들 수 있습니다. 노드와 가장자리 모두에 연결 된 속성을 가질 수 있습니다. 에서는 노드와 가장자리가 테이블로 저장 되므로 관계형 테이블에서 지원 되는 모든 작업은 노드 또는에 지 테이블에서 지원 됩니다. 다음은 예제입니다.  
+[!INCLUDE[tsql-md](../../includes/tsql-md.md)] 확장을 통해 사용자는 노드 또는에 지 테이블을 만들 수 있습니다. 노드와 가장자리 모두에 연결 된 속성을 가질 수 있습니다. 에서는 노드와 가장자리가 테이블로 저장 되므로 관계형 테이블에서 지원 되는 모든 작업은 노드 또는에 지 테이블에서 지원 됩니다. 예를 들면 다음과 같습니다.  
 
 ```   
 CREATE TABLE Person (ID INTEGER PRIMARY KEY, Name VARCHAR(100), Age INT) AS NODE;
@@ -58,7 +59,7 @@ CREATE TABLE friends (StartDate date) AS EDGE;
 노드 및 가장자리가 테이블로 저장 됩니다.  
 
 ### <a name="query-language-extensions"></a>쿼리 언어 확장  
-New `MATCH` 절은 그래프를 통해 패턴 일치 및 다중 홉 탐색을 지원 하기 위해 도입 되었습니다. `MATCH`함수는 패턴 일치에 ASCII 아트 스타일 구문을 사용 합니다. 예를 들면 다음과 같습니다.  
+New `MATCH` 절은 그래프를 통해 패턴 일치 및 다중 홉 탐색을 지원 하기 위해 도입 되었습니다. `MATCH`함수는 패턴 일치에 ASCII 아트 스타일 구문을 사용 합니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.  
 
 ```   
 -- Find friends of John
