@@ -1,4 +1,5 @@
 ---
+description: SPACE(Transact-SQL)
 title: SPACE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -20,12 +21,12 @@ ms.assetid: b4fac3b8-2d47-4c11-a6a6-009e5a538f40
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d049dc8aaadc2abb952fcbe864b2a6f35bdd33fd
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 8f2d02a2ff302b88c8af676200997978e750cf49
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112816"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467852"
 ---
 # <a name="space-transact-sql"></a>SPACE(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -54,7 +55,7 @@ SPACE ( integer_expression )
 ## <a name="remarks"></a>설명  
  유니코드 데이터에 공백을 포함하거나 8000개가 넘는 공백을 반환하려면 SPACE 대신 REPLICATE를 사용합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 성을 없애고 쉼표 하나, 공백 두 개 및 `Person`의 `AdventureWorks2012` 테이블에 나열된 사람의 이름을 연결합니다.  
   
 ```  

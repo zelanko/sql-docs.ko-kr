@@ -1,4 +1,5 @@
 ---
+description: sp_getbindtoken(Transact-SQL)
 title: sp_getbindtoken (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5db87d77-85fa-45a3-a23a-3ea500f9a5ac
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 31e95bf970f4050315ed1b74b7bb87d3ed3788fd
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 74e2e9f849e725702e6e721ad6e2a4653e84f528
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881644"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469435"
 ---
 # <a name="sp_getbindtoken-transact-sql"></a>sp_getbindtoken(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,13 +47,13 @@ sp_getbindtoken [@out_token =] 'return_value' OUTPUT
  세션을 바인딩하는 데 사용되는 토큰입니다. *return_value* 는 **varchar (255)** 이며 기본값은 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
- 없음  
+ None  
   
 ## <a name="result-sets"></a>결과 집합  
  None  
   
 ## <a name="remarks"></a>설명  
- sp_getbindtoken은 활성 트랜잭션 내에서 저장 프로시저를 실행 하는 경우에만 유효한 토큰을 반환 합니다. 그렇지 않으면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]이 오류 메시지를 반환합니다. 예를 들어:  
+ sp_getbindtoken은 활성 트랜잭션 내에서 저장 프로시저를 실행 하는 경우에만 유효한 토큰을 반환 합니다. 그렇지 않으면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]이 오류 메시지를 반환합니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.  
   
 ```  
 -- Declare a variable to hold the bind token.  
@@ -65,7 +66,7 @@ Cannot get a transaction token if there is no transaction active.
 Reissue the statement after a transaction has been started.  
 ```  
   
- Sp_getbindtoken를 사용 하 여 열린 트랜잭션 내부에 분산 트랜잭션 연결을 등록 하면는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 동일한 토큰을 반환 합니다. 예를 들어:  
+ Sp_getbindtoken를 사용 하 여 열린 트랜잭션 내부에 분산 트랜잭션 연결을 등록 하면는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 동일한 토큰을 반환 합니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.  
   
 ```  
 USE AdventureWorks2012;  
@@ -107,7 +108,7 @@ PKb'gN5<9aGEedk_16>8U=5---/5G=--
 ## <a name="permissions"></a>사용 권한  
  public 역할의 멤버 자격이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 바인드 토큰을 가져오고 이름을 표시하는 방법을 보여 줍니다.  
   
 ```  
@@ -127,7 +128,7 @@ SELECT @bind_token AS Token;
   
 ## <a name="see-also"></a>참고 항목  
  [sp_bindsession&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-bindsession-transact-sql.md)   
- [Transact-sql&#41;&#40;시스템 저장 프로시저](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;시스템 저장 프로시저 ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [srv_getbindtoken &#40;확장 저장 프로시저 API&#41;](../../relational-databases/extended-stored-procedures-reference/srv-getbindtoken-extended-stored-procedure-api.md)  
   
   

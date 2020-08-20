@@ -1,4 +1,5 @@
 ---
+description: sp_fulltext_pendingchanges(Transact-SQL)
 title: sp_fulltext_pendingchanges (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -18,12 +19,12 @@ ms.assetid: fee042fe-4781-4a33-a01b-d98fb5629f1b
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a86792b69e9bdd00c41c9ed5582046aee634d533
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5d91423e81a8597fcf7cccb30a11d47482ea9964
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772187"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469460"
 ---
 # <a name="sp_fulltext_pendingchanges-transact-sql"></a>sp_fulltext_pendingchanges(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -65,7 +66,7 @@ sp_fulltext_pendingchanges table_id
  특정 테이블에 대해 보류 중인 변경 내용이 얼마나 되는지 확인하려면 OBJECTPROPERTYEX 함수의 **TableFullTextPendingChanges** 속성을 사용하십시오.  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;전체 텍스트 검색 및 의미 체계 검색 저장 프로시저](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;전체 텍스트 검색 및 의미 체계 검색 저장 프로시저 ](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)   
  [OBJECTPROPERTYEX&#40;Transact-SQL&#41;](../../t-sql/functions/objectpropertyex-transact-sql.md)  
   
   

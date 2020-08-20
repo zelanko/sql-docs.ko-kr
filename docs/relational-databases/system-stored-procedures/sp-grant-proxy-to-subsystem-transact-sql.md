@@ -1,4 +1,5 @@
 ---
+description: sp_grant_proxy_to_subsystem(Transact-SQL)
 title: sp_grant_proxy_to_subsystem (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 866aaa27-a1e0-453a-9b1b-af39431ad9c2
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 2d772c66af8dfbab805124e4a07d26243865330a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 964bab1ac95d80d05f16fa8b538f1ecd5f15352c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891851"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469403"
 ---
 # <a name="sp_grant_proxy_to_subsystem-transact-sql"></a>sp_grant_proxy_to_subsystem(Transact-SQL)
 
@@ -41,11 +42,11 @@ sp_grant_proxy_to_subsystem
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @proxy_id = ] id`액세스 권한을 부여할 프록시의 프록시 id입니다. *Proxy_id* 은 **int**이며 기본값은 NULL입니다. *Proxy_id* 또는 *proxy_name* 를 지정 해야 하지만 둘 다 지정할 수는 없습니다.  
+`[ @proxy_id = ] id` 액세스 권한을 부여할 프록시의 프록시 id입니다. *Proxy_id* 은 **int**이며 기본값은 NULL입니다. *Proxy_id* 또는 *proxy_name* 를 지정 해야 하지만 둘 다 지정할 수는 없습니다.  
   
-`[ @proxy_name = ] 'proxy_name'`액세스 권한을 부여할 프록시의 이름입니다. *Proxy_name* 는 **sysname**이며 기본값은 NULL입니다. *Proxy_id* 또는 *proxy_name* 를 지정 해야 하지만 둘 다 지정할 수는 없습니다.  
+`[ @proxy_name = ] 'proxy_name'` 액세스 권한을 부여할 프록시의 이름입니다. *Proxy_name* 는 **sysname**이며 기본값은 NULL입니다. *Proxy_id* 또는 *proxy_name* 를 지정 해야 하지만 둘 다 지정할 수는 없습니다.  
   
-`[ @subsystem_id = ] id`액세스 권한을 부여할 하위 시스템의 id 번호입니다. *Subsystem_id* 은 **int**이며 기본값은 NULL입니다. *Subsystem_id* 또는 *subsystem_name* 를 지정 해야 하지만 둘 다 지정할 수는 없습니다. 다음 표에서는 각 하위 시스템에 대한 값을 나열합니다.  
+`[ @subsystem_id = ] id` 액세스 권한을 부여할 하위 시스템의 id 번호입니다. *Subsystem_id* 은 **int**이며 기본값은 NULL입니다. *Subsystem_id* 또는 *subsystem_name* 를 지정 해야 하지만 둘 다 지정할 수는 없습니다. 다음 표에서는 각 하위 시스템에 대한 값을 나열합니다.  
   
 |값|설명|  
 |-----------|-----------------|  
@@ -62,7 +63,7 @@ sp_grant_proxy_to_subsystem
 |**12**|PowerShell 스크립트|  
 | &nbsp; | &nbsp; |
   
-`[ @subsystem_name = ] 'subsystem_name'`액세스 권한을 부여할 하위 시스템의 이름입니다. **Subsystem_name** 는 **sysname**이며 기본값은 NULL입니다. *Subsystem_id* 또는 *subsystem_name* 를 지정 해야 하지만 둘 다 지정할 수는 없습니다. 다음 표에서는 각 하위 시스템에 대한 값을 나열합니다.  
+`[ @subsystem_name = ] 'subsystem_name'` 액세스 권한을 부여할 하위 시스템의 이름입니다. **Subsystem_name** 는 **sysname**이며 기본값은 NULL입니다. *Subsystem_id* 또는 *subsystem_name* 를 지정 해야 하지만 둘 다 지정할 수는 없습니다. 다음 표에서는 각 하위 시스템에 대한 값을 나열합니다.  
   
 |값|설명|  
 |-----------|-----------------|  
@@ -70,7 +71,7 @@ sp_grant_proxy_to_subsystem
 |**CmdExec**|운영 체제(**CmdExec**)|  
 |**스냅샷**|Replication Snapshot Agent|  
 |**LogReader**|복제 로그 판독기 에이전트|  
-|**분포**|복제 배포 에이전트|  
+|**배포**|복제 배포 에이전트|  
 |**병합**|Replication Merge Agent|  
 |**QueueReader**|복제 큐 판독기 에이전트|  
 |**ANALYSISQUERY**|Analysis Services 쿼리|  
@@ -85,7 +86,7 @@ sp_grant_proxy_to_subsystem
 ## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할의 멤버만 **sp_grant_proxy_to_subsystem**를 실행할 수 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-granting-access-to-a-subsystem-by-id"></a>A. 하위 시스템에 ID별로 액세스 권한 부여  
  다음 예에서는 ActiveX 스크립팅 하위 시스템에 프록시 `Catalog application proxy` 액세스 권한을 부여합니다.  

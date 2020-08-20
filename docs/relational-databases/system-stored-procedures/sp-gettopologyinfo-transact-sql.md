@@ -1,4 +1,5 @@
 ---
+description: sp_gettopologyinfo(Transact-SQL)
 title: sp_gettopologyinfo (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8bbe8a06-a4aa-4219-8402-12db6a4682c6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: db6c762b104edbb297f92c703a7e28dbf6f1c141
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 423739aa8ae2407b2b536fa9e2313c9073e0b6c6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891865"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469417"
 ---
 # <a name="sp_gettopologyinfo-transact-sql"></a>sp_gettopologyinfo(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -53,7 +54,7 @@ sp_gettopologyinfo [ @request_id = ] request_id
  sysadmin 고정 서버 역할 또는 db_owner 고정 데이터베이스 역할의 멤버여야 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [피어 투 피어 트랜잭션 복제](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)   
+ [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)   
  [복제 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

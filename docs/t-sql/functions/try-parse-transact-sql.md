@@ -1,4 +1,5 @@
 ---
+description: TRY_PARSE(Transact-SQL)
 title: TRY_PARSE(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ ms.assetid: 292bac1d-edd8-468c-8ff1-8c7de625bc55
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 184cebde63a58c399f5719c3d07c0846a3163f9a
-ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
+ms.openlocfilehash: f8df055fa3d40a8d31d25ad9917d86a86363335c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87523135"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467745"
 ---
 # <a name="try_parse-transact-sql"></a>TRY_PARSE(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -50,7 +51,7 @@ TRY_PARSE ( string_value AS data_type [ USING culture ] )
  *data_type*  
  결과에 대해 요청된 데이터 형식을 나타내는 리터럴입니다.  
   
- *문화권*  
+ *culture*  
  *string_value*의 형식을 지정하는 데 사용되는 culture를 식별하는 선택적 문자열입니다.  
   
  *culture* 인수를 지정하지 않으면 현재 세션의 언어가 사용됩니다. 이 언어는 SET LANGUAGE 문을 사용하여 명시적으로 또는 암시적으로 설정됩니다. *culture*는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 명시적으로 지원하는 언어로만 국한되지 않으며 .NET Framework에서 지원하는 모든 culture를 수용합니다. *culture* 인수가 유효하지 않을 경우 PARSE는 오류를 발생시킵니다.  
@@ -128,7 +129,7 @@ TRY_PARSE ( string_value AS data_type [ USING culture ] )
 |아랍어|아랍어|1025|ar-SA|  
 |ไทย|태국어|1054|Th-TH|  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-simple-example-of-try_parse"></a>A. TRY_PARSE의 간단한 예  
   

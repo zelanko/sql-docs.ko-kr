@@ -1,4 +1,5 @@
 ---
+description: sp_helpdistributor(Transact-SQL)
 title: sp_helpdistributor (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 37b0983e-3b69-4f0f-977e-20efce0a0b97
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cb2b1fb97504b50f2c26ddbfe26f67888f507328
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: eac0d50069eb6148efedecaa8f2359f4a56eed2b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733228"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469305"
 ---
 # <a name="sp_helpdistributor-transact-sql"></a>sp_helpdistributor(Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -49,31 +50,31 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @distributor = ] 'distributor' OUTPUT`배포자의 이름입니다. 배포자는 **sysname**이며 기본값은 **%** 결과 집합을 반환 하는 유일한 값인입니다.  
+`[ @distributor = ] 'distributor' OUTPUT` 배포자의 이름입니다. 배포자는 **sysname**이며 기본값은 **%** 결과 집합을 반환 하는 유일한 값인입니다.  
   
-`[ @distribdb = ] 'distribdb' OUTPUT`배포 데이터베이스의 이름입니다. *distribdb* 는 **sysname**이며 기본값은 **%** 결과 집합을 반환 하는 유일한 값인입니다.  
+`[ @distribdb = ] 'distribdb' OUTPUT` 배포 데이터베이스의 이름입니다. *distribdb* 는 **sysname**이며 기본값은 **%** 결과 집합을 반환 하는 유일한 값인입니다.  
   
-`[ @directory = ] 'directory' OUTPUT`작업 디렉터리입니다. *디렉터리* 는 **nvarchar (255)** 이며 기본값은 **%** 결과 집합을 반환 하는 유일한 값인입니다.  
+`[ @directory = ] 'directory' OUTPUT` 작업 디렉터리입니다. *디렉터리* 는 **nvarchar (255)** 이며 기본값은 **%** 결과 집합을 반환 하는 유일한 값인입니다.  
   
 `[ @account = ] 'account' OUTPUT`[!INCLUDE[msCoName](../../includes/msconame-md.md)]Windows 사용자 계정입니다. *account*는 **nvarchar (255)** 이며 기본값은 **%** 결과 집합을 반환 하는 유일한 값인입니다.  
   
-`[ @min_distretention = ] _min_distretentionOUTPUT`최소 배포 보존 기간 (시간)입니다. *min_distretention* 은 **int**이며 기본값은 **-1**입니다.  
+`[ @min_distretention = ] _min_distretentionOUTPUT` 최소 배포 보존 기간 (시간)입니다. *min_distretention* 은 **int**이며 기본값은 **-1**입니다.  
   
-`[ @max_distretention = ] _max_distretentionOUTPUT`최대 배포 보존 기간 (시간)입니다. *max_distretention* 은 **int**이며 기본값은 **-1**입니다.  
+`[ @max_distretention = ] _max_distretentionOUTPUT` 최대 배포 보존 기간 (시간)입니다. *max_distretention* 은 **int**이며 기본값은 **-1**입니다.  
   
-`[ @history_retention = ] _history_retentionOUTPUT`기록 보존 기간 (시간)입니다. *history_retention* 은 **int**이며 기본값은 **-1**입니다.  
+`[ @history_retention = ] _history_retentionOUTPUT` 기록 보존 기간 (시간)입니다. *history_retention* 은 **int**이며 기본값은 **-1**입니다.  
   
-`[ @history_cleanupagent = ] 'history_cleanupagent' OUTPUT`기록 정리 에이전트의 이름입니다. *history_cleanupagent* 은 **nvarchar (100)** 이며 기본값은 **%** 결과 집합을 반환 하는 유일한 값인입니다.  
+`[ @history_cleanupagent = ] 'history_cleanupagent' OUTPUT` 기록 정리 에이전트의 이름입니다. *history_cleanupagent* 은 **nvarchar (100)** 이며 기본값은 **%** 결과 집합을 반환 하는 유일한 값인입니다.  
   
-`[ @distrib_cleanupagent = ] 'distrib_cleanupagent' OUTPUT`배포 정리 에이전트의 이름입니다. *distrib_cleanupagent* 은 **nvarchar (100)** 이며 기본값은 **%** 결과 집합을 반환 하는 유일한 값인입니다.  
+`[ @distrib_cleanupagent = ] 'distrib_cleanupagent' OUTPUT` 배포 정리 에이전트의 이름입니다. *distrib_cleanupagent* 은 **nvarchar (100)** 이며 기본값은 **%** 결과 집합을 반환 하는 유일한 값인입니다.  
   
-`[ @publisher = ] 'publisher'`게시자의 이름입니다. *publisher* 는 **sysname**이며 기본값은 NULL입니다.  
+`[ @publisher = ] 'publisher'` 게시자의 이름입니다. *publisher* 는 **sysname**이며 기본값은 NULL입니다.  
   
-`[ @local = ] 'local'`가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로컬 서버 값을 가져와야 하는지 여부입니다. *local* 은 **nvarchar (5)** 이며 기본값은 NULL입니다.  
+`[ @local = ] 'local'` 가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로컬 서버 값을 가져와야 하는지 여부입니다. *local* 은 **nvarchar (5)** 이며 기본값은 NULL입니다.  
   
-`[ @rpcsrvname = ] 'rpcsrvname' OUTPUT`원격 프로시저 호출을 발급 하는 서버의 이름입니다. *rpcsrvname* 는 **sysname**이며 기본값은 **%** 결과 집합을 반환 하는 유일한 값인입니다.  
+`[ @rpcsrvname = ] 'rpcsrvname' OUTPUT` 원격 프로시저 호출을 발급 하는 서버의 이름입니다. *rpcsrvname* 는 **sysname**이며 기본값은 **%** 결과 집합을 반환 하는 유일한 값인입니다.  
   
-`[ @publisher_type = ] 'publisher_type' OUTPUT`게시자의 게시자 유형입니다. *publisher_type* 는 **sysname**이며 기본값은 **%** 결과 집합을 반환 하는 유일한 값인입니다.  
+`[ @publisher_type = ] 'publisher_type' OUTPUT` 게시자의 게시자 유형입니다. *publisher_type* 는 **sysname**이며 기본값은 **%** 결과 집합을 반환 하는 유일한 값인입니다.  
   
 ## <a name="result-sets"></a>결과 집합  
   

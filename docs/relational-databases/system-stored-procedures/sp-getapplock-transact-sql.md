@@ -1,4 +1,5 @@
 ---
+description: sp_getapplock(Transact-SQL)
 title: sp_getapplock (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ ms.assetid: e1e85908-9f31-47cf-8af6-88c77e6f24c9
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7f1072cf996bf32c9511586c24cd6eb8dbb920f6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 03531efe84a3443089922d5f7cfd5b2bc43e5241
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85752809"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469463"
 ---
 # <a name="sp_getapplock-transact-sql"></a>sp_getapplock(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -111,7 +112,7 @@ GO
   
  애플리케이션을 잠그는 교착 상태가 발생해도 애플리케이션 잠금을 요청한 트랜잭션이 롤백되지 않습니다. 반환 값의 결과로 필요할 수 있는 롤백은 모두 직접 수행해야 합니다. 따라서 특정 값(예: -3)을 반환하는 경우 ROLLBACK TRANSACTION 또는 대체 동작을 시작하도록 코드에 오류 확인 작업을 포함시키는 것이 좋습니다.  
   
- 다음은 예제입니다.  
+ 예를 들면 다음과 같습니다.  
   
 ```  
 USE AdventureWorks2012;  

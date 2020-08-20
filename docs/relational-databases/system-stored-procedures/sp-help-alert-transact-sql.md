@@ -1,4 +1,5 @@
 ---
+description: sp_help_alert(Transact-SQL)
 title: sp_help_alert (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 850cef4e-6348-4439-8e79-fd1bca712091
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cca6c1730343a038b24e17d6aaa0156cb99c13b1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ce66505585fa7e7ed49919c5cb54b94ffd205500
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901535"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469343"
 ---
 # <a name="sp_help_alert-transact-sql"></a>sp_help_alert(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,15 +44,15 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @alert_name = ] 'alert_name'`경고 이름입니다. *alert_name* 은 **nvarchar (128)** 입니다. *Alert_name* 지정 하지 않으면 모든 경고에 대 한 정보가 반환 됩니다.  
+`[ @alert_name = ] 'alert_name'` 경고 이름입니다. *alert_name* 은 **nvarchar (128)** 입니다. *Alert_name* 지정 하지 않으면 모든 경고에 대 한 정보가 반환 됩니다.  
   
-`[ @order_by = ] 'order_by'`결과를 생성 하는 데 사용할 정렬 순서입니다. *order_by*는 **sysname**이며 기본값은 N '*이름*'입니다.  
+`[ @order_by = ] 'order_by'` 결과를 생성 하는 데 사용할 정렬 순서입니다. *order_by*는 **sysname**이며 기본값은 N '*이름*'입니다.  
   
-`[ @alert_id = ] alert_id`보고할 정보에 대 한 경고의 id입니다. *alert_id*은 **int**이며 기본값은 NULL입니다.  
+`[ @alert_id = ] alert_id` 보고할 정보에 대 한 경고의 id입니다. *alert_id*은 **int**이며 기본값은 NULL입니다.  
   
-`[ @category_name = ] 'category'`경고의 범주입니다. *category* 는 **sysname**이며 기본값은 NULL입니다.  
+`[ @category_name = ] 'category'` 경고의 범주입니다. *category* 는 **sysname**이며 기본값은 NULL입니다.  
   
-`[ @legacy_format = ] legacy_format`레거시 결과 집합을 생성할지 여부입니다. *legacy_format* 은 **bit**이며 기본값은 **0**입니다. *Legacy_format* **1**인 경우 **sp_help_alert** **sp_help_alert** 에서 반환 된 결과 집합을 Microsoft SQL Server 2000에 반환 합니다.  
+`[ @legacy_format = ] legacy_format` 레거시 결과 집합을 생성할지 여부입니다. *legacy_format* 은 **bit**이며 기본값은 **0**입니다. *Legacy_format* **1**인 경우 **sp_help_alert** **sp_help_alert** 에서 반환 된 결과 집합을 Microsoft SQL Server 2000에 반환 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -120,7 +121,7 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 |**has_notification**|**int**|이 경고를 한 명 이상의 운영자에게 알려 주는 경우에는 0이 아닌 값을 사용합니다. 값은 다음 중 하나 이상이 될 수 있습니다(OR 연산으로 조인).<br /><br /> **1**= 전자 메일 알림 포함<br /><br /> **2**= 호출기 알림<br /><br /> **4**= **net send** 알림을 가집니다.|  
 |**flags**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)].|  
 |**performance_condition**|**nvarchar(512)**|**Type** 이 **2**인 경우이 열은 성능 조건의 정의를 표시 합니다. **Type** 이 **3**인 경우이 열은 WMI 이벤트에 대 한 쿼리를 표시 합니다. 그렇지 않은 경우 이 열은 NULL입니다.|  
-|**category_name**|**sysname**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]7.0에 대해 항상 '**[범주화**되지 않음] '이 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
+|**category_name**|**sysname**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] 7.0에 대해 항상 '**[범주화**되지 않음] '이 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |**type**|**int**|경고의 유형은 다음과 같습니다.<br /><br /> **1**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이벤트 경고<br /><br /> **2**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 성능 경고<br /><br /> **3** = WMI 이벤트 경고|  
   
 ## <a name="remarks"></a>설명  
@@ -131,7 +132,7 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
   
  **SQLAgentOperatorRole**에 대 한 자세한 내용은 [고정 데이터베이스 역할 SQL Server 에이전트](../../ssms/agent/sql-server-agent-fixed-database-roles.md)을 참조 하세요.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `Demo: Sev. 25 Errors` 경고에 대한 정보를 보고합니다.  
   
 ```  
@@ -143,7 +144,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;sp_add_alert &#40;](../../relational-databases/system-stored-procedures/sp-add-alert-transact-sql.md)   
+ [sp_add_alert&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-alert-transact-sql.md)   
  [Transact-sql&#41;sp_update_alert &#40;](../../relational-databases/system-stored-procedures/sp-update-alert-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

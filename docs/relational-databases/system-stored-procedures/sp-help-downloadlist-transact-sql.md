@@ -1,4 +1,5 @@
 ---
+description: sp_help_downloadlist(Transact-SQL)
 title: sp_help_downloadlist (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 745b265b-86e8-4399-b928-c6969ca1a2c8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: bc658776dddbf79362e3ab4c90ba052abb193e63
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: fb53702ec86f30c81802b95b77c61b71037b402e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901506"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469400"
 ---
 # <a name="sp_help_downloadlist-transact-sql"></a>sp_help_downloadlist(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,14 +47,14 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @job_id = ] job_id`정보를 반환할 작업 id입니다. *job_id* 은 **uniqueidentifier**이며 기본값은 NULL입니다.  
+`[ @job_id = ] job_id` 정보를 반환할 작업 id입니다. *job_id* 은 **uniqueidentifier**이며 기본값은 NULL입니다.  
   
-`[ @job_name = ] 'job_name'`작업의 이름입니다. *job_name* 는 **sysname**이며 기본값은 NULL입니다.  
+`[ @job_name = ] 'job_name'` 작업의 이름입니다. *job_name* 는 **sysname**이며 기본값은 NULL입니다.  
   
 > [!NOTE]  
 >  *Job_id* 또는 *job_name* 를 지정 해야 하지만 둘 다 지정할 수는 없습니다.  
   
-`[ @operation = ] 'operation'`지정 된 작업에 대 한 유효한 작업입니다. *연산은* **varchar (64)** 이며 기본값은 NULL이 고 다음 값 중 하나일 수 있습니다.  
+`[ @operation = ] 'operation'` 지정 된 작업에 대 한 유효한 작업입니다. *연산은* **varchar (64)** 이며 기본값은 NULL이 고 다음 값 중 하나일 수 있습니다.  
   
 |값|설명|  
 |-----------|-----------------|  
@@ -67,17 +68,17 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**SYNC-TIME**|대상 서버로 하여금 시스템 시계와 다중 서버 도메인을 동기화하도록 하는 서버 작업입니다. 이 작업은 비용이 많이 필요하므로 자주 실행하지 않고 제한적으로 실행합니다.|  
 |**UPDATE**|작업 단계 나 일정이 아닌 작업에 대 한 **sysjobs** 정보만 업데이트 하는 작업 작업입니다. 는 **sp_update_job**에 의해 자동으로 호출 됩니다.|  
   
-`[ @object_type = ] 'object_type'`지정 된 작업에 대 한 개체의 유형입니다. *object_type* 는 **varchar (64)** 이며 기본값은 NULL입니다. *object_type* 은 작업 또는 서버 중 하나일 수 있습니다. 유효한 *object_type*값에 대 한 자세한 내용은 [sp_add_category &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)를 참조 하세요.  
+`[ @object_type = ] 'object_type'` 지정 된 작업에 대 한 개체의 유형입니다. *object_type* 는 **varchar (64)** 이며 기본값은 NULL입니다. *object_type* 은 작업 또는 서버 중 하나일 수 있습니다. 유효한 *object_type*값에 대 한 자세한 내용은 [sp_add_category &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)를 참조 하세요.  
   
-`[ @object_name = ] 'object_name'`개체의 이름입니다. *object_name* 는 **sysname**이며 기본값은 NULL입니다. *OBJECT_TYPE* 작업 인 경우 *object_name*은 작업 이름입니다. 서버 *object_type*인 경우 *object_name*서버 이름입니다.  
+`[ @object_name = ] 'object_name'` 개체의 이름입니다. *object_name* 는 **sysname**이며 기본값은 NULL입니다. *OBJECT_TYPE* 작업 인 경우 *object_name*은 작업 이름입니다. 서버 *object_type*인 경우 *object_name*서버 이름입니다.  
   
-`[ @target_server = ] 'target_server'`대상 서버의 이름입니다. *target_server* 은 **nvarchar (128)** 이며 기본값은 NULL입니다.  
+`[ @target_server = ] 'target_server'` 대상 서버의 이름입니다. *target_server* 은 **nvarchar (128)** 이며 기본값은 NULL입니다.  
   
-`[ @has_error = ] has_error`작업이 오류를 승인 해야 하는지 여부입니다. *has_error* 은 **tinyint**이며 기본값은 오류를 인정 하지 않아야 함을 나타내는 NULL입니다. **1** 은 모든 오류를 승인 해야 함을 나타냅니다.  
+`[ @has_error = ] has_error` 작업이 오류를 승인 해야 하는지 여부입니다. *has_error* 은 **tinyint**이며 기본값은 오류를 인정 하지 않아야 함을 나타내는 NULL입니다. **1** 은 모든 오류를 승인 해야 함을 나타냅니다.  
   
-`[ @status = ] status`작업의 상태입니다. *status* 는 **tinyint**이며 기본값은 NULL입니다.  
+`[ @status = ] status` 작업의 상태입니다. *status* 는 **tinyint**이며 기본값은 NULL입니다.  
   
-`[ @date_posted = ] date_posted`지정 된 날짜 및 시간 이후의 모든 항목을 결과 집합에 포함 해야 하는 날짜와 시간입니다. *date_posted* 은 **datetime**이며 기본값은 NULL입니다.  
+`[ @date_posted = ] date_posted` 지정 된 날짜 및 시간 이후의 모든 항목을 결과 집합에 포함 해야 하는 날짜와 시간입니다. *date_posted* 은 **datetime**이며 기본값은 NULL입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -100,7 +101,7 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ## <a name="permissions"></a>사용 권한  
  이 프로시저를 실행할 수 있는 권한은 기본적으로 **sysadmin** 고정 서버 역할의 멤버로 사용 됩니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `sysdownloadlist` 작업에 대한 행을 `NightlyBackups`에 나열합니다.  
   
 ```  

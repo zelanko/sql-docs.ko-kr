@@ -1,4 +1,5 @@
 ---
+description: sp_getdefaultdatatypemapping(Transact-SQL)
 title: sp_getdefaultdatatypemapping (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b8401de1-f135-41d0-ba79-ce8fe1f48c00
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4c48f5dcb292f3d7ee6612a62a9e5edee8a6061a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 6bbd01e86f8b5cfbc24a04dee1482ddb4652354f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881623"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469425"
 ---
 # <a name="sp_getdefaultdatatypemapping-transact-sql"></a>sp_getdefaultdatatypemapping(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,7 +52,7 @@ sp_getdefaultdatatypemapping [ @source_dbms = ] 'source_dbms'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @source_dbms = ] 'source_dbms'`데이터 형식이 매핑되는 DBMS의 이름입니다. *source_dbms* 는 **sysname**이며 다음 값 중 하나일 수 있습니다.  
+`[ @source_dbms = ] 'source_dbms'` 데이터 형식이 매핑되는 DBMS의 이름입니다. *source_dbms* 는 **sysname**이며 다음 값 중 하나일 수 있습니다.  
   
 |값|설명|  
 |-----------|-----------------|  
@@ -60,19 +61,19 @@ sp_getdefaultdatatypemapping [ @source_dbms = ] 'source_dbms'
   
  이 매개 변수를 지정해야 합니다.  
   
-`[ @source_version = ] 'source_version'`원본 DBMS의 버전 번호입니다. *source_version* 는 **varchar (10)** 이며 기본값은 NULL입니다.  
+`[ @source_version = ] 'source_version'` 원본 DBMS의 버전 번호입니다. *source_version* 는 **varchar (10)** 이며 기본값은 NULL입니다.  
   
-`[ @source_type = ] 'source_type'`원본 DBMS의 데이터 형식입니다. *source_type* 는 **sysname**이며 기본값은 없습니다.  
+`[ @source_type = ] 'source_type'` 원본 DBMS의 데이터 형식입니다. *source_type* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @source_length = ] source_length`원본 DBMS에 있는 데이터 형식의 길이입니다. *source_length* 는 **bigint**이며 기본값은 NULL입니다.  
+`[ @source_length = ] source_length` 원본 DBMS에 있는 데이터 형식의 길이입니다. *source_length* 는 **bigint**이며 기본값은 NULL입니다.  
   
-`[ @source_precision = ] source_precision`원본 DBMS에 있는 데이터 형식의 전체 자릿수입니다. *source_precision* 는 **bigint**이며 기본값은 NULL입니다.  
+`[ @source_precision = ] source_precision` 원본 DBMS에 있는 데이터 형식의 전체 자릿수입니다. *source_precision* 는 **bigint**이며 기본값은 NULL입니다.  
   
-`[ @source_scale = ] source_scale`원본 DBMS에 있는 데이터 형식의 소수 자릿수입니다. *source_scale* 은 **int**이며 기본값은 NULL입니다.  
+`[ @source_scale = ] source_scale` 원본 DBMS에 있는 데이터 형식의 소수 자릿수입니다. *source_scale* 은 **int**이며 기본값은 NULL입니다.  
   
-`[ @source_nullable = ] source_nullable`원본 DBMS의 데이터 형식이 NULL 값을 지원 하는지 여부입니다. *source_nullable* 은 **bit**이며 기본값은 **1**입니다 .이 값은 NULL 값이 지원 됨을 의미 합니다.  
+`[ @source_nullable = ] source_nullable` 원본 DBMS의 데이터 형식이 NULL 값을 지원 하는지 여부입니다. *source_nullable* 은 **bit**이며 기본값은 **1**입니다 .이 값은 NULL 값이 지원 됨을 의미 합니다.  
   
-`[ @destination_dbms = ] 'destination_dbms'`대상 DBMS의 이름입니다. *destination_dbms* 는 **sysname**이며 다음 값 중 하나일 수 있습니다.  
+`[ @destination_dbms = ] 'destination_dbms'` 대상 DBMS의 이름입니다. *destination_dbms* 는 **sysname**이며 다음 값 중 하나일 수 있습니다.  
   
 |값|설명|  
 |-----------|-----------------|  
@@ -83,19 +84,19 @@ sp_getdefaultdatatypemapping [ @source_dbms = ] 'source_dbms'
   
  이 매개 변수를 지정해야 합니다.  
   
-`[ @destination_version = ] 'destination_version'`대상 DBMS의 제품 버전입니다. *destination_version* 는 **varchar (10)** 이며 기본값은 NULL입니다.  
+`[ @destination_version = ] 'destination_version'` 대상 DBMS의 제품 버전입니다. *destination_version* 는 **varchar (10)** 이며 기본값은 NULL입니다.  
   
-`[ @destination_type = ] 'destination_type' OUTPUT`대상 DBMS에 나열 된 데이터 형식입니다. *destination_type* 는 **sysname**이며 기본값은 NULL입니다.  
+`[ @destination_type = ] 'destination_type' OUTPUT` 대상 DBMS에 나열 된 데이터 형식입니다. *destination_type* 는 **sysname**이며 기본값은 NULL입니다.  
   
-`[ @destination_length = ] destination_length OUTPUT`대상 DBMS에 있는 데이터 형식의 길이입니다. *destination_length* 는 **bigint**이며 기본값은 NULL입니다.  
+`[ @destination_length = ] destination_length OUTPUT` 대상 DBMS에 있는 데이터 형식의 길이입니다. *destination_length* 는 **bigint**이며 기본값은 NULL입니다.  
   
-`[ @destination_precision = ] destination_precision OUTPUT`대상 DBMS에 있는 데이터 형식의 전체 자릿수입니다. *destination_precision* 는 **bigint**이며 기본값은 NULL입니다.  
+`[ @destination_precision = ] destination_precision OUTPUT` 대상 DBMS에 있는 데이터 형식의 전체 자릿수입니다. *destination_precision* 는 **bigint**이며 기본값은 NULL입니다.  
   
-`[ @destination_scale = ] _destination_scaleOUTPUT`대상 DBMS에 있는 데이터 형식의 소수 자릿수입니다. *destination_scale* 은 **int**이며 기본값은 NULL입니다.  
+`[ @destination_scale = ] _destination_scaleOUTPUT` 대상 DBMS에 있는 데이터 형식의 소수 자릿수입니다. *destination_scale* 은 **int**이며 기본값은 NULL입니다.  
   
-`[ @destination_nullable = ] _destination_nullableOUTPUT`대상 DBMS의 데이터 형식이 NULL 값을 지원 하는지 여부입니다. *destination_nullable* 은 **bit**이며 기본값은 NULL입니다. **1** 은 NULL 값이 지원 됨을 의미 합니다.  
+`[ @destination_nullable = ] _destination_nullableOUTPUT` 대상 DBMS의 데이터 형식이 NULL 값을 지원 하는지 여부입니다. *destination_nullable* 은 **bit**이며 기본값은 NULL입니다. **1** 은 NULL 값이 지원 됨을 의미 합니다.  
   
-`[ @dataloss = ] _datalossOUTPUT`매핑의 데이터가 손실 될 가능성이 있는지 여부입니다. *데이터 손실을* 는 **bit**이며 기본값은 NULL입니다. **1** 은 데이터가 손실 될 가능성이 있음을 의미 합니다.  
+`[ @dataloss = ] _datalossOUTPUT` 매핑의 데이터가 손실 될 가능성이 있는지 여부입니다. *데이터 손실을* 는 **bit**이며 기본값은 NULL입니다. **1** 은 데이터가 손실 될 가능성이 있음을 의미 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -111,8 +112,8 @@ sp_getdefaultdatatypemapping [ @source_dbms = ] 'source_dbms'
 ## <a name="see-also"></a>참고 항목  
  [Transact-sql&#41;sp_helpdatatypemap &#40;](../../relational-databases/system-stored-procedures/sp-helpdatatypemap-transact-sql.md)   
  [Transact-sql&#41;sp_setdefaultdatatypemapping &#40;](../../relational-databases/system-stored-procedures/sp-setdefaultdatatypemapping-transact-sql.md)   
- [Oracle 게시자에 대 한 데이터 형식 매핑](../../relational-databases/replication/non-sql/data-type-mapping-for-oracle-publishers.md)   
- [IBM DB2 구독자](../../relational-databases/replication/non-sql/ibm-db2-subscribers.md)   
- [Oracle 구독자](../../relational-databases/replication/non-sql/oracle-subscribers.md)  
+ [Data Type Mapping for Oracle Publishers](../../relational-databases/replication/non-sql/data-type-mapping-for-oracle-publishers.md)   
+ [IBM DB2 Subscribers](../../relational-databases/replication/non-sql/ibm-db2-subscribers.md)   
+ [Oracle Subscribers](../../relational-databases/replication/non-sql/oracle-subscribers.md)  
   
   

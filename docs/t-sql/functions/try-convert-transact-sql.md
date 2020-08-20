@@ -1,4 +1,5 @@
 ---
+description: TRY_CONVERT(Transact-SQL)
 title: TRY_CONVERT(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -18,12 +19,12 @@ ms.assetid: 3e6e7825-6482-4cb2-a8c2-9abc99e265a6
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current||>= sql-server-2016 ||>= sql-server-linux-2017||= sqlallproducts-allversions||>= aps-pdw-2016||= azure-sqldw-latest
-ms.openlocfilehash: e3c1c579360b3487e3ee5efbc11aa05111242acc
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: b6a58db5551e8e94b6069f7dba7e415034c45a2b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396492"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467759"
 ---
 # <a name="try_convert-transact-sql"></a>TRY_CONVERT(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -51,7 +52,7 @@ TRY_CONVERT ( data_type [ ( length ) ], expression [, style ] )
  *style*  
  **TRY_CONVERT** 함수가 *expression*을 변환하는 방법을 지정하는 선택적 정수 식입니다.  
   
- *style*은 *CONVERT* 함수의 **style** 매개 변수와 동일한 값을 허용합니다. 자세한 내용은 [CAST 및 CONVERT&#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)를 참조하세요.  
+ *style*은 **CONVERT** 함수의 *style* 매개 변수와 동일한 값을 허용합니다. 자세한 내용은 [CAST 및 CONVERT&#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)를 참조하세요.  
   
  허용되는 값 범위는 *data_type* 값에 따라 결정됩니다. *style*이 Null이면 **TRY_CONVERT**는 Null을 반환합니다.  
   
@@ -65,7 +66,7 @@ TRY_CONVERT ( data_type [ ( length ) ], expression [, style ] )
   
  이 함수는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상 버전이 설치되어 있는 서버에 대해서는 원격으로 실행할 수 있지만 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이전 버전이 설치되어 있는 서버에 대해서는 원격으로 실행할 수 없습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-try_convert-returns-null"></a>A. TRY_CONVERT가 Null 반환  
  다음 예에서는 캐스팅을 실패할 때 TRY_CONVERT가 null을 반환하는 것을 보여 줍니다.  

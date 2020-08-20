@@ -1,4 +1,5 @@
 ---
+description: sp_grant_publication_access(Transact-SQL)
 title: sp_grant_publication_access (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 17993952-def6-4a16-b1c1-323ec42967f8
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: 319f61f1cf1587117b4f8205b208c4f3e7deb6be
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 5078173bfdf8ea079c0fa553c64a6235b101cdc2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891836"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469375"
 ---
 # <a name="sp_grant_publication_access-transact-sql"></a>sp_grant_publication_access(Transact-SQL)
 
@@ -38,9 +39,9 @@ sp_grant_publication_access [ @publication = ] 'publication', [ @login = ] 'logi
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @publication = ] 'publication'`액세스할 게시의 이름입니다. **'***게시***'** 는 **sysname**이며 기본값은 없습니다.  
+`[ @publication = ] 'publication'` 액세스할 게시의 이름입니다. **'***게시***'** 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @login = ] 'login'`로그인 ID입니다. **'***login***'** 은 **sysname**이며 기본값은 없습니다.  
+`[ @login = ] 'login'` 로그인 ID입니다. **'***login***'** 은 **sysname**이며 기본값은 없습니다.  
   
 `[ @reserved = ] 'reserved'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   

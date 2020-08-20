@@ -1,4 +1,5 @@
 ---
+description: sp_grantdbaccess(Transact-SQL)
 title: sp_grantdbaccess (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3eb09513-03f1-42f8-9917-3a1f3a579bec
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: 4fa8894b5c7ac33d8847bc28f2fac7a3c1020362
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0425c6f4108ae48dadcead271814d99c212e8a2e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891825"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469371"
 ---
 # <a name="sp_grantdbaccess-transact-sql"></a>sp_grantdbaccess(Transact-SQL)
 
@@ -31,7 +32,7 @@ ms.locfileid: "85891825"
   현재 데이터베이스에 데이터베이스 사용자를 추가합니다.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]대신 [CREATE USER](../../t-sql/statements/create-user-transact-sql.md) 를 사용 해야 합니다.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 대신 [CREATE USER](../../t-sql/statements/create-user-transact-sql.md) 를 사용 해야 합니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,9 +44,9 @@ sp_grantdbaccess [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @loginame = ] 'login_ '`새 데이터베이스 사용자에 매핑할 Windows 그룹, Windows 로그인 또는 로그인의 이름입니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Windows 그룹 및 windows 로그인의 이름은 *도메인* \\ *로그인*(예: **: london\joeb)**)의 windows 도메인 이름으로 한정 되어야 합니다. 로그인은 데이터베이스의 사용자에 미리 매핑될 수 없습니다. *login* 은 **sysname**이며 기본값은 없습니다.  
+`[ @loginame = ] 'login_ '` 새 데이터베이스 사용자에 매핑할 Windows 그룹, Windows 로그인 또는 로그인의 이름입니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Windows 그룹 및 windows 로그인의 이름은 *도메인* \\ *로그인*(예: **: london\joeb)**)의 windows 도메인 이름으로 한정 되어야 합니다. 로그인은 데이터베이스의 사용자에 미리 매핑될 수 없습니다. *login* 은 **sysname**이며 기본값은 없습니다.  
   
-``[ @name_in_db = ] 'name_in_db' [ OUTPUT]``새 데이터베이스 사용자의 이름입니다. *name_in_db* 는 **SYSNAME**데이터 형식의 OUTPUT 변수 이며 기본값은 NULL입니다. 지정 하지 않으면 *login* 이 사용 됩니다. 값이 NULL 인 OUTPUT 변수로 지정 된 경우 ** \@ name_in_db** 는 *login*으로 설정 됩니다. *name_in_db* 은 (는) 현재 데이터베이스에 없어야 합니다.  
+``[ @name_in_db = ] 'name_in_db' [ OUTPUT]`` 새 데이터베이스 사용자의 이름입니다. *name_in_db* 는 **SYSNAME**데이터 형식의 OUTPUT 변수 이며 기본값은 NULL입니다. 지정 하지 않으면 *login* 이 사용 됩니다. 값이 NULL 인 OUTPUT 변수로 지정 된 경우 ** \@ name_in_db** 는 *login*으로 설정 됩니다. *name_in_db* 은 (는) 현재 데이터베이스에 없어야 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -58,7 +59,7 @@ sp_grantdbaccess [ @loginame = ] 'login'
 ## <a name="permissions"></a>사용 권한  
  **Db_owner** 고정 데이터베이스 역할 또는 **db_accessadmin** 고정 데이터베이스 역할의 멤버 자격이 필요 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `CREATE USER` 를 사용 하 여 Windows 로그인에 대 한 데이터베이스 사용자를 현재 데이터베이스에 추가 합니다 `Edmonds\LolanSo` . 새 사용자의 이름은 `Lolan`입니다. 데이터베이스 사용자를 만드는 경우 기본적으로 이 방법이 사용됩니다.  
   
 ```sql
@@ -67,9 +68,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;보안 저장 프로시저](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [Transact-sql&#41;사용자 &#40;만들기](../../t-sql/statements/create-user-transact-sql.md)   
- [DROP USER &#40;Transact-sql&#41;](../../t-sql/statements/drop-user-transact-sql.md)   
+ [Transact-sql&#41;&#40;보안 저장 프로시저 ](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [CREATE USER&#40;Transact-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md)   
+ [DROP USER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-user-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

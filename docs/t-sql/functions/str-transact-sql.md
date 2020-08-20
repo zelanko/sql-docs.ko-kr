@@ -1,4 +1,5 @@
 ---
+description: STR(Transact-SQL)
 title: STR(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -21,12 +22,12 @@ ms.assetid: de03531b-d9e7-4c3c-9604-14e582ac20c6
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f918f7fa212c9342726d61cc04ac08d65771821a
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 365ef62b6b5437956e6dd2753b3f83de300d32b3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113306"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467813"
 ---
 # <a name="str-transact-sql"></a>STR(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -62,7 +63,7 @@ STR ( float_expression [ , length [ , decimal ] ] )
 > [!NOTE]  
 >  유니코드 데이터로 변환하려면 CONVERT 또는 [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) 변환 함수에서 STR를 사용합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 다섯 자리의 숫자와 소수점으로 구성된 식을 여섯 자리 문자열로 변환합니다. 숫자의 소수 부분은 소수 첫째 자리로 반올림됩니다.  
   
 ```  
@@ -113,7 +114,7 @@ GO
   
 ## <a name="see-also"></a>참고 항목  
  [CAST 및 CONVERT&#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
- [FORMAT&#40;Transact-SQL&#41;](../../t-sql/functions/format-transact-sql.md)  
+ [형식 &#40;Transact-SQL&#41;](../../t-sql/functions/format-transact-sql.md)  
  [문자열 함수&#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)  
   
   

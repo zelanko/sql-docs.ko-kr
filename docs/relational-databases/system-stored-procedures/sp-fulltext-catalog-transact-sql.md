@@ -1,4 +1,5 @@
 ---
+description: sp_fulltext_catalog(Transact-SQL)
 title: sp_fulltext_catalog (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ ms.assetid: e49b98e4-d1f1-42b2-b16f-eb2fc7aa1cf5
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 42985c60b7057904291bbf196e3faae27e77ae68
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 892b0e24bb76625b5d245a7314d368c0e0dc0cf2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771088"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469548"
 ---
 # <a name="sp_fulltext_catalog-transact-sql"></a>sp_fulltext_catalog(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -45,14 +46,14 @@ sp_fulltext_catalog [ @ftcat= ] 'fulltext_catalog_name' ,
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @ftcat = ] 'fulltext_catalog_name'`전체 텍스트 카탈로그의 이름입니다. 카탈로그 이름은 각 데이터베이스에 대해 고유해야 합니다. *fulltext_catalog_name* 는 **sysname**입니다.  
+`[ @ftcat = ] 'fulltext_catalog_name'` 전체 텍스트 카탈로그의 이름입니다. 카탈로그 이름은 각 데이터베이스에 대해 고유해야 합니다. *fulltext_catalog_name* 는 **sysname**입니다.  
   
-`[ @action = ] 'action'`수행할 동작입니다. *action* 은 **varchar (20)** 이며 다음 값 중 하나일 수 있습니다.  
+`[ @action = ] 'action'` 수행할 동작입니다. *action* 은 **varchar (20)** 이며 다음 값 중 하나일 수 있습니다.  
   
 > [!NOTE]  
 >  필요에 따라 전체 텍스트 카탈로그를 만들고 삭제하고 수정할 수 있습니다. 그러나 동시에 여러 카탈로그에서 스키마를 변경하지 마십시오. 이러한 작업은 권장 되는 방법인 **sp_fulltext_table** 저장 프로시저를 사용 하 여 수행할 수 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**만들기**|파일 시스템에 비어 있는 새 전체 텍스트 카탈로그를 만들고 *fulltext_catalog_name* 및 *root_directory*(있는 경우)와 관련 된 행을 **sysfulltextcatalogs** 에 추가 합니다. *fulltext_catalog_name* 은 데이터베이스 내에서 고유 해야 합니다.|  
 |**그림자**|는 파일 시스템에서 제거 하 고 **sysfulltextcatalogs**에서 연결 된 행을 삭제 하 여 *fulltext_catalog_name* 을 삭제 합니다. 해당 카탈로그에 한 개 이상의 테이블에 대한 인덱스가 있는 경우에는 이 동작이 실패합니다. **sp_fulltext_table** 카탈로그에서 테이블을 삭제 하려면 '*table_name*', ' 삭제 '를 실행 해야 합니다.<br /><br /> 카탈로그가 없을 경우에는 오류가 표시됩니다.|  
@@ -138,7 +139,7 @@ GO
  [Transact-sql&#41;sp_fulltext_database &#40;](../../relational-databases/system-stored-procedures/sp-fulltext-database-transact-sql.md)   
  [Transact-sql&#41;sp_help_fulltext_catalogs &#40;](../../relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-transact-sql.md)   
  [Transact-sql&#41;sp_help_fulltext_catalogs_cursor &#40;](../../relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-cursor-transact-sql.md)   
- [Transact-sql&#41;&#40;시스템 저장 프로시저](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;시스템 저장 프로시저 ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [전체 텍스트 검색](../../relational-databases/search/full-text-search.md)  
   
   

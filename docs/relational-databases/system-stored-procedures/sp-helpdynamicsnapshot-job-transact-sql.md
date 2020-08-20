@@ -1,4 +1,5 @@
 ---
+description: sp_helpdynamicsnapshot_job(Transact-SQL)
 title: sp_helpdynamicsnapshot_job (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: d6dfdf26-f874-495f-a8a6-8780699646d7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a155e7031a78cac6dcea4ca380f7b496d59170f0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 61e72b03e3bc6adff3a9e3d0858a8a2bdb4b5805
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733220"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469295"
 ---
 # <a name="sp_helpdynamicsnapshot_job-transact-sql"></a>sp_helpdynamicsnapshot_job(Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -45,15 +46,15 @@ sp_helpdynamicsnapshot_job [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @publication = ] 'publication'`게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 **%** 모든 게시에 대해 지정 된 *dynamic_snapshot_jobid*및 *dynamic_snapshot_jobname*일치 하는 모든 필터링 된 데이터 스냅숏 작업에 대 한 정보를 반환 하는입니다.  
+`[ @publication = ] 'publication'` 게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 **%** 모든 게시에 대해 지정 된 *dynamic_snapshot_jobid*및 *dynamic_snapshot_jobname*일치 하는 모든 필터링 된 데이터 스냅숏 작업에 대 한 정보를 반환 하는입니다.  
   
-`[ @dynamic_snapshot_jobname = ] 'dynamic_snapshot_jobname'`필터링 된 데이터 스냅숏 작업의 이름입니다. *dynamic_snapshot_jobname*는 **sysname**이며 기본값은 **%** 지정 된 *dynamic_snapshot_jobid*를 사용 하 여 게시에 대 한 모든 동적 작업을 반환 하는 '입니다. 작업을 만들 때 작업 이름을 명시적으로 지정하지 않은 경우에는 작업 이름이 다음 형식으로 지정됩니다.  
+`[ @dynamic_snapshot_jobname = ] 'dynamic_snapshot_jobname'` 필터링 된 데이터 스냅숏 작업의 이름입니다. *dynamic_snapshot_jobname*는 **sysname**이며 기본값은 **%** 지정 된 *dynamic_snapshot_jobid*를 사용 하 여 게시에 대 한 모든 동적 작업을 반환 하는 '입니다. 작업을 만들 때 작업 이름을 명시적으로 지정하지 않은 경우에는 작업 이름이 다음 형식으로 지정됩니다.  
   
 ```  
 'dyn_' + <name of the standard snapshot job> + <GUID>  
 ```  
   
-`[ @dynamic_snapshot_jobid = ] 'dynamic_snapshot_jobid'`필터링 된 데이터 스냅숏 작업의 식별자입니다. *dynamic_snapshot_jobid*은 **uniqueidentifier**이며 기본값은 지정 된 *dynamic_snapshot_jobname*와 일치 하는 모든 스냅숏 작업을 반환 하는 NULL입니다.  
+`[ @dynamic_snapshot_jobid = ] 'dynamic_snapshot_jobid'` 필터링 된 데이터 스냅숏 작업의 식별자입니다. *dynamic_snapshot_jobid*은 **uniqueidentifier**이며 기본값은 지정 된 *dynamic_snapshot_jobname*와 일치 하는 모든 스냅숏 작업을 반환 하는 NULL입니다.  
   
 ## <a name="result-sets"></a>결과 집합  
   

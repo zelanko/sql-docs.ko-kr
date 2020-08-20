@@ -1,4 +1,5 @@
 ---
+description: TRY_CAST(Transact-SQL)
 title: TRY_CAST(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -18,12 +19,12 @@ ms.assetid: ea3a16de-995b-415c-b5f0-9355cf7bb401
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current||>= sql-server-2016 ||>= sql-server-linux-2017||= sqlallproducts-allversions||>= aps-pdw-2016||= azure-sqldw-latest
-ms.openlocfilehash: 0cac60f2b6f60ab8f4e52df8d32d178d29b8e3f1
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: bd5c7d9ee466ba52d2cc82429e92f9ce6fec6ab2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396811"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467785"
 ---
 # <a name="try_cast-transact-sql"></a>TRY_CAST(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -61,7 +62,7 @@ TRY_CAST ( expression AS data_type [ ( length ) ] )
   
  **TRY_CAST**는 예약 키워드가 아니며 모든 호환성 수준에서 사용할 수 있습니다. **TRY_CAST**는 원격 서버에 연결할 때 **TRY_CONVERT**와 동일한 의미 체계를 갖습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-try_cast-returns-null"></a>A. TRY_CAST가 null을 반환  
  다음 예에서는 캐스팅을 실패할 때 TRY_CAST가 null을 반환하는 것을 보여 줍니다.  

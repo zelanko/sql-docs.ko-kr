@@ -1,4 +1,5 @@
 ---
+description: sp_help_log_shipping_secondary_primary(Transact-SQL)
 title: sp_help_log_shipping_secondary_primary (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1310fdaf-edb5-4294-9739-7fb37c2c2cb5
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 7aaa40e2542c3010e697e370cd4124982b35d41e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 36831a6638dc3fca62d3f2c2f104e7ebfa6a7437
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893625"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469382"
 ---
 # <a name="sp_help_log_shipping_secondary_primary-transact-sql"></a>sp_help_log_shipping_secondary_primary(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +44,7 @@ sp_help_log_shipping_secondary_primary
 ## <a name="arguments"></a>인수  
 `[ @primary_server = ] 'primary_server'`[!INCLUDE[msCoName](../../includes/msconame-md.md)]로그 전달 구성에 있는의 주 인스턴스 이름입니다 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . *primary_server* 는 **sysname** 이며 NULL 일 수 없습니다.  
   
-`[ @primary_database = ] 'primary_database'`주 서버에 있는 데이터베이스의 이름입니다. *primary_database* 는 **sysname**이며 기본값은 없습니다.  
+`[ @primary_database = ] 'primary_database'` 주 서버에 있는 데이터베이스의 이름입니다. *primary_database* 는 **sysname**이며 기본값은 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  

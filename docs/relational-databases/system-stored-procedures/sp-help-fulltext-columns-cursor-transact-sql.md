@@ -1,4 +1,5 @@
 ---
+description: sp_help_fulltext_columns_cursor(Transact-SQL)
 title: sp_help_fulltext_columns_cursor (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 26054e76-53b7-4004-8d48-92ba3435e9d7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1ed545d31cd5f05fa8360d2cf73a88787f98df45
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: dff9f4ea5fb2eda11da2144114cde959197c3723
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901472"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469388"
 ---
 # <a name="sp_help_fulltext_columns_cursor-transact-sql"></a>sp_help_fulltext_columns_cursor(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85901472"
   커서를 사용하여 전체 텍스트 인덱싱에 등록된 열을 반환할 수 있습니다.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]대신 [fulltext_index_columns](../../relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql.md) 카탈로그 뷰를 사용 하십시오.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 대신 [fulltext_index_columns](../../relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql.md) 카탈로그 뷰를 사용 하십시오.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -46,9 +47,9 @@ sp_help_fulltext_columns_cursor [ @cursor_return = ] @cursor_variable OUTPUT
 ## <a name="arguments"></a>인수  
 `[ @cursor_return = ] @cursor_variable OUTPUT`**Cursor**유형의 출력 변수입니다. 결과 커서는 읽기 전용의 스크롤할 수 있는 동적 커서입니다.  
   
-`[ @table_name = ] 'table_name'`전체 텍스트 인덱스 정보를 요청 하는 한 부분 또는 두 부분으로 구성 된 테이블 이름입니다. *table_name* 은 **nvarchar (517)** 이며 기본값은 NULL입니다. *Table_name* 를 생략 하면 전체 텍스트 인덱싱된 테이블 마다 전체 텍스트 인덱스 열 정보가 검색 됩니다.  
+`[ @table_name = ] 'table_name'` 전체 텍스트 인덱스 정보를 요청 하는 한 부분 또는 두 부분으로 구성 된 테이블 이름입니다. *table_name* 은 **nvarchar (517)** 이며 기본값은 NULL입니다. *Table_name* 를 생략 하면 전체 텍스트 인덱싱된 테이블 마다 전체 텍스트 인덱스 열 정보가 검색 됩니다.  
   
-`[ @column_name = ] 'column_name'`전체 텍스트 인덱스 메타 데이터가 필요한 열의 이름입니다. *column_name* 는 **sysname** 이며 기본값은 NULL입니다. *Column_name* 생략 하거나 NULL 인 경우 *table_name*의 모든 전체 텍스트 인덱싱된 열에 대해 전체 텍스트 열 정보가 반환 됩니다. *Table_name* 도 생략 하거나 NULL 인 경우 데이터베이스의 모든 테이블에 대 한 전체 텍스트 인덱싱된 열 마다 전체 텍스트 인덱스 열 정보가 반환 됩니다.  
+`[ @column_name = ] 'column_name'` 전체 텍스트 인덱스 메타 데이터가 필요한 열의 이름입니다. *column_name* 는 **sysname** 이며 기본값은 NULL입니다. *Column_name* 생략 하거나 NULL 인 경우 *table_name*의 모든 전체 텍스트 인덱싱된 열에 대해 전체 텍스트 열 정보가 반환 됩니다. *Table_name* 도 생략 하거나 NULL 인 경우 데이터베이스의 모든 테이블에 대 한 전체 텍스트 인덱싱된 열 마다 전체 텍스트 인덱스 열 정보가 반환 됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -69,7 +70,7 @@ sp_help_fulltext_columns_cursor [ @cursor_return = ] @cursor_variable OUTPUT
 ## <a name="permissions"></a>사용 권한  
  실행 권한은 기본적으로 **public** 역할의 멤버로 설정됩니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 데이터베이스의 모든 테이블에서 전체 텍스트를 인덱싱하기 위해 지정된 열에 관한 정보를 반환합니다.  
   
 ```  

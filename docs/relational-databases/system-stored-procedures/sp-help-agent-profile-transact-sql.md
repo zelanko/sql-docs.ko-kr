@@ -1,4 +1,5 @@
 ---
+description: sp_help_agent_profile(Transact-SQL)
 title: sp_help_agent_profile (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5637b671-4aa3-497e-9a1c-c99798a1afb4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 24a95d193d483c35dac0f94a839555fecb52afca
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5c6873ada83a846ae719e5498a296df02fa2a9c8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85662446"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469361"
 ---
 # <a name="sp_help_agent_profile-transact-sql"></a>sp_help_agent_profile(Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -38,9 +39,9 @@ sp_help_agent_profile [ [ @agent_type = ] agent_type ]
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @agent_type = ] agent_type`에이전트의 유형입니다. *agent_type* 은 **int**이며 기본값은 **0**이 고 다음 값 중 하나일 수 있습니다.  
+`[ @agent_type = ] agent_type` 에이전트의 유형입니다. *agent_type* 은 **int**이며 기본값은 **0**이 고 다음 값 중 하나일 수 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**1**|스냅샷 에이전트|  
 |**2**|로그 판독기 에이전트|  
@@ -48,7 +49,7 @@ sp_help_agent_profile [ [ @agent_type = ] agent_type ]
 |**4**|병합 에이전트|  
 |**9**|큐 판독기 에이전트|  
   
-`[ @profile_id = ] profile_id`표시할 프로필의 ID입니다. *profile_id* 는 **int**이며 기본값은 **MSagent_profiles** 테이블의 모든 프로필을 반환 하는 **-1**입니다.  
+`[ @profile_id = ] profile_id` 표시할 프로필의 ID입니다. *profile_id* 는 **int**이며 기본값은 **MSagent_profiles** 테이블의 모든 프로필을 반환 하는 **-1**입니다.  
   
 ## <a name="result-sets"></a>결과 집합  
   
@@ -57,8 +58,8 @@ sp_help_agent_profile [ [ @agent_type = ] agent_type ]
 |**profile_id**|**int**|프로필의 ID입니다.|  
 |**profile_name**|**sysname**|에이전트 유형에 대해 고유합니다.|  
 |**agent_type**|**int**|**1** = 스냅숏 에이전트<br /><br /> **2** = 로그 판독기 에이전트<br /><br /> **3** = 배포 에이전트<br /><br /> **4** = 병합 에이전트<br /><br /> **9** = 큐 판독기 에이전트|  
-|**Type**|**int**|**0** = 시스템<br /><br /> **1** = 사용자 지정|  
-|**한**|**varchar (3000)**|프로필에 관한 설명입니다.|  
+|**유형**|**int**|**0** = 시스템<br /><br /> **1** = 사용자 지정|  
+|**description**|**varchar (3000)**|프로필에 관한 설명입니다.|  
 |**def_profile**|**bit**|해당 프로필이 해당 에이전트 유형에 대한 기본값인지 여부를 지정합니다.|  
   
 ## <a name="return-code-values"></a>반환 코드 값  

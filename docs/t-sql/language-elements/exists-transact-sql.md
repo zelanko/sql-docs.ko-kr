@@ -1,4 +1,5 @@
 ---
+description: EXISTS(Transact-SQL)
 title: EXISTS(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -25,12 +26,12 @@ ms.assetid: b6510a65-ac38-4296-a3d5-640db0c27631
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a5948f5c7b2de3be9e7e94bd68831aa6eb283ff5
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 21ea1933bc37001040beb6007fb877fa8765a24c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923376"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467695"
 ---
 # <a name="exists-transact-sql"></a>EXISTS(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -57,7 +58,7 @@ EXISTS ( subquery )
 ## <a name="result-values"></a>결과 값  
  하위 쿼리에 행이 있으면 TRUE를 반환합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-using-null-in-a-subquery-to-still-return-a-result-set"></a>A. 하위 쿼리에서 NULL을 사용하여 결과 집합 계속 반환  
  다음 예에서는 하위 쿼리에 `NULL`을 지정하여 결과 집합을 반환하고 `EXISTS`를 사용하여 TRUE로 계속 평가됩니다.  

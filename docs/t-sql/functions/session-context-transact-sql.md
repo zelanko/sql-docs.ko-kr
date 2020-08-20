@@ -1,4 +1,5 @@
 ---
+description: SESSION_CONTEXT (Transact-SQL)
 title: SESSION_CONTEXT(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/14/2019
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b6bdbc54-331a-43cc-ab3d-3872d6a12100
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 00056403e2b2ef00862b7552c76fd98b851cabe5
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: ae64d9e63d6c6a6c77642144275af00a8418a8d9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394768"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467908"
 ---
 # <a name="session_context-transact-sql"></a>SESSION_CONTEXT (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -37,8 +38,6 @@ ms.locfileid: "87394768"
 SESSION_CONTEXT(N'key')  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## <a name="arguments"></a>인수
  'key'  
  검색되는 값의 키(sysname 형식)입니다.  
@@ -55,7 +54,7 @@ SESSION_CONTEXT(N'key')
 ## <a name="remarks"></a>설명  
  SESSION_CONTEXT의 MARS 동작은 CONTEXT_INFO의 그것과 유사합니다. MARS 일괄 처리가 키-값 쌍을 설정하는 경우 새 값을 완료로 설정하는 일괄 처리를 시작하지 않았다면 동일한 연결의 다른 MARS 일괄 처리에서 새 값을 반환하지 않습니다. 다중 MARS 일괄 처리가 연결에서 활성 상태인 경우 값을 "read_only"로 설정할 수 없습니다. 이렇게 하면 어떤 값이 "이길지"에 관한 경쟁 조건 및 비결정론이 방지됩니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 간단한 예에서는 키 `user_id`의 세션 컨텍스트 값을 4로 설정한 다음, **SESSION_CONTEXT** 함수를 사용하여 값을 검색합니다.  
   
 ```  

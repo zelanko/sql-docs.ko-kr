@@ -1,4 +1,5 @@
 ---
+description: TYPE_ID(Transact-SQL)
 title: TYPE_ID(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -21,12 +22,12 @@ ms.assetid: 647d17ef-b878-4922-b446-56642322ebad
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 675240db58ea6c46978987adb39696a8370639bf
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 9fa18e7fd00b50597068695f9b1f20a947289ca3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112796"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467740"
 ---
 # <a name="type_id-transact-sql"></a>TYPE_ID(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -58,7 +59,7 @@ TYPE_ID ( [ schema_name ] type_name )
 ## <a name="remarks"></a>설명  
  유형 이름이 잘못되었거나 호출자가 해당 유형을 참조할 수 있는 충분한 권한이 없는 경우 TYPE_ID는 NULL을 반환합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-looking-up-the-type-id-values-for-single--and-two-part-type-names"></a>A. 한 부분 및 두 부분으로 구성된 유형 이름의 TYPE ID 값 찾기  
  다음 예에서는 한 부분 및 두 부분으로 구성된 유형 이름의 유형 ID를 반환합니다.  
@@ -88,7 +89,7 @@ GO
   
 ## <a name="examples-sssdwfull-and-sspdw"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-looking-up-the-type-id-of-a-system-data-type"></a>3\. 시스템 데이터 형식의 TYPE ID 찾기  
+### <a name="c-looking-up-the-type-id-of-a-system-data-type"></a>3. 시스템 데이터 형식의 TYPE ID 찾기  
  다음 예에서는 `TYPE ID` 시스템 데이터 형식의 `datetime`를 반환합니다.  
   
 ```  

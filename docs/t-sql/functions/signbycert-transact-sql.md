@@ -1,4 +1,5 @@
 ---
+description: SIGNBYCERT(Transact-SQL)
 title: SIGNBYCERT(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: b4c6bced-4473-4bae-85b9-56deced495f9
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: e1c0705a6057842b80f7e9bf59412f0a64af30ae
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 32fa18577753641583ff5b6c12d864da0f0e36af
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112304"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467885"
 ---
 # <a name="signbycert-transact-sql"></a>SIGNBYCERT(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -62,7 +63,7 @@ SignByCert ( certificate_ID , @cleartext [ , 'password' ] )
 ## <a name="remarks"></a>설명  
  인증서에 대한 CONTROL 권한이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `@SensitiveData` 인증서를 사용하여 `ABerglundCert07`의 텍스트에 서명합니다. 이 인증서는 먼저 암호 "pGFD4bb925DGvbd2439587y"를 사용하여 해독해야 합니다. 그런 다음 `SignedData04` 테이블에 일반 텍스트와 서명을 삽입합니다.  
   
 ```  

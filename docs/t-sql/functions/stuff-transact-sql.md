@@ -1,4 +1,5 @@
 ---
+description: STUFF(Transact-SQL)
 title: STUFF(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/17/2017
@@ -24,12 +25,12 @@ ms.assetid: abb0afa9-44f6-42a2-a871-5f471dfb222b
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 46ccac4e4cdacea4caa8be6d31561ceb145f1969
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: e14a1a07537ee9ec99d2eb54de4ec636621cce80
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111328"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467804"
 ---
 # <a name="stuff-transact-sql"></a>STUFF(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -70,7 +71,7 @@ STUFF ( character_expression , start , length , replaceWith_expression )
 ## <a name="supplementary-characters-surrogate-pairs"></a>보조 문자(서로게이트 쌍)  
  SC 데이터 정렬을 사용할 경우 *character_expression* 및 *replaceWith_expression* 모두 서로게이트 쌍을 포함할 수 있습니다. 길이 매개 변수는 *character_expression*의 각 서로게이트를 단일 문자로 계산합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 첫 문자열 `abcdef`에서 `2` 위치의 `b`부터 세 문자를 삭제하고 삭제 지점에 두 번째 문자열을 삽입하여 만든 문자열을 반환합니다.  
   
 ```  

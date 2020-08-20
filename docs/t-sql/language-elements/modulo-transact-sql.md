@@ -1,4 +1,5 @@
 ---
+description: '%(모듈러스)(Transact-SQL)'
 title: '%(모듈러스)(Transact-SQL) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/15/2017
@@ -25,12 +26,12 @@ ms.assetid: f93c662e-f405-486e-bf23-a2d03907b5bd
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3912a363d90006e31e6d600c5fa983fc6ae6b939
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: a3c5c380472013176cdbe7ff745c588107d216b9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395666"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467638"
 ---
 # <a name="-modulus-transact-sql"></a>%(모듈러스)(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -60,7 +61,7 @@ dividend % divisor
 ## <a name="remarks"></a>설명  
  열 이름, 숫자 상수 또는 정수 및 통화 데이터 형식 범주나 **numeric** 데이터 형식을 사용한 유효한 식의 모든 조합이 들어 있는 SELECT 문의 선택 목록에 모듈로 산술 연산자를 사용할 수 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-simple-example"></a>A. 간단한 예  
  다음 예에서는 숫자 38을 5로 나눕니다. 결과의 정수 부분은 7이며 나머지 3을 반환하는 모듈로를 보여 줍니다.  

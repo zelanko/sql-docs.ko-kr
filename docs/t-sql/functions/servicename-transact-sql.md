@@ -1,4 +1,5 @@
 ---
+description: '&#x40;&#x40;SERVICENAME(Transact-SQL)'
 title: '@@SERVICENAME(Transact-SQL) | Microsoft Docs'
 ms.custom: ''
 ms.date: 09/18/2017
@@ -20,12 +21,12 @@ ms.assetid: 5b0b35be-50ae-411d-a607-bf7464b73624
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 112f387c1f3f3817535c354a8e934b8fd1f864b4
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 0754a042a02730ad58015d74b3bfdd34c1dc33fe
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113344"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467926"
 ---
 # <a name="x40x40servicename-transact-sql"></a>&#x40;&#x40;SERVICENAME(Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -48,7 +49,7 @@ ms.locfileid: "87113344"
 ## <a name="remarks"></a>설명  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 MSSQLServer라는 서비스로 실행됩니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `@@SERVICENAME`를 사용하는 방법을 보여 줍니다.  
   
 ```  

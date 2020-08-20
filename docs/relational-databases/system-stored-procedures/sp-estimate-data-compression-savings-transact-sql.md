@@ -1,4 +1,5 @@
 ---
+description: sp_estimate_data_compression_savings(Transact-SQL)
 title: sp_estimate_data_compression_savings (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/26/2019
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 6f6c7150-e788-45e0-9d08-d6c2f4a33729
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 94eeb0baeae20327650d0291e0ca4f1725abb1d9
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: dd4479aa059222ea7685cf38b56c98cc22ee94df
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881733"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469476"
 ---
 # <a name="sp_estimate_data_compression_savings-transact-sql"></a>sp_estimate_data_compression_savings(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -135,7 +136,7 @@ sp_estimate_data_compression_savings
 > [!NOTE]  
 > Columnstore 원본 개체에서 rowstore 압축 (NONE, ROW 또는 PAGE)을 추정 하는 경우 rowstore (비클러스터형) 인덱스에서 지원 되는 제한은 원본 인덱스에 32 개 보다 많은 열이 포함 되지 않아야 합니다.
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `Production.WorkOrderRouting` 압축을 사용하여 압축할 경우 `ROW` 테이블 크기를 계산합니다.  
   
 ```sql  
@@ -149,7 +150,7 @@ GO
  [CREATE TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [CREATE INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
  [&#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   
- [Transact-sql&#41;&#40;저장 프로시저 데이터베이스 엔진](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;저장 프로시저 데이터베이스 엔진 ](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [유니코드 압축 구현](../../relational-databases/data-compression/unicode-compression-implementation.md)  
   
   

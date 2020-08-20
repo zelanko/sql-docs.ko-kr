@@ -1,4 +1,5 @@
 ---
+description: USER_NAME(Transact-SQL)
 title: USER_NAME(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -24,12 +25,12 @@ ms.assetid: ab32d644-4228-449a-9ef0-5a975c305775
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dd303885ba4849932687248b2ae26c78d92b3a8a
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: eb4be6c95f60be21e594b98725a636aebce62bfc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112223"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467707"
 ---
 # <a name="user_name-transact-sql"></a>USER_NAME(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -59,7 +60,7 @@ USER_NAME ( [ id ] )
 > [!NOTE]
 > USER_NAME 함수는 Azure SQL Database에서 지원되지만, Azure SQL Database에서 USER_NAME과 함께 *Execute as*를 사용할 수는 없습니다. 
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-using-user_name"></a>A. USER_NAME 사용  
  다음 예에서는 사용자 ID `13`에 대한 사용자 이름을 반환합니다.  
@@ -166,5 +167,5 @@ User7
  [CURRENT_USER &#40;Transact-SQL&#41;](../../t-sql/functions/current-user-transact-sql.md)   
  [SESSION_USER &#40;Transact-SQL&#41;](../../t-sql/functions/session-user-transact-sql.md)   
  [시스템 함수&#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-category-transact-sql.md)   
- [SYSTEM_USER&#40;Transact-SQL&#41;](../../t-sql/functions/system-user-transact-sql.md)  
+ [SYSTEM_USER &#40;Transact-SQL&#41;](../../t-sql/functions/system-user-transact-sql.md)  
   
