@@ -1,4 +1,5 @@
 ---
+description: Full Text 이벤트 범주
 title: Full Text 이벤트 범주 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/01/2017
@@ -14,12 +15,12 @@ ms.assetid: 8107a3ea-f891-4134-946b-c64e3a8e92e8
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 58af699bdbb3c6aad7d261f2dc7eafa67285bfda
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1b04f8f0ad52ebd1d3d59f9662b0a99ec65e1964
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737217"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491073"
 ---
 # <a name="full-text-event-category"></a>Full Text 이벤트 범주
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
