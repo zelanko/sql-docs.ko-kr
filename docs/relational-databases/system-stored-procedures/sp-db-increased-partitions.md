@@ -1,4 +1,5 @@
 ---
+description: sp_db_increased_partitions
 title: sp_db_increased_partitions | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a8c043ec-b504-4929-ac0e-8babaa99d989
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e73f98e2548427ae8d102b56e729c2bd21235572
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 4e3e16858d8c071877d781fcee594d85da0ac392
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85867749"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486127"
 ---
 # <a name="sp_db_increased_partitions"></a>sp_db_increased_partitions
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

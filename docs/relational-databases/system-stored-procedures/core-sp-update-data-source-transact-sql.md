@@ -1,4 +1,5 @@
 ---
+description: core.sp_update_data_source(Transact-SQL)
 title: core. sp_update_data_source (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 66b95f96-6df7-4657-9b3c-86a58c788ca5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6b25dfb47c49bd53a4544649d8e10e4c092d04de
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 19644668bc9daf054aeb8907be5ca8ff29a7bb84
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898216"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486396"
 ---
 # <a name="coresp_update_data_source-transact-sql"></a>core.sp_update_data_source(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -77,7 +78,7 @@ core.sp_update_data_source [ @collection_set_uid = ] 'collection_set_uid'
 ## <a name="permissions"></a>사용 권한  
  **Mdw_writer** (실행 권한 포함) 고정 데이터베이스 역할의 멤버 자격이 필요 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 데이터 원본(이 경우에는 디스크 사용 컬렉션 집합)을 업데이트하고 만료 기간(일)을 설정한 다음 원본의 식별자를 반환합니다. 이 예에서는 기본 인스턴스가 사용됩니다.  
   
 ```  
@@ -92,9 +93,9 @@ EXEC core.sp_update_data_source
 @source_id = @source_id OUTPUT;  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;시스템 저장 프로시저](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Transact-sql&#41;&#40;데이터 수집기 저장 프로시저](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>관련 항목  
+ [Transact-sql&#41;&#40;시스템 저장 프로시저 ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [데이터 수집기 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
  [관리 데이터 웨어하우스](../../relational-databases/data-collection/management-data-warehouse.md)  
   
   

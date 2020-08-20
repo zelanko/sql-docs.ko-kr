@@ -1,4 +1,5 @@
 ---
+description: sp_syspolicy_add_policy_category_subscription(Transact-SQL)
 title: sp_syspolicy_add_policy_category_subscription (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4284f550-9a3f-4726-8181-15e407fbf08f
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 99e27db247ca38897b65ef73c38e3eb48e1f1358
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ba22b7025aa30216d94804440fec2c86eea5fc09
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892775"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485688"
 ---
 # <a name="sp_syspolicy_add_policy_category_subscription-transact-sql"></a>sp_syspolicy_add_policy_category_subscription(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,15 +43,15 @@ sp_syspolicy_add_policy_category_subscription [ @target_type = ] 'target_type'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @target_type = ] 'target_type'`범주 구독의 대상 유형입니다. *target_type* 는 **sysname**이며, 필수 이며 ' 데이터베이스 '로 설정 해야 합니다.  
+`[ @target_type = ] 'target_type'` 범주 구독의 대상 유형입니다. *target_type* 는 **sysname**이며, 필수 이며 ' 데이터베이스 '로 설정 해야 합니다.  
   
-`[ @target_object = ] 'target_object'`범주를 구독할 데이터베이스의 이름입니다. *target_object* 는 **sysname**이며 필수입니다.  
+`[ @target_object = ] 'target_object'` 범주를 구독할 데이터베이스의 이름입니다. *target_object* 는 **sysname**이며 필수입니다.  
   
-`[ @policy_category = ] 'policy_category'`구독할 정책 범주의 이름입니다. *policy_category* 는 **sysname**이며 필수입니다.  
+`[ @policy_category = ] 'policy_category'` 구독할 정책 범주의 이름입니다. *policy_category* 는 **sysname**이며 필수입니다.  
   
  *Policy_category*에 대 한 값을 가져오려면 msdb.dbo.syspolicy_policy_categories 시스템 뷰를 쿼리 합니다.  
   
-`[ @policy_category_subscription_id = ] policy_category_subscription_id`범주 구독의 식별자입니다. *policy_category_subscription_id* 은 **int**이며 OUTPUT으로 반환 됩니다.  
+`[ @policy_category_subscription_id = ] policy_category_subscription_id` 범주 구독의 식별자입니다. *policy_category_subscription_id* 은 **int**이며 OUTPUT으로 반환 됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -63,7 +64,7 @@ sp_syspolicy_add_policy_category_subscription [ @target_type = ] 'target_type'
 ## <a name="permissions"></a>사용 권한  
  이 저장 프로시저는 현재 저장 프로시저 소유자의 컨텍스트에서 실행됩니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 'Table Naming Policies'라는 정책 범주를 구독하도록 지정된 데이터베이스를 구성합니다.  
   
 ```  
@@ -75,7 +76,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;정책 기반 관리 저장 프로시저](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;정책 기반 관리 저장 프로시저 ](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
  [Transact-sql&#41;sp_syspolicy_update_policy_category_subscription &#40;](../../relational-databases/system-stored-procedures/sp-syspolicy-update-policy-category-subscription-transact-sql.md)   
  [Transact-sql&#41;sp_syspolicy_unsubscribe_from_policy_category &#40;](../../relational-databases/system-stored-procedures/sp-syspolicy-unsubscribe-from-policy-category-transact-sql.md)  
   

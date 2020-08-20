@@ -1,4 +1,5 @@
 ---
+description: sys.conversation_priorities(Transact-SQL)
 title: sys. conversation_priorities (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 7cbb9171-3310-4aae-8458-755c882d6462
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0c0d365978fa8c8c336040db50655e96234ecb22
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0db91b1640390e2a04040d74413e4e55f8579c27
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85887626"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486437"
 ---
 # <a name="sysconversation_priorities-transact-sql"></a>sys.conversation_priorities(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +46,7 @@ ms.locfileid: "85887626"
 ## <a name="permissions"></a>사용 권한  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 계약과 로컬 서비스 이름을 보여 주는 조인을 사용하여 대화 우선 순위를 나열합니다.  
   
 ```  
@@ -64,7 +65,7 @@ ORDER BY priority_name, contract_name,
   
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [ALTER BROKER PRIORITY &#40;Transact-sql&#41;](../../t-sql/statements/alter-broker-priority-transact-sql.md)   
  [CREATE BROKER PRIORITY&#40;Transact-SQL&#41;](../../t-sql/statements/create-broker-priority-transact-sql.md)   
  [DROP BROKER PRIORITY &#40;Transact-sql&#41;](../../t-sql/statements/drop-broker-priority-transact-sql.md)   

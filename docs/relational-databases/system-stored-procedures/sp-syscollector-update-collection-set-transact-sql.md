@@ -1,4 +1,5 @@
 ---
+description: sp_syscollector_update_collection_set(Transact-SQL)
 title: sp_syscollector_update_collection_set (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 2dccc3cd-0e93-4e3e-a4e5-8fe89b31bd63
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8ed9fe58317d1dbe1cb3de59b11f556bc96b1d9f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 00285e7f1e170a671cd38149098e485c90f710db
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892825"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485704"
 ---
 # <a name="sp_syscollector_update_collection_set-transact-sql"></a>sp_syscollector_update_collection_set(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -55,15 +56,15 @@ sp_syscollector_update_collection_set
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @collection_set_id = ] collection_set_id`컬렉션 집합의 고유한 로컬 식별자입니다. *collection_set_id* 은 **int** 이며 *name* 이 NULL 인 경우 값이 있어야 합니다.  
+`[ @collection_set_id = ] collection_set_id` 컬렉션 집합의 고유한 로컬 식별자입니다. *collection_set_id* 은 **int** 이며 *name* 이 NULL 인 경우 값이 있어야 합니다.  
   
-`[ @name = ] 'name'`컬렉션 집합의 이름입니다. *name* 은 **SYSNAME** 이며 *collection_set_id* NULL 인 경우 값이 있어야 합니다.  
+`[ @name = ] 'name'` 컬렉션 집합의 이름입니다. *name* 은 **SYSNAME** 이며 *collection_set_id* NULL 인 경우 값이 있어야 합니다.  
   
-`[ @new_name = ] 'new_name'`컬렉션 집합의 새 이름입니다. *new_name* 는 **sysname**이며 사용 될 경우 빈 문자열일 수 없습니다. *new_name* 은 고유 해야 합니다. 현재 컬렉션 집합 이름의 목록을 보려면 syscollector_collection_sets 시스템 뷰를 쿼리합니다.  
+`[ @new_name = ] 'new_name'` 컬렉션 집합의 새 이름입니다. *new_name* 는 **sysname**이며 사용 될 경우 빈 문자열일 수 없습니다. *new_name* 은 고유 해야 합니다. 현재 컬렉션 집합 이름의 목록을 보려면 syscollector_collection_sets 시스템 뷰를 쿼리합니다.  
   
-`[ @target = ] 'target'`나중에 사용 하도록 예약 되어 있습니다.  
+`[ @target = ] 'target'` 나중에 사용 하도록 예약 되어 있습니다.  
   
-`[ @collection_mode = ] collection_mode`사용할 데이터 컬렉션의 유형입니다. *collection_mode* 은 **smallint** 이며 다음 값 중 하나를 사용할 수 있습니다.  
+`[ @collection_mode = ] collection_mode` 사용할 데이터 컬렉션의 유형입니다. *collection_mode* 은 **smallint** 이며 다음 값 중 하나를 사용할 수 있습니다.  
   
  0 - 캐시된 모드. 데이터 컬렉션과 업로드가 별도의 일정에 속해 있습니다. 연속 컬렉션을 위해 캐시된 모드를 지정합니다.  
   
@@ -71,21 +72,21 @@ sp_syscollector_update_collection_set
   
  캐시 되지 않은 모드에서 캐시 된 모드 (0)로 변경 하는 경우 *schedule_uid* 또는 *schedule_name*도 지정 해야 합니다.  
   
-`[ @days_until_expiration = ] days_until_expiration`수집 된 데이터가 관리 데이터 웨어하우스에 저장 되는 일 수입니다. *days_until_expiration* 은 **smallint**입니다. *days_until_expiration* 는 0 또는 양의 정수 여야 합니다.  
+`[ @days_until_expiration = ] days_until_expiration` 수집 된 데이터가 관리 데이터 웨어하우스에 저장 되는 일 수입니다. *days_until_expiration* 은 **smallint**입니다. *days_until_expiration* 는 0 또는 양의 정수 여야 합니다.  
   
-`[ @proxy_id = ] proxy_id`에이전트 프록시 계정의 고유 식별자입니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *proxy_id* 은 **int**입니다.  
+`[ @proxy_id = ] proxy_id` 에이전트 프록시 계정의 고유 식별자입니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *proxy_id* 은 **int**입니다.  
   
-`[ @proxy_name = ] 'proxy_name'`프록시의 이름입니다. *proxy_name* 는 **sysname** 이며 null을 허용 합니다.  
+`[ @proxy_name = ] 'proxy_name'` 프록시의 이름입니다. *proxy_name* 는 **sysname** 이며 null을 허용 합니다.  
   
-`[ @schedule_uid = ] 'schedule_uid'`일정을 가리키는 GUID입니다. **uniqueidentifier** *schedule_uid* 입니다.  
+`[ @schedule_uid = ] 'schedule_uid'` 일정을 가리키는 GUID입니다. **uniqueidentifier** *schedule_uid* 입니다.  
   
  *Schedule_uid*를 얻으려면 sysschedules 시스템 테이블을 쿼리 합니다.  
   
  *Collection_mode* 를 0으로 설정 하면 *schedule_uid* 또는 *schedule_name* 를 지정 해야 합니다. *Collection_mode* 1로 설정 되 면 *schedule_uid* 또는 *schedule_name* 지정 된 경우 무시 됩니다.  
   
-`[ @schedule_name = ] 'schedule_name'`일정의 이름입니다. *schedule_name* 는 **sysname** 이며 null을 허용 합니다. 지정 하는 경우 *schedule_uid* 은 NULL 이어야 합니다. *Schedule_name*를 얻으려면 sysschedules 시스템 테이블을 쿼리 합니다.  
+`[ @schedule_name = ] 'schedule_name'` 일정의 이름입니다. *schedule_name* 는 **sysname** 이며 null을 허용 합니다. 지정 하는 경우 *schedule_uid* 은 NULL 이어야 합니다. *Schedule_name*를 얻으려면 sysschedules 시스템 테이블을 쿼리 합니다.  
   
-`[ @logging_level = ] logging_level`로깅 수준입니다. *logging_level* 은 **smallint** 이며 다음 값 중 하나를 사용 합니다.  
+`[ @logging_level = ] logging_level` 로깅 수준입니다. *logging_level* 은 **smallint** 이며 다음 값 중 하나를 사용 합니다.  
   
  0 - 실행 정보 및 다음 항목을 추적하는 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 이벤트 기록  
   
@@ -107,7 +108,7 @@ sp_syscollector_update_collection_set
   
  *Logging_level* 의 기본값은 1입니다.  
   
-`[ @description = ] 'description'`컬렉션 집합에 대 한 설명입니다. *설명은* **nvarchar (4000)** 입니다.  
+`[ @description = ] 'description'` 컬렉션 집합에 대 한 설명입니다. *설명은* **nvarchar (4000)** 입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -134,7 +135,7 @@ sp_syscollector_update_collection_set
   
 -   @days_until_expiration  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-renaming-a-collection-set"></a>A. 컬렉션 집합 이름 바꾸기  
  다음 예에서는 사용자 정의 컬렉션 집합의 이름을 바꿉니다.  
@@ -179,9 +180,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;시스템 저장 프로시저](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [데이터 수집](../../relational-databases/data-collection/data-collection.md)   
+ [Transact-sql&#41;&#40;시스템 저장 프로시저 ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [데이터 컬렉션](../../relational-databases/data-collection/data-collection.md)   
  [Transact-sql&#41;syscollector_collection_sets &#40;](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md)   
- [Transact-sql&#41;&#40;dbo.sys일정](../../relational-databases/system-tables/dbo-sysschedules-transact-sql.md)  
+ [ Transact-sql&#41;&#40;dbo.sys일정 ](../../relational-databases/system-tables/dbo-sysschedules-transact-sql.md)  
   
   

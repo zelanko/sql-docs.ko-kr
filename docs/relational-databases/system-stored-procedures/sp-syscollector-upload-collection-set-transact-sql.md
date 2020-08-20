@@ -1,4 +1,5 @@
 ---
+description: sp_syscollector_upload_collection_set(Transact-SQL)
 title: sp_syscollector_upload_collection_set (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: eed9232c-2b0a-4b6a-8ba0-76b7c99f48dc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 793b042f64dae7aa96341ee0794057f940ce4d72
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 7ae866b15b11d88f7cea301e7c687edf75c9fb2f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892786"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485670"
 ---
 # <a name="sp_syscollector_upload_collection_set-transact-sql"></a>sp_syscollector_upload_collection_set(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,9 +45,9 @@ sp_syscollector_upload_collection_set [[ @collection_set_id = ] collection_set_i
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @collection_set_id = ] collection_set_id`컬렉션 집합의 고유한 로컬 식별자입니다. *collection_set_id* 은 **int** 이며 *name* 이 NULL 인 경우 값이 있어야 합니다.  
+`[ @collection_set_id = ] collection_set_id` 컬렉션 집합의 고유한 로컬 식별자입니다. *collection_set_id* 은 **int** 이며 *name* 이 NULL 인 경우 값이 있어야 합니다.  
   
-`[ @name = ] 'name'`컬렉션 집합의 이름입니다. *name* 은 **SYSNAME** 이며 *collection_set_id* NULL 인 경우 값이 있어야 합니다.  
+`[ @name = ] 'name'` 컬렉션 집합의 이름입니다. *name* 은 **SYSNAME** 이며 *collection_set_id* NULL 인 경우 값이 있어야 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -69,7 +70,7 @@ EXEC sp_syscollector_upload_collection_set @name = 'Simple Collection Set' ;
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;시스템 저장 프로시저](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [데이터 수집](../../relational-databases/data-collection/data-collection.md)  
+ [Transact-sql&#41;&#40;시스템 저장 프로시저 ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [데이터 컬렉션](../../relational-databases/data-collection/data-collection.md)  
   
   

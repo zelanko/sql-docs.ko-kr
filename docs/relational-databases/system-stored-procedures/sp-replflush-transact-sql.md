@@ -1,4 +1,5 @@
 ---
+description: sp_replflush(Transact-SQL)
 title: sp_replflush (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 20809f5f-941d-427f-8f0c-de7a6c487584
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: eb038176fb0a2d81f2c643e9e21cc336c97d48ff
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 144bffdd6076b73c8b10fca3c7d9f878d77091d2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725729"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485767"
 ---
 # <a name="sp_replflush-transact-sql"></a>sp_replflush(Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -53,7 +54,7 @@ sp_replflush
  **Sysadmin** 고정 서버 역할 또는 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_replflush**을 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;sp_replcmds &#40;](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)   
+ [sp_replcmds&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)   
  [Transact-sql&#41;sp_repldone &#40;](../../relational-databases/system-stored-procedures/sp-repldone-transact-sql.md)   
  [Transact-sql&#41;sp_repltrans &#40;](../../relational-databases/system-stored-procedures/sp-repltrans-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

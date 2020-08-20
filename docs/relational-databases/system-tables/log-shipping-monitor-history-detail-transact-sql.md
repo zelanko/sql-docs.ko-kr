@@ -1,4 +1,5 @@
 ---
+description: log_shipping_monitor_history_detail(Transact-SQL)
 title: log_shipping_monitor_history_detail (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7080c888-323b-4206-a1ab-e6c51f9e2579
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 30679d8123bf2f5f4339d53d52cadcc39cdd4542
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f4a3b6562d6b5b01ccf1bf40842dac404b1add1e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890164"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485523"
 ---
 # <a name="log_shipping_monitor_history_detail-transact-sql"></a>log_shipping_monitor_history_detail(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -53,7 +54,7 @@ ms.locfileid: "85890164"
  [sp_cleanup_log_shipping_history&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cleanup-log-shipping-history-transact-sql.md)   
  [Transact-sql&#41;sp_refresh_log_shipping_monitor &#40;](../../relational-databases/system-stored-procedures/sp-refresh-log-shipping-monitor-transact-sql.md)   
  [Transact-sql&#41;sp_delete_log_shipping_secondary_database &#40;](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-secondary-database-transact-sql.md)   
- [Transact-sql&#41;&#40;시스템 테이블](../../relational-databases/system-tables/system-tables-transact-sql.md)   
+ [Transact-sql&#41;&#40;시스템 테이블 ](../../relational-databases/system-tables/system-tables-transact-sql.md)   
  [Transact-sql&#41;log_shipping_monitor_error_detail &#40;](../../relational-databases/system-tables/log-shipping-monitor-error-detail-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: sp_reinitmergepullsubscription(Transact-SQL)
 title: sp_reinitmergepullsubscription (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 48464bc9-60aa-4886-b526-163f010102b8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5efb256d77a676cc394fb2731127deb17037a205
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d65bd7f5e6967bac665892de55566cf4d151144f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901426"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485787"
 ---
 # <a name="sp_reinitmergepullsubscription-transact-sql"></a>sp_reinitmergepullsubscription(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,13 +41,13 @@ sp_reinitmergepullsubscription [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @publisher = ] 'publisher'`게시자의 이름입니다. *publisher* 는 **sysname**이며 기본값은 ALL입니다.  
+`[ @publisher = ] 'publisher'` 게시자의 이름입니다. *publisher* 는 **sysname**이며 기본값은 ALL입니다.  
   
-`[ @publisher_db = ] 'publisher_db'`게시자 데이터베이스의 이름입니다. *publisher_db* 는 **sysname**이며 기본값은 ALL입니다.  
+`[ @publisher_db = ] 'publisher_db'` 게시자 데이터베이스의 이름입니다. *publisher_db* 는 **sysname**이며 기본값은 ALL입니다.  
   
-`[ @publication = ] 'publication'`게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 ALL입니다.  
+`[ @publication = ] 'publication'` 게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 ALL입니다.  
   
-`[ @upload_first = ] 'upload_first'`구독을 다시 초기화 하기 전에 구독자에서 변경 내용을 업로드 하는지 여부입니다. *upload_first* 은 **nvarchar (5)** 이며 기본값은 FALSE입니다. **True**이면 구독을 다시 초기화 하기 전에 변경 내용이 업로드 됩니다. **False**이면 변경 내용이 업로드 되지 않습니다.  
+`[ @upload_first = ] 'upload_first'` 구독을 다시 초기화 하기 전에 구독자에서 변경 내용을 업로드 하는지 여부입니다. *upload_first* 은 **nvarchar (5)** 이며 기본값은 FALSE입니다. **True**이면 구독을 다시 초기화 하기 전에 변경 내용이 업로드 됩니다. **False**이면 변경 내용이 업로드 되지 않습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

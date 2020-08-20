@@ -1,4 +1,5 @@
 ---
+description: sys.sp_cdc_enable_db(Transact-SQL)
 title: sys. sp_cdc_enable_db (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 176d83b3-493d-43cd-800e-aa123c3bdf17
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 98258dbee3e2afa59314e340b27661a816a48b0f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 810e39bf9c4ff4626bf957978a12d77df6e60d54
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891135"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485518"
 ---
 # <a name="syssp_cdc_enable_db-transact-sql"></a>sys.sp_cdc_enable_db(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -59,7 +60,7 @@ sys.sp_cdc_enable_db
 ## <a name="permissions"></a>사용 권한  
  sysadmin 고정 서버 역할의 멤버 자격이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 변경 데이터 캡처를 활성화합니다.  
   
 ```  
@@ -69,7 +70,7 @@ EXECUTE sys.sp_cdc_enable_db;
 GO  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [sp_cdc_disable_db &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md)  
   
   

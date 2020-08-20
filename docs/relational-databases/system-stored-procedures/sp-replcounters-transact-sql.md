@@ -1,4 +1,5 @@
 ---
+description: sp_replcounters(Transact-SQL)
 title: sp_replcounters (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: fe585b1f-edda-421f-81d6-8a03a3a535d2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 98e5064c571a67afe445f265eaac693432cb5b38
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c4646b4062a0557a4c0b8a3086eef10f3e1a38a2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85645449"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485754"
 ---
 # <a name="sp_replcounters-transact-sql"></a>sp_replcounters(Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -41,7 +42,7 @@ sp_replcounters
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**데이터베이스**|**sysname**|데이터베이스의 이름입니다.|  
+|**Database**|**sysname**|데이터베이스의 이름입니다.|  
 |**Replicated transactions**|**int**|배포 데이터베이스에 전달되기 위해 대기하고 있는 로그의 트랜잭션 수입니다.|  
 |**Replication rate trans/sec**|**float**|배포 데이터베이스로 전달된 초 당 평균 트랜잭션 수입니다.|  
 |**복제 대기 시간**|**float**|트랜잭션이 배포되기 전에 로그 내에 머무는 평균 시간을 초 단위로 표시한 것입니다.|  
@@ -55,7 +56,7 @@ sp_replcounters
  **Db_owner** 고정 데이터베이스 역할 또는 **sysadmin** 고정 서버 역할의 멤버 자격이 필요 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;sp_replcmds &#40;](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)   
+ [sp_replcmds&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)   
  [Transact-sql&#41;sp_repldone &#40;](../../relational-databases/system-stored-procedures/sp-repldone-transact-sql.md)   
  [Transact-sql&#41;sp_replflush &#40;](../../relational-databases/system-stored-procedures/sp-replflush-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

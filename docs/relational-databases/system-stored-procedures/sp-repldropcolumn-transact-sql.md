@@ -1,4 +1,5 @@
 ---
+description: sp_repldropcolumn(Transact-SQL)
 title: sp_repldropcolumn (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: fdc1ec5f-f108-42b4-a2d8-f06a71913ab8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 718309e24e9ad7936dfc359e6db6ac529c926345
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0724bb3be7b22dc506f6038a9a5b9d1a1d25c0a8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85646100"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485790"
 ---
 # <a name="sp_repldropcolumn-transact-sql"></a>sp_repldropcolumn(Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

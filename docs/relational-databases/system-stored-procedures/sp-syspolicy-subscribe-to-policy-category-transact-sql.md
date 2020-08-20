@@ -1,4 +1,5 @@
 ---
+description: sp_syspolicy_subscribe_to_policy_category(Transact-SQL)
 title: sp_syspolicy_subscribe_to_policy_category (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: de88cc49-bcc8-4dc6-8e59-ad85cfbfb2fb
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: b8c4ec221c0d122fa2397df7e9adbe6f1f3ef436
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: beadf9f07bb78abb750a1f94383b926e5be505ca
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891469"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485588"
 ---
 # <a name="sp_syspolicy_subscribe_to_policy_category-transact-sql"></a>sp_syspolicy_subscribe_to_policy_category(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,7 @@ sp_syspolicy_subscribe_to_policy_category [ @policy_category = ] 'policy_categor
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @policy_category = ] 'policy_category'`데이터베이스에서 구독할 정책 범주의 이름입니다. *policy_category* 는 **sysname**이며 필수입니다.  
+`[ @policy_category = ] 'policy_category'` 데이터베이스에서 구독할 정책 범주의 이름입니다. *policy_category* 는 **sysname**이며 필수입니다.  
   
  *Policy_category*에 대 한 값을 가져오려면 msdb.dbo.syspolicy_policy_categories 시스템 뷰를 쿼리 합니다.  
   
@@ -52,7 +53,7 @@ sp_syspolicy_subscribe_to_policy_category [ @policy_category = ] 'policy_categor
 ## <a name="permissions"></a>사용 권한  
  db_owner 고정 데이터베이스 역할의 멤버 자격이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 지정한 데이터베이스에 대해 'Finance' 정책 범주에 대한 구독을 추가합니다.  
   
 ```  
@@ -63,8 +64,8 @@ EXEC sys.sp_syspolicy_subscribe_to_policy_category @policy_category = N'Finance'
 GO  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;정책 기반 관리 저장 프로시저](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>관련 항목  
+ [Transact-sql&#41;&#40;정책 기반 관리 저장 프로시저 ](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
  [Transact-sql&#41;sp_syspolicy_unsubscribe_from_policy_category &#40;](../../relational-databases/system-stored-procedures/sp-syspolicy-unsubscribe-from-policy-category-transact-sql.md)  
   
   

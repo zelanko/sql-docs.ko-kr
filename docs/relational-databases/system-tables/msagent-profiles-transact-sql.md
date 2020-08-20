@@ -1,4 +1,5 @@
 ---
+description: MSagent_profiles(Transact-SQL)
 title: MSagent_profiles (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4ab1b2ae-b6d9-42b7-9b31-98547dbb7f99
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: bde828bdb5d99b132373b847daeb9f8126a85f7a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: fbf072d6e873b595d2c9c5d4e27a0d792c09ba4c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890070"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485486"
 ---
 # <a name="msagent_profiles-transact-sql"></a>MSagent_profiles(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,11 +36,11 @@ ms.locfileid: "85890070"
 |**profile_name**|**sysname**|에이전트 유형에 대한 고유한 프로필 이름입니다.|  
 |**agent_type**|**int**|에이전트의 유형입니다.<br /><br /> **1** = 스냅숏 에이전트<br /><br /> **2** = 로그 판독기 에이전트<br /><br /> **3** = 배포 에이전트<br /><br /> **4** = 병합 에이전트<br /><br /> **9** = 큐 판독기 에이전트|  
 |**type**|**int**|프로필의 유형입니다.<br /><br /> **0** = 시스템**1** = 사용자 지정|  
-|**한**|**nvarchar (3000)**|프로필에 대한 설명입니다.|  
+|**description**|**nvarchar (3000)**|프로필에 대한 설명입니다.|  
 |**def_profile**|**bit**|해당 프로필이 해당 에이전트 유형에 대한 기본값인지 여부를 지정합니다.|  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;복제 테이블](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Transact-sql&#41;&#40;복제 테이블 ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [복제 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

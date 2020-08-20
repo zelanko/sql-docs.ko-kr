@@ -1,4 +1,5 @@
 ---
+description: sp_renamedb(Transact-SQL)
 title: sp_renamedb (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7dd9d4ff-20e1-4857-9a8e-a5bff767cf76
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a947bd670e57660f1f523c56f7422a28eacc39e0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: bbf6e245c580a54d68ddaba146bc26050f4264ba
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891482"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485791"
 ---
 # <a name="sp_renamedb-transact-sql"></a>sp_renamedb(Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -42,9 +43,9 @@ sp_renamedb [ @dbname = ] 'old_name' , [ @newname = ] 'new_name'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @dbname = ] 'old_name'`데이터베이스의 현재 이름입니다. *old_name* 는 **sysname**이며 기본값은 없습니다.  
+`[ @dbname = ] 'old_name'` 데이터베이스의 현재 이름입니다. *old_name* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @newname = ] 'new_name'`데이터베이스의 새 이름입니다. *new_name* 는 식별자에 대 한 규칙을 따라야 합니다. *new_name* 는 **sysname**이며 기본값은 없습니다.  
+`[ @newname = ] 'new_name'` 데이터베이스의 새 이름입니다. *new_name* 는 식별자에 대 한 규칙을 따라야 합니다. *new_name* 는 **sysname**이며 기본값은 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 0이 아닌 수(실패)  
@@ -52,7 +53,7 @@ sp_renamedb [ @dbname = ] 'old_name' , [ @newname = ] 'new_name'
 ## <a name="permissions"></a>사용 권한  
  **Sysadmin** 또는 **dbcreator** 고정 서버 역할의 멤버 자격이 필요 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `Accounting` 데이터베이스를 만든 후 데이터베이스의 이름을 `Financial`로 변경합니다. 그런 다음 `sys.databases` 카탈로그 뷰를 쿼리하여 데이터베이스의 새 이름을 확인합니다.  
   
 ```  
@@ -69,9 +70,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;저장 프로시저 데이터베이스 엔진](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;저장 프로시저 데이터베이스 엔진 ](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [ALTER DATABASE &#40;Transact-SQL &#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [Transact-sql&#41;sp_changedbowner &#40;](../../relational-databases/system-stored-procedures/sp-changedbowner-transact-sql.md)   
+ [sp_changedbowner&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedbowner-transact-sql.md)   
  [Transact-sql&#41;sp_helpdb &#40;](../../relational-databases/system-stored-procedures/sp-helpdb-transact-sql.md)   
  [sys.databases&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

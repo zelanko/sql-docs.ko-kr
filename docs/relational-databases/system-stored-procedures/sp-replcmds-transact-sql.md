@@ -1,4 +1,5 @@
 ---
+description: sp_replcmds(Transact-SQL)
 title: sp_replcmds (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7e932f80-cc6e-4109-8db4-2b7c8828df73
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c11132450e88326740af485a7293dd5a27b8326b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: dde94b7383bd6d043972bc8ad496e0b40165e206
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85645651"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485779"
 ---
 # <a name="sp_replcmds-transact-sql"></a>sp_replcmds(Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -40,7 +41,7 @@ sp_replcmds [ @maxtrans = ] maxtrans
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @maxtrans = ] maxtrans`정보를 반환할 트랜잭션의 수입니다. *maxtrans* 은 **int**이며 기본값은 배포 대기 중인 다음 트랜잭션을 지정 하는 **1**입니다.  
+`[ @maxtrans = ] maxtrans` 정보를 반환할 트랜잭션의 수입니다. *maxtrans* 은 **int**이며 기본값은 배포 대기 중인 다음 트랜잭션을 지정 하는 **1**입니다.  
   
 ## <a name="result-sets"></a>결과 집합  
   

@@ -1,4 +1,5 @@
 ---
+description: sp_replmonitorhelpsubscription(Transact-SQL)
 title: sp_replmonitorhelpsubscription (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a681b2db-c82d-4624-a10c-396afb0ac42f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 70b85170ec4b7cf56028b2cea6d643d5e72dfd0f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b9597e7a3512307367568ee14800fcbf69a3045f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760037"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485689"
 ---
 # <a name="sp_replmonitorhelpsubscription-transact-sql"></a>sp_replmonitorhelpsubscription(Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -44,13 +45,13 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @publisher = ] 'publisher'`상태를 모니터링 하는 게시자의 이름입니다. *publisher* 는 **sysname**이며 기본값은 NULL입니다. **Null**인 경우 배포자를 사용 하는 모든 게시자에 대해 정보가 반환 됩니다.  
+`[ @publisher = ] 'publisher'` 상태를 모니터링 하는 게시자의 이름입니다. *publisher* 는 **sysname**이며 기본값은 NULL입니다. **Null**인 경우 배포자를 사용 하는 모든 게시자에 대해 정보가 반환 됩니다.  
   
-`[ @publisher_db = ] 'publisher_db'`게시 된 데이터베이스의 이름입니다. *publisher_db* 는 **sysname**이며 기본값은 NULL입니다. NULL인 경우 게시자에 게시된 모든 데이터베이스에 대한 정보가 반환됩니다.  
+`[ @publisher_db = ] 'publisher_db'` 게시 된 데이터베이스의 이름입니다. *publisher_db* 는 **sysname**이며 기본값은 NULL입니다. NULL인 경우 게시자에 게시된 모든 데이터베이스에 대한 정보가 반환됩니다.  
   
-`[ @publication = ] 'publication'`모니터링 되는 게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 NULL입니다.  
+`[ @publication = ] 'publication'` 모니터링 되는 게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 NULL입니다.  
   
-`[ @publication_type = ] publication_type`게시의 유형입니다. *publication_type* 은 **int**이며 다음 값 중 하나일 수 있습니다.  
+`[ @publication_type = ] publication_type` 게시의 유형입니다. *publication_type* 은 **int**이며 다음 값 중 하나일 수 있습니다.  
   
 |값|설명|  
 |-----------|-----------------|  
@@ -59,9 +60,9 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
 |**2**|병합 게시|  
 |NULL(기본값)|복제가 게시 유형을 확인하려고 합니다.|  
   
-`[ @mode = ] mode`구독 모니터링 정보를 반환할 때 사용 하는 필터링 모드입니다. *모드* 는 **int**이며 다음 값 중 하나일 수 있습니다.  
+`[ @mode = ] mode` 구독 모니터링 정보를 반환할 때 사용 하는 필터링 모드입니다. *모드* 는 **int**이며 다음 값 중 하나일 수 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**0** (기본값)|모든 구독을 반환합니다.|  
 |**1**|오류가 있는 구독만 반환합니다.|  
@@ -72,11 +73,11 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
 |**6**|현재 동기화 중인 구독만 반환합니다.|  
 |**7**|현재 동기화 중이 아닌 구독만 반환합니다.|  
   
-`[ @topnum = ] topnum`반환 된 데이터의 맨 위에 있는 지정 된 수의 구독으로 결과 집합을 제한 합니다. *topnum* 은 **int**이며 기본값은 없습니다.  
+`[ @topnum = ] topnum` 반환 된 데이터의 맨 위에 있는 지정 된 수의 구독으로 결과 집합을 제한 합니다. *topnum* 은 **int**이며 기본값은 없습니다.  
   
-`[ @exclude_anonymous = ] exclude_anonymous`결과 집합에서 익명 끌어오기 구독을 제외할지 여부입니다. *exclude_anonymous* 은 **bit**이며 기본값은 **0**입니다. 값 **1** 은 익명 구독을 제외 하 고 값이 **0** 이면 포함 됨을 의미 합니다.  
+`[ @exclude_anonymous = ] exclude_anonymous` 결과 집합에서 익명 끌어오기 구독을 제외할지 여부입니다. *exclude_anonymous* 은 **bit**이며 기본값은 **0**입니다. 값 **1** 은 익명 구독을 제외 하 고 값이 **0** 이면 포함 됨을 의미 합니다.  
   
-`[ @refreshpolicy = ] refreshpolicy`내부용 으로만 사용 됩니다.  
+`[ @refreshpolicy = ] refreshpolicy` 내부용 으로만 사용 됩니다.  
   
 ## <a name="result-sets"></a>결과 집합  
   

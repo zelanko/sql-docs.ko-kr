@@ -1,4 +1,5 @@
 ---
+description: sp_replication_agent_checkup(Transact-SQL)
 title: sp_replication_agent_checkup (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 50357c2e-71aa-4e13-9e2e-0977a3655cc9
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 25daf9098c1c4da74d8c5adfdac062016f68ce96
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5bcd42ae639fad4b50feb6aac829a39abc9a1cad
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725715"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485736"
 ---
 # <a name="sp_replication_agent_checkup-transact-sql"></a>sp_replication_agent_checkup(Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -37,7 +38,7 @@ sp_replication_agent_checkup [ [ @heartbeat_interval = ] heartbeat_interval ]
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @heartbeat_interval = ] 'heartbeat_interval'`진행률 메시지를 기록 하지 않고 에이전트를 진행할 수 있는 최대 시간 (분)입니다. *heartbeat_interval* 은 **int**이며 기본값은 10 분입니다.  
+`[ @heartbeat_interval = ] 'heartbeat_interval'` 진행률 메시지를 기록 하지 않고 에이전트를 진행할 수 있는 최대 시간 (분)입니다. *heartbeat_interval* 은 **int**이며 기본값은 10 분입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **sp_replication_agent_checkup** 는 주의 대상으로 검색 된 각 에이전트에 대해 오류 14151을 발생 시킵니다. 또한 에이전트에 대한 실패 기록 메시지를 기록합니다.  

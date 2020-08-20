@@ -1,4 +1,5 @@
 ---
+description: sp_syspolicy_delete_policy_execution_history(Transact-SQL)
 title: sp_syspolicy_delete_policy_execution_history (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: fe651af9-267e-45ec-b4e7-4b0698fb1be3
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: cbee07cd02ca423a633133546130615bcb1d60c1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 99a17425f74b1ae2f5db7c4a6002e27ca7780f21
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892717"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485631"
 ---
 # <a name="sp_syspolicy_delete_policy_execution_history-transact-sql"></a>sp_syspolicy_delete_policy_execution_history(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,9 +41,9 @@ sp_syspolicy_delete_policy_execution_history [ @policy_id = ] policy_id ]
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @policy_id = ] policy_id`실행 기록을 삭제 하려는 정책의 식별자입니다. *policy_id* 는 **int**이며 필수입니다. NULL일 수 있습니다.  
+`[ @policy_id = ] policy_id` 실행 기록을 삭제 하려는 정책의 식별자입니다. *policy_id* 는 **int**이며 필수입니다. NULL일 수 있습니다.  
   
-`[ @oldest_date = ] 'oldest_date'`정책 실행 기록을 유지 하려는 가장 오래 된 날짜입니다. 이 날짜 이전의 실행 기록은 모두 삭제됩니다. *oldest_date* 은 **datetime**이며 필수입니다. NULL일 수 있습니다.  
+`[ @oldest_date = ] 'oldest_date'` 정책 실행 기록을 유지 하려는 가장 오래 된 날짜입니다. 이 날짜 이전의 실행 기록은 모두 삭제됩니다. *oldest_date* 은 **datetime**이며 필수입니다. NULL일 수 있습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -75,7 +76,7 @@ ON a.policy_id = b.policy_id
 > [!IMPORTANT]  
 >  자격 증명의 승격 가능: Policy관리자 역할 역할의 사용자는 서버 트리거를 만들고 인스턴스 작업에 영향을 줄 수 있는 정책 실행을 예약할 수 있습니다 [!INCLUDE[ssDE](../../includes/ssde-md.md)] . 예를 들어 PolicyAdministratorRole 역할의 사용자는 대부분의 개체가 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 생성되지 않도록 할 수 있는 정책을 만들 수 있습니다. 이렇게 자격 증명을 승격할 수 있기 때문에 PolicyAdministratorRole 역할은 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 구성을 제어할 수 있도록 신뢰할 수 있는 사용자에게만 부여되어야 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 ID가 7인 정책에 대해 특정 날짜 이전의 정책 실행 기록을 삭제합니다.  
   
 ```  
@@ -85,8 +86,8 @@ EXEC msdb.dbo.sp_syspolicy_delete_policy_execution_history @policy_id = 7
 GO  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;정책 기반 관리 저장 프로시저](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>관련 항목  
+ [Transact-sql&#41;&#40;정책 기반 관리 저장 프로시저 ](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
  [Transact-sql&#41;sp_syspolicy_set_config_history_retention &#40;](../../relational-databases/system-stored-procedures/sp-syspolicy-set-config-history-retention-transact-sql.md)   
  [Transact-sql&#41;sp_syspolicy_purge_history &#40;](../../relational-databases/system-stored-procedures/sp-syspolicy-purge-history-transact-sql.md)  
   

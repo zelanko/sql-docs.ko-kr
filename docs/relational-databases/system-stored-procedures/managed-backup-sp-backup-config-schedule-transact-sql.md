@@ -1,4 +1,5 @@
 ---
+description: managed_backup. sp_backup_config_schedule (Transact-sql)
 title: managed_backup. sp_backup_config_schedule (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/20/2020
@@ -20,11 +21,12 @@ helpviewer_keywords:
 ms.assetid: 82541160-d1df-4061-91a5-6868dd85743a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 04e152b8ae15e4e0a810fb5ed945b4c8c69afe5b
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: 23f1f96ff6d41412e8606e67aacfdc42d9afabc4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86053467"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486307"
 ---
 # <a name="managed_backupsp_backup_config_schedule-transact-sql"></a>managed_backup. sp_backup_config_schedule (Transact-sql)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -46,7 +48,7 @@ EXEC managed_backup.sp_backup_config_schedule
     ,[@log_backup_freq = ] 'frequency of log backup'  
 ```  
   
-##  <a name="arguments"></a><a name="Arguments"></a>인수의  
+##  <a name="arguments"></a><a name="Arguments"></a> 인수  
  @database_name  
  특정 데이터베이스에서 관리 되는 백업을 사용 하도록 설정 하기 위한 데이터베이스 이름입니다. NULL 또는 * 인 경우이 관리 되는 백업은 서버의 모든 데이터베이스에 적용 됩니다.  
   
@@ -66,7 +68,7 @@ EXEC managed_backup.sp_backup_config_schedule
  백업 시간 기간의 기간입니다. 및에 정의 된 기간 동안에는 백업이 완료 될 수도 없습니다 @backup_begin_time @backup_duration . 이 기간에 시작 되었지만 기간을 초과 하는 백업 작업은 취소 되지 않습니다.  
   
  @log_backup_freq  
- 이는 트랜잭션 로그 백업의 빈도를 결정 합니다. 이러한 백업은 데이터베이스 백업에 지정 된 일정 대신 정기적으로 수행 됩니다. @log_backup_freq는 분 또는 시간 일 수 있으며 `0:00` 로그 백업이 없음을 나타내는 유효 합니다. 로그 백업을 사용 하지 않도록 설정 하는 것은 단순 복구 모델을 사용 하는 데이터베이스에만 적합 합니다.  
+ 이는 트랜잭션 로그 백업의 빈도를 결정 합니다. 이러한 백업은 데이터베이스 백업에 지정 된 일정 대신 정기적으로 수행 됩니다. @log_backup_freq 는 분 또는 시간 일 수 있으며 `0:00` 로그 백업이 없음을 나타내는 유효 합니다. 로그 백업을 사용 하지 않도록 설정 하는 것은 단순 복구 모델을 사용 하는 데이터베이스에만 적합 합니다.  
   
 > [!NOTE]  
 >  복구 모델이 단순에서 전체로 변경 되는 경우의 log_backup_freq을 `0:00` 0이 아닌 값으로 다시 구성 해야 합니다.  
@@ -79,7 +81,7 @@ EXEC managed_backup.sp_backup_config_schedule
 ### <a name="permissions"></a>사용 권한  
  **ALTER ANY CREDENTIAL** 권한 및 **sp_delete_backuphistory** 저장 프로시저에 대 한 **EXECUTE** 권한이 있는 **db_backupoperator** 데이터베이스 역할의 멤버 자격이 필요 합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [managed_backup. sp_backup_config_basic (Transact-sql)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md)   
  [managed_backup.sp_backup_config_advanced&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md)  
   

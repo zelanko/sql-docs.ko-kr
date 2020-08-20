@@ -1,4 +1,5 @@
 ---
+description: sp_repladdcolumn(Transact-SQL)
 title: sp_repladdcolumn (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d6220f9f-c738-4f9c-bcf8-419994e86c81
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 05c00137acdf989456903fedddcc45a7b79e0e61
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 48fc4ad0f7881c3afe567d65ee0e0200b59169e4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85751630"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485801"
 ---
 # <a name="sp_repladdcolumn-transact-sql"></a>sp_repladdcolumn(Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

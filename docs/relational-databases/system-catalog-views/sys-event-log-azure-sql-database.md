@@ -1,4 +1,5 @@
 ---
+description: sys.event_log(Azure SQL Database)
 title: event_log (Azure SQL Database) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/28/2019
@@ -20,12 +21,12 @@ ms.assetid: ad5496b5-e5c7-4a18-b5a0-3f985d7c4758
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 52bc643e1af6f09c0f1ab8e90021ae949310968c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fd3db96c34d6a6ca8f6f08fc76fac73a4c4d79a1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85784925"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486406"
 ---
 # <a name="sysevent_log-azure-sql-database"></a>sys.event_log(Azure SQL Database)
 
@@ -38,10 +39,10 @@ ms.locfileid: "85784925"
   
  `sys.event_log` 뷰는 다음 열을 포함합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**database_name**|**sysname**|데이터베이스의 이름입니다. 연결이 실패하고 사용자가 데이터베이스 이름을 지정하지 않은 경우 이 열은 비어 있습니다.|  
-|**start_time**|**datetime2**|집계 간격 시작의 UTC 날짜 및 시간입니다. 집계 이벤트에 대해 시간은 항상 5분의 배수입니다. 예를 들면 다음과 같습니다.<br /><br /> '2011-09-28 16:00:00'<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  
+|**start_time**|**datetime2**|집계 간격 시작의 UTC 날짜 및 시간입니다. 집계 이벤트에 대해 시간은 항상 5분의 배수입니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.<br /><br /> '2011-09-28 16:00:00'<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  
 |**end_time**|**datetime2**|집계 간격 끝의 UTC 날짜 및 시간입니다. 집계 된 이벤트의 경우 **End_time** 은 항상 같은 행의 해당 **start_time** 보다 정확히 5 분 후입니다. 집계 되지 않은 이벤트의 경우 **start_time** 및 **end_time** 이벤트의 실제 UTC 날짜 및 시간과 같습니다.|  
 |**event_category**|**nvarchar (64)**|이 이벤트를 생성한 높은 수준의 구성 요소입니다.<br /><br /> 가능한 값 목록은 [이벤트 유형](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) 을 참조 하세요.|  
 |**event_type**|**nvarchar (64)**|이벤트의 유형입니다.<br /><br /> 가능한 값 목록은 [이벤트 유형](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) 을 참조 하세요.|  
@@ -49,10 +50,10 @@ ms.locfileid: "85784925"
 |**event_subtype_desc**|**nvarchar (64)**|이벤트 하위 유형에 대한 설명입니다.<br /><br /> 가능한 값 목록은 [이벤트 유형](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) 을 참조 하세요.|  
 |**severity**|**int**|오류의 심각도입니다. 가능한 값은 다음과 같습니다.<br /><br /> 0 = 정보<br />1 = 경고<br />2 = 오류|  
 |**event_count**|**int**|지정 된 시간 간격 (**start_time** 및 **end_time**) 내에 지정 된 데이터베이스에 대해이 이벤트가 발생 한 횟수입니다.|  
-|**한**|**nvarchar(max)**|이벤트에 대한 상세한 설명입니다.<br /><br /> 가능한 값 목록은 [이벤트 유형](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) 을 참조 하세요.|  
+|**description**|**nvarchar(max)**|이벤트에 대한 상세한 설명입니다.<br /><br /> 가능한 값 목록은 [이벤트 유형](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) 을 참조 하세요.|  
 |**additional_data**|**XML**|*참고: Azure SQL Database V12의 경우이 값은 항상 NULL입니다. V12에 대 한 교착 상태 이벤트를 검색 하는 방법에 대 한 [예제](#Deadlock) 섹션을 참조 하세요.*<br /><br /> **교착 상태** 이벤트의 경우이 열에는 교착 상태 그래프가 포함 됩니다. 이 열은 다른 이벤트 유형에 대해서는 NULL을 반환합니다. |  
   
-##  <a name="event-types"></a><a name="EventTypes"></a>이벤트 유형
+##  <a name="event-types"></a><a name="EventTypes"></a> 이벤트 유형
 
  이 뷰의 각 행에서 기록 하는 이벤트는 범주 (**event_category**), 이벤트 유형 (**event_type**) 및 하위 유형 (**event_subtype**)으로 식별 됩니다. 다음 테이블에서는 이 뷰에 수집된 이벤트 유형을 나열합니다.  
   
@@ -61,7 +62,7 @@ ms.locfileid: "85784925"
 > [!NOTE]  
 > 이 뷰에는 여기에 나와 있는 것 외에 발생할 수 있는 다른 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 데이터베이스 이벤트가 포함되어 있지 않습니다. [!INCLUDE[ssSDS](../../includes/sssds-md.md)]의 후속 릴리스에 범주, 이벤트 유형 및 하위 유형이 추가될 수 있습니다.  
   
-|**event_category**|**event_type**|**event_subtype**|**event_subtype_desc**|**severity**|**한**|  
+|**event_category**|**event_type**|**event_subtype**|**event_subtype_desc**|**severity**|**description**|  
 |-------------------------|---------------------|------------------------|------------------------------|------------------|---------------------|  
 |**connectivity**|**connection_successful**|0|**connection_successful**|0|데이터베이스에 연결되었습니다.|  
 |**connectivity**|**connection_failed**|0|**invalid_login_name**|2|이 SQL Server 버전에서 로그인 이름이 잘못되었습니다.|  
@@ -99,7 +100,7 @@ ms.locfileid: "85784925"
   
  예를 들어, 사용자가 잘못된 로그인 이름으로 인해 2012년 2월 5일 오전 11시와 11시 5분(UTC) 사이에 데이터베이스 Database1에 대한 연결을 7회 실패한 경우 이 정보는 이 뷰의 단일 행에서 확인할 수 있습니다.  
   
-|**database_name**|**start_time**|**end_time**|**event_category**|**event_type**|**event_subtype**|**event_subtype_desc**|**severity**|**event_count**|**한**|**additional_data**|  
+|**database_name**|**start_time**|**end_time**|**event_category**|**event_type**|**event_subtype**|**event_subtype_desc**|**severity**|**event_count**|**description**|**additional_data**|  
 |------------------------|---------------------|-------------------|-------------------------|---------------------|------------------------|------------------------------|------------------|----------------------|---------------------|--------------------------|  
 |`Database1`|`2012-02-05 11:00:00`|`2012-02-05 11:05:00`|`connectivity`|`connection_failed`|`4`|`login_failed_for_user`|`2`|`7`|`Login failed for user.`|`NULL`|  
   
@@ -148,7 +149,7 @@ WHERE event_type = 'deadlock'
     AND database_name = 'Database1';  
 ```
 
-<a name="Deadlock"></a>다음 쿼리는 Database1 데이터베이스에 대 한 모든 교착 상태 이벤트를 반환 합니다 (Azure SQL Database V12에만 적용).  
+<a name="Deadlock"></a> 다음 쿼리는 Database1 데이터베이스에 대 한 모든 교착 상태 이벤트를 반환 합니다 (Azure SQL Database V12에만 적용).  
 
 ```sql
 WITH CTE AS (  
@@ -228,7 +229,7 @@ WITH CTE AS (
 SELECT * FROM CTE2;  
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목
 
  [Azure SQL Database 확장 이벤트](https://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)  
  

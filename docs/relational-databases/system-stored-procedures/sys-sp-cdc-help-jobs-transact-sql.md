@@ -1,4 +1,5 @@
 ---
+description: sys.sp_cdc_help_jobs(Transact-SQL)
 title: sys. sp_cdc_help_jobs (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 9399b4bc-8293-408f-b3cb-f904e0657fb5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0e5f1bc891a9ed3ce41d2b692d94995fc8ff0909
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 884d9f9b6e0cf60268d0d980f1141fee627e5a19
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891071"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485536"
 ---
 # <a name="syssp_cdc_help_jobs-transact-sql"></a>sys.sp_cdc_help_jobs(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -59,7 +60,7 @@ sys.sp_cdc_help_jobs
 ## <a name="permissions"></a>사용 권한  
  **Db_owner** 고정 데이터베이스 역할의 멤버 자격이 필요 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `AdventureWorks2012` 데이터베이스에 대해 정의된 캡처 및 정리 작업에 관한 정보를 반환합니다.  
   
 ```  

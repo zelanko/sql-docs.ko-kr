@@ -1,4 +1,5 @@
 ---
+description: sp_helpmergeconflictrows(Transact-SQL)
 title: sp_helpmergeconflictrows (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 131395a5-cb18-4795-a7ae-fa09d8ff347f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 85a5ad519f836288a98dd6327fc7ca8a15c0cf70
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 4c66dc9c8ac6cc21d74cbf2a6474ad74a2cffba1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893572"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485959"
 ---
 # <a name="sp_helpmergeconflictrows-transact-sql"></a>sp_helpmergeconflictrows(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,15 +42,15 @@ sp_helpmergeconflictrows [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @publication = ] 'publication'`게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 **%** 입니다. 게시가 지정된 경우에는 해당 게시에 대한 모든 충돌이 반환됩니다. 예를 들어 **MSmerge_conflict_Customers** 테이블에 **WA** 및 **CA** 게시에 대 한 충돌 행이 있는 경우 게시 이름 **ca** 를 전달 하면 **ca** 게시와 관련 된 충돌을 검색 합니다.  
+`[ @publication = ] 'publication'` 게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 **%** 입니다. 게시가 지정된 경우에는 해당 게시에 대한 모든 충돌이 반환됩니다. 예를 들어 **MSmerge_conflict_Customers** 테이블에 **WA** 및 **CA** 게시에 대 한 충돌 행이 있는 경우 게시 이름 **ca** 를 전달 하면 **ca** 게시와 관련 된 충돌을 검색 합니다.  
   
-`[ @conflict_table = ] 'conflict_table'`충돌 테이블의 이름입니다. *conflict_table* 는 **sysname**이며 기본값은 없습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전에서 충돌 테이블은 게시 된 각 아티클에 대해 하나의 테이블을 사용 하 여 **MSmerge_conflict \_ _게시 \_ 아티클의_** 형식 이름을 사용 하 여 지정 됩니다.  
+`[ @conflict_table = ] 'conflict_table'` 충돌 테이블의 이름입니다. *conflict_table* 는 **sysname**이며 기본값은 없습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전에서 충돌 테이블은 게시 된 각 아티클에 대해 하나의 테이블을 사용 하 여 **MSmerge_conflict \_ _게시 \_ 아티클의_** 형식 이름을 사용 하 여 지정 됩니다.  
   
-`[ @publisher = ] 'publisher'`게시자의 이름입니다. *publisher* 는 **sysname**이며 기본값은 NULL입니다.  
+`[ @publisher = ] 'publisher'` 게시자의 이름입니다. *publisher* 는 **sysname**이며 기본값은 NULL입니다.  
   
-`[ @publisher_db = ] 'publisher_db'`게시자 데이터베이스의 이름입니다. *publisher_db* 는 **sysname**이며 기본값은 NULL입니다.  
+`[ @publisher_db = ] 'publisher_db'` 게시자 데이터베이스의 이름입니다. *publisher_db* 는 **sysname**이며 기본값은 NULL입니다.  
   
-`[ @logical_record_conflicts = ] logical_record_conflicts`결과 집합에 논리 레코드 충돌 정보가 포함 되는지 여부를 나타냅니다. *logical_record_conflicts* 은 **int**이며 기본값은 0입니다. **1** 은 논리적 레코드 충돌 정보가 반환 됨을 의미 합니다.  
+`[ @logical_record_conflicts = ] logical_record_conflicts` 결과 집합에 논리 레코드 충돌 정보가 포함 되는지 여부를 나타냅니다. *logical_record_conflicts* 은 **int**이며 기본값은 0입니다. **1** 은 논리적 레코드 충돌 정보가 반환 됨을 의미 합니다.  
   
 ## <a name="result-sets"></a>결과 집합  
  **sp_helpmergeconflictrows** 은 기본 테이블 구조와 이러한 추가 열로 구성 된 결과 집합을 반환 합니다.  

@@ -1,4 +1,5 @@
 ---
+description: sp_update_category(Transact-SQL)
 title: sp_update_category (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 098b926a-b078-4122-a5e1-3ef54b979dd4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3c738d918c43764048cd0c67ade2fccc9be961c7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f4eaf2fe7fd4b1ee613bec30dbf6967eaeab8b51
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891350"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485592"
 ---
 # <a name="sp_update_category-transact-sql"></a>sp_update_category(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +43,7 @@ sp_update_category
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @class = ] 'class'`업데이트할 범주의 클래스입니다. *클래스*는 **varchar (8)** 이며 기본값은 없고 다음 값 중 하나일 수 있습니다.  
+`[ @class = ] 'class'` 업데이트할 범주의 클래스입니다. *클래스*는 **varchar (8)** 이며 기본값은 없고 다음 값 중 하나일 수 있습니다.  
   
 |값|설명|  
 |-----------|-----------------|  
@@ -50,9 +51,9 @@ sp_update_category
 |**직함**|작업 범주를 업데이트합니다.|  
 |**연산자**|연산자 범주를 업데이트합니다.|  
   
-`[ @name = ] 'old_name'`범주의 현재 이름입니다. *old_name*는 **sysname**이며 기본값은 없습니다.  
+`[ @name = ] 'old_name'` 범주의 현재 이름입니다. *old_name*는 **sysname**이며 기본값은 없습니다.  
   
-`[ @new_name = ] 'new_name'`범주의 새 이름입니다. *new_name*는 **sysname**이며 기본값은 없습니다.  
+`[ @new_name = ] 'new_name'` 범주의 새 이름입니다. *new_name*는 **sysname**이며 기본값은 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -63,7 +64,7 @@ sp_update_category
 ## <a name="permissions"></a>사용 권한  
  이 저장 프로시저를 실행 하려면 사용자에 게 **sysadmin** 고정 서버 역할을 부여 해야 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 작업 범주의 이름을 `AdminJobs`에서 `Administrative Jobs`로 바꿉니다.  
   
 ```  
@@ -77,7 +78,7 @@ EXEC dbo.sp_update_category
 GO  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [Transact-sql&#41;sp_add_category &#40;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)   
  [Transact-sql&#41;sp_delete_category &#40;](../../relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md)   
  [Transact-sql&#41;sp_help_category &#40;](../../relational-databases/system-stored-procedures/sp-help-category-transact-sql.md)   

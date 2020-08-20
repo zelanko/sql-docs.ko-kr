@@ -1,4 +1,5 @@
 ---
+description: sp_replicationdboption(Transact-SQL)
 title: sp_replicationdboption (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d021864e-3f21-4d1a-89df-6c1086f753bf
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 819c6c91b2fc57ca077b82797626cf255dcc6357
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 65839ea899d001c42478e1eb3d1e54cad0f53f52
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725703"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485716"
 ---
 # <a name="sp_replicationdboption-transact-sql"></a>sp_replicationdboption(Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -41,9 +42,9 @@ sp_replicationdboption [ @dbname= ] 'db_name'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @dbname = ] 'dbname'`복제 데이터베이스 옵션이 설정 되는 데이터베이스입니다. *db_name* 는 **sysname**이며 기본값은 없습니다.  
+`[ @dbname = ] 'dbname'` 복제 데이터베이스 옵션이 설정 되는 데이터베이스입니다. *db_name* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @optname = ] 'optname'`사용 하거나 사용 하지 않도록 설정 하는 복제 데이터베이스 옵션입니다. *optname* 는 **sysname**이며 다음 값 중 하나일 수 있습니다.  
+`[ @optname = ] 'optname'` 사용 하거나 사용 하지 않도록 설정 하는 복제 데이터베이스 옵션입니다. *optname* 는 **sysname**이며 다음 값 중 하나일 수 있습니다.  
   
 |값|설명|  
 |-----------|-----------------|  
@@ -52,9 +53,9 @@ sp_replicationdboption [ @dbname= ] 'db_name'
 |**구독**|데이터베이스는 구독 데이터베이스입니다.|  
 |**sync with backup**|통합 백업용으로 데이터베이스를 사용할 수 있습니다. 자세한 내용은 [트랜잭션 복제에 대해 통합 백업 사용 &#40;복제 Transact-sql 프로그래밍&#41;](../../relational-databases/replication/administration/enable-coordinated-backups-for-transactional-replication.md)을 참조 하세요.|  
   
-`[ @value = ] 'value'`지정 된 복제 데이터베이스 옵션을 사용 하거나 사용 하지 않도록 설정할지 여부입니다. *value* 는 **sysname**이며 **true** 또는 **false**일 수 있습니다. 이 값이 **false** 이 고 *optname* 가 **merge publish**이면 병합 게시 된 데이터베이스에 대 한 구독도 삭제 됩니다.  
+`[ @value = ] 'value'` 지정 된 복제 데이터베이스 옵션을 사용 하거나 사용 하지 않도록 설정할지 여부입니다. *value* 는 **sysname**이며 **true** 또는 **false**일 수 있습니다. 이 값이 **false** 이 고 *optname* 가 **merge publish**이면 병합 게시 된 데이터베이스에 대 한 구독도 삭제 됩니다.  
   
-`[ @ignore_distributor = ] ignore_distributor`이 저장 프로시저가 배포자에 연결 되지 않고 실행 되는지 여부를 나타냅니다. *ignore_distributor* 은 **bit**이며 기본값은 **0**입니다. 즉, 배포자가 게시 데이터베이스의 새 상태로 연결 되어 업데이트 되어야 합니다. 값 **1** 은 배포자에 액세스할 수 없고 게시를 사용 하지 않도록 설정 하는 **sp_replicationdboption** 사용 되는 경우에만 지정 해야 합니다.  
+`[ @ignore_distributor = ] ignore_distributor` 이 저장 프로시저가 배포자에 연결 되지 않고 실행 되는지 여부를 나타냅니다. *ignore_distributor* 은 **bit**이며 기본값은 **0**입니다. 즉, 배포자가 게시 데이터베이스의 새 상태로 연결 되어 업데이트 되어야 합니다. 값 **1** 은 배포자에 액세스할 수 없고 게시를 사용 하지 않도록 설정 하는 **sp_replicationdboption** 사용 되는 경우에만 지정 해야 합니다.  
   
 `[ @from_scripting = ] from_scripting` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   

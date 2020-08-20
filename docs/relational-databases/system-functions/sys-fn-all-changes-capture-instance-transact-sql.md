@@ -1,4 +1,5 @@
 ---
+description: sys. fn_all_changes_ &lt; capture_instance &gt; (transact-sql)
 title: sys. fn_all_changes_ &lt; capture_instance &gt; (transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/02/2016
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 564fae96-b88c-4f22-9338-26ec168ba6f5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4a412ac614037a79e033636b20c21e2464c427ad
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e091db783b29a767a5f1f762dbbc037a878ce8a7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898473"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486343"
 ---
 # <a name="sysfn_all_changes_ltcapture_instancegt-transact-sql"></a>sys. fn_all_changes_ &lt; capture_instance &gt; (transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -87,7 +88,7 @@ fn_all_changes_<capture_instance> ('start_time' ,'end_time', '<row_filter_option
 |-----------------|-----------------|-----------------|  
 |__CDC_STARTLSN|**binary(10)**|변경 내용과 관련된 트랜잭션의 커밋 LSN입니다. 동일한 트랜잭션에서 커밋된 모든 변경 내용은 같은 커밋 LSN을 공유합니다.|  
 |__CDC_SEQVAL|**binary(10)**|트랜잭션에서 행 변경 내용을 정렬하는 데 사용되는 시퀀스 값입니다.|  
-|\<columns from @column_list>|**잠기기**|래퍼 함수를 만드는 스크립트를 생성 하기 위해 호출 될 때 sp_cdc_generate_wrapper_function *column_list* 인수에서 식별 되는 열입니다.|  
+|\<columns from @column_list>|**다름**|래퍼 함수를 만드는 스크립트를 생성 하기 위해 호출 될 때 sp_cdc_generate_wrapper_function *column_list* 인수에서 식별 되는 열입니다.|  
 |__CDC_OPERATION|**nvarchar(2)**|대상 환경에 행을 적용하는 데 필요한 작업을 나타내는 작업 코드입니다. 이 매개 변수는 호출에 제공 된 *row_filter_option* 인수의 값에 따라 달라 집니다.<br /><br /> *row_filter_option* = ' 모두 '<br /><br /> 'D' - 삭제 작업<br /><br /> 'I' - 삽입 작업<br /><br /> 'UN' - 업데이트 작업 새 값<br /><br /> *row_filter_option* = ' 모든 업데이트 이전 '<br /><br /> 'D' - 삭제 작업<br /><br /> 'I' - 삽입 작업<br /><br /> 'UN' - 업데이트 작업 새 값<br /><br /> 'UO' - 업데이트 작업 이전 값|  
 |\<columns from @update_flag_list>|**bit**|_uflag를 열 이름에 추가하여 이름을 지정한 비트 플래그입니다. \__CDC_OPERATION이 ' d ', ' I ', ' UO ' 인 경우 플래그는 항상 NULL로 설정 됩니다. \__CDC_OPERATION ' u n ' 이면 업데이트에서 해당 열에 대 한 변경 내용을 생성 하는 경우 1로 설정 됩니다. 그렇지 않으면 0입니다.|  
   
@@ -110,7 +111,7 @@ fn_all_changes_<capture_instance> ('start_time' ,'end_time', '<row_filter_option
   
  변경 데이터 캡처 구성 템플릿 ' Schema 용 CDC 래퍼 Tvf 인스턴스화 '에서는 sp_cdc_generate_wrapper_function 저장 프로시저를 사용 하 여 스키마에 정의 된 쿼리 함수의 모든 래퍼 함수에 대 한 CREATE 스크립트를 가져오는 방법을 보여 줍니다. 그런 다음 이 템플릿에서는 이러한 스크립트를 만듭니다. 템플릿에 대 한 자세한 내용은 [템플릿 탐색기](../../ssms/template/template-explorer.md)를 참조 하세요.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [sp_cdc_generate_wrapper_function &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-generate-wrapper-function-transact-sql.md)   
  [fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-sql&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)  
   

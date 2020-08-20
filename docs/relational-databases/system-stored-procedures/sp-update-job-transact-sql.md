@@ -1,4 +1,5 @@
 ---
+description: sp_update_job(Transact-SQL)
 title: sp_update_job (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: cbdfea38-9e42-47f3-8fc8-5978b82e2623
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 99d15bc1a877d73598d84c66185a76b004b72de9
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 88123b9997d1111c0254d38fd770bb1fd8949d0e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891326"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485589"
 ---
 # <a name="sp_update_job-transact-sql"></a>sp_update_job(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -56,25 +57,25 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @job_id = ] job_id`업데이트할 작업의 id 번호입니다. **uniqueidentifier** *job_id*입니다.  
+`[ @job_id = ] job_id` 업데이트할 작업의 id 번호입니다. **uniqueidentifier** *job_id*입니다.  
   
-`[ @job_name = ] 'job_name'`작업의 이름입니다. *job_name* 은 **nvarchar (128)** 입니다.  
+`[ @job_name = ] 'job_name'` 작업의 이름입니다. *job_name* 은 **nvarchar (128)** 입니다.  
   
 > **참고:** *Job_id* 또는 *job_name* 를 지정 해야 하지만 둘 다 지정할 수 없습니다.  
   
-`[ @new_name = ] 'new_name'`작업의 새 이름입니다. *new_name* 은 **nvarchar (128)** 입니다.  
+`[ @new_name = ] 'new_name'` 작업의 새 이름입니다. *new_name* 은 **nvarchar (128)** 입니다.  
   
-`[ @enabled = ] enabled`작업을 사용할지 (**1**) 또는 사용 하지 않을 지 (**0**) 여부를 지정 합니다. *enabled* 는 **tinyint**입니다.  
+`[ @enabled = ] enabled` 작업을 사용할지 (**1**) 또는 사용 하지 않을 지 (**0**) 여부를 지정 합니다. *enabled* 는 **tinyint**입니다.  
   
-`[ @description = ] 'description'`작업에 대 한 설명입니다. *설명은* **nvarchar (512)** 입니다.  
+`[ @description = ] 'description'` 작업에 대 한 설명입니다. *설명은* **nvarchar (512)** 입니다.  
   
-`[ @start_step_id = ] step_id`작업에 대해 실행할 첫 번째 단계의 id입니다. *step_id* 은 **int**입니다.  
+`[ @start_step_id = ] step_id` 작업에 대해 실행할 첫 번째 단계의 id입니다. *step_id* 은 **int**입니다.  
   
-`[ @category_name = ] 'category'`작업의 범주입니다. *category* 는 **nvarchar (128)** 입니다.  
+`[ @category_name = ] 'category'` 작업의 범주입니다. *category* 는 **nvarchar (128)** 입니다.  
   
-`[ @owner_login_name = ] 'login'`작업을 소유 하는 로그인의 이름입니다. *login* 은 **nvarchar (128)** 입니다. **sysadmin** 고정 서버 역할의 멤버만 작업 소유권을 변경할 수 있습니다.  
+`[ @owner_login_name = ] 'login'` 작업을 소유 하는 로그인의 이름입니다. *login* 은 **nvarchar (128)** 입니다. **sysadmin** 고정 서버 역할의 멤버만 작업 소유권을 변경할 수 있습니다.  
   
-`[ @notify_level_eventlog = ] eventlog_level`Microsoft Windows 응용 프로그램 로그에서이 작업에 대 한 항목을 저장할 시기를 지정 합니다. *eventlog_level*은 **int**이며 다음 값 중 하나일 수 있습니다.  
+`[ @notify_level_eventlog = ] eventlog_level` Microsoft Windows 응용 프로그램 로그에서이 작업에 대 한 항목을 저장할 시기를 지정 합니다. *eventlog_level*은 **int**이며 다음 값 중 하나일 수 있습니다.  
   
 |값|설명(동작)|  
 |-----------|----------------------------|  
@@ -83,21 +84,21 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
 |**2**|실패한 경우|  
 |**3**|항상|  
   
-`[ @notify_level_email = ] email_level`이 작업이 완료 될 때 전자 메일을 보낼 시기를 지정 합니다. *email_level*은 **int**입니다. *email_level*는 *eventlog_level*와 동일한 값을 사용 합니다.  
+`[ @notify_level_email = ] email_level` 이 작업이 완료 될 때 전자 메일을 보낼 시기를 지정 합니다. *email_level*은 **int**입니다. *email_level*는 *eventlog_level*와 동일한 값을 사용 합니다.  
   
-`[ @notify_level_netsend = ] netsend_level`이 작업이 완료 될 때 네트워크 메시지를 보낼 시기를 지정 합니다. *netsend_level*은 **int**입니다. *netsend_level*는 *eventlog_level*와 동일한 값을 사용 합니다.  
+`[ @notify_level_netsend = ] netsend_level` 이 작업이 완료 될 때 네트워크 메시지를 보낼 시기를 지정 합니다. *netsend_level*은 **int**입니다. *netsend_level*는 *eventlog_level*와 동일한 값을 사용 합니다.  
   
-`[ @notify_level_page = ] page_level`이 작업이 완료 될 때 페이지를 보낼 시기를 지정 합니다. *page_level* 은 **int**입니다. *page_level*는 *eventlog_level*와 동일한 값을 사용 합니다.  
+`[ @notify_level_page = ] page_level` 이 작업이 완료 될 때 페이지를 보낼 시기를 지정 합니다. *page_level* 은 **int**입니다. *page_level*는 *eventlog_level*와 동일한 값을 사용 합니다.  
   
 `[ @notify_email_operator_name = ] 'operator_name'`*Email_level* 에 도달 했을 때 전자 메일을 받을 운영자의 이름입니다. *email_name* 은 **nvarchar (128)** 입니다.  
   
-`[ @notify_netsend_operator_name = ] 'netsend_operator'`네트워크 메시지가 전송 되는 운영자의 이름입니다. *netsend_operator* 은 **nvarchar (128)** 입니다.  
+`[ @notify_netsend_operator_name = ] 'netsend_operator'` 네트워크 메시지가 전송 되는 운영자의 이름입니다. *netsend_operator* 은 **nvarchar (128)** 입니다.  
   
-`[ @notify_page_operator_name = ] 'page_operator'`페이지가 전송 되는 운영자의 이름입니다. *page_operator* 은 **nvarchar (128)** 입니다.  
+`[ @notify_page_operator_name = ] 'page_operator'` 페이지가 전송 되는 운영자의 이름입니다. *page_operator* 은 **nvarchar (128)** 입니다.  
   
-`[ @delete_level = ] delete_level`작업 삭제 시기를 지정 합니다. *delete_value*은 **int**입니다. *delete_level*는 *eventlog_level*와 동일한 값을 사용 합니다.  
+`[ @delete_level = ] delete_level` 작업 삭제 시기를 지정 합니다. *delete_value*은 **int**입니다. *delete_level*는 *eventlog_level*와 동일한 값을 사용 합니다.  
   
-`[ @automatic_post = ] automatic_post`쓰이는.  
+`[ @automatic_post = ] automatic_post` 쓰이는.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -120,7 +121,7 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
   
  **Sysadmin** 의 멤버만이 저장 프로시저를 사용 하 여 다른 사용자가 소유 하는 작업의 특성을 편집할 수 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `NightlyBackups` 작업의 이름, 설명 및 활성화 상태를 변경합니다.  
   
 ```  
@@ -136,7 +137,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;sp_add_job &#40;](../../relational-databases/system-stored-procedures/sp-add-job-transact-sql.md)   
+ [sp_add_job&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-job-transact-sql.md)   
  [Transact-sql&#41;sp_delete_job &#40;](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
  [Transact-sql&#41;sp_help_job &#40;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

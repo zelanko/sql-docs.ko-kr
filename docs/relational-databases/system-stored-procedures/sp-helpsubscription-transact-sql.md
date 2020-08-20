@@ -1,4 +1,5 @@
 ---
+description: sp_helpsubscription(Transact-SQL)
 title: sp_helpsubscription (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ff96bcbf-e2b9-4da8-8515-d80d4ce86c16
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 43951ff65e904bcb0802f84793f9f2101bfd14e9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b1bd6fc81b1af824ded4b193fe34455035edbd56
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85736943"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485919"
 ---
 # <a name="sp_helpsubscription-transact-sql"></a>sp_helpsubscription(Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -42,21 +43,21 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @publication = ] 'publication'`연결 된 게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 **%** 이 서버에 대 한 모든 구독 정보를 반환 합니다.  
+`[ @publication = ] 'publication'` 연결 된 게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 **%** 이 서버에 대 한 모든 구독 정보를 반환 합니다.  
   
-`[ @article = ] 'article'`아티클의 이름입니다. *article* 은 **sysname**이며 기본값은 **%** 선택한 게시 및 구독자에 대 한 모든 구독 정보를 반환 하는입니다. **All**인 경우 게시의 전체 구독에 대해 하나의 항목만 반환 됩니다.  
+`[ @article = ] 'article'` 아티클의 이름입니다. *article* 은 **sysname**이며 기본값은 **%** 선택한 게시 및 구독자에 대 한 모든 구독 정보를 반환 하는입니다. **All**인 경우 게시의 전체 구독에 대해 하나의 항목만 반환 됩니다.  
   
-`[ @subscriber = ] 'subscriber'`구독 정보를 가져올 구독자의 이름입니다. *구독자* 는 **sysname**이며 기본값은 **%** 선택한 게시 및 아티클에 대 한 모든 구독 정보를 반환 하는입니다.  
+`[ @subscriber = ] 'subscriber'` 구독 정보를 가져올 구독자의 이름입니다. *구독자* 는 **sysname**이며 기본값은 **%** 선택한 게시 및 아티클에 대 한 모든 구독 정보를 반환 하는입니다.  
   
-`[ @destination_db = ] 'destination_db'`대상 데이터베이스의 이름입니다. *destination_db* 는 **sysname**이며 기본값은 **%** 입니다.  
+`[ @destination_db = ] 'destination_db'` 대상 데이터베이스의 이름입니다. *destination_db* 는 **sysname**이며 기본값은 **%** 입니다.  
   
-`[ @found = ] 'found'OUTPUT`반환 하는 행을 나타내는 플래그입니다. *검색*된 **int** 및 OUTPUT 매개 변수 이며 기본값은 23456입니다.  
+`[ @found = ] 'found'OUTPUT` 반환 하는 행을 나타내는 플래그입니다. *검색*된 **int** 및 OUTPUT 매개 변수 이며 기본값은 23456입니다.  
   
  **1** 은 게시가 발견 되었음을 나타냅니다.  
   
  **0** 은 게시를 찾을 수 없음을 나타냅니다.  
   
-`[ @publisher = ] 'publisher'`게시자의 이름입니다. *publisher* 는 **sysname**이며 기본값은 현재 서버의 이름입니다.  
+`[ @publisher = ] 'publisher'` 게시자의 이름입니다. *publisher* 는 **sysname**이며 기본값은 현재 서버의 이름입니다.  
   
 > [!NOTE]  
 >  Oracle 게시자 인 경우를 제외 하 고는 *게시자* 를 지정 하면 안 됩니다.  
@@ -76,7 +77,7 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
 |**구독 이름**|**nvarchar(255)**|구독의 이름입니다.|  
 |**업데이트 모드**|**int**|**0** = 읽기 전용<br /><br /> **1** = 즉시 업데이트 구독|  
 |**distribution job id**|**binary(16)**|배포 에이전트의 작업 ID입니다.|  
-|**loopback_detection**|**bit**|루프백 검색은 배포 에이전트가 구독자에서 발생한 트랜잭션을 다시 구독자로 보낼지 여부를 결정합니다.<br /><br /> **0** = 다시 보냅니다.<br /><br /> **1** = 다시 보내지 않습니다.<br /><br /> 양방향 트랜잭션 복제에 사용됩니다. 자세한 내용은 [양방향 트랜잭션 복제](../../relational-databases/replication/transactional/bidirectional-transactional-replication.md)를 참조 하세요.|  
+|**loopback_detection**|**bit**|루프백 검색은 배포 에이전트가 구독자에서 발생한 트랜잭션을 다시 구독자로 보낼지 여부를 결정합니다.<br /><br /> **0** = 다시 보냅니다.<br /><br /> **1** = 다시 보내지 않습니다.<br /><br /> 양방향 트랜잭션 복제에 사용됩니다. 자세한 내용은 [Bidirectional Transactional Replication](../../relational-databases/replication/transactional/bidirectional-transactional-replication.md)를 참조하세요.|  
 |**offload_enabled**|**bit**|복제 에이전트의 오프로드 실행이 구독자에서 실행되도록 설정되었는지 여부를 지정합니다.<br /><br /> **0**인 경우 게시자에서 에이전트가 실행 됩니다.<br /><br /> **1**인 경우 에이전트가 구독자에서 실행 됩니다.|  
 |**offload_server**|**sysname**|원격 에이전트 활성화를 위해 사용할 수 있는 서버의 이름입니다. NULL 인 경우 [MSdistribution_agents](../../relational-databases/system-tables/msdistribution-agents-transact-sql.md) 테이블에 나열 된 현재 offload_server 사용 됩니다.|  
 |**dts_package_name**|**sysname**|DTS(데이터 변환 서비스) 패키지의 이름을 지정합니다.|  

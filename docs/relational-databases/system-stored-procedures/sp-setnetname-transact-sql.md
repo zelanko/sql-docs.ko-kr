@@ -1,4 +1,5 @@
 ---
+description: sp_setnetname(Transact-SQL)
 title: sp_setnetname (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f416ba81-3835-4588-b0a3-2fe75589490e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 87401c8f90f0351f797aa3572c7717bb02360e00
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 68c44dfb6810b677361150cb1ce4d3807c97b1e3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881520"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485676"
 ---
 # <a name="sp_setnetname-transact-sql"></a>sp_setnetname(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -76,7 +77,7 @@ EXEC sp_setnetname 'rpcserv2', 'sqlserv2';
 ## <a name="permissions"></a>사용 권한  
  **Sysadmin** 및 **setupadmin** 고정 서버 역할의 멤버 자격이 필요 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 원격 저장 프로시저 호출을 실행하는 데 사용되는 일반적인 관리 시퀀스를 보여 줍니다.  
   
 ```  
@@ -88,8 +89,8 @@ EXEC Win_1.master.dbo.sp_who;
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;저장 프로시저 데이터베이스 엔진](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [Transact-sql&#41;sp_addlinkedserver &#40;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
+ [Transact-sql&#41;&#40;저장 프로시저 데이터베이스 엔진 ](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [sp_addlinkedserver&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
  [Transact-sql&#41;sp_addserver &#40;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

@@ -1,4 +1,5 @@
 ---
+description: sp_procoption(Transact-SQL)
 title: sp_procoption (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6f0221bd-70b4-4b04-b15d-722235aceb3c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8a7a4942e3109ec244cb7a16f4ef6a513b1cdcff
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 161f819ba4d9cea76b6cf904b28236f6e6f9fefc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901443"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485854"
 ---
 # <a name="sp_procoption-transact-sql"></a>sp_procoption(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,11 +42,11 @@ sp_procoption [ @ProcName = ] 'procedure'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @ProcName = ] 'procedure'`옵션을 설정 하는 프로시저의 이름입니다. *프로시저* 는 **nvarchar (776)** 이며 기본값은 없습니다.  
+`[ @ProcName = ] 'procedure'` 옵션을 설정 하는 프로시저의 이름입니다. *프로시저* 는 **nvarchar (776)** 이며 기본값은 없습니다.  
   
-`[ @OptionName = ] 'option'`설정할 옵션의 이름입니다. *Option* 의 유일한 값은 **startup**입니다.  
+`[ @OptionName = ] 'option'` 설정할 옵션의 이름입니다. *Option* 의 유일한 값은 **startup**입니다.  
   
-`[ @OptionValue = ] 'value'`옵션을 (**true** 또는 **on**) 또는 off (**false** 또는 **off**)로 설정할지 여부입니다. *값* 은 **varchar (12)** 이며 기본값은 없습니다.  
+`[ @OptionValue = ] 'value'` 옵션을 (**true** 또는 **on**) 또는 off (**false** 또는 **off**)로 설정할지 여부입니다. *값* 은 **varchar (12)** 이며 기본값은 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 오류 번호(실패)  

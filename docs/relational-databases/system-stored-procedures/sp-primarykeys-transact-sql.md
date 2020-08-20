@@ -1,4 +1,5 @@
 ---
+description: sp_primarykeys(Transact-SQL)
 title: sp_primarykeys (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0f76dd31-5b7b-4209-9e2e-b9ed5cac164d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5b9277918b8ed869e121e3cf1fe3389bf402b2a0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 35d9639416ffa551997f5c658148f19682bb3b8c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901467"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485855"
 ---
 # <a name="sp_primarykeys-transact-sql"></a>sp_primarykeys(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,16 +43,16 @@ sp_primarykeys [ @table_server = ] 'table_server'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @table_server = ] 'table_server'_`기본 키 정보를 반환할 연결 된 서버의 이름입니다. *table_server* 는 **sysname**이며 기본값은 없습니다.  
+`[ @table_server = ] 'table_server'_` 기본 키 정보를 반환할 연결 된 서버의 이름입니다. *table_server* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @table_name = ] 'table_name'`기본 키 정보를 제공할 테이블의 이름입니다. *table_name*는 **sysname**이며 기본값은 NULL입니다.  
+`[ @table_name = ] 'table_name'` 기본 키 정보를 제공할 테이블의 이름입니다. *table_name*는 **sysname**이며 기본값은 NULL입니다.  
   
-`[ @table_schema = ] 'table_schema'`테이블 스키마입니다. *table_schema* 는 **sysname**이며 기본값은 NULL입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 환경에서는 테이블 소유자에 해당합니다.  
+`[ @table_schema = ] 'table_schema'` 테이블 스키마입니다. *table_schema* 는 **sysname**이며 기본값은 NULL입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 환경에서는 테이블 소유자에 해당합니다.  
   
-`[ @table_catalog = ] 'table_catalog'`지정 된 *table_name* 있는 카탈로그의 이름입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 환경에서는 데이터베이스 이름에 해당합니다. *table_catalog* 는 **sysname**이며 기본값은 NULL입니다.  
+`[ @table_catalog = ] 'table_catalog'` 지정 된 *table_name* 있는 카탈로그의 이름입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 환경에서는 데이터베이스 이름에 해당합니다. *table_catalog* 는 **sysname**이며 기본값은 NULL입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
- 없음  
+ None  
   
 ## <a name="result-sets"></a>결과 집합  
   
@@ -72,7 +73,7 @@ sp_primarykeys [ @table_server = ] 'table_server'
 ## <a name="permissions"></a>사용 권한  
  스키마에 대한 SELECT 권한이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스의 `LONDON1` 테이블에 대해 `HumanResources.JobCandidate` 서버에서 기본 키 열을 반환합니다.  
   
 ```  
@@ -83,12 +84,12 @@ EXEC sp_primarykeys @table_server = N'LONDON1',
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;분산 쿼리 저장 프로시저](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;분산 쿼리 저장 프로시저 ](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)   
  [Transact-sql&#41;sp_catalogs &#40;](../../relational-databases/system-stored-procedures/sp-catalogs-transact-sql.md)   
  [Transact-sql&#41;sp_column_privileges &#40;](../../relational-databases/system-stored-procedures/sp-column-privileges-transact-sql.md)   
  [Transact-sql&#41;sp_foreignkeys &#40;](../../relational-databases/system-stored-procedures/sp-foreignkeys-transact-sql.md)   
  [Transact-sql&#41;sp_indexes &#40;](../../relational-databases/system-stored-procedures/sp-indexes-transact-sql.md)   
- [Transact-sql&#41;sp_linkedservers &#40;](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)   
+ [sp_linkedservers&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)   
  [Transact-sql&#41;sp_tables_ex &#40;](../../relational-databases/system-stored-procedures/sp-tables-ex-transact-sql.md)   
  [Transact-sql&#41;sp_table_privileges &#40;](../../relational-databases/system-stored-procedures/sp-table-privileges-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

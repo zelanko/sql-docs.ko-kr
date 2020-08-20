@@ -1,4 +1,5 @@
 ---
+description: sp_addscriptexec(Transact-SQL)
 title: sp_addscriptexec (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1627db41-6a80-45b6-b0b9-c0b7f9a1c886
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7907f085cedfeb6a5dfc8be70c9a7eff67dc37b0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a133709a8fbaaabd58a9ad00d7298bf34317b0cf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85876551"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486359"
 ---
 # <a name="sp_addscriptexec-transact-sql"></a>sp_addscriptexec(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,17 +41,17 @@ sp_addscriptexec [ @publication = ] publication
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @publication = ] 'publication'`게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 없습니다.  
+`[ @publication = ] 'publication'` 게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @scriptfile = ] 'scriptfile'`SQL 스크립트 파일의 전체 경로입니다. *scriptfile* 는 **nvarchar (4000)** 이며 기본값은 없습니다.  
+`[ @scriptfile = ] 'scriptfile'` SQL 스크립트 파일의 전체 경로입니다. *scriptfile* 는 **nvarchar (4000)** 이며 기본값은 없습니다.  
   
-`[ @skiperror = ] 'skiperror'`스크립트를 처리 하는 동안 오류가 발생 하는 경우 배포 에이전트 또는 병합 에이전트를 중지할지 여부를 나타냅니다. *SkipError* 는 **bit**이며 기본값은 0입니다.  
+`[ @skiperror = ] 'skiperror'` 스크립트를 처리 하는 동안 오류가 발생 하는 경우 배포 에이전트 또는 병합 에이전트를 중지할지 여부를 나타냅니다. *SkipError* 는 **bit**이며 기본값은 0입니다.  
   
  **0** = 에이전트가 중지 됩니다.  
   
  **1** = 에이전트가 스크립트를 계속 하 고 오류를 무시 합니다.  
   
-`[ @publisher = ] 'publisher'`이외 게시자를 지정 합니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *publisher* 는 **sysname**이며 기본값은 NULL입니다.  
+`[ @publisher = ] 'publisher'` 이외 게시자를 지정 합니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *publisher* 는 **sysname**이며 기본값은 NULL입니다.  
   
 > [!NOTE]  
 >  게시자에서 게시할 때는 *게시자* 를 사용 하면 안 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -77,7 +78,7 @@ sp_addscriptexec [ @publication = ] publication
 ## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할 또는 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_addscriptexec**을 실행할 수 있습니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [복제 Transact-sql 프로그래밍 &#40;동기화 중 스크립트 실행&#41;](../../relational-databases/replication/execute-scripts-during-synchronization-replication-transact-sql-programming.md)   
  [데이터 동기화](../../relational-databases/replication/synchronize-data.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

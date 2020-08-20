@@ -1,4 +1,5 @@
 ---
+description: sp_registercustomresolver(Transact-SQL)
 title: sp_registercustomresolver (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6d2b0472-0e1f-4005-833c-735d1940fe93
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e16fe7352b03e803af57ca1ef4b744597b57a18f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 92c601a4cf105c1c1b8ff1403d457a5a21d0f356
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901438"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485816"
 ---
 # <a name="sp_registercustomresolver-transact-sql"></a>sp_registercustomresolver(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,15 +42,15 @@ sp_registercustomresolver [ @article_resolver = ] 'article_resolver'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @article_resolver = ] 'article_resolver'`등록할 사용자 지정 비즈니스 논리의 이름을 지정 합니다. *article_resolver* 은 **nvarchar (255)** 이며 기본값은 없습니다.  
+`[ @article_resolver = ] 'article_resolver'` 등록할 사용자 지정 비즈니스 논리의 이름을 지정 합니다. *article_resolver* 은 **nvarchar (255)** 이며 기본값은 없습니다.  
   
-`[ @resolver_clsid = ] 'resolver_clsid'`등록할 COM 개체의 CLSID 값을 지정 합니다. 사용자 지정 비즈니스 논리 *resolver_clsid* 는 **nvarchar (50)** 이며 기본값은 NULL입니다. 이 매개 변수는 유효한 CLSID로 설정하거나 비즈니스 논리 처리기 어셈블리를 등록할 때는 NULL로 설정해야 합니다.  
+`[ @resolver_clsid = ] 'resolver_clsid'` 등록할 COM 개체의 CLSID 값을 지정 합니다. 사용자 지정 비즈니스 논리 *resolver_clsid* 는 **nvarchar (50)** 이며 기본값은 NULL입니다. 이 매개 변수는 유효한 CLSID로 설정하거나 비즈니스 논리 처리기 어셈블리를 등록할 때는 NULL로 설정해야 합니다.  
   
-`[ @is_dotnet_assembly = ] 'is_dotnet_assembly'`등록할 사용자 지정 비즈니스 논리의 유형을 지정 합니다. *is_dotnet_assembly* 는 **nvarchar (50)** 이며 기본값은 FALSE입니다. **true** 는 등록 중인 사용자 지정 비즈니스 논리가 비즈니스 논리 처리기 어셈블리 임을 나타냅니다. **false** 는 COM 구성 요소 임을 나타냅니다.  
+`[ @is_dotnet_assembly = ] 'is_dotnet_assembly'` 등록할 사용자 지정 비즈니스 논리의 유형을 지정 합니다. *is_dotnet_assembly* 는 **nvarchar (50)** 이며 기본값은 FALSE입니다. **true** 는 등록 중인 사용자 지정 비즈니스 논리가 비즈니스 논리 처리기 어셈블리 임을 나타냅니다. **false** 는 COM 구성 요소 임을 나타냅니다.  
   
-`[ @dotnet_assembly_name = ] 'dotnet_assembly_name'`비즈니스 논리 처리기를 구현 하는 어셈블리의 이름입니다. *dotnet_assembly_name* 은 **nvarchar (255)** 이며 기본값은 NULL입니다. 어셈블리가 병합 에이전트 실행 파일과 같은 디렉터리, 병합 에이전트를 동기적으로 시작하는 애플리케이션과 같은 디렉터리 또는 GAC(전역 어셈블리 캐시)에서 배포되지 않은 경우 어셈블리에 대한 전체 경로를 지정해야 합니다.  
+`[ @dotnet_assembly_name = ] 'dotnet_assembly_name'` 비즈니스 논리 처리기를 구현 하는 어셈블리의 이름입니다. *dotnet_assembly_name* 은 **nvarchar (255)** 이며 기본값은 NULL입니다. 어셈블리가 병합 에이전트 실행 파일과 같은 디렉터리, 병합 에이전트를 동기적으로 시작하는 애플리케이션과 같은 디렉터리 또는 GAC(전역 어셈블리 캐시)에서 배포되지 않은 경우 어셈블리에 대한 전체 경로를 지정해야 합니다.  
   
-`[ @dotnet_class_name = ] 'dotnet_class_name'`는를 재정의 하 여 비즈니스 논리 처리기를 구현 하는 클래스의 이름입니다 <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> . 이름은 **Namespace. Classname**형식으로 지정 해야 합니다. *dotnet_class_name* 은 **nvarchar (255)** 이며 기본값은 NULL입니다.  
+`[ @dotnet_class_name = ] 'dotnet_class_name'` 는를 재정의 하 여 비즈니스 논리 처리기를 구현 하는 클래스의 이름입니다 <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> . 이름은 **Namespace. Classname**형식으로 지정 해야 합니다. *dotnet_class_name* 은 **nvarchar (255)** 이며 기본값은 NULL입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -61,7 +62,7 @@ sp_registercustomresolver [ @article_resolver = ] 'article_resolver'
  **Sysadmin** 고정 서버 역할 또는 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_registercustomresolver**을 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [병합 아티클에 대 한 비즈니스 논리 처리기 구현](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)   
+ [병합 아티클에 대한 비즈니스 논리 처리기 구현](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)   
  [병합 아티클에 대 한 사용자 지정 충돌 해결 프로그램 구현](../../relational-databases/replication/implement-a-custom-conflict-resolver-for-a-merge-article.md)   
  [Transact-sql&#41;sp_lookupcustomresolver &#40;](../../relational-databases/system-stored-procedures/sp-lookupcustomresolver-transact-sql.md)   
  [Transact-sql&#41;sp_unregistercustomresolver &#40;](../../relational-databases/system-stored-procedures/sp-unregistercustomresolver-transact-sql.md)   

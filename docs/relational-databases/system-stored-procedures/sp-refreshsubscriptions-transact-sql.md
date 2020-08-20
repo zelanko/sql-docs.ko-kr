@@ -1,4 +1,5 @@
 ---
+description: sp_refreshsubscriptions(Transact-SQL)
 title: sp_refreshsubscriptions (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6cb9b1ce-1ce7-43ab-9451-201f79ed1ffa
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a2a0c662d74e99a9d8151026dd514a39dd0e7c70
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 98acb61611d25e695c481e9a93a215333b9ae020
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85719240"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485836"
 ---
 # <a name="sp_refreshsubscriptions-transact-sql"></a>sp_refreshsubscriptions(Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -37,7 +38,7 @@ sp_refreshsubscriptions [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @publication = ] 'publication'`구독을 새로 고칠 게시입니다. *게시* 는 **sysname**이며 기본값은 없습니다.  
+`[ @publication = ] 'publication'` 구독을 새로 고칠 게시입니다. *게시* 는 **sysname**이며 기본값은 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

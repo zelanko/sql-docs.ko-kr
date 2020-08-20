@@ -1,4 +1,5 @@
 ---
+description: sp_helppeerresponses(Transact-SQL)
 title: sp_helppeerresponses (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e55789d1-43fb-4a37-9e5e-60ccef122a5d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7b6e6ed76873abba0988045a1c336b4a34fb5d48
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9c1570b01ca8ae3d62303e64760dbc8664981bcb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893535"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485934"
 ---
 # <a name="sp_helppeerresponses-transact-sql"></a>sp_helppeerresponses(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +38,7 @@ sp_helppeerresponses [ @request_id = ] request_id
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @request_id = ] request_id`특정 상태 요청의 ID입니다. *request_id* 는 **int**이며 기본값은 없습니다.  
+`[ @request_id = ] request_id` 특정 상태 요청의 ID입니다. *request_id* 는 **int**이며 기본값은 없습니다.  
   
 ## <a name="result-sets"></a>결과 집합  
   

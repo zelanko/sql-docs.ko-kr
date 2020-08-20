@@ -1,4 +1,5 @@
 ---
+description: sp_manage_jobs_by_login(Transact-SQL)
 title: sp_manage_jobs_by_login (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 832ec15a-6e92-4eb5-8c4a-af4dba79fbaa
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e810bf996f7dbaa8624c6a0e834011d759aa9348
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: fb7d27bab8fd7593b92f52d33fd847facab4ee0c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899386"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485903"
 ---
 # <a name="sp_manage_jobs_by_login-transact-sql"></a>sp_manage_jobs_by_login(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,11 +43,11 @@ sp_manage_jobs_by_login
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @action = ] 'action'`지정 된 로그인에 대해 수행할 동작입니다. *action* 은 **varchar (10)** 이며 기본값은 없습니다. *작업이* **DELETE**인 경우 **sp_manage_jobs_by_login** 는 *current_owner_login_name*소유의 모든 작업을 삭제 합니다. *작업이* **재할당**되 면 모든 작업이 *new_owner_login_name*에 할당 됩니다.  
+`[ @action = ] 'action'` 지정 된 로그인에 대해 수행할 동작입니다. *action* 은 **varchar (10)** 이며 기본값은 없습니다. *작업이* **DELETE**인 경우 **sp_manage_jobs_by_login** 는 *current_owner_login_name*소유의 모든 작업을 삭제 합니다. *작업이* **재할당**되 면 모든 작업이 *new_owner_login_name*에 할당 됩니다.  
   
-`[ @current_owner_login_name = ] 'current_owner_login_name'`현재 작업 소유자의 로그인 이름입니다. *current_owner_login_name* 는 **sysname**이며 기본값은 없습니다.  
+`[ @current_owner_login_name = ] 'current_owner_login_name'` 현재 작업 소유자의 로그인 이름입니다. *current_owner_login_name* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @new_owner_login_name = ] 'new_owner_login_name'`새 작업 소유자의 로그인 이름입니다. *작업* 을 **다시 할당**하는 경우에만이 매개 변수를 사용 합니다. *new_owner_login_name* 는 **sysname**이며 기본값은 NULL입니다.  
+`[ @new_owner_login_name = ] 'new_owner_login_name'` 새 작업 소유자의 로그인 이름입니다. *작업* 을 **다시 할당**하는 경우에만이 매개 변수를 사용 합니다. *new_owner_login_name* 는 **sysname**이며 기본값은 NULL입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -57,7 +58,7 @@ sp_manage_jobs_by_login
 ## <a name="permissions"></a>사용 권한  
  이 저장 프로시저를 실행 하려면 사용자에 게 **sysadmin** 고정 서버 역할을 부여 해야 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `danw` 의 모든 작업을 `françoisa`에 다시 할당합니다.  
   
 ```  

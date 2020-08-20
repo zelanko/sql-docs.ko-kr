@@ -1,4 +1,5 @@
 ---
+description: sp_publication_validation(Transact-SQL)
 title: sp_publication_validation (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 06be2363-00c0-4936-97c1-7347f294a936
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: db8a79e723d76cdf54377618cc94cb6a4b5431d7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 02409799b4fe597eb784ffe9d94d645c92cddcd0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715176"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485853"
 ---
 # <a name="sp_publication_validation-transact-sql"></a>sp_publication_validation(Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -41,27 +42,27 @@ sp_publication_validation [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @publication = ] 'publication'`게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 없습니다.  
+`[ @publication = ] 'publication'` 게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @rowcount_only = ] 'rowcount_only'`테이블에 대 한 행 개수만 반환 하는지 여부입니다. *rowcount_only* 은 **smallint** 이며 다음 값 중 하나일 수 있습니다.  
+`[ @rowcount_only = ] 'rowcount_only'` 테이블에 대 한 행 개수만 반환 하는지 여부입니다. *rowcount_only* 은 **smallint** 이며 다음 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**0**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 호환 체크섬을 수행합니다.<br /><br /> 참고: 아티클이 행 필터링 되 면 체크섬 작업 대신 행 개수 연산이 수행 됩니다.|  
 |**1** (기본값)|행 개수 검사만 수행합니다.|  
 |**2**|행 개수와 이진 체크섬을 수행합니다.<br /><br /> 참고: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전 7.0 구독자의 경우 행 개수 유효성 검사만 수행 됩니다.|  
   
-`[ @full_or_fast = ] 'full_or_fast'`행 개수를 계산 하는 데 사용 되는 방법입니다. *full_or_fast* 은 **tinyint** 이며 다음 값 중 하나일 수 있습니다.  
+`[ @full_or_fast = ] 'full_or_fast'` 행 개수를 계산 하는 데 사용 되는 방법입니다. *full_or_fast* 은 **tinyint** 이며 다음 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**0**|COUNT(*)를 사용하여 전체 개수를 계산합니다.|  
 |**1**|는 **sysindexes 행**에서 빠르게 계산 합니다. [sys.sys인덱스](../../relational-databases/system-compatibility-views/sys-sysindexes-transact-sql.md) 의 행 수를 계산 하는 것은 실제 테이블의 행 수를 계산 하는 것 보다 훨씬 빠릅니다. 그러나 [sys.sys인덱스](../../relational-databases/system-compatibility-views/sys-sysindexes-transact-sql.md) 는 지연 업데이트 되므로 행 개수가 정확 하지 않을 수 있습니다.|  
 |**2** (기본값)|먼저 빠른 방법을 시도함으로써 조건부로 빠른 계산 방법을 수행합니다. 빠른 방법의 결과에 차이점이 있는 경우 전체 방법으로 전환합니다. *Expected_rowcount* 가 NULL이 고 저장 프로시저를 사용 하 여 값을 가져오는 경우에는 항상 전체 개수 (*)가 사용 됩니다.|  
   
-`[ @shutdown_agent = ] 'shutdown_agent'`유효성 검사가 완료 되 면 즉시 배포 에이전트 종료 해야 하는지 여부입니다. *shutdown_agent* 은 **bit**이며 기본값은 **0**입니다. **0**인 경우 복제 에이전트가 종료 되지 않습니다. **1**인 경우 마지막 아티클의 유효성을 검사 한 후 복제 에이전트가 종료 됩니다.  
+`[ @shutdown_agent = ] 'shutdown_agent'` 유효성 검사가 완료 되 면 즉시 배포 에이전트 종료 해야 하는지 여부입니다. *shutdown_agent* 은 **bit**이며 기본값은 **0**입니다. **0**인 경우 복제 에이전트가 종료 되지 않습니다. **1**인 경우 마지막 아티클의 유효성을 검사 한 후 복제 에이전트가 종료 됩니다.  
   
-`[ @publisher = ] 'publisher'`이외 게시자를 지정 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *publisher* 는 **sysname**이며 기본값은 NULL입니다.  
+`[ @publisher = ] 'publisher'` 이외 게시자를 지정 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *publisher* 는 **sysname**이며 기본값은 NULL입니다.  
   
 > [!NOTE]  
 >  게시자에 대 한 유효성 검사를 요청할 때는 *게시자* 를 사용 하면 안 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

@@ -1,4 +1,5 @@
 ---
+description: sp_refreshsqlmodule(Transact-SQL)
 title: sp_refreshsqlmodule (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/25/2018
@@ -26,12 +27,12 @@ ms.assetid: f0022a05-50dd-4620-961d-361b1681d375
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 11b7ec3592e73d890a6abab1e0d5df39e53eef18
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 0c2621ffb96ad93d75e5b59e11963f93bf0f32eb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396481"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485892"
 ---
 # <a name="sp_refreshsqlmodule-transact-sql"></a>sp_refreshsqlmodule(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -56,9 +57,9 @@ sys.sp_refreshsqlmodule [ @name = ] 'module_name'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @name = ] 'module\_name'`저장 프로시저, 사용자 정의 함수, 뷰, DML 트리거, 데이터베이스 수준 DDL 트리거 또는 서버 수준 DDL 트리거의 이름입니다. *module_name* 은 clr (공용 언어 런타임) 저장 프로시저 또는 clr 함수가 될 수 없습니다. *module_name* 은 스키마 바인딩될 수 없습니다. *module_name* 는 **nvarchar**이며 기본값은 없습니다. *module_name* 은 여러 부분으로 구성 된 식별자가 될 수 있지만 현재 데이터베이스의 개체만 참조할 수 있습니다.  
+`[ @name = ] 'module\_name'` 저장 프로시저, 사용자 정의 함수, 뷰, DML 트리거, 데이터베이스 수준 DDL 트리거 또는 서버 수준 DDL 트리거의 이름입니다. *module_name* 은 clr (공용 언어 런타임) 저장 프로시저 또는 clr 함수가 될 수 없습니다. *module_name* 은 스키마 바인딩될 수 없습니다. *module_name* 는 **nvarchar**이며 기본값은 없습니다. *module_name* 은 여러 부분으로 구성 된 식별자가 될 수 있지만 현재 데이터베이스의 개체만 참조할 수 있습니다.  
   
-`[ , @namespace = ] ' \<class> '`는 지정 된 모듈의 클래스입니다. *MODULE_NAME* DDL 트리거 인 경우 \<class> 가 필요 합니다. *\<class>* 는 **nvarchar**(20)입니다. 잘못된 입력:  
+`[ , @namespace = ] ' \<class> '` 는 지정 된 모듈의 클래스입니다. *MODULE_NAME* DDL 트리거 인 경우 \<class> 가 필요 합니다. *\<class>* 는 **nvarchar**(20)입니다. 잘못된 입력:  
 
 * DATABASE_DDL_TRIGGER
 
@@ -82,7 +83,7 @@ sys.sp_refreshsqlmodule [ @name = ] 'module_name'
   
  또한 EXECUTE AS 절로 정의되는 모듈의 경우 지정된 보안 주체에 대해 IMPERSONATE 권한이 필요합니다. 일반적으로 모듈이 EXECUTE AS USER로 정의되었으며 보안 주체의 사용자 이름이 모듈이 만들어진 때의 사용자와 다른 사용자로 확인되지 않는 이상 개체를 새로 고쳐도 EXECUTE AS 보안 주체가 변경되지 않습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-refreshing-a-user-defined-function"></a>A. 사용자 정의 함수 새로 고침  
  다음 예에서는 사용자 정의 함수를 새로 고칩니다. 이 예에서는 별칭 데이터 형식인 `mytype`과 `to_upper`을 사용하는 사용자 정의 함수 `mytype`를 만듭니다. 그런 다음 `mytype`의 이름을 `myoldtype`으로 바꾸고 다른 정의가 있는 새 `mytype`을 만듭니다. `dbo.to_upper` 함수를 새로 고치면 이전 항목 대신 새로 구현된 `mytype`이 참조됩니다.  
@@ -169,6 +170,6 @@ GO
   
 ## <a name="see-also"></a>참고 항목  
  [sp_refreshview&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-refreshview-transact-sql.md)   
- [Transact-sql&#41;&#40;저장 프로시저 데이터베이스 엔진](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
+ [Transact-sql&#41;&#40;저장 프로시저 데이터베이스 엔진 ](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: sp_helprotect(Transact-SQL)
 title: sp_helprotect (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: faaa3e40-1c95-43c2-9fdc-c61a1d3cc0c3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8f170c15cdc75c8832adae7fae4147829b3b4bb9
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: eab1ad6fa3e71f4ef5c39ca06b081ed6b3889d29
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899493"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485909"
 ---
 # <a name="sp_helprotect-transact-sql"></a>sp_helprotect(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,15 +48,15 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @name = ] 'object_statement'`현재 데이터베이스에 있는 개체의 이름 또는 보고할 권한이 있는 문입니다. *object_statement* 은 **nvarchar (776)** 이며 기본값은 모든 개체 및 문 사용 권한을 반환 하는 NULL입니다. 값이 개체(테이블,  뷰,  저장 프로시저 또는 확장 저장 프로시저)인 경우에는 반드시 현재 데이터베이스의 유효한 개체여야 합니다. 개체 이름에는 소유자 한정자가 포함 될 수 있습니다 _owner_**.** _개체_입니다.  
+`[ @name = ] 'object_statement'` 현재 데이터베이스에 있는 개체의 이름 또는 보고할 권한이 있는 문입니다. *object_statement* 은 **nvarchar (776)** 이며 기본값은 모든 개체 및 문 사용 권한을 반환 하는 NULL입니다. 값이 개체(테이블,  뷰,  저장 프로시저 또는 확장 저장 프로시저)인 경우에는 반드시 현재 데이터베이스의 유효한 개체여야 합니다. 개체 이름에는 소유자 한정자가 포함 될 수 있습니다 _owner_**.** _개체_입니다.  
   
  문이 *object_statement* 경우 CREATE 문이 될 수 있습니다.  
   
-`[ @username = ] 'security_account'`사용 권한이 반환 되는 보안 주체의 이름입니다. *security_account* 는 **sysname**이며 기본값은 현재 데이터베이스의 모든 보안 주체를 반환 하는 NULL입니다. *security_account* 는 현재 데이터베이스에 있어야 합니다.  
+`[ @username = ] 'security_account'` 사용 권한이 반환 되는 보안 주체의 이름입니다. *security_account* 는 **sysname**이며 기본값은 현재 데이터베이스의 모든 보안 주체를 반환 하는 NULL입니다. *security_account* 는 현재 데이터베이스에 있어야 합니다.  
   
-`[ @grantorname = ] 'grantor'`사용 권한을 부여한 보안 주체의 이름입니다. *grantor* 는 **sysname**이며 기본값은 데이터베이스의 보안 주체에서 부여 된 사용 권한에 대 한 모든 정보를 반환 하는 NULL입니다.  
+`[ @grantorname = ] 'grantor'` 사용 권한을 부여한 보안 주체의 이름입니다. *grantor* 는 **sysname**이며 기본값은 데이터베이스의 보안 주체에서 부여 된 사용 권한에 대 한 모든 정보를 반환 하는 NULL입니다.  
   
-`[ @permissionarea = ] 'type'`개체 사용 권한 (문자열 **o**), 문 사용 권한 (문자열 **s**) 또는 둘 다 (**os**)를 표시할지 여부를 나타내는 문자열입니다. *type* 은 **varchar (10)** 이며 기본값은 **os**입니다. *type* **은 o와** **s**를 조합 하 여 사용할 수 **있습니다.** **o**  
+`[ @permissionarea = ] 'type'` 개체 사용 권한 (문자열 **o**), 문 사용 권한 (문자열 **s**) 또는 둘 다 (**os**)를 표시할지 여부를 나타내는 문자열입니다. *type* 은 **varchar (10)** 이며 기본값은 **os**입니다. *type* **은 o와** **s**를 조합 하 여 사용할 수 **있습니다.** **o**  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -65,7 +66,7 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**소유자**|**sysname**|개체 소유자의 이름입니다.|  
-|**개체**|**sysname**|개체 이름입니다.|  
+|**Object**|**sysname**|개체 이름입니다.|  
 |**피부 여자**|**sysname**|사용 권한이 부여된 보안 주체의 이름입니다.|  
 |**Grantor**|**sysname**|지정된 사람에게 사용 권한을 부여한 보안 주체의 이름입니다.|  
 |**ProtectType**|**nvarchar (10)**|보호의 유형 이름입니다.<br /><br /> GRANT  REVOKE|  
@@ -94,7 +95,7 @@ EXEC sp_helprotect @grantorname = 'dbo';
   
  반환되는 정보는 메타데이터에 대한 액세스 제한 사항에 따라 달라집니다. 보안 주체에 사용 권한이 없는 엔터티는 나타나지 않습니다. 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-listing-the-permissions-for-a-table"></a>A. 테이블에 대한 사용 권한 나열  
  다음 예에서는 `titles` 테이블에 대한 사용 권한을 나열합니다.  
@@ -132,10 +133,10 @@ EXEC sp_helprotect @name = 'CREATE TABLE';
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;보안 저장 프로시저](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [DENY &#40;Transact-sql&#41;](../../t-sql/statements/deny-transact-sql.md)   
- [Transact-sql&#41;&#40;권한 부여](../../t-sql/statements/grant-transact-sql.md)   
- [REVOKE &#40;Transact-sql&#41;](../../t-sql/statements/revoke-transact-sql.md)   
+ [Transact-sql&#41;&#40;보안 저장 프로시저 ](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [DENY&#40;Transact-SQL&#41;](../../t-sql/statements/deny-transact-sql.md)   
+ [GRANT&#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
+ [REVOKE&#40;Transact-SQL&#41;](../../t-sql/statements/revoke-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: sp_replmonitorhelpmergesession(Transact-SQL)
 title: sp_replmonitorhelpmergesession (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a0400ba8-9609-4901-917e-925e119103a1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 305b7a0e2c9d83fe33a6d571198b205f7452ba44
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5fe48c8ed194434fa71ce3fd01f2a8db93ecac74
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725693"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485703"
 ---
 # <a name="sp_replmonitorhelpmergesession-transact-sql"></a>sp_replmonitorhelpmergesession(Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -42,9 +43,9 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @agent_name = ] 'agent_name'`에이전트의 이름입니다. *agent_name* 은 **nvarchar (100)** 이며 기본값은 없습니다.  
+`[ @agent_name = ] 'agent_name'` 에이전트의 이름입니다. *agent_name* 은 **nvarchar (100)** 이며 기본값은 없습니다.  
   
-`[ @hours = ] hours`기록 에이전트 세션 정보를 반환할 시간 범위 (시간)입니다. *시간은* **int**이며 다음 범위 중 하나일 수 있습니다.  
+`[ @hours = ] hours` 기록 에이전트 세션 정보를 반환할 시간 범위 (시간)입니다. *시간은* **int**이며 다음 범위 중 하나일 수 있습니다.  
   
 |값|설명|  
 |-----------|-----------------|  
@@ -52,18 +53,18 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
 |**0** (기본값)|이전에 실행된 모든 에이전트 세션에 대한 정보를 반환합니다.|  
 |> **0**|지난 *시간* 에 발생 한 에이전트 실행에 대 한 정보를 반환 합니다.|  
   
-`[ @session_type = ] session_type`세션 종료 결과를 기준으로 결과 집합을 필터링 합니다. *session_type* 은 **int**이며 다음 값 중 하나일 수 있습니다.  
+`[ @session_type = ] session_type` 세션 종료 결과를 기준으로 결과 집합을 필터링 합니다. *session_type* 은 **int**이며 다음 값 중 하나일 수 있습니다.  
   
 |값|설명|  
 |-----------|-----------------|  
 |**1** (기본값)|다시 시도 또는 성공한 에이전트 세션입니다.|  
 |**0**|실패한 에이전트 세션입니다.|  
   
-`[ @publisher = ] 'publisher'`게시자의 이름입니다. *publisher* 는 **sysname**이며 기본값은 NULL입니다. 이 매개 변수는 구독자에서 **sp_replmonitorhelpmergesession** 를 실행할 때 사용 됩니다.  
+`[ @publisher = ] 'publisher'` 게시자의 이름입니다. *publisher* 는 **sysname**이며 기본값은 NULL입니다. 이 매개 변수는 구독자에서 **sp_replmonitorhelpmergesession** 를 실행할 때 사용 됩니다.  
   
-`[ @publisher_db = ] 'publisher_db'`게시 데이터베이스의 이름입니다. *publisher_db* 는 **sysname**이며 기본값은 NULL입니다. 이 매개 변수는 구독자에서 **sp_replmonitorhelpmergesession** 를 실행할 때 사용 됩니다.  
+`[ @publisher_db = ] 'publisher_db'` 게시 데이터베이스의 이름입니다. *publisher_db* 는 **sysname**이며 기본값은 NULL입니다. 이 매개 변수는 구독자에서 **sp_replmonitorhelpmergesession** 를 실행할 때 사용 됩니다.  
   
-`[ @publication = ] 'publication'`게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 NULL입니다. 이 매개 변수는 구독자에서 **sp_replmonitorhelpmergesession** 를 실행할 때 사용 됩니다.  
+`[ @publication = ] 'publication'` 게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 NULL입니다. 이 매개 변수는 구독자에서 **sp_replmonitorhelpmergesession** 를 실행할 때 사용 됩니다.  
   
 ## <a name="result-sets"></a>결과 집합  
   
@@ -73,7 +74,7 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
 |**상태**|**int**|에이전트 실행 상태입니다.<br /><br /> **1** = 시작<br /><br /> **2** = 성공<br /><br /> **3** = 진행 중<br /><br /> **4** = 유휴 상태<br /><br /> **5** = 다시 시도<br /><br /> **6** = 실패|  
 |**StartTime**|**datetime**|에이전트 작업 세션이 시작된 시간입니다.|  
 |**EndTime**|**datetime**|에이전트 작업 세션이 완료된 시간입니다.|  
-|**Duration**|**int**|해당 작업 세션에 소요된 총 시간(초)입니다.|  
+|**기간**|**int**|해당 작업 세션에 소요된 총 시간(초)입니다.|  
 |**UploadedCommands**|**int**|에이전트 세션 중에 업로드된 명령 수입니다.|  
 |**DownloadedCommands**|**int**|에이전트 세션 중에 다운로드된 명령 수입니다.|  
 |**ErrorMessages**|**int**|에이전트 세션 중에 생성된 오류 메시지 수입니다.|  

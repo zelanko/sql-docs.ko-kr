@@ -1,4 +1,5 @@
 ---
+description: sp_server_diagnostics(Transact-SQL)
 title: sp_server_diagnostics (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 62658017-d089-459c-9492-c51e28f60efe
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6524de89a96f64d2eed6a9f01b38b492ffb0fc04
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d2bd308f79e9ef4a49e91509400e8d4938cd4473
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783743"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485677"
 ---
 # <a name="sp_server_diagnostics-transact-sql"></a>sp_server_diagnostics(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +41,7 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @repeat_interval = ] 'repeat_interval_in_seconds'`상태 정보를 보내기 위해 저장 프로시저를 반복적으로 실행 하는 시간 간격을 나타냅니다.  
+`[ @repeat_interval = ] 'repeat_interval_in_seconds'` 상태 정보를 보내기 위해 저장 프로시저를 반복적으로 실행 하는 시간 간격을 나타냅니다.  
   
  *repeat_interval_in_seconds* 은 **int** 이며 기본값은 0입니다. 올바른 매개 변수 값은 0 또는 5보다 크거나 같은 값입니다. 전체 데이터를 반환하려면 저장 프로시저가 적어도 5초 간격으로 실행되어야 합니다. 반복 모드에서 실행되는 저장 프로시저의 최소값은 5초입니다.  
   
@@ -59,11 +60,11 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 |열|데이터 형식|Description|  
 |------------|---------------|-----------------|  
 |**create_time**|**datetime**|행 만들기의 타임스탬프를 나타냅니다. 단일 행 집합의 각 행은 타임스탬프가 같습니다.|  
-|**component_type**|**sysname**|행에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 수준 구성 요소 또는 Always On 가용성 그룹에 대 한 정보가 포함 되어 있는지 여부를 나타냅니다.<br /><br /> instance<br /><br /> Always On: AvailabilityGroup|  
+|**component_type**|**sysname**|행에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 수준 구성 요소 또는 Always On 가용성 그룹에 대 한 정보가 포함 되어 있는지 여부를 나타냅니다.<br /><br /> 인스턴스<br /><br /> Always On: AvailabilityGroup|  
 |**component_name**|**sysname**|구성 요소의 이름이나 가용성 그룹의 이름을 나타냅니다.<br /><br /> 시스템<br /><br /> resource<br /><br /> query_processing<br /><br /> io_subsystem<br /><br /> events<br /><br /> *\<name of the availability group>*|  
 |**상태**|**int**|구성 요소의 상태를 나타냅니다.<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> 3|  
 |**state_desc**|**sysname**|state 열을 설명합니다. state 열의 값에 해당하는 설명은 다음과 같습니다.<br /><br /> 0: 알 수 없음<br /><br /> 1: 정리<br /><br /> 2: 경고<br /><br /> 3: 오류|  
-|**데이터**|**varchar (max)**|구성 요소와 관련된 데이터를 지정합니다.|  
+|**data**|**varchar (max)**|구성 요소와 관련된 데이터를 지정합니다.|  
   
  다음은 다섯 가지 구성 요소에 대한 설명입니다.  
   
@@ -87,7 +88,7 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 |구성 요소|정상(1)|경고(2)|오류(3)|알 수 없음(0)|  
 |----------------|-----------------|-------------------|-----------------|--------------------|  
 |시스템|x|x|x||  
-|resource|x|x|x||  
+|리소스|x|x|x||  
 |query_processing|x|x|x||  
 |io_subsystem|x|x|||  
 |events||||x|  
@@ -241,6 +242,6 @@ go
 ``` 
   
 ## <a name="see-also"></a>참고 항목  
- [장애 조치 (Failover) 클러스터 인스턴스에 대 한 장애 조치 정책](../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)  
+ [Failover Policy for Failover Cluster Instances](../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)  
   
   

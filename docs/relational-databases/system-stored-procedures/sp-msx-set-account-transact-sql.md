@@ -1,4 +1,5 @@
 ---
+description: sp_msx_set_account(Transact-SQL)
 title: sp_msx_set_account (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 314ec720-3a37-48f7-bb6b-8d5b894bf843
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e9e0e355c033c0ee33dd8c503875d03a163f998b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b2b044279361f2ddd7118c7feda70a963de18761
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893454"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485869"
 ---
 # <a name="sp_msx_set_account-transact-sql"></a>sp_msx_set_account(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,9 +40,9 @@ sp_msx_set_account [ @credential_name = ] 'credential_name'  | [ @credential_id 
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @credential_name = ] 'credential_name'`마스터 서버에 로그인 하는 데 사용할 자격 증명의 이름입니다. 제공된 이름은 기존 자격 증명의 이름이어야 합니다. *Credential_name* 또는 *credential_id* 를 지정 해야 합니다.  
+`[ @credential_name = ] 'credential_name'` 마스터 서버에 로그인 하는 데 사용할 자격 증명의 이름입니다. 제공된 이름은 기존 자격 증명의 이름이어야 합니다. *Credential_name* 또는 *credential_id* 를 지정 해야 합니다.  
   
-`[ @credential_id = ] credential_id`마스터 서버에 로그인 하는 데 사용할 자격 증명의 식별자입니다. 식별자는 기존 자격 증명의 식별자여야 합니다. *Credential_name* 또는 *credential_id* 를 지정 해야 합니다.  
+`[ @credential_id = ] credential_id` 마스터 서버에 로그인 하는 데 사용할 자격 증명의 식별자입니다. 식별자는 기존 자격 증명의 식별자여야 합니다. *Credential_name* 또는 *credential_id* 를 지정 해야 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -57,7 +58,7 @@ sp_msx_set_account [ @credential_name = ] 'credential_name'  | [ @credential_id 
 ## <a name="permissions"></a>사용 권한  
  Execute 권한은 **sysadmin** 고정 서버 역할의 멤버에 게 기본적으로 **sp_msx_set_account** 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 이 서버가 `MsxAccount` 자격 증명을 사용하여 마스터 서버에 로그인하도록 설정합니다.  
   
 ```  
@@ -69,8 +70,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;저장 프로시저 SQL Server 에이전트](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
- [Transact-sql&#41;자격 증명 &#40;만들기](../../t-sql/statements/create-credential-transact-sql.md)   
+ [Transact-sql&#41;&#40;저장 프로시저 SQL Server 에이전트 ](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
+ [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)   
  [Transact-sql&#41;sp_msx_get_account &#40;](../../relational-databases/system-stored-procedures/sp-msx-get-account-transact-sql.md)  
   
   

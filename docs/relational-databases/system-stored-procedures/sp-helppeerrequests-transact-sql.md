@@ -1,4 +1,5 @@
 ---
+description: sp_helppeerrequests(Transact-SQL)
 title: sp_helppeerrequests (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 37bd503e-46c4-47c6-996e-be7ffe636fe8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8f4b6dd66c3903b4503e37166ba8f3ae29439b30
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b16e7c25ebc47ccdb97950658de11d738a0d1666
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893523"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485951"
 ---
 # <a name="sp_helppeerrequests-transact-sql"></a>sp_helppeerrequests(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,9 +39,9 @@ sp_helppeerrequests [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @publication = ] 'publication'`상태 요청이 전송 된 피어 투 피어 토폴로지의 게시 이름입니다. *게시* 는 **sysname**이며 기본값은 없습니다.  
+`[ @publication = ] 'publication'` 상태 요청이 전송 된 피어 투 피어 토폴로지의 게시 이름입니다. *게시* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @description = ] 'description'`개별 상태 요청을 식별 하는 데 사용할 수 있는 값입니다 .이 값을 사용 하면 [sp_requestpeerresponse &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md)를 호출할 때 제공 된 사용자 정의 정보를 기준으로 반환 된 응답을 필터링 할 수 있습니다. *설명은* **nvarchar (4000)** 이며 기본값은 **%** 입니다. 기본적으로 게시에 대한 모든 상태 요청이 반환됩니다. 이 매개 변수는 *설명*에 제공 된 값과 일치 하는 설명으로 상태 요청만 반환 하는 데 사용 됩니다. 여기서 문자열은 [LIKE &#40;transact-sql&#41;](../../t-sql/language-elements/like-transact-sql.md) 절을 사용 하 여 일치 합니다.  
+`[ @description = ] 'description'` 개별 상태 요청을 식별 하는 데 사용할 수 있는 값입니다 .이 값을 사용 하면 [sp_requestpeerresponse &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md)를 호출할 때 제공 된 사용자 정의 정보를 기준으로 반환 된 응답을 필터링 할 수 있습니다. *설명은* **nvarchar (4000)** 이며 기본값은 **%** 입니다. 기본적으로 게시에 대한 모든 상태 요청이 반환됩니다. 이 매개 변수는 *설명*에 제공 된 값과 일치 하는 설명으로 상태 요청만 반환 하는 데 사용 됩니다. 여기서 문자열은 [LIKE &#40;transact-sql&#41;](../../t-sql/language-elements/like-transact-sql.md) 절을 사용 하 여 일치 합니다.  
   
 ## <a name="result-sets"></a>결과 집합  
   
@@ -49,7 +50,7 @@ sp_helppeerrequests [ @publication = ] 'publication'
 |**id**|**int**|요청을 식별합니다.|  
 |**게시물**|**sysname**|상태 요청이 전송된 게시의 이름입니다.|  
 |**sent_date**|**datetime**|상태 요청이 전송된 날짜와 시간입니다.|  
-|**한**|**nvarchar(4000)**|개별 상태 요청을 식별하기 위해 사용할 수 있는 사용자 정의 정보입니다.|  
+|**description**|**nvarchar(4000)**|개별 상태 요청을 식별하기 위해 사용할 수 있는 사용자 정의 정보입니다.|  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
