@@ -1,4 +1,5 @@
 ---
+description: 보고서 생성 (AccessToSQL)
 title: 보고서 생성 (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: abb4264a-622e-4215-af5b-14e309b8a399
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 3701cac59619634b314e138e11eae5af79b8a462
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: b0c97c84282952f8f33aa900a394820830ae8bd5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87938536"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488301"
 ---
 # <a name="generating-reports-accesstosql"></a>보고서 생성 (AccessToSQL)
 명령을 사용 하 여 수행 되는 특정 활동의 보고서는 SSMA 콘솔에서 개체 트리 수준에 생성 됩니다.  
@@ -36,7 +37,7 @@ ms.locfileid: "87938536"
     > [!IMPORTANT]  
     > 출력 보고서는 평가 보고서와 다릅니다. 전자는 실행 된 명령의 성능에 대 한 보고서 이며 후자는 프로그래밍 방식으로 사용할 수 있는 XML 보고서입니다.  
   
-    Sl에서 출력 보고서에 대 한 명령 옵션을 선택 합니다. 아니요. 2-4 위) [AccessToSQL&#41;&#40;SSMA 콘솔 실행](../../ssma/access/executing-the-ssma-console-accesstosql.md) 섹션을 참조 하세요.  
+    Sl에서 출력 보고서에 대 한 명령 옵션을 선택 합니다. 아니요. 2-4 위) [AccessToSQL&#41;&#40;SSMA 콘솔 실행 ](../../ssma/access/executing-the-ssma-console-accesstosql.md) 섹션을 참조 하세요.  
   
 2.  보고서 세부 정보 표시 설정을 사용 하 여 출력 보고서에서 원하는 세부 정보 범위를 표시 합니다.  
   
@@ -138,6 +139,6 @@ ms.locfileid: "87938536"
   
 -   fail-스크립트  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
 [SSMA 콘솔 실행 (Access)](https://msdn.microsoft.com/aa1bf665-8dc0-4259-b36f-46ae67197a43)  
   

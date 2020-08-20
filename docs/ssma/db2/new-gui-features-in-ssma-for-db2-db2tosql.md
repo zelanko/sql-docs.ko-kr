@@ -1,4 +1,5 @@
 ---
+description: D b 2 용 SSMA의 새로운 GUI 기능 (DB2ToSQL)
 title: D b 2 용 SSMA의 새로운 GUI 기능 (DB2ToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: a8ed33e9-185a-492d-a4cf-2fded1aa5c70
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 872eb991483bb1615f3260d64ed5e5438fd1c2ce
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: d3ad4946b7e900fa9ca4adc22e16a299948e00f9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87933544"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488154"
 ---
 # <a name="new-gui-features-in-ssma-for-db2-db2tosql"></a>D b 2 용 SSMA의 새로운 GUI 기능 (DB2ToSQL)
 이 장에서는 SSMA 사용자 인터페이스의 새로운 기능에 대해 설명 합니다.  

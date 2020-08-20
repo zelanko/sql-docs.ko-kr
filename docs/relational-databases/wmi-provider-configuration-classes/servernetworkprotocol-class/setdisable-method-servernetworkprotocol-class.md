@@ -1,4 +1,5 @@
 ---
+description: SetDisable 메서드(ServerNetworkProtocol 클래스)
 title: SetDisable 메서드 (ServerNetworkProtocol)
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0ebbe0c5-07ad-4a76-a918-e379930adf71
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 215e704d58b3c161672d7b93ddfc878fa89fe8b8
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 5fc006f12ab9eda34b9ecffbbc64683a634a9de9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888704"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488448"
 ---
 # <a name="setdisable-method-servernetworkprotocol-class"></a>SetDisable 메서드(ServerNetworkProtocol 클래스)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

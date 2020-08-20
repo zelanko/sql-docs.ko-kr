@@ -1,4 +1,5 @@
 ---
+description: 데이터베이스 찾기 마법사 (위치 선택) (AccessToSQL)
 title: 데이터베이스 찾기 마법사 (위치 선택) (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 00b2d32a-998b-47a7-b25c-589b5bd6777a
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 06a6135425a8baf19d28d99b74e761f229f977fd
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 15e065410a32b0902ad065a1903f4e28da044149
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87938664"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488314"
 ---
 # <a name="find-databases-wizard-select-locations-accesstosql"></a>데이터베이스 찾기 마법사 (위치 선택) (AccessToSQL)
 데이터베이스 찾기 마법사의 위치 선택 페이지에서 Access 데이터베이스를 찾기 위한 검색 매개 변수를 입력 합니다.  
@@ -57,7 +58,7 @@ SSMA에서 검색할 위치를 나열 합니다. **추가** 단추를 클릭 하
 **소유자**  
 소유자의 전체 Windows 사용자 이름을 입력 합니다. 이는 *도메인*사용자로 지정 될 수 있습니다 \\ *user*.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
 [Access 데이터베이스 파일 추가 및 제거](adding-and-removing-access-database-files-accesstosql.md)  
 [사용자 인터페이스 참조 (액세스)](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
   

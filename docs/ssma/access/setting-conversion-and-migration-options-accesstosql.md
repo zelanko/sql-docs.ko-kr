@@ -1,4 +1,5 @@
 ---
+description: 변환 및 마이그레이션 옵션 설정 (AccessToSQL)
 title: 변환 및 마이그레이션 옵션 설정 (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0a7304df-2f35-4453-96ef-7ac83dea1167
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: e074f603586afa0322d62872c49abb52fe47f047
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 8d5113a5c007105a0fab7700d92a16672fa9ab84
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87933964"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488241"
 ---
 # <a name="setting-conversion-and-migration-options-accesstosql"></a>변환 및 마이그레이션 옵션 설정 (AccessToSQL)
 각 SSMA 프로젝트에 대해 프로젝트 수준 옵션을 설정할 수 있습니다. 이러한 옵션은 개체가 변환 되는 방법, 데이터를 마이그레이션하는 방법 및 원본 데이터 형식을 대상 데이터 형식에 매핑하는 방법을 지정 합니다. 개체를로 변환 하거나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL Azure 하거나 데이터를 또는 SQL Azure로 마이그레이션하려면 먼저 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 옵션이 프로젝트에 적합 한지 확인 합니다.  

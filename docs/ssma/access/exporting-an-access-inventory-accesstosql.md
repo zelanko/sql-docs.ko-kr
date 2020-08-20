@@ -1,4 +1,5 @@
 ---
+description: 액세스 인벤토리 내보내기 (AccessToSQL)
 title: 액세스 인벤토리 내보내기 (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 7e1941fb-3d14-4265-aff6-c77a4026d0ed
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 7d7a87d45807c749477da7a7158f3a63fc56ec4b
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 112452e9e6c31810dbf26d9aa1e7b36959c192d5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934025"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488336"
 ---
 # <a name="exporting-an-access-inventory-accesstosql"></a>액세스 인벤토리 내보내기 (AccessToSQL)
 여러 Access 데이터베이스를 사용 하 고 마이그레이션할 데이터베이스를 모를 경우에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로젝트에 있는 모든 access 데이터베이스의 인벤토리를 내보낼 수 있습니다. 그런 다음 해당 데이터베이스 내에서 마이그레이션할 데이터베이스와 개체를 확인 하는 인벤토리 메타 데이터를 검토 하 고 쿼리할 수 있습니다. 이 인벤토리를 사용 하면 다음과 같은 질문에 대 한 답변을 신속 하 게 찾을 수 있습니다.  
@@ -226,6 +227,6 @@ WHERE ColumnName LIKE '%salary%';
 ```  
 열 이름을 모르는 경우 모든 열을 반환 하는 쿼리를 작성할 수 있습니다. 이렇게 하려면 이전 쿼리에서 WHERE 절을 제거 합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
 [마이그레이션을 위해 Access 데이터베이스 준비](preparing-access-databases-for-migration-accesstosql.md)  
   

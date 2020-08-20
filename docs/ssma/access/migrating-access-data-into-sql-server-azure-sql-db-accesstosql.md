@@ -1,4 +1,5 @@
 ---
+description: 액세스 데이터를 SQL Server Azure SQL Database (AccessToSQL)로 마이그레이션
 title: Access 데이터를 Azure SQL Database SQL Server로 마이그레이션 (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: f3b18af7-1af0-499d-a00d-a0af94895625
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: db881613edca3a6108f1d1f8164182465febff11
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: c44f7af6972c316322d4a81b7de9fa13b77205a0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87938136"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488306"
 ---
 # <a name="migrating-access-data-into-sql-server---azure-sql-database-accesstosql"></a>액세스 데이터를 SQL Server Azure SQL Database (AccessToSQL)로 마이그레이션
 로 데이터베이스 개체를 성공적으로 만든 후에는에 대 한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 액세스에서 또는 SQL Azure으로 데이터를 마이그레이션할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -53,7 +54,7 @@ ms.locfileid: "87938136"
 ## <a name="next-step"></a>다음 단계  
 마이그레이션 후에도 계속 사용 하려는 데이터베이스 응용 프로그램에 액세스 하는 경우 Access 데이터베이스 테이블을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure 테이블에 연결 합니다. 자세한 내용은 [SQL Server에 액세스 응용 프로그램 연결](linking-access-applications-to-sql-server-azure-sql-db-accesstosql.md)을 참조 하세요.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
 [SQL Server로 Access 데이터베이스 마이그레이션](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
 [변환 및 마이그레이션 옵션 설정](setting-conversion-and-migration-options-accesstosql.md)  
   

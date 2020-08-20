@@ -1,4 +1,5 @@
 ---
+description: 프로젝트 설정 (변환) (AccessToSQL)
 title: 프로젝트 설정 (변환) (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: bcebc635-c638-4ddb-924c-b9ccfef86388
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 8889e0d869960f8300194afe31fe87b7f0cf2346
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 49df8709518a9654ca5c286c4381b274546007cd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87937893"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488280"
 ---
 # <a name="project-settings-conversion-accesstosql"></a>프로젝트 설정 (변환) (AccessToSQL)
 변환 프로젝트 설정을 사용 하 여 개체를 Access 데이터베이스 개체에서 또는 Azure SQL Database 개체로 변환 하는 방법을 구성할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
