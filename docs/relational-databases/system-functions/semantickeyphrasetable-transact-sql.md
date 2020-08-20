@@ -1,4 +1,5 @@
 ---
+description: semantickeyphrasetable(Transact-SQL)
 title: semantickeyphrasetable (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d33b973a-2724-4d4b-aaf7-67675929c392
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 3782b8139b84d87a30ac575476f5535173cdc66a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8026760d93132e3a18b51145bc1802e416bc0934
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85662580"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464817"
 ---
 # <a name="semantickeyphrasetable-transact-sql"></a>semantickeyphrasetable(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +45,7 @@ SEMANTICKEYPHRASETABLE
     )  
 ```  
   
-##  <a name="arguments"></a><a name="Arguments"></a>인수의  
+##  <a name="arguments"></a><a name="Arguments"></a> 인수  
  **table**  
  전체 텍스트 및 의미 체계 인덱싱을 사용하도록 설정된 테이블의 이름입니다.  
   
@@ -67,7 +68,7 @@ SEMANTICKEYPHRASETABLE
 ## <a name="table-returned"></a>반환된 테이블  
  다음 표에서는 이 행 집합 함수가 반환하는 키 구에 대해 설명합니다.  
   
-|Column_name|형식|설명|  
+|Column_name|Type|설명|  
 |------------------|----------|-----------------|  
 |**column_id**|**int**|현재 키 구가 추출되고 인덱싱된 원본 열의 ID입니다.<br /><br /> column_id에서 열 이름을 검색하거나 열 이름에서 column_id를 검색하는 방법에 대한 자세한 내용은 COL_NAME 및 COLUMNPROPERTY 함수를 참조하십시오.|  
 |**document_key**|**\***<br /><br /> 이 키는 원본 테이블의 고유 키 유형과 일치합니다.|현재 키 구가 인덱싱된 문서 또는 행의 고유 키 값입니다.|  
@@ -91,7 +92,7 @@ SEMANTICKEYPHRASETABLE
   
 ## <a name="examples"></a>예제  
   
-###  <a name="example-1-find-the-top-key-phrases-in-a-specific-document"></a><a name="HowToTopPhrases"></a>예 1: 특정 문서에서 상위 키 구 찾기  
+###  <a name="example-1-find-the-top-key-phrases-in-a-specific-document"></a><a name="HowToTopPhrases"></a> 예 1: 특정 문서에서 상위 키 구 찾기  
  다음 예제에서는 AdventureWorks 예제 데이터베이스에 있는 Production.Document 테이블의 Document 열에서 @DocumentId 변수를 통해 지정된 문서에서 상위 10개의 키 구를 검색합니다. @DocumentId 변수는 전체 텍스트 인덱스의 키 열에 있는 값을 나타냅니다. **SEMANTICKEYPHRASETABLE** 함수는 테이블 검색 대신 인덱스 검색을 사용하여 이러한 결과를 효율적으로 검색합니다. 이 예에서는 열이 전체 텍스트 및 의미 체계 인덱싱에 대해 구성되어 있는 것으로 가정합니다.  
   
 ```sql  
@@ -106,7 +107,7 @@ ORDER BY KEYP_TBL.score DESC;
   
 ```  
   
-###  <a name="example-2-find-the-top-documents-that-contain-a-specific-key-phrase"></a><a name="HowToTopDocuments"></a>예 2: 특정 키 구가 포함 된 상위 문서 찾기  
+###  <a name="example-2-find-the-top-documents-that-contain-a-specific-key-phrase"></a><a name="HowToTopDocuments"></a> 예 2: 특정 키 구가 포함 된 상위 문서 찾기  
  다음 예제에서는 AdventureWorks 예제 데이터베이스에 있는 Production.Document 테이블의 Document 열에서 "Bracket" 키 구가 포함된 상위 25개의 문서를 검색합니다. 이 예에서는 열이 전체 텍스트 및 의미 체계 인덱싱에 대해 구성되어 있는 것으로 가정합니다.  
   
 ```sql  

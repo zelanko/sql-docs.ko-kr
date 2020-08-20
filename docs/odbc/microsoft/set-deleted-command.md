@@ -1,4 +1,5 @@
 ---
+description: SET DELETED 명령
 title: SET DELETED 명령 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6b5e0086-156d-471d-8e7f-6c5fa9686cd5
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3b3302dc7eecca7135dab9dff5afa376169be0f1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 60e00af582e0440957c8a4e743624e00f0ba3e58
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300883"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466375"
 ---
 # <a name="set-deleted-command"></a>SET DELETED 명령
 삭제 표시 된 레코드를 처리 하 고 다른 명령에서 사용할 수 있는지 여부를 지정 합니다.  
@@ -42,5 +43,5 @@ SET DELETED ON | OFF
 > [!IMPORTANT]  
 >  명령의 기본 범위가 현재 레코드 이거나 단일 레코드의 범위를 포함 하는 경우에는 SET DELETED가 무시 됩니다. 인덱스는 항상 삭제 된 집합을 무시 하 고 테이블의 모든 레코드를 인덱싱합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [DELETE - SQL 명령](../../odbc/microsoft/delete-sql-command.md)

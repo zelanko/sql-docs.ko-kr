@@ -1,4 +1,5 @@
 ---
+description: model 데이터베이스
 title: model 데이터베이스 | Microsoft 문서
 ms.custom: ''
 ms.date: 07/22/2020
@@ -14,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 4e4f739b-fd27-4dce-8be6-3d808040d8d7
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: dd0390e7e6b781d5ca5d2b0f5685aeb8fc95c88f
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 0e1af46a47e6e0e09c8e538fed06ecd1eb1ccc41
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87108330"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465425"
 ---
 # <a name="model-database"></a>model 데이터베이스
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  **model** 데이터베이스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 생성된 모든 데이터베이스에 대한 템플릿으로 사용됩니다. **을(를) 시작할 때마다** tempdb [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 생성되기 때문에 **model** 데이터베이스는 항상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템에 있어야 합니다. 데이터베이스 옵션을 포함한 **model** 데이터베이스의 전체 내용이 새 데이터베이스에 복사됩니다. 또한 **model** 의 일부 설정이 시작되는 동안 새 **tempdb** 를 만드는 데 사용되므로 **시스템에 항상** model [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스가 있어야 합니다.  
+  **model** 데이터베이스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 생성된 모든 데이터베이스에 대한 템플릿으로 사용됩니다. **을(를) 시작할 때마다** tempdb [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 생성되기 때문에 **model** 데이터베이스는 항상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템에 있어야 합니다. 데이터베이스 옵션을 포함한 **model** 데이터베이스의 전체 내용이 새 데이터베이스에 복사됩니다. 또한 **model** 의 일부 설정이 시작되는 동안 새 **tempdb** 를 만드는 데 사용되므로 **시스템에 항상** model [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스가 있어야 합니다.  
   
  새로 만든 사용자 데이터베이스는 model 데이터베이스와 같은 [복구 모델](../../relational-databases/backup-restore/recovery-models-sql-server.md) 을 사용합니다. 기본값은 사용자 구성입니다. 모델의 현재 복구 모델에 대한 자세한 내용은 [데이터베이스 복구 모델 보기 또는 변경&#40;SQL Server&#41;](../../relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md)을 참조하세요.  
   
@@ -52,33 +53,33 @@ SQL Server 2014의 경우 기본 파일 증가 값은 [model 데이터베이스]
   
 |데이터베이스 옵션|기본값|수정 가능|  
 |---------------------|-------------------|---------------------|  
-|ALLOW_SNAPSHOT_ISOLATION|OFF|yes|  
-|ANSI_NULL_DEFAULT|OFF|yes|  
-|ANSI_NULLS|OFF|yes|  
-|ANSI_PADDING|OFF|yes|  
-|ANSI_WARNINGS|OFF|yes|  
-|ARITHABORT|OFF|yes|  
-|AUTO_CLOSE|OFF|yes|  
-|AUTO_CREATE_STATISTICS|켜기|yes|  
-|AUTO_SHRINK|OFF|yes|  
-|AUTO_UPDATE_STATISTICS|켜기|yes|  
-|AUTO_UPDATE_STATISTICS_ASYNC|OFF|yes|  
+|ALLOW_SNAPSHOT_ISOLATION|OFF|예|  
+|ANSI_NULL_DEFAULT|OFF|예|  
+|ANSI_NULLS|OFF|예|  
+|ANSI_PADDING|OFF|예|  
+|ANSI_WARNINGS|OFF|예|  
+|ARITHABORT|OFF|예|  
+|AUTO_CLOSE|OFF|예|  
+|AUTO_CREATE_STATISTICS|켜기|예|  
+|AUTO_SHRINK|OFF|예|  
+|AUTO_UPDATE_STATISTICS|켜기|예|  
+|AUTO_UPDATE_STATISTICS_ASYNC|OFF|예|  
 |CHANGE_TRACKING|OFF|예|  
-|CONCAT_NULL_YIELDS_NULL|OFF|yes|  
-|CURSOR_CLOSE_ON_COMMIT|OFF|yes|  
-|CURSOR_DEFAULT|GLOBAL|yes|  
-|데이터베이스 가용성 옵션|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|예<br /><br /> yes<br /><br /> yes|  
-|DATE_CORRELATION_OPTIMIZATION|OFF|yes|  
+|CONCAT_NULL_YIELDS_NULL|OFF|예|  
+|CURSOR_CLOSE_ON_COMMIT|OFF|예|  
+|CURSOR_DEFAULT|GLOBAL|예|  
+|데이터베이스 가용성 옵션|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|예<br /><br /> yes<br /><br /> 예|  
+|DATE_CORRELATION_OPTIMIZATION|OFF|예|  
 |DB_CHAINING|OFF|예|  
 |ENCRYPTION|OFF|예|  
 |MIXED_PAGE_ALLOCATION|켜기|예|  
-|NUMERIC_ROUNDABORT|OFF|yes|  
+|NUMERIC_ROUNDABORT|OFF|예|  
 |PAGE_VERIFY|CHECKSUM|yes|  
-|PARAMETERIZATION|SIMPLE|yes|  
-|QUOTED_IDENTIFIER|OFF|yes|  
-|READ_COMMITTED_SNAPSHOT|OFF|yes|  
+|PARAMETERIZATION|SIMPLE|예|  
+|QUOTED_IDENTIFIER|OFF|예|  
+|READ_COMMITTED_SNAPSHOT|OFF|예|  
 |RECOVERY|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에 따라 다름*|yes|  
-|RECURSIVE_TRIGGERS|OFF|yes|  
+|RECURSIVE_TRIGGERS|OFF|예|  
 |Service Broker 옵션|DISABLE_BROKER|예|  
 |TRUSTWORTHY|OFF|예|  
   

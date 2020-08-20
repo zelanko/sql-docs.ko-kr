@@ -1,4 +1,5 @@
 ---
+description: 일치 프로젝트 실행
 title: 일치 프로젝트 실행
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ f1_keywords:
 ms.assetid: 6aa9d199-83ce-4b5d-8497-71eef9258745
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 0a8a71349a5948c4ac162b82bd92d3b022446cb0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8f1d75abc4a4e7f5221c500c211e915fa51bd49b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883327"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466695"
 ---
 # <a name="run-a-matching-project"></a>일치 프로젝트 실행
 
@@ -75,7 +76,7 @@ ms.locfileid: "85883327"
     > [!NOTE]  
     >  일치 프로젝트의 단계를 저장하고 DQS 홈 페이지로 돌아가려면 **닫기** 를 클릭합니다. 다음에 이 프로젝트를 열면 동일한 단계에서 시작됩니다. **취소** 를 클릭하면 일치 작업이 저장되지 않고 종료되며 DQS 홈 페이지로 돌아갑니다.  
   
-##  <a name="matching-stage"></a><a name="MatchingStage"></a>일치 단계  
+##  <a name="matching-stage"></a><a name="MatchingStage"></a> 일치 단계  
  이 단계에서는 일치 규칙에 따라 원본 데이터에 존재하는 일치 항목 수를 보여 주는 컴퓨터 기반 일치 프로세스를 수행합니다. 이 프로세스를 수행하면 DQS에서 확인한 클러스터, 클러스터의 각 레코드(해당 레코드 ID 및 일치 점수 포함) 및 클러스터의 초기 선행 레코드가 표시된 일치 결과 테이블이 생성됩니다. 클러스터의 선행 레코드는 임의로 선택됩니다. 일치 프로젝트를 실행할 때 **내보내기** 페이지에서 Survivorship 규칙을 선택하여 존속 레코드를 결정합니다. 클러스터의 각 추가 행은 일치하는 것으로 간주되며, 선행 레코드와 비교된 해당 일치 점수가 결과 테이블에 제공됩니다. 클러스터 번호는 클러스터의 선행 레코드에 대한 레코드 ID와 같습니다.  
   
  일치 결과에서 원하는 데이터를 필터링하고 원하지 않는 일치 항목을 거부할 수 있습니다. 전체 일치 프로세스에 대한 프로파일링 데이터, 적용되는 일치 규칙에 대한 구체적인 정보 및 전체 일치 결과에 대한 통계를 표시할 수 있습니다. 일치 프로세스에서는 겹치는 클러스터와 겹치지 않는 클러스터를 확인할 수 있으며, 여러 번 실행할 경우 원본에서 새로 복사하여 인덱스를 다시 작성한 데이터 또는 이전 데이터에 대해 일치 프로세스를 실행할 수 있습니다.  
@@ -104,7 +105,7 @@ ms.locfileid: "85883327"
   
 12. **다음** 을 클릭하여 Survivorship 및 내보내기 단계로 이동합니다.  
   
-##  <a name="survivorship-and-exporting-stage"></a><a name="SurvivorshipandExportStage"></a>Survivorship 및 내보내기 단계  
+##  <a name="survivorship-and-exporting-stage"></a><a name="SurvivorshipandExportStage"></a> Survivorship 및 내보내기 단계  
  Survivorship 프로세스에서는 각 클러스터에 대한 존속 레코드가 결정됩니다. 이 레코드는 클러스터에서 일치하는 다른 레코드를 대체합니다. 그런 다음 일치 및/또는 Survivorship 결과를 SQL Server 데이터베이스의 테이블, .csv 파일 또는 Excel 파일로 내보냅니다.  
   
  Survivorship은 선택 사항입니다. Survivorship을 실행하지 않고 결과를 내보낼 수 있습니다. 이 경우 DQS에서는 일치 분석에서 지정된 피벗 레코드를 사용합니다. 클러스터에 있는 둘 이상 레코드가 Survivorship 규칙을 준수하는 경우에는 Survivorship 프로세스에서 충돌하는 레코드 중 레코드 ID가 가장 낮은 레코드를 존속 레코드로 선택합니다. 다른 Survivorship 규칙을 사용하여 존속 레코드를 다른 파일 또는 테이블로 내보낼 수 있습니다.  

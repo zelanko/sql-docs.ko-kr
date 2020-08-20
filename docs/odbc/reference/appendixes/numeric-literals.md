@@ -1,4 +1,5 @@
 ---
+description: 숫자 리터럴
 title: 숫자 리터럴 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9dc23656-61e1-4b62-a07f-64ab716e45d2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 994bbed6ed3454c6213b16faabf5a0de7eeabbf9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 471d70b2bee7cb554b00b63ce9734ebf5459402a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299853"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466148"
 ---
 # <a name="numeric-literals"></a>숫자 리터럴
 숫자 리터럴은 숫자 데이터 값을 문자열로 저장할 때 사용 됩니다. 숫자 SQL 데이터를 SQL_C_CHAR 문자열로 변환 하거나 숫자 C 데이터를 SQL_CHAR 또는 SQL_VARCHAR 문자열로 변환 하는 경우 숫자 리터럴 구문을 사용 하 여 대상에 저장 되는 항목을 지정 합니다. SQL_C_CHAR 문자열로 저장 된 숫자를 숫자 SQL 데이터로 변환 하거나 숫자 C 데이터에 SQL_CHAR 문자열로 저장 하는 경우이 구문을 사용 하 여 소스에 저장 된 항목의 유효성을 검사 합니다.  

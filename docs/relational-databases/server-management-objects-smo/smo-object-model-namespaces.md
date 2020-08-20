@@ -1,4 +1,5 @@
 ---
+description: SMO 개체 모델 네임스페이스
 title: SMO 네임 스페이스 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/02/2016
@@ -16,11 +17,12 @@ ms.assetid: 7bfabe4d-9f4c-4bc9-b998-93bd2b50ee8a
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 192e3b98e7091ba337fa1b0090c6add2a255a97a
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: f5e2c5b4574e03ed8820f3d9bfe307fe5a5c6e55
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012285"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464948"
 ---
 # <a name="smo-object-model-namespaces"></a>SMO 개체 모델 네임스페이스
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -32,7 +34,7 @@ ms.locfileid: "86012285"
 ## <a name="namespaces"></a>네임스페이스  
  SMO 네임스페이스는 다음과 같습니다.  
   
-|클래스|함수|  
+|클래스|기능|  
 |-----------|--------------|  
 |<xref:Microsoft.SqlServer.Management.Smo>|프로그래밍 방식으로를 조작 하는 데 사용 되는 인스턴스 클래스, 유틸리티 클래스 및 열거형을 포함 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 합니다.|  
 |<xref:Microsoft.SqlServer.Management.Common>|연결 클래스와 같이 RMO(복제 관리 개체)와 SMO에 공통되는 클래스를 포함합니다.|  

@@ -1,4 +1,5 @@
 ---
+description: DQS 맞춤법 검사기 사용
 title: DQS 맞춤법 검사기 사용
 ms.date: 11/08/2011
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 65e4e53e-2699-4cae-a9e0-fe78547755b5
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: ca84d1706641c15d7043e96ead0013fef3ed606a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 5da3a38baa2038f923df5365b4eacb0bc60dcea0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883292"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466642"
 ---
 # <a name="use-the-dqs-speller"></a>DQS 맞춤법 검사기 사용
 
@@ -66,10 +67,10 @@ ms.locfileid: "85883292"
   
 6.  사전에 값을 추가하려면 **사전에 추가**를 클릭합니다. 값의 빨간색 밑줄이 사라집니다.  
   
-##  <a name="follow-up-after-using-the-speller"></a><a name="FollowUp"></a>후속 작업: 맞춤법 검사기 사용 후  
+##  <a name="follow-up-after-using-the-speller"></a><a name="FollowUp"></a> 후속 작업: 맞춤법 검사기 사용 후  
  맞춤법 검사기를 실행한 후 맞춤법 검사기에서 제안한 수정 사항을 사용하려면 현재 진행 중인 도메인 작업을 완료합니다. 기술 자료 검색, 도메인 관리 또는 일치 정책 작업 중인 경우 맞춤법 검사기 분석 결과를 기술 자료에서 사용할 수 있도록 기술 자료를 게시합니다. 자세한 내용은 [기술 자료 검색 수행](../data-quality-services/perform-knowledge-discovery.md), [도메인 관리](../data-quality-services/managing-a-domain.md) 또는 [일치 정책 만들기](../data-quality-services/create-a-matching-policy.md)를 참조하세요.  
   
-##  <a name="how-the-speller-works"></a><a name="How"></a>맞춤법 검사기 작동 방식  
+##  <a name="how-the-speller-works"></a><a name="How"></a> 맞춤법 검사기 작동 방식  
  DQS 맞춤법 검사기는 모든 잠재적 문자열 값 오류의 전체 값에 빨간색 밑줄을 표시합니다. 예를 들어 "New York"이 "Neu York"으로 철자가 잘못된 경우 맞춤법 검사기에서 "Neu"뿐 아니라 "Neu York" 전체에 빨간색 밑줄을 표시합니다. 값을 마우스 오른쪽 단추로 클릭하면 전체 값에 대해 제안된 수정 사항이 표시됩니다. 제안이 5개보다 많은 경우 **추가 제안** 을 클릭할 수도 있습니다. 제안 중 하나를 선택하거나 원래 값에 대해 표시된 사전에 값을 추가할 수 있습니다(사용자 계정 수준에서). 사전에 추가한 값은 모든 도메인에 적용됩니다. 제안을 명시적으로 지정한 경우에만 도메인에 수정 사항이 적용됩니다. 맞춤법 검사기의 상황에 맞는 메뉴에서 제안을 선택하면 값 유형이 오류로 변경 또는 유지됩니다. 선택한 제안은 수정 열에 추가됩니다. 값 **유형** 은 **올바름** 이 될 수 있고 맞춤법 검사기가 아직 잠재적 오류로 표시하지 않았을 수 있습니다.  
   
  DQS는 **값** 테이블의 **값** 열과 **다음으로 수정** 열 모두에 값 제안을 제공합니다. **값** 열에서 제안을 선택하면 값 유형이 **오류**로 설정되고 사용자가 수동으로 삽입한 것처럼 **다음으로 수정** 열에 제안이 복사됩니다. 기존 수정 사항이 있는 경우 제안이 됩니다. **정리** 작업에서 **결과 관리 및 보기** 페이지의 **다음으로 수정** 열에 있는 제안을 선택하면 DQS가 현재 선택된 값을 선택 항목으로 바꾸고 현재 선택된 값이 제안이 됩니다. **정리** 작업의 **결과 관리 및 보기** 페이지에서 레코드 수준(하단 표)에는 제안이 제공되지 않습니다.  

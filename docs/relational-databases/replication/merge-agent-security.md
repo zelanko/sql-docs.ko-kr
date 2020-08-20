@@ -1,4 +1,5 @@
 ---
+description: 병합 에이전트 보안
 title: 병합 에이전트 보안 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9b86171a-4381-4b39-869a-cdc161e7cd15
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 894c9d7cddb6473cc063863a3f39d7c48f7be00f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6d571e5b41937947e0c6d03e5d1a84fe0dc88e8b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775293"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465275"
 ---
 # <a name="merge-agent-security"></a>병합 에이전트 보안
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,7 +50,7 @@ ms.locfileid: "85775293"
   
  연결을 설정할 때 프로세스 계정을 가장하면 추가 사용 권한이 필요합니다. 아래의 **게시자 및 배포자에 연결** 섹션과 **구독자에 연결** 섹션을 참조하십시오.  
   
- 병합 에이전트가 **인스턴스에서 실행되지 않기 때문에** [!INCLUDE[msCoName](../../includes/msconame-md.md)]에 대한 끌어오기 구독에 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]프로세스 계정[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]을 지정할 수 없습니다.  
+ 병합 에이전트가 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 인스턴스에서 실행되지 않기 때문에 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]에 대한 끌어오기 구독에 **프로세스 계정**을 지정할 수 없습니다.  
   
  **암호** 및 **암호 확인**  
  Windows 계정의 암호를 입력합니다.  

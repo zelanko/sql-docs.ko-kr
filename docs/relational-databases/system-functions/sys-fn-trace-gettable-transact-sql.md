@@ -1,4 +1,5 @@
 ---
+description: sys.fn_trace_gettable(Transact-SQL)
 title: sys. fn_trace_gettable (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: c2590159-6ec5-4510-81ab-e935cc4216cd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4d1bc18704b4f2b239fe590184d58289d66b35fc
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 85ffb20fb0ead23c8027ab9b4ba45f906fe8c097
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898288"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464751"
 ---
 # <a name="sysfn_trace_gettable-transact-sql"></a>sys.fn_trace_gettable(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -59,7 +60,7 @@ fn_trace_gettable ( 'filename' , number_files )
 ## <a name="permissions"></a>사용 권한  
  서버에 대한 ALTER TRACE 권한이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-using-fn_trace_gettable-to-import-rows-from-a-trace-file"></a>A. fn_trace_gettable을 사용하여 추적 파일에서 행 가져오기  
  다음 예에서는 `fn_trace_gettable` 문의 `FROM` 절에서 `SELECT...INTO`을 호출합니다.  
@@ -85,7 +86,7 @@ GO
   
 ## <a name="see-also"></a>참고 항목  
  [Transact-sql&#41;sp_trace_generateevent &#40;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
- [Transact-sql&#41;sp_trace_setevent &#40;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
+ [sp_trace_setevent&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [Transact-sql&#41;sp_trace_setfilter &#40;](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)   
  [sp_trace_setstatus&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql.md)  
   

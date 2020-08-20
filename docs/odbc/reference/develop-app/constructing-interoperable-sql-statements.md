@@ -1,4 +1,5 @@
 ---
+description: 상호 운용 가능한 SQL 문 생성
 title: 상호 운용 가능한 SQL 문 생성 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: dee6f7e2-bcc4-4c74-8c7c-12aeda8a90eb
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1eccdef63b7d06a456a07f5f1a9ccad987d2de29
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: acdb0f360242c4c9953804cb768214b0a78251dd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81282522"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465885"
 ---
 # <a name="constructing-interoperable-sql-statements"></a>상호 운용 가능한 SQL 문 생성
 이전 섹션에서 설명한 것 처럼 상호 운용 가능한 응용 프로그램은 ODBC SQL 문법을 사용 해야 합니다. 그러나이 문법을 사용 하는 것 외에도 상호 운용 가능한 응용 프로그램에서 많은 추가 문제가 발생 합니다. 예를 들어 외부 조인과 같이 모든 데이터 원본에서 지원 하지 않는 기능을 사용 하려는 경우 응용 프로그램에서 수행 하는 작업은 무엇 인가요?  

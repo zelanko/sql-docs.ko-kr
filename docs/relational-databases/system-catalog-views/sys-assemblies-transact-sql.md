@@ -1,4 +1,5 @@
 ---
+description: sys.assemblies(Transact-SQL)
 title: sys. assemblies (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,12 +21,12 @@ ms.assetid: e321753f-293f-42ab-b225-d118713df40b
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d5b430767a7ded990b440c3f22b68c2bfab2573a
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 2e239ea7b5f91261fb58577071d42ec52957979a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394837"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464873"
 ---
 # <a name="sysassemblies-transact-sql"></a>sys.assemblies(Transact-SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
@@ -49,7 +50,7 @@ ms.locfileid: "87394837"
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;CLR 어셈블리 카탈로그 뷰](../../relational-databases/system-catalog-views/clr-assembly-catalog-views-transact-sql.md)   
+ [Transact-sql&#41;&#40;CLR 어셈블리 카탈로그 뷰 ](../../relational-databases/system-catalog-views/clr-assembly-catalog-views-transact-sql.md)   
  [카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [ASSEMBLYPROPERTY &#40;Transact-sql&#41;](../../t-sql/functions/assemblyproperty-transact-sql.md)  
   

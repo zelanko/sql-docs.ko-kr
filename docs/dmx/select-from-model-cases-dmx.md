@@ -1,4 +1,5 @@
 ---
+description: 모델에서 &lt; 선택 &gt; 합니다. 사례 (DMX)
 title: 모델에서 &lt; 선택 &gt; 합니다. 사례 (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 1fa1da730fc370995b22927604f9550c865877f4
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 6d20c04b6771b0f6a5893868d7484d2cae6ae47f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970630"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466531"
 ---
 # <a name="select-from-ltmodelgtcases-dmx"></a>모델에서 &lt; 선택 &gt; 합니다. 사례 (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -60,7 +61,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CASES
   
  **Where** 절에서 [IsInNode &#40;DMX&#41;](../dmx/isinnode-dmx.md) 함수를 사용 하면 스키마 행 집합의 NODE_UNIQUE_NAME 열에 지정 된 노드와 연결 된 사례만 반환 됩니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예는 [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] 데이터베이스 및 연결 된 마이닝 모델을 기반으로 하는 마이닝 구조 대상 메일링을 기반으로 합니다. 자세한 내용은 [기본 데이터 마이닝 자습서](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)를 참조 하세요.  
   
 ### <a name="example-1-drillthrough-to-model-cases-and-structure-columns"></a>예 1: 모델 사례 및 구조 열로 드릴스루  

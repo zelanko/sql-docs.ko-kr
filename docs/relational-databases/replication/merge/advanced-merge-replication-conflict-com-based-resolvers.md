@@ -1,4 +1,5 @@
 ---
+description: 고급 병합 복제 충돌 - COM 기반 해결 프로그램
 title: Microsoft COM 기반 해결 프로그램 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a6637e4b-4e6b-40aa-bee6-39d98cc507c8
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5fee5fdcc962d1d310f36196b20f1936b85516c1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 20b7e91ad9b6ce87cbfecc266d1eae1e70d1780d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892022"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465255"
 ---
 # <a name="advanced-merge-replication-conflict---com-based-resolvers"></a>고급 병합 복제 충돌 - COM 기반 해결 프로그램
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85892022"
   
  다음 표에서는 특정 해결 프로그램의 특성을 설명합니다.  
   
-|속성|필수 입력|Description|주석|  
+|Name|필수 입력|Description|의견|  
 |----------|--------------------|-----------------|--------------|  
 |[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 가산성 충돌 해결 프로그램|합계할 행 이름입니다. **int**, **smallint**, **numeric**과 같은 산술 데이터 형식이어야 합니다.|충돌 시 적용되는 내용은 우선 순위 값으로 결정합니다. 지정된 열의 값은 원본 및 대상 열 값의 합계로 설정됩니다. 하나를 NULL로 설정하면, 모두 다른 열의 값으로 설정됩니다.|업데이트 충돌 및 열 추적만 지원합니다.|  
 |[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 평균 충돌 해결 프로그램|평균할 열 이름입니다. **int**, **smallint**, **numeric**과 같은 산술 데이터 형식이어야 합니다.|충돌 시 적용되는 내용은 우선 순위 값으로 결정합니다. 결과 열 값은 원본 및 대상 열 값의 평균으로 설정됩니다. 하나를 NULL로 설정하면, 모두 다른 열의 값으로 설정됩니다.|업데이트 충돌 및 열 추적만 지원합니다.|  

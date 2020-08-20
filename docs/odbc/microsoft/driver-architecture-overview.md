@@ -1,4 +1,5 @@
 ---
+description: 드라이버 아키텍처 개요
 title: 드라이버 아키텍처 개요 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ef5a91cd-158e-40bf-b5a8-8ba535c4705e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: cd55290e09fbd35f5a1559ce4209693ef8eaaf73
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d71a2c28825ee8c7d4e12e047234f3e336b339e0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303464"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466445"
 ---
 # <a name="driver-architecture-overview"></a>드라이버 아키텍처 개요
 Microsoft Visual FoxPro ODBC 드라이버는 ODBC (Open Database Connectivity) 인터페이스를 통해 Microsoft Visual FoxPro 데이터베이스 또는 FoxPro 테이블을 열고 쿼리 하는 데 사용할 수 있는 32 비트 드라이버입니다. 다음과 같은 유형의 응용 프로그램을 사용 하 여 FoxPro 데이터에 액세스할 수 있습니다.  

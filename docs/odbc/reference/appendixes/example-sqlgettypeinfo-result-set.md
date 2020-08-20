@@ -1,4 +1,5 @@
 ---
+description: SQLGetTypeInfo 결과 집합의 예제
 title: 예제 SQLGetTypeInfo 결과 집합 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2019
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: dc1952cc-7581-4d69-9c72-7dc1cd370836
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a5cf62f8a95f4c91095c21a6d603317fe1f73500
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2420713e0adb7f0b7c983243b4021ebbe9b141c0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307014"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466213"
 ---
 # <a name="example-sqlgettypeinfo-result-set"></a>SQLGetTypeInfo 결과 집합의 예제
 응용 프로그램은 **SQLGetTypeInfo** 를 호출 하 여 데이터 원본에서 지원 되는 데이터 형식과 해당 데이터 형식의 특성을 결정 합니다. 다음 표에서는 SQL_CHAR, SQL_LONGVARCHAR, SQL_DECIMAL, SQL_REAL, SQL_DATETIME, SQL_INTERVAL_YEAR 및 SQL_INTERVAL_DAY_TO_SECOND를 지 원하는 데이터 원본에 대해 **SQLGetTypeInfo** 에서 반환 하는 예제 결과 집합을 보여 줍니다.  
@@ -34,7 +35,7 @@ ms.locfileid: "81307014"
 |"INTERVAL YEAR () ~ YEAR"|SQL_INTERVAL_YEAR|9|"'"|"'"|소수|SQL_TRUE|  
 |"간격 일 ()-분수 (5)"|SQL_INTERVAL_DAY_TO_SECOND|24|"'"|"'"|소수|SQL_TRUE|  
   
-|DATA_TYPE|CASE_SENSITIVE|SEARCHABLE|UNSIGNED_ATTRIBUTE|FIXED_PREC_SCALE|AUTO_UNIQUE_VALUE|LOCAL_TYPE_NAME|  
+|DATA_TYPE|CASE_SENSITIVE|검색 가능|UNSIGNED_ATTRIBUTE|FIXED_PREC_SCALE|AUTO_UNIQUE_VALUE|LOCAL_TYPE_NAME|  
 |----------------|---------------------|----------------|-------------------------|------------------------|-------------------------|-----------------------|  
 |**SQL_CHAR**|SQL_FALSE|SQL_SEARCHABLE|\<Null>|SQL_FALSE|\<Null>|문자가|  
 |**SQL_LONGVARCHAR**|SQL_FALSE|SQL_PRED_CHAR|\<Null>|SQL_FALSE|\<Null>|"text"|  

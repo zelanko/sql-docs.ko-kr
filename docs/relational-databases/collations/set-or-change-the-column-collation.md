@@ -1,4 +1,5 @@
 ---
+description: 열 데이터 정렬 설정 또는 변경
 title: 열 데이터 정렬 설정 또는 변경 | Microsoft 문서
 ms.custom: ''
 ms.date: 12/05/2019
@@ -13,12 +14,12 @@ ms.assetid: d7a9638b-717c-4680-9b98-8849081e08be
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 06e96206160557eaaa71d3b44dd6960182b47a20
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2c57021e300168a5e912dfce4ce1e0c62f728dfd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85694970"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465615"
 ---
 # <a name="set-or-change-the-column-collation"></a>열 데이터 정렬 설정 또는 변경
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -75,7 +76,7 @@ ms.locfileid: "85694970"
         
     자세한 내용은 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)을 참조하세요.
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]입니다. 자세한 내용은 [열 수정(데이터베이스 엔진)](../../relational-databases/tables/modify-columns-database-engine.md#SSMSProcedure)을 참조하세요.  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. 자세한 내용은 [열 수정(데이터베이스 엔진)](../../relational-databases/tables/modify-columns-database-engine.md#SSMSProcedure)을 참조하세요.  
   
 -   SMO( **Management Objects)의** Column.Collation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 속성 사용  
   
@@ -103,7 +104,7 @@ USE TestDB;
 CREATE TABLE TestPermTab (PrimaryKey int PRIMARY KEY, Col1 nchar );  
 ```  
   
- 이 시스템에서 **tempdb** 데이터베이스는 코드 페이지 1252를 포함하는 Latin1_General_CS_AS 데이터 정렬을 사용하고 `TestDB` 및 `TestPermTab.Col1` 은 코드 페이지 1257을 포함하는 `Estonian_CS_AS` 데이터 정렬을 사용합니다. 다음은 그 예입니다.  
+ 이 시스템에서 **tempdb** 데이터베이스는 코드 페이지 1252를 포함하는 Latin1_General_CS_AS 데이터 정렬을 사용하고 `TestDB` 및 `TestPermTab.Col1` 은 코드 페이지 1257을 포함하는 `Estonian_CS_AS` 데이터 정렬을 사용합니다. 예를 들면 다음과 같습니다.  
   
 ```sql  
 USE TestDB;  
@@ -116,7 +117,7 @@ INSERT INTO #TestTempTab
 GO  
 ```  
   
- 이전 예에서 **tempdb** 데이터베이스는 Latin1_General_CS_AS 데이터 정렬을 사용하고 `TestDB` 및 `TestTab.Col1` 은 `Estonian_CS_AS` 데이터 정렬을 사용합니다. 다음은 그 예입니다.  
+ 이전 예에서 **tempdb** 데이터베이스는 Latin1_General_CS_AS 데이터 정렬을 사용하고 `TestDB` 및 `TestTab.Col1` 은 `Estonian_CS_AS` 데이터 정렬을 사용합니다. 예를 들면 다음과 같습니다.  
   
 ```sql  
 SELECT * FROM TestPermTab AS a INNER JOIN #TestTempTab on a.Col1 = #TestTempTab.Col1;  

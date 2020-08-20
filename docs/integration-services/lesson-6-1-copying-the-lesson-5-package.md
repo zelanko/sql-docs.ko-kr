@@ -1,4 +1,5 @@
 ---
+description: '6-1단원: 5단원 패키지 복사'
 title: '1단계: 5단원 패키지 복사 | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/11/2019
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: a25fcc13-987e-4f3d-8f0c-76f7e6e59920
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a8df0901617b22317b2a87616be7b769c749d298
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 820c8022c68dfb95874230698769926fdfaedc70
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922133"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466559"
 ---
 # <a name="lesson-6-1-copy-the-lesson-5-package"></a>6-1단원: 5단원 패키지 복사
 

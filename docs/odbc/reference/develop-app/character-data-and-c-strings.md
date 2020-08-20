@@ -1,4 +1,5 @@
 ---
+description: 문자 데이터 및 C 문자열
 title: 문자 데이터 및 C 문자열 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 3a141cb4-229d-4027-9349-615cb2995e36
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7bb25022d4e0c0559f2a8f77b89a4ba26aeba33a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e412976cb297af9a9e38bbc6991647eeab48483b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307493"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465925"
 ---
 # <a name="character-data-and-c-strings"></a>문자 데이터 및 C 문자열
 가변 길이 문자 데이터를 참조 하는 입력 매개 변수 (예: 열 이름, 동적 매개 변수 및 문자열 특성 값)에는 연결 된 길이 매개 변수가 있습니다. 응용 프로그램이 C에서와 같이 null 문자를 사용 하 여 문자열을 종료 하는 경우 문자열의 길이 (null 종결자를 포함 하지 않음) 또는 SQL_NTS (Null로 끝나는 문자열)의 길이를 인수로 제공 합니다. 음수 길이가 아닌 인수는 연결 된 문자열의 실제 길이를 지정 합니다. 길이가 0 인 문자열을 지정 하려면 길이 인수가 0 일 수 있으며,이는 NULL 값과 구분 됩니다. 음수 값 SQL_NTS null 종료 문자를 찾아 드라이버에 문자열 길이를 결정 하도록 지시 합니다.  

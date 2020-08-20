@@ -1,4 +1,5 @@
 ---
+description: 준비된 실행 ODBC
 title: 준비 된 실행 ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f08c8a98-31ee-48b2-9dbf-6f31c2166dbb
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 147ca85b21296575ff55afbe66ab286cc4824fae
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6141af2cde7106419ab1eb68f86d5817f055aab2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81282313"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465745"
 ---
 # <a name="prepared-execution-odbc"></a>준비된 실행 ODBC
 준비 된 실행은 문을 두 번 이상 실행 하는 효율적인 방법입니다. 문은 먼저 액세스 계획으로 컴파일하거나 *준비* 됩니다. 액세스 계획은 나중에 한 번 이상 실행 됩니다. 액세스 계획에 대 한 자세한 내용은 [SQL 문 처리](../../../odbc/reference/processing-a-sql-statement.md)를 참조 하세요.  

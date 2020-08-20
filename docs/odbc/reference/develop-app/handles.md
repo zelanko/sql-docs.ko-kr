@@ -1,4 +1,5 @@
 ---
+description: 핸들
 title: 핸들 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f663101e-a4cc-402b-b9d7-84d5e975be71
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 713c2a71ec195b75d682b97239413e98d07b5861
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6e9d2445dbbd676e8d48be519c1649d550fd89c5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300213"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465765"
 ---
 # <a name="handles"></a>핸들
 핸들은 특정 항목을 식별 하는 불분명 한 32 비트 값입니다. ODBC에서이 항목은 환경, 연결, 문 또는 설명자 일 수 있습니다. 응용 프로그램에서 **SQLAllocHandle**를 호출 하면 드라이버 관리자 또는 드라이버는 지정 된 형식의 새 항목을 만들고 해당 핸들을 응용 프로그램에 반환 합니다. 응용 프로그램은 나중에 핸들을 사용 하 여 ODBC 함수를 호출할 때 해당 항목을 식별 합니다. 드라이버 관리자와 드라이버는 핸들을 사용 하 여 항목에 대 한 정보를 찾습니다.  

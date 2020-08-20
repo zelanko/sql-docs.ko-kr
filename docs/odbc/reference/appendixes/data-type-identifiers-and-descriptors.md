@@ -1,4 +1,5 @@
 ---
+description: 데이터 형식 식별자 및 설명자
 title: 데이터 형식 식별자 및 설명자 | Microsoft Docs
 ms.custom: ''
 ms.date: 02/02/2019
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f0077c9b-8eb2-4b5f-8c4c-7436fdef37ab
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f65bc86213f99112daf17c67a4ca522490d32149
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dce52118099ff4be572231e7f44f28a4cfca5ea7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81284486"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466223"
 ---
 # <a name="data-type-identifiers-and-descriptors"></a>데이터 형식 식별자 및 설명자
 이 부록 앞부분의 [SQL 데이터 형식](../../../odbc/reference/appendixes/sql-data-types.md) 및 [C 데이터 형식](../../../odbc/reference/appendixes/c-data-types.md) 섹션에 나열 된 데이터 형식은 "간결한" 데이터 형식입니다. 각 식별자는 단일 데이터 형식을 참조 합니다. 식별자와 데이터 형식이 일대일로 대응 됩니다. 그러나 설명자는 모든 경우에 단일 값을 사용 하 여 데이터 형식을 식별 합니다. 일부 경우에는 "verbose" 데이터 형식 및 형식 하위 코드를 사용 합니다. Datetime 및 interval 데이터 형식을 제외한 모든 데이터 형식의 경우 자세한 형식 식별자는 간결한 형식 식별자와 같으며 SQL_DESC_DATETIME_INTERVAL_CODE의 값은 0과 같습니다. 그러나 datetime 및 interval 데이터 형식의 경우 자세한 형식 (SQL_DATETIME 또는 SQL_INTERVAL)이 SQL_DESC_TYPE에 저장 되 고 간결한 형식이 SQL_DESC_CONCISE_TYPE에 저장 되며 각 간결한 형식의 하위 코드가 SQL_DESC_DATETIME_INTERVAL_CODE에 저장 됩니다. 이러한 필드 중 하나를 설정 하면 다른 필드에 영향을 줍니다. 이러한 필드에 대 한 자세한 내용은 [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md) 함수 설명을 참조 하세요.  

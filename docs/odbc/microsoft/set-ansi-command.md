@@ -1,4 +1,5 @@
 ---
+description: SET ANSI 명령
 title: ANSI 명령 설정 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: cf9a01b2-14bf-458c-a73c-2a58ddef32d8
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 97269642b4147b966fdd71003f5f81ebe7905282
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4a9f9c576199905c23994af4dc6b031114f4ad72
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300913"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466405"
 ---
 # <a name="set-ansi-command"></a>SET ANSI 명령
 Visual FoxPro SQL 명령의 = 연산자를 사용 하 여 길이가 다른 문자열을 비교 하는 방법을 결정 합니다.  
@@ -56,6 +57,6 @@ SET ANSI ON | OFF
 ## <a name="string-order"></a>문자열 순서  
  SQL 명령에서 비교 시 두 문자열의 왼쪽에서 오른쪽으로의 순서는 = 또는 = = 연산자의 한 쪽에서 다른 쪽으로의 문자열 irrelevantswitching 비교 결과에 영향을 주지 않습니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [SELECT-SQL 명령](../../odbc/microsoft/select-sql-command.md)   
  [SET EXACT 명령](../../odbc/microsoft/set-exact-command.md)

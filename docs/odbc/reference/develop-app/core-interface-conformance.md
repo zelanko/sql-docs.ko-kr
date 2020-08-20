@@ -1,4 +1,5 @@
 ---
+description: 핵심 인터페이스 적합성
 title: 핵심 인터페이스 규칙 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: aaaa864a-6477-45ff-a50a-96d8db66a252
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 886ded1cd79b35488c0d47df3dbd8055dc6a8016
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1ca38e2b616c39839cfe813dad984f7eba3796a6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302135"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465845"
 ---
 # <a name="core-interface-conformance"></a>핵심 인터페이스 적합성
 모든 ODBC 드라이버는 최소한 코어 수준 인터페이스 규칙을 준수 해야 합니다. 핵심 수준의 기능은 대부분의 상호 운용성이 높은 응용 프로그램에 필요한 기능 이므로 이러한 응용 프로그램에서 드라이버를 사용할 수 있습니다. 핵심 수준의 기능은 ISO CLI 사양에 정의 된 기능과 오픈 그룹 CLI 사양에 정의 된 선택적 기능에도 해당 합니다. 코어 수준 인터페이스와 호환 되는 ODBC 드라이버를 사용 하면 응용 프로그램에서 다음 작업을 모두 수행할 수 있습니다.  

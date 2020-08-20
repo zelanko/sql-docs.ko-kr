@@ -1,4 +1,5 @@
 ---
+description: ODBC의 카탈로그 함수
 title: ODBC의 카탈로그 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 4f28f557-7eca-4905-aa6d-45a6cf501a66
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c6731018b99f2f3043e48ee7c174a08cb9ef71fc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b7a34a29e55f6705ccc98e5644096ac6ea7bfd67
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306234"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465975"
 ---
 # <a name="catalog-functions-in-odbc"></a>ODBC의 카탈로그 함수
 ODBC에는 다음 카탈로그 함수가 포함 되어 있습니다.  
   
-|함수|Description|  
+|기능|설명|  
 |--------------|-----------------|  
 |**SQLTables**|데이터 원본의 카탈로그, 스키마, 테이블 또는 테이블 형식 목록을 반환 합니다.|  
 |**SQLColumns**|하나 이상의 테이블에 있는 열의 목록을 반환 합니다.|  
@@ -45,4 +46,4 @@ ODBC에는 다음 카탈로그 함수가 포함 되어 있습니다.
   
 -   [카탈로그 함수의 인수](../../../odbc/reference/develop-app/arguments-in-catalog-functions.md)  
   
--   [스키마 보기](../../../odbc/reference/develop-app/schema-views.md)
+-   [스키마 뷰](../../../odbc/reference/develop-app/schema-views.md)

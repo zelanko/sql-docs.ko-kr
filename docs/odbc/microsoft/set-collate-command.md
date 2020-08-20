@@ -1,4 +1,5 @@
 ---
+description: SET COLLATE 명령
 title: COLLATE 명령 설정 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 00efbcd4-fea8-4061-86a5-82de413cb753
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4a9c1dfd59c00ad0ac0b7bd8b8f1cdfccc84d9b3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5ca796da60adf0c432b5bbd80065e58563664bc5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300893"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466385"
 ---
 # <a name="set-collate-command"></a>SET COLLATE 명령
 후속 인덱싱 및 정렬 작업에서 문자 필드에 대 한 데이터 정렬 시퀀스를 지정 합니다.  
@@ -33,7 +34,7 @@ SET COLLATE TO cSequenceName
  *cSequenceName*  
  데이터 정렬 시퀀스를 지정 합니다. 다음 표에서는 사용 가능한 데이터 정렬 순서 옵션에 대해 설명 합니다.  
   
-|옵션|언어|  
+|옵션|Language|  
 |-------------|--------------|  
 |네덜란드어|네덜란드어|  
 |GENERAL|영어, 프랑스어, 독일어, 최신 스페인어, 포르투갈어 및 기타 서유럽어 언어|  
@@ -73,5 +74,5 @@ SET COLLATE TO cSequenceName
   
  예를 들어 COLLATE set을 일반으로 설정 하 여 인덱스를 만들고 COLLATE 설정 설정이 나중에 스페인어로 변경 되는 경우 인덱스는 일반 데이터 정렬 시퀀스를 유지 합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [ODBC Visual FoxPro 설치 대화 상자](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md)

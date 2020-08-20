@@ -1,4 +1,5 @@
 ---
+description: 데이터 길이, 버퍼 길이 및 잘라내기
 title: 데이터 길이, 버퍼 길이 및 잘림 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 2825c6e7-b9ff-42fe-84fc-7fb39728ac5d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b2e7b8d1e60cd83594509c2ab5cbc24e04546eca
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c9a9651f39c1ff4d2c6dc9b691453fb5354c9e1a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305235"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465835"
 ---
 # <a name="data-length-buffer-length-and-truncation"></a>데이터 길이, 버퍼 길이 및 잘라내기
 데이터 *길이* 는 데이터 원본에 저장 되는 것이 아니라 응용 프로그램의 데이터 버퍼에 저장 되는 데이터의 바이트 길이입니다. 데이터는 데이터 원본에 있는 데이터 버퍼의 다른 형식에 저장 되는 경우가 많으므로 이러한 구분은 중요 합니다. 따라서 데이터 원본으로 데이터를 전송 하려면 데이터 원본의 형식으로 변환 하기 전의 데이터 바이트 길이입니다. 데이터 원본에서 검색 되는 데이터의 경우 데이터 버퍼의 형식으로 변환한 후 잘림이 수행 되기 전에 데이터의 바이트 길이입니다.  

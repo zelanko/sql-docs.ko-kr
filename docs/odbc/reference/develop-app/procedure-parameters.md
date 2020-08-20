@@ -1,4 +1,5 @@
 ---
+description: 프로시저 매개 변수
 title: 프로시저 매개 변수 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: 54fd857e-d2cb-467d-bb72-121e67a8e88d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 35d43ca7cf6e603d7dabca9eacf1e026daa753b7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b21780cc4a6670c76e60daa69cf7933b4182b44e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306962"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465725"
 ---
 # <a name="procedure-parameters"></a>프로시저 매개 변수
 프로시저 호출의 매개 변수는 입력, 입/출력 또는 출력 매개 변수가 될 수 있습니다. 이는 항상 입력 매개 변수인 다른 모든 SQL 문의 매개 변수와는 다릅니다.  
   
- 입력 매개 변수는 프로시저에 값을 보내는 데 사용 됩니다. 예를 들어 Parts 테이블에 PartID, 설명 및 가격 열이 있다고 가정 합니다. InsertPart 프로시저에는 테이블의 각 열에 대 한 입력 매개 변수가 있을 수 있습니다. 예를 들면 다음과 같습니다.  
+ 입력 매개 변수는 프로시저에 값을 보내는 데 사용 됩니다. 예를 들어 Parts 테이블에 PartID, 설명 및 가격 열이 있다고 가정 합니다. InsertPart 프로시저에는 테이블의 각 열에 대 한 입력 매개 변수가 있을 수 있습니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.  
   
 ```  
 {call InsertPart(?, ?, ?)}  

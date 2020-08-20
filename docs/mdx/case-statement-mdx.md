@@ -1,4 +1,5 @@
 ---
+description: CASE 문(MDX)
 title: CASE 문 (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 756300f1efc93e47a7af3913b34d9318cbe5e559
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7a5907eb58fa102c46fa22af97116c4fad0f217a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68016827"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466505"
 ---
 # <a name="case-statement-mdx"></a>CASE 문(MDX)
 

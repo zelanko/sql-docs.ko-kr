@@ -1,4 +1,5 @@
 ---
+description: Microsoft Excel 데이터 형식
 title: Microsoft Excel 데이터 형식 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: 7b44c8e5-0bc3-4912-8a5d-56f4d5562fe6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8574985e10e5aaa3ae5431af7ee1245643e20b60
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b3e54ece7962fc5b56e4b9fcc17123ac7ad3c9e8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81283773"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466435"
 ---
 # <a name="microsoft-excel-data-types"></a>Microsoft Excel 데이터 형식
 다음 표에서는 Microsoft Excel 드라이버 데이터 형식을 ODBC SQL 데이터 형식에 매핑하는 방법을 보여 줍니다. Microsoft Excel 드라이버는 열의 데이터를 기반으로 Microsoft Excel 테이블의 열에 이러한 데이터 형식을 할당 합니다.  
   
 |Microsoft Excel 데이터 형식|ODBC 데이터 형식|  
 |-------------------------------|--------------------|  
-|Currency|SQL_NUMERIC|  
+|통화|SQL_NUMERIC|  
 |DATETIME|SQL_TIMESTAMP|  
 |논리곱|SQL_BIT|  
 |NUMBER|SQL_DOUBLE|  
@@ -40,7 +41,7 @@ ms.locfileid: "81283773"
   
  다음 표에서는 Microsoft Excel 데이터 형식에 대 한 제한 사항을 보여 줍니다.  
   
-|데이터 형식|설명|  
+|데이터 형식|Description|  
 |---------------|-----------------|  
 |암호화된 데이터|Microsoft Excel driver에서 암호화 된 데이터를 읽을 수 없습니다.|  
 |오류 문자열|Microsoft Excel 드라이버는 Microsoft Excel 오류 값 (#N/A!, #VALUE!, #REF!, #DIV/0!, #NUM!, #NAME? 및 #NULL!)에 대 한 문자열을 반환할 수 없지만 대신 NULL을 반환 합니다.|  

@@ -1,4 +1,5 @@
 ---
+description: '4단원: SSIS를 사용하여 오류 흐름 리디렉션 추가'
 title: '4단원: SSIS를 사용하여 오류 흐름 리디렉션 추가 | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/07/2019
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: 0c8dbda2-75e3-4278-9b4e-dcd220c92522
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8858494792a8acd9d1af7aee887c24e45d8829f9
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d7ef0a6862e334221fd497a5adc44ffd0ab7990d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918143"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466592"
 ---
 # <a name="lesson-4-add-error-flow-redirection-with-ssis"></a>4단원: SSIS를 사용하여 오류 흐름 리디렉션 추가
 
@@ -33,7 +34,7 @@ ms.locfileid: "86918143"
   
 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]에서 오류 데이터를 파일에 작성하기 전에 오류 설명을 가져오는 스크립트 구성 요소를 포함시킵니다. 그런 다음, 처리하지 못한 모든 데이터를 스크립트 변환으로 리디렉션하도록 Lookup Currency Key 변환을 다시 구성합니다.  
   
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>전제 조건
 
 > [!NOTE]
 > 아직 준비가 되지 않았다면 [1단원 필수 구성 요소](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md#prerequisites)를 참조하세요.

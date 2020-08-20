@@ -1,4 +1,5 @@
 ---
+description: 데이터 품질 클라이언트 애플리케이션 실행
 title: 데이터 품질 클라이언트 애플리케이션 실행
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 0b2aa202-7ab2-4c9d-b0f1-802588053a1e
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 7125dd10e16b8013fccc1f584115550c026cc627
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ed5b6449ea470a63e27a1d23a057ed6507c2ed2e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883341"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466669"
 ---
 # <a name="run-the-data-quality-client-application"></a>데이터 품질 클라이언트 애플리케이션 실행
 
@@ -35,12 +36,12 @@ ms.locfileid: "85883341"
 ####  <a name="permissions"></a><a name="Permissions"></a> 권한  
  DQS_MAIN 데이터베이스에 대해 세 가지 DQS 역할(dqs_adminstrator, dqs_kb_editor 또는 dqs_kb_operator) 중 하나가 있어야 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]에 로그온할 수 있습니다.  
   
-##  <a name="run-data-quality-client"></a><a name="Run"></a>Data Quality Client 실행  
+##  <a name="run-data-quality-client"></a><a name="Run"></a> Data Quality Client 실행  
  설치된 컴퓨터에서 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 를 실행하려면 다음과 같이 진행합니다.  
   
 1.  **시작**을 클릭하고 **모든 프로그램**을 가리킨 다음 **[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]**, **Data Quality Services**, **Data Quality 클라이언트**를 차례로 클릭합니다.  
   
-2.  **서버에 연결** 대화 상자에서  
+2.  **서버에 연결** 대화 상자에서 다음을 수행합니다.  
   
     1.  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 애플리케이션을 연결할 서버를 지정합니다. **(로컬)** 을 선택하여 로컬 컴퓨터의 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 에 연결할 수 있습니다. 아래쪽 화살표를 클릭 하 고 **\<Browse network for more servers>** 를 선택 하 여 다른 서버에 연결 하거나 이름으로 로컬 서버에 연결할 수도 있습니다. **서버 찾아보기** 대화 상자가 표시됩니다. **로컬 서버** 탭이나 **네트워크 서버** 탭에서 서버를 선택할 수 있습니다.  
   

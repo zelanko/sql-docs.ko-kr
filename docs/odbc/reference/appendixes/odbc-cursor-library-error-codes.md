@@ -1,4 +1,5 @@
 ---
+description: ODBC 커서 라이브러리 오류 코드
 title: ODBC 커서 라이브러리 오류 코드 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9713480e-8744-4f37-a630-20871590d4a1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c263ce53c41546e63dc2a830d3db3b903e2e3515
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 414de02eb7145006af4faa543735888082a3d6ff
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301434"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466138"
 ---
 # <a name="odbc-cursor-library-error-codes"></a>ODBC 커서 라이브러리 오류 코드
 > [!IMPORTANT]  

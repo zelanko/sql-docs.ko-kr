@@ -1,4 +1,5 @@
 ---
+description: 컬렉션 집합에 컬렉션 항목 추가(Transact-SQL)
 title: 컬렉션 세트에 컬렉션 항목 추가(T-SQL)
 ms.date: 06/03/2020
 ms.prod: sql
@@ -12,12 +13,12 @@ ms.assetid: 9fe6454e-8c0e-4b50-937b-d9871b20fd13
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 3fc722a36601315dac08e6b497d89737fb2f4d33
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8ef2d09b1ce912f73d03d3e25f8dac0169e57f8c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733903"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465487"
 ---
 # <a name="add-a-collection-item-to-a-collection-set-transact-sql"></a>컬렉션 집합에 컬렉션 항목 추가(Transact-SQL)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

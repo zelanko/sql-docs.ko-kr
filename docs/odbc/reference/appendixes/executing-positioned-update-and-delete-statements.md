@@ -1,4 +1,5 @@
 ---
+description: 위치 지정 업데이트 및 삭제 문 실행
 title: 위치 지정 업데이트 및 Delete 문 실행 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1d64f309-2a6e-4ad1-a6b5-e81145549c56
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 96a1aa891ef8ba26c6c239cf35e62a8f36018e65
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e2e11843085f28ceeec965e079bb2942968d15b4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307004"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466200"
 ---
 # <a name="executing-positioned-update-and-delete-statements"></a>위치 지정 업데이트 및 삭제 문 실행
 > [!IMPORTANT]  

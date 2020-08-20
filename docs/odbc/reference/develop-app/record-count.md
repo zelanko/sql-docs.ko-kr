@@ -1,4 +1,5 @@
 ---
+description: Record Count
 title: 레코드 수 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 46eec3cc-0ecc-4980-9020-fb74a9af5730
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 28e503ae4602d87fc9138ed018ee1e95f135ec57
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3d329ca3638f964244cea8c28f7e07e171887fb9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81281819"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465673"
 ---
 # <a name="record-count"></a>Record Count
 설명자의 SQL_DESC_COUNT 헤더 필드는 데이터를 포함 하는 가장 번호가 매겨진 레코드의 인덱스 (1부터 수)입니다. 이 필드는 바인딩된 모든 열 또는 매개 변수의 개수가 아닙니다. 설명자가 할당 될 때 SQL_DESC_COUNT의 초기 값은 0입니다.  

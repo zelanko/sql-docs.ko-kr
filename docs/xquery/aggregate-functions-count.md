@@ -1,4 +1,5 @@
 ---
+description: 집계 함수 - count
 title: count 함수 (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a9f7131f-23e1-4d4d-a36c-180447543926
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f1b56d549d00fb0b76c530a5274adb6a9c82c80c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6691ca005de2ceec1de0408e358544292c58704d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85643722"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467187"
 ---
 # <a name="aggregate-functions---count"></a>집계 함수 - count
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]

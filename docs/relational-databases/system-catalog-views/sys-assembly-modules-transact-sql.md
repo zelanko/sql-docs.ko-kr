@@ -1,4 +1,5 @@
 ---
+description: sys.assembly_modules(Transact-SQL)
 title: sys. assembly_modules (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -20,12 +21,12 @@ ms.assetid: 5f9e644e-8065-49a2-b53d-db7df98f70d8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7b7837e3f3c1da1f9eebe35d312fc9df602eebea
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: e8d04bb98a27ea81f2624c5d9e822b254eee9503
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396326"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464841"
 ---
 # <a name="sysassembly_modules-transact-sql"></a>sys.assembly_modules(Transact-SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]

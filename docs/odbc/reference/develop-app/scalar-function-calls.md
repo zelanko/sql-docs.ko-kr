@@ -1,4 +1,5 @@
 ---
+description: 스칼라 함수 호출
 title: 스칼라 함수 호출 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 10cb4dcf-4cd8-4a56-8725-d080bd3ffe47
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 349599a51b2996f419e6c8656a71bc9e30146542
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b6d0f77adaf6284bceac126b3539121cbdb174ca
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304264"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465591"
 ---
 # <a name="scalar-function-calls"></a>스칼라 함수 호출
 스칼라 함수는 각 행에 대 한 값을 반환 합니다. 예를 들어 절대값 스칼라 함수는 숫자 열을 인수로 사용 하 고 열에 있는 각 값의 절대 값을 반환 합니다. 스칼라 함수를 호출 하는 이스케이프 시퀀스는  

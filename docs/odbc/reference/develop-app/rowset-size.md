@@ -1,4 +1,5 @@
 ---
+description: 행 집합 크기
 title: 행 집합 크기 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 60366ae8-175c-456a-ae5e-bdd860786911
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 11b95768934f96e1587b3c570b2510f3c2849239
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d915d6e11fc7678312eab60c3316815cfabab38e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304244"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465611"
 ---
 # <a name="rowset-size"></a>행 집합 크기
 사용할 행 집합 크기는 응용 프로그램에 따라 달라 집니다. 화면 기반 응용 프로그램은 일반적으로 두 가지 전략 중 하나를 따릅니다. 첫 번째는 행 집합 크기를 화면에 표시 되는 행의 수로 설정 하는 것입니다. 사용자가 화면의 크기를 조정 하면 응용 프로그램은 행 집합 크기를 적절 하 게 변경 합니다. 두 번째는 데이터 원본에 대 한 호출 수를 줄일 수 있도록 행 집합 크기를 100과 같은 큰 수로 설정 하는 것입니다. 가능 하면 응용 프로그램은 행 집합 내에서 로컬로 스크롤하고 행 집합 외부에서 스크롤하면 새 행을 페치합니다.  

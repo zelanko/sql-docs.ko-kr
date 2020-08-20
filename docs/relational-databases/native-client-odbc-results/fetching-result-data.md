@@ -1,4 +1,5 @@
 ---
+description: 결과 데이터 인출
 title: 결과 데이터를 페치하는 중 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -23,11 +24,12 @@ ms.assetid: b289c7fb-5017-4d7e-a2d3-19401e9fc4cd
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e83a9c039a5da06a63261f8d062d0f4da5ddf8a1
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: f30630a170463fdf7b45fb5fee851416a24889d6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007475"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465331"
 ---
 # <a name="fetching-result-data"></a>결과 데이터 인출
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -63,6 +65,6 @@ ms.locfileid: "86007475"
  사용자가 커서를 위나 아래로 스크롤 하는 동안 **text**, **ntext**또는 **image** 데이터가 표시 되지 않도록 이러한 최적화를 응용 프로그램에 적용할 수 있습니다. 사용자가 행을 선택 하면 응용 프로그램에서 **SQLGetData** 를 호출 하 여 **text**, **ntext**또는 **image** 데이터를 검색할 수 있습니다. 이렇게 하면 사용자가 선택 하지 않은 행에 대해 **text**, **ntext**또는 **image** 데이터를 전송 하 고 대량의 데이터 전송을 저장할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [ODBC&#41;&#40;결과 처리](../../relational-databases/native-client-odbc-results/processing-results-odbc.md)  
+ [ODBC&#41;&#40;결과 처리 ](../../relational-databases/native-client-odbc-results/processing-results-odbc.md)  
   
   

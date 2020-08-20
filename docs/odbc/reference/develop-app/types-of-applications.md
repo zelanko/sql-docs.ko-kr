@@ -1,4 +1,5 @@
 ---
+description: 애플리케이션 형식
 title: 응용 프로그램 유형 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d346a64e-a32c-4153-a40f-5b53c2f57ef2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f14326c9cec1eb89e431154c91b680e4688fcdfa
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 54056a6111924fb584ac35a65d6f74e8dab1ba6c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305534"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465553"
 ---
 # <a name="types-of-applications"></a>애플리케이션 형식
 ODBC 응용 프로그램은 다음과 같이 분류할 수 있습니다.  
@@ -41,7 +42,7 @@ ODBC 응용 프로그램은 다음과 같이 분류할 수 있습니다.
 -   **순수한 ODBC 2.**  
      **_x_ 유니코드 응용 프로그램** 순수 ODBC 2. 유니코드로 호환 되 고 SQL_WCHAR 데이터 형식을 사용 하는 *x* 다시 컴파일된 응용 프로그램입니다.  
   
--   **순수한 오픈 그룹 및 ISO**-**규격 ODBC 응용 프로그램** 은 다음을 수행 하는 32 비트 응용 프로그램입니다.  
+-   **순수 개방 그룹 및 ISO** - **호환 ODBC 응용 프로그램** 32 비트 응용 프로그램은 다음과 같습니다.  
   
     -   Open Group 또는 ISO CLI 표준에 정의 된 함수를 호출 합니다. 이러한 함수는 사용 되지 않는 3.0 함수를 포함할 수 있습니다.  
   

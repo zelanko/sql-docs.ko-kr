@@ -1,4 +1,5 @@
 ---
+description: 숫자 데이터 형식에 대한 기본 전체 자릿수 및 소수 자릿수 재정의
 title: 숫자 데이터 형식에 대 한 기본 전체 자릿수 및 소수 자릿수 재정의 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 84292334-0e33-4a1b-84de-8c018dd787f3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 365c5f69d21dd3a4ad8e89805d81f1b3b0c9dcba
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 798e607ff6584bde27791a29e4b20aeb1d7bb3cf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303594"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466085"
 ---
 # <a name="overriding-default-precision-and-scale-for-numeric-data-types"></a>숫자 데이터 형식에 대한 기본 전체 자릿수 및 소수 자릿수 재정의
 **SQLBindCol** 또는 SQLSetDescField를 호출 하 여 **SQLSetDescField**의 SQL_DESC_TYPE 필드가 SQL_C_NUMERIC로 설정 된 경우, 나의 SQL_DESC_SCALE 필드는 0으로 설정 되 고 SQL_DESC_PRECISION 필드는 드라이버 정의 기본 전체 자릿수로 설정 됩니다. **SQLBindParameter** 또는 **SQLSetDescField**를 호출 하 여 apd의 SQL_DESC_TYPE 필드가 SQL_C_NUMERIC으로 설정 된 경우에도 마찬가지입니다. 입력, 입/출력 또는 출력 매개 변수의 경우에도 마찬가지입니다.  

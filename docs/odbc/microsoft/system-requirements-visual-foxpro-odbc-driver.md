@@ -1,4 +1,5 @@
 ---
+description: 시스템 요구 사항(Visual FoxPro ODBC 드라이버)
 title: 시스템 요구 사항 (Visual FoxPro ODBC 드라이버) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: fb4d5157-9a3e-43bf-97b5-7a614558652c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d02681709edb3a22144469df7c9abbda34e6e083
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d48f5ddf105d8ecc315387c0c42c3cb84c104bda
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301444"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466325"
 ---
 # <a name="system-requirements-visual-foxpro-odbc-driver"></a>시스템 요구 사항(Visual FoxPro ODBC 드라이버)
 설치를 위한 시스템 요구 사항은 드라이버를 성공적으로 설치 하는 데 필요한 최소 운영 체제 및 디스크 공간을 제공 합니다. 드라이버를 설치한 후에는 Visual FoxPro 데이터에 액세스 하는 데 사용 하려는 특정 응용 프로그램 소프트웨어를 선택할 수 있습니다.  

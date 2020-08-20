@@ -1,4 +1,5 @@
 ---
+description: DQS 기술 자료 및 도메인
 title: DQS 기술 자료 및 도메인
 ms.date: 10/01/2012
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: b5879041-db1e-4c6c-b49a-33784ade2942
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: c677a999454f307f90b0f0444e67069ce81dfcc3
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: e27c84f54901bb66e2d934af661c3aac20aea384
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87362505"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466825"
 ---
 # <a name="dqs-knowledge-bases-and-domains"></a>DQS 기술 자료 및 도메인
 
@@ -138,7 +139,7 @@ ms.locfileid: "87362505"
   
  일치는 복합 도메인을 구성하는 단일 도메인에서 수행할 수 있지만 복합 도메인 자체에서는 수행할 수 없습니다.  
   
-##  <a name="data-matching"></a><a name="Matching"></a>데이터 일치  
+##  <a name="data-matching"></a><a name="Matching"></a> 데이터 일치  
  도메인 관리를 통해 기술 자료를 수동으로 변경하는 것 외에도 일치하는 지식을 기술 자료에 추가할 수 있습니다. 데이터 중복 제거 프로세스를 위해 DQS를 준비하려면 일치 가능성을 계산하기 위해 DQS가 사용할 일치 규칙을 만들어야 합니다. 정책에는 데이터 관리자가 DQS에서 데이터 행을 비교하는 방법을 식별하기 위해 만드는 하나 이상의 일치 규칙이 포함됩니다. 데이터 관리자는 행에서 비교할 데이터 필드와 비교 시 각 필드가 갖는 가중치를 결정합니다. 데이터 관리자는 또한 일치하는 것으로 간주할 일치 확률을 결정합니다. DQS는 데이터 품질 프로젝트에서 일치 활동을 수행하는 데 사용할 일치 규칙을 기술 자료에 추가합니다.  
   
  기술 자료 및 데이터 일치에 대한 자세한 내용은 [데이터 일치](../data-quality-services/data-matching.md)에서 유지 관리할 수 있으며,  

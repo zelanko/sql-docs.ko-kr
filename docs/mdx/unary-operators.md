@@ -1,4 +1,5 @@
 ---
+description: 단항 연산자
 title: 단항 연산자 | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 9ec9ac3eef28c4deae08d577487599575852c132
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 32f5084190642bd4237d225404c92f0c4754da7b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68893550"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466475"
 ---
 # <a name="unary-operators"></a>단항 연산자
 
@@ -22,7 +23,7 @@ ms.locfileid: "68893550"
   
  다음 표에서는 MDX가 지원하는 단항 연산자를 나열합니다.  
   
-|연산자|Description|  
+|연산자|설명|  
 |--------------|-----------------|  
 |[-(음수)](../mdx/negative-mdx.md)|숫자 식의 음수 값을 반환합니다.|  
 |[+(양수)](../mdx/positive-mdx.md)|숫자 식의 양수 값을 반환합니다.|  

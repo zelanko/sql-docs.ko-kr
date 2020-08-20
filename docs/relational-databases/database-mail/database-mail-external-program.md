@@ -1,4 +1,5 @@
 ---
+description: 데이터베이스 메일 외부 프로그램
 title: 데이터베이스 메일 외부 프로그램 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: bc124164-eb6e-4b7f-bf66-98a3113d02f7
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 4821091d350abd3396d524aa7ea3a1b4dd131318
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e8d609ec57f47cf3df061f286bd663c0a8431047
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726529"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465455"
 ---
 # <a name="database-mail-external-program"></a>데이터베이스 메일 외부 프로그램
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  데이터베이스 메일 외부 프로그램의 실행 파일은 **DatabaseMail.exe**이며 **설치 위치의** MSSQL\Binn 디렉터리 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 들어 있습니다. 데이터베이스 메일은 처리할 전자 메일 메시지가 있는 경우 Service Broker 활성화를 사용하여 외부 프로그램을 시작합니다. 데이터베이스 메일은 외부 프로그램의 인스턴스 하나를 시작합니다. 외부 프로그램은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대한 서비스 계정의 보안 컨텍스트에서 실행됩니다.  
+   데이터베이스 메일 외부 프로그램의 실행 파일은 **DatabaseMail.exe**이며 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 위치의 **MSSQL\Binn 디렉터리**에 들어 있습니다. 데이터베이스 메일은 처리할 전자 메일 메시지가 있는 경우 Service Broker 활성화를 사용하여 외부 프로그램을 시작합니다. 데이터베이스 메일은 외부 프로그램의 인스턴스 하나를 시작합니다. 외부 프로그램은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대한 서비스 계정의 보안 컨텍스트에서 실행됩니다.  
   
  **항목 내용:**  
   

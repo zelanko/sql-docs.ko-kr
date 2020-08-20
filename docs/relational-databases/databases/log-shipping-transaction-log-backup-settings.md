@@ -1,4 +1,5 @@
 ---
+description: 로그 전달 트랜잭션 로그 백업 설정
 title: 로그 전달 트랜잭션 로그 백업 설정 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 9a6e6c16-7f71-412b-bba6-7bffac001277
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: a73e046e4013ef4396ddd738fd84e2a932a2da81
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7d4aca0ffc4cf4521123c03b71c7e2e4aae72038
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85642551"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465438"
 ---
 # <a name="log-shipping-transaction-log-backup-settings"></a>로그 전달 트랜잭션 로그 백업 설정
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

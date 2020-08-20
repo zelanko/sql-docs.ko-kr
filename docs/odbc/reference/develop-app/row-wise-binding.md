@@ -1,4 +1,5 @@
 ---
+description: 행 단위 바인딩
 title: 행 단위 바인딩 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4f622cf4-0603-47a1-a48b-944c4ef46364
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3a63565590bbafc6f3a8740dd7cf7d4acbfd4f80
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b30d2426a8fb2a2bd0f0cb89c2de5bc326b67dfa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304274"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465623"
 ---
 # <a name="row-wise-binding"></a>행 단위 바인딩
 행 단위 바인딩을 사용 하는 경우 응용 프로그램은 데이터가 반환 되는 각 열에 대해 하나 또는 두 개의 요소를 포함 하는 구조체를 정의 합니다. 첫 번째 요소는 데이터 값을 보유 하 고 두 번째 요소는 길이/지표 버퍼를 보유 합니다. SQL_DESC_INDICATOR_PTR 및 SQL_DESC_OCTET_LENGTH_PTR 설명자 필드를 서로 다른 값으로 설정 하 여 표시기 및 길이 값을 별도의 버퍼에 저장할 수 있습니다. 이 작업이 수행 되 면 구조체에 세 번째 요소가 포함 됩니다. 그런 다음 응용 프로그램은 행 집합의 행 수 만큼의 요소를 포함 하는 이러한 구조의 배열을 할당 합니다.  

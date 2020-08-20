@@ -1,4 +1,5 @@
 ---
+description: Lag(DMX)
 title: Lag (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: e011fc48b63aa653cd63e11678b84d8356370bd0
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 4e7aa504c3afd236ddd748a7ee81cbbb6cf90b7c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86969344"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466576"
 ---
 # <a name="lag-dmx"></a>Lag(DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -33,7 +34,7 @@ Lag()
 ## <a name="remarks"></a>설명  
  KEY TIME 열이 중첩 테이블 내에 있는 모델에서 **Lag** 함수를 사용 하는 경우이 함수는 문의 하위 select 내에 위치 해야 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 모델의 학습에 사용된 데이터에 대한 지난 12개월 간 사례를 반환합니다.  
   
 ```  

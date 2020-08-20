@@ -1,4 +1,5 @@
 ---
+description: Oracle 게시를 위한 용어 설명
 title: Oracle 게시를 위한 용어 설명 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e21dfa4b-6144-4be7-9cbf-ca2709b2bd9f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 259ddd0128350fef480d4d25429808571d23ef11
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2dae5a66a762e53a4748bf43732aed70c5c0edfc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892445"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465158"
 ---
 # <a name="glossary-of-terms-for-oracle-publishing"></a>Oracle 게시를 위한 용어 설명
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "85892445"
 #### <a name="rowid"></a>ROWID  
  데이터베이스의 특정 행 위치를 가리키는 포인터입니다. ROWID를 사용하여 행을 검색하는 것이 테이블 검색 또는 인덱스를 사용하는 것보다 빠르므로 복제는 게시된 테이블의 변경 내용을 처리하는 중 일시적으로 ROWID를 사용합니다.  
   
-#### <a name="sequence"></a>시퀀스  
+#### <a name="sequence"></a>순서  
  고유 번호를 생성하는 데 사용되는 데이터베이스 개체입니다. 복제는 시퀀스를 사용하여 게시된 테이블에 대한 변경 내용의 적용 순서를 지정합니다.  
   
 #### <a name="sqlplus"></a>SQL\*Plus  

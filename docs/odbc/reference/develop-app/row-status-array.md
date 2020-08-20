@@ -1,4 +1,5 @@
 ---
+description: 행 상태 배열
 title: 행 상태 배열 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4b69f189-2722-4314-8a02-f4ffecd6dabd
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 60dead23fe0051c05698e094f37ddad96b2b337d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8067aaf8724a6634d165d53743cbd0ef2015f6bd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304294"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465636"
 ---
 # <a name="row-status-array"></a>행 상태 배열
 **Sqlfetch** 및 **sqlfetchscroll** 은 데이터 외에도 행 집합의 각 행에 대 한 상태를 제공 하는 배열을 반환할 수 있습니다. 이 배열은 SQL_ATTR_ROW_STATUS_PTR statement 특성을 통해 지정 됩니다. 이 배열은 응용 프로그램에 의해 할당 되며 SQL_ATTR_ROW_ARRAY_SIZE statement 특성에 지정 된 것과 같은 수의 요소를 포함 해야 합니다. 배열의 값은 **SQLBulkOperations**, **sqlfetch**, **sqlfetchscroll**및 SQLSetPos로 설정 됩니다 **.** 값은 행의 상태를 설명 하 고 마지막으로 인출 된 후 해당 상태가 변경 되었는지 여부를 설명 합니다.  

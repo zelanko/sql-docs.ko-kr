@@ -1,4 +1,5 @@
 ---
+description: 프로시저 호출
 title: 프로시저 호출 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 145130cc-40e7-4722-8417-dff131084752
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a9c52e72512c8b81c6872461207f235ea2731ac5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ed5da9bbe94bf1f508e1b94c17e81c7b0169f6e0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81282233"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465735"
 ---
 # <a name="procedure-calls"></a>프로시저 호출
 *프로시저* 는 데이터 원본에 저장 된 실행 가능한 개체입니다. 일반적으로 미리 컴파일된 하나 이상의 SQL 문입니다. 프로시저를 호출 하는 이스케이프 시퀀스는 다음과 같습니다.  

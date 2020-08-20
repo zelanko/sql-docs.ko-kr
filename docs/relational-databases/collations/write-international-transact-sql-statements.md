@@ -1,4 +1,5 @@
 ---
+description: 국가별 Transact-SQL 문 작성
 title: 국가별 Transact-SQL 문 작성 | Microsoft 문서
 ms.custom: ''
 ms.date: 04/24/2019
@@ -18,12 +19,12 @@ ms.assetid: f0b10fee-27f7-45fe-aece-ccc3f63bdcdb
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 72b2d6056d3a48d21804d02677867a9757f4f671
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 8192fcd7d657c5842dfd60fcca36fec3e945413d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003938"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465529"
 ---
 # <a name="write-international-transact-sql-statements"></a>국가별 Transact-SQL 문 작성
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -48,7 +49,7 @@ ms.locfileid: "86003938"
   
          **{ ts'** _yyyy_ **-** _mm_ **-** _dd_ _hh_ **:** _mm_ **:** _ss_ [ **.** _fff_] **'}** (예: **{ ts'1998-09-24 10:02:20'}** )  
   
-         **{ d'** _yyyy_ **-** _mm_ **-** _dd_ **'}** (예: **{ d'1998-09-24'}** )
+         **{ d'** _yyyy_ **-** _mm_ **-** _dd_ **'}**(예: **{ d'1998-09-24'}**)
   
          **{ t'** _hh_ **:** _mm_ **:** _ss_ **'}** (예: **{ t'10:02:20'}** )  
   

@@ -1,4 +1,5 @@
 ---
+description: SQL 문의 일괄 처리
 title: SQL 문의 일괄 처리 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 766488cc-450c-434c-9c88-467f6c57e17c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d68ea1c13655ca7c57ba076823f461a4b2e22055
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e342fd7eaef721f8fb0033a5ae022ca8de74cda1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81283513"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465935"
 ---
 # <a name="batches-of-sql-statements"></a>SQL 문의 일괄 처리
 SQL 문 일괄 처리는 둘 이상의 sql 문 또는 두 개 이상의 SQL 문 그룹과 동일한 영향을 주는 단일 SQL 문 그룹입니다. 일부 구현에서는 전체 일괄 처리 문이 실행 되어 결과를 사용할 수 있습니다. 이는 일반적으로 네트워크 트래픽을 줄일 수 있고 데이터 원본에서 SQL 문 일괄 처리의 실행을 최적화할 수 있기 때문에 문을 개별적으로 전송 하는 것 보다 더 효율적입니다. 다른 구현에서 **SQLMoreResults** 를 호출 하면 일괄 처리에서 다음 문의 실행이 트리거됩니다. ODBC는 다음과 같은 유형의 일괄 처리를 지원 합니다.  

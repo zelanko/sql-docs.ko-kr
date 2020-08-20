@@ -1,4 +1,5 @@
 ---
+description: 게이트웨이 진단 예제
 title: 게이트웨이 진단 예 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e0695fac-4593-4b3d-8675-cb8f73dab966
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b18fd78be7be2eb79316339cbdf3d315deb194fb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 17e32f0ccdc1b2fbbebb1969083e216ed3371688
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305574"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465785"
 ---
 # <a name="gateways-diagnostic-example"></a>게이트웨이 진단 예제
 게이트웨이 아키텍처에서 드라이버는 ODBC를 지 원하는 게이트웨이로 요청을 보냅니다. 게이트웨이에서 DBMS로 요청을 보냅니다. 드라이버 관리자와 상호 작용 하는 구성 요소 이므로 드라이버는 **SQLGetDiagRec**에 대 한 인수를 포맷 하 고 반환 합니다.  

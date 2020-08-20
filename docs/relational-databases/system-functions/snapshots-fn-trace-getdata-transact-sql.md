@@ -1,4 +1,5 @@
 ---
+description: snapshots.fn_trace_getdata(Transact-SQL)
 title: snapshot. fn_trace_getdata (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: ac28ef48-f4f4-4bf2-ba22-d44e1be88172
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 96120924b3362ec14df84d5043f7b7741a0f2b8f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f022a27c8a8e47cd12994d0d03ddb5af9a2f920c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898439"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464784"
 ---
 # <a name="snapshotsfn_trace_getdata-transact-sql"></a>snapshots.fn_trace_getdata(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -57,6 +58,6 @@ snapshots.fn_trace_gettable ( trace_info_id, start_time, end_time )
  mdw_reader에 대한 SELECT 권한이 필요합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [데이터 수집](../../relational-databases/data-collection/data-collection.md)  
+ [데이터 컬렉션](../../relational-databases/data-collection/data-collection.md)  
   
   

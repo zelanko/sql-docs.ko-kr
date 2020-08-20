@@ -1,4 +1,5 @@
 ---
+description: 전체 텍스트 카탈로그와 인덱스 백업 및 복원
 title: 전체 텍스트 카탈로그와 인덱스 백업 및 복원
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 3458c111b32ae42a71d062df091b01b4723fc6d9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 37a8ab93e1a7f4747167dc6a69acf173c318751f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85729254"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465002"
 ---
 # <a name="back-up-and-restore-full-text-catalogs-and-indexes"></a>전체 텍스트 카탈로그와 인덱스 백업 및 복원
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

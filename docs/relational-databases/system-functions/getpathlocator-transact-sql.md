@@ -1,4 +1,5 @@
 ---
+description: GetPathLocator(Transact-SQL)
 title: GetPathLocator (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 78b7e220-445b-4fdf-811b-7253f4f2b058
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 133d2b109c54271c2e94cba2e88831f8f7aecf16
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2551dfbb7d71b33542f4bc6fd8087c10f974e45b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85662875"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464766"
 ---
 # <a name="getpathlocator-transact-sql"></a>GetPathLocator(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

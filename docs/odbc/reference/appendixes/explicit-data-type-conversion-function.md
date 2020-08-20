@@ -1,4 +1,5 @@
 ---
+description: 명시적 데이터 형식 변환 함수
 title: 명시적 데이터 형식 변환 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d5789450-b668-4753-96c8-6789e955e7ed
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ed0a1e9155eeb3e2147bed3dd31e78176bdc38d2
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: da897469d26cd0403dc023cfcd3f3e03bfceeba4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87363323"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466190"
 ---
 # <a name="explicit-data-type-conversion-function"></a>명시적 데이터 형식 변환 함수
 명시적 데이터 형식 변환은 SQL 데이터 형식 정의를 기준으로 지정 됩니다.  
@@ -79,7 +80,7 @@ ms.locfileid: "87363323"
 
  명시적 데이터 형식 변환 함수에 대 한 ODBC 구문은 변환 형식의 사양을 지원 하지 않습니다. 기본 데이터 원본에서 명시적 형식 지정을 지 원하는 경우 드라이버는 기본값을 지정 하거나 형식 사양을 구현 해야 합니다.  
   
- *Value_exp* 인수는 열 이름, 다른 스칼라 함수의 결과 또는 숫자 또는 문자열 리터럴일 수 있습니다. 예를 들면 다음과 같습니다.  
+ *Value_exp* 인수는 열 이름, 다른 스칼라 함수의 결과 또는 숫자 또는 문자열 리터럴일 수 있습니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.  
   
 ```  
 { fn CONVERT( { fn CURDATE() }, SQL_CHAR ) }  

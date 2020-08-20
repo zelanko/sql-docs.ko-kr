@@ -1,4 +1,5 @@
 ---
+description: 기술 자료 검색 수행
 title: 기술 자료 검색 수행
 ms.date: 06/04/2013
 ms.prod: sql
@@ -14,12 +15,12 @@ f1_keywords:
 ms.assetid: 34a0ea16-02e6-46ed-90bc-dede68687f63
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 9f1d6865a4c432694201c9b5a666fff3fd46d117
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 65bde5805bbe3e768b56094d165b385d01f68439
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883404"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466814"
 ---
 # <a name="perform-knowledge-discovery"></a>기술 자료 검색 수행
 
@@ -39,7 +40,7 @@ ms.locfileid: "85883404"
 ####  <a name="permissions"></a><a name="Permissions"></a> 권한  
  기술 자료를 만들려면 DQS_MAIN 데이터베이스에 대한 dqs_kb_editor 또는 dqs_administrator 역할이 있어야 합니다.  
   
-##  <a name="first-step-start-knowledge-discovery"></a><a name="FirstStep"></a>첫 번째 단계: 기술 자료 검색 시작  
+##  <a name="first-step-start-knowledge-discovery"></a><a name="FirstStep"></a> 첫 번째 단계: 기술 자료 검색 시작  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Data Quality Client 응용 프로그램을 실행](../data-quality-services/run-the-data-quality-client-application.md)합니다.  
   
@@ -202,7 +203,7 @@ ms.locfileid: "85883404"
   
     -   **검색** 페이지로 돌아가려면 **뒤로** 를 클릭합니다. **닫기**를 클릭한 후 도메인 관리 작업을 수행하려면 **기술 자료 열기** 화면에서 **기술 자료 검색** 을 클릭하고 **기술 자료 관리: 도메인 용어 관리** 화면으로 이동한 후 **마침**을 클릭하고 **예** 를 클릭하여 기술 자료를 게시하거나 **아니요** 를 클릭하여 기술 자료에 작업을 저장한 후 끝내야 합니다.  
   
-##  <a name="follow-up-after-performing-knowledge-discovery"></a><a name="FollowUp"></a>후속 작업: 기술 자료 검색을 수행한 후  
+##  <a name="follow-up-after-performing-knowledge-discovery"></a><a name="FollowUp"></a> 후속 작업: 기술 자료 검색을 수행한 후  
  컴퓨터 기반 기술 자료 검색 프로세스에서 기술 자료에 정보를 추가한 후에는 기술 자료를 사용하여 프로젝트를 즉시 정리하거나 정리를 수행하기 전에 도메인 관리를 수행할 수 있습니다. 데이터 정리 또는 도메인 관리에 대한 자세한 내용은 [데이터 정리](../data-quality-services/data-cleansing.md) 또는 [도메인 관리](../data-quality-services/managing-a-domain.md)를 참조하세요.  
   
 ##  <a name="the-meaning-of-correct-error-and-invalid-values"></a><a name="Meaning"></a> 올바름, 오류, 유효하지 않음 값의 의미  

@@ -1,4 +1,5 @@
 ---
+description: 따옴표 붙은 식별자
 title: 따옴표 붙은 식별자 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 729ba55f-743b-4a04-8c39-ac0a9914211d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0c03fa8bbc059566288997b29c899056f26de252
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cd317e5d92618d8b458d6d28fa870c6945e136fd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81282006"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465683"
 ---
 # <a name="quoted-identifiers"></a>따옴표 붙은 식별자
 SQL 문에서 특수 문자 또는 match 키워드를 포함 하는 식별자는 *식별자 따옴표 문자로*묶어야 합니다. 이러한 문자로 묶인 식별자를 *따옴표 붙은 식별자* (SQL-92에서는 *구분 식별자* 라고도 함) 라고 합니다. 예를 들어 외상 매입금 식별자는 다음 **SELECT** 문에서 따옴표로 묶여 있습니다.  

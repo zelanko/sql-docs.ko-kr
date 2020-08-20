@@ -1,4 +1,5 @@
 ---
+description: SQLBulkOperations로 데이터 업데이트
 title: SQLBulkOperations를 사용 하 여 데이터 업데이트 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7645a704-341e-4267-adbe-061a9fda225b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9b96e3a43b8385910e4260cf51dea7e4ff508200
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6c8626a0925d0f30792ed92332c0f96efd23f62e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298487"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465537"
 ---
 # <a name="updating-data-with-sqlbulkoperations"></a>SQLBulkOperations로 데이터 업데이트
 응용 프로그램은 **SQLBulkOperations**를 호출 하 여 데이터 원본의 기본 테이블에서 대량 업데이트, 삭제, 페치 또는 삽입 작업을 수행할 수 있습니다. **SQLBulkOperations** 를 호출 하는 것은 SQL 문을 생성 하 고 실행 하는 편리한 방법입니다. 데이터 원본에서 위치가 지정 된 SQL 문을 지원 하지 않는 경우에도 ODBC 드라이버에서 위치 지정 업데이트를 지원할 수 있습니다. 함수 호출을 통해 전체 데이터베이스 액세스를 달성 하는 패러다임의 일부입니다.  

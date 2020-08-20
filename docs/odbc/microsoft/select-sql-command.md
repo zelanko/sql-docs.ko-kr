@@ -1,4 +1,5 @@
 ---
+description: SELECT - SQL 명령
 title: SELECT-SQL 명령 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2149c3ca-3a71-446d-8d53-3d056e2f301a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 640189a5a31d0c21642b037e906bd6361690a9a5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2b5fb0e3d38a2e5594cacf77b116844bcce219d7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300943"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466425"
 ---
 # <a name="select---sql-command"></a>SELECT - SQL 명령
 하나 이상의 테이블에서 데이터를 검색 합니다.  
@@ -113,7 +114,7 @@ FROM [DatabaseName!]Table [Local_Alias]
   
 -   쿼리에 두 개의 테이블을 포함 하 고 조인 조건을 지정 하지 않으면 첫 번째 테이블의 모든 레코드는 필터 조건이 충족 되는 한 두 번째 테이블의 모든 레코드에 조인 됩니다. 이러한 쿼리는 긴 결과를 생성할 수 있습니다.  
   
--   Visual FoxPro는 빈 필드와 일치 하므로 빈 필드가 있는 테이블을 조인 하는 경우 주의 해야 합니다. 예를 들어 고객에 게 참여 하는 경우입니다. ZIP 및 청구서. ZIP 및 고객에 게 100 빈 우편 번호가 포함 되어 있고 청구서에 400 빈 우편 번호가 포함 된 경우 쿼리 출력에는 빈 필드에서 생성 된 4만 추가 레코드가 포함 됩니다. **빈 ()** 함수를 사용 하 여 쿼리 출력에서 빈 레코드를 제거 합니다.  
+-   Visual FoxPro는 빈 필드와 일치 하므로 빈 필드가 있는 테이블을 조인 하는 경우 주의 해야 합니다. 예를 들어 CUSTOMER.ZIP 및 INVOICE.ZIP에 조인 하 고, 고객에 게 100 빈 우편 번호가 포함 되어 있고 청구서에 400 빈 우편 번호가 포함 되어 있는 경우 쿼리 출력에는 빈 필드에서 생성 된 4만 추가 레코드가 포함 됩니다. **빈 ()** 함수를 사용 하 여 쿼리 출력에서 빈 레코드를 제거 합니다.  
   
 -   여러 조인 조건을 연결 하려면 AND 연산자를 사용 해야 합니다. 각 조인 조건에는 다음과 같은 형식이 있습니다.  
   
@@ -280,7 +281,7 @@ WHERE customer.cust_id NOT IN ;
 ## <a name="driver-remarks"></a>드라이버 설명  
  응용 프로그램에서 ODBC SQL 문 SELECT를 데이터 원본으로 보내면 Visual FoxPro ODBC 드라이버는 명령이 ODBC 이스케이프 시퀀스를 포함 하지 않는 한 변환 하지 않고 명령을 Visual FoxPro SELECT 명령으로 변환 합니다. ODBC 이스케이프 시퀀스로 묶인 항목은 Visual FoxPro 구문으로 변환 됩니다. ODBC 이스케이프 시퀀스를 사용 하는 방법에 대 한 자세한 내용은 [시간 및 날짜 함수](../../odbc/microsoft/time-and-date-functions-visual-foxpro-odbc-driver.md) 및 *Microsoft odbc 프로그래머 참조*에서 [odbc의 이스케이프 시퀀스](../../odbc/reference/develop-app/escape-sequences-in-odbc.md)를 참조 하세요.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [CREATE TABLE-SQL](../../odbc/microsoft/create-table-sql-command.md)   
  [삽입-SQL](../../odbc/microsoft/insert-sql-command.md)   
  [ANSI 설정](../../odbc/microsoft/set-ansi-command.md)   

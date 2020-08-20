@@ -1,4 +1,5 @@
 ---
+description: sys.http_endpoints(Transact-SQL)
 title: sys. http_endpoints (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 16f59695-ecd9-457e-8874-055af63f8ea7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 527cc2d7596a1bdd894ba71c1e3b1139150efc63
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b964a9974c8884618b1412827c5a53ad1c481d5e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896274"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464810"
 ---
 # <a name="syshttp_endpoints-transact-sql"></a>sys.http_endpoints(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -33,7 +34,7 @@ ms.locfileid: "85896274"
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**상속 된 열<>**||[&#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)에서 열을 상속 합니다.|  
+|** 상속 된 열<>**||[&#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)에서 열을 상속 합니다.|  
 |**사이트별**|**nvarchar(128)**|이 사이트에 대한 호스트 컴퓨터의 이름이며 SITE = 옵션으로 지정됩니다.|  
 |**url_path**|**nvarchar(4000)**|이 HTTP 엔드포인트에 대한 URL의 경로 부분이며 PATH= 옵션으로 지정됩니다.|  
 |**is_clear_port_enabled**|**bit**|1 = CLEAR 포트가 PORT = CLEAR 옵션을 사용하여 활성화되었습니다.|  
@@ -54,7 +55,7 @@ ms.locfileid: "85896274"
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;카탈로그 뷰](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [엔드포인트 카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)  
   
   

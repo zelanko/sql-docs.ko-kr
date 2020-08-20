@@ -1,4 +1,5 @@
 ---
+description: 복합 도메인의 값 관계 사용
 title: 복합 도메인의 값 관계 사용
 ms.date: 11/22/2011
 ms.prod: sql
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: 5ee468f0-8538-4620-90e8-63f466c9000e
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: e9876e5a232174c387fb46cf4f3b2012f1435dc2
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 67d6d4743fc373afd0ac008a72c7d97751b8ac29
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883298"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466599"
 ---
 # <a name="use-value-relations-in-a-composite-domain"></a>복합 도메인의 값 관계 사용
 
@@ -34,7 +35,7 @@ ms.locfileid: "85883298"
 ####  <a name="permissions"></a><a name="Permissions"></a> 권한  
  복합 도메인의 값 관계를 보려면 DQS_MAIN 데이터베이스에 대한 dqs_kb_editor 또는 dqs_administrator 역할이 있어야 합니다.  
   
-##  <a name="view-value-relations"></a><a name="Use"></a>값 관계 보기  
+##  <a name="view-value-relations"></a><a name="Use"></a> 값 관계 보기  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Data Quality Client 응용 프로그램을 실행](../data-quality-services/run-the-data-quality-client-application.md)합니다.  
   
@@ -51,7 +52,7 @@ ms.locfileid: "85883298"
   
 6.  테이블의 값은 변경할 수 없습니다. 다른 작업을 수행한 경우 **마침** 을 클릭하여 도메인 관리 작업을 완료합니다. 그렇지 않으면 **취소**를 클릭 합니다.  
   
-##  <a name="follow-up-after-viewing-value-relations"></a><a name="FollowUp"></a>후속 작업: 값 관계를 본 후  
+##  <a name="follow-up-after-viewing-value-relations"></a><a name="FollowUp"></a> 후속 작업: 값 관계를 본 후  
  값 관계를 본 후 도메인에 대해 다른 도메인 관리 태스크를 수행하거나, 기술 자료 검색을 수행하여 도메인에 정보를 추가하거나, 도메인에 일치 정책을 추가할 수 있습니다. 자세한 내용은 [기술 자료 검색 수행](../data-quality-services/perform-knowledge-discovery.md), [도메인 관리](../data-quality-services/managing-a-domain.md) 또는 [일치 정책 만들기](../data-quality-services/create-a-matching-policy.md)를 참조하세요.  
   
   

@@ -1,4 +1,5 @@
 ---
+description: ODBC의 SQL 데이터 형식
 title: ODBC의 SQL 데이터 형식 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: a833a725-3c27-4d6b-9f6a-8c2e6e3e2920
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 5c42b4745b2e9865462f58e17b5ce966d8598729
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ca36e54f244112d66c859e1ff66fbfb008b3ac9c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301640"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465575"
 ---
 # <a name="sql-data-types-in-odbc"></a>ODBC의 SQL 데이터 형식
 SQL 데이터 형식은 데이터가 데이터 원본에 저장 되는 형식입니다.  

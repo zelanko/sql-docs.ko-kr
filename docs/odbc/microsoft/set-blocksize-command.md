@@ -1,4 +1,5 @@
 ---
+description: SET BLOCKSIZE 명령
 title: 블록 크기 설정 명령 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0c11580f-37f5-4a8e-99be-9fb9c44bb433
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3eb9fbe9df90f7ddafebc6baa029164a578a6da3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6677a397542f4bcd7f27b11cd032092b7087a9fd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300903"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466395"
 ---
 # <a name="set-blocksize-command"></a>SET BLOCKSIZE 명령
 메모 필드의 저장소에 대해 디스크 공간을 할당 하는 방법을 지정 합니다.  

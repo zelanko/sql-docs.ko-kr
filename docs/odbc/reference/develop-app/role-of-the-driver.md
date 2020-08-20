@@ -1,4 +1,5 @@
 ---
+description: 드라이버의 역할
 title: 드라이버의 역할 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: cac64c24-a27d-4884-96c0-ea7988351711
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8c683d990aaa3fd6892369e734c06fd1c356bd0f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: afd8f058b12b30140bb193ded7a23e8daf365865
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304285"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465649"
 ---
 # <a name="role-of-the-driver"></a>드라이버의 역할
 드라이버는 드라이버 관리자에서 확인 하지 않은 모든 오류 및 경고와이를 생성 하는 주문 상태 레코드를 확인 합니다. ODBC 2. *x* 드라이버는 상태 레코드를 정렬 하지 않습니다.) 여기에는 데이터 잘림, 데이터 변환, 구문 및 일부 상태 전환의 오류 및 경고가 포함 됩니다. 드라이버는 드라이버 관리자에서 부분적으로 검사 한 오류 및 경고를 검사할 수도 있습니다. 예를 들어 드라이버 관리자는 **SQLSetPos** 의 *작업* 값이 유효한 지 여부를 확인 하지만 드라이버가 지원 되는지 여부를 확인 해야 합니다.  

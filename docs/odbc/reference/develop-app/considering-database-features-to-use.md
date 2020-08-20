@@ -1,4 +1,5 @@
 ---
+description: 사용할 데이터베이스 기능 고려
 title: 사용할 데이터베이스 기능 고려 Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 59760114-508e-46c5-81d2-8f2498c0d778
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a9d966781def1c3eab6a9568eab07ab591326171
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2abaed3806514a161c5c506d8bad89b4d3b75153
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299013"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465895"
 ---
 # <a name="considering-database-features-to-use"></a>사용할 데이터베이스 기능 고려
 기본 수준의 상호 운용성을 알고 나면 응용 프로그램에서 사용 하는 데이터베이스 기능을 고려해 야 합니다. 예를 들어 응용 프로그램에서 실행 하는 SQL 문은 무엇 인가요? 응용 프로그램에서 스크롤 가능 커서를 사용 하나요? 트랜잭션을? 절차? Long 데이터 모든 Dbms에서 지원 되지 않을 수 있는 기능에 대 한 자세한 내용은 [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md), [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)및 [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md) 함수 설명 및 [부록 C: SQL 문법을](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)참조 하세요. 응용 프로그램에 필요한 기능은 대상 Dbms 목록에서 일부 Dbms를 제거할 수 있습니다. 또한 응용 프로그램에서 많은 Dbms를 쉽게 대상으로 지정할 수 있습니다.  

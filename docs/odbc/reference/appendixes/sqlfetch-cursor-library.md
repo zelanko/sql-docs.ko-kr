@@ -1,4 +1,5 @@
 ---
+description: SQLFetch(커서 라이브러리)
 title: SQLFetch (커서 라이브러리) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 35a0d493-778b-4fb1-84ee-a13540e2fe0e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: bee83ccb5497888b57a45673599af6b92931a704
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ce9da3c0c5b95be4336c58896b17b6ba5daf6443
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298723"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466005"
 ---
 # <a name="sqlfetch-cursor-library"></a>SQLFetch(커서 라이브러리)
 > [!IMPORTANT]  

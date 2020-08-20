@@ -1,4 +1,5 @@
 ---
+description: DQS 기본 기술 자료 사용
 title: DQS 기본 기술 자료 사용
 ms.custom: ''
 ms.date: 07/31/2012
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: b36af13b-9fcc-4168-bb92-214d600b1c93
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: ef5ed9dc991d91c2f5be790ea6cc49948f237ed5
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1954d4d732e239c4506f92ca3a5411201717e09a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883267"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466585"
 ---
 # <a name="using-the-dqs-default-knowledge-base"></a>DQS 기본 기술 자료 사용
 
@@ -44,7 +45,7 @@ ms.locfileid: "85883267"
   
 -   먼저 DQS에서 새 기술 자료를 만들 필요 없이 기본 기술 자료를 사용하여 정리 데이터 품질 프로젝트를 빠르게 시작하고 실행합니다.  
   
--   기본 기술 자료에서 도메인 관리, 기술 자료 검색 또는 일치 정책 작업을 실행합니다. 이렇게 하려면 **Data Quality Client Home Screen** 에서 [기술 자료 열기](../data-quality-services/data-quality-client-home-screen.md)를 클릭하고 **기술 자료 열기** 화면에서 **DQS 데이터** 기술 자료를 선택한 다음 **작업 선택** 영역에서 필요한 작업을 선택합니다. **다음**을 클릭하여 계속합니다.  
+-   기본 기술 자료에서 도메인 관리, 기술 자료 검색 또는 일치 정책 작업을 실행합니다. 이렇게 하려면 **Data Quality Client Home Screen** 에서 [기술 자료 열기](../data-quality-services/data-quality-client-home-screen.md)를 클릭하고 **기술 자료 열기** 화면에서 **DQS 데이터** 기술 자료를 선택한 다음 **작업 선택** 영역에서 필요한 작업을 선택합니다. **다음** 을 클릭하여 진행합니다.  
   
 -   기본 기술 자료를 사용하여 새 기술 자료를 만듭니다. 기존 기술 자료를 토대로 기술 자료를 만들려면 [Create a Knowledge Base](../data-quality-services/create-a-knowledge-base.md)를 참조하십시오.  
   

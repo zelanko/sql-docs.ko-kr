@@ -1,4 +1,5 @@
 ---
+description: 외부 조인 이스케이프 시퀀스
 title: 외부 조인 이스케이프 시퀀스 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2cfd1525-6677-4d36-9b9e-730496853750
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 37ce446328d263f492cdfd369f6e8f9f64fe6dfc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 22517e676f9f8ac80622d368edcdb5a0ce1b283f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303614"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466095"
 ---
 # <a name="outer-join-escape-sequence"></a>외부 조인 이스케이프 시퀀스
 ODBC는 외부 조인에 대 한 이스케이프 시퀀스를 사용 합니다. 이 이스케이프 시퀀스의 구문은 다음과 같습니다.  

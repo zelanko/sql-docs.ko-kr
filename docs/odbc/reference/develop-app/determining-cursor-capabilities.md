@@ -1,4 +1,5 @@
 ---
+description: 커서 기능 확인
 title: 커서 기능 결정 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 35be486c-8f2d-4cec-beb8-df14151abfef
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 984ad8302f2e1695c8df84a64a18042f4cc9e364
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3390f83a30f6f462148d477ec018d1209ee6e098
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305884"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465825"
 ---
 # <a name="determining-cursor-capabilities"></a>커서 기능 확인
 **SQLGetInfo** 의 다음 네 가지 옵션은 지원 되는 커서 유형과 해당 기능에 대해 설명 합니다.  

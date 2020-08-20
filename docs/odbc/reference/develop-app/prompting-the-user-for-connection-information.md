@@ -1,4 +1,5 @@
 ---
+description: 사용자에게 연결 정보 요청
 title: 사용자에 게 연결 정보를 묻는 메시지 표시 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: da98e9b9-a4ac-4a9d-bae6-e9252b1fe1e5
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9b0f120a1076f14f5e67d506e52a446e0a3d4713
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f52e0d120fb150fe58b850107847d7ef5df20e7c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81282086"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465715"
 ---
 # <a name="prompting-the-user-for-connection-information"></a>사용자에게 연결 정보 요청
 응용 프로그램에서 **SQLConnect** 를 사용 하 고 사용자 이름 및 암호와 같은 연결 정보를 사용자에 게 묻는 메시지를 표시 해야 하는 경우에는 자체적으로이 작업을 수행 해야 합니다. 이를 통해 응용 프로그램에서 "모양과 느낌"을 제어할 수 있지만 응용 프로그램에서 드라이버별 코드를 강제로 포함할 수 있습니다. 이는 응용 프로그램에서 사용자에 게 드라이버별 연결 정보를 입력 하 라는 메시지를 표시 해야 할 때 발생 합니다. 이는 응용 프로그램을 작성할 때 존재 하지 않는 드라이버를 포함 하 여 모든 드라이버와 함께 작동 하도록 설계 된 일반 응용 프로그램에 대해 불가능 한 상황을 제시 합니다.  

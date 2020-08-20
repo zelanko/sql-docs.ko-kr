@@ -1,4 +1,5 @@
 ---
+description: NEAR를 사용하여 근접 단어 검색
 title: NEAR를 사용하여 근접 단어 검색 | Microsoft 문서
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,16 +21,16 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 401be9b8f231704dc5fd44860d03208cc1fa7a5f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6fb4746b2dda07cfcc4872f3bc987df3276f8859
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85629190"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465012"
 ---
 # <a name="search-for-words-close-to-another-word-with-near"></a>NEAR를 사용하여 근접 단어 검색
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  [CONTAINS](../../t-sql/queries/contains-transact-sql.md) 조건자 또는 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 함수에서 ‘근접 단어’ **NEAR**를 사용하여 단어나 구를 검색할 수 있습니다.  
+  [CONTAINS](../../t-sql/queries/contains-transact-sql.md) 조건자 또는 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 함수에서 ‘근접 단어’ **NEAR**를 사용하여 단어나 구를 검색할 수 있습니다. 
   
 ##  <a name="overview-of-near"></a><a name="Custom_NEAR"></a> NEAR 개요  
 **NEAR**에는 다음과 같은 기능이 포함되어 있습니다.  
@@ -109,7 +110,7 @@ GO
  "`Cats` `enjoy` `hunting mice``, but usually avoid` `dogs``.`"  
   
 ## <a name="combine-near-with-other-terms"></a>NEAR와 다른 용어 결합  
- NEAR를 일부 다른 용어와 결합할 수 있습니다. AND(&), OR(|) 또는 AND NOT(&!)을 사용하여 사용자 지정 근접 단어를 다른 사용자 지정 근접 단어, 단순 단어 또는 접두사 단어와 결합할 수 있습니다. 다음은 그 예입니다.  
+ NEAR를 일부 다른 용어와 결합할 수 있습니다. AND(&), OR(|) 또는 AND NOT(&!)을 사용하여 사용자 지정 근접 단어를 다른 사용자 지정 근접 단어, 단순 단어 또는 접두사 단어와 결합할 수 있습니다. 예를 들면 다음과 같습니다.  
   
 -   CONTAINS('NEAR((*term1*, *term2*),5) AND *term3*')  
   

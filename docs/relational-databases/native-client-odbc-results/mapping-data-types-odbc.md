@@ -1,4 +1,5 @@
 ---
+description: 데이터 형식 매핑(ODBC)
 title: 데이터 형식 매핑 (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,11 +21,12 @@ ms.assetid: 4ba0924d-9fca-4c48-aced-0a8d817b3dde
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5c68381c68a70ef72cf10481f05584aa25098773
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: a2cd0786cac3976bcb280422f177d19d8f86a3c7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004667"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465313"
 ---
 # <a name="mapping-data-types-odbc"></a>데이터 형식 매핑(ODBC)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -91,6 +93,6 @@ while ((retcode = SQLFetch (hstmt))==SQL_SUCCESS)
  Native Client ODBC 드라이버와 관련 된 새 데이터 유형인 **SQL_SS_VARIANT**는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sql_variant** 열로 전송 되는 데이터에 사용 됩니다. 매개 변수를 사용 하 여 서버에 데이터를 전송 하는 경우 (예: INSERT INTO TableName VALUES (?,?)) [SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md) 는 C 형식 및 해당 형식을 포함 하는 매개 변수 정보를 지정 하는 데 사용 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC 드라이버는 C 데이터 형식을 적절 한 **sql_variant** 하위 형식 중 하나로 변환 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [ODBC&#41;&#40;결과 처리](../../relational-databases/native-client-odbc-results/processing-results-odbc.md)  
+ [ODBC&#41;&#40;결과 처리 ](../../relational-databases/native-client-odbc-results/processing-results-odbc.md)  
   
   

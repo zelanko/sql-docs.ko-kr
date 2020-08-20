@@ -1,4 +1,5 @@
 ---
+description: 카탈로그 함수
 title: 카탈로그 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 81ba9453-c085-47c0-b411-90ca6a5ee428
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: eb28ec6f4ea299dae8737fc707fd53e4d102442d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b75e6a40252f06f6b9e2105bd557fd35ded9243f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305204"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465945"
 ---
 # <a name="catalog-functions"></a>카탈로그 함수
 모든 데이터베이스에는 데이터를 데이터베이스에 저장 하는 방법을 간략하게 설명 하는 구조가 있습니다. 예를 들어 간단한 판매 주문 데이터베이스에는 다음 그림에 표시 된 구조가 있을 수 있습니다 .이 그림에서는 ID 열을 사용 하 여 테이블을 연결 합니다.  

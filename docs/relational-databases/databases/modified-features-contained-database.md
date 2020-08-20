@@ -1,4 +1,5 @@
 ---
+description: 수정된 기능(포함된 데이터베이스)
 title: 수정된 기능(포함된 데이터베이스) | Microsoft 문서
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: a2942509-39a2-4903-b504-ae80a300a9de
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 2ac376cdb7fd57506470b03facdc16b415098b7a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5726487c9582a7f99b26154bdb92fa61647b1190
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726402"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465413"
 ---
 # <a name="modified-features-contained-database"></a>수정된 기능(포함된 데이터베이스)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

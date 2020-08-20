@@ -1,4 +1,5 @@
 ---
+description: 모델링 플래그(DMX)
 title: 모델링 플래그 (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 7e05d629f46f1c94bbe9305510daf37c09a39c9b
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 52b28158c59e12886f8058883c65654b23ece9e0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86969125"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466548"
 ---
 # <a name="modeling-flags-dmx"></a>모델링 플래그(DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]

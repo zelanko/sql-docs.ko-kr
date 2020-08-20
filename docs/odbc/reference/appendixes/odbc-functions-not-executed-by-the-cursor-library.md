@@ -1,4 +1,5 @@
 ---
+description: 커서 라이브러리에 의해 실행되지 않는 ODBC 함수
 title: 커서 라이브러리에 의해 실행 되지 않는 ODBC 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f2941522-75eb-4db9-9468-4800b884dac2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ff9d685cf4a509b84142d91f76d41eb7ca3508ee
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e9855bcf92373af085ac7ba8eb10f63afef6c5c9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81308044"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466105"
 ---
 # <a name="odbc-functions-not-executed-by-the-cursor-library"></a>커서 라이브러리에 의해 실행되지 않는 ODBC 함수
 > [!IMPORTANT]  

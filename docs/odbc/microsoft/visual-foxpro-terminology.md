@@ -1,4 +1,5 @@
 ---
+description: Visual FoxPro 용어
 title: Visual FoxPro 용어 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a379b3cb-0393-46e7-b03b-724a56d8f31c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 159314e3dddb946bceaeab5079ac81a685d087d6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e75879d62c73d731b09273e26304c7d5d92ee2eb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307574"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466295"
 ---
 # <a name="visual-foxpro-terminology"></a>Visual FoxPro 용어
 **database**  

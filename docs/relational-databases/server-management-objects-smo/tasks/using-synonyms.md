@@ -1,4 +1,5 @@
 ---
+description: 동의어 사용
 title: 동의어 사용 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
@@ -13,11 +14,12 @@ ms.assetid: db0a9022-9549-43e5-b6b3-deb236f05fb8
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 05578af8f00b9ffea3dbf0e480e9a9f165539f9e
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 7fef9446721928315268db66d46af6ed3a4138c1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85985418"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464955"
 ---
 # <a name="using-synonyms"></a>동의어 사용
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
