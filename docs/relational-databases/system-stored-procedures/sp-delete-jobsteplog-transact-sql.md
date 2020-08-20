@@ -1,4 +1,5 @@
 ---
+description: sp_delete_jobsteplog(Transact-SQL)
 title: sp_delete_jobsteplog (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e9ef4c99-abde-4038-b6a3-a25dcbaf0958
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b1ae68a2c09ca79917288381db0a0f9c92d4e33c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 4b50fb6987fe43e78ae205f620fffa06750172a1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85863676"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469647"
 ---
 # <a name="sp_delete_jobsteplog-transact-sql"></a>sp_delete_jobsteplog(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,21 +44,21 @@ sp_delete_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @job_id = ] 'job_id'`제거할 작업 단계 로그가 포함 된 작업의 id입니다. *job_id* 은 **int**이며 기본값은 NULL입니다.  
+`[ @job_id = ] 'job_id'` 제거할 작업 단계 로그가 포함 된 작업의 id입니다. *job_id* 은 **int**이며 기본값은 NULL입니다.  
   
-`[ @job_name = ] 'job_name'`작업의 이름입니다. *job_name* 는 **sysname**이며 기본값은 NULL입니다.  
+`[ @job_name = ] 'job_name'` 작업의 이름입니다. *job_name* 는 **sysname**이며 기본값은 NULL입니다.  
   
 > **참고:** *Job_id* 또는 *job_name* 를 지정 해야 하지만 둘 다 지정할 수는 없습니다.  
   
-`[ @step_id = ] step_id`작업 단계 로그를 삭제할 작업 단계의 id 번호입니다. 포함 되지 않은 경우 ** \@ older_than** 또는 ** \@ larger_than** 지정 되지 않은 경우 작업의 모든 작업 단계 로그가 삭제 됩니다. *step_id* 은 **int**이며 기본값은 NULL입니다.  
+`[ @step_id = ] step_id` 작업 단계 로그를 삭제할 작업 단계의 id 번호입니다. 포함 되지 않은 경우 ** \@ older_than** 또는 ** \@ larger_than** 지정 되지 않은 경우 작업의 모든 작업 단계 로그가 삭제 됩니다. *step_id* 은 **int**이며 기본값은 NULL입니다.  
   
-`[ @step_name = ] 'step_name'`작업 단계 로그를 삭제할 작업 단계의 이름입니다. *step_name* 는 **sysname**이며 기본값은 NULL입니다.  
+`[ @step_name = ] 'step_name'` 작업 단계 로그를 삭제할 작업 단계의 이름입니다. *step_name* 는 **sysname**이며 기본값은 NULL입니다.  
   
 > **참고:** *Step_id* 또는 *step_name* 를 지정할 수 있지만 둘 다 지정할 수는 없습니다.  
   
-`[ @older_than = ] 'date'`유지 하려는 가장 오래 된 작업 단계 로그의 날짜와 시간입니다. 이 날짜와 시간보다 오래된 모든 작업 단계 로그는 제거됩니다. *날짜* 는 **datetime**이며 기본값은 NULL입니다. ** \@ Older_than** 와 ** \@ larger_than** 를 모두 지정할 수 있습니다.  
+`[ @older_than = ] 'date'` 유지 하려는 가장 오래 된 작업 단계 로그의 날짜와 시간입니다. 이 날짜와 시간보다 오래된 모든 작업 단계 로그는 제거됩니다. *날짜* 는 **datetime**이며 기본값은 NULL입니다. ** \@ Older_than** 와 ** \@ larger_than** 를 모두 지정할 수 있습니다.  
   
-`[ @larger_than = ] 'size_in_bytes'`유지 하려는 가장 큰 작업 단계 로그의 크기 (바이트)입니다. 이 크기보다 큰 모든 작업 단계 로그는 제거됩니다. ** \@ Larger_than** 와 ** \@ older_than** 를 모두 지정할 수 있습니다.  
+`[ @larger_than = ] 'size_in_bytes'` 유지 하려는 가장 큰 작업 단계 로그의 크기 (바이트)입니다. 이 크기보다 큰 모든 작업 단계 로그는 제거됩니다. ** \@ Larger_than** 와 ** \@ older_than** 를 모두 지정할 수 있습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -83,7 +84,7 @@ sp_delete_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
   
  **Sysadmin** 의 멤버만 다른 사용자가 소유한 작업 단계 로그를 삭제할 수 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-removing-all-job-step-logs-from-a-job"></a>A. 작업에서 모든 작업 단계 로그 제거  
  다음 예에서는 작업 `Weekly Sales Data Backup`에 대한 모든 작업 단계 로그를 제거합니다.  
@@ -124,8 +125,8 @@ EXEC dbo.sp_delete_jobsteplog
 GO  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [Transact-sql&#41;sp_help_jobsteplog &#40;](../../relational-databases/system-stored-procedures/sp-help-jobsteplog-transact-sql.md)   
- [Transact-sql&#41;&#40;저장 프로시저 SQL Server 에이전트](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)  
+ [Transact-sql&#41;&#40;저장 프로시저 SQL Server 에이전트 ](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)  
   
   

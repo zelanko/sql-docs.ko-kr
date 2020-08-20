@@ -1,4 +1,5 @@
 ---
+description: sp_delete_alert(Transact-SQL)
 title: sp_delete_alert (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a831315e-793d-41c4-8333-b324bb2bc614
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7ef855e02ce472f06b7cd1364a5030bd0adbeeb5
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 782d6f748521c6c0d1279fe3d29b843f93d2811f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85864807"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469648"
 ---
 # <a name="sp_delete_alert-transact-sql"></a>sp_delete_alert(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,7 @@ sp_delete_alert [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @name = ] 'name'`경고의 이름입니다. *name* 은 **sysname**이며 기본값은 없습니다.  
+`[ @name = ] 'name'` 경고의 이름입니다. *name* 은 **sysname**이며 기본값은 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -53,7 +54,7 @@ sp_delete_alert [ @name = ] 'name'
 ## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할의 멤버만이 프로시저를 실행할 수 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `Test Alert`라는 경고를 제거합니다.  
   
 ```  
@@ -66,7 +67,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;sp_add_alert &#40;](../../relational-databases/system-stored-procedures/sp-add-alert-transact-sql.md)   
+ [sp_add_alert&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-alert-transact-sql.md)   
  [Transact-sql&#41;sp_help_alert &#40;](../../relational-databases/system-stored-procedures/sp-help-alert-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

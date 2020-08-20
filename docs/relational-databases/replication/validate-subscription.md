@@ -1,4 +1,5 @@
 ---
+description: 구독 유효성 검사
 title: 구독 유효성 검사 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ ms.assetid: 74bdf5e1-b886-4284-b5fb-332bf79ae083
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: e95a160e405adb8cdc77a763840489b436c9bf96
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 2e80697f75a6234b913e0784b0110873b3c848ac
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110530"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88470150"
 ---
 # <a name="validate-subscription"></a>구독 유효성 검사
 [!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]

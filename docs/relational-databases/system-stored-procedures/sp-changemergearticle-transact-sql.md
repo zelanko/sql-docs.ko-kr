@@ -1,4 +1,5 @@
 ---
+description: sp_changemergearticle(Transact-SQL)
 title: sp_changemergearticle (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/09/2015
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0dc3da5c-4af6-45be-b5f0-074da182def2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5e5533d228030349992dc9b6aa56812ada87872f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8775928ede4fd92072bd91e39bc9652bb7db53a5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85872384"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469741"
 ---
 # <a name="sp_changemergearticle-transact-sql"></a>sp_changemergearticle(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,13 +43,13 @@ sp_changemergearticle [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @publication = ] 'publication'`아티클이 있는 게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 없습니다.  
+`[ @publication = ] 'publication'` 아티클이 있는 게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @article = ] 'article'`변경할 아티클의 이름입니다. *article* 은 **sysname**이며 기본값은 없습니다.  
+`[ @article = ] 'article'` 변경할 아티클의 이름입니다. *article* 은 **sysname**이며 기본값은 없습니다.  
   
-`[ @property = ] 'property'`지정 된 아티클 및 게시에 대해 변경할 속성입니다. *속성* 은 **nvarchar (30)** 이며 표에 나열 된 값 중 하나일 수 있습니다.  
+`[ @property = ] 'property'` 지정 된 아티클 및 게시에 대해 변경할 속성입니다. *속성* 은 **nvarchar (30)** 이며 표에 나열 된 값 중 하나일 수 있습니다.  
   
-`[ @value = ] 'value'`지정 된 속성의 새 값입니다. *value* 는 **nvarchar (1000)** 이며 표에 나열 된 값 중 하나일 수 있습니다.  
+`[ @value = ] 'value'` 지정 된 속성의 새 값입니다. *value* 는 **nvarchar (1000)** 이며 표에 나열 된 값 중 하나일 수 있습니다.  
   
  다음 표에서는 아티클의 속성 및 해당 속성의 값을 설명합니다.  
   
@@ -68,7 +69,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 |**creation_script**||구독 데이터베이스에서 아티클을 만드는 데 사용된 선택적 아티클 스키마 스크립트의 경로 및 이름입니다.|  
 |**delete_tracking**|**true**|DELETE 문을 복제합니다(기본 동작).|  
 ||**false**|DELETE 문을 복제하지 않습니다.<br /><br /> ** \* \* 중요 \* 한 \* ** 설정 **delete_tracking** **false** 이면 일치 하지 않으므로 삭제 된 행을 수동으로 제거 해야 합니다.|  
-|**한**||아티클에 대한 설명 항목입니다.|  
+|**description**||아티클에 대한 설명 항목입니다.|  
 |**destination_owner**||**Dbo**가 아닌 경우 구독 데이터베이스에 있는 개체 소유자의 이름입니다.|  
 |**identity_range**||아티클에 **identityrangemanagementoption** 가 **auto** 로 설정 되어 있거나 **auto_identity_range** **true**로 설정 된 경우 새 id 값을 할당할 때 사용할 범위 크기를 지정 하는 **bigint** 입니다. 테이블 아티클에만 적용됩니다. 자세한 내용은 [Id 열 복제](../../relational-databases/replication/publish/replicate-identity-columns.md)의 "병합 복제" 섹션을 참조 하세요.|  
 |**identityrangemanagementoption**|**수동**|자동 ID 범위 관리를 사용하지 않습니다. 수동 ID 범위 처리를 사용하려면 NOT FOR REPLICATION을 사용하여 ID 열을 표시합니다. 자세한 내용은 [ID 열 복제](../../relational-databases/replication/publish/replicate-identity-columns.md)를 참조하세요.|  
@@ -83,7 +84,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 ||**3**|아티클을 필터링하면 각 구독에 고유한 겹치지 않는 파티션이 생성됩니다.<br /><br /> 참고: **partition_options**에 값 **3** 을 지정 하면 해당 아티클의 각 데이터 파티션에 대해 구독이 하나만 있을 수 있습니다. 새 구독의 필터링 조건이 기존 구독과 동일한 파티션을 사용하도록 하여 두 번째 구독이 생성될 경우 기존 구독이 삭제됩니다.|  
 |**pre_creation_command**|**없음**|구독자에 이미 테이블이 존재하는 경우 아무런 동작이 발생하지 않습니다.|  
 ||**delete**|하위 집합 필터의 WHERE 절을 기반으로 하여 삭제를 실행합니다.|  
-||**그림자**|테이블을 다시 만들기 전에 삭제합니다.|  
+||**drop**|테이블을 다시 만들기 전에 삭제합니다.|  
 ||**잘라내야**|대상 테이블을 자릅니다.|  
 |**processing_order**||병합 게시에서 아티클의 처리 순서를 나타내는 **int** 입니다.|  
 |**pub_identity_range**||아티클의 **identityrangemanagementoption** 가 **auto** 로 설정 되거나 **auto_identity_range** **true**로 설정 된 경우 서버 구독이 있는 구독자에 할당 된 범위 크기를 지정 하는 **bigint** 입니다. 이 ID 범위는 재게시 구독자가 해당 구독자에게 할당하도록 예약됩니다. 테이블 아티클에만 적용됩니다. 자세한 내용은 [Id 열 복제](../../relational-databases/replication/publish/replicate-identity-columns.md)의 "병합 복제" 섹션을 참조 하세요.|  
@@ -144,7 +145,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 ||**0**|트러스트된 원본에서 제공된 것인지 판단하기 위해 사용자 지정 해결 프로그램의 디지털 서명을 확인을 하지 않습니다.|  
 |NULL(기본값)||*속성*에 대해 지원 되는 값 목록을 반환 합니다.|  
   
-`[ @force_invalidate_snapshot = ] force_invalidate_snapshot`이 저장 프로시저가 수행한 동작으로 인해 기존 스냅숏이 무효화 될 수 있음을 승인 합니다. *force_invalidate_snapshot* 은 **bit**이며 기본값은 **0**입니다.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` 이 저장 프로시저가 수행한 동작으로 인해 기존 스냅숏이 무효화 될 수 있음을 승인 합니다. *force_invalidate_snapshot* 은 **bit**이며 기본값은 **0**입니다.  
   
  **0** 은 병합 아티클에 대 한 변경으로 인해 스냅숏이 무효화 되지 않도록 지정 합니다. 저장 프로시저가 새 스냅샷을 필요로 하는 변경을 감지하면 오류가 발생하며 변경이 수행되지 않습니다.  
   
@@ -152,7 +153,7 @@ sp_changemergearticle [ @publication = ] 'publication'
   
  변경 시 새 스냅샷의 생성을 필요로 하는 속성에 대해서는 주의 섹션을 참조하십시오.  
   
-`[ @force_reinit_subscription = ] force_reinit_subscription`이 저장 프로시저가 수행한 동작으로 인해 기존 구독을 다시 초기화 해야 할 수도 있습니다. *force_reinit_subscription* 은 **bit**이며 기본값은 **0**입니다.  
+`[ @force_reinit_subscription = ] force_reinit_subscription` 이 저장 프로시저가 수행한 동작으로 인해 기존 구독을 다시 초기화 해야 할 수도 있습니다. *force_reinit_subscription* 은 **bit**이며 기본값은 **0**입니다.  
   
  **0** 은 병합 아티클에 대 한 변경으로 인해 구독이 다시 초기화 되지 않도록 지정 합니다. 저장 프로시저가 기존 구독을 다시 초기화해야 하는 변경을 감지하면 오류가 발생하며 변경이 수행되지 않습니다.  
   
@@ -236,12 +237,12 @@ sp_changemergearticle [ @publication = ] 'publication'
 ## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할 또는 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_changemergearticle**을 실행할 수 있습니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [아티클 속성 보기 및 수정](../../relational-databases/replication/publish/view-and-modify-article-properties.md)   
  [게시 및 아티클 속성 변경](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
  [Transact-sql&#41;sp_addmergearticle &#40;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)   
  [Transact-sql&#41;sp_dropmergearticle &#40;](../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md)   
- [Transact-sql&#41;sp_helpmergearticle &#40;](../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)   
+ [sp_helpmergearticle&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)   
  [복제 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

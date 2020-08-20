@@ -1,4 +1,5 @@
 ---
+description: Join Filters
 title: 조인 필터 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/07/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: dd78fd8f-56e3-4582-9abd-6bc25c91e075
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e6c68c2b2b2af6f32bcec900211b9185004caaa8
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a667c6055a43886239102bd9985d06fa714a24d2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882467"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88470267"
 ---
 # <a name="join-filters"></a>Join Filters
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

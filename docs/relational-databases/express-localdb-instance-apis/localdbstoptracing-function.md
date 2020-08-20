@@ -1,4 +1,5 @@
 ---
+description: LocalDBStopTracing 함수
 title: LocalDBStopTracing 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -15,12 +16,12 @@ apitype: DLLExport
 ms.assetid: 1d50e040-8602-4ffa-be8f-b8633fdfa7ff
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5d26d5a7dd54adaae212a840e3183ff3f098d845
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: dcaec82419ebe5e33f8dc953753583b790909b12
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765183"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88470524"
 ---
 # <a name="localdbstoptracing-function"></a>LocalDBStopTracing 함수
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

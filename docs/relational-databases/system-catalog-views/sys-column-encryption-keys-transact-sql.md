@@ -1,4 +1,5 @@
 ---
+description: sys. column_encryption_keys (Transact-sql)
 title: sys. column_encryption_keys (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/15/2019
@@ -20,12 +21,12 @@ ms.assetid: 43980dd8-b9b1-4869-a304-2c183ae8977d
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4cd6b4a4cb8eeed0dd0a2a78adc2d39c6a2e895d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5792aac11b14077430846a893b811eff8b617fc2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73593725"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469959"
 ---
 # <a name="syscolumn_encryption_keys--transact-sql"></a>sys. column_encryption_keys (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-xxx-md.md)]
@@ -45,16 +46,16 @@ ms.locfileid: "73593725"
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;열 암호화 키 만들기](../../t-sql/statements/create-column-encryption-key-transact-sql.md)   
- [Transact-sql&#41;&#40;열 암호화 키 변경](../../t-sql/statements/alter-column-encryption-key-transact-sql.md)   
- [Transact-sql&#41;&#40;열 암호화 키 삭제](../../t-sql/statements/drop-column-encryption-key-transact-sql.md)   
- [Transact-sql&#41;&#40;열 마스터 키 만들기](../../t-sql/statements/create-column-master-key-transact-sql.md)   
- [Transact-sql&#41;&#40;보안 카탈로그 뷰](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
+ [Transact-sql&#41;&#40;열 암호화 키 만들기 ](../../t-sql/statements/create-column-encryption-key-transact-sql.md)   
+ [Transact-sql&#41;&#40;열 암호화 키 변경 ](../../t-sql/statements/alter-column-encryption-key-transact-sql.md)   
+ [Transact-sql&#41;&#40;열 암호화 키 삭제 ](../../t-sql/statements/drop-column-encryption-key-transact-sql.md)   
+ [Transact-sql&#41;&#40;열 마스터 키 만들기 ](../../t-sql/statements/create-column-master-key-transact-sql.md)   
+ [보안 카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [sys.column_encryption_key_values &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md)  
  [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
  [Secure enclaves를 사용 하는 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)   
  [Always Encrypted 키 관리 개요](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)   
- [보안 enclave를 사용한 Always Encrypted용 키 관리](../../relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md)    
+ [보안 Enclave를 사용한 Always Encrypted 키 관리](../../relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md)    
 
   
   

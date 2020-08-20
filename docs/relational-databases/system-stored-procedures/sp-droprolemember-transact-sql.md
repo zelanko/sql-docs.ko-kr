@@ -1,4 +1,5 @@
 ---
+description: sp_droprolemember(Transact-SQL)
 title: sp_droprolemember (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/20/2017
@@ -18,12 +19,12 @@ ms.assetid: c2f19ab1-e742-4d56-ba8e-8ffd40cf4925
 ms.author: vanto
 author: VanMSFT
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1ffff6387f2129c2e3bdb2af726e6b87e665554e
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 1bbd0dfdeedb0954bb82f97dae6419a9a7f2d852
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180106"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469565"
 ---
 # <a name="sp_droprolemember-transact-sql"></a>sp_droprolemember(Transact-SQL)
 
@@ -32,7 +33,7 @@ ms.locfileid: "88180106"
   현재 데이터베이스의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 역할에서 보안 계정을 제거합니다.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]대신 [ALTER ROLE](../../t-sql/statements/alter-role-transact-sql.md) 을 사용 하십시오.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 대신 [ALTER ROLE](../../t-sql/statements/alter-role-transact-sql.md) 을 사용 하십시오.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -53,9 +54,9 @@ sp_droprolemember 'role' ,
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @rolename = ] 'role'`멤버가 제거 되는 역할의 이름입니다. *role* 은 **sysname**이며 기본값은 없습니다. 현재 데이터베이스에 *역할이* 있어야 합니다.  
+`[ @rolename = ] 'role'` 멤버가 제거 되는 역할의 이름입니다. *role* 은 **sysname**이며 기본값은 없습니다. 현재 데이터베이스에 *역할이* 있어야 합니다.  
   
-`[ @membername = ] 'security_account'`역할에서 제거 되는 보안 계정의 이름입니다. *security_account* 는 **sysname**이며 기본값은 없습니다. *security_account* 는 데이터베이스 사용자, 다른 데이터베이스 역할, windows 로그인 또는 windows 그룹이 될 수 있습니다. *security_account* 는 현재 데이터베이스에 있어야 합니다.  
+`[ @membername = ] 'security_account'` 역할에서 제거 되는 보안 계정의 이름입니다. *security_account* 는 **sysname**이며 기본값은 없습니다. *security_account* 는 데이터베이스 사용자, 다른 데이터베이스 역할, windows 로그인 또는 windows 그룹이 될 수 있습니다. *security_account* 는 현재 데이터베이스에 있어야 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -70,7 +71,7 @@ sp_droprolemember 'role' ,
 ## <a name="permissions"></a>사용 권한  
  역할에 대한 ALTER 권한이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `JonB` 역할에서 `Sales`라는 사용자를 제거합니다.  
   
 ```sql
@@ -85,7 +86,7 @@ EXEC sp_droprolemember 'Sales', 'JonB'
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;보안 저장 프로시저](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;보안 저장 프로시저 ](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [Transact-sql&#41;sp_addrolemember &#40;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)   
  [Transact-sql&#41;sp_droprole &#40;](../../relational-databases/system-stored-procedures/sp-droprole-transact-sql.md)   
  [Transact-sql&#41;sp_dropsrvrolemember &#40;](../../relational-databases/system-stored-procedures/sp-dropsrvrolemember-transact-sql.md)   

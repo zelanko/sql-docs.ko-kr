@@ -1,4 +1,5 @@
 ---
+description: sp_audit_write(Transact-SQL)
 title: sp_audit_write (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4c523848-1ce6-49ad-92b3-e0e90f24f1c2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 371bbb36abd6362c9724604a102f590869a74cc2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9d6d6c6214d4157519454ab4b7eb3eb32ddae360
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716177"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469733"
 ---
 # <a name="sp_audit_write-transact-sql"></a>sp_audit_write(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,10 +46,10 @@ sp_audit_write [ @user_defined_event_id = ] user_defined_event_id
  사용자가 정의 하 고 감사 로그의 **user_defined_event_id** 열에 기록 되는 매개 변수입니다. * \@ user_defined_event_id* 은 **smallint**유형입니다.  
   
  `[ @succeeded = ] succeeded`  
- 이벤트 성공 여부를 표시하기 위해 사용자가 전달하는 매개 변수입니다. 이 매개 변수는 감사 로그의 succeeded 열에 표시됩니다. `@succeeded`는 **bit**입니다.  
+ 이벤트 성공 여부를 표시하기 위해 사용자가 전달하는 매개 변수입니다. 이 매개 변수는 감사 로그의 succeeded 열에 표시됩니다. `@succeeded` 는 **bit**입니다.  
   
  `[ @user_defined_information = ] 'user_defined_information'`  
- 사용자가 정의하며 감사 로그의 새 user_defined_event_id 열에 기록되는 텍스트입니다. `@user_defined_information`는 **nvarchar (4000)** 입니다.  
+ 사용자가 정의하며 감사 로그의 새 user_defined_event_id 열에 기록되는 텍스트입니다. `@user_defined_information` 는 **nvarchar (4000)** 입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -80,12 +81,12 @@ EXEC sp_audit_write 27, 0;
   
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;보안 저장 프로시저](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [server_principals &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
+## <a name="see-also"></a>관련 항목  
+ [Transact-sql&#41;&#40;보안 저장 프로시저 ](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [sys.server_principals&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
  [Transact-sql&#41;sp_addrole &#40;](../../relational-databases/system-stored-procedures/sp-addrole-transact-sql.md)   
- [Transact-sql&#41;사용자 &#40;만들기](../../t-sql/statements/create-user-transact-sql.md)   
- [Transact-sql&#41;sp_dropuser &#40;](../../relational-databases/system-stored-procedures/sp-dropuser-transact-sql.md)   
+ [CREATE USER&#40;Transact-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md)   
+ [sp_dropuser&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropuser-transact-sql.md)   
  [Transact-sql&#41;sp_grantdbaccess &#40;](../../relational-databases/system-stored-procedures/sp-grantdbaccess-transact-sql.md)   
  [Transact-sql&#41;sp_grantlogin &#40;](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

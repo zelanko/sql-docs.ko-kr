@@ -1,4 +1,5 @@
 ---
+description: LocalDBUnshareInstance 함수
 title: LocalDBUnshareInstance 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -15,12 +16,12 @@ apitype: DLLExport
 ms.assetid: 54012ccb-eded-43f7-8ea5-da5ce79224c6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 76693483dd8dd2f7e063f31d3e5739cbec9e2b1e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 57c2a0d6c508e755c2212ceec48733055fc4803f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765157"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88470493"
 ---
 # <a name="localdbunshareinstance-function"></a>LocalDBUnshareInstance 함수
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

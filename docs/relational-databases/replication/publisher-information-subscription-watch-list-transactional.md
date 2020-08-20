@@ -1,4 +1,5 @@
 ---
+description: 게시자 정보, 구독 조사 목록(트랜잭션)
 title: 게시자 정보, 구독 조사 목록(트랜잭션) | Microsoft 문서
 ms.custom: ''
 ms.date: 03/07/2017
@@ -13,12 +14,12 @@ ms.assetid: 6bc64ddb-5c86-4681-a391-77fc1d3c4e6e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 6289b71f044bc3df3d9bc5306906483c6dd02886
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4d335464f07ad5573a2c45fb7258152fc71d930a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85640396"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88470172"
 ---
 # <a name="publisher-information-subscription-watch-list-transactional"></a>게시자 정보, 구독 조사 목록(트랜잭션)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -77,7 +78,7 @@ ms.locfileid: "85640396"
  **성능**  
  각 구독의 성능 등급은 복제 모니터에서 측정한 가장 최근의 측정값을 기반으로 하며 이전 성능은 반영하지 않습니다. 성능 임계값이 정의된 게시의 구독에 대해 성능을 측정합니다. 게시에 대해 성능 임계값을 정의하지 않으면 이 열에 **사용 안 함**이 표시됩니다. 성능 등급은 다음 값 중 하나입니다.  
   
--   최고  
+-   우수  
   
 -   좋음  
   

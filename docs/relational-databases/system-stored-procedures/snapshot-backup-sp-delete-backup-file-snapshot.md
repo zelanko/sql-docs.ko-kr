@@ -1,4 +1,5 @@
 ---
+description: sp_delete_backup_file_snapshot (Transact-sql)
 title: sp_delete_backup_file_snapshot (Transact-sql) | Microsoft Docs
 ms.date: 08/09/2016
 ms.prod: sql
@@ -12,11 +13,12 @@ dev_langs:
 ms.assetid: 5afe5530-a404-4fa5-af3c-bc7c3ca43ce6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 365ddae67f2357c11735f2d0966e56405edbde07
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: a9689e6f739173f3e6b0f69a8e5d648c1faeac3e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86053683"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469785"
 ---
 # <a name="sp_delete_backup_file_snapshot-transact-sql"></a>sp_delete_backup_file_snapshot (Transact-sql)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]

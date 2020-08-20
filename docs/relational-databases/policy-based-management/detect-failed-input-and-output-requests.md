@@ -1,4 +1,5 @@
 ---
+description: Detect Failed Input and Output Requests
 title: 실패한 입력 및 출력 요청 검색 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 85373b2e-d9fe-42ef-9653-6e22fe5ecab0
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 85e59881bd28aae9a5245aa71fbec5eea234966a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3a6b1654d673759b949eb24fee0ec9c905054579
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85654526"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88470298"
 ---
 # <a name="detect-failed-input-and-output-requests"></a>Detect Failed Input and Output Requests
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

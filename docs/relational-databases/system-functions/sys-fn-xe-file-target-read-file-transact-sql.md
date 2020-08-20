@@ -1,4 +1,5 @@
 ---
+description: sys.fn_xe_file_target_read_file(Transact-SQL)
 title: sys. fn_xe_file_target_read_file (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/22/2017
@@ -22,12 +23,12 @@ ms.assetid: cc0351ae-4882-4b67-b0d8-bd235d20c901
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6b4ee24b0ee74540a967c713579365c68aa849dd
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9edd7d5181979beb5bbbc0e4069aac31d9b302bb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85738566"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469850"
 ---
 # <a name="sysfn_xe_file_target_read_file-transact-sql"></a>sys.fn_xe_file_target_read_file(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "85738566"
   확장 이벤트 비동기 파일 대상에서 만든 파일을 읽습니다. 행당 하나의 이벤트가 XML 형식으로 반환됩니다.  
   
 > [!WARNING]  
->  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)][!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]XEL 및 XEM 형식으로 생성 된 추적 결과를 허용 합니다. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]확장 이벤트는 XEL 형식의 추적 결과만 지원 합니다. XEL 형식의 추적 결과를 읽으려면 SQL Server Management Studio를 사용하는 것이 좋습니다.    
+>  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)][!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]XEL 및 XEM 형식으로 생성 된 추적 결과를 허용 합니다. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 확장 이벤트는 XEL 형식의 추적 결과만 지원 합니다. XEL 형식의 추적 결과를 읽으려면 SQL Server Management Studio를 사용하는 것이 좋습니다.    
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -54,7 +55,7 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
  *Path* 인수로 지정 된 파일에 해당 하는 메타 데이터 파일의 경로입니다. *mdpath* 는 **nvarchar (260)** 입니다. 기본값은 없습니다. SQL Server 2016부터이 매개 변수는 null로 지정할 수 있습니다.
   
 > [!NOTE]  
->  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에는 *mdpath* 매개 변수가 필요 하지 않습니다. 그러나 이전 버전의 SQL Server에서 생성된 로그 파일의 경우 이전 버전과의 호환성을 위해 이 매개 변수가 유지됩니다.  
+>  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 에는 *mdpath* 매개 변수가 필요 하지 않습니다. 그러나 이전 버전의 SQL Server에서 생성된 로그 파일의 경우 이전 버전과의 호환성을 위해 이 매개 변수가 유지됩니다.  
   
  *initial_file_name*  
  *경로*에서 읽을 첫 번째 파일입니다. *initial_file_name* 은 **nvarchar (260)** 입니다. 기본값은 없습니다. **Null** 이 인수로 지정 된 경우 *경로* 에 있는 모든 파일을 읽습니다.  
@@ -95,7 +96,7 @@ SELECT * FROM sys.fn_xe_file_target_read_file('C:\traces\*.xel', 'C:\traces\meta
   
 ## <a name="see-also"></a>참고 항목  
  [확장 이벤트 동적 관리 뷰](../../relational-databases/system-dynamic-management-views/extended-events-dynamic-management-views.md)   
- [Transact-sql&#41;&#40;확장 이벤트 카탈로그 뷰](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md)   
+ [Transact-sql&#41;&#40;확장 이벤트 카탈로그 뷰 ](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md)   
  [확장 이벤트](../../relational-databases/extended-events/extended-events.md)  
   
   

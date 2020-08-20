@@ -1,4 +1,5 @@
 ---
+description: 다른 파일 그룹으로 기존 인덱스 이동
 title: 다른 파일 그룹으로 기존 인덱스 이동 | Microsoft 문서
 ms.custom: ''
 ms.date: 02/17/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 167ebe77-487d-4ca8-9452-4b2c7d5cb96e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 01b7f9191c34e9c83c472abfb560c365e9e5f9b0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: abbd77be3e20cc69bc12cd69f07fa82ec99d95db
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771703"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88470472"
 ---
 # <a name="move-an-existing-index-to-a-different-filegroup"></a>다른 파일 그룹으로 기존 인덱스 이동
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -89,7 +90,7 @@ ms.locfileid: "85771703"
   
 5.  이동할 인덱스를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
   
-6.  **페이지 선택**아래에서 **스토리지**를 선택합니다.  
+6.  **페이지 선택** 아래에서 **스토리지**를 선택합니다.  
   
 7.  인덱스를 이동할 파일 그룹을 선택합니다.  
   
@@ -101,7 +102,7 @@ ms.locfileid: "85771703"
   
 8.  **확인**을 클릭합니다.  
   
- **인덱스 속성 –** **index_name** 대화 상자의 _스토리지_ 페이지에서 다음 정보를 사용할 수 있습니다.  
+ **인덱스 속성 –** _index_name_ 대화 상자의 **스토리지** 페이지에서 다음 정보를 사용할 수 있습니다.  
   
  **파일 그룹**  
  지정한 파일 그룹에 인덱스를 저장합니다. 목록에는 표준(행) 파일 그룹만 표시됩니다. 목록에서는 기본적으로 데이터베이스의 PRIMARY 파일 그룹이 선택됩니다.  

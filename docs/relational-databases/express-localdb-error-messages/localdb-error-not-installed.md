@@ -1,4 +1,5 @@
 ---
+description: LOCALDB_ERROR_NOT_INSTALLED
 title: LOCALDB_ERROR_NOT_INSTALLED | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -9,12 +10,12 @@ ms.topic: reference
 ms.assetid: e7912885-1c14-409b-9022-83ad4c36f3bd
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 7cc95b39eb41baee83791f6e87d235676feb9831
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 9caaf20096c489eb4e7ff5ff4620c22acda57436
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246020"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88470595"
 ---
 # <a name="localdb_error_not_installed"></a>LOCALDB_ERROR_NOT_INSTALLED
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

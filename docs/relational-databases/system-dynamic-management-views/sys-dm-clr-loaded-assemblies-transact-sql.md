@@ -1,4 +1,5 @@
 ---
+description: sys.dm_clr_loaded_assemblies(Transact-SQL)
 title: sys. dm_clr_loaded_assemblies (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 8523d8db-d8a0-4b1f-ae19-6705d633e0a6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: eb2a7ffc194741e546e10261711af3f78b697a77
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 777dfc663eb076446e70455fb5b07f013300189c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894620"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469857"
 ---
 # <a name="sysdm_clr_loaded_assemblies-transact-sql"></a>sys.dm_clr_loaded_assemblies(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +46,7 @@ ms.locfileid: "85894620"
 ## <a name="remarks"></a>설명  
  **Dm_clr_loaded_assemblies 뷰 appdomain_address** 에는 **dm_clr_appdomains appdomain_address**와 다 대 일 관계가 있습니다. **Dm_clr_loaded_assemblies 뷰 assembly_id** 에는 **assembly_id**와 일 대 다 관계가 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 로드되어 있는 현재 데이터베이스의 모든 어셈블리에 대한 세부 정보를 표시하는 방법을 보여 줍니다.  
   
 ```  

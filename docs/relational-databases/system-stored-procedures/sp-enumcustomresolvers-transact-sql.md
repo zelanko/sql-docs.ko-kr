@@ -1,4 +1,5 @@
 ---
+description: sp_enumcustomresolvers(Transact-SQL)
 title: sp_enumcustomresolvers (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 81bd0d3a-48dc-42b1-b662-c630f61fc630
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ecff860e5dc101cc02b3e5fd7b97569510a8cf68
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2579e1d099d0543b1ed8d14bccef877bb892c64e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891899"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469515"
 ---
 # <a name="sp_enumcustomresolvers-transact-sql"></a>sp_enumcustomresolvers(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +38,7 @@ sp_enumcustomresolvers [ [ @distributor =] 'distributor']
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @distributor = ] 'distributor'`사용자 지정 해결 프로그램이 있는 배포자의 이름입니다. *배포자* 는 **sysname**이며 기본값은 NULL입니다. *이 매개 변수는 더 이상 사용되지 않으며 다음 번 릴리스에서 제거될 예정입니다.*  
+`[ @distributor = ] 'distributor'` 사용자 지정 해결 프로그램이 있는 배포자의 이름입니다. *배포자* 는 **sysname**이며 기본값은 NULL입니다. *이 매개 변수는 더 이상 사용되지 않으며 다음 번 릴리스에서 제거될 예정입니다.*  
   
 ## <a name="result-sets"></a>결과 집합  
   
@@ -59,7 +60,7 @@ sp_enumcustomresolvers [ [ @distributor =] 'distributor']
  **Sysadmin** 고정 서버 역할 및 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_enumcustomresolvers**을 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [병합 아티클에 대 한 비즈니스 논리 처리기 구현](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)   
+ [병합 아티클에 대한 비즈니스 논리 처리기 구현](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)   
  [병합 아티클에 대 한 사용자 지정 충돌 해결 프로그램 구현](../../relational-databases/replication/implement-a-custom-conflict-resolver-for-a-merge-article.md)   
  [Transact-sql&#41;sp_lookupcustomresolver &#40;](../../relational-databases/system-stored-procedures/sp-lookupcustomresolver-transact-sql.md)   
  [Transact-sql&#41;sp_unregistercustomresolver &#40;](../../relational-databases/system-stored-procedures/sp-unregistercustomresolver-transact-sql.md)   

@@ -1,4 +1,5 @@
 ---
+description: sp_describe_parameter_encryption (Transact-sql)
 title: sp_describe_parameter_encryption (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/27/2016
@@ -18,11 +19,12 @@ ms.assetid: 706ed441-2881-4934-8d5e-fb357ee067ce
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ccba808ada0276933608b9297b6c416c11cdb194
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: d3f4b5dd2d6c63688046eda4a8b752bc10b9c943
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85998953"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469585"
 ---
 # <a name="sp_describe_parameter_encryption-transact-sql"></a>sp_describe_parameter_encryption (Transact-sql)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -64,7 +66,7 @@ sp_describe_parameter_encryption
 |**column_encryption_key_ordinal**|**int**|결과 집합에 있는 행의 Id입니다.|  
 |**database_id**|**int**|데이터베이스 id입니다.|  
 |**column_encryption_key_id**|**int**|열 암호화 키 id입니다. 참고:이 id는 [column_encryption_keys &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md) 카탈로그 뷰의 행을 나타냅니다.|  
-|**column_encryption_key_version**|**int**|다음에 사용하도록 예약됩니다. 현재에는 항상 1이 포함 되어 있습니다.|  
+|**column_encryption_key_version**|**int**|나중에 사용하기 위해 예약되어 있습니다. 현재에는 항상 1이 포함 되어 있습니다.|  
 |**column_encryption_key_metadata_version**|**binary (8)**|열 암호화 키를 만든 시간을 나타내는 타임 스탬프입니다.|  
 |**column_encryption_key_encrypted_value**|**varbinary(4000)**|열 암호화 키의 암호화 된 값입니다.|  
 |**column_master_key_store_provider_name**|**sysname**|열 암호화 키의 암호화 된 값을 생성 하는 데 사용 된 열 마스터 키를 포함 하는 키 저장소의 공급자 이름입니다.|  
@@ -85,10 +87,10 @@ sp_describe_parameter_encryption
 ## <a name="remarks"></a>설명  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Always Encrypted를 지 원하는 클라이언트 드라이버는 **sp_describe_parameter_encryption** 를 자동으로 호출 하 여 응용 프로그램에서 실행 한 매개 변수가 있는 쿼리에 대 한 암호화 메타 데이터를 검색 합니다. 그런 다음, 드라이버는 암호화 메타 데이터를 사용 하 여 Always Encrypted로 보호 되는 데이터베이스 열에 해당 하는 매개 변수의 값을 암호화 하 고, 데이터베이스 엔진에 쿼리를 보내기 전에 응용 프로그램에서 전송한 일반 텍스트 매개 변수 값을 암호화 된 매개 변수 값으로 대체 합니다.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  데이터베이스에서 **VIEW ANY COLUMN ENCRYPTION key** Definition 및 **VIEW ANY COLUMN MASTER KEY definition** 권한이 필요 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ```sql  
 CREATE COLUMN MASTER KEY [CMK1]  
@@ -162,7 +164,7 @@ EXEC sp_describe_parameter_encryption N'INSERT INTO t1 VALUES(@c1)',  N'@c1 INT'
 |--------------------------------------|------------------------------------------------------|  
 |1|1|  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
  [Always Encrypted를 사용 하 여 응용 프로그램 개발](../../relational-databases/security/encryption/always-encrypted-client-development.md)  
   

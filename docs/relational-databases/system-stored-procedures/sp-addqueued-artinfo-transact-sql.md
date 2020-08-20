@@ -1,4 +1,5 @@
 ---
+description: sp_addqueued_artinfo(Transact-SQL)
 title: sp_addqueued_artinfo (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: decdb6eb-3dcd-4053-a21d-fd367c3fbafb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: de7f206aea8b536c86333698dd5a557e2f50b84b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 22c1c38828ab6f1857d64136a402752b110a214e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716445"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469822"
 ---
 # <a name="sp_addqueued_artinfo-transact-sql"></a>sp_addqueued_artinfo(Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -49,22 +50,22 @@ sp_addqueued_artinfo [ @artid= ] 'artid'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @artid = ] 'artid'`아티클 ID의 이름입니다. *artid* 은 **int**이며 기본값은 없습니다.  
+`[ @artid = ] 'artid'` 아티클 ID의 이름입니다. *artid* 은 **int**이며 기본값은 없습니다.  
   
-`[ @article = ] 'article'`스크립팅할 아티클의 이름입니다. *article* 은 **sysname**이며 기본값은 없습니다.  
+`[ @article = ] 'article'` 스크립팅할 아티클의 이름입니다. *article* 은 **sysname**이며 기본값은 없습니다.  
   
-`[ @publisher = ] 'publisher'`게시자 서버의 이름입니다. *publisher* 는 **sysname**이며 기본값은 없습니다.  
+`[ @publisher = ] 'publisher'` 게시자 서버의 이름입니다. *publisher* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @publisher_db = ] 'publisher_db'`게시자 데이터베이스의 이름입니다. *publisher_db* 는 **sysname**이며 기본값은 없습니다.  
+`[ @publisher_db = ] 'publisher_db'` 게시자 데이터베이스의 이름입니다. *publisher_db* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @publication = ] 'publication'`스크립팅할 게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 없습니다.  
+`[ @publication = ] 'publication'` 스크립팅할 게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @dest_table = ] _'dest_table'`대상 테이블의 이름입니다. *dest_table* 는 **sysname**이며 기본값은 없습니다.  
+`[ @dest_table = ] _'dest_table'` 대상 테이블의 이름입니다. *dest_table* 는 **sysname**이며 기본값은 없습니다.  
   
  [** @owner =** ] **'**_owner_**'**  
  구독의 소유자입니다. *owner* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @cft_table = ] 'cft_table'`이 아티클에 대 한 지연 업데이트 충돌 테이블의 이름입니다. *cft_table*는 **sysname**이며 기본값은 없습니다.  
+`[ @cft_table = ] 'cft_table'` 이 아티클에 대 한 지연 업데이트 충돌 테이블의 이름입니다. *cft_table*는 **sysname**이며 기본값은 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -78,7 +79,7 @@ sp_addqueued_artinfo [ @artid= ] 'artid'
  **Sysadmin** 고정 서버 역할 또는 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_addqueued_artinfo**을 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [트랜잭션 복제에 대 한 업데이트할 수 있는 구독](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   
+ [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   
  [Transact-sql&#41;sp_script_synctran_commands &#40;](../../relational-databases/system-stored-procedures/sp-script-synctran-commands-transact-sql.md)   
  [Transact-sql&#41;MSsubscription_articles &#40;](../../relational-databases/system-tables/mssubscription-articles-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

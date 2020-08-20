@@ -1,4 +1,5 @@
 ---
+description: sp_column_privileges_ex(Transact-SQL)
 title: sp_column_privileges_ex (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 98cb6e58-4007-40fc-b048-449fb2e7e6be
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ec17e4482a07d90ccf65e98f6697cc6b12e5fac1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d9d6eee0a85444171ae24d7ac991fb90a451f5d5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85871031"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469775"
 ---
 # <a name="sp_column_privileges_ex-transact-sql"></a>sp_column_privileges_ex(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,15 +44,15 @@ sp_column_privileges_ex [ @table_server = ] 'table_server'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @table_server = ] 'table_server'`정보를 반환할 연결 된 서버의 이름입니다. *table_server* 는 **sysname**이며 기본값은 없습니다.  
+`[ @table_server = ] 'table_server'` 정보를 반환할 연결 된 서버의 이름입니다. *table_server* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @table_name = ] 'table_name'`지정 된 열이 포함 된 테이블의 이름입니다. *table_name* 는 **sysname**이며 기본값은 NULL입니다.  
+`[ @table_name = ] 'table_name'` 지정 된 열이 포함 된 테이블의 이름입니다. *table_name* 는 **sysname**이며 기본값은 NULL입니다.  
   
-`[ @table_schema = ] 'table_schema'`테이블 스키마입니다. *table_schema* 는 **sysname**이며 기본값은 NULL입니다.  
+`[ @table_schema = ] 'table_schema'` 테이블 스키마입니다. *table_schema* 는 **sysname**이며 기본값은 NULL입니다.  
   
-`[ @table_catalog = ] 'table_catalog'`지정 된 *table_name* 이 있는 데이터베이스의 이름입니다. *table_catalog* 는 **sysname**이며 기본값은 NULL입니다.  
+`[ @table_catalog = ] 'table_catalog'` 지정 된 *table_name* 이 있는 데이터베이스의 이름입니다. *table_catalog* 는 **sysname**이며 기본값은 NULL입니다.  
   
-`[ @column_name = ] 'column_name'`권한 정보를 제공할 열의 이름입니다. *column_name* 는 **sysname**이며 기본값은 NULL (모두 공통)입니다.  
+`[ @column_name = ] 'column_name'` 권한 정보를 제공할 열의 이름입니다. *column_name* 는 **sysname**이며 기본값은 NULL (모두 공통)입니다.  
   
 ## <a name="result-sets"></a>결과 집합  
  다음 표에서는 결과 집합의 열을 보여 줍니다. 반환 되는 결과는 **TABLE_QUALIFIER**, **TABLE_OWNER**, **TABLE_NAME**, **COLUMN_NAME**및 **권한에**따라 정렬 됩니다.  
@@ -70,7 +71,7 @@ sp_column_privileges_ex [ @table_server = ] 'table_server'
 ## <a name="permissions"></a>사용 권한  
  스키마에 대한 SELECT 권한이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 연결된 서버 `HumanResources.Department`에서 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스의 `Seattle1` 테이블에 대한 열 권한 정보를 반환합니다.  
   
 ```  
@@ -80,7 +81,7 @@ EXEC sp_column_privileges_ex @table_server = 'Seattle1',
    @table_catalog ='AdventureWorks2012';  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [Transact-sql&#41;sp_table_privileges_ex &#40;](../../relational-databases/system-stored-procedures/sp-table-privileges-ex-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

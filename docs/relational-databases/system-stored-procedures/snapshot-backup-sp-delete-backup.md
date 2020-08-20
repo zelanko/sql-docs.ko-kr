@@ -1,4 +1,5 @@
 ---
+description: sp_delete_backup (Transact-sql)
 title: sp_delete_backup (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/03/2015
@@ -12,11 +13,12 @@ dev_langs:
 ms.assetid: 808e50ae-ff6e-4520-9ce2-530591d3d59b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: edb0740ce1bbc0009996849e39bf495c23ba29b0
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: cc62c8e07de682aa075371561d3c95187c7c86c0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86053719"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469765"
 ---
 # <a name="sp_delete_backup-transact-sql"></a>sp_delete_backup (Transact-sql)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]

@@ -1,4 +1,5 @@
 ---
+description: 문 사용(ODBC)
 title: 문 사용 (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -13,11 +14,12 @@ ms.assetid: f7573f8f-6f21-4e03-8dd5-a5f2ea4878cc
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 49e653ff458ee816a00654e574b27fe2d9f327b2
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 1d3a6cead69651eedec63d9c34e24674ec6dd6ae
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009425"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88470442"
 ---
 # <a name="use-a-statement-odbc"></a>문 사용(ODBC)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -37,11 +39,11 @@ ms.locfileid: "86009425"
   
 5.  SQLExecDirect를 사용하여 문을 직접 실행합니다.  
   
-     \- 또는 -  
+     \- 또는-  
   
      문이 준비되어 있는 경우 [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400)를 사용하여 여러 번 실행합니다.  
   
-     \- 또는 -  
+     \- 또는-  
   
      카탈로그 함수를 호출하여 결과가 반환되도록 합니다.  
   
@@ -49,11 +51,11 @@ ms.locfileid: "86009425"
   
      문의 결과 집합을 한 번에 한 행씩 인출합니다.  
   
-     \- 또는 -  
+     \- 또는-  
   
      블록 커서를 사용하여 결과 집합을 한 번에 여러 행씩 인출합니다.  
   
-     \- 또는 -  
+     \- 또는-  
   
      [SQLRowCount](../../../relational-databases/native-client-odbc-api/sqlrowcount.md)를 호출하여 INSERT, UPDATE 또는 DELETE 문의 영향을 받는 행 수를 확인합니다.  
   

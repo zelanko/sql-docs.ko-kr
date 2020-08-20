@@ -1,4 +1,5 @@
 ---
+description: 정책 기반 관리 정책 삭제
 title: 정책 기반 관리 정책 삭제 | Microsoft 문서
 ms.custom: ''
 ms.date: 08/01/2016
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 488f0305-190c-4223-aa5c-e9bd43b520eb
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ca019a5183cabcc78468fa504d9bfd98f8532032
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: de66aa15b385ee2aef206e026550aca95e770f12
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85749428"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88470331"
 ---
 # <a name="delete-a-policy-based-management-policy"></a>정책 기반 관리 정책 삭제
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

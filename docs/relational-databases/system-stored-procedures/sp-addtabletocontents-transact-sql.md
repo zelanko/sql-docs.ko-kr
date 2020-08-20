@@ -1,4 +1,5 @@
 ---
+description: sp_addtabletocontents(Transact-SQL)
 title: sp_addtabletocontents (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2ea27001-74f4-463e-bf1b-b6b5a86b9219
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 928d601fe544432b669b84b8d8a819405bcfbc7e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d0363795187e586a7a37481505240b74690aa425
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85876042"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469772"
 ---
 # <a name="sp_addtabletocontents-transact-sql"></a>sp_addtabletocontents(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,11 +40,11 @@ sp_addtabletocontents [ @table_name = ] 'table_name'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @table_name = ] 'table_name'`테이블의 이름입니다. *table_name* 는 **sysname**이며 기본값은 없습니다.  
+`[ @table_name = ] 'table_name'` 테이블의 이름입니다. *table_name* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @owner_name = ] 'owner_name'`테이블 소유자의 이름입니다. *owner_name* 는 **sysname**이며 기본값은 NULL입니다.  
+`[ @owner_name = ] 'owner_name'` 테이블 소유자의 이름입니다. *owner_name* 는 **sysname**이며 기본값은 NULL입니다.  
   
-`[ @filter_clause = ] 'filter_clause'`새로 로드 된 데이터의 행을 병합 추적 테이블에 추가 해야 하는 행을 제어 하는 필터 절을 지정 합니다. *filter_clause* 은 **nvarchar (4000)** 이며 기본값은 NULL입니다. *Filter_clause* **null**이면 대량 로드 된 모든 행이 추가 됩니다.  
+`[ @filter_clause = ] 'filter_clause'` 새로 로드 된 데이터의 행을 병합 추적 테이블에 추가 해야 하는 행을 제어 하는 필터 절을 지정 합니다. *filter_clause* 은 **nvarchar (4000)** 이며 기본값은 NULL입니다. *Filter_clause* **null**이면 대량 로드 된 모든 행이 추가 됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -56,7 +57,7 @@ sp_addtabletocontents [ @table_name = ] 'table_name'
 ## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할 또는 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_addtabletocontents**을 실행할 수 있습니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

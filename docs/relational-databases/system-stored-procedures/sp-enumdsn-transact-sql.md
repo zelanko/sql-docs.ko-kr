@@ -1,4 +1,5 @@
 ---
+description: sp_enumdsn(Transact-SQL)
 title: sp_enumdsn (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 171cbc7d-7406-4cb0-8602-9405243bfd1d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 092866e2f8efd69ad0baccc73984dcf8a7db051c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: afc6b97a969aa833e96bd4d8c2ad1a35ae35d14b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891897"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469485"
 ---
 # <a name="sp_enumdsn-transact-sql"></a>sp_enumdsn(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +46,7 @@ sp_enumdsn
 |-----------------|---------------|-----------------|  
 |**데이터 원본 이름**|**sysname**|데이터 원본의 이름입니다.|  
 |**설명**|**varchar(255)**|데이터 원본에 대한 설명입니다.|  
-|**Type**|**int**|데이터 원본의 유형입니다.<br /><br /> **1** = ODBC DSN<br /><br /> **3** = OLE DB 데이터 원본|  
+|**유형**|**int**|데이터 원본의 유형입니다.<br /><br /> **1** = ODBC DSN<br /><br /> **3** = OLE DB 데이터 원본|  
 |**공급자 이름**|**varchar(255)**|OLE DB Provider의 이름입니다. ODBC DSN에 대한 값은 NULL입니다.|  
   
 ## <a name="remarks"></a>설명  

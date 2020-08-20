@@ -1,4 +1,5 @@
 ---
+description: LOCALDB_ERROR_INVALID_INSTANCE_NAME
 title: LOCALDB_ERROR_INVALID_INSTANCE_NAME | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -9,12 +10,12 @@ ms.topic: reference
 ms.assetid: 709ac713-aadd-4d5b-a0f9-d859a79dd24c
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 320ace9a1fbeeb73598d380dfca46c04e1ab1cc0
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 1c0abb7ed5d4dfa128a276dc4a6a6c3db5a96d2b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246031"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88470611"
 ---
 # <a name="localdb_error_invalid_instance_name"></a>LOCALDB_ERROR_INVALID_INSTANCE_NAME
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

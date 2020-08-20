@@ -1,4 +1,5 @@
 ---
+description: sp_delete_targetservergroup(Transact-SQL)
 title: sp_delete_targetservergroup (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d8dd838e-64aa-419f-9ccb-ff04908cf3e4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2d6f00cf5fcc0cad2c5b6874b7302d00655e7a76
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c35c95e7140de0ce3da453a8063cb849625639af
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85862367"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469596"
 ---
 # <a name="sp_delete_targetservergroup-transact-sql"></a>sp_delete_targetservergroup(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,7 @@ sp_delete_targetservergroup [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @name = ] 'name'`제거할 대상 서버 그룹의 이름입니다. *name* 은 **sysname**이며 기본값은 없습니다.  
+`[ @name = ] 'name'` 제거할 대상 서버 그룹의 이름입니다. *name* 은 **sysname**이며 기본값은 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -62,7 +63,7 @@ EXEC sp_delete_targetservergroup
 GO  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [Transact-sql&#41;sp_add_targetservergroup &#40;](../../relational-databases/system-stored-procedures/sp-add-targetservergroup-transact-sql.md)   
  [Transact-sql&#41;sp_help_targetservergroup &#40;](../../relational-databases/system-stored-procedures/sp-help-targetservergroup-transact-sql.md)   
  [Transact-sql&#41;sp_update_targetservergroup &#40;](../../relational-databases/system-stored-procedures/sp-update-targetservergroup-transact-sql.md)  

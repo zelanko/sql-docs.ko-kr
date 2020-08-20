@@ -1,4 +1,5 @@
 ---
+description: sp_delete_targetserver(Transact-SQL)
 title: sp_delete_targetserver (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: cc438701-ad91-419d-9f23-ebc4c548c700
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4489e34ec83bd3981e464e72cb8e72885fcc994f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 290da3e982e98287305e2e9f277037fea0e8f86a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85862191"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469611"
 ---
 # <a name="sp_delete_targetserver-transact-sql"></a>sp_delete_targetserver(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,11 +42,11 @@ sp_delete_targetserver [ @server_name = ] 'server'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @server_name = ] 'server'`사용 가능한 대상 서버로 제거할 서버의 이름입니다. *서버* 는 **nvarchar (30)** 이며 기본값은 없습니다.  
+`[ @server_name = ] 'server'` 사용 가능한 대상 서버로 제거할 서버의 이름입니다. *서버* 는 **nvarchar (30)** 이며 기본값은 없습니다.  
   
-`[ @clear_downloadlist = ] clear_downloadlist`대상 서버에 대 한 다운로드 목록을 지울지 여부를 지정 합니다. *clear_downloadlist* 형식은 **bit**이며 기본값은 **1**입니다. *Clear_downloadlist* **1**인 경우이 프로시저는 서버를 삭제 하기 전에 서버에 대 한 다운로드 목록을 지웁니다. *Clear_downloadlist* **0**이면 다운로드 목록이 지워지지 않습니다.  
+`[ @clear_downloadlist = ] clear_downloadlist` 대상 서버에 대 한 다운로드 목록을 지울지 여부를 지정 합니다. *clear_downloadlist* 형식은 **bit**이며 기본값은 **1**입니다. *Clear_downloadlist* **1**인 경우이 프로시저는 서버를 삭제 하기 전에 서버에 대 한 다운로드 목록을 지웁니다. *Clear_downloadlist* **0**이면 다운로드 목록이 지워지지 않습니다.  
   
-`[ @post_defection = ] post_defection`대상 서버에 결함 명령을 게시할 것인지 여부를 지정 합니다. *post_defection* 형식은 **bit**이며 기본값은 1입니다. *Post_defection* **1**인 경우 프로시저는 서버를 삭제 하기 전에 대상 서버에 오류 명령을 게시 합니다. *Post_defection* 가 **0**이면 프로시저에서 대상 서버에 오류 명령을 게시 하지 않습니다.  
+`[ @post_defection = ] post_defection` 대상 서버에 결함 명령을 게시할 것인지 여부를 지정 합니다. *post_defection* 형식은 **bit**이며 기본값은 1입니다. *Post_defection* **1**인 경우 프로시저는 서버를 삭제 하기 전에 대상 서버에 오류 명령을 게시 합니다. *Post_defection* 가 **0**이면 프로시저에서 대상 서버에 오류 명령을 게시 하지 않습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -59,7 +60,7 @@ sp_delete_targetserver [ @server_name = ] 'server'
 ## <a name="permissions"></a>사용 권한  
  이 저장 프로시저를 실행 하려면 사용자에 게 **sysadmin** 고정 서버 역할을 부여 해야 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 사용할 수 있는 작업 서버에서 `LONDON1`이라는 서버를 제거합니다.  
   
 ```  

@@ -1,4 +1,5 @@
 ---
+description: 새로운 정책 기반 관리 조건 만들기
 title: 새로운 정책 기반 관리 조건 만들기 | Microsoft 문서
 ms.custom: ''
 ms.date: 08/01/2016
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8a612f7e-6c70-49db-a4de-48431e097cc5
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 27635c5f579ea6590b939c460702d36d2c1c7ed8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 76c60d4561eacda47648d2cac710e64c2ccc1f4e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85654659"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88470359"
 ---
 # <a name="create-a-new-policy-based-management-condition"></a>새로운 정책 기반 관리 조건 만들기
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

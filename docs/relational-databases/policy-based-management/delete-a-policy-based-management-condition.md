@@ -1,4 +1,5 @@
 ---
+description: 정책 기반 관리 조건 삭제
 title: 정책 기반 관리 조건 삭제 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e04148b8-f6dd-4c50-a5ef-c650b71dbf4d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0c710c1b90f432abdb93d9013dd2310d93f2b651
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3265e970fbad572e09527dedcb35397d811daefa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85749450"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88470337"
 ---
 # <a name="delete-a-policy-based-management-condition"></a>정책 기반 관리 조건 삭제
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
