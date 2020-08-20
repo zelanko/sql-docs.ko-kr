@@ -1,4 +1,5 @@
 ---
+description: sp_dropdynamicsnapshot_job(Transact-SQL)
 title: sp_dropdynamicsnapshot_job (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 128e428a-01b3-4062-8c6e-d22d5fa268a9
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 224de422a7f43b7e2c3ff1dc090eeb3b55c752b1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 85a81b9dac7fd543a1840263da91ec644652cadf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85860159"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464395"
 ---
 # <a name="sp_dropdynamicsnapshot_job-transact-sql"></a>sp_dropdynamicsnapshot_job(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,11 +41,11 @@ sp_dropdynamicsnapshot_job [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @publication = ] 'publication'`필터링 된 데이터 스냅숏 작업을 제거할 게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 없습니다.  
+`[ @publication = ] 'publication'` 필터링 된 데이터 스냅숏 작업을 제거할 게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @dynamic_snapshot_jobname = ] 'dynamic_snapshot_jobname'`제거할 필터링 된 데이터 스냅숏 작업의 이름입니다. *dynamic_snapshot_jobname*는 sysname 이며, 지정 되지 않은 경우 *dynamic_snapshot_jobid*와 연결 된 작업 이름을 기본값으로 사용 합니다.  
+`[ @dynamic_snapshot_jobname = ] 'dynamic_snapshot_jobname'` 제거할 필터링 된 데이터 스냅숏 작업의 이름입니다. *dynamic_snapshot_jobname*는 sysname 이며, 지정 되지 않은 경우 *dynamic_snapshot_jobid*와 연결 된 작업 이름을 기본값으로 사용 합니다.  
   
-`[ @dynamic_snapshot_jobid = ] 'dynamic_snapshot_jobid'`제거할 필터링 된 데이터 스냅숏 작업의 식별자입니다. *dynamic_snapshot_jobid*은 **uniqueidentifier**이며 기본값은 NULL입니다.  
+`[ @dynamic_snapshot_jobid = ] 'dynamic_snapshot_jobid'` 제거할 필터링 된 데이터 스냅숏 작업의 식별자입니다. *dynamic_snapshot_jobid*은 **uniqueidentifier**이며 기본값은 NULL입니다.  
   
 > [!IMPORTANT]  
 >  *Dynamic_snapshot_jobid*또는 *dynamic_snapshot_jobname* 만 지정할 수 있습니다. *Dynamic_snapshot_jobid*또는 *dynamic_snapshot_jobname*에 대해 값이 제공 되지 않은 경우 게시에 대 한 모든 동적 스냅숏 작업이 제거 됩니다.  

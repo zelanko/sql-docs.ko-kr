@@ -1,4 +1,5 @@
 ---
+description: sp_can_tlog_be_applied(Transact-SQL)
 title: sp_can_tlog_be_applied (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9c143b6c-27ac-4ab7-98d1-3b7b265f3963
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2369c2db6003229ee54f9d7ef04784a470493faf
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 4e4596cfab5bb7a272e29b2d2749e38c9f38ddaf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85873828"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464480"
 ---
 # <a name="sp_can_tlog_be_applied-transact-sql"></a>sp_can_tlog_be_applied(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,11 +42,11 @@ sp_can_tlog_be_applied [ @backup_file_name = ] 'backup_file_name'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @backup_file_name = ] 'backup_file_name'`백업 파일의 이름입니다. *backup_file_name* 은 **nvarchar (128)** 입니다.  
+`[ @backup_file_name = ] 'backup_file_name'` 백업 파일의 이름입니다. *backup_file_name* 은 **nvarchar (128)** 입니다.  
   
-`[ @database_name = ] 'database_name'`데이터베이스의 이름입니다. *database_name*은 **sysname**입니다.  
+`[ @database_name = ] 'database_name'` 데이터베이스의 이름입니다. *database_name*은 **sysname**입니다.  
   
-`[ @result = ] _result_ OUTPUT`트랜잭션 로그를 데이터베이스에 적용할 수 있는지 여부를 나타냅니다. *result* 는 **bit**입니다.  
+`[ @result = ] _result_ OUTPUT` 트랜잭션 로그를 데이터베이스에 적용할 수 있는지 여부를 나타냅니다. *result* 는 **bit**입니다.  
   
  1 = 로그를 적용할 수 있음  
   
@@ -57,7 +58,7 @@ sp_can_tlog_be_applied [ @backup_file_name = ] 'backup_file_name'
 ## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할의 멤버만 **sp_can_tlog_be_applied**를 실행할 수 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `@MyBitVar` 지역 변수를 선언하여 결과를 저장합니다.  
   
 ```  
@@ -72,7 +73,7 @@ N'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Backup\Adventu
 GO  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

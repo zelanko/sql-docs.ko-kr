@@ -1,4 +1,5 @@
 ---
+description: sp_fulltext_keymappings(Transact-SQL)
 title: sp_fulltext_keymappings (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,12 +21,12 @@ ms.assetid: 2818fa42-072d-4664-a2f7-7ec363b51d81
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 000c71e284f77b5024cd45727803af55fa8d8b06
-ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
+ms.openlocfilehash: 59445fdd9d4d7588291b2fac0073b962155cde04
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86977744"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464375"
 ---
 # <a name="sp_fulltext_keymappings-transact-sql"></a>sp_fulltext_keymappings(Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -64,7 +65,7 @@ sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }
 |DocId|**bigint**|키 값에 해당하는 내부 문서 ID(DocId) 열입니다.|  
 |키|*|지정한 테이블의 전체 텍스트 키 값입니다.<br /><br /> 매핑 테이블에 전체 텍스트 키가 없으면 빈 행 집합이 반환됩니다.|  
   
- <sup>*</sup>Key의 데이터 형식은 기본 테이블에 있는 전체 텍스트 키 열의 데이터 형식과 동일 합니다.  
+ <sup>*</sup> Key의 데이터 형식은 기본 테이블에 있는 전체 텍스트 키 열의 데이터 형식과 동일 합니다.  
   
 ## <a name="permissions"></a>사용 권한  
  이 함수는 공개 함수이며 특별한 사용 권한이 필요하지 않습니다.  
@@ -137,6 +138,6 @@ GO
 |`4`|`4`|`4`|  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;전체 텍스트 검색 및 의미 체계 검색 저장 프로시저](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)  
+ [Transact-sql&#41;&#40;전체 텍스트 검색 및 의미 체계 검색 저장 프로시저 ](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: sp_marksubscriptionvalidation(Transact-SQL)
 title: sp_marksubscriptionvalidation (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e68fe0b9-5993-4880-917a-b0f661f8459b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c440247433404c520559d6609bd4690b425ddd43
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1046bf396112309e17752088969c9556b50ae1cb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899345"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464150"
 ---
 # <a name="sp_marksubscriptionvalidation-transact-sql"></a>sp_marksubscriptionvalidation(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,13 +41,13 @@ sp_marksubscriptionvalidation [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @publication = ] 'publication'`게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 없습니다.  
+`[ @publication = ] 'publication'` 게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @subscriber = ] 'subscriber'`구독자의 이름입니다. *구독자* 는 sysname 이며 기본값은 없습니다.  
+`[ @subscriber = ] 'subscriber'` 구독자의 이름입니다. *구독자* 는 sysname 이며 기본값은 없습니다.  
   
-`[ @destination_db = ] 'destination_db'`대상 데이터베이스의 이름입니다. *destination_db* 는 **sysname**이며 기본값은 없습니다.  
+`[ @destination_db = ] 'destination_db'` 대상 데이터베이스의 이름입니다. *destination_db* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @publisher = ] 'publisher'`이외 게시자를 지정 합니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *publisher* 는 **sysname**이며 기본값은 NULL입니다.  
+`[ @publisher = ] 'publisher'` 이외 게시자를 지정 합니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *publisher* 는 **sysname**이며 기본값은 NULL입니다.  
   
 > [!NOTE]  
 >  게시자에 속하는 게시에는 *게시자* 를 사용 하면 안 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -67,7 +68,7 @@ sp_marksubscriptionvalidation [ @publication = ] 'publication'
  **Sysadmin** 고정 서버 역할 또는 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_marksubscriptionvalidation**을 실행할 수 있습니다.  
   
 ## <a name="example"></a>예제  
- 다음 쿼리는 게시 데이터베이스가 구독 수준 유효성 검사 명령을 게시하는 데 적용할 수 있습니다. 다음 명령은 지정한 구독자의 배포 에이전트에 의해 적용됩니다. 첫 번째 트랜잭션은 '**art1**' 아티클의 유효성을 검사 하는 반면 두 번째 트랜잭션은 '**art2**'의 유효성을 검사 합니다. 또한 **sp_marksubscriptionvalidation** 및 [sp_article_validation &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md) 에 대 한 호출이 트랜잭션에 캡슐화 되어 있습니다. 트랜잭션 당 [transact-sql&#41;&#40;sp_article_validation](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md) 에는 한 번만 호출 하는 것이 좋습니다. 이는 [sp_article_validation &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md) 트랜잭션 기간 동안 원본 테이블에 대 한 공유 테이블 잠금을 보유 하 고 있기 때문입니다. 반드시 트랜잭션 길이를 짧게 유지하여 동시성을 최대화해야 합니다.  
+ 다음 쿼리는 게시 데이터베이스가 구독 수준 유효성 검사 명령을 게시하는 데 적용할 수 있습니다. 다음 명령은 지정한 구독자의 배포 에이전트에 의해 적용됩니다. 첫 번째 트랜잭션은 '**art1**' 아티클의 유효성을 검사 하는 반면 두 번째 트랜잭션은 '**art2**'의 유효성을 검사 합니다. 또한 **sp_marksubscriptionvalidation** 및 [sp_article_validation &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md) 에 대 한 호출이 트랜잭션에 캡슐화 되어 있습니다. 트랜잭션 당 [transact-sql&#41;&#40;sp_article_validation ](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md) 에는 한 번만 호출 하는 것이 좋습니다. 이는 [sp_article_validation &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md) 트랜잭션 기간 동안 원본 테이블에 대 한 공유 테이블 잠금을 보유 하 고 있기 때문입니다. 반드시 트랜잭션 길이를 짧게 유지하여 동시성을 최대화해야 합니다.  
   
 ```  
 begin tran  
@@ -100,7 +101,7 @@ commit tran
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;시스템 저장 프로시저](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;시스템 저장 프로시저 ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [복제된 데이터의 유효성 검사](../../relational-databases/replication/validate-data-at-the-subscriber.md)  
   
   

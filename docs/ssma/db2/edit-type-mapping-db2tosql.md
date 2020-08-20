@@ -1,4 +1,5 @@
 ---
+description: 형식 매핑 편집 (DB2ToSQL)
 title: 형식 매핑 편집 (DB2ToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: f93c4b7d-74fc-4856-bf42-035289918e83
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 5dc6cd8939dbc7d5d42417b06c938c9ae8d3f7e8
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 3e31f1422415a14c4e1fb497ff56806feeb9439e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87937290"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463539"
 ---
 # <a name="edit-type-mapping-db2tosql"></a>형식 매핑 편집 (DB2ToSQL)
 **유형 매핑 편집** 대화 상자를 사용 하 여 원본 및 대상 데이터베이스 개체 간에 유형을 매핑하는 방법을 지정할 수 있습니다.  
@@ -44,6 +45,6 @@ ms.locfileid: "87937290"
   
 데이터 형식이 가변 길이인 경우 **대상 유형**아래에 다음 필드가 표시 됩니다.  
   
-**바꿀 내용**  
+**Replace with**  
 이 매핑의 대상 길이를 지정 합니다. 예를 들어 **nvarchar** 데이터 형식의 경우 20을 입력 하 여 지정 된 원본 데이터 형식을 **nvarchar (20)** 로 매핑해야 함을 지정할 수 있습니다.  
   

@@ -1,4 +1,5 @@
 ---
+description: sp_apply_job_to_targets(Transact-SQL)
 title: sp_apply_job_to_targets (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4a3e9173-7e3c-4100-a9ac-2f5d2c60a8b0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: dbefdf6a045dce468365aa585b7efad775709c2c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1f821418b5e6a75aa51264abb0d265f907b8957d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85874930"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464561"
 ---
 # <a name="sp_apply_job_to_targets-transact-sql"></a>sp_apply_job_to_targets(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,18 +43,18 @@ sp_apply_job_to_targets { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @job_id = ] job_id`지정 된 대상 서버 또는 대상 서버 그룹에 적용할 작업의 id입니다. *job_id* 은 **uniqueidentifier**이며 기본값은 NULL입니다.  
+`[ @job_id = ] job_id` 지정 된 대상 서버 또는 대상 서버 그룹에 적용할 작업의 id입니다. *job_id* 은 **uniqueidentifier**이며 기본값은 NULL입니다.  
   
-`[ @job_name = ] 'job_name'`지정 된 연결 대상 서버 또는 대상 서버 그룹에 적용할 작업의 이름입니다. *job_name* 는 **sysname**이며 기본값은 NULL입니다.  
+`[ @job_name = ] 'job_name'` 지정 된 연결 대상 서버 또는 대상 서버 그룹에 적용할 작업의 이름입니다. *job_name* 는 **sysname**이며 기본값은 NULL입니다.  
   
 > [!NOTE]  
 >  *Job_id* 또는 *job_name* 를 지정 해야 하지만 둘 다 지정할 수는 없습니다.  
   
-`[ @target_server_groups = ] 'target_server_groups'`지정 된 작업을 적용할 대상 서버 그룹의 쉼표로 구분 된 목록입니다. *target_server_groups* 은 **nvarchar (2048)** 이며 기본값은 NULL입니다.  
+`[ @target_server_groups = ] 'target_server_groups'` 지정 된 작업을 적용할 대상 서버 그룹의 쉼표로 구분 된 목록입니다. *target_server_groups* 은 **nvarchar (2048)** 이며 기본값은 NULL입니다.  
   
-`[ @target_servers = ] 'target_servers'`지정 된 작업을 적용할 대상 서버의 쉼표로 구분 된 목록입니다. *target_servers*은 **nvarchar (2048)** 이며 기본값은 NULL입니다.  
+`[ @target_servers = ] 'target_servers'` 지정 된 작업을 적용할 대상 서버의 쉼표로 구분 된 목록입니다. *target_servers*은 **nvarchar (2048)** 이며 기본값은 NULL입니다.  
   
-`[ @operation = ] 'operation'`지정 된 대상 서버 또는 대상 서버 그룹에서 지정 된 작업을 적용 하거나 제거할지 여부를 나타냅니다. *연산은* **varchar (7)** 이며 기본값은 APPLY입니다. 유효한 작업은 **적용** 및 **제거**입니다.  
+`[ @operation = ] 'operation'` 지정 된 대상 서버 또는 대상 서버 그룹에서 지정 된 작업을 적용 하거나 제거할지 여부를 나타냅니다. *연산은* **varchar (7)** 이며 기본값은 APPLY입니다. 유효한 작업은 **적용** 및 **제거**입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -64,7 +65,7 @@ sp_apply_job_to_targets { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할의 멤버만이 프로시저를 실행할 수 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 이전에 만든 `Backup Customer Information` 작업을 `Servers Maintaining Customer Information` 그룹의 모든 대상 서버에 적용합니다.  
   
 ```  

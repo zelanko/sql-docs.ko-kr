@@ -1,4 +1,5 @@
 ---
+description: sp_help_spatial_geography_histogram(Transact-SQL)
 title: sp_help_spatial_geography_histogram (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5c5bd319-055d-4cd6-8c5a-06354cc056cc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c1ed475c78decb3891185b90d3dc032ab896bdf0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c1713bb208fd556b23776fcfc2871879e6aa0d79
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85790355"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464249"
 ---
 # <a name="sp_help_spatial_geography_histogram-transact-sql"></a>sp_help_spatial_geography_histogram(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,15 +41,15 @@ sp_help_spatial_geography_histogram [ @tabname =] 'tabname'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @tabname = ] 'tabname'`공간 인덱스가 지정 된 테이블의 정규화 된 이름 또는 정규화 되지 않은 이름입니다.  
+`[ @tabname = ] 'tabname'` 공간 인덱스가 지정 된 테이블의 정규화 된 이름 또는 정규화 되지 않은 이름입니다.  
   
  따옴표는 정규화된 테이블이 지정된 경우에만 필요합니다. 데이터베이스 이름을 포함한 정규화된 이름인 경우 반드시 현재 데이터베이스의 이름을 사용해야 합니다. *tabname* 은 **sysname**이며 기본값은 없습니다.  
   
-`[ @colname = ] 'columnname'`지정 된 공간 열의 이름입니다. *columnname* 은 **sysname**이며 기본값은 없습니다.  
+`[ @colname = ] 'columnname'` 지정 된 공간 열의 이름입니다. *columnname* 은 **sysname**이며 기본값은 없습니다.  
   
-`[ @resolution = ] 'resolution'`경계 상자를 확인 하는 것입니다. 유효한 값은 10부터 5000까지입니다. *resolution* 은 **tinyint**이며 기본값은 없습니다.  
+`[ @resolution = ] 'resolution'` 경계 상자를 확인 하는 것입니다. 유효한 값은 10부터 5000까지입니다. *resolution* 은 **tinyint**이며 기본값은 없습니다.  
   
-`[ @sample = ] 'sample'`사용 되는 테이블의 백분율입니다. 유효한 값은 0에서 100 까지입니다. *tablesample* 은 **float**입니다. 기본값은 100입니다.  
+`[ @sample = ] 'sample'` 사용 되는 테이블의 백분율입니다. 유효한 값은 0에서 100 까지입니다. *tablesample* 은 **float**입니다. 기본값은 100입니다.  
   
 ## <a name="property-valuereturn-value"></a>속성 값/반환 값  
  테이블 값이 반환됩니다. 다음 표에서는 테이블의 열 내용에 대해 설명합니다.  
@@ -56,7 +57,7 @@ sp_help_spatial_geography_histogram [ @tabname =] 'tabname'
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**cellid**|**int**|각 셀의 고유한 ID를 나타내며 1부터 셉니다.|  
-|**셀씩**|**요인**|각 셀을 나타내는 사각의 다각형입니다. 셀 셰이프는 공간 인덱싱에 사용된 셀 셰이프와 동일합니다.|  
+|**셀씩**|**geography**|각 셀을 나타내는 사각의 다각형입니다. 셀 셰이프는 공간 인덱싱에 사용된 셀 셰이프와 동일합니다.|  
 |**row_count**|**bigint**|셀에 접해 있거나 셀을 포함하는 공간 개체 수를 나타냅니다.|  
   
 ## <a name="permissions"></a>사용 권한  
@@ -71,7 +72,7 @@ sp_help_spatial_geography_histogram [ @tabname =] 'tabname'
  **지리** 형식에 대 한 경계 상자는 전체 구형입니다.  
   
 ## <a name="examples"></a>예제  
- 다음 예에서는 데이터베이스의 테이블에 대해 **sp_help_spatial_geography_histogram** 를 호출 합니다 `Person.Address` [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] .  
+ 다음 예에서는 데이터베이스의 테이블에 대해  **sp_help_spatial_geography_histogram** 를 호출 합니다 `Person.Address` [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] .  
   
 ```  
 EXEC sp_help_spatial_geography_histogram @tabname = Person.Address, @colname = SpatialLocation, @resolution = 64, @sample = 30;  

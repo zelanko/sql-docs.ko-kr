@@ -1,4 +1,5 @@
 ---
+description: IHextendedArticleView(Transact-SQL)
 title: IHextendedArticleView (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 19ef0a12-3214-4bb0-9c25-a665897e65a2
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: e15bb478ba04a95fa3c4d358477fe8073f50d007
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8a56d2e7b96464866f0216e1f93ef6eb3d1066df
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889209"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463875"
 ---
 # <a name="ihextendedarticleview-transact-sql"></a>IHextendedArticleView(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +38,7 @@ ms.locfileid: "85889209"
 |**destination_object**|**sysname**|구독자에 게시된 개체의 이름입니다.|  
 |**source_owner**|**sysname**|게시자에 게시된 개체의 소유자입니다.|  
 |**source_object**|**sysname**|게시자에 게시된 개체의 이름입니다.|  
-|**한**|**nvarchar(255)**|아티클 설명입니다.|  
+|**description**|**nvarchar(255)**|아티클 설명입니다.|  
 |**creation_script**|**nvarchar(255)**|아티클에 대한 스키마 생성 스크립트입니다.|  
 |**del_cmd**|**nvarchar(255)**|DELETE를 위해 실행되는 명령입니다.|  
 |**필터가**|**int**|수평 분할을 정의하는 데 사용되는 저장 프로시저에 대한 식별자입니다.|  
@@ -52,7 +53,7 @@ ms.locfileid: "85889209"
   
 ## <a name="see-also"></a>참고 항목  
  [다른 유형의 데이터베이스 복제](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
- [Transact-sql&#41;&#40;복제 테이블](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Transact-sql&#41;&#40;복제 테이블 ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [복제 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

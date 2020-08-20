@@ -1,4 +1,5 @@
 ---
+description: sysextendedarticlesview(Transact-SQL)
 title: sysextendedarticlesview (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8bdd22f7-c268-49b6-820c-3fe603feb128
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: c273b33c0bdecd86eb9ef21f086860bbe3c569b5
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 347d05c4ca4d5c29c04af853581ad02efb287d10
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881258"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463860"
 ---
 # <a name="sysextendedarticlesview-transact-sql"></a>sysextendedarticlesview(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "85881258"
 |**artid**|**int**|아티클에 대해 고유한 ID를 제공하는 ID 열입니다.|  
 |**creation_script**|**nvarchar(255)**|아티클에 대한 스키마 생성 스크립트입니다.|  
 |**del_cmd**|**nvarchar(255)**|DELETE 시 실행할 명령입니다. 그렇지 않으면 로그에서 만들어집니다.|  
-|**한**|**nvarchar(255)**|아티클에 대한 설명 항목입니다.|  
+|**description**|**nvarchar(255)**|아티클에 대한 설명 항목입니다.|  
 |**dest_table**|**nvarchar(128)**|대상 테이블의 이름입니다.|  
 |**필터가**|**int**|수평 분할에 사용하는 저장 프로시저의 개체 식별자입니다.|  
 |**filter_clause**|**ntext**|행 필터링에 사용하는 아티클의 WHERE 절입니다.|  
@@ -56,11 +57,11 @@ ms.locfileid: "85881258"
 |**fire_triggers_on_snapshot**|**int**|복제된 트리거가 스냅샷이 적용될 때 실행될지 여부를 나타냅니다. 다음 값 중 하나일 수 있습니다.<br /><br /> **0** = 트리거가 실행 되지 않습니다.<br /><br /> **1** = 트리거가 실행 됩니다.|  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;복제 테이블](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Transact-sql&#41;&#40;복제 뷰](../../relational-databases/system-views/replication-views-transact-sql.md)   
+ [Transact-sql&#41;&#40;복제 테이블 ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Transact-sql&#41;&#40;복제 뷰 ](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [Transact-sql&#41;sp_addarticle &#40;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
  [Transact-sql&#41;sp_changearticle &#40;](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)   
- [Transact-sql&#41;sp_helparticle &#40;](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)   
+ [sp_helparticle&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)   
  [sysarticles &#40;Transact-sql&#41;](../../relational-databases/system-tables/sysarticles-transact-sql.md)  
   
   

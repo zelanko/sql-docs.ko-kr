@@ -1,4 +1,5 @@
 ---
+description: Table Properties - SSMS
 title: 테이블 속성 - SSMS | Microsoft 문서
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ ms.assetid: ad8a2fd4-f092-4c0f-be85-54ce8b9d725a
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2e476076084e23d3381f08a2e10dc130bee25b93
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 1cc8c79f0a8020d4301e6bc8653f2d3fcf600149
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87928675"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463779"
 ---
 # <a name="table-properties---ssms"></a>Table Properties - SSMS
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
@@ -149,7 +150,7 @@ ms.locfileid: "87928675"
  테이블의 인덱스가 차지하는 공간의 크기(MB)입니다. 이 값에 테이블에 대한 XML 인덱스 공간 사용량은 포함되지 않습니다. XML 인덱스가 해당 테이블에 속할 경우 [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md) 를 대신 사용하세요.  
   
  **행 개수**  
- 테이블의 행 수입니다.  
+ 표의 행 수입니다.  
   
  **데이터 공간**  
  테이블의 데이터가 차지하는 공간의 크기(MB)입니다.  

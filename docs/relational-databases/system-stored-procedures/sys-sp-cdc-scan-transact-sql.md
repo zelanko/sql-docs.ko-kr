@@ -1,4 +1,5 @@
 ---
+description: sys.sp_cdc_scan(Transact-SQL)
 title: sys. sp_cdc_scan (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 46e4294c-97b8-47d6-9ed9-b436a9929353
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 558a2fd9ff62baa3448609eb42e5f31883fbac53
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0ad39bba5f8a3fbee5bcecde3e41ad9a7f7f4442
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891067"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463948"
 ---
 # <a name="syssp_cdc_scan-transact-sql"></a>sys.sp_cdc_scan(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,13 +45,13 @@ sys.sp_cdc_scan [ [ @maxtrans = ] max_trans ]
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @maxtrans = ] max_trans`각 검색 주기에서 처리할 최대 트랜잭션 수입니다. *max_trans* 는 **int** 이며 기본값은 500입니다.  
+`[ @maxtrans = ] max_trans` 각 검색 주기에서 처리할 최대 트랜잭션 수입니다. *max_trans* 는 **int** 이며 기본값은 500입니다.  
   
-`[ @maxscans = ] max_scans`로그에서 모든 행을 추출 하기 위해 실행할 최대 검색 주기 수입니다. *max_scans* 은 **int** 이며 기본값은 10입니다.  
+`[ @maxscans = ] max_scans` 로그에서 모든 행을 추출 하기 위해 실행할 최대 검색 주기 수입니다. *max_scans* 은 **int** 이며 기본값은 10입니다.  
   
-`[ @continuous = ] continuous`단일 검색 주기를 실행 한 후 저장 프로시저를 종료할지 (0), 아니면 검색 주기를 다시 실행 하기 전에 *polling_interval* 에 지정 된 시간 동안 일시 중지 해야 하는지를 나타냅니다 (1). *연속* 은 **tinyint** 이며 기본값은 0입니다.  
+`[ @continuous = ] continuous` 단일 검색 주기를 실행 한 후 저장 프로시저를 종료할지 (0), 아니면 검색 주기를 다시 실행 하기 전에 *polling_interval* 에 지정 된 시간 동안 일시 중지 해야 하는지를 나타냅니다 (1). *연속* 은 **tinyint** 이며 기본값은 0입니다.  
   
-`[ @pollinginterval = ] polling_interval`로그 검색 주기 사이의 시간 (초)입니다. *polling_interval* 는 **bigint** 이며 기본값은 0입니다.  
+`[ @pollinginterval = ] polling_interval` 로그 검색 주기 사이의 시간 (초)입니다. *polling_interval* 는 **bigint** 이며 기본값은 0입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

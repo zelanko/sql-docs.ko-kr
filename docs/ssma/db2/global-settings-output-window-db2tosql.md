@@ -1,4 +1,5 @@
 ---
+description: 전역 설정 (출력 창) (DB2ToSQL)
 title: 전역 설정 (출력 창) (DB2ToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: f21f80f4-9a2a-448d-9fe8-b6926595389e
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: c28d9bed90a492ee4c6feb50236386516e2bb93c
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: d30c40e3085c7a34343e96ec0a9eaf10bddcdd5b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87933704"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463503"
 ---
 # <a name="global-settings-output-window-db2tosql"></a>전역 설정 (출력 창) (DB2ToSQL)
 **전역 설정** 대화 상자를 사용 하 여 ssma에 대 한 설정을 지정할 수 있습니다.  

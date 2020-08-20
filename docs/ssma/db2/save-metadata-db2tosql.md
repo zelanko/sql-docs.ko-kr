@@ -1,4 +1,5 @@
 ---
+description: 메타 데이터 저장 (DB2ToSQL)
 title: 메타 데이터 저장 (DB2ToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9a76083e-4902-449e-b125-7e9259fc37f7
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 6293a11055aeb7e5cd5d68ae936365334234e100
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 0a8972f267c21fdd43b01a7316ddd199400733de
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87936442"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463465"
 ---
 # <a name="save-metadata-db2tosql"></a>메타 데이터 저장 (DB2ToSQL)
 **메타 데이터 저장** 대화 상자에 메타 데이터를 저장 하기 전에 ssma 프로젝트에 로드 하 라는 메시지가 표시 됩니다. 이를 통해 오프 라인으로 사용 하 고 기술 지원 담당자와 같은 다른 사람에 게 보낼 수 있는 전체 프로젝트 파일을 사용할 수 있습니다.  

@@ -1,4 +1,5 @@
 ---
+description: sp_changedistributiondb(Transact-SQL)
 title: sp_changedistributiondb (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 66f73185-ea9e-43f9-86ed-9dd933cee2f6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b9bd4367a4af33195ffdb3e233980f46205ca39a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fb52176989ef6e90eb132da21abcd299444aec8d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760208"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464459"
 ---
 # <a name="sp_changedistributiondb-transact-sql"></a>sp_changedistributiondb(Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -39,9 +40,9 @@ sp_changedistributiondb [ @database= ] 'database'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @database = ] 'database'`배포 데이터베이스의 이름입니다. *데이터베이스* 는 **sysname**이며 기본값은 없습니다.  
+`[ @database = ] 'database'` 배포 데이터베이스의 이름입니다. *데이터베이스* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @property = ] 'property'`지정 된 데이터베이스에 대해 변경할 속성입니다. *속성* 은 **sysname**이며 다음 값 중 하나일 수 있습니다.  
+`[ @property = ] 'property'` 지정 된 데이터베이스에 대해 변경할 속성입니다. *속성* 은 **sysname**이며 다음 값 중 하나일 수 있습니다.  
   
 |값|설명|  
 |-----------|-----------------|  
@@ -50,7 +51,7 @@ sp_changedistributiondb [ @database= ] 'database'
 |**min_distretention**|최소 배포 보존 기간입니다.|  
 |NULL(기본값)|사용 가능한 모든 *속성* 값이 출력 됩니다.|  
   
-`[ @value = ] 'value'`지정 된 속성의 새 값입니다. *value* 는 **nvarchar (255)** 이며 기본값은 NULL입니다.  
+`[ @value = ] 'value'` 지정 된 속성의 새 값입니다. *value* 는 **nvarchar (255)** 이며 기본값은 NULL입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -64,11 +65,11 @@ sp_changedistributiondb [ @database= ] 'database'
 ## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할의 멤버만 **sp_changedistributiondb**를 실행할 수 있습니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [배포자 및 게시자 속성 보기 및 수정](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
  [Transact-sql&#41;sp_adddistributiondb &#40;](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md)   
  [Transact-sql&#41;sp_dropdistributiondb &#40;](../../relational-databases/system-stored-procedures/sp-dropdistributiondb-transact-sql.md)   
- [Transact-sql&#41;sp_helpdistributiondb &#40;](../../relational-databases/system-stored-procedures/sp-helpdistributiondb-transact-sql.md)   
+ [sp_helpdistributiondb&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistributiondb-transact-sql.md)   
  [복제 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

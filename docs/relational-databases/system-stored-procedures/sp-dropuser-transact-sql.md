@@ -1,4 +1,5 @@
 ---
+description: sp_dropuser(Transact-SQL)
 title: sp_dropuser (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e28f18f9-7ecf-4568-89f4-fe5c520df386
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4270edfcdacf94d354c0079e48c10a201a3e5a6b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 7456ae7c2350f8d7c7e5aa145b44b2267f22f4fc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881761"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464305"
 ---
 # <a name="sp_dropuser-transact-sql"></a>sp_dropuser(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85881761"
   현재 데이터베이스에서 데이터베이스 사용자를 제거합니다. **sp_dropuser** 는 이전 버전의와의 호환성을 제공 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 합니다.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]대신 [DROP USER](../../t-sql/statements/drop-user-transact-sql.md) 를 사용 해야 합니다.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 대신 [DROP USER](../../t-sql/statements/drop-user-transact-sql.md) 를 사용 해야 합니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,7 +43,7 @@ sp_dropuser [ @name_in_db = ] 'user'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @name_in_db = ] 'user'`제거할 사용자의 이름입니다. *사용자* 는 **sysname**이며 기본값은 없습니다. *사용자가* 현재 데이터베이스에 있어야 합니다. Windows 로그인을 지정하는 경우에는 데이터베이스에서 알 수 있는 로그인 이름을 사용합니다.  
+`[ @name_in_db = ] 'user'` 제거할 사용자의 이름입니다. *사용자* 는 **sysname**이며 기본값은 없습니다. *사용자가* 현재 데이터베이스에 있어야 합니다. Windows 로그인을 지정하는 경우에는 데이터베이스에서 알 수 있는 로그인 이름을 사용합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -61,7 +62,7 @@ sp_dropuser [ @name_in_db = ] 'user'
 ## <a name="permissions"></a>사용 권한  
  데이터베이스에 대한 ALTER ANY USER 권한이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 현재 데이터베이스에서 `Albert` 사용자를 제거합니다.  
   
 ```  
@@ -70,9 +71,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;보안 저장 프로시저](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;보안 저장 프로시저 ](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [Transact-sql&#41;sp_grantdbaccess &#40;](../../relational-databases/system-stored-procedures/sp-grantdbaccess-transact-sql.md)   
- [DROP USER &#40;Transact-sql&#41;](../../t-sql/statements/drop-user-transact-sql.md)   
+ [DROP USER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-user-transact-sql.md)   
  [Transact-sql&#41;sp_revokedbaccess &#40;](../../relational-databases/system-stored-procedures/sp-revokedbaccess-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

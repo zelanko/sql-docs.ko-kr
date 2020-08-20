@@ -1,4 +1,5 @@
 ---
+description: sp_changedistpublisher(Transact-SQL)
 title: sp_changedistpublisher (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7ef5c89d-faaa-4f8e-aef7-00649ebc8bc9
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ed3ae93d1b2bd87decb43050e03624bb9a7ed62c
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 565ca8d7328446435aa584b614014d0ce22cb2c1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87865000"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464516"
 ---
 # <a name="sp_changedistpublisher-transact-sql"></a>sp_changedistpublisher(Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -40,13 +41,13 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @publisher = ] 'publisher'`게시자 이름입니다. *publisher* 는 **sysname**이며 기본값은 없습니다.  
+`[ @publisher = ] 'publisher'` 게시자 이름입니다. *publisher* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @property = ] 'property'`지정 된 게시자에 대해 변경할 속성입니다. *속성* 은 **sysname** 이며 다음 값 중 하나일 수 있습니다.  
+`[ @property = ] 'property'` 지정 된 게시자에 대해 변경할 속성입니다. *속성* 은 **sysname** 이며 다음 값 중 하나일 수 있습니다.  
   
-`[ @value = ] 'value'`지정 된 속성에 대 한 값입니다. *value* 는 **nvarchar (255)** 이며 기본값은 NULL입니다.  
+`[ @value = ] 'value'` 지정 된 속성에 대 한 값입니다. *value* 는 **nvarchar (255)** 이며 기본값은 NULL입니다.  
   
-`[ @storage_connection_string = ] 'storage_connection_string'`는 SQL Managed Instance에 필요 하며 Azure SQL Database 저장소 볼륨에 대 한 액세스 키와 일치 해야 합니다. 
+`[ @storage_connection_string = ] 'storage_connection_string'` 는 SQL Managed Instance에 필요 하며 Azure SQL Database 저장소 볼륨에 대 한 액세스 키와 일치 해야 합니다. 
 
 
  > [!INCLUDE[Azure SQL Database link](../../includes/azure-sql-db-repl-for-more-information.md)]
@@ -75,7 +76,7 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
 ## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할의 멤버만 **sp_changedistpublisher**를 실행할 수 있습니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [배포자 및 게시자 속성 보기 및 수정](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
  [Transact-sql&#41;sp_adddistpublisher &#40;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
  [Transact-sql&#41;sp_dropdistpublisher &#40;](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md)   

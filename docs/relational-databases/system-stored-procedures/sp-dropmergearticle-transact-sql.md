@@ -1,4 +1,5 @@
 ---
+description: sp_dropmergearticle(Transact-SQL)
 title: sp_dropmergearticle (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/02/2016
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5ef1fbf7-c03d-4488-9ab2-64aae296fa4f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4445c622027e4e639c7748010daf97d535a29624
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 77762c318d06d1a9c872405a9965e7b018f3eb85
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881838"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464322"
 ---
 # <a name="sp_dropmergearticle-transact-sql"></a>sp_dropmergearticle(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,27 +44,27 @@ sp_dropmergearticle [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @publication = ] 'publication'`아티클을 삭제할 게시의 이름입니다. *게시*는 **sysname**이며 기본값은 없습니다.  
+`[ @publication = ] 'publication'` 아티클을 삭제할 게시의 이름입니다. *게시*는 **sysname**이며 기본값은 없습니다.  
   
-`[ @article = ] 'article'`지정 된 게시에서 삭제할 아티클의 이름입니다. *article*은 **sysname**이며 기본값은 없습니다. **All**인 경우 지정 된 병합 게시의 모든 기존 아티클이 제거 됩니다. *아티클이* **모두**인 경우에도 문서와 별도로 게시를 삭제 해야 합니다.  
+`[ @article = ] 'article'` 지정 된 게시에서 삭제할 아티클의 이름입니다. *article*은 **sysname**이며 기본값은 없습니다. **All**인 경우 지정 된 병합 게시의 모든 기존 아티클이 제거 됩니다. *아티클이* **모두**인 경우에도 문서와 별도로 게시를 삭제 해야 합니다.  
   
-`[ @ignore_distributor = ] ignore_distributor`이 저장 프로시저가 배포자에 연결 되지 않고 실행 되는지 여부를 나타냅니다. *ignore_distributor* 은 **bit**이며 기본값은 **0**입니다.  
+`[ @ignore_distributor = ] ignore_distributor` 이 저장 프로시저가 배포자에 연결 되지 않고 실행 되는지 여부를 나타냅니다. *ignore_distributor* 은 **bit**이며 기본값은 **0**입니다.  
   
-`[ @reserved = ] reserved`는 나중에 사용 하도록 예약 되어 있습니다. *reserved* 는 **nvarchar (20)** 이며 기본값은 NULL입니다.  
+`[ @reserved = ] reserved` 는 나중에 사용 하도록 예약 되어 있습니다. *reserved* 는 **nvarchar (20)** 이며 기본값은 NULL입니다.  
   
-`[ @force_invalidate_snapshot = ] force_invalidate_snapshot`스냅숏이 무효화 되는 기능을 사용 하거나 사용 하지 않도록 설정 합니다. *force_invalidate_snapshot* 은 **bit**이며 기본값은 **0**입니다.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` 스냅숏이 무효화 되는 기능을 사용 하거나 사용 하지 않도록 설정 합니다. *force_invalidate_snapshot* 은 **bit**이며 기본값은 **0**입니다.  
   
  **0** 은 병합 아티클에 대 한 변경으로 인해 스냅숏이 무효화 되지 않도록 지정 합니다.  
   
  **1** 은 병합 아티클에 대 한 변경으로 인해 스냅숏이 무효화 될 수 있음을 의미 합니다 .이 경우 값 **1** 은 새 스냅숏을 생성 하기 위한 권한을 부여 합니다.  
   
-`[ @force_reinit_subscription = ] force_reinit_subscription`아티클을 삭제 하면 기존 구독을 다시 초기화 해야 합니다. *force_reinit_subscription* 은 **bit**이며 기본값은 **0**입니다.  
+`[ @force_reinit_subscription = ] force_reinit_subscription` 아티클을 삭제 하면 기존 구독을 다시 초기화 해야 합니다. *force_reinit_subscription* 은 **bit**이며 기본값은 **0**입니다.  
   
  **0** 은 아티클 삭제로 인해 구독이 다시 초기화 되지 않도록 지정 합니다.  
   
  **1** 은 아티클 삭제로 인해 기존 구독이 다시 초기화 됨을 의미 하며 구독을 다시 초기화할 수 있는 권한을 부여 합니다.  
   
-`[ @ignore_merge_metadata = ] ignore_merge_metadata`내부용 으로만 사용 됩니다.  
+`[ @ignore_merge_metadata = ] ignore_merge_metadata` 내부용 으로만 사용 됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -156,10 +157,10 @@ GO
   
 ## <a name="see-also"></a>참고 항목  
  [아티클 삭제](../../relational-databases/replication/publish/delete-an-article.md)   
- [기존 게시에 대 한 아티클 추가 및 삭제](../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)   
+ [기존 게시에 대한 아티클 추가 및 삭제](../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)   
  [Transact-sql&#41;sp_addmergearticle &#40;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)   
  [Transact-sql&#41;sp_changemergearticle &#40;](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)   
- [Transact-sql&#41;sp_helpmergearticle &#40;](../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)   
+ [sp_helpmergearticle&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)   
  [복제 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: sp_add_log_shipping_secondary_database(Transact-SQL)
 title: sp_add_log_shipping_secondary_database (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d29e1c24-3a3c-47a4-a726-4584afa6038a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: de65ab447394d17c6400f77c58986e111839e9b4
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 384884e2b2b076b20cb9c679c3494a7c292f77a1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85879843"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464670"
 ---
 # <a name="sp_add_log_shipping_secondary_database-transact-sql"></a>sp_add_log_shipping_secondary_database(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -53,17 +54,17 @@ sp_add_log_shipping_secondary_database
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @secondary_database = ] 'secondary_database'`보조 데이터베이스의 이름입니다. *secondary_database* 는 **sysname**이며 기본값은 없습니다.  
+`[ @secondary_database = ] 'secondary_database'` 보조 데이터베이스의 이름입니다. *secondary_database* 는 **sysname**이며 기본값은 없습니다.  
   
 `[ @primary_server = ] 'primary_server'`[!INCLUDE[msCoName](../../includes/msconame-md.md)]로그 전달 구성에 있는의 주 인스턴스 이름입니다 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . *primary_server* 는 **sysname** 이며 NULL 일 수 없습니다.  
   
-`[ @primary_database = ] 'primary_database'`주 서버에 있는 데이터베이스의 이름입니다. *primary_database* 는 **sysname**이며 기본값은 없습니다.  
+`[ @primary_database = ] 'primary_database'` 주 서버에 있는 데이터베이스의 이름입니다. *primary_database* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @restore_delay = ] 'restore_delay'`보조 서버가 지정 된 백업 파일을 복원 하기 전에 대기 하는 시간 (분)입니다. *restore_delay* 는 **int** 이며 NULL 일 수 없습니다. 기본값은 0입니다.  
+`[ @restore_delay = ] 'restore_delay'` 보조 서버가 지정 된 백업 파일을 복원 하기 전에 대기 하는 시간 (분)입니다. *restore_delay* 는 **int** 이며 NULL 일 수 없습니다. 기본값은 0입니다.  
   
-`[ @restore_all = ] 'restore_all'`1로 설정 하면 복원 작업이 실행 될 때 보조 서버에서 사용 가능한 모든 트랜잭션 로그 백업을 복원 합니다. 그렇지 않으면 파일 한 개를 복원한 후 중지됩니다. *restore_all* 은 **bit** 이며 NULL 일 수 없습니다.  
+`[ @restore_all = ] 'restore_all'` 1로 설정 하면 복원 작업이 실행 될 때 보조 서버에서 사용 가능한 모든 트랜잭션 로그 백업을 복원 합니다. 그렇지 않으면 파일 한 개를 복원한 후 중지됩니다. *restore_all* 은 **bit** 이며 NULL 일 수 없습니다.  
   
-`[ @restore_mode = ] 'restore_mode'`보조 데이터베이스에 대 한 복원 모드입니다.  
+`[ @restore_mode = ] 'restore_mode'` 보조 데이터베이스에 대 한 복원 모드입니다.  
   
  0 = NORECOVERY로 로그 복원  
   
@@ -71,21 +72,21 @@ sp_add_log_shipping_secondary_database
   
  *restore* 는 **bit** 이며 NULL 일 수 없습니다.  
   
-`[ @disconnect_users = ] 'disconnect_users'`1로 설정 하면 복원 작업을 수행할 때 보조 데이터베이스에서 사용자 연결이 끊어집니다. 기본값 = 0 *연결 끊기* 사용자는 **bit** 이며 NULL 일 수 없습니다.  
+`[ @disconnect_users = ] 'disconnect_users'` 1로 설정 하면 복원 작업을 수행할 때 보조 데이터베이스에서 사용자 연결이 끊어집니다. 기본값 = 0 *연결 끊기* 사용자는 **bit** 이며 NULL 일 수 없습니다.  
   
-`[ @block_size = ] 'block_size'`백업 장치의 블록 크기로 사용 되는 크기 (바이트)입니다. *block_size* 은 **int** 이며 기본값은-1입니다.  
+`[ @block_size = ] 'block_size'` 백업 장치의 블록 크기로 사용 되는 크기 (바이트)입니다. *block_size* 은 **int** 이며 기본값은-1입니다.  
   
-`[ @buffer_count = ] 'buffer_count'`백업 또는 복원 작업에 사용 되는 버퍼의 총 수입니다. *buffer_count* 은 **int** 이며 기본값은-1입니다.  
+`[ @buffer_count = ] 'buffer_count'` 백업 또는 복원 작업에 사용 되는 버퍼의 총 수입니다. *buffer_count* 은 **int** 이며 기본값은-1입니다.  
   
-`[ @max_transfer_size = ] 'max_transfer_size'`에서 백업 장치로 발급 하는 최대 입력 또는 출력 요청의 크기 (바이트)입니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *max_transfersize* 는 **int** 이며 NULL 일 수 있습니다.  
+`[ @max_transfer_size = ] 'max_transfer_size'` 에서 백업 장치로 발급 하는 최대 입력 또는 출력 요청의 크기 (바이트)입니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *max_transfersize* 는 **int** 이며 NULL 일 수 있습니다.  
   
-`[ @restore_threshold = ] 'restore_threshold'`복원 작업 간 허용 되는 시간 (분)으로, 경고가 생성 됩니다. *restore_threshold* 는 **int** 이며 NULL 일 수 없습니다.  
+`[ @restore_threshold = ] 'restore_threshold'` 복원 작업 간 허용 되는 시간 (분)으로, 경고가 생성 됩니다. *restore_threshold* 는 **int** 이며 NULL 일 수 없습니다.  
   
-`[ @threshold_alert = ] 'threshold_alert'`백업 임계값이 초과 될 때 발생 하는 경고입니다. *threshold_alert* 는 **int**이며 기본값은 14420입니다.  
+`[ @threshold_alert = ] 'threshold_alert'` 백업 임계값이 초과 될 때 발생 하는 경고입니다. *threshold_alert* 는 **int**이며 기본값은 14420입니다.  
   
 `[ @threshold_alert_enabled = ] 'threshold_alert_enabled'`*Backup_threshold* 를 초과할 때 경고가 발생 하는지 여부를 지정 합니다. 기본값인 1은 경고가 발생된다는 의미입니다. *threshold_alert_enabled* **비트**입니다.  
   
-`[ @history_retention_period = ] 'history_retention_period'`기록이 보존 되는 시간 (분)입니다. *history_retention_period* 은 **int**이며 기본값은 NULL입니다. 지정된 값이 없으면 14420을 사용합니다.  
+`[ @history_retention_period = ] 'history_retention_period'` 기록이 보존 되는 시간 (분)입니다. *history_retention_period* 은 **int**이며 기본값은 NULL입니다. 지정된 값이 없으면 14420을 사용합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -107,7 +108,7 @@ sp_add_log_shipping_secondary_database
 ## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할의 멤버만이 프로시저를 실행할 수 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  이 예에서는 **sp_add_log_shipping_secondary_database** 저장 프로시저를 사용 하 여 주 서버 TRIBECA에 있는 주 데이터베이스를 사용 하 여 로그 전달 구성에서 데이터베이스 **로깅할 adventureworks** 를 보조 데이터베이스로 추가 하는 방법을 보여 줍니다 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
   
 ```  

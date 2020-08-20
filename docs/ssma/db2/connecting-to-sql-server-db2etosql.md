@@ -1,4 +1,5 @@
 ---
+description: SQL Server에 연결 (DB2eToSQL)
 title: SQL Server에 연결 (DB2eToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: b59803cb-3cc6-41cc-8553-faf90851410e
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: d04d44abe758ffb15e57944a624ac5b7a87546d4
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 0e8c231223beea2d29e3af06527fdcf1627e381e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87933944"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463545"
 ---
 # <a name="connecting-to-sql-server-db2etosql"></a>SQL Server에 연결 (DB2eToSQL)
 DB2 데이터베이스를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 또는 Azure SQL Database로 마이그레이션하려면 이러한 대상 인스턴스에 연결 해야 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 연결할 때 SSMA는 인스턴스의 모든 데이터베이스에 대 한 메타 데이터를 가져오고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 메타 데이터 탐색기에 데이터베이스 메타 데이터를 표시 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 합니다. SSMA는 연결 된 인스턴스에 대 한 정보 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 저장 하지만 암호를 저장 하지는 않습니다.  
@@ -28,7 +29,7 @@ DB2 데이터베이스를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.m
   
 -   DB2 개체를 구문으로 변환 [!INCLUDE[tsql](../../includes/tsql-md.md)] 하거나에서 메타 데이터를 업데이트 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 하거나 변환 된 구문을 스크립트에 저장 하려면 계정에 인스턴스에 로그온 할 수 있는 권한이 있어야 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
--   데이터베이스 개체를에 로드 하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 계정이 **sysadmin** 서버 역할의 멤버 여야 합니다. 이는 CLR 어셈블리를 설치 하는 데 필요 합니다.  
+-   데이터베이스 개체를에 로드 하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 계정이   **sysadmin** 서버 역할의 멤버 여야 합니다. 이는 CLR 어셈블리를 설치 하는 데 필요 합니다.  
   
 -   로 데이터를 마이그레이션하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 계정이 **sysadmin** 서버 역할의 멤버 여야 합니다. 에이전트 데이터 마이그레이션 패키지를 실행 하는 데 필요 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 합니다.  
   
@@ -78,11 +79,11 @@ DB2 데이터베이스 개체를 구문으로 변환 하기 전에 [!INCLUDE[ssN
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]프로젝트를 만들 때 2012 및 2014 및 2016에 연결할 수는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL Server 2012입니다.  
   
-|프로젝트 형식 및 대상 서버 버전|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 <br />(버전: 11.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014 <br />(버전: 12.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 <br />(버전: 13.x)|Azure SQL Database|  
+|프로젝트 형식 및 대상 서버 버전|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 <br />(버전: 11.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 <br />(버전: 12.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 <br />(버전: 13.x)|Azure SQL Database|  
 |-|-|-|-|-|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012|예|예|예||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014||예|예||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014|||예||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014||예|예||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014|||예||  
 |Azure SQL Database||||예|  
   
 > [!IMPORTANT]  
@@ -112,6 +113,6 @@ DB2 데이터베이스 개체를 구문으로 변환 하기 전에 [!INCLUDE[ssN
   
 -   이러한 작업을 수행할 필요가 없는 경우 DB2 데이터베이스 개체 정의를 개체 정의로 변환할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 자세한 내용은 [DB2 스키마 변환 &#40;DB2ToSQL&#41;](../../ssma/db2/converting-db2-schemas-db2tosql.md)을 참조 하세요.  
   
-## <a name="see-also"></a>참고 항목  
-[DB2 데이터베이스를 SQL Server &#40;DB2ToSQL&#41;로 마이그레이션](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
+## <a name="see-also"></a>관련 항목  
+[DB2 데이터베이스를 SQL Server &#40;DB2ToSQL&#41;로 마이그레이션 ](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
   

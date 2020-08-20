@@ -1,4 +1,5 @@
 ---
+description: 변경 데이터 캡처 정보(SQL Server)
 title: 변경 데이터 캡처 정보
 ms.custom: seo-dt-2019
 ms.date: 01/14/2019
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7d8c4684-9eb1-4791-8c3b-0f0bb15d9634
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d87d1a080fe85bd2be3805b113c5799667d47b0b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8d0c6f18fc92c778478066c218707fbc17c45c26
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889153"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463762"
 ---
 # <a name="about-change-data-capture-sql-server"></a>변경 데이터 캡처 정보(SQL Server)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]

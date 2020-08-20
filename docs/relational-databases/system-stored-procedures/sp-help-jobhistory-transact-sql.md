@@ -1,4 +1,5 @@
 ---
+description: sp_help_jobhistory(Transact-SQL)
 title: sp_help_jobhistory (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a944d44e-411b-4735-8ce4-73888d4262d7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a04d651467b8ccff057d3dcec0cb824edae73b12
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: bf0766388b50fabfe3a0571b5cf4e86ab7e15520
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893694"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464287"
 ---
 # <a name="sp_help_jobhistory-transact-sql"></a>sp_help_jobhistory(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -53,27 +54,27 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @job_id = ] job_id`작업 id입니다. *job_id* 은 **uniqueidentifier**이며 기본값은 NULL입니다.  
+`[ @job_id = ] job_id` 작업 id입니다. *job_id* 은 **uniqueidentifier**이며 기본값은 NULL입니다.  
   
-`[ @job_name = ] 'job_name'`작업의 이름입니다. *job_name* 는 **sysname**이며 기본값은 NULL입니다.  
+`[ @job_name = ] 'job_name'` 작업의 이름입니다. *job_name* 는 **sysname**이며 기본값은 NULL입니다.  
   
-`[ @step_id = ] step_id`단계 id입니다. *step_id* 은 **int**이며 기본값은 NULL입니다.  
+`[ @step_id = ] step_id` 단계 id입니다. *step_id* 은 **int**이며 기본값은 NULL입니다.  
   
-`[ @sql_message_id = ] sql_message_id`작업을 실행할 때 Microsoft SQL Server에서 반환 하는 오류 메시지의 id 번호입니다. *sql_message_id* 은 **int**이며 기본값은 NULL입니다.  
+`[ @sql_message_id = ] sql_message_id` 작업을 실행할 때 Microsoft SQL Server에서 반환 하는 오류 메시지의 id 번호입니다. *sql_message_id* 은 **int**이며 기본값은 NULL입니다.  
   
-`[ @sql_severity = ] sql_severity`작업을 실행할 때 SQL Server에서 반환 하는 오류 메시지의 심각도 수준입니다. *sql_severity* 은 **int**이며 기본값은 NULL입니다.  
+`[ @sql_severity = ] sql_severity` 작업을 실행할 때 SQL Server에서 반환 하는 오류 메시지의 심각도 수준입니다. *sql_severity* 은 **int**이며 기본값은 NULL입니다.  
   
-`[ @start_run_date = ] start_run_date`작업이 시작 된 날짜입니다. *start_run_date*은 **int**이며 기본값은 NULL입니다. *start_run_date* 은 YYYYMMDD 형식으로 입력 해야 합니다. 여기서 YYYY는 4 자리 연도, MM은 두 자리 월, DD는 두 자리 일입니다.  
+`[ @start_run_date = ] start_run_date` 작업이 시작 된 날짜입니다. *start_run_date*은 **int**이며 기본값은 NULL입니다. *start_run_date* 은 YYYYMMDD 형식으로 입력 해야 합니다. 여기서 YYYY는 4 자리 연도, MM은 두 자리 월, DD는 두 자리 일입니다.  
   
-`[ @end_run_date = ] end_run_date`작업이 완료 된 날짜입니다. *end_run_date* 은 **int**이며 기본값은 NULL입니다. *end_run_date*은 YYYYMMDD 형식으로 입력 해야 합니다. 여기서 YYYY는 4 자리 연도, MM은 두 자리 월, DD는 두 자리 일입니다.  
+`[ @end_run_date = ] end_run_date` 작업이 완료 된 날짜입니다. *end_run_date* 은 **int**이며 기본값은 NULL입니다. *end_run_date*은 YYYYMMDD 형식으로 입력 해야 합니다. 여기서 YYYY는 4 자리 연도, MM은 두 자리 월, DD는 두 자리 일입니다.  
   
-`[ @start_run_time = ] start_run_time`작업이 시작 된 시간입니다. *start_run_time* 은 **int**이며 기본값은 NULL입니다. *start_run_time*은 HHMMSS 형식으로 입력 해야 합니다. 여기서 HH는 두 자리 시간, MM은 두 자리 분, SS는 두 자리 초입니다.  
+`[ @start_run_time = ] start_run_time` 작업이 시작 된 시간입니다. *start_run_time* 은 **int**이며 기본값은 NULL입니다. *start_run_time*은 HHMMSS 형식으로 입력 해야 합니다. 여기서 HH는 두 자리 시간, MM은 두 자리 분, SS는 두 자리 초입니다.  
   
-`[ @end_run_time = ] end_run_time`작업 실행을 완료 한 시간입니다. *end_run_time* 은 **int**이며 기본값은 NULL입니다. *end_run_time*은 HHMMSS 형식으로 입력 해야 합니다. 여기서 HH는 두 자리 시간, MM은 두 자리 분, SS는 두 자리 초입니다.  
+`[ @end_run_time = ] end_run_time` 작업 실행을 완료 한 시간입니다. *end_run_time* 은 **int**이며 기본값은 NULL입니다. *end_run_time*은 HHMMSS 형식으로 입력 해야 합니다. 여기서 HH는 두 자리 시간, MM은 두 자리 분, SS는 두 자리 초입니다.  
   
-`[ @minimum_run_duration = ] minimum_run_duration`작업을 완료 하는 데 소요 된 최소 시간입니다. *minimum_run_duration* 은 **int**이며 기본값은 NULL입니다. *minimum_run_duration*은 HHMMSS 형식으로 입력 해야 합니다. 여기서 HH는 두 자리 시간, MM은 두 자리 분, SS는 두 자리 초입니다.  
+`[ @minimum_run_duration = ] minimum_run_duration` 작업을 완료 하는 데 소요 된 최소 시간입니다. *minimum_run_duration* 은 **int**이며 기본값은 NULL입니다. *minimum_run_duration*은 HHMMSS 형식으로 입력 해야 합니다. 여기서 HH는 두 자리 시간, MM은 두 자리 분, SS는 두 자리 초입니다.  
   
-`[ @run_status = ] run_status`작업의 실행 상태입니다. *run_status* 은 **int**이며 기본값은 NULL이 고 다음 값 중 하나일 수 있습니다.  
+`[ @run_status = ] run_status` 작업의 실행 상태입니다. *run_status* 은 **int**이며 기본값은 NULL이 고 다음 값 중 하나일 수 있습니다.  
   
 |값|설명|  
 |-----------|-----------------|  
@@ -84,13 +85,13 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
 |**4**|메시지 처리 중|  
 |**5**|알 수 없음|  
   
-`[ @minimum_retries = ] minimum_retries`작업 실행을 다시 시도해 야 하는 최소 횟수입니다. *minimum_retries* 은 **int**이며 기본값은 NULL입니다.  
+`[ @minimum_retries = ] minimum_retries` 작업 실행을 다시 시도해 야 하는 최소 횟수입니다. *minimum_retries* 은 **int**이며 기본값은 NULL입니다.  
   
-`[ @oldest_first = ] oldest_first`가장 오래 된 작업의 출력을 먼저 표시할지 여부입니다. *oldest_first* 는 **int**이며 기본값은 최신 작업을 먼저 표시 하는 **0**입니다. **1** 은 가장 오래 된 작업을 먼저 표시 합니다.  
+`[ @oldest_first = ] oldest_first` 가장 오래 된 작업의 출력을 먼저 표시할지 여부입니다. *oldest_first* 는 **int**이며 기본값은 최신 작업을 먼저 표시 하는 **0**입니다. **1** 은 가장 오래 된 작업을 먼저 표시 합니다.  
   
-`[ @server = ] 'server'`작업이 수행 된 서버의 이름입니다. *서버* 는 **nvarchar (30)** 이며 기본값은 NULL입니다.  
+`[ @server = ] 'server'` 작업이 수행 된 서버의 이름입니다. *서버* 는 **nvarchar (30)** 이며 기본값은 NULL입니다.  
   
-`[ @mode = ] 'mode'`SQL Server 결과 집합의 모든 열 (**FULL**) 또는 열의 요약을 인쇄할지 여부입니다. *모드* 는 **varchar (7)** 이며 기본값은 **SUMMARY**입니다.  
+`[ @mode = ] 'mode'` SQL Server 결과 집합의 모든 열 (**FULL**) 또는 열의 요약을 인쇄할지 여부입니다. *모드* 는 **varchar (7)** 이며 기본값은 **SUMMARY**입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -134,7 +135,7 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
   
  **SQLAgentUserRole** 데이터베이스 역할의 멤버는 자신이 소유한 작업에 대 한 기록만 볼 수 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-listing-all-job-information-for-a-job"></a>A. 작업에 대한 모든 정보 나열  
  다음 예에서는 `NightlyBackups` 작업에 대한 모든 작업 정보를 나열합니다.  
@@ -164,7 +165,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;sp_purge_jobhistory &#40;](../../relational-databases/system-stored-procedures/sp-purge-jobhistory-transact-sql.md)   
+ [sp_purge_jobhistory&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-purge-jobhistory-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

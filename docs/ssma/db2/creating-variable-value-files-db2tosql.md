@@ -1,4 +1,5 @@
 ---
+description: 변수 값 파일 만들기 (DB2ToSQL)
 title: 변수 값 파일 만들기 (DB2ToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 122f3fbe-46a0-40df-ac3b-d43bf33d96ba
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: f5a1b2fe01fd9800ee9d56e3a01f9861bfb3a046
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 69753bb7f8b873ebdd74a8c18262034557844c55
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87933858"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463493"
 ---
 # <a name="creating-variable-value-files-db2tosql"></a>변수 값 파일 만들기 (DB2ToSQL)
 변수 값 파일은 서버 마이그레이션 간에 자주 변경 되는 원본 또는 대상 서버 이름과 같은 명령의 매개 변수 값을 구성 하는 XML 파일입니다. 데이터베이스 마이그레이션이 많은 경우 각 원본 서버의 값을 저장 하는 여러 변수 파일이 생성 되 고 명령줄에서 **-v** 스위치를 사용 하 여 마스터 스크립트 파일에서 참조 됩니다. 이를 통해 여러 변수 파일의 변수 값을 사용 하 여 몇 가지 스크립트 파일의 정적 값을 유지 관리할 수 있습니다.  
@@ -86,6 +87,6 @@ ms.locfileid: "87933858"
 ## <a name="next-step"></a>다음 단계  
 콘솔 운영의 다음 단계에서는 [DB2ToSQL &#40;서버 연결 파일을 만듭니다&#41;](../../ssma/db2/creating-the-server-connection-files-db2tosql.md)  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
 [서버 연결 파일 만들기](../oracle/creating-the-server-connection-files-oracletosql.md)  
   

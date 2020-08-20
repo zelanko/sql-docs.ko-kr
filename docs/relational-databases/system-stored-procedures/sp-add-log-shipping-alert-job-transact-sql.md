@@ -1,4 +1,5 @@
 ---
+description: sp_add_log_shipping_alert_job(Transact-SQL)
 title: sp_add_log_shipping_alert_job (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: dd95d96e-8963-4aa9-bdcc-3e4b1bc002d3
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ca0d81b9e8c08fc25c86303d4f3fe7cf02013498
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b5c872f0346cce50ff27e442991efa5e5f4e4391
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85879932"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464719"
 ---
 # <a name="sp_add_log_shipping_alert_job-transact-sql"></a>sp_add_log_shipping_alert_job(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,7 +55,7 @@ sp_add_log_shipping_alert_job
 ## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할의 멤버만이 프로시저를 실행할 수 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  이 예제에서는 경고 작업 ID를 만드는 **sp_add_log_shipping_alert_job** 를 실행 하는 방법을 보여 줍니다.  
   
 ```  

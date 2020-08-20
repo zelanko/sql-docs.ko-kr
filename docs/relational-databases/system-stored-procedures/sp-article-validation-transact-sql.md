@@ -1,4 +1,5 @@
 ---
+description: sp_article_validation(Transact-SQL)
 title: sp_article_validation (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 44e7abcd-778c-4728-a03e-7e7e78d3ce22
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a3fa3274901d881be7d52ecd62c60a802b597a0a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 146925fbcbb0f2195195204831f7216ae4ca39da
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716250"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464576"
 ---
 # <a name="sp_article_validation-transact-sql"></a>sp_article_validation(Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -44,11 +45,11 @@ sp_article_validation [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @publication = ] 'publication'`아티클이 있는 게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 없습니다.  
+`[ @publication = ] 'publication'` 아티클이 있는 게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @article = ] 'article'`유효성을 검사할 아티클의 이름입니다. *article* 은 **sysname**이며 기본값은 없습니다.  
+`[ @article = ] 'article'` 유효성을 검사할 아티클의 이름입니다. *article* 은 **sysname**이며 기본값은 없습니다.  
   
-`[ @rowcount_only = ] type_of_check_requested`테이블에 대 한 행 개수만 반환 되는지 여부를 지정 합니다. *type_of_check_requested* 은 **smallint**이며 기본값은 **1**입니다.  
+`[ @rowcount_only = ] type_of_check_requested` 테이블에 대 한 행 개수만 반환 되는지 여부를 지정 합니다. *type_of_check_requested* 은 **smallint**이며 기본값은 **1**입니다.  
   
  **0**인 경우 rowcount 및 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 호환 체크섬을 수행 합니다.  
   
@@ -56,7 +57,7 @@ sp_article_validation [ @publication = ] 'publication'
   
  **2**인 경우 행 개수와 이진 체크섬을 수행 합니다.  
   
-`[ @full_or_fast = ] full_or_fast`행 개수를 계산 하는 데 사용 되는 방법입니다. *full_or_fast* 은 **tinyint**이며 다음 값 중 하나일 수 있습니다.  
+`[ @full_or_fast = ] full_or_fast` 행 개수를 계산 하는 데 사용 되는 방법입니다. *full_or_fast* 은 **tinyint**이며 다음 값 중 하나일 수 있습니다.  
   
 |**값**|**설명**|  
 |---------------|---------------------|  
@@ -64,13 +65,13 @@ sp_article_validation [ @publication = ] 'publication'
 |**1**|**Sysindexes 행**에서 빠른 카운트를 수행 합니다. **Sysindexes** 에서 행을 계산 하는 것은 실제 테이블의 행 수를 계산 하는 것 보다 빠릅니다. 그러나 **sysindexes** 는 지연 업데이트 되며 rowcount는 정확 하지 않을 수 있습니다.|  
 |**2** (기본값)|조건에 따라 계산 방법을 결정합니다. 먼저 빠른 계산 방법이 시도됩니다. 빠른 방법의 결과에 차이점이 있는 경우 전체 방법으로 전환합니다. *Expected_rowcount* 가 NULL이 고 저장 프로시저를 사용 하 여 값을 가져오는 경우에는 항상 전체 개수 (*)가 사용 됩니다.|  
   
-`[ @shutdown_agent = ] shutdown_agent`유효성 검사가 완료 되 면 배포 에이전트가 즉시 종료 되어야 하는지 여부를 지정 합니다. *shutdown_agent* 은 **bit**이며 기본값은 **0**입니다. **0**인 경우 배포 에이전트 종료 되지 않습니다. **1**인 경우 아티클의 유효성을 검사 한 후 배포 에이전트 종료 됩니다.  
+`[ @shutdown_agent = ] shutdown_agent` 유효성 검사가 완료 되 면 배포 에이전트가 즉시 종료 되어야 하는지 여부를 지정 합니다. *shutdown_agent* 은 **bit**이며 기본값은 **0**입니다. **0**인 경우 배포 에이전트 종료 되지 않습니다. **1**인 경우 아티클의 유효성을 검사 한 후 배포 에이전트 종료 됩니다.  
   
-`[ @subscription_level = ] subscription_level`구독자 집합에서 유효성 검사를 선택 하는지 여부를 지정 합니다. *subscription_level* 은 **bit**이며 기본값은 **0**입니다. **0**인 경우 모든 구독자에 유효성 검사가 적용 됩니다. **1**인 경우 현재 열려 있는 트랜잭션의 **sp_marksubscriptionvalidation** 에 대 한 호출로 지정 된 구독자의 하위 집합에만 유효성 검사가 적용 됩니다.  
+`[ @subscription_level = ] subscription_level` 구독자 집합에서 유효성 검사를 선택 하는지 여부를 지정 합니다. *subscription_level* 은 **bit**이며 기본값은 **0**입니다. **0**인 경우 모든 구독자에 유효성 검사가 적용 됩니다. **1**인 경우 현재 열려 있는 트랜잭션의 **sp_marksubscriptionvalidation** 에 대 한 호출로 지정 된 구독자의 하위 집합에만 유효성 검사가 적용 됩니다.  
   
 `[ @reserved = ] reserved` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
-`[ @publisher = ] 'publisher'`이외 게시자를 지정 합니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *publisher* 는 **sysname**이며 기본값은 NULL입니다.  
+`[ @publisher = ] 'publisher'` 이외 게시자를 지정 합니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *publisher* 는 **sysname**이며 기본값은 NULL입니다.  
   
 > [!NOTE]  
 >  게시자에 대 한 유효성 검사를 요청할 때는 *게시자* 를 사용 하면 안 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

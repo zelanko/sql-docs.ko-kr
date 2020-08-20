@@ -1,4 +1,5 @@
 ---
+description: MSarticles(Transact-SQL)
 title: MSarticles (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1acd79a5-b3e2-4161-9592-7acc2a41ba38
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d6272b8370b461db0a7a2259be3de4d584ea8498
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f6a33127f1ba95fb17daff02ddcfaf64232cf94c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890057"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463902"
 ---
 # <a name="msarticles-transact-sql"></a>MSarticles(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,11 +40,11 @@ ms.locfileid: "85890057"
 |**destination_object**|**sysname**|구독자에서 생성되는 테이블의 이름입니다.|  
 |**source_owner**|**sysname**|게시자에서 원본 테이블의 스키마 이름입니다.|  
 |**source_object**|**sysname**|아티클을 추가할 출처가 되는 원본 개체의 이름입니다.|  
-|**한**|**nvarchar(255)**|아티클 설명입니다.|  
+|**description**|**nvarchar(255)**|아티클 설명입니다.|  
 |**destination_owner**|**sysname**|구독자에서 생성된 테이블의 스키마 이름입니다.|  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;복제 테이블](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Transact-sql&#41;&#40;복제 테이블 ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [복제 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: sp_attach_schedule(Transact-SQL)
 title: sp_attach_schedule (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 80c80eaf-cf23-4ed8-b8dd-65fe59830dd1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6bc01db6ae019694cbff4082c394fd8c736b9a5a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8108bdad26c02b02ae2e88b1780fada126e2c797
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85874367"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464492"
 ---
 # <a name="sp_attach_schedule-transact-sql"></a>sp_attach_schedule(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,16 +43,16 @@ sp_attach_schedule
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @job_id = ] job_id`일정이 추가 된 작업의 id입니다. *job_id*은 **uniqueidentifier**이며 기본값은 NULL입니다.  
+`[ @job_id = ] job_id` 일정이 추가 된 작업의 id입니다. *job_id*은 **uniqueidentifier**이며 기본값은 NULL입니다.  
   
-`[ @job_name = ] 'job_name'`일정을 추가할 작업의 이름입니다. *job_name*는 **sysname**이며 기본값은 NULL입니다.  
+`[ @job_name = ] 'job_name'` 일정을 추가할 작업의 이름입니다. *job_name*는 **sysname**이며 기본값은 NULL입니다.  
   
 > [!NOTE]  
 >  *Job_id* 또는 *job_name* 를 지정 해야 하지만 둘 다 지정할 수는 없습니다.  
   
-`[ @schedule_id = ] schedule_id`작업에 대해 설정할 일정의 일정 id입니다. *schedule_id*은 **int**이며 기본값은 NULL입니다.  
+`[ @schedule_id = ] schedule_id` 작업에 대해 설정할 일정의 일정 id입니다. *schedule_id*은 **int**이며 기본값은 NULL입니다.  
   
-`[ @schedule_name = ] 'schedule_name'`작업에 대해 설정할 일정의 이름입니다. *schedule_name*는 **sysname**이며 기본값은 NULL입니다.  
+`[ @schedule_name = ] 'schedule_name'` 작업에 대해 설정할 일정의 이름입니다. *schedule_name*는 **sysname**이며 기본값은 NULL입니다.  
   
 > [!NOTE]  
 >  *Schedule_id* 또는 *schedule_name* 를 지정 해야 하지만 둘 다 지정할 수는 없습니다.  
@@ -78,7 +79,7 @@ sp_attach_schedule
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 사용자가 작업과 일정을 둘 다 소유하고 있는지 확인합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `NightlyJobs`라는 일정을 만듭니다. 서버 시간이 `01:00`일 때 이 일정을 사용하는 작업이 매일 실행됩니다. 이 예에서는 `BackupDatabase` 작업과 `RunReports` 작업에 일정을 연결합니다.  
   
 > [!NOTE]  
@@ -106,7 +107,7 @@ EXEC sp_attach_schedule
 GO  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [Transact-sql&#41;sp_add_schedule &#40;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
  [Transact-sql&#41;sp_detach_schedule &#40;](../../relational-databases/system-stored-procedures/sp-detach-schedule-transact-sql.md)   
  [Transact-sql&#41;sp_delete_schedule &#40;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)  

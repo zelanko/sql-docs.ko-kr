@@ -1,4 +1,5 @@
 ---
+description: 테이블 만들기(데이터베이스 엔진)
 title: 테이블 만들기(데이터베이스 엔진) | Microsoft 문서
 ms.custom: ''
 ms.date: 09/22/2016
@@ -13,12 +14,12 @@ ms.assetid: 6f7c6ac5-e6d3-4dca-831e-b28442ba535b
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9d37b8d87be1b6207ba9dcfd9bc1a8dcaa1ab039
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: de52eb6abbcbcbb23638c07663d78a80ccffd22f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394588"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463843"
 ---
 # <a name="create-tables-database-engine"></a>테이블 만들기(데이터베이스 엔진)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
@@ -63,7 +64,7 @@ ms.locfileid: "87394588"
   
      스키마에 대한 자세한 내용은 [Create a Database Schema](../../relational-databases/security/authentication-access/create-a-database-schema.md)를 참조하세요.  
   
-9. **파일** 메뉴에서 ‘테이블 이름’ **저장**을 선택합니다.   
+9. **파일** 메뉴에서 ‘테이블 이름’ **저장을 선택합니다.** **  
   
 10. **이름 선택** 대화 상자에서 테이블의 이름을 입력하고 **확인**을 클릭합니다.  
   

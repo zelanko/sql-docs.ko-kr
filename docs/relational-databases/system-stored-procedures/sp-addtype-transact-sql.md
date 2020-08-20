@@ -1,4 +1,5 @@
 ---
+description: sp_addtype(Transact-SQL)
 title: sp_addtype (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ed72cd8e-5ff7-4084-8458-2d8ed279d817
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a1b4d469d8afd6946b35cce503efd6db6cdfcb3a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e924e286c036f7d26e93d88c18105696835d2f5e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85876221"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464648"
 ---
 # <a name="sp_addtype-transact-sql"></a>sp_addtype(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85876221"
   별칭 데이터 형식을 만듭니다.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]대신 [CREATE TYPE](../../t-sql/statements/create-type-transact-sql.md) 을 사용 해야 합니다.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 대신 [CREATE TYPE](../../t-sql/statements/create-type-transact-sql.md) 을 사용 해야 합니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -44,7 +45,7 @@ sp_addtype [ @typename = ] type,
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @typename = ] type`별칭 데이터 형식의 이름입니다. 별칭 데이터 형식 이름은 [식별자](../../relational-databases/databases/database-identifiers.md) 에 대 한 규칙을 따라야 하며 각 데이터베이스에서 고유 해야 합니다. *형식은* **sysname**이며 기본값은 없습니다.  
+`[ @typename = ] type` 별칭 데이터 형식의 이름입니다. 별칭 데이터 형식 이름은 [식별자](../../relational-databases/databases/database-identifiers.md) 에 대 한 규칙을 따라야 하며 각 데이터베이스에서 고유 해야 합니다. *형식은* **sysname**이며 기본값은 없습니다.  
   
 `[ @phystype = ] system_data_type`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]별칭 데이터 형식의 기반이 되는 물리적 또는 제공 된 데이터 형식입니다.* system_data_type* 는 **sysname**이며 기본값은 없고 다음 값 중 하나일 수 있습니다.  
   
@@ -70,7 +71,7 @@ sp_addtype [ @typename = ] type,
  *삭제*  
  소수점 오른쪽에 저장할 수 있는 최대 십진 자릿수를 표시하는 음이 아닌 정수이며 전체 자릿수보다 작거나 같아야 합니다. 자세한 내용은 [decimal 및 numeric &#40;Transact-SQL&#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)을 참조하세요.  
   
-`[ @nulltype = ] 'null_type'`별칭 데이터 형식이 null 값을 처리 하는 방법을 나타냅니다. *null_type* 는 **varchar (** 8 **)** 이며 기본값은 NULL이 고 작은따옴표 (' null ', ' NOT null ' 또는 ' nonull ')로 묶어야 합니다. *Null_type* **sp_addtype**에 의해 명시적으로 정의 되지 않은 경우 현재 기본 null 허용 여부로 설정 됩니다. GETANSINULL 시스템 함수를 사용하면 현재의 기본 NULL 허용 여부를 확인할 수 있습니다. 이것은 SET 문 또는 ALTER DATABASE를 사용하여 조정될 수 있습니다. NULL 허용 여부는 명시적으로 정의해야 합니다. ** \@ Phystype** 가 **bit**이 고 ** \@ nulltype** 이 지정 되지 않은 경우 기본값은 NULL이 아닙니다.  
+`[ @nulltype = ] 'null_type'` 별칭 데이터 형식이 null 값을 처리 하는 방법을 나타냅니다. *null_type* 는 **varchar (** 8 **)** 이며 기본값은 NULL이 고 작은따옴표 (' null ', ' NOT null ' 또는 ' nonull ')로 묶어야 합니다. *Null_type* **sp_addtype**에 의해 명시적으로 정의 되지 않은 경우 현재 기본 null 허용 여부로 설정 됩니다. GETANSINULL 시스템 함수를 사용하면 현재의 기본 NULL 허용 여부를 확인할 수 있습니다. 이것은 SET 문 또는 ALTER DATABASE를 사용하여 조정될 수 있습니다. NULL 허용 여부는 명시적으로 정의해야 합니다. ** \@ Phystype** 가 **bit**이 고 ** \@ nulltype** 이 지정 되지 않은 경우 기본값은 NULL이 아닙니다.  
   
 > [!NOTE]  
 >  *Null_type* 매개 변수는이 데이터 형식에 대 한 기본 null 허용만 정의 합니다. 테이블을 만드는 동안 별칭 데이터 형식을 사용할 때 NULL 허용 여부를 명시적으로 정의하면 정의된 NULL 허용 여부보다 우선적으로 적용됩니다. 자세한 내용은 [ALTER TABLE &#40;transact-sql&#41;](../../t-sql/statements/alter-table-transact-sql.md) 및 [CREATE TABLE &#40;transact-sql&#41;](../../t-sql/statements/create-table-transact-sql.md)을 참조 하세요.  
@@ -96,7 +97,7 @@ sp_addtype [ @typename = ] type,
 ## <a name="permissions"></a>사용 권한  
  **Db_owner** 또는 **db_ddladmin** 고정 데이터베이스 역할의 멤버 자격이 필요 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-creating-an-alias-data-type-that-does-not-allow-for-null-values"></a>A. NULL 값을 허용하지 않는 별칭 데이터 형식 만들기  
  다음 예에서는 `ssn` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 제공 된 **varchar** 데이터 형식을 기반으로 하는 (주민 등록 번호) 라는 별칭 데이터 형식을 만듭니다. `ssn` 데이터 형식은 11자리의 주민 등록 번호(999-99-9999)를 보유하는 열에 사용됩니다. 이 열은 NULL이 될 수 없습니다.  
@@ -132,8 +133,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;저장 프로시저 데이터베이스 엔진](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [CREATE TYPE &#40;Transact-sql&#41;](../../t-sql/statements/create-type-transact-sql.md)   
+ [Transact-sql&#41;&#40;저장 프로시저 데이터베이스 엔진 ](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [CREATE TYPE&#40;Transact-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md)   
  [CREATE DEFAULT&#40;Transact-SQL&#41;](../../t-sql/statements/create-default-transact-sql.md)   
  [CREATE RULE&#40;Transact-SQL&#41;](../../t-sql/statements/create-rule-transact-sql.md)   
  [Transact-sql&#41;sp_bindefault &#40;](../../relational-databases/system-stored-procedures/sp-bindefault-transact-sql.md)   

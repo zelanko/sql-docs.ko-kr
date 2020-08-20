@@ -1,4 +1,5 @@
 ---
+description: sp_addumpdevice(Transact-SQL)
 title: sp_addumpdevice (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,17 +19,17 @@ helpviewer_keywords:
 ms.assetid: c2d2ae49-0808-46d8-8444-db69a69d0ec3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 840214a807ff37eedcc024125fc4902587afa05c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 91343fe93ad66b4e89e1e0190f5a46be23142f6c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85875902"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464685"
 ---
 # <a name="sp_addumpdevice-transact-sql"></a>sp_addumpdevice(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스에 백업 디바이스를 추가합니다.  
   
@@ -47,16 +48,16 @@ sp_addumpdevice [ @devtype = ] 'device_type'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @devtype = ] 'device_type'`백업 장치의 유형입니다. *device_type* 는 **varchar (20)** 이며 기본값은 없고 다음 값 중 하나일 수 있습니다.  
+`[ @devtype = ] 'device_type'` 백업 장치의 유형입니다. *device_type* 는 **varchar (20)** 이며 기본값은 없고 다음 값 중 하나일 수 있습니다.  
   
 |값|설명|  
 |-----------|-----------------|  
 |**디스크로**|백업 디바이스로서의 하드 디스크 파일입니다.|  
 |**테이프가**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows에서 지원되는 테이프 디바이스입니다.<br /><br /> 참고: 테이프 백업 디바이스에 대한 지원은 이후 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 제거될 예정입니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요.|  
   
-`[ @logicalname = ] 'logical_name'`BACKUP 및 RESTORE 문에서 사용 되는 백업 장치의 논리적 이름입니다. *logical_name* 는 **sysname**이며 기본값은 없고 NULL 일 수 없습니다.  
+`[ @logicalname = ] 'logical_name'` BACKUP 및 RESTORE 문에서 사용 되는 백업 장치의 논리적 이름입니다. *logical_name* 는 **sysname**이며 기본값은 없고 NULL 일 수 없습니다.  
   
-`[ @physicalname = ] 'physical_name'`백업 장치의 물리적 이름입니다. 물리적 이름은 운영 체제 파일 이름에 적용되는 규칙 또는 네트워크 디바이스에 적용되는 UNC(Universal Naming Convention)를 따라야 하며 전체 경로를 포함해야 합니다. *physical_name* 은 **nvarchar (260)** 이며 기본값은 없고 NULL 일 수 없습니다.  
+`[ @physicalname = ] 'physical_name'` 백업 장치의 물리적 이름입니다. 물리적 이름은 운영 체제 파일 이름에 적용되는 규칙 또는 네트워크 디바이스에 적용되는 UNC(Universal Naming Convention)를 따라야 하며 전체 경로를 포함해야 합니다. *physical_name* 은 **nvarchar (260)** 이며 기본값은 없고 NULL 일 수 없습니다.  
   
  원격 네트워크 위치에서 백업 디바이스를 만드는 경우에는 [!INCLUDE[ssDE](../../includes/ssde-md.md)]이 시작된 해당 이름이 원격 컴퓨터에 대해 적절한 쓰기 기능을 갖고 있어야 합니다.  
   
@@ -65,9 +66,9 @@ sp_addumpdevice [ @devtype = ] 'device_type'
 > [!NOTE]  
 >  이 프로시저에서는 지정한 물리적 이름을 카탈로그에 입력합니다. 디바이스에 액세스하거나 디바이스를 만들지는 않습니다.  
   
-`[ @cntrltype = ] 'controller_type'`않게. 지정된 경우 이 매개 변수는 무시됩니다. 이전 버전과의 호환성을 위해서만 지원됩니다. **Sp_addumpdevice** 를 새로 사용 하는 경우이 매개 변수를 생략 해야 합니다.  
+`[ @cntrltype = ] 'controller_type'` 않게. 지정된 경우 이 매개 변수는 무시됩니다. 이전 버전과의 호환성을 위해서만 지원됩니다. **Sp_addumpdevice** 를 새로 사용 하는 경우이 매개 변수를 생략 해야 합니다.  
   
-`[ @devstatus = ] 'device_status'`않게. 지정된 경우 이 매개 변수는 무시됩니다. 이전 버전과의 호환성을 위해서만 지원됩니다. **Sp_addumpdevice** 를 새로 사용 하는 경우이 매개 변수를 생략 해야 합니다.  
+`[ @devstatus = ] 'device_status'` 않게. 지정된 경우 이 매개 변수는 무시됩니다. 이전 버전과의 호환성을 위해서만 지원됩니다. **Sp_addumpdevice** 를 새로 사용 하는 경우이 매개 변수를 생략 해야 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -93,7 +94,7 @@ sp_addumpdevice [ @devtype = ] 'device_type'
   
  디스크에 대한 쓰기 권한이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-adding-a-disk-dump-device"></a>A. 디스크 덤프 디바이스 추가  
  다음 예에서는 `mydiskdump`이라는 물리적 이름으로 `c:\dump\dump1.bak`라는 디스크 백업 디바이스를 추가합니다.  

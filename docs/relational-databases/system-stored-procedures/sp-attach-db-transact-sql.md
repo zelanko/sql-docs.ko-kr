@@ -1,4 +1,5 @@
 ---
+description: sp_attach_db(Transact-SQL)
 title: sp_attach_db (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/01/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 59bc993e-7913-4091-89cb-d2871cffda95
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 896a4791d1b04de37f57496fd8ff71961a54f7ab
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 62f7ed238899f6fe99c10f2c3c558e5e16af2e49
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85874615"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464532"
 ---
 # <a name="sp_attach_db-transact-sql"></a>sp_attach_db(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85874615"
   서버에 데이터베이스를 연결합니다.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]대신 CREATE DATABASE *database_name* 를 사용 하 여 연결 하는 것이 좋습니다. 자세한 내용은 [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)를 참조하세요.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 대신 CREATE DATABASE *database_name* 를 사용 하 여 연결 하는 것이 좋습니다. 자세한 내용은 [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)를 참조하세요.  
   
 > [!NOTE]  
 >  하나 이상의 로그 파일에 새 위치가 있는 경우 여러 로그 파일을 다시 작성 하려면 CREATE DATABASE *database_name* FOR ATTACH_REBUILD_LOG를 사용 합니다.  
@@ -47,9 +48,9 @@ sp_attach_db [ @dbname= ] 'dbname'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @dbname = ] 'dbnam_ '`서버에 연결할 데이터베이스의 이름입니다. 이름은 고유해야 합니다. *dbname* 은 **sysname**이며 기본값은 NULL입니다.  
+`[ @dbname = ] 'dbnam_ '` 서버에 연결할 데이터베이스의 이름입니다. 이름은 고유해야 합니다. *dbname* 은 **sysname**이며 기본값은 NULL입니다.  
   
-`[ @filename1 = ] 'filename_n'`경로를 포함 한 데이터베이스 파일의 물리적 이름입니다. *filename_n* 은 **nvarchar (260)** 이며 기본값은 NULL입니다. 파일 이름은 16개까지 지정할 수 있습니다. 매개 변수 이름은 ** \@ filename1** 에서 시작 하 여 ** \@ filename16**로 증가 합니다. 파일 이름 목록에는 적어도 주 파일이 포함되어야 합니다. 주 파일에는 데이터베이스의 다른 파일을 가리키는 시스템 테이블이 포함됩니다. 또한 목록은 데이터베이스가 분리된 다음 이동된 모든 파일을 포함해야 합니다.  
+`[ @filename1 = ] 'filename_n'` 경로를 포함 한 데이터베이스 파일의 물리적 이름입니다. *filename_n* 은 **nvarchar (260)** 이며 기본값은 NULL입니다. 파일 이름은 16개까지 지정할 수 있습니다. 매개 변수 이름은 ** \@ filename1** 에서 시작 하 여 ** \@ filename16**로 증가 합니다. 파일 이름 목록에는 적어도 주 파일이 포함되어야 합니다. 주 파일에는 데이터베이스의 다른 파일을 가리키는 시스템 테이블이 포함됩니다. 또한 목록은 데이터베이스가 분리된 다음 이동된 모든 파일을 포함해야 합니다.  
   
 > [!NOTE]  
 >  이 인수는 CREATE DATABASE 문의 FILENAME 매개 변수에 매핑됩니다. 자세한 내용은 [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)를 참조하세요.  
@@ -85,7 +86,7 @@ sp_attach_db [ @dbname= ] 'dbname'
 ## <a name="permissions"></a>사용 권한  
  데이터베이스가 연결 될 때 사용 권한이 처리 되는 방법에 대 한 자세한 내용은 [CREATE database &#40;SQL Server transact-sql&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)를 참조 하세요.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]의 파일을 현재 서버에 연결합니다.  
   
 ```  

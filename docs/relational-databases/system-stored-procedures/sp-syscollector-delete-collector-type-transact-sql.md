@@ -1,4 +1,5 @@
 ---
+description: sp_syscollector_delete_collector_type(Transact-SQL)
 title: sp_syscollector_delete_collector_type (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 3f32905e-0005-42cb-aef1-7bd04c51fbac
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2c24011a274b362a6b8267b7559d2641a4f1c6aa
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a5e24b7cce5992df21e11edf5aff4202abb67f0b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892923"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464026"
 ---
 # <a name="sp_syscollector_delete_collector_type-transact-sql"></a>sp_syscollector_delete_collector_type(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,9 +42,9 @@ sp_syscollector_delete_collector_type [[ @collector_type_uid = ] 'collector_type
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @collector_type_uid = ] 'collector_type_uid'`수집기 유형의 GUID입니다. *collector_type_uid* 은 **UNIQUEIDENTIFIER** 이며 *이름이* NULL 인 경우 값이 있어야 합니다.  
+`[ @collector_type_uid = ] 'collector_type_uid'` 수집기 유형의 GUID입니다. *collector_type_uid* 은 **UNIQUEIDENTIFIER** 이며 *이름이* NULL 인 경우 값이 있어야 합니다.  
   
-`[ @name = ] 'name'`수집기 유형의 이름입니다. *name* 은 **SYSNAME** 이며 *collector_type_uid* NULL 인 경우 값이 있어야 합니다.  
+`[ @name = ] 'name'` 수집기 유형의 이름입니다. *name* 은 **SYSNAME** 이며 *collector_type_uid* NULL 인 경우 값이 있어야 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -66,7 +67,7 @@ EXEC sp_syscollector_delete_collector_type @collector_type_uid = '302E93D1-3424-
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;시스템 저장 프로시저](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [데이터 수집](../../relational-databases/data-collection/data-collection.md)  
+ [Transact-sql&#41;&#40;시스템 저장 프로시저 ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [데이터 컬렉션](../../relational-databases/data-collection/data-collection.md)  
   
   

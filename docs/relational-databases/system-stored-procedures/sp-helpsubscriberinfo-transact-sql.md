@@ -1,4 +1,5 @@
 ---
+description: sp_helpsubscriberinfo(Transact-SQL)
 title: sp_helpsubscriberinfo (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: fbabe1ec-57cf-425c-bae7-af7f5d3198fd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d843ff86e221a3e007d68f6f6d130f4fceb82f3f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: db23a3861e20627a829006c22d74a368acfb349f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756653"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464169"
 ---
 # <a name="sp_helpsubscriberinfo-transact-sql"></a>sp_helpsubscriberinfo(Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -38,9 +39,9 @@ sp_helpsubscriberinfo [ [ @subscriber =] 'subscriber']
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @subscriber = ] 'subscriber'`구독자의 이름입니다. *구독자* 는 **sysname**이며 기본값은 **%** 모든 정보를 반환 하는입니다.  
+`[ @subscriber = ] 'subscriber'` 구독자의 이름입니다. *구독자* 는 **sysname**이며 기본값은 **%** 모든 정보를 반환 하는입니다.  
   
-`[ @publisher = ] 'publisher'`게시자의 이름입니다. *publisher* 는 **sysname**이며 기본값은 현재 서버의 이름입니다.  
+`[ @publisher = ] 'publisher'` 게시자의 이름입니다. *publisher* 는 **sysname**이며 기본값은 현재 서버의 이름입니다.  
   
 > [!NOTE]  
 >  Oracle 게시자 인 경우를 제외 하 고는 *게시자* 를 지정 하면 안 됩니다.  
@@ -54,9 +55,9 @@ sp_helpsubscriberinfo [ [ @subscriber =] 'subscriber']
 |**type**|**tinyint**|구독자의 유형입니다.<br /><br /> **0**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 **1** = ODBC 데이터 원본|  
 |**로그인**|**sysname**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증에 대한 로그인 ID입니다.|  
 |**password**|**sysname**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증에 대한 암호입니다.|  
-|**commit_batch_size**|**int**|지원 안 됨|  
-|**status_batch_size**|**int**|지원 안 됨|  
-|**flush_frequency**|**int**|지원 안 됨|  
+|**commit_batch_size**|**int**|지원되지 않습니다.|  
+|**status_batch_size**|**int**|지원되지 않습니다.|  
+|**flush_frequency**|**int**|지원되지 않습니다.|  
 |**frequency_type**|**int**|배포 에이전트가 실행되는 빈도입니다.<br /><br /> **1** = 한 번<br /><br /> **2** = 요청 시<br /><br /> **4** = 매일<br /><br /> **8** = 매주<br /><br /> **16** = 매월<br /><br /> **32** = 매월 상대적<br /><br /> **64** = 자동 시작<br /><br /> **128** = 되풀이|  
 |**frequency_interval**|**int**|*Frequency_type*에 의해 설정 된 빈도에 적용 되는 값입니다.|  
 |**frequency_relative_interval**|**int**|*Frequency_type* 가 **32** (매월 상대적)로 설정 된 경우 사용 되는 배포 에이전트의 날짜입니다.<br /><br /> **1** = 첫 번째<br /><br /> **2** = 초<br /><br /> **4** = 세 번째<br /><br /> **8** = 네 번째<br /><br /> **16** = 마지막|  
@@ -67,9 +68,9 @@ sp_helpsubscriberinfo [ [ @subscriber =] 'subscriber']
 |**active_end_time_of_day**|**int**|배포 에이전트가 마지막으로 실행되도록 예약된 시간이며 HHMMSS 형식으로 표시됩니다.|  
 |**active_start_date**|**int**|배포 에이전트가 처음으로 실행되도록 예약된 날짜이며 YYYYMMDD 형식으로 표시됩니다.|  
 |**active_end_date**|**int**|배포 에이전트가 마지막으로 실행되도록 예약된 날짜이며 YYYYMMDD 형식으로 표시됩니다.|  
-|**retryattempt**|**int**|지원 안 됨|  
-|**retrydelay**|**int**|지원 안 됨|  
-|**한**|**nvarchar(255)**|구독자에 관한 텍스트 설명입니다.|  
+|**retryattempt**|**int**|지원되지 않습니다.|  
+|**retrydelay**|**int**|지원되지 않습니다.|  
+|**description**|**nvarchar(255)**|구독자에 관한 텍스트 설명입니다.|  
 |**security_mode**|**int**|구현된 보안 모드입니다.<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증<br /><br /> **1**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 인증|  
 |**frequency_type2**|**int**|병합 에이전트가 실행되는 빈도입니다.<br /><br /> **1** = 한 번<br /><br /> **2** = 요청 시<br /><br /> **4** = 매일<br /><br /> **8** = 매주<br /><br /> **16** = 매월<br /><br /> **32** = 매월 상대적<br /><br /> **64** = 자동 시작<br /><br /> **128** = 되풀이|  
 |**frequency_interval2**|**int**|*Frequency_type*에 의해 설정 된 빈도에 적용 되는 값입니다.|  
@@ -96,8 +97,8 @@ sp_helpsubscriberinfo [ [ @subscriber =] 'subscriber']
  [Transact-sql&#41;sp_addpullsubscription &#40;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)   
  [Transact-sql&#41;sp_changesubscriber &#40;](../../relational-databases/system-stored-procedures/sp-changesubscriber-transact-sql.md)   
  [Transact-sql&#41;sp_dropsubscriber &#40;](../../relational-databases/system-stored-procedures/sp-dropsubscriber-transact-sql.md)   
- [Transact-sql&#41;sp_helpdistributor &#40;](../../relational-databases/system-stored-procedures/sp-helpdistributor-transact-sql.md)   
- [Transact-sql&#41;sp_helpserver &#40;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
+ [sp_helpdistributor&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistributor-transact-sql.md)   
+ [sp_helpserver&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

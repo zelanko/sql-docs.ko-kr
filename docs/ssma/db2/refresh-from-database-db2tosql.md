@@ -1,4 +1,5 @@
 ---
+description: 데이터베이스에서 새로 고침 (DB2ToSQL)
 title: 데이터베이스에서 새로 고침 (DB2ToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 613a8368-b372-443f-8252-fb6dc31a003d
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 2efc0667bd69e43cfe3d3246c0622fad18ff21e3
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 973f3aae444b27be93b675d16c9b9a73d8fac518
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87933364"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463480"
 ---
 # <a name="refresh-from-database-db2tosql"></a>데이터베이스에서 새로 고침 (DB2ToSQL)
 **데이터베이스에서 새로 고침** 대화 상자를 사용 하 여 DB2 데이터베이스에서 새로 고칠 개체를 선택할 수 있습니다. 대화 상자의 행은 메타 데이터의 상태를 기반으로 하는 색으로 구분 됩니다.  

@@ -1,4 +1,5 @@
 ---
+description: sp_drop_agent_parameter(Transact-SQL)
 title: sp_drop_agent_parameter (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b99e65ff-9cca-4dce-a2ce-2968de23a76a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c284a3cb2601f66d48dd61ad7df6017052964aaa
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 24f037232818ef395bfd52d3734b5de9cce5378b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85860189"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464405"
 ---
 # <a name="sp_drop_agent_parameter-transact-sql"></a>sp_drop_agent_parameter(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,9 +39,9 @@ sp_drop_agent_parameter [ @profile_id = ] profile_id
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @profile_id = ] profile_id`매개 변수를 삭제할 프로필의 ID입니다. *profile_id* 는 **int**이며 기본값은 없습니다.  
+`[ @profile_id = ] profile_id` 매개 변수를 삭제할 프로필의 ID입니다. *profile_id* 는 **int**이며 기본값은 없습니다.  
   
-`[ @parameter_name = ] 'parameter_name'`삭제할 매개 변수의 이름입니다. *parameter_name* 는 **sysname**이며 기본값은 **%** 입니다. 인 경우 **%** 지정 된 프로필에 대 한 모든 매개 변수가 삭제 됩니다.  
+`[ @parameter_name = ] 'parameter_name'` 삭제할 매개 변수의 이름입니다. *parameter_name* 는 **sysname**이며 기본값은 **%** 입니다. 인 경우 **%** 지정 된 프로필에 대 한 모든 매개 변수가 삭제 됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

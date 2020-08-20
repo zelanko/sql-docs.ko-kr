@@ -1,4 +1,5 @@
 ---
+description: sp_xml_preparedocument(Transact-SQL)
 title: sp_xml_preparedocument (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 95f41cff-c52a-4182-8ac6-bf49369d214c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1232f5eb7917606d7f7e88c912be163d13de33ba
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 48a414d4987d5b10349c6c4b2babe2d964875cb4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85767485"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463962"
 ---
 # <a name="sp_xml_preparedocument-transact-sql"></a>sp_xml_preparedocument(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -66,7 +67,7 @@ OUTPUT
  원본 XML 문서입니다. MSXML 파서는 이 XML 문서의 구문을 분석합니다. *xmltext* 는 **char**, **nchar**, **varchar**, **nvarchar**, **text**, **ntext** 또는 **xml**의 텍스트 매개 변수입니다. 기본값은 NULL이며 이 경우에는 빈 XML 문서의 내부 표현이 생성됩니다.  
   
 > [!NOTE]  
->  **sp_xml_preparedocument** 는 텍스트 또는 형식화 되지 않은 xml만 처리할 수 있습니다. 입력으로 사용할 항목의 값이 형식화된 XML인 경우에는 먼저 형식화되지 않은 새로운 XML 항목 또는 문자열로 캐스팅한 다음 해당 값을 입력으로 전달합니다. 자세한 내용은 [형식화 된 Xml과 형식화 되지 않은 Xml 비교](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)를 참조 하세요.  
+>  **sp_xml_preparedocument** 는 텍스트 또는 형식화 되지 않은 xml만 처리할 수 있습니다. 입력으로 사용할 항목의 값이 형식화된 XML인 경우에는 먼저 형식화되지 않은 새로운 XML 항목 또는 문자열로 캐스팅한 다음 해당 값을 입력으로 전달합니다. 자세한 내용은 [형식화된 XML과 형식화되지 않은 XML 비교](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)를 참조하세요.  
   
  [ *xpath_namespaces* ]  
  OPENXML의 행과 열 XPath 식에 사용되는 네임스페이스 선언을 지정합니다. *xpath_namespaces* 는 **char**, **nchar**, **varchar**, **nvarchar**, **text**, **ntext** 또는 **xml**과 같은 텍스트 매개 변수입니다.  
@@ -79,7 +80,7 @@ OUTPUT
 ## <a name="permissions"></a>사용 권한  
  **public** 역할의 멤버 자격이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-preparing-an-internal-representation-for-a-well-formed-xml-document"></a>A. 올바른 형식의 XML 문서를 위한 내부 표현 준비  
  다음 예에서는 입력으로 제공된 XML 문서의 새로 생성된 내부 표현에 대한 핸들을 반환합니다. `sp_xml_preparedocument` 호출에서 기본 네임스페이스 접두사 매핑이 사용됩니다.  

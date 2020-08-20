@@ -1,4 +1,5 @@
 ---
+description: sp_helpmergepublication(Transact-SQL)
 title: sp_helpmergepublication (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: dfe1e1e1-9a65-406a-aced-6385a078e135
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a0e396b4ee38ddd2c6e76158d9cb8abfb9b601a8
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e16d7669dd827d1d58bf02851ced72bd89ee804d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899556"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464219"
 ---
 # <a name="sp_helpmergepublication-transact-sql"></a>sp_helpmergepublication(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

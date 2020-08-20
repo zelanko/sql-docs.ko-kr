@@ -1,4 +1,5 @@
 ---
+description: sp_MShasdbaccess(Transact-SQL)
 title: sp_MShasdbaccess (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a9a23b90-2c60-4460-80a7-d7e14cc5a6a8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 00ecddd29afe6b8f34c8096c20a6a0b3f51c2269
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 22c9e8a366cb50490a2a4f8bfb330d2d3317d31c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893496"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464121"
 ---
 # <a name="sp_mshasdbaccess-transact-sql"></a>sp_MShasdbaccess(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

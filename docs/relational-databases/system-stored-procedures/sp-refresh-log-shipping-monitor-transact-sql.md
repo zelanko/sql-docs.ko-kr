@@ -1,4 +1,5 @@
 ---
+description: sp_refresh_log_shipping_monitor(Transact-SQL)
 title: sp_refresh_log_shipping_monitor (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: edefb912-31c5-4d99-9aba-06629afd0171
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 93abffe797a4507c9d3329f864e09753ca1f1da0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 6125ac4a916ff9d19777644a9db5fd853c045290
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891520"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464077"
 ---
 # <a name="sp_refresh_log_shipping_monitor-transact-sql"></a>sp_refresh_log_shipping_monitor(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,9 +44,9 @@ sp_refresh_log_shipping_monitor
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @agent_id = ] 'agent_id'`백업에 대 한 주 ID 이거나 복사 또는 복원에 대 한 보조 ID입니다. *agent_id* 은 **uniqueidentifier** 이며 NULL 일 수 없습니다.  
+`[ @agent_id = ] 'agent_id'` 백업에 대 한 주 ID 이거나 복사 또는 복원에 대 한 보조 ID입니다. *agent_id* 은 **uniqueidentifier** 이며 NULL 일 수 없습니다.  
   
-`[ @agent_type = ] 'agent_type'`로그 전달 작업의 유형입니다.  
+`[ @agent_type = ] 'agent_type'` 로그 전달 작업의 유형입니다.  
   
  0 = 백업  
   
@@ -55,9 +56,9 @@ sp_refresh_log_shipping_monitor
   
  *agent_type* 은 **tinyint** 이며 NULL 일 수 없습니다.  
   
-`[ @database = ] 'database'`백업 또는 복원 에이전트에서 로깅하는 데 사용 하는 주 데이터베이스 또는 보조 데이터베이스입니다.  
+`[ @database = ] 'database'` 백업 또는 복원 에이전트에서 로깅하는 데 사용 하는 주 데이터베이스 또는 보조 데이터베이스입니다.  
   
-`[ @mode ] n`모니터 데이터를 새로 고칠지 아니면 정리할 지를 지정 합니다. *M* 의 데이터 형식은 tinyint 이며 지원 되는 값은 다음과 같습니다.  
+`[ @mode ] n` 모니터 데이터를 새로 고칠지 아니면 정리할 지를 지정 합니다. *M* 의 데이터 형식은 tinyint 이며 지원 되는 값은 다음과 같습니다.  
   
  1 = 새로 고침(기본값)  
   

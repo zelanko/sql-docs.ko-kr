@@ -1,4 +1,5 @@
 ---
+description: sp_xml_removedocument(Transact-SQL)
 title: sp_xml_removedocument (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f9dca50a-8baf-4170-90bc-e72783ce5b73
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e3ee34c74a10414104f96190cd04244c28171db4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 42f4c9f09846d590752e282dc19af9312236cecd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85790328"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463963"
 ---
 # <a name="sp_xml_removedocument-transact-sql"></a>sp_xml_removedocument(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -51,7 +52,7 @@ sp_xml_removedocument hdoc
 ## <a name="permissions"></a>사용 권한  
  **public** 역할의 멤버 자격이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 XML 문서의 내부 표현을 제거합니다. 문서의 핸들은 입력으로 제공됩니다.  
   
 ```  

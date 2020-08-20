@@ -1,4 +1,5 @@
 ---
+description: sp_help_jobsteplog(Transact-SQL)
 title: sp_help_jobsteplog (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1a0be7b1-8f31-4b4c-aadb-586c0e00ed04
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7ef843202631d632b2a3712554cf67c9eca0878e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 3c3659e9f82da6d735bb8d5c53d6a182d4fa14d9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891803"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464260"
 ---
 # <a name="sp_help_jobsteplog-transact-sql"></a>sp_help_jobsteplog(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,16 +43,16 @@ sp_help_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @job_id = ] 'job_id'`작업 단계 로그 정보를 반환할 작업 id입니다. *job_id* 은 **int**이며 기본값은 NULL입니다.  
+`[ @job_id = ] 'job_id'` 작업 단계 로그 정보를 반환할 작업 id입니다. *job_id* 은 **int**이며 기본값은 NULL입니다.  
   
-`[ @job_name = ] 'job_name'`작업의 이름입니다. *job_name* 는 **sysname**이며 기본값은 NULL입니다.  
+`[ @job_name = ] 'job_name'` 작업의 이름입니다. *job_name* 는 **sysname**이며 기본값은 NULL입니다.  
   
 > [!NOTE]  
 >  *Job_id* 또는 *job_name* 를 지정 해야 하지만 둘 다 지정할 수는 없습니다.  
   
-`[ @step_id = ] step_id`작업 단계의 id입니다. 지정하지 않은 경우 작업의 모든 단계가 포함됩니다. *step_id* 은 **int**이며 기본값은 NULL입니다.  
+`[ @step_id = ] step_id` 작업 단계의 id입니다. 지정하지 않은 경우 작업의 모든 단계가 포함됩니다. *step_id* 은 **int**이며 기본값은 NULL입니다.  
   
-`[ @step_name = ] 'step_name'`작업 단계의 이름입니다. *step_name* 는 **sysname**이며 기본값은 NULL입니다.  
+`[ @step_name = ] 'step_name'` 작업 단계의 이름입니다. *step_name* 는 **sysname**이며 기본값은 NULL입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -86,7 +87,7 @@ sp_help_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
   
  **SQLAgentUserRole** 의 멤버는 자신이 소유한 작업 단계에 대 한 작업 단계 로그 메타 데이터만 볼 수 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-returns-job-step-log-information-for-all-steps-in-a-specific-job"></a>A. 특정 작업의 모든 단계에 대한 작업 단계 로그 정보 반환  
  다음 예에서는 `Weekly Sales Data Backup`이라는 작업에 관한 모든 작업 단계 로그 정보를 반환합니다.  
@@ -119,6 +120,6 @@ GO
  [Transact-sql&#41;sp_help_jobstep &#40;](../../relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql.md)   
  [Transact-sql&#41;sp_delete_jobstep &#40;](../../relational-databases/system-stored-procedures/sp-delete-jobstep-transact-sql.md)   
  [Transact-sql&#41;sp_delete_jobsteplog &#40;](../../relational-databases/system-stored-procedures/sp-delete-jobsteplog-transact-sql.md)   
- [Transact-sql&#41;&#40;저장 프로시저 SQL Server 에이전트](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)  
+ [Transact-sql&#41;&#40;저장 프로시저 SQL Server 에이전트 ](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)  
   
   

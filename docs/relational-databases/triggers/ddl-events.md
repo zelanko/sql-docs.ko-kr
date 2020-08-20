@@ -1,4 +1,5 @@
 ---
+description: DDL 이벤트
 title: DDL 이벤트 | Microsoft 문서
 ms.custom: ''
 ms.date: 11/01/2016
@@ -14,12 +15,12 @@ ms.assetid: 62ef24b4-3553-4aed-b62a-670980bae501
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4281b67d44e7a1aa7404e89b07a505416f38260f
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 25cdef293ced7b58ea41f71f78a1046c6b5dd0ba
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243324"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463805"
 ---
 # <a name="ddl-events"></a>DDL 이벤트
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

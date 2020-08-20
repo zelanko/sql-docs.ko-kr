@@ -1,4 +1,5 @@
 ---
+description: sp_ivindexhasnullcols(Transact-SQL)
 title: sp_ivindexhasnullcols (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ed2cde63-37e1-43cf-b6ba-3b6114a0f797
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 837a589827b4bf4db9d4e7d38e00d56b646e781a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 86fef9d3b131770e11edde117ea12e96d336de24
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891617"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464217"
 ---
 # <a name="sp_ivindexhasnullcols-transact-sql"></a>sp_ivindexhasnullcols(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,9 +39,9 @@ sp_ivindexhasnullcols [ @viewname = ] 'view_name'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @viewname = ] 'view_name'`확인할 뷰의 이름입니다. *view_name* 는 **sysname**이며 기본값은 없습니다.  
+`[ @viewname = ] 'view_name'` 확인할 뷰의 이름입니다. *view_name* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @fhasnullcols = ] field_has_null_columns OUTPUT`뷰 인덱스에 NULL을 허용 하는 열이 있는지 여부를 나타내는 플래그입니다. *view_name* 는 **sysname**이며 기본값은 없습니다. 뷰 인덱스에 NULL을 허용 하는 열이 있는 경우 값 **1** 을 반환 합니다. 뷰에 NULL을 허용 하는 열이 포함 되어 있지 않으면 **0** 값을 반환 합니다.  
+`[ @fhasnullcols = ] field_has_null_columns OUTPUT` 뷰 인덱스에 NULL을 허용 하는 열이 있는지 여부를 나타내는 플래그입니다. *view_name* 는 **sysname**이며 기본값은 없습니다. 뷰 인덱스에 NULL을 허용 하는 열이 있는 경우 값 **1** 을 반환 합니다. 뷰에 NULL을 허용 하는 열이 포함 되어 있지 않으면 **0** 값을 반환 합니다.  
   
 > [!NOTE]  
 >  저장 프로시저 자체가 반환 코드 **1**을 반환 하는 경우 저장 프로시저 실행에 오류가 발생 하는 경우이 값은 **0** 이며 무시 되어야 합니다.  

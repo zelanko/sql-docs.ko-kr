@@ -1,4 +1,5 @@
 ---
+description: 테이블 백업 및 복원(Transact-SQL)
 title: 테이블 백업 및 복원 (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: aa615add-54e6-40f5-8b55-3728b26884ee
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8b3a8bf99bb51e5b2c4e9979266bd7252790315c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a1d5e0638338cdf53d33eed310d23f1a124a7415
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750397"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463915"
 ---
 # <a name="backup-and-restore-tables-transact-sql"></a>테이블 백업 및 복원(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

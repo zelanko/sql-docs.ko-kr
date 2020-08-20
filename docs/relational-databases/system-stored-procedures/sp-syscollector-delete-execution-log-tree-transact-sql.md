@@ -1,4 +1,5 @@
 ---
+description: sp_syscollector_delete_execution_log_tree(Transact-SQL)
 title: sp_syscollector_delete_execution_log_tree (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 0a9a7c5b-c3cc-40ca-b524-e948a8cce4e4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b82886cf4be8714580159c35848788fd25e395ee
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2b184f469662502613e1340e3642cab153597b8c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892937"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464005"
 ---
 # <a name="sp_syscollector_delete_execution_log_tree-transact-sql"></a>sp_syscollector_delete_execution_log_tree(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,9 +42,9 @@ sp_syscollector_delete_execution_log_tree[ @log_id = ] log_id
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @log_id = ] log_id`컬렉션 집합 로그의 고유 식별자입니다. *log_id* 은 **int**입니다.  
+`[ @log_id = ] log_id` 컬렉션 집합 로그의 고유 식별자입니다. *log_id* 은 **int**입니다.  
   
-`[ @from_collection_set = ] from_collection_set`컬렉션 집합의 식별자입니다. *from_collection_set* 은 **bit = 1**입니다.  
+`[ @from_collection_set = ] from_collection_set` 컬렉션 집합의 식별자입니다. *from_collection_set* 은 **bit = 1**입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

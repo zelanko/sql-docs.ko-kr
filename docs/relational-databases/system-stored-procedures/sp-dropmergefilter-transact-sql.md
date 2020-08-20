@@ -1,4 +1,5 @@
 ---
+description: sp_dropmergefilter(Transact-SQL)
 title: sp_dropmergefilter (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 798586d7-05f3-4a5e-bea8-a34b7b52d0fd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2de7b17ff172c5945c7bfb83cae6a8a11325e6d0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 5eb42c423d562ad251dc55ce015fdd111fa7d6fd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881820"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464344"
 ---
 # <a name="sp_dropmergefilter-transact-sql"></a>sp_dropmergefilter(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,19 +40,19 @@ sp_dropmergefilter [ @publication= ] 'publication', [ @article= ] 'article'     
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @publication = ] 'publication'`게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 없습니다.  
+`[ @publication = ] 'publication'` 게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @article = ] 'article'`아티클의 이름입니다. *article* 은 **sysname**이며 기본값은 없습니다.  
+`[ @article = ] 'article'` 아티클의 이름입니다. *article* 은 **sysname**이며 기본값은 없습니다.  
   
-`[ @filtername = ] 'filtername'`삭제할 필터의 이름입니다. *filtername* 는 **sysname**이며 기본값은 없습니다.  
+`[ @filtername = ] 'filtername'` 삭제할 필터의 이름입니다. *filtername* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @force_invalidate_snapshot = ] force_invalidate_snapshot`스냅숏이 무효화 되는 기능을 사용 하거나 사용 하지 않도록 설정 합니다. *force_invalidate_snapshot* 은 **bit**이며 기본값은 **0**입니다.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` 스냅숏이 무효화 되는 기능을 사용 하거나 사용 하지 않도록 설정 합니다. *force_invalidate_snapshot* 은 **bit**이며 기본값은 **0**입니다.  
   
  **0** 은 병합 아티클에 대 한 변경으로 인해 스냅숏이 무효화 되지 않도록 지정 합니다.  
   
  **1** 은 병합 아티클에 대 한 변경으로 인해 스냅숏이 무효화 될 수 있음을 의미 합니다. 해당 하는 경우 값 **1** 은 새 스냅숏이 발생할 수 있는 권한을 부여 합니다.  
   
-`[ @force_reinit_subscription = ] force_reinit_subscription`구독을 유효 하지 않은 것으로 표시 하는 기능을 사용 하거나 사용 하지 않도록 설정 합니다. *force_reinit_subscription* 은 **bit**이며 기본값은 **0**입니다.  
+`[ @force_reinit_subscription = ] force_reinit_subscription` 구독을 유효 하지 않은 것으로 표시 하는 기능을 사용 하거나 사용 하지 않도록 설정 합니다. *force_reinit_subscription* 은 **bit**이며 기본값은 **0**입니다.  
   
  **0** 은 병합 아티클 필터에 대 한 변경으로 인해 구독이 무효화 되지 않도록 지정 합니다.  
   

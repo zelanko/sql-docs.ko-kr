@@ -1,4 +1,5 @@
 ---
+description: sp_helpmergesubscription(Transact-SQL)
 title: sp_helpmergesubscription (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: da564112-f769-4e67-9251-5699823e8c86
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2c1c2ff23ecde51f13270fca3f674c58412858f6
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 6892f15293c66e36afe7108047a7e81539559fc1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899568"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464241"
 ---
 # <a name="sp_helpmergesubscription-transact-sql"></a>sp_helpmergesubscription(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,17 +44,17 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @publication = ] 'publication'`게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 **%** 입니다. 게시는 이미 존재하고 있어야 하며 식별자에 적용되는 규칙을 준수해야 합니다. NULL 또는 인 경우 **%** 현재 데이터베이스의 모든 병합 게시 및 구독에 대 한 정보가 반환 됩니다.  
+`[ @publication = ] 'publication'` 게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 **%** 입니다. 게시는 이미 존재하고 있어야 하며 식별자에 적용되는 규칙을 준수해야 합니다. NULL 또는 인 경우 **%** 현재 데이터베이스의 모든 병합 게시 및 구독에 대 한 정보가 반환 됩니다.  
   
-`[ @subscriber = ] 'subscriber'`구독자의 이름입니다. *구독자* 는 **sysname**이며 기본값은 **%** 입니다. NULL 또는 %인 경우 지정한 게시에 대한 모든 구독에 관한 정보가 반환됩니다.  
+`[ @subscriber = ] 'subscriber'` 구독자의 이름입니다. *구독자* 는 **sysname**이며 기본값은 **%** 입니다. NULL 또는 %인 경우 지정한 게시에 대한 모든 구독에 관한 정보가 반환됩니다.  
   
-`[ @subscriber_db = ] 'subscriber_db'`구독 데이터베이스의 이름입니다. *subscriber_db*는 **sysname**이며 기본값은 **%** 모든 구독 데이터베이스에 대 한 정보를 반환 하는입니다.  
+`[ @subscriber_db = ] 'subscriber_db'` 구독 데이터베이스의 이름입니다. *subscriber_db*는 **sysname**이며 기본값은 **%** 모든 구독 데이터베이스에 대 한 정보를 반환 하는입니다.  
   
-`[ @publisher = ] 'publisher'`게시자의 이름입니다. 게시자는 유효한 서버여야 합니다. *publisher*는 **sysname**이며 기본값은 **%** 모든 게시자에 대 한 정보를 반환 하는입니다.  
+`[ @publisher = ] 'publisher'` 게시자의 이름입니다. 게시자는 유효한 서버여야 합니다. *publisher*는 **sysname**이며 기본값은 **%** 모든 게시자에 대 한 정보를 반환 하는입니다.  
   
-`[ @publisher_db = ] 'publisher_db'`게시자 데이터베이스의 이름입니다. *publisher_db*는 **sysname**이며 기본값은 **%** 모든 게시자 데이터베이스에 대 한 정보를 반환 하는입니다.  
+`[ @publisher_db = ] 'publisher_db'` 게시자 데이터베이스의 이름입니다. *publisher_db*는 **sysname**이며 기본값은 **%** 모든 게시자 데이터베이스에 대 한 정보를 반환 하는입니다.  
   
-`[ @subscription_type = ] 'subscription_type'`구독의 유형입니다. *subscription_type*은 **nvarchar (15)** 이며 다음 값 중 하나일 수 있습니다.  
+`[ @subscription_type = ] 'subscription_type'` 구독의 유형입니다. *subscription_type*은 **nvarchar (15)** 이며 다음 값 중 하나일 수 있습니다.  
   
 |값|설명|  
 |-----------|-----------------|  
@@ -61,7 +62,7 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
 |**서브스크립션을**|끌어오기 구독|  
 |**양방향**|밀어넣기 및 끌어오기 구독|  
   
-`[ @found = ] 'found'OUTPUT`반환 하는 행을 나타내는 플래그입니다. *검색*된 **int** 및 OUTPUT 매개 변수 이며 기본값은 NULL입니다. **1** 은 게시가 발견 되었음을 나타냅니다. **0** 은 게시를 찾을 수 없음을 나타냅니다.  
+`[ @found = ] 'found'OUTPUT` 반환 하는 행을 나타내는 플래그입니다. *검색*된 **int** 및 OUTPUT 매개 변수 이며 기본값은 NULL입니다. **1** 은 게시가 발견 되었음을 나타냅니다. **0** 은 게시를 찾을 수 없음을 나타냅니다.  
   
 ## <a name="result-sets"></a>결과 집합  
   
@@ -78,7 +79,7 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
 |**subscription_type**|**int**|구독 유형:<br /><br /> **0** = 푸시<br /><br /> **1** = 끌어오기<br /><br /> **2** = 모두|  
 |**priority**|**float (8)**|구독의 우선 순위를 표시하는 숫자입니다.|  
 |**sync_type**|**tinyint**|구독 동기화 유형입니다.|  
-|**한**|**nvarchar(255)**|해당 병합 구독에 대한 간단한 설명입니다.|  
+|**description**|**nvarchar(255)**|해당 병합 구독에 대한 간단한 설명입니다.|  
 |**merge_jobid**|**binary(16)**|병합 에이전트의 작업 ID입니다.|  
 |**full_publication**|**tinyint**|구독이 전체 게시 또는 필터링된 게시를 위한 것인지 여부를 표시합니다.|  
 |**offload_enabled**|**bit**|복제 에이전트의 오프로드 실행이 구독자에서 실행되도록 설정되었는지 여부를 지정합니다. NULL인 경우 게시자에서 실행됩니다.|  

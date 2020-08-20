@@ -1,4 +1,5 @@
 ---
+description: sp_dropmergepublication(Transact-SQL)
 title: sp_dropmergepublication (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9e1cb96e-5889-4f97-88cd-f60cf313ce68
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e9b2b36484d34396ed573f4b06bd1feb5b0f83b1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0a28a81d897f9319495963b0f9d049502fe8c7d2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881827"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464362"
 ---
 # <a name="sp_dropmergepublication-transact-sql"></a>sp_dropmergepublication(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,13 +41,13 @@ sp_dropmergepublication [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @publication = ] 'publication'`삭제할 게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 없습니다. **All**인 경우 모든 기존 병합 게시가 제거 되며 여기에 연결 된 스냅숏 에이전트 작업도 제거 됩니다. *게시*에 특정 값을 지정 하는 경우 해당 게시 및 연결 된 스냅숏 에이전트 작업만 삭제 됩니다.  
+`[ @publication = ] 'publication'` 삭제할 게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 없습니다. **All**인 경우 모든 기존 병합 게시가 제거 되며 여기에 연결 된 스냅숏 에이전트 작업도 제거 됩니다. *게시*에 특정 값을 지정 하는 경우 해당 게시 및 연결 된 스냅숏 에이전트 작업만 삭제 됩니다.  
   
-`[ @ignore_distributor = ] ignore_distributor`배포자에서 정리 태스크를 수행 하지 않고 게시를 삭제 하는 데 사용 됩니다. *ignore_distributor* 은 **bit**이며 기본값은 **0**입니다. 이 매개 변수는 배포자를 다시 설치할 때도 사용됩니다.  
+`[ @ignore_distributor = ] ignore_distributor` 배포자에서 정리 태스크를 수행 하지 않고 게시를 삭제 하는 데 사용 됩니다. *ignore_distributor* 은 **bit**이며 기본값은 **0**입니다. 이 매개 변수는 배포자를 다시 설치할 때도 사용됩니다.  
   
-`[ @reserved = ] reserved`는 나중에 사용 하도록 예약 되어 있습니다. *reserved* 는 **bit**이며 기본값은 **0**입니다.  
+`[ @reserved = ] reserved` 는 나중에 사용 하도록 예약 되어 있습니다. *reserved* 는 **bit**이며 기본값은 **0**입니다.  
   
-`[ @ignore_merge_metadata = ] ignore_merge_metadata`내부용 으로만 사용 됩니다.  
+`[ @ignore_merge_metadata = ] ignore_merge_metadata` 내부용 으로만 사용 됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -68,7 +69,7 @@ sp_dropmergepublication [ @publication= ] 'publication'
  [게시 삭제](../../relational-databases/replication/publish/delete-a-publication.md)   
  [Transact-sql&#41;sp_addmergepublication &#40;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)   
  [Transact-sql&#41;sp_changemergepublication &#40;](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)   
- [Transact-sql&#41;sp_helpmergepublication &#40;](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)   
+ [sp_helpmergepublication&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)   
  [복제 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

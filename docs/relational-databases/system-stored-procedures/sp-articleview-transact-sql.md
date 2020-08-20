@@ -1,4 +1,5 @@
 ---
+description: sp_articleview(Transact-SQL)
 title: sp_articleview (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a3d63fd6-f360-4a2f-8a82-a0dc15f650b3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4a906e3b74e4682883dbddaf89ba58b5d4069936
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5b1d18b8e4249f2948dccb3b042742afe0c0f54a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716221"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464539"
 ---
 # <a name="sp_articleview-transact-sql"></a>sp_articleview(Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -46,34 +47,34 @@ sp_articleview [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @publication = ] 'publication'`아티클이 포함 된 게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 없습니다.  
+`[ @publication = ] 'publication'` 아티클이 포함 된 게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @article = ] 'article'`아티클의 이름입니다. *article* 은 **sysname**이며 기본값은 없습니다.  
+`[ @article = ] 'article'` 아티클의 이름입니다. *article* 은 **sysname**이며 기본값은 없습니다.  
   
-`[ @view_name = ] 'view_name'`게시 된 아티클을 정의 하는 뷰의 이름입니다. *view_name* 은 **nvarchar (386)** 이며 기본값은 NULL입니다.  
+`[ @view_name = ] 'view_name'` 게시 된 아티클을 정의 하는 뷰의 이름입니다. *view_name* 은 **nvarchar (386)** 이며 기본값은 NULL입니다.  
   
-`[ @filter_clause = ] 'filter_clause'`는 가로 필터를 정의 하는 제한 (WHERE) 절입니다. 제약 조건 절을 입력할 때는 WHERE 키워드를 생략합니다. *filter_clause* 는 **ntext**이며 기본값은 NULL입니다.  
+`[ @filter_clause = ] 'filter_clause'` 는 가로 필터를 정의 하는 제한 (WHERE) 절입니다. 제약 조건 절을 입력할 때는 WHERE 키워드를 생략합니다. *filter_clause* 는 **ntext**이며 기본값은 NULL입니다.  
   
-`[ @change_active = ] change_active`구독이 있는 게시에서 열을 수정할 수 있습니다. *change_active* 은 **int**이며 기본값은 **0**입니다. **0**인 경우 열은 변경 되지 않습니다. **1**인 경우 구독이 있는 활성 아티클에서 뷰를 만들거나 다시 만들 수 있습니다.  
+`[ @change_active = ] change_active` 구독이 있는 게시에서 열을 수정할 수 있습니다. *change_active* 은 **int**이며 기본값은 **0**입니다. **0**인 경우 열은 변경 되지 않습니다. **1**인 경우 구독이 있는 활성 아티클에서 뷰를 만들거나 다시 만들 수 있습니다.  
   
-`[ @force_invalidate_snapshot = ] force_invalidate_snapshot`이 저장 프로시저가 수행한 동작으로 인해 기존 스냅숏이 무효화 될 수 있음을 승인 합니다. *force_invalidate_snapshot* 은 **bit**이며 기본값은 **0**입니다.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` 이 저장 프로시저가 수행한 동작으로 인해 기존 스냅숏이 무효화 될 수 있음을 승인 합니다. *force_invalidate_snapshot* 은 **bit**이며 기본값은 **0**입니다.  
   
  **0** 은 아티클에 대 한 변경으로 인해 스냅숏이 무효화 되지 않도록 지정 합니다. 저장 프로시저가 새 스냅샷을 필요로 하는 변경을 감지하면 오류가 발생하며 변경이 수행되지 않습니다.  
   
  **1** 은 아티클에 대 한 변경으로 인해 스냅숏이 무효화 될 수 있음을 지정 합니다. 새 스냅숏이 필요한 기존 구독이 있는 경우 기존 스냅숏이 사용 되지 않는 것으로 표시 되 고 새 스냅숏으로 생성 될 수 있는 권한을 부여 합니다.  
   
-`[ @force_reinit_subscription = ] _force_reinit_subscription_`이 저장 프로시저가 수행한 동작으로 인해 기존 구독을 다시 초기화 해야 할 수도 있습니다. *force_reinit_subscription* 은 **bit** 이며 기본값은 **0**입니다.  
+`[ @force_reinit_subscription = ] _force_reinit_subscription_` 이 저장 프로시저가 수행한 동작으로 인해 기존 구독을 다시 초기화 해야 할 수도 있습니다. *force_reinit_subscription* 은 **bit** 이며 기본값은 **0**입니다.  
   
  **0** 은 아티클에 대 한 변경으로 인해 구독이 다시 초기화 되지 않도록 지정 합니다. 저장 프로시저가 구독의 다시 초기화를 필요로 하는 변경을 감지하면 오류가 발생하며 변경이 수행되지 않습니다.  
   
  **1** 은 아티클에 대 한 변경으로 인해 기존 구독이 다시 초기화 되도록 지정 하며 구독을 다시 초기화할 수 있는 권한을 부여 합니다.  
   
-`[ @publisher = ] 'publisher'`이외 게시자를 지정 합니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *publisher* 는 **sysname**이며 기본값은 NULL입니다.  
+`[ @publisher = ] 'publisher'` 이외 게시자를 지정 합니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *publisher* 는 **sysname**이며 기본값은 NULL입니다.  
   
 > [!NOTE]  
 >  게시자에서 게시할 때는 *게시자* 를 사용 하면 안 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-`[ @refreshsynctranprocs = ] refreshsynctranprocs`복제를 동기화 하는 데 사용 되는 저장 프로시저가 자동으로 다시 생성 되는지 여부입니다. *refreshsynctranprocs* 는 **bit**이며 기본값은 1입니다.  
+`[ @refreshsynctranprocs = ] refreshsynctranprocs` 복제를 동기화 하는 데 사용 되는 저장 프로시저가 자동으로 다시 생성 되는지 여부입니다. *refreshsynctranprocs* 는 **bit**이며 기본값은 1입니다.  
   
  **1** 은 저장 프로시저가 다시 생성 됨을 의미 합니다.  
   
@@ -104,13 +105,13 @@ sp_articleview [ @publication = ] 'publication'
  **Sysadmin** 고정 서버 역할 또는 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_articleview**을 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [아티클 정의](../../relational-databases/replication/publish/define-an-article.md)   
+ [Define an Article](../../relational-databases/replication/publish/define-an-article.md)   
  [정적 행 필터 정의 및 수정](../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md)   
  [Transact-sql&#41;sp_addarticle &#40;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
  [Transact-sql&#41;sp_articlefilter &#40;](../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md)   
  [Transact-sql&#41;sp_changearticle &#40;](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)   
  [Transact-sql&#41;sp_droparticle &#40;](../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)   
- [Transact-sql&#41;sp_helparticle &#40;](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)   
+ [sp_helparticle&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)   
  [복제 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

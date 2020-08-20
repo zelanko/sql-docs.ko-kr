@@ -1,4 +1,5 @@
 ---
+description: sp_approlepassword (Transact-SQL)
 title: sp_approlepassword (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7967dc0b-bee2-4c63-b8e9-1c3ce2f5db2a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0d6fb44101952c5fe5fe28ba9764c43658a6208a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b375dac904decdaa096cfe0e0b1839cc0c3d2d8c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85874856"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464548"
 ---
 # <a name="sp_approlepassword-transact-sql"></a>sp_approlepassword (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85874856"
   현재 데이터베이스에 있는 애플리케이션 역할의 암호를 변경합니다.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]대신 [ALTER APPLICATION ROLE](../../t-sql/statements/alter-application-role-transact-sql.md) 을 사용 해야 합니다.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 대신 [ALTER APPLICATION ROLE](../../t-sql/statements/alter-application-role-transact-sql.md) 을 사용 해야 합니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,9 +43,9 @@ sp_approlepassword [ @rolename= ] 'role' , [ @newpwd = ] 'password'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @rolename = ] 'role'`응용 프로그램 역할의 이름입니다. *Role* 은 **sysname**이며 기본값은 없습니다. 현재 데이터베이스에 *역할이* 있어야 합니다.  
+`[ @rolename = ] 'role'` 응용 프로그램 역할의 이름입니다. *Role* 은 **sysname**이며 기본값은 없습니다. 현재 데이터베이스에 *역할이* 있어야 합니다.  
   
-`[ @newpwd = ] 'password'`응용 프로그램 역할의 새 암호입니다. *password* 는 **sysname**이며 기본값은 없습니다. *암호* 는 NULL 일 수 없습니다.  
+`[ @newpwd = ] 'password'` 응용 프로그램 역할의 새 암호입니다. *password* 는 **sysname**이며 기본값은 없습니다. *암호* 는 NULL 일 수 없습니다.  
   
 > [!IMPORTANT]  
 >  NULL 암호를 사용하지 마십시오. 강력한 암호를 사용하세요. 자세한 내용은 [Strong Passwords](../../relational-databases/security/strong-passwords.md)을 참조하세요.  
@@ -58,7 +59,7 @@ sp_approlepassword [ @rolename= ] 'role' , [ @newpwd = ] 'password'
 ## <a name="permissions"></a>사용 권한  
  데이터베이스에 대한 ALTER ANY APPLICATION ROLE 권한이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예는 `PayrollAppRole` 애플리케이션 역할의 암호를 `B3r12-36`으로 설정합니다.  
   
 ```  
@@ -66,7 +67,7 @@ EXEC sp_approlepassword 'PayrollAppRole', '''B3r12-36';
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;보안 저장 프로시저](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;보안 저장 프로시저 ](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [응용 프로그램 역할](../../relational-databases/security/authentication-access/application-roles.md)   
  [Transact-sql&#41;sp_addapprole &#40;](../../relational-databases/system-stored-procedures/sp-addapprole-transact-sql.md)   
  [Transact-sql&#41;sp_setapprole &#40;](../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md)   

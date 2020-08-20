@@ -1,4 +1,5 @@
 ---
+description: 테이블 열 속성(SQL Server Management Studio)
 title: 테이블 열 속성(SQL Server Management Studio) | Microsoft 문서
 ms.custom: ''
 ms.date: 08/08/2016
@@ -15,12 +16,12 @@ ms.assetid: 09830897-cc10-46b8-95f5-e0e9681b668c
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5cb7e20e8f310b6cb6786c2d4cc1a62409dc81c6
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: c5792d13fc9fcfff9ffeadaf5aadee948f6060e6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87397009"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463830"
 ---
 # <a name="table-column-properties-sql-server-management-studio"></a>테이블 열 속성(SQL Server Management Studio)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
@@ -48,7 +49,7 @@ ms.locfileid: "87397009"
  **길이**  
  문자 기반 데이터 형식에 허용되는 문자 수를 표시합니다. 이 속성은 문자 기반 데이터 형식에 대해서만 사용할 수 있습니다.  
   
- **규모**  
+ **크기 조정**  
  현재 열의 값의 소수점 오른쪽에 나타날 수 있는 최대 자릿수를 표시합니다. 이 속성은 숫자가 아닌 데이터 형식에 대해 **0** 을 표시합니다.  
   
  **정밀도**  

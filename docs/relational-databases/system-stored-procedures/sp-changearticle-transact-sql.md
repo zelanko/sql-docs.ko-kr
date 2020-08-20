@@ -1,4 +1,5 @@
 ---
+description: sp_changearticle(Transact-SQL)
 title: sp_changearticle (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/28/2015
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 24c33ca5-f03a-4417-a267-131ca5ba6bb5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e0f9b47d2a8d5732aa42ed92f2b5af00524052e6
-ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
+ms.openlocfilehash: 46afab7da64374922f20e5736c2a3d31217056b5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86977551"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464486"
 ---
 # <a name="sp_changearticle-transact-sql"></a>sp_changearticle(Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -43,13 +44,13 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @publication = ] 'publication'`아티클이 포함 된 게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 NULL입니다.  
+`[ @publication = ] 'publication'` 아티클이 포함 된 게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 NULL입니다.  
   
-`[ @article = ] 'article'`속성을 변경할 아티클의 이름입니다. *article* 은 **sysname**이며 기본값은 NULL입니다.  
+`[ @article = ] 'article'` 속성을 변경할 아티클의 이름입니다. *article* 은 **sysname**이며 기본값은 NULL입니다.  
   
-`[ @property = ] 'property'`변경할 아티클 속성입니다. *속성* 은 **nvarchar (100)** 입니다.  
+`[ @property = ] 'property'` 변경할 아티클 속성입니다. *속성* 은 **nvarchar (100)** 입니다.  
   
-`[ @value = ] 'value'`아티클 속성의 새 값입니다. *value* 는 **nvarchar (255)** 입니다.  
+`[ @value = ] 'value'` 아티클 속성의 새 값입니다. *value* 는 **nvarchar (255)** 입니다.  
   
  다음 표에서는 아티클의 속성 및 해당 속성의 값을 설명합니다.  
   
@@ -68,7 +69,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 |**ins_cmd**||실행할 INSERT 문입니다. 그렇지 않은 경우에는 로그에서 만들어집니다.|  
 |**pre_creation_cmd**||동기화를 적용하기 전에 대상 테이블을 제거, 삭제 또는 자를 수 있는 사전 작성 명령입니다.|  
 ||**없음**|명령을 사용하지 않습니다.|  
-||**그림자**|대상 테이블을 삭제합니다.|  
+||**drop**|대상 테이블을 삭제합니다.|  
 ||**delete**|대상 테이블을 삭제합니다.|  
 ||**잘라내야**|대상 테이블을 자릅니다.|  
 |**pub_identity_range**||구독자에 할당된 ID 범위의 크기를 제어합니다. 피어 투 피어 복제의 경우에는 지원되지 않습니다.|  
@@ -141,7 +142,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 |**upd_cmd**||실행할 UPDATE 문입니다. 그렇지 않은 경우에는 로그에서 만들어집니다.|  
 |NULL|NULL|변경될 수 있는 아티클 속성의 목록을 반환합니다.|  
   
-`[ @force_invalidate_snapshot = ] force_invalidate_snapshot`이 저장 프로시저가 수행한 동작으로 인해 기존 스냅숏이 무효화 될 수 있음을 승인 합니다. *force_invalidate_snapshot* 은 **bit**이며 기본값은 **0**입니다.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` 이 저장 프로시저가 수행한 동작으로 인해 기존 스냅숏이 무효화 될 수 있음을 승인 합니다. *force_invalidate_snapshot* 은 **bit**이며 기본값은 **0**입니다.  
   
  **0** 은 아티클에 대 한 변경으로 인해 스냅숏이 무효화 되지 않도록 지정 합니다. 저장 프로시저가 새 스냅샷을 필요로 하는 변경을 감지하면 오류가 발생하며 변경이 수행되지 않습니다.  
   
@@ -149,7 +150,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
   
  변경 시 새 스냅샷의 생성을 필요로 하는 속성에 대해서는 주의 섹션을 참조하십시오.  
   
-`[ @force_reinit_subscription = ]force_reinit_subscription_`이 저장 프로시저가 수행한 동작으로 인해 기존 구독을 다시 초기화 해야 할 수도 있습니다. *force_reinit_subscription* 은 **bit** 이며 기본값은 **0**입니다.  
+`[ @force_reinit_subscription = ]force_reinit_subscription_` 이 저장 프로시저가 수행한 동작으로 인해 기존 구독을 다시 초기화 해야 할 수도 있습니다. *force_reinit_subscription* 은 **bit** 이며 기본값은 **0**입니다.  
   
  **0** 은 아티클에 대 한 변경으로 인해 구독이 다시 초기화 되지 않도록 지정 합니다. 저장 프로시저가 기존 구독을 다시 초기화해야 하는 변경을 감지하면 오류가 발생하며 변경이 수행되지 않습니다.  
   
@@ -157,7 +158,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
   
  변경 시 기존의 모든 구독을 다시 초기화해야 하는 속성에 대해서는 주의 섹션을 참조하십시오.  
   
-`[ @publisher = ] 'publisher'`이외 게시자를 지정 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *publisher* 는 **sysname**이며 기본값은 NULL입니다.  
+`[ @publisher = ] 'publisher'` 이외 게시자를 지정 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *publisher* 는 **sysname**이며 기본값은 NULL입니다.  
   
 > [!NOTE]  
 >  게시자에 대 한 아티클 속성을 변경할 때는 *게시자* 를 사용 하면 안 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -235,7 +236,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할 또는 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_changearticle**을 실행할 수 있습니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [아티클 속성 보기 및 수정](../../relational-databases/replication/publish/view-and-modify-article-properties.md)   
  [게시 및 아티클 속성 변경](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
  [Transact-sql&#41;sp_addarticle &#40;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   

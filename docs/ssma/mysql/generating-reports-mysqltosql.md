@@ -1,4 +1,5 @@
 ---
+description: 보고서 생성(MySQLToSQL)
 title: 보고서 생성 (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1c0202e8-546d-4cb3-a37f-1d2e35d53839
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: f61387e6ca77ed93b7b23f335fc5b1f46c343ff2
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 641edbb3db15387543645fcab7a375b2985a01d6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935535"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463431"
 ---
 # <a name="generating-reports-mysqltosql"></a>보고서 생성(MySQLToSQL)
 명령을 사용 하 여 수행 되는 특정 활동의 보고서는 SSMA 콘솔에서 개체 트리 수준에 생성 됩니다.  
@@ -39,7 +40,7 @@ ms.locfileid: "87935535"
     > [!IMPORTANT]  
     > 출력 보고서는 평가 보고서와 다릅니다. 전자는 실행 된 명령의 성능에 대 한 보고서 이며 후자는 프로그래밍 방식으로 사용할 수 있는 XML 보고서입니다.  
   
-    Sl에서 출력 보고서에 대 한 명령 옵션을 선택 합니다. 아니요. 2-4) [&#40;MySQLToSQL&#41;섹션에서 SSMA 콘솔 실행](../../ssma/mysql/executing-the-ssma-console-mysqltosql.md) 을 참조 하세요.  
+    Sl에서 출력 보고서에 대 한 명령 옵션을 선택 합니다. 아니요. 2-4) [&#40;MySQLToSQL&#41;섹션에서 SSMA 콘솔 실행 ](../../ssma/mysql/executing-the-ssma-console-mysqltosql.md) 을 참조 하세요.  
   
 2.  보고서 세부 정보 표시 설정을 사용 하 여 출력 보고서에서 원하는 세부 정보 범위를 표시 합니다.  
   
@@ -139,6 +140,6 @@ ms.locfileid: "87935535"
   
 -   fail-스크립트  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
 [SSMA 콘솔 실행 (MySQL)](https://msdn.microsoft.com/e3e9f7e4-0619-4861-a202-3d5d39953b26)  
   

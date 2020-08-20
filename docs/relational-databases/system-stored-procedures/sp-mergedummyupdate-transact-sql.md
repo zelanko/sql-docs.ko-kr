@@ -1,4 +1,5 @@
 ---
+description: sp_mergedummyupdate(Transact-SQL)
 title: sp_mergedummyupdate (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b834f7f6-9588-4d59-a3e2-83d8e8e722e1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5502b64da269639d99fe54d4930f7f3b7b145d73
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: dbacf385842d226c733c5c1baec9859f26e140d3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899362"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464136"
 ---
 # <a name="sp_mergedummyupdate-transact-sql"></a>sp_mergedummyupdate(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,9 +38,9 @@ sp_mergedummyupdate [ @source_object =] 'source_object', [ @rowguid =] 'rowguid'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @source_object = ] 'source_object'`원본 개체의 이름입니다. *source_object*은 **nvarchar (386)** 이며 기본값은 없습니다.  
+`[ @source_object = ] 'source_object'` 원본 개체의 이름입니다. *source_object*은 **nvarchar (386)** 이며 기본값은 없습니다.  
   
-`[ @rowguid = ] 'rowguid'`행 식별자입니다. *rowguid* 는 **uniqueidentifier**이며 기본값은 없습니다.  
+`[ @rowguid = ] 'rowguid'` 행 식별자입니다. *rowguid* 는 **uniqueidentifier**이며 기본값은 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

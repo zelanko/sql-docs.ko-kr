@@ -1,4 +1,5 @@
 ---
+description: sp_changedistributor_password(Transact-SQL)
 title: sp_changedistributor_password (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4a496e60-414a-4026-ba7a-3e89391d39b7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 52fcf5c739ad5312aef89586e78454652df93f2f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1709bdbb673dcf88ffc9646ded291abb5702412d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771547"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464496"
 ---
 # <a name="sp_changedistributor_password-transact-sql"></a>sp_changedistributor_password(Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -37,7 +38,7 @@ sp_changedistributor_password [ @password= ] 'password'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @password = ] 'password'`새 암호입니다. *password* 는 **sysname**이며 기본값은 없습니다. 배포자가 로컬 인 경우 **distributor_admin** 시스템 로그인의 암호가 변경 됩니다.  
+`[ @password = ] 'password'` 새 암호입니다. *password* 는 **sysname**이며 기본값은 없습니다. 배포자가 로컬 인 경우 **distributor_admin** 시스템 로그인의 암호가 변경 됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -51,7 +52,7 @@ sp_changedistributor_password [ @password= ] 'password'
 ## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할의 멤버만 **sp_changedistributor_password**를 실행할 수 있습니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [복제 보안 설정 보기 및 수정](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
  [배포자 보안 설정](../../relational-databases/replication/security/secure-the-distributor.md)   
  [Transact-sql&#41;sp_adddistributor &#40;](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md)   

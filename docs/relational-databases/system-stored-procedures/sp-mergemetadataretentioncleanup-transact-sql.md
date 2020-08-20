@@ -1,4 +1,5 @@
 ---
+description: sp_mergemetadataretentioncleanup(Transact-SQL)
 title: sp_mergemetadataretentioncleanup (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4e8d6343-2a38-421d-a3f3-c37d437a0f88
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9e922d92f217cead21116b61ebd828a1dd588abb
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 7c0a186852c704a5ab21fd31864de9aa019078df
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891599"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464155"
 ---
 # <a name="sp_mergemetadataretentioncleanup-transact-sql"></a>sp_mergemetadataretentioncleanup(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,7 +47,7 @@ sp_mergemetadataretentioncleanup [ [ @num_genhistory_rows = ] num_genhistory_row
   
 `[ @num_tombstone_rows = ] num_tombstone_rows OUTPUT`[MSmerge_tombstone](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md) 테이블에서 정리 된 행 수를 반환 합니다. *num_tombstone_rows* 은 **int**이며 기본값은 **0**입니다.  
   
-`[ @aggressive_cleanup_only = ] aggressive_cleanup_only`내부용 으로만 사용 됩니다.  
+`[ @aggressive_cleanup_only = ] aggressive_cleanup_only` 내부용 으로만 사용 됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
