@@ -1,4 +1,5 @@
 ---
+description: UnionAggregate(geometry 데이터 형식)
 title: UnionAggregate (geometry 데이터 형식) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: dc7929cc-55ca-4a2c-a4b9-f5452f95bde8
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 1f518b22b4d7aaaf6e100a4f10c91d463d80e495
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 832c49b68150be650885176b301ecd772cac82e2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554910"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472432"
 ---
 # <a name="unionaggregate-geometry-data-type"></a>UnionAggregate(geometry 데이터 형식)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -53,7 +54,7 @@ UnionAggregate ( geometry_operand )
 > [!NOTE]  
 >  이 메서드는 모든 입력 값이 **null**인 경우 **null**을 반환합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 테이블 변수에 있는 **geometry** 개체 집합의 합집합을 반환합니다.  
  ```
  -- Setup table variable for UnionAggregate example 

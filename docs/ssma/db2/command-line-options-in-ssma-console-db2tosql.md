@@ -1,4 +1,5 @@
 ---
+description: SSMA 콘솔의 명령줄 옵션 (DB2ToSQL)
 title: SSMA 콘솔의 명령줄 옵션 (DB2ToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 237354e9-25c4-4386-9d1f-ca0618d4a9a0
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 32167639a12d86a7bf3cf84b3895537af551d8d5
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 5dde1168e8107f01f06d5e60fb2b1853d47abc43
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87937043"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472526"
 ---
 # <a name="command-line-options-in-ssma-console-db2tosql"></a>SSMA 콘솔의 명령줄 옵션 (DB2ToSQL)
 Microsoft에서는 SSMA 활동을 실행 하 고 제어 하는 강력한 set 명령줄 옵션을 제공 합니다. 결과 섹션에서 자세히 설명 합니다.  

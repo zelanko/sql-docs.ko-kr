@@ -1,4 +1,5 @@
 ---
+description: 문자열 함수(Visual FoxPro ODBC 드라이버)
 title: 문자열 함수 (Visual FoxPro ODBC 드라이버) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1974fd26-ef0d-45d5-860b-298917c8e9c3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 988ba23b95f6b138148b1fa17ad303d7aa2dc895
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4ab2ecefb604183b0387a561f72494028c62d15f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299193"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471545"
 ---
 # <a name="string-functions-visual-foxpro-odbc-driver"></a>문자열 함수(Visual FoxPro ODBC 드라이버)
 다음 표에서는 Visual FoxPro ODBC 드라이버에서 지 원하는 ODBC 문자열 조작 함수를 보여 줍니다. 동일한 함수에 대 한 Visual FoxPro 문법이 ODBC 구문과 다를 경우 Visual FoxPro와 동일한 항목이 나열 됩니다.  

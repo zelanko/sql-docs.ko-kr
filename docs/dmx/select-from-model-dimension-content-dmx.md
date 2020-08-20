@@ -1,4 +1,5 @@
 ---
+description: 모델에서 &lt; 선택 &gt; 합니다. DIMENSION_CONTENT (DMX)
 title: 모델에서 &lt; 선택 &gt; 합니다. DIMENSION_CONTENT (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: d16b8b01251be6703350a1a64bb9cdd2bdc5cadb
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: e3d7bbfcce023ce994f71a5897a1cbf4b0095419
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970591"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472035"
 ---
 # <a name="select-from-ltmodelgtdimension_content-dmx"></a>모델에서 &lt; 선택 &gt; 합니다. DIMENSION_CONTENT (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -66,7 +67,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.Dimension_CONTENT
 |MARGINAL_PROBABILITY|멤버 속성|  
 |NODE_SUPPORT|멤버 속성|  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="description"></a>Description  
  이 예에서는 `[TM Decision Tree]` 모델 내용에서 모델을 차원으로 사용하는 데 적합한 모든 열을 선택합니다.  

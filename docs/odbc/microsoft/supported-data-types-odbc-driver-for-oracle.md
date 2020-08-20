@@ -1,4 +1,5 @@
 ---
+description: 지원되는 데이터 형식(Oracle용 ODBC 드라이버)
 title: 지원 되는 데이터 형식 (Oracle 용 ODBC 드라이버) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 21d5f8d9-a3aa-4aa4-bc37-ff8bc90c0870
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 313254a3a117984d666d7c7be7e506386ae34e3b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d53cdb9a270149866b2a480496f39adcb20e4d56
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301118"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471515"
 ---
 # <a name="supported-data-types-odbc-driver-for-oracle"></a>지원되는 데이터 형식(Oracle용 ODBC 드라이버)
 > [!IMPORTANT]  
@@ -34,7 +35,7 @@ ms.locfileid: "81301118"
 |CLOB|해당 없음|지원되지 않음|  
 |DATE|지원됨|지원됨|  
 |FLOAT|지원됨|지원됨|  
-|INTEGER|지원됨|지원됨|  
+|정수|지원됨|지원됨|  
 |LONG|지원됨|지원됨|  
 |LONG RAW|지원됨|지원됨|  
 |NCHAR|해당 없음|지원되지 않음|  
@@ -43,7 +44,7 @@ ms.locfileid: "81301118"
 |NVARCHAR2|해당 없음|지원되지 않음|  
 |RAW|지원됨|지원됨|  
 |VARCHAR2|지원됨|지원됨|  
-|MLSLABEL|지원 안 됨|지원 안 됨|  
+|MLSLABEL|지원되지 않습니다.|지원되지 않습니다.|  
   
 > [!NOTE]  
 >  VARCHAR 열에 허용 되는 크기에 대 한 자세한 내용은이 가이드의 [Varchar 열 크기](../../odbc/microsoft/varchar-column-size-odbc-driver-for-oracle.md) 를 참조 하십시오.

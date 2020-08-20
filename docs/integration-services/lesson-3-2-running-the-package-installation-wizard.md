@@ -1,4 +1,5 @@
 ---
+description: 3-2단원 - 패키지 설치 마법사 실행
 title: '2단계: 패키지 설치 마법사 실행 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: f91fbb89-4626-4c47-b96d-56052dc45861
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ea753e6d74ae5073936cbb98bc0eed716f224dd7
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f30bc07edc2d6d513eb9078e1758caf99a2822cf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922217"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472061"
 ---
 # <a name="lesson-3-2---running-the-package-installation-wizard"></a>3-2단원 - 패키지 설치 마법사 실행
 
@@ -50,7 +51,7 @@ ms.locfileid: "86922217"
   
 9. 설치 폴더 선택 페이지에서 **찾아보기**를 클릭합니다.  
   
-10. **폴더 찾아보기** 대화 상자에서 **내 컴퓨터** 를 확장한 다음 **로컬 디스크(C:)** 를 클릭합니다.  
+10. **폴더 찾아보기** 대화 상자에서 **내 컴퓨터**를 확장한 다음 **로컬 디스크 (C:)** 를 클릭합니다.  
   
 11. **새 폴더 만들기** 를 클릭하고 새 폴더의 기본 이름인 **새 폴더**를 **DeploymentTutorialInstall**로 바꿉니다.  
   

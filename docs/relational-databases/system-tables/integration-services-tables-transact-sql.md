@@ -1,4 +1,5 @@
 ---
+description: Integration Services 테이블(Transact-SQL)
 title: Integration Services 테이블 (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 683b181b-0091-4a9c-86db-bc577af43cec
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: c341ae73981eb0d06a2a1e64e804db9f81297fdd
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 05f7e319dbaec37761eb5488f9d9a33cce09f3a4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85773750"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473254"
 ---
 # <a name="integration-services-tables-transact-sql"></a>Integration Services 테이블(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

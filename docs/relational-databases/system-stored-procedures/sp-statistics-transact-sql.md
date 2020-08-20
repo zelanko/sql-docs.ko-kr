@@ -1,4 +1,5 @@
 ---
+description: sp_statistics(Transact-SQL)
 title: sp_statistics (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ ms.assetid: 0bb6495f-258a-47ec-9f74-fd16671d23b8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 34d4b7763fd35b2012a90240a4d27fa27018f828
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: bd5a7fa747241cfbfa767219894ba937a63ce7c7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173108"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473729"
 ---
 # <a name="sp_statistics-transact-sql"></a>sp_statistics(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -46,19 +47,19 @@ sp_statistics [ @table_name = ] 'table_name'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @table_name = ] 'table_name'`카탈로그 정보를 반환 하는 데 사용 되는 테이블을 지정 합니다. *table_name* 는 **sysname**이며 기본값은 없습니다. 와일드카드 패턴 일치는 지원되지 않습니다.  
+`[ @table_name = ] 'table_name'` 카탈로그 정보를 반환 하는 데 사용 되는 테이블을 지정 합니다. *table_name* 는 **sysname**이며 기본값은 없습니다. 와일드카드 패턴 일치는 지원되지 않습니다.  
   
-`[ @table_owner = ] 'owner'`카탈로그 정보를 반환 하는 데 사용 되는 테이블의 소유자 이름입니다. *table_owner* 는 **sysname**이며 기본값은 NULL입니다. 와일드카드 패턴 일치는 지원되지 않습니다. *Owner* 를 지정 하지 않은 경우 기본 DBMS의 기본 테이블 표시 규칙이 적용 됩니다.  
+`[ @table_owner = ] 'owner'` 카탈로그 정보를 반환 하는 데 사용 되는 테이블의 소유자 이름입니다. *table_owner* 는 **sysname**이며 기본값은 NULL입니다. 와일드카드 패턴 일치는 지원되지 않습니다. *Owner* 를 지정 하지 않은 경우 기본 DBMS의 기본 테이블 표시 규칙이 적용 됩니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 현재 사용자가 지정된 이름의 테이블을 소유한 경우 해당 테이블의 인덱스가 반환됩니다. *Owner* 를 지정 하지 않은 경우 현재 사용자가 지정 된 *이름의*테이블을 소유 하 고 있지 않은 경우이 프로시저는 데이터베이스 소유자가 소유한 지정 된 *이름의* 테이블을 찾습니다. 테이블이 있을 경우 해당 테이블의 인덱스가 반환됩니다.  
   
-`[ @table_qualifier = ] 'qualifier'`테이블 한정자의 이름입니다. *한정자* 는 **sysname**이며 기본값은 NULL입니다. 다양 한 DBMS 제품에서 테이블에 대해 세 부분으로 구성 되는 이름 (_한정자_)을 지원**합니다.** _소유자_**.** _이름_). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 이 매개 변수는 데이터베이스 이름을 나타냅니다. 일부 제품에서는 테이블 데이터베이스 환경의 서버 이름을 나타냅니다.  
+`[ @table_qualifier = ] 'qualifier'` 테이블 한정자의 이름입니다. *한정자* 는 **sysname**이며 기본값은 NULL입니다. 다양 한 DBMS 제품에서 테이블에 대해 세 부분으로 구성 되는 이름 (_한정자_)을 지원**합니다.** _소유자_**.** _이름_). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 이 매개 변수는 데이터베이스 이름을 나타냅니다. 일부 제품에서는 테이블 데이터베이스 환경의 서버 이름을 나타냅니다.  
   
-`[ @index_name = ] 'index_name'`인덱스 이름입니다. *index_name* 는 **sysname**이며 기본값 은%입니다. 와일드카드 패턴 일치가 지원됩니다.  
+`[ @index_name = ] 'index_name'` 인덱스 이름입니다. *index_name* 는 **sysname**이며 기본값 은%입니다. 와일드카드 패턴 일치가 지원됩니다.  
   
-`[ @is_unique = ] 'is_unique'`고유 인덱스 ( **Y**인 경우)만 반환할지 여부입니다. *is_unique* 은 **char (1)** 이며 기본값은 **N**입니다.  
+`[ @is_unique = ] 'is_unique'` 고유 인덱스 ( **Y**인 경우)만 반환할지 여부입니다. *is_unique* 은 **char (1)** 이며 기본값은 **N**입니다.  
   
-`[ @accuracy = ] 'accuracy'`통계의 카디널리티 및 페이지 정확도 수준입니다. *정확도* 는 **char (1)** 이며 기본값은 **Q**입니다. 카디널리티 및 페이지가 정확한 지 확인 하기 위해 통계를 업데이트 하려면 **E** 를 지정 합니다.  
+`[ @accuracy = ] 'accuracy'` 통계의 카디널리티 및 페이지 정확도 수준입니다. *정확도* 는 **char (1)** 이며 기본값은 **Q**입니다. 카디널리티 및 페이지가 정확한 지 확인 하기 위해 통계를 업데이트 하려면 **E** 를 지정 합니다.  
   
  **E** (SQL_ENSURE) 값은 통계를 무조건 검색 하도록 드라이버에 요청 합니다.  
   
@@ -97,7 +98,7 @@ sp_statistics [ @table_name = ] 'table_name'
 ## <a name="permissions"></a>사용 권한  
  스키마에 대한 SELECT 권한이 필요합니다.  
   
-## <a name="example-sssdwfull-and-sspdw"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="example-sssdwfull-and-sspdw"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  다음 예에서는 테이블에 대 한 정보를 반환 합니다 `DimEmployee` .  
   
 ```sql  

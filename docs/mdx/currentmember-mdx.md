@@ -1,4 +1,5 @@
 ---
+description: CurrentMember(MDX)
 title: CurrentMember (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 374a38d07c3174e799d01199e20e822f85deed13
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e04dd1146bc55d8d68475770a9077fc8d962b56d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68892918"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471875"
 ---
 # <a name="currentmember-mdx"></a>CurrentMember(MDX)
 
@@ -37,7 +38,7 @@ Hierarchy_Expression.CurrentMember
 > [!IMPORTANT]  
 >  차원에 표시 가능한 계층이 하나만 있는 경우 해당 차원 이름은 표시 가능한 유일한 계층으로 확인되므로 해당 계층을 차원 이름이나 계층 이름 중 하나로 참조할 수 있습니다. 예를 들어 `Measures.CurrentMember`는 Measures 차원의 유일한 계층으로 확인되므로 유효한 MDX 식입니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 쿼리는 **Currentmember** 를 사용 하 여 열, 행 및 조각 축의 계층에서 현재 멤버를 찾는 방법을 보여 줍니다.  
   
  `WITH MEMBER MEASURES.CURRENTDATE AS`  

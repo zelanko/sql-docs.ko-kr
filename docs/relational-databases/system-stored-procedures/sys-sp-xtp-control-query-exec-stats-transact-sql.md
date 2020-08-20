@@ -1,4 +1,5 @@
 ---
+description: sys.sp_xtp_control_query_exec_stats(Transact-SQL)
 title: sys. sp_xtp_control_query_exec_stats (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/13/2015
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4838125d-ad1e-479e-b7d2-42655e8f4f02
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7f451e3d6083a32db87c7e453413cf6b318e739f
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: 0963985b2f6f83d9be8c19be35fd16b0451dda8a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442657"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473422"
 ---
 # <a name="syssp_xtp_control_query_exec_stats-transact-sql"></a>sys.sp_xtp_control_query_exec_stats(Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -43,17 +44,17 @@ sp_xtp_control_query_exec_stats [ [ @new_collection_value = ] collection_value ]
 ```  
   
 ## <a name="arguments"></a>인수  
- @new_collection_value= *값*  
+ @new_collection_value = *값*  
  프로시저 수준 통계 컬렉션이 설정(1)되었는지 아니면 해제(0)되었는지를 결정합니다.  
   
- @new_collection_value는가 시작 될 때 0으로 설정 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ @new_collection_value 는가 시작 될 때 0으로 설정 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- @database_id= = *database_id*, @xtp_object_id = *procedure_id*  
+ @database_id = = *database_id*, @xtp_object_id = *procedure_id*  
  고유하게 컴파일된 저장 프로시저에 대한 데이터베이스 ID 및 개체 ID입니다. 인스턴스에 대해 statistics 컬렉션을 사용 하는 경우 ([sp_xtp_control_proc_exec_stats &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md)) 고유 하 게 컴파일된 저장 프로시저에 대 한 통계가 수집 됩니다. 인스턴스에 대해 통계 컬렉션을 해제하는 경우 개별적으로 고유하게 컴파일된 저장 프로시저에 대한 통계 컬렉션은 해제되지 않습니다.  
   
- Transact-sql을 사용 하 여 [&#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md), [&#41;&#40;](../../relational-databases/system-catalog-views/sys-procedures-transact-sql.md)transact-sql [DB_ID ](../../t-sql/functions/db-id-transact-sql.md)또는 &#40;&#41;[transact-sql OBJECT_ID](../../t-sql/functions/object-id-transact-sql.md) 를 사용 하 여 데이터베이스와 저장 프로시저에 대 한 id를 가져옵니다.  
+ Transact-sql을 사용 하 여 [&#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md), [&#41;&#40;](../../relational-databases/system-catalog-views/sys-procedures-transact-sql.md)transact-sql [DB_ID ](../../t-sql/functions/db-id-transact-sql.md)또는 &#40;&#41;[transact-sql OBJECT_ID ](../../t-sql/functions/object-id-transact-sql.md) 를 사용 하 여 데이터베이스와 저장 프로시저에 대 한 id를 가져옵니다.  
   
- @old_collection_value= *값*  
+ @old_collection_value = *값*  
  현재 상태를 반환합니다.  
   
 ## <a name="return-code"></a>반환 코드  
@@ -83,7 +84,7 @@ SELECT @c AS 'collection status';
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;시스템 저장 프로시저](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;시스템 저장 프로시저 ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [메모리 내 OLTP&#40;메모리 내 최적화&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: 기본 키 수정
 title: 기본 키 수정 | Microsoft 문서
 ms.custom: ''
 ms.date: 07/25/2017
@@ -14,12 +15,12 @@ ms.assetid: 8e2a15ba-1cd1-4408-b860-16c3ee37d635
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 86f2fa7037a7c113a452974f8565148d0a9417e3
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: f69001aa9bdc4785c992f019807b411f00b755b2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007116"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473057"
 ---
 # <a name="modify-primary-keys"></a>기본 키 수정
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -55,14 +56,14 @@ ms.locfileid: "86007116"
   
 3.  다음 표의 동작을 수행합니다.  
   
-    |수행할 작업|수행할 단계|  
+    |대상|수행할 단계|  
     |--------|------------------------|  
     |기본 키 이름 바꾸기|**이름** 상자에 새 이름을 입력합니다. 새 이름은 **선택한 기본/고유 키 또는 인덱스** 목록의 다른 이름과 중복되지 않아야 합니다.|  
     |클러스터형 옵션 설정|기본 키에 대한 클러스터형 인덱스를 만들려면 **CLUSTERED로 만들기**를 선택하고 드롭다운 목록 상자에서 옵션을 선택합니다. 클러스터형 인덱스는 테이블마다 하나씩만 만들 수 있습니다. 인덱스에 이 옵션을 사용할 수 없는 경우 기존의 클러스터형 인덱스에 대해 이 설정을 먼저 해제해야 합니다.<br /><br /> 이 옵션을 선택하지 않으면 고유 비클러스터형 인덱스가 만들어집니다.|  
     |채우기 비율 정의|**채우기 사양** 범주를 확장하고 0에서 100 사이의 정수를 **채우기 비율** 상자에 입력합니다. 채우기 비율과 그 사용 방법은 [인덱스의 채우기 비율 지정](../../relational-databases/indexes/specify-fill-factor-for-an-index.md)을 참조하세요.|  
     |열 순서 변경|**열**을 선택한 다음, 속성의 오른쪽에 있는 줄임표 **(...)** 를 클릭합니다. **인덱스 열** 대화 상자에서 기본 키의 열을 제거합니다. 그런 다음 이 열을 원하는 순서로 다시 추가합니다. 키에서 열을 제거하려면 **열** 이름 목록에서 열 이름을 제거하기만 하면 됩니다.|  
   
-4.  **파일** 메뉴에서 _테이블 이름_**저장**을 클릭합니다.  
+4.  **파일** 메뉴에서 ‘테이블 이름’ **저장**을 클릭합니다.__  
 
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
  **기본 키를 수정하려면**  

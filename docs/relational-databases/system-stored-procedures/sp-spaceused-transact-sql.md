@@ -1,4 +1,5 @@
 ---
+description: sp_spaceused(Transact-SQL)
 title: sp_spaceused (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/14/2017
@@ -18,12 +19,12 @@ ms.assetid: c6253b48-29f5-4371-bfcd-3ef404060621
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 91b38115cfcd9f688187fc7663e3da8c90d3d457
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 4b07a4f8ece975662127797f6f25ecd19ecc759c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173091"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473812"
 ---
 # <a name="sp_spaceused-transact-sql"></a>sp_spaceused(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -52,15 +53,15 @@ sp_spaceused [[ @objname = ] 'objname' ]
 *Objname* 을 지정 하지 않으면 전체 데이터베이스에 대해 결과가 반환 됩니다.  
 *objname* 은 **nvarchar (776)** 이며 기본값은 NULL입니다.  
 > [!NOTE]  
-> [!INCLUDE[sssdw-md](../../includes/sssdw-md.md)]및는 [!INCLUDE[sspdw-md](../../includes/sspdw-md.md)] 데이터베이스 및 테이블 개체만 지원 합니다.
+> [!INCLUDE[sssdw-md](../../includes/sssdw-md.md)] 및는 [!INCLUDE[sspdw-md](../../includes/sspdw-md.md)] 데이터베이스 및 테이블 개체만 지원 합니다.
   
-`[ @updateusage = ] 'updateusage'`공간 사용량 정보를 업데이트 하기 위해 DBCC UPDATEUSAGE을 실행 해야 함을 나타냅니다. *Objname* 을 지정 하지 않으면 전체 데이터베이스에서 문이 실행 됩니다. 그렇지 않으면 문이 *objname*에 대해 실행 됩니다. 값은 **true** 또는 **false**일 수 있습니다. *updateusage* 은 **varchar (5)** 이며 기본값은 **false**입니다.  
+`[ @updateusage = ] 'updateusage'` 공간 사용량 정보를 업데이트 하기 위해 DBCC UPDATEUSAGE을 실행 해야 함을 나타냅니다. *Objname* 을 지정 하지 않으면 전체 데이터베이스에서 문이 실행 됩니다. 그렇지 않으면 문이 *objname*에 대해 실행 됩니다. 값은 **true** 또는 **false**일 수 있습니다. *updateusage* 은 **varchar (5)** 이며 기본값은 **false**입니다.  
   
-`[ @mode = ] 'mode'`결과의 범위를 나타냅니다. 스트레치 된 테이블이 나 데이터베이스의 경우 *mode* 매개 변수를 사용 하 여 개체의 원격 부분을 포함 하거나 제외할 수 있습니다. 자세한 내용은 [Stretch Database](../../sql-server/stretch-database/stretch-database.md)를 참조하십시오.  
+`[ @mode = ] 'mode'` 결과의 범위를 나타냅니다. 스트레치 된 테이블이 나 데이터베이스의 경우 *mode* 매개 변수를 사용 하 여 개체의 원격 부분을 포함 하거나 제외할 수 있습니다. 자세한 내용은 [Stretch Database](../../sql-server/stretch-database/stretch-database.md)를 참조하십시오.  
   
  *Mode* 인수는 다음과 같은 값을 가질 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |ALL|로컬 부분과 원격 부분을 모두 포함 하는 개체 또는 데이터베이스의 저장소 통계를 반환 합니다.|  
 |LOCAL_ONLY|개체 또는 데이터베이스의 로컬 부분에 대 한 저장소 통계만 반환 합니다. 스트레치를 사용 하지 않는 개체 또는 데이터베이스는 when = ALL과 동일한 통계를 반환 합니다 @mode .|  
@@ -68,9 +69,9 @@ sp_spaceused [[ @objname = ] 'objname' ]
   
  *모드* 는 **varchar (11)** 이며 기본값은 **N'ALL '** 입니다.  
   
-`[ @oneresultset = ] oneresultset`단일 결과 집합을 반환할지 여부를 나타냅니다. *Oneresultset* 인수에는 다음 값을 사용할 수 있습니다.  
+`[ @oneresultset = ] oneresultset` 단일 결과 집합을 반환할지 여부를 나타냅니다. *Oneresultset* 인수에는 다음 값을 사용할 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |0|* \@ Objname* 이 null 이거나 지정 되지 않은 경우 두 개의 결과 집합이 반환 됩니다. 두 개의 결과 집합이 기본 동작입니다.|  
 |1|* \@ Objname* = null 또는를 지정 하지 않으면 단일 결과 집합이 반환 됩니다.|  
@@ -179,7 +180,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
 ## <a name="permissions"></a>사용 권한  
  **sp_spaceused** 를 실행할 수 있는 사용 권한은 **public** 역할에 부여됩니다. **db_owner** 고정 데이터베이스 역할의 멤버만 **\@updateusage** 매개 변수를 지정할 수 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-displaying-disk-space-information-about-a-table"></a>A. 테이블에 관한 디스크 공간 정보 표시  
  다음 예에서는 `Vendor` 테이블 및 해당 인덱스의 디스크 공간 정보를 알려 줍니다.  

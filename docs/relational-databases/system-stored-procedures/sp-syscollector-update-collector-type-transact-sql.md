@@ -1,4 +1,5 @@
 ---
+description: sp_syscollector_update_collector_type(Transact-SQL)
 title: sp_syscollector_update_collector_type (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 3c414dfd-d9ca-4320-81aa-949465b967bf
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f315b95b100315691d1ace30a3fe3bb2e9788d27
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 477fb448d91939933cea7132ad8b532de7a162e8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892795"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473592"
 ---
 # <a name="sp_syscollector_update_collector_type-transact-sql"></a>sp_syscollector_update_collector_type(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,15 +45,15 @@ sp_syscollector_update_collector_type [ @collector_type_uid = ] 'collector_type_
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @collector_type_uid = ] 'collector_type_uid'`수집기 유형의 GUID입니다. *collector_type_uid* 은 **uniqueidentifier**이며 NULL 인 경우 자동으로 만들어지고 OUTPUT으로 반환 됩니다.  
+`[ @collector_type_uid = ] 'collector_type_uid'` 수집기 유형의 GUID입니다. *collector_type_uid* 은 **uniqueidentifier**이며 NULL 인 경우 자동으로 만들어지고 OUTPUT으로 반환 됩니다.  
   
-`[ @name = ] 'name'`수집기 유형의 이름입니다. *name* 은 **sysname** 이며 반드시 지정 해야 합니다.  
+`[ @name = ] 'name'` 수집기 유형의 이름입니다. *name* 은 **sysname** 이며 반드시 지정 해야 합니다.  
   
-`[ @parameter_schema = ] 'parameter_schema'`이 수집기 유형에 대 한 XML 스키마입니다. *parameter_schema* **xml** 이며 특정 수집기 형식에 필요할 수 있습니다. 필요하지 않은 경우 이 인수는 NULL일 수 있습니다.  
+`[ @parameter_schema = ] 'parameter_schema'` 이 수집기 유형에 대 한 XML 스키마입니다. *parameter_schema* **xml** 이며 특정 수집기 형식에 필요할 수 있습니다. 필요하지 않은 경우 이 인수는 NULL일 수 있습니다.  
   
-`[ @collection_package_id = ] collection_package_id`는 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 컬렉션 집합에 사용 되는 컬렉션 패키지를 가리키는 고유한 로컬 식별자입니다. *collection_package_id* **uniqueidentifer** 필요 합니다. *Collection_package_id*에 대 한 값을 가져오려면 msdb 데이터베이스에서 dbo.syscollector_collector_types 시스템 뷰를 쿼리 합니다.  
+`[ @collection_package_id = ] collection_package_id` 는 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 컬렉션 집합에 사용 되는 컬렉션 패키지를 가리키는 고유한 로컬 식별자입니다. *collection_package_id* **uniqueidentifer** 필요 합니다. *Collection_package_id*에 대 한 값을 가져오려면 msdb 데이터베이스에서 dbo.syscollector_collector_types 시스템 뷰를 쿼리 합니다.  
   
-`[ @upload_package_id = ] upload_package_id`는 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 컬렉션 집합에 사용 되는 업로드 패키지를 가리키는 고유한 로컬 식별자입니다. *upload_package_id* 은 **uniqueidentifier** 이며 필수입니다. *Upload_package_id*에 대 한 값을 가져오려면 msdb 데이터베이스에서 dbo.syscollector_collector_types 시스템 뷰를 쿼리 합니다.  
+`[ @upload_package_id = ] upload_package_id` 는 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 컬렉션 집합에 사용 되는 업로드 패키지를 가리키는 고유한 로컬 식별자입니다. *upload_package_id* 은 **uniqueidentifier** 이며 필수입니다. *Upload_package_id*에 대 한 값을 가져오려면 msdb 데이터베이스에서 dbo.syscollector_collector_types 시스템 뷰를 쿼리 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -101,7 +102,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;시스템 저장 프로시저](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [데이터 수집](../../relational-databases/data-collection/data-collection.md)  
+ [Transact-sql&#41;&#40;시스템 저장 프로시저 ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [데이터 컬렉션](../../relational-databases/data-collection/data-collection.md)  
   
   

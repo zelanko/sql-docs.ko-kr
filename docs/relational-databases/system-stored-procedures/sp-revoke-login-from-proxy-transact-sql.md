@@ -1,4 +1,5 @@
 ---
+description: sp_revoke_login_from_proxy(Transact-SQL)
 title: sp_revoke_login_from_proxy (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e4546c13-9fba-4bab-8b42-d6f18b33ec25
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0819dbe8c2b4f76e638c09861d83ddb37e76da31
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 39857bce8c0fc50c1773709d70e7e477b669b282
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899231"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473861"
 ---
 # <a name="sp_revoke_login_from_proxy-transact-sql"></a>sp_revoke_login_from_proxy(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,9 +45,9 @@ sp_revoke_login_from_proxy
 ## <a name="arguments"></a>인수  
 `[ @name = ] 'name'`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]액세스 권한을 제거할 로그인, 서버 역할 또는 **msdb** 데이터베이스 역할의 이름입니다. *name* 은 **nvarchar (256)** 이며 기본값은 없습니다.  
   
-`[ @proxy_id = ] id`액세스 권한을 제거할 프록시의 id입니다. *Id* 또는 *proxy_name* 지정 해야 하지만 둘 다 지정할 수 없습니다. *Id* 는 **int**이며 기본값은 NULL입니다.  
+`[ @proxy_id = ] id` 액세스 권한을 제거할 프록시의 id입니다. *Id* 또는 *proxy_name* 지정 해야 하지만 둘 다 지정할 수 없습니다. *Id* 는 **int**이며 기본값은 NULL입니다.  
   
-`[ @proxy_name = ] 'proxy_name'`액세스 권한을 제거할 프록시의 이름입니다. *Id* 또는 *proxy_name* 지정 해야 하지만 둘 다 지정할 수 없습니다. *Proxy_name* 는 **sysname**이며 기본값은 NULL입니다.  
+`[ @proxy_name = ] 'proxy_name'` 액세스 권한을 제거할 프록시의 이름입니다. *Id* 또는 *proxy_name* 지정 해야 하지만 둘 다 지정할 수 없습니다. *Proxy_name* 는 **sysname**이며 기본값은 NULL입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -57,7 +58,7 @@ sp_revoke_login_from_proxy
 ## <a name="permissions"></a>사용 권한  
  이 저장 프로시저를 실행하려면 사용자가 **sysadmin** 고정 서버 역할의 멤버여야 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 로그인 `terrid`가 프록시 `Catalog application proxy`에 액세스할 수 있는 권한을 취소합니다.  
   
 ```  
@@ -71,7 +72,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;저장 프로시저 SQL Server 에이전트](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;저장 프로시저 SQL Server 에이전트 ](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
  [Transact-sql&#41;sp_grant_login_to_proxy &#40;](../../relational-databases/system-stored-procedures/sp-grant-login-to-proxy-transact-sql.md)   
  [Transact-sql&#41;sp_help_proxy &#40;](../../relational-databases/system-stored-procedures/sp-help-proxy-transact-sql.md)  
   

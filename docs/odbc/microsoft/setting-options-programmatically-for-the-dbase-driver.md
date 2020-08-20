@@ -1,4 +1,5 @@
 ---
+description: dBASE 드라이버에 프로그래밍 방식으로 옵션 설정
 title: DBASE 드라이버에 대해 프로그래밍 방식으로 옵션 설정 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 336d0fd4-5448-4d8c-b7d9-49e857228e36
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 75889d9ff3ccfe01f9b8d5141df7774205522815
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7c4b86b8284ca9a47e3ad40b1680a362035a3f13
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300783"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471585"
 ---
 # <a name="setting-options-programmatically-for-the-dbase-driver"></a>dBASE 드라이버에 프로그래밍 방식으로 옵션 설정
 

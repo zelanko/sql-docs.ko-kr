@@ -1,4 +1,5 @@
 ---
+description: sysmail_add_account_sp(Transact-SQL)
 title: sysmail_add_account_sp (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 65e15e2e-107c-49c3-b12c-f4edf0eb1617
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f3b97b134e424cb46b98b09001a86f66bb5e8c4d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 810e0f32b5a77fa60e2c32c4b9b7259d60fc51d3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891043"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473376"
 ---
 # <a name="sysmail_add_account_sp-transact-sql"></a>sysmail_add_account_sp(Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -51,31 +52,31 @@ sysmail_add_account_sp  [ @account_name = ] 'account_name',
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @account_name = ] 'account_name'`추가할 계정의 이름입니다. *account_name* 는 **sysname**이며 기본값은 없습니다.  
+`[ @account_name = ] 'account_name'` 추가할 계정의 이름입니다. *account_name* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @email_address = ] 'email_address'`메시지를 보낼 전자 메일 주소입니다. 이 주소는 인터넷 전자 메일 주소여야 합니다. *email_address* 은 **nvarchar (128)** 이며 기본값은 없습니다. 예를 들어 에이전트의 계정은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **SqlAgent \@ Adventure-Works.com**주소에서 전자 메일을 보낼 수 있습니다.  
+`[ @email_address = ] 'email_address'` 메시지를 보낼 전자 메일 주소입니다. 이 주소는 인터넷 전자 메일 주소여야 합니다. *email_address* 은 **nvarchar (128)** 이며 기본값은 없습니다. 예를 들어 에이전트의 계정은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **SqlAgent \@ Adventure-Works.com**주소에서 전자 메일을 보낼 수 있습니다.  
   
-`[ @display_name = ] 'display_name'`이 계정의 전자 메일 메시지에 사용할 표시 이름입니다. *display_name* 은 **nvarchar (128)** 이며 기본값은 NULL입니다. 예를 들어 에이전트 계정에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 전자 메일 메시지의 **자동 메일러 SQL Server 에이전트** 이름이 표시 될 수 있습니다.  
+`[ @display_name = ] 'display_name'` 이 계정의 전자 메일 메시지에 사용할 표시 이름입니다. *display_name* 은 **nvarchar (128)** 이며 기본값은 NULL입니다. 예를 들어 에이전트 계정에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 전자 메일 메시지의 **자동 메일러 SQL Server 에이전트** 이름이 표시 될 수 있습니다.  
   
-`[ @replyto_address = ] 'replyto_address'`이 계정에서 메시지에 대 한 응답을 보낼 주소입니다. *replyto_address* 은 **nvarchar (128)** 이며 기본값은 NULL입니다. 예를 들어 에이전트 계정에 대 한 회신 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 은 데이터베이스 관리자 인 **danw \@ Adventure-Works.com**로 이동할 수 있습니다.  
+`[ @replyto_address = ] 'replyto_address'` 이 계정에서 메시지에 대 한 응답을 보낼 주소입니다. *replyto_address* 은 **nvarchar (128)** 이며 기본값은 NULL입니다. 예를 들어 에이전트 계정에 대 한 회신 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 은 데이터베이스 관리자 인 **danw \@ Adventure-Works.com**로 이동할 수 있습니다.  
   
-`[ @description = ] 'description'`계정에 대 한 설명입니다. *description* 은 **nvarchar (256)** 이며 기본값은 NULL입니다.  
+`[ @description = ] 'description'` 계정에 대 한 설명입니다. *description* 은 **nvarchar (256)** 이며 기본값은 NULL입니다.  
   
-`[ @mailserver_name = ] 'server_name'`이 계정에 사용할 SMTP 메일 서버의 이름 또는 IP 주소입니다. 를 실행 하는 컴퓨터에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] IP 주소에 대 한 *server_name* 를 확인할 수 있어야 합니다. *server_name* 는 **sysname**이며 기본값은 없습니다.  
+`[ @mailserver_name = ] 'server_name'` 이 계정에 사용할 SMTP 메일 서버의 이름 또는 IP 주소입니다. 를 실행 하는 컴퓨터에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] IP 주소에 대 한 *server_name* 를 확인할 수 있어야 합니다. *server_name* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @mailserver_type = ] 'server_type'`전자 메일 서버의 유형입니다. *server_type* 는 **sysname**이며 기본값은 **' SMTP '** 입니다.  
+`[ @mailserver_type = ] 'server_type'` 전자 메일 서버의 유형입니다. *server_type* 는 **sysname**이며 기본값은 **' SMTP '** 입니다.  
   
-`[ @port = ] port_number`전자 메일 서버의 포트 번호입니다. *port_number* 은 **int**이며 기본값은 25입니다.  
+`[ @port = ] port_number` 전자 메일 서버의 포트 번호입니다. *port_number* 은 **int**이며 기본값은 25입니다.  
   
-`[ @username = ] 'username'`전자 메일 서버에 로그온 하는 데 사용할 사용자 이름입니다. *username* 은 **nvarchar (128)** 이며 기본값은 NULL입니다. 이 매개 변수가 NULL이면 데이터베이스 메일은 이 계정에 대한 인증을 사용하지 않습니다. 메일 서버에 인증이 필요하지 않은 경우 username에 NULL을 사용합니다.  
+`[ @username = ] 'username'` 전자 메일 서버에 로그온 하는 데 사용할 사용자 이름입니다. *username* 은 **nvarchar (128)** 이며 기본값은 NULL입니다. 이 매개 변수가 NULL이면 데이터베이스 메일은 이 계정에 대한 인증을 사용하지 않습니다. 메일 서버에 인증이 필요하지 않은 경우 username에 NULL을 사용합니다.  
   
-`[ @password = ] 'password'`전자 메일 서버에 로그온 하는 데 사용할 암호입니다. *password* 는 **nvarchar (128)** 이며 기본값은 NULL입니다. username을 지정하지 않으면 암호를 제공할 필요가 없습니다.  
+`[ @password = ] 'password'` 전자 메일 서버에 로그온 하는 데 사용할 암호입니다. *password* 는 **nvarchar (128)** 이며 기본값은 NULL입니다. username을 지정하지 않으면 암호를 제공할 필요가 없습니다.  
   
-`[ @use_default_credentials = ] use_default_credentials`의 자격 증명을 사용 하 여 메일을 SMTP 서버로 보낼지 여부를 지정 합니다 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . **use_default_credentials** 은 bit 이며 기본값은 0입니다. 이 매개 변수가 1이면 데이터베이스 메일은 [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 자격 증명을 사용합니다. 이 매개 변수가 0 이면 데이터베이스 메일는 ** \@ 사용자 이름** 및 ** \@ 암호** 매개 변수를 보내고, 그렇지 않은 경우 ** \@ 사용자 이름** 및 ** \@ 암호** 매개 변수 없이 메일을 보냅니다.  
+`[ @use_default_credentials = ] use_default_credentials` 의 자격 증명을 사용 하 여 메일을 SMTP 서버로 보낼지 여부를 지정 합니다 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . **use_default_credentials** 은 bit 이며 기본값은 0입니다. 이 매개 변수가 1이면 데이터베이스 메일은 [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 자격 증명을 사용합니다. 이 매개 변수가 0 이면 데이터베이스 메일는 ** \@ 사용자 이름** 및 ** \@ 암호** 매개 변수를 보내고, 그렇지 않은 경우 ** \@ 사용자 이름** 및 ** \@ 암호** 매개 변수 없이 메일을 보냅니다.  
   
-`[ @enable_ssl = ] enable_ssl`데이터베이스 메일에서 SSL(Secure Sockets Layer)를 사용 하 여 통신을 암호화할지 여부를 지정 합니다. **Enable_ssl** 은 bit 이며 기본값은 0입니다.  
+`[ @enable_ssl = ] enable_ssl` 데이터베이스 메일에서 SSL(Secure Sockets Layer)를 사용 하 여 통신을 암호화할지 여부를 지정 합니다. **Enable_ssl** 은 bit 이며 기본값은 0입니다.  
   
-`[ @account_id = ] account_id OUTPUT`새 계정에 대 한 계정 id를 반환 합니다. *account_id* 은 **int**이며 기본값은 NULL입니다.  
+`[ @account_id = ] account_id OUTPUT` 새 계정에 대 한 계정 id를 반환 합니다. *account_id* 은 **int**이며 기본값은 NULL입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -92,7 +93,7 @@ sysmail_add_account_sp  [ @account_name = ] 'account_name',
 ## <a name="permissions"></a>사용 권한  
  이 프로시저에 대 한 실행 권한은 기본적으로 **sysadmin** 고정 서버 역할의 멤버로 사용 됩니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `AdventureWorks Administrator`라는 계정을 만듭니다. 이 계정은 `dba@Adventure-Works.com`이라는 전자 메일 주소를 사용하고 SMTP 메일 서버 `smtp.Adventure-Works.com`으로 메일을 보냅니다. 이 계정에서 보낸 전자 메일 메시지는 `AdventureWorks Automated Mailer` 메시지의 **보낸 사람:** 줄에 표시 됩니다. 메시지에 대한 회신은 `danw@Adventure-Works.com`으로 전달됩니다.  
   
 ```  
@@ -107,6 +108,6 @@ EXECUTE msdb.dbo.sysmail_add_account_sp
 ## <a name="see-also"></a>참고 항목  
  [데이터베이스 메일](../../relational-databases/database-mail/database-mail.md)   
  [데이터베이스 메일 계정 만들기](../../relational-databases/database-mail/create-a-database-mail-account.md)   
- [Transact-sql&#41;&#40;저장 프로시저 데이터베이스 메일](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [Transact-sql&#41;&#40;저장 프로시저 데이터베이스 메일 ](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

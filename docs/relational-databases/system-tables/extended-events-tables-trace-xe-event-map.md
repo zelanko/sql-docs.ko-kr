@@ -1,4 +1,5 @@
 ---
+description: 확장 이벤트 테이블 - trace_xe_event_map
 title: trace_xe_event_map (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 537aa292-3540-47e8-be28-56dc01abc343
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 154eb6731264fb8363aff0825e3ec0639e4e142c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f50922734694bb937a5ab4e299778d7782224241
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750194"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473284"
 ---
 # <a name="extended-events-tables---trace_xe_event_map"></a>확장 이벤트 테이블 - trace_xe_event_map
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

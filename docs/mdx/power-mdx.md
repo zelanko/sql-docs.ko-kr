@@ -1,4 +1,5 @@
 ---
+description: ^ (거듭제곱)(MDX)
 title: ^ (거듭제곱) (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 9b1ebeaca9e81103d2038d6f7a34fe9221cc68f4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 683b1390a0322dc06e3601b0e6675b203c18d7c5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68055595"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471685"
 ---
 # <a name="-power-mdx"></a>^ (거듭제곱)(MDX)
 
@@ -31,7 +32,7 @@ Numeric_Expression ^ Numeric_Expression
  *Numeric_Expression*  
  숫자 값을 반환하는 유효한 MDX 식입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
  우선 순위가 더 높은 매개 변수의 데이터 형식을 갖는 값입니다.  
   
 ## <a name="remarks"></a>설명  

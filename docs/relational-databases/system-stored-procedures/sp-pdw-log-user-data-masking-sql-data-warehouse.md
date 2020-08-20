@@ -1,4 +1,5 @@
 ---
+description: sp_pdw_log_user_data_masking (SQL Data Warehouse)
 title: sp_pdw_log_user_data_masking (SQL Data Warehouse) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -11,12 +12,12 @@ ms.assetid: 43c63b42-03cb-4fb5-8362-ec3b7e22a590
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: ea363af9a4f9362e7aa9d09ab29b8a5a9e1a2b5c
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 0857ffe4bae954efdbad4e1e692069a2b3eeab60
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173210"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473989"
 ---
 # <a name="sp_pdw_log_user_data_masking-sql-data-warehouse"></a>sp_pdw_log_user_data_masking (SQL Data Warehouse)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -39,7 +40,7 @@ sp_pdw_log_user_data_masking [ [ @masking_mode = ] value ] ;
 ```  
   
 #### <a name="parameters"></a>매개 변수  
-`[ @masking_mode = ] masking_mode`투명 한 데이터 암호화 로그 사용자 데이터 마스킹을 사용 하는지 여부를 결정 합니다. *masking_mode* 은 **int**이며 다음 값 중 하나일 수 있습니다.  
+`[ @masking_mode = ] masking_mode` 투명 한 데이터 암호화 로그 사용자 데이터 마스킹을 사용 하는지 여부를 결정 합니다. *masking_mode* 은 **int**이며 다음 값 중 하나일 수 있습니다.  
   
 -   0 = 사용 안 함, 사용자 데이터가 활동 로그에 표시 됩니다 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] .  
   

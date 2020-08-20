@@ -1,4 +1,5 @@
 ---
+description: 지원되는 FoxPro 버전
 title: FoxPro의 지원 되는 버전 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 203fdabe-9b5c-4840-824c-792b508262c2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 400a3a29bebd5fbd8c19bef1e3d027549394595e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e964b4a8627ed3190efd63bbbc908c2282b15fee
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81286183"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471485"
 ---
 # <a name="supported-versions-of-foxpro"></a>지원되는 FoxPro 버전
 Microsoft® Visual FoxPro® ODBC 드라이버를 사용 하 여 FoxPro 테이블에 저장 된 데이터에 액세스할 수 있습니다. 다음 버전의 FoxPro 데이터가 지원 됩니다.  

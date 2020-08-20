@@ -1,4 +1,5 @@
 ---
+description: OR(MDX)
 title: OR (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 45063e9f2aca6a924289d4d52434535d16c9a08e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d5ea3e65dd9bad768ef829858d42d6e4adea7a72
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68055713"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471755"
 ---
 # <a name="or-mdx"></a>OR(MDX)
 
@@ -34,13 +35,13 @@ Expression1 OR Expression2
  Expression2  
  숫자 값을 반환하는 유효한 MDX 식입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
  둘 중 하나 또는 둘 다가 **true**로 평가 되는 경우 **true** 를 반환 하는 부울 값입니다. 그렇지 않으면 **false**입니다.  
   
 ## <a name="remarks"></a>설명  
  **OR** 연산자는 연산자가 논리 분리를 수행 하기 전에 두 인수를 모두 부울 값 (0, 0, 0, **0, 0)으로**처리 **합니다.** 다음 표에서는 **OR** 연산자가 논리 분리를 수행 하는 방법을 보여 줍니다.  
   
-|*Expression1*|*Expression2*|Return Value|  
+|*Expression1*|*Expression2*|반환 값|  
 |-------------------|-------------------|------------------|  
 |**true**|**true**|**true**|  
 |**true**|**false**|**true**|  

@@ -1,4 +1,5 @@
 ---
+description: 테이블에 열 추가(데이터베이스 엔진)
 title: 테이블에 열 추가(데이터베이스 엔진) | Microsoft 문서
 ms.custom: ''
 ms.date: 10/27/2016
@@ -15,12 +16,12 @@ ms.assetid: abeb8d52-d562-4e29-9e1e-2923ae874859
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a0212f7615feb36b9c9f14d0a07e28445fac5597
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: ad7cb3cdba7b9b20a28362b8570cc6e2fc0b04d1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394490"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473080"
 ---
 # <a name="add-columns-to-a-table-database-engine"></a>테이블에 열 추가(데이터베이스 엔진)
 
@@ -57,9 +58,9 @@ ms.locfileid: "87394490"
 5. **열 속성** 탭에서 다른 열 속성을 계속 정의합니다.
 
     > [!NOTE]
-    > 새 열을 만들면 열 속성에 기본값이 자동으로 추가됩니다. 이러한 값은 **열 속성** 탭에서 변경할 수 있습니다.
+    >  새 열을 만들면 열 속성에 기본값이 자동으로 추가됩니다. 이러한 값은 **열 속성** 탭에서 변경할 수 있습니다.
 
-6. 열을 모두 추가했으면 **파일** 메뉴에서 ‘테이블 이름’ **저장**을 선택합니다. 
+6. 열을 모두 추가했으면 **파일** 메뉴에서 ‘테이블 이름’ **저장을 선택합니다.** __
   
 ## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용
   

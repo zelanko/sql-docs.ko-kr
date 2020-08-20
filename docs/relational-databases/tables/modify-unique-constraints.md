@@ -1,4 +1,5 @@
 ---
+description: UNIQUE 제약 조건 수정
 title: UNIQUE 제약 조건 수정 | Microsoft 문서
 ms.custom: ''
 ms.date: 10/12/2016
@@ -16,12 +17,12 @@ ms.assetid: fddbdc9e-958b-4614-8e88-6ca205d64a4e
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ca363d76f8c2bc624ad0e8889d10f2dd4883685e
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 5df4a0e197a55262afb57382ad1145194b66d3db
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007101"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473048"
 ---
 # <a name="modify-unique-constraints"></a>UNIQUE 제약 조건 수정
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -59,14 +60,14 @@ ms.locfileid: "86007101"
   
 4.  다음 표의 동작을 수행합니다.  
   
-    |수행할 작업|수행할 단계|  
+    |대상|수행할 단계|  
     |--------|------------------------|  
     |제약 조건이 연결된 열 변경|1) **(일반)** 아래의 표에서 **열** 을 클릭한 다음, 속성 오른쪽에 있는 줄임표 **(…)** 를 클릭합니다.<br /><br /> 2) **인덱스 열** 대화 상자에서 인덱스에 대해 새 열 또는 정렬 순서 또는 두 가지 옵션을 모두 지정합니다.|  
     |제약 조건 이름 바꾸기|**ID**아래의 표에서 **이름** 상자에 새 이름을 입력합니다. 새 이름은 **선택한 기본/고유 키 또는 인덱스** 목록의 다른 이름과 중복되지 않아야 합니다.|  
     |클러스터형 옵션 설정|**테이블 디자이너** 아래의 표에서 **클러스터형으로 만들기**를 선택한 다음 클러스터형 인덱스를 만들려면 드롭다운에서 예를 선택하고 비클러스터형 인덱스를 만들려면 아니요를 선택합니다. 클러스터형 인덱스는 테이블마다 하나씩만 만들 수 있습니다. 클러스터형 인덱스가 이미 이 테이블에 있는 경우 원본 인덱스에 대해 이 설정을 먼저 해제해야 합니다.|  
     |채우기 비율 정의|**테이블 디자이너**아래의 표에서 **파일 사양** 범주를 확장하고 0에서 100 사이의 정수를 **채우기 비율** 상자에 입력합니다.|  
   
-5.  **파일** 메뉴에서 _테이블 이름_**저장**을 클릭합니다.  
+5.  **파일** 메뉴에서 ‘테이블 이름’ **저장**을 클릭합니다.__  
   
 ##  <a name="to-modify-a-unique-constraint"></a><a name="TsqlProcedure"></a> **UNIQUE 제약 조건을 수정하려면 다음을 수행합니다.**  
   

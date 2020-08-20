@@ -1,4 +1,5 @@
 ---
+description: NOT(MDX)
 title: NOT (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 4031b887eb0a42580d6ae8debf6c9177ff67efc3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6c0cfa43896457397f2e2e08bac0b3de1d61e73f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68088232"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471785"
 ---
 # <a name="not-mdx"></a>NOT(MDX)
 
@@ -31,13 +32,13 @@ NOT Expression1
  *Expression1*  
  숫자 값을 반환하는 유효한 MDX 식입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
  인수가 **true**로 평가 되는 경우 **false** 를 반환 하는 부울 값입니다. 그렇지 않으면 **true**입니다.  
   
 ## <a name="remarks"></a>설명  
  **Not** 연산자는 연산자가 논리 부정을 수행 하기 전에 식을 부울 값 (0, 0, 0, 0, **0, 0)으로**처리 **합니다.** 다음 표에서는 **not** 연산자가 논리 부정을 수행 하는 방법을 보여 줍니다.  
   
-|*Expression1*|Return Value|  
+|*Expression1*|반환 값|  
 |-------------------|------------------|  
 |**true**|**false**|  
 |**false**|**true**|  

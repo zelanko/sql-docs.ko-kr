@@ -1,4 +1,5 @@
 ---
+description: CLR 함수 만들기
 title: CLR 함수 만들기 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/16/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a82df075-2243-4e19-bfe1-ae6d65dabd0f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dd0860bc09c4b4ee1d1a67130f58a75c86dd0625
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: 97cbd5543bd73001f599a25eaa9a79f493f40f58
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86053599"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472921"
 ---
 # <a name="create-clr-functions"></a>CLR 함수 만들기
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]

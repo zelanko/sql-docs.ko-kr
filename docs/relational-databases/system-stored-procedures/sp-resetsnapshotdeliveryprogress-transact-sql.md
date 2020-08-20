@@ -1,4 +1,5 @@
 ---
+description: sp_resetsnapshotdeliveryprogress(Transact-SQL)
 title: sp_resetsnapshotdeliveryprogress (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5df7d86b-d343-4d9b-88b1-74429ed092e6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 918bd98410de1c82de9098dab5f6e74c32ebf7f1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8a6a4c0114077910f34f548db1f2b0b26d652f4a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901396"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473846"
 ---
 # <a name="sp_resetsnapshotdeliveryprogress-transact-sql"></a>sp_resetsnapshotdeliveryprogress(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,9 +39,9 @@ sp_resetsnapshotdeliveryprogress [ [ @verbose_level = ] verbose_level ]
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @verbose_level = ] verbose_level`반환 되는 정보의 양을 지정 합니다. *verbose_level*은 **int**이며 기본값은 **1**입니다. 값 **1** 은 **MSsnapshotdeliveryprogress** 테이블에서 필요한 잠금을 얻을 수 없는 경우 오류가 반환 됨을 의미 하 고 **0** 은 반환 된 오류가 없음을 의미 합니다.  
+`[ @verbose_level = ] verbose_level` 반환 되는 정보의 양을 지정 합니다. *verbose_level*은 **int**이며 기본값은 **1**입니다. 값 **1** 은 **MSsnapshotdeliveryprogress** 테이블에서 필요한 잠금을 얻을 수 없는 경우 오류가 반환 됨을 의미 하 고 **0** 은 반환 된 오류가 없음을 의미 합니다.  
   
-`[ @drop_table = ] 'drop_table'`스냅숏의 진행에 대 한 정보를 포함 하는 테이블을 삭제 하거나 잘라낼 지 여부입니다. *drop_table* 은 **nvarchar (5)** 이며 기본값은 **FALSE**입니다. FALSE는 테이블을 잘라내며 TRUE는 테이블을 삭제합니다.  
+`[ @drop_table = ] 'drop_table'` 스냅숏의 진행에 대 한 정보를 포함 하는 테이블을 삭제 하거나 잘라낼 지 여부입니다. *drop_table* 은 **nvarchar (5)** 이며 기본값은 **FALSE**입니다. FALSE는 테이블을 잘라내며 TRUE는 테이블을 삭제합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

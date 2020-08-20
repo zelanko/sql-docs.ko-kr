@@ -1,4 +1,5 @@
 ---
+description: sysmergesubscriptions(Transact-SQL)
 title: sysmergesubscriptions (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6adc78da-991d-4c08-98c3-ecb4762e0e99
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3ed8e5b745c98bf6559ab0513e79205e8f9de458
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ffb85633adfe9b8aceb05a5188e67e951d6be190
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881342"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473176"
 ---
 # <a name="sysmergesubscriptions-transact-sql"></a>sysmergesubscriptions(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -64,7 +65,7 @@ ms.locfileid: "85881342"
 |subscriber_number|**int**|내부적으로만 사용됩니다.|  
 |last_makegeneration_datetime|**datetime**|Makegeneration 프로세스가 게시자에 대해 실행 한 마지막 **날짜/시간** 입니다. 자세한 내용은 [Replication 병합 에이전트](../../relational-databases/replication/agents/replication-merge-agent.md)의-MakeGenerationInterval 매개 변수를 참조 하세요.|  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [복제 테이블&#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: 데스크톱 데이터베이스 드라이버에 대한 진단
 title: 데스크톱 데이터베이스 드라이버에 대 한 진단 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1c3740eb-62c6-4009-b4b2-570fcf5661e4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 99603c047e77d3cd3e077c1b07c2192eeb65f93c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: eb5e4233ae77979df7b4b76ea845634fd7fd6ded
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303484"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471595"
 ---
 # <a name="diagnostics-for-desktop-database-drivers"></a>데스크톱 데이터베이스 드라이버에 대한 진단
 드라이버 관리자가 검사 하거나 부분적으로 검사 하지 않은 모든 오류 및 경고는 드라이버에 의해 처리 됩니다. 또한 드라이버는 네이티브 오류 또는 데이터 소스에서 반환 된 오류를 SQLSTATEs에 매핑합니다. *ODBC 프로그래머 참조* 에 나열 된 각 함수에는 조건 및 메시지를 지정 하는 "진단" 섹션이 포함 되어 있습니다.  
@@ -30,7 +31,7 @@ ms.locfileid: "81303484"
 |DiagIdentifiers|지원 수준|  
 |---------------------|-------------------|  
 |SQL_DIA_DYNAMIC_FUNCTION|지원되지 않음|  
-|SQL_DIAG_CLASS_ORIGIN|지원됩니다. 이 드라이버의 버전 3.0 이상에서는 항상 "ODBC 3.0"입니다.|  
+|SQL_DIAG_CLASS_ORIGIN|지원됨. 이 드라이버의 버전 3.0 이상에서는 항상 "ODBC 3.0"입니다.|  
 |SQL_DIAG_COLUMN_NUMBER|지원됨|  
 |SQL_DIAG_CURSOR_ROW_COUNT|지원되지 않음|  
 |SQL_DIAG_DYNAMIC_FUNCTION_CODE|지원되지 않음|  

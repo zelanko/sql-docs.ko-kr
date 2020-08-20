@@ -1,4 +1,5 @@
 ---
+description: sp_stop_job(Transact-SQL)
 title: sp_stop_job (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/01/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 64b4cc75-99a0-421e-b418-94e37595bbb0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7be2717c1f98291c0ce60b25e4290c20d23a86ae
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2314cec4cbb66893eb77ed6c8b025355c319de71
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892992"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473690"
 ---
 # <a name="sp_stop_job-transact-sql"></a>sp_stop_job(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,16 +45,16 @@ sp_stop_job
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @job_name = ] 'job_name'`중지할 작업의 이름입니다. *job_name* 는 **sysname**이며 기본값은 NULL입니다.  
+`[ @job_name = ] 'job_name'` 중지할 작업의 이름입니다. *job_name* 는 **sysname**이며 기본값은 NULL입니다.  
   
-`[ @job_id = ] job_id`중지할 작업의 id입니다. *job_id* 은 **uniqueidentifier**이며 기본값은 NULL입니다.  
+`[ @job_id = ] job_id` 중지할 작업의 id입니다. *job_id* 은 **uniqueidentifier**이며 기본값은 NULL입니다.  
   
-`[ @originating_server = ] 'master_server'`마스터 서버의 이름입니다. 지정된 경우 모든 다중 서버 작업이 중지됩니다. *master_server* 은 **nvarchar (128)** 이며 기본값은 NULL입니다. 대상 서버에서 **sp_stop_job** 를 호출할 때만이 매개 변수를 지정 합니다.  
+`[ @originating_server = ] 'master_server'` 마스터 서버의 이름입니다. 지정된 경우 모든 다중 서버 작업이 중지됩니다. *master_server* 은 **nvarchar (128)** 이며 기본값은 NULL입니다. 대상 서버에서 **sp_stop_job** 를 호출할 때만이 매개 변수를 지정 합니다.  
   
 > [!NOTE]  
 >  처음 세 매개 변수 중 하나만 지정할 수 있습니다.  
   
-`[ @server_name = ] 'target_server'`다중 서버 작업을 중지할 특정 대상 서버의 이름입니다. *target_server* 은 **nvarchar (128)** 이며 기본값은 NULL입니다. 다중 서버 작업에 대해 마스터 서버에서 **sp_stop_job** 를 호출할 때만이 매개 변수를 지정 합니다.  
+`[ @server_name = ] 'target_server'` 다중 서버 작업을 중지할 특정 대상 서버의 이름입니다. *target_server* 은 **nvarchar (128)** 이며 기본값은 NULL입니다. 다중 서버 작업에 대해 마스터 서버에서 **sp_stop_job** 를 호출할 때만이 매개 변수를 지정 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -79,7 +80,7 @@ sp_stop_job
   
  **SQLAgentUserRole** 및 **SQLAgentReaderRole** 의 멤버는 자신이 소유한 작업만 중지할 수 있습니다. **SQLAgentOperatorRole** 의 멤버는 다른 사용자가 소유 하는 작업을 포함 하 여 모든 로컬 작업을 중지할 수 있습니다. **Sysadmin** 의 멤버는 모든 로컬 및 다중 서버 작업을 중지할 수 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `Weekly Sales Data Backup`이라는 작업을 중지합니다.  
   
 ```  

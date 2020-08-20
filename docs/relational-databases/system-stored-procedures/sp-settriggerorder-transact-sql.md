@@ -1,4 +1,5 @@
 ---
+description: sp_settriggerorder(Transact-SQL)
 title: sp_settriggerorder (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ ms.assetid: 8b75c906-7315-486c-bc59-293ef12078e8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2f222261c21ecb96f3599b20917a441898e3325e
-ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
+ms.openlocfilehash: 564e38166cd26ea1fff2bc5154fea115e21b3131
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86977726"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473813"
 ---
 # <a name="sp_settriggerorder-transact-sql"></a>sp_settriggerorder(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -43,9 +44,9 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @triggername = ] '[ _triggerschema.] _triggername'`트리거의 이름 및 트리거가 속한 스키마 (해당 하는 경우)를 설정 하거나 변경할 수 있는 스키마입니다. [_triggerschema_**.**] *triggername* 는 **sysname**입니다. 이름이 트리거와 일치하지 않거나 INSTEAD OF 트리거와 일치하는 경우에는 프로시저가 오류를 반환합니다. DDL 또는 logon 트리거에 대해 *triggerschema* 를 지정할 수 없습니다.  
+`[ @triggername = ] '[ _triggerschema.] _triggername'` 트리거의 이름 및 트리거가 속한 스키마 (해당 하는 경우)를 설정 하거나 변경할 수 있는 스키마입니다. [_triggerschema_**.**] *triggername* 는 **sysname**입니다. 이름이 트리거와 일치하지 않거나 INSTEAD OF 트리거와 일치하는 경우에는 프로시저가 오류를 반환합니다. DDL 또는 logon 트리거에 대해 *triggerschema* 를 지정할 수 없습니다.  
   
-`[ @order = ] 'value'`트리거의 새 순서에 대 한 설정입니다. *값* 은 **varchar (10)** 이며 다음 값 중 하나일 수 있습니다.  
+`[ @order = ] 'value'` 트리거의 새 순서에 대 한 설정입니다. *값* 은 **varchar (10)** 이며 다음 값 중 하나일 수 있습니다.  
   
 > [!IMPORTANT]  
 >  **첫 번째** 트리거와 **마지막** 트리거는 서로 다른 두 트리거 여야 합니다.  
@@ -53,10 +54,10 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
 |값|설명|  
 |-----------|-----------------|  
 |**첫째**|트리거가 첫 번째로 실행됩니다.|  
-|**최신**|트리거가 마지막으로 실행됩니다.|  
+|**마지막**|트리거가 마지막으로 실행됩니다.|  
 |**없음**|트리거가 정의되지 않은 순서로 실행됩니다.|  
   
-`[ @stmttype = ] 'statement_type'`트리거를 실행 하는 SQL 문을 지정 합니다. *statement_type* 는 **varchar (50)** 이며 [!INCLUDE[tsql](../../includes/tsql-md.md)] [DDL 이벤트](../../relational-databases/triggers/ddl-events.md)에 나열 된 INSERT, UPDATE, DELETE, LOGON 또는 statement 이벤트 일 수 있습니다. 이벤트 그룹은 지정할 수 없습니다.  
+`[ @stmttype = ] 'statement_type'` 트리거를 실행 하는 SQL 문을 지정 합니다. *statement_type* 는 **varchar (50)** 이며 [!INCLUDE[tsql](../../includes/tsql-md.md)] [DDL 이벤트](../../relational-databases/triggers/ddl-events.md)에 나열 된 INSERT, UPDATE, DELETE, LOGON 또는 statement 이벤트 일 수 있습니다. 이벤트 그룹은 지정할 수 없습니다.  
   
  트리거를 문 형식에 대 한 트리거로 정의한 후에만 트리거를 문 형식에 대 한 **첫 번째** 또는 **마지막** 트리거로 지정할 수 있습니다. 예를 들어 **tr1** 이 insert 트리거로 정의 된 **경우 Tr1 트리거** 는 **T1** 테이블에서 insert에 대해 **처음** 으로 지정할 수 있습니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)]INSERT 트리거로만 정의 된 **TR1**이 UPDATE 문의 **First**또는 **Last**트리거로 설정 된 경우는 오류를 반환 합니다. 자세한 내용은 주의 섹션을 참조하세요.  
   
@@ -104,7 +105,7 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
   
  DML 트리거의 순서를 설정하려면 트리거가 정의된 테이블 또는 뷰에 대한 ALTER 권한이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-setting-the-firing-order-for-a-dml-trigger"></a>A. DML 트리거의 실행 순서 설정  
  다음 예에서는 `uSalesOrderHeader` 트리거를 `UPDATE` 테이블에서 `Sales.SalesOrderHeader` 작업이 발생한 후 실행되는 첫 번째 트리거로 지정합니다.  
@@ -125,8 +126,8 @@ sp_settriggerorder @triggername= 'ddlDatabaseTriggerLog', @order='First', @stmtt
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;시스템 저장 프로시저](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Transact-sql&#41;&#40;저장 프로시저 데이터베이스 엔진](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;시스템 저장 프로시저 ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;저장 프로시저 데이터베이스 엔진 ](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [ALTER TRIGGER&#40;Transact-SQL&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)  
   
   

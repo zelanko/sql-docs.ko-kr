@@ -1,4 +1,5 @@
 ---
+description: ConvexHullAggregate(geometry 데이터 형식)
 title: ConvexHullAggregate(geometry 데이터 형식) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ca3d3b55-e02d-4599-8817-a54f5e047db8
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: ff540360dc48dec0d13d6c0fe1093710263ac12f
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: f5f27e06872c72244361fe2973b005924a2b85d5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86556038"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472541"
 ---
 # <a name="convexhullaggregate-geometry-data-type"></a>ConvexHullAggregate(geometry 데이터 형식)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -53,7 +54,7 @@ ConvexHullAggregate ( geometry_operand )
 > [!NOTE]  
 >  이 메서드는 모든 입력 값이 **null**인 경우 **null**을 반환합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 테이블 변수 열에 있는 geometry 개체 집합에 대한 볼록 집합(convex hull)을 반환합니다.  
   
  ```

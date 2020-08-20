@@ -1,4 +1,5 @@
 ---
+description: AcceptStop 속성(SqlService 클래스)
 title: AcceptStop 속성 (SqlService)
 ms.custom: seo-lt-2019
 ms.date: 03/06/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: bf8ffe79-4f4c-4a2d-82e5-2ae8f5d466c5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8036e4c21b7cc79744fc8c04411b0866ea1fce22
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 67874a17c13c5e62dde3e364291e29516d02276f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888414"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472731"
 ---
 # <a name="acceptstop-property-sqlservice-class"></a>AcceptStop 속성(SqlService 클래스)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

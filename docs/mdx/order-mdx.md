@@ -1,4 +1,5 @@
 ---
+description: Order(MDX)
 title: Order (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: d540b299fd08aa78576b19040a4cfafb9046ae7c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4db745ea01a56d68fe259ebb2fffb5aae250abd4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68055686"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471745"
 ---
 # <a name="order-mdx"></a>Order(MDX)
 
@@ -49,8 +50,8 @@ Order(Set_Expression, String_Expression
   
  두 개 이상의 계층이 크로스 조인할 집합에 **Order** 함수를 사용 하 고 **DESC** 플래그를 사용 하는 경우 집합에서 마지막 계층의 멤버만 정렬 됩니다. 이 사항은 집합에 있는 모든 계층이 정렬되는 Analysis Services 2000에서 변경되었습니다.  
   
-## <a name="examples"></a>예  
- 다음 예에서는 **놀이 Works** 큐브에서 Date 차원의 calendar 계층에 있는 모든 분기의 재판매인 주문 수를 반환 합니다. Order 함수는 ROWS 축에 대해 집합의 순서를 다시 **정렬** 합니다. **Order** 함수는 `[Calendar]` 계층에 의해 결정 `[Reseller Order Count]` 된 대로 내림차순 계층 순서로 집합을 정렬 합니다.  
+## <a name="examples"></a>예제  
+ 다음 예에서는 **놀이 Works** 큐브에서 Date 차원의 calendar 계층에 있는 모든 분기의 재판매인 주문 수를 반환 합니다. Order 함수는 ROWS 축에 대해 집합의 순서를 다시 **정렬** 합니다. **Order** 함수는 `[Reseller Order Count]` 계층에 의해 결정 된 대로 내림차순 계층 순서로 집합을 정렬 합니다 `[Calendar]` .  
   
  `SELECT`  
   

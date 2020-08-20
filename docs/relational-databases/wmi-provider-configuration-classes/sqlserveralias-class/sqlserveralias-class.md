@@ -1,4 +1,5 @@
 ---
+description: SqlServerAlias 클래스
 title: SqlServerAlias 클래스
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 475662b9-6985-45bf-b1e9-b0f26ef50443
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 613df198c6278c43fce8de71c831aa017a82bcea
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a1609867cc1b21338ce20deab1d51302cebde201
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888431"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472759"
 ---
 # <a name="sqlserveralias-class"></a>SqlServerAlias 클래스
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

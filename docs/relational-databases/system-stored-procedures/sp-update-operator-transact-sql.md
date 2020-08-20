@@ -1,4 +1,5 @@
 ---
+description: sp_update_operator(Transact-SQL)
 title: sp_update_operator (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 231750a6-4828-4d03-afe6-b91d38c42ed3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8966e5d423a24be8c7d7329f270368ea20e9ef7b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 26c34a2af11f50ed8d9a22bada95525cfdca6499
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891299"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473556"
 ---
 # <a name="sp_update_operator-transact-sql"></a>sp_update_operator(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -114,7 +115,7 @@ sp_update_operator
 ## <a name="permissions"></a>사용 권한  
  이 프로시저를 실행할 수 있는 권한은 기본적으로 sysadmin 고정 서버 역할의 멤버로 설정됩니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 운영자의 상태를 설정으로 업데이트하고 호출 가능한 날을 월요일부터 금요일, 오전 8시부터 오후 5시까지로 설정합니다.  
   
 ```  

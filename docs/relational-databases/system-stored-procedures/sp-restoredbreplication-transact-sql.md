@@ -1,4 +1,5 @@
 ---
+description: sp_restoredbreplication(Transact-SQL)
 title: sp_restoredbreplication (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a2c5ee32-e6d9-46e9-8031-8ff13c20acf7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c8d83d2aad9227993df29774d3140376514319ff
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b75fb66ba210f8981ab5a61e635030d2d7c941a8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85633938"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473840"
 ---
 # <a name="sp_restoredbreplication-transact-sql"></a>sp_restoredbreplication(Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

@@ -1,4 +1,5 @@
 ---
+description: sp_pdw_add_network_credentials (SQL Data Warehouse)
 title: sp_pdw_add_network_credentials
 titleSuffix: Azure SQL Data Warehouse
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 4a6f551012a744d8659e0f3a4cee83b1fd39fbdf
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 47782250a0acf14ce0e8b63a2b631acfce9b3583
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173224"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473999"
 ---
 # <a name="sp_pdw_add_network_credentials-sql-data-warehouse"></a>sp_pdw_add_network_credentials (SQL Data Warehouse)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -36,7 +37,7 @@ sp_pdw_add_network_credentials 'target_server_name',  'user_name', ꞌpassword�
   
 ## <a name="arguments"></a>인수  
  '*target_server_name*'  
- 대상 서버 호스트 이름 또는 IP 주소를 지정 합니다. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]에서이 저장 프로시저에 전달 된 사용자 이름 및 암호 자격 증명을 사용 하 여이 서버에 액세스 합니다.  
+ 대상 서버 호스트 이름 또는 IP 주소를 지정 합니다. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 에서이 저장 프로시저에 전달 된 사용자 이름 및 암호 자격 증명을 사용 하 여이 서버에 액세스 합니다.  
   
  InfiniBand 네트워크를 통해 연결 하려면 대상 서버의 InfiniBand IP 주소를 사용 합니다.  
   
@@ -65,7 +66,7 @@ sp_pdw_add_network_credentials 'target_server_name',  'user_name', ꞌpassword�
 ## <a name="examples-sssdwfull-and-sspdw"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="a-add-credentials-for-performing-a-database-backup"></a>A. 데이터베이스 백업을 수행 하기 위한 자격 증명 추가  
- 다음 예에서는 도메인 사용자 seattle\david의 사용자 이름 및 암호 자격 증명을 IP 주소가 10.172.63.255 인 대상 서버에 연결 합니다. 사용자 seattle\david에는 대상 서버에 대 한 읽기/쓰기 권한이 있습니다. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]는 이러한 자격 증명을 저장 하 고 백업 및 복원 작업을 수행 하는 데 필요한 대로 대상 서버에서 읽고 쓰는 데 사용 합니다.  
+ 다음 예에서는 도메인 사용자 seattle\david의 사용자 이름 및 암호 자격 증명을 IP 주소가 10.172.63.255 인 대상 서버에 연결 합니다. 사용자 seattle\david에는 대상 서버에 대 한 읽기/쓰기 권한이 있습니다. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 는 이러한 자격 증명을 저장 하 고 백업 및 복원 작업을 수행 하는 데 필요한 대로 대상 서버에서 읽고 쓰는 데 사용 합니다.  
   
 ```sql  
 EXEC sp_pdw_add_network_credentials '10.172.63.255', 'seattle\david', '********';  

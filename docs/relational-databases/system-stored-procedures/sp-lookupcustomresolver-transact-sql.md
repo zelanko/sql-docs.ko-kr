@@ -1,4 +1,5 @@
 ---
+description: sp_lookupcustomresolver(Transact-SQL)
 title: sp_lookupcustomresolver (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 356a7b8a-ae53-4fb5-86ee-fcfddbf23ddd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fafdcdd2d0fea423ddf44058e7615aff7241565e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 75f030013417d3cb5f68f8349d36cb26f9971a88
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899369"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473956"
 ---
 # <a name="sp_lookupcustomresolver-transact-sql"></a>sp_lookupcustomresolver(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,17 +43,17 @@ sp_lookupcustomresolver [ @article_resolver = ] 'article_resolver'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @article_resolver = ] 'article_resolver'`등록을 취소할 사용자 지정 비즈니스 논리의 이름을 지정 합니다. *article_resolver* 은 **nvarchar (255)** 이며 기본값은 없습니다. 제거할 비즈니스 논리가 COM 구성 요소이면 이 매개 변수는 해당 구성 요소의 이름이며 비즈니스 논리가 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 어셈블리이면 이 매개 변수는 어셈블리의 이름입니다.  
+`[ @article_resolver = ] 'article_resolver'` 등록을 취소할 사용자 지정 비즈니스 논리의 이름을 지정 합니다. *article_resolver* 은 **nvarchar (255)** 이며 기본값은 없습니다. 제거할 비즈니스 논리가 COM 구성 요소이면 이 매개 변수는 해당 구성 요소의 이름이며 비즈니스 논리가 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 어셈블리이면 이 매개 변수는 어셈블리의 이름입니다.  
   
 `[ @resolver_clsid = ] 'resolver_clsid' OUTPUT`*Article_resolver* 매개 변수에 지정 된 사용자 지정 비즈니스 논리의 이름과 연결 된 COM 개체의 CLSID 값입니다. *resolver_clsid* 는 **nvarchar (50)** 이며 기본값은 NULL입니다.  
   
-`[ @is_dotnet_assembly = ] 'is_dotnet_assembly' OUTPUT`등록할 사용자 지정 비즈니스 논리의 유형을 지정 합니다. *is_dotnet_assembly* 은 **bit**이며 기본값은 0입니다. **1** 은 등록할 사용자 지정 비즈니스 논리가 비즈니스 논리 처리기 어셈블리 임을 나타냅니다. **0** 은 COM 구성 요소 임을 나타냅니다.  
+`[ @is_dotnet_assembly = ] 'is_dotnet_assembly' OUTPUT` 등록할 사용자 지정 비즈니스 논리의 유형을 지정 합니다. *is_dotnet_assembly* 은 **bit**이며 기본값은 0입니다. **1** 은 등록할 사용자 지정 비즈니스 논리가 비즈니스 논리 처리기 어셈블리 임을 나타냅니다. **0** 은 COM 구성 요소 임을 나타냅니다.  
   
-`[ @dotnet_assembly_name = ] 'dotnet_assembly_name' OUTPUT`비즈니스 논리 처리기를 구현 하는 어셈블리의 이름입니다. *dotnet_assembly_name* 은 **nvarchar (255)** 이며 기본값은 NULL입니다.  
+`[ @dotnet_assembly_name = ] 'dotnet_assembly_name' OUTPUT` 비즈니스 논리 처리기를 구현 하는 어셈블리의 이름입니다. *dotnet_assembly_name* 은 **nvarchar (255)** 이며 기본값은 NULL입니다.  
   
-`[ @dotnet_class_name = ] 'dotnet_class_name' OUTPUT`는를 재정의 하 여 비즈니스 논리 처리기를 구현 하는 클래스의 이름입니다 <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> . *dotnet_class_name* 은 **nvarchar (255)** 이며 기본값은 NULL입니다.  
+`[ @dotnet_class_name = ] 'dotnet_class_name' OUTPUT` 는를 재정의 하 여 비즈니스 논리 처리기를 구현 하는 클래스의 이름입니다 <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> . *dotnet_class_name* 은 **nvarchar (255)** 이며 기본값은 NULL입니다.  
   
-`[ @publisher = ] 'publisher'`게시자의 이름입니다. *publisher* 는 **sysname**이며 기본값은 NULL입니다. 저장 프로시저가 게시자에서 호출되지 않을 경우 이 매개 변수를 사용하십시오. 지정하지 않으면 로컬 서버가 게시자인 것으로 가정합니다.  
+`[ @publisher = ] 'publisher'` 게시자의 이름입니다. *publisher* 는 **sysname**이며 기본값은 NULL입니다. 저장 프로시저가 게시자에서 호출되지 않을 경우 이 매개 변수를 사용하십시오. 지정하지 않으면 로컬 서버가 게시자인 것으로 가정합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -68,9 +69,9 @@ sp_lookupcustomresolver [ @article_resolver = ] 'article_resolver'
  게시 데이터베이스에 대 한 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_lookupcustomresolver**을 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [고급 병합 복제 충돌 감지 및 해결](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
+ [Advanced Merge Replication Conflict Detection and Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
  [병합 동기화 중 비즈니스 논리 실행](../../relational-databases/replication/merge/execute-business-logic-during-merge-synchronization.md)   
- [병합 아티클에 대 한 비즈니스 논리 처리기 구현](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)   
+ [병합 아티클에 대한 비즈니스 논리 처리기 구현](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)   
  [병합 아티클 해결 프로그램 지정](../../relational-databases/replication/publish/specify-a-merge-article-resolver.md)   
  [Transact-sql&#41;sp_registercustomresolver &#40;](../../relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql.md)   
  [Transact-sql&#41;sp_unregistercustomresolver &#40;](../../relational-databases/system-stored-procedures/sp-unregistercustomresolver-transact-sql.md)   

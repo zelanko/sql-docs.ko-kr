@@ -1,4 +1,5 @@
 ---
+description: 스크립트 파일 만들기(MySQLToSQL)
 title: 스크립트 파일 만들기 (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b4608fe7-c777-4ba5-b853-4402f02109e3
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 54b8dd8d58158997793f6c32da51a10136d02fce
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: bc77109e51cff1169105f39c1898dfd1fc32588c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935752"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472460"
 ---
 # <a name="creating-script-files-mysqltosql"></a>스크립트 파일 만들기(MySQLToSQL)
 SSMA 콘솔 응용 프로그램을 시작 하기 전의 첫 번째 단계는 스크립트 파일을 만드는 것이 고, 필요한 경우 변수 값 파일 및 서버 연결 파일을 만드는 것입니다.  
@@ -343,7 +344,7 @@ SSMA 콘솔 응용 프로그램을 시작 하기 전의 첫 번째 단계는 스
 -   **최대 다시 연결 시도 횟수:** 설정 된 연결의 시간이 초과 되거나 네트워크 오류로 인해 중단 되는 경우 서버를 다시 연결 해야 합니다. 다시 연결 시도는 다시 시도 횟수가 최대 **5 개** 까지 허용 되며, 그 후에는 콘솔에서 자동으로 다시 연결을 수행 합니다. 자동 다시 연결 기능을 통해 스크립트를 다시 실행 하는 작업이 줄어듭니다.  
   
 ## <a name="server-connection-parameters"></a>서버 연결 매개 변수  
-서버 연결 매개 변수는 스크립트 파일 또는 서버 연결 파일에서 정의할 수 있습니다. 자세한 내용은 [MySQLToSQL&#41;&#40;서버 연결 파일 만들기](../../ssma/mysql/creating-the-server-connection-files-mysqltosql.md) 섹션을 참조 하세요.  
+서버 연결 매개 변수는 스크립트 파일 또는 서버 연결 파일에서 정의할 수 있습니다. 자세한 내용은 [MySQLToSQL&#41;&#40;서버 연결 파일 만들기 ](../../ssma/mysql/creating-the-server-connection-files-mysqltosql.md) 섹션을 참조 하세요.  
   
 ## <a name="script-commands"></a>스크립트 명령  
 스크립트 파일에는 XML 형식의 마이그레이션 워크플로 명령 시퀀스가 포함 되어 있습니다. SSMA 콘솔 응용 프로그램은 스크립트 파일에 표시 되는 명령 순서에 따라 마이그레이션을 처리 합니다.  
@@ -400,5 +401,5 @@ SSMA 콘솔 응용 프로그램을 시작 하기 전의 첫 번째 단계는 스
 콘솔 운영의 다음 단계에서는 [MySQLToSQL&#41;&#40;변수 값 파일을 만듭니다 ](../../ssma/mysql/creating-variable-value-files-mysqltosql.md).  
   
 ## <a name="see-also"></a>참고 항목  
-[MySQLToSQL&#41;&#40;변수 값 파일 만들기](../../ssma/mysql/creating-variable-value-files-mysqltosql.md)  
+[MySQLToSQL&#41;&#40;변수 값 파일 만들기 ](../../ssma/mysql/creating-variable-value-files-mysqltosql.md)  
   

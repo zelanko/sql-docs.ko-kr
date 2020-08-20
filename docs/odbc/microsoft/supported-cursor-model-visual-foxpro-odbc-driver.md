@@ -1,4 +1,5 @@
 ---
+description: 지원되는 커서 모델(Visual FoxPro ODBC 드라이버)
 title: 지원 되는 커서 모델 (Visual FoxPro ODBC 드라이버) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: be95bbb2-6886-491e-a5a7-f58028d19c1e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: cf3400f24e20a8fa864404612bf07ea44efce49e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 789d55a894e66c87fc5773856375757947835b35
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301129"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471535"
 ---
 # <a name="supported-cursor-model-visual-foxpro-odbc-driver"></a>지원되는 커서 모델(Visual FoxPro ODBC 드라이버)
 Visual FoxPro ODBC 드라이버는 *블록* (*행 집합*) 및 *정적* 커서를 모두 지원 합니다. 정적 커서는 수준 1 ODBC 준수를 준수 하는 모든 드라이버에 대해 지원 됩니다. 드라이버는 동적, 키 집합 기반 또는 혼합 (키 집합 및 동적) 커서를 지원 하지 않습니다.  

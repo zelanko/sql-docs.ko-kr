@@ -1,4 +1,5 @@
 ---
+description: sp_syscollector_create_collection_item(Transact-SQL)
 title: sp_syscollector_create_collection_item (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 60dacf13-ca12-4844-b417-0bc0a8bf0ddb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: dc35ba06f17b3b067e3b7ba9059c27e1f6db2d18
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 133f564d4f131e187334e5ebe5d4a2561dd21dcc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892969"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473685"
 ---
 # <a name="sp_syscollector_create_collection_item-transact-sql"></a>sp_syscollector_create_collection_item(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -79,7 +80,7 @@ sp_syscollector_create_collection_item
 ## <a name="permissions"></a>사용 권한  
  이 프로시저를 실행하려면 dc_admin(EXECUTE 권한 있음) 고정 데이터베이스 역할의 멤버 자격이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `Generic T-SQL Query Collector Type` 컬렉션 형식 기반의 컬렉션 항목을 만들어서 `Simple collection set test 2`라는 컬렉션 집합에 추가합니다. 지정 된 컬렉션 집합을 만들려면 [sp_syscollector_create_collection_set &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md)에서 예제 B를 실행 합니다.  
   
 ```  
@@ -116,8 +117,8 @@ EXEC sp_syscollector_create_collection_item
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;시스템 저장 프로시저](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [데이터 수집](../../relational-databases/data-collection/data-collection.md)   
+ [Transact-sql&#41;&#40;시스템 저장 프로시저 ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [데이터 컬렉션](../../relational-databases/data-collection/data-collection.md)   
  [Transact-sql&#41;sp_syscollector_update_collection_item &#40;](../../relational-databases/system-stored-procedures/sp-syscollector-update-collection-item-transact-sql.md)   
  [Transact-sql&#41;sp_syscollector_delete_collection_item &#40;](../../relational-databases/system-stored-procedures/sp-syscollector-delete-collection-item-transact-sql.md)   
  [Transact-sql&#41;syscollector_collector_types &#40;](../../relational-databases/system-catalog-views/syscollector-collector-types-transact-sql.md)   

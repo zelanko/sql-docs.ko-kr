@@ -1,4 +1,5 @@
 ---
+description: sp_mergearticlecolumn(Transact-SQL)
 title: sp_mergearticlecolumn (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b4f2b888-e094-4759-a472-d893638995eb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ccc8cb8b4f9390d7453287c584e1f30dfdb15683
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d1036539564811e25be7764a3afb1106e05b1f37
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899337"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473982"
 ---
 # <a name="sp_mergearticlecolumn-transact-sql"></a>sp_mergearticlecolumn(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,26 +44,26 @@ sp_mergearticlecolumn [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @publication = ] 'publication'`게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 없습니다.  
+`[ @publication = ] 'publication'` 게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @article = ] 'article'`게시에 있는 아티클의 이름입니다. *article* 은 **sysname**이며 기본값은 없습니다.  
+`[ @article = ] 'article'` 게시에 있는 아티클의 이름입니다. *article* 은 **sysname**이며 기본값은 없습니다.  
   
-`[ @column = ] 'column'`수직 분할을 만들 열을 식별 합니다. *열* 은 **sysname**이며 기본값은 NULL입니다. NULL 및 `@operation = N'add'`일 경우 원본 테이블의 모든 열이 기본적으로 아티클에 추가됩니다. *작업이* **drop**으로 설정 된 경우에는 *열* 이 NULL 일 수 없습니다. 아티클에서 열을 제외 하려면 **sp_mergearticlecolumn** 를 실행 하 고 지정 된 아티클에서 제거할 열 *과 열을 지정* `@operation = N'drop'` 합니다 *article*.  
+`[ @column = ] 'column'` 수직 분할을 만들 열을 식별 합니다. *열* 은 **sysname**이며 기본값은 NULL입니다. NULL 및 `@operation = N'add'`일 경우 원본 테이블의 모든 열이 기본적으로 아티클에 추가됩니다. *작업이* **drop**으로 설정 된 경우에는 *열* 이 NULL 일 수 없습니다. 아티클에서 열을 제외 하려면 **sp_mergearticlecolumn** 를 실행 하 고 지정 된 아티클에서 제거할 열 *과 열을 지정* `@operation = N'drop'` 합니다 *article*.  
   
-`[ @operation = ] 'operation'`복제 상태입니다. *연산은* **nvarchar (4)** 이며 기본값은 ADD입니다. **추가** 는 복제를 위해 열을 표시 합니다. **drop** 은 열을 지웁니다.  
+`[ @operation = ] 'operation'` 복제 상태입니다. *연산은* **nvarchar (4)** 이며 기본값은 ADD입니다. **추가** 는 복제를 위해 열을 표시 합니다. **drop** 은 열을 지웁니다.  
   
-`[ @schema_replication = ] 'schema_replication'`병합 에이전트 실행 될 때 스키마 변경 내용이 전파 되도록 지정 합니다. *schema_replication* 은 **nvarchar (5)** 이며 기본값은 FALSE입니다.  
+`[ @schema_replication = ] 'schema_replication'` 병합 에이전트 실행 될 때 스키마 변경 내용이 전파 되도록 지정 합니다. *schema_replication* 은 **nvarchar (5)** 이며 기본값은 FALSE입니다.  
   
 > [!NOTE]  
 >  *Schema_replication*에 대해서는 **FALSE** 만 지원 됩니다.  
   
-`[ @force_invalidate_snapshot = ] force_invalidate_snapshot`스냅숏이 무효화 되는 기능을 사용 하거나 사용 하지 않도록 설정 합니다. *force_invalidate_snapshot* 은 **bit**이며 기본값은 **0**입니다.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` 스냅숏이 무효화 되는 기능을 사용 하거나 사용 하지 않도록 설정 합니다. *force_invalidate_snapshot* 은 **bit**이며 기본값은 **0**입니다.  
   
  **0** 은 병합 아티클에 대 한 변경으로 인해 스냅숏이 무효화 되지 않도록 지정 합니다.  
   
  **1** 은 병합 아티클에 대 한 변경으로 인해 스냅숏이 무효화 되도록 지정 합니다 .이 경우 값 **1** 은 새 스냅숏이 생성 될 수 있는 권한을 부여 합니다.  
   
-`[ @force_reinit_subscription = ]force_reinit_subscription_`구독을 다시 사용 하는 기능을 사용 하거나 사용 하지 않도록 설정 합니다. *force_reinit_subscription* 은 bit 이며 기본값은 **0**입니다.  
+`[ @force_reinit_subscription = ]force_reinit_subscription_` 구독을 다시 사용 하는 기능을 사용 하거나 사용 하지 않도록 설정 합니다. *force_reinit_subscription* 은 bit 이며 기본값은 **0**입니다.  
   
  **0** 은 병합 아티클에 대 한 변경으로 인해 구독이 다시 초기화 되지 않도록 지정 합니다.  
   
@@ -87,9 +88,9 @@ sp_mergearticlecolumn [ @publication = ] 'publication'
  **Sysadmin** 고정 서버 역할 또는 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_mergearticlecolumn**을 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [병합 아티클 간의 조인 필터 정의 및 수정](../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)   
+ [병합 아티클 사이에서 조인 필터 정의 및 수정](../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)   
  [병합 아티클에 대한 매개 변수가 있는 행 필터 정의 및 수정](../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)   
- [게시 된 데이터 필터링](../../relational-databases/replication/publish/filter-published-data.md)   
+ [게시된 데이터 필터링](../../relational-databases/replication/publish/filter-published-data.md)   
  [복제 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

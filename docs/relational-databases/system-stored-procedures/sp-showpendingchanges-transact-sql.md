@@ -1,4 +1,5 @@
 ---
+description: sp_showpendingchanges(Transact-SQL)
 title: sp_showpendingchanges (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8013a792-639d-4550-b262-e65d30f9d291
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2f6d22fb18989022676eb06751d583383a14d783
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 324f3d5b8b1e70d41e276fd0b0f909b27a937e81
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881498"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473771"
 ---
 # <a name="sp_showpendingchanges-transact-sql"></a>sp_showpendingchanges(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,13 +44,13 @@ sp_showpendingchanges [ [ @destination_server = ] 'destination_server' ]
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @destination_server = ] 'destination_server'`복제 된 변경 내용이 적용 되는 서버의 이름입니다. *destination_server* 는 **sysname**이며 기본값은 NULL입니다.  
+`[ @destination_server = ] 'destination_server'` 복제 된 변경 내용이 적용 되는 서버의 이름입니다. *destination_server* 는 **sysname**이며 기본값은 NULL입니다.  
   
-`[ @publication = ] 'publication'`게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 NULL입니다. *게시* 를 지정 하면 결과는 지정 된 게시로만 제한 됩니다.  
+`[ @publication = ] 'publication'` 게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 NULL입니다. *게시* 를 지정 하면 결과는 지정 된 게시로만 제한 됩니다.  
   
-`[ @article = ] 'article'`아티클의 이름입니다. *article* 은 **sysname**이며 기본값은 NULL입니다. *Article* 을 지정 하면 결과는 지정 된 아티클로만 제한 됩니다.  
+`[ @article = ] 'article'` 아티클의 이름입니다. *article* 은 **sysname**이며 기본값은 NULL입니다. *Article* 을 지정 하면 결과는 지정 된 아티클로만 제한 됩니다.  
   
-`[ @show_rows = ] 'show_rows'`결과 집합에 보류 중인 변경 내용에 대 한 보다 구체적인 정보가 포함 되어 있는지 여부를 지정 합니다. 기본값은 **0**입니다. 값 **1** 을 지정 하면 결과 집합에 is_delete 및 rowguid 열이 포함 됩니다.  
+`[ @show_rows = ] 'show_rows'` 결과 집합에 보류 중인 변경 내용에 대 한 보다 구체적인 정보가 포함 되어 있는지 여부를 지정 합니다. 기본값은 **0**입니다. 값 **1** 을 지정 하면 결과 집합에 is_delete 및 rowguid 열이 포함 됩니다.  
   
 ## <a name="result-set"></a>결과 집합  
   

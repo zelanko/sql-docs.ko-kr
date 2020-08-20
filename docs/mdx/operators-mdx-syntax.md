@@ -1,4 +1,5 @@
 ---
+description: 연산자(MDX 구문)
 title: 연산자 (MDX 구문) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 5067793ae0f5533a889973e18f7b300914df9092
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3d52751978dbe2973ecab9506094fad6a6f6c29a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68892110"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471775"
 ---
 # <a name="operators-mdx-syntax"></a>연산자(MDX 구문)
 
@@ -30,14 +31,14 @@ ms.locfileid: "68892110"
   
  MDX는 다음 테이블에 나열된 연산자를 지원합니다.  
   
-|원하는 연산|사용|  
+|원하는 연산|기능|  
 |---------------------------------------|---------|  
 |변수에 값을 할당하거나 결과 집합 열을 별칭과 연결합니다.|[할당 연산자](../mdx/assignment-operators.md)|  
 |더하기, 빼기, 곱하기, 나누기 연산을 수행합니다.|[산술 연산자](../mdx/arithmetic-operators.md)|  
 |AND, OR, NOT, XOR와 같은 조건에서 진리를 검사합니다.|[비트 연산자](../mdx/bitwise-operators.md)|  
 |값을 다른 값이나 식에 대해 비교합니다.|[비교 연산자](../mdx/comparison-operators.md)|  
 |두 문자열을 한 문자열로 영구 또는 임시적으로 결합합니다.|[연결 연산자](../mdx/concatenation-operators.md)|  
-|두 집합 식을 한 집합으로 영구 또는 임시적으로 결합합니다.|[집합 연산자](../mdx/set-operators.md)|  
+|두 집합 식을 한 집합으로 영구 또는 임시적으로 결합합니다.|[세트 연산자](../mdx/set-operators.md)|  
 |한 피연산자에 대한 연산을 수행합니다.|[단항 연산자](../mdx/unary-operators.md)|  
   
 > [!NOTE]  
@@ -46,7 +47,7 @@ ms.locfileid: "68892110"
  여러 연산자를 사용할 때는 MDX가 연산자를 계산하는 순서가 중요합니다. 마찬가지로 연산자 사용자가 해당 연산자로 계산하려면 먼저 데이터 형식을 다른 데이터 형식으로 변환해야 하도록 요구할 수도 있습니다.  
   
 ## <a name="evaluating-complex-expressions"></a>복잡한 식 계산  
- 연산자를 사용하여 작은 식 여러 개를 결합한 식을 만들 수 있습니다. 이러한 복잡 한 식에서 MDX는에 사용 되는 연산자 우선 순위 정의에 따라 연산자를 순서 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]대로 계산 합니다. MDX는 높은 우선 순위의 연산자를 먼저 수행한 다음 낮은 우선 순위의 연산자를 수행합니다.  
+ 연산자를 사용하여 작은 식 여러 개를 결합한 식을 만들 수 있습니다. 이러한 복잡 한 식에서 MDX는에 사용 되는 연산자 우선 순위 정의에 따라 연산자를 순서 대로 계산 합니다 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . MDX는 높은 우선 순위의 연산자를 먼저 수행한 다음 낮은 우선 순위의 연산자를 수행합니다.  
   
 ### <a name="understanding-operator-precedence"></a>연산자 우선 순위의 이해  
  다음 목록은 내림차순으로 연산자 우선 순위를 표시한 것입니다. 같은 줄에 있는 연산자의 우선 순위는 같고 괄호로 묶인 경우가 아니라면 왼쪽에서 오른쪽으로 계산됩니다.  
@@ -67,7 +68,7 @@ ms.locfileid: "68892110"
   
 -   EXISTING  
   
--   <>, >=, =, \<=, >, <  
+-   <>, >=, =, \<=, > <  
   
 -   NOT  
   
@@ -91,11 +92,11 @@ ms.locfileid: "68892110"
   
 |원본 형식|필요한 형식|변환|  
 |-------------------|-----------------|----------------|  
-|Level|설정|\<수준>. 멤버|  
-|계층|멤버|\<계층> defaultmember|  
-|멤버|Tuple|(\<멤버>)|  
-|Tuple|멤버|\<튜플을> 합니다. 항목 (0)|  
-|Tuple|스칼라|\<튜플>. 값|  
+|Level|설정|\<level>. 멤버|  
+|계층|멤버|\<hierarchy>. defaultmember|  
+|멤버|Tuple|(\<Member>)|  
+|Tuple|멤버|\<tuple>. 항목 (0)|  
+|Tuple|스칼라|\<tuple>. 값|  
   
 ## <a name="see-also"></a>참고 항목  
  [Mdx 연산자 참조 &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)   

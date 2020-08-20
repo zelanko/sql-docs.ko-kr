@@ -1,4 +1,5 @@
 ---
+description: 3-3단원 - 배포된 패키지 테스트
 title: '3단계: 배포된 패키지 테스트 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: 9159da3f-c9ca-4015-9e85-3bf4373a1349
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6fb3889d57052bcd305056a6468a2fa42d79d5c4
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f6c7fed5c20d9025be9ad9bce060d6fa83de378a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922210"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472040"
 ---
 # <a name="lesson-3-3---testing-the-deployed-packages"></a>3-3단원 - 배포된 패키지 테스트
 
@@ -107,7 +108,7 @@ ms.locfileid: "86922210"
   
     쿼리는 21개의 데이터 행을 반환합니다. 반환 결과는 XML 데이터 파일 orders.xml의 행으로 구성됩니다. 각 행은 국가/지역별 요약이며 각 행에는 국가/지역의 이름, 각 국가/지역의 주문 수, 최신 주문과 가장 오래된 주문의 날짜가 나열됩니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
 [dtexec 유틸리티](../integration-services/packages/dtexec-utility.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: 변환 된 데이터베이스 개체를 SQL Server (AccessToSQL)로 로드 하는 중
 title: 변환 된 데이터베이스 개체를 SQL Server로 로드 하는 중 (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -29,12 +30,12 @@ helpviewer_keywords:
 ms.assetid: 4e854eee-b10c-4f0b-9d9e-d92416e6f2ba
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 0f4517c58cf748cb3832b0718ac7891c2a309df0
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 41a1613a879579e809c8fd6a85d5c9b58c7b2b9c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87938484"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472580"
 ---
 # <a name="loading-converted-database-objects-into-sql-server-accesstosql"></a>변환 된 데이터베이스 개체를 SQL Server (AccessToSQL)로 로드 하는 중
 Access 데이터베이스 개체를 또는 SQL Azure로 변환한 후에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 결과 데이터베이스 개체를 또는 SQL Azure에 로드할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . SSMA에서 개체를 만들거나 개체를 스크립팅 하 고 스크립트를 직접 실행할 수 있습니다. 또한 SSMA를 사용 하면의 실제 내용으로 대상 메타 데이터를 업데이트 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 하거나 Azure SQL Database 수 있습니다.  

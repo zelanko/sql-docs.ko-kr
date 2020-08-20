@@ -1,4 +1,5 @@
 ---
+description: sysssislog(Transact-SQL)
 title: sysssislog (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7fa288a1-81e3-42a0-82f6-8a59019693d0
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 264f6495c12a350983af22c1bef325278238a514
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9aef51cb3297cd83b68fa42c71dcd993fb418830
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889264"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473110"
 ---
 # <a name="sysssislog-transact-sql"></a>sysssislog(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85889264"
   런타임에 패키지나 패키지의 태스크 및 컨테이너에 의해 생성되는 각 로깅 항목에 대해 한 행을 포함합니다. 이 테이블은를 설치할 때 msdb 데이터베이스에 만들어집니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 기록하도록 로깅을 구성하면 이러한 형식의 sysssislog 테이블이 지정한 데이터베이스에 만들어집니다.  
   
 > [!NOTE]  
->  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]는 패키지에서 로그 공급자를 사용 하는 경우에 **만** 이 테이블의 로깅 항목을 작성 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 합니다.  
+>  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 는 패키지에서 로그 공급자를 사용 하는 경우에 **만** 이 테이블의 로깅 항목을 작성 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 합니다.  
   
   
 |열 이름|데이터 형식|Description|  

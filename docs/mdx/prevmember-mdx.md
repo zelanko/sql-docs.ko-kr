@@ -1,4 +1,5 @@
 ---
+description: PrevMember(MDX)
 title: PrevMember (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: e5aa91ac2ab5b4056a693535c19a9e250a865dd0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6f02dfca925fce4399bb9f0c4a8c7ff1e005e598
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68020659"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471665"
 ---
 # <a name="prevmember-mdx"></a>PrevMember(MDX)
 

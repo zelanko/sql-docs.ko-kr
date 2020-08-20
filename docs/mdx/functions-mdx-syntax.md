@@ -1,4 +1,5 @@
 ---
+description: 함수(MDX 구문)
 title: 함수 (MDX 구문) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 126cfdf6ef690a48d0b9ff17a6963ba37d3ade82
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 732c14e823e9b25b423ce1d0d7c5a84c6f8ccd28
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68084131"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471855"
 ---
 # <a name="functions-mdx-syntax"></a>함수(MDX 구문)
 
@@ -23,7 +24,7 @@ ms.locfileid: "68084131"
 > [!NOTE]  
 >  개별 함수에 대 한 자세한 내용은 mdx [함수 참조 &#40;mdx&#41;](../mdx/mdx-function-reference-mdx.md)를 참조 하세요.  
   
-|함수 범주|Description|  
+|함수 범주|설명|  
 |-----------------------|-----------------|  
 |배열 함수|저장 프로시저에서 사용할 배열을 제공합니다.<br /><br /> 자세한 내용은 [저장 프로시저 &#40;사용 하 여 MDX&#41;](../mdx/using-stored-procedures-mdx.md)를 참조 하세요.|  
 |차원 함수|계층, 수준 또는 멤버에서 차원으로 참조를 반환합니다.<br /><br /> 자세한 내용은 [차원, 계층 및 수준 함수 사용](../mdx/using-dimension-hierarchy-and-level-functions.md)을 참조 하세요.|  

@@ -1,4 +1,5 @@
 ---
+description: STIsSimple(geometry 데이터 형식)
 title: STIsSimple(geometry 데이터 형식) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: da8f45d4-4f9c-405d-b883-760eb5344a71
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 24f50da4302c152588ddf573368054cc58b995c9
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 51e9f38a40b26ab4ff50c371519ed50e85ae984d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555567"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472466"
 ---
 # <a name="stissimple-geometry-data-type"></a>STIsSimple(geometry 데이터 형식)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -50,7 +51,7 @@ OGC(Open Geospatial Consortium)에 의해 정의된 대로 **geometry** 인스�
   
 -   인스턴스의 도형 두 개가 양쪽의 경계가 아닌 점에서는 서로 교차하지 않아야 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 자체 교차하는 복잡한 `LineString` 인스턴스를 만들고 `STIsSimple()`을 사용하여 `LineString`이 단순한지 테스트합니다.  
   
 ```  

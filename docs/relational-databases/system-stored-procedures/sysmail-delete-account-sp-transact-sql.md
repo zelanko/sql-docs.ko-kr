@@ -1,4 +1,5 @@
 ---
+description: sysmail_delete_account_sp(Transact-SQL)
 title: sysmail_delete_account_sp (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 2adcac78-4a4a-407e-9666-1d9c43c73cc2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9b49f1b42a1484ca5449c3e65e274a3626b62809
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 749aee08d548f3658c5cfba3e44e4cbf4667f6b8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890987"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473407"
 ---
 # <a name="sysmail_delete_account_sp-transact-sql"></a>sysmail_delete_account_sp(Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -39,9 +40,9 @@ sysmail_delete_account_sp { [ @account_id = ] account_id | [ @account_name = ] '
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @account_id = ] account_id`삭제할 계정의 ID 번호입니다. *account_id* 는 **int**이며 기본값은 없습니다. *Account_id* 또는 *account_name* 를 지정 해야 합니다.  
+`[ @account_id = ] account_id` 삭제할 계정의 ID 번호입니다. *account_id* 는 **int**이며 기본값은 없습니다. *Account_id* 또는 *account_name* 를 지정 해야 합니다.  
   
-`[ @account_name = ] 'account_name'`삭제할 계정의 이름입니다. *account_name* 는 **sysname**이며 기본값은 없습니다. *Account_id* 또는 *account_name* 를 지정 해야 합니다.  
+`[ @account_name = ] 'account_name'` 삭제할 계정의 이름입니다. *account_name* 는 **sysname**이며 기본값은 없습니다. *Account_id* 또는 *account_name* 를 지정 해야 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -57,7 +58,7 @@ sysmail_delete_account_sp { [ @account_id = ] account_id | [ @account_name = ] '
 ## <a name="permissions"></a>사용 권한  
  이 프로시저에 대 한 실행 권한은 기본적으로 **sysadmin** 고정 서버 역할의 멤버로 사용 됩니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `AdventureWorks Administrator`라는 데이터베이스 메일 계정을 삭제합니다.  
   
 ```  

@@ -1,4 +1,5 @@
 ---
+description: sp_setsubscriptionxactseqno(Transact-SQL)
 title: sp_setsubscriptionxactseqno (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: cdb4e0ba-5370-4905-b03f-0b0c6f080ca6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d17675f8443db2a726ceb72237d184d665f9d7e8
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: fc63f645fe2c825e0c8dac27cbf5aeb138123c0b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881541"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473797"
 ---
 # <a name="sp_setsubscriptionxactseqno-transact-sql"></a>sp_setsubscriptionxactseqno(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,13 +44,13 @@ sp_setsubscriptionxactseqno [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @publisher = ] 'publisher'`게시자의 이름입니다. *publisher* 는 **sysname**이며 기본값은 없습니다.  
+`[ @publisher = ] 'publisher'` 게시자의 이름입니다. *publisher* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @publisher_db = ] 'publisher_db'`게시 데이터베이스의 이름입니다. *publisher_db* 는 **sysname**이며 기본값은 없습니다. SQL Server 이외 *Publisher_db* 게시자의 경우는 배포 데이터베이스의 이름입니다.  
+`[ @publisher_db = ] 'publisher_db'` 게시 데이터베이스의 이름입니다. *publisher_db* 는 **sysname**이며 기본값은 없습니다. SQL Server 이외 *Publisher_db* 게시자의 경우는 배포 데이터베이스의 이름입니다.  
   
-`[ @publication = ] 'publication'`게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 없습니다. 배포 에이전트 둘 이상의 게시에서 공유 되는 경우 *게시*에 대해 모두 값을 지정 해야 합니다.  
+`[ @publication = ] 'publication'` 게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 없습니다. 배포 에이전트 둘 이상의 게시에서 공유 되는 경우 *게시*에 대해 모두 값을 지정 해야 합니다.  
   
-`[ @xact_seqno = ] xact_seqno`배포자에서 구독자에 적용 될 다음 트랜잭션의 LSN입니다. *xact_seqno* 는 **varbinary (16)** 이며 기본값은 없습니다.  
+`[ @xact_seqno = ] xact_seqno` 배포자에서 구독자에 적용 될 다음 트랜잭션의 LSN입니다. *xact_seqno* 는 **varbinary (16)** 이며 기본값은 없습니다.  
   
 ## <a name="result-set"></a>결과 집합  
   
@@ -67,7 +68,7 @@ sp_setsubscriptionxactseqno [ @publisher = ] 'publisher'
   
  피어 투 피어 트랜잭션 복제 토폴로지에서는 **sp_setsubscriptionxactseqno** 사용할 수 없습니다.  
   
- **sp_setsubscriptionxactseqno** 를 사용 하 여 구독자에 적용 될 때 오류가 발생 하는 특정 트랜잭션을 건너뛸 수 있습니다. 오류가 발생 하 고 배포 에이전트 중지 된 후에는 배포자에서 [transact-sql&#41;&#40;sp_helpsubscriptionerrors](../../relational-databases/system-stored-procedures/sp-helpsubscriptionerrors-transact-sql.md) 를 호출 하 여 실패 한 트랜잭션의 xact_seqno 값을 검색 한 다음 **sp_setsubscriptionxactseqno**를 호출 하 여 *xact_seqno*에 대해이 값을 전달 합니다. 그러면 이 LSN 이후의 명령만 처리됩니다.  
+ **sp_setsubscriptionxactseqno** 를 사용 하 여 구독자에 적용 될 때 오류가 발생 하는 특정 트랜잭션을 건너뛸 수 있습니다. 오류가 발생 하 고 배포 에이전트 중지 된 후에는 배포자에서 [transact-sql&#41;&#40;sp_helpsubscriptionerrors ](../../relational-databases/system-stored-procedures/sp-helpsubscriptionerrors-transact-sql.md) 를 호출 하 여 실패 한 트랜잭션의 xact_seqno 값을 검색 한 다음 **sp_setsubscriptionxactseqno**를 호출 하 여 *xact_seqno*에 대해이 값을 전달 합니다. 그러면 이 LSN 이후의 명령만 처리됩니다.  
   
  배포 데이터베이스에서 보류 중인 모든 명령을 구독자로 배달 하려면 *xact_seqno* 값을 **0** 으로 지정 합니다.  
   

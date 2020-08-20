@@ -1,4 +1,5 @@
 ---
+description: sp_stored_procedures(Transact-SQL)
 title: sp_stored_procedures (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: fe52dd83-000a-4665-83fb-7a0024193dec
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ac4bc1262eeb87aae42f11bf7c67ca0dc58848ec
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9d51536a973871e3907ba693306812b7681ab63d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725639"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473696"
 ---
 # <a name="sp_stored_procedures-transact-sql"></a>sp_stored_procedures(Transact-SQL)
 
@@ -43,9 +44,9 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @sp_name = ] 'name'`카탈로그 정보를 반환 하는 데 사용 되는 프로시저의 이름입니다. *name* 은 **nvarchar (390)** 이며 기본값은 NULL입니다. 와일드카드 패턴 일치가 지원됩니다.  
+`[ @sp_name = ] 'name'` 카탈로그 정보를 반환 하는 데 사용 되는 프로시저의 이름입니다. *name* 은 **nvarchar (390)** 이며 기본값은 NULL입니다. 와일드카드 패턴 일치가 지원됩니다.  
   
-`[ @sp_owner = ] 'schema'`프로시저가 속한 스키마의 이름입니다. *schema* 는 **nvarchar (384)** 이며 기본값은 NULL입니다. 와일드카드 패턴 일치가 지원됩니다. *Owner* 를 지정 하지 않은 경우 기본 DBMS의 기본 프로시저 표시 유형 규칙이 적용 됩니다.  
+`[ @sp_owner = ] 'schema'` 프로시저가 속한 스키마의 이름입니다. *schema* 는 **nvarchar (384)** 이며 기본값은 NULL입니다. 와일드카드 패턴 일치가 지원됩니다. *Owner* 를 지정 하지 않은 경우 기본 DBMS의 기본 프로시저 표시 유형 규칙이 적용 됩니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 현재 스키마에 지정된 이름을 가진 프로시저가 포함된 경우 해당 프로시저가 반환됩니다. 불완전한 저장 프로시저가 지정된 경우 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 다음 순서로 프로시저를 검색합니다.  
   
@@ -55,16 +56,16 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
   
 -   현재 데이터베이스의 **dbo** 스키마  
   
-`[ @qualifier = ] 'qualifier'`프로시저 한정자의 이름입니다. *한정자* 는 **sysname**이며 기본값은 NULL입니다. 다양 한 DBMS 제품에서 형식의 테이블에 대해 세 부분으로 구성 된 이름 (_한정자_)을 지원**합니다.** _스키마_**.** _이름_. 에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *한정자* 는 데이터베이스 이름을 나타냅니다. 일부 제품에서는 테이블 데이터베이스 환경의 서버 이름을 나타냅니다.  
+`[ @qualifier = ] 'qualifier'` 프로시저 한정자의 이름입니다. *한정자* 는 **sysname**이며 기본값은 NULL입니다. 다양 한 DBMS 제품에서 형식의 테이블에 대해 세 부분으로 구성 된 이름 (_한정자_)을 지원**합니다.** _스키마_**.** _이름_. 에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *한정자* 는 데이터베이스 이름을 나타냅니다. 일부 제품에서는 테이블 데이터베이스 환경의 서버 이름을 나타냅니다.  
   
-`[ @fUsePattern = ] 'fUsePattern'`밑줄 (_), 백분율 (%) 또는 대괄호 ([])가 와일드 카드 문자로 해석 되는지 여부를 결정 합니다. *fUsePattern* 는 **bit**이며 기본값은 1입니다.  
+`[ @fUsePattern = ] 'fUsePattern'` 밑줄 (_), 백분율 (%) 또는 대괄호 ([])가 와일드 카드 문자로 해석 되는지 여부를 결정 합니다. *fUsePattern* 는 **bit**이며 기본값은 1입니다.  
   
  **0** = 패턴 일치가 해제 되어 있습니다.  
   
  **1** = 패턴 일치가 on입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
- 없음  
+ None  
   
 ## <a name="result-sets"></a>결과 집합  
   
@@ -73,9 +74,9 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
 |**PROCEDURE_QUALIFIER**|**sysname**|프로시저 한정자 이름입니다. 이 열은 NULL이 될 수 있습니다.|  
 |**PROCEDURE_OWNER**|**sysname**|프로시저 소유자 이름입니다. 이 열은 항상 값을 반환합니다.|  
 |**PROCEDURE_NAME**|**nvarchar (134)**|프로시저 이름입니다. 이 열은 항상 값을 반환합니다.|  
-|**NUM_INPUT_PARAMS**|**int**|다음에 사용하도록 예약됩니다.|  
-|**NUM_OUTPUT_PARAMS**|**int**|다음에 사용하도록 예약됩니다.|  
-|**NUM_RESULT_SETS**|**int**|다음에 사용하도록 예약됩니다.|  
+|**NUM_INPUT_PARAMS**|**int**|나중에 사용하기 위해 예약되어 있습니다.|  
+|**NUM_OUTPUT_PARAMS**|**int**|나중에 사용하기 위해 예약되어 있습니다.|  
+|**NUM_RESULT_SETS**|**int**|나중에 사용하기 위해 예약되어 있습니다.|  
 |**설명**|**varchar (254)**|프로시저에 대한 설명입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 이 열의 값을 반환하지 않습니다.|  
 |**PROCEDURE_TYPE**|**smallint**|프로시저 유형입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 항상 2.0을 반환합니다. 이 값은 다음 중 하나일 수 있습니다.<br /><br /> 0 = SQL_PT_UNKNOWN<br /><br /> 1 = SQL_PT_PROCEDURE<br /><br /> 2 = SQL_PT_FUNCTION|  
   

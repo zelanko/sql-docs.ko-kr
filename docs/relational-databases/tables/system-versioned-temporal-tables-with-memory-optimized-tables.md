@@ -1,4 +1,5 @@
 ---
+description: 메모리 액세스에 최적화된 테이블을 포함한 시스템 버전 임시 테이블
 title: 메모리 액세스에 최적화된 테이블을 포함한 시스템 버전 임시 테이블 | Microsoft 문서
 ms.custom: ''
 ms.date: 07/12/2016
@@ -11,12 +12,12 @@ ms.assetid: 23274522-e5cf-4095-bed8-bf986d6342e0
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cd143092a666a9e1fd661651d0bfe9620db7cc8c
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 198cb23fdd7fe76b7777bc22b63ace4f1dedcc2b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554538"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473046"
 ---
 # <a name="system-versioned-temporal-tables-with-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블을 포함한 시스템 버전 임시 테이블
 

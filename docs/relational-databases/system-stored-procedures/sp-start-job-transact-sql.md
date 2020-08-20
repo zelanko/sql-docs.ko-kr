@@ -1,4 +1,5 @@
 ---
+description: sp_start_job(Transact-SQL)
 title: sp_start_job (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8a91df6a-eb84-4512-9a17-4a6e32a9538a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 506fde9c77a0a78ef36bc4a89933ccdbe6a5f45d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: fcf38d9b430943669a17e0ab1dd449eb4c75a18b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893010"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473738"
 ---
 # <a name="sp_start_job-transact-sql"></a>sp_start_job(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,15 +46,15 @@ sp_start_job
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @job_name = ] 'job_name'`시작할 작업의 이름입니다. *Job_id* 또는 *job_name* 를 지정 해야 하지만 둘 다 지정할 수는 없습니다. *job_name* 는 **sysname**이며 기본값은 NULL입니다.  
+`[ @job_name = ] 'job_name'` 시작할 작업의 이름입니다. *Job_id* 또는 *job_name* 를 지정 해야 하지만 둘 다 지정할 수는 없습니다. *job_name* 는 **sysname**이며 기본값은 NULL입니다.  
   
-`[ @job_id = ] job_id`시작할 작업의 id입니다. *Job_id* 또는 *job_name* 를 지정 해야 하지만 둘 다 지정할 수는 없습니다. *job_id* 은 **uniqueidentifier**이며 기본값은 NULL입니다.  
+`[ @job_id = ] job_id` 시작할 작업의 id입니다. *Job_id* 또는 *job_name* 를 지정 해야 하지만 둘 다 지정할 수는 없습니다. *job_id* 은 **uniqueidentifier**이며 기본값은 NULL입니다.  
   
 `[ @error_flag = ] error_flag` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
-`[ @server_name = ] 'server_name'`작업을 시작할 대상 서버입니다. *server_name* 은 **nvarchar (128)** 이며 기본값은 NULL입니다. *server_name* 은 현재 작업 대상인 대상 서버 중 하나 여야 합니다.  
+`[ @server_name = ] 'server_name'` 작업을 시작할 대상 서버입니다. *server_name* 은 **nvarchar (128)** 이며 기본값은 NULL입니다. *server_name* 은 현재 작업 대상인 대상 서버 중 하나 여야 합니다.  
   
-`[ @step_name = ] 'step_name'`작업 실행을 시작할 단계의 이름입니다. 로컬 로그에만 적용됩니다. *step_name* 는 **sysname**이며 기본값은 NULL입니다.  
+`[ @step_name = ] 'step_name'` 작업 실행을 시작할 단계의 이름입니다. 로컬 로그에만 적용됩니다. *step_name* 는 **sysname**이며 기본값은 NULL입니다.  
   
 `[ @output_flag = ] output_flag` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
@@ -79,7 +80,7 @@ sp_start_job
   
  **SQLAgentUserRole** 및 **SQLAgentReaderRole** 의 멤버는 자신이 소유한 작업만 시작할 수 있습니다. **SQLAgentOperatorRole** 의 멤버는 다른 사용자가 소유 하는 작업을 포함 하 여 모든 로컬 작업을 시작할 수 있습니다. **Sysadmin** 의 멤버는 모든 로컬 및 다중 서버 작업을 시작할 수 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `Weekly Sales Data Backup`라는 작업을 시작합니다.  
   
 ```  

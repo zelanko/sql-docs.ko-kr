@@ -1,4 +1,5 @@
 ---
+description: Ordinal(MDX)
 title: 서 수 (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: b22cc6d5a609f8e1f585ccc1229e0e1cd67e1796
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 74811da22f8c73536749acad41dfbe859b00eeea
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68055642"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471735"
 ---
 # <a name="ordinal-mdx"></a>Ordinal(MDX)
 

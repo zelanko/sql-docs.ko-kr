@@ -1,4 +1,5 @@
 ---
+description: sp_syscollector_create_collection_set(Transact-SQL)
 title: sp_syscollector_create_collection_set (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 69e9ff0f-c409-43fc-89f6-40c3974e972c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 227c25b9e64e2630fe16b946383c37fd2989caaa
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d5b1d3b125a60608727273cc9ce2796fa254f174
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892966"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473649"
 ---
 # <a name="sp_syscollector_create_collection_set-transact-sql"></a>sp_syscollector_create_collection_set(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -55,13 +56,13 @@ sp_syscollector_create_collection_set
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @name = ] 'name'`컬렉션 집합의 이름입니다. *name* 은 **sysname** 이며 빈 문자열 또는 NULL 일 수 없습니다.  
+`[ @name = ] 'name'` 컬렉션 집합의 이름입니다. *name* 은 **sysname** 이며 빈 문자열 또는 NULL 일 수 없습니다.  
   
  *이름은* 고유 해야 합니다. 현재 컬렉션 집합 이름의 목록을 보려면 syscollector_collection_sets 시스템 뷰를 쿼리합니다.  
   
-`[ @target = ] 'target'`나중에 사용 하도록 예약 되어 있습니다. *name* 은 **nvarchar (128)** 이며 기본값은 NULL입니다.  
+`[ @target = ] 'target'` 나중에 사용 하도록 예약 되어 있습니다. *name* 은 **nvarchar (128)** 이며 기본값은 NULL입니다.  
   
-`[ @collection_mode = ] collection_mode`데이터를 수집 하 고 저장 하는 방식을 지정 합니다. *collection_mode* 은 **smallint** 이며 다음 값 중 하나를 사용할 수 있습니다.  
+`[ @collection_mode = ] collection_mode` 데이터를 수집 하 고 저장 하는 방식을 지정 합니다. *collection_mode* 은 **smallint** 이며 다음 값 중 하나를 사용할 수 있습니다.  
   
  0 - 캐시된 모드. 데이터 컬렉션과 업로드가 별도의 일정에 속해 있습니다. 연속 컬렉션을 위해 캐시된 모드를 지정합니다.  
   
@@ -69,19 +70,19 @@ sp_syscollector_create_collection_set
   
  *Collection_mode* 의 기본값은 0입니다. *Collection_mode* 0 이면 *schedule_uid* 또는 *schedule_name* 를 지정 해야 합니다.  
   
-`[ @days_until_expiration = ] days_until_expiration`수집 된 데이터가 관리 데이터 웨어하우스에 저장 되는 일 수입니다. *days_until_expiration* 은 **smallint** 이며 기본값은 730 (2 년)입니다. *days_until_expiration* 는 0 또는 양의 정수 여야 합니다.  
+`[ @days_until_expiration = ] days_until_expiration` 수집 된 데이터가 관리 데이터 웨어하우스에 저장 되는 일 수입니다. *days_until_expiration* 은 **smallint** 이며 기본값은 730 (2 년)입니다. *days_until_expiration* 는 0 또는 양의 정수 여야 합니다.  
   
-`[ @proxy_id = ] proxy_id`에이전트 프록시 계정의 고유 식별자입니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *proxy_id* 은 **int** 이며 기본값은 NULL입니다. 지정 하는 경우 *proxy_name* 은 NULL 이어야 합니다. *Proxy_id*를 얻으려면 sysproxies 시스템 테이블을 쿼리 합니다. dc_admin 고정 데이터베이스 역할에는 프록시에 액세스할 권한이 있어야 합니다. 자세한 내용은 [SQL Server 에이전트 프록시 만들기](../../ssms/agent/create-a-sql-server-agent-proxy.md)를 참조 하세요.  
+`[ @proxy_id = ] proxy_id` 에이전트 프록시 계정의 고유 식별자입니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *proxy_id* 은 **int** 이며 기본값은 NULL입니다. 지정 하는 경우 *proxy_name* 은 NULL 이어야 합니다. *Proxy_id*를 얻으려면 sysproxies 시스템 테이블을 쿼리 합니다. dc_admin 고정 데이터베이스 역할에는 프록시에 액세스할 권한이 있어야 합니다. 자세한 내용은 [SQL Server 에이전트 프록시 만들기](../../ssms/agent/create-a-sql-server-agent-proxy.md)를 참조 하세요.  
   
-`[ @proxy_name = ] 'proxy_name'`프록시 계정의 이름입니다. *proxy_name* 는 **sysname** 이며 기본값은 NULL입니다. 지정 하는 경우 *proxy_id* 은 NULL 이어야 합니다. *Proxy_name*를 얻으려면 sysproxies 시스템 테이블을 쿼리 합니다.  
+`[ @proxy_name = ] 'proxy_name'` 프록시 계정의 이름입니다. *proxy_name* 는 **sysname** 이며 기본값은 NULL입니다. 지정 하는 경우 *proxy_id* 은 NULL 이어야 합니다. *Proxy_name*를 얻으려면 sysproxies 시스템 테이블을 쿼리 합니다.  
   
-`[ @schedule_uid = ] 'schedule_uid'`일정을 가리키는 GUID입니다. *schedule_uid* 은 **uniqueidentifier** 이며 기본값은 NULL입니다. 지정 하는 경우 *schedule_name* 은 NULL 이어야 합니다. *Schedule_uid*를 얻으려면 sysschedules 시스템 테이블을 쿼리 합니다.  
+`[ @schedule_uid = ] 'schedule_uid'` 일정을 가리키는 GUID입니다. *schedule_uid* 은 **uniqueidentifier** 이며 기본값은 NULL입니다. 지정 하는 경우 *schedule_name* 은 NULL 이어야 합니다. *Schedule_uid*를 얻으려면 sysschedules 시스템 테이블을 쿼리 합니다.  
   
  *Collection_mode* 를 0으로 설정 하면 *schedule_uid* 또는 *schedule_name* 를 지정 해야 합니다. *Collection_mode* 1로 설정 되 면 *schedule_uid* 또는 *schedule_name* 지정 된 경우 무시 됩니다.  
   
-`[ @schedule_name = ] 'schedule_name'`일정의 이름입니다. *schedule_name* 는 **sysname** 이며 기본값은 NULL입니다. 지정 하는 경우 *schedule_uid* 은 NULL 이어야 합니다. *Schedule_name*를 얻으려면 sysschedules 시스템 테이블을 쿼리 합니다.  
+`[ @schedule_name = ] 'schedule_name'` 일정의 이름입니다. *schedule_name* 는 **sysname** 이며 기본값은 NULL입니다. 지정 하는 경우 *schedule_uid* 은 NULL 이어야 합니다. *Schedule_name*를 얻으려면 sysschedules 시스템 테이블을 쿼리 합니다.  
   
-`[ @logging_level = ] logging_level`로깅 수준입니다. *logging_level* 은 **smallint** 이며 다음 값 중 하나를 사용 합니다.  
+`[ @logging_level = ] logging_level` 로깅 수준입니다. *logging_level* 은 **smallint** 이며 다음 값 중 하나를 사용 합니다.  
   
  0 - 실행 정보 및 다음 항목을 추적하는 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 이벤트 기록  
   
@@ -103,11 +104,11 @@ sp_syscollector_create_collection_set
   
  *Logging_level* 의 기본값은 1입니다.  
   
-`[ @description = ] 'description'`컬렉션 집합에 대 한 설명입니다. *설명은* **nvarchar (4000)** 이며 기본값은 NULL입니다.  
+`[ @description = ] 'description'` 컬렉션 집합에 대 한 설명입니다. *설명은* **nvarchar (4000)** 이며 기본값은 NULL입니다.  
   
-`[ @collection_set_id = ] collection_set_id`컬렉션 집합의 고유한 로컬 식별자입니다. *collection_set_id* 은 출력이 있는 **int** 이며 필수입니다.  
+`[ @collection_set_id = ] collection_set_id` 컬렉션 집합의 고유한 로컬 식별자입니다. *collection_set_id* 은 출력이 있는 **int** 이며 필수입니다.  
   
-`[ @collection_set_uid = ] 'collection_set_uid'`컬렉션 집합의 GUID입니다. *collection_set_uid* 은 출력을 사용 하는 **uniqueidentifier** 이며 기본값은 NULL입니다.  
+`[ @collection_set_uid = ] 'collection_set_uid'` 컬렉션 집합의 GUID입니다. *collection_set_uid* 은 출력을 사용 하는 **uniqueidentifier** 이며 기본값은 NULL입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -118,7 +119,7 @@ sp_syscollector_create_collection_set
 ## <a name="permissions"></a>사용 권한  
  이 프로시저를 실행하려면 dc_admin(EXECUTE 권한 있음) 고정 데이터베이스 역할의 멤버 자격이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-creating-a-collection-set-by-using-default-values"></a>A. 기본값을 사용하여 컬렉션 집합 만들기  
  다음 예에서는 필수 매개 변수만 지정하여 컬렉션 집합을 만듭니다. `@collection_mode`는 필수 사항은 아니지만 기본 컬렉션 모드(캐시된 모드)를 사용하려면 일정 ID 또는 일정 이름을 지정해야 합니다.  
@@ -156,9 +157,9 @@ EXEC dbo.sp_syscollector_create_collection_set
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [데이터 수집](../../relational-databases/data-collection/data-collection.md)   
- [Transact-sql&#41;&#40;일반 T-sql 쿼리 수집기 유형을 사용 하는 사용자 지정 컬렉션 집합을 만듭니다.](../../relational-databases/data-collection/create-custom-collection-set-generic-t-sql-query-collector-type.md)   
- [Transact-sql&#41;&#40;데이터 수집기 저장 프로시저](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
+ [데이터 컬렉션](../../relational-databases/data-collection/data-collection.md)   
+ [Transact-sql&#41;&#40;일반 T-sql 쿼리 수집기 유형을 사용 하는 사용자 지정 컬렉션 집합을 만듭니다. ](../../relational-databases/data-collection/create-custom-collection-set-generic-t-sql-query-collector-type.md)   
+ [데이터 수집기 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
  [syscollector_collection_sets&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md)  
   
   

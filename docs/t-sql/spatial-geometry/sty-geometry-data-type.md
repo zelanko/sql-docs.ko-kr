@@ -1,4 +1,5 @@
 ---
+description: STY(geometry 데이터 형식)
 title: STY(geometry 데이터 형식) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f72e0eaa-7d1d-4052-88fd-a172d8cb0d71
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: fd5f297b3fb2ea2700a6de0600896a6742fed8fc
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: ae260a3587e3f0f9ea08829a89bfe78901cfb0e2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554921"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472395"
 ---
 # <a name="sty-geometry-data-type"></a>STY(geometry 데이터 형식)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -41,12 +42,12 @@ ms.locfileid: "86554921"
 ## <a name="return-types"></a>반환 형식
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 형식: **float**  
   
- CLR 형식: **SqlDouble**  
+ CLR 유형: **SqlDouble**  
   
 ## <a name="remarks"></a>설명  
  **geometry** 인스턴스가 점인 경우 이 속성의 값은 Null입니다. 이 속성은 읽기 전용입니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `Point` 인스턴스를 만들고 `STY`를 사용하여 인스턴스의 Y 좌표를 검색합니다.  
   
 ```  

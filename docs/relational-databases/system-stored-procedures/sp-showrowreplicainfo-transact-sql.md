@@ -1,4 +1,5 @@
 ---
+description: sp_showrowreplicainfo(Transact-SQL)
 title: sp_showrowreplicainfo (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6a9dbc1a-e1e1-40c4-97cb-8164a2288f76
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a734045bc253e71e8663314f785b8630b32b383a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 09ab29ef7e164aa89d99d4e34ffd1e71fc4a18a2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893044"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473761"
 ---
 # <a name="sp_showrowreplicainfo-transact-sql"></a>sp_showrowreplicainfo(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,13 +41,13 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @ownername = ] 'ownername'`테이블 소유자의 이름입니다. *ownername* 는 **sysname**이며 기본값은 NULL입니다. 이 매개 변수는 데이터베이스에 이름은 같지만 소유자는 다른 여러 개의 테이블이 있는 경우 테이블을 구별하는 데 유용합니다.  
+`[ @ownername = ] 'ownername'` 테이블 소유자의 이름입니다. *ownername* 는 **sysname**이며 기본값은 NULL입니다. 이 매개 변수는 데이터베이스에 이름은 같지만 소유자는 다른 여러 개의 테이블이 있는 경우 테이블을 구별하는 데 유용합니다.  
   
-`[ @tablename = ] 'tablename'`정보가 반환 되는 행이 포함 된 테이블의 이름입니다. *tablename* 은 **sysname**이며 기본값은 NULL입니다.  
+`[ @tablename = ] 'tablename'` 정보가 반환 되는 행이 포함 된 테이블의 이름입니다. *tablename* 은 **sysname**이며 기본값은 NULL입니다.  
   
-`[ @rowguid = ] rowguid`행의 고유 식별자입니다. *rowguid* 는 **uniqueidentifier**이며 기본값은 없습니다.  
+`[ @rowguid = ] rowguid` 행의 고유 식별자입니다. *rowguid* 는 **uniqueidentifier**이며 기본값은 없습니다.  
   
-`[ @show = ] 'show'`결과 집합에 반환할 정보의 양을 결정 합니다. *show* 는 **nvarchar (20)** 이며 기본값은 BOTH입니다. **Row**인 경우 행 버전 정보만 반환 됩니다. **열**이면 열 버전 정보만 반환 됩니다. **둘 다**이면 행 및 열 정보가 모두 반환 됩니다.  
+`[ @show = ] 'show'` 결과 집합에 반환할 정보의 양을 결정 합니다. *show* 는 **nvarchar (20)** 이며 기본값은 BOTH입니다. **Row**인 경우 행 버전 정보만 반환 됩니다. **열**이면 열 버전 정보만 반환 됩니다. **둘 다**이면 행 및 열 정보가 모두 반환 됩니다.  
   
 ## <a name="result-sets-for-row-information"></a>행 정보에 대한 결과 집합  
   
@@ -56,7 +57,7 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
 |**db_name**|**sysname**|이 항목을 만든 데이터베이스의 이름입니다.|  
 |**db_nickname**|**binary(6)**|이 항목을 만든 데이터베이스의 애칭입니다.|  
 |**version**|**int**|항목의 버전입니다.|  
-|**current_state**|**nvarchar (9)**|행의 현재 상태에 대한 정보를 반환합니다.<br /><br /> **y** 행 데이터는 행의 현재 상태를 나타냅니다.<br /><br /> **n** 행 데이터가 행의 현재 상태를 나타내지 않습니다.<br /><br /> **\<n/a>**-적용할 수 없습니다.<br /><br /> **\<unknown>**-현재 상태를 확인할 수 없습니다.|  
+|**current_state**|**nvarchar (9)**|행의 현재 상태에 대한 정보를 반환합니다.<br /><br /> **y** 행 데이터는 행의 현재 상태를 나타냅니다.<br /><br /> **n** 행 데이터가 행의 현재 상태를 나타내지 않습니다.<br /><br /> **\<n/a>** -적용할 수 없습니다.<br /><br /> **\<unknown>** -현재 상태를 확인할 수 없습니다.|  
 |**rowversion_table**|**nchar (17)**|행 버전이 [MSmerge_contents](../../relational-databases/system-tables/msmerge-contents-transact-sql.md) 테이블이 나 [MSmerge_tombstone](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md) 테이블에 저장 되는지 여부를 나타냅니다.|  
 |**comment**|**nvarchar(255)**|현재 행 버전 항목에 대한 추가 정보입니다. 일반적으로 이 필드는 비어 있습니다.|  
   

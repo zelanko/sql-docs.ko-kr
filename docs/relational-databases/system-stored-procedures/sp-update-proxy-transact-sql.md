@@ -1,4 +1,5 @@
 ---
+description: sp_update_proxy(Transact-SQL)
 title: sp_update_proxy (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 864fd0e6-9d61-4f07-92ef-145318d2f881
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: eb6af87e40c663ae6e1d7465919abb2f14f85979
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 052f78652c02b7486d930dbb7071a6b2a981074b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891284"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473503"
 ---
 # <a name="sp_update_proxy-transact-sql"></a>sp_update_proxy(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,19 +48,19 @@ sp_update_proxy
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @proxy_id = ] id`변경할 프록시의 프록시 id입니다. *Proxy_id* 은 **int**이며 기본값은 NULL입니다.  
+`[ @proxy_id = ] id` 변경할 프록시의 프록시 id입니다. *Proxy_id* 은 **int**이며 기본값은 NULL입니다.  
   
-`[ @proxy_name = ] 'proxy_name'`변경할 프록시의 이름입니다. *Proxy_name* 는 **sysname**이며 기본값은 NULL입니다.  
+`[ @proxy_name = ] 'proxy_name'` 변경할 프록시의 이름입니다. *Proxy_name* 는 **sysname**이며 기본값은 NULL입니다.  
   
-`[ @credential_name = ] 'credential_name'`프록시에 대 한 새 자격 증명의 이름입니다. *Credential_name* 는 **sysname**이며 기본값은 NULL입니다. *Credential_name* 또는 *credential_id* 를 지정할 수 있습니다.  
+`[ @credential_name = ] 'credential_name'` 프록시에 대 한 새 자격 증명의 이름입니다. *Credential_name* 는 **sysname**이며 기본값은 NULL입니다. *Credential_name* 또는 *credential_id* 를 지정할 수 있습니다.  
   
-`[ @credential_id = ] credential_id`프록시에 대 한 새 자격 증명의 id 번호입니다. *Credential_id* 은 **int**이며 기본값은 NULL입니다. *Credential_name* 또는 *credential_id* 를 지정할 수 있습니다.  
+`[ @credential_id = ] credential_id` 프록시에 대 한 새 자격 증명의 id 번호입니다. *Credential_id* 은 **int**이며 기본값은 NULL입니다. *Credential_name* 또는 *credential_id* 를 지정할 수 있습니다.  
   
-`[ @new_name = ] 'new_name'`프록시의 새 이름입니다. *New_name* 는 **sysname**이며 기본값은 NULL입니다. 이 프로시저는 제공 된 경우 프록시 이름을 *new_name*로 변경 합니다. 이 인수가 NULL이면 프록시의 이름은 변경되지 않은 상태로 유지됩니다.  
+`[ @new_name = ] 'new_name'` 프록시의 새 이름입니다. *New_name* 는 **sysname**이며 기본값은 NULL입니다. 이 프로시저는 제공 된 경우 프록시 이름을 *new_name*로 변경 합니다. 이 인수가 NULL이면 프록시의 이름은 변경되지 않은 상태로 유지됩니다.  
   
-`[ @enabled = ] is_enabled`프록시가 사용 되는지 여부입니다. *Is_enabled* 플래그는 **tinyint**이며 기본값은 NULL입니다. *Is_enabled* 가 **0**이면 프록시가 사용 되지 않으며 작업 단계에서 사용할 수 없습니다. 이 인수가 NULL이면 프록시의 상태는 변경되지 않은 상태로 유지됩니다.  
+`[ @enabled = ] is_enabled` 프록시가 사용 되는지 여부입니다. *Is_enabled* 플래그는 **tinyint**이며 기본값은 NULL입니다. *Is_enabled* 가 **0**이면 프록시가 사용 되지 않으며 작업 단계에서 사용할 수 없습니다. 이 인수가 NULL이면 프록시의 상태는 변경되지 않은 상태로 유지됩니다.  
   
-`[ @description = ] 'description'`프록시에 대 한 새 설명입니다. *설명은* **nvarchar (512)** 이며 기본값은 NULL입니다. 이 인수가 NULL이면 프록시에 대한 설명은 변경되지 않은 상태로 유지됩니다.  
+`[ @description = ] 'description'` 프록시에 대 한 새 설명입니다. *설명은* **nvarchar (512)** 이며 기본값은 NULL입니다. 이 인수가 NULL이면 프록시에 대한 설명은 변경되지 않은 상태로 유지됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -74,7 +75,7 @@ sp_update_proxy
 ## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 보안 역할의 멤버만이 프로시저를 실행할 수 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 프록시 `Catalog application proxy`에 설정된 값을 `0`으로 설정합니다.  
   
 ```  
@@ -88,7 +89,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;저장 프로시저 SQL Server 에이전트](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;저장 프로시저 SQL Server 에이전트 ](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
  [SQL Server 에이전트 보안 구현](../../ssms/agent/implement-sql-server-agent-security.md)   
  [Transact-sql&#41;sp_add_proxy &#40;](../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md)   
  [Transact-sql&#41;sp_delete_proxy &#40;](../../relational-databases/system-stored-procedures/sp-delete-proxy-transact-sql.md)   

@@ -1,4 +1,5 @@
 ---
+description: sp_syscollector_stop_collection_set(Transact-SQL)
 title: sp_syscollector_stop_collection_set (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4668cfb7-462f-40d0-948c-8f740a792a4d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 46e8735e48925464d2dc715979a75998b97bd673
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a1133928ce137726e4d24996132902316239f469
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892799"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473622"
 ---
 # <a name="sp_syscollector_stop_collection_set-transact-sql"></a>sp_syscollector_stop_collection_set(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -63,7 +64,7 @@ sp_syscollector_stop_collection_set
 ## <a name="permissions"></a>사용 권한  
  이 프로시저를 실행하려면 dc_operator(EXECUTE 권한 있음) 고정 데이터베이스 역할의 멤버 자격이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 해당 식별자를 사용하여 컬렉션 집합을 중지합니다.  
   
 ```  
@@ -73,7 +74,7 @@ EXEC sp_syscollector_stop_collection_set @collection_set_id = 1;
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [데이터 수집](../../relational-databases/data-collection/data-collection.md)   
+ [데이터 컬렉션](../../relational-databases/data-collection/data-collection.md)   
  [데이터 수집기 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)  
   
   

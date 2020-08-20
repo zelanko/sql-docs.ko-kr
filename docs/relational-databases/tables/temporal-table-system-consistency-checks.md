@@ -1,4 +1,5 @@
 ---
+description: 임시 테이블 시스템 일관성 검사
 title: 임시 테이블 시스템 일관성 검사 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/07/2016
@@ -11,12 +12,12 @@ ms.assetid: ec081d42-57e4-43c7-9e1c-317ba8f23437
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2a6b62ef573638a1cd3602eecc14e3f489f87d2b
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 8eac6400caf5a1d94e3b23aee4f59db252619eab
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555281"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473031"
 ---
 # <a name="temporal-table-system-consistency-checks"></a>Temporal 테이블 시스템 일관성 확인
 

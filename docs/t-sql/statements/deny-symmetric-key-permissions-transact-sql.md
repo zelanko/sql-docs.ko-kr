@@ -1,4 +1,5 @@
 ---
+description: DENY 대칭 키 사용 권한(Transact-SQL)
 title: DENY 대칭 키 사용 권한(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/09/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 52d4b12d-17be-4cbd-aa78-65332a4883b0
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 22b811a7048e48ba213e6bb83b799679ae5f6b99
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 37faae69ff478df0a40abe36569e818605500c6d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485514"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472345"
 ---
 # <a name="deny-symmetric-key-permissions-transact-sql"></a>DENY 대칭 키 사용 권한(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

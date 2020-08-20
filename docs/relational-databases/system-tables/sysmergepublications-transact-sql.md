@@ -1,4 +1,5 @@
 ---
+description: sysmergepublications(Transact-SQL)
 title: sysmergepublications (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7f82c6c3-22d1-47c0-a92b-4d64b98cc455
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8443d522edc8eeddeea51c775d2d29e6286e84cc
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 51a23c71b99ff57cb9dda76dd65cfc25fcf4a097
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881391"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473215"
 ---
 # <a name="sysmergepublications-transact-sql"></a>sysmergepublications(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -34,18 +35,18 @@ ms.locfileid: "85881391"
 |**발행자**|**sysname**|기본 서버의 이름입니다.|  
 |**publisher_db**|**sysname**|기본 게시자 데이터베이스의 이름입니다.|  
 |**name**|**sysname**|게시의 이름입니다.|  
-|**한**|**nvarchar(255)**|게시에 대한 간단한 설명입니다.|  
+|**description**|**nvarchar(255)**|게시에 대한 간단한 설명입니다.|  
 |**보존**|**int**|전체 게시 집합의 보존 기간으로, 단위는 **retention_period_unit** 열의 값으로 표시 됩니다.|  
 |**publication_type**|**tinyint**|게시가 필터링되었음을 나타냅니다.<br /><br /> **0** = 필터링 되지 않습니다.<br /><br /> **1** = 필터링 됨|  
 |**pubid**|**uniqueidentifier**|이 게시의 고유한 ID입니다. 게시를 추가할 때 생성됩니다.|  
-|**designmasterid**|**uniqueidentifier**|다음에 사용하도록 예약됩니다.|  
+|**designmasterid**|**uniqueidentifier**|나중에 사용하기 위해 예약되어 있습니다.|  
 |**parentid**|**uniqueidentifier**|현재의 피어 또는 하위 집합 게시가 작성된 부모 게시입니다. 계층 구조적 게시 토폴로지에 사용됩니다.|  
 |**sync_mode**|**tinyint**|해당 게시의 동기화 모드입니다.<br /><br /> **0** = 네이티브<br /><br /> **1** = 문자|  
 |**allow_push**|**int**|게시에서 밀어내기 구독이 허용되는지 여부를 나타냅니다.<br /><br /> **0** = 밀어넣기 구독이 허용 되지 않습니다.<br /><br /> **1** = 밀어넣기 구독이 허용 됩니다.|  
 |**allow_pull**|**int**|게시에서 끌어오기 구독이 허용되는지 여부를 나타냅니다.<br /><br /> **0** = 끌어오기 구독이 허용 되지 않습니다.<br /><br /> **1** = 끌어오기 구독이 허용 됩니다.|  
 |**allow_anonymous**|**int**|게시에서 익명 구독이 허용되는지 여부를 나타냅니다.<br /><br /> **0** = 익명 구독이 허용 되지 않습니다.<br /><br /> **1** = 익명 구독이 허용 됩니다.|  
 |**centralized_conflicts**|**int**|충돌 레코드가 게시자에 저장되는지 여부를 나타냅니다.<br /><br /> **0** = 충돌 레코드가 게시자에 저장 되지 않습니다.<br /><br /> **1** = 충돌 레코드가 게시자에 저장 됩니다.|  
-|**status**|**tinyint**|다음에 사용하도록 예약됩니다.|  
+|**status**|**tinyint**|나중에 사용하기 위해 예약되어 있습니다.|  
 |**snapshot_ready**|**tinyint**|게시의 스냅샷 상태를 나타냅니다.<br /><br /> **0** = 스냅숏을 사용할 준비가 되지 않았습니다.<br /><br /> **1** = 스냅숏을 사용할 준비가 되었습니다.<br /><br /> **2** =이 게시에 대 한 새 스냅숏을 만들어야 합니다.|  
 |**enabled_for_internet**|**bit**|게시에 대한 동기화 파일이 FTP 및 다른 서비스를 통해 인터넷에 제공되는지 여부를 나타냅니다.<br /><br /> **0** = 인터넷에서 동기화 파일에 액세스할 수 있습니다.<br /><br /> **1** = 인터넷에서 동기화 파일에 액세스할 수 없습니다.|  
 |**dynamic_filters**|**bit**|매개 변수가 있는 행 필터를 사용하여 게시를 필터링하는지 여부를 표시합니다.<br /><br /> **0** = 게시가 행 필터링 되지 않습니다.<br /><br /> **1** = 게시가 행 필터링 됩니다.|  
@@ -65,7 +66,7 @@ ms.locfileid: "85881391"
 |**allow_synctoalternate**|**bit**|대체 동기화 파트너가 해당 게시자와 동기화될 수 있는지 여부를 지정합니다. **0** 은 동기화 파트너가 허용 되지 않음을 의미 합니다.|  
 |**validate_subscriber_info**|**nvarchar (500)**|구독자 정보를 검색하고 구독자에서 매개 변수가 있는 행 필터링 조건의 유효성을 검사하는 데 사용하는 함수를 나열합니다.|  
 |**ad_guidname**|**sysname**|게시를 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory에 게시할지 여부를 지정합니다. 유효한 GUID는 게시가 Active Directory 게시 되도록 지정 하 고 GUID는 해당 Active Directory 게시 개체 **objectGUID**입니다. NULL인 경우 게시는 Active Directory에 게시되지 않습니다.|  
-|**backward_comp_level**|**int**|데이터베이스 호환성 수준이며 다음 값 중 하나를 사용할 수 있습니다.<br /><br /> **90**  =  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .<br /><br /> **100**  =  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] .|  
+|**backward_comp_level**|**int**|데이터베이스 호환성 수준이며 다음 값 중 하나일 수 있습니다.<br /><br /> **90**  =  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .<br /><br /> **100**  =  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] .|  
 |**max_concurrent_merge**|**int**|최대 동시 병합 프로세스 수입니다. 이 속성 값이 **0** 이면 지정 된 시간에 실행 중인 동시 병합 프로세스 수에 제한이 없음을 의미 합니다. 이 속성은 병합 게시에 대해 한 번에 실행할 수 있는 동시 병합 프로세스의 수를 제한합니다. 실행하도록 허용된 값보다 많은 스냅샷 프로세스를 동시에 실행하도록 예약할 경우 초과 작업은 큐에 두고 현재 실행 중인 병합 프로세스가 완료될 때까지 기다립니다.|  
 |**max_concurrent_dynamic_snapshots**|**int**|병합 게시에 대해 동시에 실행할 수 있는 필터링된 동시 데이터 스냅샷 세션의 최대 수입니다. **0**인 경우 지정 된 시간에 게시에 대해 동시에 실행할 수 있는 필터링 된 동시 데이터 스냅숏 세션의 최대 수에 제한이 없습니다. 이 속성은 병합 게시에 대해 한 번에 실행할 수 있는 동시 스냅샷 프로세스의 수를 제한합니다. 실행하도록 허용된 값보다 많은 스냅샷 프로세스를 동시에 실행하도록 예약할 경우 초과 작업은 큐에 두고 현재 실행 중인 병합 프로세스가 완료될 때까지 기다립니다.|  
 |**use_partition_groups**|**smallint**|게시에서 사전 계산 파티션을 사용하는지 여부를 지정합니다.|  
@@ -86,9 +87,9 @@ ms.locfileid: "85881391"
 |**generation_leveling_threshold**|**int**|하나의 생성에 포함되는 변경 내용 수를 지정합니다. 생성은 게시자 또는 구독자에 배달되는 변경 내용 모음입니다.|  
 |**automatic_reinitialization_policy**|**bit**|자동 다시 초기화가 발생하기 전에 구독자에서 변경 사항을 업로드할지 여부를 나타냅니다.<br /><br /> **1** = 자동 다시 초기화가 수행 되기 전에 구독자에서 변경 내용이 업로드 됩니다.<br /><br /> **0** = 자동 다시 초기화 전에 변경 내용이 업로드 되지 않습니다.|  
   
-## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;복제 테이블](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Transact-sql&#41;&#40;복제 뷰](../../relational-databases/system-views/replication-views-transact-sql.md)   
+## <a name="see-also"></a>관련 항목  
+ [Transact-sql&#41;&#40;복제 테이블 ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Transact-sql&#41;&#40;복제 뷰 ](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [Transact-sql&#41;sp_addmergepublication &#40;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)   
  [Transact-sql&#41;sp_changemergepublication &#40;](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)   
  [sp_helpmergepublication&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)  

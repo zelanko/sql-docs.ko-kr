@@ -1,4 +1,5 @@
 ---
+description: 지원되는 ODBC SQL 문법(Visual FoxPro ODBC 드라이버)
 title: 지원 되는 ODBC SQL 문법 (Visual FoxPro ODBC 드라이버) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: f41a38c2-e22e-4c65-a32e-9a6777435160
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f72548d0708a63f887f7d6da4d4f5988500f0eef
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3057520e5aca5277a68971513ef28427f27208ed
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304086"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471505"
 ---
 # <a name="supported-odbc-sql-grammar-visual-foxpro-odbc-driver"></a>지원되는 ODBC SQL 문법(Visual FoxPro ODBC 드라이버)
 Microsoft Visual FoxPro ODBC 드라이버는 다음을 지원 합니다.  
@@ -47,7 +48,7 @@ Microsoft Visual FoxPro ODBC 드라이버는 다음을 지원 합니다.
   
  [CREATE TABLE](../../odbc/microsoft/create-table-sql-command.md)  
   
- [제거](../../odbc/microsoft/delete-sql-command.md)  
+ [DELETE](../../odbc/microsoft/delete-sql-command.md)  
   
  [태그 삭제](../../odbc/microsoft/delete-tag-command.md)  
   
@@ -57,6 +58,6 @@ Microsoft Visual FoxPro ODBC 드라이버는 다음을 지원 합니다.
   
  [INSERT](../../odbc/microsoft/insert-sql-command.md)  
   
- [[](../../odbc/microsoft/select-sql-command.md)  
+ [SELECT](../../odbc/microsoft/select-sql-command.md)  
   
  [UPDATE](../../odbc/microsoft/update-sql-command.md)

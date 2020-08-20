@@ -1,4 +1,5 @@
 ---
+description: sp_recompile(Transact-SQL)
 title: sp_recompile (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -18,12 +19,12 @@ ms.assetid: 6192ca87-febd-4075-8199-14b4fa609b8c
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4537cdca0d9d0b64d7c7b75f57d0c4eb39836097
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6bbf1e6b85b3071e0029d1fd294a8147b79d64fb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85651913"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473910"
 ---
 # <a name="sp_recompile-transact-sql"></a>sp_recompile(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

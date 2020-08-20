@@ -1,4 +1,5 @@
 ---
+description: sys.sp_xtp_merge_checkpoint_files(Transact-SQL)
 title: sys. sp_xtp_merge_checkpoint_files (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/28/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: da04df2a-f7a1-41e7-a1ef-2d5d68919892
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 60f180eabadcbd4605b958ed3b631a5b4f38b838
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: 9bd9412dd63c8fa167fde614992b255508eea6b3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442650"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473386"
 ---
 # <a name="syssp_xtp_merge_checkpoint_files-transact-sql"></a>sys.sp_xtp_merge_checkpoint_files(Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -56,7 +57,7 @@ sys.sp_xtp_merge_checkpoint_files database_name, @transaction_lower_bound, @tran
  [Dm_db_xtp_checkpoint_files &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql.md)에 표시 되는 데이터 파일의 트랜잭션 (bigint) 상한입니다. 트랜잭션 ID 값이 잘못된 경우 오류가 생성됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
- 없음  
+ None  
   
 ## <a name="cursors-returned"></a>반환되는 커서  
  None  
@@ -68,7 +69,7 @@ sys.sp_xtp_merge_checkpoint_files database_name, @transaction_lower_bound, @tran
  단일 데이터 및 델타 파일을 생성하려면 유효한 범위에 있는 모든 데이터 및 델타 파일을 병합합니다. 이 프로시저는 병합 정책을 준수하지 않습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;시스템 저장 프로시저](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;시스템 저장 프로시저 ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [메모리 내 OLTP&#40;메모리 내 최적화&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   

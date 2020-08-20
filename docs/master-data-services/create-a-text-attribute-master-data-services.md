@@ -1,4 +1,5 @@
 ---
+description: 텍스트 특성 만들기(Master Data Services)
 title: 텍스트 특성 만들기
 ms.custom: ''
 ms.date: 03/15/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: cd8b57de-364d-42a3-9273-c1c6b992bb40
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: ea4f99ef58da9c74e22eb9edce67a00c55bec60b
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 152c9a10da8a6a90f8792e940f4700a28e6a931f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812764"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472049"
 ---
 # <a name="create-a-text-attribute-master-data-services"></a>텍스트 특성 만들기(Master Data Services)
 
@@ -26,7 +27,7 @@ ms.locfileid: "85812764"
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 사용자가 텍스트 문자열을 특성 값으로 입력할 수 있도록 하려면 텍스트 특성을 만듭니다.  
   
-## <a name="prerequisites"></a>전제 조건  
+## <a name="prerequisites"></a>사전 요구 사항  
  이 절차를 수행하려면  
   
 -   **시스템 관리** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  
@@ -38,7 +39,7 @@ ms.locfileid: "85812764"
 ## <a name="attribute-information"></a>특성 정보  
  생성되는 각 특성에 대해 열이 7개 포함된 행이 표에 추가됩니다. 다음 표에서는 열을 설명합니다.  
   
-|Column|설명|  
+|열|설명|  
 |------------|-----------------|  
 |상태|특성 상태입니다.<br /><br /> 저장을 클릭 하면 특성이 업데이트 되 고 있음을 나타내는 ![상태 업데이트 이미지 아이콘이](../master-data-services/media/mds-statusicon-updating.png "상태 업데이트 아이콘") 표시 됩니다.<br /><br /> 특성을 만들거나 편집할 때 오류가 발생 하면 ![오류 상태 이미지 아이콘이](../master-data-services/media/mds-statusicon-error.png "오류 상태 아이콘") 표시 됩니다.<br /><br /> 그렇지 않으면 상태가 정상 이며 ![ok 상태 이미지 아이콘이](../master-data-services/media/mds-statusicon-ok.png "정상 상태 아이콘") 표시 됩니다.|  
 |Name|특성 이름입니다.|  
@@ -90,7 +91,7 @@ ms.locfileid: "85812764"
   
 12. 또는 특성 그룹의 변경 내용을 추적하려면 **변경 내용 추적 설정** 을 선택합니다. 자세한 내용은 [변경 내용 추적 그룹에 특성 추가&#40;Master Data Services&#41;](../master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md)를 참조하세요.  
   
-13. **Save**을 클릭합니다.  
+13. **저장**을 클릭합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [특성 &#40;MDS(Master Data Services)&#41;](../master-data-services/attributes-master-data-services.md)   

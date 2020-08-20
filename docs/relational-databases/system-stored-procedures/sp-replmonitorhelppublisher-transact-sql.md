@@ -1,4 +1,5 @@
 ---
+description: sp_replmonitorhelppublisher(Transact-SQL)
 title: sp_replmonitorhelppublisher (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 171501fe-4b74-4647-96c3-7691c777e01b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a3edb7c7b7e2db67132b943bb0d37e04516c8981
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a2a37168d22bd931faa6f8033c847620b9606b11
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720182"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473875"
 ---
 # <a name="sp_replmonitorhelppublisher-transact-sql"></a>sp_replmonitorhelppublisher(Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -38,9 +39,9 @@ sp_replmonitorhelppublisher [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @publisher = ] 'publisher'`상태를 모니터링 하는 게시자의 이름입니다. *publisher* 는 **sysname**이며 기본값은 NULL입니다. NULL인 경우 배포자를 사용하는 모든 게시자에 대해 정보가 반환됩니다.  
+`[ @publisher = ] 'publisher'` 상태를 모니터링 하는 게시자의 이름입니다. *publisher* 는 **sysname**이며 기본값은 NULL입니다. NULL인 경우 배포자를 사용하는 모든 게시자에 대해 정보가 반환됩니다.  
   
-`[ @refreshpolicy = ] refreshpolicy`내부용 으로만 사용 됩니다.  
+`[ @refreshpolicy = ] refreshpolicy` 내부용 으로만 사용 됩니다.  
   
 ## <a name="result-sets"></a>결과 집합  
   

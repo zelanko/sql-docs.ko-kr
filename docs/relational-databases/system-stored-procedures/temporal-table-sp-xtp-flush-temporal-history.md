@@ -1,4 +1,5 @@
 ---
+description: sp_xtp_flush_temporal_history (Transact-sql)
 title: sp_xtp_flush_temporal_history | Microsoft Docs
 ms.custom: ''
 ms.date: 02/21/2016
@@ -18,11 +19,12 @@ ms.assetid: 322e3170-93f8-468a-a123-104ce7bd7fad
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 64b7b9b3134383182804d6efd5f98c8b91ad55c1
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: ead5aae7b27528c12c4d44d574106815ddf382f5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000219"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473329"
 ---
 # <a name="sp_xtp_flush_temporal_history-transact-sql"></a>sp_xtp_flush_temporal_history (Transact-sql)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -49,7 +51,7 @@ sys.sp_xtp_flush_temporal_history @schema_name, @object_name
 ## <a name="return-code-values"></a>반환 코드 값  
  0 (성공) 또는 >0 (실패)  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  Db_owner 권한이 필요 합니다.  
   
 ## <a name="see-also"></a>참고 항목  

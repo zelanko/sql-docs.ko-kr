@@ -1,4 +1,5 @@
 ---
+description: sys. sp_cleanup_temporal_history (Transact-sql)
 title: sys. sp_cleanup_temporal_history | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -9,12 +10,12 @@ ms.assetid: 6eff30b4-b261-4f1f-b93c-1f69d754298d
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: a9cd5efaf70a915b6a31dced0f79498a01dd7ef5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 30e689666336bfc76c7ec5e5f5df363363801baf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783598"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473315"
 ---
 # <a name="syssp_cleanup_temporal_history-transact-sql"></a>sys. sp_cleanup_temporal_history (Transact-sql)
 

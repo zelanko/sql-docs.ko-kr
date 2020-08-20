@@ -1,4 +1,5 @@
 ---
+description: sp_update_notification(Transact-SQL)
 title: sp_update_notification (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3e1c3d40-8c24-46ce-a68e-ce6c6a237fda
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2b3018d982558f5d023d25695a541c8b109c015f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 32ddc8e2afae79b458d39f577d75176ba6f9dec1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891346"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473533"
 ---
 # <a name="sp_update_notification-transact-sql"></a>sp_update_notification(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,11 +44,11 @@ sp_update_notification
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @alert_name = ] 'alert'`이 알림과 연결 된 경고의 이름입니다. *경고* 는 **sysname**이며 기본값은 없습니다.  
+`[ @alert_name = ] 'alert'` 이 알림과 연결 된 경고의 이름입니다. *경고* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @operator_name = ] 'operator'`경고가 발생 하는 경우 알림을 받을 운영자입니다. *연산자* 는 **sysname**이며 기본값은 없습니다.  
+`[ @operator_name = ] 'operator'` 경고가 발생 하는 경우 알림을 받을 운영자입니다. *연산자* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @notification_method = ] notification`운영자에 게 알리는 방법입니다. *알림은* **tinyint**이며 기본값은 없고 다음 값 중 하나 이상이 될 수 있습니다.  
+`[ @notification_method = ] notification` 운영자에 게 알리는 방법입니다. *알림은* **tinyint**이며 기본값은 없고 다음 값 중 하나 이상이 될 수 있습니다.  
   
 |값|Description|  
 |-----------|-----------------|  
@@ -67,7 +68,7 @@ sp_update_notification
 ## <a name="permissions"></a>사용 권한  
  이 저장 프로시저를 실행 하려면 사용자에 게 **sysadmin** 고정 서버 역할을 부여 해야 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 경고에 대해로 전송 된 알림에 대 한 알림 방법을 수정 합니다 `François Ajenstat` `Test Alert` .  
   
 ```  
