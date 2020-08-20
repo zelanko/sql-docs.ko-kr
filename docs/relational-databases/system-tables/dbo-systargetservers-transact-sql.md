@@ -1,4 +1,5 @@
 ---
+description: dbo.systargetservers(Transact-SQL)
 title: dbo.systargetservers (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 479d1314-be37-4d19-ac9c-419fc9110e53
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: acd388c54d67e690972b53f2adbdf046cf241549
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9b8391e01d681f50f36a6f0c5b1b13a2726eaae5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890372"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488948"
 ---
 # <a name="dbosystargetservers-transact-sql"></a>dbo.systargetservers(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

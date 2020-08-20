@@ -1,4 +1,5 @@
 ---
+description: sp_delete_jobstep(Transact-SQL)
 title: sp_delete_jobstep (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 421ede8e-ad57-474a-9fb9-92f70a3e77e3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 77557dee97475ef713c88c969de98a241d955eea
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 7fc21ae11a1ade4780b99a86d03b7c9948c05663
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85863908"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489427"
 ---
 # <a name="sp_delete_jobstep-transact-sql"></a>sp_delete_jobstep(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,13 +42,13 @@ sp_delete_jobstep { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @job_id = ] job_id`단계를 제거할 작업의 id입니다. *job_id*은 **uniqueidentifier**이며 기본값은 NULL입니다.  
+`[ @job_id = ] job_id` 단계를 제거할 작업의 id입니다. *job_id*은 **uniqueidentifier**이며 기본값은 NULL입니다.  
   
-`[ @job_name = ] 'job_name'`단계를 제거할 작업의 이름입니다. *job_name*는 **sysname**이며 기본값은 NULL입니다.  
+`[ @job_name = ] 'job_name'` 단계를 제거할 작업의 이름입니다. *job_name*는 **sysname**이며 기본값은 NULL입니다.  
   
 > **참고:** *Job_id* 또는 *job_name* 를 지정 해야 합니다. 둘 다 지정할 수 없습니다.  
   
-`[ @step_id = ] step_id`제거 되는 단계의 id입니다. *step_id*는 **int**이며 기본값은 없습니다.  
+`[ @step_id = ] step_id` 제거 되는 단계의 id입니다. *step_id*는 **int**이며 기본값은 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -77,7 +78,7 @@ sp_delete_jobstep { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
   
  **Sysadmin** 의 멤버만 다른 사용자가 소유한 작업 단계를 삭제할 수 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `1` 작업에서 작업 단계 `Weekly Sales Data Backup`을 제거합니다.  
   
 ```  

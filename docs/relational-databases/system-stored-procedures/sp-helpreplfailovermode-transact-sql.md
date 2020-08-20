@@ -1,4 +1,5 @@
 ---
+description: sp_helpreplfailovermode(Transact-SQL)
 title: sp_helpreplfailovermode (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d1090e42-6840-4bf6-9aa9-327fd8987ec2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 846057680d9f97d5fc1e1bb2683a720a63f71585
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 5503291dc5011366ab6fe3b4a2d60b0a1310ba79
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899790"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489293"
 ---
 # <a name="sp_helpreplfailovermode-transact-sql"></a>sp_helpreplfailovermode(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,15 +42,15 @@ sp_helpreplfailovermode [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @publisher = ] 'publisher'`이 구독자의 업데이트에 참여 하 고 있는 게시자의 이름입니다. *publisher* 는 **sysname**이며 기본값은 없습니다. 게시하려면 게시자가 미리 구성되어 있어야 합니다.  
+`[ @publisher = ] 'publisher'` 이 구독자의 업데이트에 참여 하 고 있는 게시자의 이름입니다. *publisher* 는 **sysname**이며 기본값은 없습니다. 게시하려면 게시자가 미리 구성되어 있어야 합니다.  
   
-`[ @publisher_db = ] 'publisher_db'`게시 데이터베이스의 이름입니다. *publisher_db* 는 **sysname**이며 기본값은 없습니다.  
+`[ @publisher_db = ] 'publisher_db'` 게시 데이터베이스의 이름입니다. *publisher_db* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @publication = ] 'publication'`이 구독자의 업데이트에 참여 하는 게시의 이름입니다. *게시*는 **sysname**이며 기본값은 없습니다.  
+`[ @publication = ] 'publication'` 이 구독자의 업데이트에 참여 하는 게시의 이름입니다. *게시*는 **sysname**이며 기본값은 없습니다.  
   
-`[ @failover_mode_id = ] 'failover_mode_id' OUTPUT`장애 조치 (failover) 모드의 정수 값을 반환 하 고 **출력** 매개 변수입니다. *failover_mode_id* 은 **tinyint** 이며 기본값은 **0**입니다. 즉시 업데이트의 경우 **0** 을 반환 하 고 지연 업데이트의 경우 **1** 을 반환 합니다.  
+`[ @failover_mode_id = ] 'failover_mode_id' OUTPUT` 장애 조치 (failover) 모드의 정수 값을 반환 하 고 **출력** 매개 변수입니다. *failover_mode_id* 은 **tinyint** 이며 기본값은 **0**입니다. 즉시 업데이트의 경우 **0** 을 반환 하 고 지연 업데이트의 경우 **1** 을 반환 합니다.  
   
-`[ @failover_mode = ] 'failover_mode' OUTPUT`구독자에서 데이터가 수정 되는 모드를 반환 합니다. *failover_mode* 은 **nvarchar (10)** 이며 기본값은 NULL입니다. 는 **OUTPUT** 매개 변수입니다.  
+`[ @failover_mode = ] 'failover_mode' OUTPUT` 구독자에서 데이터가 수정 되는 모드를 반환 합니다. *failover_mode* 은 **nvarchar (10)** 이며 기본값은 NULL입니다. 는 **OUTPUT** 매개 변수입니다.  
   
 |값|설명|  
 |-----------|-----------------|  

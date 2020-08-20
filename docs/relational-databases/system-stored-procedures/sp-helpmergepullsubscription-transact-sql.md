@@ -1,4 +1,5 @@
 ---
+description: sp_helpmergepullsubscription(Transact-SQL)
 title: sp_helpmergepullsubscription (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6f3125f3-0dfa-40bd-b725-8aa1591234f6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: db4ae46a9436ceb960a32764a95467116ce537e0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: fde1ffb997d476cc114b7bac3f3a6d32ad208dd2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899520"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489333"
 ---
 # <a name="sp_helpmergepullsubscription-transact-sql"></a>sp_helpmergepullsubscription(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,13 +41,13 @@ sp_helpmergepullsubscription [ [ @publication=] 'publication']
 ```  
   
 ## <a name="argument"></a>인수  
-`[ @publication = ] 'publication'`게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 **%** 입니다. *게시가* 인 경우 **%** 현재 데이터베이스의 모든 병합 게시 및 구독에 대 한 정보가 반환 됩니다.  
+`[ @publication = ] 'publication'` 게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 **%** 입니다. *게시가* 인 경우 **%** 현재 데이터베이스의 모든 병합 게시 및 구독에 대 한 정보가 반환 됩니다.  
   
-`[ @publisher = ] 'publisher'`게시자의 이름입니다. *publisher*는 **sysname**이며 기본값은 **%** 입니다.  
+`[ @publisher = ] 'publisher'` 게시자의 이름입니다. *publisher*는 **sysname**이며 기본값은 **%** 입니다.  
   
-`[ @publisher_db = ] 'publisher_db'`게시자 데이터베이스의 이름입니다. *publisher_db*는 **sysname**이며 기본값은 **%** 입니다.  
+`[ @publisher_db = ] 'publisher_db'` 게시자 데이터베이스의 이름입니다. *publisher_db*는 **sysname**이며 기본값은 **%** 입니다.  
   
-`[ @subscription_type = ] 'subscription_type'`끌어오기 구독을 표시할지 여부입니다. *subscription_type*은 **nvarchar (10)** 이며 기본값은 **' pull '** 입니다. 유효한 값은 **' push '**, **' pull '** 또는 **' both '** 입니다.  
+`[ @subscription_type = ] 'subscription_type'` 끌어오기 구독을 표시할지 여부입니다. *subscription_type*은 **nvarchar (10)** 이며 기본값은 **' pull '** 입니다. 유효한 값은 **' push '**, **' pull '** 또는 **' both '** 입니다.  
   
 ## <a name="result-sets"></a>결과 집합  
   
@@ -63,7 +64,7 @@ sp_helpmergepullsubscription [ [ @publication=] 'publication']
 |**subscription_type**|**int**|구독 유형:<br /><br /> **0** = 푸시<br /><br /> **1** = 끌어오기<br /><br /> **2** = 익명|  
 |**priority**|**float (8)**|구독 우선 순위입니다. 값은 **100.00**미만 이어야 합니다.|  
 |**sync_type**|**tinyint**|구독 동기화 유형입니다.<br /><br /> **1** = 자동<br /><br /> **2** = 스냅숏이 사용 되지 않습니다.|  
-|**한**|**nvarchar(255)**|해당 끌어오기 구독에 관한 간략한 설명입니다.|  
+|**description**|**nvarchar(255)**|해당 끌어오기 구독에 관한 간략한 설명입니다.|  
 |**merge_jobid**|**binary(16)**|병합 에이전트의 작업 ID입니다.|  
 |**enabled_for_syncmgr**|**int**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] 동기화 관리자를 통해 구독을 동기화할 수 있는지 여부입니다.|  
 |**last_updated**|**nvarchar (26)**|병합 에이전트가 구독의 동기화를 마지막으로 성공한 시각입니다.|  

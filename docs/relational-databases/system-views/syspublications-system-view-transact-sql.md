@@ -1,4 +1,5 @@
 ---
+description: syspublications(시스템 뷰)(Transact-SQL)
 title: syspublications (시스템 뷰) (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e5f57c32-efc0-4455-a74f-684dc2ae51f8
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: d19bf233bf1f240f6ada8a1e110b331cc7ca6ce8
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 051a57d3cce26d7367cff1ce3afc720534e920bb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881208"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488679"
 ---
 # <a name="syspublications-system-view-transact-sql"></a>syspublications(시스템 뷰)(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "85881208"
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**한**|**nvarchar(255)**|게시에 대한 설명 항목입니다.|  
+|**description**|**nvarchar(255)**|게시에 대한 설명 항목입니다.|  
 |**name**|**sysname**|게시에 연결된 고유한 이름입니다.|  
 |**pubid**|**int**|게시에 고유한 ID를 제공하는 ID 열입니다.|  
 |**repl_freq**|**tinyint**|복제 빈도<br /><br /> **0** = 트랜잭션 기반 (트랜잭션).<br /><br /> **1** = 예약 된 테이블 새로 고침 (스냅숏)|  
@@ -74,8 +75,8 @@ ms.locfileid: "85881208"
 |**originator_id**|**smallint**|충돌 감지를 위해 피어 투 피어 복제 토폴로지의 각 노드를 식별합니다. 자세한 내용은 [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)을 참조하세요.|  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;복제 테이블](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Transact-sql&#41;를 &#40;하는 복제 저장 프로시저](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;복제 테이블 ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Transact-sql&#41;를 &#40;하는 복제 저장 프로시저 ](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
  [Transact-sql&#41;sp_addpublication &#40;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
  [Transact-sql&#41;sp_changepublication &#40;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)   
  [sp_helppublication&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)  

@@ -1,4 +1,5 @@
 ---
+description: sysmail_add_profileaccount_sp(Transact-SQL)
 title: sysmail_add_profileaccount_sp (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7cbf430f-1997-45ea-9707-0086184de744
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3de6a0b8ed5cbabd37cfa18f3b107c90121fe459
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a393c3902d8ee9c5af45a10358fbb9fa371af18e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891001"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489012"
 ---
 # <a name="sysmail_add_profileaccount_sp-transact-sql"></a>sysmail_add_profileaccount_sp(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,15 +42,15 @@ sysmail_add_profileaccount_sp { [ @profile_id = ] profile_id | [ @profile_name =
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @profile_id = ] profile_id`계정을 추가할 프로필 id입니다. *profile_id* 은 **int**이며 기본값은 NULL입니다. *Profile_id* 또는 *profile_name* 를 지정 해야 합니다.  
+`[ @profile_id = ] profile_id` 계정을 추가할 프로필 id입니다. *profile_id* 은 **int**이며 기본값은 NULL입니다. *Profile_id* 또는 *profile_name* 를 지정 해야 합니다.  
   
-`[ @profile_name = ] 'profile_name'`계정을 추가할 프로필 이름입니다. *profile_name* 는 **sysname**이며 기본값은 NULL입니다. *Profile_id* 또는 *profile_name* 를 지정 해야 합니다.  
+`[ @profile_name = ] 'profile_name'` 계정을 추가할 프로필 이름입니다. *profile_name* 는 **sysname**이며 기본값은 NULL입니다. *Profile_id* 또는 *profile_name* 를 지정 해야 합니다.  
   
-`[ @account_id = ] account_id`프로필에 추가할 계정 id입니다. *account_id* 은 **int**이며 기본값은 NULL입니다. *Account_id* 또는 *account_name* 를 지정 해야 합니다.  
+`[ @account_id = ] account_id` 프로필에 추가할 계정 id입니다. *account_id* 은 **int**이며 기본값은 NULL입니다. *Account_id* 또는 *account_name* 를 지정 해야 합니다.  
   
-`[ @account_name = ] 'account_name'`프로필에 추가할 계정의 이름입니다. *account_name* 는 **sysname**이며 기본값은 NULL입니다. *Account_id* 또는 *account_name* 를 지정 해야 합니다.  
+`[ @account_name = ] 'account_name'` 프로필에 추가할 계정의 이름입니다. *account_name* 는 **sysname**이며 기본값은 NULL입니다. *Account_id* 또는 *account_name* 를 지정 해야 합니다.  
   
-`[ @sequence_number = ] sequence_number`프로필 내 계정의 시퀀스 번호입니다. *sequence_number* 는 **int**이며 기본값은 없습니다. 시퀀스 번호는 프로필의 계정이 사용되는 순서를 결정합니다.  
+`[ @sequence_number = ] sequence_number` 프로필 내 계정의 시퀀스 번호입니다. *sequence_number* 는 **int**이며 기본값은 없습니다. 시퀀스 번호는 프로필의 계정이 사용되는 순서를 결정합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -68,7 +69,7 @@ sysmail_add_profileaccount_sp { [ @profile_id = ] profile_id | [ @profile_name =
 ## <a name="permissions"></a>사용 권한  
  이 프로시저에 대 한 실행 권한은 기본적으로 **sysadmin** 고정 서버 역할의 멤버로 사용 됩니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `AdventureWorks Administrator` 프로필의 `Audit Account` 계정에 연결합니다. 감사 계정의 시퀀스 번호는 1입니다.  
   
 ```  
@@ -82,6 +83,6 @@ EXECUTE msdb.dbo.sysmail_add_profileaccount_sp
  [데이터베이스 메일](../../relational-databases/database-mail/database-mail.md)   
  [데이터베이스 메일 계정 만들기](../../relational-databases/database-mail/create-a-database-mail-account.md)   
  [데이터베이스 메일 구성 개체](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
- [Transact-sql&#41;&#40;저장 프로시저 데이터베이스 메일](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [Transact-sql&#41;&#40;저장 프로시저 데이터베이스 메일 ](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: 정책으로 내보내기 대화 상자
 title: 정책으로 내보내기 대화 상자 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: f19a8450-2a28-40a6-8a7d-9f4eaea0447d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 40fe56e0cd726ca9dd3c129bd46dabd38c4aecfa
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a866e30681ec9d224af77e19cbf74909c6b8f104
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85749411"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490655"
 ---
 # <a name="export-as-policy-dialog-box"></a>정책으로 내보내기 대화 상자
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -34,9 +35,9 @@ ms.locfileid: "85749411"
  정책을 로컬 서버 인스턴스에 저장하려면 선택합니다.  
   
  **파일로 내보내기**  
- 정책을 XML 파일로 저장하려면 파일의 경로와 이름을 입력하거나 찾아보기 단추( **...** )를 사용합니다.  
+ 정책을 XML 파일로 저장하려면 파일의 경로와 이름을 입력하거나 찾아보기 단추(**...**)를 사용합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [정책 기반 관리를 사용하여 서버 관리](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
   
   

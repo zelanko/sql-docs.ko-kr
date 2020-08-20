@@ -1,4 +1,5 @@
 ---
+description: SQLXML이 SQL Server에 설치되지 않음
 title: SQLXML이 SQL Server에 설치되지 않음
 ms.custom: ''
 ms.date: 03/14/2017
@@ -11,12 +12,12 @@ ms.assetid: 3dbb4f65-41de-48b8-ad62-47c9d7932de3
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3412b02a7164a5cb57421c52b3662e226bf7e537
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3c0fee1b0ad59aa8a07e8f95decd94e84c6af225
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85665914"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490374"
 ---
 # <a name="sqlxml-is-not-installed-in-sql-server"></a>SQLXML이 SQL Server에 설치되지 않음
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -25,7 +26,7 @@ ms.locfileid: "85665914"
  응용 프로그램이에서 실행 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 되며 sqlxml 4.0이 필요한 경우 sqlxml 4.0 s p 1을 다운로드 하 여 설치 해야 합니다.  
   
 ## <a name="sqlxml-40-sp1-behavior-with-new-data-types-using-sqloledb-and-sql-server-native-client-ole-db-provider"></a>SQLOLEDB 및 SQL Server Native Client OLE DB 공급자를 사용하는 SQLXML 4.0 SP1의 새로운 데이터 형식 관련 동작  
- [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]에는 SQLXML을 사용 하는 개발자가 사용할 수 있는 다음 데이터 형식이 도입 되었습니다.  
+ [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 에는 SQLXML을 사용 하는 개발자가 사용할 수 있는 다음 데이터 형식이 도입 되었습니다.  
   
 -   **날짜**  
   

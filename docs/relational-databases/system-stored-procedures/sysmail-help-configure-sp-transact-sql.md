@@ -1,4 +1,5 @@
 ---
+description: sysmail_help_configure_sp(Transact-SQL)
 title: sysmail_help_configure_sp (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e598d4c8-3041-4965-b046-dce3a8e3d3e0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 307b1a1259210890d0b21abdc7a26f0e321e49b3
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: c030fbc4ee2c329f8c13e525c07961794b28608e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87122703"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488963"
 ---
 # <a name="sysmail_help_configure_sp-transact-sql"></a>sysmail_help_configure_sp(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,7 @@ sysmail_help_configure_sp  [ [ @parameter_name = ] 'parameter_name' ]
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @parameter_name = ] 'parameter_name'`검색할 구성 설정의 이름입니다. 이 값을 지정 하면 구성 설정의 값이 ** \@ parameter_value** OUTPUT 매개 변수에 반환 됩니다. ** \@ Parameter_name** 지정 하지 않으면이 저장 프로시저는 인스턴스의 모든 데이터베이스 메일 구성 설정을 포함 하는 결과 집합을 반환 합니다.  
+`[ @parameter_name = ] 'parameter_name'` 검색할 구성 설정의 이름입니다. 이 값을 지정 하면 구성 설정의 값이 ** \@ parameter_value** OUTPUT 매개 변수에 반환 됩니다. ** \@ Parameter_name** 지정 하지 않으면이 저장 프로시저는 인스턴스의 모든 데이터베이스 메일 구성 설정을 포함 하는 결과 집합을 반환 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -63,7 +64,7 @@ sysmail_help_configure_sp  [ [ @parameter_name = ] 'parameter_name' ]
 ## <a name="permissions"></a>사용 권한  
  이 프로시저에 대 한 실행 권한은 기본적으로 **sysadmin** 고정 서버 역할의 멤버로 사용 됩니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 데이터베이스 메일 구성 설정 목록을 보여 줍니다.  
   
 ```  
@@ -87,6 +88,6 @@ ProhibitedExtensions            exe,dll,vbs,js  Extensions not allowed in outgoi
   
 ## <a name="see-also"></a>참고 항목  
  [데이터베이스 메일](../../relational-databases/database-mail/database-mail.md)   
- [Transact-sql&#41;&#40;저장 프로시저 데이터베이스 메일](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [Transact-sql&#41;&#40;저장 프로시저 데이터베이스 메일 ](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

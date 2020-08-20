@@ -1,4 +1,5 @@
 ---
+description: sp_addmergepullsubscription(Transact-SQL)
 title: sp_addmergepullsubscription (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d63909a0-8ea7-4734-9ce8-8204d936a3e4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: daa2f455f4b1b1bbb4f809797857f62b82137915
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: af86ada2400422732d910752538de54f42b01437
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85786229"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489609"
 ---
 # <a name="sp_addmergepullsubscription-transact-sql"></a>sp_addmergepullsubscription(Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -43,22 +44,22 @@ sp_addmergepullsubscription [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @publication = ] 'publication'`게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 없습니다.  
+`[ @publication = ] 'publication'` 게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @publisher = ] 'publisher'`게시자의 이름입니다. *Publisher* 는 **sysname**이며 기본값은 로컬 서버 이름입니다. 게시자는 유효한 서버여야 합니다.  
+`[ @publisher = ] 'publisher'` 게시자의 이름입니다. *Publisher* 는 **sysname**이며 기본값은 로컬 서버 이름입니다. 게시자는 유효한 서버여야 합니다.  
   
-`[ @publisher_db = ] 'publisher_db'`게시자 데이터베이스의 이름입니다. *publisher_db* 는 **sysname**이며 기본값은 NULL입니다.  
+`[ @publisher_db = ] 'publisher_db'` 게시자 데이터베이스의 이름입니다. *publisher_db* 는 **sysname**이며 기본값은 NULL입니다.  
   
-`[ @subscriber_type = ] 'subscriber_type'`구독자의 유형입니다. *subscriber_type* 은 **nvarchar (15)** 이며 **전역**, **로컬** 또는 **익명**일 수 있습니다. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전에서 로컬 구독은 클라이언트 구독이라고 하며 전역 구독은 서버 구독이라고 합니다.  
+`[ @subscriber_type = ] 'subscriber_type'` 구독자의 유형입니다. *subscriber_type* 은 **nvarchar (15)** 이며 **전역**, **로컬** 또는 **익명**일 수 있습니다. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전에서 로컬 구독은 클라이언트 구독이라고 하며 전역 구독은 서버 구독이라고 합니다.  
   
-`[ @subscription_priority = ] subscription_priority`구독 우선 순위입니다. *subscription_priority*은 **실제**이며 기본값은 NULL입니다. 로컬 및 익명 구독의 경우 우선 순위는 **0.0**입니다. 우선 순위는 기본 해결 프로그램이 충돌을 감지했을 때 먼저 적용할 항목을 선택하는 데 사용합니다. 전역 구독자인 경우 구독 우선 순위는 100 미만이어야 합니다. 100은 게시자의 우선 순위입니다.  
+`[ @subscription_priority = ] subscription_priority` 구독 우선 순위입니다. *subscription_priority*은 **실제**이며 기본값은 NULL입니다. 로컬 및 익명 구독의 경우 우선 순위는 **0.0**입니다. 우선 순위는 기본 해결 프로그램이 충돌을 감지했을 때 먼저 적용할 항목을 선택하는 데 사용합니다. 전역 구독자인 경우 구독 우선 순위는 100 미만이어야 합니다. 100은 게시자의 우선 순위입니다.  
   
-`[ @sync_type = ] 'sync_type'`구독 동기화 유형입니다. *sync_type*은 **nvarchar (15)** 이며 기본값은 **automatic**입니다. **자동** 또는 **없음**일 수 있습니다. **Automatic**인 경우 게시 된 테이블의 스키마 및 초기 데이터가 먼저 구독자로 전송 됩니다. 없으면 **구독자**에 게시 된 테이블에 대 한 스키마 및 초기 데이터가 이미 있다고 가정 합니다. 시스템 테이블 및 데이터는 항상 전송됩니다.  
+`[ @sync_type = ] 'sync_type'` 구독 동기화 유형입니다. *sync_type*은 **nvarchar (15)** 이며 기본값은 **automatic**입니다. **자동** 또는 **없음**일 수 있습니다. **Automatic**인 경우 게시 된 테이블의 스키마 및 초기 데이터가 먼저 구독자로 전송 됩니다. 없으면 **구독자**에 게시 된 테이블에 대 한 스키마 및 초기 데이터가 이미 있다고 가정 합니다. 시스템 테이블 및 데이터는 항상 전송됩니다.  
   
 > [!NOTE]  
 >  **None**값을 지정 하지 않는 것이 좋습니다.  
   
-`[ @description = ] 'description'`이 끌어오기 구독에 대 한 간단한 설명입니다. *description*은 **nvarchar (255)** 이며 기본값은 NULL입니다. 이 값은 모니터링 되는 게시에 대 한 구독을 정렬 하는 데 사용할 수 있는 **이름** 열의 복제 모니터에 의해 표시 됩니다.  
+`[ @description = ] 'description'` 이 끌어오기 구독에 대 한 간단한 설명입니다. *description*은 **nvarchar (255)** 이며 기본값은 NULL입니다. 이 값은 모니터링 되는 게시에 대 한 구독을 정렬 하는 데 사용할 수 있는 **이름** 열의 복제 모니터에 의해 표시 됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

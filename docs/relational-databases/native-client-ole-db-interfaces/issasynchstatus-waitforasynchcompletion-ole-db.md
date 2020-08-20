@@ -1,4 +1,5 @@
 ---
+description: 'ISSAsynchStatus:: WaitForAsynchCompletion in SQL Server Native Client (OLE DB)'
 title: 'ISSAsynchStatus:: WaitForAsynchCompletion (Native Client OLE DB 공급자) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
@@ -16,12 +17,12 @@ ms.assetid: 9f65e9e7-eb93-47a1-bc42-acd4649fbd0e
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f5c3af0d700ff8ad4d06af98a4b0387bd9e0f850
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: b5557c9f73effcea3064b674081bd00901ef9e0b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246908"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490809"
 ---
 # <a name="issasynchstatuswaitforasynchcompletion-in-sql-server-native-client-ole-db"></a>ISSAsynchStatus:: WaitForAsynchCompletion in SQL Server Native Client (OLE DB)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -57,7 +58,7 @@ HRESULT WaitForAsynchCompletion(
 >  위에 나열된 반환 코드 값 외에도 **ISSAsynchStatus::WaitForAsynchCompletion** 메서드는 코어 OLEDB **ICommand::Execute** 및 **IDBInitialize::Initialize** 메서드에서 반환하는 반환 코드 값을 지원합니다.  
   
 ## <a name="remarks"></a>설명  
- **ISSAsynchStatus::WaitForAsynchCompletion** 메서드는 제한 시간 값(밀리초)이 경과하거나 보류 중인 작업이 완료될 때까지 값을 반환하지 않습니다. **Command** 개체에는 시간이 초과 되기 전에 쿼리가 실행 되는 시간 (초)을 제어 하는 **CommandTimeout** 속성이 있습니다. **ISSAsynchStatus:: WaitForAsynchCompletion** 메서드와 함께 사용 하는 경우 **CommandTimeout** 속성은 무시 됩니다.  
+ **ISSAsynchStatus::WaitForAsynchCompletion** 메서드는 제한 시간 값(밀리초)이 경과하거나 보류 중인 작업이 완료될 때까지 값을 반환하지 않습니다. **Command** 개체에는 제한 시간이 초과되기 전까지의 쿼리 실행 시간(초)을 제어하는 **CommandTimeout** 속성이 있습니다. **CommandTimeout** 속성을 **ISSAsynchStatus::WaitForAsynchCompletion** 메서드와 함께 사용하면 이 속성이 무시됩니다.  
   
  비동기 작업의 경우 제한 시간 속성이 무시됩니다. **ISSAsynchStatus::WaitForAsynchCompletion** 의 제한 시간 매개 변수는 컨트롤이 호출자에게 반환되기 전까지의 최대 경과 시간을 지정합니다. 제한 시간이 만료되면 DB_S_ASYNCHRONOUS가 반환됩니다. 제한 시간을 지정해도 비동기 작업이 취소되지 않습니다. 애플리케이션이 제한 시간 내에 완료되지 않은 비동기 작업을 취소해야 할 경우 애플리케이션은 제한 시간에 도달할 때까지 기다린 다음 DB_S_ASYNCHRONOUS가 반환되면 작업을 명시적으로 취소해야 합니다.  
   

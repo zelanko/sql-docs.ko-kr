@@ -1,4 +1,5 @@
 ---
+description: 시스템 저장 프로시저(Transact-SQL)
 title: 시스템 저장 프로시저 (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/21/2016
@@ -22,12 +23,12 @@ ms.assetid: a5c4d5b8-5a24-4a2d-99b4-d003b546ee3a
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 480b45d5b241b2c19b081d7a50f0d46c6e2ea6fd
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: e0308664a32b75e51b3f7a92a72d8fe5295b22ad
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246502"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489010"
 ---
 # <a name="system-stored-procedures-transact-sql"></a>시스템 저장 프로시저(Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -44,7 +45,7 @@ ms.locfileid: "87246502"
 |[커서 저장 프로시저](../../relational-databases/system-stored-procedures/cursor-stored-procedures-transact-sql.md)|커서 변수 기능을 구현합니다.|  
 |[데이터 수집기 저장 프로시저](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)|데이터 수집기 및 컬렉션 집합, 컬렉션 항목, 컬렉션 유형과 같은 구성 요소 작업에 사용됩니다.|  
 |[데이터베이스 엔진 저장 프로시저](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 일반적인 유지 관리를 수행합니다.|  
-|[Transact-sql&#41;&#40;저장 프로시저 데이터베이스 메일](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 내에서 전자 메일 작업을 수행합니다.|  
+|[Transact-sql&#41;&#40;저장 프로시저 데이터베이스 메일 ](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 내에서 전자 메일 작업을 수행합니다.|  
 |[데이터베이스 유지 관리 계획 저장 프로시저](../../relational-databases/system-stored-procedures/database-maintenance-plan-stored-procedures-transact-sql.md)|데이터베이스 성능을 관리하는 데 필요한 주요 유지 관리 태스크를 설정합니다.|  
 |[분산 쿼리 저장 프로시저](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)|분산 쿼리를 구현하고 관리합니다.|  
 |[Transact-sql&#41;Filestream 및 FileTable 저장 프로시저 &#40;](https://msdn.microsoft.com/library/54beca08-c012-4ebd-aa68-d8a10d221b64)|FILESTREAM 및 FileTable 기능을 구성하고 관리합니다.|  
@@ -744,10 +745,10 @@ ms.locfileid: "87246502"
 
 ## <a name="see-also"></a>참고 항목  
  [CREATE PROCEDURE&#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)   
- [저장 프로시저 &#40;데이터베이스 엔진&#41;](../../relational-databases/stored-procedures/stored-procedures-database-engine.md)   
+ [저장 프로시저&#40;데이터베이스 엔진&#41;](../../relational-databases/stored-procedures/stored-procedures-database-engine.md)   
  [저장 프로시저를 실행 하는 &#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/stored-procedures-running.md)   
  [저장 프로시저 실행](../../relational-databases/native-client-odbc-stored-procedures/running-stored-procedures.md)   
- [Transact-sql&#41;&#40;저장 프로시저 데이터베이스 엔진](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;저장 프로시저 데이터베이스 엔진 ](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [저장 프로시저 실행](../../relational-databases/native-client-odbc-stored-procedures/running-stored-procedures.md)  
   
   

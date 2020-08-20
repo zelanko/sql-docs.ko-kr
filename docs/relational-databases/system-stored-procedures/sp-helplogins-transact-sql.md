@@ -1,4 +1,5 @@
 ---
+description: sp_helplogins(Transact-SQL)
 title: sp_helplogins (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f9ad3767-5b9f-420d-8922-b637811404f7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f88a0248d6e3afbfb3b654bd56de01cecfc7f872
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 68a90477996c9782722e1a9c0b50f82fd5cf408e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891687"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489346"
 ---
 # <a name="sp_helplogins-transact-sql"></a>sp_helplogins(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,7 @@ sp_helplogins [ [ @LoginNamePattern = ] 'login' ]
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @LoginNamePattern = ] 'login'`로그인 이름입니다. *login*은 **sysname**이며 기본값은 NULL입니다. 지정 된 경우 *로그인* 이 있어야 합니다. *로그인* 을 지정 하지 않으면 모든 로그인에 대 한 정보가 반환 됩니다.  
+`[ @LoginNamePattern = ] 'login'` 로그인 이름입니다. *login*은 **sysname**이며 기본값은 NULL입니다. 지정 된 경우 *로그인* 이 있어야 합니다. *로그인* 을 지정 하지 않으면 모든 로그인에 대 한 정보가 반환 됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -62,7 +63,7 @@ sp_helplogins [ [ @LoginNamePattern = ] 'login' ]
 |-----------------|---------------|-----------------|  
 |**LoginName**|**sysname**|로그인 이름입니다.|  
 |**DBName**|**sysname**|인스턴스에 연결할 때 **LoginName** 이 사용 하는 기본 데이터베이스입니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
-|**이름**|**sysname**|**Dbname**에서 **loginname** 이 매핑된 사용자 계정 및 **dbname**에서 **loginname** 이 멤버로 속해 있는 역할입니다.|  
+|**UserName**|**sysname**|**Dbname**에서 **loginname** 이 매핑된 사용자 계정 및 **dbname**에서 **loginname** 이 멤버로 속해 있는 역할입니다.|  
 |**UserOrAlias**|**char (8)**|MemberOf = **UserName** 이 역할입니다.<br /><br /> User = **UserName** 은 사용자 계정입니다.|  
   
 ## <a name="remarks"></a>설명  
@@ -79,7 +80,7 @@ sp_helplogins [ [ @LoginNamePattern = ] 'login' ]
   
  **Sp_helplogins** 데이터베이스에 액세스할 수 없는 경우 **sp_helplogins** 는 가능한 한 많은 정보를 반환 하 고 오류 메시지 15622을 표시 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `John`이라는 로그인에 대한 정보를 보고합니다.  
   
 ```  
@@ -100,7 +101,7 @@ John        pubs     John       User
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;보안 저장 프로시저](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;보안 저장 프로시저 ](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [Transact-sql&#41;sp_helpdb &#40;](../../relational-databases/system-stored-procedures/sp-helpdb-transact-sql.md)   
  [Transact-sql&#41;sp_helpuser &#40;](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

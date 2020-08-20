@@ -1,4 +1,5 @@
 ---
+description: sp_help_targetservergroup(Transact-SQL)
 title: sp_help_targetservergroup (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ec3a4a68-b591-431c-9518-053ede522d0c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 10f96877b346396166f2980d47085c726a66bc19
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 75d725bec30d25d46216e292d7e96ff8f2b5f899
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881568"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489386"
 ---
 # <a name="sp_help_targetservergroup-transact-sql"></a>sp_help_targetservergroup(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +41,7 @@ sp_help_targetservergroup
 ```  
   
 ## <a name="argument"></a>인수  
-`[ @name = ] 'name'`정보를 반환할 대상 서버 그룹의 이름입니다. *name* 은 **sysname**이며 기본값은 NULL입니다.  
+`[ @name = ] 'name'` 정보를 반환할 대상 서버 그룹의 이름입니다. *name* 은 **sysname**이며 기본값은 NULL입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -55,7 +56,7 @@ sp_help_targetservergroup
 ## <a name="permissions"></a>사용 권한  
  이 프로시저를 실행할 수 있는 권한은 기본적으로 **sysadmin** 고정 서버 역할에 대 한 것입니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-listing-information-for-all-target-server-groups"></a>A. 모든 대상 서버 그룹에 대한 정보 나열  
  다음 예에서는 모든 대상 서버 그룹에 대한 정보를 나열합니다.  

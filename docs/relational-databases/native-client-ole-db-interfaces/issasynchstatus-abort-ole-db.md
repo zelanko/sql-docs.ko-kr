@@ -1,4 +1,5 @@
 ---
+description: 'ISSAsynchStatus:: Abort (Native Client OLE DB 공급자)'
 title: 'ISSAsynchStatus:: Abort (Native Client OLE DB 공급자) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/07/2017
@@ -16,12 +17,12 @@ ms.assetid: 2a4bd312-839a-45a8-a299-fc8609be9a2a
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a713f210c04032d9b24d90c59ad1088b1a1cd0d8
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: f159a85e4dd60706402c08931f0350e9f7efaf67
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246932"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490912"
 ---
 # <a name="issasynchstatusabort-native-client-ole-db-provider"></a>ISSAsynchStatus:: Abort (Native Client OLE DB 공급자)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -65,7 +66,7 @@ HRESULT Abort(
  E_UNEXPECTED  
  **IDBInitialize::Initialize** 가 취소되지 않은 데이터 원본 개체에서 **ISSAsynchStatus::Abort** 가 호출되었거나 호출이 완료되지 않았습니다.  
   
- **IDBInitialize:: Initialize** 가 호출 되었지만 이후에 초기화 되기 전에 취소 되었거나 시간이 초과 된 데이터 원본 개체에 대해 **ISSAsynchStatus:: Abort** 가 호출 되었습니다. 데이터 원본 개체가 아직 초기화 되지 않았습니다.  
+ **IDBInitialize::Initialize** 가 호출되었지만 초기화 전에 취소된 데이터 원본 개체에서 **ISSAsynchStatus::Abort** 가 호출되었거나 시간이 초과되었습니다. 데이터 원본 개체가 여전히 초기화가 취소되지 않았습니다.  
   
  이전에**ITransaction::Ab가 호출된 행 집합에서t** 또는 **ITransaction::Ab가 호출된 행 집합에서t** 가 호출된 행 집합에서 **ITransaction::Ab가 호출된 행 집합에서t** was previously called, and the rowset did not survive the commit 가 호출된 행 집합에서 ab가 호출된 행 집합에서t and is in a zombie state.  
   

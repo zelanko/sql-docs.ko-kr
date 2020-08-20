@@ -1,4 +1,5 @@
 ---
+description: 열의 기본값 지정
 title: 열의 기본값 지정 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/17/2020
@@ -14,12 +15,12 @@ ms.assetid: 64514aed-b846-407b-992e-cf813f9a1a91
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e624926eb55adf65bd8390e6929cfa04aa742ba4
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 361e98e19788f4d2c6aa921caf71e58552ee53a0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395821"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488569"
 ---
 # <a name="specify-default-values-for-columns"></a>열의 기본값 지정
 
@@ -64,7 +65,7 @@ ms.locfileid: "87395821"
    > [!NOTE]
    > 숫자 기본값을 입력하려면 숫자를 입력합니다. 개체나 함수의 경우 해당 이름을 입력합니다. 영숫자 기본값의 경우 원하는 값을 작은따옴표로 묶어 입력합니다.
 
-4. **파일** 메뉴에서 ‘테이블 이름’ **저장**을 클릭합니다. 
+4. **파일** 메뉴에서 ‘테이블 이름’ **저장을 클릭합니다.** __
 
 ## <a name="use-transact-sql-to-specify-a-default"></a><a name="TsqlProcedure"></a> Transact-SQL을 사용하여 기본값 지정
 

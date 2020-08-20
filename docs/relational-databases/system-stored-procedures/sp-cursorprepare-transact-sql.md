@@ -1,4 +1,5 @@
 ---
+description: sp_cursorprepare(Transact-SQL)
 title: sp_cursorprepare (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6207e110-f4bf-4139-b3ec-b799c9cb3ad7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 130446e1f92fd735c3ab83a8f515fcf36fb63948
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8a2b001c3e08c9d68be113e351bcf0482205e196
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85868819"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489451"
 ---
 # <a name="sp_cursorprepare-transact-sql"></a>sp_cursorprepare(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -115,7 +116,7 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
 |0x0001|실패|  
 |1FF6|메타데이터를 반환할 수 없습니다.<br /><br /> 참고:이 이유는 문이 결과 집합을 생성 하지 않기 때문입니다. 예를 들어 INSERT 또는 DDL 문입니다.|  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   다음은 sp_cursorprepare 및를 사용 하는 예제 sp_cursorexecute
 
 ```sql

@@ -1,4 +1,5 @@
 ---
+description: sp_cursoropen(Transact-SQL)
 title: sp_cursoropen (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 16462ede-4393-4293-a598-ca88c48ca70b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: eedb738c9bd1a940f2875d182077edd3b939870b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1faec2f41d2396102b4ee675f2dac40be4b9b216
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85868871"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489508"
 ---
 # <a name="sp_cursoropen-transact-sql"></a>sp_cursoropen(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -201,7 +202,7 @@ sp_cursoropen cursor OUTPUT, stmt
 ## <a name="rpc-considerations"></a>RPC 고려 사항  
  커서 선택 목록 메타데이터가 TDS 스트림에 반환되도록 요청하기 위해 RPC RETURN_METADATA 입력 플래그를 0x0001로 설정할 수 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="bound_param-parameter"></a>bound_param 매개 변수  
  5번째 매개 변수 다음의 모든 매개 변수는 문 계획에 입력 매개 변수로 전달됩니다. 이러한 첫 번째 매개 변수는 다음 형식의 문자열이어야 합니다.  

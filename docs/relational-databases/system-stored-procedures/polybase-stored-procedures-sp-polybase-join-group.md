@@ -1,4 +1,5 @@
 ---
+description: sp_polybase_join_group (Transact-sql)
 title: sp_polybase_join_group | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2016
@@ -14,18 +15,19 @@ helpviewer_keywords:
 ms.assetid: 48066431-fed2-4a8a-85af-ac704689e183
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: bc4a9d78289f6d3fdf3272c6581d9baab586122f
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: 6e9e76c30adf6ec3ec241c5f5bc8589802a2cad0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86052727"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489692"
 ---
 # <a name="sp_polybase_join_group-transact-sql"></a>sp_polybase_join_group (Transact-sql)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   확장 계산을 위해 PolyBase 그룹에 SQL Server 인스턴스를 계산 노드로 추가 합니다.  
   
- SQL Server 인스턴스에 [PolyBase](../../relational-databases/polybase/polybase-guide.md) 기능이 설치 되어 있어야 합니다.  PolyBase를 사용 하면 Hadoop 및 Azure blob storage와 같은 비 SQL Server 데이터 원본을 통합할 수 있습니다. 또한 [sp_polybase_leave_group &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/polybase-stored-procedures-sp-polybase-leave-group.md)을 참조 하십시오.  
+ SQL Server 인스턴스에  [PolyBase](../../relational-databases/polybase/polybase-guide.md) 기능이 설치 되어 있어야 합니다.  PolyBase를 사용 하면 Hadoop 및 Azure blob storage와 같은 비 SQL Server 데이터 원본을 통합할 수 있습니다. 또한 [sp_polybase_leave_group &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/polybase-stored-procedures-sp-polybase-leave-group.md)을 참조 하십시오.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -64,7 +66,7 @@ sp_polybase_join_group (@head_node_address = N'head_node_address',
 EXEC sp_polybase_join_group N'HST01', 16450, N'MSSQLSERVER'   
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [PolyBase 시작](../../relational-databases/polybase/get-started-with-polybase.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

@@ -1,4 +1,5 @@
 ---
+description: sp_publisherproperty(Transact-SQL)
 title: sp_publisherproperty (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0ed1ebc1-a1bd-4aed-9f46-615c5cf07827
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1a4bfcd7d9f03e41e32551653788386612a43835
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3b04284605289d731b0a8eb955830ab149827114
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715154"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489226"
 ---
 # <a name="sp_publisherproperty-transact-sql"></a>sp_publisherproperty(Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -39,9 +40,9 @@ sp_publisherproperty [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @publisher = ] 'publisher'`유형이 다른 게시자의 이름입니다. *publisher* 는 **sysname**이며 기본값은 없습니다.  
+`[ @publisher = ] 'publisher'` 유형이 다른 게시자의 이름입니다. *publisher* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @propertyname = ] 'propertyname'`설정 되는 속성의 이름입니다. *propertyname* 은 **sysname**이며 다음 값 중 하나일 수 있습니다.  
+`[ @propertyname = ] 'propertyname'` 설정 되는 속성의 이름입니다. *propertyname* 은 **sysname**이며 다음 값 중 하나일 수 있습니다.  
   
 |값|설명|  
 |-----------|-----------------|  
@@ -79,7 +80,7 @@ sp_publisherproperty [ @publisher = ] 'publisher'
  배포자에서 **sysadmin** 고정 서버 역할의 멤버만 **sp_publisherproperty**를 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Oracle 게시자 &#40;복제 Transact-sql 프로그래밍에 대 한 트랜잭션 집합 작업 구성&#41;](../../relational-databases/replication/administration/configure-the-transaction-set-job-for-an-oracle-publisher.md)   
+ [Oracle 게시자에 대한 트랜잭션 집합 작업 구성&#40;복제 Transact-SQL 프로그래밍&#41;](../../relational-databases/replication/administration/configure-the-transaction-set-job-for-an-oracle-publisher.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

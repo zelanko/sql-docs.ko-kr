@@ -1,4 +1,5 @@
 ---
+description: SetDisable 메서드(ClientNetworkProtocol 클래스)
 title: SetDisable 메서드 (ClientNetworkProtocol)
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: bce69ab9-ea5b-43fd-8114-08b1b5890755
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3d13eb6e6d7dfc06fd710537e3b746837619ddc4
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b5401d0eb4aa5d4682a078beb194e944c5923d88
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881078"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488503"
 ---
 # <a name="setdisable-method-clientnetworkprotocol-class"></a>SetDisable 메서드(ClientNetworkProtocol 클래스)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

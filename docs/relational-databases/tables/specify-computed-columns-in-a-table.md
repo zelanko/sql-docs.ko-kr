@@ -1,4 +1,5 @@
 ---
+description: 테이블에서 계산 열 지정
 title: 테이블에서 계산 열 지정 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ ms.assetid: 731a4576-09c1-47f0-a8f6-edd0b55679f4
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 546490349b2d80135c873ff0917ab571f3cae830
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ee1d32ce60064d6ab42b04a9aeddec4a6252d479
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731579"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488609"
 ---
 # <a name="specify-computed-columns-in-a-table"></a>테이블에서 계산 열 지정
 
@@ -67,7 +68,7 @@ ms.locfileid: "85731579"
 
 5. **지속형** 자식 속성 드롭다운에서 **예** 또는 **아니요** 를 선택하여 데이터를 지속할지 여부를 지정합니다.
 
-6. **파일** 메뉴에서 ‘테이블 이름’ **저장**을 클릭합니다. 
+6. **파일** 메뉴에서 ‘테이블 이름’ **저장을 클릭합니다.** __
 
 #### <a name="to-add-a-computed-column-definition-to-an-existing-column"></a>기존 열에 계산 열 정의를 추가하려면
 

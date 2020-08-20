@@ -1,4 +1,5 @@
 ---
+description: sysmail_help_account_sp(Transact-SQL)
 title: sysmail_help_account_sp (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 87c7c39c-8e05-4e68-9272-45f908809c3b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 11242eae3f17e24c428aac3a6f344d937f15dd33
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: 9f6995ca068efacff419ddad4f99435234d3228b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87122705"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488989"
 ---
 # <a name="sysmail_help_account_sp-transact-sql"></a>sysmail_help_account_sp(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,9 +40,9 @@ sysmail_help_account_sp [ [ @account_id = ] account_id | [ @account_name = ] 'ac
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @account_id = ] account_id`정보를 나열할 계정의 계정 ID입니다. *account_id* 은 **int**이며 기본값은 NULL입니다.  
+`[ @account_id = ] account_id` 정보를 나열할 계정의 계정 ID입니다. *account_id* 은 **int**이며 기본값은 NULL입니다.  
   
-`[ @account_name = ] 'account_name'`정보를 나열할 계정의 이름입니다. *account_name* 는 **sysname**이며 기본값은 NULL입니다.  
+`[ @account_name = ] 'account_name'` 정보를 나열할 계정의 이름입니다. *account_name* 는 **sysname**이며 기본값은 NULL입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -72,7 +73,7 @@ sysmail_help_account_sp [ [ @account_id = ] account_id | [ @account_name = ] 'ac
 ## <a name="permissions"></a>사용 권한  
  이 프로시저에 대 한 실행 권한은 기본적으로 **sysadmin** 고정 서버 역할의 멤버로 사용 됩니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  **1. 모든 계정에 대한 정보 나열**  
   
  다음 예에서는 인스턴스의 모든 계정에 대한 계정 정보를 나열합니다.  
@@ -110,6 +111,6 @@ account_id  name                         description                            
 ## <a name="see-also"></a>참고 항목  
  [데이터베이스 메일](../../relational-databases/database-mail/database-mail.md)   
  [데이터베이스 메일 계정 만들기](../../relational-databases/database-mail/create-a-database-mail-account.md)   
- [Transact-sql&#41;&#40;저장 프로시저 데이터베이스 메일](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [Transact-sql&#41;&#40;저장 프로시저 데이터베이스 메일 ](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

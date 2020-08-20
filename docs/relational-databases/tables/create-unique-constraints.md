@@ -1,4 +1,5 @@
 ---
+description: UNIQUE 제약 조건 만들기
 title: UNIQUE 제약 조건 만들기 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/17/2020
@@ -17,12 +18,12 @@ ms.assetid: a86f9d6f-f242-43be-b65d-b3435b71b62a
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ef372c63ec954a0be878d013f4198ee6f5656a53
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: aa8ab586235c33d6620bbce15676f226a85779d8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002150"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488626"
 ---
 # <a name="create-unique-constraints"></a>UNIQUE 제약 조건 만들기
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -63,7 +64,7 @@ ms.locfileid: "86002150"
   
 4.  **일반**아래의 표에서 **형식** 을 선택하고 속성 오른쪽에 있는 드롭다운 목록 상자에서 **고유 키** 를 선택합니다.  
   
-5.  **파일** 메뉴에서 _테이블 이름_**저장**을 클릭합니다.  
+5.  **파일** 메뉴에서 ‘테이블 이름’ **저장**을 클릭합니다.__  
 
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   

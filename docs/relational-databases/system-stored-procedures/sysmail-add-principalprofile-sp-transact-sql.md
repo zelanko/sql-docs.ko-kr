@@ -1,4 +1,5 @@
 ---
+description: sysmail_add_principalprofile_sp(Transact-SQL)
 title: sysmail_add_principalprofile_sp (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b2a0b313-abb9-4c23-8511-db77ca8172b3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: dac2c362e2aac2b09969ba7193e44b06facebb51
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 7e3c8085bdbdf45deac3fe6190bbad263e4d7d5b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891022"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489046"
 ---
 # <a name="sysmail_add_principalprofile_sp-transact-sql"></a>sysmail_add_principalprofile_sp(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,15 +42,15 @@ sysmail_add_principalprofile_sp  { [ @principal_id = ] principal_id | [ @princip
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @principal_id = ] principal_id`연결에 대 한 **msdb** 데이터베이스에 있는 데이터베이스 사용자 또는 역할의 ID입니다. *principal_id* 은 **int**이며 기본값은 NULL입니다. *Principal_id* 또는 *principal_name* 를 지정 해야 합니다. 0 *principal_id* 하면 **0** 이 프로필은 공개 프로필이 되며 데이터베이스의 모든 보안 주체에 게 액세스 권한을 부여 합니다.  
+`[ @principal_id = ] principal_id` 연결에 대 한 **msdb** 데이터베이스에 있는 데이터베이스 사용자 또는 역할의 ID입니다. *principal_id* 은 **int**이며 기본값은 NULL입니다. *Principal_id* 또는 *principal_name* 를 지정 해야 합니다. 0 *principal_id* 하면 **0** 이 프로필은 공개 프로필이 되며 데이터베이스의 모든 보안 주체에 게 액세스 권한을 부여 합니다.  
   
-`[ @principal_name = ] 'principal_name'`연결에 대 한 **msdb** 데이터베이스에 있는 데이터베이스 사용자 또는 역할의 이름입니다. *principal_name* 는 **sysname**이며 기본값은 NULL입니다. *Principal_id* 또는 *principal_name* 를 지정 해야 합니다. **' Public '** *principal_name* 이 프로필을 공개 프로필로 만들어 데이터베이스의 모든 보안 주체에 대 한 액세스 권한을 부여 합니다.  
+`[ @principal_name = ] 'principal_name'` 연결에 대 한 **msdb** 데이터베이스에 있는 데이터베이스 사용자 또는 역할의 이름입니다. *principal_name* 는 **sysname**이며 기본값은 NULL입니다. *Principal_id* 또는 *principal_name* 를 지정 해야 합니다. **' Public '** *principal_name* 이 프로필을 공개 프로필로 만들어 데이터베이스의 모든 보안 주체에 대 한 액세스 권한을 부여 합니다.  
   
-`[ @profile_id = ] profile_id`연결에 대 한 프로필의 id입니다. *profile_id* 은 **int**이며 기본값은 NULL입니다. *Profile_id* 또는 *profile_name* 를 지정 해야 합니다.  
+`[ @profile_id = ] profile_id` 연결에 대 한 프로필의 id입니다. *profile_id* 은 **int**이며 기본값은 NULL입니다. *Profile_id* 또는 *profile_name* 를 지정 해야 합니다.  
   
-`[ @profile_name = ] 'profile_name'`연결에 대 한 프로필의 이름입니다. *profile_name* 는 **sysname**이며 기본값은 없습니다. *Profile_id* 또는 *profile_name* 를 지정 해야 합니다.  
+`[ @profile_name = ] 'profile_name'` 연결에 대 한 프로필의 이름입니다. *profile_name* 는 **sysname**이며 기본값은 없습니다. *Profile_id* 또는 *profile_name* 를 지정 해야 합니다.  
   
-`[ @is_default = ] is_default`이 프로필이 보안 주체의 기본 프로필 인지 여부를 지정 합니다. 보안 주체는 하나의 기본 프로필을 가져야 합니다. *is_default* 은 **bit**이며 기본값은 없습니다.  
+`[ @is_default = ] is_default` 이 프로필이 보안 주체의 기본 프로필 인지 여부를 지정 합니다. 보안 주체는 하나의 기본 프로필을 가져야 합니다. *is_default* 은 **bit**이며 기본값은 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -66,7 +67,7 @@ sysmail_add_principalprofile_sp  { [ @principal_id = ] principal_id | [ @princip
 ## <a name="permissions"></a>사용 권한  
  이 프로시저에 대 한 실행 권한은 기본적으로 **sysadmin** 고정 서버 역할의 멤버로 사용 됩니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  **1. 연결 생성 및 기본 프로필 설정**  
   
  다음 예에서는 라는 프로필과 `AdventureWorks Administrator Profile` **msdb** 데이터베이스 사용자 간의 연결을 만듭니다 `ApplicationUser` . 이 프로필은 해당 사용자의 기본 프로필입니다.  
@@ -92,6 +93,6 @@ EXECUTE msdb.dbo.sysmail_add_principalprofile_sp
 ## <a name="see-also"></a>참고 항목  
  [데이터베이스 메일](../../relational-databases/database-mail/database-mail.md)   
  [데이터베이스 메일 구성 개체](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
- [Transact-sql&#41;&#40;저장 프로시저 데이터베이스 메일](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [Transact-sql&#41;&#40;저장 프로시저 데이터베이스 메일 ](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

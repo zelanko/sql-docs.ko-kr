@@ -1,4 +1,5 @@
 ---
+description: dbo.sysjobsteps(Transact-SQL)
 title: dbo.sysjobsteps (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 978b8205-535b-461c-91f3-af9b08eca467
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6b3395a26efaa4d05ebc4a74681c7d7d3e51897b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8cbe10b4d7734aa15448bd39e9e3ea9ec52eabd0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890438"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488913"
 ---
 # <a name="dbosysjobsteps-transact-sql"></a>dbo.sysjobsteps(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -61,6 +62,6 @@ ms.locfileid: "85890438"
 |**step_uid**|**uniqueidentifier**|작업 단계에 대한 식별자입니다.|  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;테이블 SQL Server 에이전트](../../relational-databases/system-tables/sql-server-agent-tables-transact-sql.md)  
+ [Transact-sql&#41;&#40;테이블 SQL Server 에이전트 ](../../relational-databases/system-tables/sql-server-agent-tables-transact-sql.md)  
   
   

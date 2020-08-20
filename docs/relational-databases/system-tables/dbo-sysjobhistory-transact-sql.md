@@ -1,4 +1,5 @@
 ---
+description: dbo.sysjobhistory(Transact-SQL)
 title: dbo.sysjobhistory (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/24/2019
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 1b1fcdbb-2af2-45e6-bf3f-e8279432ce13
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 06a5ab82207534d01f84c58d3a445f3fb91f0c34
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a5fc3586075ddf8f48f4117b3907db503960e613
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890505"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488930"
 ---
 # <a name="dbosysjobhistory-transact-sql"></a>dbo.sysjobhistory(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

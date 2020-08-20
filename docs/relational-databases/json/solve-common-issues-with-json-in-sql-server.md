@@ -1,4 +1,5 @@
 ---
+description: SQL Server에서 JSON으로 일반적인 문제 해결
 title: SQL Server에서 JSON으로 일반적인 문제 해결
 ms.date: 06/03/2020
 ms.prod: sql
@@ -12,12 +13,12 @@ ms.author: jovanpop
 ms.reviewer: jroth
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f0e5a115c8ba86553954ab325651a1bb89cf6c64
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3d898f2e0c61b0775d9094580e319640f2aeadf2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730374"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490911"
 ---
 # <a name="solve-common-issues-with-json-in-sql-server"></a>SQL Server에서 JSON으로 일반적인 문제 해결
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -141,7 +142,7 @@ WHERE [key] = 'color'
 ### <a name="reference-keys-that-contain-non-alphanumeric-characters-in-json-text"></a>JSON 텍스트에 영숫자가 아닌 문자가 포함된 참조 키  
  **질문.** JSON 텍스트의 키에 영숫자가 아닌 문자가 포함되었습니다. 이러한 속성을 어떻게 참조할 수 있나요?  
   
- **대답.** JSON 경로에서 따옴표로 묶어야 합니다. `JSON_VALUE(@json, '$."$info"."First Name".value')`)을 입력합니다.
+ **대답.** JSON 경로에서 따옴표로 묶어야 합니다. 예: `JSON_VALUE(@json, '$."$info"."First Name".value')`.
  
 ## <a name="learn-more-about-json-in-sql-server-and-azure-sql-database"></a>SQL Server 및 Azure SQL Database에서 JSON에 대한 자세한 정보  
   

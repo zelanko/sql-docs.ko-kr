@@ -1,4 +1,5 @@
 ---
+description: sys. dm_pdw_exec_sessions (Transact-sql)
 title: sys. dm_pdw_exec_sessions (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/22/2019
@@ -12,19 +13,19 @@ ms.assetid: 31c262b3-7e4d-44c4-af71-aaef0fd1a980
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 3e5e3982f0e8a2470878e06cded3f814871cc0aa
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: 5801b3e1b4cf57aef3b465a6190b3093480e6ca0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86197089"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489803"
 ---
 # <a name="sysdm_pdw_exec_sessions-transact-sql"></a>sys. dm_pdw_exec_sessions (Transact-sql)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   어플라이언스에서 현재 또는 최근에 열려 있는 모든 세션에 대 한 정보를 보관 합니다. 세션 마다 하나의 행을 나열 합니다.  
   
-|열 이름|데이터 형식|설명|범위|  
+|열 이름|데이터 형식|Description|범위|  
 |-----------------|---------------|-----------------|-----------|  
 |session_id|**nvarchar(32)**|현재 쿼리 또는 마지막 쿼리 실행의 id입니다 (세션이 종료 되 고 종료 시 쿼리가 실행 되는 경우). 이 보기의 키입니다.|시스템의 모든 세션에서 고유 합니다.|  
 |상태|**nvarchar (10)**|현재 세션의 경우 세션이 현재 활성 상태 인지 아니면 유휴 상태 인지를 식별 합니다. 이전 세션의 경우 세션 상태는 종료 됨 또는 중단 됨으로 표시 될 수 있습니다 (세션이 강제로 닫혀 있는 경우).|' ACTIVE ', ' CLOSED ', ' IDLE ', ' 종료 됨 '|  
@@ -43,7 +44,7 @@ ms.locfileid: "86197089"
 ## <a name="permissions"></a>사용 권한  
  `VIEW SERVER STATE` 권한이 필요합니다.  
   
-## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;SQL Data Warehouse 및 병렬 데이터 웨어하우스 동적 관리 뷰](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
+## <a name="see-also"></a>관련 항목  
+ [Transact-sql&#41;&#40;SQL Data Warehouse 및 병렬 데이터 웨어하우스 동적 관리 뷰 ](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   

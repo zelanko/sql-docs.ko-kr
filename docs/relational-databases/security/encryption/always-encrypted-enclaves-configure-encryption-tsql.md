@@ -1,4 +1,5 @@
 ---
+description: Transact-SQL을 사용하여 내부 열 암호화 구성
 title: Transact-SQL을 사용하여 내부 열 암호화 구성 | Microsoft Docs
 ms.custom: ''
 ms.date: 10/10/2019
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: e1dba061f6b8bc30e8f9f0e64e45f16493f62db1
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: 85729b4f194cedb1a0682387ab7047f332a2ceb8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411443"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490476"
 ---
 # <a name="configure-column-encryption-in-place-with-transact-sql"></a>Transact-SQL을 사용하여 내부 열 암호화 구성
 [!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
@@ -62,7 +63,7 @@ ms.locfileid: "87411443"
 
 4.  [sp_refresh_parameter_encryption](../../system-stored-procedures/sp-refresh-parameter-encryption-transact-sql.md)을 호출하여 [sys.parameters](../..//system-catalog-views/sys-parameters-transact-sql.md)에 보관되었으며 열 암호화로 인해 무효화되었을 수 있는 각 모듈(저장 프로시저, 함수, 뷰, 트리거)의 매개 변수 메타데이터를 업데이트합니다.
 
-### <a name="examples"></a>예
+### <a name="examples"></a>예제
 #### <a name="encrypting-a-column-in-place"></a>내부 열 암호화
 아래 예제에서는 다음을 가정합니다.
 - `CEK1`은 enclave 사용 열 암호화 키입니다.

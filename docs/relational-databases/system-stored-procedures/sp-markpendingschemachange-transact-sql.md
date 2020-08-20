@@ -1,4 +1,5 @@
 ---
+description: sp_markpendingschemachange(Transact-SQL)
 title: sp_markpendingschemachange (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 01100309-7bef-4154-85bf-f18489577e37
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cea2f7c8f9ce6040f4335428e2c5e97b52a3e591
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b9e62684057772d18a78694de67928073bc10c8a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899358"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489232"
 ---
 # <a name="sp_markpendingschemachange-transact-sql"></a>sp_markpendingschemachange(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,11 +41,11 @@ sp_markpendingschemachange [@publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @publication = ] 'publication'`게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 없습니다.  
+`[ @publication = ] 'publication'` 게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @schemaversion = ] schemaversion`보류 중인 스키마 변경 내용을 식별 합니다. *schemaversion* 은 **int**이며 기본값은 **0**입니다. [Sp_enumeratependingschemachanges &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-enumeratependingschemachanges-transact-sql.md) 를 사용 하 여 게시에 대 한 보류 중인 스키마 변경 내용을 나열 합니다.  
+`[ @schemaversion = ] schemaversion` 보류 중인 스키마 변경 내용을 식별 합니다. *schemaversion* 은 **int**이며 기본값은 **0**입니다. [Sp_enumeratependingschemachanges &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-enumeratependingschemachanges-transact-sql.md) 를 사용 하 여 게시에 대 한 보류 중인 스키마 변경 내용을 나열 합니다.  
   
-`[ @status = ] 'status'`보류 중인 스키마 변경 내용을 건너뛸 것인지 여부를 나타냅니다. *status* 는 **nvarchar (10)** 이며 기본값은 **active**입니다. *상태* 값을 **건너뛰면**선택한 스키마 변경이 복제 되지 않습니다.  
+`[ @status = ] 'status'` 보류 중인 스키마 변경 내용을 건너뛸 것인지 여부를 나타냅니다. *status* 는 **nvarchar (10)** 이며 기본값은 **active**입니다. *상태* 값을 **건너뛰면**선택한 스키마 변경이 복제 되지 않습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

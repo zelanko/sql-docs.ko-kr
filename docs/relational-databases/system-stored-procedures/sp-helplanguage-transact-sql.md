@@ -1,4 +1,5 @@
 ---
+description: sp_helplanguage(Transact-SQL)
 title: sp_helplanguage (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ ms.assetid: 8c4651a5-7dbc-49c5-8691-dc72103c2dfa
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2878d206d4bc90d801e1e8f42f4f3f2c04d2c121
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 72f2e867c8139045b107cbb99871742c26440ee4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733202"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489342"
 ---
 # <a name="sp_helplanguage-transact-sql"></a>sp_helplanguage(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -41,7 +42,7 @@ sp_helplanguage [ [ @language = ] 'language' ]
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @language = ] 'language'`정보를 표시할 대체 언어의 이름입니다. *language* 는 **sysname**이며 기본값은 NULL입니다. *Language* 를 지정 하면 지정 된 언어에 대 한 정보가 반환 됩니다. Language를 지정 하지 않으면 **sys.sys언어** 호환성 보기의 모든 언어에 대 한 정보가 반환 됩니다.  
+`[ @language = ] 'language'` 정보를 표시할 대체 언어의 이름입니다. *language* 는 **sysname**이며 기본값은 NULL입니다. *Language* 를 지정 하면 지정 된 언어에 대 한 정보가 반환 됩니다. Language를 지정 하지 않으면 **sys.sys언어** 호환성 보기의 모든 언어에 대 한 정보가 반환 됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -65,7 +66,7 @@ sp_helplanguage [ [ @language = ] 'language' ]
 ## <a name="permissions"></a>사용 권한  
  **public** 역할의 멤버 자격이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-returning-information-about-a-single-language"></a>A. 단일 언어에 관한 정보 반환  
  다음 예에서는 대체 언어 `French`에 관한 정보를 표시합니다.  
@@ -82,7 +83,7 @@ sp_helplanguage;
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;저장 프로시저 데이터베이스 엔진](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;저장 프로시저 데이터베이스 엔진 ](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [@@LANGUAGE&#40;Transact-SQL&#41;](../../t-sql/functions/language-transact-sql.md)   
  [SET LANGUAGE &#40;Transact-sql&#41;](../../t-sql/statements/set-language-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

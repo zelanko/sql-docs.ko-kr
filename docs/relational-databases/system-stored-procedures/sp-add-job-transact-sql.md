@@ -1,4 +1,5 @@
 ---
+description: sp_add_job(Transact-SQL)
 title: sp_add_job (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6ca8fe2c-7b1c-4b59-b4c7-e3b7485df274
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: bf9351455ffa21978821590e06edaa93e7f70405
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 76503d17117e6a6dd0787539d96c6e16f3a0bfd6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87865351"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489682"
 ---
 # <a name="sp_add_job-transact-sql"></a>sp_add_job(Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -57,47 +58,47 @@ sp_add_job [ @job_name = ] 'job_name'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @job_name = ] 'job_name'`작업의 이름입니다. 이름은 고유 해야 하며 백분율 () 문자를 포함할 수 없습니다 **%** . *job_name*은 **nvarchar (128)** 이며 기본값은 없습니다.  
+`[ @job_name = ] 'job_name'` 작업의 이름입니다. 이름은 고유 해야 하며 백분율 () 문자를 포함할 수 없습니다 **%** . *job_name*은 **nvarchar (128)** 이며 기본값은 없습니다.  
   
-`[ @enabled = ] enabled`추가 된 작업의 상태를 나타냅니다. *enabled*는 **tinyint**이며 기본값은 1 (사용)입니다. **0**인 경우 작업이 활성화 되지 않으며 일정에 따라 실행 되지 않습니다. 그러나 수동으로 실행할 수도 있습니다.  
+`[ @enabled = ] enabled` 추가 된 작업의 상태를 나타냅니다. *enabled*는 **tinyint**이며 기본값은 1 (사용)입니다. **0**인 경우 작업이 활성화 되지 않으며 일정에 따라 실행 되지 않습니다. 그러나 수동으로 실행할 수도 있습니다.  
   
-`[ @description = ] 'description'`작업에 대 한 설명입니다. *description* 은 **nvarchar (512)** 이며 기본값은 NULL입니다. *설명을* 생략 하면 "사용할 수 있는 설명이 없습니다."가 사용 됩니다.  
+`[ @description = ] 'description'` 작업에 대 한 설명입니다. *description* 은 **nvarchar (512)** 이며 기본값은 NULL입니다. *설명을* 생략 하면 "사용할 수 있는 설명이 없습니다."가 사용 됩니다.  
   
-`[ @start_step_id = ] step_id`작업에 대해 실행할 첫 번째 단계의 id입니다. *step_id*은 **int**이며 기본값은 1입니다.  
+`[ @start_step_id = ] step_id` 작업에 대해 실행할 첫 번째 단계의 id입니다. *step_id*은 **int**이며 기본값은 1입니다.  
   
-`[ @category_name = ] 'category'`작업의 범주입니다. *category*는 **sysname**이며 기본값은 NULL입니다.  
+`[ @category_name = ] 'category'` 작업의 범주입니다. *category*는 **sysname**이며 기본값은 NULL입니다.  
   
-`[ @category_id = ] category_id`작업 범주를 지정 하는 언어 독립적 메커니즘입니다. *category_id*은 **int**이며 기본값은 NULL입니다.  
+`[ @category_id = ] category_id` 작업 범주를 지정 하는 언어 독립적 메커니즘입니다. *category_id*은 **int**이며 기본값은 NULL입니다.  
   
-`[ @owner_login_name = ] 'login'`작업을 소유 하는 로그인의 이름입니다. *login*은 **sysname**이며 기본값은 현재 로그인 이름으로 해석 되는 NULL입니다. **Sysadmin** 고정 서버 역할의 멤버만 ** \@ owner_login_name**에 대 한 값을 설정 하거나 변경할 수 있습니다. **Sysadmin** 역할의 멤버가 아닌 사용자가 ** \@ owner_login_name**값을 설정 하거나 변경 하는 경우이 저장 프로시저의 실행이 실패 하 고 오류가 반환 됩니다.  
+`[ @owner_login_name = ] 'login'` 작업을 소유 하는 로그인의 이름입니다. *login*은 **sysname**이며 기본값은 현재 로그인 이름으로 해석 되는 NULL입니다. **Sysadmin** 고정 서버 역할의 멤버만 ** \@ owner_login_name**에 대 한 값을 설정 하거나 변경할 수 있습니다. **Sysadmin** 역할의 멤버가 아닌 사용자가 ** \@ owner_login_name**값을 설정 하거나 변경 하는 경우이 저장 프로시저의 실행이 실패 하 고 오류가 반환 됩니다.  
   
-`[ @notify_level_eventlog = ] eventlog_level`Microsoft Windows 응용 프로그램 로그에서이 작업에 대 한 항목을 저장할 시간을 나타내는 값입니다. *eventlog_level*은 **int**이며 다음 값 중 하나일 수 있습니다.  
+`[ @notify_level_eventlog = ] eventlog_level` Microsoft Windows 응용 프로그램 로그에서이 작업에 대 한 항목을 저장할 시간을 나타내는 값입니다. *eventlog_level*은 **int**이며 다음 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**0**|안 함|  
 |**1**|성공한 경우|  
 |**2** (기본값)|실패한 경우|  
 |**3**|항상|  
   
-`[ @notify_level_email = ] email_level`이 작업이 완료 될 때 전자 메일을 보낼 시간을 나타내는 값입니다. *email_level*는 **int**이며 기본값은 never를 나타내는 **0**입니다. *email_level*는 *eventlog_level*와 동일한 값을 사용 합니다.  
+`[ @notify_level_email = ] email_level` 이 작업이 완료 될 때 전자 메일을 보낼 시간을 나타내는 값입니다. *email_level*는 **int**이며 기본값은 never를 나타내는 **0**입니다. *email_level*는 *eventlog_level*와 동일한 값을 사용 합니다.  
   
-`[ @notify_level_netsend = ] netsend_level`이 작업이 완료 될 때 네트워크 메시지를 보낼 시간을 나타내는 값입니다. *netsend_level*는 **int**이며 기본값은 never를 나타내는 **0**입니다. *netsend_level* 는 *eventlog_level*와 동일한 값을 사용 합니다.  
+`[ @notify_level_netsend = ] netsend_level` 이 작업이 완료 될 때 네트워크 메시지를 보낼 시간을 나타내는 값입니다. *netsend_level*는 **int**이며 기본값은 never를 나타내는 **0**입니다. *netsend_level* 는 *eventlog_level*와 동일한 값을 사용 합니다.  
   
-`[ @notify_level_page = ] page_level`이 작업이 완료 될 때 페이지를 보낼지 여부를 나타내는 값입니다. *page_level*는 **int**이며 기본값은 never를 나타내는 **0**입니다. *page_level*는 *eventlog_level*와 동일한 값을 사용 합니다.  
+`[ @notify_level_page = ] page_level` 이 작업이 완료 될 때 페이지를 보낼지 여부를 나타내는 값입니다. *page_level*는 **int**이며 기본값은 never를 나타내는 **0**입니다. *page_level*는 *eventlog_level*와 동일한 값을 사용 합니다.  
   
 `[ @notify_email_operator_name = ] 'email_name'`*Email_level* 에 도달 했을 때 전자 메일을 보낼 사람의 전자 메일 이름입니다. *email_name* 는 **sysname**이며 기본값은 NULL입니다.  
   
-`[ @notify_netsend_operator_name = ] 'netsend_name'`이 작업이 완료 될 때 네트워크 메시지가 전송 되는 운영자의 이름입니다. *netsend_name*는 **sysname**이며 기본값은 NULL입니다.  
+`[ @notify_netsend_operator_name = ] 'netsend_name'` 이 작업이 완료 될 때 네트워크 메시지가 전송 되는 운영자의 이름입니다. *netsend_name*는 **sysname**이며 기본값은 NULL입니다.  
   
-`[ @notify_page_operator_name = ] 'page_name'`이 작업이 완료 될 때 페이지로 이동할 사람의 이름입니다. *page_name*는 **sysname**이며 기본값은 NULL입니다.  
+`[ @notify_page_operator_name = ] 'page_name'` 이 작업이 완료 될 때 페이지로 이동할 사람의 이름입니다. *page_name*는 **sysname**이며 기본값은 NULL입니다.  
   
-`[ @delete_level = ] delete_level`작업을 삭제할 시간을 나타내는 값입니다. *delete_value*은 **int**이며 기본값은 0으로,이는 never를 의미 합니다. *delete_level*는 *eventlog_level*와 동일한 값을 사용 합니다.  
+`[ @delete_level = ] delete_level` 작업을 삭제할 시간을 나타내는 값입니다. *delete_value*은 **int**이며 기본값은 0으로,이는 never를 의미 합니다. *delete_level*는 *eventlog_level*와 동일한 값을 사용 합니다.  
   
 > [!NOTE]  
 >  *Delete_level* 가 **3**이면 작업에 대해 정의 된 일정에 관계 없이 작업이 한 번만 실행 됩니다. 또한 작업 자체를 삭제하는 경우 작업에 대한 모든 기록도 함께 삭제됩니다.  
   
-`[ @job_id = ] _job_idOUTPUT`성공적으로 만들어진 경우 작업에 할당 된 작업 id 번호입니다. *job_id*은 **uniqueidentifier**형식의 출력 변수 이며 기본값은 NULL입니다.  
+`[ @job_id = ] _job_idOUTPUT` 성공적으로 만들어진 경우 작업에 할당 된 작업 id 번호입니다. *job_id*은 **uniqueidentifier**형식의 출력 변수 이며 기본값은 NULL입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -127,7 +128,7 @@ sp_add_job [ @job_name = ] 'job_name'
   
  **Sysadmin** 고정 서버 역할의 멤버만 ** \@ owner_login_name**에 대 한 값을 설정 하거나 변경할 수 있습니다. **Sysadmin** 역할의 멤버가 아닌 사용자가 ** \@ owner_login_name**값을 설정 하거나 변경 하는 경우이 저장 프로시저의 실행이 실패 하 고 오류가 반환 됩니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-adding-a-job"></a>A. 작업 추가  
  다음 예에서는 `NightlyBackups`라는 새 작업을 추가합니다.  
@@ -167,7 +168,7 @@ EXEC dbo.sp_add_job
 GO  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [Transact-sql&#41;sp_add_schedule &#40;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
  [Transact-sql&#41;sp_add_jobstep &#40;](../../relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md)   
  [Transact-sql&#41;sp_add_jobserver &#40;](../../relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql.md)   

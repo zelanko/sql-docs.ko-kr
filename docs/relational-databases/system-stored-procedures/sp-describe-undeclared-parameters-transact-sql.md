@@ -1,4 +1,5 @@
 ---
+description: sp_describe_undeclared_parameters(Transact-SQL)
 title: sp_describe_undeclared_parameters (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/24/2018
@@ -18,12 +19,12 @@ ms.assetid: 6f016da6-dfee-4228-8b0d-7cd8e7d5a354
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: 2c40ef34ffcde3f7a1d02f6ba45963bd83df841a
-ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
+ms.openlocfilehash: b93ecf05c0a4b48417240db1b9bf22e1104149a2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87522547"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489456"
 ---
 # <a name="sp_describe_undeclared_parameters-transact-sql"></a>sp_describe_undeclared_parameters(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)] 
@@ -45,7 +46,7 @@ sp_describe_undeclared_parameters
 > Azure Synapse Analytics (이전의 SQL DW)에서이 저장 프로시저를 사용 하려면 데이터베이스의 호환성 수준이 10 보다 커야 합니다. 
 
 ## <a name="arguments"></a>인수  
-`[ \@tsql = ] 'Transact-SQL\_batch'`하나 이상의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문입니다. *SQL_batch* 는 **nvarchar (**_n_**)** 또는 **nvarchar (max)** 일 수 있습니다.  
+`[ \@tsql = ] 'Transact-SQL\_batch'` 하나 이상의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문입니다. *SQL_batch* 는 **nvarchar (**_n_**)** 또는 **nvarchar (max)** 일 수 있습니다.  
   
 `[ \@params = ] N'parameters'`\@params는 [!INCLUDE[tsql](../../includes/tsql-md.md)] sp_executesql 작동 방식과 비슷하게 일괄 처리에 대 한 매개 변수에 대 한 선언 문자열을 제공 합니다. *매개 변수* 는 **nvarchar (**_n_**)** 또는 **nvarchar (max)** 일 수 있습니다.  
   
@@ -169,7 +170,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
 -   단순 추론  
   
-     E ( \@ p) = \@ p 및 TT (p)가 있는 경우 (예 \@ : \@ p가 2 단계 시작 부분에 나열 된 식 중 하나에 대 한 인수) 이면 형식 추론 알고리즘에서 p의 데이터 형식을 \@ TT ( \@ p)로 추론 합니다. 예를 들면 다음과 같습니다.  
+     E ( \@ p) = \@ p 및 TT (p)가 있는 경우 (예 \@ : \@ p가 2 단계 시작 부분에 나열 된 식 중 하나에 대 한 인수) 이면 형식 추론 알고리즘에서 p의 데이터 형식을 \@ TT ( \@ p)로 추론 합니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.  
   
     ```sql
     SELECT * FROM t WHERE c1 = @p1 AND @p2 = dbo.tbl(@p3)  
@@ -217,7 +218,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
 1.  E (p)에서 가장 적은 수의 암시적 변환을 생성 하는 데이터 형식이 \@ 선택 됩니다. 특정 데이터 형식이 E (p)에 대해 TT (p)와 다른 데이터 형식을 생성 하는 경우 \@ \@ 형식 추론 알고리즘은이를 e (p)의 데이터 형식에서 \@ tt (p)로 추가 암시적 변환으로 간주 합니다 \@ .  
   
-     예를 들면 다음과 같습니다.  
+     예를 들어 다음과 같은 가치를 제공해야 합니다.  
   
     ```sql
     SELECT * FROM t WHERE Col_Int = Col_Int + @p  
@@ -225,7 +226,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
      이 경우 E ( \@ p)는 Col_Int + p이 \@ 고 TT ( \@ p)는 **Int**입니다. **int** 는 \@ 암시적 변환을 생성 하지 않으므로 p에 대해 선택 됩니다. 다른 데이터 형식은 하나 이상의 암시적 변환을 생성합니다.  
   
-2.  변환 수가 가장 적은 데이터 형식에 여러 데이터 형식이 연결된 경우 우선 순위가 가장 높은 데이터 형식이 사용됩니다. 예  
+2.  변환 수가 가장 적은 데이터 형식에 여러 데이터 형식이 연결된 경우 우선 순위가 가장 높은 데이터 형식이 사용됩니다. 예를 들면 다음과 같습니다.  
   
     ```sql
     SELECT * FROM t WHERE Col_Int = Col_smallint + @p  

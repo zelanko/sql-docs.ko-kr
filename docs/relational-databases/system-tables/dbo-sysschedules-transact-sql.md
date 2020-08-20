@@ -1,4 +1,5 @@
 ---
+description: dbo.sysschedules(Transact-SQL)
 title: dbo.sys일정 (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 4cac9237-7a69-4035-bb3e-928b76aad698
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 397fecaadad721529671a69daaf1c704e28268ea
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 16e51513c6d2b678798d0f4bde3b5a9cb1de69a7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890395"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488890"
 ---
 # <a name="dbosysschedules-transact-sql"></a>dbo.sysschedules(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +45,7 @@ ms.locfileid: "85890395"
 |**freq_interval**|**int**|작업이 실행되는 요일입니다. **Freq_type**값에 따라 달라 집니다. 기본값은 **freq_interval** 이 사용 되지 않음을 나타내는 **0**입니다. 가능한 값과 그 영향에 대해서는 아래 표를 참조 하세요.|  
 |**freq_subday_type**|**int**|**Freq_subday_interval**단위입니다. 다음은 가능한 값과 그에 대 한 설명입니다.<br /><br /> <br /><br /> **1** : 지정 된 시간에<br /><br /> **2** : 초<br /><br /> **4** : 분<br /><br /> **8** : 시간|  
 |**freq_subday_interval**|**int**|각 작업 실행 사이에 발생 하는 **freq_subday_type** 기간 수입니다.|  
-|**freq_relative_interval**|**int**|매월 **freq_interval** 발생 하는 경우 **freq_type** 는 **32** (매월 상대적)입니다. 다음 값 중 하나를 사용할 수 있습니다.<br /><br /> **0**  =  **freq_relative_interval** 사용 되지 않음<br /><br /> **1** = 첫 번째<br /><br /> **2** = 초<br /><br /> **4** = 세 번째<br /><br /> **8** = 네 번째<br /><br /> **16** = 마지막|  
+|**freq_relative_interval**|**int**|매월 **freq_interval** 발생 하는 경우 **freq_type** 는 **32** (매월 상대적)입니다. 다음 값 중 하나일 수 있습니다.<br /><br /> **0**  =  **freq_relative_interval** 사용 되지 않음<br /><br /> **1** = 첫 번째<br /><br /> **2** = 초<br /><br /> **4** = 세 번째<br /><br /> **8** = 네 번째<br /><br /> **16** = 마지막|  
 |**freq_recurrence_**<br /><br /> **이용한**|**int**|예약된 작업 실행 간의 주 또는 월 수입니다. **freq_recurrence_factor** 는 **freq_type** 이 **8**, **16**또는 **32**인 경우에만 사용 됩니다. 이 열에 **0**이 있으면 **freq_recurrence_factor** 사용 되지 않습니다.|  
 |**active_start_date**|**int**|작업 실행이 시작되는 날짜입니다. 날짜 형식은 YYYYMMDD입니다. NULL은 오늘 날짜를 나타냅니다.|  
 |**active_end_date**|**int**|작업 실행이 중지되는 날짜입니다. 날짜 형식은 YYYYMMDD입니다.|  
@@ -64,7 +65,7 @@ ms.locfileid: "85890395"
 |**64** (SQL Server 에이전트 서비스가 시작 될 때 시작)|**freq_interval** 사용 되지 않음 (**0**)|  
 |**128** (컴퓨터가 유휴 상태일 때 실행)|**freq_interval** 사용 되지 않음 (**0**)|  
   
-## <a name="see-also"></a>참조  
- [Transact-sql&#41;&#40;dbo.sysjobschedules](../../relational-databases/system-tables/dbo-sysjobschedules-transact-sql.md)  
+## <a name="see-also"></a>참고 항목  
+ [ Transact-sql&#41;&#40;dbo.sysjobschedules ](../../relational-databases/system-tables/dbo-sysjobschedules-transact-sql.md)  
   
   

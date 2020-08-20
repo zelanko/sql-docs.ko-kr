@@ -1,4 +1,5 @@
 ---
+description: 인덱스 디스크 공간 예
 title: 인덱스 디스크 공간 예 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/02/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e5c71f55-0be3-4c93-97e9-7b3455c8f581
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1d85fecce4c5b97154312922ed96f988754f88e0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8d12125849b83fb6701b18bd3d7c46b9d9b9828a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85668283"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490975"
 ---
 # <a name="index-disk-space-example"></a>인덱스 디스크 공간 예
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -120,7 +121,7 @@ ms.locfileid: "85668283"
  이 예에서는 동시 사용자 업데이트 및 삭제 작업으로 인해 만들어진 버전 레코드용으로 **tempdb** 에서 추가로 필요한 임시 디스크 공간을 고려하지 않았습니다.  
   
 ## <a name="related-content"></a>관련 내용  
- [인덱스 DDL 작업의 디스크 공간 요구 사항](../../relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md)  
+ [Disk Space Requirements for Index DDL Operations](../../relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md)  
   
  [인덱스 작업에 필요한 트랜잭션 로그 디스크 공간](../../relational-databases/indexes/transaction-log-disk-space-for-index-operations.md)  
   

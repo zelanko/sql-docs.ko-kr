@@ -1,4 +1,5 @@
 ---
+description: sp_posttracertoken(Transact-SQL)
 title: sp_posttracertoken (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 24da5cd2-1c45-475e-93db-5bdf660f1c2c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1354645781d4d6207311349689fb8431e3cb7912
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 74e1bcab6a1db0f8c92b82475689f24b53d72316
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891545"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489148"
 ---
 # <a name="sp_posttracertoken-transact-sql"></a>sp_posttracertoken(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,11 +42,11 @@ sp_posttracertoken [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @publication = ] 'publication'`대기 시간이 측정 되는 게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 없습니다.  
+`[ @publication = ] 'publication'` 대기 시간이 측정 되는 게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @tracer_token_id = ] _tracer_token_id OUTPUT`삽입 된 추적 프로그램 토큰의 ID입니다. *tracer_token_id* 은 **int** 이며 기본값은 NULL이 고 OUTPUT 매개 변수입니다. 이 값은 [&#40;&#41;](../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md)sp_helptracertokens &#40;를 먼저 실행 하지 않고 transact-sql [&#41;&#40;](../../relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql.md) transact-sql [&#41;sp_deletetracertokenhistory](../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md) 를 sp_helptracertokenhistory 실행 하는 데 사용할 수 있습니다.  
+`[ @tracer_token_id = ] _tracer_token_id OUTPUT` 삽입 된 추적 프로그램 토큰의 ID입니다. *tracer_token_id* 은 **int** 이며 기본값은 NULL이 고 OUTPUT 매개 변수입니다. 이 값은 [&#40;&#41;](../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md)sp_helptracertokens &#40;를 먼저 실행 하지 않고 transact-sql [&#41;&#40;](../../relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql.md) transact-sql [&#41;sp_deletetracertokenhistory](../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md) 를 sp_helptracertokenhistory 실행 하는 데 사용할 수 있습니다.  
   
-`[ @publisher = ] 'publisher'`이외 게시자를 지정 합니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *publisher* 는 **sysname**이며 기본값은 NULL이 고 게시자에 대해서는 지정 하지 않아야 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+`[ @publisher = ] 'publisher'` 이외 게시자를 지정 합니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *publisher* 는 **sysname**이며 기본값은 NULL이 고 게시자에 대해서는 지정 하지 않아야 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

@@ -1,4 +1,5 @@
 ---
+description: sp_helpserver(Transact-SQL)
 title: sp_helpserver (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e8f42de7-c738-41c3-8bf5-dbd559dc7184
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fe5e3bd8d7d5ce0046a908f16ae860bc68386054
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1870b2e58871eacde9a65fa42bf75285b2630311
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899475"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489275"
 ---
 # <a name="sp_helpserver-transact-sql"></a>sp_helpserver(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,9 +42,9 @@ sp_helpserver [ [ @server = ] 'server' ]
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @server = ] 'server'`정보를 보고할 서버입니다. *서버* 를 지정 하지 않으면 **master.sys**서버에 있는 모든 서버에 대해 보고 합니다. *서버* 는 **sysname**이며 기본값은 NULL입니다.  
+`[ @server = ] 'server'` 정보를 보고할 서버입니다. *서버* 를 지정 하지 않으면 **master.sys**서버에 있는 모든 서버에 대해 보고 합니다. *서버* 는 **sysname**이며 기본값은 NULL입니다.  
   
-`[ @optname = ] 'option'`서버를 설명 하는 옵션입니다. *옵션* 은 **varchar (** 35 **)** 이며 기본값은 NULL이 고 다음 값 중 하나 여야 합니다.  
+`[ @optname = ] 'option'` 서버를 설명 하는 옵션입니다. *옵션* 은 **varchar (** 35 **)** 이며 기본값은 NULL이 고 다음 값 중 하나 여야 합니다.  
   
 |값|설명|  
 |-----------|-----------------|  
@@ -59,7 +60,7 @@ sp_helpserver [ [ @server = ] 'server' ]
 |**시스템**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**원격 데이터 정렬 사용**|로컬 서버가 아닌 원격 열의 데이터 정렬을 사용합니다.|  
   
-`[ @show_topology = ] 'show_topology'`지정한 서버와 다른 서버의 관계입니다. *show_topology* 는 **varchar (** 1 **)** 이며 기본값은 NULL입니다. *Show_topology* **t** 와 같지 않거나 NULL 인 경우 **sp_helpserver** 결과 집합 섹션에 나열 된 열을 반환 합니다. *Show_topology* 가 **t**인 경우 결과 집합에 나열 된 열 외에도 **topx** 및 **topx** 정보를 반환 **sp_helpserver** .  
+`[ @show_topology = ] 'show_topology'` 지정한 서버와 다른 서버의 관계입니다. *show_topology* 는 **varchar (** 1 **)** 이며 기본값은 NULL입니다. *Show_topology* **t** 와 같지 않거나 NULL 인 경우 **sp_helpserver** 결과 집합 섹션에 나열 된 열을 반환 합니다. *Show_topology* 가 **t**인 경우 결과 집합에 나열 된 열 외에도 **topx** 및 **topx** 정보를 반환 **sp_helpserver** .  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패).  
@@ -82,7 +83,7 @@ sp_helpserver [ [ @server = ] 'server' ]
 ## <a name="permissions"></a>사용 권한  
  사용 권한을 확인하지 않습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-displaying-information-about-all-servers"></a>A. 모든 서버에 관한 정보 표시  
  다음 예에서는 매개 변수 없이 `sp_helpserver`를 사용하여 모든 서버에 관한 정보를 표시합니다.  
@@ -103,16 +104,16 @@ EXEC sp_helpserver 'SEATTLE2';
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;저장 프로시저 데이터베이스 엔진](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;저장 프로시저 데이터베이스 엔진 ](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [Transact-sql&#41;sp_adddistpublisher &#40;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
  [Transact-sql&#41;sp_addserver &#40;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
  [Transact-sql&#41;sp_addsubscriber &#40;](../../relational-databases/system-stored-procedures/sp-addsubscriber-transact-sql.md)   
  [Transact-sql&#41;sp_changesubscriber &#40;](../../relational-databases/system-stored-procedures/sp-changesubscriber-transact-sql.md)   
  [Transact-sql&#41;sp_dropserver &#40;](../../relational-databases/system-stored-procedures/sp-dropserver-transact-sql.md)   
  [Transact-sql&#41;sp_dropsubscriber &#40;](../../relational-databases/system-stored-procedures/sp-dropsubscriber-transact-sql.md)   
- [Transact-sql&#41;sp_helpdistributor &#40;](../../relational-databases/system-stored-procedures/sp-helpdistributor-transact-sql.md)   
+ [sp_helpdistributor&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistributor-transact-sql.md)   
  [Transact-sql&#41;sp_helpremotelogin &#40;](../../relational-databases/system-stored-procedures/sp-helpremotelogin-transact-sql.md)   
- [Transact-sql&#41;sp_helpsubscriberinfo &#40;](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md)   
+ [sp_helpsubscriberinfo&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md)   
  [Transact-sql&#41;sp_serveroption &#40;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

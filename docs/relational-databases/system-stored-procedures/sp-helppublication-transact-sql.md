@@ -1,4 +1,5 @@
 ---
+description: sp_helppublication(Transact-SQL)
 title: sp_helppublication (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/18/2019
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e801c3f0-dcbd-4b4a-b254-949a05f63518
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b4c5d3157c6683a793f30eccd878aa9e691c7023
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: dd5452439cc3467cc840ac11dd9ce3cf880a4ce8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85729217"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489309"
 ---
 # <a name="sp_helppublication-transact-sql"></a>sp_helppublication(Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -39,11 +40,11 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @publication = ] 'publication'`보려는 게시의 이름입니다. *게시* 는 sysname 이며 기본값은 **%** 모든 게시에 대 한 정보를 반환 하는입니다.  
+`[ @publication = ] 'publication'` 보려는 게시의 이름입니다. *게시* 는 sysname 이며 기본값은 **%** 모든 게시에 대 한 정보를 반환 하는입니다.  
   
-`[ @found = ] 'found' OUTPUT`반환 하는 행을 나타내는 플래그입니다. *검색*된 **int** 및 OUTPUT 매개 변수 이며 기본값은 **23456**입니다. **1** 은 게시가 발견 되었음을 나타냅니다. **0** 은 게시를 찾을 수 없음을 나타냅니다.  
+`[ @found = ] 'found' OUTPUT` 반환 하는 행을 나타내는 플래그입니다. *검색*된 **int** 및 OUTPUT 매개 변수 이며 기본값은 **23456**입니다. **1** 은 게시가 발견 되었음을 나타냅니다. **0** 은 게시를 찾을 수 없음을 나타냅니다.  
   
-`[ @publisher = ] 'publisher'`이외 게시자를 지정 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *publisher* 는 sysname 이며 기본값은 NULL입니다.  
+`[ @publisher = ] 'publisher'` 이외 게시자를 지정 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *publisher* 는 sysname 이며 기본값은 NULL입니다.  
   
 > [!NOTE]  
 >  게시자에서 게시 정보를 요청할 때 *게시자* 를 지정 하면 안 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

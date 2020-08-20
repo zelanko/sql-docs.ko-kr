@@ -1,4 +1,5 @@
 ---
+description: 복제 개발자 설명서
 title: 복제 개발자 설명서 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ ms.assetid: 7ee134ae-1cab-4a35-8017-8ac6d8fc64b6
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 950723affaeb6c1e06f16d07967b8fea5adfca75
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: bf9fb1e0980680793f9aa87c6a7297089f619512
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914216"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490637"
 ---
 # <a name="replication-developer-documentation"></a>복제 개발자 설명서
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]

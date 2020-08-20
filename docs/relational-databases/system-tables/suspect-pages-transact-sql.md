@@ -1,4 +1,5 @@
 ---
+description: suspect_pages(Transact-SQL)
 title: suspect_pages (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 119c8d62-eea8-44fb-bf72-de469c838c50
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: aa13a24d933157aaa1dc546a2e55c1dc0d1ef7ed
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c2532301ee2459f66281be8cf1b782574768e283
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881448"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488663"
 ---
 # <a name="suspect_pages-transact-sql"></a>suspect_pages(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,7 +48,7 @@ ms.locfileid: "85881448"
 ## <a name="see-also"></a>참고 항목  
  [페이지 복원&#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-pages-sql-server.md)   
  [데이터베이스 주의 대상 데이터 페이지 이벤트 클래스](../../relational-databases/event-classes/database-suspect-data-page-event-class.md)   
- [Transact-sql&#41;&#40;시스템 테이블](../../relational-databases/system-tables/system-tables-transact-sql.md)   
+ [Transact-sql&#41;&#40;시스템 테이블 ](../../relational-databases/system-tables/system-tables-transact-sql.md)   
  [suspect_pages 테이블 관리&#40;SQL Server&#41;](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)  
   
   

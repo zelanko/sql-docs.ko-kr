@@ -1,4 +1,5 @@
 ---
+description: sp_delete_maintenance_plan_job(Transact-SQL)
 title: sp_delete_maintenance_plan_job (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1c2148c3-2928-4d9b-b1c8-3512cfbd6a63
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 516bfaa2b581b19570e7edffc7567ae1d520bb85
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8aab6443a16b5de89bb3d8764beabfa5dc8beb34
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85862734"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489426"
 ---
 # <a name="sp_delete_maintenance_plan_job-transact-sql"></a>sp_delete_maintenance_plan_job(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,9 +46,9 @@ sp_delete_maintenance_plan_job [ @plan_id = ] 'plan_id' ,
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @plan_id = ] 'plan\_id'`유지 관리 계획의 ID를 지정 합니다. *plan_id* 은 **UNIQUEIDENTIFIER**이며 유효한 id 여야 합니다.  
+`[ @plan_id = ] 'plan\_id'` 유지 관리 계획의 ID를 지정 합니다. *plan_id* 은 **UNIQUEIDENTIFIER**이며 유효한 id 여야 합니다.  
   
-`[ @job_id = ] 'job\_id'`유지 관리 계획과 관련 된 작업의 ID를 지정 합니다. *job_id* 은 **UNIQUEIDENTIFIER**이며 유효한 id 여야 합니다.  
+`[ @job_id = ] 'job\_id'` 유지 관리 계획과 관련 된 작업의 ID를 지정 합니다. *job_id* 은 **UNIQUEIDENTIFIER**이며 유효한 id 여야 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -60,7 +61,7 @@ sp_delete_maintenance_plan_job [ @plan_id = ] 'plan_id' ,
 ## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할의 멤버만 **sp_delete_maintenance_plan_job**를 실행할 수 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 유지 관리 계획에서 작업 "B8FCECB1-E22C-11D2-AA64-00C04F688EAE"를 삭제합니다.  
   
 ```  

@@ -1,4 +1,5 @@
 ---
+description: sp_post_msx_operation(Transact-SQL)
 title: sp_post_msx_operation (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 085deef8-2709-4da9-bb97-9ab32effdacf
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 36759d2c90e29c0a019d8bd294a0c7e621c8d468
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: da3d1e8bd762f31a7592d90957c3a8680c29dbfb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891557"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489209"
 ---
 # <a name="sp_post_msx_operation-transact-sql"></a>sp_post_msx_operation(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,23 +46,23 @@ sp_post_msx_operation
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @operation = ] 'operation'`게시 된 작업에 대 한 작업의 유형입니다. *연산은* **varchar (64)** 이며 기본값은 없습니다. 유효한 작업은 *object_type*에 따라 달라 집니다.  
+`[ @operation = ] 'operation'` 게시 된 작업에 대 한 작업의 유형입니다. *연산은* **varchar (64)** 이며 기본값은 없습니다. 유효한 작업은 *object_type*에 따라 달라 집니다.  
   
-|개체 유형|작업(Operation)|  
+|개체 유형|작업|  
 |-----------------|---------------|  
 |**직함**|INSERT<br /><br /> UPDATE<br /><br /> Delete<br /><br /> START<br /><br /> STOP|  
 |**서버인**|RE-ENLIST<br /><br /> DEFECT<br /><br /> SYNC-TIME<br /><br /> SET-POLL|  
 |**일정과**|INSERT<br /><br /> UPDATE<br /><br /> Delete|  
   
-`[ @object_type = ] 'object'`작업을 게시할 개체의 형식입니다. 유효한 유형은 **JOB**, **SERVER**및 **SCHEDULE**입니다. *개체가* **varchar (64)** 이며 기본값은 **JOB**입니다.  
+`[ @object_type = ] 'object'` 작업을 게시할 개체의 형식입니다. 유효한 유형은 **JOB**, **SERVER**및 **SCHEDULE**입니다. *개체가* **varchar (64)** 이며 기본값은 **JOB**입니다.  
   
-`[ @job_id = ] job_id`작업이 적용 되는 작업의 id입니다. *job_id* 은 **uniqueidentifier**이며 기본값은 없습니다. **0x00** 은 모든 작업을 나타냅니다. *Object* 가 **SERVER**인 경우 *job_id*필요 하지 않습니다.  
+`[ @job_id = ] job_id` 작업이 적용 되는 작업의 id입니다. *job_id* 은 **uniqueidentifier**이며 기본값은 없습니다. **0x00** 은 모든 작업을 나타냅니다. *Object* 가 **SERVER**인 경우 *job_id*필요 하지 않습니다.  
   
-`[ @specific_target_server = ] 'target_server'`지정 된 작업이 적용 되는 대상 서버의 이름입니다. *Job_id* 지정 되었지만 *target_server* 지정 되지 않은 경우 작업의 모든 작업 서버에 대해 작업이 게시 됩니다. *target_server* 은 **nvarchar (30)** 이며 기본값은 NULL입니다.  
+`[ @specific_target_server = ] 'target_server'` 지정 된 작업이 적용 되는 대상 서버의 이름입니다. *Job_id* 지정 되었지만 *target_server* 지정 되지 않은 경우 작업의 모든 작업 서버에 대해 작업이 게시 됩니다. *target_server* 은 **nvarchar (30)** 이며 기본값은 NULL입니다.  
   
-`[ @value = ] value`폴링 간격 (초)입니다. *value* 는 **int**이며 기본값은 NULL입니다. *작업이* **설정-폴링**인 경우에만이 매개 변수를 지정 합니다.  
+`[ @value = ] value` 폴링 간격 (초)입니다. *value* 는 **int**이며 기본값은 NULL입니다. *작업이* **설정-폴링**인 경우에만이 매개 변수를 지정 합니다.  
   
-`[ @schedule_uid = ] schedule_uid`작업이 적용 되는 일정의 고유 식별자입니다. *schedule_uid* 은 **uniqueidentifier**이며 기본값은 없습니다.  
+`[ @schedule_uid = ] schedule_uid` 작업이 적용 되는 일정의 고유 식별자입니다. *schedule_uid* 은 **uniqueidentifier**이며 기본값은 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

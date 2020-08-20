@@ -1,4 +1,5 @@
 ---
+description: CHECK 제약 조건 수정
 title: CHECK 제약 조건 수정 | Microsoft 문서
 ms.custom: ''
 ms.date: 06/28/2017
@@ -16,12 +17,12 @@ ms.assetid: f22daef8-e350-40ef-8ff0-b5f87d1d9e56
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ea5ecb64640df674d0f55d7347c1e8cb2d78d3ed
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 024897c426ed1bee082a75f44365698274424977
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85786071"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488575"
 ---
 # <a name="modify-check-constraints"></a>CHECK 제약 조건 수정
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -59,7 +60,7 @@ ms.locfileid: "85786071"
   
 4.  다음 표의 동작을 수행합니다.  
   
-    |수행할 작업|수행할 단계|  
+    |대상|수행할 단계|  
     |--------|------------------------|  
     |제약 조건 식 편집|**식** 필드에 새 식을 입력합니다.|  
     |제약 조건 이름 바꾸기|**이름** 필드에 새 이름을 입력합니다.|  
@@ -72,7 +73,7 @@ ms.locfileid: "85786071"
   
 5.  **닫기**를 클릭합니다.  
   
-6.  **파일** 메뉴에서 _테이블 이름_**저장**을 클릭합니다.  
+6.  **파일** 메뉴에서 ‘테이블 이름’ **저장**을 클릭합니다.__  
 
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
  **CHECK 제약 조건을 수정하려면**  

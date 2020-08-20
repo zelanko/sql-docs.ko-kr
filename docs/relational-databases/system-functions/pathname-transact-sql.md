@@ -1,4 +1,5 @@
 ---
+description: PathName(Transact-SQL)
 title: PathName (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/02/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6b95ad90-6c82-4a23-9294-a2adb74934a3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 348069dcab86747bccd179f85fd343e5c9d2c47f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: fc5b4b67074c85aef7d5d6d0f7c889a02cbb047d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898457"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489744"
 ---
 # <a name="pathname-transact-sql"></a>PathName(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,9 +50,9 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
   
 |값|설명|  
 |-----------|-----------------|  
-|0|BIOS 형식으로 변환 된 서버 이름을 반환 합니다. 예를 들면 다음과 같습니다.`\\SERVERNAME\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F19F7-38EA-4AB0-BB89-E6C545DBD3F9`|  
-|1|서버 이름을 변환 하지 않고 반환 합니다. 예를 들면 다음과 같습니다.`\\ServerName\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F1`|  
-|2|전체 서버 경로를 반환 합니다. 예를 들면 다음과 같습니다.`\\ServerName.MyDomain.com\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F19F7-38EA-4AB0-BB89-E6C545DBD3F9`|  
+|0|BIOS 형식으로 변환 된 서버 이름을 반환 합니다. 예를 들면 다음과 같습니다. `\\SERVERNAME\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F19F7-38EA-4AB0-BB89-E6C545DBD3F9`|  
+|1|서버 이름을 변환 하지 않고 반환 합니다. 예를 들면 다음과 같습니다. `\\ServerName\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F1`|  
+|2|전체 서버 경로를 반환 합니다. 예를 들면 다음과 같습니다. `\\ServerName.MyDomain.com\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F19F7-38EA-4AB0-BB89-E6C545DBD3F9`|  
   
  *use_replica_computer_name*  
  서버 이름이 Always On 가용성 그룹에서 반환 되는 방법을 정의 하는 비트 값입니다.  
@@ -77,7 +78,7 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
   
  FILESTREAM BLOB는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용해서만 만들 수 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-reading-the-path-for-a-filestream-blob"></a>A. FILESTREAM BLOB의 경로 읽기  
  다음 예에서는 `PathName` 변수에 `nvarchar(max)`을 할당합니다.  
@@ -148,7 +149,7 @@ DROP DATABASE PathNameDB;
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Blob&#41; Blob을 &#40;Blob (Binary Large Object &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)   
+ [Binary Large Object &#40;Blob&#41; 데이터 &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)   
  [Transact-sql&#41;GET_FILESTREAM_TRANSACTION_CONTEXT &#40;](../../t-sql/functions/get-filestream-transaction-context-transact-sql.md)   
  [OpenSqlFilestream을 사용하여 FILESTREAM 데이터 액세스](../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md)  
   

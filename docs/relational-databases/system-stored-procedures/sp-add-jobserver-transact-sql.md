@@ -1,4 +1,5 @@
 ---
+description: sp_add_jobserver(Transact-SQL)
 title: sp_add_jobserver (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 485252cc-0081-490a-9bd1-cbbd68eea286
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3a93fb689cf812ad48a9c77469621a2d523796bf
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 17759b079b8f2263d6cfe025d8550d35747ab080
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85879963"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489694"
 ---
 # <a name="sp_add_jobserver-transact-sql"></a>sp_add_jobserver(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,14 +41,14 @@ sp_add_jobserver [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @job_id = ] job_id`작업의 id입니다. *job_id* 은 **uniqueidentifier**이며 기본값은 NULL입니다.  
+`[ @job_id = ] job_id` 작업의 id입니다. *job_id* 은 **uniqueidentifier**이며 기본값은 NULL입니다.  
   
-`[ @job_name = ] 'job_name'`작업의 이름입니다. *job_name* 는 **sysname**이며 기본값은 NULL입니다.  
+`[ @job_name = ] 'job_name'` 작업의 이름입니다. *job_name* 는 **sysname**이며 기본값은 NULL입니다.  
   
 > [!NOTE]  
 >  *Job_id* 또는 *job_name* 를 지정 해야 하지만 둘 다 지정할 수는 없습니다.  
   
-`[ @server_name = ] 'server'`작업을 대상으로 하는 서버의 이름입니다. *서버* 는 **nvarchar (30)** 이며 기본값은 N ' (LOCAL) '입니다. *서버* 는 로컬 서버에 대해 **(local)** 이거나 기존 대상 서버의 이름일 수 있습니다.  
+`[ @server_name = ] 'server'` 작업을 대상으로 하는 서버의 이름입니다. *서버* 는 **nvarchar (30)** 이며 기본값은 N ' (LOCAL) '입니다. *서버* 는 로컬 서버에 대해 **(local)** 이거나 기존 대상 서버의 이름일 수 있습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -73,7 +74,7 @@ sp_add_jobserver [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
  **Sysadmin** 고정 서버 역할의 멤버만 여러 서버를 포함 하는 작업에 대해 **sp_add_jobserver** 를 실행할 수 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-assigning-a-job-to-the-local-server"></a>A. 로컬 서버에 작업 할당  
  다음 예에서는 로컬 서버에서 실행할 `NightlyBackups` 작업을 할당합니다.  
@@ -106,7 +107,7 @@ EXEC dbo.sp_add_jobserver
 GO  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [Transact-sql&#41;sp_apply_job_to_targets &#40;](../../relational-databases/system-stored-procedures/sp-apply-job-to-targets-transact-sql.md)   
  [Transact-sql&#41;sp_delete_jobserver &#40;](../../relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

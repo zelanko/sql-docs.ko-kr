@@ -1,4 +1,5 @@
 ---
+description: sys.sp_drop_trusted_assembly(Transact-SQL)
 title: sys. sp_drop_trusted_assembly (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
@@ -20,12 +21,12 @@ ms.assetid: ''
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4dbeed2c84db6a94237df6878fba688c6ed08a66
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fd3c1747fee1e23e0f68a7bcf1744f40e80786b8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85625948"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489034"
 ---
 # <a name="syssp_drop_trusted_assembly-transact-sql"></a>sys.sp_drop_trusted_assembly(Transact-SQL)  
 [!INCLUDE[SQL Server 2017](../../includes/applies-to-version/sqlserver2017.md)]

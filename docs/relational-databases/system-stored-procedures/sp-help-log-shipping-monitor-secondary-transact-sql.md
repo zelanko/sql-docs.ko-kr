@@ -1,4 +1,5 @@
 ---
+description: sp_help_log_shipping_monitor_secondary(Transact-SQL)
 title: sp_help_log_shipping_monitor_secondary (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/02/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3ac091ea-c9a8-4c05-a0b6-1ccf4e001339
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: bfdf2e7f08f9fc5c5ef602188c6c291b53de6063
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e9bfac5c9cbb8594667f33a3abcc0a3a7561b49d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891780"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489365"
 ---
 # <a name="sp_help_log_shipping_monitor_secondary-transact-sql"></a>sp_help_log_shipping_monitor_secondary(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,16 +43,16 @@ sp_help_log_shipping_monitor_secondary
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @secondary_server = ] 'secondary_server'`보조 서버의 이름입니다. *secondary_server* 는 **sysname**이며 기본값은 없습니다.  
+`[ @secondary_server = ] 'secondary_server'` 보조 서버의 이름입니다. *secondary_server* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @secondary_database = ] 'secondary_database'`보조 데이터베이스의 이름입니다. *secondary_database* 는 **sysname**이며 기본값은 없습니다.  
+`[ @secondary_database = ] 'secondary_database'` 보조 데이터베이스의 이름입니다. *secondary_database* 는 **sysname**이며 기본값은 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
   
 ## <a name="result-sets"></a>결과 집합  
   
-|Column|설명|  
+|열|설명|  
 |------------|-----------------|  
 |**secondary_server**|[!INCLUDE[msCoName](../../includes/msconame-md.md)]로그 전달 구성에 있는의 보조 인스턴스의 이름입니다 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] .|  
 |**secondary_database**|로그 전달 구성의 보조 데이터베이스의 이름입니다.|  
@@ -75,7 +76,7 @@ sp_help_log_shipping_monitor_secondary
 ## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할의 멤버만이 프로시저를 실행할 수 있습니다.  
   
-## <a name="see-also"></a>참조  
+## <a name="see-also"></a>참고 항목  
  [로그 전달 정보&#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

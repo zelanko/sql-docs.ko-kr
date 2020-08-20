@@ -1,4 +1,5 @@
 ---
+description: sp_cursorprepexec(Transact-SQL)
 title: sp_cursorprepexec (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/20/2019
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8094fa90-35b5-4cf4-8012-0570cb2ba1e6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e82a82df5f532df05ad0f04a14c95b24850484bd
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: d1a6cbd32485e006ead529f4d8b1afeca3e0e7af
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831672"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489396"
 ---
 # <a name="sp_cursorprepexec-transact-sql"></a>sp_cursorprepexec(Transact-SQL)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -86,7 +87,7 @@ sp_cursorprepexec prepared handle OUTPUT, cursor OUTPUT, params , statement , op
 |0x80000|STATIC_ACCEPTABLE|  
 |0x100000|FAST_FORWARD_ACCEPTABLE|  
   
- 요청 된 옵션이 * \< stmt>* 에서 정의 된 커서에 적합 하지 않을 수 있기 때문에이 매개 변수는 입력과 출력 둘 다로 사용 됩니다. 이러한 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 적절한 형식을 할당하고 이 값을 수정합니다.  
+ 요청 된 옵션이에 의해 정의 된 커서에 적합 하지 않을 수 있기 때문에 *\<stmt>* 이 매개 변수는 입력과 출력 둘 다로 사용 됩니다. 이러한 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 적절한 형식을 할당하고 이 값을 수정합니다.  
   
  *ccopt*  
  동시성 제어 옵션입니다. *ccopt* 는 다음 **int** 입력 값 중 하나를 필요로 하는 선택적 매개 변수입니다.  

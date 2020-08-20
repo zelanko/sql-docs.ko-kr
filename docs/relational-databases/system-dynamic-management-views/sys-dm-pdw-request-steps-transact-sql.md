@@ -1,4 +1,5 @@
 ---
+description: sys. dm_pdw_request_steps (Transact-sql)
 title: sys. dm_pdw_request_steps (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/19/2020
@@ -12,19 +13,19 @@ ms.assetid: cc563e88-0d34-436e-b914-b60d6ee0d50b
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: d1e9dd970cebd1f25b953e7a5fe21c8ea8c60bde
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: 4144e068354d43e2e8a5f9ea5bd6af7ad40a0e6d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86196219"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489760"
 ---
 # <a name="sysdm_pdw_request_steps-transact-sql"></a>sys. dm_pdw_request_steps (Transact-sql)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   에서 지정 된 요청 또는 쿼리를 구성 하는 모든 단계에 대 한 정보를 저장 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 합니다. 쿼리 단계 별로 하나의 행을 나열 합니다.  
   
-|열 이름|데이터 형식|설명|범위|  
+|열 이름|데이터 형식|Description|범위|  
 |-----------------|---------------|-----------------|-----------|  
 |request_id|**nvarchar(32)**|request_id 및 step_index이 보기에 대 한 키를 구성 합니다.<br /><br /> 요청과 연결 된 고유 숫자 id입니다.|[Dm_pdw_exec_requests &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md)에서 request_id를 참조 하세요.|  
 |step_index|**int**|request_id 및 step_index이 보기에 대 한 키를 구성 합니다.<br /><br /> 요청을 구성 하는 단계 시퀀스에서이 단계를 수행 하는 위치입니다.|n 단계가 포함 된 요청의 경우 0 ~ (n-1)입니다.|  
@@ -41,7 +42,7 @@ ms.locfileid: "86196219"
   
  이 뷰에서 유지 되는 최대 행에 대 한 자세한 내용은의 "최소 및 최대 값"의 최대 시스템 뷰 값 섹션을 참조 하십시오 [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)] .  
   
-## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;SQL Data Warehouse 및 병렬 데이터 웨어하우스 동적 관리 뷰](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
+## <a name="see-also"></a>관련 항목  
+ [Transact-sql&#41;&#40;SQL Data Warehouse 및 병렬 데이터 웨어하우스 동적 관리 뷰 ](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   

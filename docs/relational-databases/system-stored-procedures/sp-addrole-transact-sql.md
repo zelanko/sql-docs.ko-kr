@@ -1,4 +1,5 @@
 ---
+description: sp_addrole(Transact-SQL)
 title: sp_addrole (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e8a21642-8440-419a-8585-93d3d9d44f00
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: f364de4eb2760c5beeae17360fb84ffd52fd7181
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 245e617a9756e276bc06907a6f1592ec5383e69e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85876739"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489576"
 ---
 # <a name="sp_addrole-transact-sql"></a>sp_addrole(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,9 +43,9 @@ sp_addrole [ @rolename = ] 'role' [ , [ @ownername = ] 'owner' ]
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @rolename = ] 'role'`새 데이터베이스 역할의 이름입니다. *role* 은 **sysname**이며 기본값은 없습니다. *role* 은 올바른 식별자 (id) 여야 하며 현재 데이터베이스에 없어야 합니다.  
+`[ @rolename = ] 'role'` 새 데이터베이스 역할의 이름입니다. *role* 은 **sysname**이며 기본값은 없습니다. *role* 은 올바른 식별자 (id) 여야 하며 현재 데이터베이스에 없어야 합니다.  
   
-`[ @ownername = ] 'owner'`새 데이터베이스 역할의 소유자입니다. *owner* 는 **sysname**이며 기본값은 현재 실행 중인 사용자의입니다. *owner* 는 현재 데이터베이스의 데이터베이스 사용자 또는 데이터베이스 역할 이어야 합니다.  
+`[ @ownername = ] 'owner'` 새 데이터베이스 역할의 소유자입니다. *owner* 는 **sysname**이며 기본값은 현재 실행 중인 사용자의입니다. *owner* 는 현재 데이터베이스의 데이터베이스 사용자 또는 데이터베이스 역할 이어야 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -62,16 +63,16 @@ sp_addrole [ @rolename = ] 'role' [ , [ @ownername = ] 'owner' ]
 ## <a name="permissions"></a>사용 권한  
  데이터베이스에 대한 CREATE ROLE 권한이 필요합니다. 스키마를 만드는 경우에는 데이터베이스에 대한 CREATE SCHEMA 권한이 필요합니다. *Owner* 를 사용자 또는 그룹으로 지정 하는 경우에는 해당 사용자 또는 그룹에 대 한 IMPERSONATE가 필요 합니다. *Owner* 가 역할로 지정 된 경우에는 해당 역할의 ALTER 권한 또는 해당 역할의 멤버에 대 한 ALTER 권한이 필요 합니다. owner를 애플리케이션 역할로 지정한 경우에는 해당 애플리케이션 역할에 대한 ALTER 권한이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 현재 데이터베이스에 `Managers`라는 새 역할을 추가합니다.  
   
 ```  
 EXEC sp_addrole 'Managers';  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;시스템 저장 프로시저](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Transact-sql&#41;&#40;보안 저장 프로시저](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>관련 항목  
+ [Transact-sql&#41;&#40;시스템 저장 프로시저 ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;보안 저장 프로시저 ](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [CREATE ROLE&#40;Transact-SQL&#41;](../../t-sql/statements/create-role-transact-sql.md)  
   
   

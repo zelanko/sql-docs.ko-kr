@@ -1,4 +1,5 @@
 ---
+description: 동의어(데이터베이스 엔진)
 title: 동의어(데이터베이스 엔진) | Microsoft 문서
 ms.custom: ''
 ms.date: 03/03/2017
@@ -15,12 +16,12 @@ ms.assetid: 6210e1d5-075f-47e4-ac8d-f84bcf26fbc0
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0e992a6629f3dbff2e8ed5e3b2b9cc568a7b8811
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: e74d6062af769de9364e46faea78f81e7353f630
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918069"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490328"
 ---
 # <a name="synonyms-database-engine"></a>동의어(데이터베이스 엔진)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

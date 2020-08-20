@@ -1,4 +1,5 @@
 ---
+description: JSON 경로 식(SQL Server)
 title: JSON 경로 식
 ms.date: 06/03/2020
 ms.prod: sql
@@ -13,12 +14,12 @@ ms.author: jovanpop
 ms.reviewer: jroth
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 90f30c6fc18915b96f17ddf8e775e06bf94559a0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8be99986e6ca9ded5bb28e53b5c3ae166e8b86b3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715373"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490956"
 ---
 # <a name="json-path-expressions-sql-server"></a>JSON 경로 식(SQL Server)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -65,13 +66,13 @@ SELECT * FROM OPENJSON(@json, N'lax $.info');
   
 -   속성 경로는 경로 단계의 집합입니다. 경로 단계는 다음 요소와 연산자를 포함할 수 있습니다.  
   
-    -   키 이름. 예를 들어 `$.name` 또는 `$."first name"`입니다. 키 이름이 달러 기호로 시작되거나 공백과 같은 특수 기호를 포함하는 경우, 따옴표로 묶습니다.   
+    -   키 이름. 예를 들어 `$.name` 및 `$."first name"`를 지정합니다. 키 이름이 달러 기호로 시작되거나 공백과 같은 특수 기호를 포함하는 경우, 따옴표로 묶습니다.   
   
-    -   배열 요소 `$.product[3]`)을 입력합니다. 배열은 0부터 시작됩니다.  
+    -   배열 요소 예: `$.product[3]`. 배열은 0부터 시작됩니다.  
   
     -   점 연산자(`.`)는 개체의 멤버를 나타냅니다. 예를 들어 `$.people[1].surname`에서 `surname`은 `people`의 자식입니다.
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  이 섹션의 예는 다음 JSON 텍스트를 참조합니다.  
   
 ```json  

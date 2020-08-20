@@ -1,4 +1,5 @@
 ---
+description: sp_helpqreader_agent(Transact-SQL)
 title: sp_helpqreader_agent (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8e74e1aa-e95b-4183-8017-bf123439b08d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2e969e33c42348aabcd46f1c51d56c1329669820
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c638e7895d95518f59627643deb0b0070a19fa70
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85729197"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489294"
 ---
 # <a name="sp_helpqreader_agent-transact-sql"></a>sp_helpqreader_agent(Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -37,7 +38,7 @@ sp_helpqreader_agent [ [ @frompublisher = ] frompublisher ]
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @frompublisher = ] frompublisher`저장 프로시저가 게시자에서 호출 되는지 또는 배포자에서 호출 되는지 여부를 지정 합니다. *frompublisher* 는 bit 이며 기본값은 0입니다. **1** 은 저장 프로시저가 게시자에서 호출 됨을 의미 하 고 **0** 은 저장 프로시저가 배포자에서 호출 됨을 의미 합니다.  
+`[ @frompublisher = ] frompublisher` 저장 프로시저가 게시자에서 호출 되는지 또는 배포자에서 호출 되는지 여부를 지정 합니다. *frompublisher* 는 bit 이며 기본값은 0입니다. **1** 은 저장 프로시저가 게시자에서 호출 됨을 의미 하 고 **0** 은 저장 프로시저가 배포자에서 호출 됨을 의미 합니다.  
   
 ## <a name="result-sets"></a>결과 집합  
   

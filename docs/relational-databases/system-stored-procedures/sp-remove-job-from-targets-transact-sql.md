@@ -1,4 +1,5 @@
 ---
+description: sp_remove_job_from_targets(Transact-SQL)
 title: sp_remove_job_from_targets (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b8171fb1-c11d-4244-8618-a12e28a150ce
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: de4d2686066e10f1eb9f80862241d1d1a47cf6b7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d40f7d8812fe83648871bedbb3538202f5c519a1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891495"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489161"
 ---
 # <a name="sp_remove_job_from_targets-transact-sql"></a>sp_remove_job_from_targets(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,13 +43,13 @@ sp_remove_job_from_targets [ @job_id = ] job_id
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @job_id = ] job_id`지정 된 대상 서버 또는 대상 서버 그룹을 제거할 작업의 id입니다. *Job_id* 또는 *job_name* 를 지정 해야 하지만 둘 다 지정할 수는 없습니다. *job_id* 은 **uniqueidentifier**이며 기본값은 NULL입니다.  
+`[ @job_id = ] job_id` 지정 된 대상 서버 또는 대상 서버 그룹을 제거할 작업의 id입니다. *Job_id* 또는 *job_name* 를 지정 해야 하지만 둘 다 지정할 수는 없습니다. *job_id* 은 **uniqueidentifier**이며 기본값은 NULL입니다.  
   
-`[ @job_name = ] 'job_name'`지정 된 대상 서버 또는 대상 서버 그룹을 제거할 작업의 이름입니다. *Job_id* 또는 *job_name* 를 지정 해야 하지만 둘 다 지정할 수는 없습니다. *job_name* 는 **sysname**이며 기본값은 NULL입니다.  
+`[ @job_name = ] 'job_name'` 지정 된 대상 서버 또는 대상 서버 그룹을 제거할 작업의 이름입니다. *Job_id* 또는 *job_name* 를 지정 해야 하지만 둘 다 지정할 수는 없습니다. *job_name* 는 **sysname**이며 기본값은 NULL입니다.  
   
-`[ @target_server_groups = ] 'target_server_groups'`지정 된 작업에서 제거할 대상 서버 그룹의 쉼표로 구분 된 목록입니다. *target_server_groups* 는 **nvarchar (1024)** 이며 기본값은 NULL입니다.  
+`[ @target_server_groups = ] 'target_server_groups'` 지정 된 작업에서 제거할 대상 서버 그룹의 쉼표로 구분 된 목록입니다. *target_server_groups* 는 **nvarchar (1024)** 이며 기본값은 NULL입니다.  
   
-`[ @target_servers = ] 'target_servers'`지정 된 작업에서 제거할 대상 서버의 쉼표로 구분 된 목록입니다. *target_servers* 는 **nvarchar (1024)** 이며 기본값은 NULL입니다.  
+`[ @target_servers = ] 'target_servers'` 지정 된 작업에서 제거할 대상 서버의 쉼표로 구분 된 목록입니다. *target_servers* 는 **nvarchar (1024)** 이며 기본값은 NULL입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -56,7 +57,7 @@ sp_remove_job_from_targets [ @job_id = ] job_id
 ## <a name="permissions"></a>사용 권한  
  이 프로시저를 실행할 수 있는 권한은 기본적으로 **sysadmin** 고정 서버 역할의 멤버로 사용 됩니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `Weekly Sales Backups` 대상 서버 그룹, `Servers Processing Customer Orders` 및 `SEATTLE1` 서버에서 이전에 만든 `SEATTLE2` 작업을 제거합니다.  
   
 ```  

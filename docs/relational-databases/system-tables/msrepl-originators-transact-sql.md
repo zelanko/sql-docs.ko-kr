@@ -1,4 +1,5 @@
 ---
+description: MSrepl_originators(Transact-SQL)
 title: MSrepl_originators (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a3ac20a6-73f6-4fdc-ad5f-5f72746c9871
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6afe910bc5e758a0003bd15c9376d4d50583eb38
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 65bc706e4087a8aed5809bdead7c8e1977afdf7c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889498"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488716"
 ---
 # <a name="msrepl_originators-transact-sql"></a>MSrepl_originators(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,7 @@ ms.locfileid: "85889498"
 |**dbversion**|**int**|데이터베이스 버전을 식별합니다.|  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;복제 테이블](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Transact-sql&#41;&#40;복제 테이블 ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [복제 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

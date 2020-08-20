@@ -1,4 +1,5 @@
 ---
+description: sp_create_removable(Transact-SQL)
 title: sp_create_removable (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 06e36ae5-f70d-4a26-9a7f-ee4b9360b355
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 454b077e39a8ff1c17c3a742bb7acd00e8e719f8
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b004ff5c004d51bcd0af402fc081f96745d9b9ad
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85869877"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489510"
 ---
 # <a name="sp_create_removable-transact-sql"></a>sp_create_removable(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85869877"
   이동식 미디어 데이터베이스를 작성합니다. 3개 이상(시스템 카탈로그 테이블용으로 하나, 트랜잭션 로그용으로 하나 및 데이터 테이블용으로 하나 이상)의 파일을 작성하고 이러한 파일에 데이터베이스를 놓습니다.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]대신 [CREATE DATABASE](../../t-sql/statements/create-database-sql-server-transact-sql.md) 를 사용 하는 것이 좋습니다.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 대신 [CREATE DATABASE](../../t-sql/statements/create-database-sql-server-transact-sql.md) 를 사용 하는 것이 좋습니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -55,27 +56,27 @@ sp_create_removable
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @dbname = ] 'dbname'`이동식 미디어에서 사용 하기 위해 만들 데이터베이스의 이름입니다. *dbname* 은 **sysname**입니다.  
+`[ @dbname = ] 'dbname'` 이동식 미디어에서 사용 하기 위해 만들 데이터베이스의 이름입니다. *dbname* 은 **sysname**입니다.  
   
-`[ @syslogical = ] 'syslogical'`시스템 카탈로그 테이블을 포함 하는 파일의 논리적 이름입니다. *syslogical* 은 **sysname**입니다.  
+`[ @syslogical = ] 'syslogical'` 시스템 카탈로그 테이블을 포함 하는 파일의 논리적 이름입니다. *syslogical* 은 **sysname**입니다.  
   
-`[ @sysphysical = ] 'sysphysical'`물리적 이름입니다. 여기에는 시스템 카탈로그 테이블을 보유하고 있는 파일의 정규화된 경로가 포함됩니다. *sysphysical* 은 **nvarchar (260)** 입니다.  
+`[ @sysphysical = ] 'sysphysical'` 물리적 이름입니다. 여기에는 시스템 카탈로그 테이블을 보유하고 있는 파일의 정규화된 경로가 포함됩니다. *sysphysical* 은 **nvarchar (260)** 입니다.  
   
-`[ @syssize = ] syssize`시스템 카탈로그 테이블을 보유 하는 파일의 크기 (mb)입니다. *syssize* 는 **int**입니다. 최소 *syssize* 는 1입니다.  
+`[ @syssize = ] syssize` 시스템 카탈로그 테이블을 보유 하는 파일의 크기 (mb)입니다. *syssize* 는 **int**입니다. 최소 *syssize* 는 1입니다.  
   
-`[ @loglogical = ] 'loglogical'`트랜잭션 로그를 포함 하는 파일의 논리적 이름입니다. *loglogical* 은 **sysname**입니다.  
+`[ @loglogical = ] 'loglogical'` 트랜잭션 로그를 포함 하는 파일의 논리적 이름입니다. *loglogical* 은 **sysname**입니다.  
   
-`[ @logphysical = ] 'logphysical'`물리적 이름입니다. 여기에는 트랜잭션 로그가 있는 파일의 정규화된 경로가 포함됩니다. *logphysical* 는 **nvarchar (260)** 입니다.  
+`[ @logphysical = ] 'logphysical'` 물리적 이름입니다. 여기에는 트랜잭션 로그가 있는 파일의 정규화된 경로가 포함됩니다. *logphysical* 는 **nvarchar (260)** 입니다.  
   
-`[ @logsize = ] logsize`트랜잭션 로그를 포함 하는 파일의 크기 (mb)입니다. *logsize* 는 **int**입니다. 최소 *logsize* 는 1입니다.  
+`[ @logsize = ] logsize` 트랜잭션 로그를 포함 하는 파일의 크기 (mb)입니다. *logsize* 는 **int**입니다. 최소 *logsize* 는 1입니다.  
   
-`[ @datalogical1 = ] 'datalogical'`데이터 테이블을 포함 하는 파일의 논리적 이름입니다. *datalogical* 는 **sysname**입니다.  
+`[ @datalogical1 = ] 'datalogical'` 데이터 테이블을 포함 하는 파일의 논리적 이름입니다. *datalogical* 는 **sysname**입니다.  
   
  1개에서 16개까지의 데이터 파일이 있어야 합니다. 일반적으로 데이터베이스가 대형일 것으로 예상되며 여러 디스크에 배포되어야 할 때 두 개 이상의 데이터 파일이 작성됩니다.  
   
-`[ @dataphysical1 = ] 'dataphysical'`물리적 이름입니다. 여기에는 데이터 테이블을 포함하는 파일의 정규화된 경로가 포함됩니다. *dataphysical* 은 **nvarchar (260)** 입니다.  
+`[ @dataphysical1 = ] 'dataphysical'` 물리적 이름입니다. 여기에는 데이터 테이블을 포함하는 파일의 정규화된 경로가 포함됩니다. *dataphysical* 은 **nvarchar (260)** 입니다.  
   
-`[ @datasize1 = ] 'datasize'`데이터 테이블을 포함 하는 파일의 크기 (mb)입니다. *datasize* 는 **int**입니다. 최소 *datasize* 는 1입니다.  
+`[ @datasize1 = ] 'datasize'` 데이터 테이블을 포함 하는 파일의 크기 (mb)입니다. *datasize* 는 **int**입니다. 최소 *datasize* 는 1입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -103,7 +104,7 @@ sp_create_removable
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]은 데이터 및 로그 파일 권한을 설정하지 않습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `inventory` 데이터베이스를 이동식 데이터베이스로 만듭니다.  
   
 ```  

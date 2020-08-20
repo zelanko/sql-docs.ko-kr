@@ -1,4 +1,5 @@
 ---
+description: sys.sp_cdc_start_job(Transact-SQL)
 title: sys. sp_cdc_start_job (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: cf443a67-7705-4799-9f39-0e3a6a8a0708
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4a87fca28491075c9a75945b7a452c02b270d95b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1d96a7ab3bbddfa134b4e8cba80e6d8aeddeb1f4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891055"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489095"
 ---
 # <a name="syssp_cdc_start_job-transact-sql"></a>sys.sp_cdc_start_job(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +42,7 @@ sys.sp_cdc_start_job [ [ @job_type = ] 'job_type' ]
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ [ @job_type = ] 'job_type' ]`추가할 작업 유형입니다. *job_type* 은 **nvarchar (20)** 이며 기본값은 **capture**입니다. 올바른 입력은 **캡처** 및 **정리**입니다.  
+`[ [ @job_type = ] 'job_type' ]` 추가할 작업 유형입니다. *job_type* 은 **nvarchar (20)** 이며 기본값은 **capture**입니다. 올바른 입력은 **캡처** 및 **정리**입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -55,7 +56,7 @@ sys.sp_cdc_start_job [ [ @job_type = ] 'job_type' ]
 ## <a name="permissions"></a>사용 권한  
  db_owner 고정 데이터베이스 역할의 멤버 자격이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-starting-a-capture-job"></a>A. 캡처 작업 시작  
  다음 예에서는 `AdventureWorks2012` 데이터베이스의 캡처 작업을 시작합니다. 기본 작업 유형이 **캡처**이기 때문에 *job_type* 값을 지정 하지 않아도 됩니다.  

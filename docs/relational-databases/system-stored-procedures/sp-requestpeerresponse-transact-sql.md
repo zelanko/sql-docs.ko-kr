@@ -1,4 +1,5 @@
 ---
+description: sp_requestpeerresponse(Transact-SQL)
 title: sp_requestpeerresponse (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: cbe13c22-4d7d-4a36-b194-7a13ce68ef27
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: adcf5709bc3bf086123324095a796e024a08911e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b2114460ca878b45bb0b850c066e1fd9356504a8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899284"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489207"
 ---
 # <a name="sp_requestpeerresponse-transact-sql"></a>sp_requestpeerresponse(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,11 +40,11 @@ sp_requestpeerresponse [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @publication = ] 'publication'`상태를 확인 하는 피어 투 피어 토폴로지의 게시 이름입니다. *게시* 는 **sysname**이며 기본값은 없습니다.  
+`[ @publication = ] 'publication'` 상태를 확인 하는 피어 투 피어 토폴로지의 게시 이름입니다. *게시* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @description = ] 'description'`개별 상태 요청을 식별 하는 데 사용할 수 있는 사용자 정의 정보입니다. *설명은* **nvarchar (4000)** 이며 기본값은 NULL입니다.  
+`[ @description = ] 'description'` 개별 상태 요청을 식별 하는 데 사용할 수 있는 사용자 정의 정보입니다. *설명은* **nvarchar (4000)** 이며 기본값은 NULL입니다.  
   
-`[ @request_id = ] request_id`새 요청의 ID를 반환 합니다. *request_id* 은 **int** 이며 OUTPUT 매개 변수입니다. 이 값은 [sp_helppeerresponses &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql.md) 를 실행 하 여 상태 요청에 대 한 모든 응답을 볼 때 사용할 수 있습니다.  
+`[ @request_id = ] request_id` 새 요청의 ID를 반환 합니다. *request_id* 은 **int** 이며 OUTPUT 매개 변수입니다. 이 값은 [sp_helppeerresponses &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql.md) 를 실행 하 여 상태 요청에 대 한 모든 응답을 볼 때 사용할 수 있습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -58,7 +59,7 @@ sp_requestpeerresponse [ @publication = ] 'publication'
 ## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할 또는 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_requestpeerresponse**을 실행할 수 있습니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [Transact-sql&#41;sp_deletepeerrequesthistory &#40;](../../relational-databases/system-stored-procedures/sp-deletepeerrequesthistory-transact-sql.md)   
  [Transact-sql&#41;sp_helppeerrequests &#40;](../../relational-databases/system-stored-procedures/sp-helppeerrequests-transact-sql.md)  
   
