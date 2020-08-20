@@ -1,4 +1,5 @@
 ---
+description: 결과 검색(고급)
 title: 결과 검색 (고급) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bc00c379-71a7-407a-975c-898243f39bb6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ca02b4ff911c8edff06b38d5341eeaa288cc194c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 12f5c2ddd1e04b1aef96b7ef1544db9b58a9a58e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81294643"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461375"
 ---
 # <a name="retrieving-results-advanced"></a>결과 검색(고급)
 응용 프로그램은 **SQLBulkOperations**, **sqlfetch**, **sqlfetchscroll**또는 **SQLSetPos** 가 호출 될 때 바인딩된 데이터 버퍼 주소와 해당 길이/표시기 버퍼 주소에 오프셋을 추가 하도록 지정할 수 있습니다. 이러한 추가 결과에 따라 이러한 작업에 사용 되는 주소가 결정 됩니다.  

@@ -1,4 +1,5 @@
 ---
+description: 전역 설정 (대화 상자) (OracleToSQL)
 title: 전역 설정 (대화 상자) (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -10,12 +11,12 @@ ms.assetid: 43989355-cebf-4d8b-ba3d-fa8546e70230
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 715bc5d1a407380d47c05313954adab5cdf53dc6
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 0a0b888c594a46543f3cdec8e9c70bf9b511ed91
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934827"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463195"
 ---
 # <a name="global-settings-dialogs--oracletosql"></a>전역 설정 (대화 상자) (OracleToSQL)
 **전역 설정** 대화 상자의 대화 상자 페이지를 사용 하 여 ssma의 기본 사용자 동작 및 경고 설정을 지정할 수 있습니다.  

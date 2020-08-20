@@ -1,4 +1,5 @@
 ---
+description: Aggregate(MDX)
 title: Aggregate (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 6c75ab71456dc8b7ffc3efdf6bd157693de14881
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d1e3f00ffbf662422f162d493a585d3972518431
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68017173"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461696"
 ---
 # <a name="aggregate-mdx"></a>Aggregate(MDX)
 
@@ -54,8 +55,8 @@ Aggregate(Set_Expression [ ,Numeric_Expression ])
 |계산 멤버|일반적인 규칙이 적용됩니다. 즉, 마지막 계산 순서가 우선합니다.|  
 |할당|할당은 측정값 집계 함수에 따라 집계합니다. 측정값 집계 함수가 고유 카운트이면 할당의 합계가 계산됩니다.|  
   
-## <a name="examples"></a>예  
- 다음 예에서는 **놀이 Works** 큐브에서 `Date` 차원에 `Measures.[Order Quantity]` 포함 된 2003 년의 첫 8 개월 동안 집계 된 멤버의 합계를 반환 합니다.  
+## <a name="examples"></a>예제  
+ 다음 예에서는 `Measures.[Order Quantity]` `Date` **놀이 Works** 큐브에서 차원에 포함 된 2003 년의 첫 8 개월 동안 집계 된 멤버의 합계를 반환 합니다.  
   
 ```  
 WITH MEMBER [Date].[Calendar].[First8Months2003] AS  

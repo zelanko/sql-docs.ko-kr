@@ -1,4 +1,5 @@
 ---
+description: DQS 데이터베이스 분리 및 연결
 title: DQS 데이터베이스 분리 및 연결
 ms.date: 03/01/2017
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 830e33bc-dd15-4f8e-a4ac-d8634b78fe45
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: fdd977cf886512c7d8ef19bfa5580ec689acb91b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 6d59c5c92b41176cfb6a664bdf1617c164d23d30
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882825"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462135"
 ---
 # <a name="detaching-and-attaching-dqs-databases"></a>DQS 데이터베이스 분리 및 연결
 
@@ -43,7 +44,7 @@ ms.locfileid: "85882825"
   
 -   DQS에서 실행 중인 작업을 종료하거나 실행 중인 프로세스를 중지하려면 DQS_MAIN 데이터베이스에 대한 dqs_administrator 역할이 있어야 합니다.  
   
-##  <a name="detach-dqs-databases"></a><a name="Detach"></a>DQS 데이터베이스 분리  
+##  <a name="detach-dqs-databases"></a><a name="Detach"></a> DQS 데이터베이스 분리  
  SQL Server Management Studio를 사용하여 DQS 데이터베이스를 분리하는 경우 분리된 파일은 컴퓨터에 남아 있으므로 동일한 SQL Server 인스턴스에 다시 연결되거나 다른 서버로 이동하여 거기에서 연결될 수 있습니다. DQS 데이터베이스 파일은 대개 Data Quality Services 컴퓨터의 C:\Program Files\Microsoft SQL Server\MSSQL13.*<Instance_Name>* \MSSQL\DATA에서 사용할 수 있습니다.  
   
 1.  Microsoft SQL Server Management Studio를 시작하고 적합한 SQL Server 인스턴스에 연결합니다.  
@@ -58,7 +59,7 @@ ms.locfileid: "85882825"
   
  Transact-SQL 문에서 sp_detach_db 저장 프로시저를 사용하여 DQS 데이터베이스를 분리할 수도 있습니다. Transact-SQL 문을 사용하여 데이터베이스를 분리하는 방법은 [Using Transact-SQL](../relational-databases/databases/detach-a-database.md#TsqlProcedure) 의 [Detach a Database](../relational-databases/databases/detach-a-database.md)을 참조하세요.  
   
-##  <a name="attach-dqs-databases"></a><a name="Attach"></a>DQS 데이터베이스 연결  
+##  <a name="attach-dqs-databases"></a><a name="Attach"></a> DQS 데이터베이스 연결  
  다음 지침을 사용하여 DQS 데이터베이스를 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 가 설치된 다른 SQL Server 인스턴스에 연결하거나 분리되었던 SQL Server 인스턴스에 연결할 수 있습니다.  
   
 1.  Microsoft SQL Server Management Studio를 시작하고 적합한 SQL Server 인스턴스에 연결합니다.  
@@ -85,14 +86,13 @@ ms.locfileid: "85882825"
   
 9. 쿼리 편집기 창에서 다음 SQL 문을 복사합니다.  
   
-    ```  
+    ```sql  
     ALTER DATABASE [DQS_MAIN] SET TRUSTWORTHY ON;  
     EXEC sp_configure 'clr enabled', 1;  
-    RECONFIGURE WITH OVERRIDE  
-    ALTER DATABASE [DQS_MAIN] SET ENABLE_BROKER  
-    ALTER AUTHORIZATION ON DATABASE::[DQS_MAIN] TO [##MS_dqs_db_owner_login##]  
-    ALTER AUTHORIZATION ON DATABASE::[DQS_PROJECTS] TO [##MS_dqs_db_owner_login##]  
-  
+    RECONFIGURE WITH OVERRIDE;  
+    ALTER DATABASE [DQS_MAIN] SET ENABLE_BROKER;  
+    ALTER AUTHORIZATION ON DATABASE::[DQS_MAIN] TO [##MS_dqs_db_owner_login##];  
+    ALTER AUTHORIZATION ON DATABASE::[DQS_PROJECTS] TO [##MS_dqs_db_owner_login##];  
     ```  
   
 10. F5 키를 눌러 문을 실행합니다. 결과 창에서 문이 성공적으로 실행되었는지 확인합니다. 다음 메시지가 표시됩니다. `Configuration option 'clr enabled' changed from 1 to 1. Run the RECONFIGURE statement to install.`  

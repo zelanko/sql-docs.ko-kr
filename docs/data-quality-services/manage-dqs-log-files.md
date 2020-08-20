@@ -1,4 +1,5 @@
 ---
+description: DQS 로그 파일 관리
 title: DQS 로그 파일 관리
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4fccfd24-aede-4882-be69-ec1e82682e16
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: e4b5864129d25754fb2177376e011be1972078e1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 46ff924c7dcbd2d11b2b54721d11945a74026e33
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898128"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462103"
 ---
 # <a name="manage-dqs-log-files"></a>DQS 로그 파일 관리
 
@@ -28,7 +29,7 @@ ms.locfileid: "85898128"
   
  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 를 사용하여 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 기능 및 모듈의 로그 심각도 설정을 구성할 수 있습니다. 또한 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 컴퓨터에서 DQS_MAIN 데이터베이스 및 XML 파일의 DQS 로그 구성 설정을 수동으로 변경하여 DQS 로그 파일의 다른 (고급) 설정을 구성할 수도 있습니다.  
   
-##  <a name="data-quality-server-log-file"></a><a name="DQSServer"></a>Data Quality 서버 로그 파일  
+##  <a name="data-quality-server-log-file"></a><a name="DQSServer"></a> Data Quality 서버 로그 파일  
  [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 로그 파일 DQServerLog.DQS_MAIN.log에는 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]에서 실행된 작업에 대한 로그가 포함됩니다. SQL Server의 기본 인스턴스를 설치한 경우 DQServerLog.DQS_MAIN.log 파일은 C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Log에 있습니다. [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 로그 파일에는 다음과 같은 정보 조각이 각각 파이프(|)로 구분되어 포함됩니다.  
   
 -   날짜 및 시간  
@@ -60,12 +61,12 @@ ms.locfileid: "85898128"
   
  DQServerLog.DQS_MAIN.log 파일은 롤링 파일이며 기존 로그 파일이 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 로그 구성 설정에 지정된 롤링 파일 크기 제한을 초과하면 새 로그 파일이 생성됩니다. 자세한 내용은 [Configure Advanced Settings for DQS Log Files](../data-quality-services/configure-advanced-settings-for-dqs-log-files.md)을 참조하세요.  
   
-##  <a name="data-quality-client-log-file"></a><a name="DQSClient"></a>로그 파일 Data Quality Client  
+##  <a name="data-quality-client-log-file"></a><a name="DQSClient"></a> 로그 파일 Data Quality Client  
  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 로그 파일 DQClientLog.log에는 클라이언트 쪽 로그가 포함됩니다. [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 로그 파일은 %APPDATA%\SSDQS\Log에 있습니다. [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 로그 파일에는 서버 로그 파일과 유사하지만 클라이언트 쪽에 대한 정보 집합이 포함됩니다.  
   
  [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 로그 파일과 마찬가지로 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 로그 파일도 롤링 파일이며 기존 로그 파일이 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 로그 구성 설정에 지정된 롤링 파일 크기 제한을 초과하면 새 로그 파일이 생성됩니다. 자세한 내용은 [Configure Advanced Settings for DQS Log Files](../data-quality-services/configure-advanced-settings-for-dqs-log-files.md)을 참조하세요.  
   
-##  <a name="dqs-cleansing-component-log-file"></a><a name="DQSCleansing"></a>DQS 정리 구성 요소 로그 파일  
+##  <a name="dqs-cleansing-component-log-file"></a><a name="DQSCleansing"></a> DQS 정리 구성 요소 로그 파일  
  [!INCLUDE[ssDQSCleansing](../includes/ssdqscleansing-md.md)] 로그 파일 DQSSSISLog.log에는 [!INCLUDE[ssDQSCleansingLong](../includes/ssdqscleansinglong-md.md)]를 사용하여 수행된 작업에 대한 로그가 포함됩니다. [!INCLUDE[ssDQSCleansing](../includes/ssdqscleansing-md.md)] 구성 요소 로그 파일은 %APPDATA%\SSDQS\Log에 있습니다. [!INCLUDE[ssDQSCleansing](../includes/ssdqscleansing-md.md)] 로그 파일에는 서버 로그 파일과 유사하지만 [!INCLUDE[ssDQSCleansing](../includes/ssdqscleansing-md.md)]에 대한 정보 집합이 포함됩니다.  
   
 ##  <a name="related-tasks"></a><a name="RT"></a> 관련 작업  

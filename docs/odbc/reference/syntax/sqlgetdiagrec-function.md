@@ -1,4 +1,5 @@
 ---
+description: SQLGetDiagRec 함수
 title: SQLGetDiagRec 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: ebdbac93-3d68-438f-8416-ef1f08e04269
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 39069526e254903509ddfef00b7bd4844f3d9e10
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7f141891292fb80d53ba06e03329b66cbc8b826e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81285383"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461016"
 ---
 # <a name="sqlgetdiagrec-function"></a>SQLGetDiagRec 함수
 **규칙**  
@@ -85,7 +86,7 @@ SQLRETURN SQLGetDiagRec(
  입력 **MessageText* 버퍼의 길이 (문자)입니다. 진단 메시지 텍스트의 최대 길이는 없습니다.  
   
  *TextLengthPtr*  
- 출력 * \*MessageText*에서 반환 하는 데 사용할 수 있는 총 문자 수 (null 종결 문자에 필요한 문자 수 제외)를 반환할 버퍼에 대 한 포인터입니다. 반환할 수 있는 문자 수가 *bufferlength*보다 큰 경우 * \*MessageText* 의 진단 메시지 텍스트는 *bufferlength* 에서 null 종료 문자의 길이를 뺀 값으로 잘립니다.  
+ 출력 * \* MessageText*에서 반환 하는 데 사용할 수 있는 총 문자 수 (null 종결 문자에 필요한 문자 수 제외)를 반환할 버퍼에 대 한 포인터입니다. 반환할 수 있는 문자 수가 *Bufferlength*보다 큰 경우 * \* MessageText* 의 진단 메시지 텍스트는 *bufferlength* 에서 null 종료 문자의 길이를 뺀 값으로 잘립니다.  
   
 ## <a name="returns"></a>반환  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR 또는 SQL_INVALID_HANDLE입니다.  
@@ -135,7 +136,7 @@ SQLRETURN SQLGetDiagRec(
 |---------------------------|---------|  
 |진단 레코드의 필드 또는 진단 헤더의 필드 가져오기|[SQLGetDiagField 함수](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)|  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [ODBC API 참조](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 헤더 파일](../../../odbc/reference/install/odbc-header-files.md)   
  [샘플 ODBC 프로그램](../../../odbc/reference/sample-odbc-program.md)

@@ -1,4 +1,5 @@
 ---
+description: Manage DQS Databases
 title: Manage DQS Databases
 ms.date: 03/01/2017
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 655a67aa-d662-42f2-b982-c6217125ada8
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: b9f779ded8b13c209e3c490c2a7c0cdbef71e779
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2384aab12163f54aa458c857c5b006861572f3fa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898111"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462151"
 ---
 # <a name="manage-dqs-databases"></a>Manage DQS Databases
 
@@ -44,7 +45,7 @@ ms.locfileid: "85898111"
 >  -   단순 복구 모델에서는 오랜 시간 동안 로그 레코드가 활성 상태로 유지되는 경우(예: 길고 시간이 많이 소요되는 트랜잭션) 로그 잘림이 지연될 수 있으므로 트랜잭션 로그가 가득 찰 수 있습니다. 또한 로그 잘림을 수행하더라도 물리적 로그 파일(.ldf 파일)의 크기는 줄어들지 않습니다. 물리적 로그 파일의 크기를 줄이려면 로그 파일을 축소해야 합니다. 트랜잭션 로그와 관련된 문제를 해결하는 방법에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?LinkId=237446](https://go.microsoft.com/fwlink/?LinkId=237446)의 [트랜잭션 로그&#40;SQL Server&#41;](../relational-databases/logs/the-transaction-log-sql-server.md) 또는 Microsoft 지원 아티클을 참조하세요.  
 > -   데이터에 대해 지정 시간 복구를 수행하려면 DQS 데이터베이스에 대해 전체 백업 또는 차등 백업을 정기적으로 수행하고 트랜잭션 로그도 백업해야 합니다. 자세한 내용은 [전체 데이터베이스 백업&#40;SQL Server&#41;](../relational-databases/backup-restore/full-database-backups-sql-server.md) 및 [트랜잭션 로그 백업&#40;SQL Server&#41;](../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)을 참조하세요.  
   
-##  <a name="detachattach-the-dqs-databases"></a><a name="DetachAttach"></a>DQS 데이터베이스 분리/연결  
+##  <a name="detachattach-the-dqs-databases"></a><a name="DetachAttach"></a> DQS 데이터베이스 분리/연결  
  DQS 데이터베이스를 같은 컴퓨터의 다른 SQL Server 인스턴스로 변경하거나 데이터베이스를 이동하려는 경우 DQS 데이터베이스의 데이터 및 트랜잭션 로그 파일을 분리한 다음 SQL Server의 같은 인스턴스나 다른 인스턴스에 데이터베이스를 다시 연결할 수 있습니다.  
   
  SQL Server에서 데이터베이스를 분리 및 연결하기 전에 고려해야 할 사항은 [데이터베이스 분리 및 연결&#40;SQL Server&#41;](../relational-databases/databases/database-detach-and-attach-sql-server.md)을 참조하세요.  

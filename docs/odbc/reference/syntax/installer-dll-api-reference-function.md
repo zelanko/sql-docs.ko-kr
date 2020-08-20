@@ -1,4 +1,5 @@
 ---
+description: 설치 관리자 DLL API 참조 함수
 title: 설치 관리자 DLL API 참조 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 47fcadc3-f102-4989-9ee7-a1c65233142a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3502dfe6cdf54214041e3654d20e1b6dd2ff6f21
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d5b2c49e5a49d371677b0fc16a77fb332bb95a9c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298783"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461245"
 ---
 # <a name="installer-dll-api-reference-function"></a>설치 관리자 DLL API 참조 함수
 이 섹션에서는 설치 관리자 DLL API의 함수 구문에 대해 설명 합니다. 설치 관리자 DLL API는 20 개의 함수로 구성 됩니다. **SQLGetTranslator**, **SQLRemoveDSNFromIni**및 **Sqlwritedsntoini**의 세 가지 함수는 설치 dll에 의해서만 호출 됩니다. 다른 함수는 설치 프로그램 및 관리 프로그램에 의해 호출 됩니다.  

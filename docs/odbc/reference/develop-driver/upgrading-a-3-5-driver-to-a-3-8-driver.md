@@ -1,4 +1,5 @@
 ---
+description: 3.5 드라이버를 3.8 드라이버로 업그레이드
 title: 3.5 드라이버를 3.8 드라이버로 업그레이드 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ffba36ac-d22e-40b9-911a-973fa9e10bd3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: dcd01d050e806b733d75c54058945d367a33d6a7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ac140c92b4042df1b4754d3a56237a6aa4b3afaf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81294434"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461335"
 ---
 # <a name="upgrading-a-35-driver-to-a-38-driver"></a>3.5 드라이버를 3.8 드라이버로 업그레이드
 이 항목에서는 odbc 3.5 드라이버를 ODBC 3.8 드라이버로 업그레이드 하는 방법에 대 한 지침과 고려 사항을 제공 합니다.  
@@ -72,7 +73,7 @@ SQL_DRIVER_C_TYPE_BASE+0, SQL_DRIVER_C_TYPE_BASE+1
 ##### <a name="asynchronous-execution-notification-method"></a>비동기 실행(알림 방법)  
  ODBC 3.8은 Windows 8부터 사용 가능한 비동기 작업에 대 한 알림 방법을 지원 합니다. 자세한 내용은 [비동기 실행 (알림 방법)](../../../odbc/reference/develop-app/asynchronous-execution-notification-method.md)을 참조 하세요.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [ODBC 드라이버 개발](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   
  [Microsoft에서 제공 하는 ODBC 드라이버](../../../odbc/microsoft/microsoft-supplied-odbc-drivers.md)   
  [ODBC 3.8의 새로운 기능](../../../odbc/reference/what-s-new-in-odbc-3-8.md)

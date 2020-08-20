@@ -1,4 +1,5 @@
 ---
+description: 일반적인 데이터베이스 메일 오류
 title: 일반적인 데이터베이스 메일 오류 | Microsoft Docs
 ms.custom: ''
 ms.date: 04/22/2019
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - Database Mail [SQL Server], components
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4693990f7dc2a32f1d1a4c1462d35af9830de530
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 442e95c2e579fa67cb54b801fe6ebbdcd4098ae3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737418"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461087"
 ---
 # <a name="common-errors-with-database-mail"></a>일반적인 데이터베이스 메일 오류 
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -28,7 +29,7 @@ ms.locfileid: "85737418"
 ## <a name="could-not-find-stored-procedure-sp_send_dbmail"></a>'sp_send_dbmail' 저장 프로시저를 찾을 수 없음
 [sp_send_dbmail](../system-stored-procedures/sp-send-dbmail-transact-sql.md) 저장 프로시저는 msdb 데이터베이스에 설치됩니다. msdb 데이터베이스에서 **sp_send_dbmail**을 실행하거나 저장 프로시저 이름의 세 부분을 모두 지정해야 합니다.
 
-예제:
+예:
 ```sql
 EXEC msdb.dbo.sp_send_dbmail ...
 ```

@@ -1,4 +1,5 @@
 ---
+description: 결과 검색(기본)
 title: 결과 검색 (기본) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 052870e3-3f3f-4f07-91da-b649348225f4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3f7d01bf92fcee07940e449a2fb4bbac4f0fe6ac
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a43064703e7ee448de89396135fa610e972e2679
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304334"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461365"
 ---
 # <a name="retrieving-results-basic"></a>결과 검색(기본)
 *결과 집합* 은 특정 조건과 일치 하는 데이터 원본에 대 한 행 집합입니다. 이 테이블은 쿼리에서 생성 되 고 테이블 형식으로 응용 프로그램에 사용할 수 있는 개념적 테이블입니다. **SELECT** 문, 카탈로그 함수 및 일부 프로시저에서 결과 집합을 만듭니다. 다음 예에서는 첫 번째 SQL 문이 Orders 테이블의 모든 행과 모든 열을 포함 하는 결과 집합을 생성 하 고, 두 번째 SQL 문은 상태가 열린 Orders 테이블의 행에 대해 OrderID, 영업 사원 및 상태 열을 포함 하는 결과 집합을 만듭니다.  

@@ -1,4 +1,5 @@
 ---
+description: 데이터 원본에 대한 레지스트리 항목
 title: 데이터 원본에 대 한 레지스트리 항목 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 78aaa3d3-d081-4550-80e3-720c910d5996
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c73ea704b091bc37afb1ac42b520304022d929c3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 82759a988a0a2ff290d67406a1450ec9cb228a82
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81296273"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461305"
 ---
 # <a name="registry-entries-for-data-sources"></a>데이터 원본에 대한 레지스트리 항목
 > [!NOTE]  

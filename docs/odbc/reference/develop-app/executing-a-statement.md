@@ -1,4 +1,5 @@
 ---
+description: 명령문 실행
 title: 문 실행 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e5f0d2ee-0453-4faf-b007-12978dd300a1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c3ce09809c896a4d1d9333da00367f972655f96b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4ce060c91e2500b016e824e733d8189c99334e1b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305744"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461475"
 ---
 # <a name="executing-a-statement"></a>명령문 실행
 다음 네 가지 방법으로 문을 실행 하는 방법에 따라 데이터베이스 엔진에서 컴파일 (준비) 하 고 정의 하는 방법을 사용할 수 있습니다.  

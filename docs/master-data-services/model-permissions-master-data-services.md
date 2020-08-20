@@ -1,4 +1,5 @@
 ---
+description: 모델 권한(Master Data Services)
 title: 모델 권한
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 210f440b-2cc1-4c49-94b1-3a97e2af7bc3
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 36e2b4cacd6636b2580aff1d8c27ea5a3a444906
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: e195c4f2db244fa5cf647c19c0713f24840c3441
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813253"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461756"
 ---
 # <a name="model-permissions-master-data-services"></a>모델 권한(Master Data Services)
 
@@ -34,7 +35,7 @@ ms.locfileid: "85813253"
 |**읽기**|사용자는 멤버, 특성, 계층 멤버 자격 또는 컬렉션 멤버를 읽을 수 있습니다.|  
 |**만들기**|사용자는 멤버를 만들고 만드는 동안 특성 값을 할당할 수 있습니다.|  
 |**Update**|사용자는 멤버, 특성, 계층 멤버 자격 또는 컬렉션 멤버를 업데이트할 수 있습니다.|  
-|**삭제**|사용자는 멤버를 삭제할 수 있습니다.|  
+|**Delete**|사용자는 멤버를 삭제할 수 있습니다.|  
 |**거부**|모델에 대한 모든 액세스를 거부 합니다.|  
 |**관리자**|모델에 대한 관리자 권한입니다. 관리자 권한은 모델 수준에서만 사용할 수 있습니다.|  
   

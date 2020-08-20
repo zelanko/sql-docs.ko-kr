@@ -1,4 +1,5 @@
 ---
+description: 데이터 원본 또는 드라이버 선택
 title: 데이터 원본 또는 드라이버 선택 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 10aaf570-01ab-4478-8339-bdde2a5e3dd1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b10aafad95463f56ec0f5a029eac59a02cff003b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 215e249fe354396239118394d4e792ced67bc82d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303374"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461605"
 ---
 # <a name="choosing-a-data-source-or-driver"></a>데이터 원본 또는 드라이버 선택
 응용 프로그램에서 사용 하는 데이터 원본 또는 드라이버는 응용 프로그램에 하드 코딩 된 경우도 있습니다. 예를 들어 한 데이터 원본에서 다른 데이터 원본으로 데이터를 전송 하기 위해 MIS 부서에서 작성 한 사용자 지정 응용 프로그램은 해당 데이터 원본의 이름을 포함 합니다. 응용 프로그램은 단순히 다른 데이터 소스와 함께 작동 하지 않습니다. 또 다른 예는 주문 항목에 사용 되는 것과 같은 수직 응용 프로그램입니다. 이러한 응용 프로그램은 응용 프로그램에서 알려진 미리 정의 된 스키마가 있는 동일한 데이터 원본을 항상 사용 합니다.  

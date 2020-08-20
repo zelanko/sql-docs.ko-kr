@@ -1,4 +1,5 @@
 ---
+description: SQLGetData를 사용하여 출력 매개 변수 검색
 title: SQLGetData를 사용 하 여 출력 매개 변수 검색 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7a8c298a-2160-491d-a300-d36f45568d9c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8c96a3f9fc81d081ce16fe8e75746aafe8962fd0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a31cb6baa015e2a90977d0112e770ce66fa8e62f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81294593"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461385"
 ---
 # <a name="retrieving-output-parameters-using-sqlgetdata"></a>SQLGetData를 사용하여 출력 매개 변수 검색
 ODBC 3.8 이전에는 응용 프로그램이 바인딩된 출력 버퍼를 사용 하는 쿼리의 출력 매개 변수만 검색할 수 있었습니다. 그러나 매개 변수 값의 크기가 매우 큰 경우 (예: 큰 이미지) 매우 큰 버퍼를 할당 하는 것은 어렵습니다. ODBC 3.8에는 파트에서 출력 매개 변수를 검색 하는 새로운 방법이 도입 되었습니다. 이제 응용 프로그램은 작은 버퍼로 **SQLGetData** 를 여러 번 호출 하 여 많은 매개 변수 값을 검색할 수 있습니다. 이는 많은 열 데이터를 검색 하는 것과 유사 합니다.  
@@ -37,7 +38,7 @@ ODBC 3.8 이전에는 응용 프로그램이 바인딩된 출력 버퍼를 사�
   
 3.  **Sqlparamdata** 를 호출 하 여 검색에 사용할 수 있는 매개 변수를 가져옵니다. **Sqlparamdata** 는 **SQLBindParameter** 에서 설정 된 사용 가능한 첫 번째 매개 변수의 토큰과 함께 SQL_PARAM_DATA_AVAILABLE를 반환 합니다 (1 단계). 토큰 *은 고 지 수가 가리키는 버퍼* 에서 반환 됩니다.  
   
-4.  _Or\_인수 *Col*으로 **SQLGetData** 를 호출 하 여 사용 가능한 첫 번째 매개 변수의 데이터를 검색 하는 매개 변수 서 수로 설정*Param_Num* 합니다. **SQLGetData** 가 SQL_SUCCESS_WITH_INFO 및 SQLState 01004 (데이터 잘림)을 반환 하 고 형식이 클라이언트와 서버 모두에서 가변 길이인 경우 사용 가능한 첫 번째 매개 변수에서 검색할 데이터가 더 있습니다. 다른 **SQLState**를 사용 하 여 SQL_SUCCESS 또는 SQL_SUCCESS_WITH_INFO를 반환할 때까지 **SQLGetData** 를 계속 호출할 수 있습니다.  
+4.  _Or 인수 *Col*으로 **SQLGetData** 를 호출 하 여 \_ 사용 가능한 첫 번째 매개 변수의 데이터를 검색 하는 매개 변수 서 수로 설정*Param_Num* 합니다. **SQLGetData** 가 SQL_SUCCESS_WITH_INFO 및 SQLState 01004 (데이터 잘림)을 반환 하 고 형식이 클라이언트와 서버 모두에서 가변 길이인 경우 사용 가능한 첫 번째 매개 변수에서 검색할 데이터가 더 있습니다. 다른 **SQLState**를 사용 하 여 SQL_SUCCESS 또는 SQL_SUCCESS_WITH_INFO를 반환할 때까지 **SQLGetData** 를 계속 호출할 수 있습니다.  
   
 5.  3 단계와 4 단계를 반복 하 여 현재 매개 변수를 검색 합니다.  
   
@@ -75,13 +76,13 @@ ODBC 3.8 이전에는 응용 프로그램이 바인딩된 출력 버퍼를 사�
   
  **Sqlexecute**, **sqlexecdirect**또는 **SQLMoreResults** 가 SQL_PARAM_DATA_AVAILABLE를 반환한 후 응용 프로그램이 다음 목록에 없는 함수를 호출 하면 함수 시퀀스 오류가 발생 합니다.  
   
--   **SQLAllocHandle** / **SQLAllocHandleStd**  
+-   **SQLAllocHandle**  /  **SQLAllocHandleStd**  
   
--   **Sqldatasources 원본** / **sqldatasources**  
+-   **Sqldatasources 원본**  /  **Sqldrivers**  
   
--   **SQLGetInfo** / **SQLGetFunctions**  
+-   **SQLGetInfo**  /  **SQLGetFunctions**  
   
--   **SQLGetConnectAttr** / **SQLGetEnvAttr**SQLGetEnvAttr / **SQLGetDescField**SQLGetDescField / **SQLGetDescRec**  
+-   **SQLGetConnectAttr**  /  **SQLGetEnvAttr**  /  **SQLGetDescField**  /  **SQLGetDescRec**  
   
 -   **SQLNumParams**  
   
@@ -93,7 +94,7 @@ ODBC 3.8 이전에는 응용 프로그램이 바인딩된 출력 버퍼를 사�
   
 -   **SQLMoreResults**  
   
--   **SQLGetDiagField** / **SQLGetDiagRec**  
+-   **SQLGetDiagField**  /  **SQLGetDiagRec**  
   
 -   **SQLCancel**  
   
@@ -268,5 +269,5 @@ BOOL displaySimilarPicture(BYTE* image, ULONG lengthOfImage, SQLHSTMT hstmt) {
 }  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [명령문 매개 변수](../../../odbc/reference/develop-app/statement-parameters.md)

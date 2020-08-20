@@ -1,4 +1,5 @@
 ---
+description: 테스트 사례 준비 완료(OracleToSQL)
 title: 테스트 사례 준비 완료 (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -10,12 +11,12 @@ ms.assetid: 32f38713-7ae4-48d3-980d-74cadc8545a0
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 0cd80ee10d70b31f06c22e064d199c98cc1820b3
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: a0498953c28a90498aa3e15439840180efdd25f7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934871"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463228"
 ---
 # <a name="finishing-test-case-preparation-oracletosql"></a>테스트 사례 준비 완료(OracleToSQL)
 마법사의 마지막 페이지에는 테스트 사례 설명 및 테스트와 관련 된 개체에 대 한 정보가 표시 됩니다. 또한이 페이지에서 테스트 실행 옵션을 설정할 수 있습니다.  
@@ -57,7 +58,7 @@ ms.locfileid: "87934871"
 [테스트 리포지토리 (OracleToSQL)를 사용 하 여](https://msdn.microsoft.com/f941cce4-d3e3-4aeb-a88a-4f101a97a9f4)준비 된 테스트 사례를 저장 하려면 **마침** 단추를 클릭 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
-[OracleToSQL&#41;&#40;테스트 리포지토리 사용](../../ssma/oracle/using-test-repositories-oracletosql.md)  
-[OracleToSQL&#41;&#40;테스트 사례 실행](../../ssma/oracle/running-test-cases-oracletosql.md)  
-[OracleToSQL&#41;&#40;마이그레이션된 데이터베이스 개체 테스트](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
+[OracleToSQL&#41;&#40;테스트 리포지토리 사용 ](../../ssma/oracle/using-test-repositories-oracletosql.md)  
+[OracleToSQL&#41;&#40;테스트 사례 실행 ](../../ssma/oracle/running-test-cases-oracletosql.md)  
+[OracleToSQL&#41;&#40;마이그레이션된 데이터베이스 개체 테스트 ](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
   

@@ -1,4 +1,5 @@
 ---
+description: + 추가 MDX
 title: + 추가 (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 9cb5ddf37104c0de00e17bdec5946d9b39d60020
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 04a744eee7c62171ee2e60f2137aa667d08dc9e8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68017215"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461715"
 ---
 # <a name="-add-mdx"></a>+ (더하기)(MDX)
 
@@ -31,7 +32,7 @@ Numeric_Expression + Numeric_Expression
  *숫자 식*  
  숫자 값을 반환하는 유효한 MDX 식입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
  우선 순위가 더 높은 매개 변수의 데이터 형식을 갖는 값입니다.  
   
 ## <a name="remarks"></a>설명  

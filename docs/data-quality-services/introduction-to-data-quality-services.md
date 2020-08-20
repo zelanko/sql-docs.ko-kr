@@ -1,4 +1,5 @@
 ---
+description: Data Quality Services 소개
 title: Data Quality Services 소개
 ms.date: 03/05/2012
 ms.prod: sql
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5350214c-7333-41d0-ae83-1b7d8454ebec
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 0564da5fc907db5f684f96b716ad1cb39ef007ce
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 46a95e0cdd54360a91aa56cfde86be6fff8d0c40
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901617"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462104"
 ---
 # <a name="introduction-to-data-quality-services"></a>Data Quality Services 소개
 
@@ -24,7 +25,7 @@ ms.locfileid: "85901617"
 
   DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )에서 제공되는 데이터 품질 솔루션을 통해 데이터 관리자 또는 IT 전문가는 데이터의 품질을 유지 관리하고 데이터가 비즈니스 용도에 적합한지 보장할 수 있습니다. DQS는 컴퓨터 기반 방식과 대화형 방식 모두를 사용하여 데이터 원본의 무결성과 품질을 관리할 수 있게 해주는 지식 기반 솔루션입니다. DQS를 사용하면 데이터에 대한 지식을 검색, 구축 및 관리할 수 있습니다. 그런 후 이러한 지식을 사용하여 데이터 정리, 일치 및 프로파일링을 수행할 수 있습니다. 또한 DQS 데이터 품질 프로젝트에서 참조 데이터 공급자의 클라우드 기반 서비스를 활용할 수도 있습니다.  
   
-##  <a name="the-business-need-for-dqs"></a><a name="BusinessNeed"></a>DQS의 비즈니스 요구  
+##  <a name="the-business-need-for-dqs"></a><a name="BusinessNeed"></a> DQS의 비즈니스 요구  
  잘못된 데이터는 사용자가 잘못 입력했거나, 전송 또는 스토리지 과정에서 손상되었거나, 데이터 사전 정의가 일치하지 않을 때 및 기타 데이터 품질 및 프로세스 문제로 인해 나타날 수 있습니다. 서로 다른 데이터 표준을 사용하는 여러 원본의 데이터를 집계할 때는 임의적인 규칙을 적용하거나 내역 데이터를 덮어 쓸 수 있으므로 일관적이지 않은 데이터를 얻게 될 수 있습니다. 잘못된 데이터가 있으면 기업이 본연의 비즈니스 기능을 수행하고 고객에게 서비스를 제공하는 데 영향이 있을 수 있으며 이로 인해 신용 및 수익 손실, 고객 불만족 및 규정 준수 문제를 초래할 수 있습니다. 또한 자동화된 시스템은 잘못된 데이터를 사용할 경우 작동하지 않는 경우가 많으며, 잘못된 데이터로 인해 수동으로 프로세스를 수행하느라 시간과 인력을 낭비하게 됩니다. 잘못된 데이터는 데이터 분석, 보고, 데이터 마이닝 및 웨어하우징과 관련된 문제를 유발할 수 있습니다.  
   
  고품질 데이터는 사업체 및 기관의 업무 효율을 위한 핵심 요소입니다. 어떤 규모의 조직이라도 DQS를 활용하여 자신의 데이터가 갖는 정보 가치를 향상시키고 데이터를 의도한 용도에 맞게 적합하게 만들 수 있습니다. 데이터 품질 솔루션은 데이터를 보다 안정적이고, 액세스할 수 있으며, 다시 사용할 수 있도록 만듭니다. 이러한 솔루션은 비즈니스 인텔리전스 또는 데이터 웨어하우스 작업뿐만 아니라 OLTP 작업 시스템에서 잘못된 데이터로 인해 발생하는 문제를 해결하여 데이터의 완전성, 정확성, 준수성 및 일관성을 향상시킬 수 있습니다.  
@@ -52,7 +53,7 @@ ms.locfileid: "85901617"
   
  ![DQS 처리](../data-quality-services/media/dqs-process.gif "DQS 처리")  
   
-##  <a name="a-knowledge-driven-solution"></a><a name="KnowledgeDrivenSolution"></a>기술 자료 기반 솔루션  
+##  <a name="a-knowledge-driven-solution"></a><a name="KnowledgeDrivenSolution"></a> 기술 자료 기반 솔루션  
  DQS 기술 자료는 즉시 사용 가능한 지식, [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]로 생성된 지식 및 사용자가 생성한 지식의 세 가지 지식 유형의 리포지토리입니다. DQS를 사용하면 기술 자료에서 데이터에 대한 지식을 저장하고, 비즈니스 규칙을 추가하고, 필요에 따라 지식을 수정한 후, 이를 적용하여 데이터의 무결성 및 정확성을 테스트할 수 있습니다. 기술 자료를 구축한 후에는 지속적으로 이를 향상시키고 여러 데이터 품질 향상 프로세스에서 다시 사용할 수 있습니다.  
   
  기술 자료의 지식은 잠재적으로 잘못된 데이터를 식별하고 데이터에 대한 변경 사항을 제안합니다. 지식은 데이터 일치를 찾아서 데이터 중복 제거를 수행할 수 있도록 해줍니다. 또한 원본 데이터를 데이터 품질 공급자가 유지 관리하고 보증하는 클라우드 기반 참조 데이터와 비교할 수 있습니다. 데이터 관리자 또는 IT 전문가는 기술 자료의 지식과 데이터에 대해 적용할 변경 사항을 모두 확인하고 정리, 중복 제거 및 참조 데이터 서비스를 실행합니다.  
@@ -69,7 +70,7 @@ ms.locfileid: "85901617"
   
  자세한 내용은 [DQS 기술 자료 및 도메인](../data-quality-services/dqs-knowledge-bases-and-domains.md) 및 [데이터 품질 프로젝트&#40;DQS&#41;](../data-quality-services/data-quality-projects-dqs.md)를 참조하세요.  
   
-##  <a name="dqs-components"></a><a name="Components"></a>DQS 구성 요소  
+##  <a name="dqs-components"></a><a name="Components"></a> DQS 구성 요소  
  Data Quality Services는 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 및 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]로 구성됩니다. 이러한 구성 요소를 통해 다른 SQL Server 작업과 별도로 Data Quality Services를 수행할 수 있습니다. 이 둘은 모두 SQL Server 설치 프로그램 내에서 설치됩니다.  
   
  [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 는 SQL Server Management Studio에서 관리 및 모니터링할 수 있는 세 가지 SQL Server 카탈로그(DQS_MAIN, DQS_PROJECTS 및 DQS_STAGING_DATA)로 구현됩니다. DQS_MAIN에는 DQS 저장 프로시저, DQS 엔진 및 게시된 기술 자료가 포함됩니다. DQS_PROJECTS에는 지식 기반 관리와 DQS 프로젝트 작업에 필요한 데이터가 포함됩니다. DQS_STAGING_DATA는 DQS 작업을 수행하기 위해 원본 데이터를 복사한 다음 처리된 데이터를 내보낼 수 있는 중간 준비 데이터베이스를 제공합니다.  

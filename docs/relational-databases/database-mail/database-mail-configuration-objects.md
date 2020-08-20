@@ -1,4 +1,5 @@
 ---
+description: 데이터베이스 메일 구성 개체
 title: 데이터베이스 메일 구성 개체 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/14/2017
@@ -32,12 +33,12 @@ helpviewer_keywords:
 ms.assetid: 03f6e4c0-04ff-490a-bd91-637806215bd1
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 681fd78830589d680924b2d1b7d6d71c3692a7ee
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 69d87b31dbb3171682319ca0f6bead7d6a76f562
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726539"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461152"
 ---
 # <a name="database-mail-configuration-objects"></a>데이터베이스 메일 구성 개체
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

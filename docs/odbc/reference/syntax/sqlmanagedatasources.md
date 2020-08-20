@@ -1,4 +1,5 @@
 ---
+description: SQLManageDataSources
 title: SQLManageDataSources | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: ac6d186f-b394-406c-94c4-c6331d1ca468
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3b572a861af3479e1543be9fda9598cc7e25d36c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 81f4616cb04d5d17cca687843d28efa1027ff65f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81290221"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460976"
 ---
 # <a name="sqlmanagedatasources"></a>SQLManageDataSources
 **규칙**  
@@ -49,9 +50,9 @@ BOOL SQLManageDataSources(
  *Hwnd* 가 유효한 창 핸들이 아니면 **SQLManageDataSources** 는 FALSE를 반환 합니다. 그러지 않으면 TRUE를 반환합니다.  
   
 ## <a name="diagnostics"></a>진단  
- **SQLManageDataSources** 가 FALSE를 반환 하면 **SQLInstallerError**을 호출 하 여 연결 된 * \*pfErrorCode* 값을 얻을 수 있습니다. 다음 표에서는 **SQLInstallerError** 에서 반환 될 수 있는 * \*pfErrorCode* 값을 나열 하 고이 함수의 컨텍스트에서 각 값에 대해 설명 합니다.  
+ **SQLManageDataSources** 가 FALSE를 반환 하면 **SQLInstallerError**을 호출 하 여 연결 된 * \* pfErrorCode* 값을 얻을 수 있습니다. 다음 표에서는 **SQLInstallerError** 에서 반환 될 수 있는 * \* pfErrorCode* 값을 나열 하 고이 함수의 컨텍스트에서 각 값에 대해 설명 합니다.  
   
-|*\*pfErrorCode*|Error|Description|  
+|*\*pfErrorCode*|오류|설명|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|일반 설치 관리자 오류|특정 설치 관리자 오류가 없는 오류가 발생 했습니다.|  
 |ODBC_ERROR_REQUEST_FAILED|*요청* 실패|**ConfigDSN** 에 대 한 호출이 실패 했습니다.|  
@@ -93,7 +94,7 @@ BOOL SQLManageDataSources(
   
  시스템 DSN이 HKEY_CURRENT_USER 항목이 아닌 시스템 정보의 HKEY_LOCAL_MACHINE 항목에 등록 되어 있습니다. 특정 사용자 이름 및 암호를 사용 하 여 로그온 하는 한 사용자에 게는 연결 되지 않지만, 해당 컴퓨터의 모든 사용자 또는 자동 전체 시스템 서비스에서 사용할 수 있습니다. 그러나 시스템 DSN은 한 대의 컴퓨터에 연결 되어 있습니다. 컴퓨터 간 원격 Dsn을 사용 하는 기능을 지원 하지 않습니다. 시스템 Dsn은 다음과 같이 시스템 정보에 등록 됩니다.  
   
- HKEY_LOCAL_MACHINE SOFTWARE ODBC setup.ini  
+ HKEY_LOCAL_MACHINE 소프트웨어 ODBC Odbc.ini  
   
 ## <a name="file-dsns"></a>파일 Dsn  
  파일 데이터 원본에는 컴퓨터 데이터 원본 처럼 데이터 원본 이름이 없고 한 사용자 또는 컴퓨터에 등록 되지 않습니다. 해당 데이터 원본에 대 한 연결 정보는 컴퓨터로 복사 될 수 있는 dsn 파일에 포함 되어 있습니다. 파일 데이터 원본을 공유할 수 있으며,이 경우 dsn 파일은 네트워크에 상주 하며, 사용자에 게 적절 한 드라이버가 설치 되어 있으면 네트워크의 여러 사용자가 동시에 사용할 수 있습니다. 파일 데이터 원본도 unshareable 수 있으며,이 경우 단일 컴퓨터 에서만 사용할 수 있습니다.  

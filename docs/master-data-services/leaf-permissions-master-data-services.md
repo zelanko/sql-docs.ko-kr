@@ -1,4 +1,5 @@
 ---
+description: 리프 권한(Master Data Services)
 title: 리프 권한
 ms.custom: ''
 ms.date: 03/15/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: bde16e8c-bcd4-4041-8130-55c5450e5f72
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 112c046e6a3e0eb51b18ba397c718907fa0829c9
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: a50723727690307492d3d16cb3671e762dec401f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813300"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461769"
 ---
 # <a name="leaf-permissions-master-data-services"></a>리프 권한(Master Data Services)
 
@@ -42,7 +43,7 @@ ms.locfileid: "85813300"
 |**읽기**|사용자는 리프 멤버, 특성을 읽을 수 있습니다.|  
 |**만들기**|사용자는 리프 멤버를 만들고 만드는 동안 특성 값을 할당할 수 있습니다.|  
 |**Update**|사용자는 리프 멤버 및 특성을 업데이트할 수 있습니다.|  
-|**삭제**|사용자는 리프 멤버를 삭제할 수 있습니다.|  
+|**Delete**|사용자는 리프 멤버를 삭제할 수 있습니다.|  
 |**거부**|리프 멤버에 대한 모든 액세스를 거부 합니다.|  
   
  읽기, 만들기, 업데이트 및 삭제 권한을 결합할 수 있습니다. 만들기, 업데이트 및 삭제가 할당될 때 읽기 권한은 자동으로 할당됩니다.  
@@ -55,7 +56,7 @@ ms.locfileid: "85813300"
 |**읽기**|사용자는 특성을 읽을 수 있습니다.|  
 |**만들기**|사용자는 멤버를 만들 때 값을 할당할 수 있습니다.|  
 |**Update**|사용자는 특성을 업데이트할 수 있습니다.|  
-|**삭제**|아무런 영향이 없습니다.|  
+|**Delete**|아무런 영향이 없습니다.|  
 |**거부**|특성이 표시되지 않습니다.<br /><br /> 참고: 이름 및 코드 특성에 대한 액세스를 명시적으로 거부할 수 없습니다.|  
   
 ### <a name="example"></a>예제  
@@ -63,8 +64,8 @@ ms.locfileid: "85813300"
   
 |Name|코드|Subcategory(업데이트)|  
 |----------|----------|----------------------------|  
-|Mountain-100|BK-M101|{5}산악 자전거|  
-|Mountain-100|BK-M201|{5}산악 자전거|  
+|Mountain-100|BK-M101|{5} 산악 자전거|  
+|Mountain-100|BK-M201|{5} 산악 자전거|  
   
  **탐색기**에서 Subcategory 열의 특성 값을 업데이트할 수 있습니다. 특성에 대한 사용 권한이 없는 경우에는 해당 특성이 표시되지 않습니다.  
   

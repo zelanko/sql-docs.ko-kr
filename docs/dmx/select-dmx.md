@@ -1,4 +1,5 @@
 ---
+description: SELECT(DMX)
 title: SELECT (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: bf4164308b0fdc9e6ba3fabb756c18214757cde5
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 1e44c7d2f4bf872a7629a48c305114f09f98ee66
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970622"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462051"
 ---
 # <a name="select-dmx"></a>SELECT(DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -110,7 +111,7 @@ SELECT FROM PREDICTION JOIN (<SELECT statement>) AS t, WHERE <SELECT statement>
 ## <a name="clause-syntax"></a>절 구문  
  **SELECT** 문을 사용 하 여 검색 하는 복잡성 때문에 자세한 구문 요소와 인수는 절에 설명 되어 있습니다. 각 절에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하십시오.  
   
- [&#60;모델 &#62; &#40;DMX&#41;에서 고유를 선택 합니다.](../dmx/select-distinct-from-model-dmx.md)  
+ [&#60;모델 &#62; &#40;DMX&#41;에서 고유를 선택 합니다. ](../dmx/select-distinct-from-model-dmx.md)  
   
  [&#60;모델&#62;에서 선택 합니다. 콘텐츠 &#40;DMX&#41;](../dmx/select-from-model-content-dmx.md)  
   

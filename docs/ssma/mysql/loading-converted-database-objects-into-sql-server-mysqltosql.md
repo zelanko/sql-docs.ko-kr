@@ -1,4 +1,5 @@
 ---
+description: 변환된 데이터베이스 개체를 SQL Server로 로드(MySQLToSQL)
 title: 변환 된 데이터베이스 개체를 SQL Server (MySQLToSQL)로 로드 하는 중 Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ac993a6d-0283-4823-8793-6b217677dfa3
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 57a6f527da05c4f62d9055b70193af6ce74275f7
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 87960d05db8a12ebd7a8751f46c90a256ce73313
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935564"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463398"
 ---
 # <a name="loading-converted-database-objects-into-sql-server-mysqltosql"></a>변환된 데이터베이스 개체를 SQL Server로 로드(MySQLToSQL)
 MySQL 데이터베이스를 또는 SQL Azure 변환한 후에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 결과 데이터베이스 개체를 또는 SQL Azure에 로드할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . SSMA에서 개체를 만들거나 개체를 스크립팅 하 고 스크립트를 직접 실행할 수 있습니다. 또한 SSMA를 사용 하면의 실제 내용으로 대상 메타 데이터를 업데이트 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 하거나 Azure SQL Database 수 있습니다.  
@@ -104,5 +105,5 @@ SQL Server Management Studio에서 스크립트나 개별 문을 실행할 수 �
 마이그레이션 프로세스의 다음 단계는 [MySQL 데이터를 SQL Server Azure SQL Database &#40;MySQLToSQL로 마이그레이션하](../../ssma/mysql/migrating-mysql-data-into-sql-server-azure-sql-db-mysqltosql.md) 는 것입니다&#41;  
   
 ## <a name="see-also"></a>참고 항목  
-[MySQL 데이터베이스를 SQL Server-Azure SQL Database &#40;MySQLToSql&#41;로 마이그레이션](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
+[MySQL 데이터베이스를 SQL Server-Azure SQL Database &#40;MySQLToSql&#41;로 마이그레이션 ](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   

@@ -1,4 +1,5 @@
 ---
+description: SQLDrivers 함수
 title: SQLDrivers 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 6b5b7514-e9cb-4cfd-8b7a-ab51dfab9efa
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2496e7cd5f2abe0831c72484bed374d7aa1513ce
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9abe7502b7efcfba695bd58081752342504378ab
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302764"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461165"
 ---
 # <a name="sqldrivers-function"></a>SQLDrivers 함수
 **규칙**  
@@ -64,7 +65,7 @@ SQLRETURN SQLDrivers(
  입력 **Driverdescription* 버퍼의 길이 (문자)입니다.  
   
  *DescriptionLengthPtr*  
- 출력 \* *Driverdescription*에서 반환 하는 데 사용할 수 있는 총 문자 수 (null 종결 문자 제외)를 반환할 버퍼에 대 한 포인터입니다. 반환할 수 있는 문자 수가 *BufferLength1*보다 크거나 같으면 \* *driverdescription* 의 드라이버 설명이 *BufferLength1* 로 잘리고 null 종료 문자의 길이를 뺀 값입니다.  
+ 출력 Driverdescription에서 반환 하는 데 사용할 수 있는 총 문자 수 (null 종결 문자 제외)를 반환할 버퍼에 대 한 포인터 \* *DriverDescription*입니다. 반환할 수 있는 문자 수가 *BufferLength1*보다 크거나 같으면 \* *Driverdescription* 의 드라이버 설명이 *BufferLength1* 로 잘리고 null 종료 문자의 길이를 뺀 값입니다.  
   
  *DriverAttributes*  
  출력 드라이버 특성 값 쌍의 목록을 반환할 버퍼에 대 한 포인터입니다 ("Comments" 참조).  
@@ -72,10 +73,10 @@ SQLRETURN SQLDrivers(
  *Driverattributes* 가 NULL 인 경우 *AttributesLengthPtr* 는 *driverattributes*가 가리키는 버퍼에서 반환 하는 데 사용할 수 있는 총 바이트 수 (문자 데이터의 NULL 종료 문자 제외)를 반환 합니다.  
   
  *BufferLength2*  
- 입력 \* *Driverattributes* 버퍼의 길이 (문자)입니다. Driverdescription 값이 유니코드 문자열이 면 ( **sqldriversw**호출 시) *bufferlength* 인수는 짝수 여야 합니다. * \**  
+ 입력 \* *Driverattributes* 버퍼의 길이 (문자)입니다. * \* Driverdescription* 값이 유니코드 문자열이 면 ( **sqldriversw**호출 시) *bufferlength* 인수는 짝수 여야 합니다.  
   
  *AttributesLengthPtr*  
- 출력 \* *Driverattributes*에서 반환 하는 데 사용할 수 있는 총 바이트 수 (null 종결 바이트 제외)를 반환할 버퍼에 대 한 포인터입니다. 반환 하는 데 사용할 수 있는 바이트 수가 *BufferLength2*보다 크거나 같으면 \* *driverattributes* 의 특성 값 쌍 목록이 *BufferLength2* 로 잘리고 null 종료 문자의 길이를 뺀 값입니다.  
+ 출력 Driverattributes에서 반환 하는 데 사용할 수 있는 총 바이트 수 (null 종결 바이트 제외)를 반환할 버퍼에 대 한 포인터 \* *DriverAttributes*입니다. 반환 하는 데 사용할 수 있는 바이트 수가 *BufferLength2*보다 크거나 같으면 driverattributes의 특성 값 쌍 목록이 \* *DriverAttributes* *BufferLength2* 로 잘리고 null 종료 문자의 길이를 뺀 값입니다.  
   
 ## <a name="returns"></a>반환  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA, SQL_ERROR 또는 SQL_INVALID_HANDLE입니다.  
@@ -83,11 +84,11 @@ SQLRETURN SQLDrivers(
 ## <a name="diagnostics"></a>진단  
  **Sqldrivers** 가 SQL_ERROR 또는 SQL_SUCCESS_WITH_INFO를 반환할 때 SQL_HANDLE_ENV의 *HandleType* 및 *EnvironmentHandle* *핸들* 을 사용 하 여 **SQLGetDiagRec** 를 호출 하 여 연결 된 SQLSTATE 값을 얻을 수 있습니다. 다음 표에서는 일반적으로 **Sqldrivers** 에서 반환 하는 SQLSTATE 값을 나열 하 고이 함수의 컨텍스트에서 각 값에 대해 설명 합니다. "(DM)" 표기법은 드라이버 관리자에서 반환 된 SQLSTATEs의 설명 보다 앞에 나옵니다. 다른 설명이 없는 한 각 SQLSTATE 값과 연결 된 반환 코드는 SQL_ERROR 됩니다.  
   
-|SQLSTATE|Error|Description|  
+|SQLSTATE|오류|설명|  
 |--------------|-----------|-----------------|  
 |01000|일반 경고|(DM) 드라이버 관리자 관련 정보 메시지입니다. 함수는 SQL_SUCCESS_WITH_INFO를 반환 합니다.|  
-|01004|문자열 데이터, 오른쪽이 잘렸습니다.|(DM) 버퍼 \* *driverdescription* 의 크기가 작아 전체 드라이버 설명을 반환할 수 없습니다. 따라서 설명이 잘렸습니다. 전체 드라이버 설명의 길이는 \* *DescriptionLengthPtr*에서 반환 됩니다. 함수는 SQL_SUCCESS_WITH_INFO를 반환 합니다.<br /><br /> (DM) 버퍼 \* *driverattributes* 의 크기가 작아 특성 값 쌍의 전체 목록을 반환할 수 없습니다. 따라서 목록이 잘렸습니다. 특성 값 쌍의 잘린 잘림 목록 길이는 **AttributesLengthPtr*에서 반환 됩니다. 함수는 SQL_SUCCESS_WITH_INFO를 반환 합니다.|  
-|HY000|일반 오류|특정 SQLSTATE가 없고 구현 별 SQLSTATE가 정의 되지 않은 오류가 발생 했습니다. MessageText 버퍼에서 **SQLGetDiagRec** 에 의해 반환 되는 오류 메시지는 오류 및 해당 원인을 설명 합니다. * \**|  
+|01004|문자열 데이터, 오른쪽이 잘렸습니다.|(DM) 버퍼 \* *driverdescription* 의 크기가 작아 전체 드라이버 설명을 반환할 수 없습니다. 따라서 설명이 잘렸습니다. 전체 드라이버 설명의 길이는 DescriptionLengthPtr에서 반환 됩니다 \* *DescriptionLengthPtr*. 함수는 SQL_SUCCESS_WITH_INFO를 반환 합니다.<br /><br /> (DM) 버퍼 \* *driverattributes* 의 크기가 작아 특성 값 쌍의 전체 목록을 반환할 수 없습니다. 따라서 목록이 잘렸습니다. 특성 값 쌍의 잘린 잘림 목록 길이는 **AttributesLengthPtr*에서 반환 됩니다. 함수는 SQL_SUCCESS_WITH_INFO를 반환 합니다.|  
+|HY000|일반 오류|특정 SQLSTATE가 없고 구현 별 SQLSTATE가 정의 되지 않은 오류가 발생 했습니다. * \* MessageText* 버퍼에서 **SQLGetDiagRec** 에 의해 반환 되는 오류 메시지는 오류 및 해당 원인을 설명 합니다.|  
 |HY001|메모리 할당 오류|(DM) 드라이버 관리자가 함수의 실행 또는 완료를 지 원하는 데 필요한 메모리를 할당할 수 없습니다.|  
 |HY010|함수 시퀀스 오류|(DM) **Sqlexecute**, **sqlexecdirect**또는 **SQLMoreResults** 가 *StatementHandle* 에 대해 호출 되 고 SQL_PARAM_DATA_AVAILABLE 반환 되었습니다. 이 함수는 모든 스트리밍된 매개 변수에 대 한 데이터를 검색 하기 전에 호출 되었습니다.|  
 |HY013|메모리 관리 오류|메모리 부족 상태로 인해 기본 메모리 개체에 액세스할 수 없기 때문에 함수 호출을 처리할 수 없습니다.|  
@@ -96,7 +97,7 @@ SQLRETURN SQLDrivers(
 |HY117|알 수 없는 트랜잭션 상태로 인해 연결이 일시 중단 되었습니다. 연결 끊기 및 읽기 전용 함수만 허용 됩니다.|(DM) 일시 중단 된 상태에 대 한 자세한 내용은 [Sqlendtran 함수](../../../odbc/reference/syntax/sqlendtran-function.md)를 참조 하세요.|  
   
 ## <a name="comments"></a>주석  
- **Sqldrivers** \* *는 드라이버 설명 버퍼에* 드라이버 설명을 반환 합니다. \* *Driverattributes* 버퍼의 드라이버에 대 한 추가 정보를 키워드-값 쌍의 목록으로 반환 합니다. 데이터 원본 만들기를 묻는 메시지를 표시 하는 데 사용 되는 **CreateDSN**를 제외 하 고 모든 드라이버에 대해 드라이버에 대 한 시스템 정보에 나열 된 모든 키워드가 반환 됩니다 .이는 선택 사항입니다. 각 쌍은 null 바이트로 종료 되 고 전체 목록은 null 바이트로 종료 됩니다. 즉, 두 개의 null 바이트는 목록의 끝을 표시 합니다. 예를 들어 C 구문을 사용 하는 파일 기반 드라이버는 다음 특성 목록을 반환할 수 있습니다 ("\ 0"은 null 문자를 나타냄).  
+ **Sqldrivers** 는 드라이버 설명 버퍼에 드라이버 설명을 반환 합니다 \* *DriverDescription* . Driverattributes 버퍼의 드라이버에 대 한 추가 정보를 \* *DriverAttributes* 키워드-값 쌍의 목록으로 반환 합니다. 데이터 원본 만들기를 묻는 메시지를 표시 하는 데 사용 되는 **CreateDSN**를 제외 하 고 모든 드라이버에 대해 드라이버에 대 한 시스템 정보에 나열 된 모든 키워드가 반환 됩니다 .이는 선택 사항입니다. 각 쌍은 null 바이트로 종료 되 고 전체 목록은 null 바이트로 종료 됩니다. 즉, 두 개의 null 바이트는 목록의 끝을 표시 합니다. 예를 들어 C 구문을 사용 하는 파일 기반 드라이버는 다음 특성 목록을 반환할 수 있습니다 ("\ 0"은 null 문자를 나타냄).  
   
 ```  
 FileUsage=1\0FileExtns=*.dbf\0\0  
@@ -121,6 +122,6 @@ FileUsage=1\0FileExtns=*.dbf\0\0
 |데이터 원본 이름 반환|[SQLDataSources 함수](../../../odbc/reference/syntax/sqldatasources-function.md)|  
 |연결 문자열 또는 대화 상자를 사용 하 여 데이터 원본에 연결|[SQLDriverConnect 함수](../../../odbc/reference/syntax/sqldriverconnect-function.md)|  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [ODBC API 참조](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 헤더 파일](../../../odbc/reference/install/odbc-header-files.md)

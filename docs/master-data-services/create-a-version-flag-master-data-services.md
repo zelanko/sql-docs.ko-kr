@@ -1,4 +1,5 @@
 ---
+description: 버전 플래그 만들기(Master Data Services)
 title: 버전 플래그 만들기
 ms.custom: ''
 ms.date: 03/01/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3067e1e3-05b7-4f11-9206-c612ef4e7e42
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 373e915a2a0a2c75894698df943b0d8a3df955c9
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 6720191a37230042f3b1fa85ec3018d0508b0fba
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812749"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461865"
 ---
 # <a name="create-a-version-flag-master-data-services"></a>버전 플래그 만들기(Master Data Services)
 
@@ -27,7 +28,7 @@ ms.locfileid: "85812749"
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 버전에 할당할 버전 플래그를 만듭니다. 플래그는 사용자나 구독 시스템에서 사용해야 하는 버전을 나타낼 수 있습니다.  
   
-## <a name="prerequisites"></a>전제 조건  
+## <a name="prerequisites"></a>사전 요구 사항  
  이 절차를 수행하려면  
   
 -   **버전 관리** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  
@@ -52,7 +53,7 @@ ms.locfileid: "85812749"
   
 7.  상태가 **커밋됨** 인 버전에만 플래그를 할당할 수 있도록 지정하려면 **커밋된 버전만** 필드에서 **True** 를 선택합니다. 모든 상태의 버전에 플래그를 할당할 수 있도록 지정하려면 **False** 를 선택합니다.  
   
-8.  **Save**을 클릭합니다.  
+8.  **저장**을 클릭합니다.  
   
 ## <a name="next-steps"></a>다음 단계  
   

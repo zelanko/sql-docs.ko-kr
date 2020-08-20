@@ -1,4 +1,5 @@
 ---
+description: SQLDriverToDataSource 함수
 title: SQLDriverToDataSource 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 0de28eb5-8aa9-43e4-a87f-7dbcafe800dc
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 89e7db7e4b20a35e047dca94cb72d8a6888fb670
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: da885e3be81a7a7de04a58bbb92725317477e80e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302754"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461144"
 ---
 # <a name="sqldrivertodatasource-function"></a>SQLDriverToDataSource 함수
 **SQLDriverToDataSource** 는 ODBC 드라이버에 대 한 번역을 지원 합니다. 이 함수는 ODBC 사용 응용 프로그램에서 호출 되지 않습니다. 응용 프로그램은 **SQLSetConnectAttr**를 통해 변환을 요청 합니다. **SQLSetConnectAttr** 에 지정 된 *ConnectionHandle* 와 연결 된 드라이버는 지정 된 DLL을 호출 하 여 드라이버에서 데이터 원본으로 흐르는 모든 데이터의 번역을 수행 합니다. 기본 변환 DLL은 ODBC 초기화 파일에 지정할 수 있습니다.  

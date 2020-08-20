@@ -1,4 +1,5 @@
 ---
+description: 엔터티 관리자 만들기(Master Data Services)
 title: 엔터티 관리자 만들기
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 717be1e8-488e-4219-8d1e-ca9084b864cd
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 5b74d076e0ba104c514126f035994c8debcb1de3
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: a7313abe93c9095cf5efb9199b6d93637a5daf87
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813362"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461913"
 ---
 # <a name="create-an-entity-administrator-master-data-services"></a>엔터티 관리자 만들기(Master Data Services)
 
@@ -26,7 +27,7 @@ ms.locfileid: "85813362"
 > [!TIP]  
 >  관리 작업을 간편하게 수행하려면 Windows 또는 로컬 그룹을 만든 다음 엔터티 관리자로 구성합니다. 그러면 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에 액세스하지 않고 그룹에서 사용자를 추가하고 제거할 수 있습니다.  
   
-## <a name="prerequisites"></a>전제 조건  
+## <a name="prerequisites"></a>사전 요구 사항  
  이 절차를 수행하려면  
   
 -   **사용자 및 그룹 권한** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  
@@ -45,7 +46,7 @@ ms.locfileid: "85813362"
   
 5.  그룹 또는 사용자를 관리자로 지정할 각 엔터티에 대해 4단계를 완료합니다.  
   
-6.  **Save**을 클릭합니다.  
+6.  **저장**을 클릭합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [관리자는 MDS(Master Data Services) &#40;&#41;](../master-data-services/administrators-master-data-services.md)   

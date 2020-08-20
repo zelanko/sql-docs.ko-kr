@@ -1,4 +1,5 @@
 ---
+description: 날짜 특성 만들기(Master Data Services)
 title: 날짜 특성 만들기
 ms.custom: ''
 ms.date: 03/15/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 22a8f1a3-b4f2-4cfa-8495-7daad5ce9d12
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: cb52caebef0a9c042e3f7a077aa098cdc42b7ff4
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: 5b2bb59ff72884649feb2167c41c5d838b9779d6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87363160"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461910"
 ---
 # <a name="create-a-date-attribute-master-data-services"></a>날짜 특성 만들기(Master Data Services)
 
@@ -29,7 +30,7 @@ ms.locfileid: "87363160"
 > [!NOTE]  
 >  이 특성을 DateTime이라고 하지만 시간 값이 지원되지 않습니다.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>사전 요구 사항  
  이 절차를 수행하려면  
   
 -   **시스템 관리** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  

@@ -1,4 +1,5 @@
 ---
+description: 식별자 인수
 title: 식별자 인수 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b9de003f-cb49-4dec-b528-14a5b8ff12bd
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6831eab30daebe37baecebe3ed7053537d7de8f8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 24efb295c9c27dbfc5edc2b1d7a46d6ca166e2c9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300163"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461455"
 ---
 # <a name="identifier-arguments"></a>식별자 인수
 식별자 인수의 문자열이 따옴표 붙은 경우 드라이버는 선행 및 후행 공백을 제거 하 고 문자열을 따옴표 안에 그대로 처리 합니다. 문자열이 따옴표로 묶여 있지 않으면 드라이버는 후행 공백을 제거 하 고 문자열을 대문자로 정리 합니다. 인수가 카탈로그 이름이 고 카탈로그가 지원 되지 않는 경우 식별자 인수를 null 포인터로 설정 하면 SQL_ERROR 및 SQLSTATE HY009 (null 포인터 사용이 잘못 되었습니다)가 반환 됩니다.  

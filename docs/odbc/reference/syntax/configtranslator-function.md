@@ -1,4 +1,5 @@
 ---
+description: ConfigTranslator 함수
 title: ConfigTranslator 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 7c22f07e-36de-425b-aa67-e32a84afae92
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fb2f26f87854d74a217885010014633963472787
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9b99628b801199c7e2d7fd033e1b0728f1538932
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306034"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461275"
 ---
 # <a name="configtranslator-function"></a>ConfigTranslator 함수
 **규칙**  
@@ -53,9 +54,9 @@ BOOL ConfigTranslator(
  이 함수는 성공 하면 TRUE를 반환 하 고 실패 하면 FALSE를 반환 합니다.  
   
 ## <a name="diagnostics"></a>진단  
- **Configtranslator** FALSE를 반환 하면 연결 * \*된 pfErrorCode* 값이 **SQLPostInstallerError** 에 대 한 호출에 의해 설치 관리자 오류 버퍼에 게시 되 고 **SQLInstallerError**를 호출 하 여 가져올 수 있습니다. 다음 표에서는 **SQLInstallerError** 에서 반환 될 수 있는 * \*pfErrorCode* 값을 나열 하 고이 함수의 컨텍스트에서 각 값에 대해 설명 합니다.  
+ **Configtranslator** FALSE를 반환 하면 연결 된 * \* pfErrorCode* 값이 **SQLPostInstallerError** 에 대 한 호출에 의해 설치 관리자 오류 버퍼에 게시 되 고 **SQLInstallerError**를 호출 하 여 가져올 수 있습니다. 다음 표에서는 **SQLInstallerError** 에서 반환 될 수 있는 * \* pfErrorCode* 값을 나열 하 고이 함수의 컨텍스트에서 각 값에 대해 설명 합니다.  
   
-|*\*pfErrorCode*|Error|Description|  
+|*\*pfErrorCode*|오류|설명|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_INVALID_HWND|창 핸들이 잘못 되었습니다.|*HwndParent* 인수가 잘못 되었거나 NULL입니다.|  
 |ODBC_ERROR_DRIVER_SPECIFIC|드라이버 또는 번역기 관련 오류|ODBC 설치 관리자 오류가 정의 되지 않은 드라이버 관련 오류입니다. **SQLPostInstallerError** 함수 호출의 *szerror* 인수는 드라이버별 오류 메시지를 포함 해야 합니다.|  

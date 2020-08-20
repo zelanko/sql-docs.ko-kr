@@ -1,4 +1,5 @@
 ---
+description: 코드 외의 특성 값 자동 생성(Master Data Services)
 title: 특성 값 자동 생성
 titleSuffix: Master Data Services
 ms.custom: seo-lt-2019
@@ -11,12 +12,12 @@ ms.topic: conceptual
 ms.assetid: b82f6f81-6e9c-4918-9ea9-4ab5f5d11b15
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 165820bfea62fe1172aaad4f6a18f4d3b5e5eed4
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 85339e8fb742bfa6e8545e72ac1ff70dc5bde6c7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813739"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461972"
 ---
 # <a name="automatically-generate-attribute-values-other-than-code-master-data-services"></a>코드 외의 특성 값 자동 생성(Master Data Services)
 
@@ -24,7 +25,7 @@ ms.locfileid: "85813739"
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 비즈니스 규칙이 적용될 때마다 값으로 정수가 자동 할당되도록 하려면 엔터티의 특성 값에 대해 값을 자동으로 생성합니다.  
   
-## <a name="prerequisites"></a>전제 조건  
+## <a name="prerequisites"></a>사전 요구 사항  
  이 절차를 수행하려면  
   
 -   **시스템 관리** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  
@@ -76,7 +77,7 @@ ms.locfileid: "85813739"
 -   [비즈니스 규칙에 대해 버전 유효성 검사&#40;Master Data Services&#41;](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [MDS(Master Data Services)&#41;&#40;자동 코드 만들기](../master-data-services/automatic-code-creation-master-data-services.md)   
+ [MDS(Master Data Services)&#41;&#40;자동 코드 만들기 ](../master-data-services/automatic-code-creation-master-data-services.md)   
  [비즈니스 규칙 &#40;MDS(Master Data Services)&#41;](../master-data-services/business-rules-master-data-services.md)   
  [유효성 검사&#40;Master Data Services&#41;](../master-data-services/validation-master-data-services.md)  
   

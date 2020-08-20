@@ -1,4 +1,5 @@
 ---
+description: 샘플 콘솔 스크립트 파일 작업(OracleToSQL)
 title: 샘플 콘솔 스크립트 파일 작업 (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -14,12 +15,12 @@ ms.assetid: c6202dcc-b994-457b-9b2f-0cd89e79792d
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: b5be39914c13b647f9a3f4b70a6371b9c5b40749
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: f7b9fa46fcd5b24b5427c4ba7a359ac37565f724
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87932504"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463185"
 ---
 # <a name="working-with-the-sample-console-script-files-oracletosql"></a>샘플 콘솔 스크립트 파일 작업(OracleToSQL)
 사용자 참조 및 사용을 위해 제품과 함께 몇 가지 샘플 파일이 제공 되었습니다. 이 섹션에서는 최종 사용자 요구에 맞게 이러한 스크립트를 쉽게 사용자 지정 하는 방법을 설명 합니다.  
@@ -43,7 +44,7 @@ ms.locfileid: "87932504"
   
     -   사용자는 필요한 원본 및 대상 서버 정의로 값을 변경 하 여 필요한 데이터베이스에 연결할 수 있습니다. 이 예제에서는 모든 값이 **VariableValueFileSample.xml**에서 사용할 수 있는 변수 값으로 제공 되었습니다.  다른 모든 연결 매개 변수는 사용자의 작업 중인 서버 연결 파일에서 제거할 수 있습니다.  
   
-    -   원본 및 대상 서버에 연결 하는 방법에 대 한 자세한 내용은 [OracleToSQL&#41;&#40;서버 연결 파일 만들기](../../ssma/oracle/creating-the-server-connection-files-oracletosql.md) 를 참조 하세요.  
+    -   원본 및 대상 서버에 연결 하는 방법에 대 한 자세한 내용은 [OracleToSQL&#41;&#40;서버 연결 파일 만들기 ](../../ssma/oracle/creating-the-server-connection-files-oracletosql.md) 를 참조 하세요.  
   
 -   **VariableValueFileSample.xml:** 샘플 콘솔에서 사용 된 모든 변수가 `ServersConnectionFileSample.xml` 이 파일에서 정렬 되었습니다. 샘플 콘솔 스크립트를 실행 하려면 사용자가 샘플 변수 값을 사용자 정의 된 값으로 바꾸고이 파일을 스크립트 파일과 함께 추가 명령줄 인수로 전달 하기만 하면 됩니다.  
   
@@ -80,9 +81,9 @@ ms.locfileid: "87932504"
   
     원본 데이터베이스와 대상 스키마의 스키마 매핑  
   
-    **특성**  
+    **Attribute**  
   
-    -   `source-schema:`변환 해야 하는 원본 데이터베이스를 지정 합니다.  
+    -   `source-schema:` 변환 해야 하는 원본 데이터베이스를 지정 합니다.  
   
     -   `sql-server-schema`: 마이그레이션할 대상 데이터베이스를 지정 합니다.  
   
@@ -94,9 +95,9 @@ ms.locfileid: "87932504"
   
     -   사용자가 여러 개체/데이터베이스를 평가 해야 하는 경우 `metabase-object` `convert-schema` 샘플 콘솔 스크립트 파일의 명령 예제 4에 나와 있는 것 처럼 여러 노드를 지정할 수 있습니다.  
   
-    **특성**  
+    **Attribute**  
   
-    `object-name`: 변환 해야 하는 원본 데이터베이스/개체 이름을 지정 합니다. 에 `object-type` 지정 된 개체의 형식에 따라 해당이 변경 되었는지 확인 합니다.`object-name`  
+    `object-name`: 변환 해야 하는 원본 데이터베이스/개체 이름을 지정 합니다. 에 `object-type` 지정 된 개체의 형식에 따라 해당이 변경 되었는지 확인 합니다. `object-name`  
   
     **명령 이름**  
   
@@ -106,9 +107,9 @@ ms.locfileid: "87932504"
   
     -   사용자가 여러 개체/데이터베이스를 평가 해야 하는 경우 `metabase-object` `synchronize-target` 샘플 콘솔 스크립트 파일의 명령 예제 3에 나와 있는 것 처럼 여러 노드를 지정할 수 있습니다.  
   
-    **특성**  
+    **Attribute**  
   
-    `object-name:`만들어야 하는 sql server 데이터베이스/개체 이름을 지정 합니다. 에 `object-type` 지정 된 개체의 형식에 따라 해당이 변경 되었는지 확인 합니다.`object-name`  
+    `object-name:` 만들어야 하는 sql server 데이터베이스/개체 이름을 지정 합니다. 에 `object-type` 지정 된 개체의 형식에 따라 해당이 변경 되었는지 확인 합니다. `object-name`  
   
     **명령 이름**  
   
@@ -118,12 +119,12 @@ ms.locfileid: "87932504"
   
     -   사용자가 여러 개체/데이터베이스를 평가 해야 하는 경우 `metabase-object` `migrate-data` 샘플 콘솔 스크립트 파일의 명령 예제 2에 설명 된 대로 여러 노드를 지정할 수 있습니다.  
   
-    **특성**  
+    **Attribute**  
   
-    `object-name:`마이그레이션해야 하는 원본 데이터베이스/테이블 이름을 지정 합니다. 에 `object-type` 지정 된 개체의 형식에 따라 해당이 변경 되었는지 확인 합니다.`object-name`  
+    `object-name:` 마이그레이션해야 하는 원본 데이터베이스/테이블 이름을 지정 합니다. 에 `object-type` 지정 된 개체의 형식에 따라 해당이 변경 되었는지 확인 합니다. `object-name`  
   
 ## <a name="see-also"></a>참고 항목  
-[OracleToSQL&#41;&#40;변수 값 파일 만들기](../../ssma/oracle/creating-variable-value-files-oracletosql.md)  
-[OracleToSQL&#41;&#40;서버 연결 파일 만들기](../../ssma/oracle/creating-the-server-connection-files-oracletosql.md)  
-[OracleToSQL&#41;&#40;보고서 생성](../../ssma/oracle/generating-reports-oracletosql.md)  
+[OracleToSQL&#41;&#40;변수 값 파일 만들기 ](../../ssma/oracle/creating-variable-value-files-oracletosql.md)  
+[OracleToSQL&#41;&#40;서버 연결 파일 만들기 ](../../ssma/oracle/creating-the-server-connection-files-oracletosql.md)  
+[OracleToSQL&#41;&#40;보고서 생성 ](../../ssma/oracle/generating-reports-oracletosql.md)  
   

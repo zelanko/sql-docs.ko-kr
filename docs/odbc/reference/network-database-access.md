@@ -1,4 +1,5 @@
 ---
+description: 네트워크 데이터베이스 액세스
 title: 네트워크 데이터베이스 액세스 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: f31dd938-e992-436b-b613-145c23973064
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2237c725d6fe3696d1f28d80c09f22183f718de8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 025959072b7ebadc96fd1d1a628bdfaf5d449940
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81295586"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461325"
 ---
 # <a name="network-database-access"></a>네트워크 데이터베이스 액세스
 네트워크를 통해 데이터베이스에 액세스 하려면 여러 구성 요소가 필요 하며, 각 구성 요소는와 독립적 이며 프로그래밍 인터페이스 아래에 있습니다. 이러한 구성 요소는 다음 그림에 나와 있습니다.  

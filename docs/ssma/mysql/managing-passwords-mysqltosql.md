@@ -1,4 +1,5 @@
 ---
+description: 암호 관리(MySQLToSQL)
 title: 암호 관리 (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4ffbc587-ea3f-49ad-bc42-a654f672325e
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 55e387cf1f45f557b2e1bbbdce8a119bba03f6f8
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 2caaa5f0a7fca36dcd5cf7aebcadaee4c8f715e5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935292"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463345"
 ---
 # <a name="managing-passwords-mysqltosql"></a>암호 관리(MySQLToSQL)
 이 문서에서는 데이터베이스 암호를 보호 하는 방법과 서버 간에 데이터베이스를 가져오거나 내보내는 절차에 대해 설명 합니다.
@@ -69,7 +70,7 @@ SSMA를 사용 하면 데이터베이스의 암호를 보호할 수 있습니다
   
         를 사용 하 여를 실행 하 `SSMAforMySQLConsole.exe` `-securepassword` 고 `-remove` 명령줄에서 서버 id를 전달 하는 스위치를 사용 하 여 로컬 컴퓨터에 있는 보호 된 저장소 파일에서 암호화 된 암호를 제거 합니다.  
   
-        예:  
+        예제:  
 
         ```console
         C:\SSMA\SSMAforMySQLConsole.EXE -securepassword -remove all
@@ -80,7 +81,7 @@ SSMA를 사용 하면 데이터베이스의 암호를 보호할 수 있습니다
   
         를 사용 하 여를 실행 하 `SSMAforMySQLConsole.exe` `-securepassword` 고 `-list` 명령줄에서 스위치를 사용 하 여 암호가 암호화 된 모든 서버 id를 나열 합니다.  
   
-        예:  
+        예제:  
         
         ```console
         C:\SSMA\SSMAforMySQLConsole.EXE -securepassword -list  

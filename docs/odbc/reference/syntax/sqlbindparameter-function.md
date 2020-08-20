@@ -1,4 +1,5 @@
 ---
+description: SQLBindParameter 함수
 title: SQLBindParameter 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2019
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 38349d4b-be03-46f9-9d6a-e50dd144e225
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 02f50862bcfb0295c7f098afc6856c91e0249f66
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e6866f7c35dbf38f25cf854368053ffd46c74baa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301363"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461225"
 ---
 # <a name="sqlbindparameter-function"></a>SQLBindParameter 함수
 
@@ -99,7 +100,7 @@ SQLRETURN SQLBindParameter(
 
  **SQLBindParameter** 가 SQL_ERROR 또는 SQL_SUCCESS_WITH_INFO를 반환 하는 경우 SQL_HANDLE_STMT의 *HandleType* 및 *StatementHandle* *핸들* 을 사용 하 여 **SQLGetDiagRec** 를 호출 하 여 연결 된 SQLSTATE 값을 얻을 수 있습니다. 다음 표에서는 일반적으로 **SQLBindParameter** 에서 반환 하는 SQLSTATE 값을 나열 하 고이 함수의 컨텍스트에서 각 값에 대해 설명 합니다. "(DM)" 표기법은 드라이버 관리자에서 반환 된 SQLSTATEs의 설명 보다 앞에 나옵니다. 다른 설명이 없는 한 각 SQLSTATE 값과 연결 된 반환 코드는 SQL_ERROR 됩니다.  
 
-|SQLSTATE|Error|Description|  
+|SQLSTATE|오류|설명|  
 |--------------|-----------|-----------------|  
 |01000|일반 경고|드라이버 관련 정보 메시지입니다. 함수는 SQL_SUCCESS_WITH_INFO를 반환 합니다.|  
 |07006|제한 된 데이터 형식 특성 위반|*ValueType* 인수로 식별 되는 데이터 형식은 *ParameterType* 인수로 식별 되는 데이터 형식으로 변환할 수 없습니다. 이 오류는 **SQLBindParameter**대신 실행 시 **sqlexecdirect**, **Sqlexecute**또는 **sqlexecdirect** 에서 반환 될 수 있습니다.|  
@@ -216,11 +217,11 @@ SQLRETURN SQLBindParameter(
   
 ## <a name="parametervalueptr-argument"></a>ParameterValuePtr 인수
 
- *Parameter인수* 는 **Sqlexecute** 또는 **sqlexecdirect** 가 호출 될 때 매개 변수에 대 한 실제 데이터를 포함 하는 버퍼를 가리킵니다. 데이터는 *ValueType* 인수로 지정 된 형식 이어야 합니다. 이 인수는 APD의 SQL_DESC_DATA_PTR 필드를 설정 합니다. StrLen_or_IndPtr SQL_NULL_DATA 또는 SQL_DATA_AT_EXEC 경우 응용 프로그램 *은 매개 변수를 null* 포인터로 설정할 수 있습니다. * \** 이는 입력 또는 입/출력 매개 변수에만 적용 됩니다.  
+ *Parameter인수* 는 **Sqlexecute** 또는 **sqlexecdirect** 가 호출 될 때 매개 변수에 대 한 실제 데이터를 포함 하는 버퍼를 가리킵니다. 데이터는 *ValueType* 인수로 지정 된 형식 이어야 합니다. 이 인수는 APD의 SQL_DESC_DATA_PTR 필드를 설정 합니다. * \* StrLen_or_IndPtr* SQL_NULL_DATA 또는 SQL_DATA_AT_EXEC 경우 응용 프로그램 *은 매개 변수를 null* 포인터로 설정할 수 있습니다. 이는 입력 또는 입/출력 매개 변수에만 적용 됩니다.  
   
  \* *StrLen_or_IndPtr* SQL_LEN_DATA_AT_EXEC (*길이*) 매크로 또는 SQL_DATA_AT_EXEC의 결과인 경우 *parametervalueptr* 은 매개 변수와 연결 된 응용 프로그램 정의 포인터 값입니다. **Sqlparamdata**를 통해 응용 프로그램에 반환 됩니다. 예를 들어 매개 변수 번호, 데이터에 대 한 포인터 또는 응용 프로그램에서 입력 매개 변수를 바인딩하는 데 사용 하는 구조에 대 한 포인터와 같은 0이 아닌 토큰을 *Parametervalueptr* 으로 사용할 수 있습니다. 그러나 매개 변수가 입/출력 매개 변수인 경우 *Parametervalueptr* 은 출력 값이 저장 되는 버퍼에 대 한 포인터 여야 합니다. SQL_ATTR_PARAMSET_SIZE statement 특성의 값이 1 보다 크면 응용 프로그램은 SQL_ATTR_PARAMS_PROCESSED_PTR statement 특성에 의해 가리키는 값을 *Parametervalueptr* 인수와 함께 사용할 수 있습니다. 예를 들어 *Parametervalueptr* 은 값의 배열을 가리키면 응용 프로그램은 SQL_ATTR_PARAMS_PROCESSED_PTR에서 가리키는 값을 사용 하 여 배열에서 올바른 값을 검색할 수 있습니다. 자세한 내용은이 섹션의 뒷부분에 나오는 "매개 변수 값 전달"을 참조 하십시오.  
   
- *Inputoutputtype* 인수가 SQL_PARAM_INPUT_OUTPUT 또는 SQL_PARAM_OUTPUT 인 경우 *Parametervalueptr* 은 드라이버가 출력 값을 반환 하는 버퍼를 가리킵니다. 프로시저에서 하나 이상의 결과 집합을 반환 하 \*는 경우에는 모든 결과 집합/행 개수가 처리 될 때까지 *parametervalueptr* 버퍼가 설정 되지 않을 수 있습니다. 처리가 완료 될 때까지 버퍼를 설정 하지 않으면 **SQLMoreResults** 가 SQL_NO_DATA를 반환할 때까지 출력 매개 변수와 반환 값을 사용할 수 없습니다. SQL_CLOSE 옵션을 사용 하 여 **SQLCloseCursor** 또는 **SQLFreeStmt** 를 호출 하면 이러한 값이 삭제 됩니다.  
+ *Inputoutputtype* 인수가 SQL_PARAM_INPUT_OUTPUT 또는 SQL_PARAM_OUTPUT 인 경우 *Parametervalueptr* 은 드라이버가 출력 값을 반환 하는 버퍼를 가리킵니다. 프로시저에서 하나 이상의 결과 집합을 반환 하는 경우에는 \* 모든 결과 집합/행 개수가 처리 될 때까지 *parametervalueptr* 버퍼가 설정 되지 않을 수 있습니다. 처리가 완료 될 때까지 버퍼를 설정 하지 않으면 **SQLMoreResults** 가 SQL_NO_DATA를 반환할 때까지 출력 매개 변수와 반환 값을 사용할 수 없습니다. SQL_CLOSE 옵션을 사용 하 여 **SQLCloseCursor** 또는 **SQLFreeStmt** 를 호출 하면 이러한 값이 삭제 됩니다.  
   
  SQL_ATTR_PARAMSET_SIZE statement 특성의 값이 1 보다 크면 *Parametervalueptr* 이 배열을 가리킵니다. 단일 SQL 문은 입력 또는 입/출력 매개 변수에 대 한 입력 값의 전체 배열을 처리 하 고 입력/출력 또는 출력 매개 변수에 대 한 출력 값의 배열을 반환 합니다.  
   
@@ -228,7 +229,7 @@ SQLRETURN SQLBindParameter(
 
  문자 및 이진 C 데이터의 경우 *bufferlength* 인수는 \* *parametervalueptr* 버퍼의 길이 (단일 요소인 경우) 또는 \* *parametervalueptr* 배열의 요소 길이 (SQL_ATTR_PARAMSET_SIZE statement 특성의 값이 1 보다 큰 경우)를 지정 합니다. 이 인수는 APD의 SQL_DESC_OCTET_LENGTH 레코드 필드를 설정 합니다. 응용 프로그램에서 여러 값을 지정 하는 경우 *Bufferlength* 를 사용 하 여 입력 및 출력 모두에서 **Parametervalueptr* 배열의 값 위치를 확인 합니다. 입/출력 및 출력 매개 변수의 경우 출력에서 문자 및 이진 C 데이터를 잘라낼 지 여부를 결정 하는 데 사용 됩니다.  
   
--   문자 C 데이터의 경우 반환할 수 있는 바이트 수가 *bufferlength*보다 크거나 같은 경우 \* *parametervalueptr* 의 데이터는 null 종료 문자의 길이 보다 작은 *bufferlength* 로 잘리고 드라이버에 의해 null로 종료 됩니다.  
+-   문자 C 데이터의 경우 반환할 수 있는 바이트 수가 *Bufferlength*보다 크거나 같은 경우 \* *parametervalueptr* 의 데이터는 null 종료 문자의 길이 보다 작은 *bufferlength* 로 잘리고 드라이버에 의해 null로 종료 됩니다.  
   
 -   이진 C 데이터의 경우 반환할 수 있는 바이트 수가 *bufferlength*보다 크면 \* *parametervalueptr* 의 데이터가 *bufferlength* 바이트로 잘립니다.  
   
@@ -252,7 +253,7 @@ SQLRETURN SQLBindParameter(
   
 -   SQL_NULL_DATA. 매개 변수 값이 NULL입니다.  
   
--   SQL_DEFAULT_PARAM. 프로시저는 응용 프로그램에서 검색 된 값 대신 매개 변수의 기본값을 사용 하는 것입니다. 이 값은 ODBC 정식 구문에서 호출 된 프로시저 에서만 유효 하며,이 경우 *Inputoutputtype* 인수가 SQL_PARAM_INPUT, SQL_PARAM_INPUT_OUTPUT 또는 SQL_PARAM_INPUT_OUTPUT_STREAM 인 경우에만 유효 합니다. \* *StrLen_or_IndPtr* SQL_DEFAULT_PARAM 되는 경우 *ValueType*, *ParameterType*, *columnsize*, *DecimalDigits*, *bufferlength*및 *parametervalueptr* 인수는 입력 매개 변수에 대해 무시 되 고 입력/출력 매개 변수의 출력 매개 변수 값을 정의 하는 데만 사용 됩니다.  
+-   SQL_DEFAULT_PARAM. 프로시저는 응용 프로그램에서 검색 된 값 대신 매개 변수의 기본값을 사용 하는 것입니다. 이 값은 ODBC 정식 구문에서 호출 된 프로시저 에서만 유효 하며,이 경우 *Inputoutputtype* 인수가 SQL_PARAM_INPUT, SQL_PARAM_INPUT_OUTPUT 또는 SQL_PARAM_INPUT_OUTPUT_STREAM 인 경우에만 유효 합니다. \* *StrLen_or_IndPtr* SQL_DEFAULT_PARAM 되는 경우 *ValueType*, *ParameterType*, *Columnsize*, *DecimalDigits*, *bufferlength*및 *parametervalueptr* 인수는 입력 매개 변수에 대해 무시 되 고 입력/출력 매개 변수의 출력 매개 변수 값을 정의 하는 데만 사용 됩니다.  
   
 -   SQL_LEN_DATA_AT_EXEC (*길이*) 매크로의 결과입니다. 매개 변수에 대 한 데이터는 **Sqlputdata**를 사용 하 여 전송 됩니다. *ParameterType* 인수가 SQL_LONGVARBINARY, SQL_LONGVARCHAR 또는 길고 데이터 원본 관련 데이터 형식이 고 드라이버에서 **SQLGetInfo**의 SQL_NEED_LONG_DATA_LEN 정보 형식에 대해 "Y"를 반환 하는 경우 *길이* 는 매개 변수에 대해 전송 되는 데이터 바이트 수입니다. 그렇지 않으면 *길이* 는 음수가 아닌 값 이어야 하며 무시 됩니다. 자세한 내용은이 섹션의 뒷부분에 나오는 "매개 변수 값 전달"을 참조 하십시오.  
   
@@ -265,13 +266,13 @@ SQLRETURN SQLBindParameter(
 > [!NOTE]  
 >  응용 프로그램 개발자는 매개 변수의 데이터 형식이 SQL_C_BINARY 될 때 *StrLen_or_IndPtr* 에 대해 null 포인터를 지정 하지 않는 것이 좋습니다. 드라이버가 예기치 않게 SQL_C_BINARY 데이터를 잘라내는 것이 아닌지 확인 하려면 *StrLen_or_IndPtr* 올바른 길이 값에 대 한 포인터를 포함 해야 합니다.  
   
- *Inputoutputtype* 인수가 SQL_PARAM_INPUT_OUTPUT, SQL_PARAM_OUTPUT, SQL_PARAM_INPUT_OUTPUT_STREAM 또는 SQL_PARAM_OUTPUT_STREAM 인 경우, *StrLen_or_IndPtr* 가 반환 하는 데 사용할 수 있는 바이트 수 (문자 데이터의 NULL 종결 바이트 제외) 또는 SQL_NULL_DATA \* *(반환* 에 사용할 수 있는 바이트 수를 확인할 수 없는 경우)가 SQL_NO_TOTAL 반환 하는 버퍼를 가리킵니다. 프로시저에서 하나 이상의 결과 집합을 반환 하는 경우 모든 결과가 인출 될 때까지 **StrLen_or_IndPtr* 버퍼가 설정 되지 않을 수 있습니다.  
+ *Inputoutputtype* 인수가 SQL_PARAM_INPUT_OUTPUT, SQL_PARAM_OUTPUT, SQL_PARAM_INPUT_OUTPUT_STREAM 또는 SQL_PARAM_OUTPUT_STREAM 인 경우, *StrLen_or_IndPtr* 가 반환 하는 데 사용할 수 있는 바이트 수 \* *ParameterValuePtr* (문자 데이터의 NULL 종결 바이트 제외) 또는 SQL_NULL_DATA (반환에 사용할 수 있는 바이트 수를 확인할 수 없는 경우)가 SQL_NO_TOTAL 반환 하는 버퍼를 가리킵니다. 프로시저에서 하나 이상의 결과 집합을 반환 하는 경우 모든 결과가 인출 될 때까지 **StrLen_or_IndPtr* 버퍼가 설정 되지 않을 수 있습니다.  
   
  SQL_ATTR_PARAMSET_SIZE statement 특성의 값이 1 보다 크면 *StrLen_or_IndPtr* 는 sqllen 값의 배열을 가리킵니다. 이러한 값은이 섹션의 앞부분에 나열 된 값 중 하나일 수 있으며 단일 SQL 문을 사용 하 여 처리 됩니다.  
   
 ## <a name="passing-parameter-values"></a>매개 변수 값 전달
 
- 응용 프로그램은 매개 변수 \*값을 *parametervalueptr* 버퍼 또는 **sqlputdata**에 대 한 하나 이상의 호출로 전달할 수 있습니다. **Sqlputdata** 를 사용 하 여 해당 데이터를 전달 하는 매개 변수는 *실행 시 데이터* 매개 변수 라고 합니다. 이러한 매개 변수는 일반적으로 SQL_LONGVARBINARY 및 SQL_LONGVARCHAR 매개 변수에 대 한 데이터를 전송 하는 데 사용 되며 다른 매개 변수와 혼합할 수 있습니다.  
+ 응용 프로그램은 매개 변수 값을 \* *parametervalueptr* 버퍼 또는 **sqlputdata**에 대 한 하나 이상의 호출로 전달할 수 있습니다. **Sqlputdata** 를 사용 하 여 해당 데이터를 전달 하는 매개 변수는 *실행 시 데이터* 매개 변수 라고 합니다. 이러한 매개 변수는 일반적으로 SQL_LONGVARBINARY 및 SQL_LONGVARCHAR 매개 변수에 대 한 데이터를 전송 하는 데 사용 되며 다른 매개 변수와 혼합할 수 있습니다.  
   
  매개 변수 값을 전달 하기 위해 응용 프로그램은 다음과 같은 일련의 단계를 수행 합니다.  
   
@@ -294,7 +295,7 @@ SQLRETURN SQLBindParameter(
     > [!NOTE]  
     >  실행 시 데이터 매개 변수는 실행 시 데이터 열과 비슷하지만 **Sqlparamdata** 에서 반환 되는 값은 서로 다릅니다. 실행 시 데이터 매개 변수는 문이 **Sqlputdata** 또는 **sqlexecute**를 사용 하 여 실행 될 때 **sqlputdata** 를 사용 하 여 데이터를 전송 하는 SQL 문의 매개 변수입니다. **SQLBindParameter**와 바인딩됩니다. **Sqlparamdata** 에서 반환 되는 값은 *Parametervalueptr* 인수에서 **SQLBindParameter** 로 전달 되는 포인터 값입니다. 실행 시 데이터 열은 행이 업데이트 되거나 **SQLBulkOperations** 로 추가 되거나 **SQLSetPos**로 업데이트 될 때 **sqlputdata** 를 사용 하 여 데이터를 전송 하는 행 집합의 열입니다. **SQLBindCol**와 바인딩됩니다. **Sqlparamdata** 에서 반환 되는 값은 처리 중인 **Targetvalueptr* 버퍼 ( **SQLBindCol**에 대 한 호출에 의해 설정 됨)의 행 주소입니다.  
   
-5.  **Sqlputdata** 를 한 번 이상 호출 하 여 매개 변수에 대 한 데이터를 보냅니다. 데이터 값이 **sqlputdata**에 지정 된 *parametervalueptr* 버퍼 \*보다 클 경우 둘 이상의 호출이 필요 합니다. 동일한 매개 변수에 대 한 **Sqlputdata** 에 대 한 여러 호출은 문자, 이진 또는 데이터 원본 관련 데이터 형식이 있는 열에 문자 c 데이터를 보내거나 문자, 이진 또는 데이터 원본 관련 데이터 형식이 있는 열에 이진 c 데이터를 보내는 경우에만 허용 됩니다.  
+5.  **Sqlputdata** 를 한 번 이상 호출 하 여 매개 변수에 대 한 데이터를 보냅니다. 데이터 값이 \* **sqlputdata**에 지정 된 *parametervalueptr* 버퍼 보다 클 경우 둘 이상의 호출이 필요 합니다. 동일한 매개 변수에 대 한 **sqlputdata** 에 대 한 여러 호출은 문자, 이진 또는 데이터 원본 관련 데이터 형식이 있는 열에 문자 c 데이터를 보내거나 문자, 이진 또는 데이터 원본 관련 데이터 형식이 있는 열에 이진 c 데이터를 보내는 경우에만 허용 됩니다.  
   
 6.  **Sqlparamdata** 를 다시 호출 하 여 매개 변수에 대 한 모든 데이터가 전송 되었음을 알립니다.  
   
@@ -302,7 +303,7 @@ SQLRETURN SQLBindParameter(
   
     -   실행 시 데이터 매개 변수가 더 이상 없으면 프로세스가 완료 된 것입니다. 문이 성공적으로 실행 된 경우 **Sqlparamdata** 는 SQL_SUCCESS 또는 SQL_SUCCESS_WITH_INFO을 반환 합니다. 실행에 실패 하면 SQL_ERROR 반환 됩니다. 이 시점에서 **Sqlparamdata** 는 문 (**sqlparamdata** 또는 **sqlexecute**)을 실행 하는 데 사용 되는 함수에 의해 반환 될 수 있는 모든 SQLSTATE를 반환할 수 있습니다.  
   
-         입력/출력 또는 출력 매개 변수의 출력 값은 응용 프로그램이 문에서 생성 \*된 모든 결과 집합을 검색 한 후 *parametervalueptr* 및 **StrLen_or_IndPtr* 버퍼에서 사용할 수 있습니다.  
+         입력/출력 또는 출력 매개 변수의 출력 값은 \* 응용 프로그램이 문에서 생성 된 모든 결과 집합을 검색 한 후 *parametervalueptr* 및 **StrLen_or_IndPtr* 버퍼에서 사용할 수 있습니다.  
   
  **Sqlexecute** 또는 **sqlexecdirect** 를 호출 하면 문이 SQL_NEED_DATA 상태로 전환 됩니다. 이 시점에서 응용 프로그램은 문과 연결 된 문 또는 *연결 핸들* 을 사용 하 여 **sqlcancel**, **SQLGetDiagField**, **SQLGetDiagRec**, **SQLGetFunctions**, **sqlparamdata**또는 **sqlputdata** 만 호출할 수 있습니다. 문 또는 문과 연결 된 연결을 사용 하 여 다른 함수를 호출 하는 경우이 함수는 SQLSTATE HY010 (함수 시퀀스 오류)를 반환 합니다. **Sqlparamdata** 또는 **sqlparamdata** 에서 오류를 반환 하거나 **sqlparamdata** 가 SQL_SUCCESS 또는 SQL_SUCCESS_WITH_INFO을 반환 하거나 문이 취소 되는 경우 문은 SQL_NEED_DATA 상태를 유지 합니다.  
   
@@ -495,7 +496,7 @@ SQLRETURN SQLBindParameter(
   
 |ODBC 1.0 응용 프로그램에서 호출|ODBC 3을 호출 합니다. *x* 드라이버|  
 |----------------------------------|-------------------------------|  
-|SQLSetParam (StatementHandle, ParameterNumber, ValueType, ParameterType, LengthPrecision, Parameternumber, Parametervalueeptr, StrLen_or_IndPtr);|SQLBindParameter (StatementHandle, ParameterNumber, SQL_PARAM_INPUT_OUTPUT, ValueType, ParameterType, *Columnsize*, *DecimalDigits*, parametervalueeptr, SQL_SETPARAM_VALUE_MAX, StrLen_or_IndPtr);|  
+|SQLSetParam (StatementHandle, ParameterNumber, ValueType, ParameterType, LengthPrecision, Parameternumber, Parametervalueeptr, StrLen_or_IndPtr);|SQLBindParameter (StatementHandle, ParameterNumber, SQL_PARAM_INPUT_OUTPUT, ValueType, ParameterType,      *Columnsize*,      *DecimalDigits*, parametervalueeptr, SQL_SETPARAM_VALUE_MAX, StrLen_or_IndPtr);|  
   
 ## <a name="code-example"></a>코드 예  
  다음 예에서는 응용 프로그램이 ORDERS 테이블에 데이터를 삽입 하는 SQL 문을 준비 합니다. 문의 각 매개 변수에 대해 응용 프로그램은 **SQLBindParameter** 를 호출 하 여 ODBC C 데이터 형식 및 매개 변수의 SQL 데이터 형식을 지정 하 고 버퍼를 각 매개 변수에 바인딩합니다. 응용 프로그램은 각 데이터 행에 대해 데이터 값을 각 매개 변수에 할당 하 고 **Sqlexecute** 를 호출 하 여 문을 실행 합니다.  
@@ -609,7 +610,7 @@ int main() {
 |여러 매개 변수 값 지정|[SQLParamOptions 함수](../../../odbc/reference/syntax/sqlparamoptions-function.md)|  
 |실행 시 매개 변수 데이터 보내기|[SQLPutData 함수](../../../odbc/reference/syntax/sqlputdata-function.md)|  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목
 
  [ODBC API 참조](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 헤더 파일](../../../odbc/reference/install/odbc-header-files.md)   

@@ -1,4 +1,5 @@
 ---
+description: SQLSetDriverConnectInfo 함수
 title: SQLSetDriverConnectInfo 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: bfd4dfc2-fbca-4ef3-81e5-2706f2389256
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 10336475e39598161126c13771ad822de0d5f7d8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 21538fa93328790ad8173e5193ba377b0744d964
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298805"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461255"
 ---
 # <a name="sqlsetdriverconnectinfo-function"></a>SQLSetDriverConnectInfo 함수
 **규칙**  
@@ -61,7 +62,7 @@ SQLRETURN SQLSetDriverConnectInfo(
   
  ODBC 드라이버 개발용으로 sqlspi .h를 포함 합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [ODBC 드라이버 개발](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   
  [드라이버 인식 연결 풀링](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md)   
  [ODBC 드라이버에서 연결 풀 인식 개발](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)

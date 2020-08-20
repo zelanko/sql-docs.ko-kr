@@ -1,4 +1,5 @@
 ---
+description: 데이터베이스 메일 프로필 만들기
 title: 데이터베이스 메일 프로필 만들기 | Microsoft 문서
 ms.custom: ''
 ms.date: 08/01/2016
@@ -14,22 +15,22 @@ helpviewer_keywords:
 ms.assetid: 58ae749d-6ada-4f9c-bf00-de7c7a992a2d
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 466fa0d08af2fa91aefa4d206037080a5aa8f0b3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f3ee012fe4bcd7fa1cd98c51f537035fc6148938
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737607"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461153"
 ---
 # <a name="create-a-database-mail-profile"></a>데이터베이스 메일 프로필 만들기
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
-  **데이터베이스 메일 구성 마법사** 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 을 사용하여 데이터베이스 메일 퍼블릭 프로필 및 프라이빗 프로필을 만들 수 있습니다. 메일 프로필에 대한 자세한 내용은 [데이터베이스 메일 프로필](database-mail-configuration-objects.md)을 참조하세요.
+  **데이터베이스 메일 구성 마법사** 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 데이터베이스 메일 퍼블릭 프로필 및 프라이빗 프로필을 만들 수 있습니다. 메일 프로필에 대한 자세한 내용은 [데이터베이스 메일 프로필](database-mail-configuration-objects.md)을 참조하세요.
   
--   **시작하기 전에:** [필수 구성 요소](#Prerequisites), [보안](#Security)  
+-   **시작하기 전 주의 사항:** [필수 구성 요소](#Prerequisites), [보안](#Security)  
   
--   **데이터베이스 메일 프라이빗 프로필을 만들려면 다음을 사용합니다.**  [데이터베이스 메일 구성 마법사](#SSMSProcedure), [Transact-SQL](#PrivateProfile)  
+-   **To Create a Database Mail private profile using:**  [Database Mail Configuration Wizard](#SSMSProcedure), [Transact-SQL](#PrivateProfile)  
   
--   **데이터베이스 메일 공개 프로필을 만들려면 다음을 사용합니다.**  [데이터베이스 메일 구성 마법사](#SSMSProcedure), [Transact-SQL](#PublicProfile)  
+-   **데이터베이스 메일 공용 프로필을 만드는 데 사용되는 도구:**  [데이터베이스 메일 구성 마법사](#SSMSProcedure), [Transact-SQL](#PublicProfile)  
   
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   

@@ -1,4 +1,5 @@
 ---
+description: Sybase ASE 및 SQL Server 데이터 형식 매핑(SybaseToSQL)
 title: Sybase ASE 및 SQL Server 데이터 형식 매핑 (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 784365d3-df4e-47ab-8ee0-d8392b52f510
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 174f16b2b5a901b06f292f5bf53391fb7685eef1
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 5a7e1ba17822d339e5ae40e6e6b5828191ce84ed
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87931124"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463175"
 ---
 # <a name="mapping-sybase-ase-and-sql-server-data-types-sybasetosql"></a>Sybase ASE 및 SQL Server 데이터 형식 매핑(SybaseToSQL)
 Sybase 적응 서버 엔터프라이즈 (ASE) 데이터베이스 유형은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 Azure SQL Database 유형과 다릅니다. ASE 데이터베이스 개체를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure 개체로 변환 하는 경우 ase에서 또는 SQL Azure 데이터 형식을 매핑하는 방법을 지정 해야 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 기본 데이터 형식 매핑을 그대로 적용 하거나 다음 섹션에 표시 된 대로 매핑을 사용자 지정할 수 있습니다.  
@@ -91,5 +92,5 @@ SSMA에서 **형식 매핑** 탭을 보면 상속 된 형식 매핑을 보여 �
 마이그레이션 프로세스의 다음 단계는 [평가 보고서를 만들거나](assessing-sybase-ase-database-objects-for-conversion-sybasetosql.md) [Sybase ASE 데이터베이스 개체를 SQL Server 또는 SQL Azure 구문으로 변환](converting-sybase-ase-database-objects-sybasetosql.md)하는 것입니다. 평가 보고서를 만드는 경우에는 평가 중에 Sybase ASE 개체가 자동으로 변환 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
-[Sybase ASE 데이터베이스를 SQL Server-Azure SQL Database &#40;SybaseToSQL&#41;로 마이그레이션](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
+[Sybase ASE 데이터베이스를 SQL Server-Azure SQL Database &#40;SybaseToSQL&#41;로 마이그레이션 ](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   

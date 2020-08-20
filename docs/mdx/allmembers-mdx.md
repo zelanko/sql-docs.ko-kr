@@ -1,4 +1,5 @@
 ---
+description: AllMembers(MDX)
 title: AllMembers (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 770d66941af9b42be3c7b26f7e04a60d2a95cac2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ba70d4ad8b301cbd8af2fd76ce058f2dab2e4a4c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68017154"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461675"
 ---
 # <a name="allmembers-mdx"></a>AllMembers(MDX)
 
@@ -47,8 +48,8 @@ Level_Expression.AllMembers
 > [!NOTE]  
 >  **Allmembers** 함수는 [AddCalculatedMembers (MDX)](../mdx/addcalculatedmembers-mdx.md) 함수와 의미상 유사 합니다.  
   
-## <a name="examples"></a>예  
- 다음 예에서는 열 축에 있는 [`Date].[Calendar Year]` 특성 계층]의 모든 멤버를 반환 합니다. 여기에는 계산 멤버와 **어드벤처 Works** 큐브의 행 축 `[Product].[Model Name]` 에 있는 특성 계층의 모든 자식 항목이 포함 됩니다.  
+## <a name="examples"></a>예제  
+ 다음 예에서는 `Date].[Calendar Year]` 열 축에 있는 [특성 계층]의 모든 멤버를 반환 합니다. 여기에는 계산 멤버와 `[Product].[Model Name]` **어드벤처 Works** 큐브의 행 축에 있는 특성 계층의 모든 자식 항목이 포함 됩니다.  
   
 ```  
 SELECT  

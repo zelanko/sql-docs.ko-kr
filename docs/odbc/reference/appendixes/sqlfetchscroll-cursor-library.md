@@ -1,4 +1,5 @@
 ---
+description: SQLFetchScroll(커서 라이브러리)
 title: SQLFetchScroll (커서 라이브러리) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4417e57c-31dd-475e-8fe9-eab00a459c80
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e5573b8afc49afec8b7afa4fc52590e7a6a9e2fb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9783e2e0e7e5030aef0173a67cf8a4eac416242f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302054"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461655"
 ---
 # <a name="sqlfetchscroll-cursor-library"></a>SQLFetchScroll(커서 라이브러리)
 > [!IMPORTANT]  

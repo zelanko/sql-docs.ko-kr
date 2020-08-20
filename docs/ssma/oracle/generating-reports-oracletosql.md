@@ -1,4 +1,5 @@
 ---
+description: 보고서 생성(OracleToSQL)
 title: 보고서 생성 (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -14,12 +15,12 @@ ms.assetid: ccad6262-01e1-447a-bd2b-c105154c80ce
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 17f9c9b31d1593edd353830d999d5afdbfbaabaa
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: aa659269808555f37a570963d82119d1360d1ef4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934850"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463208"
 ---
 # <a name="generating-reports-oracletosql"></a>보고서 생성(OracleToSQL)
 명령을 사용 하 여 수행 되는 특정 활동의 보고서는 SSMA 콘솔에서 개체 트리 수준에 생성 됩니다.  
@@ -42,7 +43,7 @@ ms.locfileid: "87934850"
     > [!IMPORTANT]  
     > 출력 보고서는 평가 보고서와 다릅니다. 전자는 실행 된 명령의 성능에 대 한 보고서 이며 후자는 프로그래밍 방식으로 사용할 수 있는 XML 보고서입니다.  
   
-    Sl에서 출력 보고서에 대 한 명령 옵션을 선택 합니다. 아니요. 2-4 위) [OracleToSQL&#41;&#40;SSMA 콘솔 실행](../../ssma/oracle/executing-the-ssma-console-oracletosql.md) 섹션을 참조 하세요.  
+    Sl에서 출력 보고서에 대 한 명령 옵션을 선택 합니다. 아니요. 2-4 위) [OracleToSQL&#41;&#40;SSMA 콘솔 실행 ](../../ssma/oracle/executing-the-ssma-console-oracletosql.md) 섹션을 참조 하세요.  
   
 2.  보고서 세부 정보 표시 설정을 사용 하 여 출력 보고서에서 원하는 세부 정보 범위를 표시 합니다.  
   

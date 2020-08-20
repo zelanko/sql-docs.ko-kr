@@ -1,4 +1,5 @@
 ---
+description: 환경 핸들
 title: 환경 핸들 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 917f1b0c-272b-4e37-a1f5-87cd24b9fa21
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b504995e99dfad032598485e370b4d5a6681ae81
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1aa22a89288f4dd5a8400484078f57b60fc135fb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300443"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461505"
 ---
 # <a name="environment-handles"></a>환경 핸들
 *환경은* 데이터에 액세스할 수 있는 전역 컨텍스트입니다. 환경에 연결 된 것은 다음과 같이 본질적으로 전체적으로 사용 되는 모든 정보입니다.  

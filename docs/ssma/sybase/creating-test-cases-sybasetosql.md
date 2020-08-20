@@ -1,4 +1,5 @@
 ---
+description: 테스트 사례 만들기(SybaseToSQL)
 title: 테스트 사례 만들기 (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: b52dfd93-95af-4299-bc8f-83f2a7a6a518
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 146e6975dd8880f750e7bb449e8d42ca3e6a4e62
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: fb3fe4816faeb050a1c4321def0e7dd4e6937bdb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87931917"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463155"
 ---
 # <a name="creating-test-cases-sybasetosql"></a>테스트 사례 만들기(SybaseToSQL)
 테스트 사례 마법사를 사용 하 여 테스트를 만듭니다. 이 마법사를 사용 하면 테스트 되 고 확인 된 개체를 선택 하 고 테스트 매개 변수를 지정 하 여 테스트 사례를 만들 수 있습니다.  

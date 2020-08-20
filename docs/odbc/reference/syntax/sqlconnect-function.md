@@ -1,4 +1,5 @@
 ---
+description: SQLConnect 함수
 title: SQLConnect 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 59075e46-a0ca-47bf-972a-367b08bb518d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ab0a31845efeb484c554a9c9cf1afeaeab1a8bea
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 714bc6f69a72609ee266effff71f1898d62ec7d6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301219"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461205"
 ---
 # <a name="sqlconnect-function"></a>SQLConnect 함수
 **규칙**  
@@ -57,7 +58,7 @@ SQLRETURN SQLConnect(
  *NameLength1*  
  입력 **ServerName* 의 길이 (문자)입니다.  
   
- *이름*  
+ *UserName*  
  입력 사용자 식별자입니다.  
   
  *NameLength2*  
@@ -75,7 +76,7 @@ SQLRETURN SQLConnect(
 ## <a name="diagnostics"></a>진단  
  **SQLConnect** 가 SQL_ERROR 또는 SQL_SUCCESS_WITH_INFO를 반환 하는 경우 SQL_HANDLE_DBC의 *HandleType* 및 *ConnectionHandle* *핸들* 을 사용 하 여 **SQLGetDiagRec** 를 호출 하 여 연결 된 SQLSTATE 값을 얻을 수 있습니다. 다음 표에서는 일반적으로 **SQLConnect** 에서 반환 하는 SQLSTATE 값을 나열 하 고이 함수의 컨텍스트에서 각 값에 대해 설명 합니다. "(DM)" 표기법은 드라이버 관리자에서 반환 된 SQLSTATEs의 설명 보다 앞에 나옵니다. 다른 설명이 없는 한 각 SQLSTATE 값과 연결 된 반환 코드는 SQL_ERROR 됩니다.  
   
-|SQLSTATE|Error|Description|  
+|SQLSTATE|오류|설명|  
 |--------------|-----------|-----------------|  
 |01000|일반 경고|드라이버 관련 정보 메시지입니다. 함수는 SQL_SUCCESS_WITH_INFO를 반환 합니다.|  
 |01 S 02|옵션 값 변경 됨|드라이버가 **SQLSetConnectAttr** 에서 *지정 된 값* 을 지원 하지 않아 유사한 값으로 대체 되었습니다. 함수는 SQL_SUCCESS_WITH_INFO를 반환 합니다.|  
@@ -84,7 +85,7 @@ SQLRETURN SQLConnect(
 |08004|서버에서 연결을 거부 했습니다.|데이터 소스에서 구현 정의 이유에 대 한 연결 설정을 거부 했습니다.|  
 |08S01|통신 연결 오류|드라이버가 연결을 시도 하는 드라이버와 데이터 원본 간의 통신 연결이 함수 처리를 완료 하기 전에 실패 했습니다.|  
 |28000|잘못 된 권한 부여 사양|인수 *사용자 이름* 또는 인수 *인증* 에 지정 된 값에 지정 된 값이 데이터 원본에 정의 된 제한을 위반 했습니다.|  
-|HY000|일반 오류|특정 SQLSTATE가 없고 구현 별 SQLSTATE가 정의 되지 않은 오류가 발생 했습니다. MessageText 버퍼에서 **SQLGetDiagRec** 에 의해 반환 되는 오류 메시지는 오류 및 해당 원인을 설명 합니다. * \**|  
+|HY000|일반 오류|특정 SQLSTATE가 없고 구현 별 SQLSTATE가 정의 되지 않은 오류가 발생 했습니다. * \* MessageText* 버퍼에서 **SQLGetDiagRec** 에 의해 반환 되는 오류 메시지는 오류 및 해당 원인을 설명 합니다.|  
 |HY001|메모리 할당 오류|(DM) 드라이버 관리자가 함수의 실행 또는 완료를 지 원하는 데 필요한 메모리를 할당할 수 없습니다.|  
 |HY008|작업 취소됨|*ConnectionHandle*에 대해 비동기 처리를 사용 하도록 설정 했습니다. **SQLConnect** 함수를 호출 하 고 실행을 완료 하기 전에 *ConnectionHandle*에서 [Sqlcancelhandle 함수](../../../odbc/reference/syntax/sqlcancelhandle-function.md) 를 호출한 다음 *ConnectionHandle*에서 **SQLConnect** 함수를 다시 호출 했습니다.<br /><br /> 또는 **SQLConnect** 함수가 호출 되 고 실행이 완료 되기 전에 **sqlcancelhandle** 이 다중 스레드 응용 프로그램의 다른 스레드에서 *ConnectionHandle* 에 대해 호출 되었습니다.|  
 |HY010|함수 시퀀스 오류|(DM) *ConnectionHandle* 에 대해 비동기적으로 실행 되는 함수 (이 함수 아님)가 호출 되었으며이 함수가 호출 될 때 계속 실행 중입니다.|  
@@ -100,7 +101,7 @@ SQLRETURN SQLConnect(
 |IM005|SQL_HANDLE_DBC에서 드라이버의 SQLAllocHandle 실패|(DM) **SQLConnect**를 사용 하는 동안 드라이버 관리자는 *HandleType* SQL_HANDLE_DBC의 **SQLAllocHandle** 함수를 호출 하 고 드라이버에서 오류를 반환 했습니다.|  
 |IM006|드라이버의 SQLSetConnectAttr 실패|**SQLConnect**중에 드라이버 관리자가 드라이버의 **SQLSetConnectAttr** 함수를 호출 하 고 드라이버에서 오류를 반환 했습니다. 함수는 SQL_SUCCESS_WITH_INFO를 반환 합니다.|  
 |IM009|변환 DLL에 연결할 수 없습니다.|드라이버에서 데이터 원본에 대해 지정 된 변환 DLL에 연결할 수 없습니다.|  
-|IM010|데이터 원본 이름이 너무 깁니다.|(DM) * \*ServerName* 이 SQL_MAX_DSN_LENGTH 자 보다 깁니다.|  
+|IM010|데이터 원본 이름이 너무 깁니다.|(DM) * \* ServerName* 이 SQL_MAX_DSN_LENGTH 자 보다 깁니다.|  
 |IM014|지정 된 DSN에 드라이버와 응용 프로그램 간의 아키텍처가 일치 하지 않습니다.|(DM) 32 비트 응용 프로그램은 64 비트 드라이버에 연결 하는 DSN을 사용 합니다. 또는 그 반대의 경우도 마찬가지입니다.|  
 |IM015|SQL_HANDLE_DBC_INFO_HANDLE에서 드라이버의 SQLConnect 실패|드라이버가 SQL_ERROR을 반환 하는 경우 드라이버 관리자는 응용 프로그램에 SQL_ERROR을 반환 하 고 연결에 실패 합니다.<br /><br /> SQL_HANDLE_DBC_INFO_TOKEN에 대 한 자세한 내용은 [ODBC 드라이버에서 연결 풀 인식 개발](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)을 참조 하세요.|  
 |IM017|비동기 알림 모드에서는 폴링을 사용할 수 없습니다.|알림 모델을 사용할 때마다 폴링은 사용 하지 않도록 설정 됩니다.|  
@@ -256,6 +257,6 @@ int main() {
 |연결 특성의 설정 반환|[SQLGetConnectAttr 함수(SQLGetConnectAttr Function)](../../../odbc/reference/syntax/sqlgetconnectattr-function.md)|  
 |연결 특성 설정|[SQLSetConnectAttr 함수](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [ODBC API 참조](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 헤더 파일](../../../odbc/reference/install/odbc-header-files.md)

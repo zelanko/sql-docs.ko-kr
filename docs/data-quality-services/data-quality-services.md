@@ -1,5 +1,6 @@
 ---
-title: 데이터베이스 엔진 서비스
+description: 데이터베이스 엔진 서비스
+title: Data Quality Services
 ms.date: 10/12/2013
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -9,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 9c6b996c-e768-4bf5-837f-5436ed9cea1d
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 138086e898617da8e14714dd97e74568bcd57c0d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: dc765b9cca33e249e4efda60bad08781eee35b15
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882857"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462155"
 ---
-# <a name="data-quality-services"></a>데이터베이스 엔진 서비스
+# <a name="data-quality-services"></a>Data Quality Services
 
 [!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sqlserver.md)]
 

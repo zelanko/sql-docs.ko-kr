@@ -1,4 +1,5 @@
 ---
+description: 2-1단원 - 배포 유틸리티 작성
 title: '1단계: 배포 유틸리티 작성 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 1ff4dcff-89b3-4b99-a725-5f7963e98abf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 47d98801dd722f1727a7cdf3a982bf63cbd9974e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: bf91bcb1f0f9db399980c7650ae9b7491c47c78a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917301"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461973"
 ---
 # <a name="lesson-2-1---building-the-deployment-utility"></a>2-1단원 - 배포 유틸리티 작성
 

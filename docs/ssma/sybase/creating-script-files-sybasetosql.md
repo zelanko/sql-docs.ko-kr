@@ -1,4 +1,5 @@
 ---
+description: 스크립트 파일 만들기(SybaseToSQL)
 title: 스크립트 파일 만들기 (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e6baf106-abbd-4200-b3de-33b4b4f1b294
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: e5abea3995ae8b2515c142812ee47498c37497f6
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 0f5205dccc0d5c13f4c9308d32d981a7be506656
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87932001"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463165"
 ---
 # <a name="creating-script-files-sybasetosql"></a>스크립트 파일 만들기(SybaseToSQL)
 SSMA 콘솔 응용 프로그램을 시작 하기 전의 첫 번째 단계는 스크립트 파일을 만드는 것이 고, 필요한 경우 변수 값 파일 및 서버 연결 파일을 만드는 것입니다.  

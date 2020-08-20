@@ -1,4 +1,5 @@
 ---
+description: 인덱스 만들기(Master Data Services)
 title: 인덱스 만들기
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: d694a105-69b1-4ff6-99d3-1f408b916b81
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: da814796cb4f03008857b20d6f8f7d00b70a8b4a
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 48d78cffb116996848035e3675e707994226f080
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813084"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461841"
 ---
 # <a name="create-an-index-master-data-services"></a>인덱스 만들기(Master Data Services)
 
@@ -23,7 +24,7 @@ ms.locfileid: "85813084"
 
   쿼리 성능을 개선하려면 자주 쿼리하는 특성 목록에 대해 사용자 지정 인덱스를 만듭니다.  
   
-## <a name="prerequisites"></a>전제 조건  
+## <a name="prerequisites"></a>사전 요구 사항  
  이 절차를 수행하려면  
   
 -   시스템 관리 기능 영역에 액세스할 수 있는 권한이 있어야 합니다. 자세한 내용은 [기능 영역 권한&#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md)을 참조하세요.  
@@ -46,7 +47,7 @@ ms.locfileid: "85813084"
   
 7.  **사용 가능한 특성** 상자의 특성을 클릭하고 **추가** 화살표를 클릭합니다. 모든 특성을 추가하려면 **모두 추가** 화살표를 클릭합니다.  
   
-8.  **Save**을 클릭합니다.  
+8.  **저장**을 클릭합니다.  
   
  생성되는 각 인덱스에 대해 열이 4개 포함된 행이 표에 추가됩니다. 다음 표에서는 열을 설명합니다.  
   

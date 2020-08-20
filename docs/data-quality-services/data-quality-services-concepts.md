@@ -1,4 +1,5 @@
 ---
+description: Data Quality Services 개념
 title: Data Quality Services 개념
 ms.date: 01/01/2012
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 837c71ee-48fa-4044-8744-2be9119aaa04
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: fe7f6c957bb1781528c0bad06de41063c41ca3cc
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 15fc90d3437ff4cf9f24a482201ba64ce38560d2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85887953"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462215"
 ---
 # <a name="data-quality-services-concepts"></a>Data Quality Services 개념
 
@@ -46,7 +47,7 @@ ms.locfileid: "85887953"
 ##  <a name="data-quality-project-concepts"></a><a name="Projects"></a> 데이터 품질 프로젝트 개념  
  데이터 관리자는 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 애플리케이션에서 데이터 품질 프로젝트를 사용하여 데이터 품질 작업(정리 및 일치)을 수행합니다.  
   
- **Data Cleansing**  
+ **데이터 정리**  
   
  DQS의 데이터 정리 작업은 DQS 기술 자료의 지식을 기반으로 수행됩니다. DQS의 데이터 정리 작업은 2단계 프로세스입니다.  
   
@@ -73,7 +74,7 @@ ms.locfileid: "85887953"
   
  작업 모니터링은 데이터 범위 내에서 수행한 각 작업의 상태를 표시하고, 각 작업의 데이터를 제공하며, DQS 관리자가 작업을 제어할 수 있도록 합니다. 자세한 내용은 [Monitor DQS Activities](../data-quality-services/monitor-dqs-activities.md)을 참조하세요.  
   
- **구성**  
+ **Configuration**  
   
  구성 옵션을 사용하면 다음 작업을 수행할 수 있습니다.  
   
@@ -92,6 +93,6 @@ ms.locfileid: "85887953"
  DQS 관리에 대한 자세한 내용은 [DQS Administration](../data-quality-services/dqs-administration.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [데이터베이스 엔진 서비스](../data-quality-services/data-quality-services.md)  
+ [Data Quality Services](../data-quality-services/data-quality-services.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: ODBC 64비트 정보
 title: ODBC 64 비트 정보 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ed9851ce-44ee-4c8e-b626-1d0b52da30fe
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b9cb8e3fc42d0ad71ac83f1432c165f243f39012
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 791bb54481ae5844061852f5321bdf07fc027b1a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298303"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461285"
 ---
 # <a name="odbc-64-bit-information"></a>ODBC 64비트 정보
 Windows Server 2003부터 Microsoft 운영 체제는 64 비트 ODBC 라이브러리를 지원 합니다. MDAC 2.7 SDK와 함께 제공 되는 ODBC 헤더 및 라이브러리에는 프로그래머가 새 64 비트 플랫폼에 대 한 코드를 쉽게 작성할 수 있도록 변경 된 내용이 포함 되어 있습니다. 코드에서 아래 나열 된 ODBC 정의 형식을 사용 하도록 하 여 **_WIN64** 또는 **WIN32** 매크로를 기반으로 64 비트 및 32 비트 플랫폼에 대해 동일한 소스 코드를 컴파일할 수 있습니다.  
@@ -496,5 +497,5 @@ typedef SQLULEN BOOKMARK;
   
  SQL_ROWSET_SIZE  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [ODBC 소개](../../odbc/reference/introduction-to-odbc.md)

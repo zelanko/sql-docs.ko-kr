@@ -1,4 +1,5 @@
 ---
+description: 커서 닫기
 title: 커서 닫기 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 4f19bf5e-6d8c-40ae-a975-cfd62a0790ec
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 723e40e6d83eed84ed93ee1eeab3535622ad5f04
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cd9465f0fc076a4f41dd8bf4cb3463ce5a47de84
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299143"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461575"
 ---
 # <a name="closing-the-cursor"></a>커서 닫기
-응용 프로그램이 커서를 사용 하 여 완료 되 면 **SQLCloseCursor** 를 호출 하 여 커서를 닫습니다. 예를 들면 다음과 같습니다.  
+응용 프로그램이 커서를 사용 하 여 완료 되 면 **SQLCloseCursor** 를 호출 하 여 커서를 닫습니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.  
   
 ```  
 SQLCloseCursor(hstmt);  

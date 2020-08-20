@@ -1,4 +1,5 @@
 ---
+description: 기술 자료 관리
 title: 기술 자료 관리
 ms.date: 06/04/2013
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 27f306f4-d67c-47f5-b35c-4260cc5d36e3
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 2f445f4c076497db3c41947e3105440de9025175
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 5676a182615dfa7ddf23dcda1841a6530467a8c0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882753"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462086"
 ---
 # <a name="manage-a-knowledge-base"></a>기술 자료 관리
 
@@ -32,7 +33,7 @@ ms.locfileid: "85882753"
 ####  <a name="permissions"></a><a name="Permissions"></a> 권한  
  기술 자료를 열려면 DQS_MAIN 데이터베이스에 대한 dqs_kb_editor 또는 dqs_administrator 역할이 있어야 합니다.  
   
-##  <a name="manage-a-knowledge-base"></a><a name="Manage"></a>기술 자료 관리  
+##  <a name="manage-a-knowledge-base"></a><a name="Manage"></a> 기술 자료 관리  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Data Quality Client 응용 프로그램을 실행](../data-quality-services/run-the-data-quality-client-application.md)합니다.  
   
@@ -70,7 +71,7 @@ ms.locfileid: "85882753"
   
         8.  **만든 날짜**: 생성된 날짜  
   
-##  <a name="follow-up-after-managing-a-knowledge-base"></a><a name="FollowUp"></a>후속 작업: 기술 자료를 관리 한 후  
+##  <a name="follow-up-after-managing-a-knowledge-base"></a><a name="FollowUp"></a> 후속 작업: 기술 자료를 관리 한 후  
  기술 자료 관리 후 다음 단계는 기술 자료에 대해 수행한 작업에 따라 달라집니다.  
   
 -   기술 자료를 연 경우 선택한 작업이 계속됩니다.  

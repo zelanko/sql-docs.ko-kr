@@ -1,4 +1,5 @@
 ---
+description: 현재 위치 업데이트 및 Delete 문
 title: 위치 지정 업데이트 및 Delete 문 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0eafba50-02c7-46ca-a439-ef3307b935dc
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6e5316bee7057b30eace326b3ca82b30b75741fb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bd100ac674aedf8dfd652c3d48e0f2dea1226019
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81282364"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461395"
 ---
 # <a name="positioned-update-and-delete-statements"></a>현재 위치 업데이트 및 Delete 문
 응용 프로그램은 위치 지정 update 또는 delete 문을 사용 하 여 결과 집합에서 현재 행을 업데이트 하거나 삭제할 수 있습니다. 위치 지정 update 및 delete 문은 일부 데이터 원본에서 지원 되지만 일부 데이터 원본에서는 지원 되지 않습니다. 데이터 원본에서 위치 지정 update 및 delete 문을 지원 하는지 확인 하기 위해 응용 프로그램은 커서의 유형에 따라 SQL_DYNAMIC_CURSOR_ATTRIBUTES1, SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1, SQL_KEYSET_CURSOR_ATTRIBUTES1 또는 SQL_STATIC_CURSOR_ATTRIBUTES1 *InfoType* 를 사용 하 여 **SQLGetInfo** 를 호출 합니다. ODBC 커서 라이브러리는 위치 지정 update 및 delete 문을 시뮬레이트합니다.  

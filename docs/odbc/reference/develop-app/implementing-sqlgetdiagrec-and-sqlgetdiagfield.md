@@ -1,4 +1,5 @@
 ---
+description: SQLGetDiagRec 및 SQLGetDiagField 구현
 title: SQLGetDiagRec 및 SQLGetDiagField 구현 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 11ba1857-b533-4517-8131-a2a8a0154a0a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4c090af19a9296e46e3036ca23f6c97298bcb1b8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 91e43252aea4ebf12dedcb14bb1b7fb34f75df6f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300143"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461435"
 ---
 # <a name="implementing-sqlgetdiagrec-and-sqlgetdiagfield"></a>SQLGetDiagRec 및 SQLGetDiagField 구현
 **SQLGetDiagRec** 및 **SQLGetDiagField** 는 드라이버 관리자 및 각 드라이버에 의해 구현 됩니다. 드라이버 관리자와 각 드라이버는 각 환경, 연결, 문 및 설명자 핸들에 대 한 진단 레코드를 유지 관리 하 고 해당 핸들을 사용 하 여 다른 함수를 호출 하거나 핸들이 해제 된 경우에만 해당 레코드를 해제 합니다.  

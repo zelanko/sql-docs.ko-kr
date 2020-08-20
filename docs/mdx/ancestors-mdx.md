@@ -1,4 +1,5 @@
 ---
+description: Ancestors(MDX)
 title: 상위 항목 (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,17 +9,17 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 8551e6fdac54b3eb4c20f13f6722936df1c92feb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d92f15f20c872fbe63db09a55356b5d1e35ff0d6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68017106"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461685"
 ---
 # <a name="ancestors-mdx"></a>Ancestors(MDX)
 
 
-  지정된 수준이나 지정된 멤버로부터 지정된 거리만큼 떨어진 수준에서 지정된 멤버의 모든 상위 항목 집합을 반환하는 함수입니다. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에서 반환 되는 집합은 항상 단일 멤버로 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 구성 되며 단일 멤버에 대해 여러 부모를 지원 하지 않습니다.  
+  지정된 수준이나 지정된 멤버로부터 지정된 거리만큼 떨어진 수준에서 지정된 멤버의 모든 상위 항목 집합을 반환하는 함수입니다. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에서 반환 되는 집합은 항상 단일 멤버로 구성 되며 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 단일 멤버에 대해 여러 부모를 지원 하지 않습니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -38,7 +39,7 @@ Ancestors(Member_Expression, Distance)
  *Level_Expression*  
  수준을 반환하는 유효한 MDX 식입니다.  
   
- *Distance*  
+ *거리*  
  지정된 멤버와의 거리를 지정하는 유효한 숫자 식입니다.  
   
 ## <a name="remarks"></a>설명  
@@ -54,7 +55,7 @@ Ancestors(Member_Expression, Distance)
 > [!NOTE]  
 >  부모의 수준을 알 수 없거나 이름을 지정할 수 없는 경우 이러한 형식의 **상위** 함수를 사용 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 **상위** 함수를 사용 하 여 멤버, 해당 부모 및 부모의 Internet Sales Amount 측정값을 반환 합니다. 이 예에서는 수준 식을 사용하여 반환할 수준을 지정합니다. 수준은 멤버 식에 지정된 멤버와 동일한 계층에 있습니다.  
   
 ```  

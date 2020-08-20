@@ -1,4 +1,5 @@
 ---
+description: 데이터 품질 클라이언트 홈 화면
 title: 데이터 품질 클라이언트 홈 화면
 ms.date: 02/29/2012
 ms.prod: sql
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: 7c6ec469-bc7d-4d19-8e21-11dcf8ade108
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 4b1a25fc4bee5c66838c7e29f7c34dc67a572b79
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: aaca3245731102ad667f8507761f57da0adb1437
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899109"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462415"
 ---
 # <a name="data-quality-client-home-screen"></a>데이터 품질 클라이언트 홈 화면
 
@@ -58,12 +59,12 @@ ms.locfileid: "85899109"
  **작업 모니터링**  
  연결된 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]서버와 관련된 현재 및 과거의 모든 작업 상태에 대한 뷰를 표시합니다. 모니터링되는 작업 유형에는 기술 자료 관리, 데이터 품질 프로젝트 및 SSIS 기반 데이터 수정이 포함됩니다.  
   
- **구성**  
+ **Configuration**  
  참조 데이터 서비스 계정에 대 한 구성 속성 (Azure Marketplace 및 참조 데이터 서비스에 직접), 일반 설정 (대화형 정리, 일치 및 프로 파일링) 및 로그 심각도 설정을 표시 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [DQS 기술 자료 및 도메인](../data-quality-services/dqs-knowledge-bases-and-domains.md)   
- [DQS&#41;&#40;데이터 품질 프로젝트](../data-quality-services/data-quality-projects-dqs.md)   
+ [DQS&#41;&#40;데이터 품질 프로젝트 ](../data-quality-services/data-quality-projects-dqs.md)   
  [dqs 관리](../data-quality-services/dqs-administration.md)  
   
   

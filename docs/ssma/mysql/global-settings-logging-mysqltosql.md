@@ -1,4 +1,5 @@
 ---
+description: 전역 설정(로깅)(MySQLToSQL)
 title: 전역 설정 (로깅) (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 0d033492-5ec3-473a-8de1-821894ec9518
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 0540a39f4e9d6d3a2cdaa3f89f69dbdc0c2533ab
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 4a830bf0a4a5dc3ec0a0d3e2a724b0c02517f995
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935576"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463470"
 ---
 # <a name="global-settings-logging--mysqltosql"></a>전역 설정(로깅)(MySQLToSQL)
 **전역 설정** 대화 상자를 사용 하 여 ssma의 로깅 설정을 지정할 수 있습니다. 일반적으로 제품 지원에 대 한 작업을 수행 하는 경우에만 이러한 설정을 변경할 수 있습니다.  

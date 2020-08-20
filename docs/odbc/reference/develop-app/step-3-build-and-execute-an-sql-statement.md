@@ -1,4 +1,5 @@
 ---
+description: '3단계: SQL 문 작성 및 실행'
 title: '3 단계: SQL 문 작성 및 실행 | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 133b8bd4-a3c8-4f7e-93c5-c05283c8e96f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e8322cf5e7b4a91bfc5f5f0204cfb25fa4bdad92
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cf99649ca84ab557457a1fb067e06188552b6aad
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306834"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461355"
 ---
 # <a name="step-3-build-and-execute-an-sql-statement"></a>3단계: SQL 문 작성 및 실행
 세 번째 단계는 다음 그림에 표시 된 것 처럼 SQL 문을 작성 하 고 실행 하는 것입니다. 이 단계를 수행 하는 데 사용 되는 방법은 크게 달라질 수 있습니다. 응용 프로그램은 사용자에 게 SQL 문을 입력 하거나, 사용자 입력을 기반으로 SQL 문을 작성 하거나, 하드 코드 된 SQL 문을 사용 하 라는 메시지를 표시할 수 있습니다. 자세한 내용은 [SQL 문 생성](../../../odbc/reference/develop-app/constructing-sql-statements.md)을 참조 하세요.  

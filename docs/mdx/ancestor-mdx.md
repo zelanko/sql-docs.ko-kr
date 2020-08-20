@@ -1,4 +1,5 @@
 ---
+description: Ancestor(MDX)
 title: 상위 항목 (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 385206d4a94362831e0949bafe5a11c1ce48d7bd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9e08a0f281a9e48c3416bb00f6ee47322d554d9c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68017133"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461665"
 ---
 # <a name="ancestor-mdx"></a>Ancestor(MDX)
 
@@ -38,7 +39,7 @@ Ancestor(Member_Expression, Distance)
  *Level_Expression*  
  수준을 반환하는 유효한 MDX 식입니다.  
   
- *Distance*  
+ *거리*  
  지정된 멤버와의 거리를 지정하는 유효한 숫자 식입니다.  
   
 ## <a name="remarks"></a>설명  
@@ -54,7 +55,7 @@ Ancestor(Member_Expression, Distance)
 > [!NOTE]  
 >  부모의 수준을 알 수 없거나 이름을 지정할 수 없는 경우에이 형식의 **상위** 함수를 사용 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 수준 식을 사용하고 Australia의 각 State-Province에 대한 Internet Sales Amount와 Australia의 총 Internet Sales Amount에 대한 이 값의 백분율을 반환합니다.  
   
 ```  

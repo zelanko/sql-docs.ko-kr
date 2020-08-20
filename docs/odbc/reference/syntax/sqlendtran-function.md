@@ -1,4 +1,5 @@
 ---
+description: SQLEndTran 함수(SQLEndTran Function)
 title: SQLEndTran 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 07/18/2019
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: ff375ce1-eb50-4693-b1e6-70181a6dbf9f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: cce7792e52fce4984f3da41e11d79c34b6b79e53
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fea27beb03c19dd9499175678ecfdcb7759a73f4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302744"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461133"
 ---
 # <a name="sqlendtran-function"></a>SQLEndTran 함수(SQLEndTran Function)
 **규칙**  
@@ -65,7 +66,7 @@ SQLRETURN SQLEndTran(
 ## <a name="diagnostics"></a>진단  
  **Sqlendtran** 이 SQL_ERROR 또는 SQL_SUCCESS_WITH_INFO를 반환할 때 적절 한 *HandleType* 및 *핸들*을 사용 하 여 **SQLGETDIAGREC** 를 호출 하 여 연결 된 SQLSTATE 값을 얻을 수 있습니다. 다음 표에서는 **Sqlendtran** 에서 일반적으로 반환 하는 SQLSTATE 값을 나열 하 고이 함수의 컨텍스트에서 각 항목을 설명 합니다. "(DM)" 표기법은 드라이버 관리자에서 반환 된 SQLSTATEs의 설명 보다 앞에 나옵니다. 다른 설명이 없는 한 각 SQLSTATE 값과 연결 된 반환 코드는 SQL_ERROR 됩니다.  
   
-|SQLSTATE|Error|Description|  
+|SQLSTATE|오류|설명|  
 |--------------|-----------|-----------------|  
 |01000|일반 경고|드라이버 관련 정보 메시지입니다. 함수는 SQL_SUCCESS_WITH_INFO를 반환 합니다.|  
 |08003|연결이 열려 있지 않음|(DM) *HandleType* 가 SQL_HANDLE_DBC 되었으며 *핸들이* 연결 된 상태가 아닙니다.|  
@@ -75,7 +76,7 @@ SQLRETURN SQLEndTran(
 |25S03|트랜잭션을 롤백합니다.|드라이버가 전역 트랜잭션의 모든 작업을 원자성으로 완료할 수 있으며 *핸들* 에서 활성화 된 트랜잭션의 모든 작업이 롤백 되었음을 보장할 수 없습니다.|  
 |40001|Serialization 오류|다른 트랜잭션과의 리소스 교착 상태 때문에 트랜잭션이 롤백 되었습니다.|  
 |40002|무결성 제약 조건 위반|확정 *유형이* SQL_COMMIT 되었으며 변경 약정으로 인해 무결성 제약 조건 위반이 발생 했습니다. 그 결과 트랜잭션이 롤백됩니다.|  
-|HY000|일반 오류|특정 SQLSTATE가 없고 구현 별 SQLSTATE가 정의 되지 않은 오류가 발생 했습니다. SzMessageText 버퍼에서 **SQLGetDiagRec** 에 의해 반환 되는 오류 메시지는 오류 및 해당 원인을 설명 합니다. * \**|  
+|HY000|일반 오류|특정 SQLSTATE가 없고 구현 별 SQLSTATE가 정의 되지 않은 오류가 발생 했습니다. * \* SzMessageText* 버퍼에서 **SQLGetDiagRec** 에 의해 반환 되는 오류 메시지는 오류 및 해당 원인을 설명 합니다.|  
 |HY001|메모리 할당 오류|드라이버에서 함수 실행 또는 완료를 지 원하는 데 필요한 메모리를 할당할 수 없습니다.|  
 |HY008|작업 취소됨|*ConnectionHandle*에 대해 비동기 처리를 사용 하도록 설정 했습니다. 함수가 호출 되었으며 [Sqlcancelhandle 함수](../../../odbc/reference/syntax/sqlcancelhandle-function.md) 실행이 완료 되기 전에 *ConnectionHandle*에서 호출 되었습니다. 그런 다음 *ConnectionHandle*에서 함수를 다시 호출 했습니다.<br /><br /> 함수가 호출 되었고 **Sqlcancelhandle** 실행이 완료 되기 전에 다중 스레드 응용 프로그램의 다른 스레드에서 *ConnectionHandle* 에 대해 호출 되었습니다.|  
 |HY010|함수 시퀀스 오류|(DM) *ConnectionHandle* 연결 된 문 핸들에 대해 비동기적으로 실행 되는 함수가 호출 되었으며 **sqlendtran** 이 호출 될 때 계속 실행 중입니다.<br /><br /> (DM) *ConnectionHandle* 에 대해 비동기적으로 실행 되는 함수 (이 함수 아님)가 호출 되었으며이 함수가 호출 될 때 계속 실행 중입니다.<br /><br /> (DM) **Sqlexecute**, **sqlexecdirect**, **SQLBulkOperations**또는 **SQLSetPos** 가 *ConnectionHandle* 와 연결 된 문 핸들에 대해 호출 되 고 SQL_NEED_DATA 반환 되었습니다. 이 함수는 모든 실행 시 데이터 매개 변수 또는 열에 대해 데이터를 보내기 전에 호출 되었습니다.<br /><br /> (DM) *HandleType* 가 SQL_HANDLE_DBC로 설정 되 고이 함수가 호출 될 때 여전히 실행 되 고 있는 *핸들* 에 대해 비동기적으로 실행 되는 함수 (이 함수 아님)가 호출 되었습니다.<br /><br /> (DM) **Sqlexecute**, **sqlexecdirect**또는 **SQLMoreResults** 가 *핸들과* 연결 된 문 핸들 중 하나에 대해 호출 되 고 SQL_PARAM_DATA_AVAILABLE 반환 되었습니다. 이 함수는 모든 스트리밍된 매개 변수에 대 한 데이터를 검색 하기 전에 호출 되었습니다.|  
@@ -153,7 +154,7 @@ SQLRETURN SQLEndTran(
 |핸들 해제|[SQLFreeHandle 함수](../../../odbc/reference/syntax/sqlfreehandle-function.md)|  
 |문 핸들 해제|[SQLFreeStmt 함수](../../../odbc/reference/syntax/sqlfreestmt-function.md)|  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [ODBC API 참조](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 헤더 파일](../../../odbc/reference/install/odbc-header-files.md)   
- [비동기 실행(폴링 메서드)](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md)
+ [비동기 실행 (폴링 방법)](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md)

@@ -1,4 +1,5 @@
 ---
+description: '1단원: SSIS를 사용하여 프로젝트 및 기본 패키지 만들기'
 title: '1단원: SSIS를 사용하여 프로젝트 및 기본 패키지 만들기 | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/03/2019
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: 84d0b877-603f-4f8e-bb6b-671558ade5c2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: aeeac3c8033bfde5a528dd791e7b23b4f9973e1f
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 428295430a2abb50738742db088b9573a7bf35a6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917317"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461995"
 ---
 # <a name="lesson-1-create-a-project-and-basic-package-with-ssis"></a>1단원: SSIS를 사용하여 프로젝트 및 기본 패키지 만들기
 
@@ -27,7 +28,7 @@ ms.locfileid: "86917317"
   
 패키지를 만들기 전에 원본 데이터와 대상 모두에 사용되는 형식을 이해해야 합니다. 그런 다음, 원본 데이터를 대상에 매핑하는 데 필요한 변환을 정의할 수 있습니다.  
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>전제 조건
 
 이 자습서에서는 Microsoft SQL Server Data Tools, 예제 패키지 집합 및 샘플 데이터베이스를 사용합니다.
 
@@ -70,10 +71,10 @@ ms.locfileid: "86917317"
   
 |열 이름|데이터 형식|조회 테이블|조회 열|  
 |---------------|-------------|----------------|-----------------|  
-|AverageRate|float|None|None|  
+|AverageRate|float|None|없음|  
 |CurrencyKey|int(FK)|DimCurrency|CurrencyKey(PK)|  
 |DateKey|int(FK)|FactOnlineSales|DateKey (PK)|  
-|EndOfDayRate|float|None|None|  
+|EndOfDayRate|float|None|없음|  
   
 ## <a name="map-the-source-data-to-the-destination"></a>원본 데이터를 대상에 매핑  
 원본 및 대상 데이터 형식의 분석에는 **CurrencyKey** 및 **DateKey** 값에 대한 조회가 필요함을 나타냅니다. 이러한 조회를 수행하는 변환은 **DimCurrency** 및 **DimDate** 차원 테이블의 대체 키를 사용하여 해당 값을 가져옵니다.  

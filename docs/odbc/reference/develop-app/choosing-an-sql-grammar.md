@@ -1,4 +1,5 @@
 ---
+description: SQL 문법 선택
 title: SQL 문법 선택 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4e0d189b-e407-47e0-92a9-f9982230dd0e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2ca9911d3c88f2f540ff1332d77a2e1ebc6a4942
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7936631c830d65d58e69d6cd77a728dfd8e664b0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299163"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461585"
 ---
 # <a name="choosing-an-sql-grammar"></a>SQL 문법 선택
 SQL 문을 구성할 때의 첫 번째 결정은 사용할 문법입니다. Open Group, ANSI 및 ISO와 같은 다양 한 표준 본문에서 사용할 수 있는 문법 외에도 거의 모든 DBMS 공급 업체는 자체 문법을 정의 하며, 각는 표준에서 약간 다릅니다.  

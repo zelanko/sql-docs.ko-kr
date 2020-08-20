@@ -1,4 +1,5 @@
 ---
+description: 드라이버에 직접 연결
 title: 드라이버에 직접 연결 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f86e198f-a088-4401-9106-aa62a0eb8f6e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d6aacb5d3df985949e04cdd47a9fe460cddbde6a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6dbf1d7a11f0ca4d6e7d049d425451b5f0e26c2d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299083"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461525"
 ---
 # <a name="connecting-directly-to-drivers"></a>드라이버에 직접 연결
 이 섹션의 앞부분에 나오는 [데이터 원본 또는 드라이버 선택](../../../odbc/reference/develop-app/choosing-a-data-source-or-driver.md)에 설명 된 것 처럼 일부 응용 프로그램에서는 데이터 원본을 전혀 사용 하지 않으려고 합니다. 대신, 드라이버에 직접 연결 하려고 합니다. **SQLDriverConnect** 는 응용 프로그램이 데이터 원본을 지정 하지 않고 드라이버에 직접 연결할 수 있는 방법을 제공 합니다. 개념적으로 임시 데이터 원본은 런타임에 생성 됩니다.  

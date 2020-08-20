@@ -1,4 +1,5 @@
 ---
+description: 특성 그룹 만들기(Master Data Services)
 title: 특성 그룹 만들기
 ms.custom: ''
 ms.date: 03/15/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 798c325e-e8d8-412a-b02e-118f2741d1c7
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 2075a9b9faddf7028f0b0b27b52cf34db20a17ba
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: ffe84797d519961ab26e6d43fb48a5c4c2dd3e13
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813457"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461845"
 ---
 # <a name="create-an-attribute-group-master-data-services"></a>특성 그룹 만들기(Master Data Services)
 
@@ -26,7 +27,7 @@ ms.locfileid: "85813457"
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 **탐색기** 표의 개별 탭에 특성을 표시하려는 경우 특성 그룹을 만듭니다.  
   
-## <a name="prerequisites"></a>전제 조건  
+## <a name="prerequisites"></a>사전 요구 사항  
  이 절차를 수행하려면  
   
 -   **시스템 관리** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  
@@ -65,7 +66,7 @@ ms.locfileid: "85813457"
   
 11. **사용 가능한 그룹** 상자에서 그룹을 클릭하고 **추가** 화살표를 클릭합니다. 모든 그룹을 추가하려면 **모두 추가** 화살표를 클릭합니다.  
   
-12. **Save**을 클릭합니다.  
+12. **저장**을 클릭합니다.  
   
 ## <a name="next-steps"></a>다음 단계  
   

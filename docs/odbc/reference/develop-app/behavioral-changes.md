@@ -1,4 +1,5 @@
 ---
+description: 동작 변경
 title: 동작 변경 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a17ae701-6ab6-4eaf-9e46-d3b9cd0a3a67
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3e4a433531d90eb0f89d9a5e446464b13fd02526
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6fb5501d362cb46f3616e58c5a4994bab86e00ec
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81283443"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461625"
 ---
 # <a name="behavioral-changes"></a>동작 변경
 동작 변경은 인터페이스의 *구문이* 동일 하 게 유지 되지만 *의미 체계가* 변경 된 변경 내용입니다. 이러한 변경의 경우 ODBC 2에서 사용 되는 기능입니다. *x* 는 ODBC 3의 동일한 기능과 다르게 동작 합니다. *x*.  

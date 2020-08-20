@@ -1,4 +1,5 @@
 ---
+description: 애플리케이션의 이전 버전과의 호환성을 위한 대체 함수 매핑
 title: 앱의 호환성을 위한 대체 함수 매핑-ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: f5e6d9da-76ef-42cb-b3f5-f640857df732
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b18669fe9b6edbd39859166e382ad18d1b04a99a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7cba29b0dda2b0d4533444fd3fa8b83eaaeae7a9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301093"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461415"
 ---
 # <a name="mapping-replacement-functions-for-backward-compatibility-of-applications"></a>애플리케이션의 이전 버전과의 호환성을 위한 대체 함수 매핑
 Odbc 3.x 드라이버 관리자를 통해 작업 하는 ODBC *2.x 응용 프로그램* 은 새로운 기능을 사용 하지 않는 *한 odbc* *2.x 드라이버에* 대해 작동 합니다. 그러나 중복 된 기능과 동작 변경 *모두 odbc 2.x 드라이버* *에서 odbc 2.x 응용 프로그램이* 작동 하는 방식에 영향을 줍니다. ODBC *2.x 드라이버를* 사용 하 여 작업 하는 경우 드라이버 관리자는 하나 이상의 odbc *2.x 함수를* *해당 ODBC 2.x 함수로 바꾼* 다음 odbc 2.x 함수 *를* 매핑합니다.  

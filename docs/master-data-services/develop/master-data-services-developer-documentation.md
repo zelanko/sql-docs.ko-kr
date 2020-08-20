@@ -1,4 +1,5 @@
 ---
+description: Master Data Services 개발자 설명서
 title: 개발자 설명서
 ms.custom: ''
 ms.date: 03/17/2017
@@ -10,12 +11,12 @@ ms.topic: reference
 ms.assetid: 067b1f69-84eb-4a13-b220-120cd63704b4
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: e3dc41680a336936bf419dbcd52255e8a60120a3
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 3c1772c12889da4200553a7f303e2b6c9c26b894
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892273"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461783"
 ---
 # <a name="master-data-services-developer-documentation"></a>Master Data Services 개발자 설명서
 

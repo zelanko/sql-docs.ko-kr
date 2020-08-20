@@ -1,4 +1,5 @@
 ---
+description: Data Quality Services 설치
 title: Data Quality Services 설치
 ms.date: 09/11/2017
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 486e4216-a946-4c6e-828c-61bc905f7ec1
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 7558b68c6cdc286d2152f1dee8d4ae325d699ed1
-ms.sourcegitcommit: 2e6c4104dca8680064eb64a7a79a3e15e1b4365f
+ms.openlocfilehash: 35ca44da3c63d8de38a342cbf1f63bceb1916e15
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "85942697"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462137"
 ---
 # <a name="install-data-quality-services"></a>Data Quality Services 설치
 
@@ -22,7 +23,7 @@ ms.locfileid: "85942697"
 
   [!INCLUDE[ssDQSnoversionLong](../../includes/ssdqsnoversionlong-md.md)](DQS)에는 및와 같은 두 가지 구성 요소가 있습니다. **[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]** **[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]**  
   
-|DQS 구성 요소|Description|  
+|DQS 구성 요소|설명|  
 |-------------------|-----------------|  
 |[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]는 [!INCLUDE[ssNoversion](../../includes/ssNoVersion-md.md)] 데이터베이스 엔진을 기반으로 설치되며 DQS_MAIN, DQS_PROJECTS 및 DQS_STAGING_DATA의 세 데이터베이스를 포함합니다. DQS_MAIN은 DQS 저장 프로시저, DQS 엔진 및 게시된 기술 자료를 포함합니다. DQS_PROJECTS는 데이터 품질 프로젝트 정보를 포함합니다. DQS_STAGING_DATA는 DQS 작업을 수행하기 위해 원본 데이터를 복사한 다음 처리된 데이터를 내보낼 수 있는 준비 영역입니다.|  
 |[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]|[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] 는 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]에 연결할 수 있게 해주는 독립 실행형 애플리케이션으로, 데이터 품질 작업 및 DQS와 관련된 기타 관리 태스크를 수행하기 위한 매우 직관적인 그래픽 사용자 인터페이스를 제공합니다.|  
@@ -45,7 +46,7 @@ ms.locfileid: "85942697"
 > [!NOTE]  
 >  이 항목에서는 명령줄에서 설치 프로그램을 실행하는 데 대한 지침을 다루지 않습니다. [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 및 클라이언트 설치를 위한 명령줄 옵션에 대한 자세한 내용은 [명령 프롬프트에서 SQL Server 설치](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Feature) 에서 [기능 매개 변수](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)를 참조하세요.  
   
-##  <a name="pre-installation-tasks"></a><a name="PreInstallationTasks"></a>설치 전 태스크  
+##  <a name="pre-installation-tasks"></a><a name="PreInstallationTasks"></a> 설치 전 태스크  
  DQS를 설치하기 전에 컴퓨터가 최소 시스템 요구 사항을 만족하는지 확인합니다. 다음 표에서는 DQS 구성 요소에 대한 최소 시스템 요구 사항 정보를 제공합니다.  
   
 |DQS 구성 요소|최소 시스템 요구 사항|  
@@ -62,7 +63,7 @@ ms.locfileid: "85942697"
   
  [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)]설치에 대한 최소 시스템 요구 사항에 대한 자세한 내용은 [SQL Server 설치를 위한 하드웨어 및 소프트웨어 요구 사항](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)을 참조하세요.  
   
-##  <a name="data-quality-services-installation-tasks"></a><a name="DQSInstallation"></a>Data Quality Services 설치 태스크  
+##  <a name="data-quality-services-installation-tasks"></a><a name="DQSInstallation"></a> Data Quality Services 설치 태스크  
  DQS 구성 요소를 설치하려면 [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] 설치 프로그램을 사용해야 합니다. SQL Server 설치 프로그램을 실행할 때는 일련의 설치 마법사 페이지를 진행하면서 요구 사항에 따라 적합한 옵션을 선택해야 합니다. 다음 표에서는 선택한 옵션이 DQS 설치에 영향을 미치는 설치 마법사 페이지만 보여 줍니다.  
   
 |페이지|작업|  
@@ -70,7 +71,7 @@ ms.locfileid: "85942697"
 |기능 선택|선택:<br /><br /> **데이터베이스 엔진 서비스** 아래에서 **Data Quality Services** 를 선택하여 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]를 설치합니다. <br />**Data Quality Services** 확인란을 선택한 경우 SQL Server 설치 프로그램에서 설치 파일인 DQSInstaller.exe를 컴퓨터의 SQL Server 인스턴스 디렉터리에 복사합니다. SQL Server 설치 프로그램을 완료한 후 이 파일을 실행하여 *설치를* 완료 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 해야 합니다. 또한 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 를 사용하려면 먼저 몇 가지 추가 단계를 수행하여 DQS 서버를 구성해야 합니다. 자세한 내용은 [설치 후 태스크](#PostInstallationTasks)를 참조하세요.<br /><br /> **Data Quality 클라이언트** 를 선택하여 [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]를 설치합니다.<br /><br /> 바람직하지 **관리 도구-** **관리 도구-기본** 에서 설치를 완료 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 합니다. 이렇게 하면 그래픽 사용자 인터페이스를 사용하여 SQL Server 인스턴스를 관리할 수 있으며, 다음 섹션에 나열된 추가 사후 설치 태스크를 수행하는 데에도 도움이 됩니다.|  
 |데이터베이스 엔진 구성|**현재 사용자 추가** 를 클릭하여 사용자 Windows 계정을 sysadmin 고정 서버 역할에 추가합니다. 나중에 DQSInstaller.exe 파일을 실행하여 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 설치를 완료하기 위해서는 이 과정이 필요합니다.|  
   
-##  <a name="post-installation-tasks"></a><a name="PostInstallationTasks"></a>설치 후 작업  
+##  <a name="post-installation-tasks"></a><a name="PostInstallationTasks"></a> 설치 후 작업  
  SQL Server 설치 마법사를 완료한 후 이 섹션에 언급된 추가 단계를 수행해야 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 설치 및 구성을 완료하여 사용할 수 있습니다.  
   
 1.  [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 설치를 완료하려면 DQSInstaller.exe 파일을 실행합니다. DQSInstaller.exe 파일 실행 시:  
@@ -116,7 +117,7 @@ ms.locfileid: "85942697"
 ## <a name="see-also"></a>참고 항목  
  [비디오: DQS 설치 및 구성](https://go.microsoft.com/fwlink/?LinkId=238241)   
  [.NET Framework 업데이트 후 SQLCLR 어셈블리 업그레이드](../../data-quality-services/install-windows/upgrade-sqlclr-assemblies-after-net-framework-update.md)   
- [DQSInstaller.exe를 사용 하 여 DQS 기술 자료 내보내기 및 가져오기](../../data-quality-services/install-windows/export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md)   
+ [DQSInstaller.exe를 사용 하 여 DQS 기술 자료 내보내기 및 가져오기 ](../../data-quality-services/install-windows/export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md)   
  [Data Quality Services 업그레이드](../../database-engine/install-windows/upgrade-data-quality-services.md)   
  [Data Quality 서버 개체 제거](../../sql-server/install/remove-data-quality-server-objects.md)   
  [SQL Server 비즈니스 인텔리전스 기능 설치](../../sql-server/install/install-sql-server-business-intelligence-features.md)   

@@ -1,4 +1,5 @@
 ---
+description: 책갈피(ODBC)
 title: 책갈피 (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1d7cccc5-f847-4321-b240-28570854ee5c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e8273c82b918024417e613ea44a2d26bafaf7d76
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3f162fc317f2651549a1a2e80af03c9942dc64bb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306324"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461615"
 ---
 # <a name="bookmarks-odbc"></a>책갈피(ODBC)
 책갈피는 데이터의 행을 식별하는 데 사용되는 값입니다. 책갈피 값의 의미는 드라이버나 데이터 원본에만 알려집니다. 예를 들어 책갈피 값은 행 번호처럼 간단하거나 디스크 주소처럼 복잡할 수 있습니다. ODBC의 책갈피는 실제 서적에서 책갈피와 약간 다릅니다. 실제 책에서 판독기는 특정 페이지에 책갈피를 배치한 다음 해당 책갈피를 찾아 페이지로 돌아갑니다. ODBC 애플리케이션에서는 특정 행에 대해 책갈피를 요청하고 이를 저장한 다음 다시 커서에 전달하여 원래 행으로 돌아갑니다. 따라서 ODBC의 책갈피는 페이지 번호를 기록한 후 페이지를 기억 하 고 페이지를 다시 조회 하는 판독기와 유사 합니다.  

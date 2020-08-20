@@ -1,4 +1,5 @@
 ---
+description: 진단 메시지
 title: 진단 메시지 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 98027871-9901-476e-a722-ee58b7723c1f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: be63e9d78960e40ac5e9ee016d2cfd868d99a922
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6d788a8bb23b7b63ae65a6fcf8c119110b5e6557
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305834"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461515"
 ---
 # <a name="diagnostic-messages"></a>진단 메시지
 각 SQLSTATE와 함께 진단 메시지가 반환 됩니다. 여러 메시지와 함께 동일한 SQLSTATE가 반환 되는 경우가 많습니다. 예를 들어 SQL 구문에서 대부분의 오류에 대해 SQLSTATE 42000 (구문 오류 또는 액세스 위반)이 반환 됩니다. 그러나 각 구문 오류는 다른 메시지로 설명할 수 있습니다.  
