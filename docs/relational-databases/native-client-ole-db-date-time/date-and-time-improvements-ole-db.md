@@ -1,4 +1,5 @@
 ---
+description: SQL Server Native Client 날짜 및 시간 기능 향상 (OLE DB)
 title: 날짜 및 시간 기능 향상(OLE DB)
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-dt-2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d505096eee8e637ceb069dc1e4ed591cebb55269
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 9fc1f9de3db5d2e3aa31d932b74c9971fc596c04
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245850"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486781"
 ---
 # <a name="sql-server-native-client-date-and-time-improvements-ole-db"></a>SQL Server Native Client 날짜 및 시간 기능 향상 (OLE DB)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -1,4 +1,5 @@
 ---
+description: dqs 관리
 title: dqs 관리
 ms.date: 10/01/2012
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9940ef5d-f6f6-4dec-9414-1077a4d7f12b
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 3ad4fb8f24ca51741c21fead975a1c745f661b87
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1874867b02aea521e44ff6ee0af4d8cfdfb57298
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888106"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487792"
 ---
 # <a name="dqs-administration"></a>dqs 관리
 
@@ -42,13 +43,13 @@ ms.locfileid: "85888106"
   
 -   이벤트의 심각도 수준에 따라 로깅을 구성합니다.  
   
-##  <a name="administration-activities-by-using-data-quality-client"></a><a name="AdminUsingClent"></a>Data Quality Client를 사용한 관리 활동  
+##  <a name="administration-activities-by-using-data-quality-client"></a><a name="AdminUsingClent"></a> Data Quality Client를 사용한 관리 활동  
  이러한 활동은 **의** 관리 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]기능을 사용하여 수행됩니다.  
   
 ### <a name="activity-monitoring"></a>작업 모니터링  
  **의** 활동 모니터링 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 에는 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]에서 수행되는 각 활동에 대한 자세한 정보를 표시합니다. 이 화면은 데이터 관리자가 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 애플리케이션이 연결된 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 에서 수행되는 모든 작업에 대한 상위 수준의 모니터링을 수행하는 데 주로 사용됩니다. 이 화면에서는 시스템 수준 모니터링을 제공하지 않습니다. 또한 이 화면에서 DQS 관리자는 필요에 따라 실행 중인 활동을 종료하거나 활동 내에서 실행 중인 프로세스를 중지하여 활동 또는 활동 내의 프로세스를 제어할 수 있습니다. 데이터는 기술 자료 검색, 도메인 관리, 일치 정책, 정리, 일치, SSIS(SQL Server Integration Services) 기반 정리에 대해 표시됩니다.  
   
-### <a name="configuration"></a>Configuration  
+### <a name="configuration"></a>구성  
  **의** 구성 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 화면에서는 DQS 관리자가 다음 작업을 수행할 수 있습니다.  
   
 -   **참조 데이터**: 참조 데이터 서비스 공급자 구성: Azure Marketplace 또는 다이렉트 참조 데이터 서비스 공급자입니다. 참조 데이터 서비스 공급자를 설정한 후 기술 자료에서 도메인 관리 활동 중 참조 데이터와 함께 도메인/복합 도메인을 매핑하고 동일한 기술 자료를 데이터 품질 프로젝트의 정리 활동에 대해 사용할 수 있습니다. 또한 Azure Marketplace를 사용 하기 위해 인터넷에 연결 하기 위한 프록시 설정을 지정할 수 있습니다.  
@@ -60,7 +61,7 @@ ms.locfileid: "85888106"
 > [!NOTE]  
 >  **구성** 화면은 DQS_MAIN 데이터베이스에서 dqs_administrator 역할이 있는 사용자에게만 제공됩니다.  
   
-##  <a name="administration-activities-outside-of-data-quality-client"></a><a name="AdminOutsideClient"></a>Data Quality Client 외부의 관리 활동  
+##  <a name="administration-activities-outside-of-data-quality-client"></a><a name="AdminOutsideClient"></a> Data Quality Client 외부의 관리 활동  
  다음 활동은 Data Quality 클라이언트 외부에서 수행됩니다.  
   
 -   **DQS 데이터베이스 백업 및 복원**: DQS 데이터베이스의 백업 및 복원은 DQS와 관련된 몇 가지 고려 사항을 제외하면 다른 SQL Server 데이터베이스를 백업 및 복원하는 것과 동일합니다.  

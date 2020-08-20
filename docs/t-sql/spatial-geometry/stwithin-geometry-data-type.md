@@ -1,4 +1,5 @@
 ---
+description: STWithin(geometry 데이터 형식)
 title: STWithin(geometry 데이터 형식) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f845d28c-8029-4e2b-bcf0-71c52a592501
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: a3d7d00c901d317fb168d18f8ad81b62c30a8a06
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: f0a9d615fcb05ed6b1c9ada74a98038de9f84e66
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554603"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488115"
 ---
 # <a name="stwithin-geometry-data-type"></a>STWithin(geometry 데이터 형식)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -50,7 +51,7 @@ ms.locfileid: "86554603"
 ## <a name="remarks"></a>설명  
  이 메서드는 **geometry** 인스턴스의 SRID(spatial Reference ID)가 일치하지 않으면 항상 Null을 반환합니다.
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `STWithin()`을 사용하여 두 `geometry` 인스턴스를 테스트하여 첫 번째 인스턴스가 두 번째 인스턴스에 완전히 포함되는지 확인합니다.  
   
 ```  
@@ -61,7 +62,7 @@ SET @h = geometry::STGeomFromText('POLYGON((1 1, 3 1, 3 3, 1 3, 1 1))', 0);
 SELECT @g.STWithin(@h);  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [공간 인덱스 개요](../../relational-databases/spatial/spatial-indexes-overview.md)   
  [geometry 인스턴스의 OGC 메서드](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   

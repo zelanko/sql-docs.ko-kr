@@ -1,4 +1,5 @@
 ---
+description: ODBC SPI(서비스 공급자 인터페이스) 참조
 title: ODBC SPI (서비스 공급자 인터페이스) 참조 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: cdeffb4a-f344-4abe-97f3-be2ede1c8e59
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e9739abd13bf2c4bed1b1b3a31c18c683594705a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7ef1eea6dd78537169d3394c7d048d1829e8d9a5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298911"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487356"
 ---
 # <a name="odbc-service-provider-interface-spi-reference"></a>ODBC SPI(서비스 공급자 인터페이스) 참조
 일반적으로 ODBC는 API (응용 프로그래밍 인터페이스)를 정의 했습니다. API의 함수는 응용 프로그램에서 호출할 수 있으며 드라이버 관리자와 드라이버 내에서 구현 해야 합니다.  
@@ -40,7 +41,7 @@ ms.locfileid: "81298911"
   
 -   [SQLSetDriverConnectInfo](../../../odbc/reference/syntax/installation-and-configuration-wwi-oltp.md)  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [ODBC 드라이버 개발](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   
  [ODBC 드라이버에서 연결 풀 인식 개발](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)   
  [드라이버 관리자 연결 풀링](../../../odbc/reference/develop-app/driver-manager-connection-pooling.md)

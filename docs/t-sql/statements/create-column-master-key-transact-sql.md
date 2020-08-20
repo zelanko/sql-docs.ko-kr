@@ -1,4 +1,5 @@
 ---
+description: CREATE COLUMN MASTER KEY(Transact-SQL)
 title: CREATE COLUMN MASTER KEY(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/15/2019
@@ -26,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: f8926b95-e146-4e3f-b56b-add0c0d0a30e
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 02d57df3e018e558f5e8a42a63647aeefdff77ff
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 3e6b80b2737517e0d78a5ca4adbd1c66e619fc8a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110680"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488070"
 ---
 # <a name="create-column-master-key-transact-sql"></a>CREATE COLUMN MASTER KEY(Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -81,7 +82,7 @@ Always Encrypted를 통해 사용 가능한 클라이언트 드라이버는 다�
     |-----------------------------|--------------------------|
     |'MSSQL_CERTIFICATE_STORE'|Windows 인증서 저장소| 
     |'MSSQL_CSP_PROVIDER'|Microsoft CryptoAPI를 지원하는 HSM(하드웨어 보안 모듈) 같은 저장소입니다.|
-    |'MSSQL_CNG_STORE'|Cryptography API: Next Generation을 지원하는 HSM(하드웨어 보안 모듈) 같은 저장소입니다.|  
+    |'MSSQL_CNG_STORE'|CryptoAPI: Next Generation를 지원하는 HSM 같은 저장소입니다.|  
     |'AZURE_KEY_VAULT'|[Azure Key Vault 시작](https://azure.microsoft.com/documentation/articles/key-vault-get-started/) 참조|  
     |'MSSQL_JAVA_KEYSTORE'| Java Key Store.}
   
@@ -140,7 +141,7 @@ key_path
     위치:  
   
     *ProviderName*  
-    열 마스터 키 스토리지에 대한 CNG(Cryptography: Next Generation) API를 구현하는 KSP(키 저장소 공급자)의 이름입니다. 키 저장소로 HSM을 사용하는 경우 공급자 이름은 HSM 공급업체가 제공하는 KSP 이름이어야 합니다. 클라이언트 컴퓨터에 공급자를 설치해야 합니다.  
+    마스터 키 스토리지에 대한 CNG(차세대 암호화) API를 구현하는 KSP(키 스토리지 공급자) 이름입니다. 키 저장소로 HSM을 사용하는 경우 공급자 이름은 HSM 공급업체가 제공하는 KSP 이름이어야 합니다. 클라이언트 컴퓨터에 공급자를 설치해야 합니다.  
   
     *KeyIdentifier*  
     키의 식별자가 키 저장소에서 열 마스터 키로 사용됩니다.  
@@ -163,11 +164,10 @@ key_path
 ENCLAVE_COMPUTATIONS  
 열 마스터 키를 Enclave 사용 키로 지정합니다. 이 열 마스터 키로 암호화된 모든 열 암호화 키를 서버 쪽 보안 Enclave와 공유하고 Enclave 내의 계산에 사용할 수 있습니다. 자세한 내용은 [보안 Enclave를 사용한 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)를 참조하세요.
 
-*signature*  
-이진 리터럴은 ‘키 경로’ 및 ENCLAVE_COMPUTATIONS 설정을 열 마스터 키로 디지털 서명한 결과입니다.  이 서명은 ENCLAVE_COMPUTATIONS가 지정되었는지 여부를 반영합니다. 이 서명은 권한 없는 사용자가 서명된 값을 변경하지 못하도록 보호합니다. Always Encrypted 사용 가능 클라이언트 드라이버는 서명을 확인하고, 서명이 유효하지 않은 경우 애플리케이션에 오류를 반환합니다. 이 서명은 클라이언트 쪽 도구를 사용하여 생성해야 합니다. 자세한 내용은 [보안 Enclave를 사용한 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)를 참조하세요.
-  
-  
-## <a name="remarks"></a>설명  
+*서명*  
+이진 리터럴은 ‘키 경로’ 및 ENCLAVE_COMPUTATIONS 설정을 열 마스터 키로 디지털 서명한 결과입니다.** 이 서명은 ENCLAVE_COMPUTATIONS가 지정되었는지 여부를 반영합니다. 이 서명은 권한 없는 사용자가 서명된 값을 변경하지 못하도록 보호합니다. Always Encrypted 사용 가능 클라이언트 드라이버는 서명을 확인하고, 서명이 유효하지 않은 경우 애플리케이션에 오류를 반환합니다. 이 서명은 클라이언트 쪽 도구를 사용하여 생성해야 합니다. 자세한 내용은 [보안 Enclave를 사용한 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)를 참조하세요.
+
+## <a name="remarks"></a>설명
 
 열 암호화 키 메타데이터 항목을 데이터베이스에서 만들기 전에 그리고 Always Encrypted를 사용하여 데이터베이스의 모든 열을 암호화하기 전에 열 마스터 키 메타데이터 항목을 만듭니다. 메타데이터의 열 마스터 키 항목에는 실제 열 마스터 키가 포함되지 않습니다. 열 마스터 키는 외부 열 키 저장소(SQL Server 외부)에 저장되어야 합니다. 메타데이터의 키 저장소 공급자 이름과 열 마스터 키 경로는 클라이언트 애플리케이션에 대해 유효해야 합니다. 클라이언트 애플리케이션은 열 마스터 키를 사용하여 열 암호화 키의 암호를 해독해야 합니다. 열 암호화 키는 열 마스터 키로 암호화됩니다. 또한 클라이언트 애플리케이션은 암호화된 열을 쿼리해야 합니다.
 
@@ -177,7 +177,7 @@ SSMS(SQL Server Management Studio) 또는 PowerShell과 같은 도구를 사용�
 ## <a name="permissions"></a>사용 권한  
 **ALTER ANY COLUMN MASTER KEY** 권한을 요구합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-creating-a-column-master-key"></a>A. 열 마스터 키 만들기  
 다음 예제에서는 열 마스터 키의 열 마스터 키 메타데이터 항목을 만듭니다. MSSQL_CERTIFICATE_STORE 공급자를 사용하는 클라이언트 애플리케이션이 열 마스터 키에 액세스할 수 있도록 열 마스터 키가 인증서 저장소에 저장됩니다.  

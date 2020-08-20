@@ -1,4 +1,5 @@
 ---
+description: SQLPoolConnect Function
 title: SQLPoolConnect 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 41322737-890d-4a81-aed2-06cc3d546962
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 5045fe47683529f858b01e69f6af696e2821ca4c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 30e2ce61baf861551e51773aea7ce6dcaf020cf6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306904"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487222"
 ---
 # <a name="sqlpoolconnect-function"></a>SQLPoolConnect Function
 **규칙**  
@@ -54,7 +55,7 @@ SQLRETURN  SQLPoolConnect(
  입력 **WszOutConnectString* 버퍼의 길이 (문자)입니다.  
   
  *cchConnectStringLen*  
- 출력 \* *WszOutConnectString*에서 반환 하는 데 사용할 수 있는 총 문자 수 (null 종결 문자 제외)를 반환할 버퍼에 대 한 포인터입니다. 반환할 수 있는 문자 수가 *cchconnectstringbuffer*보다 크거나 같으면 \* *wszOutConnectString* 의 완료 된 연결 문자열이 *cchconnectstringbuffer* 에서 null 종료 문자의 길이를 뺀 값으로 잘립니다.  
+ 출력 WszOutConnectString에서 반환 하는 데 사용할 수 있는 총 문자 수 (null 종결 문자 제외)를 반환할 버퍼에 대 한 포인터입니다 \* *wszOutConnectString*. 반환할 수 있는 문자 수가 *Cchconnectstringbuffer*보다 크거나 같으면 wszOutConnectString의 완료 된 연결 문자열이 \* *wszOutConnectString* *cchconnectstringbuffer* 에서 null 종료 문자의 길이를 뺀 값으로 잘립니다.  
   
 ## <a name="returns"></a>반환  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR 또는 SQL_INVALID_HANDLE입니다.  
@@ -77,7 +78,7 @@ SQLRETURN  SQLPoolConnect(
   
  ODBC 드라이버 개발용으로 sqlspi .h를 포함 합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [ODBC 드라이버 개발](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   
  [드라이버 인식 연결 풀링](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md)   
  [ODBC 드라이버에서 연결 풀 인식 개발](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)

@@ -1,4 +1,5 @@
 ---
+description: SQLPrepare 함수
 title: SQLPrepare 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 332e1b4b-b0ed-4e7a-aa4d-4f35f4f4476b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e9aedd665df2a943627207902d592d597c503c63
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d3b5d68aae8033b0710ee052b001c7942eb1f7d6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306884"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487189"
 ---
 # <a name="sqlprepare-function"></a>SQLPrepare 함수
 **규칙**  
@@ -59,7 +60,7 @@ SQLRETURN SQLPrepare(
 ## <a name="diagnostics"></a>진단  
  **Sqlprepare** 가 SQL_ERROR 또는 SQL_SUCCESS_WITH_INFO을 반환 하는 경우 *HandleType* SQL_HANDLE_STMT의 및 *StatementHandle* *핸들* 을 사용 하 여 **SQLGetDiagRec** 를 호출 하 여 연결 된 SQLSTATE 값을 얻을 수 있습니다. 다음 표에서는 **Sqlprepare** 에서 일반적으로 반환 하는 SQLSTATE 값을 나열 하 고이 함수의 컨텍스트에서 각 항목을 설명 합니다. "(DM)" 표기법은 드라이버 관리자에서 반환 된 SQLSTATEs의 설명 보다 앞에 나옵니다. 다른 설명이 없는 한 각 SQLSTATE 값과 연결 된 반환 코드는 SQL_ERROR 됩니다.  
   
-|SQLSTATE|Error|Description|  
+|SQLSTATE|오류|설명|  
 |--------------|-----------|-----------------|  
 |01000|일반 경고|드라이버 관련 정보 메시지입니다. 함수는 SQL_SUCCESS_WITH_INFO를 반환 합니다.|  
 |01 S 02|옵션 값 변경 됨|구현 작업 조건 때문에 지정 된 문 특성이 잘못 되었습니다. 따라서 유사한 값이 일시적으로 대체 되었습니다. (**SQLGetStmtAttr** 를 호출 하 여 임시로 대체 된 값을 확인할 수 있습니다.) 대체 값은 커서가 닫힐 때까지 *StatementHandle* 에 대해 유효 합니다. 변경할 수 있는 문 특성은 SQL_ATTR_CONCURRENCY SQL_ATTR_CURSOR_TYPE SQL_ATTR_KEYSET_SIZE SQL_ATTR_MAX_LENGTH SQL_ATTR_MAX_ROWS SQL_ATTR_QUERY_TIMEOUT SQL_ATTR_SIMULATE_CURSOR<br /><br /> 함수는 SQL_SUCCESS_WITH_INFO를 반환 합니다.|  
@@ -80,7 +81,7 @@ SQLRETURN SQLPrepare(
 |42S12|인덱스를 찾을 수 없음|\**StatementText* 에 **DROP INDEX** 문이 포함 되어 있고 지정한 인덱스 이름이 없습니다.|  
 |42S21|열이 이미 있습니다.|\**StatementText* 에 **ALTER TABLE** 문이 포함 되어 있고 **ADD** 절에 지정 된 열이 고유 하지 않거나 기본 테이블의 기존 열을 식별 합니다.|  
 |42S22|열을 찾을 수 없음|\**StatementText* 에 **CREATE INDEX** 문이 포함 되어 있고 열 목록에 지정 된 열 이름 중 하나 이상이 존재 하지 않습니다.<br /><br /> \**StatementText* 에 **GRANT** 또는 **REVOKE** 문이 포함 되어 있고 지정한 열 이름이 없습니다.<br /><br /> \**StatementText* 에 **SELECT**, **DELETE**, **INSERT**또는 **UPDATE** 문이 포함 되어 있고 지정한 열 이름이 없습니다.<br /><br /> \**StatementText* 에 **CREATE TABLE** 문이 포함 되어 있으며 제약 조건에 지정 된 열 (생성 되는 열이 아닌 테이블 참조)이 없습니다.|  
-|HY000|일반 오류|특정 SQLSTATE가 없고 구현 별 SQLSTATE가 정의 되지 않은 오류가 발생 했습니다. MessageText 버퍼에서 **SQLGetDiagRec** 에 의해 반환 되는 오류 메시지는 오류 및 해당 원인을 설명 합니다. * \**|  
+|HY000|일반 오류|특정 SQLSTATE가 없고 구현 별 SQLSTATE가 정의 되지 않은 오류가 발생 했습니다. * \* MessageText* 버퍼에서 **SQLGetDiagRec** 에 의해 반환 되는 오류 메시지는 오류 및 해당 원인을 설명 합니다.|  
 |HY001|메모리 할당 오류|드라이버에서 함수 실행 또는 완료를 지 원하는 데 필요한 메모리를 할당할 수 없습니다.|  
 |HY008|작업 취소됨|*StatementHandle*에 대해 비동기 처리를 사용 하도록 설정 했습니다. 함수가 호출 되었으며 실행이 완료 되기 전에 *StatementHandle*에서 **Sqlcancel** 또는 **Sqlcancelhandle** 이 호출 되 고 *StatementHandle*에서 함수가 다시 호출 되었습니다.<br /><br /> 함수가 호출 되 고 실행이 완료 되기 전에 **sqlcancel** 또는 **sqlcancelhandle** 이 다중 스레드 응용 프로그램의 다른 스레드에서 *StatementHandle* 호출 되었습니다.|  
 |HY009|Null 포인터 사용이 잘못 되었습니다.|(DM) *StatementText* 가 null 포인터입니다.|  
@@ -129,6 +130,6 @@ SQLRETURN SQLPrepare(
 |문의 영향을 받는 행 수 반환|[SQLRowCount 함수(SQLRowCount Function)](../../../odbc/reference/syntax/sqlrowcount-function.md)|  
 |커서 이름 설정|[SQLSetCursorName 함수](../../../odbc/reference/syntax/sqlsetcursorname-function.md)|  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [ODBC API 참조](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 헤더 파일](../../../odbc/reference/install/odbc-header-files.md)

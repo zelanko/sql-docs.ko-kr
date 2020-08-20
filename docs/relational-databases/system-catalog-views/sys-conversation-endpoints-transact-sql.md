@@ -1,4 +1,5 @@
 ---
+description: sys.conversation_endpoints(Transact-SQL)
 title: sys. conversation_endpoints (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 2ed758bc-2a9d-4831-8da2-4b80e218f3ea
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d371f877c35d1a7935b3a98e00695b03a0a1c961
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 48c548ed85c5110c8e3c117da796c6189eee39de
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892203"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486448"
 ---
 # <a name="sysconversation_endpoints-transact-sql"></a>sys.conversation_endpoints(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

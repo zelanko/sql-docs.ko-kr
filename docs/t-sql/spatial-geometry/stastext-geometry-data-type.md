@@ -1,4 +1,5 @@
 ---
+description: STAsText(geometry 데이터 형식)
 title: STAsText(geometry 데이터 형식) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e0decf5e-2858-4c56-b61a-6123f47fb51c
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: b2c16ad7d74d69f743708bbf95fdaf0d23f43e14
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: b04948983ca371a457f7908f48544a73a268ded5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554326"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488255"
 ---
 # <a name="stastext-geometry-data-type"></a>STAsText(geometry 데이터 형식)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -43,7 +44,7 @@ ms.locfileid: "86554326"
   
  CLR 반환 형식: **SqlChars**  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 텍스트에서 `LineString` geometry 인스턴스((0,0) - (2,3))를 만듭니다. `STAsText()`는 결과를 텍스트로 반환합니다.  
   
 ```  

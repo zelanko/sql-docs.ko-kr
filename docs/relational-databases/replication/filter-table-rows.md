@@ -1,4 +1,5 @@
 ---
+description: 테이블 행 필터
 title: 테이블 행 필터 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ ms.assetid: 005f5c71-0401-490e-8823-adc54a2e9675
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 3c0eb5fd5b69d87532770b439c86340dc928fb34
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2aae3e81429f4d884230a6f371c36fca8887a883
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85653069"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486656"
 ---
 # <a name="filter-table-rows"></a>테이블 행 필터
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

@@ -1,4 +1,5 @@
 ---
+description: UPDATE, DELETE 및 INSERT 문
 title: UPDATE, DELETE 및 INSERT 문 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5004ea72-4c49-4064-9752-f7032ba7f133
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f12682a5d012d6981afce0085e9c920ed2f2ffbc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8b01582594bb54f8feafef3f98118d3e17286fae
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81284263"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487426"
 ---
 # <a name="update-delete-and-insert-statements"></a>UPDATE, DELETE 및 INSERT 문
 SQL 기반 응용 프로그램은 **UPDATE**, **DELETE**및 **INSERT** 문을 실행 하 여 테이블을 변경 합니다. 이러한 문은 최소 SQL 문법 규칙 수준의 일부 이며 모든 드라이버 및 데이터 원본에서 지원 되어야 합니다.  

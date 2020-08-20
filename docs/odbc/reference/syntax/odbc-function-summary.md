@@ -1,4 +1,5 @@
 ---
+description: ODBC 함수 요약
 title: ODBC 함수 요약 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: 7aa635da-e6b7-439f-8e9b-c3860e24de5e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c10cc7880cf941a1490f963e21e8b44bc91db215
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 50a0b9146acd71f87b4dd65bbdd34c67725e9948
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298924"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487376"
 ---
 # <a name="odbc-function-summary"></a>ODBC 함수 요약
 다음 표에서는 태스크 유형별로 그룹화 된 ODBC 함수를 나열 하 고 각 함수의 용도에 대 한 규칙 지정 및 간단한 설명을 포함 합니다. 규칙을 준수 하는 방법에 대 한 자세한 내용은 [ODBC 및 표준 CLI](../../../odbc/reference/odbc-and-the-standard-cli.md)를 참조 하세요. 각 함수의 구문 및 의미 체계에 대 한 자세한 내용은 [ODBC API 참조](../../../odbc/reference/syntax/odbc-api-reference.md)를 참조 하세요.  
   
  응용 프로그램은 **SQLGetInfo** 함수를 호출 하 여 드라이버에 대 한 규칙 정보를 얻을 수 있습니다. 드라이버의 특정 기능에 대 한 지원 정보를 얻기 위해 응용 프로그램은 **SQLGetFunctions**를 호출할 수 있습니다.  
   
-|작업|함수 이름|규칙|목적|  
+|Task|함수 이름|규칙|목적|  
 |----------|-------------------|-----------------|-------------|  
 |데이터 원본에 연결|[SQLAllocHandle](../../../odbc/reference/syntax/sqlallochandle-function.md)|ISO 92|환경, 연결, 문 또는 설명자 핸들을 가져옵니다.|  
 ||[SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)|ISO 92|데이터 원본 이름, 사용자 ID 및 암호를 사용 하 여 특정 드라이버에 연결 합니다.|  

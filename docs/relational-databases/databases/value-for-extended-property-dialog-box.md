@@ -1,4 +1,5 @@
 ---
+description: 확장 속성 값 대화 상자
 title: 확장 속성 값 대화 상자 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/01/2017
@@ -16,12 +17,12 @@ ms.assetid: cf0ba215-cf83-48e0-bd98-a8ddc8810eab
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fb86d74c3b8a3e2cc1efe0804336115cbf387bcf
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 790ee35dd642e67fe7f93898372451c3cbf64ffa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727561"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487201"
 ---
 # <a name="value-for-extended-property-dialog-box"></a>확장 속성 값 대화 상자
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

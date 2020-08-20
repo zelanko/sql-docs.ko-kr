@@ -1,4 +1,5 @@
 ---
+description: 컬렉션 세트 로그 보기(SQL Server Management Studio)
 title: 컬렉션 세트 로그 보기(SSMS)
 ms.date: 06/03/2020
 ms.prod: sql
@@ -12,12 +13,12 @@ ms.assetid: 428908b8-fb6a-4d0c-8339-ee133e23aad2
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 3b347a88187e7f7b961c8ad86b50b334e0837333
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5974ffeac325fdd3309d18367b0a64aff5086fb4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733829"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487236"
 ---
 # <a name="view-collection-set-logs-sql-server-management-studio"></a>컬렉션 세트 로그 보기(SQL Server Management Studio)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

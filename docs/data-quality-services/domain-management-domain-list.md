@@ -1,4 +1,5 @@
 ---
+description: '도메인 관리: 도메인 목록'
 title: '도메인 관리: 도메인 목록'
 ms.date: 11/08/2011
 ms.prod: sql
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: 8df305f0-97ea-4226-811b-979ed862e1f0
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: f90d13f65fbdd9f0c3f6626f15f65fa6d18d641a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c9d00eb424f951486ba8a89238fb75aa48581469
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882842"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487806"
 ---
 # <a name="domain-management-domain-list"></a>도메인 관리: 도메인 목록
 

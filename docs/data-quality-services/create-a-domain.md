@@ -1,4 +1,5 @@
 ---
+description: 도메인 만들기
 title: 도메인 만들기
 ms.date: 11/08/2011
 ms.prod: sql
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: 5c4828f5-bd51-4c29-b3de-87b7d2f2d3e5
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 529f0233f95a4f2ee123b2cc3c6974e4f5e6faf4
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c3a97b28ed41f71fe73c1184bdea28870beecd1f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85887995"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487906"
 ---
 # <a name="create-a-domain"></a>도메인 만들기
 
@@ -48,7 +49,7 @@ ms.locfileid: "85887995"
   
 5.  **매핑** 테이블에서 빈 행의 **원본 열** 에 대한 드롭다운 목록에서 원본 열을 선택합니다. 해당 도메인이 없으면 **도메인 만들기** 아이콘을 클릭합니다.  
   
-##  <a name="create-a-domain-in-the-domain-management-activity"></a><a name="DomainManagement"></a>도메인 관리 작업에서 도메인 만들기  
+##  <a name="create-a-domain-in-the-domain-management-activity"></a><a name="DomainManagement"></a> 도메인 관리 작업에서 도메인 만들기  
   
 1.  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 홈 화면에서 **기술 자료 열기** 를 클릭한 다음 기술 자료를 선택하거나 **새 기술 자료** 를 클릭하고 새 기술 자료의 속성을 입력합니다.  
   
@@ -56,7 +57,7 @@ ms.locfileid: "85887995"
   
 3.  **도메인 관리** 페이지에서 도메인 목록 위에 있는 **도메인 만들기** 아이콘을 클릭합니다.  
   
-##  <a name="set-domain-properties"></a><a name="Properties"></a>도메인 속성 설정  
+##  <a name="set-domain-properties"></a><a name="Properties"></a> 도메인 속성 설정  
   
 1.  **도메인 만들기** 대화 상자에서 기술 자료에 고유한 이름과 설명(최대 256자)을 입력합니다.  
   

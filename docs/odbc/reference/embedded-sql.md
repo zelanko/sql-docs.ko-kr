@@ -1,4 +1,5 @@
 ---
+description: Embedded SQL
 title: Embedded SQL | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8eee3527-f225-4aa2-bd18-a16bd3ab0fb7
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9ad6fd2753d026f026d72a7aa8f68d5d48ce03cb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7b52c5a87d1df03460a833a27fcb5523b80cd1f4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306676"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487416"
 ---
 # <a name="embedded-sql"></a>Embedded SQL
 SQL 문을 DBMS에 보내는 첫 번째 방법은 포함 된 SQL입니다. SQL은 변수 및 흐름 제어 문을 사용 하지 않으므로 C 또는 COBOL과 같은 기존 프로그래밍 언어로 작성 된 프로그램에 추가할 수 있는 데이터베이스 하위 언어로 사용 되는 경우가 많습니다. 이는 포함 된 SQL의 핵심 개념입니다. 호스트 프로그래밍 언어로 작성 된 프로그램에 SQL 문을 배치 하는 것입니다. 간단히 말해서, 다음 기술은 호스트 언어로 SQL 문을 포함 하는 데 사용 됩니다.  

@@ -1,4 +1,5 @@
 ---
+description: PredictVariance(DMX)
 title: PredictVariance (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 6217df2efb63b691ad565ea4d6466cdbd5831830
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 49791a6f1db662735be529e2f39fb347f8f858fc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970681"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487761"
 ---
 # <a name="predictvariance-dmx"></a>PredictVariance(DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -36,7 +37,7 @@ PredictVariance(<scalar column reference>)
 ## <a name="remarks"></a>설명  
  열 참조가 불연속 인 경우 불연속 값에서 분산을 계산할 수 없기 때문에 **Predictvariance** 는 0을 반환 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 자연 예측 조인을 사용하여 TM Decision Tree 마이닝 모델을 기반으로 개별 고객이 자전거를 구입할 가능성이 있는지 여부를 확인하고 예측의 분산도 확인합니다.  
   
 ```  

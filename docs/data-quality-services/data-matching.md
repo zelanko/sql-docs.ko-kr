@@ -1,4 +1,5 @@
 ---
+description: 데이터 일치
 title: 데이터 일치
 ms.date: 10/01/2012
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: fe66d098-bec3-4258-b42a-479ae460feb3
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: faa4c6066af0d7c516434176817d8c7f49672be5
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: 5f4fad318bfb0755848e1af3fd7d21b9bc421f47
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87363055"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487843"
 ---
 # <a name="data-matching"></a>데이터 일치
 
@@ -47,7 +48,7 @@ ms.locfileid: "87363055"
   
 2.  데이터 품질 프로젝트의 일부인 일치 작업에서 중복 제거 프로세스를 수행합니다.  
   
-###  <a name="building-a-matching-policy"></a><a name="Policy"></a>일치 정책 빌드  
+###  <a name="building-a-matching-policy"></a><a name="Policy"></a> 일치 정책 빌드  
  기술 자료에 DQS가 일치 확률을 할당하는 방법을 정의한 일치 정책을 만들어 일치 수행을 위해 기술 자료를 준비해야 합니다. 일치 정책은 DQS에서 레코드가 서로 얼마나 일치하는지 평가할 때 사용될 도메인을 식별하고, 일치 평가에서 각 도메인 값이 가지는 가중치를 지정하는 하나 이상의 일치 규칙으로 구성됩니다. 이 규칙에 도메인 값이 정확히 일치하는 항목이어야 하는지, 또는 유사하기만 해도 되는지 여부와 유사성 수준을 지정합니다. 또한 도메인 일치 항목이 필수 구성 요소인지 여부도 지정합니다.  
   
  기술 자료 관리 마법사의 일치 정책 작업은 각 일치 규칙을 적용하여 샘플 데이터를 분석함으로써 레코드 범위 전체에서 한 번에 두 레코드를 비교합니다. 지정된 최소값보다 일치 점수가 큰 레코드는 일치 결과에서 클러스터로 그룹화됩니다. 이러한 일치 결과는 기술 자료에 추가되지 않습니다. 이 결과를 사용하여 일치 규칙을 조정하세요. 일치 정책 만들기는 일치 결과 또는 프로파일링 통계에 따라 일치 규칙을 수정하는 반복 프로세스가 될 수 있습니다.  

@@ -1,4 +1,5 @@
 ---
+description: 직접 실행
 title: 직접 실행 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,11 +17,12 @@ ms.assetid: fa36e1af-ed98-4abc-97c1-c4cc5d227b29
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 14c2a982d1d1744eb8ee0da40203b86d62bfaccd
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: c55dd59c86c5a46ef409f607e109264859210f8c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001411"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486833"
 ---
 # <a name="direct-execution"></a>직접 실행
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -31,7 +33,7 @@ ms.locfileid: "86001411"
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서는 다중 사용자 환경에서 자주 실행되는 문의 직접 실행 성능이 크게 향상되었으며, 자주 실행되는 SQL 문에 대한 매개 변수 표식과 SQLExecDirect를 함께 사용하여 준비된 실행의 효율성을 높일 수 있습니다.  
   
- 의 인스턴스에 연결 된 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] NATIVE Client ODBC 드라이버는 [sp_executesql](../../../relational-databases/system-stored-procedures/sp-executesql-transact-sql.md) 을 사용 하 여 **SQLEXECDIRECT**에 지정 된 SQL 문 또는 일괄 처리를 전송 합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에는 **sp_executesql** 실행 중인 SQL 문 또는 일괄 처리가 메모리에 이미 있는 실행 계획을 생성 한 문 또는 일괄 처리와 일치 하는지 빠르게 확인 하는 논리가 있습니다. 일치하는 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]는 새 계획을 컴파일하는 대신 기존 계획을 다시 사용합니다. 즉, 사용자가 많은 시스템에서 **Sqlexecdirect** 를 사용 하 여 실행 되는 일반적으로 실행 되는 SQL 문은 이전 버전의 저장 프로시저 에서만 사용할 수 있었던 대부분의 계획 재사용 혜택을 활용 합니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
+ 의 인스턴스에 연결 된 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] NATIVE Client ODBC 드라이버는 [sp_executesql](../../../relational-databases/system-stored-procedures/sp-executesql-transact-sql.md) 을 사용 하 여 **SQLEXECDIRECT**에 지정 된 SQL 문 또는 일괄 처리를 전송 합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에는 **sp_executesql** 실행 중인 SQL 문 또는 일괄 처리가 메모리에 이미 있는 실행 계획을 생성 한 문 또는 일괄 처리와 일치 하는지 빠르게 확인 하는 논리가 있습니다. 일치하는 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]는 새 계획을 컴파일하는 대신 기존 계획을 다시 사용합니다. 즉, 사용자가 많은 시스템에서 **Sqlexecdirect** 를 사용 하 여 실행 되는 일반적으로 실행 되는 SQL 문은 이전 버전의 저장 프로시저 에서만 사용할 수 있었던 대부분의 계획 재사용 혜택을 활용 합니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
  실행 계획을 다시 사용하는 데 따른 이러한 이점은 여러 사용자가 동일한 SQL 문 또는 일괄 처리를 실행하는 경우에만 얻을 수 있습니다. 여러 클라이언트에서 실행되는 SQL 문에서 실행 계획의 다시 사용 가능성을 높이려면 다음 코딩 규칙을 따르십시오.  
   
@@ -44,6 +46,6 @@ ms.locfileid: "86001411"
  **Sqlexecdirect** 를 사용 하 여 실행 된 모든 문이 이러한 규칙을 사용 하 여 코딩 되는 경우는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 기회가 발생할 때 실행 계획을 재사용할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [ODBC&#41;&#40;문을 실행 하는 중](../../../relational-databases/native-client-odbc-queries/executing-statements/executing-statements-odbc.md)  
+ [ODBC&#41;&#40;문을 실행 하는 중 ](../../../relational-databases/native-client-odbc-queries/executing-statements/executing-statements-odbc.md)  
   
   

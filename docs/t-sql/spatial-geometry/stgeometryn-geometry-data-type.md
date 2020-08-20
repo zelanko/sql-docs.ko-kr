@@ -1,4 +1,5 @@
 ---
+description: STGeometryN(geometry 데이터 형식)
 title: STGeometryN(geometry 데이터 형식) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 348c7047-3442-4590-8879-fe841e79058c
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: fcc6ccdb16dbc7091defe0405588da435f672c88
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: ad02bc424fe6e6ba0196e56faf060998f841b0b0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86552825"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488116"
 ---
 # <a name="stgeometryn-geometry-data-type"></a>STGeometryN(geometry 데이터 형식)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -50,7 +51,7 @@ ms.locfileid: "86552825"
 ## <a name="remarks"></a>설명  
  이 메서드는 매개 변수가 `STNumGeometries()`의 결과보다 크면 **null**을 반환하고 *expression* 매개 변수가 1보다 작으면 **ArgumentOutOfRangeException**을 throw합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `MultiPoint``geometry collection`을 만들고 `STGeometryN()`을 사용하여 컬렉션의 두 번째 `geometry` 인스턴스를 찾습니다.  
   
 ```  

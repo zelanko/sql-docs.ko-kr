@@ -1,4 +1,5 @@
 ---
+description: 데이터 원본 구성
 title: 데이터 원본 구성 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: f11985c2-c054-4ab4-840e-aca4c585c9d8
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b0d52c154f4e9d38aad9d08668f41917793e5893
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: eece81e68356cea179d068e52a4f269fe81e0222
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300353"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487406"
 ---
 # <a name="configuring-data-sources"></a>데이터 원본 구성
 데이터 원본에 대 한 정보는 시스템 레지스트리에 저장 됩니다. 사용자는 관리 프로그램을 통해 데이터 원본 정보를 수정 합니다. 이는 ODBC 관리자, ODBC 제어판 장치 또는 응용 프로그램 또는 드라이버 개발자가 작성 한 관리 프로그램 일 수 있습니다.  

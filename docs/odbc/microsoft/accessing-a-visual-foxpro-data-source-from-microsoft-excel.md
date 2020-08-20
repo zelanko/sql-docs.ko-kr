@@ -1,4 +1,5 @@
 ---
+description: Microsoft Excel에서 Visual FoxPro 데이터 원본에 액세스
 title: Microsoft Excel에서 Visual FoxPro 데이터 원본에 액세스 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2c143020-0403-4592-80e0-84229f3d40be
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b4afaeebb5b3a0d2430eafc6febf98f2fb9c16bf
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3ce4e3bf96a41918fff392117a2fbbd1b9eb47f2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302082"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487576"
 ---
 # <a name="accessing-a-visual-foxpro-data-source-from-microsoft-excel"></a>Microsoft Excel에서 Visual FoxPro 데이터 원본에 액세스
 Microsoft Query를 설치한 경우 Visual FoxPro 데이터에 연결 하는 데이터 원본을 Microsoft Excel에서 만들 수 있습니다.  

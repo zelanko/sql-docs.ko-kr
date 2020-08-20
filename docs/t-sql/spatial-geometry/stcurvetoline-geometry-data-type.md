@@ -1,4 +1,5 @@
 ---
+description: STCurveToLine(geometry 데이터 형식)
 title: STCurveToLine(geometry 데이터 형식) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: abc80b32-4152-4e10-b816-798b901e0ac5
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 68129b88cbd7bfa0f168f901952e9f8a40643a51
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: e4eb3aa1d61d49b70a9526f352807a1569dfb7e8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555060"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488101"
 ---
 # <a name="stcurvetoline-geometry-data-type"></a>STCurveToLine(geometry 데이터 형식)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -53,7 +54,7 @@ ms.locfileid: "86555060"
   
  SQL/MM 사양과 달리 `STCurveToLine` 메서드는 다각형 근사값을 계산할 때 z-좌표 값을 사용하지 않습니다. 이 메서드는 **geometry** 인스턴스를 호출할 때 제공되는 모든 z-좌표 값을 무시합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-using-an-uninitialized-geometry-variable-and-empty-instance"></a>A. 초기화되지 않은 Geometry 변수 및 빈 인스턴스 사용  
  다음 예제에서는 첫 번째 **SELECT** 문이 초기화되지 않은 **geometry** 인스턴스를 사용하여 `STCurveToLine` 메서드를 호출하고 두 번째 **SELECT** 문이 빈 **geometry** 인스턴스를 사용합니다. 따라서 메서드는 첫 번째 문에 **NULL**을 반환하고 두 번째 문에 **GeometryCollection** 컬렉션을 반환합니다.  

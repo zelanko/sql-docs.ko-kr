@@ -1,4 +1,5 @@
 ---
+description: SQLPutData 함수
 title: SQLPutData 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 9a60f004-1477-4c54-a20c-7378e1116713
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7c4e704d96924942812904ea63d0e3d4fce8748e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8adda30141a99c1a575d8cc66511f1606e77dcf5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300043"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487136"
 ---
 # <a name="sqlputdata-function"></a>SQLPutData 함수
 **규칙**  
@@ -59,7 +60,7 @@ SQLRETURN SQLPutData(
   
 -   C 데이터 형식은 SQL_C_DEFAULT 되며 지정 된 SQL 데이터 형식에 대 한 기본 C 데이터 형식은 SQL_C_CHAR 또는 SQL_C_BINARY입니다.  
   
- 다른 모든 유형의 C 데이터에 대해 *StrLen_or_Ind* SQL_NULL_DATA 또는 SQL_DEFAULT_PARAM 되지 않은 경우 드라이버는 \* *dataptr* 버퍼의 크기가 *ValueType* 또는 *TargetType* 으로 지정 된 C 데이터 형식의 크기인 것으로 가정 하 고 전체 데이터 값을 보냅니다. 자세한 내용은 부록 D: 데이터 형식에서 데이터 [를 C에서 SQL 데이터 형식으로 변환](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md) 을 참조 하세요.  
+ 다른 모든 유형의 C 데이터에 대해 *StrLen_or_Ind* SQL_NULL_DATA 또는 SQL_DEFAULT_PARAM 되지 않은 경우 드라이버는 \* *Dataptr* 버퍼의 크기가 *ValueType* 또는 *TargetType* 으로 지정 된 C 데이터 형식의 크기인 것으로 가정 하 고 전체 데이터 값을 보냅니다. 자세한 내용은 부록 D: 데이터 형식에서 데이터 [를 C에서 SQL 데이터 형식으로 변환](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md) 을 참조 하세요.  
   
 ## <a name="returns"></a>반환  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_STILL_EXECUTING, SQL_ERROR 또는 SQL_INVALID_HANDLE입니다.  
@@ -67,7 +68,7 @@ SQLRETURN SQLPutData(
 ## <a name="diagnostics"></a>진단  
  **Sqlputdata** 가 SQL_ERROR 또는 SQL_SUCCESS_WITH_INFO를 반환 하는 경우 *HandleType* SQL_HANDLE_STMT의 및 *StatementHandle* *핸들* 을 사용 하 여 **SQLGetDiagRec** 를 호출 하 여 연결 된 SQLSTATE 값을 얻을 수 있습니다. 다음 표에서는 **Sqlputdata** 에서 일반적으로 반환 하는 SQLSTATE 값을 나열 하 고이 함수의 컨텍스트에서 각 항목에 대해 설명 합니다. "(DM)" 표기법은 드라이버 관리자에서 반환 된 SQLSTATEs의 설명 보다 앞에 나옵니다. 다른 설명이 없는 한 각 SQLSTATE 값과 연결 된 반환 코드는 SQL_ERROR 됩니다.  
   
-|SQLSTATE|Error|Description|  
+|SQLSTATE|오류|설명|  
 |--------------|-----------|-----------------|  
 |01000|일반 경고|드라이버 관련 정보 메시지입니다. 함수는 SQL_SUCCESS_WITH_INFO를 반환 합니다.|  
 |01004|문자열 데이터, 오른쪽이 잘렸습니다.|출력 매개 변수에 대해 반환 된 문자열 또는 이진 데이터 때문에 비어 있지 않은 문자 또는 NULL이 아닌 이진 데이터가 잘렸습니다. 문자열 값인 경우 오른쪽이 잘렸습니다. 함수는 SQL_SUCCESS_WITH_INFO를 반환 합니다.|  
@@ -81,7 +82,7 @@ SQLRETURN SQLPutData(
 |22012|0으로 나누었습니다.|입/출력 또는 출력 매개 변수에 대해 계산 된 산술 식의 결과로 0으로 나누었습니다.|  
 |22015|간격 필드 오버플로입니다.|정확한 숫자 또는 간격 열 이나 매개 변수에 대해 interval SQL 데이터 형식으로 전송 된 데이터를 통해 유효 자릿수가 손실 됩니다.<br /><br /> 데이터가 두 개 이상의 필드를 포함 하는 간격 열 또는 매개 변수에 대해 전송 되었으며 숫자 데이터 형식으로 변환 되었으며 숫자 데이터 형식에는 표시 되지 않았습니다.<br /><br /> 열 또는 매개 변수 데이터에 대해 전송 되는 데이터가 interval SQL 형식에 할당 되었으며 interval SQL 형식에 C 형식의 값이 표시 되지 않았습니다.<br /><br /> 정확한 숫자 또는 간격 C 열 또는 매개 변수에 대해 interval C 형식으로 전송 된 데이터는 유효 자릿수가 손실 되는 원인이 됩니다.<br /><br /> 열 또는 매개 변수 데이터에 대해 전송 된 데이터는 interval C 구조에 할당 되 고 interval 데이터 구조에는 데이터가 표시 되지 않습니다.|  
 |22018|캐스트 사양에 대 한 문자 값이 잘못 되었습니다.|C 형식은 정확한 수치 또는 근사치, datetime 또는 interval 데이터 형식입니다. 열의 SQL 형식이 문자 데이터 형식입니다. 열 또는 매개 변수의 값이 바인딩된 C 형식의 올바른 리터럴이 아닙니다.<br /><br /> SQL 형식은 정확한 수치 또는 근사치, datetime 또는 interval 데이터 형식입니다. C 형식이 SQL_C_CHAR 되었습니다. 열 또는 매개 변수의 값이 바인딩된 SQL 형식의 올바른 리터럴이 아닙니다.|  
-|HY000|일반 오류|특정 SQLSTATE가 없고 구현 별 SQLSTATE가 정의 되지 않은 오류가 발생 했습니다. MessageText 버퍼에서 **SQLGetDiagRec** 에 의해 반환 되는 오류 메시지는 오류 및 해당 원인을 설명 합니다. * \**|  
+|HY000|일반 오류|특정 SQLSTATE가 없고 구현 별 SQLSTATE가 정의 되지 않은 오류가 발생 했습니다. * \* MessageText* 버퍼에서 **SQLGetDiagRec** 에 의해 반환 되는 오류 메시지는 오류 및 해당 원인을 설명 합니다.|  
 |HY001|메모리 할당 오류|드라이버에서 함수 실행 또는 완료를 지 원하는 데 필요한 메모리를 할당할 수 없습니다.|  
 |HY008|작업 취소됨|*StatementHandle*에 대해 비동기 처리를 사용 하도록 설정 했습니다. 함수가 호출 되었으며 실행이 완료 되기 전에 **sqlcancel** 또는 **Sqlcancelhandle** 이 *StatementHandle*에 대해 호출 되었습니다. 그런 다음 *StatementHandle*에서 함수를 다시 호출 했습니다.<br /><br /> 함수가 호출 되 고 실행이 완료 되기 전에 **sqlcancel** 또는 **sqlcancelhandle** 이 다중 스레드 응용 프로그램의 다른 스레드에서 *StatementHandle* 호출 되었습니다.|  
 |HY009|Null 포인터 사용이 잘못 되었습니다.|(DM) 인수가 *Dataptr* 은 null 포인터이 고 *StrLen_or_Ind* 인수가 0, SQL_DEFAULT_PARAM 또는 SQL_NULL_DATA이 아닙니다.|  
@@ -103,7 +104,7 @@ SQLRETURN SQLPutData(
   
  응용 프로그램에서 **Sqlparamdata** 를 호출 하 여 보내야 하는 데이터를 결정 하는 경우 드라이버는 응용 프로그램에서 보낼 매개 변수 데이터 또는 열 데이터를 찾을 수 있는 위치를 결정 하는 데 사용할 수 있는 표시기를 반환 합니다. 또한 데이터를 보내기 위해 **Sqlputdata** 를 호출 해야 하는 응용 프로그램에 대 한 지표로 SQL_NEED_DATA 반환 합니다. **Sqlputdata**에 대 한 *dataptr* 인수에서 응용 프로그램은 매개 변수 또는 열에 대 한 실제 데이터를 포함 하는 버퍼에 대 한 포인터를 전달 합니다.  
   
- 드라이버가 **Sqlputdata**에 대 한 SQL_SUCCESS를 반환 하는 경우 응용 프로그램은 **sqlputdata** 를 다시 호출 합니다. **Sqlparamdata** 는 추가 데이터를 전송 해야 하는 경우에 SQL_NEED_DATA를 반환 합니다 .이 경우 응용 프로그램은 **sqlparamdata** 를 다시 호출 합니다. 모든 실행 데이터 데이터를 보낸 경우에 SQL_SUCCESS를 반환 합니다. 그러면 응용 프로그램에서 **Sqlparamdata** 를 다시 호출 합니다. 드라이버가 SQL_NEED_DATA을 반환 하 고 다른 * \*표시기를 이상 값으로 반환*하는 경우 다른 매개 변수 또는 열에 대 한 데이터가 필요 하 고 **sqlputdata** 가 다시 호출 됩니다. 드라이버가 SQL_SUCCESS 반환 하는 경우 모든 실행 시 데이터 데이터가 전송 되 고 SQL 문을 실행 하거나 **SQLBulkOperations** 또는 **SQLSetPos** 호출을 처리할 수 있습니다.  
+ 드라이버가 **Sqlputdata**에 대 한 SQL_SUCCESS를 반환 하는 경우 응용 프로그램은 **sqlputdata** 를 다시 호출 합니다. **Sqlparamdata** 는 추가 데이터를 전송 해야 하는 경우에 SQL_NEED_DATA를 반환 합니다 .이 경우 응용 프로그램은 **sqlparamdata** 를 다시 호출 합니다. 모든 실행 데이터 데이터를 보낸 경우에 SQL_SUCCESS를 반환 합니다. 그러면 응용 프로그램에서 **Sqlparamdata** 를 다시 호출 합니다. 드라이버가 SQL_NEED_DATA을 반환 하 고 다른 표시기를 * \* 이상 값으로 반환*하는 경우 다른 매개 변수 또는 열에 대 한 데이터가 필요 하 고 **sqlputdata** 가 다시 호출 됩니다. 드라이버가 SQL_SUCCESS 반환 하는 경우 모든 실행 시 데이터 데이터가 전송 되 고 SQL 문을 실행 하거나 **SQLBulkOperations** 또는 **SQLSetPos** 호출을 처리할 수 있습니다.  
   
  실행 시 데이터 매개 변수 데이터가 문 실행 시 전달 되는 방법에 대 한 자세한 내용은 [SQLBindParameter](../../../odbc/reference/syntax/sqlbindparameter-function.md) 의 "매개 변수 값 전달" 및 [긴 데이터 전송](../../../odbc/reference/develop-app/sending-long-data.md)을 참조 하세요. 실행 시 데이터 열 데이터를 업데이트 하거나 추가 하는 방법에 대 한 자세한 내용은 [sqlsetpos](../../../odbc/reference/syntax/sqlsetpos-function.md)의 "sqlsetpos 사용" 및 [SQLBulkOperations](../../../odbc/reference/syntax/sqlbulkoperations-function.md)의 "책갈피를 사용 하 여 대량 업데이트 수행" 및 [Long data 및 SQLSetPos 및 SQLBulkOperations](../../../odbc/reference/develop-app/long-data-and-sqlsetpos-and-sqlbulkoperations.md)섹션을 참조 하세요.  
   
@@ -283,6 +284,6 @@ int main() {
 |준비 된 SQL 문 실행|[SQLExecute 함수](../../../odbc/reference/syntax/sqlexecute-function.md)|  
 |다음 매개 변수를 반환 하 여 데이터 보내기|[SQLParamData 함수](../../../odbc/reference/syntax/sqlparamdata-function.md)|  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [ODBC API 참조](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 헤더 파일](../../../odbc/reference/install/odbc-header-files.md)

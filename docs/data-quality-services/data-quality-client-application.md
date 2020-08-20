@@ -1,4 +1,5 @@
 ---
+description: 데이터 품질 클라이언트 애플리케이션
 title: 데이터 품질 클라이언트 애플리케이션
 ms.date: 10/01/2012
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 25d1547e-4113-4b34-a9f8-8897db1acf16
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 88deed9104d231b666a1ab3e6dfd72da94ad1465
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9442b966c7a7b5679e685fe330b52807c46af35f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899125"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487820"
 ---
 # <a name="data-quality-client-application"></a>데이터 품질 클라이언트 애플리케이션
 
@@ -38,7 +39,7 @@ ms.locfileid: "85899125"
 |콘텐츠 설명|항목|  
 |-------------------------|-----------|  
 |DQS에서 기술 자료 및 도메인을 사용하는 방법에 대해 설명합니다.|[DQS 기술 자료 및 도메인](../data-quality-services/dqs-knowledge-bases-and-domains.md)|  
-|DQS에서 데이터를 정리하는 방법에 대해 설명합니다.|[Data Cleansing](../data-quality-services/data-cleansing.md)|  
+|DQS에서 데이터를 정리하는 방법에 대해 설명합니다.|[데이터 정리](../data-quality-services/data-cleansing.md)|  
 |DQS에서 일치 작업을 수행하는 방법에 대해 설명합니다.|[데이터 일치](../data-quality-services/data-matching.md)|  
 |DQS를 관리하는 방법에 대해 설명합니다.|[dqs 관리](../data-quality-services/dqs-administration.md)|  
   

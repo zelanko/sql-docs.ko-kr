@@ -1,4 +1,5 @@
 ---
+description: TupleToStr(MDX)
 title: 문자열 (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: d6cde1f60274d1437517d89e48b111e9e7298b9d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 69e81156b26d4becb05390c8684b433584793697
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68097370"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487626"
 ---
 # <a name="tupletostr-mdx"></a>TupleToStr(MDX)
 
@@ -32,9 +33,9 @@ TupleToStr(Tuple_Expression)
  튜플을 반환하는 유효한 MDX 식입니다.  
   
 ## <a name="remarks"></a>설명  
- 이 함수를 사용하여 튜플의 문자열 표현을 구문 분석을 위해 외부 함수에 전송할 수 있습니다. 반환 되는 문자열은 중괄호로 {} 묶이고 각 멤버는 튜플에 명시적으로 정의 되어 있는 경우 쉼표로 구분 됩니다.  
+ 이 함수를 사용하여 튜플의 문자열 표현을 구문 분석을 위해 외부 함수에 전송할 수 있습니다. 반환 되는 문자열은 중괄호로 묶이고 {} 각 멤버는 튜플에 명시적으로 정의 되어 있는 경우 쉼표로 구분 됩니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 문자열 ([Date]. [ Calendar Year]. & [2001], [Geography]. [Geography]. [Country]. & [미국]):  
   
 ```  

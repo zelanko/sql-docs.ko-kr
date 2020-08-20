@@ -1,4 +1,5 @@
 ---
+description: 추가 지원되는 ODBC SQL 문법
 title: 추가로 지원 되는 ODBC SQL 문법 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2ead7727-3245-4c2b-91f5-ed946ef4edf5
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d6ac9bd3a54e1f06f17bf6b92485ce5b9cc52882
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3081f287a1d580c2e3bced671cbfc40b15780241
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307134"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487566"
 ---
 # <a name="additional-supported-odbc-sql-grammar"></a>추가 지원되는 ODBC SQL 문법
 ODBC 드라이버는 최소 ODBC 2.5 문법과 핵심 및 확장 된 ODBC 2.5 문법에서 다음 절을 완벽 하 게 지원 합니다. [ALTER TABLE 문](../../odbc/microsoft/alter-table-statement.md), [상관 관계 이름](../../odbc/microsoft/correlation-names.md)및 [프로시저 호출](../../odbc/microsoft/procedure-invocation.md) 항목으로 이동 하 여 추가 정보를 표시할 수 있습니다.  

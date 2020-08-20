@@ -1,4 +1,5 @@
 ---
+description: 도메인 규칙 만들기
 title: 도메인 규칙 만들기
 ms.date: 11/08/2011
 ms.prod: sql
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 339fa10d-e22c-4468-b366-080c33f1a23f
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: e77d3966476bba662f864cb2f81dbbfa983d4740
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b85a6f50b7e0759c5b691389c102236ce3df082b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900457"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487936"
 ---
 # <a name="create-a-domain-rule"></a>도메인 규칙 만들기
 
@@ -72,7 +73,7 @@ ms.locfileid: "85900457"
   
 16. 다음 테스트 절차를 진행합니다.  
   
-##  <a name="test-domain-rules"></a><a name="Test"></a>도메인 규칙 테스트  
+##  <a name="test-domain-rules"></a><a name="Test"></a> 도메인 규칙 테스트  
   
 1.  규칙을 하나 선택한 상태에서 **테스트 데이터에서 선택한 도메인 규칙 실행** 아이콘을 클릭합니다.  
   
@@ -88,7 +89,7 @@ ms.locfileid: "85900457"
   
 7.  다음 적용 절차를 진행합니다.  
   
-##  <a name="apply-domain-rules"></a><a name="Apply"></a>도메인 규칙 적용  
+##  <a name="apply-domain-rules"></a><a name="Apply"></a> 도메인 규칙 적용  
   
 1.  도메인 값에 규칙을 적용하려면 **모든 규칙 적용** 을 클릭합니다. **모든 규칙 적용**을 클릭하면 이 규칙의 영향을 받는 특정 상태의 값 개수를 나타내는 팝업이 표시됩니다. 그래도 규칙을 적용하려는 경우 **예** 를 클릭하고, 그렇지 않을 경우 **아니요** 를 클릭합니다. **예**를 클릭한 경우 **확인** 을 클릭하여 결과 팝업을 닫습니다.  
   
@@ -99,10 +100,10 @@ ms.locfileid: "85900457"
   
 3.  **마침** 을 클릭하여 [도메인 관리 작업 종료](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)에 설명된 대로 도메인 관리 작업을 완료합니다.  
   
-##  <a name="follow-up-after-creating-a-domain-rule"></a><a name="FollowUp"></a>후속 작업: 도메인 규칙을 만든 후  
+##  <a name="follow-up-after-creating-a-domain-rule"></a><a name="FollowUp"></a> 후속 작업: 도메인 규칙을 만든 후  
  도메인 규칙을 만든 후 도메인에 대해 다른 도메인 관리 태스크를 수행하거나, 기술 자료 검색을 수행하여 도메인에 정보를 추가하거나, 도메인에 일치 정책을 추가할 수 있습니다. 자세한 내용은 [기술 자료 검색 수행](../data-quality-services/perform-knowledge-discovery.md), [도메인 관리](../data-quality-services/managing-a-domain.md) 또는 [일치 정책 만들기](../data-quality-services/create-a-matching-policy.md)를 참조하세요.  
   
-##  <a name="domain-rule-conditions"></a><a name="Conditions"></a>도메인 규칙 조건  
+##  <a name="domain-rule-conditions"></a><a name="Conditions"></a> 도메인 규칙 조건  
  다음 표에서는 도메인 규칙에 적용될 수 있는 조건을 설명하고 조건을 적용하는 방법을 설명하는 예를 제공합니다.  
   
  도메인 규칙을 적용하고 도메인 값이 규칙에 실패하면 값이 잘못됨으로 지정됩니다. 잘못됨으로 지정된 값은 해당 값을 잘못된 것으로 판정한 규칙이 삭제되거나, 비활성화되거나 해당 값이 더 이상 규칙에 실패하지 않도록 규칙이 변경된 경우 올바름으로 변경됩니다. 도메인 관리 작업의 도메인 값 탭에서 수동으로 값을 잘못됨으로 지정한 경우 값이 실패한 규칙이 삭제되거나 비활성화되거나 변경되면 수동 지정에 따라 값은 계속 잘못됨으로 지정됩니다.  

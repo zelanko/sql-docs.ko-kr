@@ -1,4 +1,5 @@
 ---
+description: CurveToLineWithTolerance(geometry 데이터 형식)
 title: CurveToLineWithTolerance(geometry 데이터 형식) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 96871075-1998-4cd9-86b1-3fc55577aee4
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 99133135d568030646813026af0c6543a05218de
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 4a717b5b83be8d381a91ff1ab1055d24ae8c59ed
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86552868"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488223"
 ---
 # <a name="curvetolinewithtolerance-geometry-data-type"></a>CurveToLineWithTolerance(geometry 데이터 형식)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -71,7 +72,7 @@ ms.locfileid: "86552868"
 |여러 2차원 인스턴스가 있는 **GeometryCollection**|**MultiPolygon** 인스턴스|  
 |다른 차원의 여러 인스턴스가 있는 **GeometryCollection**|**GeometryCollection** 인스턴스|  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-using-different-tolerance-values-on-a-circularstring-instance"></a>A. CircularString 인스턴스에 여러 허용 오차 값 사용  
  다음 예에서는 허용 오차를 설정하면 `CircularString` 인스턴스에서 반환된 `LineString`인스턴스가 어떤 영향을 받는지 보여 줍니다.  

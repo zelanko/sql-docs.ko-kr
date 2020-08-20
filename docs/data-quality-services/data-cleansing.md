@@ -1,4 +1,5 @@
 ---
+description: Data Cleansing
 title: Data Cleansing
 ms.date: 10/01/2012
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e67136cc-f8c6-4cb3-ba0b-c966c636256c
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 5a45acafea032b6a0815d975f91b64f5612b2e43
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d54722c2a8cf6e5364cc25d35621957164d3b9a6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899131"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487844"
 ---
 # <a name="data-cleansing"></a>Data Cleansing
 
@@ -38,7 +39,7 @@ ms.locfileid: "85899131"
   
  ![DQS의 데이터 정리 프로세스](../data-quality-services/media/dqs-cleansingprocess.gif "DQS의 데이터 정리 프로세스")  
   
-##  <a name="computer-assisted-cleansing"></a><a name="ComputerAssisted"></a>컴퓨터 기반 정리  
+##  <a name="computer-assisted-cleansing"></a><a name="ComputerAssisted"></a> 컴퓨터 기반 정리  
  DQS 데이터 정리 프로세스에서는 정리할 데이터에 기술 자료를 적용하고 데이터에 대한 변경 내용을 제시합니다. 데이터 관리자는 제시된 각 변경 내용에 액세스할 수 있으므로 변경 내용을 확인하고 수정할 수 있습니다. 데이터 관리자가 데이터 정리를 수행하기 위해 진행하는 단계는 다음과 같습니다.  
   
 1.  데이터 품질 프로젝트를 만들고, 원본 데이터를 분석 및 정리하는 데 사용할 기술 자료를 선택하고, **정리** 활동을 선택합니다. 여러 데이터 품질 프로젝트에서 동일한 기술 자료를 사용할 수 있습니다.  
@@ -62,7 +63,7 @@ ms.locfileid: "85899131"
   
  신뢰 수준 값이 자동 제안 임계값보다 낮으면 데이터 관리자가 변경 내용을 지정하지 않은 한 DQS에서 데이터를 현재대로 둡니다.  
   
-##  <a name="interactive-cleansing"></a><a name="Interactive"></a>대화형 정리  
+##  <a name="interactive-cleansing"></a><a name="Interactive"></a> 대화형 정리  
  컴퓨터 기반 정리 프로세스에 따라 DQS는 데이터 관리자에게 데이터 변경과 관련된 의사 결정에 필요한 정보를 제공합니다. DQS는 다음 5개 탭으로 데이터를 분류합니다.  
   
 -   **제안**: 신뢰도 수준이 *자동 제안 임계값* 보다 높고 *자동 수정 임계값* 보다 낮은 것으로 DQS에서 검색된 제안 값입니다. 이러한 값은 검토 후 적절하게 승인 또는 거부해야 합니다.  
@@ -106,7 +107,7 @@ ms.locfileid: "85899131"
 |복합 도메인을 정리하는 방법을 설명합니다.|[복합 도메인의 데이터 정리](../data-quality-services/cleanse-data-in-a-composite-domain.md)|  
   
 ## <a name="see-also"></a>참고 항목  
- [DQS&#41;&#40;데이터 품질 프로젝트](../data-quality-services/data-quality-projects-dqs.md)   
+ [DQS&#41;&#40;데이터 품질 프로젝트 ](../data-quality-services/data-quality-projects-dqs.md)   
  [데이터 일치](../data-quality-services/data-matching.md)  
   
   

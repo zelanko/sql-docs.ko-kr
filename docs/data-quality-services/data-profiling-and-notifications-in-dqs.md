@@ -1,4 +1,5 @@
 ---
+description: DQS의 데이터 프로파일링 및 알림
 title: DQS의 데이터 프로파일링 및 알림
 ms.date: 04/01/2020
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: a778bb5b-8e35-4a7b-b04a-ae2b46dec21b
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: af0464a307d77531c5d11624dc86a836ddf77711
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 4857ba951d86551e95f81075d77bc1d0d9be928a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882552"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487833"
 ---
 # <a name="data-profiling-and-notifications-in-dqs"></a>DQS의 데이터 프로파일링 및 알림
 
@@ -74,7 +75,7 @@ ms.locfileid: "85882552"
   
 -   [일치 프로젝트 실행](../data-quality-services/run-a-matching-project.md)  
   
-##  <a name="profiling-data-in-activity-monitoring"></a><a name="Monitoring"></a>작업 모니터링의 데이터 프로 파일링  
+##  <a name="profiling-data-in-activity-monitoring"></a><a name="Monitoring"></a> 작업 모니터링의 데이터 프로 파일링  
  기술 자료 검색, 일치 정책, 일치 및 정리 작업에 대 한 프로 파일링 정보는 Data Quality 클라이언트의 작업 페이지 뿐만 아니라 작업 모니터링 에서도 사용할 수 있습니다. 작업 모니터링은 현재 및 이전 작업에 대한 개요를 제공합니다. 작업의 속성 및 관련 계산 프로세스 외에도 각 작업에 대해 생성된 프로파일링 정보를 한 곳에서 볼 수 있습니다. 작업 테이블에서 특정 작업을 선택하여 아래 테이블에 프로파일링 결과를 표시할 수 있습니다. 또한 프로파일링 결과를 내보낼 수도 있습니다. 자세한 내용은 [DQS Administration](../data-quality-services/dqs-administration.md)을 참조하세요.  
   
 ##  <a name="notifications"></a><a name="Notifications"></a> 알림  
@@ -98,7 +99,7 @@ ms.locfileid: "85882552"
   
 ## <a name="related-tasks"></a>관련 작업  
   
-|태스크 설명|기사|  
+|태스크 설명|아티클|  
 |----------------------|-----------|  
 |DQS에서 알림을 설정 또는 해제하는 방법에 대해 설명합니다.|[DQS에서 프로파일링 알림 설정 또는 해제](../data-quality-services/enable-or-disable-profiling-notifications-in-dqs.md)|  
   

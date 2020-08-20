@@ -1,4 +1,5 @@
 ---
+description: SQLReadFileDSN 함수
 title: SQLReadFileDSN 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: ead464aa-cdc3-47dd-a0c0-997711205d31
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3abda956ee7682c9ac49270e8bf69fb039641790
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 76f6cdb3dfc423cba4eed6981ce540b5192288e3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303954"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487105"
 ---
 # <a name="sqlreadfiledsn-function"></a>SQLReadFileDSN 함수
 **규칙**  
@@ -48,39 +49,39 @@ BOOL SQLReadFileDSN(
   
 ## <a name="arguments"></a>인수  
  *lpszFileName*  
- 입력 Dsn 파일의 이름을 포함 하는 데이터 버퍼에 대 한 포인터입니다. . Dsn 확장명은 아직 확장명이 없는 모든 파일 이름에 추가 됩니다. * \*LpszFileName* 의 값은 null로 끝나는 문자열 이어야 합니다.  
+ 입력 Dsn 파일의 이름을 포함 하는 데이터 버퍼에 대 한 포인터입니다. . Dsn 확장명은 아직 확장명이 없는 모든 파일 이름에 추가 됩니다. * \* LpszFileName* 의 값은 null로 끝나는 문자열 이어야 합니다.  
   
  *lpszAppName*  
- 입력 응용 프로그램의 이름을 포함 하는 데이터 버퍼에 대 한 포인터입니다. ODBC 섹션에 대 한 "ODBC"입니다. * \*LpszAppName* 의 값은 null로 끝나는 문자열 이어야 합니다.  
+ 입력 응용 프로그램의 이름을 포함 하는 데이터 버퍼에 대 한 포인터입니다. ODBC 섹션에 대 한 "ODBC"입니다. * \* LpszAppName* 의 값은 null로 끝나는 문자열 이어야 합니다.  
   
  *lpszKeyName*  
- 입력 읽을 키의 이름을 포함 하는 데이터 버퍼에 대 한 포인터입니다. 예약 된 키워드는 "Comments"를 참조 하십시오. * \*LpszAppName* 의 값은 null로 끝나는 문자열 이어야 합니다.  
+ 입력 읽을 키의 이름을 포함 하는 데이터 버퍼에 대 한 포인터입니다. 예약 된 키워드는 "Comments"를 참조 하십시오. * \* LpszAppName* 의 값은 null로 끝나는 문자열 이어야 합니다.  
   
  *lpszString*  
  출력 읽을 키와 연결 된 문자열을 포함 하는 데이터 버퍼에 대 한 포인터입니다.  
   
- * \*LpszFileName* 이 유효한 dsn 파일 이름 이지만 *lpszAppName* 인수가 null 포인터이 고 *lpszKeyName* 인수가 null 포인터인 경우 * \*lpszString* 에는 유효한 응용 프로그램 목록이 포함 됩니다. * \*LpszFileName* 이 유효한 dsn 파일 이름이 고 * \*lpszAppName* 가 유효한 응용 프로그램 이름 이지만 *lpszKeyName* 인수가 null 포인터인 경우 * \*lpszString* 는 dsn 파일의 해당 섹션에서 세미콜론으로 구분 된 올바른 예약 키워드 목록을 포함 합니다. * \*LpszFileName* 가 유효한. i n t 파일 이름 이지만 * \*lpszAppName* 가 null 포인터이 고 *lpszKeyName* 인수가 null 포인터인 경우 * \*lpszString* 는 dsn 파일의 섹션 목록을 세미콜론으로 구분 하 여 포함 합니다.  
+ * \* LpszFileName* 이 유효한 dsn 파일 이름 이지만 *lpszAppName* 인수가 null 포인터이 고 *lpszKeyName* 인수가 null 포인터인 경우 * \* lpszString* 에는 유효한 응용 프로그램 목록이 포함 됩니다. * \* LpszFileName* 이 유효한 dsn 파일 이름이 고 * \* lpszAppName* 가 유효한 응용 프로그램 이름 이지만 *LPSZKEYNAME* 인수가 null 포인터인 경우 * \* lpszString* 는 dsn 파일의 해당 섹션에서 세미콜론으로 구분 된 올바른 예약 키워드 목록을 포함 합니다. * \* LpszFileName* 가 유효한. i n t 파일 이름 이지만 * \* lpszAppName* 가 null 포인터이 고 *LPSZKEYNAME* 인수가 null 포인터인 경우 * \* lpszString* 는 dsn 파일의 섹션 목록을 세미콜론으로 구분 하 여 포함 합니다.  
   
  *cbString*  
- 입력 LpszString 버퍼의 길이입니다. * \**  
+ 입력 * \* LpszString* 버퍼의 길이입니다.  
   
  *pcbString*  
- 출력 * \*LpszString*에서 반환할 수 있는 총 바이트 수입니다. 반환할 수 있는 바이트 수가 *cbstring*보다 크거나 같으면 * \*lpszString* 의 출력 문자열이 *cbstring* 에서 null 종료 문자를 뺀 값으로 잘립니다. *Pcbstring* 인수는 null 포인터 일 수 있습니다.  
+ 출력 * \* LpszString*에서 반환할 수 있는 총 바이트 수입니다. 반환할 수 있는 바이트 수가 *Cbstring*보다 크거나 같으면 * \* LpszString* 의 출력 문자열이 *cbstring* 에서 null 종료 문자를 뺀 값으로 잘립니다. *Pcbstring* 인수는 null 포인터 일 수 있습니다.  
   
 ## <a name="returns"></a>반환  
  이 함수는 성공 하면 TRUE를 반환 하 고 실패 하면 FALSE를 반환 합니다.  
   
 ## <a name="diagnostics"></a>진단  
- **Sqlreadfiledsn** 이 FALSE를 반환 하는 경우 **SQLInstallerError**를 호출 하 여 연결 된 * \*pfErrorCode* 값을 얻을 수 있습니다. 다음 표에서는 **SQLInstallerError** 에서 반환 될 수 있는 * \*pfErrorCode* 값을 나열 하 고이 함수의 컨텍스트에서 각 값에 대해 설명 합니다.  
+ **Sqlreadfiledsn** 이 FALSE를 반환 하는 경우 **SQLInstallerError**를 호출 하 여 연결 된 * \* pfErrorCode* 값을 얻을 수 있습니다. 다음 표에서는 **SQLInstallerError** 에서 반환 될 수 있는 * \* pfErrorCode* 값을 나열 하 고이 함수의 컨텍스트에서 각 값에 대해 설명 합니다.  
   
-|*\*pfErrorCode*|Error|Description|  
+|*\*pfErrorCode*|오류|설명|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|일반 설치 관리자 오류|특정 설치 관리자 오류가 없는 오류가 발생 했습니다.|  
 |ODBC_ERROR_INVALID_BUFF_LEN|잘못 된 버퍼 길이|*LpszString* 인수가 NULL입니다.<br /><br /> *Cbstring* 인수가 0 보다 작거나 같습니다.|  
 |ODBC_ERROR_INVALID_PATH|잘못 된 설치 경로|*LpszFileName* 인수에 지정 된 파일 이름의 경로가 잘못 되었습니다.|  
 |ODBC_ERROR_INVALID_REQUEST_TYPE|잘못 된 요청 유형|*LpszAppName* 인수가 NULL 이지만 *lpszKeyName* 인수가 유효 합니다.|  
 |ODBC_ERROR_OUT_OF_MEM|메모리가 부족합니다.|메모리가 부족 하 여 설치 관리자가 함수를 수행할 수 없습니다.|  
-|ODBC_ERROR_OUTPUT_STRING_TRUNCATED|출력 문자열이 잘렸습니다.|*Cbstring* 의 값이 * \*pcbstring*의 값 보다 작거나 같으므로 * \*lpszString* 에 반환 된 문자열이 잘렸습니다.|  
+|ODBC_ERROR_OUTPUT_STRING_TRUNCATED|출력 문자열이 잘렸습니다.|*Cbstring* 의 값이 * \* pcbstring*의 값 보다 작거나 같으므로 * \* lpszString* 에 반환 된 문자열이 잘렸습니다.|  
 |ODBC_ERROR_REQUEST_FAILED|요청 실패|키워드가 파일 DSN에 없습니다.|  
   
 ## <a name="comments"></a>주석  

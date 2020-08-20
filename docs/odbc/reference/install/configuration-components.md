@@ -1,4 +1,5 @@
 ---
+description: 구성 구성 요소
 title: 구성 요소 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0b68ff48-12e4-41aa-b9e2-b39ed5023ea7
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 37c2518c3b18423c804631780ee4a18bff29d88b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a8a4b0f0b0a7a99409b5bb9caea53f23b62457e7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81289014"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487436"
 ---
 # <a name="configuration-components"></a>구성 구성 요소
 > [!NOTE]  

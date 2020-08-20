@@ -1,4 +1,5 @@
 ---
+description: 상호 운용 가능한 애플리케이션 테스트
 title: 상호 운용 가능한 응용 프로그램 테스트 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 489083cb-8430-40be-9ef2-d75b9a2eea88
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c1d43c7aad2501591c497475f6c250ac33712aa7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: feebbe5914e9da1e414f5c77a1a69bc0a6e0e7b1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307744"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487526"
 ---
 # <a name="testing-interoperable-applications"></a>상호 운용 가능한 애플리케이션 테스트
 상호 운용 가능한 응용 프로그램을 테스트 하는 것은 시간이 많이 걸리는 비즈니스 이며 새로운 드라이버가 시장에 지속적으로 표시 되기 때문에 최악의 경우 불가능 합니다. 그러나 적절 한 테스트 수준이 가능 합니다. 상호 운용성이 제한적 이거나 낮은 응용 프로그램은 지원 되는 드라이버만 테스트할 수 있어야 합니다. 그러나 이러한 드라이버에 대해 완전히 테스트 해야 합니다.  

@@ -1,4 +1,5 @@
 ---
+description: sys.configurations(Transact-SQL)
 title: sys.configurations (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: c4709ed1-bf88-4458-9e98-8e9b78150441
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: bfe45a28ba06da888b5b28bbd3c5c404acde2dca
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1b041e0bb17e0c290225ecb951fe26d95ab07770
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896324"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486461"
 ---
 # <a name="sysconfigurations-transact-sql"></a>sys.configurations(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,10 +37,10 @@ ms.locfileid: "85896324"
 |**configuration_id**|**int**|구성 값에 대한 고유한 ID입니다.|  
 |**name**|**nvarchar(35)**|구성 옵션의 이름입니다.|  
 |**value**|**sql_variant**|이 옵션에 구성된 값입니다.|  
-|**최대**|**sql_variant**|구성 옵션의 최소값입니다.|  
-|**최대화**|**sql_variant**|구성 옵션의 최대값입니다.|  
+|**minimum**|**sql_variant**|구성 옵션의 최소값입니다.|  
+|**maximum**|**sql_variant**|구성 옵션의 최대값입니다.|  
 |**value_in_use**|**sql_variant**|이 옵션에 대해 현재 유효한 값을 실행하고 있습니다.|  
-|**한**|**nvarchar(255)**|구성 옵션의 설명입니다.|  
+|**description**|**nvarchar(255)**|구성 옵션의 설명입니다.|  
 |**is_dynamic**|**bit**|1 = RECONFIGURE 문이 실행될 때 효력을 갖는 변수입니다.|  
 |**is_advanced**|**bit**|1 = **show advancedoption** 가 설정 된 경우에만 변수가 표시 됩니다.|  
   
@@ -62,7 +63,7 @@ select * from sys.configurations where value != value_in_use
 
 값이 구성 옵션에 대 한 변경 값과 동일 하지만 **value_in_use** 동일 하지 않은 경우 RECONFIGURE 명령이 실행 되지 않았거나 실패 했거나 서버 엔진을 다시 시작 해야 합니다.
 
-값과 value_in_use 동일 하지 않을 수 있는 구성 옵션이 있으며이는 예상 된 동작입니다. 예를 들어:
+값과 value_in_use 동일 하지 않을 수 있는 구성 옵션이 있으며이는 예상 된 동작입니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.
 
 "max server memory (MB)"-기본 구성 값 0은 value_in_use = 2147483647 "min server memory (MB)"로 표시 됩니다. 기본 구성 된 값 0은 value_in_use = 8 (32 비트) 또는 16 (64 비트)으로 표시 될 수 있습니다. 
 
@@ -77,7 +78,7 @@ select * from sys.configurations where value != value_in_use
  **public** 역할의 멤버 자격이 필요합니다. 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;서버 차원의 구성 카탈로그 뷰](../../relational-databases/system-catalog-views/server-wide-configuration-catalog-views-transact-sql.md)   
+ [Transact-sql&#41;&#40;서버 차원의 구성 카탈로그 뷰 ](../../relational-databases/system-catalog-views/server-wide-configuration-catalog-views-transact-sql.md)   
  [카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
   

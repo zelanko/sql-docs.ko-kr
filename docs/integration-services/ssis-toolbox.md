@@ -1,4 +1,5 @@
 ---
+description: SSIS 도구 상자
 title: SSIS 도구 상자 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/16/2016
@@ -14,12 +15,12 @@ f1_keywords:
 ms.assetid: 552ff592-eeef-46e8-b4a2-9b2384c869aa
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1d69335c7455dcd34fc5368a68c86193c2fc7526
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 2523c8ac095a576d243aef661092e7939e27863b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921861"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487669"
 ---
 # <a name="ssis-toolbox"></a>SSIS 도구 상자
 

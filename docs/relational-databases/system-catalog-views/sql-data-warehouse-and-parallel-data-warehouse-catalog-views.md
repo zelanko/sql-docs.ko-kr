@@ -1,4 +1,5 @@
 ---
+description: SQL Data Warehouse 및 병렬 Data Warehouse 카탈로그 뷰
 title: 카탈로그 뷰
 titleSuffix: Azure SQL Data Warehouse and Parallel Data Warehouse
 ms.date: 10/29/2019
@@ -12,12 +13,12 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 258c08acbccc80a90a03b70f5f586960aa763f02
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: 8682f7d5549389ff98d20862ce86f6d177b3116e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86197301"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486517"
 ---
 # <a name="sql-data-warehouse-and-parallel-data-warehouse-catalog-views"></a>SQL Data Warehouse 및 병렬 Data Warehouse 카탈로그 뷰
 
@@ -25,7 +26,7 @@ ms.locfileid: "86197301"
 
  이 항목에서는 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 카탈로그 뷰를 나열 합니다.  
   
-## <a name="sssdw-and-sspdw-catalog-views"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 카탈로그 뷰  
+## <a name="sssdw-and-sspdw-catalog-views"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 카탈로그 뷰  
  다음 카탈로그 뷰는 및에 모두 적용 됩니다 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] .  
   
  [pdw_column_distribution_properties &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-pdw-column-distribution-properties-transact-sql.md)  
@@ -60,7 +61,7 @@ ms.locfileid: "86197301"
   
  [pdw_table_mappings &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-pdw-table-mappings-transact-sql.md) 
 
-## <a name="sssdw-catalog-views"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]카탈로그 뷰
+## <a name="sssdw-catalog-views"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 카탈로그 뷰
 
  다음 카탈로그 뷰는에만 적용 됩니다 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] .
 
@@ -77,7 +78,7 @@ ms.locfileid: "86197301"
  [workload_management_workload_groups &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-workload-management-workload-groups-transact-sql?view=azure-sqldw-latest) 
 
 
-## <a name="sspdw-catalog-views"></a>[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]카탈로그 뷰
+## <a name="sspdw-catalog-views"></a>[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 카탈로그 뷰
 
  다음 카탈로그 뷰는에만 적용 됩니다 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] .
 

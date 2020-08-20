@@ -1,4 +1,5 @@
 ---
+description: Transact-SQL을 사용하여 Visual Studio Code에서 SSIS 패키지 실행
 title: Transact-SQL(VS Code)을 사용하여 SSIS 패키지 실행 | Microsoft Docs
 ms.date: 05/21/2018
 ms.topic: quickstart
@@ -8,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5533f3425cd301b6d69904d346031c4143870f88
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f59bde18b416927484cac2a1b8dec86663ffeb05
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921855"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487679"
 ---
 # <a name="run-an-ssis-package-from-visual-studio-code-with-transact-sql"></a>Transact-SQL을 사용하여 Visual Studio Code에서 SSIS 패키지 실행
 
@@ -30,7 +31,7 @@ Visual Studio Code는 Microsoft SQL Server, Azure SQL Database 또는 Azure SQL 
 -   [Visual Studio Code 다운로드](https://code.visualstudio.com/Download)
 -   [mssql 확장](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql)
 
-## <a name="supported-platforms"></a>지원 플랫폼
+## <a name="supported-platforms"></a>지원되는 플랫폼
 
 이 빠른 시작의 정보를 사용하여 다음과 같은 플랫폼에서 SSIS 패키지를 실행할 수 있습니다.
 

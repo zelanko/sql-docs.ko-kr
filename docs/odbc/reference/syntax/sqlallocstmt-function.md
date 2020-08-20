@@ -1,4 +1,5 @@
 ---
+description: SQLAllocStmt 함수
 title: SQLAllocStmt 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 7bb38a06-e3d5-4c9a-a0e8-7b59b2ec6927
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4b45dd8444d5ca2511672952e0637cc3cc500c5d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 28eea4b64b8c94c0db83352a5bcbeafe8263bf60
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298753"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487286"
 ---
 # <a name="sqlallocstmt-function"></a>SQLAllocStmt 함수
 **규칙**  
@@ -36,6 +37,6 @@ ms.locfileid: "81298753"
 > [!NOTE]  
 >  ODBC 2를 사용할 때 드라이버 관리자가이 기능을에 매핑하는 방법에 대 한 자세한 내용은을 (를) 확인 하십시오. *x* 응용 프로그램이 ODBC 3에서 작동 하 고 있습니다. *x* 드라이버 부록 G: 이전 버전과의 호환성을 위한 드라이버 지침에서 [사용 되지 않는 함수 매핑](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) 을 참조 하세요.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [ODBC API 참조](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 헤더 파일](../../../odbc/reference/install/odbc-header-files.md)

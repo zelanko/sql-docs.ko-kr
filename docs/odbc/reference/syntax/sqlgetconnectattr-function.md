@@ -1,4 +1,5 @@
 ---
+description: SQLGetConnectAttr 함수(SQLGetConnectAttr Function)
 title: SQLGetConnectAttr 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 2cb4ffa8-19d3-4664-8c2f-6682cdcc3f33
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e6076f14ff0c33fec38b99e9c43b8a688970a7a9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 457ba462c277ec4b5fa44030557861507823dc04
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81285633"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487276"
 ---
 # <a name="sqlgetconnectattr-function"></a>SQLGetConnectAttr 함수(SQLGetConnectAttr Function)
 **규칙**  
@@ -52,7 +53,7 @@ SQLRETURN SQLGetConnectAttr(
  *ConnectionHandle*  
  [Input] 연결 핸들입니다.  
   
- *특성도*  
+ *Attribute*  
  입력 검색할 특성입니다.  
   
  *ValuePtr*  
@@ -61,20 +62,20 @@ SQLRETURN SQLGetConnectAttr(
  *Valueptr* 이 NULL 인 경우 *StringLengthPtr* 는 해당 값을 가리키는 버퍼에서 반환 하는 데 사용할 수 있는 총 바이트 수 (문자 데이터의 NULL 종료 문자 제외)를 반환 *합니다.*  
   
  *BufferLength*  
- 입력 *특성이* ODBC에 정의 된 *특성이 고,* 이상 문자열이 문자열 또는 이진 버퍼를 가리키는 경우이 인수는이 인수의 길이 \*여야 *합니다.* *특성이* ODBC 정의 특성이 고 \*값 *eptr* 이 정수 이면 *bufferlength* 는 무시 됩니다. **SQLGetConnectAttrW**를 호출할 때 인수 * \*값이 유니코드* 문자열이 면 *bufferlength* 인수는 짝수 여야 합니다.  
+ 입력 *특성이* ODBC에 정의 된 *특성이 고,* 이상 문자열이 문자열 또는 이진 버퍼를 가리키는 경우이 인수는이 인수의 길이 여야 합니다 \* *ValuePtr*. *특성이* ODBC 정의 특성이 고 \* 값 *Eptr* 이 정수 이면 *bufferlength* 는 무시 됩니다. **SQLGetConnectAttrW**를 호출할 때 인수 값이 유니코드 문자열이 면 *bufferlength* 인수는 짝수 여야 합니다. * \* *  
   
  *특성이* 드라이버 정의 특성인 경우 응용 프로그램은 *bufferlength* 인수를 설정 하 여 특성의 특성을 드라이버 관리자에 게 표시 합니다. *Bufferlength* 에는 다음 값을 사용할 수 있습니다.  
   
--   * \*Valueptr* 이 문자열에 대 한 포인터인 경우 *bufferlength* 는 문자열의 길이입니다.  
+-   * \* Valueptr* 이 문자열에 대 한 포인터인 경우 *bufferlength* 는 문자열의 길이입니다.  
   
--   * \*Valueptr* 이 이진 버퍼에 대 한 포인터인 경우 응용 프로그램은 SQL_LEN_BINARY_ATTR (*길이*) 매크로의 결과를 *bufferlength*로 배치 합니다. 그러면 음수 값이 *Bufferlength*에 배치 됩니다.  
+-   * \* Valueptr* 이 이진 버퍼에 대 한 포인터인 경우 응용 프로그램은 SQL_LEN_BINARY_ATTR (*길이*) 매크로의 결과를 *bufferlength*로 배치 합니다. 그러면 음수 값이 *Bufferlength*에 배치 됩니다.  
   
--   * \*Valueptr* 이 문자열 또는 이진 문자열이 아닌 값에 대 한 포인터인 경우 *bufferlength* 의 값은 SQL_IS_POINTER 이어야 합니다.  
+-   * \* Valueptr* 이 문자열 또는 이진 문자열이 아닌 값에 대 한 포인터인 경우 *bufferlength* 의 값은 SQL_IS_POINTER 이어야 합니다.  
   
--   * \*Valueptr* 에 고정 길이 데이터 형식이 포함 된 경우 *bufferlength* 는 SQL_IS_INTEGER 또는 SQL_IS_UINTEGER입니다.  
+-   * \* Valueptr* 에 고정 길이 데이터 형식이 포함 된 경우 *bufferlength* 는 SQL_IS_INTEGER 또는 SQL_IS_UINTEGER입니다.  
   
  *StringLengthPtr*  
- 출력 \* *Valueptr*에서 반환 하는 데 사용할 수 있는 총 바이트 수 (null 종료 문자 제외)를 반환할 버퍼에 대 한 포인터입니다. \* *Valueptr* 이 null 포인터인 경우 길이가 반환 되지 않습니다. 특성 값이 문자열이 고 반환할 수 있는 바이트 수가 *버퍼 길이* 에서 null 종료 문자의 길이를 뺀 값 보다 큰 경우, 값 * \*eptr* 의 데이터는 *bufferlength* 에서 null 종료 문자의 길이를 뺀 값으로 잘리고 드라이버에 의해 null로 종료 됩니다.  
+ 출력 Valueptr에서 반환 하는 데 사용할 수 있는 총 바이트 수 (null 종료 문자 제외)를 반환할 버퍼에 대 한 포인터입니다 \* *ValuePtr*. \* *Valueptr* 이 null 포인터인 경우 길이가 반환 되지 않습니다. 특성 값이 문자열이 고 반환할 수 있는 바이트 수가 *버퍼 길이* 에서 null 종료 문자의 길이를 뺀 값 보다 큰 경우, 값 * \* Eptr* 의 데이터는 *bufferlength* 에서 null 종료 문자의 길이를 뺀 값으로 잘리고 드라이버에 의해 null로 종료 됩니다.  
   
 ## <a name="returns"></a>반환  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA, SQL_ERROR 또는 SQL_INVALID_HANDLE입니다.  
@@ -82,17 +83,17 @@ SQLRETURN SQLGetConnectAttr(
 ## <a name="diagnostics"></a>진단  
  **SQLGetConnectAttr** 가 SQL_ERROR 또는 SQL_SUCCESS_WITH_INFO를 반환 하는 경우 SQLGetDiagRec의 SQL_HANDLE_DBC *HandleType* 및 *ConnectionHandle* *핸들* 을 사용 하 여 **SQLGetDiagRec** 를 호출 함으로써 진단 데이터 구조에서 연결 된 SQLSTATE 값을 가져올 수 있습니다. 다음 표에서는 일반적으로 **SQLGetConnectAttr** 에서 반환 하는 SQLSTATE 값을 나열 하 고이 함수의 컨텍스트에서 각 값에 대해 설명 합니다. "(DM)" 표기법은 드라이버 관리자에서 반환 된 SQLSTATEs의 설명 보다 앞에 나옵니다. 다른 설명이 없는 한 각 SQLSTATE 값과 연결 된 반환 코드는 SQL_ERROR 됩니다.  
   
-|SQLSTATE|Error|Description|  
+|SQLSTATE|오류|설명|  
 |--------------|-----------|-----------------|  
 |01000|일반 경고|드라이버 관련 정보 메시지입니다. 함수는 SQL_SUCCESS_WITH_INFO를 반환 합니다.|  
-|01004|문자열 데이터, 오른쪽이 잘렸습니다.|\* *Valueptr* 에서 반환 된 데이터가 *bufferlength* 에서 null 종료 문자의 길이를 뺀 값으로 잘렸습니다. 잘리지 않는 문자열 값의 길이는 **StringLengthPtr*에서 반환 됩니다. 함수는 SQL_SUCCESS_WITH_INFO를 반환 합니다.|  
+|01004|문자열 데이터, 오른쪽이 잘렸습니다.|Valueptr에서 반환 된 데이터가 \* *ValuePtr* *bufferlength* 에서 null 종료 문자의 길이를 뺀 값으로 잘렸습니다. 잘리지 않는 문자열 값의 길이는 **StringLengthPtr*에서 반환 됩니다. 함수는 SQL_SUCCESS_WITH_INFO를 반환 합니다.|  
 |08003|연결이 열려 있지 않음|(DM) 열린 연결을 지정 해야 하는 *특성* 값입니다.|  
 |08S01|통신 연결 오류|드라이버가 연결 된 드라이버와 데이터 원본 간의 통신 연결이 함수 처리를 완료 하기 전에 실패 했습니다.|  
 |HY000|일반 오류|특정 SQLSTATE가 없고 구현 별 SQLSTATE가 정의 되지 않은 오류가 발생 했습니다. **SQLGetDiagField** 의 인수 *MessageText* 진단 데이터 구조에서 반환 되는 오류 메시지는 오류 및 해당 원인을 설명 합니다.|  
 |HY001|메모리 할당 오류|드라이버가 실행 또는 함수의 완료를 지 원하는 데 필요한 메모리를 할당할 수 없습니다.|  
 |HY010|함수 시퀀스 오류|(DM) **SQLBrowseConnect** 가 *ConnectionHandle* 에 대해 호출 되 고 SQL_NEED_DATA 반환 되었습니다. 이 함수는 **SQLBrowseConnect** 가 SQL_SUCCESS_WITH_INFO 또는 SQL_SUCCESS을 반환 하기 전에 호출 되었습니다.<br /><br /> (DM) **Sqlexecute**, **sqlexecdirect**또는 **SQLMoreResults** 가 *ConnectionHandle* 에 대해 호출 되 고 SQL_PARAM_DATA_AVAILABLE 반환 되었습니다. 이 함수는 모든 스트리밍된 매개 변수에 대 한 데이터를 검색 하기 전에 호출 되었습니다.|  
 |HY013|메모리 관리 오류|메모리 부족 상태로 인해 기본 메모리 개체에 액세스할 수 없기 때문에 함수 호출을 처리할 수 없습니다.|  
-|HY090|잘못 된 문자열 또는 버퍼 길이입니다.|( * \*DM)는 문자열 이며* bufferlength는 0 보다 작지만 SQL_NTS와 같지 않습니다.|  
+|HY090|잘못 된 문자열 또는 버퍼 길이입니다.|( *DM)는 문자열 이며 BufferLength \* 는* 0 보다 작지만 SQL_NTS와 같지 않습니다.|  
 |HY092|특성/옵션 식별자가 잘못 되었습니다.|인수 *특성* 에 지정 된 값이 드라이버에서 지원 되는 ODBC 버전에 적합 하지 않습니다.|  
 |HY114|드라이버가 연결 수준의 비동기 함수 실행을 지원 하지 않습니다.|(DM) 비동기 연결 작업을 지원 하지 않는 드라이버에 대 한 SQL_ATTR_ASYNC_DBC_FUNCTIONS_ENABLE를 사용 하 여 비동기 함수 실행을 사용 하도록 응용 프로그램을 시도 했습니다.|  
 |HY117|알 수 없는 트랜잭션 상태로 인해 연결이 일시 중단 되었습니다. 연결 끊기 및 읽기 전용 함수만 허용 됩니다.|(DM) 일시 중단 된 상태에 대 한 자세한 내용은 [Sqlendtran 함수](../../../odbc/reference/syntax/sqlendtran-function.md)를 참조 하세요.|  
@@ -125,6 +126,6 @@ SQLRETURN SQLGetConnectAttr(
 |환경 특성 설정|[SQLSetEnvAttr 함수](../../../odbc/reference/syntax/sqlsetenvattr-function.md)|  
 |문 특성 설정|[SQLSetStmtAttr 함수](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)|  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [ODBC API 참조](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 헤더 파일](../../../odbc/reference/install/odbc-header-files.md)

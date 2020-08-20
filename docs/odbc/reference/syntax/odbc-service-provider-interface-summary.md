@@ -1,4 +1,5 @@
 ---
+description: ODBC SPI(서비스 공급자 인터페이스) 요약
 title: ODBC 서비스 공급자 인터페이스 요약 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,17 +11,17 @@ ms.topic: conceptual
 ms.assetid: ace6085b-355b-435b-8734-503fc3c12ec2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b2f7e459cc7b89106bf1b7ebcd49c699d43da9f6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 00d15d33fba1e697eebbe6a640c4f8a4d8eadea7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298900"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487346"
 ---
 # <a name="odbc-service-provider-interface-summary"></a>ODBC SPI(서비스 공급자 인터페이스) 요약
 다음 표에서는 ODBC 서비스 공급자 인터페이스 함수에 대해 설명 합니다. 각 함수의 구문 및 의미 체계에 대 한 자세한 내용은 [SPI (ODBC 서비스 공급자 인터페이스) 참조](../../../odbc/reference/syntax/odbc-service-provider-interface-spi-reference.md)를 참조 하세요.  
   
-|함수 이름|목적|  
+|함수 이름|용도|  
 |-------------------|-------------|  
 |[SQLSetConnectAttrForDbcInfo](../../../odbc/reference/syntax/sqldatasourcetodriver-function.md)|[SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)와 동일 하지만 연결 핸들 대신 연결 정보 토큰에 대 한 특성을 설정 합니다.|  
 |[SQLSetDriverConnectInfo](../../../odbc/reference/syntax/sqldrivertodatasource-function.md)|응용 프로그램의 [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) 호출에 대 한 연결 정보 토큰으로 연결 문자열을 설정 합니다.|  

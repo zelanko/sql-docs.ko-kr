@@ -1,4 +1,5 @@
 ---
+description: 고유 인덱스 만들기
 title: 고유 인덱스 만들기 | Microsoft 문서
 ms.custom: ''
 ms.date: 02/17/2017
@@ -18,12 +19,12 @@ ms.assetid: 56b5982e-cb94-46c0-8fbb-772fc275354a
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f9b897de6d5d833a485e976592f5776972a212f6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 59ab82f18d59bd6a2f8df0c236cd44031b740ee1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760810"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486881"
 ---
 # <a name="create-unique-indexes"></a>고유 인덱스 만들기
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

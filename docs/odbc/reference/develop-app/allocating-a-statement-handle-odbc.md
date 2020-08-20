@@ -1,4 +1,5 @@
 ---
+description: 명령문 핸들 ODBC 할당
 title: 문 핸들을 할당 하는 중 ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 4ce3b446-34ab-46dc-96e5-f40ec95c267e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: bf9a15bc4622b15afa9838327edd90383a812270
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 624490beee55c7fa37346087fc85b560904f6b93
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81288433"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487546"
 ---
 # <a name="allocating-a-statement-handle-odbc"></a>명령문 핸들 ODBC 할당
 응용 프로그램은 문을 실행 하기 전에 다음과 같이 문 핸들을 할당 해야 합니다.  
   
-1.  응용 프로그램은 HSTMT 형식의 변수를 선언 합니다. 그런 다음 **SQLAllocHandle** 를 호출 하 고이 변수의 주소, 문을 할당할 연결의 핸들 및 SQL_HANDLE_STMT 옵션을 전달 합니다. 예를 들면 다음과 같습니다.  
+1.  응용 프로그램은 HSTMT 형식의 변수를 선언 합니다. 그런 다음 **SQLAllocHandle** 를 호출 하 고이 변수의 주소, 문을 할당할 연결의 핸들 및 SQL_HANDLE_STMT 옵션을 전달 합니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.  
   
     ```  
     SQLHSTMT hstmt1;  

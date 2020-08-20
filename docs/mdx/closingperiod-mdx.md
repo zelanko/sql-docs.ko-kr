@@ -1,4 +1,5 @@
 ---
+description: ClosingPeriod(MDX)
 title: ClosingPeriod (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 102485ede0e52389d43bdb64742a2564aaa71419
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f457a941c8967ce6f3c6700760ff95d5c2999d0f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68016795"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487636"
 ---
 # <a name="closingperiod-mdx"></a>ClosingPeriod(MDX)
 
@@ -50,7 +51,7 @@ ClosingPeriod( [ Level_Expression [ ,Member_Expression ] ] )
 > [!NOTE]  
 >  [OpeningPeriod](../mdx/openingperiod-mdx.md) 함수는 **OpeningPeriod** 함수가 마지막 형제 대신 첫 번째 형제를 반환 한다는 점을 제외 하 고 **ClosingPeriod** 함수와 유사 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 의미적으로 Time 형식인 Date 차원의 FY2007 멤버에 대한 기본 측정값의 값을 반환합니다. Fiscal Year 수준이 [All] 수준의 첫 번째 하위 항목이고, Fiscal 계층이 계층 컬렉션의 첫 번째 사용자 정의 계층이라서 해당 계층이 기본 계층이며, FY 2007 멤버가 이 계층에서 이 수준의 마지막 형제이므로 이 멤버가 반환됩니다.  
   
 ```  

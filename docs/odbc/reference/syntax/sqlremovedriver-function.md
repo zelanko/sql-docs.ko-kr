@@ -1,4 +1,5 @@
 ---
+description: SQLRemoveDriver 함수
 title: SQLRemoveDriver 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,19 +20,19 @@ helpviewer_keywords:
 ms.assetid: 9a3b4f8b-982b-44b9-ade6-754ff026dc90
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 205c5b46e5f6cea195094f7a50e81d7509927d1a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 503fadfae168a2fc7259cd0507b283563d681bf7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303934"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487071"
 ---
 # <a name="sqlremovedriver-function"></a>SQLRemoveDriver 함수
 **규칙**  
  소개 된 버전: ODBC 3.0  
   
  **요약**  
- **SQLRemoveDriver** 시스템 정보의 odbcinst.ini 항목에서 드라이버에 대 한 정보를 변경 하거나 제거 합니다.  
+ **SQLRemoveDriver** 시스템 정보의 Odbcinst.ini 항목에서 드라이버에 대 한 정보를 변경 하거나 제거 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -59,9 +60,9 @@ BOOL SQLRemoveDriver(
  이 함수는 성공 하면 TRUE를 반환 하 고 실패 하면 FALSE를 반환 합니다. 이 함수가 호출 될 때 시스템 정보에 항목이 없으면 함수는 FALSE를 반환 합니다.  
   
 ## <a name="diagnostics"></a>진단  
- **SQLRemoveDriver** 가 FALSE를 반환 하면 **SQLInstallerError**을 호출 하 여 연결 된 * \*pfErrorCode* 값을 얻을 수 있습니다. 다음 표에서는 **SQLInstallerError** 에서 반환 될 수 있는 * \*pfErrorCode* 값을 나열 하 고이 함수의 컨텍스트에서 각 값에 대해 설명 합니다.  
+ **SQLRemoveDriver** 가 FALSE를 반환 하면 **SQLInstallerError**을 호출 하 여 연결 된 * \* pfErrorCode* 값을 얻을 수 있습니다. 다음 표에서는 **SQLInstallerError** 에서 반환 될 수 있는 * \* pfErrorCode* 값을 나열 하 고이 함수의 컨텍스트에서 각 값에 대해 설명 합니다.  
   
-|*\*pfErrorCode*|Error|Description|  
+|*\*pfErrorCode*|오류|설명|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|일반 설치 관리자 오류|특정 설치 관리자 오류가 없는 오류가 발생 했습니다.|  
 |ODBC_ERROR_COMPONENT_NOT_FOUND|레지스트리에서 구성 요소를 찾을 수 없음|레지스트리에 없거나 레지스트리에서 찾을 수 없기 때문에 설치 관리자가 드라이버 정보를 제거할 수 없습니다.|  

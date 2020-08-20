@@ -1,4 +1,5 @@
 ---
+description: 보안 개요(Integration Services)
 title: 보안 개요(Integration Services) | Microsoft Docs
 ms.custom: security
 ms.date: 03/14/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 01aa0b88-d477-4581-9a3b-2efc3de2b133
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b4abc0de87f8dc11fbbd1d66b32b2eb9a0f6f2b9
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 9e45f6fc97531038c7d1d16c34eb18fc19d189cb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922035"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487688"
 ---
 # <a name="security-overview-integration-services"></a>보안 개요(Integration Services)
 

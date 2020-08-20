@@ -1,4 +1,5 @@
 ---
+description: 트랜잭션 격리
 title: 트랜잭션 격리 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 351bfe5c-3b26-4010-9b9c-22e796135f3b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 11ece337b06632df82d81dbbc058ff120f25adb4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: becee73d73ed2facfda46c8b034bdec9dee29d6c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298025"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487466"
 ---
 # <a name="transaction-isolation"></a>트랜잭션 격리
 *트랜잭션 격리* 는 여러 동시 트랜잭션 간의 상호 작용 수준을 나타냅니다. 이것이 중요 한 이유를 확인 하려면 먼저 순차성 아이디어를 확인 해야 합니다.  

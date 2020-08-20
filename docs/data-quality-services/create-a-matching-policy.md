@@ -1,4 +1,5 @@
 ---
+description: 일치 정책 만들기
 title: 일치 정책 만들기
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ f1_keywords:
 ms.assetid: cce77a06-ca31-47b6-8146-22edf001d605
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: c18d8d44bb595e4bfaad66296331d8dab403535e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a899d2117cf3999e93fc95628b6cccea1bbbde1c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881959"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487915"
 ---
 # <a name="create-a-matching-policy"></a>일치 정책 만들기
 
@@ -62,7 +63,7 @@ ms.locfileid: "85881959"
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Data Quality Client 응용 프로그램을 실행](../data-quality-services/run-the-data-quality-client-application.md)합니다.  
   
-2.  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 홈 화면에서 **새 기술 자료** 를 클릭하여 새 기술 자료에 일치 정책을 만듭니다. 기술 자료의 이름과 설명을 입력하고 원하는 대로 **기술 자료 만들기** 를 설정합니다. 작업에 대해 **일치 정책** 을 클릭합니다. **다음**을 클릭하여 계속합니다.  
+2.  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 홈 화면에서 **새 기술 자료** 를 클릭하여 새 기술 자료에 일치 정책을 만듭니다. 기술 자료의 이름과 설명을 입력하고 원하는 대로 **기술 자료 만들기** 를 설정합니다. 작업에 대해 **일치 정책** 을 클릭합니다. **다음** 을 클릭하여 진행합니다.  
   
 3.  **기술 자료 열기** 를 클릭하여 기존 기술 자료에서 일치 정책을 만들거나 수정합니다. 기술 자료를 선택한 다음 **일치 정책**을 선택하고 **다음**을 클릭합니다. **최근 기술 자료**에서 기술 자료를 클릭할 수도 있습니다. 일치 정책에서 작업 중일 때 닫은 기술 자료를 연 경우 일치 정책 작업이 닫힌 단계( **최신 기술 자료** 아래의 기술 자료 이름 또는 기술 자료 테이블의 해당 기술 자료에 대한 **상태**열에 표시된 단계)로 이동합니다. 일치 정책이 포함되어 있고 완료된 기술 자료를 연 경우 **일치 정책** 페이지로 이동합니다. 일치 정책이 포함되어 있지 않고 완료된 기술 자료를 연 경우 **매핑** 페이지로 이동합니다.  
   

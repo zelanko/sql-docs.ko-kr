@@ -1,4 +1,5 @@
 ---
+description: 데이터 품질 프로젝트 만들기
 title: 데이터 품질 프로젝트 만들기
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 19c52d2b-d28e-4449-ab59-5fe0dc326cd9
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 33e719fb9db8f51df9b79569df778429e3051984
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 62dd18cb55aa57b95ab325b3e48d1ec618bd75c5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900462"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487972"
 ---
 # <a name="create-a-data-quality-project"></a>데이터 품질 프로젝트 만들기
 
@@ -37,7 +38,7 @@ ms.locfileid: "85900462"
 ####  <a name="permissions"></a><a name="Permissions"></a> 권한  
  데이터 품질 프로젝트를 만들려면 DQS_MAIN 데이터베이스에 대한 dqs_kb_editor 또는 dqs_kb_operator 역할이 있어야 합니다.  
   
-##  <a name="create-a-data-quality-project"></a><a name="Create"></a>데이터 품질 프로젝트 만들기  
+##  <a name="create-a-data-quality-project"></a><a name="Create"></a> 데이터 품질 프로젝트 만들기  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Data Quality Client 응용 프로그램을 실행](../data-quality-services/run-the-data-quality-client-application.md)합니다.  
   
