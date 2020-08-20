@@ -1,4 +1,5 @@
 ---
+description: SQLFreeConnect(Visual FoxPro ODBC 드라이버)
 title: SQLFreeConnect (Visual FoxPro ODBC 드라이버) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5ecfbbed-43f6-4875-a6a7-732f36431e91
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 06810ba9ac7086a6c9fdd59f8183cdca5f66db5b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cf6eeb677ac805bea94a74b771e2aad08d1f4d81
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81292853"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500216"
 ---
 # <a name="sqlfreeconnect-visual-foxpro-odbc-driver"></a>SQLFreeConnect(Visual FoxPro ODBC 드라이버)
 > [!NOTE]  

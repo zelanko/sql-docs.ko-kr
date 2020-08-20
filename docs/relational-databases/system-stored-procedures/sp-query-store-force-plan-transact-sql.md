@@ -22,17 +22,18 @@ ms.assetid: 0068f258-b998-4e4e-b47b-e375157c8213
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3aa708d4af93449e2efe3d26cb9b92496c497942
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 91ecfae192c0af671961120e4cd2efbf6cac36b0
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88493065"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88646263"
 ---
 # <a name="sp_query_store_force_plan-transact-sql"></a>sp_query_store_force_plan (Transact-sql)
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
-  특정 쿼리에 대해 특정 계획을 강제로 적용할 수 있습니다.  
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
+
+특정 쿼리에 대해 특정 계획을 강제로 적용할 수 있습니다.  
   
  특정 쿼리에 대해 계획을 강제 적용 하는 경우 쿼리를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 발견할 때마다 쿼리 최적화 프로그램에서 계획을 강제로 적용 하려고 시도 합니다. 계획 강제 적용에 실패 하는 경우 확장 이벤트가 발생 하 고 쿼리 최적화 프로그램은 일반적인 방식으로 최적화 하도록 지시 됩니다.  
   
@@ -75,7 +76,7 @@ JOIN sys.query_store_query_text AS Txt
 EXEC sp_query_store_force_plan 3, 3;  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [sp_query_store_remove_plan &#40;Transct-sql&-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-plan-transct-sql.md)   
  [Transact-sql&#41;sp_query_store_remove_query &#40;](../../relational-databases/system-stored-procedures/sp-query-store-remove-query-transact-sql.md)   
  [Transact-sql&#41;sp_query_store_unforce_plan &#40;](../../relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql.md)   

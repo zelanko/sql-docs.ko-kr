@@ -1,4 +1,5 @@
 ---
+description: Qtd(MDX)
 title: Qtd (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 7a8856b28d8eec76d2bc262c4209b007c0a7fa04
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ea3bd80fa85d95dd3adf52793d5895425b40b9fe
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68020643"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500456"
 ---
 # <a name="qtd-mdx"></a>Qtd(MDX)
 
@@ -37,7 +38,7 @@ Qtd( [ Member_Expression ] )
  **Qtd** 함수는 수준 식 인수가 *Quarter*로 설정 된 [PeriodsToDate &#40;MDX&#41;](../mdx/periodstodate-mdx.md) 함수에 대 한 바로 가기 함수입니다. 즉, `Qtd(Member_Expression)`은 `PeriodsToDate(Quarter_Level_Expression, Member_Expression)`과 동일합니다.  
   
 ## <a name="example"></a>예제  
- 다음 예에서는 **놀이 Works** 큐브에서 `Date` 차원에 `Measures.[Order Quantity]` 포함 되어 있는 2003 년 3 분기의 처음 2 개월 동안 집계 된 멤버의 합계를 반환 합니다.  
+ 다음 예에서는 `Measures.[Order Quantity]` `Date` **놀이 Works** 큐브에서 차원에 포함 되어 있는 2003 년 3 분기의 처음 2 개월 동안 집계 된 멤버의 합계를 반환 합니다.  
   
 ```  
 WITH MEMBER [Date].[Calendar].[First2MonthsSecondSemester2003] AS  

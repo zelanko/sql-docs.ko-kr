@@ -1,4 +1,5 @@
 ---
+description: 사용자 지정 워크플로 만들기 - 예제
 title: 사용자 지정 워크플로 예제
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: reference
 ms.assetid: dfd1616c-a75c-4f32-bdb1-7569e367bf41
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 404fab4ed966fd8b29bc4160e7a7d721dd6397e7
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 4c04e5da6a1e6ddb09f27613888c872ca7e94df6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923091"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500633"
 ---
 # <a name="create-a-custom-workflow---example"></a>사용자 지정 워크플로 만들기 - 예제
 
@@ -24,7 +25,7 @@ ms.locfileid: "86923091"
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]에서 사용자 지정 워크플로 클래스 라이브러리를 만들면 Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender 인터페이스를 구현하는 클래스를 만듭니다. 이 인터페이스에는 워크플로가 시작 될 때 MDS 워크플로 통합 서비스 SQL Server에서 호출 하는 [MasterDataServices](/previous-versions/sql/sql-server-2016/hh759009(v=sql.130)) 메서드 하나가 포함 되어 있습니다. [MasterDataServices](/previous-versions/sql/sql-server-2016/hh759009(v=sql.130)) 에는 두 개의 매개 변수가 포함 됩니다. *workflowType* 에는의 **워크플로 유형** 텍스트 상자에 입력 한 텍스트가 포함 되 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 고 *dataelement* 에는 워크플로 비즈니스 규칙을 트리거한 항목에 대 한 메타 데이터 및 항목 데이터가 포함 됩니다.  
   
 ## <a name="custom-workflow-example"></a>사용자 지정 워크플로 예제  
- 다음 코드 예제에서는 [MasterDataServices 워크플로 *](/previous-versions/sql/sql-server-2016/hh759009(v=sql.130)) 메서드를 구현 하 여 워크플로 비즈니스 규칙을 트리거한 요소의 XML 데이터에서 Name, Code 및 LastChgUserName 특성을 추출 하는 방법 및 저장 프로시저를 호출 하 여 다른 데이터베이스에 삽입 하는 방법을 보여 줍니다. 항목 데이터 XML의 예와 항목 데이터 XML에 포함되는 태그에 대한 설명은 [사용자 지정 워크플로 XML 설명&#40;Master Data Services&#41;](../../master-data-services/develop/create-a-custom-workflow-xml-description.md)을 참조하십시오.  
+ 다음 코드 예제에서는 [MasterDataServices 워크플로 *](/previous-versions/sql/sql-server-2016/hh759009(v=sql.130))  메서드를 구현 하 여 워크플로 비즈니스 규칙을 트리거한 요소의 XML 데이터에서 Name, Code 및 LastChgUserName 특성을 추출 하는 방법 및 저장 프로시저를 호출 하 여 다른 데이터베이스에 삽입 하는 방법을 보여 줍니다. 항목 데이터 XML의 예와 항목 데이터 XML에 포함되는 태그에 대한 설명은 [사용자 지정 워크플로 XML 설명&#40;Master Data Services&#41;](../../master-data-services/develop/create-a-custom-workflow-xml-description.md)을 참조하십시오.  
   
 ```csharp  
 using System;  

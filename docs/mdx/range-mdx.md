@@ -1,4 +1,5 @@
 ---
+description: ': (범위) (MDX)'
 title: ': (범위) (MDX) | Microsoft Docs'
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 6afc3a73b958062bd6472153b2452bc0e3fa6cfc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d52a78a1fcdefa4ee7bf09fa4125b488165e09c4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68020624"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500466"
 ---
 # <a name="-range-mdx"></a>: (범위) (MDX)
 
@@ -31,7 +32,7 @@ Member_Expression : Member_Expression
  *Member_Expression*  
  멤버를 반환하는 유효한 MDX 식입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
  지정된 멤버를 포함하는 집합과 지정된 멤버 사이의 모든 멤버입니다.  
   
 ## <a name="remarks"></a>설명  
@@ -39,7 +40,7 @@ Member_Expression : Member_Expression
   
  MDX에는 이 집합 연산자에 해당하는 기능이 없습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 이 연산자의 사용 방법을 보여 줍니다.  
   
 ```  

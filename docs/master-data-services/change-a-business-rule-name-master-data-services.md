@@ -1,4 +1,5 @@
 ---
+description: 비즈니스 규칙 이름 변경(Master Data Services)
 title: 비즈니스 규칙 이름 변경
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: cffcae43-a208-443f-9f43-a0ec9e05f79c
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 9de8fba3f5a9ba04cccf475ed4a1ebcef1dced74
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: c575f408d0682554eb3ead69e3915d226d4975b0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813647"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500723"
 ---
 # <a name="change-a-business-rule-name-master-data-services"></a>비즈니스 규칙 이름 변경(Master Data Services)
 
@@ -25,7 +26,7 @@ ms.locfileid: "85813647"
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서는 할당된 이름이 비즈니스 요구에 맞지 않으면 비즈니스 규칙 이름을 변경할 수 있습니다.  
   
-## <a name="prerequisites"></a>전제 조건  
+## <a name="prerequisites"></a>사전 요구 사항  
  이 절차를 수행하려면  
   
 -   **시스템 관리** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  
@@ -50,7 +51,7 @@ ms.locfileid: "85813647"
   
 7.  비즈니스 규칙의 새 이름을 입력합니다.  
   
-8.  **Save**을 클릭합니다.  
+8.  **저장**을 클릭합니다.  
   
 9. **모두 게시**를 클릭합니다.  
   

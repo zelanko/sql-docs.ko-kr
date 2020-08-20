@@ -1,4 +1,5 @@
 ---
+description: ODBC Jet SQLConfigDataSource(Excel 드라이버)
 title: ODBC Jet SQLConfigDataSource (Excel 드라이버) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 885b3bea-f4b6-4902-b994-f78a912b612f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a76482acd1182d900336d7ac9826b16968e00caa
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 61fcc1e7df00f14a7b92e294262b7806382a3d52
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81293013"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500306"
 ---
 # <a name="odbc-jet-sqlconfigdatasource-excel-driver"></a>ODBC Jet SQLConfigDataSource(Excel 드라이버)
 > [!NOTE]  

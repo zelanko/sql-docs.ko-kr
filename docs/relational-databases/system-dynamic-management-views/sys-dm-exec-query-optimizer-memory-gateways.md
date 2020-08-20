@@ -20,14 +20,16 @@ helpviewer_keywords:
 author: josack
 ms.author: josack
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: da47c1b31551abd538adca6a447ac57a3fc429ff
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 3da92fb6d489bd8ca09c65e267f67dca75d8c01a
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005195"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88646403"
 ---
 # <a name="sysdm_exec_query_optimizer_memory_gateways-transact-sql"></a>sys. dm_exec_query_optimizer_memory_gateways (Transact-sql)
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
+
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
 동시 쿼리 최적화를 제한 하는 데 사용 되는 리소스 세마포에 대 한 현재 상태를 반환 합니다.
 
@@ -43,7 +45,7 @@ ms.locfileid: "86005195"
 |**is_active**|**bit**|쿼리가 현재 게이트를 전달 하는 데 필요한 지 여부를 나타냅니다.|
 
 
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
 SQL Server 서버에 대 한 VIEW SERVER STATE 권한이 필요 합니다.
 
 Azure SQL Database 데이터베이스에 대 한 VIEW DATABASE STATE 권한이 필요 합니다.
@@ -54,7 +56,7 @@ SQL Server는 계층화 된 게이트웨이 방법을 사용 하 여 허용 되�
 
 지연 된 컴파일이 발생 하면 게이트웨이를 대기 합니다. 컴파일 지연 외에도 제한 된 요청에는 연결 된 RESOURCE_SEMAPHORE_QUERY_COMPILE 대기 유형이 누적 됩니다. RESOURCE_SEMAPHORE_QUERY_COMPILE 대기 유형은 쿼리가 많은 양의 메모리를 컴파일하기 위해 사용 중이거나 메모리가 고갈 되었거나 전체적으로 사용 가능한 충분 한 메모리가 있지만 특정 게이트웨이에서 사용 가능한 단위가 모두 사용 되었음을 나타낼 수 있습니다. **Dm_exec_query_optimizer_memory_gateways** 의 출력을 사용 하 여 쿼리 실행 계획을 컴파일하는 데 필요한 메모리가 부족 한 시나리오를 해결할 수 있습니다.  
 
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
 
 ### <a name="a-viewing-statistics-on-resource-semaphores"></a>A. 리소스 세마포에 대 한 통계 보기  
 이 SQL Server 인스턴스에 대 한 현재 최적화 프로그램 메모리 게이트웨이 통계는 무엇 인가요?
@@ -67,8 +69,8 @@ FROM sys.dm_exec_query_optimizer_memory_gateways;
 
 ```  
 
-## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;동적 관리 뷰 및 함수](./system-dynamic-management-views.md)   
+## <a name="see-also"></a>관련 항목  
+ [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](./system-dynamic-management-views.md)   
  [실행 관련 동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](./execution-related-dynamic-management-views-and-functions-transact-sql.md)  
 [DBCC MEMORYSTATUS 명령을 사용 하 여 SQL Server 2005의 메모리 사용량을 모니터링 하는 방법](https://support.microsoft.com/help/907877/how-to-use-the-dbcc-memorystatus-command-to-monitor-memory-usage-on-sql-server-2005) 
  [SQL Server 2014의 RESOURCE_SEMAPHORE_QUERY_COMPILE에 대 한 대량 쿼리 컴파일 대기](https://support.microsoft.com/help/3024815/large-query-compilation-waits-on-resource-semaphore-query-compile-in-sql-server-2014)

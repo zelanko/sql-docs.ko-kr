@@ -1,4 +1,5 @@
 ---
+description: Open 메서드(ADO 레코드 집합)
 title: Open 메서드 (ADO 레코드 집합) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3236749c-4b71-4235-89e2-ccdfaaa9319d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8a091a606cf3049c055794bc16cc51db78a40978
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: d8a4514e677b2b50effdadd2eac24c9f195a1f07
+ms.sourcegitcommit: 291ae8f6b72fd355f8f24ce5300339306293ea7e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762181"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88512259"
 ---
 # <a name="open-method-ado-recordset"></a>Open 메서드(ADO 레코드 집합)
 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체에 대 한 커서를 엽니다.  
@@ -34,20 +35,20 @@ recordset.Open Source, ActiveConnection, CursorType, LockType, Options
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- *소스*  
- (선택 사항) 유효한 [명령](../../../ado/reference/ado-api/command-object-ado.md) 개체, SQL 문, 테이블 이름, 저장 프로시저 호출, URL 또는 영구적으로 저장 된 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)을 포함 하는 파일 또는 [스트림](../../../ado/reference/ado-api/stream-object-ado.md) 개체의 이름으로 계산 되는 **Variant** 입니다.  
+ *원본*  
+ 선택 사항입니다. 유효한 [명령](../../../ado/reference/ado-api/command-object-ado.md) 개체, SQL 문, 테이블 이름, 저장 프로시저 호출, URL 또는 영구적으로 저장 된 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)을 포함 하는 파일 또는 [스트림](../../../ado/reference/ado-api/stream-object-ado.md) 개체의 이름으로 계산 되는 **Variant** 입니다.  
   
  *ActiveConnection*  
- (선택 사항) 유효한 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체 변수 이름으로 계산 되는 **변형** 이거나, [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) 매개 변수를 포함 하는 **문자열** 입니다.  
+ 선택 사항입니다. 유효한 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체 변수 이름으로 계산 되는 **변형** 이거나, [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) 매개 변수를 포함 하는 **문자열** 입니다.  
   
  *CursorType*  
- (선택 사항) **레코드 집합**을 열 때 공급자가 사용 해야 하는 커서의 유형을 결정 하는 [CursorTypeEnum](../../../ado/reference/ado-api/cursortypeenum.md) 값입니다. 기본값은 **Adopenforwardonly**입니다.  
+ 선택 사항입니다. **레코드 집합**을 열 때 공급자가 사용 해야 하는 커서의 유형을 결정 하는 [CursorTypeEnum](../../../ado/reference/ado-api/cursortypeenum.md) 값입니다. 기본값은 **Adopenforwardonly**입니다.  
   
  *LockType*  
- (선택 사항) **레코드 집합**을 열 때 공급자가 사용 해야 하는 잠금 유형 (동시성)을 결정 하는 [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md) 값입니다. 기본값은 **Adlockreadonly**입니다.  
+ 선택 사항입니다. **레코드 집합**을 열 때 공급자가 사용 해야 하는 잠금 유형 (동시성)을 결정 하는 [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md) 값입니다. 기본값은 **Adlockreadonly**입니다.  
   
- *Options*  
- (선택 사항) 공급자가 **명령** 개체 이외의 항목을 나타내거나 이전에 저장 된 파일에서 **레코드 집합** 을 복원 해야 하는 경우에 *소스* 인수를 평가 하는 방법을 나타내는 **Long** 값입니다. 비트 OR 연산자와 함께 사용할 수 있는 하나 이상의 [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) 또는 [executeto 열거형](../../../ado/reference/ado-api/executeoptionenum.md) 값이 될 수 있습니다.  
+ *옵션*  
+ 선택 사항입니다. 공급자가 **명령** 개체 이외의 항목을 나타내거나 이전에 저장 된 파일에서 **레코드 집합** 을 복원 해야 하는 경우에 *소스* 인수를 평가 하는 방법을 나타내는 **Long** 값입니다. 비트 OR 연산자와 함께 사용할 수 있는 하나 이상의 [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) 또는 [executeto 열거형](../../../ado/reference/ado-api/executeoptionenum.md) 값이 될 수 있습니다.  
   
 > [!NOTE]
 >  지속형 **레코드 집합**을 포함 하는 **스트림에서** **레코드 집합** 을 여는 경우 **Adasyncfetchnonblocking** 의 [executeoptionenum](../../../ado/reference/ado-api/executeoptionenum.md) 값을 사용 하면 아무런 효과가 없습니다. fetch는 동기식 이며 차단 됩니다.  
@@ -60,7 +61,7 @@ recordset.Open Source, ActiveConnection, CursorType, LockType, Options
   
  **레코드 집합** 개체에 대해 **Open** 메서드를 사용 하면 기본 테이블의 레코드, 쿼리 결과 또는 이전에 저장 된 **레코드 집합**을 나타내는 커서가 열립니다.  
   
- 선택적 *source* 인수를 사용 하 여 **명령** 개체 변수, SQL 문, 저장 프로시저, 테이블 이름, URL 또는 전체 파일 경로 이름 중 하나를 사용 하 여 데이터 원본을 지정할 수 있습니다. *Source* 가 파일 경로 이름인 경우 전체 경로 ("c:\dir\file.rst"), 상대 경로 (".. \file.rst ") 또는 URL (" <https://files/file.rst> ")이 있습니다.  
+ 선택적 *source* 인수를 사용 하 여 **명령** 개체 변수, SQL 문, 저장 프로시저, 테이블 이름, URL 또는 전체 파일 경로 이름 중 하나를 사용 하 여 데이터 원본을 지정할 수 있습니다. *Source* 가 파일 경로 이름인 경우 전체 경로 ("c:\dir\file.rst"), 상대 경로 (".. \file.rst ") 또는 URL ()이 `https://files/file.rst` 있습니다.  
   
  호출의 성공 여부를 쉽게 확인할 수 있는 방법이 없기 때문에 레코드를 반환 하지 않는 작업 쿼리를 수행 하는 데 **Open** 메서드의 *Source* 인수를 사용 하는 것은 좋지 않습니다. 이러한 쿼리에서 반환 되는 **레코드 집합** 은 닫힙니다. SQL INSERT 문과 같이 레코드를 반환 하지 않는 쿼리를 수행 하려면 대신 **Command** 개체의 [Execute](../../../ado/reference/ado-api/execute-method-ado-command.md) 메서드 또는 [Connection](../../../ado/reference/ado-api/connection-object-ado.md) 개체의 [execute](../../../ado/reference/ado-api/execute-method-ado-connection.md) 메서드를 호출 합니다.  
   
@@ -104,7 +105,7 @@ recordset.Open Source, ActiveConnection, CursorType, LockType, Options
 ## <a name="applies-to"></a>적용 대상  
  [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [Open 및 Close 메서드 예제 (VB)](../../../ado/reference/ado-api/open-and-close-methods-example-vb.md)   
  [Open 및 Close 메서드 예제 (VBScript)](../../../ado/reference/ado-api/open-and-close-methods-example-vbscript.md)   
  [Open 및 Close 메서드 예제 (VC + +)](../../../ado/reference/ado-api/open-and-close-methods-example-vc.md)   

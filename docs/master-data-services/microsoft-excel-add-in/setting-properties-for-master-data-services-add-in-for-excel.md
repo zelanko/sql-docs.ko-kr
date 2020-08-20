@@ -1,4 +1,5 @@
 ---
+description: Excel용 Master Data Services 추가 기능의 속성 설정
 title: 속성 설정
 ms.custom: microsoft-excel-add-in, seo-lt-2019
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: cab1c662-5d40-4c16-9f5c-36ff9608810b
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: c0a4778ae941b22bf362d926881b1cd3ba806059
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: b790b0f733a862f93249ecf85490d914e8e8d3b0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87361803"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500566"
 ---
 # <a name="setting-properties-for-master-data-services-add-in-for-excel"></a>Excel용 Master Data Services 추가 기능의 속성 설정
 
@@ -27,7 +28,7 @@ ms.locfileid: "87361803"
   
 ## <a name="excel-add-in-settings"></a>Excel 추가 기능 설정  
   
-|탭 및 섹션|설정|Description|  
+|탭 및 섹션|설정|설명|  
 |-|-|-|  
 |설정: 게시|게시할 때 **게시 및 주석** 대화 상자 표시|**게시** 를 클릭한 후 모든 변경 내용에 대한 단일 주석을 입력하거나 각 변경 내용에 대한 개별 주석을 입력할 수 있도록 **게시 및 주석**대화 상자를 표시하려면 선택합니다.<br /><br /> **게시 및 주석** 대화 상자를 표시하지 않고 게시 프로세스가 시작되도록 지정하려면 선택을 취소합니다. 이 경우 주석을 입력할 수 없습니다.|  
 |설정: 버전|버전 선택|Excel 추가 기능으로 로드할 마스터 데이터의 버전을 선택합니다. 다음 값 중 하나일 수 있습니다.<br /><br /> **없음** 은 기본 버전을 설정하지 않습니다.<br /><br /> **내림차순** 은 가장 오래된 버전을 기본값으로 설정하고, **오름차순** 은 최신 버전을 기본값으로 설정합니다.|  

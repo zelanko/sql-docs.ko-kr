@@ -1,4 +1,5 @@
 ---
+description: 날짜 및 시간 함수(Visual FoxPro ODBC 드라이버)
 title: 시간 및 날짜 함수 (Visual FoxPro ODBC 드라이버) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: c1fb63b7-af50-45d6-8dec-ae6ea7119527
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 86260f8e7245bed15122d4dbfc4649131674e17f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d537411481a8bc6c9065e8e86c216c8c0637e565
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303064"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500076"
 ---
 # <a name="time-and-date-functions-visual-foxpro-odbc-driver"></a>날짜 및 시간 함수(Visual FoxPro ODBC 드라이버)
 다음 표에서는 Visual FoxPro ODBC 드라이버에서 지 원하는 ODBC 시간 및 날짜 함수를 보여 줍니다. 동일한 함수에 대 한 Visual FoxPro 문법이 ODBC 구문과 다를 경우 Visual FoxPro와 동일한 항목이 나열 됩니다.  

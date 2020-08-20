@@ -1,4 +1,5 @@
 ---
+description: 'C에서 SQL로: GUID'
 title: 'C에서 SQL로: GUID | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9168b0b6-a828-4fef-b8cd-bdf439776f23
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b3b559499273e885e23da10d9093a0ce9ff92393
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3fca2ba20df65222eaf1ce6f4384f449a1524334
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306624"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499986"
 ---
 # <a name="c-to-sql-guid"></a>C에서 SQL로: GUID
 GUID ODBC C 데이터 형식에 대 한 식별자는 다음과 같습니다.  

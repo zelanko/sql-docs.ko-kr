@@ -1,4 +1,5 @@
 ---
+description: 식별자 제한 사항
 title: 식별자 제한 사항 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b3466382-71cb-4f82-8318-092a8fcef3df
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7154f2db09b69e6376b1fe3af1de3f2c646ee94e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f5efaba8fa73f61082be8d7cd8dca78626a9f972
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81286253"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500346"
 ---
 # <a name="identifiers-limitations"></a>식별자 제한 사항
 식별자에 공백이 나 특수 기호가 포함 된 경우에는 식별자를 큰따옴표로 묶어야 합니다. 유효한 이름은 64 자 미만의 문자열 이며, 첫 번째 문자는 공백이 아니어야 합니다. 올바른 이름은 ' &#124; # *?와 같은 특수 문자를 포함할 수 없습니다. [ ] . ! $ .  

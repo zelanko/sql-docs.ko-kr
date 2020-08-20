@@ -1,4 +1,5 @@
 ---
+description: 튜플 함수 사용
 title: 튜플 함수 사용 | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 9a329c8786ce580469e4601709509ca8a2de73f6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d858fa6e67712a6ab93608dae20a15dca629c01e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68037982"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500496"
 ---
 # <a name="using-tuple-functions"></a>튜플 함수 사용
 
@@ -22,7 +23,7 @@ ms.locfileid: "68037982"
   
  튜플 함수는 멤버 함수 및 집합 함수와 마찬가지로 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에서 사용되는 다차원 구조를 처리하는 데 필수적입니다.  
   
- Mdx에는 세 가지 튜플 함수, [현재 &#40;mdx&#41;](../mdx/current-mdx.md), [항목 &#40;튜플&#41; &#40;Mdx](../mdx/item-tuple-mdx.md)&#41;및 [strtotuple &#40;mdx&#41;](../mdx/strtotuple-mdx.md)있습니다. 다음 예제 쿼리에서는 이러한 각 튜플 함수를 사용하는 방법을 보여 줍니다.  
+ Mdx에는 세 가지 튜플 함수, [현재 &#40;mdx&#41;](../mdx/current-mdx.md), [항목 &#40;튜플&#41; &#40;Mdx ](../mdx/item-tuple-mdx.md)&#41;및 [strtotuple &#40;mdx&#41;](../mdx/strtotuple-mdx.md)있습니다. 다음 예제 쿼리에서는 이러한 각 튜플 함수를 사용하는 방법을 보여 줍니다.  
   
  `WITH`  
   

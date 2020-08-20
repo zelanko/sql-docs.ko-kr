@@ -23,21 +23,22 @@ ms.assetid: a5c4d5b8-5a24-4a2d-99b4-d003b546ee3a
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e0308664a32b75e51b3f7a92a72d8fe5295b22ad
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 05be8467516ff84c45268357eb6ab743d5599a05
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489010"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88645114"
 ---
 # <a name="system-stored-procedures-transact-sql"></a>시스템 저장 프로시저(Transact-SQL)
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
+
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서는 시스템 저장 프로시저를 통해 다양한 관리 및 정보 작업 수행할 수 있습니다. 시스템 저장 프로시저는 다음 표에 표시된 범주별로 그룹화됩니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
   
-|범주|설명|  
+|범주|Description|  
 |--------------|-----------------|  
 |[활성 지역 복제 저장 프로시저](https://msdn.microsoft.com/library/81658ee4-4422-4d73-bf7a-86a07422cb0d)|Azure SQL Database에서 활성 지역 복제 구성을 관리 하는 데 사용 됩니다.|  
 |[카탈로그 저장 프로시저](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)|ODBC 데이터 사전 기능을 구현하고 ODBC 애플리케이션을 원본 시스템 테이블 변경으로부터 격리합니다.|  

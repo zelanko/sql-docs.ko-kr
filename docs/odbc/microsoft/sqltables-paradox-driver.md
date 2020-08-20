@@ -1,4 +1,5 @@
 ---
+description: SQLTables(Paradox 드라이버)
 title: SQLTables (Paradox 드라이버) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d68adad6-97bd-4b47-bcf9-0102aafb00d4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: aa13b5395d8f3c2cb470a4eff1b1ef02a43bad53
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5da80e16a63431bd7a0ddf46c2efaa236ecefd3e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299292"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500136"
 ---
 # <a name="sqltables-paradox-driver"></a>SQLTables(Paradox 드라이버)
 > [!NOTE]  

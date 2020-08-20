@@ -1,4 +1,5 @@
 ---
+description: 비즈니스 규칙 조건(Master Data Services)
 title: 비즈니스 규칙 조건
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: d2e0a8c3-4c2e-407c-856e-68d95ebda9ed
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 4849b2f16c691db08766ca451673d0960ee69222
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 5d6894fa23743581be1b8c87f8dd4c9e5d7b799c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813715"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500823"
 ---
 # <a name="business-rule-conditions-master-data-services"></a>비즈니스 규칙 조건(Master Data Services)
 
@@ -33,7 +34,7 @@ ms.locfileid: "85813715"
 |**같음**|선택한 특성이 특정 특성 또는 특정 특성 값과 **같거나** , 비어 있습니다.<br /><br /> 이 조건은 텍스트, 숫자, 날짜 및 링크 값에 유효합니다.|  
 |**같지 않음**|선택한 특성이 특정 특성 또는 특정 특성 값과 **같지 않거나** , 비어 있습니다.<br /><br /> 이 조건은 텍스트, 숫자, 날짜 및 링크 값에 유효합니다.|  
 |**보다 큼**|선택한 특성이 특정 특성 또는 특정 특성 값보다 **크거나** , 비어 있습니다.<br /><br /> 이 조건은 텍스트, 숫자 및 날짜 값에 유효합니다.|  
-|**크거나 같음**|선택한 특성이 특정 특성 또는 특정 특성 값보다 **크거나 같거나** , 비어 있습니다.<br /><br /> 이 조건은 텍스트, 숫자 및 날짜 값에 유효합니다.|  
+|**다음 보다 크거나 같음**|선택한 특성이 특정 특성 또는 특정 특성 값보다 **크거나 같거나** , 비어 있습니다.<br /><br /> 이 조건은 텍스트, 숫자 및 날짜 값에 유효합니다.|  
 |**보다 작음**|선택한 특성이 특정 특성 또는 특정 특성 값보다 **작거나** , 비어 있습니다.<br /><br /> 이 조건은 텍스트, 숫자 및 날짜 값에 유효합니다.|  
 |**작거나 같음**|선택한 특성이 특정 특성 또는 특정 특성 값보다 **작거나 같거나** , 비어 있습니다.<br /><br /> 이 조건은 텍스트, 숫자 및 날짜 값에 유효합니다.|  
 |**시작 문자**|선택한 특성이 특정 특성 또는 특정 특성 값으로 **시작되거나** , 비어 있습니다.<br /><br /> 이 조건은 텍스트 및 링크 값에 유효합니다.|  

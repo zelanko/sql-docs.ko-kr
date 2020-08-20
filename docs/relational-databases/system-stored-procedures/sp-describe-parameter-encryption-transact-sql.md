@@ -19,15 +19,16 @@ ms.assetid: 706ed441-2881-4934-8d5e-fb357ee067ce
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d3f4b5dd2d6c63688046eda4a8b752bc10b9c943
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 35bf38e3c6ac85fe27af595571785f8d34a6f0d4
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88469585"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88646493"
 ---
 # <a name="sp_describe_parameter_encryption-transact-sql"></a>sp_describe_parameter_encryption (Transact-sql)
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
+
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
   지정 된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문과 해당 매개 변수를 분석 하 여 Always Encrypted 기능을 사용 하 여 보호 되는 데이터베이스 열에 해당 하는 매개 변수를 확인 합니다. 암호화 된 열에 해당 하는 매개 변수에 대 한 암호화 메타 데이터를 반환 합니다.  
   
@@ -66,7 +67,7 @@ sp_describe_parameter_encryption
 |**column_encryption_key_ordinal**|**int**|결과 집합에 있는 행의 Id입니다.|  
 |**database_id**|**int**|데이터베이스 id입니다.|  
 |**column_encryption_key_id**|**int**|열 암호화 키 id입니다. 참고:이 id는 [column_encryption_keys &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md) 카탈로그 뷰의 행을 나타냅니다.|  
-|**column_encryption_key_version**|**int**|나중에 사용하기 위해 예약되어 있습니다. 현재에는 항상 1이 포함 되어 있습니다.|  
+|**column_encryption_key_version**|**int**|다음에 사용하도록 예약됩니다. 현재에는 항상 1이 포함 되어 있습니다.|  
 |**column_encryption_key_metadata_version**|**binary (8)**|열 암호화 키를 만든 시간을 나타내는 타임 스탬프입니다.|  
 |**column_encryption_key_encrypted_value**|**varbinary(4000)**|열 암호화 키의 암호화 된 값입니다.|  
 |**column_master_key_store_provider_name**|**sysname**|열 암호화 키의 암호화 된 값을 생성 하는 데 사용 된 열 마스터 키를 포함 하는 키 저장소의 공급자 이름입니다.|  

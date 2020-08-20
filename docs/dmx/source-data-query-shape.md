@@ -1,4 +1,5 @@
 ---
+description: '&lt;원본 데이터 쿼리 &gt; -셰이프'
 title: SHAPE (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 4d5d93d4236b3cf86719c416ba87517401e4b4f5
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 16fff086514facbb8197d8d6f27b72b81f67c2e2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970308"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500807"
 ---
 # <a name="ltsource-data-querygt---shape"></a>&lt;원본 데이터 쿼리 &gt; -셰이프
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -57,7 +58,7 @@ APPEND ({ <child table query> }
 ## <a name="remarks"></a>설명  
  부모 테이블 및 자식 테이블에 관련되는 열을 기준으로 쿼리를 정렬해야 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  [INSERT INTO &#40;DMX&#41;](../dmx/insert-into-dmx.md) 문 내에서 다음 예를 사용 하 여 중첩 테이블을 포함 하는 모델을 학습 시킬 수 있습니다. **SHAPE** 문 내의 두 테이블은 **ordernumber** 열을 통해 관련 됩니다.  
   
 ```  

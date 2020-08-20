@@ -1,4 +1,5 @@
 ---
+description: 지원되는 ODBC API 함수
 title: 지원 되는 ODBC API 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b28a8ed6-09b1-4acf-bf3e-f90bb32422de
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ec6ceaf57d8fe3c5325f85a9644cf4c8016663e4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 61dca7de4a9a532789a2b448fad812ae3daf76ba
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304104"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500096"
 ---
 # <a name="supported-odbc-api-functions"></a>지원되는 ODBC API 함수
 평준화의 목적은 드라이버에서 사용할 수 있는 기능을 응용 프로그램에 알리는 것입니다. Microsoft ODBC 데스크톱 데이터베이스 드라이버는 모든 핵심 및 수준 1 함수를 지원 합니다.  
@@ -30,28 +31,28 @@ ms.locfileid: "81304104"
 |ODBC 함수|드라이버 관련 정보 액세스|dBASE 드라이버 관련 참고 사항|Paradox 드라이버 관련 참고 사항|텍스트 파일 드라이버 관련 참고 사항|Excel 드라이버 관련 참고 사항|모든 드라이버와 관련 된 참고 사항|  
 |-------------------|-----------------------------------|----------------------------------|------------------------------------|--------------------------------------|----------------------------------|-----------------------------------|  
 |[SQLBindParameter](../../odbc/reference/syntax/sqlbindparameter-function.md)|||||[Excel](../../odbc/microsoft/sqlbindparameter-excel-driver.md)||  
-|[SQLColAttributes](../../odbc/reference/syntax/sqlcolattributes-function.md)|[액세스](../../odbc/microsoft/sqlcolattributes-access-driver.md)|[dBASE](../../odbc/microsoft/sqlcolattributes-dbase-driver.md)|[Paradox](../../odbc/microsoft/sqlcolattributes-paradox-driver.md)|[텍스트 파일](../../odbc/microsoft/sqlcolattributes-text-file-driver.md)|[Excel](../../odbc/microsoft/sqlcolattributes-excel-driver.md)||  
-|[SQLColumns](../../odbc/reference/syntax/sqlcolattributes-function.md)|[액세스](../../odbc/microsoft/sqlcolattributes-access-driver.md)|[dBASE](../../odbc/microsoft/sqlcolattributes-dbase-driver.md)|[Paradox](../../odbc/microsoft/sqlcolattributes-paradox-driver.md)|[텍스트 파일](../../odbc/microsoft/sqlcolattributes-text-file-driver.md)|[Excel](../../odbc/microsoft/sqlcolattributes-excel-driver.md)||  
-|[SQLConfigDataSource](../../odbc/reference/syntax/sqlconfigdatasource-function.md)|[액세스](../../odbc/microsoft/sqlconfigdatasource-access-driver.md)|[dBASE](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md)|[Paradox](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md)|[텍스트 파일](../../odbc/microsoft/sqlconfigdatasource-text-file-driver.md)|[Excel](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md)||  
-|[SQLDriverConnect](../../odbc/reference/syntax/sqldriverconnect-function.md)|[액세스](../../odbc/microsoft/sqldriverconnect-access-driver.md)|[dBASE](../../odbc/microsoft/sqldriverconnect-dbase-driver.md)|[Paradox](../../odbc/microsoft/sqldriverconnect-paradox-driver.md)|[텍스트 파일](../../odbc/microsoft/sqldriverconnect-text-file-driver.md)|[Excel](../../odbc/microsoft/sqldriverconnect-excel-driver.md)||  
+|[SQLColAttributes](../../odbc/reference/syntax/sqlcolattributes-function.md)|[Access](../../odbc/microsoft/sqlcolattributes-access-driver.md)|[dBASE](../../odbc/microsoft/sqlcolattributes-dbase-driver.md)|[Paradox](../../odbc/microsoft/sqlcolattributes-paradox-driver.md)|[텍스트 파일](../../odbc/microsoft/sqlcolattributes-text-file-driver.md)|[Excel](../../odbc/microsoft/sqlcolattributes-excel-driver.md)||  
+|[SQLColumns](../../odbc/reference/syntax/sqlcolattributes-function.md)|[Access](../../odbc/microsoft/sqlcolattributes-access-driver.md)|[dBASE](../../odbc/microsoft/sqlcolattributes-dbase-driver.md)|[Paradox](../../odbc/microsoft/sqlcolattributes-paradox-driver.md)|[텍스트 파일](../../odbc/microsoft/sqlcolattributes-text-file-driver.md)|[Excel](../../odbc/microsoft/sqlcolattributes-excel-driver.md)||  
+|[SQLConfigDataSource](../../odbc/reference/syntax/sqlconfigdatasource-function.md)|[Access](../../odbc/microsoft/sqlconfigdatasource-access-driver.md)|[dBASE](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md)|[Paradox](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md)|[텍스트 파일](../../odbc/microsoft/sqlconfigdatasource-text-file-driver.md)|[Excel](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md)||  
+|[SQLDriverConnect](../../odbc/reference/syntax/sqldriverconnect-function.md)|[Access](../../odbc/microsoft/sqldriverconnect-access-driver.md)|[dBASE](../../odbc/microsoft/sqldriverconnect-dbase-driver.md)|[Paradox](../../odbc/microsoft/sqldriverconnect-paradox-driver.md)|[텍스트 파일](../../odbc/microsoft/sqldriverconnect-text-file-driver.md)|[Excel](../../odbc/microsoft/sqldriverconnect-excel-driver.md)||  
 |[SQLGetCursorName](../../odbc/reference/syntax/sqlgetcursorname-function.md)||||||[모든 드라이버](../../odbc/microsoft/sqlgetcursorname-desktop-database-drivers.md)|  
 |[SQLGetData](../../odbc/reference/syntax/sqlgetdata-function.md)||||||[모든 드라이버](../../odbc/microsoft/sqlgetdata-desktop-database-drivers.md)|  
-|[SQLGetInfo](../../odbc/reference/syntax/sqlgetinfo-function.md)|[액세스](../../odbc/microsoft/sqlgetinfo-access-driver.md)|[dBASE](../../odbc/microsoft/sqlgetinfo-dbase-driver.md)|[Paradox](../../odbc/microsoft/sqlgetinfo-paradox-driver.md)|[텍스트 파일](../../odbc/microsoft/sqlgetinfo-text-file-driver.md)|[Excel](../../odbc/microsoft/sqlgetinfo-excel-driver.md)|
+|[SQLGetInfo](../../odbc/reference/syntax/sqlgetinfo-function.md)|[Access](../../odbc/microsoft/sqlgetinfo-access-driver.md)|[dBASE](../../odbc/microsoft/sqlgetinfo-dbase-driver.md)|[Paradox](../../odbc/microsoft/sqlgetinfo-paradox-driver.md)|[텍스트 파일](../../odbc/microsoft/sqlgetinfo-text-file-driver.md)|[Excel](../../odbc/microsoft/sqlgetinfo-excel-driver.md)|
 |[SQLGetStmtOption](../../odbc/reference/syntax/sqlgetstmtoption-function.md)||||||[모든 드라이버](../../odbc/microsoft/sqlgetstmtoption-desktop-database-drivers.md)|  
-|[SQLGetTypeInfo](../../odbc/reference/syntax/sqlgettypeinfo-function.md)|[액세스](../../odbc/microsoft/sqlgettypeinfo-access-driver.md)|[dBASE](../../odbc/microsoft/sqlgettypeinfo-dbase-driver.md)|[Paradox](../../odbc/microsoft/sqlgettypeinfo-paradox-driver.md)|[텍스트 파일](../../odbc/microsoft/sqlgettypeinfo-text-file-driver.md)|[Excel](../../odbc/microsoft/sqlgettypeinfo-excel-driver.md)||  
+|[SQLGetTypeInfo](../../odbc/reference/syntax/sqlgettypeinfo-function.md)|[Access](../../odbc/microsoft/sqlgettypeinfo-access-driver.md)|[dBASE](../../odbc/microsoft/sqlgettypeinfo-dbase-driver.md)|[Paradox](../../odbc/microsoft/sqlgettypeinfo-paradox-driver.md)|[텍스트 파일](../../odbc/microsoft/sqlgettypeinfo-text-file-driver.md)|[Excel](../../odbc/microsoft/sqlgettypeinfo-excel-driver.md)||  
 |[SQLMoreResults](../../odbc/reference/syntax/sqlmoreresults-function.md)||||||[모든 드라이버](../../odbc/microsoft/sqlmoreresults-desktop-database-drivers.md)|  
 |[SQLPrepare](../../odbc/reference/syntax/sqlprepare-function.md)||||||[모든 드라이버](../../odbc/microsoft/sqlprepare-desktop-database-drivers.md)|  
-|[SQLProcedureColumns](../../odbc/reference/syntax/sqlprocedurecolumns-function.md)|[액세스](../../odbc/microsoft/sqlprocedurecolumns-access-driver.md)||||||  
+|[SQLProcedureColumns](../../odbc/reference/syntax/sqlprocedurecolumns-function.md)|[Access](../../odbc/microsoft/sqlprocedurecolumns-access-driver.md)||||||  
 |[SQLProcedures](../../odbc/reference/syntax/sqlprocedures-function.md)||||||[모든 드라이버](../../odbc/microsoft/sqlprocedures-desktop-database-drivers.md)|  
-|[SQLSetConnectOption](../../odbc/reference/syntax/sqlsetconnectoption-function.md)|[액세스](../../odbc/microsoft/sqlsetconnectoption-access-driver.md)|[dBASE](../../odbc/microsoft/sqlsetconnectoption-dbase-driver.md)|[Paradox](../../odbc/microsoft/sqlsetconnectoption-paradox-driver.md)|[텍스트 파일](../../odbc/microsoft/sqlsetconnectoption-text-file-driver.md)|[Excel](../../odbc/microsoft/sqlsetconnectoption-excel-driver.md)||  
+|[SQLSetConnectOption](../../odbc/reference/syntax/sqlsetconnectoption-function.md)|[Access](../../odbc/microsoft/sqlsetconnectoption-access-driver.md)|[dBASE](../../odbc/microsoft/sqlsetconnectoption-dbase-driver.md)|[Paradox](../../odbc/microsoft/sqlsetconnectoption-paradox-driver.md)|[텍스트 파일](../../odbc/microsoft/sqlsetconnectoption-text-file-driver.md)|[Excel](../../odbc/microsoft/sqlsetconnectoption-excel-driver.md)||  
 |[SQLSetCursorName](../../odbc/reference/syntax/sqlsetcursorname-function.md)||||||[모든 드라이버](../../odbc/microsoft/sqlsetcursorname-desktop-database-drivers.md)|  
 |[SQLSetPos](../../odbc/reference/syntax/sqlsetpos-function.md)||||||[모든 드라이버](../../odbc/microsoft/sqlsetpos-desktop-database-drivers.md)|  
 |[SQLSetScrollOptions](../../odbc/reference/syntax/sqlsetscrolloptions-function.md)||||||[모든 드라이버](../../odbc/microsoft/sqlsetscrolloptions-desktop-database-drivers.md)|  
 |[SQLSetStmtOption](../../odbc/reference/syntax/sqlsetstmtoption-function.md)||||||[모든 드라이버](../../odbc/microsoft/sqlsetstmtoption-desktop-database-drivers.md)|  
 |[SQLSpecialColumns](../../odbc/reference/syntax/sqlspecialcolumns-function.md)||||||[모든 드라이버](../../odbc/microsoft/sqlspecialcolumns-desktop-database-drivers.md)|  
-|[SQLStatistics](../../odbc/reference/syntax/sqlstatistics-function.md)|[액세스](../../odbc/microsoft/sqlstatistics-access-driver.md)|[dBASE](../../odbc/microsoft/sqlstatistics-dbase-driver.md)|[Paradox](../../odbc/microsoft/sqlstatistics-paradox-driver.md)|[텍스트 파일](../../odbc/microsoft/sqlstatistics-text-file-driver.md)|[Excel](../../odbc/microsoft/sqlstatistics-excel-driver.md)||  
-|[SQLTables](../../odbc/reference/syntax/sqltables-function.md)|[액세스](../../odbc/microsoft/sqltables-access-driver.md)|[dBASE](../../odbc/microsoft/sqltables-dbase-driver.md)|[Paradox](../../odbc/microsoft/sqltables-paradox-driver.md)|[텍스트 파일](../../odbc/microsoft/sqltables-text-file-driver.md)|[Excel](../../odbc/microsoft/sqltables-excel-driver.md)|  
-|[SQLTransact](../../odbc/reference/syntax/sqltransact-function.md)|[액세스](../../odbc/microsoft/sqltransact-access-driver.md)|[dBASE](../../odbc/microsoft/sqltransact-dbase-driver.md)|[Paradox](../../odbc/microsoft/sqltransact-paradox-driver.md)|[텍스트 파일](../../odbc/microsoft/sqltransact-text-file-driver.md)|[Excel](../../odbc/microsoft/sqltransact-excel-driver.md)||  
+|[SQLStatistics](../../odbc/reference/syntax/sqlstatistics-function.md)|[Access](../../odbc/microsoft/sqlstatistics-access-driver.md)|[dBASE](../../odbc/microsoft/sqlstatistics-dbase-driver.md)|[Paradox](../../odbc/microsoft/sqlstatistics-paradox-driver.md)|[텍스트 파일](../../odbc/microsoft/sqlstatistics-text-file-driver.md)|[Excel](../../odbc/microsoft/sqlstatistics-excel-driver.md)||  
+|[SQLTables](../../odbc/reference/syntax/sqltables-function.md)|[Access](../../odbc/microsoft/sqltables-access-driver.md)|[dBASE](../../odbc/microsoft/sqltables-dbase-driver.md)|[Paradox](../../odbc/microsoft/sqltables-paradox-driver.md)|[텍스트 파일](../../odbc/microsoft/sqltables-text-file-driver.md)|[Excel](../../odbc/microsoft/sqltables-excel-driver.md)|  
+|[SQLTransact](../../odbc/reference/syntax/sqltransact-function.md)|[Access](../../odbc/microsoft/sqltransact-access-driver.md)|[dBASE](../../odbc/microsoft/sqltransact-dbase-driver.md)|[Paradox](../../odbc/microsoft/sqltransact-paradox-driver.md)|[텍스트 파일](../../odbc/microsoft/sqltransact-text-file-driver.md)|[Excel](../../odbc/microsoft/sqltransact-excel-driver.md)||  
   
  다음 항목에서는 ODBC 함수에 대해 설명 합니다. 이러한 주의 사항은 모든 ODBC 데스크톱 데이터베이스 드라이버에 적용 됩니다.  
   

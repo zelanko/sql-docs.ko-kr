@@ -1,4 +1,5 @@
 ---
+description: 문자열 함수 사용
 title: 문자열 함수 사용 | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 74eec478baad335cb5be6a78ec1faea2d15030ba
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2160662a5e8fe9e89e133e053cca820fc60a66e9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68037988"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500486"
 ---
 # <a name="using-string-functions"></a>문자열 함수 사용
 
@@ -22,7 +23,7 @@ ms.locfileid: "68037988"
   
  가장 널리 사용 되는 문자열 함수는 **Name** 및 **Uniquename**입니다. 이러한 함수는 각각 개체의 이름과 고유 이름을 반환합니다. 이러한 함수는 대개 함수가 반환하는 멤버를 찾기 위해 계산을 디버깅할 때 사용됩니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예제 쿼리에서는 이러한 함수를 사용하는 방법을 보여 줍니다.  
   
  `WITH`  
@@ -101,7 +102,7 @@ ms.locfileid: "68037988"
 >  **Strtomember** 및 **strtomember** 함수는 주의 해 서 사용 해야 합니다. 이러한 함수를 계산 정의 내에 사용할 때 쿼리 성능이 저하될 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [&#40;MDX&#41;생성](../mdx/generate-mdx.md)   
+ [&#40;MDX&#41;생성 ](../mdx/generate-mdx.md)   
  [이름 &#40;MDX&#41;](../mdx/name-mdx.md)   
  [UniqueName &#40;MDX&#41;](../mdx/uniquename-mdx.md)   
  [함수 &#40;MDX 구문&#41;](../mdx/functions-mdx-syntax.md)   

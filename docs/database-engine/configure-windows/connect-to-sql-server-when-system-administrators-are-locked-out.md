@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c0c0082e-b867-480f-a54b-79f2a94ceb67
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: eec9e95ccbc326d3d2f64d224cf11f3d059bb8f7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 801602c78193f9fc3fa9cdab40b98c3dc3dd42e0
+ms.sourcegitcommit: 291ae8f6b72fd355f8f24ce5300339306293ea7e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717085"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88512319"
 ---
 # <a name="connect-to-sql-server-when-system-administrators-are-locked-out"></a>시스템 관리자가 잠긴 경우 SQL Server에 연결 
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "85717085"
 
 인스턴스를 단일 사용자 모드로 시작할 때는 먼저 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스를 중지해야 합니다. 그렇지 않으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 먼저 연결되어 서버에 대한 유일한 가용 연결을 사용하기 때문에 로그인할 수 없게 됩니다.
 
-또한 로그인하기 전에 알 수 없는 클라이언트 응용 프로그램에서 사용 가능한 유일한 연결을 차지할 수도 있습니다. 이 문제를 방지하려면 응용 프로그램 이름 뒤에 `-m` 옵션을 사용하여 지정된 응용 프로그램에서의 연결을 단일 연결로 제한할 수 있습니다. 예를 들어 `-m"sqlcmd"`를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 함께 사용하면 자신을 **sqlcmd** 클라이언트 프로그램으로 인식하는 단일 연결로 연결이 제한됩니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서 쿼리 편집기를 통해 연결하려면 `-m"Microsoft SQL Server Management Studio - Query"`를 사용합니다.  
+또한 로그인하기 전에 알 수 없는 클라이언트 응용 프로그램에서 사용 가능한 유일한 연결을 차지할 수도 있습니다. 이 문제를 방지하려면 응용 프로그램 이름 뒤에 `-m` 옵션을 사용하여 지정된 응용 프로그램에서의 연결을 단일 연결로 제한할 수 있습니다. 예를 들어 `-mSQLCMD`를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 함께 사용하면 자신을 **sqlcmd** 클라이언트 프로그램으로 인식하는 단일 연결로 연결이 제한됩니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서 쿼리 편집기를 통해 연결하려면 `-m"Microsoft SQL Server Management Studio - Query"`를 사용합니다.  
 
 
 > [!IMPORTANT]  
@@ -55,7 +55,7 @@ ms.locfileid: "85717085"
 | 옵션 | Description | 사용 시기 |
 |:---|:---|:---|
 |`-m` | 연결을 단일 연결로 제한 | 인스턴스에 연결을 시도하는 다른 사용자가 없거나 인스턴스에 연결하는 데 어떤 애플리케이션 이름을 사용하는지 모르는 경우. |
-|`-m"sqlcmd"`| 자신을 **sqlcmd** 클라이언트 프로그램으로 인식하는 단일 연결로 연결을 제한| **sqlcmd**를 사용하여 인스턴스에 연결할 계획이며 다른 응용 프로그램에서 사용 가능한 유일한 연결을 차지하지 못하게 하려는 경우. |
+|`-mSQLCMD`| 자신을 **sqlcmd** 클라이언트 프로그램으로 인식하는 단일 연결로 연결을 제한| **sqlcmd**를 사용하여 인스턴스에 연결할 계획이며 다른 응용 프로그램에서 사용 가능한 유일한 연결을 차지하지 못하게 하려는 경우. |
 |`-m"Microsoft SQL Server Management Studio - Query"`| 자신을 **Microsoft SQL Server Management Studio - 쿼리** 응용 프로그램으로 인식하는 단일 연결로 연결을 제한| [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서 쿼리 편집기를 사용하여 인스턴스에 연결할 계획이며 다른 응용 프로그램에서 사용 가능한 유일한 연결을 차지하지 못하게 하려는 경우. |
 |`-f`| 연결을 단일 연결로 제한하고 인스턴스를 최소 구성으로 시작 | 다른 구성 때문에 시작할 수 없는 경우. |
 | &nbsp; | &nbsp; | &nbsp; |

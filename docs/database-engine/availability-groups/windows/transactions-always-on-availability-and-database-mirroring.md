@@ -1,4 +1,5 @@
 ---
+description: 트랜잭션 - Always On 가용성 그룹 및 데이터베이스 미러링
 title: '트랜잭션: Always On 가용성 그룹 및 데이터베이스 미러링'
 descripton: Learn about cross-database and distributed transaction support for SQL Server Always On availability groups and database mirroring.
 ms.custom: seo-lt-2019
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9f7ed895-ad65-43e3-ba08-00d7bff1456d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 87a2d5dc4e4c7109db09217e975c1a8c8c9b9434
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a738c1eb308ccafa0c744a66d069cbefee46ad26
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900697"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500941"
 ---
 # <a name="transactions---availability-groups-and-database-mirroring"></a>트랜잭션 - Always On 가용성 그룹 및 데이터베이스 미러링
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -91,6 +92,6 @@ SQL Server 2016에서는 트랜잭션에 포함된 하나 이상의 데이터베
 >  이 아티클에서 승인되지 않은 방식으로 DTC에서 데이터베이스 미러링 또는 가용성 그룹을 사용하는 것은 지원되지 않습니다.  DTC와 관련이 없는 제품 측면이 지원되지 않는 것은 아니지만, 분산 트랜잭션을 부적절하게 사용하는 경우 발생하는 문제는 지원되지 않습니다.  
   
 ## <a name="next-steps"></a>다음 단계  
- [Always On availability groups: Interoperability &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)  
+ [Always On 가용성 그룹: 상호 운용성 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)  
   
   

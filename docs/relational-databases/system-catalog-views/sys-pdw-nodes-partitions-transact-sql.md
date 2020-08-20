@@ -13,12 +13,12 @@ ms.assetid: b4216752-4813-4b2c-b259-7d8ffc6cc190
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: b13e5da130d7b122f9b79e1996ea3fdb0792e25a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1f015d17f401cb2457d3e5cf657ce85342c1628e
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88475392"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88646273"
 ---
 # <a name="syspdw_nodes_partitions-transact-sql"></a>sys. pdw_nodes_partitions (Transact-sql)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -27,9 +27,9 @@ ms.locfileid: "88475392"
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|partition_id|**bigint**|파티션의 id입니다. 데이터베이스 내에서 고유합니다.|  
-|object_id|**int**|이 파티션이 속한 개체의 id입니다. 모든 테이블 또는 뷰는 최소한 하나 이상의 파티션으로 구성됩니다.|  
-|index_id|**int**|이 파티션이 속한 개체 내의 인덱스 id입니다.|  
+|partition_id|**bigint**|파티션의 ID입니다. 데이터베이스 내에서 고유합니다.|  
+|object_id|**int**|이 파티션이 속한 개체의 ID입니다. 모든 테이블 또는 뷰는 최소한 하나 이상의 파티션으로 구성됩니다.|  
+|index_id|**int**|이 파티션이 속한 개체 내부의 인덱스 ID입니다.|  
 |partition_number|**int**|소유하는 인덱스나 힙 내의 1부터 시작하는 파티션 번호입니다. 의 경우 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 이 열의 값은 1입니다.|  
 |hobt_id|**bigint**|이 파티션에 대 한 행을 포함 하는 데이터 힙 또는 B-트리 (HoBT)의 ID입니다.|  
 |rows|**bigint**|이 파티션에 있는 행의 대략적인 수입니다. |  
@@ -69,8 +69,11 @@ JOIN sys.objects AS o
 WHERE o.name = 'myTable'  
 ORDER BY o.name, pnp.index_id, pnp.partition_id;  
 ```    
+
+>[!TIP]
+> Synapse SQL의 성능 향상을 위해 영구 사용자 테이블에서 **pdw_table_mappings** 대신 **pdw_permanent_table_mappings** 를 사용 하는 것이 좋습니다. 자세한 내용은 **[pdw_permanent_table_mappings &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-pdw-permanent-table-mappings-transact-sql.md)** 을 참조 하십시오.
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [SQL Data Warehouse 및 병렬 Data Warehouse 카탈로그 뷰](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
   
   

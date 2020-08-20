@@ -1,4 +1,5 @@
 ---
+description: Visual FoxPro 데이터베이스에서 Microsoft Excel로 데이터 가져오기
 title: Visual FoxPro 데이터베이스에서 Microsoft Excel로 데이터 가져오기 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3085bc4c-00a7-40e5-bffb-c3962cd3d509
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1bfd86233e5a0a406febcb30bf7a4fae595e53d2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9a4bd1cf7983ed0a552de4f9d0f491960b48f0d7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81287673"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500296"
 ---
 # <a name="importing-data-into-microsoft-excel-from-a-visual-foxpro-database"></a>Visual FoxPro 데이터베이스에서 Microsoft Excel로 데이터 가져오기
 데이터 원본을 정의한 경우 Visual FoxPro 데이터를 Microsoft Excel 워크시트로 가져올 수 있습니다. Visual FoxPro 데이터 원본을 만드는 방법에 대 한 자세한 내용은 [Microsoft Excel에서 Visual Foxpro 데이터 원본에 액세스](../../odbc/microsoft/accessing-a-visual-foxpro-data-source-from-microsoft-excel.md)를 참조 하세요.  

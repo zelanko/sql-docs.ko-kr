@@ -1,4 +1,5 @@
 ---
+description: Schema.ini 파일(텍스트 파일 드라이버)
 title: Schema.ini 파일 (텍스트 파일 드라이버) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0c4625c4-c730-4984-b430-9051b7bc0451
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ed041e43a211f58a34b4e2476d9e0b62ff5d162b
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: 8b4bbebfa6eb184bf81cba4a9faf5e3200f428de
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442881"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500226"
 ---
 # <a name="schemaini-file-text-file-driver"></a>Schema.ini 파일(텍스트 파일 드라이버)
 텍스트 드라이버를 사용 하는 경우 텍스트 파일의 형식은 스키마 정보 파일을 사용 하 여 결정 됩니다. 스키마 정보 파일은 항상 Schema.ini 이름이 지정 되며 항상 텍스트 데이터 원본과 동일한 디렉터리에 보관 됩니다. 스키마 정보 파일은 파일의 일반 형식, 열 이름 및 데이터 형식 정보 및 기타 여러 데이터 특성에 대 한 정보를 IISAM에 제공 합니다. 고정 길이 데이터에 액세스 하려면 항상 Schema.ini 파일이 필요 합니다. 텍스트 테이블에 DateTime, Currency 또는 Decimal 데이터가 포함 되어 있거나 테이블의 데이터 처리에 대 한 더 많은 제어가 필요한 경우에는 Schema.ini 파일을 사용 해야 합니다.  
@@ -96,10 +97,10 @@ n=ColumnName type [Width] [#]
 ## <a name="remarks"></a>설명  
  다음 표에서는 **Col**_n_ 항목의 각 부분에 대해 설명 합니다.  
   
-|매개 변수|Description|  
+|매개 변수|설명|  
 |---------------|-----------------|  
 |*ColumnName*|열의 텍스트 이름입니다. 열 이름에 공백이 포함 된 경우에는 큰따옴표로 묶어야 합니다.|  
-|*type*|데이터 형식은 다음과 같습니다.<br /><br /> **Microsoft Jet 데이터 형식**<br /><br /> bit<br /><br /> Byte<br /><br /> Short<br /><br /> Long<br /><br /> Currency<br /><br /> Single<br /><br /> Double<br /><br /> DateTime<br /><br /> 텍스트<br /><br /> 메모<br /><br /> **ODBC 데이터 형식** Char (텍스트와 동일)<br /><br /> Float (Double과 같음)<br /><br /> Integer (Short와 동일)<br /><br /> 이상 문자 (메모와 동일)<br /><br /> 날짜 *날짜 형식*|  
+|*type*|데이터 형식은 다음과 같습니다.<br /><br /> **Microsoft Jet 데이터 형식**<br /><br /> bit<br /><br /> Byte<br /><br /> Short<br /><br /> Long<br /><br /> 통화<br /><br /> Single<br /><br /> Double<br /><br /> DateTime<br /><br /> 텍스트<br /><br /> 메모<br /><br /> **ODBC 데이터 형식** Char (텍스트와 동일)<br /><br /> Float (Double과 같음)<br /><br /> Integer (Short와 동일)<br /><br /> 이상 문자 (메모와 동일)<br /><br /> 날짜 *날짜 형식*|  
 |**Width**|리터럴 문자열 값 `Width` 입니다. 다음 숫자가 열 너비를 지정 함을 나타냅니다. 문자 구분 파일의 경우 선택 사항이 며 고정 길이 파일에 필요 합니다.|  
 |*#*|열의 너비를 지정 하는 정수 값입니다 ( **width** 가 지정 된 경우 필수).|  
   
@@ -122,7 +123,7 @@ CharacterSet=ANSI
 |**CurrencySymbol**|텍스트 파일의 통화 값에 사용할 수 있는 통화 기호를 나타냅니다. 예로는 달러 기호 ($) 및 Dm이 있습니다.|  
 |**CurrencyPosFormat**|는 다음 값 중 하나로 설정할 수 있습니다.<br /><br /> -구분 없이 통화 기호 접두사 ($1)<br />-구분 없이 통화 기호 접미사 ($1)<br />-문자 구분이 하나인 통화 기호 접두사 ($1)<br />-문자 구분이 하나인 통화 기호 접미사 ($1)|  
 |**CurrencyDigits**|통화 금액의 소수 부분에 사용 되는 자릿수를 지정 합니다.|  
-|**CurrencyNegFormat**|다음 값 중 하나를 사용할 수 있습니다.<br /><br /> -($1)<br />--$1<br />-$-1<br />-$1-<br />-($1)<br />--$1<br />-1-$<br />-$1-<br />--$1<br />--$1<br />-$1-<br />-$1-<br />-$-1<br />-1-$<br />-($1)<br />-($1)<br /><br /> 이 예제는 달러 기호를 보여 주지만 실제 프로그램에서 적절 한 **CurrencySymbol** 값으로 바꾸어야 합니다.|  
+|**CurrencyNegFormat**|다음 값 중 하나일 수 있습니다.<br /><br /> -($1)<br />--$1<br />-$-1<br />-$1-<br />-($1)<br />--$1<br />-1-$<br />-$1-<br />--$1<br />--$1<br />-$1-<br />-$1-<br />-$-1<br />-1-$<br />-($1)<br />-($1)<br /><br /> 이 예제는 달러 기호를 보여 주지만 실제 프로그램에서 적절 한 **CurrencySymbol** 값으로 바꾸어야 합니다.|  
 |**CurrencyThousandSymbol**|텍스트 파일의 통화 값을 천 단위로 구분 하는 데 사용할 수 있는 단일 문자 기호를 나타냅니다.|  
 |**CurrencyDecimalSymbol**|통화 금액의 소수 부분에서 전체를 구분 하는 데 사용 되는 단일 문자로 설정할 수 있습니다.|  
   

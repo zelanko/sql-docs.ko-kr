@@ -1,4 +1,5 @@
 ---
+description: 데이터베이스 만들기 마법사(Master Data Services 구성 관리자)
 title: 데이터베이스 만들기 마법사
 ms.custom: ''
 ms.date: 03/20/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 45fe7a23-a46c-4d40-8bca-3431fbfc5c9d
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 5379610bd7ca41f2648654eb3e3eaf27bf7dbae9
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: b5a2b1480db92f1cd3741aa4f3429755eeffce6b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813038"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500661"
 ---
 # <a name="create-database-wizard-master-data-services-configuration-manager"></a>데이터베이스 만들기 마법사(Master Data Services 구성 관리자)
 
@@ -34,7 +35,7 @@ ms.locfileid: "85813038"
 |**인증 유형**|지정된 SQL Server 인스턴스에 연결할 때 사용할 인증 유형을 선택합니다. 지정된 **인스턴스에 대한** sysadmin [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 서버 역할의 일부인 자격 증명을 사용하여 연결해야 합니다. sysadmin 역할에 대한 자세한 내용은 [서버 수준 역할](../relational-databases/security/authentication-access/server-level-roles.md)을 참조하세요.<br /><br /> 인증 유형은 다음과 같습니다.<br /><br /> **현재 사용자 통합 보안**: Windows 통합 인증을 사용 하 여 현재 windows 사용자 계정의 자격 증명을 사용 하 여 연결 합니다. [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 에서는 컴퓨터에 로그온하여 애플리케이션을 연 사용자의 Windows 자격 증명을 사용합니다. 애플리케이션에서 다른 Windows 자격 증명은 지정할 수 없습니다. 다른 Windows 자격 증명으로 연결하려면 해당 사용자로 컴퓨터에 로그온한 다음 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]를 열어야 합니다.<br /><br /> **SQL Server 계정**: SQL Server 계정을 사용하여 연결합니다. 이 옵션을 선택하면 **사용자 이름** 및 **암호** 필드가 활성화됩니다. 이 필드에 지정된 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 계정에 대한 자격 증명을 지정해야 합니다.|  
 |**사용자 이름**|지정된 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에 연결하는 데 사용되는 사용자 계정의 이름을 지정합니다. 계정은 지정 된 인스턴스에 대 한 **sysadmin** 역할의 일부 여야 합니다 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .<br /><br /> **인증 유형이** **현재 사용자 통합 보안**인 경우 **사용자 이름** 상자는 읽기 전용 이며 컴퓨터에 로그온 된 Windows 사용자 계정의 이름을 표시 합니다.<br /><br /> **인증 유형** 이 **SQL Server 계정**인 경우 **사용자 이름** 상자가 활성화되며, 지정된 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 계정에 대한 자격 증명을 지정해야 합니다.|  
 |**암호**|사용자 계정에 연결된 암호를 지정합니다.<br /><br /> **인증 유형이** **현재 사용자 통합 보안**인 경우 **암호** 상자는 읽기 전용 이며 지정 된 Windows 사용자 계정의 자격 증명을 사용 하 여 연결 합니다.<br /><br /> **인증 유형** 이 **SQL Server 계정**인 경우 **암호** 상자가 활성화되며, 지정된 사용자 계정에 연결된 암호를 지정해야 합니다.|  
-|**연결을 테스트**|지정된 사용자 계정에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에 연결할 수 있는지, 그리고 해당 인스턴스에 대해 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스를 만들 수 있는 권한이 있는지 확인합니다. **연결 테스트**를 클릭하지 않은 경우 **다음**을 클릭하면 연결이 테스트됩니다.|  
+|**연결 테스트**|지정된 사용자 계정에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에 연결할 수 있는지, 그리고 해당 인스턴스에 대해 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스를 만들 수 있는 권한이 있는지 확인합니다. **연결 테스트**를 클릭하지 않은 경우 **다음**을 클릭하면 연결이 테스트됩니다.|  
   
 ## <a name="database"></a>데이터베이스  
  새 데이터베이스에 대한 데이터베이스 이름 및 데이터 정렬 옵션을 지정합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 의 데이터 정렬은 데이터에 대한 정렬 규칙과 대/소문자 및 악센트 구분 속성을 제공합니다. char 및 varchar과 같은 문자 데이터 형식과 함께 사용되는 데이터 정렬은 해당 데이터 형식을 나타내는 데 사용할 수 있는 코드 페이지와 해당 문자를 지정합니다. 데이터베이스 데이터 정렬에 대한 자세한 내용은 [데이터 정렬 및 유니코드 지원](../relational-databases/collations/collation-and-unicode-support.md)을 참조하세요.  

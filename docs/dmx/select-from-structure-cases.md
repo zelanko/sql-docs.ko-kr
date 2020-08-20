@@ -1,4 +1,5 @@
 ---
+description: 구조에서 &lt; 선택 &gt; 합니다. 경우
 title: 구조에서 &lt; 선택 &gt; 합니다. 사례 | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 2e0fc30945396f22184e1d18c6b132d8e2e2d781
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 6e4a14565a0ac4b2aba19dd1ef0dfbbfdc4454b1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970439"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500924"
 ---
 # <a name="select-from-ltstructuregtcases"></a>구조에서 &lt; 선택 &gt; 합니다. 경우
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -64,7 +65,7 @@ SELECT StructureColumn('<column name>') FROM <model>.CASES
   
  따라서 중요 한 데이터 나 개인 정보를 보호 하려면 개인 정보를 마스킹 하도록 데이터 원본 뷰를 생성 하 고 필요한 경우에만 마이닝 구조 또는 마이닝 모델에 대 한 **Allowdrillthrough** 권한을 부여 해야 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예는 [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] 데이터베이스 및 연결 된 마이닝 모델을 기반으로 하는 대상 메일링 인 마이닝 구조를 기반으로 합니다. 자세한 내용은 [기본 데이터 마이닝 자습서](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)를 참조 하세요.  
   
 ### <a name="example-1-drill-through-to-structure-cases"></a>예제 1: 구조 사례로 드릴스루  

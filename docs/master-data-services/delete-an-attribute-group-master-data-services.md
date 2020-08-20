@@ -1,4 +1,5 @@
 ---
+description: 특성 그룹 삭제(Master Data Services)
 title: 특성 그룹 삭제
 ms.custom: ''
 ms.date: 03/15/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f915e89b-629d-4725-aea6-a7f051978244
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: bcc9a263a8bb6ebb015c715930ebd601747ea25f
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 91abdbbec357c5d5b7b629c5619b221c14bc0d15
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812389"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500599"
 ---
 # <a name="delete-an-attribute-group-master-data-services"></a>특성 그룹 삭제(Master Data Services)
 
@@ -28,7 +29,7 @@ ms.locfileid: "85812389"
   
 -   **참고** 특성 그룹이 있는 경우 특성 그룹에 속하지 않은 특성은 **탐색기**에 표시되지 않습니다. 특성 그룹이 없는 경우 모든 특성이 표시됩니다.  
   
-## <a name="prerequisites"></a>전제 조건  
+## <a name="prerequisites"></a>사전 요구 사항  
  이 절차를 수행하려면  
   
 -   **시스템 관리** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  

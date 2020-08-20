@@ -1,4 +1,5 @@
 ---
+description: 파생 계층 이름 변경(Master Data Services)
 title: 파생 계층 이름 변경
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5765e710-d273-4675-aee2-5718273bfdc4
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: e4437060371cb15daa68df439b9fe4d679710f8f
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 3b0a7f9a8243f5294f43adb8d2e9703d54bc1101
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813657"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500731"
 ---
 # <a name="change-a-derived-hierarchy-name-master-data-services"></a>파생 계층 이름 변경(Master Data Services)
 
@@ -25,7 +26,7 @@ ms.locfileid: "85813657"
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 파생 계층의 이름을 변경할 수 있습니다.  
   
-## <a name="prerequisites"></a>전제 조건  
+## <a name="prerequisites"></a>사전 요구 사항  
  이 절차를 수행하려면  
   
 -   **시스템 관리** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  

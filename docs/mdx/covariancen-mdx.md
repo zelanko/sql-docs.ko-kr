@@ -1,4 +1,5 @@
 ---
+description: CovarianceN(MDX)
 title: Covarc (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 796dc37127eba984477aef628e4ae9161db4637e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e9475b7402a5317c18ad0ac5d4065ca2f4fdce26
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68047185"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500526"
 ---
 # <a name="covariancen-mdx"></a>CovarianceN(MDX)
 

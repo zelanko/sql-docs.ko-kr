@@ -1,4 +1,5 @@
 ---
+description: '&lt;원본 데이터 쿼리 &gt; -OPENQUERY'
 title: OPENQUERY (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: a075f314af0eb8ea2eb0bc941ada0bc38e22fec3
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: fd654bf63cfbb961b6aaa3c6369358db25371846
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970430"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500882"
 ---
 # <a name="ltsource-data-querygt---openquery"></a>&lt;원본 데이터 쿼리 &gt; -OPENQUERY
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -43,7 +44,7 @@ OPENQUERY(<named datasource>, <query syntax>)
   
  `SELECT * FROM $system.MDSCHEMA_INPUT_DATASOURCES`  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 데이터베이스에 이미 정의 되어 있는 MyDS 데이터 원본을 사용 하 여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터베이스에 대 한 연결을 만들고 [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] **vtargetmail** 뷰를 쿼리 합니다.  
   
 ```  

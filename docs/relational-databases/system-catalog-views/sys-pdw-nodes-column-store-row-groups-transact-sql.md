@@ -13,12 +13,12 @@ ms.assetid: 17a4c925-d4b5-46ee-9cd6-044f714e6f0e
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 8f323ccec312a1d2e11d72b582d1b574c923591f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9cabbcd9a47bbea4eaaf2d01bca1044c66ff9112
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447887"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88646030"
 ---
 # <a name="syspdw_nodes_column_store_row_groups-transact-sql"></a>sys. pdw_nodes_column_store_row_groups (Transact-sql)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -37,8 +37,8 @@ ms.locfileid: "88447887"
 |**total_rows**|**bigint**|행 그룹에 물리적으로 저장된 총 행 수입니다. 일부는 삭제되었을 수도 있지만 그대로 저장되어 있습니다. 행 그룹의 최대 행 수는 1,048,576개(16진수 FFFFF)입니다.|  
 |**deleted_rows**|**bigint**|삭제 되도록 표시 된 행 그룹에 물리적으로 저장 된 행의 수입니다.<br /><br /> 델타 행 그룹의 경우 항상 0입니다.|  
 |**size_in_bytes**|**int**|이 행 그룹에 있는 모든 페이지의 조합 된 크기 (바이트)입니다. 이 크기에는 메타 데이터 또는 공유 사전을 저장 하는 데 필요한 크기가 포함 되지 않습니다.|  
-|**pdw_node_id**|**int**|노드의 고유 id [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 입니다.|  
-|**distribution_id**|**int**|분포의 고유 id입니다.|
+|**pdw_node_id**|**int**|노드의 고유 ID [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 입니다.|  
+|**distribution_id**|**int**|분포의 고유 ID입니다.|
   
 ## <a name="remarks"></a>설명  
  클러스터형 또는 비클러스터형 columnstore 인덱스가 있는 각 테이블에 대해 columnstore 행 그룹당 한 행을 표시합니다.  
@@ -107,8 +107,10 @@ FROM sys.pdw_nodes_column_store_row_groups rg
 GROUP BY s.name, t.name, rg.partition_number
 ORDER BY 1, 2
 ```
+>[!TIP]
+> Synapse SQL의 성능 향상을 위해 영구 사용자 테이블에서 **pdw_table_mappings** 대신 **pdw_permanent_table_mappings** 를 사용 하는 것이 좋습니다. 자세한 내용은 **[pdw_permanent_table_mappings &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-pdw-permanent-table-mappings-transact-sql.md)** 을 참조 하십시오.
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [SQL Data Warehouse 및 병렬 Data Warehouse 카탈로그 뷰](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
  [Transact-sql&#41;&#40;COLUMNSTORE 인덱스 만들기 ](../../t-sql/statements/create-columnstore-index-transact-sql.md)   
  [pdw_nodes_column_store_segments &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-segments-transact-sql.md)   

@@ -1,4 +1,5 @@
 ---
+description: Count(튜플)(MDX)
 title: Count (튜플) (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 486c68e1947bfad67bc0288751d03c6042cd7f3e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4212e3ed86d10035793cecd45ab071feb57e5abf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68047268"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500556"
 ---
 # <a name="count-tuple-mdx"></a>Count(튜플)(MDX)
 

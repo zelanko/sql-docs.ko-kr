@@ -1,4 +1,5 @@
 ---
+description: '&lt;원본 데이터 쿼리 &gt; -OPENROWSET'
 title: OPENROWSET (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: b19b897b65ffb3a4c9e940370ffdead1e10b6d31
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 8da3686e7772b7e997690d509c8092917635497a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970324"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500791"
 ---
 # <a name="ltsource-data-querygt---openrowset"></a>&lt;원본 데이터 쿼리 &gt; -OPENROWSET
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -40,7 +41,7 @@ OPENROWSET(provider_name,provider_string,query_syntax)
 ## <a name="remarks"></a>설명  
  데이터 마이닝 공급자는 *provider_name* 및 *provider_string를* 사용 하 여 데이터 원본 개체에 대 한 연결을 설정 하 고 *query_syntax* 에 지정 된 쿼리를 실행 하 여 원본 데이터에서 행 집합을 검색 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] SELECT 문을 사용하여 [!INCLUDE[tsql](../includes/tsql-md.md)] 데이터베이스에서 데이터를 검색할 때 PREDICTION JOIN 문 내에서 다음 예를 사용할 수 있습니다.  
   
 ```  

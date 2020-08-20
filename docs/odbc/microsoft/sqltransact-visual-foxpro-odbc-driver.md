@@ -1,4 +1,5 @@
 ---
+description: SQLTransact(Visual FoxPro ODBC 드라이버)
 title: SQLTransact (Visual FoxPro ODBC 드라이버) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 92cf86c0-f7a8-44d7-b59f-a1342677440b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3910f24578bcbc409a84573e994c0680ed5949b2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1deed379c456ba2f15d30b6783c95d657e688457
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299223"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500116"
 ---
 # <a name="sqltransact-visual-foxpro-odbc-driver"></a>SQLTransact(Visual FoxPro ODBC 드라이버)
 > [!NOTE]  

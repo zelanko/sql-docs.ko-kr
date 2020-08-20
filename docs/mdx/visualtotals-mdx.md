@@ -1,4 +1,5 @@
 ---
+description: VisualTotals(MDX)
 title: VisualTotals (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: a5becd3382f07a9adc89055a253235495a7e50a8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1c1e85f4384c322938f5e7937c32bcd116acdda2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68125835"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500426"
 ---
 # <a name="visualtotals-mdx"></a>VisualTotals(MDX)
 
@@ -40,9 +41,9 @@ VisualTotals(Set_Expression[,Pattern])
 > [!NOTE]  
 >  측정값 또는 측정값 그룹 세분성 아래에 있는 차원 멤버에 **Visualtotals** 함수를 적용 하면 값이 null로 바뀝니다.  
   
- *패턴*(선택 사항)은 합계 레이블의 형식을 지정 합니다. *패턴* 에는 별표 (*)가 부모 멤버의 대체 문자로 필요 하 고 문자열의 나머지 텍스트는 부모 이름과 연결 된 결과에 나타납니다. 리터럴 별표를 표시 하려면 별표 (\*\*)를 두 개 사용 합니다.  
+ *패턴*(선택 사항)은 합계 레이블의 형식을 지정 합니다. *패턴* 에는 별표 (*)가 부모 멤버의 대체 문자로 필요 하 고 문자열의 나머지 텍스트는 부모 이름과 연결 된 결과에 나타납니다. 리터럴 별표를 표시 하려면 별표 ()를 두 개 사용 \* \* 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 지정된 단일 하위 항목, 즉 7월을 기준으로 2001년 3분기의 보이는 값 합계를 반환합니다.  
   
 ```  

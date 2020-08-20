@@ -1,4 +1,5 @@
 ---
+description: 바인딩 매개 변수 ODBC
 title: 바인딩 매개 변수 ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7538a82b-b08b-4c8f-9809-e4ccea16db11
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6e314bb9e3a1a979976a450e2a45a286ec54dfe7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9893d6611ad2bfc7107df1cd2d4ffe72dbf32fad
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306384"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499956"
 ---
 # <a name="binding-parameters-odbc"></a>바인딩 매개 변수 ODBC
 문을 실행 하기 전에 SQL 문의 각 매개 변수를 응용 프로그램의 변수에 연결 하거나 *바인딩해야* 합니다. 응용 프로그램은 변수에 변수를 바인딩하는 경우 해당 변수 주소, C 데이터 형식 등을 드라이버에 설명 합니다. 또한 매개 변수 자체, 즉 SQL 데이터 형식, 전체 자릿수 등을 설명 합니다. 드라이버는 해당 문에 대해 유지 관리 되는 구조에이 정보를 저장 하 고 문을 실행할 때이 정보를 사용 하 여 변수에서 값을 검색 합니다.  

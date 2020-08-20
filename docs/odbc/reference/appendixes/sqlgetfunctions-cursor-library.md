@@ -1,4 +1,5 @@
 ---
+description: SQLGetFunctions(커서 라이브러리)
 title: SQLGetFunctions (커서 라이브러리) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 931acd12-4eb6-4a78-9a77-157a18a9a2d0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f993a08aae1656b8d373911299e75852de855419
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ac307fbc1dcd2b10777ebe2e92f48f053ffcbd6c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307824"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499976"
 ---
 # <a name="sqlgetfunctions-cursor-library"></a>SQLGetFunctions(커서 라이브러리)
 > [!IMPORTANT]  

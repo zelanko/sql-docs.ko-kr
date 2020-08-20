@@ -14,15 +14,16 @@ ms.assetid: 0262df2b-5ba7-4715-b17b-3d9ce470a38e
 author: ronortloff
 ms.author: rortloff
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: abfff1a5f8a9ed447566e5f6a91fe23c51654890
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e7e6f8d248ef4d000c98a664148a5a5b33f0786b
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88401459"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88645943"
 ---
 # <a name="sysinternal_partitions-transact-sql"></a>sys. internal_partitions (Transact-sql)
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
+
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
   디스크 기반 테이블의 columnstore 인덱스에 대 한 내부 데이터를 추적 하는 각 행 집합에 대해 하나의 행을 반환 합니다. 이러한 행 집합은 columnstore 인덱스에 대 한 내부 이며 삭제 된 행, 행 그룹 매핑 및 델타 저장소 행 그룹을 추적 합니다. 각 테이블 파티션에 대 한 데이터를 추적 합니다. 모든 테이블에는 하나 이상의 파티션이 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] columnstore 인덱스를 다시 작성할 때마다 행 집합을 다시 만듭니다.   
   
@@ -60,7 +61,7 @@ on i.object_id = p.object_id
 WHERE p.object_id = OBJECT_ID ( '<table name' ) ;  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [개체 카탈로그 뷰 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [SQL Server 시스템 카탈로그 쿼리에 대한 질문과 대답](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  

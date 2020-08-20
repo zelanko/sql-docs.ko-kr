@@ -21,16 +21,17 @@ helpviewer_keywords:
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cabadc5cd42afa7a001d27f55e22c138bb6f9002
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2dc6a94205c7432f6fee305d58a27ec1eb0e0c33
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447700"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88646140"
 ---
 # <a name="sysdm_db_column_store_row_group_physical_stats-transact-sql"></a>sys. dm_db_column_store_row_group_physical_stats (Transact-sql)
 
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
+
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
 현재 데이터베이스의 모든 columnstore 인덱스에 대 한 현재 행 그룹 수준 정보를 제공 합니다.  
 
@@ -44,7 +45,7 @@ ms.locfileid: "88447700"
 |**row_group_id**|**int**|이 행 그룹의 ID입니다. 분할 된 테이블의 경우 값은 파티션 내에서 고유 합니다.<br /><br /> -메모리 내 꼬리의 경우-1입니다.|  
 |**delta_store_hobt_id**|**bigint**|델타 저장소의 행 그룹에 대 한 hobt_id입니다.<br /><br /> 행 그룹이 델타 저장소에 없는 경우 NULL입니다.<br /><br /> 메모리 내 테이블의 꼬리에 대해 NULL입니다.|  
 |**상태**|**tinyint**|*State_description*연결 된 ID 번호입니다.<br /><br /> 0 = INVISIBLE<br /><br /> 1 = OPEN<br /><br /> 2 = CLOSED<br /><br /> 3 = COMPRESSED<br /><br /> 4 = 삭제 표시<br /><br /> 압축은 메모리 내 테이블에 적용 되는 유일한 상태입니다.|  
-|**state_desc**|**nvarchar(60)**|행 그룹 상태에 대 한 설명입니다.<br /><br /> 0-보이지 않음-작성 중인 행 그룹입니다. 예를 들어 다음과 같은 가치를 제공해야 합니다. <br />데이터를 압축 하는 동안 columnstore의 행 그룹은 표시 되지 않습니다. 압축이 완료 되 면 메타 데이터 스위치는 columnstore 행 그룹의 상태를 보이지 않음에서 압축 됨으로 변경 하 고 deltastore 행 그룹의 상태를 닫힘에서 삭제 표시로 변경 합니다.<br /><br /> 1-OPEN-새 행을 수락 하는 deltastore 행 그룹입니다. 열린 행 그룹은 columnstore 형식으로 압축되지 않았고 여전히 rowstore 형식입니다.<br /><br /> 2-닫힘-최대 행 수를 포함 하는 델타 저장소의 행 그룹으로, 튜플 이동 기 프로세스가 columnstore로 압축 될 때까지 대기 합니다.<br /><br /> 3-압축-columnstore 압축으로 압축 되 고 columnstore에 저장 되는 행 그룹입니다.<br /><br /> 4-삭제 표시-이전에 deltastore에 있던 행 그룹이 더 이상 사용 되지 않습니다.|  
+|**state_desc**|**nvarchar(60)**|행 그룹 상태에 대 한 설명입니다.<br /><br /> 0-보이지 않음-작성 중인 행 그룹입니다. 다음은 그 예입니다.  <br />데이터를 압축 하는 동안 columnstore의 행 그룹은 표시 되지 않습니다. 압축이 완료 되 면 메타 데이터 스위치는 columnstore 행 그룹의 상태를 보이지 않음에서 압축 됨으로 변경 하 고 deltastore 행 그룹의 상태를 닫힘에서 삭제 표시로 변경 합니다.<br /><br /> 1-OPEN-새 행을 수락 하는 deltastore 행 그룹입니다. 열린 행 그룹은 columnstore 형식으로 압축되지 않았고 여전히 rowstore 형식입니다.<br /><br /> 2-닫힘-최대 행 수를 포함 하는 델타 저장소의 행 그룹으로, 튜플 이동 기 프로세스가 columnstore로 압축 될 때까지 대기 합니다.<br /><br /> 3-압축-columnstore 압축으로 압축 되 고 columnstore에 저장 되는 행 그룹입니다.<br /><br /> 4-삭제 표시-이전에 deltastore에 있던 행 그룹이 더 이상 사용 되지 않습니다.|  
 |**total_rows**|**bigint**|행 그룹에 물리적으로 저장 된 행의 수입니다. 압축 된 행 그룹의 경우 삭제 된 것으로 표시 된 행을 포함 합니다.|  
 |**deleted_rows**|**bigint**|삭제되도록 표시된 압축된 행 그룹에 물리적으로 저장된 행의 수입니다.<br /><br /> 델타 저장소에 있는 행 그룹의 경우 0입니다.|  
 |**size_in_bytes**|**bigint**|이 행 그룹에 있는 모든 페이지의 조합 된 크기 (바이트)입니다. 이 크기에는 메타 데이터 또는 공유 사전을 저장 하는 데 필요한 크기가 포함 되지 않습니다.|  
@@ -86,7 +87,7 @@ JOIN sys.dm_db_column_store_row_group_physical_stats AS CSRowGroups
 ORDER BY object_name(i.object_id), i.name, row_group_id;  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [개체 카탈로그 뷰 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)      
  [Columnstore 인덱스 아키텍처](../../relational-databases/sql-server-index-design-guide.md#columnstore_index)         

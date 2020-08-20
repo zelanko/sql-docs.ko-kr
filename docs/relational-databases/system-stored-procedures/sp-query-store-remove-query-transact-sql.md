@@ -22,15 +22,16 @@ ms.assetid: cc39ca92-3cba-478e-beef-65560aa84007
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4aff0b1ce7544474899793e7f1cc7344021cb157
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a7c958db4933fcf6ba8e42ff3504ee68b002b142
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489181"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88646483"
 ---
 # <a name="sp_query_store_remove_query-transact-sql"></a>sp_query_store_remove_query (Transact-sql)
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
+
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
   쿼리 저장소에서 관련 된 모든 계획 및 런타임 통계를 비롯 하 여 쿼리를 제거 합니다.  
   
@@ -74,7 +75,7 @@ JOIN sys.query_store_query_text AS Txt
 EXEC sp_query_store_remove_query 3;  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [Transact-sql&#41;sp_query_store_force_plan &#40;](../../relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql.md)   
  [sp_query_store_remove_plan &#40;Transct-sql&-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-plan-transct-sql.md)   
  [Transact-sql&#41;sp_query_store_unforce_plan &#40;](../../relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql.md)   

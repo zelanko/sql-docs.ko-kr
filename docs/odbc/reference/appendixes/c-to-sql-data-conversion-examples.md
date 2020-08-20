@@ -1,4 +1,5 @@
 ---
+description: C에서 SQL로 데이터 변환 예제
 title: C에서 SQL 데이터 변환 예제 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 9f390afc-d8b8-4286-b559-98b3b8781f3d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0e21654f183946675c63cee10a3c08754e1508f5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 65b0dd229139de060dd79132ee3ca7215906442a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81291993"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500016"
 ---
 # <a name="c-to-sql-data-conversion-examples"></a>C에서 SQL로 데이터 변환 예제
 다음 예에서는 드라이버가 C 데이터를 SQL 데이터로 변환 하는 방법을 보여 줍니다.  
   
-|C 형식 식별자|C 데이터 값|SQL 유형<br /><br /> identifier|열<br /><br /> length|SQL data<br /><br /> value|SQLSTATE|  
+|C 형식 식별자|C 데이터 값|SQL 유형<br /><br /> identifier|열<br /><br /> length|SQL data<br /><br /> 값|SQLSTATE|  
 |-----------------------|------------------|-----------------------------|-----------------------|------------------------|--------------|  
 |SQL_C_CHAR|abcdef\0 [a]|SQL_CHAR|6|abcdef|해당 없음|  
 |SQL_C_CHAR|abcdef\0 [a]|SQL_CHAR|5|abcde...z|22001|  

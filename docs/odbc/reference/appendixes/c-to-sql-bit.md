@@ -1,4 +1,5 @@
 ---
+description: 'C에서 SQL로: 비트'
 title: 'C에서 SQL로: Bit | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 267c9fa9-599e-4ee6-b51b-0cae43f09183
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a96982573d83cf01947f82dc2014ee2c470931e3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b62f85ddb3a89d27e078f316560cec466043743a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81292046"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500036"
 ---
 # <a name="c-to-sql-bit"></a>C에서 SQL로: 비트
 ODBC C 데이터 형식의 비트 식별자는 다음과 같습니다.  
@@ -30,8 +31,8 @@ ODBC C 데이터 형식의 비트 식별자는 다음과 같습니다.
   
 |SQL 유형 식별자|테스트|SQLSTATE|  
 |-------------------------|----------|--------------|  
-|SQL_CHAR SQL_VARCHAR<br /><br /> SQL_LONGVARCHAR<br /><br /> SQL_WCHAR SQL_WVARCHAR<br /><br /> SQL_WLONGVARCHAR|없음|해당 없음|  
-|SQL_DECIMAL SQL_NUMERIC<br /><br /> SQL_TINYINT SQL_SMALLINT<br /><br /> SQL_INTEGER SQL_BIGINT<br /><br /> SQL_REAL SQL_FLOAT<br /><br /> SQL_DOUBLE|없음|해당 없음|  
-|SQL_BIT|없음|해당 없음|  
+|SQL_CHAR SQL_VARCHAR<br /><br /> SQL_LONGVARCHAR<br /><br /> SQL_WCHAR SQL_WVARCHAR<br /><br /> SQL_WLONGVARCHAR|None|해당 없음|  
+|SQL_DECIMAL SQL_NUMERIC<br /><br /> SQL_TINYINT SQL_SMALLINT<br /><br /> SQL_INTEGER SQL_BIGINT<br /><br /> SQL_REAL SQL_FLOAT<br /><br /> SQL_DOUBLE|None|해당 없음|  
+|SQL_BIT|None|해당 없음|  
   
  비트 C 데이터 형식에서 데이터를 변환할 때 드라이버는 길이/표시기 값을 무시 하 고 데이터 버퍼의 크기가 비트 C 데이터 형식의 크기인 것으로 가정 합니다. 길이/표시기 값은 **Sqlputdata** 의 *StrLen_or_Ind* 인수와 **SQLBindParameter**의 *StrLen_or_IndPtr* 인수를 사용 하 여 지정 된 버퍼에 전달 됩니다. 데이터 버퍼는 **Sqlputdata** 의 *Dataptr* 인수와 **SQLBindParameter**의 *parametervalueptr* 인수를 사용 하 여 지정 됩니다.

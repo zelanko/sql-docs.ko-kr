@@ -1,4 +1,5 @@
 ---
+description: 바인딩 결과 집합 열
 title: 바인딩 결과 집합 열 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4bc9c30f-83ae-4766-a746-032953c187ad
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 558ceb79d42d82477b70a028395de82cc023c170
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e6a228de81deb5cdfdaa62ee7940185b14bcaef8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306364"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499946"
 ---
 # <a name="binding-result-set-columns"></a>바인딩 결과 집합 열
 응용 프로그램은 열을 전혀 바인딩하지 않는 것을 포함 하 여 선택 하는 것과 같이 결과 집합의 열을 여러 개 또는 여러 개 바인딩할 수 있습니다. 데이터 행을 인출할 때 드라이버는 바인딩된 열에 대 한 데이터를 응용 프로그램에 반환 합니다. 응용 프로그램이 결과 집합의 모든 열을 바인딩하는 지 여부는 응용 프로그램에 따라 달라 집니다. 예를 들어 보고서를 생성 하는 응용 프로그램에는 일반적으로 고정 된 형식이 있습니다. 이러한 응용 프로그램은 보고서에 사용 된 모든 열을 포함 하는 결과 집합을 만든 다음 이러한 모든 열에 대 한 데이터를 바인딩하고 검색 합니다. 화면에 전체 데이터를 표시 하는 응용 프로그램에서는 사용자가 표시할 열을 결정할 수 있습니다. 이러한 응용 프로그램은 사용자가 원하는 모든 열을 포함 하는 결과 집합을 만들지만 사용자가 선택한 열에 대해서만 데이터를 바인딩하고 검색할 수 있습니다.  
