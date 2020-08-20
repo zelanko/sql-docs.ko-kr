@@ -1,4 +1,5 @@
 ---
+description: bcp_bind
 title: bcp_bind | Microsoft Docs
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -18,11 +19,12 @@ ms.custom: ''
 ms.reviewer: ''
 ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 29422a0dba80f9092221616c128b69f5579cb900
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 7cbf8a5d7fa207b7be9eb2e6359766064dbef343
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009130"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455925"
 ---
 # <a name="bcp_bind"></a>bcp_bind
 
@@ -120,7 +122,7 @@ bcp_bind(hdbc, szName, 0,
 
 *Edatatype* 매개 변수는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC C 데이터 형식 열거자가 아닌 sqlncli의 데이터 형식 토큰에 의해 열거 됩니다. 예를 들어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 특정 형식 SQLINT2를 사용하여 2바이트 정수인 ODBC 형식 SQL_C_SHORT를 지정할 수 있습니다.  
 
-[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서는 **_Edatatype_** 매개 변수의 SQLXML 및 sqludt 데이터 형식 토큰에 대 한 지원이 도입 되었습니다.  
+[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 에서는 **_Edatatype_** 매개 변수의 SQLXML 및 sqludt 데이터 형식 토큰에 대 한 지원이 도입 되었습니다.  
 
 다음 표에는 유효한 열거형 데이터 형식 및 해당 ODBC C 데이터 형식이 나열되어 있습니다.
 

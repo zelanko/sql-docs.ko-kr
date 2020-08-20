@@ -1,4 +1,5 @@
 ---
+description: 온라인 인덱스 작동 방식
 title: 온라인 인덱스 작동 방식 | Microsoft 문서
 ms.custom: ''
 ms.date: 02/17/2017
@@ -18,12 +19,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.prod_service: database-engine, sql-database
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a61295dcadd884f2b54d23bd74dfee66cd866dc4
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 3a837e19bdba71b6aa3f810d62099f2da0e4e516
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812648"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455944"
 ---
 # <a name="how-online-index-operations-work"></a>온라인 인덱스 작동 방식
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

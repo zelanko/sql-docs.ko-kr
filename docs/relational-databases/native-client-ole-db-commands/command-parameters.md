@@ -1,4 +1,5 @@
 ---
+description: 명령 매개 변수 (Native Client OLE DB 공급자)
 title: 명령 매개 변수 (Native Client OLE DB 공급자) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ ms.assetid: 072ead49-ebaf-41eb-9a0f-613e9d990f26
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f77c6efacf6110a3a69a073f1743583ac6e42387
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: bb1e6e149a17e5315f1675aed52ec010a1751b4b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247062"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455903"
 ---
 # <a name="sql-server-native-client-command-parameters"></a>SQL Server Native Client 명령 매개 변수
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

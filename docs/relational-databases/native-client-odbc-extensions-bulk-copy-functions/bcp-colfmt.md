@@ -1,4 +1,5 @@
 ---
+description: bcp_colfmt
 title: bcp_colfmt | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,11 +19,12 @@ ms.assetid: 5c3b6299-80c7-4e84-8e69-4ff33009548e
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d01e3c08ea1554fcc10c986bb6e6b9bbd9570d54
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 7b5ae01aef91edd1a7fe45c9203be407dbf7620c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009146"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455922"
 ---
 # <a name="bcp_colfmt"></a>bcp_colfmt
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -54,7 +56,7 @@ RETCODE bcp_colfmt (
  *eUserDataType*  
  사용자 파일에 있는 이 열의 데이터 형식입니다. 데이터베이스 테이블에 있는 해당 열의 데이터 형식(*idxServerColumn*)과 다르면 가능한 경우 대량 복사에서 데이터를 변환합니다.  
   
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서는 *Euserdatatype* 매개 변수의 SQLXML 및 sqludt 데이터 형식 토큰에 대 한 지원이 도입 되었습니다.  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 에서는 *Euserdatatype* 매개 변수의 SQLXML 및 sqludt 데이터 형식 토큰에 대 한 지원이 도입 되었습니다.  
   
  *eUserDataType* 매개 변수는 ODBC C 데이터 형식 열거자가 아닌 sqlncli.h의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식 토큰에 의해 열거됩니다. 예를 들어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 관련된 SQLCHARACTER 형식을 사용하여 ODBC 유형 SQL_C_CHAR라는 문자열을 지정할 수 있습니다.  
   
@@ -135,7 +137,7 @@ RETCODE bcp_colfmt (
   
  사용자 파일 열에 대해 **bcp_colfmt** 를 두 번 이상 호출 하면 오류가 발생 합니다.  
   
- 사용자 파일의 모든 데이터를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블로 복사할 필요가 없습니다. 열을 건너뛰려면 *idxServerCol* 매개 변수를 0으로 설정하여 해당 열의 데이터 형식을 지정합니다. 열을 건너뛰려면 열 형식을 지정해야 합니다.  
+ 사용자 파일의 모든 데이터를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블로 복사할 필요가 없습니다. 열을 건너뛰려면 *Idxservercol* 매개 변수를 0으로 설정 하 여 열의 데이터 형식을 지정 합니다. 열을 건너뛰려면 열 형식을 지정해야 합니다.  
   
  [bcp_writefmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-writefmt.md) 함수는 형식 사양을 유지하는 데 사용할 수 있습니다.  
   

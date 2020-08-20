@@ -1,4 +1,5 @@
 ---
+description: 준비된 문의 테이블 반환 매개 변수 메타데이터
 title: 준비 된 문에 대 한 TVP 메타 데이터
 ms.custom: ''
 ms.date: 03/04/2017
@@ -13,11 +14,12 @@ ms.assetid: fd2fc705-2e98-4011-9822-c7e6cca4a535
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f5e50f025aa2524a3b6fee1a92ca2fecbca214bc
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: c93614fa84a1758586deb72382dde042d40dd827
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85998357"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455885"
 ---
 # <a name="table-valued-parameter-metadata-for-prepared-statements"></a>준비된 문의 테이블 반환 매개 변수 메타데이터
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -31,6 +33,6 @@ ms.locfileid: "85998357"
  저장 프로시저 호출이 아닌 준비된 문의 테이블 반환 매개 변수 메타데이터는 가져올 수 없습니다. 이렇게 하려고 하면 애플리케이션에서 SQLSTATE 42000이고 메시지가 &quot;구문 오류 또는 액세스 위반입니다.&quot;인 SQL_ERROR가 반환됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [ODBC&#41;&#40;테이블 반환 매개 변수](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
+ [ODBC&#41;&#40;테이블 반환 매개 변수 ](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
   
   

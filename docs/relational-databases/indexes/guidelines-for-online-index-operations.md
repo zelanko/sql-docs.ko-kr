@@ -1,4 +1,5 @@
 ---
+description: 온라인 인덱스 작업에 대한 지침
 title: 온라인 인덱스 작업에 대한 지침 | Microsoft 문서
 ms.custom: ''
 ms.date: 11/12/2019
@@ -18,12 +19,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.prod_service: table-view-index, sql-database
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4dde42d927732e0209fed114e6d8d50451ab6379
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ce049f8c597526187ccce8ba7fdb498d8280cf1f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85629614"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455954"
 ---
 # <a name="guidelines-for-online-index-operations"></a>온라인 인덱스 작업에 대한 지침
 
@@ -43,7 +44,7 @@ ms.locfileid: "85629614"
 
 | 온라인 인덱스 작업 | 제외되는 인덱스 | 기타 제한 사항 |  
 |----------------------------|----------------------|------------------------|  
-|ALTER INDEX REBUILD|비활성화된 클러스터형 인덱스 또는 비활성화된 인덱싱된 뷰<br /><br /> XML 인덱스<br /><br />columnstore 인덱스 <br /><br /> 로컬 임시 테이블의 인덱스|키워드를 ALL로 지정하면 테이블에 제외된 인덱스가 들어 있는 경우 작업이 실패할 수 있습니다.<br /><br /> 비활성 인덱스를 다시 작성하는 작업에 추가 제한 사항이 적용됩니다. 자세한 내용은 [인덱스 및 제약 조건 비활성화](../../relational-databases/indexes/disable-indexes-and-constraints.md)를 참조하세요.|  
+|ALTER INDEX REBUILD|비활성화된 클러스터형 인덱스 또는 비활성화된 인덱싱된 뷰<br /><br /> XML 인덱스<br /><br />Columnstore 인덱스 <br /><br /> 로컬 임시 테이블의 인덱스|키워드를 ALL로 지정하면 테이블에 제외된 인덱스가 들어 있는 경우 작업이 실패할 수 있습니다.<br /><br /> 비활성 인덱스를 다시 작성하는 작업에 추가 제한 사항이 적용됩니다. 자세한 내용은 [인덱스 및 제약 조건 비활성화](../../relational-databases/indexes/disable-indexes-and-constraints.md)를 참조하세요.|  
 |CREATE  INDEX|XML 인덱스<br /><br /> 뷰의 초기 고유 클러스터형 인덱스<br /><br /> 로컬 임시 테이블의 인덱스||  
 |CREATE  INDEX  WITH  DROP_EXISTING|비활성화된 클러스터형 인덱스 또는 비활성화된 인덱싱된 뷰<br /><br /> 로컬 임시 테이블의 인덱스<br /><br /> XML 인덱스||  
 |DROP INDEX|비활성 인덱스<br /><br /> XML 인덱스<br /><br /> 비클러스터형 인덱스<br /><br /> 로컬 임시 테이블의 인덱스|단일 문에 여러 인덱스를 지정할 수 없습니다.|  
@@ -130,7 +131,7 @@ ELEVATE_ONLINE 및 ELEVATE_RESUMABLE은 online 및 resumable 구문을 각각 �
 
 ## <a name="related-content"></a>관련 콘텐츠
 
-- [온라인 인덱스 작업 작동 방식](../../relational-databases/indexes/how-online-index-operations-work.md)  
+- [온라인 인덱스 작동 방식](../../relational-databases/indexes/how-online-index-operations-work.md)  
 - [온라인으로 인덱스 작업 수행](../../relational-databases/indexes/perform-index-operations-online.md)  
 - [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md)  
 - [CREATE  INDEX](../../t-sql/statements/create-index-transact-sql.md)  

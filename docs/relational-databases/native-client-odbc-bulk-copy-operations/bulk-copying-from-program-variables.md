@@ -1,4 +1,5 @@
 ---
+description: 프로그램 변수에서 대량 복사
 title: 프로그램 변수에서 대량 복사 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,11 +20,12 @@ ms.assetid: e4284a1b-7534-4b34-8488-b8d05ed67b8c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 543d14bf67cfc4587c315090533c1066646493c7
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 50b1177e65ad2ef082335fa29a180ddd8f489adf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012330"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455980"
 ---
 # <a name="bulk-copying-from-program-variables"></a>프로그램 변수에서 대량 복사
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -84,7 +86,7 @@ ms.locfileid: "86012330"
 |SQL_GUID|SQL_C_GUID|SQLUNIQUEID|**uniqueidentifier**|  
 |SQL_INTERVAL_|SQL_C_CHAR|SQLCHARACTER|**char**|  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에는 서명 된 **tinyint**, unsigned **smallint**또는 unsigned **int** 데이터 형식이 없습니다. 이러한 데이터 형식을 마이그레이션할 때 데이터 값이 손실되지 않게 하려면 다음으로 큰 정수 데이터 형식을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블을 만드십시오. 나중에 사용자가 원래 데이터 형식에서 허용되는 범위를 벗어나는 값을 추가하지 못하도록 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 열에 원래 원본의 데이터 형식에서 지원하는 범위로 사용 가능한 값을 제한하는 규칙을 적용합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에는 서명 된 **tinyint**, unsigned **smallint**또는 unsigned **int** 데이터 형식이 없습니다. 이러한 데이터 형식을 마이그레이션할 때 데이터 값이 손실되지 않게 하려면 다음으로 큰 정수 데이터 형식을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블을 만드십시오. 나중에 사용자가 원래 데이터 형식에서 허용되는 범위를 벗어나는 값을 추가하지 못하도록 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 열에 원래 원본의 데이터 형식에서 지원하는 범위로 사용 가능한 값을 제한하는 규칙을 적용합니다.  
   
 ```  
 CREATE TABLE Sample_Ints(STinyIntCol   SMALLINT,  
@@ -113,6 +115,6 @@ GO
  "bcp_readrow" 함수에 해당하는 기능이 없기 때문에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 대량 복사를 사용하여 프로그램 변수로 데이터를 읽어들일 수는 없으며 애플리케이션에서 서버로 데이터를 보낼 수만 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [ODBC&#41;&#40;대량 복사 작업 수행](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)  
+ [ODBC&#41;&#40;대량 복사 작업 수행 ](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)  
   
   

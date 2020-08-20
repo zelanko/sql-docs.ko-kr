@@ -1,4 +1,5 @@
 ---
+description: 텍스트 및 이미지 데이터 대량 복사
 title: 텍스트 및 이미지 데이터 대량 복사 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -16,11 +17,12 @@ ms.assetid: 87155bfa-3a73-4158-9d4d-cb7435dac201
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3ad6e41b5f290a0f76c369ab454f68f3779e7737
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 55635292fab4a720e706cb62797bce4d1a1ce378
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009585"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455965"
 ---
 # <a name="bulk-copying-text-and-image-data"></a>텍스트 및 이미지 데이터 대량 복사
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -30,6 +32,6 @@ ms.locfileid: "86009585"
  **bcp_moretext** 에는 열을 식별 하는 매개 변수가 없습니다. 한 행에 **text**, **ntext**또는 **image** 열이 여러 개 있는 경우 **bcp_moretext** 는 가장 낮은 서 수 번호가 있는 열로 시작 하는 **text**, **ntext**또는 **image** 열에 대해 작동 하며 서 수 번호가 가장 높은 열로 진행 됩니다. 전송 된 데이터의 길이가 최신 **bcp_collen** **bcp_bind** 또는 현재 열에 대해 지정 된 길이와 같으면 한 열에서 다음 열로 이동 **bcp_moretext** .  
   
 ## <a name="see-also"></a>참고 항목  
- [ODBC&#41;&#40;대량 복사 작업 수행](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)  
+ [ODBC&#41;&#40;대량 복사 작업 수행 ](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)  
   
   
