@@ -1,4 +1,5 @@
 ---
+description: ODBC 소개
 title: ODBC 소개 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: dbe0b5a3-d7fa-440d-80b4-6cc00de159dc
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0a92e671169fa375169a37ca01e1d55729167b1e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d164acb4621c0298fe8821255941e0ccf1d4c25f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81295973"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499706"
 ---
 # <a name="introduction-to-odbc"></a>ODBC 소개
 이 섹션에서는 구조적 쿼리 언어 및 ODBC에 대 한 간단한 기록을 제공 하며 ODBC 인터페이스에 대 한 개념 정보를 포함 합니다.  

@@ -1,4 +1,5 @@
 ---
+description: CREATE AGGREGATE(Transact-SQL)
 title: CREATE AGGREGATE(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 62eebc19-9f15-4245-94fa-b3fcd64a9d42
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2235751cc4c198a39a3e3c368f4d07f5451dedd7
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+ms.openlocfilehash: 46cca1e2e955b96a11d9be648f3f7ac7f042995b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86380816"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496906"
 ---
 # <a name="create-aggregate-transact-sql"></a>CREATE AGGREGATE(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -84,14 +85,14 @@ EXTERNAL NAME assembly_name [ .class_name ]
  사용자 정의 집계 함수와 바인딩할 어셈블리를 지정하고 필요에 따라 어셈블리가 속한 스키마의 이름과 사용자 정의 집계를 구현하는 어셈블리의 클래스 이름을 지정합니다. 어셈블리는 CREATE ASSEMBLY 문을 사용하여 데이터베이스에 이미 생성되어 있어야 합니다. *class_name*은 유효한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 식별자여야 하며 어셈블리에 있는 클래스의 이름과 일치해야 합니다. *class_name*은 클래스를 작성할 때 사용된 프로그래밍 언어가 C#과 같은 네임스페이스를 사용하는 경우 네임스페이스로 한정된 이름일 수 있습니다. *class_name*을 지정하지 않을 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]은 *aggregate_name*과 동일한 것으로 간주합니다.  
   
 ## <a name="remarks"></a>설명  
- 기본적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 CLR 코드 실행 기능은 해제됩니다. 관리 코드 모듈을 참조하는 데이터베이스 개체를 만들고 수정하고 삭제할 수 있지만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sp_configure[를 사용하여 ](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)clr enabled 옵션[을 설정해야 이러한 모듈의 코드가 ](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 인스턴스에서 실행됩니다.  
+ 기본적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 CLR 코드 실행 기능은 해제됩니다. 관리 코드 모듈을 참조하는 데이터베이스 개체를 만들고 수정하고 삭제할 수 있지만 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)를 사용하여 [clr enabled 옵션](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)을 설정해야 이러한 모듈의 코드가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 실행됩니다.  
   
  *assembly_name* 및 해당 메서드에서 참조되는 어셈블리의 클래스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 사용자 정의 집계 함수를 구현하기 위한 모든 요구 사항을 만족해야 합니다. 자세한 내용은 [CLR 사용자 집계](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md)를 참조하세요.  
   
 ## <a name="permissions"></a>사용 권한  
  EXTERNAL NAME 절에 지정된 어셈블리에 대한 REFERENCES 권한과 CREATE AGGREGATE 권한이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 StringUtilities.csproj 예제 애플리케이션이 컴파일된다고 가정합니다. 자세한 내용은 [문자열 유틸리티 함수 예제](https://msdn.microsoft.com/library/9623013f-15f1-4614-8dac-1155e57c880c)를 참조합니다.  
   
  이 예에서는 집계 `Concatenate`를 만듭니다. 집계를 만들기 전에 `StringUtilities.dll` 어셈블리가 로컬 데이터베이스에 등록됩니다.  

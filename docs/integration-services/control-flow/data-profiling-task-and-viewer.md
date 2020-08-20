@@ -1,4 +1,5 @@
 ---
+description: 데이터 프로파일링 태스크 및 뷰어
 title: 데이터 프로파일링 태스크 및 뷰어 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 756840e3-aa09-45cd-9951-1a17af4b5925
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e06817d0c3af0c4f5446b52ad352b35845f9e122
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ad5a2f88c170477095627a5f6da33b089424dcc4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919816"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495995"
 ---
 # <a name="data-profiling-task-and-viewer"></a>데이터 프로파일링 태스크 및 뷰어
 
@@ -62,12 +63,12 @@ ms.locfileid: "86919816"
  **1단계: 데이터 프로파일링 태스크 설정**  
  데이터 프로파일링 태스크는 컴퓨팅하려는 프로필을 구성하기 위해 사용하는 태스크입니다. 데이터 프로파일링 태스크를 포함하는 패키지를 실행하여 프로필을 컴퓨팅합니다. 이 태스크는 프로필 출력을 XML 형식으로 파일이나 패키지 변수에 저장합니다.  
   
- **자세한 내용은 다음을 참조하세요.** [데이터 프로파일링 태스크 설정](../../integration-services/control-flow/setup-of-the-data-profiling-task.md)  
+ **자세한 내용:** [데이터 프로파일링 태스크 설정](../../integration-services/control-flow/setup-of-the-data-profiling-task.md)  
   
  **2단계: 데이터 프로파일링 태스크가 계산하는 프로필 검토**  
  데이터 프로파일링 태스크가 계산하는 데이터 프로필을 보려면 출력을 파일로 보낸 다음 데이터 프로필 뷰어를 사용합니다. 이 뷰어는 선택적 드릴다운 기능과 함께 요약 및 세부 정보 형식으로 프로필 출력을 표시하는 독립 실행형 유틸리티입니다.  
   
- **자세한 내용은 다음을 참조하세요.** [데이터 프로필 뷰어](../../integration-services/control-flow/data-profile-viewer.md)  
+ **자세한 내용:** [데이터 프로필 뷰어](../../integration-services/control-flow/data-profile-viewer.md)  
   
 ### <a name="addition-of-conditional-logic-to-the-data-profiling-workflow"></a>데이터 프로파일링 워크플로에 조건부 논리 추가  
  데이터 프로파일링 태스크에는 조건부 논리를 사용하여 프로필 출력에 따라 해당 태스크를 다운스트림 태스크에 연결할 수 있는 기본 제공 기능이 없습니다. 그러나 스크립트 태스크에서 약간의 프로그래밍 작업을 수행하여 이 논리를 손쉽게 추가할 수 있습니다. 예를 들어 스크립트 태스크는 데이터 프로파일링 태스크의 출력 파일에 대해 XPath 쿼리를 수행할 수 있습니다. 이 쿼리에서는 특정 열의 Null 값 비율이 특정 임계값을 초과하는지 여부를 확인할 수 있습니다. 해당 비율이 임계값을 초과하는 경우 패키지를 중단하고 원본 데이터에서 문제를 해결한 다음 계속할 수 있습니다. 자세한 내용은 [패키지 워크플로에 데이터 프로파일링 태스크 포함](../../integration-services/control-flow/incorporate-a-data-profiling-task-in-package-workflow.md)을 참조하세요.  

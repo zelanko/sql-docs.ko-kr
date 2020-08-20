@@ -1,4 +1,5 @@
 ---
+description: SQLSetConnectOption 함수
 title: SQLSetConnectOption 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 8cd2c2a2-25c8-4aff-951c-b593bbfc90ad
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 263b15cb75fb5c0c7c1d7aa630a8da171b9765a7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ebe9166ea52971812e8905399da4ea0e6347361a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301598"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499535"
 ---
 # <a name="sqlsetconnectoption-function"></a>SQLSetConnectOption 함수
 **규칙**  
@@ -42,6 +43,6 @@ ms.locfileid: "81301598"
 > [!NOTE]  
 >  ODBC 3.8에 도입 된 SQL_ASYNC_DBC_FUNCTION_ENABLE 특성은 **SQLSetConnectOption**에서 지원 되지 않습니다. 연결 핸들에 대해 비동기 작업을 사용 하는 응용 프로그램은 **SQLSetConnectAttr**를 사용 해야 합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [ODBC API 참조](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 헤더 파일](../../../odbc/reference/install/odbc-header-files.md)

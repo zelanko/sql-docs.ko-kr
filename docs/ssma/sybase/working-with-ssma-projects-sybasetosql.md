@@ -1,4 +1,5 @@
 ---
+description: SSMA 프로젝트 작업(SybaseToSQL)
 title: SSMA 프로젝트 작업 (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 11091d95-c488-48c3-891a-743cac94ac93
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: c9bc3f8f81d8701a584a1f4d6caee1b442746b76
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: a1a73e1dbc1c494080427ae5dfd686dd3c18abc1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934495"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497637"
 ---
 # <a name="working-with-ssma-projects-sybasetosql"></a>SSMA 프로젝트 작업(SybaseToSQL)
 Sybase ASE (적응 서버 엔터프라이즈) 데이터베이스를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure 마이그레이션하려면 먼저 SSMA 프로젝트를 만듭니다. 프로젝트는 SQL Azure 마이그레이션하려는 ASE 데이터베이스에 대 한 메타 데이터를 포함 하는 파일입니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .이 파일의 대상 인스턴스에 대 한 메타 데이터, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 마이그레이션된 개체 및 데이터를 받는 SQL Azure 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결 정보 SQL Azure, 프로젝트 설정에 대 한 메타 데이터를 포함 하는 파일입니다.  
@@ -70,7 +71,7 @@ ASE 데이터베이스에서 또는 SQL Azure로 데이터를 마이그레이션
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014  
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016  
   
@@ -119,8 +120,8 @@ ASE 데이터베이스에서 또는 SQL Azure로 데이터를 마이그레이션
 마이그레이션 프로세스의 다음 단계는 [SYBASE ASE에 연결](connecting-to-sybase-ase-sybasetosql.md)하는 것입니다.  
   
 ## <a name="see-also"></a>참고 항목  
-[Sybase ASE 데이터베이스를 SQL Server-Azure SQL Database &#40;SybaseToSQL&#41;로 마이그레이션](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
-[Sybase ASE &#40;SybaseToSQL&#41;에 연결](../../ssma/sybase/connecting-to-sybase-ase-sybasetosql.md)  
-[SQL Server &#40;SybaseToSQL&#41;에 연결](../../ssma/sybase/connecting-to-sql-server-sybasetosql.md)  
-[Azure SQL Database &#40;SybaseToSQL&#41;에 연결](../../ssma/sybase/connecting-to-azure-sql-db-sybasetosql.md)  
+[Sybase ASE 데이터베이스를 SQL Server-Azure SQL Database &#40;SybaseToSQL&#41;로 마이그레이션 ](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
+[Sybase ASE &#40;SybaseToSQL&#41;에 연결 ](../../ssma/sybase/connecting-to-sybase-ase-sybasetosql.md)  
+[SQL Server &#40;SybaseToSQL&#41;에 연결 ](../../ssma/sybase/connecting-to-sql-server-sybasetosql.md)  
+[Azure SQL Database &#40;SybaseToSQL&#41;에 연결 ](../../ssma/sybase/connecting-to-azure-sql-db-sybasetosql.md)  
   

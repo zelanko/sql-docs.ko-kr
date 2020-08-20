@@ -1,4 +1,5 @@
 ---
+description: REVOKE 전체 텍스트 사용 권한(Transact-SQL)
 title: REVOKE 전체 텍스트 사용 권한(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/26/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: ef617436-1e86-4573-900a-702e27a202b9
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 1c127761678432295e1e41bb84581df52f7252d5
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: a4f331b478aeb81ef7ceed5777928b4f82898b0f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483781"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496599"
 ---
 # <a name="revoke-full-text-permissions-transact-sql"></a>REVOKE 전체 텍스트 사용 권한(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -58,10 +59,10 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
  *permission*  
  사용 권한의 이름입니다. 보안 개체에 대한 사용 권한의 올바른 매핑에 대해서는 이 항목 뒷부분의 "주의" 섹션에 설명되어 있습니다.  
   
- ON FULLTEXT CATALOG **::** _full-text_catalog_name_  
+ ON FULLTEXT CATALOG **::**_full-text_catalog_name_  
  사용 권한을 취소할 전체 텍스트 카탈로그를 지정합니다. 범위 한정자 **::** 가 필요합니다.  
   
- ON FULLTEXT STOPLIST **::** _full-text_stoplist_name_  
+ ON FULLTEXT STOPLIST **::**_full-text_stoplist_name_  
  사용 권한을 취소할 전체 텍스트 중지 목록을 지정합니다. 범위 한정자 **::** 가 필요합니다.  
   
  *database_principal*  
@@ -150,6 +151,6 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
  [REVOKE&#40;Transact-SQL&#41;](../../t-sql/statements/revoke-transact-sql.md)   
  [sys.fn_builtin_permissions&#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   
  [sys.fulltext_catalogs&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)   
- [sys.fulltext_stoplists&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-stoplists-transact-sql.md)  
+ [sys.fulltext_stoplists &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-stoplists-transact-sql.md)  
   
   

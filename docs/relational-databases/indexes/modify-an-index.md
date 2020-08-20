@@ -1,4 +1,5 @@
 ---
+description: 인덱스 수정
 title: 인덱스 수정 | Microsoft 문서
 ms.custom: ''
 ms.date: 02/17/2017
@@ -15,12 +16,12 @@ ms.assetid: 97e3110d-fde7-4f5d-9309-dc1697960aeb
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9c8334573b66b5c227a5033a63b5aedf06909c78
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 15a7386c08d2b9147858cab3fde212cf285902cb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68316965"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499367"
 ---
 # <a name="modify-an-index"></a>인덱스 수정
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

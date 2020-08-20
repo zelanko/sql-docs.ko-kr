@@ -1,4 +1,5 @@
 ---
+description: 스토리지 할당
 title: 저장소 할당 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -22,11 +23,12 @@ ms.assetid: 11c81955-5300-495f-925f-9256f2587b58
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d891ae890f101fff704dfa0500e6cbb3724ffbf5
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 2006f41abcdc086a49ce04e91a579294a411dd07
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002905"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499139"
 ---
 # <a name="assigning-storage"></a>스토리지 할당
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -60,6 +62,6 @@ ms.locfileid: "86002905"
  또한 애플리케이션에서는 SQL_ATTR_ROW_ARRAY_SIZE를 열 또는 행 배열의 요소 수로 설정하고 SQL_ATTR_ROW_STATUS_PTR 및 SQL_ATTR_ROWS_FETCHED_PTR을 설정합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [ODBC&#41;&#40;결과 처리](../../relational-databases/native-client-odbc-results/processing-results-odbc.md)  
+ [ODBC&#41;&#40;결과 처리 ](../../relational-databases/native-client-odbc-results/processing-results-odbc.md)  
   
   

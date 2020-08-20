@@ -1,4 +1,5 @@
 ---
+description: 새 InfoObject 만들기
 title: 새 InfoObject 만들기 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 3587a633-1c0b-4d63-a22a-6b2b93923c3a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7a67dd66c18fc5700ee964a2e321bd50fef09092
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 9cb9336b7999373b1f6af5bb5327a35f77fdbe7e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86900510"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495888"
 ---
 # <a name="create-new-infoobject"></a>새 InfoObject 만들기
 
@@ -56,7 +57,7 @@ ms.locfileid: "86900510"
  **새 InfoObject 만들기** 대화 상자의 **특성** 섹션에서 **새로 만들기** 를 클릭하여 **새 InfoObject 만들기** 대화 상자를 열 수도 있습니다.  
   
 ## <a name="general-options"></a>일반 옵션  
- **특징**  
+ **특성**  
  차원 데이터를 나타내는 InfoObject를 만듭니다.  
   
  **주요 수치**  
@@ -75,7 +76,7 @@ ms.locfileid: "86900510"
  InfoObject에 특성, 텍스트 또는 계층의 형태로 마스터 데이터가 포함됨을 나타냅니다.  
   
 > [!NOTE]  
->  InfoObject가 차원 데이터를 나타내고 **특징** 옵션을 선택한 경우 이 옵션을 선택합니다.  
+>   InfoObject가 차원 데이터를 나타내고 **특징** 옵션을 선택한 경우 이 옵션을 선택합니다.  
   
  **소문자 허용**  
  InfoObject 데이터에서 소문자를 허용합니다.  
@@ -137,7 +138,7 @@ ms.locfileid: "86900510"
 |-----------|-----------------|  
 |CHA|특징|  
 |KYF|주요 수치|  
-|UNI|Units|  
+|UNI|단위|  
 |TIM|시간 특징|  
   
 ### <a name="attributes-options"></a>특성 옵션  

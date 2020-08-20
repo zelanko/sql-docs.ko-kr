@@ -1,4 +1,5 @@
 ---
+description: 현재 위치 업데이트 및 Delete 문 시뮬레이션
 title: 위치 지정 업데이트 및 Delete 문 시뮬레이션 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b24ed59f-f25b-4646-a135-5f3596abc1a4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e1eb498a99180d145147e67c8955eeb7a0027024
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 06f6faad1b5b6cb83616575ea8732cac98b88ed0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301994"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499816"
 ---
 # <a name="simulating-positioned-update-and-delete-statements"></a>현재 위치 업데이트 및 Delete 문 시뮬레이션
 데이터 원본에서 위치 지정 update 및 delete 문을 지원 하지 않는 경우 드라이버에서 이러한 문을 시뮬레이트할 수 있습니다. 예를 들어 ODBC 커서 라이브러리는 위치 지정 update 및 delete 문을 시뮬레이트합니다. 위치 지정 update 및 delete 문을 시뮬레이트하는 일반적인 전략은 위치 지정 문을 검색 된 문으로 변환 하는 것입니다. **WHERE CURRENT OF** 절을 현재 행을 식별 하는 검색 된 **where** 절로 바꿔서이 작업을 수행 합니다.  

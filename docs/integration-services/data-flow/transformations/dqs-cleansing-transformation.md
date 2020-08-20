@@ -1,4 +1,5 @@
 ---
+description: DQS 정리 변환
 title: DQS 정리 변환 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d2ec1b1a-c745-4741-b57c-6fdb524a154c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2d02041dfedd882502a0440909b52fab86337b22
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ce6e3f36d8216f08493933798cdab558274e0cb5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919382"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495709"
 ---
 # <a name="dqs-cleansing-transformation"></a>DQS 정리 변환
 
@@ -47,7 +48,7 @@ ms.locfileid: "86919382"
   
 ## <a name="related-tasks"></a>관련 작업  
   
--   [Data Quality Client에서 Integration Services 프로젝트 열기](../../../data-quality-services/open-integration-services-projects-in-data-quality-client.md)  
+-   [데이터 품질 클라이언트에서 Integration Services 프로젝트 열기](../../../data-quality-services/open-integration-services-projects-in-data-quality-client.md)  
   
 -   [도메인으로 정리 프로젝트 값 가져오기](../../../data-quality-services/import-cleansing-project-values-into-a-domain.md)  
   
@@ -141,7 +142,7 @@ ms.locfileid: "86919382"
  **신뢰도**  
  수정된 데이터에 대한 신뢰 수준을 포함할지 여부를 나타냅니다. 신뢰 수준은 수정 내용 또는 제안 내용에 대한 DQS의 확신도를 나타냅니다. 신뢰 수준에 대한 자세한 내용은 [데이터 정리](../../../data-quality-services/data-cleansing.md)를 참조하세요.  
   
- **원인**  
+ **이유**  
  데이터 수정 이유를 포함할지 여부를 나타냅니다.  
   
  **추가된 데이터**  

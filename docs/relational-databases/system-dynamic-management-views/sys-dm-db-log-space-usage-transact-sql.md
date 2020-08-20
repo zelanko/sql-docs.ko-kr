@@ -1,4 +1,5 @@
 ---
+description: sys. dm_db_log_space_usage (Transact-sql)
 title: sys. dm_db_log_space_usage (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/29/2017
@@ -20,12 +21,12 @@ ms.assetid: f6b40060-c17d-472f-b0a3-3b350275d487
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3dd64b703561b4572ccef54cbab27a711ed783f9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 62bb7d8d5aef48e8516ce74721b38f3c7003c6b4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85786309"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498403"
 ---
 # <a name="sysdm_db_log_space_usage-transact-sql"></a>sys. dm_db_log_space_usage (Transact-sql)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -41,7 +42,7 @@ ms.locfileid: "85786309"
 |total_log_size_in_bytes |**bigint** |로그의 크기입니다.  |
 |used_log_space_in_bytes |**bigint** |로그의 차지 하는 크기입니다.  |     
 |used_log_space_in_percent |**real** |총 로그 크기의 백분율로 된 로그의 차지 하는 크기입니다. |
-|log_space_in_bytes_since_last_backup |**bigint** |마지막 로그 백업 이후 사용 된 공간의 양입니다. <br />**적용 대상:** [!INCLUDE[sssql14-md](../../includes/sssql14-md.md)] 부터 [!INCLUDE[sscurrent-md](../../includes/sscurrent-md.md)] , [!INCLUDE[ssSDS](../../includes/sssds-md.md)] .|
+|log_space_in_bytes_since_last_backup |**bigint** |마지막 로그 백업 이후 사용 된 공간의 양입니다. <br />**적용 대상:** [!INCLUDE[sssql14-md](../../includes/sssql14-md.md)] 부터 [!INCLUDE[sscurrent-md](../../includes/sscurrent-md.md)] ,  [!INCLUDE[ssSDS](../../includes/sssds-md.md)] .|
     
   
 ## <a name="permissions"></a>사용 권한  
@@ -62,13 +63,13 @@ SELECT (total_log_size_in_bytes - used_log_space_in_bytes)*1.0/1024/1024 AS [fre
 FROM sys.dm_db_log_space_usage;  
 ```
   
-## <a name="see-also"></a>참고 항목  
-[Transact-sql&#41;&#40;동적 관리 뷰 및 함수](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
-[Transact-sql&#41;&#40;데이터베이스 관련 동적 관리 뷰](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
+## <a name="see-also"></a>관련 항목  
+[동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+[Transact-sql&#41;&#40;데이터베이스 관련 동적 관리 뷰 ](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
 [sys. dm_db_file_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-file-space-usage-transact-sql.md)    
 [dm_db_task_space_usage &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-task-space-usage-transact-sql.md)   
 [sys.dm_db_session_space_usage&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql.md)  
-[dm_db_log_info &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)    
+[sys.dm_db_log_info&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)    
 [sys.dm_db_log_stats&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-stats-transact-sql.md) 
 
 

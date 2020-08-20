@@ -1,4 +1,5 @@
 ---
+description: 변환 된 데이터베이스 개체를 SQL Server (DB2ToSQL)로 로드 하는 중
 title: 변환 된 데이터베이스 개체를 SQL Server로 로드 하는 중 (DB2ToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: f4ea1ced-9f9f-4a9d-88ab-81dbab64adc3
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: c44f55d80669863bf0a968d3a6c415b863a311e9
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: ddd074654a12d6eb837b9e9fc9a152c7ec1e75b9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87937180"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497784"
 ---
 # <a name="loading-converted-database-objects-into-sql-server-db2tosql"></a>변환 된 데이터베이스 개체를 SQL Server (DB2ToSQL)로 로드 하는 중
 DB2 스키마를로 변환한 후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 결과 데이터베이스 개체를에 로드할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . SSMA에서 개체를 만들거나 개체를 스크립팅 하 고 스크립트를 직접 실행할 수 있습니다. 또한 SSMA를 사용 하면 데이터베이스의 실제 콘텐츠를 사용 하 여 대상 메타 데이터를 업데이트할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -42,7 +43,7 @@ SSMA를 사용 하 여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
   
 3.  메타 데이터 탐색기에서 처리할 개체를 선택한 후 데이터베이스 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 마우스 오른쪽 단추로 클릭 **Databases**하 고 **데이터베이스와 동기화**를 클릭 합니다.  
   
-    개체 또는 해당 부모 폴더를 마우스 오른쪽 단추로 클릭 한 다음 **데이터베이스와 동기화**를 클릭 하 여 개별 개체 또는 개체 범주를 동기화 할 수도 있습니다.  
+    개체 또는 해당 부모 폴더를 마우스 오른쪽 단추로 클릭 한 다음  **데이터베이스와 동기화**를 클릭 하 여 개별 개체 또는 개체 범주를 동기화 할 수도 있습니다.  
   
     그런 다음, SSMA는 두 개의 항목 그룹을 볼 수 있는 **데이터베이스와 동기화** 대화 상자를 표시 합니다. 왼쪽에서 SSMA는 트리로 표시 되는 선택한 데이터베이스 개체를 표시 합니다. 오른쪽에서 SSMA 메타 데이터의 동일한 개체를 나타내는 트리를 볼 수 있습니다. 오른쪽 또는 왼쪽 ' + ' 단추를 클릭 하 여 트리를 확장할 수 있습니다. 동기화 방향은 두 트리 사이에 배치 된 작업 열에 표시 됩니다.  
   
@@ -105,6 +106,6 @@ SSMA를 사용 하 여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 ## <a name="next-step"></a>다음 단계  
 마이그레이션 프로세스의 다음 단계는 [DB2 데이터를 SQL Server으로 마이그레이션하](https://msdn.microsoft.com/86cbd39f-6dac-409a-9ce1-7dd54403f84b)는 것입니다.  
   
-## <a name="see-also"></a>참고 항목  
-[DB2 데이터를 SQL Server &#40;DB2ToSQL&#41;로 마이그레이션](../../ssma/db2/migrating-db2-data-into-sql-server-db2tosql.md)  
+## <a name="see-also"></a>관련 항목  
+[DB2 데이터를 SQL Server &#40;DB2ToSQL&#41;로 마이그레이션 ](../../ssma/db2/migrating-db2-data-into-sql-server-db2tosql.md)  
   

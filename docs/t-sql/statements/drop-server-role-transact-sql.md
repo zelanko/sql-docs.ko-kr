@@ -1,4 +1,5 @@
 ---
+description: DROP SERVER ROLE(Transact-SQL)
 title: DROP SERVER ROLE(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -19,12 +20,12 @@ ms.assetid: a2a1e6e6-e40c-4d6a-81be-d197b80bf226
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f55027afe2452acd6b9eb3f0dd39f4212fe08081
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 40e9be1315ee89990d6cfec8dc5e6ac7042bdbc5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67929246"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496738"
 ---
 # <a name="drop-server-role-transact-sql"></a>DROP SERVER ROLE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-pdw-md.md)]
@@ -57,7 +58,7 @@ DROP SERVER ROLE role_name
 ## <a name="permissions"></a>사용 권한  
  서버 역할에 대한 CONTROL 권한 또는 ALTER ANY SERVER ROLE 권한이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-to-drop-a-server-role"></a>A. 서버 역할 삭제  
  다음 예에서는 서버 역할 `purchasing`을 삭제합니다.  

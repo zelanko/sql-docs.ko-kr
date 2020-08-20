@@ -1,4 +1,5 @@
 ---
+description: 테이블 반환 매개 변수 사용(ODBC)
 title: 테이블 반환 매개 변수 사용 (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -11,11 +12,12 @@ ms.assetid: 6f8da6ab-9de6-4d0a-9b7e-acb76a50a2e7
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 80d3e54ce50b385267ee5148b07367fdac7dcc58
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: b1d5b7baaba443c948e0c02440d6e38520eb16c2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011218"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499193"
 ---
 # <a name="use-table-valued-parameters-odbc"></a>테이블 반환 매개 변수 사용(ODBC)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

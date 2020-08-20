@@ -1,4 +1,5 @@
 ---
+description: 캐시 변환
 title: 캐시 변환 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: a5683fc8-9c32-4634-819e-e9815627e4f1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b9fc1882dec5946e002d906afc07541d0923fc18
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: fddf4562e1d2899e667f245b32309617c4147b29
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922501"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495756"
 ---
 # <a name="cache-transform"></a>캐시 변환
 

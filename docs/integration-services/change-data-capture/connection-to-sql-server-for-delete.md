@@ -1,4 +1,5 @@
 ---
+description: 삭제를 위해 SQL Server에 연결
 title: 삭제를 위해 SQL Server에 연결 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 030b10c2-6b88-4c2c-bf67-22994be25a60
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c2db76002be78fba04d324036b3eb5af1b81585a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 1688ed8c1e95edabfea6b022b605a18a0e99d690
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916289"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496306"
 ---
 # <a name="connection-to-sql-server-for-delete"></a>삭제를 위해 SQL Server에 연결
 
@@ -49,7 +50,7 @@ ms.locfileid: "86916289"
   
 -   **고급**: **고급** 을 클릭하고 필요한 경우 고급 연결 속성 대화 상자에 추가 연결 속성을 입력합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [SQL Server 연결 CDC Service에 필요한 권한](../../integration-services/change-data-capture/sql-server-connection-required-permissions-for-the-cdc-service.md)  
   
   

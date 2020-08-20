@@ -1,4 +1,5 @@
 ---
+description: sys.fulltext_catalogs(Transact-SQL)
 title: sys. fulltext_catalogs (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -19,12 +20,12 @@ ms.assetid: cf1489ff-4819-41fa-a62a-4ed797a16207
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: 87aac3b3791a46e7522993c6909643a75c196f98
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 886f8d99e286fd026e5e4435c8daa9192d22ce99
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882140"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498401"
 ---
 # <a name="sysfulltext_catalogs-transact-sql"></a>sys.fulltext_catalogs(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +39,7 @@ ms.locfileid: "85882140"
 |-----------------|---------------|-----------------|  
 |fulltext_catalog_id|**int**|전체 텍스트 카탈로그의 ID입니다. 데이터베이스의 전체 텍스트 카탈로그에서 고유합니다.|  
 |name|**sysname**|카탈로그의 이름입니다. 데이터베이스 내에서 고유합니다.|  
-|경로|**nvarchar(260)**|파일 시스템에 있는 카탈로그 디렉터리의 이름입니다.|  
+|path|**nvarchar(260)**|파일 시스템에 있는 카탈로그 디렉터리의 이름입니다.|  
 |is_default|**bit**|기본 전체 텍스트 카탈로그입니다.<br /><br /> True = 기본값<br /><br /> False = 기본값이 아님|  
 |is_accent_sensitivity_on|**bit**|카탈로그의 악센트 구분 설정입니다.<br /><br /> True = 악센트 구분<br /><br /> False = 악센트 구분 안 함|  
 |data_space_id|**int**|이 카탈로그가 만들어진 파일 그룹입니다.|  
@@ -49,10 +50,10 @@ ms.locfileid: "85882140"
 ## <a name="permissions"></a>사용 권한  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]  
   
-## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;카탈로그 뷰](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+## <a name="see-also"></a>관련 항목  
+ [카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [CREATE FULLTEXT CATALOG&#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)   
- [Transact-sql&#41;&#40;전체 텍스트 카탈로그 변경](../../t-sql/statements/alter-fulltext-catalog-transact-sql.md)   
+ [Transact-sql&#41;&#40;전체 텍스트 카탈로그 변경 ](../../t-sql/statements/alter-fulltext-catalog-transact-sql.md)   
  [DROP FULLTEXT CATALOG &#40;Transact-SQL&#41;](../../t-sql/statements/drop-fulltext-catalog-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: 플랫 파일 데이터 원본에 연결(SQL Server 가져오기 및 내보내기 마법사)
 title: 플랫 파일 데이터 원본에 연결(SQL Server 가져오기 및 내보내기 마법사) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/17/2017
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: d7e7067b-f5a5-482f-b97e-9d82fe8e9f76
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 661f4a95e7904fbec1147d0fd6a372b64a09d76e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ea6e8b6a3628fb0f8d93aaa6b8775999b0481266
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920399"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495654"
 ---
 # <a name="connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard"></a>플랫 파일 데이터 원본에 연결(SQL Server 가져오기 및 내보내기 마법사)
 
@@ -32,7 +33,7 @@ ms.locfileid: "86920399"
  
  플랫 파일 데이터 원본에 대한 4개의 옵션 페이지가 있습니다. 페이지가 많습니다. 하지만 각 페이지에서 시간을 오래 끌지 않아도 됩니다. 다음은 고려해야 하는 태스크입니다.
  
-호출|권장  |Type  
+페이지|권장  |Type  
 ----|---------|---------
 **일반**|**형식** 섹션에서 옵션을 업데이트했는지 확인합니다.|권장    
 **열**|행 및 열 구분 기호를 확인(구분된 파일)하거나 열을 표시(고정 폭 파일)했는지 확인합니다.|권장

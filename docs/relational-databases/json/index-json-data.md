@@ -1,4 +1,5 @@
 ---
+description: JSON 데이터 인덱싱
 title: JSON 데이터 인덱싱 | Microsoft 문서
 ms.custom: ''
 ms.date: 06/03/2020
@@ -13,12 +14,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 77cdc132f3ef52baf6124d3f52279ad1c16b9bde
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1e1de8032c72f829dbc564bae38b12b120f13695
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755766"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499263"
 ---
 # <a name="index-json-data"></a>JSON 데이터 인덱싱
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

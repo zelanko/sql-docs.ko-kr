@@ -1,4 +1,5 @@
 ---
+description: 원본 및 대상 데이터 형식 매핑 (AccessToSQL)
 title: 원본 및 대상 데이터 형식 매핑 (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b362a075-16e7-423f-b63f-e1e9f02844a9
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: c67cb826d5a5dce7c142cba3ded468b851cef337
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: d95c7b5d429aeba2425c9deb63af1df4ab0f6ac8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87938282"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497851"
 ---
 # <a name="mapping-source-and-target-data-types-accesstosql"></a>원본 및 대상 데이터 형식 매핑 (AccessToSQL)
 Access 데이터베이스 형식은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 형식과 다릅니다. Access 데이터베이스 개체를 개체로 변환 하 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 경우 access에서로 데이터 형식을 매핑하는 방법을 지정 해야 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 기본 데이터 형식 매핑을 그대로 적용 하거나 다음 절차에 표시 된 대로 매핑을 사용자 지정할 수 있습니다.  
@@ -90,6 +91,6 @@ SSMA에는 기본 데이터 형식 매핑 집합이 있습니다. 기본 매핑 
 ## <a name="next-steps"></a>다음 단계  
 마이그레이션 프로세스의 다음 단계는 [access 데이터베이스 개체를 SQL Server 개체로 변환 하](converting-access-database-objects-accesstosql.md) 는 것입니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
 [SQL Server로 Access 데이터베이스 마이그레이션](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
   

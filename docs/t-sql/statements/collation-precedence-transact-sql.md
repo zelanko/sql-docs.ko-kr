@@ -1,4 +1,5 @@
 ---
+description: 데이터 정렬 선행 규칙
 title: 데이터 정렬 선행 규칙 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -26,12 +27,12 @@ ms.assetid: 58c4e64b-5634-4c29-aa22-33193282dd27
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 09d9ff8e9944faa4d5dcbd9f24f2ab5a359962e2
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: b078af3631380a6de3306fd71a93f1c7e695f64c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111208"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497006"
 ---
 # <a name="collation-precedence"></a>데이터 정렬 선행 규칙
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -87,7 +88,7 @@ ms.locfileid: "87111208"
 |----------------------------|----------------|----------------|------------------------|-------------------|  
 |**명시적 Y**|오류 발생|결과는 명시적 Y|결과는 명시적 Y|결과는 명시적 Y|  
 |**암시적 Y**|결과는 명시적 X|결과는 데이터 정렬 없음|결과는 암시적 Y|결과는 데이터 정렬 없음|  
-|**Coercible-default**|결과는 명시적 X|결과는 암시적 X|결과는 기본값 강제 변환|결과는 데이터 정렬 없음|  
+|**기본값 강제 변환**|결과는 명시적 X|결과는 암시적 X|결과는 기본값 강제 변환|결과는 데이터 정렬 없음|  
 |**데이터 정렬 없음**|결과는 명시적 X|결과는 데이터 정렬 없음|결과는 데이터 정렬 없음|결과는 데이터 정렬 없음|  
   
 다음은 데이터 정렬 선행 규칙에 적용되는 추가 규칙입니다.  

@@ -1,4 +1,5 @@
 ---
+description: DB2 및 SQL Server 데이터 형식 매핑 (DB2ToSQL)
 title: DB2 및 SQL Server 데이터 형식 매핑 (DB2ToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e7e939a8-5e76-4509-beaf-5acd1cab505e
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 50320d85d957e71d317f263d820d4fca5a079547
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 0579a5c477b9933b9937c1f003d3c7bbc056eae6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87936922"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497796"
 ---
 # <a name="mapping-db2-and-sql-server-data-types-db2tosql"></a>DB2 및 SQL Server 데이터 형식 매핑 (DB2ToSQL)
 DB2 데이터베이스 형식은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 형식과 다릅니다. DB2 데이터베이스 개체를 개체로 변환할 때는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] db2에서로 데이터 형식을 매핑하는 방법을 지정 해야 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 기본 데이터 형식 매핑을 그대로 적용 하거나 다음 섹션에 표시 된 대로 매핑을 사용자 지정할 수 있습니다.  
@@ -74,7 +75,7 @@ SSMA에서 **형식 매핑** 탭을 보면 상속 된 형식 매핑을 보여 �
   
     4.  **대상 유형**에서 대상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식을 선택 합니다.  
   
-        일부 형식에는 대상 데이터 형식 길이가 필요 합니다. 필요한 경우 **바꿀 내용** 상자에 새 데이터 길이를 입력 한 다음[!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+        일부 형식에는 대상 데이터 형식 길이가 필요 합니다. 필요한 경우 **바꿀 내용** 상자에 새 데이터 길이를 입력 한 다음 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 4.  사용자 지정 데이터 형식 매핑을 제거 하려면 다음을 수행 합니다.  
   
@@ -87,6 +88,6 @@ SSMA에서 **형식 매핑** 탭을 보면 상속 된 형식 매핑을 보여 �
 ## <a name="next-steps"></a>다음 단계  
 마이그레이션 프로세스의 다음 단계는 [평가 보고서 &#40;DB2ToSQL&#41;](../../ssma/db2/assessment-report-db2tosql.md) 하거나 [DB2 스키마 &#40;&#41;를 변환 ](../../ssma/db2/converting-db2-schemas-db2tosql.md)하는 것입니다. 평가 보고서를 만들면 DB2 개체가 평가 중에 자동으로 변환 됩니다.  
   
-## <a name="see-also"></a>참고 항목  
-[DB2 데이터베이스를 SQL Server &#40;DB2ToSQL&#41;로 마이그레이션](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
+## <a name="see-also"></a>관련 항목  
+[DB2 데이터베이스를 SQL Server &#40;DB2ToSQL&#41;로 마이그레이션 ](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
   

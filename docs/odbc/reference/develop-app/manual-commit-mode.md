@@ -1,4 +1,5 @@
 ---
+description: 수동 커밋 모드
 title: 수동 커밋 모드 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9c4b3931-e48b-4960-89a2-5697537e9f51
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2a00ff373e374d0940b3e7259eeb01e26b620cae
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cb576166242078707846e005b958143812fd5901
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81287877"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499837"
 ---
 # <a name="manual-commit-mode"></a>수동 커밋 모드
 *수동 커밋 모드에서* 응용 프로그램은 **sqlendtran** 을 호출 하 여 트랜잭션을 명시적으로 완료 하 여 커밋하거나 롤백합니다. 이는 대부분의 관계형 데이터베이스에 대 한 정상적인 트랜잭션 모드입니다.  

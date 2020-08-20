@@ -1,4 +1,5 @@
 ---
+description: 프로젝트 설정(동기화)(SybaseToSQL)
 title: 프로젝트 설정 (동기화) (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 2cd6bc01-b8e5-4312-83a4-eac66dc1d460
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: b2237d2226644799b7360c53948ae2ecd9445cfa
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 505df97bc8acbc0d3f55ef9c816ed4fb0c9bd569
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87930742"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497653"
 ---
 # <a name="project-settings-synchronization-sybasetosql"></a>프로젝트 설정(동기화)(SybaseToSQL)
 **프로젝트 설정** 대화 상자의 동기화 페이지에는 테이블 및 저장 프로시저와 같은 데이터베이스 개체를 또는 SQL Azure로 로드 하는 방법을 사용자 지정 하는 설정이 포함 되어 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

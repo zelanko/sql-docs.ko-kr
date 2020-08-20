@@ -1,4 +1,5 @@
 ---
+description: Service Broker 카탈로그 뷰(Transact-SQL)
 title: Service Broker 카탈로그 뷰 (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 00682b5e-4720-422e-a5ec-4a96f26e1300
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c2dad704672d5c2eb6aa82db6c4a6cfb2c48fc67
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: a6f083a8f776714f8ac32dcc3394b32d6bce6870
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442764"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498476"
 ---
 # <a name="service-broker-catalog-views-transact-sql"></a>Service Broker 카탈로그 뷰(Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -60,9 +61,9 @@ ms.locfileid: "87442764"
     :::column-end:::
 :::row-end:::
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Transact-sql&#41;&#40;시스템 뷰](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
+ [Transact-sql&#41;&#40;시스템 뷰 ](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
  [service_broker_endpoints &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-service-broker-endpoints-transact-sql.md)   
  [sys.service_queues &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-service-queues-transact-sql.md)  
   

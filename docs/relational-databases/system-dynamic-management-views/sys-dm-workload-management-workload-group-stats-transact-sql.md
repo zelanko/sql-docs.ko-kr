@@ -1,4 +1,5 @@
 ---
+description: sys. dm_workload_management_workload_groups_stats (Transact-sql)
 title: sys. dm_workload_management_workload_groups_stats (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/02/2019
@@ -11,12 +12,12 @@ dev_langs:
 author: ronortloff
 ms.author: rortloff
 monikerRange: = azure-sqldw-latest||= sqlallproducts-allversions
-ms.openlocfilehash: 38ed2b42a24dbaec27e3014bc0b1d783722fa91f
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: a439ebecacd29c2ca412e5ba90fac6b6b5af2b24
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394538"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498321"
 ---
 # <a name="sysdm_workload_management_workload_groups_stats-transact-sql"></a>sys. dm_workload_management_workload_groups_stats (Transact-sql)
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
@@ -38,6 +39,6 @@ ms.locfileid: "87394538"
 |effective_request_max_resource_grant_percent|**decimal (5, 2)**|모든 작업 그룹의 구성을 고려 하 여 작업 그룹의 request_max_resource_grant_percent에 대 한 유효 런타임 값입니다.||
 |||||
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
- [Transact-sql&#41;&#40;SQL Data Warehouse 및 병렬 데이터 웨어하우스 동적 관리 뷰](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
+ [Transact-sql&#41;&#40;SQL Data Warehouse 및 병렬 데이터 웨어하우스 동적 관리 뷰 ](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  

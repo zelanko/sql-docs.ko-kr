@@ -1,4 +1,5 @@
 ---
+description: SQLRemoveTranslator 함수
 title: SQLRemoveTranslator 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,19 +20,19 @@ helpviewer_keywords:
 ms.assetid: c6feda49-0359-4224-8de9-77125cf2397b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 348d2c5da0731ba88ccd4dd6406d3754890f7906
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 92042d1a29720d8fcca32d3fb7127f24a0566b7e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301790"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499606"
 ---
 # <a name="sqlremovetranslator-function"></a>SQLRemoveTranslator 함수
 **규칙**  
  소개 된 버전: ODBC 3.0  
   
  **요약**  
- **SQLRemoveTranslator** 는 시스템 정보의 odbcinst.ini 섹션에서 변환기에 대 한 정보를 제거 하 고 변환기의 구성 요소 사용 횟수를 1 씩 감소 시킵니다.  
+ **SQLRemoveTranslator** 는 시스템 정보의 Odbcinst.ini 섹션에서 변환기에 대 한 정보를 제거 하 고 변환기의 구성 요소 사용 횟수를 1 씩 감소 시킵니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -53,9 +54,9 @@ BOOL SQLRemoveTranslator(
  이 함수는 성공 하면 TRUE를 반환 하 고 실패 하면 FALSE를 반환 합니다. 이 함수가 호출 될 때 시스템 정보에 항목이 없으면 함수는 FALSE를 반환 합니다.  
   
 ## <a name="diagnostics"></a>진단  
- **SQLRemoveTranslator** 가 FALSE를 반환 하면 **SQLInstallerError**을 호출 하 여 연결 된 * \*pfErrorCode* 값을 얻을 수 있습니다. 다음 표에서는 **SQLInstallerError** 에서 반환 될 수 있는 * \*pfErrorCode* 값을 나열 하 고이 함수의 컨텍스트에서 각 값에 대해 설명 합니다.  
+ **SQLRemoveTranslator** 가 FALSE를 반환 하면 **SQLInstallerError**을 호출 하 여 연결 된 * \* pfErrorCode* 값을 얻을 수 있습니다. 다음 표에서는 **SQLInstallerError** 에서 반환 될 수 있는 * \* pfErrorCode* 값을 나열 하 고이 함수의 컨텍스트에서 각 값에 대해 설명 합니다.  
   
-|*\*pfErrorCode*|Error|Description|  
+|*\*pfErrorCode*|오류|설명|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|일반 설치 관리자 오류|특정 설치 관리자 오류가 없는 오류가 발생 했습니다.|  
 |ODBC_ERROR_COMPONENT_NOT_FOUND|레지스트리에서 구성 요소를 찾을 수 없음|레지스트리에 없거나 레지스트리에서 찾을 수 없기 때문에 설치 관리자가 변환기 정보를 제거할 수 없습니다.|  

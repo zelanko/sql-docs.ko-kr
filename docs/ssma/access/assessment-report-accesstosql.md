@@ -1,4 +1,5 @@
 ---
+description: 평가 보고서 (AccessToSQL)
 title: 평가 보고서 (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ba6f53aa-0049-4c49-8bb8-607a8bfaa737
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: de675e479217170a465126d8fe242d01c778abf0
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 5f1058947591fdd454ce181b2d098f88b183cbe1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87939082"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497829"
 ---
 # <a name="assessment-report-accesstosql"></a>평가 보고서 (AccessToSQL)
 평가 보고서 창에는 데이터베이스 개체를 구문으로 변환한 결과가 표시 [!INCLUDE[tsql](../../includes/tsql-md.md)] 되며 마이그레이션 프로젝트의 복잡성과 비용을 예측 하는 데에도 도움이 될 수 있습니다.  
@@ -36,6 +37,6 @@ ms.locfileid: "87939082"
   
 메시지 정보를 보려면 **오류**, **경고**또는 메시지를 클릭 한 다음 **메시지를 확장**합니다. SSMA에서이 오류가 발생 한 개체의 목록을 표시 합니다. 개체를 클릭 하 여 개체에 대 한 모든 변환 정보를 표시 합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
 [사용자 인터페이스 참조 (액세스)](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
   

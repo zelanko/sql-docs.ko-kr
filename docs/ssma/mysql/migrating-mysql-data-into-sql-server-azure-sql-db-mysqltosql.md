@@ -1,4 +1,5 @@
 ---
+description: MySQL 데이터를 SQL Server Azure SQL Database로 마이그레이션 (MySQLToSQL)
 title: MySQL 데이터를 SQL Server Azure SQL Database (MySQLToSQL)로 마이그레이션 | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: a6a7f4d6-68aa-4a38-93bf-53eba0d7dc82
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 46636f7d7b72eb10e6bf8417e90bde48468db9f3
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 9fa753d472c5a7ead39faf88bc2479bc1caa9bc3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935335"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497745"
 ---
 # <a name="migrating-mysql-data-into-sql-server---azure-sql-database-mysqltosql"></a>MySQL 데이터를 SQL Server Azure SQL Database로 마이그레이션 (MySQLToSQL)
 변환 된 개체를 또는 SQL Azure 성공적으로 동기화 한 후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에는 MySQL에서 또는 SQL Azure로 데이터를 마이그레이션할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -107,6 +108,6 @@ ms.locfileid: "87935335"
 > [!NOTE]  
 > SQL Express edition을 대상 데이터베이스로 사용 하는 경우 클라이언트 쪽 데이터 마이그레이션만 허용 되며 서버 쪽 데이터 마이그레이션은 지원 되지 않습니다.  
   
-## <a name="see-also"></a>참고 항목  
-[MySQL 데이터베이스를 SQL Server-Azure SQL Database &#40;MySQLToSql&#41;로 마이그레이션](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
+## <a name="see-also"></a>관련 항목  
+[MySQL 데이터베이스를 SQL Server-Azure SQL Database &#40;MySQLToSql&#41;로 마이그레이션 ](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   

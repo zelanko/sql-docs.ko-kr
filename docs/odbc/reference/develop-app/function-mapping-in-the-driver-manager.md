@@ -1,4 +1,5 @@
 ---
+description: 드라이버 관리자의 함수 매핑
 title: 드라이버 관리자의 함수 매핑 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ff093b29-671a-4fc0-86c9-08a311a98e54
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: db8e525bb7e8f3e167deb8061a4dd5b75073933c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 69434638dee25cdbad8428a1e09cb05a270f99de
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305584"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499847"
 ---
 # <a name="function-mapping-in-the-driver-manager"></a>드라이버 관리자의 함수 매핑
 드라이버 관리자는 문자열 인수를 사용 하는 함수에 대 한 두 가지 진입점을 지원 합니다. 데코레이팅되지 않은 함수 (**SQLDriverConnect**)는 함수의 ANSI 형식입니다. 유니코드 형식은 *W* (**: sqldriverconnectw**)로 데코 레이트 됩니다.  

@@ -1,4 +1,5 @@
 ---
+description: Oracle에 연결
 title: Oracle에 연결 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 711ac7ff-5d3d-4533-80ca-d1fecdb3048f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9be5e4b3652dec337583123e0232ce9b1442af73
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c628f77c74c16bd196a496e7cacf27a0f2904e12
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86924005"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496280"
 ---
 # <a name="connect-to-oracle"></a>Oracle에 연결
 
@@ -34,7 +35,7 @@ ms.locfileid: "86924005"
   
 -   **Oracle 인증**: 이 옵션을 선택하는 경우 연결 중인 Oracle 데이터베이스의 사용자에 대한 **사용자 이름** 과 **암호** 를 입력해야 합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [CDC 인스턴스에 테이블 추가](../../integration-services/change-data-capture/add-tables-to-a-cdc-instance.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: 주목할 기능
 title: 시청할 기능 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0fb1693b-11c3-43b1-bb16-c3323b7b2d45
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 10fa5df8a47837e92d4215f558d52711a0df3440
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ee7da25bccf0ed3d3649412c702a426a31c3ad44
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305684"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499903"
 ---
 # <a name="features-to-watch-for"></a>주목할 기능
 이 섹션에서는 응용 프로그램 개발자가 부여 하는 데 자주 사용 하는 다양 한 기능에 대해 설명 합니다. 실제로 이러한 기능은 Dbms 간의 지원 및 지원 방식에 따라 크게 달라 집니다. 코드에 오류가 발생 하면 상호 운용할 수 있는 응용 프로그램에서 문제가 발생할 수 있습니다.  

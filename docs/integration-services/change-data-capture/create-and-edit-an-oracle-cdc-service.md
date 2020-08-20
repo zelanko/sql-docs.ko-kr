@@ -1,4 +1,5 @@
 ---
+description: Oracle CDC Service 만들기 및 편집
 title: Oracle CDC Service 만들기 및 편집 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/20/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 10cd612e-d8f1-4af2-97d3-a0c22e1e2326
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 18aa250838107e9b28fc5a1a2ad7646e5dccf072
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: bcccb89d1af55f990388b389087c16c003d12c39
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916227"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496276"
 ---
 # <a name="create-and-edit-an-oracle-cdc-service"></a>Oracle CDC Service 만들기 및 편집
 
@@ -67,7 +68,7 @@ ms.locfileid: "86916227"
   
 -   **Windows 인증**: 이 옵션을 선택하면 Oracle CDC Service는 서비스 계정 ID를 사용하여 대상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 다른 컴퓨터에서 실행 중인 경우 도메인 계정과 함께 Windows 인증을 사용해야 합니다.  
   
--   **SQL Server 인증**: 이 옵션을 선택하면 사용하려는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인의 **사용자 이름**과 **암호**를 입력해야 합니다. Oracle CDC Service는 대상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결할 때 이러한 자격 증명을 사용합니다.  
+-   **SQL Server 인증**: 이 옵션을 선택하면 사용하려는 **로그인의** 사용자 이름 **과** 암호 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 입력해야 합니다. Oracle CDC Service는 대상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결할 때 이러한 자격 증명을 사용합니다.  
   
  Oracle CDC Service에서 사용되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인은 공용 고정 서버 역할의 구성원이면 가능하며 다른 권한은 필요 없습니다. 새 Oracle CDC 인스턴스를 추가하면 해당 로그인은 연결된 **CDC 데이터베이스에 대한** db_owner [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 액세스 권한을 얻게 됩니다.  
   
@@ -82,7 +83,7 @@ ms.locfileid: "86916227"
   
 -   **실행 제한 시간**: 제한 시간이 초과되기 전에 Oracle CDC Windows 서비스에서 명령이 실행될 때까지 기다리는 시간(초)을 입력합니다. 기본값은 **30**입니다.  
   
--   **연결 암호화**: 암호화된 연결을 사용하는 대상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스와 Oracle CDC Service 사이의 통신을 위해 **연결 암호화**를 선택합니다.  
+-   **연결 암호화**: 암호화된 연결을 사용하는 대상 **인스턴스와 Oracle CDC Service 사이의 통신을 위해** 연결 암호화 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 선택합니다.  
   
 -   **고급**: 필요한 경우 모든 추가 연결 속성을 입력합니다.  
   
@@ -91,7 +92,7 @@ ms.locfileid: "86916227"
   
  동일한 서비스의 다른 인스턴스가 고가용성 구성에서 한 클러스터의 다른 노드에 대해 구성된 경우에도 동일한 마스터 암호를 사용해야 합니다. 마스터 암호를 잃어버리거나 수정할 경우 CDC Designer 콘솔을 사용하여 Oracle CDC 인스턴스 데이터베이스에 저장된 모든 로그 마이닝 암호를 다시 입력해야 합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [CDC Service를 만들고 편집하는 방법](../../integration-services/change-data-capture/how-to-create-and-edit-a-cdc-service.md)  
   
   

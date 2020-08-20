@@ -1,4 +1,5 @@
 ---
+description: SET LANGUAGE(Transact-SQL)
 title: SET LANGUAGE(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/05/2017
@@ -22,12 +23,12 @@ ms.assetid: 0ec0e5cf-e115-4be9-a0db-e65837d6fa45
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8e845cf7fcf299185947a07a6249167cad652a21
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 9c8a97bd48405e97e660428027bfc16279dc0963
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87397058"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496478"
 ---
 # <a name="set-language-transact-sql"></a>SET LANGUAGE(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -44,7 +45,9 @@ ms.locfileid: "87397058"
 SET LANGUAGE { [ N ] 'language' | @language_var }   
 ```  
   
-## <a name="arguments"></a>인수  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>인수
  [**N**] **'** _language_ **'**  |  **@** _language\_var_  
  [sys.syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)에 저장된 언어의 이름입니다. 유니코드나 유니코드로 변환된 DBCS 중 하나가 될 수 있습니다. 유니코드로 언어를 지정하려면 **N'** _language_ **'** 를 사용합니다. 변수로 지정할 경우 변수는 **sysname**이어야 합니다.  
   
@@ -56,7 +59,7 @@ SET LANGUAGE { [ N ] 'language' | @language_var }
 ## <a name="permissions"></a>사용 권한  
  **public** 역할의 멤버 자격이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예제에서는 기본 언어를 `Italian`으로 설정하고 월 이름을 표시한 다음, `us_english`로 다시 전환하고 월 이름을 다시 표시합니다.  
   
 ```sql

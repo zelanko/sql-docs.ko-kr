@@ -1,4 +1,5 @@
 ---
+description: Oracle CDC 인스턴스
 title: Oracle CDC 인스턴스 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ed71e8c4-e013-4bf2-8b6c-1e833ff2a41d
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7d85994b68177f23323549177fdd343d4a2a0f83
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 256df16a5ae5a21720d3add261b1fb164c5be7b9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914009"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496187"
 ---
 # <a name="the-oracle-cdc-instance"></a>Oracle CDC 인스턴스
 
@@ -46,7 +47,7 @@ ms.locfileid: "86914009"
   
 -   **복원 처리**: Oracle CDC 인스턴스가 시작되면 내부 상태가 **xdbcdc_state** 및 **xdbcdc_staged_transactions** 테이블에서 복원됩니다. 상태가 복원되면 CDC 인스턴스가 평소와 같이 진행됩니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [오류 처리](../../integration-services/change-data-capture/error-handling.md)  
   
   

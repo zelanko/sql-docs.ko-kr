@@ -1,4 +1,5 @@
 ---
+description: BEGIN CONVERSATION TIMER(Transact-SQL)
 title: BEGIN CONVERSATION TIMER(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -32,12 +33,12 @@ helpviewer_keywords:
 ms.assetid: 98e49b3f-a38f-4180-8171-fa9cb30db4cb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7143f1aee0047f00c0b21507f8b25290866f3faf
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+ms.openlocfilehash: c7f0d19062bd164c44481082ab5885f0c40572be
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86380906"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496985"
 ---
 # <a name="begin-conversation-timer-transact-sql"></a>BEGIN CONVERSATION TIMER(Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -76,7 +77,7 @@ BEGIN CONVERSATION TIMER ( conversation_handle )
 ## <a name="permissions"></a>사용 권한  
  대화 타이머 설정 권한은 기본적으로 대화의 서비스에 대한 SEND 권한이 있는 사용자, **sysadmin** 고정 서버 역할의 멤버 및 **db_owner** 고정 데이터베이스 역할의 멤버로 설정됩니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `@dialog_handle`로 식별되는 대화에 2분이라는 제한 시간을 설정합니다.  
   
 ```  

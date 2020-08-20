@@ -1,4 +1,5 @@
 ---
+description: WMI 데이터 판독기 태스크
 title: WMI 데이터 판독기 태스크 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: dae57067-0275-4ac3-8f34-1b9d169f1112
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 08239a5cdb5991d38278569a8f49bb6bdb99190e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 2c184f0be8a853eb373063468e3bded901c4b58e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923903"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495928"
 ---
 # <a name="wmi-data-reader-task"></a>WMI 데이터 판독기 태스크
 

@@ -1,4 +1,5 @@
 ---
+description: SSIS 패키지 업그레이드 마법사 F1 도움말
 title: SSIS 패키지 업그레이드 마법사 F1 도움말 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ f1_keywords:
 ms.assetid: 7fe886ff-1ea5-48d5-9d20-d5da36dd1cd7
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0bd61166df6d257c6088b1e62c2c5b262207f958
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 9e47bae183dc2d0e790a6f0cb6be207d30cd4834
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921983"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495546"
 ---
 # <a name="ssis-package-upgrade-wizard-f1-help"></a>SSIS 패키지 업그레이드 마법사 F1 도움말
 
@@ -230,7 +231,7 @@ ms.locfileid: "86921983"
  **상태**  
  각 동작의 결과를 봅니다.  
   
- **메시지**  
+ **Message**  
  각 동작에서 생성된 오류 메시지를 봅니다.  
   
  **중지**  

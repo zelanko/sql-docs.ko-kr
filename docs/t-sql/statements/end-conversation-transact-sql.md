@@ -1,4 +1,5 @@
 ---
+description: END CONVERSATION(Transact-SQL)
 title: END CONVERSATION(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/26/2017
@@ -24,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 4415a126-cd22-4a5e-b84a-d8c68515c83b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 16fa18b79361cf6d448d7d75b63208e882ac0b36
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 76784d22919fc492c715ffa876c825e14794a511
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485202"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496726"
 ---
 # <a name="end-conversation-transact-sql"></a>END CONVERSATION(Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -90,7 +91,7 @@ END CONVERSATION conversation_handle
   
  sysadmin 고정 서버 역할의 멤버 또는 db_owner 고정 데이터베이스 역할의 멤버는 WITH CLEANUP을 사용하여 이미 완료된 대화에 대한 메타데이터를 제거할 수 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-ending-a-conversation"></a>A. 대화 종료  
  다음 예에서는 `@dialog_handle`로 지정된 대화를 종료합니다.  
@@ -134,6 +135,6 @@ END CONVERSATION @dialog_handle WITH CLEANUP ;
 ## <a name="see-also"></a>참고 항목  
  [BEGIN CONVERSATION TIMER&#40;Transact-SQL&#41;](../../t-sql/statements/begin-conversation-timer-transact-sql.md)   
  [BEGIN DIALOG CONVERSATION&#40;Transact-SQL&#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
- [sys.conversation_endpoints&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql.md)  
+ [sys.conversation_endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql.md)  
   
   

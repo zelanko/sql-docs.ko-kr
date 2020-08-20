@@ -1,4 +1,5 @@
 ---
+description: 스크립트 구성 요소를 사용하여 비동기 변환 만들기
 title: 스크립트 구성 요소를 사용하여 비동기 변환 만들기 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0d814404-21e4-4a68-894c-96fa47ab25ae
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 980300f1deee55be9d8c7977bf813108bcfd1e80
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 05d28638ebb8981c0ccce4e6bb38ab7179565d00
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923849"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495621"
 ---
 # <a name="creating-an-asynchronous-transformation-with-the-script-component"></a>스크립트 구성 요소를 사용하여 비동기 변환 만들기
 
@@ -72,9 +73,9 @@ ms.locfileid: "86923849"
  **스크립트 변환 편집기**의 **입/출력** 페이지에 대한 자세한 내용은 [스크립트 변환 편집기&#40;입/출력 페이지&#41;](../../integration-services/data-flow/transformations/script-transformation-editor-inputs-and-outputs-page.md)를 참조하세요.  
   
 ### <a name="adding-variables"></a>변수 추가  
- 스크립트에 사용하려는 값을 포함하는 기존 변수가 있는 경우 **스크립트 변환 편집기**의 **스크립트** 페이지에서 ReadOnlyVariables 및 ReadWriteVariables 속성 필드에 해당 변수를 추가할 수 있습니다.  
+ 스크립트에 사용하려는 값을 포함하는 기존 변수가 있는 경우 스크립트 변환 편집기의 스크립트 페이지에서 **ReadOnlyVariables** 및 **ReadWriteVariables** 속성 필드에 해당 변수를 추가할 수 있습니다.  
   
- 속성 필드에 여러 변수를 추가하는 경우 변수 이름을 쉼표로 구분하십시오. 또한 **ReadOnlyVariables** 및 **ReadWriteVariables** 속성 필드 옆에 있는 줄임표(**...**) 단추를 클릭한 다음, **변수 선택** 대화 상자에서 변수를 선택하면 여러 개의 변수를 선택할 수 있습니다.  
+ 속성 필드에 여러 변수를 추가하는 경우 변수 이름을 쉼표로 구분하십시오. 또한 **ReadOnlyVariables** 및 **ReadWriteVariables** 속성 필드 옆에 있는 줄임표( **...** ) 단추를 클릭한 다음, **변수 선택** 대화 상자에서 변수를 선택하면 여러 개의 변수를 선택할 수 있습니다.  
   
  스크립트 구성 요소에서 변수를 사용하는 방법에 대한 일반적인 내용은 [스크립트 구성 요소에서 변수 사용](../../integration-services/extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md)을 참조하세요.  
   

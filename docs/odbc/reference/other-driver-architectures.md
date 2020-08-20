@@ -1,4 +1,5 @@
 ---
+description: 기타 드라이버 아키텍처
 title: 기타 드라이버 아키텍처 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1cad06ee-5940-4361-8d01-7d850db1dd66
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ae047fe8014b806d3bda8b0513521b4ddda072a7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 44a09eb786abc9f43e25ea105e25e8fdefcdff86
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81280533"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499666"
 ---
 # <a name="other-driver-architectures"></a>기타 드라이버 아키텍처
 일부 ODBC 드라이버는 앞에서 설명한 아키텍처를 엄격 하 게 준수 하지 않습니다. 이는 드라이버가 기존 ODBC 드라이버 이외의 업무를 수행 하거나 일반적인 의미에서 드라이버가 아닌 경우에 발생할 수 있습니다.  

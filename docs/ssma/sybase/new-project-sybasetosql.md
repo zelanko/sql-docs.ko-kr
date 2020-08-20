@@ -1,4 +1,5 @@
 ---
+description: 새 프로젝트(SybaseToSQL)
 title: 새 프로젝트 (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: fcd83cd6-a876-4b5f-996d-84b7c8706305
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: eba002acba86df808adf9e57cc9d902a6b398173
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 4122e4d9deb354dded9e015f4ca4a8987cd6ff6d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934680"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497686"
 ---
 # <a name="new-project-sybasetosql"></a>새 프로젝트(SybaseToSQL)
 **새 프로젝트** 대화 상자를 사용 하 여 새 ssma 프로젝트를 만들 수 있습니다. **새 프로젝트** 대화 상자에 액세스 하려면 **파일** 메뉴에서 **새 프로젝트**를 클릭 합니다.  
@@ -35,7 +36,7 @@ ms.locfileid: "87934680"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016  
   

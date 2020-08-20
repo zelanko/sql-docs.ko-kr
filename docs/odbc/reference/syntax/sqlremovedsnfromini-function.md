@@ -1,4 +1,5 @@
 ---
+description: SQLRemoveDSNFromIni 함수
 title: SQLRemoveDSNFromIni 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: bb2e8273-7b61-4113-bfc8-f7ccc607c811
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 848e82741954ab24941d5d519699292727ca25d6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f49646881539d7c90c057633e7151b31cfe52b52
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301802"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499616"
 ---
 # <a name="sqlremovedsnfromini-function"></a>SQLRemoveDSNFromIni 함수
 **규칙**  
@@ -46,12 +47,12 @@ BOOL SQLRemoveDSNFromIni(
  입력 제거할 데이터 원본의 이름입니다.  
   
 ## <a name="returns"></a>반환  
- 함수는 데이터 원본을 제거 하거나 데이터 원본이 Odbc .ini 파일에 없는 경우 TRUE를 반환 합니다. 데이터 원본을 제거 하지 못한 경우 FALSE를 반환 합니다.  
+ 함수는 데이터 소스를 제거 하거나 데이터 원본이 Odbc.ini 파일에 없는 경우 TRUE를 반환 합니다. 데이터 원본을 제거 하지 못한 경우 FALSE를 반환 합니다.  
   
 ## <a name="diagnostics"></a>진단  
- **SQLRemoveDSNFromIni** 가 FALSE를 반환 하면 **SQLInstallerError**을 호출 하 여 연결 된 * \*pfErrorCode* 값을 얻을 수 있습니다. 다음 표에서는 **SQLInstallerError** 에서 반환 될 수 있는 * \*pfErrorCode* 값을 나열 하 고이 함수의 컨텍스트에서 각 값에 대해 설명 합니다.  
+ **SQLRemoveDSNFromIni** 가 FALSE를 반환 하면 **SQLInstallerError**을 호출 하 여 연결 된 * \* pfErrorCode* 값을 얻을 수 있습니다. 다음 표에서는 **SQLInstallerError** 에서 반환 될 수 있는 * \* pfErrorCode* 값을 나열 하 고이 함수의 컨텍스트에서 각 값에 대해 설명 합니다.  
   
-|*\*pfErrorCode*|Error|Description|  
+|*\*pfErrorCode*|오류|설명|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|일반 설치 관리자 오류|특정 설치 관리자 오류가 없는 오류가 발생 했습니다.|  
 |ODBC_ERROR_INVALID_DSN|잘못 된 DSN|*LpszDSN* 인수가 잘못 되었습니다.|  

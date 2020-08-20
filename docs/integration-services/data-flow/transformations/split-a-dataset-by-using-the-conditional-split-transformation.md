@@ -1,4 +1,5 @@
 ---
+description: 조건부 분할 변환을 사용하여 데이터 세트 분할
 title: 조건부 분할 변환을 사용하여 데이터 세트 분할 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 23b3e84f-9296-4dc9-81c0-c7f06ae3f1ff
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8d69be64aeb9c60ff4f72e735ff1c8e61a676b05
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: aa38530f0cddfd8518e114b15dda86e5fd51f297
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914287"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495665"
 ---
 # <a name="split-a-dataset-by-using-the-conditional-split-transformation"></a>조건부 분할 변환을 사용하여 데이터 세트 분할
 

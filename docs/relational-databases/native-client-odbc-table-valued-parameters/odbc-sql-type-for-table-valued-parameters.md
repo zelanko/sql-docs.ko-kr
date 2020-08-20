@@ -1,4 +1,5 @@
 ---
+description: 테이블 반환 매개 변수의 ODBC SQL 유형
 title: 테이블 반환 매개 변수의 ODBC SQL 유형 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,11 +14,12 @@ ms.assetid: 6725bfb9-5f10-4115-be09-fd9c9f5779ea
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ef0728ab8c2785c11473743a39da2ba33b84d491
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 1bdde09e3ee58390d8b6b1e14e19de247b0a7b60
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001094"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499107"
 ---
 # <a name="odbc-sql-type-for-table-valued-parameters"></a>테이블 반환 매개 변수의 ODBC SQL 유형
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -42,6 +44,6 @@ ms.locfileid: "86001094"
  테이블 반환 매개 변수에는 행별 기본값이 지원되지 않으므로 테이블 반환 매개 변수 열의 *StrLen_or_IndPtr*에는 SQL_DEFAULT_PARAM을 사용할 수 없습니다. 대신 애플리케이션에서 열 특성 SQL_CA_SS_COL_HAS_DEFAULT_VALUE를 1로 설정할 수 있습니다. 즉, 해당 열이 모든 행에 대해 기본값을 갖습니다. *StrLen_or_IndPtr* SQL_DEFAULT_PARAM로 설정 된 경우 sqlexecute 또는 SQLExecDirect는 SQL_ERROR를 반환 하 고 SQLSTATE = HY090 및 "잘못 된 문자열 또는 버퍼 길이" 라는 메시지와 함께 진단 레코드가 문에 추가 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [ODBC&#41;&#40;테이블 반환 매개 변수](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
+ [ODBC&#41;&#40;테이블 반환 매개 변수 ](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
   
   

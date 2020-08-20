@@ -1,4 +1,5 @@
 ---
+description: SET ANSI_PADDING(Transact-SQL)
 title: SET ANSI_PADDING(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/04/2017
@@ -24,12 +25,12 @@ ms.assetid: 92bd29a3-9beb-410e-b7e0-7bc1dc1ae6d0
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 29ae3ce5c5398a6ac8006f8b3af7ceb0477576fb
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: be98a76b74f9c4b9882c55de8b18ea045a1be85c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396522"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496510"
 ---
 # <a name="set-ansi_padding-transact-sql"></a>SET ANSI_PADDING(Transact-SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
@@ -52,7 +53,9 @@ SET ANSI_PADDING { ON | OFF }
 SET ANSI_PADDING ON
 ```
 
-## <a name="remarks"></a>설명  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="remarks"></a>설명
  **char**, **varchar**, **binary** 및 **varbinary** 데이터 형식으로 정의된 열에는 정의된 크기가 있습니다.  
   
  이 설정은 새 열의 정의에만 영향을 줍니다. 열이 생성된 다음에는 열을 만들 때의 설정에 따라 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 값을 저장합니다. 나중에 이 설정을 변경해도 기존의 열은 영향을 받지 않습니다.  
@@ -74,7 +77,7 @@ SET ANSI_PADDING ON
   
 SET ANSI_PADDING의 기본값은 ON입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]용 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 연결될 때 자동으로 ANSI_PADDING을 ON으로 설정합니다. ODBC 데이터 원본과 ODBC 연결 특성 또는, SQL Server에 연결하기 전에 애플리케이션에 설정된 OLE DB 연결 속성에서 이 옵션을 구성할 수 있습니다. DB-Library 애플리케이션에서 연결하는 경우 SET ANSI_PADDING의 기본값은 OFF입니다.  
   
- SET ANSI_PADDING 설정은 **nchar**, **nvarchar**, **ntext**, **text**, **image**, **varbinary(max)** , **varchar(max)** 및 **nvarchar(max)** 데이터 형식에는 영향을 주지 않습니다. 이 설정은 항상 SET ANSI_PADDING ON 동작을 표시합니다. 즉, 후행 공백과 뒤에 오는 0은 잘리지 않는다는 의미입니다.  
+ SET ANSI_PADDING 설정은 **nchar**, **nvarchar**, **ntext**, **text**, **image**, **varbinary(max)**, **varchar(max)** 및 **nvarchar(max)** 데이터 형식에는 영향을 주지 않습니다. 이 설정은 항상 SET ANSI_PADDING ON 동작을 표시합니다. 즉, 후행 공백과 뒤에 오는 0은 잘리지 않는다는 의미입니다.  
   
 ANSI_DEFAULTS가 ON이면 ANSI_PADDING이 활성화됩니다.  
   
@@ -91,7 +94,7 @@ SELECT @ANSI_PADDING AS ANSI_PADDING;
 ## <a name="permissions"></a>사용 권한  
 **public** 역할의 멤버 자격이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
 다음 예에서는 설정이 다음과 같은 각 데이터 형식에 영향을 미치는 방법을 보여 줍니다.  
 
 ANSI_PADDING을 ON으로 설정하고 테스트합니다.
@@ -146,6 +149,6 @@ DROP TABLE t2;
  [SESSIONPROPERTY&#40;Transact-SQL&#41;](../../t-sql/functions/sessionproperty-transact-sql.md)   
  [CREATE TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [INSERT&#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
- [SET ANSI_DEFAULTS&#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-defaults-transact-sql.md)  
+ [SET ANSI_DEFAULTS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-defaults-transact-sql.md)  
   
   

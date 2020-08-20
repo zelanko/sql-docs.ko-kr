@@ -1,4 +1,5 @@
 ---
+description: OPENJSON을 사용하여 JSON 데이터 구문 분석 및 변환(SQL Server)
 title: OPENJSON을 사용하여 JSON 데이터 구문 분석 및 변환
 ms.date: 06/03/2020
 ms.prod: sql
@@ -14,12 +15,12 @@ ms.author: jovanpop
 ms.reviewer: jroth
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||= azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 496e49a866bb477139078b0797c6390b42df3192
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 6c92c89d86f14f108e1d21643da7b578d6a2f800
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009593"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499366"
 ---
 # <a name="parse-and-transform-json-data-with-openjson-sql-server"></a>OPENJSON을 사용하여 JSON 데이터 구문 분석 및 변환(SQL Server)
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]

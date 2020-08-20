@@ -1,4 +1,5 @@
 ---
+description: 파일 기반 드라이버 진단 예제
 title: 파일 기반 드라이버 진단 예제 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0575fccd-4641-478d-a3cc-5a764e35bae2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6f09e4f4758b6276836b08f02b24fb31dd1fadc7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8986ebaa8c4ecf0ac18f4e043eb731df35054884
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305641"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499863"
 ---
 # <a name="file-based-driver-diagnostic-example"></a>파일 기반 드라이버 진단 예제
 파일 기반 드라이버는 ODBC 드라이버와 데이터 원본으로 모두 작동 합니다. 따라서 ODBC 연결의 구성 요소 및 데이터 원본으로 오류와 경고를 생성할 수 있습니다. 또한 드라이버 관리자와 상호 작용 하는 구성 요소 이기 때문에 **SQLGetDiagRec**에 대 한 인수를 포맷 하 고 반환 합니다.  

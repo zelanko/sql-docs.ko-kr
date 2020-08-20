@@ -1,4 +1,5 @@
 ---
+description: ODBC 구성 요소 설치
 title: ODBC 구성 요소 설치 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b7e48e9c-8912-4003-b4ef-30aa44de06a7
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: bbd0a6aeba8073ce14b08b8635396b1f231895fb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0250cc51b76cbda9c1091ebe1d696c2e569c037f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298983"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499749"
 ---
 # <a name="installing-odbc-components"></a>ODBC 구성 요소 설치
 > [!NOTE]  

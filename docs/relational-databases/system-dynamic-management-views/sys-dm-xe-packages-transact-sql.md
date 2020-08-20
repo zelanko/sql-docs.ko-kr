@@ -1,4 +1,5 @@
 ---
+description: sys.dm_xe_packages(Transact-SQL)
 title: sys. dm_xe_packages (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 2e5ecbe9-3ea8-45e6-a161-e31671a03e1d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3ae80e8db245c5a70db238a17b5d09bb682b09b1
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: 98c43952212ffd101bfc822f68c39a1e04bce150
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942356"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498272"
 ---
 # <a name="sysdm_xe_packages-transact-sql"></a>sys.dm_xe_packages(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -52,7 +53,7 @@ ms.locfileid: "86942356"
   
 ## <a name="relationship-cardinalities"></a>관계 카디널리티  
   
-| 보낸 사람 | 수행할 작업 | 관계 |
+| 보낸 사람 | 대상 | 관계 |
 | ---- | -- | ------------ |  
 |sys.dm_xe_packages.module_address|sys.dm_os_loaded_modules.base_address|다 대 일|  
   

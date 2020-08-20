@@ -1,4 +1,5 @@
 ---
+description: ADO.NET 사용자 지정 속성
 title: ADO.NET 사용자 지정 속성 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: e062a9ab-1e6b-4061-845a-4f8a0552b09d
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7f05fbdb725e2304e7f30dce7a6801bb8300e4c9
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: a44bc28763df210a16a7376408ff342b91ac6d9c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923228"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495952"
 ---
 # <a name="ado-net-custom-properties"></a>ADO.NET 사용자 지정 속성
 
@@ -52,7 +53,7 @@ ms.locfileid: "86923228"
   
  자세한 내용은 [ADO NET Destination](../../integration-services/data-flow/ado-net-destination.md)을 참조하세요.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
   

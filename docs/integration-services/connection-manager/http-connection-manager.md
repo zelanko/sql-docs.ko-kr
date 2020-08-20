@@ -1,4 +1,5 @@
 ---
+description: HTTP 연결 관리자
 title: HTTP 연결 관리자 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 26b2b3e1-d02c-46ca-8d31-7aef2bbc3c53
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ef8b2df4b24f50f600683a5c6e9bb815208970cc
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: cd88a7f40787ecc33d99fe0c749c477f23b526a3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918551"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496153"
 ---
 # <a name="http-connection-manager"></a>HTTP 연결 관리자
 
@@ -132,7 +133,7 @@ ms.locfileid: "86918551"
  **제거**  
  주소를 선택한 다음 **제거**를 클릭하여 삭제합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [웹 서비스 태스크](../../integration-services/control-flow/web-service-task.md)   
  [Integration Services&#40;SSIS&#41; 연결](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
   

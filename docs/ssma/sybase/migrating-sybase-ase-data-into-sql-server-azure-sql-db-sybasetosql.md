@@ -1,4 +1,5 @@
 ---
+description: Sybase ASE 데이터를 SQL Server Azure SQL Database로 마이그레이션 (SybaseToSQL)
 title: Sybase ASE 데이터를 SQL Server로 마이그레이션-Azure SQL Database | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 54a39f5e-9250-4387-a3ae-eae47c799811
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 5bac0e5437a4700c6bfb4b349e1a5ca9cf421901
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 89603e61a51ebac9ccf8d834e493bbd463645a02
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934702"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497682"
 ---
 # <a name="migrating-sybase-ase-data-into-sql-server---azure-sql-database--sybasetosql"></a>Sybase ASE 데이터를 SQL Server Azure SQL Database로 마이그레이션 (SybaseToSQL)
 Sybase 서버 ASE (적응 서버 엔터프라이즈) 데이터베이스 개체를 또는 Azure SQL Database 성공적으로 로드 한 후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ase에서 또는 Azure SQL Database로 데이터를 마이그레이션할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -108,5 +109,5 @@ Sybase 서버 ASE (적응 서버 엔터프라이즈) 데이터베이스 개체�
 > SQL Express edition을 대상 데이터베이스로 사용 하는 경우 클라이언트 쪽 데이터 마이그레이션만 허용 되며 서버 쪽 데이터 마이그레이션은 지원 되지 않습니다.  
   
 ## <a name="see-also"></a>참고 항목  
-[Sybase ASE 데이터베이스를 SQL Server-Azure SQL Database &#40;SybaseToSQL&#41;로 마이그레이션](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
+[Sybase ASE 데이터베이스를 SQL Server-Azure SQL Database &#40;SybaseToSQL&#41;로 마이그레이션 ](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   

@@ -1,4 +1,5 @@
 ---
+description: SET FORCEPLAN(Transact-SQL)
 title: SET FORCEPLAN(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/26/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: b6c0b08f-2060-4696-9e12-50cb7e674321
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 02ed9e434ad527fa9e9c6c6ec34b464a522be7ce
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 88d97ef1c5f56a6329e59bdf6c29b8d89bc696e8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765800"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496447"
 ---
 # <a name="set-forceplan-transact-sql"></a>SET FORCEPLAN(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -44,7 +45,9 @@ ms.locfileid: "85765800"
 SET FORCEPLAN { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>설명  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="remarks"></a>설명
  SET FORCEPLAN 옵션은 기본적으로 쿼리 최적화 프로그램이 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 처리하는 데 사용하는 논리보다 우선 적용됩니다. 이 옵션 설정에 상관 없이 반환되는 데이터는 같습니다. 쿼리를 충족시키기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 테이블을 처리하는 방법에만 차이가 있습니다.  
   
  쿼리 최적화 프로그램 참고를 사용해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 SELECT 문을 처리하는 방법을 지정할 수도 있습니다.  
@@ -54,7 +57,7 @@ SET FORCEPLAN { ON | OFF }
 ## <a name="permissions"></a>사용 권한  
  SET FORCEPLAN 권한은 기본적으로 모든 사용자로 설정됩니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 테이블 4개의 조인을 수행합니다. `SHOWPLAN_TEXT` 옵션을 설정해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 쿼리를 다른 방식으로 처리하는 방법에 대한 정보를 반환할 수 있도록 `SET FORCE_PLAN` 옵션이 설정되어 있습니다.  
   
 ```sql
@@ -104,6 +107,6 @@ GO
  [SELECT&#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [SET 문&#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
  [SET SHOWPLAN_ALL &#40;Transact-SQL&#41;](../../t-sql/statements/set-showplan-all-transact-sql.md)   
- [SET SHOWPLAN_TEXT &#40;Transact-SQL&#41;](../../t-sql/statements/set-showplan-text-transact-sql.md)  
+ [SET SHOWPLAN_TEXT&#40;Transact-SQL&#41;](../../t-sql/statements/set-showplan-text-transact-sql.md)  
   
   

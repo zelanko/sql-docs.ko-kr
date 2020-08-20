@@ -1,4 +1,5 @@
 ---
+description: 데이터 프로파일링 태스크 설정
 title: 데이터 프로파일링 태스크 설정 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: fe050ca4-fe45-43d7-afa9-99478041f9a8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3b3f51db976994dad9e29ea8f7187f0106da53ce
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: a9630dd97fc2588ac8ba3dfcf9935d4fe3f77932
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921009"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496004"
 ---
 # <a name="setup-of-the-data-profiling-task"></a>데이터 프로파일링 태스크 설정
 
@@ -60,7 +61,7 @@ ms.locfileid: "86921009"
 |선택한 열에 있는 문자열 값의 모든 고유 길이 및 각 길이가 나타내는 테이블 내 행의 비율|**유효하지 않은 문자열 값** - 예를 들어 미국의 주 코드에 대해 두 개의 문자를 사용해야 하는 열을 프로파일링하는 중에 두 문자보다 긴 값을 검색할 수 있습니다.|**열 길이 분포** - 다음 문자 데이터 형식 중 하나가 포함된 열에 대해 유효합니다.<br /><br /> **char**<br /><br /> **nchar**<br /><br /> **varchar**<br /><br /> **nvarchar**|  
 |문자열 열에서 지정된 값의 비율을 포괄하는 정규식 집합<br /><br /> 또한 앞으로 새 값의 유효성 검사에 사용할 수 있는 정규식 검색을 위해|**유효하지 않거나 올바른 형식이 아닌 문자열 값** - 예를 들어 우편 번호 열의 패턴 프로필은 \d{5}-\d{4}, \d{5} 및 \d{9} 같은 정규식을 생성할 수 있습니다. 출력에 다른 정규식이 포함된 경우 데이터에 유효하지 않거나 잘못된 형식의 값이 포함되어 있는 것입니다.|**열 패턴 프로필** - 다음 문자 데이터 형식 중 하나가 포함된 열에 대해 유효합니다.<br /><br /> **char**<br /><br /> **nchar**<br /><br /> **varchar**<br /><br /> **nvarchar**|  
 |선택한 열 내 Null 값의 비율|**예기치 않게 높은 열 내 Null 값의 비율** - 예를 들어 미국 우편 번호를 포함해야 하는 열을 프로파일링하는 중 예기치 않게 높은 비율의 누락된 우편 번호를 검색할 수 있습니다.|**열 Null 비율** - 다음 데이터 형식 중 하나가 포함된 열에 대해 유효합니다.<br /><br /> **image**<br /><br /> **text**<br /><br /> **xml**<br /><br /> 사용자 정의 형식<br /><br /> 변형 유형|  
-|숫자 열에 대한 최소값, 최대값, 평균값, 표준 편차 및 **datetime** 열에 대한 최소값/최대값과 같은 통계|**유효하지 않은 숫자 값 및 날짜** - 예를 들어 기록 날짜 열을 프로파일링하는 중 미래의 최대 날짜를 검색할 수 있습니다.|**열 통계 프로필** - 다음 데이터 형식 중 하나가 포함된 열에 대해 유효합니다.<br /><br /> 숫자 데이터 형식:<br /><br /> 정수 형식(제외: **bit**<br /><br /> **money**<br /><br /> **smallmoney**<br /><br /> **decimal**<br /><br /> **float**<br /><br /> **real**<br /><br /> **numeric**<br /><br /> 날짜 및 시간 데이터 형식:<br /><br /> **datetime**<br /><br /> **smalldatetime**<br /><br /> **timestamp**<br /><br /> **date**<br /><br /> **time**<br /><br /> **datetime2**<br /><br /> **datetimeoffset**<br /><br /> 참고: 날짜 및 시간 데이터 유형이 포함된 열의 경우 프로필이 최소값 및 최대값만 계산합니다.|  
+|숫자 열에 대한 최소값, 최대값, 평균값, 표준 편차 및 **datetime** 열에 대한 최소값/최대값과 같은 통계|**유효하지 않은 숫자 값 및 날짜** - 예를 들어 기록 날짜 열을 프로파일링하는 중 미래의 최대 날짜를 검색할 수 있습니다.|**열 통계 프로필** - 다음 데이터 형식 중 하나가 포함된 열에 대해 유효합니다.<br /><br /> 숫자 데이터 형식:<br /><br /> 정수 형식(제외: **bit**<br /><br /> **money**<br /><br /> **smallmoney**<br /><br /> **decimal**<br /><br /> **float**<br /><br /> **real**<br /><br /> **numeric**<br /><br /> 날짜 및 시간 데이터 형식:<br /><br /> **datetime**<br /><br /> **smalldatetime**<br /><br /> **timestamp**<br /><br /> **date**<br /><br /> **time**<br /><br /> **datetime2**<br /><br /> **datetimeoffset**<br /><br /> 참고: 날짜 및 시간 데이터 형식이 포함된 열의 경우 프로필이 최소값 및 최대값만 계산합니다.|  
 |선택한 열에 있는 모든 고유 값 및 각 값이 나타내는 테이블 내 행의 비율 또는 테이블에서 지정된 비율을 초과하는 값|**열에 포함된 잘못된 수의 고유 값** - 예를 들어 미국의 주가 포함된 열을 프로파일링하는 중 50개를 초과하는 고유 값을 검색할 수 있습니다.|**열 값 분포** - 다음 데이터 형식 중 하나가 포함된 열에 대해 유효합니다.<br /><br /> 숫자 데이터 형식:<br /><br /> 정수 형식(제외: **bit**<br /><br /> **money**<br /><br /> **smallmoney**<br /><br /> **decimal**<br /><br /> **float**<br /><br /> **real**<br /><br /> **numeric**<br /><br /> 문자 데이터 형식:<br /><br /> **char**<br /><br /> **nchar**<br /><br /> **varchar**<br /><br /> **nvarchar**<br /><br /> 날짜 및 시간 데이터 형식:<br /><br /> **datetime**<br /><br /> **smalldatetime**<br /><br /> **timestamp**<br /><br /> **date**<br /><br /> **time**<br /><br /> **datetime2**<br /><br /> **datetimeoffset**|  
 |열 또는 열 집합이 선택한 테이블에 대해 키인지, 아니면 근사 키인지 여부|**잠재적 키 열의 중복 값** - 예를 들어 Customers 테이블의 Name 및 Address 열을 프로파일링하는 중 이름과 주소의 조합이 고유해야 하는 중복 값을 검색할 수 있습니다.|**후보 키** - 열 또는 열 집합이 선택한 테이블에 대한 키 역할을 수행하기에 적합한지 여부를 보고하는 여러 열 프로필입니다. 다음 데이터 형식 중 하나가 지정된 열에 대해 유효합니다.<br /><br /> 정수 데이터 형식:<br /><br /> **bit**<br /><br /> **tinyint**<br /><br /> **smallint**<br /><br /> **int**<br /><br /> **bigint**<br /><br /> 문자 데이터 형식:<br /><br /> **char**<br /><br /> **nchar**<br /><br /> **varchar**<br /><br /> **nvarchar**<br /><br /> 날짜 및 시간 데이터 형식:<br /><br /> **datetime**<br /><br /> **smalldatetime**<br /><br /> **timestamp**<br /><br /> **date**<br /><br /> **time**<br /><br /> **datetime2**<br /><br /> **datetimeoffset**|  
 |한 열(종속 열)의 값이 다른 열 또는 열 집합(결정 열)의 값에 종속되는 범위|**종속 열에서 유효하지 않은 값** - 예를 들어 미국의 우편 번호가 포함된 열과 미국의 주가 포함된 열 간 종속성을 프로파일링하는 중 같은 우편 번호는 항상 같은 주여야 하는데 프로필이 종속성 위반을 검색할 수 있습니다.|**함수 종속성** - 다음 데이터 형식 중 하나가 포함된 열에 대해 유효합니다.<br /><br /> 정수 데이터 형식:<br /><br /> **bit**<br /><br /> **tinyint**<br /><br /> **smallint**<br /><br /> **int**<br /><br /> **bigint**<br /><br /> 문자 데이터 형식:<br /><br /> **char**<br /><br /> **nchar**<br /><br /> **varchar**<br /><br /> **nvarchar**<br /><br /> 날짜 및 시간 데이터 형식:<br /><br /> **datetime**<br /><br /> **smalldatetime**<br /><br /> **timestamp**<br /><br /> **date**<br /><br /> **time**<br /><br /> **datetime2**<br /><br /> **datetimeoffset**|  

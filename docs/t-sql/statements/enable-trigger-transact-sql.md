@@ -1,4 +1,5 @@
 ---
+description: ENABLE TRIGGER(Transact-SQL)
 title: ENABLE TRIGGER(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/12/2017
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 6e21f0ad-68d0-432f-9c7c-a119dd2d3fc9
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 542613ad0404170d7af90a3cddc93feb685039eb
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 31f558799af8244bf14faeff1af16717ead48417
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485204"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496706"
 ---
 # <a name="enable-trigger-transact-sql"></a>ENABLE TRIGGER(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -77,7 +78,7 @@ DML 트리거를 활성화하려면 최소한 트리거가 만들어진 테이�
   
 서버 범위(ON ALL SERVER)의 DDL 트리거 또는 LOGON 트리거를 활성화하려면 서버에 대한 CONTROL SERVER 권한이 필요합니다. 데이터베이스 범위(ON DATABASE)에서 DDL 트리거를 활성화하려면 최소한 현재 데이터베이스에 대한 ALTER ANY DATABASE DDL TRIGGER 권한이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-enabling-a-dml-trigger-on-a-table"></a>A. 테이블의 DML 트리거 활성화  
 다음 예에서는 AdventureWorks 데이터베이스의 `uAddress` 테이블에서 만든 `Address` 트리거를 비활성화한 다음, 다시 활성화하는 방법을 보여 줍니다.  

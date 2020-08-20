@@ -1,4 +1,5 @@
 ---
+description: DROP AVAILABILITY GROUP(Transact-SQL)
 title: DROP AVAILABILITY GROUP(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: c1600289-c990-454a-b279-dba0ebd5d63e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 35639381335232acb6c7438321ec037f5aa0f83d
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: c47ca2a1697752068902a26d20322232648dc2f4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484724"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496788"
 ---
 # <a name="drop-availability-group-transact-sql"></a>DROP AVAILABILITY GROUP(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -71,7 +72,7 @@ DROP AVAILABILITY GROUP group_name
 ### <a name="permissions"></a>사용 권한  
  가용성 그룹에 대한 **ALTER AVAILABILITY GROUP** 권한, **CONTROL AVAILABILITY GROUP** permission, **ALTER ANY AVAILABILITY GROUP** 권한 또는 **CONTROL SERVER** 권한이 필요합니다. 로컬 서버 인스턴스에서 호스팅되지 않는 가용성 그룹을 삭제하려면 해당 가용성 그룹에 대한 **CONTROL SERVER** 권한이나 **CONTROL** 권한이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `AccountsAG` 가용성 그룹을 삭제합니다.  
   
 ```  

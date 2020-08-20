@@ -1,4 +1,5 @@
 ---
+description: IsValidDetailed(geometry 데이터 형식)
 title: IsValidDetailed (geometry 데이터 형식) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5a31e88a-ad7b-4ef7-b773-e2571f1cb3aa
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: a1aa6995864aa4407c0c7c71611ddf9da65acfc7
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: f57155c8724d8cb27aaf06eaf491e11298ad61c2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555135"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497046"
 ---
 # <a name="isvaliddetailed-geometry-datatype"></a>IsValidDetailed(geometry 데이터 형식)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -43,7 +44,7 @@ ms.locfileid: "86555135"
 ## <a name="remarks"></a>설명  
  다음 표에는 가능한 반환 값이 있습니다.  
   
-|반환 값|Description|  
+|반환 값|설명|  
 |------------------|-----------------|  
 |24400|Valid|  
 |24401|유효하지 않으며 이유를 알 수 없습니다.|  
@@ -63,7 +64,7 @@ ms.locfileid: "86555135"
 |24415|일부 다각형이 잘못된 링 구조를 가지므로 유효하지 않습니다.|  
 |24416|{1} 지점에서 시작하는 {0} 곡선의 가장자리가 대척점이 있는 중복 제거 호이거나 선이므로 유효하지 않습니다.|  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 올바르지 않은 공간 개체의 예에서는 **IsValidDetailed()** 메서드가 동작하는 방법을 보여 줍니다.  
   
 ```sql  

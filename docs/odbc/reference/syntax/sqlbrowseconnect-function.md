@@ -1,4 +1,5 @@
 ---
+description: SQLBrowseConnect 함수
 title: SQLBrowseConnect 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: b7f1be66-e6c7-4790-88ec-62b7662103c0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 607b0d764a694098a23111e9d7f4ce9755ea982d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 712dbb366e25098c7956ffbb9c8733a437339297
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301343"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499636"
 ---
 # <a name="sqlbrowseconnect-function"></a>SQLBrowseConnect 함수
 **규칙**  
@@ -66,7 +67,7 @@ SQLRETURN SQLBrowseConnect(
  입력 **Outconnectionstring* 버퍼의 길이 (문자)입니다.  
   
  *StringLength2Ptr*  
- 출력 \* *Outconnectionstring*에서 반환 하는 데 사용할 수 있는 총 문자 수 (null 종료 제외)입니다. 반환할 수 있는 문자 수가 *bufferlength*보다 크거나 같은 경우 \* *outconnectionstring* 의 연결 문자열은 *bufferlength* 에서 null 종료 문자의 길이를 뺀 값으로 잘립니다.  
+ 출력 Outconnectionstring에서 반환 하는 데 사용할 수 있는 총 문자 수 (null 종료 제외)입니다 \* *OutConnectionString*. 반환할 수 있는 문자 수가 *Bufferlength*보다 크거나 같은 경우 \* *outconnectionstring* 의 연결 문자열은 *bufferlength* 에서 null 종료 문자의 길이를 뺀 값으로 잘립니다.  
   
 ## <a name="returns"></a>반환  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NEED_DATA, SQL_ERROR, SQL_INVALID_HANDLE 또는 SQL_STILL_EXECUTING입니다.  
@@ -74,7 +75,7 @@ SQLRETURN SQLBrowseConnect(
 ## <a name="diagnostics"></a>진단  
  **SQLBrowseConnect** 가 SQL_ERROR, SQL_SUCCESS_WITH_INFO 또는 SQL_NEED_DATA 반환 하는 경우 *HandleType* 의 SQL_HANDLE_STMT 및 *ConnectionHandle 핸들*을 사용 하 여 **SQLGETDIAGREC** 를 호출 하 여 연결 된 SQLSTATE 값을 얻을 수 있습니다. 다음 표에서는 일반적으로 **SQLBrowseConnect** 에서 반환 하는 SQLSTATE 값을 나열 하 고이 함수의 컨텍스트에서 각 항목에 대해 설명 합니다. "(DM)" 표기법은 드라이버 관리자에서 반환 된 SQLSTATEs의 설명 보다 앞에 나옵니다. 다른 설명이 없는 한 각 SQLSTATE 값과 연결 된 반환 코드는 SQL_ERROR 됩니다.  
   
-|SQLSTATE|Error|Description|  
+|SQLSTATE|오류|설명|  
 |--------------|-----------|-----------------|  
 |01000|일반 경고|드라이버 관련 정보 메시지입니다. 함수는 SQL_SUCCESS_WITH_INFO를 반환 합니다.|  
 |01004|문자열 데이터, 오른쪽이 잘렸습니다.|버퍼 \* *outconnectionstring* 이 전체 찾아보기 결과 연결 문자열을 반환할 만큼 크지 않아 문자열이 잘렸습니다. Buffer **StringLength2Ptr* 에는 잘림 검색 결과 연결 문자열의 길이가 포함 됩니다. 함수는 SQL_NEED_DATA를 반환 합니다.|  
@@ -85,7 +86,7 @@ SQLRETURN SQLBrowseConnect(
 |08004|서버에서 연결을 거부 했습니다.|데이터 소스에서 구현 정의 이유에 대 한 연결 설정을 거부 했습니다.|  
 |08S01|통신 연결 오류|드라이버가 연결을 시도 하는 드라이버와 데이터 원본 간의 통신 연결이 함수 처리를 완료 하기 전에 실패 했습니다.|  
 |28000|잘못 된 권한 부여 사양|찾아보기 요청 연결 문자열 (*Inconnectionstring*)에 지정 된 사용자 id 또는 권한 부여 문자열이 나 둘 다에서 데이터 원본에 의해 정의 된 제한을 위반 했습니다.|  
-|HY000|일반 오류|특정 SQLSTATE가 없고 구현 별 SQLSTATE가 정의 되지 않은 오류가 발생 했습니다. MessageText 버퍼에서 **SQLGetDiagRec** 에 의해 반환 되는 오류 메시지는 오류 및 해당 원인을 설명 합니다. * \**|  
+|HY000|일반 오류|특정 SQLSTATE가 없고 구현 별 SQLSTATE가 정의 되지 않은 오류가 발생 했습니다. * \* MessageText* 버퍼에서 **SQLGetDiagRec** 에 의해 반환 되는 오류 메시지는 오류 및 해당 원인을 설명 합니다.|  
 |HY001|메모리 할당 오류|(DM) 드라이버 관리자가 함수의 실행 또는 완료를 지 원하는 데 필요한 메모리를 할당할 수 없습니다.<br /><br /> 드라이버에서 함수 실행 또는 완료를 지 원하는 데 필요한 메모리를 할당할 수 없습니다.|  
 |HY008|작업 취소됨|[Sqlcancelhandle 함수](../../../odbc/reference/syntax/sqlcancelhandle-function.md)를 호출 하 여 비동기 작업을 취소 했습니다. 그런 다음 *ConnectionHandle*에서 원래 함수를 다시 호출 했습니다.<br /><br /> 다중 스레드 응용 프로그램의 다른 스레드에서 *ConnectionHandle* **sqlcancelhandle** 을 호출 하 여 작업을 취소 했습니다.|  
 |HY010|함수 시퀀스 오류|(DM) *ConnectionHandle* 에 대해 비동기적으로 실행 되는 함수 (이 함수 아님)가 호출 되었으며이 함수가 호출 될 때 계속 실행 중입니다.|  
@@ -112,13 +113,13 @@ SQLRETURN SQLBrowseConnect(
 ## <a name="inconnectionstring-argument"></a>InConnectionString 인수  
  찾아보기 요청 연결 문자열의 구문은 다음과 같습니다.  
   
- *연결 문자열* :: = *특성*[`;`] &#124; *특성* `;` *연결-문자열*;<br>
- *attribute* :: = *특성-키워드*`=`*특성-값* &#124; `DRIVER=`[`{`]*특성 값*[`}`]<br>
+ *연결 문자열* :: = *특성*[ `;` ] &#124; *특성* `;` *연결-문자열*;<br>
+ *attribute* :: = *특성-키워드* `=` *특성-값* &#124; `DRIVER=` [ `{` ]*특성 값*[ `}` ]<br>
  *특성-keyword* :: = `DSN` &#124; `UID` &#124; `PWD` &#124; *드라이버 정의-키워드*<br>
  *특성-value* :: = *문자 문자열*<br>
  *드라이버 정의-키워드* :: = *식별자*<br>
   
- 여기서 *문자 문자열* 에는 0 자 이상의 문자가 있습니다. *식별자* 에 하나 이상의 문자가 있습니다. *특성-키워드* 는 대/소문자를 구분 하지 않습니다. *특성-값* 은 대/소문자를 구분 합니다. 그리고 **DSN** 키워드 값은 공백으로만 구성 되지 않습니다. 연결 문자열 및 초기화 파일 문법을 포함 하 여 **[]{}(),;? 문자를 포함 하는 키워드 및 특성 값 = \*! @** 를 피해 야 합니다. 시스템 정보의 문법 때문에 키워드와 데이터 원본 이름에는 백슬래시 (\\) 문자를 사용할 수 없습니다. ODBC 2의 경우. *x* 드라이버 키워드에 대 한 특성 값 주위에는 중괄호를 입력 해야 합니다.  
+ 여기서 *문자 문자열* 에는 0 자 이상의 문자가 있습니다. *식별자* 에 하나 이상의 문자가 있습니다. *특성-키워드* 는 대/소문자를 구분 하지 않습니다. *특성-값* 은 대/소문자를 구분 합니다. 그리고 **DSN** 키워드 값은 공백으로만 구성 되지 않습니다. 연결 문자열 및 초기화 파일 문법을 포함 하 여 **[] {} (),;? \* 문자를 포함 하는 키워드 및 특성 값 =! @** 를 피해 야 합니다. 시스템 정보의 문법 때문에 키워드와 데이터 원본 이름에는 백슬래시 () 문자를 사용할 수 없습니다 \\ . ODBC 2의 경우. *x* 드라이버 키워드에 대 한 특성 값 주위에는 중괄호를 입력 해야 합니다.  
   
  찾아보기 요청 연결 문자열에서 키워드가 반복 되는 경우 드라이버는 처음 발견 되는 키워드와 연결 된 값을 사용 합니다. **DSN** 및 **드라이버** 키워드가 동일한 찾아보기 요청 연결 문자열에 포함 된 경우 드라이버 관리자와 드라이버에서 가장 먼저 표시 되는 키워드를 사용 합니다.  
   
@@ -127,17 +128,17 @@ SQLRETURN SQLBrowseConnect(
 ## <a name="outconnectionstring-argument"></a>OutConnectionString 인수  
  찾아보기 결과 연결 문자열은 연결 특성의 목록입니다. 연결 특성은 특성 키워드와 해당 특성 값으로 구성 됩니다. 찾아보기 결과 연결 문자열의 구문은 다음과 같습니다.  
   
- *연결 문자열* :: = *특성*[`;`] &#124; *특성* `;` *연결 문자열*<br>
- *attribute* :: = [`*`]*특성-키워드*`=`*특성-값*<br>
+ *연결 문자열* :: = *특성*[ `;` ] &#124; *특성* `;` *연결 문자열*<br>
+ *attribute* :: = [ `*` ]*특성-키워드* `=` *특성-값*<br>
  *특성-keyword* :: = *ODBC-attribute* &#124; *드라이버 정의 특성-키워드*<br>
- *ODBC-keyword* =`UID` { `PWD`&#124;} [`:`*지역화 된 식별자*] 드라이버별- *keyword* :: = *식별자*[`:`*지역화*된 식별자] *특성-value* :: = `{` *특성* `}` -값 목록 &#124; `?` (중괄호는 literal 이며 드라이버에서 반환 됩니다.)<br>
- *특성-값-list* :: = *문자열* [`:`*지역화*된 문자열 *] &#124; 문자열* [`:`*지역화 된 문자열*] `,` *특성-값 목록*<br>
+ *ODBC-keyword* = { `UID` &#124; `PWD` } [ `:` *지역화 된 식별자*] 드라이버별- *keyword* :: = *식별자*[ `:` *지역화*된 식별자] *특성-value* :: = 특성-값 `{` *목록* `}` &#124; `?` (중괄호는 literal 이며 드라이버에서 반환 됩니다.)<br>
+ *특성-값-list* :: = *문자열* [ `:` *지역화*된 문자열] &#124; 문자열 [지역화 *character-string* 된 `:` *문자열*] `,` *특성-값 목록*<br>
   
- 여기서 *문자 문자열과* 지역화 된 *문자열* 은 0 개 이상의 문자를 포함 합니다. *식별자* 와 *지역화 된 식별자* 에는 하나 이상의 문자가 포함 되어 있습니다. *특성-키워드* 는 대/소문자를 구분 하지 않습니다. 및 *특성 값* 은 대/소문자를 구분 합니다. 연결 문자열 및 초기화 파일 문법, 키워드, 지역화 된 식별자 및 **[]{}(),;? 문자를 포함 하는 특성 값 = \*! @** 를 피해 야 합니다. 시스템 정보의 문법 때문에 키워드와 데이터 원본 이름에는 백슬래시 (\\) 문자를 사용할 수 없습니다.  
+ 여기서 *문자 문자열과* 지역화 된 *문자열* 은 0 개 이상의 문자를 포함 합니다. *식별자* 와 *지역화 된 식별자* 에는 하나 이상의 문자가 포함 되어 있습니다. *특성-키워드* 는 대/소문자를 구분 하지 않습니다. 및 *특성 값* 은 대/소문자를 구분 합니다. 연결 문자열 및 초기화 파일 문법, 키워드, 지역화 된 식별자 및 **[] {} (),;? \* 문자를 포함 하는 특성 값 =! @** 를 피해 야 합니다. 시스템 정보의 문법 때문에 키워드와 데이터 원본 이름에는 백슬래시 () 문자를 사용할 수 없습니다 \\ .  
   
  찾아보기 결과 연결 문자열 구문은 다음 의미 체계 규칙에 따라 사용 됩니다.  
   
--   별표\*()가 *특성-키워드*앞에 오면 *특성* 은 선택 사항이 며 다음에 **SQLBrowseConnect**에 대 한 호출에서 생략 될 수 있습니다.  
+-   별표 ()가 \* *특성-키워드*앞에 오면 *특성* 은 선택 사항이 며 다음에 **SQLBrowseConnect**에 대 한 호출에서 생략 될 수 있습니다.  
   
 -   **UID** 및 **PWD** 특성 키워드는 **SQLDriverConnect**에 정의 된 것과 동일한 의미를 갖습니다.  
   
@@ -145,7 +146,7 @@ SQLRETURN SQLBrowseConnect(
   
 -   *ODBC-특성-* 키워드 및 *드라이버 정의-키워드* 에는 지역화 되거나 사용자에 게 친숙 한 키워드 버전이 포함 되어 있습니다. 이는 응용 프로그램에서 대화 상자에 레이블로 사용할 수 있습니다. 그러나 검색 요청 문자열을 드라이버에 전달할 때에는 **UID**, **PWD**또는 *식별자* 만 사용 해야 합니다.  
   
--   {*특성-값-목록*}은 해당 *특성-키워드*에 유효한 실제 값의 열거형입니다. 중괄호 ({})는 선택 목록에 표시 되지 않습니다. 드라이버에서 반환 됩니다. 예를 들어 서버 이름이 나 데이터베이스 이름 목록 일 수 있습니다.  
+-   {*특성-값-목록*}은 해당 *특성-키워드*에 유효한 실제 값의 열거형입니다. 중괄호 ( {} )는 선택 항목 목록을 나타내지 않으며 드라이버에 의해 반환 됩니다. 예를 들어 서버 이름이 나 데이터베이스 이름 목록 일 수 있습니다.  
   
 -   *특성 값* 이 단일 물음표 (?) 이면 단일 값은 *특성-키워드*에 해당 합니다. 예: UID = 존스; PWD = Sesame.  
   
@@ -184,9 +185,9 @@ SQLRETURN SQLBrowseConnect(
 ## <a name="code-example"></a>코드 예  
   
 > [!NOTE]  
->  Windows 인증을 지 원하는 데이터 원본 공급자에 연결 하는 경우 연결 문자열에 사용자 `Trusted_Connection=yes` ID 및 암호 정보를 지정 하는 대신를 지정 해야 합니다.  
+>  Windows 인증을 지 원하는 데이터 원본 공급자에 연결 하는 경우 `Trusted_Connection=yes` 연결 문자열에 사용자 ID 및 암호 정보를 지정 하는 대신를 지정 해야 합니다.  
   
- 다음 예제에서 응용 프로그램은 **SQLBrowseConnect** 를 반복적으로 호출 합니다. **SQLBrowseConnect** 가 SQL_NEED_DATA를 반환할 때마다 \* *outconnectionstring*에서 필요한 데이터에 대 한 정보를 다시 전달 합니다. 응용 프로그램은 해당 루틴 **GetUserInput** (표시 되지 않음)에 *outconnectionstring* 을 전달 합니다. **GetUserInput** 는 정보를 구문 분석 하 고, 대화 상자를 작성 및 표시 하 고, \* *inconnectionstring*에 사용자가 입력 한 정보를 반환 합니다. 응용 프로그램은 다음에 **SQLBrowseConnect**에 대 한 호출에서 사용자 정보를 드라이버로 전달 합니다. 응용 프로그램에서 데이터 원본에 연결 하는 데 필요한 모든 정보를 제공 하 고 나면 **SQLBrowseConnect** 는 SQL_SUCCESS을 반환 하 고 응용 프로그램을 계속 진행 합니다.  
+ 다음 예제에서 응용 프로그램은 **SQLBrowseConnect** 를 반복적으로 호출 합니다. **SQLBrowseConnect** 가 SQL_NEED_DATA를 반환할 때마다 outconnectionstring에서 필요한 데이터에 대 한 정보를 다시 전달 \* *OutConnectionString*합니다. 응용 프로그램은 해당 루틴 **GetUserInput** (표시 되지 않음)에 *outconnectionstring* 을 전달 합니다. **GetUserInput** 는 정보를 구문 분석 하 고, 대화 상자를 작성 및 표시 하 고, \* *inconnectionstring*에 사용자가 입력 한 정보를 반환 합니다. 응용 프로그램은 다음에 **SQLBrowseConnect**에 대 한 호출에서 사용자 정보를 드라이버로 전달 합니다. 응용 프로그램에서 데이터 원본에 연결 하는 데 필요한 모든 정보를 제공 하 고 나면 **SQLBrowseConnect** 는 SQL_SUCCESS을 반환 하 고 응용 프로그램을 계속 진행 합니다.  
   
  **SQLBrowseConnect**를 호출 하 여 SQL Server 드라이버에 연결 하는 방법에 대 한 자세한 예제는 [SQL Server 검색 예](../../../odbc/reference/develop-app/sql-server-browsing-example.md)를 참조 하세요.  
   
@@ -202,7 +203,7 @@ SQLRETURN SQLBrowseConnect(
 "HOST:Server={red,blue,green};UID:ID=?;PWD:Password=?"  
 ```  
   
- 응용 프로그램은 사용자에 게 red, blue 또는 green 서버를 선택 하 고 사용자 ID와 암호를 입력 하도록 요청 하는 대화 상자를 작성 하는 **GetUserInput** 루틴에이 문자열을 전달 합니다. 루틴은 응용 프로그램이 \* **SQLBrowseConnect**에 전달 하는 *inconnectionstring*에서 다음 사용자 지정 정보를 다시 전달 합니다.  
+ 응용 프로그램은 사용자에 게 red, blue 또는 green 서버를 선택 하 고 사용자 ID와 암호를 입력 하도록 요청 하는 대화 상자를 작성 하는 **GetUserInput** 루틴에이 문자열을 전달 합니다. 루틴은 \* 응용 프로그램이 **SQLBrowseConnect**에 전달 하는 *inconnectionstring*에서 다음 사용자 지정 정보를 다시 전달 합니다.  
   
 ```  
 "HOST=red;UID=Smith;PWD=Sesame"  
@@ -293,6 +294,6 @@ int main() {
 |드라이버 설명 및 특성 반환|[SQLDrivers 함수](../../../odbc/reference/syntax/sqldrivers-function.md)|  
 |연결 핸들 해제|[SQLFreeHandle 함수](../../../odbc/reference/syntax/sqlfreehandle-function.md)|  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [ODBC API 참조](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 헤더 파일](../../../odbc/reference/install/odbc-header-files.md)

@@ -1,4 +1,5 @@
 ---
+description: SQL Server에 JSON 문서 가져오기
 title: JSON 문서 가져오기
 ms.date: 06/03/2020
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.author: jovanpop
 ms.reviewer: jroth
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ed2924ae8b839bd414f036b389bf1298d51ed452
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 342af018f28b52909adf59f830737036637ab589
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755778"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499303"
 ---
 # <a name="import-json-documents-into-sql-server"></a>SQL Server에 JSON 문서 가져오기
 
@@ -145,7 +146,7 @@ SELECT book.*
 
 이 예제에서 OPENROWSET(BULK)는 파일 콘텐츠를 읽고 그 콘텐츠를 출력에 대해 정의된 스키마로 OPENJSON 함수에 전달합니다. OPENJSON은 열 이름을 사용하여 JSON 개체의 속성을 찾습니다. 예를 들어 `price` 속성은 `price` 열로 반환되고 float 데이터 형식으로 변환됩니다. 결과는 다음과 같습니다.
 
-|Id|속성|price|pages_i|작성자|
+|Id|Name|price|pages_i|작성자|
 |---|---|---|---|---|
 |978-0641723445|번개 도둑|12.5|384|Rick Riordan| 
 |978-1423103349|몬스터 바다|6.49|304|Rick Riordan| 

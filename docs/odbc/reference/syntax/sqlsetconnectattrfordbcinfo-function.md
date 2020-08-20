@@ -1,4 +1,5 @@
 ---
+description: SQLSetConnectAttrForDbcInfo 함수
 title: SQLSetConnectAttrForDbcInfo 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: a28fadb9-b998-472a-b252-709507e92005
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9f43a0fc6cd02fe566579a543667f9a4c4c1a108
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7380ba8682deb7424c363b28d42ecf3980755daf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301890"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499563"
 ---
 # <a name="sqlsetconnectattrfordbcinfo-function"></a>SQLSetConnectAttrForDbcInfo 함수
 **규칙**  
@@ -41,7 +42,7 @@ SQLRETURN  SQLSetConnectAttrForDbcInfo(
  *hDbcInfoToken*  
  입력 토큰 핸들입니다.  
   
- *특성도*  
+ *Attribute*  
  입력 설정할 특성입니다. 유효한 특성 목록은 [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)에 대 한 드라이버와 동일 합니다.  
   
  *ValuePtr*  
@@ -77,7 +78,7 @@ SQLRETURN  SQLSetConnectAttrForDbcInfo(
   
  ODBC 드라이버 개발용으로 sqlspi .h를 포함 합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [ODBC 드라이버 개발](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   
  [드라이버 인식 연결 풀링](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md)   
  [ODBC 드라이버에서 연결 풀 인식 개발](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)

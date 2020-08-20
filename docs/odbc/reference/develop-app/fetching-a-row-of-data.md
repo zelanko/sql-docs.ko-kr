@@ -1,4 +1,5 @@
 ---
+description: 데이터 행 페치
 title: 데이터 행 페치 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 16d4a380-0d83-456b-aeee-f10738944e86
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a702f561b756d5305020df9f015d3ea4b444caa6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 71ced7d7df30f1bb4f784317b76f7b42553951df
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305674"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499893"
 ---
 # <a name="fetching-a-row-of-data"></a>데이터 행 페치
 데이터 행을 페치 하기 위해 응용 프로그램은 **Sqlfetch**를 호출 합니다. **Sqlfetch** 는 모든 종류의 커서를 사용 하 여 호출할 수 있지만 행 집합 커서를 앞 으로만 이동 전용 방향으로 이동 합니다. **Sqlfetch** 는 커서를 다음 행으로 이동 하 고 **SQLBindCol**에 대 한 호출을 사용 하 여 바인딩된 모든 열에 대 한 데이터를 반환 합니다. 커서가 결과 집합의 끝에 도달 하면 **Sqlfetch** 는 SQL_NO_DATA을 반환 합니다. **Sqlfetch**호출에 대 한 예제는 [SQLBindCol 사용](../../../odbc/reference/develop-app/using-sqlbindcol.md)을 참조 하세요.  

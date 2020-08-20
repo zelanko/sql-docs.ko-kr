@@ -1,4 +1,5 @@
 ---
+description: sys. dm_user_db_resource_governance (Transact-sql)
 title: sys. dm_user_db_resource_governance (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/17/2019
@@ -20,12 +21,12 @@ ms.assetid: ''
 author: joesackmsft
 ms.author: josack
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
-ms.openlocfilehash: f853f1778a62b345accff745aade5fb5608322fd
-ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
+ms.openlocfilehash: 869a5d802e36e74c22a88e599065b04df35c62a7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84627397"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498260"
 ---
 # <a name="sysdm_user_db_resource_governance-transact-sql"></a>sys. dm_user_db_resource_governance (Transact-sql)
 
@@ -101,7 +102,7 @@ Azure SQL Database의 리소스 관리에 대 한 설명은 [리소스 제한 SQ
 > [!IMPORTANT]
 > 이 DMV에서 반환 하는 대부분의 데이터는 내부 사용을 위한 것 이며 언제 든 지 변경 될 수 있습니다.
 
-## <a name="examples"></a>예
+## <a name="examples"></a>예제
 
 사용자 데이터베이스의 컨텍스트에서 실행 되는 다음 쿼리는 사용자 작업 그룹 및 리소스 풀 수준에서 최대 로그 속도 및 최대 IOPS를 반환 합니다. 단일 데이터베이스의 경우 하나의 행이 반환 됩니다. 탄력적 풀의 데이터베이스에 대해 풀의 각 데이터베이스에 대해 행이 반환 됩니다.
 

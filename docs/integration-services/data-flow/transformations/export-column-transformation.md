@@ -1,4 +1,5 @@
 ---
+description: 열 내보내기 변환
 title: 열 내보내기 변환 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 678d2dfc-e40c-4fbb-b2cc-42fffc44478a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 450d7856924f5a7f8292ce65b1184aeb657ff40e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 9d7741de0a6a1d0195344613330bffd3f0c0c62d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919373"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495736"
 ---
 # <a name="export-column-transformation"></a>열 내보내기 변환
 
@@ -38,16 +39,16 @@ ms.locfileid: "86919373"
 ## <a name="append-and-truncate-options"></a>추가 및 잘림 옵션  
  다음 표에서는 추가 및 잘림 옵션 설정이 결과에 미치는 영향을 설명합니다.  
   
-|추가|Truncate|파일 존재 여부|결과|  
+|Append|Truncate|파일 존재 여부|결과|  
 |------------|--------------|-----------------|-------------|  
 |False|False|예|이 변환은 새 파일을 만들고 해당 파일에 데이터를 씁니다.|  
 |True|False|예|이 변환은 새 파일을 만들고 해당 파일에 데이터를 씁니다.|  
 |False|True|예|이 변환은 새 파일을 만들고 해당 파일에 데이터를 씁니다.|  
 |True|True|예|이 변환은 디자인 타임 유효성 검사에 실패합니다. 두 속성을 모두 **true**로 설정하면 안 됩니다.|  
-|False|False|yes|런타임 오류가 발생합니다. 이 변환은 파일은 있지만 해당 파일에 쓸 수 없습니다.|  
-|False|True|yes|이 변환은 파일을 삭제하고 다시 만든 후 해당 파일에 데이터를 씁니다.|  
-|True|False|yes|이 변환은 파일을 열고 해당 파일의 끝에 데이터를 씁니다.|  
-|True|True|yes|이 변환은 디자인 타임 유효성 검사에 실패합니다. 두 속성을 모두 **true**로 설정하면 안 됩니다.|  
+|False|False|예|런타임 오류가 발생합니다. 이 변환은 파일은 있지만 해당 파일에 쓸 수 없습니다.|  
+|False|True|예|이 변환은 파일을 삭제하고 다시 만든 후 해당 파일에 데이터를 씁니다.|  
+|True|False|예|이 변환은 파일을 열고 해당 파일의 끝에 데이터를 씁니다.|  
+|True|True|예|이 변환은 디자인 타임 유효성 검사에 실패합니다. 두 속성을 모두 **true**로 설정하면 안 됩니다.|  
   
 ## <a name="configuration-of-the-export-column-transformation"></a>열 내보내기 변환 구성  
  다음과 같은 방법으로 열 내보내기 변환을 구성할 수 있습니다.  

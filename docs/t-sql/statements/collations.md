@@ -1,4 +1,5 @@
 ---
+description: COLLATE(Transact-SQL)
 title: COLLATE(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/30/2019
@@ -19,12 +20,12 @@ ms.assetid: 76763ac8-3e0d-4bbb-aa53-f5e7da021daa
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ab4b79abe293e01ac0087ea68363f7378d180a07
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+ms.openlocfilehash: e6f5df8b371ded189d63095c86baeb417afe4ca4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86380876"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496942"
 ---
 # <a name="collate-transact-sql"></a>COLLATE(Transact-SQL)
 
@@ -103,7 +104,7 @@ FROM fn_helpcollations();
 >
 > 지정된 데이터 정렬 또는 참조된 개체가 사용하는 데이터 정렬에서 Windows가 지원하지 않는 코드 페이지를 사용하는 경우에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 오류가 나타납니다.
 
-## <a name="examples"></a>예
+## <a name="examples"></a>예제
 
 ### <a name="a-specifying-collation-during-a-select"></a>A. SELECT 중 데이터 정렬 지정
 

@@ -1,4 +1,5 @@
 ---
+description: sys.dm_clr_properties(Transact-SQL)
 title: sys. dm_clr_properties (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -20,11 +21,12 @@ ms.assetid: 220d062f-d117-46e7-a448-06fe48db8163
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a61484691e4e5a2ea5ca4c08b6382b501f1cc851
-ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
+ms.openlocfilehash: 7db1f2a88248f01929326f02cf19cd42ac5a5e6f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86091881"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498420"
 ---
 # <a name="sysdm_clr_properties-transact-sql"></a>sys.dm_clr_properties(Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -43,7 +45,7 @@ ms.locfileid: "86091881"
   
  **Version** 속성은 서버에서 .NET Framework 및 호스팅된 CLR의 버전을 나타냅니다.  
   
- **Dm_clr_properties** 동적 관리 뷰는 호스트 된 clr의 상태를 반영 하는 **상태** 속성에 대해 6 개의 다른 값을 반환할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 아래에 이 계정과 키의 예제가 나와 있습니다.  
+ **Dm_clr_properties** 동적 관리 뷰는 호스트 된 clr의 상태를 반영 하는 **상태** 속성에 대해 6 개의 다른 값을 반환할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 해당 항목은 다음과 같습니다.  
   
 -   Mscoree is not loaded.  
   
@@ -83,8 +85,8 @@ SELECT name, value
 FROM sys.dm_clr_properties;  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;동적 관리 뷰 및 함수](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+## <a name="see-also"></a>관련 항목  
+ [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [공용 언어 런타임 관련 동적 관리 뷰 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/common-language-runtime-related-dynamic-management-views-transact-sql.md)  
   
   

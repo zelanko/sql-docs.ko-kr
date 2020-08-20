@@ -1,4 +1,5 @@
 ---
+description: sys.dm_xe_sessions(Transact-SQL)
 title: sys. dm_xe_sessions (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: defd6efb-9507-4247-a91f-dc6ff5841e17
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8100309dafa8004d156b74712e91b0bd340d160e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2407ced0c8e3d597367f95460039461e24c11285
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898536"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498220"
 ---
 # <a name="sysdm_xe_sessions-transact-sql"></a>sys.dm_xe_sessions(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

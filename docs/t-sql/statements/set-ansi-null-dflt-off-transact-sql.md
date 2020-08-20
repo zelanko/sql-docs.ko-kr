@@ -1,4 +1,5 @@
 ---
+description: SET ANSI_NULL_DFLT_OFF(Transact-SQL)
 title: SET ANSI_NULL_DFLT_OFF(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/04/2017
@@ -24,12 +25,12 @@ ms.assetid: 8ed5c512-f5de-4741-a18a-de85a3041295
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dc993ab2b3dbe8d167a91bcf4c52e786844c73fe
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: f6768c48004f8b39d6806fae05a1b1571d774e85
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002455"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496509"
 ---
 # <a name="set-ansi_null_dflt_off-transact-sql"></a>SET ANSI_NULL_DFLT_OFF(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -52,10 +53,12 @@ SET ANSI_NULL_DFLT_OFF { ON | OFF }
 SET ANSI_NULL_DFLT_OFF OFF
 ```
 
-## <a name="remarks"></a>설명  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="remarks"></a>설명
  이 설정은 CREATE TABLE과 ALTER TABLE 문에 열의 Null 허용이 지정되어 있지 않을 때 새 열의 Null 허용에만 영향을 줍니다. SET ANSI_NULL_DFLT_OFF를 ON으로 설정하면 열의 Null 허용 여부 상태가 명시적으로 지정되지 않은 경우 ALTER TABLE과 CREATE TABLE 문을 사용해 만든 새 열의 기본값은 NOT NULL이 됩니다. SET ANSI_NULL_DFLT_OFF는 NULL 또는 NOT NULL을 명시적으로 지정하여 만들 열에 영향을 주지 않습니다.  
   
- SET ANSI_NULL_DFLT_OFF와 SET ANSI_NULL_DFLT_ON을 동시에 ON으로 설정할 수 없습니다. 둘 중 하나를 ON으로 설정하면 다른 옵션은 OFF로 설정됩니다. 따라서 ANSI_NULL_DFLT_OFF와 SET ANSI_NULL_DFLT_ON 중 하나만 ON으로 설정하거나 둘 다 OFF로 설정할 수 있습니다. 두 옵션 중 하나를 ON으로 설정하면 이 설정(SET ANSI_NULL_DFLT_OFF 또는 SET ANSI_NULL_DFLT_ON)이 적용됩니다. 두 옵션을 모두 OFF로 설정하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 카탈로그 뷰에 있는 is_ansi_null_default_on 열의 값을 사용합니다.  
+ SET ANSI_NULL_DFLT_OFF와 SET ANSI_NULL_DFLT_ON을 동시에 ON으로 설정할 수 없습니다. 둘 중 하나를 ON으로 설정하면 다른 옵션은 OFF로 설정됩니다. 따라서 ANSI_NULL_DFLT_OFF와 SET ANSI_NULL_DFLT_ON 중 하나만 ON으로 설정하거나 둘 다 OFF로 설정할 수 있습니다. 두 옵션 중 하나를 ON으로 설정하면 이 설정(SET ANSI_NULL_DFLT_OFF 또는 SET ANSI_NULL_DFLT_ON)이 적용됩니다. 두 옵션을 모두 OFF로 설정하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 sys.databases 카탈로그 뷰에 있는 [is_ansi_null_default_on](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 열의 값을 사용합니다.  
   
  Null 허용 여부 설정이 서로 다른 데이터베이스에서 사용되는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트로 가장 안정적으로 작업하려면 CREATE TABLE과 ALTER TABLE 문에서 NULL 또는 NOT NULL을 항상 지정하는 것이 좋습니다.  
   
@@ -63,20 +66,19 @@ SET ANSI_NULL_DFLT_OFF OFF
   
  이 설정에 대한 현재 설정을 보려면 다음 쿼리를 실행합니다.  
   
-```  
+```sql  
 DECLARE @ANSI_NULL_DFLT_OFF VARCHAR(3) = 'OFF';  
 IF ( (2048 & @@OPTIONS) = 2048 ) SET @ANSI_NULL_DFLT_OFF = 'ON';  
 SELECT @ANSI_NULL_DFLT_OFF AS ANSI_NULL_DFLT_OFF;  
-  
 ```  
   
 ## <a name="permissions"></a>사용 권한  
  public 역할의 멤버 자격이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 ANSI Null 기본값데이터베이스 옵션에 대해 `SET ANSI_NULL_DFLT_OFF`을 두 가지 값으로 설정했을 때의 결과를 보여 줍니다.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
   
@@ -116,28 +118,28 @@ GO
 ALTER DATABASE AdventureWorks2012 SET ANSI_NULL_DEFAULT OFF;  
 GO  
 -- Create table t4.  
-CREATE TABLE t4 (a tinyint) ;  
+CREATE TABLE t4 (a TINYINT) ;  
 GO   
 -- NULL INSERT should fail.  
-INSERT INTO t4 (a) VALUES (null);  
+INSERT INTO t4 (a) VALUES (NULL);  
 GO  
   
 -- SET ANSI_NULL_DFLT_OFF to ON and create table t5.  
 SET ANSI_NULL_DFLT_OFF ON;  
 GO  
-CREATE TABLE t5 (a tinyint);  
+CREATE TABLE t5 (a TINYINT);  
 GO   
 -- NULL insert should fail.  
-INSERT INTO t5 (a) VALUES (null);  
+INSERT INTO t5 (a) VALUES (NULL);  
 GO  
   
 -- SET ANSI_NULL_DFLT_OFF to OFF and create table t6.  
 SET ANSI_NULL_DFLT_OFF OFF;  
 GO  
-CREATE TABLE t6 (a tinyint);   
+CREATE TABLE t6 (a TINYINT);   
 GO   
 -- NULL insert should fail.  
-INSERT INTO t6 (a) VALUES (null);  
+INSERT INTO t6 (a) VALUES (NULL);  
 GO  
   
 -- Drop tables t1 through t6.  

@@ -1,4 +1,5 @@
 ---
+description: 프로시저
 title: 프로시저 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,13 +18,14 @@ ms.assetid: c64d5f3a-376b-48ef-84f3-b6148ac8600a
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f5bef54d188545b5e7c62d68ad889d5e3ea6ec64
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 152f5862901122d6c31a092fe7877876c20b4202
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001374"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499177"
 ---
-# <a name="procedures"></a>절차
+# <a name="procedures"></a>프로시저
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   저장 프로시저란 하나 이상의 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문을 포함하는 미리 컴파일된 실행 개체입니다. 저장 프로시저는 입/출력 매개 변수를 가질 수 있으며 정수 반환 코드를 반환할 수도 있습니다. 애플리케이션에서는 카탈로그 함수를 사용하여 사용 가능한 저장 프로시저를 열거할 수 있습니다.  
@@ -35,6 +37,6 @@ ms.locfileid: "86001374"
  자세한 내용은 [저장 프로시저 실행](../../../relational-databases/native-client-odbc-stored-procedures/running-stored-procedures.md)을 참조 하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [ODBC&#41;&#40;문을 실행 하는 중](../../../relational-databases/native-client-odbc-queries/executing-statements/executing-statements-odbc.md)  
+ [ODBC&#41;&#40;문을 실행 하는 중 ](../../../relational-databases/native-client-odbc-queries/executing-statements/executing-statements-odbc.md)  
   
   

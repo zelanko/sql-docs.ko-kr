@@ -1,4 +1,5 @@
 ---
+description: WMI 이벤트 감시자 태스크
 title: WMI 이벤트 감시자 태스크 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b5bb52e9-a77e-41e1-93f9-d4c3bc6b2c9a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 205c755ce2a719031c0b07a2884134d81bd55d55
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 5187cdcfcb6ffc66ed2985123256ebf3943163a8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914626"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495914"
 ---
 # <a name="wmi-event-watcher-task"></a>WMI 이벤트 감시자 태스크
 

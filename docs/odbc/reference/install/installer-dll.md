@@ -1,4 +1,5 @@
 ---
+description: 설치 관리자 DLL
 title: 설치 관리자 DLL | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e2b92afb-64ce-4ce0-84ad-6a4276646e68
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d51d69d013fe2d2fc78171fa64c1caf7e19d5eca
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d7dc68194bfea8c1161e304be7f69c945d373413
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301068"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499775"
 ---
 # <a name="installer-dll"></a>설치 관리자 DLL
 > [!NOTE]  

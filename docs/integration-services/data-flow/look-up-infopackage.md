@@ -1,4 +1,5 @@
 ---
+description: InfoPackage 조회
 title: InfoPackage 조회 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 7c0cb7a4-cd07-44cc-85cb-eb1ad91f85fd
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 43ad94c5f4cc7d97b99dd0cfadda9811e4ce5f05
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 348ac42f2903b039e88a073cb24b1ae6d95dec7f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916509"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495823"
 ---
 # <a name="look-up-infopackage"></a>InfoPackage 조회
 
@@ -60,7 +61,7 @@ ms.locfileid: "86916509"
  **InfoPackage**  
  SAP Netweaver BW 시스템에 정의된 InfoPackage의 이름을 표시합니다.  
   
- **형식**  
+ **유형**  
  InfoPackage의 유형을 표시합니다. 다음 표에서는 유형에 사용할 수 있는 값을 나열합니다.  
   
 |값|Description|  
@@ -75,7 +76,7 @@ ms.locfileid: "86916509"
  **InfoSource**  
  InfoPackage와 연결된 InfoSource의 이름을 표시합니다(있는 경우).  
   
- **Source System**  
+ **원본 시스템**  
  원본 시스템의 이름을 표시합니다.  
   
  InfoPackage 목록이 표시될 때 원하는 InfoPackage를 선택하면 관련 옵션이 대상의 값으로 채워집니다.  

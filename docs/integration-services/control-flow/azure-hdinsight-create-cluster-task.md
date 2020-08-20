@@ -1,4 +1,5 @@
 ---
+description: Azure HDInsight 클러스터 만들기 태스크
 title: Azure HDInsight 클러스터 만들기 태스크 | Microsoft Docs
 ms.custom: ''
 ms.date: 02/28/2017
@@ -13,12 +14,12 @@ f1_keywords:
 ms.assetid: a8ec413a-38d3-45df-887e-6f5f4d9f8465
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3fff08c4259424319621127d3e91762beaa46885
-ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
+ms.openlocfilehash: f86a35316de80caa1a6db487518f0080f6097a17
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87472427"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496089"
 ---
 # <a name="azure-hdinsight-create-cluster-task"></a>Azure HDInsight 클러스터 만들기 태스크
 
@@ -37,7 +38,7 @@ ms.locfileid: "87472427"
   
 다음 표에서는 이 대화 상자의 필드에 대해 설명합니다.  
   
-|필드|설명|  
+|필드|Description|  
 |-|-|  
 |AzureResourceManagerConnection|기존 Azure Resource Manager 연결 관리자를 선택하거나 HDInsight 클러스터를 만드는 데 사용할 새 연결 관리자를 만듭니다.|  
 |AzureStorageConnection|기존 Azure 스토리지 연결 관리자를 선택하거나 HDInsight 클러스터에 연결할 Azure 스토리지 계정을 참조하는 스토리지 연결 관리자를 새로 만듭니다.|

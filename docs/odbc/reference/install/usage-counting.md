@@ -1,4 +1,5 @@
 ---
+description: 사용량 계산
 title: 사용량 계산 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0678aee9-8256-463c-89dd-77b1a0dfdd60
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8d516a591bfde47522c0ccfe08bd2bd706218e07
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8e8c02aae51c47b13970a1824e3c0c9c417eb5f2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81296023"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499696"
 ---
 # <a name="usage-counting"></a>사용량 계산
 > [!NOTE]  
@@ -59,11 +60,11 @@ ms.locfileid: "81296023"
   
  파일 사용 횟수 값의 형식은 다음 표에 나와 있습니다.  
   
-|속성|데이터 형식|데이터|  
+|Name|데이터 형식|데이터|  
 |----------|---------------|----------|  
 |*전체 경로*|REG_DWORD|*count*|  
   
- 예를 들어 Informix에 대 한 드라이버에서 Infrmx32 및 Infrmx32 파일을 사용 하 고이 드라이버가 두 번 설치 되었다고 가정 합니다. Informix 드라이버의 SharedDlls 하위 키 아래에 있는 값은 다음과 같습니다.  
+ 예를 들어 Informix에 대 한 드라이버가 Infrmx32.dll 및 Infrmx32 파일을 사용 하 고이 드라이버가 두 번 설치 되었다고 가정 합니다. Informix 드라이버의 SharedDlls 하위 키 아래에 있는 값은 다음과 같습니다.  
   
 ```  
 C:\WINDOWS\SYSTEM32\INFRMX32.DLL : REG_DWORD : 0x2  

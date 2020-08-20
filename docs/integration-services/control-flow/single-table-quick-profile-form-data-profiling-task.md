@@ -1,4 +1,5 @@
 ---
+description: 단일 테이블 빠른 프로필 형식(데이터 프로파일링 태스크)
 title: 단일 테이블 빠른 프로필 형식(데이터 프로파일링 태스크) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d2fac9ce-730e-474e-961a-69406b633778
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9da9e33020b89074eb42751eaba89d22e251ef69
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b974db6df0f18a8063201f9e83ec905b87267301
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920989"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495964"
 ---
 # <a name="single-table-quick-profile-form-data-profiling-task"></a>단일 테이블 빠른 프로필 형식(데이터 프로파일링 태스크)
 
@@ -53,9 +54,9 @@ ms.locfileid: "86920989"
 |**최대 N 한정사로 사용되는 열**|가능한 조합에서, 결정 열로 테스트할 최대 열 수를 선택합니다. 기본값은 1입니다. 최대값은 1000입니다. 예를 들어 2를 선택하면 단일 열 또는 두 열 조합이 다른(종속) 열에 대한 결정 열인 조합을 테스트합니다.|  
   
 > [!NOTE]  
->  값 포함 프로필 형식은 **단일 테이블 빠른 프로필 형식**에서 사용할 수 없습니다.  
+>   값 포함 프로필 형식은 **단일 테이블 빠른 프로필 형식**에서 사용할 수 없습니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [데이터 프로파일링 태스크 편집기&#40;일반 페이지&#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
  [데이터 프로파일링 태스크 편집기&#40;프로필 요청 페이지&#41;](../../integration-services/control-flow/data-profiling-task-editor-profile-requests-page.md)  
   

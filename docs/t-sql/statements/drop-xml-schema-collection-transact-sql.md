@@ -1,4 +1,5 @@
 ---
+description: DROP XML SCHEMA COLLECTION(Transact-SQL)
 title: DROP XML SCHEMA COLLECTION(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/25/2015
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: d686f2f5-e03a-4ffe-a566-6036628f46f1
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: c46567c63dbfda8f622f1c70d32a5dfdc82925ac
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: f644ba5a1e42c309cc481d2ba7b42e6973d940e3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483426"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496722"
 ---
 # <a name="drop-xml-schema-collection-transact-sql"></a>DROP XML SCHEMA COLLECTION(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -78,7 +79,7 @@ XML 스키마 컬렉션을 삭제하는 것은 트랜잭션 작업입니다. 트
 ## <a name="permissions"></a>사용 권한  
 XML SCHEMA COLLECTION을 삭제하려면 이 컬렉션에 대한 DROP 권한이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
 다음 예에서는 XML 스키마 컬렉션을 제거하는 것을 보여 줍니다.  
   
 ```  

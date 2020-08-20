@@ -1,4 +1,5 @@
 ---
+description: BEGIN DIALOG CONVERSATION(Transact-SQL)
 title: BEGIN DIALOG CONVERSATION(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/26/2017
@@ -30,12 +31,12 @@ helpviewer_keywords:
 ms.assetid: 8e814f9d-77c1-4906-b8e4-668a86fc94ba
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6ae198ad14426a71c8c86838c15e60ce0464cebf
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+ms.openlocfilehash: 980563b7aa2b8a169f271a40f97f1f49295e7a84
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86380846"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496970"
 ---
 # <a name="begin-dialog-conversation-transact-sql"></a>BEGIN DIALOG CONVERSATION(Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -126,7 +127,7 @@ WHERE database_id = DB_ID() ;
 ## <a name="permissions"></a>사용 권한  
  대화를 시작하려면 현재 사용자는 명령의 FROM 절에서 지정한 서비스의 큐에 대한 RECEIVE 권한과 지정한 계약에 대한 REFERENCES 권한이 있어야 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-beginning-a-dialog"></a>A. 대화 시작  
  다음 예에서는 대화를 시작하고 `@dialog_handle.`에 대화 식별자를 저장합니다. `//Adventure-Works.com/ExpenseClient` 서비스는 대화의 시작자이고 `//Adventure-Works.com/Expenses` 서비스는 대화의 대상입니다. 대화는 `//Adventure-Works.com/Expenses/ExpenseSubmission` 계약을 따릅니다.  
@@ -216,6 +217,6 @@ BEGIN DIALOG CONVERSATION @dialog_handle
  [BEGIN CONVERSATION TIMER&#40;Transact-SQL&#41;](../../t-sql/statements/begin-conversation-timer-transact-sql.md)   
  [END CONVERSATION&#40;Transact-SQL&#41;](../../t-sql/statements/end-conversation-transact-sql.md)   
  [MOVE CONVERSATION&#40;Transact-SQL&#41;](../../t-sql/statements/move-conversation-transact-sql.md)   
- [sys.conversation_endpoints&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql.md)  
+ [sys.conversation_endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql.md)  
   
   

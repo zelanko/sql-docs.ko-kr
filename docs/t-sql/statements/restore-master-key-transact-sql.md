@@ -1,4 +1,5 @@
 ---
+description: RESTORE MASTER KEY(Transact-SQL)
 title: RESTORE MASTER KEY(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -25,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 70ceb951-31a2-4fc4-a0c1-e6c18eeb3ae7
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 101b4a941f355891a7e7e6aa9578998f2d8efc4c
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 0f5b32d1caa0562f5a5fd226387c21ec029982a5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483580"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496664"
 ---
 # <a name="restore-master-key-transact-sql"></a>RESTORE MASTER KEY(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -76,7 +77,7 @@ RESTORE MASTER KEY FROM FILE = 'path_to_file'
 ## <a name="permissions"></a>사용 권한  
  데이터베이스에 대한 CONTROL 권한이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `AdventureWorks2012` 데이터베이스의 데이터베이스 마스터 키를 복원합니다.  
   
 ```  

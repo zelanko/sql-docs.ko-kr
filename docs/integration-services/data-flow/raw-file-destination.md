@@ -1,4 +1,5 @@
 ---
+description: Raw File Destination
 title: 원시 파일 대상 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: d311b458-aefc-4b4d-b1a1-4c0ebbb34214
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 93b992e9931c2e62f359beeca98d7d53e46a95eb
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 9cf51661228dcb9b6dd5e42ff900b3770b540898
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916049"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495787"
 ---
 # <a name="raw-file-destination"></a>Raw File Destination
 
@@ -61,7 +62,7 @@ ms.locfileid: "86916049"
   
 |옵션|Description|  
 |------------|-----------------|  
-|추가|기존 파일에 데이터를 추가합니다. 추가된 데이터의 메타데이터가 해당 파일 형식과 일치해야 합니다.|  
+|Append|기존 파일에 데이터를 추가합니다. 추가된 데이터의 메타데이터가 해당 파일 형식과 일치해야 합니다.|  
 |항상 만들기|항상 새 파일을 만듭니다.|  
 |한 번 만들기|새 파일을 만듭니다. 파일이 있는 경우 구성 요소가 실패합니다.|  
 |잘라내기 및 추가|기존 파일을 잘라낸 다음 데이터를 파일에 기록합니다. 추가된 데이터의 메타데이터가 해당 파일 형식과 일치해야 합니다.|  

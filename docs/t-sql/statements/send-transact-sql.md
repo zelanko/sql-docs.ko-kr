@@ -1,4 +1,5 @@
 ---
+description: SEND(Transact-SQL)
 title: SEND(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/26/2017
@@ -24,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: b6e66aeb-1714-4c2b-b7c2-d386d77b0d46
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 56352f68927d82e1c7df0110168a6a4aff14d0c7
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: bed4098228eb381f4785da87bf8d7fc2c2c4095b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484049"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496536"
 ---
 # <a name="send-transact-sql"></a>SEND(Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -97,7 +98,7 @@ SEND는 사용자 정의 함수에 유효하지 않습니다.
 ## <a name="permissions"></a>사용 권한  
 메시지를 보내려면 현재 사용자가 메시지를 보내는 모든 서비스의 큐에 대한 RECEIVE 권한이 있어야 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
 다음 예에서는 대화를 시작하고 해당 대화에서 XML 메시지를 보냅니다. 메시지를 보내기 위해 이 예제에서는 xml 개체를 **varbinary(max)** 로 변환합니다.  
   
 ```sql
@@ -150,6 +151,6 @@ SEND ON CONVERSATION (@dialog_handle1, @dialog_handle2, @dialog_handle3)
 [BEGIN DIALOG CONVERSATION&#40;Transact-SQL&#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
 [END CONVERSATION&#40;Transact-SQL&#41;](../../t-sql/statements/end-conversation-transact-sql.md)   
 [RECEIVE &#40;Transact-SQL&#41;](../../t-sql/statements/receive-transact-sql.md)   
-[sys.transmission_queue &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-transmission-queue-transact-sql.md)  
+[sys.transmission_queue&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-transmission-queue-transact-sql.md)  
   
   

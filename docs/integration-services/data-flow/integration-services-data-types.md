@@ -1,4 +1,5 @@
 ---
+description: Integration Services 데이터 형식
 title: Integration Services 데이터 형식 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 896fc3e8-3aa6-4396-ba82-5d7741cffa56
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ffa03bda518d3b30119cca0534a070f2140712fc
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 504c89f7c3c150451e9bf59e1f6c0b7984eb1a1c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86904931"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495876"
 ---
 # <a name="integration-services-data-types"></a>Integration Services 데이터 형식
 
@@ -56,8 +57,8 @@ ms.locfileid: "86904931"
 |DT_I4|4바이트의 부호 있는 정수입니다.|  
 |DT_I8|8바이트의 부호 있는 정수입니다.|  
 |DT_NUMERIC|전체 자릿수 및 소수 자릿수가 고정된 정확한 숫자 값입니다. 이 데이터 형식은 별개의 부호가 포함된 16바이트의 부호 없는 정수이며 소수 자릿수는 0에서 38이고 최대 전체 자릿수는 38입니다.|  
-|DT_R4|단정밀도의 부동 소수점 값입니다.|  
-|DT_R8|배정밀도의 부동 소수점 값입니다.|  
+|DT_R4|단정밀도 부동 소수점 값입니다.|  
+|DT_R8|배정밀도 부동 소수점 값입니다.|  
 |DT_STR|최대 길이가 8000자인 Null 종료 [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)]/MBCS 문자열입니다. 열 값에 추가 Null 종결자가 들어 있으면 해당 문자열은 첫 번째 Null이 나타나는 위치에서 잘립니다.|  
 |DT_UI1|1바이트의 부호 없는 정수입니다.|  
 |DT_UI2|2바이트의 부호 없는 정수입니다.|  
@@ -113,7 +114,7 @@ ms.locfileid: "86904931"
   
 |DT_FILETIME 변환 대상|결과|  
 |-----------------------------|------------|  
-|DT_FILETIME|변경 없음|  
+|DT_FILETIME|변경되지 않았습니다.|  
 |DT_DATE|데이터 형식을 변환합니다.|  
 |DT_DBDATE|시간 값을 제거합니다.|  
 |DT_DBTIME|날짜 값을 제거합니다.<br /><br /> 소수 자릿수가 DT_DBTIME 데이터 형식이 포함할 수 있는 소수 자릿수를 초과할 경우 소수 자릿수 초 값을 제거합니다. 소수 자릿수 초 값을 제거한 후 이 데이터 잘림에 대한 보고서를 생성합니다. 자세한 내용은 [데이터 오류 처리](../../integration-services/data-flow/error-handling-in-data.md)를 참조하세요.|  
@@ -127,7 +128,7 @@ ms.locfileid: "86904931"
 |DT_DATE 변환 대상|결과|  
 |-------------------------|------------|  
 |DT_FILETIME|데이터 형식을 변환합니다.|  
-|DT_DATE|변경 없음|  
+|DT_DATE|변경되지 않았습니다.|  
 |DT_DBDATE|DT_DATA 데이터 형식이 나타내는 시간 값을 제거합니다.|  
 |DT_DBTIME|DT_DATE 데이터 형식이 나타내는 날짜 값을 제거합니다.|  
 |DT_DBTIME2|DT_DATE 데이터 형식이 나타내는 날짜 값을 제거합니다.|  
@@ -141,7 +142,7 @@ ms.locfileid: "86904931"
 |---------------------------|------------|  
 |DT_FILETIME|DT_FILETIME 데이터 형식의 시간 필드를 0으로 설정합니다.|  
 |DT_DATE|DT_DATE 데이터 형식의 시간 필드를 0으로 설정합니다.|  
-|DT_DBDATE|변경 없음|  
+|DT_DBDATE|변경되지 않았습니다.|  
 |DT_DBTIME|DT_DBTIME 데이터 형식의 시간 필드를 0으로 설정합니다.|  
 |DT_DBTIME2|DT_DBTIME2 데이터 형식의 시간 필드를 0으로 설정합니다.|  
 |DT_DBTIMESTAMP|DT_DBTIMESTAMP 데이터 형식의 시간 필드를 0으로 설정합니다.|  
@@ -155,7 +156,7 @@ ms.locfileid: "86904931"
 |DT_FILETIME|DT_FILETIME 데이터 형식의 날짜 필드를 현재 날짜로 설정합니다.|  
 |DT_DATE|DT_DATE 데이터 형식의 날짜 필드를 현재 날짜로 설정합니다.|  
 |DT_DBDATE|DT_DBDATE 데이터 형식의 날짜 필드를 현재 날짜로 설정합니다.|  
-|DT_DBTIME|변경 없음|  
+|DT_DBTIME|변경되지 않았습니다.|  
 |DT_DBTIME2|데이터 형식을 변환합니다.|  
 |DT_DBTIMESTAMP|DT_DBTIMESTAMP 데이터 형식의 날짜 필드를 현재 날짜로 설정합니다.|  
 |DT_DBTIMESTAMP2|DT_DBTIMESTAMP2 데이터 형식의 날짜 필드를 현재 날짜로 설정합니다.|  
@@ -183,7 +184,7 @@ ms.locfileid: "86904931"
 |DT_DBDATE|DT_DBTIMESTAMP 데이터 형식이 나타내는 시간 값을 제거합니다.|  
 |DT_DBTIME|DT_DBTIMESTAMP 데이터 형식이 나타내는 날짜 값을 제거합니다.<br /><br /> 소수 자릿수가 DT_DBTIME 데이터 형식이 포함할 수 있는 소수 자릿수 초의 자릿수를 초과할 경우 소수 자릿수 초 값을 제거합니다. 소수 자릿수 초 값을 제거한 후 이 데이터 잘림에 대한 보고서를 생성합니다. 자세한 내용은 [데이터 오류 처리](../../integration-services/data-flow/error-handling-in-data.md)를 참조하세요.|  
 |DT_DBTIME2|DT_DBTIMESTAMP 데이터 형식이 나타내는 날짜 값을 제거합니다.<br /><br /> 소수 자릿수가 DT_DBTIME2 데이터 형식이 포함할 수 있는 소수 자릿수 초의 자릿수를 초과할 경우 소수 자릿수 초 값을 제거합니다. 소수 자릿수 초 값을 제거한 후 이 데이터 잘림에 대한 보고서를 생성합니다. 자세한 내용은 [데이터 오류 처리](../../integration-services/data-flow/error-handling-in-data.md)를 참조하세요.|  
-|DT_DBTIMESTAMP|변경 없음|  
+|DT_DBTIMESTAMP|변경되지 않았습니다.|  
 |DT_DBTIMESTAMP2|소수 자릿수가 DT_DBTIMESTAMP2 데이터 형식이 포함할 수 있는 소수 자릿수 초의 자릿수를 초과할 경우 소수 자릿수 초 값을 제거합니다. 소수 자릿수 초 값을 제거한 후 이 데이터 잘림에 대한 보고서를 생성합니다. 자세한 내용은 [데이터 오류 처리](../../integration-services/data-flow/error-handling-in-data.md)를 참조하세요.|  
 |DT_DBTIMESTAMPOFFSET|DT_DBTIMESTAMPOFFSET 데이터 형식의 표준 시간대 필드를 0으로 설정합니다.<br /><br /> 소수 자릿수가 DT_DBTIMESTAMPOFFSET 데이터 형식이 포함할 수 있는 소수 자릿수 초의 자릿수를 초과할 경우 소수 자릿수 초 값을 제거합니다. 소수 자릿수 초 값을 제거한 후 이 데이터 잘림에 대한 보고서를 생성합니다. 자세한 내용은 [데이터 오류 처리](../../integration-services/data-flow/error-handling-in-data.md)를 참조하세요.|  
   
@@ -239,10 +240,10 @@ ms.locfileid: "86904931"
 |DT_GUID|uniqueidentifier|uniqueidentifier|GUID||||  
 |DT_I1|||||||  
 |DT_I2|smallint|smallint|Short||SMALLINT|SMALLINT|  
-|DT_I4|int|int|long||INTEGER|INTEGER|  
+|DT_I4|int|int|Long||INTEGER|정수|  
 |DT_I8|bigint|bigint|||bigint|bigint|  
 |DT_NUMERIC|decimal, numeric|decimal, numeric|Decimal|NUMBER, INT|decimal, numeric|decimal, numeric|  
-|DT_R4|real|real|Single||real|real|  
+|DT_R4|real|real|Single||real|실수|  
 |DT_R8|float|float|Double|FLOAT, REAL|FLOAT, DOUBLE|FLOAT, DOUBLE|  
 |DT_STR|char, varchar||VarChar||char, varchar|char, varchar|  
 |DT_UI1|tinyint|tinyint|Byte||||  

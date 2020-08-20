@@ -1,4 +1,5 @@
 ---
+description: 데이터베이스 메일 로그 및 감사
 title: 데이터베이스 메일 로그 및 감사 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/06/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 846589ee-5fe5-4ab3-b335-0c253e569f99
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 4354def42884887539693073bf3108d7227170de
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: 1fcb4dbe767c549987c6c54a056d0f33f3708a4b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87363573"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499850"
 ---
 # <a name="database-mail-log-and-audits"></a>데이터베이스 메일 로그 및 감사
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

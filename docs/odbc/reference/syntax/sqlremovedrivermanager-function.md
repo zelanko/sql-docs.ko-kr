@@ -1,4 +1,5 @@
 ---
+description: SQLRemoveDriverManager 함수
 title: SQLRemoveDriverManager 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 3a41511f-6603-4b81-a815-7883874023c4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c94765dfe76bc5a1ef188328a6fe27e96671efb1
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: db880d031e803d5778c2af9b2bea08b6ed590e3d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87363136"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499626"
 ---
 # <a name="sqlremovedrivermanager-function"></a>SQLRemoveDriverManager 함수
 **규칙**  
@@ -56,9 +57,9 @@ BOOL SQLRemoveDriverManager(
 |ODBC_ERROR_GENERAL_ERR|일반 설치 관리자 오류|특정 설치 관리자 오류가 없는 오류가 발생 했습니다.|  
 |ODBC_ERROR_COMPONENT_NOT_FOUND|레지스트리에서 구성 요소를 찾을 수 없음|레지스트리에 없거나 레지스트리에서 찾을 수 없기 때문에 설치 관리자가 드라이버 관리자 정보를 제거할 수 없습니다.|  
 |ODBC_ERROR_USAGE_UPDATE_FAILED|구성 요소 사용 횟수를 증가 시키거나 감소 시킬 수 없습니다.|드라이버 관리자의 사용 횟수를 감소 시 설치 관리자가 실패 했습니다.|  
-|ODBC_ERROR_OUT_OF_MEM|메모리 부족|메모리가 부족 하 여 설치 관리자가 함수를 수행할 수 없습니다.|  
+|ODBC_ERROR_OUT_OF_MEM|메모리가 부족합니다.|메모리가 부족 하 여 설치 관리자가 함수를 수행할 수 없습니다.|  
   
-## <a name="comments"></a>의견  
+## <a name="comments"></a>주석  
  **SQLRemoveDriverManager** 는 **Sqlinstalldrivermanager** 함수를 보완 하 고 시스템 정보의 구성 요소 사용 횟수를 업데이트 합니다. 이 함수는 설치 응용 프로그램 에서만 호출 해야 합니다.  
   
  **SQLRemoveDriverManager** 는 코어 구성 요소 사용 횟수를 1 씩 감소 시킵니다. 구성 요소 사용 횟수가 0이 되 면 항목 시스템 정보가 제거 됩니다. 핵심 구성 요소 항목은 시스템 정보에서 "ODBC Core" 제목의 다음 위치에 있습니다.  

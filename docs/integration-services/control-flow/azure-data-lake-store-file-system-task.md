@@ -1,4 +1,5 @@
 ---
+description: Azure Data Lake Store 파일 시스템 태스크
 title: Azure Data Lake Store 파일 시스템 태스크 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/22/2017
@@ -11,12 +12,12 @@ f1_keywords:
 author: Lingxi-Li
 ms.author: lingxl
 ms.reviewer: maghan
-ms.openlocfilehash: 9460730ae4756bb2862de751bc72cad649e38298
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 27ee71393bfbad6c824de25bd95c9ca465cf2a51
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913889"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496083"
 ---
 # <a name="azure-data-lake-store-file-system-task"></a>Azure Data Lake Store 파일 시스템 태스크
 

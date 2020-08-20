@@ -1,4 +1,5 @@
 ---
+description: DROP VIEW(Transact-SQL)
 title: DROP VIEW(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/11/2018
@@ -23,12 +24,12 @@ ms.assetid: 03cea355-e39c-46e1-b7db-8832038669dd
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 81d3db058663274babb0eae1e16306e2197ad2a8
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 31a1fa86f6d56d5a6b9b45ec096289bcd07301a7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483744"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496820"
 ---
 # <a name="drop-view-transact-sql"></a>DROP VIEW(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -81,7 +82,7 @@ DROP VIEW [ schema_name . ] view_name [ ; ]
 ## <a name="permissions"></a>사용 권한  
  보기에 대한 **CONTROL** 권한, 뷰가 포함된 스키마에 대한 **ALTER** 권한 또는 **db_ddladmin** 고정 서버 역할의 멤버 자격이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-drop-a-view"></a>A. 뷰 삭제  
  다음 예에서는 `Reorder` 뷰를 제거합니다.  

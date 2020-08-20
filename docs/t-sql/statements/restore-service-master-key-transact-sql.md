@@ -1,4 +1,5 @@
 ---
+description: RESTORE SERVICE MASTER KEY(Transact-SQL)
 title: RESTORE SERVICE MASTER KEY(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: a68fd0ee-70ce-4104-aca0-fcae5f41fc38
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 8565124ea527b5c9de885a5b342d6368b99149d6
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 8eab13b0089b289dd7a6835b20c17b4fbc2ee60c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483175"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496686"
 ---
 # <a name="restore-service-master-key-transact-sql"></a>RESTORE SERVICE MASTER KEY(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -70,7 +71,7 @@ RESTORE SERVICE MASTER KEY FROM FILE = 'path_to_file'
 ## <a name="permissions"></a>사용 권한  
  서버에 대한 CONTROL SERVER 권한이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 백업 파일로부터 서비스 마스터 키를 복원합니다.  
   
 ```  

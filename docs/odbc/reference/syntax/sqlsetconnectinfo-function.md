@@ -1,4 +1,5 @@
 ---
+description: SQLSetConnectInfo 함수
 title: SQLSetConnectInfo 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0782a1c3-c5d1-499b-a8ba-134162db9990
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b575e0d09f87ad21e1190b8081b6604349a98263
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0ee3480678d228e26b16cc99e7df8955d45ade9e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301854"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499548"
 ---
 # <a name="sqlsetconnectinfo-function"></a>SQLSetConnectInfo 함수
 **규칙**  
@@ -50,7 +51,7 @@ SQLRETURN  SQLSetConnectInfo(
  *NameLength1*  
  입력 **ServerName* 의 길이 (문자)입니다.  
   
- *이름*  
+ *UserName*  
  입력 사용자 식별자입니다.  
   
  *NameLength2*  
@@ -77,7 +78,7 @@ SQLRETURN  SQLSetConnectInfo(
   
  ODBC 드라이버 개발용으로 sqlspi .h를 포함 합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [ODBC 드라이버 개발](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   
  [드라이버 인식 연결 풀링](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md)   
  [ODBC 드라이버에서 연결 풀 인식 개발](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)

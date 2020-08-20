@@ -1,4 +1,5 @@
 ---
+description: SET ANSI_DEFAULTS(Transact-SQL)
 title: SET ANSI_DEFAULTS(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/16/2020
@@ -21,12 +22,12 @@ ms.assetid: bd721d97-6e23-488b-8c8c-c0453d5b3b86
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 087fc2be7400052c2bbd3e82999c66b052422f99
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 662915032de8a7d27262cd5729937b2160261d50
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394708"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496532"
 ---
 # <a name="set-ansi_defaults-transact-sql"></a>SET ANSI_DEFAULTS(Transact-SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
@@ -49,7 +50,9 @@ SET ANSI_DEFAULTS { ON | OFF }
 SET ANSI_DEFAULTS ON
 ```
 
-## <a name="remarks"></a>설명  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="remarks"></a>설명
 ANSI_DEFAULTS는 모든 클라이언트 연결의 동작을 사용하도록 설정할 수 있는 서버 측 설정입니다. 클라이언트는 일반적으로 연결 시점에 또는 세션 초기화 시점에 이 설정을 요청합니다. 사용자가 서버 설정을 수정하면 안 됩니다.   
 사용자가 클라이언트 동작을 변경하려면 `SQL_COPT_SS_PRESERVE_CURSORS`와 같은 특정 메서드를 사용해야 합니다. 자세한 내용은 [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)을 참조하세요.
   
@@ -125,7 +128,7 @@ SET ANSI_DEFAULTS가 실행되면 QUOTED_IDENTIFIER 옵션은 구문 분석 시 
 ## <a name="permissions"></a>사용 권한  
 **public** 역할의 멤버 자격이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
 다음 예에서는 ANSI_DEFAULTS를 ON으로 설정하고 `DBCC USEROPTIONS` 문을 사용하여 영향을 받는 설정을 표시합니다.  
   
 ```sql  

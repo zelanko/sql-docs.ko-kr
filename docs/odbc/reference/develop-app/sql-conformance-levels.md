@@ -1,4 +1,5 @@
 ---
+description: SQL 적합성 수준
 title: SQL 규칙 수준 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3529df2c-a09b-4c16-9c60-eae7a06d903a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 875330ac78588566b4b1c212f7a65d2841127a61
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 525cda9094213e6decf30643c23a7db623511e14
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301384"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499806"
 ---
 # <a name="sql-conformance-levels"></a>SQL 적합성 수준
 드라이버에서 지 원하는 SQL-92 문법 수준은 SQL_SQL_CONFORMANCE 정보 형식을 사용 하는 **SQLGetInfo** 호출에서 반환 된 값으로 표시 됩니다. 드라이버가 SQL-92에 정의 된 항목, FIPS 전환, 중간 또는 전체 수준을 따르는지 여부를 나타냅니다.  

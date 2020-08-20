@@ -1,4 +1,5 @@
 ---
+description: 열 길이 분포 프로필 요청 옵션(데이터 프로파일링 태스크)
 title: 열 길이 분포 프로필 요청 옵션(데이터 프로파일링 태스크) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1a4de41f-f38d-40ea-ba1b-6c0ef67ea52a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0f3833327f518b935874b79747ef9cd6b129143a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 8eea376c7dc204b326f7ad4bb5ac41d0a76e4ee4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921429"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496043"
 ---
 # <a name="column-length-distribution-profile-request-options-data-profiling-task"></a>열 길이 분포 프로필 요청 옵션(데이터 프로파일링 태스크)
 
@@ -82,7 +83,7 @@ ms.locfileid: "86921429"
  **IgnoreTrailingSpaces**  
  프로필에서 문자열 값을 비교할 때 후행 공백을 무시해야 하는지 여부를 나타냅니다. 이 옵션의 기본값은 **True**입니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [데이터 프로파일링 태스크 편집기&#40;일반 페이지&#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
  [단일 테이블 빠른 프로필 형식&#40;데이터 프로파일링 태스크&#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
   

@@ -1,4 +1,5 @@
 ---
+description: 인덱스 옵션 설정
 title: 인덱스 옵션 설정 | Microsoft 문서
 ms.custom: ''
 ms.date: 06/26/2019
@@ -25,12 +26,12 @@ ms.assetid: 7969af33-e94c-41f7-ab89-9d9a2747cd5c
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7f365e59f615c532ae168bacafe690d66501eea4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1427a47837063db4fd617c8489d99a3ab7927d15
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85659352"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499392"
 ---
 # <a name="set-index-options"></a>인덱스 옵션 설정
 

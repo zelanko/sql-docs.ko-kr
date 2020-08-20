@@ -1,4 +1,5 @@
 ---
+description: ODBC 대상을 사용하여 데이터 로드
 title: ODBC 대상을 사용하여 데이터 로드 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 339ec0a8-922e-48c0-97b3-fc5ee34f95e3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: abbe91428fdf30d5b598063831f400b69c18f859
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: fbcb0fa1f7618a7cf6d2a78b18d9193e09f81f02
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86904880"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495850"
 ---
 # <a name="load-data-by-using-the-odbc-destination"></a>ODBC 대상을 사용하여 데이터 로드
 

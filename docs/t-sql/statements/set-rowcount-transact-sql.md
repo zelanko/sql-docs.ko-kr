@@ -1,4 +1,5 @@
 ---
+description: SET ROWCOUNT (Transact-SQL)
 title: SET ROWCOUNT(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -27,12 +28,12 @@ ms.assetid: c6966fb7-6421-47ef-98f3-82351f2f6bdc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 91739df2125005e123f2d9acd19c71682111f9a8
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: c77fbff703cbb22828285ba33b3b1916f6b6b98d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484024"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496426"
 ---
 # <a name="set-rowcount-transact-sql"></a>SET ROWCOUNT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -69,7 +70,7 @@ SET ROWCOUNT { number | @number_var }
 ## <a name="permissions"></a>사용 권한  
  public 역할의 멤버 자격이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  SET ROWCOUNT는 지정한 행 수 이후에는 처리를 중지합니다. 다음 예에서는 500개 이상의 행이 `Quantity`보다 작은 `300` 조건과 일치합니다. 그러나 SET ROWCOUNT를 적용한 후 일부 행이 반환되지 않은 것을 알 수 있습니다.  
   
 ```sql
@@ -124,7 +125,7 @@ SELECT * FROM [dbo].[DimAccount]
 WHERE AccountType = 'Assets';  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [SET 문&#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)  
   
   

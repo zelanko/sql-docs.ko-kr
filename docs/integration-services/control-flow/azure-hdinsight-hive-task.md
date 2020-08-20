@@ -1,4 +1,5 @@
 ---
+description: Azure HDInsight 하이브 태스크
 title: Azure HDInsight 하이브 태스크 | Microsoft Docs
 ms.custom: ''
 ms.date: 02/28/2017
@@ -13,12 +14,12 @@ f1_keywords:
 ms.assetid: e1896c73-128a-4128-9814-3e01f7dfe19b
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 69fd7d3245ea6c166890c4fbe49040b12fbc97e9
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 0c327451deeb763605dc9e66862fe275046cddb9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913860"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496045"
 ---
 # <a name="azure-hdinsight-hive-task"></a>Azure HDInsight 하이브 태스크
 

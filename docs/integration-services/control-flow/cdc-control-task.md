@@ -1,4 +1,5 @@
 ---
+description: CDC 제어 태스크
 title: CDC 제어 태스크 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ f1_keywords:
 ms.assetid: 6404dc7f-550c-47cc-b901-c072742f430a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e5097ad2987dfbcc3301b35666ba6245a7559b63
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 685ac46fd80e92d115dcf8aed3c49abb1ac9d144
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923106"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496057"
 ---
 # <a name="cdc-control-task"></a>CDC 제어 태스크
 

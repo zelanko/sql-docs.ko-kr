@@ -1,4 +1,5 @@
 ---
+description: Integration Services 경로
 title: Integration Services 경로 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 6c4629a9-2ede-4011-9101-3b342249640e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4443598b2fa59e51a9c8ec6b5161b913f2890056
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: a69d70b9e58458303dbba3444b6a8c38fb40ccc0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918889"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495861"
 ---
 # <a name="integration-services-paths"></a>Integration Services 경로
 
@@ -103,7 +104,7 @@ ms.locfileid: "86918889"
  **정밀도**  
  숫자 값의 자릿수를 나열합니다.  
   
- **규모**  
+ **크기 조정**  
  숫자 값에서 소수점 이하 자릿수를 나열합니다.  
   
  **길이**  

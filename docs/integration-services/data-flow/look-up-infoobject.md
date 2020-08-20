@@ -1,4 +1,5 @@
 ---
+description: InfoObject 조회
 title: InfoObject 조회 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: e7f4c132-a5ec-49d8-a964-45775432731f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5fc863ce6460977b2eb91c53531983a0dde92668
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 93050f2a583f3fa378778397470506787c7001f5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916505"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495871"
 ---
 # <a name="look-up-infoobject"></a>InfoObject 조회
 
@@ -39,9 +40,9 @@ ms.locfileid: "86916505"
   
 4.  **연결 관리자** 페이지의 **SAP BW 개체 만들기** 그룹 상자에서 다음 옵션 중 하나를 선택합니다.  
   
-    1.  **InfoCube**를 선택합니다. 그런 다음 **만들기**를 클릭합니다. **트랜잭션 데이터용 InfoCube 만들기** 대화 상자에서 목록의 행 중 하나에 대해 **IObject** 열에서 **검색** 을 클릭합니다. 각 행은 패키지의 데이터 흐름에 있는 열을 나타냅니다.  
+    1.  **InfoCube**를 선택합니다. 그런 다음 **만들기**를 클릭합니다. **트랜잭션 데이터용 InfoCube 만들기** 대화 상자에서 목록의 행 중 하나에 대해 **IObject** 열에서 **검색**을 클릭합니다. 각 행은 패키지의 데이터 흐름에 있는 열을 나타냅니다.  
   
-    2.  **InfoSource**를 선택합니다. 그런 다음, **만들기**를 클릭합니다. **InfoSource 만들기** 대화 상자에서 **트랜잭션 데이터**를 선택합니다. **트랜잭션 데이터용 InfoSource 만들기** 대화 상자에서 목록의 행 중 하나에 대해 **IObject** 열에서 **검색** 을 클릭합니다. 각 행은 패키지의 데이터 흐름에 있는 열을 나타냅니다.  
+    2.  **InfoSource**를 선택합니다. 그런 다음, **만들기**를 클릭합니다. **InfoSource 만들기** 대화 상자에서 **트랜잭션 데이터**를 선택합니다. **트랜잭션 데이터용 InfoSource 만들기** 대화 상자에서 목록의 행 중 하나에 대해 **IObject** 열에서 **검색**을 클릭합니다. 각 행은 패키지의 데이터 흐름에 있는 열을 나타냅니다.  
   
     3.  **InfoSource**를 선택합니다. 그런 다음, **만들기**를 클릭합니다. **InfoSource 만들기** 대화 상자에서 **마스터 데이터**를 선택합니다. **마스터 데이터용 InfoSource 만들기** 대화 상자에서 **조회**를 클릭합니다.  
   

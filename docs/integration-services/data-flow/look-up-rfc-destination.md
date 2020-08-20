@@ -1,4 +1,5 @@
 ---
+description: RFC 대상 조회
 title: RFC 대상 조회 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: db9404d8-4c42-45e5-a100-c7a84b056109
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 023ecbe65136661f8afbaaf68078cd0a04cc2a1f
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d938b3d742dd9d4b43f0a9b3704281392d89049d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916479"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495806"
 ---
 # <a name="look-up-rfc-destination"></a>RFC 대상 조회
 

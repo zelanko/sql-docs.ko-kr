@@ -1,4 +1,5 @@
 ---
+description: 프로그래밍 방식으로 패키지 실행 및 관리
 title: 프로그래밍 방식으로 패키지 실행 및 관리 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -10,12 +11,12 @@ ms.topic: reference
 ms.assetid: 1a08c75e-ce8c-45ee-81bd-32248bbdb2b2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6d1b837a2271a74cb577ebd318a815eeb632dd66
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: dbee736c5f74a2fa4258e6271e5ddce98a7fc626
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913289"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495531"
 ---
 # <a name="running-and-managing-packages-programmatically"></a>프로그래밍 방식으로 패키지 실행 및 관리
 
@@ -32,7 +33,7 @@ ms.locfileid: "86913289"
   
  단 몇 줄의 코드를 작성하여 클라이언트 애플리케이션에서 기존 패키지를 로드하고 실행할 수 있습니다.  
   
- 이 섹션에서는 기존 패키지를 프로그래밍 방식으로 실행하는 방법과 다른 애플리케이션에서 데이터 흐름의 출력에 액세스하는 방법을 설명합니다. 고급 프로그래밍 옵션인 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]프로그래밍 방식으로 패키지 작성[ 항목의 설명에 따라 ](../../integration-services/building-packages-programmatically/building-packages-programmatically.md) 패키지를 프로그래밍 방식으로 한 줄씩 만들 수 있습니다.  
+ 이 섹션에서는 기존 패키지를 프로그래밍 방식으로 실행하는 방법과 다른 애플리케이션에서 데이터 흐름의 출력에 액세스하는 방법을 설명합니다. 고급 프로그래밍 옵션인 [프로그래밍 방식으로 패키지 작성](../../integration-services/building-packages-programmatically/building-packages-programmatically.md) 항목의 설명에 따라 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 프로그래밍 방식으로 한 줄씩 만들 수 있습니다.  
   
  이 섹션에서는 저장된 패키지, 실행 중인 패키지 및 패키지 역할을 관리하기 위해 프로그래밍 방식으로 수행할 수 있는 기타 관리 태스크도 설명합니다.  
   
@@ -77,7 +78,7 @@ ms.locfileid: "86913289"
  [사용자 지정 개체를 사용한 패키지 확장](../../integration-services/extending-packages-custom-objects/extending-packages-with-custom-objects.md)  
  여러 패키지에서 사용할 프로그램 사용자 지정 태스크, 데이터 흐름 구성 요소 및 기타 패키지 개체를 만드는 방법에 대해 설명합니다.  
   
- [프로그래밍 방식으로 패키지 빌드](../../integration-services/building-packages-programmatically/building-packages-programmatically.md)  
+ [프로그래밍 방식으로 패키지 작성](../../integration-services/building-packages-programmatically/building-packages-programmatically.md)  
  프로그래밍 방식으로 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 만들고 구성 및 저장하는 방법에 대해 설명합니다.  
   
 ## <a name="see-also"></a>참고 항목  

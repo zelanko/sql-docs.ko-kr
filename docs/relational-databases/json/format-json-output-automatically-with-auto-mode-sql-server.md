@@ -1,4 +1,5 @@
 ---
+description: AUTO 모드를 사용하여 JSON 출력 형식 자동 지정(SQL Server)
 title: AUTO 모드를 사용하여 JSON 출력 형식 자동 지정
 ms.date: 06/03/2020
 ms.prod: sql
@@ -12,12 +13,12 @@ ms.author: jovanpop
 ms.reviewer: jroth
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 083e8503b659be0f03af08c5f514e30baf012ae8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 785060a9f12b68f38e7d59420f7a2e31a77312fa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722300"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499339"
 ---
 # <a name="format-json-output-automatically-with-auto-mode-sql-server"></a>AUTO 모드를 사용하여 JSON 출력 형식 자동 지정(SQL Server)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "85722300"
   
 아래에는 **AUTO** 옵션에서 **FOR JSON** 절을 사용하는 몇 가지 예가 나와 있습니다.  
   
-## <a name="examples"></a>예
+## <a name="examples"></a>예제
 
 ### <a name="example-1"></a>예 1
  **쿼리**  

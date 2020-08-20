@@ -1,4 +1,5 @@
 ---
+description: FOR JSON을 사용하여 쿼리 결과를 JSON으로 서식 지정(SQL Server)
 title: FOR JSON을 사용하여 쿼리 결과를 JSON으로 서식 지정
 ms.date: 06/03/2020
 ms.prod: sql
@@ -14,12 +15,12 @@ ms.author: jovanpop
 ms.reviewer: jroth
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4e9aee7c2c8de20c50c101e3573e4d3d9259b661
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7862fa1b8454fba689edda2f8a451320315c1021
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722271"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499326"
 ---
 # <a name="format-query-results-as-json-with-for-json-sql-server"></a>FOR JSON을 사용하여 쿼리 결과를 JSON으로 서식 지정(SQL Server)
 

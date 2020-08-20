@@ -1,4 +1,5 @@
 ---
+description: ISDeploymentWizard.exe를 사용하여 명령 프롬프트에서 SSIS 프로젝트 배포
 title: 명령 프롬프트에서 SSIS 프로젝트 배포 | Microsoft Docs
 ms.date: 05/21/2018
 ms.topic: conceptual
@@ -8,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 949a073a9e31afd0e203dc4c9f3b497c2551504b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 127df7b347f1c421d3714fc8be2f92dfc6f05e52
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921960"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495490"
 ---
 # <a name="deploy-an-ssis-project-from-the-command-prompt-with-isdeploymentwizardexe"></a>ISDeploymentWizard.exe를 사용하여 명령 프롬프트에서 SSIS 프로젝트 배포
 
@@ -30,7 +31,7 @@ Azure SQL Database에 대한 배포를 위해 이 아티클에서 설명한 유�
 
 Azure SQL Database 서버는 포트 1433에서 수신 대기합니다. 회사 방화벽 내에서 Azure SQL Database 서버에 성공적으로 연결하려면 이 포트가 회사 방화벽에서 열려 있어야 합니다.
 
-## <a name="supported-platforms"></a>지원 플랫폼
+## <a name="supported-platforms"></a>지원되는 플랫폼
 
 이 빠른 시작의 정보를 사용하여 다음과 같은 플랫폼에 SSIS 프로젝트를 배포할 수 있습니다.
 

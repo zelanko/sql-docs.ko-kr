@@ -1,4 +1,5 @@
 ---
+description: 도메인 관리
 title: 도메인 관리
 ms.date: 07/31/2012
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: c5ab71a3-0dac-45b1-be8e-93bf7e0e03ce
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 32ecd829cbd3de8845f38a367e1e23d5af39ec48
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: 5083a23b8e29bfcbf1a4fc343cc8535667b0af89
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87363013"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496342"
 ---
 # <a name="managing-a-domain"></a>도메인 관리
 

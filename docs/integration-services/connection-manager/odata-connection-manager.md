@@ -1,4 +1,5 @@
 ---
+description: OData 연결 관리자
 title: OData 연결 관리자 | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ f1_keywords:
 - sql13.dts.designer.odataconnectionmanager.f1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 788aaa50e7bf083a91a4c919708e0677fc190476
-ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
+ms.openlocfilehash: 37ebb31c408d20708d6398be95a30883cceb04d4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87472439"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496104"
 ---
 # <a name="odata-connection-manager"></a>OData 연결 관리자
 
@@ -80,7 +81,7 @@ Microsoft Dynamics AX Online 또는 Microsoft Dynamics CRM Online에 연결하�
   
  **인증**  
 다음 옵션 중 하나를 선택합니다.
--   **Windows 인증** 익명 액세스의 경우 이 옵션을 선택합니다.
+-   **Windows 인증**. 익명 액세스의 경우 이 옵션을 선택합니다.
 -   **기본 인증** 
 -   Dynamics AX Online에 대한 **Microsoft Dynamics AX Online**
 -   Dynamics CRM Online에 대한 **Microsoft Dynamics CRM Online**

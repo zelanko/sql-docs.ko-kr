@@ -1,4 +1,5 @@
 ---
+description: 진단 레코드
 title: 진단 레코드 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 92c73f9b-3ed7-410d-9cec-2771004aae60
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b564f2837bc76e04011170e191d00c08d10c119d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1b407ef1f8664191a16f54942f42f4088824517c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305184"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499924"
 ---
 # <a name="diagnostic-records"></a>진단 레코드
 각 환경, 연결, 문 및 설명자 핸들은 *진단 레코드*입니다. 이러한 레코드는 특정 핸들을 사용 하는 라는 마지막 함수에 대 한 진단 정보를 포함 합니다. 해당 핸들을 사용 하 여 다른 함수를 호출 하는 경우에만 레코드가 바뀝니다. 한 번에 저장할 수 있는 진단 레코드 수에는 제한이 없습니다.  

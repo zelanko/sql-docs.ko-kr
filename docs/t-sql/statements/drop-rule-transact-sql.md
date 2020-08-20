@@ -1,4 +1,5 @@
 ---
+description: DROP RULE(Transact-SQL)
 title: DROP RULE(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/11/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 8370b730-7fd5-43fe-a7f6-8300b3caa16d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4692f23e97da03de8698c48fa1f04049e64cef36
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 45e23207d73aa6f366de330c4a0ed7c7c9aa04f5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485484"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496799"
 ---
 # <a name="drop-rule-transact-sql"></a>DROP RULE(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -68,7 +69,7 @@ DROP RULE [ IF EXISTS ] { [ schema_name . ] rule_name } [ ,...n ] [ ; ]
 ## <a name="permissions"></a>사용 권한  
  DROP RULE을 실행하려면 최소한 규칙이 속한 스키마에 대한 ALTER 권한이 있어야 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `VendorID_rule`이라는 규칙을 언바인딩한 후 삭제합니다. 
   
 ```  

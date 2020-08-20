@@ -1,4 +1,5 @@
 ---
+description: 데이터베이스 유지 관리 계획 저장 프로시저(Transact-SQL)
 title: 데이터베이스 유지 관리 계획 저장 프로시저 (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: f5f658e3-417e-4286-9213-5738266f3b28
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0326b5a4101d6c18d84302c38bcf8de02ce924b5
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 806cf56fa2bf80e1d44e914d58e937b64f625b20
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395262"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498117"
 ---
 # <a name="database-maintenance-plan-stored-procedures-transact-sql"></a>데이터베이스 유지 관리 계획 저장 프로시저(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,7 +47,7 @@ ms.locfileid: "87395262"
 :::row-end:::
 
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;시스템 저장 프로시저](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;시스템 저장 프로시저 ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [유지 관리 계획](../../relational-databases/maintenance-plans/maintenance-plans.md)  
   
   

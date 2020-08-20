@@ -1,4 +1,5 @@
 ---
+description: DROP TYPE(Transact-SQL)
 title: DROP TYPE (Transact-SQL)| Microsoft Docs
 ms.custom: ''
 ms.date: 05/12/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 11bf83f9-0718-4238-a835-83d2eb14ae7b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 448a7f273a27751d0c904dd90c36ca622dc28e02
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 81586edf4744031a6b7743e07e12e6a56da7fd62
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86481583"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496761"
 ---
 # <a name="drop-type-transact-sql"></a>DROP TYPE(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -66,7 +67,7 @@ DROP TYPE [ IF EXISTS ] [ schema_name. ] type_name [ ; ]
 ## <a name="permissions"></a>사용 권한  
  *type_name*에 관한 CONTROL 권한 또는 *schema_name*에 대한 ALTER 권한이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `ssn` 형식이 이미 현재 데이터베이스에서 생성된 것으로 가정합니다.  
   
 ```  

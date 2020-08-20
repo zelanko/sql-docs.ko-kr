@@ -1,4 +1,5 @@
 ---
+description: 분산 데이터 배포자 변환
 title: 균형 있는 데이터 배포자 변환 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: ae0b33dd-f44b-42df-b6f6-69861770ce10
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 18b31421a4362fc281141b642ac76d4008df9c3b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 17650c2fd72996ea0d8f0eb080fbc170d779fdbf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922487"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495732"
 ---
 # <a name="balanced-data-distributor-transformation"></a>분산 데이터 배포자 변환
 
@@ -41,6 +42,6 @@ ms.locfileid: "86922487"
  SSIS 패키지의 병목 현상이 원본에서 데이터를 읽을 수 있는 속도 때문에 발생하는 경우 BDD 구성 요소는 성능을 향상시키는 데 도움이 되지 않습니다. SSIS 패키지의 병목 현상이 대상에서 병렬 처리를 지원하지 않기 때문에 발생하는 경우 BDD는 도움이 되지 않지만, 모든 변환을 병렬로 수행하고 UNION ALL 변환을 사용하여 BDD 변환의 여러 출력 경로에서 들어오는 출력 데이터를 결합한 후 대상에 데이터를 보낼 수 있습니다.  
   
 > [!IMPORTANT]  
->  변환 사용에 대한 데모를 보려면 TechNet 라이브러리에서 [분산 데이터 배포자 비디오](https://go.microsoft.com/fwlink/?LinkID=226278) 를 참조하세요.  
+>   변환 사용에 대한 데모를 보려면 TechNet 라이브러리에서 [분산 데이터 배포자 비디오](https://go.microsoft.com/fwlink/?LinkID=226278) 를 참조하십시오.  
   
   

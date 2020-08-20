@@ -1,4 +1,5 @@
 ---
+description: SQL Server Native Client의 테이블 반환 매개 변수 (OLE DB)
 title: 테이블 반환 매개 변수 (Native Client OLE DB 공급자)
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ ms.assetid: 4298b73d-615b-4d28-9843-03b4d5fc489e
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 40fe9932ca65af3087b8bcccc569adc2e0451952
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.openlocfilehash: 6e13837ce1d00ae9ea7c113cb64aa9c068a12400
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87331878"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499048"
 ---
 # <a name="table-valued-parameters--in-sql-server-native-client-ole-db"></a>SQL Server Native Client의 테이블 반환 매개 변수 (OLE DB)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

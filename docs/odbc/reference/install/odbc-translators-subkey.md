@@ -1,4 +1,5 @@
 ---
+description: ODBC 변환기 하위 키
 title: ODBC 번역기 하위 키 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6b170f1f-e263-4aac-9d49-8d0ca0470ca2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 617416adfcddfbf041c48acbf83cb9589e34ae27
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 46308518f1f806cea21bbb824312d5269f8b61e4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81296223"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499716"
 ---
 # <a name="odbc-translators-subkey"></a>ODBC 변환기 하위 키
 ODBC 번역기 하위 키 아래에 있는 값에는 설치 된 번역기가 나열 됩니다. 이러한 값의 형식은 다음 표에 나와 있습니다.  

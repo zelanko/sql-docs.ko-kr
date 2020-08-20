@@ -1,4 +1,5 @@
 ---
+description: 문 핸들 해제
 title: 문 핸들 해제 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -18,11 +19,12 @@ ms.assetid: 96fdff84-0ca7-460a-a240-94ee826ea41c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8ae605b755eb5b0eb4848077a48c54940680649f
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 5cf58becc532153617ebcbd3cafc6c89d21b4d00
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001362"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499203"
 ---
 # <a name="freeing-a-statement-handle"></a>문 핸들 해제
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -32,6 +34,6 @@ ms.locfileid: "86001362"
  응용 프로그램에서 문 사용을 마치면 [Sqlfreehandle](../../relational-databases/native-client-odbc-api/sqlfreehandle.md) 을 호출 하 여 문을 해제 합니다. **Sqldisconnect** 는 연결에서 모든 문을 자동으로 해제 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [ODBC&#41;&#40;쿼리 실행](../../relational-databases/native-client-odbc-queries/executing-queries-odbc.md)  
+ [ODBC&#41;&#40;쿼리 실행 ](../../relational-databases/native-client-odbc-queries/executing-queries-odbc.md)  
   
   

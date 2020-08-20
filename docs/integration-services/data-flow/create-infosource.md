@@ -1,4 +1,5 @@
 ---
+description: InfoSource 만들기
 title: InfoSource 만들기 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: e7db233b-5464-43de-9d26-6dd24c7ac1b7
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7a81bf2cef2329853df05eda97e2ce53501369c8
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c4672ce48890af7202445d283d15c2c167550f5a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923552"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495940"
 ---
 # <a name="create-infosource"></a>InfoSource 만들기
 

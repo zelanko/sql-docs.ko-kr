@@ -1,4 +1,5 @@
 ---
+description: SQL 모드(MySQLToSQL)
 title: SQL 모드 (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: d840ee51-b863-4e77-84aa-37d3f094bfed
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 4bc4b59984cc9e2e1f7a6c358f24e3fc0d2e86be
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 8d0631b35d2631e04cfad5c509d6084ba0a30aaf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935102"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497720"
 ---
 # <a name="sql-modes-mysqltosql"></a>SQL 모드(MySQLToSQL)
 MySQL 용 SSMA는 서로 다른 SQL 모드에서 작동할 수 있으며 클라이언트 마다 이러한 모드를 다르게 적용할 수 있습니다.  
@@ -27,7 +28,7 @@ MySQL 용 SSMA는 서로 다른 SQL 모드에서 작동할 수 있으며 클라�
   
 -   데이터베이스 범주, 데이터베이스, 테이블 범주, 문 범주, 뷰 범주, 테이블, 뷰, 함수, 프로시저, UDF 및 이벤트 개체 수준의 SQL 모드 표는 **Sql 모드 이름**, **상속 된 Sql 모드**및 **유효 sql 모드**열을 포함 합니다.  
   
--   저장 프로시저, 저장 된 함수 및 트리거 수준의 SQL 모드 표는 **Sql 모드 이름**, **원본 Sql 모드**및 **유효 sql 모드**열을 포함 합니다.  
+-   저장 프로시저, 저장 된 함수 및 트리거 수준의 SQL 모드 표는 **Sql 모드 이름**,  **원본 Sql 모드**및 **유효 sql 모드**열을 포함 합니다.  
   
 > [!NOTE]  
 > 그룹 모드는 ' SQL 모드 이름 ' 열 아래에 굵게 표시 됩니다.  

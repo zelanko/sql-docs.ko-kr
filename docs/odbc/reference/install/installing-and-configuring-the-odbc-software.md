@@ -1,4 +1,5 @@
 ---
+description: ODBC 소프트웨어 설치 및 구성
 title: ODBC 소프트웨어 설치 및 구성 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e2580f7d-d614-4e14-a9a3-804e8061b00e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a71d021f7ff9d1ef73a3a64c1b5bb27dea1caeba
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 733fb0cd75b5c0f3040e83ee2c55aba46e3cc1ef
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301928"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499759"
 ---
 # <a name="installing-and-configuring-the-odbc-software"></a>ODBC 소프트웨어 설치 및 구성
 > [!NOTE]  

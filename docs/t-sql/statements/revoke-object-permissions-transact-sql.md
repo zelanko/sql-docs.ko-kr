@@ -1,4 +1,5 @@
 ---
+description: REVOKE 개체 사용 권한(Transact-SQL)
 title: REVOKE 개체 사용 권한(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/10/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 99c7146e-d2e7-4f1a-80ff-21a05bc5e8bb
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 8971ebe550dc4fa61e7ff5d350744eafc455c102
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 738fe71b4f8fe1c97252039a0f48ef054c7d0125
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483903"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496592"
 ---
 # <a name="revoke-object-permissions-transact-sql"></a>REVOKE 개체 사용 권한(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

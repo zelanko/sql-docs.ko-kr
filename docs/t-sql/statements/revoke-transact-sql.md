@@ -1,4 +1,5 @@
 ---
+description: REVOKE(Transact-SQL)
 title: REVOKE(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/26/2017
@@ -29,12 +30,12 @@ ms.assetid: 9d31d3e7-0883-45cd-bf0e-f0361bbb0956
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 80d1eeb52c557fc1966a70e62dcfb37b9759369d
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: cb01b06486996a43eba3401644c34663eb05b800
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485134"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496579"
 ---
 # <a name="revoke-transact-sql"></a>REVOKE(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -166,37 +167,37 @@ REVOKE
   
 |보안 개체|항목|  
 |---------------|-----------|  
-|애플리케이션 역할|[REVOKE 데이터베이스 보안 주체 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/revoke-database-principal-permissions-transact-sql.md)|  
+|애플리케이션 역할|[REVOKE Database Principal Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-database-principal-permissions-transact-sql.md)|  
 |어셈블리|[REVOKE 어셈블리 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/revoke-assembly-permissions-transact-sql.md)|  
 |비대칭 키|[REVOKE 비대칭 키 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/revoke-asymmetric-key-permissions-transact-sql.md)|  
-|가용성 그룹|[REVOKE 가용성 그룹 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/revoke-availability-group-permissions-transact-sql.md)|  
+|가용성 그룹|[REVOKE Availability Group Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-availability-group-permissions-transact-sql.md)|  
 |인증서|[REVOKE 인증서 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/revoke-certificate-permissions-transact-sql.md)|  
 |계약|[REVOKE Service Broker 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/revoke-service-broker-permissions-transact-sql.md)|  
 |데이터베이스|[REVOKE 데이터베이스 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/revoke-database-permissions-transact-sql.md)|  
-|엔드포인트|[REVOKE 엔드포인트 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/revoke-endpoint-permissions-transact-sql.md)|  
+|엔드포인트|[REVOKE 엔드포인트 권한&#40;Transact-SQL&#41;](../../t-sql/statements/revoke-endpoint-permissions-transact-sql.md)|  
 |데이터베이스 범위 자격 증명|[REVOKE 데이터베이스 범위 자격 증명(Transact-SQL)](../../t-sql/statements/revoke-database-scoped-credential-transact-sql.md)|  
 |전체 텍스트 카탈로그|[REVOKE 전체 텍스트 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/revoke-full-text-permissions-transact-sql.md)|  
 |전체 텍스트 중지 목록|[REVOKE 전체 텍스트 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/revoke-full-text-permissions-transact-sql.md)|  
-|함수|[REVOKE 개체 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
+|기능|[REVOKE 개체 사용 권한 &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
 |로그인|[REVOKE 서버 보안 주체 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/revoke-server-principal-permissions-transact-sql.md)|  
 |메시지 유형|[REVOKE Service Broker 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/revoke-service-broker-permissions-transact-sql.md)|  
-|Object|[REVOKE 개체 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
-|큐|[REVOKE 개체 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
+|Object|[REVOKE 개체 사용 권한 &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
+|큐|[REVOKE 개체 사용 권한 &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
 |원격 서비스 바인딩|[REVOKE Service Broker 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/revoke-service-broker-permissions-transact-sql.md)|  
-|역할|[REVOKE 데이터베이스 보안 주체 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/revoke-database-principal-permissions-transact-sql.md)|  
-|라우팅|[REVOKE Service Broker 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/revoke-service-broker-permissions-transact-sql.md)|  
-|스키마|[REVOKE 스키마 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/revoke-schema-permissions-transact-sql.md)|  
-|검색 속성 목록|[REVOKE 검색 속성 목록 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/revoke-search-property-list-permissions-transact-sql.md)|  
-|서버|[REVOKE 서버 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/revoke-server-permissions-transact-sql.md)|  
+|역할|[REVOKE Database Principal Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-database-principal-permissions-transact-sql.md)|  
+|경로|[REVOKE Service Broker 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/revoke-service-broker-permissions-transact-sql.md)|  
+|스키마|[REVOKE Schema Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-schema-permissions-transact-sql.md)|  
+|검색 속성 목록|[REVOKE Search Property List Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-search-property-list-permissions-transact-sql.md)|  
+|서버|[REVOKE 서버 사용 권한 &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-server-permissions-transact-sql.md)|  
 |서비스|[REVOKE Service Broker 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/revoke-service-broker-permissions-transact-sql.md)|  
-|저장 프로시저|[REVOKE 개체 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
-|대칭 키|[REVOKE 대칭 키 사용 권한 &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-symmetric-key-permissions-transact-sql.md)|  
-|동의어|[REVOKE 개체 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
-|시스템 개체|[REVOKE 시스템 개체 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/revoke-system-object-permissions-transact-sql.md)|  
-|테이블|[REVOKE 개체 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
-|Type|[REVOKE 형식 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/revoke-type-permissions-transact-sql.md)|  
-|사용자|[REVOKE 데이터베이스 보안 주체 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/revoke-database-principal-permissions-transact-sql.md)|  
-|보기|[REVOKE 개체 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
+|저장 프로시저|[REVOKE 개체 사용 권한 &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
+|대칭 키|[REVOKE Symmetric Key Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-symmetric-key-permissions-transact-sql.md)|  
+|동의어|[REVOKE 개체 사용 권한 &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
+|시스템 개체|[REVOKE 시스템 개체 사용 권한 &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-system-object-permissions-transact-sql.md)|  
+|테이블|[REVOKE 개체 사용 권한 &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
+|Type|[REVOKE 형식 사용 권한 &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-type-permissions-transact-sql.md)|  
+|사용자|[REVOKE Database Principal Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-database-principal-permissions-transact-sql.md)|  
+|View|[REVOKE 개체 사용 권한 &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
 |XML 스키마 컬렉션|[REVOKE XML 스키마 컬렉션 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/revoke-xml-schema-collection-permissions-transact-sql.md)|  
   
 ## <a name="see-also"></a>참고 항목  

@@ -1,4 +1,5 @@
 ---
+description: 서버 연결 파일 만들기 (DB2ToSQL)
 title: 서버 연결 파일 만들기 (DB2ToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 685419f6-8606-462c-be12-8bace45bede6
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 4a1ee05cbf14f18a34b15161eec88df04be5539b
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: 5a27b74e529d917cf746d617e08dd44f9953a800
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86392781"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497760"
 ---
 # <a name="creating-the-server-connection-files-db2tosql"></a>서버 연결 파일 만들기 (DB2ToSQL)
 
@@ -70,6 +71,6 @@ ms.locfileid: "86392781"
 
 콘솔 운영의 다음 단계에서는 [SSMA 콘솔 &#40;DB2ToSQL를 실행 합니다&#41;](../../ssma/db2/executing-the-ssma-console-db2tosql.md)
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목
 
 - [SSMA 콘솔 실행](https://msdn.microsoft.com/ce63f633-067d-4f04-b8e9-e1abd7ec740b)

@@ -1,4 +1,5 @@
 ---
+description: DAY(SSIS 식)
 title: DAY(SSIS 식) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d8447187-49df-45b7-a98e-142ad44fd3e2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9b170928624565d8dc1f80cea93eed4473db3e5e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: dff99f077b9260f6bb41fe39661ad831404b4f65
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921290"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495636"
 ---
 # <a name="day-ssis-expression"></a>DAY(SSIS 식)
 
@@ -70,7 +71,7 @@ DAY(ModifiedDate)
 DAY(GETDATE())  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [DATEADD&#40;SSIS 식&#41;](../../integration-services/expressions/dateadd-ssis-expression.md)   
  [DATEDIFF&#40;SSIS 식&#41;](../../integration-services/expressions/datediff-ssis-expression.md)   
  [DATEPART&#40;SSIS 식&#41;](../../integration-services/expressions/datepart-ssis-expression.md)   

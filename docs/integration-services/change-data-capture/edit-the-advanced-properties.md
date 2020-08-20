@@ -1,4 +1,5 @@
 ---
+description: 고급 속성 편집
 title: 고급 속성 편집 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 1114a1bb-7556-40d9-b44e-f18ff7f63ed5
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 124682b94fd3512141c267ed43b93b45c1eb77a3
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 7946dcea0153c57b685c0f773d312080a9147569
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921665"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496237"
 ---
 # <a name="edit-the-advanced-properties"></a>고급 속성 편집
 
@@ -37,7 +38,7 @@ ms.locfileid: "86921665"
   
  입력할 수 있는 속성에 대한 자세한 내용은 [cdc.xdbcdc_config](../../integration-services/change-data-capture/the-oracle-cdc-databases.md#BKMK_cdcxdbcdc_config)에서 사용 가능한 옵션 테이블을 참조하십시오.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [How to Manage a CDC Instance](../../integration-services/change-data-capture/how-to-manage-a-cdc-instance.md)   
  [CDC 인스턴스 속성을 편집하는 방법](../../integration-services/change-data-capture/how-to-edit-the-cdc-instance-properties.md)  
   
