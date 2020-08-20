@@ -1,4 +1,5 @@
 ---
+description: 데이터 공급자
 title: 데이터 공급자 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 877b9f25-60c4-4ab6-8052-2c28a3849e89
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6dfb672b57b95224cf6ff056c3298c7c8a437d2a
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: cb448efeb0b78ba6cb29d9acff661308a6bf14bc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761109"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453585"
 ---
 # <a name="data-providers"></a>데이터 공급자
 데이터 공급자는 SQL 데이터베이스, 인덱싱된 순차 파일, 스프레드시트, 문서 저장소, 메일 파일 등 다양 한 데이터 원본을 나타냅니다. 공급자는 행 집합 이라는 일반적인 추상화를 사용 하 여 데이터를 균일 하 게 노출 합니다.  

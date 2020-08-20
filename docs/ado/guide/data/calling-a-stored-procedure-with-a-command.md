@@ -1,4 +1,5 @@
 ---
+description: 명령을 사용하여 저장 프로시저 호출
 title: 명령을 사용 하 여 저장 프로시저 호출 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 685f7652-2271-4ede-b552-2eeb8c756b4c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 998bda7d2c940b16f298fdfe436a2d60b27f09ba
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 7c510bd71d8b81eae9f86e48c398cc6ff7e81cea
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761219"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453695"
 ---
 # <a name="calling-a-stored-procedure-with-a-command"></a>명령을 사용하여 저장 프로시저 호출
 명령을 사용 하 여 저장 프로시저를 호출할 수 있습니다. 이 항목의 끝에 있는 코드 샘플은 다음과 같이 정의 된 CustOrdersOrders 이라는 Northwind 샘플 데이터베이스의 저장 프로시저를 참조 합니다.  

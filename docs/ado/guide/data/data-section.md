@@ -1,4 +1,5 @@
 ---
+description: 데이터 섹션
 title: 데이터 섹션 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,24 +13,24 @@ helpviewer_keywords:
 ms.assetid: 43dc42a8-7057-48e6-93d6-880d5c5c51a4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2d6b03137e920be036d1dd47cb4612076247fa3f
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: abf0202e75ef64825d6dc815624adc1c1d337174
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761099"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453575"
 ---
 # <a name="data-section"></a>데이터 섹션
 데이터 섹션은 보류 중인 모든 업데이트, 삽입 또는 삭제와 함께 행 집합의 데이터를 정의 합니다. 데이터 섹션에는 0 개 이상의 행이 포함 될 수 있습니다. 행이 스키마에 의해 정의 되는 한 행 집합의 데이터만 포함할 수 있습니다. 또한 앞에서 설명한 것 처럼 데이터를 포함 하지 않는 열은 생략할 수 있습니다. 데이터 섹션에서 특성 또는 하위 요소를 사용 하 고 해당 구문이 schema 섹션에서 정의 되지 않은 경우 자동으로 무시 됩니다.  
   
-## <a name="string"></a>문자열  
+## <a name="string"></a>String  
  텍스트 데이터의 예약 된 XML 문자를 적절 한 문자 엔터티로 바꾸어야 합니다. 예를 들어 회사 이름 "Joe의 중고품"에서 작은따옴표는 엔터티로 바꾸어야 합니다. 실제 행은 다음과 유사 합니다.  
   
 ```  
 <z:row CompanyName="Joe's Garage"/>  
 ```  
   
- 다음 문자는 XML에서 예약 되며 문자 엔터티로 바꾸어야 합니다: {', ", &, \< >}.  
+ 다음 문자는 XML에서 예약 되며 문자 엔터티로 바꾸어야 합니다: {', ", &, \<,> }.  
   
 ## <a name="binary"></a>이진  
  이진 데이터는 bin입니다. hex로 인코드 됩니다. 즉, 1 바이트는 니블 당 한 문자씩 두 문자로 매핑됩니다.  

@@ -1,4 +1,5 @@
 ---
+description: 데이터 셰이핑 예제
 title: 데이터 셰이핑 예 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1bfdcad4-52e1-45bc-ad21-783657ef0a44
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0f5f4095cc8c6d3d70bdb5d1e388532cefb7e76a
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 3f3b10494a9ae9fb49de6bf2779395f9eb065cd9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763634"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453565"
 ---
 # <a name="data-shaping-example"></a>데이터 셰이핑 예제
 다음 데이터 셰이핑 명령은 Northwind 데이터베이스의 **Customers** 및 **Orders** 테이블에서 계층적 **레코드 집합** 을 작성 하는 방법을 보여 줍니다.  

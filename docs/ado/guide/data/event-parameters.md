@@ -1,4 +1,5 @@
 ---
+description: 이벤트 매개 변수
 title: 이벤트 매개 변수 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: bd5c5afa-d301-4899-acda-40f98a6afa4d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 32e3cd177089fb99009490b82941928e091ab7c6
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: d29e5897183cb10f33a322b75298d8adee08d0b5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763194"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453435"
 ---
 # <a name="event-parameters"></a>이벤트 매개 변수
 모든 이벤트 처리기에는 이벤트 처리기를 제어 하는 상태 매개 변수가 있습니다. 전체 이벤트의 경우이 매개 변수를 사용 하 여 이벤트를 생성 한 작업의 성공 또는 실패를 나타낼 수도 있습니다. 또한 대부분의 전체 이벤트에는 발생 한 오류에 대 한 정보를 제공 하 고 작업을 수행 하는 데 사용 되는 ADO 개체를 참조 하는 하나 이상의 개체 매개 변수를 포함 하는 오류 매개 변수가 있습니다. 예를 들어 [ExecuteComplete](../../../ado/reference/ado-api/executecomplete-event-ado.md) 이벤트는 이벤트와 연결 된 **명령**, **레코드 집합**및 **연결** 개체에 대 한 개체 매개 변수를 포함 합니다. 다음 Microsoft® Visual Basic® 예제에서는 **Execute** 메서드에서 사용 하는 **명령**, **레코드 집합**및 **연결** 개체를 나타내는 pcommand, pcommand 및 pcommand 개체를 볼 수 있습니다.  

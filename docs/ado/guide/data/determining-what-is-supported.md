@@ -1,4 +1,5 @@
 ---
+description: 지원되는 기능 확인
 title: 지원 되는 항목 확인 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 65090cba-6d46-4775-8d61-f6838e7752a6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 360a57c6647b83fc72ba950a6aaa8175155c893f
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 1936048f0ced1a15a8134a81bc3de2a09244803d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761069"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453495"
 ---
 # <a name="determining-what-is-supported"></a>지원되는 기능 확인
 **Supports** 메서드는 지정 된 **레코드 집합** 개체가 특정 유형의 기능을 지원 하는지 여부를 확인 하는 데 사용 됩니다. 다음 구문이 있습니다.  

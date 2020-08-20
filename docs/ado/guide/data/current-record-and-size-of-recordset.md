@@ -1,4 +1,5 @@
 ---
+description: 현재 레코드 및 레코드 집합의 크기
 title: 레코드 집합의 현재 레코드 및 크기 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: e63ff331-8655-4be7-82c6-e6cd6cc9d16d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 30b669a566270a0eff5d6cf93abb5b0acb7ff3c2
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 12d4b9803682e94326636dd27bbc3f134eea23d8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761129"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453605"
 ---
 # <a name="current-record-and-size-of-recordset"></a>현재 레코드 및 레코드 집합의 크기
 이 섹션에서는 JScript 코드 예제의 샘플 **레코드 집합** 에서 커서의 현재 위치를 찾아 [레코드 집합을 반환](../../../ado/guide/data/jscript-code-example-to-return-a-recordset.md)하는 방법에 대해 설명 합니다.  
   
 ## <a name="current-record"></a>현재 레코드  
- 데이터 집합의 현재 레코드는 **레코드 집합** 개체의 커서 위치가 가리키는에 해당 합니다. 레코드 집합 **개체를** 호출 하 여 데이터 원본에서 **레코드**집합 개체를 반환 하는 경우 ( **예를**들어 **connection. namedcommand** 및 **connection**을 포함 하 여) 커서는 첫 번째 레코드를 가리키도록 설정 **됩니다.** 샘플 데이터 집합에서 초기 현재 레코드는 "열혈 삼촌 Bob의 유기적 Dried 배" 항목입니다.  
+ 데이터 집합의 현재 레코드는 **레코드 집합** 개체의 커서 위치가 가리키는에 해당 합니다. **Recordset 개체가** **귀여운,Command.Exe**또는 **Connection.Exe귀여운** ( **connection. namedcommand** 및 **connection**포함)를 호출 하 여 데이터 원본에서 반환 되는 경우 커서가 첫 번째 레코드를 가리키도록 설정 **됩니다.** 샘플 데이터 집합에서 초기 현재 레코드는 "열혈 삼촌 Bob의 유기적 Dried 배" 항목입니다.  
   
 ## <a name="size-of-recordset"></a>레코드 집합의 크기  
  **레코드 집합** 개체의 크기를 확인 하려면 **레코드 집합. RecordCount** 속성의 값을 가져옵니다. 이 값은 레코드 **집합**의 레코드 수를 나타내는 정수 (long)입니다. Microsoft SQL Server 용 OLEDB 공급자에서 데이터 집합이 반환 되는 경우이 값은 반환 되는 행 수를 제공 합니다. 닫힌 **레코드 집합** 에서 **RecordCount** 속성을 읽으면 오류가 발생 합니다.  

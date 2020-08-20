@@ -1,4 +1,5 @@
 ---
+description: 간단한 명령 만들기 및 실행
 title: 간단한 명령 만들기 및 실행 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0b81af6f-b9ae-4f7c-b59b-b5bdd775036f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9f4946af23a684e1bc98556c914cbd9e271fd208
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: ea860584e00b7b25a69d406ee81a24c4c8f01844
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761139"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453615"
 ---
 # <a name="creating-and-executing-a-simple-command"></a>간단한 명령 만들기 및 실행
 간단한 명령은 매개 변수화 되지 않고 지 속성을 필요로 하지 않는 명령입니다. 간단한 명령을 만들고 실행 하는 방법에는 세 가지가 있습니다.  

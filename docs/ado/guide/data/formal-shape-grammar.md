@@ -1,4 +1,5 @@
 ---
+description: 공식적인 셰이프 문법
 title: 공식 모양 문법 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ea691475-0f03-4abe-a785-b77e77712d1d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ce65f6961502a5bfe43278e4a29a11c4210d4af8
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 6a8d92abc3a1b0d7e6d39ac4149c186c5a2fc2eb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758259"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453375"
 ---
 # <a name="formal-shape-grammar"></a>공식적인 셰이프 문법
 다음은 셰이프 명령을 만들기 위한 공식 문법입니다.  
@@ -41,31 +42,31 @@ ms.locfileid: "82758259"
   
 |용어|정의|  
 |----------|----------------|  
-|\<셰이프-명령>|SHAPE [ \< 테이블-exp> [[AS] \< alias>]] [ \< 셰이프 동작>]|  
-|\<테이블-exp>|{ \< provider-명령 텍스트>} &#124;<br /><br /> ( \< shape 명령>) &#124;<br /><br /> 테이블 \< 따옴표 붙은-이름> &#124;<br /><br /> \<따옴표 붙은-이름>|  
-|\<셰이프-동작>|추가 \< 별칭 지정-필드 목록> &#124;<br /><br /> 계산 \< 별칭-필드 목록> [ \< 필드별 목록>]|  
-|\<별칭 필드 목록>|\<별칭인-field> [, \< 별칭인-field ... >]|  
-|\<별칭 필드>|\<필드-exp> [[AS] \< 별칭>]|  
-|\<필드-exp>|( \< 관계-exp>) &#124;<br /><br /> \<계산 된 exp> &#124;<br /><br /> \<집계-exp> &#124;<br /><br /> \<새-exp>|  
-|<relation_exp>|\<테이블-exp> [[AS] \< 별칭>]<br /><br /> \<관계-조건-목록>|  
-|\<관계-조건-목록>|\<관계-조건> [, \< 관계-조건> ...]|  
-|\<관계-조건>|\<필드-이름> \< 자식-참조>|  
-|\<자식-참조>|\<필드 이름> &#124;<br /><br /> 매개 변수 \< -참조>|  
-|\<param-참조>|\<숫자>|  
-|\<필드 목록>|\<필드 이름> [, \< 필드 이름>]|  
-|\<집계-exp>|합계 ( \< 정규화 된 필드 이름>) &#124;<br /><br /> AVG ( \< 정규화 된 필드 이름>) &#124;<br /><br /> MIN ( \< 정규화 된 필드 이름>) &#124;<br /><br /> MAX ( \< 정규화 된 필드 이름>) &#124;<br /><br /> COUNT ( \< 정규화 된 별칭> &#124; \< 정규화 된 이름>) &#124;<br /><br /> STDEV ( \< 정규화 된 필드-이름>) &#124;<br /><br /> ANY ( \< 정규화 된 필드 이름>)|  
-|\<계산 된 exp>|CALC ( \< 식>)|  
-|\<정규화 된 필드 이름>|\<별칭>입니다. [ \< 별칭> ...] \< 필드 이름>|  
-|\<별칭>|\<따옴표 붙은-이름>|  
-|\<필드 이름>|\<따옴표 붙은-이름> [[AS] \< 별칭>]|  
-|\<따옴표 붙은-이름>|" \< string>" &#124;<br /><br /> ' \< string> ' &#124;<br /><br /> [ \< 문자열>] &#124;<br /><br /> \<name>|  
-|\<정규화 된 이름>|별칭 [. alias ...]|  
+|\<shape-command>|SHAPE [ \<table-exp> [AS] \<alias> ]] [ \<shape-action> ]|  
+|\<table-exp>|{ \<provider-command-text> } &#124;<br /><br /> ( \<shape-command> ) &#124;<br /><br /> 테이블 \<quoted-name> &#124;<br /><br /> \<quoted-name>|  
+|\<shape-action>|\<aliased-field-list>&#124; 추가<br /><br /> COMPUTE \<aliased-field-list> [BY \<field-list> ]|  
+|\<aliased-field-list>|\<aliased-field> [, \<aliased-field...>]|  
+|\<aliased-field>|\<field-exp> [[AS] \<alias> ]|  
+|\<field-exp>|( \<relation-exp> ) &#124;<br /><br /> \<calculated-exp> &#124;<br /><br /> \<aggregate-exp> &#124;<br /><br /> \<new-exp>|  
+|<relation_exp>|\<table-exp> [[AS] \<alias> ]<br /><br /> 관련 \<relation-cond-list>|  
+|\<relation-cond-list>|\<relation-cond> [, \<relation-cond>...]|  
+|\<relation-cond>|\<field-name> 받는 사람 \<child-ref>|  
+|\<child-ref>|\<field-name> &#124;<br /><br /> 변수에 \<param-ref>|  
+|\<param-ref>|\<number>|  
+|\<field-list>|\<field-name> [, \<field-name>]|  
+|\<aggregate-exp>|SUM ( \<qualified-field-name> ) &#124;<br /><br /> AVG ( \<qualified-field-name> ) &#124;<br /><br /> MIN ( \<qualified-field-name> ) &#124;<br /><br /> MAX ( \<qualified-field-name> ) &#124;<br /><br /> 개수 ( \<qualified-alias> &#124; \<qualified-name> ) &#124;<br /><br /> STDEV ( \<qualified-field-name> ) &#124;<br /><br /> ANY ( \<qualified-field-name> )|  
+|\<calculated-exp>|CALC ( \<expression> )|  
+|\<qualified-field-name>|\<alias>.[\<alias>...]\<field-name>|  
+|\<alias>|\<quoted-name>|  
+|\<field-name>|\<quoted-name> [[AS] \<alias> ]|  
+|\<quoted-name>|" \<string> " &#124;<br /><br /> ' \<string> ' &#124;<br /><br /> [ \<string> ] &#124;<br /><br /> \<name>|  
+|\<qualified-name>|별칭 [. alias ...]|  
 |\<name>|알파 [알파 &#124; 자릿수 &#124; _ &#124; # &#124;: &#124; ...]|  
-|\<숫자>|숫자 [digit ...]|  
-|\<새-exp>|새 \< 필드 형식> [( \< number> [, \< number>])]|  
-|\<필드 형식>|OLE DB 또는 ADO 데이터 형식입니다.|  
-|\<문자열>|유니코드 문자 [유니코드 문자 ...]|  
-|\<식>|피연산자가 같은 행에 있는 다른 비 계산 열인 Visual Basic for Applications 식입니다.|  
+|\<number>|숫자 [digit ...]|  
+|\<new-exp>|NEW \<field-type> [( \<number> [, \<number> ])]|  
+|\<field-type>|OLE DB 또는 ADO 데이터 형식입니다.|  
+|\<string>|유니코드 문자 [유니코드 문자 ...]|  
+|\<expression>|피연산자가 같은 행에 있는 다른 비 계산 열인 Visual Basic for Applications 식입니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [계층적 레코드 집합의 행 액세스](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   

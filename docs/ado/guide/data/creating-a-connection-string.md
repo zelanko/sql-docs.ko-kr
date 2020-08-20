@@ -1,4 +1,5 @@
 ---
+description: 연결 문자열 만들기
 title: 연결 문자열 만들기 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 14eae122-2d1e-40c8-b88e-b7cb8dfbc93b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b58dc19097d01630fa1ab1c2707e8be379ae83cb
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: f544805336fdea586fac5697b3abde009dc6f7ff
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761149"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453625"
 ---
 # <a name="creating-a-connection-string"></a>연결 문자열 만들기
-연결 문자열은 세미콜론으로 구분 된 인수/값 쌍 (즉, 매개 변수)의 목록으로 구성 됩니다. 다음은 그 예입니다.  
+연결 문자열은 세미콜론으로 구분 된 인수/값 쌍 (즉, 매개 변수)의 목록으로 구성 됩니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.  
   
 ```syntax
 "arg1=val1; arg2=val2; ... argN=valN;"  

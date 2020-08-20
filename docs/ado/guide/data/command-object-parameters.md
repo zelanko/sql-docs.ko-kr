@@ -1,4 +1,5 @@
 ---
+description: 명령 개체 매개 변수
 title: Command 개체 매개 변수 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 10e7ef4a-78bf-4e91-931e-cbc6c065dd4c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0935fa2b45d0ab496072f4f3a9619c821afc8383
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: f2e2cd8da9522c7aead905cc0c19debe132faf4b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761189"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453675"
 ---
 # <a name="command-object-parameters"></a>명령 개체 매개 변수
 이전 항목에서는 [간단한 명령 만들기 및 실행](../../../ado/guide/data/creating-and-executing-a-simple-command.md)에 대해 설명 했습니다. [명령](../../../ado/reference/ado-api/command-object-ado.md) 개체에 대 한 더 흥미로운 사용은 SQL 명령이 매개 변수화 된 다음 예제에 나와 있습니다. 이렇게 수정 하면 매번 매개 변수에 다른 값을 전달 하 여 명령을 다시 사용할 수 있습니다. **Command** 개체의 [준비 된 속성](../../../ado/reference/ado-api/prepared-property-ado.md) 속성이 **true**로 설정 되어 있기 때문에 ADO에서는 처음으로 실행 하기 전에 해당 공급자가 [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) 에 지정 된 명령을 컴파일해야 합니다. 또한 컴파일된 명령을 메모리에 유지 합니다. 이렇게 하면 명령 실행이 처음 실행 될 때 약간 느리게 실행 되 고,이를 준비 하는 데 필요한 오버 헤드로 인해 성능이 저하 되지만 그 이후에 명령이 호출 될 때마다 성능이 향상 됩니다. 따라서 명령은 두 번 이상 사용 되는 경우에만 준비 해야 합니다.  

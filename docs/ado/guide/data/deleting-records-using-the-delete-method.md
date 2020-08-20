@@ -1,4 +1,5 @@
 ---
+description: Delete 메서드를 사용하여 레코드 삭제
 title: Delete 메서드를 사용 하 여 레코드 삭제 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bfed5cfa-7f57-463b-9da2-0c612a079d30
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a8da01b9c92aeec9c01527370e19c8edfb751da9
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 3d8a29f2e1f35ddddc28e4aa3fb3c52c649e3056
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763624"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453535"
 ---
 # <a name="deleting-records-using-the-delete-method"></a>Delete 메서드를 사용하여 레코드 삭제
 **Delete** 메서드를 사용 하면 **레코드 집합** 개체의 레코드 그룹 또는 현재 레코드를 삭제 하도록 표시 합니다. 레코드 **집합** 개체가 레코드 삭제를 허용 하지 않는 경우 오류가 발생 합니다. 즉시 업데이트 모드에 있는 경우 데이터베이스에서 즉시 삭제가 발생 합니다. 예를 들어 데이터베이스 무결성 위반으로 인해 레코드를 삭제할 수 없는 경우 업데이트를 호출한 후에도 레코드는 편집 모드로 유지 됩니다 **.** 즉, 현재 레코드를 이동 하기 전에 [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) 를 사용 하 여 업데이트를 취소 해야 합니다 (예: [Close](../../../ado/reference/ado-api/close-method-ado.md), [Move](../../../ado/reference/ado-api/move-method-ado.md)또는 [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)사용).  
