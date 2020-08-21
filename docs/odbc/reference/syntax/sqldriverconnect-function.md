@@ -1,8 +1,8 @@
 ---
-description: SQLDriverConnect 함수(SQLDriverConnect Function)
 title: SQLDriverConnect 함수 | Microsoft Docs
+description: SQLDriverConnect 함수는 ODBC API 표준의 일부 이며이 참조 설명서는 구문에 대 한 정보를 제공 합니다.
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/20/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -20,32 +20,20 @@ helpviewer_keywords:
 ms.assetid: e299be1d-5c74-4ede-b6a3-430eb189134f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6abdafe0a01d5c8182c5427c45545930c84e08e4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d9ff73c570e607f687ff8293587b8dbcef551926
+ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88476146"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88745903"
 ---
 # <a name="sqldriverconnect-function"></a>SQLDriverConnect 함수(SQLDriverConnect Function)
 **규칙**  
  소개 된 버전: ODBC 1.0 표준 준수: ODBC  
   
  **요약**  
- **SQLDriverConnect** 는 **SQLConnect**에 대 한 대안입니다. **SQLConnect**의 세 인수 보다 더 많은 연결 정보를 요구 하는 데이터 원본, 모든 연결 정보를 사용자에 게 표시 하는 대화 상자, 시스템 정보에 정의 되어 있지 않은 데이터 원본을 지원 합니다.  
-  
- **SQLDriverConnect** 는 다음과 같은 연결 특성을 제공 합니다.  
-  
--   데이터 원본 이름, 하나 이상의 사용자 Id, 하나 이상의 암호 및 데이터 원본에 필요한 기타 정보를 포함 하는 연결 문자열을 사용 하 여 연결을 설정 합니다.  
-  
--   부분 연결 문자열 또는 추가 정보를 사용 하 여 연결을 설정 합니다. 이 경우 드라이버 관리자와 드라이버는 각각 사용자에 게 연결 정보를 묻는 메시지를 표시할 수 있습니다.  
-  
--   시스템 정보에 정의 되어 있지 않은 데이터 원본에 대 한 연결을 설정 합니다. 응용 프로그램에서 부분 연결 문자열을 제공 하는 경우 드라이버는 사용자에 게 연결 정보를 묻는 메시지를 표시할 수 있습니다.  
-  
--   Dsn 파일의 정보에서 생성 된 연결 문자열을 사용 하 여 데이터 원본에 대 한 연결을 설정 합니다.  
-  
- 연결이 설정 된 후 **SQLDriverConnect** 는 완료 된 연결 문자열을 반환 합니다. 응용 프로그램은 후속 연결 요청에이 문자열을 사용할 수 있습니다. 자세한 내용은 [SQLDriverConnect를 사용 하 여 연결](../../../odbc/reference/develop-app/connecting-with-sqldriverconnect.md)을 참조 하세요.  
-  
+ **SQLDriverConnect** 는 **SQLConnect**에 대 한 대안입니다. **SQLConnect**의 세 인수 보다 더 많은 연결 정보를 요구 하는 데이터 원본, 모든 연결 정보를 사용자에 게 표시 하는 대화 상자, 시스템 정보에 정의 되어 있지 않은 데이터 원본을 지원 합니다. 자세한 내용은 [SQLDriverConnect를 사용 하 여 연결](../develop-app/connecting-with-sqldriverconnect.md)을 참조 하세요.  
+
 ## <a name="syntax"></a>구문  
   
 ```cpp  
