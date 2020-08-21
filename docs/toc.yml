@@ -1819,7 +1819,7 @@
           items:
             - name: 생성
               href: relational-databases/tables/create-edge-constraints.md
-            - name: DELETE
+            - name: 삭제
               href: relational-databases/tables/delete-edge-constraint.md
             - name: 수정
               href: relational-databases/tables/modify-edge-constraint.md
@@ -8443,6 +8443,8 @@
           items:
             - name: SQL Server 연결 및 쿼리
               href: ssms/tutorials/connect-query-sql-server.md
+            - name: 플랫 파일 가져오기
+              href: relational-databases/import-export/import-flat-file-wizard.md
         - name: 개념
           items:
             - name: SSMS의 도구 창
@@ -9869,6 +9871,12 @@
           href: linux/quickstart-install-connect-clouds.md
     - name: 자습서
       items:
+        - name: SQL Server 문서를 처음 사용하는 경우
+          href: linux/new-to-sql-learning-resources.yml
+        - name: Linux 문서를 처음 사용하는 경우
+          href: linux/new-to-linux-learning-resources.yml
+        - name: Linux 리소스를 처음 사용하는 경우
+          href: linux/new-to-linux-resources.md
         - name: Windows에서 마이그레이션
           href: linux/sql-server-linux-migrate-restore-database.md
         - name: Docker로 마이그레이션
@@ -11872,6 +11880,8 @@
               href: relational-databases/system-catalog-views/sys-pdw-nodes-pdw-physical-databases-transact-sql.md
             - name: sys.pdw_nodes_tables
               href: relational-databases/system-catalog-views/sys-pdw-nodes-tables-transact-sql.md
+            - name: sys.pdw_permanent_table_mappings
+              href: relational-databases/system-catalog-views/sys-pdw-permanent-table-mappings-transact-sql.md
             - name: sys.pdw_replicated_table_cache_state
               href: relational-databases/system-catalog-views/sys-pdw-replicated-table-cache-state-transact-sql.md
             - name: sys.pdw_table_distribution_properties
