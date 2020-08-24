@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 57fcb0eb-5d40-4ad4-996d-380732de8a3d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 50cb2ca388b078fbd1adc044e28d523aa80a7522
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 46aaf66f2a715f716162ddab3f1952117fa27694
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440175"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88770792"
 ---
 # <a name="create-method-example-vc"></a>Create 메서드 예제(VC++)
-다음 코드에서는 [create](../../../ado/reference/adox-api/create-method-adox.md) 메서드를 사용 하 여 새 Microsoft Jet 데이터베이스를 만드는 방법을 보여 줍니다.  
+다음 코드에서는 [create](./create-method-adox.md) 메서드를 사용 하 여 새 Microsoft Jet 데이터베이스를 만드는 방법을 보여 줍니다.  
   
 ```  
 // BeginCreateDatabaseCpp.cpp  
@@ -77,4 +77,4 @@ void CreateDatabaseX() {
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Create 메서드(ADOX)](../../../ado/reference/adox-api/create-method-adox.md)
+ [Create 메서드(ADOX)](./create-method-adox.md)

@@ -17,29 +17,29 @@ helpviewer_keywords:
 ms.assetid: a6001168-b954-47f0-ba0d-c05c4cc40c58
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 55db23316b4d920154f00aa3b03fb101b2382483
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a0217267b73a449e40beff1134b3cdcc744246f3
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440815"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777932"
 ---
 # <a name="ordinal-property-ado-md-cell"></a>Ordinal 속성(ADO MD Cell)
-셀 집합의 위치를 기준으로 [셀](../../../ado/reference/ado-md-api/cell-object-ado-md.md) 을 고유 하 게 식별 합니다.  
+셀 집합의 위치를 기준으로 [셀](./cell-object-ado-md.md) 을 고유 하 게 식별 합니다.  
   
 ## <a name="return-values"></a>반환 값  
  는 **Long** 정수를 반환 하며 읽기 전용입니다.  
   
 ## <a name="remarks"></a>설명  
- 셀의 서 수 값은 셀 집합 내의 셀을 고유 하 게 식별 합니다. 개념적으로 셀은 셀 집합에서 셀 개수가 *p*차원 배열인 것 처럼 번호가 매겨집니다. 여기서 *p* 는 [축](../../../ado/reference/ado-md-api/axes-collection-ado-md.md)수입니다. 셀의 번호는 0부터 시작 하 여 행의 오름차순으로 정렬 됩니다. 다음은 셀의 서 수 번호를 계산 하는 수식입니다.  
+ 셀의 서 수 값은 셀 집합 내의 셀을 고유 하 게 식별 합니다. 개념적으로 셀은 셀 집합에서 셀 개수가 *p*차원 배열인 것 처럼 번호가 매겨집니다. 여기서 *p* 는 [축](./axes-collection-ado-md.md)수입니다. 셀의 번호는 0부터 시작 하 여 행의 오름차순으로 정렬 됩니다. 다음은 셀의 서 수 번호를 계산 하는 수식입니다.  
   
- 셀의 서 수 값은 [셀](../../../ado/reference/ado-md-api/cell-object-ado-md.md)을 신속 하 게 검색 하기 위해 셀 [집합](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) 개체의 [Item](../../../ado/reference/ado-md-api/item-property-ado-md-cellset.md) 속성에 사용할 수 있습니다.  
+ 셀의 서 수 값은 [셀](./cell-object-ado-md.md)을 신속 하 게 검색 하기 위해 셀 [집합](./cellset-object-ado-md.md) 개체의 [Item](./item-property-ado-md-cellset.md) 속성에 사용할 수 있습니다.  
   
 ## <a name="applies-to"></a>적용 대상  
- [Cell 개체(ADO MD)](../../../ado/reference/ado-md-api/cell-object-ado-md.md)  
+ [Cell 개체(ADO MD)](./cell-object-ado-md.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [축 예 (VBScript)](../../../ado/reference/ado-md-api/axis-example-vbscript.md)   
- [Cellset 개체 (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)   
- [Item 속성 (ADO MD 셀 집합)](../../../ado/reference/ado-md-api/item-property-ado-md-cellset.md)   
- [Ordinal 속성(ADO MD Position)](../../../ado/reference/ado-md-api/ordinal-property-ado-md-position.md)
+ [축 예 (VBScript)](./axis-example-vbscript.md)   
+ [Cellset 개체 (ADO MD)](./cellset-object-ado-md.md)   
+ [Item 속성 (ADO MD 셀 집합)](./item-property-ado-md-cellset.md)   
+ [Ordinal 속성(ADO MD Position)](./ordinal-property-ado-md-position.md)

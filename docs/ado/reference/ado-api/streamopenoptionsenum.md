@@ -16,24 +16,24 @@ helpviewer_keywords:
 ms.assetid: 85b6c57f-47ed-46ba-bd92-07882ae9e9d2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e2799d52ef8c46092132a36eb2fe4fb92f5d14d4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 80918159031787844330c4ddd92032e81a99c8c1
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441825"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777192"
 ---
 # <a name="streamopenoptionsenum"></a>StreamOpenOptionsEnum
-[Stream](../../../ado/reference/ado-api/stream-object-ado.md) 개체를 여는 옵션을 지정 합니다. 값은 또는 작업과 함께 사용할 수 있습니다.  
+[Stream](./stream-object-ado.md) 개체를 여는 옵션을 지정 합니다. 값은 또는 작업과 함께 사용할 수 있습니다.  
   
 |상수|값|설명|  
 |--------------|-----------|-----------------|  
 |**adOpenStreamAsync**|1|비동기 모드에서 **Stream** 개체를 엽니다.|  
-|**adOpenStreamFromRecord**|4|이미 열려 있는 [Record](../../../ado/reference/ado-api/record-object-ado.md) 개체가 될 *소스* 매개 변수의 내용을 식별 합니다. 기본 동작은 트리 구조에서 노드를 직접 가리키는 URL로 *소스* 를 처리 하는 것입니다. 해당 노드와 연결 된 기본 스트림이 열립니다.|  
+|**adOpenStreamFromRecord**|4|이미 열려 있는 [Record](./record-object-ado.md) 개체가 될 *소스* 매개 변수의 내용을 식별 합니다. 기본 동작은 트리 구조에서 노드를 직접 가리키는 URL로 *소스* 를 처리 하는 것입니다. 해당 노드와 연결 된 기본 스트림이 열립니다.|  
 |**adOpenStreamUnspecified 되지 않음**|-1|기본값 기본 옵션을 사용 하 여 **스트림** 개체 열기를 지정 합니다.|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC 동급  
  이러한 상수에는 ADO/WFC 해당 항목이 없습니다.  
   
 ## <a name="applies-to"></a>적용 대상  
- [Open 메서드(ADO 스트림)](../../../ado/reference/ado-api/open-method-ado-stream.md)
+ [Open 메서드(ADO 스트림)](./open-method-ado-stream.md)

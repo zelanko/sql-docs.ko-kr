@@ -31,12 +31,12 @@ helpviewer_keywords:
 ms.assetid: e6b6e3a4-8952-4d79-81f4-51019c338374
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7345337ab35f4154fd9dc53f749e04dba96dad48
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f239978dc9d71af81c74de452fefe16efe95d1bf
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440115"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88770632"
 ---
 # <a name="delete-method-adox-collections"></a>Delete 메서드(ADOX 컬렉션)
 컬렉션에서 개체를 제거 합니다.  
@@ -55,27 +55,27 @@ Collection.Delete Name
 ## <a name="remarks"></a>설명  
  컬렉션에 *이름이* 없는 경우 오류가 발생 합니다.  
   
- [테이블](../../../ado/reference/adox-api/tables-collection-adox.md) 및 [사용자](../../../ado/reference/adox-api/users-collection-adox.md) 컬렉션의 경우 공급자가 테이블 또는 사용자 삭제를 각각 지원 하지 않는 경우 오류가 발생 합니다. [프로시저](../../../ado/reference/adox-api/procedures-collection-adox.md) 및 [뷰](../../../ado/reference/adox-api/views-collection-adox.md) 컬렉션의 경우 공급자가 명령 유지를 지원 하지 않으면 **삭제가** 실패 합니다.  
+ [테이블](./tables-collection-adox.md) 및 [사용자](./users-collection-adox.md) 컬렉션의 경우 공급자가 테이블 또는 사용자 삭제를 각각 지원 하지 않는 경우 오류가 발생 합니다. [프로시저](./procedures-collection-adox.md) 및 [뷰](./views-collection-adox.md) 컬렉션의 경우 공급자가 명령 유지를 지원 하지 않으면 **삭제가** 실패 합니다.  
   
 ## <a name="applies-to"></a>적용 대상  
 
 :::row:::
     :::column:::
-        [Columns 컬렉션(ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)  
-        [Groups 컬렉션(ADOX)](../../../ado/reference/adox-api/groups-collection-adox.md)  
-        [Indexes 컬렉션(ADOX)](../../../ado/reference/adox-api/indexes-collection-adox.md)  
+        [Columns 컬렉션(ADOX)](./columns-collection-adox.md)  
+        [Groups 컬렉션(ADOX)](./groups-collection-adox.md)  
+        [Indexes 컬렉션(ADOX)](./indexes-collection-adox.md)  
     :::column-end:::
     :::column:::
-        [Keys 컬렉션(ADOX)](../../../ado/reference/adox-api/keys-collection-adox.md)  
-        [Procedures 컬렉션(ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)  
-        [Tables 컬렉션(ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)  
+        [Keys 컬렉션(ADOX)](./keys-collection-adox.md)  
+        [Procedures 컬렉션(ADOX)](./procedures-collection-adox.md)  
+        [Tables 컬렉션(ADOX)](./tables-collection-adox.md)  
     :::column-end:::
     :::column:::
-        [Users 컬렉션(ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)  
-        [Views 컬렉션(ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)  
+        [Users 컬렉션(ADOX)](./users-collection-adox.md)  
+        [Views 컬렉션(ADOX)](./views-collection-adox.md)  
     :::column-end:::
 :::row-end:::
 
 ## <a name="see-also"></a>참고 항목  
- [프로시저 Delete 메서드 예제 (VB)](../../../ado/reference/adox-api/procedures-delete-method-example-vb.md)   
- [Views Delete 메서드 예제(VB)](../../../ado/reference/adox-api/views-delete-method-example-vb.md)
+ [프로시저 Delete 메서드 예제 (VB)](./procedures-delete-method-example-vb.md)   
+ [Views Delete 메서드 예제(VB)](./views-delete-method-example-vb.md)

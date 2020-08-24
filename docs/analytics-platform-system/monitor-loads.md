@@ -9,15 +9,15 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: b284fdcef506924c26e452196db6e9518faa1351
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6bc64949b0e636a6c64e7b0ef576613f6e02c5c2
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74400958"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777722"
 ---
 # <a name="monitor-loads-into-parallel-data-warehouse"></a>병렬 데이터 웨어하우스로 부하 모니터링
-APS (분석 플랫폼 시스템) 관리 콘솔 또는 PDW (병렬 데이터 웨어하우스) [시스템 뷰](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-reference-tsql-system-views/)를 사용 하 여 활성 및 최근 [dwloader](dwloader.md) 로드를 모니터링 합니다. 
+APS (분석 플랫폼 시스템) 관리 콘솔 또는 PDW (병렬 데이터 웨어하우스) [시스템 뷰](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-reference-tsql-system-views)를 사용 하 여 활성 및 최근 [dwloader](dwloader.md) 로드를 모니터링 합니다. 
   
 > [!TIP]  
 > 일부 로드는 SQL 문을 사용 하 여 로드를 수행 하는 INSERT 문 또는 비즈니스 인텔리전스 도구를 사용 하 여 시작 됩니다. 
@@ -26,7 +26,7 @@ APS (분석 플랫폼 시스템) 관리 콘솔 또는 PDW (병렬 데이터 웨�
 To monitor this type of load, see [Monitoring Active Queries](monitor-active-queries.md).  
 -->
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>필수 구성 요소  
 부하를 모니터링 하는 데 사용 되는 방법에 관계 없이 로그인에는 기본 데이터 원본에 대 한 액세스 권한이 있어야 합니다. 
 
 <!-- MISSING LINKS
@@ -49,7 +49,7 @@ For the permissions to grant, see "Use All of the Admin Console" in [Grant Permi
   
 -   [sys.dm_pdw_exec_requests](../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md)  
   
--   [sys.pdw_loader_run_stages](https://msdn.microsoft.com/library/mt203879.aspx)  
+-   [sys.pdw_loader_run_stages](../relational-databases/system-catalog-views/sys-pdw-loader-run-stages-transact-sql.md?view=aps-pdw-2016-au7)  
   
 -   [sys.pdw_loader_backup_runs](../relational-databases/system-catalog-views/sys-pdw-loader-backup-runs-transact-sql.md)  
   
@@ -58,15 +58,15 @@ For the permissions to grant, see "Use All of the Admin Console" in [Grant Permi
 ### <a name="to-monitor-loads-by-using-system-views"></a>시스템 뷰를 사용 하 여 로드를 모니터링 하려면  
 SQL Server PDW 보기를 사용 하 여 활성 및 최근 로드를 모니터링 하려면 다음 단계를 수행 합니다. 사용 되는 각 시스템 뷰에 대해 뷰에서 반환 되는 열 및 잠재적 값에 대 한 자세한 내용은 해당 보기에 대 한 설명서를 참조 하십시오.  
   
-1.  이 보기의 `command` 열에서 로더 명령줄을 찾아 dm_pdw_exec_requests 뷰의 로드를 찾습니다. [sys.dm_pdw_exec_requests](../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md) `request_id`  
+1.  `request_id`이 보기의 열에서 로더 명령줄을 찾아 [dm_pdw_exec_requests](../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md) 뷰의 로드를 찾습니다 `command` .  
   
-    예를 들어 다음 명령은 명령 텍스트 및 현재 상태와을 반환 합니다 `request_id`.  
+    예를 들어 다음 명령은 명령 텍스트 및 현재 상태와을 반환 합니다 `request_id` .  
   
     ```sql  
     SELECT request_id, status, command FROM sys.dm_pdw_exec_requests;  
     ```  
   
-2.  [Pdw_loader_run_stages](../relational-databases/system-catalog-views/sys-pdw-loader-run-stages-transact-sql.md) 및 `request_id` [pdw_loader_backup_run_details](../relational-databases/system-catalog-views/sys-pdw-loader-backup-run-details-transact-sql.md) 뷰를 사용 하 여 로드에 대 한 추가 정보를 검색 하려면를 사용 합니다. 예를 들어 다음 쿼리는 로드의 `run_id` 시작, 종료 및 기간 및 오류에 대 한 정보와 처리 된 행 수에 대 한 정보를 반환 합니다.  
+2.  `request_id` [Pdw_loader_run_stages](../relational-databases/system-catalog-views/sys-pdw-loader-run-stages-transact-sql.md) 및 [pdw_loader_backup_run_details](../relational-databases/system-catalog-views/sys-pdw-loader-backup-run-details-transact-sql.md) 뷰를 사용 하 여 로드에 대 한 추가 정보를 검색 하려면를 사용 합니다. 예를 들어 다음 쿼리는 `run_id` 로드의 시작, 종료 및 기간 및 오류에 대 한 정보와 처리 된 행 수에 대 한 정보를 반환 합니다.  
   
     ```sql  
     SELECT lbr.run_id,   
@@ -83,4 +83,3 @@ SQL Server PDW 보기를 사용 하 여 활성 및 최근 로드를 모니터링
 ## See Also  
 [Common metadata query examples](metadata-query-examples.md)
 -->  
-  

@@ -16,35 +16,35 @@ helpviewer_keywords:
 ms.assetid: e6bad449-ebdb-4dd3-886a-9e6f1e7ee5d2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 78a22e22f5bf65c211a18bd68767537af164b452
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2bede13c00304565a0e3b7819be7c8e6a5b5ca48
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442155"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777482"
 ---
 # <a name="size-property-ado-parameter"></a>Size 속성(ADO 매개 변수)
-[매개 변수](../../../ado/reference/ado-api/parameter-object.md) 개체의 최대 크기 (바이트 또는 문자)를 나타냅니다.  
+[매개 변수](./parameter-object.md) 개체의 최대 크기 (바이트 또는 문자)를 나타냅니다.  
   
 ## <a name="settings-and-return-values"></a>설정 및 반환 값  
  **매개 변수** 개체에 있는 값의 최대 크기 (바이트 또는 문자)를 나타내는 **Long** 값을 설정 하거나 반환 합니다.  
   
 ## <a name="remarks"></a>설명  
- **Size** 속성을 사용 하 여 **매개 변수** 개체의 [Value](../../../ado/reference/ado-api/value-property-ado.md) 속성에 쓰거나 읽을 값의 최대 크기를 결정할 수 있습니다.  
+ **Size** 속성을 사용 하 여 **매개 변수** 개체의 [Value](./value-property-ado.md) 속성에 쓰거나 읽을 값의 최대 크기를 결정할 수 있습니다.  
   
- **매개 변수** 개체의 가변 길이 데이터 형식을 지정 하는 경우 (예: **AdVarChar**등의 **문자열** 형식) [매개 변수](../../../ado/reference/ado-api/parameters-collection-ado.md) 컬렉션에 추가 하기 전에 개체의 **크기** 속성을 설정 해야 합니다. 그렇지 않으면 오류가 발생 합니다.  
+ **매개 변수** 개체의 가변 길이 데이터 형식을 지정 하는 경우 (예: **AdVarChar**등의 **문자열** 형식) [매개 변수](./parameters-collection-ado.md) 컬렉션에 추가 하기 전에 개체의 **크기** 속성을 설정 해야 합니다. 그렇지 않으면 오류가 발생 합니다.  
   
- [Command](../../../ado/reference/ado-api/command-object-ado.md) 개체의 **Parameters** 컬렉션에 **매개 변수** 개체를 이미 추가 했 고 해당 형식을 가변 길이 데이터 형식으로 변경한 경우에는 **Command** 개체를 실행 하기 전에 **매개 변수** 개체의 **Size** 속성을 설정 해야 합니다. 그렇지 않으면 오류가 발생 합니다.  
+ [Command](./command-object-ado.md) 개체의 **Parameters** 컬렉션에 **매개 변수** 개체를 이미 추가 했 고 해당 형식을 가변 길이 데이터 형식으로 변경한 경우에는 **Command** 개체를 실행 하기 전에 **매개 변수** 개체의 **Size** 속성을 설정 해야 합니다. 그렇지 않으면 오류가 발생 합니다.  
   
- [Refresh](../../../ado/reference/ado-api/refresh-method-ado.md) 메서드를 사용 하 여 공급자에서 매개 변수 정보를 가져오고 하나 이상의 가변 길이 데이터 형식 **매개 변수** 개체를 반환 하는 경우, ADO는 실행 중에 오류를 발생 시킬 수 있는 최대 크기를 기준으로 매개 변수에 대 한 메모리를 할당할 수 있습니다. 오류를 방지 하려면 명령을 실행 하기 전에 이러한 매개 변수의 **Size** 속성을 명시적으로 설정 해야 합니다.  
+ [Refresh](./refresh-method-ado.md) 메서드를 사용 하 여 공급자에서 매개 변수 정보를 가져오고 하나 이상의 가변 길이 데이터 형식 **매개 변수** 개체를 반환 하는 경우, ADO는 실행 중에 오류를 발생 시킬 수 있는 최대 크기를 기준으로 매개 변수에 대 한 메모리를 할당할 수 있습니다. 오류를 방지 하려면 명령을 실행 하기 전에 이러한 매개 변수의 **Size** 속성을 명시적으로 설정 해야 합니다.  
   
  **Size** 속성은 읽기/쓰기입니다.  
   
 ## <a name="applies-to"></a>적용 대상  
- [Parameter 개체](../../../ado/reference/ado-api/parameter-object.md)  
+ [Parameter 개체](./parameter-object.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [ActiveConnection, CommandText, CommandTimeout, CommandType, Size 및 Direction 속성 예제 (VB)](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vb.md)   
- [ActiveConnection, CommandText, CommandTimeout, CommandType, Size 및 Direction 속성 예제 (VC + +)](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vc.md)   
- [ActiveConnection, CommandText, CommandTimeout, CommandType, Size 및 Direction 속성 예제 (JScript)](../../../ado/reference/ado-api/activeconnection-commandtext-timeout-type-size-example-jscript.md)   
- [Size 속성(ADO 스트림)](../../../ado/reference/ado-api/size-property-ado-stream.md)
+ [ActiveConnection, CommandText, CommandTimeout, CommandType, Size 및 Direction 속성 예제 (VB)](./activeconnection-commandtext-commandtimeout-commandtype-size-example-vb.md)   
+ [ActiveConnection, CommandText, CommandTimeout, CommandType, Size 및 Direction 속성 예제 (VC + +)](./activeconnection-commandtext-commandtimeout-commandtype-size-example-vc.md)   
+ [ActiveConnection, CommandText, CommandTimeout, CommandType, Size 및 Direction 속성 예제 (JScript)](./activeconnection-commandtext-timeout-type-size-example-jscript.md)   
+ [Size 속성(ADO 스트림)](./size-property-ado-stream.md)

@@ -1,4 +1,5 @@
 ---
+description: Microsoft Connector for Oracle
 title: Microsoft Connector for Oracle | Microsoft Docs
 ms.custom: ''
 ms.date: 08/14/2019
@@ -9,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1ef8ccdfc30c772548cff4caa816ef1a582c8823
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: a5bb5631a398e398b45b84a0ee70b51f49c90988
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913799"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430755"
 ---
 # <a name="microsoft-connector-for-oracle"></a>Microsoft Connector for Oracle
 
@@ -55,6 +56,10 @@ Oracle 데이터베이스용 커넥터를 설치하려면 [최신 버전의 Micr
 - [SQL Server 2016: Attunity의 Oracle용 Microsoft Connector 버전 4.0](https://www.microsoft.com/download/details.aspx?id=52950)
 - [SQL Server 2014: Attunity의 Oracle용 Microsoft Connector 버전 3.0](https://www.microsoft.com/download/details.aspx?id=44582)
 - [SQL Server 2012: Attunity의 Oracle용 Microsoft Connector 버전 2.0](https://www.microsoft.com/download/details.aspx?id=29283)
+
+## <a name="limitations-and-known-issues"></a>제한 사항 및 알려진 문제
+
+- Oracle 원본의 ‘테이블 또는 뷰 이름’에 뷰가 나열되지 않습니다. 해결 방법으로, SQL 명령을 사용하고 뷰에서 *를 선택하거나 고급 편집기에서 뷰 이름을 [Oracle Source].[TableName] 속성으로 설정하세요.
 
 ## <a name="uninstallation"></a>제거
 

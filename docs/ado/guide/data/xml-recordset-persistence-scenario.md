@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 353d569a-043a-4397-9ee6-564c4af8d5f6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2c61663a1fc88f4e8efe464da0220df22133bdc2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 42fbc8670320761697caf4c956c1f9b64bda5c24
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452505"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88758423"
 ---
 # <a name="xml-recordset-persistence-scenario"></a>XML 레코드 집합 지속성 시나리오
 이 시나리오에서는 레코드 집합 개체의 내용을 ASP 응답 개체에 직접 저장 하는 ASP (Active Server Pages) 응용 프로그램을 만듭니다.  
@@ -26,7 +26,7 @@ ms.locfileid: "88452505"
 > [!NOTE]
 >  이 시나리오에서는 서버에 IIS (인터넷 정보 서버 5.0) 이상이 설치 되어 있어야 합니다.  
   
- 반환 된 레코드 집합은 [rds (DataControl 개체](../../../ado/reference/rds-api/datacontrol-object-rds.md))를 사용 하 여 Internet Explorer에 표시 됩니다.  
+ 반환 된 레코드 집합은 [rds (DataControl 개체](../../reference/rds-api/datacontrol-object-rds.md))를 사용 하 여 Internet Explorer에 표시 됩니다.  
   
  이 시나리오를 만들려면 다음 단계를 수행 해야 합니다.  
   
@@ -85,12 +85,12 @@ ms.locfileid: "88452505"
 %>  
 ```  
   
- 그러면 ASP Response 개체가 레코드 집합 [저장 메서드의](../../../ado/reference/ado-api/save-method.md)대상으로 지정 됩니다. Save 메서드의 대상은 ado [Stream 개체 (ado)](../../../ado/reference/ado-api/stream-object-ado.md)와 같이 IStream 인터페이스를 지 원하는 개체 또는 레코드 집합을 저장할 전체 경로를 포함 하는 파일 이름일 수 있습니다.  
+ 그러면 ASP Response 개체가 레코드 집합 [저장 메서드의](../../reference/ado-api/save-method.md)대상으로 지정 됩니다. Save 메서드의 대상은 ado [Stream 개체 (ado)](../../reference/ado-api/stream-object-ado.md)와 같이 IStream 인터페이스를 지 원하는 개체 또는 레코드 집합을 저장할 전체 경로를 포함 하는 파일 이름일 수 있습니다.  
   
  다음 단계로 이동 하기 전에 XMLResponse .asp를 저장 하 고 닫습니다. 또한 기본 ADO 라이브러리 설치 폴더의 adovbs 파일을 XMLResponse 파일을 저장 한 폴더와 동일한 폴더에 복사 합니다.  
   
 ## <a name="step-4-receive-and-display-the-data"></a>4 단계: 데이터 받기 및 표시  
- 이 단계에서는 XMLResponse 파일을 가리키는 RDS (포함 된 [DataControl 개체)](../../../ado/reference/rds-api/datacontrol-object-rds.md) 개체를 사용 하 여 레코드 집합을 가져오는 HTML 파일을 만듭니다. 메모장과 같은 텍스트 편집기를 사용 하 여 default.htm을 열고 다음 코드를 추가 합니다. URL의 "sqlserver"를 서버 이름으로 바꿉니다.  
+ 이 단계에서는 XMLResponse 파일을 가리키는 RDS (포함 된 [DataControl 개체)](../../reference/rds-api/datacontrol-object-rds.md) 개체를 사용 하 여 레코드 집합을 가져오는 HTML 파일을 만듭니다. 메모장과 같은 텍스트 편집기를 사용 하 여 default.htm을 열고 다음 코드를 추가 합니다. URL의 "sqlserver"를 서버 이름으로 바꿉니다.  
   
 ```  
 <HTML>  
@@ -113,6 +113,6 @@ ms.locfileid: "88452505"
   
  default.htm 파일을 닫고 XMLResponse .asp를 저장 한 폴더와 동일한 폴더에 저장 합니다. Internet Explorer 4.0 이상 버전을 사용 하 여 https://*sqlserver*/Xmlpersist/default.htm URL을 열고 결과를 관찰 합니다. 데이터는 바인딩된 DHTML 테이블에 표시 됩니다. 이제 URL https:// *sqlserver* /Xmlpersist/xmlresponse.xml을 열고 결과를 관찰 합니다. XML이 표시 됩니다.  
   
-## <a name="see-also"></a>참고 항목  
- [Save 메서드](../../../ado/reference/ado-api/save-method.md)   
- [XML 형식으로 레코드 유지](../../../ado/guide/data/persisting-records-in-xml-format.md)
+## <a name="see-also"></a>관련 항목  
+ [Save 메서드](../../reference/ado-api/save-method.md)   
+ [XML 형식으로 레코드 유지](./persisting-records-in-xml-format.md)

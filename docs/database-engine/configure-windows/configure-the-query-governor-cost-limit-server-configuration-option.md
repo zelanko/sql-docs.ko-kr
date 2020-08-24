@@ -1,6 +1,6 @@
 ---
 title: query governor cost limit 서버 구성 옵션 구성 | Microsoft Docs
-description: 쿼리 관리자 비용 제한 옵션에 대해 알아봅니다. 이 옵션을 사용하여 SQL Server가 특정 시간 이내에 완료될 것으로 예상하는 쿼리로 실행을 제한하는 방법을 알아봅니다.
+description: 쿼리 관리자 비용 제한 옵션에 대해 알아봅니다. 이 옵션을 사용하여 쿼리 실행을 제한하는 방법을 확인해보세요.
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: e7b8f084-1052-4133-959b-cebf4add790f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 016ca109ae4ad609637a1919c29515dea2548083
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 02b34ab8d3c0a3efd79d7d136bf26401ba92fdf4
+ms.sourcegitcommit: bf8cf755896a8c964774a438f2bd461a2a648c22
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85785880"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88216733"
 ---
 # <a name="configure-the-query-governor-cost-limit-server-configuration-option"></a>query governor cost limit 서버 구성 옵션 구성
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  이 항목에서는 **또는** 을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 쿼리 관리자 비용 제한 [!INCLUDE[tsql](../../includes/tsql-md.md)]서버 구성 옵션을 구성하는 방법에 대해 설명합니다. 쿼리 관리자 비용 제한 옵션은 쿼리 실행 제한 시간에 대한 상한값을 지정합니다. 쿼리 비용이란 특정 하드웨어 구성에서 쿼리를 완료하는 데 필요한 예상 소요 시간(초)입니다. 이 옵션의 기본값은 0이며, 이 값은 쿼리 관리자 설정을 해제합니다. 기본값을 사용하면 시간 제한 없이 모든 쿼리를 실행할 수 있습니다. 0이나 음수가 아닌 값을 지정하면 쿼리 관리자가 그 값을 초과하는 예상 비용을 갖는 쿼리의 실행을 허용하지 않습니다.  
+이 항목에서는 **또는** 을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 쿼리 관리자 비용 제한 [!INCLUDE[tsql](../../includes/tsql-md.md)]서버 구성 옵션을 구성하는 방법에 대해 설명합니다. 비용 제한 옵션은 지정된 쿼리를 실행하는 데 허용되는 예상 비용의 상한을 지정합니다. 쿼리 비용은 CPU 시간, 메모리, 디스크 IO 등 예상 실행 요구 사항을 기반으로 쿼리 최적화 프로그램에서 결정되는 추상 수치입니다. 특정 하드웨어 구성에서 쿼리를 완료하는 데 필요한 예상 경과 시간(초)입니다. 이러한 개략적 수치는 실행 중인 인스턴스에서 쿼리를 완료하는 데 필요한 시간과는 다릅니다. 상대적 측정값으로 취급되어야 합니다. 이 옵션의 기본값은 0이며, 이 값은 쿼리 관리자 설정을 해제합니다. 값을 0으로 설정하면 모든 쿼리를 시간 제한 없이 실행할 수 있습니다. 0이나 음수가 아닌 값을 지정하면 쿼리 관리자가 그 값을 초과하는 예상 비용을 갖는 쿼리의 실행을 허용하지 않습니다.   
   
  **항목 내용**  
   
@@ -66,7 +66,7 @@ ms.locfileid: "85785880"
   
 3.  **쿼리 관리자를 사용하여 장기 실행 쿼리 방지** 확인란을 선택하거나 선택을 취소합니다.  
   
-     이 확인란을 선택하는 경우 아래 입력란에 양수 값을 입력합니다. 쿼리 관리자는 이 값을 사용하여 실행 길이가 이 값을 초과하는 쿼리는 실행할 수 없도록 합니다.  
+     이 확인란을 선택하는 경우 아래 입력란에 양수 값을 입력합니다. 쿼리 관리자는 이 값을 사용하여 예상 비용이 해당 값을 초과하는 쿼리는 실행을 허용하지 않습니다.  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   
@@ -76,7 +76,7 @@ ms.locfileid: "85785880"
   
 2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 이 예제에서는 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 를 사용하여 `query governor cost limit` 옵션 값을 `120` 초로 설정하는 방법을 보여 줍니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 이 예에서는 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)를 사용하여 `query governor cost limit` 옵션의 값을 `120`의 예상 쿼리 비용 상한으로 설정하는 방법을 보여 줍니다.
   
 ```sql  
 USE AdventureWorks2012 ;  

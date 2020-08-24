@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 3a5db5f0-094b-46e1-939b-d9fa9417a406
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 20145847731b831bcfb21ca27c0229b064e33286
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 36d5deae232c609473b2cd81b203559343df2d00
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441895"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777262"
 ---
 # <a name="stayinsync-property-example-vc"></a>StayInSync 속성 예제(VC++)
-이 예에서는 [StayInSync](../../../ado/reference/ado-api/stayinsync-property.md) 속성을 통해 계층적 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)의 행에 쉽게 액세스 하는 방법을 보여 줍니다.  
+이 예에서는 [StayInSync](./stayinsync-property.md) 속성을 통해 계층적 [레코드 집합](./recordset-object-ado.md)의 행에 쉽게 액세스 하는 방법을 보여 줍니다.  
   
- 외부 루프에는 각 저자의 성과 이름, 상태 및 식별이 표시 됩니다. 각 행에 대해 추가 된 **레코드 집합** 은 [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) 컬렉션에서 검색 되 고 부모 **레코드 집합이** 새 행으로 이동 될 때마다 **StayInSync** 속성에 의해 자동으로 **rstTitleAuthor** 에 할당 됩니다. 내부 루프는 추가 된 레코드 집합의 각 행에서 4 개의 필드를 표시 합니다.  
+ 외부 루프에는 각 저자의 성과 이름, 상태 및 식별이 표시 됩니다. 각 행에 대해 추가 된 **레코드 집합** 은 [Fields](./fields-collection-ado.md) 컬렉션에서 검색 되 고 부모 **레코드 집합이** 새 행으로 이동 될 때마다 **StayInSync** 속성에 의해 자동으로 **rstTitleAuthor** 에 할당 됩니다. 내부 루프는 추가 된 레코드 집합의 각 행에서 4 개의 필드를 표시 합니다.  
   
 ```  
 // BeginStayInSyncCpp.cpp  
@@ -145,6 +145,6 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Fields 컬렉션 (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
- [레코드 집합 개체 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [StayInSync 속성](../../../ado/reference/ado-api/stayinsync-property.md)
+ [Fields 컬렉션 (ADO)](./fields-collection-ado.md)   
+ [레코드 집합 개체 (ADO)](./recordset-object-ado.md)   
+ [StayInSync 속성](./stayinsync-property.md)

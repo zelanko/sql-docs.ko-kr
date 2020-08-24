@@ -1,7 +1,7 @@
 ---
 title: SQL Server on RHEL의 무인 설치
 titleSuffix: SQL Server
-description: SQL Server 스크립트 샘플 - RHEL(Red Hat Enterprise Linux)의 무인 설치
+description: 샘플 Bash 스크립트를 사용하여 대화형 입력 없이 RHEL(Red Hat Enterprise Linux)에서 SQL Server 2017을 설치합니다.
 ms.custom: seo-lt-2019
 author: VanMSFT
 ms.author: vanto
@@ -9,12 +9,12 @@ ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: a5681a7700e77d0cc5fd4afb7267a21f298c1f87
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: fda9b1459cf7cd0b15252cfb0e51e0d3ad4e9374
+ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894133"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88089027"
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-red-hat-enterprise-linux"></a>샘플: Red Hat Enterprise Linux를 위한 무인 SQL Server 설치 스크립트
 

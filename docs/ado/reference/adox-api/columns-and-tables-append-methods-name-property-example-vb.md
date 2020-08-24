@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 678e5546-df5d-4cd0-bfe9-6cf13cb385c0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8877bc3e17dfb38be273bd0782643d7fad00f53c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0a62e610ae47243e8200a9422639569e91ce2c4c
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440305"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88771052"
 ---
 # <a name="columns-and-tables-append-methods-name-property-example-vb"></a>Columns 및 Tables Append 메서드, Name 속성 예제 (VB)
 다음 코드에서는 새 테이블을 만드는 방법을 보여 줍니다.  
@@ -68,10 +68,10 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Append 메서드 (ADOX Columns)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
- [Append 메서드 (ADOX Tables)](../../../ado/reference/adox-api/append-method-adox-tables.md)   
- [Column 개체 (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
- [Columns 컬렉션 (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
- [Name 속성 (ADOX)](../../../ado/reference/adox-api/name-property-adox.md)   
- [Table 개체 (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)   
- [Tables 컬렉션(ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)
+ [Append 메서드 (ADOX Columns)](./append-method-adox-columns.md)   
+ [Append 메서드 (ADOX Tables)](./append-method-adox-tables.md)   
+ [Column 개체 (ADOX)](./column-object-adox.md)   
+ [Columns 컬렉션 (ADOX)](./columns-collection-adox.md)   
+ [Name 속성 (ADOX)](./name-property-adox.md)   
+ [Table 개체 (ADOX)](./table-object-adox.md)   
+ [Tables 컬렉션(ADOX)](./tables-collection-adox.md)

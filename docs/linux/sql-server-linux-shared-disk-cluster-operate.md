@@ -1,6 +1,6 @@
 ---
 title: FCI 수동 장애 조치 - SQL Server on Linux
-description: SQL Server on Linux에서 FCI(장애 조치 클러스터 인스턴스)를 수동으로 장애 조치하는 방법을 알아봅니다.
+description: SQL Server on Linux 특히 Red Hat Linux Enterprise, Ubuntu 및 Suse Linux Enterprise Server에서 FCI(장애 조치(failover) 클러스터 인스턴스)를 수동으로 장애 조치하는 방법을 알아봅니다.
 ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 58c30fc1e88ec3b7e90549f28b13f91e3330675d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2be454ad7d2ca85f1648ba7f98ea503627d6c437
+ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897254"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88088758"
 ---
 # <a name="operate-failover-cluster-instance---sql-server-on-linux"></a>장애 조치(failover) 클러스터 인스턴스 작동 - SQL Server on Linux
 
@@ -47,7 +47,7 @@ RHEL(Red Hat Enterprise Linux) 또는 Ubuntu 서버에서 수동 장애 조치�
 
    \<NewHostNode>는 FCI를 호스트하려는 클러스터 노드의 이름입니다. 
 
-   승인이 수신되지 않습니다.
+   승인은 받지 않습니다.
 
 2.  수동 장애 조치(failover) 중 Pacemaker는 수동으로 이동하도록 선택한 리소스에 대한 위치 제약 조건을 만듭니다. 이 제약 조건을 확인하려면 `sudo pcs constraint`를 실행합니다.
 

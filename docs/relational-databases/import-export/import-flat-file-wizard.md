@@ -13,12 +13,12 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 88fb60179a5503d3c41bbc253c1f7373c1d97184
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 074dc46c36f4b90bebc241840eb137549e3bbd4d
+ms.sourcegitcommit: 2b4baae583a5430f2e2ec76192ef1af3f55b25e8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85751221"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88251497"
 ---
 # <a name="import-flat-file-to-sql-wizard"></a>SQL 마법사로 플랫 파일 가져오기
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -45,50 +45,70 @@ PROSE는 입력 파일의 데이터 패턴을 분석하여 열 이름, 형식, �
 2. SQL Server 데이터베이스 엔진의 인스턴스 또는 localhost에 연결합니다.
 3. **데이터베이스**를 확장하고, 데이터베이스(아래 예제에서는 테스트)를 마우스 오른쪽 단추로 클릭하고, **작업**을 가리킨 다음, 데이터 가져오기 위에 있는 **플랫 파일 가져오기**를 클릭합니다.
 
-![마법사 메뉴](media/import-flat-file-wizard/importffmenu.png)
+![마법사 메뉴](media/import-flat-file-wizard/import-flat-file-menu.png)
 
 마법사의 다른 기능에 대해 자세히 알아보려면 다음 자습서를 참조하세요.
 
 ## <a name="tutorial"></a>자습서
 이 자습서의 목적을 위해 사용자 고유의 플랫 파일을 자유롭게 사용할 수 있어야 합니다. 그렇지 않으면 이 자습서는 사용자가 복사할 수 있는 Excel에서 다음 CSV를 사용합니다. 이 CSV를 사용하는 경우 제목을 **example.csv**로 지정하고 바탕 화면처럼 쉬운 위치에 csv로 저장해야 합니다.
 
-![마법사 Excel](media/import-flat-file-wizard/importffexample.png)
+![마법사 Excel](media/import-flat-file-wizard/import-flat-file-example.png)
 
 ### <a name="step-1-access-wizard-and-intro-page"></a>1단계: 마법사 액세스 및 소개 페이지
 [여기](#started) 설명된 대로 마법사에 액세스합니다.
 
 마법사의 첫 페이지는 시작 페이지입니다. 이 페이지를 다시 표시하지 않으려면 **이 시작 페이지를 다시 표시 안 함**을 클릭하면 됩니다.
 
-![마법사 소개](media/import-flat-file-wizard/importffintro.png)
+![마법사 소개](media/import-flat-file-wizard/import-flat-file-intro.png)
 
 ### <a name="step-2-specify-input-file"></a>2단계: 입력 파일 지정
 찾아보기를 클릭하여 입력 파일을 선택합니다. 기본적으로 마법사는 .csv 및 .txt 파일을 검색합니다. 
 
 새 테이블 이름은 고유해야 하며, 그렇지 않은 경우 더 이상 마법사에서 이동할 수 없습니다.
 
-![마법사 지정](media/import-flat-file-wizard/importffspecify.png)
+![마법사 지정](media/import-flat-file-wizard/import-flat-file-specify.png)
 
 ### <a name="step-3-preview-data"></a>3단계: 데이터 미리 보기
 마법사에서는 첫 50개 행을 볼 수 있는 미리 보기가 생성됩니다. 문제가 있는 경우 취소를 클릭하고, 그렇지 않으면 다음 페이지로 진행합니다.
 
-![마법사 미리 보기](media/import-flat-file-wizard/importffpreview.png)
+![마법사 미리 보기](media/import-flat-file-wizard/import-flat-file-preview.png)
 
 ### <a name="step-4-modify-columns"></a>4단계: 열 수정
 마법사에서는 올바른 열 이름, 데이터 형식 등을 식별합니다. 올바르지 않은 경우(예를 들어 데이터 형식이 int가 아닌 float이여야 함) 다음에서 필드를 편집할 수 있습니다.
 
 준비가 되면 계속 진행합니다.
 
-![마법사 수정](media/import-flat-file-wizard/importffmodify.png)
+![마법사 수정](media/import-flat-file-wizard/import-flat-file-modify.png)
 
 ### <a name="step-5-summary"></a>5단계: 요약
 다음은 현재 구성을 표시하는 간단한 요약 페이지입니다. 문제가 있는 경우 이전 섹션으로 다시 이동할 수 있습니다. 그렇지 않으면 마침을 클릭하여 가져오기 프로세스를 시도합니다.
 
-![마법사 요약](media/import-flat-file-wizard/importffsummary.png)
+![마법사 요약](media/import-flat-file-wizard/import-flat-file-summary.png)
 
 ### <a name="step-6-results"></a>6단계: 결과
 이 페이지는 가져오기 작업의 성공 여부를 나타냅니다. 녹색 확인 표시가 나타나는 경우 성공, 그렇지 않으면 모든 오류에 대해 구성 또는 입력 파일을 검토해야 할 수 있습니다.
 
-![마법사 결과](media/import-flat-file-wizard/importffresults.png)
+![마법사 결과](media/import-flat-file-wizard/import-flat-file-results.png)
+
+## <a name="troubleshooting"></a>문제 해결
+플랫 파일 가져오기 마법사는 처음 200개의 행을 기반으로 데이터 형식을 검색합니다.  플랫 파일의 데이터가 자동으로 검색된 데이터 형식에 더 이상 맞지 않는 시나리오에서는 가져오는 중에 오류가 발생합니다. 오류 메시지는 다음과 유사합니다.
+```
+Error inserting data into table. (Microsoft.SqlServer.Prose.Import)
+The given value of type String from the data source cannot be converted to type nvarchar of the specified target column. (System.Data)
+String or binary data would be truncated. (System.Data)
+```
+이러한 오류를 완화하기 위한 전술은 다음과 같습니다.
+- [열 수정 단계](#step-4-modify-columns)에서 nvarchar 열의 길이와 같은 데이터 형식 크기를 확장하여 플랫 파일의 나머지 부분에 있는 데이터의 변형을 보정할 수 있습니다.
+- [열 수정 단계](#step-4-modify-columns)에서 특히 더 작은 수로 오류 보고를 사용하도록 설정하면 선택한 데이터 형식에 맞지 않는 데이터가 포함된 플랫 파일의 행이 표시됩니다. 예를 들어 두 번째 행에서 오류가 발생하는 플랫 파일의 경우 범위가 1인 오류 보고가 있는 가져오기를 실행하면 특정 오류 메시지를 제공합니다.  해당 위치에서 직접 파일을 검사하면 식별된 행의 데이터를 기반으로 데이터 형식에 대한 더 많은 대상 변경 내용이 제공될 수 있습니다.
+
+![오류 보고 결과](media/import-flat-file-wizard/import-flat-file-error.png)
+
+```
+Error inserting data into table occured while inserting rows 1 - 2. (Microsoft.SqlServer.Prose.Import)
+The given value of type String from the data source cannot be converted to type float of the specified target column. (System.Data)
+Failed to convert parameter value from a String to a Double. (System.Data)
+```
+
 
 ## <a name="learn-more"></a>자세한 정보
 

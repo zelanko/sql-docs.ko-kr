@@ -14,25 +14,25 @@ helpviewer_keywords:
 ms.assetid: 8a3bb608-66d7-4128-a3ef-84cb0556de0d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 43657b3dddcf53f9aa9df507c646b7f23088f0ef
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 52884baca793ae9f5cb7b849c9f50d2399f0cf5e
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441635"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777012"
 ---
 # <a name="update-resync-property-dynamic-ado"></a>Update Resync 속성 - 동적(ADO)
-[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) 메서드 뒤에 암시적 다시 [동기화](../../../ado/reference/ado-api/resync-method.md) 메서드 작업이 오고 그 뒤에 해당 작업의 범위가 있는지 여부를 지정 합니다.  
+[UpdateBatch](./updatebatch-method.md) 메서드 뒤에 암시적 다시 [동기화](./resync-method.md) 메서드 작업이 오고 그 뒤에 해당 작업의 범위가 있는지 여부를 지정 합니다.  
   
 ## <a name="settings-and-return-values"></a>설정 및 반환 값  
- 하나 이상의 [ADCPROP_UPDATERESYNC_ENUM](../../../ado/reference/ado-api/adcprop-updateresync-enum.md) 값을 설정 하거나 반환 합니다.  
+ 하나 이상의 [ADCPROP_UPDATERESYNC_ENUM](./adcprop-updateresync-enum.md) 값을 설정 하거나 반환 합니다.  
   
 ## <a name="remarks"></a>설명  
  값의 나머지 조합을 이미 나타내는 adResyncAll를 제외 하 고 ADCPROP_UPDATERESYNC_ENUM의 값을 결합할 수 있습니다.  
   
  상수 **adResyncConflicts** 는 재 동기화 값을 기본 값으로 저장 하지만 보류 중인 변경 내용은 재정의 하지 않습니다.  
   
- **업데이트 다시 동기화** 는 [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) 속성이 **AdUseClient**로 설정 된 경우 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체 [속성](../../../ado/reference/ado-api/properties-collection-ado.md) 컬렉션에 추가 되는 동적 속성입니다.  
+ **업데이트 다시 동기화** 는 [CursorLocation](./cursorlocation-property-ado.md) 속성이 **AdUseClient**로 설정 된 경우 [레코드 집합](./recordset-object-ado.md) 개체 [속성](./properties-collection-ado.md) 컬렉션에 추가 되는 동적 속성입니다.  
   
 ## <a name="applies-to"></a>적용 대상  
- [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [레코드 집합 개체(ADO)](./recordset-object-ado.md)

@@ -30,12 +30,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: ea604f3144f371047c00171947c0b7ceaeaa602f
-ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
+ms.openlocfilehash: 528eedeb18de9b0d1a8558edecccf5470a374eda
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87988392"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479158"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET 옵션(Transact-SQL)
 
@@ -741,14 +741,14 @@ FORCED
 <a name="query-store"></a> **\<query_store_options> ::=**      
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 시작)
 
-ON | **OFF** | CLEAR [ ALL ]     
+ON | **OFF** [ FORCED ] | CLEAR [ ALL ]     
 이 데이터베이스에서 쿼리 저장소를 사용할 수 있는지 여부를 제어하고, 쿼리 저장소의 내용 제거도 제어합니다. 자세한 내용은 [쿼리 스토리지 사용 시나리오](../../relational-databases/performance/query-store-usage-scenarios.md)를 참조하세요.
 
 켜기     
 쿼리 저장소를 사용하도록 설정합니다.
 
 OFF      
-쿼리 저장소를 사용하지 않도록 합니다. OFF가 기본값입니다. 
+쿼리 저장소를 사용하지 않도록 합니다. OFF가 기본값입니다. FORCED는 선택 사항입니다. FORCED는 실행 중인 모든 쿼리 저장소 백그라운드 태스크를 중단하고, 쿼리 저장소가 해제된 경우 동기 플러시를 건너뜁니다. 쿼리 저장소가 최대한 빨리 종료되도록 합니다. 실질적으로 쿼리 저장소를 즉시 해제합니다. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU6에 FORCED가 도입됩니다.
 
 > [!NOTE]  
 > 쿼리 저장소는 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 단일 데이터베이스 및 탄력적 풀에서 사용하지 않도록 설정할 수 없습니다. `ALTER DATABASE [database] SET QUERY_STORE = OFF`를 실행하면 경고 `'QUERY_STORE=OFF' is not supported in this version of SQL Server.`가 반환됩니다. 
@@ -1868,10 +1868,13 @@ ON | OFF | CLEAR [ ALL ]
 이 데이터베이스에서 쿼리 저장소를 사용할 수 있는지 여부를 제어하고, 쿼리 저장소의 내용 제거도 제어합니다.
 
 켜기     
-쿼리 저장소를 사용하도록 설정합니다.
+쿼리 저장소를 사용하도록 설정합니다. 기본값은 ON입니다.
 
 OFF     
-쿼리 저장소를 사용하지 않도록 합니다. 이것은 기본값입니다.
+쿼리 저장소를 사용하지 않도록 합니다. 
+
+> [!NOTE]  
+> 쿼리 저장소는 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 단일 데이터베이스 및 탄력적 풀에서 사용하지 않도록 설정할 수 없습니다. `ALTER DATABASE [database] SET QUERY_STORE = OFF`를 실행하면 경고 `'QUERY_STORE=OFF' is not supported in this version of SQL Server.`가 반환됩니다. 
 
 CLEAR     
 쿼리 저장소의 내용을 제거합니다.
@@ -3323,7 +3326,7 @@ OFF
 
 ### <a name="remarks"></a>설명
 
-이 명령은 `master` 데이터베이스에 연결되어 있는 동안 실행되어야 합니다. 사용자 데이터베이스에 대해 READ_COMMITTED_SNAPSHOT을 켜거나 끄면 이 데이터베이스에 열려 있는 모든 연결이 종료됩니다. 데이터베이스 유지 관리 기간 동안 이 변경을 수행하거나 ALTER DATABSE 명령을 실행하는 연결을 제외하고 데이터베이스에 대한 활성 연결이 없을 때까지 기다릴 수 있습니다.  데이터베이스가 단일 사용자 모드에 있을 필요는 없습니다. 세션 수준에서 READ_COMMITTED_SNAPSHOT 설정을 변경하는 것은 지원되지 않습니다.  데이터베이스에 대한이 설정을 확인하려면 is_read_committed_snapshot_on의 열을 확인합니다.
+이 명령은 `master` 데이터베이스에 연결되어 있는 동안 실행되어야 합니다. 사용자 데이터베이스에 대해 READ_COMMITTED_SNAPSHOT을 켜거나 끄면 이 데이터베이스에 열려 있는 모든 연결이 종료됩니다. 데이터베이스 유지 관리 기간에 이 내용을 변경하거나 ALTER DATABASE 명령을 실행하는 연결 이외의 활성화된 데이터베이스 연결이 없을 때까지 대기하는 것이 좋습니다.  데이터베이스가 단일 사용자 모드에 있을 필요는 없습니다. 세션 수준에서 READ_COMMITTED_SNAPSHOT 설정을 변경하는 것은 지원되지 않습니다.  데이터베이스에 대한이 설정을 확인하려면 is_read_committed_snapshot_on의 열을 확인합니다.
 
 READ_COMMITTED_SNAPSHOT이 설정된 데이터베이스에서 여러 데이터 버전이 있는 경우 버전의 검사로 인해 쿼리 성능이 저하될 수 있습니다. 트랜잭션을 오래 열어두면 데이터베이스 크기도 증가할 수 있습니다. 이 문제는 트랜잭션의 데이터 변경 내용으로 인해 버전 정리가 차단되는 경우에 발생합니다.  
 

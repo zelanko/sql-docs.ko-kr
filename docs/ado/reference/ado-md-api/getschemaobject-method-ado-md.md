@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 36b754b4-6b17-4dd1-a925-bca46938b7c4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 19af2bf0e7058a8f483da25c0db926ebc19807c6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b0a54b02cf748d8ff1144e50e3531295dbfe8c55
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441015"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778122"
 ---
 # <a name="getschemaobject-method-ado-md"></a>GetSchemaObject 메서드(ADO MD)
-[UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md)에 의해 ADO MD 스키마 개체 ([차원](../../../ado/reference/ado-md-api/dimension-object-ado-md.md), [계층](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md), [수준](../../../ado/reference/ado-md-api/level-object-ado-md.md)또는 [멤버](../../../ado/reference/ado-md-api/member-object-ado-md.md))를 검색 합니다.  
+[UniqueName](./uniquename-property-ado-md.md)에 의해 ADO MD 스키마 개체 ([차원](./dimension-object-ado-md.md), [계층](./hierarchy-object-ado-md.md), [수준](./level-object-ado-md.md)또는 [멤버](./member-object-ado-md.md))를 검색 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -36,7 +36,7 @@ Set object = CubeDef.GetSchemaObject (ObjType, UniqueName)
   
 #### <a name="parameters"></a>매개 변수  
  *ObjType*  
- 검색할 스키마 개체 (차원, 계층, 수준 또는 멤버)의 유형을 지정 하는 [SchemaObjectTypeEnum](../../../ado/reference/ado-md-api/schemaobjecttypeenum.md) 값입니다.  
+ 검색할 스키마 개체 (차원, 계층, 수준 또는 멤버)의 유형을 지정 하는 [SchemaObjectTypeEnum](./schemaobjecttypeenum.md) 값입니다.  
   
  *UniqueName*  
  검색할 개체의 **UniqueName** 속성 값을 지정 하는 **문자열** 입니다.  
@@ -45,7 +45,7 @@ Set object = CubeDef.GetSchemaObject (ObjType, UniqueName)
  **Getschemaobject** 는 **UniqueName** 속성에 지정 된 고유 이름을 사용 하 여 개체를 검색 합니다. 부모 개체의 이름을 알 필요는 없으며 스키마 개체를 검색 하기 위해 부모 컬렉션을 채울 필요가 없습니다.  
   
 ## <a name="applies-to"></a>적용 대상  
- [CubeDef 개체(ADO MD)](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)  
+ [CubeDef 개체(ADO MD)](./cubedef-object-ado-md.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [CubeDef 개체(ADO MD)](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)
+ [CubeDef 개체(ADO MD)](./cubedef-object-ado-md.md)

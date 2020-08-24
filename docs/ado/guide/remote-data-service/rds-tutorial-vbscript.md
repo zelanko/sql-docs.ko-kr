@@ -15,20 +15,20 @@ helpviewer_keywords:
 ms.assetid: e2a48c4d-88b1-43ff-a202-9cdec54997d2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ea18ea1d5df16d26b47bcddcdf284e51dc0c2fcf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6c8e93e72833e649f46ebda5885d3a16c5afece6
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452085"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759513"
 ---
 # <a name="rds-tutorial-vbscript"></a>RDS 자습서(VBScript)
-Microsoft Visual Basic Scripting Edition으로 작성 된 RDS 자습서입니다. 이 자습서의 용도에 대 한 설명은 [RDS 자습서](../../../ado/guide/remote-data-service/rds-tutorial.md)를 참조 하십시오.  
+Microsoft Visual Basic Scripting Edition으로 작성 된 RDS 자습서입니다. 이 자습서의 용도에 대 한 설명은 [RDS 자습서](./rds-tutorial.md)를 참조 하십시오.  
   
 > [!IMPORTANT]
 >  Windows 8 및 Windows Server 2012부터 RDS 서버 구성 요소는 더 이상 Windows 운영 체제에 포함 되지 않습니다 (자세한 내용은 Windows 8 및 [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) 참조). 이후 버전의 Windows에서는 RDS 클라이언트 구성 요소가 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. RDS를 사용 하는 응용 프로그램은 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)로 마이그레이션해야 합니다.  
   
- 이 자습서에서는 [RDS입니다. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) 및 [RDS. 스페이스](../../../ado/reference/rds-api/dataspace-object-rds.md) 는 디자인 타임에 생성 됩니다. 즉,와 같이 개체 태그로 정의 됩니다 `<OBJECT>...</OBJECT>` . 또는 런타임에 [RDS (CreateObject 메서드)](../../../ado/reference/rds-api/createobject-method-rds.md) 메서드를 사용 하 여 만들 수 있습니다. 예: **RDS. ** 다음과 같이 DataControl 개체를 만들 수 있습니다.  
+ 이 자습서에서는 [RDS입니다. DataControl](../../reference/rds-api/datacontrol-object-rds.md) 및 [RDS. 스페이스](../../reference/rds-api/dataspace-object-rds.md) 는 디자인 타임에 생성 됩니다. 즉,와 같이 개체 태그로 정의 됩니다 `<OBJECT>...</OBJECT>` . 또는 런타임에 [RDS (CreateObject 메서드)](../../reference/rds-api/createobject-method-rds.md) 메서드를 사용 하 여 만들 수 있습니다. 예: **RDS. ** 다음과 같이 DataControl 개체를 만들 수 있습니다.  
   
 ```vb
 Set DC = Server.CreateObject("RDS.DataControl")  
@@ -59,7 +59,7 @@ Set DC = Server.CreateObject("RDS.DataControl")
  그러나이 자습서에서는 허수 서버 "해당 서버"를 사용 합니다.  
   
 > [!NOTE]
->  **ByRef** 인수의 데이터 형식에 주의 합니다. VBScript에서는 변수 형식을 지정할 수 없으므로 항상 **Variant**를 전달 해야 합니다. HTTP를 사용 하는 경우 rds를 사용 하 여 호출 하는 경우 비 변형이 필요한 메서드에 Variant를 전달할 수 있습니다 **. 공간** 개체 [CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md) 메서드입니다. DCOM 또는 in-process 서버를 사용 하는 경우 클라이언트 및 서버 쪽의 매개 변수 형식과 일치 해야 합니다. 그렇지 않으면 "형식 불일치" 오류가 표시 됩니다.  
+>  **ByRef** 인수의 데이터 형식에 주의 합니다. VBScript에서는 변수 형식을 지정할 수 없으므로 항상 **Variant**를 전달 해야 합니다. HTTP를 사용 하는 경우 rds를 사용 하 여 호출 하는 경우 비 변형이 필요한 메서드에 Variant를 전달할 수 있습니다 **. 공간** 개체 [CreateObject](../../reference/rds-api/createobject-method-rds.md) 메서드입니다. DCOM 또는 in-process 서버를 사용 하는 경우 클라이언트 및 서버 쪽의 매개 변수 형식과 일치 해야 합니다. 그렇지 않으면 "형식 불일치" 오류가 표시 됩니다.  
   
 ```vb
 Set DF1 = DS1.CreateObject("RDSServer.DataFactory", "https://yourServer")  
@@ -139,5 +139,5 @@ End Sub
   
  **이 자습서의 마지막 부분입니다.**  
   
-## <a name="see-also"></a>참고 항목  
- [RDS 자습서](../../../ado/guide/remote-data-service/rds-tutorial.md)   
+## <a name="see-also"></a>관련 항목  
+ [RDS 자습서](./rds-tutorial.md)

@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 5d8132c0-7ca2-4f86-8336-1b34213869ad
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 00a15eed4abf9ceec57d89e147e3b489d126aab8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 186ef16dfaafac2151436a3cd63e944de2468457
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440835"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777962"
 ---
 # <a name="membertypeenum"></a>MemberTypeEnum
-[멤버](../../../ado/reference/ado-md-api/member-object-ado-md.md) 개체의 [Type](../../../ado/reference/ado-md-api/type-property-ado-md.md) 속성에 대 한 설정을 지정 합니다.  
+[멤버](./member-object-ado-md.md) 개체의 [Type](./type-property-ado-md.md) 속성에 대 한 설정을 지정 합니다.  
   
 |상수|값|설명|  
 |--------------|-----------|-----------------|  

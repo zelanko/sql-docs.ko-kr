@@ -16,24 +16,24 @@ helpviewer_keywords:
 ms.assetid: 21c97651-297f-469f-b5b5-c48af72b62a8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a4356ad974c45e16cec32d45fa2ed6aeb42209f5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 929421784aabdcd3e414d6005fc3d48ade2f68e2
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442175"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777542"
 ---
 # <a name="schemaenum"></a>SchemaEnum
-[OpenSchema](../../../ado/reference/ado-api/openschema-method.md) 메서드가 검색 하는 스키마 **레코드 집합** 의 유형을 지정 합니다.  
+[OpenSchema](./openschema-method.md) 메서드가 검색 하는 스키마 **레코드 집합** 의 유형을 지정 합니다.  
   
 ## <a name="remarks"></a>설명  
- 각 ADO 상수에 대해 반환 되는 함수 및 열에 대 한 추가 정보는 부록 B: OLE DB 프로그래머 참조의 [스키마 행 집합](https://msdn.microsoft.com/2b5fbf03-e50d-44ee-bc57-5a57666c55f1) 에 있는 항목에서 찾을 수 있습니다. 각 항목의 이름은 다음 표의 설명 섹션에서 괄호 안에 나열 됩니다.  
+ 각 ADO 상수에 대해 반환 되는 함수 및 열에 대 한 추가 정보는 부록 B: OLE DB 프로그래머 참조의 [스키마 행 집합](/previous-versions/windows/desktop/ms712921(v=vs.85)) 에 있는 항목에서 찾을 수 있습니다. 각 항목의 이름은 다음 표의 설명 섹션에서 괄호 안에 나열 됩니다.  
   
- 각 ADO MD 상수에 대해 반환 되는 함수 및 열에 대 한 추가 정보는 olap (온라인 분석 처리) 설명서에 대 한 OLE DB의 [Olap 개체 및 스키마 행 집합](https://msdn.microsoft.com/d20bb2a6-68bd-423f-9ec8-eb930cd0c144) 에 대 한 OLE DB 항목에서 찾을 수 있습니다. 각 항목의 이름은 다음 표의 설명 열에 괄호로 묶여 나열 됩니다.  
+ 각 ADO MD 상수에 대해 반환 되는 함수 및 열에 대 한 추가 정보는 olap (온라인 분석 처리) 설명서에 대 한 OLE DB의 [Olap 개체 및 스키마 행 집합](/previous-versions/windows/desktop/ms723056(v=vs.85)) 에 대 한 OLE DB 항목에서 찾을 수 있습니다. 각 항목의 이름은 다음 표의 설명 열에 괄호로 묶여 나열 됩니다.  
   
- ADO [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) 토픽의 Description 열을 참조 하 여 OLE DB 설명서에 있는 열의 데이터 형식을 ado 데이터 형식으로 변환할 수 있습니다. 예를 들어 **DBTYPE_WSTR** 의 OLE DB 데이터 형식은 **ADWCHAR**의 ADO 데이터 형식에 해당 합니다.  
+ ADO [DataTypeEnum](./datatypeenum.md) 토픽의 Description 열을 참조 하 여 OLE DB 설명서에 있는 열의 데이터 형식을 ado 데이터 형식으로 변환할 수 있습니다. 예를 들어 **DBTYPE_WSTR** 의 OLE DB 데이터 형식은 **ADWCHAR**의 ADO 데이터 형식에 해당 합니다.  
   
- ADO는 상수, **Adschemadbinfokeywords** 및 **adSchemaDBInfoLiterals**에 대 한 스키마와 유사한 결과를 생성 합니다. ADO는 **레코드 집합**을 만든 다음 각 행을 **IDBInfo:: Getkeywords** 및 **IDBInfo:: GetLiteralInfo** 메서드에서 각각 반환 된 값으로 채웁니다. 이러한 메서드에 대 한 추가 정보는 OLE DB 프로그래머 참조의 [IDBInfo](https://msdn.microsoft.com/3f5ad97f-3fc6-4f21-b691-f6911e4007f3) 섹션에서 찾을 수 있습니다.  
+ ADO는 상수, **Adschemadbinfokeywords** 및 **adSchemaDBInfoLiterals**에 대 한 스키마와 유사한 결과를 생성 합니다. ADO는 **레코드 집합**을 만든 다음 각 행을 **IDBInfo:: Getkeywords** 및 **IDBInfo:: GetLiteralInfo** 메서드에서 각각 반환 된 값으로 채웁니다. 이러한 메서드에 대 한 추가 정보는 OLE DB 프로그래머 참조의 [IDBInfo](/previous-versions/windows/desktop/ms713663(v=vs.85)) 섹션에서 찾을 수 있습니다.  
   
 |상수|값|설명|제약 조건 열|  
 |--------------|-----------|-----------------|------------------------|  
@@ -127,4 +127,4 @@ ms.locfileid: "88442175"
 |AdoEnums. VIEWTABLEUSAGE|  
   
 ## <a name="applies-to"></a>적용 대상  
- [OpenSchema 메서드](../../../ado/reference/ado-api/openschema-method.md)
+ [OpenSchema 메서드](./openschema-method.md)

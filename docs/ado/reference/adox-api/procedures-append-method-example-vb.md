@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: ce83b966-474b-4f57-8eb9-370996dfc5c0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 85b13a87e09d7c95ecad8b6ed283b8d8066b22f2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b8b9b58c50a1e3c77a6239c73222ea7a1656b882
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439635"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88769642"
 ---
 # <a name="procedures-append-method-example-vb"></a>Procedures Append 메서드 예제(VB)
-다음 코드에서는 [Command](../../../ado/reference/ado-api/command-object-ado.md) 개체와 [procedure collection](../../../ado/reference/adox-api/procedures-collection-adox.md) [Append](../../../ado/reference/adox-api/append-method-adox-procedures.md) 메서드를 사용 하 여 기본 데이터 소스에 새 프로시저를 만드는 방법을 보여 줍니다.  
+다음 코드에서는 [Command](../ado-api/command-object-ado.md) 개체와 [procedure collection](./procedures-collection-adox.md) [Append](./append-method-adox-procedures.md) 메서드를 사용 하 여 기본 데이터 소스에 새 프로시저를 만드는 방법을 보여 줍니다.  
   
 ```  
 ' BeginCreateProcedureVB  
@@ -75,8 +75,8 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [ActiveConnection 속성 (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
- [Append 메서드 (ADOX 프로시저)](../../../ado/reference/adox-api/append-method-adox-procedures.md)   
- [Catalog 개체 (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [Procedure 개체 (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)   
- [Procedures 컬렉션(ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)
+ [ActiveConnection 속성 (ADOX)](./activeconnection-property-adox.md)   
+ [Append 메서드 (ADOX 프로시저)](./append-method-adox-procedures.md)   
+ [Catalog 개체 (ADOX)](./catalog-object-adox.md)   
+ [Procedure 개체 (ADOX)](./procedure-object-adox.md)   
+ [Procedures 컬렉션(ADOX)](./procedures-collection-adox.md)

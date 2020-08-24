@@ -1,6 +1,6 @@
 ---
 title: Linux에서 SQL Server Integration Services 설치
-description: 이 문서에서는 Linux에서 SSIS(SQL Server Integration Services)를 설치하는 방법을 설명합니다.
+description: 이 문서에서는 Linux에서 SSIS(SQL Server Integration Services)를 설치하는 방법을 설명합니다. Ubuntu 16.04 및 Red Hat Enterprise Linux에서 SSIS를 설치할 수 있습니다.
 author: lrtoyou1223
 ms.author: lle
 ms.reviewer: maghan
@@ -8,12 +8,12 @@ ms.date: 01/09/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 681ba70f94819d9e7d4f129cfaf409a968e80bca
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a8ec33ad6d3c2bfc9c8f3adab2acad2fdb74ce0d
+ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882523"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88088774"
 ---
 # <a name="install-sql-server-integration-services-ssis-on-linux"></a>Linux에서 SSIS(SQL Server Integration Services) 설치
 
@@ -217,7 +217,7 @@ sudo SSIS_PID=Developer ACCEPT_EULA=Y /opt/ssis/bin/ssis-conf -n setup
 | 환경 변수 | Description |
 |---|---|
 | ACCEPT_EULA | “Y” 등의 임의 값으로 설정된 경우 SQL Server 사용 조건에 동의합니다.|
-| SSIS_PID | SQL Server 버전 또는 제품 키를 설정합니다. 가능한 값은 다음과 같습니다.<ul><li>평가</li><li>Developer</li><li>Express</li><li>웹</li><li>Standard</li><li>Enterprise</li><li>제품 키</li></ul>제품 키를 지정하는 경우 제품 키는 *#####* - *#####* - *#####* - *#####* - *#####* 형식이어야 합니다. 여기서 *#* 은 문자 또는 숫자입니다.  |
+| SSIS_PID | SQL Server 버전 또는 제품 키를 설정합니다. 가능한 값은 다음과 같습니다.<ul><li>평가</li><li>개발자</li><li>Express</li><li>웹</li><li>Standard</li><li>Enterprise</li><li>제품 키</li></ul>제품 키를 지정하는 경우 제품 키는 *#####* - *#####* - *#####* - *#####* - *#####* 형식이어야 합니다. 여기서 *#* 은 문자 또는 숫자입니다.  |
 | | |
 
 ## <a name="next-steps"></a>다음 단계

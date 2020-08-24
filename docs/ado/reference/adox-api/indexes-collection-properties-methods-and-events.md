@@ -13,28 +13,28 @@ helpviewer_keywords:
 ms.assetid: b27b5c37-3db2-4831-a447-ee6442e24d87
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bcd274bd42235b489e017e7fd85bc3223008f57c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 76f89d20d2140f10cd0ab32e18a2878f191c53d4
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439905"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88770202"
 ---
 # <a name="indexes-collection-properties-methods-and-events"></a>Indexes 컬렉션 속성, 메서드 및 이벤트
 ## <a name="properties"></a>속성  
- [Count 속성](../../../ado/reference/ado-api/count-property-ado.md)  
+ [Count 속성](../ado-api/count-property-ado.md)  
   
- [Item 속성](../../../ado/reference/ado-api/item-property-ado.md)  
+ [Item 속성](../ado-api/item-property-ado.md)  
   
 ## <a name="methods"></a>메서드  
- [Append 메서드 (Indexes)](../../../ado/reference/adox-api/append-method-adox-indexes.md)  
+ [Append 메서드 (Indexes)](./append-method-adox-indexes.md)  
   
- [Delete 메서드 (Collections)](../../../ado/reference/adox-api/delete-method-adox-collections.md)  
+ [Delete 메서드 (Collections)](./delete-method-adox-collections.md)  
   
- [Refresh 메서드](../../../ado/reference/ado-api/refresh-method-ado.md)  
+ [Refresh 메서드](../ado-api/refresh-method-ado.md)  
   
 ## <a name="events"></a>이벤트  
  없음  
   
 ## <a name="see-also"></a>참고 항목  
- [Indexes 컬렉션(ADOX)](../../../ado/reference/adox-api/indexes-collection-adox.md)
+ [Indexes 컬렉션(ADOX)](./indexes-collection-adox.md)

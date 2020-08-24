@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: d90763b8-ba3f-48f8-95b2-e6a0e52296e1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bb766bddb637133dfb46af53187c8c34f99c2660
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7d30b4fdcea6d8334e94d8b02ef8e060e5060d69
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441295"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778362"
 ---
 # <a name="caption-property-ado-md"></a>Caption 속성(ADO MD)
-[수준](../../../ado/reference/ado-md-api/level-object-ado-md.md) 또는 [멤버](../../../ado/reference/ado-md-api/member-object-ado-md.md) 개체를 표시할 때 사용할 텍스트 캡션을 나타냅니다.  
+[수준](./level-object-ado-md.md) 또는 [멤버](./member-object-ado-md.md) 개체를 표시할 때 사용할 텍스트 캡션을 나타냅니다.  
   
 ## <a name="return-values"></a>반환 값  
  는 **문자열** 을 반환 하며 읽기 전용입니다.  
@@ -35,13 +35,13 @@ ms.locfileid: "88441295"
 
 :::row:::
     :::column:::
-        [Level 개체(ADO MD)](../../../ado/reference/ado-md-api/level-object-ado-md.md)  
+        [Level 개체(ADO MD)](./level-object-ado-md.md)  
     :::column-end:::
     :::column:::
-        [Member 개체(ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)  
+        [Member 개체(ADO MD)](./member-object-ado-md.md)  
     :::column-end:::
 :::row-end:::
 
 ## <a name="see-also"></a>참고 항목  
- [셀 집합 예제 (VB)](../../../ado/reference/ado-md-api/cellset-example-vb.md)   
- [Description 속성(ADO MD)](../../../ado/reference/ado-md-api/description-property-ado-md.md)
+ [셀 집합 예제 (VB)](./cellset-example-vb.md)   
+ [Description 속성(ADO MD)](./description-property-ado-md.md)

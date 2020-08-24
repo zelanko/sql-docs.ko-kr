@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 66adbbd2-23a3-4c19-a91b-84c31309aa1b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fc3661ef36c0b763ca6b0f04f52e4713d59b9a19
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 73feb1e20320a418804666e11cb2410ab4451c52
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441115"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778202"
 ---
 # <a name="dimension-object-ado-md"></a>Dimension 개체(ADO MD)
 하나 이상의 멤버 계층을 포함 하는 다차원 큐브의 차원 중 하나를 나타냅니다.  
@@ -29,13 +29,13 @@ ms.locfileid: "88441115"
 ## <a name="remarks"></a>설명  
  **Dimension** 개체의 컬렉션 및 속성을 사용 하 여 다음을 수행할 수 있습니다.  
   
--   [Name](../../../ado/reference/ado-md-api/name-property-ado-md.md) 및 [UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md) 속성을 사용 하 여 **차원을** 식별 합니다.  
+-   [Name](./name-property-ado-md.md) 및 [UniqueName](./uniquename-property-ado-md.md) 속성을 사용 하 여 **차원을** 식별 합니다.  
   
--   [Description](../../../ado/reference/ado-md-api/description-property-ado-md.md) 속성을 사용 하 여 **차원을** 설명 하는 의미 있는 문자열을 반환 합니다.  
+-   [Description](./description-property-ado-md.md) 속성을 사용 하 여 **차원을** 설명 하는 의미 있는 문자열을 반환 합니다.  
   
--   [계층](../../../ado/reference/ado-md-api/hierarchies-collection-ado-md.md) 컬렉션을 사용 하 여 **차원을** 구성 하는 [계층](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md) 개체를 반환 합니다.  
+-   [계층](./hierarchies-collection-ado-md.md) 컬렉션을 사용 하 여 **차원을** 구성 하는 [계층](./hierarchy-object-ado-md.md) 개체를 반환 합니다.  
   
--   표준 ADO [속성](../../../ado/reference/ado-api/properties-collection-ado.md) 컬렉션을 사용 하 여 **차원** 개체에 대 한 추가 정보를 가져올 수 있습니다.  
+-   표준 ADO [속성](../ado-api/properties-collection-ado.md) 컬렉션을 사용 하 여 **차원** 개체에 대 한 추가 정보를 가져올 수 있습니다.  
   
  **속성** 컬렉션에는 공급자가 제공한 속성이 포함 되어 있습니다. 다음 표에서는 사용할 수 있는 속성을 보여 줍니다. 실제 속성 목록은 공급자의 구현에 따라 다를 수 있습니다. 사용 가능한 속성의 전체 목록은 공급자 설명서를 참조 하세요.  
   
@@ -56,11 +56,11 @@ ms.locfileid: "88441115"
   
  이 섹션에는 다음 항목이 포함 되어 있습니다.  
   
--   [속성, 메서드 및 이벤트](../../../ado/reference/ado-md-api/dimension-object-properties-methods-and-events.md)  
+-   [속성, 메서드 및 이벤트](./dimension-object-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [CubeDef 예제 (VBScript)](../../../ado/reference/ado-md-api/cubedef-example-vbscript.md)   
- [CubeDef 개체 (ADO MD)](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)   
- [차원 컬렉션 (ADO MD)](../../../ado/reference/ado-md-api/dimensions-collection-ado-md.md)   
- [계층 구조 컬렉션 (ADO MD)](../../../ado/reference/ado-md-api/hierarchies-collection-ado-md.md)   
- [Properties 컬렉션(ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)
+ [CubeDef 예제 (VBScript)](./cubedef-example-vbscript.md)   
+ [CubeDef 개체 (ADO MD)](./cubedef-object-ado-md.md)   
+ [차원 컬렉션 (ADO MD)](./dimensions-collection-ado-md.md)   
+ [계층 구조 컬렉션 (ADO MD)](./hierarchies-collection-ado-md.md)   
+ [Properties 컬렉션(ADO)](../ado-api/properties-collection-ado.md)

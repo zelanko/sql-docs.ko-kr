@@ -1,6 +1,6 @@
 ---
 title: SQL Server on Linux 문제 해결
-description: SQL Server on Linux 사용에 대한 문제 해결 팁을 제공합니다.
+description: Linux 또는 Docker 컨테이너에서 실행되는 Microsoft SQL Server 문제를 해결합니다. 지원되는 기능 및 알려진 제한 사항에 대한 정보를 어디에서 찾을 수 있는지 알아봅니다.
 author: VanMSFT
 ms.author: vanto
 ms.date: 05/01/2018
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
-ms.openlocfilehash: 7c2c191fa05f1c584c9e45e88cd5bd5b0e3b7851
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 99ac4b9fbd0ce616cebc707026eff1d5eb15895f
+ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897219"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88088757"
 ---
 # <a name="troubleshoot-sql-server-on-linux"></a>SQL Server on Linux 문제 해결
 

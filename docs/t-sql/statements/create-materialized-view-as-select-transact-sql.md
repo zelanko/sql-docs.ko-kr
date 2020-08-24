@@ -1,4 +1,5 @@
 ---
+description: CREATE MATERIALIZED VIEW AS SELECT(Transact-SQL)
 title: CREATE MATERIALIZED VIEW AS SELECT(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2020
@@ -37,12 +38,12 @@ ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: 221b26f59feb3c51ade10fd4923f30e1ade91fbf
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 8d9dce220699fcdc2448ac19727d34ddd1bdad67
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394643"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444848"
 ---
 # <a name="create-materialized-view-as-select-transact-sql"></a>CREATE MATERIALIZED VIEW AS SELECT(Transact-SQL)  
 
@@ -94,7 +95,7 @@ HASH 및 ROUND_ROBIN 배포만 지원됩니다.
 
 MIN/MAX 집계가 구체화된 뷰 정의의 SELECT 목록에 사용될 경우 다음과 같은 요구 사항이 적용됩니다.
  
-- FOR_APPEND가 필요합니다.  다음은 그 예입니다.
+- FOR_APPEND가 필요합니다.  예를 들면 다음과 같습니다.
   ```sql 
   CREATE MATERIALIZED VIEW mv_test2  
   WITH (distribution = hash(i_category_id), FOR_APPEND)  
@@ -108,7 +109,7 @@ MIN/MAX 집계가 구체화된 뷰 정의의 SELECT 목록에 사용될 경우 �
   
 ## <a name="remarks"></a>설명
 
-Azure Data Warehouse의 구체화된 뷰는 SQL Server의 인덱싱된 뷰와 비슷합니다.  구체화된 뷰는 집계 함수를 지원한다는 점을 제외하고, 인덱싱된 뷰와 거의 같은 제한을 공유합니다([인덱싱된 뷰 만들기](/sql/relational-databases/views/create-indexed-views)에서 자세한 내용 참조).   
+Azure Data Warehouse의 구체화된 뷰는 SQL Server의 인덱싱된 뷰와 비슷합니다.구체화된 뷰는 집계 함수를 지원한다는 점을 제외하고, 인덱싱된 뷰와 거의 같은 제한을 공유합니다([인덱싱된 뷰 만들기](/sql/relational-databases/views/create-indexed-views)에서 자세한 내용 참조).   
 
 구체화된 뷰는 CLUSTERED COLUMNSTORE INDEX만 지원합니다. 
 
@@ -122,7 +123,7 @@ DDM 열이 구체화된 뷰의 일부가 아닌 경우에도 DDM(동적 데이�
  
 ALTER TABLE SWITCH는 구체화된 뷰에서 참조되는 테이블에서 지원되지 않습니다. ALTER TABLE SWITCH를 사용하기 전에 구체화된 뷰를 사용하지 않도록 설정하거나 삭제합니다. 다음 시나리오에서 구체화된 뷰를 만들려면 새 열을 구체화된 뷰에 추가해야 합니다.
 
-|시나리오|구체화된 뷰에 추가할 새 열|주석|  
+|시나리오|구체화된 뷰에 추가할 새 열|의견|  
 |-----------------|---------------|-----------------|
 |COUNT_BIG()이 구체화된 뷰 정의의 SELECT 목록에 없습니다.| COUNT_BIG (*) |구체화된 뷰를 만들면 자동으로 추가됩니다.  추가적인 조치가 필요하지 않습니다.|
 |사용자가 구체화된 뷰 정의의 SELECT 목록에서 SUM(a)을 지정하며, ‘a’는 null 허용 식입니다. |COUNT_BIG (a) |사용자가 구체화된 뷰 정의에서 수동으로 식 ‘a’를 추가해야 합니다.|
@@ -142,7 +143,8 @@ SQL 문이 새 구체화된 뷰로 인해 개선될 수 있는지 확인하려�
 
 ## <a name="permissions"></a>사용 권한
 
-데이터베이스에는 CREATE VIEW 권한이 필요하고 뷰를 만들 구성표에는 ALTER 권한이 필요합니다. 
+뷰를 만드는 스키마에 대한 1) REFERENCES 및 CREATE VIEW 권한 또는 2) CONTROL 권한이 필요합니다. 
+
   
 ## <a name="see-also"></a>참고 항목
 

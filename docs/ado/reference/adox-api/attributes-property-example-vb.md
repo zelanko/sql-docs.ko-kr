@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: c0ed8195-09af-42c8-99c7-038ecc8a5c9f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3d1067f47d50b344731c0f270671861f381a3242
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7907572a282835e8d56150dbd034d530dd646b8a
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440435"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88771332"
 ---
 # <a name="attributes-property-example-vb"></a>Attributes 속성 예제(VB)
-이 예에서는 열의 [Attributes](../../../ado/reference/adox-api/attributes-property-adox.md) 속성을 보여 [Column](../../../ado/reference/adox-api/column-object-adox.md)줍니다. **Adcolnullable** 로 설정 하면 사용자가 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) [필드](../../../ado/reference/ado-api/field-object.md) 의 값을 빈 문자열로 설정할 수 있습니다. 이 경우 사용자는 데이터를 알 수 없는 레코드와 데이터가 적용 되지 않는 레코드를 구분할 수 있습니다.  
+이 예에서는 열의 [Attributes](./attributes-property-adox.md) 속성을 보여 [Column](./column-object-adox.md)줍니다. **Adcolnullable** 로 설정 하면 사용자가 [레코드 집합](../ado-api/recordset-object-ado.md) [필드](../ado-api/field-object.md) 의 값을 빈 문자열로 설정할 수 있습니다. 이 경우 사용자는 데이터를 알 수 없는 레코드와 데이터가 적용 되지 않는 레코드를 구분할 수 있습니다.  
   
 ```  
 ' BeginAttributesVB  
@@ -127,6 +127,6 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Attributes 속성 (ADOX)](../../../ado/reference/adox-api/attributes-property-adox.md)   
- [Catalog 개체 (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [Column 개체(ADOX)](../../../ado/reference/adox-api/column-object-adox.md)
+ [Attributes 속성 (ADOX)](./attributes-property-adox.md)   
+ [Catalog 개체 (ADOX)](./catalog-object-adox.md)   
+ [열 개체(ADOX)](./column-object-adox.md)

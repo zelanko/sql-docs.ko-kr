@@ -18,37 +18,37 @@ helpviewer_keywords:
 ms.assetid: 3a647cde-efdc-4394-b1b9-8cbb1b9d689f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a39565e51270684a5514d499c658f950fe473a1e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b302661baefaf7c4e9659e836d92b293d127e2aa
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440875"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777972"
 ---
 # <a name="members-collection-ado-md"></a>Members 컬렉션(ADO MD)
-수준 또는 축의 위치에서 [멤버](../../../ado/reference/ado-md-api/member-object-ado-md.md) 개체를 포함 합니다.  
+수준 또는 축의 위치에서 [멤버](./member-object-ado-md.md) 개체를 포함 합니다.  
   
 ## <a name="remarks"></a>설명  
  **Members** 컬렉션은 다음과 같은 멤버 유형을 포함 하는 데 사용 됩니다.  
   
--   큐브의 수준을 구성 하는 멤버입니다. 이러한 개체는 [수준](../../../ado/reference/ado-md-api/level-object-ado-md.md) 개체의 **Members** 컬렉션에 포함 되어 있습니다. 예를 들어 [다차원 스키마 및 데이터 개요](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md)에서 샘플을 사용 하는 경우 국가 수준의 네 가지 구성원은 캐나다, USA, 영국 및 독일입니다.  
+-   큐브의 수준을 구성 하는 멤버입니다. 이러한 개체는 [수준](./level-object-ado-md.md) 개체의 **Members** 컬렉션에 포함 되어 있습니다. 예를 들어 [다차원 스키마 및 데이터 개요](../../guide/multidimensional/overview-of-multidimensional-schemas-and-data.md)에서 샘플을 사용 하는 경우 국가 수준의 네 가지 구성원은 캐나다, USA, 영국 및 독일입니다.  
   
--   계층 내에 있는 특정 멤버의 자식인 멤버입니다. 이러한 멤버는 부모 **멤버** 개체의 [Children](../../../ado/reference/ado-md-api/children-property-ado-md.md) 속성에 의해 반환 됩니다. 예를 들어 동일한 샘플을 다시 사용 하는 경우 캐나다 구성원의 두 자식은 캐나다 동부와 캐나다-서 부입니다.  
+-   계층 내에 있는 특정 멤버의 자식인 멤버입니다. 이러한 멤버는 부모 **멤버** 개체의 [Children](./children-property-ado-md.md) 속성에 의해 반환 됩니다. 예를 들어 동일한 샘플을 다시 사용 하는 경우 캐나다 구성원의 두 자식은 캐나다 동부와 캐나다-서 부입니다.  
   
--   [셀 집합](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)의 축을 따라 특정 위치를 정의 하는 멤버입니다. 셀 집합을 사용 하 여 [다차원 데이터 작업](../../../ado/guide/multidimensional/working-with-multidimensional-data.md) 에서 x 축의 첫 번째 위치에 있는 두 멤버는 발렌타인 및 시애틀입니다. 이러한 멤버는 [Position](../../../ado/reference/ado-md-api/position-object-ado-md.md) 개체의 **members** 컬렉션에 포함 됩니다.  
+-   [셀 집합](./cellset-object-ado-md.md)의 축을 따라 특정 위치를 정의 하는 멤버입니다. 셀 집합을 사용 하 여 [다차원 데이터 작업](../../guide/multidimensional/working-with-multidimensional-data.md) 에서 x 축의 첫 번째 위치에 있는 두 멤버는 발렌타인 및 시애틀입니다. 이러한 멤버는 [Position](./position-object-ado-md.md) 개체의 **members** 컬렉션에 포함 됩니다.  
   
  **멤버** 는 표준 ADO 컬렉션입니다. 컬렉션의 속성과 메서드를 사용 하 여 다음을 수행할 수 있습니다.  
   
--   [Count](../../../ado/reference/ado-api/count-property-ado.md) 속성을 사용 하 여 컬렉션의 개체 수를 가져옵니다.  
+-   [Count](../ado-api/count-property-ado.md) 속성을 사용 하 여 컬렉션의 개체 수를 가져옵니다.  
   
--   기본 [항목](../../../ado/reference/ado-api/item-property-ado.md) 속성을 사용 하 여 컬렉션에서 개체를 반환 합니다.  
+-   기본 [항목](../ado-api/item-property-ado.md) 속성을 사용 하 여 컬렉션에서 개체를 반환 합니다.  
   
--   [Refresh](../../../ado/reference/ado-api/refresh-method-ado.md) 메서드를 사용 하 여 공급자에서 컬렉션의 개체를 업데이트 합니다.  
+-   [Refresh](../ado-api/refresh-method-ado.md) 메서드를 사용 하 여 공급자에서 컬렉션의 개체를 업데이트 합니다.  
   
  이 섹션에는 다음 항목이 포함 되어 있습니다.  
   
--   [속성, 메서드 및 이벤트](../../../ado/reference/ado-md-api/members-collection-properties-methods-and-events.md)  
+-   [속성, 메서드 및 이벤트](./members-collection-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [Members 예제 (VBScript)](../../../ado/reference/ado-md-api/members-example-vbscript.md)   
- [Member 개체(ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)
+ [Members 예제 (VBScript)](./members-example-vbscript.md)   
+ [Member 개체(ADO MD)](./member-object-ado-md.md)

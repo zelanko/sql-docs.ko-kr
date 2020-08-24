@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: fdd09b60-39c7-44be-8008-e891a031f80e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 66fab5cee49adf89bffee79f5b51b13780d5d982
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 148deaa16746bd964e4bed07ed673fea0ec4cb6a
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441945"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777292"
 ---
 # <a name="status-property-example-field-vb"></a>Status 속성 예제(필드)(VB)
-다음 예제에서는 [인터넷 게시 공급자](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)를 사용 하 여 읽기/쓰기 폴더에서 문서를 엽니다. [레코드](../../../ado/reference/ado-api/record-object-ado.md) 에 대 한 [Field](../../../ado/reference/ado-api/field-object.md) 개체의 [Status](../../../ado/reference/ado-api/status-property-ado-field.md) 속성은 먼저 **adfieldpendinginsert**로 설정 된 다음 **adFieldOk**로 업데이트 됩니다.  
+다음 예제에서는 [인터넷 게시 공급자](../../guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)를 사용 하 여 읽기/쓰기 폴더에서 문서를 엽니다. [레코드](./record-object-ado.md) 에 대 한 [Field](./field-object.md) 개체의 [Status](./status-property-ado-field.md) 속성은 먼저 **adfieldpendinginsert**로 설정 된 다음 **adFieldOk**로 업데이트 됩니다.  
   
 ```  
 'BeginStatusFieldVB  
@@ -86,13 +86,13 @@ End Sub
 Attribute VB_Name = "StatusField"  
 ```  
   
- 다음 코드는 읽기 전용 문서에서 열린 **레코드** 에서 **필드** 를 삭제 합니다. **상태** 는 **adfieldpendingdelete**로 설정 됩니다. [업데이트](../../../ado/reference/ado-api/update-method.md)시에는 삭제 작업이 실패 하 고 **상태** 는 **Adfieldpendingdelete** plus **adfieldpendingdelete 거부**합니다. [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) 보류 중 **상태** 설정을 지웁니다.  
+ 다음 코드는 읽기 전용 문서에서 열린 **레코드** 에서 **필드** 를 삭제 합니다. **상태** 는 **adfieldpendingdelete**로 설정 됩니다. [업데이트](./update-method.md)시에는 삭제 작업이 실패 하 고 **상태** 는 **Adfieldpendingdelete** plus **adfieldpendingdelete 거부**합니다. [CancelUpdate](./cancelupdate-method-ado.md) 보류 중 **상태** 설정을 지웁니다.  
   
 ```  
 Attribute VB_Name = "StatusField"  
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Field 개체](../../../ado/reference/ado-api/field-object.md)   
- [Record 개체 (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
- [Status 속성(ADO 필드)](../../../ado/reference/ado-api/status-property-ado-field.md)
+ [Field 개체](./field-object.md)   
+ [Record 개체 (ADO)](./record-object-ado.md)   
+ [Status 속성(ADO 필드)](./status-property-ado-field.md)

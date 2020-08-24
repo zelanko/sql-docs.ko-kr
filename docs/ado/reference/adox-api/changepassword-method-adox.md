@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: d187fbc6-5fac-4abb-803d-bf344dcf0302
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d23920fff14bfa04020223ad0150f480f6073723
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 94ddd75bddf8845012fe0845826eea264718cc91
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440375"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88771172"
 ---
 # <a name="changepassword-method-adox"></a>ChangePassword 메서드(ADOX)
-[사용자](../../../ado/reference/adox-api/user-object-adox.md) 계정에 대 한 암호를 변경 합니다.  
+[사용자](./user-object-adox.md) 계정에 대 한 암호를 변경 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -47,7 +47,7 @@ User.ChangePassword OldPassword, NewPassword
  공급자가 트러스티 속성의 관리를 지원 하지 않는 경우 오류가 발생 합니다.  
   
 ## <a name="applies-to"></a>적용 대상  
- [User 개체(ADOX)](../../../ado/reference/adox-api/user-object-adox.md)  
+ [사용자 개체(ADOX)](./user-object-adox.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [Groups 및 Users Append, ChangePassword 메서드 예제(VB)](../../../ado/reference/adox-api/groups-and-users-append-changepassword-methods-example-vb.md)
+ [Groups 및 Users Append, ChangePassword 메서드 예제(VB)](./groups-and-users-append-changepassword-methods-example-vb.md)

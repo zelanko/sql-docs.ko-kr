@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a676f0a7-7d17-45db-87c1-3fc78627465f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a6263acd1a51aa73ab004103eb6a7315626335ba
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 21f8333c0fd8b4d290f2d76aa35ef8cfea73b35d
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452135"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759683"
 ---
 # <a name="rds-fundamentals"></a>RDS 기본 사항
 > [!IMPORTANT]
@@ -27,20 +27,18 @@ ms.locfileid: "88452135"
   
  다음 항목에서는 RDS를 소개 합니다.  
   
--   [원격 데이터 액세스에 대한 솔루션](../../../ado/guide/remote-data-service/solutions-for-remote-data-access.md)  
+-   [원격 데이터 액세스에 대한 솔루션](./solutions-for-remote-data-access.md)  
   
--   [기본 RDS 프로그래밍 모델](../../../ado/guide/remote-data-service/basic-rds-programming-model.md)  
+-   [기본 RDS 프로그래밍 모델](./basic-rds-programming-model.md)  
   
--   [RDS 프로그래밍 모델 세부 정보](../../../ado/guide/remote-data-service/rds-programming-model-in-detail.md)  
+-   [RDS 프로그래밍 모델 세부 정보](./rds-programming-model-in-detail.md)  
   
--   [개체에서 RDS 프로그래밍 모델](../../../ado/guide/remote-data-service/rds-programming-model-with-objects.md)  
+-   [개체에서 RDS 프로그래밍 모델](./rds-programming-model-with-objects.md)  
   
--   [RDS 개체 모델 요약](../../../ado/guide/remote-data-service/rds-object-model-summary.md)  
+-   [RDS 개체 모델 요약](./rds-object-model-summary.md)  
   
-## <a name="see-also"></a>참고 항목  
- [원격 데이터 액세스를 위한 솔루션](../../../ado/guide/remote-data-service/solutions-for-remote-data-access.md)   
- [RDS 시나리오](../../../ado/guide/remote-data-service/rds-scenario.md)   
- [RDS 자습서](../../../ado/guide/remote-data-service/rds-tutorial.md)   
- [RDS 사용량 및 보안](../../../ado/guide/remote-data-service/rds-usage-and-security.md)
-
-
+## <a name="see-also"></a>관련 항목  
+ [원격 데이터 액세스를 위한 솔루션](./solutions-for-remote-data-access.md)   
+ [RDS 시나리오](./rds-scenario.md)   
+ [RDS 자습서](./rds-tutorial.md)   
+ [RDS 사용량 및 보안](./rds-usage-and-security.md)

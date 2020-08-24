@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5e2452c0-cac0-49b2-8099-836c35794d50
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2f30243440d9b09194bd3cd1c7ed5a162ad8de34
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 65e5e28443fd4656aa2b953f18b07c952bcbb66a
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441215"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778312"
 ---
 # <a name="cellset-object-ado-md"></a>Cellset 개체(ADO MD)
 다차원 쿼리 결과를 나타냅니다. 큐브 또는 다른 셀 집합에서 선택 된 셀의 컬렉션입니다.  
@@ -34,35 +34,35 @@ cst.Axes(0).Positions(0).Members(0).Caption
 ```  
   
 ## <a name="remarks"></a>설명  
- 셀 집합에는 현재 셀에 대 한 개념이 없습니다. 대신 [Item](../../../ado/reference/ado-md-api/item-property-ado-md-cellset.md) 속성은 셀 집합에서 특정 [셀](../../../ado/reference/ado-md-api/cell-object-ado-md.md) 개체를 검색 합니다. **항목** 속성의 인수는 검색 되는 셀을 결정 합니다. 셀의 고유 서 수 값을 지정할 수 있습니다. 셀 집합의 각 축에서 해당 위치 번호를 사용 하 여 셀을 검색할 수도 있습니다. 셀을 검색 하는 방법에 대 한 자세한 내용은 [Item](../../../ado/reference/ado-md-api/item-property-ado-md-cellset.md) 속성을 참조 하세요.  
+ 셀 집합에는 현재 셀에 대 한 개념이 없습니다. 대신 [Item](./item-property-ado-md-cellset.md) 속성은 셀 집합에서 특정 [셀](./cell-object-ado-md.md) 개체를 검색 합니다. **항목** 속성의 인수는 검색 되는 셀을 결정 합니다. 셀의 고유 서 수 값을 지정할 수 있습니다. 셀 집합의 각 축에서 해당 위치 번호를 사용 하 여 셀을 검색할 수도 있습니다. 셀을 검색 하는 방법에 대 한 자세한 내용은 [Item](./item-property-ado-md-cellset.md) 속성을 참조 하세요.  
   
  **셀 집합** 개체의 컬렉션, 메서드 및 속성을 사용 하 여 다음을 수행할 수 있습니다.  
   
--   [ActiveConnection](../../../ado/reference/ado-md-api/activeconnection-property-ado-md.md) 속성을 설정 하 여 열린 연결을 **Cellset** 개체와 연결 합니다.  
+-   [ActiveConnection](./activeconnection-property-ado-md.md) 속성을 설정 하 여 열린 연결을 **Cellset** 개체와 연결 합니다.  
   
--   [Open](../../../ado/reference/ado-md-api/open-method-ado-md.md) 메서드를 사용 하 여 다차원 쿼리 결과를 실행 하 고 검색 합니다.  
+-   [Open](./open-method-ado-md.md) 메서드를 사용 하 여 다차원 쿼리 결과를 실행 하 고 검색 합니다.  
   
--   [항목](../../../ado/reference/ado-md-api/item-property-ado-md-cellset.md) 속성을 사용 하 여 셀 **집합** 에서 **셀** 을 검색 합니다.  
+-   [항목](./item-property-ado-md-cellset.md) 속성을 사용 하 여 셀 **집합** 에서 **셀** 을 검색 합니다.  
   
--   [축](../../../ado/reference/ado-md-api/axes-collection-ado-md.md) 컬렉션을 사용 하 여 **셀 집합** 을 정의 하는 [축](../../../ado/reference/ado-md-api/axis-object-ado-md.md) 개체를 반환 합니다.  
+-   [축](./axes-collection-ado-md.md) 컬렉션을 사용 하 여 **셀 집합** 을 정의 하는 [축](./axis-object-ado-md.md) 개체를 반환 합니다.  
   
--   [Filteraxis](../../../ado/reference/ado-md-api/filteraxis-property-ado-md.md) 속성을 사용 하 여 **셀 집합** 의 데이터를 필터링 하는 데 사용 되는 차원에 대 한 정보를 검색 합니다.  
+-   [Filteraxis](./filteraxis-property-ado-md.md) 속성을 사용 하 여 **셀 집합** 의 데이터를 필터링 하는 데 사용 되는 차원에 대 한 정보를 검색 합니다.  
   
--   [Source](../../../ado/reference/ado-md-api/source-property-ado-md.md) 속성을 사용 하 여 **셀 집합** 을 정의 하는 데 사용 되는 쿼리를 반환 하거나 지정 합니다.  
+-   [Source](./source-property-ado-md.md) 속성을 사용 하 여 **셀 집합** 을 정의 하는 데 사용 되는 쿼리를 반환 하거나 지정 합니다.  
   
--   [상태](../../../ado/reference/ado-md-api/state-property-ado-md.md) 속성을 사용 하 여 **셀 집합** (열기, 닫기, 실행 또는 연결)의 현재 상태를 반환 합니다.  
+-   [상태](./state-property-ado-md.md) 속성을 사용 하 여 **셀 집합** (열기, 닫기, 실행 또는 연결)의 현재 상태를 반환 합니다.  
   
--   [Close](../../../ado/reference/ado-md-api/close-method-ado-md.md) 메서드를 사용 하 여 열린 **셀 집합** 을 닫습니다.  
+-   [Close](./close-method-ado-md.md) 메서드를 사용 하 여 열린 **셀 집합** 을 닫습니다.  
   
--   표준 ADO [속성](../../../ado/reference/ado-api/properties-collection-ado.md) 컬렉션을 사용 하 여 **셀 집합** 에 대 한 공급자 관련 정보를 검색 합니다.  
+-   표준 ADO [속성](../ado-api/properties-collection-ado.md) 컬렉션을 사용 하 여 **셀 집합** 에 대 한 공급자 관련 정보를 검색 합니다.  
   
  이 섹션에는 다음 항목이 포함 되어 있습니다.  
   
--   [속성, 메서드 및 이벤트](../../../ado/reference/ado-md-api/cellset-object-properties-methods-and-events.md)  
+-   [속성, 메서드 및 이벤트](./cellset-object-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [셀 집합 예제 (VB)](../../../ado/reference/ado-md-api/cellset-example-vb.md)   
- [축 컬렉션 (ADO MD)](../../../ado/reference/ado-md-api/axes-collection-ado-md.md)   
- [Cell 개체 (ADO MD)](../../../ado/reference/ado-md-api/cell-object-ado-md.md)   
- [Connection 개체 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
- [Properties 컬렉션(ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)
+ [셀 집합 예제 (VB)](./cellset-example-vb.md)   
+ [축 컬렉션 (ADO MD)](./axes-collection-ado-md.md)   
+ [Cell 개체 (ADO MD)](./cell-object-ado-md.md)   
+ [Connection 개체 (ADO)](../ado-api/connection-object-ado.md)   
+ [Properties 컬렉션(ADO)](../ado-api/properties-collection-ado.md)

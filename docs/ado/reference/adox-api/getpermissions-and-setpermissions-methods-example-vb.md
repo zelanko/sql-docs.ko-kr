@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: aa366d98-8c7a-4189-bdd8-1d663b243d33
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 59984877f4c8d86b9adc18b841b17c92740e8602
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f5763c00222d08f8b0362351879389c43f39f3e2
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440055"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88770522"
 ---
 # <a name="getpermissions-and-setpermissions-methods-example-vb"></a>GetPermissions 및 SetPermissions 메서드 예제(VB)
-이 예제에서는 [Getpermissions](../../../ado/reference/adox-api/getpermissions-method-adox.md) 및 [SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md) 메서드를 보여 줍니다. 다음 코드는 관리 사용자에 게 Orders 테이블에 대 한 모든 권한을 부여 합니다.  
+이 예제에서는 [Getpermissions](./getpermissions-method-adox.md) 및 [SetPermissions](./setpermissions-method-adox.md) 메서드를 보여 줍니다. 다음 코드는 관리 사용자에 게 Orders 테이블에 대 한 모든 권한을 부여 합니다.  
   
 ```  
 ' BeginGrantPermissionsVB  
@@ -96,8 +96,8 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Catalog 개체 (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [GetPermissions 메서드 (ADOX)](../../../ado/reference/adox-api/getpermissions-method-adox.md)   
- [SetPermissions 메서드 (ADOX)](../../../ado/reference/adox-api/setpermissions-method-adox.md)   
- [User 개체 (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)   
- [Users 컬렉션(ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)
+ [Catalog 개체 (ADOX)](./catalog-object-adox.md)   
+ [GetPermissions 메서드 (ADOX)](./getpermissions-method-adox.md)   
+ [SetPermissions 메서드 (ADOX)](./setpermissions-method-adox.md)   
+ [User 개체 (ADOX)](./user-object-adox.md)   
+ [Users 컬렉션(ADOX)](./users-collection-adox.md)

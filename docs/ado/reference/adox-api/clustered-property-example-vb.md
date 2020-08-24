@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1cd30769-c8af-43e7-be27-12ed0434daa1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 647fe236ad7a616cbce54986f6a3ce3aba0db163
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1992c8c5796052e46719c34ecbc43d6b94553b6e
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440355"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88771142"
 ---
 # <a name="clustered-property-example-vb"></a>Clustered 속성 예제(VB)
-이 예에서는 [인덱스](../../../ado/reference/adox-api/index-object-adox.md)의 [클러스터형](../../../ado/reference/adox-api/clustered-property-adox.md) 속성을 보여 줍니다. Microsoft Jet 데이터베이스는 클러스터형 인덱스를 지원 하지 않으므로이 예에서는 **Northwind** 데이터베이스에 있는 모든 인덱스의 **클러스터형** 속성에 대해 **False** 를 반환 합니다.  
+이 예에서는 [인덱스](./index-object-adox.md)의 [클러스터형](./clustered-property-adox.md) 속성을 보여 줍니다. Microsoft Jet 데이터베이스는 클러스터형 인덱스를 지원 하지 않으므로이 예에서는 **Northwind** 데이터베이스에 있는 모든 인덱스의 **클러스터형** 속성에 대해 **False** 를 반환 합니다.  
   
 ```  
 ' BeginClusteredVB  
@@ -74,7 +74,7 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Catalog 개체 (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [Clustered 속성 (ADOX)](../../../ado/reference/adox-api/clustered-property-adox.md)   
- [Index 개체 (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)   
- [Table 개체(ADOX)](../../../ado/reference/adox-api/table-object-adox.md)
+ [Catalog 개체 (ADOX)](./catalog-object-adox.md)   
+ [Clustered 속성 (ADOX)](./clustered-property-adox.md)   
+ [Index 개체 (ADOX)](./index-object-adox.md)   
+ [테이블 개체(ADOX)](./table-object-adox.md)

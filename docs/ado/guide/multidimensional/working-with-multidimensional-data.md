@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 84387746-aa3e-44fd-ad6c-a8214a6966dc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7c37f18f8bcaa3d0c1f78b3ddb8d0c6413fe7277
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3804925eb893b656d555419ab81753ff464f41bd
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452395"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88758773"
 ---
 # <a name="working-with-multidimensional-data"></a>다차원 데이터 작업
 *셀 집합* 은 다차원 데이터에 대 한 쿼리의 결과입니다. 이는 축 컬렉션으로 구성 됩니다. 일반적으로 축은 4 개 이하로, 일반적으로는 2 개 또는 3 개만 있습니다. *축은* 큐브에서 특정 값을 찾거나 필터링 하는 데 사용 되는 하나 이상의 차원에서 가져온 멤버의 컬렉션입니다.  
@@ -29,7 +29,7 @@ ms.locfileid: "88452395"
   
  *셀* 은 축 좌표가 교차 하는 위치에 있는 개체입니다. 각 셀에는 데이터 자체, 서식이 지정 된 문자열 (표시 가능한 셀 데이터 형식) 및 셀 서 수 값을 포함 하 여 관련 된 여러 가지 정보가 있습니다. 각 셀은 셀 집합의 고유한 서 수 값입니다. 셀 집합에 있는 첫 번째 셀의 서 수 값은 0이 고, 열이 8 개인 셀의 두 번째 행에 있는 맨 왼쪽 셀의 서 수 값은 8입니다.  
   
- 예를 들어 큐브에는 다음과 같은 6 개의 차원이 있습니다 .이 큐브 스키마는 [다차원 스키마 및 데이터 개요](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md)에 제공 된 예와 약간 다릅니다.  
+ 예를 들어 큐브에는 다음과 같은 6 개의 차원이 있습니다 .이 큐브 스키마는 [다차원 스키마 및 데이터 개요](./overview-of-multidimensional-schemas-and-data.md)에 제공 된 예와 약간 다릅니다.  
   
 -   Salesperson  
   
@@ -76,11 +76,11 @@ ms.locfileid: "88452395"
 Jan, Feb, Mar, Qtr2, Qtr3, Oct, Nov, Dec  
 ```  
   
- 셀 집합, 셀, 축 및 위치는 모두 해당 개체 (셀 [집합](../../../ado/reference/ado-md-api/cellset-object-ado-md.md), [셀](../../../ado/reference/ado-md-api/cell-object-ado-md.md), [축](../../../ado/reference/ado-md-api/axis-object-ado-md.md)및 [위치](../../../ado/reference/ado-md-api/position-object-ado-md.md))로 ADO MD 표시 됩니다.  
+ 셀 집합, 셀, 축 및 위치는 모두 해당 개체 (셀 [집합](../../reference/ado-md-api/cellset-object-ado-md.md), [셀](../../reference/ado-md-api/cell-object-ado-md.md), [축](../../reference/ado-md-api/axis-object-ado-md.md)및 [위치](../../reference/ado-md-api/position-object-ado-md.md))로 ADO MD 표시 됩니다.  
   
-## <a name="see-also"></a>참고 항목  
- [ADO MD 개체 모델](../../../ado/reference/ado-md-api/ado-md-object-model.md)   
- [ADO (다차원) (ADO MD)](../../../ado/guide/multidimensional/ado-multidimensional-ado-md.md)   
- [다차원 스키마 및 데이터 개요](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md)   
- [ADO MD를 사용한 프로그래밍](../../../ado/guide/multidimensional/programming-with-ado-md.md)   
- [ADO MD에서 ADO 사용](../../../ado/guide/multidimensional/using-ado-with-ado-md.md)
+## <a name="see-also"></a>관련 항목  
+ [ADO MD 개체 모델](../../reference/ado-md-api/ado-md-object-model.md)   
+ [ADO (다차원) (ADO MD)](./ado-multidimensional-ado-md.md)   
+ [다차원 스키마 및 데이터 개요](./overview-of-multidimensional-schemas-and-data.md)   
+ [ADO MD를 사용한 프로그래밍](./programming-with-ado-md.md)   
+ [ADO MD에서 ADO 사용](./using-ado-with-ado-md.md)

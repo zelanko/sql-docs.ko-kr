@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1c38cd3b-e4f5-4754-b115-ef5e46d24ab9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 90c08625fb319733f391af5d84f5de053021904c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5cd76fac1fa65f74935f318e2d39d6a1502f2428
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441965"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777332"
 ---
 # <a name="state-property-example-vc"></a>State 속성 예제(VC++)
-이 예제에서는 [상태](../../../ado/reference/ado-api/state-property-ado.md) 속성을 사용 하 여 비동기 연결이 열리고 비동기 명령이 실행 되는 동안 메시지를 표시 합니다.  
+이 예제에서는 [상태](./state-property-ado.md) 속성을 사용 하 여 비동기 연결이 열리고 비동기 명령이 실행 되는 동안 메시지를 표시 합니다.  
   
 ```  
 // BeginStateCpp.cpp  
@@ -137,4 +137,4 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [State 속성(ADO)](../../../ado/reference/ado-api/state-property-ado.md)
+ [State 속성(ADO)](./state-property-ado.md)

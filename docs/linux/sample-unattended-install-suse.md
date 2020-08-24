@@ -1,19 +1,19 @@
 ---
 title: SUSE Linux Enterprise Server에서 SQL Server 무인 설치
 titleSuffix: SQL Server
-description: SQL Server 스크립트 샘플 - SUSE Linux Enterprise Server에서 무인 설치
+description: 샘플 Bash 스크립트를 사용하여 대화형 입력 없이 SLES(SUSE Linux Enterprise Server) v12 SP2에서 SQL Server 2017을 설치합니다.
 author: VanMSFT
 ms.author: vanto
 ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 9944a6065d89a49e5bf1a0ccec2d4d681fbae748
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 6562d01d615b4aac929b01d1e28985b5adddea42
+ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900155"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88089013"
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-suse-linux-enterprise-server"></a>샘플: SUSE Linux Enterprise Server를 위한 무인 SQL Server 설치 스크립트
 

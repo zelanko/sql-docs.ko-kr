@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 3e597c52-caf4-4341-8471-d1ade563dbf7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9f8e1f16d9505de18751e80cc982f472d7ae0422
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2a1ebbe699f00f29b0aac8e6b7fcbdbfcb1abaa6
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439795"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88769992"
 ---
 # <a name="keytypeenum"></a>KeyTypeEnum
-기본, 외부 또는 고유 [키](../../../ado/reference/adox-api/key-object-adox.md)의 유형을 지정 합니다.  
+기본, 외부 또는 고유 [키](./key-object-adox.md)의 유형을 지정 합니다.  
   
 |상수|값|설명|  
 |--------------|-----------|-----------------|  
@@ -33,4 +33,4 @@ ms.locfileid: "88439795"
 |**adKeyUnique**|3|키가 고유 합니다.|  
   
 ## <a name="applies-to"></a>적용 대상  
- [Type 속성(키)(ADOX)](../../../ado/reference/adox-api/type-property-key-adox.md)
+ [Type 속성(키)(ADOX)](./type-property-key-adox.md)

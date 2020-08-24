@@ -1,6 +1,6 @@
 ---
 title: Linux에서 SQL Server 전체 텍스트 검색 설치
-description: 이 문서에서는 Linux에 SQL Server 전체 텍스트 검색을 설치하는 방법을 설명합니다.
+description: Linux에서 SQL Server 전체 텍스트 검색을 설치하는 방법을 알아봅니다. 전체 텍스트 검색을 사용하면 SQL Server 테이블의 문자 기반 데이터에 대해 전체 텍스트 쿼리를 실행할 수 있습니다.
 author: VanMSFT
 ms.author: vanto
 ms.date: 10/02/2017
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: bb42076f-e823-4cee-9281-cd3f83ae42f5
-ms.openlocfilehash: 781730767836eab18f613c9c1e99e0279635f7b3
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 054de1a7f4213a7a8c23ff44bab021d2b64c9f35
+ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895279"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88088786"
 ---
 # <a name="install-sql-server-full-text-search-on-linux"></a>Linux에서 SQL Server 전체 텍스트 검색 설치
 

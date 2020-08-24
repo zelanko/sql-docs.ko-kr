@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 2ee8e4c5-1d66-4a77-8892-6dad7e07e611
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3f9c49ba9456af1f602fa5d2f399fc5172a5f1a4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e6c0f758de185e56256aef4797c9507cdff539e4
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441695"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777052"
 ---
 # <a name="type-property-example-property-vb"></a>Type 속성 예제(속성)(VB)
-이 예제에서는 [Type](../../../ado/reference/ado-api/type-property-ado.md) 속성을 보여 줍니다. [속성](../../../ado/reference/ado-api/properties-collection-ado.md), [필드](../../../ado/reference/ado-api/fields-collection-ado.md)등과 같은 컬렉션의 이름 및 형식을 나열 하는 유틸리티의 모델입니다.  
+이 예제에서는 [Type](./type-property-ado.md) 속성을 보여 줍니다. [속성](./properties-collection-ado.md), [필드](./fields-collection-ado.md)등과 같은 컬렉션의 이름 및 형식을 나열 하는 유틸리티의 모델입니다.  
   
- **속성** 컬렉션에 액세스 하기 위해 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 을 열 필요는 없습니다. 이는 **레코드 집합** 개체가 인스턴스화될 때 존재 합니다. 그러나 [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) 속성을 **adUseClient** 로 설정 하면 **레코드 집합** 개체의 **properties** 컬렉션에 몇 가지 동적 속성을 추가 하 여 예제를 좀 더 흥미로운 방법으로 만들 수 있습니다. 설명을 위해 [항목](../../../ado/reference/ado-api/item-property-ado.md) 속성을 명시적으로 사용 하 여 각 [속성](../../../ado/reference/ado-api/property-object-ado.md) 개체에 액세스 합니다.  
+ **속성** 컬렉션에 액세스 하기 위해 [레코드 집합](./recordset-object-ado.md) 을 열 필요는 없습니다. 이는 **레코드 집합** 개체가 인스턴스화될 때 존재 합니다. 그러나 [CursorLocation](./cursorlocation-property-ado.md) 속성을 **adUseClient** 로 설정 하면 **레코드 집합** 개체의 **properties** 컬렉션에 몇 가지 동적 속성을 추가 하 여 예제를 좀 더 흥미로운 방법으로 만들 수 있습니다. 설명을 위해 [항목](./item-property-ado.md) 속성을 명시적으로 사용 하 여 각 [속성](./property-object-ado.md) 개체에 액세스 합니다.  
   
 ```  
 'BeginTypePropertyVB  
@@ -149,5 +149,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Property 개체 (ADO)](../../../ado/reference/ado-api/property-object-ado.md)   
- [Type 속성(ADO)](../../../ado/reference/ado-api/type-property-ado.md)
+ [Property 개체 (ADO)](./property-object-ado.md)   
+ [Type 속성(ADO)](./type-property-ado.md)

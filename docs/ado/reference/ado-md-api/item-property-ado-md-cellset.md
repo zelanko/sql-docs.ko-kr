@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 0e93d79b-b12e-4e98-889e-c2dfcca20fd0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 92f81199f52323e1e317c27b5206ebe69e674879
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 12df2a7d592be4fa42d8cc0df779a375ab987cb2
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440965"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778072"
 ---
 # <a name="item-property-ado-md-cellset"></a>Item 속성(ADO MD Cellset)
-좌표를 사용 하 여 셀 [집합](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) 에서 셀을 검색 합니다.  
+좌표를 사용 하 여 셀 [집합](./cellset-object-ado-md.md) 에서 셀을 검색 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -46,7 +46,7 @@ Cell = Cellset.Item ( Positions)
 -   서 수 위치입니다.  
   
 ## <a name="remarks"></a>설명  
- **Item** 속성을 사용 하 여 셀 [집합](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) 개체 내에 [셀](../../../ado/reference/ado-md-api/cell-object-ado-md.md) 개체를 반환 합니다. **항목** 속성이 *위치* 인수에 해당 하는 셀을 찾을 수 없는 경우 오류가 발생 합니다.  
+ **Item** 속성을 사용 하 여 셀 [집합](./cellset-object-ado-md.md) 개체 내에 [셀](./cell-object-ado-md.md) 개체를 반환 합니다. **항목** 속성이 *위치* 인수에 해당 하는 셀을 찾을 수 없는 경우 오류가 발생 합니다.  
   
  **Item** 속성은 **셀 집합** 개체의 기본 속성입니다. 다음 구문 형식은 서로 바꿔 사용할 수 있습니다.  
   
@@ -66,8 +66,8 @@ Cellset.Item ( Positions )Cellset ( Positions )
 >  멤버 이름으로 셀을 검색 하는 것은 데이터 공급자가 지원 하지 않을 수 있습니다. 자세한 내용은 공급자에 대 한 설명서를 참조 하세요.  
   
 ## <a name="applies-to"></a>적용 대상  
- [Cellset 개체(ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)  
+ [Cellset 개체(ADO MD)](./cellset-object-ado-md.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [Cell 개체 (ADO MD)](../../../ado/reference/ado-md-api/cell-object-ado-md.md)   
- [Cellset 개체(ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)
+ [Cell 개체 (ADO MD)](./cell-object-ado-md.md)   
+ [Cellset 개체(ADO MD)](./cellset-object-ado-md.md)

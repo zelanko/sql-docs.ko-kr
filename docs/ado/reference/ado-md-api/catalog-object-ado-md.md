@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 11f6f896-d69c-44a4-94cd-d54c93140e4a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7fe8cb849b5b770f23fab92da84bc3bc58fdf55d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b198e9765a8d0e68e61ecd3f9ed334e34c714ea8
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441275"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778342"
 ---
 # <a name="catalog-object-ado-md"></a>Catalog 개체(ADO MD)
 .MDP (multidimensional data provider)와 관련 된 다차원 스키마 정보 (즉, 큐브 및 기본 차원, 계층, 수준 및 멤버)를 포함 합니다.  
@@ -29,17 +29,17 @@ ms.locfileid: "88441275"
 ## <a name="remarks"></a>설명  
  **Catalog** 개체의 컬렉션 및 속성을 사용 하 여 다음을 수행할 수 있습니다.  
   
--   [ActiveConnection](../../../ado/reference/ado-md-api/activeconnection-property-ado-md.md) 속성을 표준 ADO [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체 또는 유효한 연결 문자열로 설정 하 여 카탈로그를 엽니다.  
+-   [ActiveConnection](./activeconnection-property-ado-md.md) 속성을 표준 ADO [연결](../ado-api/connection-object-ado.md) 개체 또는 유효한 연결 문자열로 설정 하 여 카탈로그를 엽니다.  
   
--   [이름](../../../ado/reference/ado-md-api/name-property-ado-md.md) 속성을 사용 하 여 **카탈로그** 를 식별 합니다.  
+-   [이름](./name-property-ado-md.md) 속성을 사용 하 여 **카탈로그** 를 식별 합니다.  
   
--   [CubeDefs](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md) 컬렉션을 사용 하 여 카탈로그의 큐브를 반복 합니다.  
+-   [CubeDefs](./cubedefs-collection-ado-md.md) 컬렉션을 사용 하 여 카탈로그의 큐브를 반복 합니다.  
   
  이 섹션에는 다음 항목이 포함 되어 있습니다.  
   
--   [속성, 메서드 및 이벤트](../../../ado/reference/ado-md-api/catalog-object-properties-methods-and-events-ado-md.md)  
+-   [속성, 메서드 및 이벤트](./catalog-object-properties-methods-and-events-ado-md.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [Catalog 예제 (VB)](../../../ado/reference/ado-md-api/catalog-example-vb.md)   
- [Connection 개체 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
- [CubeDefs 컬렉션(ADO MD)](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md)
+ [Catalog 예제 (VB)](./catalog-example-vb.md)   
+ [Connection 개체 (ADO)](../ado-api/connection-object-ado.md)   
+ [CubeDefs 컬렉션(ADO MD)](./cubedefs-collection-ado-md.md)

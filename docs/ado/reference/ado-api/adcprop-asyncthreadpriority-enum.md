@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: f0965617-17d8-41e0-98d0-f824274735a6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 00878f5caddcbd8060c9c85222bc061533542bf8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 446a220868a2cf0b0a518bde95897b9d1f41a3b3
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451625"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88760278"
 ---
 # <a name="adcprop_asyncthreadpriority_enum"></a>ADCPROP_ASYNCTHREADPRIORITY_ENUM
-RDS [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체의 경우 데이터를 검색 하는 비동기 스레드의 실행 우선 순위를 지정 합니다.  
+RDS [레코드 집합](./recordset-object-ado.md) 개체의 경우 데이터를 검색 하는 비동기 스레드의 실행 우선 순위를 지정 합니다.  
   
- 이러한 상수를 **레코드 집합** "**백그라운드 스레드 우선 순위**"와 함께 사용 합니다. 동적 속성은 ADO to OLE DB 동적 속성 인덱스에서 참조 되며 [Microsoft Cursor Service for OLE DB](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md) 설명서에 설명 되어 있습니다.  
+ 이러한 상수를 **레코드 집합** "**백그라운드 스레드 우선 순위**"와 함께 사용 합니다. 동적 속성은 ADO to OLE DB 동적 속성 인덱스에서 참조 되며 [Microsoft Cursor Service for OLE DB](../../guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md) 설명서에 설명 되어 있습니다.  
   
 |상수|값|설명|  
 |--------------|-----------|-----------------|  

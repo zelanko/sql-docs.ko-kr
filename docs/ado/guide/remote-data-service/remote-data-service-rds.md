@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 63a5f26b-e7ca-47d9-a004-59eaad6052b4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c367d9e8926d04852bde756a430116f25bfc3b31
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7f21ac9577b45bbeca2d57a3c54c40d542fe5220
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452035"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759423"
 ---
 # <a name="remote-data-service-rds"></a>RDS(원격 데이터 서비스)
 RDS (원격 데이터 서비스)는 ADO의 기능으로, 서버에서 클라이언트 응용 프로그램이 나 웹 페이지로 데이터를 이동 하 고, 클라이언트에서 데이터를 조작 하 고, 단일 왕복으로 서버에 업데이트를 반환할 수 있습니다.  
@@ -29,30 +29,8 @@ RDS (원격 데이터 서비스)는 ADO의 기능으로, 서버에서 클라이�
   
  RDS 프로그래머 가이드에는 다음 장이 포함 되어 있습니다.  
   
--   [RDS 기본 사항](../../../ado/guide/remote-data-service/rds-fundamentals.md)  
+-   [RDS 기본 사항](./rds-fundamentals.md)  
   
--   [RDS 자습서](../../../ado/guide/remote-data-service/rds-tutorial.md)  
+-   [RDS 자습서](./rds-tutorial.md)  
   
--   [RDS 사용량 및 보안](../../../ado/guide/remote-data-service/rds-usage-and-security.md)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+-   [RDS 사용량 및 보안](./rds-usage-and-security.md)

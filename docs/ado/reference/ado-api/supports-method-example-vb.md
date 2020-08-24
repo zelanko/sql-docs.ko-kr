@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 135aab26-ff5c-4fd9-910f-65cdead0b47e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4042f1a7bffc935333232a6267d06d905a34545f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3e644bc69ec4d77dfdb280a263836784eebc39df
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441775"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777152"
 ---
 # <a name="supports-method-example-vb"></a>Supports 메서드 예제(VB)
-이 예제에서는 [Supports](../../../ado/reference/ado-api/supports-method.md) 메서드를 사용 하 여 다른 커서 유형으로 열린 레코드 집합에서 지원 되는 옵션을 표시 합니다. 이 절차를 실행 하려면 DisplaySupport 절차가 필요 합니다.  
+이 예제에서는 [Supports](./supports-method.md) 메서드를 사용 하 여 다른 커서 유형으로 열린 레코드 집합에서 지원 되는 옵션을 표시 합니다. 이 절차를 실행 하려면 DisplaySupport 절차가 필요 합니다.  
   
 ```  
 'BeginSupportsVB  
@@ -163,5 +163,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [레코드 집합 개체 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Supports 메서드](../../../ado/reference/ado-api/supports-method.md)
+ [레코드 집합 개체 (ADO)](./recordset-object-ado.md)   
+ [Supports 메서드](./supports-method.md)

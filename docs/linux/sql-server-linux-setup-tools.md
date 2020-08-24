@@ -1,7 +1,7 @@
 ---
 title: Linux에서 SQL Server 명령줄 도구 설치
 titleSuffix: SQL Server
-description: 이 문서에서는 Linux에 SQL Server 도구를 설치하는 방법을 설명합니다.
+description: Linux에서 SQL Server 명령줄 도구, Microsoft ODBC 드라이버 및 해당 종속성을 설치하는 방법을 알아봅니다.
 author: VanMSFT
 ms.author: vanto
 ms.date: 06/30/2020
@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sqlfreshmay19
 ms.technology: linux
 ms.assetid: eff8e226-185f-46d4-a3e3-e18b7a439e63
-ms.openlocfilehash: e427e429ea4fe65f1f4f0af707c1a11c16c0834b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9bffa8f183e511cdc4885635c4d23c940a82e4f9
+ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897333"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88088759"
 ---
 # <a name="install-sqlcmd-and-bcp-the-sql-server-command-line-tools-on-linux"></a>Linux에서 SQL Server 명령줄 도구 sqlcmd 및 bcp 설치
 

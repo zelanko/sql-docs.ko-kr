@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a7dcad87-aaf0-4b02-9660-472f8469761c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f5a1058b23c92160b039d2cb439d429b46bfcb98
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7baed4eff98c8286c1c84bd346826b4c49e4fa75
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452095"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759563"
 ---
 # <a name="rds-scenario"></a>RDS 시나리오
 > [!IMPORTANT]
@@ -50,22 +50,20 @@ ms.locfileid: "88452095"
   
  이 시나리오에는 다음 항목이 포함 되어 있습니다.  
   
--   [주소록 애플리케이션에 대한 시스템 요구 사항](../../../ado/guide/remote-data-service/system-requirements-for-the-address-book-application.md)  
+-   [주소록 애플리케이션에 대한 시스템 요구 사항](./system-requirements-for-the-address-book-application.md)  
   
--   [주소록 SQL 스크립트 실행](../../../ado/guide/remote-data-service/running-the-address-book-sql-script.md)  
+-   [주소록 SQL 스크립트 실행](./running-the-address-book-sql-script.md)  
   
--   [주소록 예제 애플리케이션 실행](../../../ado/guide/remote-data-service/running-the-address-book-sample-application.md)  
+-   [주소록 예제 애플리케이션 실행](./running-the-address-book-sample-application.md)  
   
--   [주소록 데이터 바인딩 개체](../../../ado/guide/remote-data-service/address-book-data-binding-object.md)  
+-   [주소록 데이터 바인딩 개체](./address-book-data-binding-object.md)  
   
--   [주소록 명령 단추](../../../ado/guide/remote-data-service/address-book-command-buttons.md)  
+-   [주소록 명령 단추](./address-book-command-buttons.md)  
   
--   [주소록 탐색 단추](../../../ado/guide/remote-data-service/address-book-navigation-buttons.md)  
+-   [주소록 탐색 단추](./address-book-navigation-buttons.md)  
   
-## <a name="see-also"></a>참고 항목  
- [주소록 응용 프로그램에 대 한 시스템 요구 사항](../../../ado/guide/remote-data-service/system-requirements-for-the-address-book-application.md)   
- [Microsoft ADO(ActiveX Data Objects) (ADO)](../../../ado/microsoft-activex-data-objects-ado.md)   
- [RDS 기본 사항](../../../ado/guide/remote-data-service/rds-fundamentals.md)   
- [RDS 자습서](../../../ado/guide/remote-data-service/rds-tutorial.md)
-
-
+## <a name="see-also"></a>관련 항목  
+ [주소록 응용 프로그램에 대 한 시스템 요구 사항](./system-requirements-for-the-address-book-application.md)   
+ [Microsoft ADO(ActiveX Data Objects) (ADO)](../../microsoft-activex-data-objects-ado.md)   
+ [RDS 기본 사항](./rds-fundamentals.md)   
+ [RDS 자습서](./rds-tutorial.md)

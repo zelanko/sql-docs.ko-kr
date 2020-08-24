@@ -1,5 +1,6 @@
 ---
-title: '@@DBTS(Transact-SQL) | Microsoft Docs'
+description: '&#x40;&#x40;DBTS(Transact-SQL)'
+title: DBTS(Transact-SQL)
 ms.custom: ''
 ms.date: 09/18/2017
 ms.prod: sql
@@ -18,14 +19,15 @@ helpviewer_keywords:
 ms.assetid: 91842ddd-91c0-4445-a03f-116f6bc991d0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5493589b7a87af2ea856a63e81c3b366eb410d9e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1f11adca5f8a3fe72a0365e84a746cdec2d5e049
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85682944"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417409"
 ---
 # <a name="x40x40dbts-transact-sql"></a>&#x40;&#x40;DBTS(Transact-SQL)
+
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 이 함수는 현재 데이터베이스의 현재 **timestamp** 데이터 형식 값을 반환합니다. 현재 데이터베이스는 보장된 고유한 타임스탬프 값을 갖습니다.
@@ -34,10 +36,12 @@ ms.locfileid: "85682944"
   
 ## <a name="syntax"></a>구문  
   
-```
+```syntaxsql
 @@DBTS  
 ```  
-  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="return-types"></a>반환 형식
 **varbinary**
   
@@ -47,7 +51,7 @@ ms.locfileid: "85682944"
 트랜잭션 격리 수준에 대한 변경 내용은 @@DBTS 함수에 영향을 주지 않습니다.
   
 ## <a name="examples"></a>예  
-이 예에서는 **데이터베이스의 현재**timestamp[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]를 반환합니다.
+이 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 현재 **timestamp**를 반환합니다.
   
 ```sql
 USE AdventureWorks2012;  

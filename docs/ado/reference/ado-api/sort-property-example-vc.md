@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 58199284-747b-4312-b97f-797ee7bd4435
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ad4474e72485e8b69cc4c9f40f790e11fc6145d0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 091c79539472cc46c31f508dea560636dac37cc0
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442075"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777442"
 ---
 # <a name="sort-property-example-vc"></a>Sort 속성 예제(VC++)
-이 예에서는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체의 [Sort](../../../ado/reference/ado-api/sort-property.md) 속성을 사용 하 여 **Pubs** 데이터베이스의 ***Authors*** 테이블에서 파생 된 **레코드 집합** 의 행을 다시 정렬 합니다. 보조 유틸리티 루틴은 각 행을 인쇄 합니다.  
+이 예에서는 [레코드 집합](./recordset-object-ado.md) 개체의 [Sort](./sort-property.md) 속성을 사용 하 여 **Pubs** 데이터베이스의 ***Authors*** 테이블에서 파생 된 **레코드 집합** 의 행을 다시 정렬 합니다. 보조 유틸리티 루틴은 각 행을 인쇄 합니다.  
   
 ```  
 // SortPropertyExample.cpp  
@@ -134,5 +134,5 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [레코드 집합 개체 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Sort 속성](../../../ado/reference/ado-api/sort-property.md)
+ [레코드 집합 개체 (ADO)](./recordset-object-ado.md)   
+ [Sort 속성](./sort-property.md)

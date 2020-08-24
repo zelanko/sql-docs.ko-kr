@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 136f74bf-8d86-4a41-be66-c86cbcf81548
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 59c0f32f7e5ba467fd1b90a348a78432a16621ba
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 18c7d09707a69967560765f880a3c6563de1506e
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451875"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759871"
 ---
 # <a name="understanding-the-customization-file"></a>사용자 지정 파일 이해
 사용자 지정 파일의 각 섹션 헤더는 형식 및 매개 변수를 포함 하는 대괄호 (**[]**)로 구성 됩니다. 네 가지 섹션 형식은 **connect**, **sql**, **userlist**또는 **logs**리터럴 문자열로 표시 됩니다. 매개 변수는 리터럴 문자열, 기본값, 사용자 지정 식별자 또는 nothing입니다.  
@@ -67,12 +67,11 @@ identifier
   
 -   **로그** 섹션은 **DataFactory** 가 작업 중일 때마다 사용 됩니다.  
   
-## <a name="see-also"></a>참고 항목  
- [사용자 지정 파일 연결 섹션](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
- [사용자 지정 파일 로그 섹션](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   
- [사용자 지정 파일 SQL 섹션](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   
- [사용자 지정 파일 UserList 섹션](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   
- [DataFactory 사용자 지정](../../../ado/guide/remote-data-service/datafactory-customization.md)   
- [필수 클라이언트 설정](../../../ado/guide/remote-data-service/required-client-settings.md)   
- [고유한 사용자 지정된 처리기 작성](../../../ado/guide/remote-data-service/writing-your-own-customized-handler.md)
-
+## <a name="see-also"></a>관련 항목  
+ [사용자 지정 파일 연결 섹션](./customization-file-connect-section.md)   
+ [사용자 지정 파일 로그 섹션](./customization-file-logs-section.md)   
+ [사용자 지정 파일 SQL 섹션](./customization-file-sql-section.md)   
+ [사용자 지정 파일 UserList 섹션](./customization-file-userlist-section.md)   
+ [DataFactory 사용자 지정](./datafactory-customization.md)   
+ [필수 클라이언트 설정](./required-client-settings.md)   
+ [고유한 사용자 지정된 처리기 작성](./writing-your-own-customized-handler.md)
