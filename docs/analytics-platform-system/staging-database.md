@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: dcd7f95833695cc5f9f791d83a6221c35e88f58e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 08/25/2020
 ms.locfileid: "74400279"
 ---
 # <a name="using-a-staging-database-in-parallel-data-warehouse-pdw"></a>PDW (병렬 데이터 웨어하우스)에서 준비 데이터베이스 사용
@@ -38,7 +38,7 @@ SQL Server PDW (병렬 데이터 웨어하우스)는 준비 데이터베이스�
   
 -   Rowstore 클러스터형 인덱스에 대 한 로드의 경우 준비 테이블은 rowstore 클러스터형 인덱스입니다.  
   
-## <a name="permissions"></a><a name="Permissions"></a>권한에  
+## <a name="permissions"></a><a name="Permissions"></a>권한  
 준비 데이터베이스에 대 한 CREATE 권한 (임시 테이블을 만드는 경우)이 필요 합니다. 
 
 <!-- MISSING LINKS

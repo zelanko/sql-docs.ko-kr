@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 46908cbd-434f-43e7-a794-ed0be0e0c0a7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bb26d148aff616f36f3244cbe65b315378573278
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bf807a1883aaaa85b8485a9f58a1414248f02075
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451285"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776532"
 ---
 # <a name="append-and-createparameter-methods-example-vb"></a>Append 및 CreateParameter 메서드 예제(VB)
-이 예에서는 [Append](../../../ado/reference/ado-api/append-method-ado.md) 및 [createparameter](../../../ado/reference/ado-api/createparameter-method-ado.md) 메서드를 사용 하 여 입력 매개 변수를 사용 하 여 저장 프로시저를 실행 합니다.  
+이 예에서는 [Append](./append-method-ado.md) 및 [createparameter](./createparameter-method-ado.md) 메서드를 사용 하 여 입력 매개 변수를 사용 하 여 저장 프로시저를 실행 합니다.  
   
 ```  
 'BeginAppendVB  
@@ -121,8 +121,8 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Append 메서드 (ADO)](../../../ado/reference/ado-api/append-method-ado.md)   
- [CreateParameter 메서드 (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)   
- [Field 개체](../../../ado/reference/ado-api/field-object.md)   
- [Fields 컬렉션 (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
- [Parameter 개체](../../../ado/reference/ado-api/parameter-object.md)
+ [Append 메서드 (ADO)](./append-method-ado.md)   
+ [CreateParameter 메서드 (ADO)](./createparameter-method-ado.md)   
+ [Field 개체](./field-object.md)   
+ [Fields 컬렉션 (ADO)](./fields-collection-ado.md)   
+ [Parameter 개체](./parameter-object.md)

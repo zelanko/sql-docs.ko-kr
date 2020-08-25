@@ -14,21 +14,21 @@ helpviewer_keywords:
 ms.assetid: 4e2bb601-0fe8-4d61-b00e-38341d85a6bb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a7a350540d94ea0379f7829fa004d98ce691f1e3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4c79843bb3397fee6d4c2d92d9e7905d2db472c3
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442305"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777682"
 ---
 # <a name="resync-command-property-dynamic-ado"></a>Resync Command 속성-동적(ADO)
-[Resync](../../../ado/reference/ado-api/resync-method.md) 메서드에서 [고유 테이블](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) 동적 속성의 테이블에 있는 데이터를 새로 고치는 데 발급 하는 사용자 제공 명령 문자열을 지정 합니다.  
+[Resync](./resync-method.md) 메서드에서 [고유 테이블](./unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) 동적 속성의 테이블에 있는 데이터를 새로 고치는 데 발급 하는 사용자 제공 명령 문자열을 지정 합니다.  
   
 ## <a name="settings-and-return-values"></a>설정 및 반환 값  
  명령 문자열인 **문자열** 값을 설정 하거나 반환 합니다.  
   
 ## <a name="remarks"></a>설명  
- [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체는 여러 기본 테이블에 대해 실행 된 조인 작업의 결과입니다. 영향을 받는 행은 [Resync](../../../ado/reference/ado-api/resync-method.md) 메서드의 *AffectRecords* 매개 변수에 따라 달라 집니다. [고유 테이블](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) 및 다시 **동기화 명령** 속성을 설정 하지 않으면 표준 다시 **동기화** 방법이 실행 됩니다.  
+ [레코드 집합](./recordset-object-ado.md) 개체는 여러 기본 테이블에 대해 실행 된 조인 작업의 결과입니다. 영향을 받는 행은 [Resync](./resync-method.md) 메서드의 *AffectRecords* 매개 변수에 따라 달라 집니다. [고유 테이블](./unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) 및 다시 **동기화 명령** 속성을 설정 하지 않으면 표준 다시 **동기화** 방법이 실행 됩니다.  
   
  **Resync command** 속성의 명령 문자열은 새로 고칠 행을 고유 하 게 식별 하는 매개 변수가 있는 명령 또는 저장 프로시저 이며, 새로 고칠 행과 동일한 수와 순서를 포함 하는 단일 행을 반환 합니다. 명령 문자열은 **고유 테이블**의 각 기본 키 열에 대 한 매개 변수를 포함 합니다. 그렇지 않으면 런타임 오류가 반환 됩니다. 매개 변수는 새로 고칠 행의 기본 키 값으로 자동으로 채워집니다.  
   
@@ -81,7 +81,7 @@ WHERE Orders.ordid  = @ordid
   
  이 경우 **고유 테이블** 은 *Orders* 이 고 기본 키인 *OrderID*는 매개 변수화 됩니다.  
   
- **Resync 명령은** [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) 속성이 **AdUseClient**로 설정 된 경우 **레코드 집합** 개체 [속성](../../../ado/reference/ado-api/properties-collection-ado.md) 컬렉션에 추가 되는 동적 속성입니다.  
+ **Resync 명령은** [CursorLocation](./cursorlocation-property-ado.md) 속성이 **AdUseClient**로 설정 된 경우 **레코드 집합** 개체 [속성](./properties-collection-ado.md) 컬렉션에 추가 되는 동적 속성입니다.  
   
 ## <a name="applies-to"></a>적용 대상  
- [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [레코드 집합 개체(ADO)](./recordset-object-ado.md)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 43dc42a8-7057-48e6-93d6-880d5c5c51a4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: abf0202e75ef64825d6dc815624adc1c1d337174
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f8cd34a76e2de6a37ee7fe3c647e845c0fbf3fac
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453575"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806197"
 ---
 # <a name="data-section"></a>데이터 섹션
 데이터 섹션은 보류 중인 모든 업데이트, 삽입 또는 삭제와 함께 행 집합의 데이터를 정의 합니다. 데이터 섹션에는 0 개 이상의 행이 포함 될 수 있습니다. 행이 스키마에 의해 정의 되는 한 행 집합의 데이터만 포함할 수 있습니다. 또한 앞에서 설명한 것 처럼 데이터를 포함 하지 않는 열은 생략할 수 있습니다. 데이터 섹션에서 특성 또는 하위 요소를 사용 하 고 해당 구문이 schema 섹션에서 정의 되지 않은 경우 자동으로 무시 됩니다.  
@@ -86,4 +86,4 @@ ms.locfileid: "88453575"
  업데이트에는 항상 원래 행 데이터와 변경 된 행 데이터가 모두 포함 됩니다. 변경 된 행에는 모든 열 또는 실제로 변경 된 열만 포함 될 수 있습니다. 이전 예에서는 전달자 2에 대 한 행이 변경 되지 않으며 Phone 열만 전달자 3의 값이 변경 되었으므로 변경 된 행에는 유일한 열이 포함 됩니다. 운송 업체 12, 13, 14에 삽입 된 행은 하나의 rs: insert 태그에서 함께 일괄 처리 됩니다. 이전 예제에는 표시 되지 않지만 삭제 된 행도 함께 일괄 처리할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [XML 형식으로 레코드 유지](../../../ado/guide/data/persisting-records-in-xml-format.md)
+ [XML 형식으로 레코드 유지](./persisting-records-in-xml-format.md)

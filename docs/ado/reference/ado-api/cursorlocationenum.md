@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: acb255ff-1734-4b70-89bb-aef862b4c63b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 67cd645a7eca33d949055a1de6fd264bc7a4b942
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 950d6310bff0bf27affe70899ba63914c9ae0ec4
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444295"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775532"
 ---
 # <a name="cursorlocationenum"></a>CursorLocationEnum
 커서 서비스의 위치를 지정 합니다.  
@@ -30,7 +30,7 @@ ms.locfileid: "88444295"
 |--------------|-----------|-----------------|  
 |**adUseClient**|3|로컬 커서 라이브러리에서 제공 하는 클라이언트 쪽 커서를 사용 합니다. 로컬 커서 서비스를 사용 하면 드라이버에서 제공 하는 커서의 많은 기능을 사용할 수 있으므로이 설정을 사용 하면 사용할 수 있는 기능과 관련 된 이점을 얻을 수 있습니다. 이전 버전과의 호환성을 위해 동의어 **adUseClientBatch** 지원 됩니다.|  
 |**adUseNone**|1|는 커서 서비스를 사용 하지 않습니다. 이 상수는 사용 되지 않으며 이전 버전과의 호환성을 위해서만 표시 됩니다.|  
-|**adUseServer**|2|기본값 데이터 공급자나 드라이버에서 제공 하는 커서를 사용 합니다. 이러한 커서는 때때로 매우 유연 하며 다른 사용자가 데이터 원본에 대 한 변경 내용에 대 한 추가 민감도를 허용 합니다. 그러나 [OLE DB에 대 한 Microsoft 커서 서비스](../../../ado/guide/data/the-microsoft-cursor-service-for-ole-db.md)의 일부 기능 (예: 연결이 끊어졌습니다.<br /><br /> [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체는 서버 쪽 커서를 사용 하 여 시뮬레이션할 수 없으며이 설정에서는 이러한 기능을 사용할 수 없습니다.|  
+|**adUseServer**|2|기본값 데이터 공급자나 드라이버에서 제공 하는 커서를 사용 합니다. 이러한 커서는 때때로 매우 유연 하며 다른 사용자가 데이터 원본에 대 한 변경 내용에 대 한 추가 민감도를 허용 합니다. 그러나 [OLE DB에 대 한 Microsoft 커서 서비스](../../guide/data/the-microsoft-cursor-service-for-ole-db.md)의 일부 기능 (예: 연결이 끊어졌습니다.<br /><br /> [레코드 집합](./recordset-object-ado.md) 개체는 서버 쪽 커서를 사용 하 여 시뮬레이션할 수 없으며이 설정에서는 이러한 기능을 사용할 수 없습니다.|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC 동급  
  Package: **com.ms.wfc.data**  
@@ -42,4 +42,4 @@ ms.locfileid: "88444295"
 |AdoEnums. CursorLocation|  
   
 ## <a name="applies-to"></a>적용 대상  
- [CursorLocation 속성(ADO)](../../../ado/reference/ado-api/cursorlocation-property-ado.md)
+ [CursorLocation 속성(ADO)](./cursorlocation-property-ado.md)

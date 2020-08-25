@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: a86c8a02-dd69-420d-8a47-0188b339858d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0a571c36a67a4d2c1c3b98c64c826af949b0e773
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 39e50c060dc602cb2bdd3541a454624e41b4d5b3
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453255"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88805975"
 ---
 # <a name="how-event-handlers-work-together"></a>이벤트 처리기가 함께 작동하는 방법
-Visual Basic 프로그래밍 하지 않는 한 **연결** 및 **레코드 집합** 이벤트에 대 한 모든 이벤트 처리기는 실제로 모든 이벤트를 처리 하는지 여부에 관계 없이 구현 되어야 합니다. 구현 해야 하는 작업의 양은 프로그래밍 언어에 따라 달라 집니다. 자세한 내용은 [언어별 ADO 이벤트 인스턴스화](../../../ado/guide/data/ado-event-instantiation-by-language.md)를 참조 하세요.  
+Visual Basic 프로그래밍 하지 않는 한 **연결** 및 **레코드 집합** 이벤트에 대 한 모든 이벤트 처리기는 실제로 모든 이벤트를 처리 하는지 여부에 관계 없이 구현 되어야 합니다. 구현 해야 하는 작업의 양은 프로그래밍 언어에 따라 달라 집니다. 자세한 내용은 [언어별 ADO 이벤트 인스턴스화](./ado-event-instantiation-by-language.md)를 참조 하세요.  
   
 ## <a name="paired-event-handlers"></a>쌍을 이루는 이벤트 처리기  
  각 이벤트 처리기에는 연결 된 **완전** 한 이벤트 처리기가 있습니다. 예를 들어 응용 프로그램에서 필드의 값을 변경 하면 **WillChangeField** 이벤트 처리기가 호출 됩니다. 변경이 허용 되는 경우 응용 프로그램은 **Adstatus** 매개 변수를 변경 되지 않은 상태로 두고 작업을 수행 합니다. 작업이 완료 되 면 **FieldChangeComplete** 이벤트에서 작업이 완료 되었음을 응용 프로그램에 알립니다. 성공적으로 완료 되 면 **Adstatus** 에 **adstatusok**가 포함 됩니다. 그렇지 않으면 **Adstatus** 에 **adStatusErrorsOccurred** 가 포함 되 고 오류 **개체를 확인 하 여 오류의** 원인을 확인 해야 합니다.  
@@ -46,7 +46,7 @@ Visual Basic 프로그래밍 하지 않는 한 **연결** 및 **레코드 집합
   
  단일 **Complete** 이벤트 처리기는 비동기 작업을 관리 하는 데 유용할 수 있습니다. 각 비동기 작업에는 적절 한 **완료** 이벤트가 있습니다.  
   
- 예를 들어, 대량 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체를 채우는 데 시간이 오래 걸릴 수 있습니다. 응용 프로그램이 적절 하 게 작성 되 면 작업을 시작 `Recordset.Open(...,adAsyncExecute)` 하 고 다른 처리를 계속할 수 있습니다. **ExecuteComplete** 이벤트로 **레코드 집합** 을 채울 때 알림이 표시 됩니다.  
+ 예를 들어, 대량 [레코드 집합](../../reference/ado-api/recordset-object-ado.md) 개체를 채우는 데 시간이 오래 걸릴 수 있습니다. 응용 프로그램이 적절 하 게 작성 되 면 작업을 시작 `Recordset.Open(...,adAsyncExecute)` 하 고 다른 처리를 계속할 수 있습니다. **ExecuteComplete** 이벤트로 **레코드 집합** 을 채울 때 알림이 표시 됩니다.  
   
 ## <a name="single-event-handlers-and-multiple-objects"></a>단일 이벤트 처리기 및 여러 개체  
  Microsoft Visual C++®와 같은 프로그래밍 언어의 유연성을 사용 하면 하나의 이벤트 처리기에서 여러 개체의 이벤트를 처리할 수 있습니다. 예를 들어 여러 **연결** 개체에서 이벤트 처리기를 처리 하 **는 이벤트 처리기가 하나 있을** 수 있습니다. 연결 중 하나가 종료 되 면 **연결 끊기** 이벤트 처리기가 호출 됩니다. 이벤트 처리기 개체 매개 변수가 해당 **연결** 개체로 설정 되기 때문에 이벤트를 발생 시킨 연결을 확인할 수 있습니다.  
@@ -55,7 +55,7 @@ Visual Basic 프로그래밍 하지 않는 한 **연결** 및 **레코드 집합
 >  이 기술은 하나의 개체만 이벤트 처리기와 상관 관계를 지정할 수 있으므로 Visual Basic에서 사용할 수 없습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [ADO 이벤트 처리기 요약](../../../ado/guide/data/ado-event-handler-summary.md)   
- [언어별 ADO 이벤트 인스턴스화](../../../ado/guide/data/ado-event-instantiation-by-language.md)   
- [이벤트 매개 변수](../../../ado/guide/data/event-parameters.md)   
- [이벤트 형식](../../../ado/guide/data/types-of-events.md)
+ [ADO 이벤트 처리기 요약](./ado-event-handler-summary.md)   
+ [언어별 ADO 이벤트 인스턴스화](./ado-event-instantiation-by-language.md)   
+ [이벤트 매개 변수](./event-parameters.md)   
+ [이벤트 형식](./types-of-events.md)

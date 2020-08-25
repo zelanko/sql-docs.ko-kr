@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: ef514f85-c446-4f05-824e-c9313b2ffae1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b7fc5d177b05447637d635a9f132c9f9da086ef2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 01f5f2010491e394addd37511ead8b7ea20136c1
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453465"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806879"
 ---
 # <a name="editing-data"></a>데이터 편집
 ADO를 사용 하 여 데이터 원본에 연결 하 고, 명령을 실행 하 고, **레코드 집합** 개체에서 결과를 가져오고, **레코드 집합**내에서 탐색 하는 방법에 대해 설명 했습니다. 이 섹션에서는 다음 기본 ADO 작업 인 데이터 편집에 대해 중점적으로 설명 합니다.  
   
- 이 섹션에서는 중요 한 변경 내용으로 [데이터 검사](../../../ado/guide/data/examining-data.md)에 도입 된 샘플 **레코드 집합** 을 계속 사용 합니다. 다음 코드는 **레코드 집합**을 여는 데 사용 됩니다.  
+ 이 섹션에서는 중요 한 변경 내용으로 [데이터 검사](./examining-data.md)에 도입 된 샘플 **레코드 집합** 을 계속 사용 합니다. 다음 코드는 **레코드 집합**을 여는 데 사용 됩니다.  
   
 ```  
 'BeginEditIntro  
@@ -44,7 +44,7 @@ ADO를 사용 하 여 데이터 원본에 연결 하 고, 명령을 실행 하 �
 'EndEditIntro  
 ```  
   
- 코드의 중요 한 변경 내용에는 클라이언트 커서 사용을 나타내는 *Getnewconnection* 함수 (다음 예제에서 표시)에서 **Connection** 개체의 **CursorLocation** 속성을 **adUseClient** 로 설정 하는 작업이 포함 됩니다. 클라이언트 쪽 커서와 서버측 커서 간의 차이점에 대 한 자세한 내용은 [커서 및 잠금 이해](../../../ado/guide/data/understanding-cursors-and-locks.md)를 참조 하세요.  
+ 코드의 중요 한 변경 내용에는 클라이언트 커서 사용을 나타내는 *Getnewconnection* 함수 (다음 예제에서 표시)에서 **Connection** 개체의 **CursorLocation** 속성을 **adUseClient** 로 설정 하는 작업이 포함 됩니다. 클라이언트 쪽 커서와 서버측 커서 간의 차이점에 대 한 자세한 내용은 [커서 및 잠금 이해](./understanding-cursors-and-locks.md)를 참조 하세요.  
   
  **CursorLocation** 속성의 **adUseClient** 설정은 커서 위치를 데이터 원본 (이 경우 SQL Server)에서 클라이언트 코드의 위치 (데스크톱 워크스테이션)로 이동 합니다. 이 설정을 통해 ADO는 커서를 만들고 관리 하기 위해 클라이언트에서 OLE DB에 대 한 클라이언트 커서 엔진을 호출 합니다.  
   
@@ -84,12 +84,12 @@ End Function
   
  이 섹션에서는 다음 항목을 다룹니다.  
   
--   [기존 레코드 편집](../../../ado/guide/data/editing-existing-records.md)  
+-   [기존 레코드 편집](./editing-existing-records.md)  
   
--   [레코드 추가](../../../ado/guide/data/adding-records.md)  
+-   [레코드 추가](./adding-records.md)  
   
--   [지원되는 기능 확인](../../../ado/guide/data/determining-what-is-supported.md)  
+-   [지원되는 기능 확인](./determining-what-is-supported.md)  
   
--   [Delete 메서드를 사용하여 레코드 삭제](../../../ado/guide/data/deleting-records-using-the-delete-method.md)  
+-   [Delete 메서드를 사용하여 레코드 삭제](./deleting-records-using-the-delete-method.md)  
   
--   [대안: SQL 문 사용](../../../ado/guide/data/alternatives-using-sql-statements.md)
+-   [대안: SQL 문 사용](./alternatives-using-sql-statements.md)

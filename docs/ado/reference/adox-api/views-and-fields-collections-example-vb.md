@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: d8304849-3f80-4cf3-9425-529d2a8ebedd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 30be1e48aca9a942b0a98d0f119f1f8e8218144b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5cbf00fc32364c1077be44ebb791708f361ec4da
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439335"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768982"
 ---
 # <a name="views-and-fields-collections-example-vb"></a>보기 및 필드 컬렉션 예제(VB)
-다음 코드에서는 [명령](../../../ado/reference/adox-api/command-property-adox.md) 속성과 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체를 사용 하 여 뷰에 대 한 필드 정보를 검색 하는 방법을 보여 줍니다.  
+다음 코드에서는 [명령](./command-property-adox.md) 속성과 [레코드 집합](../ado-api/recordset-object-ado.md) 개체를 사용 하 여 뷰에 대 한 필드 정보를 검색 하는 방법을 보여 줍니다.  
   
 ```  
 ' BeginViewFieldsVB  
@@ -79,8 +79,8 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [ActiveConnection 속성 (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
- [Catalog 개체 (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [Command 속성 (ADOX)](../../../ado/reference/adox-api/command-property-adox.md)   
- [View 개체 (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)   
- [Views 컬렉션(ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)
+ [ActiveConnection 속성 (ADOX)](./activeconnection-property-adox.md)   
+ [Catalog 개체 (ADOX)](./catalog-object-adox.md)   
+ [Command 속성 (ADOX)](./command-property-adox.md)   
+ [View 개체 (ADOX)](./view-object-adox.md)   
+ [Views 컬렉션(ADOX)](./views-collection-adox.md)

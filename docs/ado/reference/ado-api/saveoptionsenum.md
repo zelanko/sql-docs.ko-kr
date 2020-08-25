@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 59339100-6e29-48d1-aea3-6873796d186b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 27284d84bb89c0e742c5166589a60fdc949e7b2e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: edac11f61b003307703ec13daed8022b8af31bae
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442195"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777562"
 ---
 # <a name="saveoptionsenum"></a>SaveOptionsEnum
-[스트림](../../../ado/reference/ado-api/stream-object-ado.md) 개체에서 저장할 때 파일을 만들거나 덮어쓸지 여부를 지정 합니다. 값은 **adSaveCreateNotExist** 또는 **adSaveCreateOverWrite**수 있습니다.  
+[스트림](./stream-object-ado.md) 개체에서 저장할 때 파일을 만들거나 덮어쓸지 여부를 지정 합니다. 값은 **adSaveCreateNotExist** 또는 **adSaveCreateOverWrite**수 있습니다.  
   
 |상수|값|설명|  
 |--------------|-----------|-----------------|  
@@ -35,4 +35,4 @@ ms.locfileid: "88442195"
  이러한 상수에는 ADO/WFC 해당 항목이 없습니다.  
   
 ## <a name="applies-to"></a>적용 대상  
- [SaveToFile 메서드](../../../ado/reference/ado-api/savetofile-method.md)
+ [SaveToFile 메서드](./savetofile-method.md)

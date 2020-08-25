@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9dfb6784-037d-4f9d-bb7f-b506b4498573
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b4e8304204a6eaebf6b64d5cb9ad44e5fa1602da
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: efb206f3c0fbbeb0fbc700f8e714ddd1d5ee5a8c
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454015"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806515"
 ---
 # <a name="using-ado-with-microsoft-visual-basic-and-visual-basic-for-applications"></a>Microsoft Visual Basic 및 Visual Basic for Applications에서 ADO 사용
 ADO 프로젝트를 설정 하 고 ADO 코드를 작성 하는 것은 Visual Basic 또는 Visual Basic for Applications를 사용 하는 경우와 비슷합니다. 이 항목에서는 Visual Basic와 Visual Basic for Applications 모두 ADO를 사용 하는 방법을 설명 하 고 차이점을 설명 합니다.
@@ -99,7 +99,7 @@ Dim conn1
 Set conn1 = CreateObject("ADODB.Connection") As Object
 ```
 
- **CreateObject** 로 인스턴스화된 개체는 런타임에 바인딩되어 있으며,이는 강력 하 게 형식화 되지 않고 명령줄 완성이 사용 되지 않음을 의미 합니다. 그러나 프로젝트에서 ADO 라이브러리 참조를 건너뛸 수 있으며 특정 버전의 개체를 인스턴스화할 수 있습니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.
+ **CreateObject** 로 인스턴스화된 개체는 런타임에 바인딩되어 있으며,이는 강력 하 게 형식화 되지 않고 명령줄 완성이 사용 되지 않음을 의미 합니다. 그러나 프로젝트에서 ADO 라이브러리 참조를 건너뛸 수 있으며 특정 버전의 개체를 인스턴스화할 수 있습니다. 예를 들면 다음과 같습니다.
 
 ```
 Set conn1 = CreateObject("ADODB.Connection.2.0") As Object
@@ -110,10 +110,10 @@ Set conn1 = CreateObject("ADODB.Connection.2.0") As Object
  **CreateObject** 메서드를 사용 하 여 개체를 인스턴스화하는 것은 일반적으로 **Dim** 문을 사용 하는 것 보다 느립니다.
 
 ## <a name="handling-events"></a>이벤트 처리
- Microsoft Visual Basic에서 ADO 이벤트를 처리 하려면 **WithEvents** 키워드를 사용 하 여 모듈 수준 변수를 선언 해야 합니다. 변수는 클래스 모듈의 일부로만 선언할 수 있으며 모듈 수준에서 선언 되어야 합니다. ADO 이벤트를 처리 하는 방법에 대 한 자세한 내용은 [Ado 이벤트 처리](../../../ado/guide/data/handling-ado-events.md)를 참조 하세요.
+ Microsoft Visual Basic에서 ADO 이벤트를 처리 하려면 **WithEvents** 키워드를 사용 하 여 모듈 수준 변수를 선언 해야 합니다. 변수는 클래스 모듈의 일부로만 선언할 수 있으며 모듈 수준에서 선언 되어야 합니다. ADO 이벤트를 처리 하는 방법에 대 한 자세한 내용은 [Ado 이벤트 처리](../data/handling-ado-events.md)를 참조 하세요.
 
 ## <a name="visual-basic-examples"></a>Visual Basic 예제
- 많은 Visual Basic 예제는 ADO 설명서에 포함 되어 있습니다. 자세한 내용은 [Microsoft Visual Basic의 ADO 코드 예제](../../../ado/reference/ado-api/ado-code-examples-in-visual-basic.md)를 참조 하세요.
+ 많은 Visual Basic 예제는 ADO 설명서에 포함 되어 있습니다. 자세한 내용은 [Microsoft Visual Basic의 ADO 코드 예제](../../reference/ado-api/ado-code-examples-in-visual-basic.md)를 참조 하세요.
 
-## <a name="see-also"></a>관련 항목
- Ado ( [Microsoft ADO(ActiveX Data Objects))](../../../ado/microsoft-activex-data-objects-ado.md) [를](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-c.md) 사용 하 여 ado를 사용 하는 Microsoft Visual C++ [스크립트 언어와 함께 ado 사용](../../../ado/guide/appendixes/using-ado-with-scripting-languages.md)
+## <a name="see-also"></a>참고 항목
+ Ado ( [Microsoft ADO(ActiveX Data Objects))](../../microsoft-activex-data-objects-ado.md) [를](./using-ado-with-microsoft-visual-c.md) 사용 하 여 ado를 사용 하는 Microsoft Visual C++ [스크립트 언어와 함께 ado 사용](./using-ado-with-scripting-languages.md)

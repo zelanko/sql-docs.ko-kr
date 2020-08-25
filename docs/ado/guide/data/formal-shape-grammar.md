@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ea691475-0f03-4abe-a785-b77e77712d1d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6a8d92abc3a1b0d7e6d39ac4149c186c5a2fc2eb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 75cfedbafa7bc0c1b954f8bbdea29ec92d45c07f
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453375"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806829"
 ---
 # <a name="formal-shape-grammar"></a>공식적인 셰이프 문법
 다음은 셰이프 명령을 만들기 위한 공식 문법입니다.  
@@ -69,10 +69,10 @@ ms.locfileid: "88453375"
 |\<expression>|피연산자가 같은 행에 있는 다른 비 계산 열인 Visual Basic for Applications 식입니다.|  
   
 ## <a name="see-also"></a>참고 항목  
- [계층적 레코드 집합의 행 액세스](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   
- [데이터 셰이핑 개요](../../../ado/guide/data/data-shaping-overview.md)   
- [데이터 셰이핑에 필요한 공급자](../../../ado/guide/data/required-providers-for-data-shaping.md)   
- [Shape APPEND 절](../../../ado/guide/data/shape-append-clause.md)   
- [Shape 명령 일반](../../../ado/guide/data/shape-commands-in-general.md)   
- [셰이프 COMPUTE 절](../../../ado/guide/data/shape-compute-clause.md)   
- [Visual Basic for Applications 기능](../../../ado/guide/data/visual-basic-for-applications-functions.md)
+ [계층적 레코드 집합의 행 액세스](./accessing-rows-in-a-hierarchical-recordset.md)   
+ [데이터 셰이핑 개요](./data-shaping-overview.md)   
+ [데이터 셰이핑에 필요한 공급자](./required-providers-for-data-shaping.md)   
+ [Shape APPEND 절](./shape-append-clause.md)   
+ [Shape 명령 일반](./shape-commands-in-general.md)   
+ [셰이프 COMPUTE 절](./shape-compute-clause.md)   
+ [Visual Basic for Applications 기능](./visual-basic-for-applications-functions.md)

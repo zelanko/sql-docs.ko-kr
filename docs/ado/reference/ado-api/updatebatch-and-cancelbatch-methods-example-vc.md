@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: bcb1468e-18bb-41b8-8902-6ee05b786eec
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 848c798a92c2075cdfff04551b17a46d2d90fc76
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 98130e528428817f6bd43323f47d2ef4e1191dc0
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441625"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776981"
 ---
 # <a name="updatebatch-and-cancelbatch-methods-example-vc"></a>UpdateBatch 및 CancelBatch 메서드 예제(VC++)
-이 예제에서는 [CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md) 메서드와 함께 [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) 메서드를 보여 줍니다.  
+이 예제에서는 [CancelBatch](./cancelbatch-method-ado.md) 메서드와 함께 [UpdateBatch](./updatebatch-method.md) 메서드를 보여 줍니다.  
   
 ```  
 // BeginUpdateBatchCpp.cpp  
@@ -212,5 +212,5 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [CancelBatch 메서드 (ADO)](../../../ado/reference/ado-api/cancelbatch-method-ado.md)   
- [UpdateBatch 메서드](../../../ado/reference/ado-api/updatebatch-method.md)
+ [CancelBatch 메서드 (ADO)](./cancelbatch-method-ado.md)   
+ [UpdateBatch 메서드](./updatebatch-method.md)

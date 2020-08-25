@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 57bda520-e98b-443c-a8bc-d8430e89a383
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 93e4a003e2234c0ee8eb537bc8ee09cdef1869d7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f8d13a3d1ce8db32e01e20608dd1d7b3b3fb5be6
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442265"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777512"
 ---
 # <a name="seek-method-and-index-property-example-vc"></a>Seek 메서드 및 인덱스 속성 예제(VC++)
-이 예에서는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체의 [Seek](../../../ado/reference/ado-api/seek-method.md) 메서드 및 [인덱스](../../../ado/reference/ado-api/index-property.md) 속성을 지정 된 ***직원 ID***와 함께 사용 하 여 Nwind 데이터베이스의 ***Employees*** 테이블에서 직원의 이름을 찾습니다.  
+이 예에서는 [레코드 집합](./recordset-object-ado.md) 개체의 [Seek](./seek-method.md) 메서드 및 [인덱스](./index-property.md) 속성을 지정 된 ***직원 ID***와 함께 사용 하 여 Nwind 데이터베이스의 ***Employees*** 테이블에서 직원의 이름을 찾습니다.  
   
 ```  
 // BeginSeekCpp.cpp  
@@ -227,6 +227,6 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [인덱스 속성](../../../ado/reference/ado-api/index-property.md)   
- [레코드 집합 개체 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Seek 메서드](../../../ado/reference/ado-api/seek-method.md)
+ [인덱스 속성](./index-property.md)   
+ [레코드 집합 개체 (ADO)](./recordset-object-ado.md)   
+ [Seek 메서드](./seek-method.md)

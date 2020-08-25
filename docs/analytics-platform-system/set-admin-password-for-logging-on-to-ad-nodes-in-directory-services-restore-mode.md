@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 6bbbf42106602a25b03072a9c9abfb04f04d3c49
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 08/25/2020
 ms.locfileid: "74400332"
 ---
 # <a name="set-admin-password-for-logging-on-to-ad-nodes-in-directory-services-restore-mode-dsrm---analytics-platform-system"></a>DSRM (디렉터리 서비스 복원 모드)-분석 플랫폼 시스템에서 AD 노드에 로그온 하기 위한 관리자 암호 설정
@@ -25,9 +25,9 @@ DSRM (디렉터리 서비스 복원 모드)은 Active Directory Domain Services 
   
 2.  명령 프롬프트에서 `ntdsutil`를 입력합니다.  
   
-3.  **Ntdsutil** 프롬프트에서을 입력 `set dsrm password`합니다.  
+3.  **Ntdsutil** 프롬프트에서을 입력 `set dsrm password` 합니다.  
   
-4.  **관리자 암호 다시 설정:** 프롬프트에서을 입력 `reset password on server null`합니다.  
+4.  **관리자 암호 다시 설정:** 프롬프트에서을 입력 `reset password on server null` 합니다.  
   
 5.  프롬프트에 새 암호를 입력 합니다.  
   

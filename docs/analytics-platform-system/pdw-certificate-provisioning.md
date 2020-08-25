@@ -10,16 +10,16 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 676335fb8ee4aac5906c61084c28cd94cf8ea815
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 08/25/2020
 ms.locfileid: "74400889"
 ---
 # <a name="pdw-certificate-provisioning---analytics-platform-system"></a>PDW 인증서 프로 비전-분석 플랫폼 시스템
 분석 플랫폼 시스템의 **Pdw 인증서 프로 비전** 페이지는 pdw 지역에서 사용 하는 인증서를 가져오거나 제거 **Configuration Manager** 합니다. 를 사용 하 여 연결을 암호화 하는 인증서는 SQL Server 클라이언트, SQL Server PDW 드라이버, [관리 콘솔](monitor-the-appliance-by-using-the-admin-console.md)및 Integration Services 로드를 사용 하는 도구를 통해 제어 노드에 대 한 통신을 보호 하는 데 도움이 될 수 있습니다.  
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>사전 준비 사항  
 인증서를 설치 하기 전에 다음을 수행 합니다.  
   
 1.  보안 인증서를 가져옵니다. 보안 인증서를 가져오는 방법에 대 한 자세한 정보가 필요한 경우 Microsoft 지원에 문의 하세요.  
@@ -38,7 +38,7 @@ SQL Server PDW는 인증서를 사용 하 여 제어 노드에 대 한 연결을
   
 인증 경로에는 **관리 콘솔**에 액세스 하기 위해 사용자가 브라우저 주소 표시줄에 입력 하는 이름 또는 제어 노드 클러스터 IP 주소 (권장)에 매핑되는 정규화 된 도메인 이름이 포함 되어야 합니다.  
   
-분석 플랫폼 시스템**Configuration Manager** 를 사용 하 여 신뢰할 수 있는 인증서를 추가 하거나 제거 합니다. Microsoft Windows HTTP 서비스 인증서 구성 도구 (**winHttpCertCfg**)를 사용 하 여 인증서를 관리 하는 것은 지원 되지 않습니다.  
+분석 플랫폼 시스템**Configuration Manager** 를 사용 하 여 신뢰할 수 있는 인증서를 추가 하거나 제거 합니다. Microsoft Windows HTTP 서비스 인증서 구성 도구 (**winHttpCertCfg.exe**)를 직접 사용 하 여 인증서를 관리할 수 없습니다.  
   
 ## <a name="import-or-remove-the-certificate"></a>인증서 가져오기 또는 제거  
 다음 지침에서는 어플라이언스 인증서를 가져오거나 제거 하는 방법을 보여 줍니다.

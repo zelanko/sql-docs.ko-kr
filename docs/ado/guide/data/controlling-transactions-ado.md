@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 189240e8-3ffa-4024-81a9-c6cb5d17eee0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 861fe39f270a007fdd3896c4150a02a0fd905b47
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 279c77e7bbd5d676ab3f5f53b41e9e3172ab0d57
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453635"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806285"
 ---
 # <a name="controlling-transactions-ado"></a>트랜잭션 제어(ADO)
 ADO **는 연결 개체에** 대 한 **BeginTrans**, **CommitTrans**및 **RollbackTrans** 메서드를 통해 연결 내에서 트랜잭션 처리를 지원 합니다. ADO에서 트랜잭션 처리를 구현 하는 일반적인 개념은 다음 간단한 코드 조각에 설명 되어 있습니다.  
@@ -80,4 +80,4 @@ oConn.Close
   
  여기에서 트랜잭션 처리를 사용 하 여 두 레코드가 하나의 작업 단위로 업데이트 되 고 두 제품 이름이 함께 사용 되거나 변경 되지 않도록 합니다.  
   
- 트랜잭션 처리에 대 한 자세한 논의는 [데이터 업데이트 및 유지](../../../ado/guide/data/updating-and-persisting-data.md)를 참조 하세요.
+ 트랜잭션 처리에 대 한 자세한 논의는 [데이터 업데이트 및 유지](./updating-and-persisting-data.md)를 참조 하세요.

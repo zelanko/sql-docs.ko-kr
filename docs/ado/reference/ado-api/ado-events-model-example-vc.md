@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 29530153-b963-4a7c-8665-2335f1d604a8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2bdb668584a0a725add4decc0bd64217d5dacbb5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d19743fb8434ddfb75025ae47da079a8256f270f
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451435"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776702"
 ---
 # <a name="ado-events-model-example-vc"></a>ADO 이벤트 모델 예제(VC++)
-[언어별 Ado 이벤트 인스턴스화](../../../ado/guide/data/ado-event-instantiation-by-language.md) 의 Visual C++ 섹션에서는 ado 이벤트 모델을 인스턴스화하는 방법에 대 한 일반적인 설명을 제공 합니다. 다음은 **#import** 지시문에 의해 만들어진 환경 내에서 이벤트 모델을 인스턴스화하는 특정 예제입니다.  
+[언어별 Ado 이벤트 인스턴스화](../../guide/data/ado-event-instantiation-by-language.md) 의 Visual C++ 섹션에서는 ado 이벤트 모델을 인스턴스화하는 방법에 대 한 일반적인 설명을 제공 합니다. 다음은 **#import** 지시문에 의해 만들어진 환경 내에서 이벤트 모델을 인스턴스화하는 특정 예제입니다.  
   
  일반 설명은 메서드 시그니처의 참조로 **adoint** 를 사용 합니다. 그러나 일반 설명에 있는 몇 가지 세부 정보는 **#import** 지시어를 사용 하 여 약간 변경 됩니다.  
   

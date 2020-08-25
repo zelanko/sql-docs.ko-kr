@@ -13,23 +13,23 @@ helpviewer_keywords:
 ms.assetid: 0ce201c3-6657-4c87-ae81-0d7dc5b5a431
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4e7897d051716434b85f8ee01d15a94588fd947a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5d55b29ec268fcb47b1706eaeab2f42c8d3ff215
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88414649"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88805262"
 ---
 # <a name="appendix-b-ado-error-codes"></a>부록 B: ADO 오류 코드
 특정 오류 메시지에 대 한 자세한 내용은 다음 항목을 참조 하십시오.
 
--   [ADO 오류 코드](../../../ado/guide/appendixes/ado-error-codes.md)
+-   [ADO 오류 코드](./ado-error-codes.md)
 
--   [DataControl 오류 코드](../../../ado/guide/appendixes/datacontrol-error-codes.md)
+-   [DataControl 오류 코드](./datacontrol-error-codes.md)
 
--   [Internet Explorer 오류 코드](../../../ado/guide/appendixes/internet-explorer-error-codes.md)
+-   [Internet Explorer 오류 코드](./internet-explorer-error-codes.md)
 
--   [인터넷 정보 서비스 오류 코드](../../../ado/guide/appendixes/internet-information-services-error-codes.md)
+-   [인터넷 정보 서비스 오류 코드](./internet-information-services-error-codes.md)
 
 ## <a name="see-also"></a>참고 항목
- Ado [API 참조](../../../ado/reference/ado-api/ado-api-reference.md) [Ado 컬렉션](../../../ado/reference/ado-api/ado-collections.md) [Ado 동적 속성](../../../ado/reference/ado-api/ado-dynamic-properties.md) [ado 열거형 상수](../../../ado/reference/ado-api/ado-enumerated-constants.md) ado [이벤트](../../../ado/reference/ado-api/ado-events.md) Ado [메서드](../../../ado/reference/ado-api/ado-methods.md) ado [개체 모델](../../../ado/reference/ado-api/ado-object-model.md) ado 개체 [및 인터페이스](../../../ado/reference/ado-api/ado-objects-and-interfaces.md) [ado 속성](../../../ado/reference/ado-api/ado-properties.md)
+ Ado [API 참조](../../reference/ado-api/ado-api-reference.md) [Ado 컬렉션](../../reference/ado-api/ado-collections.md) [Ado 동적 속성](../../reference/ado-api/ado-dynamic-properties.md) [ado 열거형 상수](../../reference/ado-api/ado-enumerated-constants.md) ado [이벤트](../../reference/ado-api/ado-events.md) Ado [메서드](../../reference/ado-api/ado-methods.md) ado [개체 모델](../../reference/ado-api/ado-object-model.md) ado 개체 [및 인터페이스](../../reference/ado-api/ado-objects-and-interfaces.md) [ado 속성](../../reference/ado-api/ado-properties.md)

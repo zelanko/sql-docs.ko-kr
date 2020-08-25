@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c0dd4a0f-478d-4c5e-b5d5-7535f211d064
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d89f25dc6e37c0b5c569d5db7c4f8486115ce94a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: aec0ad3065deb60f99f672712c085fe054885d27
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453715"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806380"
 ---
 # <a name="boundaries-of-a-recordset"></a>레코드 집합의 경계
 **레코드** 집합은 데이터 집합의 시작과 끝을 각각 나타내며 **BOF** 및 **EOF** 속성을 지원 합니다. **BOF** 및 **EOF** 는 **레코드 집합**의 시작과 끝에 배치 되는 "가상" 레코드로 간주할 수 있습니다. **BOF** 및 **EOF**를 계산 하면 샘플 **레코드 집합** 은 다음과 같이 표시 됩니다.  
@@ -70,4 +70,4 @@ else
   
  이 체계는 모든 커서 형식에 대해 작동 하며 기본 공급자와는 독립적입니다. **RecordCount** 속성 값이 0 인지 여부를 확인 하 여 **레코드 집합** 개체의 비어 있는지 확인할 확인 하려고 시도 하는 경우 결과의 레코드 수를 반환 하는 데 필요한 적절 한 커서 및 공급자를 사용 하도록 예방 조치를 취해야 합니다.  
   
- **레코드 집합** 개체에서 마지막으로 남아 있는 레코드를 삭제 하면 커서는 결정 되지 않은 상태로 유지 됩니다. 공급자에 따라 현재 레코드의 위치를 변경할 때까지 **BOF** 및 **EOF** 속성을 **False로** 유지할 수 있습니다. 자세한 내용은 [Delete 메서드를 사용 하 여 레코드 삭제](../../../ado/guide/data/deleting-records-using-the-delete-method.md)를 참조 하세요.
+ **레코드 집합** 개체에서 마지막으로 남아 있는 레코드를 삭제 하면 커서는 결정 되지 않은 상태로 유지 됩니다. 공급자에 따라 현재 레코드의 위치를 변경할 때까지 **BOF** 및 **EOF** 속성을 **False로** 유지할 수 있습니다. 자세한 내용은 [Delete 메서드를 사용 하 여 레코드 삭제](./deleting-records-using-the-delete-method.md)를 참조 하세요.

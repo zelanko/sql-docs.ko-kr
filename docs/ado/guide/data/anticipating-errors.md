@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ea1d4a97-58c3-476b-a496-cc80db2a90d5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 799a238d37e7b2fe4f5f4c8af5bb396513b75b03
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a85d313dabe9c6c0cf8c4dcdb76e01b0f2962d7d
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453735"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806412"
 ---
 # <a name="anticipating-errors"></a>오류 예측
 오류 방지는 최소한 오류 처리 만큼 중요 합니다. 이 마지막 섹션에는 오류 발생 가능성을 줄일 수 있도록 응용 프로그램에서 수행할 수 있는 간단한 주의 사항 목록이 포함 되어 있습니다.  
@@ -29,7 +29,7 @@ ms.locfileid: "88453735"
   
 -   사용자의 데이터를 허용 하는 모든 프로그램은 데이터를 데이터 저장소에 보내기 전에 유효성을 검사 하는 코드를 포함 해야 합니다. 데이터 저장소, 공급자, ADO 또는 프로그래밍 언어를 사용 하 여 문제를 알릴 수 없습니다. 사용자가 입력 한 모든 바이트를 확인 하 여 해당 필드에 대 한 데이터가 올바른 형식이 고 필수 필드가 비어 있지 않은지 확인 해야 합니다.  
   
- 데이터를 데이터 저장소에 쓰기 전에 데이터를 확인 하십시오. 이 작업을 수행 하는 가장 쉬운 방법은 **WillMove** 이벤트 또는 **WillUpdateRecordset** 이벤트를 처리 하는 것입니다. ADO 이벤트를 처리 하는 방법에 대 한 자세한 설명은 [Ado 이벤트 처리](../../../ado/guide/data/handling-ado-events.md)를 참조 하세요.  
+ 데이터를 데이터 저장소에 쓰기 전에 데이터를 확인 하십시오. 이 작업을 수행 하는 가장 쉬운 방법은 **WillMove** 이벤트 또는 **WillUpdateRecordset** 이벤트를 처리 하는 것입니다. ADO 이벤트를 처리 하는 방법에 대 한 자세한 설명은 [Ado 이벤트 처리](./handling-ado-events.md)를 참조 하세요.  
   
  레코드 포인터를 이동 하기 **전에 레코드 집합 개체가 레코드** **집합** 의 경계를 넘지 않는지 확인 합니다. **EOF** 가 true 일 때 **MoveNext** 를 시도 하거나 **BOF** 가 true 일 때 **MovePrev** 오류가 발생 하면 오류가 발생 합니다. **EOF** 와 **BOF** 가 모두 True 인 경우 **Move** 메서드를 수행 하면 오류가 생성 됩니다.  
   

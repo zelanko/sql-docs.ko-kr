@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 14eae122-2d1e-40c8-b88e-b7cb8dfbc93b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f544805336fdea586fac5697b3abde009dc6f7ff
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d6a682a706e18046bde0a6d117d1964262700c1c
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453625"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806269"
 ---
 # <a name="creating-a-connection-string"></a>연결 문자열 만들기
-연결 문자열은 세미콜론으로 구분 된 인수/값 쌍 (즉, 매개 변수)의 목록으로 구성 됩니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.  
+연결 문자열은 세미콜론으로 구분 된 인수/값 쌍 (즉, 매개 변수)의 목록으로 구성 됩니다. 예를 들면 다음과 같습니다.  
   
 ```syntax
 "arg1=val1; arg2=val2; ... argN=valN;"  
@@ -34,7 +34,7 @@ ms.locfileid: "88453625"
   
 |인수|설명|  
 |--------------|-----------------|  
-|*공급자*|연결에 사용할 공급자의 이름을 지정 합니다.|  
+|*공급 기업*|연결에 사용할 공급자의 이름을 지정 합니다.|  
 |*파일 이름*|미리 설정 된 연결 정보를 포함 하는 공급자별 파일 (예: 지속형 데이터 원본 개체)의 이름을 지정 합니다.|  
 |*URL*|파일 또는 디렉터리와 같은 리소스를 식별 하는 절대 URL로 연결 문자열을 지정 합니다.|  
 |*원격 공급자*|클라이언트 쪽 연결을 열 때 사용할 공급자의 이름을 지정 합니다. (원격 데이터 서비스에만 해당)|  
@@ -42,7 +42,7 @@ ms.locfileid: "88453625"
   
  다른 인수는 ADO에서 처리 하지 않고 *공급자* 인수에서 라는 공급자에 전달 됩니다.  
   
- HelloData의 HelloData 응용 프로그램 [: 간단한 ADO 응용 프로그램](../../../ado/guide/data/hellodata-a-simple-ado-application.md) 은 다음 연결 문자열을 사용 했습니다.  
+ HelloData의 HelloData 응용 프로그램 [: 간단한 ADO 응용 프로그램](./hellodata-a-simple-ado-application.md) 은 다음 연결 문자열을 사용 했습니다.  
   
 ```vb
 m_sConnStr = "Provider=SQLOLEDB;Data Source=MySqlServer;" & _  

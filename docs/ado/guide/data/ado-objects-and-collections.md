@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7a745aae-9372-49b6-8dae-b9c93e5f3216
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cbebf1e910fd749ff4f582c57da6c8c2656e9f61
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 101eab85f19922b56a7e7f86f330188d87fcc9fe
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453765"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806417"
 ---
 # <a name="ado-objects-and-collections"></a>ADO 개체 및 컬렉션
 ADO는 다음 9 개의 개체와 4 개의 컬렉션으로 구성 됩니다.  
@@ -39,5 +39,5 @@ ADO는 다음 9 개의 개체와 4 개의 컬렉션으로 구성 됩니다.
 |**Parameters** 컬렉션|**Command** 개체의 모든 **Parameter** 개체를 포함 합니다.|  
 |**Errors** 컬렉션|단일 공급자 관련 오류에 대 한 응답으로 생성 된 모든 **오류** 개체를 포함 합니다.|  
   
-## <a name="see-also"></a>관련 항목  
- [ADO 개체 모델](../../../ado/reference/ado-api/ado-object-model.md)
+## <a name="see-also"></a>참고 항목  
+ [ADO 개체 모델](../../reference/ado-api/ado-object-model.md)

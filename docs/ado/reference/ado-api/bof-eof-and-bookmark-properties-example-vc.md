@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: bd2b9d85-e75e-4fc8-a392-076582019caa
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 33bd0bf737b6c586c0cb97072b28650898e86696
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: be80fc6c09279920a992b25bb91ee7621aabf5a1
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451145"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776592"
 ---
 # <a name="bof-eof-and-bookmark-properties-example-vc"></a>BOF, EOF 및 Bookmark 속성 예제 (VC + +)
-이 예제의 첫 번째 함수는 사용자가 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)의 첫 번째 또는 마지막 레코드를 지나서 이동 하려고 시도 하는 경우 [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) 및 [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) 속성을 사용 하 여 메시지를 표시 합니다. [책갈피](../../../ado/reference/ado-api/bookmark-property-ado.md) 속성을 사용 하 여 사용자가 레코드 **집합** 의 레코드에 플래그를 지정 하 고 나중에이 레코드로 돌아갈 수 있습니다.  
+이 예제의 첫 번째 함수는 사용자가 [레코드 집합](./recordset-object-ado.md)의 첫 번째 또는 마지막 레코드를 지나서 이동 하려고 시도 하는 경우 [BOF](./bof-eof-properties-ado.md) 및 [EOF](./bof-eof-properties-ado.md) 속성을 사용 하 여 메시지를 표시 합니다. [책갈피](./bookmark-property-ado.md) 속성을 사용 하 여 사용자가 레코드 **집합** 의 레코드에 플래그를 지정 하 고 나중에이 레코드로 돌아갈 수 있습니다.  
   
  두 번째 함수는 Bookmark 속성을 사용 하 여 레코드 **집합** 의 모든 다른 레코드에 대 한 **책갈피** 를 배열로 배치한 다음 배열을 사용 하 여 레코드 집합을 필터링 합니다.  
   
@@ -207,6 +207,6 @@ Authors with 25 percent royalty
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [BOF, EOF 속성 (ADO)](../../../ado/reference/ado-api/bof-eof-properties-ado.md)   
- [Bookmark 속성 (ADO)](../../../ado/reference/ado-api/bookmark-property-ado.md)   
- [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [BOF, EOF 속성 (ADO)](./bof-eof-properties-ado.md)   
+ [Bookmark 속성 (ADO)](./bookmark-property-ado.md)   
+ [레코드 집합 개체(ADO)](./recordset-object-ado.md)

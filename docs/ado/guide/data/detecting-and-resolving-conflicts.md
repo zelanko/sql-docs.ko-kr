@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b28fdd26-c1a4-40ce-a700-2b0c9d201514
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c9ab7dd72816d47b4f8a1c7aa55ba8751399e41a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b9676087d23ff17b7aaa4c4ad6cab20eaec644ca
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453515"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806908"
 ---
 # <a name="detecting-and-resolving-conflicts"></a>충돌 감지 및 해결
 직접 실행 모드에서 레코드 집합을 처리 하는 경우 동시성 문제가 발생 하는 것이 훨씬 줄어듭니다. 반면에 응용 프로그램이 일괄 처리 모드 업데이트를 사용 하는 경우 한 사용자가 동일한 레코드를 편집 하는 다른 사용자가 변경한 내용을 저장 하기 전에 레코드를 변경 하는 것이 좋을 수 있습니다. 이 경우 응용 프로그램에서 충돌을 정상적으로 처리 하는 것이 좋습니다. "Wins" 서버에 대 한 업데이트를 마지막 사용자에 게 보낼 수 있습니다. 또는 충돌 하는 두 값 중에서 선택할 수 있도록 가장 최근의 사용자에 게 우선 순위를 지정할 업데이트를 결정 하도록 할 수 있습니다.  
@@ -114,7 +114,7 @@ ms.locfileid: "88453515"
   
  현재 레코드 또는 특정 필드의 Status 속성을 사용 하 여 발생 한 충돌 유형을 확인할 수 있습니다.  
   
- 오류 처리에 대 한 자세한 내용은 [오류 처리](../../../ado/guide/data/error-handling.md)를 참조 하세요.  
+ 오류 처리에 대 한 자세한 내용은 [오류 처리](./error-handling.md)를 참조 하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [일괄 처리 모드](../../../ado/guide/data/batch-mode.md)
+ [일괄 처리 모드](./batch-mode.md)

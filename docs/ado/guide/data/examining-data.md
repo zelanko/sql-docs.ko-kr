@@ -16,26 +16,26 @@ helpviewer_keywords:
 ms.assetid: de1d74af-89b6-4f3f-a8c9-07c3e2b3c9a5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fef2189af66c6777e2c337026db76e85b2cb42d9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 28c548316ebb6ede317f13d20ff82de0b802659e
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453415"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806115"
 ---
 # <a name="examining-data"></a>데이터 검사
-데이터 [가져오기](../../../ado/guide/data/getting-data.md) 섹션에서는 데이터 원본에서 하나 이상의 **레코드 집합** 개체로 데이터를 검색 하는 방법에 대해 설명 했습니다. 이 섹션에서는 **레코드** 집합을 탐색 하 고 데이터를 보는 방법을 비롯 하 여 **레코드 집합** 에 대해 자세히 설명 합니다.  
+데이터 [가져오기](./getting-data.md) 섹션에서는 데이터 원본에서 하나 이상의 **레코드 집합** 개체로 데이터를 검색 하는 방법에 대해 설명 했습니다. 이 섹션에서는 **레코드** 집합을 탐색 하 고 데이터를 보는 방법을 비롯 하 여 **레코드 집합** 에 대해 자세히 설명 합니다.  
   
- **레코드 집합** 은 내에 포함 된 데이터를 탐색 하 고 검사할 수 있는 다양 한 [속성 및 메서드](../../../ado/reference/ado-api/recordset-object-properties-methods-and-events.md) 를 지원 합니다. 이러한 기능은 공급자에 따라 다릅니다. 일부 공급자는 일부 속성 또는 메서드를 지원 하지 않을 수 있습니다.  
+ **레코드 집합** 은 내에 포함 된 데이터를 탐색 하 고 검사할 수 있는 다양 한 [속성 및 메서드](../../reference/ado-api/recordset-object-properties-methods-and-events.md) 를 지원 합니다. 이러한 기능은 공급자에 따라 다릅니다. 일부 공급자는 일부 속성 또는 메서드를 지원 하지 않을 수 있습니다.  
   
  이 섹션에서는 다음 항목을 다룹니다.  
   
--   [현재 레코드 및 레코드 집합의 크기](../../../ado/guide/data/current-record-and-size-of-recordset.md)  
+-   [현재 레코드 및 레코드 집합의 크기](./current-record-and-size-of-recordset.md)  
   
--   [데이터 탐색](../../../ado/guide/data/navigating-through-data.md)  
+-   [데이터 탐색](./navigating-through-data.md)  
   
--   [레코드 집합 구조 이해](../../../ado/guide/data/understanding-recordset-structure.md)  
+-   [레코드 집합 구조 이해](./understanding-recordset-structure.md)  
   
--   [데이터를 검사하기 위한 샘플 레코드 집합](../../../ado/guide/data/sample-recordset-for-examining-data.md)  
+-   [데이터를 검사하기 위한 샘플 레코드 집합](./sample-recordset-for-examining-data.md)  
   
--   [레코드 집합의 경계](../../../ado/guide/data/boundaries-of-a-recordset.md)
+-   [레코드 집합의 경계](./boundaries-of-a-recordset.md)

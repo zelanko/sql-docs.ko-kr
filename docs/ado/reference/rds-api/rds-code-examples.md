@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 59030e99-de9c-4506-a450-67dfcb6f7c00
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 612d7dfd7b274b69f6ceeb3801d1a85e454d6d5f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 66404237dbcb0a5cd74dd5eaf77d30f3af7e70a7
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438815"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767812"
 ---
 # <a name="rds-code-examples"></a>RDS 코드 예제
 > [!IMPORTANT]
@@ -28,8 +28,8 @@ ms.locfileid: "88438815"
   
  **참고** 전체 코드 예제를 코드 편집기에 붙여 넣습니다. 부분 예제가 사용 되거나 단락 서식이 손실 된 경우 예제가 올바르게 실행 되지 않을 수 있습니다.  
   
--   [Microsoft Visual Basic의 RDS 코드 예제](../../../ado/reference/rds-api/rds-code-examples-in-visual-basic.md)  
+-   [Microsoft Visual Basic의 RDS 코드 예제](./rds-code-examples-in-visual-basic.md)  
   
--   [Microsoft Visual Basic Scripting Edition의 RDS 코드 예제](../../../ado/reference/rds-api/rds-code-examples-in-vbscript.md)  
+-   [Microsoft Visual Basic Scripting Edition의 RDS 코드 예제](./rds-code-examples-in-vbscript.md)  
   
--   [Microsoft Visual C++의 RDS 코드 예제](../../../ado/reference/rds-api/rds-code-examples-in-visual-c.md)  
+-   [Microsoft Visual C++의 RDS 코드 예제](./rds-code-examples-in-visual-c.md)

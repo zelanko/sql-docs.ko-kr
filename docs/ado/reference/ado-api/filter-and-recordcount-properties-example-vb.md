@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: e8bc63c7-8967-438a-9a49-512478a87a15
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0f948d2f0ba3a70c1f9a7b3279b0eb9bf68b5b3a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3bf78308afe6a48a071daa8a68a0a3cfaecd907c
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443695"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775302"
 ---
 # <a name="filter-and-recordcount-properties-example-vb"></a>Filter 및 RecordCount 속성 예제(VB)
-이 예에서는 ***Pubs*** 데이터베이스의 Publishers 테이블에서 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 을 엽니다. 그런 다음 [Filter](../../../ado/reference/ado-api/filter-property.md) 속성을 사용 하 여 특정 국가/지역의 해당 게시자로 표시 되는 레코드 수를 제한 합니다. **RecordCount** 속성은 필터링 되거나 필터링 되지 않은 레코드 집합 간의 차이를 표시 하는 데 사용 됩니다.  
+이 예에서는 ***Pubs*** 데이터베이스의 Publishers 테이블에서 [레코드 집합](./recordset-object-ado.md) 을 엽니다. 그런 다음 [Filter](./filter-property.md) 속성을 사용 하 여 특정 국가/지역의 해당 게시자로 표시 되는 레코드 수를 제한 합니다. **RecordCount** 속성은 필터링 되거나 필터링 되지 않은 레코드 집합 간의 차이를 표시 하는 데 사용 됩니다.  
   
 ```  
 'BeginFilterVB  
@@ -116,6 +116,6 @@ Attribute VB_Name = "Filter"
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [필터 속성](../../../ado/reference/ado-api/filter-property.md)   
- [RecordCount 속성 (ADO)](../../../ado/reference/ado-api/recordcount-property-ado.md)   
- [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [필터 속성](./filter-property.md)   
+ [RecordCount 속성 (ADO)](./recordcount-property-ado.md)   
+ [레코드 집합 개체(ADO)](./recordset-object-ado.md)

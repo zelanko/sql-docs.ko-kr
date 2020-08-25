@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: f3ecf5cf783b707b75c90dfa70d502e3c81d28c3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 08/25/2020
 ms.locfileid: "74401007"
 ---
 # <a name="locking-behavior-in-parallel-data-warehouse"></a>병렬 데이터 웨어하우스의 잠금 동작
@@ -27,7 +27,7 @@ SQL Server PDW는 다음과 같은 네 가지 잠금 모드를 지원 합니다.
 단독  
 배타적 잠금은 배타적 잠금을 보유 하 고 있는 트랜잭션이 완료 될 때까지 잠긴 개체를 읽거나 쓸 수 없습니다. 단독 잠금이 적용 되는 동안에는 모드의 다른 잠금을 사용할 수 없습니다. 예를 들어 DROP TABLE 및 CREATE DATABASE는 배타적 잠금을 사용 합니다.  
   
-Shared  
+공유됨  
 공유 잠금은 영향을 받는 개체에 대 한 배타적 잠금을 시작 하는 것을 금지 하지만 다른 모든 잠금 모드를 허용 합니다. 예를 들어 SELECT 문은 공유 잠금을 시작 하므로 여러 쿼리에서 선택 된 데이터에 동시에 액세스할 수 있지만 SELECT 문이 완료 될 때까지 읽을 레코드에 대 한 업데이트를 방지 합니다.  
   
 ExclusiveUpdate  

@@ -15,24 +15,24 @@ helpviewer_keywords:
 ms.assetid: fd956da1-5203-40af-aa7e-fc13a6c6581f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 822c9f6ef6aebe5e32bb37e4c89a9bb4e6d7db68
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1747f01b554e8df45a7835e2cb2006adcdb3079a
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454075"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806615"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-jet-overview"></a>Microsoft Jet 용 microsoft OLE DB 공급자 개요
 Microsoft Jet 용 OLE DB 공급자를 사용 하 여 ADO에서 Microsoft Jet 데이터베이스에 액세스할 수 있습니다.
 
 ## <a name="connection-string-parameters"></a>연결 문자열 매개 변수
- 이 공급자에 연결 하려면 [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) 속성의 *공급자* 인수를 다음과 같이 설정 합니다.
+ 이 공급자에 연결 하려면 [ConnectionString](../../reference/ado-api/connectionstring-property-ado.md) 속성의 *공급자* 인수를 다음 속성으로 설정 합니다.
 
 ```vb
 Microsoft.Jet.OLEDB.4.0
 ```
 
- [공급자](../../../ado/reference/ado-api/provider-property-ado.md) 속성을 읽으면이 문자열도 반환 됩니다.
+ [공급자](../../reference/ado-api/provider-property-ado.md) 속성을 읽으면이 문자열도 반환 됩니다.
 
 ## <a name="typical-connection-string"></a>일반 연결 문자열
  이 공급자에 대 한 일반적인 연결 문자열은 다음과 같습니다.
@@ -45,7 +45,7 @@ Microsoft.Jet.OLEDB.4.0
 
 |키워드|설명|
 |-------------|-----------------|
-|**공급자**|Microsoft Jet의 OLE DB 공급자를 지정 합니다.|
+|**공급 기업**|Microsoft Jet의 OLE DB 공급자를 지정 합니다.|
 |**데이터 원본**|데이터베이스 경로와 파일 이름을 지정 합니다 (예: `c:\Northwind.mdb` ).|
 |**사용자 ID**|사용자 이름을 지정합니다. 이 키워드를 지정 하지 않으면 `admin` 기본적으로 "" 문자열이 사용 됩니다.|
 |**암호**|사용자 암호를 지정 합니다. 이 키워드를 지정 하지 않으면 기본적으로 빈 문자열 ("")이 사용 됩니다.|
@@ -54,7 +54,7 @@ Microsoft.Jet.OLEDB.4.0
 >  Windows 인증을 지 원하는 데이터 원본 공급자에 연결 하는 경우 연결 문자열에 사용자 ID 및 암호 정보 대신 **Trusted_Connection = yes** 또는 **INTEGRATED Security = SSPI** 를 지정 해야 합니다.
 
 ## <a name="provider-specific-connection-parameters"></a>공급자별 연결 매개 변수
- Microsoft Jet 용 OLE DB 공급자는 ADO에 정의 된 속성 외에 여러 공급자별 동적 속성을 지원 합니다. 다른 모든 **연결** 매개 변수와 마찬가지로 연결 개체의 **Properties** 컬렉션을 사용 하 여 설정 **하거나 연결 문자열** 의 일부로 설정할 수 있습니다.
+ Microsoft Jet 용 OLE DB 공급자는 ADO에 정의 된 속성 외에 몇 가지 공급자별 동적 속성을 지원 합니다. 다른 모든 **연결** 매개 변수와 마찬가지로 연결 개체의 **Properties** 컬렉션을 사용 하 여 설정 **하거나 연결 문자열** 의 일부로 설정할 수 있습니다.
 
  다음 표에서는 이러한 속성을 해당 OLE DB 속성 이름과 함께 괄호 안에 나열 합니다.
 
@@ -69,7 +69,7 @@ Microsoft.Jet.OLEDB.4.0
 |Jet OLEDB: 데이터베이스 암호화 (DBPROP_JETOLEDB_ENCRYPTDATABASE)|압축 된 데이터베이스를 암호화할지 여부를 나타냅니다. 이 속성이 설정 되지 않은 경우 원본 데이터베이스가 암호화 된 경우에도 압축 된 데이터베이스는 암호화 됩니다.|
 |Jet OLEDB: 엔진 유형 (DBPROP_JETOLEDB_ENGINE)|현재 데이터 저장소에 액세스 하는 데 사용 되는 저장소 엔진을 나타냅니다.|
 |Jet OLEDB: 전용 비동기 지연 (DBPROP_JETOLEDB_EXCLUSIVEASYNCDELAY)|데이터베이스가 단독으로 열리는 경우 Jet에서 디스크에 대 한 비동기 쓰기를 지연할 수 있는 최대 시간 (밀리초)을 나타냅니다.<br /><br /> **JET OLEDB: Flush Transaction Timeout** 이 0으로 설정 되지 않은 경우이 속성은 무시 됩니다.|
-|Jet OLEDB: 플러시 트랜잭션 시간 제한 (DBPROP_JETOLEDB_FLUSHTRANSACTIONTIMEOUT)|비동기 쓰기를 위해 캐시에 저장 된 데이터가 실제로 디스크에 기록 될 때까지 대기 하는 시간을 나타냅니다. 이 설정은 **JET oledb: Shared Async delay** 및 **Jet Oledb: 배타 비동기 지연**값을 재정의 합니다.|
+|Jet OLEDB: 플러시 트랜잭션 시간 제한 (DBPROP_JETOLEDB_FLUSHTRANSACTIONTIMEOUT)|비동기 쓰기를 위해 캐시에 저장 된 데이터가 디스크에 기록 될 때까지 대기 하는 시간을 나타냅니다. 이 설정은 **JET oledb: Shared Async delay** 및 **Jet Oledb: 배타 비동기 지연**값을 재정의 합니다.|
 |Jet OLEDB: 글로벌 대량 트랜잭션 (DBPROP_JETOLEDB_GLOBALBULKNOTRANSACTIONS)|SQL 대량 트랜잭션이 트랜잭션 되었는지 여부를 나타냅니다.|
 |Jet OLEDB: 전역 부분 대량 Ops (DBPROP_JETOLEDB_GLOBALBULKPARTIAL)|데이터베이스를 여는 데 사용 된 암호를 나타냅니다.|
 |Jet OLEDB: 암시적 커밋 동기화 (DBPROP_JETOLEDB_IMPLICITCOMMITSYNC)|내부 암시적 트랜잭션에서 수행 된 변경 내용을 동기 또는 비동기 모드로 쓸지 여부를 나타냅니다.|
@@ -106,16 +106,16 @@ Microsoft.Jet.OLEDB.4.0
 |Jet OLEDB: 저장 된 쿼리 (DBPROP_JETOLEDB_STOREDQUERY)|명령 텍스트를 SQL 명령 대신 저장 쿼리로 해석할지 여부를 나타냅니다.|
 |Jet OLEDB: 집합에 대 한 규칙 유효성 검사 (DBPROP_JETOLEDB_VALIDATEONSET)|열 데이터가 설정 되거나 변경 내용이 데이터베이스에 커밋될 때 Jet 유효성 검사 규칙이 평가 되는지 여부를 나타냅니다.|
 
- 기본적으로 Microsoft Jet 용 OLE DB 공급자는 읽기/쓰기 모드에서 Microsoft Jet 데이터베이스를 엽니다. 읽기 전용 모드로 데이터베이스를 열려면 ADO **연결** 개체의 [Mode](../../../ado/reference/ado-api/mode-property-ado.md) 속성을 **adModeRead**로 설정 합니다.
+ 기본적으로 Microsoft Jet 용 OLE DB 공급자는 읽기/쓰기 모드에서 Microsoft Jet 데이터베이스를 엽니다. 읽기 전용 모드로 데이터베이스를 열려면 ADO **연결** 개체의 [Mode](../../reference/ado-api/mode-property-ado.md) 속성을 **adModeRead**로 설정 합니다.
 
 ## <a name="command-object-usage"></a>명령 개체 사용
- [Command](../../../ado/reference/ado-api/command-object-ado.md) 개체의 명령 텍스트는 MICROSOFT Jet SQL 언어를 사용 합니다. 명령 텍스트에서 행 반환 쿼리, 동작 쿼리 및 테이블 이름을 지정할 수 있습니다. 그러나 저장 프로시저는 지원 되지 않으므로 지정 하면 안 됩니다.
+ [Command](../../reference/ado-api/command-object-ado.md) 개체의 명령 텍스트는 MICROSOFT Jet SQL 언어를 사용 합니다. 명령 텍스트에서 행 반환 쿼리, 동작 쿼리 및 테이블 이름을 지정할 수 있습니다. 그러나 저장 프로시저는 지원 되지 않으므로 지정 하면 안 됩니다.
 
 ## <a name="recordset-behavior"></a>레코드 집합 동작
- Microsoft Jet 데이터베이스 엔진은 동적 커서를 지원 하지 않습니다. 따라서 Microsoft Jet 용 OLE DB 공급자는 **Adlockdynamic** 커서 유형을 지원 하지 않습니다. 동적 커서가 요청 될 때 공급자는 키 집합 커서를 반환 하 고 [CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md) 속성을 다시 설정 하 여 반환 되는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 의 유형을 표시 합니다. 또한 업데이트할 수 있는 **레코드 집합이** 요청 될 경우 **(LockType** is **adlockoptimistic**, **Adlockbatch낙관적**또는 **adlockoptimistic**) 공급자가 키 집합 커서를 반환 하 고 **CursorType** 속성을 다시 설정 합니다.
+ Microsoft Jet 데이터베이스 엔진은 동적 커서를 지원 하지 않습니다. 따라서 Microsoft Jet 용 OLE DB 공급자는 **Adlockdynamic** 커서 유형을 지원 하지 않습니다. 동적 커서가 요청 될 때 공급자는 키 집합 커서를 반환 하 고 [CursorType](../../reference/ado-api/cursortype-property-ado.md) 속성을 다시 설정 하 여 반환 되는 [레코드 집합](../../reference/ado-api/recordset-object-ado.md) 의 유형을 표시 합니다. 또한 업데이트할 수 있는 **레코드 집합이** 요청 될 경우 **(LockType** is **adlockoptimistic**, **Adlockbatch낙관적**또는 **adlockoptimistic**) 공급자가 키 집합 커서를 반환 하 고 **CursorType** 속성을 다시 설정 합니다.
 
 ## <a name="dynamic-properties"></a>동적 속성
- Microsoft Jet 용 OLE DB 공급자는 열려 있는 [연결](../../../ado/reference/ado-api/connection-object-ado.md), [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)및 [명령](../../../ado/reference/ado-api/command-object-ado.md) 개체의 **properties** 컬렉션에 몇 가지 동적 속성을 삽입 합니다.
+ Microsoft Jet 용 OLE DB 공급자는 열려 있는 [연결](../../reference/ado-api/connection-object-ado.md), [레코드 집합](../../reference/ado-api/recordset-object-ado.md)및 [명령](../../reference/ado-api/command-object-ado.md) 개체의 **properties** 컬렉션에 몇 가지 동적 속성을 삽입 합니다.
 
  다음 테이블은 각 동적 속성에 대 한 ADO 및 OLE DB 이름의 교차 인덱스입니다. OLE DB 프로그래머 참조는 "설명" 이라는 용어로 ADO 속성 이름을 참조 합니다. 이러한 속성에 대 한 자세한 내용은 OLE DB 프로그래머 참조에서 찾을 수 있습니다.
 
@@ -336,4 +336,4 @@ Microsoft.Jet.OLEDB.4.0
 |업데이트 가능성|DBPROP_UPDATABILITY|
 |책갈피 사용|DBPROP_BOOKMARKS|
 
- Microsoft Jet 용 OLE DB 공급자에 대 한 특정 구현 세부 정보 및 기능 정보는 OLE DB 설명서의 [Jet 공급자](https://msdn.microsoft.com/library/windows/desktop/ms722791.aspx) 를 참조 하십시오.
+ Microsoft Jet 용 OLE DB 공급자에 대 한 특정 구현 세부 정보 및 기능 정보는 OLE DB 설명서의 [Jet 공급자](/previous-versions/windows/desktop/ms722791(v=vs.85)) 를 참조 하십시오.

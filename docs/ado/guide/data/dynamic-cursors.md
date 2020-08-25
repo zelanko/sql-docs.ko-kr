@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 00460f30-8cf7-494e-82df-41012f40ae51
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6904bc0b3459f25af955d804ed4764ae57238b90
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f646a608c8cbc25e16c5200f8271c133a62d3457
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453475"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806160"
 ---
 # <a name="dynamic-cursors"></a>동적 커서
 동적 커서는 변경 내용이 커서 내부에서 발생 하는지 아니면 커서 외부의 다른 사용자에 의해 변경 되는지에 관계 없이 결과 집합의 행에 대 한 모든 변경 내용을 검색 합니다. 모든 사용자가 수행한 모든 insert, update 및 delete 문은 커서를 통해 볼 수 있습니다. 동적 커서는 커서를 연 후 결과 집합에서 행, 순서 및 값에 대 한 변경 내용을 검색할 수 있습니다. 커서 트랜잭션 격리 수준이 "커밋되지 않음"으로 설정 되지 않은 경우 커서 외부에서 수행 된 업데이트는 커밋될 때까지 표시 되지 않습니다.  
@@ -29,6 +29,6 @@ ms.locfileid: "88453475"
  응용 프로그램에서 다른 사용자가 수행한 모든 동시 업데이트를 검색 해야 하는 경우에는 동적 커서를 선택 하는 것이 좋습니다. **AdOpenDynamic CursorTypeEnum** 를 사용 하 여 ADO에서 동적 커서를 사용 하도록 지정 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [앞 으로만 이동 가능한 커서](../../../ado/guide/data/forward-only-cursors.md)   
- [정적 커서](../../../ado/guide/data/static-cursors.md)   
- [키 집합 커서](../../../ado/guide/data/keyset-cursors.md)
+ [앞 으로만 이동 가능한 커서](./forward-only-cursors.md)   
+ [정적 커서](./static-cursors.md)   
+ [키 집합 커서](./keyset-cursors.md)

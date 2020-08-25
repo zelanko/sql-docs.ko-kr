@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9f7c78bb-7bb8-4c4f-8e5a-4d3bfc8a208f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3d05785a005ea6f0bbeb000d8abb74609318b741
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a4f57460813cc72e4d513b9954739bcc02a5e4b8
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443525"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775022"
 ---
 # <a name="getrows-method-example-vb"></a>GetRows 메서드 예제(VB)
-이 예에서는 [GetRows](../../../ado/reference/ado-api/getrows-method-ado.md) 메서드를 사용 하 여 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 에서 지정 된 수의 행을 검색 하 고 결과 데이터로 배열을 채웁니다. **Getrows** 메서드는 [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) 에 도달 했거나 **getrows** 에서 다른 사용자가 삭제 한 레코드를 검색 하려고 시도 하는 경우 두 경우에 원하는 수의 행 보다 더 작은 값을 반환 합니다. 함수는 두 번째 사례가 발생 하는 경우에만 **False** 를 반환 합니다. GetRowsOK 함수는이 프로시저를 실행 하는 데 필요 합니다.  
+이 예에서는 [GetRows](./getrows-method-ado.md) 메서드를 사용 하 여 [레코드 집합](./recordset-object-ado.md) 에서 지정 된 수의 행을 검색 하 고 결과 데이터로 배열을 채웁니다. **Getrows** 메서드는 [EOF](./bof-eof-properties-ado.md) 에 도달 했거나 **getrows** 에서 다른 사용자가 삭제 한 레코드를 검색 하려고 시도 하는 경우 두 경우에 원하는 수의 행 보다 더 작은 값을 반환 합니다. 함수는 두 번째 사례가 발생 하는 경우에만 **False** 를 반환 합니다. GetRowsOK 함수는이 프로시저를 실행 하는 데 필요 합니다.  
   
 ```  
 'BeginGetRowsVB  
@@ -114,5 +114,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [GetRows 메서드 (ADO)](../../../ado/reference/ado-api/getrows-method-ado.md)   
- [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [GetRows 메서드 (ADO)](./getrows-method-ado.md)   
+ [레코드 집합 개체(ADO)](./recordset-object-ado.md)

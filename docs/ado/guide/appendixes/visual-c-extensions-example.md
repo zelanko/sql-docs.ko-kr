@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9739c278-582c-402b-a158-7f68a1b2c293
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 06e7ca7204d673ac5888962f3d4f5095e9fe5a9d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ae7eaab32f14ce653d766cfe38408118cc37b763
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453945"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806782"
 ---
 # <a name="visual-c-extensions-example"></a>Visual C++ 확장 예제
 이 프로그램은 필드에서 값을 검색 하 고 C/c + + 변수로 변환 하는 방법을 보여 줍니다.  
@@ -111,5 +111,5 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Visual C++ 확장 사용](../../../ado/guide/appendixes/using-visual-c-extensions.md)   
- [Visual C++ 확장 헤더](../../../ado/guide/appendixes/visual-c-extensions-header.md)
+ [Visual C++ 확장 사용](./using-visual-c-extensions.md)   
+ [Visual C++ 확장 헤더](./visual-c-extensions-header.md)

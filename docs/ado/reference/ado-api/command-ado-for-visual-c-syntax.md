@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: cf12cbd1-25f7-4bb5-aa94-0fe823b3b6d6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 33857f9d88c9e46779aeaa8f22372485a77541b0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 882c088379b53df8b9618f3d11f2e1628c9b7f03
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88450905"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776182"
 ---
 # <a name="command-ado-for-visual-c-syntax"></a>명령(Visual C++ 구문에 대한 ADO)
 ## <a name="methods"></a>메서드  
@@ -53,4 +53,4 @@ get_Parameters(ADOParameters **ppvObject)
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [명령 개체(ADO)](../../../ado/reference/ado-api/command-object-ado.md)
+ [명령 개체(ADO)](./command-object-ado.md)

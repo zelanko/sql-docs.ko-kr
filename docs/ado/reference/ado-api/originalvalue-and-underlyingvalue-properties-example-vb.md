@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 1750804b-d7ef-47d6-8d73-1f51fa1cbe4a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 189ca54160090bde8b526b8feec481dc31104ccb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 74cb7f53f7fd55332469a74e77405aa3312aef7e
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442875"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773612"
 ---
 # <a name="originalvalue-and-underlyingvalue-properties-example-vb"></a>OriginalValue 및 UnderlyingValue 속성 예제 (VB)
-이 예제에서는 레코드 [집합](../../../ado/reference/ado-api/recordset-object-ado.md) 일괄 처리를 업데이트 하는 동안 레코드의 기본 데이터가 변경 된 경우 메시지를 표시 하 여 [Originalvalue](../../../ado/reference/ado-api/originalvalue-property-ado.md) 및 [UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md) 속성을 보여 줍니다.  
+이 예제에서는 레코드 [집합](./recordset-object-ado.md) 일괄 처리를 업데이트 하는 동안 레코드의 기본 데이터가 변경 된 경우 메시지를 표시 하 여 [Originalvalue](./originalvalue-property-ado.md) 및 [UnderlyingValue](./underlyingvalue-property.md) 속성을 보여 줍니다.  
   
 ```  
 'BeginOriginalValueVB  
@@ -121,6 +121,6 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [OriginalValue 속성 (ADO)](../../../ado/reference/ado-api/originalvalue-property-ado.md)   
- [레코드 집합 개체 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [UnderlyingValue 속성](../../../ado/reference/ado-api/underlyingvalue-property.md)
+ [OriginalValue 속성 (ADO)](./originalvalue-property-ado.md)   
+ [레코드 집합 개체 (ADO)](./recordset-object-ado.md)   
+ [UnderlyingValue 속성](./underlyingvalue-property.md)

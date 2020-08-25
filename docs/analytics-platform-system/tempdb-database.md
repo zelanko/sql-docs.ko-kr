@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 3772e2b4cabac84c00854eba85f7a0c2a33d48bc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 08/25/2020
 ms.locfileid: "74400147"
 ---
 # <a name="tempdb-database-in-parallel-data-warehouse"></a>병렬 데이터 웨어하우스의 tempdb 데이터베이스
@@ -25,7 +25,7 @@ ms.locfileid: "74400147"
 *로컬 임시 테이블*  
 *로컬 임시 테이블* 은 테이블 이름 앞에 # 접두사를 사용 하 고는 로컬 사용자 세션에서 만든 임시 테이블입니다. 각 세션은 자체 세션에 대해 로컬 임시 테이블의 데이터에만 액세스할 수 있습니다.  
   
-각 세션은 모든 세션에서 로컬 임시 테이블에 대 한 메타 데이터를 볼 수 있습니다. 예를 들어 모든 세션은 `SELECT * FROM tempdb.sys.tables` 쿼리를 사용 하 여 모든 로컬 임시 테이블에 대 한 메타 데이터를 볼 수 있습니다.  
+각 세션은 모든 세션에서 로컬 임시 테이블에 대 한 메타 데이터를 볼 수 있습니다. 예를 들어 모든 세션은 쿼리를 사용 하 여 모든 로컬 임시 테이블에 대 한 메타 데이터를 볼 수 있습니다 `SELECT * FROM tempdb.sys.tables` .  
   
 전역 임시 테이블  
 이 SQL Server PDW 릴리스에서는 # # 구문을 사용 하 여 SQL Server에서 지원 되는 *전역 임시 테이블*은 지원 되지 않습니다.  

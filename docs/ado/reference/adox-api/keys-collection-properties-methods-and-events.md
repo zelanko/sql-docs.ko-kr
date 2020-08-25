@@ -13,28 +13,28 @@ helpviewer_keywords:
 ms.assetid: eeb3746d-1c75-4bb0-97b5-2c2d073c8c0e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 11ac84b96e9dee887da98683b9d88d4ced8a6332
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a83b49d9e05257d9973a9548e25e7151a842a441
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439805"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88770052"
 ---
 # <a name="keys-collection-properties-methods-and-events"></a>Keys 컬렉션 속성, 메서드 및 이벤트
 ## <a name="properties"></a>속성  
- [Count 속성](../../../ado/reference/ado-api/count-property-ado.md)  
+ [Count 속성](../ado-api/count-property-ado.md)  
   
- [Item 속성](../../../ado/reference/ado-api/item-property-ado.md)  
+ [Item 속성](../ado-api/item-property-ado.md)  
   
 ## <a name="methods"></a>메서드  
- [Append 메서드 (Keys)](../../../ado/reference/adox-api/append-method-adox-keys.md)  
+ [Append 메서드 (Keys)](./append-method-adox-keys.md)  
   
- [Delete 메서드 (Collections)](../../../ado/reference/adox-api/delete-method-adox-collections.md)  
+ [Delete 메서드 (Collections)](./delete-method-adox-collections.md)  
   
- [Refresh 메서드](../../../ado/reference/ado-api/refresh-method-ado.md)  
+ [Refresh 메서드](../ado-api/refresh-method-ado.md)  
   
 ## <a name="events"></a>이벤트  
  없음  
   
 ## <a name="see-also"></a>참고 항목  
- [Keys 컬렉션(ADOX)](../../../ado/reference/adox-api/keys-collection-adox.md)
+ [Keys 컬렉션(ADOX)](./keys-collection-adox.md)

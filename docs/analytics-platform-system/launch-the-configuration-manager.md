@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 421265abcf3731ed48ff34a6b199ba5cd3c6af5c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 08/25/2020
 ms.locfileid: "74401050"
 ---
 # <a name="launch-the-configuration-manager-in-analytics-platform-system"></a>분석 플랫폼 시스템에서 Configuration Manager 시작
@@ -21,7 +21,7 @@ ms.locfileid: "74401050"
   
 ## <a name="before-you-begin"></a>시작하기 전에  
   
-### <a name="prerequisites"></a>전제 조건  
+### <a name="prerequisites"></a>사전 준비 사항  
 분석 플랫폼 시스템**Configuration Manager** 는 어플라이언스 도메인 관리자만 실행할 수 있습니다. 이 도구를 실행 하려면 어플라이언스 도메인 관리자에 대 한 암호가 필요 합니다. 추가 AP 관리자를 만들려면 aps [도메인 관리자 &#40;ap&#41;만들기 ](create-an-aps-domain-administrator-aps.md)를 참조 하세요.  
   
 ## <a name="launch-the-configuration-manager-tool"></a><a name="Accessing"></a>Configuration Manager 도구 시작  
@@ -29,15 +29,15 @@ Configuration Manager를 실행 하려면 원격 데스크톱을 사용 하 여 
   
 #### <a name="to-launch-from-a-browser-window"></a>브라우저 창에서 시작 하려면  
   
-1.  브라우저를 열고 디렉터리로 `C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100`이동 합니다.  
+1.  브라우저를 열고 디렉터리로 이동 `C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100` 합니다.  
   
-2.  를 마우스 오른쪽 `dwconfig.exe` 단추로 클릭 한 다음 **관리자 권한으로 실행**을 클릭 합니다.  
+2.  를 마우스 오른쪽 단추로 클릭 한 `dwconfig.exe` 다음 **관리자 권한으로 실행**을 클릭 합니다.  
   
 #### <a name="to-launch-from-a-command-prompt"></a>명령 프롬프트에서 시작 하려면  
   
 1.  바탕 화면에서 **시작** 메뉴를 열고 **프로그램**, **보조 프로그램**을 차례로 클릭 하 고 **명령 프롬프트** 를 마우스 오른쪽 단추로 클릭 한 다음 **관리자 권한으로 실행**을 클릭 합니다.  
   
-2.  명령 프롬프트에서 다음 명령을 입력 하 여 디렉터리를 변경 `cd /d "C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100"`합니다.  
+2.  명령 프롬프트에서 다음 명령을 입력 하 여 디렉터리를 변경 합니다. `cd /d "C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100"`  
   
 3.  명령 프롬프트에서 `dwconfig.exe`을 입력합니다.  
   

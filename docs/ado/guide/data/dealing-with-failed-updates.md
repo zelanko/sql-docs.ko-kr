@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 299c37bd-19ff-4261-8571-b9665687e075
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c313e424c44ce289254267e6d6aa651308ae25df
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 508508da57fc7a0b1ab899acf3f77b1a49a7fa9b
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453525"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806925"
 ---
 # <a name="dealing-with-failed-updates"></a>실패한 업데이트 처리
 업데이트를 종료 하는 경우 오류를 해결 하는 방법은 오류 및 응용 프로그램의 논리에 대 한 특성 및 심각도에 따라 달라 집니다. 그러나 데이터베이스가 다른 사용자와 공유 되는 경우 일반적인 오류는 다른 사용자가 필드를 수정 하는 것입니다. 이러한 유형의 오류를 충돌 이라고 합니다. ADO에서이 상황을 감지 하 고 오류를 보고 합니다.  
@@ -38,4 +38,4 @@ Loop
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [일괄 처리 모드](../../../ado/guide/data/batch-mode.md)
+ [일괄 처리 모드](./batch-mode.md)

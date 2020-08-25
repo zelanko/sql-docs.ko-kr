@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: efff5569-db52-451d-a039-2e74870534da
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a4ab26dd8f767315a3392a2434689561fdb391d6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4973bd2e822d3ec56b4e8cb4aa9b7a359e07b977
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453145"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88805773"
 ---
 # <a name="namespaces"></a>네임스페이스
 ADO의 XML 지 속성 형식은 다음 네 가지 네임 스페이스를 사용 합니다.  
@@ -47,4 +47,4 @@ xmlns:rs="urn:schemas-microsoft-com:rowset"
  이 이름이 XML 문서 전체에서 일관 되 게 사용 되는 경우 사용자는이 이름을 모든 이름으로 정의할 수 있습니다. ADO는 항상 "s", "rs", "dt" 및 "z"를 작성 하지만 이러한 접두사 이름은 로드 구성 요소에 하드 코딩 되지 않습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [XML 형식으로 레코드 유지](../../../ado/guide/data/persisting-records-in-xml-format.md)
+ [XML 형식으로 레코드 유지](./persisting-records-in-xml-format.md)

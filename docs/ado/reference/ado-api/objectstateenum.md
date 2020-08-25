@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 32746558-097b-4749-989e-519aadf7e3f4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0c387240e36225f03c8ba1287618ab59a98fb63c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 43e511329ba2b32784718d6edb381e6b7085aeb9
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443025"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773912"
 ---
 # <a name="objectstateenum"></a>ObjectStateEnum
 개체가 열려 있는지 또는 닫혀 있는지, 데이터 원본에 연결 하 고, 명령을 실행 하거나, 데이터를 검색할지를 지정 합니다.  
@@ -49,9 +49,9 @@ ms.locfileid: "88443025"
 
 :::row:::
     :::column:::
-        [State 속성(ADO)](../../../ado/reference/ado-api/state-property-ado.md)  
+        [State 속성(ADO)](./state-property-ado.md)  
     :::column-end:::
     :::column:::
-        [State 속성(ADO MD)](../../../ado/reference/ado-md-api/state-property-ado-md.md)  
+        [State 속성(ADO MD)](../ado-md-api/state-property-ado-md.md)  
     :::column-end:::
 :::row-end:::

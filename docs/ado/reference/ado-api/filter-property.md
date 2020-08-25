@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 80263a7a-5d21-45d1-84fc-34b7a9be4c22
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a97db427db3c0dc42e004e1b0fcd0a889c9d6c5b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0e5927c2c3b32540ebfe54307203e0425600e2f2
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443685"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775322"
 ---
 # <a name="filter-property"></a>Filter 속성
-[레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)의 데이터에 대 한 필터를 나타냅니다.  
+[레코드 집합](./recordset-object-ado.md)의 데이터에 대 한 필터를 나타냅니다.  
   
 ## <a name="settings-and-return-values"></a>설정 및 반환 값
 
@@ -34,11 +34,11 @@ ms.locfileid: "88443685"
   
 -   **책갈피의 배열:** **레코드 집합** 개체의 레코드를 가리키는 고유한 책갈피 값의 배열입니다.  
   
--   [Filtergroupenum](../../../ado/reference/ado-api/filtergroupenum.md) 값입니다.  
+-   [Filtergroupenum](./filtergroupenum.md) 값입니다.  
   
 ## <a name="remarks"></a>설명
 
-**Filter** 속성을 사용 하 여 레코드 **집합** 개체에서 레코드를 선택적으로 화면에 출력 합니다. 필터링 된 **레코드 집합** 은 현재 커서가 됩니다. 현재 **커서** 를 기준으로 값을 반환 하는 다른 속성 (예: [ado](../../../ado/reference/ado-api/absoluteposition-property-ado.md)), [AbsolutePage Property (](../../../ado/reference/ado-api/absolutepage-property-ado.md)ado), AbsolutePosition 속성 [(](../../../ado/reference/ado-api/recordcount-property-ado.md)ado) 및 [PageCount 속성 (ado))](../../../ado/reference/ado-api/pagecount-property-ado.md)이 영향을 받습니다. **필터** 속성을 특정 새 값으로 설정 하면 현재 레코드가 새 값을 충족 하는 첫 번째 레코드로 이동 합니다.
+**Filter** 속성을 사용 하 여 레코드 **집합** 개체에서 레코드를 선택적으로 화면에 출력 합니다. 필터링 된 **레코드 집합** 은 현재 커서가 됩니다. 현재 **커서** 를 기준으로 값을 반환 하는 다른 속성 (예: [ado](./absoluteposition-property-ado.md)), [AbsolutePage Property (](./absolutepage-property-ado.md)ado), AbsolutePosition 속성 [(](./recordcount-property-ado.md)ado) 및 [PageCount 속성 (ado))](./pagecount-property-ado.md)이 영향을 받습니다. **필터** 속성을 특정 새 값으로 설정 하면 현재 레코드가 새 값을 충족 하는 첫 번째 레코드로 이동 합니다.
   
 조건 문자열은 *FieldName-Operator-Value* 형식의 절로 구성 됩니다 (예: `"LastName = 'Smith'"` ). 개별 절을 **AND** (예: `"LastName = 'Smith' AND FirstName = 'John'"` ) 또는 **또는** (예:)와 연결 하 여 복합 절을 만들 수 있습니다 `"LastName = 'Smith' OR LastName = 'Jones'"` . 조건 문자열의 경우 다음 지침을 사용 합니다.
 
@@ -59,9 +59,9 @@ ms.locfileid: "88443685"
   
 -   **LIKE** 절에서는 패턴의 시작과 끝에 와일드 카드를 사용할 수 있습니다. 예를 들어 `LastName Like '*mit*'`를 사용할 수 있습니다. 또는 **LIKE** 를 사용 하는 경우 패턴의 끝에만 와일드 카드를 사용할 수 있습니다. 예들 들어 `LastName Like 'Smit*'`입니다.  
   
- 필터 상수를 사용 하면 예를 들어, 마지막 [UpdateBatch 메서드](../../../ado/reference/ado-api/updatebatch-method.md) 호출 중에 영향을 받은 레코드만 볼 수 있으므로 일괄 업데이트 모드에서 개별 레코드 충돌을 쉽게 해결할 수 있습니다.  
+ 필터 상수를 사용 하면 예를 들어, 마지막 [UpdateBatch 메서드](./updatebatch-method.md) 호출 중에 영향을 받은 레코드만 볼 수 있으므로 일괄 업데이트 모드에서 개별 레코드 충돌을 쉽게 해결할 수 있습니다.  
   
-기본 데이터와의 충돌로 인해 **필터** 속성 자체를 설정 하지 못할 수 있습니다. 예를 들어 다른 사용자가 이미 레코드를 삭제 한 경우이 오류가 발생할 수 있습니다. 이 경우 공급자는 [오류 컬렉션 (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md) 컬렉션에 대 한 경고를 반환 하지만 프로그램 실행을 중단 하지는 않습니다. 런타임에 발생 한 오류는 요청 된 모든 레코드에 충돌이 있는 경우에만 발생 합니다. [Status 속성 (ADO 레코드 집합)](../../../ado/reference/ado-api/status-property-ado-recordset.md) 속성을 사용 하 여 충돌이 발생 한 레코드를 찾을 수 있습니다.  
+기본 데이터와의 충돌로 인해 **필터** 속성 자체를 설정 하지 못할 수 있습니다. 예를 들어 다른 사용자가 이미 레코드를 삭제 한 경우이 오류가 발생할 수 있습니다. 이 경우 공급자는 [오류 컬렉션 (ADO)](./errors-collection-ado.md) 컬렉션에 대 한 경고를 반환 하지만 프로그램 실행을 중단 하지는 않습니다. 런타임에 발생 한 오류는 요청 된 모든 레코드에 충돌이 있는 경우에만 발생 합니다. [Status 속성 (ADO 레코드 집합)](./status-property-ado-recordset.md) 속성을 사용 하 여 충돌이 발생 한 레코드를 찾을 수 있습니다.  
   
 **Filter** 속성을 길이가 0 인 문자열 ("")로 설정 하면 **adfilternone** 상수를 사용 하는 것과 동일한 효과가 있습니다.
   
@@ -74,7 +74,7 @@ ms.locfileid: "88443685"
 
 이 구성은 런타임 중에 오류를 생성 합니다. 그러나 `rs.Filter = "C=2"` 같은 필드에 적용 해도 오류가 발생 하지는 않습니다. 그리고 필드가 현재 레코드 집합에서 필터링 됩니다.
 
-Filter 속성에 사용할 배열을 만들 수 있는 책갈피 값에 대 한 설명은 [Bookmark 속성 (ADO)](../../../ado/reference/ado-api/bookmark-property-ado.md) 속성을 참조 하세요.
+Filter 속성에 사용할 배열을 만들 수 있는 책갈피 값에 대 한 설명은 [Bookmark 속성 (ADO)](./bookmark-property-ado.md) 속성을 참조 하세요.
 
 조건 문자열 형식의 필터만 지속형 **레코드 집합**의 내용에 영향을 줍니다. 조건 문자열의 예는 `OrderDate > '12/31/1999'` 입니다. 책갈피 배열을 사용 하거나 **Filtergroupenum**의 값을 사용 하 여 만든 필터는 지속형 **레코드 집합**의 내용에 영향을 주지 않습니다. 이러한 규칙은 클라이언트 쪽 또는 서버 쪽 커서를 사용 하 여 만든 레코드 집합에 적용 됩니다.
   
@@ -94,17 +94,17 @@ Filter 속성에 사용할 배열을 만들 수 있는 책갈피 값에 대 한 
 |넣을|키가 아닌|단일 키|여러 키|
 |-|--------------|----------------|-------------------|
 |**키가 아닌**|+|+|+|
-|**단일 키**|+|-|해당 없음|
-|**여러 키**|+|해당 없음|+|
+|**단일 키**|+|-|N/A|
+|**여러 키**|+|N/A|+|
 |||||
   
 ## <a name="applies-to"></a>적용 대상
 
-[레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+[레코드 집합 개체(ADO)](./recordset-object-ado.md)  
   
 ## <a name="see-also"></a>참고 항목
 
-[Filter 및 RecordCount 속성 예제 (VB)](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-vb.md) 
- [Filter 및 RecordCount 속성 예제 (VC + +)](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-vc.md) 
- [Clear 메서드 (ADO)](../../../ado/reference/ado-api/clear-method-ado.md) 
- [Optimize 속성-동적 (ADO)](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)
+[Filter 및 RecordCount 속성 예제 (VB)](./filter-and-recordcount-properties-example-vb.md) 
+ [Filter 및 RecordCount 속성 예제 (VC + +)](./filter-and-recordcount-properties-example-vc.md) 
+ [Clear 메서드 (ADO)](./clear-method-ado.md) 
+ [Optimize 속성-동적 (ADO)](./optimize-property-dynamic-ado.md)

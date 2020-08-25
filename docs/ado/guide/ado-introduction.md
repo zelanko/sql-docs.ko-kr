@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c5b3a134-de22-4e9c-9489-9a1cc7a5dcfa
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b702f96fab776c383e309a94eea9358ed95cab90
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 861b170e55c37f333f09dc8168c35ad7088d17fa
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88355439"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88805496"
 ---
 # <a name="ado-overview-and-benefits"></a>ADO 개요 및 이점
 ADO (ADO(ActiveX Data Objects))는 OLE DB 하는 데 사용 하기 쉬운 고급 인터페이스입니다. OLE DB은 다양 한 데이터 저장소에 대 한 낮은 수준의 고성능 인터페이스입니다. ADO와 OLE DB 모두 관계형 (테이블 형식) 및 비관계형 (계층적 또는 스트림) 데이터에서 사용할 수 있습니다.
@@ -27,14 +27,14 @@ ADO (ADO(ActiveX Data Objects))는 OLE DB 하는 데 사용 하기 쉬운 고급
 
  이 섹션에서는 다음 항목을 다룹니다.
 
--   [ADO 기록](../../ado/guide/ado-history.md)
+-   [ADO 기록](./ado-history.md)
 
--   [ADO 문서 사용을 위한 필수 구성 요소](../../ado/guide/prerequisites-for-using-the-ado-documentation.md)
+-   [ADO 설명서 사용을 위한 필수 구성 요소](./prerequisites-for-using-the-ado-documentation.md)
 
--   [ADO 라이브러리 참조](../../ado/guide/referencing-the-ado-libraries.md)
+-   [ADO 라이브러리 참조](./referencing-the-ado-libraries.md)
 
--   [ADO 작업 테이블](../../ado/guide/ado-task-table.md)
+-   [ADO 작업 테이블](./ado-task-table.md)
 
--   [ADO 기술 테이블](../../ado/guide/ado-technology-table.md)
+-   [ADO 기술 테이블](./ado-technology-table.md)
 
--   [ADO 보안 디자인 문제](../../ado/guide/ado-security-design-issues.md)
+-   [ADO 보안 디자인 문제](./ado-security-design-issues.md)

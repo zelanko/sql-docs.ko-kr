@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2d4fe651-ef09-461b-8884-a70b6af4362e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bb8c23168cb68438b2f8a74359f14b05795ad913
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8c388b12b70213afb297508ccac91315d828c9d4
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441585"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776942"
 ---
 # <a name="value-property-example-vb"></a>Value 속성 예제(VB)
-이 예에서는 ***Employees*** 테이블의 필드 및 속성 값을 표시 하 여 [필드](../../../ado/reference/ado-api/field-object.md) 및 [속성](../../../ado/reference/ado-api/property-object-ado.md) 개체가 포함 된 [Value](../../../ado/reference/ado-api/value-property-ado.md) 속성을 보여 줍니다.  
+이 예에서는 ***Employees*** 테이블의 필드 및 속성 값을 표시 하 여 [필드](./field-object.md) 및 [속성](./property-object-ado.md) 개체가 포함 된 [Value](./value-property-ado.md) 속성을 보여 줍니다.  
   
 ```  
 'BeginValueVB  
@@ -102,6 +102,6 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Field 개체](../../../ado/reference/ado-api/field-object.md)   
- [Property 개체 (ADO)](../../../ado/reference/ado-api/property-object-ado.md)   
- [Value 속성(ADO)](../../../ado/reference/ado-api/value-property-ado.md)
+ [Field 개체](./field-object.md)   
+ [Property 개체 (ADO)](./property-object-ado.md)   
+ [Value 속성(ADO)](./value-property-ado.md)

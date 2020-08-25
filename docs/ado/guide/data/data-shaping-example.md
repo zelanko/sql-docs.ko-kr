@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1bfdcad4-52e1-45bc-ad21-783657ef0a44
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3f3b10494a9ae9fb49de6bf2779395f9eb065cd9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 127586308fe030507a2b4f4de6951a8068b034fd
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453565"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806181"
 ---
 # <a name="data-shaping-example"></a>데이터 셰이핑 예제
 다음 데이터 셰이핑 명령은 Northwind 데이터베이스의 **Customers** 및 **Orders** 테이블에서 계층적 **레코드 집합** 을 작성 하는 방법을 보여 줍니다.  
@@ -29,7 +29,7 @@ APPEND ({SELECT OrderID, OrderDate, CustomerID FROM Orders} AS chapOrders
 RELATE customerID TO customerID)   
 ```  
   
- [데이터 셰이핑의 Visual Basic 예제](../../../ado/guide/data/visual-basic-example-of-data-shaping.md)와 같이이 명령을 사용 하 여 **레코드 집합** 개체를 열면 **Customers** 테이블에서 반환 되는 각 레코드에 대해 챕터 (**chapOrders**)가 생성 됩니다. 이 장은 **Orders** 테이블에서 반환 되는 **레코드 집합** 의 하위 집합으로 구성 됩니다. **ChapOrders** 챕터에는 지정 된 고객에 의해 배치 된 주문에 대 한 모든 요청 된 정보가 포함 됩니다. 이 예제에서 장은 **OrderID**, **OrderDate**및 **CustomerID**의 세 열로 구성 됩니다.  
+ [데이터 셰이핑의 Visual Basic 예제](./visual-basic-example-of-data-shaping.md)와 같이이 명령을 사용 하 여 **레코드 집합** 개체를 열면 **Customers** 테이블에서 반환 되는 각 레코드에 대해 챕터 (**chapOrders**)가 생성 됩니다. 이 장은 **Orders** 테이블에서 반환 되는 **레코드 집합** 의 하위 집합으로 구성 됩니다. **ChapOrders** 챕터에는 지정 된 고객에 의해 배치 된 주문에 대 한 모든 요청 된 정보가 포함 됩니다. 이 예제에서 장은 **OrderID**, **OrderDate**및 **CustomerID**의 세 열로 구성 됩니다.  
   
  결과로 만들어진 **레코드 집합** 의 처음 두 항목은 다음과 같습니다.  
   
@@ -42,10 +42,10 @@ RELATE customerID TO customerID)
   
  셰이프 명령을 사용 하는 두 번째 방법이 있습니다. 즉, 자식 **레코드 집합**에서 부모 **레코드 집합** 을 생성 합니다. 자식 **레코드 집합** 의 레코드는 일반적으로 by 절을 사용 하 여 그룹화 되며 자식에 있는 각 결과 그룹의 부모 **레코드 집합** 에 하나의 행이 추가 됩니다. BY 절을 생략 하면 자식 **레코드 집합** 은 단일 그룹을 형성 하 고 부모 **레코드 집합** 에는 정확히 한 개의 행이 포함 됩니다. 이는 전체 하위 **레코드 집합**에 대 한 "총합계" 집계를 계산 하는 데 유용 합니다.  
   
- 셰이프 명령 구문을 사용 하 여 프로그래밍 방식으로 셰이프 **레코드 집합**을 만들 수도 있습니다. 그런 다음 프로그래밍 방식으로 또는 적절 한 시각적 컨트롤을 통해 **레코드 집합** 의 구성 요소에 액세스할 수 있습니다. Shape 명령은 다른 ADO 명령 텍스트와 같이 실행 됩니다. 자세한 내용은 [일반적으로 Shape 명령](../../../ado/guide/data/shape-commands-in-general.md)을 참조 하세요.  
+ 셰이프 명령 구문을 사용 하 여 프로그래밍 방식으로 셰이프 **레코드 집합**을 만들 수도 있습니다. 그런 다음 프로그래밍 방식으로 또는 적절 한 시각적 컨트롤을 통해 **레코드 집합** 의 구성 요소에 액세스할 수 있습니다. Shape 명령은 다른 ADO 명령 텍스트와 같이 실행 됩니다. 자세한 내용은 [일반적으로 Shape 명령](./shape-commands-in-general.md)을 참조 하세요.  
   
  부모 **레코드 집합** 의 구성 방식에 관계 없이 자식 **레코드**집합에 연결 하는 데 사용 되는 챕터 열이 포함 됩니다. 원하는 경우 부모 **레코드 집합** 에는 자식 행에 대 한 집계 (SUM, MIN, MAX 등)가 포함 된 열이 포함 될 수도 있습니다. 부모 및 자식 **레코드 집합** 모두에는 **레코드 집합**의 행에 식이 포함 된 열이 포함 될 수 있으며 처음에는 비어 있는 열도 포함 될 수 있습니다.  
   
  이 섹션에서는 다음 항목을 계속 진행 합니다.  
   
--   [데이터 셰이핑의 Visual Basic 예제](../../../ado/guide/data/visual-basic-example-of-data-shaping.md)
+-   [데이터 셰이핑의 Visual Basic 예제](./visual-basic-example-of-data-shaping.md)

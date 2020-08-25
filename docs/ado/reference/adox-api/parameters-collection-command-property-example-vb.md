@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7df1089e-69b7-476e-9244-19947c087351
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c82fc6388f1a7ad6582cc91ab2589afda2912f6a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e7bfbf83c3b10a97593810e5160f585f61e2fdec
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439745"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88769892"
 ---
 # <a name="parameters-collection-command-property-example-vb"></a>Parameters 컬렉션, Command 속성 예제(VB)
-다음 [코드에서는 command 개체와](../../../ado/reference/ado-api/command-object-ado.md) 함께 [command](../../../ado/reference/adox-api/command-property-adox.md) 속성을 사용 하 여 프로시저에 대 한 매개 변수 정보를 검색 하는 방법을 보여 줍니다.  
+다음 [코드에서는 command 개체와](../ado-api/command-object-ado.md) 함께 [command](./command-property-adox.md) 속성을 사용 하 여 프로시저에 대 한 매개 변수 정보를 검색 하는 방법을 보여 줍니다.  
   
 ```  
 ' BeginParametersVB  
@@ -77,8 +77,8 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [ActiveConnection 속성 (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
- [Catalog 개체 (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [Command 속성 (ADOX)](../../../ado/reference/adox-api/command-property-adox.md)   
- [Procedure 개체 (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)   
- [Procedures 컬렉션(ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)
+ [ActiveConnection 속성 (ADOX)](./activeconnection-property-adox.md)   
+ [Catalog 개체 (ADOX)](./catalog-object-adox.md)   
+ [Command 속성 (ADOX)](./command-property-adox.md)   
+ [Procedure 개체 (ADOX)](./procedure-object-adox.md)   
+ [Procedures 컬렉션(ADOX)](./procedures-collection-adox.md)

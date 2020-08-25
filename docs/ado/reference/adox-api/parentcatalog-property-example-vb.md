@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 448bc850-7584-4c5f-89f3-5f4fee88b259
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c4093cfbd1ca5372d86fd07b6fc7716d484c4f51
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 66e80c85d1361c99499c91685d46e2df29b59957
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439715"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88769812"
 ---
 # <a name="parentcatalog-property-example-vb"></a>ParentCatalog 속성 예제(VB)
-다음 코드에서는 카탈로그에 테이블을 추가 하기 전에 [ParentCatalog](../../../ado/reference/adox-api/parentcatalog-property-adox.md) 속성을 사용 하 여 공급자별 속성에 액세스 하는 방법을 보여 줍니다. 속성은 **autoincrement**이며 Microsoft Jet 데이터베이스에서 autoincrement 필드를 만듭니다.  
+다음 코드에서는 카탈로그에 테이블을 추가 하기 전에 [ParentCatalog](./parentcatalog-property-adox.md) 속성을 사용 하 여 공급자별 속성에 액세스 하는 방법을 보여 줍니다. 속성은 **autoincrement**이며 Microsoft Jet 데이터베이스에서 autoincrement 필드를 만듭니다.  
   
 ```  
 ' BeginCreateAutoIncrColumnVB  
@@ -85,12 +85,12 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Append 메서드 (ADOX Columns)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
- [Append 메서드 (ADOX Tables)](../../../ado/reference/adox-api/append-method-adox-tables.md)   
- [Catalog 개체 (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [Column 개체 (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
- [Columns 컬렉션 (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
- [Name 속성 (ADOX)](../../../ado/reference/adox-api/name-property-adox.md)   
- [ParentCatalog 속성 (ADOX)](../../../ado/reference/adox-api/parentcatalog-property-adox.md)   
- [Table 개체 (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)   
- [Type 속성(열)(ADOX)](../../../ado/reference/adox-api/type-property-column-adox.md)
+ [Append 메서드 (ADOX Columns)](./append-method-adox-columns.md)   
+ [Append 메서드 (ADOX Tables)](./append-method-adox-tables.md)   
+ [Catalog 개체 (ADOX)](./catalog-object-adox.md)   
+ [Column 개체 (ADOX)](./column-object-adox.md)   
+ [Columns 컬렉션 (ADOX)](./columns-collection-adox.md)   
+ [Name 속성 (ADOX)](./name-property-adox.md)   
+ [ParentCatalog 속성 (ADOX)](./parentcatalog-property-adox.md)   
+ [Table 개체 (ADOX)](./table-object-adox.md)   
+ [Type 속성(열)(ADOX)](./type-property-column-adox.md)

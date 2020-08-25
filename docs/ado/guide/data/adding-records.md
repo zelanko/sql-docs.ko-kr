@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: dd34669e-6f06-403b-9241-1c85c82aecc2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2394cf5612dab45ccd2e0f3cc6e2204b6d451142
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e38dbfbf8b0a92a0d1a8a2eff1b8b8d4d5374057
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453885"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806705"
 ---
 # <a name="adding-records-to-a-recordset"></a>레코드 집합에 레코드 추가
 **AddNew** 메서드를 사용 하 여 기존 레코드 **집합**에 새 레코드를 만들고 초기화 합니다. **CursorOptionEnum** 값이 **Adaddnew** 인 **Supports** 메서드를 사용 하 여 현재 **레코드 집합** 개체에 레코드를 추가할 수 있는지 여부를 확인할 수 있습니다.
@@ -32,10 +32,10 @@ ms.locfileid: "88453885"
 
  이 섹션에서는 다음 항목을 다룹니다.
 
--   [AddNew를 사용하여 레코드 추가](../../../ado/guide/data/adding-records-using-addnew.md)
+-   [AddNew를 사용하여 레코드 추가](./adding-records-using-addnew.md)
 
--   [다중 필드 추가](../../../ado/guide/data/adding-multiple-fields.md)
+-   [다중 필드 추가](./adding-multiple-fields.md)
 
--   [편집 모드 확인](../../../ado/guide/data/determining-edit-mode.md)
+-   [편집 모드 확인](./determining-edit-mode.md)
 
--   [직접 실행 및 일괄 처리 모드에서 AddNew 사용](../../../ado/guide/data/using-addnew-in-immediate-and-batch-modes.md)
+-   [직접 실행 및 일괄 처리 모드에서 AddNew 사용](./using-addnew-in-immediate-and-batch-modes.md)
