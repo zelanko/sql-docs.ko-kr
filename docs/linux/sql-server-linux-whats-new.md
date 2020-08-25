@@ -1,18 +1,18 @@
 ---
 title: SQL Server 2017 on Linux의 새로운 기능
-description: 이 문서에서는 SQL Server 2017 on Linux의 새로운 기능을 중점적으로 설명합니다.
+description: 이 문서에서는 Linux에서 실행되는 SQL Server 2017에 사용할 수 있는 주요 기능 및 서비스에 대해 알아봅니다.
 author: VanMSFT
 ms.author: vanto
 ms.date: 04/10/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 1d36925292bee040735dc07df3044293263661e5
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 489b2bda31554766a874fb7d09d259fbc96a3398
+ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893809"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88088747"
 ---
 # <a name="whats-new-for-sql-server-2017-on-linux"></a>SQL Server 2017 on Linux의 새로운 기능
 

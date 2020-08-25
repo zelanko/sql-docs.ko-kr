@@ -1,4 +1,5 @@
 ---
+description: '* (곱하기)(Transact-SQL)'
 title: '* (곱하기)(Transact-SQL) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/15/2017
@@ -20,12 +21,12 @@ ms.assetid: 34beb660-db19-46ca-ac90-2218471457bf
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3df5b6d79b40180bfa283c94aeb29f1f92d191b3
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 4265eac0332833e2a3fdae2957e3ef37b7b62707
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395527"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467645"
 ---
 # <a name="-multiplication-transact-sql"></a>*(곱하기)(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -49,7 +50,7 @@ expression * expression
 ## <a name="result-types"></a>결과 형식  
  우선 순위가 높은 인수의 데이터 형식을 반환합니다. 자세한 내용은 [데이터 형식 우선 순위&#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md)를 참조하세요.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `Product` 테이블에 있는 모든 산악 자전거의 제품 ID, 이름, 정가를 검색합니다. 새 정가는 `*` 산술 연산자를 사용해 `ListPrice`에 `1.15`를 곱해 계산합니다.  
   
 ```  

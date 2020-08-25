@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: b35d2f4a-449c-4170-aab6-9ff88c890043
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0b2d5e2b34c5a82d222ee7018d0751cb7ec5f092
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0cb6a0695405bc8a3d8a96045b67efcadff308b3
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438945"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768112"
 ---
 # <a name="internettimeout-property-example-vb"></a>InternetTimeout 속성 예제(VB)
 > [!IMPORTANT]
 >  Windows 8 및 Windows Server 2012부터 RDS 서버 구성 요소는 더 이상 Windows 운영 체제에 포함 되지 않습니다 (자세한 내용은 Windows 8 및 [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) 참조). 이후 버전의 Windows에서는 RDS 클라이언트 구성 요소가 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. RDS를 사용 하는 응용 프로그램은 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)로 마이그레이션해야 합니다.  
   
- 이 예제에서는 [DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) 및 [스페이스](../../../ado/reference/rds-api/dataspace-object-rds.md) 개체에 존재 하는 [internettimeout](../../../ado/reference/rds-api/internettimeout-property-rds.md) 속성을 보여 줍니다. 이 예에서는 **DataControl** 개체를 사용 하 고 제한 시간을 20 초로 설정 합니다.  
+ 이 예제에서는 [DataControl](./datacontrol-object-rds.md) 및 [스페이스](./dataspace-object-rds.md) 개체에 존재 하는 [internettimeout](./internettimeout-property-rds.md) 속성을 보여 줍니다. 이 예에서는 **DataControl** 개체를 사용 하 고 제한 시간을 20 초로 설정 합니다.  
   
 ```  
 'BeginInternetTimeoutVB  
@@ -77,8 +77,6 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [DataControl 개체 (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
- [스페이스 개체 (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)   
- [InternetTimeout 속성(RDS)](../../../ado/reference/rds-api/internettimeout-property-rds.md)
-
-
+ [DataControl 개체 (RDS)](./datacontrol-object-rds.md)   
+ [스페이스 개체 (RDS)](./dataspace-object-rds.md)   
+ [InternetTimeout 속성(RDS)](./internettimeout-property-rds.md)

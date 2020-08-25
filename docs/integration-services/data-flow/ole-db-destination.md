@@ -1,4 +1,5 @@
 ---
+description: OLE DB 대상
 title: OLE DB 대상 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 873a2fa0-2a02-41fc-a80a-ec9767f36a8a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 046e23f3861af9e1a1b6877036d90f249bb04723
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 91f2323a61440792654b341364efb79506c5cdd3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86908421"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477795"
 ---
 # <a name="ole-db-destination"></a>OLE DB 대상
 
@@ -129,6 +130,8 @@ ms.locfileid: "86908421"
   
 > [!NOTE]  
 >  OLE DB 대상의 **CommandTimeout** 속성은 **OLE DB 대상 편집기**에서 사용할 수 없지만 **고급 편집기**를 사용하여 설정할 수 있습니다. 또한 특정 빠른 로드 옵션은 **고급 편집기**에서만 사용할 수 있습니다. 이러한 속성에 대한 자세한 내용은 [OLE DB Custom Properties](../../integration-services/data-flow/ole-db-custom-properties.md)의 OLE DB 대상 섹션을 참조하십시오.  
+> 
+>  **CommandTimeout** 속성은 데이터 액세스 모드가 **SQL 명령**인 경우에만 적용됩니다.
   
 ### <a name="static-options"></a>정적 옵션  
  **캐시 없음**  

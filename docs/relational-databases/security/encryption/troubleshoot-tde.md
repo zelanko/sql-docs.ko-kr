@@ -14,12 +14,12 @@ ms.topic: conceptual
 ms.date: 11/06/2019
 ms.author: jaszymas
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 16368fe948d2cefeb052d503385c99cedfb097ff
-ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
+ms.openlocfilehash: c37c2aa1f36fca57e544dc588d492be98c653fef
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87899007"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448082"
 ---
 # <a name="common-errors-for-transparent-data-encryption-with-customer-managed-keys-in-azure-key-vault"></a>Azure Key Vault의 고객 관리 키를 통한 투명한 데이터 암호화의 일반적인 오류
 
@@ -165,7 +165,7 @@ _401 AzureKeyVaultMissingPermissions - 서버에서 Azure Key Vault에 필요한
 
 ## <a name="getting-tde-status-from-the-activity-log"></a>활동 로그에서 TDE 상태 가져오기
 
-Azure Key Vault 키 액세스 문제로 인한 데이터베이스 상태를 모니터링할 수 있도록 하려면 Azure Resource Manager URL 및 Subscription+Resourcegroup+ServerName+DatabseName을 기반으로 하는 리소스 ID에 대한 [활동 로그](https://docs.microsoft.com/azure/service-health/alerts-activity-log-service-notifications)에 다음 이벤트가 기록됩니다. 
+Azure Key Vault 키 액세스 이슈로 인한 데이터베이스 상태를 모니터링할 수 있도록 Azure Resource Manager URL 및 Subscription+Resourcegroup+ServerName+DatabaseName을 기반으로 리소스 ID에 대한 [활동 로그](https://docs.microsoft.com/azure/service-health/alerts-activity-log-service-notifications)에 다음 이벤트가 로그됩니다. 
 
 **서비스가 Azure Key Vault 키에 대한 액세스 권한을 잃은 경우 발생하는 이벤트**
 

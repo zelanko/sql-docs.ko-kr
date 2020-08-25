@@ -1,4 +1,5 @@
 ---
+description: '- (빼기)(Transact-SQL)'
 title: '- (빼기)(Transact-SQL) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/15/2017
@@ -22,12 +23,12 @@ ms.assetid: db23145f-f17d-4b90-be09-28a881cacd1a
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f24d5937b7f573951051fa3e27aaf111bdacaa40
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 8cfe1427b432645915c6becec53df5e879a2d9b6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395907"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445427"
 ---
 # <a name="--subtraction-transact-sql"></a>-(빼기)(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -51,7 +52,7 @@ expression - expression
 ## <a name="result-types"></a>결과 형식  
  우선 순위가 높은 인수의 데이터 형식을 반환합니다. 자세한 내용은 [데이터 형식 우선 순위&#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md)를 참조하세요.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-using-subtraction-in-a-select-statement"></a>A. SELECT 문에서 빼기 사용  
  다음 예에서는 세율이 가장 높은 시/도와 세율이 가장 낮은 시/도 간의 세율 차를 계산합니다.  

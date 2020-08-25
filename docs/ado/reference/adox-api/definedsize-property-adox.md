@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 762b8937-c31c-4e90-bb85-506d991e8280
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2f122574ba5aa405ca4493b498bb0179249cccf1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2777b5dc9043cfce45dd1ff3b721cacf842b8991
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440145"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88770722"
 ---
 # <a name="definedsize-property-adox"></a>DefinedSize 속성(ADOX)
 열의 최대 크기를 나타냅니다.  
@@ -36,10 +36,10 @@ ms.locfileid: "88440145"
 ## <a name="remarks"></a>설명  
  기본값은 영(0)입니다.  
   
- 컬렉션에 이미 추가 된 [열](../../../ado/reference/adox-api/column-object-adox.md) 개체의 경우이 속성은 읽기 전용입니다.  
+ 컬렉션에 이미 추가 된 [열](./column-object-adox.md) 개체의 경우이 속성은 읽기 전용입니다.  
   
 ## <a name="applies-to"></a>적용 대상  
- [Column 개체(ADOX)](../../../ado/reference/adox-api/column-object-adox.md)  
+ [열 개체(ADOX)](./column-object-adox.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [DefinedSize 속성 예제(VB)](../../../ado/reference/adox-api/definedsize-property-example-vb.md)
+ [DefinedSize 속성 예제(VB)](./definedsize-property-example-vb.md)

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: a362ed51-314c-4783-9598-538dbf755f3d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6069b3d99e021be01d8fd2d724b7c25868167bd3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2f54f1491327b9b0294dec1332a3fb9ff8b2c69c
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440475"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88771392"
 ---
 # <a name="append-method-adox-tables"></a>Append 메서드(ADOX 테이블)
-[Tables](../../../ado/reference/adox-api/tables-collection-adox.md) 컬렉션에 새 [Table](../../../ado/reference/adox-api/table-object-adox.md) 개체를 추가 합니다.  
+[Tables](./tables-collection-adox.md) 컬렉션에 새 [Table](./table-object-adox.md) 개체를 추가 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -42,15 +42,15 @@ Tables.Append Table
  공급자가 테이블 생성을 지원 하지 않으면 오류가 발생 합니다.  
   
 ## <a name="applies-to"></a>적용 대상  
- [Tables 컬렉션(ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)  
+ [Tables 컬렉션(ADOX)](./tables-collection-adox.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [Columns 및 Tables Append 메서드, Name 속성 예제 (VB)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
- [ParentCatalog 속성 예제 (VB)](../../../ado/reference/adox-api/parentcatalog-property-example-vb.md)   
- [Append 메서드 (ADOX Columns)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
- [Append 메서드 (ADOX Groups)](../../../ado/reference/adox-api/append-method-adox-groups.md)   
- [Append 메서드 (ADOX 인덱스)](../../../ado/reference/adox-api/append-method-adox-indexes.md)   
- [Append 메서드 (ADOX 키)](../../../ado/reference/adox-api/append-method-adox-keys.md)   
- [Append 메서드 (ADOX 프로시저)](../../../ado/reference/adox-api/append-method-adox-procedures.md)   
- [Append 메서드 (ADOX 사용자)](../../../ado/reference/adox-api/append-method-adox-users.md)   
- [Append 메서드(ADOX Views)](../../../ado/reference/adox-api/append-method-adox-views.md)
+ [Columns 및 Tables Append 메서드, Name 속성 예제 (VB)](./columns-and-tables-append-methods-name-property-example-vb.md)   
+ [ParentCatalog 속성 예제 (VB)](./parentcatalog-property-example-vb.md)   
+ [Append 메서드 (ADOX Columns)](./append-method-adox-columns.md)   
+ [Append 메서드 (ADOX Groups)](./append-method-adox-groups.md)   
+ [Append 메서드 (ADOX 인덱스)](./append-method-adox-indexes.md)   
+ [Append 메서드 (ADOX 키)](./append-method-adox-keys.md)   
+ [Append 메서드 (ADOX 프로시저)](./append-method-adox-procedures.md)   
+ [Append 메서드 (ADOX 사용자)](./append-method-adox-users.md)   
+ [Append 메서드(ADOX 보기)](./append-method-adox-views.md)

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: bb3274b1-764d-43a7-a49f-ef55680ecd26
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4895f1ec08a0f10c93335fc36954f3a9098ffce4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ee63f567e3bb9c1f389ada4bf2e76ed6f3b39929
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440415"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88771252"
 ---
 # <a name="catalog-activeconnection-property-example-vb"></a>Catalog ActiveConnection 속성 예제(VB)
-[ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) 속성을 유효한 열린 연결로 설정 하면 카탈로그가 열립니다. 열려 있는 카탈로그에서 해당 카탈로그 내에 포함 된 스키마 개체에 액세스할 수 있습니다.  
+[ActiveConnection](./activeconnection-property-adox.md) 속성을 유효한 열린 연결로 설정 하면 카탈로그가 열립니다. 열려 있는 카탈로그에서 해당 카탈로그 내에 포함 된 스키마 개체에 액세스할 수 있습니다.  
   
 ```  
 ' BeginOpenConnectionVB  
@@ -67,8 +67,8 @@ Attribute VB_Name = "Catalog"
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [ActiveConnection 속성 (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
- [Catalog 개체 (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [Table 개체 (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)   
- [Tables 컬렉션 (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)   
- [Type 속성(테이블)(ADOX)](../../../ado/reference/adox-api/type-property-table-adox.md)
+ [ActiveConnection 속성 (ADOX)](./activeconnection-property-adox.md)   
+ [Catalog 개체 (ADOX)](./catalog-object-adox.md)   
+ [Table 개체 (ADOX)](./table-object-adox.md)   
+ [Tables 컬렉션 (ADOX)](./tables-collection-adox.md)   
+ [Type 속성(테이블)(ADOX)](./type-property-table-adox.md)

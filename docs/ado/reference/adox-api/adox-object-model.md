@@ -13,26 +13,26 @@ helpviewer_keywords:
 ms.assetid: 31c0781c-96c8-4460-90ea-134066154fc7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0a221cf2a36cb49b1005362d4cda5ad0ca986ca5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ada8f0f0e5b93128ab188c18810f3240c5445940
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440575"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88771622"
 ---
 # <a name="adox-object-model"></a>ADOX 개체 모델
-다음 다이어그램에서는 ADOX에서 개체를 표시 하 고 관련 하는 방법을 보여 줍니다. 특정 개체 또는 컬렉션에 대 한 자세한 내용은 특정 참조 항목 또는 [Adox 개체](../../../ado/reference/adox-api/adox-objects.md) 및 [adox 컬렉션](../../../ado/reference/adox-api/adox-collections.md)을 참조 하세요.  
+다음 다이어그램에서는 ADOX에서 개체를 표시 하 고 관련 하는 방법을 보여 줍니다. 특정 개체 또는 컬렉션에 대 한 자세한 내용은 특정 참조 항목 또는 [Adox 개체](./adox-objects.md) 및 [adox 컬렉션](./adox-collections.md)을 참조 하세요.  
   
  ![ADOX 개체 모델](../../../ado/reference/adox-api/media/adox_object_model.gif "ADOX_object_model")  
   
- 각 [테이블](../../../ado/reference/adox-api/table-object-adox.md), [인덱스](../../../ado/reference/adox-api/index-object-adox.md)및 [열](../../../ado/reference/adox-api/column-object-adox.md) 개체에도 표준 ADO [속성](../../../ado/reference/ado-api/properties-collection-ado.md) 컬렉션이 있습니다.  
+ 각 [테이블](./table-object-adox.md), [인덱스](./index-object-adox.md)및 [열](./column-object-adox.md) 개체에도 표준 ADO [속성](../ado-api/properties-collection-ado.md) 컬렉션이 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [ADOX API 참조](../../../ado/reference/adox-api/adox-api-reference.md)   
- [ADOX 코드 예제](../../../ado/reference/adox-api/adox-code-examples.md)   
- [ADOX 컬렉션](../../../ado/reference/adox-api/adox-collections.md)   
- [ADOX 열거 상수](../../../ado/reference/adox-api/adox-enumerated-constants.md)   
- [ADOX 메서드](../../../ado/reference/adox-api/adox-methods.md)   
- [ADOX 개체](../../../ado/reference/adox-api/adox-objects.md)   
- [ADOX 속성](../../../ado/reference/adox-api/adox-properties.md)   
- [DDL(데이터 정의 언어) 및 보안을 위한 ADO 확장(ADOX)](../../../ado/guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)
+ [ADOX API 참조](?view=sql-server-ver15)   
+ [ADOX 코드 예제](./adox-code-examples.md)   
+ [ADOX 컬렉션](./adox-collections.md)   
+ [ADOX 열거 상수](./adox-enumerated-constants.md)   
+ [ADOX 메서드](./adox-methods.md)   
+ [ADOX 개체](./adox-objects.md)   
+ [ADOX 속성](./adox-properties.md)   
+ [데이터 정의 언어 및 보안을 위한 ADO 확장(ADOX)](../../guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)

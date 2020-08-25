@@ -12,19 +12,19 @@ helpviewer_keywords:
 ms.assetid: 80d389dd-46ef-459f-b0d4-6f712fc4f32d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fbd7933ac206f81460a7d0d50d0a7ac332cf154a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a4777349384d372355a107cced1503d774ade4f7
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451465"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88771742"
 ---
 # <a name="ado-dynamic-property-index"></a>ADO 동적 속성 인덱스
-데이터 공급자, 서비스 공급자 및 서비스 구성 요소는 열려 있지 않은 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 및 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체의 **속성** 컬렉션에 동적 속성을 추가할 수 있습니다. 지정 된 공급자는 이러한 개체를 열 때 추가 속성을 삽입할 수도 있습니다. 이러한 속성 중 일부는 [ADO 동적 속성](../../../ado/reference/ado-api/ado-dynamic-properties.md) 섹션에 나열 됩니다. 자세한 내용은 [부록 a: providers](../../../ado/guide/appendixes/appendix-a-providers.md) 섹션의 특정 공급자에 나열 되어 있습니다.  
+데이터 공급자, 서비스 공급자 및 서비스 구성 요소는 열려 있지 않은 [연결](./connection-object-ado.md) 및 [레코드 집합](./recordset-object-ado.md) 개체의 **속성** 컬렉션에 동적 속성을 추가할 수 있습니다. 지정 된 공급자는 이러한 개체를 열 때 추가 속성을 삽입할 수도 있습니다. 이러한 속성 중 일부는 [ADO 동적 속성](./ado-dynamic-properties.md) 섹션에 나열 됩니다. 자세한 내용은 [부록 a: providers](../../guide/appendixes/appendix-a-providers.md) 섹션의 특정 공급자에 나열 되어 있습니다.  
   
  다음 표는 각 표준 OLE DB 공급자 동적 속성에 대 한 ADO 및 OLE DB 이름의 교차 인덱스입니다. 공급자는 여기에 나열 된 것 보다 더 많은 속성을 추가할 수 있습니다. 공급자별 동적 속성에 대 한 자세한 내용은 공급자 설명서를 참조 하십시오.  
   
- OLE DB 프로그래머 참조는 "설명" 이라는 용어를 통해 ADO 속성 이름을 참조 합니다. 이러한 표준 속성에 대 한 자세한 내용은 OLE DB 속성에 대 한 [OLE DB 설명서](https://msdn.microsoft.com/library/windows/desktop/ms722784.aspx)에서 인덱스를 검색 하거나 해당 이름으로 이동 합니다.  
+ OLE DB 프로그래머 참조는 "설명" 이라는 용어를 통해 ADO 속성 이름을 참조 합니다. 이러한 표준 속성에 대 한 자세한 내용은 OLE DB 속성에 대 한 [OLE DB 설명서](/previous-versions/windows/desktop/ms722784(v=vs.85))에서 인덱스를 검색 하거나 해당 이름으로 이동 합니다.  
   
 ## <a name="connection-dynamic-properties"></a>연결 동적 속성  
   

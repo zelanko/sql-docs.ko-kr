@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: d8bb35b1-c02a-4231-8d55-016e56e53b95
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4b5c76aebd80ff4a5706c9226abc051c03940707
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 32e01e2dd12dcfb098222ffb7c8da0d9a4527d5d
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451955"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759163"
 ---
 # <a name="step-1-specify-a-server-program-rds-tutorial"></a>1단계: 서버 프로그램 지정(RDS 자습서)
-가장 일반적인 경우에는 RDS를 사용 합니다 [. 공간](../../../ado/reference/rds-api/dataspace-object-rds.md) 개체 [CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md) 방법 기본 서버 프로그램, [RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)또는 사용자 지정 서버 프로그램 (비즈니스 개체)을 지정 합니다. 서버 프로그램은 서버에서 인스턴스화되고 서버 프로그램 또는 *프록시*에 대 한 참조가 반환 됩니다.  
+가장 일반적인 경우에는 RDS를 사용 합니다 [. 공간](../../reference/rds-api/dataspace-object-rds.md) 개체 [CreateObject](../../reference/rds-api/createobject-method-rds.md) 방법 기본 서버 프로그램, [RDSServer. DataFactory](../../reference/rds-api/datafactory-object-rdsserver.md)또는 사용자 지정 서버 프로그램 (비즈니스 개체)을 지정 합니다. 서버 프로그램은 서버에서 인스턴스화되고 서버 프로그램 또는 *프록시*에 대 한 참조가 반환 됩니다.  
   
  이 자습서에서는 기본 서버 프로그램을 사용 합니다.  
   
@@ -36,6 +36,6 @@ Sub RDSTutorial1()
 > [!IMPORTANT]
 >  Windows 8 및 Windows Server 2012부터 RDS 서버 구성 요소는 더 이상 Windows 운영 체제에 포함 되지 않습니다 (자세한 내용은 Windows 8 및 [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) 참조). 이후 버전의 Windows에서는 RDS 클라이언트 구성 요소가 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. RDS를 사용 하는 응용 프로그램은 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)로 마이그레이션해야 합니다.  
   
-## <a name="see-also"></a>참고 항목  
- [2 단계: 서버 프로그램 호출 (RDS 자습서)](../../../ado/guide/remote-data-service/step-2-invoke-the-server-program-rds-tutorial.md)   
- [RDS 자습서(VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)   
+## <a name="see-also"></a>관련 항목  
+ [2 단계: 서버 프로그램 호출 (RDS 자습서)](./step-2-invoke-the-server-program-rds-tutorial.md)   
+ [RDS 자습서(VBScript)](./rds-tutorial-vbscript.md)

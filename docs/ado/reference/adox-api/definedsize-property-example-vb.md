@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4dda2239-7ab5-4729-9c63-eb530803f7d9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 059bec9781abe0903c9a5af2d78e46d532028e04
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0a1cfa4cae20e2f43ae666e7bb99ae5b65b92a74
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440135"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88770732"
 ---
 # <a name="definedsize-property-example-vb"></a>DefinedSize 속성 예제(VB)
-이 예에서는 열의 [DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md) 속성을 보여 [Column](../../../ado/reference/adox-api/column-object-adox.md)줍니다. 이 코드는 *Northwind* 데이터베이스의 **Employees** 테이블에 있는 FirstName 열의 크기를 다시 정의 합니다. 그런 다음 **Employees** 테이블을 기반으로 하는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 의 FirstName [필드](../../../ado/reference/ado-api/field-object.md) 값이 변경 됩니다. 기본적으로 **DefinedSize** 속성을 다시 정의한 후 FirstName 필드는 공백을 사용 하 여 채워집니다.  
+이 예에서는 열의 [DefinedSize](./definedsize-property-adox.md) 속성을 보여 [Column](./column-object-adox.md)줍니다. 이 코드는 *Northwind* 데이터베이스의 **Employees** 테이블에 있는 FirstName 열의 크기를 다시 정의 합니다. 그런 다음 **Employees** 테이블을 기반으로 하는 [레코드 집합](../ado-api/recordset-object-ado.md) 의 FirstName [필드](../ado-api/field-object.md) 값이 변경 됩니다. 기본적으로 **DefinedSize** 속성을 다시 정의한 후 FirstName 필드는 공백을 사용 하 여 채워집니다.  
   
 ```  
 ' BeginDefinedSizeVB  
@@ -151,5 +151,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Column 개체 (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
- [DefinedSize 속성(ADOX)](../../../ado/reference/adox-api/definedsize-property-adox.md)
+ [Column 개체 (ADOX)](./column-object-adox.md)   
+ [DefinedSize 속성(ADOX)](./definedsize-property-adox.md)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ce37fa06-c581-4d80-9a9b-c3aa66408909
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 449bfe5056cdf96f86b5371731c2d1c0b00ba31e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c7fc8cd189534a217468f71188479a8df100fed6
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452425"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88758363"
 ---
 # <a name="overview-of-multidimensional-schemas-and-data"></a>다차원 스키마 및 데이터 개요
 ## <a name="understanding-multidimensional-schemas"></a>다차원 스키마 이해  
@@ -32,7 +32,7 @@ ms.locfileid: "88452425"
   
  *멤버* 는 차원의 데이터 항목입니다. 일반적으로 캡션을 만들거나 멤버를 사용 하 여 데이터베이스의 측정값을 설명 합니다.  
   
- 큐브는 ADO MD [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md) 개체로 표현 됩니다. 차원, 계층, 수준 및 멤버는 해당 ADO MD 개체 ( [차원](../../../ado/reference/ado-md-api/dimension-object-ado-md.md), [계층](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md), [수준](../../../ado/reference/ado-md-api/level-object-ado-md.md)및 [멤버](../../../ado/reference/ado-md-api/member-object-ado-md.md))로도 표시 됩니다.  
+ 큐브는 ADO MD [CubeDef](../../reference/ado-md-api/cubedef-object-ado-md.md) 개체로 표현 됩니다. 차원, 계층, 수준 및 멤버는 해당 ADO MD 개체 ( [차원](../../reference/ado-md-api/dimension-object-ado-md.md), [계층](../../reference/ado-md-api/hierarchy-object-ado-md.md), [수준](../../reference/ado-md-api/level-object-ado-md.md)및 [멤버](../../reference/ado-md-api/member-object-ado-md.md))로도 표시 됩니다.  
   
 ### <a name="dimensions"></a>차원  
  큐브의 차원은 데이터베이스에서 모델링할 비즈니스 엔터티와 데이터 유형에 따라 달라 집니다. 일반적으로 각 차원은 데이터를 선택 하기 위한 독립적인 진입점 또는 메커니즘입니다.  
@@ -69,7 +69,7 @@ Hamburg, Munich, Stuttgart}
   
 -   건설 `= {Ottawa, Toronto, Vancouver, Calgary, Seattle, Boise, Los Angeles, Houston, Shreveport, Miami, Boston, New York, London, Dover, Glasgow, Edinburgh, Cardiff, Pembroke, Belfast, Derry, Berlin, Hamburg, Munich, Stuttgart}`  
   
-### <a name="members"></a>멤버  
+### <a name="members"></a>구성원  
  계층의 리프 수준에 있는 멤버에는 자식이 없고 루트 수준의 멤버에는 부모가 없습니다. 다른 모든 멤버는 하나 이상의 부모 및 하나 이상의 자식을 가집니다. 예를 들어 Geography 차원에서 계층 트리의 부분 순회는 다음과 같은 부모-자식 관계를 생성 합니다.  
   
 -   `{All} (parent of) {Europe, North America}`  
@@ -84,9 +84,9 @@ Hamburg, Munich, Stuttgart}
   
  또한이 예제에서는 다른 특징을 보여 줍니다. Year 계층의 주 수준 멤버가 Year-Quarter 계층의 수준에 표시 되지 않습니다. 따라서 계층 구조는 차원의 모든 멤버를 포함할 필요가 없습니다.  
   
-## <a name="see-also"></a>참고 항목  
- [ADO MD 개체 모델](../../../ado/reference/ado-md-api/ado-md-object-model.md)   
- [ADO (다차원) (ADO MD)](../../../ado/guide/multidimensional/ado-multidimensional-ado-md.md)   
- [ADO MD를 사용한 프로그래밍](../../../ado/guide/multidimensional/programming-with-ado-md.md)   
- [ADO MD와 함께 ADO 사용](../../../ado/guide/multidimensional/using-ado-with-ado-md.md)   
- [다차원 데이터 작업](../../../ado/guide/multidimensional/working-with-multidimensional-data.md)
+## <a name="see-also"></a>관련 항목  
+ [ADO MD 개체 모델](../../reference/ado-md-api/ado-md-object-model.md)   
+ [ADO (다차원) (ADO MD)](./ado-multidimensional-ado-md.md)   
+ [ADO MD를 사용한 프로그래밍](./programming-with-ado-md.md)   
+ [ADO MD와 함께 ADO 사용](./using-ado-with-ado-md.md)   
+ [다차원 데이터 작업](./working-with-multidimensional-data.md)

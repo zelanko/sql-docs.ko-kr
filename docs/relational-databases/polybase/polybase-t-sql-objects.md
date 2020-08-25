@@ -13,12 +13,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: a282ceacba0c767ce2130cd3e7f8708e244bf473
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 40763d6caadc420a3bb1794a4759c848d579007c
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914460"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88173384"
 ---
 # <a name="polybase-transact-sql-reference"></a>PolyBase Transact-SQL 참조
 
@@ -221,19 +221,32 @@ WITH
 ;
 ```  
 
-**2. 외부 데이터 원본 만들기**  
+**2.** Azure Data Lake Store Gen 1 또는 Gen 2를 참조하는 외부 데이터 원본 만들기 **  
 
 ```sql  
--- TYPE: HADOOP - PolyBase uses Hadoop APIs to access data in Azure Data Lake Store.
--- LOCATION: Provide Azure storage account name and blob container name.
+-- For Gen 1 - Create an external data source
+-- TYPE: HADOOP - PolyBase uses Hadoop APIs to access data in Azure Data Lake Storage.
+-- LOCATION: Provide Data Lake Storage Gen 1 account name and URI
 -- CREDENTIAL: Provide the credential created in the previous step.
 
 CREATE EXTERNAL DATA SOURCE AzureDataLakeStore
 WITH (
     TYPE = HADOOP,
-    LOCATION = 'adl://<AzureDataLake account_name>.azuredatalake.net,
+    LOCATION = 'adl://<AzureDataLake account_name>.azuredatalakestore.net',
     CREDENTIAL = AzureStorageCredential
 );
+
+-- For Gen 2 - Create an external data source
+-- TYPE: HADOOP - PolyBase uses Hadoop APIs to access data in Azure Data Lake Storage.
+-- LOCATION: Provide Data Lake Storage Gen 2 account name and URI
+-- CREDENTIAL: Provide the credential created in the previous step
+CREATE EXTERNAL DATA SOURCE AzureDataLakeStore
+WITH
+  -- Please note the abfss endpoint when your account has secure transfer enabled
+  ( LOCATION = 'abfss://<file-system-name>@<storage-account-name>.dfs.core.windows.net/' , 
+    CREDENTIAL = ADLS_credential ,
+    TYPE = HADOOP
+  ) ;
 ```  
 
 **3. 외부 파일 형식 만들기**  
@@ -553,6 +566,6 @@ CREATE STATISTICS CustomerCustKeyStatistics ON sqlserver.customer (C_CUSTKEY) WI
 ## <a name="next-steps"></a>다음 단계  
 쿼리의 예제를 보려면 [PolyBase 쿼리](../../relational-databases/polybase/polybase-queries.md)를 참조하세요.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
 [PolyBase 시작하기](../../relational-databases/polybase/get-started-with-polybase.md)   
 [PolyBase 가이드](../../relational-databases/polybase/polybase-guide.md)

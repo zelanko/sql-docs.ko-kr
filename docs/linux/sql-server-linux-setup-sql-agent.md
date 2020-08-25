@@ -1,6 +1,6 @@
 ---
 title: Linux에서 SQL Server 에이전트 구성
-description: 이 문서에서는 Linux에서 SQL Server 에이전트를 사용하도록 설정하거나 설치하는 방법을 설명합니다.
+description: Linux에서 SQL Server 에이전트를 사용하도록 설정하거나 설치하는 방법을 알아봅니다. SQL Server 2017 CU4부터는 SQL Server 에이전트가 mssql-server 패키지에 포함되어 있습니다.
 author: VanMSFT
 ms.author: vanto
 ms.date: 12/05/2019
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 77f16adc-e6cb-4a57-82f3-7b9780369868
-ms.openlocfilehash: 85869c797e8f91ca28d468c6a4a52dd52ea45a92
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 6554acf46da19a9833cf649bce34a455cbc92e5b
+ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882533"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88088813"
 ---
 # <a name="install-sql-server-agent-on-linux"></a>Linux에 SQL Server 에이전트 설치
 

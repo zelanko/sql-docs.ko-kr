@@ -13,20 +13,20 @@ helpviewer_keywords:
 ms.assetid: e9566718-9122-490d-8a8e-da8f605246f2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a83cd7b5cf9df56432bcaf6b484617b3692c35e9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5fc0a406b2af481ba1932e5f4a161c854d4e653b
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441265"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778352"
 ---
 # <a name="catalog-object-properties-methods-and-events-ado-md"></a>Catalog 개체 속성, 메서드 및 이벤트(ADO MD)
 ## <a name="propertiescollections"></a>속성/컬렉션  
- [ActiveConnection 속성](../../../ado/reference/ado-md-api/activeconnection-property-ado-md.md)  
+ [ActiveConnection 속성](./activeconnection-property-ado-md.md)  
   
- [CubeDefs 컬렉션](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md)  
+ [CubeDefs 컬렉션](./cubedefs-collection-ado-md.md)  
   
- [Name 속성](../../../ado/reference/ado-md-api/name-property-ado-md.md)  
+ [Name 속성](./name-property-ado-md.md)  
   
 ## <a name="methods"></a>메서드  
  없음  
@@ -35,4 +35,4 @@ ms.locfileid: "88441265"
  없음  
   
 ## <a name="see-also"></a>참고 항목  
- [Catalog 개체(ADO MD)](../../../ado/reference/ado-md-api/catalog-object-ado-md.md)
+ [Catalog 개체(ADO MD)](./catalog-object-ado-md.md)

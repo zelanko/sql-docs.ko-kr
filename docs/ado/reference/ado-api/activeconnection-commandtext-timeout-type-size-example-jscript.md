@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: ea74e2a3-c965-43aa-9076-26a084b48ad8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 44bfda3dc902af0398d26481c307b90926133654
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1d46e3acaa77045e0006a77bb0d20ab77d975d24
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451695"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88760113"
 ---
 # <a name="activeconnection-commandtext-commandtimeout-commandtype-size-and-direction-properties-example-jscript"></a>ActiveConnection, CommandText, CommandTimeout, CommandType, Size 및 Direction 속성 예제 (JScript)
-이 예에서는 [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md), [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md), [CommandTimeout](../../../ado/reference/ado-api/commandtimeout-property-ado.md), [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md), [Size](../../../ado/reference/ado-api/size-property-ado-parameter.md)및 [Direction](../../../ado/reference/ado-api/direction-property.md) 속성을 사용 하 여 저장 프로시저를 실행 합니다. 다음 코드를 잘라내어 메모장 또는 다른 텍스트 편집기에 붙여 넣고 **ActiveConnectionJS**로 저장 합니다.  
+이 예에서는 [ActiveConnection](./activeconnection-property-ado.md), [CommandText](./commandtext-property-ado.md), [CommandTimeout](./commandtimeout-property-ado.md), [CommandType](./commandtype-property-ado.md), [Size](./size-property-ado-parameter.md)및 [Direction](./direction-property.md) 속성을 사용 하 여 저장 프로시저를 실행 합니다. 다음 코드를 잘라내어 메모장 또는 다른 텍스트 편집기에 붙여 넣고 **ActiveConnectionJS**로 저장 합니다.  
   
 ```  
 <!-- BeginActiveConnectionJS -->  
@@ -173,15 +173,15 @@ BODY {
 <!-- EndActiveConnectionJS -->  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [ActiveCommand 속성 (ADO)](../../../ado/reference/ado-api/activecommand-property-ado.md)   
- [Command 개체 (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
- [CommandText 속성 (ADO)](../../../ado/reference/ado-api/commandtext-property-ado.md)   
- [CommandTimeout 속성 (ADO)](../../../ado/reference/ado-api/commandtimeout-property-ado.md)   
- [CommandType 속성 (ADO)](../../../ado/reference/ado-api/commandtype-property-ado.md)   
- [Connection 개체 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
- [Direction 속성](../../../ado/reference/ado-api/direction-property.md)   
- [Parameter 개체](../../../ado/reference/ado-api/parameter-object.md)   
- [Record 개체 (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
- [레코드 집합 개체 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Size 속성(ADO 매개 변수)](../../../ado/reference/ado-api/size-property-ado-parameter.md)
+## <a name="see-also"></a>관련 항목  
+ [ActiveCommand 속성 (ADO)](./activecommand-property-ado.md)   
+ [Command 개체 (ADO)](./command-object-ado.md)   
+ [CommandText 속성 (ADO)](./commandtext-property-ado.md)   
+ [CommandTimeout 속성 (ADO)](./commandtimeout-property-ado.md)   
+ [CommandType 속성 (ADO)](./commandtype-property-ado.md)   
+ [Connection 개체 (ADO)](./connection-object-ado.md)   
+ [Direction 속성](./direction-property.md)   
+ [Parameter 개체](./parameter-object.md)   
+ [Record 개체 (ADO)](./record-object-ado.md)   
+ [레코드 집합 개체 (ADO)](./recordset-object-ado.md)   
+ [Size 속성(ADO 매개 변수)](./size-property-ado-parameter.md)

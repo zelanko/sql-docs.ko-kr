@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: cd0db27a-1080-40af-a491-3893e7bef9cd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7f9ab23767ccac617694468f5ff1502b8c60f14e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ff4747f86f2bcca6acdfa0d472db3eb59506a14e
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440315"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88771042"
 ---
 # <a name="columnattributesenum"></a>ColumnAttributesEnum
-[열의](../../../ado/reference/adox-api/column-object-adox.md)특성을 지정 합니다.  
+[열의](./column-object-adox.md)특성을 지정 합니다.  
   
 |상수|값|설명|  
 |--------------|-----------|-----------------|  
@@ -32,4 +32,4 @@ ms.locfileid: "88440315"
 |**adColNullable**|2|열에 null 값이 포함 될 수 있습니다.|  
   
 ## <a name="applies-to"></a>적용 대상  
- [Attributes 속성(ADOX)](../../../ado/reference/adox-api/attributes-property-adox.md)
+ [Attributes 속성(ADOX)](./attributes-property-adox.md)

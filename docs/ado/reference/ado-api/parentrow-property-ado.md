@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5ea8029b-eda4-490b-ae84-2ad036fb582f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b81fc704c78b620c1319aa592336aba0489a3d37
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d7924a27a8b04e430eb1d9d68d5de6e4d19c51a8
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442745"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773272"
 ---
 # <a name="parentrow-property-ado"></a>ParentRow 속성(ADO)
 **ADORecordConstruction** 개체에 대 한 OLE DB **row** 개체의 컨테이너를 설정 하 여 행의 부모를 ADO **Record** 개체로 설정 합니다.  
@@ -44,4 +44,4 @@ HRESULT put_ParentRow([in] IUnknown* pParent);
  이 속성 메서드는 S_OK 및 E_FAIL를 포함 하 여 표준 HRESULT 값을 반환 합니다.  
   
 ## <a name="applies-to"></a>적용 대상  
- [ADORecordConstruction 인터페이스](../../../ado/reference/ado-api/adorecordconstruction-interface.md)
+ [ADORecordConstruction 인터페이스](./adorecordconstruction-interface.md)

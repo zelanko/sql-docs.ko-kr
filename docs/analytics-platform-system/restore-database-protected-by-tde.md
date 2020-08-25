@@ -9,17 +9,17 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 53707c62e018b9923f2bb923a4df46f6917d2902
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bfd345ff4f55311de41140d5675809838eb06297
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74400446"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88766722"
 ---
 # <a name="restore-a-database-protected-by-tde-in-parallel-data-warehouse"></a>병렬 데이터 웨어하우스에서 TDE로 보호 되는 데이터베이스 복원
 다음 단계를 사용 하 여 투명 한 데이터 암호화를 사용 하 여 암호화 된 데이터베이스를 복원 합니다.  
   
-[투명한 데이터 암호화 사용](transparent-data-encryption.md#using-tde) 예제에는 `AdventureWorksPDW2012` 데이터베이스에서 tde를 사용 하도록 설정 하는 코드가 있습니다. 다음 코드는 원래 APS (분석 플랫폼 시스템) 어플라이언스에서 데이터베이스의 백업을 만들고 다른 어플라이언스에서 인증서와 데이터베이스를 복원 하 여 해당 예를 계속 합니다.  
+[투명한 데이터 암호화 사용](transparent-data-encryption.md#using-tde) 예제에는 데이터베이스에서 tde를 사용 하도록 설정 하는 코드가 있습니다 `AdventureWorksPDW2012` . 다음 코드는 원래 APS (분석 플랫폼 시스템) 어플라이언스에서 데이터베이스의 백업을 만들고 다른 어플라이언스에서 인증서와 데이터베이스를 복원 하 여 해당 예를 계속 합니다.  
   
 첫 번째 단계는 원본 데이터베이스의 백업을 만드는 것입니다.  
   
@@ -59,10 +59,9 @@ RESTORE DATABASE AdventureWorksPDW2012
 ```  
   
 ## <a name="see-also"></a>참고 항목  
-[BACKUP DATABASE](../t-sql/statements/backup-database-parallel-data-warehouse.md)  
-[마스터 키](../t-sql/statements/create-master-key-transact-sql.md) 
-[sp_pdw_add_network_credentials](../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md) 만들기  
+[BACKUP DATABASE](../t-sql/statements/backup-transact-sql.md?view=aps-pdw-2016)  
+[마스터 키 만들기](../t-sql/statements/create-master-key-transact-sql.md)  
+ [sp_pdw_add_network_credentials](../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md)  
 [sp_pdw_database_encryption](../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md)  
 [CREATE CERTIFICATE](../t-sql/statements/create-certificate-transact-sql.md)  
-[RESTORE DATABASE](../t-sql/statements/restore-database-parallel-data-warehouse.md)
-  
+[데이터베이스 복원](../t-sql/statements/restore-statements-transact-sql.md?view=aps-pdw-2016)

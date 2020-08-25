@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: e0dabf23-a159-4fe5-a962-3df544a21f5c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c21e12d3601f40b1749067f04ce3d655ea0c1109
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d5c87c5374a0e631b08d355e5f1fc0d7c0862d23
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438605"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767412"
 ---
 # <a name="sql-property"></a>SQL 속성
-[레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)을 검색 하는 데 사용 되는 쿼리 문자열을 나타냅니다.  
+[레코드 집합](../ado-api/recordset-object-ado.md)을 검색 하는 데 사용 되는 쿼리 문자열을 나타냅니다.  
   
- RDS에서 디자인 타임에 **SQL** 속성을 설정할 수 있습니다 [. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) 개체의 개체 태그 또는 런타임 시 스크립팅 코드  
+ RDS에서 디자인 타임에 **SQL** 속성을 설정할 수 있습니다 [. DataControl](./datacontrol-object-rds.md) 개체의 개체 태그 또는 런타임 시 스크립팅 코드  
   
 > [!IMPORTANT]
 >  Windows 8 및 Windows Server 2012부터 RDS 서버 구성 요소는 더 이상 Windows 운영 체제에 포함 되지 않습니다 (자세한 내용은 Windows 8 및 [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) 참조). 이후 버전의 Windows에서는 RDS 클라이언트 구성 요소가 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. RDS를 사용 하는 응용 프로그램은 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)로 마이그레이션해야 합니다.  
@@ -50,13 +50,11 @@ Run time: DataControl.SQL = "QueryString"
  사용자 지정 서버 쪽 비즈니스 개체가 클라이언트의 데이터를 검색 하는 경우 **SQL** 속성은 선택 사항입니다.  
   
 ## <a name="applies-to"></a>적용 대상  
- [DataControl 개체(RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
+ [DataControl 개체(RDS)](./datacontrol-object-rds.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [SQL 속성 예제 (VBScript)](../../../ado/reference/rds-api/sql-property-example-vbscript.md)   
- [Connect 속성 (RDS)](../../../ado/reference/rds-api/connect-property-rds.md)   
- [Query 메서드 (RDS)](../../../ado/reference/rds-api/query-method-rds.md)   
- [Refresh 메서드 (RDS)](../../../ado/reference/rds-api/refresh-method-rds.md)   
- [SubmitChanges 메서드(RDS)](../../../ado/reference/rds-api/submitchanges-method-rds.md)
-
-
+ [SQL 속성 예제 (VBScript)](./sql-property-example-vbscript.md)   
+ [Connect 속성 (RDS)](./connect-property-rds.md)   
+ [Query 메서드 (RDS)](./query-method-rds.md)   
+ [Refresh 메서드 (RDS)](./refresh-method-rds.md)   
+ [SubmitChanges 메서드(RDS)](./submitchanges-method-rds.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6b35f136-9d9a-4bdd-8144-67decfd3c4e9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4627ac4b67e31861ff91cb516076a561a7a315e2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b09994dba988d94c2e0f0f7cd9f68eef5790dde0
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438565"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767322"
 ---
 # <a name="synchronize21-method-rds"></a>Synchronize21 메서드(RDS)
 지정 된 레코드 집합을 ADO 2.1에 사용 하기 위해 연결 문자열에 지정 된 데이터베이스와 동기화 합니다.  
@@ -62,9 +62,7 @@ object.Synchronize21(ConnectionString As String, HandlerString As String, lSynch
  *Handlerstring* 매개 변수는 null 일 수 있습니다. 이 경우에 발생 하는 상황은 RDS 서버를 구성 하는 방법에 따라 달라 집니다. "MSDFMAP. handler"의 처리기 문자열은 Microsoft에서 제공 하는 처리기 (Msdfmap.dll)를 사용 해야 함을 나타냅니다. "MASDFMAP sample.ini" 처리기 문자열은 Msdfmap.dll 처리기를 사용 해야 하며 "sample.ini" 인수를 처리기에 전달 해야 함을 나타냅니다. 그러면 Msdfmap.dll는 sample.ini를 사용 하 여 연결 및 쿼리 문자열을 확인 하는 방향으로 인수를 해석 합니다.  
   
 > [!NOTE]
->  **Synchronize21** 메서드는 단순히 [동기화 방법 (RDS)](../../../ado/reference/rds-api/synchronize-method-rds.md)의 버전입니다. **Synchronize** 메서드를 사용 하 여 ADO 2.1와 통신 해야 하는 경우 대신 **Synchronize21** 메서드를 호출할 수 있습니다. ADO 2.5 이상에서 **Synchronize** 메서드의 기능은 ado 2.1에서 동일한 방법으로 제공 되는 기능의 상위 집합입니다.  
+>  **Synchronize21** 메서드는 단순히 [동기화 방법 (RDS)](./synchronize-method-rds.md)의 버전입니다. **Synchronize** 메서드를 사용 하 여 ADO 2.1와 통신 해야 하는 경우 대신 **Synchronize21** 메서드를 호출할 수 있습니다. ADO 2.5 이상에서 **Synchronize** 메서드의 기능은 ado 2.1에서 동일한 방법으로 제공 되는 기능의 상위 집합입니다.  
   
 ## <a name="applies-to"></a>적용 대상  
- [DataFactory 개체(RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)
-
-
+ [DataFactory 개체(RDSServer)](./datafactory-object-rdsserver.md)

@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 4a04380b-51dc-4aaf-8d25-123cdd589641
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 957afb5eaff886824c53069ad42721d5013adf25
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 83207cd13db790d645bea146b2a031604e598256
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440845"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777952"
 ---
 # <a name="name-property-ado-md"></a>Name 속성(ADO MD)
 개체의 이름을 나타냅니다.  
@@ -37,28 +37,28 @@ ms.locfileid: "88440845"
  는 **문자열** 을 반환 하며 읽기 전용입니다.  
   
 ## <a name="remarks"></a>설명  
- 서 수 참조로 개체의 **이름** 속성을 검색할 수 있으며, 그 후에는 개체를 이름으로 직접 참조할 수 있습니다. 예를 들어가 `cdf.CubeDefs(0).Name` "Bobs 비디오 저장소"를 생성 하는 경우이 [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md) 를으로 참조할 수 있습니다 `cdf.CubeDefs("Bobs Video Store")` .  
+ 서 수 참조로 개체의 **이름** 속성을 검색할 수 있으며, 그 후에는 개체를 이름으로 직접 참조할 수 있습니다. 예를 들어가 `cdf.CubeDefs(0).Name` "Bobs 비디오 저장소"를 생성 하는 경우이 [CubeDef](./cubedef-object-ado-md.md) 를으로 참조할 수 있습니다 `cdf.CubeDefs("Bobs Video Store")` .  
   
 ## <a name="applies-to"></a>적용 대상  
 
 :::row:::
     :::column:::
-        [Axis 개체(ADO MD)](../../../ado/reference/ado-md-api/axis-object-ado-md.md)  
-        [Catalog 개체(ADO MD)](../../../ado/reference/ado-md-api/catalog-object-ado-md.md)  
-        [CubeDef 개체(ADO MD)](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)  
+        [Axis 개체(ADO MD)](./axis-object-ado-md.md)  
+        [Catalog 개체(ADO MD)](./catalog-object-ado-md.md)  
+        [CubeDef 개체(ADO MD)](./cubedef-object-ado-md.md)  
     :::column-end:::
     :::column:::
-        [Dimension 개체(ADO MD)](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)  
-        [Hierarchy 개체(ADO MD)](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)  
+        [Dimension 개체(ADO MD)](./dimension-object-ado-md.md)  
+        [Hierarchy 개체(ADO MD)](./hierarchy-object-ado-md.md)  
     :::column-end:::
     :::column:::
-        [Level 개체(ADO MD)](../../../ado/reference/ado-md-api/level-object-ado-md.md)  
-        [Member 개체(ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)  
+        [Level 개체(ADO MD)](./level-object-ado-md.md)  
+        [Member 개체(ADO MD)](./member-object-ado-md.md)  
     :::column-end:::
 :::row-end:::
 
 ## <a name="see-also"></a>참고 항목  
- [Catalog 예제 (VB)](../../../ado/reference/ado-md-api/catalog-example-vb.md)   
- [Caption 속성 (ADO MD)](../../../ado/reference/ado-md-api/caption-property-ado-md.md)   
- [Description 속성 (ADO MD)](../../../ado/reference/ado-md-api/description-property-ado-md.md)   
- [UniqueName 속성(ADO MD)](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md)
+ [Catalog 예제 (VB)](./catalog-example-vb.md)   
+ [Caption 속성 (ADO MD)](./caption-property-ado-md.md)   
+ [Description 속성 (ADO MD)](./description-property-ado-md.md)   
+ [UniqueName 속성(ADO MD)](./uniquename-property-ado-md.md)

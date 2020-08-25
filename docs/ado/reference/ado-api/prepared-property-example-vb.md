@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: e3a3db2d-7f73-4288-ad08-5468f251d610
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bfddc290ee906402490743205ca939d82db2dad6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0ae1e12bf05312f96e4647bb1185e3ac8359b0ed
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442685"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773102"
 ---
 # <a name="prepared-property-example-vb"></a>Prepared 속성 예제(VB)
-이 예제에서는 준비 [된 속성](../../../ado/reference/ado-api/prepared-property-ado.md) 중 하나를 [Command](../../../ado/reference/ado-api/command-object-ado.md) 열어 준비 된 속성을 보여 줍니다.  
+이 예제에서는 준비 [된 속성](./prepared-property-ado.md) 중 하나를 [Command](./command-object-ado.md) 열어 준비 된 속성을 보여 줍니다.  
   
 ```  
 'BeginPreparedVB  
@@ -116,5 +116,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Command 개체 (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
- [준비된 속성(ADO)](../../../ado/reference/ado-api/prepared-property-ado.md)
+ [Command 개체 (ADO)](./command-object-ado.md)   
+ [준비된 속성(ADO)](./prepared-property-ado.md)

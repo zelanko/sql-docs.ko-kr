@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b01cbc62-fbd7-4068-b16c-8b0f80a05887
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 86bdb1cd343ff0c8b3375760c843ef1c4d93c2dc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fb9ab9b7b97875ee62fe96a39ff8d34591810560
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438895"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767952"
 ---
 # <a name="onerror-event-rds"></a>onError 이벤트(RDS)
 **OnError** 이벤트는 작업을 수행 하는 동안 오류가 발생할 때마다 호출 됩니다.  
@@ -48,10 +48,8 @@ onError SCode, Description, Source, CancelDisplay
  **True**로 설정 된 경우 대화 상자에 오류가 표시 되지 않도록 하는 **부울** 값입니다.  
   
 ## <a name="applies-to"></a>적용 대상  
- [DataControl 개체(RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
+ [DataControl 개체(RDS)](./datacontrol-object-rds.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [ADO Events 모델 예제 (VC + +)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
- [ADO 이벤트 처리기 요약](../../../ado/guide/data/ado-event-handler-summary.md)
-
-
+ [ADO Events 모델 예제 (VC + +)](../ado-api/ado-events-model-example-vc.md)   
+ [ADO 이벤트 처리기 요약](../../guide/data/ado-event-handler-summary.md)

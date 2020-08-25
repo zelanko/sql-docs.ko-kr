@@ -2,7 +2,7 @@
 title: 단일 사용자 모드로 SQL Server 시작 | Microsoft Docs
 description: SQL Server의 단일 사용자 모드에 대해 알아봅니다. 이 모드가 유용한 경우와 이 모드에서 시작 옵션 "-m"을 사용하여 SQL Server 인스턴스를 시작하는 방법을 알아봅니다.
 ms.custom: ''
-ms.date: 09/20/2017
+ms.date: 08/11/2020
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 72eb4fc1-7af4-4ec6-9e02-11a69e02748e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 31b0075dfa6b3f4fa380e8b43054d0c98ebd8d81
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8651bcaa4aebf69eae9622031b49fb562b7be9f6
+ms.sourcegitcommit: e4c36570c34cd7d7ae258061351bce6e54ea49f6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85764006"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88147304"
 ---
 # <a name="start-sql-server-in-single-user-mode"></a>단일 사용자 모드로 SQL Server 시작
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,7 +47,13 @@ ms.locfileid: "85764006"
   
 > [!IMPORTANT]  
 >  이 옵션을 보안 용도로는 사용하지 마십시오. 클라이언트 애플리케이션에서 클라이언트 애플리케이션 이름을 제공하므로 연결 문자열의 일부로 잘못된 이름을 제공할 수 있습니다.  
-  
+
+다음 예에서는 SQL Server 인스턴스를 단일 사용자 모드로 시작하고 SQL Server Management Studio 쿼리 편집기를 통해서만 연결을 허용합니다.
+
+```console
+net start "SQL Server (MSSQLSERVER)" -m"Microsoft SQL Server Management Studio - Query"
+```
+
 ## <a name="note-for-clustered-installations"></a>클러스터형 설치에 대한 참고 사항  
  클러스터 환경에 설치된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 단일 사용자 모드로 시작되면 클러스터 리소스 dll이 사용 가능한 모든 연결을 사용하므로 서버에 대한 다른 연결은 차단됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 이 상태이고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 리소스가 그룹에 영향을 주도록 구성되어 있는 경우 온라인으로 이 리소스를 가져오려고 하면 SQL 리소스가 다른 노드로 장애 조치(failover)될 수 있습니다.  
   

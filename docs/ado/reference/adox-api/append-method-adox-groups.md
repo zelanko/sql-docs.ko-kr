@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 56b94fc6-7ef0-4e4a-82a3-033b94c46036
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2dc46d1c0d44ec175b442df943ce72a38ec2b761
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 14900e34ef93f2ad738779b0cf7478372ab59179
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440495"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88771482"
 ---
 # <a name="append-method-adox-groups"></a>Append 메서드(ADOX 그룹)
-[그룹](../../../ado/reference/adox-api/groups-collection-adox.md) 컬렉션에 새 [그룹](../../../ado/reference/adox-api/group-object-adox.md) 개체를 추가 합니다.  
+[그룹](./groups-collection-adox.md) 컬렉션에 새 [그룹](./group-object-adox.md) 개체를 추가 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -39,22 +39,22 @@ Groups.Append Group
  추가할 **그룹** 개체 또는 만들고 추가할 그룹의 이름입니다.  
   
 ## <a name="remarks"></a>설명  
- [카탈로그](../../../ado/reference/adox-api/catalog-object-adox.md) 의 **Groups** 컬렉션은 모든 카탈로그 그룹 계정을 나타냅니다. [사용자](../../../ado/reference/adox-api/user-object-adox.md) 에 대 한 **그룹** 컬렉션은 사용자가 속한 그룹만 나타냅니다.  
+ [카탈로그](./catalog-object-adox.md) 의 **Groups** 컬렉션은 모든 카탈로그 그룹 계정을 나타냅니다. [사용자](./user-object-adox.md) 에 대 한 **그룹** 컬렉션은 사용자가 속한 그룹만 나타냅니다.  
   
  공급자가 그룹 만들기를 지원 하지 않는 경우 오류가 발생 합니다.  
   
 > [!NOTE]
->  **그룹** 개체를 **사용자** 개체의 **groups** 컬렉션에 추가 하기 전에 추가 될 그룹과 동일한 [이름의](../../../ado/reference/adox-api/name-property-adox.md) **그룹** 개체가 **카탈로그**의 **groups** 컬렉션에 이미 존재 해야 합니다.  
+>  **그룹** 개체를 **사용자** 개체의 **groups** 컬렉션에 추가 하기 전에 추가 될 그룹과 동일한 [이름의](./name-property-adox.md) **그룹** 개체가 **카탈로그**의 **groups** 컬렉션에 이미 존재 해야 합니다.  
   
 ## <a name="applies-to"></a>적용 대상  
- [Groups 컬렉션(ADOX)](../../../ado/reference/adox-api/groups-collection-adox.md)  
+ [Groups 컬렉션(ADOX)](./groups-collection-adox.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [Groups 및 Users Append, ChangePassword 메서드 예제 (VB)](../../../ado/reference/adox-api/groups-and-users-append-changepassword-methods-example-vb.md)   
- [Append 메서드 (ADOX Columns)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
- [Append 메서드 (ADOX 인덱스)](../../../ado/reference/adox-api/append-method-adox-indexes.md)   
- [Append 메서드 (ADOX 키)](../../../ado/reference/adox-api/append-method-adox-keys.md)   
- [Append 메서드 (ADOX 프로시저)](../../../ado/reference/adox-api/append-method-adox-procedures.md)   
- [Append 메서드 (ADOX Tables)](../../../ado/reference/adox-api/append-method-adox-tables.md)   
- [Append 메서드 (ADOX 사용자)](../../../ado/reference/adox-api/append-method-adox-users.md)   
- [Append 메서드(ADOX Views)](../../../ado/reference/adox-api/append-method-adox-views.md)
+ [Groups 및 Users Append, ChangePassword 메서드 예제 (VB)](./groups-and-users-append-changepassword-methods-example-vb.md)   
+ [Append 메서드 (ADOX Columns)](./append-method-adox-columns.md)   
+ [Append 메서드 (ADOX 인덱스)](./append-method-adox-indexes.md)   
+ [Append 메서드 (ADOX 키)](./append-method-adox-keys.md)   
+ [Append 메서드 (ADOX 프로시저)](./append-method-adox-procedures.md)   
+ [Append 메서드 (ADOX Tables)](./append-method-adox-tables.md)   
+ [Append 메서드 (ADOX 사용자)](./append-method-adox-users.md)   
+ [Append 메서드(ADOX 보기)](./append-method-adox-views.md)

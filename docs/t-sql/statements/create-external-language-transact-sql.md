@@ -1,4 +1,5 @@
 ---
+description: CREATE EXTERNAL LANGUAGE(Transact-SQL) - SQL Server
 title: CREATE EXTERNAL LANGUAGE(Transact-SQL) - SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 04/03/2020
@@ -9,15 +10,15 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8d4f85f004d1b15e356b02f025f4297296f9ef2a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6a32e4c18096aefc88342104ae54124d6e88cefa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85735843"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426685"
 ---
 # <a name="create-external-language-transact-sql"></a>CREATE EXTERNAL LANGUAGE(Transact-SQL)
-[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
+[!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
 지정된 파일 경로 또는 바이트 스트림에서 데이터베이스의 외부 언어 확장을 등록합니다. 이 명령문은 데이터베이스 관리자가 SQL Server에서 지원되는 OS 플랫폼에 새 외부 언어를 등록하는 일반 메커니즘의 역할을 합니다. 자세한 내용은 [언어 확장](https://docs.microsoft.com/sql/language-extensions/language-extensions-overview)을 참조하세요.
 

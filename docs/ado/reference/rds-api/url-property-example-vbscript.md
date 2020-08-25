@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6ae5ac50-c88c-4262-b7ab-f2b3de382a0b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 25a0460aa93c51f841719b1318e1413a2dcf0d99
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 38e09a12f56bef4751d2c872e25fce70413c88dc
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438545"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767302"
 ---
 # <a name="url-property-example-vbscript"></a>URL 속성 예제(VBScript)
 > [!IMPORTANT]
@@ -140,6 +140,4 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [URL 속성(RDS)](../../../ado/reference/rds-api/url-property-rds.md)
-
-
+ [URL 속성(RDS)](./url-property-rds.md)

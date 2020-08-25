@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: b0bcb5cfe1ec4111aaea7153f35bca084df62b76
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ea2a4f39b16fe2f8b23d6a6a229ce9b936e6e6d7
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401012"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88766762"
 ---
 # <a name="load-data-with-integration-services-to-parallel-data-warehouse"></a>병렬 데이터 웨어하우스에 Integration Services를 사용 하 여 데이터 로드
 SQL Server Integration Services (SSIS) 패키지를 사용 하 여 SQL Server 병렬 데이터 웨어하우스로 데이터를 로드 하기 위한 참조 및 배포 정보를 제공 합니다.  
@@ -97,7 +97,7 @@ Integration Services를 사용 하 여 데이터 원본에서 SQL Server PDW 데
   
 DT_NUMERIC 또는 전체 자릿수가 28 보다 큰 값을 포함 하는 DT_DECIMAL 입력 열을 매핑하는 경우 PDW는 유효성 검사 오류를 생성 합니다.  
   
-**지원 되지 않는 데이터 형식**  
+**지원되지 않는 데이터 형식**  
   
 SQL Server PDW는 다음 Integration Services 데이터 형식을 지원 하지 않습니다.  
   
@@ -149,12 +149,12 @@ For the maximum number of loads and queued loads per appliance, see [Minimum and
 ## <a name="locking-behavior"></a><a name="Locks"></a>잠금 동작  
 Integration Services를 사용 하 여 데이터를 로드 하는 경우 SQL ServerPDW는 행 수준 잠금을 사용 하 여 대상 테이블의 데이터를 업데이트 합니다. 따라서 각 행이 업데이트될 때는 각 행에 대한 읽기 및 쓰기가 잠깁니다. 데이터가 준비 테이블에 로드될 때는 대상 테이블의 행이 잠기지 않습니다.  
   
-## <a name="examples"></a><a name="Examples"></a>예  
+## <a name="examples"></a><a name="Examples"></a>예제  
   
 ### <a name="a-simple-load-from-flat-file"></a><a name="Walkthrough"></a>A. 플랫 파일에서 간단히 로드  
 다음 연습에서는 Integration Services를 사용 하 여 SQL Server PDW 어플라이언스로 플랫 파일 데이터를 로드 하는 간단한 데이터 로드를 보여 줍니다.  이 예에서는 Integration Services 이미 클라이언트 컴퓨터에 설치 되어 있고 SQL Server PDW 대상이 위에 설명 된 대로 설치 되어 있다고 가정 합니다.  
   
-이 예에서는 다음 DDL이 있는 `Orders` 테이블에 로드 합니다. `Orders` 테이블은 `LoadExampleDB` 데이터베이스의 일부입니다.  
+이 예에서는 `Orders` 다음 DDL이 있는 테이블에 로드 합니다. `Orders`테이블은 데이터베이스의 일부입니다 `LoadExampleDB` .  
   
 ```sql  
 CREATE TABLE LoadExampleDB.dbo.Orders (  
@@ -174,7 +174,7 @@ id        city           lastUpdateDate     orderdate
 2         Denver         2002-06-25         1999-01-02  
 ```  
   
-로드 준비 중에 로드 데이터를 포함 하는 `exampleLoad.txt`플랫 파일을 만듭니다.  
+로드 준비 중에 `exampleLoad.txt` 로드 데이터를 포함 하는 플랫 파일을 만듭니다.  
   
 ```  
 id,city,lastUpdateDate,orderDate  
@@ -184,7 +184,7 @@ id,city,lastUpdateDate,orderDate
   
 먼저 다음 단계를 수행 하 여 Integration Services 패키지를 만듭니다.  
   
-1.  SQL Server Data Tools \(SSDT\)에서 **파일**, **새로 만들기**, **프로젝트**를 차례로 선택 합니다. 나열 된 옵션에서 **Integration Services 프로젝트** 를 선택 합니다. 이 프로젝트 `ExampleLoad`의 이름을로, **확인**을 클릭 합니다.  
+1.  SQL Server Data Tools \( SSDT에서 \) **파일**, **새로 만들기**, **프로젝트**를 차례로 선택 합니다. 나열 된 옵션에서 **Integration Services 프로젝트** 를 선택 합니다. 이 프로젝트 `ExampleLoad` 의 이름을로, **확인**을 클릭 합니다.  
   
 2.  **제어 흐름** 탭을 클릭 한 다음 **도구 상자** 의 **데이터 흐름 태스크** 를 **제어 흐름** 창으로 끌어 놓습니다.  
   
@@ -192,7 +192,7 @@ id,city,lastUpdateDate,orderDate
   
 4.  **연결 관리자** 를 클릭 한 다음 **새로 만들기**를 클릭 합니다.  
   
-5.  **연결 관리자 이름** 상자에 연결의 이름을 입력 합니다. 이 예에서는 `Example Load Flat File CM`입니다.  
+5.  **연결 관리자 이름** 상자에 연결의 이름을 입력 합니다. 이 예에서는 `Example Load Flat File CM` 입니다.  
   
 6.  **찾아보기** 를 클릭 하 고 `ExampleLoad.txt` 로컬 컴퓨터에서 파일을 선택 합니다.  
   
@@ -228,7 +228,7 @@ id,city,lastUpdateDate,orderDate
   
     **대상 데이터베이스:**`LoadExampleDB`  
   
-6.  대상 테이블을 선택 `Orders`합니다.  
+6.  대상 테이블을 선택 `Orders` 합니다.  
   
 7.  로드 모드로 **추가** 를 선택 하 고 **확인**을 클릭 합니다.  
   
@@ -253,7 +253,7 @@ Integration Services 컴퓨터에서 패키지를 실행 합니다.
 [자습서: 마법사를 사용하여 기본 패키지 만들기](https://technet.microsoft.com/library/ms365330\(v=sql11\).aspx)  
 [시작 (Integration Services)](https://go.microsoft.com/fwlink/?LinkId=202412)  
 [동적 패키지 생성 샘플](https://go.microsoft.com/fwlink/?LinkId=202413)  
-[병렬 처리를 위한 SSIS 패키지 디자인(SQL Server 비디오)](https://msdn.microsoft.com/library/dd795221.aspx)  
+[병렬 처리를 위한 SSIS 패키지 디자인(SQL Server 비디오)](/previous-versions/sql/sql-server-2008/dd795221(v=sql.100))  
 [Microsoft SQL Server 커뮤니티 예제: Integration Services](https://go.microsoft.com/fwlink/?LinkId=202415)  
 [변경 데이터 캡처를 사용하여 증분 로드 개선](../integration-services/change-data-capture/change-data-capture-ssis.md)  
 [느린 변경 차원 변환](../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)  
