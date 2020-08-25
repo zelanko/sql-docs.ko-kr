@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: a237ffdb-6e5b-47c6-9901-d5cdbe8625f3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fab0cc27720b6f5cff48441eef047dd219311c93
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: be5e96526cc68701615617991c774c7124f7cd09
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451085"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776382"
 ---
 # <a name="cachesize-property-example-vb"></a>CacheSize 속성 예제(VB)
-이 예에서는 [CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md) 속성을 사용 하 여 30 레코드 캐시 없이 수행 된 작업의 성능 차이를 표시 합니다.  
+이 예에서는 [CacheSize](./cachesize-property-ado.md) 속성을 사용 하 여 30 레코드 캐시 없이 수행 된 작업의 성능 차이를 표시 합니다.  
   
 ```  
 'BeginCacheSizeVB  
@@ -121,5 +121,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [CacheSize 속성 (ADO)](../../../ado/reference/ado-api/cachesize-property-ado.md)   
- [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [CacheSize 속성 (ADO)](./cachesize-property-ado.md)   
+ [레코드 집합 개체(ADO)](./recordset-object-ado.md)

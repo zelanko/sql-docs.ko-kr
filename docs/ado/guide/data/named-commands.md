@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 5a0ec8f9-5ba3-4f9f-b80d-2073aa049586
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 607142ec89a1032fe42bab87c0dfad0f2a276387
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0c5b5f21c1af3a3438b9e00cd00f4ed2baf338e2
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453155"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88805800"
 ---
 # <a name="named-commands"></a>명명된 명령
-[간단한 명령을 만들고 실행](../../../ado/guide/data/creating-and-executing-a-simple-command.md) 하면 명령을 실행 하는 한 가지 방법이 표시 됩니다. 또 다른 방법으로, 명명 된 명령으로 만든 다음 **연결** 개체 ( **명령** 개체의 **ActiveConnection** 속성에 할당 됨)에서 직접이 명명 된 명령을 호출할 수 있습니다. 명령 이름 지정은 **명령** 개체의 **name** 속성에 이름을 할당 하는 것을 의미 합니다. 예를 들면 다음과 같습니다.  
+[간단한 명령을 만들고 실행](./creating-and-executing-a-simple-command.md) 하면 명령을 실행 하는 한 가지 방법이 표시 됩니다. 또 다른 방법으로, 명명 된 명령으로 만든 다음 **연결** 개체 ( **명령** 개체의 **ActiveConnection** 속성에 할당 됨)에서 직접이 명명 된 명령을 호출할 수 있습니다. 명령 이름 지정은 **명령** 개체의 **name** 속성에 이름을 할당 하는 것을 의미 합니다. 예를 들면 다음과 같습니다.  
   
 ```  
 objCmd.Name = "GetCustomers"  
@@ -91,4 +91,4 @@ ErrHandler:
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [연결 개체(ADO)](../../../ado/reference/ado-api/connection-object-ado.md)
+ [연결 개체(ADO)](../../reference/ado-api/connection-object-ado.md)

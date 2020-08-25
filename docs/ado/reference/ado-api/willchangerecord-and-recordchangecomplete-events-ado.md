@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: cbc369fd-63af-4a7d-96ae-efa91b78ca69
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0a6cb124e51c232b0a3a26e9eb84316e3bde7ecd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8f69b16392204722e4efd3dc91602a920316919d
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441525"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776882"
 ---
 # <a name="willchangerecord-and-recordchangecomplete-events-ado"></a>WillChangeRecord 및 RecordChangeComplete 이벤트(ADO)
-**WillChangeRecord** 이벤트는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 의 하나 이상의 레코드 (행)가 변경 되기 전에 호출 됩니다. **RecordChangeComplete** 이벤트는 하나 이상의 레코드가 변경 된 후에 호출 됩니다.  
+**WillChangeRecord** 이벤트는 [레코드 집합](./recordset-object-ado.md) 의 하나 이상의 레코드 (행)가 변경 되기 전에 호출 됩니다. **RecordChangeComplete** 이벤트는 하나 이상의 레코드가 변경 된 후에 호출 됩니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -39,16 +39,16 @@ RecordChangeCompleteadReason, cRecords, pError, adStatus, pRecordset
   
 #### <a name="parameters"></a>매개 변수  
  *adReason*  
- 이 이벤트의 이유를 지정 하는 [EventReasonEnum](../../../ado/reference/ado-api/eventreasonenum.md) 값입니다. 해당 값은 **Adrsnaddnew**, **adrsnaddnew**, **adrsnaddnew**, adRsnUndoUpdate, **adrsnaddnew**, **adRsnUndoUpdate** **adrsnaddnew 삭제**하거나 **adrsnfirstchange**일 수 있습니다.  
+ 이 이벤트의 이유를 지정 하는 [EventReasonEnum](./eventreasonenum.md) 값입니다. 해당 값은 **Adrsnaddnew**, **adrsnaddnew**, **adrsnaddnew**, adRsnUndoUpdate, **adrsnaddnew**, **adRsnUndoUpdate** **adrsnaddnew 삭제**하거나 **adrsnfirstchange**일 수 있습니다.  
   
  *cRecords*  
  변경 된 레코드 수 (영향을 받음)를 나타내는 **Long** 값입니다.  
   
  *pError*  
- [오류](../../../ado/reference/ado-api/error-object.md) 개체입니다. *Adstatus* 값이 **adStatusErrorsOccurred**인 경우 발생 하는 오류를 설명 합니다. 그렇지 않으면 설정 되지 않습니다.  
+ [오류](./error-object.md) 개체입니다. *Adstatus* 값이 **adStatusErrorsOccurred**인 경우 발생 하는 오류를 설명 합니다. 그렇지 않으면 설정 되지 않습니다.  
   
  *adStatus*  
- [Eventstatusenum](../../../ado/reference/ado-api/eventstatusenum.md) 상태 값입니다.  
+ [Eventstatusenum](./eventstatusenum.md) 상태 값입니다.  
   
  **WillChangeRecord** 가 호출 되 면이 매개 변수는 이벤트를 발생 시킨 작업이 성공한 경우 **adstatusok** 로 설정 됩니다. 이 이벤트는 보류 중인 작업의 취소를 요청할 수 없는 경우 **adStatusCantDeny** 로 설정 됩니다.  
   
@@ -62,12 +62,12 @@ RecordChangeCompleteadReason, cRecords, pError, adStatus, pRecordset
  **레코드 집합** 개체입니다. 이 이벤트가 발생 한 **레코드 집합** 입니다.  
   
 ## <a name="remarks"></a>설명  
- [업데이트](../../../ado/reference/ado-api/update-method.md), [삭제](../../../ado/reference/ado-api/delete-method-ado-recordset.md), [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md), [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md), [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)및 [CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md) **레코드 집합** 작업으로 인해 행의 첫 번째 변경 된 필드에 대해 **WillChangeRecord** 또는 **RecordChangeComplete** 이벤트가 발생할 수 있습니다. **레코드 집합** [CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md) 의 값은 이벤트를 발생 시키는 작업을 결정 합니다.  
+ [업데이트](./update-method.md), [삭제](./delete-method-ado-recordset.md), [CancelUpdate](./cancelupdate-method-ado.md), [AddNew](./addnew-method-ado.md), [UpdateBatch](./updatebatch-method.md)및 [CancelBatch](./cancelbatch-method-ado.md) **레코드 집합** 작업으로 인해 행의 첫 번째 변경 된 필드에 대해 **WillChangeRecord** 또는 **RecordChangeComplete** 이벤트가 발생할 수 있습니다. **레코드 집합** [CursorType](./cursortype-property-ado.md) 의 값은 이벤트를 발생 시키는 작업을 결정 합니다.  
   
- **WillChangeRecord** 이벤트 중에는 **레코드 집합** [필터](../../../ado/reference/ado-api/filter-property.md) 속성이 **adFilterAffectedRecords**로 설정 됩니다. 이벤트를 처리 하는 동안에는이 속성을 변경할 수 없습니다.  
+ **WillChangeRecord** 이벤트 중에는 **레코드 집합** [필터](./filter-property.md) 속성이 **adFilterAffectedRecords**로 설정 됩니다. 이벤트를 처리 하는 동안에는이 속성을 변경할 수 없습니다.  
   
  **AdReason** 매개 변수를 포함 하는 모든 이벤트에 대 한 이벤트 알림을 완전히 중지 하려면 각 가능한 **adReason** 값에 대해 **Adstatus** 매개 변수를 **adStatusUnwantedEvent** 로 설정 해야 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [ADO Events 모델 예제 (VC + +)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
- [ADO 이벤트 처리기 요약](../../../ado/guide/data/ado-event-handler-summary.md)
+ [ADO Events 모델 예제 (VC + +)](./ado-events-model-example-vc.md)   
+ [ADO 이벤트 처리기 요약](../../guide/data/ado-event-handler-summary.md)

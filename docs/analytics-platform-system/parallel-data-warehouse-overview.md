@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 5e609585e464cb52b996f45c7d8c57aaffcd79fe
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 08/25/2020
 ms.locfileid: "74400929"
 ---
 # <a name="parallel-data-warehouse-components---analytics-platform-system"></a>병렬 데이터 웨어하우스 구성 요소-분석 플랫폼 시스템
@@ -66,8 +66,8 @@ DMS (데이터 이동 서비스)는 PDW의 "secret 기술인"에 포함 되어 �
 ### <a name="admin-console"></a>관리 사용자  
 관리 콘솔은 어플라이언스 상태, 상태 및 성능 정보를 표시 하는 웹 응용 프로그램입니다.  
   
-### <a name="configuration-manager"></a>Configuration Manager  
-Configuration Manager (dwconfig .exe)는 어플라이언스 관리자가 분석 플랫폼 시스템을 구성 하는 데 사용 하는 도구입니다.  
+### <a name="configuration-manager"></a>구성 관리자  
+Configuration Manager (dwconfig.exe)는 어플라이언스 관리자가 분석 플랫폼 시스템을 구성 하는 데 사용 하는 도구입니다.  
   
 ### <a name="control-node-databases"></a>제어 노드 데이터베이스  
 SQL Server는 제어 노드의 모든 데이터베이스를 관리 합니다.  
@@ -138,7 +138,7 @@ PolyBase 기술은 SQL Server PDW 데이터를 외부 Hadoop 데이터와 통합
   
 ## <a name="query-tools"></a>쿼리 도구   
   
-쿼리는 쿼리의 MPP 특성\-에 맞게 수정 된 transact-sql로 작성 됩니다. 모든 쿼리는 계산 노드에서 쿼리를 실행 하는 병렬 쿼리 계획을 생성 하는 제어 노드로 전송 됩니다.  
+쿼리는 \- 쿼리의 MPP 특성에 맞게 수정 된 transact-sql로 작성 됩니다. 모든 쿼리는 계산 노드에서 쿼리를 실행 하는 병렬 쿼리 계획을 생성 하는 제어 노드로 전송 됩니다.  
   
 ### <a name="sql-server-data-tools-ssdt"></a>SSDT(SQL Server Data Tools)  
 SQL Server Data Tools는 Visual Studio 내에서 실행 되며 SQL Server PDW에 쿼리를 전송 하기 위한 권장 GUI 도구입니다. 개체 탐색기를 탐색 하도록 허용 하 여 SQL Server Management Studio와 비슷합니다.  
@@ -149,7 +149,7 @@ For more information, see [Install SQL Server database tooling  for Visual Studi
 -->
   
 ### <a name="sqlcmd-command-line-query-tool"></a>sqlcmd 명령줄 쿼리 도구  
-sqlcmd는 Transact-sql\-명령과 시스템 명령을 실행 하기 위한 SQL Server 명령줄 도구입니다. SQL Server PDW와 함께 작동 하며 SQL Server PDW을 쿼리 하는 데 권장 되는 명령줄 도구입니다. Sqlcmd를 사용 하면 명령줄,\-배치 파일 또는 Windows PowerShell에서 대화형으로 transact-sql 문을 실행할 수 있습니다.  
+sqlcmd는 Transact-sql 명령과 시스템 명령을 실행 하기 위한 SQL Server 명령줄 도구입니다 \- . SQL Server PDW와 함께 작동 하며 SQL Server PDW을 쿼리 하는 데 권장 되는 명령줄 도구입니다. Sqlcmd를 사용 하면 \- 명령줄, 배치 파일 또는 Windows PowerShell에서 대화형으로 transact-sql 문을 실행할 수 있습니다.  
   
 <!-- MISSING LINKS
 
@@ -165,7 +165,7 @@ For more information, see [Connect With SQL Server Integration Services for Quer
 --> 
   
 ### <a name="linked-server"></a>연결된 서버  
-SQL Server 연결 된 서버 연결을 사용 하 여 SQL Server를 사용 하 여 SQL Server PDW\-에 transact-sql 문을 전송할 수 있습니다. 
+SQL Server 연결 된 서버 연결을 사용 하 여 SQL Server를 사용 하 여 SQL Server PDW에 Transact-sql 문을 전송할 수 있습니다 \- . 
 <!-- MISSING LINKS
 For more information, see [Connect With SQL Server Linked Server &#40;SQL Server PDW&#41;](../sqlpdw/connect-with-sql-server-linked-server-sql-server-pdw.md). 
 --> 

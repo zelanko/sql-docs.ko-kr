@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 22f23c30-7c21-4fe3-8e76-36cea6448819
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 49c6ae45be2f1d0979f8af827a85080edd919400
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ba3d23cf360285f87b0034e5b73162e7b2408da0
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438845"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767912"
 ---
 # <a name="rds-code-examples-in-vbscript"></a>VBScript의 RDS 코드 예제
 > [!IMPORTANT]
@@ -34,48 +34,46 @@ ms.locfileid: "88438845"
   
 ## <a name="objects"></a>개체  
   
--   [DataControl 개체 예](../../../ado/reference/rds-api/datacontrol-object-example-vbscript.md)  
+-   [DataControl 개체 예](./datacontrol-object-example-vbscript.md)  
   
--   [스페이스 개체 예](../../../ado/reference/rds-api/dataspace-object-and-createobject-method-example-vbscript.md)  
+-   [스페이스 개체 예](./dataspace-object-and-createobject-method-example-vbscript.md)  
   
--   [DataFactory 개체 예제](../../../ado/reference/rds-api/datafactory-object-query-method-and-createobject-method-example-vbscript.md)  
+-   [DataFactory 개체 예제](./datafactory-object-query-method-and-createobject-method-example-vbscript.md)  
   
 ## <a name="methods"></a>메서드  
   
--   [Cancel 메서드 예제](../../../ado/reference/rds-api/cancel-method-example-vbscript.md)  
+-   [Cancel 메서드 예제](./cancel-method-example-vbscript.md)  
   
--   [CancelUpdate 메서드 예제](../../../ado/reference/rds-api/cancelupdate-method-example-vbscript.md)  
+-   [CancelUpdate 메서드 예제](./cancelupdate-method-example-vbscript.md)  
   
--   [ConvertToString 메서드 예제](../../../ado/reference/rds-api/converttostring-method-example-vbscript.md)  
+-   [ConvertToString 메서드 예제](./converttostring-method-example-vbscript.md)  
   
--   [CreateObject 메서드](../../../ado/reference/rds-api/dataspace-object-and-createobject-method-example-vbscript.md)  
+-   [CreateObject 메서드](./dataspace-object-and-createobject-method-example-vbscript.md)  
   
--   [CreateRecordset 메서드 예제](../../../ado/reference/rds-api/createrecordset-method-example-vbscript.md)  
+-   [CreateRecordset 메서드 예제](./createrecordset-method-example-vbscript.md)  
   
--   [쿼리 메서드 예](../../../ado/reference/rds-api/datafactory-object-query-method-and-createobject-method-example-vbscript.md)  
+-   [쿼리 메서드 예](./datafactory-object-query-method-and-createobject-method-example-vbscript.md)  
   
--   [Refresh 메서드 예제](../../../ado/reference/rds-api/refresh-method-example-vbscript.md)  
+-   [Refresh 메서드 예제](./refresh-method-example-vbscript.md)  
   
--   [Reset 메서드 예제](../../../ado/reference/rds-api/filter-column-criterion-value-sortcolumn-sortdirection-example-vbscript.md)  
+-   [Reset 메서드 예제](./filter-column-criterion-value-sortcolumn-sortdirection-example-vbscript.md)  
   
--   [SubmitChanges 메서드 예제](../../../ado/reference/rds-api/submitchanges-method-example-vbscript.md)  
+-   [SubmitChanges 메서드 예제](./submitchanges-method-example-vbscript.md)  
   
 ## <a name="properties"></a>속성  
   
--   [Connect 속성 예제](../../../ado/reference/rds-api/connect-property-example-vbscript.md)  
+-   [Connect 속성 예제](./connect-property-example-vbscript.md)  
   
--   [ExecuteOptions 및 FetchOptions 속성 예제](../../../ado/reference/rds-api/executeoptions-and-fetchoptions-properties-example-vbscript.md)  
+-   [ExecuteOptions 및 FetchOptions 속성 예제](./executeoptions-and-fetchoptions-properties-example-vbscript.md)  
   
--   [FilterColumn, Filtercolumn, Filtercolumn, SortColumn 및 SortDirection Properties 예제](../../../ado/reference/rds-api/filter-column-criterion-value-sortcolumn-sortdirection-example-vbscript.md)  
+-   [FilterColumn, Filtercolumn, Filtercolumn, SortColumn 및 SortDirection Properties 예제](./filter-column-criterion-value-sortcolumn-sortdirection-example-vbscript.md)  
   
--   [ReadyState 속성 예제](../../../ado/reference/rds-api/readystate-property-example-vbscript.md)  
+-   [ReadyState 속성 예제](./readystate-property-example-vbscript.md)  
   
--   [레코드 집합 및 SourceRecordset 속성 예제](../../../ado/reference/rds-api/recordset-and-sourcerecordset-properties-example-vbscript.md)  
+-   [레코드 집합 및 SourceRecordset 속성 예제](./recordset-and-sourcerecordset-properties-example-vbscript.md)  
   
--   [서버 속성 예](../../../ado/reference/rds-api/server-property-example-vbscript.md)  
+-   [서버 속성 예](./server-property-example-vbscript.md)  
   
--   [SQL 속성 예](../../../ado/reference/rds-api/sql-property-example-vbscript.md)  
+-   [SQL 속성 예](./sql-property-example-vbscript.md)  
   
--   [URL 속성 예](../../../ado/reference/rds-api/url-property-example-vbscript.md)
-
-
+-   [URL 속성 예](./url-property-example-vbscript.md)

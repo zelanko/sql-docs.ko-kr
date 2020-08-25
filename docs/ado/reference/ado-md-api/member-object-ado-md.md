@@ -69,12 +69,12 @@ ms.locfileid: "88778002"
   
  **속성** 컬렉션에는 공급자가 제공한 속성이 포함 되어 있습니다. 다음 표에서는 사용할 수 있는 속성을 보여 줍니다. 실제 속성 목록은 공급자의 구현에 따라 다를 수 있습니다. 사용 가능한 속성의 전체 목록은 공급자 설명서를 참조 하세요.  
   
-|Name|설명|  
+|이름|Description|  
 |----------|-----------------|  
 |CatalogName|이 큐브가 속한 카탈로그의 이름입니다.|  
 |ChildrenCardinality|멤버의 자식 수입니다.|  
 |CubeName|큐브 이름입니다.|  
-|설명|멤버에 대 한 의미 있는 설명입니다.|  
+|Description|멤버에 대 한 의미 있는 설명입니다.|  
 |DimensionUniqueName|[차원의](./dimension-object-ado-md.md)명확 하지 않은 이름입니다.|  
 |HierarchyUniqueName|계층의 모호 하지 않은 이름입니다.|  
 |LevelNumber|계층의 수준과 루트 사이의 거리입니다.|  

@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 14c96d71-46a8-4782-b474-80ce348e8bff
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c6b680c3a386629721c7e3256a69ec305d98af5d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8d5baaab530a1d693a5f31f998e6aa6893b6cdfa
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443505"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774902"
 ---
 # <a name="getstring-method-example-vb"></a>GetString 메서드 예제(VB)
-이 예제에서는 [GetString](../../../ado/reference/ado-api/getstring-method-ado.md) 메서드를 보여 줍니다.  
+이 예제에서는 [GetString](./getstring-method-ado.md) 메서드를 보여 줍니다.  
   
- 데이터 액세스 문제를 디버그 하 고 작은 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)의 현재 콘텐츠를 빠르고 간단 하 게 인쇄 하려는 경우를 가정 합니다.  
+ 데이터 액세스 문제를 디버그 하 고 작은 [레코드 집합](./recordset-object-ado.md)의 현재 콘텐츠를 빠르고 간단 하 게 인쇄 하려는 경우를 가정 합니다.  
   
 ```  
 'BeginGetStringVB  
@@ -103,5 +103,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [GetString 메서드 (ADO)](../../../ado/reference/ado-api/getstring-method-ado.md)   
- [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [GetString 메서드 (ADO)](./getstring-method-ado.md)   
+ [레코드 집합 개체(ADO)](./recordset-object-ado.md)

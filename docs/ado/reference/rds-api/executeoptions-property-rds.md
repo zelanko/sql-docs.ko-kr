@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 62a4fd88-afc3-4f1f-b978-40710a30c4e9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dacac570cac3525593f281e52742f4efeb8cba4b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 042a69dd679cf84e2ab26da77cda3c06d2abd94e
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439035"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768312"
 ---
 # <a name="executeoptions-property-rds"></a>ExecuteOptions 속성(RDS)
 비동기 실행을 사용 하는지 여부를 나타냅니다.  
@@ -30,26 +30,24 @@ ms.locfileid: "88439035"
 ## <a name="settings-and-return-values"></a>설정 및 반환 값  
  다음 값 중 하나를 설정 하거나 반환 합니다.  
   
-|상수|설명|  
+|상수|Description|  
 |--------------|-----------------|  
-|**adcExecSync**|[레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 의 다음 새로 고침을 동기적으로 실행 합니다.|  
+|**adcExecSync**|[레코드 집합](../ado-api/recordset-object-ado.md) 의 다음 새로 고침을 동기적으로 실행 합니다.|  
 |**adcExecAsync**|기본값 **레코드 집합** 의 다음 새로 고침을 비동기적으로 실행 합니다.|  
   
 > [!NOTE]
 >  이러한 상수를 사용 하는 각 실행 파일은 이러한 상수에 대 한 선언을 제공 해야 합니다. RDS 라이브러리의 기본 설치 폴더에 있는 Adcvbs. i n c. i n t. i n t.  
   
 ## <a name="remarks"></a>설명  
- **Executeoptions** 를 **Adcexecasync**로 설정 하면 RDS에서 다음 **새로 고침** 호출을 비동기적으로 실행 합니다 [. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) 개체의 **레코드 집합**입니다.  
+ **Executeoptions** 를 **Adcexecasync**로 설정 하면 RDS에서 다음 **새로 고침** 호출을 비동기적으로 실행 합니다 [. DataControl](./datacontrol-object-rds.md) 개체의 **레코드 집합**입니다.  
   
- [다시 설정](../../../ado/reference/rds-api/reset-method-rds.md), [새로 고침](../../../ado/reference/rds-api/refresh-method-rds.md), [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md), [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)또는 [레코드 집합](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md) 을 호출 하려고 시도 하는 경우에는 다른 비동기 작업에서 RDS를 변경할 수 있습니다 [. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) 개체의 **레코드 집합이** 실행 중 이므로 오류가 발생 합니다.  
+ [다시 설정](./reset-method-rds.md), [새로 고침](./refresh-method-rds.md), [SubmitChanges](./submitchanges-method-rds.md), [CancelUpdate](../ado-api/cancelupdate-method-ado.md)또는 [레코드 집합](./recordset-sourcerecordset-properties-rds.md) 을 호출 하려고 시도 하는 경우에는 다른 비동기 작업에서 RDS를 변경할 수 있습니다 [. DataControl](./datacontrol-object-rds.md) 개체의 **레코드 집합이** 실행 중 이므로 오류가 발생 합니다.  
   
- 비동기 작업 중에 오류가 발생 하는 경우 **RDS. DataControl** 개체의 [ReadyState](../../../ado/reference/rds-api/readystate-property-rds.md) 값이 **Adcreadystateloaded** 에서 **adcReadyStateComplete**로 변경 되 고 **레코드 집합** 속성 값은 *아무 것도*유지 되지 않습니다.  
+ 비동기 작업 중에 오류가 발생 하는 경우 **RDS. DataControl** 개체의 [ReadyState](./readystate-property-rds.md) 값이 **Adcreadystateloaded** 에서 **adcReadyStateComplete**로 변경 되 고 **레코드 집합** 속성 값은 *아무 것도*유지 되지 않습니다.  
   
 ## <a name="applies-to"></a>적용 대상  
- [DataControl 개체(RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
+ [DataControl 개체(RDS)](./datacontrol-object-rds.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [ExecuteOptions 및 FetchOptions 속성 예제 (VBScript)](../../../ado/reference/rds-api/executeoptions-and-fetchoptions-properties-example-vbscript.md)   
- [Cancel 메서드(RDS)](../../../ado/reference/rds-api/cancel-method-rds.md)
-
-
+ [ExecuteOptions 및 FetchOptions 속성 예제 (VBScript)](./executeoptions-and-fetchoptions-properties-example-vbscript.md)   
+ [Cancel 메서드(RDS)](./cancel-method-rds.md)

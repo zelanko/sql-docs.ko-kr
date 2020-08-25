@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 21026e24-62b7-4cc9-8aef-62c1fc6cba75
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0ad8fe77bb3472931d3b16d5849b047001922c96
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 48d5cdb61cee2051d3469b7cfeee85629521d71e
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444415"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775802"
 ---
 # <a name="connectpromptenum"></a>ConnectPromptEnum
 데이터 원본에 대 한 연결을 열 때 누락 된 매개 변수를 확인 하기 위해 대화 상자를 표시할지 여부를 지정 합니다.  
@@ -44,4 +44,4 @@ ms.locfileid: "88444415"
 |AdoEnums 프롬프트. NEVER|  
   
 ## <a name="applies-to"></a>적용 대상  
- [Prompt 속성-동적(ADO)](../../../ado/reference/ado-api/prompt-property-dynamic-ado.md)
+ [Prompt 속성-동적(ADO)](./prompt-property-dynamic-ado.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9194bffa-5bdf-4dff-af86-f7158c23bfa7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bb24cdf6acbe58891177dfc84d6c1e341699b129
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 092af21c57b733e12c233cb201304cbc27930c80
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439065"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768382"
 ---
 # <a name="dataspace-object-rds"></a>DataSpace 개체(RDS)
 > [!IMPORTANT]
@@ -27,9 +27,9 @@ ms.locfileid: "88439065"
   
  중간 계층에 있는 사용자 지정 비즈니스 개체에 대 한 클라이언트 쪽 프록시를 만듭니다.  
   
- 원격 데이터 서비스는 클라이언트 쪽 구성 요소가 중간 계층에 있는 비즈니스 개체와 통신할 수 있도록 비즈니스 개체 프록시가 필요 합니다. 프록시는 프로세스 또는 컴퓨터 경계를 넘어 응용 프로그램의 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 데이터에 대 한 패키징, unpackaging 및 전송 (마샬링)을 용이 하 게 합니다.  
+ 원격 데이터 서비스는 클라이언트 쪽 구성 요소가 중간 계층에 있는 비즈니스 개체와 통신할 수 있도록 비즈니스 개체 프록시가 필요 합니다. 프록시는 프로세스 또는 컴퓨터 경계를 넘어 응용 프로그램의 [레코드 집합](../ado-api/recordset-object-ado.md) 데이터에 대 한 패키징, unpackaging 및 전송 (마샬링)을 용이 하 게 합니다.  
   
- 원격 데이터 서비스는 RDS를 사용 **합니다. ** 비즈니스 개체 프록시를 만들기 위한 공간 개체의 [CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md) 메서드 비즈니스 개체 프록시는 해당 중간 계층 비즈니스 개체의 인스턴스가 만들어질 때마다 동적으로 생성 됩니다. 원격 데이터 서비스는 HTTP, HTTPS (HTTP Secure Sockets), DCOM 및 in-process (클라이언트 구성 요소와 비즈니스 개체가 동일한 컴퓨터에 상주) 프로토콜을 지원 합니다.  
+ 원격 데이터 서비스는 RDS를 사용 **합니다. ** 비즈니스 개체 프록시를 만들기 위한 공간 개체의 [CreateObject](./createobject-method-rds.md) 메서드 비즈니스 개체 프록시는 해당 중간 계층 비즈니스 개체의 인스턴스가 만들어질 때마다 동적으로 생성 됩니다. 원격 데이터 서비스는 HTTP, HTTPS (HTTP Secure Sockets), DCOM 및 in-process (클라이언트 구성 요소와 비즈니스 개체가 동일한 컴퓨터에 상주) 프로토콜을 지원 합니다.  
   
 > [!NOTE]
 >  Rds는 Rds를 사용할 때 "상태 비저장" 방식으로 동작 합니다 **. 스페이스** 개체는 HTTP 또는 HTTPS 프로토콜을 사용 합니다. 즉, 서버에서 응답을 반환한 후 클라이언트 요청에 대 한 모든 내부 정보를 삭제 합니다.  
@@ -46,9 +46,7 @@ ms.locfileid: "88439065"
   
  이 섹션에는 다음 항목이 포함 되어 있습니다.  
   
--   [DataSpace 개체(RDS) 속성, 메서드 및 이벤트](../../../ado/reference/rds-api/dataspace-object-rds-properties-methods-and-events.md)  
+-   [DataSpace 개체(RDS) 속성, 메서드 및 이벤트](./dataspace-object-rds-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [DataSpace 개체 및 CreateObject 메서드 예제(VBScript)](../../../ado/reference/rds-api/dataspace-object-and-createobject-method-example-vbscript.md)
-
-
+ [DataSpace 개체 및 CreateObject 메서드 예제(VBScript)](./dataspace-object-and-createobject-method-example-vbscript.md)

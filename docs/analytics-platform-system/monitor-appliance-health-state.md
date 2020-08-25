@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: b99123f81fcdddd74dc72d485d97e428ca59ed84
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 08/25/2020
 ms.locfileid: "74400989"
 ---
 # <a name="monitor-appliance-health-state"></a>어플라이언스 상태 모니터링
@@ -73,7 +73,7 @@ Status 속성에 대해 반환 될 수 있는 값은 다음과 같습니다.
   
 -   않음  
   
--   중요  
+-   위험  
   
 -   Unknown  
   
@@ -83,7 +83,7 @@ Status 속성에 대해 반환 될 수 있는 값은 다음과 같습니다.
   
 -   복구가  
   
-모든 구성 요소의 속성을 모두 보려면 `WHERE  p.property_name = 'Status'` 절을 제거 합니다.  
+모든 구성 요소의 속성을 모두 보려면 절을 제거 `WHERE  p.property_name = 'Status'` 합니다.  
   
 **[Update_time]** 열은 SQL Server PDW 상태 에이전트에서 구성 요소를 마지막으로 폴링한 시간을 보여 줍니다.  
   

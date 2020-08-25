@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: ed3d9678-5c28-4e61-8bb3-7dfb66d99cf5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 09b8ce2c2b8f6388e300a0034c0ea72b795bded1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 05e65643884d57d991028394f9f5b1ba7b752533
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442215"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777582"
 ---
 # <a name="save-method"></a>Save 메서드
-파일 또는 [스트림](../../../ado/reference/ado-api/stream-object-ado.md) 개체에 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 을 저장 합니다.  
+파일 또는 [스트림](./stream-object-ado.md) 개체에 [레코드 집합](./recordset-object-ado.md) 을 저장 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -36,15 +36,15 @@ recordset.Save Destination, PersistFormat
   
 #### <a name="parameters"></a>매개 변수  
  *대상*  
- (선택 사항) **레코드 집합** 을 저장할 파일의 전체 경로 이름을 나타내는 **Variant** 이거나 **스트림** 개체에 대 한 참조입니다.  
+ 선택 사항입니다. **레코드 집합** 을 저장할 파일의 전체 경로 이름을 나타내는 **Variant** 이거나 **스트림** 개체에 대 한 참조입니다.  
   
  *PersistFormat*  
- (선택 사항) **레코드 집합** 을 저장할 형식을 지정 하는 [persistformatenum](../../../ado/reference/ado-api/persistformatenum.md) 값 (XML 또는 ADTG)입니다. 기본값은 **adPersistADTG**입니다.  
+ 선택 사항입니다. **레코드 집합** 을 저장할 형식을 지정 하는 [persistformatenum](./persistformatenum.md) 값 (XML 또는 ADTG)입니다. 기본값은 **adPersistADTG**입니다.  
   
 ## <a name="remarks"></a>설명  
- [Save Method](../../../ado/reference/ado-api/save-method.md) 메서드는 열린 **레코드 집합**에 대해서만 호출할 수 있습니다. [Open 메서드 (ADO 레코드 집합)](../../../ado/reference/ado-api/open-method-ado-recordset.md) 메서드를 사용 하 여 나중에 *대상*에서 **레코드 집합** 을 복원할 수 있습니다.  
+ [Save Method]() 메서드는 열린 **레코드 집합**에 대해서만 호출할 수 있습니다. [Open 메서드 (ADO 레코드 집합)](./open-method-ado-recordset.md) 메서드를 사용 하 여 나중에 *대상*에서 **레코드 집합** 을 복원할 수 있습니다.  
   
- [필터 속성](../../../ado/reference/ado-api/filter-property.md) 속성이 **레코드 집합**에 적용 되는 경우 필터에서 액세스할 수 있는 행만 저장 됩니다. **레코드 집합이** 계층적 이면 부모 **레코드**집합을 포함 하 여 현재 자식 **레코드 집합과** 해당 자식 항목이 저장 됩니다. 자식 **레코드 집합** 의 Save 메서드를 호출 하면 자식 및 모든 자식 항목이 저장 되지만 부모는 저장 되지 않습니다.  
+ [필터 속성](./filter-property.md) 속성이 **레코드 집합**에 적용 되는 경우 필터에서 액세스할 수 있는 행만 저장 됩니다. **레코드 집합이** 계층적 이면 부모 **레코드**집합을 포함 하 여 현재 자식 **레코드 집합과** 해당 자식 항목이 저장 됩니다. 자식 **레코드 집합** 의 Save 메서드를 호출 하면 자식 및 모든 자식 항목이 저장 되지만 부모는 저장 되지 않습니다.  
   
  처음으로 **레코드 집합**을 저장할 때 *대상을*지정 하는 것이 선택 사항입니다. *Destination*을 생략 하면 **레코드 집합**의 Source 속성 값으로 설정 된 이름으로 새 파일이 생성 됩니다.  
   
@@ -58,14 +58,14 @@ recordset.Save Destination, PersistFormat
   
  레코드는 레코드 **집합**의 첫 번째 행부터 저장 됩니다. **Save** 메서드가 완료 되 면 현재 행 위치가 **레코드 집합**의 첫 번째 행으로 이동 합니다.  
   
- 최상의 결과를 위해 [CursorLocation 속성 (ADO)](../../../ado/reference/ado-api/cursorlocation-property-ado.md) 속성을 **adUseClient** 로 설정 하 고 **저장**을 사용 하 여 설정 합니다. 공급자가 **레코드 집합** 개체를 저장 하는 데 필요한 일부 기능을 지원 하지 않는 경우 Cursor Service가 해당 기능을 제공 합니다.  
+ 최상의 결과를 위해 [CursorLocation 속성 (ADO)](./cursorlocation-property-ado.md) 속성을 **adUseClient** 로 설정 하 고 **저장**을 사용 하 여 설정 합니다. 공급자가 **레코드 집합** 개체를 저장 하는 데 필요한 일부 기능을 지원 하지 않는 경우 Cursor Service가 해당 기능을 제공 합니다.  
   
- **CursorLocation** 속성이 **aduseserver**로 설정 된 상태에서 **레코드 집합** 을 유지 하면 **레코드 집합** 에 대 한 업데이트 기능이 제한 됩니다. 일반적으로는 단일 테이블 업데이트, 삽입 및 삭제만 허용 됩니다 (공급자 기능에 따라 달라 집니다). [Resync 메서드](../../../ado/reference/ado-api/resync-method.md) 메서드는이 구성 에서도 사용할 수 없습니다.  
+ **CursorLocation** 속성이 **aduseserver**로 설정 된 상태에서 **레코드 집합** 을 유지 하면 **레코드 집합** 에 대 한 업데이트 기능이 제한 됩니다. 일반적으로는 단일 테이블 업데이트, 삽입 및 삭제만 허용 됩니다 (공급자 기능에 따라 달라 집니다). [Resync 메서드](./resync-method.md) 메서드는이 구성 에서도 사용할 수 없습니다.  
   
 > [!NOTE]
 >  **Advariant**, **adIDispatch**또는 **AdIUnknown** 형식의 **필드가** 포함 된 **레코드 집합** 을 ADO에서 지원 하지 않으므로 예기치 않은 결과가 발생할 수 있습니다.  
   
- 조건 문자열 (예: OrderDate > ' 12/31/1999 ') 형식의 필터만 지속형 **레코드 집합**의 내용에 영향을 줍니다. **책갈피** 배열을 사용 하거나 [filtergroupenum](../../../ado/reference/ado-api/filtergroupenum.md) 의 값을 사용 하 여 만든 필터는 지속형 **레코드 집합**의 내용에 영향을 주지 않습니다. 이러한 규칙은 클라이언트 쪽 또는 서버 쪽 커서를 사용 하 여 만든 **레코드 집합**에 적용 됩니다.  
+ 조건 문자열 (예: OrderDate > ' 12/31/1999 ') 형식의 필터만 지속형 **레코드 집합**의 내용에 영향을 줍니다. **책갈피** 배열을 사용 하거나 [filtergroupenum](./filtergroupenum.md) 의 값을 사용 하 여 만든 필터는 지속형 **레코드 집합**의 내용에 영향을 주지 않습니다. 이러한 규칙은 클라이언트 쪽 또는 서버 쪽 커서를 사용 하 여 만든 **레코드 집합**에 적용 됩니다.  
   
  *Destination* 매개 변수는 OLE DB IStream 인터페이스를 지 원하는 개체를 받아들일 수 있으므로 **레코드 집합** 을 ASP Response 개체에 직접 저장할 수 있습니다. 자세한 내용은 **XML 레코드 집합 지 속성 시나리오**를 참조 하세요.  
   
@@ -92,16 +92,16 @@ rsXML.Save xDOM, adPersistXML   'Save Recordset directly into a DOM tree.
 
 :::row:::
     :::column:::
-        [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+        [레코드 집합 개체(ADO)](./recordset-object-ado.md)  
     :::column-end:::
     :::column:::
-        [스트림 개체(ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
+        [스트림 개체(ADO)](./stream-object-ado.md)  
     :::column-end:::
 :::row-end:::
 
 ## <a name="see-also"></a>참고 항목  
- [Save 및 Open 메서드 예제 (VB)](../../../ado/reference/ado-api/save-and-open-methods-example-vb.md)   
- [Save 및 Open 메서드 예제 (VC + +)](../../../ado/reference/ado-api/save-and-open-methods-example-vc.md)   
- [Open 메서드 (ADO 레코드 집합)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
- [Open 메서드 (ADO 스트림)](../../../ado/reference/ado-api/open-method-ado-stream.md)   
- [SaveToFile 메서드](../../../ado/reference/ado-api/savetofile-method.md)
+ [Save 및 Open 메서드 예제 (VB)](./save-and-open-methods-example-vb.md)   
+ [Save 및 Open 메서드 예제 (VC + +)](./save-and-open-methods-example-vc.md)   
+ [Open 메서드 (ADO 레코드 집합)](./open-method-ado-recordset.md)   
+ [Open 메서드 (ADO 스트림)](./open-method-ado-stream.md)   
+ [SaveToFile 메서드](./savetofile-method.md)

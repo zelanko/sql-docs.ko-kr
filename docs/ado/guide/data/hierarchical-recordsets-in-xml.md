@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5d4b11c4-c94f-4910-b99b-5b9abc50d791
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cd1e9e9b2dd1dc3512c95100baed0c83745250bb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3e6180c8aa422c5833234afba7881a1a4c8b9049
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453265"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806019"
 ---
 # <a name="hierarchical-recordsets-in-xml"></a>XML의 계층적 레코드 집합
 ADO에서는 계층적 레코드 집합 개체를 XML로 지 속성을 사용할 수 있습니다. 계층적 레코드 집합 개체를 사용 하는 경우 부모 레코드 집합의 필드 값은 또 다른 레코드 집합입니다. 이러한 필드는 특성이 아니라 XML 스트림에 자식 요소로 표시 됩니다.  
@@ -126,4 +126,4 @@ Rs.Open "SHAPE {select stor_id, stor_name, state from stores} APPEND ({select st
 -   자식 레코드에 둘 이상의 부모 레코드에 대 한 참조가 있는 경우 레코드 집합을 다시 열면 자식 레코드 집합에 중복 레코드가 포함 될 수 있습니다. 그러나 이러한 중복은 사용자가 기본 자식 행 집합을 사용 하 여 직접 작업 하는 경우에만 표시 됩니다. 하위 레코드 집합을 탐색 하는 데 챕터를 사용 하는 경우 (ADO를 탐색 하는 유일한 방법) 중복 항목이 표시 되지 않습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [XML 형식으로 레코드 유지](../../../ado/guide/data/persisting-records-in-xml-format.md)
+ [XML 형식으로 레코드 유지](./persisting-records-in-xml-format.md)

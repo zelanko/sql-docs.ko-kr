@@ -20,24 +20,24 @@ helpviewer_keywords:
 ms.assetid: 313b0bf7-3f37-4823-8fca-bd9c80e078a7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c197a7eb88472f609d2d2713b292bc5f98c88c9b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7b71e3298c18b10fa34615e3382d561f454b5eb4
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439895"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88770172"
 ---
 # <a name="indexnulls-property-adox"></a>IndexNulls 속성(ADOX)
 인덱스 필드에 null 값이 있는 레코드에 인덱스 항목이 있는지 여부를 나타냅니다.  
   
 ## <a name="settings-and-return-values"></a>설정 및 반환 값  
- [AllowNullsEnum](../../../ado/reference/adox-api/allownullsenum.md) 값을 설정 하 고 반환 합니다. 기본값은 **Adindexnullsdisallow**입니다.  
+ [AllowNullsEnum](./allownullsenum.md) 값을 설정 하 고 반환 합니다. 기본값은 **Adindexnullsdisallow**입니다.  
   
 ## <a name="remarks"></a>설명  
- 이 속성은 이미 컬렉션에 추가 된 [인덱스](../../../ado/reference/adox-api/index-object-adox.md) 개체에서 읽기 전용입니다.  
+ 이 속성은 이미 컬렉션에 추가 된 [인덱스](./index-object-adox.md) 개체에서 읽기 전용입니다.  
   
 ## <a name="applies-to"></a>적용 대상  
- [Index 개체(ADOX)](../../../ado/reference/adox-api/index-object-adox.md)  
+ [인덱스 개체(ADOX)](./index-object-adox.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [IndexNulls 속성 예제(VB)](../../../ado/reference/adox-api/indexnulls-property-example-vb.md)
+ [IndexNulls 속성 예제(VB)](./indexnulls-property-example-vb.md)

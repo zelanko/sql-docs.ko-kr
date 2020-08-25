@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: f5236d35009c67eb6e205129cd629fa5f7eca54d
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: 7dd0ccf960b53b3cd1b474f61c60a58ff9b0a2c6
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942345"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767052"
 ---
 # <a name="dwloader-command-line-loader-for-parallel-data-warehouse"></a>병렬 데이터 웨어하우스의 dwloader 명령줄 로더
 **dwloader** 는 테이블 행을 기존 테이블에 대량으로 로드 하는 PDW (병렬 데이터 웨어하우스) 명령줄 도구입니다. 행을 로드할 때 모든 행을 테이블의 끝에 추가 (*추가 모드* 또는 *fastappend 모드*) 하거나, 새 행을 추가 하 고 기존 행을 업데이트 (*upsert 모드*) 하거나, 로드 하기 전에 기존 행을 모두 삭제 하 고 모든 행을 빈 테이블 (*다시 로드 모드*)에 삽입할 수 있습니다.  
@@ -490,7 +490,7 @@ CU 7.4 update에서 사용할 수 있으며 로드할 수 있는 최대 행 길�
 ## <a name="return-code-values"></a>반환 코드 값  
 0 (성공) 또는 기타 정수 값 (오류)  
   
-명령 창이 나 배치 파일에서를 사용 `errorlevel` 하 여 반환 코드를 표시 합니다. 예를 들어:  
+명령 창이 나 배치 파일에서를 사용 `errorlevel` 하 여 반환 코드를 표시 합니다. 예를 들면 다음과 같습니다.  
   
 ```  
 dwloader  
@@ -528,7 +528,7 @@ For the maximum number of loads per appliance, see [Minimum and Maximum Values](
 **Dwloader** 는 트랜잭션 프로세스이 고 실패 시 정상적으로 롤백되기 때문에 대량 로드가 성공적으로 완료 되 면 롤백할 수 없습니다. 활성 **dwloader** 프로세스를 취소 하려면 CTRL + C를 입력 합니다.  
   
 ## <a name="limitations-and-restrictions"></a>제한 사항  
-동시에 발생 하는 모든 로드의 총 크기는 데이터베이스의 LOG_SIZE 보다 작아야 하며, 모든 동시 로드의 총 크기가 LOG_SIZE의 50% 미만인 것이 좋습니다. 이러한 크기 제한을 얻으려면 큰 부하를 여러 일괄 처리로 분할할 수 있습니다. LOG_SIZE에 대 한 자세한 내용은 [CREATE DATABASE](../t-sql/statements/create-database-parallel-data-warehouse.md) 를 참조 하세요.  
+동시에 발생 하는 모든 로드의 총 크기는 데이터베이스의 LOG_SIZE 보다 작아야 하며, 모든 동시 로드의 총 크기가 LOG_SIZE의 50% 미만인 것이 좋습니다. 이러한 크기 제한을 얻으려면 큰 부하를 여러 일괄 처리로 분할할 수 있습니다. LOG_SIZE에 대 한 자세한 내용은 [CREATE DATABASE](../t-sql/statements/create-database-transact-sql.md?view=aps-pdw-2016) 를 참조 하세요.  
   
 하나의 load 명령을 사용 하 여 여러 파일을 로드할 때 거부 된 모든 행은 동일한 거부 파일에 기록 됩니다. 거부 파일에는 거부 된 각 행이 포함 된 입력 파일이 표시 되지 않습니다.  
   
@@ -556,16 +556,16 @@ For the maximum number of loads per appliance, see [Minimum and Maximum Values](
 |--------------|-----------------------------------|------------------|-------------------------|-----------|  
 |힙|예|예|예|최소|  
 |힙|예|예|예|최소|  
-|힙|예|예|아니요|최소|  
-|힙|아니요|아니요|아니요|최소|  
-|Cl.exe|예|예|아니요|최소|  
+|힙|예|예|예|최소|  
+|힙|예|예|예|최소|  
+|Cl.exe|예|예|예|최소|  
 |Cl.exe|예|예|예|전체|  
-|Cl.exe|예|예|아니요|최소|  
-|Cl.exe|아니요|예|예|전체|  
+|Cl.exe|예|예|예|최소|  
+|Cl.exe|예|예|예|전체|  
   
 위의 표에서는 추가 모드를 힙 또는 CI (클러스터형 인덱스) 테이블로 로드 하 여 다중 트랜잭션 플래그를 사용 하거나 사용 하지 않고 빈 테이블이 나 비어 있지 않은 테이블에 로드 하는 **dwloader** 를 보여 줍니다. 이러한 각 부하 조합의 잠금 및 로깅 동작이 표에 표시 됩니다. 예를 들어, 추가 모드를 사용 하 여 다중 트랜잭션 모드를 사용 하지 않는 클러스터형 인덱스에 추가 모드를 로드 하 고 빈 테이블로 로드 하는 경우 PDW는 테이블에 대 한 배타적 잠금을 만들고 로깅은 최소화 합니다. 즉, 고객은 두 번째 단계와 쿼리를 빈 테이블로 동시에 로드할 수 없습니다. 그러나 동일한 구성을 사용 하 여 비어 있지 않은 테이블에 로드 하는 경우 PDW는 테이블에 대해 배타 잠금을 실행 하지 않으며 동시성이 가능 합니다. 그러나 전체 로깅이 발생 하 여 프로세스가 느려집니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-simple-dwloader-example"></a>A. Simple dwloader 예  
 다음 예에서는 필수 옵션만 선택 하 여 **로더** 를 시작 하는 방법을 보여 줍니다. 기타 옵션은 *loadparamfile.txt*전역 구성 파일에서 가져옵니다.  
@@ -704,4 +704,3 @@ C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\dwloader.exe -
 [Common Metadata Query Examples](metadata-query-examples.md)  
 
 -->
-  

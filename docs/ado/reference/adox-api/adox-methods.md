@@ -23,7 +23,7 @@ ms.locfileid: "88771602"
 ---
 # <a name="adox-methods"></a>ADOX 메서드
 
-|방법|설명|  
+|메서드|Description|  
 |-|-|  
 |[추가 (열)](./append-method-adox-columns.md)|**열** 컬렉션에 새 **열** 개체를 추가 합니다.|  
 |[추가 (그룹)](./append-method-adox-groups.md)|**그룹** 컬렉션에 새 **그룹** 개체를 추가 합니다.|  

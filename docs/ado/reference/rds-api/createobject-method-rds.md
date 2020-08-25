@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: dec96be6-0b31-4953-9c9a-e962b5afcd18
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 430031bab7e644278693aa26095aaa1724b715ea
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0fbc77fd5107e5642ba4fabe2f331c803ffde392
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439205"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768642"
 ---
 # <a name="createobject-method-rds"></a>CreateObject 메서드(RDS)
 대상 비즈니스 개체에 대 한 프록시를 만들어 해당 개체에 대 한 포인터를 반환 합니다. 프록시 패키지 및는 비즈니스 개체와 통신 하 여 인터넷을 통해 요청 및 데이터를 전송 하기 위해 서버 쪽 스텁으로 데이터를 마샬링합니다. In-process 구성 요소 개체의 경우에는 프록시를 사용 하지 않고 개체에 대 한 포인터만 제공 됩니다.  
@@ -42,7 +42,7 @@ ms.locfileid: "88439205"
  *ProgID*에 지정 된 형식인 개체로 계산 되는 개체 변수입니다.  
   
  *스페이스가*  
- RDS를 나타내는 개체 변수입니다 [. ](../../../ado/reference/rds-api/dataspace-object-rds.md) 새 개체의 인스턴스를 만드는 데 사용 되는 공간 개체입니다.  
+ RDS를 나타내는 개체 변수입니다 [. ](./dataspace-object-rds.md) 새 개체의 인스턴스를 만드는 데 사용 되는 공간 개체입니다.  
   
  *ProgID*  
  응용 프로그램의 비즈니스 규칙을 구현 하는 서버측 비즈니스 개체를 지정 하는 프로그래밍 id를 포함 하는 **문자열** 값입니다.  
@@ -54,11 +54,9 @@ ms.locfileid: "88439205"
  *HTTP 프로토콜* 은 표준 웹 프로토콜입니다. *HTTPS* 는 보안 웹 프로토콜입니다. HTTP를 사용 하지 않고 로컬 영역 네트워크를 실행 하는 경우 *DCOM 프로토콜* 을 사용 합니다. *In-process* 프로토콜은 로컬 DLL (동적 연결 라이브러리)입니다. 네트워크를 사용 하지 않습니다.  
   
 ## <a name="applies-to"></a>적용 대상  
- [DataSpace 개체(RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)  
+ [DataSpace 개체(RDS)](./dataspace-object-rds.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [DataFactory 개체, 쿼리 메서드 및 CreateObject 메서드 예제 (VBScript)](../../../ado/reference/rds-api/datafactory-object-query-method-and-createobject-method-example-vbscript.md)   
- [스페이스 개체 및 CreateObject 메서드 예제 (VBScript)](../../../ado/reference/rds-api/dataspace-object-and-createobject-method-example-vbscript.md)   
- [CreateRecordset 메서드(RDS)](../../../ado/reference/rds-api/createrecordset-method-rds.md)
-
-
+ [DataFactory 개체, 쿼리 메서드 및 CreateObject 메서드 예제 (VBScript)](./datafactory-object-query-method-and-createobject-method-example-vbscript.md)   
+ [스페이스 개체 및 CreateObject 메서드 예제 (VBScript)](./dataspace-object-and-createobject-method-example-vbscript.md)   
+ [CreateRecordset 메서드(RDS)](./createrecordset-method-rds.md)

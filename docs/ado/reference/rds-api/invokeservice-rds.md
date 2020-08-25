@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ad45c676-ec7e-4a3a-9a6b-a54f75eb3012
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4b14c4f2b97f3002291f5be765b1b0dfe6cf4f1d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9367a8766b0a26a4f83869aad1d11a417a03d9c3
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438915"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768052"
 ---
 # <a name="invokeservice-rds"></a>InvokeService(RDS)
 개체의 지원 되는 버전에서 요청 된 인터페이스에 대 한 포인터를 반환 합니다.  
@@ -54,9 +54,7 @@ object.InvokeService(REFID riid, IUknown* punkNotSoFunctionalInterface, IUknown*
  **InvokeService** 의 RDS 커서 엔진 구현에서는 입력 행 집합 (또는 여러 결과 개체)을 사용 하 여 입력 행 집합에서 커서 엔진을 채운 다음 자체에 대 한 포인터를 반환 합니다.  
   
 ## <a name="applies-to"></a>적용 대상  
- [IRDSService 인터페이스(RDS)](../../../ado/reference/rds-api/irdsservice-interface-rds.md)  
+ [IRDSService 인터페이스(RDS)](./irdsservice-interface-rds.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [RDS 메서드](../../../ado/reference/rds-api/rds-methods.md)
-
-
+ [RDS 메서드](./rds-methods.md)

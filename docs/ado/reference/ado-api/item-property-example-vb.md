@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: b4476603-691b-4081-8797-a3d0b331dce5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4ff98b6c2fe1dbb6da0131bf1a1d539fdfb74649
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c85e34201cb37745ef9f09b337b8d1f71dd508af
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443395"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774652"
 ---
 # <a name="item-property-example-vb"></a>Item 속성 예제(VB)
-이 예제에서는 [항목](../../../ado/reference/ado-api/item-property-ado.md) 속성이 컬렉션의 멤버에 액세스 하는 방법을 보여 줍니다. 이 예에서는 매개 변수가 있는 명령을 사용 하 여 ***Pubs*** 데이터베이스의 ***Authors*** 테이블을 엽니다.  
+이 예제에서는 [항목](./item-property-ado.md) 속성이 컬렉션의 멤버에 액세스 하는 방법을 보여 줍니다. 이 예에서는 매개 변수가 있는 명령을 사용 하 여 ***Pubs*** 데이터베이스의 ***Authors*** 테이블을 엽니다.  
   
- 데이터베이스에 대해 실행 되는 명령의 매개 변수는 인덱스 및 이름으로 [명령](../../../ado/reference/ado-api/command-object-ado.md) 개체의 [매개 변수](../../../ado/reference/ado-api/parameters-collection-ado.md) 컬렉션에서 액세스 됩니다. 그러면 반환 된 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 의 필드에 인덱스 및 이름으로 해당 개체의 [fields](../../../ado/reference/ado-api/fields-collection-ado.md) 컬렉션에서 액세스할 수 있습니다.  
+ 데이터베이스에 대해 실행 되는 명령의 매개 변수는 인덱스 및 이름으로 [명령](./command-object-ado.md) 개체의 [매개 변수](./parameters-collection-ado.md) 컬렉션에서 액세스 됩니다. 그러면 반환 된 [레코드 집합](./recordset-object-ado.md) 의 필드에 인덱스 및 이름으로 해당 개체의 [fields](./fields-collection-ado.md) 컬렉션에서 액세스할 수 있습니다.  
   
 ```  
 'BeginItemVB  
@@ -136,8 +136,8 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Command 개체 (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
- [Fields 컬렉션 (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
- [Item 속성 (ADO)](../../../ado/reference/ado-api/item-property-ado.md)   
- [Parameters 컬렉션 (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
- [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [Command 개체 (ADO)](./command-object-ado.md)   
+ [Fields 컬렉션 (ADO)](./fields-collection-ado.md)   
+ [Item 속성 (ADO)](./item-property-ado.md)   
+ [Parameters 컬렉션 (ADO)](./parameters-collection-ado.md)   
+ [레코드 집합 개체(ADO)](./recordset-object-ado.md)

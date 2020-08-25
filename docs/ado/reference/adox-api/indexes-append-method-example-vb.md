@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 50f87e27-1bf9-427c-9b1d-704a672434d2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1fd4f1229e5473cbc120df7a88d18cfef9ceac56
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8a08cabb34fed31ffd8b843fcbb9f76a29b6016b
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439955"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88770282"
 ---
 # <a name="indexes-append-method-example-vb"></a>Indexes Append 메서드 예제(VB)
 다음 코드에서는 새 인덱스를 만드는 방법을 보여 줍니다. 인덱스는 테이블의 두 열에 있습니다.  
@@ -82,6 +82,6 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Append 메서드 (ADOX 인덱스)](../../../ado/reference/adox-api/append-method-adox-indexes.md)   
- [Index 개체 (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)   
- [Indexes 컬렉션(ADOX)](../../../ado/reference/adox-api/indexes-collection-adox.md)
+ [Append 메서드 (ADOX 인덱스)](./append-method-adox-indexes.md)   
+ [Index 개체 (ADOX)](./index-object-adox.md)   
+ [Indexes 컬렉션(ADOX)](./indexes-collection-adox.md)

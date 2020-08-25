@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b2a80e44-03d8-426e-81b6-dd9dfc30e181
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 081fafdbc0f12014daf21507184e04375ddd0b38
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 034e7ef1bd472c8ebcc6749797decd8176455801
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444265"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775492"
 ---
 # <a name="cursortype-locktype-and-editmode-properties-example-vc"></a>CursorType, LockType 및 EditMode 속성 예제 (VC + +)
-이 예에서는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)을 열기 전에 [CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md) 및 [LockType](../../../ado/reference/ado-api/locktype-property-ado.md) 속성을 설정 하는 방법을 보여 줍니다. 또한 다양 한 조건에서 [EditMode](../../../ado/reference/ado-api/editmode-property.md) 속성의 값을 보여 줍니다. 이 프로시저를 실행 하려면 EditModeOutput 함수가 필요 합니다.  
+이 예에서는 [레코드 집합](./recordset-object-ado.md)을 열기 전에 [CursorType](./cursortype-property-ado.md) 및 [LockType](./locktype-property-ado.md) 속성을 설정 하는 방법을 보여 줍니다. 또한 다양 한 조건에서 [EditMode](./editmode-property.md) 속성의 값을 보여 줍니다. 이 프로시저를 실행 하려면 EditModeOutput 함수가 필요 합니다.  
   
 ## <a name="example"></a>예제  
   
@@ -163,7 +163,7 @@ void PrintComError(_com_error &e) {
 **편집한 후:**   
  **EditMode = adEditInProgress**   
 ## <a name="see-also"></a>참고 항목  
- [CursorType 속성 (ADO)](../../../ado/reference/ado-api/cursortype-property-ado.md)   
- [EditMode 속성](../../../ado/reference/ado-api/editmode-property.md)   
- [LockType 속성 (ADO)](../../../ado/reference/ado-api/locktype-property-ado.md)   
- [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [CursorType 속성 (ADO)](./cursortype-property-ado.md)   
+ [EditMode 속성](./editmode-property.md)   
+ [LockType 속성 (ADO)](./locktype-property-ado.md)   
+ [레코드 집합 개체(ADO)](./recordset-object-ado.md)

@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 8c75d547-d3d7-44c4-b7de-eead5d11b92e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 15680dc29e8731d03978d32f9b21ba33cb74794e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9e8d5d9ee99bc1c055846d8f8882ed15907ee3f9
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440035"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88770472"
 ---
 # <a name="getpermissions-and-setpermissions-methods-example-vc"></a>GetPermissions 및 SetPermissions 메서드 예제(VC++)
-이 예제에서는 [Getpermissions](../../../ado/reference/adox-api/getpermissions-method-adox.md) 및 [SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md) 메서드를 보여 줍니다. 다음 코드는 관리자 사용자에 게 Orders 테이블에 대 한 모든 권한을 부여 합니다.  
+이 예제에서는 [Getpermissions](./getpermissions-method-adox.md) 및 [SetPermissions](./setpermissions-method-adox.md) 메서드를 보여 줍니다. 다음 코드는 관리자 사용자에 게 Orders 테이블에 대 한 모든 권한을 부여 합니다.  
   
 ```  
 // BeginGrantPermissionCpp.cpp  

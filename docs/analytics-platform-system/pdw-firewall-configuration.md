@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 4ed739ce12170aa6d0ab79b996de0075cd6723ee
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 08/25/2020
 ms.locfileid: "74400879"
 ---
 # <a name="parallel-data-warehouse-firewall-configuration-in-analytics-platform-system"></a>분석 플랫폼 시스템의 병렬 데이터 웨어하우스 방화벽 구성
@@ -35,7 +35,7 @@ SQL Server PDW Configuration Manager의 **방화벽** 페이지를 사용 하 �
 ## <a name="external-ports"></a>외부 포트  
 PDW 외부에서 들어오는 클라이언트 연결에 대해 다음 포트가 열립니다.  
   
-|목적|포트인 #|노드|  
+|용도|포트인 #|노드|  
 |-----------|-----------|---------|  
 |PDW에 대 한 SQL 클라이언트 액세스 (TDS)|17001|CTL|  
 |로더 클라이언트 액세스 (dwloader & SSIS)|8001|CTL|  
@@ -51,7 +51,7 @@ PDW 외부에서 들어오는 클라이언트 연결에 대해 다음 포트가 
 ## <a name="internal-ports"></a>내부 포트  
 다음 포트는 PDW에서 내부 통신용으로 사용 되지만 PDW 어플라이언스 외부에서 들어오는 연결에 대해서는 열리지 않습니다.  
   
-|목적|포트인 #|노드|  
+|용도|포트인 #|노드|  
 |-----------|-----------|---------|  
 |DMS 제어 채널 트래픽|16450|CTL, .CMP|  
 |DMS 데이터 채널 트래픽|16550|CTL, .CMP|  

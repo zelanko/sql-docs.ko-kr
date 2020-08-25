@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: fc2fd40b-65d6-4023-90a3-90c9a88ef6cf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b7821e971d32f855fc219a2883f4190b9434d998
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 49964c5dc3f9f6402c853f4adddabd798db4b2f0
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442085"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777452"
 ---
 # <a name="sort-property-example-vb"></a>Sort 속성 예제(VB)
-이 예에서는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체의 [Sort](../../../ado/reference/ado-api/sort-property.md) 속성을 사용 하 여 ***Pubs*** 데이터베이스의 ***Authors*** 테이블에서 파생 된 **레코드 집합** 의 행을 다시 정렬 합니다. 보조 유틸리티 루틴은 각 행을 인쇄 합니다.  
+이 예에서는 [레코드 집합](./recordset-object-ado.md) 개체의 [Sort](./sort-property.md) 속성을 사용 하 여 ***Pubs*** 데이터베이스의 ***Authors*** 테이블에서 파생 된 **레코드 집합** 의 행을 다시 정렬 합니다. 보조 유틸리티 루틴은 각 행을 인쇄 합니다.  
   
 ```  
 'BeginSortVB  
@@ -111,5 +111,5 @@ Attribute VB_Name = "Sort"
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [레코드 집합 개체 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Sort 속성](../../../ado/reference/ado-api/sort-property.md)
+ [레코드 집합 개체 (ADO)](./recordset-object-ado.md)   
+ [Sort 속성](./sort-property.md)

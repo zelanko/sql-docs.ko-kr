@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: d14714cb23a9f6b0d6cc63ddca5049cb6741017c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 08/25/2020
 ms.locfileid: "74399441"
 ---
 # <a name="workload-management-in-analytics-platform-system"></a>분석 플랫폼 시스템의 워크 로드 관리
@@ -58,10 +58,10 @@ ALTER SERVER ROLE largerc ADD MEMBER Anna;
 ## <a name="resource-class-descriptions"></a><a name="RC"></a>리소스 클래스 설명  
 다음 표에서는 리소스 클래스 및 해당 시스템 리소스 할당에 대해 설명 합니다.  
   
-|리소스 클래스|요청 중요도|최대 메모리 사용량 *|동시성 슬롯 (최대값 = 32)|Description|  
+|리소스 클래스|요청 중요도|최대 메모리 사용량 *|동시성 슬롯 (최대값 = 32)|설명|  
 |------------------|----------------------|--------------------------|---------------------------------------|---------------|  
-|default|보통|400 MB|1|기본적으로 각 로그인은 적은 양의 메모리와 해당 요청에 대 한 동시성 리소스를 허용 합니다.<br /><br />리소스 클래스에 로그인을 추가 하면 새 클래스가 우선적으로 적용 됩니다. 모든 리소스 클래스에서 로그인을 삭제 하면 해당 로그인은 기본 리소스 할당으로 돌아갑니다.|  
-|MediumRC|보통|1200 M B|3|중간 리소스 클래스가 필요할 수 있는 요청의 예는 다음과 같습니다.<br /><br />해시 조인이 많은 CTAS 작업<br /><br />디스크로의 캐싱을 방지 하기 위해 더 많은 메모리가 필요한 작업을 선택 합니다.<br /><br />클러스터형 columnstore 인덱스에 데이터를 로드 하는 중입니다.<br /><br />10-15 개의 열이 있는 작은 테이블에 대 한 클러스터형 columnstore 인덱스를 작성, 다시 작성 및 다시 구성 합니다.|  
+|default|중간|400 MB|1|기본적으로 각 로그인은 적은 양의 메모리와 해당 요청에 대 한 동시성 리소스를 허용 합니다.<br /><br />리소스 클래스에 로그인을 추가 하면 새 클래스가 우선적으로 적용 됩니다. 모든 리소스 클래스에서 로그인을 삭제 하면 해당 로그인은 기본 리소스 할당으로 돌아갑니다.|  
+|MediumRC|중간|1200 M B|3|중간 리소스 클래스가 필요할 수 있는 요청의 예는 다음과 같습니다.<br /><br />해시 조인이 많은 CTAS 작업<br /><br />디스크로의 캐싱을 방지 하기 위해 더 많은 메모리가 필요한 작업을 선택 합니다.<br /><br />클러스터형 columnstore 인덱스에 데이터를 로드 하는 중입니다.<br /><br />10-15 개의 열이 있는 작은 테이블에 대 한 클러스터형 columnstore 인덱스를 작성, 다시 작성 및 다시 구성 합니다.|  
 |Largerc|높음|2.8 GB|7|대량 리소스 클래스가 필요할 수 있는 요청의 예는 다음과 같습니다.<br /><br />매우 큰 해시 조인이 있거나 큰 ORDER BY 또는 GROUP BY 절과 같은 대규모 집계를 포함 하는 매우 큰 CTAS 작업<br /><br />해시 조인과 같은 작업에 대해 매우 많은 양의 메모리가 필요한 작업 또는 ORDER BY 또는 GROUP BY 절과 같은 집계를 선택 합니다.<br /><br />클러스터형 columnstore 인덱스에 데이터를 로드 하는 중입니다.<br /><br />10-15 개의 열이 있는 작은 테이블에 대 한 클러스터형 columnstore 인덱스를 작성, 다시 작성 및 다시 구성 합니다.|  
 |xlargerc|높음|8.4 GB|22|추가 대형 리소스 클래스는 런타임에 추가 리소스 소비가 필요할 수 있는 요청에 대 한 것입니다.|  
   
@@ -177,7 +177,7 @@ SQL Server PDW 문을 실행 하기 전에 요청에 필요한 동시성 슬롯�
   
 -   sys.dm_pdw_nodes_exec_cached_plans  
   
-## <a name="related-tasks"></a><a name="RelatedTasks"></a>관련 작업  
+## <a name="related-tasks"></a><a name="RelatedTasks"></a>관련 태스크  
 [작업 관리 작업](workload-management-tasks.md)  
   
 <!-- MISSING LINKS

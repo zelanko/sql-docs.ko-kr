@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 4de7336a-b5ea-43f1-b750-5fa302b5b756
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9d1da11bab0ba3858eac13f8a1e32259d376f672
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fc8619fd7c803fdbf417368ef8e7e896e1947ab2
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444485"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775922"
 ---
 # <a name="connectionstring-connectiontimeout-and-state-properties-example-vb"></a>ConnectionString, ConnectionTimeout 및 State 속성 예제 (VB)
-이 예에서는 [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) 속성을 사용 하 여 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체를 여는 다양 한 방법을 보여 줍니다. 또한 [ConnectionTimeout](../../../ado/reference/ado-api/connectiontimeout-property-ado.md) 속성을 사용 하 여 연결 제한 시간을 설정 하 고 [상태](../../../ado/reference/ado-api/state-property-ado.md) 속성을 사용 하 여 연결 상태를 확인 합니다. GetState 함수는이 프로시저를 실행 하는 데 필요 합니다.  
+이 예에서는 [ConnectionString](./connectionstring-property-ado.md) 속성을 사용 하 여 [연결](./connection-object-ado.md) 개체를 여는 다양 한 방법을 보여 줍니다. 또한 [ConnectionTimeout](./connectiontimeout-property-ado.md) 속성을 사용 하 여 연결 제한 시간을 설정 하 고 [상태](./state-property-ado.md) 속성을 사용 하 여 연결 상태를 확인 합니다. GetState 함수는이 프로시저를 실행 하는 데 필요 합니다.  
   
 > [!NOTE]
 >  Windows 인증을 지 원하는 데이터 원본 공급자에 연결 하는 경우 연결 문자열에 사용자 ID 및 암호 정보 대신 **Trusted_Connection = yes** 또는 **INTEGRATED Security = SSPI** 를 지정 해야 합니다.  
@@ -128,7 +128,7 @@ End Function
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Connection 개체 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
- [ConnectionString 속성 (ADO)](../../../ado/reference/ado-api/connectionstring-property-ado.md)   
- [ConnectionTimeout 속성 (ADO)](../../../ado/reference/ado-api/connectiontimeout-property-ado.md)   
- [State 속성(ADO)](../../../ado/reference/ado-api/state-property-ado.md)
+ [Connection 개체 (ADO)](./connection-object-ado.md)   
+ [ConnectionString 속성 (ADO)](./connectionstring-property-ado.md)   
+ [ConnectionTimeout 속성 (ADO)](./connectiontimeout-property-ado.md)   
+ [State 속성(ADO)](./state-property-ado.md)

@@ -44,10 +44,10 @@ fields.Append Name, Type, DefinedSize, Attrib, FieldValue
  *object*  
  추가할 개체를 나타내는 개체 변수입니다.  
   
- *이름*  
+ *Name*  
  새 **Field** 개체의 이름을 포함 하는 **문자열** 값으로, *필드*의 다른 개체와 이름이 달라 야 합니다.  
   
- *형식*  
+ *유형*  
  새 필드의 데이터 형식을 지정 하는 [DataTypeEnum](./datatypeenum.md) 값으로, 기본값은 **adEmpty**입니다. 다음 데이터 형식은 ADO에서 지원 되지 않으므로 [레코드 집합 개체 (ADO)](./recordset-object-ado.md)에 새 필드를 추가할 때 사용 하면 안 됩니다. **adIDispatch**, **adIUnknown**, **advariant**.  
   
  *DefinedSize*  

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d00d1e1e-14b1-41a2-a00f-2a3cb7396f15
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6fc5226da0ceeefc6ae961b2a3d358d1dc1955b0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 09d345a0f08d9fa2e9e3696941aba1ef49443efd
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442825"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773472"
 ---
 # <a name="parameter-ado---wfc-syntax"></a>매개 변수(ADO - WFC 구문)
 ## <a name="package-commswfcdata"></a>package com.  
@@ -66,7 +66,7 @@ public AdoProperties getProperties()
 ```  
   
 ## <a name="parameter-accessor-methods"></a>매개 변수 접근자 메서드  
- [매개 변수](../../../ado/reference/ado-api/parameter-object.md) 개체의 [Value](../../../ado/reference/ado-api/value-property-ado.md) 속성은 해당 개체의 내용을 가져오거나 설정 합니다. 콘텐츠는 값 및 여러 데이터 형식 중 하나를 할당할 수 있는 개체의 유형인 VARIANT로 표시 됩니다.  
+ [매개 변수](./parameter-object.md) 개체의 [Value](./value-property-ado.md) 속성은 해당 개체의 내용을 가져오거나 설정 합니다. 콘텐츠는 값 및 여러 데이터 형식 중 하나를 할당할 수 있는 개체의 유형인 VARIANT로 표시 됩니다.  
   
  ADO/WFC는 VARIANT 개체를 반환 하는 **getValue** 메서드를 사용 하 여 **Value** 속성을 구현 합니다. 그리고 **setValue** 메서드로 VARIANT를 인수로 사용 합니다. 변형은 Microsoft Visual Basic와 같은 특정 언어에서 매우 효율적입니다.  
   
@@ -96,4 +96,4 @@ public void setNull()
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Parameter 개체](../../../ado/reference/ado-api/parameter-object.md)
+ [Parameter 개체](./parameter-object.md)

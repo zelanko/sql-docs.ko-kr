@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: ffc6e245-4471-42ae-84dd-e85bddfce983
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: beb6afdd93d69ea920acee3840dc6c0bc44d181e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9e0d37d5aad3f27a61cf3ae7c8dad9b27149e09b
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444245"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775472"
 ---
 # <a name="cursortypeenum"></a>CursorTypeEnum
-[레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체에 사용 되는 커서의 유형을 지정 합니다.  
+[레코드 집합](./recordset-object-ado.md) 개체에 사용 되는 커서의 유형을 지정 합니다.  
   
-|상수|값|설명|  
+|상수|값|Description|  
 |--------------|-----------|-----------------|  
 |**adOpenDynamic**|2|동적 커서를 사용 합니다. 다른 사용자에의 한 추가, 변경 및 삭제 내용이 표시 되 고, 공급자가 지원 하지 않는 경우 책갈피를 제외 하 고 **레코드 집합** 을 통한 모든 이동 유형이 허용 됩니다.|  
 |**adOpenForwardOnly**|0|기본값 앞 으로만 이동 가능한 커서를 사용 합니다. 레코드를 앞 으로만 스크롤할 수 있다는 점을 제외 하 고 정적 커서와 동일 합니다. 이렇게 하면 **레코드 집합**을 한 번만 통과 해야 하는 경우 성능이 향상 됩니다.|  
@@ -46,4 +46,4 @@ ms.locfileid: "88444245"
 |AdoEnums. CursorType|  
   
 ## <a name="applies-to"></a>적용 대상  
- [CursorType 속성(ADO)](../../../ado/reference/ado-api/cursortype-property-ado.md)
+ [CursorType 속성(ADO)](./cursortype-property-ado.md)

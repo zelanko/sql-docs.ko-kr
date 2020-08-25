@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 2509b32c-a995-4364-9152-d8c83129bdd8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3f226f9687f1bce3def616739f43f4d283d019ea
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ea9319e89c44b9cbb66b3acecdcbea4afa3e61c4
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441445"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776782"
 ---
 # <a name="activeconnection-property-ado-md"></a>ActiveConnection 속성(ADO MD)
-현재 셀 집합 또는 카탈로그가 현재 속해 있는 ADO [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체를 나타냅니다.  
+현재 셀 집합 또는 카탈로그가 현재 속해 있는 ADO [연결](../ado-api/connection-object-ado.md) 개체를 나타냅니다.  
   
 ## <a name="settings-and-return-values"></a>설정 및 반환 값  
  **연결 또는 연결 개체를** 정의 하는 문자열을 포함 하는 **Variant** 를 설정 하거나 반환 합니다. 기본값은 비어 있습니다.  
@@ -34,9 +34,9 @@ ms.locfileid: "88441445"
 ## <a name="remarks"></a>설명  
  이 속성을 유효한 ADO **연결** 개체 또는 유효한 연결 문자열로 설정할 수 있습니다. 이 속성을 연결 문자열로 설정 하면 공급자는이 정의를 사용 하 여 새 **연결** 개체를 만들고 연결을 엽니다.  
   
- [Open](../../../ado/reference/ado-md-api/open-method-ado-md.md) 메서드의 *ActiveConnection* 인수를 사용 하 여 [셀 집합](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) 개체를 열면 **ActiveConnection** 속성이 인수 값을 상속 합니다.  
+ [Open](./open-method-ado-md.md) 메서드의 *ActiveConnection* 인수를 사용 하 여 [셀 집합](./cellset-object-ado-md.md) 개체를 열면 **ActiveConnection** 속성이 인수 값을 상속 합니다.  
   
- [카탈로그](../../../ado/reference/ado-md-api/catalog-object-ado-md.md) 개체의 **ActiveConnection** 속성을 **Nothing** 으로 설정 하면 [CubeDefs](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md) 컬렉션의 데이터, 관련 된 [차원](../../../ado/reference/ado-md-api/dimension-object-ado-md.md), [계층](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md), [수준](../../../ado/reference/ado-md-api/level-object-ado-md.md)및 [멤버](../../../ado/reference/ado-md-api/member-object-ado-md.md) 개체를 비롯 한 연결 된 데이터가 해제 됩니다. **카탈로그** 를 여는 데 사용 된 **연결** 개체를 닫는 것은 **ActiveConnection** 속성을 **Nothing**으로 설정 하는 것과 동일한 효과를 가집니다.  
+ [카탈로그](./catalog-object-ado-md.md) 개체의 **ActiveConnection** 속성을 **Nothing** 으로 설정 하면 [CubeDefs](./cubedefs-collection-ado-md.md) 컬렉션의 데이터, 관련 된 [차원](./dimension-object-ado-md.md), [계층](./hierarchy-object-ado-md.md), [수준](./level-object-ado-md.md)및 [멤버](./member-object-ado-md.md) 개체를 비롯 한 연결 된 데이터가 해제 됩니다. **카탈로그** 를 여는 데 사용 된 **연결** 개체를 닫는 것은 **ActiveConnection** 속성을 **Nothing**으로 설정 하는 것과 동일한 효과를 가집니다.  
   
  **카탈로그** 개체의 **ActiveConnection** 속성에서 참조 하는 연결의 기본 데이터베이스를 변경 하면 **카탈로그**의 내용이 무효화 됩니다.  
   
@@ -61,14 +61,14 @@ ms.locfileid: "88441445"
 
 :::row:::
     :::column:::
-        [Catalog 개체(ADO MD)](../../../ado/reference/ado-md-api/catalog-object-ado-md.md)  
+        [Catalog 개체(ADO MD)](./catalog-object-ado-md.md)  
     :::column-end:::
     :::column:::
-        [Cellset 개체(ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)  
+        [Cellset 개체(ADO MD)](./cellset-object-ado-md.md)  
     :::column-end:::
 :::row-end:::
 
 ## <a name="see-also"></a>참고 항목  
- [셀 집합 예제 (VB)](../../../ado/reference/ado-md-api/cellset-example-vb.md)   
- [Connection 개체 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
- [Open 메서드(ADO MD)](../../../ado/reference/ado-md-api/open-method-ado-md.md)
+ [셀 집합 예제 (VB)](./cellset-example-vb.md)   
+ [Connection 개체 (ADO)](../ado-api/connection-object-ado.md)   
+ [Open 메서드(ADO MD)](./open-method-ado-md.md)

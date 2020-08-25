@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: e63ff331-8655-4be7-82c6-e6cd6cc9d16d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 12d4b9803682e94326636dd27bbc3f134eea23d8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1bf1757eac1d3c94c0d26439c3519060def03e27
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453605"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806205"
 ---
 # <a name="current-record-and-size-of-recordset"></a>현재 레코드 및 레코드 집합의 크기
-이 섹션에서는 JScript 코드 예제의 샘플 **레코드 집합** 에서 커서의 현재 위치를 찾아 [레코드 집합을 반환](../../../ado/guide/data/jscript-code-example-to-return-a-recordset.md)하는 방법에 대해 설명 합니다.  
+이 섹션에서는 JScript 코드 예제의 샘플 **레코드 집합** 에서 커서의 현재 위치를 찾아 [레코드 집합을 반환](./jscript-code-example-to-return-a-recordset.md)하는 방법에 대해 설명 합니다.  
   
 ## <a name="current-record"></a>현재 레코드  
  데이터 집합의 현재 레코드는 **레코드 집합** 개체의 커서 위치가 가리키는에 해당 합니다. **Recordset 개체가** **귀여운,Command.Exe**또는 **Connection.Exe귀여운** ( **connection. namedcommand** 및 **connection**포함)를 호출 하 여 데이터 원본에서 반환 되는 경우 커서가 첫 번째 레코드를 가리키도록 설정 **됩니다.** 샘플 데이터 집합에서 초기 현재 레코드는 "열혈 삼촌 Bob의 유기적 Dried 배" 항목입니다.  
@@ -38,14 +38,14 @@ ms.locfileid: "88453605"
   
  경우에 따라 공급자나 커서는 먼저 데이터 소스에서 모든 레코드를 인출 하지 않고 **RecordCount** 값을 확인할 수 없습니다. 정확한 계산을 위해 **레코드 집합**을 호출 합니다. **레코드 집합인 RecordCount**를 호출 하기 전의 **MoveLast** 메서드.  
   
- [JScript 코드 예제](../../../ado/guide/data/jscript-code-example-to-return-a-recordset.md) 를 사용 하 여 가져온 샘플 **레코드 집합** 개체는 앞 으로만 이동 가능한 커서를 사용 하므로이 개체의 **RecordCount** 를 호출 하면 항상-1이 반환 됩니다. **레코드 집합**을 호출 하는 코드 줄을 변경 하는 경우 **Open** 메서드 다음 예제와 같이 **RecordCount** 속성은 인출 된 레코드의 실제 수를 반환 합니다.  
+ [JScript 코드 예제](./jscript-code-example-to-return-a-recordset.md) 를 사용 하 여 가져온 샘플 **레코드 집합** 개체는 앞 으로만 이동 가능한 커서를 사용 하므로이 개체의 **RecordCount** 를 호출 하면 항상-1이 반환 됩니다. **레코드 집합**을 호출 하는 코드 줄을 변경 하는 경우 **Open** 메서드 다음 예제와 같이 **RecordCount** 속성은 인출 된 레코드의 실제 수를 반환 합니다.  
   
 ```  
 oRs.Open sSQL, sCnStr, adOpenStatic, adLockOptimistic, adCmdText   
 ```  
   
- 이는 [SQL Server 용 Microsoft OLE DB 공급자](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md) 를 사용 하는 정적 커서는 **RecordCount**를 지원 하기 때문입니다. 이 예제에서는 5 개의 레코드가 있으며이에 따라 **RecordCount** 는 5 값을 생성 해야 합니다.  
+ 이는 [SQL Server 용 Microsoft OLE DB 공급자](../appendixes/microsoft-ole-db-provider-for-sql-server.md) 를 사용 하는 정적 커서는 **RecordCount**를 지원 하기 때문입니다. 이 예제에서는 5 개의 레코드가 있으며이에 따라 **RecordCount** 는 5 값을 생성 해야 합니다.  
   
  이 섹션에는 다음 항목이 포함 되어 있습니다.  
   
- [레코드 집합의 경계](../../../ado/guide/data/boundaries-of-a-recordset.md)
+ [레코드 집합의 경계](./boundaries-of-a-recordset.md)
