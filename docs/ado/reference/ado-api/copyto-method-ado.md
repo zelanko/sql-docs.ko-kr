@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b4aa5714-916b-48b8-8b09-cc2708379602
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fbb9fc1c9d6f2a86a6f047b20962e5513798a26e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 59894d6632cd5dae3887099db2d6e71b1174af43
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444365"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775712"
 ---
 # <a name="copyto-method-ado"></a>CopyTo 메서드(ADO)
-[스트림에](../../../ado/reference/ado-api/stream-object-ado.md) 따라 지정 된 문자 또는 바이트 수를 다른 **스트림** 개체에 복사 합니다. [Type](../../../ado/reference/ado-api/type-property-ado-stream.md)  
+[스트림에](./stream-object-ado.md) 따라 지정 된 문자 또는 바이트 수를 다른 **스트림** 개체에 복사 합니다. [Type](./type-property-ado-stream.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -42,14 +42,14 @@ Stream.CopyTo DestStream, NumChars
 >  *Deststream* 매개 변수는 클라이언트에 원격으로 연결할 수 없는 **스트림** 개체의 전용 인터페이스에 대 한 액세스를 필요로 하기 때문에 **스트림** 개체의 프록시가 될 수 없습니다.  
   
  *NumChars*  
- (선택 사항) 소스 **스트림의** 현재 위치에서 대상 **스트림으로**복사할 바이트 또는 문자 수를 지정 하는 **정수** 값입니다. 기본값은-1입니다 .이 값은 모든 문자 또는 바이트가 현재 위치에서 [EOS](../../../ado/reference/ado-api/eos-property.md)로 복사 되도록 지정 합니다.  
+ 선택 사항입니다. 소스 **스트림의** 현재 위치에서 대상 **스트림으로**복사할 바이트 또는 문자 수를 지정 하는 **정수** 값입니다. 기본값은-1입니다 .이 값은 모든 문자 또는 바이트가 현재 위치에서 [EOS](./eos-property.md)로 복사 되도록 지정 합니다.  
   
 ## <a name="remarks"></a>설명  
- 이 메서드는 [position](../../../ado/reference/ado-api/position-property-ado.md) 속성에 지정 된 현재 위치에서 시작 하 여 지정 된 수의 문자 또는 바이트를 복사 합니다. 지정 된 숫자가 **eos**까지 사용 가능한 바이트 수를 초과할 경우 현재 위치에서 **EOS** 까지의 문자나 바이트만 복사 됩니다. *NumChars* 의 값이-1 이거나 생략 된 경우 현재 위치에서 시작 하는 모든 문자 또는 바이트가 복사 됩니다.  
+ 이 메서드는 [position](./position-property-ado.md) 속성에 지정 된 현재 위치에서 시작 하 여 지정 된 수의 문자 또는 바이트를 복사 합니다. 지정 된 숫자가 **eos**까지 사용 가능한 바이트 수를 초과할 경우 현재 위치에서 **EOS** 까지의 문자나 바이트만 복사 됩니다. *NumChars* 의 값이-1 이거나 생략 된 경우 현재 위치에서 시작 하는 모든 문자 또는 바이트가 복사 됩니다.  
   
- 대상 스트림에 기존 문자 또는 바이트가 있는 경우 복사가 끝난 지점을 벗어난 모든 콘텐츠가 잘리지 않습니다. **Position** 은 마지막으로 복사한 바이트 바로 다음 바이트가 됩니다. 이러한 바이트를 잘라내는 경우 [SetEOS](../../../ado/reference/ado-api/seteos-method.md)를 호출 합니다.  
+ 대상 스트림에 기존 문자 또는 바이트가 있는 경우 복사가 끝난 지점을 벗어난 모든 콘텐츠가 잘리지 않습니다. **Position** 은 마지막으로 복사한 바이트 바로 다음 바이트가 됩니다. 이러한 바이트를 잘라내는 경우 [SetEOS](./seteos-method.md)를 호출 합니다.  
   
- **CopyTo** 는 원본 **스트림과** 동일한 형식의 대상 **스트림에** 데이터를 복사 하는 데 사용 해야 합니다. 해당 **Type** 속성 설정은 **adTypeText** 또는 둘 다 **adtypebinary**입니다. 텍스트 **스트림** 개체의 경우 한 문자 집합에서 다른 문자 집합으로 변환 하기 위해 대상 **스트림의** [Charset](../../../ado/reference/ado-api/charset-property-ado.md) 속성 설정을 변경할 수 있습니다. 또한 텍스트 **스트림** 개체는 이진 **스트림** 개체로 복사 될 수 있지만 이진 **스트림** 개체는 텍스트 **스트림** 개체에 복사할 수 없습니다.  
+ **CopyTo** 는 원본 **스트림과** 동일한 형식의 대상 **스트림에** 데이터를 복사 하는 데 사용 해야 합니다. 해당 **Type** 속성 설정은 **adTypeText** 또는 둘 다 **adtypebinary**입니다. 텍스트 **스트림** 개체의 경우 한 문자 집합에서 다른 문자 집합으로 변환 하기 위해 대상 **스트림의** [Charset](./charset-property-ado.md) 속성 설정을 변경할 수 있습니다. 또한 텍스트 **스트림** 개체는 이진 **스트림** 개체로 복사 될 수 있지만 이진 **스트림** 개체는 텍스트 **스트림** 개체에 복사할 수 없습니다.  
   
 ## <a name="applies-to"></a>적용 대상  
- [스트림 개체(ADO)](../../../ado/reference/ado-api/stream-object-ado.md)
+ [스트림 개체(ADO)](./stream-object-ado.md)

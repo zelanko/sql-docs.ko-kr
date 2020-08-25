@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: aa3afd41a64b35cca0e3ffc4e676939dd2920ee9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0adcc74321fa5e1d03ea305799ae8aaf654e26e9
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441435"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776802"
 ---
 # <a name="ado-glossary"></a>ADO 용어 설명
 이 항목에서는 ADO와 관련 된 용어를 정의 합니다.  
@@ -178,7 +178,7 @@ ms.locfileid: "88441435"
  계층적 레코드 집합  
  다른 **레코드 집합**을 포함 하는 **레코드 집합** 입니다. 데이터 셰이핑, 챕터도 참조 하세요.  
   
- 자세한 내용은 [계층적 레코드 집합의 행에 액세스](../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)를 참조 하세요.  
+ 자세한 내용은 [계층적 레코드 집합의 행에 액세스](../guide/data/accessing-rows-in-a-hierarchical-recordset.md)를 참조 하세요.  
   
  계층 구조  
  일반적으로 계층은 최상위 수준 및 하위 수준이 있는 순위가 있는 구조입니다. ADO에서 계층적 **레코드 집합** 은 레코드와 챕터 간의 부모-자식 관계를 나타내는 데 사용 됩니다. 또한 ADO에서 **Record** 및 **Stream** 개체를 사용 하 여 폴더 및 문서와 같은 계층적 트리 구조에 액세스할 수 있습니다. 또한 ADO MD에는 OLAP 큐브의 차원 수준 간 관계를 나타내는 **계층** 개체도 포함 됩니다. 계층 구조 레코드 집합, 부모-자식 관계, 챕터, 트리도 참조 하세요.  

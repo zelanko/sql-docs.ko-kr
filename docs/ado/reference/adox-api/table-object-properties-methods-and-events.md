@@ -13,32 +13,32 @@ helpviewer_keywords:
 ms.assetid: 140d1517-6f0c-4fc9-9deb-9658982d88ed
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b614fc32325ef8a7b64b555f91c32966fdbb438c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c77279fa33781102234fc353aeaad88501e8ce7d
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439465"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88769292"
 ---
 # <a name="table-object-properties-methods-and-events"></a>테이블 개체 속성, 메서드 및 이벤트
 ## <a name="propertiescollections"></a>속성/컬렉션  
- [Columns 컬렉션(ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)  
+ [Columns 컬렉션(ADOX)](./columns-collection-adox.md)  
   
- [DateCreated 속성(ADOX)](../../../ado/reference/adox-api/datecreated-property-adox.md)  
+ [DateCreated 속성(ADOX)](./datecreated-property-adox.md)  
   
- [DateModified 속성(ADOX)](../../../ado/reference/adox-api/datemodified-property-adox.md)  
+ [DateModified 속성(ADOX)](./datemodified-property-adox.md)  
   
- [Indexes 컬렉션(ADOX)](../../../ado/reference/adox-api/indexes-collection-adox.md)  
+ [Indexes 컬렉션(ADOX)](./indexes-collection-adox.md)  
   
- [Keys 컬렉션(ADOX)](../../../ado/reference/adox-api/keys-collection-adox.md)  
+ [Keys 컬렉션(ADOX)](./keys-collection-adox.md)  
   
- [Name 속성(ADOX)](../../../ado/reference/adox-api/name-property-adox.md)  
+ [Name 속성(ADOX)](./name-property-adox.md)  
   
- [ParentCatalog 속성(ADOX)](../../../ado/reference/adox-api/parentcatalog-property-adox.md)  
+ [ParentCatalog 속성(ADOX)](./parentcatalog-property-adox.md)  
   
- [Properties 컬렉션(ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)  
+ [Properties 컬렉션(ADO)](../ado-api/properties-collection-ado.md)  
   
- [Type 속성(테이블)(ADOX)](../../../ado/reference/adox-api/type-property-table-adox.md)  
+ [Type 속성(테이블)(ADOX)](./type-property-table-adox.md)  
   
 ## <a name="methods"></a>메서드  
  없음  
@@ -47,4 +47,4 @@ ms.locfileid: "88439465"
  없음  
   
 ## <a name="see-also"></a>참고 항목  
- [Table 개체(ADOX)](../../../ado/reference/adox-api/table-object-adox.md)
+ [테이블 개체(ADOX)](./table-object-adox.md)

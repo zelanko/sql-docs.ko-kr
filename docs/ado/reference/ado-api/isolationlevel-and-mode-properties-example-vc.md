@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 92ddec5d-e3dc-4e8e-997a-c5417cceab69
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 455db4b01f6e25b6e280a6b33461ed6747cea284
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 89dc7e47bbd286d790086bde5da24e0a3316eef3
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443435"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774762"
 ---
 # <a name="isolationlevel-and-mode-properties-example-vc"></a>IsolationLevel 및 Mode 속성 예제 (VC + +)
-이 예에서는 [Mode](../../../ado/reference/ado-api/mode-property-ado.md) 속성을 사용 하 여 배타적 연결을 열고 [IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md) 속성을 사용 하 여 다른 트랜잭션과 분리 하 여 수행 되는 트랜잭션을 엽니다.  
+이 예에서는 [Mode](./mode-property-ado.md) 속성을 사용 하 여 배타적 연결을 열고 [IsolationLevel](./isolationlevel-property.md) 속성을 사용 하 여 다른 트랜잭션과 분리 하 여 수행 되는 트랜잭션을 엽니다.  
   
 ## <a name="example"></a>예제  
   
@@ -245,5 +245,5 @@ void PrintComError(_com_error &e) {
 **Buckingham 왕궁 Kitchens 50 년 trad_cook**  
 **초밥, 누구 인가요? -trad_cook**   
 ## <a name="see-also"></a>참고 항목  
- [IsolationLevel 속성](../../../ado/reference/ado-api/isolationlevel-property.md)   
- [Mode 속성(ADO)](../../../ado/reference/ado-api/mode-property-ado.md)
+ [IsolationLevel 속성](./isolationlevel-property.md)   
+ [Mode 속성(ADO)](./mode-property-ado.md)

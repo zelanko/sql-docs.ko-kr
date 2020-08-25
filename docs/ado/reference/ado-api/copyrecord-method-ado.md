@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b9bcf272-3c74-479f-95dd-0229a32e98fc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b6519ba504056966b8e237f73209e96855dd6c11
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b72860215018a9a869aed8f0a06e280a601947e5
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444385"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775782"
 ---
 # <a name="copyrecord-method-ado"></a>CopyRecord 메서드(ADO)
-[레코드가](../../../ado/reference/ado-api/record-object-ado.md) 나타내는 엔터티를 다른 위치로 복사 합니다.  
+[레코드가](./record-object-ado.md) 나타내는 엔터티를 다른 위치로 복사 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -36,22 +36,22 @@ Record.CopyRecord (Source, Destination, UserName, Password, Options, Async)
   
 #### <a name="parameters"></a>매개 변수  
  *원본*  
- (선택 사항) 복사할 엔터티 (예: 파일 또는 디렉터리)를 지정 하는 URL을 포함 하는 **문자열** 값입니다. *Source* 를 생략 하거나 빈 문자열을 지정 하면 현재 [레코드가](../../../ado/reference/ado-api/record-object-ado.md) 나타내는 파일이 나 디렉터리가 복사 됩니다.  
+ 선택 사항입니다. 복사할 엔터티 (예: 파일 또는 디렉터리)를 지정 하는 URL을 포함 하는 **문자열** 값입니다. *Source* 를 생략 하거나 빈 문자열을 지정 하면 현재 [레코드가](./record-object-ado.md) 나타내는 파일이 나 디렉터리가 복사 됩니다.  
   
  *대상*  
- (선택 사항) *원본이* 복사 될 위치를 지정 하는 URL을 포함 하는 **문자열** 값입니다.  
+ 선택 사항입니다. *원본이* 복사 될 위치를 지정 하는 URL을 포함 하는 **문자열** 값입니다.  
   
  *UserName*  
- (선택 사항) 필요한 경우 *대상*에 대 한 액세스 권한을 부여 하는 사용자 ID를 포함 하는 **문자열** 값입니다.  
+ 선택 사항입니다. 필요한 경우 *대상*에 대 한 액세스 권한을 부여 하는 사용자 ID를 포함 하는 **문자열** 값입니다.  
   
  *암호*  
- (선택 사항) 필요한 경우 *사용자 이름을*확인 하는 암호를 포함 하는 **문자열** 값입니다.  
+ 선택 사항입니다. 필요한 경우 *사용자 이름을*확인 하는 암호를 포함 하는 **문자열** 값입니다.  
   
- *옵션*  
- (선택 사항) 기본값은 **adCopyUnspecified**인 [CopyRecordOptionsEnum](../../../ado/reference/ado-api/copyrecordoptionsenum.md) 값입니다. 이 메서드의 동작을 지정 합니다.  
+ *Options*  
+ 선택 사항입니다. 기본값은 **adCopyUnspecified**인 [CopyRecordOptionsEnum](./copyrecordoptionsenum.md) 값입니다. 이 메서드의 동작을 지정 합니다.  
   
  *Async*  
- (선택 사항) **부울** 값입니다. **True**인 경우이 작업을 비동기로 지정 합니다.  
+ 선택 사항입니다. **부울** 값입니다. **True**인 경우이 작업을 비동기로 지정 합니다.  
   
 ## <a name="return-value"></a>반환 값  
  일반적으로 *Destination*값을 반환 하는 **문자열** 값입니다. 그러나 반환 되는 정확한 값은 공급자에 따라 다릅니다.  
@@ -67,7 +67,7 @@ Record.CopyRecord (Source, Destination, UserName, Password, Options, Async)
 >  **AdCopyOverWrite** 옵션을 신중 하 게 사용 합니다. 예를 들어 디렉터리에 파일을 복사할 때이 옵션을 지정 하면 디렉터리가 *삭제* 되 고 파일로 바뀝니다.  
   
 > [!NOTE]
->  Http 체계를 사용 하는 Url은 자동으로 [Microsoft OLE DB 공급자에 게 Internet 게시용](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)으로 호출 됩니다. 자세한 내용은 [절대 및 상대 url](../../../ado/guide/data/absolute-and-relative-urls.md)을 참조 하세요.  
+>  Http 체계를 사용 하는 Url은 자동으로 [Microsoft OLE DB 공급자에 게 Internet 게시용](../../guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)으로 호출 됩니다. 자세한 내용은 [절대 및 상대 url](../../guide/data/absolute-and-relative-urls.md)을 참조 하세요.  
   
 ## <a name="applies-to"></a>적용 대상  
- [레코드 개체(ADO)](../../../ado/reference/ado-api/record-object-ado.md)
+ [레코드 개체(ADO)](./record-object-ado.md)

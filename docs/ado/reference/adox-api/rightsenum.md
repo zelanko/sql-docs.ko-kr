@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 55ee67c7-a583-42aa-849a-78264b4cb614
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ead66b4c3215ef0d7a42e8ec029e97502dac2f4f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8ddda86faaf032fbc981c159300ee4545643bb2e
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439555"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88769452"
 ---
 # <a name="rightsenum"></a>RightsEnum
 개체의 그룹 또는 사용자에 대 한 권한 또는 사용 권한을 지정 합니다.  
@@ -37,7 +37,7 @@ ms.locfileid: "88439555"
 |**adRightInsert**|32768 (&H8000)|사용자 또는 그룹에 개체를 삽입할 수 있는 권한이 있습니다. **테이블과**같은 개체의 경우 사용자에 게 테이블에 데이터를 삽입할 수 있는 권한이 있습니다.|  
 |**adRightMaximumAllowed**|33554432 (&H2000000)|사용자 또는 그룹에는 공급자가 허용 하는 최대 권한 수가 있습니다. 특정 사용 권한은 공급자에 따라 다릅니다.|  
 |**adRightNone**|0|사용자 또는 그룹에 개체에 대 한 권한이 없습니다.|  
-|**adRightRead**|-2147483648 (&H80000000)|사용자 또는 그룹에 개체를 읽을 수 있는 권한이 있습니다. [테이블과](../../../ado/reference/adox-api/table-object-adox.md)같은 개체의 경우 사용자에 게 테이블의 데이터를 읽을 수 있는 권한이 있습니다.|  
+|**adRightRead**|-2147483648 (&H80000000)|사용자 또는 그룹에 개체를 읽을 수 있는 권한이 있습니다. [테이블과](./table-object-adox.md)같은 개체의 경우 사용자에 게 테이블의 데이터를 읽을 수 있는 권한이 있습니다.|  
 |**adRightReadDesign**|1024 (&H400)|사용자 또는 그룹에 개체에 대 한 디자인을 읽을 수 있는 권한이 있습니다.|  
 |**adRightReadPermissions**|131072 (&H20000)|사용자 또는 그룹은 카탈로그의 개체에 대 한 특정 사용 권한을 볼 수 있지만 변경할 수는 없습니다.|  
 |**adRightReference**|8192 (&H2000)|사용자 또는 그룹에 개체를 참조할 수 있는 권한이 있습니다.|  
@@ -51,9 +51,9 @@ ms.locfileid: "88439555"
 
 :::row:::
     :::column:::
-        [GetPermissions 메서드(ADOX)](../../../ado/reference/adox-api/getpermissions-method-adox.md)  
+        [GetPermissions 메서드(ADOX)](./getpermissions-method-adox.md)  
     :::column-end:::
     :::column:::
-        [SetPermissions 메서드(ADOX)](../../../ado/reference/adox-api/setpermissions-method-adox.md)  
+        [SetPermissions 메서드(ADOX)](./setpermissions-method-adox.md)  
     :::column-end:::
 :::row-end:::

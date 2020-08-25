@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 51aa99be-d5ca-46ac-8b3f-1b03ce4f0b2a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c6d8089bc7a3f0b59684a7dc1065c5b8c5dcc04c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0e2817ef08ab7c5d46b459fc2b1e28f1e70c6a6e
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451245"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776492"
 ---
 # <a name="appendchunk-and-getchunk-methods-example-vc"></a>AppendChunk 및 GetChunk 메서드 예제(VC++)
-이 예제에서는 [AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md) 및 [GetChunk](../../../ado/reference/ado-api/getchunk-method-ado.md) 메서드를 사용 하 여 다른 레코드의 데이터로 이미지 필드를 채웁니다.  
+이 예제에서는 [AppendChunk](./appendchunk-method-ado.md) 및 [GetChunk](./getchunk-method-ado.md) 메서드를 사용 하 여 다른 레코드의 데이터로 이미지 필드를 채웁니다.  
   
 ```  
 // BeginAppendChunkCpp.cpp  
@@ -267,6 +267,6 @@ void PrintProviderError(_ConnectionPtr pConnection) {
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [AppendChunk 메서드 (ADO)](../../../ado/reference/ado-api/appendchunk-method-ado.md)   
- [Field 개체](../../../ado/reference/ado-api/field-object.md)   
- [GetChunk 메서드(ADO)](../../../ado/reference/ado-api/getchunk-method-ado.md)
+ [AppendChunk 메서드 (ADO)](./appendchunk-method-ado.md)   
+ [Field 개체](./field-object.md)   
+ [GetChunk 메서드(ADO)](./getchunk-method-ado.md)

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 92f5a939-3e1a-4b14-a9dd-90e6ce2dec74
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f911be2784e849c8feb271127e2a83ed1ce90c4f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 144965d31dbb11da6cbc9a3ee6b23cd79cda800e
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451315"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776632"
 ---
 # <a name="adostreamconstruction-interface"></a>ADOStreamConstruction 인터페이스
 **ADOStreamConstruction** 인터페이스는 C/c + + 응용 프로그램의 OLE DB **ISTREAM** 개체에서 ADO **스트림** 개체를 생성 하는 데 사용 됩니다.  
@@ -30,7 +30,7 @@ ms.locfileid: "88451315"
   
 |속성|설명|  
 |-|-|  
-|[스트림](../../../ado/reference/ado-api/stream-property.md)|읽기/쓰기. OLE DB **Stream** 개체를 가져오거나 설정 합니다.|  
+|[스트림](./stream-property.md)|읽기/쓰기. OLE DB **Stream** 개체를 가져오거나 설정 합니다.|  
   
 ## <a name="methods"></a>메서드  
  없음  
@@ -74,4 +74,4 @@ adoStrConstruct->put_Stream(pUnk);
  **UUID:** 00000283-0000-0010-8000-00AA006D2EA4  
   
 ## <a name="see-also"></a>참고 항목  
- [ADO API 참조](../../../ado/reference/ado-api/ado-api-reference.md)
+ [ADO API 참조](./ado-api-reference.md)

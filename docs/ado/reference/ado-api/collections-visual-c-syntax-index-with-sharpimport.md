@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 36fbca8e-1884-44b5-806b-d15e30f42fe6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 58f7761cc67cd1320594988ba50bfcc79bcfc0d9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e1e67827a5a496b6b9163d8fa8740cc620033efd
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88450915"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776192"
 ---
 # <a name="collections-visual-c-syntax-index-with-import"></a>Collections (#import를 사용 하는 Visual C++ 구문 인덱스)
 컬렉션이 특정 공용 메서드 및 속성을 상속 한다는 것을 알고 있으면 유용 합니다.  
@@ -98,7 +98,7 @@ PropertyPtr GetItem( const _variant_t & Index ); __declspec(property(get=GetItem
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Errors 컬렉션 (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
- [Fields 컬렉션 (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
- [Parameters 컬렉션 (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
- [Properties 컬렉션(ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)
+ [Errors 컬렉션 (ADO)](./errors-collection-ado.md)   
+ [Fields 컬렉션 (ADO)](./fields-collection-ado.md)   
+ [Parameters 컬렉션 (ADO)](./parameters-collection-ado.md)   
+ [Properties 컬렉션(ADO)](./properties-collection-ado.md)

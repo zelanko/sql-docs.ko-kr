@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: ab79a623-88a9-40b6-a017-a658bf19b778
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d7661c142263a785565a7dabc92d9b7f31c93739
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 980e7c840cfb19077c6f4f1d1041d1f1eb8acf64
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442975"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773802"
 ---
 # <a name="open-method-ado-record"></a>Open 메서드(ADO 레코드)
-기존 [record](../../../ado/reference/ado-api/record-object-ado.md) 개체를 열거나 파일이 나 디렉터리와 같이 **레코드가**나타내는 새 항목을 만듭니다.  
+기존 [record](./record-object-ado.md) 개체를 열거나 파일이 나 디렉터리와 같이 **레코드가**나타내는 새 항목을 만듭니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -36,25 +36,25 @@ Open Source, ActiveConnection, Mode, CreateOptions, Options, UserName, Password
   
 #### <a name="parameters"></a>매개 변수  
  *원본*  
- (선택 사항) 이 **Record** 개체, **명령**, 열린 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 또는 다른 **레코드** 개체, SQL SELECT 문 또는 테이블 이름이 포함 된 문자열을 나타내는 엔터티의 URL을 나타낼 수 있는 **Variant** 입니다.  
+ 선택 사항입니다. 이 **Record** 개체, **명령**, 열린 [레코드 집합](./recordset-object-ado.md) 또는 다른 **레코드** 개체, SQL SELECT 문 또는 테이블 이름이 포함 된 문자열을 나타내는 엔터티의 URL을 나타낼 수 있는 **Variant** 입니다.  
   
  *ActiveConnection*  
- (선택 사항) 연결 문자열 또는 열린 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체를 나타내는 **Variant** 입니다.  
+ 선택 사항입니다. 연결 문자열 또는 열린 [연결](./connection-object-ado.md) 개체를 나타내는 **Variant** 입니다.  
   
  *모드*  
- (선택 사항) 결과 **레코드** 개체의 액세스 모드를 지정 하는 [connectmodeenum](../../../ado/reference/ado-api/connectmodeenum.md) 값입니다. 기본값은 **Admodeunknown**입니다.  
+ 선택 사항입니다. 결과 **레코드** 개체의 액세스 모드를 지정 하는 [connectmodeenum](./connectmodeenum.md) 값입니다. 기본값은 **Admodeunknown**입니다.  
   
  *CreateOptions*  
- (선택 사항) 기존 파일 또는 디렉터리를 열어야 하는지 아니면 새 파일 또는 디렉터리를 만들어야 하는지를 지정 하는 [RecordCreateOptionsEnum](../../../ado/reference/ado-api/recordcreateoptionsenum.md) 값입니다. 기본값은 **Adfailifnotexists**입니다. 이 값을 기본값으로 설정 하면 [모드](../../../ado/reference/ado-api/mode-property-ado.md) 속성에서 액세스 모드를 가져옵니다. *원본* 매개 변수에 URL이 포함 되어 있지 않으면이 매개 변수는 무시 됩니다.  
+ 선택 사항입니다. 기존 파일 또는 디렉터리를 열어야 하는지 아니면 새 파일 또는 디렉터리를 만들어야 하는지를 지정 하는 [RecordCreateOptionsEnum](./recordcreateoptionsenum.md) 값입니다. 기본값은 **Adfailifnotexists**입니다. 이 값을 기본값으로 설정 하면 [모드](./mode-property-ado.md) 속성에서 액세스 모드를 가져옵니다. *원본* 매개 변수에 URL이 포함 되어 있지 않으면이 매개 변수는 무시 됩니다.  
   
- *옵션*  
- (선택 사항) **레코드**열기 옵션을 지정 하는 [RecordOpenOptionsEnum](../../../ado/reference/ado-api/recordopenoptionsenum.md) 값입니다. 기본값은 **Adopenrecordunspecified 되지 않음**입니다. 이러한 값은 결합할 수 있습니다.  
+ *Options*  
+ 선택 사항입니다. **레코드**열기 옵션을 지정 하는 [RecordOpenOptionsEnum](./recordopenoptionsenum.md) 값입니다. 기본값은 **Adopenrecordunspecified 되지 않음**입니다. 이러한 값은 결합할 수 있습니다.  
   
  *UserName*  
- (선택 사항) 필요한 경우 *소스*에 대 한 액세스 권한을 부여 하는 사용자 ID를 포함 하는 **문자열** 값입니다.  
+ 선택 사항입니다. 필요한 경우 *소스*에 대 한 액세스 권한을 부여 하는 사용자 ID를 포함 하는 **문자열** 값입니다.  
   
  *암호*  
- (선택 사항) 필요한 경우 *사용자 이름을*확인 하는 암호를 포함 하는 **문자열** 값입니다.  
+ 선택 사항입니다. 필요한 경우 *사용자 이름을*확인 하는 암호를 포함 하는 **문자열** 값입니다.  
   
 ## <a name="remarks"></a>설명  
  *소스* 는 다음과 같을 수 있습니다.  
@@ -69,16 +69,16 @@ Open Source, ActiveConnection, Mode, CreateOptions, Options, UserName, Password
   
 -   테이블 이름입니다.  
   
- **Record** 개체가 URL (예: 데이터베이스에서 파생 된 **레코드 집합** 의 행)을 사용 하 여 액세스할 수 없는 엔터티를 나타내는 경우 [parenturl](../../../ado/reference/ado-api/parenturl-property-ado.md) 속성과 **adRecordURL** 상수를 사용 하 여 액세스 하는 필드의 값이 모두 null입니다.  
+ **Record** 개체가 URL (예: 데이터베이스에서 파생 된 **레코드 집합** 의 행)을 사용 하 여 액세스할 수 없는 엔터티를 나타내는 경우 [parenturl](./parenturl-property-ado.md) 속성과 **adRecordURL** 상수를 사용 하 여 액세스 하는 필드의 값이 모두 null입니다.  
   
 > [!NOTE]
->  Http 체계를 사용 하는 Url은 자동으로 [Microsoft OLE DB 공급자에 게 Internet 게시용](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)으로 호출 됩니다. 자세한 내용은 [절대 및 상대 url](../../../ado/guide/data/absolute-and-relative-urls.md)을 참조 하세요.  
+>  Http 체계를 사용 하는 Url은 자동으로 [Microsoft OLE DB 공급자에 게 Internet 게시용](../../guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)으로 호출 됩니다. 자세한 내용은 [절대 및 상대 url](../../guide/data/absolute-and-relative-urls.md)을 참조 하세요.  
   
 ## <a name="applies-to"></a>적용 대상  
- [레코드 개체(ADO)](../../../ado/reference/ado-api/record-object-ado.md)  
+ [레코드 개체(ADO)](./record-object-ado.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [Open 메서드 (ADO 연결)](../../../ado/reference/ado-api/open-method-ado-connection.md)   
- [Open 메서드 (ADO 레코드 집합)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
- [Open 메서드 (ADO 스트림)](../../../ado/reference/ado-api/open-method-ado-stream.md)   
- [OpenSchema 메서드](../../../ado/reference/ado-api/openschema-method.md)
+ [Open 메서드 (ADO 연결)](./open-method-ado-connection.md)   
+ [Open 메서드 (ADO 레코드 집합)](./open-method-ado-recordset.md)   
+ [Open 메서드 (ADO 스트림)](./open-method-ado-stream.md)   
+ [OpenSchema 메서드](./openschema-method.md)

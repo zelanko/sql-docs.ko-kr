@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 652194af-cfa4-4aa0-a6d6-fa409bbc3f98
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e6dbeea5a053a1395e051939e313b9f672c73d2f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5ee1d8d211c0ceeed02408f559c63b5942aafe05
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442905"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773632"
 ---
 # <a name="optimize-property-example-vb"></a>Optimize 속성 예제(VB)
-이 예제에서는 [Field](../../../ado/reference/ado-api/field-object.md) 개체의 dynamic **Optimize** 속성을 보여 줍니다. ***Pubs*** 데이터베이스에 있는 ***Authors*** 테이블의 ***zip*** 필드는 인덱싱되지 않습니다. ***Zip*** 필드에서 [Optimize](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md) 속성을 **True** 로 설정 하면 ADO에서 [Find](../../../ado/reference/ado-api/find-method-ado.md) 메서드의 성능을 향상 시키는 인덱스를 작성할 수 있습니다.  
+이 예제에서는 [Field](./field-object.md) 개체의 dynamic **Optimize** 속성을 보여 줍니다. ***Pubs*** 데이터베이스에 있는 ***Authors*** 테이블의 ***zip*** 필드는 인덱싱되지 않습니다. ***Zip*** 필드에서 [Optimize](./optimize-property-dynamic-ado.md) 속성을 **True** 로 설정 하면 ADO에서 [Find](./find-method-ado.md) 메서드의 성능을 향상 시키는 인덱스를 작성할 수 있습니다.  
   
 ```  
 'BeginOptimizeVB  
@@ -88,5 +88,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Field 개체](../../../ado/reference/ado-api/field-object.md)   
- [Optimize 속성-동적(ADO)](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)
+ [Field 개체](./field-object.md)   
+ [Optimize 속성-동적(ADO)](./optimize-property-dynamic-ado.md)

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 52a5429e-5829-455e-be3b-31f05cbecf2d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a52b8006ed97809690ec874c27e20ee8f1b05d0f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f93370ae23cd50e1fb494d484756505f69514df1
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451335"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776603"
 ---
 # <a name="adorecordconstruction-interface"></a>ADORecordConstruction 인터페이스
 **ADORecordConstruction**인터페이스는 C/c + + 응용 프로그램의 OLE DB **ROW** 개체에서 ADO **Record** 개체를 생성 하는 데 사용 됩니다.  
@@ -32,8 +32,8 @@ ms.locfileid: "88451335"
   
 |속성|설명|  
 |-|-|  
-|[ParentRow](../../../ado/reference/ado-api/parentrow-property-ado.md)|쓰기 전용입니다.<br />이 ADO **레코드** 개체에 대 한 OLE DB **Row** 개체의 컨테이너를 설정 합니다.|  
-|[행](../../../ado/reference/ado-api/row-property-ado.md)|읽기/쓰기.<br />이 ADO **레코드** 개체에서/에 대 한 OLE DB **행** 개체를 가져오거나 설정 합니다.|  
+|[ParentRow](./parentrow-property-ado.md)|쓰기 전용입니다.<br />이 ADO **레코드** 개체에 대 한 OLE DB **Row** 개체의 컨테이너를 설정 합니다.|  
+|[행당](./row-property-ado.md)|읽기/쓰기.<br />이 ADO **레코드** 개체에서/에 대 한 OLE DB **행** 개체를 가져오거나 설정 합니다.|  
   
 ## <a name="methods"></a>메서드  
  없음  

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: ae576b2c-65aa-4838-872a-85e618806dc8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6004df68918c166e3964cb10222b2117210430c0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8a8fc5df35b017913b5178d06ab4f51a0d8a720a
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443315"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774492"
 ---
 # <a name="marshaloptions-property-example-vb"></a>MarshalOptions 속성 예제(VB)
-이 예에서는 [MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md) 속성을 사용 하 여 서버에 다시 보낼 행을 지정 합니다. 모든 행 또는 수정 된 행만 지정 합니다.  
+이 예에서는 [MarshalOptions](./marshaloptions-property-ado.md) 속성을 사용 하 여 서버에 다시 보낼 행을 지정 합니다. 모든 행 또는 수정 된 행만 지정 합니다.  
   
 ```  
 'BeginMarshalOptionsVB  
@@ -133,5 +133,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [MarshalOptions 속성 (ADO)](../../../ado/reference/ado-api/marshaloptions-property-ado.md)   
- [MarshalOptionsEnum](../../../ado/reference/ado-api/marshaloptionsenum.md)
+ [MarshalOptions 속성 (ADO)](./marshaloptions-property-ado.md)   
+ [MarshalOptionsEnum](./marshaloptionsenum.md)

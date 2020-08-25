@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 03f47eda-840d-4cab-83d9-ccddd873f342
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9ee7e847b9e57b10520bfe8ac77af638214b5126
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 927ccd0b8d53b1abe50c20062eb59374c7f49f95
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444495"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775942"
 ---
 # <a name="connection-visual-c-syntax-index-with-import"></a>Connection (#import를 사용 하는 Visual C++ 구문 인덱스)
 ## <a name="methods"></a>메서드  
@@ -89,4 +89,4 @@ __declspec(property(get=GetState)) long State;
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [연결 개체(ADO)](../../../ado/reference/ado-api/connection-object-ado.md)
+ [연결 개체(ADO)](./connection-object-ado.md)

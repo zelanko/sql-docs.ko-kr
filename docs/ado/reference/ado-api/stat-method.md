@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 99a2b2d4-e6b1-4205-b011-72d024ea7240
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5375335fe0964107aed54de71d7e700b0588f209
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e4a79dc76537bbcbabc8b8689638ff9c670413e3
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441995"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777362"
 ---
 # <a name="stat-method"></a>Stat 메서드
-[스트림](../../../ado/reference/ado-api/stream-object-ado.md) 개체에 대 한 정보를 검색 합니다.  
+[스트림](./stream-object-ado.md) 개체에 대 한 정보를 검색 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -71,4 +71,4 @@ Long stream.Stat(StatStg, StatFlag)
  StatFlag 매개 변수에 STATFLAG_NONAME 지정 되지 않은 경우 현재 스트림에 사용할 수 있는 이름이 없으면이 값이 E_NOTIMPL 됩니다.  
   
 ## <a name="applies-to"></a>적용 대상  
- [스트림 개체(ADO)](../../../ado/reference/ado-api/stream-object-ado.md)
+ [스트림 개체(ADO)](./stream-object-ado.md)

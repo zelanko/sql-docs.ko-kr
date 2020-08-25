@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8cfc35bb-91e2-47da-ad4c-982e9162cd51
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4a9d467a2ab9073bd287fd0cf6a3fc36c60cabda
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cffba6c7354059c56315c956e327be2b6b85c562
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444525"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775972"
 ---
 # <a name="connection-ado---wfc-syntax"></a>연결(ADO - WFC 구문)
 ## <a name="package-commswfcdata"></a>package com.  
@@ -87,7 +87,7 @@ public com.ms.wfc.data.Errors getErrors()
 ```  
   
 ### <a name="events"></a>이벤트  
- ADO/WFC 이벤트에 대 한 자세한 내용은 [언어별 Ado 이벤트 인스턴스화](../../../ado/guide/data/ado-event-instantiation-by-language.md)를 참조 하세요.  
+ ADO/WFC 이벤트에 대 한 자세한 내용은 [언어별 Ado 이벤트 인스턴스화](../../guide/data/ado-event-instantiation-by-language.md)를 참조 하세요.  
   
 ```  
 public void addOnBeginTransComplete(ConnectionEventHandler handler)  
@@ -111,4 +111,4 @@ public void removeOnWillExecute(ConnectionEventHandler handler)
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [연결 개체(ADO)](../../../ado/reference/ado-api/connection-object-ado.md)
+ [연결 개체(ADO)](./connection-object-ado.md)

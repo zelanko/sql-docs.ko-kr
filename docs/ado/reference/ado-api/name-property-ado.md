@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: cfd0e29c-8310-44ab-85c3-5761184b865d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 60bf64f57c4373d814f2b207808aa2d7dbe7c497
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: da88b8e5a98e7d3ae105cc6e826804158f4bf7c8
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443135"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774172"
 ---
 # <a name="name-property-ado"></a>Name 속성(ADO)
 개체의 이름을 나타냅니다.  
@@ -35,9 +35,9 @@ ms.locfileid: "88443135"
   
  이 값은 **명령** 개체에 대 한 읽기/쓰기 및 **속성** 개체에 대 한 읽기 전용입니다.  
   
- **필드** 개체의 경우 **이름은** 일반적으로 읽기 전용입니다. 그러나 [레코드](../../../ado/reference/ado-api/record-object-ado.md)의 [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) 컬렉션에 추가 된 새 **field** 개체의 경우 **필드** 의 [Value](../../../ado/reference/ado-api/value-property-ado.md) 속성을 지정 하 고 데이터 공급자가 **Fields** 컬렉션의 [Update](../../../ado/reference/ado-api/update-method.md) 메서드를 호출 하 여 새 **필드** 를 성공적으로 추가한 후에만 **이름이** 읽기/쓰기입니다.  
+ **필드** 개체의 경우 **이름은** 일반적으로 읽기 전용입니다. 그러나 [레코드](./record-object-ado.md)의 [Fields](./fields-collection-ado.md) 컬렉션에 추가 된 새 **field** 개체의 경우 **필드** 의 [Value](./value-property-ado.md) 속성을 지정 하 고 데이터 공급자가 **Fields** 컬렉션의 [Update](./update-method.md) 메서드를 호출 하 여 새 **필드** 를 성공적으로 추가한 후에만 **이름이** 읽기/쓰기입니다.  
   
- [매개 변수 컬렉션에](../../../ado/reference/ado-api/parameters-collection-ado.md) 아직 추가 되지 않은 **매개 변수** 개체의 경우 **Name** 속성은 읽기/쓰기가 됩니다. 추가 된 **매개 변수** 개체 및 기타 모든 개체의 경우 **Name** 속성은 읽기 전용입니다. 이름은 컬렉션 내에서 고유 하지 않아도 됩니다.  
+ [매개 변수 컬렉션에](./parameters-collection-ado.md) 아직 추가 되지 않은 **매개 변수** 개체의 경우 **Name** 속성은 읽기/쓰기가 됩니다. 추가 된 **매개 변수** 개체 및 기타 모든 개체의 경우 **Name** 속성은 읽기 전용입니다. 이름은 컬렉션 내에서 고유 하지 않아도 됩니다.  
   
  서 수 참조로 개체의 **이름** 속성을 검색할 수 있으며, 그 후에는 개체를 이름으로 직접 참조할 수 있습니다. 예를 들어가 `rstMain.Properties(20).Name` 생성 되 면 `Updatability` 이후에이 속성을 참조할 수 있습니다 `rstMain.Properties("Updatability")` .  
   
@@ -45,15 +45,15 @@ ms.locfileid: "88443135"
 
 :::row:::
     :::column:::
-        [명령 개체(ADO)](../../../ado/reference/ado-api/command-object-ado.md)  
-        [Field 개체](../../../ado/reference/ado-api/field-object.md)  
+        [명령 개체(ADO)](./command-object-ado.md)  
+        [Field 개체](./field-object.md)  
     :::column-end:::
     :::column:::
-        [Parameter 개체](../../../ado/reference/ado-api/parameter-object.md)  
-        [속성 개체(ADO)](../../../ado/reference/ado-api/property-object-ado.md)  
+        [Parameter 개체](./parameter-object.md)  
+        [속성 개체(ADO)](./property-object-ado.md)  
     :::column-end:::
 :::row-end:::
 
 ## <a name="see-also"></a>참고 항목  
- [특성 및 이름 속성 예제 (VB)](../../../ado/reference/ado-api/attributes-and-name-properties-example-vb.md)   
- [특성 및 이름 속성 예제 (VC + +)](../../../ado/reference/ado-api/attributes-and-name-properties-example-vc.md)   
+ [특성 및 이름 속성 예제 (VB)](./attributes-and-name-properties-example-vb.md)   
+ [특성 및 이름 속성 예제 (VC + +)](./attributes-and-name-properties-example-vc.md)

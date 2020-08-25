@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 258bdce3-1819-44a2-9217-105879c789ef
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ed744b6cb39b37958de8dcd6cb4dd6dde8b2a9a8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2fb0d90d8e6fd5a999d3596af600c140c75e9617
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451225"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776462"
 ---
 # <a name="attributes-and-name-properties-example-vb"></a>Attributes 및 Name 속성 예제(VB)
-이 예에서는 [연결](../../../ado/reference/ado-api/connection-object-ado.md), [필드](../../../ado/reference/ado-api/field-object.md)및 [속성](../../../ado/reference/ado-api/property-object-ado.md) 개체에 대 한 [Attributes](../../../ado/reference/ado-api/attributes-property-ado.md) 속성의 값을 표시 합니다. [Name](../../../ado/reference/ado-api/name-property-ado.md) 속성을 사용 하 여 각 **필드** 및 **속성** 개체의 이름을 표시 합니다.  
+이 예에서는 [연결](./connection-object-ado.md), [필드](./field-object.md)및 [속성](./property-object-ado.md) 개체에 대 한 [Attributes](./attributes-property-ado.md) 속성의 값을 표시 합니다. [Name](./name-property-ado.md) 속성을 사용 하 여 각 **필드** 및 **속성** 개체의 이름을 표시 합니다.  
   
 ```  
 ' BeginAttributesVB  
@@ -128,8 +128,8 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Attributes 속성 (ADO)](../../../ado/reference/ado-api/attributes-property-ado.md)   
- [Connection 개체 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
- [Field 개체](../../../ado/reference/ado-api/field-object.md)   
- [Name 속성 (ADO)](../../../ado/reference/ado-api/name-property-ado.md)   
- [속성 개체(ADO)](../../../ado/reference/ado-api/property-object-ado.md)
+ [Attributes 속성 (ADO)](./attributes-property-ado.md)   
+ [Connection 개체 (ADO)](./connection-object-ado.md)   
+ [Field 개체](./field-object.md)   
+ [Name 속성 (ADO)](./name-property-ado.md)   
+ [속성 개체(ADO)](./property-object-ado.md)

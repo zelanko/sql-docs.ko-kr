@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 08386eba-f1f7-4879-8ffd-8733930ecb2f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3dd1000dce8308ada4044eb9f043097f8767a9c0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c17ccfe0a31714d5e2b3945960a4ff3d2ad55d1e
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451325"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776642"
 ---
 # <a name="adorecordsetconstruction-interface"></a>ADORecordsetConstruction 인터페이스
 **ADORecordsetConstruction** 인터페이스는 C/c + + 응용 프로그램의 OLE DB **ROWSET** 개체에서 ADO **레코드 집합** 개체를 생성 하는 데 사용 됩니다.  
@@ -32,9 +32,9 @@ ms.locfileid: "88451325"
   
 |속성|설명|  
 |-|-|  
-|[장](../../../ado/reference/ado-api/chapter-property-ado.md)|읽기/쓰기.<br />이 ADO **레코드 집합** 개체의/에서 OLE DB **챕터** 개체를 가져오거나 설정 합니다.|  
-|[행 위치](../../../ado/reference/ado-api/rowposition-property-ado.md)|읽기/쓰기.<br />이 ADO **레코드 집합** 개체의 OLE DB **rowposition** 개체를 가져오거나 설정 합니다.|  
-|[행 집합](../../../ado/reference/ado-api/rowset-property-ado.md)|읽기/쓰기.<br />이 ADO **레코드 집합** 개체의 OLE DB **행 집합** 개체를 가져오거나 설정 합니다.|  
+|[장](./chapter-property-ado.md)|읽기/쓰기.<br />이 ADO **레코드 집합** 개체의/에서 OLE DB **챕터** 개체를 가져오거나 설정 합니다.|  
+|[행 위치](./rowposition-property-ado.md)|읽기/쓰기.<br />이 ADO **레코드 집합** 개체의 OLE DB **rowposition** 개체를 가져오거나 설정 합니다.|  
+|[행 집합](./rowset-property-ado.md)|읽기/쓰기.<br />이 ADO **레코드 집합** 개체의 OLE DB **행 집합** 개체를 가져오거나 설정 합니다.|  
   
 ## <a name="methods"></a>메서드  
  없음  
@@ -80,5 +80,5 @@ ms.locfileid: "88451325"
  **UUID:** 00000283-0000-0010-8000-00AA006D2EA4  
   
 ## <a name="see-also"></a>참고 항목  
- [레코드 집합 개체 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Rowset 속성(ADO)](../../../ado/reference/ado-api/rowset-property-ado.md)
+ [레코드 집합 개체 (ADO)](./recordset-object-ado.md)   
+ [Rowset 속성(ADO)](./rowset-property-ado.md)

@@ -17,18 +17,18 @@ helpviewer_keywords:
 ms.assetid: b4e2844a-120a-4513-860b-f1b6e4b5dda4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d4ae79c8ee96d94d697ad78cf77f1d96b8c2e4a5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 53c9d3161126a1728335c132fc7886b49297f2cb
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439125"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768492"
 ---
 # <a name="datafactory-object-query-method-and-createobject-method-example-vbscript"></a>DataFactory 개체, Query 메서드 및 CreateObject 메서드 예제(VBScript)
 > [!IMPORTANT]
 >  Windows 8 및 Windows Server 2012부터 RDS 서버 구성 요소는 더 이상 Windows 운영 체제에 포함 되지 않습니다 (자세한 내용은 Windows 8 및 [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) 참조). 이후 버전의 Windows에서는 RDS 클라이언트 구성 요소가 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. RDS를 사용 하는 응용 프로그램은 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)로 마이그레이션해야 합니다.  
   
- 이 예제에서는 RDS의 [CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md) 메서드를 사용 하 여 [DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) 개체를 만듭니다. [ 공간](../../../ado/reference/rds-api/dataspace-object-rds.md) 개체입니다. 이 예를 테스트 하려면 \<Body> \</Body> 일반 HTML 문서의 및 태그 사이에이 코드를 잘라내어 붙여넣고 **DataFactoryVBS**로 이름을 다시 만듭니다. ASP 스크립트는 서버를 식별 합니다.  
+ 이 예제에서는 RDS의 [CreateObject](./createobject-method-rds.md) 메서드를 사용 하 여 [DataFactory](./datafactory-object-rdsserver.md) 개체를 만듭니다. [ 공간](./dataspace-object-rds.md) 개체입니다. 이 예를 테스트 하려면 \<Body> \</Body> 일반 HTML 문서의 및 태그 사이에이 코드를 잘라내어 붙여넣고 **DataFactoryVBS**로 이름을 다시 만듭니다. ASP 스크립트는 서버를 식별 합니다.  
   
 ```  
 <!-- BeginDataFactoryVBS -->  
@@ -138,9 +138,7 @@ to bring back a Recordset. </H4>
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [CreateObject 메서드 (RDS)](../../../ado/reference/rds-api/createobject-method-rds.md)   
- [DataFactory 개체 (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)   
- [스페이스 개체 (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)   
- [Query 메서드(RDS)](../../../ado/reference/rds-api/query-method-rds.md)
-
-
+ [CreateObject 메서드 (RDS)](./createobject-method-rds.md)   
+ [DataFactory 개체 (RDSServer)](./datafactory-object-rdsserver.md)   
+ [스페이스 개체 (RDS)](./dataspace-object-rds.md)   
+ [Query 메서드(RDS)](./query-method-rds.md)

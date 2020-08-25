@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d9502254-d89b-4bcb-94f1-6418f89e7f30
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a66fcb11780731424563526d30a4d544c60ea693
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 089c4e7f402e374ab4af43c683270ad488c0f8bb
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439505"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88769362"
 ---
 # <a name="sortorder-property-example-vb"></a>SortOrder 속성 예제(VB)
-이 예에서는 [인덱스](../../../ado/reference/adox-api/index-object-adox.md)의 [Columns](../../../ado/reference/adox-api/columns-collection-adox.md) 컬렉션에 추가 된 [열의](../../../ado/reference/adox-api/column-object-adox.md) [SortOrder](../../../ado/reference/adox-api/sortorder-property-adox.md) 속성을 보여 줍니다. 이 코드는 **Employees** 테이블의 Country 열에 오름차순 인덱스를 추가한 다음 레코드를 표시 합니다. 그런 다음 코드는 **Employees** 테이블의 Country 열에 내림차순 인덱스를 추가 하 고 레코드를 다시 표시 합니다. 오름차순과 내림차순 인덱스의 차이가 표시 됩니다.  
+이 예에서는 [인덱스](./index-object-adox.md)의 [Columns](./columns-collection-adox.md) 컬렉션에 추가 된 [열의](./column-object-adox.md) [SortOrder](./sortorder-property-adox.md) 속성을 보여 줍니다. 이 코드는 **Employees** 테이블의 Country 열에 오름차순 인덱스를 추가한 다음 레코드를 표시 합니다. 그런 다음 코드는 **Employees** 테이블의 Country 열에 내림차순 인덱스를 추가 하 고 레코드를 다시 표시 합니다. 오름차순과 내림차순 인덱스의 차이가 표시 됩니다.  
   
 ```  
 ' BeginSortOrderVB  
@@ -138,7 +138,7 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Column 개체 (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
- [Columns 컬렉션 (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
- [Index 개체 (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)   
- [SortOrder 속성(ADOX)](../../../ado/reference/adox-api/sortorder-property-adox.md)
+ [Column 개체 (ADOX)](./column-object-adox.md)   
+ [Columns 컬렉션 (ADOX)](./columns-collection-adox.md)   
+ [Index 개체 (ADOX)](./index-object-adox.md)   
+ [SortOrder 속성(ADOX)](./sortorder-property-adox.md)

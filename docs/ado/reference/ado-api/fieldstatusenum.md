@@ -16,23 +16,23 @@ helpviewer_keywords:
 ms.assetid: e06da1e2-303f-41b2-a3b0-61e233da152c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 06044b54be7066deb5cf7510f060716106816805
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 21f3ebabab3096217348e2309070d81e90128b8e
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443715"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775332"
 ---
 # <a name="fieldstatusenum"></a>FieldStatusEnum
-[필드 개체](../../../ado/reference/ado-api/field-object.md)의 [상태](../../../ado/reference/ado-api/status-property-ado-field.md) 를 지정 합니다.  
+[필드 개체](./field-object.md)의 [상태](./status-property-ado-field.md) 를 지정 합니다.  
   
  **Adfieldpending \* ** 값은 상태를 설정 하는 작업을 나타내며 다른 상태 값과 결합 될 수 있습니다.  
   
 |상수|값|설명|  
 |--------------|-----------|-----------------|  
 |**adFieldAlreadyExists**|26|지정 된 필드가 이미 있음을 나타냅니다.|  
-|**adFieldBadStatus**|12|잘못 된 상태 값이 ADO에서 OLE DB 공급자로 전송 되었음을 나타냅니다. OLE DB 1.0 또는 1.1 공급자 또는 잘못 된 [값](../../../ado/reference/ado-api/value-property-ado.md) 과 [상태](../../../ado/reference/ado-api/status-property-ado-field.md)조합이 포함 될 수 있습니다.|  
-|**adFieldCannotComplete**|20|[원본](../../../ado/reference/ado-api/source-property-ado-record.md) 으로 지정 된 URL의 서버에서 작업을 완료할 수 없음을 나타냅니다.|  
+|**adFieldBadStatus**|12|잘못 된 상태 값이 ADO에서 OLE DB 공급자로 전송 되었음을 나타냅니다. OLE DB 1.0 또는 1.1 공급자 또는 잘못 된 [값](./value-property-ado.md) 과 [상태](./status-property-ado-field.md)조합이 포함 될 수 있습니다.|  
+|**adFieldCannotComplete**|20|[원본](./source-property-ado-record.md) 으로 지정 된 URL의 서버에서 작업을 완료할 수 없음을 나타냅니다.|  
 |**adFieldCannotDeleteSource**|23|이동 작업을 수행 하는 동안 트리 또는 하위 트리를 새 위치로 이동 했지만 원본을 삭제할 수 없음을 나타냅니다.|  
 |**adFieldCantConvertValue**|2|필드를 데이터 손실 없이 검색 하거나 저장할 수 없음을 나타냅니다.|  
 |**adFieldCantCreate**|7|공급자가 제한을 초과 하 여 필드를 추가할 수 없음을 나타냅니다 (예: 허용 되는 필드 수).|  
@@ -45,7 +45,7 @@ ms.locfileid: "88443715"
 |**adFieldIsNull**|3|공급자가 VT_NULL 형식의 VARIANT 값을 반환 했으며 필드가 비어 있지 않음을 나타냅니다.|  
 |**adFieldOK**|0|기본값 필드가 성공적으로 추가 또는 삭제 되었음을 나타냅니다.|  
 |**adFieldOutOfSpace**|22|공급자가 이동 또는 복사 작업을 완료 하기에 충분 한 저장소 공간을 확보할 수 없음을 나타냅니다.|  
-|**adFieldPendingChange**|0x40000|는 필드가 삭제 된 후 다른 데이터 형식으로 다시 추가 되었거나 이전에 **adFieldOK** 상태가 된 필드의 값이 변경 되었음을 나타냅니다. 필드의 마지막 형태는 [Update](../../../ado/reference/ado-api/update-method.md) 메서드를 호출한 후에 [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) 컬렉션을 수정 합니다.|  
+|**adFieldPendingChange**|0x40000|는 필드가 삭제 된 후 다른 데이터 형식으로 다시 추가 되었거나 이전에 **adFieldOK** 상태가 된 필드의 값이 변경 되었음을 나타냅니다. 필드의 마지막 형태는 [Update](./update-method.md) 메서드를 호출한 후에 [Fields](./fields-collection-ado.md) 컬렉션을 수정 합니다.|  
 |**adFieldPendingDelete**|0x20000|**삭제** 작업으로 인해 상태가 설정 되었음을 나타냅니다. **업데이트** 메서드를 호출한 후 필드가 **Fields** 컬렉션에서 삭제 되도록 표시 되었습니다.|  
 |**adFieldPendingInsert**|0x10000|**추가** 작업으로 인해 상태가 설정 되었음을 나타냅니다. **업데이트** 메서드를 호출한 **후 필드가** **Fields** 컬렉션에 추가 된 것으로 표시 되었습니다.|  
 |**adFieldPendingUnknown**|0x80000|공급자가 필드 상태를 설정 하는 작업을 확인할 수 없음을 나타냅니다.|  
@@ -65,4 +65,4 @@ ms.locfileid: "88443715"
  이러한 상수에는 ADO/WFC 해당 항목이 없습니다.  
   
 ## <a name="applies-to"></a>적용 대상  
- [Status 속성(ADO 필드)](../../../ado/reference/ado-api/status-property-ado-field.md)
+ [Status 속성(ADO 필드)](./status-property-ado-field.md)

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 29ec4b95-8986-4970-943f-3da3ecb207a2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d16881ba6ee448ab8efda506e506b0a7f3bde02c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0ff88ab9dc0c3f050be5ae8cfd593473ca2a7fa8
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443225"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774302"
 ---
 # <a name="move-method-example-vbscript"></a>Move 메서드 예제(VBScript)
-이 예제에서는 [Move](../../../ado/reference/ado-api/move-method-ado.md) 메서드를 사용 하 여 사용자 입력을 기준으로 레코드 포인터를 배치 합니다.  
+이 예제에서는 [Move](./move-method-ado.md) 메서드를 사용 하 여 사용자 입력을 기준으로 레코드 포인터를 배치 합니다.  
   
  Active Server 페이지 (ASP)에서 다음 예제를 사용 합니다. 이 완전 한 기능 예제를 보려면 C:\Program Files\Microsoft Platform SDK\Samples\DataAccess\Rds\RDSTest\advworks.mdb에 있는 데이터 원본 AdvWorks (SDK와 함께 설치 됨)를 사용 하거나 예제 코드에서 경로를 편집 하 여이 파일의 실제 위치를 반영 해야 합니다. 이 파일은 Microsoft Access 데이터베이스 파일입니다.  
   
@@ -184,5 +184,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Move 메서드 (ADO)](../../../ado/reference/ado-api/move-method-ado.md)   
- [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [Move 메서드 (ADO)](./move-method-ado.md)   
+ [레코드 집합 개체(ADO)](./recordset-object-ado.md)

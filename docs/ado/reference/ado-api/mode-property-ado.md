@@ -18,18 +18,18 @@ helpviewer_keywords:
 ms.assetid: 808661eb-0d7c-4e6d-8e40-9dc3bef3d77a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7fd002f54010a9bc8d5cf543fe1fd4521bc6d221
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4d63e1ccddf4384a01911738e3eabfddb77cd6be
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443255"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774392"
 ---
 # <a name="mode-property-ado"></a>Mode 속성(ADO)
-[연결](../../../ado/reference/ado-api/connection-object-ado.md), [레코드](../../../ado/reference/ado-api/record-object-ado.md)또는 [스트림](../../../ado/reference/ado-api/stream-object-ado.md) 개체의 데이터를 수정 하는 데 사용할 수 있는 권한을 나타냅니다.  
+[연결](./connection-object-ado.md), [레코드](./record-object-ado.md)또는 [스트림](./stream-object-ado.md) 개체의 데이터를 수정 하는 데 사용할 수 있는 권한을 나타냅니다.  
   
 ## <a name="settings-and-return-values"></a>설정 및 반환 값  
- [Connectmodeenum](../../../ado/reference/ado-api/connectmodeenum.md) 값을 설정 하거나 반환 합니다. **연결** 의 기본값은 **admodeunknown**입니다. **Record** 개체의 기본값은 **adModeRead**입니다. 원본으로 URL을 사용 하 여 열거나 **레코드**의 기본 **스트림으로** 연 기본 소스와 연결 된 **스트림의** 기본값은 **adModeRead**입니다. 내부 소스와 연결 되지 않은 (메모리에서 인스턴스화된) **스트림의** 기본값은 **admodeunknown**입니다.  
+ [Connectmodeenum](./connectmodeenum.md) 값을 설정 하거나 반환 합니다. **연결** 의 기본값은 **admodeunknown**입니다. **Record** 개체의 기본값은 **adModeRead**입니다. 원본으로 URL을 사용 하 여 열거나 **레코드**의 기본 **스트림으로** 연 기본 소스와 연결 된 **스트림의** 기본값은 **adModeRead**입니다. 내부 소스와 연결 되지 않은 (메모리에서 인스턴스화된) **스트림의** 기본값은 **admodeunknown**입니다.  
   
 ## <a name="remarks"></a>설명  
  **Mode** 속성을 사용 하 여 현재 연결에서 공급자가 사용 하는 액세스 권한을 설정 하거나 반환 합니다. **연결** 개체가 닫혀 있을 때만 **Mode** 속성을 설정할 수 있습니다.  
@@ -45,16 +45,16 @@ ms.locfileid: "88443255"
 
 :::row:::
     :::column:::
-        [연결 개체(ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
+        [연결 개체(ADO)](./connection-object-ado.md)  
     :::column-end:::
     :::column:::
-        [레코드 개체(ADO)](../../../ado/reference/ado-api/record-object-ado.md)  
+        [레코드 개체(ADO)](./record-object-ado.md)  
     :::column-end:::
     :::column:::
-        [스트림 개체(ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
+        [스트림 개체(ADO)](./stream-object-ado.md)  
     :::column-end:::
 :::row-end:::
 
 ## <a name="see-also"></a>참고 항목  
- [IsolationLevel 및 Mode 속성 예제 (VB)](../../../ado/reference/ado-api/isolationlevel-and-mode-properties-example-vb.md)   
- [IsolationLevel 및 Mode 속성 예제 (VC + +)](../../../ado/reference/ado-api/isolationlevel-and-mode-properties-example-vc.md)   
+ [IsolationLevel 및 Mode 속성 예제 (VB)](./isolationlevel-and-mode-properties-example-vb.md)   
+ [IsolationLevel 및 Mode 속성 예제 (VC + +)](./isolationlevel-and-mode-properties-example-vc.md)

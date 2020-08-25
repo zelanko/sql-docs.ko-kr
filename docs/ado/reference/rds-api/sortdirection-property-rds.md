@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1d9d8715-e4ad-4ff3-bf7f-f1dc0532d8c2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 264cf997d3dc7448be90d5e3115bb54053a107b9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a7a8aca2bb5dd4acf6a2b7b2702eb7807d520f73
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438625"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767472"
 ---
 # <a name="sortdirection-property-rds"></a>SortDirection 속성(RDS)
 정렬 순서가 오름차순 인지 또는 내림차순 인지를 나타냅니다.  
@@ -36,20 +36,18 @@ DataControl.SortDirection = value
   
 #### <a name="parameters"></a>매개 변수  
  *DataControl*  
- RDS를 나타내는 개체 변수입니다 [. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) 개체입니다.  
+ RDS를 나타내는 개체 변수입니다 [. DataControl](./datacontrol-object-rds.md) 개체입니다.  
   
  *값*  
  **True**로 설정 된 경우 정렬 방향이 오름차순 임을 나타내는 **부울** 값입니다. **False** 는 내림차순을 나타냅니다.  
   
 ## <a name="remarks"></a>설명  
- [Sortcolumn](../../../ado/reference/rds-api/sortcolumn-property-rds.md), **SortDirection**, [filtervalue](../../../ado/reference/rds-api/filtervalue-property-rds.md), [filtervalue](../../../ado/reference/rds-api/filtercriterion-property-rds.md)및 [filtervalue](../../../ado/reference/rds-api/filtercolumn-property-rds.md) 속성은 클라이언트 쪽 캐시에 정렬 및 필터링 기능을 제공 합니다. 정렬 기능은 한 열의 값을 사용 하 여 레코드를 정렬 합니다. 필터링 기능은 찾기 조건에 따라 레코드의 하위 집합을 표시 하는 반면 전체 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 은 캐시에 유지 됩니다. [Reset](../../../ado/reference/rds-api/reset-method-rds.md) 메서드는 조건을 실행 하 고 현재 **레코드 집합** 을 업데이트할 수 있는 **레코드 집합**으로 바꿉니다.  
+ [Sortcolumn](./sortcolumn-property-rds.md), **SortDirection**, [filtervalue](./filtervalue-property-rds.md), [filtervalue](./filtercriterion-property-rds.md)및 [filtervalue](./filtercolumn-property-rds.md) 속성은 클라이언트 쪽 캐시에 정렬 및 필터링 기능을 제공 합니다. 정렬 기능은 한 열의 값을 사용 하 여 레코드를 정렬 합니다. 필터링 기능은 찾기 조건에 따라 레코드의 하위 집합을 표시 하는 반면 전체 [레코드 집합](../ado-api/recordset-object-ado.md) 은 캐시에 유지 됩니다. [Reset](./reset-method-rds.md) 메서드는 조건을 실행 하 고 현재 **레코드 집합** 을 업데이트할 수 있는 **레코드 집합**으로 바꿉니다.  
   
 ## <a name="applies-to"></a>적용 대상  
- [DataControl 개체(RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
+ [DataControl 개체(RDS)](./datacontrol-object-rds.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [FilterColumn, Filtercolumn, Filtercolumn, SortColumn 및 SortDirection 속성 및 Reset 메서드 예제 (VBScript)](../../../ado/reference/rds-api/filter-column-criterion-value-sortcolumn-sortdirection-example-vbscript.md)   
- [Sort 속성](../../../ado/reference/ado-api/sort-property.md)   
- [SortColumn 속성(RDS)](../../../ado/reference/rds-api/sortcolumn-property-rds.md)
-
-
+ [FilterColumn, Filtercolumn, Filtercolumn, SortColumn 및 SortDirection 속성 및 Reset 메서드 예제 (VBScript)](./filter-column-criterion-value-sortcolumn-sortdirection-example-vbscript.md)   
+ [Sort 속성](../ado-api/sort-property.md)   
+ [SortColumn 속성(RDS)](./sortcolumn-property-rds.md)

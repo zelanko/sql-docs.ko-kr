@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 36b96e3d-8cb0-4b79-bd93-ea5e0eb5679f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e56e93f851d2f5f0dac7df2339dec37c0b6a1ac2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0c696fb6be361327944223bab19d1edb0cf35460
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88450945"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776242"
 ---
 # <a name="clone-method-example-vbscript"></a>Clone 메서드 예제(VBScript)
-이 예제에서는 [Clone](../../../ado/reference/ado-api/clone-method-ado.md) 메서드를 사용 하 여 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 의 복사본을 만든 다음 사용자가 각 복사본의 레코드 포인터를 독립적으로 배치할 수 있도록 합니다.  
+이 예제에서는 [Clone](./clone-method-ado.md) 메서드를 사용 하 여 [레코드 집합](./recordset-object-ado.md) 의 복사본을 만든 다음 사용자가 각 복사본의 레코드 포인터를 독립적으로 배치할 수 있도록 합니다.  
   
  Active Server 페이지 (ASP)에서 다음 예제를 사용 합니다. 이 예에서는 Microsoft Access와 함께 배포 된 **Northwind** 데이터베이스를 사용 합니다. 다음 코드를 잘라내어 메모장 또는 다른 텍스트 편집기에 붙여넣고 CloneVBS로 저장 합니다. 모든 클라이언트 브라우저에서 결과를 볼 수 있습니다.  
   
@@ -119,5 +119,5 @@ ms.locfileid: "88450945"
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Clone 메서드 (ADO)](../../../ado/reference/ado-api/clone-method-ado.md)   
- [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [Clone 메서드 (ADO)](./clone-method-ado.md)   
+ [레코드 집합 개체(ADO)](./recordset-object-ado.md)

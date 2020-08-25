@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3be75b75-4d36-4479-ab64-9a456869252a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 617ceace87a7f265d3d4db901b0a586481c19e32
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f7adb671b42d17b4abe13733fd912234e79560e3
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444455"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775902"
 ---
 # <a name="connectionstring-property-ado"></a>ConnectionString 속성(ADO)
 데이터 원본에 대 한 연결을 설정 하는 데 사용 되는 정보를 나타냅니다.  
@@ -42,9 +42,9 @@ ms.locfileid: "88444455"
 |*원격 서버 =*|클라이언트 쪽 연결을 열 때 사용할 서버의 경로 이름을 지정 합니다. (원격 데이터 서비스에만 해당)|  
 |*URL =*|파일 또는 디렉터리와 같은 리소스를 식별 하는 절대 URL로 연결 문자열을 지정 합니다.|  
   
- **ConnectionString** 속성을 설정 하 고 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체를 연 후에는 공급자가 속성의 콘텐츠를 변경할 수 있습니다. 예를 들어 ADO에서 정의한 인수 이름을 특정 공급자의 해당 항목에 매핑할 수 있습니다.  
+ **ConnectionString** 속성을 설정 하 고 [연결](./connection-object-ado.md) 개체를 연 후에는 공급자가 속성의 콘텐츠를 변경할 수 있습니다. 예를 들어 ADO에서 정의한 인수 이름을 특정 공급자의 해당 항목에 매핑할 수 있습니다.  
   
- **Connectionstring** 속성은 [open](../../../ado/reference/ado-api/open-method-ado-connection.md) 메서드의 *connectionstring* 인수에 사용 되는 값을 자동으로 상속 하므로 **open** 메서드 호출 중에 현재 **connectionstring** 속성을 재정의할 수 있습니다.  
+ **Connectionstring** 속성은 [open](./open-method-ado-connection.md) 메서드의 *connectionstring* 인수에 사용 되는 값을 자동으로 상속 하므로 **open** 메서드 호출 중에 현재 **connectionstring** 속성을 재정의할 수 있습니다.  
   
  *파일 이름* 인수를 사용할 경우 ADO에서 연결 된 공급자를 로드 하므로 *공급자* 와 *파일 이름* 인수를 모두 전달할 수 없습니다.  
   
@@ -63,9 +63,9 @@ ms.locfileid: "88444455"
 |기본값은 없습니다.<br /><br /> ADO 응용 프로그램이 다음 운영 체제에서 실행 되 고 공급자를 명시적으로 지정 하지 않은 경우 ADO에서 다음 오류를 반환 합니다. "ADODB. 연결: 공급자가 지정 되지 않았고 지정 된 기본 공급자가 없습니다. "|Windows 2000 (64 비트)<br /><br /> Windows XP(64비트)<br /><br /> Windows 2003 서버 (64 비트)<br /><br /> Windows Vista(64비트)|  
   
 ## <a name="applies-to"></a>적용 대상  
- [연결 개체(ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
+ [연결 개체(ADO)](./connection-object-ado.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [ConnectionString, ConnectionTimeout 및 State 속성 예제 (VB)](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vb.md)   
- [ConnectionString, ConnectionTimeout 및 State 속성 예제 (VC + +)](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vc.md)   
- [부록 A: 공급자](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [ConnectionString, ConnectionTimeout 및 State 속성 예제 (VB)](./connectionstring-connectiontimeout-and-state-properties-example-vb.md)   
+ [ConnectionString, ConnectionTimeout 및 State 속성 예제 (VC + +)](./connectionstring-connectiontimeout-and-state-properties-example-vc.md)   
+ [부록 A: 공급자](../../guide/appendixes/appendix-a-providers.md)
