@@ -2,19 +2,19 @@
 title: Azure Data Studio란?
 description: Azure Data Studio는 Windows, macOS 및 Linux에서 실행되는 체험용 경량 도구로, SQL Server, Azure SQL Database 및 Azure SQL Data Warehouse를 관리하는 데 사용됩니다.
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.topic: overview
 author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18, sqlfreshmay19
 ms.date: 01/15/2020
-ms.openlocfilehash: 05819f1bafef5095ac9d3534b0293817f3841f96
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b58a54e99c269db113bdd1e1821ba55ce3d83ff5
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771929"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88765512"
 ---
 # <a name="what-is-azure-data-studio"></a>Azure Data Studio란?
 
@@ -24,7 +24,7 @@ Azure Data Studio는 IntelliSense, 코드 조각, 원본 제어 통합 및 통�
 
 Azure Data Studio와 데이터 공급자의 소스 코드는 GitHub에서 소프트웨어를 수정 및 사용할 수 있지만 클라우드 서비스에서 재배포하거나 호스트할 수는 없도록 하는 소스 코드 EULA에 따라 사용할 수 있습니다. 자세한 내용은 [Azure Data Studio FAQ](faq.md)를 참조하세요.
 
-**[Azure Data Studio 다운로드 및 설치](download.md)**
+**[Azure Data Studio 다운로드 및 설치](./download-azure-data-studio.md?view=sql-server-ver15)**
 
 ## <a name="sql-code-editor-with-intellisense"></a>IntelliSense를 포함하는 SQL 코드 편집기
 
@@ -165,7 +165,7 @@ Azure Data Studio 확장성에 대해 자세히 알아보려면 [확장성](exte
 
 ## <a name="next-steps"></a>다음 단계
 
-- [Azure Data Studio 다운로드 및 설치](download.md)
+- [Azure Data Studio 다운로드 및 설치](./download-azure-data-studio.md?view=sql-server-ver15)
 - [SQL Server 연결 및 쿼리](quickstart-sql-server.md)
 - [Azure SQL Database 연결 및 쿼리](quickstart-sql-database.md)
 

@@ -12,16 +12,18 @@ ms.assetid: 313714b8-4ad1-4c14-93a3-7f628a334a51
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 634cfc71f7b96cd5ec2acbff6c264792cfe6469a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: eb967e6607efa717865ad64f7673072034d852d4
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88419067"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88646643"
 ---
 # <a name="partitioning-with-temporal-tables"></a>Temporal 테이블을 사용하여 분할
 
+
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
+
 
 현재 및 기록 테이블에서 모두 독립적으로 분할을 사용할 수 있습니다. 그러나 분할은 시스템 버전 관리 없이 데이터의 내용을 변경하는 데 사용할 수 없습니다.
 

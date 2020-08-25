@@ -1,5 +1,5 @@
 - name: Azure Data Studio 설명서
-  href: ../azure-data-studio/index.yml
+  href: ./index.yml
 - name: Azure Data Studio 다운로드
   href: download-azure-data-studio.md
 - name: 릴리스 정보
@@ -127,7 +127,7 @@
     - name: SQL 도구
       href: ../tools/overview-sql-tools.md
     - name: Azure 개발자 도구
-      href: 'https://docs.microsoft.com/azure/?product=developer-tools'
+      href: /azure/?product=developer-tools
 - name: 리소스
   items:
     - name: FAQ

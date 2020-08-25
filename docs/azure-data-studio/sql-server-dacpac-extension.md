@@ -5,16 +5,16 @@ ms.custom: seodec18
 ms.date: 11/04/2019
 ms.reviewer: alayu, maghan, sstein
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: eeff69a65751097017383399784ea9a717f3b7e8
-ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
+ms.openlocfilehash: 709e218727ad85fdf220033e3d8ea8741451fd9e
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87522477"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88766012"
 ---
 # <a name="sql-server-dacpac-extension"></a>SQL Server dacpac 확장
 
@@ -33,7 +33,7 @@ ms.locfileid: "87522477"
 
 ## <a name="why-would-i-use-the-data-tier-application-wizard"></a>데이터 계층 애플리케이션 마법사를 사용해야 하는 이유
 
-마법사를 사용하면 dacpac 및 bacpac 파일을 보다 쉽게 관리할 수 있으므로 애플리케이션을 지원하는 데이터 계층 요소를 간편하게 개발하고 배포할 수 있습니다. 데이터 계층 애플리케이션을 사용하는 방법에 대해 자세히 알아보려면 [설명서](https://docs.microsoft.com/sql/relational-databases/data-tier-applications/data-tier-applications?view=sql-server-2017)를 참조하세요.
+마법사를 사용하면 dacpac 및 bacpac 파일을 보다 쉽게 관리할 수 있으므로 애플리케이션을 지원하는 데이터 계층 요소를 간편하게 개발하고 배포할 수 있습니다. 데이터 계층 애플리케이션을 사용하는 방법에 대해 자세히 알아보려면 [설명서](../relational-databases/data-tier-applications/data-tier-applications.md?view=sql-server-2017)를 참조하세요.
 
 
 ## <a name="install-the-extension"></a>확장 설치
@@ -56,5 +56,5 @@ ms.locfileid: "87522477"
 
 ## <a name="next-steps"></a>다음 단계
 
-dacpac에 대한 자세한 내용은 [설명서](https://docs.microsoft.com/sql/relational-databases/data-tier-applications/data-tier-applications?view=sql-server-2017)를 참조하세요.
+dacpac에 대한 자세한 내용은 [설명서](../relational-databases/data-tier-applications/data-tier-applications.md?view=sql-server-2017)를 참조하세요.
 [여기](https://github.com/microsoft/azuredatastudio/issues)서 문제 및 기능 요청을 보고하세요.

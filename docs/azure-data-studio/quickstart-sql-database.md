@@ -2,19 +2,19 @@
 title: Azure SQL 데이터베이스 연결 및 쿼리
 description: Azure Data Studio를 사용하여 Azure SQL Database 서버에 연결한 다음 데이터베이스를 만들고 쿼리해 보는 빠른 시작을 진행합니다.
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.reviewer: alayu; maghan; sstein
 ms.topic: quickstart
 author: yualan
 ms.author: alayu
 ms.custom: seodec18; sqlfreshmay19; seo-lt-2019
 ms.date: 05/14/2019
-ms.openlocfilehash: f7ceb73d25d69e1d8e8f33b2c6a23b0ff7bff636
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: fc3ff2a1edea509318040edd90e693b8eaf839df
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411299"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88766442"
 ---
 # <a name="quickstart-use-azure-data-studio-to-connect-and-query-azure-sql-database"></a>빠른 시작: Azure Data Studio를 사용한 Azure SQL 데이터베이스 연결 및 쿼리
 
@@ -24,13 +24,13 @@ ms.locfileid: "87411299"
 
 이 빠른 시작을 완료하려면 Azure Data Studio 및 Azure SQL Database 서버가 필요합니다.
 
-- [Azure Data Studio 설치](download.md)
+- [Azure Data Studio 설치](./download-azure-data-studio.md?view=sql-server-ver15)
 
 Azure SQL Server가 없는 경우 다음 Azure SQL Database 빠른 시작 중 하나를 완료합니다. 이후 단계를 위해 정규화된 서버 이름과 로그인 자격 증명을 기억합니다.
 
-- [DB 만들기 - 포털](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-portal)
-- [DB 만들기 - CLI](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-cli)
-- [DB 만들기 - PowerShell](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-powershell)
+- [DB 만들기 - 포털](/azure/sql-database/sql-database-get-started-portal)
+- [DB 만들기 - CLI](/azure/sql-database/sql-database-get-started-cli)
+- [DB 만들기 - PowerShell](/azure/sql-database/sql-database-get-started-powershell)
 
 
 ## <a name="connect-to-your-azure-sql-database-server"></a>Azure SQL Database 서버에 연결
@@ -57,7 +57,7 @@ Azure Data Studio를 사용하여 Azure SQL Database 서버에 대한 연결을 
 
 3. **연결**을 선택합니다.
 
-4. 서버에 Azure Data Studio 연결을 허용하는 방화벽 규칙이 없으면 **새 방화벽 규칙 만들기** 양식이 열립니다. 양식을 완료하여 새 방화벽 규칙을 만듭니다. 자세한 내용은 [방화벽 규칙](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure)을 참조하세요.
+4. 서버에 Azure Data Studio 연결을 허용하는 방화벽 규칙이 없으면 **새 방화벽 규칙 만들기** 양식이 열립니다. 양식을 완료하여 새 방화벽 규칙을 만듭니다. 자세한 내용은 [방화벽 규칙](/azure/sql-database/sql-database-firewall-configure)을 참조하세요.
 
    ![새 방화벽 규칙](media/quickstart-sql-database/firewall.png)  
 
@@ -150,7 +150,7 @@ Azure Data Studio를 사용하여 Azure SQL Database 서버에 대한 연결을 
 
 ## <a name="clean-up-resources"></a>리소스 정리
 
-이후의 빠른 시작 문서는 여기에서 만든 리소스를 기반으로 합니다. 해당 문서를 진행하려는 경우 이 리소스를 삭제하지 않아야 합니다. 그렇지 않으면 Azure Portal에서 더 이상 필요하지 않은 리소스를 삭제합니다. 자세한 내용은 [리소스 정리](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-portal#clean-up-resources)를 참조하세요.
+이후의 빠른 시작 문서는 여기에서 만든 리소스를 기반으로 합니다. 해당 문서를 진행하려는 경우 이 리소스를 삭제하지 않아야 합니다. 그렇지 않으면 Azure Portal에서 더 이상 필요하지 않은 리소스를 삭제합니다. 자세한 내용은 [리소스 정리](/azure/sql-database/sql-database-get-started-portal#clean-up-resources)를 참조하세요.
 
 ## <a name="next-steps"></a>다음 단계
 

@@ -19,28 +19,29 @@ ms.assetid: dff99404-a002-48ee-910e-f37f013d946d
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: babdda8ca6ced94eba21788028d8bf6e6e7eeaae
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: fef5768f72f45bf388ccd5878d56dc480371aecd
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012451"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88646063"
 ---
 # <a name="examples-of-bulk-import-and-export-of-xml-documents-sql-server"></a>XML 문서 대량 가져오기 및 내보내기 예(SQL Server)
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
-    
-##  <a name="top"></a>
- XML 문서를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스로 대량 가져오거나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에서 대량으로 내보낼 수 있습니다. 이 항목에서는 이 두 가지 경우에 대한 예를 제공합니다.  
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
+
+## <a name="top"></a>
+
+XML 문서를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스로 대량 가져오거나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에서 대량으로 내보낼 수 있습니다. 이 항목에서는 이 두 가지 경우에 대한 예를 제공합니다.
+
+다음을 사용하여 데이터 파일의 데이터를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블 또는 분할되지 않은 뷰로 대량 가져올 수 있습니다.  
   
- 다음을 사용하여 데이터 파일의 데이터를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블 또는 분할되지 않은 뷰로 대량 가져올 수 있습니다.  
+- **bcp** 유틸리티  
+   **bcp** 유틸리티를 사용하면 분할된 뷰를 포함하여 SELECT 문이 작동하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 모든 위치에서 데이터를 내보낼 수도 있습니다.  
+
+- BULK INSERT  
   
--   **bcp** 유틸리티  
-    **bcp** 유틸리티를 사용하면 분할된 뷰를 포함하여 SELECT 문이 작동하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 모든 위치에서 데이터를 내보낼 수도 있습니다.  
-  
--   BULK INSERT  
-  
--   INSERT ... 선택 * OPENROWSET (BULK)에서  
+- INSERT ... 선택 * OPENROWSET (BULK)에서  
 
 자세한 내용은 다음 항목을 참조하십시오.
 - [bcp 유틸리티를 사용하여 대량 데이터 가져오기 및 내보내기(SQL Server)](../../relational-databases/import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)

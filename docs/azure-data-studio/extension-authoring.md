@@ -2,19 +2,19 @@
 title: 확장 만들기
 description: 확장을 사용하여 Azure Data Studio에 기능을 추가할 수 있습니다. 확장을 만들고 확장 갤러리에 게시하는 방법을 알아봅니다.
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 0473ac567f26748999e5718fe5f81660b0bfb7ba
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: bd2a20857c8f16ea2b2d71ebfcb620bcea3f0190
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411129"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778422"
 ---
 # <a name="extend-the-functionality-by-creating-azure-data-studio-extensions"></a>Azure Data Studio 확장을 만들어 기능 확장
 
@@ -40,7 +40,7 @@ npm install -g yo generator-azuredatastudio # Install the generator
 yo azuredatastudio
 ```
 
-확장 템플릿을 시작하는 방법에 대한 자세한 내용은 키맵 확장을 만드는 과정을 안내해 주는 [확장 만들기](https://docs.microsoft.com/sql/azure-data-studio/tutorial-create-extension?view=sql-server-ver15)를 참조하세요.
+확장 템플릿을 시작하는 방법에 대한 자세한 내용은 키맵 확장을 만드는 과정을 안내해 주는 [확장 만들기](./tutorial-create-extension.md?view=sql-server-ver15)를 참조하세요.
 
 **확장성 참조**
 

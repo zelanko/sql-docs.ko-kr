@@ -2,19 +2,19 @@
 title: Windows 인증을 사용하여 SQL Server에 연결(Kerberos)
 description: Microsoft Kerberos 통합 인증을 사용하여 Azure Data Studio를 SQL Server에 연결하는 방법을 알아봅니다.
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu, maghan, sstein
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 325d066ec88045380c45dc2784e6766a4f549757
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: 573f78b3edace44695f73d79fba9679ba5fd4e00
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411159"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778432"
 ---
 # <a name="connect-azure-data-studio-to-your-sql-server-using-windows-authentication---kerberos"></a>Windows 인증을 사용하여 Azure Data Studio를 SQL Server에 연결 - Kerberos
 
@@ -25,7 +25,7 @@ macOS 또는 Linux에서 통합 인증(Windows 인증)을 사용하려면 현재
 ## <a name="prerequisites"></a>필수 구성 요소
 
 - Kerberos 도메인 컨트롤러를 쿼리하기 위해 Windows 도메인에 가입된 머신에 액세스할 수 있어야 합니다.
-- Kerberos 인증을 허용하도록 SQL Server가 구성되어 있어야 합니다. Unix에서 실행되는 클라이언트 드라이버의 경우 Kerberos를 사용한 통합 인증만 지원됩니다. 자세한 내용은 [Kerberos 통합 인증을 사용하여 SQL Server에 연결](../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md)을 참조하세요. 연결하려는 각 SQL Server 인스턴스에 대해 등록된 SPN이 있어야 합니다. 자세한 내용은 [서비스 사용자 이름 등록](https://technet.microsoft.com/library/ms191153%28v=sql.105%29.aspx#SPN%20Formats)을 참조하세요.
+- Kerberos 인증을 허용하도록 SQL Server가 구성되어 있어야 합니다. Unix에서 실행되는 클라이언트 드라이버의 경우 Kerberos를 사용한 통합 인증만 지원됩니다. 자세한 내용은 [Kerberos 통합 인증을 사용하여 SQL Server에 연결](../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md)을 참조하세요. 연결하려는 각 SQL Server 인스턴스에 대해 등록된 SPN이 있어야 합니다. 자세한 내용은 [서비스 사용자 이름 등록](/previous-versions/sql/sql-server-2008-r2/ms191153(v=sql.105)#SPN%20Formats)을 참조하세요.
 
 
 ## <a name="checking-if-sql-server-has-kerberos-setup"></a>SQL Server에 Kerberos 설정이 있는지 확인

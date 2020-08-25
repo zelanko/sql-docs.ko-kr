@@ -5,16 +5,16 @@ ms.custom: seodec18
 ms.date: 09/24/2018
 ms.reviewer: alayu, maghan, sstein
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: e6e71f00748fa9d0fc4b803d8268d8a8b23284fc
-ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
+ms.openlocfilehash: e3ab5a83f8ea4a8715101debdbdf5d292761d7b6
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87522447"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88765782"
 ---
 # <a name="sql-server-profiler-extension-preview"></a>SQL Server Profiler 확장(미리 보기)
 
@@ -49,9 +49,4 @@ SQL Server Profiler 확장(미리 보기)은 확장 이벤트를 사용하여 �
 
 ## <a name="next-steps"></a>다음 단계
 
-Profiler 및 확장 이벤트에 대한 자세한 내용은 [확장 이벤트](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events)를 참조하세요.
-
-
-
-
-
+Profiler 및 확장 이벤트에 대한 자세한 내용은 [확장 이벤트](../relational-databases/extended-events/extended-events.md)를 참조하세요.

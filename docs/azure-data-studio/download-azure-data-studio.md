@@ -9,12 +9,12 @@ ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
 ms.date: 8/12/2020
-ms.openlocfilehash: a92bc4b19adc4322852f19ddabe3d98e20174e40
-ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
+ms.openlocfilehash: bacfbe7df36b9222a4297ced95a0ffed2733fed6
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88746063"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778462"
 ---
 # <a name="download-and-install-azure-data-studio"></a>Azure Data Studio 다운로드 및 설치
 
@@ -31,7 +31,7 @@ Azure Data Studio는 Windows, macOS, Linux에서 실행됩니다.
 | macOS | [.zip](https://go.microsoft.com/fwlink/?linkid=2138609) | 2020년 8월 12일 | 1.21.0 |
 | Linux | [.deb](https://go.microsoft.com/fwlink/?linkid=2138508)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2138507)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2138706) | 2020년 8월 12일| 1.21.0 |
 
-최신 릴리스에 대한 자세한 내용은 [릴리스 정보](release-notes.md)를 참조하세요.
+최신 릴리스에 대한 자세한 내용은 [릴리스 정보](./release-notes-azure-data-studio.md?view=sql-server-ver15)를 참조하세요.
 
 ## <a name="get-azure-data-studio-for-windows"></a>Windows용 Azure Data Studio 다운로드
 

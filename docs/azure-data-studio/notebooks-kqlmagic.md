@@ -6,19 +6,19 @@ ms.author: maghan
 ms.reviewer: jukoesma
 ms.topic: tutorial
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.custom: ''
 ms.date: 04/27/2020
-ms.openlocfilehash: ef59ecb200b30af6c30a5ea602cd89bc2c951e24
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 0f05030869b66ca0d2f57000aa85f02c93079f08
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920471"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88766832"
 ---
 # <a name="kqlmagic-extension-in-azure-data-studio"></a>Azure Data Studio의 Kqlmagic 확장
 
-**Kqlmagic**은 **[Azure Data Studio Notebook](notebooks-guidance.md)** 에서 Python 커널의 기능을 확장하는 명령입니다. Python과 **[KQL(Kusto 쿼리 언어)](https://docs.microsoft.com/azure/data-explorer/kusto/query)** 을 결합하여, `render` 명령이 통합된 Plot.ly 라이브러리를 사용하여 데이터를 쿼리하고 시각화할 수 있습니다. Kqlmagic은 하나의 위치에서 Notebook, 데이터 분석 및 풍부한 Python 기능이라는 장점을 제공합니다. Kqlmagic이 지원되는 데이터 원본에는 **[Azure Data Explorer](https://docs.microsoft.com/azure/data-explorer/data-explorer-overview)** , **[Application Insights](https://docs.microsoft.com/azure/azure-monitor/app/app-insights-overview)** , **[Azure Monitor 로그](https://docs.microsoft.com/azure/azure-monitor/platform/data-platform-logs)** 등이 있습니다.
+**Kqlmagic**은 **[Azure Data Studio Notebook](notebooks-guidance.md)** 에서 Python 커널의 기능을 확장하는 명령입니다. Python과 **[KQL(Kusto 쿼리 언어)](/azure/data-explorer/kusto/query)** 을 결합하여, `render` 명령이 통합된 Plot.ly 라이브러리를 사용하여 데이터를 쿼리하고 시각화할 수 있습니다. Kqlmagic은 하나의 위치에서 Notebook, 데이터 분석 및 풍부한 Python 기능이라는 장점을 제공합니다. Kqlmagic이 지원되는 데이터 원본에는 **[Azure Data Explorer](/azure/data-explorer/data-explorer-overview)** , **[Application Insights](/azure/azure-monitor/app/app-insights-overview)** , **[Azure Monitor 로그](/azure/azure-monitor/platform/data-platform-logs)** 등이 있습니다.
 
 이 문서에서는 Azure Data Studio에서 Azure Data Explorer 클러스터, Application Insights 로그 및 Azure Monitor 로그용 Kqlmagic 확장을 사용하여 Notebook을 만들고 실행하는 방법을 보여 줍니다.
 
@@ -114,7 +114,7 @@ ms.locfileid: "86920471"
 
 ### <a name="query-and-visualize-for-azure-data-explorer"></a>Azure Data Explorer에 대해 쿼리 및 시각화
 
-[렌더링 연산자](https://docs.microsoft.com/azure/data-explorer/kusto/query/renderoperator)를 사용하여 데이터를 쿼리하고 ploy.ly 라이브러리를 사용하여 데이터를 시각화합니다. 이 쿼리 및 시각화는 네이티브 KQL을 사용하는 통합 환경을 제공합니다.
+[렌더링 연산자](/azure/data-explorer/kusto/query/renderoperator)를 사용하여 데이터를 쿼리하고 ploy.ly 라이브러리를 사용하여 데이터를 시각화합니다. 이 쿼리 및 시각화는 네이티브 KQL을 사용하는 통합 환경을 제공합니다.
 
 1. 주와 빈도를 기준으로 상위 10개의 폭풍우 이벤트를 분석합니다.
 
@@ -179,7 +179,7 @@ ms.locfileid: "86920471"
 
 ### <a name="query-and-visualize-for-application-insights"></a>Application Insights에 대해 쿼리 및 시각화
 
-[렌더링 연산자](https://docs.microsoft.com/azure/data-explorer/kusto/query/renderoperator)를 사용하여 데이터를 쿼리하고 ploy.ly 라이브러리를 사용하여 데이터를 시각화합니다. 이 쿼리 및 시각화는 네이티브 KQL을 사용하는 통합 환경을 제공합니다.
+[렌더링 연산자](/azure/data-explorer/kusto/query/renderoperator)를 사용하여 데이터를 쿼리하고 ploy.ly 라이브러리를 사용하여 데이터를 시각화합니다. 이 쿼리 및 시각화는 네이티브 KQL을 사용하는 통합 환경을 제공합니다.
 
 1. 페이지 보기를 표시합니다.
 
@@ -234,7 +234,7 @@ ms.locfileid: "86920471"
 
 ### <a name="query-and-visualize-for-azure-monitor-logs"></a>Azure Monitor 로그에 대해 쿼리 및 시각화
 
-[렌더링 연산자](https://docs.microsoft.com/azure/data-explorer/kusto/query/renderoperator)를 사용하여 데이터를 쿼리하고 ploy.ly 라이브러리를 사용하여 데이터를 시각화합니다. 이 쿼리 및 시각화는 네이티브 KQL을 사용하는 통합 환경을 제공합니다.
+[렌더링 연산자](/azure/data-explorer/kusto/query/renderoperator)를 사용하여 데이터를 쿼리하고 ploy.ly 라이브러리를 사용하여 데이터를 시각화합니다. 이 쿼리 및 시각화는 네이티브 KQL을 사용하는 통합 환경을 제공합니다.
 
 1. 타임라인 차트를 봅니다.
 
@@ -251,7 +251,7 @@ ms.locfileid: "86920471"
 
 Notebook 및 Kqlmagic에 대한 자세한 정보:
 
-- [Azure Data Explorer에서 Jupyter Notebook 및 kqlmagic 확장을 사용하여 데이터 분석하기](https://docs.microsoft.com/azure/data-explorer/Kqlmagic)
+- [Azure Data Explorer에서 Jupyter Notebook 및 kqlmagic 확장을 사용하여 데이터 분석하기](/azure/data-explorer/Kqlmagic)
 - [Extension (Magic) to Jupyter notebook and Jupyter lab, that enable notebook experience working with Kusto, Application Insights, and LogAnalytics data](https://github.com/Microsoft/jupyter-Kqlmagic)(Kusto, Application Insights 및 LogAnalytics 데이터로 작업할 수 있는 Notebook 환경을 지원하는 Jupyter Notebook 및 Jupyter Lab으로 확장(매직))
 - [Kqlmagic](https://pypi.org/project/Kqlmagic/)
 - [KustoMagicSamples](https://notebooks.azure.com/RknDzgn/projects/KustoMagicSamples/html/Getting%20Started%20with%20Kqlmagic%20on%20Azure%20Data%20Explorer-Copy.ipynb)

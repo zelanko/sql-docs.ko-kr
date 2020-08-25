@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c60b0dbb40c41a7d41971bffc0f44b89ad77eaaa
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 25b22aa23d773765f98cf3610d57bb041ba2205b
+ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882734"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88746183"
 ---
 # <a name="connect-to-an-always-on-availability-group-listener"></a>Always On 가용성 그룹 수신기에 연결 
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -184,10 +184,10 @@ SAN: Win2019.contoso.com,Listener1.contoso.com,Listener2.contoso.com,Listener3.c
 
 도메인 관리자가 수신기에 대한 클라이언트 연결에 Kerberos를 사용하도록 설정하려면 Active Directory에서 각 가용성 그룹 수신기의 SPN(서비스 사용자 이름)을 구성해야 합니다. SPN을 등록할 때 가용성 복제본을 호스트하는 서버 인스턴스의 서비스 계정을 사용해야 합니다. SPN을 모든 복제본에 대해 사용하려면 가용성 그룹을 호스팅하는 WSFC 클러스터의 모든 인스턴스에 대해 동일한 서비스 계정을 사용해야 합니다.  
   
- **setspn** Windows 명령줄 도구를 사용하여 SPN을 구성할 수 있습니다.  예를 들어 `AG1listener.Adventure-Works.com` 도메인 계정에서 실행하도록 구성된 모든 SQL Server 인스턴스 집합에 호스팅되는 `corp/svclogin2`이라는 가용성 그룹에 대한 SPN을 구성하려면  
+ **setspn** Windows 명령줄 도구를 사용하여 SPN을 구성할 수 있습니다.  예를 들어 `AG1listener.Adventure-Works.com` 도메인 계정에서 실행하도록 구성된 모든 SQL Server 인스턴스 집합에 호스팅되는 `corp\svclogin2`이라는 가용성 그룹에 대한 SPN을 구성하려면  
   
 ```  
-setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp/svclogin2  
+setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp\svclogin2  
 ```  
   
  SQL Server에 대한 SPN을 수동으로 등록하는 방법은 [Kerberos 연결의 서비스 사용자 이름 등록](../../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)을 참조하세요.  

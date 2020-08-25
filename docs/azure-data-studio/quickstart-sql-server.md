@@ -2,19 +2,19 @@
 title: '빠른 시작: SQL Server 연결 및 쿼리'
 description: Azure Data Studio를 사용하여 SQL Server에 연결하고 T-SQL(Transact-SQL) 문을 사용하여 데이터베이스를 만들어 보는 빠른 시작을 진행합니다.
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.topic: quickstart
 author: yualan
 ms.author: alayu
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18, sqlfreshmay19
 ms.date: 08/02/2019
-ms.openlocfilehash: 532e210d239f8c55b99bd34828fafe160e1fb78b
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: f49d322e664bce35f7d9a47ab5c8f3b197468377
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411289"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88766362"
 ---
 # <a name="quickstart-use-azure-data-studio-to-connect-and-query-sql-server"></a>빠른 시작: Azure Data Studio를 사용하여 SQL Server 연결 및 쿼리
 
@@ -24,13 +24,13 @@ ms.locfileid: "87411289"
 
 이 빠른 시작을 완료하려면 Azure Data Studio와 SQL Server 액세스 권한이 필요합니다.
 
-- [Azure Data Studio](download.md)를 설치합니다.
+- [Azure Data Studio](./download-azure-data-studio.md?view=sql-server-ver15)를 설치합니다.
 
 SQL Server에 대한 액세스 권한이 없는 경우 다음 링크에서 해당 플랫폼을 선택합니다(SQL 로그인 및 암호를 기억해야 함).
 
 - [Windows - SQL Server 2017 Developer Edition 다운로드](https://www.microsoft.com/sql-server/sql-server-downloads)
-- [macOS - Docker에서 SQL Server 2017 다운로드](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker)
-- [Linux - SQL Server 2017 Developer Edition 다운로드](https://docs.microsoft.com/sql/linux/sql-server-linux-overview#install) - ‘데이터를 만들고 쿼리’하는 단계까지만 수행하면 됩니다.
+- [macOS - Docker에서 SQL Server 2017 다운로드](../linux/quickstart-install-connect-docker.md)
+- [Linux - SQL Server 2017 Developer Edition 다운로드](../linux/sql-server-linux-overview.md#install) - ‘데이터를 만들고 쿼리’하는 단계까지만 수행하면 됩니다.
 
 ## <a name="connect-to-a-sql-server"></a>SQL Server에 연결
 

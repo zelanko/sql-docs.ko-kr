@@ -3,18 +3,18 @@ title: SQL Server 중앙 관리 서버 확장
 description: 서버를 그룹화하고 작업을 그룹에 적용하기 위한 확장인 SQL Server 중앙 관리 서버 확장(미리 보기)을 설치하고 사용하는 방법을 알아봅니다.
 ms.reviewer: alayu, maghan, sstein
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
 ms.custom: seodec18
 ms.date: 06/06/2019
-ms.openlocfilehash: 6f28601245c239b9ffed0379b43123a300d23d30
-ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
+ms.openlocfilehash: 3024a9c61fb51063b50f8fde769e7bdbb5608fbf
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87522497"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88766052"
 ---
 # <a name="sql-server-central-management-servers-extension-preview"></a>SQL Server 중앙 관리 서버 확장(미리 보기)
 
@@ -34,6 +34,4 @@ ms.locfileid: "87522497"
  중앙 관리 서버는 연결 아이콘(Ctrl/Cmd + G)을 클릭하여 볼 수 있습니다. 확장을 처음 다운로드하면 CMS 보기가 최소화되며 **중앙 관리 서버**를 클릭하여 열 수 있습니다.
 
 ## <a name="next-steps"></a>다음 단계
-중앙 관리 서버를 개념적으로 자세히 알아보려면 [여기를 참조하세요.](https://docs.microsoft.com/sql/ssms/register-servers/create-a-central-management-server-and-server-group)
-
-
+중앙 관리 서버를 개념적으로 자세히 알아보려면 [여기를 참조하세요.](../ssms/register-servers/create-a-central-management-server-and-server-group.md)

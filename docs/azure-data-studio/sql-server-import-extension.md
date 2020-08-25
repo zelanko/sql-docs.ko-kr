@@ -5,22 +5,22 @@ ms.custom: seodec18
 ms.date: 09/24/2018
 ms.reviewer: alayu, maghan, sstein
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: cac73bebca185f40deb1b1bac4a77c6ceb20264e
-ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
+ms.openlocfilehash: 9ecee71588cb54cb23c813cf5009b92159cf94d6
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87522457"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88765922"
 ---
 # <a name="sql-server-import-extension-preview"></a>SQL Server 가져오기 확장(미리 보기)
 
 SQL Server 가져오기 확장(미리 보기)은 .txt 및 .csv 파일을 SQL 테이블로 변환합니다. 이 마법사는 [PROSE(Program Synthesis using Examples)](https://microsoft.github.io/prose/)라는 Microsoft Research 프레임워크를 활용하여 최소한의 사용자 입력으로 파일을 지능적으로 구문 분석합니다. 이 기능은 데이터 랭글링을 위한 강력한 프레임워크로, Microsoft Excel의 빠른 채우기를 지원하는 것과 동일한 기술입니다.
 
-이 기능의 SSMS 버전에 대해 자세히 알아보려면 [이 문서](https://docs.microsoft.com/sql/relational-databases/import-export/import-flat-file-wizard)를 참조하세요.
+이 기능의 SSMS 버전에 대해 자세히 알아보려면 [이 문서](../relational-databases/import-export/import-flat-file-wizard.md)를 참조하세요.
 
 
 ## <a name="install-the-sql-server-import-extension"></a>SQL Server 가져오기 확장 설치

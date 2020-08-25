@@ -6,15 +6,15 @@ ms.author: alayu
 ms.reviewer: achatter, maghan, mikeray
 ms.topic: conceptual
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.custom: seo-lt-2019
 ms.date: 07/01/2020
-ms.openlocfilehash: 7e61b31a21a6a3a85a9830bc73a7d62777c78b9b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b7d6e2c33cfc76736c3678ff9c802e3059f53baa
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920550"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767822"
 ---
 # <a name="use-jupyter-notebooks-in-azure-data-studio"></a>Azure Data Studio에서 Jupyter Notebook 사용
 
@@ -22,7 +22,7 @@ ms.locfileid: "86920550"
 
 Jupyter Notebook은 라이브 코드, 수식, 시각화 및 내레이션 텍스트를 포함하는 문서를 만들고 공유할 수 있는 오픈 소스 웹 애플리케이션입니다. 사용에는 데이터 정리 및 변환, 숫자 시뮬레이션, 통계 모델링, 데이터 시각화 및 기계 학습이 포함됩니다.
 
-이 문서에서는 최신 버전의 [**Azure Data Studio**](../azure-data-studio/download.md)에서 새 Notebook을 만드는 방법과 여러 커널을 사용하여 고유한 Notebook 작성을 시작하는 방법을 설명합니다.
+이 문서에서는 최신 버전의 [**Azure Data Studio**](./download-azure-data-studio.md?view=sql-server-ver15)에서 새 Notebook을 만드는 방법과 여러 커널을 사용하여 고유한 Notebook 작성을 시작하는 방법을 설명합니다.
 
 Notebook에 대한 소개는 5분 분량의 다음 동영상을 시청하세요. Azure Data Studio:
 
@@ -51,7 +51,7 @@ Azure Data Studio Notebook은 SQL Server, Python, PySpark를 비롯한 다양한
 **연결 대상**은 커널의 컨텍스트를 제공합니다. 예를 들어 SQL 커널을 사용하는 경우 임의의 SQL Server 인스턴스에 연결할 수 있습니다.
 Python3 커널을 사용하는 경우 **localhost**에 연결하고 로컬 Python 개발에 이 커널을 사용할 수 있습니다.
 
-SQL 커널을 사용하여 PostgreSQL 서버 인스턴스에 연결할 수도 있습니다. PostgreSQL 개발자이고 Notebook을 PostgreSQL 서버에 연결하려는 경우, Azure Data Studio 확장 마켓플레이스에서 [**PostgreSQL 확장**](../azure-data-studio/postgres-extension.md)을 다운로드한 다음, PostgreSQL 서버에 연결합니다.
+SQL 커널을 사용하여 PostgreSQL 서버 인스턴스에 연결할 수도 있습니다. PostgreSQL 개발자이고 Notebook을 PostgreSQL 서버에 연결하려는 경우, Azure Data Studio 확장 마켓플레이스에서 [**PostgreSQL 확장**](./postgres-extension.md)을 다운로드한 다음, PostgreSQL 서버에 연결합니다.
 
 SQL Server 2019 빅 데이터 클러스터에 연결되어 있는 경우, 기본 **연결 대상**은 클러스터의 엔드포인트입니다. 클러스터의 Spark 컴퓨팅을 사용하여 Python, Scala 및 R 코드를 제출할 수 있습니다.
 

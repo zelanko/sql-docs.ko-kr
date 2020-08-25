@@ -5,21 +5,21 @@ ms.custom: seodec18
 ms.date: 10/07/2019
 ms.reviewer: alanyu, maghan, sstein
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.topic: conceptual
 author: jovanpop-msft
 ms.author: jovanpop
 manager: alanyu
-ms.openlocfilehash: 58c79a367782f040739b23f52e01bec5cb0ed917
-ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
+ms.openlocfilehash: dd1b610c5c8e99fcda446688d0dbdffe0a9dc51e
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87988602"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778482"
 ---
 # <a name="azure-sql-managed-instance-dashboard-for-azure-data-studio-preview"></a>Azure Data Studio용 Azure SQL Managed Instance 대시보드(미리 보기)
 
-Azure SQL Managed Instance 확장은 [Azure Data Studio](https://github.com/Microsoft/azuredatastudio)에서 [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index)를 사용하기 위한 대시보드를 제공합니다. 이 확장은 다음과 같은 기능을 제공합니다.
+Azure SQL Managed Instance 확장은 [Azure Data Studio](https://github.com/Microsoft/azuredatastudio)에서 [Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance-index)를 사용하기 위한 대시보드를 제공합니다. 이 확장은 다음과 같은 기능을 제공합니다.
 
 - vCore 및 사용된 스토리지를 포함하여 SQL Managed Instance 속성 표시
 - 이전 2시간 동안 CPU 및 스토리지 사용량을 모니터링
@@ -29,7 +29,7 @@ Azure SQL Managed Instance 확장은 [Azure Data Studio](https://github.com/Micr
 
 ## <a name="install"></a>설치
 
-이 확장의 공식 릴리스를 설치할 수 있습니다. [Azure Data Studio 설명서](https://docs.microsoft.com/sql/azure-data-studio/extensions)의 단계를 수행합니다.
+이 확장의 공식 릴리스를 설치할 수 있습니다. [Azure Data Studio 설명서](./extensions.md)의 단계를 수행합니다.
 **확장** 창에서 “Managed Instance”를 검색하여 설치합니다. 이 확장을 설치하면 후속 확장 업데이트에 대한 알림이 자동으로 제공됩니다.
 
 그리고 Azure Data Studio에 **관리되는 인스턴스** 탭이 표시됩니다. 이 탭에서 관리되는 인스턴스 관련 정보를 찾을 수 있습니다.
@@ -58,8 +58,8 @@ Azure SQL Managed Instance 확장은 [Azure Data Studio](https://github.com/Micr
 - **저장소 공간 제한에 도달**. 불필요한 데이터를 삭제하거나 인스턴스 스토리지 크기를 늘리세요. 스토리지 제한에 도달한 데이터베이스는 읽기 쿼리도 처리하지 못할 수 있습니다.
 - **인스턴스 처리량 제한에 도달**. 서비스 계층의 제한에 근접하여 로드하는 경우 사용자에게 알립니다. 범용의 경우 22MB/s, 중요 비즈니스용의 경우 48MB/s입니다. 관리되는 인스턴스는 백업을 수행할 수 있도록 부하를 제한한다는 점을 유의하세요.
 - **메모리 압력**. 페이지 예상 수명이 짧거나 `PAGEIOLATCH` 대기 통계가 많을 경우 이는 인스턴스가 메모리에서 페이지를 제거하고 지속적으로 디스크에서 더 많은 페이지를 로드하려 하고 있음을 나타내는 것일 수 있습니다.
-- **로그 파일 제한**. 로그 파일이 [범용 서비스 계층에 대한 파일 I/O 제한](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-resource-limits#file-io-characteristics-in-general-purpose-tier)에 근접하는 경우 더 나은 성능을 얻으려면 로그 파일 크기를 늘려야 할 수 있습니다.
-- **데이터 파일 제한**. 데이터 파일이 [범용 서비스 계층에 대한 파일 I/O 제한](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-resource-limits#file-io-characteristics-in-general-purpose-tier)에 근접하는 경우 더 나은 성능을 얻으려면 데이터 파일 크기를 늘려야 할 수 있습니다. 이 문제로 인해 메모리 압력이 유발되거나 백업 속도가 느려질 수 있습니다.
+- **로그 파일 제한**. 로그 파일이 [범용 서비스 계층에 대한 파일 I/O 제한](/azure/sql-database/sql-database-managed-instance-resource-limits#file-io-characteristics-in-general-purpose-tier)에 근접하는 경우 더 나은 성능을 얻으려면 로그 파일 크기를 늘려야 할 수 있습니다.
+- **데이터 파일 제한**. 데이터 파일이 [범용 서비스 계층에 대한 파일 I/O 제한](/azure/sql-database/sql-database-managed-instance-resource-limits#file-io-characteristics-in-general-purpose-tier)에 근접하는 경우 더 나은 성능을 얻으려면 데이터 파일 크기를 늘려야 할 수 있습니다. 이 문제로 인해 메모리 압력이 유발되거나 백업 속도가 느려질 수 있습니다.
 - **가용성 문제**. 가상 로그 파일 수가 많으면 성능에 영향을 줄 수 있습니다. 프로세스 오류가 발생하면 이러한 문제로 인해 범용 서비스 계층에서 데이터베이스 복구가 길어질 수 있습니다.
 
 정기적으로 이러한 권장 사항을 검토하고 근본 원인을 조사하여 문제를 해결하기 위한 조치를 취해야 합니다. SQL Managed Instance 확장은 보고된 문제 중 일부를 완화하기 위해 실행할 수 있는 스크립트를 제공합니다.

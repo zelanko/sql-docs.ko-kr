@@ -3,18 +3,18 @@ title: 데이터 가상화 확장
 description: Azure Data Studio용 데이터 가상화 확장
 ms.reviewer: alayu, sstein, maghan
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.topic: conceptual
 author: rajmera3
 ms.author: raajmera
 ms.custom: seodec18
 ms.date: 11/04/2019
-ms.openlocfilehash: 29e4e9b942902d598908dc96888fb5917a7d2f50
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7cfe58590608dcc67af8e0beb36b440813dc76fa
+ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774674"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88746053"
 ---
 # <a name="data-virtualization-extension-for-azure-data-studio"></a>Azure Data Studio용 데이터 가상화 확장
 

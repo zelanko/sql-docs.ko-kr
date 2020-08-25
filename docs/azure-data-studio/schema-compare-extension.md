@@ -5,16 +5,16 @@ ms.custom: seodec18
 ms.date: 11/04/2019
 ms.reviewer: alayu, maghan, sstein
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 80aa0be8ae70773fe0e1a0087e623f679504a983
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: 928c258dff70f861c33cc59125171a467eb12bf8
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411229"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88766222"
 ---
 # <a name="schema-compare-extension"></a>스키마 비교 확장
 스키마 비교 확장은 두 데이터베이스 정의를 비교하고 원본에서 대상으로 차이점을 적용하는 데 사용할 수 있는 간편한 환경을 제공합니다.
@@ -68,5 +68,5 @@ ms.locfileid: "87411229"
 
 ## <a name="next-steps"></a>다음 단계
 
-스키마 비교에 대해 자세히 알아보려면 [설명서를 참조하세요.](https://docs.microsoft.com/sql/ssdt/how-to-use-schema-compare-to-compare-different-database-definitions)
+스키마 비교에 대해 자세히 알아보려면 [설명서를 참조하세요.](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)
 [여기](https://github.com/microsoft/azuredatastudio/issues)서 문제 및 기능 요청을 보고하세요.

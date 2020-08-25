@@ -2,19 +2,19 @@
 title: 확장성을 통해 다른 기능 추가
 description: Azure Data Studio의 기능을 확장하기 위한 확장성 모델 및 핵심 확장 영역에 대해 알아보세요.
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 3595c9aac3b0b8a0419780cdeaf9b5547bfa97d1
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: a8866c438b446715f7e804688f50881e0b0eb167
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483861"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778442"
 ---
 # <a name="azure-data-studio-extensibility"></a>Azure Data Studio 확장성
 
@@ -111,7 +111,7 @@ Dashboard.tabs는 대시보드 페이지 내에 탭 섹션을 만듭니다. 개�
 
 `dashboard.insights`
 
-dashboard.insights를 사용하여 인사이트를 등록할 수 있습니다. 이것은 [자습서: 사용자 지정 인사이트 위젯 빌드](https://docs.microsoft.com/sql/sql-operations-studio/tutorial-build-custom-insight-sql-server)와 비슷합니다.
+dashboard.insights를 사용하여 인사이트를 등록할 수 있습니다. 이것은 [자습서: 사용자 지정 인사이트 위젯 빌드](./tutorial-build-custom-insight-sql-server.md?view=sql-server-ver15)와 비슷합니다.
 
 ```json
 "dashboard.insights": {

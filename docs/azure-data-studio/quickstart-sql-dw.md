@@ -2,19 +2,19 @@
 title: Azure SQL 데이터 웨어하우스 연결 및 쿼리
 description: 이 빠른 시작에서는 Azure Data Studio를 사용하여 Azure SQL Data Warehouse에 연결하고 쿼리를 실행하는 방법을 보여 줍니다.
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.reviewer: alayu, maghan, sstein
 ms.topic: quickstart
 author: yualan
 ms.author: alayu
 ms.custom: seodec18; seo-lt-2019
 ms.date: 09/24/2018
-ms.openlocfilehash: f9a8213dacb3a7f221d3a3c3e51f0ed94bb6990a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e9c0ba08445eb1f9712b00b84cc07ac7eae310f1
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728007"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88766372"
 ---
 # <a name="quickstart-use-azure-data-studio-to-connect-and-query-data-in-azure-sql-data-warehouse"></a>빠른 시작: Azure Data Studio를 사용하여 Azure SQL 데이터 웨어하우스의 데이터 연결 및 쿼리
 
@@ -23,9 +23,9 @@ ms.locfileid: "85728007"
 ## <a name="prerequisites"></a>필수 구성 요소
 이 빠른 시작을 완료하려면 Azure Data Studio 및 Azure SQL 데이터 웨어하우스가 필요합니다.
 
-- [Azure Data Studio를 설치](download.md)합니다.
+- [Azure Data Studio를 설치](./download-azure-data-studio.md?view=sql-server-ver15)합니다.
 
-SQL Data Warehouse가 아직 없는 경우 [SQL Data Warehouse 만들기](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-get-started-provision)를 참조하세요.
+SQL Data Warehouse가 아직 없는 경우 [SQL Data Warehouse 만들기](/azure/sql-data-warehouse/sql-data-warehouse-get-started-provision)를 참조하세요.
 
 서버 이름 및 로그인 자격 증명을 알아둡니다.
 
@@ -52,7 +52,7 @@ Azure Data Studio를 사용하여 Azure SQL Data Warehouse 서버에 대한 연�
 
    ![새 연결 아이콘](media/quickstart-sql-dw/new-connection-screen.png) 
 
-3. 서버에 Azure Data Studio 연결을 허용하는 방화벽 규칙이 없으면 **새 방화벽 규칙 만들기** 양식이 열립니다. 양식을 완료하여 새 방화벽 규칙을 만듭니다. 자세한 내용은 [방화벽 규칙](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure)을 참조하세요.
+3. 서버에 Azure Data Studio 연결을 허용하는 방화벽 규칙이 없으면 **새 방화벽 규칙 만들기** 양식이 열립니다. 양식을 완료하여 새 방화벽 규칙을 만듭니다. 자세한 내용은 [방화벽 규칙](/azure/sql-database/sql-database-firewall-configure)을 참조하세요.
 
    ![새 방화벽 규칙](media/quickstart-sql-dw/firewall.png)  
 
@@ -140,7 +140,7 @@ Azure Data Studio를 사용하여 Azure SQL Data Warehouse 서버에 대한 연�
 ## <a name="clean-up-resources"></a>리소스 정리
 
 이 컬렉션의 다른 문서는 이 빠른 시작에 따라 빌드됩니다. 후속 빠른 시작을 계속 사용하려는 경우 이 빠른 시작에서 만든 리소스를 정리하지 마세요. 계속하지 않으려는 경우 다음 단계를 사용하여 이 빠른 시작으로 만든 리소스를 Azure Portal에서 삭제합니다.
-더 이상 필요하지 않은 리소스 그룹을 삭제하여 리소스를 정리합니다. 자세한 내용은 [리소스 정리](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-portal#clean-up-resources)를 참조하세요.
+더 이상 필요하지 않은 리소스 그룹을 삭제하여 리소스를 정리합니다. 자세한 내용은 [리소스 정리](/azure/sql-database/sql-database-get-started-portal#clean-up-resources)를 참조하세요.
 
 
 ## <a name="next-steps"></a>다음 단계

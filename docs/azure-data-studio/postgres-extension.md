@@ -5,16 +5,16 @@ ms.custom: seodec18
 ms.date: 03/19/2019
 ms.reviewer: alayu, maghan, sstein
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.topic: conceptual
 author: rachel-msft
 ms.author: raagyema
-ms.openlocfilehash: a273850f64168caeb48304606e50703ba8fc54f4
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: ac218ec447ef338b4df770e9251e6fdb37e5db5f
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411329"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88766642"
 ---
 # <a name="postgresql-extension-preview"></a>PostgreSQL 확장(미리 보기)
 
@@ -33,7 +33,7 @@ PostgreSQL에 사용할 수 있는 Azure Data Studio 기능은 다음과 같습�
 
 ## <a name="install-the-postgresql-extension-preview"></a>PostgreSQL 확장(미리 보기) 설치
 
-Azure Data Studio를 아직 설치하지 않았으면 [설치 지침](download.md)을 참조하세요.
+Azure Data Studio를 아직 설치하지 않았으면 [설치 지침](./download-azure-data-studio.md?view=sql-server-ver15)을 참조하세요.
 
 1. Azure Data Studio의 사이드바에서 확장 아이콘을 선택합니다.
    ![확장 아이콘](media/extensions/postgresql-extension/extensions-icon.png)
@@ -46,4 +46,3 @@ Azure Data Studio를 아직 설치하지 않았으면 [설치 지침](download.m
 ## <a name="next-steps"></a>다음 단계
 
 [Azure Data Studio에서 Postgres를 연결하고 쿼리하는 방법](quickstart-postgres.md)을 알아보세요.
-
