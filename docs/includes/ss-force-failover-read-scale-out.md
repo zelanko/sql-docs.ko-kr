@@ -7,12 +7,12 @@ ms.topic: include
 ms.date: 02/05/2018
 ms.author: mikeray
 ms.custom: include file
-ms.openlocfilehash: 90c7c7863228ce210e56e76ab3e12c77e7ccc902
-ms.sourcegitcommit: fc5b757bb27048a71bb39755648d5cefe25a8bc6
+ms.openlocfilehash: 0933f493ee71fe589842f8636e7364f79a432de0
+ms.sourcegitcommit: dec2e2d3582c818cc9489e6a824c732b91ec3aeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80407934"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88122466"
 ---
 각 가용성 그룹에는 하나의 주 복제본만 있습니다. 주 복제본은 읽기 및 쓰기를 허용합니다. 주 복제본을 변경하기 위해 장애 조치(failover)를 수행할 수 있습니다. 고가용성을 위한 가용성 그룹에서 클러스터 관리자는 장애 조치 프로세스를 자동화합니다. 클러스터 형식이 NONE인 가용성 그룹에서 장애 조치(failover) 프로세스는 수동입니다. 
 
@@ -51,7 +51,7 @@ ALTER AVAILABILITY GROUP [ag1]  SET (ROLE = SECONDARY);
         WITH (AVAILABILITY_MODE = SYNCHRONOUS_COMMIT);
    ```
 
-2. 활성 트랜잭션이 주 복제본과 적어도 하나의 동기 보조 복제본에 커밋되었는지 확인하려면 다음 쿼리를 실행합니다. 
+1. 활성 트랜잭션이 주 복제본과 적어도 하나의 동기 보조 복제본에 커밋되었는지 확인하려면 다음 쿼리를 실행합니다. 
 
    ```SQL
    SELECT ag.name, 
@@ -66,7 +66,7 @@ ALTER AVAILABILITY GROUP [ag1]  SET (ROLE = SECONDARY);
 
    보조 복제본이 `synchronization_state_desc`가 `SYNCHRONIZED`일 때 동기화됩니다.
 
-3. `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT`을 1로 업데이트합니다.
+1. `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT`을 1로 업데이트합니다.
 
    다음 스크립트에서는 `ag1` 가용성 그룹에서 `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT`을 1로 설정합니다. 다음 스크립트를 실행하기 전에 `ag1`을 가용성 그룹의 이름으로 바꿉니다.
 
@@ -79,18 +79,18 @@ ALTER AVAILABILITY GROUP [ag1]  SET (ROLE = SECONDARY);
    >[!NOTE]
    >이 설정은 장애 조치에만 적용되는 것이 아니며, 환경 요구 사항에 따라 설정해야 합니다.
    
-4. 역할 변경에 작업에 대한 준비로, 주 복제본을 오프라인으로 전환합니다.
+1. 역할 변경에 작업에 대한 준비로, 주 복제본을 오프라인으로 전환합니다.
    ```SQL
    ALTER AVAILABILITY GROUP [ag1] OFFLINE
    ```
 
-5. 대상 보조 복제본을 주 복제본으로 승격합니다. 
+1. 대상 보조 복제본을 주 복제본으로 승격합니다. 
 
    ```SQL
    ALTER AVAILABILITY GROUP ag1 FORCE_FAILOVER_ALLOW_DATA_LOSS; 
    ``` 
 
-6. 주 복제본을 호스팅하는 SQL Server 인스턴스에서 다음 명령을 실행하여 기존 주 복제본의 역할을 `SECONDARY`로 업데이트합니다.
+1. 주 복제본을 호스팅하는 SQL Server 인스턴스에서 다음 명령을 실행하여 기존 주 복제본의 역할을 `SECONDARY`로 업데이트합니다.
 
    ```SQL
    ALTER AVAILABILITY GROUP [ag1] 
@@ -99,3 +99,10 @@ ALTER AVAILABILITY GROUP [ag1]  SET (ROLE = SECONDARY);
 
    > [!NOTE] 
    > 가용성 그룹 사용을 삭제하려면 [DROP AVAILABILITY GROUP](https://docs.microsoft.com/sql/t-sql/statements/drop-availability-group-transact-sql)을 사용합니다. NONE 또는 EXTERNAL 클러스터 형식을 사용하여 만든 가용성 그룹의 경우 가용성 그룹의 일부인 모든 복제본에서 명령을 실행합니다.
+
+1. 데이터 이동을 계속하고, 주 복제본을 호스트하는 SQL Server 인스턴스의 가용성 그룹에 있는 모든 데이터베이스에 대해 다음 명령을 실행합니다. 
+
+   ```sql
+   ALTER DATABASE [db1]
+        SET HADR RESUME
+   ```

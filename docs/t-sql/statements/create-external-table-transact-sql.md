@@ -1,4 +1,5 @@
 ---
+description: CREATE EXTERNAL TABLE(Transact-SQL)
 title: CREATE EXTERNAL TABLE(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/27/2020
@@ -21,12 +22,12 @@ ms.assetid: 6a6fd8fe-73f5-4639-9908-2279031abdec
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 29c625eb5b169e1811f880416a027eb3ac32c027
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: db302d75d691a584c3179881450f7dd271eb3ae6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87864384"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88305147"
 ---
 # <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE(Transact-SQL)
 
@@ -911,18 +912,20 @@ SCHEMARESOLUTION 개체에 대한 공유 잠금입니다.
 
 ## <a name="examples"></a>예제
 
-### <a name="a-importing-data-from-adls-into-azure-ssdw"></a>A. Azure [!INCLUDE[ssDW](../../includes/ssdw-md.md)]로 ADLS의 데이터 가져오기
+### <a name="a-importing-data-from-adls-gen-2-into-azure-ssdw"></a>A. ADLS Gen 2에서 Azure로 데이터 가져오기 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] 
+
+ADLS Gen 1에 대한 예는 [외부 데이터 원본 만들기](create-external-data-source-transact-sql.md)를 참조하세요.
 
 ```sql
 
--- These values come from your Azure Active Directory Application used to authenticate to ADLS
+-- These values come from your Azure Active Directory Application used to authenticate to ADLS Gen 2. 
 CREATE DATABASE SCOPED CREDENTIAL ADLUser
 WITH IDENTITY = '<clientID>@\<OAuth2.0TokenEndPoint>',
 SECRET = '<KEY>' ;
 
 CREATE EXTERNAL DATA SOURCE AzureDataLakeStore
 WITH (TYPE = HADOOP,
-      LOCATION = 'adl://pbasetr.azuredatalakestore.net'
+      LOCATION = 'abfss://data@pbasetr.azuredatalakestore.net'
 )
 
 CREATE EXTERNAL FILE FORMAT TextFileFormat

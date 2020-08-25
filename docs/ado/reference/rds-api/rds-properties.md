@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e4e04cbd-21fc-44a1-9f21-49aa68746934
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f4abe8e9f72ced67a23113bee61452f372bbb1e3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6b2a106dadcb8af11dcdd5865472fce1fa2e1be2
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438775"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767742"
 ---
 # <a name="rds-properties"></a>RDS 속성
 > [!IMPORTANT]
@@ -27,40 +27,18 @@ ms.locfileid: "88438775"
   
 |속성|설명|  
 |-|-|  
-|[연결 (RDS)](../../../ado/reference/rds-api/connect-property-rds.md)|쿼리 및 업데이트 작업이 실행 되는 데이터베이스 이름을 나타냅니다.|  
-|[ExecuteOptions (RDS)](../../../ado/reference/rds-api/executeoptions-property-rds.md)|비동기 실행을 사용 하는지 여부를 나타냅니다.|  
-|[FetchOptions (RDS)](../../../ado/reference/rds-api/fetchoptions-property-rds.md)|비동기 인출의 유형을 나타냅니다.|  
-|[FilterColumn (RDS)](../../../ado/reference/rds-api/filtercolumn-property-rds.md)|필터 조건을 평가할 열을 나타냅니다.|  
-|[FilterCriterion (RDS)](../../../ado/reference/rds-api/filtercriterion-property-rds.md)|필터 값에 사용할 평가 연산자를 나타냅니다.|  
-|[FilterValue (RDS)](../../../ado/reference/rds-api/filtervalue-property-rds.md)|레코드를 필터링 할 값을 나타냅니다.|  
-|[처리기 (RDS)](../../../ado/reference/rds-api/handler-property-rds.md)|DataFactory의 기능과 *처리기*에서 사용 하는 매개 변수를 확장 하는 서버 쪽 사용자 지정 프로그램 (*처리기*)의 이름을 나타냅니다 **RDSServer.**|  
-|[InternetTimeout (RDS)](../../../ado/reference/rds-api/internettimeout-property-rds.md)|요청 시간이 초과 될 때까지 대기 하는 시간 (밀리초)을 나타냅니다.|  
-|[ReadyState (RDS)](../../../ado/reference/rds-api/readystate-property-rds.md)|데이터를 **레코드 집합** 개체로 인출할 때 **DataControl** 개체의 진행률을 나타냅니다.|  
-|[레코드 집합 및 SourceRecordset (RDS)](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md)|사용자 지정 비즈니스 개체에서 반환 된 **레코드 집합** 개체를 나타냅니다.|  
-|[서버 (RDS)](../../../ado/reference/rds-api/server-property-rds.md)|인터넷 정보 서비스 (IIS) 이름 및 통신 프로토콜을 나타냅니다.|  
-|[SortColumn (RDS)](../../../ado/reference/rds-api/sortcolumn-property-rds.md)|레코드를 정렬 하는 기준이 되는 열을 나타냅니다.|  
-|[SortDirection (RDS)](../../../ado/reference/rds-api/sortdirection-property-rds.md)|정렬 순서가 오름차순 인지 또는 내림차순 인지를 나타냅니다.|  
-|[SQL (RDS)](../../../ado/reference/rds-api/sql-property.md)|**레코드 집합**을 검색 하는 데 사용 되는 쿼리 문자열을 나타냅니다.|  
-|[URL (RDS)](../../../ado/reference/rds-api/url-property-rds.md)|상대 또는 절대 URL이 포함 된 문자열을 나타냅니다.|
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+|[연결 (RDS)](./connect-property-rds.md)|쿼리 및 업데이트 작업이 실행 되는 데이터베이스 이름을 나타냅니다.|  
+|[ExecuteOptions (RDS)](./executeoptions-property-rds.md)|비동기 실행을 사용 하는지 여부를 나타냅니다.|  
+|[FetchOptions (RDS)](./fetchoptions-property-rds.md)|비동기 인출의 유형을 나타냅니다.|  
+|[FilterColumn (RDS)](./filtercolumn-property-rds.md)|필터 조건을 평가할 열을 나타냅니다.|  
+|[FilterCriterion (RDS)](./filtercriterion-property-rds.md)|필터 값에 사용할 평가 연산자를 나타냅니다.|  
+|[FilterValue (RDS)](./filtervalue-property-rds.md)|레코드를 필터링 할 값을 나타냅니다.|  
+|[처리기 (RDS)](./handler-property-rds.md)|DataFactory의 기능과 *처리기*에서 사용 하는 매개 변수를 확장 하는 서버 쪽 사용자 지정 프로그램 (*처리기*)의 이름을 나타냅니다 **RDSServer.**|  
+|[InternetTimeout (RDS)](./internettimeout-property-rds.md)|요청 시간이 초과 될 때까지 대기 하는 시간 (밀리초)을 나타냅니다.|  
+|[ReadyState (RDS)](./readystate-property-rds.md)|데이터를 **레코드 집합** 개체로 인출할 때 **DataControl** 개체의 진행률을 나타냅니다.|  
+|[레코드 집합 및 SourceRecordset (RDS)](./recordset-sourcerecordset-properties-rds.md)|사용자 지정 비즈니스 개체에서 반환 된 **레코드 집합** 개체를 나타냅니다.|  
+|[서버 (RDS)](./server-property-rds.md)|인터넷 정보 서비스 (IIS) 이름 및 통신 프로토콜을 나타냅니다.|  
+|[SortColumn (RDS)](./sortcolumn-property-rds.md)|레코드를 정렬 하는 기준이 되는 열을 나타냅니다.|  
+|[SortDirection (RDS)](./sortdirection-property-rds.md)|정렬 순서가 오름차순 인지 또는 내림차순 인지를 나타냅니다.|  
+|[SQL (RDS)](./sql-property.md)|**레코드 집합**을 검색 하는 데 사용 되는 쿼리 문자열을 나타냅니다.|  
+|[URL (RDS)](./url-property-rds.md)|상대 또는 절대 URL이 포함 된 문자열을 나타냅니다.|

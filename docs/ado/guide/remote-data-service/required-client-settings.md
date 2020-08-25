@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e776b4e3-fcc4-4bfb-a7e8-5ffae1d83833
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8d21cf3f08b284ed2642f9567ae86909fb35579b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5263da344d39b828b431efd99a4171f74d2552db
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452025"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759383"
 ---
 # <a name="required-client-settings"></a>필수 클라이언트 설정
 > [!IMPORTANT]
@@ -26,11 +26,11 @@ ms.locfileid: "88452025"
   
  사용자 지정 **DataFactory** 처리기를 사용 하려면 다음 설정을 지정 합니다.  
   
--   [Connection 개체 (ado)](../../../ado/reference/ado-api/connection-object-ado.md) 개체 [공급자 속성 (ado)](../../../ado/reference/ado-api/provider-property-ado.md) 속성 또는 **연결** 개체 연결 문자열 "**provider**=" 키워드에 "provider = MS Remote"를 지정 합니다.  
+-   [Connection 개체 (ado)](../../reference/ado-api/connection-object-ado.md) 개체 [공급자 속성 (ado)](../../reference/ado-api/provider-property-ado.md) 속성 또는 **연결** 개체 연결 문자열 "**provider**=" 키워드에 "provider = MS Remote"를 지정 합니다.  
   
--   [CursorLocation 속성 (ADO)](../../../ado/reference/ado-api/cursorlocation-property-ado.md) 속성을 **adUseClient**로 설정 합니다.  
+-   [CursorLocation 속성 (ADO)](../../reference/ado-api/cursorlocation-property-ado.md) 속성을 **adUseClient**로 설정 합니다.  
   
--   [DataControl 개체 (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md) 개체의 **Handler** 속성 또는 [레코드 집합 개체 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) 개체의 연결 문자열 "**handler**=" 키워드에 사용할 처리기의 이름을 지정 합니다. **연결** 개체 연결 문자열에는 처리기를 설정할 수 없습니다.  
+-   [DataControl 개체 (RDS)](../../reference/rds-api/datacontrol-object-rds.md) 개체의 **Handler** 속성 또는 [레코드 집합 개체 (ADO)](../../reference/ado-api/recordset-object-ado.md) 개체의 연결 문자열 "**handler**=" 키워드에 사용할 처리기의 이름을 지정 합니다. **연결** 개체 연결 문자열에는 처리기를 설정할 수 없습니다.  
   
  RDS는 Msdfmap 이라는 서버에 기본 처리기를 제공 합니다 **. 처리기**. 기본 사용자 지정 파일의 이름은 MSDFMAP.INI입니다.  
   
@@ -67,7 +67,7 @@ Dim rs as New ADODB.Recordset
 rs.CursorLocation = adUseClient  
 ```  
   
- [Handler 속성 (RDS)](../../../ado/reference/rds-api/handler-property-rds.md) 속성 또는 키워드를 지정 합니다. [공급자 속성 (ADO)](../../../ado/reference/ado-api/provider-property-ado.md) 속성 또는 키워드 *CustomerById* 및 *customerdatabase* 식별자가 있습니다. 그런 다음 **레코드 집합** 개체를 엽니다.  
+ [Handler 속성 (RDS)](../../reference/rds-api/handler-property-rds.md) 속성 또는 키워드를 지정 합니다. [공급자 속성 (ADO)](../../reference/ado-api/provider-property-ado.md) 속성 또는 키워드 *CustomerById* 및 *customerdatabase* 식별자가 있습니다. 그런 다음 **레코드 집합** 개체를 엽니다.  
   
  dvd-r. "CustomerById (4)", "Handler = MSDFMAP을 엽니다. Handler; "& _  
   
@@ -76,12 +76,11 @@ rs.CursorLocation = adUseClient
 "Remote Server=https://yourServer"  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [사용자 지정 파일 연결 섹션](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
- [사용자 지정 파일 SQL 섹션](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   
- [사용자 지정 파일 UserList 섹션](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   
- [DataFactory 사용자 지정](../../../ado/guide/remote-data-service/datafactory-customization.md)   
- [필수 클라이언트 설정](../../../ado/guide/remote-data-service/required-client-settings.md)   
- [사용자 지정 파일 이해](../../../ado/guide/remote-data-service/understanding-the-customization-file.md)   
- [고유한 사용자 지정된 처리기 작성](../../../ado/guide/remote-data-service/writing-your-own-customized-handler.md)
-
+## <a name="see-also"></a>관련 항목  
+ [사용자 지정 파일 연결 섹션](./customization-file-connect-section.md)   
+ [사용자 지정 파일 SQL 섹션](./customization-file-sql-section.md)   
+ [사용자 지정 파일 UserList 섹션](./customization-file-userlist-section.md)   
+ [DataFactory 사용자 지정](./datafactory-customization.md)   
+ [필수 클라이언트 설정]()   
+ [사용자 지정 파일 이해](./understanding-the-customization-file.md)   
+ [고유한 사용자 지정된 처리기 작성](./writing-your-own-customized-handler.md)

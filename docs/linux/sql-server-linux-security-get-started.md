@@ -1,6 +1,6 @@
 ---
 title: Linux에서 SQL Server 보안 시작
-description: 이 문서에서는 일반적인 보안 작업을 설명합니다.
+description: 추가로 조사할 영역에 대한 아이디어를 얻을 수 있도록 SQL Server on Linux의 보안 기능을 살펴봅니다.
 author: VanMSFT
 ms.author: vanto
 ms.date: 10/02/2017
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ecc72850-8b01-492e-9a27-ec817648f0e0
-ms.openlocfilehash: d26cdde25f3431c72e1f5327db591db60b31938e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 031005dcb6a5353e9e4f0b73a7a45d667d2212e7
+ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883006"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88088809"
 ---
 # <a name="walkthrough-for-the-security-features-of-sql-server-on-linux"></a>SQL Server on Linux의 보안 기능 연습
 

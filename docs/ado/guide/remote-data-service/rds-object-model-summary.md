@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 909f9af7-31db-4eec-ad52-650ce74dac2f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d7488811326dda4228ef2f458b70d5575b33b122
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 50776f67f09fabbba2282867e09db1e94a49772b
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452145"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759693"
 ---
 # <a name="rds-object-model-summary"></a>RDS 개체 모델 요약
 > [!IMPORTANT]
@@ -27,14 +27,12 @@ ms.locfileid: "88452145"
   
 |Object|설명|  
 |------------|-----------------|  
-|[RDS. 스페이스가](../../../ado/reference/rds-api/dataspace-object-rds.md)|이 개체에는 서버 프록시를 얻기 위한 메서드가 포함 되어 있습니다. 프록시는 기본 또는 사용자 지정 서버 프로그램 (비즈니스 개체) 일 수 있습니다. 서버 프로그램은 인터넷, 인트라넷 또는 로컬 영역 네트워크에서 호출 되거나 로컬 동적 연결 라이브러리 일 수 있습니다.<br /><br /> **스페이스** 개체는 스크립팅에 안전 합니다.|  
-|[RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)|이 개체는 기본 서버 프로그램을 나타냅니다. 기본 RDS 데이터 검색 및 업데이트 동작을 실행 합니다.<br /><br /> **DataFactory** 개체는 스크립팅에 안전 하지 않습니다.|  
-|[RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)|이 개체는 RDS를 자동으로 호출할 수 있습니다 **. ** RDSServer 및 **DataFactory** 개체<br /><br /> 이 개체를 사용 하 여 기본 RDS 데이터 검색 또는 업데이트 동작을 호출 합니다.<br /><br /> 또한이 개체는 visual 컨트롤에서 반환 된 **레코드 집합** 개체에 액세스할 수 있는 방법을 제공 합니다.<br /><br /> **DataControl** 개체는 스크립팅에 안전 합니다.|  
+|[RDS. 스페이스가](../../reference/rds-api/dataspace-object-rds.md)|이 개체에는 서버 프록시를 얻기 위한 메서드가 포함 되어 있습니다. 프록시는 기본 또는 사용자 지정 서버 프로그램 (비즈니스 개체) 일 수 있습니다. 서버 프로그램은 인터넷, 인트라넷 또는 로컬 영역 네트워크에서 호출 되거나 로컬 동적 연결 라이브러리 일 수 있습니다.<br /><br /> **스페이스** 개체는 스크립팅에 안전 합니다.|  
+|[RDSServer. DataFactory](../../reference/rds-api/datafactory-object-rdsserver.md)|이 개체는 기본 서버 프로그램을 나타냅니다. 기본 RDS 데이터 검색 및 업데이트 동작을 실행 합니다.<br /><br /> **DataFactory** 개체는 스크립팅에 안전 하지 않습니다.|  
+|[RDS. DataControl](../../reference/rds-api/datacontrol-object-rds.md)|이 개체는 RDS를 자동으로 호출할 수 있습니다 **. ** RDSServer 및 **DataFactory** 개체<br /><br /> 이 개체를 사용 하 여 기본 RDS 데이터 검색 또는 업데이트 동작을 호출 합니다.<br /><br /> 또한이 개체는 visual 컨트롤에서 반환 된 **레코드 집합** 개체에 액세스할 수 있는 방법을 제공 합니다.<br /><br /> **DataControl** 개체는 스크립팅에 안전 합니다.|  
   
-## <a name="see-also"></a>참고 항목  
- [RDS 기본 사항](../../../ado/guide/remote-data-service/rds-fundamentals.md)   
- [RDS 시나리오](../../../ado/guide/remote-data-service/rds-scenario.md)   
- [RDS 자습서](../../../ado/guide/remote-data-service/rds-tutorial.md)   
- [RDS 사용량 및 보안](../../../ado/guide/remote-data-service/rds-usage-and-security.md)
-
-
+## <a name="see-also"></a>관련 항목  
+ [RDS 기본 사항](./rds-fundamentals.md)   
+ [RDS 시나리오](./rds-scenario.md)   
+ [RDS 자습서](./rds-tutorial.md)   
+ [RDS 사용량 및 보안](./rds-usage-and-security.md)

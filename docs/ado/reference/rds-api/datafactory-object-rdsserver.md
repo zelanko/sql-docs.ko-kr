@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e75240c2-b749-471e-b6ea-98cae232efbe
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8a27d7911b00e5172941245ef5dcd587345aa1fc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 066add7729712c6c8c40951a3139dcba00ed5a70
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439105"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768462"
 ---
 # <a name="datafactory-object-rdsserver"></a>DataFactory 개체(RDSServer)
 > [!IMPORTANT]
@@ -29,11 +29,11 @@ ms.locfileid: "88439105"
   
  DataFactory 개체는 클라이언트 요청을 수신 하는 서버 쪽 자동화 개체로 설계 **RDSServer.** 인터넷 구현에서이는 웹 서버에 상주 하며 ADISAPI 구성 요소에 의해 인스턴스화됩니다. **RDSServer** 개체는 지정 된 데이터 원본에 대 한 읽기 및 쓰기 권한을 제공 하지만 유효성 검사 또는 비즈니스 규칙 논리를 포함 하지 않습니다.  
   
- DataFactory와 RDS 모두에서 사용할 수 있는 메서드를 사용 하는 경우 **RDSServer** . [ DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) 개체, 원격 데이터 서비스는 RDS를 사용 합니다 **. ** 기본적으로는 DataControl 버전이 있습니다. 기본값은 기본 프로그래밍 시나리오를 가정 합니다. 여기서 **RDSServer는 DataFactory** 가 일반 서버 쪽 비즈니스 개체로 사용 됩니다.  
+ DataFactory와 RDS 모두에서 사용할 수 있는 메서드를 사용 하는 경우 **RDSServer** . [ DataControl](./datacontrol-object-rds.md) 개체, 원격 데이터 서비스는 RDS를 사용 합니다 **. ** 기본적으로는 DataControl 버전이 있습니다. 기본값은 기본 프로그래밍 시나리오를 가정 합니다. 여기서 **RDSServer는 DataFactory** 가 일반 서버 쪽 비즈니스 개체로 사용 됩니다.  
   
  웹 응용 프로그램에서 작업 관련 서버 쪽 처리를 처리 하 게 하려면 DataFactory를 사용자 지정 비즈니스 개체로 **RDSServer.**  
   
- [Query](../../../ado/reference/rds-api/query-method-rds.md) 및 [CreateRecordset](../../../ado/reference/rds-api/createrecordset-method-rds.md)와 같은 **RDSServer DataFactory** 메서드를 호출 하는 서버 쪽 비즈니스 개체를 만들 수 있습니다. 이는 비즈니스 개체에 기능을 추가 하지만 기존 원격 데이터 서비스 기술을 활용 하려는 경우에 유용 합니다.  
+ [Query](./query-method-rds.md) 및 [CreateRecordset](./createrecordset-method-rds.md)와 같은 **RDSServer DataFactory** 메서드를 호출 하는 서버 쪽 비즈니스 개체를 만들 수 있습니다. 이는 비즈니스 개체에 기능을 추가 하지만 기존 원격 데이터 서비스 기술을 활용 하려는 경우에 유용 합니다.  
   
  **DataFactory** 개체는 클라이언트 쪽에서 실행 되는 스크립트에는 안전 하지 않습니다.  
   
@@ -41,9 +41,7 @@ ms.locfileid: "88439105"
   
  이 섹션에는 다음 항목이 포함 되어 있습니다.  
   
--   [DataFactory 개체(RDSServer) 속성, 메서드 및 이벤트](../../../ado/reference/rds-api/datafactory-object-rdsserver-properties-methods-and-events.md)  
+-   [DataFactory 개체(RDSServer) 속성, 메서드 및 이벤트](./datafactory-object-rdsserver-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [DataFactory 개체, Query 메서드 및 CreateObject 메서드 예제(VBScript)](../../../ado/reference/rds-api/datafactory-object-query-method-and-createobject-method-example-vbscript.md)
-
-
+ [DataFactory 개체, Query 메서드 및 CreateObject 메서드 예제(VBScript)](./datafactory-object-query-method-and-createobject-method-example-vbscript.md)

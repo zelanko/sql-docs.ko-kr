@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 250062a4-13c4-4bed-807d-8b9ad81536d4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0bd87e3e533168b2ff84f95fc9c6cf6275dd829e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 86645c9a8735c8764bbd210e55858a6de81e387d
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438585"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767362"
 ---
 # <a name="submitchanges-method-rds"></a>SubmitChanges 메서드(RDS)
-로컬에서 캐시 하 고 업데이트할 수 있는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 의 보류 중인 변경 내용을 [Connect](../../../ado/reference/rds-api/connect-property-rds.md) 속성 또는 [URL](../../../ado/reference/rds-api/url-property-rds.md) 속성에 지정 된 데이터 원본에 전송 합니다.  
+로컬에서 캐시 하 고 업데이트할 수 있는 [레코드 집합](../ado-api/recordset-object-ado.md) 의 보류 중인 변경 내용을 [Connect](./connect-property-rds.md) 속성 또는 [URL](./url-property-rds.md) 속성에 지정 된 데이터 원본에 전송 합니다.  
   
 > [!IMPORTANT]
 >  Windows 8 및 Windows Server 2012부터 RDS 서버 구성 요소는 더 이상 Windows 운영 체제에 포함 되지 않습니다 (자세한 내용은 Windows 8 및 [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) 참조). 이후 버전의 Windows에서는 RDS 클라이언트 구성 요소가 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. RDS를 사용 하는 응용 프로그램은 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)로 마이그레이션해야 합니다.  
@@ -36,21 +36,21 @@ DataControl.SubmitChanges DataFactory.SubmitChanges Connection, Recordset
   
 #### <a name="parameters"></a>매개 변수  
  *DataControl*  
- RDS를 나타내는 개체 변수입니다 [. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) 개체입니다.  
+ RDS를 나타내는 개체 변수입니다 [. DataControl](./datacontrol-object-rds.md) 개체입니다.  
   
  *DataFactory*  
- DataFactory 개체를 나타내는 개체 변수 [RDSServer](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) .  
+ DataFactory 개체를 나타내는 개체 변수 [RDSServer](./datafactory-object-rdsserver.md) .  
   
  *연결*  
- RDS를 사용 하 여 만든 연결을 나타내는 **문자열** 값입니다 **. DataControl** 개체의 [Connect](../../../ado/reference/rds-api/connect-property-rds.md) 속성입니다.  
+ RDS를 사용 하 여 만든 연결을 나타내는 **문자열** 값입니다 **. DataControl** 개체의 [Connect](./connect-property-rds.md) 속성입니다.  
   
  *레코드 집합*  
  **레코드 집합** 개체를 나타내는 개체 변수입니다.  
   
 ## <a name="remarks"></a>설명  
- RDS와 함께 **SubmitChanges** 메서드를 사용 하려면 먼저 [Connect](../../../ado/reference/rds-api/connect-property-rds.md), [Server](../../../ado/reference/rds-api/server-property-rds.md)및 [SQL](../../../ado/reference/rds-api/sql-property.md) 속성을 설정 해야 합니다 **. DataControl** 개체입니다.  
+ RDS와 함께 **SubmitChanges** 메서드를 사용 하려면 먼저 [Connect](./connect-property-rds.md), [Server](./server-property-rds.md)및 [SQL](./sql-property.md) 속성을 설정 해야 합니다 **. DataControl** 개체입니다.  
   
- 동일한 **레코드 집합** 개체에 대해 **SubmitChanges** 를 호출한 후에 [cancelupdate](../../../ado/reference/rds-api/cancelupdate-method-rds.md) 메서드를 호출 하면 변경 내용이 이미 커밋 되었으므로 **cancelupdate** 호출이 실패 합니다.  
+ 동일한 **레코드 집합** 개체에 대해 **SubmitChanges** 를 호출한 후에 [cancelupdate](./cancelupdate-method-rds.md) 메서드를 호출 하면 변경 내용이 이미 커밋 되었으므로 **cancelupdate** 호출이 실패 합니다.  
   
  변경 된 레코드만 수정 하기 위해 전송 되 고 모든 변경 내용이 성공 하거나 모든 변경 내용이 함께 실패 합니다.  
   
@@ -62,18 +62,15 @@ DataControl.SubmitChanges DataFactory.SubmitChanges Connection, Recordset
 
 :::row:::
     :::column:::
-        [DataControl 개체(RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
+        [DataControl 개체(RDS)](./datacontrol-object-rds.md)  
     :::column-end:::
     :::column:::
-        [DataFactory 개체(RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)  
+        [DataFactory 개체(RDSServer)](./datafactory-object-rdsserver.md)  
     :::column-end:::
 :::row-end:::
 
 ## <a name="see-also"></a>참고 항목  
- [SubmitChanges 메서드 예제 (VBScript)](../../../ado/reference/rds-api/submitchanges-method-example-vbscript.md)   
- [주소록 명령 단추](../../../ado/guide/remote-data-service/address-book-command-buttons.md)   
- [CancelUpdate 메서드 (RDS)](../../../ado/reference/rds-api/cancelupdate-method-rds.md)   
- [Refresh 메서드(RDS)](../../../ado/reference/rds-api/refresh-method-rds.md)
-
-
-
+ [SubmitChanges 메서드 예제 (VBScript)](./submitchanges-method-example-vbscript.md)   
+ [주소록 명령 단추](../../guide/remote-data-service/address-book-command-buttons.md)   
+ [CancelUpdate 메서드 (RDS)](./cancelupdate-method-rds.md)   
+ [Refresh 메서드(RDS)](./refresh-method-rds.md)

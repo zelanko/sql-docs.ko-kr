@@ -1,4 +1,5 @@
 ---
+description: Columnstore 인덱스 - 데이터 로드 지침
 title: Columnstore 인덱스 - 데이터 로드 지침 | Microsoft 문서
 ms.custom: ''
 ms.date: 12/03/2017
@@ -11,12 +12,12 @@ ms.assetid: b29850b5-5530-498d-8298-c4d4a741cdaf
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9113071199d8561f2f4521bd8563e7cab275fc34
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 6b057d193af0cea47e1dc19c58c508d45786b940
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007532"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482740"
 ---
 # <a name="columnstore-indexes---data-loading-guidance"></a>Columnstore 인덱스 - 데이터 로드 지침
 
@@ -52,6 +53,8 @@ ms.locfileid: "86007532"
 -   **잠금 최적화:** 압축된 행 그룹으로 데이터를 로드하는 경우 행 그룹에 대한 X 잠금이 자동으로 획득됩니다. 그러나 델타 행 그룹으로 대량 로드 시 행 그룹에서 X 잠금이 획득되지만, X 행 그룹 잠금이 잠금 계층 구조의 일부가 아니므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 계속해서 PAGE/EXTENT를 잠급니다.  
   
 columnstore 인덱스에 비클러스터형 B-트리 인덱스가 있는 경우 인덱스 자체에 대한 잠금 또는 로깅 최적화는 없지만, 위의 설명대로 클러스터형 columnstore 인덱스에 대한 최적화를 적용할 수 있습니다.  
+
+DML(insert, delete, update)은 병렬이 아니므로 일괄 처리 모드 작업이 아닙니다.
   
 ## <a name="plan-bulk-load-sizes-to-minimize-delta-rowgroups"></a>델타 행 그룹을 최소화하는 대량 로드 크기 계획
 columnstore 인덱스는 대부분의 행이 columnstore로 압축되고 델타 행 그룹에 저장되지 않을 때 성능이 최적화됩니다. 행이 columnstore로 바로 이동하고 최대한 deltastore를 우회하도록 로드 크기를 지정하는 것이 좋습니다.

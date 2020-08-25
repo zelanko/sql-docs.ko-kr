@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 36a1f49b-91f4-44f4-b6e2-52fc7ed06d7e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 43143be9bbe538059da8fac1bb44dedbb4b2ad64
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: afc3b34dec0360930acdd333a97a62577ce334c8
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439115"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768472"
 ---
 # <a name="datafactory-object-rdsserver-properties-methods-and-events"></a>DataFactory 개체(RDSServer) 속성, 메서드 및 이벤트
 > [!IMPORTANT]
@@ -29,21 +29,19 @@ ms.locfileid: "88439115"
   
 ## <a name="methods"></a>메서드  
   
-|메서드|설명|  
+|방법|설명|  
 |-|-|  
-|[ConvertToString 메서드(RDS)](../../../ado/reference/rds-api/converttostring-method-rds.md)|레코드 집합을 MIME64 문자열로 변환 합니다.|  
-|[CreateRecordset 메서드(RDS)](../../../ado/reference/rds-api/createrecordset-method-rds.md)|빈 레코드 집합을 만들어 반환 합니다.|  
-|[Execute 메서드(RDS)](../../../ado/reference/rds-api/execute-method-rds.md)|요청을 실행 하 고 고급 데이터 행 집합을 만듭니다 (ADO 2.5 이상에 사용).|  
-|[Execute21 메서드(RDS)](../../../ado/reference/rds-api/execute21-method-rds.md)|요청을 실행 하 고 고급 데이터 행 집합을 만듭니다 (ADO 2.1에서 사용).|  
-|[Query 메서드(RDS)](../../../ado/reference/rds-api/query-method-rds.md)|요청을 실행 하 고 고급 데이터 행 집합을 만듭니다.|  
-|[SubmitChanges 메서드(RDS)](../../../ado/reference/rds-api/submitchanges-method-rds.md)|보류 중인 변경 내용이 포함 된 레코드 집합을 지정 하면이 메서드는 연결 문자열에서 식별 된 데이터베이스로 해당 레코드를 전송 합니다.|  
-|[Synchronize 메서드(RDS)](../../../ado/reference/rds-api/synchronize-method-rds.md)|지정 된 레코드 집합을 연결 문자열 (ADO 2.5 이상에서 사용)에서 지정한 데이터베이스와 동기화 합니다.|  
-|[Synchronize21 메서드(RDS)](../../../ado/reference/rds-api/synchronize21-method-rds.md)|지정 된 레코드 집합을 연결 문자열에 지정 된 데이터베이스와 동기화 합니다 (ADO 2.1에서 사용).|  
+|[ConvertToString 메서드(RDS)](./converttostring-method-rds.md)|레코드 집합을 MIME64 문자열로 변환 합니다.|  
+|[CreateRecordset 메서드(RDS)](./createrecordset-method-rds.md)|빈 레코드 집합을 만들어 반환 합니다.|  
+|[Execute 메서드(RDS)](./execute-method-rds.md)|요청을 실행 하 고 고급 데이터 행 집합을 만듭니다 (ADO 2.5 이상에 사용).|  
+|[Execute21 메서드(RDS)](./execute21-method-rds.md)|요청을 실행 하 고 고급 데이터 행 집합을 만듭니다 (ADO 2.1에서 사용).|  
+|[Query 메서드(RDS)](./query-method-rds.md)|요청을 실행 하 고 고급 데이터 행 집합을 만듭니다.|  
+|[SubmitChanges 메서드(RDS)](./submitchanges-method-rds.md)|보류 중인 변경 내용이 포함 된 레코드 집합을 지정 하면이 메서드는 연결 문자열에서 식별 된 데이터베이스로 해당 레코드를 전송 합니다.|  
+|[Synchronize 메서드(RDS)](./synchronize-method-rds.md)|지정 된 레코드 집합을 연결 문자열 (ADO 2.5 이상에서 사용)에서 지정한 데이터베이스와 동기화 합니다.|  
+|[Synchronize21 메서드(RDS)](./synchronize21-method-rds.md)|지정 된 레코드 집합을 연결 문자열에 지정 된 데이터베이스와 동기화 합니다 (ADO 2.1에서 사용).|  
   
 ## <a name="events"></a>이벤트  
  없음  
   
 ## <a name="see-also"></a>참고 항목  
- [DataFactory 개체(RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)
-
-
+ [DataFactory 개체(RDSServer)](./datafactory-object-rdsserver.md)

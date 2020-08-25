@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 94f1ac93-e778-4a40-a85e-94bce5316ac7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c3f7d26eded130f22bda4f707f451ddf78c4b3d7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7c61d1446158dd74af15ab3ab354546c09aff672
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439615"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88769582"
 ---
 # <a name="procedures-delete-method-example-vb"></a>Procedures Delete 메서드 예제(VB)
-다음 코드에서는 프로시저 컬렉션의 [delete](../../../ado/reference/adox-api/delete-method-adox-collections.md) 메서드를 사용 하 [여 프로시저를](../../../ado/reference/adox-api/procedures-collection-adox.md) 삭제 하는 방법을 보여 줍니다.  
+다음 코드에서는 프로시저 컬렉션의 [delete](./delete-method-adox-collections.md) 메서드를 사용 하 [여 프로시저를](./procedures-collection-adox.md) 삭제 하는 방법을 보여 줍니다.  
   
 ```  
 ' BeginDeleteProcedureVB  
@@ -56,8 +56,8 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [ActiveConnection 속성 (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
- [Catalog 개체 (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [Delete 메서드 (ADOX Collections)](../../../ado/reference/adox-api/delete-method-adox-collections.md)   
- [Procedure 개체 (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)   
- [Procedures 컬렉션(ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)
+ [ActiveConnection 속성 (ADOX)](./activeconnection-property-adox.md)   
+ [Catalog 개체 (ADOX)](./catalog-object-adox.md)   
+ [Delete 메서드 (ADOX Collections)](./delete-method-adox-collections.md)   
+ [Procedure 개체 (ADOX)](./procedure-object-adox.md)   
+ [Procedures 컬렉션(ADOX)](./procedures-collection-adox.md)

@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 06297993-fe72-4446-aa76-3b8bc25444f6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f7b854f8d5b84883d28915af629c2af67036b718
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 20993c30753f87bd307d1516b7981ac6809ff2cb
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439225"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768722"
 ---
 # <a name="connect-property-example-vbscript"></a>Connect 속성 예제(VBScript)
 > [!IMPORTANT]
 >  Windows 8 및 Windows Server 2012부터 RDS 서버 구성 요소는 더 이상 Windows 운영 체제에 포함 되지 않습니다 (자세한 내용은 Windows 8 및 [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) 참조). 이후 버전의 Windows에서는 RDS 클라이언트 구성 요소가 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. RDS를 사용 하는 응용 프로그램은 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)로 마이그레이션해야 합니다.  
   
- 이 코드는 디자인 타임에 [Connect](../../../ado/reference/rds-api/connect-property-rds.md) 속성을 설정 하는 방법을 보여 줍니다.  
+ 이 코드는 디자인 타임에 [Connect](./connect-property-rds.md) 속성을 설정 하는 방법을 보여 줍니다.  
   
 ```  
 <OBJECT CLASSID="clsid:BD96C556-65A3-11D0-983A-00C04FC29E33" ID="ADC1">  
@@ -127,25 +127,4 @@ BODY {
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Connect 속성(RDS)](../../../ado/reference/rds-api/connect-property-rds.md)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ [Connect 속성(RDS)](./connect-property-rds.md)

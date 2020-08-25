@@ -9,17 +9,17 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: f3652b767f4628b61f5dd363999838418ff933aa
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0db3a588dfabf290f2e095adafcd3331187af957
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401068"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88766982"
 ---
 # <a name="install-sql-server-operations-manager-scom-management-packs-for-analytics-platform-system"></a>분석 플랫폼 시스템용 SCOM (SQL Server Operations Manager) 관리 팩 설치
 SQL Server PDW System Center Operations Manager (SCOM) 관리 팩을 다운로드 하 여 설치 하려면 다음 단계를 따르세요. 관리 팩은 SCOM의 SQL Server PDW를 모니터링 하는 데 필요 합니다.  
   
-## <a name="before-you-begin"></a><a name="BeforeBegin"></a>시작 하기 전에  
+## <a name="before-you-begin"></a><a name="BeforeBegin"></a>시작하기 전 주의 사항  
 **전제 조건**  
   
 System Center Operations Manager를 설치 하 고 실행 해야 합니다. SQL Server PDW 2012에 System Center Operations Manager 2007 R2, System Center Operations Manager 2012 또는 System Center Operations Manager 2012 Service Pack 1이 필요 합니다.  
@@ -27,7 +27,7 @@ System Center Operations Manager를 설치 하 고 실행 해야 합니다. SQL 
 ## <a name="step-1-download-the-management-packs"></a><a name="Step1"></a>1 단계: 관리 팩 다운로드  
 APS PDW 워크 로드의 경우 [Microsoft Analytics Platform System 용 System Center 관리 팩](https://go.microsoft.com/fwlink/?LinkId=396857)을 다운로드 합니다.  
   
-어플라이언스 관리의 경우 [SQL Server 어플라이언스 기본 관리 팩](https://docs.microsoft.com/previous-versions/system-center/packs/gg602398(v=technet.10))을 다운로드 합니다.  
+어플라이언스 관리의 경우 [SQL Server 어플라이언스 기본 관리 팩](/previous-versions/system-center/packs/gg602398(v=technet.10))을 다운로드 합니다.  
   
 APS가 없는 이전 버전의 PDW의 경우[Microsoft SQL Server 2012 병렬 데이터 웨어하우스 어플라이언스 용 System Center 모니터링 팩](https://go.microsoft.com/fwlink/p/?LinkId=282661)을 다운로드 합니다.  
   
@@ -47,7 +47,7 @@ APS가 없는 이전 버전의 PDW의 경우[Microsoft SQL Server 2012 병렬 �
   
     ![설치 폴더 선택](./media/install-the-scom-management-packs/SCOM_licnse_agrmt2.png "SCOM_licnse_agrmt2")  
   
-4.  **설치**를 클릭합니다.  
+4.  **Install**을 클릭합니다.  
   
     ![설치 확인](./media/install-the-scom-management-packs/SCOM_licnse_agrmt3.png "SCOM_licnse_agrmt3")  
   
@@ -67,7 +67,7 @@ APS가 없는 이전 버전의 PDW의 경우[Microsoft SQL Server 2012 병렬 �
   
     ![설치 폴더 선택](./media/install-the-scom-management-packs/SCOM_licnse_agmtB1.png "SCOM_licnse_agmtB1")  
   
-4.  **설치**를 클릭합니다.  
+4.  **Install**을 클릭합니다.  
   
     ![설치 확인](./media/install-the-scom-management-packs/SCOM_licnse_agmtB2.png "SCOM_licnse_agmtB2")  
   
@@ -80,4 +80,3 @@ APS가 없는 이전 버전의 PDW의 경우[Microsoft SQL Server 2012 병렬 �
   
 <!-- MISSING LINKS ## See Also  
 [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  
-  

@@ -1,8 +1,6 @@
 ---
-title: 서버 인증 모드 변경 | Microsoft Docs
+title: 서버 인증 모드 변경
 description: SQL Server에서 서버 인증 모드를 변경하는 방법을 알아봅니다. 이 작업을 위해 SQL Server Management Studio 또는 Transact-SQL을 사용할 수 있습니다.
-ms.custom: ''
-ms.date: 02/18/2020
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -16,23 +14,26 @@ helpviewer_keywords:
 ms.assetid: 79babcf8-19fd-4495-b8eb-453dc575cac0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 67fe4768a07460ebac0b533b6e886ab565d82029
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.custom: ''
+ms.date: 02/18/2020
+ms.openlocfilehash: 79dc463039be1100f265e6bb44561a6e2dc71c93
+ms.sourcegitcommit: bf5acef60627f77883249bcec4c502b0205300a4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85759226"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88200958"
 ---
 # <a name="change-server-authentication-mode"></a>서버 인증 모드 변경
 
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+
 이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 서버 인증 모드를 변경하는 방법에 대해 설명합니다. 설치하는 동안 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 은 **Windows 인증 모드** 또는 **SQL Server 및 Windows 인증 모드**로 설정됩니다. 설치 후 언제든지 인증 모드를 변경할 수 있습니다.
 
 설치 중에 **Windows 인증 모드** 를 선택하면 sa 로그인이 해제되며 설치 프로그램에서 암호를 할당합니다. 나중에 인증 모드를 **SQL Server 및 Windows 인증 모드**로 변경해도 sa 로그인은 계속 해제되어 있습니다. sa 로그인을 사용하려면 ALTER LOGIN 문을 사용하여 sa 로그인을 설정하고 새 암호를 할당합니다. sa 로그인은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용한 서버 연결만 허용합니다.
 
 ## <a name="before-you-begin"></a>시작하기 전에
 
-sa 계정은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 계정으로 잘 알려져 있으며 종종 악의적인 사용자의 대상이 됩니다. 애플리케이션에서 요청하지 않는 한 sa 계정을 사용하지 마십시오. sa 로그인에 대해 강력한 암호를 사용하는 것이 중요합니다.
+sa 계정은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 계정으로 잘 알려져 있으며 악의적인 사용자의 대상이 되는 경우가 많습니다. 애플리케이션에서 요청하지 않는 한 sa 계정을 사용하지 마십시오. sa 로그인에 강력한 암호를 사용하는 것이 중요합니다.
 
 ## <a name="change-authentication-mode-with-ssms"></a>SSMS를 사용하여 인증 모드 변경
 
@@ -46,7 +47,7 @@ sa 계정은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 계정으
 
 ## <a name="enable-sa-login"></a>sa 로그인 사용
 
-SSMS 또는 T-SQL을 사용하여 **sa** 로그인을 사용하도록 설정할 수 있습니다.
+SSMS 또는 T-SQL로 **sa** 로그인을 사용하도록 설정할 수 있습니다.
 
 ### <a name="use-ssms"></a>SSMS 사용
 
@@ -83,7 +84,12 @@ EXEC xp_instance_regwrite N'HKEY_LOCAL_MACHINE',
 GO
 ```
 
+> [!Note]
+> 인증 모드를 변경하는 데 필요한 권한은 [sysadmin](../../relational-databases/security/authentication-access/server-level-roles.md#fixed-server-level-roles) 또는 [Control Server](../../relational-databases/security/permissions-database-engine.md)입니다.
+
 ## <a name="see-also"></a>참고 항목
 
- [강력한 암호](../../relational-databases/security/strong-passwords.md)   
- [SQL Server 설치에 대한 보안 고려 사항](../../sql-server/install/security-considerations-for-a-sql-server-installation.md) [ALTER LOGIN&#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md) [시스템 관리자가 잠겨 있는 경우 SQL Server에 연결](../../database-engine/configure-windows/connect-to-sql-server-when-system-administrators-are-locked-out.md)
+- [강력한 암호](../../relational-databases/security/strong-passwords.md)
+- [SQL Server 설치에 대한 보안 고려 사항](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)
+- [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)
+- [시스템 관리자가 잠겨 있는 경우 SQL Server에 연결](../../database-engine/configure-windows/connect-to-sql-server-when-system-administrators-are-locked-out.md)

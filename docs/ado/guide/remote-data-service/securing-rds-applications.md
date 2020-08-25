@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 82fb1330-d6c6-4c17-ad3e-d417ff822b25
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0e40d5739de285c0655e9ab45f14ba3f342a420f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: aff7a1a180e29adf457feab1d0c7f57f4629cfea
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451975"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759283"
 ---
 # <a name="securing-rds-applications"></a>RDS 애플리케이션 보안
 이 항목에서는 RDS에 대 한 보안 정보를 제공 합니다.  
@@ -30,18 +30,16 @@ ms.locfileid: "88451975"
  Microsoft Internet Explorer에 새로운 보안 기능이 추가 됨에 따라 일부 ADO 및 RDS 개체는 "안전" 모드 환경 에서만 실행 되도록 제한 됩니다. 이를 위해서는 여러 영역, 보안 수준, 제한적인 동작, 안전 하지 않은 작업 및 사용자 지정 된 보안 설정을 포함 하 여 이러한 문제를 알고 있어야 합니다.  
   
 ## <a name="security-and-your-web-server"></a>보안 및 웹 서버  
- 인터넷 웹 서버에서 [RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) 개체를 사용 하는 경우이로 인해 보안 위험이 발생할 수 있습니다. 유효한 DSN (데이터 원본 이름), 사용자 ID 및 암호 정보를 가져오는 외부 사용자는 해당 데이터 원본에 대 한 쿼리를 전송 하는 페이지를 작성할 수 있습니다. 데이터 원본에 대 한 제한 된 액세스 권한을 원하는 경우 **RDSServer DataFactory** 개체 (msadcf.dll)를 등록 취소 하 고 삭제 한 다음 하드 코드 된 쿼리와 함께 사용자 지정 비즈니스 개체를 사용 하는 것이 한 가지 옵션입니다.  
+ 인터넷 웹 서버에서 [RDSServer. DataFactory](../../reference/rds-api/datafactory-object-rdsserver.md) 개체를 사용 하는 경우이로 인해 보안 위험이 발생할 수 있습니다. 유효한 DSN (데이터 원본 이름), 사용자 ID 및 암호 정보를 가져오는 외부 사용자는 해당 데이터 원본에 대 한 쿼리를 전송 하는 페이지를 작성할 수 있습니다. 데이터 원본에 대 한 제한 된 액세스 권한을 원하는 경우 **RDSServer DataFactory** 개체 (msadcf.dll)를 등록 취소 하 고 삭제 한 다음 하드 코드 된 쿼리와 함께 사용자 지정 비즈니스 개체를 사용 하는 것이 한 가지 옵션입니다.  
   
  DataFactory 개체를 사용 하는 경우의 보안 문제에 대 한 자세한 내용은 microsoft 보안 웹 사이트의 Microsoft 보안 공지 MS99-025을 참조 하십시오 RDSServer.  
   
 ## <a name="client-impersonation-and-security"></a>클라이언트 가장 및 보안  
  IIS 웹 서버에 대 한 **암호 인증** 속성이 Windows nt Challenge/Response 인증 (windows nt 4.0의 경우) 또는 windows 통합 인증 (windows 2000의 경우)으로 설정 된 경우 비즈니스 개체가 클라이언트의 보안 컨텍스트에서 호출 됩니다. 이는 HTTP를 통한 클라이언트 가장을 허용 하는 RDS 1.5의 새로운 기능입니다. 이 모드에서 작업 하는 경우 웹 서버 (IIS)에 대 한 로그온은 익명이 아니지만 클라이언트 컴퓨터를 실행 하는 사용자 ID와 암호를 사용 합니다. ODBC Dsn이 트러스트 된 연결을 사용 하도록 설정 된 경우 SQL Server와 같은 데이터베이스에 대 한 액세스도 클라이언트의 보안 컨텍스트에서 수행 됩니다. 그러나 데이터베이스가 IIS와 같은 컴퓨터에 있는 경우에만 작동 합니다. 클라이언트 자격 증명을 다른 컴퓨터에 전달할 수 없습니다.  
   
- 예를 들어 userid가 "JohnD"이 고 password = "secret" 인 John Doe 라는 클라이언트는 클라이언트 컴퓨터에 로그온 됩니다. **RDSServer** 개체에 액세스 해야 하는 브라우저 기반 응용 프로그램을 실행 하 여 IIS를 실행 하는 "MyServer" 컴퓨터에서 SQL 쿼리를 실행 하 여 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 을 만들어야 합니다. Windows NT Server 4.0를 실행 하는 시스템용 MyServer는 Windows NT 챌린지/응답 인증을 사용 하도록 설정 되 고, 해당 ODBC DSN에는 "트러스트 된 연결 사용"이 선택 되어 있으며 서버에도 SQL Server 데이터 원본이 포함 되어 있습니다. 웹 서버에서 요청을 받으면 클라이언트에 사용자 ID와 암호를 요청 합니다. 따라서 요청은 IUSER_MyServer 대신 "JohnD"/"비밀"에서 오는 것 처럼 MyServer에 기록 됩니다 (익명 암호 인증이 설정 된 경우의 기본값). 마찬가지로 SQL Server에 로그온 하면 "JohnD"/"Secret"이 사용 됩니다.  
+ 예를 들어 userid가 "JohnD"이 고 password = "secret" 인 John Doe 라는 클라이언트는 클라이언트 컴퓨터에 로그온 됩니다. **RDSServer** 개체에 액세스 해야 하는 브라우저 기반 응용 프로그램을 실행 하 여 IIS를 실행 하는 "MyServer" 컴퓨터에서 SQL 쿼리를 실행 하 여 [레코드 집합](../../reference/ado-api/recordset-object-ado.md) 을 만들어야 합니다. Windows NT Server 4.0를 실행 하는 시스템용 MyServer는 Windows NT 챌린지/응답 인증을 사용 하도록 설정 되 고, 해당 ODBC DSN에는 "트러스트 된 연결 사용"이 선택 되어 있으며 서버에도 SQL Server 데이터 원본이 포함 되어 있습니다. 웹 서버에서 요청을 받으면 클라이언트에 사용자 ID와 암호를 요청 합니다. 따라서 요청은 IUSER_MyServer 대신 "JohnD"/"비밀"에서 오는 것 처럼 MyServer에 기록 됩니다 (익명 암호 인증이 설정 된 경우의 기본값). 마찬가지로 SQL Server에 로그온 하면 "JohnD"/"Secret"이 사용 됩니다.  
   
  따라서 IIS Windows NT 챌린지/응답 인증 모드를 사용 하면 사용자가 데이터베이스에 로그온 하는 데 필요한 사용자 ID와 암호 정보를 명시적으로 묻지 않고 HTML 페이지를 만들 수 있습니다. IIS 기본 인증을 사용 하는 경우에도이를 사용 해야 합니다.  
   
 ## <a name="password-authentication"></a>암호 인증  
  RDS는 세 가지 암호 인증 모드인 익명, 기본 또는 NT 챌린지/Response 인증 (Windows 2000의 windows 통합 인증 이라고 함) 중 하나에서 실행 되는 IIS 웹 서버와 통신할 수 있습니다. 이러한 설정은 클라이언트 컴퓨터에 NT 웹 서버에 대 한 명시적 액세스 권한이 있어야 하는 것과 같이 웹 서버에서 액세스를 제어 하는 방법을 정의 합니다.
-
-

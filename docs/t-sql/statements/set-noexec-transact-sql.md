@@ -1,4 +1,5 @@
 ---
+description: SET NOEXEC(Transact-SQL)
 title: SET NOEXEC(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: ba56fba1-af9b-4459-b6e4-5d7e71a7630b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7495f0eb68df1cf64320aee14276d33ff7641db5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4e32f168c04aba303dc33e1e3db8c268e163ef82
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765771"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88356629"
 ---
 # <a name="set-noexec-transact-sql"></a>SET NOEXEC(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -43,8 +44,10 @@ ms.locfileid: "85765771"
 SET NOEXEC { ON | OFF }  
 ```  
   
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="remarks"></a>설명  
- SET NOEXEC 옵션을 ON으로 설정하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문의 각 일괄 처리를 컴파일하지만 실행하지는 않습니다. SET NOEXEC 옵션을 OFF로 설정하면 컴파일 후 모든 일괄 처리가 실행됩니다.  
+ SET NOEXEC 옵션을 ON으로 설정하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문의 각 일괄 처리를 구문 분석하고 컴파일하지만 실행하지는 않습니다. SET NOEXEC 옵션을 OFF로 설정하면 컴파일 후 모든 일괄 처리가 실행됩니다.  NOEXEC는 지연된 이름 확인을 지원합니다. 일괄 처리에서 하나 이상의 참조된 개체가 존재하지 않으면 오류가 throw되지 않습니다.
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 문의 실행은 컴파일과 실행의 두 단계로 이루어집니다. 이 옵션은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 구문의 유효성 및 실행 시 [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드의 개체 이름 유효성을 검사하도록 할 때 사용할 수 있는 유용한 기능입니다. 또한 더 큰 일괄 처리 문에 포함된 문을 디버깅할 때도 유용한 기능입니다.  
   
@@ -53,7 +56,7 @@ SET NOEXEC { ON | OFF }
 ## <a name="permissions"></a>사용 권한  
  public 역할의 멤버 자격이 필요합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 유효한 쿼리, 유효하지 않은 개체 이름이 있는 쿼리 및 잘못된 구문이 있는 쿼리에 `NOEXEC`를 사용합니다.  
   
 ```sql
@@ -111,6 +114,6 @@ GO
 ## <a name="see-also"></a>참고 항목  
  [SET 문&#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
  [SET SHOWPLAN_ALL &#40;Transact-SQL&#41;](../../t-sql/statements/set-showplan-all-transact-sql.md)   
- [SET SHOWPLAN_TEXT &#40;Transact-SQL&#41;](../../t-sql/statements/set-showplan-text-transact-sql.md)  
+ [SET SHOWPLAN_TEXT&#40;Transact-SQL&#41;](../../t-sql/statements/set-showplan-text-transact-sql.md)  
   
   

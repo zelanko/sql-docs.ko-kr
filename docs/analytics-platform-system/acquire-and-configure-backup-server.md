@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: e160c606b19933934ec844b477ffec08475307d8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b1d817bae593d4083f3e4873d626e147e58d5c28
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401491"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767162"
 ---
 # <a name="acquire-and-configure-a-backup-server-for-parallel-data-warehouse"></a>병렬 데이터 웨어하우스의 백업 서버 가져오기 및 구성
 이 문서에서는 비 어플라이언스 Windows 시스템을 AP (Analytics Platform System) 및 PDW (병렬 데이터 웨어하우스)의 백업 및 복원 기능과 함께 사용할 백업 서버로 구성 하는 방법을 설명 합니다.  
@@ -50,7 +50,7 @@ Windows 파일 공유 (SMB) 프로토콜을 사용 하는 파일 서버
   
 -   SMB를 통한 파일 사전 할당의 성능 혜택을 얻습니다.  
   
--   백업 작업에는 IFI (인스턴트 파일 초기화)를 사용 합니다. IT 팀은 백업 서버에서이 설정을 관리 합니다. PDW Configuration Manager (dwconfig .exe)는 백업 서버에서 IFI를 설정 하거나 제어 하지 않습니다. 이전 버전의 Windows는 IFI를 갖지 않지만 여전히 백업 서버로 사용할 수 있습니다.  
+-   백업 작업에는 IFI (인스턴트 파일 초기화)를 사용 합니다. IT 팀은 백업 서버에서이 설정을 관리 합니다. PDW Configuration Manager (dwconfig.exe)가 백업 서버에서 IFI를 설정 하거나 제어 하지 않습니다. 이전 버전의 Windows는 IFI를 갖지 않지만 여전히 백업 서버로 사용할 수 있습니다.  
   
 ### <a name="networking-requirements"></a>네트워킹 요구 사항  
 필수는 아니지만 InfiniBand은 백업 서버에 권장 되는 연결 형식입니다. 기기 InfiniBand 네트워크에 로드 서버를 연결 하기 위해 준비 하려면:  
@@ -120,9 +120,9 @@ FROM DISK = '\\10.172.14.255\backups\yearly\Invoices2013Full'
   
 자세한 내용은 다음을 참조하세요. 
   
--   [BACKUP DATABASE](../t-sql/statements/backup-database-parallel-data-warehouse.md)   
+-   [BACKUP DATABASE](../t-sql/statements/backup-transact-sql.md?view=aps-pdw-2016)   
   
--   [RESTORE DATABASE](../t-sql/statements/restore-database-parallel-data-warehouse.md)  
+-   [데이터베이스 복원](../t-sql/statements/restore-statements-transact-sql.md?view=aps-pdw-2016)  
   
 ## <a name="security-notices"></a><a name="Security"></a>보안 알림  
 백업 서버가 어플라이언스의 개인 도메인에 가입 되어 있지 않습니다. 사용자의 네트워크에 있으며 사용자의 도메인과 개인 어플라이언스 도메인 간에 트러스트 관계가 없습니다.  
@@ -150,5 +150,4 @@ SQL Server PDW에 저장 된 모든 네트워크 자격 증명을 나열 하려�
 - 로드 서버에서 보안 설정 \ 로컬 정책 \ 보안 옵션: Microsoft 네트워크 클라이언트: 디지털 서명 통신 (항상): 사용에 다음 그룹 정책 옵션을 설정 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
-[백업 및 복원](backup-and-restore-overview.md)  
-  
+[Backup and Restore (백업 및 복원)](backup-and-restore-overview.md)  

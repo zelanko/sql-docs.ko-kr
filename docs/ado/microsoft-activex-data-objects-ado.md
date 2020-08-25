@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2fa6237b-44b8-4b6c-9952-5acd80a54e20
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 63307b7b0074cca482befd0dfa689684504f26f5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3f170bbc7144e624ea6788c844fb817014e178d0
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451835"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88760033"
 ---
 # <a name="microsoft-activex-data-objects-ado"></a>Microsoft ADO(ActiveX Data Objects)
 
@@ -50,21 +50,19 @@ ADO(ActiveX Data Objects)은 지정 된 백 엔드 엔진에 종속 되지 않�
  ADOX는 핵심 ADO 개체에 대 한 도우미 라이브러리입니다. 테이블, 프로시저 등의 스키마 개체를 만들고 수정 하 고 삭제 하기 위한 추가 개체를 제공 합니다. 또한 사용자 및 그룹을 유지 관리 하 고 개체에 대 한 사용 권한을 부여 하 고 취소 하는 보안 개체를 포함 합니다.  
   
 ## <a name="documentation"></a>설명서  
- [ADO 보안 디자인 문제](../ado/guide/ado-security-design-issues.md)  
+ [ADO 보안 디자인 문제](./guide/ado-security-design-issues.md)  
   
- [ADO 프로그래머 가이드](../ado/guide/ado-programmer-s-guide.md)  
+ [ADO 프로그래머 가이드](./guide/ado-programmer-s-guide.md)  
   
  ADO, RDS, ADO MD 및 ADOX를 사용 하는 방법을 소개 합니다.  
   
- [ADO 프로그래머 참조](../ado/reference/ado-programmer-s-reference.md)  
+ [ADO 프로그래머 참조](./reference/ado-programmer-s-reference.md)  
   
  ADO 설명서의이 섹션에는 각 ADO, RDS, ADO MD 및 ADOX 개체, 컬렉션, 속성, 동적 속성, 메서드, 이벤트 및 열거형에 대 한 항목이 포함 되어 있습니다.  
   
- [ADO 용어 설명](../ado/ado-glossary.md)  
+ [ADO 용어 설명](./ado-glossary.md)  
   
 ## <a name="support"></a>지원  
  ADO 문제에 대 한 무료 도움말을 보려면 ADO 공용 뉴스 그룹에 게시 해 보세요. 이 뉴스 그룹은 ADO를 다루는 Microsoft PSS (기술 지원 서비스) 지원 전문가와 기타 숙련 된 ADO 개발자에 의해 모니터링 됩니다.  
   
  지원 옵션에 대 한 자세한 내용은 Microsoft 도움말 및 지원 웹 사이트에서 찾을 수 있습니다.
-
-

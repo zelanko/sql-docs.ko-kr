@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: da385405-1c9a-478b-9bf6-fba70015324c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0c2eb347c7bd4b4bd39e6d85690e9646784077ae
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 59913c457702e39b9009cd2a8a138b2dbc5f9032
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451895"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759903"
 ---
 # <a name="system-requirements-for-the-address-book-application"></a>주소록 애플리케이션에 대한 시스템 요구 사항
 주소록 샘플 응용 프로그램을 설정 하려면 다음 소프트웨어 및 데이터베이스 요구 사항을 충족 해야 합니다.  
@@ -51,9 +51,7 @@ ms.locfileid: "88451895"
   
  권한이 없는 경우 데이터베이스 관리자가 시스템을 설정 하 고 데이터베이스에 대 한 액세스 권한을 부여 하거나 데이터베이스를 설정 해야 할 수 있습니다.  
   
-## <a name="see-also"></a>참고 항목  
- [주소록 SQL 스크립트 실행](../../../ado/guide/remote-data-service/running-the-address-book-sql-script.md)   
- [DataControl 개체 (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
- [주소록 예제 애플리케이션 실행](../../../ado/guide/remote-data-service/running-the-address-book-sample-application.md)
-
-
+## <a name="see-also"></a>관련 항목  
+ [주소록 SQL 스크립트 실행](./running-the-address-book-sql-script.md)   
+ [DataControl 개체 (RDS)](../../reference/rds-api/datacontrol-object-rds.md)   
+ [주소록 예제 애플리케이션 실행](./running-the-address-book-sample-application.md)

@@ -11,12 +11,12 @@ ms.assetid: 8b7810b2-637e-46a3-9fe1-d055898ba639
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ff25352a7aefe716c66cb01a4abafcfb9742e6ca
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 98a7fefe85c953cfb186951ff69e287288fa0ac0
+ms.sourcegitcommit: dec2e2d3582c818cc9489e6a824c732b91ec3aeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883513"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88091994"
 ---
 # <a name="install-sql-server-with-smb-fileshare-storage"></a>SMB 파일 공유 스토리지를 사용하여 SQL Server 설치
 
@@ -111,7 +111,7 @@ ms.locfileid: "85883513"
   
 ## <a name="known-issues"></a>알려진 문제  
   
--   네트워크로 연결된 스토리지에 있는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 데이터베이스를 분리한 후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스를 다시 연결하려고 시도하는 동안 데이터베이스 권한 문제가 발생할 수 있습니다. 이 문제는 [이 KB 아티클](https://go.microsoft.com/fwlink/?LinkId=237321)(https://go.microsoft.com/fwlink/?LinkId=237321) 에 정의되어 있습니다. 이 문제를 해결하려면 KB 문서의 **자세한 정보** 섹션을 참조하십시오.  
+-   네트워크로 연결된 스토리지에 있는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 데이터베이스를 분리한 후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스를 다시 연결하려고 시도하는 동안 데이터베이스 권한 문제가 발생할 수 있습니다. 자세한 내용은 [오류 5120](../../relational-databases/errors-events/mssqlserver-5120-database-engine-error.md)을 참조하세요.
   
 -   SMB 파일 공유가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 클러스터형 인스턴스에 대한 스토리지 옵션으로 사용되는 경우, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 리소스 DLL에는 파일 공유에 대한 읽기/쓰기 권한이 부족하기 때문에 기본적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 장애 조치(failover) 클러스터 진단 로그에서 파일 공유에 쓸 수 없습니다. 이 문제를 해결하려면 다음 방법 중 하나를 사용하십시오.  
   

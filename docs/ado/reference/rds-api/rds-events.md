@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e03739e0-8169-46d6-9956-556b644a7645
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9c66bd5fc3c0274985dfcfc1ebbd323b6677b718
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b0874d04d779b517971d215735fe2bb34d1677e4
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438805"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767792"
 ---
 # <a name="rds-events"></a>RDS 이벤트
 > [!IMPORTANT]
@@ -27,7 +27,5 @@ ms.locfileid: "88438805"
   
 |이벤트|설명|  
 |-|-|  
-|[onError (RDS)](../../../ado/reference/rds-api/onerror-event-rds.md)|작업을 수행 하는 동안 오류가 발생할 때마다 호출 됩니다.|  
-|[onReadyStateChange (RDS)](../../../ado/reference/rds-api/onreadystatechange-event-rds.md)|**ReadyState** 속성 값이 변경 될 때마다 호출 됩니다.|
-
-
+|[onError (RDS)](./onerror-event-rds.md)|작업을 수행 하는 동안 오류가 발생할 때마다 호출 됩니다.|  
+|[onReadyStateChange (RDS)](./onreadystatechange-event-rds.md)|**ReadyState** 속성 값이 변경 될 때마다 호출 됩니다.|

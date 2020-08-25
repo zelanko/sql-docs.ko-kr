@@ -1,4 +1,5 @@
 ---
+description: DROP WORKLOAD 분류자(Transact-SQL)
 title: DROP WORKLOAD 분류자(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2019
@@ -19,12 +20,12 @@ helpviewer_keywords:
 author: ronortloff
 ms.author: rortloff
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: 244166a9aefb08c5fe037776d47cf5a578c50481
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 3382c3b63180cbccb091442820ed99d7882382d1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394468"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496746"
 ---
 # <a name="drop-workload-classifier-transact-sql"></a>DROP WORKLOAD CLASSIFIER(Transact-SQL)
 
@@ -36,7 +37,7 @@ ms.locfileid: "87394468"
   
 ## <a name="syntax"></a>구문  
 
-```
+```syntaxsql
 DROP WORKLOAD CLASSIFIER classifier_name;
 ```
 

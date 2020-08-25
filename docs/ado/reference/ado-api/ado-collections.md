@@ -14,32 +14,32 @@ helpviewer_keywords:
 ms.assetid: b5e1d26d-b41d-4e35-8c7c-972426473dfb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7fb960d7539dd2d47be6eb2aad424808d44db10d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: adaf8b1b14fbc6813096e8ba8fcbf3943e8a2179
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451475"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88760123"
 ---
 # <a name="ado-collections"></a>ADO 컬렉션
-이러한 컬렉션과 ADO 개체 간의 관계는 [Ado 개체 모델](../../../ado/reference/ado-api/ado-object-model.md)에 표시 됩니다.  
+이러한 컬렉션과 ADO 개체 간의 관계는 [Ado 개체 모델](./ado-object-model.md)에 표시 됩니다.  
   
- 각 컬렉션은 해당 개체를 포함할 수 있습니다. 예를 들어 [오류](../../../ado/reference/ado-api/error-object.md) 개체는 [Errors](../../../ado/reference/ado-api/errors-collection-ado.md) 컬렉션에 포함 될 수 있습니다. 개체에 대 한 자세한 내용은 [ADO 개체](../../../ado/reference/ado-api/ado-objects-and-interfaces.md) 또는 특정 개체 항목을 참조 하세요.  
+ 각 컬렉션은 해당 개체를 포함할 수 있습니다. 예를 들어 [오류](./error-object.md) 개체는 [Errors](./errors-collection-ado.md) 컬렉션에 포함 될 수 있습니다. 개체에 대 한 자세한 내용은 [ADO 개체](./ado-objects-and-interfaces.md) 또는 특정 개체 항목을 참조 하세요.  
   
 |컬렉션|설명|  
 |-|-|  
-|[Errors](../../../ado/reference/ado-api/errors-collection-ado.md)|단일 공급자 관련 오류에 대 한 응답으로 생성 된 모든 **오류** 개체를 포함 합니다.|  
-|[필드](../../../ado/reference/ado-api/fields-collection-ado.md)|**레코드 집합** 개체의 모든 **필드** 개체를 포함 합니다.|  
-|[매개 변수](../../../ado/reference/ado-api/parameters-collection-ado.md)|**Command** 개체의 모든 **Parameter** 개체를 포함 합니다.|  
-|[속성](../../../ado/reference/ado-api/properties-collection-ado.md)|개체의 특정 인스턴스에 대 한 모든 **속성** 개체를 포함 합니다.|  
+|[Errors](./errors-collection-ado.md)|단일 공급자 관련 오류에 대 한 응답으로 생성 된 모든 **오류** 개체를 포함 합니다.|  
+|[필드](./fields-collection-ado.md)|**레코드 집합** 개체의 모든 **필드** 개체를 포함 합니다.|  
+|[매개 변수](./parameters-collection-ado.md)|**Command** 개체의 모든 **Parameter** 개체를 포함 합니다.|  
+|[속성](./properties-collection-ado.md)|개체의 특정 인스턴스에 대 한 모든 **속성** 개체를 포함 합니다.|  
   
-## <a name="see-also"></a>참고 항목  
- [ADO API 참조](../../../ado/reference/ado-api/ado-api-reference.md)   
- [ADO 동적 속성](../../../ado/reference/ado-api/ado-dynamic-properties.md)   
- [ADO 열거 상수](../../../ado/reference/ado-api/ado-enumerated-constants.md)   
- [부록 B: ADO 오류](../../../ado/guide/appendixes/appendix-b-ado-errors.md)   
- [ADO 이벤트](../../../ado/reference/ado-api/ado-events.md)   
- [ADO 메서드](../../../ado/reference/ado-api/ado-methods.md)   
- [ADO 개체 모델](../../../ado/reference/ado-api/ado-object-model.md)   
- [ADO 개체 및 인터페이스](../../../ado/reference/ado-api/ado-objects-and-interfaces.md)   
- [ADO 속성](../../../ado/reference/ado-api/ado-properties.md)
+## <a name="see-also"></a>관련 항목  
+ [ADO API 참조](./ado-api-reference.md)   
+ [ADO 동적 속성](./ado-dynamic-properties.md)   
+ [ADO 열거 상수](./ado-enumerated-constants.md)   
+ [부록 B: ADO 오류](../../guide/appendixes/appendix-b-ado-errors.md)   
+ [ADO 이벤트](./ado-events.md)   
+ [ADO 메서드](./ado-methods.md)   
+ [ADO 개체 모델](./ado-object-model.md)   
+ [ADO 개체 및 인터페이스](./ado-objects-and-interfaces.md)   
+ [ADO 속성](./ado-properties.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2d9c30e9-ab5b-4920-91b8-48454c2fb5d8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c04f910aa169d346868b3fec2f1eccb2e381176e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2f1c68dc55a4ae57283ce4ca7e6d357fd47030e4
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439085"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768442"
 ---
 # <a name="execute-method-rds"></a>Execute 메서드(RDS)
 요청을 실행 하 고 ADO 2.5 이상에서 사용할 ADO 레코드 집합을 만듭니다.  
@@ -49,7 +49,7 @@ object.Execute(ConnectionString As String, HandlerString As String, QueryString 
  *lFetchOptions*  
  비동기 인출의 유형을 나타냅니다.  
   
- 자세한 내용은 [Fetchoptions 속성 (RDS)](../../../ado/reference/rds-api/fetchoptions-property-rds.md)을 참조 하십시오.  
+ 자세한 내용은 [Fetchoptions 속성 (RDS)](./fetchoptions-property-rds.md)을 참조 하십시오.  
   
  *TableID*  
  VT_EMPTY 또는 VT_BSTR 형식의 **변형** 입니다. 이 값이 VT_EMPTY 형식이 면 무시 됩니다. VT_BSTR 형식인 경우 **adCmdTableDirect** 를 사용 하 여 레코드 집합을 만들고 여기에 지정 된 값과 *QueryString* 매개 변수는 무시 됩니다.  
@@ -82,6 +82,4 @@ object.Execute(ConnectionString As String, HandlerString As String, QueryString 
  *Handlerstring* 매개 변수는 null 일 수 있습니다. 이 경우에 발생 하는 상황은 RDS 서버를 구성 하는 방법에 따라 달라 집니다. "MSDFMAP. handler"의 처리기 문자열은 Microsoft에서 제공 하는 처리기 (Msdfmap.dll)를 사용 해야 함을 나타냅니다. "MASDFMAP sample.ini" 처리기 문자열은 Msdfmap.dll 처리기를 사용 해야 하며 "sample.ini" 인수를 처리기에 전달 해야 함을 나타냅니다. MSDFMAP.dll은 sample.ini를 사용 하 여 연결 및 쿼리 문자열을 확인 하는 방향으로 인수를 해석 합니다.  
   
 ## <a name="applies-to"></a>적용 대상  
- [DataFactory 개체(RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)
-
-
+ [DataFactory 개체(RDSServer)](./datafactory-object-rdsserver.md)

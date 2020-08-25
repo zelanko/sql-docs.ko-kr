@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: b1e927d6-7d50-4978-9eef-045043cdce7a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e2a52faceafdde92acb3aed1e2a1b765594777e1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0056f965e36fb1fadd3d7f8c08c2514ee2593d46
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451905"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759003"
 ---
 # <a name="step-6-changes-are-sent-to-the-server-rds-tutorial"></a>6단계: 서버에 변경 내용이 보내집니다(RDS 자습서).
 **레코드 집합** 개체를 편집 하는 경우 변경 내용 (즉, 추가, 변경 또는 삭제 된 행)을 서버에 다시 보낼 수 있습니다.  
@@ -35,7 +35,7 @@ rs.   ' The equivalent of
 ...  
 ```  
   
- **A 부** 이 경우에는 RDS만 사용 했다고 가정 [합니다. ](../../../ado/reference/rds-api/datacontrol-object-rds.md) 이제는 **레코드 집합** 개체가 RDS와 연결 되어 있습니다 **. DataControl**. [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md) 메서드는 [서버](../../../ado/reference/rds-api/server-property-rds.md) 및 [연결](../../../ado/reference/rds-api/connect-property-rds.md) 속성이 여전히 설정 된 경우 **레코드 집합** 개체에 대 한 변경 내용으로 데이터 원본을 업데이트 합니다.  
+ **A 부** 이 경우에는 RDS만 사용 했다고 가정 [합니다. ](../../reference/rds-api/datacontrol-object-rds.md) 이제는 **레코드 집합** 개체가 RDS와 연결 되어 있습니다 **. DataControl**. [SubmitChanges](../../reference/rds-api/submitchanges-method-rds.md) 메서드는 [서버](../../reference/rds-api/server-property-rds.md) 및 [연결](../../reference/rds-api/connect-property-rds.md) 속성이 여전히 설정 된 경우 **레코드 집합** 개체에 대 한 변경 내용으로 데이터 원본을 업데이트 합니다.  
   
 ```vb
 Sub RDSTutorial6A()  
@@ -53,7 +53,7 @@ DC.
 ...  
 ```  
   
- **B 파트** 또는 연결 및 **레코드 집합** 개체를 지정 하 여 [RDSServer](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) 개체를 사용 하 여 서버를 업데이트할 수 있습니다.  
+ **B 파트** 또는 연결 및 **레코드 집합** 개체를 지정 하 여 [RDSServer](../../reference/rds-api/datafactory-object-rdsserver.md) 개체를 사용 하 여 서버를 업데이트할 수 있습니다.  
   
 ```vb
 Sub RDSTutorial6B()  
@@ -75,7 +75,7 @@ End Sub
 > [!IMPORTANT]
 >  Windows 8 및 Windows Server 2012부터 RDS 서버 구성 요소는 더 이상 Windows 운영 체제에 포함 되지 않습니다 (자세한 내용은 Windows 8 및 [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) 참조). 이후 버전의 Windows에서는 RDS 클라이언트 구성 요소가 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. RDS를 사용 하는 응용 프로그램은 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)로 마이그레이션해야 합니다.  
   
-## <a name="see-also"></a>참고 항목  
- [Microsoft OLE DB Remoting 공급자 (ADO 서비스 공급자)](../../../ado/guide/appendixes/microsoft-ole-db-remoting-provider-ado-service-provider.md)   
- [RDS 자습서](../../../ado/guide/remote-data-service/rds-tutorial.md)   
- [RDS 자습서(VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)   
+## <a name="see-also"></a>관련 항목  
+ [Microsoft OLE DB Remoting 공급자 (ADO 서비스 공급자)](../appendixes/microsoft-ole-db-remoting-provider-ado-service-provider.md)   
+ [RDS 자습서](./rds-tutorial.md)   
+ [RDS 자습서(VBScript)](./rds-tutorial-vbscript.md)

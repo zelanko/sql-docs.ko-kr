@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3957197a-f543-4d6b-9e11-67a77c2063b7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4d0174e4d40aba55e012b333045bcedfb4fea460
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3c28555be7737129553c01ca4fd863505e2090b0
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438705"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767542"
 ---
 # <a name="reset-method-rds"></a>Reset 메서드(RDS)
 지정 된 정렬 및 필터 속성을 기반으로 클라이언트 쪽 **레코드 집합** 에서 정렬 또는 필터를 실행 합니다.  
@@ -36,15 +36,15 @@ DataControl.Reset(value)
   
 #### <a name="parameters"></a>매개 변수  
  *DataControl*  
- RDS를 나타내는 개체 변수입니다 [. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) 개체입니다.  
+ RDS를 나타내는 개체 변수입니다 [. DataControl](./datacontrol-object-rds.md) 개체입니다.  
   
  *value*  
- (선택 사항) 현재 "필터링 된" 행 집합을 필터링 하려는 경우 **부울** **값 (기본값)입니다.** **False** 는 원래 행 집합을 필터링 하 고 이전 필터 옵션을 제거 함을 나타냅니다.  
+ 선택 사항입니다. 현재 "필터링 된" 행 집합을 필터링 하려는 경우 **부울** **값 (기본값)입니다.** **False** 는 원래 행 집합을 필터링 하 고 이전 필터 옵션을 제거 함을 나타냅니다.  
   
 ## <a name="remarks"></a>설명  
- [Sortcolumn](../../../ado/reference/rds-api/sortcolumn-property-rds.md), [SortDirection](../../../ado/reference/rds-api/sortdirection-property-rds.md), [filtervalue](../../../ado/reference/rds-api/filtervalue-property-rds.md), [filtervalue](../../../ado/reference/rds-api/filtercriterion-property-rds.md)및 [filtervalue](../../../ado/reference/rds-api/filtercolumn-property-rds.md) 속성은 클라이언트 쪽 캐시에 정렬 및 필터링 기능을 제공 합니다. 정렬 기능은 한 열의 값으로 레코드를 정렬 합니다. 필터링 기능은 검색 조건에 따라 레코드의 하위 집합을 표시 하는 반면 전체 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 은 캐시에 유지 됩니다. **Reset** 메서드는 조건을 실행 하 고 현재 **레코드 집합** 을 업데이트할 수 있는 **레코드 집합**으로 바꿉니다.  
+ [Sortcolumn](./sortcolumn-property-rds.md), [SortDirection](./sortdirection-property-rds.md), [filtervalue](./filtervalue-property-rds.md), [filtervalue](./filtercriterion-property-rds.md)및 [filtervalue](./filtercolumn-property-rds.md) 속성은 클라이언트 쪽 캐시에 정렬 및 필터링 기능을 제공 합니다. 정렬 기능은 한 열의 값으로 레코드를 정렬 합니다. 필터링 기능은 검색 조건에 따라 레코드의 하위 집합을 표시 하는 반면 전체 [레코드 집합](../ado-api/recordset-object-ado.md) 은 캐시에 유지 됩니다. **Reset** 메서드는 조건을 실행 하 고 현재 **레코드 집합** 을 업데이트할 수 있는 **레코드 집합**으로 바꿉니다.  
   
- 전송 되지 않은 원본 데이터에 변경 내용이 있으면 **Reset** 메서드가 실패 합니다. 먼저 [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md) 메서드를 사용 하 여 읽기/쓰기 **레코드 집합**의 변경 내용을 저장 한 다음 **Reset** 메서드를 사용 하 여 레코드를 정렬 하거나 필터링 합니다.  
+ 전송 되지 않은 원본 데이터에 변경 내용이 있으면 **Reset** 메서드가 실패 합니다. 먼저 [SubmitChanges](./submitchanges-method-rds.md) 메서드를 사용 하 여 읽기/쓰기 **레코드 집합**의 변경 내용을 저장 한 다음 **Reset** 메서드를 사용 하 여 레코드를 정렬 하거나 필터링 합니다.  
   
  행 집합에서 필터를 두 개 이상 수행 하려는 경우에는 선택적 *부울* 인수를 **Reset** 메서드와 함께 사용할 수 있습니다. 다음 예제에 이 작업을 수행하는 방법이 나와 있습니다.  
   
@@ -72,11 +72,8 @@ ADC.Reset(FALSE)   ' Rowset now has all Last Names > "T".
 ```  
   
 ## <a name="applies-to"></a>적용 대상  
- [DataControl 개체(RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
+ [DataControl 개체(RDS)](./datacontrol-object-rds.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [FilterColumn, Filtercolumn, Filtercolumn, SortColumn 및 SortDirection 속성 및 Reset 메서드 예제 (VBScript)](../../../ado/reference/rds-api/filter-column-criterion-value-sortcolumn-sortdirection-example-vbscript.md)   
- [SubmitChanges 메서드(RDS)](../../../ado/reference/rds-api/submitchanges-method-rds.md)
-
-
-
+ [FilterColumn, Filtercolumn, Filtercolumn, SortColumn 및 SortDirection 속성 및 Reset 메서드 예제 (VBScript)](./filter-column-criterion-value-sortcolumn-sortdirection-example-vbscript.md)   
+ [SubmitChanges 메서드(RDS)](./submitchanges-method-rds.md)

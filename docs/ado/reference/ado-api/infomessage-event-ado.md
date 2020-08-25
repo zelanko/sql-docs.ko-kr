@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 468c87dd-e3bc-4084-9941-94d10743d4e9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d3957c6cf6843ba27c54fb5a979901bd4a656c2e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4cab5acb3ccedb9a1e42426da3701bc015f0ec2d
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443455"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774832"
 ---
 # <a name="infomessage-event-ado"></a>InfoMessage 이벤트(ADO)
 **InfoMessage** 이벤트는 **connectionevent** 작업 중에 경고가 발생할 때마다 호출 됩니다.  
@@ -36,17 +36,17 @@ InfoMessage pError, adStatus, pConnection
   
 #### <a name="parameters"></a>매개 변수  
  *pError*  
- [오류](../../../ado/reference/ado-api/error-object.md) 개체입니다. 이 매개 변수는 반환 되는 모든 오류를 포함 합니다. 여러 오류가 반환 되는 경우 **오류** 컬렉션을 열거 하 여 찾습니다.  
+ [오류](./error-object.md) 개체입니다. 이 매개 변수는 반환 되는 모든 오류를 포함 합니다. 여러 오류가 반환 되는 경우 **오류** 컬렉션을 열거 하 여 찾습니다.  
   
  *adStatus*  
- [Eventstatusenum](../../../ado/reference/ado-api/eventstatusenum.md) 상태 값입니다. 경고가 발생 하는 경우 *Adstatus* 는 **adstatusok** 로 설정 되 고 *pError* 에는 경고가 포함 됩니다.  
+ [Eventstatusenum](./eventstatusenum.md) 상태 값입니다. 경고가 발생 하는 경우 *Adstatus* 는 **adstatusok** 로 설정 되 고 *pError* 에는 경고가 포함 됩니다.  
   
  이 이벤트가 반환 되기 전에이 매개 변수를 **adStatusUnwantedEvent** 로 설정 하 여 후속 알림이 발생 하지 않도록 합니다.  
   
  *pConnection*  
- [Connection](../../../ado/reference/ado-api/connection-object-ado.md) 개체입니다. 경고가 발생 한 연결입니다. 예를 들어 **연결 개체를** 열거나 **연결**에서 [명령을](../../../ado/reference/ado-api/command-object-ado.md) 실행할 때 경고가 발생할 수 있습니다.  
+ [Connection](./connection-object-ado.md) 개체입니다. 경고가 발생 한 연결입니다. 예를 들어 **연결 개체를** 열거나 **연결**에서 [명령을](./command-object-ado.md) 실행할 때 경고가 발생할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [ADO Events 모델 예제 (VC + +)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
- [ADO 이벤트 처리기 요약](../../../ado/guide/data/ado-event-handler-summary.md)   
- [연결 개체(ADO)](../../../ado/reference/ado-api/connection-object-ado.md)
+ [ADO Events 모델 예제 (VC + +)](./ado-events-model-example-vc.md)   
+ [ADO 이벤트 처리기 요약](../../guide/data/ado-event-handler-summary.md)   
+ [연결 개체(ADO)](./connection-object-ado.md)

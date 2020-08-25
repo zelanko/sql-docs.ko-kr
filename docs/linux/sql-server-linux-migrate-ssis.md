@@ -1,6 +1,6 @@
 ---
 title: SSIS를 사용하여 Linux에서 데이터 추출, 변환 및 로드
-description: 이 문서에서는 Linux 컴퓨터용 SSIS(SQL Server Integration Services)를 설명합니다.
+description: Linux에서 SSIS(SQL Server Integration Services) 패키지를 실행하는 방법을 알아봅니다. 또한 SSIS 기능에 대한 자세한 정보를 어디에서 찾을 수 있는지 알아봅니다.
 author: lrtoyou1223
 ms.author: lle
 ms.reviewer: maghan
@@ -8,12 +8,12 @@ ms.date: 01/09/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 72ad1ca9c97834ad38b579b904f29db71cf0686d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a459924450582e57ff17af2cc8f48c9156ab8bb2
+ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882723"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88088873"
 ---
 # <a name="extract-transform-and-load-data-on-linux-with-ssis"></a>SSIS를 사용하여 Linux에서 데이터 추출, 변환 및 로드
 
@@ -25,7 +25,7 @@ Linux에서 실행되는 SSIS 패키지는 Windows 온-프레미스 또는 클�
 
 SSIS의 기능에 대한 자세한 내용은 [SQL Server Integration Services](../integration-services/sql-server-integration-services.md)를 참조하세요.
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>전제 조건
 
 Linux 컴퓨터에서 SSIS 패키지를 실행하려면 먼저 SQL Server Integration Services를 설치해야 합니다. SSIS는 Linux 컴퓨터용 SQL Server 설치에 포함되어 있지 않습니다. 설치 지침은 [SQL Server Integration Services 설치](sql-server-linux-setup-ssis.md)를 참조하세요.
 
@@ -36,7 +36,7 @@ Linux 컴퓨터에서 SSIS 패키지를 실행하려면 먼저 SQL Server Integr
 Linux 컴퓨터에서 SSIS 패키지를 실행하려면 다음 작업을 수행합니다.
 
 1.  Linux 컴퓨터에 SSIS 패키지를 복사합니다.
-2.  다음 명령 실행:
+2.  다음 명령을 실행합니다.
     ```
     $ dtexec /F \<package name \> /DE <protection password>
     ```

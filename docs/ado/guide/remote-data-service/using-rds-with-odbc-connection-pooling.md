@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e8b912c1-da5b-4e85-a000-1e6648a94237
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 440a1947d5424840ec99f9e4da7ae03266c7ac04
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 074226de92d5ea02a3eb507013c862e0ca493455
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451865"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88760043"
 ---
 # <a name="using-rds-with-odbc-connection-pooling"></a>ODBC 연결 풀링에서 RDS 사용
 ODBC 데이터 원본을 사용 하는 경우 인터넷 정보 서비스 (IIS)에서 연결 풀링 옵션을 사용 하 여 클라이언트 로드의 고성능 처리를 달성할 수 있습니다. 연결 풀링은 연결에 대 한 리소스 관리자로, 자주 사용 하는 연결에서 열린 상태를 유지 합니다.  
@@ -124,27 +124,5 @@ ODBC 데이터 원본을 사용 하는 경우 인터넷 정보 서비스 (IIS)�
   
 5.  확인을 클릭 한 다음 확인을 다시 클릭 하 여 유틸리티를 종료 합니다.  
   
-## <a name="see-also"></a>참고 항목  
- [RDS 기본 사항](../../../ado/guide/remote-data-service/rds-fundamentals.md)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+## <a name="see-also"></a>관련 항목  
+ [RDS 기본 사항](./rds-fundamentals.md)

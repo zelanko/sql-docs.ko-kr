@@ -1,6 +1,6 @@
 ---
 title: PMEM(영구 메모리) 구성
-description: 이 문서에서는 Linux에서 PMEM을 구성하기 위한 연습을 제공합니다.
+description: SQL Server on Linux에 대한 PMEM(영구 메모리)을 구성하는 방법과 PMEM 디바이스에 대한 네임스페이스를 만드는 방법을 알아봅니다.
 ms.custom: seo-lt-2019
 author: briancarrig
 ms.author: brcarrig
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>= sql-server-linux-ver15  || >= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: d0222b763ea7898a18443175a88012b5fb5aed42
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 146ab5788e29045a55e6251be01e061f52d7bbb8
+ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901510"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88088935"
 ---
 # <a name="configure-persistent-memory-pmem-for-sql-server-on-linux"></a>SQL Server on Linux의 PMEM(영구적 메모리) 구성
 

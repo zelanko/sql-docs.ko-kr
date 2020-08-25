@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 30185312-5e09-4804-852d-e505d660113a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ab3a4f6bd28c74dadb82d7e388866b4bf6100a06
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6b1dde4ddae2acf4a6b238489a0af56ae1ce63d4
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439665"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88769722"
 ---
 # <a name="primarykey-property-adox"></a>PrimaryKey 속성(ADOX)
 인덱스가 테이블의 기본 키를 나타내는지 여부를 나타냅니다.  
@@ -36,11 +36,11 @@ ms.locfileid: "88439665"
 ## <a name="remarks"></a>설명  
  기본값은 **False**입니다.  
   
- 이 속성은 이미 컬렉션에 추가 된 [인덱스](../../../ado/reference/adox-api/index-object-adox.md) 개체에서 읽기 전용입니다.  
+ 이 속성은 이미 컬렉션에 추가 된 [인덱스](./index-object-adox.md) 개체에서 읽기 전용입니다.  
   
 ## <a name="applies-to"></a>적용 대상  
- [Index 개체(ADOX)](../../../ado/reference/adox-api/index-object-adox.md)  
+ [인덱스 개체(ADOX)](./index-object-adox.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [PrimaryKey 및 Unique 속성 예제 (VB)](../../../ado/reference/adox-api/primarykey-and-unique-properties-example-vb.md)   
- [Index 개체(ADOX)](../../../ado/reference/adox-api/index-object-adox.md)
+ [PrimaryKey 및 Unique 속성 예제 (VB)](./primarykey-and-unique-properties-example-vb.md)   
+ [인덱스 개체(ADOX)](./index-object-adox.md)

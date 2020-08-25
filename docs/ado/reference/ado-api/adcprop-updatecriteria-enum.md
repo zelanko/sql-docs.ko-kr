@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 33fd7b65-2ec8-4f62-91a7-630b5dab1aa2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 31205bbe32dd3c09d70fe4baeb41261be985096c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2b0e2a308d9a83c936abe8f5f39b29dac86795ec
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451605"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88760257"
 ---
 # <a name="adcprop_updatecriteria_enum"></a>ADCPROP_UPDATECRITERIA_ENUM
-[레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체를 사용 하 여 데이터 원본 행의 낙관적 업데이트를 수행 하는 동안 충돌을 검색 하는 데 사용할 수 있는 필드를 지정 합니다.  
+[레코드 집합](./recordset-object-ado.md) 개체를 사용 하 여 데이터 원본 행의 낙관적 업데이트를 수행 하는 동안 충돌을 검색 하는 데 사용할 수 있는 필드를 지정 합니다.  
   
- 이러한 상수는 [ADO 동적 속성 인덱스](../../../ado/reference/ado-api/ado-dynamic-property-index.md) 에서 참조 되 고 [OLE DB 문서에 대 한 Microsoft Cursor Service](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md) 에 설명 된 **레코드 집합** "**업데이트 조건**" 동적 속성에 사용 합니다.  
+ 이러한 상수는 [ADO 동적 속성 인덱스](./ado-dynamic-property-index.md) 에서 참조 되 고 [OLE DB 문서에 대 한 Microsoft Cursor Service](../../guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md) 에 설명 된 **레코드 집합** "**업데이트 조건**" 동적 속성에 사용 합니다.  
   
 |상수|값|설명|  
 |--------------|-----------|-----------------|  
