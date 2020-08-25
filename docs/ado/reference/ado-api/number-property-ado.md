@@ -18,30 +18,30 @@ helpviewer_keywords:
 ms.assetid: f92323c5-dd11-4a63-a505-d9014a0f067f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 448842387c524326e51b104a0850f9ff503d35e7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fe4984a9bdbeff69f7c2beba4d91833cdca85f50
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443075"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774102"
 ---
 # <a name="number-property-ado"></a>Number 속성(ADO)
-[오류](../../../ado/reference/ado-api/error-object.md) 개체를 고유 하 게 식별 하는 번호를 나타냅니다.  
+[오류](./error-object.md) 개체를 고유 하 게 식별 하는 번호를 나타냅니다.  
   
 ## <a name="return-value"></a>반환 값  
- [Errorvalueenum](../../../ado/reference/ado-api/errorvalueenum.md) 상수 중 하나에 해당할 수 있는 **Long** 값을 반환 합니다.  
+ [Errorvalueenum](./errorvalueenum.md) 상수 중 하나에 해당할 수 있는 **Long** 값을 반환 합니다.  
   
 ## <a name="remarks"></a>설명  
  **Number** 속성을 사용 하 여 발생 한 오류를 확인 합니다. 속성의 값은 오류 조건에 해당 하는 고유 번호입니다.  
   
- [Errors](../../../ado/reference/ado-api/errors-collection-ado.md) 컬렉션은 16 진수 형식 (예: 0x80004005) 또는 long 값 (예: 2147467259)의 HRESULT를 반환 합니다. 이러한 Hresult는 OLE DB 또는 OLE 자체와 같은 기본 구성 요소에 의해 발생할 수 있습니다. 이러한 숫자에 대 한 자세한 내용은 [OLE DB 프로그래머 참조](https://msdn.microsoft.com/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8)에서 [오류 (OLE DB)](https://msdn.microsoft.com/ed74e62d-4948-4eeb-a7c9-fd7ad46af7fd) 를 참조*하세요.*  
+ [Errors](./errors-collection-ado.md) 컬렉션은 16 진수 형식 (예: 0x80004005) 또는 long 값 (예: 2147467259)의 HRESULT를 반환 합니다. 이러한 Hresult는 OLE DB 또는 OLE 자체와 같은 기본 구성 요소에 의해 발생할 수 있습니다. 이러한 숫자에 대 한 자세한 내용은 [OLE DB 프로그래머 참조](/previous-versions/windows/desktop/ms713643(v=vs.85))에서 [오류 (OLE DB)](/previous-versions/windows/desktop/ms724533(v=vs.85)) 를 참조*하세요.*  
   
 ## <a name="applies-to"></a>적용 대상  
- [Error 개체](../../../ado/reference/ado-api/error-object.md)  
+ [Error 개체](./error-object.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [Description, HelpContext, HelpFile, NativeError, Number, Source 및 SQLState 속성 예제 (VB)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vb.md)   
- [Description, HelpContext, HelpFile, NativeError, Number, Source 및 SQLState 속성 예제 (VC + +)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vc.md)   
- [Description 속성](../../../ado/reference/ado-api/description-property.md)   
- [HelpContext, HelpFile 속성](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md)   
- [Source 속성(ADO 오류)](../../../ado/reference/ado-api/source-property-ado-error.md)
+ [Description, HelpContext, HelpFile, NativeError, Number, Source 및 SQLState 속성 예제 (VB)](./description-helpcontext-helpfile-nativeerror-number-source-example-vb.md)   
+ [Description, HelpContext, HelpFile, NativeError, Number, Source 및 SQLState 속성 예제 (VC + +)](./description-helpcontext-helpfile-nativeerror-number-source-example-vc.md)   
+ [Description 속성](./description-property.md)   
+ [HelpContext, HelpFile 속성](./helpcontext-helpfile-properties.md)   
+ [Source 속성(ADO 오류)](./source-property-ado-error.md)

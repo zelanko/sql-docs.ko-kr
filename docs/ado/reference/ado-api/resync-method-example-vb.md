@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: ab95315c-fe15-458c-9e0c-937ae5596592
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fb942aac538e73697435d94c77530ed1531a7325
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7f7bbad7f16191b6ff9d1c3b5c497995733ab10b
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442295"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777672"
 ---
 # <a name="resync-method-example-vb"></a>Resync 메서드 예제(VB)
-이 예에서는 [Resync](../../../ado/reference/ado-api/resync-method.md) 메서드를 사용 하 여 정적 레코드 집합의 데이터를 새로 고치는 방법을 보여 줍니다.  
+이 예에서는 [Resync](./resync-method.md) 메서드를 사용 하 여 정적 레코드 집합의 데이터를 새로 고치는 방법을 보여 줍니다.  
   
 ```  
 'BeginResyncVB  
@@ -105,5 +105,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [레코드 집합 개체 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Resync 메서드](../../../ado/reference/ado-api/resync-method.md)
+ [레코드 집합 개체 (ADO)](./recordset-object-ado.md)   
+ [Resync 메서드](./resync-method.md)

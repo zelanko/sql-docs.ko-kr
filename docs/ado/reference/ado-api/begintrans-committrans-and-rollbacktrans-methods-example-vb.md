@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: aa7de324-cd71-4bd0-8043-24229f4a785e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8cc23406c3c9ad7c2455d0efc7f11aeee107bb52
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9579e5314bb298eed65145548d848e31bf47c1b9
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451185"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776432"
 ---
 # <a name="begintrans-committrans-and-rollbacktrans-methods-example-vb"></a>BeginTrans, CommitTrans 및 RollbackTrans 메서드 예제 (VB)
-이 예에서는 데이터베이스의 ***Titles*** 테이블에 있는 모든 심리학 books의 책 유형을 변경 합니다. [BeginTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) 메서드가 ***Titles*** 테이블에 적용 된 모든 변경 내용을 격리 하는 트랜잭션을 시작한 후 [CommitTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) 메서드는 변경 내용을 저장 합니다. [RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) 메서드를 사용 하 여 [Update](../../../ado/reference/ado-api/update-method.md) 메서드를 사용 하 여 저장 한 변경 내용을 취소할 수 있습니다.  
+이 예에서는 데이터베이스의 ***Titles*** 테이블에 있는 모든 심리학 books의 책 유형을 변경 합니다. [BeginTrans](./begintrans-committrans-and-rollbacktrans-methods-ado.md) 메서드가 ***Titles*** 테이블에 적용 된 모든 변경 내용을 격리 하는 트랜잭션을 시작한 후 [CommitTrans](./begintrans-committrans-and-rollbacktrans-methods-ado.md) 메서드는 변경 내용을 저장 합니다. [RollbackTrans](./begintrans-committrans-and-rollbacktrans-methods-ado.md) 메서드를 사용 하 여 [Update](./update-method.md) 메서드를 사용 하 여 저장 한 변경 내용을 취소할 수 있습니다.  
   
 ```  
 'BeginBeginTransVB  
@@ -133,5 +133,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [BeginTrans, CommitTrans 및 RollbackTrans 메서드 (ADO)](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)   
- [연결 개체(ADO)](../../../ado/reference/ado-api/connection-object-ado.md)
+ [BeginTrans, CommitTrans 및 RollbackTrans 메서드 (ADO)](./begintrans-committrans-and-rollbacktrans-methods-ado.md)   
+ [연결 개체(ADO)](./connection-object-ado.md)

@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: d4683472-4120-4236-8640-fa9ae289e23e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 71dd02544e80d24e96d9cc64fa1e5947f38c685a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cefa913c42440d69345bfa9c8d4b8826a0bc3d84
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451195"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776572"
 ---
 # <a name="begintrans-committrans-and-rollbacktrans-methods-ado"></a>BeginTrans, CommitTrans 및 RollbackTrans 메서드(ADO)
-이러한 트랜잭션 메서드는 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체 내에서 트랜잭션 처리를 다음과 같이 관리 합니다.  
+이러한 트랜잭션 메서드는 [연결](./connection-object-ado.md) 개체 내에서 트랜잭션 처리를 다음과 같이 관리 합니다.  
   
 -   **BeginTrans** 새 트랜잭션을 시작 합니다.  
   
@@ -60,7 +60,7 @@ object.RollbackTrans
  원본 데이터에 대 한 일련의 변경 내용을 단일 단위로 저장 하거나 취소 하려는 경우 **연결** 개체에 이러한 메서드를 사용 합니다. 예를 들어 계정 간에 돈을 전송 하려면 1에서 금액을 빼서 동일한 금액을 다른에 추가 합니다. 업데이트 중 하나가 실패 하면 계정이 더 이상 균형을 유지 하지 않습니다. 열려 있는 트랜잭션 내에서 이러한 변경 작업을 수행 하면 변경 내용이 전부 또는 전혀 변경 되지 않습니다.  
   
 > [!NOTE]
->  일부 공급자는 트랜잭션을 지원 하지 않습니다. 공급자 정의 속성 "**TRANSACTION DDL**"이 공급자가 트랜잭션을 지원 함을 나타내는 **연결** 개체의 [Properties](../../../ado/reference/ado-api/properties-collection-ado.md) 컬렉션에 나타나는지 확인 합니다. 공급자가 트랜잭션을 지원 하지 않는 경우 이러한 메서드 중 하나를 호출 하면 오류가 반환 됩니다.  
+>  일부 공급자는 트랜잭션을 지원 하지 않습니다. 공급자 정의 속성 "**TRANSACTION DDL**"이 공급자가 트랜잭션을 지원 함을 나타내는 **연결** 개체의 [Properties](./properties-collection-ado.md) 컬렉션에 나타나는지 확인 합니다. 공급자가 트랜잭션을 지원 하지 않는 경우 이러한 메서드 중 하나를 호출 하면 오류가 반환 됩니다.  
   
  **BeginTrans** 메서드를 호출한 후에는 **CommitTrans** 또는 **RollbackTrans** 를 호출 하 여 트랜잭션을 종료할 때까지 공급자가 즉시 변경 내용을 커밋하지 않습니다.  
   
@@ -68,15 +68,15 @@ object.RollbackTrans
   
  **CommitTrans** 메서드를 호출 하면 연결에서 열린 트랜잭션 내에서 수행 된 변경 내용이 저장 되 고 트랜잭션이 종료 됩니다. **RollbackTrans** 메서드를 호출 하면 열린 트랜잭션 내에서 수행 된 모든 변경 내용이 취소 되 고 트랜잭션이 종료 됩니다. 열려 있는 트랜잭션이 없는 경우 두 메서드를 호출 하면 오류가 발생 합니다.  
   
- **Connection** 개체의 [Attributes](../../../ado/reference/ado-api/attributes-property-ado.md) 속성에 따라 **CommitTrans** 또는 **RollbackTrans** 메서드를 호출 하면 새 트랜잭션이 자동으로 시작 될 수 있습니다. **Attributes** 속성이 **adXactCommitRetaining**로 설정 된 경우 공급자는 **CommitTrans** 호출 후에 새 트랜잭션을 자동으로 시작 합니다. **Attributes** 속성이 **adXactAbortRetaining**로 설정 된 경우 공급자는 **RollbackTrans** 호출 후에 새 트랜잭션을 자동으로 시작 합니다.  
+ **Connection** 개체의 [Attributes](./attributes-property-ado.md) 속성에 따라 **CommitTrans** 또는 **RollbackTrans** 메서드를 호출 하면 새 트랜잭션이 자동으로 시작 될 수 있습니다. **Attributes** 속성이 **adXactCommitRetaining**로 설정 된 경우 공급자는 **CommitTrans** 호출 후에 새 트랜잭션을 자동으로 시작 합니다. **Attributes** 속성이 **adXactAbortRetaining**로 설정 된 경우 공급자는 **RollbackTrans** 호출 후에 새 트랜잭션을 자동으로 시작 합니다.  
   
 ## <a name="remote-data-service"></a>원격 데이터 서비스  
  클라이언트 쪽 **연결** 개체에서는 **BeginTrans**, **CommitTrans**및 **RollbackTrans** 메서드를 사용할 수 없습니다.  
   
 ## <a name="applies-to"></a>적용 대상  
- [연결 개체(ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
+ [연결 개체(ADO)](./connection-object-ado.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [BeginTrans, CommitTrans 및 RollbackTrans 메서드 예제 (VB)](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-example-vb.md)   
- [BeginTrans, CommitTrans 및 RollbackTrans 메서드 예제 (VC + +)](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-example-vc.md)   
- [Attributes 속성(ADO)](../../../ado/reference/ado-api/attributes-property-ado.md)
+ [BeginTrans, CommitTrans 및 RollbackTrans 메서드 예제 (VB)](./begintrans-committrans-and-rollbacktrans-methods-example-vb.md)   
+ [BeginTrans, CommitTrans 및 RollbackTrans 메서드 예제 (VC + +)](./begintrans-committrans-and-rollbacktrans-methods-example-vc.md)   
+ [Attributes 속성(ADO)](./attributes-property-ado.md)

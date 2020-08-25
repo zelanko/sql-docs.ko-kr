@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: e37b4d46-380d-4615-b4bb-e1a7b0851771
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 83ee7fc06923a4e0010fab835ea05e00768cbb94
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: da0a6641ff98848e3cfd2173ecd19711bf41fa4e
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441925"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777312"
 ---
 # <a name="status-property-example-recordset-vb"></a>Status 속성 예제(레코드 집합)(VB)
-이 예에서는 [Status](../../../ado/reference/ado-api/status-property-ado-recordset.md) 속성을 사용 하 여 일괄 처리 업데이트를 발생 하기 전에 일괄 처리 작업에서 수정 된 레코드를 표시 합니다.  
+이 예에서는 [Status](./status-property-ado-recordset.md) 속성을 사용 하 여 일괄 처리 업데이트를 발생 하기 전에 일괄 처리 작업에서 수정 된 레코드를 표시 합니다.  
   
 ```  
 'BeginStatusRecordsetVB  
@@ -99,4 +99,4 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Status 속성(ADO 레코드 집합)](../../../ado/reference/ado-api/status-property-ado-recordset.md)
+ [Status 속성(ADO 레코드 집합)](./status-property-ado-recordset.md)

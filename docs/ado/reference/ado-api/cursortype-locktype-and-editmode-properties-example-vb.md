@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 2cb4a304-f40a-4897-8b93-82c2d8e93500
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3d9b0ae19ce5fbac150a86fc7db3d08b16840fbd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 859fca56653250ee1070981db048aafeb2e4011a
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444285"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775512"
 ---
 # <a name="cursortype-locktype-and-editmode-properties-example-vb"></a>CursorType, LockType 및 EditMode 속성 예제 (VB)
-이 예에서는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)을 열기 전에 [CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md) 및 [LockType](../../../ado/reference/ado-api/locktype-property-ado.md) 속성을 설정 하는 방법을 보여 줍니다. 또한 다양 한 조건에서 [EditMode](../../../ado/reference/ado-api/editmode-property.md) 속성의 값을 보여 줍니다. 이 프로시저를 실행 하려면 EditModeOutput 함수가 필요 합니다.  
+이 예에서는 [레코드 집합](./recordset-object-ado.md)을 열기 전에 [CursorType](./cursortype-property-ado.md) 및 [LockType](./locktype-property-ado.md) 속성을 설정 하는 방법을 보여 줍니다. 또한 다양 한 조건에서 [EditMode](./editmode-property.md) 속성의 값을 보여 줍니다. 이 프로시저를 실행 하려면 EditModeOutput 함수가 필요 합니다.  
   
 ```  
 'BeginEditModeVB  
@@ -124,10 +124,10 @@ End Function
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [CursorType 속성 (ADO)](../../../ado/reference/ado-api/cursortype-property-ado.md)   
- [CursorTypeEnum](../../../ado/reference/ado-api/cursortypeenum.md)   
- [EditMode 속성](../../../ado/reference/ado-api/editmode-property.md)   
- [EditModeEnum](../../../ado/reference/ado-api/editmodeenum.md)   
- [LockType 속성 (ADO)](../../../ado/reference/ado-api/locktype-property-ado.md)   
- [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md)   
- [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [CursorType 속성 (ADO)](./cursortype-property-ado.md)   
+ [CursorTypeEnum](./cursortypeenum.md)   
+ [EditMode 속성](./editmode-property.md)   
+ [EditModeEnum](./editmodeenum.md)   
+ [LockType 속성 (ADO)](./locktype-property-ado.md)   
+ [LockTypeEnum](./locktypeenum.md)   
+ [레코드 집합 개체(ADO)](./recordset-object-ado.md)

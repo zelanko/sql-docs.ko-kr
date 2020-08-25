@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: fb4088d5-5968-42d6-aeaa-3955046bb4da
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 38c0a0955e934b4f303937d978f739e00ac6c120
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2e8c969c8e611c8e2bff76dc045a28a9c6d6ab96
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451745"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759943"
 ---
 # <a name="activecommand-property-ado"></a>ActiveCommand 속성(ADO)
-연결 된 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체를 만든 [명령](../../../ado/reference/ado-api/command-object-ado.md) 개체를 나타냅니다.  
+연결 된 [레코드 집합](./recordset-object-ado.md) 개체를 만든 [명령](./command-object-ado.md) 개체를 나타냅니다.  
   
 ## <a name="return-value"></a>반환 값  
  **명령** 개체를 포함 하는 **Variant** 를 반환 합니다. 기본값은 null 개체 참조입니다.  
@@ -37,10 +37,10 @@ ms.locfileid: "88451745"
  결과 **레코드 집합** 개체만 제공 되는 경우이 속성을 사용 하 여 연결 된 **명령** 개체를 찾을 수 있습니다.  
   
 ## <a name="applies-to"></a>적용 대상  
- [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [레코드 집합 개체(ADO)](./recordset-object-ado.md)  
   
-## <a name="see-also"></a>참고 항목  
- [ActiveCommand 속성 예제 (VB)](../../../ado/reference/ado-api/activecommand-property-example-vb.md)   
- [ActiveCommand 속성 예제 (JScript)](../../../ado/reference/ado-api/activecommand-property-example-jscript.md)   
- [ActiveCommand 속성 예제 (VC + +)](../../../ado/reference/ado-api/activecommand-property-example-vc.md)   
- [명령 개체(ADO)](../../../ado/reference/ado-api/command-object-ado.md)
+## <a name="see-also"></a>관련 항목  
+ [ActiveCommand 속성 예제 (VB)](./activecommand-property-example-vb.md)   
+ [ActiveCommand 속성 예제 (JScript)](./activecommand-property-example-jscript.md)   
+ [ActiveCommand 속성 예제 (VC + +)](./activecommand-property-example-vc.md)   
+ [명령 개체(ADO)](./command-object-ado.md)

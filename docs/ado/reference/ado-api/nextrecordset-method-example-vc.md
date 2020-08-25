@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8bb72817-0cf5-4ce9-9fb8-043c89da941c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a9543501582e8cff357a2677f88e7a917224d866
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 77d6e70dcc1d2fa7d3fc0ad3d4e14139e8e4dace
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443085"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774042"
 ---
 # <a name="nextrecordset-method-example-vc"></a>NextRecordset 메서드 예제(VC++)
-이 예제에서는 [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md) 메서드를 사용 하 여 세 개의 개별 **SELECT** 문으로 구성 된 복합 명령 문을 사용 하는 레코드 집합의 데이터를 봅니다.  
+이 예제에서는 [NextRecordset](./nextrecordset-method-ado.md) 메서드를 사용 하 여 세 개의 개별 **SELECT** 문으로 구성 된 복합 명령 문을 사용 하는 레코드 집합의 데이터를 봅니다.  
   
 ```  
 // BeginNextRecordsetCpp.cpp  
@@ -140,4 +140,4 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [NextRecordset 메서드(ADO)](../../../ado/reference/ado-api/nextrecordset-method-ado.md)
+ [NextRecordset 메서드(ADO)](./nextrecordset-method-ado.md)

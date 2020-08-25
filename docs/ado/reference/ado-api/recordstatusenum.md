@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 506fdd70-4452-4e83-95d5-c94311988dfa
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0d48e9538fb8ec4f0dac8c3a17457b04b0ace963
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 57edf327f2ba4661ba47f43cf8b2f128b9fe92ab
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442393"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88772132"
 ---
 # <a name="recordstatusenum"></a>RecordStatusEnum
-일괄 업데이트 및 기타 대량 작업과 관련 된 레코드의 [상태](../../../ado/reference/ado-api/status-property-ado-recordset.md) 를 지정 합니다.  
+일괄 업데이트 및 기타 대량 작업과 관련 된 레코드의 [상태](./status-property-ado-recordset.md) 를 지정 합니다.  
   
 |상수|값|설명|  
 |--------------|-----------|-----------------|  
@@ -74,4 +74,4 @@ ms.locfileid: "88442393"
 |AdoEnums.RecordStatus.UNMODIFIED|  
   
 ## <a name="applies-to"></a>적용 대상  
- [Status 속성(ADO 레코드 집합)](../../../ado/reference/ado-api/status-property-ado-recordset.md)
+ [Status 속성(ADO 레코드 집합)](./status-property-ado-recordset.md)

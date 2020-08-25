@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ccb6ffbc-7303-4124-8a0c-f6356f2c82d9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 45f999fce96969331ddd8e235b120532919c22b5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 02ba483a38f554455d1b30546a9308aeec3921ed
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88450865"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776132"
 ---
 # <a name="command-visual-c-syntax-index-with-import"></a>Command (#import를 사용 하는 Visual C++ 구문 인덱스)
 ## <a name="methods"></a>메서드  
@@ -61,4 +61,4 @@ __declspec(property(get=GetState)) long State;
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [명령 개체(ADO)](../../../ado/reference/ado-api/command-object-ado.md)
+ [명령 개체(ADO)](./command-object-ado.md)

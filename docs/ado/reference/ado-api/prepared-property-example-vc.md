@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: f697ac1a-f125-42b5-bbf6-762a7fa30ae3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d05e220717ad88ad52340d368a3b54a85365621d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 003f3f80e9a544e5b33929cf434f6b39855ca49d
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442675"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773062"
 ---
 # <a name="prepared-property-example-vc"></a>Prepared 속성 예제(VC++)
-이 예제에서는 준비 [된 속성](../../../ado/reference/ado-api/prepared-property-ado.md) 중 하나를 [Command](../../../ado/reference/ado-api/command-object-ado.md) 열어 준비 된 속성을 보여 줍니다.  
+이 예제에서는 준비 [된 속성](./prepared-property-ado.md) 중 하나를 [Command](./command-object-ado.md) 열어 준비 된 속성을 보여 줍니다.  
   
 ## <a name="example"></a>예제  
   
@@ -145,5 +145,5 @@ void PrintComError(_com_error &e) {
 **준비 되지 않음: 0.016 초**  
 **준비: 0.016 초**   
 ## <a name="see-also"></a>참고 항목  
- [Command 개체 (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
- [준비된 속성(ADO)](../../../ado/reference/ado-api/prepared-property-ado.md)
+ [Command 개체 (ADO)](./command-object-ado.md)   
+ [준비된 속성(ADO)](./prepared-property-ado.md)

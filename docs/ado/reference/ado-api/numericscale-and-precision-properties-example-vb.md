@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 9c1e2322-c225-49d1-a120-a343f23cea73
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0fdeaafe1a6f4362eb6a4bc912ce9267d179fe9c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3f4e5407d013e567c09dbb659f5b5e6617e0042c
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443065"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773992"
 ---
 # <a name="numericscale-and-precision-properties-example-vb"></a>NumericScale 및 Precision 속성 예제(VB)
-이 예에서는 [NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md) 및 [precision](../../../ado/reference/ado-api/precision-property-ado.md) 속성을 사용 하 여 ***Pubs*** 데이터베이스의 ***할인율*** 테이블에 있는 필드의 숫자 소수 자릿수와 전체 자릿수를 표시 합니다.  
+이 예에서는 [NumericScale](./numericscale-property-ado.md) 및 [precision](./precision-property-ado.md) 속성을 사용 하 여 ***Pubs*** 데이터베이스의 ***할인율*** 테이블에 있는 필드의 숫자 소수 자릿수와 전체 자릿수를 표시 합니다.  
   
 ```  
 'BeginNumericScaleVB  
@@ -75,7 +75,7 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Field 개체](../../../ado/reference/ado-api/field-object.md)   
- [NumericScale 속성 (ADO)](../../../ado/reference/ado-api/numericscale-property-ado.md)   
- [Parameter 개체](../../../ado/reference/ado-api/parameter-object.md)   
- [Precision 속성(ADO)](../../../ado/reference/ado-api/precision-property-ado.md)
+ [Field 개체](./field-object.md)   
+ [NumericScale 속성 (ADO)](./numericscale-property-ado.md)   
+ [Parameter 개체](./parameter-object.md)   
+ [Precision 속성(ADO)](./precision-property-ado.md)

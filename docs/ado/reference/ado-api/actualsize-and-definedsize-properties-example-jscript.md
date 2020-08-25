@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 23575e70-2304-43b4-b8be-99d9a6842589
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bbe2180d9f63f7dff8fa7398b3f037ea662b32d3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ad6deb3d0b4bc1340835effaef3e2472017fa0cd
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451665"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88760063"
 ---
 # <a name="actualsize-and-definedsize-properties-example-jscript"></a>ActualSize 및 DefinedSize 속성 예제(JScript)
-이 예에서는 [ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md) 및 [DefinedSize](../../../ado/reference/ado-api/definedsize-property.md) 속성을 사용 하 여 필드의 정의 된 크기 및 실제 크기를 표시 합니다. 다음 코드를 잘라내어 메모장 또는 다른 텍스트 편집기에 붙여 넣고 **ActualSizeJS**로 저장 합니다.  
+이 예에서는 [ActualSize](./actualsize-property-ado.md) 및 [DefinedSize](./definedsize-property.md) 속성을 사용 하 여 필드의 정의 된 크기 및 실제 크기를 표시 합니다. 다음 코드를 잘라내어 메모장 또는 다른 텍스트 편집기에 붙여 넣고 **ActualSizeJS**로 저장 합니다.  
   
 ```  
 <!-- BeginActualSizeJS -->  
@@ -131,7 +131,7 @@ body {
 <!-- EndActualSizeJS -->  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [ActualSize 속성 (ADO)](../../../ado/reference/ado-api/actualsize-property-ado.md)   
- [DefinedSize 속성](../../../ado/reference/ado-api/definedsize-property.md)   
- [Field 개체](../../../ado/reference/ado-api/field-object.md)
+## <a name="see-also"></a>관련 항목  
+ [ActualSize 속성 (ADO)](./actualsize-property-ado.md)   
+ [DefinedSize 속성](./definedsize-property.md)   
+ [Field 개체](./field-object.md)

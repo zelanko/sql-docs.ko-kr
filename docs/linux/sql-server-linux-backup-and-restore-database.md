@@ -1,6 +1,6 @@
 ---
 title: Linux에서 SQL Server 데이터베이스 백업 및 복원
-description: Linux에서 SQL Server 데이터베이스를 백업 및 복원하는 방법을 알아봅니다.
+description: Linux에서 SQL Server 데이터베이스를 백업 및 복원하는 방법을 알아봅니다. SSMS(SQL Server Management Studio)를 사용하여 백업하고 복원하는 방법도 알아봅니다.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: d30090fb-889f-466e-b793-5f284fccc4e6
-ms.openlocfilehash: f90d612eb9064025db8b9ac942dd7f664cedb67e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 637a4c7d5eef6b40008a2903d4840783dcb48b12
+ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882340"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88088972"
 ---
 # <a name="backup-and-restore-sql-server-databases-on-linux"></a>Linux에서 SQL Server 데이터베이스 백업 및 복원
 
@@ -30,7 +30,7 @@ ms.locfileid: "85882340"
 sqlcmd -S localhost -U SA -Q "BACKUP DATABASE [demodb] TO DISK = N'/var/opt/mssql/data/demodb.bak' WITH NOFORMAT, NOINIT, NAME = 'demodb-full', SKIP, NOREWIND, NOUNLOAD, STATS = 10"
 ```
 
-명령을 실행하면 SQL Server에서 암호를 입력하라는 메시지가 표시됩니다. 암호를 입력하면 셸에서 백업 진행 결과를 반환합니다. 다음은 그 예입니다.
+명령을 실행하면 SQL Server에서 암호를 입력하라는 메시지가 표시됩니다. 암호를 입력하면 셸에서 백업 진행 결과를 반환합니다. 다음은 그 예입니다. 
 
 ```
 Password:
@@ -112,4 +112,4 @@ SQL Server가 데이터베이스 백업을 완료합니다.
 * [전체 데이터베이스 백업 만들기(SQL Server)](../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)
 * [트랜잭션 로그 백업(SQL Server)](../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)
 * [BACKUP(Transact-SQL)](../t-sql/statements/backup-transact-sql.md)
-* [URL에 SQL Server Backup](../relational-databases/backup-restore/sql-server-backup-to-url.md)
+* [URL에 대한 SQL Server 백업](../relational-databases/backup-restore/sql-server-backup-to-url.md)

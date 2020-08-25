@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 6695769f-275b-4b70-81bd-1a5f7d74926c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b13115a657f3bc25ae79cf3ba92a7fe339492536
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 28e396e85dc68a3d622a173dad440c5dff68dea1
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440545"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88771462"
 ---
 # <a name="append-method-adox-indexes"></a>Append 메서드(ADOX 인덱스)
-[인덱스](../../../ado/reference/adox-api/indexes-collection-adox.md) 컬렉션에 새 [인덱스](../../../ado/reference/adox-api/index-object-adox.md) 개체를 추가 합니다.  
+[인덱스](./indexes-collection-adox.md) 컬렉션에 새 [인덱스](./index-object-adox.md) 개체를 추가 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -38,7 +38,7 @@ Indexes.Append Index [,Columns]
  추가할 **인덱스** 개체 또는 만들고 추가할 인덱스의 이름입니다.  
   
  *열*  
- (선택 사항) 인덱싱할 열의 이름을 지정 하는 Variant 값입니다 ( **Variant** ). *Columns* 매개 변수는 [열](../../../ado/reference/adox-api/column-object-adox.md) 개체의 [Name](../../../ado/reference/adox-api/name-property-adox.md) 속성 값에 해당 합니다.  
+ 선택 사항입니다. 인덱싱할 열의 이름을 지정 하는 Variant 값입니다 ( **Variant** ). *Columns* 매개 변수는 [열](./column-object-adox.md) 개체의 [Name](./name-property-adox.md) 속성 값에 해당 합니다.  
   
 ## <a name="remarks"></a>설명  
  *Columns* 매개 변수는 열 이름 또는 열 이름 배열을 사용할 수 있습니다.  
@@ -46,14 +46,14 @@ Indexes.Append Index [,Columns]
  공급자가 인덱스 생성을 지원 하지 않는 경우 오류가 발생 합니다.  
   
 ## <a name="applies-to"></a>적용 대상  
- [Indexes 컬렉션(ADOX)](../../../ado/reference/adox-api/indexes-collection-adox.md)  
+ [Indexes 컬렉션(ADOX)](./indexes-collection-adox.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [Indexes Append 메서드 예제 (VB)](../../../ado/reference/adox-api/indexes-append-method-example-vb.md)   
- [Append 메서드 (ADOX Columns)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
- [Append 메서드 (ADOX Groups)](../../../ado/reference/adox-api/append-method-adox-groups.md)   
- [Append 메서드 (ADOX 키)](../../../ado/reference/adox-api/append-method-adox-keys.md)   
- [Append 메서드 (ADOX 프로시저)](../../../ado/reference/adox-api/append-method-adox-procedures.md)   
- [Append 메서드 (ADOX Tables)](../../../ado/reference/adox-api/append-method-adox-tables.md)   
- [Append 메서드 (ADOX 사용자)](../../../ado/reference/adox-api/append-method-adox-users.md)   
- [Append 메서드(ADOX Views)](../../../ado/reference/adox-api/append-method-adox-views.md)
+ [Indexes Append 메서드 예제 (VB)](./indexes-append-method-example-vb.md)   
+ [Append 메서드 (ADOX Columns)](./append-method-adox-columns.md)   
+ [Append 메서드 (ADOX Groups)](./append-method-adox-groups.md)   
+ [Append 메서드 (ADOX 키)](./append-method-adox-keys.md)   
+ [Append 메서드 (ADOX 프로시저)](./append-method-adox-procedures.md)   
+ [Append 메서드 (ADOX Tables)](./append-method-adox-tables.md)   
+ [Append 메서드 (ADOX 사용자)](./append-method-adox-users.md)   
+ [Append 메서드(ADOX 보기)](./append-method-adox-views.md)

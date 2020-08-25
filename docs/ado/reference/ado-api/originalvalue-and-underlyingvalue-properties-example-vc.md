@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: c5762ad2-f43b-453d-b44a-9c70210eb00f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6b4db7c5b7fdbd25687f37cc3c04101b25b9e997
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6f230bc40d310570ab717eee06a454fb3ef2b52b
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442895"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773582"
 ---
 # <a name="originalvalue-and-underlyingvalue-properties-example-vc"></a>OriginalValue 및 UnderlyingValue 속성 예제 (VC + +)
-이 예제에서는 레코드 [집합](../../../ado/reference/ado-api/recordset-object-ado.md) 일괄 처리를 업데이트 하는 동안 레코드의 기본 데이터가 변경 된 경우 메시지를 표시 하 여 [Originalvalue](../../../ado/reference/ado-api/originalvalue-property-ado.md) 및 [UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md) 속성을 보여 줍니다.  
+이 예제에서는 레코드 [집합](./recordset-object-ado.md) 일괄 처리를 업데이트 하는 동안 레코드의 기본 데이터가 변경 된 경우 메시지를 표시 하 여 [Originalvalue](./originalvalue-property-ado.md) 및 [UnderlyingValue](./underlyingvalue-property.md) 속성을 보여 줍니다.  
   
 ## <a name="example"></a>예제  
   
@@ -221,6 +221,6 @@ void PrintComError(_com_error &e) {
 **원래 값: 심리학**   
 **내부 값: sociology**    
 ## <a name="see-also"></a>참고 항목  
- [OriginalValue 속성 (ADO)](../../../ado/reference/ado-api/originalvalue-property-ado.md)   
- [레코드 집합 개체 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [UnderlyingValue 속성](../../../ado/reference/ado-api/underlyingvalue-property.md)
+ [OriginalValue 속성 (ADO)](./originalvalue-property-ado.md)   
+ [레코드 집합 개체 (ADO)](./recordset-object-ado.md)   
+ [UnderlyingValue 속성](./underlyingvalue-property.md)

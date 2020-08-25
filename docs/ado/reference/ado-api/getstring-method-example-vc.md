@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 4daa93aa-9727-4d1c-886a-e9d22017a1ea
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7a70c445858b24dfe8cffc44c2dea70e9d007ab9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 004a875656b9dc772985f965ec8c2c2910b127ec
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443495"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774882"
 ---
 # <a name="getstring-method-example-vc"></a>GetString 메서드 예제(VC++)
-이 예제에서는 [GetString](../../../ado/reference/ado-api/getstring-method-ado.md) 메서드를 보여 줍니다.  
+이 예제에서는 [GetString](./getstring-method-ado.md) 메서드를 보여 줍니다.  
   
- 데이터 액세스 문제를 디버그 하 고 작은 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)의 현재 콘텐츠를 빠르고 간단 하 게 인쇄 하려는 경우를 가정 합니다.  
+ 데이터 액세스 문제를 디버그 하 고 작은 [레코드 집합](./recordset-object-ado.md)의 현재 콘텐츠를 빠르고 간단 하 게 인쇄 하려는 경우를 가정 합니다.  
   
 ## <a name="example"></a>예제  
   
@@ -185,5 +185,5 @@ Sylvia   Panteley   1956 Arlington Pl.   Rockville
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [GetString 메서드 (ADO)](../../../ado/reference/ado-api/getstring-method-ado.md)   
- [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [GetString 메서드 (ADO)](./getstring-method-ado.md)   
+ [레코드 집합 개체(ADO)](./recordset-object-ado.md)

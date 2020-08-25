@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: a3b6fc09-ce21-450d-9063-bac505208d31
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2e591ca4524bbbdd13ccd934434c743e49c0b2c4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4e29b5d53b46248ba9ba4017692f51f2c01cbc8b
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443305"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774472"
 ---
 # <a name="marshaloptions-property-example-vc"></a>MarshalOptions 속성 예제(VC++)
-이 예에서는 [MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md) 속성을 사용 하 여 서버에 다시 보낼 행을 지정 합니다. 모든 행 또는 수정 된 행만 지정 합니다.  
+이 예에서는 [MarshalOptions](./marshaloptions-property-ado.md) 속성을 사용 하 여 서버에 다시 보낼 행을 지정 합니다. 모든 행 또는 수정 된 행만 지정 합니다.  
   
 ```  
 // BeginMarshalOptionsCpp.cpp  
@@ -246,4 +246,4 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [MarshalOptions 속성(ADO)](../../../ado/reference/ado-api/marshaloptions-property-ado.md)
+ [MarshalOptions 속성(ADO)](./marshaloptions-property-ado.md)

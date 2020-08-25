@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 37000833-68f4-45f1-b2dd-7f75893d09d9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c0701577bbd569e1b7c01239bd3613591864696d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 177ba5a63cb8503c51e3264ac5fea48ebf44a3e4
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451305"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776552"
 ---
 # <a name="append-and-createparameter-methods-example-jscript"></a>Append 및 CreateParameter 메서드 예제 (JScript)
-이 예에서는 [Append](../../../ado/reference/ado-api/append-method-ado.md) 및 [createparameter](../../../ado/reference/ado-api/createparameter-method-ado.md) 메서드를 사용 하 여 입력 매개 변수를 사용 하 여 저장 프로시저를 실행 합니다. 다음 코드를 잘라내어 메모장 또는 다른 텍스트 편집기에 붙여넣고 파일을 **Appendjs .asp**로 저장 합니다.  
+이 예에서는 [Append](./append-method-ado.md) 및 [createparameter](./createparameter-method-ado.md) 메서드를 사용 하 여 입력 매개 변수를 사용 하 여 저장 프로시저를 실행 합니다. 다음 코드를 잘라내어 메모장 또는 다른 텍스트 편집기에 붙여넣고 파일을 **Appendjs .asp**로 저장 합니다.  
   
 ```  
 <!-- BeginAppendJS -->  
@@ -143,8 +143,8 @@ body {
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Append 메서드 (ADO)](../../../ado/reference/ado-api/append-method-ado.md)   
- [CreateParameter 메서드 (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)   
- [Field 개체](../../../ado/reference/ado-api/field-object.md)   
- [Fields 컬렉션 (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
- [Parameter 개체](../../../ado/reference/ado-api/parameter-object.md)
+ [Append 메서드 (ADO)](./append-method-ado.md)   
+ [CreateParameter 메서드 (ADO)](./createparameter-method-ado.md)   
+ [Field 개체](./field-object.md)   
+ [Fields 컬렉션 (ADO)](./fields-collection-ado.md)   
+ [Parameter 개체](./parameter-object.md)

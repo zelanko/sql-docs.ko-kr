@@ -20,28 +20,28 @@ helpviewer_keywords:
 ms.assetid: 0e0ecbbf-d7de-49d4-a128-5a519ecd54ba
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 82df9a1dcd53fa5f64f59e7fd86262a03ae5f8aa
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0e75cfa88eb66b88084a823d0558923210aed4db
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439705"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88769783"
 ---
 # <a name="precision-property-adox"></a>Precision 속성(ADOX)
-[열](../../../ado/reference/adox-api/column-object-adox.md)에 있는 데이터 값의 최대 전체 자릿수를 나타냅니다.  
+[열](./column-object-adox.md)에 있는 데이터 값의 최대 전체 자릿수를 나타냅니다.  
   
 ## <a name="settings-and-return-values"></a>설정 및 반환 값  
- [Type](../../../ado/reference/adox-api/type-property-column-adox.md) 속성이 숫자 형식인 경우 열에 있는 데이터 값의 최대 전체 자릿수 인 **Long** 값을 설정 하 고 반환 합니다. 다른 모든 데이터 형식에 대해서는 **전체 자릿수가** 무시 됩니다.  
+ [Type](./type-property-column-adox.md) 속성이 숫자 형식인 경우 열에 있는 데이터 값의 최대 전체 자릿수 인 **Long** 값을 설정 하 고 반환 합니다. 다른 모든 데이터 형식에 대해서는 **전체 자릿수가** 무시 됩니다.  
   
 ## <a name="remarks"></a>설명  
  기본값은 영(**0**)입니다.  
   
- 컬렉션에 이미 추가 된 [열](../../../ado/reference/adox-api/column-object-adox.md) 개체의 경우이 속성은 읽기 전용입니다.  
+ 컬렉션에 이미 추가 된 [열](./column-object-adox.md) 개체의 경우이 속성은 읽기 전용입니다.  
   
 ## <a name="applies-to"></a>적용 대상  
- [Column 개체(ADOX)](../../../ado/reference/adox-api/column-object-adox.md)  
+ [열 개체(ADOX)](./column-object-adox.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [ADOX 코드 예제: NumericScale 및 Precision 속성 예제 (VB)](../../../ado/reference/adox-api/adox-code-example-numericscale-and-precision-properties-example-vb.md)   
- [Type 속성 (Column) (ADOX)](../../../ado/reference/adox-api/type-property-column-adox.md)   
- [Column 개체(ADOX)](../../../ado/reference/adox-api/column-object-adox.md)
+ [ADOX 코드 예제: NumericScale 및 Precision 속성 예제 (VB)](./adox-code-example-numericscale-and-precision-properties-example-vb.md)   
+ [Type 속성 (Column) (ADOX)](./type-property-column-adox.md)   
+ [열 개체(ADOX)](./column-object-adox.md)

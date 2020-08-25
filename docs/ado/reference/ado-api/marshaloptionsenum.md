@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4013075d-dbea-4bbc-a6f4-c345a55c5633
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6243621ad7127e475f89052dc0d860fba6bad510
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9569d73bd7ec403fa50a400f84a5189a3eb10cdb
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443295"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774442"
 ---
 # <a name="marshaloptionsenum"></a>MarshalOptionsEnum
 서버에 반환 되어야 하는 레코드를 지정 합니다.  
@@ -40,4 +40,4 @@ ms.locfileid: "88443295"
 |AdoEnums. MarshalOptions. MODIFIEDONLY|  
   
 ## <a name="applies-to"></a>적용 대상  
- [MarshalOptions 속성(ADO)](../../../ado/reference/ado-api/marshaloptions-property-ado.md)
+ [MarshalOptions 속성(ADO)](./marshaloptions-property-ado.md)

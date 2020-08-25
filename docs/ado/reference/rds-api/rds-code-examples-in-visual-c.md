@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 380264da-e6bb-418c-b4af-3c22d35644b8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 122e6dc070565116bb6140464b33fdafdf4dc489
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b5d39885ccc6640bb40c3e369c050fd00fb4c12d
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438825"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767852"
 ---
 # <a name="rds-code-examples-in-visual-c"></a>Visual C++의 RDS 코드 예제
 다음 코드 예제를 사용 하 여 Microsoft Visual C++에서 작성할 때 RDS 속성을 사용 하는 방법을 알아봅니다.  
@@ -32,8 +32,6 @@ ms.locfileid: "88438825"
 > [!NOTE]
 >  전체 코드 예제를 처음부터 끝까지 코드 편집기에 붙여 넣습니다. 부분 예제가 사용 되거나 단락 서식이 손실 된 경우 예제가 올바르게 실행 되지 않을 수 있습니다.  
   
--   [Handler 속성 예제](../../../ado/reference/rds-api/handler-property-example-vc.md)  
+-   [Handler 속성 예제](./handler-property-example-vc.md)  
   
--   [InternetTimeout 속성 예제](../../../ado/reference/rds-api/internettimeout-property-example-vc.md)
-
-
+-   [InternetTimeout 속성 예제](./internettimeout-property-example-vc.md)

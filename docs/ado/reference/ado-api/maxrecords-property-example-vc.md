@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: af6b399b-e546-4de5-9cd1-5a6e0ec7ddc7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5888cf1ce3bb058c7c71e4bcec5b448d4f0ab9bd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fa326f24e1c8d3e6e7fab3adf691f3dd3a80a0c3
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443265"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774382"
 ---
 # <a name="maxrecords-property-example-vc"></a>MaxRecords 속성 예제(VC++)
-이 예에서는 [MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md) 속성을 사용 하 여 ***titles*** 테이블에서 가장 비싼 10 개의 제목이 포함 된 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 을 엽니다.  
+이 예에서는 [MaxRecords](./maxrecords-property-ado.md) 속성을 사용 하 여 ***titles*** 테이블에서 가장 비싼 10 개의 제목이 포함 된 [레코드 집합](./recordset-object-ado.md) 을 엽니다.  
   
 ## <a name="example"></a>예제  
   
@@ -178,5 +178,5 @@ void PrintComError(_com_error &e) {
 **초밥, 누구 인가요? ---14.99**  
 **50 년 Buckingham 왕궁 Kitchens---11.95**   
 ## <a name="see-also"></a>참고 항목  
- [MaxRecords 속성 (ADO)](../../../ado/reference/ado-api/maxrecords-property-ado.md)   
- [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [MaxRecords 속성 (ADO)](./maxrecords-property-ado.md)   
+ [레코드 집합 개체(ADO)](./recordset-object-ado.md)

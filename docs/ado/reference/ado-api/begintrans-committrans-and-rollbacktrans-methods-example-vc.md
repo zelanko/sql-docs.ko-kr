@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 4ac19647-73e7-4edf-9913-25c8fd927e36
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 56f3a7551a94fa9f079aa56d24de9c1d7a072480
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5203cc9a896e42a18f2c3eedcbfbcb41d4f6ec4a
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451175"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776442"
 ---
 # <a name="begintrans-committrans-and-rollbacktrans-methods-example-vc"></a>BeginTrans, CommitTrans 및 RollbackTrans 메서드 예제 (VC + +)
-이 예에서는 데이터베이스의 ***Titles*** 테이블에 있는 모든 심리학 books의 책 유형을 변경 합니다. [BeginTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) 메서드가 ***Titles*** 테이블에 적용 된 모든 변경 내용을 격리 하는 트랜잭션을 시작한 후 [CommitTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) 메서드는 변경 내용을 저장 합니다. [Rollback](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) 메서드를 사용 하 여 [Update](../../../ado/reference/ado-api/update-method.md) 메서드를 사용 하 여 저장 한 변경 내용을 취소할 수 있습니다.  
+이 예에서는 데이터베이스의 ***Titles*** 테이블에 있는 모든 심리학 books의 책 유형을 변경 합니다. [BeginTrans](./begintrans-committrans-and-rollbacktrans-methods-ado.md) 메서드가 ***Titles*** 테이블에 적용 된 모든 변경 내용을 격리 하는 트랜잭션을 시작한 후 [CommitTrans](./begintrans-committrans-and-rollbacktrans-methods-ado.md) 메서드는 변경 내용을 저장 합니다. [Rollback](./begintrans-committrans-and-rollbacktrans-methods-ado.md) 메서드를 사용 하 여 [Update](./update-method.md) 메서드를 사용 하 여 저장 한 변경 내용을 취소할 수 있습니다.  
   
 ## <a name="example"></a>예제  
   
@@ -268,5 +268,5 @@ void PrintProviderError(_ConnectionPtr pConnection) {
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [BeginTrans, CommitTrans 및 RollbackTrans 메서드 (ADO)](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)   
- [Update 메서드](../../../ado/reference/ado-api/update-method.md)
+ [BeginTrans, CommitTrans 및 RollbackTrans 메서드 (ADO)](./begintrans-committrans-and-rollbacktrans-methods-ado.md)   
+ [Update 메서드](./update-method.md)

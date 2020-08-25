@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: affc847c-a533-4c8a-bdff-3682fdb5df5f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f411d7cc7856799e923fb75e7e1ca2ba6717d44c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7348cf06348ee9fc4588c599c584e09808bf690a
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442445"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88772322"
 ---
 # <a name="recordset-ado-for-visual-c-syntax"></a>레코드 집합(Visual C++ 구문에 대한 ADO)
 ## <a name="methods"></a>메서드  
@@ -120,4 +120,4 @@ WillMove(EventReasonEnum adReason, EventStatusEnum *adStatus, _ADORecordset *pRe
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [레코드 집합 개체(ADO)](./recordset-object-ado.md)

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2440b6ff-2536-497c-a5f4-41db0cf1945e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7ddac29da277027f1cc89a8c078ac4d072c369b6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5cf9b819d57a6ad0808c498e2492863c685b13ba
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441545"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776912"
 ---
 # <a name="version-property-example-vc"></a>Version 속성 예제(VC++)
-이 예에서는 [Connection](../../../ado/reference/ado-api/connection-object-ado.md) 개체의 [Version](../../../ado/reference/ado-api/version-property-ado.md) 속성을 사용 하 여 현재 ADO 버전을 표시 합니다. 또한 다음과 같은 몇 가지 동적 속성을 사용 하 여 표시 합니다.  
+이 예에서는 [Connection](./connection-object-ado.md) 개체의 [Version](./version-property-ado.md) 속성을 사용 하 여 현재 ADO 버전을 표시 합니다. 또한 다음과 같은 몇 가지 동적 속성을 사용 하 여 표시 합니다.  
   
 -   현재 DBMS 이름 및 버전입니다.  
   
@@ -136,5 +136,5 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Connection 개체 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
- [Version 속성(ADO)](../../../ado/reference/ado-api/version-property-ado.md)
+ [Connection 개체 (ADO)](./connection-object-ado.md)   
+ [Version 속성(ADO)](./version-property-ado.md)

@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: cc59d23a-2f38-42f9-8b65-ed89009e87ec
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 25347b53dbb1b489ce66deb045fec780172ad360
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 60f63706057acffa4e00954c6ff92d77503ec14f
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441655"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777022"
 ---
 # <a name="update-and-cancelupdate-methods-example-vc"></a>Update 및 CancelUpdate 메서드 예제(VC++)
-이 예제에서는 [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) 메서드와 함께 [Update](../../../ado/reference/ado-api/update-method.md) 메서드를 보여 줍니다.  
+이 예제에서는 [CancelUpdate](./cancelupdate-method-ado.md) 메서드와 함께 [Update](./update-method.md) 메서드를 보여 줍니다.  
   
 ```  
 // Update_CancelUpdate_Methods_Sample.cpp  
@@ -311,5 +311,5 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [CancelUpdate 메서드 (ADO)](../../../ado/reference/ado-api/cancelupdate-method-ado.md)   
- [Update 메서드](../../../ado/reference/ado-api/update-method.md)
+ [CancelUpdate 메서드 (ADO)](./cancelupdate-method-ado.md)   
+ [Update 메서드](./update-method.md)

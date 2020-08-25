@@ -1,4 +1,5 @@
 ---
+description: CREATE ASSEMBLY(Transact-SQL)
 title: CREATE ASSEMBLY(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/07/2018
@@ -23,12 +24,12 @@ ms.assetid: d8d1d245-c2c3-4325-be52-4fc1122c2079
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: f7de8aed89c10e434ed8ef451a5e49f604d01995
-ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
+ms.openlocfilehash: 556cab50de2e8207eb78d829f18373213ee171b9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83807905"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496868"
 ---
 # <a name="create-assembly-transact-sql"></a>CREATE ASSEMBLY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -36,7 +37,7 @@ ms.locfileid: "83807905"
   클래스 메타데이터와 관리 코드를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 개체로 포함하는 관리되는 애플리케이션 모듈을 만듭니다. 이 모듈을 참조하여 데이터베이스에서 CLR(공용 언어 런타임) 함수, 저장 프로시저, 트리거, 사용자 정의 집계 및 사용자 정의 형식을 만들 수 있습니다.  
   
 > [!WARNING]
->  CLR은 더 이상 보안 경계로 지원되지 않는 .NET Framework의 CAS(코드 액세스 보안)를 사용합니다. `PERMISSION_SET = SAFE`로 만든 CLR 어셈블리에서 외부 시스템 리소스에 액세스하고, 비관리 코드를 호출하고, sysadmin 권한을 얻을 수 있습니다. [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]부터 CLR 어셈블리의 보안을 강화하기 위해 `sp_configure`라는 `clr strict security` 옵션이 도입되었습니다. `clr strict security`는 기본적으로 사용되며 `SAFE` 및 `EXTERNAL_ACCESS` 어셈블리가 `UNSAFE`로 표시된 것처럼 처리됩니다. `clr strict security` 옵션은 이전 버전과의 호환성을 위해 사용하지 않도록 설정할 수 있지만 권장하지는 않습니다. 모든 어셈블리는 master 데이터베이스에서 `UNSAFE ASSEMBLY` 권한이 부여된 해당 로그인이 포함된 인증서 또는 비대칭 키로 서명하는 것이 좋습니다. 자세한 내용은 [CLR strict security](../../database-engine/configure-windows/clr-strict-security.md)를 참조하세요.  
+>  CLR은 더 이상 보안 경계로 지원되지 않는 .NET Framework의 CAS(코드 액세스 보안)를 사용합니다. `PERMISSION_SET = SAFE`로 만든 CLR 어셈블리에서 외부 시스템 리소스에 액세스하고, 비관리 코드를 호출하고, sysadmin 권한을 얻을 수 있습니다. [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]부터 CLR 어셈블리의 보안을 강화하기 위해 `clr strict security`라는 `sp_configure` 옵션이 도입되었습니다. `clr strict security`는 기본적으로 사용되며 `SAFE` 및 `EXTERNAL_ACCESS` 어셈블리가 `UNSAFE`로 표시된 것처럼 처리됩니다. `clr strict security` 옵션은 이전 버전과의 호환성을 위해 사용하지 않도록 설정할 수 있지만 권장하지는 않습니다. 모든 어셈블리는 master 데이터베이스에서 `UNSAFE ASSEMBLY` 권한이 부여된 해당 로그인이 포함된 인증서 또는 비대칭 키로 서명하는 것이 좋습니다. 자세한 내용은 [CLR strict security](../../database-engine/configure-windows/clr-strict-security.md)를 참조하세요.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -64,7 +65,7 @@ FROM { <client_assembly_specifier> | <assembly_bits> [ ,...n ] }
  어셈블리 소유자인 사용자 또는 역할의 이름을 지정합니다. *owner_name*은 현재 사용자가 멤버로 속한 역할의 이름이어야 합니다. 그렇지 않으면 현재 사용자가 *owner_name*에 대한 IMPERSONATE 권한이 있어야 합니다. 값을 지정하지 않으면 현재 사용자에게 소유권이 부여됩니다.  
   
  \<client_assembly_specifier>  
-업로드할 어셈블리가 있는 로컬 경로나 네트워크 위치와 어셈블리에 해당하는 매니페스트 파일 이름을 지정합니다.  \<client_assembly_specifier>는 고정 문자열 또는 고정 문자열에 대해 평가하는 변수가 있는 식으로 나타낼 수 있습니다. CREATE ASSEMBLY로는 다중 모듈 어셈블리를 로드할 수 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 동일한 위치에서 이 어셈블리의 모든 종속 어셈블리를 찾은 다음 동일한 소유자를 사용하여 해당 종속 어셈블리를 루트 수준 어셈블리로 업로드합니다. 이러한 종속 어셈블리를 찾을 수 없으며 현재 데이터베이스에 종속 어셈블리가 로드되어 있지 않은 경우 CREATE ASSEMBLY는 실패합니다. 종속 어셈블리가 현재 데이터베이스에 로드되어 있는 경우 해당 어셈블리의 소유자는 새로 만든 어셈블리의 소유자와 동일해야 합니다.
+업로드할 어셈블리가 있는 로컬 경로나 네트워크 위치와 어셈블리에 해당하는 매니페스트 파일 이름을 지정합니다.  \<client_assembly_specifier>는 고정 문자열로 나타내거나 변수가 있으며 고정 문자열로 평가되는 식으로 나타낼 수 있습니다. CREATE ASSEMBLY로는 다중 모듈 어셈블리를 로드할 수 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 동일한 위치에서 이 어셈블리의 모든 종속 어셈블리를 찾은 다음 동일한 소유자를 사용하여 해당 종속 어셈블리를 루트 수준 어셈블리로 업로드합니다. 이러한 종속 어셈블리를 찾을 수 없으며 현재 데이터베이스에 종속 어셈블리가 로드되어 있지 않은 경우 CREATE ASSEMBLY는 실패합니다. 종속 어셈블리가 현재 데이터베이스에 로드되어 있는 경우 해당 어셈블리의 소유자는 새로 만든 어셈블리의 소유자와 동일해야 합니다.
 
 > [!IMPORTANT]
 > Azure SQL Database는 파일에서 어셈블리 생성을 지원하지 않습니다.
@@ -113,11 +114,11 @@ FROM { <client_assembly_specifier> | <assembly_bits> [ ,...n ] }
 ## <a name="remarks"></a>설명  
  CREATE ASSEMBLY는 관리 코드에서 .dll 파일로 미리 컴파일된 어셈블리를 SQL Server 인스턴스 내부에서 사용할 수 있도록 업로드합니다.  
  
-사용하도록 설정되면 `PERMISSION_SET` 및 `CREATE ASSEMBLY` 문의 `ALTER ASSEMBLY` 옵션은 런타임에서 무시되지만 `PERMISSION_SET` 옵션은 메타데이터에서 유지됩니다. 이 옵션을 무시하면 기존 코드 문의 중단을 최소화합니다.
+사용하도록 설정되면 `CREATE ASSEMBLY` 및 `ALTER ASSEMBLY` 문의 `PERMISSION_SET` 옵션은 런타임에서 무시되지만 `PERMISSION_SET` 옵션은 메타데이터에서 유지됩니다. 이 옵션을 무시하면 기존 코드 문의 중단을 최소화합니다.
  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 이름, culture 및 공개 키가 동일한 서로 다른 버전의 어셈블리를 등록할 수 없습니다.  
   
-\<client_assembly_specifier>에 지정된 어셈블리에 액세스하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 현재 Windows 로그인의 보안 컨텍스트를 가장합니다. \<client_assembly_specifier>에서 네트워크 위치(UNC 경로)를 지정하는 경우에는 위임 제한 때문에 현재 로그인의 가장이 해당 네트워크 위치로 전달되지 않습니다. 이 경우에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 계정의 보안 컨텍스트를 사용하여 액세스합니다. 자세한 내용은 [자격 증명 &#40;데이터베이스 엔진&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)를 참조하세요.
+\<client_assembly_specifier>에 지정된 어셈블리에 액세스하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 현재 Windows 로그인의 보안 컨텍스트를 가장합니다. \<client_assembly_specifier> 에서 네트워크 위치(UNC 경로)를 지정하는 경우에는 위임 제한 때문에 현재 로그인의 가장이 해당 네트워크 위치로 전달되지 않습니다. 이 경우에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 계정의 보안 컨텍스트를 사용하여 액세스합니다. 자세한 내용은 [자격 증명 &#40;데이터베이스 엔진&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)를 참조하세요.
   
  *assembly_name*에서 지정한 루트 어셈블리 외에도 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]은 업로드할 루트 어셈블리에서 참조하는 모든 어셈블리를 업로드합니다. 참조하는 어셈블리가 이전의 CREATE ASSEMBLY 문에 의해 이미 데이터베이스에 업로드된 경우에는 루트 어셈블리에서 사용할 수 있으므로 해당 어셈블리는 업로드되지 않습니다. 종속 어셈블리가 이전에 업로드되지 않았지만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 원본 디렉터리에서 해당 매니페스트 파일을 찾지 못하는 경우 CREATE ASSEMBLY는 오류를 반환합니다.  
   
@@ -161,11 +162,11 @@ FROM { <client_assembly_specifier> | <assembly_bits> [ ,...n ] }
 - 사용자에게 `CREATE ASSEMBLY` 권한이 있어야 합니다.  
 - 다음 조건 중 하나가 충족되어야 합니다.  
   - 어셈블리는 서버에 대한 `UNSAFE ASSEMBLY` 권한이 있는 해당 로그인이 포함된 인증서 또는 비대칭 키로 서명됩니다. 어셈블리에 서명하는 것이 좋습니다.  
-  - 데이터베이스는 `TRUSTWORTHY`으로 설정된 `ON` 속성을 가지고 있고 서버에 대한 `UNSAFE ASSEMBLY` 권한이 있는 로그인으로 소유됩니다. 이 방법은 권장되지 않습니다.  
+  - 데이터베이스는 `ON`으로 설정된 `TRUSTWORTHY` 속성을 가지고 있고 서버에 대한 `UNSAFE ASSEMBLY` 권한이 있는 로그인으로 소유됩니다. 이 방법은 권장되지 않습니다.  
   
  어셈블리 권한 집합에 대한 자세한 내용은 [Designing Assemblies](../../relational-databases/clr-integration/assemblies-designing.md)를 참조하십시오.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="example-a-creating-an-assembly-from-a-dll"></a>예제 A: dll에서 어셈블리 만들기  
   

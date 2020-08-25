@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 66eca011-e258-4d8f-bd67-e017bcf0871b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bb26a778e3d484ba024a5a38564d9e3abc0a3ef0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3847fb3f9beaba4abe7820dae16cd57eba1cedd3
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443005"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773832"
 ---
 # <a name="open-and-close-methods-example-vbscript"></a>Open 및 Close 메서드 예제(VBScript)
-이 예에서는 열려 있는 [레코드 집합과](../../../ado/reference/ado-api/recordset-object-ado.md) [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체 모두에서 [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) 및 [Close](../../../ado/reference/ado-api/close-method-ado.md) 메서드를 사용 합니다.  
+이 예에서는 열려 있는 [레코드 집합과](./recordset-object-ado.md) [연결](./connection-object-ado.md) 개체 모두에서 [Open](./open-method-ado-recordset.md) 및 [Close](./close-method-ado.md) 메서드를 사용 합니다.  
   
  Active Server 페이지 (ASP)에서 다음 예제를 사용 합니다. **찾기** 를 사용 하 여 Adovbs 파일을 찾은 다음 사용 하려는 디렉터리에 배치 합니다. 다음 코드를 잘라내어 메모장 또는 다른 텍스트 편집기에 붙여 넣고 **Openvbs .asp**로 저장 합니다. 모든 브라우저에서 결과를 볼 수 있습니다.  
   
@@ -163,8 +163,8 @@ BODY {
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Close 메서드 (ADO)](../../../ado/reference/ado-api/close-method-ado.md)   
- [Connection 개체 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
- [Open 메서드 (ADO 연결)](../../../ado/reference/ado-api/open-method-ado-connection.md)   
- [Open 메서드 (ADO 레코드 집합)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
- [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [Close 메서드 (ADO)](./close-method-ado.md)   
+ [Connection 개체 (ADO)](./connection-object-ado.md)   
+ [Open 메서드 (ADO 연결)](./open-method-ado-connection.md)   
+ [Open 메서드 (ADO 레코드 집합)](./open-method-ado-recordset.md)   
+ [레코드 집합 개체(ADO)](./recordset-object-ado.md)

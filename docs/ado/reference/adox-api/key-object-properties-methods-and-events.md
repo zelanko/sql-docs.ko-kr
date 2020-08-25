@@ -13,26 +13,26 @@ helpviewer_keywords:
 ms.assetid: fba47748-53dd-4a5c-8c00-72e48bbc5bb0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5d3b1d4dd70de6c11094990b633b0d370b348e8e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5600c81fe5aea48505619cfbeac7d2daf752f6c4
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439845"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88770102"
 ---
 # <a name="key-object-properties-methods-and-events"></a>키 개체 속성, 메서드 및 이벤트
 ## <a name="propertiescollections"></a>속성/컬렉션  
- [Columns 컬렉션](../../../ado/reference/adox-api/columns-collection-adox.md)  
+ [Columns 컬렉션](./columns-collection-adox.md)  
   
- [DeleteRule 속성](../../../ado/reference/adox-api/deleterule-property-adox.md)  
+ [DeleteRule 속성](./deleterule-property-adox.md)  
   
- [Name 속성](../../../ado/reference/adox-api/name-property-adox.md)  
+ [Name 속성](./name-property-adox.md)  
   
- [RelatedTable 속성](../../../ado/reference/adox-api/relatedtable-property-adox.md)  
+ [RelatedTable 속성](./relatedtable-property-adox.md)  
   
- [Type 속성 (Key)](../../../ado/reference/adox-api/type-property-key-adox.md)  
+ [Type 속성 (Key)](./type-property-key-adox.md)  
   
- [UpdateRule 속성](../../../ado/reference/adox-api/updaterule-property-adox.md)  
+ [UpdateRule 속성](./updaterule-property-adox.md)  
   
 ## <a name="methods"></a>메서드  
  없음  
@@ -41,4 +41,4 @@ ms.locfileid: "88439845"
  없음  
   
 ## <a name="see-also"></a>참고 항목  
- [Key 개체(ADOX)](../../../ado/reference/adox-api/key-object-adox.md)
+ [키 개체(ADOX)](./key-object-adox.md)

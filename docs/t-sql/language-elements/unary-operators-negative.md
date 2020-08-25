@@ -1,4 +1,5 @@
 ---
+description: '- (음수)(Transact-SQL)'
 title: '- (음수) (Transact-SQL) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/13/2017
@@ -19,12 +20,12 @@ ms.assetid: d6c14d14-d379-403b-82db-c197ad58c896
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 456190fd25a3ca7ce362c276d33096afb768b941
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 873bff9e761f83f0b15493810d0c684afa189748
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917090"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459247"
 ---
 # <a name="unary-operators---negative"></a>단항 연산자 - 음수
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "86917090"
 |--------------|-------------|  
 |[+(양수)](../../t-sql/language-elements/unary-operators-positive.md)|숫자 값이 양수입니다.|  
 |[-(음수)](../../t-sql/language-elements/unary-operators-negative.md)|숫자 값이 음수입니다.|  
-|[~(비트 단위 NOT)](../../t-sql/language-elements/bitwise-not-transact-sql.md)|해당 수의 1의 보수를 반환합니다.|  
+|[~ (비트 NOT)](../../t-sql/language-elements/bitwise-not-transact-sql.md)|해당 수의 1의 보수를 반환합니다.|  
   
  +(양수) 및 -(음수) 연산자는 숫자 데이터 형식 범주에 속하는 데이터 형식의 식에서 사용할 수 있습니다. ~(비트 NOT) 연산자는 정수 데이터 형식 범주에 속하는 데이터 형식 중 하나의 식에서만 사용할 수 있습니다. 
   
@@ -56,7 +57,7 @@ ms.locfileid: "86917090"
 ## <a name="result-types"></a>결과 형식  
  *numeric_expression*의 데이터 형식을 반환합니다. 단, 부호 없는 **tinyint** 식은 부호 있는 **smallint** 결과로 승격됩니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-setting-a-variable-to-a-negative-value"></a>A. 변수를 음의 값으로 설정  
  다음 예에서는 변수를 음의 값으로 설정합니다.  
@@ -138,7 +139,7 @@ SELECT TOP (1) - ( - 17) FROM DimEmployee;
 ```  
   
 ### <a name="e-returning-the-negative-of-a-column"></a>E. 열의 음수 반환  
- 다음 예에서는 `BaseRate` 테이블의 각 직원에 대해 `dimEmployee` 값의 음수를 반환합니다.  
+ 다음 예에서는 `dimEmployee` 테이블의 각 직원에 대해 `BaseRate` 값의 음수를 반환합니다.  
   
 ```  
 USE ssawPDW;  

@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: da561d58-eb58-446c-a4fd-1838c76073c0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d7c9bc68b33e9a8ed8878e153b5fb2eb11d27ba2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4a63bf9d324fc9c2e0363576814e1c97c9ad6aeb
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441485"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776862"
 ---
 # <a name="willconnect-event-ado"></a>WillConnect 이벤트(ADO)
 **WillConnect** 이벤트는 연결을 시작 하기 전에 호출 됩니다.  
   
- **적용 대상:** [CONNECTION 개체 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
+ **적용 대상:** [CONNECTION 개체 (ADO)](./connection-object-ado.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -46,18 +46,18 @@ WillConnect ConnectionString, UserID, Password, Options, adStatus, pConnection
  *암호*  
  보류 중인 연결에 대 한 암호를 포함 하는 **문자열** 입니다.  
   
- *옵션*  
+ *Options*  
  공급자가 *ConnectionString*을 평가 하는 방법을 나타내는 **Long** 값입니다. 유일한 옵션은 **adAsyncOpen**입니다.  
   
  *adStatus*  
- [Eventstatusenum](../../../ado/reference/ado-api/eventstatusenum.md) 상태 값입니다.  
+ [Eventstatusenum](./eventstatusenum.md) 상태 값입니다.  
   
  이 이벤트가 호출 되 면이 매개 변수는 기본적으로 **Adstatusok** 로 설정 됩니다. 이벤트에서 보류 중인 작업의 취소를 요청할 수 없는 경우 **adStatusCantDeny** 로 설정 됩니다.  
   
  이 이벤트가 반환 되기 전에이 매개 변수를 **adStatusUnwantedEvent** 로 설정 하 여 후속 알림이 발생 하지 않도록 합니다. 이 알림을 취소 한 연결 작업을 요청 하려면이 매개 변수를 **Adstatuscancel** 로 설정 합니다.  
   
  *pConnection*  
- 이 이벤트 알림이 적용 되는 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체입니다. **WillConnect** 이벤트 처리기에서 **연결** 의 매개 변수를 변경 해도 **연결**에는 영향을 주지 않습니다.  
+ 이 이벤트 알림이 적용 되는 [연결](./connection-object-ado.md) 개체입니다. **WillConnect** 이벤트 처리기에서 **연결** 의 매개 변수를 변경 해도 **연결**에는 영향을 주지 않습니다.  
   
 ## <a name="remarks"></a>설명  
  **WillConnect** 가 호출 되 면 *ConnectionString*, *UserID*, *Password*및 *Options* 매개 변수가이 이벤트를 발생 시킨 작업 (보류 중인 연결)에서 설정한 값으로 설정 되 고 이벤트에서 반환 되기 전에 변경 될 수 있습니다. **WillConnect** 는 보류 중인 연결을 취소 하는 요청을 반환할 수 있습니다.  
@@ -65,5 +65,5 @@ WillConnect ConnectionString, UserID, Password, Options, adStatus, pConnection
  이 이벤트가 취소 되 면 **adStatusErrorsOccurred**로 설정 된 *adstatus* 매개 변수를 사용 하 여 **connectcomplete** 가 호출 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [ADO Events 모델 예제 (VC + +)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
- [ADO 이벤트 처리기 요약](../../../ado/guide/data/ado-event-handler-summary.md)
+ [ADO Events 모델 예제 (VC + +)](./ado-events-model-example-vc.md)   
+ [ADO 이벤트 처리기 요약](../../guide/data/ado-event-handler-summary.md)

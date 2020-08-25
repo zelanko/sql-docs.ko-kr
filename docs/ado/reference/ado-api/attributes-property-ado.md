@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: acc15d40-68a6-4ba9-85bd-12d331aecaa6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 43f374429d38cb4d3cb4516d640b6d05ef8e3efb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 99c4e9be5c998b8abc1a5b609bbdeb249fa6c7b8
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451205"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776452"
 ---
 # <a name="attributes-property-ado"></a>Attributes 속성(ADO)
 개체의 특성을 하나 이상 나타냅니다.  
@@ -31,13 +31,13 @@ ms.locfileid: "88451205"
 ## <a name="settings-and-return-values"></a>설정 및 반환 값  
  **Long** 값을 설정 하거나 반환 합니다.  
   
- [Connection](../../../ado/reference/ado-api/connection-object-ado.md) 개체의 경우 **Attributes** 속성은 읽기/쓰기가 가능 하 고 해당 값은 하나 이상의 [XactAttributeEnum](../../../ado/reference/ado-api/xactattributeenum.md) 값의 합이 될 수 있습니다. 기본값은 0입니다.  
+ [Connection](./connection-object-ado.md) 개체의 경우 **Attributes** 속성은 읽기/쓰기가 가능 하 고 해당 값은 하나 이상의 [XactAttributeEnum](./xactattributeenum.md) 값의 합이 될 수 있습니다. 기본값은 0입니다.  
   
- [매개 변수](../../../ado/reference/ado-api/parameter-object.md) 개체의 경우 **Attributes** 속성은 읽기/쓰기가 가능 하 고 해당 값은 하나 이상의 [ParameterAttributesEnum](../../../ado/reference/ado-api/parameterattributesenum.md) 값의 합이 될 수 있습니다. 기본값은 **Adparamsigned**입니다.  
+ [매개 변수](./parameter-object.md) 개체의 경우 **Attributes** 속성은 읽기/쓰기가 가능 하 고 해당 값은 하나 이상의 [ParameterAttributesEnum](./parameterattributesenum.md) 값의 합이 될 수 있습니다. 기본값은 **Adparamsigned**입니다.  
   
- [Field](../../../ado/reference/ado-api/field-object.md) 개체의 경우 **Attributes** 속성은 하나 이상의 [FieldAttributeEnum](../../../ado/reference/ado-api/fieldattributeenum.md) 값의 합계인 수 있습니다. 일반적으로 읽기 전용입니다. 그러나 [레코드](../../../ado/reference/ado-api/record-object-ado.md)의 [fields](../../../ado/reference/ado-api/fields-collection-ado.md) 컬렉션에 추가 된 새 **field** 개체의 경우 **필드** 의 [Value](../../../ado/reference/ado-api/value-property-ado.md) 속성을 지정 하 고 **필드** 컬렉션의 [Update](../../../ado/reference/ado-api/update-method.md) 메서드를 호출 하 여 데이터 공급자가 새 **필드** 를 성공적으로 추가한 후에만 **특성** 을 읽고 쓸 수 있습니다.  
+ [Field](./field-object.md) 개체의 경우 **Attributes** 속성은 하나 이상의 [FieldAttributeEnum](./fieldattributeenum.md) 값의 합계인 수 있습니다. 일반적으로 읽기 전용입니다. 그러나 [레코드](./record-object-ado.md)의 [fields](./fields-collection-ado.md) 컬렉션에 추가 된 새 **field** 개체의 경우 **필드** 의 [Value](./value-property-ado.md) 속성을 지정 하 고 **필드** 컬렉션의 [Update](./update-method.md) 메서드를 호출 하 여 데이터 공급자가 새 **필드** 를 성공적으로 추가한 후에만 **특성** 을 읽고 쓸 수 있습니다.  
   
- [속성](../../../ado/reference/ado-api/property-object-ado.md) 개체의 경우 **Attributes** 속성은 읽기 전용 이며 해당 값은 하나 이상의 [PropertyAttributesEnum](../../../ado/reference/ado-api/propertyattributesenum.md) 값의 합이 될 수 있습니다.  
+ [속성](./property-object-ado.md) 개체의 경우 **Attributes** 속성은 읽기 전용 이며 해당 값은 하나 이상의 [PropertyAttributesEnum](./propertyattributesenum.md) 값의 합이 될 수 있습니다.  
   
 ## <a name="remarks"></a>설명  
  **Attributes** 속성을 사용 하 여 **연결** 개체, **매개 변수** 개체, **필드** 개체 또는 **속성** 개체의 특성을 설정 하거나 반환할 수 있습니다.  
@@ -51,18 +51,18 @@ ms.locfileid: "88451205"
 
 :::row:::
     :::column:::
-        [연결 개체(ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
-        [Field 개체](../../../ado/reference/ado-api/field-object.md)  
+        [연결 개체(ADO)](./connection-object-ado.md)  
+        [Field 개체](./field-object.md)  
     :::column-end:::
     :::column:::
-        [Parameter 개체](../../../ado/reference/ado-api/parameter-object.md)  
-        [속성 개체(ADO)](../../../ado/reference/ado-api/property-object-ado.md)  
+        [Parameter 개체](./parameter-object.md)  
+        [속성 개체(ADO)](./property-object-ado.md)  
     :::column-end:::
 :::row-end:::
 
 ## <a name="see-also"></a>참고 항목  
- [특성 및 이름 속성 예제 (VB)](../../../ado/reference/ado-api/attributes-and-name-properties-example-vb.md)   
- [특성 및 이름 속성 예제 (VC + +)](../../../ado/reference/ado-api/attributes-and-name-properties-example-vc.md)   
- [AppendChunk 메서드 (ADO)](../../../ado/reference/ado-api/appendchunk-method-ado.md)   
- [BeginTrans, CommitTrans 및 RollbackTrans 메서드 (ADO)](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)   
- [GetChunk 메서드(ADO)](../../../ado/reference/ado-api/getchunk-method-ado.md)
+ [특성 및 이름 속성 예제 (VB)](./attributes-and-name-properties-example-vb.md)   
+ [특성 및 이름 속성 예제 (VC + +)](./attributes-and-name-properties-example-vc.md)   
+ [AppendChunk 메서드 (ADO)](./appendchunk-method-ado.md)   
+ [BeginTrans, CommitTrans 및 RollbackTrans 메서드 (ADO)](./begintrans-committrans-and-rollbacktrans-methods-ado.md)   
+ [GetChunk 메서드(ADO)](./getchunk-method-ado.md)

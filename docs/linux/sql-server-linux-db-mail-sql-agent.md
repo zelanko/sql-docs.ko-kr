@@ -1,6 +1,6 @@
 ---
 title: Linux에서 SQL 에이전트와 함께 DB 메일 및 메일 경고 사용
-description: 이 문서에서는 SQL Server on Linux에서 DB 메일 및 메일 경고를 사용하는 방법을 설명합니다.
+description: Linux에서 SQL Server 에이전트(mssql-server-agent)와 함께 DB 메일을 사용하고 메일 경고를 설정하는 방법을 알아봅니다.
 author: VanMSFT
 ms.author: vanto
 ms.date: 02/20/2018
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: tbd
-ms.openlocfilehash: d2e759d5cfa0f7b1fa918bde8547d3cbee2439af
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 92306aa0c6fa28b2cd094e85f439d654605483b6
+ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896512"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88088987"
 ---
 # <a name="db-mail-and-email-alerts-with-sql-agent-on-linux"></a>Linux에서 SQL 에이전트와 함께 DB 메일 및 메일 경고 사용
 

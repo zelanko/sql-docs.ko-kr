@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c611f857-d6b0-4dca-8925-f4a02e769eb0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 49fc6e3a6e91908e1fd549a60efa751769d61bd5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: eaa3f7aace505092b147fc3d15c2890de50c5958
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88450835"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776112"
 ---
 # <a name="commandtimeout-property-ado"></a>CommandTimeout 속성(ADO)
 시도를 종료 하 고 오류를 생성 하기 전에 명령을 실행 하는 동안 대기 하는 시간을 나타냅니다.  
@@ -30,7 +30,7 @@ ms.locfileid: "88450835"
  명령이 실행 될 때까지 대기 하는 시간 (초)을 나타내는 **long** 값을 설정 하거나 반환 합니다. 기본값은 30입니다.  
   
 ## <a name="remarks"></a>설명  
- 네트워크 트래픽 또는 과도 한 서버 사용의 지연으로 인해 [Execute](../../../ado/reference/ado-api/execute-method-ado-command.md) 메서드 호출을 취소할 수 있도록 하려면 [Connection](../../../ado/reference/ado-api/connection-object-ado.md) 개체 또는 [Command](../../../ado/reference/ado-api/command-object-ado.md) 개체에서 **CommandTimeout** 속성을 사용 합니다. 명령 실행이 완료 되기 전에 **CommandTimeout** 속성에 설정 된 간격이 경과 하면 오류가 발생 하 고 ADO에서 명령이 취소 됩니다. 속성을 0으로 설정 하면 ADO는 실행이 완료 될 때까지 무기한 대기 합니다. 코드를 작성 하는 공급자 및 데이터 소스가 **CommandTimeout** 기능을 지원 하는지 확인 합니다.  
+ 네트워크 트래픽 또는 과도 한 서버 사용의 지연으로 인해 [Execute](./execute-method-ado-command.md) 메서드 호출을 취소할 수 있도록 하려면 [Connection](./connection-object-ado.md) 개체 또는 [Command](./command-object-ado.md) 개체에서 **CommandTimeout** 속성을 사용 합니다. 명령 실행이 완료 되기 전에 **CommandTimeout** 속성에 설정 된 간격이 경과 하면 오류가 발생 하 고 ADO에서 명령이 취소 됩니다. 속성을 0으로 설정 하면 ADO는 실행이 완료 될 때까지 무기한 대기 합니다. 코드를 작성 하는 공급자 및 데이터 소스가 **CommandTimeout** 기능을 지원 하는지 확인 합니다.  
   
  **연결** 개체에 대 한 **CommandTimeout** 설정은 동일한 **연결**에서 **명령** 개체의 **CommandTimeout** 설정에 영향을 주지 않습니다. 즉, **Command** 개체의 **CommandTimeout** 속성은 **Connection** 개체의 **CommandTimeout** 값을 상속 하지 않습니다.  
   
@@ -40,15 +40,15 @@ ms.locfileid: "88450835"
 
 :::row:::
     :::column:::
-        [명령 개체(ADO)](../../../ado/reference/ado-api/command-object-ado.md)  
+        [명령 개체(ADO)](./command-object-ado.md)  
     :::column-end:::
     :::column:::
-        [연결 개체(ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
+        [연결 개체(ADO)](./connection-object-ado.md)  
     :::column-end:::
 :::row-end:::
 
 ## <a name="see-also"></a>참고 항목  
- [ActiveConnection, CommandText, CommandTimeout, CommandType, Size 및 Direction 속성 예제 (VB)](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vb.md)   
- [ActiveConnection, CommandText, CommandTimeout, CommandType, Size 및 Direction 속성 예제 (VC + +)](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vc.md)   
- [ActiveConnection, CommandText, CommandTimeout, CommandType, Size 및 Direction 속성 예제 (JScript)](../../../ado/reference/ado-api/activeconnection-commandtext-timeout-type-size-example-jscript.md)   
- [ConnectionTimeout 속성(ADO)](../../../ado/reference/ado-api/connectiontimeout-property-ado.md)
+ [ActiveConnection, CommandText, CommandTimeout, CommandType, Size 및 Direction 속성 예제 (VB)](./activeconnection-commandtext-commandtimeout-commandtype-size-example-vb.md)   
+ [ActiveConnection, CommandText, CommandTimeout, CommandType, Size 및 Direction 속성 예제 (VC + +)](./activeconnection-commandtext-commandtimeout-commandtype-size-example-vc.md)   
+ [ActiveConnection, CommandText, CommandTimeout, CommandType, Size 및 Direction 속성 예제 (JScript)](./activeconnection-commandtext-timeout-type-size-example-jscript.md)   
+ [ConnectionTimeout 속성(ADO)](./connectiontimeout-property-ado.md)

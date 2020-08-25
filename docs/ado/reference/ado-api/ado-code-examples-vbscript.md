@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 78bb9a95-7ac4-44b6-818b-d1787f952ed7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 68a63c48615dabb7bc33e71818e4e03eee214b4e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 65629afe45d9906a423582cd904ade17726bf504
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451505"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88760143"
 ---
 # <a name="ado-code-examples-vbscript"></a>ADO 코드 예제 VBScript
 다음 코드 예제를 사용 하 여 Microsoft® Visual Basic® Scripting Edition (VBScript)에서 작성할 때 ADO 메서드를 사용 하는 방법을 알아봅니다.  
@@ -31,21 +31,21 @@ ms.locfileid: "88451505"
   
 ## <a name="methods"></a>메서드  
   
--   [AddNew 메서드 예제](../../../ado/reference/ado-api/addnew-method-example-vbscript.md)  
+-   [AddNew 메서드 예제](./addnew-method-example-vbscript.md)  
   
--   [Clone 메서드 예제](../../../ado/reference/ado-api/clone-method-example-vbscript.md)  
+-   [Clone 메서드 예제](./clone-method-example-vbscript.md)  
   
--   [Delete 메서드 예제](../../../ado/reference/ado-api/delete-method-example-vbscript.md)  
+-   [Delete 메서드 예제](./delete-method-example-vbscript.md)  
   
--   [Execute, Requery 및 Clear 메서드 예제](../../../ado/reference/ado-api/execute-requery-and-clear-methods-example-vbscript.md)  
+-   [Execute, Requery 및 Clear 메서드 예제](./execute-requery-and-clear-methods-example-vbscript.md)  
   
--   [Move 메서드 예제](../../../ado/reference/ado-api/move-method-example-vbscript.md)  
+-   [Move 메서드 예제](./move-method-example-vbscript.md)  
   
--   [MoveFirst, MoveLast, MoveNext 및 MovePrevious 메서드 예제](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-example-vbscript.md)  
+-   [MoveFirst, MoveLast, MoveNext 및 MovePrevious 메서드 예제](./movefirst-movelast-movenext-and-moveprevious-methods-example-vbscript.md)  
   
--   [Open 및 Close 메서드 예제](../../../ado/reference/ado-api/open-and-close-methods-example-vbscript.md)  
+-   [Open 및 Close 메서드 예제](./open-and-close-methods-example-vbscript.md)  
   
-## <a name="see-also"></a>참고 항목  
- [Visual Basic의 ADO 코드 예제](../../../ado/reference/ado-api/ado-code-examples-in-visual-basic.md)   
- [Visual C++의 ADO 코드 예제](../../../ado/reference/ado-api/ado-code-examples-in-visual-c.md)   
- [부록 D: ADO 샘플](../../../ado/guide/appendixes/appendix-d-ado-samples.md)
+## <a name="see-also"></a>관련 항목  
+ [Visual Basic의 ADO 코드 예제](./ado-code-examples-in-visual-basic.md)   
+ [Visual C++의 ADO 코드 예제](./ado-code-examples-in-visual-c.md)   
+ [부록 D: ADO 샘플](../../guide/appendixes/appendix-d-ado-samples.md)

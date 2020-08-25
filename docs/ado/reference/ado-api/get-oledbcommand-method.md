@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 23d551f5-3d5b-434b-ade6-fef15f1710e7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 562b10fa67b04926e512833248c99ecb7b55a1fd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 56148afcd3c7d3e18e856c6e50a44f35aaa1bc64
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443605"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775132"
 ---
 # <a name="get_oledbcommand-method"></a>get_OLEDBCommand 메서드
 먼저 ADO 명령에 설정 된 매개 변수 정보를 OLE DB 명령에 전파 하는 기본 OLE DB 명령을 반환 합니다.  
@@ -37,4 +37,4 @@ HRESULT get_OLEDBCommand(
  제한이 기본 OLE DB 명령에 대 한 IUnknown 포인터가 작성 될 포인터 위치에 대 한 포인터입니다.  
   
 ## <a name="applies-to"></a>적용 대상  
- [IADOCommandConstruction](https://msdn.microsoft.com/d8e54333-00eb-4b72-bf4a-ca92c7ca5f86)
+ [IADOCommandConstruction](/previous-versions/windows/desktop/aa965677(v=vs.85))

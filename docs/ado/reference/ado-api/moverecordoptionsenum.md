@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: f53c2ce4-1021-4a45-92b8-775e8bebad99
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 03728baab7882597cfba29d2f566d73ac98f9300
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ceba3183cf400556524b5f424a2703fafefc74bd
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443145"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774182"
 ---
 # <a name="moverecordoptionsenum"></a>MoveRecordOptionsEnum
-[Record](../../../ado/reference/ado-api/record-object-ado.md) 개체 [MoveRecord](../../../ado/reference/ado-api/moverecord-method-ado.md) 메서드의 동작을 지정 합니다.  
+[Record](./record-object-ado.md) 개체 [MoveRecord](./moverecord-method-ado.md) 메서드의 동작을 지정 합니다.  
   
 |상수|값|설명|  
 |--------------|-----------|-----------------|  
@@ -37,4 +37,4 @@ ms.locfileid: "88443145"
  이러한 상수에는 ADO/WFC 해당 항목이 없습니다.  
   
 ## <a name="applies-to"></a>적용 대상  
- [MoveRecord 메서드(ADO)](../../../ado/reference/ado-api/moverecord-method-ado.md)
+ [MoveRecord 메서드(ADO)](./moverecord-method-ado.md)

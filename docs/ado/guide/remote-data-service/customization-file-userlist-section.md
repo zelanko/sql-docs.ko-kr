@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 42e8ec20-eaac-4a95-8cb8-4bba93a75bcb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: afdd3560de5ca7e64d8a378f1eca04f875903a06
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 14308aeda28311b73dc34a323a9a9bf662770e8b
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452235"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759817"
 ---
 # <a name="customization-file-userlist-section"></a>사용자 지정 파일 UserList 섹션
 **Userlist** 섹션은 동일한 section *식별자* 매개 변수를 사용 하는 **connect** 섹션과 관련이 있습니다.  
@@ -40,13 +40,11 @@ ms.locfileid: "88452235"
 |*userName*|이 연결을 사용 하는 *사용자의 사용자 이름* 입니다. 올바른 사용자 이름은 IIS **Service Manager** 대화 상자를 사용 하 여 설정 됩니다.|  
 |**_accessRights_**|다음 액세스 권한 중 하나입니다.<br /><br /> -   **NoAccess** -사용자가 데이터 원본에 액세스할 수 없습니다.<br />-   **ReadOnly** -사용자가 데이터 소스를 읽을 수 있습니다.<br />-   **ReadWrite** -사용자가 데이터 소스를 읽거나 쓸 수 있습니다.|  
   
-## <a name="see-also"></a>참고 항목  
- [사용자 지정 파일 연결 섹션](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
- [사용자 지정 파일 로그 섹션](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   
- [사용자 지정 파일 SQL 섹션](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   
- [DataFactory 사용자 지정](../../../ado/guide/remote-data-service/datafactory-customization.md)   
- [필수 클라이언트 설정](../../../ado/guide/remote-data-service/required-client-settings.md)   
- [사용자 지정 파일 이해](../../../ado/guide/remote-data-service/understanding-the-customization-file.md)   
- [고유한 사용자 지정된 처리기 작성](../../../ado/guide/remote-data-service/writing-your-own-customized-handler.md)
-
-
+## <a name="see-also"></a>관련 항목  
+ [사용자 지정 파일 연결 섹션](./customization-file-connect-section.md)   
+ [사용자 지정 파일 로그 섹션](./customization-file-logs-section.md)   
+ [사용자 지정 파일 SQL 섹션](./customization-file-sql-section.md)   
+ [DataFactory 사용자 지정](./datafactory-customization.md)   
+ [필수 클라이언트 설정](./required-client-settings.md)   
+ [사용자 지정 파일 이해](./understanding-the-customization-file.md)   
+ [고유한 사용자 지정된 처리기 작성](./writing-your-own-customized-handler.md)

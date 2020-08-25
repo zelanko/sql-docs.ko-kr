@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5a4c6bd5-0c79-4f81-a977-0561392d8d50
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1a45d78960b8b6b1ba2534e39f080a6c94fc0655
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e21e45d72cd5140c542fb6d6d0b150c414fb9832
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443575"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775072"
 ---
 # <a name="getdataproviderdso-method"></a>GetDataProviderDSO 메서드
 셰이프 공급자에서 내부 OLE DB 데이터 소스 개체를 검색 합니다.  
@@ -40,4 +40,4 @@ HRESULT GetDataProviderDSO(
  이 메서드는 인터페이스 포인터를 addref 하지 않습니다. 호출자가 포인터를 보유 하도록 계획 하는 경우 호출자는 필수 addref 및 릴리스를 수행 해야 합니다.  
   
 ## <a name="applies-to"></a>적용 대상  
- [IDSOShapeExtensions 인터페이스](../../../ado/reference/ado-api/idsoshapeextensions-interface.md)
+ [IDSOShapeExtensions 인터페이스](./idsoshapeextensions-interface.md)

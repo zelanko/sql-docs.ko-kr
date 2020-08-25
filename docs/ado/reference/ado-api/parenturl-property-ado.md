@@ -16,21 +16,21 @@ helpviewer_keywords:
 ms.assetid: 65120ce6-3900-4cd4-b322-3b9816d74737
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8e8e171362e66c9809e646eb33cecfbad91f30df
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8254dd1e47d6f6d3042e88365bd3c6ad0ea4301f
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442755"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773242"
 ---
 # <a name="parenturl-property-ado"></a>ParentURL 속성(ADO)
-현재 **record** 개체의 부모 [레코드](../../../ado/reference/ado-api/record-object-ado.md) 를 가리키는 절대 URL 문자열을 나타냅니다.  
+현재 **record** 개체의 부모 [레코드](./record-object-ado.md) 를 가리키는 절대 URL 문자열을 나타냅니다.  
   
 ## <a name="return-value"></a>반환 값  
  부모 **레코드**의 URL을 나타내는 **문자열** 값을 반환 합니다.  
   
 ## <a name="remarks"></a>설명  
- **Parenturl** 속성은 **Record** 개체를 여는 데 사용 되는 원본에 따라 달라 집니다. 예를 들어 [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) 속성에서 참조 하는 디렉터리의 상대 경로 이름을 포함 하는 원본으로 **레코드** 를 열 수 있습니다.  
+ **Parenturl** 속성은 **Record** 개체를 여는 데 사용 되는 원본에 따라 달라 집니다. 예를 들어 [ActiveConnection](./activeconnection-property-ado.md) 속성에서 참조 하는 디렉터리의 상대 경로 이름을 포함 하는 원본으로 **레코드** 를 열 수 있습니다.  
   
  "Second"는 "first" 아래에 포함 된 폴더 라고 가정 합니다. 다음 구문을 사용 하 여 **Record** 개체를 엽니다.  
   
@@ -52,13 +52,13 @@ record.Open "second"
  이 속성은 읽기 전용입니다.  
   
 > [!NOTE]
->  이 속성은 [Microsoft OLE DB Provider For Internet 게시용](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)과 같은 문서 소스 공급자 에서만 지원 됩니다. 자세한 내용은 [레코드 및 공급자 제공 필드](../../../ado/guide/data/records-and-provider-supplied-fields.md)를 참조 하세요.  
+>  이 속성은 [Microsoft OLE DB Provider For Internet 게시용](../../guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)과 같은 문서 소스 공급자 에서만 지원 됩니다. 자세한 내용은 [레코드 및 공급자 제공 필드](../../guide/data/records-and-provider-supplied-fields.md)를 참조 하세요.  
   
 > [!NOTE]
->  Http 체계를 사용 하는 Url은 자동으로 [Microsoft OLE DB 공급자에 게 Internet 게시용](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)으로 호출 됩니다. 자세한 내용은 [절대 및 상대 url](../../../ado/guide/data/absolute-and-relative-urls.md)을 참조 하세요.  
+>  Http 체계를 사용 하는 Url은 자동으로 [Microsoft OLE DB 공급자에 게 Internet 게시용](../../guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)으로 호출 됩니다. 자세한 내용은 [절대 및 상대 url](../../guide/data/absolute-and-relative-urls.md)을 참조 하세요.  
   
 > [!NOTE]
 >  현재 레코드가 ADO **레코드 집합**의 데이터 레코드를 포함 하는 경우 **parenturl** 속성에 액세스 하면 URL이 없음을 나타내는 런타임 오류가 발생 합니다.  
   
 ## <a name="applies-to"></a>적용 대상  
- [레코드 개체(ADO)](../../../ado/reference/ado-api/record-object-ado.md)
+ [레코드 개체(ADO)](./record-object-ado.md)

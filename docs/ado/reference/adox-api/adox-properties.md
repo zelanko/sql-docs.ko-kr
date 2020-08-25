@@ -14,42 +14,42 @@ helpviewer_keywords:
 ms.assetid: 2ddf19e4-312e-4d21-8053-a6fc4b738ad4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2bb02d47575eaaa2e1eee4a443f86a7d103dabca
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: aae7fdebfa01972709cd8e84c9e92a59f24acff1
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440555"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88771632"
 ---
 # <a name="adox-properties"></a>ADOX 속성
 
 |속성|설명|  
 |-|-|  
-|[ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md)|카탈로그가 속한 ADO **연결** 개체를 나타냅니다.|  
-|[특성](../../../ado/reference/adox-api/attributes-property-adox.md)|열 특징을 설명 합니다.|  
-|[클러스터형](../../../ado/reference/adox-api/clustered-property-adox.md)|인덱스가 클러스터형 인지 여부를 나타냅니다.|  
-|[명령](../../../ado/reference/adox-api/command-property-adox.md)|프로시저를 만들거나 실행 하는 데 사용할 수 있는 ADO **명령** 개체를 지정 합니다.|  
-|[Count](../../../ado/reference/ado-api/count-property-ado.md)|컬렉션의 개체 수를 나타냅니다.|  
-|[DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md)|개체를 만든 날짜를 나타냅니다.|  
-|[DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md)|개체가 마지막으로 수정 된 날짜를 나타냅니다.|  
-|[DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md)|열의 최대 크기를 나타냅니다.|  
-|[DeleteRule](../../../ado/reference/adox-api/deleterule-property-adox.md)|기본 키가 삭제 될 때 수행 되는 동작을 나타냅니다.|  
-|[IndexNulls](../../../ado/reference/adox-api/indexnulls-property-adox.md)|인덱스 필드에 null 값이 있는 레코드에 인덱스 항목이 있는지 여부를 나타냅니다.|  
-|[항목](../../../ado/reference/ado-api/item-property-ado.md)|이름 또는 서 수를 기준으로 컬렉션의 특정 멤버를 나타냅니다.|  
-|[이름](../../../ado/reference/adox-api/name-property-adox.md)|개체의 이름을 나타냅니다.|  
-|[NumericScale](../../../ado/reference/adox-api/numericscale-property-adox.md)|열에 있는 숫자 값의 소수 자릿수를 나타냅니다.|  
-|[ParentCatalog](../../../ado/reference/adox-api/parentcatalog-property-adox.md)|공급자별 속성에 대 한 액세스를 제공 하는 테이블 또는 열의 부모 카탈로그를 지정 합니다.|  
-|[정밀도](../../../ado/reference/adox-api/precision-property-adox.md)|열에 있는 데이터 값의 최대 전체 자릿수를 나타냅니다.|  
-|[PrimaryKey](../../../ado/reference/adox-api/primarykey-property-adox.md)|인덱스가 테이블의 기본 키를 나타내는지 여부를 나타냅니다.|  
-|[RelatedColumn](../../../ado/reference/adox-api/relatedcolumn-property-adox.md)|관련 테이블의 관련 열 이름을 나타냅니다 (키 열에만 해당).|  
-|[RelatedTable](../../../ado/reference/adox-api/relatedtable-property-adox.md)|관련 테이블의 이름을 나타냅니다.|  
-|[SortOrder](../../../ado/reference/adox-api/sortorder-property-adox.md)|열에 대 한 정렬 순서를 나타냅니다 (인덱스 열에만 해당).|  
-|[유형 (열)](../../../ado/reference/adox-api/type-property-column-adox.md)|열의 데이터 형식을 나타냅니다.|  
-|[유형 (키)](../../../ado/reference/adox-api/type-property-key-adox.md)|키의 데이터 형식을 나타냅니다.|  
-|[유형 (테이블)](../../../ado/reference/adox-api/type-property-table-adox.md)|테이블의 유형을 나타냅니다.|  
-|[고유](../../../ado/reference/adox-api/unique-property-adox.md)|인덱스 키가 고유 해야 하는지 여부를 나타냅니다.|  
-|[UpdateRule](../../../ado/reference/adox-api/updaterule-property-adox.md)|기본 키를 업데이트할 때 수행 되는 동작을 나타냅니다.|  
+|[ActiveConnection](./activeconnection-property-adox.md)|카탈로그가 속한 ADO **연결** 개체를 나타냅니다.|  
+|[특성](./attributes-property-adox.md)|열 특징을 설명 합니다.|  
+|[클러스터형](./clustered-property-adox.md)|인덱스가 클러스터형 인지 여부를 나타냅니다.|  
+|[명령](./command-property-adox.md)|프로시저를 만들거나 실행 하는 데 사용할 수 있는 ADO **명령** 개체를 지정 합니다.|  
+|[Count](../ado-api/count-property-ado.md)|컬렉션의 개체 수를 나타냅니다.|  
+|[DateCreated](./datecreated-property-adox.md)|개체를 만든 날짜를 나타냅니다.|  
+|[DateModified](./datemodified-property-adox.md)|개체가 마지막으로 수정 된 날짜를 나타냅니다.|  
+|[DefinedSize](./definedsize-property-adox.md)|열의 최대 크기를 나타냅니다.|  
+|[DeleteRule](./deleterule-property-adox.md)|기본 키가 삭제 될 때 수행 되는 동작을 나타냅니다.|  
+|[IndexNulls](./indexnulls-property-adox.md)|인덱스 필드에 null 값이 있는 레코드에 인덱스 항목이 있는지 여부를 나타냅니다.|  
+|[항목](../ado-api/item-property-ado.md)|이름 또는 서 수를 기준으로 컬렉션의 특정 멤버를 나타냅니다.|  
+|[이름](./name-property-adox.md)|개체의 이름을 나타냅니다.|  
+|[NumericScale](./numericscale-property-adox.md)|열에 있는 숫자 값의 소수 자릿수를 나타냅니다.|  
+|[ParentCatalog](./parentcatalog-property-adox.md)|공급자별 속성에 대 한 액세스를 제공 하는 테이블 또는 열의 부모 카탈로그를 지정 합니다.|  
+|[정밀도](./precision-property-adox.md)|열에 있는 데이터 값의 최대 전체 자릿수를 나타냅니다.|  
+|[PrimaryKey](./primarykey-property-adox.md)|인덱스가 테이블의 기본 키를 나타내는지 여부를 나타냅니다.|  
+|[RelatedColumn](./relatedcolumn-property-adox.md)|관련 테이블의 관련 열 이름을 나타냅니다 (키 열에만 해당).|  
+|[RelatedTable](./relatedtable-property-adox.md)|관련 테이블의 이름을 나타냅니다.|  
+|[SortOrder](./sortorder-property-adox.md)|열에 대 한 정렬 순서를 나타냅니다 (인덱스 열에만 해당).|  
+|[유형 (열)](./type-property-column-adox.md)|열의 데이터 형식을 나타냅니다.|  
+|[유형 (키)](./type-property-key-adox.md)|키의 데이터 형식을 나타냅니다.|  
+|[유형 (테이블)](./type-property-table-adox.md)|테이블의 유형을 나타냅니다.|  
+|[고유](./unique-property-adox.md)|인덱스 키가 고유 해야 하는지 여부를 나타냅니다.|  
+|[UpdateRule](./updaterule-property-adox.md)|기본 키를 업데이트할 때 수행 되는 동작을 나타냅니다.|  
   
 ## <a name="see-also"></a>참고 항목  
- [ADOX API 참조](../../../ado/reference/adox-api/adox-api-reference.md)   
- [DDL(데이터 정의 언어) 및 보안을 위한 ADO 확장(ADOX)](../../../ado/guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)
+ [ADOX API 참조](./adox-object-model.md?view=sql-server-ver15)   
+ [데이터 정의 언어 및 보안을 위한 ADO 확장(ADOX)](../../guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)
