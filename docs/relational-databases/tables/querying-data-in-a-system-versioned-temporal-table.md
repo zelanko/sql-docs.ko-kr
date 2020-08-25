@@ -12,16 +12,18 @@ ms.assetid: 2d358c2e-ebd8-4eb3-9bff-cfa598a39125
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4298cbc0c80937f01f37126c93b01f927c8cbd2f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 21e97c74d99a3ce653a79c68727e714d773cbba9
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88427485"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88645796"
 ---
 # <a name="querying-data-in-a-system-versioned-temporal-table"></a>시스템 버전 관리 temporal 테이블의 데이터 쿼리
 
+
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
+
 
 temporal 테이블 데이터의 최신(실제) 상태를 가져오려면, 비temporal 테이블 쿼리와 완전히 동일한 방식으로 쿼리할 수 있습니다. PERIOD 열이 숨겨져 있지 않은 경우, 해당 값은 SELECT \* 쿼리에 나타납니다. **PERIOD** 열을 숨김으로 지정하면 해당 값이 SELECT \* 쿼리에 나타나지 않습니다. **PERIOD** 열이 숨겨진 경우 해당 열에 대한 값을 반환하기 위해 특히 SELECT 절의 **PERIOD** 열을 참조합니다.
 

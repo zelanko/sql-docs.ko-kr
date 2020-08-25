@@ -6,15 +6,15 @@ ms.author: garye
 ms.reviewer: mikeray, alayu, maghan
 ms.topic: tutorial
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.custom: ''
 ms.date: 07/01/2020
-ms.openlocfilehash: 7eb7af0577cb74f180991bf455c36c9122972643
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 268caea0eb9101606963dce09d33a725eb964255
+ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920463"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88745873"
 ---
 # <a name="create-and-run-a-python-notebook"></a>Python 노트북 만들기 및 실행
 

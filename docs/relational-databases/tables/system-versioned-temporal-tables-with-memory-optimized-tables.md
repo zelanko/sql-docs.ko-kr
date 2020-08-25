@@ -12,16 +12,18 @@ ms.assetid: 23274522-e5cf-4095-bed8-bf986d6342e0
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 198cb23fdd7fe76b7777bc22b63ace4f1dedcc2b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f8aaedc07aef085f7245346adc5a8e04302be909
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88473046"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88646638"
 ---
 # <a name="system-versioned-temporal-tables-with-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블을 포함한 시스템 버전 임시 테이블
 
+
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
+
 
 [메모리 최적화 테이블](../../relational-databases/in-memory-oltp/memory-optimized-tables.md) 에 대한 시스템 버전 temporal 테이블은 메모리 내 OLTP 작업으로 수집한 데이터 위에 [데이터 감사 및 특정 시간 분석](https://msdn.microsoft.com/library/mt631669.aspx) 이 필요한 시나리오에 대해 비용 효율적인 솔루션을 제공하기 위한 것입니다. 이는 높은 트랜잭션 처리량, 잠금 없는 동시성 및 동시에 쉽게 쿼리할 수 있는 대량의 기록 데이터를 저장하는 기능을 제공합니다.
 

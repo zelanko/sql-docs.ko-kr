@@ -12,16 +12,18 @@ ms.assetid: 5f398470-c531-47b5-84d5-7c67c27df6e5
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 654648ba7206c3d5ce01a715a0ee24eae2d3212b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 79ae1efd305215d0e64287e6c0a7ad7aa9a70a36
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88419007"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88646453"
 ---
 # <a name="modifying-data-in-a-system-versioned-temporal-table"></a>시스템 버전 관리 temporal 테이블의 데이터 수정
 
+
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
+
 
 시스템 버전 temporal 테이블의 데이터는 일반 DML 문을 사용하여 수정됩니다. 여기서 한가지 중요한 차이점은 기간 열 데이터를 직접 수정할 수 없다는 것입니다. 데이터가 업데이트되면 버전이 부여되며, 업데이트된 각 행의 이전 버전은 기록 테이블에 삽입됩니다. 데이터가 삭제되는 경우, 논리적으로 삭제되고 행이 현재 테이블에서 기록 테이블로 이동합니다. 영구적으로 삭제되지 않습니다.
 

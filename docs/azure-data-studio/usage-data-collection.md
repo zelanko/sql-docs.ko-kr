@@ -2,19 +2,19 @@
 title: 사용량 현황 데이터 수집 및 크래시 보고 사용 또는 사용 안 함
 description: 이 문서에서는 사용량 및 충돌 보고 데이터를 수집하여 Microsoft로 보낼지 여부를 제어하는 방법을 설명합니다.
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18; seo-lt-2019
 ms.date: 09/24/2018
-ms.openlocfilehash: ad36e319338c90c33e0969f75ee34e980f3d23f5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5d65a1333f3fc0f41bdcb5b7ac1f5284f32a03cc
+ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771939"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88745543"
 ---
 # <a name="enable-or-disable-usage-data-collection-for-azure-data-studio"></a>Azure Data Studio의 사용량 현황 데이터 수집 사용 또는 사용 안 함
 

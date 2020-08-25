@@ -19,16 +19,17 @@ ms.assetid: 2163bc7a-3816-4304-9c40-8954804f5465
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: 393b1a79d12c3280013f609d9a62924359ad57e8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6de463b09ed654c8469f650ea83e3ebb2ebb653e
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417159"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88645974"
 ---
 # <a name="string_escape-transact-sql"></a>STRING_ESCAPE(Transact-SQL)
 
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
+
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
 텍스트의 특수 문자를 이스케이프하고 이스케이프 문자가 포함된 텍스트를 반환합니다. **STRING_ESCAPE**는 SQL Server 2016에서 도입된 결정 함수입니다. 
   
