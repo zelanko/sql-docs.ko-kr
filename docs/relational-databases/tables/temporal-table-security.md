@@ -12,16 +12,18 @@ ms.assetid: 60e5d6f6-a26d-4bba-aada-42e382bbcd38
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5dbfd363746a0849643835d3d9cf567c8f065e7f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bd2a3fe4ce33a8ea5a9889f996e1b6f35c5d9b28
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463746"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88645764"
 ---
 # <a name="temporal-table-security"></a>임시 테이블 보안
 
+
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
+
 
 temporal 테이블에 보안이 적용되는 방식을 이해하려면 temporal 테이블에 적용되는 보안 원칙을 이해하는 것이 중요합니다. 이러한 보안 원칙을 이해한 이후에 **CREATE TABLE**, **ALTER TABLE**, **SELECT** 문에 대한 보안을 자세히 파악할 수 있습니다.
 

@@ -12,16 +12,18 @@ ms.assetid: ec081d42-57e4-43c7-9e1c-317ba8f23437
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8eac6400caf5a1d94e3b23aee4f59db252619eab
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c5fb93aa131d856f0a1aeaad3f6da1265b649357
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88473031"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88646003"
 ---
 # <a name="temporal-table-system-consistency-checks"></a>Temporal 테이블 시스템 일관성 확인
 
+
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
+
 
 temporal 테이블을 사용하는 경우 시스템은 다양한 일관성 검사를 수행하여 스키마가 임시 요구 사항에 따라 컴파일되고 데이터가 일관적이며 일관성을 유지함을 보장할 수 있습니다. 또한, **DBCC CHECKCONSTRAINTS** 문에 임시 검사가 추가되었습니다.
 

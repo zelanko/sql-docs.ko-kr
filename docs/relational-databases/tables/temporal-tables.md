@@ -12,16 +12,18 @@ ms.assetid: e442303d-4de1-494e-94e4-4f66c29b5fb9
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d3543738d8987beaeb6eafc69a446ab63e9b0c27
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a12607d7279b8a7789d6365c11825608f57ad628
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463753"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88646083"
 ---
 # <a name="temporal-tables"></a>임시 테이블
 
+
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
+
 
 SQL Server 2016에서는 현재 시점에서 정확한 데이터만이 아니라 임의 시점에서 테이블에 저장된 데이터에 대한 정보를 제공하기 위해 기본적으로 지원을 제공하는 데이터베이스 기능으로 임시 테이블(시스템 버전 임시 테이블이라고도 함)에 대한 지원을 도입했습니다. 임시 테이블은 ANSI SQL 2011에서 도입된 데이터베이스 기능입니다.
 

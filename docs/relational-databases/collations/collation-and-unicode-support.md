@@ -33,12 +33,12 @@ ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 author: pmasl
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3f9d8025daba4b4006b0d87422cffe8ea73f82c6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 39803c2063bf6afbae9bc6797d85499fc91a10bd
+ms.sourcegitcommit: 19ae05bc69edce1e3b3d621d7fdd45ea5f74969d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88466205"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88564673"
 ---
 # <a name="collation-and-unicode-support"></a>데이터 정렬 및 유니코드 지원
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -372,9 +372,6 @@ Windows 데이터 정렬은 관련 Windows 시스템 로캘을 기반으로 하�
 |요루바어(나이지리아)|0x046a|0x0409|Latin1_General_CI_AS|
 |줄루어(남아프리카)|0x0435|0x0409|Latin1_General_CI_AS|
 
-> [!NOTE]
-> 유니코드 전용 데이터 정렬은 서버 수준 데이터 정렬로 지원되지 않으므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 중에 선택할 수 없습니다.    
-    
 서버에 데이터 정렬을 할당한 후에 데이터 정렬을 변경하려면 모든 데이터베이스 개체와 데이터를 내보내고 *master* 데이터베이스를 다시 빌드한 다음, 모든 데이터베이스 개체와 데이터를 다시 가져와야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 기본 데이터 정렬을 변경하는 대신 새 데이터베이스 또는 데이터베이스 열을 만들 때 원하는 데이터 정렬을 지정할 수 있습니다.    
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 서버 데이터 정렬을 쿼리하려면 `SERVERPROPERTY` 함수를 사용합니다.

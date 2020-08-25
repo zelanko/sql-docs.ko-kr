@@ -12,16 +12,18 @@ ms.assetid: 1c1fc682-bf5b-4096-a0ff-3235d71c205a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 432c61f69e8d03126d78113989c83172b8ac2e3d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 83a7cdd151b958a7840696c09af12dcf2b64d319
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88473070"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88645854"
 ---
 # <a name="creating-a-memory-optimized-system-versioned-temporal-table"></a>메모리 액세스에 최적화된 시스템 버전 임시 테이블 만들기
 
+
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
+
 
 디스크 기반 기록 테이블을 만들 때와 마찬가지로 다양한 방식으로 메모리 최적화 temporal 테이블을 만들 수 있습니다.
 
