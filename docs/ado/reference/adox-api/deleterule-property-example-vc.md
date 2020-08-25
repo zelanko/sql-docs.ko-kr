@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7a1def31-2b6f-4542-aac3-ec35b54c89ef
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d2c24d7d5470ed4c78f74b78b38158113e3f4894
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7f7f994f29b41015d60912901100ac5b73c829e4
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440095"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88770562"
 ---
 # <a name="deleterule-property-example-vc"></a>DeleteRule 속성 예제(VC++)
-이 예제에서는 [키](../../../ado/reference/adox-api/key-object-adox.md) 개체의 [DeleteRule](../../../ado/reference/adox-api/deleterule-property-adox.md) 속성을 보여 줍니다. 이 코드는 새 [테이블](../../../ado/reference/adox-api/table-object-adox.md) 을 추가 하 고 **DeleteRule** 를 **adRICascade**로 설정 하 여 새 기본 키를 정의 합니다.  
+이 예제에서는 [키](./key-object-adox.md) 개체의 [DeleteRule](./deleterule-property-adox.md) 속성을 보여 줍니다. 이 코드는 새 [테이블](./table-object-adox.md) 을 추가 하 고 **DeleteRule** 를 **adRICascade**로 설정 하 여 새 기본 키를 정의 합니다.  
   
 ```  
 // BeginDeleteRuleCpp.cpp  
@@ -109,5 +109,5 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [DeleteRule 속성 (ADOX)](../../../ado/reference/adox-api/deleterule-property-adox.md)   
- [Key 개체(ADOX)](../../../ado/reference/adox-api/key-object-adox.md)
+ [DeleteRule 속성 (ADOX)](./deleterule-property-adox.md)   
+ [키 개체(ADOX)](./key-object-adox.md)

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 45204669-32c0-4690-aab9-ddf0fd71ae48
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 527e510979afd81a5e90ea207027479cde5c5f63
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: aba3aed53a3640ff76b2d46b221265d1505e020a
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439885"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88770152"
 ---
 # <a name="indexnulls-property-example-vb"></a>IndexNulls 속성 예제(VB)
-이 예에서는 [인덱스](../../../ado/reference/adox-api/index-object-adox.md)의 [IndexNulls](../../../ado/reference/adox-api/indexnulls-property-adox.md) 속성을 보여 줍니다. 이 코드는 새 인덱스를 만들고 List1 라는 목록 상자에서 사용자 입력을 기반으로 **IndexNulls** 의 값을 설정 합니다. 그런 다음 **인덱스가** *Northwind* [카탈로그](../../../ado/reference/adox-api/catalog-object-adox.md)의 **Employees** [테이블](../../../ado/reference/adox-api/table-object-adox.md) 에 추가 됩니다. 새 **인덱스** 는 **Employees** 테이블을 기반으로 하는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 에 적용 되 고 **레코드 집합** 은 열립니다. 새 레코드가 **Employees** 테이블에 추가 되 고 인덱싱된 필드에 **Null** 값이 추가 됩니다. 이 새 레코드가 표시 되는지 여부는 **IndexNulls** 속성의 설정에 따라 달라 집니다.  
+이 예에서는 [인덱스](./index-object-adox.md)의 [IndexNulls](./indexnulls-property-adox.md) 속성을 보여 줍니다. 이 코드는 새 인덱스를 만들고 List1 라는 목록 상자에서 사용자 입력을 기반으로 **IndexNulls** 의 값을 설정 합니다. 그런 다음 **인덱스가** *Northwind* [카탈로그](./catalog-object-adox.md)의 **Employees** [테이블](./table-object-adox.md) 에 추가 됩니다. 새 **인덱스** 는 **Employees** 테이블을 기반으로 하는 [레코드 집합](../ado-api/recordset-object-ado.md) 에 적용 되 고 **레코드 집합** 은 열립니다. 새 레코드가 **Employees** 테이블에 추가 되 고 인덱싱된 필드에 **Null** 값이 추가 됩니다. 이 새 레코드가 표시 되는지 여부는 **IndexNulls** 속성의 설정에 따라 달라 집니다.  
   
 ```  
 ' BeginIndexNullsVB  
@@ -110,5 +110,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Index 개체 (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)   
- [IndexNulls 속성(ADOX)](../../../ado/reference/adox-api/indexnulls-property-adox.md)
+ [Index 개체 (ADOX)](./index-object-adox.md)   
+ [IndexNulls 속성(ADOX)](./indexnulls-property-adox.md)

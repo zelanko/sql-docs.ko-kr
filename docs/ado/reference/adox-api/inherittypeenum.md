@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: c2f6ce79-c4b3-4d40-ac95-21025208f991
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dfa4d6c15cc7d26dbfe964947bd09a04e2f75128
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d1fed614d90bbf53fdb2198e3ddd657a1e44acd1
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439855"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88770122"
 ---
 # <a name="inherittypeenum"></a>InheritTypeEnum
-개체가 [SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md)로 설정 된 사용 권한을 상속 하는 방법을 지정 합니다.  
+개체가 [SetPermissions](./setpermissions-method-adox.md)로 설정 된 사용 권한을 상속 하는 방법을 지정 합니다.  
   
 |상수|값|설명|  
 |--------------|-----------|-----------------|  
@@ -35,4 +35,4 @@ ms.locfileid: "88439855"
 |**adInheritObjects**|1|컨테이너의 컨테이너가 아닌 개체는 권한을 상속 합니다.|  
   
 ## <a name="applies-to"></a>적용 대상  
- [SetPermissions 메서드(ADOX)](../../../ado/reference/adox-api/setpermissions-method-adox.md)
+ [SetPermissions 메서드(ADOX)](./setpermissions-method-adox.md)

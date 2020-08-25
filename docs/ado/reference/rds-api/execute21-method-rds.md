@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9f131c8d-1497-416d-8209-abb481c38f7b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 412401ba2b1d5a676b5f5172c59c6e4ffc5cce7e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9ee73221460a177e24317c9c3d7ff9ab5c06dec9
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439055"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768402"
 ---
 # <a name="execute21-method-rds"></a>Execute21 메서드(RDS)
 요청을 실행 하 고 ADO 2.1에 사용할 ADO 레코드 집합을 만듭니다.  
@@ -74,9 +74,7 @@ object.Execute21(ConnectionString As String, HandlerString As String, QueryStrin
  *Handlerstring* 매개 변수는 null 일 수 있습니다. 이 경우에 발생 하는 작업은 RDS 서버를 구성 하는 방법에 따라 달라 집니다. "MSDFMAP. handler"의 처리기 문자열은 Microsoft에서 제공 하는 처리기 (Msdfmap.dll)를 사용 해야 함을 나타냅니다. "MASDFMAP sample.ini" 처리기 문자열은 Msdfmap.dll 처리기를 사용 해야 하며 "sample.ini" 인수를 처리기에 전달 해야 함을 나타냅니다. MSDFMAP.dll은 sample.ini를 사용 하 여 연결 및 쿼리 문자열을 확인 하는 방향으로 인수를 해석 합니다.  
   
 > [!NOTE]
->  **Execute21** 메서드는 [EXECUTE 메서드 (RDS)](../../../ado/reference/rds-api/execute-method-rds.md)의 버전입니다. **Execute** 메서드를 사용 하 여 ADO 2.1와 통신 해야 하는 경우 대신 **Execute21** 메서드를 호출할 수 있습니다. ADO 2.5 이상에서 **Execute** 메서드의 기능은 ado 2.1에서 동일한 메서드에 제공 되는 기능의 상위 집합입니다.  
+>  **Execute21** 메서드는 [EXECUTE 메서드 (RDS)](./execute-method-rds.md)의 버전입니다. **Execute** 메서드를 사용 하 여 ADO 2.1와 통신 해야 하는 경우 대신 **Execute21** 메서드를 호출할 수 있습니다. ADO 2.5 이상에서 **Execute** 메서드의 기능은 ado 2.1에서 동일한 메서드에 제공 되는 기능의 상위 집합입니다.  
   
 ## <a name="applies-to"></a>적용 대상  
- [DataFactory 개체(RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)
-
-
+ [DataFactory 개체(RDSServer)](./datafactory-object-rdsserver.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 14b51b17-6fd9-4146-af45-ca4b0fe6d48a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ea25d5c85969b71836fec30085dd9a626a18d40a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 26586cf6a01b51e01ca695252dcdbf6e197b77c9
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453175"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88805847"
 ---
 # <a name="keyset-cursors"></a>키 집합 커서
 키 집합 커서는 정적 커서와 동적 커서 사이의 기능을 제공 하 여 변경 내용을 검색할 수 있습니다. 정적 커서처럼 항상 결과 집합의 멤버 자격과 순서에 대한 변경 내용을 검색하지는 못합니다. 동적 커서처럼 결과 집합의 행 값에 대한 변경 내용을 검색합니다.  
@@ -39,6 +39,6 @@ ms.locfileid: "88453175"
  데이터 변경에 대 한 민감도는 위에 설명 된 대로 서로 다른 여러 상황에 따라 달라 지므로 키 집합 커서는 올바르게 사용 하기 어렵습니다. 그러나 응용 프로그램에서 동시 업데이트를 수행 하지 않아도 되는 경우에서 잘못 된 키를 프로그래밍 방식으로 처리 하 고 특정 키 행에 직접 액세스 해야 하는 경우 키 집합 커서를 사용할 수 있습니다. **Adopenkeyset 집합 CursorTypeEnum** 를 사용 하 여 ADO에서 키 집합 커서를 사용 하도록 지정 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [앞 으로만 이동 가능한 커서](../../../ado/guide/data/forward-only-cursors.md)   
- [정적 커서](../../../ado/guide/data/static-cursors.md)   
- [동적 커서](../../../ado/guide/data/dynamic-cursors.md)
+ [앞 으로만 이동 가능한 커서](./forward-only-cursors.md)   
+ [정적 커서](./static-cursors.md)   
+ [동적 커서](./dynamic-cursors.md)

@@ -35,7 +35,7 @@ Views.Append Name, Command
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- *이름*  
+ *Name*  
  만들 뷰의 이름을 지정 하는 **문자열** 값입니다.  
   
  *명령*  

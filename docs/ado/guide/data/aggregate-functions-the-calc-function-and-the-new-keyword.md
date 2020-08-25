@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0590b466-2a36-49a2-868e-028ef5e49394
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ad6bf4b041fbae0f30e327bd32dd067c1e9c429a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f3ef1ae1b6b5d60774e220cc4594cd54eda291e7
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453755"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806956"
 ---
 # <a name="aggregate-functions-the-calc-function-and-the-new-keyword"></a>집계 함수, CALC 함수 및 NEW 키워드
 데이터 셰이핑은 다음과 같은 기능을 지원 합니다. 작업할 열을 포함 하는 챕터에 할당 된 이름은 *챕터 별칭*입니다.  
@@ -40,7 +40,7 @@ ms.locfileid: "88453755"
   
 |계산 식|설명|  
 |---------------------------|-----------------|  
-|CALC (*식*)|CALC 함수를 포함 하는 **레코드 집합** 의 행 에서만 임의의 식을 계산 합니다. 이러한 [Visual Basic for Applications (VBA) 함수](../../../ado/guide/data/visual-basic-for-applications-functions.md) 를 사용 하는 식은 허용 됩니다.|  
+|CALC (*식*)|CALC 함수를 포함 하는 **레코드 집합** 의 행 에서만 임의의 식을 계산 합니다. 이러한 [Visual Basic for Applications (VBA) 함수](./visual-basic-for-applications-functions.md) 를 사용 하는 식은 허용 됩니다.|  
   
 |NEW 키워드|설명|  
 |-----------------|-----------------|  
@@ -73,7 +73,7 @@ ms.locfileid: "88453755"
   
  새 필드가 decimal 형식 (OLE DB, DBTYPE_DECIMAL 또는 ADO, adDecimal) 이면 전체 자릿수 및 소수 자릿수 값을 지정 해야 합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [데이터 셰이핑 예](../../../ado/guide/data/data-shaping-example.md)   
- [공식 모양 문법](../../../ado/guide/data/formal-shape-grammar.md)   
- [일반적인 셰이핑 명령](../../../ado/guide/data/shape-commands-in-general.md)
+## <a name="see-also"></a>참고 항목  
+ [데이터 셰이핑 예](./data-shaping-example.md)   
+ [공식 모양 문법](./formal-shape-grammar.md)   
+ [일반적인 셰이핑 명령](./shape-commands-in-general.md)

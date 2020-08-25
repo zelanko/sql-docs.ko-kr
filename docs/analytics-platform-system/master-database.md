@@ -42,9 +42,9 @@ SQL Server PDW master 데이터베이스는 어플라이언스 수준 로그인 
   
 ## <a name="related-tasks"></a>관련 작업  
   
-|Task|설명|  
+|Task|Description|  
 |--------|---------------|  
-|Master의 전체 백업을 만듭니다.|예제:<br /><br />`BACKUP DATABASE master TO backup_directory;`<br /><br />자세한 내용은 [BACKUP DATABASE](../t-sql/statements/backup-transact-sql.md?view=aps-pdw-2016)를 참조 하세요.|  
+|Master의 전체 백업을 만듭니다.|예:<br /><br />`BACKUP DATABASE master TO backup_directory;`<br /><br />자세한 내용은 [BACKUP DATABASE](../t-sql/statements/backup-transact-sql.md?view=aps-pdw-2016)를 참조 하세요.|  
 |master 데이터베이스 복원|Master 데이터베이스를 복원 하려면 Configuration Manager 도구의 [Master 데이터베이스 복원](restore-the-master-database.md) 페이지를 사용 합니다.|  
 |데이터베이스 카탈로그 정보를 봅니다.|`SELECT * FROM master.sys.databases;`|  
 |시스템 전체 로그인 및 사용 권한 정보를 확인 합니다.|`SELECT * FROM master.sys.server_permissions;`<br /><br />`SELECT * FROM master.sys.server_principals;`<br /><br />`SELECT * FROM master.sys.sql_logins;`|  

@@ -15,24 +15,24 @@ helpviewer_keywords:
 ms.assetid: 1e7dc6f0-482c-4103-8187-f890865e40fc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9ed83809ec1bf3fd4ba55552f4ecac1d55cfb8d7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 81d60f33e0e9e055e086d990a681efb74cc943cc
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454025"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806529"
 ---
 # <a name="microsoft-ole-db-simple-provider-overview"></a>Microsoft OLE DB 단순 공급자 개요
-Microsoft OSP (OLE DB Simple Provider)를 사용 하면 ADO에서 [osp (OLE DB Simple provider) 도구 키트](https://msdn.microsoft.com/6e7b7931-9e4a-4151-ae51-672abd3f84a6)를 사용 하 여 공급자가 작성 된 모든 데이터에 액세스할 수 있습니다. 단순 공급자는 메모리 내 배열 또는 XML 문서와 같이 기본적인 OLE DB 지원만 필요한 데이터 원본에 액세스 하기 위한 것입니다.
+Microsoft OSP (OLE DB Simple Provider)를 사용 하면 ADO에서 [osp (OLE DB Simple provider) 도구 키트](/previous-versions/windows/desktop/ms715822(v=vs.85))를 사용 하 여 공급자가 작성 된 모든 데이터에 액세스할 수 있습니다. 단순 공급자는 메모리 내 배열 또는 XML 문서와 같이 기본적인 OLE DB 지원만 필요한 데이터 원본에 액세스 하기 위한 것입니다.
 
 ## <a name="connection-string-parameters"></a>연결 문자열 매개 변수
- OLE DB 단순 공급자 DLL에 연결 하려면 *provider* 인수를 [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) 속성으로 설정 합니다.
+ OLE DB 단순 공급자 DLL에 연결 하려면 *provider* 인수를 [ConnectionString](../../reference/ado-api/connectionstring-property-ado.md) 속성으로 설정 합니다.
 
 ```vb
 MSDAOSP
 ```
 
- 이 값은 [공급자](../../../ado/reference/ado-api/provider-property-ado.md) 속성을 사용 하 여 설정 하거나 읽을 수도 있습니다.
+ 이 값은 [공급자](../../reference/ado-api/provider-property-ado.md) 속성을 사용 하 여 설정 하거나 읽을 수도 있습니다.
 
  공급자 작성자가 결정 한 등록 된 공급자 이름을 사용 하 여 전체 OLE DB 공급자로 등록 된 단순 공급자에 연결할 수 있습니다.
 
@@ -47,7 +47,7 @@ MSDAOSP
 
 |키워드|설명|
 |-------------|-----------------|
-|**공급자**|SQL Server에 대 한 OLE DB 공급자를 지정 합니다.|
+|**공급 기업**|SQL Server에 대 한 OLE DB 공급자를 지정 합니다.|
 |**데이터 원본**|서버의 이름을 지정합니다.|
 
 ## <a name="xml-document-example"></a>XML 문서 예제
@@ -137,7 +137,7 @@ adoRS.Open "C:\Directory\portfolio.xml", adoConn
 
 -   XMLDSO는 계층의 각 **레코드 집합** 에 추가 데이터 열 ($Text)을 추가 합니다.
 
- OLE DB 단순 공급자에 대 한 자세한 내용은 [단순 공급자 빌드](https://msdn.microsoft.com/b31a6cba-58ae-4ee8-9039-700973d354d6)를 참조 하세요.
+ OLE DB 단순 공급자에 대 한 자세한 내용은 [단순 공급자 빌드](/previous-versions/windows/desktop/ms721067(v=vs.85))를 참조 하세요.
 
 ## <a name="code-example"></a>코드 예
  다음 Visual Basic 코드는 임의의 XML 파일을 열고 계층적 **레코드 집합**을 생성 하 고 각 레코드 **집합** 의 각 레코드를 디버그 창에 재귀적으로 작성 하는 방법을 보여 줍니다.

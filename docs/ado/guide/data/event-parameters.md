@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: bd5c5afa-d301-4899-acda-40f98a6afa4d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d29e5897183cb10f33a322b75298d8adee08d0b5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c2da60e0d6ea0652d531b3e8c459617f1d52954b
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453435"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806859"
 ---
 # <a name="event-parameters"></a>이벤트 매개 변수
-모든 이벤트 처리기에는 이벤트 처리기를 제어 하는 상태 매개 변수가 있습니다. 전체 이벤트의 경우이 매개 변수를 사용 하 여 이벤트를 생성 한 작업의 성공 또는 실패를 나타낼 수도 있습니다. 또한 대부분의 전체 이벤트에는 발생 한 오류에 대 한 정보를 제공 하 고 작업을 수행 하는 데 사용 되는 ADO 개체를 참조 하는 하나 이상의 개체 매개 변수를 포함 하는 오류 매개 변수가 있습니다. 예를 들어 [ExecuteComplete](../../../ado/reference/ado-api/executecomplete-event-ado.md) 이벤트는 이벤트와 연결 된 **명령**, **레코드 집합**및 **연결** 개체에 대 한 개체 매개 변수를 포함 합니다. 다음 Microsoft® Visual Basic® 예제에서는 **Execute** 메서드에서 사용 하는 **명령**, **레코드 집합**및 **연결** 개체를 나타내는 pcommand, pcommand 및 pcommand 개체를 볼 수 있습니다.  
+모든 이벤트 처리기에는 이벤트 처리기를 제어 하는 상태 매개 변수가 있습니다. 전체 이벤트의 경우이 매개 변수를 사용 하 여 이벤트를 생성 한 작업의 성공 또는 실패를 나타낼 수도 있습니다. 또한 대부분의 전체 이벤트에는 발생 한 오류에 대 한 정보를 제공 하 고 작업을 수행 하는 데 사용 되는 ADO 개체를 참조 하는 하나 이상의 개체 매개 변수를 포함 하는 오류 매개 변수가 있습니다. 예를 들어 [ExecuteComplete](../../reference/ado-api/executecomplete-event-ado.md) 이벤트는 이벤트와 연결 된 **명령**, **레코드 집합**및 **연결** 개체에 대 한 개체 매개 변수를 포함 합니다. 다음 Microsoft® Visual Basic® 예제에서는 **Execute** 메서드에서 사용 하는 **명령**, **레코드 집합**및 **연결** 개체를 나타내는 pcommand, pcommand 및 pcommand 개체를 볼 수 있습니다.  
   
 ```  
 Private Sub connEvent_ExecuteComplete(ByVal RecordsAffected As Long, _  
@@ -60,7 +60,7 @@ Private Sub connEvent_ExecuteComplete(ByVal RecordsAffected As Long, _
 |**adStatusCancel**|발생 하려는 작업의 취소를 요청 합니다.|  
   
 ## <a name="error-parameter"></a>오류 매개 변수  
- *Error* 매개 변수는 ADO [오류](../../../ado/reference/ado-api/error-object.md) 개체에 대 한 참조입니다. *Status* 매개 변수를 **adStatusErrorsOccurred**로 설정 하면 **Error** 개체에는 작업이 실패 한 이유에 대 한 세부 정보가 포함 됩니다. Complete 이벤트와 연결 된 이벤트에서 *상태* 매개 변수를 **adstatuscancel**로 설정 하 여 작업을 취소 한 경우에는 error 개체가 항상 **adErrOperationCancelled**로 설정 됩니다.  
+ *Error* 매개 변수는 ADO [오류](../../reference/ado-api/error-object.md) 개체에 대 한 참조입니다. *Status* 매개 변수를 **adStatusErrorsOccurred**로 설정 하면 **Error** 개체에는 작업이 실패 한 이유에 대 한 세부 정보가 포함 됩니다. Complete 이벤트와 연결 된 이벤트에서 *상태* 매개 변수를 **adstatuscancel**로 설정 하 여 작업을 취소 한 경우에는 error 개체가 항상 **adErrOperationCancelled**로 설정 됩니다.  
   
 ## <a name="object-parameter"></a>개체 매개 변수  
  각 이벤트는 작업과 관련 된 개체를 나타내는 개체를 하나 이상 받습니다. 예를 들어 **ExecuteComplete** 이벤트는 **명령** 개체, **레코드 집합** 개체 및 **연결** 개체를 수신 합니다.  
@@ -88,7 +88,7 @@ End Sub
  이와 대조적으로 *Adstatus* 를 한 번만 **adStatusUnwantedEvent** 로 설정 하 여 **adReason** 매개 변수가 없는 이벤트 처리기가 이벤트 알림을 수신 하지 않도록 요청 해야 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [ADO 이벤트 처리기 요약](../../../ado/guide/data/ado-event-handler-summary.md)   
- [언어별 ADO 이벤트 인스턴스화](../../../ado/guide/data/ado-event-instantiation-by-language.md)   
- [이벤트 처리기가 함께 작동 하는 방법](../../../ado/guide/data/how-event-handlers-work-together.md)   
- [이벤트 형식](../../../ado/guide/data/types-of-events.md)
+ [ADO 이벤트 처리기 요약](./ado-event-handler-summary.md)   
+ [언어별 ADO 이벤트 인스턴스화](./ado-event-instantiation-by-language.md)   
+ [이벤트 처리기가 함께 작동 하는 방법](./how-event-handlers-work-together.md)   
+ [이벤트 형식](./types-of-events.md)

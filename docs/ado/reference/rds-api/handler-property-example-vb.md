@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 9664f9a6-65fc-4e7f-be3d-3e4b501b558a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d00626b04c4107ffdbf15cd24b104b17602fc6e3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3a4667b6524cef6694340d917dad04fad04ad3f8
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438975"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768142"
 ---
 # <a name="handler-property-example-vb"></a>Handler 속성 예제(VB)
 > [!IMPORTANT]
 >  Windows 8 및 Windows Server 2012부터 RDS 서버 구성 요소는 더 이상 Windows 운영 체제에 포함 되지 않습니다 (자세한 내용은 Windows 8 및 [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) 참조). 이후 버전의 Windows에서는 RDS 클라이언트 구성 요소가 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. RDS를 사용 하는 응용 프로그램은 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)로 마이그레이션해야 합니다.  
   
- 이 예제에서는 [RDS DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) 개체 [처리기](../../../ado/reference/rds-api/handler-property-rds.md) 속성을 보여 줍니다. 자세한 내용은 [DataFactory 사용자 지정](../../../ado/guide/remote-data-service/datafactory-customization.md) 을 참조 하세요.  
+ 이 예제에서는 [RDS DataControl](./datacontrol-object-rds.md) 개체 [처리기](./handler-property-rds.md) 속성을 보여 줍니다. 자세한 내용은 [DataFactory 사용자 지정](../../guide/remote-data-service/datafactory-customization.md) 을 참조 하세요.  
   
  Msdfmap.ini 매개 변수 파일의 다음 섹션이 서버에 있는 경우를 가정 합니다.  
   
@@ -38,7 +38,7 @@ Connect="DSN=Pubs"
 SQL="SELECT * FROM Authors WHERE au_id = ?"  
 ```  
   
- 코드는 다음과 같습니다. [SQL](../../../ado/reference/rds-api/sql-property.md) 속성에 할당 되는 명령은 ***AuthorById*** 식별자와 일치 하 고 author Michael O'Leary에 대 한 행을 검색 합니다. **DataControl** 개체 **레코드 집합** 속성은 코딩 편의를 위해 연결 되지 않은 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체에만 할당 됩니다.  
+ 코드는 다음과 같습니다. [SQL](./sql-property.md) 속성에 할당 되는 명령은 ***AuthorById*** 식별자와 일치 하 고 author Michael O'Leary에 대 한 행을 검색 합니다. **DataControl** 개체 **레코드 집합** 속성은 코딩 편의를 위해 연결 되지 않은 [레코드 집합](../ado-api/recordset-object-ado.md) 개체에만 할당 됩니다.  
   
 ```  
 'BeginHandlerVB  
@@ -80,7 +80,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [DataControl 개체 (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
- [Handler 속성(RDS)](../../../ado/reference/rds-api/handler-property-rds.md)
-
-
+ [DataControl 개체 (RDS)](./datacontrol-object-rds.md)   
+ [Handler 속성(RDS)](./handler-property-rds.md)

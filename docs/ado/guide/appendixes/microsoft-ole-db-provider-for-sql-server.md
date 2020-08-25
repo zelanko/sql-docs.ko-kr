@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 99bc40c4-9181-4ca1-a06f-9a1a914a0b7b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a39166406be321d01ab6d0dc2acd2488d7b64da5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ffb627b0994afbe2b51f946e4ab7dca881e9a9a4
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454045"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806552"
 ---
 # <a name="microsoft-ole-db-provider-for-sql-server-overview"></a>SQL Server 용 Microsoft OLE DB 공급자 개요
 SQL Server에 대 한 Microsoft OLE DB 공급자 SQLOLEDB를 사용 하면 ADO에서 Microsoft SQL Server에 액세스할 수 있습니다.
@@ -29,13 +29,13 @@ SQL Server에 대 한 Microsoft OLE DB 공급자 SQLOLEDB를 사용 하면 ADO�
 > SQLOLEDB (Microsoft OLE DB Provider for SQL Server)는 더 이상 사용 되지 않으며 새로운 개발 작업에 사용 하지 않는 것이 좋습니다. 대신 최신 서버 기능으로 업데이트되는 새로운 [Microsoft OLE DB Driver for SQL Server](../../../connect/oledb/oledb-driver-for-sql-server.md)(MSOLEDBSQL)를 사용하세요.
 
 ## <a name="connection-string-parameters"></a>연결 문자열 매개 변수
- 이 공급자에 연결 하려면 *provider* 인수를 [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) 속성으로 설정 합니다.
+ 이 공급자에 연결 하려면 *provider* 인수를 [ConnectionString](../../reference/ado-api/connectionstring-property-ado.md) 속성으로 설정 합니다.
 
 ```vb
 SQLOLEDB
 ```
 
- 이 값은 [공급자](../../../ado/reference/ado-api/provider-property-ado.md) 속성을 사용 하 여 설정 하거나 읽을 수도 있습니다.
+ 이 값은 [공급자](../../reference/ado-api/provider-property-ado.md) 속성을 사용 하 여 설정 하거나 읽을 수도 있습니다.
 
 ## <a name="typical-connection-string"></a>일반 연결 문자열
  이 공급자에 대 한 일반적인 연결 문자열은 다음과 같습니다.
@@ -50,7 +50,7 @@ User ID=MyUserID;Password=MyPassword;"
 
 |키워드|설명|
 |-------------|-----------------|
-|**공급자**|SQL Server에 대 한 OLE DB 공급자를 지정 합니다.|
+|**공급 기업**|SQL Server에 대 한 OLE DB 공급자를 지정 합니다.|
 |**데이터 원본** 또는 **서버**|서버의 이름을 지정합니다.|
 |**초기 카탈로그** 또는 **데이터베이스**|서버에 있는 데이터베이스의 이름을 지정 합니다.|
 |**사용자 ID** 또는 **uid**|SQL Server 인증에 대 한 사용자 이름을 지정 합니다.|
@@ -60,11 +60,11 @@ User ID=MyUserID;Password=MyPassword;"
 >  Windows 인증을 지 원하는 데이터 원본 공급자에 연결 하는 경우 연결 문자열에 사용자 ID 및 암호 정보 대신 **Trusted_Connection = yes** 또는 **INTEGRATED Security = SSPI** 를 지정 해야 합니다.
 
 ## <a name="provider-specific-connection-parameters"></a>공급자별 연결 매개 변수
- 공급자는 ADO에 의해 정의 된 매개 변수 외에도 여러 공급자별 연결 매개 변수를 지원 합니다. ADO 연결 속성과 마찬가지로 이러한 공급자별 속성은 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 의 [속성](../../../ado/reference/ado-api/properties-collection-ado.md) 컬렉션을 통해 설정 하거나 **ConnectionString**의 일부로 설정할 수 있습니다.
+ 공급자는 ADO에 의해 정의 된 매개 변수 외에도 여러 공급자별 연결 매개 변수를 지원 합니다. ADO 연결 속성과 마찬가지로 이러한 공급자별 속성은 [연결](../../reference/ado-api/connection-object-ado.md) 의 [속성](../../reference/ado-api/properties-collection-ado.md) 컬렉션을 통해 설정 하거나 **ConnectionString**의 일부로 설정할 수 있습니다.
 
 |매개 변수|설명|
 |---------------|-----------------|
-|Trusted_Connection|사용자 인증 모드를 나타냅니다. **예** 또는 **아니요**로 설정할 수 있습니다. 기본값은 **No**입니다. 이 속성이 **예**로 설정 된 경우 SQLOLEDB는 MICROSOFT Windows NT 인증 모드를 사용 하 여 **Location** 및 [Datasource](../../../ado/reference/ado-api/datasource-property-ado.md) 속성 값으로 지정 된 SQL Server 데이터베이스에 대 한 사용자 액세스 권한을 부여 합니다. 이 속성이 **아니요**로 설정 된 경우 SQLOLEDB는 혼합 모드를 사용 하 여 SQL Server 데이터베이스에 대 한 사용자 액세스 권한을 부여 합니다. **사용자 Id** **및 암호 속성에** SQL Server 로그인 및 암호가 지정 됩니다.|
+|Trusted_Connection|사용자 인증 모드를 나타냅니다. **예** 또는 **아니요**로 설정할 수 있습니다. 기본값은 **No**입니다. 이 속성이 **예**로 설정 된 경우 SQLOLEDB는 MICROSOFT Windows NT 인증 모드를 사용 하 여 **Location** 및 [Datasource](../../reference/ado-api/datasource-property-ado.md) 속성 값으로 지정 된 SQL Server 데이터베이스에 대 한 사용자 액세스 권한을 부여 합니다. 이 속성이 **아니요**로 설정 된 경우 SQLOLEDB는 혼합 모드를 사용 하 여 SQL Server 데이터베이스에 대 한 사용자 액세스 권한을 부여 합니다. **사용자 Id** **및 암호 속성에** SQL Server 로그인 및 암호가 지정 됩니다.|
 |현재 언어|SQL Server 언어 이름을 나타냅니다. 시스템 메시지 선택 및 서식 지정에 사용되는 언어를 식별합니다. 언어가 SQL Server에 설치 되어 있어야 합니다. 그렇지 않으면 연결을 열 수 없습니다.|
 |네트워크 주소|**Location** 속성에 지정 된 SQL Server의 네트워크 주소를 나타냅니다.|
 |Network Library|SQL Server와 통신 하는 데 사용 되는 네트워크 라이브러리 (DLL)의 이름을 나타냅니다. 이름에는 경로 또는 .dll 파일 확장명이 포함되면 안 됩니다. 기본값은 SQL Server 클라이언트 구성에서 제공 됩니다.|
@@ -109,7 +109,7 @@ EXECUTE SalesByCategory 'Produce', '1995'
 ```
 
 ## <a name="sql-server-features"></a>SQL Server 기능
- SQL Server에서 ADO는 **명령** 입력에 xml을 사용 하 고 **레코드 집합** 개체가 아닌 xml 스트림 형식으로 결과를 검색할 수 있습니다. 자세한 내용은 [명령 입력에 스트림 사용](../../../ado/guide/data/command-streams.md) 및 [결과 집합을 스트림으로 검색](../../../ado/guide/data/retrieving-resultsets-into-streams.md)을 참조 하세요.
+ SQL Server에서 ADO는 **명령** 입력에 xml을 사용 하 고 **레코드 집합** 개체가 아닌 xml 스트림 형식으로 결과를 검색할 수 있습니다. 자세한 내용은 [명령 입력에 스트림 사용](../data/command-streams.md) 및 [결과 집합을 스트림으로 검색](../data/retrieving-resultsets-into-streams.md)을 참조 하세요.
 
 ### <a name="accessing-sql_variant-data-using-mdac-27-mdac-28-or-windows-dac-60"></a>MDAC 2.7, MDAC 2.8 또는 Windows DAC 6.0를 사용 하 여 sql_variant 데이터에 액세스
  Microsoft SQL Server에는 **sql_variant**라는 데이터 형식이 있습니다. OLE DB의 **DBTYPE_VARIANT**와 마찬가지로 **sql_variant** 데이터 형식에는 여러 가지 유형의 데이터를 저장할 수 있습니다. 그러나 **DBTYPE_VARIANT** 와 **sql_variant**간에는 몇 가지 중요 한 차이점이 있습니다. 또한 ADO는 **sql_variant** 값으로 저장 된 데이터를 다른 데이터 형식 처리 방법과 다르게 처리 합니다. 다음 목록에서는 **sql_variant**형식의 열에 저장 된 SQL Server 데이터에 액세스할 때 고려해 야 할 문제에 대해 설명 합니다.
@@ -134,9 +134,9 @@ EXECUTE SalesByCategory 'Produce', '1995'
  스크롤 가능한 SQLOLEDB 레코드 집합은 SQL Server 커서에서 지원 됩니다. SQL Server는 데이터베이스의 다른 사용자가 변경한 내용에 영향을 주는 커서에 제한을 적용 합니다. 특히 일부 커서의 행은 순서를 지정할 수 없으며 SQL ORDER BY 절이 포함 된 명령을 사용 하 여 레코드 집합을 만들려고 하면 실패할 수 있습니다.
 
 ## <a name="dynamic-properties"></a>동적 속성
- SQL Server 용 Microsoft OLE DB 공급자는 열려 있는 [연결](../../../ado/reference/ado-api/connection-object-ado.md), [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)및 [명령](../../../ado/reference/ado-api/command-object-ado.md) 개체의 **properties** 컬렉션에 몇 가지 동적 속성을 삽입 합니다.
+ SQL Server 용 Microsoft OLE DB 공급자는 열려 있는 [연결](../../reference/ado-api/connection-object-ado.md), [레코드 집합](../../reference/ado-api/recordset-object-ado.md)및 [명령](../../reference/ado-api/command-object-ado.md) 개체의 **properties** 컬렉션에 몇 가지 동적 속성을 삽입 합니다.
 
- 다음 테이블은 각 동적 속성에 대 한 ADO 및 OLE DB 이름의 교차 인덱스입니다. OLE DB 프로그래머 참조는 "설명" 이라는 용어를 통해 ADO 속성 이름을 참조 합니다. 이러한 속성에 대 한 자세한 내용은 OLE DB 프로그래머 참조에서 찾을 수 있습니다. 인덱스에서 OLE DB 속성 이름을 검색 하거나 [부록 C: OLE DB 속성](https://msdn.microsoft.com/deded3ff-f508-4e1b-b2b1-fd9afd3bd292)을 참조 하세요.
+ 다음 테이블은 각 동적 속성에 대 한 ADO 및 OLE DB 이름의 교차 인덱스입니다. OLE DB 프로그래머 참조는 "설명" 이라는 용어를 통해 ADO 속성 이름을 참조 합니다. 이러한 속성에 대 한 자세한 내용은 OLE DB 프로그래머 참조에서 찾을 수 있습니다. 인덱스에서 OLE DB 속성 이름을 검색 하거나 [부록 C: OLE DB 속성](/previous-versions/windows/desktop/ms723130(v=vs.85))을 참조 하세요.
 
 ## <a name="connection-dynamic-properties"></a>연결 동적 속성
  다음 속성이 **Connection** 개체의 **properties** 컬렉션에 추가 됩니다.
@@ -356,7 +356,7 @@ EXECUTE SalesByCategory 'Produce', '1995'
 |XML 루트|SSPROP_STREAM_XMLROOT|
 |XSL|SSPROP_STREAM_XSL|
 
- Microsoft SQL Server OLE DB 공급자에 대 한 특정 구현 세부 정보 및 기능 정보는 [SQL Server 공급자](https://msdn.microsoft.com/adf1d6c4-5930-444a-9248-ff1979729635)를 참조 하세요.
+ Microsoft SQL Server OLE DB 공급자에 대 한 특정 구현 세부 정보 및 기능 정보는 [SQL Server 공급자](/previous-versions/windows/desktop/ms720897(v=vs.85))를 참조 하세요.
 
-## <a name="see-also"></a>관련 항목
- [ConnectionString 속성 (ado)](../../../ado/reference/ado-api/connectionstring-property-ado.md) [공급자 속성 (](../../../ado/reference/ado-api/provider-property-ado.md) Ado) [레코드 집합 개체 (ado)](../../../ado/reference/ado-api/recordset-object-ado.md)
+## <a name="see-also"></a>참고 항목
+ [ConnectionString 속성 (ado)](../../reference/ado-api/connectionstring-property-ado.md) [공급자 속성 (](../../reference/ado-api/provider-property-ado.md) Ado) [레코드 집합 개체 (ado)](../../reference/ado-api/recordset-object-ado.md)

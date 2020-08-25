@@ -26,7 +26,7 @@ ms.locfileid: "88775812"
 # <a name="connectoptionenum"></a>ConnectOptionEnum
 [연결 개체](./connection-object-ado.md) 의 [Open](./open-method-ado-connection.md) 메서드가 연결이 설정 된 후 (동기적) 또는 before (비동기적으로) 반환 되어야 하는지 여부를 지정 합니다.  
   
-|상수|값|설명|  
+|상수|값|Description|  
 |--------------|-----------|-----------------|  
 |**adAsyncConnect**|16|연결을 비동기적으로 엽니다. [Connectcomplete](./connectcomplete-and-disconnect-events-ado.md) 이벤트는 연결을 사용할 수 있는 시기를 결정 하는 데 사용할 수 있습니다.|  
 |**adConnectUnspecified**|-1|기본값 연결을 동기적으로 엽니다.|  
