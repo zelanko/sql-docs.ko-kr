@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5f1c2205-191c-4fb4-9bd9-84c878ea46ed
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d685e03834b1c8390ddd51a8e590f25cd6307efe
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e0c68a6e438f44bedae3134253c72fe49521b44e
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452205"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759786"
 ---
 # <a name="enabling-a-dll-to-run-on-dcom"></a>DCOM에서 실행하도록 DLL 사용
 > [!IMPORTANT]
@@ -36,12 +36,10 @@ ms.locfileid: "88452205"
   
      또는  
   
-     [RDSServer DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) 개체를 패키지에 가져옵니다.  
+     [RDSServer DataFactory](../../reference/rds-api/datafactory-object-rdsserver.md) 개체를 패키지에 가져옵니다.  
   
 3.  **작성자의 프로세스** (라이브러리 응용 프로그램)에서 패키지에 대 한 활성화 특성을로 설정 합니다.  
   
      동일한 컴퓨터의 DCOM 및 IIS를 통해 .dll을 액세스할 수 있도록 구성 요소 서비스 MMC 스냅인에서 구성 요소의 활성화 특성을 설정 해야 합니다. **작성자의 프로세스에서**특성을로 설정 하면 레지스트리에서 **Inproc** 서버 키가 추가 된 것을 알 수 있습니다 .이는 구성 요소 서비스 서로게이트 .dll을 가리킵니다.  
   
  구성 요소 서비스 (또는 Windows NT를 사용 하는 경우 Microsoft Transaction Service)에 대 한 자세한 내용 및 이러한 단계를 수행 하는 방법에 대 한 자세한 내용은 Microsoft Transaction Server 웹 사이트를 참조 하십시오.
-
-

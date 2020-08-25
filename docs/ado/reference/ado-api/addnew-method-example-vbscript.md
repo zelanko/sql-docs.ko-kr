@@ -15,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: dcdcaf0a-b9b0-4d81-8728-43c38c4c853b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 74734bd5518f7691107fff873379879b2edd2fa8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c6d402470724cfaaaa4a27e2c0d2d3843b7904c2
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451555"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88760205"
 ---
 # <a name="addnew-method-example-vbscript"></a>AddNew 메서드 예제(VBScript)
-이 예제에서는 [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) 메서드를 사용 하 여 지정 된 이름의 새 레코드를 만듭니다.  
+이 예제에서는 [AddNew](./addnew-method-ado.md) 메서드를 사용 하 여 지정 된 이름의 새 레코드를 만듭니다.  
   
  Active Server 페이지 (ASP)에서 다음 예제를 사용 합니다. **찾기** 를 사용 하 여 Adovbs 파일을 찾은 다음 사용 하려는 디렉터리에 배치 합니다. 다음 코드를 잘라내어 메모장 또는 다른 텍스트 편집기에 붙여 넣고 **AddNewVBS**로 저장 합니다. 모든 클라이언트 브라우저에서 결과를 볼 수 있습니다.  
   
- 예제를 실행 하려면 HTML 폼에 새 레코드를 추가 합니다. **새로 추가**를 클릭 합니다. 원치 않는 레코드를 제거 하려면 [Delete 메서드 예](../../../ado/reference/ado-api/delete-method-example-vbscript.md) 를 참조 하세요.  
+ 예제를 실행 하려면 HTML 폼에 새 레코드를 추가 합니다. **새로 추가**를 클릭 합니다. 원치 않는 레코드를 제거 하려면 [Delete 메서드 예](./delete-method-example-vbscript.md) 를 참조 하세요.  
   
 ```  
 <!-- BeginAddNewVBS -->  
@@ -213,6 +213,6 @@ End Sub
 <!-- EndAddNewVBS -->  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [AddNew 메서드 (ADO)](../../../ado/reference/ado-api/addnew-method-ado.md)   
- [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+## <a name="see-also"></a>관련 항목  
+ [AddNew 메서드 (ADO)](./addnew-method-ado.md)   
+ [레코드 집합 개체(ADO)](./recordset-object-ado.md)

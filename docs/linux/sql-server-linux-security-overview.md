@@ -1,6 +1,6 @@
 ---
 title: SQL Server on Linux에 대한 보안 제한 사항
-description: 이 문서에서는 SQL Server on Linux 제한 사항을 설명합니다.
+description: Azure Key Vault에 저장된 키 사용과 확장 가능한 키 관리가 어떻게 지원되지 않는지를 비롯하여 SQL Server on Linux의 제한 사항에 대해 알아봅니다.
 author: VanMSFT
 ms.author: vanto
 ms.date: 09/12/2019
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 64da74cc-14bf-4636-a55e-8cc1fce2aaff
-ms.openlocfilehash: f1820b54532a820a47babdaf79e28d1baa0f096b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 611afe6c02e979c7c9672d7d94f84844b8932cf6
+ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895300"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88088805"
 ---
 # <a name="security-limitations-for-sql-server-on-linux"></a>SQL Server on Linux에 대한 보안 제한 사항
 

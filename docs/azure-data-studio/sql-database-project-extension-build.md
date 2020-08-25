@@ -9,12 +9,12 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: dzsquared
 ms.author: drskwier
-ms.openlocfilehash: 4348f117b57c9b13a70f4a6db39ab6710eafd0ef
-ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
+ms.openlocfilehash: 191b10fd32d7c49c3f4a4e81c109e52fb2a1a81c
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/29/2020
-ms.locfileid: "85519192"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88171372"
 ---
 # <a name="build-and-publish-a-project"></a>프로젝트 빌드 및 게시
 
@@ -32,7 +32,6 @@ Azure Data Studio용 SQL 데이터베이스 프로젝트 확장의 빌드 프로
 
  ``` ... exited with code: 0 ```
 
-
 ## <a name="publish-a-database-project"></a>데이터베이스 프로젝트 게시
 
 빌드 프로세스를 통해 프로젝트를 성공적으로 컴파일한 후에는 데이터베이스를 SQL Server 인스턴스에 게시할 수 있습니다. 데이터베이스 프로젝트를 게시하려면 **탐색기** 아래 **프로젝트** 뷰렛에서 *.sqlproj* 루트 노드를 마우스 오른쪽 단추로 클릭하고 **게시**를 선택합니다.
@@ -42,6 +41,4 @@ Azure Data Studio용 SQL 데이터베이스 프로젝트 확장의 빌드 프로
 ## <a name="next-steps"></a>다음 단계
 
 - [Azure Data Studio용 SQL 데이터베이스 프로젝트 확장](sql-database-project-extension.md)
-- [데이터 계층 애플리케이션](../relational-databases/data-tier-applications/data-tier-applications.md)
-
-
+- [명령줄에서 SQL Database Projects 빌드](sql-database-project-extension-build-from-command-line.md)

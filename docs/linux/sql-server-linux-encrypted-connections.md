@@ -1,6 +1,6 @@
 ---
 title: SQL Server on Linux에 대한 연결 암호화
-description: 이 문서에서는 SQL Server on Linux에 대한 연결 암호화를 설명합니다.
+description: SQL Server on Linux는 TLS를 사용하여 클라이언트 애플리케이션과 SQL Server 인스턴스 간의 네트워크에서 전송되는 데이터를 암호화합니다.
 ms.date: 06/29/2020
 author: vin-yu
 ms.author: vinsonyu
@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: linux
 helpviewer_keywords:
 - Linux, encrypted connections
-ms.openlocfilehash: 53da117e95d235b0de22b8265439721b94346024
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 44903475ed2202ba3cc40de388ccc00511075dac
+ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894010"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88088913"
 ---
 # <a name="encrypting-connections-to-sql-server-on-linux"></a>SQL Server on Linux에 대한 연결 암호화
 

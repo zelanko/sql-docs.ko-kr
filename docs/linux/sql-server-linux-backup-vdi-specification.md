@@ -1,6 +1,6 @@
 ---
 title: VDI 백업 사양 - SQL Server on Linux
-description: SQL Server 백업 가상 디바이스 인터페이스 사양입니다.
+description: SQL Server on Linux VDI(가상 디바이스 인터페이스) 클라이언트 SDK에서 제공하는 인터페이스에 대해 알아봅니다.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 0250ba2b-8cdd-450e-9109-bf74f70e1247
-ms.openlocfilehash: 0ee533d9a0c3dace8f7fe8ec8e0c615b444ea91d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1580977da984e84bd244166651330ab91665c774
+ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892279"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88088993"
 ---
 # <a name="sql-server-on-linux-vdi-client-sdk-specification"></a>SQL Server on Linux VDI 클라이언트 SDK 사양
 

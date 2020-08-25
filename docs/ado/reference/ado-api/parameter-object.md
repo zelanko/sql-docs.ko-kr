@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: e010e794-7f0f-4026-8b5b-37328e437d63
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ac768cf83d370a1fc60508b5d6a476f0e586d4f6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: eac5abf388644cff05c4a3a81955f025c65dd7aa
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442815"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773412"
 ---
 # <a name="parameter-object"></a>Parameter 개체
-매개 변수가 있는 쿼리 또는 저장 프로시저를 기반으로 [Command](../../../ado/reference/ado-api/command-object-ado.md) 개체와 연결 된 매개 변수 또는 인수를 나타냅니다.  
+매개 변수가 있는 쿼리 또는 저장 프로시저를 기반으로 [Command](./command-object-ado.md) 개체와 연결 된 매개 변수 또는 인수를 나타냅니다.  
   
 ## <a name="remarks"></a>설명  
  많은 공급자가 매개 변수가 있는 명령을 지원 합니다. 이러한 명령은 원하는 작업을 한 번 정의 하지만 변수 (또는 매개 변수)를 사용 하 여 명령의 일부 세부 정보를 변경 하는 명령입니다. 예를 들어 SQL SELECT 문은 매개 변수를 사용 하 여 WHERE 절의 일치 조건을 정의 하 고 다른 매개 변수를 사용 하 여 SORT BY 절의 열 이름을 정의할 수 있습니다.  
@@ -33,26 +33,26 @@ ms.locfileid: "88442815"
   
  **매개 변수** 개체의 컬렉션, 메서드 및 속성을 사용 하 여 다음을 수행할 수 있습니다.  
   
--   [Name](../../../ado/reference/ado-api/name-property-ado.md) 속성을 사용 하 여 매개 변수의 이름을 설정 하거나 반환 합니다.  
+-   [Name](./name-property-ado.md) 속성을 사용 하 여 매개 변수의 이름을 설정 하거나 반환 합니다.  
   
--   [Value](../../../ado/reference/ado-api/value-property-ado.md) 속성을 사용 하 여 매개 변수의 값을 설정 하거나 반환 합니다. **Value** 는 **매개 변수** 개체의 기본 속성입니다.  
+-   [Value](./value-property-ado.md) 속성을 사용 하 여 매개 변수의 값을 설정 하거나 반환 합니다. **Value** 는 **매개 변수** 개체의 기본 속성입니다.  
   
--   [특성](../../../ado/reference/ado-api/attributes-property-ado.md), [방향](../../../ado/reference/ado-api/direction-property.md), [전체 자릿수](../../../ado/reference/ado-api/precision-property-ado.md), [NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md), [크기](../../../ado/reference/ado-api/size-property-ado-parameter.md)및 [유형](../../../ado/reference/ado-api/type-property-ado.md) 속성을 사용 하 여 매개 변수 특성을 설정 하거나 반환 합니다.  
+-   [특성](./attributes-property-ado.md), [방향](./direction-property.md), [전체 자릿수](./precision-property-ado.md), [NumericScale](./numericscale-property-ado.md), [크기](./size-property-ado-parameter.md)및 [유형](./type-property-ado.md) 속성을 사용 하 여 매개 변수 특성을 설정 하거나 반환 합니다.  
   
--   [AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md) 메서드를 사용 하 여 긴 이진 또는 문자 데이터를 매개 변수에 전달 합니다.  
+-   [AppendChunk](./appendchunk-method-ado.md) 메서드를 사용 하 여 긴 이진 또는 문자 데이터를 매개 변수에 전달 합니다.  
   
--   [Properties](../../../ado/reference/ado-api/properties-collection-ado.md) 컬렉션을 사용 하 여 공급자별 특성에 액세스 합니다.  
+-   [Properties](./properties-collection-ado.md) 컬렉션을 사용 하 여 공급자별 특성에 액세스 합니다.  
   
- 호출 하려는 저장 프로시저 또는 매개 변수가 있는 쿼리와 연결 된 매개 변수의 이름 및 속성을 알고 있는 경우 [Createparameter](../../../ado/reference/ado-api/createparameter-method-ado.md) 메서드를 사용 하 여 적절 한 속성 설정을 사용 하 여 **매개 변수** 개체를 만들고 [Append](../../../ado/reference/ado-api/append-method-ado.md) 메서드를 사용 하 여 [매개](../../../ado/reference/ado-api/parameters-collection-ado.md) 변수 컬렉션에 추가할 수 있습니다. 이렇게 하면 리소스를 많이 사용 하는 작업 인 공급자에서 매개 변수 정보를 검색 하기 위해 **Parameters** 컬렉션에서 [Refresh](../../../ado/reference/ado-api/refresh-method-ado.md) 메서드를 호출 하지 않고도 매개 변수 값을 설정 하 고 반환할 수 있습니다.  
+ 호출 하려는 저장 프로시저 또는 매개 변수가 있는 쿼리와 연결 된 매개 변수의 이름 및 속성을 알고 있는 경우 [Createparameter](./createparameter-method-ado.md) 메서드를 사용 하 여 적절 한 속성 설정을 사용 하 여 **매개 변수** 개체를 만들고 [Append](./append-method-ado.md) 메서드를 사용 하 여 [매개](./parameters-collection-ado.md) 변수 컬렉션에 추가할 수 있습니다. 이렇게 하면 리소스를 많이 사용 하는 작업 인 공급자에서 매개 변수 정보를 검색 하기 위해 **Parameters** 컬렉션에서 [Refresh](./refresh-method-ado.md) 메서드를 호출 하지 않고도 매개 변수 값을 설정 하 고 반환할 수 있습니다.  
   
  **매개 변수** 개체는 스크립팅에 안전 하지 않습니다.  
   
  이 섹션에는 다음 항목이 포함 되어 있습니다.  
   
--   [매개 변수 개체 속성, 메서드 및 이벤트](../../../ado/reference/ado-api/parameter-object-properties-methods-and-events.md)  
+-   [매개 변수 개체 속성, 메서드 및 이벤트](./parameter-object-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [Command 개체 (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
- [CreateParameter 메서드 (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)   
- [Parameters 컬렉션 (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
- [Properties 컬렉션(ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)
+ [Command 개체 (ADO)](./command-object-ado.md)   
+ [CreateParameter 메서드 (ADO)](./createparameter-method-ado.md)   
+ [Parameters 컬렉션 (ADO)](./parameters-collection-ado.md)   
+ [Properties 컬렉션(ADO)](./properties-collection-ado.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a368e264-865c-41ee-be00-d9097255c2ea
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 365b57f174f289317a7e8b3e09fe0c29b051ef64
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f478a1e1c18e9182d2effe77d37c0c329ba22c54
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452255"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759837"
 ---
 # <a name="customization-file-logs-section"></a>사용자 지정 파일 로그 섹션
 **Logs** 섹션에는 **DataFactory**작업 중에 오류를 기록 하는 파일의 이름을 지정 하는 로그 파일 항목이 포함 되어 있습니다.  
@@ -46,13 +46,11 @@ FileName
   
  로그 파일에는 각 오류의 사용자 이름, HRESULT, 날짜 및 시간이 포함 됩니다.  
   
-## <a name="see-also"></a>참고 항목  
- [사용자 지정 파일 연결 섹션](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
- [사용자 지정 파일 SQL 섹션](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   
- [사용자 지정 파일 UserList 섹션](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   
- [DataFactory 사용자 지정](../../../ado/guide/remote-data-service/datafactory-customization.md)   
- [필수 클라이언트 설정](../../../ado/guide/remote-data-service/required-client-settings.md)   
- [사용자 지정 파일 이해](../../../ado/guide/remote-data-service/understanding-the-customization-file.md)   
- [고유한 사용자 지정된 처리기 작성](../../../ado/guide/remote-data-service/writing-your-own-customized-handler.md)
-
-
+## <a name="see-also"></a>관련 항목  
+ [사용자 지정 파일 연결 섹션](./customization-file-connect-section.md)   
+ [사용자 지정 파일 SQL 섹션](./customization-file-sql-section.md)   
+ [사용자 지정 파일 UserList 섹션](./customization-file-userlist-section.md)   
+ [DataFactory 사용자 지정](./datafactory-customization.md)   
+ [필수 클라이언트 설정](./required-client-settings.md)   
+ [사용자 지정 파일 이해](./understanding-the-customization-file.md)   
+ [고유한 사용자 지정된 처리기 작성](./writing-your-own-customized-handler.md)

@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 9b62fb35-de43-425a-83ca-77af4e33fea9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b3c915fcaf1a3661e606f5e1c2cf9a04bafd91fd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a102b63db62d6eba40e23bad99adeb3bdfa63b01
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440365"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88771162"
 ---
 # <a name="clustered-property-adox"></a>Clustered 속성(ADOX)
 인덱스가 클러스터형 인지 여부를 나타냅니다.  
@@ -36,10 +36,10 @@ ms.locfileid: "88440365"
 ## <a name="remarks"></a>설명  
  기본값은 **False**입니다.  
   
- 이 속성은 컬렉션에 이미 추가 된 [인덱스](../../../ado/reference/adox-api/index-object-adox.md) 개체에 대해 읽기 전용입니다.  
+ 이 속성은 컬렉션에 이미 추가 된 [인덱스](./index-object-adox.md) 개체에 대해 읽기 전용입니다.  
   
 ## <a name="applies-to"></a>적용 대상  
- [Index 개체(ADOX)](../../../ado/reference/adox-api/index-object-adox.md)  
+ [인덱스 개체(ADOX)](./index-object-adox.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [Clustered 속성 예제(VB)](../../../ado/reference/adox-api/clustered-property-example-vb.md)
+ [Clustered 속성 예제(VB)](./clustered-property-example-vb.md)

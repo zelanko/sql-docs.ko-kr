@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d447712a-e123-47b5-a3a4-5d366cfe8d72
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 73e71438b7f49472dff8c3f4732c541222598b08
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bfddb0a5cbc1691a8013528abd4c1547f29e1504
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451845"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88760073"
 ---
 # <a name="writing-your-own-customized-handler"></a>고유한 사용자 지정된 처리기 작성
 기본 RDS 지원을 원하는 IIS 서버 관리자 인 경우 사용자 요청 및 액세스 권한을 더 자세히 제어 하려면 고유한 처리기를 작성 하는 것이 좋습니다.  
@@ -30,12 +30,12 @@ ms.locfileid: "88451845"
 >  Windows 8 및 Windows Server 2012부터 RDS 서버 구성 요소는 더 이상 Windows 운영 체제에 포함 되지 않습니다 (자세한 내용은 Windows 8 및 [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) 참조). 이후 버전의 Windows에서는 RDS 클라이언트 구성 요소가 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. RDS를 사용 하는 응용 프로그램은 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)로 마이그레이션해야 합니다.  
   
 ## <a name="idatafactoryhandler-interface"></a>IDataFactoryHandler 인터페이스  
- 이 인터페이스에는 두 가지 메서드인 **Getrecordset** 및 **Reconnect**가 있습니다. 두 방법 모두 [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) 속성을 **adUseClient**로 설정 해야 합니다.  
+ 이 인터페이스에는 두 가지 메서드인 **Getrecordset** 및 **Reconnect**가 있습니다. 두 방법 모두 [CursorLocation](../../reference/ado-api/cursorlocation-property-ado.md) 속성을 **adUseClient**로 설정 해야 합니다.  
   
  두 메서드는 "**Handler =**" 키워드의 첫 번째 쉼표 뒤에 나오는 인수를 사용 합니다. 예를 들어 `"Handler=progid,arg1,arg2;"` 는의 인수 문자열을 전달 `"arg1,arg2"` 하 고는 `"Handler=progid"` null 인수를 전달 합니다.  
   
 ## <a name="getrecordset-method"></a>GetRecordset 메서드  
- 이 메서드는 데이터 소스를 쿼리하고 제공 된 인수를 사용 하 여 새 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체를 만듭니다. **레코드 집합** 은 **Adlockbatchoptimistic** 으로 열어야 하며 비동기식으로 열지 않아야 합니다.  
+ 이 메서드는 데이터 소스를 쿼리하고 제공 된 인수를 사용 하 여 새 [레코드 집합](../../reference/ado-api/recordset-object-ado.md) 개체를 만듭니다. **레코드 집합** 은 **Adlockbatchoptimistic** 으로 열어야 하며 비동기식으로 열지 않아야 합니다.  
   
 ### <a name="arguments"></a>인수  
  ***conn***  연결 문자열입니다.  
@@ -47,7 +47,7 @@ ms.locfileid: "88451845"
  ***ppRS***  **레코드 집합** 을 반환 해야 하는 포인터입니다.  
   
 ## <a name="reconnect-method"></a>Reconnect 메서드  
- 이 메서드는 데이터 소스를 업데이트 합니다. 새 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체를 만들고 지정 된 **레코드 집합**을 연결 합니다.  
+ 이 메서드는 데이터 소스를 업데이트 합니다. 새 [연결](../../reference/ado-api/connection-object-ado.md) 개체를 만들고 지정 된 **레코드 집합**을 연결 합니다.  
   
 ### <a name="arguments"></a>인수  
  ***conn***  연결 문자열입니다.  
@@ -100,13 +100,11 @@ HRESULT _stdcall GetRecordset(
 };  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [사용자 지정 파일 연결 섹션](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
- [사용자 지정 파일 로그 섹션](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   
- [사용자 지정 파일 SQL 섹션](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   
- [사용자 지정 파일 UserList 섹션](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   
- [DataFactory 사용자 지정](../../../ado/guide/remote-data-service/datafactory-customization.md)   
- [필수 클라이언트 설정](../../../ado/guide/remote-data-service/required-client-settings.md)   
- [사용자 지정 파일 이해](../../../ado/guide/remote-data-service/understanding-the-customization-file.md)
-
-
+## <a name="see-also"></a>관련 항목  
+ [사용자 지정 파일 연결 섹션](./customization-file-connect-section.md)   
+ [사용자 지정 파일 로그 섹션](./customization-file-logs-section.md)   
+ [사용자 지정 파일 SQL 섹션](./customization-file-sql-section.md)   
+ [사용자 지정 파일 UserList 섹션](./customization-file-userlist-section.md)   
+ [DataFactory 사용자 지정](./datafactory-customization.md)   
+ [필수 클라이언트 설정](./required-client-settings.md)   
+ [사용자 지정 파일 이해](./understanding-the-customization-file.md)

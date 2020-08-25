@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5dd48483-858a-48c2-98ce-f2359abe1f59
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 223822bf6921ce63eb0893fe9db3024c46dfb628
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 23110157445da6c776de7582682992ab55a97ac8
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452285"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759881"
 ---
 # <a name="configuring-rds"></a>RDS 구성
 > [!IMPORTANT]
@@ -26,27 +26,25 @@ ms.locfileid: "88452285"
   
  RDS를 효율적으로 구현 하려면 사용자에 게 제공 되는 다양 한 구성에 대해 잘 알고 있어야 합니다. 이 섹션에서는 RDS의 구현에서 보안 및 확장성에 대 한 중요 한 정보를 제공 합니다. RDS를 사용 하도록 컴퓨터를 구성 하는 방법에 대 한 자세한 내용은 다음 항목을 참조 하세요.  
   
--   [웹 서버 컴퓨터에 게스트 권한 부여](../../../ado/guide/remote-data-service/granting-guest-privileges-to-a-web-server-computer.md)  
+-   [웹 서버 컴퓨터에 게스트 권한 부여](./granting-guest-privileges-to-a-web-server-computer.md)  
   
--   [사용자 지정 비즈니스 개체 등록](../../../ado/guide/remote-data-service/registering-a-custom-business-object.md)  
+-   [사용자 지정 비즈니스 개체 등록](./registering-a-custom-business-object.md)  
   
--   [비즈니스 개체를 스크립팅하기에 안전하다고 표시](../../../ado/guide/remote-data-service/marking-business-objects-as-safe-for-scripting.md)  
+-   [비즈니스 개체를 스크립팅하기에 안전하다고 표시](./marking-business-objects-as-safe-for-scripting.md)  
   
--   [DCOM에서 사용할 클라이언트에서 비즈니스 개체 등록](../../../ado/guide/remote-data-service/registering-business-objects-on-the-client-for-use-with-dcom.md)  
+-   [DCOM에서 사용할 클라이언트에서 비즈니스 개체 등록](./registering-business-objects-on-the-client-for-use-with-dcom.md)  
   
--   [DCOM 스트림 마샬링 형식 설정](../../../ado/guide/remote-data-service/setting-dcom-stream-marshaling-format.md)  
+-   [DCOM 스트림 마샬링 형식 설정](./setting-dcom-stream-marshaling-format.md)  
   
--   [DCOM에서 실행하도록 DLL 사용](../../../ado/guide/remote-data-service/enabling-a-dll-to-run-on-dcom.md)  
+-   [DCOM에서 실행하도록 DLL 사용](./enabling-a-dll-to-run-on-dcom.md)  
   
--   [IIS에서 가상 서버 구성](../../../ado/guide/remote-data-service/configuring-virtual-servers-on-iis.md)  
+-   [IIS에서 가상 서버 구성](./configuring-virtual-servers-on-iis.md)  
   
--   [RDS 애플리케이션 보안](../../../ado/guide/remote-data-service/securing-rds-applications.md)  
+-   [RDS 애플리케이션 보안](./securing-rds-applications.md)  
   
--   [안전 또는 무제한 모드에 대한 DataFactory 구성](../../../ado/guide/remote-data-service/configuring-datafactory-for-safe-or-unrestricted-modes.md)  
+-   [안전 또는 무제한 모드에 대한 DataFactory 구성](./configuring-datafactory-for-safe-or-unrestricted-modes.md)  
   
-## <a name="see-also"></a>참고 항목  
- [RDS와 관련 기술 사용](../../../ado/guide/remote-data-service/using-related-technologies-with-rds.md)   
- [DataFactory 사용자 지정](../../../ado/guide/remote-data-service/datafactory-customization.md)   
- [RDS 문제 해결](../../../ado/guide/remote-data-service/troubleshooting-rds.md)
-
-
+## <a name="see-also"></a>관련 항목  
+ [RDS와 관련 기술 사용](./using-related-technologies-with-rds.md)   
+ [DataFactory 사용자 지정](./datafactory-customization.md)   
+ [RDS 문제 해결](./troubleshooting-rds.md)

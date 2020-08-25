@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 9028aba4-90fc-4dfc-88e4-fa8a7b6fedee
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dbddab9f7536c311d55f83fc9c6ea443c3757fa3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 25d3c1fce0fd227a609da49d54bd55762fa1c4a2
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442455"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88772312"
 ---
 # <a name="recordopenoptionsenum"></a>RecordOpenOptionsEnum
-[레코드](../../../ado/reference/ado-api/record-object-ado.md)를 열기 위한 옵션을 지정 합니다. 이러한 값은 또는을 사용 하 여 결합할 수 있습니다.  
+[레코드](./record-object-ado.md)를 열기 위한 옵션을 지정 합니다. 이러한 값은 또는을 사용 하 여 결합할 수 있습니다.  
   
 |상수|값|설명|  
 |--------------|-----------|-----------------|  
@@ -39,4 +39,4 @@ ms.locfileid: "88442455"
  이러한 상수에는 ADO/WFC 해당 항목이 없습니다.  
   
 ## <a name="applies-to"></a>적용 대상  
- [Open 메서드(ADO 레코드)](../../../ado/reference/ado-api/open-method-ado-record.md)
+ [Open 메서드(ADO 레코드)](./open-method-ado-record.md)

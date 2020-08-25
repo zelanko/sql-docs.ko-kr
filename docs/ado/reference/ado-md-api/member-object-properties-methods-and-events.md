@@ -13,40 +13,40 @@ helpviewer_keywords:
 ms.assetid: dadd6e7e-b5b4-4ede-8747-ae67ec917d90
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cb4b686c0fd2366b0bd229603414fb70c2d60ba1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b12131ae069b9be362aebb93c90272d81de1d036
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440895"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777992"
 ---
 # <a name="member-object-properties-methods-and-events"></a>Member 개체 속성, 메서드 및 이벤트
 ## <a name="propertiescollections"></a>속성/컬렉션  
- [Caption 속성](../../../ado/reference/ado-md-api/caption-property-ado-md.md)  
+ [Caption 속성](./caption-property-ado-md.md)  
   
- [ChildCount 속성](../../../ado/reference/ado-md-api/childcount-property-ado-md.md)  
+ [ChildCount 속성](./childcount-property-ado-md.md)  
   
- [Children 속성](../../../ado/reference/ado-md-api/children-property-ado-md.md)  
+ [Children 속성](./children-property-ado-md.md)  
   
- [Description 속성](../../../ado/reference/ado-md-api/description-property-ado-md.md)  
+ [Description 속성](./description-property-ado-md.md)  
   
- [DrilledDown 속성](../../../ado/reference/ado-md-api/drilleddown-property-ado-md.md)  
+ [DrilledDown 속성](./drilleddown-property-ado-md.md)  
   
- [LevelDepth 속성](../../../ado/reference/ado-md-api/leveldepth-property-ado-md.md)  
+ [LevelDepth 속성](./leveldepth-property-ado-md.md)  
   
- [LevelName 속성](../../../ado/reference/ado-md-api/levelname-property-ado-md.md)  
+ [LevelName 속성](./levelname-property-ado-md.md)  
   
- [Name 속성](../../../ado/reference/ado-md-api/name-property-ado-md.md)  
+ [Name 속성](./name-property-ado-md.md)  
   
- [부모 속성](../../../ado/reference/ado-md-api/parent-property-ado-md.md)  
+ [부모 속성](./parent-property-ado-md.md)  
   
- [ParentSameAsPrev 속성](../../../ado/reference/ado-md-api/parentsameasprev-property-ado-md.md)  
+ [ParentSameAsPrev 속성](./parentsameasprev-property-ado-md.md)  
   
- [속성 컬렉션](../../../ado/reference/ado-api/properties-collection-ado.md)  
+ [속성 컬렉션](../ado-api/properties-collection-ado.md)  
   
- [Type 속성](../../../ado/reference/ado-md-api/type-property-ado-md.md)  
+ [Type 속성](./type-property-ado-md.md)  
   
- [UniqueName 속성](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md)  
+ [UniqueName 속성](./uniquename-property-ado-md.md)  
   
 ## <a name="methods"></a>메서드  
  없음  
@@ -55,4 +55,4 @@ ms.locfileid: "88440895"
  없음  
   
 ## <a name="see-also"></a>참고 항목  
- [Member 개체(ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)
+ [Member 개체(ADO MD)](./member-object-ado-md.md)

@@ -8,17 +8,31 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
-ms.date: 07/17/2020
-ms.openlocfilehash: 4a8f50b7a6558974c79f01f3d157715890beeb82
-ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
+ms.date: 08/12/2020
+ms.openlocfilehash: e4a431e798069a639f72c3d4fa6761d3b18131f7
+ms.sourcegitcommit: e4c36570c34cd7d7ae258061351bce6e54ea49f6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87988557"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88147204"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio의 릴리스 정보
 
 **[최신 릴리스 다운로드 및 설치](download.md)**
+
+## <a name="august-2020"></a>2020년 8월
+
+2020년 8월 12일 &nbsp; / &nbsp; 버전: 1.21.0
+
+&nbsp;
+
+| 변경 | 세부 정보 |
+| :----- | :------ |
+| 새로운 Notebook 기능 | &bull; &nbsp; 셀 위치 이동 <br/> &bull; &nbsp; 셀을 텍스트 셀 또는 코드 셀로 변환
+| Jupyter Book 선택기 | 이제 사용자가 Github 릴리스의 Jupyter Book을 선택하여 Azure Data Studio에서 원활하게 열 수 있습니다. |
+| Notebook 뷰렛에 검색 추가 | 사용자가 해당 Notebook 및 Jupyter Book에서 콘텐츠를 쉽게 검색할 수 있습니다. |
+| 버그 및 이슈 해결 | 전체 수정 목록은 [GitHub의 버그 및 이슈](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22August+2020+Release%22+is%3Aclosed)를 참조하세요. |
+| &nbsp; | &nbsp; |
 
 ## <a name="july-2020-hotfix"></a>2020년 7월(핫픽스)
 

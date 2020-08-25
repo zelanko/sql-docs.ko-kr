@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3dc3443b-a1b0-4fbd-908a-6e274dec981c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 521ed958411e2943d0f01d25cb417aee569f1912
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b99e08e689e9e37ae489f61c742819e9d8a8afca
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442335"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88771962"
 ---
 # <a name="refresh-method-example-vc"></a>Refresh 메서드 예제(VC++)
-이 예에서는 [refresh](../../../ado/reference/ado-api/refresh-method-ado.md) 메서드를 사용 하 여 저장 프로시저 [명령](../../../ado/reference/ado-api/command-object-ado.md) 개체에 대 한 [Parameters](../../../ado/reference/ado-api/parameters-collection-ado.md) 컬렉션을 새로 고치는 방법을 보여 줍니다.  
+이 예에서는 [refresh](./refresh-method-ado.md) 메서드를 사용 하 여 저장 프로시저 [명령](./command-object-ado.md) 개체에 대 한 [Parameters](./parameters-collection-ado.md) 컬렉션을 새로 고치는 방법을 보여 줍니다.  
   
 ## <a name="example"></a>예제  
   
@@ -235,6 +235,6 @@ Authors with 25 percent royalty
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Command 개체 (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
- [Parameters 컬렉션 (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
- [Refresh 메서드(ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)
+ [Command 개체 (ADO)](./command-object-ado.md)   
+ [Parameters 컬렉션 (ADO)](./parameters-collection-ado.md)   
+ [Refresh 메서드(ADO)](./refresh-method-ado.md)

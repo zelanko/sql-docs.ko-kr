@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 413263a8-05c0-4404-929d-69f82b987ba3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a607b44311ab9229ecbcf8171e1a506d7b6713d3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 23136450602552394eb20a4ace7272081d9bf68f
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440265"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88770958"
 ---
 # <a name="command-and-commandtext-properties-example-vb"></a>Command 및 CommandText 속성 예제(VB)
-다음 코드에서는 [Command](../../../ado/reference/adox-api/command-property-adox.md) 속성을 사용 하 여 프로시저의 텍스트를 업데이트 하는 방법을 보여 줍니다.  
+다음 코드에서는 [Command](./command-property-adox.md) 속성을 사용 하 여 프로시저의 텍스트를 업데이트 하는 방법을 보여 줍니다.  
   
 ```  
 ' BeginProcedureTextVB  
@@ -77,8 +77,8 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [ActiveConnection 속성 (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
- [Catalog 개체 (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [Command 속성 (ADOX)](../../../ado/reference/adox-api/command-property-adox.md)   
- [Procedure 개체 (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)   
- [Procedures 컬렉션(ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)
+ [ActiveConnection 속성 (ADOX)](./activeconnection-property-adox.md)   
+ [Catalog 개체 (ADOX)](./catalog-object-adox.md)   
+ [Command 속성 (ADOX)](./command-property-adox.md)   
+ [Procedure 개체 (ADOX)](./procedure-object-adox.md)   
+ [Procedures 컬렉션(ADOX)](./procedures-collection-adox.md)

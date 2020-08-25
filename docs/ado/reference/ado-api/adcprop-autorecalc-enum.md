@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: ded4f087-87b9-4efa-8026-bde53d3e9e8a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e0b9cf745ae30d11d85aeba1c916594e09392c6d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7500fd42ef02b974989488b70e668933aaa00cab
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451615"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88760268"
 ---
 # <a name="adcprop_autorecalc_enum"></a>ADCPROP_AUTORECALC_ENUM
-[MSDataShape](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) 공급자가 계층적 레코드 집합에서 집계 열과 계산 된 열을 다시 계산 하는 시기를 지정 합니다.  
+[MSDataShape](../../guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) 공급자가 계층적 레코드 집합에서 집계 열과 계산 된 열을 다시 계산 하는 시기를 지정 합니다.  
   
- 이러한 상수는 **MSDataShape** 공급자 및 **레코드 집합** "**자동**다시 계산" 동적 속성에만 사용 됩니다 .이 속성은 [ADO 동적 속성 인덱스](../../../ado/reference/ado-api/ado-dynamic-property-index.md) 에서 참조 되며 [Microsoft Cursor service for OLE DB](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md) 또는 [microsoft Data 셰이핑 service for OLE DB](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) 설명서에 설명 되어 있습니다.  
+ 이러한 상수는 **MSDataShape** 공급자 및 **레코드 집합** "**자동**다시 계산" 동적 속성에만 사용 됩니다 .이 속성은 [ADO 동적 속성 인덱스](./ado-dynamic-property-index.md) 에서 참조 되며 [Microsoft Cursor service for OLE DB](../../guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md) 또는 [microsoft Data 셰이핑 service for OLE DB](../../guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) 설명서에 설명 되어 있습니다.  
   
 |상수|값|설명|  
 |--------------|-----------|-----------------|  

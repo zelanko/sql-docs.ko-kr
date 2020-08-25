@@ -1,7 +1,7 @@
 ---
 title: 클라우드에서 SQL Server on Linux 시작
 titleSuffix: SQL Server
-description: 이 빠른 시작에서는 선택한 클라우드의 Linux에서 SQL Server를 실행하는 방법을 보여 줍니다.
+description: 선택한 클라우드의 RHEL(Red Hat Enterprise Linux), SLES(SUSE Linux Enterprise Server) 또는 Ubuntu에서 SQL Server를 설치하는 방법을 알아봅니다.
 author: VanMSFT
 ms.author: vanto
 ms.date: 11/04/2019
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: cb24499b411d288e1e79b49d202fba63b251a805
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d40072ea8b347001feba5d74e6e08c8c4c8ae340
+ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897539"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88089033"
 ---
 # <a name="quickstart-run-sql-server-in-the-cloud"></a>빠른 시작: 클라우드에서 SQL Server 실행
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]

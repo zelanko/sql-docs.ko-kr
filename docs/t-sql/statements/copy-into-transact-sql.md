@@ -2,7 +2,7 @@
 title: COPY INTO(Transact-SQL)(미리 보기)
 titleSuffix: (SQL Data Warehouse) - SQL Server
 description: 외부 스토리지 계정에서 로드하려면 Azure SQL Data Warehouse의 COPY 문을 사용합니다.
-ms.date: 06/19/2020
+ms.date: 08/05/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse
 ms.reviewer: jrasnick
@@ -18,12 +18,12 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 9bbc4017411c457638ac93aac147ab63b44dbcab
-ms.sourcegitcommit: 6f49804b863fed44968ea5829e2c26edc5988468
+ms.openlocfilehash: 52096dc3c4996537b36082bb9bb215405e097a68
+ms.sourcegitcommit: dec2e2d3582c818cc9489e6a824c732b91ec3aeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87807506"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88091959"
 ---
 # <a name="copy-transact-sql-preview"></a>COPY(Transact-SQL)(미리 보기)
 
@@ -102,7 +102,7 @@ WITH
 - ADLS Gen2의 *외부 위치*: https://<account>. dfs.core.windows.net/<container>/<path>
 
 > [!NOTE]  
-> Blob 엔드포인트는 ADLS Gen2에 사용할 수 있으며 이전 버전과의 호환성을 위해서만 사용됩니다. 최상의 성능을 위해 ADLS Gen2에 **dfs** 엔드포인트를 사용합니다.
+> BLOB 엔드포인트는 이전 버전과의 호환성을 위해 ADLS Gen2에 사용할 수 있습니다. 최상의 성능을 위해 **BLOB** 엔드포인트를 사용하세요.
 
 - *계정* - 스토리지 계정 이름
 
@@ -139,10 +139,12 @@ WITH
 *CREDENTIAL (IDENTITY = ‘’, SECRET = ‘’)*</br>
 *자격 증명*은 외부 스토리지 계정에 액세스하기 위한 인증 메커니즘을 지정합니다. 인증 방법은 다음과 같습니다.
 
-|                          |                CSV                |              Parquet              |                ORC                |
-| :----------------------: | :-------------------------------: | :-------------------------------: | :-------------------------------: |
-|  **Azure Blob 스토리지**  | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD |              SAS/KEY              |              SAS/KEY              |
-| **Azure Data Lake Gen2** | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD |
+|                          |                CSV                |              Parquet               |                ORC                 |
+| :----------------------: | :-------------------------------: | :-------------------------------:  | :-------------------------------:  |
+|  **Azure Blob 스토리지**  | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD |              SAS/KEY               |              SAS/KEY               |
+| **Azure Data Lake Gen2** | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD | SAS*/MSI/SERVICE PRINCIPAL/KEY/AAD | SAS*/MSI/SERVICE PRINCIPAL/KEY/AAD |
+
+*BLOB 엔드포인트를 사용하는 경우에만 지원됨
 
 AAD 또는 퍼블릭 스토리지 계정을 사용하여 인증할 때는 자격 증명을 지정할 필요가 없습니다. 
 
@@ -429,7 +431,7 @@ Parquet 및 ORC 파일은 COPY 명령이 자동으로 분할하기 때문에 파
 COPY 명령은 올해(2020년) 말에 출시될 예정입니다. 
 
 ### <a name="are-there-any-limitations-on-the-number-or-size-of-files"></a>파일 개수 또는 크기에 제한이 있나요?
-파일은 4MB 이상이어야 합니다.
+파일 개수 또는 크기에 제한이 없습니다. 하지만 최상의 성능을 위해 4MB 이상의 파일을 사용하는 것이 좋습니다.
 
 
 피드백이나 문제가 있으면 배포 목록(sqldwcopypreview@service.microsoft.com)으로 보내주세요.

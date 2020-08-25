@@ -1,5 +1,6 @@
 ---
-title: '@@FETCH_STATUS(Transact-SQL) | Microsoft Docs'
+description: '&#x40;&#x40;FETCH_STATUS(Transact-SQL)'
+title: FETCH_STATUS(Transact-SQL)
 ms.custom: ''
 ms.date: 09/18/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 93659193-e4ff-4dfb-9043-0c4114921b91
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 73c5802df5988c323efb7ae1c5554b4835063e4c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2b8e44321611a4e814a1102a0cec233ede45eb2b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85631720"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88310109"
 ---
 # <a name="x40x40fetch_status-transact-sql"></a>&#x40;&#x40;FETCH_STATUS(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -35,16 +36,18 @@ ms.locfileid: "85631720"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```syntaxsql
 @@FETCH_STATUS  
 ```  
-  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="return-type"></a>반환 형식  
  **integer**  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
   
-|반환 값|Description|  
+|반환 값|설명|  
 |------------------|-----------------|  
 |&nbsp;0|FETCH 문이 성공적으로 수행되었습니다.|  
 |-1|FETCH 문이 실패했거나 행이 결과 집합의 범위를 벗어났습니다.|  
@@ -58,7 +61,7 @@ ms.locfileid: "85631720"
   
 특정 커서의 마지막 페치 상태를 검색하려면 **sys.dm_exec_cursors** 동적 관리 함수의 **fetch_status** 열을 쿼리하세요.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
 다음 예에서는 `@@FETCH_STATUS`를 사용하여 `WHILE` 루프에서 커서 작업을 제어합니다.  
   
 ```  
@@ -76,8 +79,8 @@ DEALLOCATE Employee_Cursor;
 GO  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [커서 함수&#40;Transact-SQL&#41;](../../t-sql/functions/cursor-functions-transact-sql.md)   
- [FETCH&#40;Transact-SQL&#41;](../../t-sql/language-elements/fetch-transact-sql.md)  
+ [FETCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/fetch-transact-sql.md)  
   
   

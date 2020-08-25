@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 215a5391-f422-42ec-99ea-4e6fbb5d3d64
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7ae3ef035594b696b829f0f1898e1749a2c33f11
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6334f4edb0d98e7fa0dca49f1c024f63e471c7f8
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440535"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88771432"
 ---
 # <a name="append-method-adox-keys"></a>Append 메서드(ADOX 키)
-[키](../../../ado/reference/adox-api/keys-collection-adox.md) 컬렉션에 새 [키](../../../ado/reference/adox-api/key-object-adox.md) 개체를 추가 합니다.  
+[키](./keys-collection-adox.md) 컬렉션에 새 [키](./key-object-adox.md) 개체를 추가 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -39,29 +39,29 @@ Keys.Append Key [,KeyType] [,Column] [,RelatedTable] [,RelatedColumn]
  추가할 **키** 개체 또는 만들고 추가할 키의 이름입니다.  
   
  *KeyType*  
- (선택 사항) 키의 유형을 지정 하는 **Long** 값입니다. *키* 매개 변수는 **키** 개체의 [Type](../../../ado/reference/adox-api/type-property-key-adox.md) 속성에 해당 합니다.  
+ 선택 사항입니다. 키의 유형을 지정 하는 **Long** 값입니다. *키* 매개 변수는 **키** 개체의 [Type](./type-property-key-adox.md) 속성에 해당 합니다.  
   
  *열*  
- (선택 사항) 인덱싱할 열의 이름을 지정 하는 **문자열** 값입니다. *Columns* 매개 변수는 [Column](../../../ado/reference/adox-api/column-object-adox.md) 개체의 [Name](../../../ado/reference/adox-api/name-property-adox.md) 속성 값에 해당 합니다.  
+ 선택 사항입니다. 인덱싱할 열의 이름을 지정 하는 **문자열** 값입니다. *Columns* 매개 변수는 [Column](./column-object-adox.md) 개체의 [Name](./name-property-adox.md) 속성 값에 해당 합니다.  
   
  *RelatedTable*  
- (선택 사항) 관련 테이블의 이름을 지정 하는 **문자열** 값입니다. *RelatedTable* 매개 변수는 [Table](../../../ado/reference/adox-api/table-object-adox.md) 개체의 **Name** 속성 값에 해당 합니다.  
+ 선택 사항입니다. 관련 테이블의 이름을 지정 하는 **문자열** 값입니다. *RelatedTable* 매개 변수는 [Table](./table-object-adox.md) 개체의 **Name** 속성 값에 해당 합니다.  
   
  *RelatedColumn*  
- (선택 사항) 외래 키에 대 한 관련 열의 이름을 지정 하는 **문자열** 값입니다. *RelatedColumn* 매개 변수는 [Column](../../../ado/reference/adox-api/column-object-adox.md) 개체의 **Name** 속성 값에 해당 합니다.  
+ 선택 사항입니다. 외래 키에 대 한 관련 열의 이름을 지정 하는 **문자열** 값입니다. *RelatedColumn* 매개 변수는 [Column](./column-object-adox.md) 개체의 **Name** 속성 값에 해당 합니다.  
   
 ## <a name="remarks"></a>설명  
  *Columns* 매개 변수는 열 이름 또는 열 이름 배열을 사용할 수 있습니다.  
   
 ## <a name="applies-to"></a>적용 대상  
- [Keys 컬렉션(ADOX)](../../../ado/reference/adox-api/keys-collection-adox.md)  
+ [Keys 컬렉션(ADOX)](./keys-collection-adox.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [Keys Append 메서드, Key Type, RelatedColumn, RelatedTable 및 UpdateRule 속성 예제 (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
- [Append 메서드 (ADOX Columns)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
- [Append 메서드 (ADOX Groups)](../../../ado/reference/adox-api/append-method-adox-groups.md)   
- [Append 메서드 (ADOX 인덱스)](../../../ado/reference/adox-api/append-method-adox-indexes.md)   
- [Append 메서드 (ADOX 프로시저)](../../../ado/reference/adox-api/append-method-adox-procedures.md)   
- [Append 메서드 (ADOX Tables)](../../../ado/reference/adox-api/append-method-adox-tables.md)   
- [Append 메서드 (ADOX 사용자)](../../../ado/reference/adox-api/append-method-adox-users.md)   
- [Append 메서드(ADOX Views)](../../../ado/reference/adox-api/append-method-adox-views.md)
+ [Keys Append 메서드, Key Type, RelatedColumn, RelatedTable 및 UpdateRule 속성 예제 (VB)](./keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
+ [Append 메서드 (ADOX Columns)](./append-method-adox-columns.md)   
+ [Append 메서드 (ADOX Groups)](./append-method-adox-groups.md)   
+ [Append 메서드 (ADOX 인덱스)](./append-method-adox-indexes.md)   
+ [Append 메서드 (ADOX 프로시저)](./append-method-adox-procedures.md)   
+ [Append 메서드 (ADOX Tables)](./append-method-adox-tables.md)   
+ [Append 메서드 (ADOX 사용자)](./append-method-adox-users.md)   
+ [Append 메서드(ADOX 보기)](./append-method-adox-views.md)

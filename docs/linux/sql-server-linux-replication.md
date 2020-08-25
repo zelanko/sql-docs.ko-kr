@@ -1,6 +1,6 @@
 ---
 title: Linux의 SQL Server 복제
-description: 이 문서에서는 Linux에서 SQL Server 복제에 대해 설명합니다.
+description: SQL Server 2017(14.x)(CU18) 이상에서 SQL Server on Linux 인스턴스에 대해 SQL Server 복제를 지원하는 방법을 알아봅니다.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -10,12 +10,12 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.technology: linux
 monikerRange: '>=sql-server-2017||>=sql-server-linux-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: cdd37963a419b33bb84353dee98c928179473bcb
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 3e705c463977bf355554ed1d242232649702d276
+ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882650"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88088840"
 ---
 # <a name="sql-server-replication-on-linux"></a>Linux의 SQL Server 복제
 

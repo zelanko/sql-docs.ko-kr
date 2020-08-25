@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 92905044-579f-4c38-bca6-f8bd5b239c20
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5674fc090a9803f6ce5249c48c65615edb2581bc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 67dd2ac9820167c92b16d11b056e02f796e56f5f
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451885"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759891"
 ---
 # <a name="troubleshooting-rds"></a>RDS 문제 해결
 > [!IMPORTANT]
@@ -26,19 +26,17 @@ ms.locfileid: "88451885"
   
  특정 오류 또는 RDS 관련 문제에 대 한 해결 방법은이 섹션을 참조 하세요. 이 섹션에서는 다음 항목을 다룹니다.  
   
--   [Windows 2000에서 RDS 구성](../../../ado/guide/remote-data-service/configuring-rds-on-windows-2000.md)  
+-   [Windows 2000에서 RDS 구성](./configuring-rds-on-windows-2000.md)  
   
--   ["인터넷 서버 오류: 액세스가 거부 되었습니다."](../../../ado/guide/remote-data-service/internet-server-error-access-denied.md)  
+-   ["인터넷 서버 오류: 액세스가 거부 되었습니다."](./internet-server-error-access-denied.md)  
   
--   [RDS는 "스트림을 읽지 않았습니다." 오류를 반환합니다.](../../../ado/guide/remote-data-service/rds-returns-stream-not-read-error.md)  
+-   [RDS는 "스트림을 읽지 않았습니다." 오류를 반환합니다.](./rds-returns-stream-not-read-error.md)  
   
--   [반복 읽기 격리 수준으로 교착 상태 발생](../../../ado/guide/remote-data-service/deadlocks-with-read-repeatable-isolation-level.md)  
+-   [반복 읽기 격리 수준으로 교착 상태 발생](./deadlocks-with-read-repeatable-isolation-level.md)  
   
--   [충분한 TempDB 공간 확인](../../../ado/guide/remote-data-service/ensuring-sufficient-tempdb-space.md)  
+-   [충분한 TempDB 공간 확인](./ensuring-sufficient-tempdb-space.md)  
   
--   [로그 파일 공간 사용 최소화](../../../ado/guide/remote-data-service/minimizing-log-file-space-usage.md)  
+-   [로그 파일 공간 사용 최소화](./minimizing-log-file-space-usage.md)  
   
-## <a name="see-also"></a>참고 항목  
- [RDS 기본 사항](../../../ado/guide/remote-data-service/rds-fundamentals.md)
-
-
+## <a name="see-also"></a>관련 항목  
+ [RDS 기본 사항](./rds-fundamentals.md)

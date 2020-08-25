@@ -17,12 +17,12 @@ ms.assetid: 54757c91-615b-468f-814b-87e5376a960f
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cec29c3c9c9486c08ee8c95625b026f7b51ef5e0
-ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
+ms.openlocfilehash: 0f46200a134351d1f6328ad79ccb030baddf4df3
+ms.sourcegitcommit: bf8cf755896a8c964774a438f2bd461a2a648c22
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87472679"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88216769"
 ---
 # <a name="always-encrypted"></a>Always Encrypted
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -163,21 +163,20 @@ Always Encrypted 암호화 알고리즘에 대한 자세한 내용은 [Always En
 - `IDENTITY` 속성이 있는 열  
 - `ROWGUIDCOL` 속성이 있는 열  
 - bin2가 아닌 데이터 정렬을 사용하는 문자열(`varchar`, `char` 등) 열  
-- 임의 암호화된 열(결정적 암호화된 열도 마찬가지)을 키 열로 사용하여 비클러스터형 인덱스에 대한 키 역할을 하는 열  
-- 임의 암호화된 열(결정적 암호화된 열도 마찬가지)을 키 열로 사용하여 클러스터형 인덱스에 대한 키 역할을 하는 열  
-- 임의 및 결정적 둘 다로 암호화된 열을 포함하는 전체 텍스트 인덱스에 대한 키 역할을 하는 열  
+- 임의 암호화를 사용하는 경우 클러스터형 및 비클러스터형 인덱스에 대한 키 역할을 하는 열(결정적 암호화 지원됨)
+- 임의 암호화를 사용하는 경우 전체 텍스트 인덱스에 대한 키 역할을 하는 열(결정적 암호화 지원됨)  
 - 계산된 열입니다.
 - 계산된 열에서 참조되는 열(식이 Always Encrypted에 대해 지원되지 않는 작업을 수행하는 경우)  
 - 스파스 열 집합  
-- 통계에서 참조되는 열  
-- 별칭 유형을 사용하는 열  
+- 임의 암호화를 사용하는 경우 통계에서 참조되는 열(결정적 암호화 지원됨)  
+- 별칭 형식을 사용하는 열  
 - 분할 열  
 - 기본 제약 조건이 있는 열  
 - 임의 암호화를 사용하는 경우 고유한 제약 조건에서 참조되는 열(결정적 암호화도 지원됨)  
 - 임의 암호화를 사용하는 경우 기본 키 열(결정적 암호화도 지원됨)  
 - 임의 암호화를 사용하거나 결정적 암호화를 사용할 때 참조된 열과 참조하는 열에서 서로 다른 키 또는 알고리즘을 사용하는 경우 외래 키 제약 조건에서 참조하는 열  
 - CHECK 제약 조건에서 참조되는 열  
-- 변경 데이터 캡처를 사용하는 테이블의 열  
+- 변경 데이터 캡처를 사용하여 캡처되는/추적되는 열  
 - 변경 내용 추적을 사용하는 테이블의 기본 키 열  
 - 마스킹된 열(동적 데이터 마스킹 사용)  
 - 스트레치 데이터베이스 테이블의 열 상시 암호화로 암호화된 열이 있는 테이블은 스트레치에 사용할 수 있습니다.  

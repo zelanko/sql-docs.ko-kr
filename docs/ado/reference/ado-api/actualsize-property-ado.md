@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 722803d0-cef5-4d4c-b79d-3f2f58052229
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 53384838d53003f0c4f81ec3b629e987ce2649a8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b08a0ce6f9b318430785938c33ce951282eafce2
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451635"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88760288"
 ---
 # <a name="actualsize-property-ado"></a>ActualSize 속성(ADO)
 필드 값의 실제 길이 (바이트)를 나타냅니다.  
@@ -30,14 +30,14 @@ ms.locfileid: "88451635"
  **Long** 값을 반환 합니다.  
   
 ## <a name="remarks"></a>설명  
- **ActualSize** 속성을 사용 하 여 [필드](../../../ado/reference/ado-api/field-object.md) 개체 값의 실제 길이를 반환 합니다. 모든 필드에 대해 **ActualSize** 속성은 읽기 전용입니다. ADO에서 **필드** 개체 값의 길이를 확인할 수 없는 경우 **ActualSize** 속성은 **adunknown**을 반환 합니다.  
+ **ActualSize** 속성을 사용 하 여 [필드](./field-object.md) 개체 값의 실제 길이를 반환 합니다. 모든 필드에 대해 **ActualSize** 속성은 읽기 전용입니다. ADO에서 **필드** 개체 값의 길이를 확인할 수 없는 경우 **ActualSize** 속성은 **adunknown**을 반환 합니다.  
   
- **ActualSize** 및 [DefinedSize](../../../ado/reference/ado-api/definedsize-property.md) 속성은 다음 예제와 같이 다릅니다. **AdVarChar** 의 선언 된 형식 및 최대 길이가 50 자인 **Field** 개체는 50의 **DefinedSize** 속성 값을 반환 하지만 반환 하는 **ActualSize** 속성 값은 현재 레코드의 필드에 저장 된 데이터의 길이입니다. **DefinedSize** 가 255 바이트 보다 큰 **필드** 는 가변 길이 열로 처리 됩니다.  
+ **ActualSize** 및 [DefinedSize](./definedsize-property.md) 속성은 다음 예제와 같이 다릅니다. **AdVarChar** 의 선언 된 형식 및 최대 길이가 50 자인 **Field** 개체는 50의 **DefinedSize** 속성 값을 반환 하지만 반환 하는 **ActualSize** 속성 값은 현재 레코드의 필드에 저장 된 데이터의 길이입니다. **DefinedSize** 가 255 바이트 보다 큰 **필드** 는 가변 길이 열로 처리 됩니다.  
   
 ## <a name="applies-to"></a>적용 대상  
- [Field 개체](../../../ado/reference/ado-api/field-object.md)  
+ [Field 개체](./field-object.md)  
   
-## <a name="see-also"></a>참고 항목  
- [ActualSize 및 DefinedSize 속성 예제 (VB)](../../../ado/reference/ado-api/actualsize-and-definedsize-properties-example-vb.md)   
- [ActualSize 및 DefinedSize 속성 예제 (VC + +)](../../../ado/reference/ado-api/actualsize-and-definedsize-properties-example-vc.md)   
- [DefinedSize 속성](../../../ado/reference/ado-api/definedsize-property.md)
+## <a name="see-also"></a>관련 항목  
+ [ActualSize 및 DefinedSize 속성 예제 (VB)](./actualsize-and-definedsize-properties-example-vb.md)   
+ [ActualSize 및 DefinedSize 속성 예제 (VC + +)](./actualsize-and-definedsize-properties-example-vc.md)   
+ [DefinedSize 속성](./definedsize-property.md)

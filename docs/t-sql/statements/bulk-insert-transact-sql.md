@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: be3984e1-5ab3-4226-a539-a9f58e1e01e2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8c76d2efccf6f9031d21b85b3bfd3aabed47708c
-ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
+ms.openlocfilehash: d8d91f01faa2f8ce6e81579964d7027122cd8d38
+ms.sourcegitcommit: bf5acef60627f77883249bcec4c502b0205300a4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87988379"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88200795"
 ---
 # <a name="bulk-insert-transact-sql"></a>BULK INSERT(Transact-SQL)
 
@@ -310,7 +310,7 @@ BULK INSERT 문은 데이터를 테이블 또는 뷰로 가져올 사용자 정�
 
 ## <a name="logging-behavior"></a>로깅 동작
 
- SQL Server로 대량 가져오기에서 수행된 행 삽입 작업이 트랜잭션 로그에 기록되는 경우에 대한 자세한 내용은 [대량 가져오기의 최소 로깅을 위한 필수 조건](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)을 참조하세요. 최소 로깅은 Azure SQL Database에서 지원되지 않습니다.
+ SQL Server로 대량 가져오기에서 수행된 행 삽입 작업이 트랜잭션 로그에 로그되는 경우에 대한 자세한 내용은 [대량 가져오기의 최소 로깅을 위한 필수 조건](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)을 참조하세요. 최소 로깅은 Azure SQL Database에서 지원되지 않습니다.
 
 ## <a name="restrictions"></a><a name="Limitations"></a> 제한 사항
 

@@ -1,19 +1,19 @@
 ---
 title: Ubuntu에서 SQL Server에 대한 무인 설치
 titleSuffix: SQL Server
-description: SQL Server 스크립트 샘플 - Ubuntu에서 무인 설치
+description: 샘플 Bash 스크립트를 사용하여 대화형 입력 없이 Ubuntu 16.04에서 SQL Server 2017을 설치하는 작업에 대해 알아봅니다.
 author: VanMSFT
 ms.author: vanto
 ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: e9921f6b2639d533674a487de26c1d26aa365a0f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 555a15c3120b9dec2bfc367f9f15f23d967e0c05
+ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900165"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88089003"
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-ubuntu"></a>샘플: Ubuntu용 무인 SQL Server 설치 스크립트
 

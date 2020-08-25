@@ -3,17 +3,17 @@ title: Linux에서 SQL Server 설정 구성
 description: 이 문서에서는 mssql-conf 도구를 사용하여 Linux에서 SQL Server 설정을 구성하는 방법을 설명합니다.
 author: VanMSFT
 ms.author: vanto
-ms.date: 07/30/2019
+ms.date: 08/12/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
-ms.openlocfilehash: fe93023bfbcd285d8d50a90bb11ea532eb066f2c
-ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
+ms.openlocfilehash: 2e21b8f811af5887147ddb71b211e3a876b728d2
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87472189"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88180015"
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>mssql-conf 도구를 사용하여 SQL Server on Linux 구성
 
@@ -42,6 +42,8 @@ ms.locfileid: "87472189"
 | [로컬 감사 디렉터리](#localaudit) | 로컬 감사 파일을 추가할 디렉터리를 설정합니다. |
 | [로캘](#lcid) | 사용할 SQL Server의 로캘을 설정합니다. |
 | [메모리 제한](#memorylimit) | SQL Server의 메모리 제한을 설정합니다. |
+| [네트워크 설정](#network) | SQL Server에 대한 추가 네트워크 설정입니다. |
+| [Microsoft Distributed Transaction Coordinator](#msdtc) | Linux에서 MSDTC를 구성하고 문제를 해결합니다. |
 | [TCP 포트](#tcpport) | SQL Server가 연결을 수신 대기하는 포트를 변경합니다. |
 | [TLS](#tls) | 전송 수준 보안을 구성합니다. |
 | [추적 플래그](#traceflags) | 서비스에서 사용할 추적 플래그를 설정합니다. |
@@ -72,6 +74,7 @@ ms.locfileid: "87472189"
 | [메모리 제한](#memorylimit) | SQL Server의 메모리 제한을 설정합니다. |
 | [Microsoft Distributed Transaction Coordinator](#msdtc) | Linux에서 MSDTC를 구성하고 문제를 해결합니다. |
 | [MLServices EULA](#mlservices-eula) | mlservices 패키지에 대한 R 및 Python EULA에 동의합니다. SQL Server 2019에만 적용됩니다.|
+| [네트워크 설정](#network) | SQL Server에 대한 추가 네트워크 설정입니다. |
 | [outboundnetworkaccess](#mlservices-outbound-access) |[mlservices](sql-server-linux-setup-machine-learning.md) R, Python 및 Java 확장의 아웃바운드 네트워크 액세스를 사용하도록 설정합니다.|
 | [TCP 포트](#tcpport) | SQL Server가 연결을 수신 대기하는 포트를 변경합니다. |
 | [TLS](#tls) | 전송 수준 보안을 구성합니다. |
@@ -107,6 +110,34 @@ ms.locfileid: "87472189"
    ```bash
    sudo systemctl restart mssql-server
    ```
+
+### <a name="set-the-default-database-mail-profile-for-sql-server-on-linux"></a><a id="dbmail"></a> SQL Server on Linux의 기본 데이터베이스 메일 프로필 설정
+
+**sqlpagent.databasemailprofile**을 사용하여 메일 경고의 기본 DB 메일 프로필을 설정할 수 있습니다.
+
+```bash
+sudo /opt/mssql/bin/mssql-conf set sqlagent.databasemailprofile <profile_name>
+```
+
+### <a name="sql-agent-error-logs"></a><a id="agenterrorlog"></a> SQL 에이전트 오류 로그
+
+**sqlpagent.errorlogfile** 및 **sqlpagent.errorlogginglevel** 설정을 사용하면 각각 SQL 에이전트 로그 파일 경로 및 로깅 수준을 설정할 수 있습니다. 
+
+```bash
+sudo /opt/mssql/bin/mssql-conf set sqlagent.errorfile <path>
+```
+
+SQL 에이전트 로깅 수준은 다음과 같은 비트 마스크 값입니다.
+
+- 1 = 오류
+- 2 = 경고
+- 4 = 정보
+
+모든 수준을 캡처하려면 값으로 `7`을 사용합니다.
+
+```bash
+sudo /opt/mssql/bin/mssql-conf set sqlagent.errorlogginglevel <level>
+```
 
 ## <a name="change-the-sql-server-collation"></a><a id="collation"></a> SQL Server 데이터 정렬 변경
 
@@ -335,6 +366,7 @@ ms.locfileid: "87472189"
    sudo systemctl restart mssql-server
    ```
 
+`errorlog.numerrorlogs` 설정을 사용하면 로그를 순환하기 전에 유지 관리되는 오류 로그 수를 지정할 수 있습니다.
 
 ## <a name="change-the-default-backup-directory-location"></a><a id="backupdir"></a> 기본 백업 디렉터리 위치 변경
 
@@ -393,20 +425,13 @@ SQL Server가 수집하는 메모리 덤프 유형을 제어하는 두 가지 �
 
     다음 표에는 가능한 **coredump.coredumptype** 값이 나와 있습니다.
 
-    | Type | 설명 |
+    | Type | Description |
     |-----|-----|
     | **mini** | Mini는 가장 작은 덤프 파일 형식입니다. Linux 시스템 정보를 사용하여 프로세스의 스레드 및 모듈을 결정합니다. 덤프에는 호스트 환경 스레드 스택 및 모듈만 포함됩니다. 간접 메모리 참조 또는 전역은 포함되지 않습니다. |
     | **miniplus** | MiniPlus는 mini와 비슷하지만 추가 메모리를 포함합니다. 다음 메모리 영역을 덤프에 추가하여 SQLPAL 및 호스트 환경의 내부를 이해합니다.</br></br> - 다양한 전역</br> - 64TB를 초과하는 모든 메모리</br> - **/proc/$pid/maps**에 있는 모든 명명된 영역</br> - 스레드 및 스택의 간접 메모리</br> - 스레드 정보</br> - 연결된 Teb 및 Peb</br> - 모듈 정보</br> - VMM 및 VAD 트리 |
     | **filtered** | Filtered는 별도로 제외하는 경우가 아니면 프로세스의 모든 메모리가 포함되는 빼기 기반 디자인을 사용합니다. 이 디자인은 덤프에서 특정 영역을 제외하고 SQLPAL 및 호스트 환경의 내부를 이해합니다.
     | **full** | Full은 **/proc/$pid/maps**에 있는 모든 영역을 포함하는 전체 프로세스 덤프입니다. **coredump.captureminiandfull** 설정을 통해 제어되지 않습니다. |
 
-## <a name="set-the-default-database-mail-profile-for-sql-server-on-linux"></a><a id="dbmail"></a> SQL Server on Linux의 기본 데이터베이스 메일 프로필 설정
-
-**sqlpagent.databasemailprofile**을 사용하여 메일 경고의 기본 DB 메일 프로필을 설정할 수 있습니다.
-
-```bash
-sudo /opt/mssql/bin/mssql-conf set sqlagent.databasemailprofile <profile_name>
-```
 ## <a name="high-availability"></a><a id="hadr"></a> 고가용성
 
 **hadr.hadrenabled** 옵션은 SQL Server 인스턴스에서 가용성 그룹을 사용하도록 설정합니다. 다음 명령은 **hadr.hadrenabled**를 1로 설정하여 가용성 그룹을 사용하도록 설정합니다. 설정을 적용하려면 SQL Server를 다시 시작해야 합니다.
@@ -485,7 +510,14 @@ sudo systemctl restart mssql-server
    sudo systemctl restart mssql-server
    ```
 
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+### <a name="additional-memory-settings"></a>추가 메모리 설정
+
+다음 옵션은 메모리 설정에 사용할 수 있습니다.
+
+|옵션 |Description |
+|--- |--- |
+| memory.disablememorypressure | SQL Server는 메모리 압력을 사용하지 않도록 설정합니다. 값은 `true` 또는 `false`일 수 있습니다. |
+| memory.memory_optimized | SQL Server 메모리 최적화 기능인 영구 메모리 파일 향상 기능, 메모리 보호를 사용하거나 사용하지 않도록 설정합니다. 값은 `true` 또는 `false`일 수 있습니다. |
 
 ## <a name="configure-msdtc"></a><a id="msdtc"></a> MSDTC 구성
 
@@ -527,7 +559,6 @@ MSDTC를 모니터링하고 문제 해결하는 데 사용할 수 있는 mssql-c
 | distributedtransaction.tracefilepath | 추적 파일을 저장해야 하는 폴더 |
 | distributedtransaction.turnoffrpcsecurity | 분산 트랜잭션에 대한 RPC 보안 사용 또는 사용 안 함 |
 
-::: moniker-end
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
 ## <a name="accept-mlservices-eulas"></a><a id="mlservices-eula"></a> MLServices EULA 동의
@@ -623,6 +654,22 @@ outboundnetworkaccess = 1
 | **network.kerberoskeytabfile** |Kerberos keytab 파일의 경로입니다. |
 
 TLS 설정 사용에 대한 예제는 [SQL Server on Linux에 대한 연결 암호화](sql-server-linux-encrypted-connections.md)를 참조하세요.
+
+## <a name="network-settings"></a><a id="network"></a> 네트워크 설정
+
+[자습서: SQL Server on Linux와 Active Directory 인증 사용](sql-server-linux-active-directory-authentication.md)에서 SQL Server on Linux와 AD 인증 사용에 대한 포괄적인 정보를 참조하세요.
+
+다음 옵션은 `mssql-conf`를 사용하여 구성할 수 있는 추가 네트워크 설정입니다.
+
+|옵션 |Description |
+|--- |--- |
+| network.disablesssd | AD 계정 정보에 대한 SSSD 쿼리를 사용하지 않도록 설정하며 기본적으로 LDAP 호출로 지정됩니다. 값은 `true` 또는 `false`일 수 있습니다. |
+| network.enablekdcfromkrb5conf | krb5.conf에서 KDC 정보를 조회할 수 있도록 설정합니다. 값은 `true` 또는 `false`일 수 있습니다. |
+| network.forcesecureldap | 도메인 컨트롤러에 연결하는 데 LDAPS를 사용하도록 강제 적용합니다. 값은 `true` 또는 `false`일 수 있습니다. |
+| network.ipaddress | 들어오는 연결을 위한 IP 주소입니다. |
+| network.kerberoscredupdatefrequency | 업데이트해야 하는 kerberos 자격 증명 검사 사이의 시간(초)입니다. 값은 정수입니다.|
+| network.privilegedadaccount | AD 인증에 사용할 권한을 가진 AD 사용자입니다. 값은 `<username>`입니다. 자세한 내용은 [자습서: Linux에서 SQL Server와 Active Directory 인증 사용](sql-server-linux-active-directory-authentication.md#spn)|
+| uncmapping | 로컬 경로에 UNC 경로를 매핑합니다. 예: `sudo /opt/mssql/bin/mssql-conf set uncmapping //servername/sharename /tmp/folder`. |
 
 ## <a name="enabledisable-traceflags"></a><a id="traceflags"></a> 추적 플래그 사용/사용 안 함
 

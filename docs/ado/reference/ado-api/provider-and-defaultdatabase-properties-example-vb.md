@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 677e1dbe-bcf6-4028-a62c-e99b1c88bf7b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: db5e40a1f82f95e7b4d78f4e6e3ce7703305abb0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d3a438a3be7e7a046f36b0038cae8dcf24b6725c
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442595"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88772832"
 ---
 # <a name="provider-and-defaultdatabase-properties-example-vb"></a>Provider 및 DefaultDatabase 속성 예제 (VB)
-이 예에서는 다른 공급자를 사용 하 여 세 개의 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체를 열어 [공급자](../../../ado/reference/ado-api/provider-property-ado.md) 속성을 보여 줍니다. 또한 [defaultdatabase](../../../ado/reference/ado-api/defaultdatabase-property.md) 속성을 사용 하 여 Microsoft ODBC 공급자에 대 한 기본 데이터베이스를 설정 합니다.  
+이 예에서는 다른 공급자를 사용 하 여 세 개의 [연결](./connection-object-ado.md) 개체를 열어 [공급자](./provider-property-ado.md) 속성을 보여 줍니다. 또한 [defaultdatabase](./defaultdatabase-property.md) 속성을 사용 하 여 Microsoft ODBC 공급자에 대 한 기본 데이터베이스를 설정 합니다.  
   
 > [!NOTE]
 >  Windows 인증을 지 원하는 데이터 원본 공급자에 연결 하는 경우 연결 문자열에 사용자 ID 및 암호 정보 대신 **Trusted_Connection = yes** 또는 **INTEGRATED Security = SSPI** 를 지정 해야 합니다.  
@@ -106,6 +106,6 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Connection 개체 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
- [DefaultDatabase 속성](../../../ado/reference/ado-api/defaultdatabase-property.md)   
- [Provider 속성(ADO)](../../../ado/reference/ado-api/provider-property-ado.md)
+ [Connection 개체 (ADO)](./connection-object-ado.md)   
+ [DefaultDatabase 속성](./defaultdatabase-property.md)   
+ [Provider 속성(ADO)](./provider-property-ado.md)

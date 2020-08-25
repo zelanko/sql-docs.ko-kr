@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6e146738-ac4d-47bb-b6cd-d87b2260aead
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7a014addf2d3ff6c7b02ed9abc103cdbd7b2ecb8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 081ba6f2b82e6369d2871a2c9c7352c7335bc0d4
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452515"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88758983"
 ---
 # <a name="xml-persistence-format"></a>XML 지속성 형식
 ADO는 유지 되는 XML 스트림에 UTF-8 인코딩을 사용 합니다.  
@@ -71,5 +71,5 @@ xmlns:z="#RowsetSchema">
   
  데이터 섹션에는 운송 정보를 포함 하는 3 개의 행이 있습니다. 빈 행 집합의 경우 데이터 섹션이 비어 있을 수 있지만 태그가 있어야 합니다 \<rs:data> . 데이터가 없는 경우 간단 하 게 태그를 작성할 수 있습니다 \<rs:data/> . "Rs" 접두사가 붙은 태그는 urn: 스키마-microsoft-com: rowset에서 정의 된 네임 스페이스에 있음을 나타냅니다.  
   
-## <a name="see-also"></a>참고 항목  
- [XML 형식으로 레코드 유지](../../../ado/guide/data/persisting-records-in-xml-format.md)
+## <a name="see-also"></a>관련 항목  
+ [XML 형식으로 레코드 유지](./persisting-records-in-xml-format.md)

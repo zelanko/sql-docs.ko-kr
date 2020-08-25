@@ -1,18 +1,18 @@
 ---
 title: Linux에서 MSDTC를 구성하는 방법
-description: 이 문서에서는 Linux에서 MSDTC를 구성하기 위한 연습을 제공합니다.
+description: 이 문서에서는 Linux에서 MSDTC(Microsoft Distributed Transaction Coordinator)를 구성하는 방법을 알아봅니다.
 author: VanMSFT
 ms.author: vanto
-ms.date: 08/01/2019
+ms.date: 08/12/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 5f2e8502956b808556c0ac6ddb83f95a61cbe5c9
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 77df45c3eb4cded79e4485e8c93262a6b5ed43fc
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900114"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88180022"
 ---
 # <a name="how-to-configure-the-microsoft-distributed-transaction-coordinator-msdtc-on-linux"></a>Linux에서 MSDTC(Microsoft Distributed Transaction Coordinator)를 구성하는 방법
 
@@ -36,19 +36,21 @@ MSDTC는 mssql-conf 유틸리티의 두 가지 구성 매개 변수를 사용합
 
 이 설정 및 기타 관련 MSDTC 설정에 대한 자세한 내용은 [mssql-conf 도구를 사용하여 SQL Server on Linux 구성](sql-server-linux-configure-mssql-conf.md)을 참조하세요.
 
-## <a name="supported-msdtc-configurations"></a>지원되는 MSDTC 구성
+## <a name="supported-transaction-standards"></a>지원되는 트랜잭션 표준
 
 다음 MSDTC 구성이 지원됩니다.
 
-- ODBC 공급자를 위한 SQL Server on Linux에 대한 OLE-TX 분산 트랜잭션
+| 트랜잭션 표준 | 데이터 원본 | ODBC 드라이버 | JDBC 드라이버|
+|---|---|---|---|
+| OLE-TX 트랜잭션 | SQL Server on Linux | 예 | 아니요|
+| XA 분산 트랜잭션 | XA를 지원하는 SQL Server, 기타 ODBC 및 JDBC 데이터 원본 | 예(버전 17.3 이상 필요) | 예 |
+| 연결된 서버의 분산 트랜잭션 | SQL Server | 예 | 아니요
 
-- ODBC 공급자를 위한 JDBC를 사용하는 SQL Server on Linux에 대한 OLE-TX 분산 트랜잭션 ODBC 공급자를 사용하여 XA 트랜잭션을 수행하려면 Microsoft ODBC Driver for SQL Server 버전 17.3 이상을 사용해야 합니다. 자세한 내용은 [XA 트랜잭션 이해](../connect/jdbc/understanding-xa-transactions.md#configuration-instructions)를 참조하세요.
-
-- 연결된 서버의 분산 트랜잭션
+자세한 내용은 [XA 트랜잭션 이해](../connect/jdbc/understanding-xa-transactions.md#configuration-instructions)를 참조하세요.
 
 ## <a name="msdtc-configuration-steps"></a>MSDTC 구성 단계
 
-MSDTC 통신 및 기능은 3단계로 구성합니다. 필요한 구성 단계를 수행하지 않으면 SQL Server에서 MSDTC 기능을 사용할 수 없습니다.
+MSDTC 통신 및 기능은 3단계로 구성합니다. 필요한 구성 단계를 수행하지 않으면 SQL Server에서 MSDTC 기능을 사용하도록 설정하지 않습니다.
 
 - mssql-conf를 사용하여 **network.rpcport** 및 **distributedtransaction.servertcpport**를 구성합니다.
 - **distributedtransaction.servertcpport** 및 포트 135에서 통신을 허용하도록 방화벽을 구성합니다.
@@ -165,7 +167,7 @@ sudo firewall-cmd --reload
 sudo netstat -tulpn | grep sqlservr
 ```
 
-다음과 비슷한 내용이 출력됩니다.
+다음과 비슷한 결과가 나타나야 합니다.
 
 ```bash
 tcp 0 0 0.0.0.0:1433 0.0.0.0:* LISTEN 13911/sqlservr

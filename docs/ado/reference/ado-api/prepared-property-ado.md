@@ -16,29 +16,29 @@ helpviewer_keywords:
 ms.assetid: 11ca8825-765e-4bb4-a6ce-3f6564ad8755
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 050651b5c25fcfdfa6723936659b9a11772c2b03
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9b5095432d283a2a0695d948de08a9f6b0ab25c5
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442695"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773132"
 ---
 # <a name="prepared-property-ado"></a>준비된 속성(ADO)
-실행 전에 [명령의](../../../ado/reference/ado-api/command-object-ado.md) 컴파일된 버전을 저장할지 여부를 나타냅니다.  
+실행 전에 [명령의](./command-object-ado.md) 컴파일된 버전을 저장할지 여부를 나타냅니다.  
   
 ## <a name="settings-and-return-values"></a>설정 및 반환 값  
  **True**로 설정 된 경우 명령을 준비 해야 함을 나타내는 **부울** 값을 설정 하거나 반환 합니다.  
   
 ## <a name="remarks"></a>설명  
- **준비** 된 속성을 사용 하 여 공급자가 [명령](../../../ado/reference/ado-api/command-object-ado.md) 개체의 첫 번째 실행 전에 [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) 속성에 지정 된 준비 된 (또는 컴파일된) 버전의 쿼리를 저장 하도록 합니다. 이렇게 하면 명령의 첫 번째 실행 속도가 느려질 수 있지만 공급자가 명령을 컴파일하면 이후 실행에 대해 컴파일된 버전의 명령이 사용 됩니다 .이로 인해 성능이 향상 됩니다.  
+ **준비** 된 속성을 사용 하 여 공급자가 [명령](./command-object-ado.md) 개체의 첫 번째 실행 전에 [CommandText](./commandtext-property-ado.md) 속성에 지정 된 준비 된 (또는 컴파일된) 버전의 쿼리를 저장 하도록 합니다. 이렇게 하면 명령의 첫 번째 실행 속도가 느려질 수 있지만 공급자가 명령을 컴파일하면 이후 실행에 대해 컴파일된 버전의 명령이 사용 됩니다 .이로 인해 성능이 향상 됩니다.  
   
  속성이 **False**이면 공급자는 컴파일된 버전을 만들지 않고 **명령** 개체를 직접 실행 합니다.  
   
  공급자가 명령 준비를 지원 하지 않는 경우이 속성이 **True**로 설정 되 면 오류를 반환할 수 있습니다. 공급자가 오류를 반환 하지 않는 경우 단순히 명령을 준비 하는 요청을 무시 하 고 **준비** 된 속성을 **False**로 설정 합니다.  
   
 ## <a name="applies-to"></a>적용 대상  
- [명령 개체(ADO)](../../../ado/reference/ado-api/command-object-ado.md)  
+ [명령 개체(ADO)](./command-object-ado.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [준비 된 속성 예제 (VB)](../../../ado/reference/ado-api/prepared-property-example-vb.md)   
- [Prepared 속성 예제(VC++)](../../../ado/reference/ado-api/prepared-property-example-vc.md)   
+ [준비 된 속성 예제 (VB)](./prepared-property-example-vb.md)   
+ [Prepared 속성 예제(VC++)](./prepared-property-example-vc.md)

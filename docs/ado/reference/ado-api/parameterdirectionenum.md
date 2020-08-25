@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: c66aa6e6-d4f0-4f0f-9640-e08ae6cfdef3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8c586b4e7ce2e18411d147e8aafb4eb144e01e6f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cdd0e393c7fc5214866142150c7ff497e48e7122
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442785"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773332"
 ---
 # <a name="parameterdirectionenum"></a>ParameterDirectionEnum
-[매개 변수가](../../../ado/reference/ado-api/parameter-object.md) 입력 매개 변수, 출력 매개 변수, 입력 및 출력 매개 변수 또는 저장 프로시저의 반환 값을 나타내는지 여부를 지정 합니다.  
+[매개 변수가](./parameter-object.md) 입력 매개 변수, 출력 매개 변수, 입력 및 출력 매개 변수 또는 저장 프로시저의 반환 값을 나타내는지 여부를 지정 합니다.  
   
 |상수|값|설명|  
 |--------------|-----------|-----------------|  
@@ -49,9 +49,9 @@ ms.locfileid: "88442785"
 
 :::row:::
     :::column:::
-        [CreateParameter 메서드(ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)  
+        [CreateParameter 메서드(ADO)](./createparameter-method-ado.md)  
     :::column-end:::
     :::column:::
-        [Direction 속성](../../../ado/reference/ado-api/direction-property.md)  
+        [Direction 속성](./direction-property.md)  
     :::column-end:::
 :::row-end:::

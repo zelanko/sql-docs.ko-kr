@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: ea2ec614-34c8-41b7-8ebd-063798bd56b4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 919ad2763a711382cc9f472f34c791807cdd29e2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 71bd5eb4ba0768f91ccf145933067164e668c942
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440647"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777762"
 ---
 # <a name="adox-code-example-numericscale-and-precision-properties-example-vb"></a>ADOX 코드 예제: NumericScale 및 Precision 속성 예제(VB)
-이 예에서는 [Column](../../../ado/reference/adox-api/column-object-adox.md) 개체의 [NumericScale](../../../ado/reference/adox-api/numericscale-property-adox.md) 및 [Precision](../../../ado/reference/adox-api/precision-property-adox.md) 속성을 보여 줍니다. 이 코드는 *Northwind* 데이터베이스의 **Order Details** 테이블에 대 한 값을 표시 합니다.  
+이 예에서는 [Column](./column-object-adox.md) 개체의 [NumericScale](./numericscale-property-adox.md) 및 [Precision](./precision-property-adox.md) 속성을 보여 줍니다. 이 코드는 *Northwind* 데이터베이스의 **Order Details** 테이블에 대 한 값을 표시 합니다.  
   
 ```  
 ' BeginNumericScalePrecVB  
@@ -77,6 +77,6 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Column 개체 (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
- [NumericScale 속성 (ADOX)](../../../ado/reference/adox-api/numericscale-property-adox.md)   
- [Precision 속성(ADOX)](../../../ado/reference/adox-api/precision-property-adox.md)
+ [Column 개체 (ADOX)](./column-object-adox.md)   
+ [NumericScale 속성 (ADOX)](./numericscale-property-adox.md)   
+ [Precision 속성(ADOX)](./precision-property-adox.md)

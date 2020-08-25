@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 64234ce5-dc46-4c8a-a316-61956b6b9abb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f18a02557783f972203a05019bb96d11ce50c744
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 286c2b199c83feca11a69e8d4d137ad5691f5362
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452455"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88758803"
 ---
 # <a name="provider-support-for-adox-ado"></a>ADOX에 대한 공급자 지원(ADO)
-OLE DB 데이터 공급자에 따라 ADOX의 특정 기능을 지원 하지 않습니다. ADOX는 [Microsoft Jet 용 OLE DB 공급자](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md)에서 완벽 하 게 지원 됩니다. [Microsoft OLE DB Provider for SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md), [ODBC 용 microsoft OLE DB 공급자](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-odbc.md)또는 [Microsoft OLE DB Provider for Oracle](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-oracle.md) 에서 지원 되지 않는 기능은 다음 표에 나와 있습니다. ADOX는 다른 Microsoft OLE DB 공급자에서 지원 되지 않습니다.  
+OLE DB 데이터 공급자에 따라 ADOX의 특정 기능을 지원 하지 않습니다. ADOX는 [Microsoft Jet 용 OLE DB 공급자](../appendixes/microsoft-ole-db-provider-for-microsoft-jet.md)에서 완벽 하 게 지원 됩니다. [Microsoft OLE DB Provider for SQL Server](../appendixes/microsoft-ole-db-provider-for-sql-server.md), [ODBC 용 microsoft OLE DB 공급자](../appendixes/microsoft-ole-db-provider-for-odbc.md)또는 [Microsoft OLE DB Provider for Oracle](../appendixes/microsoft-ole-db-provider-for-oracle.md) 에서 지원 되지 않는 기능은 다음 표에 나와 있습니다. ADOX는 다른 Microsoft OLE DB 공급자에서 지원 되지 않습니다.  
   
 ## <a name="microsoft-ole-db-provider-for-sql-server"></a>SQL Server용 Microsoft OLE DB Provider  
   

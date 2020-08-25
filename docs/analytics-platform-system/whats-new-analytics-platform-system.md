@@ -9,12 +9,12 @@ ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 684979981878590c0fbd8d56c648525b25e7c8b6
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 5e0193fb7e749b7127d59743557e58cb049e734c
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243081"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778472"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>확장 MPP 데이터 웨어하우스의 분석 플랫폼 시스템의 새로운 기능
 최신 어플라이언스 업데이트 Microsoft Analytics Platform System (APS)의 새로운 기능을 참조 하세요. APS는 MPP SQL Server 병렬 데이터 웨어하우스를 호스팅하는 스케일 아웃 온-프레미스 어플라이언스입니다. 
@@ -25,23 +25,23 @@ ms.locfileid: "87243081"
 릴리스 날짜-4 월 2020
 
 ### <a name="rename-column"></a>열 이름 바꾸기
-CU 7.6으로 업그레이드 한 후 고객은 사용자가 만든 테이블의 열 이름을 바꿀 수 있습니다. 구문, 예제, 제한 사항 및 추가 정보는 [RENAME (transact-sql)](https://docs.microsoft.com/sql/t-sql/statements/rename-transact-sql) 을 참조 하세요.
+CU 7.6으로 업그레이드 한 후 고객은 사용자가 만든 테이블의 열 이름을 바꿀 수 있습니다. 구문, 예제, 제한 사항 및 추가 정보는 [RENAME (transact-sql)](../t-sql/statements/rename-transact-sql.md) 을 참조 하세요.
 
 ### <a name="alter-view"></a>Alter view
-이제 고객은 보기를 변경할 수 있습니다. 자세한 내용은 [ALTER VIEW (transact-sql)](https://docs.microsoft.com/sql/t-sql/statements/alter-view-transact-sql) 를 참조 하세요.
+이제 고객은 보기를 변경할 수 있습니다. 자세한 내용은 [ALTER VIEW (transact-sql)](../t-sql/statements/alter-view-transact-sql.md) 를 참조 하세요.
 
 <a name="h2-aps-cu7.5"></a>
 ## <a name="aps-cu75"></a>APS CU7.5
 릴리스 날짜-9 월 2019
 
 ### <a name="alter-external-data-source"></a>외부 데이터 원본 변경
-고객은 CU 7.5 업데이트를 사용 하 여 외부 데이터 원본 정의를 변경할 수 있습니다. Hadoop 이름 노드 고가용성을 사용 하는 고객은 이제 장애 조치 (failover) 발생 시 인수를 변경 하도록 데이터 원본을 변경할 수 있습니다. APS의 경우 위치, RESOURCE_MANAGER_LOCATION 및 자격 증명만 변경할 수 있습니다. 자세한 내용은 [alter external data source](https://docs.microsoft.com/sql/t-sql/statements/alter-external-data-source-transact-sql?view=sql-server-2017) 를 참조 하세요.
+고객은 CU 7.5 업데이트를 사용 하 여 외부 데이터 원본 정의를 변경할 수 있습니다. Hadoop 이름 노드 고가용성을 사용 하는 고객은 이제 장애 조치 (failover) 발생 시 인수를 변경 하도록 데이터 원본을 변경할 수 있습니다. APS의 경우 위치, RESOURCE_MANAGER_LOCATION 및 자격 증명만 변경할 수 있습니다. 자세한 내용은 [alter external data source](../t-sql/statements/alter-external-data-source-transact-sql.md?view=sql-server-2017) 를 참조 하세요.
 
 ### <a name="cdh-515-and-516-support-with-polybase"></a>PolyBase를 사용한 CDH 5.15 및 5.16 지원
 CU 7.5 업데이트를 사용 하는 APS의 PolyBase는 이제 Cloudera에서 CDH 5.15 및 5.16 버전의 Hadoop 배포를 지원 합니다. Cdh .x 버전의 경우 옵션 6을 사용 합니다. 
 
 ### <a name="try_convert-and-try_cast-support"></a>Try_Convert 및 Try_Cast 지원
-CU 7.5 AP는 이제 [TRY_CAST](https://docs.microsoft.com/sql/t-sql/functions/try-cast-transact-sql?view=sql-server-2017) 및 [TRY_CONVERT](https://docs.microsoft.com/sql/t-sql/functions/try-convert-transact-sql?view=sql-server-2017) tsql 함수를 지원 합니다. 이러한 함수는 모두 변환이 성공 하는 경우 지정 된 데이터 형식으로 변환 된 값을 반환 합니다. 그렇지 않으면 null을 반환 합니다.
+CU 7.5 AP는 이제 [TRY_CAST](../t-sql/functions/try-cast-transact-sql.md?view=sql-server-2017) 및 [TRY_CONVERT](../t-sql/functions/try-convert-transact-sql.md?view=sql-server-2017) tsql 함수를 지원 합니다. 이러한 함수는 모두 변환이 성공 하는 경우 지정 된 데이터 형식으로 변환 된 값을 반환 합니다. 그렇지 않으면 null을 반환 합니다.
 
 <a name="h2-aps-cu7.4"></a>
 ## <a name="aps-cu74"></a>APS CU7.4
@@ -51,10 +51,10 @@ CU 7.5 AP는 이제 [TRY_CAST](https://docs.microsoft.com/sql/t-sql/functions/tr
 APS CU 7.4부터 고객은 새 dwloader를 사용 하 여 32 KB (32768 바이트) 보다 큰 테이블에 행을 로드할 수 있습니다. 새 dwloader는 32768과 33554432 (바이트) 사이의 정수 값을 사용 하 여 32 KB 보다 큰 행을 로드 하는-l 스위치를 지원 합니다. 이 스위치는 클라이언트와 서버에 더 많은 메모리를 할당 하 고 부하를 늦출 수 있으므로 큰 행 (32 이상)을 로드 하는 경우에만이 옵션을 사용 합니다. [다운로드 사이트](https://www.microsoft.com/download/details.aspx?id=57472)에서 새 dwloader를 다운로드할 수 있습니다.  
 
 ### <a name="hdp-30-and-31-support-with-polybase"></a>PolyBase를 사용 하는 HDP 3.0 및 3.1 지원
-이제 APS의 PolyBase는이 업데이트와 함께 HDP 3.0 및 3.1을 지원 합니다. HDP 3.x 버전에는 option 7을 사용 합니다. 자세한 내용은 [PolyBase 연결](https://docs.microsoft.com/sql/database-engine/configure-windows/polybase-connectivity-configuration-transact-sql) 페이지를 참조 하세요.
+이제 APS의 PolyBase는이 업데이트와 함께 HDP 3.0 및 3.1을 지원 합니다. HDP 3.x 버전에는 option 7을 사용 합니다. 자세한 내용은 [PolyBase 연결](../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md) 페이지를 참조 하세요.
 
 ### <a name="utf16-file-support-with-polybase"></a>PolyBase를 사용 하 여 UTF16 파일 지원
-이제 PolyBase는 UTF16 (LE) 인코딩에 있는 구분 된 텍스트 파일 읽기를 지원 합니다. 설치에 대 한 자세한 내용은 [외부 파일 형식 만들기](https://docs.microsoft.com/sql/t-sql/statements/create-external-file-format-transact-sql) 를 참조 하세요. 
+이제 PolyBase는 UTF16 (LE) 인코딩에 있는 구분 된 텍스트 파일 읽기를 지원 합니다. 설치에 대 한 자세한 내용은 [외부 파일 형식 만들기](../t-sql/statements/create-external-file-format-transact-sql.md) 를 참조 하세요. 
 
 <a name="h2-aps-cu7.3"></a>
 ## <a name="aps-cu73"></a>APS CU7.3
@@ -132,7 +132,7 @@ from cte;
 릴리스 날짜-7 월 2018
 
 ### <a name="dbcc-commands-do-not-consume-concurrency-slots-behavior-change"></a>DBCC 명령은 동시성 슬롯을 사용 하지 않습니다 (동작 변경).
-APS는 [DBCC DROPCLEANBUFFERS](https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-dropcleanbuffers-transact-sql)와 같은 t-sql [DBCC 명령의](https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-transact-sql) 하위 집합을 지원 합니다. 이러한 명령은 이전에 실행될 수 있는 사용자 로드/쿼리 수를 줄이는 [동시성 슬롯](https://docs.microsoft.com/sql/analytics-platform-system/workload-management?view=aps-pdw-2016-au7#concurrency-slots)을 사용했습니다. `DBCC`그러면 전체 쿼리 실행 성능을 향상 시키는 사용자 동시성 슬롯을 사용 하지 않는 로컬 큐에서 명령이 실행 됩니다.
+APS는 [DBCC DROPCLEANBUFFERS](../t-sql/database-console-commands/dbcc-dropcleanbuffers-transact-sql.md)와 같은 t-sql [DBCC 명령의](../t-sql/database-console-commands/dbcc-transact-sql.md) 하위 집합을 지원 합니다. 이러한 명령은 이전에 실행될 수 있는 사용자 로드/쿼리 수를 줄이는 [동시성 슬롯](./workload-management.md?view=aps-pdw-2016-au7#concurrency-slots)을 사용했습니다. `DBCC`그러면 전체 쿼리 실행 성능을 향상 시키는 사용자 동시성 슬롯을 사용 하지 않는 로컬 큐에서 명령이 실행 됩니다.
 
 ### <a name="replaces-some-metadata-calls-with-catalog-objects"></a>일부 메타 데이터 호출을 카탈로그 개체로 바꿉니다.
 SMO를 사용 하는 대신 메타 데이터 호출에 대해 카탈로그 개체를 사용 하는 경우 APS의 성능이 개선 되었습니다. CU 7.1부터 이러한 메타 데이터 호출 중 일부는 이제 기본적으로 카탈로그 개체를 사용 합니다. 메타 데이터 쿼리를 사용 하는 고객이 문제를 해결 하는 경우이 동작은 [기능 전환](appliance-feature-switch.md) 에 의해 해제 될 수 있습니다.
@@ -140,7 +140,7 @@ SMO를 사용 하는 대신 메타 데이터 호출에 대해 카탈로그 개�
 ### <a name="bug-fixes"></a>버그 수정
 Microsoft는 APS CU 7.1을 사용 하 여 SQL Server 2016 SP2 CU2로 업그레이드 했습니다. 업그레이드는 아래에 설명 된 몇 가지 문제를 해결 합니다.
 
-| 제목 | Description |
+| 제목 | 설명 |
 |:---|:---|
 | **잠재적 튜플 이동 교착 상태** |업그레이드는 분산 트랜잭션과 튜플 이동 기 백그라운드 스레드에서 교착 상태의 긴 가능성을 수정 합니다. CU 7.1을 설치한 후 TF634를 사용 하 여 시작 매개 변수 또는 전역 추적 플래그로 SQL Server 튜플 이동 기를 중지 하는 고객은이를 안전 하 게 제거할 수 있습니다. | 
 | **특정 지연/리드 쿼리 실패** |오류가 발생 하는 중첩 된 지연/리드 함수를 사용 하는 CCI 테이블의 특정 쿼리는 이제이 업그레이드로 수정 되었습니다. | 
@@ -156,9 +156,9 @@ APS 2016은 AU7로 업그레이드 하기 위한 필수 구성 요소입니다. 
 APS AU7는 기본적으로 통계를 자동으로 만들고 업데이트 합니다. 통계 설정을 업데이트 하기 위해 관리자는 [Configuration Manager](appliance-configuration.md#CMTasks)의 새로운 기능 스위치 메뉴 항목을 사용할 수 있습니다. [기능 스위치](appliance-feature-switch.md) 는 통계의 자동 생성, 자동 업데이트 및 비동기 업데이트 동작을 제어 합니다. [ALTER DATABASE (병렬 데이터 웨어하우스)](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw) 문을 사용 하 여 통계 설정을 업데이트할 수도 있습니다.
 
 ### <a name="t-sql"></a>T-SQL
-@var이제 선택이 지원 됩니다. 자세한 내용은 [지역 변수 선택](/sql/t-sql/language-elements/select-local-variable-transact-sql) 을 참조 하세요. 
+@var이제 선택이 지원 됩니다. 자세한 내용은 [지역 변수 선택](../t-sql/language-elements/select-local-variable-transact-sql.md) 을 참조 하세요. 
 
-이제 쿼리 힌트 해시 및 순서 그룹이 지원 됩니다. 자세한 내용은 [힌트 (transact-sql)-쿼리](/sql/t-sql/queries/hints-transact-sql-query) 를 참조 하세요.
+이제 쿼리 힌트 해시 및 순서 그룹이 지원 됩니다. 자세한 내용은 [힌트 (transact-sql)-쿼리](../t-sql/queries/hints-transact-sql-query.md) 를 참조 하세요.
 
 ### <a name="feature-switch"></a>기능 스위치
 APS AU7 [Configuration Manager](launch-the-configuration-manager.md)의 기능 스위치를 소개 합니다. AutoStatsEnabled 및 DmsProcessStopMessageTimeoutInSeconds는 이제 관리자가 변경할 수 있는 구성 가능한 옵션입니다.
@@ -264,7 +264,7 @@ The proper formats have at least two big advantages.  One big advantage is that 
 [BULK INSERT]:/sql/t-sql/statements/bulk-insert-transact-sql
 [bcp 유틸리티]:/sql/tools/bcp-utility
 [없으면]:/sql/t-sql/data-types/uniqueidentifier-transact-sql
-[번호]:/sql/t-sql/data-types/decimal-and-numeric-transact-sql
+[NUMERIC]:/sql/t-sql/data-types/decimal-and-numeric-transact-sql
 [행 또는 범위]:/sql/t-sql/queries/select-over-clause-transact-sql
 [FIRST_VALUE]:/sql/t-sql/functions/first-value-transact-sql
 [LAST_VALUE]:/sql/t-sql/functions/last-value-transact-sql
@@ -278,7 +278,4 @@ The proper formats have at least two big advantages.  One big advantage is that 
 
 
   
-
-  
-
 

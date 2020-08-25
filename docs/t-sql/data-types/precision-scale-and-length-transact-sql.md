@@ -1,4 +1,5 @@
 ---
+description: 전체 자릿수, 소수 자릿수 및 길이(Transact-SQL)
 title: 전체 자릿수, 소수 자릿수 및 길이(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/22/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: fbc9ad2c-0d3b-4e98-8fdd-4d912328e40a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 6ecb198e9c2bcc7e23d1b4b66e8109ecf7c8fb5a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4f48de11f648d48a3d727514718b8bdd6304ad57
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85786575"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422886"
 ---
 # <a name="precision-scale-and-length-transact-sql"></a>전체 자릿수, 소수 자릿수 및 길이(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,7 +52,7 @@ UNION, EXCEPT 또는 INTERSECT를 사용하여 데이터 형식은 같지만 길
   
 피연산자 식은 전체 자릿수 p1과 소수 자릿수 s1을 가진 식 e1, 전체 자릿수 p2와 소수 자릿수 s2를 가진 식 e2로 표시합니다. **10진수**가 아닌 모든 식의 전체 자릿수와 소수 자릿수는 해당 식의 데이터 형식에 대해 정의된 전체 자릿수와 소수 자릿수입니다. 함수 max(a,b)는 "a" 또는 "b"의 더 큰 값을 사용합니다. 마찬가지로 min(a,b)은 "a" 또는 "b"의 더 작은 값을 사용합니다.
   
-|작업(Operation)|결과 전체 자릿수|결과 소수 자릿수 *|  
+|작업|결과 전체 자릿수|결과 소수 자릿수 *|  
 |---|---|---|
 |e1 + e2|max(s1, s2) + max(p1-s1, p2-s2) + 1|max(s1, s2)|  
 |e1 - e2|max(s1, s2) + max(p1-s1, p2-s2) + 1|max(s1, s2)|  

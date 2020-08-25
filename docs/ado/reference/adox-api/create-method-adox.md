@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 64f5c21c-b581-42d8-bdc7-c4f1bebaf105
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b291651caa93e93999d87a926c9abe391e71d21e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b5add8972d95413841a6c9c45de2dcc26d8cbb24
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440215"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88770842"
 ---
 # <a name="create-method-adox"></a>Create 메서드(ADOX)
 새 카탈로그를 만듭니다.  
@@ -39,13 +39,13 @@ Catalog.Create ConnectString
  데이터 원본에 연결 하는 데 사용 되는 **문자열** 값입니다.  
   
 ## <a name="remarks"></a>설명  
- **Create** 메서드는 *connectstring*에 지정 된 데이터 원본에 대 한 새 ADO [연결](../../../ado/reference/ado-api/connection-object-ado.md) 을 만들고 엽니다. 성공 하면 새 **연결** 개체가 [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) 속성에 할당 됩니다.  
+ **Create** 메서드는 *connectstring*에 지정 된 데이터 원본에 대 한 새 ADO [연결](../ado-api/connection-object-ado.md) 을 만들고 엽니다. 성공 하면 새 **연결** 개체가 [ActiveConnection](./activeconnection-property-adox.md) 속성에 할당 됩니다.  
   
  공급자가 새 카탈로그 만들기를 지원 하지 않는 경우 오류가 발생 합니다.  
   
 ## <a name="applies-to"></a>적용 대상  
- [Catalog 개체(ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)  
+ [카탈로그 개체(ADOX)](./catalog-object-adox.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [Create 메서드 예제 (VB)](../../../ado/reference/adox-api/create-method-example-vb.md)   
- [ActiveConnection 속성(ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)
+ [Create 메서드 예제 (VB)](./create-method-example-vb.md)   
+ [ActiveConnection 속성(ADOX)](./activeconnection-property-adox.md)

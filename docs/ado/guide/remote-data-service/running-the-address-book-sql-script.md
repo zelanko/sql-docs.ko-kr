@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 409b3f8b-0ced-4867-acbe-b245dcdf6702
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 17ea6bc39986239f0dc7c16c245bc08807b3f207
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0c8c47f4e5cd5235ee0289df27d31193db8a2e1d
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451995"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759313"
 ---
 # <a name="running-the-address-book-sql-script"></a>주소록 SQL 스크립트 실행
 > [!IMPORTANT]
@@ -69,7 +69,5 @@ ms.locfileid: "88451995"
   
 7.  실행 한 후 **쿼리**, **쿼리 분석기**및 **엔터프라이즈 관리자** 창을 닫습니다.  
   
-## <a name="see-also"></a>참고 항목  
- [주소록 예제 애플리케이션 실행](../../../ado/guide/remote-data-service/running-the-address-book-sample-application.md)
-
-
+## <a name="see-also"></a>관련 항목  
+ [주소록 예제 애플리케이션 실행](./running-the-address-book-sample-application.md)

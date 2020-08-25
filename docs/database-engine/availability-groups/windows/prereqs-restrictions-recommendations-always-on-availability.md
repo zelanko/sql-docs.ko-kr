@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0ffcf45a0126e3443b1a5b3ac43cf9a0bdf7d6a1
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: 8a2a54ac42cef552fa24af5d10171eda899163e5
+ms.sourcegitcommit: dec2e2d3582c818cc9489e6a824c732b91ec3aeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87363006"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88092014"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-always-on-availability-groups"></a>Always On 가용성 그룹에 대한 필수 조건, 제한 사항 및 권장 사항
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -34,12 +34,12 @@ ms.locfileid: "87363006"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]을 배포하기 전에 이 항목의 모든 섹션을 읽어 보십시오.  
     
-##  <a name="net-hotfixes-that-support-availability-groups"></a><a name="DotNetHotfixes"></a> 가용성 그룹을 지원하는 .Net 핫픽스  
- [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 에 사용할 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]구성 요소 및 기능에 따라 다음 표에서 확인할 수 있는 추가 .Net 핫픽스를 설치해야 할 수 있습니다. 이러한 핫픽스는 순서에 관계없이 설치할 수 있습니다.  
+##  <a name="net-hotfixes-that-support-availability-groups"></a><a name="DotNetHotfixes"></a> 가용성 그룹을 지원하는 .NET 핫픽스  
+ [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]과 함께 사용할 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 구성 요소 및 기능에 따라 다음 테이블에 표시되어 있는 추가 .NET 핫픽스를 설치해야 할 수 있습니다. 이러한 핫픽스는 순서에 관계없이 설치할 수 있습니다.  
   
 |종속 기능|핫픽스|링크|  
 |-----------------------|------------|----------|  
-|[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]|.Net 3.5 SP1 핫픽스는 읽기 전용 및 multisubnetFailover의 Always On 기능을 위한 SQL 클라이언트에 대한 지원을 추가합니다. 각 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 보고서 서버에 핫픽스를 설치해야 합니다.|KB 2654347: [Always On 기능 지원을 추가하기 위한 .Net 3.5 SP1 핫픽스](https://go.microsoft.com/fwlink/?LinkId=242896)|  
+|[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]|.NET 3.5 SP1 핫픽스는 읽기 전용 및 multisubnetfailover Always On 기능을 위한 지원을 SQL 클라이언트에 추가합니다. 각 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 보고서 서버에 핫픽스를 설치해야 합니다.|KB 2654347: [Always On 기능을 위한 지원을 추가하는 .NET 3.5 SP1 핫픽스](https://go.microsoft.com/fwlink/?LinkId=242896)|  
   
 
 ###  <a name="checklist-requirements-windows-system"></a><a name="SystemRequirements"></a> 검사 목록: 요구 사항(Windows 시스템)  
@@ -162,7 +162,9 @@ ms.locfileid: "87363006"
   
     -   각각의 주 복제본은 각 주 데이터베이스에 대해 1개의 로그 캡처 스레드를 사용합니다. 또한 각 보조 데이터베이스에 대해 1개의 로그 전송 스레드를 사용합니다. 로그 전송 스레드는 아무 작업이 없는 상태가 지속된 지 15초 이내에 해제됩니다.    
   
-    -   보조 복제본의 백업은 백업 작업 시간 동안 주 스레드를 복제본에 보관합니다.  
+    -   보조 복제본의 백업은 백업 작업 시간 동안 주 스레드를 복제본에 보관합니다. 
+
+-  SQL Server 2019에서는 메모리 최적화 가용성 그룹 데이터베이스를 위한 병렬 다시 실행이 도입되었습니다. SQL Server 2016 및 2017에서는 가용성 그룹의 데이터베이스가 메모리 최적화된 경우에도 디스크 기반 테이블에서 병렬 다시 실행을 사용하지 않습니다. 
   
  자세한 내용은 [Always On - HADRON 학습 시리즈: HADRON 사용 데이터베이스의 작업자 풀 사용](https://blogs.msdn.microsoft.com/psssql/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases/)(CSS [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 엔지니어 블로그)을 참조하세요.  
   

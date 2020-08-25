@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 148dc3033fdcf0fe9b5e86f4e3efa69717c32dfd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4d28d64c4c59655c1f08eb0e4c6dc979a7814652
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74399829"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778412"
 ---
 # <a name="t-sql-language-elements-for-parallel-data-warehouse"></a>병렬 데이터 웨어하우스의 t-sql 언어 요소
 PDW (병렬 데이터 웨어하우스)를 SQL Server 하는 APS (분석 플랫폼 시스템)의 t-sql 언어 요소입니다.
@@ -23,53 +23,53 @@ PDW (병렬 데이터 웨어하우스)를 SQL Server 하는 APS (분석 플랫�
 * [구문 표기 규칙](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 * [개체 명명 규칙](../relational-databases/databases/database-identifiers.md)
 * [예약 된 키워드](../t-sql/language-elements/reserved-keywords-transact-sql.md)
-* [정렬과](https://msdn.microsoft.com/library/ff848763.aspx)
+* [정렬과](../t-sql/statements/collations.md?view=sql-server-ver15)
 * [주석만](../t-sql/language-elements/comment-transact-sql.md)
 * [상수가](../t-sql/data-types/constants-transact-sql.md)
 * [데이터 형식](../t-sql/data-types/data-types-transact-sql.md)
-* [실행할](../t-sql/language-elements/execute-transact-sql.md)
+* [EXECUTE](../t-sql/language-elements/execute-transact-sql.md)
 * [산술식](../t-sql/language-elements/expressions-transact-sql.md)
 * [KILL](../t-sql/language-elements/kill-transact-sql.md)
 * [IDENTITY 속성 해결 방법](../t-sql/statements/create-table-transact-sql-identity-property.md)
-* [인쇄가](../t-sql/language-elements/print-transact-sql.md)
-* [사용](../t-sql/language-elements/use-transact-sql.md)
+* [PRINT](../t-sql/language-elements/print-transact-sql.md)
+* [USE](../t-sql/language-elements/use-transact-sql.md)
 
 ## <a name="batches-control-of-flow-and-variables"></a>일괄 처리, 흐름 제어 및 변수
 * [BEGIN...END](../t-sql/language-elements/begin-end-transact-sql.md)
-* [끊어야](../t-sql/language-elements/break-transact-sql.md)
-* [있다고@local_variable](../t-sql/language-elements/declare-local-variable-transact-sql.md)
-* [... 사람이](../t-sql/language-elements/if-else-transact-sql.md)
+* [BREAK](../t-sql/language-elements/break-transact-sql.md)
+* [선언 @local_variable](../t-sql/language-elements/declare-local-variable-transact-sql.md)
+* [IF...ELSE](../t-sql/language-elements/if-else-transact-sql.md)
 * [RAISERROR](../t-sql/language-elements/raiserror-transact-sql.md)
 * [SET@local_variable](../t-sql/language-elements/set-local-variable-transact-sql.md)
-* [반환할](../t-sql/language-elements/throw-transact-sql.md)
-* [TRY ... TRY-CATCH](../t-sql/language-elements/try-catch-transact-sql.md)
-* [진행](../t-sql/language-elements/while-transact-sql.md)
+* [THROW](../t-sql/language-elements/throw-transact-sql.md)
+* [TRY...CATCH](../t-sql/language-elements/try-catch-transact-sql.md)
+* [WHILE](../t-sql/language-elements/while-transact-sql.md)
 
 ## <a name="operators"></a>연산자
 * [+(더하기)](../t-sql/language-elements/add-transact-sql.md)
-* [+ (문자열 연결)](../t-sql/language-elements/string-concatenation-transact-sql.md)
+* [+(문자열 연결)](../t-sql/language-elements/string-concatenation-transact-sql.md)
 * [-(음수)](../t-sql/language-elements/unary-operators-negative.md)
 * [-(빼기)](../t-sql/language-elements/subtract-transact-sql.md)
 * [*(곱하기)](../t-sql/language-elements/multiply-transact-sql.md)
 * [/(나누기)](../t-sql/language-elements/divide-transact-sql.md)
-* [나눈](../t-sql/language-elements/modulo-transact-sql.md)
+* [나머지값](../t-sql/language-elements/modulo-transact-sql.md)
 
 ## <a name="wildcard-characters-to-match"></a>일치하는 와일드 카드 문자
 * [= (같음)](../t-sql/language-elements/equals-transact-sql.md)
-* [> (다음보다 큼)](../t-sql/language-elements/greater-than-transact-sql.md)
-* [< (다음보다 적음)](../t-sql/language-elements/less-than-transact-sql.md)
+* [> (보다 큼)](../t-sql/language-elements/greater-than-transact-sql.md)
+* [< (보다 작음)](../t-sql/language-elements/less-than-transact-sql.md)
 * [>= (다음보다 크거나 다음과 같음)](../t-sql/language-elements/greater-than-or-equal-to-transact-sql.md)
-* [<= (다음보다 작거나 같음)](../t-sql/language-elements/less-than-or-equal-to-transact-sql.md)
+* [<= (작거나 같음)](../t-sql/language-elements/less-than-or-equal-to-transact-sql.md)
 * [<>  (같지 않음)](../t-sql/language-elements/not-equal-to-transact-sql-traditional.md)
 * [\!= (같지 않음)](../t-sql/language-elements/not-equal-to-transact-sql-exclamation.md)
-* [하거나](../t-sql/language-elements/and-transact-sql.md)
+* [및](../t-sql/language-elements/and-transact-sql.md)
 * [BETWEEN](../t-sql/language-elements/between-transact-sql.md)
-* [있으면](../t-sql/language-elements/exists-transact-sql.md)
-* [진행](../t-sql/language-elements/in-transact-sql.md)
+* [EXISTS](../t-sql/language-elements/exists-transact-sql.md)
+* [IN](../t-sql/language-elements/in-transact-sql.md)
 * [아닌](../t-sql/queries/is-null-transact-sql.md)
 * [LIKE](../t-sql/language-elements/like-transact-sql.md)
-* [나타내지](../t-sql/language-elements/not-transact-sql.md)
-* [디스크나](../t-sql/language-elements/or-transact-sql.md)
+* [다음이 아님](../t-sql/language-elements/not-transact-sql.md)
+* [OR](../t-sql/language-elements/or-transact-sql.md)
 
 ### <a name="bitwise-operators"></a>비트 연산자
 * [&(비트 단위 AND)](../t-sql/language-elements/bitwise-and-transact-sql.md)
@@ -106,7 +106,7 @@ PDW (병렬 데이터 웨어하우스)를 SQL Server 하는 APS (분석 플랫�
 * [CONCAT](../t-sql/functions/concat-transact-sql.md)
 * [COS](../t-sql/functions/cos-transact-sql.md)
 * [COT](../t-sql/functions/cot-transact-sql.md)
-* [수](../t-sql/functions/count-transact-sql.md)
+* [COUNT](../t-sql/functions/count-transact-sql.md)
 * [COUNT_BIG](../t-sql/functions/count-big-transact-sql.md)
 * [CUME_DIST](../t-sql/functions/cume-dist-transact-sql.md)
 * [CURRENT_TIMESTAMP](../t-sql/functions/current-timestamp-transact-sql.md)
@@ -154,7 +154,7 @@ PDW (병렬 데이터 웨어하우스)를 SQL Server 하는 APS (분석 플랫�
 * [LOWER](../t-sql/functions/lower-transact-sql.md)
 * [LTRIM](../t-sql/functions/ltrim-transact-sql.md)
 * [MAX](../t-sql/functions/max-transact-sql.md)
-* [최소](../t-sql/functions/min-transact-sql.md)
+* [MIN](../t-sql/functions/min-transact-sql.md)
 * [MONTH](../t-sql/functions/month-transact-sql.md)
 * [NCHAR](../t-sql/functions/nchar-transact-sql.md)
 * [NTILE](../t-sql/functions/ntile-transact-sql.md)
@@ -171,7 +171,7 @@ PDW (병렬 데이터 웨어하우스)를 SQL Server 하는 APS (분석 플랫�
 * [PERCENTILE_DISC](../t-sql/functions/percentile-disc-transact-sql.md)
 * [PERCENT_RANK](../t-sql/functions/percent-rank-transact-sql.md)
 * [PI](../t-sql/functions/pi-transact-sql.md)
-* [동력](../t-sql/functions/power-transact-sql.md)
+* [POWER](../t-sql/functions/power-transact-sql.md)
 * [QUOTENAME](../t-sql/functions/quotename-transact-sql.md)
 * [RADIANS](../t-sql/functions/radians-transact-sql.md)
 * [RAND](../t-sql/functions/rand-transact-sql.md)
@@ -194,14 +194,14 @@ PDW (병렬 데이터 웨어하우스)를 SQL Server 하는 APS (분석 플랫�
 * [SPACE](../t-sql/functions/space-transact-sql.md)
 * [SQL_VARIANT_PROPERTY](../t-sql/functions/sql-variant-property-transact-sql.md)
 * [SQRT](../t-sql/functions/sqrt-transact-sql.md)
-* [대괄호](../t-sql/functions/square-transact-sql.md)
+* [SQUARE](../t-sql/functions/square-transact-sql.md)
 * [STATS_DATE](../t-sql/functions/stats-date-transact-sql.md)
 * [STDEV](../t-sql/functions/stdev-transact-sql.md)
 * [STDEVP](../t-sql/functions/stdevp-transact-sql.md)
 * [STR](../t-sql/functions/str-transact-sql.md)
 * [STUFF](../t-sql/functions/stuff-transact-sql.md)
 * [SUBSTRING](../t-sql/functions/substring-transact-sql.md)
-* [합계](../t-sql/functions/sum-transact-sql.md)
+* [SUM](../t-sql/functions/sum-transact-sql.md)
 * [SUSER_SNAME](../t-sql/functions/suser-sname-transact-sql.md)
 * [SWITCHOFFSET](../t-sql/functions/switchoffset-transact-sql.md)
 * [SYSDATETIME](../t-sql/functions/sysdatetime-transact-sql.md)
@@ -215,7 +215,7 @@ PDW (병렬 데이터 웨어하우스)를 SQL Server 하는 APS (분석 플랫�
 * [TYPE_ID](../t-sql/functions/type-id-transact-sql.md)
 * [TYPE_NAME](../t-sql/functions/type-name-transact-sql.md)
 * [TYPEPROPERTY](../t-sql/functions/typeproperty-transact-sql.md)
-* [유니코드](../t-sql/functions/unicode-transact-sql.md)
+* [UNICODE](../t-sql/functions/unicode-transact-sql.md)
 * [UPPER](../t-sql/functions/upper-transact-sql.md)
 * [사용자](../t-sql/functions/user-transact-sql.md)
 * [USER_NAME](../t-sql/functions/user-name-transact-sql.md)
@@ -230,7 +230,7 @@ PDW (병렬 데이터 웨어하우스)를 SQL Server 하는 APS (분석 플랫�
 ## <a name="diagnostic-sessions"></a>진단 세션
 * [CREATE DIAGNOSTICS SESSION](../t-sql/language-elements/create-diagnostics-session-transact-sql.md)
 
-## <a name="procedures"></a>절차
+## <a name="procedures"></a>프로시저
 * [sp_addrolemember](../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)
 * [sp_columns](../relational-databases/system-stored-procedures/sp-columns-transact-sql.md)
 * [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)

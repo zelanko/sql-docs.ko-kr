@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3a2644e9-d634-4ae6-a5b7-13fb7b317ec7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1fddb0d0fb2d7a49c7b9983c03157922862f5d96
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1b0c28fdc0487fc7f14982588eefc8a7011f33b7
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452005"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759353"
 ---
 # <a name="running-the-address-book-sample-application"></a>주소록 예제 애플리케이션 실행
 > [!IMPORTANT]
@@ -42,9 +42,5 @@ ms.locfileid: "88452005"
   
 3.  그러면 주소록 샘플 응용 프로그램에서 다양 한 시나리오를 시험해 볼 수 있습니다. 예를 들어 전자 메일 이름에 따라 개인을 검색 하거나 "Program Manager" 라는 제목의 모든 사용자를 나열 하거나 기존 레코드를 편집할 수 있습니다. **찾기** 를 클릭 하 여 사용 가능한 모든 이름으로 데이터 표를 채웁니다.  
   
-## <a name="see-also"></a>참고 항목  
- [주소록 데이터 바인딩 개체](../../../ado/guide/remote-data-service/address-book-data-binding-object.md)
-
-
-
-
+## <a name="see-also"></a>관련 항목  
+ [주소록 데이터 바인딩 개체](./address-book-data-binding-object.md)
