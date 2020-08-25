@@ -23,7 +23,7 @@ ms.locfileid: "88776687"
 # <a name="ado-enumerated-constants"></a>ADO 열거 상수
 디버깅을 지원 하기 위해 ADO 열거형에는 각 상수에 대 한 값이 나열 됩니다. 그러나이 값은 전적으로 advise 이며 ADO의 릴리스 간에 변경 될 수 있습니다. 코드는 열거 된 각 상수의 실제 값이 아닌 이름에만 의존 해야 합니다.  
   
-|상수|설명|  
+|상수|Description|  
 |-|-|  
 |[ADCPROP_ASYNCTHREADPRIORITY_ENUM](./adcprop-asyncthreadpriority-enum.md)|RDS **레코드 집합** 개체의 경우 데이터를 검색 하는 비동기 스레드의 실행 우선 순위를 지정 합니다.|  
 |[ADCPROP_AUTORECALC_ENUM](./adcprop-autorecalc-enum.md)|**MSDataShape** 공급자가 계층적 **레코드 집합**에서 집계 열과 계산 된 열을 다시 계산 하는 시기를 지정 합니다.|  

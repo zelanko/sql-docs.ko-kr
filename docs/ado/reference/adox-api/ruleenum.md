@@ -26,7 +26,7 @@ ms.locfileid: "88769462"
 # <a name="ruleenum"></a>RuleEnum
 [키](./key-object-adox.md) 를 삭제할 때 따라야 하는 규칙을 지정 합니다.  
   
-|상수|값|설명|  
+|상수|값|Description|  
 |--------------|-----------|-----------------|  
 |**adRICascade**|1|Cascade 변경|  
 |**adRINone**|0|기본값 아무 동작도 수행되지 않습니다.|  

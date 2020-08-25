@@ -38,10 +38,10 @@ Set parameter = command.CreateParameter (Name, Type, Direction, Size, Value)
  **매개 변수** 개체를 반환 합니다.  
   
 #### <a name="parameters"></a>매개 변수  
- *이름*  
+ *Name*  
  선택 사항입니다. **매개 변수** 개체의 이름을 포함 하는 **문자열** 값입니다.  
   
- *형식*  
+ *유형*  
  선택 사항입니다. **매개 변수** 개체의 데이터 형식을 지정 하는 [DataTypeEnum](./datatypeenum.md) 값입니다.  
   
  *Direction*  

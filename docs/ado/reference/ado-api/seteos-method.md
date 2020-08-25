@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 707c18ca-6a56-4970-bbd6-ae1fb86a0b8a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fd1d0418fe0c6a0a475594605acc6f28851a777e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4ffe6f7d4a8861fb58f3b72f2b75de3de1ac9736
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442125"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777492"
 ---
 # <a name="seteos-method"></a>SetEOS 메서드
 스트림의 끝 위치를 설정 합니다.  
@@ -35,12 +35,12 @@ Stream.SetEOS
 ```  
   
 ## <a name="remarks"></a>설명  
- **SetEOS** 는 현재 [위치](../../../ado/reference/ado-api/position-property-ado.md) 를 스트림의 끝으로 만들어 [EOS](../../../ado/reference/ado-api/eos-property.md) 속성의 값을 업데이트 합니다. 현재 위치 다음에 나오는 모든 바이트 또는 문자는 잘립니다.  
+ **SetEOS** 는 현재 [위치](./position-property-ado.md) 를 스트림의 끝으로 만들어 [EOS](./eos-property.md) 속성의 값을 업데이트 합니다. 현재 위치 다음에 나오는 모든 바이트 또는 문자는 잘립니다.  
   
- [Write](../../../ado/reference/ado-api/write-method.md), [WriteText](../../../ado/reference/ado-api/writetext-method.md)및 [CopyTo](../../../ado/reference/ado-api/copyto-method-ado.md) 는 기존 **스트림** 개체의 추가 값을 자르지 않으므로 **SetEOS**를 사용 하 여 새 스트림 끝 위치를 설정 하 여 이러한 바이트 또는 문자를 자를 수 있습니다.  
+ [Write](./write-method.md), [WriteText](./writetext-method.md)및 [CopyTo](./copyto-method-ado.md) 는 기존 **스트림** 개체의 추가 값을 자르지 않으므로 **SetEOS**를 사용 하 여 새 스트림 끝 위치를 설정 하 여 이러한 바이트 또는 문자를 자를 수 있습니다.  
   
 > [!CAUTION]
 >  **Eos** 를 스트림의 실제 끝 앞의 위치로 설정 하면 새 **eos** 위치 이후의 모든 데이터가 손실 됩니다.  
   
 ## <a name="applies-to"></a>적용 대상  
- [스트림 개체(ADO)](../../../ado/reference/ado-api/stream-object-ado.md)
+ [스트림 개체(ADO)](./stream-object-ado.md)

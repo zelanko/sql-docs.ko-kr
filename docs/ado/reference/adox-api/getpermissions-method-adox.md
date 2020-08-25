@@ -40,7 +40,7 @@ ReturnValue=GroupOrUser.GetPermissions(Name, ObjectType    [,ObjectTypeId])
  그룹이 나 사용자가 개체에 대해 갖는 사용 권한을 포함 하는 비트 마스크를 지정 하는 **Long** 값을 반환 합니다. 이 값은 하나 이상의 [RightsEnum](./rightsenum.md) 상수 일 수 있습니다.  
   
 #### <a name="parameters"></a>매개 변수  
- *이름*  
+ *Name*  
  사용 권한을 설정할 개체의 이름을 지정 하는 **Variant** 값입니다. 개체 컨테이너에 대 한 사용 권한을 얻으려면 *이름* 을 null 값으로 설정 합니다.  
   
  *ObjectType*  

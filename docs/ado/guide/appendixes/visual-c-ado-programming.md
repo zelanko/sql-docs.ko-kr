@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 11233b96-e05c-4221-9aed-5f20944b0f1c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ae93db522b465b85feefe85cd94df4be3d29f062
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 66d06630a6bc39c49b9a3e55276bed574869d40d
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453955"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806766"
 ---
 # <a name="visual-c-ado-programming"></a>Visual C++ ADO 프로그래밍
 ADO API 참조는 Microsoft Visual Basic와 비슷한 구문을 사용 하 여 ADO API (응용 프로그래밍 인터페이스)의 기능을 설명 합니다. 대상 사용자가 모든 사용자 이기는 하지만 ADO 프로그래머는 Visual Basic, Visual C++ ( **#import** 지시문 포함 및 제외) 및 Visual j + + (ADO/WFC 클래스 패키지 사용)와 같은 다양 한 언어를 사용 합니다.  
@@ -29,7 +29,7 @@ ADO API 참조는 Microsoft Visual Basic와 비슷한 구문을 사용 하 여 A
 > [!NOTE]
 > Microsoft에서 2004의 Visual j + +에 대 한 지원을 종료 했습니다.
 
- 이러한 다양성을 수용 하기 위해 [Visual C++ 구문 인덱스에 대 한 ADO](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-c.md) 는 API 참조에서 기능, 매개 변수, 예외 동작 등에 대 한 일반적인 설명에 대 한 링크와 함께 Visual C++ 언어별 구문을 제공 합니다.  
+ 이러한 다양성을 수용 하기 위해 [Visual C++ 구문 인덱스에 대 한 ADO](./using-ado-with-microsoft-visual-c.md) 는 API 참조에서 기능, 매개 변수, 예외 동작 등에 대 한 일반적인 설명에 대 한 링크와 함께 Visual C++ 언어별 구문을 제공 합니다.  
   
  ADO는 COM (구성 요소 개체 모델) 인터페이스를 사용 하 여 구현 됩니다. 그러나 프로그래머가 다른 프로그래밍 언어로 COM을 사용 하는 것이 더 쉽습니다. 예를 들어, COM을 사용 하는 거의 모든 세부 정보는 Visual Basic 프로그래머에 게 암시적으로 처리 되는 반면 Visual C++ 프로그래머는 해당 세부 정보에 참석 해야 합니다.  
   
@@ -205,7 +205,7 @@ pRecordset->NextRecordset(NULL);
   
  Ado 오류가 발생 하 여 ado 작업이 실패 하는 것을 명심 해야 합니다. 기본 공급자가 반환 하는 오류는 **연결** 개체 **오류** 컬렉션에 **오류** 개체로 표시 됩니다.  
   
- **#Import** 지시문은 ADO .dll에 선언 된 메서드 및 속성에 대 한 오류 처리 루틴만 만듭니다. 그러나 사용자 고유의 오류 검사 매크로나 인라인 함수를 작성 하 여 이와 동일한 오류 처리 메커니즘을 활용할 수 있습니다. 예제는 다음 섹션의 [Visual C++ 확장](../../../ado/guide/appendixes/visual-c-extensions-for-ado.md)또는 코드 항목을 참조 하세요.  
+ **#Import** 지시문은 ADO .dll에 선언 된 메서드 및 속성에 대 한 오류 처리 루틴만 만듭니다. 그러나 사용자 고유의 오류 검사 매크로나 인라인 함수를 작성 하 여 이와 동일한 오류 처리 메커니즘을 활용할 수 있습니다. 예제는 다음 섹션의 [Visual C++ 확장](./visual-c-extensions-for-ado.md)또는 코드 항목을 참조 하세요.  
   
 ## <a name="visual-c-equivalents-of-visual-basic-conventions"></a>Visual C++ 해당 Visual Basic 규칙  
  다음은 ADO 설명서에서 Visual Basic 코딩 된 몇 가지 규칙에 대 한 요약 및 Visual C++의 해당 항목입니다.  
@@ -327,7 +327,7 @@ End Sub
   
  다음 Visual C++ 예제에서는 **_variant_t**에서 사용 되는 **SafeArray** 를 사용 하는 방법을 보여 줍니다.  
   
-#### <a name="notes"></a>메모  
+#### <a name="notes"></a>참고  
  다음 메모는 코드 예제의 주석 처리 된 섹션에 해당 합니다.  
   
 1.  다시 한 번 TESTHR () 인라인 함수를 정의 하 여 기존 오류 처리 메커니즘을 활용 합니다.  
@@ -436,7 +436,7 @@ End Sub
   
  이 Visual C++ 예제에서는 **Get** / **Put** / **putref**_속성_을 보여 줍니다.  
   
-#### <a name="notes"></a>메모  
+#### <a name="notes"></a>참고  
  다음 메모는 코드 예제의 주석 처리 된 섹션에 해당 합니다.  
   
 1.  이 예제에서는 두 가지 형식의 누락 된 문자열 인수를 사용 합니다. 명시적 상수, **Strmissing**및 컴파일러가 **Open** 메서드의 범위에 대해 존재 하는 임시 **_bstr_t** 을 만드는 데 사용 하는 문자열입니다.  
@@ -555,7 +555,7 @@ void main() {
 ### <a name="casting-ado-object-pointers-with-idispatch-"></a>를 사용 하 여 ADO 개체 포인터 캐스팅 (IDispatch *)  
  다음 Visual C++ 예제에서는 (IDispatch *)를 사용 하 여 ADO 개체 포인터를 캐스팅 하는 방법을 보여 줍니다.  
   
-#### <a name="notes"></a>메모  
+#### <a name="notes"></a>참고  
  다음 메모는 코드 예제의 주석 처리 된 섹션에 해당 합니다.  
   
 1.  명시적으로 코딩 된 **Variant**에서 열린 **연결** 개체를 지정 합니다. (IDispatch)로 캐스팅 하면 \* 올바른 생성자가 호출 됩니다. 또한 두 번째 **_variant_t** 매개 변수를 기본값인 **true**로 명시적으로 설정 하면 **Recordset:: Open** 작업이 종료 될 때 개체 참조 개수가 올바릅니다.  

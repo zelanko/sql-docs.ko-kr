@@ -10,17 +10,17 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 4325dfa9c16edba12c2bba694b47c1b0875c7c6f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 08/25/2020
 ms.locfileid: "74400310"
 ---
 # <a name="software-servicing-in-analytics-platform-system"></a>분석 플랫폼 시스템의 소프트웨어 서비스
 이 섹션에서는 WSUS 및 분석 플랫폼 시스템 핫픽스를 비롯 하 여 분석 플랫폼 시스템 어플라이언스에 대 한 소프트웨어 서비스 요구 사항을 요약 합니다.  
   
 ## <a name="software-servicing-basics"></a><a name="Basics"></a>소프트웨어 서비스 기본 사항  
-**WSUS:** Windows Server Update Services (WSUS)에서 업데이트를 받도록 분석 플랫폼 시스템 어플라이언스를 구성 해야 합니다. 이러한 업데이트에는 어플라이언스 소프트웨어에 대 한 중요 한 변경 내용이 포함 됩니다. 구성 된 후에는 많은 업데이트가 자동으로 설치 되며 실습 관리가 필요 하지 않습니다. 일반적으로 WSUS 업데이트는 새 어플라이언스를 설정 하는 동안 수행 되는 [Windows Server Update Services &#40;wsus&#41; &#40;분석 플랫폼&#41;시스템을 구성](configure-windows-server-update-services-wsus.md) 하는 단계를 구성 합니다. 그렇지 않은 경우이 구성 단계는 나중에 수행할 수 있습니다. WSUS에 대 한 자세한 내용은 [wsus 웹 사이트 가이드](https://go.microsoft.com/fwlink/?LinkId=202417)를 참조 하세요.  
+**WSUS:** Windows Server Update Services (WSUS)에서 업데이트를 받도록 분석 플랫폼 시스템 어플라이언스를 구성 해야 합니다. 이러한 업데이트에는 어플라이언스 소프트웨어에 대 한 중요 한 변경 내용이 포함 됩니다. 구성 된 후에는 많은 업데이트가 자동으로 설치 되며 실습 관리가 필요 하지 않습니다. 일반적으로 WSUS 업데이트는 새 어플라이언스를 설정 하는 동안 수행 되는 [Windows Server Update Services &#40;wsus&#41; &#40;분석 플랫폼&#41;시스템을 구성 ](configure-windows-server-update-services-wsus.md) 하는 단계를 구성 합니다. 그렇지 않은 경우이 구성 단계는 나중에 수행할 수 있습니다. WSUS에 대 한 자세한 내용은 [wsus 웹 사이트 가이드](https://go.microsoft.com/fwlink/?LinkId=202417)를 참조 하세요.  
   
 **핫픽스:** 또한 분석 플랫폼 시스템 핫픽스를 적용 해야 할 수도 있습니다. *핫픽스* 는 분석 플랫폼 시스템 소프트웨어의 문제를 해결 하기 위해 특정 고객에 게 생성 되는 소프트웨어 업데이트입니다. 각 핫픽스는 고객 관련 문제에 대 한 픽스를 설치 하는 실행 파일입니다. 각 핫픽스에는 Windows, SQL Server 및 분석 플랫폼 시스템에 대해 이전에 릴리스된 모든 소프트웨어 업데이트가 누적 되어 있습니다. 핫픽스를 설치 해야 하는 경우 Microsoft 지원에서 핫픽스와 지침을 제공 합니다.  
   
@@ -31,11 +31,11 @@ ms.locfileid: "74400310"
 ## <a name="software-servicing-topics"></a>소프트웨어 서비스 항목  
 다음 항목에서는 어플라이언스에서 소프트웨어 서비스를 관리 하는 방법을 설명 합니다.  
   
--   [Microsoft 업데이트 &#40;분석 플랫폼 시스템&#41;다운로드 및 적용](download-and-apply-microsoft-updates.md)  
+-   [Microsoft 업데이트 &#40;분석 플랫폼 시스템&#41;다운로드 및 적용 ](download-and-apply-microsoft-updates.md)  
   
 -   [Microsoft 업데이트 &#40;분석 플랫폼 시스템을 제거&#41;](uninstall-microsoft-updates.md)  
   
--   [Analytics platform System 핫픽스 &#40;Analytics platform system&#41;적용](apply-analytics-platform-system-hotfixes.md)  
+-   [Analytics platform System 핫픽스 &#40;Analytics platform system&#41;적용 ](apply-analytics-platform-system-hotfixes.md)  
   
 -   [분석 플랫폼 시스템 핫픽스 &#40;분석 플랫폼 시스템을 제거&#41;](uninstall-analytics-platform-system-hotfixes.md)  
   

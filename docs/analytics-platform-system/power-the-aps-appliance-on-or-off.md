@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: ee70338b5a46ec60d808e489d982fd80692c5d1d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 08/25/2020
 ms.locfileid: "74400628"
 ---
 # <a name="power-the-appliance-on-or-off-for-analytics-platform-system"></a>분석 플랫폼 시스템에 대해 어플라이언스 기능 설정 또는 해제
@@ -41,7 +41,7 @@ ms.locfileid: "74400628"
   
 1.  PDW 제어 노드**_PDW_region_(CTL01** )에 연결 하 고 분석 플랫폼 시스템 어플라이언스 도메인 관리자 계정으로 로그인 합니다.  
   
-2.  를 `C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\dwconfig.exe` 실행 하 여 **Configuration Manager**를 엽니다.  
+2.  `C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\dwconfig.exe`를 실행 하 여 **Configuration Manager**를 엽니다.  
   
 3.  Configuration Manager의 **병렬 데이터 웨어하우스 토폴로지** 메뉴에서 **서비스 상태** 탭을 클릭 하 고 **중지 영역** 을 클릭 하 여 PDW 서비스를 중지 합니다.   
   
@@ -100,7 +100,7 @@ ms.locfileid: "74400628"
   
 9. 어플라이언스 도메인 관리자 계정을 사용 하 여 ** _PDW_region_CTL01** 에 연결 합니다.  
   
-10. 을 `C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\dwconfig.exe` 실행 하 여 **Configuration Manager**를 시작 합니다.  
+10. `C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\dwconfig.exe`을 실행 하 여 **Configuration Manager**를 시작 합니다.  
   
 11. **Configuration Manager**의 **병렬 데이터 웨어하우스 토폴로지** 메뉴에서 **서비스 상태** 탭을 클릭 하 고 **시작 영역** 을 클릭 하 여 PDW 서비스를 시작 합니다.  
   

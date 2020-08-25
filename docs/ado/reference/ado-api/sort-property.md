@@ -22,21 +22,21 @@ helpviewer_keywords:
 ms.assetid: 3683ffa0-6f93-4906-9533-ef6942f24f39
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a8ec5c6812e2800825677cd844756d1dd9325729
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a7cfeeb8d91420ec25cd6dd196b260ad8222c086
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442065"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777422"
 ---
 # <a name="sort-property"></a>Sort 속성
-[레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 을 정렬 하는 하나 이상의 필드 이름과 각 필드가 오름차순으로 정렬 되는지 또는 내림차순으로 정렬 되는지 나타냅니다.  
+[레코드 집합](./recordset-object-ado.md) 을 정렬 하는 하나 이상의 필드 이름과 각 필드가 오름차순으로 정렬 되는지 또는 내림차순으로 정렬 되는지 나타냅니다.  
   
 ## <a name="settings-and-return-values"></a>설정 및 반환 값  
  정렬할 **레코드 집합** 의 필드 이름을 나타내는 **문자열** 값을 설정 하거나 반환 합니다. 각 이름은 쉼표로 구분 되며, 선택적으로 공백 및 오름차순으로 필드를 정렬 하는 ASC, 오름차순으로 필드를 **정렬 하는**ASC 키워드 ( **ASC**)를 차례로 입력 합니다. 기본적으로 키워드가 지정 되지 않은 경우 필드는 오름차순으로 정렬 됩니다.  
   
 ## <a name="remarks"></a>설명  
- 이 속성을 사용 하려면 [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) 속성을 **adUseClient**로 설정 해야 합니다. 인덱스가 아직 없는 경우 **Sort** 속성에 지정 된 각 필드에 대해 임시 인덱스가 생성 됩니다.  
+ 이 속성을 사용 하려면 [CursorLocation](./cursorlocation-property-ado.md) 속성을 **adUseClient**로 설정 해야 합니다. 인덱스가 아직 없는 경우 **Sort** 속성에 지정 된 각 필드에 대해 임시 인덱스가 생성 됩니다.  
   
  데이터는 물리적으로 다시 정렬 되지 않지만 단순히 인덱스에 지정 된 순서로 액세스 되기 때문에 정렬 작업은 효율적입니다.  
   
@@ -51,11 +51,11 @@ ms.locfileid: "88442065"
  이름이 **asc** 및 **DESC**와 충돌 하므로 필드 이름을 "ASC" 또는 "DESC"로 지정할 수 없습니다. **레코드 집합**을 반환 하는 쿼리에서 **AS** 키워드를 사용 하 여 이름이 충돌 하는 필드에 대 한 별칭을 만들 수 있습니다.  
   
 ## <a name="applies-to"></a>적용 대상  
- [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [레코드 집합 개체(ADO)](./recordset-object-ado.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [Sort 속성 예제 (VB)](../../../ado/reference/ado-api/sort-property-example-vb.md)   
- [Sort 속성 예제 (VC + +)](../../../ado/reference/ado-api/sort-property-example-vc.md)   
- [Optimize 속성-동적 (ADO)](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)   
- [SortColumn 속성 (RDS)](../../../ado/reference/rds-api/sortcolumn-property-rds.md)   
- [SortDirection 속성(RDS)](../../../ado/reference/rds-api/sortdirection-property-rds.md)
+ [Sort 속성 예제 (VB)](./sort-property-example-vb.md)   
+ [Sort 속성 예제 (VC + +)](./sort-property-example-vc.md)   
+ [Optimize 속성-동적 (ADO)](./optimize-property-dynamic-ado.md)   
+ [SortColumn 속성 (RDS)](../rds-api/sortcolumn-property-rds.md)   
+ [SortDirection 속성(RDS)](../rds-api/sortdirection-property-rds.md)

@@ -26,7 +26,7 @@ ms.locfileid: "88774552"
 # <a name="locktypeenum"></a>LockTypeEnum
 편집 하는 동안 레코드에 적용 되는 잠금 유형을 지정 합니다.  
   
-|상수|값|설명|  
+|상수|값|Description|  
 |--------------|-----------|-----------------|  
 |**adLockBatchOptimistic**|4|낙관적 일괄 처리 업데이트를 나타냅니다. 일괄 업데이트 모드에 필요 합니다.|  
 |**adLockOptimistic**|3|낙관적 잠금, 레코드 별로 기록을 나타냅니다. 공급자는 낙관적 잠금을 사용 하 고 [Update](./update-method.md) 메서드를 호출 하는 경우에만 레코드를 잠급니다.|  

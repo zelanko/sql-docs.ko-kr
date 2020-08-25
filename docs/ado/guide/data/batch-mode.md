@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0cb548e0-fcb4-4c49-98c8-be287911f826
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4642a51b950c6f28566adaeccb6ddfb532d795be
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 353e5ae0fe15fb21f04f6efcc97195a5e237b58e
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453725"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806394"
 ---
 # <a name="batch-mode"></a>일괄 처리 모드
 배치 모드는 **LockType** 속성이 **Adlockbatchoptimistic** 으로 설정 되 고 일괄 업데이트가 공급자에 의해 지원 되는 경우에 적용 됩니다. 특정 잠금 유형 설정은 커서 위치에 따라 사용할 수 없습니다. 예를 들어 **CursorLocation** 이 **adUseClient**로 설정 된 경우 비관적 잠금 유형을 사용할 수 없습니다. 반대로 커서 위치가 서버에 있는 경우에는 공급자가 일괄 처리 낙관적 잠금을 지원할 수 없습니다. 일괄 처리 업데이트는 키 집합 또는 정적 커서로만 사용 해야 합니다.  
@@ -29,14 +29,14 @@ ms.locfileid: "88453725"
   
  이 섹션에서는 다음 항목을 다룹니다.  
   
--   [업데이트 전송: UpdateBatch 메서드](../../../ado/guide/data/sending-the-updates-updatebatch-method.md)  
+-   [업데이트 전송: UpdateBatch 메서드](./sending-the-updates-updatebatch-method.md)  
   
--   [업데이트된 레코드 필터링](../../../ado/guide/data/filtering-for-updated-records.md)  
+-   [업데이트된 레코드 필터링](./filtering-for-updated-records.md)  
   
--   [실패한 업데이트 처리](../../../ado/guide/data/dealing-with-failed-updates.md)  
+-   [실패한 업데이트 처리](./dealing-with-failed-updates.md)  
   
--   [충돌 감지 및 해결](../../../ado/guide/data/detecting-and-resolving-conflicts.md)  
+-   [충돌 감지 및 해결](./detecting-and-resolving-conflicts.md)  
   
--   [레코드 집합 연결 끊기 및 다시 연결](../../../ado/guide/data/disconnecting-and-reconnecting-the-recordset.md)  
+-   [레코드 집합 연결 끊기 및 다시 연결](./disconnecting-and-reconnecting-the-recordset.md)  
   
--   [조인된 결과 업데이트: 고유한 테이블](../../../ado/guide/data/updating-joined-results-unique-table.md)
+-   [조인된 결과 업데이트: 고유한 테이블](./updating-joined-results-unique-table.md)

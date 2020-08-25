@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6aaaf6d0-1376-4473-bea6-b81f2645a9ac
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8bea576e55537d2b4ee75fb8e7a0fcdebea4847e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 104070ca1f23a4bd142a3a7c755c6c0eb1f409fc
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453965"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806746"
 ---
 # <a name="vbscript-ado-programming"></a>VBScript ADO 프로그래밍
 ## <a name="creating-an-ado-project"></a>ADO 프로젝트 만들기  
@@ -75,7 +75,7 @@ Response.Write("Success!")
 </HTML>  
 ```  
   
- 보다 구체적인 VBScript 예제가 ADO 설명서에 포함 되어 있습니다. 자세한 내용은 [Microsoft Visual Basic Scripting Edition의 ADO 코드 예제](../../../ado/reference/ado-api/ado-code-examples-vbscript.md)를 참조 하세요.  
+ 보다 구체적인 VBScript 예제가 ADO 설명서에 포함 되어 있습니다. 자세한 내용은 [Microsoft Visual Basic Scripting Edition의 ADO 코드 예제](../../reference/ado-api/ado-code-examples-vbscript.md)를 참조 하세요.  
   
 ## <a name="differences-between-vbscript-and-visual-basic"></a>VBScript와 Visual Basic의 차이점  
  VBScript와 함께 ado를 사용 하는 것은 구문을 사용 하는 방법을 비롯 하 여 여러 가지 방법으로 Visual Basic ADO를 사용 하는 것과 비슷합니다 그러나 다음과 같은 몇 가지 중요 한 차이점이 있습니다.  

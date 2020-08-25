@@ -30,7 +30,7 @@ ms.locfileid: "88767662"
 ## <a name="settings-and-return-values"></a>설정 및 반환 값  
  다음 값 중 하나를 설정 하거나 반환 합니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**adcReadyStateLoaded**|현재 쿼리가 계속 실행 중 이며 행을 가져오지 않았습니다. **DataControl** 개체의 **레코드 집합** 을 사용할 수 없습니다.|  
 |**adcReadyStateInteractive**|현재 쿼리에서 검색 된 초기 행 집합은 **DataControl** 개체의 **레코드 집합** 에 저장 되 고 사용할 수 있습니다. 나머지 행은 계속 인출 됩니다.|  

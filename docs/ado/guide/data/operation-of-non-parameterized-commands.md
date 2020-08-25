@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9700e50a-9f17-4ba3-8afb-f750741dc6ca
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ec2dbf3dfb24fc484368f3fa2e2c2e950dbd20ec
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6b0f425deb87e831547d24a4b81f7d1a601e344a
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453115"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88805670"
 ---
 # <a name="operation-of-non-parameterized-commands"></a>매개 변수화되지 않은 명령 작업
 매개 변수가 없는 명령의 경우 모든 공급자 명령이 실행 되 고 명령을 실행 하는 동안 **레코드 집합이** 생성 됩니다. 명령이 동기적으로 실행 되는 경우 모든 **레코드 집합** 은 완전히 채워집니다. 비동기 채우기 모드가 선택 된 경우 **레코드 집합** 의 채워진 상태는 채우기 모드와 **레코드 집합**의 크기에 따라 달라 집니다.  
@@ -38,11 +38,11 @@ SHAPE {SELECT * FROM Customers}
   
  장 열에서 참조에 액세스 하면 ADO에서 참조로 표시 되는 **레코드 집합** 을 자동으로 검색 합니다. 매개 변수가 없는 명령에서 전체 하위 **레코드 집합이** 검색 되더라도이 장은 행의 하위 집합만을 제공 합니다.  
   
- 추가 된 열에 *장 별칭이*없으면 자동으로 이름이 생성 됩니다. 열에 대 한 [Field](../../../ado/reference/ado-api/field-object.md) 개체가 **레코드 집합** 개체의 [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) 컬렉션에 추가 되 고 해당 데이터 형식은 **adchapter**가 됩니다.  
+ 추가 된 열에 *장 별칭이*없으면 자동으로 이름이 생성 됩니다. 열에 대 한 [Field](../../reference/ado-api/field-object.md) 개체가 **레코드 집합** 개체의 [Fields](../../reference/ado-api/fields-collection-ado.md) 컬렉션에 추가 되 고 해당 데이터 형식은 **adchapter**가 됩니다.  
   
- 계층적 **레코드 집합**을 탐색 하는 방법에 대 한 자세한 내용은 [계층적 레코드 집합의 행에 액세스](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)를 참조 하세요.  
+ 계층적 **레코드 집합**을 탐색 하는 방법에 대 한 자세한 내용은 [계층적 레코드 집합의 행에 액세스](./accessing-rows-in-a-hierarchical-recordset.md)를 참조 하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [데이터 셰이핑 예](../../../ado/guide/data/data-shaping-example.md)   
- [공식 모양 문법](../../../ado/guide/data/formal-shape-grammar.md)   
- [일반적인 셰이핑 명령](../../../ado/guide/data/shape-commands-in-general.md)
+ [데이터 셰이핑 예](./data-shaping-example.md)   
+ [공식 모양 문법](./formal-shape-grammar.md)   
+ [일반적인 셰이핑 명령](./shape-commands-in-general.md)

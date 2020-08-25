@@ -35,7 +35,7 @@ Procedures.Append Name, Command
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- *이름*  
+ *Name*  
  만들고 추가 하는 프로시저의 이름을 지정 하는 **문자열** 값입니다.  
   
  *명령*  

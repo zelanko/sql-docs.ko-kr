@@ -13,15 +13,15 @@ dev_langs:
 ms.assetid: 385ad90a-37d0-497c-94aa-935d21fed78f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 118b3515665da6a5f03e6001d9b4a1b7d1822ab5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 25271ea1cf080f8f2bb599681a54af967a2d4ad2
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453785"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806440"
 ---
 # <a name="ado-event-instantiation-visual-c"></a>ADO 이벤트 인스턴스: Visual C++
-Microsoft® Visual C++®에서 ADO 이벤트를 인스턴스화하는 방법에 대 한 구조 설명입니다. 전체 설명은 [ADO Events 모델 예제 (VC + +)](../../../ado/reference/ado-api/ado-events-model-example-vc.md) 를 참조 하세요.  
+Microsoft® Visual C++®에서 ADO 이벤트를 인스턴스화하는 방법에 대 한 구조 설명입니다. 전체 설명은 [ADO Events 모델 예제 (VC + +)](../../reference/ado-api/ado-events-model-example-vc.md) 를 참조 하세요.  
   
  Adoint 파일에 있는 **ConnectionEventsVt** 및 **RecordsetEventsVt** 인터페이스에서 파생 된 클래스를 만듭니다.  
   
@@ -68,7 +68,7 @@ STDMETHODIMP CConnEvent::ConnectComplete(
   
  이벤트 클래스는 **IUnknown**에서 상속 하므로 **QueryInterface**, **AddRef**및 **Release** 메서드도 구현 해야 합니다. 클래스 생성자 및 소멸자도 구현 합니다. 작업의이 부분을 간소화 하는 데 가장 친숙 한 Visual C++ 도구를 선택 합니다.  
   
- **IConnectionPointContainer** 및 **IConnectionPoint** 인터페이스에 대 한 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 및 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체에 대해 **QueryInterface** 를 실행 하 여 이벤트 처리기를 사용할 수 있다는 것을 알고 있어야 합니다. 그런 다음 각 클래스에 대해 **IConnectionPoint:: Advise** 를 실행 합니다.  
+ **IConnectionPointContainer** 및 **IConnectionPoint** 인터페이스에 대 한 [레코드 집합](../../reference/ado-api/recordset-object-ado.md) 및 [연결](../../reference/ado-api/connection-object-ado.md) 개체에 대해 **QueryInterface** 를 실행 하 여 이벤트 처리기를 사용할 수 있다는 것을 알고 있어야 합니다. 그런 다음 각 클래스에 대해 **IConnectionPoint:: Advise** 를 실행 합니다.  
   
  예를 들어, 사용할 수 있는 이벤트 처리기가 있는 **레코드 집합** 개체에 성공적으로 알리는 경우 **True** 를 반환 하는 부울 함수를 사용 한다고 가정 합니다.  
   

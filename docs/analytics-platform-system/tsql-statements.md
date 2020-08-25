@@ -48,7 +48,7 @@ PDW (병렬 데이터 웨어하우스)를 SQL Server 하는 APS (분석 플랫�
 * [DROP TABLE](../t-sql/statements/drop-table-transact-sql.md)
 * [DROP SCHEMA](../t-sql/statements/drop-schema-transact-sql.md)
 * [DROP VIEW](../t-sql/statements/drop-view-transact-sql.md)
-* [RENAME](../t-sql/statements/rename-transact-sql.md)
+* [바꾸면](../t-sql/statements/rename-transact-sql.md)
 * [TRUNCATE TABLE](../t-sql/statements/truncate-table-transact-sql.md)
 * [UPDATE STATISTICS](../t-sql/statements/update-statistics-transact-sql.md)
 

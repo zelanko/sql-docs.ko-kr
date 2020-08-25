@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e492d307-24cb-489c-a5b0-99cdc09b07da
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 25a435b2fd4739710f208e50c1265db441d54f7e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9d3793049d9fa1f86dd9aa6f928ffe6003882a1e
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453925"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806738"
 ---
 # <a name="visual-c-extensions-header"></a>Visual C++ 확장 헤더
 다음 헤더 **icrsint**는 클라이언트가 **레코드 집합** 의 필드를 **CADORecordBinding**에서 파생 된 클래스에 정의 된 변수로 검색할 수 있도록 하는 인터페이스에 대해 자세히 설명 합니다. 액세스 하려는 각 필드에 대해 ADO 바인딩 매크로를 지정 해야 합니다.  
@@ -209,5 +209,5 @@ public:
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Visual C++ 확장 예제](../../../ado/guide/appendixes/visual-c-extensions-example.md)   
- [Visual C++ 확장 사용](../../../ado/guide/appendixes/using-visual-c-extensions.md)
+ [Visual C++ 확장 예제](./visual-c-extensions-example.md)   
+ [Visual C++ 확장 사용](./using-visual-c-extensions.md)

@@ -26,7 +26,7 @@ ms.locfileid: "88775852"
 # <a name="connectmodeenum"></a>ConnectModeEnum
 [연결](./connection-object-ado.md)의 데이터를 수정 하거나 [레코드](./record-object-ado.md)를 열거나 **Record** 및 [Stream](./stream-object-ado.md) 개체의 [Mode](./mode-property-ado.md) 속성 값을 지정 하는 데 사용할 수 있는 권한을 지정 합니다.  
   
-|상수|값|설명|  
+|상수|값|Description|  
 |--------------|-----------|-----------------|  
 |**adModeRead**|1|읽기 전용 권한을 나타냅니다.|  
 |**adModeReadWrite**|3|읽기/쓰기 권한을 나타냅니다.|  

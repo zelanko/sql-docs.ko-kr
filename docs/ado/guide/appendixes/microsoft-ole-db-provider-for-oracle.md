@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 44fae9dd-5585-4cd6-8bbd-3248a78931b4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5a81f8b3e8acbe09fed0bac975158a9d5ef26a9e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d8633a6dd9ef94ff525c99b838de6dcec937d292
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454055"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806559"
 ---
 # <a name="microsoft-ole-db-provider-for-oracle-overview"></a>Microsoft OLE DB Provider for Oracle 개요
 > [!IMPORTANT]
@@ -29,13 +29,13 @@ ms.locfileid: "88454055"
  Microsoft OLE DB Provider for Oracle ADO를 사용 하 여 Oracle 데이터베이스에 액세스할 수 있습니다.
 
 ## <a name="connection-string-parameters"></a>연결 문자열 매개 변수
- 이 공급자에 연결 하려면 [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) 속성의 *공급자* 인수를로 설정 합니다.
+ 이 공급자에 연결 하려면 [ConnectionString](../../reference/ado-api/connectionstring-property-ado.md) 속성의 *공급자* 인수를로 설정 합니다.
 
 ```vb
 MSDAORA
 ```
 
- [공급자](../../../ado/reference/ado-api/provider-property-ado.md) 속성을 읽으면이 문자열도 반환 됩니다.
+ [공급자](../../reference/ado-api/provider-property-ado.md) 속성을 읽으면이 문자열도 반환 됩니다.
 
  Oracle 데이터베이스에서 키 집합 또는 동적 커서를 사용 하는 조인 쿼리를 실행 하는 경우 오류가 발생 합니다. Oracle은 정적 읽기 전용 커서만 지원 합니다.
 
@@ -50,7 +50,7 @@ MSDAORA
 
 |키워드|설명|
 |-------------|-----------------|
-|**공급자**|Oracle에 대 한 OLE DB 공급자를 지정 합니다.|
+|**공급 기업**|Oracle에 대 한 OLE DB 공급자를 지정 합니다.|
 |**데이터 원본**|서버의 이름을 지정합니다.|
 |**사용자 ID**|사용자 이름을 지정합니다.|
 |**암호**|사용자 암호를 지정 합니다.|
@@ -59,9 +59,9 @@ MSDAORA
 >  Windows 인증을 지 원하는 데이터 원본 공급자에 연결 하는 경우 연결 문자열에 사용자 ID 및 암호 정보 대신 **Trusted_Connection = yes** 또는 **INTEGRATED Security = SSPI** 를 지정 해야 합니다.
 
 ## <a name="provider-specific-connection-parameters"></a>공급자별 연결 매개 변수
- 공급자는 ADO에 의해 정의 된 매개 변수 외에도 여러 공급자별 연결 매개 변수를 지원 합니다. ADO 연결 속성과 마찬가지로 이러한 공급자별 속성은 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 의 [속성](../../../ado/reference/ado-api/properties-collection-ado.md) 컬렉션을 통해 설정 하거나 **ConnectionString**의 일부로 설정할 수 있습니다.
+ 공급자는 ADO에 의해 정의 된 매개 변수 외에도 여러 공급자별 연결 매개 변수를 지원 합니다. ADO 연결 속성과 마찬가지로 이러한 공급자별 속성은 [연결](../../reference/ado-api/connection-object-ado.md) 의 [속성](../../reference/ado-api/properties-collection-ado.md) 컬렉션을 통해 설정 하거나 **ConnectionString**의 일부로 설정할 수 있습니다.
 
- 이러한 매개 변수는 [OLE DB 프로그래머 참조](https://msdn.microsoft.com/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8)에 자세히 설명 되어 있습니다. [ADO 동적 속성 인덱스](../../../ado/reference/ado-api/ado-dynamic-property-index.md) 는 이러한 매개 변수 이름과 해당 OLE DB 속성 간의 상호 참조를 제공 합니다.
+ 이러한 매개 변수는 [OLE DB 프로그래머 참조](/previous-versions/windows/desktop/ms713643(v=vs.85))에 자세히 설명 되어 있습니다. [ADO 동적 속성 인덱스](../../reference/ado-api/ado-dynamic-property-index.md) 는 이러한 매개 변수 이름과 해당 OLE DB 속성 간의 상호 참조를 제공 합니다.
 
 |매개 변수|설명|
 |---------------|-----------------|
@@ -71,5 +71,5 @@ MSDAORA
 |**프롬프트**|연결을 설정 하는 동안 사용자에 게 메시지를 표시할지 여부를 나타냅니다.|
 |**확장 속성**|공급자별 확장 연결 정보를 포함 하는 문자열입니다. 속성 메커니즘을 통해 설명할 수 없는 공급자별 연결 정보에 대해서만이 속성을 사용 합니다.|
 
-## <a name="see-also"></a>관련 항목
- [ConnectionString 속성 (ado)](../../../ado/reference/ado-api/connectionstring-property-ado.md) [공급자 속성 (](../../../ado/reference/ado-api/provider-property-ado.md) Ado) [레코드 집합 개체 (ado)](../../../ado/reference/ado-api/recordset-object-ado.md)
+## <a name="see-also"></a>참고 항목
+ [ConnectionString 속성 (ado)](../../reference/ado-api/connectionstring-property-ado.md) [공급자 속성 (](../../reference/ado-api/provider-property-ado.md) Ado) [레코드 집합 개체 (ado)](../../reference/ado-api/recordset-object-ado.md)

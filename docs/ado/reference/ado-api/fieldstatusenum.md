@@ -28,7 +28,7 @@ ms.locfileid: "88775332"
   
  **Adfieldpending \* ** 값은 상태를 설정 하는 작업을 나타내며 다른 상태 값과 결합 될 수 있습니다.  
   
-|상수|값|설명|  
+|상수|값|Description|  
 |--------------|-----------|-----------------|  
 |**adFieldAlreadyExists**|26|지정 된 필드가 이미 있음을 나타냅니다.|  
 |**adFieldBadStatus**|12|잘못 된 상태 값이 ADO에서 OLE DB 공급자로 전송 되었음을 나타냅니다. OLE DB 1.0 또는 1.1 공급자 또는 잘못 된 [값](./value-property-ado.md) 과 [상태](./status-property-ado-field.md)조합이 포함 될 수 있습니다.|  

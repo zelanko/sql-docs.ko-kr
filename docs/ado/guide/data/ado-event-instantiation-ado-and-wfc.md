@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9ee4be21-657b-407a-afa4-0b27a6b096ce
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e006add96d3bcb21c652ce33f7aab749b2bc8d54
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 98719e10e837b83ac522743e120f037b1fedbd99
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453835"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806448"
 ---
 # <a name="ado-event-instantiation-ado-and-wfc"></a>ADO 이벤트 인스턴스: ADO 및 WFC
 Windows Foundation 클래스 (ADO/WFC) 용 ADO는 ADO 이벤트 모델을 기반으로 하며 간소화 된 응용 프로그램 프로그래밍 인터페이스를 제공 합니다. 일반적으로 ADO/WFC는 ADO 이벤트를 가로채 고 이벤트 매개 변수를 단일 이벤트 클래스로 통합 한 다음 이벤트 처리기를 호출 합니다.  
@@ -53,7 +53,7 @@ Windows Foundation 클래스 (ADO/WFC) 용 ADO는 ADO 이벤트 모델을 기반
     public void onConnectComplete(Object sender,ConnectionEvent e)  
     ```  
   
-     첫 번째 인수는 이벤트를 보낸 개체의 유형 ([연결](../../../ado/reference/ado-api/connection-object-ado.md) 또는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md))이 고 두 번째 인수는 ADO/WFC 이벤트 개체 (**connectionevent** 또는 **RecordsetEvent**)입니다.  
+     첫 번째 인수는 이벤트를 보낸 개체의 유형 ([연결](../../reference/ado-api/connection-object-ado.md) 또는 [레코드 집합](../../reference/ado-api/recordset-object-ado.md))이 고 두 번째 인수는 ADO/WFC 이벤트 개체 (**connectionevent** 또는 **RecordsetEvent**)입니다.  
   
      이벤트 처리기의 서명은 ADO 이벤트 보다 간단 합니다. 그러나 ADO 이벤트 모델을 이해 하 여 이벤트에 적용 되는 매개 변수와 응답 하는 방법을 알고 있어야 합니다.  
   
@@ -61,9 +61,9 @@ Windows Foundation 클래스 (ADO/WFC) 용 ADO는 ADO 이벤트 모델을 기반
   
 7.  처리가 완료 되 면 ADO/WFC 이벤트 처리기 목록에서 처리기를 제거 합니다. **RemoveOn**_EventName_(*handler*)과 같은 이름을 사용 하 여 메서드를 사용 합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [ADO 이벤트 처리기 요약](../../../ado/guide/data/ado-event-handler-summary.md)   
- [ADO-WFC 구문 인덱스](../../../ado/reference/ado-api/ado-wfc-syntax-index.md)   
- [이벤트 매개 변수](../../../ado/guide/data/event-parameters.md)   
- [이벤트 처리기가 함께 작동 하는 방법](../../../ado/guide/data/how-event-handlers-work-together.md)   
- [이벤트 형식](../../../ado/guide/data/types-of-events.md)
+## <a name="see-also"></a>참고 항목  
+ [ADO 이벤트 처리기 요약](./ado-event-handler-summary.md)   
+ [ADO-WFC 구문 인덱스](../../reference/ado-api/ado-wfc-syntax-index.md)   
+ [이벤트 매개 변수](./event-parameters.md)   
+ [이벤트 처리기가 함께 작동 하는 방법](./how-event-handlers-work-together.md)   
+ [이벤트 형식](./types-of-events.md)

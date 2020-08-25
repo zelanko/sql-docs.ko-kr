@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 35ffdb79-a931-4271-a3bb-0cd804cf173e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8e5e019760c4496b7dab769cb96fbd7b2eab4f47
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7772a1c8583619288177dd5115f532b6d51532d9
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453705"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806370"
 ---
 # <a name="calling-a-stored-procedure-as-a-method-on-a-connection-object"></a>연결 개체의 메서드로 저장 프로시저 호출
 저장 프로시저는 연결 된 열린 **연결** 개체의 네이티브 메서드인 것 처럼 호출할 수 있습니다. 이는 **Connection** 개체에서 명명 된 명령을 호출 하는 것과 유사 합니다.  
@@ -80,4 +80,4 @@ Set objComm = Nothing
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [연결 개체(ADO)](../../../ado/reference/ado-api/connection-object-ado.md)
+ [연결 개체(ADO)](../../reference/ado-api/connection-object-ado.md)

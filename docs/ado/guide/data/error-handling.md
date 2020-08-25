@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4909e413-f3b0-4183-8ad3-67b1434df742
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d26cbadd4f9c6a33c6dc43a6dcc88e0a92f23d65
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 092f1a767e614b3426db63c95ca8bf4e14954dd0
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453445"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806864"
 ---
 # <a name="error-handling-in-ado"></a>ADO의 오류 처리
 ADO는 여러 가지 방법을 사용 하 여 발생 하는 오류를 응용 프로그램에 알립니다. 이 섹션에서는 ADO를 사용할 때 발생할 수 있는 오류 유형과 응용 프로그램에 알리는 방법을 설명 합니다. 이러한 오류를 처리 하는 방법에 대 한 제안으로 마무리 합니다.  
@@ -34,7 +34,7 @@ ADO는 여러 가지 방법을 사용 하 여 발생 하는 오류를 응용 프
   
 -   오류가 데이터 공급자와 관련 된 경우 오류가 발생 했을 때 데이터 저장소에 액세스 하는 데 사용 된 **연결** 개체의 **Errors** 컬렉션에 하나 이상의 **오류** 개체가 배치 됩니다.  
   
--   이벤트를 발생 시킨 프로세스에서 오류가 발생 한 **경우 오류 정보는 오류 개체에** 배치 되 고 이벤트에 매개 변수로 전달 됩니다. 이벤트에 대 한 자세한 내용은 [ADO 이벤트 처리](../../../ado/guide/data/handling-ado-events.md) 를 참조 하세요.  
+-   이벤트를 발생 시킨 프로세스에서 오류가 발생 한 **경우 오류 정보는 오류 개체에** 배치 되 고 이벤트에 매개 변수로 전달 됩니다. 이벤트에 대 한 자세한 내용은 [ADO 이벤트 처리](./handling-ado-events.md) 를 참조 하세요.  
   
 -   일괄 처리 업데이트 또는 **레코드 집합** 을 포함 하는 다른 대량 작업을 처리할 때 발생 하는 문제는 **레코드 집합**의 **Status** 속성으로 표시 될 수 있습니다. 예를 들어 스키마 제약 조건 위반 또는 권한이 부족 한 경우 **Recordstatusenum** 값으로 지정할 수 있습니다.  
   
@@ -42,14 +42,14 @@ ADO는 여러 가지 방법을 사용 하 여 발생 하는 오류를 응용 프
   
  이 섹션에서는 다음 항목을 다룹니다.  
   
--   [ADO 오류](../../../ado/guide/data/ado-errors.md)  
+-   [ADO 오류](./ado-errors.md)  
   
--   [공급자 오류](../../../ado/guide/data/provider-errors.md)  
+-   [공급자 오류](./provider-errors.md)  
   
--   [필드 관련 오류 정보](../../../ado/guide/data/field-related-error-information.md)  
+-   [필드 관련 오류 정보](./field-related-error-information.md)  
   
--   [레코드 집합 관련 오류 정보](../../../ado/guide/data/recordset-related-error-information.md)  
+-   [레코드 집합 관련 오류 정보](./recordset-related-error-information.md)  
   
--   [다른 언어로 오류 처리](../../../ado/guide/data/handling-errors-in-other-languages.md)  
+-   [다른 언어로 오류 처리](./handling-errors-in-other-languages.md)  
   
--   [오류 예측](../../../ado/guide/data/anticipating-errors.md)
+-   [오류 예측](./anticipating-errors.md)

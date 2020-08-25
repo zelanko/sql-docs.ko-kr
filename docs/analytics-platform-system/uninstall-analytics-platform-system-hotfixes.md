@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: ef6929aeb06c9472eb3ff210de016117a9636ded
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 08/25/2020
 ms.locfileid: "74399760"
 ---
 # <a name="uninstall-analytics-platform-system-hotfixes"></a>분석 플랫폼 시스템 핫픽스 제거 
@@ -21,7 +21,7 @@ ms.locfileid: "74399760"
   
 ## <a name="before-you-begin"></a>시작하기 전에  
   
-### <a name="prerequisites"></a>전제 조건  
+### <a name="prerequisites"></a>사전 준비 사항  
 이러한 단계를 수행 하려면 다음이 필요 합니다.  
   
 -   어플라이언스를 모니터링 하기 위해 관리 콘솔에 액세스할 수 있는 권한이 있는 분석 플랫폼 시스템 로그인입니다.  
@@ -49,8 +49,8 @@ ms.locfileid: "74399760"
     ```  
   
 ## <a name="see-also"></a>참고 항목  
-[Microsoft 업데이트 &#40;분석 플랫폼 시스템&#41;다운로드 및 적용](download-and-apply-microsoft-updates.md)  
+[Microsoft 업데이트 &#40;분석 플랫폼 시스템&#41;다운로드 및 적용 ](download-and-apply-microsoft-updates.md)  
 [Microsoft 업데이트 &#40;분석 플랫폼 시스템을 제거&#41;](uninstall-microsoft-updates.md)  
-[Analytics platform System 핫픽스 &#40;Analytics platform system&#41;적용](apply-analytics-platform-system-hotfixes.md)  
+[Analytics platform System 핫픽스 &#40;Analytics platform system&#41;적용 ](apply-analytics-platform-system-hotfixes.md)  
 [소프트웨어 서비스 &#40;분석 플랫폼 시스템&#41;](software-servicing.md)  
   

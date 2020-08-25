@@ -26,7 +26,7 @@ ms.locfileid: "88773222"
 # <a name="persistformatenum"></a>PersistFormatEnum
 [레코드 집합](./recordset-object-ado.md)을 저장할 형식을 지정 합니다.  
   
-|상수|값|설명|  
+|상수|값|Description|  
 |--------------|-----------|-----------------|  
 |**adPersistADTG**|0|Microsoft ADTG (Advanced Data TableGram) 형식을 나타냅니다.|  
 |**adPersistADO**|1|ADO의 자체 XML(Extensible Markup Language) (XML) 형식이 사용 됨을 나타냅니다. 이 값은 adPersistXML과 같으며 이전 버전과의 호환성을 위해 포함 되었습니다.|  

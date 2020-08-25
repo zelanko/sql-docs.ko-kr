@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: e75ef0dc-2016-4fcc-8918-23311c0d4e02
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9a1211a84bf42afdb406c085e57f5bb36f48a168
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7010c2dc4be6207397ee5e57fc999c3cacbba0b7
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454115"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806612"
 ---
 # <a name="microsoft-ole-db-persistence-provider-overview"></a>Microsoft OLE DB 지 속성 공급자 개요
-Microsoft OLE DB 지 속성 공급자를 사용 하면 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체를 파일에 저장 하 고 나중에 파일에서 해당 **레코드 집합** 개체를 복원할 수 있습니다. 스키마 정보, 데이터 및 보류 중인 변경 내용이 유지 됩니다.
+Microsoft OLE DB 지 속성 공급자를 사용 하면 [레코드 집합](../../reference/ado-api/recordset-object-ado.md) 개체를 파일에 저장 하 고 나중에 파일에서 해당 **레코드 집합** 개체를 복원할 수 있습니다. 스키마 정보, 데이터 및 보류 중인 변경 내용이 유지 됩니다.
 
  ADTG (소유 고급 데이터 테이블) 형식 또는 open XML(Extensible Markup Language) (XML) 형식으로 **레코드 집합** 을 저장할 수 있습니다.
 
@@ -47,9 +47,9 @@ Microsoft OLE DB 지 속성 공급자를 사용 하면 [레코드 집합](../../
 
  현재 매개 변수가 있는 계층적 **레코드 집합** 개체만 저장할 수 있습니다.
 
- **레코드 집합** 개체를 영구적으로 저장 하는 방법은 [레코드 집합 지 속성](../../../ado/guide/data/more-about-recordset-persistence.md)을 참조 하세요.
+ **레코드 집합** 개체를 영구적으로 저장 하는 방법은 [레코드 집합 지 속성](../data/more-about-recordset-persistence.md)을 참조 하세요.
 
  스트림을 사용 하 여 **레코드 집합** 을 열 때 **open** 메서드의 *Source* 매개 변수 이외의 매개 변수를 지정 하지 않아야 합니다.
 
 ## <a name="see-also"></a>참고 항목
-[Microsoft OLE DB 지 속성 공급자 (ADO 서비스 공급자)](../../../ado/guide/appendixes/microsoft-ole-db-persistence-provider-ado-service-provider.md)
+[Microsoft OLE DB 지 속성 공급자 (ADO 서비스 공급자)]()

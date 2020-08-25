@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2d7cb5b5-8307-49dd-b07e-c07069bb1626
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e6119433c1a5c52e07035d97878155123d787e26
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 302cca77222454ac6fa73c69683c641e841acdda
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453975"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806490"
 ---
 # <a name="using-the-microsoft-sdk-for-java"></a>Java용 Microsoft SDK 사용
 
@@ -32,7 +32,7 @@ Microsoft SDK for Java는 Microsoft Internet Explorer 환경용 개발자 키트
   
  이 메커니즘은 ADO 형식 라이브러리를 읽고 응용 프로그램 내에서 인스턴스화할 수 있는 클래스를 생성 합니다. 이러한 클래스를 다음 위치에 생성 합니다. \\<windows directory \> \Java\trustlib\msado15.  
   
- Java 용 Microsoft SDK를 사용 하 여 java에서 ADO 응용 프로그램을 만드는 것은 기본적으로 소스 코드의 관점에서 Java 형식 라이브러리 마법사를 사용 하는 것과 같습니다. 샘플 코드는 [ADO Java 클래스 래퍼](../../../ado/guide/appendixes/ado-java-class-wrappers.md)를 참조 하세요. 다음 단계에서 설명 하는 것 처럼 첫 번째 환경에서 래퍼 클래스를 생성 하는 방법에만 실질적인 차이가 있습니다.  
+ Java 용 Microsoft SDK를 사용 하 여 java에서 ADO 응용 프로그램을 만드는 것은 기본적으로 소스 코드의 관점에서 Java 형식 라이브러리 마법사를 사용 하는 것과 같습니다. 샘플 코드는 [ADO Java 클래스 래퍼](./ado-java-class-wrappers.md)를 참조 하세요. 다음 단계에서 설명 하는 것 처럼 첫 번째 환경에서 래퍼 클래스를 생성 하는 방법에만 실질적인 차이가 있습니다.  
   
 ### <a name="to-create-an-ado-project-with-the-microsoft-sdk-for-java"></a>Java 용 Microsoft SDK를 사용 하 여 ADO 프로젝트를 만들려면  
   
@@ -50,5 +50,5 @@ Microsoft SDK for Java는 Microsoft Internet Explorer 환경용 개발자 키트
   
 3.  이러한 파일을 사용 하려면 Visual j + +에서 프로젝트를 엽니다. **프로젝트** 메뉴에서 **프로젝트에 추가**를 선택 합니다. **파일**을 선택 하 고 모든를 추가 합니다. Trustlib\msado15 디렉터리에서 프로젝트에 생성 된 JAVA 파일입니다.  
   
-## <a name="see-also"></a>관련 항목  
- [ADO Java 클래스 래퍼](../../../ado/guide/appendixes/ado-java-class-wrappers.md)   
+## <a name="see-also"></a>참고 항목  
+ [ADO Java 클래스 래퍼](./ado-java-class-wrappers.md)
