@@ -276,7 +276,7 @@ Windows 데이터 정렬은 관련 Windows 시스템 로캘을 기반으로 하�
 |리투아니아어(리투아니아)|0x0427|0x0427|Lithuanian_CI_AS|
 |저지 소르비아어(독일)|0x082e|0x0409|Latin1_General_CI_AS|
 |룩셈부르크어(룩셈부르크)|0x046e|0x0409|Latin1_General_CI_AS|
-|마케도니아어(북마케도니아, FYROM)|0x042f|0x042f|Macedonian_FYROM_90_CI_AS|
+|마케도니아어(북마케도니아)|0x042f|0x042f|Macedonian_FYROM_90_CI_AS|
 |말레이어(브루나이)|0x083e|0x0409|Latin1_General_CI_AS|
 |말레이어(말레이시아)|0x043e|0x0409|Latin1_General_CI_AS|
 |말라얄람어(인도)|0x044c|0x0439|서버 수준에서 사용할 수 없음|
