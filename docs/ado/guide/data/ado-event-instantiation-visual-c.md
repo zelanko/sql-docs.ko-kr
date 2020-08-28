@@ -3,7 +3,7 @@ description: 'ADO 이벤트 인스턴스: Visual C++'
 title: 'ADO 이벤트 인스턴스화: Visual C++ | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ dev_langs:
 ms.assetid: 385ad90a-37d0-497c-94aa-935d21fed78f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 25271ea1cf080f8f2bb599681a54af967a2d4ad2
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 68ccc1f5cc173f4ebd80ed093e88968c137c954f
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806440"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991654"
 ---
 # <a name="ado-event-instantiation-visual-c"></a>ADO 이벤트 인스턴스: Visual C++
 Microsoft® Visual C++®에서 ADO 이벤트를 인스턴스화하는 방법에 대 한 구조 설명입니다. 전체 설명은 [ADO Events 모델 예제 (VC + +)](../../reference/ado-api/ado-events-model-example-vc.md) 를 참조 하세요.  

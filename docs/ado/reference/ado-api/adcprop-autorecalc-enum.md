@@ -3,7 +3,7 @@ description: ADCPROP_AUTORECALC_ENUM
 title: ADCPROP_AUTORECALC_ENUM | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ded4f087-87b9-4efa-8026-bde53d3e9e8a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7500fd42ef02b974989488b70e668933aaa00cab
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 571d3eb0d8d836a96b2f3f7a79807bd2d2c16fdf
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88760268"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88976844"
 ---
 # <a name="adcprop_autorecalc_enum"></a>ADCPROP_AUTORECALC_ENUM
 [MSDataShape](../../guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) 공급자가 계층적 레코드 집합에서 집계 열과 계산 된 열을 다시 계산 하는 시기를 지정 합니다.  

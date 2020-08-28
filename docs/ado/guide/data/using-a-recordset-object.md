@@ -3,7 +3,7 @@ description: 레코드 집합 개체 사용
 title: 레코드 집합 개체 사용 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 01c630d8-eb35-4bd0-a99f-7c0f85316cc1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fef7e779c11dac06b2cda5401250577e9bb7162e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a9f75190ae5375b357d6baba93aac7aa2959e188
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452615"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979104"
 ---
 # <a name="using-a-recordset-object"></a>레코드 집합 개체 사용
 또는 **레코드 집합** 을 사용 하 여 암시적으로 연결을 설정 하 고 단일 작업으로 해당 연결을 통해 명령을 실행할 수 있습니다. 예를 들어 Visual Basic에서 다음을 수행 합니다.  

@@ -3,7 +3,7 @@ description: RecordOpenOptionsEnum
 title: RecordOpenOptionsEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9028aba4-90fc-4dfc-88e4-fa8a7b6fedee
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 25d3c1fce0fd227a609da49d54bd55762fa1c4a2
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 352622f55e82b1941439a242249e067aae090e51
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88772312"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88989784"
 ---
 # <a name="recordopenoptionsenum"></a>RecordOpenOptionsEnum
 [레코드](./record-object-ado.md)를 열기 위한 옵션을 지정 합니다. 이러한 값은 또는을 사용 하 여 결합할 수 있습니다.  

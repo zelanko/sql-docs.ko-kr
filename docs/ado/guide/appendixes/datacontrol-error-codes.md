@@ -3,7 +3,7 @@ description: DataControl 개체 오류 코드
 title: DataControl 오류 코드 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 293df9d5-e1a2-406d-9107-07bf7cdc6f96
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4b145e538ea44d5f007f800f70df84b8eed0b116
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 3554898451228afee73914a82907f6348ad1cff0
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806655"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991134"
 ---
 # <a name="datacontrol-object-error-codes"></a>DataControl 개체 오류 코드
 다음 표에서는 RDS를 나열 합니다 [. DataControl](../../reference/rds-api/datacontrol-object-rds.md) 개체 오류 코드입니다. 낮은 2 바이트의 10 진수 변환, 전체 오류 코드의 음수 10 진수 변환 및 16 진수 값이 표시 됩니다.

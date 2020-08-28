@@ -3,7 +3,7 @@ description: Command 및 CommandText 속성 예제(VC++)
 title: Command 및 CommandText 속성 예제 (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5a007b9a-be11-4fba-96db-6252993f97b8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 235b62a10bb5ae2012e336362da3c05299a66319
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 8a726c8156d8ed9dcfa2b10e53190b099f67af98
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88770941"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88984944"
 ---
 # <a name="command-and-commandtext-properties-example-vc"></a>Command 및 CommandText 속성 예제(VC++)
 다음 코드에서는 [Command](./command-property-adox.md) 속성을 사용 하 여 프로시저의 텍스트를 업데이트 하는 방법을 보여 줍니다.  

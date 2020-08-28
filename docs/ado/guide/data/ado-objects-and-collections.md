@@ -3,7 +3,7 @@ description: ADO 개체 및 컬렉션
 title: ADO 개체 및 컬렉션 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7a745aae-9372-49b6-8dae-b9c93e5f3216
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 101eab85f19922b56a7e7f86f330188d87fcc9fe
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 04985c3972e9eaa1ec854102123c09c6a3fd8cde
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806417"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991644"
 ---
 # <a name="ado-objects-and-collections"></a>ADO 개체 및 컬렉션
 ADO는 다음 9 개의 개체와 4 개의 컬렉션으로 구성 됩니다.  

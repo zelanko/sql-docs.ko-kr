@@ -3,7 +3,7 @@ description: IsolationLevelEnum
 title: IsolationLevelEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8e17a7bc-b8a3-4ae2-b6c9-ce088ad31fdf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 03bd95a642f3942275e1ff9d32f1b2d1829b96d3
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: d56051369218f8700ef516526c3f1baf07c7469b
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88774692"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990764"
 ---
 # <a name="isolationlevelenum"></a>IsolationLevelEnum
 [연결](./connection-object-ado.md) 개체에 대 한 트랜잭션 격리 수준을 지정 합니다.  

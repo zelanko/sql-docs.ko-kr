@@ -3,7 +3,7 @@ description: 업데이트된 레코드 필터링
 title: 업데이트 된 레코드에 대 한 필터링 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4a798921-d7bb-47c9-a252-550fd9463ec9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cf6bae32e9ed966939d5589f779bdb1d4d6d6f4b
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: cd97232b83b355948f449fefb57aa748bbc2db40
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806842"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991254"
 ---
 # <a name="filtering-for-updated-records"></a>업데이트된 레코드 필터링
 UpdateBatch를 호출 하기 전에 레코드 집합 필터 속성을 사용 하 여 레코드 집합을 연 이후 변경 된 레코드 또는 UpdateBatch에 대 한 마지막 호출을 볼 수 있습니다. 이렇게 하려면 다음 섹션의 코드 예제에 표시 된 것 처럼 필터를 adFilterPendingRecords로 설정 하 여 업데이트할 레코드 수를 결정 합니다.  

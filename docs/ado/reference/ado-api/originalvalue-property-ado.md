@@ -3,7 +3,7 @@ description: OriginalValue 속성(ADO)
 title: OriginalValue 속성 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6e33c6ec-14d9-4b1d-ba9b-cb99862e7bac
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5aedfa688b2d29a80eb0bc2e06d113e908e122c2
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: ab73e79f86ac1e504322a0606ee3839997ce5811
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88773572"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990214"
 ---
 # <a name="originalvalue-property-ado"></a>OriginalValue 속성(ADO)
 변경을 수행 하기 전에 레코드에 있던 [필드](./field-object.md) 의 값을 나타냅니다.  

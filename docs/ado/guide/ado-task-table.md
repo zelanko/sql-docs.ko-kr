@@ -6,7 +6,7 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.topic: conceptual
 helpviewer_keywords:
 - tasks [ADO]
@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 2fad33fb-c858-4dcb-98dc-3dfd0e555055
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 29aaeac82cc4853e0cd89d0179c988db9748e44e
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 59cb4cceb81861460fbcf7f079801b08319c76d9
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88805429"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991204"
 ---
 # <a name="ado-programming-task-table"></a>ADO 프로그래밍 작업 테이블
 다음 표에서는 *ADO 프로그래머 가이드* 에 포함 된 프로그래밍 태스크를 나열 하 고 각 작업에 대 한 참조를 제공 합니다. 이러한 참조에는 작업을 수행 하는 ADO 기능에 대 한 정보를 찾을 수 있는 텍스트 설명 또는 코드 예제가 있습니다.
 
-|ADO 작업|참고 문헌|
+|ADO 작업|참고자료|
 |--------------|----------------|
 |데이터 공급자에 연결|[데이터 원본에 연결](./data/connecting-to-data-sources.md)|
 |명령 실행 또는 저장 프로시저 호출|[명령 준비 및 실행](./data/preparing-and-executing-commands.md)|

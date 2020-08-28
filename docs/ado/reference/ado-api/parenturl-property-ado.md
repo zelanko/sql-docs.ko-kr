@@ -3,7 +3,7 @@ description: ParentURL 속성(ADO)
 title: ParentURL 속성 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 65120ce6-3900-4cd4-b322-3b9816d74737
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8254dd1e47d6f6d3042e88365bd3c6ad0ea4301f
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: e3a8323223f97034750c7e6bf7927ac87aefd3bd
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88773242"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990114"
 ---
 # <a name="parenturl-property-ado"></a>ParentURL 속성(ADO)
 현재 **record** 개체의 부모 [레코드](./record-object-ado.md) 를 가리키는 절대 URL 문자열을 나타냅니다.  

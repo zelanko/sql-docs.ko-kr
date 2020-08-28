@@ -3,7 +3,7 @@ description: MaxRecords 속성 예제(VB)
 title: MaxRecords 속성 예제 (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 630a3be4-7a87-41cf-997e-8bb50d89db1e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fef42834365372b889d9158c9b1a35582c384e7b
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 1873c6a3d887ddfbcccf9f51f86a94f882047e77
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88774422"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990624"
 ---
 # <a name="maxrecords-property-example-vb"></a>MaxRecords 속성 예제(VB)
 이 예에서는 [MaxRecords](./maxrecords-property-ado.md) 속성을 사용 하 여 ***titles*** 테이블에서 가장 비싼 10 개의 제목이 포함 된 [레코드 집합](./recordset-object-ado.md) 을 엽니다.  

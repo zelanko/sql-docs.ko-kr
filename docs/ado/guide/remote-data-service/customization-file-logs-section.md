@@ -3,7 +3,7 @@ description: 사용자 지정 파일 로그 섹션
 title: 사용자 지정 파일 로그 섹션 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/09/2018
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a368e264-865c-41ee-be00-d9097255c2ea
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f478a1e1c18e9182d2effe77d37c0c329ba22c54
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 890ba32615cdd78d9b999958f3ce3cb1e0755b81
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88759837"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88978244"
 ---
 # <a name="customization-file-logs-section"></a>사용자 지정 파일 로그 섹션
 **Logs** 섹션에는 **DataFactory**작업 중에 오류를 기록 하는 파일의 이름을 지정 하는 로그 파일 항목이 포함 되어 있습니다.  
@@ -46,7 +46,7 @@ FileName
   
  로그 파일에는 각 오류의 사용자 이름, HRESULT, 날짜 및 시간이 포함 됩니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [사용자 지정 파일 연결 섹션](./customization-file-connect-section.md)   
  [사용자 지정 파일 SQL 섹션](./customization-file-sql-section.md)   
  [사용자 지정 파일 UserList 섹션](./customization-file-userlist-section.md)   

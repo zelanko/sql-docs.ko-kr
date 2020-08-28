@@ -3,7 +3,7 @@ description: Append 메서드(ADOX 보기)
 title: Append 메서드 (ADOX Views) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6070fd58-3237-4c77-a966-5b39ce5d57e4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 74432aa3bb610b1cd5688e1f52c7d7ea81166f75
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 77682d479d65c7ccc0dd01fd1fd86627a580d8c5
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88771362"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88985394"
 ---
 # <a name="append-method-adox-views"></a>Append 메서드(ADOX 보기)
 새 [뷰](./view-object-adox.md) 개체를 만들어 [Views](./views-collection-adox.md) 컬렉션에 추가 합니다.  
@@ -35,7 +35,7 @@ Views.Append Name, Command
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- *Name*  
+ *이름*  
  만들 뷰의 이름을 지정 하는 **문자열** 값입니다.  
   
  *명령*  

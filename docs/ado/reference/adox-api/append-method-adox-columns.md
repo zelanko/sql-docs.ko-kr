@@ -3,7 +3,7 @@ description: Append 메서드(ADOX 열)
 title: Append 메서드 (ADOX Columns) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7a46d23c-efef-4ec7-815d-cd3ac86787dd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d17c6823acc945f50e5d8d0543448c997dadc5fe
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 1c959f6d822724ee6e7480cf00941aaa1fc8012a
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88771522"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88985504"
 ---
 # <a name="append-method-adox-columns"></a>Append 메서드(ADOX 열)
 [열](./columns-collection-adox.md) 컬렉션에 새 [열](./column-object-adox.md) 개체를 추가 합니다.  
@@ -38,7 +38,7 @@ Columns.Append Column [,Type] [,DefinedSize]
  *열*  
  추가할 **열** 개체 또는 만들고 추가할 열 이름입니다.  
   
- *형식*  
+ *유형*  
  선택 사항입니다. 열의 데이터 형식을 지정 하는 **Long** 값입니다. *Type* 매개 변수는 **Column** 개체의 [type](./type-property-column-adox.md) 속성에 해당 합니다.  
   
  *DefinedSize*  

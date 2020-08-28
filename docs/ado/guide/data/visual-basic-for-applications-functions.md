@@ -3,7 +3,7 @@ description: Visual Basic for Applications 기능
 title: Visual Basic for Applications 함수 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ccbdea9d-f9cf-4b0c-ade2-2d65311e12dc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d680d8a0f0f7d34e9074b5e2e9e63aedd82a1217
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 960e0f8cf42a2ef1f0b2b30f73a784d208777dae
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452555"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88978934"
 ---
 # <a name="visual-basic-for-applications-functions"></a>Visual Basic for Applications 기능
 데이터 셰이핑 계산 식에는 다음과 같은 Visual Basic for Applications 함수를 사용할 수 있습니다.  
@@ -63,7 +63,7 @@ ms.locfileid: "88452555"
         오류  
         Error$  
         Exp  
-        수정  
+        Fix  
         서식  
         Format$  
         FV  
@@ -120,9 +120,9 @@ ms.locfileid: "88452555"
         Rnd  
         RTrim  
         RTrim $  
-        초  
+        Second  
         Sgn  
-        사인  
+        Sin  
         SLN  
         Space  
         Space$  
@@ -133,7 +133,7 @@ ms.locfileid: "88452555"
         StrConv  
     :::column-end:::
     :::column:::
-        String  
+        문자열  
         String$  
         SYD  
         Tan  

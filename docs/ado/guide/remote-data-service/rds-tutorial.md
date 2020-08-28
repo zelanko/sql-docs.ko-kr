@@ -3,7 +3,7 @@ description: RDS 자습서
 title: RDS 자습서 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/09/2018
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6e3305a0-7bc7-40d1-9122-235c15d23ab2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c8200b9bd42d06a52e5786b839a55cce175bb0b2
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 0781d75d20254582a3a887cf92a54c8e32848289
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88759523"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88977834"
 ---
 # <a name="rds-tutorial"></a>RDS 자습서
 이 자습서에서는 RDS 프로그래밍 모델을 사용 하 여 데이터 원본을 쿼리하고 업데이트 하는 방법을 보여 줍니다. 먼저이 작업을 수행 하는 데 필요한 단계를 설명 합니다. 그런 다음 자습서는 Microsoft® Visual Basic Scripting Edition (ADO/WFC 클래스의 ADO)에서 반복 됩니다.  
@@ -69,6 +69,6 @@ ms.locfileid: "88759523"
   
 -   [RDS 자습서(VBScript)](./rds-tutorial-vbscript.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [1 단계: 서버 프로그램 지정 (RDS 자습서)](./step-1-specify-a-server-program-rds-tutorial.md)   
  [RDS 자습서(VBScript)](./rds-tutorial-vbscript.md)

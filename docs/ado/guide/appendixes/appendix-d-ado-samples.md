@@ -3,7 +3,7 @@ description: '부록 D: Windows SDK의 ADO 샘플'
 title: '부록 D: ADO 샘플 | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1582e411-55ac-40f0-bd3d-9a10654e4b67
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5f5adffa2a9459853f573227df9d6082c8eb981e
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 2226406e3fc10a2e1dadd19020f9fcb243f442b7
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806678"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991144"
 ---
 # <a name="appendix-d-ado-samples-in-the-windows-sdk"></a>부록 D: Windows SDK의 ADO 샘플
 Windows SDK에는 ADO 및 RDS 코드를 사용 하는 방법을 보여 주는 몇 가지 예제 응용 프로그램이 포함 되어 있습니다. 이러한 샘플은 ADO 및 RDS를 사용 하는 방법을 배우는 데 유용 하지만 프로덕션 서버에 배포 하기 위한 것이 아닙니다.

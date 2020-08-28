@@ -3,7 +3,7 @@ description: 안전 또는 무제한 모드에 대한 DataFactory 구성
 title: 안전 또는 무제한 모드에 대 한 DataFactory 구성 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/09/2018
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8ff24805-dc7a-42ae-b600-5bad0e3f51b8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ffd9c1b82225a131722cdaf384c4bd5662b5322f
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: ab1236205813d1fa3aee0a039703afb10661169c
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88758393"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88978364"
 ---
 # <a name="configuring-datafactory-for-safe-or-unrestricted-modes"></a>안전 또는 무제한 모드에 대한 DataFactory 구성
 > [!IMPORTANT]
@@ -38,6 +38,6 @@ ms.locfileid: "88758393"
   
  직접 safe .reg를 실행 한 후에 명령 프롬프트 창에서 "NET STOP W3SVC" 및 "NET START W3SVC" 명령을 입력 하 여 웹 서버에서 World Wide Web 게시 서비스를 중지 했다가 다시 시작 해야 합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [DataFactory 사용자 지정](./datafactory-customization.md)   
  [RDS 기본 사항](./rds-fundamentals.md)

@@ -3,7 +3,7 @@ description: ActiveCommand 속성 예제(JScript)
 title: ActiveCommand 속성 예제 (JScript) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: be09e2af-ba31-4168-8ccd-2461bb24e49a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a8b36a7fe46e975d27d4b255d3bb5928916faac7
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 06e66ac4671c9841498ae68fe568035633674ea2
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88759923"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88977144"
 ---
 # <a name="activecommand-property-example-jscript"></a>ActiveCommand 속성 예제(JScript)
 이 예제에서는 [ActiveCommand](./activecommand-property-ado.md) 속성을 보여 줍니다. 다음 코드를 잘라내어 메모장 또는 다른 텍스트 편집기에 붙여 넣고 **ActiveCommandJS**로 저장 합니다.  
@@ -126,7 +126,7 @@ if (strName.length > 0)
 <!-- EndActiveCommandJS -->  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [ActiveCommand 속성 (ADO)](./activecommand-property-ado.md)   
  [Command 개체 (ADO)](./command-object-ado.md)   
  [레코드 집합 개체(ADO)](./recordset-object-ado.md)

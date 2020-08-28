@@ -3,7 +3,7 @@ description: XSLT 변환
 title: XSLT 변환 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1a46196e-839f-4734-a59e-2c64609ffb9e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1ae0f13b2ece4ae21e8a8f8312a561bcfd0e6c88
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: a704245d166b0d53cb7ed17e6a5f8cdfa32d9447
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88758963"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88978804"
 ---
 # <a name="xslt-transformations"></a>XSLT 변환
 XSLT는 생성 된 XML에 적용 하 여 다른 형식으로 변환할 수 있습니다. ADO의 XML 형식을 이해 하면 보다 사용자에 게 친숙 한 형식으로 변환할 수 있는 XSLT 템플릿 개발에 도움이 됩니다.  
@@ -53,5 +53,5 @@ XSLT는 생성 된 XML에 적용 하 여 다른 형식으로 변환할 수 있�
   
  XSLT는 ADO Save 메서드로 생성 된 XML 스트림을 테이블 머리글과 함께 레코드 집합의 각 필드를 표시 하는 HTML 테이블로 변환 합니다. 또한 테이블 머리글과 행에는 서로 다른 글꼴 및 색이 할당 됩니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [XML 형식으로 레코드 유지](./persisting-records-in-xml-format.md)

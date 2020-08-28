@@ -3,7 +3,7 @@ description: Mode 속성(ADO)
 title: Mode 속성 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 808661eb-0d7c-4e6d-8e40-9dc3bef3d77a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4d63e1ccddf4384a01911738e3eabfddb77cd6be
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: eab9f3db1bfe9417411dc832cfa24e3d4496257b
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88774392"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990604"
 ---
 # <a name="mode-property-ado"></a>Mode 속성(ADO)
 [연결](./connection-object-ado.md), [레코드](./record-object-ado.md)또는 [스트림](./stream-object-ado.md) 개체의 데이터를 수정 하는 데 사용할 수 있는 권한을 나타냅니다.  

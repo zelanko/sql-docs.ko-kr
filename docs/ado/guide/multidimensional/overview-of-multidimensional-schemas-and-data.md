@@ -3,7 +3,7 @@ description: 다차원 스키마 및 데이터 개요
 title: 다차원 스키마 및 데이터 개요 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/08/2018
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ce37fa06-c581-4d80-9a9b-c3aa66408909
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c7fc8cd189534a217468f71188479a8df100fed6
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 431ff25d49c4a45055d796aba98f229564872a4e
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88758363"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88978644"
 ---
 # <a name="overview-of-multidimensional-schemas-and-data"></a>다차원 스키마 및 데이터 개요
 ## <a name="understanding-multidimensional-schemas"></a>다차원 스키마 이해  
@@ -69,7 +69,7 @@ Hamburg, Munich, Stuttgart}
   
 -   건설 `= {Ottawa, Toronto, Vancouver, Calgary, Seattle, Boise, Los Angeles, Houston, Shreveport, Miami, Boston, New York, London, Dover, Glasgow, Edinburgh, Cardiff, Pembroke, Belfast, Derry, Berlin, Hamburg, Munich, Stuttgart}`  
   
-### <a name="members"></a>구성원  
+### <a name="members"></a>멤버  
  계층의 리프 수준에 있는 멤버에는 자식이 없고 루트 수준의 멤버에는 부모가 없습니다. 다른 모든 멤버는 하나 이상의 부모 및 하나 이상의 자식을 가집니다. 예를 들어 Geography 차원에서 계층 트리의 부분 순회는 다음과 같은 부모-자식 관계를 생성 합니다.  
   
 -   `{All} (parent of) {Europe, North America}`  
@@ -84,7 +84,7 @@ Hamburg, Munich, Stuttgart}
   
  또한이 예제에서는 다른 특징을 보여 줍니다. Year 계층의 주 수준 멤버가 Year-Quarter 계층의 수준에 표시 되지 않습니다. 따라서 계층 구조는 차원의 모든 멤버를 포함할 필요가 없습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [ADO MD 개체 모델](../../reference/ado-md-api/ado-md-object-model.md)   
  [ADO (다차원) (ADO MD)](./ado-multidimensional-ado-md.md)   
  [ADO MD를 사용한 프로그래밍](./programming-with-ado-md.md)   

@@ -3,7 +3,7 @@ description: Item 속성 예제(VC++)
 title: Item 속성 예제 (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 05ae3f5a-a0c1-459d-aa7d-ed7f3b2ecd60
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dee5bda39c96dbfe70818a6b0e0aa4eb4f6ee6b7
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 4359302bbd32d110ce55d073f155b74438586563
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88774642"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990734"
 ---
 # <a name="item-property-example-vc"></a>Item 속성 예제(VC++)
 이 예제에서는 [항목](./item-property-ado.md) 속성이 컬렉션의 멤버에 액세스 하는 방법을 보여 줍니다. 이 예에서는 매개 변수가 있는 명령을 사용 하 여 ***Pubs*** 데이터베이스의 ***Authors*** 테이블을 엽니다.  

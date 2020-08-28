@@ -3,7 +3,7 @@ description: ADCPROP_ASYNCTHREADPRIORITY_ENUM
 title: ADCPROP_ASYNCTHREADPRIORITY_ENUM | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f0965617-17d8-41e0-98d0-f824274735a6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 446a220868a2cf0b0a518bde95897b9d1f41a3b3
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: e01a004ded0b6ed3151ba28c747d3ea245462f92
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88760278"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88976874"
 ---
 # <a name="adcprop_asyncthreadpriority_enum"></a>ADCPROP_ASYNCTHREADPRIORITY_ENUM
 RDS [레코드 집합](./recordset-object-ado.md) 개체의 경우 데이터를 검색 하는 비동기 스레드의 실행 우선 순위를 지정 합니다.  

@@ -3,7 +3,7 @@ description: 사용자 지정 비즈니스 개체 등록
 title: 사용자 지정 비즈니스 개체 등록 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/09/2018
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e9032ad8-d14c-42e3-ba13-cb5f00084a79
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 73b1fe1d0089ed601391f9a621d7cdc163ab8983
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 0b6b2a4840a1deb4a07fc4871bedbfb2f2473fa5
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88759483"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88977804"
 ---
 # <a name="registering-a-custom-business-object"></a>사용자 지정 비즈니스 개체 등록
 웹 서버를 통해 사용자 지정 비즈니스 개체 (.dll 또는 .exe)를 성공적으로 시작 하려면이 절차에 설명 된 대로 비즈니스 개체의 ProgID를 레지스트리에 입력 해야 합니다. 이 RDS 기능은 사용 권한 실행 파일만 실행 하 여 웹 서버의 보안을 보호 합니다.  

@@ -3,7 +3,7 @@ description: Prepared 속성 예제(VC++)
 title: 준비 된 속성 예제 (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f697ac1a-f125-42b5-bbf6-762a7fa30ae3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 003f3f80e9a544e5b33929cf434f6b39855ca49d
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: fb8f0b2b269e872f8a40cbdce11388895ec5f927
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88773062"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990024"
 ---
 # <a name="prepared-property-example-vc"></a>Prepared 속성 예제(VC++)
 이 예제에서는 준비 [된 속성](./prepared-property-ado.md) 중 하나를 [Command](./command-object-ado.md) 열어 준비 된 속성을 보여 줍니다.  

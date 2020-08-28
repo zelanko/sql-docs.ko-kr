@@ -3,7 +3,7 @@ description: 계층적 레코드 집합 구성
 title: Suz 계층 구조 레코드 집합 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a584e642-a4a3-418e-bc20-3aff81a5625a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e1bf51c8d7d6db2ac898787c3a649a0ecb0610cb
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 24941f8fbf2aedb5fb61cea176ef26d3172012cc
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806844"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991284"
 ---
 # <a name="fabricating-hierarchical-recordsets"></a>계층적 레코드 집합 구성
 다음 예에서는 데이터 셰이핑 문법을 사용 하 여 부모, 자식 및 손자 **레코드 집합**에 대 한 열을 정의 하 여 기본 데이터 원본 없이 계층적 레코드 집합을 만드는 방법을 보여 줍니다.  

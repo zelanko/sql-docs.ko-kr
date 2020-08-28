@@ -3,7 +3,7 @@ description: RDS 문제 해결
 title: RDS 문제 해결 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/09/2018
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 92905044-579f-4c38-bca6-f8bd5b239c20
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 67dd2ac9820167c92b16d11b056e02f796e56f5f
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: c859b990d7fb076d613f8da6fe650938f2da0880
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88759891"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88977434"
 ---
 # <a name="troubleshooting-rds"></a>RDS 문제 해결
 > [!IMPORTANT]
@@ -38,5 +38,5 @@ ms.locfileid: "88759891"
   
 -   [로그 파일 공간 사용 최소화](./minimizing-log-file-space-usage.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [RDS 기본 사항](./rds-fundamentals.md)

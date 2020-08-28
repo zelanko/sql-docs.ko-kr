@@ -3,7 +3,7 @@ description: Reshape Name 속성-동적(ADO)
 title: 이름 변경 속성-동적 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 690229d1-46cc-42e6-a57d-4438251fe248
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f5b7f98d4ba18533342e3fa2c45270b332d4bbc2
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: dbffa574fd9746788c38b6c03d9690a91ff89730
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777702"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88989544"
 ---
 # <a name="reshape-name-property-dynamic-ado"></a>Reshape Name 속성-동적(ADO)
 [레코드 집합](./recordset-object-ado.md) 개체의 이름을 지정 합니다.  

@@ -3,7 +3,7 @@ description: 데이터 편집
 title: 데이터 편집 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ef514f85-c446-4f05-824e-c9313b2ffae1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 01f5f2010491e394addd37511ead8b7ea20136c1
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: b39e62f1d7fc55c2d58b382677efa41e4df784a3
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806879"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991344"
 ---
 # <a name="editing-data"></a>데이터 편집
 ADO를 사용 하 여 데이터 원본에 연결 하 고, 명령을 실행 하 고, **레코드 집합** 개체에서 결과를 가져오고, **레코드 집합**내에서 탐색 하는 방법에 대해 설명 했습니다. 이 섹션에서는 다음 기본 ADO 작업 인 데이터 편집에 대해 중점적으로 설명 합니다.  

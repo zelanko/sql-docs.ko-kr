@@ -3,7 +3,7 @@ description: Save 및 Open 메서드 예제(VB)
 title: Save 및 Open 메서드 예제 (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ddccdf58-9c57-4c9b-8b7f-0cf193f955fb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 34ad6214f36061ed12577f7ba843a69fc13b7d8a
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 14668aba6cbc6817b951820bbdee4d5c69a51bc5
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777602"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88989364"
 ---
 # <a name="save-and-open-methods-example-vb"></a>Save 및 Open 메서드 예제(VB)
 다음 세 가지 예제에서는 [Save](./save-method.md) 및 [Open](./open-method-ado-recordset.md) 메서드를 함께 사용할 수 있는 방법을 보여 줍니다.  

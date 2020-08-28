@@ -3,7 +3,7 @@ description: 주소록 데이터 바인딩 개체
 title: 주소록 데이터-바인딩 개체 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/09/2018
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 080c1925-d453-4b89-92ac-c93591490518
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d2028a27c547d92903188c49e608dcc75b51fa27
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: d6b6bb99ea218268a7ccb988acb2f49fb4898f32
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88758623"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88978444"
 ---
 # <a name="address-book-data-binding-object"></a>주소록 데이터 바인딩 개체
 주소록 응용 프로그램은 RDS를 사용 합니다 [. ](../../reference/rds-api/datacontrol-object-rds.md) 응용 프로그램의 클라이언트 HTML 페이지에서 SQL Server 데이터베이스의 시각적 개체 (이 경우 DHTML 테이블)에 데이터를 바인딩하는 DataControl 개체입니다. 이벤트 기반 VBScript 프로그램 논리는 RDS를 사용 합니다 [. DataControl](../../reference/rds-api/datacontrol-object-rds.md) :  
@@ -65,5 +65,5 @@ Initial Catalog=AddrBookDb;Integrated Security=SSPI;">
 |[CONNECT](../../reference/rds-api/connect-property-rds.md)|RDS에 필요한 연결 정보를 제공 합니다 **. ** SQL Server에 연결 하는 DataControl입니다.|  
 |[SQL](../../reference/rds-api/sql-property.md)|[레코드 집합](../../reference/ado-api/recordset-object-ado.md)을 검색 하는 데 사용 되는 쿼리 문자열을 설정 하거나 반환 합니다.|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [주소록 명령 단추](./address-book-command-buttons.md)

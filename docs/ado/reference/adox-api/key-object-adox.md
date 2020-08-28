@@ -3,7 +3,7 @@ description: 키 개체(ADOX)
 title: Key 개체 (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 55f116fe-4d56-4892-bffe-0cdd6fc727c9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 619cd72854a4e779fbea8989fa84ef6fdf27f90a
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: d8b2f37dd12f7243f2c5fcb8e577dc35e350c6a9
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88770112"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88984054"
 ---
 # <a name="key-object-adox"></a>키 개체(ADOX)
 데이터베이스 테이블의 기본 키, 외래 키 또는 고유 키 필드를 나타냅니다.  
