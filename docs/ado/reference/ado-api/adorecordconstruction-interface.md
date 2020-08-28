@@ -3,7 +3,7 @@ description: ADORecordConstruction 인터페이스
 title: ADORecordConstruction 인터페이스 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 52a5429e-5829-455e-be3b-31f05cbecf2d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f93370ae23cd50e1fb494d484756505f69514df1
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 4e56c1ed6339c7b0baf50abfc6308a2dc2be741a
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776603"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88976234"
 ---
 # <a name="adorecordconstruction-interface"></a>ADORecordConstruction 인터페이스
 **ADORecordConstruction**인터페이스는 C/c + + 응용 프로그램의 OLE DB **ROW** 개체에서 ADO **Record** 개체를 생성 하는 데 사용 됩니다.  

@@ -3,7 +3,7 @@ description: Clone 메서드(ADO)
 title: Clone 메서드 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: ad49265f-1c05-4271-9bbf-7c00010ac18c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c91960975b04e5c09cf2745e1bb77e7b343dbd2e
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: cc7bab8106ba0d9b023999f80ce77935ae30cc8d
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776252"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88975434"
 ---
 # <a name="clone-method-ado"></a>Clone 메서드(ADO)
 기존 **recordset** 개체에서 중복 [레코드 집합](./recordset-object-ado.md) 개체를 만듭니다. 필요에 따라 복제본을 읽기 전용으로 지정 합니다.  

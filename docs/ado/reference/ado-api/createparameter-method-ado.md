@@ -3,7 +3,7 @@ description: CreateParameter 메서드(ADO)
 title: CreateParameter 메서드 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9666fdcc-0544-4ed7-a97b-c415f2a56d7e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1c3ed02109806232f8301b33e8b0387ea78b6ef4
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 8fd075dff5ae67c7965082a9b7d0f75f5c4d47eb
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88775612"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88974484"
 ---
 # <a name="createparameter-method-ado"></a>CreateParameter 메서드(ADO)
 지정 된 속성을 사용 하 여 새 [매개 변수](./parameter-object.md) 개체를 만듭니다.  
@@ -38,7 +38,7 @@ Set parameter = command.CreateParameter (Name, Type, Direction, Size, Value)
  **매개 변수** 개체를 반환 합니다.  
   
 #### <a name="parameters"></a>매개 변수  
- *Name*  
+ *이름*  
  선택 사항입니다. **매개 변수** 개체의 이름을 포함 하는 **문자열** 값입니다.  
   
  *유형*  

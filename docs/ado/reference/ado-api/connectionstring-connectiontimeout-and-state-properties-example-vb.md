@@ -3,7 +3,7 @@ description: ConnectionString, ConnectionTimeout 및 State 속성 예제 (VB)
 title: 연결 속성 예제 (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4de7336a-b5ea-43f1-b750-5fa302b5b756
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fc8619fd7c803fdbf417368ef8e7e896e1947ab2
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 6154dd6f741383dfbb2c86db95e766fc9903e3d5
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88775922"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88974794"
 ---
 # <a name="connectionstring-connectiontimeout-and-state-properties-example-vb"></a>ConnectionString, ConnectionTimeout 및 State 속성 예제 (VB)
 이 예에서는 [ConnectionString](./connectionstring-property-ado.md) 속성을 사용 하 여 [연결](./connection-object-ado.md) 개체를 여는 다양 한 방법을 보여 줍니다. 또한 [ConnectionTimeout](./connectiontimeout-property-ado.md) 속성을 사용 하 여 연결 제한 시간을 설정 하 고 [상태](./state-property-ado.md) 속성을 사용 하 여 연결 상태를 확인 합니다. GetState 함수는이 프로시저를 실행 하는 데 필요 합니다.  

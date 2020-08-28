@@ -3,7 +3,7 @@ description: ExecuteOptions 속성(RDS)
 title: ExecuteOptions 속성 (RDS) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 62a4fd88-afc3-4f1f-b978-40710a30c4e9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 042a69dd679cf84e2ab26da77cda3c06d2abd94e
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: c363333e7e88fa0bedbb8cddc126d7ad62f0e2d3
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88768312"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88982254"
 ---
 # <a name="executeoptions-property-rds"></a>ExecuteOptions 속성(RDS)
 비동기 실행을 사용 하는지 여부를 나타냅니다.  
@@ -30,7 +30,7 @@ ms.locfileid: "88768312"
 ## <a name="settings-and-return-values"></a>설정 및 반환 값  
  다음 값 중 하나를 설정 하거나 반환 합니다.  
   
-|상수|Description|  
+|상수|설명|  
 |--------------|-----------------|  
 |**adcExecSync**|[레코드 집합](../ado-api/recordset-object-ado.md) 의 다음 새로 고침을 동기적으로 실행 합니다.|  
 |**adcExecAsync**|기본값 **레코드 집합** 의 다음 새로 고침을 비동기적으로 실행 합니다.|  

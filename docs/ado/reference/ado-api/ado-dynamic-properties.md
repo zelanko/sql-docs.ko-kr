@@ -2,7 +2,7 @@
 description: ADO 동적 속성
 title: ADO 동적 속성 | Microsoft Docs
 ms.prod: sql
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: d7b06d72-f792-4328-93a2-5006b9e2c581
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 83ab2320d3400c5be066af246b50daccaf468462
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 9dd0186fba696d2fe3528f113bd0e07aeadd801f
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88771762"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88976514"
 ---
 # <a name="ado-dynamic-properties"></a>ADO 동적 속성
 동적 속성을 [연결](./connection-object-ado.md), [명령](./command-object-ado.md)또는 [레코드 집합](./recordset-object-ado.md) 개체의 [속성](./properties-collection-ado.md) 컬렉션에 추가할 수 있습니다. 이러한 속성의 원본은 [SQL Server 용 OLE DB 공급자](../../guide/appendixes/microsoft-ole-db-provider-for-sql-server.md)또는 서비스 공급자 (예: [OLE DB 용 Microsoft Cursor service](../../guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md))와 같은 데이터 공급자입니다. 특정 동적 속성에 대 한 자세한 내용은 적절 한 데이터 공급자 또는 서비스 공급자 설명서를 참조 하십시오.  

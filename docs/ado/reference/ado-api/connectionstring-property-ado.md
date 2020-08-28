@@ -3,7 +3,7 @@ description: ConnectionString 속성(ADO)
 title: ConnectionString 속성 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3be75b75-4d36-4479-ab64-9a456869252a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f7adb671b42d17b4abe13733fd912234e79560e3
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 2add76a640e89bebe8a941afa5896bb2300750a9
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88775902"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88974774"
 ---
 # <a name="connectionstring-property-ado"></a>ConnectionString 속성(ADO)
 데이터 원본에 대 한 연결을 설정 하는 데 사용 되는 정보를 나타냅니다.  
@@ -34,7 +34,7 @@ ms.locfileid: "88775902"
   
  ADO는 **ConnectionString** 속성에 대해 5 개의 인수를 지원 합니다. 다른 모든 인수는 ADO에서 처리 하지 않고 공급자에 게 직접 전달 됩니다. ADO에서 지 원하는 인수는 다음과 같습니다.  
   
-|인수|Description|  
+|인수|설명|  
 |--------------|-----------------|  
 |*공급자 =*|연결에 사용할 공급자의 이름을 지정 합니다.|  
 |*파일 이름 =*|미리 설정 된 연결 정보를 포함 하는 공급자별 파일 (예: 지속형 데이터 원본 개체)의 이름을 지정 합니다.|  

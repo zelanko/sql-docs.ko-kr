@@ -3,7 +3,7 @@ description: 명령 개체(ADO)
 title: Command 개체 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a02c22fb-542d-465e-a629-30fd59dcbebf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d876be4883844790815a0640d26cee2933ca17f2
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 252a59f63c4ce782a915a1e1cf11af58fd2f233b
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776162"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88975234"
 ---
 # <a name="command-object-ado"></a>명령 개체(ADO)
 데이터 원본에 대해 실행 하려는 특정 명령을 정의 합니다.  

@@ -3,7 +3,7 @@ description: ADO 열거 상수
 title: ADO 열거 상수 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: c97ed131-1a93-463c-9e61-22f029b0c474
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c2b7890cc9926025e7662e8571fb79309590f9de
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: c3c19b98cbb000abc93755c3de43ac5420db164d
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776687"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88976484"
 ---
 # <a name="ado-enumerated-constants"></a>ADO 열거 상수
 디버깅을 지원 하기 위해 ADO 열거형에는 각 상수에 대 한 값이 나열 됩니다. 그러나이 값은 전적으로 advise 이며 ADO의 릴리스 간에 변경 될 수 있습니다. 코드는 열거 된 각 상수의 실제 값이 아닌 이름에만 의존 해야 합니다.  
   
-|상수|Description|  
+|상수|설명|  
 |-|-|  
 |[ADCPROP_ASYNCTHREADPRIORITY_ENUM](./adcprop-asyncthreadpriority-enum.md)|RDS **레코드 집합** 개체의 경우 데이터를 검색 하는 비동기 스레드의 실행 우선 순위를 지정 합니다.|  
 |[ADCPROP_AUTORECALC_ENUM](./adcprop-autorecalc-enum.md)|**MSDataShape** 공급자가 계층적 **레코드 집합**에서 집계 열과 계산 된 열을 다시 계산 하는 시기를 지정 합니다.|  

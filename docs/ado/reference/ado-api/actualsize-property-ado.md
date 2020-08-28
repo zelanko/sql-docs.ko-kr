@@ -3,7 +3,7 @@ description: ActualSize 속성(ADO)
 title: ActualSize 속성 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 03/20/2018
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 722803d0-cef5-4d4c-b79d-3f2f58052229
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b08a0ce6f9b318430785938c33ce951282eafce2
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 6684c03c94d26b8c8f6366ac41ccd1b331016426
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88760288"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88976904"
 ---
 # <a name="actualsize-property-ado"></a>ActualSize 속성(ADO)
 필드 값의 실제 길이 (바이트)를 나타냅니다.  
@@ -37,7 +37,7 @@ ms.locfileid: "88760288"
 ## <a name="applies-to"></a>적용 대상  
  [Field 개체](./field-object.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [ActualSize 및 DefinedSize 속성 예제 (VB)](./actualsize-and-definedsize-properties-example-vb.md)   
  [ActualSize 및 DefinedSize 속성 예제 (VC + +)](./actualsize-and-definedsize-properties-example-vc.md)   
  [DefinedSize 속성](./definedsize-property.md)

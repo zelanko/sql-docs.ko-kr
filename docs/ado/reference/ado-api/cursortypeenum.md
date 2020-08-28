@@ -3,7 +3,7 @@ description: CursorTypeEnum
 title: CursorTypeEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: ffc6e245-4471-42ae-84dd-e85bddfce983
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9e0d37d5aad3f27a61cf3ae7c8dad9b27149e09b
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: ceb52384d5ed33019bf0d7ec5148322801a1dc2e
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88775472"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88974314"
 ---
 # <a name="cursortypeenum"></a>CursorTypeEnum
 [레코드 집합](./recordset-object-ado.md) 개체에 사용 되는 커서의 유형을 지정 합니다.  
   
-|상수|값|Description|  
+|상수|값|설명|  
 |--------------|-----------|-----------------|  
 |**adOpenDynamic**|2|동적 커서를 사용 합니다. 다른 사용자에의 한 추가, 변경 및 삭제 내용이 표시 되 고, 공급자가 지원 하지 않는 경우 책갈피를 제외 하 고 **레코드 집합** 을 통한 모든 이동 유형이 허용 됩니다.|  
 |**adOpenForwardOnly**|0|기본값 앞 으로만 이동 가능한 커서를 사용 합니다. 레코드를 앞 으로만 스크롤할 수 있다는 점을 제외 하 고 정적 커서와 동일 합니다. 이렇게 하면 **레코드 집합**을 한 번만 통과 해야 하는 경우 성능이 향상 됩니다.|  

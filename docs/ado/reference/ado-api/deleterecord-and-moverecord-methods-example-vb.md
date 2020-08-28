@@ -3,7 +3,7 @@ description: DeleteRecord 및 MoveRecord 메서드 예제 (VB)
 title: DeleteRecord 및 MoveRecord 메서드 예제 (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c3937d1e-9872-47e5-a22e-b147637f2388
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a3cb757703b7eebd3734ee33b97205e6491a4c40
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 382a4e103d1a51067344788b7fe1fdca9f5e1fd4
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444125"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88974014"
 ---
 # <a name="deleterecord-and-moverecord-methods-example-vb"></a>DeleteRecord 및 MoveRecord 메서드 예제 (VB)
 이 예제에서는 웹 폴더에 게시 된 텍스트 파일의 내용을 복사, 이동, 편집 및 삭제 하는 방법을 보여 줍니다. 사용 되는 기타 속성 및 메서드에는 [Getchildren](../../../ado/reference/ado-api/getchildren-method-ado.md), [parenturl](../../../ado/reference/ado-api/parenturl-property-ado.md), [Source](../../../ado/reference/ado-api/source-property-ado-record.md)및 [Flush](../../../ado/reference/ado-api/flush-method-ado.md)가 포함 됩니다.  

@@ -3,7 +3,7 @@ description: Catalog 개체(ADO MD)
 title: 카탈로그 개체 (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 11f6f896-d69c-44a4-94cd-d54c93140e4a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b198e9765a8d0e68e61ecd3f9ed334e34c714ea8
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 0e62b4eedd835cff2d5bd99e054648339ffd9bc0
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88778342"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88987304"
 ---
 # <a name="catalog-object-ado-md"></a>Catalog 개체(ADO MD)
 .MDP (multidimensional data provider)와 관련 된 다차원 스키마 정보 (즉, 큐브 및 기본 차원, 계층, 수준 및 멤버)를 포함 합니다.  

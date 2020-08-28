@@ -3,7 +3,7 @@ description: FilterColumn 속성(RDS)
 title: FilterColumn 속성 (RDS) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0a5473e8-8ce6-4518-83fb-4920b827e285
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: df85b0a5493e73613ac5ee5d4f1d7e7470fe645b
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 1af2eb386f3d61387158a3a654ff900f6b6ad43a
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88768262"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88982204"
 ---
 # <a name="filtercolumn-property-rds"></a>FilterColumn 속성(RDS)
 필터 조건을 평가할 열을 나타냅니다.  

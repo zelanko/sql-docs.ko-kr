@@ -3,7 +3,7 @@ description: ConnectModeEnum
 title: ConnectModeEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 3792c294-5161-4538-a908-22a5fc50b85f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 10bc68683f337f5a0bdf6fc5679c4276925a4234
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 704e4e78c47744fbdf2288800353fbbd33d8b090
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88775852"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88974714"
 ---
 # <a name="connectmodeenum"></a>ConnectModeEnum
 [연결](./connection-object-ado.md)의 데이터를 수정 하거나 [레코드](./record-object-ado.md)를 열거나 **Record** 및 [Stream](./stream-object-ado.md) 개체의 [Mode](./mode-property-ado.md) 속성 값을 지정 하는 데 사용할 수 있는 권한을 지정 합니다.  
   
-|상수|값|Description|  
+|상수|값|설명|  
 |--------------|-----------|-----------------|  
 |**adModeRead**|1|읽기 전용 권한을 나타냅니다.|  
 |**adModeReadWrite**|3|읽기/쓰기 권한을 나타냅니다.|  

@@ -3,7 +3,7 @@ description: WillChangeRecordset 및 RecordsetChangeComplete 이벤트(ADO)
 title: WillChangeRecordset 및 RecordsetChangeComplete 이벤트 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: d5d44659-e0d9-46d9-a297-99c43555082f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5c88cd48a16907e67813f90c06dd9ce69d11ed30
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: c3066ebce2f1f3e96404e933af1c39ad0fdd2659
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776892"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88987804"
 ---
 # <a name="willchangerecordset-and-recordsetchangecomplete-events-ado"></a>WillChangeRecordset 및 RecordsetChangeComplete 이벤트(ADO)
 **WillChangeRecordset** 이벤트는 보류 중인 작업이 [레코드 집합](./recordset-object-ado.md)을 변경 하기 전에 호출 됩니다. **RecordsetChangeComplete** 이벤트는 **레코드 집합이** 변경 된 후에 호출 됩니다.  

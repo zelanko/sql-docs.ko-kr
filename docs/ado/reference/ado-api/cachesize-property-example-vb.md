@@ -3,7 +3,7 @@ description: CacheSize 속성 예제(VB)
 title: CacheSize 속성 예제 (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a237ffdb-6e5b-47c6-9901-d5cdbe8625f3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: be5e96526cc68701615617991c774c7124f7cd09
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: b83269332001846a5481908977af9e954585eba5
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776382"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88975674"
 ---
 # <a name="cachesize-property-example-vb"></a>CacheSize 속성 예제(VB)
 이 예에서는 [CacheSize](./cachesize-property-ado.md) 속성을 사용 하 여 30 레코드 캐시 없이 수행 된 작업의 성능 차이를 표시 합니다.  

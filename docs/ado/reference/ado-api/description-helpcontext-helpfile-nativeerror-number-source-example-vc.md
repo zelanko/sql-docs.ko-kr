@@ -3,7 +3,7 @@ description: Description, HelpContext, HelpFile, NativeError, Number, Source 및
 title: Error 개체 속성 예제 (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 5321fc0f-cd0c-4e2a-a5bc-0008fba86b59
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6423ff1e0b8ba5d5c274efee7f0dfe83b70f545b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 29f9c1b3b8b886bf7e89bf14f167e474c9e853f1
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444085"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88973944"
 ---
 # <a name="description-helpcontext-helpfile-nativeerror-number-source-and-sqlstate-properties-example-vc"></a>Description, HelpContext, HelpFile, NativeError, Number, Source 및 SQLState 속성 예제 (VC + +)
 이 예에서는 오류를 트리거하고 트래핑 하 고 결과 [오류](../../../ado/reference/ado-api/error-object.md) 개체의 [Description](../../../ado/reference/ado-api/description-property.md), [HelpContext](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md), [HelpFile](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md), [NativeError](../../../ado/reference/ado-api/nativeerror-property-ado.md), [Number](../../../ado/reference/ado-api/number-property-ado.md), [Source](../../../ado/reference/ado-api/source-property-ado-error.md)및 [SQLState](../../../ado/reference/ado-api/sqlstate-property.md) 속성을 표시 합니다.  

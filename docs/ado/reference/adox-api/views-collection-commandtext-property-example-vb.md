@@ -3,7 +3,7 @@ description: 보기 컬렉션, CommandText 속성 예제(VB)
 title: Views 컬렉션, CommandText 속성 예제 (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a05a0190-352d-44ff-9488-0c94e9fb656e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 645dd3602c97f8ca4bb4fd7df832352bb4cdded0
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: da3685ba69f34fce5a97d0621917883f0e16e6b1
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88768912"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88982864"
 ---
 # <a name="views-collection-commandtext-property-example-vb"></a>보기 컬렉션, CommandText 속성 예제(VB)
 다음 코드에서는 [명령](./command-property-adox.md) 속성을 사용 하 여 뷰의 텍스트를 업데이트 하는 방법을 보여 줍니다.  

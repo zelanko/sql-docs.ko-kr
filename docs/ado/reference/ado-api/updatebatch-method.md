@@ -3,7 +3,7 @@ description: UpdateBatch 메서드
 title: UpdateBatch 메서드 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 23f9314c-b027-4a51-aeae-50caa2977740
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7b462fb22758481f3237a2a8c793b76dc50956ad
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 648e6f8e64d4001851afb3838c901ab2b1172108
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776962"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88988004"
 ---
 # <a name="updatebatch-method"></a>UpdateBatch 메서드
 모든 보류 중인 일괄 처리 업데이트를 디스크에 기록 합니다.  

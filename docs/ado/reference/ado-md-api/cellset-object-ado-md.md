@@ -3,7 +3,7 @@ description: Cellset 개체(ADO MD)
 title: Cellset 개체 (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5e2452c0-cac0-49b2-8099-836c35794d50
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 65e5e28443fd4656aa2b953f18b07c952bcbb66a
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 411ed21d5fecf5c9791a5d96aac60724e7446958
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88778312"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88987154"
 ---
 # <a name="cellset-object-ado-md"></a>Cellset 개체(ADO MD)
 다차원 쿼리 결과를 나타냅니다. 큐브 또는 다른 셀 집합에서 선택 된 셀의 컬렉션입니다.  
@@ -33,7 +33,6 @@ ms.locfileid: "88778312"
 cst.Axes(0).Positions(0).Members(0).Caption  
 ```  
   
-## <a name="remarks"></a>설명  
  셀 집합에는 현재 셀에 대 한 개념이 없습니다. 대신 [Item](./item-property-ado-md-cellset.md) 속성은 셀 집합에서 특정 [셀](./cell-object-ado-md.md) 개체를 검색 합니다. **항목** 속성의 인수는 검색 되는 셀을 결정 합니다. 셀의 고유 서 수 값을 지정할 수 있습니다. 셀 집합의 각 축에서 해당 위치 번호를 사용 하 여 셀을 검색할 수도 있습니다. 셀을 검색 하는 방법에 대 한 자세한 내용은 [Item](./item-property-ado-md-cellset.md) 속성을 참조 하세요.  
   
  **셀 집합** 개체의 컬렉션, 메서드 및 속성을 사용 하 여 다음을 수행할 수 있습니다.  

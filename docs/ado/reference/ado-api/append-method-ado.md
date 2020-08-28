@@ -3,7 +3,7 @@ description: Append 메서드(ADO)
 title: Append 메서드 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f8a9bbed-ba9c-4698-945d-317ad22d2e92
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 87c4c1b9842dbd104a69ff4ba6a90eae2d7b1369
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 84969b95751726579bdc7d4a61aee311b95b6108
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776512"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88976084"
 ---
 # <a name="append-method-ado"></a>Append 메서드(ADO)
 컬렉션에 개체를 추가 합니다. 컬렉션이 [필드인](./fields-collection-ado.md)경우 컬렉션에 추가 되기 전에 새 [필드](./field-object.md) 개체를 만들 수 있습니다.  
@@ -44,7 +44,7 @@ fields.Append Name, Type, DefinedSize, Attrib, FieldValue
  *object*  
  추가할 개체를 나타내는 개체 변수입니다.  
   
- *Name*  
+ *이름*  
  새 **Field** 개체의 이름을 포함 하는 **문자열** 값으로, *필드*의 다른 개체와 이름이 달라 야 합니다.  
   
  *유형*  

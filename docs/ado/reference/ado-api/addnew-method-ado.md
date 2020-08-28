@@ -3,7 +3,7 @@ description: AddNew 메서드(ADO)
 title: AddNew 메서드 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: a9f54be9-5763-45d0-a6eb-09981b03bc08
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4e16fb5d00ed38a0adbbb28b9c13e34f75f26236
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 4695d1cf70328adad910d5b2b34e6b346b8049a4
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88760235"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88976804"
 ---
 # <a name="addnew-method-ado"></a>AddNew 메서드(ADO)
 업데이트할 수 있는 [레코드 집합](./recordset-object-ado.md) 개체에 대 한 새 레코드를 만듭니다.  
@@ -86,7 +86,7 @@ rs.Update
 ## <a name="applies-to"></a>적용 대상  
  [레코드 집합 개체(ADO)](./recordset-object-ado.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [AddNew 메서드 예제 (VB)](./addnew-method-example-vb.md)   
  [AddNew 메서드 예제 (VBScript)](./addnew-method-example-vbscript.md)   
  [AddNew 메서드 예제 (VC + +)](./addnew-method-example-vc.md)   

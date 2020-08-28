@@ -3,7 +3,7 @@ description: StreamTypeEnum
 title: StreamTypeEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 220fe51d-4889-4020-a099-2ec9c7485503
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 561095ea23fbf03cf104105c1230955baa029341
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: e3ad1fbf5a6b916e0a70d9b067addc1848c8ac9a
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777172"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88988454"
 ---
 # <a name="streamtypeenum"></a>StreamTypeEnum
 [스트림](./stream-object-ado.md) 개체에 저장 된 데이터의 형식을 지정 합니다.  

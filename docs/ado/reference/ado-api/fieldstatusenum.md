@@ -3,7 +3,7 @@ description: FieldStatusEnum
 title: FieldStatusEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: e06da1e2-303f-41b2-a3b0-61e233da152c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 21f3ebabab3096217348e2309070d81e90128b8e
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: d30c0bc3508c364b7a0d52f23ccb52d11e06f8d5
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88775332"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88973094"
 ---
 # <a name="fieldstatusenum"></a>FieldStatusEnum
 [필드 개체](./field-object.md)의 [상태](./status-property-ado-field.md) 를 지정 합니다.  
   
  **Adfieldpending \* ** 값은 상태를 설정 하는 작업을 나타내며 다른 상태 값과 결합 될 수 있습니다.  
   
-|상수|값|Description|  
+|상수|값|설명|  
 |--------------|-----------|-----------------|  
 |**adFieldAlreadyExists**|26|지정 된 필드가 이미 있음을 나타냅니다.|  
 |**adFieldBadStatus**|12|잘못 된 상태 값이 ADO에서 OLE DB 공급자로 전송 되었음을 나타냅니다. OLE DB 1.0 또는 1.1 공급자 또는 잘못 된 [값](./value-property-ado.md) 과 [상태](./status-property-ado-field.md)조합이 포함 될 수 있습니다.|  

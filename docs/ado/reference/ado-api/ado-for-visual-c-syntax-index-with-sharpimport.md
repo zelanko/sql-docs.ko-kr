@@ -3,7 +3,7 @@ description: '#Import를 사용 하는 Visual C++ 구문 인덱스에 대 한 AD
 title: '#Import을 사용 하는 Visual C++ 구문 인덱스를 위한 ADO Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5930ccd2-5bab-448a-b0bf-773b8a83e87c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8189af2c578600df66a16fd0f41ac259dbbe68d6
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: d60cb7594592133eb19f7a9aa42ad25fb1fc1a38
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88771832"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88976364"
 ---
 # <a name="ado-for-visual-c-syntax-index-with-import"></a>#Import를 사용 하는 Visual C++ 구문 인덱스에 대 한 ADO
 이 인덱스는 Microsoft Visual C++ 및 **#import** 지시문을 기반으로 하는 ADO 언어 참조에 대 한 상호 참조입니다.  

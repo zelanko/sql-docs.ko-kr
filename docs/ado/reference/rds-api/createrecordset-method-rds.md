@@ -3,7 +3,7 @@ description: CreateRecordset 메서드(RDS)
 title: CreateRecordset 메서드 (RDS) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 6840b1e5-c04d-4d3e-9dcc-42128c83492f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 872b8d44a371e8cdce6c25b571d229bb60f0039f
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: a459ddea3716bb918ed18a49d632e20a9e4557fd
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88768622"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88982524"
 ---
 # <a name="createrecordset-method-rds"></a>CreateRecordset 메서드(RDS)
 연결 되지 않은 빈 [레코드 집합](../ado-api/recordset-object-ado.md)을 만듭니다.  
@@ -47,10 +47,10 @@ object.CreateRecordset(ColumnInfos)
  *ColumnsInfos*  
  만든 **레코드 집합** 의 각 열을 정의 하는 특성의 **변형** 배열입니다. 각 열 정의에는 네 개의 필수 특성과 하나의 선택적 특성 배열을 포함 합니다.  
   
-|특성|설명|  
+|attribute|설명|  
 |---------------|-----------------|  
 |Name|열 머리글의 이름입니다.|  
-|형식|데이터 형식의 정수입니다.|  
+|Type|데이터 형식의 정수입니다.|  
 |크기|데이터 형식과 관계 없이 문자 너비의 정수입니다.|  
 |Null 허용 여부|부울 값을 지정합니다.|  
 |크기 조정 (선택 사항)|이 선택적 특성은 숫자 필드에 대 한 소수 자릿수를 정의 합니다. 이 값을 지정 하지 않으면 숫자 값이 3 눈금으로 잘립니다. 전체 자릿수는 영향을 받지 않지만 소수점 뒤의 자릿수는 3으로 잘립니다.|  

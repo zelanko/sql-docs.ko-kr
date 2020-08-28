@@ -3,7 +3,7 @@ description: Cell 개체(ADO MD)
 title: Cell 개체 (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: dcc2f044-b785-4a29-9bc5-b673f66eedf9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 28058d792b0525aafe8850158a71afcc4423b38f
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: b6fceeea4ebe6728ae4adf9bce52cb6b642a926d
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88778332"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88987213"
 ---
 # <a name="cell-object-ado-md"></a>Cell 개체(ADO MD)
 셀 집합에 포함 된 축 좌표가 교차 하는 지점의 데이터를 나타냅니다.  
@@ -43,7 +43,7 @@ ms.locfileid: "88778332"
   
  **속성** 컬렉션에는 공급자가 제공한 속성이 포함 되어 있습니다. 다음 표에서는 사용할 수 있는 속성을 보여 줍니다. 실제 속성 목록은 공급자의 구현에 따라 다를 수 있습니다. 사용 가능한 속성의 전체 목록은 공급자 설명서를 참조 하세요.  
   
-|이름|Description|  
+|Name|설명|  
 |----------|-----------------|  
 |BackColor|셀을 표시할 때 사용 되는 배경색입니다.|  
 |FontFlags|글꼴 효과를 자세히 설명 하는 비트 마스크입니다.|  

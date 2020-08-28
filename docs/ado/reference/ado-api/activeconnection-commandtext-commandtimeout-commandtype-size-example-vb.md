@@ -3,7 +3,7 @@ description: ActiveConnection, CommandText, CommandTimeout, CommandType, Size �
 title: 저장 프로시저 속성 예제 (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: dade4531-0bcc-4a52-8f86-b110ba2a3f9d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 99ff1a7c8269ccad1f11ddeabac39dfd7bf2311d
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 083fd32899da68fb377bc2781211299960ea4851
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88760093"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88977064"
 ---
 # <a name="activeconnection-commandtext-commandtimeout-commandtype-size-and-direction-properties-example-vb"></a>ActiveConnection, CommandText, CommandTimeout, CommandType, Size 및 Direction 속성 예제 (VB)
 이 예에서는 [ActiveConnection](./activeconnection-property-ado.md), [CommandText](./commandtext-property-ado.md), [CommandTimeout](./commandtimeout-property-ado.md), [CommandType](./commandtype-property-ado.md), [Size](./size-property-ado-parameter.md)및 [Direction](./direction-property.md) 속성을 사용 하 여 저장 프로시저를 실행 합니다.  
@@ -134,7 +134,7 @@ End Sub
 'EndActiveConnectionVB  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [ActiveCommand 속성 (ADO)](./activecommand-property-ado.md)   
  [Command 개체 (ADO)](./command-object-ado.md)   
  [CommandText 속성 (ADO)](./commandtext-property-ado.md)   

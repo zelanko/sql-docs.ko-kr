@@ -1,7 +1,7 @@
 ---
 description: Reset 메서드(RDS)
 title: Reset 메서드 (RDS) | Microsoft Docs
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3957197a-f543-4d6b-9e11-67a77c2063b7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3c28555be7737129553c01ca4fd863505e2090b0
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: fb8d10d857e164832b852a78a4f8b2082b304990
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88767542"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88981314"
 ---
 # <a name="reset-method-rds"></a>Reset 메서드(RDS)
 지정 된 정렬 및 필터 속성을 기반으로 클라이언트 쪽 **레코드 집합** 에서 정렬 또는 필터를 실행 합니다.  

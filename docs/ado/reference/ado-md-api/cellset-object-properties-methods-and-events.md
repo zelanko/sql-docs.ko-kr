@@ -3,7 +3,7 @@ description: Cellset 개체 속성, 메서드 및 이벤트
 title: Cellset 개체 속성, 메서드 및 이벤트 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: fb303e33-5a85-4e4e-81db-acaaa6f53799
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1893237b985cc5dc7ef83b43e42007ba8cdd6512
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 72f51e61185269633cc3a218d48379060698342b
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88778302"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88987144"
 ---
 # <a name="cellset-object-properties-methods-and-events"></a>Cellset 개체 속성, 메서드 및 이벤트
 ## <a name="propertiescollections"></a>속성/컬렉션  

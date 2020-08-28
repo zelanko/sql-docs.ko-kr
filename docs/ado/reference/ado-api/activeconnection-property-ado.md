@@ -3,7 +3,7 @@ description: ActiveConnection 속성(ADO)
 title: ActiveConnection 속성 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 52d0a96c-14fb-4ad9-b004-4d821bc0a6db
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 344e712551e46d1ec28f75864dacbdfc39989248
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: bc1a54d70639e4e3ff78748b4e04483fcfefafdb
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88760103"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88976964"
 ---
 # <a name="activeconnection-property-ado"></a>ActiveConnection 속성(ADO)
 지정 된 [명령](./command-object-ado.md), [레코드 집합](./recordset-object-ado.md)또는 [Record](./record-object-ado.md) 개체가 현재 속해 있는 [연결](./connection-object-ado.md) 개체를 나타냅니다.  
@@ -82,7 +82,7 @@ ms.locfileid: "88760103"
     :::column-end:::
 :::row-end:::
 
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [ActiveConnection, CommandText, CommandTimeout, CommandType, Size 및 Direction 속성 예제 (VB)](./activeconnection-commandtext-commandtimeout-commandtype-size-example-vb.md)   
  [ActiveConnection, CommandText, CommandTimeout, CommandType, Size 및 Direction 속성 예제 (VC + +)](./activeconnection-commandtext-commandtimeout-commandtype-size-example-vc.md)   
  [ActiveConnection, CommandText, CommandTimeout, CommandType, Size 및 Direction 속성 예제 (JScript)](./activeconnection-commandtext-timeout-type-size-example-jscript.md)   

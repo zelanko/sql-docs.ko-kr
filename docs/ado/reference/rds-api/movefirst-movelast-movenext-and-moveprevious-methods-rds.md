@@ -3,7 +3,7 @@ description: MoveFirst, MoveLast, MoveNext 및 MovePrevious 메서드(RDS)
 title: MoveFirst, MoveLast, MoveNext 및 MovePrevious 메서드 (RDS) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 45c80bb5-136f-4204-9df2-78740fa55574
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 151c111db94cd0132196437fc86e2aa9f80be7e8
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 8feb41ff7ff1069d29beacc3b5dc0d323cdfd72b
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88768002"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88981914"
 ---
 # <a name="movefirst-movelast-movenext-and-moveprevious-methods-rds"></a>MoveFirst, MoveLast, MoveNext 및 MovePrevious 메서드(RDS)
 지정 된 [레코드 집합](../ado-api/recordset-object-ado.md) 개체에서 첫 번째, 마지막, 다음 또는 이전 레코드로 이동 합니다.  
