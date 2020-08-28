@@ -3,7 +3,7 @@ description: 정방향 전용 커서
 title: 앞 으로만 이동 가능한 커서 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2b1e062f-3294-4a6f-8241-a17045c4df18
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e26b3f364595adea7e1eadc65114bffb19db2639
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 1ccf9d679d158b6f89ef6842b427c315078b99f6
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806820"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991244"
 ---
 # <a name="forward-only-cursors"></a>정방향 전용 커서
 앞 으로만 이동 가능 하거나 스크롤할 수 없는 커서 라고 하는 일반적인 기본 커서 유형은 결과 집합을 통해서만 앞으로 이동할 수 있습니다. 앞 으로만 이동 가능한 커서는 스크롤을 지원 하지 않습니다 (결과 집합에서 앞으로 또는 뒤로 이동 하는 기능). 결과 집합의 처음부터 끝까지 행 인출만 지원 합니다. 일부 전방 전용 커서 (예: SQL Server 커서 라이브러리 사용)를 사용 하 여 결과 집합의 행에 영향을 주는 현재 사용자가 수행한 모든 삽입, 업데이트 및 삭제 문은 행이 인출 될 때 표시 됩니다. 그러나 커서는 뒤로 스크롤할 수 없기 때문에 행이 페치된 후 데이터베이스 행의 변경 내용은 대부분 커서를 통해 볼 수 없습니다.  

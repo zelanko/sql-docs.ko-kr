@@ -3,7 +3,7 @@ description: ADO 오류 참조
 title: ADO 오류 참조 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f653393e-d4b0-4c34-ad5f-2bdf56bc1305
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a286804eb5ea575e259c3b54a106edea83f55f57
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 83f3d5e9408180c4ff513f1457a2972a676fa726
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806696"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991744"
 ---
 # <a name="ado-errors"></a>ADO 오류
 **Errorvalueenum** 상수는 ADO 오류 값을 설명 합니다. 값을 포함 하 여 이러한 열거 상수의 전체 목록은 [부록 B: ADO 오류](../appendixes/appendix-b-ado-errors.md)를 참조 하세요. 이 섹션에서는 더 흥미로운 오류 중 일부를 살펴보고이를 발생 시킬 수 있는 몇 가지 특정 상황 또는 문제를 해결 하는 해결 방법을 설명 합니다. **Errorvalueenum** 상수와 짧은 양의 10 진수가 모두 나열 됩니다.

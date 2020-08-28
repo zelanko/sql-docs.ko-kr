@@ -3,7 +3,7 @@ description: 충돌 감지 및 해결
 title: 충돌 검색 및 해결 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b28fdd26-c1a4-40ce-a700-2b0c9d201514
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b9676087d23ff17b7aaa4c4ad6cab20eaec644ca
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: a28fa775c834725504075907f09dc00e95bce1ee
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806908"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991394"
 ---
 # <a name="detecting-and-resolving-conflicts"></a>충돌 감지 및 해결
 직접 실행 모드에서 레코드 집합을 처리 하는 경우 동시성 문제가 발생 하는 것이 훨씬 줄어듭니다. 반면에 응용 프로그램이 일괄 처리 모드 업데이트를 사용 하는 경우 한 사용자가 동일한 레코드를 편집 하는 다른 사용자가 변경한 내용을 저장 하기 전에 레코드를 변경 하는 것이 좋을 수 있습니다. 이 경우 응용 프로그램에서 충돌을 정상적으로 처리 하는 것이 좋습니다. "Wins" 서버에 대 한 업데이트를 마지막 사용자에 게 보낼 수 있습니다. 또는 충돌 하는 두 값 중에서 선택할 수 있도록 가장 최근의 사용자에 게 우선 순위를 지정할 업데이트를 결정 하도록 할 수 있습니다.  

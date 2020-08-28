@@ -3,7 +3,7 @@ description: GetRows 메서드 예제(VC++)
 title: GetRows 메서드 예제 (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 08e5c5bf-f7de-4bf9-97a9-f214c128ad8c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 70882984404dab2905e10344af88c2d933aceacc
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 012d0bc96f50919b02e11329f4aebc5bb3ecb269
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88774972"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990884"
 ---
 # <a name="getrows-method-example-vc"></a>GetRows 메서드 예제(VC++)
 이 예에서는 [GetRows](./getrows-method-ado.md) 메서드를 사용 하 여 [레코드 집합](./recordset-object-ado.md) 에서 지정 된 수의 행을 검색 하 고 결과 데이터로 배열을 채웁니다. **Getrows** 메서드는 [EOF](./bof-eof-properties-ado.md) 에 도달 했거나 **getrows** 에서 다른 사용자가 삭제 한 레코드를 검색 하려고 시도 하는 경우 두 경우에 원하는 수의 행 보다 작은 값을 반환 합니다. 함수는 두 번째 사례가 발생 하는 경우에만 **False** 를 반환 합니다. GetRowsOK 함수는이 프로시저를 실행 하는 데 필요 합니다.  

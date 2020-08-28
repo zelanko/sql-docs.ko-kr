@@ -3,7 +3,7 @@ description: Item 속성(ADO MD Cellset)
 title: Item 속성 (ADO MD 셀 집합) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0e93d79b-b12e-4e98-889e-c2dfcca20fd0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 12df2a7d592be4fa42d8cc0df779a375ab987cb2
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 997777e853a54ae56175b4b5795087e67079813b
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88778072"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88986604"
 ---
 # <a name="item-property-ado-md-cellset"></a>Item 속성(ADO MD Cellset)
 좌표를 사용 하 여 셀 [집합](./cellset-object-ado-md.md) 에서 셀을 검색 합니다.  
@@ -55,7 +55,6 @@ Cell = Cellset.Item ( Positions)
 Cellset.Item ( Positions )Cellset ( Positions )  
 ```  
   
-## <a name="remarks"></a>설명  
  *위치* 인수는 반환할 셀을 지정 합니다. 서 수 위치로 또는 각 축의 위치를 기준으로 셀을 지정할 수 있습니다. 각 축을 따라 위치 별로 셀을 지정 하는 경우 각 위치에 대 한 멤버 이름 또는 위치의 숫자 값을 지정할 수 있습니다.  
   
  서 수 위치는 셀 **집합**내의 셀 하나를 고유 하 게 식별 하는 숫자입니다. 개념적으로 **셀은** 셀 집합에서 셀 개수가 *p*차원 배열인 **것 처럼 번호가** 매겨집니다. 여기서 *p* 는 축 수입니다. 셀은 행 중심의 순서로 번호가 매겨집니다. 다음은 셀의 서 수 번호를 계산 하는 수식입니다.  

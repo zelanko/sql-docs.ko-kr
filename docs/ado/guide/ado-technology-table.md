@@ -6,24 +6,24 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.topic: conceptual
 helpviewer_keywords:
 - ADO, technologies
 ms.assetid: 38c8ad3c-d6f1-40f6-a394-bbba6ed861e5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7a6432b1644d92e931aa9707e9b9cf01fc573ce6
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 1cd2f1da937b663b1cc32939c0fb0de17dad8fb7
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88805379"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991214"
 ---
 # <a name="products-and-technologies-table"></a>제품 및 기술 표
 다음 표에서는 ADO 프로그래머 가이드에서 설명 하는 Microsoft 제품, 도구 및 기술을 보여 줍니다. 설명서의 관련 항목에 가능한 한 링크를 제공 합니다.
 
-|Microsoft 제품 또는 기술|참고 문헌|
+|Microsoft 제품 또는 기술|참고자료|
 |-------------------------------------|----------------|
 |Access/Jet|[레코드 집합 작업](./data/working-with-recordsets.md)<br /><br /> [ADOX 기본 사항](./extensions/adox-fundamentals.md)<br /><br /> [Microsoft Jet 용 microsoft OLE DB 공급자](./appendixes/microsoft-ole-db-provider-for-microsoft-jet.md)|
 |ADSI (Active Directory Service Interface)|[Microsoft Active Directory 서비스용 microsoft OLE DB 공급자](./appendixes/microsoft-ole-db-provider-for-microsoft-active-directory-service.md)|

@@ -3,7 +3,7 @@ description: 레코드 집합에 레코드 추가
 title: 레코드 추가 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: dd34669e-6f06-403b-9241-1c85c82aecc2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e38dbfbf8b0a92a0d1a8a2eff1b8b8d4d5374057
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: b833bc78a75d09c8f58ae12532f446ec94a097e0
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806705"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991754"
 ---
 # <a name="adding-records-to-a-recordset"></a>레코드 집합에 레코드 추가
 **AddNew** 메서드를 사용 하 여 기존 레코드 **집합**에 새 레코드를 만들고 초기화 합니다. **CursorOptionEnum** 값이 **Adaddnew** 인 **Supports** 메서드를 사용 하 여 현재 **레코드 집합** 개체에 레코드를 추가할 수 있는지 여부를 확인할 수 있습니다.

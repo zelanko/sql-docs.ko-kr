@@ -3,7 +3,7 @@ description: 레코드 집합의 경계
 title: 레코드 집합의 경계 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c0dd4a0f-478d-4c5e-b5d5-7535f211d064
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: aec0ad3065deb60f99f672712c085fe054885d27
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 2c0df560a7a70dd46c4a846e3271b5b5ea10584e
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806380"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991594"
 ---
 # <a name="boundaries-of-a-recordset"></a>레코드 집합의 경계
 **레코드** 집합은 데이터 집합의 시작과 끝을 각각 나타내며 **BOF** 및 **EOF** 속성을 지원 합니다. **BOF** 및 **EOF** 는 **레코드 집합**의 시작과 끝에 배치 되는 "가상" 레코드로 간주할 수 있습니다. **BOF** 및 **EOF**를 계산 하면 샘플 **레코드 집합** 은 다음과 같이 표시 됩니다.  

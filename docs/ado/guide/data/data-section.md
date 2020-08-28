@@ -3,7 +3,7 @@ description: 데이터 섹션
 title: 데이터 섹션 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: 43dc42a8-7057-48e6-93d6-880d5c5c51a4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f8cd34a76e2de6a37ee7fe3c647e845c0fbf3fac
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: ac4febc789aca18401380ee8ada7b2ab7f9d30a3
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806197"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991454"
 ---
 # <a name="data-section"></a>데이터 섹션
 데이터 섹션은 보류 중인 모든 업데이트, 삽입 또는 삭제와 함께 행 집합의 데이터를 정의 합니다. 데이터 섹션에는 0 개 이상의 행이 포함 될 수 있습니다. 행이 스키마에 의해 정의 되는 한 행 집합의 데이터만 포함할 수 있습니다. 또한 앞에서 설명한 것 처럼 데이터를 포함 하지 않는 열은 생략할 수 있습니다. 데이터 섹션에서 특성 또는 하위 요소를 사용 하 고 해당 구문이 schema 섹션에서 정의 되지 않은 경우 자동으로 무시 됩니다.  
   
-## <a name="string"></a>String  
+## <a name="string"></a>문자열  
  텍스트 데이터의 예약 된 XML 문자를 적절 한 문자 엔터티로 바꾸어야 합니다. 예를 들어 회사 이름 "Joe의 중고품"에서 작은따옴표는 엔터티로 바꾸어야 합니다. 실제 행은 다음과 유사 합니다.  
   
 ```  

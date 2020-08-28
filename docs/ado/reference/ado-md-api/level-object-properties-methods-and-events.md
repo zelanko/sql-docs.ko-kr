@@ -3,7 +3,7 @@ description: Level 개체 속성, 메서드 및 이벤트
 title: 수준 개체 속성, 메서드 및 이벤트 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: fdff70b0-95d0-447f-9359-97b8d159420d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: db4847a6ada52d051a13068dcd2d50f9a7448504
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: b03ccf22210fa4984b5c1424a97f63555606670f
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88778042"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88986504"
 ---
 # <a name="level-object-properties-methods-and-events"></a>Level 개체 속성, 메서드 및 이벤트
 ## <a name="propertiescollections"></a>속성/컬렉션  

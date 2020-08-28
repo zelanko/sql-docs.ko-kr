@@ -3,7 +3,7 @@ description: Microsoft OLE DB 지 속성 공급자 (ADO 서비스 공급자)
 title: Microsoft OLE DB 지 속성 공급자 (ADO 서비스 공급자) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/08/2018
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e75ef0dc-2016-4fcc-8918-23311c0d4e02
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7010c2dc4be6207397ee5e57fc999c3cacbba0b7
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 8b9cfce1762ef678e544a2148df4a4d79074e152
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806612"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991074"
 ---
 # <a name="microsoft-ole-db-persistence-provider-overview"></a>Microsoft OLE DB 지 속성 공급자 개요
 Microsoft OLE DB 지 속성 공급자를 사용 하면 [레코드 집합](../../reference/ado-api/recordset-object-ado.md) 개체를 파일에 저장 하 고 나중에 파일에서 해당 **레코드 집합** 개체를 복원할 수 있습니다. 스키마 정보, 데이터 및 보류 중인 변경 내용이 유지 됩니다.

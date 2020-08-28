@@ -3,7 +3,7 @@ description: 실패한 업데이트 처리
 title: 실패 한 업데이트 처리 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 299c37bd-19ff-4261-8571-b9665687e075
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 508508da57fc7a0b1ab899acf3f77b1a49a7fa9b
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: ca4c5a094e263ca0c44c58a9d9118d4e2ce01538
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806925"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991414"
 ---
 # <a name="dealing-with-failed-updates"></a>실패한 업데이트 처리
 업데이트를 종료 하는 경우 오류를 해결 하는 방법은 오류 및 응용 프로그램의 논리에 대 한 특성 및 심각도에 따라 달라 집니다. 그러나 데이터베이스가 다른 사용자와 공유 되는 경우 일반적인 오류는 다른 사용자가 필드를 수정 하는 것입니다. 이러한 유형의 오류를 충돌 이라고 합니다. ADO에서이 상황을 감지 하 고 오류를 보고 합니다.  

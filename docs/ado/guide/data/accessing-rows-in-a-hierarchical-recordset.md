@@ -3,7 +3,7 @@ description: 계층적 레코드 집합의 행 액세스 (예제)
 title: 계층적 레코드 집합의 행에 액세스 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 25f1d2a1-6d5e-4457-aa07-5db5c75dee18
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ad70cc527a42188588df31ea7f3a53678423f37d
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 36ad54e1768b5164294d5de9767757ef3f376144
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806716"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991784"
 ---
 # <a name="accessing-rows-in-a-hierarchical-recordset-example"></a>계층적 레코드 집합의 행 액세스 (예제)
 다음 예에서는 계층적 [레코드 집합](../../reference/ado-api/recordset-object-ado.md)의 행에 액세스 하는 데 필요한 단계를 보여 줍니다.
