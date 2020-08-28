@@ -3,7 +3,7 @@ description: SortOrder 속성 예제(VB)
 title: SortOrder 속성 예제 (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d9502254-d89b-4bcb-94f1-6418f89e7f30
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 089c4e7f402e374ab4af43c683270ad488c0f8bb
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 5196f4391a37e5881cfc4c7e5743e56cf671c976
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88769362"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88983274"
 ---
 # <a name="sortorder-property-example-vb"></a>SortOrder 속성 예제(VB)
 이 예에서는 [인덱스](./index-object-adox.md)의 [Columns](./columns-collection-adox.md) 컬렉션에 추가 된 [열의](./column-object-adox.md) [SortOrder](./sortorder-property-adox.md) 속성을 보여 줍니다. 이 코드는 **Employees** 테이블의 Country 열에 오름차순 인덱스를 추가한 다음 레코드를 표시 합니다. 그런 다음 코드는 **Employees** 테이블의 Country 열에 내림차순 인덱스를 추가 하 고 레코드를 다시 표시 합니다. 오름차순과 내림차순 인덱스의 차이가 표시 됩니다.  

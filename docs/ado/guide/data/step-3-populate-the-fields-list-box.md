@@ -3,7 +3,7 @@ description: '3단계: 필드 목록 상자 채우기'
 title: '3 단계: 필드 목록 상자 채우기 | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 315c32dc-aeb1-4629-b30e-87b44e8f84d1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d3a7378cfdce29094f5ae4271b9fe7bff7516753
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: acb2572accc19937f7f4ad278fc01aa0e5760a8a
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452795"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979524"
 ---
 # <a name="step-3-populate-the-fields-list-box"></a>3단계: 필드 목록 상자 채우기
 필드 목록 상자를 채우려면 다음 코드를의 Click 이벤트 처리기에 삽입 합니다 `lstMain` .  

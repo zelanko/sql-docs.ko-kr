@@ -3,7 +3,7 @@ description: GetChildren 메서드(ADO)
 title: GetChildren 메서드 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b3f09bac-4f66-49f6-aa5a-6fbb4fb28338
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d5d0ff58401e5294080c762c1e27f018630364f4
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: ea59a94f095a438be8fc7009a58179d488af20a2
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88775102"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88972834"
 ---
 # <a name="getchildren-method-ado"></a>GetChildren 메서드(ADO)
 행이 컬렉션 [레코드](./record-object-ado.md)의 자식을 나타내는 [레코드 집합](./recordset-object-ado.md) 을 반환 합니다.  

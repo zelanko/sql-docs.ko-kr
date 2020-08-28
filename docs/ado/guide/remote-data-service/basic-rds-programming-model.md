@@ -3,7 +3,7 @@ description: 기본 RDS 프로그래밍 모델
 title: 기본 RDS 프로그래밍 모델 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0bdd236b-edff-4aac-94c3-93e1465ca6c5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ba02a22b987384e48a750705fa3c2baf6965f920
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: a943c8b4f42dc5ca232114070e5e09ac318889d0
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88758753"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88978384"
 ---
 # <a name="basic-rds-programming-model"></a>기본 RDS 프로그래밍 모델
 > [!IMPORTANT]
@@ -44,7 +44,7 @@ ms.locfileid: "88758753"
   
  마지막으로, 사용자의 요구가의 어딘가에 있는 경우 ADO는 이제 기본 서버 프로그램의 동작을 사용자 지정 하도록 지원 합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [RDS 프로그래밍 모델 세부 정보](./rds-programming-model-in-detail.md)   
  [RDS 시나리오](./rds-scenario.md)   
  [RDS 자습서](./rds-tutorial.md)   

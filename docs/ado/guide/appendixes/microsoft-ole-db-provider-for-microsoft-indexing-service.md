@@ -3,7 +3,7 @@ description: Microsoft 인덱싱 서비스에 대 한 microsoft OLE DB 공급자
 title: Microsoft 인덱싱 서비스용 microsoft OLE DB 공급자 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/08/2018
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f86a0598-5097-471b-8318-d2c859d085f2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ec90db7109363cc017fd314dc674c143be01d185
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: b3e479ca023efb704bf496c9ffaeaca2f1b6ba15
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806624"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991044"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-indexing-service-overview"></a>Microsoft 인덱싱 서비스에 대 한 microsoft OLE DB 공급자 개요
 Microsoft OLE DB Provider for Microsoft 인덱싱 서비스는 파일 시스템에 대 한 읽기 전용 액세스와 Microsoft 인덱싱 서비스에서 인덱싱된 웹 데이터에 대 한 읽기 전용 액세스를 제공 합니다. ADO 응용 프로그램은 SQL 쿼리를 실행 하 여 콘텐츠 및 파일 속성 정보를 검색할 수 있습니다.

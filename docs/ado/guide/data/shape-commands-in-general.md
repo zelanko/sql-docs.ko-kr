@@ -3,7 +3,7 @@ description: 일반적인 셰이핑 명령
 title: Shape 명령 일반 Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1fac7831-a187-4b15-9b43-aad380c5556c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7a0364d3b123f5d042a6e008a4312217e746b5b4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a982f08323a9e852f555732b290d598412d3a802
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452855"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979614"
 ---
 # <a name="shape-commands-in-general"></a>일반적인 셰이핑 명령
 데이터 셰이핑은 셰이프 **레코드 집합**의 열, 열이 나타내는 엔터티 간의 관계 및 **레코드 집합이** 데이터로 채워지는 방식을 정의 합니다.  

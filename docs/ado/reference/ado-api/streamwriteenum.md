@@ -3,7 +3,7 @@ description: StreamWriteEnum
 title: StreamWriteEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bdbf3405-a0bd-4f02-85d4-e3fe8da3f3f7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 343e5fd45a32e45cda342ab01feb64f379054486
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: c09a15f5c5aba9d36f038304b68cc1e64112ade3
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777162"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88988444"
 ---
 # <a name="streamwriteenum"></a>StreamWriteEnum
 줄 구분 기호가 [스트림](./stream-object-ado.md) 개체에 쓰여진 문자열에 추가 되는지 여부를 지정 합니다.  

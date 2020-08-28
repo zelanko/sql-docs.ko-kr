@@ -3,7 +3,7 @@ description: ADO MD 기본 사항
 title: ADO MD 기본 사항 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 02/15/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: f6a20d9f-c1ab-474c-b9f3-82277e2a126d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: eb14a1b97ba6670b2170021bc354890b41fa01ca
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: b8f213968a55d32cb306891362d6bad9f2fd12cf
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88758793"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88978664"
 ---
 # <a name="ado-md-fundamentals"></a>ADO MD 기본 사항
 Microsoft® ActiveX® 데이터 개체 (다차원) (ADO MD)를 사용 하면 Microsoft Visual Basic®, Microsoft Visual C++® 등의 언어에서 다차원 데이터에 쉽게 액세스할 수 있습니다. ADO MD은 Microsoft ActiveX ADO (® Data Objects)를 확장 하 여 [CubeDef](../../reference/ado-md-api/cubedef-object-ado-md.md) 및 [Cellset](../../reference/ado-md-api/cellset-object-ado-md.md) 개체와 같은 다차원 데이터에 특정 한 개체를 포함 합니다. ADO MD 다차원 스키마를 찾아보고, 큐브를 쿼리하고, 결과를 검색할 수 있습니다.  
@@ -37,7 +37,7 @@ Microsoft® ActiveX® 데이터 개체 (다차원) (ADO MD)를 사용 하면 Mic
   
 -   [ADO MD를 사용한 프로그래밍](./programming-with-ado-md.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [ADO MD 개체 모델](../../reference/ado-md-api/ado-md-object-model.md)   
  [ADO 프로그래머 가이드](../ado-programmer-s-guide.md)   
  [데이터 정의 언어 및 보안을 위한 ADO 확장 (ADOX)](../extensions/ado-extensions-for-data-definition-language-and-security-adox.md)   

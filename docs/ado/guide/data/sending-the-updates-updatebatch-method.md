@@ -3,7 +3,7 @@ description: '업데이트 전송: UpdateBatch 메서드'
 title: '업데이트 전송: UpdateBatch 메서드 | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 87123797-831f-48e0-94b5-f669f9ca194a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8b5378cad96bc2827badc2e15a23d7f48f683381
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6f4e6a94282687ed70f10552e2dedf9c9312433e
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452885"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979714"
 ---
 # <a name="sending-the-updates-updatebatch-method"></a>업데이트 전송: UpdateBatch 메서드
 다음 코드는 LockType 속성을 adLockBatchOptimistic으로 설정 하 고 CursorLocation를 adUseClient로 설정 하 여 일괄 처리 모드로 레코드 집합을 엽니다. 새 레코드 두 개를 추가 하 고 기존 레코드의 필드 값을 변경 하 여 원래 값을 저장 한 다음 UpdateBatch를 호출 하 여 변경 내용을 데이터 원본으로 다시 보냅니다.  
@@ -55,5 +55,5 @@ ms.locfileid: "88452885"
   
  현재 레코드를 편집 하거나 UpdateBatch 메서드를 호출할 때 새 레코드를 추가 하는 경우, ADO는 일괄 처리 된 변경 내용을 공급자에 전송 하기 전에 업데이트 메서드를 자동으로 호출 하 여 현재 레코드에 대 한 보류 중인 변경 내용을 저장 합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [일괄 처리 모드](../../../ado/guide/data/batch-mode.md)

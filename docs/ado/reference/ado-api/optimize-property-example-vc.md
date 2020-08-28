@@ -3,7 +3,7 @@ description: Optimize 속성 예제(VC++)
 title: Optimize 속성 예제 (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: cb335455-b027-4f66-868d-d0d8b2175de1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8000fd53dbc6342ecb9a41b9c66b398d8bbae84b
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 85cfa464710579db5872155a0e27bcc57ccdda94
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88773622"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990254"
 ---
 # <a name="optimize-property-example-vc"></a>Optimize 속성 예제(VC++)
 이 예에서는 [Field](./field-object.md) Object dynamic **Optimize** 속성을 보여 줍니다. **Pubs** 데이터베이스에 있는 **Authors** 테이블의 **zip** 필드는 인덱싱되지 않습니다. **Zip** 필드에서 [Optimize](./optimize-property-dynamic-ado.md) 속성을 **True** 로 설정 하면 ADO에서 [Find](./find-method-ado.md) 메서드의 성능을 향상 시키는 인덱스를 작성할 수 있습니다.  

@@ -3,7 +3,7 @@ description: MaxRecords 속성 예제(VC++)
 title: MaxRecords 속성 예제 (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: af6b399b-e546-4de5-9cd1-5a6e0ec7ddc7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fa326f24e1c8d3e6e7fab3adf691f3dd3a80a0c3
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 612ec3cd9e2fbdfba40fd554d52558c8c14baba6
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88774382"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990614"
 ---
 # <a name="maxrecords-property-example-vc"></a>MaxRecords 속성 예제(VC++)
 이 예에서는 [MaxRecords](./maxrecords-property-ado.md) 속성을 사용 하 여 ***titles*** 테이블에서 가장 비싼 10 개의 제목이 포함 된 [레코드 집합](./recordset-object-ado.md) 을 엽니다.  

@@ -3,7 +3,7 @@ description: 오류 예측
 title: 오류 예측 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ea1d4a97-58c3-476b-a496-cc80db2a90d5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a85d313dabe9c6c0cf8c4dcdb76e01b0f2962d7d
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: f5affe90da5a982a6e01bd5719793581fb3c5f13
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806412"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991614"
 ---
 # <a name="anticipating-errors"></a>오류 예측
 오류 방지는 최소한 오류 처리 만큼 중요 합니다. 이 마지막 섹션에는 오류 발생 가능성을 줄일 수 있도록 응용 프로그램에서 수행할 수 있는 간단한 주의 사항 목록이 포함 되어 있습니다.  

@@ -3,7 +3,7 @@ description: 동적 커서
 title: 동적 커서 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 00460f30-8cf7-494e-82df-41012f40ae51
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f646a608c8cbc25e16c5200f8271c133a62d3457
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: e8ce85233cec96af3d804652225b4d14698287db
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806160"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991354"
 ---
 # <a name="dynamic-cursors"></a>동적 커서
 동적 커서는 변경 내용이 커서 내부에서 발생 하는지 아니면 커서 외부의 다른 사용자에 의해 변경 되는지에 관계 없이 결과 집합의 행에 대 한 모든 변경 내용을 검색 합니다. 모든 사용자가 수행한 모든 insert, update 및 delete 문은 커서를 통해 볼 수 있습니다. 동적 커서는 커서를 연 후 결과 집합에서 행, 순서 및 값에 대 한 변경 내용을 검색할 수 있습니다. 커서 트랜잭션 격리 수준이 "커밋되지 않음"으로 설정 되지 않은 경우 커서 외부에서 수행 된 업데이트는 커밋될 때까지 표시 되지 않습니다.  

@@ -3,7 +3,7 @@ description: 일괄 처리 모드
 title: 일괄 처리 모드 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0cb548e0-fcb4-4c49-98c8-be287911f826
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 353e5ae0fe15fb21f04f6efcc97195a5e237b58e
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: a2cda3a14dc51532d52184f8b2101981d4f36cd3
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806394"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991604"
 ---
 # <a name="batch-mode"></a>일괄 처리 모드
 배치 모드는 **LockType** 속성이 **Adlockbatchoptimistic** 으로 설정 되 고 일괄 업데이트가 공급자에 의해 지원 되는 경우에 적용 됩니다. 특정 잠금 유형 설정은 커서 위치에 따라 사용할 수 없습니다. 예를 들어 **CursorLocation** 이 **adUseClient**로 설정 된 경우 비관적 잠금 유형을 사용할 수 없습니다. 반대로 커서 위치가 서버에 있는 경우에는 공급자가 일괄 처리 낙관적 잠금을 지원할 수 없습니다. 일괄 처리 업데이트는 키 집합 또는 정적 커서로만 사용 해야 합니다.  

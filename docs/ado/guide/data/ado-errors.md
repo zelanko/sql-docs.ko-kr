@@ -3,7 +3,7 @@ description: ADO 런타임 오류
 title: ADO 오류 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 02/15/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9bb84114-a1df-4122-a1b8-ad98dcd85cc3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f753e66e6711c3abcf59e2541b9bad6cd390e71a
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 0b1da9cd8e7afd2b56921fa6b413b5d349d7027f
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806687"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991734"
 ---
 # <a name="ado-run-time-errors"></a>ADO 런타임 오류
 ADO 오류는 런타임 오류로 프로그램에 보고 됩니다. 프로그래밍 언어의 오류 트래핑 메커니즘을 사용 하 여이를 트래핑 하 고 처리할 수 있습니다. 예를 들어 Visual Basic에서 **On Error** 문을 사용 합니다. Visual C++에서 ADO 라이브러리에 액세스 하는 데 사용 하는 방법에 따라 달라 집니다. #Import를 사용 **하 여 try-catch 블록을** 사용 합니다. 그렇지 않으면 c + + 프로그래머는 **Geterrorinfo**를 호출 하 여 오류 개체를 명시적으로 검색 해야 합니다. 다음 Visual Basic 하위 절차에서는 ADO 오류를 트래핑 하는 방법을 보여 줍니다.

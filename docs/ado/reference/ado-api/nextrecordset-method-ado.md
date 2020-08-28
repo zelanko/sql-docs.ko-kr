@@ -3,7 +3,7 @@ description: NextRecordset 메서드(ADO)
 title: NextRecordset 메서드 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 03/20/2018
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ab1fa449-a695-4987-b1ee-bc68f89418dd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 018de245b6d809b094a88d3a1f455bce0166a466
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: b73779dbca82df1d672a57aae667bc5a666a4945
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88774052"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990464"
 ---
 # <a name="nextrecordset-method-ado"></a>NextRecordset 메서드(ADO)
 현재 [레코드 집합](./recordset-object-ado.md) 개체를 지우고 일련의 명령으로 이동 하 여 다음 **레코드 집합** 을 반환 합니다.  

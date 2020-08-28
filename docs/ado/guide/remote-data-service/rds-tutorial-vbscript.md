@@ -3,7 +3,7 @@ description: RDS 자습서(VBScript)
 title: RDS 자습서 (VBScript) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/09/2018
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e2a48c4d-88b1-43ff-a202-9cdec54997d2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6c8e93e72833e649f46ebda5885d3a16c5afece6
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: c9d3876b358721c7d63b1bbbb0aca98c56721b83
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88759513"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88977854"
 ---
 # <a name="rds-tutorial-vbscript"></a>RDS 자습서(VBScript)
 Microsoft Visual Basic Scripting Edition으로 작성 된 RDS 자습서입니다. 이 자습서의 용도에 대 한 설명은 [RDS 자습서](./rds-tutorial.md)를 참조 하십시오.  
@@ -139,5 +139,5 @@ End Sub
   
  **이 자습서의 마지막 부분입니다.**  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [RDS 자습서](./rds-tutorial.md)

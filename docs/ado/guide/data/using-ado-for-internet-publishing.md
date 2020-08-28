@@ -3,7 +3,7 @@ description: 인터넷 게시용 ADO 사용
 title: 인터넷 게시에 ADO 사용 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d399fce4-b70b-418f-8110-3deb3448863c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5f08edfbd56b900759c004cbf0fca8a634ab1010
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 774ff9b0728d362822c72047b573ab9def944d18
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452605"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979039"
 ---
 # <a name="using-ado-for-internet-publishing"></a>인터넷 게시용 ADO 사용
 [인터넷 게시용 OLE DB 공급자는](../../../ado/guide/data/the-ole-db-provider-for-internet-publishing.md) ADO를 사용 하 여 다른 유형의 데이터에 액세스 하는 특정 예제를 보여 줍니다. 이 섹션의 예제는 인터넷 게시 공급자를 사용 하는 것과 관련 된 것 이지만, 다른 공급자와 함께 ADO를 사용 하 여 전자 메일 저장소에 대 한 공급자와 같은 다른 유형의 데이터를 사용 하는 경우에도 이와 비슷한 원칙이 사용 됩니다.  

@@ -6,19 +6,19 @@ ms.date: 11/08/2018
 ms.reviewer: ''
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.topic: conceptual
 helpviewer_keywords:
 - ADO, about
 ms.assetid: 2fa6237b-44b8-4b6c-9952-5acd80a54e20
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3f170bbc7144e624ea6788c844fb817014e178d0
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: eb313ceb6217bf9400fda05622c7505c8067d2c1
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88760033"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88977354"
 ---
 # <a name="microsoft-activex-data-objects-ado"></a>Microsoft ADO(ActiveX Data Objects)
 
@@ -49,7 +49,7 @@ ADO(ActiveX Data Objects)은 지정 된 백 엔드 엔진에 종속 되지 않�
   
  ADOX는 핵심 ADO 개체에 대 한 도우미 라이브러리입니다. 테이블, 프로시저 등의 스키마 개체를 만들고 수정 하 고 삭제 하기 위한 추가 개체를 제공 합니다. 또한 사용자 및 그룹을 유지 관리 하 고 개체에 대 한 사용 권한을 부여 하 고 취소 하는 보안 개체를 포함 합니다.  
   
-## <a name="documentation"></a>설명서  
+## <a name="documentation"></a>문서화  
  [ADO 보안 디자인 문제](./guide/ado-security-design-issues.md)  
   
  [ADO 프로그래머 가이드](./guide/ado-programmer-s-guide.md)  

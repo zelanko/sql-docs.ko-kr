@@ -3,7 +3,7 @@ description: 사용자 지정 파일 연결 섹션
 title: 사용자 지정 파일 연결 섹션 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/09/2018
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d50eb3cc-a822-486f-b80b-65bb50547ecd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a8c712efc368d9b84158697d3b7e6eedfb4224ff
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 19dfe6f81293234d3615d0c3acaae83c50febc1d
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88759849"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88978274"
 ---
 # <a name="customization-file-connect-section"></a>사용자 지정 파일 연결 섹션
 처리기의 기본 동작은 모든 연결을 거부 하는 것입니다. **Connect** 섹션에서는 해당 동작에 대 한 예외를 지정 합니다. 예를 들어 모든 **connect** 섹션이 없거나 비어 있는 경우 기본적으로 연결을 설정할 수 없습니다.  
@@ -63,7 +63,7 @@ connectionString
   
  기본 처리기 동작을 사용 하지 않도록 설정 하 여 모든 연결을 허용 하려는 경우 **기본값 연결** 섹션에서 액세스 항목을로 설정 하 `Access=ReadWrite` 고 다른 모든 **연결** _식별자_ 섹션을 삭제 하거나 주석으로 처리 합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [사용자 지정 파일 로그 섹션](./customization-file-logs-section.md)   
  [사용자 지정 파일 SQL 섹션](./customization-file-sql-section.md)   
  [사용자 지정 파일 UserList 섹션](./customization-file-userlist-section.md)   

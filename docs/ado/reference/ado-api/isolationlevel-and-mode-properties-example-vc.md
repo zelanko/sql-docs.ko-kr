@@ -3,7 +3,7 @@ description: IsolationLevel 및 Mode 속성 예제 (VC + +)
 title: IsolationLevel 및 Mode 속성 예제 (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 92ddec5d-e3dc-4e8e-997a-c5417cceab69
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 89dc7e47bbd286d790086bde5da24e0a3316eef3
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 7d30aa737f78ba6356ac5104ca24ceeaf2f5504a
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88774762"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990794"
 ---
 # <a name="isolationlevel-and-mode-properties-example-vc"></a>IsolationLevel 및 Mode 속성 예제 (VC + +)
 이 예에서는 [Mode](./mode-property-ado.md) 속성을 사용 하 여 배타적 연결을 열고 [IsolationLevel](./isolationlevel-property.md) 속성을 사용 하 여 다른 트랜잭션과 분리 하 여 수행 되는 트랜잭션을 엽니다.  

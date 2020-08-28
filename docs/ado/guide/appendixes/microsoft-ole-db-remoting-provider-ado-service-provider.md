@@ -3,7 +3,7 @@ description: Microsoft OLE DB Remoting 공급자 (ADO 서비스 공급자)
 title: Microsoft OLE DB Remoting 공급자 (ADO 서비스 공급자) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/08/2018
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a4360ed4-b70f-4734-9041-4025d033346b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2e8520dc35b7a6d913736637cabaf34a2bd60651
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 860d151bb0071db6086629c8893795cadd47b821
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806535"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990994"
 ---
 # <a name="microsoft-ole-db-remoting-provider-overview"></a>Microsoft OLE DB Remoting 공급자 개요
 Microsoft OLE DB Remoting 공급자는 클라이언트 컴퓨터의 로컬 사용자가 원격 컴퓨터에서 데이터 공급자를 호출할 수 있도록 합니다. 원격 컴퓨터의 로컬 사용자 인 경우와 같이 원격 컴퓨터에 대 한 데이터 공급자 매개 변수를 지정 합니다. 원격 컴퓨터에 액세스 하기 위해 원격 공급자에서 사용 하는 매개 변수를 지정 합니다. 그런 다음 로컬 사용자 인 것 처럼 원격 컴퓨터에 액세스할 수 있습니다.

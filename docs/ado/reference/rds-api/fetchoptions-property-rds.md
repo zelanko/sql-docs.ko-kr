@@ -3,7 +3,7 @@ description: FetchOptions 속성(RDS)
 title: FetchOptions 속성 (RDS) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7b2e254a-9354-4541-bc98-bb185276388f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9ce3ed45c6ed45f0fdd4ac6f84db9895faec6d21
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 5608c03744ff632adb4b5e8b9f4da32797bfe8ea
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88768282"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88982214"
 ---
 # <a name="fetchoptions-property-rds"></a>FetchOptions 속성(RDS)
 비동기 인출의 유형을 나타냅니다.  
@@ -30,7 +30,7 @@ ms.locfileid: "88768282"
 ## <a name="setting-and-return-values"></a>값 설정 및 반환  
  다음 값 중 하나를 설정 하거나 반환 합니다.  
   
-|상수|Description|  
+|상수|설명|  
 |--------------|-----------------|  
 |**adcFetchUpFront**|응용 프로그램에 컨트롤을 반환 하기 전에 [레코드 집합](../ado-api/recordset-object-ado.md) 의 모든 레코드를 인출 합니다. 응용 프로그램에서 모든 작업을 수행할 수 있도록 하기 전에 전체 **레코드 집합** 을 인출 합니다.|  
 |**adcFetchBackground**|첫 번째 일괄 처리 레코드가 인출 되는 즉시 제어가 응용 프로그램으로 돌아갈 수 있습니다. 첫 번째 일괄 처리에서 인출 되지 않은 레코드에 대 한 액세스를 시도 하는 **레코드 집합** 의 후속 읽기는 검색 된 레코드가 실제로 인출 될 때까지 지연 되며,이 시점에서 컨트롤이 응용 프로그램으로 반환 됩니다.|  

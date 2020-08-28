@@ -3,7 +3,7 @@ description: UpdateBatch 및 CancelBatch 메서드 예제(VC++)
 title: UpdateBatch 및 CancelBatch 메서드 예제 (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bcb1468e-18bb-41b8-8902-6ee05b786eec
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 98130e528428817f6bd43323f47d2ef4e1191dc0
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 980e1ab0dcd507067d74797d546a26fdef8ae628
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776981"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88988014"
 ---
 # <a name="updatebatch-and-cancelbatch-methods-example-vc"></a>UpdateBatch 및 CancelBatch 메서드 예제(VC++)
 이 예제에서는 [CancelBatch](./cancelbatch-method-ado.md) 메서드와 함께 [UpdateBatch](./updatebatch-method.md) 메서드를 보여 줍니다.  

@@ -3,7 +3,7 @@ description: Open 메서드(ADO 스트림)
 title: Open 메서드 (ADO 스트림) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d26f48fb-904e-4932-a245-3b4332ca1600
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 333d20ee58123e9f1120e22d1770bd2a74ad97ae
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: ef760da2bad97cec017c7a58735200be1a14f85d
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88773782"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990324"
 ---
 # <a name="open-method-ado-stream"></a>Open 메서드(ADO 스트림)
 이진 또는 텍스트 데이터 스트림을 조작 하는 [Stream](./stream-object-ado.md) 개체를 엽니다.  

@@ -3,7 +3,7 @@ description: LoadFromFile 메서드(ADO)
 title: LoadFromFile 메서드 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b18d8d38-7354-4a94-b637-6ac035faa433
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0da662437c19f9c5105b7602035c5bcc519ea2d0
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 76c00998c8fd7c3c6f737ab9b2ab0e2e35c74101
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88774602"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990704"
 ---
 # <a name="loadfromfile-method-ado"></a>LoadFromFile 메서드(ADO)
 기존 파일의 내용을 [스트림으로](./stream-object-ado.md)로드 합니다.  

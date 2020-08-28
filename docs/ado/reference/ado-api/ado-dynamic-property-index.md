@@ -2,7 +2,7 @@
 description: ADO 동적 속성 인덱스
 title: ADO 동적 속성 인덱스 | Microsoft Docs
 ms.prod: sql
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 80d389dd-46ef-459f-b0d4-6f712fc4f32d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a4777349384d372355a107cced1503d774ade4f7
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: bbf4cdae12da71f5fc4d3b8fbc11b7ca64c46c5b
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88771742"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88976494"
 ---
 # <a name="ado-dynamic-property-index"></a>ADO 동적 속성 인덱스
 데이터 공급자, 서비스 공급자 및 서비스 구성 요소는 열려 있지 않은 [연결](./connection-object-ado.md) 및 [레코드 집합](./recordset-object-ado.md) 개체의 **속성** 컬렉션에 동적 속성을 추가할 수 있습니다. 지정 된 공급자는 이러한 개체를 열 때 추가 속성을 삽입할 수도 있습니다. 이러한 속성 중 일부는 [ADO 동적 속성](./ado-dynamic-properties.md) 섹션에 나열 됩니다. 자세한 내용은 [부록 a: providers](../../guide/appendixes/appendix-a-providers.md) 섹션의 특정 공급자에 나열 되어 있습니다.  

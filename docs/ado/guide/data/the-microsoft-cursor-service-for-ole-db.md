@@ -3,7 +3,7 @@ description: OLE DB용 Microsoft 커서 서비스
 title: OLE DB에 대 한 Microsoft Cursor Service | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1ac3bd9b-2d45-4cc8-88ec-bd8a218cfb49
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f3646ec86f76fcba2f6b82759a4784de7d463279
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ce59aa28e8db4716b0e27c848ce774b489ff5891
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452745"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979374"
 ---
 # <a name="the-microsoft-cursor-service-for-ole-db"></a>OLE DB용 Microsoft 커서 서비스
 클라이언트 쪽 커서를 선택 하거나 **CursorLocation** 속성을 **adUseClient**로 설정 하는 경우 OLE DB에 대해 Microsoft cursor Service를 호출 하 게 됩니다. "클라이언트 커서 엔진"에 대 한 참조도 표시 될 수 있으며,이는 기본적으로 ADO의 컨텍스트에서 동일 합니다. 이 서비스는 데이터 공급자의 커서 지원 기능을 보완 합니다. 결과적으로 모든 데이터 공급자의 상대적으로 일관 된 기능을 얻을 수 있습니다.  
