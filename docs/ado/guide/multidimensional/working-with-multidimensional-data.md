@@ -3,7 +3,7 @@ description: 다차원 데이터 작업
 title: 다차원 데이터 작업 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/08/2018
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 84387746-aa3e-44fd-ad6c-a8214a6966dc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3804925eb893b656d555419ab81753ff464f41bd
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 0589b1fe5ca6da29f088e26b2236cfc5205bfe0c
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88758773"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88978574"
 ---
 # <a name="working-with-multidimensional-data"></a>다차원 데이터 작업
 *셀 집합* 은 다차원 데이터에 대 한 쿼리의 결과입니다. 이는 축 컬렉션으로 구성 됩니다. 일반적으로 축은 4 개 이하로, 일반적으로는 2 개 또는 3 개만 있습니다. *축은* 큐브에서 특정 값을 찾거나 필터링 하는 데 사용 되는 하나 이상의 차원에서 가져온 멤버의 컬렉션입니다.  
@@ -78,7 +78,7 @@ Jan, Feb, Mar, Qtr2, Qtr3, Oct, Nov, Dec
   
  셀 집합, 셀, 축 및 위치는 모두 해당 개체 (셀 [집합](../../reference/ado-md-api/cellset-object-ado-md.md), [셀](../../reference/ado-md-api/cell-object-ado-md.md), [축](../../reference/ado-md-api/axis-object-ado-md.md)및 [위치](../../reference/ado-md-api/position-object-ado-md.md))로 ADO MD 표시 됩니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [ADO MD 개체 모델](../../reference/ado-md-api/ado-md-object-model.md)   
  [ADO (다차원) (ADO MD)](./ado-multidimensional-ado-md.md)   
  [다차원 스키마 및 데이터 개요](./overview-of-multidimensional-schemas-and-data.md)   

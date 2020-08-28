@@ -3,7 +3,7 @@ description: NumericScale 속성(ADO)
 title: NumericScale 속성 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 29a02992-64be-4fcd-be13-445cba205893
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 57375b89595c6ed3e5c377692709deacd8f0ff28
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 120d88e82f77af622de962ac306442625487ff08
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88773972"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990414"
 ---
 # <a name="numericscale-property-ado"></a>NumericScale 속성(ADO)
 [매개 변수](./parameter-object.md) 또는 [필드](./field-object.md) 개체에서 숫자 값의 소수 자릿수를 나타냅니다.  

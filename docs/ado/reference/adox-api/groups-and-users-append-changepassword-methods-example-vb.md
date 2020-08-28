@@ -3,7 +3,7 @@ description: Groups 및 Users Append, ChangePassword 메서드 예제(VB)
 title: Groups 및 Users Append, ChangePassword 메서드 예제 (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c9426757-9cdd-4a95-b506-d3d011569109
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 13fe25638b47221960f6f39c7e367321578ee1ff
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 824cf44560335152ac6079c4ff61f2177368447c
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88770382"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88984384"
 ---
 # <a name="groups-and-users-append-changepassword-methods-example-vb"></a>Groups 및 Users Append, ChangePassword 메서드 예제(VB)
 이 예제에서는 시스템에 새 [그룹](./group-object-adox.md) 및 새 [사용자](./user-object-adox.md) 를 추가 하 여 [사용자](./users-collection-adox.md) 의 [추가](./append-method-adox-users.md) 방법 뿐만 아니라 [그룹](./groups-collection-adox.md)의 [추가](./append-method-adox-groups.md) 메서드를 보여 줍니다. 새 **그룹** 은 새 **사용자**의 **그룹** 컬렉션에 추가 됩니다. 따라서 새 **사용자** 가 **그룹**에 추가 됩니다. 또한 [ChangePassword](./changepassword-method-adox.md) 메서드를 사용 하 여 **사용자** 암호를 지정 합니다.  

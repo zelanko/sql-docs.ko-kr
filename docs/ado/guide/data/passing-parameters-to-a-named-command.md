@@ -3,7 +3,7 @@ description: 명명된 명령에 매개 변수 전달
 title: 명명 된 명령에 매개 변수 전달 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 36e0cdbe-7f50-40f5-af0d-700f5d8dc75a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fa6ac56c3bb3e632ace019a2c8b2a97c96262421
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6de01bb420a7e2c5fadd2970064d5e84d22328b3
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453075"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88980144"
 ---
 # <a name="passing-parameters-to-a-named-command"></a>명명된 명령에 매개 변수 전달
 명령의 결과가 명명 된 명령의 *out* 변수로 전달 되는 것과 마찬가지로 매개 변수가 있는 명령에 대 한 매개 변수는 명명 된 명령에 대 한 *변수로 전달* 될 수 있습니다.  

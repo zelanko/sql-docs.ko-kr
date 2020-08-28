@@ -3,7 +3,7 @@ description: 컬렉션(ADO - WFC 구문)
 title: 컬렉션 (ADO-WFC 구문) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 073f9a0e-c755-42dd-9f71-4647d68e331a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a3a52b1dabc9ebfa01b29e1a026214a3a97aa3f2
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: a6afa603b169949673544791849ecbbc5d312cfb
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776202"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88975344"
 ---
 # <a name="collections-ado---wfc-syntax"></a>컬렉션(ADO - WFC 구문)
 **package com.**  

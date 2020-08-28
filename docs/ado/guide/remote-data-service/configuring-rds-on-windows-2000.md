@@ -3,7 +3,7 @@ description: Windows 2000에서 RDS 구성
 title: Windows에서 RDS 구성 2000 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/09/2018
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ef37e858-c05f-4f52-a65f-3ce6037e0d03
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 73ab5507d755fed32fa54b36a82f9ca915a8e194
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 2a35d730981723f83b65867468a809f795fc6d3e
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88758643"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88978334"
 ---
 # <a name="configuring-rds-on-windows-2000"></a>Windows 2000에서 RDS 구성
 Windows 2000로 업그레이드 한 후 RDS가 제대로 작동 하는 데 문제가 발생 하는 경우 다음 단계에 따라 문제를 해결 합니다.  
@@ -40,5 +40,5 @@ Windows 2000로 업그레이드 한 후 RDS가 제대로 작동 하는 데 문�
 > [!IMPORTANT]
 >  Windows 8 및 Windows Server 2012부터 RDS 서버 구성 요소는 더 이상 Windows 운영 체제에 포함 되지 않습니다 (자세한 내용은 Windows 8 및 [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) 참조). 이후 버전의 Windows에서는 RDS 클라이언트 구성 요소가 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. RDS를 사용 하는 응용 프로그램은 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)로 마이그레이션해야 합니다. Windows 8 및 Windows Server 2012부터 RDS 서버 구성 요소는 더 이상 Windows 운영 체제에 포함 되지 않습니다. RDS를 사용 하는 응용 프로그램을 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)로 마이그레이션합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [RDS 기본 사항](./rds-fundamentals.md)

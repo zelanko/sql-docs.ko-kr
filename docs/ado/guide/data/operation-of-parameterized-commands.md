@@ -3,7 +3,7 @@ description: 매개 변수화된 명령 작업
 title: 매개 변수가 있는 명령의 작업 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4fae0d54-83b6-4ead-99cc-bcf532daa121
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e21089ed2fd513f4c82ba9c30478b51fee6c4ebe
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 91fe315304cc2be0ccfb8c638665ce699c75e248
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88805634"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88980174"
 ---
 # <a name="operation-of-parameterized-commands"></a>매개 변수화된 명령 작업
 특히 부모 **레코드 집합**의 크기와 비교할 때 큰 자식 **레코드 집합**을 사용 하 여 작업 하는 경우 몇 개의 자식 챕터에만 액세스 해야 하는 경우 매개 변수가 있는 명령을 사용 하는 것이 더 효율적일 수 있습니다.  
@@ -75,7 +75,7 @@ Rst1.MovePrevious  ' RstChild now holds cached rs, saving round trip.
   
  매개 변수가 없는 계층 구조를 사용 하는 경우 각 팀의 자식 **레코드 집합** 에 전체 일정이 포함 되도록 팀과 게임 테이블을 연결할 수 있는 방법이 없습니다. 집 일정 또는도로 일정이 포함 된 챕터를 만들 수 있습니다. 이는 RELATE 절이 폼의 부모-자식 관계 (pc1 = cc1) 및 (pc2 = pc2)를 제한 하기 때문입니다. 따라서 명령에 "team_id 관련 된 home_team team_id visiting_team"가 있는 경우 팀이 자신을 재생 하는 게임만 표시 됩니다. 원하는 것은 "(team_id = home_team) 또는 (team_id = visiting_team)" 이지만 셰이프 공급자는 또는 절을 지원 하지 않습니다.  
   
- 원하는 결과를 얻기 위해 매개 변수가 있는 명령을 사용할 수 있습니다. 예를 들면 다음과 같습니다.  
+ 원하는 결과를 얻기 위해 매개 변수가 있는 명령을 사용할 수 있습니다. 예를 들어:  
   
 ```  
 SHAPE {SELECT * FROM teams}   

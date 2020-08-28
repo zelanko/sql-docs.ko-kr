@@ -3,7 +3,7 @@ description: SaveOptionsEnum
 title: SaveOptionsEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 59339100-6e29-48d1-aea3-6873796d186b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: edac11f61b003307703ec13daed8022b8af31bae
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 56e16ff6ca93dde78531394dc474a2e5cc817348
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777562"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88989314"
 ---
 # <a name="saveoptionsenum"></a>SaveOptionsEnum
 [스트림](./stream-object-ado.md) 개체에서 저장할 때 파일을 만들거나 덮어쓸지 여부를 지정 합니다. 값은 **adSaveCreateNotExist** 또는 **adSaveCreateOverWrite**수 있습니다.  

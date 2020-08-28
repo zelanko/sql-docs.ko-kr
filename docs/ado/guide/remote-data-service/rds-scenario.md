@@ -3,7 +3,7 @@ description: RDS 시나리오
 title: RDS 시나리오 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/09/2018
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a7dcad87-aaf0-4b02-9660-472f8469761c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7baed4eff98c8286c1c84bd346826b4c49e4fa75
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: e4492a80690c99d1e5b7003763faf77effdeebec
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88759563"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88977884"
 ---
 # <a name="rds-scenario"></a>RDS 시나리오
 > [!IMPORTANT]
@@ -62,7 +62,7 @@ ms.locfileid: "88759563"
   
 -   [주소록 탐색 단추](./address-book-navigation-buttons.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [주소록 응용 프로그램에 대 한 시스템 요구 사항](./system-requirements-for-the-address-book-application.md)   
  [Microsoft ADO(ActiveX Data Objects) (ADO)](../../microsoft-activex-data-objects-ado.md)   
  [RDS 기본 사항](./rds-fundamentals.md)   

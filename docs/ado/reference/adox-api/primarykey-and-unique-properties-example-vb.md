@@ -3,7 +3,7 @@ description: PrimaryKey 및 Unique 속성 예제(VB)
 title: PrimaryKey 및 Unique 속성 예제 (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f536acac-06ea-4b39-bfba-ee9902b01615
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: aa548ea37ffe3c91e8d36febac9f90cf9498d258
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: d857dfca2b690b06f43b9be50520b4530645128f
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88769752"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88983674"
 ---
 # <a name="primarykey-and-unique-properties-example-vb"></a>PrimaryKey 및 Unique 속성 예제(VB)
 이 예에서는 [인덱스](./index-object-adox.md)의 [PrimaryKey](./primarykey-property-adox.md) 및 [Unique](./unique-property-adox.md) 속성을 보여 줍니다. 이 코드는 두 개의 열이 있는 새 테이블을 만듭니다. **PrimaryKey** 및 **Unique** 속성은 중복 값이 허용 되지 않는 기본 키로 한 열을 만드는 데 사용 됩니다.  

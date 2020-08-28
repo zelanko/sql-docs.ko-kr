@@ -3,7 +3,7 @@ description: Ordinal 속성(ADO MD Position)
 title: Ordinal 속성 (ADO MD Position) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6efe8b5d-a2d5-43a9-a5ea-f9244f8d4ec9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c2f145cf96222eb08ab154dc9d683c0973cad861
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 6d2485e8331a3eee95cfd5937ffbdbd570b2ecdc
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777922"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88986194"
 ---
 # <a name="ordinal-property-ado-md-position"></a>Ordinal 속성(ADO MD Position)
 축을 따라 [위치](./position-object-ado-md.md) 를 고유 하 게 식별 합니다.  

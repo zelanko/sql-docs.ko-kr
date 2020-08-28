@@ -3,7 +3,7 @@ description: 매개 변수화되지 않은 명령 작업
 title: 매개 변수가 없는 명령의 작업 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9700e50a-9f17-4ba3-8afb-f750741dc6ca
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6b0f425deb87e831547d24a4b81f7d1a601e344a
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: c4e1187a319b086f7a28d3b282869271cd444ab5
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88805670"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88980164"
 ---
 # <a name="operation-of-non-parameterized-commands"></a>매개 변수화되지 않은 명령 작업
 매개 변수가 없는 명령의 경우 모든 공급자 명령이 실행 되 고 명령을 실행 하는 동안 **레코드 집합이** 생성 됩니다. 명령이 동기적으로 실행 되는 경우 모든 **레코드 집합** 은 완전히 채워집니다. 비동기 채우기 모드가 선택 된 경우 **레코드 집합** 의 채워진 상태는 채우기 모드와 **레코드 집합**의 크기에 따라 달라 집니다.  

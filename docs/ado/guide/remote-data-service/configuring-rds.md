@@ -3,7 +3,7 @@ description: RDS 구성
 title: RDS 구성 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/09/2018
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5dd48483-858a-48c2-98ce-f2359abe1f59
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 23110157445da6c776de7582682992ab55a97ac8
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 6d6d3ecb018ff89409a1543af827e045f75557ab
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88759881"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88978314"
 ---
 # <a name="configuring-rds"></a>RDS 구성
 > [!IMPORTANT]
@@ -44,7 +44,7 @@ ms.locfileid: "88759881"
   
 -   [안전 또는 무제한 모드에 대한 DataFactory 구성](./configuring-datafactory-for-safe-or-unrestricted-modes.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [RDS와 관련 기술 사용](./using-related-technologies-with-rds.md)   
  [DataFactory 사용자 지정](./datafactory-customization.md)   
  [RDS 문제 해결](./troubleshooting-rds.md)

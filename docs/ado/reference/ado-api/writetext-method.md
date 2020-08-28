@@ -3,7 +3,7 @@ description: WriteText 메서드
 title: WriteText 메서드 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7a669048-13f4-4574-a2b1-985e089729d5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9a4e42733013a7ea756924199d05a93ae08e0c08
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: d38d493fb57e8147f882056d07514ba9f405ecf9
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776832"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88987724"
 ---
 # <a name="writetext-method"></a>WriteText 메서드
 지정 된 텍스트 문자열을 [스트림](./stream-object-ado.md) 개체에 씁니다.  
@@ -35,7 +35,7 @@ Stream.WriteText Data, Options
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- *데이터*  
+ *Data*  
  쓸 문자 텍스트를 포함 하는 **문자열** 값입니다.  
   
  *Options*  

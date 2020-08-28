@@ -3,7 +3,7 @@ description: GetPermissions 및 SetPermissions 메서드 예제(VC++)
 title: GetPermissions 및 SetPermissions 메서드 예제 (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8c75d547-d3d7-44c4-b7de-eead5d11b92e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9e8d5d9ee99bc1c055846d8f8882ed15907ee3f9
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: a6aa56ac29a2360098284de57831638f04bcb47e
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88770472"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88984444"
 ---
 # <a name="getpermissions-and-setpermissions-methods-example-vc"></a>GetPermissions 및 SetPermissions 메서드 예제(VC++)
 이 예제에서는 [Getpermissions](./getpermissions-method-adox.md) 및 [SetPermissions](./setpermissions-method-adox.md) 메서드를 보여 줍니다. 다음 코드는 관리자 사용자에 게 Orders 테이블에 대 한 모든 권한을 부여 합니다.  

@@ -3,7 +3,7 @@ description: 레코드 집합에서 이동하는 추가 방법
 title: 여러 가지 방법으로 레코드 집합에서 이동 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9f8cf1b2-3def-453f-a0ff-4646c5f15262
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1895410181cea9a916589d766d2fa9254ca8642b
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: e8c668bc24b388d0367429086416cd67b5355550
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88805822"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88980294"
 ---
 # <a name="more-ways-to-move-in-a-recordset"></a>레코드 집합에서 이동하는 추가 방법
 다음 네 가지 방법을 사용 하 여 **레코드 집합**에서 이동 하거나 스크롤할 수 있습니다. [MoveFirst, MoveLast, MoveNext 및 MovePrevious](../../reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md). 이러한 메서드 중 일부는 앞 으로만 이동 가능한 커서에서 사용할 수 없습니다.  

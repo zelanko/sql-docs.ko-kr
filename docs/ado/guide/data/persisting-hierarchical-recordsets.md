@@ -3,7 +3,7 @@ description: 계층적 레코드 집합 유지
 title: 계층 구조 레코드 집합 유지 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 43798bb5-98a6-4ad6-9bf8-78154b3a1827
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4bfcb79e532609ad9b3eeb14fb07dec4fd1239f7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9fef0aad67d6d6cd68f50cc8940e2ddf3c53a206
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453055"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88980074"
 ---
 # <a name="persisting-hierarchical-recordsets"></a>계층적 레코드 집합 유지
 [Save](../../../ado/reference/ado-api/save-method.md) 메서드를 호출 하 여 ADTG 또는 XML 형식의 파일에 계층적 **레코드 집합** 을 저장할 수 있습니다. 그러나 계층적 **레코드**집합을 xml 형식으로 저장할 때 두 가지 제한 사항이 적용 됩니다. 계층적 **레코드 집합** 에 보류 중인 업데이트가 포함 되어 있고 매개 변수가 있는 계층적 **레코드 집합**을 저장할 수 없는 경우에는 xml로 저장할 수 없습니다.  

@@ -3,7 +3,7 @@ description: AbsolutePosition 및 CursorLocation 속성 예제 (JScript)
 title: AbsolutePosition 및 CursorLocation 속성 예제 (JScript) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bff98617-a6ba-4f41-9c5f-915161e3ea31
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1fcad0360e9ae15263860c45b9f9c4a96c4d36bc
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 058a6046d7ac4010413bb4d124dd92ff9af902df
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88759983"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88977234"
 ---
 # <a name="absoluteposition-and-cursorlocation-properties-example-jscript"></a>AbsolutePosition 및 CursorLocation 속성 예제 (JScript)
 이 예에서는 [AbsolutePosition](./absoluteposition-property-ado.md) 속성을 통해 [레코드 집합](./recordset-object-ado.md)의 모든 레코드를 열거 하는 루프의 진행률을 추적할 수 있는 방법을 보여 줍니다. [CursorLocation](./cursorlocation-property-ado.md) 속성을 사용 하 여 커서를 클라이언트 커서로 설정 하 여 **AbsolutePosition** 속성을 사용 하도록 설정 합니다. 다음 코드를 잘라내어 메모장 또는 다른 텍스트 편집기에 붙여 넣고 **AbsolutePositionJS**로 저장 합니다.  
@@ -128,7 +128,7 @@ BODY {
 <!-- EndAbsolutePositionJS -->  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [AbsolutePosition 속성 (ADO)](./absoluteposition-property-ado.md)   
  [CursorLocation 속성 (ADO)](./cursorlocation-property-ado.md)   
  [레코드 집합 개체(ADO)](./recordset-object-ado.md)

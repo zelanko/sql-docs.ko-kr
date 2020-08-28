@@ -3,7 +3,7 @@ description: DeleteRecord 메서드(ADO)
 title: DeleteRecord 메서드 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 2726498c-dbd8-4266-983b-ae7d62c39142
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 94423c36dd89d6ea14ea39b7546ef1a5bef7c620
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 634e28fb1bcc6d246de72164f33d3d252f63505a
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444105"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88974004"
 ---
 # <a name="deleterecord-method-ado"></a>DeleteRecord 메서드(ADO)
 [레코드로](../../../ado/reference/ado-api/record-object-ado.md)표시 되는 엔터티를 삭제 합니다.  
@@ -36,10 +36,10 @@ Record.DeleteRecord Source, Async
   
 #### <a name="parameters"></a>매개 변수  
  *원본*  
- (선택 사항) 삭제할 엔터티 (예: 파일 또는 디렉터리)를 식별 하는 URL을 포함 하는 **문자열** 값입니다. *Source* 를 생략 하거나 빈 문자열을 지정 하면 현재 [레코드가](../../../ado/reference/ado-api/record-object-ado.md) 나타내는 엔터티가 삭제 됩니다. 레코드가 컬렉션 레코드 (디렉터리와 같은 **Adcollectionrecord**의[RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md) ) 이면 모든 자식 (예: 하위 디렉터리)도 삭제 됩니다.  
+ 선택 사항입니다. 삭제할 엔터티 (예: 파일 또는 디렉터리)를 식별 하는 URL을 포함 하는 **문자열** 값입니다. *Source* 를 생략 하거나 빈 문자열을 지정 하면 현재 [레코드가](../../../ado/reference/ado-api/record-object-ado.md) 나타내는 엔터티가 삭제 됩니다. 레코드가 컬렉션 레코드 (디렉터리와 같은 **Adcollectionrecord**의[RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md) ) 이면 모든 자식 (예: 하위 디렉터리)도 삭제 됩니다.  
   
  *Async*  
- (선택 사항) **True**인 경우 삭제 작업을 보조적 지정 하는 **부울** 값입니다.  
+ 선택 사항입니다. **True**인 경우 삭제 작업을 보조적 지정 하는 **부울** 값입니다.  
   
 ## <a name="remarks"></a>설명  
  이 메서드가 완료 되 면이 **레코드가** 나타내는 개체에 대 한 작업이 실패할 수 있습니다. **DeleteRecord**를 호출한 후에는 공급자가 데이터 원본을 사용 하 여 **레코드** 를 업데이트 하는 시기에 따라 레코드의 동작을 **예측할 수 없게** 되므로 **레코드** 를 닫아야 합니다.  

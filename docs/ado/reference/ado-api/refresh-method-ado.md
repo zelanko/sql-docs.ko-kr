@@ -3,7 +3,7 @@ description: Refresh 메서드(ADO)
 title: Refresh 메서드 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 089b7ca7-684f-4259-8032-5bd1ecc54426
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b172179adefc880034443b29ed36bb309215ec5a
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 66324860f931a919cccc36d3de9464d2ad2e48d0
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88771982"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88989614"
 ---
 # <a name="refresh-method-ado"></a>Refresh 메서드(ADO)
 공급자와 관련 하 여 사용 가능한 개체를 반영 하도록 컬렉션의 개체를 업데이트 합니다.  

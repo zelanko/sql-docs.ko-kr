@@ -3,7 +3,7 @@ description: 스키마 섹션
 title: 스키마 섹션 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4ac6e524-2c92-48e8-b871-0a4b5c8fda18
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2b7d3a82231e31771a6f01dc558feebdc98dcbe1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a1f294e9c0258f1cc9d108d1eb9a47087b456ca8
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452895"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979724"
 ---
 # <a name="schema-section"></a>스키마 섹션
 스키마 섹션이 필요 합니다. 이전 예제에서 볼 수 있듯이 ADO는 각 열에 대 한 자세한 메타 데이터를 작성 하 여 데이터 값의 의미 체계를 업데이트 가능한 한 많이 유지 합니다. 그러나 XML에서 로드 하려면 ADO에 열 이름과 해당 열이 속한 행 집합만 필요 합니다. 최소 스키마의 예는 다음과 같습니다.  
@@ -175,5 +175,5 @@ ms.locfileid: "88452895"
   
  OLE DB XML 문서 스키마 내에서 사용할 수 있는 OLE DB 구문에 대 한 자세한 내용은 "urn: schema-microsoft-com: rowset"의 정의 및 OLE DB 프로그래머 가이드를 참조 하십시오.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [XML 형식으로 레코드 유지](../../../ado/guide/data/persisting-records-in-xml-format.md)

@@ -3,7 +3,7 @@ description: Filter 및 RecordCount 속성 예제 (VC + +)
 title: Filter 및 RecordCount 속성 예제 (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b71346cb-3b09-4b8c-a600-976171a1c336
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3974219f4070d38e877ff7fdd4b6c7e3a26adef2
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 4d01d2acc51b89fbe1100e535c9aada7dcb8a603
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88775312"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88973014"
 ---
 # <a name="filter-and-recordcount-properties-example-vc"></a>Filter 및 RecordCount 속성 예제 (VC + +)
 이 예에서는 [Filter](./filter-property.md) 속성을 사용 하 여 기존 **레코드 집합**에 적용 된 지정 된 조건에 따라 새 [레코드 집합](./recordset-object-ado.md) 을 엽니다. [RecordCount](./recordcount-property-ado.md) 속성을 사용 하 여 두 레코드 **집합**의 레코드 수를 표시 합니다. 이 프로시저를 실행 하려면 FilterField 함수를 실행 해야 합니다.  

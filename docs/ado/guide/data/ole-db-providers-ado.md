@@ -3,7 +3,7 @@ description: OLE DB 공급자(ADO)
 title: OLE DB 공급자 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6e0488c3-934d-4976-99dc-65c580dc7a3c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7fb247f62173a0c622a08eb2d55af005efcb2669
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 25eea144ab0f9301f79a74773258cf399802af9d
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88805678"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88980184"
 ---
 # <a name="ole-db-providers-ado"></a>OLE DB 공급자(ADO)
 OLE DB은 다양 한 정보 소스에 저장 된 데이터에 대 한 일관 된 액세스를 제공 하는 응용 프로그램을 제공 하는 COM 인터페이스 집합을 정의 합니다. 이 접근 방식을 사용 하면 데이터 원본에서 데이터 원본에 적합 한 DBMS 기능을 지 원하는 인터페이스를 통해 데이터를 공유할 수 있습니다. 기본적으로 OLE DB의 고성능 아키텍처는 유연 하 고 구성 요소 기반 서비스 모델을 사용 하는 것을 기반으로 합니다. 응용 프로그램과 데이터 사이에 지정 된 수의 중간 계층을 포함 하는 대신 OLE DB에는 특정 작업을 수행 하는 데 필요한 만큼의 구성 요소만 필요 합니다.  
