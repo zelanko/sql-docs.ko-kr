@@ -3,7 +3,7 @@ description: OriginalValue 및 UnderlyingValue 속성 예제 (VC + +)
 title: OriginalValue 및 UnderlyingValue 속성 예제 (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c5762ad2-f43b-453d-b44a-9c70210eb00f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6f230bc40d310570ab717eee06a454fb3ef2b52b
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: f8a9a9a7296ac87f733d8626f0c425071c5d8671
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88773582"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990234"
 ---
 # <a name="originalvalue-and-underlyingvalue-properties-example-vc"></a>OriginalValue 및 UnderlyingValue 속성 예제 (VC + +)
 이 예제에서는 레코드 [집합](./recordset-object-ado.md) 일괄 처리를 업데이트 하는 동안 레코드의 기본 데이터가 변경 된 경우 메시지를 표시 하 여 [Originalvalue](./originalvalue-property-ado.md) 및 [UnderlyingValue](./underlyingvalue-property.md) 속성을 보여 줍니다.  

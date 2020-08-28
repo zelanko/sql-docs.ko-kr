@@ -3,7 +3,7 @@ description: 결과 수신
 title: 결과 받기 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 791aa26e-7aae-477e-9f05-5cd46e1de095
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3317441322d0f1be94ee1c897946d83f6291143c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6fb6a86cb976d8ed8a3c96a10cdca9fd786a5128
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452995"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979964"
 ---
 # <a name="receiving-results"></a>결과 수신
 ADO에서 대부분의 명령은 호출자에 게 일부 정보를 반환 합니다. 행 집합을 반환 하는 명령의 경우 결과는 ADO 개체에서 가장 많이 사용 되는 **레코드 집합** 개체로 수신 됩니다.  

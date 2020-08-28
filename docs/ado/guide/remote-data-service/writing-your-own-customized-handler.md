@@ -3,7 +3,7 @@ description: 고유한 사용자 지정된 처리기 작성
 title: 사용자 지정 처리기 작성 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/09/2018
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d447712a-e123-47b5-a3a4-5d366cfe8d72
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bfddb0a5cbc1691a8013528abd4c1547f29e1504
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: e421b128faa5a7d90ec658a7c42e246110d921fb
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88760073"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88977344"
 ---
 # <a name="writing-your-own-customized-handler"></a>고유한 사용자 지정된 처리기 작성
 기본 RDS 지원을 원하는 IIS 서버 관리자 인 경우 사용자 요청 및 액세스 권한을 더 자세히 제어 하려면 고유한 처리기를 작성 하는 것이 좋습니다.  
@@ -100,7 +100,7 @@ HRESULT _stdcall GetRecordset(
 };  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [사용자 지정 파일 연결 섹션](./customization-file-connect-section.md)   
  [사용자 지정 파일 로그 섹션](./customization-file-logs-section.md)   
  [사용자 지정 파일 SQL 섹션](./customization-file-sql-section.md)   

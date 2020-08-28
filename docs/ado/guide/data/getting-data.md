@@ -3,7 +3,7 @@ description: 데이터 가져오기
 title: 데이터 가져오기 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3931e7ec-f66b-4d5d-aad3-c4bf12e8b154
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 80f1bcfad7a931898396d2463275a2426fbf0033
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 3223d2291ba15ab0a2c14b1fac2aaea911bde395
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806804"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88980774"
 ---
 # <a name="getting-data"></a>데이터 가져오기
 [Ado 기본 사항](./ado-fundamentals.md)및 특히 [HelloData](./hellodata-a-simple-ado-application.md) 예제에는 ado 응용 프로그램 만들기와 관련 된 네 가지 기본 작업 (데이터 가져오기, 데이터 검사, 데이터 편집, 데이터 업데이트)이 도입 되었습니다. 이 섹션에서는 데이터 가져오기에 대해 자세히 설명 합니다.  

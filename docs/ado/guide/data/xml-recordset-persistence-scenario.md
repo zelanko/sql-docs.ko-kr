@@ -3,7 +3,7 @@ description: XML 레코드 집합 지속성 시나리오
 title: XML 레코드 집합 지 속성 시나리오 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 353d569a-043a-4397-9ee6-564c4af8d5f6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 42fbc8670320761697caf4c956c1f9b64bda5c24
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 91066d8dd42d1bcd4a11aab093661a9061a7d7d1
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88758423"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88978824"
 ---
 # <a name="xml-recordset-persistence-scenario"></a>XML 레코드 집합 지속성 시나리오
 이 시나리오에서는 레코드 집합 개체의 내용을 ASP 응답 개체에 직접 저장 하는 ASP (Active Server Pages) 응용 프로그램을 만듭니다.  
@@ -113,6 +113,6 @@ ms.locfileid: "88758423"
   
  default.htm 파일을 닫고 XMLResponse .asp를 저장 한 폴더와 동일한 폴더에 저장 합니다. Internet Explorer 4.0 이상 버전을 사용 하 여 https://*sqlserver*/Xmlpersist/default.htm URL을 열고 결과를 관찰 합니다. 데이터는 바인딩된 DHTML 테이블에 표시 됩니다. 이제 URL https:// *sqlserver* /Xmlpersist/xmlresponse.xml을 열고 결과를 관찰 합니다. XML이 표시 됩니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Save 메서드](../../reference/ado-api/save-method.md)   
  [XML 형식으로 레코드 유지](./persisting-records-in-xml-format.md)

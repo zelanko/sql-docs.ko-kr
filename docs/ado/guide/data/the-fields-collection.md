@@ -3,7 +3,7 @@ description: 필드 컬렉션
 title: Fields 컬렉션 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 574cf36e-e5f5-403b-983c-749ef93c108f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 580ded2e3f2539d484d2a60c85adca56ac8e3ac1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 45bad5289a33b5b1f76807f1f7a9da62044dafc2
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452755"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979384"
 ---
 # <a name="the-fields-collection"></a>필드 컬렉션
 **Fields** 컬렉션은 ADO의 내장 컬렉션 중 하나입니다. 컬렉션은 하나의 단위로 참조할 수 있는 정렬 된 항목 집합입니다. ADO 컬렉션에 대 한 자세한 내용은 [Ado 개체 모델](../../../ado/guide/data/ado-objects-and-collections.md)을 참조 하세요.  

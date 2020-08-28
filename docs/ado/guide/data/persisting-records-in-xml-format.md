@@ -3,7 +3,7 @@ description: XML 형식으로 레코드 유지
 title: XML 형식으로 레코드 유지 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: f3113ec4-ae31-428f-89c6-bc1024f128ea
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b88bef75b0cbe13402d90264b766adf5a3005efd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 31512fd9843ae5ff15fc2f7c6981fccdc926dbb5
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453045"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88980064"
 ---
 # <a name="persisting-records-in-xml-format"></a>XML 형식으로 레코드 유지
 ADTG 형식과 마찬가지로 XML 형식의 **레코드 집합** 지 속성은 Microsoft OLE DB 지 속성 공급자를 사용 하 여 구현 됩니다. 이 공급자는 ADO에서 생성 한 스키마 정보를 포함 하는 저장 된 XML 파일 또는 스트림에서 앞 으로만 이동 가능한 읽기 전용 행 집합을 생성 합니다. 마찬가지로, ADO **레코드 집합**을 사용 하 여 XML을 생성 하 고이를 파일 또는 COM **IStream** 인터페이스를 구현 하는 모든 개체에 저장할 수 있습니다. 실제로 파일은 **IStream**을 지 원하는 개체의 또 다른 예입니다. 2.5 이상 버전의 경우 ADO는 Microsoft XML 파서 (MSXML)를 사용 하 여 XML을 **레코드 집합**으로 로드 합니다. 따라서 msxml.dll 필요 합니다.  

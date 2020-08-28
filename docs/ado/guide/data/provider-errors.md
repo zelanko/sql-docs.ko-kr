@@ -3,7 +3,7 @@ description: 공급자 오류
 title: 공급자 오류 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: cc7d6ff9-2034-45c6-9d61-90b177010054
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9588ddddf094f391f442dd7ad9c4172cce70970e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b31f530bafd69d59c98893cc2ead29039372dea9
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453025"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979984"
 ---
 # <a name="provider-errors"></a>공급자 오류
 공급자 오류가 발생 하면-2147467259의 런타임 오류가 반환 됩니다. 이 오류가 표시 되 면 활성 **연결** 개체의 **오류** 컬렉션을 확인 합니다 .이 컬렉션에는 발생 한 작업을 설명 하는 하나 이상의 오류가 포함 됩니다.  

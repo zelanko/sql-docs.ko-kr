@@ -3,7 +3,7 @@ description: RelatedTable 속성(ADOX)
 title: RelatedTable 속성 (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: cb54c6bc-2be2-40b1-bc11-90c10651b878
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ac92921f32197eb07372e9e63147869bdca202af
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: f7fdbe6977ee2ddfc586e152b02b4994697a39db
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88769492"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88983454"
 ---
 # <a name="relatedtable-property-adox"></a>RelatedTable 속성(ADOX)
 관련 테이블의 이름을 나타냅니다.  

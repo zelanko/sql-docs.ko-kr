@@ -3,7 +3,7 @@ description: NumericScale 및 Precision 속성 예제(VC++)
 title: NumericScale 및 Precision 속성 예제 (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/20/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 55d91ba8-4d80-4df6-af8e-060a19ddc138
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8927b2c74b72020485719b9d52e391919e39794c
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: fbca744c17ffd3dfa9b84b679e9efeaf0d27ad9a
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88773982"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990394"
 ---
 # <a name="numericscale-and-precision-properties-example-vc"></a>NumericScale 및 Precision 속성 예제(VC++)
 이 예에서는 [NumericScale](./numericscale-property-ado.md) 및 [precision](./precision-property-ado.md) 속성을 사용 하 여 ***Pubs*** 데이터베이스의 ***할인율*** 테이블에 있는 필드의 숫자 소수 자릿수와 전체 자릿수를 표시 합니다.  

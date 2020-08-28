@@ -3,7 +3,7 @@ description: onError 이벤트(RDS)
 title: onError 이벤트 (RDS) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b01cbc62-fbd7-4068-b16c-8b0f80a05887
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fb9ab9b7b97875ee62fe96a39ff8d34591810560
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: adef4e3eea01e966b87f939ce1a5b961ba87847b
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88767952"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88981904"
 ---
 # <a name="onerror-event-rds"></a>onError 이벤트(RDS)
 **OnError** 이벤트는 작업을 수행 하는 동안 오류가 발생할 때마다 호출 됩니다.  

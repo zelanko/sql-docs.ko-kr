@@ -3,7 +3,7 @@ description: 레코드로 이동
 title: 레코드로 이동 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6caf6299-2eea-4d34-9b0e-b75aab07b740
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dcbdf68a7d79b64e25dcb700b989628a6a72b8e2
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 96987a5c51d7a888672609aa28f3fd223ccfffa1
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88805857"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88980404"
 ---
 # <a name="jumping-to-a-record"></a>레코드로 이동
 [Move](../../reference/ado-api/move-method-ado.md) 메서드를 사용 하면 다음 구문을 사용 하 여 레코드 **집합** 에서 지정 된 수의 레코드를 앞 이나 뒤로 이동할 수 있습니다.  

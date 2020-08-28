@@ -3,7 +3,7 @@ description: 레코드 및 공급자 제공 필드
 title: 레코드 및 공급자 제공 필드 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 77f95e0a-0cf2-411a-a792-593f77330fbd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6cd737ce36a53643503a5c76dfaafe2127c93f9b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7cc7b8c4fb0116f96a2470a7161f9fbd30c7efb9
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453005"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979954"
 ---
 # <a name="records-and-provider-supplied-fields"></a>레코드 및 공급자 제공 필드
 [Record](../../../ado/reference/ado-api/record-object-ado.md) 개체를 열면 해당 원본은 열린 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체와 함께 열린 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)의 현재 행, 절대 url 또는 상대 url 일 수 있습니다.  
@@ -73,7 +73,7 @@ ms.locfileid: "88453005"
 |RESOURCE_ISCOLLECTION|AdBoolean|읽기 전용입니다. 리소스가 디렉터리와 같은 컬렉션인 경우 True입니다. 리소스가 단순 파일 이면 False입니다.|  
 |RESOURCE_ISSTRUCTUREDDOCUMENT|AdBoolean|리소스가 구조화 된 문서인 경우 True입니다. 리소스가 구조화 된 문서가 아닌 경우 False입니다. 컬렉션 또는 간단한 파일 일 수 있습니다.|  
 |DEFAULT_DOCUMENT|AdVarWChar|읽기 전용입니다. 이 리소스에는 폴더의 기본 단순 문서 또는 구조화 된 문서에 대 한 URL이 포함 되어 있음을 나타냅니다. 리소스에서 기본 스트림을 요청 하는 경우에 사용 됩니다. 단순 파일의 경우이 속성은 비어 있습니다.|  
-|CHAPTERED_CHILDREN|AdChapter|읽기 전용입니다. (선택 사항) 리소스의 자식을 포함 하는 행 집합의 챕터를 나타냅니다. *인터넷 게시용 OLE DB 공급자* 는이 열을 사용 하지 않습니다.|  
+|CHAPTERED_CHILDREN|AdChapter|읽기 전용입니다. 선택 사항입니다. 리소스의 자식을 포함 하는 행 집합의 챕터를 나타냅니다. *인터넷 게시용 OLE DB 공급자* 는이 열을 사용 하지 않습니다.|  
 |RESOURCE_DISPLAYNAME|AdVarWChar|읽기 전용입니다. 리소스의 표시 이름을 나타냅니다.|  
 |RESOURCE_ISROOT|AdBoolean|읽기 전용입니다. 리소스가 컬렉션 또는 구조화 된 문서의 루트 이면 True입니다.|  
   

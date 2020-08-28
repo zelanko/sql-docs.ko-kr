@@ -3,7 +3,7 @@ description: 로그 파일 공간 사용 최소화
 title: 로그 파일 공간 사용 최소화 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/09/2018
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 669662a0-e20f-483e-ab28-53f66c524c98
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7b839f5f31671d7364eeec022da1b25bdf584a3a
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: d6eeb933553d37df7db377d56ff0ff2e713ffef9
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88759723"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88978014"
 ---
 # <a name="minimizing-log-file-space-usage"></a>로그 파일 공간 사용 최소화
 SQL Server 데이터베이스에 작업 볼륨이 많은 경우 로그 파일이 빠르게 채워질 수 있습니다 (따라서 서버가 중지 됨). **검사점에서 Truncate** 로그 파일을 설정 하 여 데이터베이스에 대 한 로그 파일의 수명을 현저 하 게 확장할 수 있습니다.  
@@ -46,5 +46,5 @@ SQL Server 데이터베이스에 작업 볼륨이 많은 경우 로그 파일이
   
  **검사점에서 자르기** 기능에 대 한 자세한 내용은 Microsoft SQL Server 설명서를 참조 하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [RDS 기본 사항](./rds-fundamentals.md)

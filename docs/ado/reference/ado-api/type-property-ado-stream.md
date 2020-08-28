@@ -3,7 +3,7 @@ description: Type 속성(ADO 스트림)
 title: Type 속성 (ADO 스트림) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f6a17e8c-7a28-48d0-bded-76b9e0cf7639
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5aebb29d8434c152c0a95f04a5eb083847cf9877
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: a72fb3afba9ff1455cba3fde8ada4cf82cb6cd3d
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777112"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88988304"
 ---
 # <a name="type-property-ado-stream"></a>Type 속성(ADO 스트림)
 [스트림에](./stream-object-ado.md) 포함 된 데이터의 형식 (이진 또는 텍스트)을 나타냅니다.  

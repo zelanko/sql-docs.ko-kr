@@ -3,7 +3,7 @@ description: Move 메서드(ADO)
 title: Move 메서드 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 13fe9381-d00b-4f4a-9162-83c3f21b3837
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 57a5b882148c899136ff92315ff109b68868aa66
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 6b394d64a9d1b1f403137e9875db83fdd82c2ac1
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88774412"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990594"
 ---
 # <a name="move-method-ado"></a>Move 메서드(ADO)
 [레코드 집합](./recordset-object-ado.md) 개체에서 현재 레코드의 위치를 이동 합니다.  

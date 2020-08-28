@@ -3,7 +3,7 @@ description: RDS 프로그래밍 모델 세부 정보
 title: RDS 프로그래밍 모델 세부 정보 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/09/2018
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3e57af8d-519b-4467-a0bd-af468534cefd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 310bcdad8358120a47cf01ec6734325ca5fa425d
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: af1b575f642159cad84d0ce833bb783cf2363701
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88759663"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88977974"
 ---
 # <a name="rds-programming-model-in-detail"></a>RDS 프로그래밍 모델 세부 정보
 다음은 RDS 프로그래밍 모델의 주요 요소입니다.  
@@ -71,7 +71,7 @@ ms.locfileid: "88759663"
 > [!NOTE]
 >  Microsoft Internet Explorer는 두 개의 추가 이벤트를 RDS: **Ondatasetchanged**로 제공 합니다 .이는 **레코드 집합** 의 기능이 작동 하지만 행을 검색 하 고 있으며,이는 **레코드 집합** 에서 행 검색이 완료 되었음을 나타내는 **ondatasetchanged**입니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [개체를 사용 하는 RDS 프로그래밍 모델](./rds-programming-model-with-objects.md)   
  [DataControl 개체 (RDS)](../../reference/rds-api/datacontrol-object-rds.md)   
  [DataFactory 개체 (RDSServer)](../../reference/rds-api/datafactory-object-rdsserver.md)   

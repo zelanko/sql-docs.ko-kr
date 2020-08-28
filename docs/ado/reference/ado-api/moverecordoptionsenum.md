@@ -3,7 +3,7 @@ description: MoveRecordOptionsEnum
 title: MoveRecordOptionsEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: f53c2ce4-1021-4a45-92b8-775e8bebad99
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ceba3183cf400556524b5f424a2703fafefc74bd
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 1fd6f68364f284e974d3564c8df3da5808683c3e
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88774182"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990504"
 ---
 # <a name="moverecordoptionsenum"></a>MoveRecordOptionsEnum
 [Record](./record-object-ado.md) 개체 [MoveRecord](./moverecord-method-ado.md) 메서드의 동작을 지정 합니다.  
   
-|상수|값|Description|  
+|상수|값|설명|  
 |--------------|-----------|-----------------|  
 |**adMoveUnspecified 되지 않음**|-1|기본값 기본 이동 작업을 수행 합니다. 대상 파일이 나 디렉터리가 이미 있는 경우 작업이 실패 하 고 작업에서 하이퍼텍스트 링크를 업데이트 합니다.|  
 |**adMoveOverWrite**|1|이미 존재 하는 경우에도 대상 파일이 나 디렉터리를 덮어씁니다.|  

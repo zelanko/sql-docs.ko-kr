@@ -3,7 +3,7 @@ description: 커서 및 잠금 이해
 title: 커서 및 잠금 이해 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c1b7d7e6-1707-4ce2-863f-0c6dea967df6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cfe2d50af04309a439c276674581f07a26f9cb04
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 428ef18e9bfe6e8a0b71580a16306ed55bb58460
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452675"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979204"
 ---
 # <a name="understanding-cursors-and-locks"></a>커서 및 잠금 이해
 응용 프로그램의 데이터 액세스 요구 사항에 가장 적합 한 가장 효율적인 커서 형식을 선택할 수 있도록 커서가 작동 하는 방식을 이해 하는 것이 중요 합니다. 최적의 커서 구성을 사용 하면 데이터 액세스 작업이 painfully 속도가 느려질 수 있습니다.  

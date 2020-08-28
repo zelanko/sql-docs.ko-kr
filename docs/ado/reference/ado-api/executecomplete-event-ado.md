@@ -3,7 +3,7 @@ description: ExecuteComplete 이벤트(ADO)
 title: ExecuteComplete 이벤트 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 62470d42-e511-494c-bec4-ad4591734b7b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4e7b800f7dba925230ade048f3792020ad8a44ec
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 36e27f8a86fce348dbf2061a1c7be91f43be9adc
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443845"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88973394"
 ---
 # <a name="executecomplete-event-ado"></a>ExecuteComplete 이벤트(ADO)
 **ExecuteComplete** 이벤트는 명령 실행이 완료 된 후 호출 됩니다.  

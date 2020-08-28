@@ -3,7 +3,7 @@ description: MarshalOptions 속성 예제(VB)
 title: MarshalOptions 속성 예제 (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ae576b2c-65aa-4838-872a-85e618806dc8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8a8fc5df35b017913b5178d06ab4f51a0d8a720a
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 08ac6a07341c37e412a6bc030e37e04a8ff8e787
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88774492"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990664"
 ---
 # <a name="marshaloptions-property-example-vb"></a>MarshalOptions 속성 예제(VB)
 이 예에서는 [MarshalOptions](./marshaloptions-property-ado.md) 속성을 사용 하 여 서버에 다시 보낼 행을 지정 합니다. 모든 행 또는 수정 된 행만 지정 합니다.  

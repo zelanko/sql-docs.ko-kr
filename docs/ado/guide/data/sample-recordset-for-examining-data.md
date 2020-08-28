@@ -3,7 +3,7 @@ description: 데이터를 검사하기 위한 샘플 레코드 집합
 title: 데이터를 검사 하기 위한 샘플 레코드 집합 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e770e626-68b1-4ddf-a217-d7b30311e2ee
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f4c989667d5b4a5ceb3fb0c4f4d929e49be92e00
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ec44c25bba9c792415c462e3028bbf20d8d3f84e
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452915"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979744"
 ---
 # <a name="sample-recordset-for-examining-data"></a>데이터를 검사하기 위한 샘플 레코드 집합
 먼저 Microsoft SQL Server의 Northwind 샘플 데이터에 대해 실행 되는 다음 SQL 쿼리를 사용 하 여 반환 되는 **레코드 집합** 개체를 살펴보겠습니다.  

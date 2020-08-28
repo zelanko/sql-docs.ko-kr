@@ -1,8 +1,9 @@
 ---
 title: 직접 실행 모드 및 일괄 처리 모드에서 AddNew 사용 | Microsoft Docs
+description: 직접 실행 모드와 일괄 처리 모드에서 AddNew를 사용 하는 방법을 설명 합니다.
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ed314bb9-e188-4658-a68c-a2abc49610be
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 93fc9cb388440a8efd9099d6ae82b110cb60b2d0
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 689b8fbc6c8bb9446adfeb9fec98d53d59b28917
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763074"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979054"
 ---
 # <a name="using-addnew-in-immediate-and-batch-modes"></a>직접 실행 및 일괄 처리 모드에서 AddNew 사용
 **AddNew** 메서드의 동작은 **레코드 집합** 개체의 업데이트 모드와 *fieldlist)* 및 *Values* 인수를 전달 하는지 여부에 따라 달라 집니다.  

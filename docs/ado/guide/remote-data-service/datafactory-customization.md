@@ -3,7 +3,7 @@ description: DataFactory 사용자 지정
 title: DataFactory 사용자 지정 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/09/2018
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 86d77985-a0d0-405a-8587-c85a20540a0e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c34ae14feda7c0a6847d638f35bf84c6b9cd0fd5
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 014341cc860e9db53447abc5db08169ba0e0b5b4
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88759807"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88978204"
 ---
 # <a name="datafactory-customization"></a>DataFactory 사용자 지정
 RDS (원격 데이터 서비스)는 3 계층 클라이언트/서버 시스템에서 데이터 액세스를 쉽게 수행할 수 있는 방법을 제공 합니다. 클라이언트 데이터 컨트롤은 원격 데이터 원본에 대 한 쿼리를 수행 하는 연결 및 명령 문자열 매개 변수 또는 업데이트를 수행 하기 위해 연결 문자열 및 [레코드 집합](../../reference/ado-api/recordset-object-ado.md) 개체 매개 변수를 지정 합니다.  
