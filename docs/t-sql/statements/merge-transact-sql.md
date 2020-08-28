@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: c17996d6-56a6-482f-80d8-086a3423eecc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 67e1fe125172b6f273b27d6fcb2cac3d18d0bb2b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 73181df45ee72cc29bc73b73b40940ce7bb15b15
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88357809"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778562"
 ---
 # <a name="merge-transact-sql"></a>MERGE(Transact-SQL)
 
@@ -56,7 +56,7 @@ WHERE NOT EXISTS (SELECT col FROM tbl_A A2 WHERE A2.col = tbl_B.col);
 MERGE
     [ TOP ( expression ) [ PERCENT ] ]
     [ INTO ] <target_table> [ WITH ( <merge_hint> ) ] [ [ AS ] table_alias ]  
-    USING <table_source>
+    USING <table_source> [ [ AS ] table_alias ]
     ON <merge_search_condition>  
     [ WHEN MATCHED [ AND <clause_search_condition> ]  
         THEN <merge_matched> ] [ ...n ]  
@@ -125,12 +125,15 @@ MERGE 문은 원본과 대상 테이블 모두에 전체 테이블 검색을 수
 *target_table*은 원격 테이블일 수 없습니다. 또한 *target_table*은 정의된 규칙을 포함할 수 없습니다.  
   
 [ AS ] *table_alias*  
-테이블을 참조하기 위한 대체 이름입니다.  
+*target_table*의 테이블을 참조하기 위한 대체 이름입니다.  
   
 USING \<table_source>  
 \<merge_search condition>을 기준으로 *target_table*의 데이터 행과 일치하는 데이터 원본을 지정합니다. 이 결과는 MERGE 문의 WHEN 절에서 수행할 동작을 나타냅니다. \<table_source>는 원격 테이블이나 원격 테이블에 액세스하는 파생 테이블일 수 있습니다.
   
 \<table_source>는 [!INCLUDE[tsql](../../includes/tsql-md.md)] [테이블 값 생성자](../../t-sql/queries/table-value-constructor-transact-sql.md)를 사용해 여러 행을 지정하여 테이블을 생성하는 파생 테이블일 수 있습니다.  
+  
+ [ AS ] *table_alias*  
+table_source의 테이블을 참조하기 위한 대체 이름입니다.   
   
 이 절의 구문 및 인수에 대한 자세한 내용은 [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)을 참조하세요.  
   

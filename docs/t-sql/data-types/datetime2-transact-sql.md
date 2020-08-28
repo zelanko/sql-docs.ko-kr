@@ -2,7 +2,7 @@
 description: datetime2(Transact-SQL)
 title: datetime2(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/23/2017
+ms.date: 08/21/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -23,12 +23,12 @@ ms.assetid: 868017f3-214f-43ef-8536-cc1632a2288f
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cb7ef589270a5cdcd06d2eac18176ebbf529256d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a64acd93b34a1d919ec271f7a11a3d9edd199d44
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446013"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88760333"
 ---
 # <a name="datetime2-transact-sql"></a>datetime2(Transact-SQL)
 
@@ -49,7 +49,7 @@ ms.locfileid: "88446013"
 |요소 범위|YYYY는 0001에서 9999 사이에 속하는 4자리 숫자로, 연도를 나타냅니다.<br /><br /> MM은 01에서 12 사이에 속하는 두 자리 숫자로, 지정된 연도의 월을 나타냅니다.<br /><br /> DD는 월에 따라 01에서 31 사이에 속하는 두 자리 숫자로, 특정 월의 일을 나타냅니다.<br /><br /> hh는 00에서 23 사이에 속하는 두 자리 숫자로, 시간을 나타냅니다.<br /><br /> Mm은 00에서 59 사이에 속하는 두 자리 숫자로, 분을 나타냅니다.<br /><br /> ss는 00에서 59 사이에 속하는 두 자리 숫자로, 초를 나타냅니다.<br /><br /> n*은 0에서 9999999 사이에 속하는 0 ~ 7 자리의 숫자로, 소수 자릿수 초를 나타냅니다. Informatica에서는 n > 3일 경우 초 소수 부분이 잘립니다.|  
 |문자 길이|최소 19자리(YYYY-MM-DD hh:mm:ss )부터 최대 27자리(YYYY-MM-DD hh:mm:ss.0000000)까지|  
 |전체 자릿수, 소수 자릿수|0 ~ 7자리, 정확도 100ns. 기본 전체 자릿수는 7자리입니다.|  
-|스토리지 크기|전체 자릿수가 3보다 작은 경우 6바이트입니다.<br/>전체 자릿수가 3 또는 4인 경우 7바이트입니다.<br/>기타 모든 전체 자릿수는 8바이트가 필요합니다.<sup>1</sup>|  
+|스토리지 크기 <sup>1</sup>|전체 자릿수가 3보다 작은 경우 6바이트입니다.<br/>전체 자릿수가 3 또는 4인 경우 7바이트입니다.<br/>기타 모든 전체 자릿수는 8바이트가 필요합니다.<sup>2</sup>|  
 |정확도|100나노초|  
 |기본값|1900-01-01 00:00:00|  
 |달력|일반 달력|  
@@ -57,7 +57,9 @@ ms.locfileid: "88446013"
 |표준 시간대 오프셋 인식 및 유지|예|  
 |일광 절약 시간제 인식|예|  
 
-<sup>1</sup>**datetime2** 값의 첫 번째 바이트는 값의 전체 자릿수를 저장합니다. 즉, **datetime2** 값에 필요한 실제 스토리지는 위의 표에 표시된 스토리지 크기에 전체 자릿수를 저장할 추가 1바이트를 더한 것입니다.  이렇게 하면 **datetime2** 값의 최대 크기는 9바이트가 됩니다. 1바이트는 최대 전체 자릿수의 데이터 스토리지에 대한 8바이트를 더한 자릿수를 저장합니다.
+<sup>1</sup> 제공된 값은 압축되지 않은 rowstore의 값입니다. [데이터 압축](../../relational-databases/data-compression/data-compression.md) 또는 [columnstore](../../relational-databases/indexes/columnstore-indexes-overview.md)를 사용하면 각 전체 자릿수에 대한 스토리지 크기가 변경될 수 있습니다. 또한 디스크 및 메모리의 스토리지 크기는 서로 다를 수 있습니다. 예를 들어 **datetime2** 값은 일괄 처리 모드를 사용하는 경우 메모리에서 8바이트가 항상 필요합니다.
+
+<sup>2</sup> **datetime2** 값이 **varbinary** 값으로 캐스팅되면 1바이트가 **varbinary** 값에 추가되어 전체 자릿수를 저장합니다.
 
 데이터 형식 메타데이터에 대한 자세한 내용은 [sys.systypes&#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md) 또는 [TYPEPROPERTY&#40;Transact-SQL&#41;](../../t-sql/functions/typeproperty-transact-sql.md)를 참조하십시오. 일부 날짜 및 시간 데이터 형식의 경우 전체 자릿수와 소수 자릿수는 변할 수 있습니다. 열의 전체 자릿수와 소수 자릿수를 얻으려면 [COLUMNPROPERTY&#40;Transact-SQL&#41;](../../t-sql/functions/columnproperty-transact-sql.md), [COL_LENGTH&#40;Transact-SQL&#41;](../../t-sql/functions/col-length-transact-sql.md) 또는 [sys.columns&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)를 참조하십시오.
   

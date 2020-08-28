@@ -1,21 +1,21 @@
 ---
 title: PowerShell 확장
-description: 스크립트를 작성하고 디버깅하기 위한 다양한 기능을 갖춘 Powershell 편집기 지원을 제공하는 Azure Data Studio PowerShell 확장을 설치하고 사용하는 방법을 알아봅니다.
+description: 스크립트를 작성하고 디버그하기 위한 다양한 기능을 갖춘 PowerShell 편집기 지원을 제공하는 Azure Data Studio PowerShell 확장을 설치하고 사용하는 방법을 알아봅니다.
 ms.custom: seodec18
 ms.date: 04/19/2019
 ms.reviewer: alayu, maghan, sstein
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.topic: conceptual
 author: SQLvariant
 ms.author: aanelson
 manager: matthend
-ms.openlocfilehash: a0c6a37af62422f65329ef1bbe2e66efbdc5eeb0
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: c3edd5b618a6119021a69f90f4e90341ae6360bb
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411319"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88766542"
 ---
 # <a name="powershell-editor-support-for-azure-data-studio"></a>Azure Data Studio에 대한 PowerShell 편집기 지원
 
@@ -39,7 +39,7 @@ ms.locfileid: "87411319"
 
 ## <a name="installing-the-extension"></a>확장 설치
 
-[Azure Data Studio 설명서](https://docs.microsoft.com/sql/azure-data-studio/extensions)의 단계에 따라 PowerShell 확장의 공식 릴리스를 설치할 수 있습니다.
+[Azure Data Studio 설명서](./extensions.md)의 단계에 따라 PowerShell 확장의 공식 릴리스를 설치할 수 있습니다.
 확장 창에서 "PowerShell" 확장을 검색하여 설치합니다.  후속 확장 업데이트에 대한 알림이 자동으로 제공됩니다.
 
 [릴리스 페이지](https://github.com/PowerShell/vscode-powershell/releases)에서 VSIX 패키지를 설치하고 명령줄을 통해 설치할 수도 있습니다.
@@ -63,8 +63,8 @@ macOS 또는 Linux에서 Azure Data Studio를 실행하는 경우 PowerShell Cor
 PowerShell Core는 [GitHub](https://github.com/powershell/powershell)의 오픈 소스 프로젝트입니다.
 macOS 또는 Linux 플랫폼에 PowerShell Core를 설치하는 방법에 대한 자세한 내용은 다음 문서를 참조하세요.
 
-- [Linux에서 PowerShell Core 설치](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-linux?view=powershell-6)
-- [macOS에서 PowerShell Core 설치](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-macos?view=powershell-6)
+- [Linux에서 PowerShell Core 설치](/powershell/scripting/install/installing-powershell-core-on-linux?view=powershell-6)
+- [macOS에서 PowerShell Core 설치](/powershell/scripting/install/installing-powershell-core-on-macos?view=powershell-6)
 
 ## <a name="example-scripts"></a>예제 스크립트
 

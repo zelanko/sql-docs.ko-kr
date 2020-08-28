@@ -38,12 +38,12 @@ ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 23a71a0ffe8cfa34ee61b5396146d46f8f174bc6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b1545d389f19aeee3c1cefa2e17bcc8c60bcd495
+ms.sourcegitcommit: 71985f03656a30381b2498ac5393aaf86f670bf3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444853"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88602198"
 ---
 # <a name="create-view-transact-sql"></a>CREATE VIEW(Transact-SQL)
 
@@ -143,8 +143,8 @@ OR ALTER
  CHECK OPTION  
  뷰에 대해 실행된 모든 데이터 수정 명령문이 *select_statement* 내의 기준 집합을 준수하도록 설정합니다. 뷰를 통해 행을 수정한 경우에는 WITH CHECK OPTION을 사용하여 수정이 커밋된 후에도 계속 뷰를 통해 데이터를 볼 수 있도록 합니다.  
   
-> [!NOTE]  
->  CHECK OPTION을 지정해도 뷰의 기본 테이블을 직접 업데이트한 결과는 뷰에서 확인되지 않습니다.  
+> [!NOTE]
+>  CHECK OPTION은 뷰를 통해 이루어진 업데이트에만 적용됩니다. 뷰의 기본 테이블에 직접 수행된 업데이트에는 적용되지 않습니다.  
   
  ENCRYPTION  
  **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  

@@ -7,12 +7,12 @@ ms.topic: include
 ms.date: 02/05/2018
 ms.author: mikeray
 ms.custom: include file
-ms.openlocfilehash: 0933f493ee71fe589842f8636e7364f79a432de0
-ms.sourcegitcommit: dec2e2d3582c818cc9489e6a824c732b91ec3aeb
+ms.openlocfilehash: aa0b00ec24c96aea37901cc03aac2dda9b20bed2
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88122466"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88655101"
 ---
 각 가용성 그룹에는 하나의 주 복제본만 있습니다. 주 복제본은 읽기 및 쓰기를 허용합니다. 주 복제본을 변경하기 위해 장애 조치(failover)를 수행할 수 있습니다. 고가용성을 위한 가용성 그룹에서 클러스터 관리자는 장애 조치 프로세스를 자동화합니다. 클러스터 형식이 NONE인 가용성 그룹에서 장애 조치(failover) 프로세스는 수동입니다. 
 
@@ -43,7 +43,7 @@ ALTER AVAILABILITY GROUP [ag1]  SET (ROLE = SECONDARY);
 
 데이터 손실이 없는 수동 장애 조치(Failover)를 수행하려면:
 
-1. 대상 보조 복제본 `SYNCHRONOUS_COMMIT`를 만듭니다.
+1. 현재 주 복제본 및 대상 보조 복제본을 `SYNCHRONOUS_COMMIT`으로 설정합니다.
 
    ```SQL
    ALTER AVAILABILITY GROUP [ag1] 
@@ -90,7 +90,7 @@ ALTER AVAILABILITY GROUP [ag1]  SET (ROLE = SECONDARY);
    ALTER AVAILABILITY GROUP ag1 FORCE_FAILOVER_ALLOW_DATA_LOSS; 
    ``` 
 
-1. 주 복제본을 호스팅하는 SQL Server 인스턴스에서 다음 명령을 실행하여 기존 주 복제본의 역할을 `SECONDARY`로 업데이트합니다.
+1. 기존 주 복제본을 호스트하는 SQL Server 인스턴스에서 다음 명령을 실행하여 기존 주 복제본의 역할을 `SECONDARY`로 업데이트합니다.
 
    ```SQL
    ALTER AVAILABILITY GROUP [ag1] 
@@ -106,3 +106,5 @@ ALTER AVAILABILITY GROUP [ag1]  SET (ROLE = SECONDARY);
    ALTER DATABASE [db1]
         SET HADR RESUME
    ```
+
+1. 읽기 확장 목적으로 만들었으며 클러스터 관리자가 관리하지 않는 수신기를 다시 만듭니다. 원래 수신기가 기존 주 복제본을 가리키는 경우 이 수신기를 삭제하고 새로운 주 복제본을 가리키도록 다시 만듭니다.

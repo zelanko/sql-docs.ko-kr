@@ -9,12 +9,12 @@ ms.date: 05/24/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: high-availability
-ms.openlocfilehash: 89dee4f1fbce612ec3200bf700302f98bd4f9f36
-ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
+ms.openlocfilehash: 5681516c193a45fb3cee540d21bbc3e88a917d31
+ms.sourcegitcommit: 19ae05bc69edce1e3b3d621d7fdd45ea5f74969d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87565311"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88564529"
 ---
 # <a name="configure-read-scale-for-an-always-on-availability-group"></a>Always On 가용성 그룹에 대한 읽기 확장 구성
 
@@ -79,7 +79,7 @@ ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;
 
 두 방법 중 하나를 사용하여 읽기 전용 보조 복제본에 연결할 수 있습니다.
 * 애플리케이션은 보조 복제본을 호스팅하는 SQL Server 인스턴스에 직접 연결하고 데이터베이스를 쿼리할 수 있습니다. 자세한 내용은 [읽기 가능한 보조 복제본](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)을 참조합니다.
-* 애플리케이션은 수신기가 필요한 읽기 전용 라우팅을 사용할 수도 있습니다. 자세한 내용은 [읽기 전용 라우팅](listeners-client-connectivity-application-failover.md#ConnectToSecondary)을 참조합니다.
+* 애플리케이션은 수신기가 필요한 읽기 전용 라우팅을 사용할 수도 있습니다. 클러스터 관리자 없이 읽기 확장 시나리오를 배포하는 경우에도 현재 주 복제본의 IP 주소와 SQL Server에서 수신 대기하는 것과 다른 포트를 가리키는 수신기를 만들 수 있습니다. 장애 조치(failover) 후 새로운 주 IP 주소를 가리키도록 수신기를 다시 만들어야 합니다. 자세한 내용은 [읽기 전용 라우팅](listeners-client-connectivity-application-failover.md#ConnectToSecondary)을 참조합니다.
 
 ## <a name="fail-over-the-primary-replica-on-a-read-scale-availability-group"></a>읽기 확장 가용성 그룹에서 주 복제본 장애 조치
 

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6fc0f9b6-d3ea-4971-9f27-d0195d1ff718
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 86f7046fed39d95748c1f0ba7a7bbf5eb045cc5a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 91d8cdd0c776a7cc8f3e0fcb9ef73da83bf37e6c
+ms.sourcegitcommit: a0245fdae1ff9045f587a3a67b72f34405d35a4f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85748410"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88618122"
 ---
 # <a name="deferred-transactions-sql-server"></a>지연된 트랜잭션(SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,6 +48,14 @@ ms.locfileid: "85748410"
 |데이터베이스 미러링의 다시 실행|지연된 트랜잭션|  
 |파일 그룹이 오프라인 상태|지연된 트랜잭션|  
   
+### <a name="requirements-and-limitations"></a>요구 사항 및 제한 사항
+
+ - 데이터베이스는 전체 또는 대량 로그된 복구 모델을 사용해야 합니다.
+ - 데이터베이스를 대상으로 하나 이상의 데이터베이스 및 로그 백업이 완료되어 있어야 합니다.
+ - 데이터베이스가 온라인 상태가 된 이후 트랜잭션을 롤백하는 동안 발생한 오류에는 지연된 트랜잭션이 적용되지 않습니다. (예: 런타임 오류)
+ - 데이터베이스를 연결하는 중에 복구 실패로 인해 트랜잭션이 지연될 수 없습니다.
+ - 시스템 트랜잭션(예: 페이지 할당)과 같은 일부 트랜잭션은 지연될 수 없습니다.
+
 ## <a name="moving-a-transaction-out-of-the-deferred-state"></a>지연된 상태 밖으로 트랜잭션 이동  
   
 > [!IMPORTANT]  

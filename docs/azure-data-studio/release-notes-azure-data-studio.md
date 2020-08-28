@@ -2,23 +2,23 @@
 title: 릴리스 정보
 description: 이 문서에는 2017년 11월부터 현재까지의 Azure Data Studio 릴리스에 대한 릴리스 정보가 안내되어 있습니다. 요약된 문제 중 다수에 추가 세부 정보로 연결되는 링크가 있습니다.
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
 ms.date: 08/12/2020
-ms.openlocfilehash: e4a431e798069a639f72c3d4fa6761d3b18131f7
-ms.sourcegitcommit: e4c36570c34cd7d7ae258061351bce6e54ea49f6
+ms.openlocfilehash: 39deeb94ffa5fb3292f3402c836ec55eb826ebd3
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88147204"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88766192"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio의 릴리스 정보
 
-**[최신 릴리스 다운로드 및 설치](download.md)**
+**[최신 릴리스 다운로드 및 설치](./download-azure-data-studio.md?view=sql-server-ver15)**
 
 ## <a name="august-2020"></a>2020년 8월
 
@@ -76,7 +76,7 @@ ms.locfileid: "88147204"
 | :----- | :------ |
 | Azure Portal 통합에 Azure Data Studio가 추가됨 | 이제 사용자는 Azure SQL Database 연결과 Azure Postgres 등에서 Azure Portal을 바로 열 수 있습니다. |
 | 새로운 Notebook 기능 | &bull; &nbsp; 새로운 Notebook 도구 모음 <br/> &bull; &nbsp; 새로운 셀 편집 도구 모음 <br/> &bull; &nbsp; Python 종속성 마법사 UX 업데이트 <br/> &bull; &nbsp; Notebook에서의 간격 개선 |
-| SQL 평가 API 확장 발표 | 이 확장은 ADS에 SQL Server 모범 사례 평가를 추가합니다. 이전에는 PowerShell SqlServer 모듈과 SMO에서만 사용할 수 있었던 SQL 평가 API를 노출하여 사용자가 SQL Server 인스턴스를 평가하고 SQL Server 팀의 추천을 받을 수 있게 합니다. SQL 평가 API와 관련 기능에 관한 자세한 내용은 [이 문서를 참조하세요.](https://docs.microsoft.com/sql/sql-assessment-api/sql-assessment-api-overview?view=sql-server-ver15) |
+| SQL 평가 API 확장 발표 | 이 확장은 ADS에 SQL Server 모범 사례 평가를 추가합니다. 이전에는 PowerShell SqlServer 모듈과 SMO에서만 사용할 수 있었던 SQL 평가 API를 노출하여 사용자가 SQL Server 인스턴스를 평가하고 SQL Server 팀의 추천을 받을 수 있게 합니다. SQL 평가 API와 관련 기능에 관한 자세한 내용은 [이 문서를 참조하세요.](../tools/sql-assessment-api/sql-assessment-api-overview.md?view=sql-server-ver15) |
 | [Machine Learning 확장 개선](https://go.microsoft.com/fwlink/?linkid=2129918) | 이제 Azure SQL Managed Instance를 지원합니다. |
 | 데이터 가상화 확장 개선 | 이제 MongoDB 및 Teradata를 지원합니다. |
 | Postgres 확장 버그 수정 | Azure MFA를 수정했습니다. |
@@ -149,7 +149,7 @@ ms.locfileid: "88147204"
 | :----- | :------ |
 | SQL Notebooks에 차트 지원이 추가됨 | 이제 코드 셀에서 SQL 쿼리를 실행할 때 차트를 만들고 저장할 수 있습니다. |
 | Jupyter Book 만들기 환경이 추가됨 | 이제 Notebook을 사용하여 자체 Jupyter Book을 만들 수 있습니다. |
-| Postgres 확장을 위한 AAD 지원이 추가됨 | |
+| Postgres 확장을 위한 Azure AD 지원이 추가됨 | |
 | 여러 접근성 버그가 수정됨 | [접근성 버그 목록](https://github.com/microsoft/azuredatastudio/issues?page=1&q=is%3Aissue+is%3Aclosed+milestone%3A%22S360+-+Accessibility%22+label%3AA11y_AzureDataStudio) |
 | 1\.42로 VS Code 병합 | 이 릴리스에는 이전 VS Code 릴리스 3개의 VS Code에 대한 업데이트가 포함되어 있습니다. 자세한 내용은 [릴리스 정보](https://code.visualstudio.com/updates/v1_42)를 참조하세요. |
 | 버그 및 이슈 해결 | 전체 수정 목록은 [GitHub의 버그 및 이슈](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22March+2020%22+is%3Aclosed)를 참조하세요. |
@@ -314,7 +314,7 @@ ms.locfileid: "88147204"
 | SandDance 1.3.1 확장의 릴리스 | &bull; &nbsp; 스마트 차트 검색 <br/>&bull; &nbsp; 3D 시각화 <br/> &bull; &nbsp; 데이터 필터링 |
 | Notebook 기능 개선 | &bull; &nbsp; 인라인으로 코드 또는 텍스트 셀 추가 <br/>&bull; &nbsp; SQL 결과 표를 마우스 오른쪽 단추로 클릭하여 결과를 CSV, JSON 등으로 저장하는 기능 추가됨 <br/> &bull; &nbsp; JSON을 더 빠르게 로드할 수 있도록 Notebook 로드 성능 개선 <br/> &bull; &nbsp; 전체 개선 사항 목록은 [여기](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+label%3A%22Area%3A+Notebooks%22+milestone%3A%22August+2019+Release%22+is%3Aclosed)에서 확인할 수 있음 |
 | SQL Server 2019 지원 |  이 릴리스에서는 다음을 포함하여 추가 SQL Server 2019 빅 데이터 클러스터 기능을 지원합니다. <br/> &bull; &nbsp; 개체 매핑 페이지에서 테이블 및 열 정보를 로드하는 데 걸리는 시간이 단축됨 <br/> &bull; &nbsp; 연결 정보 페이지에서 기존 데이터베이스 범위 자격 증명을 로드할 때 발생하는 버그 수정됨 <br/> &bull; &nbsp; PROSE 구문 분석에 사용되는 기본 샘플 크기 커짐 | 
-| Dacpac 확장이 이제 AAD를 지원합니다. | 
+| Dacpac 확장에서 이제 Azure AD를 지원함 | 
 | Visual Studio Code 7월 릴리스 병합 1.37 | 최신 개선 사항은 [여기](https://code.visualstudio.com/updates/v1_37)에서 확인할 수 있습니다. |
 | 버그 및 이슈 해결 | 전체 수정 목록은 [GitHub의 버그 및 이슈](https://github.com/microsoft/azuredatastudio/milestone/39?closed=1)를 참조하세요. |
 | &nbsp; | &nbsp; |
@@ -345,7 +345,7 @@ ms.locfileid: "88147204"
 
 | 변경 | 세부 정보 |
 | :----- | :------ |
-| CMS(중앙 관리 서버) 확장 릴리스 | 중앙 관리 서버는 하나 이상의 중앙 관리 서버 그룹으로 구성된 SQL Server 인스턴스 목록을 저장합니다. 사용자는 고유한 기존 CMS 서버에 연결하고 서버 추가 및 제거와 같은 서버 관리 작업을 수행할 수 있습니다. 자세한 내용은 [여기](https://docs.microsoft.com/sql/relational-databases/administer-multiple-servers-using-central-management-servers)를 참조하세요. |
+| CMS(중앙 관리 서버) 확장 릴리스 | 중앙 관리 서버는 하나 이상의 중앙 관리 서버 그룹으로 구성된 SQL Server 인스턴스 목록을 저장합니다. 사용자는 고유한 기존 CMS 서버에 연결하고 서버 추가 및 제거와 같은 서버 관리 작업을 수행할 수 있습니다. 자세한 내용은 [여기](../relational-databases/administer-multiple-servers-using-central-management-servers.md)를 참조하세요. |
 | Windows용 데이터베이스 관리 도구 확장 릴리스 | 이 확장은 Azure Data Studio를 통해 SQL Server Management Studio에서 가장 많이 사용되는 두 가지 환경을 시작합니다. 사용자는 여러 가지 개체(예: 데이터베이스, 테이블, 열, 뷰 등)를 마우스 오른쪽 단추로 클릭하고 속성을 선택하여 해당 개체의 SSMS 속성 대화 상자를 볼 수 있습니다. 또한 사용자는 데이터베이스를 마우스 오른쪽 단추로 클릭하고 스크립트 생성을 선택하여 잘 알려진 SSMS 스크립트 생성 마법사를 시작할 수 있습니다. 
 | 스키마 비교 기능 개선 | &bull; &nbsp; 제외/포함 옵션 추가됨 <br/>&bull; &nbsp; 스크립트 생성 시 생성된 스크립트 열림 <br/>&bull; &nbsp; 이중 스크롤 막대 제거됨  <br/>&bull; &nbsp; 서식 및 레이아웃 개선 <br/>&bull; &nbsp; 전체 변경 내용은 [여기](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22June+2019+Release%22+label%3A%22Area%3A+Schema+Compare%22+is%3Aclosed)에서 확인할 수 있음|
 | 메시지 섹션이 고유한 탭으로 이동됨 | 사용자가 SQL 쿼리를 실행하면 결과 및 메시지가 누적된 패널에 표시되었습니다. 이제 SSMS와 같이 한 패널의 개별 탭으로 표시됩니다. |
@@ -361,7 +361,7 @@ ms.locfileid: "88147204"
     - Azure 서버의 속성을 시작할 수 없습니다.
     - 일부 개체에 속성 대화 상자가 없습니다.
     - 대화 상자를 시작하는 데 시간이 오래 걸립니다.
-    - 일부 연결 형식(예: AAD)으로 서버를 시작할 때 오류가 발생합니다.
+    - 일부 연결 형식(예: Azure AD)으로 서버를 시작할 때 오류가 발생합니다.
 - Notebooks
     - [5838](https://github.com/microsoft/azuredatastudio/issues/5838) 사용자가 시스템 Python을 Notebook에 사용할 수 있습니다.
 - 스키마 비교
@@ -446,7 +446,7 @@ ms.locfileid: "88147204"
 
 | 변경 | 세부 정보 |
 | :----- | :------ |
-| **SQL Server 관리 팩** 확장 팩이 추가됨 | 이 확장 팩을 사용하면 보다 간편하게 SQL Server 관리 관련 확장을 설치할 수 있습니다. 다음 내용이 포함됩니다.<br/>&bull; &nbsp; [SQL Server 에이전트](sql-server-agent-extension.md?view=sql-server-2017)<br/>&bull; &nbsp; [SQL Server Profiler](https://docs.microsoft.com/sql/azure-data-studio/sql-server-profiler-extension)<br/>&bull; &nbsp; [SQL Server 가져오기](sql-server-import-extension.md?view=sql-server-2017) |
+| **SQL Server 관리 팩** 확장 팩이 추가됨 | 이 확장 팩을 사용하면 보다 간편하게 SQL Server 관리 관련 확장을 설치할 수 있습니다. 다음 내용이 포함됩니다.<br/>&bull; &nbsp; [SQL Server 에이전트](sql-server-agent-extension.md?view=sql-server-2017)<br/>&bull; &nbsp; [SQL Server Profiler](./sql-server-profiler-extension.md)<br/>&bull; &nbsp; [SQL Server 가져오기](sql-server-import-extension.md?view=sql-server-2017) |
 | Profiler 확장에 확장 이벤트 필터링 지원이 추가됨 | &nbsp; |
 | T-SQL 결과를 XML로 저장할 수 있는 XML로 저장 기능이 추가됨 | &nbsp; |
 | 데이터 계층 애플리케이션 마법사 개선 사항이 추가됨 | &bull; &nbsp; 스크립트 생성 단추 추가됨<br/>&bull; &nbsp; 배포 중에 데이터가 손실될 수 있다는 경고를 표시하는 뷰 추가됨 |
@@ -498,7 +498,7 @@ ms.locfileid: "88147204"
 | SSMS 편집기 테마를 비롯한 하이 컬러 쿼리 확장 도입 | &nbsp; |
 | SQL Server 에이전트, Profiler 및 가져오기 확장 수정 | &nbsp; |
 | macOS에서 비활성 연결을 삭제하는 .NET Core 소켓 KeepAlive 문제 해결 | &nbsp; |
-| .NET Core 2.2 미리 보기 3으로 SQL Tools 서비스 업그레이드(최종 AAD 지원 제공) | &nbsp; |
+| .NET Core 2.2 미리 보기 3으로 SQL Tools Service 업그레이드(최종 Azure AD 지원 제공) | &nbsp; |
 | &nbsp; | &nbsp; |
 
 ### <a name="bug-fixes-november-2018"></a>버그 수정, 2018년 11월

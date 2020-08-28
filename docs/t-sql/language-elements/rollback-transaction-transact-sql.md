@@ -26,17 +26,19 @@ ms.assetid: 6882c5bc-ff74-476a-984b-164aeb036c66
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ca35aa4105bf3d54a84457fb51b48e9fc269ef72
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 795030b16c25b9bf97795e16df4c03cfb7bbea15
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417129"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88805871"
 ---
 # <a name="rollback-transaction-transact-sql"></a>ROLLBACK TRANSACTION(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   명시적 또는 암시적인 트랜잭션을 트랜잭션의 처음이나 트랜잭션 내의 저장점으로 롤백합니다. ROLLBACK TRANSACTION을 사용하여 트랜잭션의 시작 이후 또는 저장점까지의 모든 데이터 수정 사항을 지울 수 있습니다. 또한 트랜잭션에서 보유한 리소스도 해제합니다.  
+  
+  지역 변수 또는 테이블 변수에 대한 변경 내용은 포함되지 않습니다. 따라서 이와 같은 변경 내용은 이 문으로 삭제되지 않습니다.
   
 
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  

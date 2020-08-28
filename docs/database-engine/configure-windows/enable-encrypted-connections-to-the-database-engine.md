@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ab9b5b9a52656b948a63d2b283a0637f56da5037
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 952f527b248d6491c3a6f3acf3c4e5570e3ad54e
+ms.sourcegitcommit: 19ae05bc69edce1e3b3d621d7fdd45ea5f74969d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772504"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88564663"
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine"></a>데이터베이스 엔진에 암호화된 연결 사용
 
@@ -123,6 +123,10 @@ TLS 암호화를 사용하면 네트워크에서 [!INCLUDE[ssNoVersion](../../in
 9. 가져온 인증서를 마우스 오른쪽 단추로 클릭하고 **모든 태스크**를 가리킨 다음 **프라이빗 키 관리**를 클릭합니다. **보안** 대화 상자에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 계정에서 사용하는 사용자 계정에 관한 읽기 권한을 추가합니다.  
   
 10. **인증서 가져오기 마법사**를 완료하여 컴퓨터에 인증서를 추가하고 MMC 콘솔을 닫습니다. 컴퓨터에 인증서를 추가하는 방법은 Windows 설명서를 참조하세요.  
+
+> [!IMPORTANT]
+> 프로덕션 환경에서는 인증 기관의 신뢰할 수 있는 인증서를 얻는 것이 좋습니다.    
+> 테스트 목적으로 자체 서명된 인증서를 사용할 수도 있습니다. 자체 서명된 인증서를 만들려면 [PowerShell Cmdlet New-SelfSignedCertificate](https://docs.microsoft.com/powershell/module/pkiclient/new-selfsignedcertificate) 또는 [certreq 명령](https://docs.microsoft.com/windows-server/administration/windows-commands/certreq_1)을 참조하세요.
   
 ## <a name="install-across-multiple-servers"></a>여러 서버에 설치
 
@@ -141,7 +145,7 @@ TLS 암호화를 사용하면 네트워크에서 [!INCLUDE[ssNoVersion](../../in
 암호화된 연결을 강제하도록 서버를 구성합니다.
 
 > [!IMPORTANT]
-> SQL Server 서비스 계정에는 SQL Server에서 암호화를 강제하는 데 사용되는 인증서에 대한 읽기 권한이 있어야 합니다. 권한이 없는 서비스 계정의 경우 인증서에 읽기 권한을 추가해야 합니다. 그렇게 하지 않으면 SQL Server 서비스를 다시 시작하지 못할 수 있습니다.
+> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 계정에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 암호화를 강제로 수행하는 데 사용되는 인증서에 대한 읽기 권한이 있어야 합니다. 권한이 없는 서비스 계정의 경우 인증서에 읽기 권한을 추가해야 합니다. 그렇게 하지 않으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스를 다시 시작하지 못할 수 있습니다.
   
 1. **SQL Server 구성 관리자**에서 **SQL Server 네트워크 구성**을 확장하고 _\<server instance>_ 에 대한 **프로토콜**을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 선택합니다.  
   
@@ -168,7 +172,7 @@ TLS 암호화를 사용하면 네트워크에서 [!INCLUDE[ssNoVersion](../../in
   
 ## <a name="use-sql-server-management-studio"></a>SQL Server Management Studio 사용
   
-SQL Server Management Studio의 연결을 암호화하려면  
+[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 연결을 암호화하려면 다음을 수행합니다.  
 
 1. 개체 탐색기 도구 모음에서 **연결**, **데이터베이스 엔진**을 차례로 클릭합니다.  
   
@@ -183,3 +187,4 @@ SQL Server Management Studio의 연결을 암호화하려면
 
 + [Microsoft SQL Server에 대한 TLS 1.2 지원](https://support.microsoft.com/kb/3135244)     
 + [SQL Server 액세스를 허용하도록 Windows 방화벽 구성](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)     
++ [PowerShell Cmdlet New-SelfSignedCertificate](https://docs.microsoft.com/powershell/module/pkiclient/new-selfsignedcertificate)

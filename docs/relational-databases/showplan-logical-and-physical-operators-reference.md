@@ -138,12 +138,12 @@ ms.assetid: e43fd0fe-5ea7-4ffe-8d52-759ef6a7c361
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 93640502582b244c4b6e36473a087d84f53423c8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 001b08d1a2556e325fd3923928705e2a0df9aeb8
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455499"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88760313"
 ---
 # <a name="showplan-logical-and-physical-operators-reference"></a>실행 계획 논리 및 물리 연산자 참조
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -188,7 +188,7 @@ ms.locfileid: "88455499"
   
 |그래픽 실행 계획 아이콘|실행 계획 연산자|Description|  
 |-----------------------------------|-----------------------|-----------------|  
-|![Adaptive Join 연산자 아이콘](../relational-databases/media/AdaptiveJoin.gif "Adaptive Join 연산자 아이콘")|**적응형 조인**|**적응 조인** 연산자를 사용하면 해시 조인 또는 중첩된 루프 조인 메서드 선택을 첫 번째 입력이 검사된 후까지 지연할 수 있습니다. **적응 조인** 연산자는 물리 연산자입니다. 자세한 내용은 [적응 조인 이해](../relational-databases/performance/joins.md#adaptive)를 참조하세요. | 
+|![Adaptive Join 연산자 아이콘](../relational-databases/media/AdaptiveJoin.gif "Adaptive Join 연산자 아이콘")|**적응형 조인**|**적응형 조인** 연산자를 사용하면 해시 조인 또는 중첩 루프 조인 메서드 선택을 첫 번째 입력이 검사된 후까지 지연할 수 있습니다. **적응 조인** 연산자는 물리 연산자입니다. 자세한 내용은 [적응 조인 이해](../relational-databases/performance/joins.md#adaptive)를 참조하세요. | 
 |None|**집계**|**Aggregate** 연산자는 MIN, MAX, SUM, COUNT 또는 AVG를 포함하는 식을 계산합니다. **Aggregate** 연산자는 논리 또는 물리 연산자입니다.| 
 |![Arithmetic Expression 연산자 아이콘](../relational-databases/media/arithmetic-expression-32x-2.gif "Arithmetic Expression 연산자 아이콘")|**Arithmetic Expression**|**Arithmetic Expression** 연산자는 한 행의 기존 값에서 새 값을 계산합니다. **에서는** Arithmetic Expression [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]이 사용되지 않습니다.| 
 |None|**Async Concat**|**Async Concat** 연산자는 원격 쿼리(분산 쿼리)에서만 사용됩니다. Asnyc Concat은 부모 노드 하나와 *n* 개의 자식 노드를 포함합니다. 일반적으로 일부 자식 노드는 분산 쿼리에 참여하는 원격 컴퓨터에 해당합니다. **Asnyc Concat**은 모든 자식에게 동시에 `open()` 호출을 수행한 다음 각 자식에게 비트맵을 적용합니다. 값이 1인 각 비트에 대해 **Async Concat** 은 요청 시 출력 행을 부모 노드로 보냅니다.| 
@@ -259,7 +259,7 @@ ms.locfileid: "88455499"
 |![Population Query 커서 연산자 아이콘](../relational-databases/media/poulation-query-32x.gif "Population Query 커서 연산자 아이콘")|**Population Query**|**Population Query** 연산자는 커서가 열려 있을 때 커서의 작업 테이블을 채웁니다.| 
 |![Refresh Query 커서 연산자 아이콘](../relational-databases/media/refresh-query-32x.gif "Refresh Query 커서 연산자 아이콘")|**Refresh Query**|**Refresh Query** 연산자는 인출 버퍼에서 행에 대한 현재 데이터를 인출합니다.| 
 |![Remote delete 연산자 아이콘](../relational-databases/media/remote-delete-32x.gif "Remote delete 연산자 아이콘")|**Remote Delete**|**Remote Delete** 연산자는 원격 개체로부터의 입력 행을 삭제합니다. **Remote Delete** 은 논리 및 물리 연산자입니다.| 
-|![Remote index seek 실행 계획 연산자](../relational-databases/media/remote-index-scan-32x.gif "remote index seek 실행 계획 연산자")|**Remote Index Scan**|**Remote Index Scan** 연산자는 Argument 열에 지정한 원격 인덱스를 검색합니다. **Remote Insert Scan** 은 논리/물리 연산자입니다.| 
+|![Remote Index Scan 실행 계획 연산자](../relational-databases/media/remote-index-scan-32x.gif "Remote Index Scan 실행 계획 연산자")|**Remote Index Scan**|**Remote Index Scan** 연산자는 Argument 열에 지정한 원격 인덱스를 검색합니다. **Remote Insert Scan** 은 논리/물리 연산자입니다.| 
 |![Remote index seek 실행 계획 연산자](../relational-databases/media/remote-index-seek-32x.gif "remote index seek 실행 계획 연산자")|**Remote Index Seek**|**Remote Index Seek** 연산자는 원격 인덱스 개체의 검색 기능을 사용하여 행을 검색합니다. **Argument** 열에는 사용할 원격 인덱스의 이름 및 SEEK:()가 있습니다. **Remote Index Seek** 는 논리/물리 연산자입니다.| 
 |![Remote insert 연산자 아이콘](../relational-databases/media/remote-insert-32x.gif "Remote insert 연산자 아이콘")|**Remote Insert**|**Remote Insert** 연산자는 입력 행을 원격 개체에 삽입합니다. **Remote Insert** 는 논리/물리 연산자입니다.| 
 |![Remote Query 연산자 아이콘](../relational-databases/media/remote-query-32x.gif "Remote Query 연산자 아이콘")|**Remote Query**|**Remote Query** 연산자는 쿼리를 원격 원본으로 전송합니다. 원격 서버로 보내진 쿼리의 텍스트는 **Argument** 열에 표시됩니다. **Remote Query** 은 논리 및 물리 연산자입니다.| 

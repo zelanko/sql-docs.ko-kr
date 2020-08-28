@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 991111d9-1eb3-43e9-9333-a75a775c3200
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e1545722c9a2cb46bc42cb6a0e697c111e4e7f3c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a5c3daa848ced9eb6ca784e68d14a66a9bea53aa
+ms.sourcegitcommit: a0245fdae1ff9045f587a3a67b72f34405d35a4f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88424345"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88618106"
 ---
 # <a name="mssqlserver_3168"></a>MSSQLSERVER_3168
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -52,5 +52,5 @@ ms.locfileid: "88424345"
 이 시나리오에는 복원 프로세스가 마지막 수단으로 이미 시도되었습니다. 자세한 내용은 "[You cannot restore system database backups to a different build of SQL Server](https://support.microsoft.com/kb/264474)(시스템 데이터베이스 백업을 SQL Server의 다른 빌드로 복원할 수 없습니다.)"를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
-[시스템 데이터베이스 백업 및 복원&#40;SQL Server&#41;](~/relational-databases/backup-restore/back-up-the-transaction-log-when-the-database-is-damaged-sql-server.md)  
+[시스템 데이터베이스 복원의 제한 사항&#40;SQL Server&#41;](~/relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md#limitations-on-restoring-system-databases)  
   

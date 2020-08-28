@@ -14,12 +14,12 @@ ms.assetid: f372ae86-a003-40af-92de-fa52e3eea13f
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b4eed82330e1a70ddbe269f3a0be845199b4931d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b27c28f75dbd34fceded6a6170ea2b9596b0c60c
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459263"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88807027"
 ---
 # <a name="variables-transact-sql"></a>변수(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -31,10 +31,9 @@ Transact-SQL 지역 변수는 특정 유형의 단일 데이터 값을 보유할
 * 저장 프로시저 반환 코드 또는 함수 반환 값으로 반환되는 데이터 값을 저장할 수 있습니다.
 
 > [!NOTE]
-> 일부 Transact-SQL 시스템 함수의 이름은 두 개의 *at* 기호(\@\@)로 시작합니다. 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 \@\@함수가 전역 변수로 참조되지만 이 함수는 변수가 아니며 변수처럼 동작하지 않습니다. \@\@함수는 시스템 함수이며 구문 사용법이 함수 규칙을 따릅니다.
-
-> [!NOTE]
-> 변수는 뷰에서 사용할 수 없습니다.
+> - 일부 Transact-SQL 시스템 함수의 이름은 두 개의 *at* 기호(\@\@)로 시작합니다. 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 \@\@함수가 전역 변수로 참조되지만 \@\@함수는 변수가 아니며 변수와 동일하게 동작하지 않습니다. \@\@함수는 시스템 함수이며 구문 사용법이 함수 규칙을 따릅니다.
+> - 뷰에서 변수를 사용할 수 없습니다.
+> - 변수의 변경 내용은 트랜잭션 롤백의 영향을 받지 않습니다.
 
 다음 스크립트는 작은 테스트 테이블을 만들고 26개 행으로 채웁니다. 이 스크립트는 변수를 사용하여 다음 세 가지 작업을 수행합니다. 
 
