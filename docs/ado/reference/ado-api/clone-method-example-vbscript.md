@@ -3,7 +3,7 @@ description: Clone 메서드 예제(VBScript)
 title: Clone 메서드 예제 (VBScript) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 36b96e3d-8cb0-4b79-bd93-ea5e0eb5679f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0c696fb6be361327944223bab19d1edb0cf35460
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: af5f0a49c2bf126dbba4f0c40d88e15f0d71a187
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776242"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88975404"
 ---
 # <a name="clone-method-example-vbscript"></a>Clone 메서드 예제(VBScript)
 이 예제에서는 [Clone](./clone-method-ado.md) 메서드를 사용 하 여 [레코드 집합](./recordset-object-ado.md) 의 복사본을 만든 다음 사용자가 각 복사본의 레코드 포인터를 독립적으로 배치할 수 있도록 합니다.  

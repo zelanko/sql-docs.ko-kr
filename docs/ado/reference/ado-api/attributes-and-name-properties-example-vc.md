@@ -3,7 +3,7 @@ description: 특성 및 이름 속성 예제 (VC + +)
 title: 특성 및 이름 속성 예제 (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2db7c9ca-d7d0-4c8e-840b-b27d7933ec40
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cb08bddc1e308859aa8460221136fb50fe5e6b86
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: c4eb8b682e7e539c1c0af784eb70016fa1bb25c1
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776472"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88975964"
 ---
 # <a name="attributes-and-name-properties-example-vc"></a>특성 및 이름 속성 예제 (VC + +)
 이 예에서는 [연결](./connection-object-ado.md), [필드](./field-object.md)및 [속성](./property-object-ado.md) 개체에 대 한 [Attributes](./attributes-property-ado.md) 속성의 값을 표시 합니다. [Name](./name-property-ado.md) 속성을 사용 하 여 각 **필드** 및 **속성** 개체의 이름을 표시 합니다.  

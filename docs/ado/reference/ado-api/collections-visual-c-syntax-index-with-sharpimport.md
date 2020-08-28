@@ -3,7 +3,7 @@ description: Collections (#import를 사용 하는 Visual C++ 구문 인덱스)
 title: Collections (#import를 사용 하는 Visual C++ 구문 인덱스) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 36fbca8e-1884-44b5-806b-d15e30f42fe6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e1e67827a5a496b6b9163d8fa8740cc620033efd
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: cba9fa93b2f23388b11dc764a95b78d94df4874c
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776192"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88975264"
 ---
 # <a name="collections-visual-c-syntax-index-with-import"></a>Collections (#import를 사용 하는 Visual C++ 구문 인덱스)
 컬렉션이 특정 공용 메서드 및 속성을 상속 한다는 것을 알고 있으면 유용 합니다.  

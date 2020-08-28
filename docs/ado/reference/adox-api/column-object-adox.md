@@ -3,7 +3,7 @@ description: 열 개체(ADOX)
 title: Column 개체 (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6e772783-1bc8-4ea7-94b2-7d7a52ea5c47
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f620dd4c8c8c5b3e00c8875b18686259d71429d7
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: b6cc15e82091da2161a01c1c0a468e86095dd0d6
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88771122"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88985104"
 ---
 # <a name="column-object-adox"></a>열 개체(ADOX)
 테이블, 인덱스 또는 키에서 열을 나타냅니다.  

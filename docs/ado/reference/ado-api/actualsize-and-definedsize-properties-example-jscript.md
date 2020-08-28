@@ -3,7 +3,7 @@ description: ActualSize 및 DefinedSize 속성 예제(JScript)
 title: ActualSize 및 DefinedSize 속성 예제 (JScript) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 23575e70-2304-43b4-b8be-99d9a6842589
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ad6deb3d0b4bc1340835effaef3e2472017fa0cd
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 5fb77fd1732162c745590d985fc1f0e29455545c
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88760063"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88976944"
 ---
 # <a name="actualsize-and-definedsize-properties-example-jscript"></a>ActualSize 및 DefinedSize 속성 예제(JScript)
 이 예에서는 [ActualSize](./actualsize-property-ado.md) 및 [DefinedSize](./definedsize-property.md) 속성을 사용 하 여 필드의 정의 된 크기 및 실제 크기를 표시 합니다. 다음 코드를 잘라내어 메모장 또는 다른 텍스트 편집기에 붙여 넣고 **ActualSizeJS**로 저장 합니다.  
@@ -131,7 +131,7 @@ body {
 <!-- EndActualSizeJS -->  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [ActualSize 속성 (ADO)](./actualsize-property-ado.md)   
  [DefinedSize 속성](./definedsize-property.md)   
  [Field 개체](./field-object.md)

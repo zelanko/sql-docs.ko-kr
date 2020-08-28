@@ -3,7 +3,7 @@ description: 필수 클라이언트 설정
 title: 필수 클라이언트 설정 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/09/2018
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e776b4e3-fcc4-4bfb-a7e8-5ffae1d83833
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5263da344d39b828b431efd99a4171f74d2552db
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: a68ad96d6573ba6f3f61eb993d63d181939590a7
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88759383"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88977764"
 ---
 # <a name="required-client-settings"></a>필수 클라이언트 설정
 > [!IMPORTANT]
@@ -76,7 +76,7 @@ rs.CursorLocation = adUseClient
 "Remote Server=https://yourServer"  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [사용자 지정 파일 연결 섹션](./customization-file-connect-section.md)   
  [사용자 지정 파일 SQL 섹션](./customization-file-sql-section.md)   
  [사용자 지정 파일 UserList 섹션](./customization-file-userlist-section.md)   

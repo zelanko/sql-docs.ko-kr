@@ -3,7 +3,7 @@ description: 구성 요소 서비스에서 비즈니스 개체 실행
 title: 구성 요소 서비스에서 비즈니스 개체 실행 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/09/2018
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3077d0b6-42d6-4f10-8e5d-42e6204f1109
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6732724e842d4183aa7e663994df34c57f366933
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 4343d8e1bd04d7e8044fa7f3f1b5de6184466d3f
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88759363"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88977724"
 ---
 # <a name="running-business-objects-in-component-services"></a>구성 요소 서비스에서 비즈니스 개체 실행
 > [!IMPORTANT]
@@ -33,5 +33,5 @@ ms.locfileid: "88759363"
 > [!NOTE]
 >  중간 계층의 비즈니스 개체가 **Getobjectcontext**, **Setcomplete**및 **SetAbort**를 사용 하 여 구성 요소 서비스 구성 요소로 구현 되는 경우 비즈니스 개체는 구성 요소 서비스 (또는 Windows NT를 사용 하는 경우 MTS)를 사용 하 여 여러 클라이언트 호출에서 상태를 유지할 수 있습니다. 이 시나리오는 일반적으로 신뢰할 수 있는 클라이언트와 인트라넷의 서버 간에 구현 되는 DCOM에서 가능 합니다. 이 경우 [RDS. ](../../reference/rds-api/dataspace-object-rds.md)클라이언트 쪽의 공간 개체 및 [CreateObject](../../reference/rds-api/createobject-method-rds.md) 메서드는 **ITransactionContext** 인터페이스에서 제공 되 고 구성 요소 서비스에 의해 구현 되는 트랜잭션 컨텍스트 개체 및 **CreateInstance** 메서드로 대체 됩니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [RDS 기본 사항](./rds-fundamentals.md)

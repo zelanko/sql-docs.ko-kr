@@ -3,7 +3,7 @@ description: Visual C++의 ADO 코드 예제
 title: Visual C++ |의 ADO 코드 예제 Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: af30b764-398f-4918-aaa7-3952226cf544
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4606711bff277cc5e04e72d1c018ae22c4af292a
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 556fefe0943d210955a9a6a0d1058268cfc9acc6
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88760153"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88976604"
 ---
 # <a name="ado-code-examples-in-visual-c"></a>Visual C++의 ADO 코드 예제
 다음 코드 예제를 사용 하 여 Microsoft Visual C++에서 작성할 때 ADO 메서드, 속성 및 이벤트를 사용 하는 방법을 배울 수 있습니다.  
@@ -146,7 +146,7 @@ ms.locfileid: "88760153"
   
 -   [ADO 이벤트 모델 예](./ado-events-model-example-vc.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Visual Basic의 ADO 코드 예제](./ado-code-examples-in-visual-basic.md)   
  [ADO 코드 예제 VBScript](./ado-code-examples-vbscript.md)   
  [부록 D: ADO 샘플](../../guide/appendixes/appendix-d-ado-samples.md)

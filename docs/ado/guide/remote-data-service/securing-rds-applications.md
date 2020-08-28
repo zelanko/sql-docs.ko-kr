@@ -3,7 +3,7 @@ description: RDS 애플리케이션 보안
 title: RDS 응용 프로그램 보안 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/09/2018
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 82fb1330-d6c6-4c17-ad3e-d417ff822b25
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: aff7a1a180e29adf457feab1d0c7f57f4629cfea
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 588a18179c15f27c00c7e47d871d0c0a9bbddc44
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88759283"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88977634"
 ---
 # <a name="securing-rds-applications"></a>RDS 애플리케이션 보안
 이 항목에서는 RDS에 대 한 보안 정보를 제공 합니다.  

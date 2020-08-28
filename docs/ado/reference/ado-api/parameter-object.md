@@ -3,7 +3,7 @@ description: Parameter 개체
 title: Parameter 개체 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e010e794-7f0f-4026-8b5b-37328e437d63
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: eac5abf388644cff05c4a3a81955f025c65dd7aa
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 123ca1553ede61735565a6f82cb36b0035c56dcb
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88773412"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990174"
 ---
 # <a name="parameter-object"></a>Parameter 개체
 매개 변수가 있는 쿼리 또는 저장 프로시저를 기반으로 [Command](./command-object-ado.md) 개체와 연결 된 매개 변수 또는 인수를 나타냅니다.  

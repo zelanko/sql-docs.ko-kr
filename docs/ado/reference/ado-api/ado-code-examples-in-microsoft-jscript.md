@@ -3,7 +3,7 @@ description: Microsoft JScript의 ADO 코드 예제
 title: Microsoft JScript의 ADO 코드 예제 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 228b978d-eef1-4e30-928a-005b2f77ef14
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 85915249832be8ab6ee6a5db318f8dcfdda78b3e
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 8fff86663c19b4be71b2d83ae24c1cd3ea61ee14
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88760173"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88976674"
 ---
 # <a name="ado-code-examples-in-microsoft-jscript"></a>Microsoft JScript의 ADO 코드 예제
 다음 코드 예제를 사용 하 여 JScript에서 작성할 때 ADO 메서드, 속성 및 이벤트를 사용 하는 방법을 배울 수 있습니다.  
@@ -56,7 +56,7 @@ ms.locfileid: "88760173"
   
 -   [Filter 및 RecordCount 속성 예제](./filter-and-recordcount-properties-example-jscript.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Visual Basic의 ADO 코드 예제](./ado-code-examples-in-visual-basic.md)   
  [ADO 코드 예제 VBScript](./ado-code-examples-vbscript.md)   
  [Visual C++의 ADO 코드 예제](./ado-code-examples-in-visual-c.md)   

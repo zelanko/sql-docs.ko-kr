@@ -3,7 +3,7 @@ description: ActiveConnection, CommandText, CommandTimeout, CommandType, Size �
 title: 저장 프로시저 속성 예 (JScript) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: ea74e2a3-c965-43aa-9076-26a084b48ad8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1d46e3acaa77045e0006a77bb0d20ab77d975d24
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 258cc6ac4f20b6704a8f40858d7c5f47e6854933
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88760113"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88977014"
 ---
 # <a name="activeconnection-commandtext-commandtimeout-commandtype-size-and-direction-properties-example-jscript"></a>ActiveConnection, CommandText, CommandTimeout, CommandType, Size 및 Direction 속성 예제 (JScript)
 이 예에서는 [ActiveConnection](./activeconnection-property-ado.md), [CommandText](./commandtext-property-ado.md), [CommandTimeout](./commandtimeout-property-ado.md), [CommandType](./commandtype-property-ado.md), [Size](./size-property-ado-parameter.md)및 [Direction](./direction-property.md) 속성을 사용 하 여 저장 프로시저를 실행 합니다. 다음 코드를 잘라내어 메모장 또는 다른 텍스트 편집기에 붙여 넣고 **ActiveConnectionJS**로 저장 합니다.  
@@ -173,7 +173,7 @@ BODY {
 <!-- EndActiveConnectionJS -->  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [ActiveCommand 속성 (ADO)](./activecommand-property-ado.md)   
  [Command 개체 (ADO)](./command-object-ado.md)   
  [CommandText 속성 (ADO)](./commandtext-property-ado.md)   

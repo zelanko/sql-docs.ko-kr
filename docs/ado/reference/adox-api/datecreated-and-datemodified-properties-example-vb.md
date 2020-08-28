@@ -3,7 +3,7 @@ description: DateCreated 및 DateModified 속성 예제(VB)
 title: DateCreated 및 DateModified 속성 예제 (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d608ea35-6e68-402f-8184-a5041e408678
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1bab3ba9d4cff5036e6024c7c13c3ba8404a7987
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 7ea4c3fb59c2df1bba8cccb0d1ce9074b97950c9
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88770772"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88984804"
 ---
 # <a name="datecreated-and-datemodified-properties-example-vb"></a>DateCreated 및 DateModified 속성 예제(VB)
 이 예에서는 기존 [테이블](./table-object-adox.md) 에 새 [열](./column-object-adox.md) 을 추가 하 고 새 **테이블**을 만들어 [DateCreated](./datecreated-property-adox.md) 및 [DateModified](./datemodified-property-adox.md) 속성을 보여 줍니다. 이 예제를 실행 하려면 DateOutput 프로시저가 필요 합니다.  

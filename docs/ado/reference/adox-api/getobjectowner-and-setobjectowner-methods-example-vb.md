@@ -3,7 +3,7 @@ description: GetObjectOwner 및 SetObjectOwner 메서드 예제(VB)
 title: GetObjectOwner 및 SetObjectOwner 메서드 예제 (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e44ec3d4-42ae-447d-aaed-bdea53cb0cca
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dc9a111b3315c7737229ec0240e5ee4ed6e406b9
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 6b3033c06d7853768069b20493494e128991abff
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88770552"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88984574"
 ---
 # <a name="getobjectowner-and-setobjectowner-methods-example-vb"></a>GetObjectOwner 및 SetObjectOwner 메서드 예제(VB)
 이 예제에서는 [GetObjectOwner](./getobjectowner-method-adox.md) 및 [SetObjectOwner](./setobjectowner-method.md) 메서드를 보여 줍니다. 이 코드는 그룹 계정이 존재 한다고 가정 합니다 (이 그룹을 시스템에 추가 하는 방법을 보려면 그룹 [및 사용자 Append, ChangePassword 메서드 예제 (VB)](./groups-and-users-append-changepassword-methods-example-vb.md) 참조). Categories 테이블의 소유자는 Accounting로 설정 됩니다.  

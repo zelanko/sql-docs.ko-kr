@@ -3,7 +3,7 @@ description: CursorType, LockType 및 EditMode 속성 예제 (VB)
 title: CursorType, LockType 및 EditMode 속성 예제 (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 2cb4a304-f40a-4897-8b93-82c2d8e93500
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 859fca56653250ee1070981db048aafeb2e4011a
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 2980b26402b1db1b9b0e634a4acd0dcdeec2be30
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88775512"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88974334"
 ---
 # <a name="cursortype-locktype-and-editmode-properties-example-vb"></a>CursorType, LockType 및 EditMode 속성 예제 (VB)
 이 예에서는 [레코드 집합](./recordset-object-ado.md)을 열기 전에 [CursorType](./cursortype-property-ado.md) 및 [LockType](./locktype-property-ado.md) 속성을 설정 하는 방법을 보여 줍니다. 또한 다양 한 조건에서 [EditMode](./editmode-property.md) 속성의 값을 보여 줍니다. 이 프로시저를 실행 하려면 EditModeOutput 함수가 필요 합니다.  

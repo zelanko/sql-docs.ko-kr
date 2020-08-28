@@ -3,7 +3,7 @@ description: Attributes 속성 예제(VC++)
 title: Attributes 속성 예제 (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1057b57b-5ace-4830-9a20-562e88aeef86
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5b850e6b64c5acc8a504c5d684e4472a05f4eeef
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: c0c7f2a8fef9d392497744e92b3a2120d742bc9f
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88771322"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88985284"
 ---
 # <a name="attributes-property-example-vc"></a>Attributes 속성 예제(VC++)
 이 예에서는 열의 [Attributes](./attributes-property-adox.md) 속성을 보여 [Column](./column-object-adox.md)줍니다. **Adcolnullable** 로 설정 하면 사용자가 [레코드 집합](../ado-api/recordset-object-ado.md) [필드](../ado-api/field-object.md) 의 값을 빈 문자열로 설정할 수 있습니다. 이 경우 사용자는 데이터를 알 수 없는 레코드와 데이터가 적용 되지 않는 레코드를 구분할 수 있습니다.  

@@ -3,7 +3,7 @@ description: BOF, EOF 속성(ADO)
 title: BOF, EOF 속성 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 36c31ab2-f3b6-4281-89b6-db7e04e38fd2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4f6d27831c9215a66580cce32baa0d6d602d2813
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 710a116e28a102eeac8a7a062a9f66cd8dcbe79c
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776402"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88975784"
 ---
 # <a name="bof-eof-properties-ado"></a>BOF, EOF 속성(ADO)
 -   **BOF** 현재 레코드 위치가 [레코드 집합](./recordset-object-ado.md) 개체의 첫 번째 레코드 앞에 있음을 나타냅니다.  

@@ -3,7 +3,7 @@ description: CommandTimeout 속성(ADO)
 title: CommandTimeout 속성 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c611f857-d6b0-4dca-8925-f4a02e769eb0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: eaa3f7aace505092b147fc3d15c2890de50c5958
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 280e454291ebbf656b177c4a2be2773a7057f312
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776112"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88975154"
 ---
 # <a name="commandtimeout-property-ado"></a>CommandTimeout 속성(ADO)
 시도를 종료 하 고 오류를 생성 하기 전에 명령을 실행 하는 동안 대기 하는 시간을 나타냅니다.  

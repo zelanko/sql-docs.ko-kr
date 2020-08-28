@@ -3,7 +3,7 @@ description: Groups 컬렉션 속성, 메서드 및 이벤트
 title: 그룹 컬렉션 속성, 메서드 및 이벤트 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0776457f-bf78-4a79-96bf-a17136d45811
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 74865f8679a892db6efdeac2b8d6a1615dac0a0a
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 5c29037046d6ed45b3e749b1af0574ed061e00f1
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88770322"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88984344"
 ---
 # <a name="groups-collection-properties-methods-and-events"></a>Groups 컬렉션 속성, 메서드 및 이벤트
 ## <a name="properties"></a>속성  

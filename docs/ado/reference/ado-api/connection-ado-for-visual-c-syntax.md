@@ -3,7 +3,7 @@ description: 연결(Visual C++ 구문에 대한 ADO)
 title: 연결 (Visual C++ 구문에 대 한 ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: cb5e1e15-c5b4-44ab-892f-bf1ae601d0a5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 088132a44afe50218b824ecc25e2a55bda491c66
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 3458c35012535e454fa3ccad52834faebd439131
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776042"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88974954"
 ---
 # <a name="connection-ado-for-visual-c-syntax"></a>연결(Visual C++ 구문에 대한 ADO)
 ## <a name="methods"></a>메서드  

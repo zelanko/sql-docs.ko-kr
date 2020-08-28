@@ -3,7 +3,7 @@ description: PrimaryKey 및 Unique 속성 예제(VC++)
 title: PrimaryKey 및 Unique 속성 예제 (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d51814a2-ff7d-48ed-b719-99776da2091a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cf23a36461c089a76ae40890fa548bc357029ea6
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 9f622c194e1eb6d9b19d529d57219d9424507caa
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88769732"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88983664"
 ---
 # <a name="primarykey-and-unique-properties-example-vc"></a>PrimaryKey 및 Unique 속성 예제(VC++)
 이 예에서는 [인덱스](./index-object-adox.md)의 [PrimaryKey](./primarykey-property-adox.md) 및 [Unique](./unique-property-adox.md) 속성을 보여 줍니다. 이 코드는 두 개의 열이 있는 새 테이블을 만듭니다. **PrimaryKey** 및 **Unique** 속성은 중복 값이 허용 되지 않는 기본 키로 한 열을 만드는 데 사용 됩니다.  

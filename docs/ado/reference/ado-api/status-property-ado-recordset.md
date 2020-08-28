@@ -3,7 +3,7 @@ description: Status 속성(ADO 레코드 집합)
 title: Status 속성 (ADO 레코드 집합) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 41d70d89-880f-4850-9d17-19d9790cc8eb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cea09babfd2dacf35705adc71cddcdee99aad544
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 546fc85e2f6fc2753b85a055f597b3d39129dd61
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777302"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88988714"
 ---
 # <a name="status-property-ado-recordset"></a>Status 속성(ADO 레코드 집합)
 일괄 업데이트 또는 기타 대량 작업과 관련 하 여 현재 레코드의 상태를 나타냅니다.  
