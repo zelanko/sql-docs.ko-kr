@@ -3,7 +3,7 @@ description: RDS에서 관련 기술 사용
 title: RDS와 관련 기술 사용 Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/09/2018
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: a98a7245-06a7-455c-82ef-950807b9f1e7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 744bb7a701207ef92bc23fa2d9728c0b86092fd0
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: f137abb4d65a523b1926dc6455b7e68c1e39043c
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88760083"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88977364"
 ---
 # <a name="using-related-technologies-with-rds"></a>RDS에서 관련 기술 사용
 이 섹션에서는 다음 항목을 다룹니다.  
@@ -44,5 +44,5 @@ ms.locfileid: "88760083"
   
  **Microsoft WINDOWS NT server/windows 2000 서버** Microsoft Windows NT Server 또는 Windows 2000 Server의 보안에 대 한 자세한 내용은 Microsoft Windows 웹 사이트를 참조 하십시오.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [RDS 기본 사항](./rds-fundamentals.md)

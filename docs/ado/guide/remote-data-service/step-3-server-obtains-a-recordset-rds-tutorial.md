@@ -3,7 +3,7 @@ description: '3단계: 서버가 레코드 집합을 가져옵니다(RDS 자습�
 title: '3 단계: 서버에서 레코드 집합 가져오기 (RDS 자습서) | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/09/2018
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9c6779c9-1208-4696-ac51-c39f3a6d9240
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 22664ed2943800702bbb12afe6900c1ca9bac6bd
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 494cf7a3be5206f5fd4f89d3f575989ce51002b9
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88759123"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88977544"
 ---
 # <a name="step-3-server-obtains-a-recordset-rds-tutorial"></a>3단계: 서버가 레코드 집합을 가져옵니다(RDS 자습서).
 서버 프로그램은 연결 문자열과 명령 텍스트를 사용 하 여 원하는 행의 데이터 원본을 쿼리 합니다. ADO는 OLE DB와 같은 다른 Microsoft 데이터 액세스 인터페이스를 사용할 수 있지만 일반적으로이 **레코드 집합**을 검색 하는 데 사용 됩니다.  
@@ -38,6 +38,6 @@ Dim rs as New ADODB.Recordset
 End Function  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [4 단계: 서버가 레코드 집합을 반환 합니다 (RDS 자습서).](./step-4-server-returns-the-recordset-rds-tutorial.md)   
  [RDS 자습서(VBScript)](./rds-tutorial-vbscript.md)

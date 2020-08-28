@@ -3,7 +3,7 @@ description: '4단계: 서버가 레코드 집합을 반환합니다(RDS 자습�
 title: '4 단계: 서버가 레코드 집합을 반환 합니다 (RDS 자습서). | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/09/2018
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3d1855c4-419c-4810-b5ea-6c874b5e2905
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3805ac88556b6d00aaf43bf5e1d28ece71c1c591
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: e0e79cf0185f4657cd8192dd3dcd9bcce47c962e
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88759113"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88977524"
 ---
 # <a name="step-4-server-returns-the-recordset-rds-tutorial"></a>4단계: 서버가 레코드 집합을 반환합니다(RDS 자습서).
 > [!IMPORTANT]
@@ -38,6 +38,6 @@ Sub RDSTutorial4()
 ...  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [5 단계: DataControl을 사용할 수 있습니다 (RDS 자습서).](./step-5-datacontrol-is-made-usable-rds-tutorial.md)   
  [RDS 자습서(VBScript)](./rds-tutorial-vbscript.md)

@@ -3,7 +3,7 @@ description: AbsolutePage, PageCount 및 PageSize 속성 예제 (JScript)
 title: AbsolutePage, PageCount 및 PageSize 속성 예제 (JScript) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 2db6dd3f-5a9c-438c-ae62-d09242906c98
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d3f5fb6b387a48fd2c08945bd8047d16f44abaf0
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: c6f2d273b696f19286646525768bfa06a8fe6d55
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88760023"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88977303"
 ---
 # <a name="absolutepage-pagecount-and-pagesize-properties-example-jscript"></a>AbsolutePage, PageCount 및 PageSize 속성 예제 (JScript)
 이 예제에서는 AbsolutePage, PageCount 및 PageSize 속성을 보여 줍니다. 다음 코드를 잘라내어 메모장 또는 다른 텍스트 편집기에 붙여 넣고 **AbsolutePageJS**로 저장 합니다.  
@@ -158,7 +158,7 @@ BODY {
 <!-- EndAbsolutePageJS -->  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [AbsolutePage 속성 (ADO)](./absolutepage-property-ado.md)   
  [PageCount 속성 (ADO)](./pagecount-property-ado.md)   
  [PageSize 속성 (ADO)](./pagesize-property-ado.md)   

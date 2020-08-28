@@ -3,7 +3,7 @@ description: 사용자 지정 파일 이해
 title: 사용자 지정 파일 이해 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/09/2018
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 136f74bf-8d86-4a41-be66-c86cbcf81548
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 18c7d09707a69967560765f880a3c6563de1506e
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 9b097d54015d9f48140aafb6feb360b8013edeaf
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88759871"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88977394"
 ---
 # <a name="understanding-the-customization-file"></a>사용자 지정 파일 이해
 사용자 지정 파일의 각 섹션 헤더는 형식 및 매개 변수를 포함 하는 대괄호 (**[]**)로 구성 됩니다. 네 가지 섹션 형식은 **connect**, **sql**, **userlist**또는 **logs**리터럴 문자열로 표시 됩니다. 매개 변수는 리터럴 문자열, 기본값, 사용자 지정 식별자 또는 nothing입니다.  
@@ -67,7 +67,7 @@ identifier
   
 -   **로그** 섹션은 **DataFactory** 가 작업 중일 때마다 사용 됩니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [사용자 지정 파일 연결 섹션](./customization-file-connect-section.md)   
  [사용자 지정 파일 로그 섹션](./customization-file-logs-section.md)   
  [사용자 지정 파일 SQL 섹션](./customization-file-sql-section.md)   

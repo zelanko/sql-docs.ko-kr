@@ -3,7 +3,7 @@ description: 개체에서 RDS 프로그래밍 모델
 title: 개체를 사용 하는 RDS 프로그래밍 모델 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/09/2018
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 07ce0ef0-72f1-48f4-823d-1b65d28c0926
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9ce5e13641afa757f2c0ccea4ec760c4fa70b3ff
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 2658b8b7591284f1624f3649e3980db6e2022726
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88759643"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88977954"
 ---
 # <a name="rds-programming-model-with-objects"></a>개체에서 RDS 프로그래밍 모델
 RDS의 목표는 IIS와 같은 중개자를 통해 데이터 원본에 액세스 하 고 업데이트 하는 것입니다. 프로그래밍 모델은이 목표를 달성 하는 데 필요한 활동의 시퀀스를 지정 합니다. 개체 모델은 메서드 및 속성이 프로그래밍 모델에 영향을 주는 개체를 지정 합니다.  
@@ -41,7 +41,7 @@ RDS의 목표는 IIS와 같은 중개자를 통해 데이터 원본에 액세스
   
 -   **레코드 집합** 개체에 대 한 변경 내용은 서버로 다시 전송 되어 데이터 원본 (RDS)을 업데이트 하는 데 사용 됩니다 **. DataControl** 또는 **RDSServer. DataFactory**).  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [RDS 개체 모델 요약](./rds-object-model-summary.md)   
  [DataControl 개체 (RDS)](../../reference/rds-api/datacontrol-object-rds.md)   
  [DataFactory 개체 (RDSServer)](../../reference/rds-api/datafactory-object-rdsserver.md)   

@@ -3,7 +3,7 @@ description: AddNew 메서드 예제(VC++)
 title: AddNew 메서드 예제 (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9cc8774b-6711-4837-b442-959eaf79343e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 199a60ca21f7109ce1fdd181d8fa9dfcd7c70341
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 3d53033550d087844c429230c036aa1bf11e144a
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88760183"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88976694"
 ---
 # <a name="addnew-method-example-vc"></a>AddNew 메서드 예제(VC++)
 이 예제에서는 [AddNew](./addnew-method-ado.md) 메서드를 사용 하 여 지정 된 이름의 새 레코드를 만듭니다.  
@@ -214,6 +214,6 @@ void PrintProviderError(_ConnectionPtr pConnection) {
 }  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [AddNew 메서드 (ADO)](./addnew-method-ado.md)   
  [레코드 집합 개체(ADO)](./recordset-object-ado.md)

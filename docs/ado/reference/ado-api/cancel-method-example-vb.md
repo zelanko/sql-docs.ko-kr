@@ -3,7 +3,7 @@ description: Cancel 메서드 예제(VB)
 title: Cancel 메서드 예제 (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5c0530ad-68d0-4cba-b1af-9386d566c7c5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4f76532e3904da2723f59afbf1f719f7cc212954
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 3ca981db6a75beb2c4c4c04c03386f8e8b82920f
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776332"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88975634"
 ---
 # <a name="cancel-method-example-vb"></a>Cancel 메서드 예제(VB)
 이 예에서는 [cancel](./cancel-method-ado.md) 메서드를 사용 하 여 연결을 사용 하는 경우 [연결](./connection-object-ado.md) 개체에서 실행 중인 명령을 취소 합니다.  

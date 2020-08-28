@@ -3,7 +3,7 @@ description: SetPermissions 메서드(ADOX)
 title: SetPermissions 메서드 (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: b7f925d7-b05c-4376-bb49-f8d2c17b8b24
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3a13e1dc23556888c2d4ee5c013472614b764d57
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 1333fc42f98ba787cfcc139b40932038307e5592
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88769402"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88983294"
 ---
 # <a name="setpermissions-method-adox"></a>SetPermissions 메서드(ADOX)
 개체의 [그룹](./group-object-adox.md) 또는 [사용자](./user-object-adox.md) 에 대 한 사용 권한을 지정 합니다.  
@@ -37,7 +37,7 @@ GroupOrUser.SetPermissions Name, ObjectType, Action, Rights [, Inherit] [, Objec
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- *Name*  
+ *이름*  
  사용 권한을 설정할 개체의 이름을 지정 하는 **문자열** 값입니다.  
   
  *ObjectType*  

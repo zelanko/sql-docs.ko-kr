@@ -3,7 +3,7 @@ description: DataControl 개체(RDS)
 title: DataControl 개체 (RDS) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d85ea4fc-451c-436e-97b8-58f92b149dd0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f3b31721320c380606c3271b52ae2ad61c808379
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 0a282cbb7773bd12aa20f1aad74263d8f287a1dc
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88768502"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88982474"
 ---
 # <a name="datacontrol-object-rds"></a>DataControl 개체(RDS)
 텍스트 상자, 표 형태 컨트롤 또는 콤보 상자와 같은 하나 이상의 컨트롤에 데이터 쿼리 [레코드 집합](../ado-api/recordset-object-ado.md) 을 바인딩하여 웹 페이지에 **레코드 집합** 데이터를 표시 합니다.  

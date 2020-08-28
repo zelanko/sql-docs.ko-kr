@@ -3,7 +3,7 @@ description: 필드(ADO - WFC 구문)
 title: Field (ADO-WFC 구문) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 02/15/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7e01cb24-2338-4f92-ad46-8d97248e1a4d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b9f3c2e1cd7d64255b0bae2d8085a499530e7476
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b9b35f89911c0b016c52eed00f8165b767968180
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443785"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88973254"
 ---
 # <a name="field-ado---wfc-syntax"></a>필드(ADO - WFC 구문)
 ## <a name="package-commswfcdata"></a>package com.  

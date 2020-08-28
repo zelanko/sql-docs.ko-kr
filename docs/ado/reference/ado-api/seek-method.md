@@ -3,7 +3,7 @@ description: Seek 메서드
 title: Seek 메서드 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 129293d2-19d3-4940-bf64-483ee72fb4a1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3325cbb2a1178be61167cc0291bf23564d1e84fb
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 3b2058751177d0498e89d1f9bd631a3151490c9d
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777522"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88989164"
 ---
 # <a name="seek-method"></a>Seek 메서드
 [레코드 집합](./recordset-object-ado.md) 의 인덱스를 검색 하 여 지정 된 값과 일치 하는 행을 빠르게 찾고 현재 행 위치를 해당 행으로 변경 합니다.  

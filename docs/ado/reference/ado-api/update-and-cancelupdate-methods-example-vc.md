@@ -3,7 +3,7 @@ description: Update 및 CancelUpdate 메서드 예제(VC++)
 title: Update 및 CancelUpdate 메서드 예제 (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: cc59d23a-2f38-42f9-8b65-ed89009e87ec
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 60f63706057acffa4e00954c6ff92d77503ec14f
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 9d8277ab358c7eb90737f4da5a0f118d3b087150
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777022"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88988114"
 ---
 # <a name="update-and-cancelupdate-methods-example-vc"></a>Update 및 CancelUpdate 메서드 예제(VC++)
 이 예제에서는 [CancelUpdate](./cancelupdate-method-ado.md) 메서드와 함께 [Update](./update-method.md) 메서드를 보여 줍니다.  

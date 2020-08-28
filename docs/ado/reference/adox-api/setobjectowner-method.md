@@ -3,7 +3,7 @@ description: SetObjectOwner 메서드
 title: SetObjectOwner 메서드 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: e5170a37-9d6e-43db-bfb6-9b6631fa3048
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: acefd94f29b030a6bee724686e11023a354d8921
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: d021d91f89032146cb87516e6d5dd486de946378
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88769412"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88983324"
 ---
 # <a name="setobjectowner-method"></a>SetObjectOwner 메서드
 [카탈로그](./catalog-object-adox.md)에 있는 개체의 소유자를 지정 합니다.  

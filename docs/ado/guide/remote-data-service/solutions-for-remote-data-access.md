@@ -3,7 +3,7 @@ description: 원격 데이터 액세스에 대한 솔루션
 title: 원격 데이터 액세스를 위한 솔루션 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/09/2018
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: d311cc67-7db7-4c43-9590-d465564695e4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d337ef92600dbda0a54d2c2c51ab4e8caeed646c
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 849ef40c124cfe611f72c6ad5f258d678c24c963
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88759213"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88977604"
 ---
 # <a name="solutions-for-remote-data-access"></a>원격 데이터 액세스에 대한 솔루션
 ## <a name="the-issue"></a>문제  
@@ -43,7 +43,7 @@ ms.locfileid: "88759213"
 ## <a name="the-solution"></a>솔루션  
  RDS는 프로그래밍 모델을 정의 합니다. 데이터 원본에 액세스 하 고 업데이트 하는 데 필요한 일련의 작업을 사용 하 여 인터넷 정보 서비스 (IIS)와 같은 중개자를 통해 데이터에 액세스할 수 있습니다. 프로그래밍 모델에는 RDS의 전체 기능이 요약 되어 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [기본 RDS 프로그래밍 모델](./basic-rds-programming-model.md)   
  [RDS 시나리오](./rds-scenario.md)   
  [RDS 자습서](./rds-tutorial.md)   

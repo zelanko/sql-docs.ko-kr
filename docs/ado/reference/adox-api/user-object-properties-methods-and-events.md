@@ -3,7 +3,7 @@ description: 사용자 개체 속성, 메서드 및 이벤트
 title: 사용자 개체 속성, 메서드 및 이벤트 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: becd590c-0db7-485c-8bf4-fa3456e4ba20
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 50845dae282a2fdd63c1e45e459701e62983591b
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: af6813da6bf293640500fcba7f94d27016bd8505
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88769082"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88983064"
 ---
 # <a name="user-object-properties-methods-and-events"></a>사용자 개체 속성, 메서드 및 이벤트
 ## <a name="propertiescollections"></a>속성/컬렉션  

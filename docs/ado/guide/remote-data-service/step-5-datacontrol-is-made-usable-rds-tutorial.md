@@ -3,7 +3,7 @@ description: '5단계: DataControl을 사용 가능하도록 만듭니다(RDS �
 title: '5 단계: DataControl 사용 가능 (RDS 자습서) | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/09/2018
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ed5c4a24-9804-4c85-817e-317652acb9b4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 616b82b397694e4db41f709080dc4beafd945878
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 8aa0697e7f4acbae9fbc25ba3e14bccb4a468499
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88759023"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88977514"
 ---
 # <a name="step-5-datacontrol-is-made-usable-rds-tutorial"></a>5단계: DataControl을 사용 가능하도록 만듭니다(RDS 자습서).
 반환 된 **레코드 집합** 개체를 사용할 수 있습니다. 다른 **레코드 집합과**마찬가지로이를 검사 하거나 탐색 하거나 편집할 수 있습니다. **레코드 집합** 으로 수행할 수 있는 작업은 환경에 따라 달라 집니다. Visual Basic 및 Visual C++에는 데이터 컨트롤을 사용 하 여 직접 또는 간접적으로 **레코드 집합** 을 사용할 수 있는 시각적 컨트롤이 있습니다.  
@@ -44,6 +44,6 @@ Sub RDSTutorial5()
 ...  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [6 단계: 서버에 변경 내용 전송 (RDS 자습서)](./step-6-changes-are-sent-to-the-server-rds-tutorial.md)   
  [RDS 자습서(VBScript)](./rds-tutorial-vbscript.md)

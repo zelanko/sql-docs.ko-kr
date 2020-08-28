@@ -3,7 +3,7 @@ description: 주소록 예제 애플리케이션 실행
 title: 주소록 샘플 응용 프로그램 실행 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/09/2018
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3a2644e9-d634-4ae6-a5b7-13fb7b317ec7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1b0c28fdc0487fc7f14982588eefc8a7011f33b7
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 9c616d23d1491876425089877bf5242d34549ed5
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88759353"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88977694"
 ---
 # <a name="running-the-address-book-sample-application"></a>주소록 예제 애플리케이션 실행
 > [!IMPORTANT]
@@ -42,5 +42,5 @@ ms.locfileid: "88759353"
   
 3.  그러면 주소록 샘플 응용 프로그램에서 다양 한 시나리오를 시험해 볼 수 있습니다. 예를 들어 전자 메일 이름에 따라 개인을 검색 하거나 "Program Manager" 라는 제목의 모든 사용자를 나열 하거나 기존 레코드를 편집할 수 있습니다. **찾기** 를 클릭 하 여 사용 가능한 모든 이름으로 데이터 표를 채웁니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [주소록 데이터 바인딩 개체](./address-book-data-binding-object.md)

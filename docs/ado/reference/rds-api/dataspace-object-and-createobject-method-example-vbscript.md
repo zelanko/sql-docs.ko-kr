@@ -3,7 +3,7 @@ description: DataSpace 개체 및 CreateObject 메서드 예제(VBScript)
 title: 스페이스 개체 및 CreateObject 메서드 예제 (VBScript) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 12b0e160-5e5c-441f-bed7-ac0bd061e003
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 461d5410268b3ab02b739674aa86f762b1d4c597
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 6cda8ddf7be69bd4c4f1b0e46e00dd882acd9160
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88768452"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88982344"
 ---
 # <a name="dataspace-object-and-createobject-method-example-vbscript"></a>DataSpace 개체 및 CreateObject 메서드 예제(VBScript)
 > [!IMPORTANT]

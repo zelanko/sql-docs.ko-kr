@@ -3,7 +3,7 @@ description: RDS 사용량 및 보안
 title: RDS 사용 및 보안 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/09/2018
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b8ac3739-05d3-4818-8201-a763795fb8b4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 686d3caeb7835d05a4e2eff0c588a4fb2ca18cf4
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 7f357ec4390c6006ba4b522404dc7f15cc4f627f
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88759493"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88977814"
 ---
 # <a name="rds-usage-and-security"></a>RDS 사용량 및 보안
 서버를 설정 하 고 RDS를 신속 하 게 사용 하려면이 섹션의 정보를 사용 합니다. 이 섹션에서는 rds를 구현할 때 수행 해야 하는 특정 구성 단계를 설명 하 고, rds와 다른 기술 간의 몇 가지 주요 관계에 대해 설명 하 고, RDS 솔루션을 설정할 때 발생할 수 있는 문제에 대 한 해결 방법을 제공 합니다.  
@@ -37,7 +37,7 @@ ms.locfileid: "88759493"
   
 -   [RDS 문제 해결](./troubleshooting-rds.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [RDS 기본 사항](./rds-fundamentals.md)   
  [RDS 시나리오](./rds-scenario.md)   
  [RDS 자습서](./rds-tutorial.md)

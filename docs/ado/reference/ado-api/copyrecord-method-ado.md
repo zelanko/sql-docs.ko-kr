@@ -3,7 +3,7 @@ description: CopyRecord 메서드(ADO)
 title: CopyRecord 메서드 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b9bcf272-3c74-479f-95dd-0229a32e98fc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b72860215018a9a869aed8f0a06e280a601947e5
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 0056d33f1ad07ed48002bb7638acd84a963fb566
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88775782"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88974584"
 ---
 # <a name="copyrecord-method-ado"></a>CopyRecord 메서드(ADO)
 [레코드가](./record-object-ado.md) 나타내는 엔터티를 다른 위치로 복사 합니다.  

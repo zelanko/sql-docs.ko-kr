@@ -3,7 +3,7 @@ description: 레코드 개체(ADO)
 title: Record 개체 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: db83ed2c-a8e3-460c-8682-64667e4d5d01
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6860e10d3639fcbfdf59e8ff5fe8a5a8b675662a
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 6066d43bfa52d65ee133fd748f76fc651fac7379
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88772602"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88989864"
 ---
 # <a name="record-object-ado"></a>레코드 개체(ADO)
 파일이 나 디렉터리와 같이 반 구조화 된 데이터 공급자가 반환 하는 개체 또는 [레코드 집합](./recordset-object-ado.md) 또는 데이터 공급자의 행을 나타냅니다.  
