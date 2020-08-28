@@ -1,7 +1,7 @@
 ---
 description: ReadyState 속성(RDS)
 title: ReadyState 속성 (RDS) | Microsoft Docs
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5be75bc7-1171-4440-a37e-c8cc6b5cd865
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9915f76e336f7c8814428440460d1b0bfd7b9288
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 5a7e27abfa2464f84e130d789db93a3d7606df21
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88767662"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88981484"
 ---
 # <a name="readystate-property-rds"></a>ReadyState 속성(RDS)
 데이터를 [레코드 집합](../ado-api/recordset-object-ado.md) 개체로 검색할 때 [DataControl](./datacontrol-object-rds.md) 개체의 진행 상태를 나타냅니다.  
@@ -30,7 +30,7 @@ ms.locfileid: "88767662"
 ## <a name="settings-and-return-values"></a>설정 및 반환 값  
  다음 값 중 하나를 설정 하거나 반환 합니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**adcReadyStateLoaded**|현재 쿼리가 계속 실행 중 이며 행을 가져오지 않았습니다. **DataControl** 개체의 **레코드 집합** 을 사용할 수 없습니다.|  
 |**adcReadyStateInteractive**|현재 쿼리에서 검색 된 초기 행 집합은 **DataControl** 개체의 **레코드 집합** 에 저장 되 고 사용할 수 있습니다. 나머지 행은 계속 인출 됩니다.|  

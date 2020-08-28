@@ -3,7 +3,7 @@ description: ADO MD 코드 예제
 title: ADO MD 코드 예제 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 72cf9eb3-31f6-441c-aede-5383fdfb81af
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5a75ef0e885b6d90f2b305d5737e6b70a2bf0b92
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 05d2521bef0502b5567c5a5f6d2c5006fb356f97
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776762"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88987584"
 ---
 # <a name="ado-md-code-examples"></a>ADO MD 코드 예제
 다음 코드 예제를 사용 하 여 ADO MD 개체, 메서드 및 속성을 사용 하는 방법을 배울 수 있습니다. 이러한 예제는 SQL Server 7.0에 대 한 Microsoft SQL Server OLAP Services와 함께 설치 된 샘플 응용 프로그램의 하위 집합입니다.  

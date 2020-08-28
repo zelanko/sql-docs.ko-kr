@@ -3,7 +3,7 @@ description: Update 및 CancelUpdate 메서드 예제(VB)
 title: Update 및 CancelUpdate 메서드 예제 (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 55bedd08-7440-4da4-b854-4ac9ef2fdedb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 71ce20eb1c1fc76643d4650080afdbb956cfe882
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 7860bf668bb1e01029c2c0b3edaa7441bcd6244e
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777032"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88988154"
 ---
 # <a name="update-and-cancelupdate-methods-example-vb"></a>Update 및 CancelUpdate 메서드 예제(VB)
 이 예제에서는 [CancelUpdate](./cancelupdate-method-ado.md) 메서드와 함께 [Update](./update-method.md) 메서드를 보여 줍니다.  

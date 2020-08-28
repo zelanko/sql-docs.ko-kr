@@ -3,7 +3,7 @@ description: BOF, EOF 및 Bookmark 속성 예제 (VC + +)
 title: BOF, EOF 및 Bookmark 속성 예제 (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: bd2b9d85-e75e-4fc8-a392-076582019caa
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: be80fc6c09279920a992b25bb91ee7621aabf5a1
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 6be40e03723a3335578112c6038ce53789242876
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776592"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88975844"
 ---
 # <a name="bof-eof-and-bookmark-properties-example-vc"></a>BOF, EOF 및 Bookmark 속성 예제 (VC + +)
 이 예제의 첫 번째 함수는 사용자가 [레코드 집합](./recordset-object-ado.md)의 첫 번째 또는 마지막 레코드를 지나서 이동 하려고 시도 하는 경우 [BOF](./bof-eof-properties-ado.md) 및 [EOF](./bof-eof-properties-ado.md) 속성을 사용 하 여 메시지를 표시 합니다. [책갈피](./bookmark-property-ado.md) 속성을 사용 하 여 사용자가 레코드 **집합** 의 레코드에 플래그를 지정 하 고 나중에이 레코드로 돌아갈 수 있습니다.  

@@ -3,7 +3,7 @@ description: ADO 개체 모델
 title: ADO 개체 모델 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4aca9838-1ec6-4084-bd63-dc2d17d8ab7d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6f7175caaccd7943235bb489686c7ed80ef36865
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 8611017e2c53bc89efd3ab5ea98a35a8b3a764e6
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88771812"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88976384"
 ---
 # <a name="ado-object-model"></a>ADO 개체 모델
 다음 그림에서는 ADO 개체와 해당 컬렉션을 보여 줍니다.  

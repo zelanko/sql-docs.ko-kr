@@ -3,7 +3,7 @@ description: DataFactory 개체, Query 메서드 및 CreateObject 메서드 예�
 title: CreateObject (VBScript)를 사용 하 여 RDSServer DataFactory 개체 만들기 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b4e2844a-120a-4513-860b-f1b6e4b5dda4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 53c9d3161126a1728335c132fc7886b49297f2cb
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 72db0edeb614ff712712590e1556077067537b39
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88768492"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88982464"
 ---
 # <a name="datafactory-object-query-method-and-createobject-method-example-vbscript"></a>DataFactory 개체, Query 메서드 및 CreateObject 메서드 예제(VBScript)
 > [!IMPORTANT]

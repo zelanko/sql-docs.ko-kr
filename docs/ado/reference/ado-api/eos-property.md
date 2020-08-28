@@ -3,7 +3,7 @@ description: EOS 속성
 title: EOS 속성 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 57e08c5f-f3ed-4ecd-8c66-50b83b1031d1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 47a0f2c7f499b5039d6872c5a229dd445fce1b02
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f7df00678197a4b9d16298e5f680263673fd10e8
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444015"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88973784"
 ---
 # <a name="eos-property"></a>EOS 속성
 현재 위치가 [스트림의](../../../ado/reference/ado-api/stream-object-ado.md)끝에 있는지 여부를 나타냅니다.  

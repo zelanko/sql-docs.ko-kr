@@ -3,7 +3,7 @@ description: DataControl 개체 예제(VBScript)
 title: DataControl 개체 예제 (VBScript) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4f306a51-d5a4-4785-b426-487639cda164
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 181415874cfc6ede5f274fbdc5961b8275e13763
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: d0820242befac04bd37bbac3075c08212fb948e3
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88768578"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88982604"
 ---
 # <a name="datacontrol-object-example-vbscript"></a>DataControl 개체 예제(VBScript)
 > [!IMPORTANT]

@@ -3,7 +3,7 @@ description: VBScript의 RDS 코드 예제
 title: VBScript의 RDS 코드 예제 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 22f23c30-7c21-4fe3-8e76-36cea6448819
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ba3d23cf360285f87b0034e5b73162e7b2408da0
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 0f6c226d0b59d8e2f5d8e586058308903374debb
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88767912"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88981794"
 ---
 # <a name="rds-code-examples-in-vbscript"></a>VBScript의 RDS 코드 예제
 > [!IMPORTANT]

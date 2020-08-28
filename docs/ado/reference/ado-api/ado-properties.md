@@ -3,7 +3,7 @@ description: ADO 속성
 title: ADO 속성 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0ac0d1a7-6c7a-4f4c-b115-428935e0f98b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b7f6ddee8a1d7629da95e233d02512e8e5cd3f35
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: a8a53f4b901209a1ef59be6ca2eb8b531bc52d7c
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776582"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88976284"
 ---
 # <a name="ado-properties"></a>ADO 속성
 
@@ -91,7 +91,7 @@ ms.locfileid: "88776582"
 |[상태 (ADO 레코드 집합)](./status-property-ado-recordset.md)|일괄 업데이트 또는 기타 대량 작업과 관련 된 현재 레코드의 상태를 나타냅니다.|  
 |[StayInSync](./stayinsync-property.md)|부모 행 위치가 변경 될 때 계층 구조 **레코드 집합** 개체에서 기본 자식 레코드에 대 한 참조 (즉, *장*)가 변경 되는지 여부를 나타냅니다.|  
 |[Stream 속성](./stream-property.md)|**ADOStreamConstruction** 개체의/에서 OLE DB **Stream** 개체를 가져오거나 설정 합니다.|  
-|[형식](./type-property-ado.md)|**매개 변수**, **필드**또는 **속성** 개체의 작동 유형 또는 데이터 형식을 나타냅니다.|  
+|[유형](./type-property-ado.md)|**매개 변수**, **필드**또는 **속성** 개체의 작동 유형 또는 데이터 형식을 나타냅니다.|  
 |[형식 (ADO 스트림)](./type-property-ado-stream.md)|**스트림에** 포함 된 데이터의 형식 (이진 또는 텍스트)을 나타냅니다.|  
 |[UnderlyingValue](./underlyingvalue-property.md)|**필드** 개체에 대 한 데이터베이스의 현재 값을 나타냅니다.|  
 |[값](./value-property-ado.md)|**필드**, **매개 변수**또는 **속성** 개체에 할당 된 값을 나타냅니다.|  

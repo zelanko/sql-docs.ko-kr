@@ -3,7 +3,7 @@ description: Version 속성 예제(VB)
 title: Version 속성 예제 (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 708efd50-2905-4168-b7e4-91b2e9b23539
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f1f7441fe32e361d15f80a6368065548e7fe39ae
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 1ed6e89b13c926296f20125ad5942f79b9475484
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776922"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88987904"
 ---
 # <a name="version-property-example-vb"></a>Version 속성 예제(VB)
 이 예에서는 [Connection](./connection-object-ado.md) 개체의 [Version](./version-property-ado.md) 속성을 사용 하 여 현재 ADO 버전을 표시 합니다. 또한 다음과 같은 몇 가지 동적 속성을 사용 하 여 표시 합니다.  

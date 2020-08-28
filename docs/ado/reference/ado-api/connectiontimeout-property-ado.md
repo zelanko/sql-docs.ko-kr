@@ -3,7 +3,7 @@ description: ConnectionTimeout 속성(ADO)
 title: ConnectionTimeout 속성 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8904a403-1383-4b4b-b53d-5c01d6f5deac
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4391d077621377fb2a21e39ba188864a3c37ea83
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: bd8fd11c017583ef49981021688210245589e971
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88775862"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88974744"
 ---
 # <a name="connectiontimeout-property-ado"></a>ConnectionTimeout 속성(ADO)
 시도를 종료 하 고 오류를 생성 하기 전에 연결을 설정 하는 동안 대기 하는 시간을 나타냅니다.  

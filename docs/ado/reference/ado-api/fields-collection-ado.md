@@ -3,7 +3,7 @@ description: Fields 컬렉션(ADO)
 title: Fields 컬렉션 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7c371474-b88f-4730-afa5-44163a0488d5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d94803ecbe53addb2efb7ef738863bc6541a5801
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 6f16fd27e7bee9d3f9e922de4db625b897266a61
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88775382"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88973124"
 ---
 # <a name="fields-collection-ado"></a>Fields 컬렉션(ADO)
 [레코드 집합](./recordset-object-ado.md) 또는 [Record](./record-object-ado.md) 개체의 모든 [필드](./field-object.md) 개체를 포함 합니다.  

@@ -3,7 +3,7 @@ description: Type 속성 예제(필드)(VC++)
 title: Type 속성 예제 (필드) (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 440dbdb1-16fc-4cfe-9451-59a153852537
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 50b8465e5f7f816007526b66d8cc0696e0c47fca
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 64493bab591d4f7a34a5e189a88189664156b63d
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777072"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88988254"
 ---
 # <a name="type-property-example-field-vc"></a>Type 속성 예제(필드)(VC++)
 이 예에서는 ***Employees*** 테이블에 있는 모든 [Field](./field-object.md) 개체의 **type** 속성 값에 해당 하는 상수의 이름을 표시 하 여 [Type](./type-property-ado.md) 속성을 보여 줍니다. FieldType 함수는이 프로시저를 실행 하는 데 필요 합니다.  

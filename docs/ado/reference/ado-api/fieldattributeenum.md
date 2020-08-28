@@ -3,7 +3,7 @@ description: FieldAttributeEnum
 title: FieldAttributeEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6e34d886-005a-40dc-bd5c-6adcbf81e5cd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fd8910f07b5f30170e8addd90fa41ab3299fbda5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4b218616ec1514ea8af1c160b155b63fb54c182c
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443765"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88973174"
 ---
 # <a name="fieldattributeenum"></a>FieldAttributeEnum
 [Field](../../../ado/reference/ado-api/field-object.md) 개체의 특성을 하나 이상 지정 합니다.  

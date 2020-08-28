@@ -3,7 +3,7 @@ description: ConnectComplete 및 Disconnect 이벤트(ADO)
 title: ConnectComplete 및 Disconnect 이벤트 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 568f5252-d069-4d99-a01b-2ada87ad1304
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 47fa12ef5fe4d678107254923b6d6cfa569e0db2
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 9fbea6991ca030f0f83e31dfdc26b3ac72a8697f
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776032"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88974994"
 ---
 # <a name="connectcomplete-and-disconnect-events-ado"></a>ConnectComplete 및 Disconnect 이벤트(ADO)
 **Connectcomplete** 이벤트는 연결이 시작 된 후에 호출 됩니다. 연결 **끊기** 이벤트는 연결이 종료 된 후에 호출 됩니다.  

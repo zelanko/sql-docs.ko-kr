@@ -3,7 +3,7 @@ description: Count 속성 예제(VC++)
 title: Count 속성 예제 (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 54dfb1dd-636c-4560-8a3f-32b1f6aa07d7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2bd196830ad1212d495778d037c915b2f4d86874
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: e379098c00931e56e81c22d111e698571e033e5b
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88775652"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88974504"
 ---
 # <a name="count-property-example-vc"></a>Count 속성 예제(VC++)
 이 예에서는 ***Employee*** 데이터베이스에 두 개의 컬렉션이 있는 [Count](./count-property-ado.md) 속성을 보여 줍니다. 속성은 각 컬렉션의 개체 수를 가져오고 이러한 컬렉션을 열거 하는 루프의 상한 값을 설정 합니다.  

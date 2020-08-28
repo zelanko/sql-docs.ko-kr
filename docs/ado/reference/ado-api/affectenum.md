@@ -3,7 +3,7 @@ description: AffectEnum
 title: AffectEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 1ab921a0-6c57-43b4-9291-701b2599f3e8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d67a4916328d5d6d435da1b8080be42e52b35f67
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 9673567c17cda79c93fba4e74b104bd0cb42edd7
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776652"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88976144"
 ---
 # <a name="affectenum"></a>AffectEnum
 작업의 영향을 받는 레코드를 지정 합니다.  
   
-|상수|값|Description|  
+|상수|값|설명|  
 |--------------|-----------|-----------------|  
 |**adAffectAll**|3|**레코드 집합**에 적용 된 [필터가](./filter-property.md) 없는 경우는 모든 레코드에 영향을 줍니다.<br /><br /> **필터** 속성이 문자열 조건 (예: "Author = ' Smith '")으로 설정 된 경우이 작업은 현재 챕터의 표시 되는 레코드에 영향을 줍니다.<br /><br /> **Filter** 속성이 [filtergroupenum](./filtergroupenum.md) 또는 책갈피 배열의 멤버로 설정 되 면 작업은 **레코드 집합**의 모든 행에 영향을 줍니다. **참고: adAffectAll** 는 Visual Basic 개체 브라우저에서 숨겨집니다.|  
 |**adAffectAllChapters**|4|현재 적용 되는 **필터** 를 통해 표시 되지 않는 레코드 집합을 포함 하 여 **레코드 집합**의 모든 형제 챕터에 있는 모든 레코드에 영향을 줍니다.|  

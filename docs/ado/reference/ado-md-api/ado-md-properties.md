@@ -3,7 +3,7 @@ description: ADO MD 속성
 title: ADO MD 속성 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 11ca7e42-ab6a-47da-ab32-55abab663069
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9f6628f0f172e81a490d0abd6a8cb2ae2a73679e
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: e94cb9bbd873c32e17f25c00da719c11c3260162
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776672"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88987424"
 ---
 # <a name="ado-md-properties"></a>ADO MD 속성
 
@@ -47,7 +47,7 @@ ms.locfileid: "88776672"
 |[ParentSameAsPrev](./parentsameasprev-property-ado-md.md)|이 위치 멤버의 부모가 바로 앞에 있는 멤버의 부모와 같은지 여부를 나타냅니다.|  
 |[원본](./source-property-ado-md.md)|셀 집합의 데이터 원본을 나타냅니다.|  
 |[State](./state-property-ado-md.md)|셀 집합의 현재 상태를 나타냅니다.|  
-|[형식](./type-property-ado-md.md)|현재 멤버의 형식을 나타냅니다.|  
+|[유형](./type-property-ado-md.md)|현재 멤버의 형식을 나타냅니다.|  
 |[UniqueName](./uniquename-property-ado-md.md)|현재 개체의 모호 하지 않은 이름을 나타냅니다.|  
 |[값](./value-property-ado-md.md)|현재 셀의 값을 나타냅니다.|  
   

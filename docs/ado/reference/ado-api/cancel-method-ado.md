@@ -3,7 +3,7 @@ description: Cancel 메서드(ADO)
 title: Cancel 메서드 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: e0db4e15-6787-41e2-8f13-9e9b524d620a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c40b3f7d0c5a9f6669d41e4f90422dd3ce66ebd5
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 75829400fbb1beb838b9254acf7db129980046c3
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776342"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88975654"
 ---
 # <a name="cancel-method-ado"></a>Cancel 메서드(ADO)
 보류 중인 비동기 메서드 호출의 실행을 취소 합니다.  

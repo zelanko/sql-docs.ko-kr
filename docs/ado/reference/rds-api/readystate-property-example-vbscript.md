@@ -1,7 +1,7 @@
 ---
 description: ReadyState 속성 예제(VBScript)
 title: ReadyState 속성 예제 (VBScript) | Microsoft Docs
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e3e18da4-0511-4ece-a35d-699978bc28c6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7bccf1feaf95417943194eed6e1faccbc83f1060
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 5ff6a44ddb09c21bdb2210c4f5e0e4237b315611
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88767682"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88981504"
 ---
 # <a name="readystate-property-example-vbscript"></a>ReadyState 속성 예제(VBScript)
 > [!IMPORTANT]
