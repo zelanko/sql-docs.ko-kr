@@ -1,7 +1,7 @@
 ---
 description: Synchronize21 메서드(RDS)
 title: Synchronize21 메서드 (RDS) | Microsoft Docs
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6b35f136-9d9a-4bdd-8144-67decfd3c4e9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b09994dba988d94c2e0f0f7cd9f68eef5790dde0
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 792d1b562a064b55f0dd420a6aa458b5956b0100
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88767322"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88980944"
 ---
 # <a name="synchronize21-method-rds"></a>Synchronize21 메서드(RDS)
 지정 된 레코드 집합을 ADO 2.1에 사용 하기 위해 연결 문자열에 지정 된 데이터베이스와 동기화 합니다.  

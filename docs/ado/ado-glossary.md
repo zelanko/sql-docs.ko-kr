@@ -3,7 +3,7 @@ description: ADO 용어
 title: ADO 용어 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/08/2018
 ms.reviewer: ''
@@ -11,14 +11,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - ADO, glossary
 ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 109fe50bfabc39abf60e5b06ac63be98affb02fd
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: dd781612557faebd4b6eefb710ffad2379928aee
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88805554"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88980854"
 ---
 # <a name="ado-glossary-terms"></a>ADO 용어
 이 항목에서는 ADO와 관련 된 용어를 정의 합니다.
@@ -138,7 +138,7 @@ ms.locfileid: "88805554"
  계층 구조 일반적으로 계층은 최상위 수준과 하위 수준이 있는 순위가 있는 구조입니다. ADO에서 계층적 **레코드 집합** 은 레코드와 챕터 간의 부모-자식 관계를 나타내는 데 사용 됩니다. 또한 ADO에서 **Record** 및 **Stream** 개체를 사용 하 여 폴더 및 문서와 같은 계층적 트리 구조에 액세스할 수 있습니다. 또한 ADO MD에는 OLAP 큐브의 차원 수준 간 관계를 나타내는 **계층** 개체도 포함 됩니다. 계층 구조 레코드 집합, 부모-자식 관계, 챕터, 트리도 참조 하세요.
 
 ## <a name="i-l"></a>I-L
- ISAPI (인터넷 서버 응용 프로그래밍 인터페이스)는 Microsoft® 인터넷 정보 서비스 (IIS)를 실행 하는 Windows NT® Server/Windows 2000 서버와 같은 인터넷 서버용 함수 집합입니다.
+ ISAPI (인터넷 서버 응용 프로그래밍 인터페이스)는 &reg; Microsoft 인터넷 정보 서비스 (IIS)를 실행 하는 WINDOWS NT server/windows 2000 서버와 같은 인터넷 서버용 함수 집합 &reg; 입니다.
 
  테이블에서 행을 고유 하 게 식별 하는 열을 키로 지정 합니다. 테이블을 인덱싱하는 데 자주 사용 됩니다.
 

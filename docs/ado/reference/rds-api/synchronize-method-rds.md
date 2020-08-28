@@ -1,7 +1,7 @@
 ---
 description: Synchronize 메서드(RDS)
 title: Synchronize 메서드 (RDS) | Microsoft Docs
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7af42866-7db2-4174-8251-388a2cf741f2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d58e5a65b2566aa77b74d69479f310a2d4f6e05b
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 36cf462cf7f004055acedb215146d6c909175e79
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88767332"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88980974"
 ---
 # <a name="synchronize-method-rds"></a>Synchronize 메서드(RDS)
 지정 된 레코드 집합을 ADO 2.5 이상에서 사용 하기 위해 연결 문자열에 지정 된 데이터베이스와 동기화 합니다.  

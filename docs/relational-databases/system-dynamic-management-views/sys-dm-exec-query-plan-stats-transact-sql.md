@@ -18,12 +18,12 @@ ms.assetid: fdc7659e-df41-488e-b2b5-0d79734dfacb
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 6c76005fefffdbce76309762b1d2a1cd81d83537
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0ab11e74205f47d50e927680081e8e13dfee37fb
+ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474977"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89042483"
 ---
 # <a name="sysdm_exec_query_plan_stats-transact-sql"></a>sys. dm_exec_query_plan_stats (Transact-sql)
 [!INCLUDE[SQL Server 2019](../../includes/tsql-appliesto-ssver15-asdb-xxxx-xxx.md)]
@@ -63,43 +63,41 @@ sys.dm_exec_query_plan_stats(plan_handle)
 |**query_plan**|**xml**|*Plan_handle*로 지정 된 실제 쿼리 실행 계획의 마지막으로 알려진 런타임 실행 계획 표현을 포함 합니다. 실행 계획은 XML 형식입니다. 임시 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문, 저장 프로시저 호출, 사용자 정의 함수 호출 등이 포함된 각 일괄 처리에 대해 계획 하나가 생성됩니다.<br /><br /> 열이 Null 값을 허용합니다.| 
 
 ## <a name="remarks"></a>설명
-이 시스템 함수는 CTP 2.4부터 사용할 수 있습니다 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] .
-
-이는 옵트인 기능이며 [추적 플래그](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2451을 사용하도록 설정해야 합니다. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.5부터 데이터베이스 수준에서 이를 수행하려면 [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)의 LAST_QUERY_PLAN_STATS 옵션을 참조하세요.
+이 기능은 옵트인 기능입니다. 서버 수준에서를 사용 하도록 설정 하려면 [추적 플래그](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2451를 사용 합니다. 데이터베이스 수준에서 사용 하도록 설정 하려면 [ALTER DATABASE 범위 구성 &#40;transact-sql&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)에서 LAST_QUERY_PLAN_STATS 옵션을 사용 합니다.
 
 이 시스템 함수는 **경량** 쿼리 실행 통계 프로 파일링 인프라에서 작동 합니다. 자세한 내용은 [쿼리 프로파일링 인프라](../../relational-databases/performance/query-profiling-infrastructure.md)를 참조하세요.  
 
-Sys. dm_exec_query_plan_stats의 실행 계획 출력은 다음 정보를 포함 합니다.
+실행 계획 출력에는 `sys.dm_exec_query_plan_stats` 다음 정보가 포함 됩니다.
 -  캐시 된 계획에 있는 모든 컴파일 시간 정보
 -  초당 실제 행 수, 총 쿼리 CPU 시간 및 실행 시간, 분산 경고, 실제 DOP, 사용 되는 최대 메모리 및 부여 된 메모리와 같은 런타임 정보
 
-다음 조건에서 **실제 실행 계획에 해당** 하는 실행 계획 출력은 **sys. dm_exec_query_plan_stats**에 대해 반환 된 테이블의 **query_plan** 열에 반환 됩니다.  
+다음 조건에서 **실제 실행 계획에 해당** 하는 실행 계획 출력은에 대해 반환 된 테이블의 **query_plan** 열에 반환 됩니다 `sys.dm_exec_query_plan_stats` .  
 
 -   이 계획은 [dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)에서 찾을 수 있습니다.     
-    **하거나**    
+    **및**    
 -   실행 되는 쿼리는 복잡 하거나 리소스를 사용 합니다.
 
-다음 조건에서는 dm_exec_query_plan_stats에 대해 반환 된 테이블의 **query_plan** 열에서 **간소화 된 <sup>1</sup> ** 실행 계획 출력이 반환 됩니다 **.**  
+다음 조건에서는에 대해 반환 된 테이블의 **query_plan** 열에 **단순화 된 <sup>1</sup> ** 실행 계획 출력이 반환 됩니다 `sys.dm_exec_query_plan_stats` .  
 
 -   이 계획은 [dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)에서 찾을 수 있습니다.     
-    **하거나**    
+    **및**    
 -   이 쿼리는 일반적으로 OLTP 워크 로드의 일부로 분류 되어 충분히 간단 합니다.
 
-<sup>1</sup> [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.5부터이는 루트 노드 연산자 (SELECT)만 포함 하는 실행 계획을 나타냅니다. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]CTP 2.4의 경우이는를 통해 사용 가능한 캐시 된 계획을 나타냅니다 `sys.dm_exec_cached_plans` .
+<sup>1</sup> 은 루트 노드 연산자 (SELECT)만 포함 하는 실행 계획을 나타냅니다.
 
-다음 조건에서는 **sys. dm_exec_query_plan_stats**에서 **출력이 반환 되지 않습니다** .
+다음 조건에서는에서 **출력이 반환 되지 않습니다** `sys.dm_exec_query_plan_stats` .
 
--   *Plan_handle* 를 사용 하 여 지정한 쿼리 계획이 계획 캐시에서 제거 되었습니다.     
+-   을 사용 하 여 지정한 쿼리 계획이 `plan_handle` 계획 캐시에서 제거 되었습니다.     
     **OR**    
 -   첫 번째 장소에서 쿼리 계획을 캐시할 수 없습니다. 자세한 내용은 [실행 계획 캐싱 및 다시 사용 ](../../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse)을 참조 하세요.
   
 > [!NOTE] 
-> **Xml** 데이터 형식에서 허용 되는 중첩 수준 수의 제한으로 인해 **dm_exec_query_plan** 는 128 수준의 중첩 된 요소를 충족 하거나 초과 하는 쿼리 계획을 반환할 수 없습니다. 이전 버전의에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이 조건으로 인해 쿼리 계획에서 반환 하는 [오류 6335이 발생 했습니다](../../relational-databases/errors-events/database-engine-events-and-errors.md#errors-6000-to-6999). [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]서비스 팩 2 이상 버전에서 **query_plan** 열은 NULL을 반환 합니다.  
+> **Xml** 데이터 형식에서 허용 되는 중첩 수준 수의 제한으로 인해는 `sys.dm_exec_query_plan` 128 수준의 중첩 된 요소를 충족 하거나 초과 하는 쿼리 계획을 반환할 수 없습니다. 이전 버전의에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이 조건으로 인해 쿼리 계획에서 반환 하는 [오류 6335이 발생 했습니다](../../relational-databases/errors-events/database-engine-events-and-errors.md#errors-6000-to-6999). [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]서비스 팩 2 이상 버전에서는 `query_plan` 열이 NULL을 반환 합니다.  
 
 ## <a name="permissions"></a>사용 권한  
  서버에 대한 `VIEW SERVER STATE` 권한이 필요합니다.  
 
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 ### <a name="a-looking-at-last-known-actual-query-execution-plan-for-a-specific-cached-plan"></a>A. 특정 캐시 된 계획에 대 한 마지막으로 알려진 실제 쿼리 실행 계획 보기  
  다음 예에서는 **dm_exec_cached_plans** 를 쿼리하여 흥미로운 요금제를 찾고 출력에서 복사 합니다. `plan_handle`  

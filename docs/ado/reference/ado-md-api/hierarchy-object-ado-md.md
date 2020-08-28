@@ -3,7 +3,7 @@ description: Hierarchy 개체(ADO MD)
 title: Hierarchy 개체 (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 034af340-ac79-494e-ba5e-2b57da1cb9de
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fe14e37829bbeb501debcf1e8a27bd86d43712d3
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 60d779ec3ed3393417725c9f574a798e5efc0efd
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88778092"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88986654"
 ---
 # <a name="hierarchy-object-ado-md"></a>Hierarchy 개체(ADO MD)
 [차원의](./dimension-object-ado-md.md) 멤버를 집계 하거나 "롤업" 할 수 있는 한 가지 방법을 나타냅니다. 하나 이상의 계층 구조를 따라 차원을 집계할 수 있습니다.  

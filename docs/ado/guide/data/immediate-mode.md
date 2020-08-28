@@ -1,8 +1,9 @@
 ---
 title: 직접 실행 모드 | Microsoft Docs
+description: LockType 속성이 adLockOptimistic 또는 Adlockoptimistic으로 설정 된 경우 적용 되는 즉시 실행 모드에 대해 설명 합니다.
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 31fc53d0-97de-4315-a87b-3bf5cdd1f432
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d036b2fa33c2f9fd5696eeb2984d07d4217eff6e
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: e57d39fedb6509663ec21f28341d6bbca57dbd5c
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82757909"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88980504"
 ---
 # <a name="immediate-mode"></a>직접 실행 모드
 직접 실행 모드는 **LockType** 속성이 **adlockoptimistic** 또는 **adlockoptimistic**으로 설정 된 경우에 적용 됩니다. 즉시 실행 모드에서는 **Update** 메서드를 호출 하 여 완료 된 행에 대해 작업을 선언 하는 즉시 레코드에 대 한 변경 내용이 데이터 소스에 전파 됩니다.  
