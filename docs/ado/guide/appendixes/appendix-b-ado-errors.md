@@ -3,7 +3,7 @@ description: '부록 B: ADO 오류 코드'
 title: '부록 B: ADO 오류 | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0ce201c3-6657-4c87-ae81-0d7dc5b5a431
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5d55b29ec268fcb47b1706eaeab2f42c8d3ff215
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: c1a25927263ccd2f9aace3509f270bd87a9c0cbf
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88805262"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991164"
 ---
 # <a name="appendix-b-ado-error-codes"></a>부록 B: ADO 오류 코드
 특정 오류 메시지에 대 한 자세한 내용은 다음 항목을 참조 하십시오.

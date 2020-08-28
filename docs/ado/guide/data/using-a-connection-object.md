@@ -3,7 +3,7 @@ description: 연결 개체 사용
 title: Connection 개체 사용 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 4b34f971-5699-43e7-9b15-137d334fa66e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7e3041abc535557f9f92e3a994d536fb07abde8c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b63c3925fd70f6075ab1131c275fa5e52a6e3ac8
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452625"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979124"
 ---
 # <a name="using-a-connection-object"></a>연결 개체 사용
-**연결** 개체를 열기 전에 데이터 원본 및 연결 유형에 대 한 특정 정보를 정의 해야 합니다. 이러한 정보의 대부분은 **connection** 개체에서 [Open 메서드의](../../../ado/reference/ado-api/open-method-ado-connection.md) *connectionstring* 매개 변수 또는 **connection** 개체의 [connectionstring 속성](../../../ado/reference/ado-api/connectionstring-property-ado.md) 에 의해 유지 됩니다. 연결 문자열은 세미콜론으로 구분 된 인수/값 쌍의 목록으로 구성 됩니다. 값은 작은따옴표로 묶여 있습니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.  
+**연결** 개체를 열기 전에 데이터 원본 및 연결 유형에 대 한 특정 정보를 정의 해야 합니다. 이러한 정보의 대부분은 **connection** 개체에서 [Open 메서드의](../../../ado/reference/ado-api/open-method-ado-connection.md) *connectionstring* 매개 변수 또는 **connection** 개체의 [connectionstring 속성](../../../ado/reference/ado-api/connectionstring-property-ado.md) 에 의해 유지 됩니다. 연결 문자열은 세미콜론으로 구분 된 인수/값 쌍의 목록으로 구성 됩니다. 값은 작은따옴표로 묶여 있습니다. 예를 들어:  
   
 ```  
 Dim sConn As String  

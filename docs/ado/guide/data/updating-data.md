@@ -3,7 +3,7 @@ description: 데이터 업데이트
 title: 데이터 업데이트 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6508e4e9-e33a-4dad-b340-5d632fd78a91
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5ea884479e7353b822e8b679a0fff34d70c3fd93
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 417d03c66209a44110aff8d0c8e71845119049f1
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452645"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979184"
 ---
 # <a name="updating-data"></a>데이터 업데이트
 업데이트 동작 및 기능은 주로 업데이트 모드 (잠금 유형), 커서 유형 및 커서 위치에 따라 달라 집니다.  

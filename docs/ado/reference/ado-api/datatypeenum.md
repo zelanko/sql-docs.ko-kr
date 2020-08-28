@@ -3,7 +3,7 @@ description: DataTypeEnum
 title: DataTypeEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2c57eca6-9336-4b06-ba10-9fef5926b1d0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ec805f403e3f76cacde3374cda091bf9b587b74c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fd0e2226c0b85b10d7da9f4f14e7068aa25b1d2d
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444205"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88974244"
 ---
 # <a name="datatypeenum"></a>DataTypeEnum
 [필드](../../../ado/reference/ado-api/field-object.md), [매개 변수](../../../ado/reference/ado-api/parameter-object.md)또는 [속성](../../../ado/reference/ado-api/property-object-ado.md)의 데이터 형식을 지정 합니다. 해당 OLE DB 형식 표시기는 다음 표의 설명 열에 괄호 안에 표시 됩니다.  

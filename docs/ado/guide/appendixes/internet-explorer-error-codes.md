@@ -3,7 +3,7 @@ description: 원격 데이터 서비스에 대 한 Internet Explorer 오류 코�
 title: Internet Explorer 오류 코드 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 71aed2a5-4c8a-41db-a869-37db4d07a5a9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 52372f652b66a87dfc569213401e3c200c03b2ba
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d9a45a80374d323d8c9efde3833eae2b23ef323a
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426435"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991124"
 ---
 # <a name="internet-explorer-error-codes-for-remote-data-service"></a>원격 데이터 서비스에 대 한 Internet Explorer 오류 코드
 다음 표에는 원격 데이터 서비스 사용량과 관련 된 Microsoft® Internet Explorer 오류 코드가 나열 되어 있습니다. 낮은 2 바이트의 10 진수 변환, 전체 오류 코드의 음수 10 진수 변환 및 16 진수 값이 표시 됩니다.

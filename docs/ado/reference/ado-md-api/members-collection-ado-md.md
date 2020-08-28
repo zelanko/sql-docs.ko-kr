@@ -3,7 +3,7 @@ description: Members 컬렉션(ADO MD)
 title: Members 컬렉션 (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3a647cde-efdc-4394-b1b9-8cbb1b9d689f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b302661baefaf7c4e9659e836d92b293d127e2aa
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: e0f12771ebb759a658d5e3c99244755c4daa99b0
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777972"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88986384"
 ---
 # <a name="members-collection-ado-md"></a>Members 컬렉션(ADO MD)
 수준 또는 축의 위치에서 [멤버](./member-object-ado-md.md) 개체를 포함 합니다.  

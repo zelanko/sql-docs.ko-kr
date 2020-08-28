@@ -3,7 +3,7 @@ description: 셰이프 APPEND 절
 title: Shape APPEND 절 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f90fcf55-6b24-401d-94e1-d65bd24bd342
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f2a04e532256de30295f2179f7b15386bceaa8b3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 11d2c02d24753460f90452ddd6cc6b1e1589b80b
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452865"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979624"
 ---
 # <a name="shape-append-clause"></a>셰이프 APPEND 절
 Shape command APPEND 절은 **레코드 집합**에 열을 추가 합니다. 이러한 열은 종종 자식 **레코드 집합**을 참조 하는 장 열입니다.  
@@ -96,8 +96,7 @@ SHAPE [parent-command [[AS] parent-alias]]
 > [!NOTE]
 >  APPEND 키워드 뒤의 절은 실제로 목록으로, 각 절은 쉼표로 구분 되 고 부모에 추가할 다른 열을 정의 합니다.  
   
-## <a name="remarks"></a>설명  
- 셰이프 명령의 일부로 사용자 입력에서 공급자 명령을 생성 하는 경우 SHAPE는 사용자 제공 공급자 명령을 불투명 문자열로 처리 하 고이를 공급자에 게 정확 하 게 전달 합니다. 예를 들어, 다음 SHAPE 명령에서  
+셰이프 명령의 일부로 사용자 입력에서 공급자 명령을 생성 하는 경우 SHAPE는 사용자 제공 공급자 명령을 불투명 문자열로 처리 하 고이를 공급자에 게 정확 하 게 전달 합니다. 예를 들어, 다음 SHAPE 명령에서  
   
 ```  
 SHAPE {select * from t1} APPEND ({select * from t2} RELATE k1 TO k2)  

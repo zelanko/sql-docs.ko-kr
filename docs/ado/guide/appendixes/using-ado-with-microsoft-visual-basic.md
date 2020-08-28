@@ -3,7 +3,7 @@ description: Microsoft Visual Basic 및 Visual Basic for Applications에서 ADO 
 title: Microsoft Visual Basic에서 ADO 사용 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9dfb6784-037d-4f9d-bb7f-b506b4498573
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: efb206f3c0fbbeb0fbc700f8e714ddd1d5ee5a8c
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 8e2076732536c8d9862ebc022f7a78b197ff428c
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806515"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990974"
 ---
 # <a name="using-ado-with-microsoft-visual-basic-and-visual-basic-for-applications"></a>Microsoft Visual Basic 및 Visual Basic for Applications에서 ADO 사용
 ADO 프로젝트를 설정 하 고 ADO 코드를 작성 하는 것은 Visual Basic 또는 Visual Basic for Applications를 사용 하는 경우와 비슷합니다. 이 항목에서는 Visual Basic와 Visual Basic for Applications 모두 ADO를 사용 하는 방법을 설명 하 고 차이점을 설명 합니다.
@@ -99,7 +99,7 @@ Dim conn1
 Set conn1 = CreateObject("ADODB.Connection") As Object
 ```
 
- **CreateObject** 로 인스턴스화된 개체는 런타임에 바인딩되어 있으며,이는 강력 하 게 형식화 되지 않고 명령줄 완성이 사용 되지 않음을 의미 합니다. 그러나 프로젝트에서 ADO 라이브러리 참조를 건너뛸 수 있으며 특정 버전의 개체를 인스턴스화할 수 있습니다. 예를 들면 다음과 같습니다.
+ **CreateObject** 로 인스턴스화된 개체는 런타임에 바인딩되어 있으며,이는 강력 하 게 형식화 되지 않고 명령줄 완성이 사용 되지 않음을 의미 합니다. 그러나 프로젝트에서 ADO 라이브러리 참조를 건너뛸 수 있으며 특정 버전의 개체를 인스턴스화할 수 있습니다. 예를 들어:
 
 ```
 Set conn1 = CreateObject("ADODB.Connection.2.0") As Object

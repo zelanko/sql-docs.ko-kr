@@ -3,7 +3,7 @@ description: 카탈로그 개체(ADOX)
 title: Catalog 개체 (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bb651639-a488-4e38-b6de-0ed99fa4dd92
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 968142adb0cb633a19a574c2d0994360faa3fadb
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 8329c4a94a6c9e01f0730b3244eabc6c74511cfa
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88771202"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88985314"
 ---
 # <a name="catalog-object-adox"></a>카탈로그 개체(ADOX)
 데이터 원본의 스키마 카탈로그를 설명 하는 컬렉션 ([테이블](./tables-collection-adox.md), [뷰](./views-collection-adox.md), [사용자](./users-collection-adox.md), [그룹](./groups-collection-adox.md)및 [프로시저](./procedures-collection-adox.md))을 포함 합니다.  

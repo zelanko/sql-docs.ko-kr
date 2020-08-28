@@ -3,7 +3,7 @@ description: 인터넷 게시용 Microsoft OLE DB 공급자 개요
 title: 인터넷 게시용 Microsoft OLE DB 공급자 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/08/2018
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 66a208d9-b580-4655-a41e-1d36e5b5bfca
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3888cf881fd1b6cdb0ccc2c5985fe4a6e08ae581
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: f924e1bec97ed399f4d6d3351c8d18b1d8dad5b1
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806589"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991064"
 ---
 # <a name="microsoft-ole-db-provider-for-internet-publishing-overview"></a>인터넷 게시용 Microsoft OLE DB 공급자 개요
 Microsoft OLE DB Provider for Internet 게시용을 사용 하면 ADO에서 Microsoft FrontPage 또는 Microsoft Internet Information Server가 제공 하는 리소스에 액세스할 수 있습니다. 리소스에는 HTML 파일, Windows 2000 웹 폴더 등의 웹 원본 파일이 포함 됩니다.

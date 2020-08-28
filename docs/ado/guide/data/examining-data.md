@@ -3,7 +3,7 @@ description: 데이터 검사
 title: 데이터 검사 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: de1d74af-89b6-4f3f-a8c9-07c3e2b3c9a5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 28c548316ebb6ede317f13d20ff82de0b802659e
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 1f13e39dd6c1740fb29fc0347a835d568aee352a
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806115"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991294"
 ---
 # <a name="examining-data"></a>데이터 검사
 데이터 [가져오기](./getting-data.md) 섹션에서는 데이터 원본에서 하나 이상의 **레코드 집합** 개체로 데이터를 검색 하는 방법에 대해 설명 했습니다. 이 섹션에서는 **레코드** 집합을 탐색 하 고 데이터를 보는 방법을 비롯 하 여 **레코드 집합** 에 대해 자세히 설명 합니다.  

@@ -3,7 +3,7 @@ description: DateModified 속성(ADOX)
 title: DateModified 속성 (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: fed09266-1547-4bda-9088-c254d81cc738
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 02bb55cddb1e9496893ee30448a2b479d2311d01
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 613dbf829009e4e471844b0d49285817d75316b6
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88770712"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88984744"
 ---
 # <a name="datemodified-property-adox"></a>DateModified 속성(ADOX)
 개체가 마지막으로 수정 된 날짜를 나타냅니다.  

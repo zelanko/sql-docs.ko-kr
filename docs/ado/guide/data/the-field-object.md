@@ -3,7 +3,7 @@ description: 필드 개체
 title: Field 개체 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7d1c4ad5-4be3-42ab-b516-e7133ca300bc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 16f1b85006366702b0f95d5a41a74abf91ac7997
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c2d0130d00c86830614242363914105605031ef4
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452765"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979434"
 ---
 # <a name="the-field-object"></a>필드 개체
 각 **필드** 개체는 일반적으로 데이터베이스 테이블의 열에 해당 합니다. 그러나 **필드** 는 챕터 라는 다른 **레코드 집합**에 대 한 포인터를 나타낼 수도 있습니다. 장 열과 같은 예외는이 가이드의 뒷부분에 설명 되어 있습니다.  

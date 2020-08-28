@@ -3,7 +3,7 @@ description: Filter 및 RecordCount 속성 예제 (JScript)
 title: Filter 및 RecordCount 속성 예제 (JScript) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 677fa67e-9cb9-4d7d-a786-beeb5bee5236
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e9de9c244d7faa115f03463a74a1dcaedb243b65
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: f9647fd9fe838ff5657b04eb51fbe6adb40ce936
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88775412"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88973064"
 ---
 # <a name="filter-and-recordcount-properties-example-jscript"></a>Filter 및 RecordCount 속성 예제 (JScript)
 이 예에서는 Northwind 데이터베이스의 회사 테이블에서 **레코드 집합** 을 열고 [필터](./filter-property.md) 속성을 사용 하 여 CompanyName 필드가 문자 D로 시작 하는 레코드를 표시 합니다. 다음 코드를 잘라내어 메모장 또는 다른 텍스트 편집기에 붙여 넣고 **filterjs**로 저장 합니다.  

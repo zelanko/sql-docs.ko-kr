@@ -3,7 +3,7 @@ description: Type 속성(ADO MD)
 title: Type 속성 (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 34698910-64b9-41d8-8531-9de12f2b1e32
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 30cf3c161e30884d370aea0fefd81260bafe141e
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 52b07fe68f905c7f27bad4685d5df56c25cb2c13
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777822"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88985974"
 ---
 # <a name="type-property-ado-md"></a>Type 속성(ADO MD)
 현재 [멤버](./member-object-ado-md.md)의 형식을 나타냅니다.  

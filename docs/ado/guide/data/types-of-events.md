@@ -3,7 +3,7 @@ description: 이벤트 형식
 title: 이벤트 유형 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: f3327ea0-635a-43d4-bd78-c1674f62f1a2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3fa59b0faeb5b1c74ccd4dff3f9d3c274a8f12c6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fd226901137e3ad19df84d17467ad2f283430c14
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452685"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979274"
 ---
 # <a name="types-of-events"></a>이벤트 형식
 이벤트에는 두 가지 기본 유형이 있습니다. 작업이 시작 되기 전에 호출 되는 "이벤트"는 일반적으로 이름에 "WillChangeRecordset" (예: **WillChangeRecordset** 또는 **WillConnect**)를 포함 합니다. 이벤트가 완료 된 후 호출 되는 이벤트는 일반적으로 이름에 "Complete"를 포함 합니다 (예: **RecordChangeComplete** 또는 **connectcomplete**). **InfoMessage** 와 같은 예외가 존재 하지만 연결 된 작업이 완료 된 후에 이러한 예외가 발생 합니다.  

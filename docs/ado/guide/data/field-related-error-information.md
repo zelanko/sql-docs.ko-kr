@@ -3,7 +3,7 @@ description: 필드 관련 오류 정보
 title: 필드 관련 오류 정보 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5e7b1af4-996b-47c5-9161-c5575ad4fec9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7402b8cf349d95869ff292194ce6d64c3fb6f4bf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: af7aee82f8568cafcc35ac0e78d13386822888fb
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453395"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991264"
 ---
 # <a name="field-related-error-information"></a>필드 관련 오류 정보
 오류가 필드와 직접 관련 된 경우, 예를 들어 데이터가 누락 된 경우 또는 필드의 형식이 잘못 된 경우에는 **필드** 개체의 **상태** 속성을 검사 하 여 문제의 원인에 대 한 자세한 정보를 검색할 수 있습니다. 이 속성은 문제에 대 한 특정 정보를 제공 하도록 향상 되었습니다. 예를 들어, 예를 들어, **UpdateBatch** 에 대 한 호출이 실패 하면 영향을 받는 각 레코드의 **필드** **상태** 속성을 검사 하 여 문제의 원인을 확인할 수 있습니다. 속성은 **Fieldstatusenum** 상수의 값 중 하나를 포함 합니다. 다음 표에는 오류가 발생할 때 특히 관심이 있는 값이 나와 있습니다.  

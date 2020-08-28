@@ -3,7 +3,7 @@ description: ADOX 개체
 title: ADOX 개체 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3f5287e9-f62c-40c4-bb59-985102be956e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ca5131235b4c34c05f4cc3b783087f25dc027e95
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: c38b184164109ee3e6fed18a439cd904119a3ec6
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88771582"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88985664"
 ---
 # <a name="adox-objects"></a>ADOX 개체
 ## <a name="adox-object-summary"></a>ADOX 개체 요약  
@@ -31,7 +31,7 @@ ms.locfileid: "88771582"
 |[그룹](./group-object-adox.md)|보안 데이터베이스 내에서 액세스 권한이 있는 그룹 계정을 나타냅니다.|  
 |[Index](./index-object-adox.md)|데이터베이스 테이블의 인덱스를 나타냅니다.|  
 |[Key](./key-object-adox.md)|데이터베이스 테이블의 기본 키, 외래 키 또는 고유 키 필드를 나타냅니다.|  
-|[여기서](./procedure-object-adox.md)|저장 프로시저를 나타냅니다.|  
+|[프로시저](./procedure-object-adox.md)|저장 프로시저를 나타냅니다.|  
 |[테이블](./table-object-adox.md)|열, 인덱스 및 키를 포함 하는 데이터베이스 테이블을 나타냅니다.|  
 |[사용자](./user-object-adox.md)|보안 데이터베이스 내에서 액세스 권한이 있는 사용자 계정을 나타냅니다.|  
 |[보기](./view-object-adox.md)|레코드 또는 가상 테이블의 필터링 된 집합을 나타냅니다.|  

@@ -3,7 +3,7 @@ description: Microsoft Active Directory 서비스용 microsoft OLE DB 공급자
 title: Microsoft Active Directory 서비스용 microsoft OLE DB 공급자 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/08/2018
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f9e81452-5675-4cfc-9949-cfbd2fe57534
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c196b790299c4c241e5c8eda762b43115b71a038
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 08d945b101ac91300793920e3e01ea0a9619b372
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806582"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991054"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-active-directory-service"></a>Microsoft Active Directory 서비스용 microsoft OLE DB 공급자
 ADSI (Active Directory 서비스 인터페이스) 공급자를 사용 하면 ADO에서 ADSI를 통해 다른 유형의 디렉터리 서비스에 연결할 수 있습니다. 이를 통해 ADO 응용 프로그램은 LDAP 규격 디렉터리 서비스와 Novell 디렉터리 서비스 외에 Microsoft Windows NT 4.0 및 Microsoft Windows 2000 디렉터리 서비스에 대 한 읽기 전용 액세스를 제공 합니다. ADSI 자체는 공급자 모델을 기반으로 하므로 다른 디렉터리에 대 한 액세스 권한을 부여 하는 새 공급자가 있는 경우 ADO 응용 프로그램에서이를 원활 하 게 액세스할 수 있습니다. ADSI 공급자는 자유 스레드된 및 유니코드를 사용할 수 있습니다.  
@@ -67,7 +67,7 @@ ADSDSOObject
 |*특성*|반환할 특성의 쉼표로 구분 된 목록을 나타냅니다.|  
 |*범위*|선택 사항입니다. 검색 범위를 지정 하는 **문자열** 입니다. 다음 중 하나일 수 있습니다.<br /><br /> -Base-기준 개체 (검색의 루트)만 검색 합니다.<br />-OneLevel-한 수준만 검색 합니다.<br />-하위 트리-전체 하위 트리를 검색 합니다.|  
   
- 예를 들면 다음과 같습니다.  
+ 예를 들어:  
   
 ```vb
 "<LDAP://DC=ArcadiaBay,DC=COM>;(objectClass=*);sn, givenName; subtree"  

@@ -3,7 +3,7 @@ description: Source 속성(ADO MD)
 title: Source 속성 (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 875a99ea-7f1a-4570-87b1-5ecbebbcf845
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 79e6014e3bccc8ced6c8637f8966181069a42dd5
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: c07acdd7e1ed5a80e7b2633731d88ad5ea173769
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777832"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88986004"
 ---
 # <a name="source-property-ado-md"></a>Source 속성(ADO MD)
 [셀 집합](./cellset-object-ado-md.md)의 데이터 원본을 나타냅니다.  

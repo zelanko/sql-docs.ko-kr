@@ -3,7 +3,7 @@ description: '1단계: Visual Basic 프로젝트 설정'
 title: '1 단계: Visual Basic 프로젝트 설정 | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 77d3bfa5-fc9f-4a72-93b4-790c7d227988
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d168a136d4cc80999591f0e36cb65abefa9c6c79
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7c0c8208fa8e5352a720ef057bb54d2d0b51b923
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452815"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979544"
 ---
 # <a name="step-1-set-up-the-visual-basic-project"></a>1단계: Visual Basic 프로젝트 설정
 이 시나리오에서는 Microsoft Visual Basic 6.0, ADO 2.5 이상 및 Microsoft OLE DB Provider for Internet Publishing이 시스템에 설치 되어 있다고 가정 합니다. 먼저 새 프로젝트를 만든 다음 일부 컨트롤을 프로젝트의 기본 폼에 추가 합니다.  

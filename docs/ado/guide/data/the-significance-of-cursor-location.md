@@ -3,7 +3,7 @@ description: 커서 위치의 중요성
 title: 커서 위치의 의미 Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 70ef5b1c-0459-41a1-b796-031f61a29a8a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: acfb19f341bef22a9922e075d144026b9ef5f29d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1ee12680e5d5acd0d4091e0c1864ae51b285a0e6
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452725"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979354"
 ---
 # <a name="the-significance-of-cursor-location"></a>커서 위치의 중요성
 모든 커서는 임시 리소스를 사용 하 여 데이터를 저장 합니다. 이러한 리소스는 메모리, 디스크 페이징 파일, 임시 디스크 파일 또는 데이터베이스의 임시 저장소 일 수 있습니다. 이러한 리소스를 클라이언트 컴퓨터에 배치할 때 커서를 *클라이언트 쪽* 커서 라고 합니다. 이러한 리소스가 서버에 있으면 커서를 *서버측* 커서 라고 합니다.  

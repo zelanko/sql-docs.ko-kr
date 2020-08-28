@@ -3,7 +3,7 @@ description: UniqueName 속성(ADO MD)
 title: UniqueName 속성 (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 5b977956-e252-4861-8425-f1aaf6b80130
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 45c57c1d91fb2919db7e5abd5de2fdd78551141e
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 0b8b598c62d87fe515adc0557bf9a2888625eaa7
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777812"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88985964"
 ---
 # <a name="uniquename-property-ado-md"></a>UniqueName 속성(ADO MD)
 현재 개체의 모호 하지 않은 이름을 나타냅니다.  

@@ -3,7 +3,7 @@ description: ODBC 용 Microsoft OLE DB 공급자 개요
 title: ODBC 용 Microsoft OLE DB 공급자 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/08/2018
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2dc0372d-e74d-4d0f-9c8c-04e5a168c148
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2dcd280098a5ca4075f424f12b0abdfede6b7653
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 1bce53fd000baace86d32542d9b9cc843ee68296
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806649"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991024"
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>ODBC 용 Microsoft OLE DB 공급자 개요
 ADO 또는 RDS 프로그래머는 모든 데이터 원본이 OLE DB 인터페이스를 노출 하는 것이 가장 좋습니다. 그러면 ADO에서 데이터 소스를 직접 호출할 수 있습니다. 점점 더 많은 데이터베이스 공급 업체가 OLE DB 인터페이스를 구현 하지만 일부 데이터 원본은 아직 이러한 방식으로 노출 되지 않습니다. 그러나 현재 사용 중인 대부분의 DBMS 시스템은 ODBC를 통해 액세스할 수 있습니다.

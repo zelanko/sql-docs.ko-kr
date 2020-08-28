@@ -3,7 +3,7 @@ description: CursorOptionEnum
 title: CursorOptionEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 4e10cda7-ce81-4466-94c2-844d38191cf1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 83ba6960e6e7f81db55f3a8292fd054c1377b106
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: a14102f57f2b328314e20e4124ca7e78258fb7e0
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88775522"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88974354"
 ---
 # <a name="cursoroptionenum"></a>CursorOptionEnum
 에서 [지원](./supports-method.md) 되는 메서드가 테스트할 기능을 지정 합니다.  
   
-|상수|값|Description|  
+|상수|값|설명|  
 |--------------|-----------|-----------------|  
 |**adAddNew**|0x1000400|[AddNew](./addnew-method-ado.md) 메서드를 지원 하 여 새 레코드를 추가 합니다.|  
 |**adApproxPosition**|0x4000|[AbsolutePosition](./absoluteposition-property-ado.md) 및 [AbsolutePage](./absolutepage-property-ado.md) 속성을 지원 합니다.|  

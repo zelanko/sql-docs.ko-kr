@@ -3,7 +3,7 @@ description: Connection Close 메서드, Table Type 속성 예제(VC++)
 title: Connection Close 메서드, Table Type 속성 예제 (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d0e250aa-fc57-4fd3-9610-d64f50c5507f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4b0f907cd2976e53b6942ff9d33da0a2a4712e61
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 8f49a6456e9d2a461be1e4f51f3030da2b1ff015
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88770902"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88984854"
 ---
 # <a name="connection-close-method-table-type-property-example-vc"></a>Connection Close 메서드, Table Type 속성 예제(VC++)
 [ActiveConnection](./activeconnection-property-adox.md) 속성을 **Nothing** 으로 설정 하면 카탈로그를 "닫아야" 합니다. 연결 된 컬렉션은 비어 있습니다. 카탈로그의 스키마 개체에서 만든 개체는 분리 됩니다. 캐시 된 개체의 모든 속성을 계속 사용할 수 있지만 공급자를 호출 해야 하는 속성을 읽으려고 하면 오류가 발생 합니다.  

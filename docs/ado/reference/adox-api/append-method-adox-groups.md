@@ -3,7 +3,7 @@ description: Append 메서드(ADOX 그룹)
 title: Append 메서드 (ADOX Groups) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 56b94fc6-7ef0-4e4a-82a3-033b94c46036
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 14900e34ef93f2ad738779b0cf7478372ab59179
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 5890ffa77884927574f10edeb0d2acc3a428185e
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88771482"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88985494"
 ---
 # <a name="append-method-adox-groups"></a>Append 메서드(ADOX 그룹)
 [그룹](./groups-collection-adox.md) 컬렉션에 새 [그룹](./group-object-adox.md) 개체를 추가 합니다.  

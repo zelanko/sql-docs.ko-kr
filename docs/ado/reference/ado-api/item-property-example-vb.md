@@ -3,7 +3,7 @@ description: Item 속성 예제(VB)
 title: Item 속성 예제 (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b4476603-691b-4081-8797-a3d0b331dce5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c85e34201cb37745ef9f09b337b8d1f71dd508af
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 5b862f9f3a8479ad6d1eb68060be068e91a66c58
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88774652"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990744"
 ---
 # <a name="item-property-example-vb"></a>Item 속성 예제(VB)
 이 예제에서는 [항목](./item-property-ado.md) 속성이 컬렉션의 멤버에 액세스 하는 방법을 보여 줍니다. 이 예에서는 매개 변수가 있는 명령을 사용 하 여 ***Pubs*** 데이터베이스의 ***Authors*** 테이블을 엽니다.  

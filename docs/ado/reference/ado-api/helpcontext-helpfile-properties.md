@@ -3,7 +3,7 @@ description: HelpContext, HelpFile 속성
 title: HelpContext, HelpFile 속성 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 2b9ef441-993c-44d4-8f87-fac0979dac1d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a4d4aacd44cc6dd245026f84b826d4c007f6b696
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: d9ac9c7f712514f50ab8d40704700924ac344d23
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88774872"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990844"
 ---
 # <a name="helpcontext-helpfile-properties"></a>HelpContext, HelpFile 속성
 [오류](./error-object.md) 개체와 연결 된 도움말 파일 및 항목을 나타냅니다.  

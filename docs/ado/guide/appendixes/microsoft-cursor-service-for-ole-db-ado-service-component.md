@@ -3,7 +3,7 @@ description: OLE DB에 대 한 Microsoft Cursor Service (ADO 서비스 구성 �
 title: OLE DB에 대 한 Microsoft Cursor Service (ADO 서비스 구성 요소) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/08/2018
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 420d0989-7cfb-4c66-a7b5-f4199d13165d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4e1f1e1ecfef6725cfb15640486d7aeb63e348af
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 02eaad96593af153b1692beed4bcf846ff92ab7f
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806598"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991094"
 ---
 # <a name="microsoft-cursor-service-for-ole-db-overview"></a>OLE DB에 대 한 Microsoft 커서 서비스 개요
 OLE DB에 대 한 Microsoft Cursor Service는 데이터 공급자의 커서 지원 기능을 보완 합니다. 따라서 사용자는 모든 데이터 공급자의 상대적으로 일관 된 기능을 제공 합니다.

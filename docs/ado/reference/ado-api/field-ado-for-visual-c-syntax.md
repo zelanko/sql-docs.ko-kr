@@ -3,7 +3,7 @@ description: 필드(Visual C++ 구문에 대한 ADO)
 title: Field (Visual C++ 구문에 대 한 ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 04631b08-3937-440b-ac09-cd166f239908
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9d403adf47ea25f1248b22db03013d0c8b9eb1e2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ae296d7bf6b42b5a978110b8626086528dc24d89
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443805"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88973284"
 ---
 # <a name="field-ado-for-visual-c-syntax"></a>필드(Visual C++ 구문에 대한 ADO)
 ## <a name="methods"></a>메서드  

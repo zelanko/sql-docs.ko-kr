@@ -3,7 +3,7 @@ description: Dialect 속성
 title: 언어 속성 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 329c3a71-ba88-4009-b04f-2f52195a5957
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e106c76b859f9ccdf1e977cfe3a0ac784cb78740
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: be93ceb76aa0aadba5b28673c16704b0881186f9
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444075"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88973904"
 ---
 # <a name="dialect-property"></a>Dialect 속성
 [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) 또는 [commandstream](../../../ado/reference/ado-api/commandstream-property-ado.md) 속성의 언어를 나타냅니다. 언어는 공급자가 문자열 또는 스트림을 구문 분석 하는 데 사용 하는 구문 및 일반 규칙을 정의 합니다.  
