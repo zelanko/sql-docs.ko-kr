@@ -61,19 +61,19 @@
             - name: Azdata 설치
               items:
                 - name: 설치
-                  href: big-data-cluster/deploy-install-azdata.md
+                  href: azdata/install/deploy-install-azdata.md
                 - name: macOS
-                  href: big-data-cluster/deploy-install-azdata-macos.md
+                  href: azdata/install/deploy-install-azdata-macos.md
                 - name: Windows
-                  href: big-data-cluster/deploy-install-azdata-installer.md
+                  href: azdata/install/deploy-install-azdata-installer.md
                 - name: Apt를 사용하는 Linux
-                  href: big-data-cluster/deploy-install-azdata-linux-package.md
+                  href: azdata/install/deploy-install-azdata-linux-package.md
                 - name: yum을 사용하는 Linux
-                  href: big-data-cluster/deploy-install-azdata-yum.md
+                  href: azdata/install/deploy-install-azdata-yum.md
                 - name: zypper를 사용하는 Linux
-                  href: big-data-cluster/deploy-install-azdata-zypper.md
+                  href: azdata/install/deploy-install-azdata-zypper.md
                 - name: pip 사용
-                  href: big-data-cluster/deploy-install-azdata-pip.md
+                  href: azdata/install/deploy-install-azdata-pip.md
         - name: 배포
           items:
             - name: 배포 지침
@@ -381,59 +381,59 @@
             - name: azdata
               items:
                 - name: azdata
-                  href: big-data-cluster/reference-azdata.md
+                  href: azdata/reference/reference-azdata.md
                 - name: Notebook
-                  href: big-data-cluster/reference-azdata-notebook.md
+                  href: azdata/reference/reference-azdata-notebook.md
                 - name: sql
-                  href: big-data-cluster/reference-azdata-sql.md
+                  href: azdata/reference/reference-azdata-sql.md
             - name: 앱 배포
               items:
                 - name: app
-                  href: big-data-cluster/reference-azdata-app.md
+                  href: azdata/reference/reference-azdata-app.md
                 - name: 앱 템플릿
-                  href: big-data-cluster/reference-azdata-app-template.md
+                  href: azdata/reference/reference-azdata-app-template.md
             - name: 클러스터
               items:
                 - name: bdc
-                  href: big-data-cluster/reference-azdata-bdc.md
+                  href: azdata/reference/reference-azdata-bdc.md
                 - name: bdc 앱
-                  href: big-data-cluster/reference-azdata-bdc-app.md
+                  href: azdata/reference/reference-azdata-bdc-app.md
                 - name: bdc 앱 상태
-                  href: big-data-cluster/reference-azdata-bdc-app-status.md
+                  href: azdata/reference/reference-azdata-bdc-app-status.md
                 - name: bdc 구성
-                  href: big-data-cluster/reference-azdata-bdc-config.md
+                  href: azdata/reference/reference-azdata-bdc-config.md
                 - name: bdc 컨트롤
-                  href: big-data-cluster/reference-azdata-bdc-control.md
+                  href: azdata/reference/reference-azdata-bdc-control.md
                 - name: bdc 제어 상태
-                  href: big-data-cluster/reference-azdata-bdc-control-status.md
+                  href: azdata/reference/reference-azdata-bdc-control-status.md
                 - name: bdc 디버그
-                  href: big-data-cluster/reference-azdata-bdc-debug.md
+                  href: azdata/reference/reference-azdata-bdc-debug.md
                 - name: bdc 엔드포인트
-                  href: big-data-cluster/reference-azdata-bdc-endpoint.md
+                  href: azdata/reference/reference-azdata-bdc-endpoint.md
                 - name: bdc 게이트웨이
-                  href: big-data-cluster/reference-azdata-bdc-gateway.md
+                  href: azdata/reference/reference-azdata-bdc-gateway.md
                 - name: bdc 게이트웨이 상태
-                  href: big-data-cluster/reference-azdata-bdc-gateway-status.md
+                  href: azdata/reference/reference-azdata-bdc-gateway-status.md
                 - name: bdc hdfs
-                  href: big-data-cluster/reference-azdata-bdc-hdfs.md
+                  href: azdata/reference/reference-azdata-bdc-hdfs.md
                 - name: bdc hdfs 탑재
-                  href: big-data-cluster/reference-azdata-bdc-hdfs-mount.md
+                  href: azdata/reference/reference-azdata-bdc-hdfs-mount.md
                 - name: bdc hdfs 상태
-                  href: big-data-cluster/reference-azdata-bdc-hdfs-status.md
+                  href: azdata/reference/reference-azdata-bdc-hdfs-status.md
                 - name: bdc spark
-                  href: big-data-cluster/reference-azdata-bdc-spark.md
+                  href: azdata/reference/reference-azdata-bdc-spark.md
                 - name: bdc spark 일괄 처리
-                  href: big-data-cluster/reference-azdata-bdc-spark-batch.md
+                  href: azdata/reference/reference-azdata-bdc-spark-batch.md
                 - name: bdc spark 세션
-                  href: big-data-cluster/reference-azdata-bdc-spark-session.md
+                  href: azdata/reference/reference-azdata-bdc-spark-session.md
                 - name: bdc spark 문
-                  href: big-data-cluster/reference-azdata-bdc-spark-statement.md
+                  href: azdata/reference/reference-azdata-bdc-spark-statement.md
                 - name: bdc spark 상태
-                  href: big-data-cluster/reference-azdata-bdc-spark-status.md
+                  href: azdata/reference/reference-azdata-bdc-spark-status.md
                 - name: bdc sql
-                  href: big-data-cluster/reference-azdata-bdc-sql.md
+                  href: azdata/reference/reference-azdata-bdc-sql.md
                 - name: bdc 상태
-                  href: big-data-cluster/reference-azdata-bdc-status.md
+                  href: azdata/reference/reference-azdata-bdc-status.md
 - name: 비즈니스 연속성
   items:
     - name: 개요
@@ -1823,7 +1823,7 @@
           items:
             - name: 생성
               href: relational-databases/tables/create-edge-constraints.md
-            - name: DELETE
+            - name: 삭제
               href: relational-databases/tables/delete-edge-constraint.md
             - name: 수정
               href: relational-databases/tables/modify-edge-constraint.md
