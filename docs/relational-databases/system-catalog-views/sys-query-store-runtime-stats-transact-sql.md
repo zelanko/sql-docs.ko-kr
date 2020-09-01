@@ -22,12 +22,12 @@ ms.assetid: ccf7a57c-314b-450c-bd34-70749a02784a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3ca567df477cf06c6f40e7f9a2d7c8b4964eaa6f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1f59f8e08001ac926a0e129944753ecb40153217
+ms.sourcegitcommit: e103ae3f2d05431fdb8334aeaf1ed3b4fa1f593c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88377379"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89225203"
 ---
 # <a name="sysquery_store_runtime_stats-transact-sql"></a>sys. query_store_runtime_stats (Transact-sql)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -94,11 +94,11 @@ ms.locfileid: "88377379"
 |**min_log_bytes_used**|**bigint**|집계 간격 내에서 쿼리 계획에 사용 되는 데이터베이스 로그의 최소 바이트 수입니다.<br/>**참고:** Azure SQL Data Warehouse는 항상 0을 반환 합니다.|
 |**max_log_bytes_used**|**bigint**|집계 간격 내에서 쿼리 계획에 사용 되는 데이터베이스 로그의 최대 바이트 수입니다.<br/>**참고:** Azure SQL Data Warehouse는 항상 0을 반환 합니다.|
 |**stdev_log_bytes_used**|**float**|집계 간격 내에서 쿼리 계획에 사용 되는 데이터베이스 로그의 바이트 수에 대 한 표준 편차입니다.<br/>**참고:** Azure SQL Data Warehouse는 항상 0을 반환 합니다.|  
-|**avg_tempdb_space_used**|**float**|집계 간격 내의 쿼리 계획에 대 한 평균 페이지 읽기 수입니다. (8KB 페이지 읽기 수로 표시 됨).<br><br/>**적용 대상:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
-|**last_tempdb_space_used**|**bigint**|집계 간격 내의 쿼리 계획에 대 한 마지막 페이지 읽기 수입니다. (8KB 페이지 읽기 수로 표시 됨).<br><br/>**적용 대상:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
-|**min_tempdb_space_used**|**bigint**|집계 간격 내의 쿼리 계획에 대 한 최소 페이지 읽기 수입니다. (8KB 페이지 읽기 수로 표시 됨).<br><br/>**적용 대상:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
-|**max_tempdb_space_used**|**bigint**|집계 간격 내의 쿼리 계획에 대 한 최대 페이지 읽기 수입니다. (8KB 페이지 읽기 수로 표시 됨).<br><br/>**적용 대상:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
-|**stdev_tempdb_space_used**|**float**|페이지 수는 집계 간격 내의 쿼리 계획에 대 한 표준 편차를 읽습니다. (8KB 페이지 읽기 수로 표시 됨).<br><br/>**적용 대상:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
+|**avg_tempdb_space_used**|**float**|집계 간격 내의 쿼리 계획에 대 한 평균 tempdb 페이지 읽기 수입니다. (8KB 페이지 읽기 수로 표시 됨).<br><br/>**적용 대상:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
+|**last_tempdb_space_used**|**bigint**|집계 간격 내의 쿼리 계획에 대 한 마지막 tempdb 페이지 읽기 수입니다. (8KB 페이지 읽기 수로 표시 됨).<br><br/>**적용 대상:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
+|**min_tempdb_space_used**|**bigint**|집계 간격 내의 쿼리 계획에 대 한 tempdb 페이지 읽기의 최소 수입니다. (8KB 페이지 읽기 수로 표시 됨).<br><br/>**적용 대상:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
+|**max_tempdb_space_used**|**bigint**|집계 간격 내의 쿼리 계획에 대 한 tempdb 페이지 읽기의 최대 수입니다. (8KB 페이지 읽기 수로 표시 됨).<br><br/>**적용 대상:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
+|**stdev_tempdb_space_used**|**float**|Tempdb 페이지 수 집계 간격 내의 쿼리 계획에 대 한 표준 편차를 읽습니다. (8KB 페이지 읽기 수로 표시 됨).<br><br/>**적용 대상:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
 |**avg_page_server_io_reads**|**float**|집계 간격 내의 쿼리 계획에 대 한 페이지 서버 i/o 읽기의 평균 수입니다. (8KB 페이지 읽기 수로 표시 됨).<br><br/>**적용 대상:** Azure SQL Database Hyperscale</br>**참고:** Azure SQL Data Warehouse, Azure SQL Database, Azure SQL Managed Instance (비 hyperscale)는 항상 0을 반환 합니다.|
 |**last_page_server_io_reads**|**bigint**|집계 간격 내의 쿼리 계획에 대 한 페이지 서버 i/o 읽기의 마지막 수입니다. (8KB 페이지 읽기 수로 표시 됨).<br><br/>**적용 대상:** Azure SQL Database Hyperscale</br>**참고:** Azure SQL Data Warehouse, Azure SQL Database, Azure SQL Managed Instance (비 hyperscale)는 항상 0을 반환 합니다.|
 |**min_page_server_io_reads**|**bigint**|집계 간격 내의 쿼리 계획에 대 한 페이지 서버 i/o 읽기의 최소 수입니다. (8KB 페이지 읽기 수로 표시 됨).<br><br/>**적용 대상:** Azure SQL Database Hyperscale</br>**참고:** Azure SQL Data Warehouse, Azure SQL Database, Azure SQL Managed Instance (비 hyperscale)는 항상 0을 반환 합니다.|
@@ -108,7 +108,7 @@ ms.locfileid: "88377379"
 ## <a name="permissions"></a>사용 권한  
 `VIEW DATABASE STATE` 권한이 필요합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [database_query_store_options &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
  [query_context_settings &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)   
  [query_store_plan &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)   
