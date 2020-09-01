@@ -9,12 +9,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: c7e36c968a11b3aaa1e30b39ab120ffbac9bb08f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2fee6052dea18c25b093ee75b53c56b1dd053aad
+ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892049"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89042502"
 ---
 # <a name="configure-polybase-scale-out-groups-on-windows"></a>Windows에서 PolyBase 스케일 아웃 그룹 구성
 
@@ -34,7 +34,7 @@ ms.locfileid: "85892049"
   
 1. N개의 컴퓨터에 PolyBase를 사용하는 동일한 버전의 SQL Server를 설치합니다.
   
-2. SQL Server 인스턴스를 헤드 노드로 선택합니다. 헤드 노드는 SQL Server Enterprise를 실행하는 인스턴스에만 지정될 수 있습니다.
+2. SQL Server 인스턴스를 헤드 노드로 선택합니다. 
   
 3. 나머지 SQL Server 인스턴스를 [sp_polybase_join_group](../../relational-databases/system-stored-procedures/polybase-stored-procedures-sp-polybase-join-group.md)을 사용하여 컴퓨팅 노드로 추가합니다.
 
