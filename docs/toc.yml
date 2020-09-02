@@ -130,6 +130,14 @@
           href: big-data-cluster/concept-compute-pool.md
         - name: 보안
           href: big-data-cluster/concept-security.md
+        - name: 프라이빗 클러스터
+          items:
+            - name: 배포
+              href: big-data-cluster/private-deploy.md
+            - name: 관리
+              href: big-data-cluster/private-manage.md
+            - name: 트래픽 제한
+              href: big-data-cluster/private-restrict-egress-traffic.md
     - name: 방법 가이드
       items:
         - name: 구성
