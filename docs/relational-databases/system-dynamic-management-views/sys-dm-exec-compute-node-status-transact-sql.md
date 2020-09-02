@@ -22,15 +22,15 @@ ms.assetid: b606f91f-3a08-4a4f-bb57-32ae155b3738
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 182a6fff7ff2cf0af1b009a3c5acc79e00c8365a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 89ee3b4da2b3078346b4980f2293621db6ff67b0
+ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447634"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89283674"
 ---
 # <a name="sysdm_exec_compute_node_status-transact-sql"></a>sys. dm_exec_compute_node_status (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
+[!INCLUDE [sqlserver2016-asa-pdw](../../includes/applies-to-version/sqlserver2016-asa-pdw.md)]
 
   모든 PolyBase 노드의 성능 및 상태에 대 한 추가 정보를 포함 합니다. 노드당 하나의 행을 나열 합니다.  
   

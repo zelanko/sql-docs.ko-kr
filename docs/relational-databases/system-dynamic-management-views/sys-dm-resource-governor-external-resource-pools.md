@@ -21,12 +21,12 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 32df69f207de0e1c604c10d58f4d28b4a3a34aa5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 99a85cb9c329752e35f720ec97dabbb417498d3d
+ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454860"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89283634"
 ---
 # <a name="sysdm_resource_governor_external_resource_pools-transact-sql"></a>sys. dm_resource_governor_external_resource_pools (Transact-sql)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -55,9 +55,6 @@ ms.locfileid: "88454860"
 ## <a name="permissions"></a>사용 권한
 
 `VIEW SERVER STATE` 권한이 필요합니다.
-
-> [!NOTE]
-> SQL Machine Learning Services 2019 for Linux는 CPU 선호도를 설정 하는 기능을 지원 하지 않습니다.
 
 ## <a name="see-also"></a>참고 항목  
  [sys.dm_resource_governor_external_resource_pool_affinity&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pool-affinity-transact-sql.md)  

@@ -23,15 +23,15 @@ ms.assetid: 6ac47eef-4293-46b8-8555-07a614837504
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 818debc4c3db7c43f5c0e0613885e6a3d18c69ab
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d5ffd1328fc8fa2eb1e8370d06309e3a524b1a75
+ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88398689"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89283612"
 ---
 # <a name="sysdm_exec_dms_services-transact-sql"></a>sys. dm_exec_dms_services (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
+[!INCLUDE [sqlserver2016-asa-pdw](../../includes/applies-to-version/sqlserver2016-asa-pdw.md)]
 
   PolyBase 계산 노드에서 실행 되는 모든 DMS 서비스에 대 한 정보를 저장 합니다. 서비스 인스턴스당 하나의 행을 나열 합니다.  
   

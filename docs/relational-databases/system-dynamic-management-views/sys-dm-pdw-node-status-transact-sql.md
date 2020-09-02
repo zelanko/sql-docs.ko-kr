@@ -13,14 +13,15 @@ ms.assetid: 8e263b65-81d0-49d0-8873-62ef424369d6
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b93d177ad3f73982386407e019629401d70ec57f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 78b6370a7041a5e29720acce5dfcf2b0bdf1c607
+ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447501"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89283575"
 ---
 # <a name="sysdm_pdw_node_status-transact-sql"></a>sys. dm_pdw_node_status (Transact-sql)
+
 [!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
 
   모든 어플라이언스 노드의 성능 및 상태에 대 한 추가 정보 ( [dm_pdw_nodes &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md))를 포함 합니다. 어플라이언스의 노드당 하나의 행을 나열 합니다.  
@@ -42,7 +43,7 @@ ms.locfileid: "88447501"
 |received_time|**datetime**|이 노드에서 네트워크 패키지를 마지막으로 수신한 시간입니다.||  
 |error_id|**nvarchar (36)**|이 노드에서 발생 한 마지막 오류의 고유 식별자입니다.||  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Transact-sql&#41;&#40;SQL Data Warehouse 및 병렬 데이터 웨어하우스 동적 관리 뷰 ](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   
