@@ -84,10 +84,18 @@
           href: extensibility.md
         - name: 확장 작성
           href: extension-authoring.md
-        - name: 확장 만들기
-          href: tutorial-create-extension.md
         - name: 확장성 API
           href: extensibility-apis.md
+        - name: 키맵 확장
+          href: extensions/keymap-extension.md
+        - name: 대시보드 확장
+          href: extensions/dashboard-extension.md
+        - name: Notebook 확장
+          href: extensions/notebook-extension.md
+        - name: Jupyter Book 확장
+          href: extensions/jupyter-book-extension.md
+        - name: 마법사 확장
+          href: extensions/wizard-extension.md
     - name: '통합된 터미널(PowerShell, Bash)'
       href: integrated-terminal.md
     - name: 바로 가기 키

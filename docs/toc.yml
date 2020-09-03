@@ -1831,7 +1831,7 @@
           items:
             - name: 생성
               href: relational-databases/tables/create-edge-constraints.md
-            - name: 삭제
+            - name: DELETE
               href: relational-databases/tables/delete-edge-constraint.md
             - name: 수정
               href: relational-databases/tables/modify-edge-constraint.md
@@ -6222,6 +6222,8 @@
               items:
                 - name: 비대칭 키 암호화의 강도
                   href: relational-databases/policy-based-management/asymmetric-keys-encryption-strength.md
+                - name: 데이터베이스 파일과 별개의 디바이스에서 파일 백업
+                  href: relational-databases/policy-based-management/backup-files-on-separate-devices-from-database-files.md
                 - name: 디스크 입/출력 하위 시스템에서 I/O 지연 문제 확인
                   href: relational-databases/policy-based-management/check-disk-input-and-output-subsystem-for-io-delay-problems.md
                 - name: 읽기 다시 시도 문제에 대한 디스크 입력-출력 하위 시스템 검사
@@ -6230,6 +6232,8 @@
                   href: relational-databases/policy-based-management/check-integrity-of-database-with-suspect-pages.md
                 - name: 올바른 선호도 마스크 및 선호도 입/출력 마스크 겹침
                   href: relational-databases/policy-based-management/correct-affinity-mask-and-affinity-input-and-output-mask-overlap.md
+                - name: 데이터베이스 복구 모델
+                  href: relational-databases/policy-based-management/database-recovery-model.md
                 - name: 기본 추적 로그 파일 해제
                   href: relational-databases/policy-based-management/default-trace-log-files-disabled.md
                 - name: 실패한 입/출력 요청 검색
@@ -6264,6 +6268,8 @@
                   href: relational-databases/policy-based-management/set-the-auto-close-database-option-to-off.md
                 - name: AUTO_SHRINK 데이터베이스 옵션을 OFF로 설정
                   href: relational-databases/policy-based-management/set-the-auto-shrink-database-option-to-off.md
+                - name: 사용자 데이터베이스의 데이터 정렬이 master 및 model 데이터베이스와 일치하도록 설정
+                  href: relational-databases/policy-based-management/set-collation-of-user-defined-databases-to-match-master-model-databases.md
                 - name: 최적 성능을 위해 최대 병렬 처리 수준 옵션 설정
                   href: relational-databases/policy-based-management/set-the-max-degree-of-parallelism-option-for-optimal-performance.md
                 - name: PAGE_VERIFY 데이터베이스 옵션을 CHECKSUM으로 설정

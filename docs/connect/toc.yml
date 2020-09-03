@@ -5787,6 +5787,10 @@
       href: ../connect/ruby/step-2-create-a-sql-database-for-ruby-development.md
     - name: '3단계: Ruby를 사용하여 SQL과 연결된 개념 증명'
       href: ../connect/ruby/step-3-proof-of-concept-connecting-to-sql-using-ruby.md
+- name: Spark
+  items:
+    - name: SQL Server용 커넥터
+      href: ../connect/spark/connector.md
 - name: ADO
   items:
     - name: Microsoft ADO(ActiveX Data Objects)
