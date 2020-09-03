@@ -201,23 +201,23 @@
                 - name: Python
                   items:
                     - name: Python 스크립트 실행
-                      href: machine-learning/tutorials/quickstart-python-create-script.md?toc=/sql/toc.json&view=sql-server-ver15
+                      href: machine-learning/tutorials/quickstart-python-create-script.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
                     - name: 데이터 구조 및 개체
-                      href: machine-learning/tutorials/quickstart-python-data-structures.md?toc=/sql/toc.json&view=sql-server-ver15
+                      href: machine-learning/tutorials/quickstart-python-data-structures.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
                     - name: Python 함수
-                      href: machine-learning/tutorials/quickstart-python-functions.md?toc=/sql/toc.json&view=sql-server-ver15
+                      href: machine-learning/tutorials/quickstart-python-functions.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
                     - name: 모델 학습 및 점수 매기기
-                      href: machine-learning/tutorials/quickstart-python-train-score-model.md?toc=/sql/toc.json&view=sql-server-ver15
+                      href: machine-learning/tutorials/quickstart-python-train-score-model.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
                 - name: R
                   items:
                     - name: R 스크립트 실행
-                      href: machine-learning/tutorials/quickstart-r-create-script.md?toc=/sql/toc.json&view=sql-server-ver15
+                      href: machine-learning/tutorials/quickstart-r-create-script.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
                     - name: 데이터 형식 및 개체
-                      href: machine-learning/tutorials/quickstart-r-data-types-and-objects.md?toc=/sql/toc.json&view=sql-server-ver15
+                      href: machine-learning/tutorials/quickstart-r-data-types-and-objects.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
                     - name: R 함수
-                      href: machine-learning/tutorials/quickstart-r-functions.md?toc=/sql/toc.json&view=sql-server-ver15
+                      href: machine-learning/tutorials/quickstart-r-functions.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
                     - name: 모델 학습 및 점수 매기기
-                      href: machine-learning/tutorials/quickstart-r-train-score-model.md?toc=/sql/toc.json&view=sql-server-ver15
+                      href: machine-learning/tutorials/quickstart-r-train-score-model.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
             - name: 기계 학습 자습서
               items:
                 - name: Python
@@ -225,87 +225,87 @@
                     - name: 스키 대여(선형 회귀)
                       items:
                         - name: 1 - 소개
-                          href: machine-learning/tutorials/python-ski-rental-linear-regression.md?toc=/sql/toc.json&view=sql-server-ver15
+                          href: machine-learning/tutorials/python-ski-rental-linear-regression.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
                         - name: 2 - 데이터 준비
-                          href: machine-learning/tutorials/python-ski-rental-linear-regression-prepare-data.md?toc=/sql/toc.json&view=sql-server-ver15
+                          href: machine-learning/tutorials/python-ski-rental-linear-regression-prepare-data.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
                         - name: 3 - 모델 학습
-                          href: machine-learning/tutorials/python-ski-rental-linear-regression-train-model.md?toc=/sql/toc.json&view=sql-server-ver15
+                          href: machine-learning/tutorials/python-ski-rental-linear-regression-train-model.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
                         - name: 4 - 모델 배포
-                          href: machine-learning/tutorials/python-ski-rental-linear-regression-deploy-model.md?toc=/sql/toc.json&view=sql-server-ver15
+                          href: machine-learning/tutorials/python-ski-rental-linear-regression-deploy-model.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
                     - name: 고객 분류(K-Means 클러스터링)
                       items:
                         - name: 1 - 소개
-                          href: machine-learning/tutorials/python-clustering-model.md?toc=/sql/toc.json&view=sql-server-ver15
+                          href: machine-learning/tutorials/python-clustering-model.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
                         - name: 2 - 데이터 준비
-                          href: machine-learning/tutorials/python-clustering-model-prepare-data.md?toc=/sql/toc.json&view=sql-server-ver15
+                          href: machine-learning/tutorials/python-clustering-model-prepare-data.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
                         - name: 3-모델 만들기
-                          href: machine-learning/tutorials/python-clustering-model-build.md?toc=/sql/toc.json&view=sql-server-ver15
+                          href: machine-learning/tutorials/python-clustering-model-build.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
                         - name: 4 - 모델 배포
-                          href: machine-learning/tutorials/python-clustering-model-deploy.md?toc=/sql/toc.json&view=sql-server-ver15
+                          href: machine-learning/tutorials/python-clustering-model-deploy.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
                     - name: NYC 택시 팁(분류)
                       items:
                         - name: 1 - 소개
-                          href: machine-learning/tutorials/python-taxi-classification-introduction.md?toc=/sql/toc.json&view=sql-server-ver15
+                          href: machine-learning/tutorials/python-taxi-classification-introduction.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
                         - name: 2 - 데이터 살펴보기
-                          href: machine-learning/tutorials/python-taxi-classification-explore-data.md?toc=/sql/toc.json&view=sql-server-ver15
+                          href: machine-learning/tutorials/python-taxi-classification-explore-data.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
                         - name: 3 - 기능 엔지니어링
-                          href: machine-learning/tutorials/python-taxi-classification-create-features.md?toc=/sql/toc.json&view=sql-server-ver15
+                          href: machine-learning/tutorials/python-taxi-classification-create-features.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
                         - name: 4 - 학습 및 배포
-                          href: machine-learning/tutorials/python-taxi-classification-train-model.md?toc=/sql/toc.json&view=sql-server-ver15
+                          href: machine-learning/tutorials/python-taxi-classification-train-model.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
                         - name: 5 - 예측
-                          href: machine-learning/tutorials/python-taxi-classification-deploy-model.md?toc=/sql/toc.json&view=sql-server-ver15
+                          href: machine-learning/tutorials/python-taxi-classification-deploy-model.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
                 - name: R
                   items:
                     - name: 스키 대여(의사 결정 트리)
                       items:
                         - name: 1 - 소개
-                          href: machine-learning/tutorials/r-predictive-model-introduction.md?toc=/sql/toc.json&view=sql-server-ver15
+                          href: machine-learning/tutorials/r-predictive-model-introduction.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
                         - name: 2 - 데이터 준비
-                          href: machine-learning/tutorials/r-predictive-model-prepare-data.md?toc=/sql/toc.json&view=sql-server-ver15
+                          href: machine-learning/tutorials/r-predictive-model-prepare-data.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
                         - name: 3 - 모델 학습
-                          href: machine-learning/tutorials/r-predictive-model-train.md?toc=/sql/toc.json&view=sql-server-ver15
+                          href: machine-learning/tutorials/r-predictive-model-train.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
                         - name: 4 - 모델 배포
-                          href: machine-learning/tutorials/r-predictive-model-deploy.md?toc=/sql/toc.json&view=sql-server-ver15
+                          href: machine-learning/tutorials/r-predictive-model-deploy.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
                     - name: 고객 분류(K-Means 클러스터링)
                       items:
                         - name: 1 - 소개
-                          href: machine-learning/tutorials/r-clustering-model-introduction.md?toc=/sql/toc.json&view=sql-server-ver15
+                          href: machine-learning/tutorials/r-clustering-model-introduction.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
                         - name: 2 - 데이터 준비
-                          href: machine-learning/tutorials/r-clustering-model-prepare-data.md?toc=/sql/toc.json&view=sql-server-ver15
+                          href: machine-learning/tutorials/r-clustering-model-prepare-data.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
                         - name: 3-모델 만들기
-                          href: machine-learning/tutorials/r-clustering-model-build.md?toc=/sql/toc.json&view=sql-server-ver15
+                          href: machine-learning/tutorials/r-clustering-model-build.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
                         - name: 4 - 모델 배포
-                          href: machine-learning/tutorials/r-clustering-model-deploy.md?toc=/sql/toc.json&view=sql-server-ver15
+                          href: machine-learning/tutorials/r-clustering-model-deploy.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
                     - name: NYC 택시 팁(분류)
                       items:
                         - name: 1 - 소개
-                          href: machine-learning/tutorials/r-taxi-classification-introduction.md?toc=/sql/toc.json&view=sql-server-ver15
+                          href: machine-learning/tutorials/r-taxi-classification-introduction.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
                         - name: 2 - 데이터 살펴보기
-                          href: machine-learning/tutorials/r-taxi-classification-explore-data.md?toc=/sql/toc.json&view=sql-server-ver15
+                          href: machine-learning/tutorials/r-taxi-classification-explore-data.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
                         - name: 3 - 기능 엔지니어링
-                          href: machine-learning/tutorials/r-taxi-classification-create-features.md?toc=/sql/toc.json&view=sql-server-ver15
+                          href: machine-learning/tutorials/r-taxi-classification-create-features.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
                         - name: 4 - 학습 및 배포
-                          href: machine-learning/tutorials/r-taxi-classification-train-model.md?toc=/sql/toc.json&view=sql-server-ver15
+                          href: machine-learning/tutorials/r-taxi-classification-train-model.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
                         - name: 5 - 예측
-                          href: machine-learning/tutorials/r-taxi-classification-deploy-model.md?toc=/sql/toc.json&view=sql-server-ver15
+                          href: machine-learning/tutorials/r-taxi-classification-deploy-model.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
             - name: 'Python, R 패키지 관리'
               items:
                 - name: Python
                   items:
                     - name: Python 패키지 정보 가져오기
-                      href: machine-learning/package-management/python-package-information.md?toc=/sql/toc.json&view=sql-server-ver15
+                      href: machine-learning/package-management/python-package-information.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
                     - name: sqlmlutils를 사용하여 설치
-                      href: machine-learning/package-management/install-additional-python-packages-on-sql-server.md?toc=/sql/toc.json&view=sql-server-ver15
+                      href: machine-learning/package-management/install-additional-python-packages-on-sql-server.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
                 - name: R
                   items:
                     - name: R 패키지 정보 가져오기
-                      href: machine-learning/package-management/r-package-information.md?toc=/sql/toc.json&view=sql-server-ver15
+                      href: machine-learning/package-management/r-package-information.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
                     - name: sqlmlutils를 사용하여 설치
-                      href: machine-learning/package-management/install-additional-r-packages-on-sql-server.md?toc=/sql/toc.json&view=sql-server-ver15
+                      href: machine-learning/package-management/install-additional-r-packages-on-sql-server.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
                     - name: miniCRAN 리포지토리 만들기
-                      href: machine-learning/package-management/create-a-local-package-repository-using-minicran.md?toc=/sql/toc.json&view=sql-server-ver15
+                      href: machine-learning/package-management/create-a-local-package-repository-using-minicran.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
                     - name: R 패키지 사용 팁
-                      href: machine-learning/package-management/tips-for-using-r-packages.md?toc=/sql/toc.json&view=sql-server-ver15
+                      href: machine-learning/package-management/tips-for-using-r-packages.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
             - name: PROSE Code Accelerator를 사용한 데이터 랭글링
               href: big-data-cluster/use-prose-for-big-data-automation.md
             - name: MLeap이 있는 Spark 기계 학습 모델
@@ -1831,7 +1831,7 @@
           items:
             - name: 생성
               href: relational-databases/tables/create-edge-constraints.md
-            - name: DELETE
+            - name: 삭제
               href: relational-databases/tables/delete-edge-constraint.md
             - name: 수정
               href: relational-databases/tables/modify-edge-constraint.md
@@ -4447,7 +4447,7 @@
         - name: 지원되는 버전 업그레이드 - SQL Server 2017
           href: database-engine/install-windows/supported-version-and-edition-upgrades-2017.md
         - name: 지원되는 버전 업그레이드 - SQL Server 2016
-          href: database-engine/install-windows/supported-version-and-edition-upgrades.md?view=sql-server-2016
+          href: database-engine/install-windows/supported-version-and-edition-upgrades.md?view=sql-server-2016&preserve-view=true
         - name: Data Migration Assistant를 실행하여 업그레이드 준비
           href: database-engine/install-windows/prepare-for-upgrade-by-running-data-migration-assistant.md
         - name: Analysis Services

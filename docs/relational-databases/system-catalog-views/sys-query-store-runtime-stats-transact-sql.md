@@ -22,12 +22,12 @@ ms.assetid: ccf7a57c-314b-450c-bd34-70749a02784a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1f59f8e08001ac926a0e129944753ecb40153217
-ms.sourcegitcommit: e103ae3f2d05431fdb8334aeaf1ed3b4fa1f593c
+ms.openlocfilehash: 72682acb5eba9b2fa651c1aa8d1ccc5345113db7
+ms.sourcegitcommit: 8689a1abea3e2b768cdf365143b9c229194010c0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89225203"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89424451"
 ---
 # <a name="sysquery_store_runtime_stats-transact-sql"></a>sys. query_store_runtime_stats (Transact-sql)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "89225203"
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**runtime_stats_id**|**bigint**|**Plan_id**, **execution_type** 및 **runtime_stats_interval_id**에 대 한 런타임 실행 통계를 나타내는 행의 식별자입니다. 이전 런타임 통계 간격에 대해서만 고유 합니다. 현재 활성 간격의 경우 **plan_id**에서 참조 하는 계획에 대 한 런타임 통계를 나타내는 여러 행이 **execution_type**표시 되는 실행 유형과 함께 있을 수 있습니다. 일반적으로 한 행은 디스크에 플러시된 런타임 통계를 나타내고 다른 하나는 메모리 내 상태를 나타냅니다. 따라서 모든 간격에 대 한 실제 상태를 가져오려면 메트릭을 집계 하 고 **plan_id**, **execution_type** 및 **runtime_stats_interval_id**를 기준으로 그룹화 해야 합니다.<br/>**참고:** Azure SQL Data Warehouse는 항상 0을 반환 합니다.|
+|**runtime_stats_id**|**bigint**|**Plan_id**, **execution_type** 및 **runtime_stats_interval_id**에 대 한 런타임 실행 통계를 나타내는 행의 식별자입니다. 이전 런타임 통계 간격에 대해서만 고유 합니다. 현재 활성 간격의 경우 **plan_id**에서 참조 하는 계획에 대 한 런타임 통계를 나타내는 여러 행이 **execution_type**표시 되는 실행 유형과 함께 있을 수 있습니다. 일반적으로 한 행은 디스크에 플러시된 런타임 통계를 나타내고 다른 하나는 메모리 내 상태를 나타냅니다. 따라서 모든 간격에 대 한 실제 상태를 가져오려면 메트릭을 집계 하 고 **plan_id**, **execution_type** 및 **runtime_stats_interval_id**를 기준으로 그룹화 해야 합니다.<br/>**참고:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 는 항상 0을 반환 합니다.|
 |**plan_id**|**bigint**|외래 키입니다. [Transact-sql&#41;&#40;query_store_plan ](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)에 조인 합니다.|  
 |**runtime_stats_interval_id**|**bigint**|외래 키입니다. [Transact-sql&#41;&#40;query_store_runtime_stats_interval ](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)에 조인 합니다.|  
 |**execution_type**|**tinyint**|쿼리 실행 유형을 결정 합니다.<br /><br /> 0-일반 실행 (완료 됨)<br /><br /> 3-클라이언트에서 시작한 실행 중단<br /><br /> 4-예외 실행 중단|  
@@ -49,66 +49,66 @@ ms.locfileid: "89225203"
 |**min_duration**|**bigint**|집계 간격 내의 쿼리 계획에 대 한 최소 기간 (마이크로초 단위)입니다.|  
 |**max_duration**|**bigint**|집계 간격 내의 쿼리 계획에 대 한 최대 기간 (마이크로초 단위)입니다.|  
 |**stdev_duration**|**float**|집계 간격 내의 쿼리 계획에 대 한 기간 표준 편차 (마이크로초 단위로 보고 됨)|  
-|**avg_cpu_time**|**float**|집계 간격 내의 쿼리 계획에 대 한 평균 CPU 시간 (마이크로초 단위)입니다.<br/>**참고:** Azure SQL Data Warehouse는 항상 0을 반환 합니다.|
-|**last_cpu_time**|**bigint**|집계 간격 (마이크로초 단위로 보고 됨) 내의 쿼리 계획에 대 한 마지막 CPU 시간입니다.<br/>**참고:** Azure SQL Data Warehouse는 항상 0을 반환 합니다.|
-|**min_cpu_time**|**bigint**|집계 간격 내의 쿼리 계획에 대 한 최소 CPU 시간 (마이크로초 단위)입니다.<br/>**참고:** Azure SQL Data Warehouse는 항상 0을 반환 합니다.|
-|**max_cpu_time**|**bigint**|집계 간격 내의 쿼리 계획에 대 한 최대 CPU 시간 (마이크로초 단위)입니다.<br/>**참고:** Azure SQL Data Warehouse는 항상 0을 반환 합니다.|
-|**stdev_cpu_time**|**float**|집계 간격 내의 쿼리 계획에 대 한 CPU 시간 표준 편차 (마이크로초 단위로 보고 됨)<br/>**참고:** Azure SQL Data Warehouse는 항상 0을 반환 합니다.|
-|**avg_logical_io_reads**|**float**|집계 간격 내의 쿼리 계획에 대 한 평균 논리적 i/o 읽기 수입니다. (8KB 페이지 읽기 수로 표시 됨).<br/>**참고:** Azure SQL Data Warehouse는 항상 0을 반환 합니다.|
-|**last_logical_io_reads**|**bigint**|집계 간격 내의 쿼리 계획에 대 한 마지막 논리적 i/o 읽기 수입니다. (8KB 페이지 읽기 수로 표시 됨).<br/>**참고:** Azure SQL Data Warehouse는 항상 0을 반환 합니다.|
-|**min_logical_io_reads**|**bigint**|집계 간격 내의 쿼리 계획에 대 한 최소 논리적 i/o 읽기 수입니다. (8KB 페이지 읽기 수로 표시 됨).<br/>**참고:** Azure SQL Data Warehouse는 항상 0을 반환 합니다.|
-|**max_logical_io_reads**|**bigint**|집계 간격 내의 쿼리 계획에 대 한 최대 논리적 i/o 읽기 수입니다. (8KB 페이지 읽기 수로 표시 됨).<br/>**참고:** Azure SQL Data Warehouse는 항상 0을 반환 합니다.|
-|**stdev_logical_io_reads**|**float**|집계 간격 내의 쿼리 계획에 대 한 논리적 i/o의 수를 읽습니다. (8KB 페이지 읽기 수로 표시 됨).<br/>**참고:** Azure SQL Data Warehouse는 항상 0을 반환 합니다.|
-|**avg_logical_io_writes**|**float**|집계 간격 내의 쿼리 계획에 대 한 평균 논리적 i/o 쓰기 수입니다.<br/>**참고:** Azure SQL Data Warehouse는 항상 0을 반환 합니다.|
-|**last_logical_io_writes**|**bigint**|집계 간격 내의 쿼리 계획에 대 한 마지막 논리적 i/o 쓰기 수입니다.<br/>**참고:** Azure SQL Data Warehouse는 항상 0을 반환 합니다.|
-|**min_logical_io_writes**|**bigint**|집계 간격 내의 쿼리 계획에 대 한 최소 논리적 i/o 쓰기 수입니다.<br/>**참고:** Azure SQL Data Warehouse는 항상 0을 반환 합니다.|
-|**max_logical_io_writes**|**bigint**|집계 간격 내의 쿼리 계획에 대 한 최대 논리적 i/o 쓰기 수입니다.<br/>**참고:** Azure SQL Data Warehouse는 항상 0을 반환 합니다.|
-|**stdev_logical_io_writes**|**float**|집계 간격 내의 쿼리 계획에 대 한 논리 i/o의 표준 편차 수입니다.<br/>**참고:** Azure SQL Data Warehouse는 항상 0을 반환 합니다.|
-|**avg_physical_io_reads**|**float**|집계 간격 내의 쿼리 계획에 대 한 실제 i/o 읽기 수입니다 (8KB 페이지 읽기 수로 표시 됨).<br/>**참고:** Azure SQL Data Warehouse는 항상 0을 반환 합니다.|
-|**last_physical_io_reads**|**bigint**|집계 간격 내의 쿼리 계획에 대 한 실제 실제 i/o 읽기 수 (8KB 페이지 읽기 수로 표시 됨)<br/>**참고:** Azure SQL Data Warehouse는 항상 0을 반환 합니다.|
-|**min_physical_io_reads**|**bigint**|집계 간격 내의 쿼리 계획에 대 한 물리적 i/o 읽기의 최소 수입니다 (8KB 페이지 읽기 수로 표시 됨).<br/>**참고:** Azure SQL Data Warehouse는 항상 0을 반환 합니다.|
-|**max_physical_io_reads**|**bigint**|집계 간격 내의 쿼리 계획에 대 한 실제 i/o 읽기의 최대 수입니다 (8KB 페이지 읽기 수로 표시 됨).<br/>**참고:** Azure SQL Data Warehouse는 항상 0을 반환 합니다.|
-|**stdev_physical_io_reads**|**float**|실제 i/o 수는 집계 간격 내의 쿼리 계획에 대 한 표준 편차를 읽습니다 (8KB 페이지 읽기 수로 표시 됨).<br/>**참고:** Azure SQL Data Warehouse는 항상 0을 반환 합니다.|
-|**avg_clr_time**|**float**|집계 간격 내의 쿼리 계획에 대 한 평균 CLR 시간 (마이크로초 단위)입니다.<br/>**참고:** Azure SQL Data Warehouse는 항상 0을 반환 합니다.|
-|**last_clr_time**|**bigint**|집계 간격 내의 쿼리 계획에 대 한 마지막 CLR 시간 (마이크로초 단위)입니다.<br/>**참고:** Azure SQL Data Warehouse는 항상 0을 반환 합니다.|
-|**min_clr_time**|**bigint**|집계 간격 내의 쿼리 계획에 대 한 최소 CLR 시간 (마이크로초 단위)입니다.<br/>**참고:** Azure SQL Data Warehouse는 항상 0을 반환 합니다.|
-|**max_clr_time**|**bigint**|집계 간격 내의 쿼리 계획에 대 한 최대 CLR 시간 (마이크로초 단위)입니다.<br/>**참고:** Azure SQL Data Warehouse는 항상 0을 반환 합니다.|
-|**stdev_clr_time**|**float**|집계 간격 내의 쿼리 계획에 대 한 CLR 시간 표준 편차 (마이크로초 단위로 보고 됨)<br/>**참고:** Azure SQL Data Warehouse는 항상 0을 반환 합니다.|
-|**avg_dop**|**float**|집계 간격 내의 쿼리 계획에 대 한 평균 DOP (병렬 처리 수준)입니다.<br/>**참고:** Azure SQL Data Warehouse는 항상 0을 반환 합니다.|
-|**last_dop**|**bigint**|집계 간격 내의 쿼리 계획에 대 한 마지막 DOP (병렬 처리 수준)입니다.<br/>**참고:** Azure SQL Data Warehouse는 항상 0을 반환 합니다.|
-|**min_dop**|**bigint**|집계 간격 내의 쿼리 계획에 대 한 최소 DOP (병렬 처리 수준)입니다.<br/>**참고:** Azure SQL Data Warehouse는 항상 0을 반환 합니다.|
-|**max_dop**|**bigint**|집계 간격 내의 쿼리 계획에 대 한 최대 DOP (병렬 처리 수준)입니다.<br/>**참고:** Azure SQL Data Warehouse는 항상 0을 반환 합니다.|
-|**stdev_dop**|**float**|집계 간격 내의 쿼리 계획에 대 한 DOP (병렬 처리 수준) 표준 편차<br/>**참고:** Azure SQL Data Warehouse는 항상 0을 반환 합니다.|
-|**avg_query_max_used_memory**|**float**|집계 간격 내의 쿼리 계획에 대 한 평균 메모리 부여 (8kb 페이지 수로 보고 됨)입니다. 고유 하 게 컴파일된 메모리 액세스에 최적화 된 프로시저를 사용 하는 쿼리의 경우 항상 0입니다.<br/>**참고:** Azure SQL Data Warehouse는 항상 0을 반환 합니다.|
-|**last_query_max_used_memory**|**bigint**|집계 간격 내의 쿼리 계획에 대 한 마지막 메모리 부여 (8kb 페이지 수로 보고 됨)입니다. 고유 하 게 컴파일된 메모리 액세스에 최적화 된 프로시저를 사용 하는 쿼리의 경우 항상 0입니다.<br/>**참고:** Azure SQL Data Warehouse는 항상 0을 반환 합니다.|
-|**min_query_max_used_memory**|**bigint**|집계 간격 내의 쿼리 계획에 대 한 최소 메모리 부여 (8kb 페이지 수로 보고 됨)입니다. 고유 하 게 컴파일된 메모리 액세스에 최적화 된 프로시저를 사용 하는 쿼리의 경우 항상 0입니다.<br/>**참고:** Azure SQL Data Warehouse는 항상 0을 반환 합니다.|
-|**max_query_max_used_memory**|**bigint**|집계 간격 내의 쿼리 계획에 대 한 최대 메모리 부여 (8kb 페이지 수로 보고 됨) 고유 하 게 컴파일된 메모리 액세스에 최적화 된 프로시저를 사용 하는 쿼리의 경우 항상 0입니다.<br/>**참고:** Azure SQL Data Warehouse는 항상 0을 반환 합니다.|
-|**stdev_query_max_used_memory**|**float**|집계 간격 내의 쿼리 계획에 대 한 메모리 부여 표준 편차 (8kb 페이지 수로 보고 됨) 고유 하 게 컴파일된 메모리 액세스에 최적화 된 프로시저를 사용 하는 쿼리의 경우 항상 0입니다.<br/>**참고:** Azure SQL Data Warehouse는 항상 0을 반환 합니다.|
-|**avg_rowcount**|**float**|집계 간격 내의 쿼리 계획에 대해 반환 되는 평균 행 수입니다.<br/>**참고:** Azure SQL Data Warehouse는 항상 0을 반환 합니다.|
-|**last_rowcount**|**bigint**|집계 간격 내의 쿼리 계획을 마지막으로 실행 했을 때 반환 된 행 수입니다.<br/>**참고:** Azure SQL Data Warehouse는 항상 0을 반환 합니다.|
-|**min_rowcount**|**bigint**|집계 간격 내의 쿼리 계획에 대해 반환 되는 최소 행 수입니다.<br/>**참고:** Azure SQL Data Warehouse는 항상 0을 반환 합니다.|
+|**avg_cpu_time**|**float**|집계 간격 내의 쿼리 계획에 대 한 평균 CPU 시간 (마이크로초 단위)입니다.<br/>**참고:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 는 항상 0을 반환 합니다.|
+|**last_cpu_time**|**bigint**|집계 간격 (마이크로초 단위로 보고 됨) 내의 쿼리 계획에 대 한 마지막 CPU 시간입니다.<br/>**참고:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 는 항상 0을 반환 합니다.|
+|**min_cpu_time**|**bigint**|집계 간격 내의 쿼리 계획에 대 한 최소 CPU 시간 (마이크로초 단위)입니다.<br/>**참고:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 는 항상 0을 반환 합니다.|
+|**max_cpu_time**|**bigint**|집계 간격 내의 쿼리 계획에 대 한 최대 CPU 시간 (마이크로초 단위)입니다.<br/>**참고:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 는 항상 0을 반환 합니다.|
+|**stdev_cpu_time**|**float**|집계 간격 내의 쿼리 계획에 대 한 CPU 시간 표준 편차 (마이크로초 단위로 보고 됨)<br/>**참고:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 는 항상 0을 반환 합니다.|
+|**avg_logical_io_reads**|**float**|집계 간격 내의 쿼리 계획에 대 한 평균 논리적 i/o 읽기 수입니다. (8KB 페이지 읽기 수로 표시 됨).<br/>**참고:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 는 항상 0을 반환 합니다.|
+|**last_logical_io_reads**|**bigint**|집계 간격 내의 쿼리 계획에 대 한 마지막 논리적 i/o 읽기 수입니다. (8KB 페이지 읽기 수로 표시 됨).<br/>**참고:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 는 항상 0을 반환 합니다.|
+|**min_logical_io_reads**|**bigint**|집계 간격 내의 쿼리 계획에 대 한 최소 논리적 i/o 읽기 수입니다. (8KB 페이지 읽기 수로 표시 됨).<br/>**참고:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 는 항상 0을 반환 합니다.|
+|**max_logical_io_reads**|**bigint**|집계 간격 내의 쿼리 계획에 대 한 최대 논리적 i/o 읽기 수입니다. (8KB 페이지 읽기 수로 표시 됨).<br/>**참고:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 는 항상 0을 반환 합니다.|
+|**stdev_logical_io_reads**|**float**|집계 간격 내의 쿼리 계획에 대 한 논리적 i/o의 수를 읽습니다. (8KB 페이지 읽기 수로 표시 됨).<br/>**참고:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 는 항상 0을 반환 합니다.|
+|**avg_logical_io_writes**|**float**|집계 간격 내의 쿼리 계획에 대 한 평균 논리적 i/o 쓰기 수입니다.<br/>**참고:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 는 항상 0을 반환 합니다.|
+|**last_logical_io_writes**|**bigint**|집계 간격 내의 쿼리 계획에 대 한 마지막 논리적 i/o 쓰기 수입니다.<br/>**참고:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 는 항상 0을 반환 합니다.|
+|**min_logical_io_writes**|**bigint**|집계 간격 내의 쿼리 계획에 대 한 최소 논리적 i/o 쓰기 수입니다.<br/>**참고:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 는 항상 0을 반환 합니다.|
+|**max_logical_io_writes**|**bigint**|집계 간격 내의 쿼리 계획에 대 한 최대 논리적 i/o 쓰기 수입니다.<br/>**참고:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 는 항상 0을 반환 합니다.|
+|**stdev_logical_io_writes**|**float**|집계 간격 내의 쿼리 계획에 대 한 논리 i/o의 표준 편차 수입니다.<br/>**참고:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 는 항상 0을 반환 합니다.|
+|**avg_physical_io_reads**|**float**|집계 간격 내의 쿼리 계획에 대 한 실제 i/o 읽기 수입니다 (8KB 페이지 읽기 수로 표시 됨).<br/>**참고:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 는 항상 0을 반환 합니다.|
+|**last_physical_io_reads**|**bigint**|집계 간격 내의 쿼리 계획에 대 한 실제 실제 i/o 읽기 수 (8KB 페이지 읽기 수로 표시 됨)<br/>**참고:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 는 항상 0을 반환 합니다.|
+|**min_physical_io_reads**|**bigint**|집계 간격 내의 쿼리 계획에 대 한 물리적 i/o 읽기의 최소 수입니다 (8KB 페이지 읽기 수로 표시 됨).<br/>**참고:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 는 항상 0을 반환 합니다.|
+|**max_physical_io_reads**|**bigint**|집계 간격 내의 쿼리 계획에 대 한 실제 i/o 읽기의 최대 수입니다 (8KB 페이지 읽기 수로 표시 됨).<br/>**참고:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 는 항상 0을 반환 합니다.|
+|**stdev_physical_io_reads**|**float**|실제 i/o 수는 집계 간격 내의 쿼리 계획에 대 한 표준 편차를 읽습니다 (8KB 페이지 읽기 수로 표시 됨).<br/>**참고:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 는 항상 0을 반환 합니다.|
+|**avg_clr_time**|**float**|집계 간격 내의 쿼리 계획에 대 한 평균 CLR 시간 (마이크로초 단위)입니다.<br/>**참고:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 는 항상 0을 반환 합니다.|
+|**last_clr_time**|**bigint**|집계 간격 내의 쿼리 계획에 대 한 마지막 CLR 시간 (마이크로초 단위)입니다.<br/>**참고:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 는 항상 0을 반환 합니다.|
+|**min_clr_time**|**bigint**|집계 간격 내의 쿼리 계획에 대 한 최소 CLR 시간 (마이크로초 단위)입니다.<br/>**참고:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 는 항상 0을 반환 합니다.|
+|**max_clr_time**|**bigint**|집계 간격 내의 쿼리 계획에 대 한 최대 CLR 시간 (마이크로초 단위)입니다.<br/>**참고:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 는 항상 0을 반환 합니다.|
+|**stdev_clr_time**|**float**|집계 간격 내의 쿼리 계획에 대 한 CLR 시간 표준 편차 (마이크로초 단위로 보고 됨)<br/>**참고:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 는 항상 0을 반환 합니다.|
+|**avg_dop**|**float**|집계 간격 내의 쿼리 계획에 대 한 평균 DOP (병렬 처리 수준)입니다.<br/>**참고:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 는 항상 0을 반환 합니다.|
+|**last_dop**|**bigint**|집계 간격 내의 쿼리 계획에 대 한 마지막 DOP (병렬 처리 수준)입니다.<br/>**참고:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 는 항상 0을 반환 합니다.|
+|**min_dop**|**bigint**|집계 간격 내의 쿼리 계획에 대 한 최소 DOP (병렬 처리 수준)입니다.<br/>**참고:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 는 항상 0을 반환 합니다.|
+|**max_dop**|**bigint**|집계 간격 내의 쿼리 계획에 대 한 최대 DOP (병렬 처리 수준)입니다.<br/>**참고:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 는 항상 0을 반환 합니다.|
+|**stdev_dop**|**float**|집계 간격 내의 쿼리 계획에 대 한 DOP (병렬 처리 수준) 표준 편차<br/>**참고:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 는 항상 0을 반환 합니다.|
+|**avg_query_max_used_memory**|**float**|집계 간격 내의 쿼리 계획에 대 한 평균 메모리 부여 (8kb 페이지 수로 보고 됨)입니다. 고유 하 게 컴파일된 메모리 액세스에 최적화 된 프로시저를 사용 하는 쿼리의 경우 항상 0입니다.<br/>**참고:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 는 항상 0을 반환 합니다.|
+|**last_query_max_used_memory**|**bigint**|집계 간격 내의 쿼리 계획에 대 한 마지막 메모리 부여 (8kb 페이지 수로 보고 됨)입니다. 고유 하 게 컴파일된 메모리 액세스에 최적화 된 프로시저를 사용 하는 쿼리의 경우 항상 0입니다.<br/>**참고:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 는 항상 0을 반환 합니다.|
+|**min_query_max_used_memory**|**bigint**|집계 간격 내의 쿼리 계획에 대 한 최소 메모리 부여 (8kb 페이지 수로 보고 됨)입니다. 고유 하 게 컴파일된 메모리 액세스에 최적화 된 프로시저를 사용 하는 쿼리의 경우 항상 0입니다.<br/>**참고:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 는 항상 0을 반환 합니다.|
+|**max_query_max_used_memory**|**bigint**|집계 간격 내의 쿼리 계획에 대 한 최대 메모리 부여 (8kb 페이지 수로 보고 됨) 고유 하 게 컴파일된 메모리 액세스에 최적화 된 프로시저를 사용 하는 쿼리의 경우 항상 0입니다.<br/>**참고:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 는 항상 0을 반환 합니다.|
+|**stdev_query_max_used_memory**|**float**|집계 간격 내의 쿼리 계획에 대 한 메모리 부여 표준 편차 (8kb 페이지 수로 보고 됨) 고유 하 게 컴파일된 메모리 액세스에 최적화 된 프로시저를 사용 하는 쿼리의 경우 항상 0입니다.<br/>**참고:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 는 항상 0을 반환 합니다.|
+|**avg_rowcount**|**float**|집계 간격 내의 쿼리 계획에 대해 반환 되는 평균 행 수입니다.<br/>**참고:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 는 항상 0을 반환 합니다.|
+|**last_rowcount**|**bigint**|집계 간격 내의 쿼리 계획을 마지막으로 실행 했을 때 반환 된 행 수입니다.<br/>**참고:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 는 항상 0을 반환 합니다.|
+|**min_rowcount**|**bigint**|집계 간격 내의 쿼리 계획에 대해 반환 되는 최소 행 수입니다.<br/>**참고:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 는 항상 0을 반환 합니다.|
 |**max_rowcount**|**bigint**|집계 간격 내의 쿼리 계획에 대해 반환 되는 최대 행 수입니다.|  
 |**stdev_rowcount**|**float**|집계 간격 내의 쿼리 계획에 대 한 반환 된 행 표준 편차 수입니다.|
-|**avg_log_bytes_used**|**float**|집계 간격 내에서 쿼리 계획에 사용 되는 데이터베이스 로그의 평균 바이트 수입니다.<br/>**참고:** Azure SQL Data Warehouse는 항상 0을 반환 합니다.|
-|**last_log_bytes_used**|**bigint**|집계 간격 내의 쿼리 계획을 마지막으로 실행 하는 데 사용 되는 데이터베이스 로그의 바이트 수입니다.<br/>**참고:** Azure SQL Data Warehouse는 항상 0을 반환 합니다.|
-|**min_log_bytes_used**|**bigint**|집계 간격 내에서 쿼리 계획에 사용 되는 데이터베이스 로그의 최소 바이트 수입니다.<br/>**참고:** Azure SQL Data Warehouse는 항상 0을 반환 합니다.|
-|**max_log_bytes_used**|**bigint**|집계 간격 내에서 쿼리 계획에 사용 되는 데이터베이스 로그의 최대 바이트 수입니다.<br/>**참고:** Azure SQL Data Warehouse는 항상 0을 반환 합니다.|
-|**stdev_log_bytes_used**|**float**|집계 간격 내에서 쿼리 계획에 사용 되는 데이터베이스 로그의 바이트 수에 대 한 표준 편차입니다.<br/>**참고:** Azure SQL Data Warehouse는 항상 0을 반환 합니다.|  
-|**avg_tempdb_space_used**|**float**|집계 간격 내의 쿼리 계획에 대 한 평균 tempdb 페이지 읽기 수입니다. (8KB 페이지 읽기 수로 표시 됨).<br><br/>**적용 대상:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
-|**last_tempdb_space_used**|**bigint**|집계 간격 내의 쿼리 계획에 대 한 마지막 tempdb 페이지 읽기 수입니다. (8KB 페이지 읽기 수로 표시 됨).<br><br/>**적용 대상:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
-|**min_tempdb_space_used**|**bigint**|집계 간격 내의 쿼리 계획에 대 한 tempdb 페이지 읽기의 최소 수입니다. (8KB 페이지 읽기 수로 표시 됨).<br><br/>**적용 대상:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
-|**max_tempdb_space_used**|**bigint**|집계 간격 내의 쿼리 계획에 대 한 tempdb 페이지 읽기의 최대 수입니다. (8KB 페이지 읽기 수로 표시 됨).<br><br/>**적용 대상:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
-|**stdev_tempdb_space_used**|**float**|Tempdb 페이지 수 집계 간격 내의 쿼리 계획에 대 한 표준 편차를 읽습니다. (8KB 페이지 읽기 수로 표시 됨).<br><br/>**적용 대상:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
-|**avg_page_server_io_reads**|**float**|집계 간격 내의 쿼리 계획에 대 한 페이지 서버 i/o 읽기의 평균 수입니다. (8KB 페이지 읽기 수로 표시 됨).<br><br/>**적용 대상:** Azure SQL Database Hyperscale</br>**참고:** Azure SQL Data Warehouse, Azure SQL Database, Azure SQL Managed Instance (비 hyperscale)는 항상 0을 반환 합니다.|
-|**last_page_server_io_reads**|**bigint**|집계 간격 내의 쿼리 계획에 대 한 페이지 서버 i/o 읽기의 마지막 수입니다. (8KB 페이지 읽기 수로 표시 됨).<br><br/>**적용 대상:** Azure SQL Database Hyperscale</br>**참고:** Azure SQL Data Warehouse, Azure SQL Database, Azure SQL Managed Instance (비 hyperscale)는 항상 0을 반환 합니다.|
-|**min_page_server_io_reads**|**bigint**|집계 간격 내의 쿼리 계획에 대 한 페이지 서버 i/o 읽기의 최소 수입니다. (8KB 페이지 읽기 수로 표시 됨).<br><br/>**적용 대상:** Azure SQL Database Hyperscale</br>**참고:** Azure SQL Data Warehouse, Azure SQL Database, Azure SQL Managed Instance (비 hyperscale)는 항상 0을 반환 합니다.|
-|**max_page_server_io_reads**|**bigint**|집계 간격 내의 쿼리 계획에 대 한 페이지 서버 i/o 읽기의 최대 수입니다. (8KB 페이지 읽기 수로 표시 됨).<br><br/>**적용 대상:** Azure SQL Database Hyperscale</br>**참고:** Azure SQL Data Warehouse, Azure SQL Database, Azure SQL Managed Instance (비 hyperscale)는 항상 0을 반환 합니다.|
-|**stdev_page_server_io_reads**|**float**|페이지 서버 i/o 수 집계 간격 내의 쿼리 계획에 대 한 표준 편차를 읽습니다. (8KB 페이지 읽기 수로 표시 됨).<br><br/>**적용 대상:** Azure SQL Database Hyperscale</br>**참고:** Azure SQL Data Warehouse, Azure SQL Database, Azure SQL Managed Instance (비 hyperscale)는 항상 0을 반환 합니다.|
+|**avg_log_bytes_used**|**float**|집계 간격 내에서 쿼리 계획에 사용 되는 데이터베이스 로그의 평균 바이트 수입니다.<br/>**참고:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 는 항상 0을 반환 합니다.|
+|**last_log_bytes_used**|**bigint**|집계 간격 내의 쿼리 계획을 마지막으로 실행 하는 데 사용 되는 데이터베이스 로그의 바이트 수입니다.<br/>**참고:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 는 항상 0을 반환 합니다.|
+|**min_log_bytes_used**|**bigint**|집계 간격 내에서 쿼리 계획에 사용 되는 데이터베이스 로그의 최소 바이트 수입니다.<br/>**참고:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 는 항상 0을 반환 합니다.|
+|**max_log_bytes_used**|**bigint**|집계 간격 내에서 쿼리 계획에 사용 되는 데이터베이스 로그의 최대 바이트 수입니다.<br/>**참고:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 는 항상 0을 반환 합니다.|
+|**stdev_log_bytes_used**|**float**|집계 간격 내에서 쿼리 계획에 사용 되는 데이터베이스 로그의 바이트 수에 대 한 표준 편차입니다.<br/>**참고:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 는 항상 0을 반환 합니다.|  
+|**avg_tempdb_space_used**|**float**|집계 간격 내의 쿼리 계획에 대해 tempdb에서 사용 된 평균 페이지 수 (8KB 페이지 수로 표시)입니다.<br><br/>**적용 대상:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
+|**last_tempdb_space_used**|**bigint**|집계 간격 (8KB 페이지로 표시) 내에서 쿼리 계획에 대해 tempdb에 사용 된 페이지의 마지막 수입니다.<br><br/>**적용 대상:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
+|**min_tempdb_space_used**|**bigint**|집계 간격 내의 쿼리 계획에 대해 tempdb에 사용 되는 최소 페이지 수입니다 (8KB 페이지로 표시 됨).<br><br/>**적용 대상:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
+|**max_tempdb_space_used**|**bigint**|집계 간격 내의 쿼리 계획에 대해 tempdb에 사용 되는 최대 페이지 수입니다 (8KB 페이지 수로 표시 됨).<br><br/>**적용 대상:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
+|**stdev_tempdb_space_used**|**float**|집계 간격 내의 쿼리 계획에 대 한 tempdb 표준 편차에 사용 되는 페이지 수입니다 (8KB 페이지로 표시 됨).<br><br/>**적용 대상:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
+|**avg_page_server_io_reads**|**float**|집계 간격 내의 쿼리 계획에 대 한 페이지 서버 i/o 읽기의 평균 수입니다 (8KB 페이지 읽기 수로 표시 됨).<br><br/>**적용 대상:** Azure SQL Database Hyperscale</br>**참고:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] , [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] , [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)] (비 hyperscale)은 항상 0을 반환 합니다.|
+|**last_page_server_io_reads**|**bigint**|집계 간격 내의 쿼리 계획에 대 한 페이지 서버 i/o 읽기의 마지막 수입니다 (8KB 페이지 읽기 수로 표시 됨).<br><br/>**적용 대상:** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 대규모</br>**참고:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] , [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] , [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)] (비 hyperscale)은 항상 0을 반환 합니다.|
+|**min_page_server_io_reads**|**bigint**|집계 간격 내의 쿼리 계획에 대 한 페이지 서버 i/o 읽기의 최소 수입니다 (8KB 페이지 읽기 수로 표시 됨).<br><br/>**적용 대상:** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 대규모</br>**참고:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] , [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] , [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)] (비 hyperscale)은 항상 0을 반환 합니다.|
+|**max_page_server_io_reads**|**bigint**|집계 간격 내의 쿼리 계획에 대 한 페이지 서버 i/o 읽기의 최대 수입니다 (8KB 페이지 읽기 수로 표시 됨).<br><br/>**적용 대상:** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 대규모</br>**참고:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] , [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] , [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)] (비 hyperscale)은 항상 0을 반환 합니다.|
+|**stdev_page_server_io_reads**|**float**|페이지 서버 i/o 수가 집계 간격 내의 쿼리 계획에 대 한 표준 편차를 읽습니다 (8KB 페이지 읽기 수로 표시 됨).<br><br/>**적용 대상:** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 대규모</br>**참고:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] , [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] , [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)] (비 hyperscale)은 항상 0을 반환 합니다.|
   
 ## <a name="permissions"></a>사용 권한  
 `VIEW DATABASE STATE` 권한이 필요합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [database_query_store_options &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
  [query_context_settings &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)   
  [query_store_plan &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)   
