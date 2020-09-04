@@ -21,12 +21,12 @@ author: CarlRabeler
 ms.author: carlrab
 ms.custom: seo-dt-2019
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 55bfc4c575cae194b45e6aa7dbd01fbe38562a82
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6011eb41fd70ca892a940881ceee398a08983952
+ms.sourcegitcommit: ce5197686e8e2592f9e0a4b1a4e8ea0681e26c41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88460672"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89432655"
 ---
 # <a name="sysdatabase_connection_stats-azure-sql-database"></a>sys.database_connection_stats(Azure SQL Database)
 
@@ -37,7 +37,7 @@ ms.locfileid: "88460672"
 |통계|Type|설명|  
 |---------------|----------|-----------------|  
 |**database_name**|**sysname**|데이터베이스의 이름입니다.|  
-|**start_time**|**datetime2**|집계 간격 시작의 UTC 날짜 및 시간입니다. 시간은 항상 5분의 배수입니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.<br /><br /> '2011-09-28 16:00:00'<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  
+|**start_time**|**datetime2**|집계 간격 시작의 UTC 날짜 및 시간입니다. 시간은 항상 5분의 배수입니다. 예:<br /><br /> '2011-09-28 16:00:00'<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  
 |**end_time**|**datetime2**|집계 간격 끝의 UTC 날짜 및 시간입니다. **End_time** 은 항상 같은 행에 있는 해당 **start_time** 보다 정확히 5 분 후입니다.|  
 |**success_count**|**int**|성공한 연결 수:|  
 |**total_failure_count**|**int**|실패한 연결의 총 수입니다. **Connection_failure_count**, **terminated_connection_count**및 **throttled_connection_count**의 합계 이며, 교착 상태 이벤트를 포함 하지 않습니다.|  
@@ -97,7 +97,7 @@ start_time                    end_time
 ```sql
 SELECT *  
 FROM sys.database_connection_stats
-WHERE start_time>='2011-09-25:12:00:00' and end_time<='2011-09-28 12:00:00';  
+WHERE start_time>='2011-09-25 12:00:00' and end_time<='2011-09-28 12:00:00';  
 ```  
 
 ## <a name="see-also"></a>참고 항목
