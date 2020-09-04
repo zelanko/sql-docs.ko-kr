@@ -2,7 +2,7 @@
 description: ALTER DATABASE(Transact-SQL)
 title: ALTER DATABASE(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/21/2020
+ms.date: 08/27/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: t-sql
@@ -27,12 +27,12 @@ ms.assetid: 15f8affd-8f39-4021-b092-0379fc6983da
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 553d84c62dfb9de6bc1bd18cde7b09965bfdf0d9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1feac396ec7a51a82f9070890fc17adf4cdecb57
+ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88467335"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89042387"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE(Transact-SQL)
 
@@ -602,7 +602,7 @@ SERVICE_OBJECTIVE를 지정하지 않으면 보조 데이터베이스가 주 데
 ELASTIC_POOL (name = \<elastic_pool_name>) ELASTIC_POOL을 지정하지 않으면 보조 데이터베이스는 탄력적 풀에서 생성되지 않습니다. ELASTIC_POOL을 지정하면 보조 데이터베이스는 탄력적인 풀에서 생성됩니다.
 
 > [!IMPORTANT]
-> ADD SECONDARY 명령을 실행하는 사용자는 주 서버에서 DBManager이고, 로컬 데이터베이스에서 db_owner 멤버 자격과 보조 서버에서 DBManager 멤버 자격이 있어야 합니다.
+> ADD SECONDARY 명령을 실행하는 사용자는 주 서버에서 DBManager이고, 로컬 데이터베이스에서 db_owner 멤버 자격과 보조 서버에서 DBManager 멤버 자격이 있어야 합니다. 클라이언트 IP 주소를 주 서버와 보조 서버 모두에 대한 방화벽 규칙의 허용 목록에 추가해야 합니다. 다른 클라이언트 IP 주소를 사용할 경우 주 서버에 추가된 것과 동일한 클라이언트 IP 주소를 보조 서버에도 추가해야 합니다. 이는 지역 복제를 시작하기 위해 ADD SECONDARY 명령을 실행하기 전에 수행해야 하는 필수 단계입니다.
 
 REMOVE SECONDARY ON SERVER \<partner_server_name> 지정된 서버에서 지정되고 지역 복제된 보조 데이터베이스를 제거합니다. 이 명령은 주 데이터베이스를 호스팅하는 서버의 master 데이터베이스에서 실행됩니다.
 

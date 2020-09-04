@@ -37,12 +37,12 @@ helpviewer_keywords:
 ms.assetid: 8bf1316f-c0ef-49d0-90a7-3946bc8e7a89
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: d7dccda143515b801f06664d1916fbec6e2dcea3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 88e4bea72d38e7c4a60bfb89d9962c58a99e4804
+ms.sourcegitcommit: 883435b4c7366f06ac03579752093737b098feab
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88445371"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89062332"
 ---
 # <a name="hints-transact-sql---table"></a>힌트(Transact-SQL) - 테이블
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -72,10 +72,9 @@ ms.locfileid: "88445371"
 WITH  ( <table_hint> [ [, ]...n ] )  
   
 <table_hint> ::=   
-[ NOEXPAND ] {   
-    INDEX  ( index_value [ ,...n ] )   
-  | INDEX =  ( index_value )      
-  | FORCESEEK [( index_value ( index_column_name  [ ,... ] ) ) ]  
+{ NOEXPAND [ , INDEX ( <index_value> [ ,...n ] ) | INDEX = ( <index_value> ) ]  
+  | INDEX ( <index_value> [ ,...n ] ) | INDEX = ( <index_value> )
+  | FORCESEEK [ ( <index_value> ( <index_column_name> [,... ] ) ) ] 
   | FORCESCAN  
   | FORCESEEK  
   | HOLDLOCK   
@@ -90,7 +89,7 @@ WITH  ( <table_hint> [ [, ]...n ] )
   | ROWLOCK   
   | SERIALIZABLE   
   | SNAPSHOT   
-  | SPATIAL_WINDOW_MAX_CELLS = integer  
+  | SPATIAL_WINDOW_MAX_CELLS = <integer_value>  
   | TABLOCK   
   | TABLOCKX   
   | UPDLOCK   
@@ -145,15 +144,15 @@ FROM t WITH (TABLOCK, INDEX(myindex))
 테이블 힌트 사이에는 쉼표를 사용하는 것이 좋습니다.  
   
 > [!IMPORTANT]  
->  힌트를 구분할 때 쉼표 대신 공백은 더 이상 사용할 수 없습니다. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]  
+> 힌트를 구분할 때 쉼표 대신 공백은 더 이상 사용할 수 없습니다. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]  
   
 NOEXPAND  
 쿼리 최적화 프로그램에서 쿼리를 처리할 때 기본 테이블에 액세스하기 위해 인덱싱된 뷰를 확장하지 않도록 지정합니다. 쿼리 최적화 프로그램은 뷰를 클러스터형 인덱스가 있는 테이블처럼 처리합니다. NOEXPAND는 인덱싱된 뷰에만 적용됩니다. 자세한 내용은 [NOEXPAND 사용](#using-noexpand)을 참조하세요.  
   
-INDEX  **(** _index\_value_ [ **,** ... _n_ ] ) | INDEX =  ( _index\_value_ **)**  
-INDEX() 구문은 쿼리 최적화 프로그램이 문을 처리할 때 사용할 인덱스 하나 이상의 이름이나 ID를 지정합니다. 대체 INDEX = 구문은 단일 인덱스 값을 지정하며 테이블당 하나의 인덱스 힌트만 지정할 수 있습니다.  
+INDEX  **(** _<index\_value>_ [ **,** ... _n_ ] ) | INDEX =  ( _<index\_value>_ **)**  
+INDEX() 구문은 쿼리 최적화 프로그램이 문을 처리할 때 사용할 인덱스 하나 이상의 이름이나 ID를 지정합니다. 대체 `INDEX =` 구문은 단일 인덱스 값을 지정합니다. 테이블당 하나의 인덱스 힌트만 지정할 수 있습니다.  
   
-클러스터형 인덱스가 있는 경우에는 INDEX(0)이 클러스터형 인덱스 검색을 강제 실행하고 INDEX(1)이 클러스터형 인덱스 검색 또는 찾기를 강제 실행합니다. 클러스터형 인덱스가 없는 경우 INDEX(0)은 테이블 검색을 강제 실행하고 INDEX(1)은 오류로 해석됩니다.  
+클러스터형 인덱스가 있는 경우에는 `INDEX(0)`이 클러스터형 인덱스 검색을 강제 실행하고 `INDEX(1)`이 클러스터형 인덱스 검색 또는 찾기를 강제 실행합니다. 클러스터형 인덱스가 없는 경우 `INDEX(0)`은 테이블 검색을 강제 실행하고 `INDEX(1)`은 오류로 해석됩니다.  
   
  단일 힌트 목록에서 여러 인덱스가 사용되는 경우에는 중복이 무시되고 나열된 인덱스 중 나머지를 사용하여 테이블의 행을 검색합니다. 이때 인덱스 힌트에 있는 인덱스의 순서가 중요합니다. 여러 인덱스 힌트는 또한 인덱스 AND 연산을 강제 실행하고 쿼리 최적화 프로그램은 액세스되는 각 인덱스에 대해 가능한 한 많은 조건을 적용합니다. 인덱스 힌트 컬렉션에 쿼리에서 참조하는 모든 열이 포함되지 않은 경우 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]이 모든 인덱싱된 열을 검색한 후 인출을 수행하여 남은 열을 검색합니다.  
   
@@ -181,7 +180,7 @@ BULK 옵션이 [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md)와
   
 INSERT ... SELECT * FROM OPENROWSET (BULK ...) 문에서 이 힌트를 사용하는 예제는 [대량 가져오기 수행 중 Null 유지 또는 기본값 사용&#40;SQL Server&#41;](../../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)을 참조하세요.  
   
-FORCESEEK [ **(** _index\_value_ **(** _index\_column\_name_ [ **,** ... _n_ ] **))** ]  
+FORCESEEK [ **(** _<index\_value>_ **(** _<index\_column\_name>_ [ **,** ... _n_ ] **))** ]  
 쿼리 최적화 프로그램이 테이블 또는 뷰의 데이터에 대한 액세스 경로로 Index Seek 연산만 사용하도록 지정합니다. 
 
 > [!NOTE]
@@ -234,7 +233,7 @@ FORCESCAN은 인덱스 힌트와 함께 또는 인덱스 힌트 없이 지정할
 FORCESCAN 힌트는 다음과 같은 제한 사항이 있습니다.  
 -   INSERT, UPDATE 또는 DELETE 문의 대상인 테이블에는 힌트를 지정할 수 없습니다.  
 -   힌트를 두 개 이상의 인덱스 힌트와 함께 사용할 수 없습니다.  
--   힌트는 최적화 프로그램이 테이블의 모든 공간 또는 XML 인덱스를 고려하지 않도록 합니다.  
+-   힌트는 쿼리 최적화 프로그램이 테이블의 모든 공간 또는 XML 인덱스를 고려하지 않도록 합니다.  
 -   원격 데이터 원본에 대해서는 힌트를 지정할 수 없습니다.  
 -   힌트는 FORCESEEK 힌트와 함께 지정할 수 없습니다.  
   
@@ -331,9 +330,9 @@ LEFT JOIN dbo.[Order History] AS oh
     ON c.customer_id=oh.customer_id;  
 ```  
   
-SPATIAL_WINDOW_MAX_CELLS = *integer*  
+SPATIAL_WINDOW_MAX_CELLS = *<integer\_value>*  
 **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상  
-geometry 또는 geography 개체의 공간 분할(tessellation)에 사용할 최대 셀 개수를 지정합니다. *number*는 1과 8192 사이의 값입니다.  
+geometry 또는 geography 개체의 공간 분할(tessellation)에 사용할 최대 셀 개수를 지정합니다. *<integer\_value>* 는 1과 8192 사이의 값입니다.  
   
 이 옵션을 사용하면 기본 및 보조 필터 실행 시간을 서로 조정하여 쿼리 실행 시간을 미세 조정할 수 있습니다. 숫자가 클수록 보조 필터 실행 시간은 줄어들고 기본 실행 필터 시간은 늘어나며 숫자가 작을수록 기본 필터 실행 시간은 줄어들고 보조 필터 실행은 늘어납니다. 밀도가 높은 공간 데이터의 경우 숫자가 높을수록 기본 필터로 더 정확한 근사값을 제공하여 실행 시간이 빨라지고 보조 필터 실행 시간이 줄어듭니다. 스파스 데이터의 경우 숫자가 낮을수록 기본 필터 실행 시간이 줄어듭니다.  
   
@@ -393,9 +392,9 @@ GO
 쿼리 최적화 프로그램은 SET 옵션에 필터링된 인덱스에 대한 필수 값이 없으면 인덱스 힌트를 인식하지 않습니다. 자세한 내용은 [CREATE INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)를 참조하세요.  
   
 ## <a name="using-noexpand"></a>NOEXPAND 사용  
-NOEXPAND는 *인덱싱된 뷰*에만 적용됩니다. 인덱싱된 뷰란 고유한 클러스터형 인덱스가 만들어져 있는 뷰를 의미합니다. 인덱싱된 뷰와 기본 테이블 모두에 있는 열에 대한 참조가 포함된 쿼리의 경우 쿼리 최적화 프로그램이 쿼리를 실행하는 데 인덱싱된 뷰를 사용하는 것이 최상의 방법이라고 결정하면 뷰의 인덱스를 사용합니다. 이 기능은 *인덱싱된 뷰 일치*라고 합니다. [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1 이전에는 쿼리 최적화 프로그램에서 인덱싱된 뷰를 자동으로 사용하는 것은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 특정 버전에서만 지원됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 지원되는 기능 목록은 [SQL Server 2016 버전에서 지원하는 기능](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요.  
+NOEXPAND는 *인덱싱된 뷰*에만 적용됩니다. 인덱싱된 뷰란 고유한 클러스터형 인덱스가 만들어져 있는 뷰를 의미합니다. 인덱싱된 뷰와 기본 테이블 모두에 있는 열에 대한 참조가 포함된 쿼리의 경우 쿼리 최적화 프로그램이 쿼리를 실행하는 데 인덱싱된 뷰를 사용하는 것이 최상의 방법이라고 결정하면 뷰의 인덱스를 사용합니다. 이 기능은 *인덱싱된 뷰 일치*라고 합니다. [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1 이전에는 쿼리 최적화 프로그램에서 인덱싱된 뷰를 자동으로 사용하는 것은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 특정 버전에서만 지원됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 지원되는 기능 목록은 [SQL Server 버전 2016에서 지원되는 기능](../../sql-server/editions-and-supported-features-for-sql-server-2016.md), [SQL Server 서버 2017에서 지원되는 기능](../../SQL-server/editions-and-components-of-SQL-server-2017.md), [SQL Server 버전 2019에서 지원되는 기능](../../sql-server/editions-and-components-of-sql-server-version-15.md)을 참조하세요.  
   
-단, 최적화 프로그램에서 일치시킬 인덱싱된 뷰를 고려하거나 NOEXPAND 힌트로 참조된 인덱싱된 뷰를 사용하려면 다음 SET 옵션을 ON으로 설정해야 합니다.  
+단, 쿼리 최적화 프로그램에서 일치시킬 인덱싱된 뷰를 고려하거나 NOEXPAND 힌트로 참조된 인덱싱된 뷰를 사용하려면 다음 SET 옵션을 ON으로 설정해야 합니다.  
 
 > [!NOTE]
 > [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]는 NOEXPAND 힌트를 지정하지 않고도 인덱싱된 뷰를 자동으로 사용할 수 있도록 지원합니다.
@@ -411,13 +410,13 @@ NOEXPAND는 *인덱싱된 뷰*에만 적용됩니다. 인덱싱된 뷰란 고유
 
 또한 NUMERIC_ROUNDABORT 옵션은 OFF로 설정해야 합니다.  
   
- 최적화 프로그램이 인덱싱된 뷰에 대한 인덱스를 강제로 사용하게 하려면 NOEXPAND 옵션을 지정합니다. 이 힌트는 뷰가 쿼리에서도 명명되어 있는 경우에만 사용할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 FROM 절에서 직접 뷰를 명명하지 않는 쿼리에서 특정 인덱싱된 뷰를 강제로 사용하도록 힌트를 제공하지 않지만 쿼리 최적화 프로그램은 쿼리에서 직접 참조되지 않은 경우에도 인덱싱된 뷰의 사용을 고려합니다. NOEXPAND 테이블 힌트를 사용하는 경우 SQL Server는 인덱싱된 보기의 통계만 자동으로 만듭니다. 이 힌트를 생략하면 수동으로 통계를 생성하여 확인할 수 없는 누락된 통계에 대한 실행 계획 경고가 발생할 수 있습니다. 쿼리 최적화 중 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 쿼리가 보기를 직접 참조하고 NOEXPAND 힌트를 사용할 때 자동 또는 수동으로 생성된 보기 통계를 사용합니다.    
+ 쿼리 최적화 프로그램이 인덱싱된 뷰에 대한 인덱스를 강제로 사용하게 하려면 NOEXPAND 옵션을 지정합니다. 이 힌트는 뷰가 쿼리에서도 명명되어 있는 경우에만 사용할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]은 FROM 절에서 직접 뷰를 명명하지 않는 쿼리에서 특정 인덱싱된 뷰를 강제로 사용하도록 힌트를 제공하지 않지만, 쿼리 최적화 프로그램은 쿼리에서 직접 참조되지 않은 경우에도 인덱싱된 뷰의 사용을 고려합니다. NOEXPAND 테이블 힌트를 사용하는 경우 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]은 인덱싱된 보기의 통계만 자동으로 만듭니다. 이 힌트를 생략하면 수동으로 통계를 생성하여 확인할 수 없는 누락된 통계에 대한 실행 계획 경고가 발생할 수 있습니다. 쿼리 최적화 중 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]는 쿼리가 보기를 직접 참조하고 NOEXPAND 힌트를 사용할 때 자동 또는 수동으로 생성된 보기 통계를 사용합니다.    
   
 ## <a name="using-a-table-hint-as-a-query-hint"></a>테이블 힌트를 쿼리 힌트로 사용  
  *테이블 힌트*는 OPTION (TABLE HINT) 절을 사용하여 쿼리 힌트로 지정할 수도 있습니다. 테이블 힌트는 [계획 지침](../../relational-databases/performance/plan-guides.md)의 컨텍스트에서 쿼리 힌트로만 사용하는 것이 좋습니다. 다른 임시 쿼리의 경우에는 이러한 힌트를 테이블 힌트로만 지정합니다. 자세한 내용은 [쿼리 힌트&#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)를 참조하세요.  
   
 ## <a name="permissions"></a>사용 권한  
- KEEPIDENTITY, IGNORE_CONSTRAINTS 및 IGNORE_TRIGGERS 힌트를 사용하려면 테이블에 대한 ALTER 권한이 필요합니다.  
+ KEEPIDENTITY, IGNORE_CONSTRAINTS 및 IGNORE_TRIGGERS 힌트를 사용하려면 테이블에 대한 `ALTER` 권한이 필요합니다.  
   
 ## <a name="examples"></a>예제  
   

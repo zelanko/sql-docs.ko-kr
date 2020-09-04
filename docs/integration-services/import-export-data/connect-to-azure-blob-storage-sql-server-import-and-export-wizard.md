@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e2e482b8-5f90-48c5-93fb-b412ed52659f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7338ef58a86667b829fc1554660b316690de451a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9848ba94687f6f4555492de868f32431b3e1de84
+ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425265"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89042410"
 ---
 # <a name="connect-to-azure-blob-storage-sql-server-import-and-export-wizard"></a>Azure Blob Storage에 연결(SQL Server 가져오기 및 내보내기 마법사)
 
@@ -52,7 +52,7 @@ Azure 스토리지 계정의 키를 입력합니다.
  스토리지 계정에 연결할 때 사용할 프로토콜(HTTP 또는 HTTPS)을 지정합니다.  
   
  **로컬 개발자 계정 사용**  
- 로컬 컴퓨터의 스토리지 에뮬레이터를 사용할지 여부를 지정합니다.  
+ 로컬 컴퓨터에 Azure Storage 에뮬레이터를 사용할지 여부를 지정합니다.  
   
  **Blob 컨테이너 이름**  
  지정된 스토리지 계정에서 사용할 수 있는 스토리지 컨테이너 목록에서 컨테이너를 선택합니다.  

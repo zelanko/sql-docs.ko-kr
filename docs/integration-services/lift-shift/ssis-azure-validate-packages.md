@@ -10,12 +10,12 @@ ms.technology: integration-services
 author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
-ms.openlocfilehash: 0012b7d1122de32834d6d71b2a32bbec45369c49
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 41985e8d39de843c8319ac3ac5622c4cb8b4aa51
+ms.sourcegitcommit: fe5dedb2a43516450696b754e6fafac9f5fdf3cf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916178"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89195139"
 ---
 # <a name="validate-sql-server-integration-services-ssis-packages-deployed-to-azure"></a>Azure에 배포된 SSIS(SQL Server Integration Services) 패키지 유효성 검사
 
@@ -67,7 +67,7 @@ Azure 서버의 SSIS 카탈로그(SSISDB)에 SQL Server Integration Services(SSI
 
 -   Attunity에 의한 Oracle 원본 및 대상
 -   Attunity에 의한 Teradata 원본 및 대상
--   SAP BI 원본 및 대상
+-   SAP BW 원본 및 대상
 
 ## <a name="validate-tasks-and-components"></a>작업 및 구성 요소 유효성 검사
 

@@ -25,12 +25,12 @@ ms.assetid: ca5fd220-d5ea-4182-8950-55d4101a86f6
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d470d95b2d6999d4f6825dce63a1a9c5b991d20a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1035d6b4cd6eedd12c2c9a193657fd8741488f2a
+ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426935"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88901144"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>ALTER DATABASE(Transact-SQL) 호환성 수준
 
@@ -82,7 +82,12 @@ COMPATIBILITY_LEVEL { 150 \| 140 \| 130 \| 120 \| 110 \| 100 \| 90 \| 80 } 데�
 - 사용자 데이터베이스의 호환성 수준이 업그레이드 이전에 100 이상이었다면 업그레이드 후에도 동일하게 유지됩니다.
 - 업그레이드 이전에 사용자데 이터베이스의 호환성 수준이 90이었다면 업그레이드된 데이터베이스에서는 호환성 수준이 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]에서 지원되는 가장 낮은 호환성 수준인 100으로 설정됩니다.
 - tempdb, 모델, msdb 및 리소스 데이터베이스의 호환성 수준이 제공된 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 버전의 기본 호환성 수준으로 설정됩니다. 
-- master 시스템 데이터베이스는 업그레이드 이전의 호환성 수준으로 유지됩니다.
+- master 시스템 데이터베이스는 업그레이드 이전의 호환성 수준으로 유지됩니다. 사용자 데이터베이스 동작에는 영향을 주지 않습니다. 
+
+낮은 호환성 수준으로 실행되는 기존 데이터베이스의 경우, 애플리케이션이 상위 데이터베이스 호환성 수준에서만 사용 가능한 향상 기능을 사용할 필요가 없는 한, 이전 데이터베이스 호환성 수준을 유지하는 것이 유효한 접근법입니다. 새로운 개발 작업을 수행하는 경우 또는 기존 애플리케이션에 [지능형 쿼리 처리](../../relational-databases/performance/intelligent-query-processing.md) 및 새로운 [!INCLUDE[tsql](../../includes/tsql-md.md)]와 같은 새 기능을 사용해야 하는 경우, 데이터베이스 호환성 수준을 사용 가능한 최신 수준으로 업그레이드하세요. 자세한 내용은 [호환성 수준 및 데이터베이스 엔진 업그레이드](../../database-engine/install-windows/compatibility-certification.md#compatibility-levels-and-database-engine-upgrades)를 참조하세요.     
+
+> [!NOTE]
+> 사용자 개체 및 종속성이 없는 경우 일반적으로 기본 호환성 수준으로 업그레이드하는 것이 안전합니다. 자세한 내용은 [권장 사항 - 마스터 데이터베이스](../../relational-databases/databases/master-database.md#recommendations)를 참조하세요.
 
 데이터베이스의 호환성 수준을 변경하려면 `ALTER DATABASE`를 사용합니다. 데이터베이스에 대한 새로운 호환성 수준 설정은 `USE <database>` 명령이 실행되거나 기본 데이터베이스로 해당 데이터베이스 컨텍스트를 사용하여 새 로그인이 처리될 때 적용됩니다.
 데이터베이스의 현재 호환성 수준을 보려면 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 카탈로그 뷰에서 `compatibility_level` 열을 쿼리합니다.

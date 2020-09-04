@@ -18,12 +18,12 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 54216c027c01855ba5f140e1ad17accba3f9e7f9
-ms.sourcegitcommit: 71985f03656a30381b2498ac5393aaf86f670bf3
+ms.openlocfilehash: e2f225a66be811b3cafe13c0ccf89eb81700a1aa
+ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88602208"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88901570"
 ---
 # <a name="copy-transact-sql-preview"></a>COPY(Transact-SQL)(미리 보기)
 
@@ -432,6 +432,15 @@ COPY 명령은 올해(2020년) 말에 출시될 예정입니다.
 ### <a name="are-there-any-limitations-on-the-number-or-size-of-files"></a>파일 개수 또는 크기에 제한이 있나요?
 파일 개수 또는 크기에 제한이 없습니다. 하지만 최상의 성능을 위해 4MB 이상의 파일을 사용하는 것이 좋습니다.
 
+### <a name="are-there-any-limitations-with-copy-using-synapse-workspaces-preview"></a>Synapse 작업 영역(미리 보기)을 사용하는 COPY에 제한이 있나요?
+
+관리 ID(MSI)를 사용한 인증은 COPY 문이나 PolyBase로 지원되지 않습니다(파이프라인에서 사용하는 경우 포함). 다음과 유사한 오류 메시지가 나타날 수 있습니다.
+
+*com.microsoft.sqlserver.jdbc.SQLServerException: 이 서버에서 관리 서비스 ID를 사용하도록 설정하지 않았습니다. 관리 서비스 ID를 사용하도록 설정하고 다시 시도하세요.*
+
+스토리지 계정이 VNet에 연결된 경우 MSI 인증이 필요합니다. 스토리지 계정이 VNet에 연결된 경우에는 COPY 또는 PolyBase 대신 BCP/Bulk insert를 사용하여 데이터를 로드해야 합니다.
+
+이 제한은 Synapse 작업 영역(미리 보기)에 속하는 SQL 풀에만 적용됩니다. 향후 릴리스에서는 Synapse 작업 영역에서 MSI 지원을 설정할 예정입니다. 
 
 피드백이나 문제가 있으면 배포 목록(sqldwcopypreview@service.microsoft.com)으로 보내주세요.
 

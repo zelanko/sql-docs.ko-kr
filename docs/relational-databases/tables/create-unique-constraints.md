@@ -18,12 +18,12 @@ ms.assetid: a86f9d6f-f242-43be-b65d-b3435b71b62a
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c641b2562fa15f17bcb6ce235529916ca70a2a52
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: 5a9be69bad3b4cad8265065d393bea75e107492f
+ms.sourcegitcommit: fe5dedb2a43516450696b754e6fafac9f5fdf3cf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88646323"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89195099"
 ---
 # <a name="create-unique-constraints"></a>UNIQUE 제약 조건 만들기
 
@@ -63,9 +63,9 @@ ms.locfileid: "88646323"
   
 3.  **인덱스/키** 대화 상자에서 **추가**를 클릭합니다.  
   
-4.  **일반**아래의 표에서 **형식** 을 선택하고 속성 오른쪽에 있는 드롭다운 목록 상자에서 **고유 키** 를 선택합니다.  
+4.  **일반** 아래의 그리드에서 **형식**을 선택하고 속성 오른쪽에 있는 드롭다운 목록 상자에서 **고유 키**를 선택한 다음 **닫기**를 클릭합니다.  
   
-5.  **파일** 메뉴에서 ‘테이블 이름’ **저장**을 클릭합니다.__  
+5.  **파일** 메뉴에서 ‘테이블 이름’ **저장을 클릭합니다.** __  
 
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   
@@ -106,7 +106,7 @@ ms.locfileid: "88646323"
   
     ```  
   
-#### <a name="to-create-a-unique-constraint-in-an-new-table"></a>새 테이블에 UNIQUE 제약 조건을 만들려면  
+#### <a name="to-create-a-unique-constraint-on-a-new-table"></a>새 테이블에 고유 제약 조건을 만들려면  
   
 1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   

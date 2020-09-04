@@ -30,12 +30,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: d75f734b3a45942155afaa7a85f4817fe868f3a0
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 1dd62f3d2d0a3ee3b63abd5d01fe33ba7dac196f
+ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88778552"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88900961"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET 옵션(Transact-SQL)
 
@@ -753,13 +753,13 @@ ON | **OFF** [ FORCED ] | CLEAR [ ALL ]
 쿼리 저장소를 사용하도록 설정합니다.
 
 OFF      
-쿼리 저장소를 사용하지 않도록 합니다. OFF가 기본값입니다. FORCED는 선택 사항입니다. FORCED는 실행 중인 모든 쿼리 저장소 백그라운드 태스크를 중단하고, 쿼리 저장소가 해제된 경우 동기 플러시를 건너뜁니다. 쿼리 저장소가 최대한 빨리 종료되도록 합니다. 실질적으로 쿼리 저장소를 즉시 해제합니다. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU6에 FORCED가 도입됩니다.
+쿼리 저장소를 사용하지 않도록 합니다. OFF가 기본값입니다. FORCED는 선택 사항입니다. FORCED는 실행 중인 모든 쿼리 저장소 백그라운드 태스크를 중단하고, 쿼리 저장소가 해제된 경우 동기 플러시를 건너뜁니다. 쿼리 저장소가 최대한 빨리 종료되도록 합니다. FORCED가 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU6 이상 빌드에 적용됩니다.
 
 > [!NOTE]  
 > 쿼리 저장소는 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 단일 데이터베이스 및 탄력적 풀에서 사용하지 않도록 설정할 수 없습니다. `ALTER DATABASE [database] SET QUERY_STORE = OFF`를 실행하면 경고 `'QUERY_STORE=OFF' is not supported in this version of SQL Server.`가 반환됩니다. 
 
 CLEAR     
-쿼리 저장소의 내용을 제거합니다.
+쿼리 저장소에서 쿼리 관련 데이터를 제거합니다. ALL은 선택 사항입니다. ALL은 쿼리 저장소에서 쿼리 관련 데이터와 메타데이터를 제거합니다.
 
 OPERATION_MODE { READ_ONLY | READ_WRITE }     
 쿼리 저장소의 작업 모드를 설명합니다.
@@ -1290,7 +1290,7 @@ NO_WAIT
 
 계획 캐시를 삭제하면 모든 후속 실행 계획이 다시 컴파일되며 일시적으로 갑자기 쿼리 성능이 저하될 수 있습니다. 계획 캐시의 삭제된 각 캐시스토어에 대해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그에 `SQL Server has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to some database maintenance or reconfigure operations`라는 정보 메시지가 있습니다. 이 메시지는 캐시가 해당 시간 간격 내에 플러시되는 동안 5분마다 기록됩니다.
 
-## <a name="examples"></a>예제
+## <a name="examples"></a>예
 
 ### <a name="a-setting-options-on-a-database"></a>A. 데이터베이스 옵션 설정
 
@@ -2215,7 +2215,7 @@ NO_WAIT
 |\<sql_option>|예|예|
 |\<target_recovery_time_option>|예|예|
 
-## <a name="examples"></a>예제
+## <a name="examples"></a>예
 
 ### <a name="a-setting-the-database-to-read_only"></a>A. 데이터베이스를 READ_ONLY로 설정
 데이터베이스 또는 파일 그룹의 상태를 READ_ONLY 또는 READ_WRITE로 변경하려면 데이터베이스에 대한 단독 액세스 권한이 필요합니다. 다음 예제에서는 데이터베이스를 `RESTRICTED_USER` 모드로 설정하여 액세스를 제한합니다. [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스의 상태를 `READ_ONLY` 로 설정한 후 데이터베이스 액세스를 모든 사용자에게 반환합니다.
@@ -3010,7 +3010,7 @@ NO_WAIT
 
 새로 만드는 모든 데이터베이스에 대한 데이터베이스 옵션의 기본값을 변경할 수 있습니다. 이렇게 하려면 model 데이터베이스에서 해당 데이터베이스 옵션을 변경합니다.
 
-## <a name="examples"></a>예제
+## <a name="examples"></a>예
 
 ### <a name="a-setting-the-database-to-read_only"></a>A. 데이터베이스를 READ_ONLY로 설정
 데이터베이스 또는 파일 그룹의 상태를 READ_ONLY 또는 READ_WRITE로 변경하려면 데이터베이스에 대한 단독 액세스 권한이 필요합니다. 다음 예제에서는 데이터베이스를 `RESTRICTED_USER` 모드로 설정하여 액세스를 제한합니다. [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스의 상태를 `READ_ONLY` 로 설정한 후 데이터베이스 액세스를 모든 사용자에게 반환합니다.
@@ -3339,7 +3339,7 @@ READ_COMMITTED_SNAPSHOT이 설정된 데이터베이스에서 여러 데이터 �
 
 READ_COMMITTED_SNAPSHOT 옵션을 설정하려면 사용자에게 데이터베이스에 대한 ALTER 권한이 있어야 합니다.
 
-## <a name="examples"></a>예제
+## <a name="examples"></a>예
 
 ### <a name="check-statistics-setting-for-a-database"></a>데이터베이스에 대한 통계 설정 확인
 

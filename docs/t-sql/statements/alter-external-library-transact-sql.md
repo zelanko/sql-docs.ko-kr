@@ -2,7 +2,7 @@
 description: ALTER EXTERNAL LIBRARY(Transact-SQL)
 title: ALTER EXTERNAL LIBRARY(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/10/2020
+ms.date: 08/26/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: machine-learning
@@ -18,12 +18,12 @@ author: dphansen
 ms.author: davidph
 manager: cgronlund
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: b899136782f19af9707e7855987b74647da4c8f0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f0c6ad88976ff2c61f77c5b00f15cd3e551ce111
+ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88479105"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89042417"
 ---
 # <a name="alter-external-library-transact-sql"></a>ALTER EXTERNAL LIBRARY(Transact-SQL)  
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
@@ -220,6 +220,8 @@ Python 언어의 경우 .whl 또는 .zip 파일의 패키지는 압축된 보관
 ::: moniker-end
 
 `ALTER EXTERNAL LIBRARY` 문은 라이브러리 비트를 데이터베이스에 업로드하기만 합니다. 수정된 라이브러리는 사용자가 라이브러리를 호출하는 [sp_execute_external_script(Transact-SQL)](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)의 코드를 실행할 때 설치됩니다.
+
+시스템 패키지라고 불리는 여러 패키지가 SQL 인스턴스에 미리 설치되어 있습니다. 사용자는 시스템 패키지를 추가, 업데이트, 제거할 수 없습니다.
 
 ## <a name="permissions"></a>사용 권한
 

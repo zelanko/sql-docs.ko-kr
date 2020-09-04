@@ -15,12 +15,12 @@ ms.assetid: 83a4aa90-1c10-4de6-956b-7c3cd464c2d2
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ef8640f7adc7e5da1e5095e44d16d201396c0924
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: dbee5b80fdb6f74ae3840f7728ae0eab2d24c28d
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88482561"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991854"
 ---
 # <a name="pages-and-extents-architecture-guide"></a>페이지 및 익스텐트 아키텍처 가이드
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -88,14 +88,23 @@ ms.locfileid: "88482561"
 * **균일** 익스텐트는 단일 개체가 소유합니다. 또한 익스텐트의 전체 8페이지는 소유하는 개체만 사용할 수 있습니다.
 * **혼합** 익스텐트는 최대 8개의 개체가 공유할 수 있습니다. 익스텐트의 8페이지를 각각 다른 개체가 소유할 수 있습니다.
 
-최대 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]까지, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 효율적인 공간 할당을 위해 적은 양의 데이터를 포함하는 테이블에 전체 익스텐트를 할당하지 않습니다. 일반적으로 새 테이블이나 인덱스에는 혼합 익스텐트의 페이지를 할당합니다. 테이블이나 인덱스의 페이지가 8페이지로 증가하면 후속 할당을 위해 균일 익스텐트를 사용하도록 전환됩니다. 인덱스에 8개의 페이지를 생성하는 데 충분한 행을 가진 기존 테이블에서 인덱스를 만드는 경우 인덱스에 대한 모든 할당 항목은 균일 익스텐트에 있습니다. 그러나 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]부터 데이터베이스에 있는 모든 할당의 기본값은 균일 익스텐트입니다.
+![균일 및 혼합 익스텐트](../relational-databases/media/extents.gif)
 
-![Extents](../relational-databases/media/extents.gif)
+최대 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]까지, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 효율적인 공간 할당을 위해 적은 양의 데이터를 포함하는 테이블에 전체 익스텐트를 할당하지 않습니다. 일반적으로 새 테이블이나 인덱스에는 혼합 익스텐트의 페이지를 할당합니다. 테이블이나 인덱스의 페이지가 8페이지로 증가하면 후속 할당을 위해 균일 익스텐트를 사용하도록 전환됩니다. 인덱스에 8개의 페이지를 생성하는 데 충분한 행을 가진 기존 테이블에서 인덱스를 만드는 경우 인덱스에 대한 모든 할당 항목은 균일 익스텐트에 있습니다. 
+
+[!INCLUDE[ssSQL15](../includes/sssql15-md.md)]부터 사용자 데이터베이스 및 tempdb의 할당 대부분에 대한 기본값은 [IAM 체인](#IAM)의 첫 8페이지에 속하는 할당을 제외하고 균일 익스텐트를 사용하는 것입니다. 마스터, msdb 및 모델 데이터베이스에 대한 할당은 여전히 이전 동작을 유지합니다. 
 
 > [!NOTE]
 > [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]까지, 추적 플래그 1118을 사용하여 항상 균일 익스텐트를 사용하도록 기본 할당을 변경할 수 있습니다. 이 추적 플래그에 대한 자세한 내용은 [DBCC TRACEON - 추적 플래그](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)를 참조하세요.   
 >   
-> [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]부터 TF 1118에서 제공하는 기능이 TempDB에서 자동으로 사용됩니다. 사용자 데이터베이스의 경우 이 동작은 기본값이 OFF로 설정된 `ALTER DATABASE`의 `SET MIXED_PAGE_ALLOCATION` 옵션에 의해 제어되며, 추적 플래그 1118은 영향을 미치지 않습니다. 자세한 내용은 [ALTER DATABASE SET 옵션(Transact-SQL)](../t-sql/statements/alter-database-transact-sql-set-options.md)을 참조하세요.
+> [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]부터 TF 1118에서 제공하는 기능이 tempdb에서 자동으로 사용됩니다. 사용자 데이터베이스의 경우 이 동작은 기본값이 OFF로 설정된 `ALTER DATABASE`의 `SET MIXED_PAGE_ALLOCATION` 옵션에 의해 제어되며, 추적 플래그 1118은 영향을 미치지 않습니다. 자세한 내용은 [ALTER DATABASE SET 옵션(Transact-SQL)](../t-sql/statements/alter-database-transact-sql-set-options.md)을 참조하세요.
+
+[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]부터 `sys.dm_db_database_page_allocations` 시스템 함수는 데이터베이스, 테이블, 인덱스 및 파티션에 대한 페이지 할당 정보를 보고할 수 있습니다.
+
+> [!IMPORTANT]
+> `sys.dm_db_database_page_allocations` 시스템 함수는 문서화되어 있지 않으며 변경될 수 있습니다. 호환성은 보장되지 않습니다. 
+
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]부터 [sys.dm_db_page_info](../relational-databases/system-dynamic-management-views/sys-dm-db-page-info-transact-sql.md) 시스템 함수를 사용할 수 있으며 데이터베이스의 페이지에 대한 정보를 반환합니다. 이 함수는 object_id, index_id, partition_id를 포함하여 페이지의 헤더 정보를 포함하는 하나의 행을 반환합니다. 이 함수를 사용하면 대부분의 경우에서 `DBCC PAGE`를 사용할 필요가 없습니다.
 
 ## <a name="managing-extent-allocations-and-free-space"></a>익스텐트 할당 및 빈 공간 관리 
 
@@ -141,7 +150,7 @@ ms.locfileid: "88482561"
 
 ![manage_extents](../relational-databases/media/manage-extents.gif)
 
-## <a name="managing-space-used-by-objects"></a>개체에서 사용하는 공간 관리 
+## <a name="managing-space-used-by-objects"></a><a name="IAM"></a> 개체에서 사용하는 공간 관리 
 
 **IAM(Index Allocation Map)** 페이지는 할당 단위에 사용되는 데이터베이스 파일의 4GB 부분에 익스텐트를 매핑합니다. 할당 단위의 유형은 다음 3가지가 있습니다.
 
@@ -149,10 +158,10 @@ ms.locfileid: "88482561"
     힙 또는 인덱스의 파티션을 포함합니다.
 
 - LOB_DATA   
-   xml, varbinary(max), varchar(max) 같은 LOB(Large Object) 데이터 유형에 적용됩니다.
+   XML, VARBINARY(max) 및 VARCHAR(max) 같은 LOB(Large Object) 데이터 유형에 적용됩니다.
 
 - ROW_OVERFLOW_DATA   
-   varchar, nvarchar, varbinary 또는 sql_variant 열에 저장된 가변 길이 데이터 중 행 크기 제한인 8,060바이트를 초과하는 가변 길이 데이터에 적용됩니다. 
+   VARCHAR, NVARCHAR, VARBINARY, SQL_VARIANT 열에 저장된 가변 길이 데이터 중, 행 크기 제한인 8,060바이트를 초과하는 가변 길이 데이터에 적용됩니다. 
 
 힙 또는 인덱스의 각 파티션에는 적어도 하나의 IN_ROW_DATA 할당 단위가 있습니다. 또한 힙 또는 인덱스 스키마에 따라 LOB_DATA 또는 ROW_OVERFLOW_DATA 할당 단위도 포함될 수 있습니다.
 
@@ -160,10 +169,10 @@ IAM 페이지는 파일에서 4GB 범위를 처리하며 이는 GAM 또는 SGAM 
 
 ![iam_pages](../relational-databases/media/iam-pages.gif)
 
-IAM 페이지는 필요에 따라 각 할당 단위에 대해 할당되고 파일에서 임의의 위치에 배치됩니다. 시스템 뷰(sys.system_internals_allocation_units)는 할당 단위에 대한 첫 번째 IAM 페이지를 가리킵니다. 해당 할당 단위에 대한 모든 IAM 페이지는 체인으로 연결됩니다.
+IAM 페이지는 필요에 따라 각 할당 단위에 대해 할당되고 파일에서 임의의 위치에 배치됩니다. `sys.system_internals_allocation_units` 시스템 뷰는 할당 단위의 첫 번째 IAM 페이지를 가리킵니다. 해당 할당 단위에 대한 모든 IAM 페이지는 IAM 체인으로 연결됩니다.
 
 > [!IMPORTANT]
-> `sys.system_internals_allocation_units` 시스템 뷰는 내부 전용이며 변경될 수 있습니다. 호환성은 보장되지 않습니다. 이 뷰는 Azure SQL Database에서 사용할 수 없습니다. 
+> `sys.system_internals_allocation_units` 시스템 뷰는 내부 전용이며 변경될 수 있습니다. 호환성은 보장되지 않습니다. 이 뷰는 [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)]에서 사용할 수 없습니다. 
 
 ![iam_chain](../relational-databases/media/iam-chain.gif)
  
@@ -192,5 +201,6 @@ DCM 페이지와 BCM 페이지 사이의 간격은 GAM 페이지와 SGAM 페이�
 ## <a name="see-also"></a>참고 항목
 [sys.allocation_units &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)     
 [힙&#40;클러스터형 인덱스가 없는 테이블&#41;](../relational-databases/indexes/heaps-tables-without-clustered-indexes.md#heap-structures)       
+[sys.dm_db_page_info](../relational-databases/system-dynamic-management-views/sys-dm-db-page-info-transact-sql.md)     
 [페이지 읽기](../relational-databases/reading-pages.md)   
 [페이지 쓰기](../relational-databases/writing-pages.md)   

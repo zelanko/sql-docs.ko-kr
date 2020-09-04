@@ -13,12 +13,12 @@ dev_langs:
 author: pmasl
 ms.author: umajay
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: b83bba2f706b88e6a11e8efb50aaf5be4c52c152
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a221857278cdd2e8b88d8f6f13084b4def9d3c88
+ms.sourcegitcommit: 173dbecfe78fd1bcc13a922b579a2bb9ad37b713
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417629"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88942306"
 ---
 # <a name="dbcc-pdw_showexecutionplan-transact-sql"></a>DBCC PDW_SHOWEXECUTIONPLAN(Transact-SQL)
 
@@ -46,7 +46,7 @@ DBCC PDW_SHOWEXECUTIONPLAN ( pdw_node_id, spid )
 
 ## <a name="arguments"></a>인수  
  *distribution_id*  
- 쿼리 계획을 실행하는 분포에 대한 식별자입니다. 이는 NULL이 아닌 정수여야 합니다. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]를 대상으로 할 때 사용합니다.  
+ 쿼리 계획을 실행하는 분포에 대한 식별자입니다. 이는 NULL이 아닌 정수여야 합니다. 값은 1에서 60 사이여야 합니다. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]를 대상으로 할 때 사용합니다.  
   
  *pdw_node_id*  
  쿼리 계획을 실행하는 노드에 대한 식별자입니다. 이는 NULL이 아닌 정수여야 합니다. 어플라이언스를 대상으로 할 때 사용합니다.  

@@ -11,18 +11,18 @@ ms.assetid: 4846a576-57ea-4068-959c-81e69e39ddc1
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 4b115c4249a0eded065ed95d45a7892ec1595911
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 187dcb7ca6da6802b60b36e2ae7f0fa5c66b0df1
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88467545"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88858107"
 ---
 # <a name="explain-transact-sql"></a>EXPLAIN(Transact-SQL) 
 
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
-  문을 실행하지 않고 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] [!INCLUDE[DWsql](../../includes/dwsql-md.md)] 문에 대한 쿼리 계획을 반환합니다. EXPLAIN을 사용하여 데이터 이동이 필요한 작업을 미리 보고 쿼리 작업의 예상 비용을 표시합니다. `WITH RECOMMENDATIONS`는 Azure SQL Data Warehouse(미리 보기)에 적용됩니다.
+  문을 실행하지 않고 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] [!INCLUDE[DWsql](../../includes/dwsql-md.md)] 문에 대한 쿼리 계획을 반환합니다. EXPLAIN을 사용하여 데이터 이동이 필요한 작업을 미리 보고 쿼리 작업의 예상 비용을 표시합니다. `WITH RECOMMENDATIONS`는 Azure SQL Data Warehouse에 적용됩니다.
   
 ## <a name="syntax"></a>구문  
   
@@ -37,7 +37,7 @@ EXPLAIN [WITH_RECOMMENDATIONS] SQL_statement
 
  EXPLAIN이 실행되는 [!INCLUDE[DWsql](../../includes/dwsql-md.md)] 문입니다. *SQL_statement*는 다음 명령 중 하나일 수 있습니다. SELECT, INSERT, UPDATE, DELETE, CREATE TABLE AS SELECT, CREATE REMOTE TABLE.
 
-*WITH_RECOMMENDATIONS*(미리 보기)
+*WITH_RECOMMENDATIONS* 
 
 SQL 문의 성능을 최적화하기 위한 권장 사항이 포함된 쿼리 계획을 반환합니다.  
   

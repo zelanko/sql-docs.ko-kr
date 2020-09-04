@@ -13,12 +13,12 @@ ms.assetid: 73f598cf-b02a-4dba-8d89-9fc0b55a12b8
 author: pmasl
 ms.author: umajay
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: b5f8274b7d73bb0119b165b1cfbe65473b499d55
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: eb279fea42cd37af2c0e215f8dcd66ddecb766cc
+ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88479825"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89042456"
 ---
 # <a name="dbcc-pdw_showspaceused-transact-sql"></a>DBCC PDW_SHOWSPACEUSED (Transact-SQL)
 
@@ -51,7 +51,7 @@ VIEW SERVER STATE 권한이 필요합니다.
   
 ## <a name="result-sets"></a>결과 집합
 
-다음은 모든 테이블에 관한 결과 집합입니다.
+다음은 모든 테이블에 관한 결과 집합입니다.  복제된 Synapse 테이블에 대한 캐시를 만들기 전, DBCC 결과에는 각 분포의 기본 라운드 로빈 테이블 총 크기가 반영됩니다.  캐시를 만든 후 결과에는 라운드 로빈 테이블 및 캐시의 총 크기가 반영됩니다.   
   
 |열|데이터 형식|Description|  
 |------------|---------------|-----------------|  
@@ -71,7 +71,7 @@ VIEW SERVER STATE 권한이 필요합니다.
 |index_space|bigint|인덱스에 사용된 공간(KB)입니다.||  
 |unused_space|bigint|예약된 공간이면서 사용되지 않은 공간(KB)입니다.||  
 |pdw_node_id|int|공간 사용량 보고에 사용되는 컴퓨팅 노드입니다.||  
-|distribution_id|int|공간 사용량 보고에 사용되는 배포입니다.|복제된 테이블의 경우 값이 -1입니다.|  
+|distribution_id|int|공간 사용량 보고에 사용되는 배포입니다.|병렬 데이터 웨어하우스의 경우 이 값은 복제 테이블에 대해 -1입니다.|  
   
 ## <a name="examples-sssdw-and-sspdw"></a>예: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 ### <a name="a-dbcc-pdw_showspaceused-basic-syntax"></a>A. DBCC PDW_SHOWSPACEUSED 기본 구문  

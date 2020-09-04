@@ -2,7 +2,7 @@
 description: CREATE EXTERNAL LIBRARY(Transact-SQL) - SQL Server
 title: CREATE EXTERNAL LIBRARY(Transact-SQL) - SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 06/10/2020
+ms.date: 08/26/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: machine-learning
@@ -20,12 +20,12 @@ author: dphansen
 ms.author: davidph
 manager: cgronlund
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: a625b369deeeae69475c94350b30f68b4cc8e5cc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 244a70115f293b3723359cbb3966db37d240c186
+ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426715"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89042484"
 ---
 # <a name="create-external-library-transact-sql"></a>CREATE EXTERNAL LIBRARY(Transact-SQL)  
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
@@ -148,7 +148,9 @@ WITH ( LANGUAGE = <language> )
 
 **library_name**
 
-라이브러리는 사용자로 범위 지정된 데이터베이스에 추가됩니다. 라이브러리 이름은 특정 사용자 또는 소유자의 컨텍스트 내에서 고유해야 합니다. 예를 들어 두 사용자 **RUser1** 및 **RUser2**는 모두 R 라이브러리 `ggplot2`를 개별적으로 업로드할 수도 있고 따로 업로드할 수도 있습니다. 그러나 **RUser1**이 새 버전의 `ggplot2`를 업로드하려는 경우 두 번째 인스턴스는 이름을 다르게 지정하거나 기존 라이브러리를 대체해야 합니다. 
+인스턴스에 업로드된 라이브러리는 퍼블릭 또는 프라이빗일 수 있습니다. 라이브러리가 `dbo`의 멤버에 의해 만들어진 경우, 라이브러리는 공용이며 모든 사용자와 공유될 수 있습니다. 그렇지 않으면 라이브러리는 해당 사용자에게만 프라이빗으로 제공됩니다.
+
+라이브러리 이름은 특정 사용자 또는 소유자의 컨텍스트 내에서 고유해야 합니다. 예를 들어 두 사용자 **RUser1** 및 **RUser2**는 모두 R 라이브러리 `ggplot2`를 개별적으로 업로드할 수도 있고 따로 업로드할 수도 있습니다. 그러나 **RUser1**이 새 버전의 `ggplot2`를 업로드하려는 경우 두 번째 인스턴스는 이름을 다르게 지정하거나 기존 라이브러리를 대체해야 합니다.
 
 라이브러리 이름은 임의로 할당될 수 없으며, 라이브러리 이름은 외부 스크립트에서 라이브러리를 로드하는 데 필요한 이름과 같아야 합니다.
 
@@ -228,6 +230,8 @@ Python 언어의 경우 .whl 또는 .zip 파일의 패키지는 압축된 보관
 `CREATE EXTERNAL LIBRARY` 문은 라이브러리 비트를 데이터베이스에 업로드합니다. 라이브러리는 사용자가 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)를 사용하여 외부 스크립트를 실행하고 패키지 또는 라이브러리를 호출할 때 설치됩니다.
 
 인스턴스에 업로드된 라이브러리는 퍼블릭 또는 프라이빗일 수 있습니다. 라이브러리가 `dbo`의 멤버에 의해 만들어진 경우, 라이브러리는 공용이며 모든 사용자와 공유될 수 있습니다. 그렇지 않으면 라이브러리는 해당 사용자에게만 프라이빗으로 제공됩니다.
+
+시스템 패키지라고 불리는 여러 패키지가 SQL 인스턴스에 미리 설치되어 있습니다. 사용자는 시스템 패키지를 추가, 업데이트, 제거할 수 없습니다.
 
 ## <a name="permissions"></a>사용 권한
 
