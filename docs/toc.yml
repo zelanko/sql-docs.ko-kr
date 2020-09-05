@@ -1831,7 +1831,7 @@
           items:
             - name: 생성
               href: relational-databases/tables/create-edge-constraints.md
-            - name: 삭제
+            - name: DELETE
               href: relational-databases/tables/delete-edge-constraint.md
             - name: 수정
               href: relational-databases/tables/modify-edge-constraint.md
@@ -8621,7 +8621,7 @@
                     - name: 스크립트 생성 마법사에 지원되는 개체
                       href: ssms/scripting/objects-supported-by-the-generate-scripts-wizard.md
                 - name: 쿼리 및 텍스트 편집기
-                  href: ssms/scripting/query-and-text-editors-sql-server-management-studio.md
+                  href: 'https://docs.microsoft.com/sql/ssms/f1-help/database-engine-query-editor-sql-server-management-studio?view=sql-server-ver15'
                   items:
                     - name: XML 편집기
                       href: ssms/scripting/xml-editor-sql-server-management-studio.md
