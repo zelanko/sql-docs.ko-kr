@@ -12,12 +12,12 @@ ms.assetid: d8506bda-66dd-45a4-bfc9-3a10fa665acc
 author: lrtoyou1223
 ms.author: lle
 manager: erikre
-ms.openlocfilehash: 88304221dfa827679f787c55ec5065722cc9bc39
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: dbbe6d602472a62e6d94c747a8856c507d8b2e06
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88344159"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480568"
 ---
 # <a name="deprecated-master-data-services-features"></a>사용되지 않는 Master Data Services 기능
 
@@ -54,7 +54,7 @@ ms.locfileid: "88344159"
 * [멤버 수정 기록](../master-data-services/member-revision-history-master-data-services.md)
   
 ## <a name="external-resources"></a>외부 리소스  
- msdn.com의 블로그 게시물 [사용되지 않음: 명시적 계층 및 컬렉션](https://go.microsoft.com/fwlink/p/?LinkId=615373)  
+ msdn.com의 블로그 게시물 [사용되지 않음: 명시적 계층 및 컬렉션](https://techcommunity.microsoft.com/t5/sql-server-integration-services/deprecated-explicit-hierarchies-and-collections/ba-p/388221)  
   
 ## <a name="see-also"></a>참고 항목  
  [지원되지 않는 MDS(Master Data Services) 기능](../master-data-services/discontinued-master-data-services-features.md)  

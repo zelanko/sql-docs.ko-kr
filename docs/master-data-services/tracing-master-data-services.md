@@ -12,12 +12,12 @@ ms.assetid: 45823fc8-723a-49f2-9a11-94d241245cfd
 author: lrtoyou1223
 ms.author: lle
 manager: erikre
-ms.openlocfilehash: e471a3ab0f6d2ce120ae5b20cd07ef71891dadc9
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: da6742e7c2801db245002688c04fcb22ada1723a
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812688"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480448"
 ---
 # <a name="tracing-master-data-services"></a>추적(Master Data Services)
 
@@ -70,6 +70,6 @@ ms.locfileid: "85812688"
     |메시지|추적의 메시지 본문입니다.|  
   
 ## <a name="external-resources"></a>외부 리소스  
- msdn.com의 블로그 게시물 [로깅 문제 해결 개선](https://go.microsoft.com/fwlink/p/?LinkId=615377)  
+ msdn.com의 블로그 게시물 [로깅 문제 해결 개선](https://techcommunity.microsoft.com/t5/sql-server-integration-services/troubleshooting-logging-improvement/ba-p/388214)  
   
   

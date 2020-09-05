@@ -14,12 +14,12 @@ ms.assetid: 1bbe4ea4-dda4-47eb-aca1-ddcc3829a6f4
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 53c818a6d5146d8fffec64c4cbe97b54672f9ba6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8f87d123e9400d068b31ad45d193c17d8df2c526
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498895"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480338"
 ---
 # <a name="finding-more-sql-server-native-client-information"></a>SQL Server Native Client 추가 정보 찾기
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "88498895"
  [데이터 액세스 및 스토리지 개발자 센터(Data Access and Storage Developer Center)](https://go.microsoft.com/fwlink?linkid=4173)  
  이 사이트에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 및 다른 데이터 액세스 기술에 대한 기술 문서, 예제 코드 및 기타 리소스를 제공합니다.  
   
- [데이터 액세스 블로그](https://go.microsoft.com/fwlink/?LinkId=48617)  
+ [데이터 액세스 블로그](https://docs.microsoft.com/archive/blogs/dataaccess/quick-update-re-data-access-blog)  
  이 블로그 사이트에서는 데이터 액세스 기술에 대한 정보를 제공하며 제품 팀의 멤버와 직접 상호 작용할 수 있습니다.  
   
  [Windows Data Access Components](https://go.microsoft.com/fwlink/?LinkId=107907)  

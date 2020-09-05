@@ -1,5 +1,5 @@
 ---
-title: Administrators
+title: 관리자
 description: 모델 관리자, 엔터티 관리자 및 슈퍼 사용자 MDS(Master Data Services)의 관리자 유형에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 03/01/2017
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d330aa4e-6ade-4b09-b376-1b15d6c78f7d
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: a8f4fd055394df55b96b8694621d430bbac6c320
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: b37c0ef345819c313bf2246df1dc01aec21d1299
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812838"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480324"
 ---
 # <a name="administrators-master-data-services"></a>관리자(Master Data Services)
 
@@ -72,7 +72,7 @@ ms.locfileid: "85812838"
 |엔터티 관리자|명시적으로 할당된 관리자 권한 또는 그룹에서 상속된 사용 권한에 따라 엔터티 관리자로 지정될 수 있습니다.<br /><br /> 액세스 권한이 부여된 기능 영역에 대해서만 액세스 권한을 가집니다.<br /><br /> 특정 엔터티의 모든 개체 및 멤버에 대한 모든 권한이 자동으로 부여됩니다.<br /><br /> 엔터티 변경 시 승인이 필요한 경우 보류 중인 변경 집합을 승인할 수 있습니다.|  
   
 ## <a name="external-resources"></a>외부 리소스  
- msdn.com의 블로그 게시물 [향상된 보안 기능](https://go.microsoft.com/fwlink/p/?LinkId=615376)  
+ msdn.com의 블로그 게시물 [향상된 보안 기능](https://docs.microsoft.com/archive/blogs/e7/improvements-to-autoplay)  
   
 ## <a name="see-also"></a>참고 항목  
  [모델 관리자 &#40;MDS(Master Data Services)를 만듭니다&#41;](../master-data-services/create-a-model-administrator-master-data-services.md)   
