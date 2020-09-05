@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ad530f60-d480-4457-ba7a-93a10c8a1695
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: f45667dad4466789823a8ff36ccc0b665f531db3
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 1aa72c49e5862621da193d4e4a400813c7cd0d91
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813927"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480595"
 ---
 # <a name="what39s-new-in-master-data-services-mds"></a>MDS(Master Data Services)의 새로운 기능
 
@@ -71,7 +71,7 @@ ms.locfileid: "85813927"
   
  조각화가 30%를 넘는 인덱스는 온라인으로 다시 작성됩니다. 다시 작성되는 동안 같은 테이블의 CRUD 작업 성능이 저하됩니다. 성능 저하가 걱정되는 경우 업무 시간 외에 저장 프로시저를 실행하는 것이 좋습니다. 인덱스 조각화에 대한 자세한 내용은 [Reorganize and Rebuild Indexes](../relational-databases/indexes/reorganize-and-rebuild-indexes.md)을 참조하십시오.  
   
- 자세한 내용은 Master Data Services 블로그에서 [SQL Server 2016의 성능 및 배율 향상](https://go.microsoft.com/fwlink/p/?LinkId=615375)게시물을 참조하세요.  
+ 자세한 내용은 Master Data Services 블로그에서 [SQL Server 2016의 성능 및 배율 향상](https://techcommunity.microsoft.com/t5/sql-server-integration-services/performance-and-scale-improvement-in-sql-server-2016/ba-p/388225)게시물을 참조하세요.  
   
 ##  <a name="improved-security"></a>보안 향상:  
   
@@ -123,7 +123,7 @@ ms.locfileid: "85813927"
   
 -   Name 및 Code 특성 이름 바꾸기 및 숨기기  
   
- 자세한 내용은 다음 항목을 참조하세요.  
+ 자세한 내용은 다음 항목을 참조하십시오.  
   
 -   [모델&#40;Master Data Services&#41;](../master-data-services/models-master-data-services.md)  
   

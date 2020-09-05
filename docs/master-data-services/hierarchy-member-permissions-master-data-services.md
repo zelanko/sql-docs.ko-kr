@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b3880eed-1bf6-4f65-ab23-b08c194cc858
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 3911b44ee31c0bb4cd4e8b829bf3d8e2c70e9913
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 32b74832ff779ed01cb6821512187cd79d7af896
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88344099"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480665"
 ---
 # <a name="hierarchy-member-permissions-master-data-services"></a>계층 멤버 권한(Master Data Services)
 
@@ -44,7 +44,7 @@ ms.locfileid: "88344099"
 |**만들기**|계층 멤버 권한에서는 만들기 권한이 제공되지 않습니다.|  
 |**Update**|멤버가 표시되며 사용자가 멤버를 변경할 수 있습니다. 또한 사용자는 멤버가 속한 모든 명시적 계층이나 컬렉션에서 멤버를 이동할 수도 있습니다.|  
 |**Delete**|멤버가 표시되며 사용자가 멤버를 삭제할 수 있습니다.|  
-|**거부**|멤버가 표시되지 않습니다.|  
+|**Deny**|멤버가 표시되지 않습니다.|  
   
  **계층 멤버** 탭에서 할당하는 사용 권한은 즉시 적용되지 않습니다. 사용 권한이 적용되는 주기는 **데이터베이스의 시스템 설정 테이블에 지정된** 멤버 보안 처리 간격 설정 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 에 따라 다릅니다. [멤버 권한 즉시 적용&#40;Master Data Services&#41;](../master-data-services/immediately-apply-member-permissions-master-data-services.md)의 단계를 수행하여 멤버 권한을 즉시 적용할 수 있습니다.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "88344099"
 -   한 계층 노드에는 **Create** / **Read** / **Update** / **Delete** 권한의 조합이 할당 되 고 다른 노드에는 **거부** 권한이 할당 된 경우에는 노드의 멤버에 대 한 액세스가 거부 됩니다.  
   
 ## <a name="external-resources"></a>외부 리소스  
- msdn.com의 블로그 게시물 [향상된 보안 기능](https://go.microsoft.com/fwlink/p/?LinkId=615376)  
+ msdn.com의 블로그 게시물 [향상된 보안 기능](https://docs.microsoft.com/archive/blogs/e7/improvements-to-autoplay)  
   
 ## <a name="see-also"></a>참고 항목  
  [계층 멤버 권한 할당 &#40;MDS(Master Data Services)&#41;](../master-data-services/assign-hierarchy-member-permissions-master-data-services.md)   

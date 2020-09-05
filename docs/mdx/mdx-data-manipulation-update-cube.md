@@ -9,17 +9,17 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 9958fa6e7efe7b3bc42dd04aebc295f1ee2d0944
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 142783612b495d7968fec1574e182654ac83fb64
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88476995"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480673"
 ---
 # <a name="mdx-data-manipulation---update-cube"></a>MDX 데이터 조작 - UPDATE CUBE
 
 
-  UPDATE CUBE 문은 SUM 집계를 사용하여 부모에 집계하는 큐브의 셀에 데이터를 쓰기 저장하는 데 사용됩니다. 자세한 설명 및 예제를 보려면이 블로그 게시물: [Analysis Services 사용 하 여 쓰기 저장 응용 프로그램 빌드 (블로그)](https://go.microsoft.com/fwlink/?LinkId=394977)의 "할당 이해"를 참조 하세요.  
+  UPDATE CUBE 문은 SUM 집계를 사용하여 부모에 집계하는 큐브의 셀에 데이터를 쓰기 저장하는 데 사용됩니다. 자세한 설명 및 예제를 보려면이 블로그 게시물: [Analysis Services 사용 하 여 쓰기 저장 응용 프로그램 빌드 (블로그)](https://docs.microsoft.com/archive/blogs/data_otaku/building-a-writeback-application-with-analysis-services)의 "할당 이해"를 참조 하세요.  
   
 ## <a name="syntax"></a>구문  
   

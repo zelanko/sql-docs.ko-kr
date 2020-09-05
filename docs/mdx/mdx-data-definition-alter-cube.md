@@ -9,17 +9,17 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 470a71cb88a6ea35ddadcc53e83fe60ebd369bbb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 97d0653a08d2b08b0cafa5ae23b329c6193b5181
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88494896"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480611"
 ---
 # <a name="mdx-data-definition---alter-cube"></a>MDX 데이터 정의 - ALTER CUBE
 
 
-  일반적으로 차원 쓰기 저장을 지원하는 데 사용되는 지정한 큐브의 구조를 변경합니다. 응용 프로그램에서 쓰기 저장을 사용 하는 방법에 대 한 자세한 내용은이 블로그 게시물: [Analysis Services 사용 하 여 쓰기 저장 응용 프로그램 빌드 (블로그)](https://go.microsoft.com/fwlink/?LinkId=394977) 를 참조 하세요.  
+  일반적으로 차원 쓰기 저장을 지원하는 데 사용되는 지정한 큐브의 구조를 변경합니다. 응용 프로그램에서 쓰기 저장을 사용 하는 방법에 대 한 자세한 내용은이 블로그 게시물: [Analysis Services 사용 하 여 쓰기 저장 응용 프로그램 빌드 (블로그)](https://docs.microsoft.com/archive/blogs/data_otaku/building-a-writeback-application-with-analysis-services) 를 참조 하세요.  
   
  동시 차원 쓰기 저장으로 교착 상태가 발생할 수 있습니다. 두 번째 쓰기 저장이 보유한 공유 잠금으로 인해 커밋에서 첫 번째 쓰기 저장이 차단됩니다. 이 상황에서 발생되는 오류는 없지만 아무 작업도 진행할 수 없습니다. 결국 제한 시간 및 변경 내용이 롤백됩니다.  
   

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4cd2fa6f-9c76-4b7a-ae18-d4e5fd2f03f5
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: bfaa5eb1d111b29de1354a48f779c5d628e041dc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9f98afd4445d135ba7437f42c7f71355e265217c
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88342249"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480345"
 ---
 # <a name="transactions-master-data-services"></a>트랜잭션(Master Data Services)
 
@@ -94,7 +94,7 @@ EXEC mdm.udpEntityStagingBatchTableCleanup @ModelID, @CleanupOlderThanDate;
 |트랜잭션을 되돌려 동작을 실행 취소합니다(관리자에만 해당).|[트랜잭션 되돌리기&#40;Master Data Services&#41;](../master-data-services/reverse-a-transaction-master-data-services.md)|  
   
 ## <a name="external-resources"></a>외부 리소스  
- msdn.com의 블로그 게시물 [트랜잭션, 유효성 검사 문제 및 준비 테이블 정리](https://go.microsoft.com/fwlink/p/?LinkId=615374)  
+ msdn.com의 블로그 게시물 [트랜잭션, 유효성 검사 문제 및 준비 테이블 정리](https://techcommunity.microsoft.com/t5/sql-server-integration-services/transactions-validation-issue-and-staging-table-cleanup/ba-p/388209)  
   
 ## <a name="related-content"></a>관련 내용  
   
