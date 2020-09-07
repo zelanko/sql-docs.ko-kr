@@ -14,31 +14,31 @@
   items:
     - name: Microsoft ADO.NET for SQL Server
       href: ../connect/ado-net/microsoft-ado-net-sql-server.md
-    - name: SqlClient 드라이버 시작
+    - name: 시작
       href: ../connect/ado-net/get-started-sqlclient-driver.md
       items:
-        - name: '1단계: ADO.NET 개발을 위한 개발 환경 구성'
+        - name: '1단계: 개발 환경 구성'
           href: ../connect/ado-net/step-1-configure-development-environment-ado-net-development.md
-        - name: '2단계: ADO.NET 개발을 위한 SQL 데이터베이스 만들기'
+        - name: '2단계: SQL 데이터베이스 만들기'
           href: ../connect/ado-net/step-2-create-sql-database-ado-net-development.md
-        - name: '3단계: ADO.NET을 사용하여 SQL에 연결하는 개념 증명'
+        - name: '3단계: SQL에 연결하는 개념 증명'
           href: ../connect/ado-net/step-3-connect-sql-ado-net.md
-        - name: '4단계: ADO.NET을 사용하여 탄력적으로 SQL에 연결'
+        - name: '4단계: SQL에 탄력적으로 연결'
           href: ../connect/ado-net/step-4-connect-resiliently-sql-ado-net.md
-    - name: SqlClient 드라이버 개요
+    - name: 개요
       href: ../connect/ado-net/overview-sqlclient-driver.md
       items:
-        - name: Microsoft.Data.SqlClient 네임스페이스 소개
+        - name: Microsoft.Data.SqlClient 네임스페이스
           href: ../connect/ado-net/introduction-microsoft-data-sqlclient-namespace.md
-        - name: Microsoft SqlClient Data Provider for SQL Server 다운로드
+        - name: 다운로드
           href: ../connect/ado-net/download-microsoft-sqlclient-data-provider.md
-        - name: SqlClient에서 이벤트 추적 사용
-          href: ../connect/ado-net/enable-eventsource-tracing.md
-        - name: SqlClient의 AppContext 스위치
-          href: ../connect/ado-net/appcontext-switches.md
-        - name: SqlClient 드라이버 지원 기간
+        - name: 제품 지원 기간
           href: ../connect/ado-net/sqlclient-driver-support-lifecycle.md
-        - name: 추가 SqlClient 드라이버 정보 찾기
+        - name: 이벤트 추적 사용
+          href: ../connect/ado-net/enable-eventsource-tracing.md
+        - name: AppContext 전환
+          href: ../connect/ado-net/appcontext-switches.md
+        - name: 추가 정보 찾기
           href: ../connect/ado-net/find-additional-sqlclient-driver-information.md
     - name: SQL Server 및 ADO.NET
       href: ../connect/ado-net/sql/index.md
@@ -163,7 +163,43 @@
   items:
     - name: SQL Server용 Microsoft JDBC Driver
       href: ../connect/jdbc/microsoft-jdbc-driver-for-sql-server.md
-    - name: JDBC 드라이버 API 참조
+    - name: 시작
+      href: ../connect/jdbc/getting-started-with-the-jdbc-driver.md
+      items:
+        - name: '1단계: 개발 환경 구성'
+          href: ../connect/jdbc/step-1-configure-development-environment-for-java-development.md
+        - name: '2단계: SQL 데이터베이스 만들기'
+          href: ../connect/jdbc/step-2-create-a-sql-database-for-java-development.md
+        - name: '3단계: SQL에 연결하는 개념 증명'
+          href: ../connect/jdbc/step-3-proof-of-concept-connecting-to-sql-using-java.md
+    - name: 개요
+      href: ../connect/jdbc/overview-of-the-jdbc-driver.md
+      items:
+        - name: 다운로드
+          href: ../connect/jdbc/download-microsoft-jdbc-driver-for-sql-server.md
+        - name: 릴리스 정보
+          href: ../connect/jdbc/release-notes-for-the-jdbc-driver.md
+        - name: 시스템 요구 사항
+          href: ../connect/jdbc/system-requirements-for-the-jdbc-driver.md
+        - name: 지원 매트릭스
+          href: ../connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md
+        - name: 드라이버 사용
+          href: ../connect/jdbc/using-the-jdbc-driver.md
+        - name: 결과 구문 분석
+          href: ../connect/jdbc/parsing-the-results.md
+        - name: useFmtOnly를 사용
+          href: ../connect/jdbc/using-usefmtonly.md
+        - name: Java EE 지원 이해
+          href: ../connect/jdbc/understanding-java-ee-support.md
+        - name: 드라이버 배포
+          href: ../connect/jdbc/deploying-the-jdbc-driver.md
+        - name: 추가 정보 찾기
+          href: ../connect/jdbc/finding-additional-jdbc-driver-information.md
+        - name: 질문과 대답(FAQ)
+          href: ../connect/jdbc/frequently-asked-questions-faq-for-jdbc-driver.md
+        - name: 기능 종속성
+          href: ../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md
+    - name: API 참조
       href: ../connect/jdbc/reference/jdbc-driver-api-reference.md
       items:
         - name: ISQLServerCallableStatement 인터페이스
@@ -2498,43 +2534,7 @@
               items:
                 - name: SSTRANSTIGHTLYCPLD 필드(SQLServerXAResource)
                   href: ../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md
-    - name: JDBC 드라이버 시작
-      href: ../connect/jdbc/getting-started-with-the-jdbc-driver.md
-      items:
-        - name: '1단계: Java 개발을 위한 개발 환경 구성'
-          href: ../connect/jdbc/step-1-configure-development-environment-for-java-development.md
-        - name: '2단계: Java 개발을 위한 SQL 데이터베이스 만들기'
-          href: ../connect/jdbc/step-2-create-a-sql-database-for-java-development.md
-        - name: '3단계: Java를 사용하여 SQL에 연결하는 개념 증명'
-          href: ../connect/jdbc/step-3-proof-of-concept-connecting-to-sql-using-java.md
-    - name: JDBC 드라이버 개요
-      href: ../connect/jdbc/overview-of-the-jdbc-driver.md
-      items:
-        - name: Microsoft JDBC Driver for SQL Server 다운로드
-          href: ../connect/jdbc/download-microsoft-jdbc-driver-for-sql-server.md
-        - name: 결과 구문 분석
-          href: ../connect/jdbc/parsing-the-results.md
-        - name: JDBC 드라이버에 대한 릴리스 정보
-          href: ../connect/jdbc/release-notes-for-the-jdbc-driver.md
-        - name: JDBC 드라이버의 시스템 요구 사항
-          href: ../connect/jdbc/system-requirements-for-the-jdbc-driver.md
-        - name: JDBC 드라이버 사용
-          href: ../connect/jdbc/using-the-jdbc-driver.md
-        - name: useFmtOnly를 사용
-          href: ../connect/jdbc/using-usefmtonly.md
-        - name: Java EE 지원 이해
-          href: ../connect/jdbc/understanding-java-ee-support.md
-        - name: JDBC 드라이버 배포
-          href: ../connect/jdbc/deploying-the-jdbc-driver.md
-        - name: 추가 JDBC 드라이버 정보 찾기
-          href: ../connect/jdbc/finding-additional-jdbc-driver-information.md
-        - name: Microsoft JDBC Driver for SQL Server 지원 매트릭스
-          href: ../connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md
-        - name: JDBC 드라이버에 대한 FAQ(질문과 대답)
-          href: ../connect/jdbc/frequently-asked-questions-faq-for-jdbc-driver.md
-        - name: Microsoft JDBC Driver for SQL Server의 기능 종속성
-          href: ../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md
-    - name: JDBC 드라이버 애플리케이션 보안
+    - name: 애플리케이션 보안
       href: ../connect/jdbc/securing-jdbc-driver-applications.md
       items:
         - name: 연결 문자열 보안
@@ -2554,7 +2554,7 @@
               href: ../connect/jdbc/configuring-the-client-for-ssl-encryption.md
         - name: FIPS 모드
           href: ../connect/jdbc/fips-mode.md
-    - name: JDBC 드라이버로 성능 및 안정성 개선
+    - name: 성능 및 안정성 향상
       href: ../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md
       items:
         - name: 개체가 사용되고 있지 않을 때 닫기
@@ -2569,7 +2569,7 @@
           href: ../connect/jdbc/sparse-columns.md
         - name: JDBC 드라이버에 대한 준비된 명령문 메타데이터 캐싱
           href: ../connect/jdbc/prepared-statement-metadata-caching-for-the-jdbc-driver.md
-    - name: JDBC 드라이버 관련 문제 진단
+    - name: 문제 진단
       href: ../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md
       items:
         - name: 오류 처리
@@ -2582,7 +2582,7 @@
           href: ../connect/jdbc/troubleshooting-connectivity.md
         - name: 확장 이벤트 로그의 진단 정보 액세스
           href: ../connect/jdbc/accessing-diagnostic-information-in-the-extended-events-log.md
-    - name: JDBC 드라이버 애플리케이션 코드 샘플
+    - name: 애플리케이션 코드 샘플
       href: ../connect/jdbc/sample-jdbc-driver-applications.md
       items:
         - name: 데이터 연결 및 검색
@@ -2621,7 +2621,7 @@
               href: ../connect/jdbc/updating-large-data-sample.md
         - name: 데이터 검색 및 분류 샘플
           href: ../connect/jdbc/data-discovery-classification-sample.md
-    - name: JDBC SQL 드라이버에 대한 준수 및 법적 고지
+    - name: 준수 및 법적 고지
       href: ../connect/jdbc/compliance-and-legal-for-the-jdbc-sql-driver.md
       items:
         - name: JDBC 드라이버의 JDBC 4.1 준수
@@ -2630,25 +2630,25 @@
           href: ../connect/jdbc/jdbc-4-2-compliance-for-the-jdbc-driver.md
         - name: JDBC 드라이버의 JDBC 4.3 준수
           href: ../connect/jdbc/jdbc-4-3-compliance-for-the-jdbc-driver.md
-    - name: JDBC SQL 드라이버 프로그래밍 가이드
+    - name: 프로그래밍 가이드
       href: ../connect/jdbc/programming-guide-for-jdbc-sql-driver.md
       items:
-        - name: JDBC 드라이버로 SQL Server에 연결
+        - name: SQL에 연결
           href: ../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md
-        - name: JDBC 드라이버 데이터 형식 이해
+        - name: JDBC 데이터 형식 이해
           href: ../connect/jdbc/understanding-the-jdbc-driver-data-types.md
-        - name: JDBC 드라이버에서 문 사용
+        - name: 문 사용
           href: ../connect/jdbc/using-statements-with-the-jdbc-driver.md
-        - name: JDBC 드라이버로 결과 집합 관리
+        - name: 결과 집합 관리
           href: ../connect/jdbc/managing-result-sets-with-the-jdbc-driver.md
-        - name: JDBC 드라이버로 트랜잭션 수행
+        - name: 트랜잭션 수행
           href: ../connect/jdbc/performing-transactions-with-the-jdbc-driver.md
-        - name: JDBC 드라이버로 메타데이터 처리
+        - name: 메타데이터 처리
           href: ../connect/jdbc/handling-metadata-with-the-jdbc-driver.md
-        - name: 상시 암호화와 JDBC 드라이버 사용
+        - name: Always Encrypted 사용
           href: ../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md
           items:
-            - name: JDBC 드라이버와 보안 Enclave를 사용한 Always Encrypted 사용
+            - name: 보안 enclave를 사용한 Always Encrypted 사용
               href: ../connect/jdbc/using-always-encrypted-with-secure-enclaves-with-the-jdbc-driver.md
         - name: 가이드 문서
           items:
@@ -2777,17 +2777,19 @@
   items:
     - name: SQL Server용 Node.js 드라이버
       href: ../connect/node-js/node-js-driver-for-sql-server.md
-    - name: '1단계:  Node.js 개발을 위한 개발 환경 구성'
+    - name: '1단계:  개발 환경 구성'
       href: ../connect/node-js/step-1-configure-development-environment-for-node-js-development.md
-    - name: '2단계: Node.js 개발을 위한 SQL 데이터베이스 만들기'
+    - name: '2단계: SQL 데이터베이스 만들기'
       href: ../connect/node-js/step-2-create-a-sql-database-for-node-js-development.md
-    - name: '3단계: Node.js를 사용하여 SQL에 연결하는 개념 증명'
+    - name: '3단계: SQL에 연결하는 개념 증명'
       href: ../connect/node-js/step-3-proof-of-concept-connecting-to-sql-using-node-js.md
 - name: ODBC
   items:
     - name: Microsoft ODBC Driver for SQL Server
       href: ../connect/odbc/microsoft-odbc-driver-for-sql-server.md
-    - name: Linux 및 Mac
+    - name: 다운로드
+      href: ../connect/odbc/download-odbc-driver-for-sql-server.md
+    - name: Linux 및 macOS
       items:
         - name: 시스템 요구 사항
           href: ../connect/odbc/linux-mac/system-requirements.md
@@ -2821,13 +2823,13 @@
           href: ../connect/odbc/linux-mac/release-notes-tools.md
         - name: 알려진 문제
           href: ../connect/odbc/linux-mac/known-issues-in-this-version-of-the-driver.md
-        - name: ODBC Linux 및 macOS에 대한 FAQ(질문과 대답)
+        - name: 질문과 대답(FAQ)
           href: ../connect/odbc/linux-mac/frequently-asked-questions-faq-for-odbc-linux.md
     - name: Windows
       items:
         - name: Windows의 Microsoft ODBC Driver for SQL Server
           href: ../connect/odbc/windows/microsoft-odbc-driver-for-sql-server-on-windows.md
-        - name: Windows 기반 Microsoft ODBC Driver for SQL Server의 기능
+        - name: 기능
           href: ../connect/odbc/windows/features-of-the-microsoft-odbc-driver-for-sql-server-on-windows.md
         - name: 릴리스 정보
           href: ../connect/odbc/windows/release-notes-odbc-sql-server-windows.md
@@ -2835,11 +2837,11 @@
           href: ../connect/odbc/windows/system-requirements-installation-and-driver-files.md
         - name: 기능 가이드
           items:
-            - name: Windows ODBC 드라이버에서 연결 복원
+            - name: 연결 복원력
               href: ../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md
-            - name: ODBC Driver for SQL Server에서 드라이버 인식 연결 풀링
+            - name: 드라이버 인식 연결 풀링
               href: ../connect/odbc/windows/driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md
-        - name: 비동기 실행(알림 방법) 샘플
+        - name: 비동기 실행(알림 메서드) 샘플
           href: ../connect/odbc/windows/asynchronous-execution-notification-method-sample.md
         - name: 도움말 항목
           items:
@@ -2871,9 +2873,7 @@
           href: ../connect/odbc/use-xa-with-dtc.md
         - name: 버그 수정
           href: ../connect/odbc/bug-fixes.md
-    - name: SQL Server용 ODBC 드라이버 다운로드
-      href: ../connect/odbc/download-odbc-driver-for-sql-server.md
-    - name: ODBC를 사용하는 C++ 애플리케이션 예제
+    - name: C++ 애플리케이션 예제
       href: ../connect/odbc/cpp-code-example-app-connect-access-sql-db.md
     - name: ODBC 고급
       items:
@@ -5083,15 +5083,15 @@
   items:
     - name: SQL Server용 Microsoft OLE DB 드라이버
       href: ../connect/oledb/oledb-driver-for-sql-server.md
+    - name: 다운로드
+      href: ../connect/oledb/download-oledb-driver-for-sql-server.md
     - name: 릴리스 정보
       href: ../connect/oledb/release-notes-for-oledb-driver-for-sql-server.md
-    - name: SQL Server용 Microsoft OLE DB 드라이버 다운로드
-      href: ../connect/oledb/download-oledb-driver-for-sql-server.md
     - name: 시스템 요구 사항
       href: ../connect/oledb/system-requirements-for-oledb-driver-for-sql-server.md
-    - name: SQL Server용 OLE DB 드라이버를 사용해야 하는 경우
+    - name: OLE DB Driver를 사용하는 경우
       href: ../connect/oledb/when-to-use-oledb-driver-for-sql-server.md
-    - name: SQL Server 정보에 대한 더 많은 OLE DB 드라이버 찾기
+    - name: 추가 정보 찾기
       href: ../connect/oledb/finding-more-oledb-driver-for-sql-server-information.md
     - name: 기능
       href: ../connect/oledb/features/oledb-driver-for-sql-server-features.md
@@ -5475,38 +5475,38 @@
   items:
     - name: Microsoft Drivers for PHP for SQL Server
       href: ../connect/php/microsoft-php-driver-for-sql-server.md
-    - name: 시작하기
+    - name: 시작
       href: ../connect/php/getting-started-with-the-php-sql-driver.md
       items:
-        - name: '1단계: PHP 개발을 위한 개발 환경 구성'
+        - name: '1단계: 개발 환경 구성'
           href: ../connect/php/step-1-configure-development-environment-for-php-development.md
-        - name: '2단계: PHP 개발을 위한 SQL 데이터베이스 만들기'
+        - name: '2단계: SQL 데이터베이스 만들기'
           href: ../connect/php/step-2-create-a-sql-database-for-php-development.md
-        - name: '3단계: PHP를 사용하여 SQL Server에 연결하는 개념 증명'
+        - name: '3단계: SQL에 연결하는 개념 증명'
           href: ../connect/php/step-3-proof-of-concept-connecting-to-sql-using-php.md
-        - name: '4단계: PHP를 사용하여 탄력적으로 SQL Server에 연결'
+        - name: '4단계: SQL에 탄력적으로 연결'
           href: ../connect/php/step-4-connect-resiliently-to-sql-with-php.md
     - name: 개요
       href: ../connect/php/overview-of-the-php-sql-driver.md
       items:
+        - name: 다운로드
+          href: ../connect/php/download-drivers-php-sql-server.md
+        - name: Linux 및 macOS에 설치
+          href: ../connect/php/installation-tutorial-linux-mac.md
+        - name: 릴리스 정보
+          href: ../connect/php/release-notes-php-sql-driver.md
         - name: 시스템 요구 사항
           href: ../connect/php/system-requirements-for-the-php-sql-driver.md
-        - name: SQL Server용 PHP에 대한 드라이버 다운로드
-          href: ../connect/php/download-drivers-php-sql-server.md
+        - name: 지원 매트릭스
+          href: ../connect/php/microsoft-php-drivers-for-sql-server-support-matrix.md
         - name: 드라이버 로드
           href: ../connect/php/loading-the-php-sql-driver.md
         - name: IIS 구성
           href: ../connect/php/configuring-iis-for-php-sql-driver.md
-        - name: PHP Linux 및 Mac 드라이버 설치 자습서
-          href: ../connect/php/installation-tutorial-linux-mac.md
-        - name: 릴리스 정보
-          href: ../connect/php/release-notes-php-sql-driver.md
         - name: 지원 리소스
           href: ../connect/php/support-resources-for-the-php-sql-driver.md
         - name: 코드 샘플 정보
           href: ../connect/php/about-code-examples-in-the-documentation.md
-        - name: Microsoft Drivers for PHP for SQL Server에 대한 지원 행렬
-          href: ../connect/php/microsoft-php-drivers-for-sql-server-support-matrix.md
     - name: 프로그래밍 가이드
       href: ../connect/php/programming-guide-for-php-sql-driver.md
       items:
@@ -5751,9 +5751,9 @@
     - name: 코드 샘플
       href: ../connect/php/code-samples-for-php-sql-driver.md
       items:
-        - name: 예제 애플리케이션(PDO_SQLSRV 드라이버)
+        - name: 예제 애플리케이션(PDO_SQLSRV)
           href: ../connect/php/example-application-pdo-sqlsrv-driver.md
-        - name: 예제 애플리케이션(SQLSRV 드라이버)
+        - name: 예제 애플리케이션(SQLSRV)
           href: ../connect/php/example-application-sqlsrv-driver.md
 - name: Python
   items:
@@ -5762,30 +5762,30 @@
     - name: Python SQL 드라이버 - pyodbc
       href: ../connect/python/pyodbc/python-sql-driver-pyodbc.md
       items:
-        - name: '1단계: pyodbc Python 개발을 위한 개발 환경 구성'
+        - name: '1단계: 개발 환경 구성'
           href: ../connect/python/pyodbc/step-1-configure-development-environment-for-pyodbc-python-development.md
-        - name: '2단계: pyodbc Python 개발을 위한 SQL 데이터베이스 만들기'
+        - name: '2단계: SQL 데이터베이스 만들기'
           href: ../connect/python/pyodbc/step-2-create-a-sql-database-for-pyodbc-python-development.md
-        - name: '3단계: pyodbc를 사용하여 SQL에 연결하는 개념 증명'
+        - name: '3단계: SQL에 연결하는 개념 증명'
           href: ../connect/python/pyodbc/step-3-proof-of-concept-connecting-to-sql-using-pyodbc.md
     - name: Python SQL 드라이버 - pymssql
       href: ../connect/python/pymssql/python-sql-driver-pymssql.md
       items:
-        - name: '1단계: pymssql Python 개발을 위한 개발 환경 구성'
+        - name: '1단계: 개발 환경 구성'
           href: ../connect/python/pymssql/step-1-configure-development-environment-for-pymssql-python-development.md
-        - name: '2단계: pymssql Python 개발을 위한 SQL 데이터베이스 만들기'
+        - name: '2단계: SQL 데이터베이스 만들기'
           href: ../connect/python/pymssql/step-2-create-a-sql-database-for-pymssql-python-development.md
-        - name: '3단계: pymssql을 사용하여 SQL에 연결하는 개념 증명'
+        - name: '3단계: SQL에 연결하는 개념 증명'
           href: ../connect/python/pymssql/step-3-proof-of-concept-connecting-to-sql-using-pymssql.md
 - name: Ruby
   items:
     - name: SQL Server용 Ruby 드라이버
       href: ../connect/ruby/ruby-driver-for-sql-server.md
-    - name: '1단계: Ruby 개발을 위한 개발 환경 구성'
+    - name: '1단계: 개발 환경 구성'
       href: ../connect/ruby/step-1-configure-development-environment-for-ruby-development.md
-    - name: '2단계: Ruby 개발을 위한 SQL Database 만들기'
+    - name: '2단계: SQL 데이터베이스 만들기'
       href: ../connect/ruby/step-2-create-a-sql-database-for-ruby-development.md
-    - name: '3단계: Ruby를 사용하여 SQL과 연결된 개념 증명'
+    - name: '3단계: SQL에 연결하는 개념 증명'
       href: ../connect/ruby/step-3-proof-of-concept-connecting-to-sql-using-ruby.md
 - name: Spark
   items:
