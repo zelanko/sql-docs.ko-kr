@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7bd89ddd-0403-4930-a5eb-3c78718533d4
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 47f946f2a8c06d2c14f343a4c2a8eec11ac30cce
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 35016718bc38b959dd91d2c91f41bdf9d5b73627
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893205"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480878"
 ---
 # <a name="configure-read-only-routing-for-an-always-on-availability-group"></a>Always On 가용성 그룹에 대한 읽기 전용 라우팅 구성
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -252,7 +252,7 @@ Server=tcp:MyAgListener,1433;Database=Db1;IntegratedSecurity=SSPI;ApplicationInt
   
 -    [SQL Server Always On 팀 블로그: 공식 SQL Server Always On 팀 블로그](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
--    [CSS SQL Server 엔지니어 블로그](https://blogs.msdn.com/b/psssql/)  
+-    [CSS SQL Server 엔지니어 블로그](https://docs.microsoft.com/archive/blogs/psssql/)  
   
 **백서:**  
   

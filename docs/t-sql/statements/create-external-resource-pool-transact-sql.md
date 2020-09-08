@@ -23,19 +23,19 @@ author: dphansen
 ms.author: davidph
 manager: cgronlund
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 64294b819d05e46077fd6a94008d64fc60eb717f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 59a754655eff7c701a91013e686e7ff1105a4cfe
+ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426725"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89283704"
 ---
 # <a name="create-external-resource-pool-transact-sql"></a>CREATE EXTERNAL RESOURCE POOL(Transact-SQL)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 외부 프로세스에 대한 리소스를 정의하는 외부 풀을 만듭니다. 리소스 풀은 데이터베이스 엔진 인스턴스의 물리적 리소스(메모리 및 CPU)의 하위 집합을 나타냅니다. Resource Governor는 최대 64개의 리소스 풀에서 서버 리소스를 배포할 수 있습니다.
 
-::: moniker range="=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]에서 [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)]의 경우 외부 풀은 `rterm.exe`, `BxlServer.exe`, 이들에 의해 생성된 기타 프로세스를 제어합니다.
 ::: moniker-end
 
@@ -44,9 +44,27 @@ ms.locfileid: "88426725"
 ::: moniker-end
   
 ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
-  
+ 
+
 ## <a name="syntax"></a>구문  
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+
+```syntaxsql
+CREATE EXTERNAL RESOURCE POOL pool_name  
+[ WITH (  
+    [ MAX_CPU_PERCENT = value ]  
+    [ [ , ] MAX_MEMORY_PERCENT = value ]  
+    [ [ , ] MAX_PROCESSES = value ]   
+    )   
+]  
+[ ; ]  
   
+<CPU_range_spec> ::=    
+{ CPU_ID | CPU_ID  TO CPU_ID } [ ,...n ]  
+```  
+::: moniker-end
+
+::: moniker range="=sql-server-2016||=sql-server-2017||=sqlallproducts-allversions"
 ```syntaxsql
 CREATE EXTERNAL RESOURCE POOL pool_name  
 [ WITH (  
@@ -66,17 +84,28 @@ CREATE EXTERNAL RESOURCE POOL pool_name
 <CPU_range_spec> ::=    
 { CPU_ID | CPU_ID  TO CPU_ID } [ ,...n ]  
 ```  
-  
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+::: moniker-end
 
-> [!NOTE]
-> Linux용 SQL Machine Learning Services 2019에서는 CPU 선호도 설정 기능을 지원하지 않습니다.
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>인수
 
 *pool_name*  
 외부 리소스 풀에 대한 사용자 정의 이름입니다. *pool_name*은 영숫자이며 최대 128자를 포함할 수 있습니다. 이 인수는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 내에서 고유해야 하며 [식별자](../../relational-databases/databases/database-identifiers.md)에 대한 규칙을 따라야 합니다.  
 
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+MAX_CPU_PERCENT =*value*  
+CPU 경합이 있을 때 외부 리소스 풀의 모든 요청이 받을 수 있는 최대 평균 CPU 대역폭입니다. *값*은 정수입니다. 허용되는 *value*의 범위는 1에서 100까지입니다.
+
+
+MAX_MEMORY_PERCENT =*value*  
+이 외부 리소스 풀의 요청에서 사용할 수 있는 총 서버 메모리를 지정합니다. *값*은 정수입니다. 허용되는 *value*의 범위는 1에서 100까지입니다.
+
+MAX_PROCESSES =*value*  
+외부 리소스 풀에 허용되는 프로세스의 최대 수입니다. 이후에 컴퓨터 리소스에 의해서만 바인딩되는 풀에 대한 무제한 임계값은 0입니다.
+::: moniker-end
+
+::: moniker range="=sql-server-2016||=sql-server-2017||=sqlallproducts-allversions"
 MAX_CPU_PERCENT =*value*  
 CPU 경합이 있을 때 외부 리소스 풀의 모든 요청이 받을 수 있는 최대 평균 CPU 대역폭입니다. *값*은 정수입니다. 허용되는 *value*의 범위는 1에서 100까지입니다.
 
@@ -91,6 +120,7 @@ MAX_MEMORY_PERCENT =*value*
 
 MAX_PROCESSES =*value*  
 외부 리소스 풀에 허용되는 프로세스의 최대 수입니다. 이후에 컴퓨터 리소스에 의해서만 바인딩되는 풀에 대한 무제한 임계값은 0입니다.
+::: moniker-end
 
 ## <a name="remarks"></a>설명
 
@@ -108,6 +138,20 @@ MAX_PROCESSES =*value*
 
 외부 풀에서는 CPU 사용량을 75%로 제한했습니다. 최대 메모리는 컴퓨터에서 사용 가능한 메모리의 30%입니다.
 
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+```sql
+CREATE EXTERNAL RESOURCE POOL ep_1
+WITH (  
+    MAX_CPU_PERCENT = 75
+    , MAX_MEMORY_PERCENT = 30
+);
+GO
+ALTER RESOURCE GOVERNOR RECONFIGURE;
+GO
+```
+::: moniker-end
+
+::: moniker range="=sql-server-2016||=sql-server-2017||=sqlallproducts-allversions"
 ```sql
 CREATE EXTERNAL RESOURCE POOL ep_1
 WITH (  
@@ -119,7 +163,8 @@ GO
 ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO
 ```
-  
+::: moniker-end
+
 ## <a name="see-also"></a>참고 항목
 
 + [외부 스크립트 설정 서버 구성 옵션](../../database-engine/configure-windows/external-scripts-enabled-server-configuration-option.md)

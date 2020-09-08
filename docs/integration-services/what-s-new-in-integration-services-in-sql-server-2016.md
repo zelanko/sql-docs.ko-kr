@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: da6999c7-e5e3-4a59-a284-1da635995af1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 386e58e63ee0f629baf5c9ad3009c678a1a966d1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 16844bfb5c173fdb6527777950a8d80f1b177994
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88456875"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480833"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>SQL Server 2016 Integration Services의 새로운 기능
 
@@ -363,7 +363,7 @@ SQL Server 2016 서비스 팩 1을 설치하면 이제 OData 원본 및 OData �
  차원 처리 대상은 SQL 2016 호환성 수준을 사용하는 테이블 형식 모델에 대해서는 작동하지 않습니다.  Analysis Services 처리 태스크 및 파티션 처리 대상만 있으면 테이블 형식 처리가 가능합니다. 
 
 ####  <a name="support-for-built-in-r-services"></a><a name="builtinR"></a> 기본 제공 R 서비스에 대한 지원  
- SSIS에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 기본 제공 R 서비스를 이미 지원합니다. 데이터를 추출하고 분석 출력을 로드하는 것뿐 아니라 R 모델을 빌드, 실행하고 주기적으로 보존하기 위해 SSIS를 사용할 수 있습니다. 자세한 내용은 다음 로그 게시물을 참조하세요. [SQL Server 2016 SSIS 및 R 서비스를 사용하여 기계 학습 프로젝트 운영](https://blogs.msdn.com/b/ssis/archive/2016/01/12/operationalize-your-machine-learning-project-using-sql-server-2016-ssis-and-r-services.aspx)합니다. 
+ SSIS에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 기본 제공 R 서비스를 이미 지원합니다. 데이터를 추출하고 분석 출력을 로드하는 것뿐 아니라 R 모델을 빌드, 실행하고 주기적으로 보존하기 위해 SSIS를 사용할 수 있습니다. 자세한 내용은 다음 로그 게시물을 참조하세요. [SQL Server 2016 SSIS 및 R 서비스를 사용하여 기계 학습 프로젝트 운영](https://techcommunity.microsoft.com/t5/sql-server-integration-services/operationalize-your-machine-learning-project-using-sql-server/ba-p/388296)합니다. 
 
 ####  <a name="rich-xml-validation-output-in-the-xml-task"></a><a name="ValidateXML"></a> XML 태스크에서 풍부한 XML 유효성 검사 출력  
  XML 태스크의 **ValidationDetails** 속성을 사용하도록 설정하여 XML 문서의 유효성을 검사하고 풍부한 오류 출력을 가져올 수 있습니다. **ValidationDetails** 속성을 사용할 수 있게 되기 전에 먼저 XML 태스크에 의해 수행된 XML 유효성 검사가 오류 또는 해당 위치에 대한 정보 없이 true 또는 false 결과만 반환했습니다. 이제 **ValidationDetails** 를 true로 설정할 경우 출력 파일에는 줄 번호 및 위치를 포함하여 모든 오류에 대한 자세한 정보가 포함됩니다. 이 정보를 사용하여 XML 문서의 오류를 이해하고, 찾고, 수정할 수 있습니다. 자세한 내용은 [Validate XML with the XML Task](../integration-services/control-flow/validate-xml-with-the-xml-task.md)를 참조하십시오.  

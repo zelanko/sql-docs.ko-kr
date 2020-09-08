@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 8d6d9954-ff6b-4e58-882e-eff0174f0d07
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: af11c20870da67f9b6004c4a277c17e277c1ffed
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: 096e416b5abaf7e6c148cba469cd4f7453be092e
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922431"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480488"
 ---
 # <a name="monitor-and-troubleshoot-availability-groups"></a>가용성 그룹 모니터링 및 문제 해결
  이 가이드에서는 Always On 가용성 그룹 모니터링 및 가용성 그룹의 일반적인 문제 중 일부의 문제 해결을 시작하도록 돕습니다. 원래 콘텐츠 뿐만 아니라 다른 곳에서 게시된 유용한 정보의 방문 페이지를 제공합니다. 이 가이드는 가용성 그룹의 넓은 영역에서 발생할 수 있는 모든 문제를 완벽하게 논의할 수 없지만 근본 원인 분석 및 문제 해결의 올바른 방향을 안내할 수 있습니다. 
@@ -73,6 +73,6 @@ ms.locfileid: "82922431"
 
 ## <a name="next-steps"></a>다음 단계  
  [SQL Server Always On 팀 블로그](https://docs.microsoft.com/archive/blogs/sqlalwayson/)   
- [CSS SQL Server 엔지니어 블로그](https://blogs.msdn.com/b/psssql/)  
+ [CSS SQL Server 엔지니어 블로그](https://docs.microsoft.com/archive/blogs/psssql/)  
   
   

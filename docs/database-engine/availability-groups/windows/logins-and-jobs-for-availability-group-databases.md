@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d7da14d3-848c-44d4-8e49-d536a1158a61
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f474a8f2b5c9d0a22dcbec0caa6b34a369fef009
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 19c0e81facaeb2dc075c600809b2a756488217e4
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895326"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480650"
 ---
 # <a name="manage-logins-for-jobs-using-databases-in-an-always-on-availability-group"></a>Always On 가용성 그룹의 데이터베이스를 사용하여 작업에 대한 로그인 관리
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "85895326"
 > [!NOTE]  
 >  이 문제는 다른 컴퓨터의 Windows 로컬 계정에 영향을 줍니다. 하지만 도메인 계정에서는 SID가 각 컴퓨터에서 동일하기 때문에 이러한 문제가 발생하지 않습니다.  
   
- 자세한 내용은 [데이터베이스 미러링 및 로그 전달에서의 분리된 사용자](https://blogs.msdn.com/b/sqlserverfaq/archive/2009/04/13/orphaned-users-with-database-mirroring-and-log-shipping.aspx) (데이터베이스 엔진 블로그)를 참조하세요.  
+ 자세한 내용은 [데이터베이스 미러링 및 로그 전달에서의 분리된 사용자](https://docs.microsoft.com/archive/blogs/sqlserverfaq/orphaned-users-with-database-mirroring-and-log-shipping) (데이터베이스 엔진 블로그)를 참조하세요.  
   
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 관련 작업  
   

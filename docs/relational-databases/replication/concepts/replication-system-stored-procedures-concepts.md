@@ -20,12 +20,12 @@ ms.assetid: 816d2bda-ed72-43ec-aa4d-7ee3dc25fd8a
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 39f0033ead272fe448c6146fec502aa4a62d8469
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 08cca6276b93515385f342a591376b45c9898d04
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88475655"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480631"
 ---
 # <a name="replication-system-stored-procedures-concepts"></a>Replication System Stored Procedures Concepts
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -131,7 +131,7 @@ GO
  복제 스크립트를 만든 후에는 다음 방법 중 하나로 실행할 수 있습니다.  
   
 ### <a name="creating-a-sql-query-file-in-sql-server-management-studio"></a>SQL Server Management Studio에서 SQL 쿼리 파일 만들기  
- [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 프로젝트에서 SQL 쿼리 파일로 복제 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 스크립트 파일을 만들 수 있습니다. 스크립트를 작성하면 이 쿼리 파일에 대한 데이터베이스에 연결하여 스크립트를 실행할 수 있습니다. [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]를 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 스크립트를 만드는 방법은 [쿼리 및 텍스트 편집기&#40;SQL Server Management Studio&#41;](../../../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)를 참조하세요.  
+ [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 프로젝트에서 SQL 쿼리 파일로 복제 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 스크립트 파일을 만들 수 있습니다. 스크립트를 작성하면 이 쿼리 파일에 대한 데이터베이스에 연결하여 스크립트를 실행할 수 있습니다. [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]를 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 스크립트를 만드는 방법은 [쿼리 및 텍스트 편집기&#40;SQL Server Management Studio&#41;](https://docs.microsoft.com/sql/ssms/f1-help/database-engine-query-editor-sql-server-management-studio?view=sql-server-ver15)를 참조하세요.  
   
  스크립팅 변수가 포함된 스크립트를 사용하려면 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]가 **sqlcmd** 모드에서 실행 중이어야 합니다. **sqlcmd** 모드에서는 쿼리 편집기에서 **sqlcmd**와 관련된 추가적인 구문(예: 변수 값에 사용되는 `:setvar`)을 사용할 수 있습니다. **sqlcmd** 모드에 대한 자세한 내용은 [쿼리 편집기로 SQLCMD 스크립트 편집](../../../relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md)을 참조하세요. 다음 스크립트에서는 `:setvar`를 사용하여 `$(DistPubServer)` 변수의 값을 제공합니다.  
   

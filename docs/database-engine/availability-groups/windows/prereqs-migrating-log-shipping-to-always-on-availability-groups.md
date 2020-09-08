@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2738ce65-205e-4682-92d8-dc7e37c58b2b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 52ac6d145638ff6d003724793487be46afc7191b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a4ee9154593b5c1d2d3d1bdf083796134d441fad
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901296"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480820"
 ---
 # <a name="prerequisites-to-convert-log-shipping-to-always-on-availability-groups"></a>로그 전달을 Always On 가용성 그룹으로 변환하기 위한 필수 구성 요소
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -92,7 +92,7 @@ ms.locfileid: "85901296"
   
      [SQL Server Always On 팀 블로그: 공식 SQL Server Always On 팀 블로그](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
-     [CSS SQL Server 엔지니어 블로그](https://blogs.msdn.com/b/psssql/)  
+     [CSS SQL Server 엔지니어 블로그](https://docs.microsoft.com/archive/blogs/psssql/)  
   
 -   **백서:**  
   

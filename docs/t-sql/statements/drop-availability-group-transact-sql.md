@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: c1600289-c990-454a-b279-dba0ebd5d63e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: c47ca2a1697752068902a26d20322232648dc2f4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fb493b4698918e7d93fb3ef45b3c5d03a2919e1f
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88496788"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480468"
 ---
 # <a name="drop-availability-group-transact-sql"></a>DROP AVAILABILITY GROUP(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -65,7 +65,7 @@ DROP AVAILABILITY GROUP group_name
     > [!IMPORTANT]  
     >  WSFC(Windows Server 장애 조치(Failover) 클러스터링) 클러스터에 쿼럼이 없을 때 가용성 그룹이 삭제되지 않도록 합니다. 클러스터에 쿼럼이 부족할 때 가용성 그룹을 삭제해야 하는 경우 클러스터에 저장된 메타데이터 가용성 그룹은 제거되지 않습니다. 클러스터가 쿼럼을 다시 얻은 후에는 가용성 그룹을 다시 삭제하여 WSFC 클러스터에서 제거해야 합니다.  
   
--   보조 복제본에서 **DROP AVAILABILITY GROUP**은 응급용으로만 사용해야 합니다. 이는 가용성 그룹을 삭제하면 가용성 그룹이 오프라인 상태로 전환되기 때문입니다. 보조 복제본에서 가용성 그룹을 삭제하면 주 복제본에서 쿼럼 손실, 강제 장애 조치(failover) 또는 **DROP AVAILABILITY GROUP** 명령으로 인해 **OFFLINE** 상태가 발생했는지 여부를 확인할 수 없습니다. 주 복제본은 분리 장애(split-brain)가 발생하는 것을 방지하기 위해 **RESTORING** 상태로 전환됩니다. 자세한 내용은 [작동 방식: DROP AVAILABILITY GROUP 동작](https://blogs.msdn.com/b/psssql/archive/2012/06/13/how-it-works-drop-availability-group-behaviors.aspx) (CSS SQL Server 엔지니어 블로그)을 참조하세요.  
+-   보조 복제본에서 **DROP AVAILABILITY GROUP**은 응급용으로만 사용해야 합니다. 이는 가용성 그룹을 삭제하면 가용성 그룹이 오프라인 상태로 전환되기 때문입니다. 보조 복제본에서 가용성 그룹을 삭제하면 주 복제본에서 쿼럼 손실, 강제 장애 조치(failover) 또는 **DROP AVAILABILITY GROUP** 명령으로 인해 **OFFLINE** 상태가 발생했는지 여부를 확인할 수 없습니다. 주 복제본은 분리 장애(split-brain)가 발생하는 것을 방지하기 위해 **RESTORING** 상태로 전환됩니다. 자세한 내용은 [작동 방식: DROP AVAILABILITY GROUP 동작](https://docs.microsoft.com/archive/blogs/psssql/how-it-works-drop-availability-group-behaviors) (CSS SQL Server 엔지니어 블로그)을 참조하세요.  
   
 ## <a name="security"></a>보안  
   
@@ -81,7 +81,7 @@ DROP AVAILABILITY GROUP AccountsAG;
   
 ##  <a name="related-content"></a><a name="RelatedContent"></a> 관련 내용  
   
--   [작동 방식: DROP AVAILABILITY GROUP 동작](https://blogs.msdn.com/b/psssql/archive/2012/06/13/how-it-works-drop-availability-group-behaviors.aspx) (CSS SQL Server 엔지니어 블로그)  
+-   [작동 방식: DROP AVAILABILITY GROUP 동작](https://docs.microsoft.com/archive/blogs/psssql/how-it-works-drop-availability-group-behaviors) (CSS SQL Server 엔지니어 블로그)  
   
 ## <a name="see-also"></a>참고 항목  
  [ALTER AVAILABILITY GROUP&#40;Transact-SQL&#41;](../../t-sql/statements/alter-availability-group-transact-sql.md)   

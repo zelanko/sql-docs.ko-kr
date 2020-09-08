@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: de1cc8de-e7af-4727-b5a5-a1f0a739aa09
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6c37948d8af3aac4b78055f50e29aeb88f238bab
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f6daf6002a66dcffc032e9953cf400f91d725d91
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477706"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480911"
 ---
 # <a name="lookup-transformation"></a>조회 변환
 
@@ -172,7 +172,7 @@ ms.locfileid: "88477706"
  **일치하는 항목이 없는 행 처리 방법 지정** 목록 상자에서 다른 옵션을 선택하면 행이 오류로 처리되며 **오류 출력** 페이지에 있는 **오류** 옵션을 사용할 수 있습니다.  
   
 ### <a name="external-resources"></a>외부 리소스  
- blogs.msdn.com의 블로그 항목 - [조회 캐시 모드](https://go.microsoft.com/fwlink/?LinkId=219518)  
+ blogs.msdn.com의 블로그 항목 - [조회 캐시 모드](https://www.timmitchell.net/post/2019/09/05/ssis-lookup-cache-modes/)  
   
 ## <a name="lookup-transformation-editor-connection-page"></a>조회 변환 편집기(연결 페이지)
   **조회 변환 편집기** 대화 상자의 **연결** 페이지를 사용하여 연결 관리자를 선택할 수 있습니다. OLE DB 연결 관리자를 선택하면 쿼리, 테이블 또는 뷰를 선택하여 참조 데이터 세트를 생성할 수도 있습니다.  
@@ -219,7 +219,7 @@ ms.locfileid: "88477706"
  **쿼리 결과 미리 보기** 대화 상자를 사용하여 결과를 미리 봅니다. 이 옵션은 최대 200개의 행을 표시합니다.  
   
 ### <a name="external-resources"></a>외부 리소스  
- blogs.msdn.com의 블로그 항목 - [조회 캐시 모드](https://go.microsoft.com/fwlink/?LinkId=219518)  
+ blogs.msdn.com의 블로그 항목 - [조회 캐시 모드](https://www.timmitchell.net/post/2019/09/05/ssis-lookup-cache-modes/)  
   
 ## <a name="lookup-transformation-editor-columns-page"></a>조회 변환 편집기(열 페이지)
   **조회 변환 편집기** 대화 상자의 **열** 페이지를 사용하여 원본 테이블과 참조 테이블 간의 조인을 지정하고 참조 테이블에서 조회 열을 선택할 수 있습니다.  
@@ -276,7 +276,7 @@ ms.locfileid: "88477706"
  **쿼리 매개 변수 설정** 대화 상자를 사용하여 입력 열을 매개 변수에 매핑합니다.  
   
 ### <a name="external-resources"></a>외부 리소스  
- blogs.msdn.com의 블로그 항목 - [조회 캐시 모드](https://go.microsoft.com/fwlink/?LinkId=219518)  
+ blogs.msdn.com의 블로그 항목 - [조회 캐시 모드](https://www.timmitchell.net/post/2019/09/05/ssis-lookup-cache-modes/)  
   
 ## <a name="see-also"></a>관련 항목  
  [유사 항목 조회 변환](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation.md)   

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 0b7542fa-235e-413d-81bf-3eff9ee07480
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: aefb36e76e14022eb9a56ef03db83c5bad3787d8
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 04b62ac4f7a0766b0df13b9eda55ec953ae1f159
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882390"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480685"
 ---
 # <a name="administration-of-an-availability-group"></a>가용성 그룹 관리
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -106,7 +106,7 @@ ms.locfileid: "85882390"
 -   **블로그:**  
   
      [SQL Server Always On 팀 블로그: 공식 SQL Server Always On 팀 블로그](https://blogs.msdn.microsoft.com/sqlalwayson/)    
-     [CSS SQL Server 엔지니어 블로그](https://blogs.msdn.com/b/psssql/)  
+[CSS SQL Server 엔지니어 블로그](https://docs.microsoft.com/archive/blogs/psssql/)  
   
 -   **비디오:**  
   

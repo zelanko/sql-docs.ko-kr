@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4b7f7f62-43a3-49db-a72e-22d4d7c2ddbb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a0cb28f11e04de833dba859bac3ac2a88544120b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d68a51bd65f7339b27e753c47585d85cf05002d2
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888046"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480749"
 ---
 # <a name="remove-an-availability-group-sql-server"></a>가용성 그룹 제거(SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "85888046"
 -   가용성 그룹이 온라인일 때 보조 복제본에서 이 그룹을 삭제하면 주 복제본이 RESTORING 상태로 전환됩니다. 따라서 가능하면 주 복제본을 호스팅하는 서비스 인스턴스에서만 가용성 그룹을 제거하세요.    
 -   WSFC 장애 조치(failover) 클러스터에서 삭제되었거나 제거된 컴퓨터에서 가용성 그룹을 삭제하는 경우 가용성 그룹은 로컬 위치에서만 삭제됩니다. 
 -   WSFC(Windows Server 장애 조치(Failover) 클러스터링) 클러스터에 쿼럼이 없을 때 가용성 그룹이 삭제되지 않도록 합니다. 클러스터에 쿼럼이 부족할 때 가용성 그룹을 삭제해야 하는 경우 클러스터에 저장된 메타데이터 가용성 그룹은 제거되지 않습니다. 클러스터가 쿼럼을 다시 얻은 후에는 가용성 그룹을 다시 삭제하여 WSFC 클러스터에서 제거해야 합니다.    
--   보조 복제본에서 DROP AVAILABILITY GROUP은 응급용으로만 사용해야 합니다. 이는 가용성 그룹을 삭제하면 가용성 그룹이 오프라인 상태로 전환되기 때문입니다. 보조 복제본에서 가용성 그룹을 삭제하면 주 복제본에서 쿼럼 손실, 강제 장애 조치(failover) 또는 DROP AVAILABILITY GROUP 명령으로 인해 OFFLINE 상태가 발생했는지 여부를 확인할 수 없습니다. 주 복제본은 분리 장애(split-brain)가 발생하는 것을 방지하기 위해 RESTORING 상태로 전환됩니다. 자세한 내용은 [작동 방식: DROP AVAILABILITY GROUP 동작](https://blogs.msdn.com/b/psssql/archive/2012/06/13/how-it-works-drop-availability-group-behaviors.aspx) (CSS SQL Server 엔지니어 블로그)을 참조하세요.  
+-   보조 복제본에서 DROP AVAILABILITY GROUP은 응급용으로만 사용해야 합니다. 이는 가용성 그룹을 삭제하면 가용성 그룹이 오프라인 상태로 전환되기 때문입니다. 보조 복제본에서 가용성 그룹을 삭제하면 주 복제본에서 쿼럼 손실, 강제 장애 조치(failover) 또는 DROP AVAILABILITY GROUP 명령으로 인해 OFFLINE 상태가 발생했는지 여부를 확인할 수 없습니다. 주 복제본은 분리 장애(split-brain)가 발생하는 것을 방지하기 위해 RESTORING 상태로 전환됩니다. 자세한 내용은 [작동 방식: DROP AVAILABILITY GROUP 동작](https://docs.microsoft.com/archive/blogs/psssql/how-it-works-drop-availability-group-behaviors) (CSS SQL Server 엔지니어 블로그)을 참조하세요.  
   
 ##  <a name="permissions"></a><a name="Permissions"></a> 권한  
  가용성 그룹에 대한 ALTER AVAILABILITY GROUP 권한, CONTROL AVAILABILITY GROUP 권한, ALTER ANY AVAILABILITY GROUP 권한 또는 CONTROL SERVER 권한이 필요합니다. 로컬 서버 인스턴스에서 호스팅되지 않는 가용성 그룹을 삭제하려면 해당 가용성 그룹에 대한 CONTROL SERVER 권한이나 CONTROL 권한이 필요합니다.  
@@ -101,7 +101,7 @@ ms.locfileid: "85888046"
   
 ##  <a name="related-content"></a><a name="RelatedContent"></a> 관련 내용  
   
--   [작동 방식: DROP AVAILABILITY GROUP 동작](https://blogs.msdn.com/b/psssql/archive/2012/06/13/how-it-works-drop-availability-group-behaviors.aspx) (CSS SQL Server 엔지니어 블로그)  
+-   [작동 방식: DROP AVAILABILITY GROUP 동작](https://docs.microsoft.com/archive/blogs/psssql/how-it-works-drop-availability-group-behaviors) (CSS SQL Server 엔지니어 블로그)  
   
 ## <a name="see-also"></a>참고 항목  
  [Always On 가용성 그룹 개요&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

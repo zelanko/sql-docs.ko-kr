@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 39d0c98d-75af-4dd1-b908-30d31af56f2a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4c44f65761fcb54d8ad9b8eac0fc5e02bce82181
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e88eed3b4b49b15f65ad888725374d953b87806b
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898078"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480365"
 ---
 # <a name="sql-server-error-log-always-on-availability-groups"></a>SQL Server 오류 로그(Always On 가용성 그룹)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "85898078"
 -   주 복제본과 보조 복제본 간 가용성 데이터베이스의 연결 상태    
 -   가용성 그룹 엔드포인트의 상태    
 -   가용성 그룹 수신기의 상태    
--   SQL Server 리소스 DLL(WSFC 클러스터에서 실행) 및 SQL Server 인스턴스 간의 임대 시간(자세한 내용은 [작동 방법: SQL Server Always On 임대 시간 제한](https://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-alwayson-lease-timeout.aspx) 참조)    
+-   SQL Server 리소스 DLL(WSFC 클러스터에서 실행) 및 SQL Server 인스턴스 간의 임대 시간(자세한 내용은 [작동 방법: SQL Server Always On 임대 시간 제한](https://docs.microsoft.com/archive/blogs/psssql/how-it-works-sql-server-alwayson-lease-timeout) 참조)    
 -   가용성 그룹의 오류 이벤트  
 
 다음과 같은 현상은 SQL Server 오류 로그를 검토해야 합니다.  

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6d667bba-7c25-492a-8f4d-70ebaca28f40
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 99ea39318e06ba7fbaa6cf3e1147382bb1184a83
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2124351357d52e3389d0db1e58874ffcb46275d6
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88351849"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480703"
 ---
 # <a name="integration-services-ssis-server-and-catalog"></a>Integration Services(SSIS) 서버 및 카탈로그
 
@@ -39,7 +39,7 @@ ms.locfileid: "88351849"
 ## <a name="high-availability"></a>고가용성  
  다른 사용자 데이터베이스와 마찬가지로, **SSISDB** 데이터베이스는 데이터베이스 미러링 및 복제를 지원합니다. 미러링 및 복제에 대한 자세한 내용은 [데이터베이스 미러링&#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)을 참조하세요.  
   
- 또한 SSIS 및 Always On 가용성 그룹을 사용하여 SSISDB의 고가용성 및 해당 콘텐츠를 제공할 수도 있습니다. 자세한 내용은 [SSIS 카탈로그에 대한 Always On(SSISDB)](ssis-catalog.md#always-on-for-ssis-catalog-ssisdb)을 참조하세요. blogs.msdn.com에서 Matt Masson이 게시한 [Always On을 사용하는 SSIS](https://go.microsoft.com/fwlink/?LinkId=255873) 블로그도 참조하세요.  
+ 또한 SSIS 및 Always On 가용성 그룹을 사용하여 SSISDB의 고가용성 및 해당 콘텐츠를 제공할 수도 있습니다. 자세한 내용은 [SSIS 카탈로그에 대한 Always On(SSISDB)](ssis-catalog.md#always-on-for-ssis-catalog-ssisdb)을 참조하세요. blogs.msdn.com에서 Matt Masson이 게시한 [Always On을 사용하는 SSIS](https://techcommunity.microsoft.com/t5/sql-server-integration-services/ssis-with-alwayson/ba-p/388091) 블로그도 참조하세요.  
   
 ##  <a name="integration-services-server-in-sql-server-management-studio"></a><a name="ssms"></a> SQL Server Management Studio의 Integration Services 서버  
  **SSISDB** 데이터베이스를 호스트하는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 인스턴스에 연결할 때 개체 탐색기에 다음 개체가 표시됩니다.  
@@ -61,6 +61,6 @@ ms.locfileid: "88351849"
 -   [Integration Services(SSIS) 패키지 실행](../../integration-services/packages/run-integration-services-ssis-packages.md)  
   
 ## <a name="related-content"></a>관련 내용  
- blogs.msdn.com의 블로그 항목, [Always On을 사용하는 SSIS](https://go.microsoft.com/fwlink/?LinkId=255873)  
+ blogs.msdn.com의 블로그 항목, [Always On을 사용하는 SSIS](https://techcommunity.microsoft.com/t5/sql-server-integration-services/ssis-with-alwayson/ba-p/388091)  
   
   
