@@ -17,14 +17,14 @@ helpviewer_keywords:
 - file backups [SQL Server], backupfile system table
 - backupfile system table
 ms.assetid: f1a7fc0a-f4b4-47eb-9138-eebf930dc9ac
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 4a4caafa49aca29e1093ffb6304b292bcd5c7735
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: e59789c2d4de9174a43b34881e7b45a914cfd2c3
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492823"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89525559"
 ---
 # <a name="backupfile-transact-sql"></a>backupfile(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "88492823"
 |**page_size**|**int**|페이지 크기(바이트)입니다.|  
 |**file_number**|**숫자 (10, 0)**|데이터베이스 내에서 고유한 파일 id입니다. **database_files**에 해당 합니다.** file_id**).|  
 |**backed_up_page_count**|**숫자 (10, 0)**|백업된 페이지의 수입니다. NULL일 수 있습니다.|  
-|**file_type**|**char (1)**|백업된 파일이며 다음 중 하나입니다.<br /><br /> D = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 파일<br /><br /> L = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그 파일<br /><br /> F = 전체 텍스트 카탈로그<br /><br /> NULL일 수 있습니다.|  
+|**file_type**|**char(1)**|백업된 파일이며 다음 중 하나입니다.<br /><br /> D = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 파일<br /><br /> L = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그 파일<br /><br /> F = 전체 텍스트 카탈로그<br /><br /> NULL일 수 있습니다.|  
 |**source_file_block_size**|**숫자 (10, 0)**|백업될 때, 원본 데이터 또는 로그 파일이 있는 디바이스입니다. NULL일 수 있습니다.|  
 |**file_size**|**numeric(20,0)**|백업된 파일의 길이(바이트)입니다. NULL일 수 있습니다.|  
 |**logical_name**|**nvarchar(128)**|백업된 파일의 논리적 이름입니다. NULL일 수 있습니다.|  
