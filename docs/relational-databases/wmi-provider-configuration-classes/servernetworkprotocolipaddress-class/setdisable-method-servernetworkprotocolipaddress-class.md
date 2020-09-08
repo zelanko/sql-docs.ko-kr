@@ -16,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - SetDisable method
 ms.assetid: 7a7cc8cc-9fb8-4bf5-b483-2150d633ee10
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: cd7f7fbc3fb0480183789ec19557b923037d8341
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 2ce3332f08e8044ed6e4797eb144043de8f82e6c
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463577"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89517075"
 ---
 # <a name="setdisable-method-servernetworkprotocolipaddress-class"></a>SetDisable 메서드(ServerNetworkProtocolIPAddress 클래스)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

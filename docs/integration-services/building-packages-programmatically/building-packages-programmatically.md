@@ -11,12 +11,12 @@ ms.topic: reference
 ms.assetid: 7474b1f4-7607-4f28-a6fd-67f7db1dd3f8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c6b35aa78b98a681ae7312db2bd9a7b1fb18f482
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 464bc971ca52c1363366ff439bcc5c51f32d5065
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88457809"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480782"
 ---
 # <a name="building-packages-programmatically"></a>프로그래밍 방식으로 패키지 작성
 
@@ -98,7 +98,7 @@ ms.locfileid: "88457809"
   
 -   [www.codeplex.com/MSFTISProdSamples](www.codeplex.com/MSFTISProdSamples) 의 CodePlex 예제 - [Integration Services 제품 예제](https://go.microsoft.com/fwlink/?LinkID=131204)  
   
--   blogs.msdn.com의 블로그 항목 - [사용자 지정 확장 프로그램 성능 프로파일링](https://go.microsoft.com/fwlink/?LinkId=238831)  
+-   blogs.msdn.com의 블로그 항목 - [사용자 지정 확장 프로그램 성능 프로파일링](https://techcommunity.microsoft.com/t5/sql-server-integration-services/performance-profiling-your-custom-extensions/ba-p/387490)  
 
 ## <a name="see-also"></a>참고 항목  
  [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)  

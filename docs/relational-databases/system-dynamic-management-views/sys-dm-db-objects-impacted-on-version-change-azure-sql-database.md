@@ -17,29 +17,29 @@ helpviewer_keywords:
 - dm_db_objects_impacted_on_version_change
 - sys.dm_db_objects_impacted_on_version_change
 ms.assetid: b94af834-c4f6-4a27-80a6-e8e71fa8793a
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 804b9828ae2a1359075cce2db4077918b0294b59
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c316d1f87b76387ebf382754970a6b9dc1ab609f
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498336"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89517807"
 ---
 # <a name="sysdm_db_objects_impacted_on_version_change-azure-sql-database"></a>sys.dm_db_objects_impacted_on_version_change(Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   이 데이터베이스 범위 시스템 뷰는 조기 경보 시스템으로 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에서 주요 릴리스 업그레이드에 의해 영향을 받는 개체를 확인할 수 있도록 설계되어 있습니다. 업그레이드 전후에 이 뷰를 사용하여 영향을 받는 개체의 전체 목록을 가져올 수 있습니다. 전체 서버에서 전체 개수를 가져오려면 각 데이터베이스에서 이 뷰를 쿼리해야 합니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |class|**int** NULL이 아님|영향을 받는 개체의 클래스:<br /><br /> **1** = 제약 조건<br /><br /> **7** = 인덱스 및 힙|  
-|class_desc|**nvarchar (60)** NULL이 아님|클래스 설명:<br /><br /> **OBJECT_OR_COLUMN**<br /><br /> **인덱싱할**|  
+|class_desc|**nvarchar (60)** NULL이 아님|클래스 설명:<br /><br /> **OBJECT_OR_COLUMN**<br /><br /> **INDEX**|  
 |major_id|**int** NULL이 아님|제약 조건의 개체 ID 또는 인덱스나 힙을 포함하는 테이블의 개체 ID입니다.|  
 |minor_id|**int** N|제약 조건의 경우 **NULL**입니다.<br /><br /> 인덱스 및 힙의 경우 Index_id|  
-|dependency|**nvarchar (60)** NULL이 아님|제약 조건 또는 인덱스에게 영향을 미치는 종속성에 대한 설명입니다. 업그레이드 시 생성되는 경고에 대해서도 동일한 값이 사용됩니다.<br /><br /> 예제:<br /><br /> **space**(내장 함수의 경우)<br /><br /> **geometry**(시스템 UDT의 경우)<br /><br /> **geography::Parse**(시스템 UDT 메서드의 경우)|  
+|dependency|**nvarchar (60)** NULL이 아님|제약 조건 또는 인덱스에게 영향을 미치는 종속성에 대한 설명입니다. 업그레이드 시 생성되는 경고에 대해서도 동일한 값이 사용됩니다.<br /><br /> 예:<br /><br /> **space**(내장 함수의 경우)<br /><br /> **geometry**(시스템 UDT의 경우)<br /><br /> **geography::Parse**(시스템 UDT 메서드의 경우)|  
   
 ## <a name="permissions"></a>사용 권한  
  VIEW DATABASE STATE 권한이 필요합니다.  

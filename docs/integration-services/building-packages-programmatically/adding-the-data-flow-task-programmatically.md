@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 0ca03712-a82e-4aa7-949b-f869a8936ddf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 992766acbc277706711d488ebe164575c4913a88
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c5090cbe224a9ac3f94bff828189d3517c1dd376
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88457825"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480796"
 ---
 # <a name="adding-the-data-flow-task-programmatically"></a>프로그래밍 방식으로 데이터 흐름 태스크 추가
 
@@ -37,7 +37,7 @@ ms.locfileid: "88457825"
   
  데이터 흐름 태스크는 다른 태스크가 추가되는 방식과 동일한 방식으로 패키지에 추가됩니다. 태스크를 추가한 후에는 데이터 흐름 태스크에 구성 요소를 추가하고 태스크의 구성 요소를 구성 및 연결하여 태스크를 구성합니다.  
   
-## <a name="sample"></a>샘플  
+## <a name="sample"></a>예제  
  다음 코드 예제에서는 패키지에 데이터 흐름 태스크를 추가하는 방법을 보여 줍니다. 이 예에는 Microsoft.SqlServer.PipelineHost, Microsoft.SqlServer.DTSPipelineWrap 및 Microsoft.SqlServer.ManagedDTS 어셈블리에 대한 참조가 필요합니다.  
   
 ```csharp  
@@ -82,7 +82,7 @@ End Module
 ```  
   
 ## <a name="external-resources"></a>외부 리소스  
- blogs.msdn.com의 블로그 항목 - [EzAPI – SQL Server 2012용으로 업데이트됨](https://go.microsoft.com/fwlink/?LinkId=243223)  
+ blogs.msdn.com의 블로그 항목 - [EzAPI – SQL Server 2012용으로 업데이트됨](https://techcommunity.microsoft.com/t5/sql-server-integration-services/ezapi-updated-for-sql-server-2012/ba-p/388042)  
   
 ## <a name="see-also"></a>참고 항목  
  [프로그래밍 방식으로 데이터 흐름 구성 요소 검색](../../integration-services/building-packages-programmatically/discovering-data-flow-components-programmatically.md)  

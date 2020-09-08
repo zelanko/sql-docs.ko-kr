@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: e44bcc70-32d3-43e8-a84b-29aef819d5d3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8a79a235f7329b3bac84a34b0d8ff10b1faa889d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9173bfca78a0fcb872e2eac408ca6992738d7dbb
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88457795"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480755"
 ---
 # <a name="creating-a-package-programmatically"></a>프로그래밍 방식으로 패키지 만들기
 
@@ -155,9 +155,9 @@ End Module
   
 ## <a name="external-resources"></a>외부 리소스  
   
--   blogs.msdn.com의 블로그 항목 - [API 예제 - OleDB 원본 및 OleDB 대상](https://go.microsoft.com/fwlink/?LinkId=220824)  
+-   blogs.msdn.com의 블로그 항목 - [API 예제 - OleDB 원본 및 OleDB 대상](https://techcommunity.microsoft.com/t5/sql-server-integration-services/api-sample-oledb-source-and-oledb-destination/ba-p/387553)  
   
--   blogs.msdn.com의 블로그 항목 - [EzAPI – SQL Server 2012용으로 업데이트됨](https://go.microsoft.com/fwlink/?LinkId=243223)  
+-   blogs.msdn.com의 블로그 항목 - [EzAPI – SQL Server 2012용으로 업데이트됨](https://techcommunity.microsoft.com/t5/sql-server-integration-services/ezapi-updated-for-sql-server-2012/ba-p/388042)  
   
 ## <a name="see-also"></a>참고 항목  
  [프로그래밍 방식으로 태스크 추가](../../integration-services/building-packages-programmatically/adding-tasks-programmatically.md)  

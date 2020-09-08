@@ -19,12 +19,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.prod_service: table-view-index, sql-database
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ce049f8c597526187ccce8ba7fdb498d8280cf1f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6e7467127593b5a853bf5c26df75e9bc52ff12e4
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455954"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480939"
 ---
 # <a name="guidelines-for-online-index-operations"></a>온라인 인덱스 작업에 대한 지침
 
@@ -85,7 +85,7 @@ SQL Server 2016을 실행하는 다중 프로세서 컴퓨터에서는 다른 �
   
 인덱스 작업의 마지막 단계에 S  잠금 또는 Sch-M  잠금이 보유되므로 BEGIN  TRANSACTION...COMMIT  블록 등의 명시적 사용자 트랜잭션 내에서 온라인 인덱스 작업을 실행할 때는 주의해야 합니다. 이 작업을 실행하면 트랜잭션이 끝날 때까지 잠금이 보유되어 사용자 동시성을 방해할 수 있습니다.  
   
-`MAX DOP > 1` 및 `ALLOW_PAGE_LOCKS = OFF` 옵션과 함께 실행할 수 있도록 허용된 경우 온라인 인덱스를 다시 빌드하면 조각이 늘어날 수 있습니다. 자세한 내용은 [작동 방법: 온라인 인덱스 다시 빌드 - 조각이 늘어날 수 있음](https://blogs.msdn.com/b/psssql/archive/2012/09/05/how-it-works-online-index-rebuild-can-cause-increased-fragmentation.aspx)을 참조하세요.  
+`MAX DOP > 1` 및 `ALLOW_PAGE_LOCKS = OFF` 옵션과 함께 실행할 수 있도록 허용된 경우 온라인 인덱스를 다시 빌드하면 조각이 늘어날 수 있습니다. 자세한 내용은 [작동 방법: 온라인 인덱스 다시 빌드 - 조각이 늘어날 수 있음](https://docs.microsoft.com/archive/blogs/psssql/how-it-works-online-index-rebuild-can-cause-increased-fragmentation)을 참조하세요.  
   
 ## <a name="transaction-log-considerations"></a>트랜잭션 로그 고려 사항
 

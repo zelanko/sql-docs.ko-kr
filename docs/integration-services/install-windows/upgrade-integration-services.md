@@ -17,12 +17,12 @@ ms.assetid: 04f9863c-ba0b-47c5-af91-f2d41b078a23
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
-ms.openlocfilehash: d2a2de2fd59222b174fe6b02fae12ff344a3de04
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c86a5f51e1d78b15a85a2063530bfb9ac4183a7d
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88346229"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480622"
 ---
 # <a name="upgrade-integration-services"></a>Integration Services 업그레이드
 
@@ -150,6 +150,6 @@ ms.locfileid: "88346229"
 -   업그레이드된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 저장되어 있는 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 패키지는 [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] 컴퓨터의 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에이전트 작업을 사용하여 실행할 수 없습니다.  
   
 ## <a name="external-resources"></a>외부 리소스  
- blogs.msdn.com의 블로그 항목 - [기존 사용자 지정 SSIS 확장 프로그램 및 애플리케이션을 Denali에서 사용되도록 설정](https://go.microsoft.com/fwlink/?LinkId=238157)  
+ blogs.msdn.com의 블로그 항목 - [기존 사용자 지정 SSIS 확장 프로그램 및 애플리케이션을 Denali에서 사용되도록 설정](https://techcommunity.microsoft.com/t5/sql-server-integration-services/making-your-existing-custom-ssis-extensions-and-applications/ba-p/387951)  
   
   

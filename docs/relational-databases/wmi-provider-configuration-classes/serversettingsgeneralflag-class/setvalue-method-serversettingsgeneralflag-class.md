@@ -16,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - SetValue method
 ms.assetid: a889feac-c0e0-4635-b506-843863d86967
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: e400d07a8e14bed9337cd0e889cb6ca13b44f674
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 87d6daffaee3454dbb53decaf15aafe9750e1800
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88427275"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89517395"
 ---
 # <a name="setvalue-method-serversettingsgeneralflag-class"></a>SetValue 메서드(ServerSettingsGeneralFlag 클래스)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +42,7 @@ object.SetValue(Value)
   
 #### <a name="parameters"></a>매개 변수  
   
-|매개 변수|설명|  
+|매개 변수|Description|  
 |---------------|-----------------|  
 |*값*|플래그의 값을 지정하는 부울 값입니다.|  
   

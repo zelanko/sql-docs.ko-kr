@@ -15,12 +15,12 @@ f1_keywords:
 ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e507742ac9da235499749ed2345b25cfa11d87e9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c2050734b89c8b5ae74aa40316c9b1f980705dc3
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88484911"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480295"
 ---
 # <a name="ssis-catalog"></a>SSIS 카탈로그
 
@@ -40,7 +40,7 @@ ms.locfileid: "88484911"
   
  **SSISDB** 데이터베이스를 유지 관리하려면 사용자 데이터베이스 관리를 위한 표준 엔터프라이즈 정책을 적용하는 것이 좋습니다. 유지 관리 계획 만들기에 대해서는 [Maintenance Plans](../../relational-databases/maintenance-plans/maintenance-plans.md)을 참조하십시오.  
   
- **SSISDB** 카탈로그 및 **SSISDB** 데이터베이스는 Windows PowerShell을 지원합니다. Windows PowerShell과 SQL Server를 함께 사용하는 방법은 [SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md)을 참조하십시오. Windows PowerShell을 사용하여 프로젝트 배포와 같은 태스크를 수행하는 방법의 예는 blogs.msdn.com에서 [SQL Server 2012의 SSIS 및 PowerShell](https://go.microsoft.com/fwlink/?LinkId=242539)블로그 항목을 참조하십시오.  
+ **SSISDB** 카탈로그 및 **SSISDB** 데이터베이스는 Windows PowerShell을 지원합니다. Windows PowerShell과 SQL Server를 함께 사용하는 방법은 [SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md)을 참조하십시오. Windows PowerShell을 사용하여 프로젝트 배포와 같은 태스크를 수행하는 방법의 예는 blogs.msdn.com에서 [SQL Server 2012의 SSIS 및 PowerShell](https://techcommunity.microsoft.com/t5/sql-server-integration-services/ssis-and-powershell-in-sql-server-2012/ba-p/388015)블로그 항목을 참조하십시오.  
   
  작업 데이터를 보는 방법에 대한 자세한 내용은 [실행 중인 패키지 및 기타 작업 모니터링](../../integration-services/performance/monitor-running-packages-and-other-operations.md)을 참조하세요.  
   
@@ -360,7 +360,7 @@ ms.locfileid: "88484911"
   
     ```  
   
-     Windows PowerShell 및 <xref:Microsoft.SqlServer.Management.IntegrationServices> 네임스페이스를 사용하는 방법의 예를 더 보려면 blogs.msdn.com에서 [SQL Server 2012의 SSIS 및 PowerShell](https://go.microsoft.com/fwlink/?LinkId=242539) 블로그 항목을 참조하세요. 네임스페이스 및 코드 예제에 대한 개요는 blogs.msdn.com에서 [SSIS 카탈로그 관리 개체 모델에 대한 이해](https://techcommunity.microsoft.com/t5/sql-server-integration-services/a-glimpse-of-the-ssis-catalog-managed-object-model/ba-p/387892)블로그 항목을 참조하십시오.  
+     Windows PowerShell 및 <xref:Microsoft.SqlServer.Management.IntegrationServices> 네임스페이스를 사용하는 방법의 예를 더 보려면 blogs.msdn.com에서 [SQL Server 2012의 SSIS 및 PowerShell](https://techcommunity.microsoft.com/t5/sql-server-integration-services/ssis-and-powershell-in-sql-server-2012/ba-p/388015) 블로그 항목을 참조하세요. 네임스페이스 및 코드 예제에 대한 개요는 blogs.msdn.com에서 [SSIS 카탈로그 관리 개체 모델에 대한 이해](https://techcommunity.microsoft.com/t5/sql-server-integration-services/a-glimpse-of-the-ssis-catalog-managed-object-model/ba-p/387892)블로그 항목을 참조하십시오.  
 
 ## <a name="catalog-properties-dialog-box"></a>카탈로그 속성 대화 상자
   카탈로그 속성 대화 상자를 사용하여 SSISDB 카탈로그를 구성할 수 있습니다. 카탈로그 속성은 중요한 데이터가 암호화되는 방법, 작업 및 프로젝트 버전 관리 데이터가 보존되는 방법 및 유효성 검사 작업의 제한 시간을 정의합니다. SSISDB 카탈로그는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트, 패키지, 매개 변수 및 환경에 대한 중앙 스토리지 및 관리 지점 역할을 합니다.  
@@ -677,8 +677,8 @@ SSISDB는 제한된 위임을 지원하지 않습니다. 더블 홉 환경에서
   
 ##  <a name="related-content"></a><a name="RelatedContent"></a> 관련 내용  
   
--   blogs.msdn.com의 블로그 항목 - [SQL Server 2012의 SSIS 및 PowerShell](https://go.microsoft.com/fwlink/?LinkId=242539)  
+-   blogs.msdn.com의 블로그 항목 - [SQL Server 2012의 SSIS 및 PowerShell](https://techcommunity.microsoft.com/t5/sql-server-integration-services/ssis-and-powershell-in-sql-server-2012/ba-p/388015)  
   
--   blogs.msdn.com의 블로그 항목 - [SSIS 카탈로그 액세스 제어 팁](https://go.microsoft.com/fwlink/?LinkId=246669)  
+-   blogs.msdn.com의 블로그 항목 - [SSIS 카탈로그 액세스 제어 팁](https://techcommunity.microsoft.com/t5/sql-server-integration-services/ssis-catalog-access-control-tips/ba-p/388057)  
   
 -   blogs.msdn.com의 블로그 항목 - [SSIS 카탈로그 관리 개체 모델에 대한 이해](https://techcommunity.microsoft.com/t5/sql-server-integration-services/a-glimpse-of-the-ssis-catalog-managed-object-model/ba-p/387892)  

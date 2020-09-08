@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: c06065cf-43e5-4b6b-9824-7309d7f5e35e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e0c43fc088fbf6ed8f95fdd418b50dc93563b662
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3ef015c1cdaef9794546c8284e968b53a20ca197
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88457885"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480726"
 ---
 # <a name="adding-data-flow-components-programmatically"></a>프로그래밍 방식으로 데이터 흐름 구성 요소 추가
 
@@ -155,7 +155,7 @@ End Module
 ## <a name="next-step"></a>다음 단계  
  구성 요소를 추가하고 구성한 다음에는 구성 요소 간의 경로를 만들어야 합니다. 이 단계에 대한 자세한 내용은 [프로그래밍 방식으로 데이터 흐름 구성 요소 연결](../../integration-services/building-packages-programmatically/connecting-data-flow-components-programmatically.md) 항목에서 설명합니다.  
   
-## <a name="sample"></a>샘플  
+## <a name="sample"></a>예제  
  다음 코드 예제에서는 데이터 흐름 태스크에 OLE DB 원본 구성 요소를 추가하고 해당 구성 요소의 디자인 타임 인스턴스를 만든 다음 구성 요소의 속성을 구성합니다. 이 예에는 Microsoft.SqlServer.DTSRuntimeWrap 어셈블리에 대한 참조가 필요합니다.  
   
 ```csharp  
@@ -285,7 +285,7 @@ End Module
 ```  
   
 ## <a name="external-resources"></a>외부 리소스  
- blogs.msdn.com의 블로그 항목 - [EzAPI – SQL Server 2012용으로 업데이트됨](https://go.microsoft.com/fwlink/?LinkId=243223)  
+ blogs.msdn.com의 블로그 항목 - [EzAPI – SQL Server 2012용으로 업데이트됨](https://techcommunity.microsoft.com/t5/sql-server-integration-services/ezapi-updated-for-sql-server-2012/ba-p/388042)  
 
 ## <a name="see-also"></a>참고 항목  
  [프로그래밍 방식으로 데이터 흐름 구성 요소 연결](../../integration-services/building-packages-programmatically/connecting-data-flow-components-programmatically.md)  
