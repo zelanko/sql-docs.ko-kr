@@ -16,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - SetOrderValue method
 ms.assetid: 15f693fd-37f6-41d9-9dab-d2c93db19895
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: fc7e381b892b754abe2ef2500d3dfb0aa17c473d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 1ea0b09b3a20322065648efd3692d835b7c16ac9
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88488465"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89521393"
 ---
 # <a name="setordervalue-method-clientnetworkprotocol-class"></a>SetOrderValue 메서드(ClientNetworkProtocol 클래스)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +42,7 @@ object.SetOrderValue(OrderValue)
   
 #### <a name="parameters"></a>매개 변수  
   
-|매개 변수|설명|  
+|매개 변수|Description|  
 |---------------|-----------------|  
 |*OrderValue*|순서 값을 설정하는**int32** 값입니다.|  
   

@@ -16,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - ProtocolOrder property
 ms.assetid: aa09b8ab-37db-4406-8973-acf503855fd2
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 2eef28c6250524757b4a3f23c625bb0c8fe02d71
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 51b686edb6ac9e93862c5f90f06bb7370fe47a9a
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446323"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89523103"
 ---
 # <a name="protocolorder-property-clientnetworkprotocol-class"></a>ProtocolOrder 속성(ClientNetworkProtocol 클래스)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +45,7 @@ object.ProtocolOrder [= value]
   
 ## <a name="remarks"></a>설명  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [클라이언트 프로토콜 구성](https://technet.microsoft.com/library/ms181035.aspx)   
  [클라이언트 네트워크 프로토콜 및 네트워크 라이브러리 구성](https://technet.microsoft.com/library/ms181035.aspx)  
   

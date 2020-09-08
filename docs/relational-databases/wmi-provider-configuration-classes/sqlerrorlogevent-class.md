@@ -12,14 +12,14 @@ helpviewer_keywords:
 - SqlErrorLogEvent class
 - SqlErrorLogFile class
 ms.assetid: bde6c467-38d0-4766-a7af-d6c9d6302b07
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 133eb91aed4cff032afd1b83637d3e4d4efa2635
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ff086556b507c0d09750b7ab27671a7b1cfaf496
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88460073"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89522255"
 ---
 # <a name="sqlerrorlogevent-class"></a>SqlErrorLogEvent 클래스
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +42,7 @@ class SQLErrorLogEvent
 ## <a name="properties"></a>속성  
  SQLErrorLogEvent 클래스는 다음 속성을 정의 합니다.  
   
-| 속성 | 설명 |
+| 속성 | Description |
 | -------- | ----------- |
 |FileName|데이터 형식: **문자열**<br /><br /> 액세스 형식: 읽기 전용<br /><br /> <br /><br /> 오류 로그 파일의 이름입니다.|  
 |InstanceName|데이터 형식: **문자열**<br /><br /> 액세스 형식: 읽기 전용<br /><br /> 한정자: Key<br /><br /> 로그 파일이 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이름입니다.|  

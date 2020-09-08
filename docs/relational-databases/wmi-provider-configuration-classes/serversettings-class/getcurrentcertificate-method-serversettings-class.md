@@ -16,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - GetCurrentCertificate method
 ms.assetid: 450e33c6-91d4-420f-ab7c-1905111f5658
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 0e2c9733194cc8d060caf1fa535ae685b64945de
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: fb696f852b9b12cedd7a84fbdffc58a18631f83e
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485138"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89521238"
 ---
 # <a name="getcurrentcertificate-method-serversettings-class"></a>GetCurrentCertificate 메서드(ServerSettings 클래스)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +42,7 @@ object.GetCurrentCertificate(SHA)
   
 #### <a name="parameters"></a>매개 변수  
   
-|매개 변수|설명|  
+|매개 변수|Description|  
 |---------------|-----------------|  
 |*SHA*|메서드가 완료된 후 현재 보안 인증서를 지정하는 문자열 개체 값(출력 매개 변수)입니다.|  
   
