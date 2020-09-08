@@ -16,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - SetStrValue method
 ms.assetid: 1fededc3-81ba-4b08-83f9-189b96140799
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 86a0a552b8d6544a5ea42c175e04396d3dcc48a9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: edadbdf316eaa20a2a701621b82afa609607f721
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88427125"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89520454"
 ---
 # <a name="setstrvalue-method-sqlserviceadvancedproperty-class"></a>SetStrValue 메서드(SqlServiceAdvancedProperty 클래스)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +42,7 @@ object.SetStrValue(StrValue)
   
 #### <a name="parameters"></a>매개 변수  
   
-|매개 변수|설명|  
+|매개 변수|Description|  
 |---------------|-----------------|  
 |*StrValue*|고급 속성의 값을 지정하는 문자열 값입니다.|  
   
@@ -52,7 +52,7 @@ object.SetStrValue(StrValue)
 ## <a name="remarks"></a>설명  
  속성을 문자열 값으로 설정하려면 속성 값 형식이 *string* 이어야 합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [서비스 시작 및 중지](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

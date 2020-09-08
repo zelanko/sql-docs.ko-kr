@@ -17,14 +17,14 @@ helpviewer_keywords:
 - WMI Provider for Configuration Management, WQL
 - WMI Provider for Configuration Management, scripts
 ms.assetid: c1e64905-3c2b-4974-88f4-abf17cf7e289
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: d57413087b08fa4a50ab43531e7c2a32faad2fa9
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 14f0e64a884cf74b5fcb849a8f8527a6dad5de1e
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888188"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89520248"
 ---
 # <a name="using-wql-and-scripting-languages-with-the-wmi-provider"></a>WMI 공급자에 WQL 및 스크립트 언어 사용
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

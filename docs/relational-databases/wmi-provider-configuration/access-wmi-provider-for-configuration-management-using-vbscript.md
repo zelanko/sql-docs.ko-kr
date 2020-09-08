@@ -15,14 +15,14 @@ helpviewer_keywords:
 - modifying SQL Server Service properties
 - WMI Provider for Configuration Management, VBScript
 ms.assetid: f3c5d981-eaa3-4d34-9b91-37e42636aa81
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: ab864d3e2fbfb10e98347ac40b0b5f74f08729cb
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 8b41779568bee4e3d83d8425fc6745d1191c7b58
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888235"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89520450"
 ---
 # <a name="access-wmi-provider-for-configuration-management-using-vbscript"></a>VBScript를 사용하여 구성 관리용 WMI 공급자 액세스
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
