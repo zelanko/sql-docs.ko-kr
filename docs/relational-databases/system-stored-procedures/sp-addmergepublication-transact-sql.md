@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addmergepublication
 ms.assetid: 28a629a1-7374-4614-9b04-279d290a942a
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 346b335063238d118412e8a2951ced67ed685756
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 4c3b3b78cc80f441ed340c4732e9b5d43a8af10e
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489643"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89530168"
 ---
 # <a name="sp_addmergepublication-transact-sql"></a>sp_addmergepublication(Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -87,10 +87,10 @@ sp_addmergepublication [ @publication = ] 'publication'
   
 `[ @sync_mode = ] 'sync_mode'` 게시에 대 한 구독자의 초기 동기화 모드입니다. *sync_mode* 은 **nvarchar (10)** 이며 다음 값 중 하나일 수 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**native** (기본값)|모든 테이블의 기본 모드 대량 복사 프로그램 출력을 생성합니다.|  
-|**자의**|모든 테이블의 문자 모드 대량 복사 프로그램 출력을 생성합니다. 및 이외 구독자를 지 원하는 데 필요 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEW](../../includes/ssew-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 합니다.|  
+|**character**|모든 테이블의 문자 모드 대량 복사 프로그램 출력을 생성합니다. 및 이외 구독자를 지 원하는 데 필요 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEW](../../includes/ssew-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 합니다.|  
   
 `[ @allow_push = ] 'allow_push'` 지정 된 게시에 대해 밀어넣기 구독을 만들 수 있는지 여부를 지정 합니다. *allow_push* 은 **nvarchar (5)** 이며 기본값은 게시에 대 한 밀어넣기 구독을 허용 하는 TRUE입니다.  
   
@@ -163,7 +163,7 @@ sp_addmergepublication [ @publication = ] 'publication'
   
 `[ @use_partition_groups = ] 'use_partition_groups'` 동기화 프로세스를 최적화 하는 데 사전 계산 파티션을 사용 하도록 지정 합니다. *use_partition_groups* 은 **nvarchar (5)** 이며 다음 값 중 하나일 수 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**true**|게시에서 사전 계산 파티션을 사용합니다.|  
 |**false**|게시에서 사전 계산 파티션을 사용하지 않습니다.|  
@@ -217,7 +217,7 @@ sp_addmergepublication [ @publication = ] 'publication'
   
 `[ @conflict_logging = ] 'conflict_logging'` 충돌 레코드가 저장 되는 위치를 지정 합니다. *conflict_logging* 은 **nvarchar (15)** 이며 다음 값 중 하나일 수 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**발행자**|충돌 레코드가 게시자에 저장됩니다.|  
 |**구독자**|충돌 레코드가 충돌을 발생시킨 구독자에 저장됩니다. [!INCLUDE[ssEW](../../includes/ssew-md.md)] 구독자에 대해서는 지원되지 않습니다.|  
@@ -247,7 +247,7 @@ sp_addmergepublication [ @publication = ] 'publication'
 ## <a name="see-also"></a>참고 항목  
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [데이터 및 데이터베이스 개체 게시](../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
- [Transact-sql&#41;sp_changemergepublication &#40;](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)   
+ [sp_changemergepublication&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)   
  [Transact-sql&#41;sp_dropmergepublication &#40;](../../relational-databases/system-stored-procedures/sp-dropmergepublication-transact-sql.md)   
  [sp_helpmergepublication&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)   
  [복제 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  

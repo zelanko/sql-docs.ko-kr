@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addmergesubscription
 ms.assetid: a191d817-0132-49ff-93ca-76f13e609b38
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 197715e613e35e71068723fe90f2643e2373817e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: d89340dfb073548378e8d4a9eb4929f836a2bbb9
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489590"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89529918"
 ---
 # <a name="sp_addmergesubscription-transact-sql"></a>sp_addmergesubscription(Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -75,7 +75,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
   
 `[ @subscriber_type = ] 'subscriber_type'` 구독자의 유형입니다. *subscriber_type*은 **nvarchar (15)** 이며 다음 값 중 하나일 수 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**local** (기본값)|게시자에게만 알려진 구독자입니다.|  
 |**global**|모든 서버에 알려진 구독자입니다.|  
@@ -121,8 +121,8 @@ sp_addmergesubscription [ @publication= ] 'publication'
   
 |값|Description|  
 |-----------|-----------------|  
-|**1**|처음|  
-|**2**|초|  
+|**1**|첫째|  
+|**2**|Second|  
 |**4**|세 번째|  
 |**8**|넷째|  
 |**16**|마지막|  
@@ -135,7 +135,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
 |값|Description|  
 |-----------|-----------------|  
 |**1**|한 번|  
-|**2**|초|  
+|**2**|Second|  
 |**4**|Minute|  
 |**8**|시간|  
 |NULL(기본값)||  
@@ -186,7 +186,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
 ## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할 또는 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_addmergesubscription**을 실행할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [ssSDSFull](../../relational-databases/replication/create-a-push-subscription.md)   
  [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
  [대화형 충돌 해결](../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md)   
