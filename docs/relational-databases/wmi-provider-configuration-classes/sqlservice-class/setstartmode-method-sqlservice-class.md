@@ -16,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - SetStartMode method
 ms.assetid: f6f198b4-f9a4-468c-8977-76462ef06e61
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: b60886ac53fc31a2c0a0da469ace5adfdb1b1d74
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ea53ab79c36602658363e165231c5c9307bd97ff
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88488350"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89550821"
 ---
 # <a name="setstartmode-method-sqlservice-class"></a>SetStartMode 메서드(SqlService 클래스)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -61,7 +61,7 @@ object.SetStartMode(StartMode)
   
 ## <a name="remarks"></a>설명  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [서비스 시작 및 중지](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

@@ -18,14 +18,14 @@ helpviewer_keywords:
 - dm_os_cluster_properties
 - sys.dm_os_cluster_properties
 ms.assetid: 6d82e770-fba7-49e0-9a0c-3b34b393e4a7
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: f9efac0397b3b98ff6f85ba0a98fe574fb36d217
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f90e54197387bf0bd64bf5c890ab3a044883bbd9
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88493640"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89550253"
 ---
 # <a name="sysdm_os_cluster_properties-transact-sql"></a>sys.dm_os_cluster_properties(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "88493640"
  이러한 속성은 실패 감지, 실패 응답 시간 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 장애 조치(failover) 클러스터 인스턴스의 상태를 모니터링하기 위한 로깅에 영향을 주는 값을 설정하는 데 사용됩니다.  
   
 
-|열 이름|속성|설명|  
+|열 이름|속성|Description|  
 |-----------------|--------------|-----------------|  
 |VerboseLogging|bigint|SQL Server 장애 조치(failover) 클러스터에 대한 로깅 수준입니다. 자세한 로깅을 설정하여 오류 로그에 문제 해결을 위한 추가 정보를 제공할 수 있습니다. 다음 값 중 하나입니다.<br /><br /> 0 - 로깅이 해제됩니다(기본값).<br /><br /> 1  -  오류만 로깅됩니다.<br /><br /> 2 - 오류 및 경고가 로깅됩니다.<br /><br /> 자세한 내용은 [ALTER SERVER CONFIGURATION &#40;transact-sql&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md)를 참조 하세요.|  
 |SqlDumperDumpFlags|bigint|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 생성되는 덤프 파일의 형식을 결정하는 SQLDumper 덤프 플래그입니다. 기본 설정은 0입니다.|  

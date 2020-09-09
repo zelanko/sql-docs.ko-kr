@@ -18,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.server_audit_specifications catalog view
 ms.assetid: fa496c6c-2a54-4fda-a238-db490c6b3afd
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 8490c652c2927e0b3587607adf0364c693839dbc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 20ee22c169ef624b70ca2790bf5fef5e4ff4e532
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88419977"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89550383"
 ---
 # <a name="sysserver_audit_specifications-transact-sql"></a>sys.server_audit_specifications(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,8 +36,8 @@ ms.locfileid: "88419977"
 |-----------------|---------------|-----------------|  
 |**name**|**Sysname 이며**|서버 사양의 이름입니다.|  
 |**server_specification_id**|**정수**|**SERVER_SPECIFICATION**ID입니다.|  
-|**create_date**|**날짜**|서버 감사 사양을 만든 날짜입니다.|  
-|**modified_date**|**날짜**|서버 감사 사양을 마지막으로 수정한 날짜입니다.|  
+|**create_date**|**날짜/시간**|서버 감사 사양을 만든 날짜입니다.|  
+|**modified_date**|**날짜/시간**|서버 감사 사양을 마지막으로 수정한 날짜입니다.|  
 |**is_state_enabled**|**tinyint**|감사 사양 상태:<br /><br /> 0-사용 안 함<br /><br /> 1-사용|  
 |**audit_GUID**|**uniqueidentifier**|이 사양을 포함하는 감사의 GUID입니다. 서버 시작 시 멤버 서버 감사 사양을 열거하는 동안 사용됩니다.|  
   
@@ -46,8 +46,8 @@ ms.locfileid: "88419977"
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
-## <a name="see-also"></a>참고 항목  
- [서버 감사 &#40;Transact-sql&#41;만들기 ](../../t-sql/statements/create-server-audit-transact-sql.md)   
+## <a name="see-also"></a>관련 항목  
+ [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   
  [ALTER SERVER AUDIT  &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-transact-sql.md)   
  [DROP SERVER AUDIT  &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-transact-sql.md)   
  [CREATE SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-specification-transact-sql.md)   

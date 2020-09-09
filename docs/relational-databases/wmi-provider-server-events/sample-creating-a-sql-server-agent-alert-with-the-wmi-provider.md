@@ -13,14 +13,14 @@ helpviewer_keywords:
 - WMI Provider for Server Events, samples
 - sample applications [WMI]
 ms.assetid: d44811c7-cd46-4017-b284-c863ca088e8f
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 7d0c3835f35df6a8e39de23cd215a651c391c8c9
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: d4577642217bbebeefcdaef460c0e131faae5be1
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888214"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89550810"
 ---
 # <a name="sample-creating-a-sql-server-agent-alert-with-the-wmi-provider"></a>샘플: WMI 공급자를 사용하여 SQL Server 에이전트 경고 만들기
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

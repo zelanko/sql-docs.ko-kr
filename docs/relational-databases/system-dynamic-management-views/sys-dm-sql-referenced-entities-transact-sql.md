@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_sql_referenced_entities dynamic management function
 ms.assetid: 077111cb-b860-4d61-916f-bac5d532912f
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f219091eb016dddbf0f38932146a57cbd0a0a7b3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: de7e748e1e993d0e60bde500af1443707ee9020c
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88419607"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89550216"
 ---
 # <a name="sysdm_sql_referenced_entities-transact-sql"></a>sys.dm_sql_referenced_entities(Transact-SQL)
 
@@ -123,21 +123,21 @@ sys.dm_sql_referenced_entities (
 |엔터티 유형|참조 엔터티|참조된 엔터티|  
 |-----------------|------------------------|-----------------------|  
 |테이블|예*|예|  
-|보기|예|예|  
+|View|예|예|  
 |[!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저**|예|예|  
-|CLR 저장 프로시저|예|예|  
+|CLR 저장 프로시저|아니요|예|  
 |[!INCLUDE[tsql](../../includes/tsql-md.md)] 사용자 정의 함수|예|예|  
-|CLR 사용자 정의 함수|예|예|  
-|CLR 트리거(DML 및 DDL)|예|예|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] DML 트리거|예|예|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] 데이터베이스 수준 DDL 트리거|예|예|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] 서버 수준 DDL 트리거|예|예|  
-|확장된 저장 프로시저|예|예|  
-|큐|예|예|  
-|동의어|예|예|  
-|형식(별칭 및 CLR 사용자 정의 형식)|예|예|  
-|XML 스키마 컬렉션|예|예|  
-|파티션 함수|예|예|  
+|CLR 사용자 정의 함수|아니요|예|  
+|CLR 트리거(DML 및 DDL)|아니요|아니요|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] DML 트리거|예|아니요|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 데이터베이스 수준 DDL 트리거|예|아니요|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 서버 수준 DDL 트리거|예|아니요|  
+|확장된 저장 프로시저|아니요|예|  
+|큐|아니요|예|  
+|동의어|아니요|예|  
+|형식(별칭 및 CLR 사용자 정의 형식)|아니요|예|  
+|XML 스키마 컬렉션|아니요|예|  
+|파티션 함수|아니요|예|  
 | &nbsp; | &nbsp; | &nbsp; |
 
  \* 테이블은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 계산 열, CHECK 제약 조건 또는 DEFAULT 제약 조건 정의에서 모듈, 사용자 정의 형식 또는 XML 스키마 컬렉션을 참조 하는 경우에만 참조 엔터티로 추적 됩니다.  

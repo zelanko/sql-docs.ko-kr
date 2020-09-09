@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.plan_guides catalog view
 ms.assetid: 3dde0397-ef6f-4b3f-8250-3f25584eb62b
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e37b5da28e5c4f00cc9a6e0f2faedcfcf104e3b9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e8aacbeebf50eae1a6e20d35262dbdc054f1429d
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490206"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89550483"
 ---
 # <a name="sysplan_guides-transact-sql"></a>sys.plan_guides(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "88490206"
 |**plan_guide_id**|**int**|데이터베이스의 계획 지침 고유 식별자입니다.|  
 |**name**|**sysname**|계획 지침의 이름입니다.|  
 |**create_date**|**datetime**|계획 지침을 만든 날짜와 시간입니다.|  
-|**modify_date**|**날짜**|계획 지침을 마지막으로 수정한 날짜입니다.|  
+|**modify_date**|**날짜/시간**|계획 지침을 마지막으로 수정한 날짜입니다.|  
 |**is_disabled**|**bit**|1 = 계획 지침이 비활성화되어 있습니다.<br /><br /> 0 = 계획 지침이 활성화되어 있습니다.|  
 |**query_text**|**nvarchar(max)**|계획 지침이 생성된 쿼리의 텍스트입니다.|  
 |**scope_type**|**tinyint**|계획 지침 범위를 식별합니다.<br /><br /> 1 = OBJECT<br /><br /> 2 = SQL<br /><br /> 3 = TEMPLATE|  
