@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_wait_stats dynamic management view
 ms.assetid: 568d89ed-2c96-4795-8a0c-2f3e375081da
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6f3080ccf17862cdcc2002c37576802b2e7c32a4
-ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
+ms.openlocfilehash: 678c6710e17d8383077be4acff8921268e9a0b6c
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88680818"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89532332"
 ---
 # <a name="sysdm_os_wait_stats-transact-sql"></a>sys.dm_os_wait_stats(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -87,9 +87,9 @@ GO
   
  다음 표에서는 태스크에서 발생한 대기 유형을 나열합니다.  
 
-|type |Description| 
+|형식 |Description| 
 |-------------------------- |--------------------------| 
-|ABR |정보를 제공하기 위해서만 확인됩니다. 지원되지 않습니다. 향후 호환성은 보장되지 않습니다.| | 
+|ABR |정보를 제공하기 위해서만 확인됩니다. 지원 안 됨 향후 호환성은 보장되지 않습니다.| | 
 |AM_INDBUILD_ALLOCATION |내부적으로만 사용됩니다. <br /><br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 이상| 
 |AM_SCHEMAMGR_UNSHARED_CACHE |내부적으로만 사용됩니다. <br /><br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 이상| 
 |ASSEMBLY_FILTER_HASHTABLE |내부적으로만 사용됩니다. <br /><br /> **적용 대상**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 이상| 
@@ -139,7 +139,7 @@ GO
 |BROKER_TRANSMITTER |Service Broker 전송기가 작업을 기다리는 경우에 발생 합니다. Service Broker에는 여러 대화 상자에서 하나 이상의 연결 끝점을 통해 전송 되는 메시지를 예약 하는 전송기 라는 구성 요소가 있습니다. 전송기에는이 목적을 위한 2 개의 전용 스레드가 있습니다. 이러한 전송기 스레드가 전송 연결을 사용 하 여 대화 메시지를 보낼 때까지 대기 하는 경우이 대기 유형은 청구 됩니다. 이 대기 유형에 대 한 waiting_tasks_count 높은 값은 이러한 전송기 스레드에 대해 간헐적으로 작동 하며 성능 문제를 표시 하지 않습니다. Service broker가 전혀 사용 되지 않는 경우에는 2 (전송기 스레드의 경우) waiting_tasks_count 2 여야 하며, wait_time_ms 인스턴스가 시작 된 이후에 지속 되는 기간의 두 배가 되어야 합니다. [Service broker 대기 통계](https://blogs.msdn.microsoft.com/sql_service_broker/2008/12/01/service-broker-wait-types)를 참조 하십시오.|
 |BUILTIN_HASHKEY_MUTEX |내부 데이터 구조를 초기화하는 동안 인스턴스 시작 후 발생할 수 있습니다. 데이터 구조가 초기화되면 되풀이되지 않습니다.| 
 |CHANGE_TRACKING_WAITFORCHANGES |내부적으로만 사용됩니다. <br /><br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 이상| 
-|CHECK_PRINT_RECORD |정보를 제공하기 위해서만 확인됩니다. 지원되지 않습니다. 향후 호환성은 보장되지 않습니다.| 
+|CHECK_PRINT_RECORD |정보를 제공하기 위해서만 확인됩니다. 지원 안 됨 향후 호환성은 보장되지 않습니다.| 
 |CHECK_SCANNER_MUTEX |내부적으로만 사용됩니다. <br /><br /> **적용 대상**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 이상| 
 |CHECK_TABLES_INITIALIZATION |내부적으로만 사용됩니다. <br /><br /> **적용 대상**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 이상| 
 |CHECK_TABLES_SINGLE_SCAN |내부적으로만 사용됩니다. <br /><br /> **적용 대상**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 이상| 
@@ -173,8 +173,8 @@ GO
 |CXROWSET_SYNC |병렬 범위 검색 중에 발생합니다.| 
 |DAC_INIT |관리자 전용 연결이 초기화되는 동안 발생합니다.| 
 |DBCC_SCALE_OUT_EXPR_CACHE |내부적으로만 사용됩니다. <br /><br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 이상| 
-|DBMIRROR_DBM_EVENT |정보를 제공하기 위해서만 확인됩니다. 지원되지 않습니다. 향후 호환성은 보장되지 않습니다.| 
-|DBMIRROR_DBM_MUTEX |정보를 제공하기 위해서만 확인됩니다. 지원되지 않습니다. 향후 호환성은 보장되지 않습니다.| 
+|DBMIRROR_DBM_EVENT |정보를 제공하기 위해서만 확인됩니다. 지원 안 됨 향후 호환성은 보장되지 않습니다.| 
+|DBMIRROR_DBM_MUTEX |정보를 제공하기 위해서만 확인됩니다. 지원 안 됨 향후 호환성은 보장되지 않습니다.| 
 |DBMIRROR_EVENTS_QUEUE |데이터베이스 미러링이 이벤트가 처리될 때까지 대기하는 경우에 발생합니다.| 
 |DBMIRROR_SEND |태스크가 네트워크 계층의 통신 백로그가 지워져서 메시지를 보낼 수 있을 때까지 대기하는 경우에 발생합니다. 통신 계층의 로드가 많아져 데이터베이스 미러링 데이터 처리량에 영향을 미치기 시작했음을 나타냅니다.| 
 |DBMIRROR_WORKER_QUEUE |데이터베이스 미러링 작업자 태스크가 추가 작업을 대기하는 경우를 나타냅니다.| 
@@ -210,8 +210,8 @@ GO
 |DTCPNTSYNC |내부적으로만 사용됩니다. <br /><br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 이상| 
 |DUMP_LOG_COORDINATOR |주 태스크가 하위 작업이 데이터를 생성할 때까지 대기하는 경우에 발생합니다. 일반적으로 이 상태는 발생하지 않습니다. 대기 시간이 길면 예상하지 못했던 차단이 발생한 것일 수 있으므로 하위 태스크를 조사해야 합니다.| 
 |DUMP_LOG_COORDINATOR_QUEUE |내부적으로만 사용됩니다.| 
-|DUMPTRIGGER |정보를 제공하기 위해서만 확인됩니다. 지원되지 않습니다. 향후 호환성은 보장되지 않습니다.| 
-|EC |정보를 제공하기 위해서만 확인됩니다. 지원되지 않습니다. 향후 호환성은 보장되지 않습니다.| 
+|DUMPTRIGGER |정보를 제공하기 위해서만 확인됩니다. 지원 안 됨 향후 호환성은 보장되지 않습니다.| 
+|EC |정보를 제공하기 위해서만 확인됩니다. 지원 안 됨 향후 호환성은 보장되지 않습니다.| 
 |EE_PMOLOCK |문 실행 중 특정 유형의 메모리 할당을 동기화하는 경우에 발생합니다.| 
 |EE_SPECPROC_MAP_INIT |내부 프로시저 해시 테이블 생성을 동기화하는 경우에 발생합니다. 이 대기는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 시작된 후 해시 테이블에 처음 액세스하는 경우에만 발생합니다.| 
 |ENABLE_EMPTY_VERSIONING |내부적으로만 사용됩니다. <br /><br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 이상| 
@@ -231,7 +231,7 @@ GO
 |FABRIC_REPLICA_PUBLISHER_EVENT_PUBLISH |내부적으로만 사용됩니다. <br /><br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상| 
 |FABRIC_REPLICA_PUBLISHER_SUBSCRIBER_LIST |내부적으로만 사용됩니다. <br /><br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상| 
 |FABRIC_WAIT_FOR_BUILD_REPLICA_EVENT_PROCESSING |내부적으로만 사용됩니다. <br /><br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상| 
-|FAILPOINT |정보를 제공하기 위해서만 확인됩니다. 지원되지 않습니다. 향후 호환성은 보장되지 않습니다.| 
+|FAILPOINT |정보를 제공하기 위해서만 확인됩니다. 지원 안 됨 향후 호환성은 보장되지 않습니다.| 
 |FCB_REPLICA_READ |스냅샷이나 DBCC에서 만든 임시 스냅샷 스파스 파일의 읽기가 동기화되는 경우에 발생합니다.| 
 |FCB_REPLICA_WRITE |스냅샷이나 DBCC에서 만든 임시 스냅샷 스파스 파일에 대한 페이지 밀어넣기 또는 끌어오기가 동기화되는 경우에 발생합니다.| 
 |FEATURE_SWITCHES_UPDATE |내부적으로만 사용됩니다. <br /><br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상| 
@@ -270,14 +270,14 @@ GO
 |FSAGENT |FILESTREAM 파일 I/O 작업이 다른 파일 I/O 작업에 사용되는 FILESTREAM 에이전트 리소스를 기다리는 경우에 발생합니다.| 
 |FSTR_CONFIG_MUTEX |다른 FILESTREAM 기능 다시 구성 작업이 완료될 때까지 대기하는 경우에 발생합니다.| 
 |FSTR_CONFIG_RWLOCK |FILESTREAM 구성 매개 변수에 대한 액세스 직렬화를 대기하는 경우에 발생합니다.| 
-|FT_COMPROWSET_RWLOCK |전체 텍스트가 조각 메타데이터 작업에서 대기 중입니다. 정보를 제공하기 위해서만 문서화됩니다. 지원되지 않습니다. 향후 호환성은 보장되지 않습니다.| 
-|FT_IFTS_RWLOCK |전체 텍스트가 내부 동기화에서 대기 중입니다. 정보를 제공하기 위해서만 문서화됩니다. 지원되지 않습니다. 향후 호환성은 보장되지 않습니다.| 
+|FT_COMPROWSET_RWLOCK |전체 텍스트가 조각 메타데이터 작업에서 대기 중입니다. 정보를 제공하기 위해서만 문서화됩니다. 지원 안 됨 향후 호환성은 보장되지 않습니다.| 
+|FT_IFTS_RWLOCK |전체 텍스트가 내부 동기화에서 대기 중입니다. 정보를 제공하기 위해서만 문서화됩니다. 지원 안 됨 향후 호환성은 보장되지 않습니다.| 
 |FT_IFTS_SCHEDULER_IDLE_WAIT |전체 텍스트 스케줄러 중지 대기 유형입니다. 스케줄러가 유휴 상태입니다.| 
-|FT_IFTSHC_MUTEX |전체 텍스트가 fdhost 제어 작업에서 대기 중입니다. 정보를 제공하기 위해서만 문서화됩니다. 지원되지 않습니다. 향후 호환성은 보장되지 않습니다.| 
-|FT_IFTSISM_MUTEX |전체 텍스트가 통신 작업에서 대기 중입니다. 정보를 제공하기 위해서만 문서화됩니다. 지원되지 않습니다. 향후 호환성은 보장되지 않습니다.| 
-|FT_MASTER_MERGE |전체 텍스트가 마스터 병합 작업에서 대기 중입니다. 정보를 제공하기 위해서만 문서화됩니다. 지원되지 않습니다. 향후 호환성은 보장되지 않습니다.| 
+|FT_IFTSHC_MUTEX |전체 텍스트가 fdhost 제어 작업에서 대기 중입니다. 정보를 제공하기 위해서만 문서화됩니다. 지원 안 됨 향후 호환성은 보장되지 않습니다.| 
+|FT_IFTSISM_MUTEX |전체 텍스트가 통신 작업에서 대기 중입니다. 정보를 제공하기 위해서만 문서화됩니다. 지원 안 됨 향후 호환성은 보장되지 않습니다.| 
+|FT_MASTER_MERGE |전체 텍스트가 마스터 병합 작업에서 대기 중입니다. 정보를 제공하기 위해서만 문서화됩니다. 지원 안 됨 향후 호환성은 보장되지 않습니다.| 
 |FT_MASTER_MERGE_COORDINATOR |내부적으로만 사용됩니다. <br /><br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 이상| 
-|FT_METADATA_MUTEX |정보를 제공하기 위해서만 문서화됩니다. 지원되지 않습니다. 향후 호환성은 보장되지 않습니다.| 
+|FT_METADATA_MUTEX |정보를 제공하기 위해서만 문서화됩니다. 지원 안 됨 향후 호환성은 보장되지 않습니다.| 
 |FT_PROPERTYLIST_CACHE |내부적으로만 사용됩니다. <br /><br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 이상| 
 |FT_RESTART_CRAWL |임시 오류로부터 복구하기 위해 마지막으로 알려진 양호 지점부터 전체 텍스트 탐색을 다시 시작해야 하는 경우에 발생합니다. 이 대기를 사용하면 해당 채우기에서 현재 작동 중인 작업자 태스크가 현재 단계를 완료하거나 종료할 수 있습니다.| 
 |FULLTEXT GATHERER |전체 텍스트 작업을 동기화하는 경우에 발생합니다.| 
@@ -290,7 +290,7 @@ GO
 |GLOBAL_QUERY_PRODUCER |내부적으로만 사용됩니다. <br /><br /> **적용 대상**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 이상| 
 |GLOBAL_TRAN_CREATE |내부적으로만 사용됩니다. <br /><br /> **적용 대상**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 이상| 
 |GLOBAL_TRAN_UCS_SESSION |내부적으로만 사용됩니다. <br /><br /> **적용 대상**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 이상| 
-|GUARDIAN |정보를 제공하기 위해서만 확인됩니다. 지원되지 않습니다. 향후 호환성은 보장되지 않습니다.| 
+|GUARDIAN |정보를 제공하기 위해서만 확인됩니다. 지원 안 됨 향후 호환성은 보장되지 않습니다.| 
 |HADR_AG_MUTEX |Always On DDL 문 또는 Windows Server 장애 조치 (Failover) 클러스터링 명령이 가용성 그룹의 구성에 대 한 단독 읽기/쓰기 액세스를 기다리고 있을 때 발생 합니다. <br /><br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 이상| 
 |HADR_AR_CRITICAL_SECTION_ENTRY |Always On DDL 문 또는 Windows Server 장애 조치 (Failover) 클러스터링 명령이 연결 된 가용성 그룹의 로컬 복제본의 런타임 상태에 대 한 단독 읽기/쓰기 액세스를 기다리고 있을 때 발생 합니다. <br /><br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 이상| 
 |HADR_AR_MANAGER_MUTEX |가용성 복제본 셧다운이 시작될 때까지 기다리고 있거나 가용성 복제본 시작이 종료될 때까지 기다리는 경우에 발생합니다. 내부적으로만 사용됩니다. <br /><br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 이상| 
@@ -371,20 +371,20 @@ GO
 |HTTP_STORAGE_CONNECTION |내부적으로만 사용됩니다. <br /><br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상| 
 |IMPPROV_IOWAIT |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 대량 로드 I/O가 완료될 때까지 대기하는 경우에 발생합니다.| 
 |INSTANCE_LOG_RATE_GOVERNOR |내부적으로만 사용됩니다. <br /><br /> **적용 대상**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 이상| 
-|INTERNAL_TESTING |정보를 제공하기 위해서만 확인됩니다. 지원되지 않습니다. 향후 호환성은 보장되지 않습니다.| 
+|INTERNAL_TESTING |정보를 제공하기 위해서만 확인됩니다. 지원 안 됨 향후 호환성은 보장되지 않습니다.| 
 |IO_AUDIT_MUTEX |추적 이벤트 버퍼 동기화 중에 발생합니다.| 
 |IO_COMPLETION |I/O 작업이 완료될 때까지 대기하는 동안 발생합니다. 이 대기 유형은 일반적으로 비데이터 페이지 I/O를 나타냅니다. 데이터 페이지 i/o 완료 대기는 PAGEIOLATCH 대기 상태로 표시 \_ \* 됩니다.| 
 |IO_QUEUE_LIMIT |내부적으로만 사용됩니다. <br /><br /> **적용 대상**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 이상| 
 |IO_RETRY |리소스 부족으로 인해 읽기 또는 쓰기와 같은 디스크 I/O 작업이 실패하여 다시 시도되는 경우에 발생합니다.| 
-|IOAFF_RANGE_QUEUE |정보를 제공하기 위해서만 확인됩니다. 지원되지 않습니다. 향후 호환성은 보장되지 않습니다.| 
+|IOAFF_RANGE_QUEUE |정보를 제공하기 위해서만 확인됩니다. 지원 안 됨 향후 호환성은 보장되지 않습니다.| 
 |KSOURCE_WAKEUP |서비스 제어 관리자의 요청을 대기하는 동안 서비스 제어 태스크에 사용됩니다. 긴 대기가 예상되며 문제가 있는 것은 아닙니다.| 
-|KTM_ENLISTMENT |정보를 제공하기 위해서만 확인됩니다. 지원되지 않습니다. 향후 호환성은 보장되지 않습니다.| 
-|KTM_RECOVERY_MANAGER |정보를 제공하기 위해서만 확인됩니다. 지원되지 않습니다. 향후 호환성은 보장되지 않습니다.| 
-|KTM_RECOVERY_RESOLUTION |정보를 제공하기 위해서만 확인됩니다. 지원되지 않습니다. 향후 호환성은 보장되지 않습니다.| 
+|KTM_ENLISTMENT |정보를 제공하기 위해서만 확인됩니다. 지원 안 됨 향후 호환성은 보장되지 않습니다.| 
+|KTM_RECOVERY_MANAGER |정보를 제공하기 위해서만 확인됩니다. 지원 안 됨 향후 호환성은 보장되지 않습니다.| 
+|KTM_RECOVERY_RESOLUTION |정보를 제공하기 위해서만 확인됩니다. 지원 안 됨 향후 호환성은 보장되지 않습니다.| 
 |LATCH_DT |DT(삭제) 래치를 대기하는 경우에 발생합니다. 버퍼 래치 또는 트랜잭션 표시 래치를 포함하지 않습니다. 래치 \_ \* 대기 목록은 sys. dm_os_latch_stats에서 사용할 수 있습니다. sys.dm_os_latch_stats는 LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX 및 LATCH_DT 대기를 그룹화합니다.| 
 |LATCH_EX |EX(배타) 래치를 대기하는 경우에 발생합니다. 버퍼 래치 또는 트랜잭션 표시 래치를 포함하지 않습니다. 래치 \_ \* 대기 목록은 sys. dm_os_latch_stats에서 사용할 수 있습니다. sys.dm_os_latch_stats는 LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX 및 LATCH_DT 대기를 그룹화합니다.| 
 |LATCH_KP |KP(유지) 래치를 대기하는 경우에 발생합니다. 버퍼 래치 또는 트랜잭션 표시 래치를 포함하지 않습니다. 래치 \_ \* 대기 목록은 sys. dm_os_latch_stats에서 사용할 수 있습니다. sys.dm_os_latch_stats는 LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX 및 LATCH_DT 대기를 그룹화합니다.| 
-|LATCH_NL |정보를 제공하기 위해서만 확인됩니다. 지원되지 않습니다. 향후 호환성은 보장되지 않습니다.| 
+|LATCH_NL |정보를 제공하기 위해서만 확인됩니다. 지원 안 됨 향후 호환성은 보장되지 않습니다.| 
 |LATCH_SH |SH(공유) 래치를 대기하는 경우에 발생합니다. 버퍼 래치 또는 트랜잭션 표시 래치를 포함하지 않습니다. 래치 \_ \* 대기 목록은 sys. dm_os_latch_stats에서 사용할 수 있습니다. sys.dm_os_latch_stats는 LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX 및 LATCH_DT 대기를 그룹화합니다.| 
 |LATCH_UP |UP(업데이트) 래치를 대기하는 경우에 발생합니다. 버퍼 래치 또는 트랜잭션 표시 래치를 포함하지 않습니다. 래치 \_ \* 대기 목록은 sys. dm_os_latch_stats에서 사용할 수 있습니다. sys.dm_os_latch_stats는 LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX 및 LATCH_DT 대기를 그룹화합니다.| 
 |LAZYWRITER_SLEEP |지연 기록기 태스크가 일시 중단 될 때 발생 합니다. 대기 중인 백그라운드 태스크에서 사용한 시간을 측정한 것입니다. 사용자 대기를 찾을 때 이 상태는 고려하지 마세요.| 
@@ -455,9 +455,9 @@ GO
 |LOG_RATE_GOVERNOR |내부적으로만 사용됩니다. <br /><br /> **적용 대상**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 이상| 
 |LOGBUFFER |태스크가 로그 버퍼의 공간에 로그 레코드가 저장될 때까지 대기하는 경우에 발생합니다. 값이 계속 높게 나타나면 로그 디바이스가 서버에서 생성하는 로그의 양을 따라갈 수 없는 것일 수 있습니다.| 
 |LOGCAPTURE_LOGPOOLTRUNCPOINT |내부적으로만 사용됩니다. <br /><br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 이상| 
-|LOGGENERATION |정보를 제공하기 위해서만 확인됩니다. 지원되지 않습니다. 향후 호환성은 보장되지 않습니다.| 
+|LOGGENERATION |정보를 제공하기 위해서만 확인됩니다. 지원 안 됨 향후 호환성은 보장되지 않습니다.| 
 |LOGMGR |데이터베이스를 닫는 동안 태스크가 로그 종료 전에 처리 중인 로그 I/O가 완료될 때까지 대기하는 경우에 발생합니다.| 
-|LOGMGR_FLUSH |정보를 제공하기 위해서만 확인됩니다. 지원되지 않습니다. 향후 호환성은 보장되지 않습니다.| 
+|LOGMGR_FLUSH |정보를 제공하기 위해서만 확인됩니다. 지원 안 됨 향후 호환성은 보장되지 않습니다.| 
 |LOGMGR_PMM_LOG |내부적으로만 사용됩니다. <br /><br /> **적용 대상**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 이상| 
 |LOGMGR_QUEUE |로그 쓰기 태스크가 작업 요청을 대기하는 동안 발생합니다.| 
 |LOGMGR_RESERVE_APPEND |태스크가 로그 잘림으로 인해 로그 공간이 확보되어 작업이 새 로그 레코드를 쓸 수 있는지 확인하려고 대기하는 경우에 발생합니다. 이 대기를 줄이려면 영향을 받는 데이터베이스의 로그 파일 크기를 늘리세요.| 
@@ -475,8 +475,8 @@ GO
 |MEMORY_GRANT_UPDATE |내부적으로만 사용됩니다. <br /><br /> **적용 대상**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 이상| 
 |METADATA_LAZYCACHE_RWLOCK |내부적으로만 사용됩니다. <br /><br /> **적용**대상:에만 적용 됩니다 [!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)] . |  
 |MIGRATIONBUFFER |내부적으로만 사용됩니다. <br /><br /> **적용 대상**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 이상| 
-|MISCELLANEOUS |정보를 제공하기 위해서만 확인됩니다. 지원되지 않습니다. 향후 호환성은 보장되지 않습니다.| 
-|MISCELLANEOUS |정보를 제공하기 위해서만 확인됩니다. 지원되지 않습니다. 향후 호환성은 보장되지 않습니다.| 
+|MISCELLANEOUS |정보를 제공하기 위해서만 확인됩니다. 지원 안 됨 향후 호환성은 보장되지 않습니다.| 
+|MISCELLANEOUS |정보를 제공하기 위해서만 확인됩니다. 지원 안 됨 향후 호환성은 보장되지 않습니다.| 
 |MSQL_DQ |분산 쿼리 작업이 완료될 때까지 태스크가 대기하는 경우에 발생합니다. 발생 가능한 MARS(Multiple Active Result Set) 애플리케이션 교착 상태를 감지하는 데 사용됩니다. 대기는 분산 쿼리 호출이 완료될 때 끝납니다.| 
 |MSQL_XACT_MGR_MUTEX |태스크가 세션 트랜잭션 관리자의 소유권을 획득하여 세션 수준 트랜잭션 작업을 수행하려고 대기하는 경우에 발생합니다.| 
 |MSQL_XACT_MUTEX |트랜잭션 사용 동기화 중에 발생합니다. 요청에서 트랜잭션을 사용하려면 먼저 뮤텍스를 획득해야 합니다.| 
@@ -490,13 +490,13 @@ GO
 |PAGEIOLATCH_DT |태스크가 I/O 요청에 있는 버퍼를 래치에서 기다리는 경우에 발생합니다. 래치 요청이 삭제 모드에 있습니다. 대기 수가 많으면 디스크 하위 시스템에 문제가 있을 수 있습니다.| 
 |PAGEIOLATCH_EX |태스크가 I/O 요청에 있는 버퍼를 래치에서 기다리는 경우에 발생합니다. 래치 요청이 배타 모드에 있습니다. 대기 수가 많으면 디스크 하위 시스템에 문제가 있을 수 있습니다.| 
 |PAGEIOLATCH_KP |태스크가 I/O 요청에 있는 버퍼를 래치에서 기다리는 경우에 발생합니다. 래치 요청이 유지 모드에 있습니다. 대기 수가 많으면 디스크 하위 시스템에 문제가 있을 수 있습니다.| 
-|PAGEIOLATCH_NL |정보를 제공하기 위해서만 확인됩니다. 지원되지 않습니다. 향후 호환성은 보장되지 않습니다.| 
+|PAGEIOLATCH_NL |정보를 제공하기 위해서만 확인됩니다. 지원 안 됨 향후 호환성은 보장되지 않습니다.| 
 |PAGEIOLATCH_SH |태스크가 I/O 요청에 있는 버퍼를 래치에서 기다리는 경우에 발생합니다. 래치 요청이 공유 모드에 있습니다. 대기 수가 많으면 디스크 하위 시스템에 문제가 있을 수 있습니다.| 
 |PAGEIOLATCH_UP |태스크가 I/O 요청에 있는 버퍼를 래치에서 기다리는 경우에 발생합니다. 래치 요청이 업데이트 모드에 있습니다. 대기 수가 많으면 디스크 하위 시스템에 문제가 있을 수 있습니다.| 
 |PAGELATCH_DT |태스크가 I/O 요청에 없는 버퍼를 래치에서 대기하는 경우에 발생합니다. 래치 요청이 삭제 모드에 있습니다.| 
 |PAGELATCH_EX |태스크가 I/O 요청에 없는 버퍼를 래치에서 대기하는 경우에 발생합니다. 래치 요청이 배타 모드에 있습니다.| 
 |PAGELATCH_KP |태스크가 I/O 요청에 없는 버퍼를 래치에서 대기하는 경우에 발생합니다. 래치 요청이 유지 모드에 있습니다.| 
-|PAGELATCH_NL |정보를 제공하기 위해서만 확인됩니다. 지원되지 않습니다. 향후 호환성은 보장되지 않습니다.| 
+|PAGELATCH_NL |정보를 제공하기 위해서만 확인됩니다. 지원 안 됨 향후 호환성은 보장되지 않습니다.| 
 |PAGELATCH_SH |태스크가 I/O 요청에 없는 버퍼를 래치에서 대기하는 경우에 발생합니다. 래치 요청이 공유 모드에 있습니다.| 
 |PAGELATCH_UP |태스크가 I/O 요청에 없는 버퍼를 래치에서 대기하는 경우에 발생합니다. 래치 요청이 업데이트 모드에 있습니다.| 
 |PARALLEL_BACKUP_QUEUE |RESTORE HEADERONLY, RESTORE FILELISTONLY 또는 RESTORE LABELONLY에서 직렬화 출력이 생성되는 경우에 발생합니다.| 
@@ -510,7 +510,7 @@ GO
 |PERFORMANCE_COUNTERS_RWLOCK |내부적으로만 사용됩니다.| 
 |PHYSICAL_SEEDING_DMV |내부적으로만 사용됩니다. <br /><br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상| 
 |POOL_LOG_RATE_GOVERNOR |내부적으로만 사용됩니다. <br /><br /> **적용 대상**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 이상| 
-|PREEMPTIVE_ABR |정보를 제공하기 위해서만 확인됩니다. 지원되지 않습니다. 향후 호환성은 보장되지 않습니다.| 
+|PREEMPTIVE_ABR |정보를 제공하기 위해서만 확인됩니다. 지원 안 됨 향후 호환성은 보장되지 않습니다.| 
 |PREEMPTIVE_AUDIT_ACCESS_EVENTLOG |Windows 이벤트 로그에 감사 이벤트를 기록하기 위해 SQLOS([!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 운영 체제) 스케줄러가 우선 모드로 전환된 경우에 발생합니다. <br /><br /> **적용**대상:에만 적용 됩니다 [!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)] . |  
 |PREEMPTIVE_AUDIT_ACCESS_SECLOG |Windows 보안 로그에 감사 이벤트를 기록하기 위해 SQLOS 스케줄러가 우선 모드로 전환된 경우에 발생합니다. <br /><br /> **적용**대상:에만 적용 됩니다 [!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)] . |  
 |PREEMPTIVE_CLOSEBACKUPMEDIA |백업 미디어를 닫기 위해 SQLOS 스케줄러가 우선 모드로 전환된 경우에 발생합니다.| 
@@ -688,13 +688,13 @@ GO
 |PREEMPTIVE_SHAREDMEM_GETDATA |내부적으로만 사용됩니다.| 
 |PREEMPTIVE_SNIOPEN |내부적으로만 사용됩니다.| 
 |PREEMPTIVE_SOSHOST |내부적으로만 사용됩니다.| 
-|PREEMPTIVE_SOSTESTING |정보를 제공하기 위해서만 확인됩니다. 지원되지 않습니다. 향후 호환성은 보장되지 않습니다.| 
+|PREEMPTIVE_SOSTESTING |정보를 제공하기 위해서만 확인됩니다. 지원 안 됨 향후 호환성은 보장되지 않습니다.| 
 |PREEMPTIVE_SP_SERVER_DIAGNOSTICS |내부적으로만 사용됩니다. <br /><br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 이상| 
 |PREEMPTIVE_STARTRM |내부적으로만 사용됩니다.| 
 |PREEMPTIVE_STREAMFCB_CHECKPOINT |내부적으로만 사용됩니다.| 
 |PREEMPTIVE_STREAMFCB_RECOVER |내부적으로만 사용됩니다.| 
-|PREEMPTIVE_STRESSDRIVER |정보를 제공하기 위해서만 확인됩니다. 지원되지 않습니다. 향후 호환성은 보장되지 않습니다.| 
-|PREEMPTIVE_TESTING |정보를 제공하기 위해서만 확인됩니다. 지원되지 않습니다. 향후 호환성은 보장되지 않습니다.| 
+|PREEMPTIVE_STRESSDRIVER |정보를 제공하기 위해서만 확인됩니다. 지원 안 됨 향후 호환성은 보장되지 않습니다.| 
+|PREEMPTIVE_TESTING |정보를 제공하기 위해서만 확인됩니다. 지원 안 됨 향후 호환성은 보장되지 않습니다.| 
 |PREEMPTIVE_TRANSIMPORT |내부적으로만 사용됩니다.| 
 |PREEMPTIVE_UNMARSHALPROPAGATIONTOKEN |내부적으로만 사용됩니다.| 
 |PREEMPTIVE_VSS_CREATESNAPSHOT |내부적으로만 사용됩니다.| 
@@ -709,7 +709,7 @@ GO
 |PREEMPTIVE_XE_TARGETFINALIZE |내부적으로만 사용됩니다.| 
 |PREEMPTIVE_XE_TARGETINIT |내부적으로만 사용됩니다.| 
 |PREEMPTIVE_XE_TIMERRUN |내부적으로만 사용됩니다.| 
-|PREEMPTIVE_XETESTING |정보를 제공하기 위해서만 확인됩니다. 지원되지 않습니다. 향후 호환성은 보장되지 않습니다.| 
+|PREEMPTIVE_XETESTING |정보를 제공하기 위해서만 확인됩니다. 지원 안 됨 향후 호환성은 보장되지 않습니다.| 
 |PRINT_ROLLBACK_PROGRESS |ALTER DATABASE termination 절을 사용하여 전환된 데이터베이스에서 사용자 프로세스가 끝나기를 기다리는 데 사용됩니다. 자세한 내용은 ALTER DATABASE(Transact-SQL)를 참조하세요.| 
 |PRU_ROLLBACK_DEFERRED |내부적으로만 사용됩니다. <br /><br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 이상| 
 |PWAIT_ALL_COMPONENTS_INITIALIZED |내부적으로만 사용됩니다. <br /><br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 이상| 
@@ -768,16 +768,16 @@ GO
 |QRY_MEM_GRANT_INFO_MUTEX |쿼리 실행 메모리 관리 기능이 정적 권한 부여 정보 목록에 대한 액세스를 제어하려고 하는 경우에 발생합니다. 이 상태는 현재 권한이 부여된 메모리 요청과 대기 중인 메모리 요청에 대한 정보를 나열합니다. 이 상태는 단순 액세스 제어 상태입니다. 이 상태에 대한 긴 대기가 있으면 안 됩니다. 이 뮤텍스가 해제되지 않으면 새로운 메모리 사용 쿼리의 응답이 모두 중지됩니다.| 
 |QRY_PARALLEL_THREAD_MUTEX |내부적으로만 사용됩니다. <br /><br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 이상| 
 |QRY_PROFILE_LIST_MUTEX |내부적으로만 사용됩니다. <br /><br /> **적용 대상**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 이상| 
-|QUERY_ERRHDL_SERVICE_DONE |정보를 제공하기 위해서만 확인됩니다. 지원되지 않습니다. <br /><br /> **적용**대상:에만 적용 됩니다 [!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)] . |  
-|QUERY_WAIT_ERRHDL_SERVICE |정보를 제공하기 위해서만 확인됩니다.  지원되지 않습니다. <br /><br /> **적용**대상:에만 적용 됩니다 [!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)] .  |  
+|QUERY_ERRHDL_SERVICE_DONE |정보를 제공하기 위해서만 확인됩니다. 지원 안 됨 <br /><br /> **적용**대상:에만 적용 됩니다 [!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)] . |  
+|QUERY_WAIT_ERRHDL_SERVICE |정보를 제공하기 위해서만 확인됩니다.  지원 안 됨 <br /><br /> **적용**대상:에만 적용 됩니다 [!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)] .  |  
 |QUERY_EXECUTION_INDEX_SORT_EVENT_OPEN |오프라인 인덱스 빌드 생성이 병렬로 실행되고 정렬되는 여러 작업자 스레드가 정렬 파일에 대한 액세스를 동기화하는 특정 경우에 발생합니다.| 
 |QUERY_NOTIFICATION_MGR_MUTEX |쿼리 알림 관리자에서 가비지 수집 큐 동기화 중에 발생합니다.| 
 |QUERY_NOTIFICATION_SUBSCRIPTION_MUTEX |쿼리 알림의 트랜잭션 상태 동기화 중에 발생합니다.| 
 |QUERY_NOTIFICATION_TABLE_MGR_MUTEX |쿼리 알림 관리자의 내부 동기화 중에 발생합니다.| 
-|QUERY_NOTIFICATION_UNITTEST_MUTEX |정보를 제공하기 위해서만 확인됩니다. 지원되지 않습니다. 향후 호환성은 보장되지 않습니다.| 
+|QUERY_NOTIFICATION_UNITTEST_MUTEX |정보를 제공하기 위해서만 확인됩니다. 지원 안 됨 향후 호환성은 보장되지 않습니다.| 
 |QUERY_OPTIMIZER_PRINT_MUTEX |쿼리 최적화 프로그램의 진단 출력 생성 동기화 중에 발생합니다. 이 대기 유형은 진단 설정이 Microsoft 기술 지원의 방향으로 설정 된 경우에만 발생 합니다.| 
 |QUERY_TASK_ENQUEUE_MUTEX |내부적으로만 사용됩니다. <br /><br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 이상| 
-|QUERY_TRACEOUT |정보를 제공하기 위해서만 확인됩니다. 지원되지 않습니다. 향후 호환성은 보장되지 않습니다.| 
+|QUERY_TRACEOUT |정보를 제공하기 위해서만 확인됩니다. 지원 안 됨 향후 호환성은 보장되지 않습니다.| 
 |RBIO_WAIT_VLF |내부적으로만 사용됩니다. <br /><br /> **적용 대상**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 이상| 
 |RBIO_RG_STORAGE |페이지 서버에서 로그 사용량이 지연 되어 하이퍼 크기 조정 데이터베이스 계산 노드가 제한 될 때 발생 합니다. <br /><br /> **적용**대상: Azure SQL Database hyperscale.|
 |RBIO_RG_DESTAGE |장기 로그 저장소에의 한 로그 사용 지연으로 인해 Hyperscale 데이터베이스 계산 노드가 제한 될 때 발생 합니다. <br /><br /> **적용**대상: Azure SQL Database hyperscale.|
@@ -917,7 +917,7 @@ GO
 |TRAN_MARKLATCH_DT |표시된 트랜잭션에 대한 삭제 모드 래치를 대기하는 경우에 발생합니다. 트랜잭션 표시 래치는 표시된 트랜잭션의 커밋 동기화에 사용됩니다.| 
 |TRAN_MARKLATCH_EX |표시된 트랜잭션에 대한 배타 모드 래치를 대기하는 경우에 발생합니다. 트랜잭션 표시 래치는 표시된 트랜잭션의 커밋 동기화에 사용됩니다.| 
 |TRAN_MARKLATCH_KP |표시된 트랜잭션에 대한 유지 모드 래치를 대기하는 경우에 발생합니다. 트랜잭션 표시 래치는 표시된 트랜잭션의 커밋 동기화에 사용됩니다.| 
-|TRAN_MARKLATCH_NL |정보를 제공하기 위해서만 확인됩니다. 지원되지 않습니다. 향후 호환성은 보장되지 않습니다.| 
+|TRAN_MARKLATCH_NL |정보를 제공하기 위해서만 확인됩니다. 지원 안 됨 향후 호환성은 보장되지 않습니다.| 
 |TRAN_MARKLATCH_SH |표시된 트랜잭션에 대한 공유 모드 래치를 대기하는 경우에 발생합니다. 트랜잭션 표시 래치는 표시된 트랜잭션의 커밋 동기화에 사용됩니다.| 
 |TRAN_MARKLATCH_UP |표시된 트랜잭션에 대한 업데이트 모드 래치를 대기하는 경우에 발생합니다. 트랜잭션 표시 래치는 표시된 트랜잭션의 커밋 동기화에 사용됩니다.| 
 |TRANSACTION_MUTEX |트랜잭션에 대한 여러 일괄 처리의 액세스 동기화 중에 발생합니다.| 
@@ -959,9 +959,9 @@ GO
 |WAIT_XTP_TRAN_DEPENDENCY |트랜잭션에 종속성을 대기하는 동안에 발생합니다. <br /><br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상| 
 |WAITFOR |WAITFOR Transact-sql 문의 결과로 발생 합니다. 대기 시간은 문의 매개 변수에 의해 결정됩니다. 이 대기는 사용자가 시작합니다.| 
 |WAITFOR_PER_QUEUE |내부적으로만 사용됩니다. <br /><br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 이상| 
-|WAITFOR_TASKSHUTDOWN |정보를 제공하기 위해서만 확인됩니다. 지원되지 않습니다. 향후 호환성은 보장되지 않습니다.| 
+|WAITFOR_TASKSHUTDOWN |정보를 제공하기 위해서만 확인됩니다. 지원 안 됨 향후 호환성은 보장되지 않습니다.| 
 |WAITSTAT_MUTEX |sys.dm_os_wait_stats를 채우는 데 사용되는 통계 컬렉션에 대한 액세스 동기화 중에 발생합니다.| 
-|WCC |정보를 제공하기 위해서만 확인됩니다. 지원되지 않습니다. 향후 호환성은 보장되지 않습니다.| 
+|WCC |정보를 제공하기 위해서만 확인됩니다. 지원 안 됨 향후 호환성은 보장되지 않습니다.| 
 |WINDOW_AGGREGATES_MULTIPASS |내부적으로만 사용됩니다. <br /><br /> **적용 대상**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 이상| 
 |WINFAB_API_CALL |내부적으로만 사용됩니다. <br /><br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상| 
 |WINFAB_REPLICA_BUILD_OPERATION |내부적으로만 사용됩니다. <br /><br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상| 
@@ -987,9 +987,9 @@ GO
 |XE_DISPATCHER_WAIT |확장 이벤트 세션에 사용되는 백그라운드 스레드가 이벤트 버퍼 처리를 기다리는 경우 발생합니다.| 
 |XE_FILE_TARGET_TVF |내부적으로만 사용됩니다. <br /><br /> **적용 대상**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 이상| 
 |XE_LIVE_TARGET_TVF |내부적으로만 사용됩니다. <br /><br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 이상| 
-|XE_MODULEMGR_SYNC |정보를 제공하기 위해서만 확인됩니다. 지원되지 않습니다. 향후 호환성은 보장되지 않습니다.| 
-|XE_OLS_LOCK |정보를 제공하기 위해서만 확인됩니다. 지원되지 않습니다. 향후 호환성은 보장되지 않습니다.| 
-|XE_PACKAGE_LOCK_BACKOFF |정보를 제공하기 위해서만 확인됩니다. 지원되지 않습니다. <br /><br /> **적용**대상:에만 적용 됩니다 [!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)] . |  
+|XE_MODULEMGR_SYNC |정보를 제공하기 위해서만 확인됩니다. 지원 안 됨 향후 호환성은 보장되지 않습니다.| 
+|XE_OLS_LOCK |정보를 제공하기 위해서만 확인됩니다. 지원 안 됨 향후 호환성은 보장되지 않습니다.| 
+|XE_PACKAGE_LOCK_BACKOFF |정보를 제공하기 위해서만 확인됩니다. 지원 안 됨 <br /><br /> **적용**대상:에만 적용 됩니다 [!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)] . |  
 |XE_SERVICES_EVENTMANUAL |내부적으로만 사용됩니다.| 
 |XE_SERVICES_MUTEX |내부적으로만 사용됩니다.| 
 |XE_SERVICES_RWLOCK |내부적으로만 사용됩니다.| 

@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addmergepullsubscription_agent
 ms.assetid: a2f4b086-078d-49b5-8971-8a1e3f6a6feb
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 9869bd76cbec34653bb9d59a7f00968d59c41a31
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 7ad9425df176a7f822b18ab793d0eada4362c551
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489685"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89530309"
 ---
 # <a name="sp_addmergepullsubscription_agent-transact-sql"></a>sp_addmergepullsubscription_agent(Transact-SQL)
 
@@ -185,8 +185,8 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 |값|Description|  
 |-----------|-----------------|  
-|**1**|처음|  
-|**2**|초|  
+|**1**|첫째|  
+|**2**|Second|  
 |**4**|세 번째|  
 |**8**|넷째|  
 |**16**|마지막|  
@@ -199,7 +199,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 |값|Description|  
 |-----------|-----------------|  
 |**1**|한 번|  
-|**2**|초|  
+|**2**|Second|  
 |**4**|Minute|  
 |**8**|시간|  
 |NULL(기본값)||  
@@ -267,7 +267,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 `[ @internet_security_mode = ] internet_security_mode` HTTPS를 사용 하 여 웹 동기화 중에 웹 서버에 연결할 때 병합 에이전트에서 사용 하는 인증 방법입니다. *internet_security_mode* 은 **int** 이며 다음 값 중 하나일 수 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**0**|기본 인증이 사용됩니다.|  
 |**1** (기본값)|Windows 통합 인증이 사용됩니다.|  

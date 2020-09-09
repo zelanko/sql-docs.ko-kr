@@ -18,14 +18,14 @@ helpviewer_keywords:
 - extended events [SQL Server], views
 - sys.dm_os_dispatcher_pools DMV
 ms.assetid: b9edbc83-c6bc-4753-9bb5-a454cfe7d6bf
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 768bf4dca3e42837218b49fe863ae45a3daf8630
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a1810098b53ab87f98687a767f384674fcdaa8bc
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481948"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89531914"
 ---
 # <a name="sysdm_os_dispatcher_pools-transact-sql"></a>sys.dm_os_dispatcher_pools(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "88481948"
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |dispatcher_pool_address|**varbinary(8)**|디스패처 풀의 주소입니다. dispatcher_pool_address 고유 합니다. Null을 허용하지 않습니다.|  
-|type|**nvarchar(256)**|발송자 풀의 유형입니다. Null을 허용하지 않습니다. 다음과 같은 두 가지 유형의 발송자 풀이 있습니다.<br /><br /> DISP_POOL_XE_ENGINE<br /><br /> DISP_POOL_XE_SESSION<br /><br /> 전체 목록에 대 한 DMV 쿼리|  
+|형식|**nvarchar(256)**|발송자 풀의 유형입니다. Null을 허용하지 않습니다. 다음과 같은 두 가지 유형의 발송자 풀이 있습니다.<br /><br /> DISP_POOL_XE_ENGINE<br /><br /> DISP_POOL_XE_SESSION<br /><br /> 전체 목록에 대 한 DMV 쿼리|  
 |name|**nvarchar(256)**|발송자 풀의 이름입니다. Null을 허용하지 않습니다.|  
 |dispatcher_count|**int**|활성 발송자 스레드의 수입니다. Null을 허용하지 않습니다.|  
 |dispatcher_ideal_count|**int**|발송자 풀이 증가하여 사용할 수 있게 되는 발송자 스레드의 수입니다. Null을 허용하지 않습니다.|  
