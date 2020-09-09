@@ -2,7 +2,7 @@
 description: sys.dm_os_volume_stats(Transact-SQL)
 title: sys. dm_os_volume_stats (Transact-sql) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/06/2019
+ms.date: 09/03/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: system-objects
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: fa1c58ad-8487-42ad-956c-983f2229025f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 085659b4c6754bc2de68124dcb7d5c6fbbcdeb16
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: d6e6eb3ccf2823af437fc37cdddfa2b0b640ae12
+ms.sourcegitcommit: 71a334c5120a1bc3809d7657294fe44f6c909282
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539254"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89614598"
 ---
 # <a name="sysdm_os_volume_stats-transact-sql"></a>sys.dm_os_volume_stats(Transact-SQL)
 [!INCLUDE[tsql-appliesto-2008R2SP1-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-2008R2sp1-xxxx-xxxx-xxx-md.md)]
@@ -53,17 +53,18 @@ sys.dm_os_volume_stats (database_id, file_id)
 |**열**|**데이터 형식**|**설명**|  
 |**database_id**|**int**|데이터베이스의 ID입니다. null일 수 없습니다.|  
 |**file_id**|**int**|파일의 ID입니다. null일 수 없습니다.|  
-|**volume_mount_point**|**nvarchar(512)**|해당 볼륨이 루트 경로로 지정된 탑재 지점입니다. 빈 문자열을 반환할 수 있습니다.|  
-|**volume_id**|**nvarchar(512)**|운영 체제 볼륨 ID입니다. 빈 문자열을 반환할 수 있습니다.|  
-|**logical_volume_name**|**nvarchar(512)**|논리 볼륨 이름입니다. 빈 문자열을 반환할 수 있습니다.|  
-|**file_system_type**|**nvarchar(512)**|파일 시스템 볼륨 유형(예: NTFS, FAT, RAW)입니다. 빈 문자열을 반환할 수 있습니다.|  
+|**volume_mount_point**|**nvarchar(512)**|해당 볼륨이 루트 경로로 지정된 탑재 지점입니다. 빈 문자열을 반환할 수 있습니다. Linux 운영 체제에서 null을 반환 합니다.|  
+|**volume_id**|**nvarchar(512)**|운영 체제 볼륨 ID입니다. 빈 문자열을 반환할 수 있습니다. Linux 운영 체제에서 null을 반환 합니다.|  
+|**logical_volume_name**|**nvarchar(512)**|논리 볼륨 이름입니다. 빈 문자열을 반환할 수 있습니다. Linux 운영 체제에서 null을 반환 합니다.|  
+|**file_system_type**|**nvarchar(512)**|파일 시스템 볼륨 유형(예: NTFS, FAT, RAW)입니다. 빈 문자열을 반환할 수 있습니다. Linux 운영 체제에서 null을 반환 합니다.|  
 |**total_bytes**|**bigint**|볼륨의 전체 크기(바이트)입니다. null일 수 없습니다.|  
 |**available_bytes**|**bigint**|볼륨의 사용 가능한 공간입니다. null일 수 없습니다.|  
-|**supports_compression**|**bit**|볼륨에서 운영 체제 압축을 지원하는지 여부를 나타냅니다. null일 수 없습니다.|  
-|**supports_alternate_streams**|**bit**|볼륨에서 대체 스트림을 지원하는지 여부를 나타냅니다. null일 수 없습니다.|  
-|**supports_sparse_files**|**bit**|볼륨에서 스파스 파일을 지원하는지 여부를 나타냅니다.  null일 수 없습니다.|  
-|**is_read_only**|**bit**|볼륨이 현재 읽기 전용으로 표시되어 있는지 여부를 나타냅니다. null일 수 없습니다.|  
-|**is_compressed**|**bit**|이 볼륨이 현재 압축되었는지 여부를 나타냅니다. null일 수 없습니다.|  
+|**supports_compression**|**tinyint**|볼륨에서 운영 체제 압축을 지원하는지 여부를 나타냅니다. 는 Windows에서 null 일 수 없으며 Linux 운영 체제에서 null을 반환 합니다.|  
+|**supports_alternate_streams**|**tinyint**|볼륨에서 대체 스트림을 지원하는지 여부를 나타냅니다. 는 Windows에서 null 일 수 없으며 Linux 운영 체제에서 null을 반환 합니다.|  
+|**supports_sparse_files**|**tinyint**|볼륨에서 스파스 파일을 지원하는지 여부를 나타냅니다.  는 Windows에서 null 일 수 없으며 Linux 운영 체제에서 null을 반환 합니다.|  
+|**is_read_only**|**tinyint**|볼륨이 현재 읽기 전용으로 표시되어 있는지 여부를 나타냅니다. null일 수 없습니다.|  
+|**is_compressed**|**tinyint**|이 볼륨이 현재 압축되었는지 여부를 나타냅니다. 는 Windows에서 null 일 수 없으며 Linux 운영 체제에서 null을 반환 합니다.|  
+|**incurs_seek_penalty**|**tinyint**|이 볼륨을 지 원하는 저장소 유형을 나타냅니다. 가능한 값은 다음과 같습니다.<br /><br />0: 일반적으로 저장소 장치가 PMM 또는 SSD 인 경우이 볼륨에 대 한 검색 페널티 없음<br /><br />1: 일반적으로 저장소 장치가 HDD 인 경우이 볼륨에서 페널티를 검색 합니다.<br /><br />2: 볼륨이 UNC 경로 또는 탑재 된 공유에 있는 경우 저장소 유형을 확인할 수 없음<br /><br />NULL: Linux 운영 체제에서 저장소 유형을 확인할 수 없습니다.<br /><br />**적용 대상:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (부터 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] )|  
   
 ## <a name="security"></a>보안  
   
