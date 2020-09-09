@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_cursoroption
 ms.assetid: 88fc1dba-f4cb-47c0-92c2-bf398f4a382e
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 1deb0895de1b0a3694465ccb0f9e95228fbedd0b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: bb85ff45fcb9ebe35920ca858cc9dc6336475cb8
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489491"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543576"
 ---
 # <a name="sp_cursoroption-transact-sql"></a>sp_cursoroption(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,7 +46,7 @@ sp_cursoroption cursor, code, value
  *code*  
  커서 반환 값의 여러 요인을 규정하는 데 사용됩니다. *코드* 에는 다음 **int** 입력 값 중 하나가 필요 합니다.  
   
-|값|Name|설명|  
+|값|Name|Description|  
 |-----------|----------|-----------------|  
 |0x0001|TEXTPTR_ONLY|지정된 특정 텍스트 또는 이미지 열에 대해 실제 데이터가 아닌 텍스트 포인터를 반환합니다.<br /><br /> TEXTPTR_ONLY 사용 하 여 텍스트 포인터를 blob 개체에 대 한 *핸들로* 사용할 수 있습니다 .이 개체는 나중에 [!INCLUDE[tsql](../../includes/tsql-md.md)] 또는 DBLIB 시설 (예: [!INCLUDE[tsql](../../includes/tsql-md.md)] READTEXT 또는 DBLIB dbwritetext)을 사용 하 여 선택적으로 검색 하거나 업데이트할 수 있습니다.<br /><br /> "0" 값을 할당하면 선택 목록에 있는 모든 텍스트 및 이미지 열이 데이터가 아닌 텍스트 포인터를 반환합니다.|  
 |0x0002|CURSOR_NAME|*값* 에 지정 된 이름을 커서에 할당 합니다. 이렇게 하면 ODBC가 [!INCLUDE[tsql](../../includes/tsql-md.md)] sp_cursoropen를 통해 열린 커서에 대해 위치 지정 UPDATE/DELETE 문을 사용할 수 있습니다.<br /><br /> 문자열은 원하는 문자나 유니코드 데이터 형식으로 지정할 수 있습니다.<br /><br /> [!INCLUDE[tsql](../../includes/tsql-md.md)]위치 지정 update/delete 문은 기본적으로 fat 커서의 첫 번째 행에서 작동 하므로 위치 지정 update/delete 문을 실행 하기 전에 SP_CURSOR SETPOSITION을 사용 하 여 커서를 배치 해야 합니다.|  
@@ -64,7 +64,7 @@ sp_cursoroption cursor, code, value
 ## <a name="return-code-values"></a>반환 코드 값  
  *값* 매개 변수는 다음 *코드* 값 중 하나를 반환할 수 있습니다.  
   
-|반환 값|설명|  
+|반환 값|Description|  
 |------------------|-----------------|  
 |0x0004|SCROLLOPT|  
 |0X0005|CCOPT|  
@@ -72,7 +72,7 @@ sp_cursoroption cursor, code, value
   
  *값* 매개 변수는 다음 SCROLLOPT 값 중 하나를 반환 합니다.  
   
-|반환 값|설명|  
+|반환 값|Description|  
 |------------------|-----------------|  
 |0x0001|KEYSET|  
 |0x0002|DYNAMIC|  
@@ -81,14 +81,14 @@ sp_cursoroption cursor, code, value
   
  *값* 매개 변수는 다음 값 중 하나를 반환 합니다.  
   
-|반환 값|설명|  
+|반환 값|Description|  
 |------------------|-----------------|  
 |0x0001|READ_ONLY|  
 |0x0002|SCROLL_LOCKS|  
 |0x0004 또는 0x0008|OPTIMISTIC|  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;시스템 저장 프로시저 ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Transact-sql&#41;sp_cursor &#40;](../../relational-databases/system-stored-procedures/sp-cursor-transact-sql.md)   
  [Transact-sql&#41;sp_cursoropen &#40;](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)  
   

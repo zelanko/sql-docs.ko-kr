@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_cursorfetch
 ms.assetid: 14513c5e-5774-4e4c-92e1-75cd6985b6a3
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 7d68223e7ed12477b446934f01b600b840b6651a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 45621f2b99616085a2543972df7109b2f2fe8e3c
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447362"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543599"
 ---
 # <a name="sp_cursorfetch-transact-sql"></a>sp_cursorfetch(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,7 +47,7 @@ sp_cursorfetch cursor
  *fetchtype*  
  인출할 커서 버퍼를 지정합니다. *fetchtype* 은 다음 정수 입력 값 중 하나를 필요로 하는 선택적 매개 변수입니다.  
   
-|값|Name|설명|  
+|값|Name|Description|  
 |-----------|----------|-----------------|  
 |0x0001|FIRST|*Nrows* 행의 첫 번째 버퍼를 인출 합니다. *Nrows* 가 0과 같으면 커서는 결과 집합 앞에 배치 되 고 행이 반환 되지 않습니다.|  
 |0x0002|NEXT|*Nrows* 행의 다음 버퍼를 인출 합니다.|  
@@ -134,7 +134,7 @@ sp_cursorfetch cursor
   
  RPC 상태 매개 변수는 다음 표에 나와 있는 값 중 하나로 설정됩니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |0|프로시저가 실행되었습니다.|  
 |0x0001|프로시저가 실패했습니다.|  
@@ -143,7 +143,7 @@ sp_cursorfetch cursor
   
  행이 일반적인 결과 집합, 즉 열 형식(0x2a), 행(0xd1), 완료(0xfd) 순으로 반환됩니다. 메타 데이터 토큰은 sp_cursoropen에 대해 지정 된 것과 같은 형식으로 전송 됩니다. 즉, SQL Server 7.0 사용자의 경우 0x81, 0xa5 및 0xa4입니다. 행 상태 표시기는 BROWSE 모드와 비슷하게 각 행 끝에 숨겨진 열로 전송됩니다. 열 이름은 rowstat이고 데이터 형식은 INT4입니다. 이 rowstat 열은 다음 표에 있는 값 중 하나를 포함할 수 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |0x0001|FETCH_SUCCEEDED|  
 |0x0002|FETCH_MISSING|  

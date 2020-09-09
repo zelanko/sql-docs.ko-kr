@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - MSrepl_version system table
 ms.assetid: c1330f03-940b-4564-ac42-6030c6e21173
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 46ec999ebb21446d0a4973dc393460aa69f1bdc7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 978cae29c7a2ec1a60c106d4ed29acd45852ff19
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88473171"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89544471"
 ---
 # <a name="msrepl_version-transact-sql"></a>MSrepl_version(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "88473171"
 |**revision**|**int**|수정 버전 번호입니다.|  
 |**db_existed**|**bit**|**Sp_adddistributiondb** 를 호출 하기 전에 배포 데이터베이스가 있는지 여부를 나타냅니다.|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Transact-sql&#41;&#40;복제 테이블 ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [복제 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

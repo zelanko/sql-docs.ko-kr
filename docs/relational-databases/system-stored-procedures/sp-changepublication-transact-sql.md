@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changepublication
 ms.assetid: c36e5865-25d5-42b7-b045-dc5036225081
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 3bf49c2e7b09e7c0ac3bcaaaf7692889f684875b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 86a86eec0b939a579d01c36d8c9739f8d9251636
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481527"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543728"
 ---
 # <a name="sp_changepublication-transact-sql"></a>sp_changepublication(Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -50,7 +50,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
   
  이 표에서는 변경할 수 있는 게시의 속성 및 그 속성의 값에 대한 제한에 대해 설명합니다.  
   
-|속성|값|설명|  
+|속성|값|Description|  
 |--------------|-----------|-----------------|  
 |**allow_anonymous**|**true**|지정 된 게시에 대해 익명 구독을 만들 수 있으며 *immediate_sync* 도 **true**여야 합니다. 피어 투 피어 게시의 경우 변경할 수 없습니다.|  
 ||**false**|지정된 게시에 대해 익명 구독을 만들 수 없습니다. 피어 투 피어 게시의 경우 변경할 수 없습니다.|  
@@ -108,7 +108,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 |**status**|**active**|구독자는 게시가 생성되는 즉시 게시 데이터를 사용할 수 있습니다. Oracle 게시자에 대해서는 지원되지 않습니다.|  
 ||**inactive**|게시가 생성되면 구독자가 게시 데이터를 사용할 수 없습니다. Oracle 게시자에 대해서는 지원되지 않습니다.|  
 |**sync_method**|**native**|구독을 동기화할 때 모든 테이블의 기본 모드 대량 복사 출력을 사용합니다.|  
-||**자의**|구독을 동기화할 때 모든 테이블의 문자 모드 대량 복사 출력을 사용합니다.|  
+||**character**|구독을 동기화할 때 모든 테이블의 문자 모드 대량 복사 출력을 사용합니다.|  
 ||**노드당**|모든 테이블의 기본 모드 대량 복사 프로그램 출력을 사용하지만 스냅샷을 생성하는 동안에는 테이블을 잠그지 않습니다. 스냅샷 복제에는 적합하지 않습니다.|  
 ||**concurrent_c**|모든 테이블의 문자 모드 대량 복사 프로그램 출력을 사용하지만 스냅샷을 생성하는 동안에는 테이블을 잠그지 않습니다. 스냅샷 복제에는 적합하지 않습니다.|  
 |**taskid**||이 속성은 더 이상 사용되지 않으며 지원되지 않습니다.|  

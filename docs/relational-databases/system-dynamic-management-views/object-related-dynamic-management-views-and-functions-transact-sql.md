@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - dynamic management views [SQL Server], object
 ms.assetid: f9dfff29-2e68-4c76-9460-c46085dca2e8
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 2fac772f35a602514b5e0cb565619acc5b5440f1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 3a467f4457f1b41edbf0fcb1e82b2834cf3db8e8
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455078"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89544818"
 ---
 # <a name="object-related-dynamic-management-views-and-functions-transact-sql"></a>개체 관련 동적 관리 뷰 및 함수(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_cursors dynamic management function
 ms.assetid: f520b63c-36af-40f1-bf71-6901d6331d3d
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 4243bd6395095a586ceffab1c4b00f8cf99a220b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 351f97ed08d1a6a79f8611d19842dc93138277ce
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88493718"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543951"
 ---
 # <a name="sysdm_exec_cursors-transact-sql"></a>sys.dm_exec_cursors(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -75,14 +75,14 @@ dm_exec_cursors (session_id | 0 )
 ## <a name="remarks"></a>설명  
  다음 표에서는 커서 선언 인터페이스에 대한 정보를 제공하고 속성 열에 나올 수 있는 값을 보여 줍니다.  
   
-|속성|설명|  
+|속성|Description|  
 |--------------|-----------------|  
 |API|데이터 액세스 API(ODBC, OLEDB) 중 하나를 사용하여 커서가 선언되었습니다.|  
 |TSQL|Transact-SQL DECLARE CURSOR 구문을 사용하여 커서가 선언되었습니다.|  
   
  다음 표에서는 커서 유형에 대한 정보를 제공하고 속성 열에 나올 수 있는 값을 보여 줍니다.  
   
-|형식|설명|  
+|Type|Description|  
 |----------|-----------------|  
 |Keyset|키 집합 커서로 선언되었습니다.|  
 |동적|동적 커서로 선언되었습니다.|  
@@ -91,7 +91,7 @@ dm_exec_cursors (session_id | 0 )
   
  다음 표에서는 커서 동시성에 대한 정보를 제공하고 속성 열에 나올 수 있는 값을 보여 줍니다.  
   
-|동시성|설명|  
+|동시성|Description|  
 |-----------------|-----------------|  
 |읽기 전용|커서가 읽기 전용으로 선언되었습니다.|  
 |Scroll Locks|커서가 스크롤 잠금을 사용합니다.|  
@@ -99,7 +99,7 @@ dm_exec_cursors (session_id | 0 )
   
  다음 표에서는 커서 범위에 대한 정보를 제공하고 속성 열에 나올 수 있는 값을 보여 줍니다.  
   
-|범위|설명|  
+|범위|Description|  
 |-----------|-----------------|  
 |로컬|커서 범위를 커서가 생성된 일괄 처리, 저장 프로시저, 트리거에 대해 로컬로 지정합니다.|  
 |전역|커서 범위를 연결에 대해 전역으로 지정합니다.|  
@@ -117,7 +117,7 @@ WHERE DATEDIFF(hh, c.creation_time, GETDATE()) > 36;
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Transact-sql&#41;&#40;관련 동적 관리 뷰 및 함수 실행 ](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
  [sys.dm_exec_sessions&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)  

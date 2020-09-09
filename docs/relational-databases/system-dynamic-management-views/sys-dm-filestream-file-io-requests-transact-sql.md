@@ -17,21 +17,21 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_filestream_file_io_requests catalog view
 ms.assetid: d41e39a5-14d5-4f3d-a2e3-a822b454c1ed
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: f7078fde9e869886c12bc9a20784c6cf44bc40ef
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 9f4f675f0022b3afeeaccbdc6e907b5ce1c17ca7
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474948"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543897"
 ---
 # <a name="sysdm_filestream_file_io_requests-transact-sql"></a>sys.dm_filestream_file_io_requests(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   지정된 시간에 NSO(네임스페이스 소유자)에 의해 처리 중인 I/O 요청의 목록을 표시합니다.  
   
-|Column|형식|설명|  
+|Column|형식|Description|  
 |------------|----------|-----------------|  
 |**request_context_address**|**varbinary(8)**|드라이버의 I/O 요청이 포함된 NSO 메모리 블록의 내부 주소를 표시합니다. Null을 허용하지 않습니다.|  
 |**current_spid**|**smallint**|현재 SQL Server의 연결에 대 한 SPID (시스템 프로세스 id)를 표시 합니다. Null을 허용하지 않습니다.|  

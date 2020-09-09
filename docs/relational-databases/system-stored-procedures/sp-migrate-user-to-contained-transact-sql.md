@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_migrate_user_to_contained
 ms.assetid: b3a49ff6-46ad-4ee7-b6fe-7e54213dc33e
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 95bd2aa7491b15b2e16172b0761c6dccc8eb5818
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: edabb8a59a672c3ebfe04a799df7901b402fb5b3
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446937"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543202"
 ---
 # <a name="sp_migrate_user_to_contained-transact-sql"></a>sp_migrate_user_to_contained(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "88446937"
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인에 매핑된 사용자를 암호를 포함하는 포함된 데이터베이스 사용자로 변환합니다. 포함된 데이터베이스에서는 이 프로시저를 사용하여 데이터베이스가 설치된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 종속성을 제거하십시오. **sp_migrate_user_to_contained** 는 원래 로그인과 사용자를 구분 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 하므로 포함 된 데이터베이스에 대해 암호 및 기본 언어와 같은 설정을 별도로 관리할 수 있습니다. 포함 된 데이터베이스를의 다른 인스턴스로 이동 하기 전에 **sp_migrate_user_to_contained** 를 사용 하 여 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 현재 인스턴스 로그인에 대 한 종속성을 제거할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!NOTE]
-> **Sp_migrate_user_to_contained**사용 하는 경우에는 효과를 되돌릴 수 없으므로 주의 해야 합니다. 이 프로시저는 포함 된 데이터베이스 에서만 사용 됩니다. 자세한 내용은 [포함 된 데이터베이스](../../relational-databases/databases/contained-databases.md)를 참조 하세요.  
+> **Sp_migrate_user_to_contained**사용 하는 경우에는 효과를 되돌릴 수 없으므로 주의 해야 합니다. 이 프로시저는 포함 된 데이터베이스 에서만 사용 됩니다. 자세한 내용은 [Contained Databases](../../relational-databases/databases/contained-databases.md)을 참조하세요.  
   
 ## <a name="syntax"></a>구문  
   

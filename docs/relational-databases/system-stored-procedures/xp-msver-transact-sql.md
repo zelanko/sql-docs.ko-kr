@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - xp_msver
 ms.assetid: 9264cf8c-92ba-45ad-b2d6-15d26d805a16
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 93223f6d7c63402161e48b0359bf735b14593c9d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a736447de4215d7f9c630036ae13872ff9d58bff
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88419227"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89544718"
 ---
 # <a name="xp_msver-transact-sql"></a>xp_msver(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,9 +43,9 @@ xp_msver [ optname ]
  *optname*  
  옵션의 이름이며 다음 값 중 하나를 사용할 수 있습니다.  
   
-|옵션/열 이름|설명|  
+|옵션/열 이름|Description|  
 |-------------------------|-----------------|  
-|**제품**|제품 이름; 예를 들면 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 입니다.|  
+|**ProductName**|제품 이름; 예를 들면 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 입니다.|  
 |**ProductVersion**|제품 버전입니다.|  
 |**언어**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 언어 버전입니다.|  
 |**플랫폼**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 실행하는 컴퓨터의 운영 체제 이름, 제조업체 이름 및 칩 패밀리 이름입니다.|  
@@ -77,7 +77,7 @@ xp_msver [ optname ]
   
 ## <a name="see-also"></a>참고 항목  
  [시스템 함수&#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-category-transact-sql.md)   
- [Transact-sql&#41;&#40;시스템 저장 프로시저 ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Transact-sql&#41;일반 확장 저장 프로시저 &#40;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)   
  [@@VERSION&#40;Transact-SQL&#41;](../../t-sql/functions/version-transact-sql-configuration-functions.md)  
   

@@ -18,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.xml_schema_elements catalog view
 ms.assetid: 190ed0cd-0c5e-4607-9db4-9e77cacf17d7
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: cd80e0c7a557c720b4bbe09850e77f3dff260725
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 008fb9d5d8beb5f746d02be3357eb1e73ae58ea9
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88399919"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543974"
 ---
 # <a name="sysxml_schema_elements-transact-sql"></a>sys.xml_schema_elements(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "88399919"
 |**is_substitution_blocked**|**bit**|1 = 대체 그룹 인스턴스를 사용할 수 없습니다.<br /><br /> 0 = 대체 그룹으로의 대체가 (기본값)|  
 |**is_final_extension**|**bit**|1 = 확장 유형 인스턴스로의 대체가 허용되지 않습니다.<br /><br /> 0 = 확장 유형 인스턴스에서 대체가 (기본값)|  
 |**is_final_restriction**|**bit**|1 = 제한 유형 인스턴스로의 대체가 허용되지 않습니다.<br /><br /> 0 = 제한 유형 인스턴스에서 대체가 (기본값)|  
-|**default_value**|**nvarchar(4000)**|요소의 기본값입니다. 기본값을 제공하지 않으면 NULL입니다.|  
+|**default_value**|**nvarchar (4000)**|요소의 기본값입니다. 기본값을 제공하지 않으면 NULL입니다.|  
   
 ## <a name="permissions"></a>사용 권한  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  

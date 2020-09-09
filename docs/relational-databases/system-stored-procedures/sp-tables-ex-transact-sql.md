@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_tables_ex
 ms.assetid: 33755c33-7e1e-4ef7-af14-a9cebb1e2ed4
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: c195e3fa5e932bd1eb844ca5231d67747bc67486
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 0156f75940cf5e0d2186625d148850dcfb181ad0
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480989"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89544739"
 ---
 # <a name="sp_tables_ex-transact-sql"></a>sp_tables_ex(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -55,16 +55,16 @@ sp_tables_ex [ @table_server = ] 'table_server'
   
 `[ @table_type = ] 'table_type'` 반환할 테이블의 유형입니다. *table_type* 는 **sysname**이며 기본값은 NULL이 고 다음 값 중 하나를 사용할 수 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**앤티앨리어스**|별칭 이름입니다.|  
 |**GLOBAL TEMPORARY**|시스템 전반적으로 사용 가능한 임시 테이블 이름입니다.|  
 |**LOCAL TEMPORARY**|현재 작업에만 사용 가능한 임시 테이블 이름입니다.|  
-|**동의어가**|동의어 이름입니다.|  
+|**SYNONYM**|동의어 이름입니다.|  
 |**시스템 테이블**|시스템 테이블 이름입니다.|  
 |**시스템 뷰**|시스템 뷰 이름입니다.|  
-|**테이블**|사용자 테이블 이름입니다.|  
-|**봅니다**|뷰 이름입니다.|  
+|**TABLE**|사용자 테이블 이름입니다.|  
+|**VIEW**|뷰 이름입니다.|  
   
 `[ @fUsePattern = ] 'fUsePattern'`**_**, **%** , **[** 및 **]** 문자를 와일드 카드 문자로 해석할지 여부를 결정 합니다. 유효한 값은 0(패턴 일치 해제)과 1(패턴 일치 설정)입니다. *fUsePattern* 는 **bit**이며 기본값은 1입니다.  
   

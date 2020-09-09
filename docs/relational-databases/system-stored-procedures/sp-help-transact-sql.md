@@ -16,15 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_help
 ms.assetid: 913cd5d4-39a3-4a4b-a926-75ed32878884
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 85fd7be3a9f82b43c19e344602a85e1adf06c68a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 21116db0cc5faa63a54ffda5740f1c93df27c676
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486064"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543355"
 ---
 # <a name="sp_help-transact-sql"></a>sp_help(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -79,7 +79,7 @@ sp_help [ [ @objname = ] 'name' ]
     |-----------------|---------------|-----------------|  
     |**이름**|**nvarchar (** 128 **)**|테이블 이름|  
     |**소유자**|**nvarchar (** 128 **)**|테이블 소유자입니다.|  
-    |**유형**|**nvarchar (** 31 **)**|테이블 유형입니다.|  
+    |**형식**|**nvarchar (** 31 **)**|테이블 유형입니다.|  
     |**Created_datetime**|**datetime**|테이블을 만든 날짜입니다.|  
   
      지정 된 데이터베이스 개체에 따라 **sp_help** 는 추가 결과 집합을 반환 합니다.  
@@ -91,7 +91,7 @@ sp_help [ [ @objname = ] 'name' ]
         |열 이름|데이터 형식|Description|  
         |-----------------|---------------|-----------------|  
         |**Column_name**|**nvarchar (** 128 **)**|열 이름입니다.|  
-        |**유형**|**nvarchar (** 128 **)**|열의 데이터 형식입니다.|  
+        |**형식**|**nvarchar (** 128 **)**|열의 데이터 형식입니다.|  
         |**더한**|**varchar (** 35 **)**|열의 값이 계산 되는지 여부를 나타냅니다 (예 또는 아니요).|  
         |**길이**|**int**|열 길이(바이트)입니다.<br /><br /> 참고: 열 데이터 형식이 많은 값 형식 (**varchar (max)**, **nvarchar (max)**, **varbinary (max)** 또는 **xml**) 이면 값이-1로 표시 됩니다.|  
         |**Prec**|**char (** 5 **)**|열의 전체 자릿수입니다.|  
@@ -106,7 +106,7 @@ sp_help [ [ @objname = ] 'name' ]
         |열 이름|데이터 형식|Description|  
         |-----------------|---------------|-----------------|  
         |**ID**|**nvarchar (** 128 **)**|데이터 형식이 ID로 선언되는 열의 이름입니다.|  
-        |**시드는**|**numeric**|ID 열의 시작 값입니다.|  
+        |**Seed**|**numeric**|ID 열의 시작 값입니다.|  
         |**ID 증가값**|**numeric**|해당 열의 값에 대해 사용하는 증가값입니다.|  
         |**복제용 아님**|**int**|**Sqlrepl**과 같은 복제 로그인이 테이블에 데이터를 삽입 하는 경우 IDENTITY 속성이 적용 되지 않습니다.<br /><br /> 1 = True<br /><br /> 0 = False|  
   
@@ -153,7 +153,7 @@ sp_help [ [ @objname = ] 'name' ]
         |열 이름|데이터 형식|Description|  
         |-----------------|---------------|-----------------|  
         |**Parameter_name**|**nvarchar (** 128 **)**|저장 프로시저 매개 변수의 이름입니다.|  
-        |**유형**|**nvarchar (** 128 **)**|저장 프로시저 매개 변수의 데이터 형식입니다.|  
+        |**형식**|**nvarchar (** 128 **)**|저장 프로시저 매개 변수의 데이터 형식입니다.|  
         |**길이**|**smallint**|물리적 스토리지의 최대 길이(바이트)입니다.|  
         |**Prec**|**int**|전체 자릿수 또는 총 자릿수입니다.|  
         |**크기 조정**|**int**|소수점 오른쪽 자릿수입니다.|  
@@ -198,7 +198,7 @@ GO
  [sp_helpserver&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
  [sp_helptrigger&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptrigger-transact-sql.md)   
  [Transact-sql&#41;sp_helpuser &#40;](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)   
- [Transact-sql&#41;&#40;시스템 저장 프로시저 ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [ Transact-sql&#41;개체 &#40;sys.sys](../../relational-databases/system-compatibility-views/sys-sysobjects-transact-sql.md)  
   
   

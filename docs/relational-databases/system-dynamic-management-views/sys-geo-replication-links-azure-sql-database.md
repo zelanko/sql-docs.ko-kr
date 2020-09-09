@@ -15,15 +15,15 @@ helpviewer_keywords:
 - sys.dm_geo_replication_links dynamic management view
 - dm_geo_replication_links dynamic management view
 ms.assetid: 58911798-1d60-4f28-87ab-2def2bfc3de7
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: d0771578b9d9b478a9f6947fd131abb66b0654d4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 36849d6fc285839ebf99b75452735ddf5073f4ec
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88322299"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543757"
 ---
 # <a name="sysgeo_replication_links-azure-sql-database"></a>sys.geo_replication_links(Azure SQL Database)
 
@@ -44,7 +44,7 @@ ms.locfileid: "88322299"
 |역할(role)|**tinyint**|지역에서 복제 역할, 다음 중 하나입니다.<br /><br /> 0 = 기본 Database_id는 지역에서 복제 파트너 관계에서 주 데이터베이스를 참조 합니다.<br /><br /> 1 = 보조  Database_id는 지역에서 복제 파트너 관계에서 주 데이터베이스를 참조 합니다.|  
 |role_desc|**nvarchar(256)**|PRIMARY<br /><br /> SECONDARY|  
 |secondary_allow_connections|**tinyint**|보조 유형이 며 다음 중 하나입니다.<br /><br /> 0 = 아니요 장애 조치 (failover) 될 때까지 보조 데이터베이스에 액세스할 수 없습니다.<br /><br /> 1 = 읽기 전용입니다. 보조 데이터베이스는 ApplicationIntent = ReadOnly 인 클라이언트 연결에만 액세스할 수 있습니다.<br /><br /> 2  =  모두. 보조 데이터베이스는 모든 클라이언트 연결에 액세스할 수 있습니다.|  
-|secondary_allow_connections _desc|**nvarchar(256)**|예<br /><br /> 모두<br /><br /> 읽기 전용|  
+|secondary_allow_connections _desc|**nvarchar(256)**|아니요<br /><br /> 모두<br /><br /> 읽기 전용|  
   
 ## <a name="permissions"></a>사용 권한
 

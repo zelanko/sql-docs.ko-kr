@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_column_privileges_ex
 ms.assetid: 98cb6e58-4007-40fc-b048-449fb2e7e6be
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: d9d6eee0a85444171ae24d7ac991fb90a451f5d5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 05b7bfa0815cd7c210b960e46192ada6b6225c4f
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88469775"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543697"
 ---
 # <a name="sp_column_privileges_ex-transact-sql"></a>sp_column_privileges_ex(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -81,7 +81,7 @@ EXEC sp_column_privileges_ex @table_server = 'Seattle1',
    @table_catalog ='AdventureWorks2012';  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Transact-sql&#41;sp_table_privileges_ex &#40;](../../relational-databases/system-stored-procedures/sp-table-privileges-ex-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

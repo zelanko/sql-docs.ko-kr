@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_monitor
 ms.assetid: cb628496-2f9b-40e4-b018-d0831c4cb018
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 6722a59873dcf672fe2c1b953931f44da4515a8e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f214abb7b20c42ec62f1bc35d85222e0033798d1
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446995"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89544759"
 ---
 # <a name="sp_monitor-transact-sql"></a>sp_monitor(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,11 +44,11 @@ sp_monitor
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|설명|  
+|열 이름|Description|  
 |-----------------|-----------------|  
 |**last_run**|**Sp_monitor** 마지막으로 실행 된 시간입니다.|  
 |**current_run**|**Sp_monitor** 실행 되는 시간입니다.|  
-|**까지의**|**Sp_monitor** 실행 된 이후 경과 된 시간 (초)입니다.|  
+|**초**|**Sp_monitor** 실행 된 이후 경과 된 시간 (초)입니다.|  
 |**cpu_busy**|서버 컴퓨터의 CPU가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 작업을 수행한 시간(초)입니다.|  
 |**io_busy**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 입력 및 출력 작업을 수행하는 데 걸린 시간(초)입니다.|  
 |**유휴**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 유휴 상태에 있던 시간(초)입니다.|  
@@ -97,7 +97,7 @@ total_read     total_write   total_errors    connections
 ```
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;sp_who &#40;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)   
+ [sp_who&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

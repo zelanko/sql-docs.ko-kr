@@ -18,15 +18,15 @@ helpviewer_keywords:
 - backup media [SQL Server], backupset system table
 - backup sets [SQL Server]
 ms.assetid: 6ff79bbf-4acf-4f75-926f-38637ca8a943
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f5bea32ebd5269ae57d7b754cf20d12a0d695109
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 783452973a10a8f692b7fe3a3406665a2ed0eb86
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492858"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89544688"
 ---
 # <a name="backupset-transact-sql"></a>backupset(Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "88492858"
 |**last_media_number**|**smallint**|백업 세트가 끝나는 미디어의 미디어 번호입니다. NULL일 수 있습니다.|  
 |**catalog_family_number**|**tinyint**|백업 세트 디렉터리의 시작을 포함한 미디어의 패밀리 번호입니다. NULL일 수 있습니다.|  
 |**catalog_media_number**|**smallint**|백업 세트 디렉터리의 시작을 포함한 미디어의 미디어 번호입니다. NULL일 수 있습니다.|  
-|**놓을**|**int**|적절한 백업 세트 및 파일의 위치를 찾기 위해 복원 작업에 사용되는 백업 세트 위치입니다. NULL일 수 있습니다. 자세한 내용은 백업에서 파일 [&#40;transact-sql&#41;](../../t-sql/statements/backup-transact-sql.md)을 참조 하세요.|  
+|**position**|**int**|적절한 백업 세트 및 파일의 위치를 찾기 위해 복원 작업에 사용되는 백업 세트 위치입니다. NULL일 수 있습니다. 자세한 내용은 백업에서 파일 [&#40;transact-sql&#41;](../../t-sql/statements/backup-transact-sql.md)을 참조 하세요.|  
 |**expiration_date**|**datetime**|백업 세트가 만료되는 날짜 및 시간입니다. NULL일 수 있습니다.|  
 |**software_vendor_id**|**int**|백업 미디어 헤더를 기록하는 소프트웨어 공급업체의 ID입니다. NULL일 수 있습니다.|  
 |**name**|**nvarchar(128)**|백업 세트의 이름입니다. NULL일 수 있습니다.|  
@@ -65,7 +65,7 @@ ms.locfileid: "88492858"
 |**database_creation_date**|**datetime**|데이터베이스가 원래 생성된 날짜와 시간입니다. NULL일 수 있습니다.|  
 |**backup_start_date**|**datetime**|백업 작업이 시작된 날짜와 시간입니다. NULL일 수 있습니다.|  
 |**backup_finish_date**|**datetime**|백업 작업이 완료된 날짜와 시간입니다. NULL일 수 있습니다.|  
-|**type**|**char (1)**|백업 유형입니다. 다음 값 중 하나일 수 있습니다.<br /><br /> D = 데이터베이스<br /><br /> I = 차등 데이터베이스<br /><br /> L = 로그<br /><br /> F = 파일 또는 파일 그룹<br /><br /> G =차등 파일<br /><br /> P = 부분<br /><br /> Q = 차등 부분<br /><br /> NULL일 수 있습니다.|  
+|**type**|**char(1)**|백업 유형입니다. 다음 값 중 하나일 수 있습니다.<br /><br /> D = 데이터베이스<br /><br /> I = 차등 데이터베이스<br /><br /> L = 로그<br /><br /> F = 파일 또는 파일 그룹<br /><br /> G =차등 파일<br /><br /> P = 부분<br /><br /> Q = 차등 부분<br /><br /> NULL일 수 있습니다.|  
 |**sort_order**|**smallint**|백업 작업을 수행하는 서버의 정렬 순서입니다. NULL일 수 있습니다. 정렬 순서 및 데이터 정렬에 대 한 자세한 내용은 [데이터 정렬 및 유니코드 지원](../../relational-databases/collations/collation-and-unicode-support.md)을 참조 하세요.|  
 |**code_page**|**smallint**|백업 작업을 수행하는 서버의 코드 페이지입니다. NULL일 수 있습니다. 코드 페이지에 대 한 자세한 내용은 [데이터 정렬 및 유니코드 지원](../../relational-databases/collations/collation-and-unicode-support.md)을 참조 하세요.|  
 |**compatibility_level**|**tinyint**|데이터베이스에 대한 호환성 수준 설정입니다. 다음 값 중 하나일 수 있습니다.<br /><br /> 90 = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> 100 = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]<br /><br /> 110 = [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]<br /><br /> 120 = [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]<br /><br /> NULL일 수 있습니다.<br /><br /> 호환성 수준에 대한 자세한 내용은 [ALTER DATABASE 호환성 수준&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)을 참조하세요.|  

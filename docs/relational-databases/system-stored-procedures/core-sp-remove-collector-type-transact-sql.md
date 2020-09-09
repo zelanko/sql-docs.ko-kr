@@ -19,14 +19,14 @@ helpviewer_keywords:
 - sp_remove_collector_type
 - data collector [SQL Server], stored procedures
 ms.assetid: 88ceba25-e41a-405f-a416-bb68918a0024
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: ef7ad117692b259bb9de4cb595ce7782cac7fdf8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: c6ab7c32846fc322fd54ba81b87e973d5cf40bd4
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88419327"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543792"
 ---
 # <a name="coresp_remove_collector_type-transact-sql"></a>core.sp_remove_collector_type(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -67,7 +67,7 @@ EXECUTE @RC = core.sp_remove_collector_type @collector_type_uid;
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;시스템 저장 프로시저 ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [데이터 수집기 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
  [관리 데이터 웨어하우스](../../relational-databases/data-collection/management-data-warehouse.md)  
   

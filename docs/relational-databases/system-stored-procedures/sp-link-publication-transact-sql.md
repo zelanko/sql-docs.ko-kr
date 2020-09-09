@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_link_publication
 ms.assetid: 1945ed24-f9f1-4af6-94ca-16d8e864706e
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: c1df8b2f62ce305b89b061526415c73e07a18511
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: b80c28d86ae4d7022ad8784adfa7ab9023e3ebd0
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446959"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543239"
 ---
 # <a name="sp_link_publication-transact-sql"></a>sp_link_publication(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -58,7 +58,7 @@ sp_link_publication [ @publisher = ] 'publisher'
   
 `[ @security_mode = ] security_mode` 즉시 업데이트를 위해 구독자가 원격 게시자에 연결 하는 데 사용 하는 보안 모드입니다. *security_mode* 은 **int**이며 다음 값 중 하나일 수 있습니다. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**0**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서이 저장 프로시저에 지정 된 로그인과 *암호*를 *login* 사용 하 여 인증을 사용 합니다.<br /><br /> 참고: 이전 버전의에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이 옵션은 동적 RPC (원격 프로시저 호출)를 지정 하는 데 사용 되었습니다.|  
 |**1**|구독자에서 변경하는 사용자의 보안 컨텍스트([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증 또는 Windows 인증)를 사용합니다.<br /><br /> 참고:이 계정은 권한이 있는 게시자에도 있어야 합니다. Windows 인증을 사용할 때는 보안 계정 위임이 지원되어야 합니다.|  

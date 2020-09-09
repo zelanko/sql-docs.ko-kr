@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_replmonitorhelpmergesessiondetail
 ms.assetid: 805c92fc-3169-410c-984d-f37e063b791d
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 6e128b63ebe77467e7c3fd6ea2486f3fdc043334
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 8c09007256e5c336ecfa2ad62c45623fe2c0e5ff
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725720"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543236"
 ---
 # <a name="sp_replmonitorhelpmergesessiondetail-transact-sql"></a>sp_replmonitorhelpmergesessiondetail(Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -38,7 +38,7 @@ sp_replmonitorhelpmergesessiondetail [ @session_id = ] session_id
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @session_id = ] session_id`에이전트 세션을 지정 합니다. *session_id* 은 **int** 이며 기본값은 없습니다.  
+`[ @session_id = ] session_id` 에이전트 세션을 지정 합니다. *session_id* 은 **int** 이며 기본값은 없습니다.  
   
 ## <a name="result-sets"></a>결과 집합  
   
@@ -46,9 +46,9 @@ sp_replmonitorhelpmergesessiondetail [ @session_id = ] session_id
 |-----------------|---------------|-----------------|  
 |**PhaseID**|**int**|동기화 세션의 단계를 나타내며 다음 중 하나일 수 있습니다.<br /><br /> **0** = 초기화 또는 요약 행<br /><br /> **1** = 업로드<br /><br /> **2** = 다운로드|  
 |**M e**|**sysname**|동기화 중인 아티클의 이름입니다. 또한 **m e** 에는 아티클 정보를 나타내지 않는 결과 집합의 행에 대 한 요약 정보가 포함 되어 있습니다.|  
-|**되었고**|**decimal**|현재 실행 중이거나 실패한 세션에 대해 지정한 아티클 정보 행에 적용된 전체 변경 내용의 비율을 나타냅니다.|  
+|**PercentComplete**|**decimal**|현재 실행 중이거나 실패한 세션에 대해 지정한 아티클 정보 행에 적용된 전체 변경 내용의 비율을 나타냅니다.|  
 |**RelativeCost**|**decimal**|아티클을 동기화하는 데 소요된 시간을 세션의 전체 동기화 시간에 대한 비율로 나타냅니다.|  
-|**Duration**|**int**|에이전트 세션의 길이입니다.|  
+|**기간**|**int**|에이전트 세션의 길이입니다.|  
 |**Inserts**|**int**|세션의 삽입 수입니다.|  
 |**업데이트**|**int**|세션의 업데이트 수입니다.|  
 |**Deletes**|**int**|세션의 삭제 수입니다.|  

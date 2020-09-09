@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sysdac_history_internal
 ms.assetid: 774a1678-0b27-42be-8adc-a6d7a4a56510
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: f77fee435a076b4d4f6b8a56dc028c55fd3a623f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 7f89db526d638a6e934e8db7ac791875b467e487
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480860"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89544652"
 ---
 # <a name="data-tier-application-tables---sysdac_history_internal"></a>데이터 계층 애플리케이션 테이블 - sysdac_history_internal
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "88480860"
 |**dac_object_type**|**tinyint**|동작의 영향을 받는 개체의 유형에 대한 식별자입니다.<br /><br /> **0** = dacpac<br /><br /> **1** = 로그인<br /><br /> **2** = 데이터베이스|  
 |**dac_object_type_name**|**varchar (8)**|동작의 영향을 받는 개체의 유형에 대한 이름입니다.<br /><br /> **dacpac** = DAC 인스턴스<br /><br /> **로그인**<br /><br /> **database**|  
 |**action_status**|**tinyint**|동작의 현재 상태를 식별하는 코드입니다.<br /><br /> **0** = 보류 중<br /><br /> **1** = 성공<br /><br /> **2** = 실패|  
-|**action_status_name**|**varchar (11)**|동작의 현재 상태입니다.<br /><br /> **작업이**<br /><br /> **성공할**<br /><br /> **통과**|  
+|**action_status_name**|**varchar (11)**|동작의 현재 상태입니다.<br /><br /> **보류 중**<br /><br /> **성공할**<br /><br /> **통과**|  
 |**필수**|**bit**|[!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 DAC 작업을 롤백할 때 사용됩니다.|  
 |**dac_object_name_pretran**|**sysname**|동작이 포함된 트랜잭션이 커밋되기 전의 개체 이름입니다. 데이터베이스 및 로그인에만 사용됩니다.|  
 |**dac_object_name_posttran**|**sysname**|동작이 포함된 트랜잭션이 커밋된 후의 개체 이름입니다. 데이터베이스 및 로그인에만 사용됩니다.|  

@@ -16,15 +16,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_xtp_flush_temporal_history
 ms.assetid: 322e3170-93f8-468a-a123-104ce7bd7fad
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b4a9a808cdaa9f2b7f48ea7d3732a2db68ce95e2
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: 7c22e02aba01530059357b709a0c72be350ec7de
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88646438"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89544699"
 ---
 # <a name="sp_xtp_flush_temporal_history-transact-sql"></a>sp_xtp_flush_temporal_history (Transact-sql)
 
@@ -55,7 +55,7 @@ sys.sp_xtp_flush_temporal_history @schema_name, @object_name
 ## <a name="permissions"></a>사용 권한  
  Db_owner 권한이 필요 합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [메모리 액세스에 최적화된 시스템 버전 임시 테이블 관련 성능 고려 사항](../../relational-databases/tables/memory-optimized-system-versioned-temporal-tables-performance.md)  
   
   
