@@ -28,7 +28,7 @@
           href: ../integration-services/ssis-quickstart-deploy-cmdline.md
         - name: PowerShell을 사용하여 배포
           href: ../integration-services/ssis-quickstart-deploy-powershell.md
-        - name: 'C#을 사용하여 배포'
+        - name: C#을 사용하여 배포
           href: ../integration-services/ssis-quickstart-deploy-dotnet.md
     - name: 다음을 실행합니다.
       items:
@@ -42,7 +42,7 @@
           href: ../integration-services/ssis-quickstart-run-cmdline.md
         - name: PowerShell을 사용하여 실행
           href: ../integration-services/ssis-quickstart-run-powershell.md
-        - name: 'C#을 사용하여 실행'
+        - name: C#을 사용하여 실행
           href: ../integration-services/ssis-quickstart-run-dotnet.md
 - name: Azure에서 패키지 배포 및 실행
   href: ../integration-services/lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md
@@ -811,7 +811,7 @@
           href: ../integration-services/expressions/bitwise-and-ssis-expression.md
         - name: ~(비트 Not)(SSIS 식)
           href: ../integration-services/expressions/bitwise-not-ssis-expression.md
-        - name: ==(같음)(SSIS 식)
+        - name: '==(같음)(SSIS 식)'
           href: ../integration-services/expressions/equal-ssis-expression.md
         - name: '!=(같지 않음)(SSIS 식)'
           href: ../integration-services/expressions/unequal-ssis-expression.md
@@ -1843,7 +1843,7 @@
 - name: 리소스
   items:
     - name: SSIS 포럼 >>
-      href: 'https://social.msdn.microsoft.com/Forums/en-US/home'
+      href: 'https://docs.microsoft.com/answers/topics/sql-server-integration-services.html'
     - name: Stack Overflow >>
       href: 'https://stackoverflow.com/questions/tagged/ssis'
     - name: SSIS 블로그 >>
