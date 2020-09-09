@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_helprotect
 ms.assetid: faaa3e40-1c95-43c2-9fdc-c61a1d3cc0c3
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: eab1ad6fa3e71f4ef5c39ca06b081ed6b3889d29
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: fff150e26e7342beda98b2eb362e1fbb310cdab0
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485909"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89538741"
 ---
 # <a name="sp_helprotect-transact-sql"></a>sp_helprotect(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -70,7 +70,7 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
 |**피부 여자**|**sysname**|사용 권한이 부여된 보안 주체의 이름입니다.|  
 |**Grantor**|**sysname**|지정된 사람에게 사용 권한을 부여한 보안 주체의 이름입니다.|  
 |**ProtectType**|**nvarchar (10)**|보호의 유형 이름입니다.<br /><br /> GRANT  REVOKE|  
-|**동작**|**nvarchar(60)**|사용 권한의 이름입니다. 유효한 사용 권한 문은 개체의 유형에 따라 달라집니다.|  
+|**작업**|**nvarchar(60)**|사용 권한의 이름입니다. 유효한 사용 권한 문은 개체의 유형에 따라 달라집니다.|  
 |**열**|**sysname**|사용 권한의 유형입니다.<br /><br /> All  =  사용 권한이 개체의 모든 현재 열을 포함합니다.<br /><br /> New  =  사용 권한이 미래의 개체에서 (ALTER문을 사용하여)  변경할 수 있는 모든 새 열을 포함합니다.<br /><br /> All+New  =  All과 New의 조합입니다.<br /><br /> 사용 권한의 유형이 열에 적용되지 않는 경우에는 마침표를 반환합니다.|  
   
 ## <a name="remarks"></a>설명  
@@ -132,8 +132,8 @@ EXEC sp_helprotect NULL, NULL, NULL, 's';
 EXEC sp_helprotect @name = 'CREATE TABLE';  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;보안 저장 프로시저 ](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>관련 항목  
+ [Security Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [DENY&#40;Transact-SQL&#41;](../../t-sql/statements/deny-transact-sql.md)   
  [GRANT&#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [REVOKE&#40;Transact-SQL&#41;](../../t-sql/statements/revoke-transact-sql.md)   

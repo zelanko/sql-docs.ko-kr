@@ -18,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.conversation_endpoints catalog view
 ms.assetid: 2ed758bc-2a9d-4831-8da2-4b80e218f3ea
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 48c548ed85c5110c8e3c117da796c6189eee39de
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ef8bc8087811e25c8fde893a251e77d25661b5ea
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486448"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89537491"
 ---
 # <a name="sysconversation_endpoints-transact-sql"></a>sys.conversation_endpoints(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "88486448"
 |service_id|**int**|이 대화 상대에 대한 서비스 식별자입니다. NULL을 허용하지 않습니다.|  
 |lifetime|**datetime**|이 대화의 만료 날짜/시간입니다. NULL을 허용하지 않습니다.|  
 |state|**char(2)**|대화의 현재 상태입니다. NULL을 허용하지 않습니다. 다음 중 하나:<br /><br /> 아웃 바운드를 시작 했습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 이 대화에 대해 BEGIN CONVERSATION을 처리했지만 아직 보낸 메시지가 없습니다.<br /><br /> SI가 인바운드를 시작 했습니다. 다른 인스턴스에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 새 대화를 시작했지만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 첫 번째 메시지를 완전히 받지 못했습니다. 첫 번째 메시지가 조각화되었거나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 순서가 잘못된 메시지를 받는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 대화를 이 상태로 만들 수 있습니다. 하지만 대화에 대해 받은 첫 번째 전송에 첫 번째 메시지가 모두 포함된 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 대화를 CO 상태로 만들 수 있습니다.<br /><br /> CO 대화 합니다. 대화가 설정되고 대화의 양쪽 모두 메시지를 보낼 수 있습니다. 일반 서비스에 대한 통신의 대부분은 대화가 이 상태일 때 수행됩니다.<br /><br /> DI에서 인바운드를 분리 했습니다. 원격 대화 상대가 END CONVERSATION을 실행했습니다. 로컬 대화 상대가 END CONVERSATION을 실행할 때까지 대화는 이 상태로 유지됩니다. 애플리케이션은 계속해서 대화 메시지를 받을 수 있습니다. 원격 대화 상대가 대화를 종료했기 때문에 애플리케이션에서 이 대화 메시지를 보낼 수는 없습니다. 애플리케이션이 END CONVERSATION을 실행하면 대화가 CD(닫힘) 상태로 전환됩니다.<br /><br /> 아웃 바운드의 연결을 끊지 마십시오. 로컬 대화 상대가 END CONVERSATION을 실행했습니다. 원격 대화 상대가 END CONVERSATION을 승인할 때까지 대화는 이 상태로 유지됩니다. 애플리케이션에서 대화 메시지를 보내거나 받을 수 없습니다. 원격 대화 상대가 END CONVERSATION을 승인하면 대화가 CD(닫힘) 상태로 전환됩니다.<br /><br /> ER 오류입니다. 이 엔드포인트에서 오류가 발생했습니다. 오류 메시지가 애플리케이션 큐에 들어갑니다. 비어 있는 애플리케이션 큐는 애플리케이션이 이미 오류 메시지를 사용했음을 나타냅니다.<br /><br /> CD를 닫았습니다. 대화 엔드포인트는 더 이상 사용되지 않습니다.|  
-|state_desc|**nvarchar(60)**|끝점 대화 상태에 대 한 설명입니다. 이 열은 NULL을 허용합니다. 다음 중 하나:<br /><br /> **STARTED_OUTBOUND**<br /><br /> **STARTED_INBOUND**<br /><br /> **했으므로**<br /><br /> **DISCONNECTED_INBOUND**<br /><br /> **DISCONNECTED_OUTBOUND**<br /><br /> **닫히면**<br /><br /> **메시지가**|  
+|state_desc|**nvarchar(60)**|끝점 대화 상태에 대 한 설명입니다. 이 열은 NULL을 허용합니다. 다음 중 하나:<br /><br /> **STARTED_OUTBOUND**<br /><br /> **STARTED_INBOUND**<br /><br /> **했으므로**<br /><br /> **DISCONNECTED_INBOUND**<br /><br /> **DISCONNECTED_OUTBOUND**<br /><br /> **닫히면**<br /><br /> **ERROR**|  
 |far_service|**nvarchar(256)**|원격 대화 상대에 있는 서비스의 이름입니다. NULL을 허용하지 않습니다.|  
 |far_broker_instance|**nvarchar(128)**|원격 대화 상대에 대한 Broker 인스턴스입니다. NULL을 허용합니다.|  
 |principal_id|**int**|로컬 대화 상대가 사용하는 인증서를 소유한 보안 주체의 식별자입니다. NULL을 허용하지 않습니다.|  

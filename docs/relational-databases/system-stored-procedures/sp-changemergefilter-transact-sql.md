@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changemergefilter
 ms.assetid: e08fdfdd-d242-4e85-817b-9f7a224fe567
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 64922bb6150d7d3b637984a740abbb9e9f825854
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 3e5a5208eeb1a47971e1960bd9c9c581d5d6517e
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474445"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89539130"
 ---
 # <a name="sp_changemergefilter-transact-sql"></a>sp_changemergefilter(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -56,7 +56,7 @@ sp_changemergefilter [ @publication= ] 'publication'
   
  다음 표에서는 아티클의 속성 및 해당 속성의 값을 설명합니다.  
   
-|속성|값|설명|  
+|속성|값|Description|  
 |--------------|-----------|-----------------|  
 |**filter_type**|**1**|조인 필터입니다.<br /><br /> 이 옵션은 [!INCLUDE[ssEW](../../includes/ssew-md.md)] 구독자를 지원하는 데 필요합니다.|  
 ||**2**|논리적 레코드 관계입니다.|  
@@ -94,8 +94,8 @@ sp_changemergefilter [ @publication= ] 'publication'
   
 ## <a name="see-also"></a>참고 항목  
  [게시 및 아티클 속성 변경](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
- [Transact-sql&#41;sp_addmergefilter &#40;](../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md)   
- [Transact-sql&#41;sp_dropmergefilter &#40;](../../relational-databases/system-stored-procedures/sp-dropmergefilter-transact-sql.md)   
+ [sp_addmergefilter&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md)   
+ [sp_dropmergefilter&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergefilter-transact-sql.md)   
  [Transact-sql&#41;sp_helpmergefilter &#40;](../../relational-databases/system-stored-procedures/sp-helpmergefilter-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

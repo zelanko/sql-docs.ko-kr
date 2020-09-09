@@ -17,15 +17,15 @@ helpviewer_keywords:
 - query_store_wait_stats catalog view
 - sys.query_store_wait_stats catalog view
 ms.assetid: ccf7a57c-314b-450c-bd34-70749a02784a
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 41f66150a3a5c604889dc29d96abaea6d0418c6f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bc28729ef4f3743e945f782fed0409057e90224a
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447848"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89537319"
 ---
 # <a name="sysquery_store_wait_stats-transact-sql"></a>sys. query_store_wait_stats (Transact-sql)
 
@@ -55,7 +55,7 @@ ms.locfileid: "88447848"
   
 |정수 값|대기 범주|대기 유형은 범주에 포함 됩니다.|  
 |-----------------|---------------|-----------------|  
-|**0**|**알 수 없음**|알 수 없음 |  
+|**0**|**알 수 없음**|Unknown |  
 |**1**|**CPU**|SOS_SCHEDULER_YIELD|
 |**2**|**작업자 스레드**|THREADPOOL|
 |**3**|**잠금**|LCK_M_%|
@@ -65,7 +65,7 @@ ms.locfileid: "88447848"
 |**7**|**컴파일과***|RESOURCE_SEMAPHORE_QUERY_COMPILE|
 |**8**|**SQL CLR**|CLR%, SQLCLR%|
 |**9**|**미러링**|DBMIRROR%|
-|**10**|**트랜잭션과**|XACT%, DTC%, TRAN_MARKLATCH_%, MSQL_XACT_%, TRANSACTION_MUTEX|
+|**10**|**트랜잭션**|XACT%, DTC%, TRAN_MARKLATCH_%, MSQL_XACT_%, TRANSACTION_MUTEX|
 |**11**|**유휴 상태**|SLEEP_%, LAZYWRITER_SLEEP, SQLTRACE_BUFFER_FLUSH, SQLTRACE_INCREMENTAL_FLUSH_SLEEP, SQLTRACE_WAIT_ENTRIES, FT_IFTS_SCHEDULER_IDLE_WAIT, XE_DISPATCHER_WAIT, REQUEST_FOR_DEADLOCK_SEARCH, LOGMGR_QUEUE, ONDEMAND_TASK_QUEUE, CHECKPOINT_QUEUE, XE_TIMER_EVENT|
 |**12**|**선점형**|PREEMPTIVE_%|
 |**13**|**Service Broker**|BROKER_% **(BROKER_RECEIVE_WAITFOR 하지 않음)**|

@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addscriptexec
 ms.assetid: 1627db41-6a80-45b6-b0b9-c0b7f9a1c886
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: a133709a8fbaaabd58a9ad00d7298bf34317b0cf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 81d3b8ac9e8eda12ed27099fed5623d0fd3da489
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486359"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89536766"
 ---
 # <a name="sp_addscriptexec-transact-sql"></a>sp_addscriptexec(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -78,7 +78,7 @@ sp_addscriptexec [ @publication = ] publication
 ## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할 또는 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_addscriptexec**을 실행할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [복제 Transact-sql 프로그래밍 &#40;동기화 중 스크립트 실행&#41;](../../relational-databases/replication/execute-scripts-during-synchronization-replication-transact-sql-programming.md)   
  [데이터 동기화](../../relational-databases/replication/synchronize-data.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

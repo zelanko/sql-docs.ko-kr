@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_cursor
 ms.assetid: 41ade0ca-5f11-469d-bd4d-c8302ccd93b3
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 75a3d3f6c38b6d63ad8127966cba118f4c3455dc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: d087a160324ec84cbb94a73cba3ab45f36dfc29e
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481382"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89536680"
 ---
 # <a name="sp_cursor-transact-sql"></a>sp_cursor(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,7 +51,7 @@ sp_cursor  cursor, optype, rownum, table
  *optype*  
  커서가 수행할 작업을 지정하는 필수 매개 변수입니다. *optype* 에는 다음 **int** 입력 값 중 하나가 필요 합니다.  
   
-|값|Name|설명|  
+|값|Name|Description|  
 |-----------|----------|-----------------|  
 |0X0001|UPDATE|인출 버퍼에서 하나 이상의 행을 업데이트하는 데 사용됩니다.  *Rownum* 에 지정 된 행에 다시 액세스 하 여 업데이트 합니다.|  
 |0x0002|Delete|인출 버퍼에서 하나 이상의 행을 삭제하는 데 사용됩니다. *Rownum* 에 지정 된 행에 다시 액세스 하 여 삭제 합니다.|  

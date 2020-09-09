@@ -16,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - SetFlag method
 ms.assetid: 0407520f-2f84-4f68-b2b7-429697286c1b
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: ba969526eddb477a918334e30fab033e4888a1ac
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 69cd62178a35ea88c9a2d76bff14cb6b4405a061
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446280"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89537229"
 ---
 # <a name="setflag-method-clientnetworkprotocolproperty-class"></a>SetFlag 메서드(ClientNetworkProtocolProperty 클래스)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +42,7 @@ object.SetFlag(BoolValue) [=]
   
 #### <a name="parameters"></a>매개 변수  
   
-|매개 변수|설명|  
+|매개 변수|Description|  
 |---------------|-----------------|  
 |*BoolValue*|플래그의 새 값을 지정하는 부울 값입니다.|  
   
@@ -51,7 +51,7 @@ object.SetFlag(BoolValue) [=]
   
 ## <a name="remarks"></a>설명  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [클라이언트 프로토콜 구성](../../../database-engine/configure-windows/configure-client-protocols.md)  
   
   

@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.asymmetric_keys catalog view
 ms.assetid: bbca796a-9bb5-4a62-9ca8-1d255984553d
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6511df5406c72778b970a317ab7182b9db5bdd7d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d8ff4d42014f0e3b61c4087ae879edfb8f9da744
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486555"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89539709"
 ---
 # <a name="sysasymmetric_keys-transact-sql"></a>sys.asymmetric_keys(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "88486555"
 |**알고리즘과**|**char(2)**|키에 사용된 알고리즘입니다.<br /><br /> 1R = 512비트 RSA<br /><br /> 2R = 1024비트 RSA<br /><br /> 3R = 2048비트 RSA|  
 |**algorithm_desc**|**nvarchar(60)**|키에 사용된 알고리즘에 대한 설명입니다.<br /><br /> RSA_512<br /><br /> RSA_1024<br /><br /> RSA_2048|  
 |**key_length**|**int**|키의 비트 길이입니다.|  
-|**sid**|**varbinary(85)**|이 키의 로그인 SID입니다. EKM(Extensible Key Management) 키의 경우 이 값은 NULL입니다.|  
+|**s**|**varbinary(85)**|이 키의 로그인 SID입니다. EKM(Extensible Key Management) 키의 경우 이 값은 NULL입니다.|  
 |**string_sid**|**nvarchar(128)**|키의 로그인 SID를 나타내는 문자열입니다. EKM(Extensible Key Management) 키의 경우 이 값은 NULL입니다.|  
 |**public_key**|**varbinary(max)**|공개 키입니다.|  
 |**attested_by**|**nvarchar(260)**|시스템에서만 사용됩니다.|  

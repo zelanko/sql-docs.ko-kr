@@ -19,14 +19,14 @@ helpviewer_keywords:
 - notifications [WMI]
 - WMI Provider for Server Events, security
 ms.assetid: cd974b3b-2309-4a20-b9be-7cfc93fc4389
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 1a4ef3abd90b4e75ce584816846f30c5bc8553a4
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: bb1e919942d491cdf44388f24de151b2ddeeeee0
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888130"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89537572"
 ---
 # <a name="working-with-the-wmi-provider-for-server-events"></a>서버 이벤트용 WMI 공급자 작업
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

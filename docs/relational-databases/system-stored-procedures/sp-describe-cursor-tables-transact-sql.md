@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_describe_cursor_tables
 ms.assetid: 02c0f81a-54ed-4ca4-aa4f-bb7463a9ab9a
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 01e7850faa83e6d8854b5ac1a0138cd4363adf4b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: eec1a0d9d8e61613558e0f34b13080a67ba5335b
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447261"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89539004"
 ---
 # <a name="sp_describe_cursor_tables-transact-sql"></a>sp_describe_cursor_tables(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -65,7 +65,7 @@ sp_describe_cursor_tables
  열린 커서와 연관된 커서 변수의 이름입니다. *input_cursor_variable* 은 **nvarchar (128)** 입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
- None  
+ 없음  
   
 ## <a name="cursors-returned"></a>반환되는 커서  
  sp_describe_cursor_tables는 해당 보고서를 [!INCLUDE[tsql](../../includes/tsql-md.md)] **커서** 출력 매개 변수로 캡슐화 합니다. 이로 인해 [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리, 저장 프로시저 및 한 번에 하나의 행만 출력 작업을 하는 트리거가 허용됩니다. 이는 API 함수에서 바로 프로시저를 호출할 수 없음을 의미하기도 합니다. **Cursor** output 매개 변수는 프로그램 변수에 바인딩되어야 하지만 api는 **cursor** 매개 변수 또는 변수 바인딩을 지원 하지 않습니다.  

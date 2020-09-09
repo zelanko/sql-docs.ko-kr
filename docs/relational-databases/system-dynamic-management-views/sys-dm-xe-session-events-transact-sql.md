@@ -18,14 +18,14 @@ helpviewer_keywords:
 - sys.dm_xe_session_events dynamic management view
 - extended events [SQL Server], views
 ms.assetid: 4f027b31-4e03-43a6-849d-1ba9d8d34ae8
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: cf341fc33337e0205544ce8fbd56b3ead705f894
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 3a31075286ec950ba41c6d8280fef436d3ae17bc
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498288"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89536930"
 ---
 # <a name="sysdm_xe_session_events-transact-sql"></a>sys.dm_xe_session_events(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "88498288"
   
 ### <a name="relationship-cardinalities"></a>관계 카디널리티  
   
-|보낸 사람|대상|관계|  
+|시작|대상|관계|  
 |----------|--------|------------------|  
 |sys.dm_xe_session_events.event_session_address|sys.dm_xe_sessions.address|다 대 일|  
 |dm_xe_session_events. event_package_guid,<br /><br /> dm_xe_session_events. event_name|sys.dm_xe_objects.name,<br /><br /> sys.dm_xe_objects.package_guid|다 대 일|  

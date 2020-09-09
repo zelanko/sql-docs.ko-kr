@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changedistributiondb
 ms.assetid: 66f73185-ea9e-43f9-86ed-9dd933cee2f6
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: fb52176989ef6e90eb132da21abcd299444aec8d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 35a090a0dc82f09ccceb1a4d56c09f8ab9d8191f
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464459"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89536740"
 ---
 # <a name="sp_changedistributiondb-transact-sql"></a>sp_changedistributiondb(Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -44,7 +44,7 @@ sp_changedistributiondb [ @database= ] 'database'
   
 `[ @property = ] 'property'` 지정 된 데이터베이스에 대해 변경할 속성입니다. *속성* 은 **sysname**이며 다음 값 중 하나일 수 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**history_retention**|기록 테이블의 보존 기간입니다.|  
 |**max_distretention**|최대 배포 보존 기간입니다.|  
@@ -65,7 +65,7 @@ sp_changedistributiondb [ @database= ] 'database'
 ## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할의 멤버만 **sp_changedistributiondb**를 실행할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [배포자 및 게시자 속성 보기 및 수정](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
  [Transact-sql&#41;sp_adddistributiondb &#40;](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md)   
  [Transact-sql&#41;sp_dropdistributiondb &#40;](../../relational-databases/system-stored-procedures/sp-dropdistributiondb-transact-sql.md)   

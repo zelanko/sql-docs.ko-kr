@@ -18,15 +18,15 @@ helpviewer_keywords:
 - event_log
 - sys.event_log
 ms.assetid: ad5496b5-e5c7-4a18-b5a0-3f985d7c4758
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: fd3db96c34d6a6ca8f6f08fc76fac73a4c4d79a1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d819bde874fb5e81a7b6b670ebdeca61d18f127c
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486406"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89539658"
 ---
 # <a name="sysevent_log-azure-sql-database"></a>sys.event_log(Azure SQL Database)
 
@@ -39,10 +39,10 @@ ms.locfileid: "88486406"
   
  `sys.event_log` 뷰는 다음 열을 포함합니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**database_name**|**sysname**|데이터베이스의 이름입니다. 연결이 실패하고 사용자가 데이터베이스 이름을 지정하지 않은 경우 이 열은 비어 있습니다.|  
-|**start_time**|**datetime2**|집계 간격 시작의 UTC 날짜 및 시간입니다. 집계 이벤트에 대해 시간은 항상 5분의 배수입니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.<br /><br /> '2011-09-28 16:00:00'<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  
+|**start_time**|**datetime2**|집계 간격 시작의 UTC 날짜 및 시간입니다. 집계 이벤트에 대해 시간은 항상 5분의 배수입니다. 예를 들면 다음과 같습니다.<br /><br /> '2011-09-28 16:00:00'<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  
 |**end_time**|**datetime2**|집계 간격 끝의 UTC 날짜 및 시간입니다. 집계 된 이벤트의 경우 **End_time** 은 항상 같은 행의 해당 **start_time** 보다 정확히 5 분 후입니다. 집계 되지 않은 이벤트의 경우 **start_time** 및 **end_time** 이벤트의 실제 UTC 날짜 및 시간과 같습니다.|  
 |**event_category**|**nvarchar (64)**|이 이벤트를 생성한 높은 수준의 구성 요소입니다.<br /><br /> 가능한 값 목록은 [이벤트 유형](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) 을 참조 하세요.|  
 |**event_type**|**nvarchar (64)**|이벤트의 유형입니다.<br /><br /> 가능한 값 목록은 [이벤트 유형](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) 을 참조 하세요.|  
@@ -229,7 +229,7 @@ WITH CTE AS (
 SELECT * FROM CTE2;  
 ```
 
-## <a name="see-also"></a>관련 항목
+## <a name="see-also"></a>참고 항목
 
  [Azure SQL Database 확장 이벤트](https://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)  
  

@@ -17,14 +17,14 @@ helpviewer_keywords:
 - FILESTREAM [SQL Server]
 - sp_filestream_force_garbage_collection
 ms.assetid: 9d1efde6-8fa4-42ac-80e5-37456ffebd0b
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 63880b69a9c33b0f388fd25945aa9b8f0fae7cdf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: eeb70b4bc548496dcb8d0c93eeba27a9644c5bca
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88427715"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89539202"
 ---
 # <a name="sp_filestream_force_garbage_collection-transact-sql"></a>sp_filestream_force_garbage_collection(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,14 +54,14 @@ sp_filestream_force_garbage_collection
   
 ## <a name="return-code-values"></a>반환 코드 값  
   
-| 값 | 설명 |
+| 값 | Description |
 | ----- | ----------- |   
 |0|작업 성공|  
 |1|작업 실패|  
   
 ## <a name="result-sets"></a>결과 집합  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |*file_name*|FILESTREAM 컨테이너 이름을 나타냅니다.|  
 |*num_collected_items*|이 컨테이너에서 가비지 수집된(삭제된) FILESTREAM 항목(파일/디렉터리) 수를 나타냅니다.|  

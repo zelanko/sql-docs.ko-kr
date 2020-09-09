@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpdatatypemap
 ms.assetid: 800c9c65-723e-4961-a63d-327987f129f0
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 266098010f7da11f431c3bb334761209c7049cba
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 7fb7ee524e2b9849c9c8a348cd6c8a9de7fb74e2
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474121"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89538782"
 ---
 # <a name="sp_helpdatatypemap-transact-sql"></a>sp_helpdatatypemap(Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -46,7 +46,7 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
 ## <a name="arguments"></a>인수  
 `[ @source_dbms = ] 'source_dbms'` 데이터 형식이 매핑되는 DBMS의 이름입니다. *source_dbms* 는 **sysname**이며 다음 값 중 하나일 수 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|원본은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스입니다.|  
 |**ORACLE**|원본은 Oracle 데이터베이스입니다.|  
@@ -57,7 +57,7 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
   
 `[ @destination_dbms = ] 'destination_dbms'` 대상 DBMS의 이름입니다. *destination_dbms* 는 **sysname**이며 다음 값 중 하나일 수 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|대상은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스입니다.|  
 |**ORACLE**|대상은 Oracle 데이터베이스입니다.|  
@@ -72,7 +72,7 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|설명|  
+|열 이름|Description|  
 |-----------------|-----------------|  
 |**mapping_id**|데이터 형식 매핑을 식별합니다.|  
 |**source_dbms**|원본 DBMS의 이름 및 버전 번호입니다.|  
@@ -92,7 +92,7 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
 ## <a name="permissions"></a>사용 권한  
  배포자에서 **sysadmin** 고정 서버 역할의 멤버 또는 배포 데이터베이스에 대 한 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_helpdatatypemap**을 실행할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Transact-sql&#41;sp_getdefaultdatatypemapping &#40;](../../relational-databases/system-stored-procedures/sp-getdefaultdatatypemapping-transact-sql.md)   
  [Transact-sql&#41;sp_setdefaultdatatypemapping &#40;](../../relational-databases/system-stored-procedures/sp-setdefaultdatatypemapping-transact-sql.md)  
   

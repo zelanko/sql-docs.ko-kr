@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changedistributor_password
 ms.assetid: 4a496e60-414a-4026-ba7a-3e89391d39b7
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 1709bdbb673dcf88ffc9646ded291abb5702412d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 9f9f964e2db0c47dcf03b52a65c3a8e7c2599dde
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464496"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89536732"
 ---
 # <a name="sp_changedistributor_password-transact-sql"></a>sp_changedistributor_password(Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -52,7 +52,7 @@ sp_changedistributor_password [ @password= ] 'password'
 ## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할의 멤버만 **sp_changedistributor_password**를 실행할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [복제 보안 설정 보기 및 수정](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
  [배포자 보안 설정](../../relational-databases/replication/security/secure-the-distributor.md)   
  [Transact-sql&#41;sp_adddistributor &#40;](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md)   

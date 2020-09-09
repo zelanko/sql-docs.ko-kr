@@ -15,15 +15,15 @@ helpviewer_keywords:
 - stored procedures [SQL Server], query store
 - query store [SQL Server], stored procedures
 ms.assetid: 9bddbb74-e67a-43e3-b89e-896c498e53cb
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d9d39754684615128402d6b4e1605062b3857da7
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: 3e4219850fec566b39371629226e74e5d6aeaf00
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88646573"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89539177"
 ---
 # <a name="query-store-stored-procedures-transact-sql"></a>쿼리 저장소 저장 프로시저 (Transact-sql)
 
@@ -45,7 +45,7 @@ ms.locfileid: "88646573"
   
 -   [sp_query_store_unforce_plan&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Transact-sql&#41;&#40;카탈로그 뷰 쿼리 저장소 ](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)   
  [쿼리 저장소를 사용하여 성능 모니터링](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)  
   

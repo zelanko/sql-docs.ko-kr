@@ -15,19 +15,19 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_rda_deauthorize_db stored procedure
 ms.assetid: 2e362e15-2cd5-4856-9f0b-54df56b0866b
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 11e039ad6c0550942632be6f34d23972e1897e2b
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 5c8413bf0a78ea1780d0babfc6fd88abb615d4ea
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243364"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89538484"
 ---
 # <a name="syssp_rda_deauthorize_db-transact-sql"></a>sys. sp_rda_deauthorize_db (Transact-sql)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
-  로컬 스트레치 사용 데이터베이스와 원격 Azure 데이터베이스 간의 인증 된 연결을 제거 합니다. 원격 데이터베이스에 연결할 수 없거나 일관 되지 않은 상태에 있을 때 데이터베이스의 모든 스트레치 사용 테이블에 대 한 쿼리 동작을 변경 하려는 경우 **sp_rda_deauthorize_db** 를 실행 합니다.  
+  로컬 스트레치 사용 데이터베이스와 원격 Azure 데이터베이스 간의 인증 된 연결을 제거 합니다. 원격 데이터베이스에 연결할 수 없거나 일관 되지 않은 상태에 있을 때 데이터베이스의 모든 스트레치 사용 테이블에 대 한 쿼리 동작을 변경 하려는 경우 **sp_rda_deauthorize_db**  를 실행 합니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,7 +48,7 @@ sp_rda_deauthorize_db
   
 -   [Sp_rda_reauthorize_db &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md) 를 실행 하 여 원격 Azure 데이터베이스에 다시 연결 합니다. 이 작업은 자동으로 쿼리 모드를 LOCAL_AND_REMOTE으로 다시 설정 합니다 .이는 Stretch Database의 기본 동작입니다. 즉, 쿼리는 로컬 및 원격 데이터에서 결과를 반환 합니다.  
   
--   LOCAL_ONLY 인수를 사용 하 여 [transact-sql&#41;&#40;sp_rda_set_query_mode](../../relational-databases/system-stored-procedures/sys-sp-rda-set-query-mode-transact-sql.md) 실행 하 여 쿼리가 로컬 데이터에 대해서만 계속 실행 되도록 합니다.  
+-   LOCAL_ONLY 인수를 사용 하 여 [transact-sql&#41;&#40;sp_rda_set_query_mode ](../../relational-databases/system-stored-procedures/sys-sp-rda-set-query-mode-transact-sql.md) 실행 하 여 쿼리가 로컬 데이터에 대해서만 계속 실행 되도록 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [sp_rda_set_query_mode &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-set-query-mode-transact-sql.md)   

@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_operator
 ms.assetid: 817cd98a-4dff-4ed8-a546-f336c144d1e0
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: a22465af8c3d4e7e3bb0cabd76752d642c2f2423
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: e2b67e5754fdc0124d105d99954361535933c88b
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447478"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89539247"
 ---
 # <a name="sp_add_operator-transact-sql"></a>sp_add_operator(Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -59,7 +59,7 @@ sp_add_operator [ @name = ] 'name'
   
 `[ @email_address = ] 'email_address'` 운영자의 전자 메일 주소입니다. 이 문자열은 전자 메일 시스템으로 직접 전달됩니다. *email_address* 은 **nvarchar (100)** 이며 기본값은 NULL입니다.  
   
- *Email_address*에 대 한 실제 전자 메일 주소나 별칭을 지정할 수 있습니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.  
+ *Email_address*에 대 한 실제 전자 메일 주소나 별칭을 지정할 수 있습니다. 예를 들면 다음과 같습니다.  
   
  '**jdoe**' 또는 '**jdoe \@ xyz.com**'  
   
@@ -130,7 +130,7 @@ EXEC dbo.sp_add_operator
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Transact-sql&#41;sp_delete_operator &#40;](../../relational-databases/system-stored-procedures/sp-delete-operator-transact-sql.md)   
  [Transact-sql&#41;sp_help_operator &#40;](../../relational-databases/system-stored-procedures/sp-help-operator-transact-sql.md)   
  [Transact-sql&#41;sp_update_operator &#40;](../../relational-databases/system-stored-procedures/sp-update-operator-transact-sql.md)   

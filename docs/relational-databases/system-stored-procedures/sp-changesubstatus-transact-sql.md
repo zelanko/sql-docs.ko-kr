@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changesubstatus
 ms.assetid: 9370e47a-d128-4f15-9224-1c3642770c39
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: f08825d906705d87596347742c6481dda9c07d7c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: faee6b09f682c5d13a3c005d95b1d513d9206026
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486238"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89539132"
 ---
 # <a name="sp_changesubstatus-transact-sql"></a>sp_changesubstatus(Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -73,7 +73,7 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
   
 `[ @status = ] 'status'`**Syssubscriptions** 테이블의 구독 상태입니다. *status* 는 **sysname**이며 기본값은 없으며 다음 값 중 하나일 수 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**active**|구독자가 동기화되어 데이터를 받습니다.|  
 |**inactive**|구독이 없는 구독자 항목이 있습니다.|  
@@ -91,8 +91,8 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
   
 |값|Description|  
 |-----------|-----------------|  
-|**1**|처음|  
-|**2**|초|  
+|**1**|첫째|  
+|**2**|Second|  
 |**4**|세 번째|  
 |**8**|넷째|  
 |**16**|마지막|  
@@ -105,7 +105,7 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
 |값|Description|  
 |-----------|-----------------|  
 |**1**|한 번|  
-|**2**|초|  
+|**2**|Second|  
 |**4**|Minute|  
 |**8**|시간|  
 |NULL(기본값)||  
@@ -165,7 +165,7 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
 ## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할, **db_owner** 고정 데이터베이스 역할의 멤버 또는 구독의 작성자만 **sp_changesubstatus**을 실행할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Transact-sql&#41;sp_addsubscription &#40;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
  [Transact-sql&#41;sp_dropsubscription &#40;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)   
  [sp_helpdistributor&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistributor-transact-sql.md)   

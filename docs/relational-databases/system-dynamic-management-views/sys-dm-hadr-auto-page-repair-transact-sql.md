@@ -19,14 +19,14 @@ helpviewer_keywords:
 - automatic page repair
 - sys.dm_hadr_auto_page_repair dynamic management view
 ms.assetid: d7840adf-4a1b-41ac-bc94-102c07ad1c79
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 93c963fbe285407e56cafb8d13ebed0b7d4b3f31
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a1dfdf8d99f4166bdcfd913f38e23b00cd1cd365
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88493686"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89539405"
 ---
 # <a name="sysdm_hadr_auto_page_repair-transact-sql"></a>sys.dm_hadr_auto_page_repair(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "88493686"
 ### <a name="permissions"></a>사용 권한  
  을 실행하려면 서버에 대해 VIEW SERVER STATE 권한이 필요합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [자동 페이지 복구&#40;가용성 그룹: 데이터베이스 미러링&#41;](../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md)   
  [Transact-sql&#41;suspect_pages &#40;](../../relational-databases/system-tables/suspect-pages-transact-sql.md)   
  [suspect_pages 테이블 관리&#40;SQL Server&#41;](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)  

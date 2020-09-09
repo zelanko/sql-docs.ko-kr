@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_addsrvrolemember
 ms.assetid: 777f0e09-8ee5-4cb2-a3ac-939d02c3cd22
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: d7a782c8a29758eb78547219d40b4fcdc99bfec8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ec0b94d4423574729d4c92d869a73d04673edac8
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486274"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89536749"
 ---
 # <a name="sp_addsrvrolemember-transact-sql"></a>sp_addsrvrolemember(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -90,12 +90,12 @@ GO
 ```  
   
 ## <a name="see-also"></a>관련 항목  
- [Transact-sql&#41;&#40;보안 저장 프로시저 ](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [Transact-sql&#41;sp_addrolemember &#40;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)   
+ [Security Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [sp_addrolemember&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)   
  [Transact-sql&#41;sp_dropsrvrolemember &#40;](../../relational-databases/system-stored-procedures/sp-dropsrvrolemember-transact-sql.md)   
- [Transact-sql&#41;&#40;시스템 저장 프로시저 ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [보안 함수&#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)   
- [Transact-sql&#41;&#40;서버 역할 만들기 ](../../t-sql/statements/create-server-role-transact-sql.md)   
+ [CREATE SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-role-transact-sql.md)   
  [DROP SERVER ROLE&#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-role-transact-sql.md)  
   
   

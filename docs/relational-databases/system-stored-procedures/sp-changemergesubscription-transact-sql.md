@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changemergesubscription
 ms.assetid: fd820f35-c189-4e2d-884d-b60c1c469f58
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 388d33f9d812534ecee54dac41cfe7ad852e139d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: d1df7bd62aa2cecb23096121630eb0d89ce21dc8
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474471"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89536668"
 ---
 # <a name="sp_changemergesubscription-transact-sql"></a>sp_changemergesubscription(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -53,7 +53,7 @@ sp_changemergesubscription [ [ @publication= ] 'publication' ]
   
 `[ @value = ] 'value'` 지정 된 *속성*의 새 값입니다. *value* 는 **nvarchar (255)** 이며 테이블에 있는 값 중 하나일 수 있습니다.  
   
-|속성|값|설명|  
+|속성|값|Description|  
 |--------------|-----------|-----------------|  
 |**description**||해당 병합 구독에 관한 설명입니다.|  
 |**priority**||구독 우선 순위입니다. 우선 순위는 기본 해결 프로그램이 충돌을 감지했을 때 먼저 적용할 항목을 선택하는 데 사용합니다.|  

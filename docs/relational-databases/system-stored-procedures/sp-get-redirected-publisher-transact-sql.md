@@ -12,14 +12,14 @@ f1_keywords:
 - sp_get_redirected_publisher_TSQL
 - sp_get_redirected_publisher
 ms.assetid: d47a9ab5-f2cc-42a8-8be9-a33895ce44f0
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 1019f42b7edb8a82a3f655632aee64a61fbbcb99
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 5a71799e3d7820ce4a142d6c9ec7d55b743214fb
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447112"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89538945"
 ---
 # <a name="sp_get_redirected_publisher-transact-sql"></a>sp_get_redirected_publisher(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -70,7 +70,7 @@ sp_get_redirected_publisher
  호출자는 **sysadmin** 고정 서버 역할의 멤버 이거나 배포 데이터베이스에 대 한 **db_owner** 고정 데이터베이스 역할의 멤버 이거나 게시자 데이터베이스에 연결 된 정의 된 게시에 대 한 게시 액세스 목록의 멤버 여야 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;를 &#40;하는 복제 저장 프로시저 ](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
+ [복제 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
  [Transact-sql&#41;sp_validate_redirected_publisher &#40;](../../relational-databases/system-stored-procedures/sp-validate-redirected-publisher-transact-sql.md)   
  [Transact-sql&#41;sp_redirect_publisher &#40;](../../relational-databases/system-stored-procedures/sp-redirect-publisher-transact-sql.md)   
  [Transact-sql&#41;sp_validate_replica_hosts_as_publishers &#40;](../../relational-databases/system-stored-procedures/sp-validate-replica-hosts-as-publishers-transact-sql.md)  

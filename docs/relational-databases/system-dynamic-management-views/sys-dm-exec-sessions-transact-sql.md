@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_sessions dynamic management view
 ms.assetid: 2b7e8e0c-eea0-431e-819f-8ccd12ec8cfa
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 364b8c255054d10d8ae7ee10d1231ade99615bde
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d160be9c71c75e58a892f4b43494046b293caeb6
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490026"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89539452"
 ---
 # <a name="sysdm_exec_sessions-transact-sql"></a>sys.dm_exec_sessions(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -115,13 +115,13 @@ ms.locfileid: "88490026"
   
 ## <a name="relationship-cardinalities"></a>관계 카디널리티  
   
-|보낸 사람|대상|열 이름/APPLY|관계|  
+|시작|대상|열 이름/APPLY|관계|  
 |----------|--------|---------------|------------------|  
 |sys.dm_exec_sessions|[sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)|session_id|일 대 영 또는 일 대 다|  
 |sys.dm_exec_sessions|[sys.dm_exec_connections](../../relational-databases/system-dynamic-management-views/sys-dm-exec-connections-transact-sql.md)|session_id|일 대 영 또는 일 대 다|  
 |sys.dm_exec_sessions|[sys.dm_tran_session_transactions](../../relational-databases/system-dynamic-management-views/sys-dm-tran-session-transactions-transact-sql.md)|session_id|일 대 영 또는 일 대 다|  
 |sys.dm_exec_sessions|[dm_exec_cursors](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cursors-transact-sql.md)(session_id &#124; 0)|session_id CROSS APPLY<br /><br /> OUTER APPLY|일 대 영 또는 일 대 다|  
-|sys.dm_exec_sessions|[sys.dm_db_session_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql.md)|session_id|일 대 일|  
+|sys.dm_exec_sessions|[sys.dm_db_session_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql.md)|session_id|일대일|  
   
 ## <a name="examples"></a>예제  
   
@@ -184,7 +184,7 @@ JOIN sys.dm_exec_sessions AS s
 WHERE c.session_id = @@SPID;  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [실행 관련 동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
   

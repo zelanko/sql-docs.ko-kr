@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_check_for_sync_trigger
 ms.assetid: 54a1e2fd-c40a-43d4-ac64-baed28ae4637
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 1e55fd24c9d4df46cb4703af31d2eda802a458ca
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 85908cad93f729ad1c3029aff35be7a2cb91fcef
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486213"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89539110"
 ---
 # <a name="sp_check_for_sync_trigger-transact-sql"></a>sp_check_for_sync_trigger(Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -46,7 +46,7 @@ sp_check_for_sync_trigger [ @tabid = ] 'tabid'
  [** @trigger_op =** ] '*trigger_output_parameters*' 출력  
  출력 매개 변수에서 호출되고 있는 트리거 유형을 반환할지 여부를 지정합니다. *trigger_output_parameters* 은 **char (10)** 이며 다음 값 중 하나일 수 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**기능**|INSERT 트리거|  
 |**Upd**|UPDATE 트리거|  

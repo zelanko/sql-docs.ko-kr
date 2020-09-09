@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_sql_text dynamic management function
 ms.assetid: 61b8ad6a-bf80-490c-92db-58dfdff22a24
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 89f03e4acfa124189bbabd59bebdc2eb7869fdc9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 95db0c9386b8c3f1befda89c68635e37f32a1eb5
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489978"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89539432"
 ---
 # <a name="sysdm_exec_sql_text-transact-sql"></a>sys.dm_exec_sql_text(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -179,7 +179,7 @@ WHERE s2.objectid is null
 ORDER BY s1.sql_handle, s1.statement_start_offset, s1.statement_end_offset;  
 ```  
   
-## <a name="see-also"></a>참조  
+## <a name="see-also"></a>참고 항목  
  [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Transact-sql&#41;&#40;관련 동적 관리 뷰 및 함수 실행 ](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
  [dm_exec_query_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   

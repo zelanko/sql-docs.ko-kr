@@ -17,14 +17,14 @@ helpviewer_keywords:
 - system catalogs [SQL Server], example queries
 - catalog views [SQL Server], frequently asked questions
 ms.assetid: ca202580-c37e-4ccd-9275-77ce79481f64
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 17b7367ddcd8795eef64181934c8d44bb648c6e8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 346ae709b81c1d5f3892a7e7b5acfd98c3ff7d3b
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486611"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89539791"
 ---
 # <a name="querying-the-sql-server-system-catalog-faq"></a>SQL Server 시스템 카탈로그 쿼리에 대한 질문과 대답
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -140,7 +140,7 @@ GO
   
 ```  
   
- [맨 위로](#_TOP)  
+ [맨 위로 이동](#_TOP)  
   
 ###  <a name="how-do-i-find-all-the-owners-of-entities-contained-in-a-specified-schema"></a><a name="_FAQ2"></a> 지정 된 스키마에 포함 된 엔터티의 소유자를 모두 찾을 어떻게 할까요? 있나요?  
  다음 쿼리를 실행하기 전에 `<database_name>` 및 `<schema_name>`을 올바른 이름으로 대체합니다.  
@@ -168,7 +168,7 @@ GO
   
 ```  
   
- [맨 위로](#_TOP)  
+ [맨 위로 이동](#_TOP)  
   
 ###  <a name="how-do-i-find-all-the-tables-that-do-not-have-a-primary-key"></a><a name="_FAQ3"></a> 기본 키가 없는 테이블을 모두 찾으려면 어떻게 할까요??  
  다음 쿼리를 실행하기 전에 `<database_name>`을 올바른 데이터베이스 이름으로 대체합니다.  
@@ -203,7 +203,7 @@ GO
   
 ```  
   
- [맨 위로](#_TOP)  
+ [맨 위로 이동](#_TOP)  
   
 ###  <a name="how-do-i-find-all-the-tables-that-do-not-have-an-index"></a><a name="_FAQ4"></a> 인덱스가 없는 테이블을 모두 찾으려면 어떻게 할까요??  
  다음 쿼리를 실행하기 전에 `<database_name>`을 올바른 데이터베이스 이름으로 대체합니다.  
@@ -220,7 +220,7 @@ GO
   
 ```  
   
- [맨 위로](#_TOP)  
+ [맨 위로 이동](#_TOP)  
   
 ###  <a name="how-do-i-find-all-the-tables-that-have-an-identity-column"></a><a name="_FAQ5"></a> Id 열이 있는 테이블을 모두 찾을 어떻게 할까요? 있나요?  
  다음 쿼리를 실행하기 전에 `<database_name>`을 올바른 데이터베이스 이름으로 대체합니다.  
@@ -255,7 +255,7 @@ GO
   
 ```  
   
- [맨 위로](#_TOP)  
+ [맨 위로 이동](#_TOP)  
   
 ###  <a name="how-do-i-find-the-data-types-of-the-columns-of-a-specified-table"></a><a name="_FAQ7"></a> 지정 된 테이블의 열 데이터 형식을 찾을 어떻게 할까요? 있나요?  
  다음 쿼리를 실행하기 전에 `<database_name>` 및 `<schema_name.table_name>`을 올바른 이름으로 대체합니다.  
@@ -280,7 +280,7 @@ GO
   
 ```  
   
- [맨 위로](#_TOP)  
+ [맨 위로 이동](#_TOP)  
   
 ###  <a name="how-do-i-find-the-dependencies-on-a-specified-function"></a><a name="_FAQ8"></a> 지정 된 함수에 대 한 종속성을 찾을 어떻게 할까요? 있나요?  
  다음 쿼리를 실행하기 전에 `<database_name>` 및 `<schema_name.function_name>`을 올바른 이름으로 대체합니다.  
@@ -298,7 +298,7 @@ GO
   
 ```  
   
- [맨 위로](#_TOP)  
+ [맨 위로 이동](#_TOP)  
   
 ###  <a name="how-do-i-find-all-the-stored-procedures-in-a-database"></a><a name="_FAQ9"></a> 데이터베이스의 모든 저장 프로시저를 찾을 어떻게 할까요? 있나요?  
  다음 쿼리를 실행하기 전에 `<database_name>`을 올바른 이름으로 대체합니다.  
@@ -317,7 +317,7 @@ GO
   
 ```  
   
- [맨 위로](#_TOP)  
+ [맨 위로 이동](#_TOP)  
   
 ###  <a name="how-do-i-find-the-parameters-for-a-specified-stored-procedure-or-function"></a><a name="_FAQ10"></a> 지정 된 저장 프로시저 또는 함수에 대 한 매개 변수를 찾을 어떻게 할까요??  
  다음 쿼리를 실행하기 전에 `<database_name>` 및 `<schema_name.object_name>`을 올바른 이름으로 대체합니다.  
@@ -343,7 +343,7 @@ GO
   
 ```  
   
- [맨 위로](#_TOP)  
+ [맨 위로 이동](#_TOP)  
   
 ###  <a name="how-do-i-find-all-the-user-defined-functions-in-a-database"></a><a name="_FAQ12"></a> 데이터베이스에서 사용자 정의 함수를 모두 찾을 어떻게 할까요? 있나요?  
  다음 쿼리를 실행하기 전에 `<database_name>`을 올바른 데이터베이스 이름으로 대체합니다.  
@@ -362,7 +362,7 @@ GO
   
 ```  
   
- [맨 위로](#_TOP)  
+ [맨 위로 이동](#_TOP)  
   
 ###  <a name="how-do-i-find-all-views-in-a-database"></a><a name="_FAQ13"></a> 데이터베이스에서 모든 뷰를 찾을 어떻게 할까요? 있나요?  
  다음 쿼리를 실행하기 전에 `<database_name>`을 올바른 데이터베이스 이름으로 대체합니다.  
@@ -380,7 +380,7 @@ FROM sys.views;
   
 ```  
   
- [맨 위로](#_TOP)  
+ [맨 위로 이동](#_TOP)  
   
 ###  <a name="how-do-i-find-all-the-entities-that-have-been-modified-in-the-last-n-days"></a><a name="_FAQ6"></a> 최근 N 일 동안 수정 된 모든 엔터티를 찾을 어떻게 할까요? 있나요?  
  다음 쿼리를 실행하기 전에 `<database_name>` 및 `<n_days>`를 올바른 값으로 대체합니다.  
@@ -400,7 +400,7 @@ GO
   
 ```  
   
- [맨 위로](#_TOP)  
+ [맨 위로 이동](#_TOP)  
   
 ###  <a name="how-do-i-find-the-lob-data-types-of-a-specified-table"></a><a name="_FAQ14"></a> 지정 된 테이블의 LOB 데이터 형식을 찾을 어떻게 할까요? 있나요?  
  다음 쿼리를 실행하기 전에 `<database_name>` 및 `<schema_name.table_name>`을 올바른 이름으로 대체합니다.  
@@ -428,7 +428,7 @@ GO
   
 ```  
   
- [맨 위로](#_TOP)  
+ [맨 위로 이동](#_TOP)  
   
 ###  <a name="how-do-i-view-the-definition-of-a-module"></a><a name="_FAQ15"></a> 모듈의 정의를 볼 어떻게 할까요? 있나요?  
  다음 쿼리를 실행하기 전에 `<database_name>` 및 `<schema_name.object_name>`을 올바른 이름으로 대체합니다.  
@@ -453,7 +453,7 @@ GO
   
 ```  
   
- [맨 위로](#_TOP)  
+ [맨 위로 이동](#_TOP)  
   
 ###  <a name="how-do-i-view-the-definition-of-a-server-level-trigger"></a><a name="_FAQ19"></a> 서버 수준 트리거의 정의를 볼 어떻게 할까요? 있나요?  
   
@@ -464,7 +464,7 @@ GO
   
 ```  
   
- [맨 위로](#_TOP)  
+ [맨 위로 이동](#_TOP)  
   
 ###  <a name="how-do-i-find-the-columns-of-a-primary-key-for-a-specified-table"></a><a name="_FAQ16"></a> 지정 된 테이블에 대 한 기본 키 열을 찾을 어떻게 할까요? 있나요?  
  다음 쿼리를 실행하기 전에 `<database_name>` 및 `<schema_name.table_name>`을 올바른 이름으로 대체합니다.  
@@ -507,7 +507,7 @@ GO
   
 ```  
   
- [맨 위로](#_TOP)  
+ [맨 위로 이동](#_TOP)  
   
 ###  <a name="how-do-i-find-the-columns-of-a-foreign-key-for-a-specified-table"></a><a name="_FAQ17"></a> 지정 된 테이블에 대 한 외래 키 열을 찾을 어떻게 할까요? 있나요?  
  다음 쿼리를 실행하기 전에 `<database_name>` 및 `<schema_name.table_name>`을 올바른 이름으로 대체합니다.  
@@ -531,7 +531,7 @@ WHERE f.parent_object_id = OBJECT_ID('<schema_name.table_name>');
   
 ```  
   
- [맨 위로](#_TOP)  
+ [맨 위로 이동](#_TOP)  
   
 ###  <a name="how-do-i-find-the-permissions-granted-or-denied-to-a-specified-principal"></a><a name="_FAQ18"></a> 지정 된 보안 주체에 부여 되거나 거부 된 사용 권한을 찾을 어떻게 할까요? 있나요?  
  다음 예에서는 사용 권한이 확인되는 엔터티의 이름을 반환하는 함수를 만듭니다. 이 함수는 뒷부분에 나오는 쿼리에서 호출됩니다. 사용 권한을 확인할 모든 데이터베이스에서 함수를 만들어야 합니다.  
@@ -614,7 +614,7 @@ WHERE grantee_principal_id = DATABASE_PRINCIPAL_ID('public');
 GO  
 ```  
   
- [맨 위로](#_TOP)  
+ [맨 위로 이동](#_TOP)  
   
 ###  <a name="how-do-i-determine-if-a-column-is-used-in-a-computed-column-expression"></a><a name="_FAQ20"></a> 열이 계산 열 식에 사용 되 고 있는지 확인 어떻게 할까요??  
  다음 쿼리를 실행 하기 전에 `<database_name>` , `<schema_name.table_name>` 및 `<column_name`>를 유효한 이름으로 바꿉니다.  
@@ -636,7 +636,7 @@ GO
   
 ```  
   
- [맨 위로](#_TOP)  
+ [맨 위로 이동](#_TOP)  
   
 ###  <a name="how-do-i-find-all-the-columns-that-are-used-in-a-computed-column-expression"></a><a name="_FAQ21"></a> 계산 열 식에 사용 되는 열을 모두 찾으려면 어떻게 할까요??  
  다음 쿼리를 실행하기 전에 `<database_name>`을 올바른 이름으로 대체합니다.  
@@ -658,7 +658,7 @@ GO
   
 ```  
   
- [맨 위로](#_TOP)  
+ [맨 위로 이동](#_TOP)  
   
 ###  <a name="how-do-i-find-the-columns-that-depend-on-a-specified-clr-user-defined-type-or-alias-type"></a><a name="_FAQ22"></a> 지정 된 CLR 사용자 정의 형식 또는 별칭 형식에 종속 되는 열을 찾을 어떻게 할까요??  
  다음 쿼리를 실행 하기 전에을 `<database_name>` 올바른 이름으로 바꾸고을 올바른 `<schema_name.data_type_name>` 스키마 한정 CLR 사용자 정의 형식 또는 스키마 한정 별칭 형식 이름으로 바꿉니다. 다음 쿼리를 사용 하려면 **db_owner** 역할의 멤버 이거나 데이터베이스의 모든 종속 열 및 계산 열 메타 데이터를 볼 수 있는 권한이 있어야 합니다.  
@@ -696,7 +696,7 @@ GO
   
 ```  
   
- [맨 위로](#_TOP)  
+ [맨 위로 이동](#_TOP)  
   
 ###  <a name="how-do-i-find-the-computed-columns-that-depend-on-a-specified-clr-user-defined-type-or-alias-type"></a><a name="_FAQ23"></a> 지정 된 CLR 사용자 정의 형식 또는 별칭 형식에 종속 된 계산 열을 찾을 어떻게 할까요??  
  다음 쿼리를 실행하기 전에 `<database_name>`을 올바른 이름으로 대체하고 `<schema_name.data_type_name>`을 올바른 스키마 한정 CLR 사용자 정의 형식, 별칭 형식 이름으로 대체합니다.  
@@ -713,7 +713,7 @@ WHERE referenced_major_id = TYPE_ID('<schema_name.data_type_name>')
   
 ```  
   
- [맨 위로](#_TOP)  
+ [맨 위로 이동](#_TOP)  
   
 ###  <a name="how-do-i-find-the-parameters-that-depend-on-a-specified-clr-user-defined-type-or-alias-type"></a><a name="_FAQ24"></a> 지정 된 CLR 사용자 정의 형식 또는 별칭 형식에 종속 되는 매개 변수를 찾을 어떻게 할까요??  
  다음 쿼리를 실행하기 전에 `<database_name>`을 올바른 이름으로 대체하고 `<schema_name.data_type_name>`을 올바른 스키마 한정 CLR 사용자 정의 형식, 별칭 형식 이름으로 대체합니다. 다음 쿼리를 사용 하려면 **db_owner** 역할의 멤버 이거나 데이터베이스의 모든 종속 열 및 계산 열 메타 데이터를 볼 수 있는 권한이 있어야 합니다.  
@@ -755,7 +755,7 @@ GO
   
 ```  
   
- [맨 위로](#_TOP)  
+ [맨 위로 이동](#_TOP)  
   
 ###  <a name="how-do-i-find-the-check-constraints-that-depend-on-a-specified-clr-user-defined-type"></a><a name="_FAQ25"></a> 지정 된 CLR 사용자 정의 형식에 종속 된 CHECK 제약 조건을 찾을 어떻게 할까요? 있나요?  
  다음 쿼리를 실행 하기 전에을 `<database_name>` 올바른 이름으로 바꾸고을 올바른 `<schema_name.data_type_name>` 스키마 한정 CLR 사용자 정의 형식 이름으로 바꿉니다.  
@@ -775,7 +775,7 @@ GO
   
 ```  
   
- [맨 위로](#_TOP)  
+ [맨 위로 이동](#_TOP)  
   
 ###  <a name="how-do-i-find-the-views-transact-sql-functions-and-transact-sql-stored-procedures-that-depend-on-a-specified-clr-user-defined-type-or-alias-type"></a><a name="_FAQ26"></a> 지정 된 CLR 사용자 정의 형식 또는 별칭 형식에 종속 되는 뷰, Transact-sql 함수 및 Transact-sql 저장 프로시저를 찾을 어떻게 할까요??  
  다음 쿼리를 실행하기 전에 `<database_name>`을 올바른 이름으로 대체하고 `<schema_name.data_type_name>`을 올바른 스키마 한정 CLR 사용자 정의 형식, 별칭 형식 이름으로 대체합니다.  
@@ -803,7 +803,7 @@ GO
   
 ```  
   
- [맨 위로](#_TOP)  
+ [맨 위로 이동](#_TOP)  
   
 ###  <a name="how-do-i-find-all-the-constraints-for-a-specified-table"></a><a name="_FAQ27"></a> 지정 된 테이블에 대 한 모든 제약 조건을 찾을 어떻게 할까요? 있나요?  
  다음 쿼리를 실행하기 전에 `<database_name>` 및 `<schema_name.table_name>`을 올바른 이름으로 대체합니다.  
@@ -827,7 +827,7 @@ GO
   
 ```  
   
- [맨 위로](#_TOP)  
+ [맨 위로 이동](#_TOP)  
   
 ###  <a name="how-do-i-find-all-the-indexes-for-a-specified-table"></a><a name="_FAQ28"></a> 지정 된 테이블에 대 한 모든 인덱스를 찾을 어떻게 할까요? 있나요?  
  다음 쿼리를 실행하기 전에 `<database_name>` 및 `<schema_name.table_name>`을 올바른 이름으로 대체합니다.  
@@ -856,7 +856,7 @@ GO
   
 ```  
   
- [맨 위로](#_TOP)  
+ [맨 위로 이동](#_TOP)  
   
 ###  <a name="how-do-i-find-all-the-objects-that-have-a-specified-column-name"></a><a name="_FAQ30"></a> 지정 된 열 이름을 가진 개체를 모두 찾을 어떻게 할까요??  
  다음 쿼리를 실행하기 전에 `<database_name>` 및 `<column_name>`을 올바른 이름으로 대체합니다.  
@@ -886,7 +886,7 @@ GO
   
 ```  
   
- [맨 위로](#_TOP)  
+ [맨 위로 이동](#_TOP)  
   
 ###  <a name="how-do-i-find-all-the-user-defined-tables-in-a-specified-database"></a><a name="_FAQ31"></a> 지정 된 데이터베이스에서 사용자 정의 테이블을 모두 찾을 어떻게 할까요? 있나요?  
  다음 쿼리를 실행하기 전에 `<database_name>`을 올바른 이름으로 대체합니다.  
@@ -900,7 +900,7 @@ GO
   
 ```  
   
- [맨 위로](#_TOP)  
+ [맨 위로 이동](#_TOP)  
   
 ###  <a name="how-do-i-find-all-the-tables-and-indexes-that-are-partitioned"></a><a name="_FAQ32"></a> 분할 된 모든 테이블 및 인덱스를 찾으려면 어떻게 할까요? 합니다.  
  다음 쿼리를 실행하기 전에 `<database_name>`을 올바른 이름으로 대체합니다.  
@@ -922,7 +922,7 @@ GO
   
 ```  
   
- [맨 위로](#_TOP)  
+ [맨 위로 이동](#_TOP)  
   
 ###  <a name="how-do-i-find-all-the-statistics-on-a-specified-object"></a><a name="_FAQ33"></a> 지정 된 개체에 대 한 모든 통계를 찾으려면 어떻게 할까요??  
  다음 쿼리를 실행하기 전에 `<database_name>`을 올바른 이름으로 대체하고 `<schema_name.object_name>`을 올바른 테이블, 인덱싱된 뷰 또는 테이블 반환 함수 이름으로 대체합니다.  
@@ -941,7 +941,7 @@ GO
   
 ```  
   
- [맨 위로](#_TOP)  
+ [맨 위로 이동](#_TOP)  
   
 ###  <a name="how-do-i-find-all-the-statistics-and-statistics-columns-on-a-specified-object"></a><a name="_FAQ34"></a> 지정 된 개체에 대 한 모든 통계 및 통계 열을 찾으려면 어떻게 할까요??  
  다음 쿼리를 실행하기 전에 `<database_name>`을 올바른 이름으로 대체하고 `<schema_name.object_name>`을 올바른 테이블, 인덱싱된 뷰 또는 테이블 반환 함수 이름으로 대체합니다.  
@@ -962,7 +962,7 @@ GO
   
 ```  
   
- [맨 위로](#_TOP)  
+ [맨 위로 이동](#_TOP)  
   
 ###  <a name="how-do-i-find-the-definition-of-a-view"></a><a name="_FAQ35"></a> 뷰의 정의를 찾을 어떻게 할까요? 있나요?  
  다음 쿼리를 실행하기 전에 `<database_name>` 및 `<schema_name.object_name>`을 올바른 이름으로 대체합니다.  
@@ -987,7 +987,7 @@ GO
   
 ```  
   
- [맨 위로](#_TOP)  
+ [맨 위로 이동](#_TOP)  
   
 ## <a name="see-also"></a>참고 항목  
  [시스템 테이블을 시스템 뷰로 매핑 &#40;Transact-sql&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)  

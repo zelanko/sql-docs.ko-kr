@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changedynamicsnapshot_job
 ms.assetid: ea0dacd2-a5fd-42f4-88dd-7d289b0ae017
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 73406c2860dbff4dfb5f6488a2195a9f00be4bc6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 10bc612a0dc2598c973f6a6d2e3db26b5e0d69ca
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464453"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89536693"
 ---
 # <a name="sp_changedynamicsnapshot_job-transact-sql"></a>sp_changedynamicsnapshot_job(Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -93,7 +93,7 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 |값|Description|  
 |-----------|-----------------|  
 |**1**|한 번|  
-|**2**|초|  
+|**2**|Second|  
 |**4**|Minute|  
 |**8**|시간|  
 |NULL(기본값)||  
@@ -104,8 +104,8 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
   
 |값|Description|  
 |-----------|-----------------|  
-|**1**|처음|  
-|**2**|초|  
+|**1**|첫째|  
+|**2**|Second|  
 |**4**|세 번째|  
 |**8**|넷째|  
 |**16**|마지막|  
@@ -139,7 +139,7 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 ## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할 또는 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_changedynamicsnapshot_job**을 실행할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [복제 보안 설정 보기 및 수정](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
  [매개 변수가 있는 필터를 사용하는 병합 게시의 스냅샷](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)  
   

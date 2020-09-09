@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_droppublication
 ms.assetid: b52b37e6-4fec-40cf-abba-7dce4ff395fd
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 980b40421b51594ef0d687521ba9e436c2a16c4c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 5ae91db140ea261a6417cb08eae07cfe2eb7fb79
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783826"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89538937"
 ---
 # <a name="sp_droppublication-transact-sql"></a>sp_droppublication(Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -39,7 +39,7 @@ sp_droppublication [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @publication = ] 'publication'`삭제할 게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 없습니다. **All** 을 지정 하면 구독이 있는 게시를 제외 하 고 게시 데이터베이스에서 모든 게시가 삭제 됩니다.  
+`[ @publication = ] 'publication'` 삭제할 게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 없습니다. **All** 을 지정 하면 구독이 있는 게시를 제외 하 고 게시 데이터베이스에서 모든 게시가 삭제 됩니다.  
   
 `[ @ignore_distributor = ] ignore_distributor` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
@@ -56,14 +56,14 @@ sp_droppublication [ @publication= ] 'publication'
 ## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할의 멤버만 **sp_droppublication**를 실행할 수 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  [!code-sql[HowTo#sp_droppublication](../../relational-databases/replication/codesnippet/tsql/sp-droppublication-trans_1.sql)]  
   
 ## <a name="see-also"></a>참고 항목  
  [게시 삭제](../../relational-databases/replication/publish/delete-a-publication.md)   
  [Transact-sql&#41;sp_addpublication &#40;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
- [Transact-sql&#41;sp_changepublication &#40;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)   
- [Transact-sql&#41;sp_helppublication &#40;](../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)   
+ [sp_changepublication&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)   
+ [sp_helppublication&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)   
  [복제 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_help_agent_profile
 ms.assetid: 5637b671-4aa3-497e-9a1c-c99798a1afb4
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 5c6873ada83a846ae719e5498a296df02fa2a9c8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 7bcb9de7480bf0aea92f585cfece47cf09545195
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88469361"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89538861"
 ---
 # <a name="sp_help_agent_profile-transact-sql"></a>sp_help_agent_profile(Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -58,7 +58,7 @@ sp_help_agent_profile [ [ @agent_type = ] agent_type ]
 |**profile_id**|**int**|프로필의 ID입니다.|  
 |**profile_name**|**sysname**|에이전트 유형에 대해 고유합니다.|  
 |**agent_type**|**int**|**1** = 스냅숏 에이전트<br /><br /> **2** = 로그 판독기 에이전트<br /><br /> **3** = 배포 에이전트<br /><br /> **4** = 병합 에이전트<br /><br /> **9** = 큐 판독기 에이전트|  
-|**유형**|**int**|**0** = 시스템<br /><br /> **1** = 사용자 지정|  
+|**형식**|**int**|**0** = 시스템<br /><br /> **1** = 사용자 지정|  
 |**description**|**varchar (3000)**|프로필에 관한 설명입니다.|  
 |**def_profile**|**bit**|해당 프로필이 해당 에이전트 유형에 대한 기본값인지 여부를 지정합니다.|  
   

@@ -11,15 +11,15 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 31b71c68-50a0-4fd8-a7fe-2d2292be1163
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 42e7afbc0975c4f740eff21caaf86f783ac05f98
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: d384029cb8a226dfed01d14360247d00cb998cd8
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88646255"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89537620"
 ---
 # <a name="sysdm_db_column_store_row_group_operational_stats-transact-sql"></a>sys. dm_db_column_store_row_group_operational_stats (Transact-sql)
 
@@ -56,7 +56,7 @@ ms.locfileid: "88646255"
   
  자세한 내용은 [동적 관리 뷰 및 함수 &#40;transact-sql&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)를 참조 하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [인덱스 관련 동적 관리 뷰 및 함수 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)   
  [성능 모니터링 및 튜닝](../../relational-databases/performance/monitor-and-tune-for-performance.md)   

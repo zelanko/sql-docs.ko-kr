@@ -18,14 +18,14 @@ helpviewer_keywords:
 - xe
 - sys.dm_xe_session_object_columns dynamic management view
 ms.assetid: e97f3307-2da6-4c54-b818-a474faec752e
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: ba65acaf8feb98a959e9ef37c7fdd26d1ce29121
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: e4bb7b45f21e4d05984232d1453a1ca1fd69c9d6
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498273"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89536896"
 ---
 # <a name="sysdm_xe_session_object_columns-transact-sql"></a>sys.dm_xe_session_object_columns(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "88498273"
   
 ### <a name="relationship-cardinalities"></a>관계 카디널리티  
   
-|보낸 사람|대상|관계|  
+|시작|대상|관계|  
 |----------|--------|------------------|  
 |dm_xe_session_object_columns. object_name,<br /><br /> dm_xe_session_object_columns.object_package_guid|dm_xe_objects. package_guid,<br /><br /> sys.dm_xe_objects.name|다 대 일|  
 |dm_xe_session_object_columns. column_name,<br /><br /> dm_xe_session_object_columns.column_id|sys. dm_xe_object_columns. 이름,<br /><br /> sys.dm_xe_object_columns.column_id|다 대 일|  

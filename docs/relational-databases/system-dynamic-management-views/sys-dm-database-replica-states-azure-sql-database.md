@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
 - sys.dm_database_replica_states dynamic management view
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 1a40c5ba80bc3e9929109d9acc5f58f454db243d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 217f9e691ceb0da86834eb452d6b608fdbb8f091
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490036"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89537684"
 ---
 # <a name="sysdm_database_replica_states-azure-sql-database"></a>sys.dm_database_replica_states(Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -72,8 +72,8 @@ ms.locfileid: "88490036"
 |**last_commit_time**|**datetime**|마지막 커밋 레코드에 해당하는 시간입니다.<br /><br /> 보조 데이터베이스에서 이 시간은 주 데이터베이스의 시간과 동일합니다.<br /><br /> 주 복제본에서 각 보조 데이터베이스 행에는 해당 보조 데이터베이스를 호스팅하는 보조 복제본이 주 복제본에 다시 보고된 시간이 표시됩니다. 주 데이터베이스 행과 지정 된 보조 데이터베이스 행 간의 시간 차이는 다시 실행 프로세스를 catch 하 고 진행률이 보조 복제본에 의해 주 복제본에 다시 보고 된 것으로 가정 하 여 대략 RPO (복구 지점 목표)를 나타냅니다.|  
 |**low_water_mark_for_ghosts**|**bigint**|주 데이터베이스에서 고스트 정리에 사용되는 하위 워터마크를 나타내는 데이터베이스에 대한 일정하게 증가하는 번호입니다. 시간이 지나도 이 번호가 증가하지 않으면 고스트 정리가 수행되지 않은 것을 의미합니다. 정리할 고스트 행을 결정하기 위해 주 복제본은 주 복제본을 포함한 모든 가용성 복제본에서 이 데이터베이스에 대한 이 열의 최소값을 사용합니다.|  
 |**secondary_lag_seconds**|**bigint**|동기화 중에 보조 복제본이 주 복제본의 뒤에 있는 시간 (초)입니다.<br /><br />**적용 대상:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상|  
-|**quorum_commit_lsn**|**numeric(25,0)**|정보를 제공하기 위해서만 확인됩니다. 지원되지 않습니다. 향후 호환성은 보장되지 않습니다.|
-|**quorum_commit_time**|**datetime**|정보를 제공하기 위해서만 확인됩니다. 지원되지 않습니다. 향후 호환성은 보장되지 않습니다.|
+|**quorum_commit_lsn**|**numeric(25,0)**|정보를 제공하기 위해서만 확인됩니다. 지원 안 됨 향후 호환성은 보장되지 않습니다.|
+|**quorum_commit_time**|**datetime**|정보를 제공하기 위해서만 확인됩니다. 지원 안 됨 향후 호환성은 보장되지 않습니다.|
 
 
 ## <a name="permissions"></a>사용 권한

@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_depends
 ms.assetid: d9934590-c6ae-4936-91c3-146055ef2c57
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: ba819cdb8b3e9108fbae3e6405a87b78964931a0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 64bbce5c077d6752c97fd5791d5820e9cc4a2857
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447274"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89539076"
 ---
 # <a name="sp_depends-transact-sql"></a>sp_depends(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -70,7 +70,7 @@ sp_depends [ @objname = ] '<object>'
 |-----------------|---------------|-----------------|  
 |**name**|**nvarchar (257** **)**|종속성이 있는 항목의 이름입니다.|  
 |**type**|**nvarchar (16)**|항목의 유형입니다.|  
-|**updated**|**nvarchar (7)**|항목의 업데이트 여부를 결정합니다.|  
+|**업데이트됨**|**nvarchar (7)**|항목의 업데이트 여부를 결정합니다.|  
 |**선택**|**nvarchar(8)**|SELECT 문에서 항목의 사용 여부를 결정합니다.|  
 |**column**|**sysname**|종속성이 있는 열 또는 매개 변수입니다.|  
   
@@ -106,7 +106,7 @@ EXEC sp_depends @objname = N'AdventureWorks2012.Production.iWorkOrder' ;
  [Transact-sql&#41;&#40;저장 프로시저 데이터베이스 엔진 ](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [EXECUTE&#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
  [sp_help&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)   
- [Transact-sql&#41;&#40;시스템 저장 프로시저 ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sql_dependencies &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-sql-dependencies-transact-sql.md)  
   
   

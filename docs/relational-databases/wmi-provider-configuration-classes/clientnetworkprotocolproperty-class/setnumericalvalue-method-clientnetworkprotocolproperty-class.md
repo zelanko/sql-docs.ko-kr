@@ -16,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - SetNumericalValue method
 ms.assetid: d4d6df52-9e68-4003-9e28-ece6716ba7f1
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: ffdc80a3f2ca00b527ab5699429f20ff70c704c1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 0503bf1ea27981f986e20dcf1134df4f6dab912d
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88460164"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89537239"
 ---
 # <a name="setnumericalvalue-method-clientnetworkprotocolproperty-class"></a>SetNumericalValue 메서드(ClientNetworkProtocolProperty 클래스)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +42,7 @@ object.SetNumericalValue [= value]
   
 #### <a name="parameters"></a>매개 변수  
   
-|매개 변수|설명|  
+|매개 변수|Description|  
 |---------------|-----------------|  
 |*value*|참조 된 속성의 숫자 값을 지정 하는 **uint32** 값입니다.|  
   

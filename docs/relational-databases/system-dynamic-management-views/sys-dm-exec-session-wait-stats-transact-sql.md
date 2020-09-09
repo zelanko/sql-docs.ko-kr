@@ -15,14 +15,14 @@ f1_keywords:
 helpviewer_keywords:
 - sys.dm_exec_session_wait_stats
 ms.assetid: df84842a-71eb-4fda-b448-5953cf9985dc
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 1a856f10e59fa41bc9cd6d27c9c88097aa90c9c4
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 6668ab7b975c7325ab4b5d03ca2f30856b2ffbd0
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88646373"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89537013"
 ---
 # <a name="sysdm_exec_session_wait_stats-transact-sql"></a>sys. dm_exec_session_wait_stats (Transact-sql)
 
@@ -49,7 +49,7 @@ ms.locfileid: "88646373"
 ## <a name="permissions"></a>사용 권한  
  사용자에 게 서버에 대 한 **VIEW SERVER STATE** 권한이 있는 경우 사용자는 인스턴스에서 실행 중인 모든 세션을 볼 수 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 있습니다. 그렇지 않으면 사용자에 게 현재 세션만 표시 됩니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Transact-sql&#41;&#40;운영 체제 관련 동적 관리 뷰 SQL Server ](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
  [sys.dm_os_wait_stats&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)  

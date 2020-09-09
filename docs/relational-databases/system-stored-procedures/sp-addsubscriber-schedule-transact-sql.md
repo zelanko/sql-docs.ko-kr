@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addsubscriber_schedule
 ms.assetid: a6225033-5c3b-452f-ae52-79890a3590ed
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 7c5f355f735ba32c639d21d5137d6879f83cfa89
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 9f62a88f7bc1bd3cf60c2d15fe71c3d1b6e571ff
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88469823"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89536810"
 ---
 # <a name="sp_addsubscriber_schedule-transact-sql"></a>sp_addsubscriber_schedule(Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -76,10 +76,10 @@ sp_addsubscriber_schedule [ @subscriber = ] 'subscriber'
   
 `[ @frequency_relative_interval = ] frequency_relative_interval` 배포 에이전트 날짜입니다. 이 매개 변수는 *frequency_type* 이 **32** (매월 상대적)로 설정 된 경우에 사용 됩니다. *frequency_relative_interval* 은 **int**이며 다음 값 중 하나일 수 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
-|**1** (기본값)|처음|  
-|**2**|초|  
+|**1** (기본값)|첫째|  
+|**2**|Second|  
 |**4**|세 번째|  
 |**8**|넷째|  
 |**16**|마지막|  
@@ -91,7 +91,7 @@ sp_addsubscriber_schedule [ @subscriber = ] 'subscriber'
 |값|Description|  
 |-----------|-----------------|  
 |**1**|한 번|  
-|**2**|초|  
+|**2**|Second|  
 |**4** (기본값)|Minute|  
 |**8**|시간|  
   
@@ -119,7 +119,7 @@ sp_addsubscriber_schedule [ @subscriber = ] 'subscriber'
 ## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할의 멤버만 **sp_addsubscriber_schedule**를 실행할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Transact-sql&#41;sp_changesubscriber_schedule &#40;](../../relational-databases/system-stored-procedures/sp-changesubscriber-schedule-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

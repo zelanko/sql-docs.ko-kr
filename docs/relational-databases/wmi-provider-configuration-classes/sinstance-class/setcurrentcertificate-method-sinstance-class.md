@@ -16,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - SetCurrentCertificate method
 ms.assetid: 7349fb87-b973-4160-a2be-cab73abf5b31
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 3640d05ceee5c6cbc540cf054e00f027620a5748
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 0dffd5be47d66d98dbd1b1a9c421976cd153d8b3
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446494"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89537660"
 ---
 # <a name="setcurrentcertificate-method-sinstance-class"></a>SetCurrentCertificate 메서드(SInstance 클래스)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +42,7 @@ object.SetCurrentCertificate(SHA)
   
 #### <a name="parameters"></a>매개 변수  
   
-|매개 변수|설명|  
+|매개 변수|Description|  
 |---------------|-----------------|  
 |*SHA*|현재 보안 인증서를 지정하는 문자열 값입니다.|  
   

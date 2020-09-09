@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changedistributor_property
 ms.assetid: 04f503a1-307c-4de0-bac6-e6e97d5b6940
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 284f669f81f0954c0a9676d5f7a4ab8a213eba58
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 62768c7cca029d3424e478cb1b16aa01df1a52c1
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464439"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89539135"
 ---
 # <a name="sp_changedistributor_property-transact-sql"></a>sp_changedistributor_property(Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -41,7 +41,7 @@ sp_changedistributor_property [ [ @property= ] 'property' ]
 ## <a name="arguments"></a>인수  
 `[ @property = ] 'property'` 지정 된 배포자의 속성입니다. *속성* 은 **sysname**이며 다음 값 중 하나일 수 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**heartbeat_interval**|진행률 메시지를 기록하지 않고 에이전트를 실행할 수 있는 최대 시간(분)입니다.|  
 |NULL(기본값)|사용 가능한 모든 *속성* 값이 출력 됩니다.|  
@@ -60,7 +60,7 @@ sp_changedistributor_property [ [ @property= ] 'property' ]
 ## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할의 멤버만 **sp_changedistributor_property**를 실행할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [배포자 및 게시자 속성 보기 및 수정](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
  [Transact-sql&#41;sp_adddistributor &#40;](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md)   
  [Transact-sql&#41;sp_dropdistributor &#40;](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md)   

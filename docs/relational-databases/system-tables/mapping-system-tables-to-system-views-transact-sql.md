@@ -15,14 +15,14 @@ helpviewer_keywords:
 - mapping system tables to system views [SQL Server]
 - system tables [SQL Server], mapping to catalog views
 ms.assetid: a616fce9-b4c1-49da-87a7-9d6f74911d8f
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 84493da61303f1ac383eb009e07198d495a9846d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 0770074106a8d8dcbf0744297f7e6fa84b556420
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88460379"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89538312"
 ---
 # <a name="mapping-system-tables-to-system-views-transact-sql"></a>시스템 테이블을 시스템 뷰로 매핑(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,8 +49,8 @@ ms.locfileid: "88460379"
 |sysopentapes|[sys.dm_io_backup_tapes](../../relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql.md)|동적 관리 뷰|  
 |sysperfinfo|[sys.dm_os_performance_counters](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md)|동적 관리 뷰|  
 |sysprocesses|[sys.dm_exec_connections](../../relational-databases/system-dynamic-management-views/sys-dm-exec-connections-transact-sql.md)<br /><br /> [sys.dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)<br /><br /> [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)|동적 관리 뷰<br /><br /> 동적 관리 뷰<br /><br /> 동적 관리 뷰|  
-|sysremotelogins|[sys. remote_logins](../../relational-databases/system-catalog-views/sys-remote-logins-transact-sql.md)|카탈로그 뷰|  
-|sysservers|[sys. 서버](../../relational-databases/system-catalog-views/sys-servers-transact-sql.md)|카탈로그 뷰|  
+|sysremotelogins|[sys.remote_logins](../../relational-databases/system-catalog-views/sys-remote-logins-transact-sql.md)|카탈로그 뷰|  
+|sysservers|[sys.servers](../../relational-databases/system-catalog-views/sys-servers-transact-sql.md)|카탈로그 뷰|  
   
  다음 표에서는 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]의 모든 데이터베이스에 있는 시스템 테이블 또는 함수를 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]의 해당 시스템 뷰 또는 함수로 매핑합니다.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "88460379"
 |sysreferences|[sys.foreign_keys](../../relational-databases/system-catalog-views/sys-foreign-keys-transact-sql.md)|카탈로그 뷰|  
 |systypes|[sys.types](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)|카탈로그 뷰|  
 |sysusers|[sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)|카탈로그 뷰|  
-|sysfulltextcatalogs|[sys. fulltext_catalogs](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)|카탈로그 뷰|  
+|sysfulltextcatalogs|[sys.fulltext_catalogs](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)|카탈로그 뷰|  
   
 ## <a name="see-also"></a>참고 항목  
  [카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   

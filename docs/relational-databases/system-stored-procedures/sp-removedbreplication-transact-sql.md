@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_removedbreplication
 ms.assetid: cb98d571-d1eb-467b-91f7-a6e091009672
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 14c013da5fed9a0a9477692ce6bdda20b5d921a5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 01fc666444891836011b80e77492b1cdebbefff5
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85751673"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89538659"
 ---
 # <a name="sp_removedbreplication-transact-sql"></a>sp_removedbreplication (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -42,13 +42,13 @@ sp_removedbreplication [ [ @dbname = ] 'dbname' ]
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @dbname = ] 'dbname'`데이터베이스의 이름입니다. *dbname* 은 기본값은 NULL을 가진 **sysname**입니다. NULL인 경우 현재 데이터베이스를 사용합니다.  
+`[ @dbname = ] 'dbname'` 데이터베이스의 이름입니다. *dbname* 은 기본값은 NULL을 가진 **sysname**입니다. NULL인 경우 현재 데이터베이스를 사용합니다.  
   
-`[ @type = ] type`데이터베이스 개체가 제거 되는 복제의 유형입니다. *type* 은 **nvarchar (5)** 이며 다음 값 중 하나일 수 있습니다.  
+`[ @type = ] type` 데이터베이스 개체가 제거 되는 복제의 유형입니다. *type* 은 **nvarchar (5)** 이며 다음 값 중 하나일 수 있습니다.  
   
 |||  
 |-|-|  
-|**tran**|트랜잭션 복제 게시 개체를 제거합니다.|  
+|**트**|트랜잭션 복제 게시 개체를 제거합니다.|  
 |**결합**|병합 복제 게시 개체를 제거합니다.|  
 |**모두** (기본값)|모든 복제 게시 개체를 제거합니다.|  
   

@@ -17,14 +17,14 @@ helpviewer_keywords:
 - sp_dbmmonitorchangealert
 - database mirroring [SQL Server], monitoring
 ms.assetid: 1b29f82b-9cf8-4539-8d5c-9a1024db8a50
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: f4cfeffd28455b08b6ad3959f538f2eff95c6eb0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 889b418cff5add6c2891146af169fb3e97f61be5
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486166"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89539035"
 ---
 # <a name="sp_dbmmonitorchangealert-transact-sql"></a>sp_dbmmonitorchangealert(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -95,7 +95,7 @@ sp_dbmmonitorchangealert database_name
 |1|보내지 않은 가장 오래된 트랜잭션|30분|예|  
 |2|보내지 않은 로그|1만 KB|예|  
 |3|복원되지 않은 로그|1만 KB|예|  
-|4|미러 커밋 오버헤드|1,000밀리초|예|  
+|4|미러 커밋 오버헤드|1,000밀리초|아니요|  
 |5|보존 기간|8시간|예|  
   
 ```  

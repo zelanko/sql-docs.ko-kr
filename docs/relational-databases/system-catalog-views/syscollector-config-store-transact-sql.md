@@ -17,14 +17,14 @@ helpviewer_keywords:
 - data collector view
 - syscollector_config_store view
 ms.assetid: f15f6b05-6808-4b76-b6a8-48dec844cf63
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 339bbba2335512c582251f960224baae15513618
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 4ceeb3ad0d977282c88314a7305099f7c0db0496
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88399789"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89537689"
 ---
 # <a name="syscollector_config_store-transact-sql"></a>syscollector_config_store(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "88399789"
 ## <a name="remarks"></a>설명  
  사용 가능한 속성 목록은 고정되어 있으며 해당 값은 적절한 저장 프로시저를 사용해서만 변경할 수 있습니다. 다음 표에서는 이 뷰를 통해 표시되는 속성에 대해 설명합니다.  
   
-|속성 이름|설명|  
+|속성 이름|Description|  
 |-------------------|-----------------|  
 |CacheDirectory|수집기 유형 패키지가 임시 정보를 저장하는 파일 시스템의 디렉터리 이름입니다.<br /><br /> NULL = 기본 임시 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 디렉터리가 사용됩니다.|  
 |CacheWindow|실패한 데이터 업로드를 위한 캐시 디렉터리의 데이터 보존 정책을 나타냅니다.<br /><br /> -1 = 실패한 모든 업로드의 데이터를 보존합니다.<br /><br /> 0 = 실패한 업로드의 데이터를 보존하지 않습니다.<br /><br /> *n* = n 이전 업로드 실패에서 *데이터를 보존* 합니다. 여기서 *n* >= 1입니다.<br /><br /> 이 값을 변경하려면 sp_syscollector_set_cache_window 저장 프로시저를 사용하십시오.|  
@@ -60,7 +60,7 @@ FROM msdb.dbo.syscollector_config_store;
   
 ## <a name="see-also"></a>참고 항목  
  [데이터 수집기 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
- [Transact-sql&#41;&#40;데이터 수집기 뷰 ](../../relational-databases/system-catalog-views/data-collector-views-transact-sql.md)   
+ [데이터 수집기 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/data-collector-views-transact-sql.md)   
  [데이터 컬렉션](../../relational-databases/data-collection/data-collection.md)   
  [sp_syscollector_enable_collector&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-enable-collector-transact-sql.md)   
  [sp_syscollector_disable_collector&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-disable-collector-transact-sql.md)   

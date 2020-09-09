@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_schedule
 ms.assetid: b2fc4ce1-0a8e-44d2-b206-7dc7b258d8c9
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 516314123b6555f7e079471b88384e586bdc5cba
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 9e6dbddc56d00732495bce71b7c05c79f76adb20
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474206"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89538820"
 ---
 # <a name="sp_help_schedule-transact-sql"></a>sp_help_schedule(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -119,7 +119,7 @@ EXEC dbo.sp_help_schedule
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Transact-sql&#41;sp_add_schedule &#40;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
  [Transact-sql&#41;sp_attach_schedule &#40;](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)   
  [Transact-sql&#41;sp_delete_schedule &#40;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   

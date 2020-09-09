@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_cursor_prepare
 ms.assetid: 6207e110-f4bf-4139-b3ec-b799c9cb3ad7
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 8a2b001c3e08c9d68be113e351bcf0482205e196
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 3418727f21a0132390a1c1334919b2be6dc36965
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489451"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89539034"
 ---
 # <a name="sp_cursorprepare-transact-sql"></a>sp_cursorprepare(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -62,14 +62,14 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
  *options*  
  커서 결과 집합 열의 설명을 반환하는 선택적 매개 변수입니다. *옵션* 에는 다음 **int** 입력 값이 필요 합니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |0x0001|RETURN_METADATA|  
   
  *scrollopt*  
  스크롤 옵션입니다. *scrollopt* 는 다음 **int** 입력 값 중 하나를 필요로 하는 선택적 매개 변수입니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |0x0001|KEYSET|  
 |0x0002|DYNAMIC|  
@@ -91,7 +91,7 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
  *ccopt*  
  동시성 제어 옵션입니다. *ccopt* 는 다음 **int** 입력 값 중 하나를 필요로 하는 선택적 매개 변수입니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |0x0001|READ_ONLY|  
 |0x0002|SCROLL_LOCKS(이전의 LOCKCC)|  
@@ -110,7 +110,7 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
 ## <a name="remarks"></a>설명  
  RPC 상태 매개 변수는 다음 중 하나일 수 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |0|성공|  
 |0x0001|실패|  

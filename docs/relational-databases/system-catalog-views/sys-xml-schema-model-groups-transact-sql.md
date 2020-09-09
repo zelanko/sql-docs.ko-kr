@@ -18,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.xml_schema_model_groups catalog view
 ms.assetid: 566556dc-a8c8-465c-9196-c7e0ae092a8a
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 52ed63e272d03263ea6148f85a8b91ec73ec370e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 683c13fa49e689d9b6fc857f49b581a38119f3f0
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88419907"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89539480"
 ---
 # <a name="sysxml_schema_model_groups-transact-sql"></a>sys.xml_schema_model_groups(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "88419907"
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**\<inherited columns>**||[sys.xml_schema_components](../../relational-databases/system-catalog-views/sys-xml-schema-components-transact-sql.md)에서 열을 상속 합니다.|  
-|**compositor**|**char (1)**|그룹의 복합기 종류로, 다음과 같습니다.<br /><br /> A = XSD \<all> 그룹<br /><br /> C = XSD \<choice> 그룹<br /><br /> S = XSD \<sequence> 그룹|  
+|**compositor**|**char(1)**|그룹의 복합기 종류로, 다음과 같습니다.<br /><br /> A = XSD \<all> 그룹<br /><br /> C = XSD \<choice> 그룹<br /><br /> S = XSD \<sequence> 그룹|  
 |**compositor_desc**|**nvarchar (60)**|그룹의 복합기 종류에 대한 설명으로, 다음과 같습니다.<br /><br /> XSD_ALL_GROUP<br /><br /> XSD_CHOICE_GROUP<br /><br /> XSD_SEQUENCE_GROUP|  
   
 ## <a name="permissions"></a>사용 권한  

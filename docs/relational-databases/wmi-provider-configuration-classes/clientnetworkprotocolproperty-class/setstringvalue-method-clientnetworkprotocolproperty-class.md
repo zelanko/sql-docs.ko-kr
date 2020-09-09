@@ -16,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - SetStringValue method
 ms.assetid: 88d67b22-0eea-48c9-ab73-e0b4907953df
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 81424c3ca4819c04dd70483fcaa691278a6e10da
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 6c74fb2f5aad5551c0c880e04037647b769c299a
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446266"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89537158"
 ---
 # <a name="setstringvalue-method-clientnetworkprotocolproperty-class"></a>SetStringValue 메서드(ClientNetworkProtocolProperty 클래스)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +42,7 @@ object.SetStringValue(StrValue)
   
 #### <a name="parameters"></a>매개 변수  
   
-|매개 변수|설명|  
+|매개 변수|Description|  
 |---------------|-----------------|  
 |*StrValue*|현재 속성의 새 값을 지정하는 문자열 값입니다.|  
   

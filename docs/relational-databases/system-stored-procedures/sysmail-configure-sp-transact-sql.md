@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_configure_sp
 ms.assetid: 73b33c56-2bff-446a-b495-ae198ad74db1
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 28506e30d5f2d253410cca319f22ae620a2c33a0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: b16f0e11cc38abbbaf14abd4b21e7334a578c1cb
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88469152"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89538470"
 ---
 # <a name="sysmail_configure_sp-transact-sql"></a>sysmail_configure_sp(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -68,7 +68,7 @@ sysmail_configure_sp [ [ @parameter_name = ] 'parameter_name' ]
 |*DefaultAttachmentEncoding*|전자 메일 첨부 파일의 기본 인코딩입니다.|MIME|  
 |*MaxFileSize*|첨부 파일의 최대 크기(바이트)입니다.|**100만**|  
 |*ProhibitedExtensions*|전자 메일 메시지에 대한 첨부 파일로 보낼 수 없는 쉼표로 구분된 확장명 목록입니다.|**exe,dll,vbs,js**|  
-|*LoggingLevel*|데이터베이스 메일 로그에 기록할 메시지를 지정합니다. 다음 숫자 값 중 하나입니다.<br /><br /> 1 - 표준 모드입니다. 오류만 기록합니다.<br /><br /> 2 - 확장 모드입니다. 오류, 경고 및 정보 메시지를 기록합니다.<br /><br /> 3 - 세부 정보 표시 모드입니다. 오류, 경고, 정보 메시지, 성공 메시지 및 추가 내부 메시지를 기록합니다. 이 모드는 문제 해결을 위해 사용합니다.|**2**|  
+|*Logginglevel.information*|데이터베이스 메일 로그에 기록할 메시지를 지정합니다. 다음 숫자 값 중 하나입니다.<br /><br /> 1 - 표준 모드입니다. 오류만 기록합니다.<br /><br /> 2 - 확장 모드입니다. 오류, 경고 및 정보 메시지를 기록합니다.<br /><br /> 3 - 세부 정보 표시 모드입니다. 오류, 경고, 정보 메시지, 성공 메시지 및 추가 내부 메시지를 기록합니다. 이 모드는 문제 해결을 위해 사용합니다.|**2**|  
   
  **Sysmail_configure_sp** 저장 프로시저는 **msdb** 데이터베이스에 있으며 **dbo** 스키마가 소유 합니다. 현재 데이터베이스가 **msdb**가 아닌 경우 세 부분으로 된 이름을 사용 하 여 프로시저를 실행 해야 합니다.  
   

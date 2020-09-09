@@ -16,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - SetDefaults method
 ms.assetid: dc3c6a85-0711-4688-bf4f-91168c57af28
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: c454a5b2819a07ecb9152b0b9fbece48434c2fd3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: cd00c04c726885966014cb40d0174e2226a4feb2
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463636"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89537618"
 ---
 # <a name="setdefaults-method-sinstance-class"></a>SetDefaults 메서드(SInstance 클래스)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +42,7 @@ object.SetDefaults(OverwriteAll)
   
 #### <a name="parameters"></a>매개 변수  
   
-|매개 변수|설명|  
+|매개 변수|Description|  
 |---------------|-----------------|  
 |*OverwriteAll*|클라이언트 인스턴스의 기존 값을 덮어쓸지 여부를 지정 하는 부울 값입니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . 기존 데이터를 덮어쓴 경우 **true** 이 고, 기존 데이터를 덮어쓰지 않는 경우 **false** 입니다.|  
   

@@ -16,15 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_helprole
 ms.assetid: b023103f-ccf3-44e2-b418-4be9bdd49f4a
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 36414885089de27fc06dc4029ee57ef341707912
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8b96269437d8dd793c6a1baf0884d8a16160145d
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88469277"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89538725"
 ---
 # <a name="sp_helprole-transact-sql"></a>sp_helprole(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -67,13 +67,13 @@ sp_helprole [ [ @rolename = ] 'role' ]
 EXEC sp_helprole  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;보안 저장 프로시저 ](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>관련 항목  
+ [Security Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [서버 수준 역할](../../relational-databases/security/authentication-access/server-level-roles.md)   
  [데이터베이스 수준 역할](../../relational-databases/security/authentication-access/database-level-roles.md)   
  [Transact-sql&#41;sp_addapprole &#40;](../../relational-databases/system-stored-procedures/sp-addapprole-transact-sql.md)   
- [Transact-sql&#41;sp_addrole &#40;](../../relational-databases/system-stored-procedures/sp-addrole-transact-sql.md)   
- [Transact-sql&#41;sp_droprole &#40;](../../relational-databases/system-stored-procedures/sp-droprole-transact-sql.md)   
+ [sp_addrole&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addrole-transact-sql.md)   
+ [sp_droprole&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droprole-transact-sql.md)   
  [Transact-sql&#41;sp_helprolemember &#40;](../../relational-databases/system-stored-procedures/sp-helprolemember-transact-sql.md)   
  [Transact-sql&#41;sp_helpsrvrolemember &#40;](../../relational-databases/system-stored-procedures/sp-helpsrvrolemember-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

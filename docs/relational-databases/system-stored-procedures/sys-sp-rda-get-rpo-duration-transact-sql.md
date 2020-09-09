@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_rda_get_rpo_duration stored procedure
 ms.assetid: 35882067-3072-47ff-9024-ca453c0f49a7
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 3e50e313e49b955b40497f28b2cb9265cf7717e3
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: b3b52298861da031dc5eab6b3a32135eec9d26cb
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243358"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89538469"
 ---
 # <a name="syssp_rda_get_rpo_duration-transact-sql"></a>sys. sp_rda_get_rpo_duration (Transact-sql)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]

@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_rda_reconcile_columns stored procedure
 ms.assetid: 60d9cc4e-1828-450b-9d88-5b8485800d73
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 939bc5cbe299ce144b8617391fd33d740011b08a
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 1788e373c8bab330182df9338e447946cda87bd3
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245750"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89538448"
 ---
 # <a name="syssp_rda_reconcile_columns-transact-sql"></a>sys. sp_rda_reconcile_columns (Transact-sql)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]

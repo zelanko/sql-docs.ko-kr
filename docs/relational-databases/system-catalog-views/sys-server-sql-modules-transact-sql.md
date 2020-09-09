@@ -18,21 +18,21 @@ dev_langs:
 helpviewer_keywords:
 - sys.server_sql_modules catalog view
 ms.assetid: 9ef9a8b9-c470-4a61-b0c4-ee24ad871d63
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 87af92a9853af2e0817b4c8df051fe906ebce6e1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 7f74b41384c2aa42c26623fa69ef35c74f49eab3
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88376669"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89539585"
 ---
 # <a name="sysserver_sql_modules-transact-sql"></a>sys.server_sql_modules(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   TR 유형의 서버 수준 트리거에 대한 SQL 모듈 집합을 포함합니다. 이 관계를 sys.server_triggers에 조인할 수 있습니다. 튜플(object_id)은 관계의 키입니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|해당 모듈이 정의된 서버 수준 트리거에 대한 FOREIGN KEY 참조입니다.|  
 |**정의**|**nvarchar(max)**|이 모듈을 정의하는 SQL 텍스트입니다.<br /><br /> NULL = 암호화됨|  

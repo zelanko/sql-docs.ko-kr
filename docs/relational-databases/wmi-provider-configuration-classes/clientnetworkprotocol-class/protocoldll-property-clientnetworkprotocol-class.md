@@ -16,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - ProtocolDLL property
 ms.assetid: fe8650d5-7b9d-46f8-bf74-baf1d9d2a06a
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 17bde6ee4793e80a7dc3c3b536ba3337ac5de97c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 6704808520b77867bd1a0b39af5118225398dae2
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446322"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89537294"
 ---
 # <a name="protocoldll-property-clientnetworkprotocol-class"></a>ProtocolDLL 속성(ClientNetworkProtocol 클래스)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +45,7 @@ object.ProtocolDLL [= value]
   
 ## <a name="remarks"></a>설명  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [클라이언트 네트워크 프로토콜 및 네트워크 라이브러리 구성](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

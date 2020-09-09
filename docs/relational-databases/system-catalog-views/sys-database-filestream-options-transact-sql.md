@@ -18,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.database_filestream_options catalog view
 ms.assetid: 3383c607-0bbc-456a-ab37-7230f4cbf0e9
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: e52c737798c6aff82194d74808edb1e37a9f8531
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: c2255471d44962aae91147f7a3e903bfe9a240cd
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486421"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89537389"
 ---
 # <a name="sysdatabase_filestream_options-transact-sql"></a>sys.database_filestream_options(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,14 +35,14 @@ ms.locfileid: "88486421"
  FileTables 기능에 대한 자세한 내용은 [FileTables &#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md)를 참조하세요.  
   
   
-|Column|형식|설명|  
+|Column|형식|Description|  
 |------------|----------|-----------------|  
 |**database_id**|**int**|데이터베이스의 ID입니다. 이 값은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 내에서 고유합니다.|  
 |**directory_name**|**nvarchar(255)**|모든 FileTable 네임스페이스에 대한 데이터베이스 수준 디렉터리입니다.|  
 |**non_transacted_access**|**tinyint**|사용하도록 설정된 FILESTREAM 데이터에 대한 비트랜잭션 액세스 수준입니다. 액세스 수준은 **CREATE database** 또는 **ALTER database** 문의 NON_TRANSACTED_ACCESS 옵션으로 설정 됩니다.<br /><br /> 이 설정에는 다음 값 중 하나를 사용할 수 있습니다.<br /><br /> 0-사용 안 함 이것은 기본값입니다. 이 수준은 **NON_TRANSACTED_ACCESS** 옵션의 값을 **OFF** 로 설정 하 여 설정 합니다.<br /><br /> 1-읽기 전용 액세스입니다. 이 수준은 **NON_TRANSACTED_ACCESS** 옵션에 **READ_ONLY** 값을 제공 하 여 설정 합니다.<br /><br /> 3-모든 권한 이 수준은 **NON_TRANSACTED_ACCESS** 옵션에 **FULL** 값을 제공 하 여 설정 합니다.<br /><br /> 5 - READONLY로 전환 중<br /><br /> 6-OFF로 전환|  
 |**non_transacted_access_desc**|**nvarchar(60)**|Non_transacted_access에서 식별 된 비트랜잭션 액세스 수준에 대 한 설명입니다.<br /><br /> 이 설정에는 다음 값 중 하나를 사용할 수 있습니다.<br /><br /> NONE-기본값입니다.<br /><br /> READ_ONLY<br /><br /> FULL<br /><br /> IN_TRANSITION_TO_READ_ONLY<br /><br /> IN_TRANSITION_TO_OFF|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [FileTable의 필수 구성 요소를 사용하도록 설정](../../relational-databases/blob/enable-the-prerequisites-for-filetable.md)  
   
   

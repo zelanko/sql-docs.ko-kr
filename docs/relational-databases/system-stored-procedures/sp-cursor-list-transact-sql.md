@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_cursor_list
 ms.assetid: 7187cfbe-d4d9-4cfa-a3bb-96a544c7c883
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 7f033c24d2cfd84c26c9008e3f73adf5152715c9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: dca9473813bf8e4324f1b7de6fb1a30c38a21148
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481384"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89536656"
 ---
 # <a name="sp_cursor_list-transact-sql"></a>sp_cursor_list(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,14 +48,14 @@ sp_cursor_list [ @cursor_return = ] cursor_variable_name OUTPUT
  [ @cursor_scope =] *cursor_scope*  
  보고할 커서 수준을 지정합니다. *cursor_scope* 은 **int**이며 기본값은 없고 다음 값 중 하나일 수 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |1|모든 로컬 커서를 보고합니다.|  
 |2|모든 전역 커서를 보고합니다.|  
 |3|로컬과 전역 커서 모두를 보고합니다.|  
   
 ## <a name="return-code-values"></a>반환 코드 값  
- None  
+ 없음  
   
 ## <a name="cursors-returned"></a>반환되는 커서  
  sp_cursor_list는 결과 집합이 아니라 [!INCLUDE[tsql](../../includes/tsql-md.md)] 커서 출력 매개 변수를 반환합니다. 따라서 [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리, 저장 프로시저 및 트리거가 한 번에 하나의 출력 행을 처리할 수 있습니다. 이는 데이터베이스 API 함수에서 직접 프로시저를 호출할 수 없음을 의미하기도 합니다. cursor 출력 매개 변수는 반드시 프로그램 변수에 바인딩되어야 하지만 데이터베이스 API는 cursor 매개 변수 또는 변수의 바인딩을 지원하지 않기 때문입니다.  

@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_replcounters
 ms.assetid: fe585b1f-edda-421f-81d6-8a03a3a535d2
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: c4646b4062a0557a4c0b8a3086eef10f3e1a38a2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 8a2078faa410b41e381c5c1a6e913d2c2329ee08
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485754"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89538557"
 ---
 # <a name="sp_replcounters-transact-sql"></a>sp_replcounters(Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -42,7 +42,7 @@ sp_replcounters
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**Database**|**sysname**|데이터베이스의 이름입니다.|  
+|**데이터베이스**|**sysname**|데이터베이스의 이름입니다.|  
 |**Replicated transactions**|**int**|배포 데이터베이스에 전달되기 위해 대기하고 있는 로그의 트랜잭션 수입니다.|  
 |**Replication rate trans/sec**|**float**|배포 데이터베이스로 전달된 초 당 평균 트랜잭션 수입니다.|  
 |**복제 대기 시간**|**float**|트랜잭션이 배포되기 전에 로그 내에 머무는 평균 시간을 초 단위로 표시한 것입니다.|  

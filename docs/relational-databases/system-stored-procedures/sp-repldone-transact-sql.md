@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_repldone
 ms.assetid: 045d3cd1-712b-44b7-a56a-c9438d4077b9
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: e627296cecad35b21c84b928f4474f6302e9214d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 7a8e32127986fb67a28abfa2433caefc044ed1b2
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725738"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89538598"
 ---
 # <a name="sp_repldone-transact-sql"></a>sp_repldone(Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -44,15 +44,15 @@ sp_repldone [ @xactid= ] xactid
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @xactid = ] xactid`서버의 마지막 분산 트랜잭션에 대 한 첫 번째 레코드의 LSN (로그 시퀀스 번호)입니다. *xactid* 는 **binary (10)** 이며 기본값은 없습니다.  
+`[ @xactid = ] xactid` 서버의 마지막 분산 트랜잭션에 대 한 첫 번째 레코드의 LSN (로그 시퀀스 번호)입니다. *xactid* 는 **binary (10)** 이며 기본값은 없습니다.  
   
-`[ @xact_seqno = ] xact_seqno`서버의 마지막 분산 트랜잭션에 대 한 마지막 레코드의 LSN입니다. *xact_seqno* 는 **binary (10)** 이며 기본값은 없습니다.  
+`[ @xact_seqno = ] xact_seqno` 서버의 마지막 분산 트랜잭션에 대 한 마지막 레코드의 LSN입니다. *xact_seqno* 는 **binary (10)** 이며 기본값은 없습니다.  
   
-`[ @numtrans = ] numtrans`분산 된 트랜잭션의 수입니다. *numtrans* 은 **int**이며 기본값은 없습니다.  
+`[ @numtrans = ] numtrans` 분산 된 트랜잭션의 수입니다. *numtrans* 은 **int**이며 기본값은 없습니다.  
   
-`[ @time = ] time`트랜잭션의 마지막 일괄 처리를 배포 하는 데 필요한 시간 (밀리초)입니다 (제공 된 경우). *시간은* **int**이며 기본값은 없습니다.  
+`[ @time = ] time` 트랜잭션의 마지막 일괄 처리를 배포 하는 데 필요한 시간 (밀리초)입니다 (제공 된 경우). *시간은* **int**이며 기본값은 없습니다.  
   
-`[ @reset = ] reset`다시 설정 상태입니다. *reset* 은 **int**이며 기본값은 없습니다. **1**인 경우 로그의 모든 복제 된 트랜잭션이 분산 된 것으로 표시 됩니다. **0**인 경우 트랜잭션 로그는 첫 번째 복제 된 트랜잭션으로 다시 설정 되 고 복제 된 트랜잭션은 분산 된 것으로 표시 되지 않습니다. *reset* 은 *xactid* 및 *xact_seqno* 가 모두 NULL 인 경우에만 유효 합니다.  
+`[ @reset = ] reset` 다시 설정 상태입니다. *reset* 은 **int**이며 기본값은 없습니다. **1**인 경우 로그의 모든 복제 된 트랜잭션이 분산 된 것으로 표시 됩니다. **0**인 경우 트랜잭션 로그는 첫 번째 복제 된 트랜잭션으로 다시 설정 되 고 복제 된 트랜잭션은 분산 된 것으로 표시 되지 않습니다. *reset* 은 *xactid* 및 *xact_seqno* 가 모두 NULL 인 경우에만 유효 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -80,7 +80,7 @@ EXEC sp_repldone @xactid = NULL, @xact_seqno = NULL, @numtrans = 0, @time = 0, @
 >  이 프로시저는 트랜잭션 보류 중인 복제가 있을 때 트랜잭션 로그를 자를 수 있도록 하며 비상 시에 사용합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;sp_replcmds &#40;](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)   
+ [sp_replcmds&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)   
  [Transact-sql&#41;sp_replflush &#40;](../../relational-databases/system-stored-procedures/sp-replflush-transact-sql.md)   
  [Transact-sql&#41;sp_repltrans &#40;](../../relational-databases/system-stored-procedures/sp-repltrans-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

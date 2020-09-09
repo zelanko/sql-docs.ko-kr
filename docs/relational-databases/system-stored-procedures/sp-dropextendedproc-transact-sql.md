@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_dropextendedproc
 ms.assetid: dd93af2c-1b7d-4e39-af23-2d21d270a381
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 0bf9c7d760b059c5608d4af1c13a7758aaa428c3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 02d4287b2825401acd0eca532b3fad100fa32639
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447233"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89538973"
 ---
 # <a name="sp_dropextendedproc-transact-sql"></a>sp_dropextendedproc(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "88447233"
   확장 저장 프로시저를 삭제합니다.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 대신 [CLR 통합](../../relational-databases/clr-integration/common-language-runtime-integration-overview.md) 을 사용 하세요.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 대신 [CLR 통합](../../relational-databases/clr-integration/common-language-runtime-integration-overview.md) 을 사용하세요.  
   
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  

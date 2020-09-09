@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_volume_stats dynamic management function
 ms.assetid: fa1c58ad-8487-42ad-956c-983f2229025f
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 75e6753328857be7f677a253fde790dd51defc51
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 085659b4c6754bc2de68124dcb7d5c6fbbcdeb16
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474815"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89539254"
 ---
 # <a name="sysdm_os_volume_stats-transact-sql"></a>sys.dm_os_volume_stats(Transact-SQL)
 [!INCLUDE[tsql-appliesto-2008R2SP1-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-2008R2sp1-xxxx-xxxx-xxx-md.md)]

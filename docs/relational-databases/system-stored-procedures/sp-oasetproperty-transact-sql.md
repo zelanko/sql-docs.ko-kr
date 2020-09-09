@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_OASetProperty
 ms.assetid: 0fe7d554-6b67-4d55-9d3e-4096802c47f8
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 4b15d0c0e7d28973ef0803041b421c30517f0665
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: e2865189ad38f31382257a51117c62cd5d52454c
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88473927"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89538707"
 ---
 # <a name="sp_oasetproperty-transact-sql"></a>sp_OASetProperty(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
