@@ -9,14 +9,14 @@ ms.reviewer: ''
 ms.technology: wmi
 ms.topic: reference
 ms.assetid: 2b83ae4a-c0d4-414c-b6e5-a41ec7c13159
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 63937cb2d7a3aaf3994712aa493097597cd26c53
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f74e8efc28591bb951d52aa7e242ee259810ff8f
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446466"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89540047"
 ---
 # <a name="sqlerrorlogfile-class"></a>SqlErrorLogFile 클래스
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +40,7 @@ class SQLErrorLogFile
 ## <a name="properties"></a>속성  
  SQLErrorLogFile 클래스는 다음 속성을 정의 합니다.  
   
-| 속성 | 설명 |
+| 속성 | Description |
 | -------- | ----------- |
 |ArchiveNumber|데이터 형식: **uint32**<br /><br /> 액세스 형식: 읽기 전용<br /><br /> <br /><br /> 로그 파일에 대한 보관 파일 번호입니다.|  
 |InstanceName|데이터 형식: **문자열**<br /><br /> 액세스 형식: 읽기 전용<br /><br /> 한정자: Key<br /><br /> <br /><br /> 로그 파일이 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이름입니다.|  

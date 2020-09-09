@@ -16,15 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_spaceused
 ms.assetid: c6253b48-29f5-4371-bfcd-3ef404060621
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4b07a4f8ece975662127797f6f25ecd19ecc759c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5eb32803d759ff89a7c41addde56d9fa5dd76644
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88473812"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89540498"
 ---
 # <a name="sp_spaceused-transact-sql"></a>sp_spaceused(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -61,7 +61,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
   
  *Mode* 인수는 다음과 같은 값을 가질 수 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |ALL|로컬 부분과 원격 부분을 모두 포함 하는 개체 또는 데이터베이스의 저장소 통계를 반환 합니다.|  
 |LOCAL_ONLY|개체 또는 데이터베이스의 로컬 부분에 대 한 저장소 통계만 반환 합니다. 스트레치를 사용 하지 않는 개체 또는 데이터베이스는 when = ALL과 동일한 통계를 반환 합니다 @mode .|  
@@ -71,7 +71,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
   
 `[ @oneresultset = ] oneresultset` 단일 결과 집합을 반환할지 여부를 나타냅니다. *Oneresultset* 인수에는 다음 값을 사용할 수 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |0|* \@ Objname* 이 null 이거나 지정 되지 않은 경우 두 개의 결과 집합이 반환 됩니다. 두 개의 결과 집합이 기본 동작입니다.|  
 |1|* \@ Objname* = null 또는를 지정 하지 않으면 단일 결과 집합이 반환 됩니다.|  
@@ -119,7 +119,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**name**|**nvarchar(128)**|공간 사용 정보가 필요한 개체의 이름입니다.<br /><br /> 개체의 스키마 이름은 반환되지 않습니다. 스키마 이름이 필요한 경우 [dm_db_partition_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md) 또는 [dm_db_index_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md) 동적 관리 뷰를 사용 하 여 해당 하는 크기 정보를 가져옵니다.|  
-|**열**|**char (20)**|테이블에 있는 행 수입니다. 지정된 개체가 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 큐일 경우 이 열은 큐에 있는 메시지 수를 나타냅니다.|  
+|**rows**|**char (20)**|테이블에 있는 행 수입니다. 지정된 개체가 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 큐일 경우 이 열은 큐에 있는 메시지 수를 나타냅니다.|  
 |**쓰이는**|**varchar (18)**|*Objname*에 대해 예약 된 공간의 전체 크기입니다.|  
 |**data**|**varchar (18)**|*Objname*의 데이터에 사용 되는 총 공간입니다.|  
 |**index_size**|**varchar (18)**|*Objname*의 인덱스에서 사용 하는 총 공간입니다.|  
@@ -253,8 +253,8 @@ GO
  [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
  [sys.indexes&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
  [sys.index_columns&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)   
- [sys. 개체 &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
- [&#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   
+ [sys.objects&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
+ [sys.partitions&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

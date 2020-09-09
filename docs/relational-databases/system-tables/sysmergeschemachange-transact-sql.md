@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sysmergeschemachange system table
 ms.assetid: ae9ce16e-6ee9-4c7c-8210-a9bf2c7efdf0
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: d5453a7b8802177e338a008af6df1a7ce2779374
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a53651fb604e9e0359857d8d7125faa47866f557
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88473132"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89540185"
 ---
 # <a name="sysmergeschemachange-transact-sql"></a>sysmergeschemachange(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "88473132"
 |**schemastatus**|**tinyint**|아티클에 대해 스키마 변경 내용이 보류 중인지 여부를 나타내며 값은 다음 중 하나입니다.<br /><br /> **0** = 비활성<br /><br /> **1** = 활성<br /><br /> 스키마 변경이 보류 중인 경우이 값은 **1**로 설정 됩니다.|  
 |**schemasubtype**|**int**|스키마 변경의 하위 유형입니다.<br /><br /> **1** = addcolumn<br /><br /> **2** = dropcolumn<br /><br /> **3** = ALTERCOLUMN<br /><br /> **4** = addprimarykey<br /><br /> **5** = addunique<br /><br /> **6** = addreference<br /><br /> **7** = dropconstraint<br /><br /> **8** = adddefault<br /><br /> **9** = addcheck<br /><br /> **10** = DISABLETRIGGER<br /><br /> **11** = ENABLETRIGGER<br /><br /> **12** = DISABLETRIGGER<br /><br /> **13** = ENABLETRIGGER<br /><br /> **14** = ENABLECONSTRAINT<br /><br /> **15** = DISABLECONSTRAINT<br /><br /> **16** = ENABLECONSTRAINT<br /><br /> **17** = DISABLECONSTRAINT|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Transact-sql&#41;&#40;복제 테이블 ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [복제 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

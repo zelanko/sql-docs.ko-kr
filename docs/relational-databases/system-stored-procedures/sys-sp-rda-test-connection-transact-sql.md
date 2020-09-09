@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_rda_test_connection stored procedure
 ms.assetid: e2ba050c-d7e3-4f33-8281-c9b525b4edb4
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 8a49ec06172f7e28828566383137ed2d165c1e89
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 031e3abe622a4a15fa9656e65bce80b5eaf27365
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246492"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89540409"
 ---
 # <a name="syssp_rda_test_connection-transact-sql"></a>sys. sp_rda_test_connection (Transact-sql)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -43,23 +43,23 @@ EXECUTE sys.sp_rda_test_connection
 ```  
   
 ## <a name="arguments"></a>인수  
- @database_name= N '*db_name*'  
- 스트레치 사용 SQL Server 데이터베이스의 이름입니다. 이 매개 변수는 선택 사항입니다.  
+ @database_name = N '*db_name*'  
+ 스트레치 사용 SQL Server 데이터베이스의 이름입니다. 이 매개 변수는 선택적 요소입니다.  
   
- @server_address= N '*azure_server_fully_qualified_address*'  
+ @server_address = N '*azure_server_fully_qualified_address*'  
  Azure 서버의 정규화 된 주소입니다.  
   
 -   ** \@ Database_name**에 대 한 값을 제공 하지만 지정 된 데이터베이스가 스트레치를 사용 하도록 설정 되어 있지 않은 경우에는 ** \@ server_address**에 대 한 값을 제공 해야 합니다.  
   
 -   ** \@ Database_name**에 대 한 값을 제공 하 고 지정 된 데이터베이스가 스트레치를 사용 하도록 설정 된 경우에는 ** \@ server_address**에 대 한 값을 제공할 필요가 없습니다. ** \@ Server_address**에 대 한 값을 제공 하는 경우 저장 프로시저는이를 무시 하 고 스트레치 사용 데이터베이스에 이미 연결 되어 있는 기존 Azure 서버를 사용 합니다.  
   
- @azure_username= N '*azure_username*  
+ @azure_username = N '*azure_username*  
  원격 Azure 서버에 대 한 사용자 이름입니다.  
   
- @azure_password= N '*azure_password*'  
+ @azure_password = N '*azure_password*'  
  원격 Azure 서버에 대 한 암호입니다.  
   
- @credential_name= N '*credential_name*'  
+ @credential_name = N '*credential_name*'  
  사용자 이름 및 암호를 제공 하는 대신 스트레치 사용 데이터베이스에 저장 된 자격 증명의 이름을 제공할 수 있습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  

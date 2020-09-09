@@ -19,14 +19,14 @@ helpviewer_keywords:
 - sys.sp_cdc_generate_wrapper_function
 - sp_cdc_generate_wrapper_function
 ms.assetid: 85bc086d-8a4e-4949-a23b-bf53044b925c
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 7f54e99cd49c487dba0f008661da8a01d4efb837
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 069c0cb5eab377d0c2cd4bc92b68d7071f56681a
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88473442"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89540477"
 ---
 # <a name="syssp_cdc_generate_wrapper_function-transact-sql"></a>sys.sp_cdc_generate_wrapper_function(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -68,7 +68,7 @@ sys.sp_cdc_generate_wrapper_function
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|열 유형|설명|  
+|열 이름|열 유형|Description|  
 |-----------------|-----------------|-----------------|  
 |**function_name**|**nvarchar (145)**|생성된 함수의 이름입니다.|  
 |**create_script**|**nvarchar(max)**|캡처 인스턴스 래퍼 함수를 만드는 스크립트입니다.|  
