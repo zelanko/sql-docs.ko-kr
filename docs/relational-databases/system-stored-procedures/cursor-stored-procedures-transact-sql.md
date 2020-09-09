@@ -15,14 +15,14 @@ helpviewer_keywords:
 - system stored procedures [SQL Server], cursors
 - server cursors [SQL Server]
 ms.assetid: a4b6955b-9cae-40fb-99a1-2931e17a8e74
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 330f57358155b823dd15636f2d87038486ebfe14
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ebc70713f5a1f8741a22abae09960a5afe7d0111
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464725"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89550092"
 ---
 # <a name="cursor-stored-procedures-transact-sql"></a>커서 저장 프로시저(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -60,7 +60,7 @@ ms.locfileid: "88464725"
     :::column-end:::
 :::row-end:::
 
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changearticle
 ms.assetid: 24c33ca5-f03a-4417-a267-131ca5ba6bb5
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 46afab7da64374922f20e5736c2a3d31217056b5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 2eb11859c0d0e4552324b0a3d7d5e005f9bd89b7
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464486"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89548244"
 ---
 # <a name="sp_changearticle-transact-sql"></a>sp_changearticle(Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -54,7 +54,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
   
  다음 표에서는 아티클의 속성 및 해당 속성의 값을 설명합니다.  
   
-|속성|값|설명|  
+|속성|값|Description|  
 |--------------|------------|-----------------|  
 |**creation_script**||대상 테이블을 만드는 데 사용하는 아티클 스키마 스크립트의 경로 및 이름입니다. 기본값은 NULL입니다.|  
 |**del_cmd**||실행할 DELETE 문입니다. 그렇지 않은 경우에는 로그에서 만들어집니다.|  
@@ -62,14 +62,14 @@ sp_changearticle [ [@publication= ] 'publication' ]
 |**dest_object**||이전 버전과의 호환성을 위해 제공됩니다. **Dest_table**를 사용 합니다.|  
 |**dest_table**||새 대상 테이블입니다.|  
 |**destination_owner**||대상 개체 소유자의 이름입니다.|  
-|**필터가**||테이블을 필터링(행 필터링)하는 데 사용할 새 저장 프로시저입니다. 기본값은 NULL입니다. 피어 투 피어 복제 내의 게시에 대해서는 변경할 수 없습니다.|  
+|**filter**||테이블을 필터링(행 필터링)하는 데 사용할 새 저장 프로시저입니다. 기본값은 NULL입니다. 피어 투 피어 복제 내의 게시에 대해서는 변경할 수 없습니다.|  
 |**fire_triggers_on_snapshot**|**true**|초기 스냅샷을 적용할 때 복제된 사용자 트리거를 실행합니다.<br /><br /> 참고: 복제할 트리거의 경우 *schema_option* 의 비트 마스크 값에 **0x100**값이 포함 되어야 합니다.|  
 ||**false**|초기 스냅샷을 적용할 때 복제된 사용자 트리거를 실행하지 않습니다.|  
 |**identity_range**||구독자에 할당된 ID 범위의 크기를 제어합니다. 피어 투 피어 복제의 경우에는 지원되지 않습니다.|  
 |**ins_cmd**||실행할 INSERT 문입니다. 그렇지 않은 경우에는 로그에서 만들어집니다.|  
 |**pre_creation_cmd**||동기화를 적용하기 전에 대상 테이블을 제거, 삭제 또는 자를 수 있는 사전 작성 명령입니다.|  
 ||**없음**|명령을 사용하지 않습니다.|  
-||**drop**|대상 테이블을 삭제합니다.|  
+||**그림자**|대상 테이블을 삭제합니다.|  
 ||**delete**|대상 테이블을 삭제합니다.|  
 ||**잘라내야**|대상 테이블을 자릅니다.|  
 |**pub_identity_range**||구독자에 할당된 ID 범위의 크기를 제어합니다. 피어 투 피어 복제의 경우에는 지원되지 않습니다.|  
@@ -79,7 +79,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ||**제외한**|정의된 경우 아티클에 대한 변경 내용을 전파하는 저장 프로시저를 생성합니다.|  
 ||**0x04**|IDENTITY 속성을 사용하여 ID 열이 스크립팅됩니다.|  
 ||**0x08**|**타임 스탬프** 열을 복제 합니다. 설정 하지 않으면 **timestamp** 열이 **binary**로 복제 됩니다.|  
-||**10**|해당 클러스터형 인덱스를 생성합니다.|  
+||**0x10**|해당 클러스터형 인덱스를 생성합니다.|  
 ||**0x20**|사용자 정의 데이터 형식(UDT)을 구독자에서의 기본 데이터 형식으로 변환합니다. UDT 열에 CHECK 또는 DEFAULT 제약 조건이 있거나 UDT 열이 기본 키의 일부이거나 계산 열이 UDT 열을 참조하는 경우 이 옵션을 사용할 수 없습니다. Oracle 게시자에 대해서는 지원되지 않습니다.|  
 ||**0x40**|해당 비클러스터형 인덱스를 생성합니다.|  
 ||**0x80**|기본 키에 대해 선언된 참조 무결성을 포함합니다.|  
@@ -195,7 +195,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
   
 -   **destination_owner**  
   
--   **필터가**  
+-   **filter**  
   
 -   **ins_cmd**  
   
@@ -236,12 +236,12 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할 또는 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_changearticle**을 실행할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [아티클 속성 보기 및 수정](../../relational-databases/replication/publish/view-and-modify-article-properties.md)   
  [게시 및 아티클 속성 변경](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
  [Transact-sql&#41;sp_addarticle &#40;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
- [Transact-sql&#41;sp_articlecolumn &#40;](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)   
- [Transact-sql&#41;sp_droparticle &#40;](../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)   
+ [sp_articlecolumn&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)   
+ [sp_droparticle&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)   
  [sp_helparticle&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)   
  [Transact-sql&#41;sp_helparticlecolumns &#40;](../../relational-databases/system-stored-procedures/sp-helparticlecolumns-transact-sql.md)  
   

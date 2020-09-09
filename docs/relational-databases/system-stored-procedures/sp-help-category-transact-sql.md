@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_category
 ms.assetid: 8cad1dcc-b43e-43bd-bea0-cb0055c84169
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 0db25b095536c06e03c87b3bc21dacc5f8c7d0f9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: d500bad167bda9085d4caf40bdaa9e442cb26efb
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481286"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89549715"
 ---
 # <a name="sp_help_category-transact-sql"></a>sp_help_category(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +45,7 @@ sp_help_category [ [ @class = ] 'class' ]
 ## <a name="arguments"></a>인수  
 `[ @class = ] 'class'` 정보를 요청 하는 클래스입니다. *클래스* 는 **varchar (8)** 이며 기본값은 **JOB**입니다. *클래스* 는 다음 값 중 하나일 수 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**직함**|작업 범주에 관한 정보를 제공합니다.|  
 |**오류**|경고 범주에 관한 정보를 제공합니다.|  
@@ -53,7 +53,7 @@ sp_help_category [ [ @class = ] 'class' ]
   
 `[ @type = ] 'type'` 정보가 요청 되는 범주의 유형입니다. *type* 은 **varchar (12)** 이며 기본값은 NULL이 고 다음 값 중 하나일 수 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**LOCAL**|로컬 작업 범주입니다.|  
 |**MULTI -SERVER**|다중 서버 작업 범주입니다.|  

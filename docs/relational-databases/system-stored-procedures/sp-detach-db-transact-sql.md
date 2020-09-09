@@ -17,14 +17,14 @@ helpviewer_keywords:
 - sp_detach_db
 - detaching databases [SQL Server]
 ms.assetid: abcb1407-ff78-4c76-b02e-509c86574462
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 66f3e4543e3090d3a2bb0fee7179abaf2e017503
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: b01c5eb34ca97c7682847cbf1cc6d87843d517b0
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474305"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89548150"
 ---
 # <a name="sp_detach_db-transact-sql"></a>sp_detach_db(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -69,7 +69,7 @@ sp_detach_db [ @dbname= ] 'database_name'
 > [!NOTE]  
 >  모든 로그인 계정의 기본 데이터베이스를 보는 방법에 대 한 자세한 내용은 [sp_helplogins &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helplogins-transact-sql.md)을 참조 하십시오. 필요한 권한이 있는 경우 [ALTER login](../../t-sql/statements/alter-login-transact-sql.md) 을 사용 하 여 새 기본 데이터베이스를 로그인에 할당할 수 있습니다.  
   
-## <a name="restrictions"></a>제한  
+## <a name="restrictions"></a>제한 사항  
  다음 중 하나라도 해당하는 경우 데이터베이스를 분리할 수 없습니다.  
   
 -   데이터베이스가 현재 사용되고 있는 경우. 자세한 내용은 이 항목의 뒷부분에 나오는 "배타적 액세스 권한 얻기"를 참조하십시오.  

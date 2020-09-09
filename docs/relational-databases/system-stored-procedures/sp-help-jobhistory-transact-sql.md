@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_jobhistory
 ms.assetid: a944d44e-411b-4735-8ce4-73888d4262d7
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: bf0766388b50fabfe3a0571b5cf4e86ab7e15520
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: d805cfb7f6cf682e07e703e6854e25737a82b9cc
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464287"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89547997"
 ---
 # <a name="sp_help_jobhistory-transact-sql"></a>sp_help_jobhistory(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -76,14 +76,14 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
   
 `[ @run_status = ] run_status` 작업의 실행 상태입니다. *run_status* 은 **int**이며 기본값은 NULL이 고 다음 값 중 하나일 수 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
-|**0**|실패|  
+|**0**|Failed|  
 |**1**|성공|  
 |**2**|다시 시도(단계에만 적용됨)|  
 |**3**|취소됨|  
 |**4**|메시지 처리 중|  
-|**5**|알 수 없음|  
+|**5**|Unknown|  
   
 `[ @minimum_retries = ] minimum_retries` 작업 실행을 다시 시도해 야 하는 최소 횟수입니다. *minimum_retries* 은 **int**이며 기본값은 NULL입니다.  
   

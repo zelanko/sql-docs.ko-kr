@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_proxy
 ms.assetid: a2fce164-2b64-40c2-8f35-6eeb7844abf1
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: ab6a1a976dd70e991b36f51429a96d0be425b152
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f0125bee2811495eefc015e6be65d30b398edeaf
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481188"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89549696"
 ---
 # <a name="sp_help_proxy-transact-sql"></a>sp_help_proxy(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -52,13 +52,13 @@ sp_help_proxy
   
  다음 표에서는 각 하위 시스템에 대한 값을 나열합니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |ActiveScripting|ActiveX 스크립트|  
 |CmdExec|운영 체제(CmdExec)|  
 |스냅샷|Replication Snapshot Agent|  
 |LogReader|복제 로그 판독기 에이전트|  
-|배포|복제 배포 에이전트|  
+|분포|복제 배포 에이전트|  
 |병합|Replication Merge Agent|  
 |QueueReader|복제 큐 판독기 에이전트|  
 |ANALYSISQUERY|Analysis Services 명령|  

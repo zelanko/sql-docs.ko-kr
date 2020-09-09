@@ -18,21 +18,21 @@ dev_langs:
 helpviewer_keywords:
 - sys.endpoints catalog view
 ms.assetid: e6dafa4e-e47e-43ec-acfc-88c0af53c1a1
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 58199515a947ccc741314e962e457c14c7ca61f4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 73555ee11e3f03c8478ca170039b7b367036fc4f
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88377819"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89548762"
 ---
 # <a name="sysendpoints-transact-sql"></a>sys.endpoints(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   시스템에서 만든 각 엔드포인트에 대해 한 행을 포함합니다. SYSTEM 엔드포인트는 항상 하나만 있습니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|엔드포인트의 이름입니다. 서버 내에서 고유합니다. Null을 허용하지 않습니다.|  
 |**endpoint_id**|**int**|엔드포인트의 ID입니다. 서버 내에서 고유합니다. ID가 65536보다 작은 엔드포인트는 시스템 엔드포인트입니다. Null을 허용하지 않습니다.|  

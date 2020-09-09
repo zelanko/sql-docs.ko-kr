@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_indexes
 ms.assetid: 25469e72-9d95-463f-912a-193471c8f5e2
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 6129240ab59b3629704a4d67fb80b4306d6bb621
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 133a7fb36ff65444853c1bdeb44fdefabe4aab4f
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446973"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89547902"
 ---
 # <a name="sp_indexes-transact-sql"></a>sp_indexes(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -63,7 +63,7 @@ sp_indexes [ @table_server = ] 'table_server'
  [ @is_unique =] '*is_unique*'  
  정보가 반환될 인덱스의 유형입니다. *is_unique* 은 **bit**이며 기본값은 NULL이 고 다음 값 중 하나일 수 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |1|고유 인덱스에 관한 정보를 반환합니다.|  
 |0|고유하지 않은 인덱스에 관한 정보를 반환합니다.|  
