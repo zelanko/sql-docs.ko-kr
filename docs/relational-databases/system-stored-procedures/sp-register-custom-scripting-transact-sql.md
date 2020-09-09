@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_register_custom_scripting
 ms.assetid: a8159282-de3b-4b9e-bdc9-3d3fce485c7f
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 35e70da9de3239fa7f147acf8ffe5a6ecc724606
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 4f73353cc5d2e0e9be02be5a0e6dc59eaf2f909f
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446869"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89547511"
 ---
 # <a name="sp_register_custom_scripting-transact-sql"></a>sp_register_custom_scripting(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +43,7 @@ sp_register_custom_scripting [ @type  = ] 'type'
 ## <a name="arguments"></a>인수  
 `[ @type = ] 'type'` 등록 중인 사용자 지정 저장 프로시저 또는 스크립트의 유형입니다. *type* 은 **varchar (16)** 이며 기본값은 없고 다음 값 중 하나일 수 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**insert**|INSERT 문이 복제될 때 실행되는 등록된 사용자 지정 저장 프로시저입니다.|  
 |**update**|UPDATE 문이 복제될 때 실행되는 등록된 사용자 지정 저장 프로시저입니다.|  

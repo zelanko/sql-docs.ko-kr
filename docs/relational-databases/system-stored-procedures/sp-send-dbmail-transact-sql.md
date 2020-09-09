@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_send_dbmail
 ms.assetid: f1d7a795-a3fd-4043-ac4b-c781e76dab47
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 95b9b18b6f36ebbd8d43f38a2bc8fe28d8f3288b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: d2e7f1d11052b422ef8eb387349fbc8089a49eb2
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446783"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89547455"
 ---
 # <a name="sp_send_dbmail-transact-sql"></a>sp_send_dbmail(Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -94,7 +94,7 @@ sp_send_dbmail [ [ @profile_name = ] 'profile_name' ]
   
 -   보통  
   
--   높음  
+-   높은  
   
  기본값은 Normal입니다.  
   
@@ -246,7 +246,7 @@ EXEC msdb.dbo.sp_send_dbmail @recipients='yourfriend@Adventure-Works.com',
     @body_format = 'HTML' ;  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터베이스 메일](../../relational-databases/database-mail/database-mail.md)   
  [데이터베이스 메일 구성 개체](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
  [Transact-sql&#41;&#40;저장 프로시저 데이터베이스 메일 ](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)   

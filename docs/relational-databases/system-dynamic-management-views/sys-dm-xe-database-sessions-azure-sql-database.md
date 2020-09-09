@@ -7,15 +7,15 @@ ms.service: sql-database
 ms.reviewer: ''
 ms.topic: language-reference
 ms.assetid: 33ea5179-16bb-4abd-96cc-9bc696e80987
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: d49c252a60cdf08c7ac55c287333de9805d5ff26
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4af2c0fafeae67291043d990c1bbaff175de9f5a
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88322719"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546397"
 ---
 # <a name="sysdm_xe_database_sessions-azure-sql-database"></a>sys.dm_xe_database_sessions(Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "88322719"
 ### <a name="relationship-cardinalities"></a>관계 카디널리티  
 2015-07-13의 경우 dm_xe_objects ' Xevent '는 이름에 ' _database '이 포함 되지 않은 이러한 Dmv Dmv 중 하나입니다. 다음 표의 오른쪽 열에는 오타가 나 오류가 없습니다. Microsoft SQL Server 및 Azure SQL Database에서 이름이 동일 합니다.  
   
-|보낸 사람|대상|관계|  
+|시작|대상|관계|  
 |--------|------|----------------|  
 |dm_xe_database_session_events. event_session_address|dm_xe_database_sessions. 주소|다 대 일|  
 |dm_xe_database_session_events. event_package_guid, dm_xe_database_session_events event_name|sys.dm_xe_objects.name, sys.dm_xe_objects.package_guid|다 대 일|  

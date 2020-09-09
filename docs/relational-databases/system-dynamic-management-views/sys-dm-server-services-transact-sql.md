@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_server_services dynamic management view
 ms.assetid: 3f0defd0-478d-4e7f-96be-8795c9de4e3f
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: d281809133228d4af21c92ed06544a6143509e12
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: c1b013b97e15fafbc35c1f2120892d9382ea1bc2
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454807"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546480"
 ---
 # <a name="sysdm_server_services-transact-sql"></a>sys.dm_server_services(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

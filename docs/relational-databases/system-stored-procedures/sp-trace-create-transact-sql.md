@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_trace_create
 ms.assetid: f3a43597-4c5a-4520-bcab-becdbbf81d2e
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 8818beb7c8ec4a0ff688f43fe6c3fe3794a573be
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 47e16f40b7cdd9ea9c65d3262487a7a68c8cb6ff
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485604"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89547336"
 ---
 # <a name="sp_trace_create-transact-sql"></a>sp_trace_create(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,7 +54,7 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
   
  다음 표에서는 옵션, 설명 및 해당 값을 나열합니다.  
   
-|옵션 이름|옵션 값|설명|  
+|옵션 이름|옵션 값|Description|  
 |-----------------|------------------|-----------------|  
 |TRACE_FILE_ROLLOVER|**2**|*Max_file_size* 에 도달 하면 현재 추적 파일이 닫히고 새 파일이 생성 되도록 지정 합니다. 모든 새 기록은 새 파일에 기록합니다. 새 파일은 이전 파일과 같은 이름을 갖지만 정수를 붙여 시퀀스를 표시합니다. 예를 들어 원래 추적 파일 이름이 filename.trc이면, 다음 추적 파일 이름은 filename_1.trc이고 그 다음은 filename_2.trc의 식으로 명명됩니다.<br /><br /> 롤오버 추적 파일이 많이 생성될수록 파일 이름에 붙이는 정수 값도 순차적으로 증가합니다.<br /><br /> *Max_file_size*값을 지정 하지 않고이 옵션을 지정 하는 경우 SQL Server는 기본값 *max_file_size* (5mb)를 사용 합니다.|  
 |SHUTDOWN_ON_ERROR|**4**|어떤 이유에서건 추적을 파일에 쓸 수 없으면 SQL Server가 시스템을 종료하도록 지정합니다. 이 옵션은 보안 감사 추적을 수행할 때 유용합니다.|  
@@ -147,11 +147,11 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
 ## <a name="permissions"></a>사용 권한  
  사용자는 ALTER TRACE 권한이 있어야 합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Transact-sql&#41;sp_trace_generateevent &#40;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
  [sp_trace_setevent&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
- [Transact-sql&#41;sp_trace_setfilter &#40;](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)   
- [Transact-sql&#41;sp_trace_setstatus &#40;](../../relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql.md)   
+ [sp_trace_setfilter&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)   
+ [sp_trace_setstatus&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql.md)   
  [SQL 추적](../../relational-databases/sql-trace/sql-trace.md)  
   
   

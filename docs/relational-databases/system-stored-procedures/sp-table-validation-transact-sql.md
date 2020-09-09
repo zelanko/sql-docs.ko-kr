@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_table_validation
 ms.assetid: 31b25f9b-9b62-496e-a97e-441d5fd6e767
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 32d347fe40af8f2617f47291d749ef039b0838b3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 88ee13025153fff3018fadfa8d64becf7a534303
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446735"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89545935"
 ---
 # <a name="sp_table_validation-transact-sql"></a>sp_table_validation(Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -64,7 +64,7 @@ sp_table_validation [ @table = ] 'table'
   
 `[ @full_or_fast = ] full_or_fast` 행 개수를 계산 하는 데 사용 되는 방법입니다. *full_or_fast* 은 **tinyint**이며 기본값은 **2**이 고 다음 값 중 하나일 수 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**0**|COUNT(*)를 사용하여 전체 개수를 계산합니다.|  
 |**1**|는 **sysindexes 행**에서 빠르게 계산 합니다. **Sysindexes** 에서 행을 계산 하는 것은 실제 테이블의 행 수를 계산 하는 것 보다 훨씬 빠릅니다. 그러나 **sysindexes** 는 지연 업데이트 되므로 행 개수가 정확 하지 않을 수 있습니다.|  
@@ -93,7 +93,7 @@ sp_table_validation [ @table = ] 'table'
 ## <a name="permissions"></a>사용 권한  
  **Sp_table_validation**를 실행 하려면 유효성 검사 중인 테이블에 대 한 SELECT 권한이 있어야 합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [CHECKSUM &#40;Transact-sql&#41;](../../t-sql/functions/checksum-transact-sql.md)   
  [@@ROWCOUNT&#40;Transact-SQL&#41;](../../t-sql/functions/rowcount-transact-sql.md)   
  [Transact-sql&#41;sp_article_validation &#40;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)   

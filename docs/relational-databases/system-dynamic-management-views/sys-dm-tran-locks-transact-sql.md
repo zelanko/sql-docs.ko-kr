@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_tran_locks dynamic management view
 ms.assetid: f0d3b95a-8a00-471b-9da4-14cb8f5b045f
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bce5288ed4861cb1b090c851179739ea12d9ee71
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: aa9f9e0985fcebc4e9a4577745a9602c601111de
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498400"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546509"
 ---
 # <a name="sysdm_tran_locks-transact-sql"></a>sys.dm_tran_locks(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -198,7 +198,7 @@ ms.locfileid: "88498400"
   
  다음 표에서는 각 리소스 유형에 대한 **resource_description** 열의 형식을 제공합니다.  
   
-|리소스|서식|설명|  
+|리소스|서식|Description|  
 |--------------|------------|-----------------|  
 |DATABASE|해당 없음|이미 **resource_database_id** 열에서 사용할 수 있는 데이터베이스 ID입니다.|  
 |FILE|<file_id>|이 리소스가 나타내는 파일의 ID입니다.|  
@@ -385,7 +385,7 @@ SELECT STasks.session_id, SThreads.os_thread_id
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
 [dm_tran_database_transactions &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql.md)      
 [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)     
 [Transact-sql&#41;&#40;트랜잭션 관련 동적 관리 뷰 및 함수 ](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)      

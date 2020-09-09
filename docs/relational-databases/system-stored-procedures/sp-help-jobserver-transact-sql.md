@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_jobserver
 ms.assetid: 57971787-f9f5-4199-9f64-c2b61a308906
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 8f0093529c27d8dae022e005f92eeaf4f84e99b8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 7e59691a44353826f47550bb67c7a7872fcc4200
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474182"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546102"
 ---
 # <a name="sp_help_jobserver-transact-sql"></a>sp_help_jobserver(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -100,7 +100,7 @@ EXEC dbo.sp_help_jobserver
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Transact-sql&#41;sp_add_jobserver &#40;](../../relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql.md)   
  [Transact-sql&#41;sp_delete_jobserver &#40;](../../relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

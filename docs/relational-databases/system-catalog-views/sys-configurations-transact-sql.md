@@ -18,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.configurations catalog view
 ms.assetid: c4709ed1-bf88-4458-9e98-8e9b78150441
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 1b041e0bb17e0c290225ecb951fe26d95ab07770
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 6273f057b7733b787ed2ed8e8b61d23fd107fbd7
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486461"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546845"
 ---
 # <a name="sysconfigurations-transact-sql"></a>sys.configurations(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -63,7 +63,7 @@ select * from sys.configurations where value != value_in_use
 
 값이 구성 옵션에 대 한 변경 값과 동일 하지만 **value_in_use** 동일 하지 않은 경우 RECONFIGURE 명령이 실행 되지 않았거나 실패 했거나 서버 엔진을 다시 시작 해야 합니다.
 
-값과 value_in_use 동일 하지 않을 수 있는 구성 옵션이 있으며이는 예상 된 동작입니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.
+값과 value_in_use 동일 하지 않을 수 있는 구성 옵션이 있으며이는 예상 된 동작입니다. 예를 들면 다음과 같습니다.
 
 "max server memory (MB)"-기본 구성 값 0은 value_in_use = 2147483647 "min server memory (MB)"로 표시 됩니다. 기본 구성 된 값 0은 value_in_use = 8 (32 비트) 또는 16 (64 비트)으로 표시 될 수 있습니다. 
 

@@ -18,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sysjobs system table
 ms.assetid: e244a6a5-54c2-47a6-8039-dd1852b0ae59
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 71fc80a0c847957f52b85344139c75a397b8e6c8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: fb1e7125dd953fe4904c963f888ae9c11c400df9
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454750"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89545808"
 ---
 # <a name="dbosysjobs-transact-sql"></a>dbo.sysjobs(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

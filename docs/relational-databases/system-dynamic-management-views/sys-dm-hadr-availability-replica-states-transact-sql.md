@@ -18,14 +18,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
 - sys.dm_hadr_availability_replica_states dynamic management view
 ms.assetid: d2e678bb-51e8-4a61-b223-5c0b8d08b8b1
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 4e8242f81b78c943590785aea03cbc798a7d632f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 347d05c0bfc37b1c14fddb728df5508e062cb13d
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88398699"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546564"
 ---
 # <a name="sysdm_hadr_availability_replica_states-transact-sql"></a>sys.dm_hadr_availability_replica_states(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "88398699"
   
  **해결 방법:** 가용성 복제본이 확인 역할에 있는 경우 가능한 작동 상태는 다음 표에 나와 있는 것과 같습니다.  
   
-|작동 상태|설명|  
+|작동 상태|Description|  
 |-----------------------|-----------------|  
 |PENDING_FAILOVER|장애 조치(failover) 명령이 가용성 그룹에 대해 처리되고 있습니다.|  
 |OFFLINE|가용성 복제본에 대한 모든 구성 데이터가 WSFC 클러스터와 로컬 메타데이터에서 업데이트되었지만 가용성 그룹에 현재 주 복제본이 부족합니다.|  
@@ -68,7 +68,7 @@ ms.locfileid: "88398699"
   
  **기본:** 가용성 복제본이 주 역할을 수행 하는 경우 현재 주 복제본입니다. 가능한 작동 상태는 다음 표에 나와 있습니다.  
   
-|작동 상태|설명|  
+|작동 상태|Description|  
 |-----------------------|-----------------|  
 |PENDING|임시 상태이지만, 작업자가 요청을 처리할 수 없는 경우 주 복제본이 이 상태에서 멈출 수 있습니다.|  
 |ONLINE|가용성 그룹 리소스가 온라인 상태이고 모든 데이터베이스 작업자 스레드가 선택되었습니다.|  
@@ -76,7 +76,7 @@ ms.locfileid: "88398699"
   
  **보조:** 가용성 복제본이 보조 역할을 수행 하는 경우 현재 보조 복제본입니다. 가능한 작동 상태는 아래 표에 표시 된 것과 같습니다.  
   
-|작동 상태|설명|  
+|작동 상태|Description|  
 |-----------------------|-----------------|  
 |ONLINE|로컬 보조 복제본이 주 복제본에 연결되어 있습니다.|  
 |FAILED|로컬 보조 복제본이 WSFC 클러스터에서 읽거나 쓸 수 없습니다.|  

@@ -16,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - SetBoolValue method
 ms.assetid: 5252b439-fce5-446a-8e57-99e3054bee69
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: db07b4e7dc83cffa60f5005195b9ac945620fe5b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 1df2d43182d0f3f096ca6ccc4ddec6a7f5de2896
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88427145"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546973"
 ---
 # <a name="setboolvalue-method-sqlserviceadvancedproperty-class"></a>SetBoolValue 메서드(SqlServiceAdvancedProperty 클래스)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +42,7 @@ object.SetBoolValue [= value]
   
 #### <a name="parameters"></a>매개 변수  
   
-|매개 변수|설명|  
+|매개 변수|Description|  
 |---------------|-----------------|  
 |*BoolValue*|고급 속성의 값을 지정하는 부울 값입니다.|  
   
@@ -52,7 +52,7 @@ object.SetBoolValue [= value]
 ## <a name="remarks"></a>설명  
  속성을 부울 값으로 설정하려면 속성 값 형식이 부울이어야 합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [서비스 시작 및 중지](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

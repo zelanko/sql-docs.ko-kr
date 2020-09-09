@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changemergepullsubscription
 ms.assetid: 5e0d04f2-6175-44a2-ad96-a8e2986ce4c9
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 904db034372ce3be7b4f3bf3e1f7dc4a95d8383d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 39cb33678b853feadbbb20a88669f0b48a3d444a
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474436"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546220"
 ---
 # <a name="sp_changemergepullsubscription-transact-sql"></a>sp_changemergepullsubscription(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -52,7 +52,7 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
   
 `[ @value = ] 'value'` 지정 된 속성의 새 값입니다. *value*는 **nvarchar (255)** 이며 테이블에 있는 값 중 하나일 수 있습니다.  
   
-|속성|값|설명|  
+|속성|값|Description|  
 |--------------|-----------|-----------------|  
 |**alt_snapshot_folder**||기본 위치가 아니거나 기본 위치에 추가된 위치일 경우 스냅샷 폴더가 저장되는 위치입니다.|  
 |**description**||해당 병합 끌어오기 구독에 관한 설명입니다.|  

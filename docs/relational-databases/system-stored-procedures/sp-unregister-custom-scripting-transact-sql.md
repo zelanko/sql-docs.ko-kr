@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_unregister_custom_scripting
 ms.assetid: b6e9e0d2-9144-434d-88af-4874f2582399
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 0247061b99b53cb53e12fa4e5e3a1284430287e4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 1bb9545e4a74fdf6831317ee31f36488e781239d
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480940"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89547301"
 ---
 # <a name="sp_unregister_custom_scripting-transact-sql"></a>sp_unregister_custom_scripting(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +42,7 @@ sp_unregister_custom_scripting [ @type  = ] 'type'
 ## <a name="arguments"></a>인수  
 `[ @type = ] 'type'` 제거할 사용자 지정 저장 프로시저 또는 스크립트의 유형입니다. *type* 은 **varchar (16)** 이며 기본값은 없고 다음 값 중 하나일 수 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**insert**|INSERT 문이 복제될 때 실행되는 등록된 사용자 지정 저장 프로시저 또는 스크립트입니다.|  
 |**update**|UPDATE 문이 복제될 때 실행되는 등록된 사용자 지정 저장 프로시저 또는 스크립트입니다.|  

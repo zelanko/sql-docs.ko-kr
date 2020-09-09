@@ -17,14 +17,14 @@ helpviewer_keywords:
 - data collector [SQL Server], stored procedures
 - sp_syscollector_create_collection_set
 ms.assetid: 69e9ff0f-c409-43fc-89f6-40c3974e972c
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: d5b1d3b125a60608727273cc9ce2796fa254f174
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 5c2f62ec06ebda9c7c22ec381f4b9b5a3011cc4f
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88473649"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89547379"
 ---
 # <a name="sp_syscollector_create_collection_set-transact-sql"></a>sp_syscollector_create_collection_set(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -158,7 +158,7 @@ EXEC dbo.sp_syscollector_create_collection_set
   
 ## <a name="see-also"></a>참고 항목  
  [데이터 컬렉션](../../relational-databases/data-collection/data-collection.md)   
- [Transact-sql&#41;&#40;일반 T-sql 쿼리 수집기 유형을 사용 하는 사용자 지정 컬렉션 집합을 만듭니다. ](../../relational-databases/data-collection/create-custom-collection-set-generic-t-sql-query-collector-type.md)   
+ [일반 T-SQL 쿼리 수집기 유형을 사용하는 사용자 지정 컬렉션 집합 만들기&#40;Transact-SQL&#41;](../../relational-databases/data-collection/create-custom-collection-set-generic-t-sql-query-collector-type.md)   
  [데이터 수집기 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
  [syscollector_collection_sets&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md)  
   

@@ -14,14 +14,14 @@ helpviewer_keywords:
 - system stored procedures [SQL Server], SQL Server Agent
 - SQL Server Agent, stored procedures
 ms.assetid: 9c8de925-928b-460c-9455-779c4c37b966
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 954d468134c49d3b86fc39de9177afc164328400
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: b81d3535d2ea6a8abf18083f8d6c13d0f6ce8697
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446685"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89545878"
 ---
 # <a name="sql-server-agent-stored-procedures-transact-sql"></a>SQL Server 에이전트 저장 프로시저(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -187,7 +187,7 @@ ms.locfileid: "88446685"
     :::column-end:::
 :::row-end:::
 
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

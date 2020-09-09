@@ -18,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sysschedules system table
 ms.assetid: 4cac9237-7a69-4035-bb3e-928b76aad698
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 16e51513c6d2b678798d0f4bde3b5a9cb1de69a7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 9c0bb164d77ba4c505207e56897ecc17f8644821
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88488890"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89545817"
 ---
 # <a name="dbosysschedules-transact-sql"></a>dbo.sysschedules(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_OAGetProperty
 ms.assetid: 240eeeb9-6d8b-4930-b912-1d273ca0ab38
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 6fb1683c5c873bf561c012e00907cbe90e1c1fbc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ad769910b74dafd2727719980c6070d9487094da
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88493169"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89545998"
 ---
 # <a name="sp_oagetproperty-transact-sql"></a>sp_OAGetProperty(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

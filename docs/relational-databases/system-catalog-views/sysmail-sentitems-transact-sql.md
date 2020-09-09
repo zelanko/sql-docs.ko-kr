@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_sentitems database mail view
 ms.assetid: 16eb2a44-cebb-4cec-93ac-e2498c39989f
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 968dc27761440c7fb74b7be330d843d9cbf35459
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 36846ca8cba5022bc1d4bc431419c6687a4af003
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455125"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546683"
 ---
 # <a name="sysmail_sentitems-transact-sql"></a>sysmail_sentitems(Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "88455125"
 |**attach_query_result_as_file**|**bit**|값이 0이면 쿼리 결과가 전자 메일 메시지 본문의 내용 뒤에 포함됩니다. 값이 1이면 결과가 첨부 파일로 반환됩니다.|  
 |**query_result_header**|**bit**|값이 1이면 쿼리 결과에 열 머리글이 포함됩니다. 값이 0이면 쿼리 결과에 열 머리글이 포함되지 않습니다.|  
 |**query_result_width**|**int**|메시지의 **query_result_width** 매개 변수입니다.|  
-|**query_result_separator**|**char (1)**|쿼리 출력에서 열을 구분하는 데 사용되는 문자입니다.|  
+|**query_result_separator**|**char(1)**|쿼리 출력에서 열을 구분하는 데 사용되는 문자입니다.|  
 |**exclude_query_output**|**bit**|메시지의 **exclude_query_output** 매개 변수입니다. 자세한 내용은 [sp_send_dbmail &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-send-dbmail-transact-sql.md)를 참조 하세요.|  
 |**append_query_error**|**bit**|메시지의 **append_query_error** 매개 변수입니다. 0은 쿼리에 오류가 있을 때 데이터베이스 메일이 전자 메일 메시지를 보내지 않음을 나타냅니다.|  
 |**send_request_date**|**datetime**|메시지가 메일 큐에 추가된 날짜와 시간입니다.|  

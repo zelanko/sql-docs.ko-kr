@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_server_diagnostics
 ms.assetid: 62658017-d089-459c-9492-c51e28f60efe
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: d2bd308f79e9ef4a49e91509400e8d4938cd4473
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 01c576dcb71aa3814f1e1c560c6e38ec35874161
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485677"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89547415"
 ---
 # <a name="sp_server_diagnostics-transact-sql"></a>sp_server_diagnostics(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -88,7 +88,7 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 |구성 요소|정상(1)|경고(2)|오류(3)|알 수 없음(0)|  
 |----------------|-----------------|-------------------|-----------------|--------------------|  
 |시스템|x|x|x||  
-|리소스|x|x|x||  
+|resource|x|x|x||  
 |query_processing|x|x|x||  
 |io_subsystem|x|x|||  
 |events||||x|  

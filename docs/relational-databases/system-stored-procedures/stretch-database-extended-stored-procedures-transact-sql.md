@@ -13,14 +13,14 @@ dev_langs:
 helpviewer_keywords:
 - Stretch Database, stored procedures
 ms.assetid: bda29952-4b8b-4295-ab78-f24dcb0b03c6
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 11afc18f35c23c4a0a55f51eed39ab830f0ce8ad
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 975255806d8a031d1998d85778d89ccbf97a806f
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245760"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89545829"
 ---
 # <a name="stretch-database-extended-stored-procedures-transact-sql"></a>Stretch Database 확장 저장 프로시저 (Transact-sql)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]

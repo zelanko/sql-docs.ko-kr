@@ -15,14 +15,14 @@ helpviewer_keywords:
 - hobt [SQL Server]
 - base tables
 ms.assetid: 31f2df90-651f-4699-8067-19f59b60904f
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: c60aad12977f5260cc108697e52245bc8a37d9d3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 56da705b29be712942fec337e84aec5d68a31bad
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446541"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89547032"
 ---
 # <a name="system-base-tables"></a>시스템 기본 테이블
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "88446541"
 ## <a name="system-base-tables"></a>시스템 기본 테이블  
  다음 표에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 각 시스템 기본 테이블을 나열하고 설명합니다.  
   
-|기본 테이블|설명|  
+|기본 테이블|Description|  
 |----------------|-----------------|  
 |**sys.sysschobjs**|모든 데이터베이스에 있습니다. 각 행은 데이터베이스의 개체를 나타냅니다.|  
 |**sys.sysbinobjs**|모든 데이터베이스에 있습니다. 데이터베이스의 각 Service Broker 엔터티에 대한 행을 포함합니다. Service Broker 엔터티에는 다음이 포함됩니다.<br /><br /> 메시지 유형<br /><br /> 서비스 계약<br /><br /> 서비스<br /><br /> 이름 및 유형에는 고정된 이진 데이터 정렬이 사용됩니다.|  

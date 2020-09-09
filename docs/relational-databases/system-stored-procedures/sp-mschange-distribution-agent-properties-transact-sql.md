@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_MSchange_distribution_agent_properties
 ms.assetid: 7dac5e68-bf84-433a-a531-66921f35126f
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 07898bbe042d3539778317d5ea886a1043b95dc3
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 276e56e28c7455949fcf12b32f684365c20c618f
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891570"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89547640"
 ---
 # <a name="sp_mschange_distribution_agent_properties-transact-sql"></a>sp_MSchange_distribution_agent_properties(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,23 +44,23 @@ sp_MSchange_distribution_agent_properties [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @publisher = ] 'publisher'`게시자의 이름입니다. *publisher* 는 **sysname**이며 기본값은 없습니다.  
+`[ @publisher = ] 'publisher'` 게시자의 이름입니다. *publisher* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @publisher_db = ] 'publisher_db'`게시 데이터베이스의 이름입니다. *publisher_db* 는 **sysname**이며 기본값은 없습니다.  
+`[ @publisher_db = ] 'publisher_db'` 게시 데이터베이스의 이름입니다. *publisher_db* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @publication = ] 'publication'`게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 없습니다.  
+`[ @publication = ] 'publication'` 게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @subscriber = ] 'subscriber'`구독자의 이름입니다. *구독자* 는 **sysname**이며 기본값은 없습니다.  
+`[ @subscriber = ] 'subscriber'` 구독자의 이름입니다. *구독자* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @subscriber_db = ] 'subscriber_db'`구독 데이터베이스의 이름입니다. *subscriber_db* 는 **sysname**이며 기본값은 없습니다.  
+`[ @subscriber_db = ] 'subscriber_db'` 구독 데이터베이스의 이름입니다. *subscriber_db* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @property = ] 'property'`변경할 게시 속성입니다. *속성* 은 **sysname**이며 기본값은 없습니다.  
+`[ @property = ] 'property'` 변경할 게시 속성입니다. *속성* 은 **sysname**이며 기본값은 없습니다.  
   
-`[ @value = ] 'value'`새 속성 값입니다. *value* 는 **nvarchar (524)** 이며 기본값은 NULL입니다.  
+`[ @value = ] 'value'` 새 속성 값입니다. *value* 는 **nvarchar (524)** 이며 기본값은 NULL입니다.  
   
  이 표에서는 변경할 수 있는 배포 에이전트 작업의 속성 및 그 속성 값의 제한에 대해 설명합니다.  
   
-|속성|값|설명|  
+|속성|값|Description|  
 |--------------|-----------|-----------------|  
 |**distrib_job_login**||에이전트가 실행되는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 계정의 로그인입니다.|  
 |**distrib_job_password**||에이전트 작업 실행에 사용된 Windows 계정의 암호입니다.|  
@@ -71,9 +71,9 @@ sp_MSchange_distribution_agent_properties [ @publisher = ] 'publisher'
 |**subscriber_password**||구독자 암호입니다.<br /><br /> [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]|  
 |**subscriber_provider**||[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 데이터 원본에 대한 OLE DB 공급자 등록에 사용되는 고유한 PROGID(프로그래밍 식별자)입니다. *이 속성은 이외의 경우에만 유효 합니다* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *구독자.*|  
 |**subscriber_providerstring**||데이터 원본을 식별하는 OLE DB 공급자별 연결 문자열입니다. *이 속성은 SQL Server 이외 구독자에만 유효합니다.*|  
-|**subscriber_security_mode**|**1**|Windows 인증<br /><br /> [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]|  
+|**subscriber_security_mode**|**1**|Windows 인증.<br /><br /> [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]|  
 ||**0**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증입니다.|  
-|**subscriber_type**|**0**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]구독자|  
+|**subscriber_type**|**0**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구독자|  
 ||**1**|ODBC 데이터 원본 서버|  
 ||**3**|OLE DB 공급자|  
 |**subscriptionstreams**||변경 내용의 일괄 처리를 구독자에게 병렬로 적용하기 위해 배포 에이전트당 허용된 연결 수를 나타냅니다. 이외의 경우에 *는 지원 되지 않습니다* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *구독자, Oracle 게시자 또는 피어 투 피어 구독을 허용 합니다.*|  

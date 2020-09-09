@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_plan_attributes dynamic management function
 ms.assetid: dacf3ab3-f214-482e-aab5-0dab9f0a3648
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: ddfa137e0efd93bfad2a59a4fc2c8da2c189cdc3
-ms.sourcegitcommit: a0245fdae1ff9045f587a3a67b72f34405d35a4f
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 481638908fea0dbad0c593b2ca8ee28195b3eaf8
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88618116"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546608"
 ---
 # <a name="sysdm_exec_plan_attributes-transact-sql"></a>sys.dm_exec_plan_attributes(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,7 +48,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |특성|**varchar(128)**|이 계획과 연결된 특성의 이름입니다. 이 항목의 바로 아래 표에는 가능한 특성, 해당 데이터 형식 및 해당 설명이 나열 되어 있습니다.|  
-|값|**sql_variant**|이 계획과 연결된 특성의 값입니다.|  
+|value|**sql_variant**|이 계획과 연결된 특성의 값입니다.|  
 |is_cache_key|**bit**|특성이 계획에 대한 캐시 조회 키의 일부로 사용되는지 여부를 나타냅니다.|  
 
 위의 표에서 **특성** 에는 다음 값을 사용할 수 있습니다.
@@ -122,7 +122,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
   
 |옵션|값|  
 |------------|-----------|  
-|None|0|  
+|없음|0|  
 |INSENSITIVE|1|  
 |SCROLL|2|  
 |READ ONLY|4|  
@@ -167,7 +167,7 @@ PIVOT (MAX(ecpa.value) FOR ecpa.attribute IN ("set_options", "sql_handle")) AS p
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Transact-sql&#41;&#40;관련 동적 관리 뷰 및 함수 실행 ](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
  [sys.dm_exec_cached_plans&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)   

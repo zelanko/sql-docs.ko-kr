@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_unregistercustomresolver
 ms.assetid: 08bd20c8-c6be-4be2-be9f-2b5e1d7bee43
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: e1d5957d830b322be2b4c32030a514988583522f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 54d4b4ff0b08f0cd5a2a1275c0f1bc65d462137e
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492918"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89547319"
 ---
 # <a name="sp_unregistercustomresolver-transact-sql"></a>sp_unregistercustomresolver(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,7 +51,7 @@ sp_unregistercustomresolver [ @article_resolver = ] 'article_resolver'
 ## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할 또는 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_unregistercustomresolver**을 실행할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Transact-sql&#41;sp_lookupcustomresolver &#40;](../../relational-databases/system-stored-procedures/sp-lookupcustomresolver-transact-sql.md)   
  [Transact-sql&#41;sp_registercustomresolver &#40;](../../relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

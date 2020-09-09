@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - MSdistribution_agents system table
 ms.assetid: 0e8f0653-1351-41d1-95d2-40f6d5a050ca
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 9802c60aed31ec8e5cb04f7d053761382e5f90df
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f2433e5dcc96cc8b60adbc231a4f40e5a726dc62
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454685"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89547162"
 ---
 # <a name="msdistribution_agents-transact-sql"></a>MSdistribution_agents(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "88454685"
 |**dts_package_name**|**sysname**|DTS 패키지의 이름입니다. 예를 들어 **DTSPub_Package**패키지의 경우를 지정 `@dts_package_name = N'DTSPub_Package'` 합니다.|  
 |**dts_package_password**|**nvarchar (524)**|패키지의 암호입니다.|  
 |**dts_package_location**|**int**|패키지 위치입니다. 패키지의 위치는 **배포자** 또는 **구독자**일 수 있습니다.|  
-|**sid**|**varbinary(85)**|첫 번째 실행 시 배포 에이전트 또는 병합 에이전트의 SID(보안 ID)입니다.|  
+|**s**|**varbinary(85)**|첫 번째 실행 시 배포 에이전트 또는 병합 에이전트의 SID(보안 ID)입니다.|  
 |**queue_server**|**sysname**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**subscriber_security_mode**|**smallint**|에이전트가 구독자에 연결할 때 사용하는 보안 모드로 다음 중 하나일 수 있습니다.<br /><br /> **0**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server 인증<br /><br /> **1**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 인증입니다.|  
 |**subscriber_login**|**sysname**|구독자에 연결할 때 사용하는 로그인입니다.|  

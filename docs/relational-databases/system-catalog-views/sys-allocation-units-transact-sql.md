@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.allocation_units catalog view
 ms.assetid: ec9de780-68fd-4551-b70b-2d3ab3709b3e
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f3d3cfeafa6ef955ba02962b75135a6bd40ac51f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b4e1d8894659b252d4a4888c8fb905df7468eb69
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464855"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546903"
 ---
 # <a name="sysallocation_units-transact-sql"></a>sys.allocation_units(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "88464855"
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |allocation_unit_id|**bigint**|할당 단위의 ID입니다. 데이터베이스 내에서 고유합니다.|  
-|type|**tinyint**|할당 단위 형식입니다.<br /><br /> 0 = 삭제됨<br /><br /> 1 = 행 내부 데이터(LOB 데이터 형식을 제외한 모든 데이터 형식)<br /><br /> 2 = LOB (Large object) 데이터 (**text**, **ntext**, **image**, **xml**, 큰 값 형식 및 CLR 사용자 정의 형식)<br /><br /> 3 = 행 오버플로 데이터|  
+|형식|**tinyint**|할당 단위 형식입니다.<br /><br /> 0 = 삭제됨<br /><br /> 1 = 행 내부 데이터(LOB 데이터 형식을 제외한 모든 데이터 형식)<br /><br /> 2 = LOB (Large object) 데이터 (**text**, **ntext**, **image**, **xml**, 큰 값 형식 및 CLR 사용자 정의 형식)<br /><br /> 3 = 행 오버플로 데이터|  
 |type_desc|**nvarchar(60)**|할당 단위 유형에 대한 설명입니다.<br /><br /> **놓도록**<br /><br /> **IN_ROW_DATA**<br /><br /> **LOB_DATA**<br /><br /> **ROW_OVERFLOW_DATA**|  
 |container_id|**bigint**|할당 단위와 연결된 스토리지 컨테이너의 ID입니다.<br /><br /> type이 1 또는 3이면 container_id는 sys.partitions.hobt_id입니다.<br /><br /> type이 2이면 container_id = sys.partitions.partition_id입니다.<br /><br /> 0 = 삭제가 지연된 것으로 표시된 할당 단위|  
 |data_space_id|**int**|이 할당 단위가 있는 파일 그룹의 ID입니다.|  
@@ -51,7 +51,7 @@ ms.locfileid: "88464855"
  **public** 역할의 멤버 자격이 필요합니다. 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [&#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   
+ [sys.partitions&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   
  [개체 카탈로그 뷰 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   

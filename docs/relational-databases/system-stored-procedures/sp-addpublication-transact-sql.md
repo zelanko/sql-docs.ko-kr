@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addpublication
 ms.assetid: c7167ed1-2b7e-4824-b82b-65f4667c4407
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: f03bffcfefbe20386885523aaf75419e56c87dd3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 02b97900b86eac3c4fb5ffc61b7cf6922d4800e2
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464635"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546338"
 ---
 # <a name="sp_addpublication-transact-sql"></a>sp_addpublication(Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -92,10 +92,10 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@sync_method = ] _'sync_method'` 동기화 모드입니다. *sync_method* 은 **nvarchar (13)** 이며 다음 값 중 하나일 수 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**native**|모든 테이블의 기본 모드 대량 복사 프로그램 출력을 생성합니다. *Oracle 게시자에 대해서는 지원 되지 않습니다*.|  
-|**자의**|모든 테이블의 문자 모드 대량 복사 프로그램 출력을 생성합니다. _Oracle 게시자의_ 경우 **문자** _는 스냅숏 복제에만 사용할 수_있습니다.|  
+|**character**|모든 테이블의 문자 모드 대량 복사 프로그램 출력을 생성합니다. _Oracle 게시자의_ 경우 **문자** _는 스냅숏 복제에만 사용할 수_있습니다.|  
 |**노드당**|모든 테이블의 기본 모드 대량 복사 프로그램 출력을 생성하지만 스냅샷을 실행하는 동안 테이블을 잠그지 않습니다. 트랜잭션 게시에 대해서만 지원됩니다. *Oracle 게시자에 대해서는 지원 되지 않습니다*.|  
 |**concurrent_c**|모든 테이블의 문자 모드 대량 복사 프로그램 출력을 생성하지만 스냅샷을 실행하는 동안 테이블을 잠그지 않습니다. 트랜잭션 게시에 대해서만 지원됩니다.|  
 |**데이터베이스 스냅숏**|데이터베이스 스냅샷에서 모든 테이블의 기본 모드 대량 복사 프로그램 출력을 생성합니다. 데이터베이스 스냅숏은 일부 버전 에서만 사용할 수 있습니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 지원되는 기능 목록은 [SQL Server 2016 버전에서 지원하는 기능](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요.|  
@@ -104,7 +104,7 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@repl_freq = ] 'repl_freq'` 는 복제 빈도의 유형이 며 *repl_freq* 은 **nvarchar (10)** 이며 다음 값 중 하나일 수 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**연속** (기본값)|게시자가 모든 로그 기반 트랜잭션의 출력을 제공합니다. 이외 게시자의 경우에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 *sync_method* 를 **concurrent_c**으로 설정 해야 합니다.|  
 |**스냅숏에**|게시자가 예약된 동기화 이벤트만 생성합니다. 이외 게시자의 경우에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 *sync_method* 를 **character**로 설정 해야 합니다.|  
@@ -113,7 +113,7 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@status = ] 'status'` 게시 데이터를 사용할 수 있는지 여부를 지정 합니다. *status* 는 **nvarchar (8)** 이며 다음 값 중 하나일 수 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**active**|구독자가 게시 데이터를 즉시 사용할 수 있습니다.|  
 |**비활성** (기본값)|게시가 처음 작성될 때 구독자가 게시 데이터를 사용할 수 없습니다. 구독할 수는 있으나 구독이 처리되지 않습니다.|  
@@ -136,7 +136,7 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@autogen_sync_procs = ] 'autogen_sync_procs'` 구독 업데이트를 위한 동기화 저장 프로시저가 게시자에서 생성 되는지 여부를 지정 합니다. *autogen_sync_procs* 은 **nvarchar (5)** 이며 다음 값 중 하나일 수 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**true**|업데이트 구독이 사용될 때 자동으로 설정됩니다.|  
 |**false**|업데이트 구독이 사용되지 않을 때나 Oracle 게시자에 대해서 자동으로 설정됩니다.|  
@@ -177,7 +177,7 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@conflict_policy = ] 'conflict_policy'` 지연 업데이트 구독자 옵션을 사용할 때 따라야 하는 충돌 해결 정책을 지정 합니다. *conflict_policy* 은 **nvarchar (100)** 이며 기본값은 NULL이 고 다음 값 중 하나일 수 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**pub wins**|충돌 시 게시자 내용을 적용합니다.|  
 |**sub reinit**|구독을 다시 초기화합니다.|  
@@ -192,7 +192,7 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@queue_type = ] 'queue_type'` 사용 되는 큐의 유형을 지정 합니다. *queue_type* 은 **nvarchar (10)** 이며 기본값은 NULL이 고 다음 값 중 하나일 수 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**sql**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 사용하여 트랜잭션을 저장합니다.|  
 |NULL(기본값)|는를 사용 하 여 트랜잭션을 저장 하도록 지정 하는 **sql**로 기본 설정 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 됩니다.|  
@@ -215,7 +215,7 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@allow_initialize_from_backup = ] 'allow_initialize_from_backup'` 구독자가 초기 스냅숏이 아닌 백업에서이 게시에 대 한 구독을 초기화할 수 있는지 여부를 나타냅니다. *allow_initialize_from_backup* 은 **nvarchar (5)** 이며 다음 값 중 하나일 수 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**true**|백업으로부터 초기화할 수 있습니다.|  
 |**false**|백업으로부터 초기화할 수 없습니다.|  
@@ -330,10 +330,10 @@ sp_addpublication [ @publication = ] 'publication'
 ## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할 또는 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_addpublication**을 실행할 수 있습니다. Windows 인증 로그인에는 Windows 사용자 계정을 나타내는 데이터베이스의 사용자 계정이 있어야 합니다. Windows 그룹을 나타내는 사용자 계정은 충분하지 않습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Transact-sql&#41;sp_addlogreader_agent &#40;](../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md)   
  [Transact-sql&#41;sp_addpublication_snapshot &#40;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)   
- [Transact-sql&#41;sp_changepublication &#40;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)   
+ [sp_changepublication&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)   
  [Transact-sql&#41;sp_droppublication &#40;](../../relational-databases/system-stored-procedures/sp-droppublication-transact-sql.md)   
  [sp_helppublication&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)   
  [Transact-sql&#41;sp_replicationdboption &#40;](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md)   

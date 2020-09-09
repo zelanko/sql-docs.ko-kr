@@ -18,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.database_mirroring catalog view
 ms.assetid: 480de2b0-2c16-497d-a6a3-bf7f52a7c9a0
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 491ff79e6337ee7ec9767c73138174ac2fe64c8c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: cf5b55565a97669b78deedeb2487881e2aa1d808
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498436"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546859"
 ---
 # <a name="sysdatabase_mirroring-transact-sql"></a>sys.database_mirroring(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -64,7 +64,7 @@ ms.locfileid: "88498436"
 ## <a name="permissions"></a>사용 권한  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [ALTER DATABASE &#40;Transact-SQL &#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [database_mirroring_witnesses &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md)   

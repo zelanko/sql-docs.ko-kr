@@ -18,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.xml_indexes catalog view
 ms.assetid: 3408de72-b067-4fda-b5d5-8e856dfd9db3
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 2dcbefc1a9ea50841a7807002e31d236130eb038
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 1ceda15c69bd989172ad3fbb05e8c696fd9750aa
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88400409"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546735"
 ---
 # <a name="sysxml_indexes-transact-sql"></a>sys.xml_indexes(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "88400409"
 |-----------------|---------------|-----------------|  
 |**\<inherited columns>**||은 (는) [sys. 인덱스](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)에서 열을 상속 합니다.|  
 |**using_xml_index_id**|**int**|NULL = 기본 XML 인덱스입니다.<br /><br /> Nonnull = 보조 XML 인덱스입니다.<br /><br /> Nonnull은 기본 XML 인덱스에 대한 자체 조인 참조입니다.|  
-|**secondary_type**|**char (1)**|보조 인덱스에 대한 유형 설명입니다.<br /><br /> P = PATH 보조 XML 인덱스<br /><br /> V = VALUE 보조 XML 인덱스<br /><br /> R = PROPERTY 보조 XML 인덱스<br /><br /> NULL = 기본 XML 인덱스|  
+|**secondary_type**|**char(1)**|보조 인덱스에 대한 유형 설명입니다.<br /><br /> P = PATH 보조 XML 인덱스<br /><br /> V = VALUE 보조 XML 인덱스<br /><br /> R = PROPERTY 보조 XML 인덱스<br /><br /> NULL = 기본 XML 인덱스|  
 |**secondary_type_desc**|**nvarchar(60)**|보조 인덱스에 대한 유형 설명입니다.<br /><br /> PATH = PATH 보조 XML 인덱스<br /><br /> VALUE = VALUE 보조 XML 인덱스<br /><br /> PROPERTY = PROPERTY 보조 XML 인덱스<br /><br /> NULL = 기본 XML 인덱스|  
 |**xml_index_type**|**tinyint**|인덱스 유형:<br /><br /> 0 = 기본 XML 인덱스<br /><br /> 1 = 보조 XML 인덱스<br /><br /> 2 = 선택적 XML 인덱스<br /><br /> 3 = 보조 선택적 XML 인덱스|  
 |**xml_index_type_description**|**nvarchar(60)**|인덱스 유형의 설명입니다.<br /><br /> PRIMARY_XML<br /><br /> 보조 XML 인덱스<br /><br /> 선택적 XML 인덱스<br /><br /> 보조 선택적 XML 인덱스|  

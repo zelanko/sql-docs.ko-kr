@@ -16,15 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_describe_undeclared_parameters
 ms.assetid: 6f016da6-dfee-4228-8b0d-7cd8e7d5a354
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: b93ecf05c0a4b48417240db1b9bf22e1104149a2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f1e2134b008d07a12043c4b1bd4fbf6dc0986d90
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489456"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546169"
 ---
 # <a name="sp_describe_undeclared_parameters-transact-sql"></a>sp_describe_undeclared_parameters(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)] 
@@ -170,7 +170,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
 -   단순 추론  
   
-     E ( \@ p) = \@ p 및 TT (p)가 있는 경우 (예 \@ : \@ p가 2 단계 시작 부분에 나열 된 식 중 하나에 대 한 인수) 이면 형식 추론 알고리즘에서 p의 데이터 형식을 \@ TT ( \@ p)로 추론 합니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.  
+     E ( \@ p) = \@ p 및 TT (p)가 있는 경우 (예 \@ : \@ p가 2 단계 시작 부분에 나열 된 식 중 하나에 대 한 인수) 이면 형식 추론 알고리즘에서 p의 데이터 형식을 \@ TT ( \@ p)로 추론 합니다. 예를 들면 다음과 같습니다.  
   
     ```sql
     SELECT * FROM t WHERE c1 = @p1 AND @p2 = dbo.tbl(@p3)  
@@ -218,7 +218,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
 1.  E (p)에서 가장 적은 수의 암시적 변환을 생성 하는 데이터 형식이 \@ 선택 됩니다. 특정 데이터 형식이 E (p)에 대해 TT (p)와 다른 데이터 형식을 생성 하는 경우 \@ \@ 형식 추론 알고리즘은이를 e (p)의 데이터 형식에서 \@ tt (p)로 추가 암시적 변환으로 간주 합니다 \@ .  
   
-     예를 들어 다음과 같은 가치를 제공해야 합니다.  
+     예를 들면 다음과 같습니다.  
   
     ```sql
     SELECT * FROM t WHERE Col_Int = Col_Int + @p  

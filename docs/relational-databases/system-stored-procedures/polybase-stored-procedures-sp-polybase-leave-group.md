@@ -12,20 +12,21 @@ f1_keywords:
 helpviewer_keywords:
 - sp_polybase_leave_group
 ms.assetid: ef87a8f1-5407-47b5-b8bf-bd7d08c0f0fe
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 82bcad58a97fa41938f127c0a814c312c4e22ec9
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 2ce2e2ad16277c6ae5e21939976ede8ac89c8843
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86052726"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546254"
 ---
 # <a name="sp_polybase_leave_group-transact-sql"></a>sp_polybase_leave_group (Transact-sql)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   스케일 아웃 계산을 위해 PolyBase 그룹에서 SQL Server 인스턴스를 제거 합니다. 
  
- SQL Server 인스턴스에 [PolyBase 가이드](../../relational-databases/polybase/polybase-guide.md) 기능이 설치 되어 있어야 합니다.  PolyBase를 사용 하면 Hadoop 및 Azure blob storage와 같은 비 SQL Server 데이터 원본을 통합할 수 있습니다. [Sp_polybase_join_group](../../relational-databases/system-stored-procedures/polybase-stored-procedures-sp-polybase-join-group.md)도 참조 하세요.  
+ SQL Server 인스턴스에  [PolyBase 가이드](../../relational-databases/polybase/polybase-guide.md) 기능이 설치 되어 있어야 합니다.  PolyBase를 사용 하면 Hadoop 및 Azure blob storage와 같은 비 SQL Server 데이터 원본을 통합할 수 있습니다. [Sp_polybase_join_group](../../relational-databases/system-stored-procedures/polybase-stored-procedures-sp-polybase-join-group.md)도 참조 하세요.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -55,8 +56,8 @@ sp_polybase_leave_group;
 EXEC sp_polybase_leave_group ;  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [PolyBase 시작](../../relational-databases/polybase/get-started-with-polybase.md)   
+## <a name="see-also"></a>관련 항목  
+ [PolyBase 시작하기](../../relational-databases/polybase/get-started-with-polybase.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_configure_peerconflictdetection
 ms.assetid: 45117cb2-3247-433f-ba3d-7fa19514b1c3
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: b7ad54f6ff92d150ad862709b0fcc8412911c7fe
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 80ce8df6158ca3c0f7cd37fc045c7bd5987e2e0f
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88469715"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546196"
 ---
 # <a name="sp_configure_peerconflictdetection-transact-sql"></a>sp_configure_peerconflictdetection(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,7 +51,7 @@ sp_configure_peerconflictdetection [ @publication = ] 'publication'
  [ @action =] '*작업*'  
  이 게시에 대해 충돌 검색을 사용할지 여부를 지정합니다. *action* 은 **nvarchar (5)** 이며 다음 값 중 하나일 수 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**enable**|게시에 충돌 감지를 사용합니다.|  
 |**disable**|게시에 충돌 감지를 사용하지 않습니다.|  
@@ -84,7 +84,7 @@ sp_configure_peerconflictdetection [ @publication = ] 'publication'
 ## <a name="permissions"></a>사용 권한  
  sysadmin 고정 서버 역할 또는 db_owner 고정 데이터베이스 역할의 멤버여야 합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [피어 투 피어 복제에서 충돌 검색](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)   
  [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)   
  [복제 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  

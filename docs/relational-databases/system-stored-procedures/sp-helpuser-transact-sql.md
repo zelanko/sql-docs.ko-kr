@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_helpuser
 ms.assetid: 9c70b41d-ef4c-43df-92da-bd534c287ca1
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: da6af8493f8646f19436501ab750455ebbe98558
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: e9ea3b0b0b6d1700c486514c29f889cc7beb3566
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88469252"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546043"
 ---
 # <a name="sp_helpuser-transact-sql"></a>sp_helpuser(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -59,7 +59,7 @@ sp_helpuser [ [ @name_in_db = ] 'security_account' ]
 |**DefDBName**|**sysname**|**사용자 이름의**기본 데이터베이스입니다.|  
 |**DefSchemaName**|**sysname**|데이터베이스 사용자의 기본 스키마입니다.|  
 |**UserID**|**smallint**|현재 데이터베이스의 **사용자 이름** ID입니다.|  
-|**S**|**smallint**|사용자의 SID(보안 ID)입니다.|  
+|**SID**|**smallint**|사용자의 SID(보안 ID)입니다.|  
   
  다음 표에서는 사용자 계정이 지정되어 있지 않고 현재 데이터베이스에 별칭이 있는 경우의 결과 집합을 보여 줍니다.  
   
@@ -108,9 +108,9 @@ EXEC sp_helpuser 'dbo';
 EXEC sp_helpuser 'db_securityadmin';  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;보안 저장 프로시저 ](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [Transact-sql&#41;&#40;시스템 저장 프로시저 ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>관련 항목  
+ [Security Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [보안 주체&#40;데이터베이스 엔진&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [sys.database_principals&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)   
  [sys.database_role_members&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-role-members-transact-sql.md)   

@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addmergearticle
 ms.assetid: 0df654ea-24e2-4c61-a75a-ecaa7a140a6c
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: ef60a3770d579358d561d98648d4bc7a54309555
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 40c50362e8976552f80bf7a023a49f05a5bb5043
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489706"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546303"
 ---
 # <a name="sp_addmergearticle-transact-sql"></a>sp_add_targetservergroup(Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -82,7 +82,7 @@ sp_addmergearticle [ @publication = ] 'publication'
   
 `[ @type = ] 'type'` 아티클의 유형입니다. *형식은* **sysname**이며 기본값은 **table**이며 다음 값 중 하나일 수 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**table** (기본값)|스키마와 데이터가 있는 테이블입니다. 복제는 테이블을 모니터링하여 복제할 데이터를 결정합니다.|  
 |**func schema only**|스키마가 있는 함수 전용입니다.|  
@@ -102,7 +102,7 @@ sp_addmergearticle [ @publication = ] 'publication'
   
 `[ @pre_creation_cmd = ] 'pre_creation_cmd'` 스냅숏 적용 시 구독자에 테이블이 있는 경우 시스템이 수행할 작업을 지정 합니다. *pre_creation_cmd* 은 **nvarchar (10)** 이며 다음 값 중 하나일 수 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**없음**|구독자에 이미 테이블이 존재하는 경우 아무런 동작이 발생하지 않습니다.|  
 |**delete**|하위 집합 필터의 WHERE 절을 기반으로 하여 삭제를 실행합니다.|  
@@ -116,11 +116,11 @@ sp_addmergearticle [ @publication = ] 'publication'
   
 `[ @schema_option = ] schema_option` 지정 된 아티클에 대 한 스키마 생성 옵션의 비트맵입니다. *schema_option* 는 **이진 (8)** 이며 [ (비트 or)](../../t-sql/language-elements/bitwise-or-transact-sql.md) 이러한 값 중 하나 이상의 곱입니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**0x00**|스냅숏 에이전트에서 스크립팅을 사용 하지 않도록 설정 하 고 *creation_script*에 정의 된 제공 된 스키마 사전 작성 스크립트를 사용 합니다.|  
 |**0x01**|개체를 만듭니다(CREATE TABLE, CREATE PROCEDURE 등). 이는 저장 프로시저 아티클에 대한 기본값입니다.|  
-|**10**|해당 클러스터형 인덱스를 생성합니다. 이 옵션을 설정하지 않아도 게시된 테이블에 이미 정의되어 있으면 기본 키 및 UNIQUE 제약 조건과 관련된 인덱스가 생성됩니다.|  
+|**0x10**|해당 클러스터형 인덱스를 생성합니다. 이 옵션을 설정하지 않아도 게시된 테이블에 이미 정의되어 있으면 기본 키 및 UNIQUE 제약 조건과 관련된 인덱스가 생성됩니다.|  
 |**0x20**|사용자 정의 데이터 형식(UDT)을 구독자에서의 기본 데이터 형식으로 변환합니다. UDT 열에 CHECK 또는 DEFAULT 제약 조건이 있거나 UDT 열이 기본 키의 일부이거나 계산 열이 UDT 열을 참조하는 경우 이 옵션을 사용할 수 없습니다.|  
 |**0x40**|해당 비클러스터형 인덱스를 생성합니다. 이 옵션을 설정하지 않아도 게시된 테이블에 이미 정의되어 있으면 기본 키 및 UNIQUE 제약 조건과 관련된 인덱스가 생성됩니다.|  
 |**0x80**|PRIMARY KEY 제약 조건을 복제합니다. **0x10** 및 **0x40** 옵션을 사용 하도록 설정 하지 않은 경우에도 제약 조건과 관련 된 인덱스가 모두 복제 됩니다.|  
@@ -213,10 +213,10 @@ sp_addmergearticle [ @publication = ] 'publication'
   
 `[ @check_permissions = ] check_permissions` 병합 에이전트 변경 내용을 게시자에 적용할 때 확인 되는 테이블 수준 사용 권한의 비트맵입니다. 병합 프로세스가 사용하는 게시자 로그인/사용자 계정에 올바른 테이블 사용 권한이 없는 경우 잘못된 변경은 충돌로 기록됩니다. *check_permissions* 은 **int**이며 [| (비트 or)](../../t-sql/language-elements/bitwise-or-transact-sql.md) 다음 값 중 하나 이상의 곱입니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**0x00** (기본값)|사용 권한을 확인하지 않습니다.|  
-|**10**|구독자에서 실행한 삽입 작업이 업로드되기 전에 게시자에서 사용 권한을 확인합니다.|  
+|**0x10**|구독자에서 실행한 삽입 작업이 업로드되기 전에 게시자에서 사용 권한을 확인합니다.|  
 |**0x20**|구독자에서 실행한 업데이트 작업이 업로드되기 전에 게시자에서 사용 권한을 확인합니다.|  
 |**0x40**|구독자에서 실행한 삭제 작업이 업로드되기 전에 게시자에서 사용 권한을 확인합니다.|  
   
@@ -281,7 +281,7 @@ sp_addmergearticle [ @publication = ] 'publication'
   
 `[ @identityrangemanagementoption = ] identityrangemanagementoption` 아티클에 대해 id 범위 관리를 처리 하는 방법을 지정 합니다. *identityrangemanagementoption* 은 **nvarchar (10)** 이며 다음 값 중 하나일 수 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**없음**|ID 범위 관리를 사용하지 않습니다.|  
 |**수동**|수동 ID 범위 처리를 사용하려면 NOT FOR REPLICATION을 사용하여 ID 열을 표시합니다.|  
@@ -362,8 +362,8 @@ sp_addmergearticle [ @publication = ] 'publication'
  [Define an Article](../../relational-databases/replication/publish/define-an-article.md)   
  [데이터 및 데이터베이스 개체 게시](../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
  [Id 열 복제](../../relational-databases/replication/publish/replicate-identity-columns.md)   
- [Transact-sql&#41;sp_changemergearticle &#40;](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)   
- [Transact-sql&#41;sp_dropmergearticle &#40;](../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md)   
+ [sp_changemergearticle&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)   
+ [sp_dropmergearticle&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md)   
  [sp_helpmergearticle&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)   
  [복제 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   

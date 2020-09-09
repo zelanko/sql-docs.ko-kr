@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sysmergeschemaarticles system table
 ms.assetid: b5085979-2f76-48e1-bf3b-765a84003dd9
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: c4357681a782b878b9cc9bfe4df002d706e1d1f0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 690ffd7f583c008ff68138211f3181b607a1687b
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88473139"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89547069"
 ---
 # <a name="sysmergeschemaarticles-transact-sql"></a>sysmergeschemaarticles(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "88473139"
 |**destination_object**|**sysname**|구독 데이터베이스 내 대상 개체의 이름입니다. 이 값은 저장 프로시저, 뷰 및 UDF와 같은 스키마 전용 아티클에만 적용합니다.|  
 |**destination_owner**|**sysname**|**Dbo**가 아닌 경우 구독 데이터베이스에 있는 개체의 소유자입니다.|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Transact-sql&#41;&#40;복제 테이블 ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [복제 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
