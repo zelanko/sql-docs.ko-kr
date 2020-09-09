@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_notification
 ms.assetid: 0273457f-9d2a-4a6f-9a16-6a6bf281cba0
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 2e680c10037119020a1f667e40a7f77817a08cdf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: cce6fd1c7645857019399dae9934c8b730e14f77
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447065"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89536166"
 ---
 # <a name="sp_help_notification-transact-sql"></a>sp_help_notification(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,7 +51,7 @@ sp_help_notification
   
 `[ @enum_type = ] 'enum_type'` 반환 되는 *object_type*정보입니다. 대부분의 경우 *enum_type* 는 실제입니다. *enum_type*은 **char (10)** 이며 기본값은 없고 다음 값 중 하나일 수 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |ACTUAL|*이름*에 연결 된 *object_types* 나열 합니다.|  
 |ALL|*이름*에 연결 되지 않은 object_types를 포함 하 여 모든*object_types* 을 나열 합니다.|  

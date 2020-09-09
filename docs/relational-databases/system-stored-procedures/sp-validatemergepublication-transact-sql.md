@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_validatemergepublication
 ms.assetid: 5a862f1a-2be1-4758-9954-4cdc8c77d149
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: f5120e6976291f9d064346891334b2d23b15aec8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ff7a9cb80717ee6b8015c5ed1b597eb5eae7a6c3
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480997"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89534702"
 ---
 # <a name="sp_validatemergepublication-transact-sql"></a>s sp_validatemergepublication(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -60,7 +60,7 @@ sp_validatemergepublication [@publication=] 'publication'
  **Sysadmin** 고정 서버 역할의 멤버만 **sp_validatemergepublication**를 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;시스템 저장 프로시저 ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [복제 된 데이터의 유효성 검사](../../relational-databases/replication/validate-data-at-the-subscriber.md)   
  [Transact-sql&#41;sp_validatemergesubscription &#40;](../../relational-databases/system-stored-procedures/sp-validatemergesubscription-transact-sql.md)  
   

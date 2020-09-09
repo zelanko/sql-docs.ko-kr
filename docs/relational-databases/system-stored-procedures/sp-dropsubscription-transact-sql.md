@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_dropsubscription
 ms.assetid: 7551f345-5510-4684-ab53-f9057249d13a
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 3ef0707d0e2f2770a241ad22be567fed16ad9e3b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: c8c13030b1232a01aac14ac936323c05c540ab1f
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783030"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89536561"
 ---
 # <a name="sp_dropsubscription-transact-sql"></a>sp_dropsubscription(Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -43,13 +43,13 @@ sp_dropsubscription [ [ @publication= ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @publication = ] 'publication'`연결 된 게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 NULL입니다. **All**인 경우 지정 된 구독자의 모든 게시에 대 한 모든 구독이 취소 됩니다. *게시* 는 필수 매개 변수입니다.  
+`[ @publication = ] 'publication'` 연결 된 게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 NULL입니다. **All**인 경우 지정 된 구독자의 모든 게시에 대 한 모든 구독이 취소 됩니다. *게시* 는 필수 매개 변수입니다.  
   
-`[ @article = ] 'article'`아티클의 이름입니다. *article* 은 **sysname**이며 기본값은 NULL입니다. **All**인 경우 지정 된 각 게시 및 구독자에 대 한 모든 아티클에 대 한 구독이 삭제 됩니다. 즉시 업데이트를 허용 하는 게시의 경우 **모두** 를 사용 합니다.  
+`[ @article = ] 'article'` 아티클의 이름입니다. *article* 은 **sysname**이며 기본값은 NULL입니다. **All**인 경우 지정 된 각 게시 및 구독자에 대 한 모든 아티클에 대 한 구독이 삭제 됩니다. 즉시 업데이트를 허용 하는 게시의 경우 **모두** 를 사용 합니다.  
   
-`[ @subscriber = ] 'subscriber'`구독을 삭제할 구독자의 이름입니다. *구독자* 는 **sysname**이며 기본값은 없습니다. All **인 경우 모든**구독자에 대 한 모든 구독이 삭제 됩니다.  
+`[ @subscriber = ] 'subscriber'` 구독을 삭제할 구독자의 이름입니다. *구독자* 는 **sysname**이며 기본값은 없습니다. All **인 경우 모든**구독자에 대 한 모든 구독이 삭제 됩니다.  
   
-`[ @destination_db = ] 'destination_db'`대상 데이터베이스의 이름입니다. *destination_db* 는 **sysname**이며 기본값은 NULL입니다. NULL인 경우 해당 구독자에서 모든 구독이 삭제됩니다.  
+`[ @destination_db = ] 'destination_db'` 대상 데이터베이스의 이름입니다. *destination_db* 는 **sysname**이며 기본값은 NULL입니다. NULL인 경우 해당 구독자에서 모든 구독이 삭제됩니다.  
   
 `[ @ignore_distributor = ] ignore_distributor`  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  

@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_publication_validation
 ms.assetid: 06be2363-00c0-4936-97c1-7347f294a936
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 02409799b4fe597eb784ffe9d94d645c92cddcd0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: dccdb0f168b7b1e113a38c64a111e35e5bf62d77
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485853"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89535010"
 ---
 # <a name="sp_publication_validation-transact-sql"></a>sp_publication_validation(Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -46,7 +46,7 @@ sp_publication_validation [ @publication = ] 'publication'
   
 `[ @rowcount_only = ] 'rowcount_only'` 테이블에 대 한 행 개수만 반환 하는지 여부입니다. *rowcount_only* 은 **smallint** 이며 다음 값 중 하나일 수 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**0**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 호환 체크섬을 수행합니다.<br /><br /> 참고: 아티클이 행 필터링 되 면 체크섬 작업 대신 행 개수 연산이 수행 됩니다.|  
 |**1** (기본값)|행 개수 검사만 수행합니다.|  
@@ -54,7 +54,7 @@ sp_publication_validation [ @publication = ] 'publication'
   
 `[ @full_or_fast = ] 'full_or_fast'` 행 개수를 계산 하는 데 사용 되는 방법입니다. *full_or_fast* 은 **tinyint** 이며 다음 값 중 하나일 수 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**0**|COUNT(*)를 사용하여 전체 개수를 계산합니다.|  
 |**1**|는 **sysindexes 행**에서 빠르게 계산 합니다. [sys.sys인덱스](../../relational-databases/system-compatibility-views/sys-sysindexes-transact-sql.md) 의 행 수를 계산 하는 것은 실제 테이블의 행 수를 계산 하는 것 보다 훨씬 빠릅니다. 그러나 [sys.sys인덱스](../../relational-databases/system-compatibility-views/sys-sysindexes-transact-sql.md) 는 지연 업데이트 되므로 행 개수가 정확 하지 않을 수 있습니다.|  

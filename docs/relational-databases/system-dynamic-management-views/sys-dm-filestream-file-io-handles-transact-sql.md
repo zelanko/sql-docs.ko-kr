@@ -17,21 +17,21 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_filestream_file_io_handle catalog view
 ms.assetid: e59632f4-3292-419f-9217-ca375749f1a5
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 543d74e0c62c80ea768009b6a7c9c9f965acbd54
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: d7e8e059ad9d10ccd3b8fd0b51299cc91edb5c6c
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489921"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89533505"
 ---
 # <a name="sysdm_filestream_file_io_handles-transact-sql"></a>sys.dm_filestream_file_io_handles(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   NSO(네임스페이스 소유자)가 인식하는 파일 핸들을 표시합니다. **Opensqlfilestream** 을 사용 하 여 클라이언트에서 가져온 Filestream 핸들이이 뷰에 표시 됩니다.  
   
-|Column|형식|설명|  
+|Column|형식|Description|  
 |------------|----------|-----------------|  
 |**handle_context_address**|**varbinary(8)**|클라이언트의 핸들과 연결 된 내부 n 번째 구조체의 주소를 표시 합니다. Null을 허용합니다.|  
 |**creation_request_id**|**int**|이 핸들을 만드는 데 사용된 REQ_PRE_CREATE I/O 요청의 필드를 표시합니다. Null을 허용하지 않습니다.|  

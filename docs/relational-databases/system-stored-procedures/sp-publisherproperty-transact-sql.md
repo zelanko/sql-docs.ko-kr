@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_publisherproperty
 ms.assetid: 0ed1ebc1-a1bd-4aed-9f46-615c5cf07827
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 3b04284605289d731b0a8eb955830ab149827114
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 459e5c7c702f01cbae74843e4ed8b3152d25626f
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489226"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89534973"
 ---
 # <a name="sp_publisherproperty-transact-sql"></a>sp_publisherproperty(Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -44,7 +44,7 @@ sp_publisherproperty [ @publisher = ] 'publisher'
   
 `[ @propertyname = ] 'propertyname'` 설정 되는 속성의 이름입니다. *propertyname* 은 **sysname**이며 다음 값 중 하나일 수 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**xactsetbatching**|후속 작업에 대해 게시자에서 트랜잭션을 일관성 있는 트랜잭션 세트(Xactset)로 그룹화할지 여부입니다. **Enabled** 값은 xactset (기본값)를 만들 수 있음을 의미 합니다. **Disabled** 값은 새 xactset 생성 되지 않은 경우에도 기존 xactset 처리 됨을 의미 합니다.|  
 |**xactsetjob**|Xactset를 만드는 데 Xactset 작업을 사용할지 여부입니다. **Enabled** 값은 Xactset 작업이 정기적으로 실행 되어 게시자에서 xactset를 만듭니다. **Disabled** 값은 변경 내용에 대해 게시자를 폴링할 때 로그 판독기 에이전트 xactset만 생성 됨을 의미 합니다.|  

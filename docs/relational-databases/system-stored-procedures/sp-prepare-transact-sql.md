@@ -16,15 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_prepare
 ms.assetid: f328c9eb-8211-4863-bafa-347e1bf7bb3f
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b3ccb20945f47aa7094de832faa8eb246022819a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 198707a1ffda49a3ffc28d0d35eadced99e4b149
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489192"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89535068"
 ---
 # <a name="sp_prepare-transact-sql"></a>sp_prepare(Transact SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
@@ -52,7 +52,7 @@ sp_prepare handle OUTPUT, params, stmt, options
  *options*  
  커서 결과 집합 열의 설명을 반환하는 선택적 매개 변수입니다. *옵션* 에는 다음 int 입력 값이 필요 합니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |0x0001|RETURN_METADATA|  
   
