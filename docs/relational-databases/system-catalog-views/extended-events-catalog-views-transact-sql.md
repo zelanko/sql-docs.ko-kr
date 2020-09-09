@@ -14,14 +14,14 @@ helpviewer_keywords:
 - xe
 - catalog views [SQL Server], extended events
 ms.assetid: a8c2fb81-9644-4943-9391-fa62b37056de
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 867905fb26fb6d2cf38c64f36655bb4966779981
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 3d5716feb3fd79327ffdbe0f43701becf9958b5b
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455311"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89545123"
 ---
 # <a name="extended-events-catalog-views-transact-sql"></a>확장 이벤트 카탈로그 뷰(Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]

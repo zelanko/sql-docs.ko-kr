@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_clr_appdomains dynamic management dynamic management view
 ms.assetid: 9fe0d4fd-950a-4274-a493-85e776278045
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 2002b70dc0b949e3628f49e6b6bb9fa1fccbefb9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ac0a451dd88d79ab1847d4c5414fadeb01724e3d
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490048"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89545348"
 ---
 # <a name="sysdm_clr_appdomains-transact-sql"></a>sys.dm_clr_appdomains(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -59,13 +59,13 @@ ms.locfileid: "88490048"
   
 ## <a name="appdomain-initialization"></a>AppDomain 초기화  
   
-|시스템 상태|설명|  
+|시스템 상태|Description|  
 |-----------|-----------------|  
 |E_APPDOMAIN_CREATING|**AppDomain** 을 만들고 있습니다.|  
   
 ## <a name="appdomain-usage"></a>AppDomain 사용  
   
-|시스템 상태|설명|  
+|시스템 상태|Description|  
 |-----------|-----------------|  
 |E_APPDOMAIN_SHARED|여러 사용자가 런타임 **AppDomain** 을 사용할 준비가 되었습니다.|  
 |E_APPDOMAIN_SINGLEUSER|**AppDomain** 은 DDL 작업에서 사용할 준비가 되었습니다. 공유된 AppDomain이 DDL 작업이 아닌 CLR 통합 실행에 사용된다는 점에서 E_APPDOMAIN_SHARED와 다릅니다. 이러한 AppDomain은 동시에 실행되는 다른 작업과 격리됩니다.|  
@@ -73,7 +73,7 @@ ms.locfileid: "88490048"
   
 ## <a name="appdomain-cleanup"></a>AppDomain 정리  
   
-|시스템 상태|설명|  
+|시스템 상태|Description|  
 |-----------|-----------------|  
 |E_APPDOMAIN_UNLOADING|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 일반적으로 관리 되는 데이터베이스 개체를 포함 하는 어셈블리가 변경 되거나 삭제 되었기 때문에 CLR이 **AppDomain**을 언로드하기 위해 요청 했습니다.|  
 |E_APPDOMAIN_UNLOADED|CLR이 **AppDomain**을 언로드 했습니다. 이는 일반적으로 **Threadabort**, **OutOfMemory**또는 사용자 코드의 처리 되지 않은 예외로 인 한 에스컬레이션 프로시저의 결과입니다.|  
@@ -109,7 +109,7 @@ from sys.dm_clr_appdomains
 where appdomain_id = 15);  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [dm_clr_loaded_assemblies &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-clr-loaded-assemblies-transact-sql.md)   
  [공용 언어 런타임 관련 동적 관리 뷰 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/common-language-runtime-related-dynamic-management-views-transact-sql.md)  
   

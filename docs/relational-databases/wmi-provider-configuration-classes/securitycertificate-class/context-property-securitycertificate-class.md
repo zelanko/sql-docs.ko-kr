@@ -16,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - Context property
 ms.assetid: 65dd737f-81ce-479e-8219-7b1b4d8f57c7
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 2a39850d2b4dfa2e298e48baf42db2cc60615c95
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 7e6c2c0d42e7b6d38e5a252cb8a1052fc87ed47b
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88460153"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89545296"
 ---
 # <a name="context-property-securitycertificate-class"></a>Context 속성(SecurityCertificate 클래스)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

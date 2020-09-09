@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - MSmerge_agents system table
 ms.assetid: 639d2ebb-2c37-4fe0-b14b-1637bc5fc221
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: adf07725fb2d2403d8b07c4f41f865e70ebc611f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 0dd3ef69b380122d173436e19ae42ed3227b30e5
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454645"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89545699"
 ---
 # <a name="msmerge_agents-transact-sql"></a>MSmerge_agents(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "88454645"
 |**creation_date**|**datetime**|배포 또는 병합 에이전트를 만든 날짜와 시간입니다.|  
 |**offload_enabled**|**bit**|에이전트를 원격으로 활성화할 수 있음을 나타냅니다.<br /><br /> **0** 은 에이전트를 원격으로 활성화할 수 없음을 나타냅니다.<br /><br /> **1** 은 에이전트가 원격으로 활성화 되 고 offload_server 속성에 지정 된 원격 컴퓨터에서 활성화 되도록 지정 합니다.|  
 |**offload_server**|**sysname**|원격 에이전트 활성화에 사용할 서버의 네트워크 이름을 지정합니다.|  
-|**sid**|**varbinary(85)**|첫 번째 실행 시 배포 에이전트 또는 병합 에이전트의 SID(보안 ID)입니다.|  
+|**s**|**varbinary(85)**|첫 번째 실행 시 배포 에이전트 또는 병합 에이전트의 SID(보안 ID)입니다.|  
 |**subscriber_security_mode**|**smallint**|에이전트가 구독자에 연결할 때 사용하는 보안 모드로 다음 중 하나일 수 있습니다.<br /><br /> **0**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증.<br /><br /> **1**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 인증입니다.|  
 |**subscriber_login**|**sysname**|구독자에 연결할 때 사용하는 로그인입니다.|  
 |**subscriber_password**|**nvarchar (524)**|구독자에 연결할 때 사용하는 암호의 암호화된 값입니다.|  

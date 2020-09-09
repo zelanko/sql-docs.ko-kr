@@ -16,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - SecurityCertificate class
 ms.assetid: d772da67-e04e-4499-9f80-7a5e94829b5c
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: e6c069ff49e235bb7a23b5117f31e481af932f06
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 32c3c144c18ad86cbf1992424e1ee02fee97df08
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418867"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89545264"
 ---
 # <a name="securitycertificate-class"></a>SecurityCertificate 클래스
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

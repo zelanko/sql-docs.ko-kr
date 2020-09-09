@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - MSmerge_tombstone system table
 ms.assetid: 8b3fc7bf-729b-40f2-8a26-e7dfbe8ddb38
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: bf3584d9c4d65bdc498e3eab8edb9b3e0f788fe1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: dc137583386c4b098960d762484ef526f2f95f14
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88473203"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89545568"
 ---
 # <a name="msmerge_tombstone-transact-sql"></a>MSmerge_tombstone(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "88473203"
 |**logical_record_parent_rowguid**|**uniqueidentifier**|삭제된 행이 속한 논리적 레코드를 식별합니다.|  
 |**logical_record_lineage**|**Varbinary (501)**|이 행이 속한 논리적 레코드에 대한 삭제 기록을 유지 관리하기 위해 사용하는 구독자 애칭과 버전 번호 쌍입니다.|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Transact-sql&#41;&#40;복제 테이블 ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [복제 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

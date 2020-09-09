@@ -16,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - SetDefaults method
 ms.assetid: ed9e99c2-3e28-4ee8-bc20-61ca05984973
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: a5c74d4d45b374ae9c33b38a9872526333890856
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 2a99b8bbc94bf8e62cd8125e01327a4691a296cb
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88488533"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89545323"
 ---
 # <a name="cinstance-class---setdefaults-method"></a>CInstance 클래스 - SetDefaults 메서드
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +42,7 @@ object.SetDefaults(OverwriteAll)
   
 #### <a name="parameters"></a>매개 변수  
   
-|매개 변수|설명|  
+|매개 변수|Description|  
 |---------------|-----------------|  
 |*OverwriteAll*|클라이언트 인스턴스의 기존 값을 덮어쓸지 여부를 지정 하는 부울 값입니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 기존 데이터를 덮어쓰려면 **true** 이 고, 기존 데이터를 덮어쓰지 않을 경우 **false** 입니다.|  
   
