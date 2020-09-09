@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - MScached_peer_lsns system table
 ms.assetid: f8b6089a-0230-45f9-8c34-9fe0d2a3a74e
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 5c84f47e733937baa9ac01f99270a6759747d4c7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 23d4339d7a907cd755934df4803e38f5ba769b5e
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446559"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89551016"
 ---
 # <a name="mscached_peer_lsns-transact-sql"></a>MScached_peer_lsns(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "88446559"
 ## <a name="remarks"></a>설명  
  LSN 값은 삽입 직후에만 사용되고 그 의미가 시스템에서 유지되지 않습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Transact-sql&#41;&#40;복제 테이블 ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [복제 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

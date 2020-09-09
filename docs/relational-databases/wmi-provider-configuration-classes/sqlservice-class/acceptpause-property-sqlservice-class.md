@@ -15,14 +15,14 @@ apilocation:
 helpviewer_keywords:
 - AcceptPause property
 ms.assetid: 4339e903-35ee-4395-b005-ca58b3a24a84
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: bed06aa139a6bee919f41bd8d9f9f01817ebde3f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 5b86054eb6ce914a094f537374611ff71180f156
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88427265"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89550906"
 ---
 # <a name="acceptpause-property-sqlservice-class"></a>AcceptPause 속성(SqlService 클래스)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

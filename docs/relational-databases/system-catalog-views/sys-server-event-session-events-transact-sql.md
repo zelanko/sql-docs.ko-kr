@@ -19,14 +19,14 @@ helpviewer_keywords:
 - sys.server_event_session_events catalog view
 - xe
 ms.assetid: 75986e91-1fc7-4f14-98ac-4e90154a74db
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: cc4b6f67d282ce838ab5a5b8a401ade3a5e2e4c2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: d7f58a80a3d3d85fd7411d629d9d018a40002641
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447776"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89551428"
 ---
 # <a name="sysserver_event_session_events-transact-sql"></a>sys.server_event_session_events(Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "88447776"
 ## <a name="remarks"></a>설명  
  이 뷰는 다음과 같은 관계 카디널리티를 가집니다.  
   
-| 보낸 사람 | 대상 | 관계 |
+| 시작 | 대상 | 관계 |
 | ---- | -- | ------------ |
 |sys.server_event_session_events.event_session_id|server_event_sessions. event_session_id|다 대 일|  
   

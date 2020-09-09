@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_mirroring_connections dynamic management view
 ms.assetid: e4df91b6-0240-45d0-ae22-cb2c0d52e0b3
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: b10aa1339769b49a6bd05fbc96a102583960cd99
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 1a9f7b7d1cb6f3c3f9af3dcb9f64b42fa48af78c
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88374679"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89551337"
 ---
 # <a name="database-mirroring---sysdm_db_mirroring_connections"></a>데이터베이스 미러링-sys. dm_db_mirroring_connections
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -69,9 +69,9 @@ ms.locfileid: "88374679"
   
 ## <a name="relationship-cardinalities"></a>관계 카디널리티  
   
-|보낸 사람|대상|관계|  
+|시작|대상|관계|  
 |----------|--------|------------------|  
-|**dm_db_mirroring_connections.connection_id**|**dm_exec_connections.connection_id**|일 대 일|  
+|**dm_db_mirroring_connections.connection_id**|**dm_exec_connections.connection_id**|일대일|  
   
 ## <a name="see-also"></a>참고 항목  
  [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   

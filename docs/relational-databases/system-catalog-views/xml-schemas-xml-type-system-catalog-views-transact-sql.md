@@ -14,14 +14,14 @@ helpviewer_keywords:
 - catalog views [SQL Server], XML schemas
 - XML schemas [SQL Server], catalog views
 ms.assetid: e92304ae-f920-4b28-8f63-6324973ba359
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 00d3b001ba8ee3856b0938956a01adea78994733
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 7bf6327cb83f4461feabd09c748099f465b5e89b
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88469890"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89551344"
 ---
 # <a name="xml-schemas-xml-type-system-catalog-views-transact-sql"></a>XML 스키마(XML 유형 시스템) 카탈로그 뷰(Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]

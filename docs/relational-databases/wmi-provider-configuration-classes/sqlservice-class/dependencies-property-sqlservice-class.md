@@ -16,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - Dependencies property
 ms.assetid: 92d54b7e-de2f-4978-b601-0196e37cbb41
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: ba7fbda65a5ccfab9e5b9c42b73e0bbe51c2538d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 36b40efb76cedd83dfadb9e8597a7d9bb5e9888c
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418769"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89550881"
 ---
 # <a name="dependencies-property-sqlservice-class"></a>Dependencies 속성(SqlService 클래스)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
