@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpreplicationoption
 ms.assetid: ef988dbc-dd0b-4132-80ab-81eebec1cffe
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 80d34e406b7672e31dd9cb70f42431bcd7392917
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 093b718c74d086af10b351d1a87165ef1a659ea2
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464226"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89527031"
 ---
 # <a name="sp_helpreplicationoption-transact-sql"></a>sp_helpreplicationoption(Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -40,7 +40,7 @@ sp_helpreplicationoption [ [ @optname =] 'option_name' ]
 ## <a name="arguments"></a>인수  
 `[ @optname = ] 'option_name'` 쿼리할 복제 옵션의 이름입니다. *option_name* 는 **sysname**이며 기본값은 NULL입니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**트랜잭션과**|트랜잭션 복제를 사용하는 경우 반환되는 결과 집합입니다.|  
 |**결합**|병합 복제를 사용하는 경우 반환되는 결과 집합입니다.|  

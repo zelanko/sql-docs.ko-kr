@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_addmessage
 ms.assetid: 54746d30-f944-40e5-a707-f2d9be0fb9eb
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 86a7c1c41cf9b745efea8b2368d5120f0b03d3ff
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 306fc9b2316d599380b3a6e781d4f8a1ef646626
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489574"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89529256"
 ---
 # <a name="sp_addmessage-transact-sql"></a>sp_addmessage(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -157,7 +157,7 @@ RAISERROR(60000,1,1,15,'param1','param2'); -- error, severity, state,
 GO                                       -- parameters.  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [RAISERROR&#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)   
  [Transact-sql&#41;sp_altermessage &#40;](../../relational-databases/system-stored-procedures/sp-altermessage-transact-sql.md)   
  [sp_dropmessage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmessage-transact-sql.md)   

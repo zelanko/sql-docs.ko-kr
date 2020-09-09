@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_copysnapshot
 ms.assetid: a012a32f-6f26-45bf-8046-b51cd7fec455
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 85d15ffb52e41d072db3d583644eb7269cd57a33
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a1b6013694b6fe9746a3a0a167b107ed08083cc4
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88469708"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89528850"
 ---
 # <a name="sp_copysnapshot-transact-sql"></a>sp_copysnapshot(Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -57,7 +57,7 @@ sp_copysnapshot [ @publication = ] 'publication', [ @destination_folder = ] 'des
 ## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할 또는 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_copysnapshot**을 실행할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [대체 스냅숏 폴더 위치](../../relational-databases/replication/snapshot-options.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

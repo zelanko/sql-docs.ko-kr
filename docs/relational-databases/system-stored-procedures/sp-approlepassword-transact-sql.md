@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_approlepassword
 ms.assetid: 7967dc0b-bee2-4c63-b8e9-1c3ce2f5db2a
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: b375dac904decdaa096cfe0e0b1839cc0c3d2d8c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: db286dbd3fd0c38f6316939fd274db415d9856a2
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464548"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89529031"
 ---
 # <a name="sp_approlepassword-transact-sql"></a>sp_approlepassword (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -66,11 +66,11 @@ sp_approlepassword [ @rolename= ] 'role' , [ @newpwd = ] 'password'
 EXEC sp_approlepassword 'PayrollAppRole', '''B3r12-36';  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;보안 저장 프로시저 ](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [응용 프로그램 역할](../../relational-databases/security/authentication-access/application-roles.md)   
+## <a name="see-also"></a>관련 항목  
+ [Security Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [애플리케이션 역할](../../relational-databases/security/authentication-access/application-roles.md)   
  [Transact-sql&#41;sp_addapprole &#40;](../../relational-databases/system-stored-procedures/sp-addapprole-transact-sql.md)   
- [Transact-sql&#41;sp_setapprole &#40;](../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md)   
+ [sp_setapprole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

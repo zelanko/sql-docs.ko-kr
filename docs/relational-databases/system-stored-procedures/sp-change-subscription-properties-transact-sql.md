@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_change_subscription_properties
 ms.assetid: cf8137f9-f346-4aa1-ae35-91a2d3c16f17
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: da197fc6b4cc8b253b3597981a6973e9b77891bb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ad4761fdbac615ad453741a0b01d410ca3b5d572
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88493436"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89528852"
 ---
 # <a name="sp_change_subscription_properties-transact-sql"></a>sp_change_subscription_properties(Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -64,7 +64,7 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
   
  다음 표에서는 아티클의 속성 및 해당 속성의 값을 설명합니다.  
   
-|속성|값|설명|  
+|속성|값|Description|  
 |--------------|-----------|-----------------|  
 |**alt_snapshot_folder**||스냅샷의 대체 폴더 위치를 지정합니다. NULL로 설정하면 게시자가 지정한 기본 위치에서 스냅샷 파일이 선택됩니다.|  
 |**distrib_job_login**||에이전트가 실행되는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 계정의 로그인입니다.|  

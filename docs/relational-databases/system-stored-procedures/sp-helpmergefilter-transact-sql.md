@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpmergefilter
 ms.assetid: f133a094-0009-4771-b93b-e86a5c01e40b
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 7051213a6543a1dc964fe011f95f48d15cd788ce
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: faa3b2922f8d73875b5213603b980560d69465ff
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474019"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89526994"
 ---
 # <a name="sp_helpmergefilter-transact-sql"></a>sp_helpmergefilter(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -72,9 +72,9 @@ sp_helpmergefilter [ @publication= ] 'publication'
  **Sysadmin** 고정 서버 역할 및 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_helpmergefilter**을 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;sp_addmergefilter &#40;](../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md)   
- [Transact-sql&#41;sp_changemergefilter &#40;](../../relational-databases/system-stored-procedures/sp-changemergefilter-transact-sql.md)   
- [Transact-sql&#41;sp_dropmergefilter &#40;](../../relational-databases/system-stored-procedures/sp-dropmergefilter-transact-sql.md)   
+ [sp_addmergefilter&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md)   
+ [sp_changemergefilter&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergefilter-transact-sql.md)   
+ [sp_dropmergefilter&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergefilter-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

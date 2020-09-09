@@ -19,14 +19,14 @@ helpviewer_keywords:
 - sp_backup_config_optional
 - managed_backup.sp_backup_config_optional
 ms.assetid: 4fae8193-1f88-48fd-a94a-4786efe8d6af
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: d092851d710de96e9c1b06d2866183a7dfac01bc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 877b9d2db59ba060c766a27b6b040a6b0f48dc73
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464695"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89529487"
 ---
 # <a name="managed_backupsp_backup_config_advanced-transact-sql"></a>managed_backup. sp_backup_config_advanced (Transact-sql)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -97,7 +97,7 @@ Go
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [managed_backup. sp_backup_config_basic (Transact-sql)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md)   
  [managed_backup.sp_backup_config_schedule&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-schedule-transact-sql.md)  
   
