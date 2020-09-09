@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_xtp_checkpoint_stats dynamic management view
 ms.assetid: 8d0b18ca-db4d-4376-9905-3e4457727c46
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 72af811bb5c3f9f5b3fdded8589bec4ef34806fb
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: 66532a6ed19dc3a7929fe7d5638fa850c893d119
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442838"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89542330"
 ---
 # <a name="sysdm_db_xtp_checkpoint_stats-transact-sql"></a>sys.dm_db_xtp_checkpoint_stats(Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -40,7 +40,7 @@ USE In_Memory_db_name
 SELECT * FROM sys.dm_db_xtp_checkpoint_stats;  
 ```  
   
-**[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]는 최신 버전과 상당히 다르며 [SQL Server 2014](#bkmk_2014)의 항목에서 더 자세히 설명 합니다.**
+**[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 는 최신 버전과 상당히 다르며 [SQL Server 2014](#bkmk_2014)의 항목에서 더 자세히 설명 합니다.**
   
 ## <a name="sssql15-and-later"></a>[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상.  
  다음 표에서는부터 시작 하 여의 열에 대해 설명 합니다 `sys.dm_db_xtp_checkpoint_stats` **[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]** .  

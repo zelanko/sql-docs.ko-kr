@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_replmonitorchangepublicationthreshold
 ms.assetid: 2c3615d8-4a1a-4162-b096-97aefe6ddc16
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: e09946d4a705aa695b4049ac887cbb0b465ee9d3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 6114d52b0db23d04c3b8cf001b0881dbc38844a6
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85749279"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543154"
 ---
 # <a name="sp_replmonitorchangepublicationthreshold-transact-sql"></a>sp_replmonitorchangepublicationthreshold(Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -46,13 +46,13 @@ sp_replmonitorchangepublicationthreshold [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @publisher = ] 'publisher'`게시자의 이름입니다. *publisher* 는 **sysname**이며 기본값은 없습니다.  
+`[ @publisher = ] 'publisher'` 게시자의 이름입니다. *publisher* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @publisher_db = ] 'publisher_db'`게시 된 데이터베이스의 이름입니다. *publisher_db* 는 **sysname**이며 기본값은 없습니다.  
+`[ @publisher_db = ] 'publisher_db'` 게시 된 데이터베이스의 이름입니다. *publisher_db* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @publication = ] 'publication'`모니터링 임계값 특성이 변경 되는 게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 없습니다.  
+`[ @publication = ] 'publication'` 모니터링 임계값 특성이 변경 되는 게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @publication_type = ] publication_type`게시의 유형입니다. *publication_type* 은 **int**이며 다음 값 중 하나일 수 있습니다.  
+`[ @publication_type = ] publication_type` 게시의 유형입니다. *publication_type* 은 **int**이며 다음 값 중 하나일 수 있습니다.  
   
 |값|Description|  
 |-----------|-----------------|  
@@ -61,7 +61,7 @@ sp_replmonitorchangepublicationthreshold [ @publisher = ] 'publisher'
 |**2**|병합 게시|  
 |NULL(기본값)|복제에서 게시 유형을 확인하려고 합니다.|  
   
-`[ @metric_id = ] metric_id`변경 중인 게시 임계값 메트릭의 ID입니다. *metric_id* 은 **int**이며 기본값은 NULL이 고 다음 값 중 하나일 수 있습니다.  
+`[ @metric_id = ] metric_id` 변경 중인 게시 임계값 메트릭의 ID입니다. *metric_id* 은 **int**이며 기본값은 NULL이 고 다음 값 중 하나일 수 있습니다.  
   
 |값|메트릭 이름|  
 |-----------|-----------------|  
@@ -75,13 +75,13 @@ sp_replmonitorchangepublicationthreshold [ @publisher = ] 'publisher'
   
  *Metric_id* 또는 *thresholdmetricname*중 하나를 지정 해야 합니다. *Thresholdmetricname* 를 지정 하는 경우 *metric_id* 은 NULL 이어야 합니다.  
   
-`[ @thresholdmetricname = ] 'thresholdmetricname'`변경 중인 게시 임계값 메트릭의 이름입니다. *thresholdmetricname* 는 **sysname**이며 기본값은 NULL입니다. *Thresholdmetricname* 또는 *metric_id*중 하나를 지정 해야 합니다. *Metric_id* 지정 된 경우 *thresholdmetricname* 는 NULL 이어야 합니다.  
+`[ @thresholdmetricname = ] 'thresholdmetricname'` 변경 중인 게시 임계값 메트릭의 이름입니다. *thresholdmetricname* 는 **sysname**이며 기본값은 NULL입니다. *Thresholdmetricname* 또는 *metric_id*중 하나를 지정 해야 합니다. *Metric_id* 지정 된 경우 *thresholdmetricname* 는 NULL 이어야 합니다.  
   
-`[ @value = ] value`게시 임계값 메트릭의 새 값입니다. *값* 은 **int**이며 기본값은 NULL입니다. **Null**인 경우 메트릭 값은 업데이트 되지 않습니다.  
+`[ @value = ] value` 게시 임계값 메트릭의 새 값입니다. *값* 은 **int**이며 기본값은 NULL입니다. **Null**인 경우 메트릭 값은 업데이트 되지 않습니다.  
   
-`[ @shouldalert = ] shouldalert`게시 임계값 메트릭에 도달 하면 경고가 생성 되는지 여부입니다. *shouldalert* 은 **bit**이며 기본값은 NULL입니다. 값이 **1** 이면 경고가 생성 되 고 값이 **0** 이면 경고가 생성 되지 않습니다.  
+`[ @shouldalert = ] shouldalert` 게시 임계값 메트릭에 도달 하면 경고가 생성 되는지 여부입니다. *shouldalert* 은 **bit**이며 기본값은 NULL입니다. 값이 **1** 이면 경고가 생성 되 고 값이 **0** 이면 경고가 생성 되지 않습니다.  
   
-`[ @mode = ] mode`게시 임계값 메트릭이 활성화 되어 있는지 여부입니다. *mode* 는 **tinyint**이며 기본값은 **1**입니다. 값이 **1** 이면이 메트릭에 대 한 모니터링이 사용 하도록 설정 되 고 값이 **2** 이면이 메트릭에 대 한 모니터링이 사용 되지 않음을 의미 합니다.  
+`[ @mode = ] mode` 게시 임계값 메트릭이 활성화 되어 있는지 여부입니다. *mode* 는 **tinyint**이며 기본값은 **1**입니다. 값이 **1** 이면이 메트릭에 대 한 모니터링이 사용 하도록 설정 되 고 값이 **2** 이면이 메트릭에 대 한 모니터링이 사용 되지 않음을 의미 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

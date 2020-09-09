@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changemergearticle
 ms.assetid: 0dc3da5c-4af6-45be-b5f0-074da182def2
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 8775928ede4fd92072bd91e39bc9652bb7db53a5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 994efc8752017757bbced6df16fed2b6a4955eb1
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88469741"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89541911"
 ---
 # <a name="sp_changemergearticle-transact-sql"></a>sp_changemergearticle(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -53,13 +53,13 @@ sp_changemergearticle [ @publication = ] 'publication'
   
  다음 표에서는 아티클의 속성 및 해당 속성의 값을 설명합니다.  
   
-|속성|값|설명|  
+|속성|값|Description|  
 |--------------|------------|-----------------|  
 |**allow_interactive_resolver**|**true**|아티클에 대해 대화형 해결 프로그램을 사용합니다.|  
 ||**false**|아티클에 대해 대화형 해결 프로그램을 사용하지 않습니다.|  
 |**article_resolver**||아티클에 대한 사용자 지정 해결 프로그램입니다. 테이블 아티클에만 적용됩니다.|  
 |**check_permissions** (비트맵)|**0x00**|테이블 수준 권한을 확인하지 않습니다.|  
-||**10**|구독자에서 작성된 INSERT 문이 게시자에 적용되기 전에 게시자에서 테이블 수준 권한을 확인합니다.|  
+||**0x10**|구독자에서 작성된 INSERT 문이 게시자에 적용되기 전에 게시자에서 테이블 수준 권한을 확인합니다.|  
 ||**0x20**|구독자에서 작성된 UPDATE 문이 게시자에 적용되기 전에 게시자에서 테이블 수준 권한을 확인합니다.|  
 ||**0x40**|구독자에서 작성된 DELETE 문이 게시자에 적용되기 전에 게시자에서 테이블 수준 권한을 확인합니다.|  
 |**column_tracking**|**true**|열 수준 추적을 설정합니다. 테이블 아티클에만 적용됩니다.<br /><br /> 참고: 246 개 이상의 열이 있는 테이블을 게시 하는 경우 열 수준 추적을 사용할 수 없습니다.|  
@@ -84,7 +84,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 ||**3**|아티클을 필터링하면 각 구독에 고유한 겹치지 않는 파티션이 생성됩니다.<br /><br /> 참고: **partition_options**에 값 **3** 을 지정 하면 해당 아티클의 각 데이터 파티션에 대해 구독이 하나만 있을 수 있습니다. 새 구독의 필터링 조건이 기존 구독과 동일한 파티션을 사용하도록 하여 두 번째 구독이 생성될 경우 기존 구독이 삭제됩니다.|  
 |**pre_creation_command**|**없음**|구독자에 이미 테이블이 존재하는 경우 아무런 동작이 발생하지 않습니다.|  
 ||**delete**|하위 집합 필터의 WHERE 절을 기반으로 하여 삭제를 실행합니다.|  
-||**drop**|테이블을 다시 만들기 전에 삭제합니다.|  
+||**그림자**|테이블을 다시 만들기 전에 삭제합니다.|  
 ||**잘라내야**|대상 테이블을 자릅니다.|  
 |**processing_order**||병합 게시에서 아티클의 처리 순서를 나타내는 **int** 입니다.|  
 |**pub_identity_range**||아티클의 **identityrangemanagementoption** 가 **auto** 로 설정 되거나 **auto_identity_range** **true**로 설정 된 경우 서버 구독이 있는 구독자에 할당 된 범위 크기를 지정 하는 **bigint** 입니다. 이 ID 범위는 재게시 구독자가 해당 구독자에게 할당하도록 예약됩니다. 테이블 아티클에만 적용됩니다. 자세한 내용은 [Id 열 복제](../../relational-databases/replication/publish/replicate-identity-columns.md)의 "병합 복제" 섹션을 참조 하세요.|  
@@ -94,7 +94,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 |**schema_option** (비트맵)||자세한 내용은 이 항목의 뒷부분에 나오는 주의 섹션을 참조하십시오.|  
 ||**0x00**|스냅숏 에이전트에서 스크립팅을 사용 하지 않도록 설정 하 고 **creation_script**에 제공 된 스크립트를 사용 합니다.|  
 ||**0x01**|개체 만들기 스크립트(CREATE TABLE, CREATE PROCEDURE 등)를 생성합니다.|  
-||**10**|해당 클러스터형 인덱스를 생성합니다.|  
+||**0x10**|해당 클러스터형 인덱스를 생성합니다.|  
 ||**0x20**|사용자 정의 데이터 형식을 구독자에서의 기본 데이터 형식으로 변환합니다. UDT 열에 CHECK 또는 DEFAULT 제약 조건이 있거나 UDT(사용자 정의 형식) 열이 기본 키의 일부이거나 계산 열이 UDT 열을 참조하는 경우 이 옵션을 사용할 수 없습니다.|  
 ||**0x40**|해당 비클러스터형 인덱스를 생성합니다.|  
 ||**0x80**|기본 키에 대해 선언된 참조 무결성을 포함합니다.|  
@@ -237,11 +237,11 @@ sp_changemergearticle [ @publication = ] 'publication'
 ## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할 또는 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_changemergearticle**을 실행할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [아티클 속성 보기 및 수정](../../relational-databases/replication/publish/view-and-modify-article-properties.md)   
  [게시 및 아티클 속성 변경](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
  [Transact-sql&#41;sp_addmergearticle &#40;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)   
- [Transact-sql&#41;sp_dropmergearticle &#40;](../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md)   
+ [sp_dropmergearticle&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md)   
  [sp_helpmergearticle&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)   
  [복제 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   

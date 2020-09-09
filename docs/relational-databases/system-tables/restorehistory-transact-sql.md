@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - restorehistory system table
 ms.assetid: 9140ecc1-d912-4d76-ae70-e2a857da6d44
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 26b3d319738ce827d482aafcfb76f91cc2ab53ba
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 03b5887ee905d5a39bce5ef9e73e78e27b581972
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88460298"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89540846"
 ---
 # <a name="restorehistory-transact-sql"></a>restorehistory(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "88460298"
 |**destination_database_name**|**nvarchar(128)**|복원 작업용 대상 데이터베이스의 이름입니다. NULL일 수 있습니다.|  
 |**user_name**|**nvarchar(128)**|복원 작업을 수행한 사용자의 이름입니다. NULL일 수 있습니다.|  
 |**backup_set_id**|**int**|복원되는 백업 세트를 나타내는 고유 ID입니다. **Backupset (backup_set_id)** 를 참조 합니다.|  
-|**restore_type**|**char (1)**|복원 작업의 유형입니다.<br /><br /> D = 데이터베이스<br /><br /> F = 파일<br /><br /> G = 파일 그룹<br /><br /> I = 차등<br /><br /> L = 로그<br /><br /> V = Verifyonly<br /><br /> NULL일 수 있습니다.|  
+|**restore_type**|**char(1)**|복원 작업의 유형입니다.<br /><br /> D = 데이터베이스<br /><br /> F = 파일<br /><br /> G = 파일 그룹<br /><br /> I = 차등<br /><br /> L = 로그<br /><br /> V = Verifyonly<br /><br /> NULL일 수 있습니다.|  
 |**replace**|**bit**|복원 작업이 REPLACE 옵션을 지정했는지 여부를 나타냅니다.<br /><br /> 1 = 지정됨<br /><br /> 0 = 지정되지 않음<br /><br /> NULL일 수 있습니다.<br /><br /> 데이터베이스가 데이터베이스 스냅샷으로 되돌린 경우 0만 사용합니다.|  
 |**recovery**|**bit**|복원 작업이 RECOVERY 또는 NORECOVERY 옵션을 지정했는지 여부를 나타냅니다.<br /><br /> 1 = RECOVERY<br /><br /> NULL일 수 있습니다.<br /><br /> 데이터베이스를 데이터베이스 스냅숏으로 되돌린 경우에는 1 개의 옵션만 선택할 수 있습니다.<br /><br /> 0 = NORECOVERY|  
 |**restart**|**bit**|복원 작업이 RESTART 옵션을 지정했는지 여부를 나타냅니다.<br /><br /> 1 = 지정됨<br /><br /> 0 = 지정되지 않음<br /><br /> NULL일 수 있습니다.<br /><br /> 데이터베이스가 데이터베이스 스냅샷으로 되돌린 경우 0만 사용합니다.|  

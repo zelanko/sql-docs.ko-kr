@@ -17,14 +17,14 @@ helpviewer_keywords:
 - sp_syscollector_set_cache_window stored procedure
 - data collector [SQL Server], stored procedures
 ms.assetid: 660f2749-392f-46bf-89f3-27764d848507
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 25c6c07ebb04f983de4e60b2798e8bcff8c35adf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 81d1be542b93a1ceb7bd699e2dbc07a7f3884fa4
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88493016"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89541505"
 ---
 # <a name="sp_syscollector_set_cache_window-transact-sql"></a>sp_syscollector_set_cache_window(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +45,7 @@ sp_syscollector_set_cache_window [ @cache_window = ] cache_window
  [ @cache_window =] *cache_window*  
  데이터 손실이 없는 오류 발생 시에 관리 데이터 웨어하우스에 대한 데이터 업로드를 다시 시도하는 횟수입니다. *cache_window* 은 **int** 이며 기본값은 1입니다. *cache_window* 는 다음 값 중 하나를 사용할 수 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |-1|실패한 이전 업로드의 업로드 데이터를 모두 캐시합니다.|  
 |0|실패한 업로드의 데이터를 캐시하지 않습니다.|  
@@ -74,7 +74,7 @@ EXECUTE dbo.sp_syscollector_enable_collector;
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;시스템 저장 프로시저 ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sp_syscollector_set_cache_directory&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-set-cache-directory-transact-sql.md)  
   
   

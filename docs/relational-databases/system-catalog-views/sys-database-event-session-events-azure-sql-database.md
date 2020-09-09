@@ -9,15 +9,15 @@ ms.reviewer: ''
 ms.technology: system-objects
 ms.topic: language-reference
 ms.assetid: f4c9eb0a-173c-4c66-8dd8-6f7176b2657f
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c6234e6b9c6cc2cfeb48b01fd2a2541ec2244678
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: d116c44d686398f4cb76d3443f10c8a85309727f
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88646352"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89542589"
 ---
 # <a name="sysdatabase_event_session_events-azure-sql-database"></a>sys.database_event_session_events(Azure SQL Database)
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "88646352"
 ## <a name="remarks"></a>설명  
  이 뷰는 다음과 같은 관계 카디널리티를 가집니다.  
   
-| 보낸 사람 | 대상 | 관계 |
+| 시작 | 대상 | 관계 |
 | ---- | -- | ------------ |
 |database_event_session_events. event_session_id|database_event_sessions. event_session_id|다 대 일|  
   

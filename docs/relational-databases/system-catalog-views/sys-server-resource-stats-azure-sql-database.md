@@ -4,7 +4,6 @@ title: server_resource_stats (Azure SQL Database) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/28/2018
 ms.service: sql-database
-ms.reviewer: carlrab, edmaca
 ms.topic: language-reference
 f1_keywords:
 - resource_stats
@@ -20,12 +19,12 @@ ms.assetid: ''
 author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
-ms.openlocfilehash: ef3f27b814405cf6ca56a47ffcac8dd467f939f7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ed975dd768bc9d7979dd254fddec715ed07b3b2f
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88376709"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89542511"
 ---
 # <a name="sysserver_resource_stats-azure-sql-database"></a>server_resource_stats (Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -37,7 +36,7 @@ Azure SQL Managed Instance에 대 한 CPU 사용량, IO 및 저장소 데이터�
   
  다음 표에는 v12 서버에서 사용할 수 있는 열이 설명되어 있습니다.  
   
-|열|데이터 형식|설명|  
+|열|데이터 형식|Description|  
 |----------------------------|---------------|-----------------|  
 |start_time|**datetime2**|15 초 보고 간격의 시작을 나타내는 UTC 시간입니다.|  
 |end_time|**datetime**|15 초 보고 간격의 끝을 나타내는 UTC 시간입니다.|

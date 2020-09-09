@@ -18,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.database_audit_specifications catalog view
 ms.assetid: bf80e5c6-0588-4eb7-86ff-aa7c73461335
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: c2a8125bd67a5de2a3e88dab7e108b6e570f4bf9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a4e3a7d73b8464d11e4ecab1e603805bd9d41a05
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88469936"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89542614"
 ---
 # <a name="sysdatabase_audit_specifications-transact-sql"></a>sys.database_audit_specifications(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,8 +49,8 @@ ms.locfileid: "88469936"
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]. 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
-## <a name="see-also"></a>참고 항목  
- [서버 감사 &#40;Transact-sql&#41;만들기 ](../../t-sql/statements/create-server-audit-transact-sql.md)   
+## <a name="see-also"></a>관련 항목  
+ [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   
  [ALTER SERVER AUDIT  &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-transact-sql.md)   
  [DROP SERVER AUDIT  &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-transact-sql.md)   
  [CREATE SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-specification-transact-sql.md)   

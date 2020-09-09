@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_schemafilter
 ms.assetid: 199e869b-2cd2-44ee-b2ee-69edb06a1bc4
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: ad023dd248b3849e4bb900e1891bd655087a51f7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 51edefb63c7ec075e89e9239636207625c4ba1dc
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481102"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89541525"
 ---
 # <a name="sp_schemafilter-transact-sql"></a>sp_schemafilter(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,10 +46,10 @@ sp_schemafilter [ @publisher = ] 'publisher'
   
 `[ @operation = ] 'operation'` 이 스키마에 대해 수행할 작업입니다. *연산은* **nvarchar (4)** 이며 다음 값 중 하나일 수 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**add**|지정된 스키마를 게시에 적합하지 않은 스키마 목록에 추가합니다.|  
-|**drop**|지정된 스키마를 게시에 적합하지 않은 스키마 목록에서 삭제합니다.|  
+|**그림자**|지정된 스키마를 게시에 적합하지 않은 스키마 목록에서 삭제합니다.|  
 |**help**|게시에 적합하지 않은 스키마 목록을 반환합니다.|  
   
 ## <a name="result-sets"></a>결과 집합  

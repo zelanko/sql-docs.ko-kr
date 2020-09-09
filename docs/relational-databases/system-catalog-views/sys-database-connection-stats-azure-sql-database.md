@@ -17,16 +17,16 @@ helpviewer_keywords:
 - sys.database_connection_stats
 - database_connection_stats
 ms.assetid: 5c8cece0-63b0-4dee-8db7-6b43d94027ec
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ms.custom: seo-dt-2019
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 6011eb41fd70ca892a940881ceee398a08983952
-ms.sourcegitcommit: ce5197686e8e2592f9e0a4b1a4e8ea0681e26c41
+ms.openlocfilehash: 2a3d57bb4ba8c36778d3d4e552d9a69bd285db9e
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89432655"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89542597"
 ---
 # <a name="sysdatabase_connection_stats-azure-sql-database"></a>sys.database_connection_stats(Azure SQL Database)
 
@@ -34,10 +34,10 @@ ms.locfileid: "89432655"
 
   데이터베이스 연결 이벤트에 대 한 통계 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 를 포함 하 여 데이터베이스 연결 성공 및 실패에 대 한 개요를 제공 합니다. **connectivity** 연결 이벤트에 대 한 자세한 내용은 [event_log &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md)에서 이벤트 유형을 참조 하세요.  
   
-|통계|Type|설명|  
+|통계|Type|Description|  
 |---------------|----------|-----------------|  
 |**database_name**|**sysname**|데이터베이스의 이름입니다.|  
-|**start_time**|**datetime2**|집계 간격 시작의 UTC 날짜 및 시간입니다. 시간은 항상 5분의 배수입니다. 예:<br /><br /> '2011-09-28 16:00:00'<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  
+|**start_time**|**datetime2**|집계 간격 시작의 UTC 날짜 및 시간입니다. 시간은 항상 5분의 배수입니다. 예를 들면 다음과 같습니다.<br /><br /> '2011-09-28 16:00:00'<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  
 |**end_time**|**datetime2**|집계 간격 끝의 UTC 날짜 및 시간입니다. **End_time** 은 항상 같은 행에 있는 해당 **start_time** 보다 정확히 5 분 후입니다.|  
 |**success_count**|**int**|성공한 연결 수:|  
 |**total_failure_count**|**int**|실패한 연결의 총 수입니다. **Connection_failure_count**, **terminated_connection_count**및 **throttled_connection_count**의 합계 이며, 교착 상태 이벤트를 포함 하지 않습니다.|  

@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_xtp_hash_index_stats (dynamic management view)
 ms.assetid: 45969884-cd61-48e8-aee5-c725c78e3e4c
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 219fc6e3624e3a305481d661748a0f1a5ff87d6a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5e8b28d292de4d860a8e46f7a679e42d99ac8c88
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88475043"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89542264"
 ---
 # <a name="sysdm_db_xtp_hash_index_stats-transact-sql"></a>sys.dm_db_xtp_hash_index_stats(Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "88475043"
   
 자세한 내용은 [메모리 액세스에 최적화 된 테이블의 해시 인덱스](../../relational-databases/sql-server-index-design-guide.md#hash_index)를 참조 하세요.  
   
-|열 이름|Type|설명|  
+|열 이름|Type|Description|  
 |-----------------|----------|-----------------|  
 |object_id|**int**|부모 테이블의 개체 ID입니다.|  
 |xtp_object_id|**bigint**|메모리 액세스에 최적화 된 테이블의 ID입니다.|  

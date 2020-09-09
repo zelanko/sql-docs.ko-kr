@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_xtp_checkpoint_files dynamic management view
 ms.assetid: ac8e6333-7a9f-478a-b446-5602283e81c9
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a4c4579fa8c2b891644e462ffd896e67862be8ca
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: eb13f60dd50a324795b705b3b99d6cf842a23869
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442590"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89542293"
 ---
 # <a name="sysdm_db_xtp_checkpoint_files-transact-sql"></a>sys.dm_db_xtp_checkpoint_files(Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -37,11 +37,11 @@ ms.locfileid: "87442590"
   
  메모리 최적화 파일 그룹은 내부적으로 추가 전용 파일을 사용 하 여 메모리 내 테이블에 삽입 된 행과 삭제 된 행을 저장 합니다. 두 가지 유형의 파일이 있으며, 데이터 파일에는 삽입 된 행이 포함 되 고 델타 파일에는 삭제 된 행에 대 한 참조가 포함 됩니다. 
   
- [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]는 최신 버전과 상당히 다르며 [SQL Server 2014](#bkmk_2014)의 항목에서 더 자세히 설명 합니다.  
+ [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 는 최신 버전과 상당히 다르며 [SQL Server 2014](#bkmk_2014)의 항목에서 더 자세히 설명 합니다.  
   
  자세한 내용은 [메모리 액세스에 최적화 된 개체의 저장소 만들기 및 관리](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)를 참조 하세요.  
   
-##  <a name="sssql15-and-later"></a><a name="bkmk_2016"></a> [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상   
+##  <a name="sssql15-and-later"></a><a name="bkmk_2016"></a> [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상  
  다음 표에서는부터의 열에 대해 설명 합니다 `sys.dm_db_xtp_checkpoint_files` **[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]** .  
   
 |열 이름|Type|Description|  

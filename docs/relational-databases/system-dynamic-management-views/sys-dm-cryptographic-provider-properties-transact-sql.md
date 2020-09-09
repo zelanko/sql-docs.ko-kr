@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_cryptographic_provider_properties dynamic management view
 ms.assetid: 024b0095-6766-4189-a39a-d316c5ec2874
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 562c2884b0eda3488b436c1007c188ec7c64425b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 1e8ff6159cea1f6ca723ed83a73f045f5746967c
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88493796"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89542365"
 ---
 # <a name="sysdm_cryptographic_provider_properties-transact-sql"></a>sys.dm_cryptographic_provider_properties(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "88493796"
 ## <a name="remarks"></a>설명  
  sys.dm_cryptographic_provider_properties 뷰는 누구든지 볼 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [보안 카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [암호화 계층](../../relational-databases/security/encryption/encryption-hierarchy.md)   
  [확장 가능 키 관리 &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)   

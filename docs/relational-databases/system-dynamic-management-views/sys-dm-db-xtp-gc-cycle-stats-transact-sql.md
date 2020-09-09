@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_xtp_gc_cycle_stats dynamic management view
 ms.assetid: bbc9704e-158e-4d32-b693-f00dce31cd2f
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a1a18919675522753775c91712105b1193c4f0aa
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7cd3e4fef0d6d02508ff8b6cd917b1a02a08585e
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88475053"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89542256"
 ---
 # <a name="sysdm_db_xtp_gc_cycle_stats-transact-sql"></a>sys.dm_db_xtp_gc_cycle_stats(Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "88475053"
  자세한 내용은 [메모리 내 OLTP&#40;메모리 내 최적화&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)를 참조하세요.  
   
   
-|열 이름|Type|설명|  
+|열 이름|Type|Description|  
 |-----------------|----------|-----------------|  
 |cycle_id|**bigint**|가비지 수집 주기에 대한 고유 식별자입니다.|  
 |ticks_at_cycle_start|**bigint**|주기가 시작된 시간의 틱입니다.|  

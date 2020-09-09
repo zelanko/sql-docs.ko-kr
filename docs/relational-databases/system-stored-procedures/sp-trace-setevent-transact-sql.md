@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_trace_setevent
 ms.assetid: 7662d1d9-6d0f-443a-b011-c901a8b77a44
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 9f176957bb975ee08ac6ef508a187b189a6123b4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f678427f05b5c3b136a7dfe18e1f51eb91773b91
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480965"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543003"
 ---
 # <a name="sp_trace_setevent-transact-sql"></a>sp_trace_setevent(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -241,7 +241,7 @@ sp_trace_setevent [ @traceid = ] trace_id
   
  다음 표에서는 이벤트에 추가될 수 있는 열을 나열합니다.  
   
-|열 번호|열 이름|설명|  
+|열 번호|열 이름|Description|  
 |-------------------|-----------------|-----------------|  
 |1|**TextData**|추적에서 캡처한 이벤트 클래스에 의존하는 텍스트 값입니다.|  
 |2|**BinaryData**|추적에서 캡처된 이벤트 클래스에 의존하는 이진 값입니다.|  
@@ -299,13 +299,13 @@ sp_trace_setevent [ @traceid = ] trace_id
 |54|**GUID**|추적에서 캡처된 이벤트 클래스에 따라 달라지는 GUID 값입니다.|  
 |55|**IntegerData2**|추적에서 캡처된 이벤트 클래스에 따라 달라지는 정수 값입니다.|  
 |56|**ObjectID2**|관련 개체 또는 엔터티의 ID입니다(사용 가능한 경우).|  
-|57|**유형**|추적에서 캡처된 이벤트 클래스에 따라 달라지는 정수 값입니다.|  
+|57|**형식**|추적에서 캡처된 이벤트 클래스에 따라 달라지는 정수 값입니다.|  
 |58|**OwnerID**|잠금을 소유하는 개체의 유형입니다. 잠금 이벤트 전용입니다.|  
 |59|**ParentName**|개체가 포함된 스키마의 이름입니다.|  
 |60|**IsSystem**|이벤트가 시스템 프로세스에서 발생했는지 아니면 사용자 프로세스에서 발생했는지를 나타냅니다.<br /><br /> **1** = 시스템<br /><br /> **0** = 사용자|  
-|61|**이동**|저장 프로시저나 일괄 처리 내에 있는 문의 시작 오프셋입니다.|  
+|61|**Offset**|저장 프로시저나 일괄 처리 내에 있는 문의 시작 오프셋입니다.|  
 |62|**SourceDatabaseID**|개체의 원본이 있는 데이터베이스의 ID입니다.|  
-|63|**Sqlhandle 대해**|임시 쿼리 또는 데이터베이스의 텍스트 및 SQL 개체의 개체 ID를 기반으로 하는 64비트 해시입니다. 이 값을 **sys. dm_exec_sql_text ()** 에 전달 하 여 연결 된 sql 텍스트를 검색할 수 있습니다.|  
+|63|**SqlHandle**|임시 쿼리 또는 데이터베이스의 텍스트 및 SQL 개체의 개체 ID를 기반으로 하는 64비트 해시입니다. 이 값은 **sys.dm_exec_sql_text()** 에 전달되어 연관된 SQL 텍스트를 검색할 수 있습니다.|  
 |64|**SessionLoginName**|세션을 시작한 사용자의 로그인 이름입니다. 예를 들어 사용자가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Login1 **을 사용하여** 에 연결하고 **Login2**로 문을 실행하는 경우 **SessionLoginName** 은 **Login1**을 표시하고 **LoginName** 은 **Login2**를 표시합니다. 이 데이터 열은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 Windows 로그인을 모두 표시합니다.|  
   
  **[ @on =]** *on*  
@@ -317,7 +317,7 @@ sp_trace_setevent [ @traceid = ] trace_id
   
  다음 표에서는 및 ** \@ columnid**간의 ** \@ 상호 작용을 보여** 줍니다.  
   
-|\@sign-on|\@columnid|결과|  
+|\@On|\@columnid|결과|  
 |---------|---------------|------------|  
 |ON(**1**)|NULL|이벤트를 ON으로 설정합니다.<br /><br /> 모든 열은 지워집니다.|  
 ||NOT NULL|지정한 이벤트에 대한 열을 ON으로 설정합니다.|  

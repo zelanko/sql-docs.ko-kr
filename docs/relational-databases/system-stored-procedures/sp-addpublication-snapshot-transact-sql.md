@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addpublication_snapshot
 ms.assetid: 192b6214-df6e-44a3-bdd4-9d933a981619
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 764147434455852ef09fa70768b3b71d68cc913c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: e59ad9f2fb37ac4bd8aecc18d126c397ec4f67d5
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489623"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89541994"
 ---
 # <a name="sp_addpublication_snapshot-transact-sql"></a>sp_addpublication_snapshot(Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -89,7 +89,7 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
 |값|Description|  
 |-----------|-----------------|  
 |**1**|한 번|  
-|**2**|초|  
+|**2**|Second|  
 |**4** (기본값)|Minute|  
 |**8**|시간|  
   
@@ -147,7 +147,7 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
   
 ## <a name="see-also"></a>참고 항목  
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
- [스냅숏 만들기 및 적용](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)   
+ [스냅샷 만들기 및 적용](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)   
  [Transact-sql&#41;sp_addpublication &#40;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
  [Transact-sql&#41;sp_changepublication_snapshot &#40;](../../relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql.md)   
  [Transact-sql&#41;sp_startpublication_snapshot &#40;](../../relational-databases/system-stored-procedures/sp-startpublication-snapshot-transact-sql.md)   

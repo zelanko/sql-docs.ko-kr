@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_getbindtoken
 ms.assetid: 5db87d77-85fa-45a3-a23a-3ea500f9a5ac
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 74e2e9f849e725702e6e721ad6e2a4653e84f528
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: e0a499cabf4084ab13be08d08f5879bc6eddca31
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88469435"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89541783"
 ---
 # <a name="sp_getbindtoken-transact-sql"></a>sp_getbindtoken(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -53,7 +53,7 @@ sp_getbindtoken [@out_token =] 'return_value' OUTPUT
  None  
   
 ## <a name="remarks"></a>설명  
- sp_getbindtoken은 활성 트랜잭션 내에서 저장 프로시저를 실행 하는 경우에만 유효한 토큰을 반환 합니다. 그렇지 않으면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]이 오류 메시지를 반환합니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.  
+ sp_getbindtoken은 활성 트랜잭션 내에서 저장 프로시저를 실행 하는 경우에만 유효한 토큰을 반환 합니다. 그렇지 않으면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]이 오류 메시지를 반환합니다. 예를 들면 다음과 같습니다.  
   
 ```  
 -- Declare a variable to hold the bind token.  
@@ -66,7 +66,7 @@ Cannot get a transaction token if there is no transaction active.
 Reissue the statement after a transaction has been started.  
 ```  
   
- Sp_getbindtoken를 사용 하 여 열린 트랜잭션 내부에 분산 트랜잭션 연결을 등록 하면는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 동일한 토큰을 반환 합니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.  
+ Sp_getbindtoken를 사용 하 여 열린 트랜잭션 내부에 분산 트랜잭션 연결을 등록 하면는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 동일한 토큰을 반환 합니다. 예를 들면 다음과 같습니다.  
   
 ```  
 USE AdventureWorks2012;  
@@ -128,7 +128,7 @@ SELECT @bind_token AS Token;
   
 ## <a name="see-also"></a>참고 항목  
  [sp_bindsession&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-bindsession-transact-sql.md)   
- [Transact-sql&#41;&#40;시스템 저장 프로시저 ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [srv_getbindtoken &#40;확장 저장 프로시저 API&#41;](../../relational-databases/extended-stored-procedures-reference/srv-getbindtoken-extended-stored-procedure-api.md)  
   
   

@@ -16,14 +16,14 @@ helpviewer_keywords:
 - full-text catalogs [SQL Server], stored procedures
 - system stored procedures [SQL Server], full-text search
 ms.assetid: 0d185a16-2b16-4958-884f-efe675e2e551
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 0edf572ad6ae1e94455abcdba60286b0c6664254
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 4e69a1f01da28883311b96d3a623acc1888c642d
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481637"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89542048"
 ---
 # <a name="full-text-search-and-semantic-search-stored-procedures-transact-sql"></a>전체 텍스트 검색 및 의미 체계 검색 저장 프로시저(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -109,7 +109,7 @@ ms.locfileid: "88481637"
 ## <a name="see-also"></a>참고 항목  
  [Transact-sql&#41;&#40;전체 텍스트 검색 및 의미 체계 검색 카탈로그 뷰 ](../../relational-databases/system-catalog-views/full-text-search-and-semantic-search-catalog-views-transact-sql.md)   
  [Transact-sql&#41;전체 텍스트 검색 및 의미 체계 검색 동적 관리 뷰 및 함수 &#40;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)   
- [Transact-sql&#41;&#40;시스템 저장 프로시저 ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [전체 텍스트 검색](../../relational-databases/search/full-text-search.md)  
   
   

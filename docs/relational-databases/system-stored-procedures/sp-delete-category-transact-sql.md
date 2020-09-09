@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_delete_category
 ms.assetid: 63ea7d0d-a567-456e-a778-bee99e21d16c
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 1d3441ae51bd674f41cce42fe17393bbcb6983df
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: cdeb258bf7a61e5cfa4bafe796729f7c445e8cde
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88493341"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89541836"
 ---
 # <a name="sp_delete_category-transact-sql"></a>sp_delete_category(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +43,7 @@ sp_delete_category [ @class = ] 'class' , [ @name = ] 'name'
 ## <a name="arguments"></a>인수  
 `[ @class = ] 'class'` 범주의 클래스입니다. *클래스* 는 **varchar (8)** 이며 기본값은 없으며 다음 값 중 하나를 사용 해야 합니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**직함**|작업 범주를 제거합니다.|  
 |**오류**|경고 범주를 제거합니다.|  
@@ -78,7 +78,7 @@ EXEC dbo.sp_delete_category
 GO   
 ```  
   
-## <a name="see-also"></a>참조  
+## <a name="see-also"></a>참고 항목  
  [Transact-sql&#41;sp_add_category &#40;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)   
  [Transact-sql&#41;sp_help_category &#40;](../../relational-databases/system-stored-procedures/sp-help-category-transact-sql.md)   
  [Transact-sql&#41;sp_update_category &#40;](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)   

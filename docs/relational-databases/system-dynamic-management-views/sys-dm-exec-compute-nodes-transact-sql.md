@@ -20,15 +20,15 @@ helpviewer_keywords:
 - PolyBase management views
 - dm_exec_compute_nodes management view
 ms.assetid: 0de4b7a4-401f-4e2d-9ab0-c54587e05154
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 62591df1ce4a2a048c544b219f7efcc3fe18aa61
-ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
+ms.openlocfilehash: f92655d1b489ddaf35ec8085d68a2059781ecb48
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89283664"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89542159"
 ---
 # <a name="sysdm_exec_compute_nodes-transact-sql"></a>sys. dm_exec_compute_nodes (Transact-sql)
 
@@ -41,7 +41,7 @@ ms.locfileid: "89283664"
 |열 이름|데이터 형식|Description|범위|  
 |-----------------|---------------|-----------------|-----------|  
 |compute_node_id|**int**|노드와 연결 된 고유 숫자 id입니다. 이 보기의 키입니다.|형식에 관계 없이 스케일 아웃 클러스터에서 고유 합니다.|  
-|type|**nvarchar(32)**|노드의 유형입니다.|' COMPUTE ', ' HEAD '|  
+|형식|**nvarchar(32)**|노드의 유형입니다.|' COMPUTE ', ' HEAD '|  
 |name|**nvarchar(32)**|노드의 논리적 이름입니다.|적절 한 길이의 문자열입니다.|  
 |address|**nvarchar(32)**|이 노드의 IP 주소입니다.|IP 주소 범위|  
   

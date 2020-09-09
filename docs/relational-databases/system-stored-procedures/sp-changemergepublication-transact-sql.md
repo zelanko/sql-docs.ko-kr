@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changemergepublication
 ms.assetid: 81fe1994-7678-4852-980b-e02fedf1e796
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 46fef8eff54b4a27957191e2456df90ff77f72c4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: e909e343a22ca1a249e5de03bc5eb64948e982cd
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474495"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89541913"
 ---
 # <a name="sp_changemergepublication-transact-sql"></a>sp_changemergepublication(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -50,7 +50,7 @@ sp_changemergepublication [ @publication= ] 'publication'
   
  이 표에서는 변경할 수 있는 게시의 속성 및 그 속성의 값에 대한 제한에 대해 설명합니다.  
   
-|속성|값|설명|  
+|속성|값|Description|  
 |--------------|-----------|-----------------|  
 |**allow_anonymous**|**true**|익명 구독을 허용합니다.|  
 ||**false**|익명 구독을 허용하지 않습니다.|  
@@ -114,7 +114,7 @@ sp_changemergepublication [ @publication= ] 'publication'
 |**status**|**active**|게시가 활성 상태입니다.|  
 ||**inactive**|게시가 비활성 상태입니다.|  
 |**sync_mode**|**네이티브** 또는<br /><br /> **bcp 네이티브**|초기 스냅샷에 모든 테이블의 기본 모드 대량 복사 프로그램 출력을 사용합니다.|  
-||**자의**<br /><br /> 또는 **bcp 문자**|초기 스냅샷에 모든 테이블의 문자 모드 대량 복사 프로그램 출력을 사용합니다. 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 구독자의 경우에 필요합니다.|  
+||**character**<br /><br /> 또는 **bcp 문자**|초기 스냅샷에 모든 테이블의 문자 모드 대량 복사 프로그램 출력을 사용합니다. 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 구독자의 경우에 필요합니다.|  
 |**use_partition_groups**<br /><br /> 참고: partition_groups을 사용한 후 **setupbelongs**사용 하 여 되돌리고 **changemergearticle**에서 **use_partition_groups = false** 로 설정 하는 경우 스냅숏이 생성 된 후에 올바르게 반영 되지 않을 수 있습니다. 스냅샷이 생성하는 트리거는 파티션 그룹과 호환됩니다.<br /><br /> 이 시나리오에 대 한 해결 방법은 상태를 비활성으로 설정 하 고 **use_partition_groups**를 수정한 다음 상태를 활성으로 설정 하는 것입니다.|**true**|게시에서 사전 계산 파티션을 사용합니다.|  
 ||**false**|게시에서 사전 계산 파티션을 사용하지 않습니다.|  
 |**validate_subscriber_info**||구독자 정보를 검색하는 데 사용할 함수를 나열하고 구독자가 정보가 일관성 있게 분할되는지 확인하기 위해 사용하는 동적 필터링 조건의 유효성을 검사합니다.|  

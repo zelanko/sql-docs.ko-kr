@@ -18,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.database_audit_specification_details catalog view
 ms.assetid: 03fc60a9-1696-4109-b15e-a50046310859
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 7130cda8c6c43b8bde1edda58d04c6d3fff0e5d0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: c8bc8e09e9f48a7fc37b1ba0f1d308f3e17fde46
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88402359"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89542625"
 ---
 # <a name="sysdatabase_audit_specification_details-transact-sql"></a>sys.database_audit_specification_details(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,15 +43,15 @@ ms.locfileid: "88402359"
 |**minor_id**|**정수**|Table Audit 동작의 열 ID와 같이 클래스에 따라 해석되어 감사 중인 개체의 보조 ID입니다.|  
 |**audited_principal_id**|**int**|감사 중인 보안 주체입니다.|  
 |**audited_result**|**Nvarchar (60)**|감사 동작 결과:<br /><br /> - SUCCESS AND FAILURE - SUCCESS<br /><br /> - FAILURE|  
-|**is_group**|**조금**|다음은 개체가 그룹인지 여부를 보여 줍니다.<br /><br /> 0 - 그룹 아님<br /><br /> 1 - 그룹임|  
+|**is_group**|**bit**|다음은 개체가 그룹인지 여부를 보여 줍니다.<br /><br /> 0 - 그룹 아님<br /><br /> 1 - 그룹임|  
   
 ## <a name="permissions"></a>사용 권한  
  **ALTER ANY DATABASE AUDIT** 또는 **VIEW DEFINITION** 권한이 있는 보안 주체, **dbo** 역할 및 **db_owners** 고정 데이터베이스 역할의 멤버는이 카탈로그 뷰에 액세스할 수 있습니다. 또한 보안 주체에 게 **VIEW DEFINITION** 권한이 거부 되지 않아야 합니다.  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
-## <a name="see-also"></a>참고 항목  
- [서버 감사 &#40;Transact-sql&#41;만들기 ](../../t-sql/statements/create-server-audit-transact-sql.md)   
+## <a name="see-also"></a>관련 항목  
+ [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   
  [ALTER SERVER AUDIT  &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-transact-sql.md)   
  [DROP SERVER AUDIT  &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-transact-sql.md)   
  [CREATE SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-specification-transact-sql.md)   

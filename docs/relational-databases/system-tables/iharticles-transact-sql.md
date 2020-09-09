@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - IHarticles system table
 ms.assetid: 773ef9b7-c993-4629-9516-70c47b9dcf65
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 1ef51387b774f8961cb7abe30f2af4615adc0973
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: fc67de5d66f897ccc54a1cc06cf88aac35e572b5
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88419237"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89540973"
 ---
 # <a name="iharticles-transact-sql"></a>IHarticles(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "88419237"
 |**publisher_id**|**smallint**|SQL Server 이외 게시자의 ID입니다.|  
 |**creation_script**|**nvarchar(255)**|아티클에 대한 스키마 스크립트입니다.|  
 |**del_cmd**|**nvarchar(255)**|삭제를 복제할 때 테이블 아티클에서 사용되는 복제 명령 유형입니다. 자세한 내용은 [트랜잭션 아티클에 대한 변경 내용을 전파하는 방법 지정](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)을 참조하세요.|  
-|**필터가**|**int**|이 열은 사용 되지 않으며 **IHarticles** 테이블의 [sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md) 뷰가 SQL Server 아티클에 사용 되는 [sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md) 뷰 ([sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md))와 호환 되도록 하기 위해서만 포함 됩니다.|  
+|**filter**|**int**|이 열은 사용 되지 않으며 **IHarticles** 테이블의 [sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md) 뷰가 SQL Server 아티클에 사용 되는 [sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md) 뷰 ([sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md))와 호환 되도록 하기 위해서만 포함 됩니다.|  
 |**filter_clause**|**ntext**|아티클의 WHERE 절로서 행 필터링에 사용되며 SQL 게시자가 아닌 게시자가 해석할 수 있는 표준 Transact-SQL로 작성됩니다.|  
 |**ins_cmd**|**nvarchar(255)**|삽입을 복제할 때 테이블 아티클에서 사용되는 복제 명령 유형입니다. 자세한 내용은 [트랜잭션 아티클에 대한 변경 내용을 전파하는 방법 지정](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)을 참조하세요.|  
 |**pre_creation_cmd**|**tinyint**|같은 이름을 가진 개체가 이미 구독자에 존재하는 경우 초기 스냅샷을 적용하기 전에 실행하는 명령입니다.<br /><br /> **0** = None-명령이 실행 되지 않습니다.<br /><br /> **1** = 대상 테이블을 삭제 합니다.<br /><br /> **2** = delete-대상 테이블에서 데이터를 삭제 합니다.<br /><br /> **3** = 자르기-대상 테이블을 자릅니다.|  

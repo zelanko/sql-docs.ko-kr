@@ -17,15 +17,15 @@ helpviewer_keywords:
 - sys.dm_db_wait_stats dynamic management view
 - dm_db_wait_stats
 ms.assetid: 00abd0a5-bae0-4d71-b173-f7a14cddf795
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: c8932754b69fab7086f0eb6a98d979e93669daff
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 555bdfd47a44fa2d8be2e59be3a18f0b55a6fdd5
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88493776"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89542301"
 ---
 # <a name="sysdm_db_wait_stats-azure-sql-database"></a>sys.dm_db_wait_stats(Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -169,7 +169,7 @@ ms.locfileid: "88493776"
 |FSAGENT|FILESTREAM 파일 I/O 작업이 다른 파일 I/O 작업에 사용되는 FILESTREAM 에이전트 리소스를 기다리는 경우에 발생합니다.|  
 |FSTR_CONFIG_MUTEX|다른 FILESTREAM 기능 다시 구성 작업이 완료될 때까지 대기하는 경우에 발생합니다.|  
 |FSTR_CONFIG_RWLOCK|FILESTREAM 구성 매개 변수에 대한 액세스 직렬화를 대기하는 경우에 발생합니다.|  
-|FT_METADATA_MUTEX|정보를 제공하기 위해서만 문서화됩니다. 지원되지 않습니다. 향후 호환성은 보장되지 않습니다.|  
+|FT_METADATA_MUTEX|정보를 제공하기 위해서만 문서화됩니다. 지원 안 됨 향후 호환성은 보장되지 않습니다.|  
 |FT_RESTART_CRAWL|임시 오류로부터 복구하기 위해 마지막으로 알려진 양호 지점부터 전체 텍스트 탐색을 다시 시작해야 하는 경우에 발생합니다. 이 대기를 사용하면 해당 채우기에서 현재 작동 중인 작업자 태스크가 현재 단계를 완료하거나 종료할 수 있습니다.|  
 |FULLTEXT GATHERER|전체 텍스트 작업을 동기화하는 경우에 발생합니다.|  
 |GUARDIAN|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
@@ -380,11 +380,11 @@ ms.locfileid: "88493776"
 |XE_MODULEMGR_SYNC|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |XE_OLS_LOCK|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |XE_PACKAGE_LOCK_BACKOFF|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|FT_COMPROWSET_RWLOCK|전체 텍스트가 조각 메타데이터 작업에서 대기 중입니다. 정보를 제공하기 위해서만 문서화됩니다. 지원되지 않습니다. 향후 호환성은 보장되지 않습니다.|  
-|FT_IFTS_RWLOCK|전체 텍스트가 내부 동기화에서 대기 중입니다. 정보를 제공하기 위해서만 문서화됩니다. 지원되지 않습니다. 향후 호환성은 보장되지 않습니다.|  
+|FT_COMPROWSET_RWLOCK|전체 텍스트가 조각 메타데이터 작업에서 대기 중입니다. 정보를 제공하기 위해서만 문서화됩니다. 지원 안 됨 향후 호환성은 보장되지 않습니다.|  
+|FT_IFTS_RWLOCK|전체 텍스트가 내부 동기화에서 대기 중입니다. 정보를 제공하기 위해서만 문서화됩니다. 지원 안 됨 향후 호환성은 보장되지 않습니다.|  
 |FT_IFTS_SCHEDULER_IDLE_WAIT|전체 텍스트 스케줄러 중지 대기 유형입니다. 스케줄러가 유휴 상태입니다.|  
-|FT_IFTSHC_MUTEX|전체 텍스트가 fdhost 제어 작업에서 대기 중입니다. 정보를 제공하기 위해서만 문서화됩니다. 지원되지 않습니다. 향후 호환성은 보장되지 않습니다.|  
-|FT_IFTSISM_MUTEX|전체 텍스트가 통신 작업에서 대기 중입니다. 정보를 제공하기 위해서만 문서화됩니다. 지원되지 않습니다. 향후 호환성은 보장되지 않습니다.|  
-|FT_MASTER_MERGE|전체 텍스트가 마스터 병합 작업에서 대기 중입니다. 정보를 제공하기 위해서만 문서화됩니다. 지원되지 않습니다. 향후 호환성은 보장되지 않습니다.|  
+|FT_IFTSHC_MUTEX|전체 텍스트가 fdhost 제어 작업에서 대기 중입니다. 정보를 제공하기 위해서만 문서화됩니다. 지원 안 됨 향후 호환성은 보장되지 않습니다.|  
+|FT_IFTSISM_MUTEX|전체 텍스트가 통신 작업에서 대기 중입니다. 정보를 제공하기 위해서만 문서화됩니다. 지원 안 됨 향후 호환성은 보장되지 않습니다.|  
+|FT_MASTER_MERGE|전체 텍스트가 마스터 병합 작업에서 대기 중입니다. 정보를 제공하기 위해서만 문서화됩니다. 지원 안 됨 향후 호환성은 보장되지 않습니다.|  
   
   

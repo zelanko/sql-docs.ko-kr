@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_qn_subscriptions dynamic management view
 ms.assetid: a3040ce6-f5af-48fc-8835-c418912f830c
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 2d19178ff8e4b684fbc32fb80d23ee057fb55db7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 47bc6dae0c1164fefbffd0a799b5dbfcf7137bb6
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455115"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89542394"
 ---
 # <a name="query-notifications---sysdm_qn_subscriptions"></a>쿼리 알림-sys. dm_qn_subscriptions
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "88455115"
 |-----------------|---------------|-----------------|  
 |**id**|**int**|구독의 ID입니다.|  
 |**database_id**|**int**|알림 쿼리가 실행된 데이터베이스의 ID입니다. 이 데이터베이스에 이 구독과 관련된 정보가 저장됩니다.|  
-|**sid**|**varbinary(85)**|이 구독을 만들고 소유하는 서버 보안 주체의 보안 ID입니다.|  
+|**s**|**varbinary(85)**|이 구독을 만들고 소유하는 서버 보안 주체의 보안 ID입니다.|  
 |**object_id**|**int**|구독 매개 변수에 관한 정보를 저장하는 내부 테이블의 ID입니다.|  
 |**created**|**datetime**|구독을 만든 날짜와 시간입니다.|  
 |**timeout**|**int**|구독의 제한 시간(초)입니다. 이 시간이 경과하면 알림이 발생하도록 플래그가 지정됩니다.<br /><br /> 참고: 실제 발생 시간은 지정 된 시간 제한 보다 클 수 있습니다. 그러나 구독을 무효화 하는 변경 내용이 지정 된 제한 시간 이후에 발생 하지만 구독이 실행 되기 전에 발생 하는 경우에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 변경이 수행 된 시간에 발생 합니다.|  
@@ -43,7 +43,7 @@ ms.locfileid: "88455115"
   
 ## <a name="relationship-cardinalities"></a>관계 카디널리티  
   
-|보낸 사람|대상|켜기|Type|  
+|시작|대상|켜기|Type|  
 |----------|--------|--------|----------|  
 |**sys.dm_qn_subscriptions**|**sys.databases**|**database_id**|다 대 일|  
 |**sys.dm_qn_subscriptions**|**sys.internal_tables**|**object_id**|다 대 일|  
@@ -56,7 +56,7 @@ ms.locfileid: "88455115"
 |코드|보조 상태|정보|  
 |----------|------------------|----------|  
 |65798|데이터가 변경되어 구독이 발생했습니다.|삽입으로 인해 구독이 트리거되었습니다.|  
-|65799|데이터가 변경되어 구독이 발생했습니다.|DELETE|  
+|65799|데이터가 변경되어 구독이 발생했습니다.|삭제|  
 |65800|데이터가 변경되어 구독이 발생했습니다.|업데이트|  
 |65801|데이터가 변경되어 구독이 발생했습니다.|병합|  
 |65802|데이터가 변경되어 구독이 발생했습니다.|테이블 자르기|  

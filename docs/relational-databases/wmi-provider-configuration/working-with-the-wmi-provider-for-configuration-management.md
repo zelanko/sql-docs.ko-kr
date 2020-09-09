@@ -18,14 +18,14 @@ helpviewer_keywords:
 - WMI Provider for Configuration Management, late binding
 - binding [WMI]
 ms.assetid: 34daa922-7074-41d0-9077-042bb18c222a
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: da0f68133473e746b7eaae898273b3c8a8bab0cd
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 2b95e9593493524a0a86579acdd2d96193ea2fb8
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85880456"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89542757"
 ---
 # <a name="working-with-the-wmi-provider-for-configuration-management"></a>구성 관리용 WMI 공급자 작업
 

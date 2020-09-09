@@ -18,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.server_file_audits catalog view
 ms.assetid: 553288a0-be57-4d79-ae53-b7cbd065e127
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 614f1761a9b2a6e5e40fe917af2b2501389e9fc2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: bfe2aebe8a85e8ca32641e4cf334298aa1485956
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455231"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89542454"
 ---
 # <a name="sysserver_file_audits-transact-sql"></a>sys.server_file_audits(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "88455231"
 |create_date|**datetime**|파일 감사를 만든 UTC 날짜입니다.|  
 |modify_date|**datatime**|파일 감사를 마지막으로 수정한 UTC 날짜입니다.|  
 |principal_id|**int**|서버에 등록된 감사 소유자의 ID입니다.|  
-|type|**char(2)**|감사 유형:<br /><br /> 0 = NT 보안 이벤트 로그<br /><br /> 1 = NT 애플리케이션 이벤트 로그<br /><br /> 2 = 파일 시스템의 파일|  
+|형식|**char(2)**|감사 유형:<br /><br /> 0 = NT 보안 이벤트 로그<br /><br /> 1 = NT 애플리케이션 이벤트 로그<br /><br /> 2 = 파일 시스템의 파일|  
 |type_desc|**nvarchar(60)**|감사 유형 설명입니다.|  
 |on_failure|**tinyint**|조건이 실패한 경우:<br /><br /> 0 = 계속<br /><br /> 1 = 서버 인스턴스 종료<br /><br /> 2 = 작업 실패|  
 |on_failure_desc|**nvarchar(60)**|동작 항목을 쓰지 못한 경우:<br /><br /> CONTINUE<br /><br /> SHUTDOWN SERVER INSTANCE<br /><br /> FAIL OPERATION|  
@@ -59,8 +59,8 @@ ms.locfileid: "88455231"
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
-## <a name="see-also"></a>참고 항목  
- [서버 감사 &#40;Transact-sql&#41;만들기 ](../../t-sql/statements/create-server-audit-transact-sql.md)   
+## <a name="see-also"></a>관련 항목  
+ [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   
  [ALTER SERVER AUDIT  &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-transact-sql.md)   
  [DROP SERVER AUDIT  &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-transact-sql.md)   
  [CREATE SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-specification-transact-sql.md)   

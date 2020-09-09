@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_repl_traninfo dynamic management view
 ms.assetid: 5abe2605-0506-46ec-82b5-6ec08428ba13
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 13688621c4547f5bc49be2d2385d20973b85f7e9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ccac1a54db0fb5395f76205713fe65c9cba3f8e1
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88419597"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89542110"
 ---
 # <a name="sysdm_repl_traninfo-transact-sql"></a>sys.dm_repl_traninfo(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "88419597"
 |**begin_lsn**|**nvarchar (64)**|트랜잭션에 대한 시작 로그 레코드의 LSN(로그 시퀀스 번호)입니다.|  
 |**commit_lsn**|**nvarchar (64)**|트랜잭션에 대한 커밋 로그 레코드의 LSN입니다.|  
 |**dbid**|**smallint**|데이터베이스 ID입니다.|  
-|**열**|**int**|트랜잭션 내 복제된 명령의 ID입니다.|  
+|**rows**|**int**|트랜잭션 내 복제된 명령의 ID입니다.|  
 |**xdesid**|**nvarchar (64)**|트랜잭션 ID입니다.|  
 |**artcache_table_address**|**varbinary(8)**|이 트랜잭션에 대해 마지막으로 사용된 캐시된 테이블 아티클 구조의 메모리 내 주소입니다.|  
 |**server**|**nvarchar (514)**|서버 이름입니다.|  
