@@ -36,7 +36,7 @@ ms.locfileid: "88498603"
 > [!IMPORTANT]  
 >  대상 열에는 전체 텍스트 및 의미 체계 인덱싱이 사용하도록 설정되어 있어야 합니다.  
   
-###  <a name="example-find-the-top-documents-that-are-similar-to-another-document"></a><a name="HowToIdentifySimilar"></a> Example: Find the top documents that are similar to another document  
+###  <a name="example-find-the-top-documents-that-are-similar-to-another-document"></a><a name="HowToIdentifySimilar"></a>예제: 다른 문서와 유사한 상위 문서 찾기  
  다음 예에서는 AdventureWorks2012 예제 데이터베이스의 HumanResources.JobCandidate 테이블에서 *\@CandidateID*에 지정된 입사 지원자와 유사한 상위 10명의 입사 지원자를 검색합니다.  
   
 ```scr  

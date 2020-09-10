@@ -31,7 +31,7 @@ ms.locfileid: "88491218"
 |이벤트 원본|MSSQLSERVER|  
 |구성 요소|SQLEngine|  
 |심볼 이름|LDDB_MASTER_LOAD_FAILED|  
-|메시지 텍스트|master 데이터베이스를 복원하지 못했습니다. SQL Server를 종료합니다. Check the error logs, and rebuild the master database. master 데이터베이스를 다시 작성하는 방법은 SQL Server 온라인 설명서를 참조하십시오.|  
+|메시지 텍스트|master 데이터베이스를 복원하지 못했습니다. SQL Server를 종료합니다. 오류 로그를 확인한 후 마스터 데이터베이스를 다시 빌드하세요. master 데이터베이스를 다시 작성하는 방법은 SQL Server 온라인 설명서를 참조하십시오.|  
   
 ## <a name="explanation"></a>설명  
 **master** 데이터베이스에서 발생하는 다양한 문제를 나타내는 일반적인 오류 메시지입니다.  

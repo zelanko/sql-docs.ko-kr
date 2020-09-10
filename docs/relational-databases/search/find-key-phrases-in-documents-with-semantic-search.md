@@ -54,7 +54,7 @@ GO
   
  **SEMANTICKEYPHRASETABLE** 함수는 테이블 검색 대신 인덱스 검색을 사용하여 이러한 결과를 효율적으로 검색합니다.  
   
-###  <a name="example-2-find-the-top-documents-that-contain-a-specific-key-phrase"></a><a name="HowToTopDocuments"></a> Example 2: Find the top documents that contain a specific key phrase  
+###  <a name="example-2-find-the-top-documents-that-contain-a-specific-key-phrase"></a><a name="HowToTopDocuments"></a>예제 2: 특정 키 구를 포함하는 상위 문서 찾기  
  다음 예제에서는 AdventureWorks 예제 데이터베이스에 있는 Production.Document 테이블의 Document 열에서 "Bracket" 키 구가 포함된 상위 25개의 문서를 검색합니다.  
   
 ```sql  

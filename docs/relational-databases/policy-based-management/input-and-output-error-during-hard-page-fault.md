@@ -1,5 +1,5 @@
 ---
-description: Input and Output Error During Hard Page Fault
+description: 하드 페이지 폴트 중 입력 및 출력 오류
 title: 하드 페이지 폴트 중 입력 및 출력 오류 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/01/2017
