@@ -1831,7 +1831,7 @@
           items:
             - name: 생성
               href: relational-databases/tables/create-edge-constraints.md
-            - name: DELETE
+            - name: 삭제
               href: relational-databases/tables/delete-edge-constraint.md
             - name: 수정
               href: relational-databases/tables/modify-edge-constraint.md
@@ -9958,10 +9958,16 @@
               href: linux/usage-and-diagnostic-data-configuration-for-sql-server-linux.md
         - name: 컨테이너
           items:
-            - name: Docker 컨테이너 구성
-              href: linux/sql-server-linux-configure-docker.md
+            - name: 컨테이너에 배포 및 연결
+              href: linux/sql-server-linux-docker-container-deployment.md
+            - name: 컨테이너 구성 및 사용자 지정
+              href: linux/sql-server-linux-docker-container-configure.md
+            - name: 컨테이너 보안
+              href: linux/sql-server-linux-docker-container-security.md
             - name: MSDTC에 대한 Docker 구성
               href: linux/sql-server-linux-configure-msdtc-docker.md
+            - name: Docker 컨테이너 문제 해결
+              href: linux/sql-server-linux-docker-container-troubleshooting.md
         - name: 개발
           href: linux/sql-server-linux-develop-overview.md
           items:
