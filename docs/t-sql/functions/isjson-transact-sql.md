@@ -41,7 +41,7 @@ ISJSON ( expression )
  *expression*  
  테스트할 문자열입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
  문자열에 유효한 JSON이 포함되어 있으면 1을 반환하고 그렇지 않으면 0을 반환합니다. *expression*이 null이면 null을 반환합니다.  
   
  오류를 반환하지 않습니다.  

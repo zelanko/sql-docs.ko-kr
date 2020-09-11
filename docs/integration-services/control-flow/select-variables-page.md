@@ -39,10 +39,10 @@ ms.locfileid: "88349309"
  **이름**  
  변수의 이름을 지정합니다.  
   
- **유형**  
+ **형식**  
  변수의 데이터 형식을 지정합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [스크립트 태스크 편집기&#40;스크립트 페이지&#41;](../../integration-services/control-flow/script-task-editor-script-page.md)  
   
   

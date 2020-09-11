@@ -53,7 +53,7 @@ ms.locfileid: "88416899"
   
  이 메서드는 **geometry** 인스턴스의 SRID(spatial Reference ID)가 일치하지 않으면 항상 Null을 반환합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `STDisjoint()`를 사용하여 두 **geometry** 인스턴스가 공간적으로 분리되어 있는지 테스트합니다.  
   
 ```  

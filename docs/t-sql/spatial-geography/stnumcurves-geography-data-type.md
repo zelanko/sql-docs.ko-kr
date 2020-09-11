@@ -73,6 +73,6 @@ ms.locfileid: "88306037"
   
 ## <a name="see-also"></a>참고 항목  
  [공간 데이터 형식 개요](../../relational-databases/spatial/spatial-data-types-overview.md)   
- [geography 인스턴스의 OGC 메서드](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
+ [Geography 인스턴스의 OGC 메서드](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

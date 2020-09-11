@@ -42,7 +42,7 @@ catalog.set_folder_description [ @folder_name = ] folder_name
  폴더에 대한 설명입니다. *folder_description*은 **nvarchar(MAX)** 입니다.  
   
 ## <a name="return-code-value"></a>반환 코드 값  
- 없음  
+ None  
   
 ## <a name="result-sets"></a>결과 집합  
  None  

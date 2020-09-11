@@ -47,7 +47,7 @@ ms.locfileid: "88427085"
 ## <a name="remarks"></a>설명  
  이 메서드로 인해 **geometry** 인스턴스의 점이 약간 변경될 수 있을 뿐만 아니라 **geometry** 인스턴스의 형식 자체가 변경될 수 있습니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  첫 번째 예에서는 자체적으로 겹치는 잘못된 `LineString` 인스턴스를 만들고 `STIsValid()`를 사용하여 해당 인스턴스가 잘못되었음을 확인합니다. `STIsValid()`는 잘못된 인스턴스에 대해 값 0을 반환합니다.  
   
 ```  

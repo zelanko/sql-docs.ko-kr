@@ -48,7 +48,7 @@ void Write( BinaryWriter w )
 ## <a name="remarks"></a>설명  
 Write는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]이 **hierarchyid** 열에서 데이터를 로드할 때와 같이 필요한 경우 내부적으로 사용됩니다. 또한 Write는 **hierarchyid**와 **varbinary** 간의 변환 시 내부적으로 호출됩니다.
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 ```sql
 MemoryStream stream = new MemoryStream();  

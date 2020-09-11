@@ -60,7 +60,7 @@ ms.locfileid: "88352139"
   
  다음 코드에서는 패키지에 로깅 기능을 사용하도록 설정하고, <xref:Microsoft.SqlServer.Dts.Runtime.SelectedLogProviders> 컬렉션에 텍스트 파일에 대한 로그 공급자를 추가하고, 로깅 출력에 포함할 이벤트 목록을 지정합니다.  
   
-## <a name="sample"></a>샘플  
+## <a name="sample"></a>예제  
   
 ```csharp  
 using System;  
