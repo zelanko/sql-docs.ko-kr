@@ -47,7 +47,7 @@ ms.locfileid: "88479303"
 ## <a name="remarks"></a>설명  
  STDimension()은 **geography** 인스턴스가 비어 있으면 -1을 반환합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `STDimension()`을 사용하여 `geography`인스턴스를 저장할 table 변수를 만들고 `Point`, a `LineString` 및 `Polygon`을 삽입합니다.  
   
 ```  

@@ -54,7 +54,7 @@ expression /= expression
 ## <a name="remarks"></a>설명  
  자세한 내용은 [&#40;나누기&#41;&#40;Transact-SQL&#41;](../../t-sql/language-elements/divide-transact-sql.md)을 참조하세요.  
 
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
 다음 예에서는 변수를 17로 설정합니다. 그런 다음, `/=` 연산자를 사용하여 변수를 원래 값의 절반으로 설정합니다.  
 ```sql  
 DECLARE @myVariable decimal(5,2);

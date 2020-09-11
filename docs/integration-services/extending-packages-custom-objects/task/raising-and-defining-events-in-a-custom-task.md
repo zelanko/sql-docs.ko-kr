@@ -121,7 +121,7 @@ Me.onBeforeIncrement.Description, arguments, _
 Nothing,  bFireOnBeforeIncrement)  
 ```  
   
-## <a name="sample"></a>샘플  
+## <a name="sample"></a>예제  
  다음 예에서는 **InitializeTask** 메서드에서 사용자 지정 이벤트를 정의하고 이 사용자 지정 이벤트를 <xref:Microsoft.SqlServer.Dts.Runtime.EventInfos> 컬렉션에 추가한 다음 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireCustomEvent%2A> 메서드를 호출하여 **Execute** 메서드 실행 중 사용자 지정 이벤트를 발생시키는 태스크를 보여 줍니다.  
   
 ```csharp  

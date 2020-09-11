@@ -34,7 +34,7 @@ ms.locfileid: "88457787"
   
  다음 표에서 설명하는 것처럼 <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.EvalOp%2A> 속성에 지정하는 값에 따라 단일 선행 제약 조건에 제약 조건과 식을 모두 사용할 수 있습니다.  
   
-|EvalOp 속성 값|Description|  
+|EvalOp 속성 값|설명|  
 |----------------------------------|-----------------|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.DTSPrecedenceEvalOp.Constraint>|실행 결과에 따라 제약 조건이 지정된 컨테이너 또는 태스크의 실행 여부가 결정되도록 지정합니다. <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.Value%2A>의 <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint> 속성을 <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> 열거형에서 원하는 값으로 설정합니다.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.DTSPrecedenceEvalOp.Expression>|식의 값에 따라 제약 조건이 지정된 컨테이너 또는 태스크의 실행 여부가 결정되도록 지정합니다. <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.Expression%2A>의 <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint> 속성을 설정합니다.|  
