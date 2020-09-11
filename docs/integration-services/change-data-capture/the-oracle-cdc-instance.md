@@ -47,7 +47,7 @@ ms.locfileid: "88496187"
   
 -   **복원 처리**: Oracle CDC 인스턴스가 시작되면 내부 상태가 **xdbcdc_state** 및 **xdbcdc_staged_transactions** 테이블에서 복원됩니다. 상태가 복원되면 CDC 인스턴스가 평소와 같이 진행됩니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [오류 처리](../../integration-services/change-data-capture/error-handling.md)  
   
   

@@ -25,7 +25,7 @@ ms.locfileid: "88495490"
 
 Integration Services 배포 마법사에 대한 자세한 내용은 [ Integration Services 배포 마법사](packages/deploy-integration-services-ssis-projects-and-packages.md#integration-services-deployment-wizard)를 참조하세요.
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 조건
 
 Azure SQL Database에 대한 배포를 위해 이 아티클에서 설명한 유효성 검사에는 SSDT(SQL Server Data Tools) 버전 17.4 이상이 필요합니다. SSDT의 최신 버전을 얻으려면 [SQL Server Data Tools(SSDT) 다운로드](../ssdt/download-sql-server-data-tools-ssdt.md)를 참조하세요.
 
@@ -57,7 +57,7 @@ Azure SQL Database에 프로젝트를 배포하려면 SSISDB(SSIS 카탈로그 �
 ## <a name="start-the-integration-services-deployment-wizard"></a>Integration Services 배포 마법사 시작
 1. 명령 프롬프트 창을 엽니다.
 
-2. `ISDeploymentWizard.exe`을 실행합니다. Integration Services 배포 마법사가 열립니다.
+2. `ISDeploymentWizard.exe`를 실행합니다. Integration Services 배포 마법사가 열립니다.
 
     `ISDeploymentWizard.exe`를 포함하고 있는 폴더가 `path` 환경 변수 내에 없으면 `cd` 명령을 사용하여 해당 디렉터리로 변경해야 합니다. SQL Server 2017의 경우 이 폴더는 일반적으로 `C:\Program Files (x86)\Microsoft SQL Server\140\DTS\Binn`입니다.
 
