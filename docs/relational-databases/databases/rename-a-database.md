@@ -129,7 +129,7 @@ GO
 ```
 
 
-## <a name="see-also"></a>관련 항목
+## <a name="see-also"></a>참고 항목
 
 - [ALTER DATABASE(Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)
 - [데이터베이스 식별자](../../relational-databases/databases/database-identifiers.md)  

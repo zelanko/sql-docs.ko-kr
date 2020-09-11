@@ -44,7 +44,7 @@ ms.locfileid: "88430615"
  *integer_expression*의 데이터 형식을 반환합니다.  
   
 ## <a name="remarks"></a>설명  
- 없음  
+ None  
   
 ## <a name="expression-examples"></a>식 예  
  이 예에서는 숫자 170(0000 0000 1010 1010)에 비트 ~(NOT) 연산을 수행합니다. 숫자는 부호 있는 정수입니다.  

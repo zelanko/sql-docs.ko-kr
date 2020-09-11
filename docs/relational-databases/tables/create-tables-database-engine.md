@@ -64,7 +64,7 @@ ms.locfileid: "88463843"
   
      스키마에 대한 자세한 내용은 [Create a Database Schema](../../relational-databases/security/authentication-access/create-a-database-schema.md)를 참조하세요.  
   
-9. **파일** 메뉴에서 ‘테이블 이름’ **저장을 선택합니다.** **  
+9. **파일** 메뉴에서 ‘테이블 이름’ **저장**을 선택합니다.  
   
 10. **이름 선택** 대화 상자에서 테이블의 이름을 입력하고 **확인**을 클릭합니다.  
   

@@ -101,6 +101,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>참고 항목
-[ORDER BY 절&#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md)
+[ORDER BY 절 &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md)
   
   
