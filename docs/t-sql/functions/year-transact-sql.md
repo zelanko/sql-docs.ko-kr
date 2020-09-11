@@ -60,7 +60,7 @@ YEAR ( date )
   
  *date*에 시간 부분만 포함된 경우 기본 연도인 1900이 반환됩니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 문은 `2010`을 반환합니다. 이는 연도입니다.  
   
 ```sql  

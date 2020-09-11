@@ -51,7 +51,7 @@ ms.locfileid: "88416969"
 ## <a name="remarks"></a>설명  
  이 메서드는 **geography** 인스턴스의 SRID(spatial Reference ID)가 일치하지 않으면 항상 Null을 반환합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 동일하지만 약간 다른 `geography`를 사용하여 두 개의 `STGeomFromText()` 인스턴스를 만들고 `STEquals()`를 사용하여 서로 같은지 테스트합니다. `LINESTRING`과 `POINT`가 `POLYGON` 내에 포함되므로 이들 인스턴스는 서로 같습니다.  
   
 ```  
@@ -63,6 +63,6 @@ SELECT @g.STEquals(@h);
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [geography 인스턴스의 OGC 메서드](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
+ [Geography 인스턴스의 OGC 메서드](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

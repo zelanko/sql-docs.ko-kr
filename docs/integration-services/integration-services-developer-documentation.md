@@ -81,7 +81,7 @@ ms.locfileid: "88346099"
  [Integration Services 오류 및 메시지 참조](../integration-services/integration-services-error-and-message-reference.md)  
  미리 정의된 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 오류 코드와 해당 심볼 이름 및 설명을 나열합니다.  
   
-## <a name="related-sections"></a>관련 섹션  
+## <a name="related-sections"></a>관련 단원  
  [패키지 배포 문제 해결 도구](../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md)  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]에서 개발 과정의 패키지 문제 해결을 위해 제공하는 기능 및 도구에 대해 설명합니다.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "88346099"
   
 -   [www.codeplex.com/MSFTISProdSamples](www.codeplex.com/MSFTISProdSamples) 의 CodePlex 예제 - [Integration Services 제품 예제](https://go.microsoft.com/fwlink/?LinkID=131204)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [SQL Server Integration Services](../integration-services/sql-server-integration-services.md)  
   
   

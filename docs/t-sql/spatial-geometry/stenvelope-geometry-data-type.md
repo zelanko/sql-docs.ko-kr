@@ -44,7 +44,7 @@ STEnvelope ( )
   
  CLR 반환 형식: **SqlGeometry**  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `STGeomFromText()`를 사용하여 `LineString` 인스턴스((0,0) - (2,3))를 만들고 `STEnvelope()`을 사용하여 `LineString`의 경계 상자를 반환합니다.  
   
 ```  

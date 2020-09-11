@@ -67,7 +67,7 @@ SELECT @g.STArea();
  SELECT @g.STArea() AS Area;
  ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [geometry 인스턴스의 OGC 메서드](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

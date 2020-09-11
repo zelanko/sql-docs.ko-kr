@@ -44,7 +44,7 @@ ms.locfileid: "88405539"
  **다시 초기화 표시**  
  각 구독을 다시 초기화로 표시하려면 클릭합니다. 유효한 스냅샷을 사용할 수 있으면 다음에 배포 에이전트 또는 병합 에이전트가 해당 구독에 대해 실행될 때 이 스냅샷이 구독자에 적용됩니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [구독 다시 초기화](../../relational-databases/replication/reinitialize-subscriptions.md)  
   
   

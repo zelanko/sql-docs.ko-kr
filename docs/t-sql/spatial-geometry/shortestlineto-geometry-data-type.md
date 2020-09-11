@@ -68,7 +68,7 @@ ms.locfileid: "88422297"
  SELECT @g1.ShortestLineTo(@g2).ToString();
  ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [ShortestLineTo&#40;geography 데이터 형식&#41;](../../t-sql/spatial-geography/shortestlineto-geography-data-type.md)  
   
   

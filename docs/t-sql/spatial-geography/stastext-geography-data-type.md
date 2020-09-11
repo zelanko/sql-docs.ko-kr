@@ -51,7 +51,7 @@ ms.locfileid: "88422317"
   
  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에서는 서버에서 반환될 수 있는 결과 집합이 **FullGlobe** 인스턴스까지 확장되었습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 `STAsText()`를 사용하여 텍스트에서 `LineString``geography` 인스턴스((-122.360, 47.656) - (-122.343, 47.656))를 만듭니다. 그런 다음 텍스트로 결과를 반환합니다.  
   
 ```  
@@ -61,6 +61,6 @@ SELECT @g.STAsText();
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [geography 인스턴스의 OGC 메서드](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
+ [Geography 인스턴스의 OGC 메서드](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

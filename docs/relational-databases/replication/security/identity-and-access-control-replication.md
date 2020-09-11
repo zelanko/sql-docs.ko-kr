@@ -54,7 +54,7 @@ ms.locfileid: "88404829"
 
 gMSA(그룹 관리 서비스 계정)의 사용에 대한 지원은 SQL Server 2014에 도입되었습니다. 자세한 내용은 [복제 및 그룹 관리 서비스 계정](https://repltalk.com/2019/03/26/replication-and-group-managed-service-accounts/) 블로그를 참조하세요.
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [위협 요소 및 취약성 완화&#40;복제&#41;](../../../relational-databases/replication/security/threat-and-vulnerability-mitigation-replication.md) [복제 에이전트 보안 모델](../../../relational-databases/replication/security/replication-agent-security-model.md)   
  [복제 보안을 위한 최선의 구현 방법](../../../relational-databases/replication/security/replication-security-best-practices.md)   
 

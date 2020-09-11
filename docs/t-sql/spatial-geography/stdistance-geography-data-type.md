@@ -58,7 +58,7 @@ STDistance()는 **geography** 인스턴스의 SRID(Spatial Reference ID)가 일�
 > [!NOTE]  
 >  면적 또는 거리를 계산하는 **geography** 데이터 형식에 대한 메서드는 메서드에서 사용되는 인스턴스의 SRID에 따라 다른 결과를 반환합니다. SRID에 대한 자세한 내용은 [Spatial Reference Identifiers&#40;SRIDs&#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)를 참조하세요.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 두 **geography** 인스턴스 간의 거리를 찾습니다.  
   
 ```  
@@ -70,6 +70,6 @@ SELECT @g.STDistance(@h);
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [geography 인스턴스의 OGC 메서드](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
+ [Geography 인스턴스의 OGC 메서드](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

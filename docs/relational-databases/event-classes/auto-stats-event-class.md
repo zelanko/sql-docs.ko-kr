@@ -56,7 +56,7 @@ ms.locfileid: "88410549"
 |**Success**|**int**|0 = 오류<br /><br /> 1 = 성공,<br /><br /> 2 = 서버 스로틀로 인해 건너뜀(MSDE)|23|예|  
 |**TextData**|**ntext**|이 열의 내용은 통계가 동기적으로 업데이트되는지(**EventSubClass** 1) 또는 비동기적으로 업데이트되는지(**EventSubClass** 2, 3 또는 4)에 따라 결정됩니다.<br /><br /> 1: 업데이트/생성된 통계를 나열합니다.<br /><br /> 2, 3 또는 4: NULL입니다. **IndexID** 열에 업데이트된 통계의 인덱스/통계 ID가 채워집니다.|1|예|  
 |**TransactionID**|**bigint**|시스템이 할당한 트랜잭션의 ID입니다.|4|예|  
-|**유형**|**int**|작업 유형입니다.|57|예|  
+|**형식**|**int**|작업 유형입니다.|57|예|  
   
 ## <a name="see-also"></a>참고 항목  
  [확장 이벤트](../../relational-databases/extended-events/extended-events.md)   

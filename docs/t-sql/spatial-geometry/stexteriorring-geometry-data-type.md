@@ -49,7 +49,7 @@ ms.locfileid: "88416919"
 ## <a name="remarks"></a>설명  
  이 메서드는 **geometry** 인스턴스가 다각형이 아니면 **Null**을 반환합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예제에서는 `Polygon` 인스턴스를 만들고 `STExteriorRing()`을 사용하여 다각형의 외부 링을 **LineString**으로 반환합니다.  
   
 ```  
