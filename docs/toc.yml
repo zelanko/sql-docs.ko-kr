@@ -7094,8 +7094,8 @@
               href: 'https://dba.stackexchange.com/questions/tagged/sql-server'
             - name: Stack Overflow >>
               href: 'https://stackoverflow.com/questions/tagged/sql-server'
-            - name: MSDN 포럼 >>
-              href: 'https://social.msdn.microsoft.com/Forums/home?category=sqlserver'
+            - name: Microsoft Q & A >>
+              href: 'https://https://docs.microsoft.com/answers/products/sql-server'
             - name: 사용자 의견 보내기 >>
               href: 'https://feedback.azure.com/forums/908035-sql-server'
             - name: Reddit >>
@@ -10110,8 +10110,8 @@
           href: 'https://dba.stackexchange.com/questions/tagged/sql-server'
         - name: Stack Overflow >>
           href: 'https://stackoverflow.com/questions/tagged/sql-server'
-        - name: MSDN 포럼 >>
-          href: 'https://social.msdn.microsoft.com/Forums/home'
+        - name: Microsoft Q & A >>
+          href: 'https://docs.microsoft.com/answers/products/sql-server'
         - name: 사용자 의견 보내기 >>
           href: 'https://feedback.azure.com/forums/908035-sql-server'
         - name: Reddit >>
@@ -10140,16 +10140,16 @@
       items:
         - name: 도움말 보기
           href: sql-server/sql-server-get-help.md
-        - name: SQL 문서 버전 관리
-          href: sql-server/versioning-system-monikers-ui-sql-server.md
+        - name: Microsoft Q & A >>
+          href: 'https://docs.microsoft.com/answers/products/sql-server'
         - name: DBA Stack Exchange >
           href: 'https://dba.stackexchange.com/questions/tagged/sql-server'
         - name: Stack Overflow >>
           href: 'https://stackoverflow.com/questions/tagged/sql-server'
-        - name: MSDN 포럼 >>
-          href: 'https://social.msdn.microsoft.com/Forums/home'
         - name: Reddit >>
           href: 'https://www.reddit.com/r/SQLServer'
+        - name: 문서 탐색 팁
+          href: sql-server/sql-docs-navigation-guide.md
     - name: 블로그
       items:
         - name: SQL Server >>
