@@ -44,7 +44,7 @@ ms.locfileid: "88417029"
 _geography_  
 `ReorientObject()`를 호출할 다른 **geography** 인스턴스입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 반환 형식: **geography**  
   
 CLR 반환 형식: **SqlGeography**  

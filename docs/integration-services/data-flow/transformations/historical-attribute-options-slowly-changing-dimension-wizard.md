@@ -48,7 +48,7 @@ ms.locfileid: "88430705"
 |**종료 날짜 열**|종료 날짜를 포함할 차원 테이블의 열을 선택합니다.|  
 |**날짜 값 설정 변수**|목록에서 날짜 변수를 선택합니다.|  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [느린 변경 차원 마법사를 사용하여 출력 구성](../../../integration-services/data-flow/transformations/configure-outputs-using-the-slowly-changing-dimension-wizard.md)  
   
   

@@ -112,7 +112,7 @@ ms.locfileid: "88430675"
   
 14. 조회 변환의 변경 내용을 저장한 다음 패키지를 실행하려면 **확인** 을 클릭합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [Integration Services 변환](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
   
