@@ -10,12 +10,12 @@ ms.assetid: aaa180c2-5e1a-4534-a125-507c647186ab
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2bd0d3a60cfe69ba593be4fae9dec70f64b074de
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 51dc4f1def0f612c0eb074ae1111a177e27c1413
+ms.sourcegitcommit: f7c9e562d6048f89d203d71685ba86f127d8d241
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88428205"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90042764"
 ---
 # <a name="accessing-sql-server-native-client-diagnostic-information-in-the-extended-events-log"></a>확장 이벤트 로그에서 SQL Server Native Client 진단 정보에 액세스
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "88428205"
 >  이 기능은 문제 해결 및 진단 용도로만 제공되며 감사 또는 보안 용도에는 적합하지 않을 수 있습니다.  
   
 ## <a name="remarks"></a>설명  
- 연결 작업의 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client는 클라이언트 연결 ID를 전송합니다. 연결이 실패하는 경우 연결 링 버퍼에 액세스할 수 있으며([연결 링 버퍼가 있는 SQL Server 2008의 연결 문제 해결](https://go.microsoft.com/fwlink/?LinkId=207752)) **ClientConnectionID** 필드를 찾아서 연결 실패에 대한 진단 정보를 얻을 수 있습니다. 클라이언트 연결 ID는 오류가 발생하는 경우에만 링 버퍼에 기록됩니다. 로그인 전 패킷을 전송하기 전에 연결이 실패하는 경우 클라이언트 연결 ID는 생성되지 않습니다. 클라이언트 연결 ID는 16바이트 GUID입니다. 확장 이벤트 세션에서 **client_connection_id** 동작을 이벤트에 추가한 경우 확장 이벤트 출력 대상에서 클라이언트 연결 ID를 찾을 수도 있습니다. 추가 진단 지원이 필요한 경우 데이터 액세스 추적을 활성화하고 연결 명령을 다시 실행한 다음 실패한 작업에 대한 데이터 액세스 추적에서 **ClientConnectionID** 필드를 관찰할 수 있습니다.  
+ 연결 작업의 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client는 클라이언트 연결 ID를 전송합니다. 연결이 실패하는 경우 연결 링 버퍼에 액세스할 수 있으며([연결 링 버퍼가 있는 SQL Server 2008의 연결 문제 해결](https://techcommunity.microsoft.com/t5/sql-server/connectivity-troubleshooting-in-sql-server-2008-with-the/ba-p/383393)) **ClientConnectionID** 필드를 찾아서 연결 실패에 대한 진단 정보를 얻을 수 있습니다. 클라이언트 연결 ID는 오류가 발생하는 경우에만 링 버퍼에 기록됩니다. 로그인 전 패킷을 전송하기 전에 연결이 실패하는 경우 클라이언트 연결 ID는 생성되지 않습니다. 클라이언트 연결 ID는 16바이트 GUID입니다. 확장 이벤트 세션에서 **client_connection_id** 동작을 이벤트에 추가한 경우 확장 이벤트 출력 대상에서 클라이언트 연결 ID를 찾을 수도 있습니다. 추가 진단 지원이 필요한 경우 데이터 액세스 추적을 활성화하고 연결 명령을 다시 실행한 다음 실패한 작업에 대한 데이터 액세스 추적에서 **ClientConnectionID** 필드를 관찰할 수 있습니다.  
   
  Native Client에서 ODBC를 사용 하 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 고 연결에 성공 하는 경우 [SQLGetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md)와 함께 **SQL_COPT_SS_CLIENT_CONNECTION_ID** 특성을 사용 하 여 클라이언트 연결 ID를 가져올 수 있습니다.  
   
@@ -213,7 +213,7 @@ class Bid2Etw_SQLNCLI11_1_Trace_TextW : Bid2Etw_SQLNCLI11_1_Trace
 };  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [오류 및 메시지 처리](../../../relational-databases/native-client-odbc-error-messages/handling-errors-and-messages.md)  
   
   

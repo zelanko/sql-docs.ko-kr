@@ -23,12 +23,12 @@ author: bluefooted
 ms.author: pamela
 ms.reviewer: maghan
 manager: amitban
-ms.openlocfilehash: df183fe9b6ee5365f623e59dd1c94738afe5df8d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 053dc2ccc68a7e0479ad1e37a181a25b0cefcc53
+ms.sourcegitcommit: f7c9e562d6048f89d203d71685ba86f127d8d241
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447595"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90042754"
 ---
 # <a name="sysdm_os_spinlock_stats-transact-sql"></a>sys. dm_os_spinlock_stats (Transact-sql)
 
@@ -72,7 +72,7 @@ GO
    
  다음 표에는 가장 일반적인 spinlock 형식 중 일부에 대 한 간략 한 설명이 나와 있습니다.  
   
-|Spinlock 유형|설명|  
+|Spinlock 유형|Description|  
 |-----------------|-----------------|  
 |ABR|내부적으로만 사용됩니다.|
 |ADB_CACHE|내부적으로만 사용됩니다.|
@@ -413,7 +413,6 @@ GO
 
  [가 SQL Server의 CPU 사용률에 대 한 상당한 영향을 주는 경우](https://techcommunity.microsoft.com/t5/SQL-Server-Support/When-is-Spinlock-a-Significant-Driver-of-CPU-utilization-in-SQL/ba-p/530142)
 
- [SQL Server에서 Spinlock 경합 진단 및 해결](https://www.microsoft.com/download/details.aspx?id=26666)
   
   
 
