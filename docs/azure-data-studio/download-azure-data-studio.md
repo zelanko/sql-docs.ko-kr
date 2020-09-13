@@ -9,12 +9,12 @@ ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
 ms.date: 8/12/2020
-ms.openlocfilehash: bacfbe7df36b9222a4297ced95a0ffed2733fed6
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 2e4906ebe22b28a15eb20a182198e6c74853eb18
+ms.sourcegitcommit: f7c9e562d6048f89d203d71685ba86f127d8d241
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88778462"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90042734"
 ---
 # <a name="download-and-install-azure-data-studio"></a>Azure Data Studio 다운로드 및 설치
 
@@ -142,7 +142,7 @@ Azure Data Studio는 Windows, macOS, Linux에서 실행되고, 다음 플랫폼�
 - Windows 10(64비트)
 - Windows 8.1(64비트)
 - Windows 8(64비트)
-- Windows 7(SP1)(64비트) - [KB2533623](https://www.microsoft.com/download/details.aspx?id=26767) 필요
+- Windows 7(SP1)
 - Windows Server 2019
 - Windows Server 2016
 - Windows Server 2012 R2(64비트)

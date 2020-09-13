@@ -9045,7 +9045,7 @@
               href: ssms/scripting/database-engine-scripting.md
               items:
                 - name: 쿼리 및 텍스트 편집기
-                  href: ssms/scripting/query-and-text-editors-sql-server-management-studio.md
+                  href: /previous-versions/sql/sql-server-2012/ms173477(v=sql.110)?redirectedfrom=MSDN
                 - name: 데이터베이스 엔진 쿼리 편집기
                   href: ssms/scripting/database-engine-query-editor-sql-server-management-studio.md
                 - name: XML 편집기
