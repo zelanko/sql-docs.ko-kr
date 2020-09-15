@@ -10,12 +10,12 @@ ms.technology: report-data
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 11/18/2019
-ms.openlocfilehash: ba53401168c1b16bb4b61186c6883f0612b7ba60
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: d9581fe8ae3f250d40eeaf21e76c4e1f373e12cd
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458905"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395344"
 ---
 # <a name="intro-to-report-data-in-sql-server-reporting-services-ssrs"></a>SSRS(SQL Server Reporting Services)의 보고서 데이터 소개
 
@@ -98,9 +98,8 @@ ms.locfileid: "86458905"
 
  데이터 연결 만들기, 외부 원본과 데이터 세트 및 쿼리에서 가져온 데이터 추가 등과 관련된 태스크입니다.  
   
-|||  
+|일반 태스크|링크|  
 |-|-|  
-|**일반 태스크**|**연결**|  
 |데이터 연결 만들기|[데이터 연결 문자열 만들기 - 보고서 작성기 및 SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)|  
 |데이터 세트 및 쿼리 만들기|[보고서 포함된 데이터 세트 및 공유 데이터 세트&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)|  
 |게시 후 데이터 원본 관리|[보고서 데이터 원본 관리](../../reporting-services/report-data/manage-report-data-sources.md)|  

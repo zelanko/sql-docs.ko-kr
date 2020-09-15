@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: 3a0ad63f-87f9-4ca1-b0c2-c85fa991634a
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bfeb477ac1830d9604e3d794e96e807548639671
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: d49619a5005b542478f5be971b5206f492b66027
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487250"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396743"
 ---
 # <a name="rsmodelgenerationerror---reporting-services-error"></a>rsModelGenerationError - Reporting Services 오류
     
 ## <a name="details"></a>세부 정보  
   
-|||  
+|범주|값|  
 |-|-|  
 |제품 이름|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |이벤트 ID|rsRenderingError|  

@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: be7ec052-28e2-4558-bc09-8479e5082926
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 91de7513eb5d7a6528537ca68b15765c36162f8d
-ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
+ms.openlocfilehash: af9b16dc4fbf30de01429c0459498714fbe84d3c
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80742233"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87945423"
 ---
 # <a name="subscriptions-and-delivery-reporting-services"></a>구독 및 배달(Reporting Services)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구독은 특정 시간 또는 이벤트에 대한 응답으로 보고서를 지정하는 파일 형식으로 배달하는 구성입니다. 예를 들어 수요일마다 MonthlySales.rdl 보고서를 Microsoft Word 문서로 파일 공유에 저장합니다. 구독을 사용하면 특정 보고서 매개 변수 값 집합을 사용하여 일정을 예약한 다음 보고서 배달을 자동화할 수 있습니다.  
@@ -101,7 +101,7 @@ ms.locfileid: "80742233"
 |요구 사항|Description|  
 |-----------------|-----------------|  
 |사용 권한|보고서에 대한 액세스 권한이 있어야 합니다. 보고서를 구독하려면 보고서를 볼 사용 권한이 있어야 합니다.<br /><br /> 기본 모드 보고서 서버의 경우 다음과 같은 역할 할당은 구독에 영향을 줍니다.<br /><br /> - "개별 구독 관리" 태스크를 사용하면 특정 보고서에 대한 구독을 생성, 수정 및 삭제할 수 있습니다. 미리 정의된 역할에서 이 태스크는 브라우저 및 보고서 작성기 역할의 일부입니다. 사용자는 이 태스크를 포함하는 역할 할당을 사용하여 자신이 만든 구독만 관리할 수 있습니다.<br />- "모든 구독 관리" 태스크를 사용하면 모든 구독을 액세스 및 수정할 수 있습니다. 이 태스크는 데이터 기반 구독을 만드는 데 필요합니다. 미리 정의된 역할에서 내용 관리자 역할에만 이 태스크가 포함됩니다.|  
-|저장된 자격 증명|구독을 만들려면 보고서는 런타임에 데이터를 검색하기 위해 저장된 자격 증명을 사용하거나 자격 증명을 사용하지 말아야 합니다. 현재 사용자의 가장된 자격 증명이나 위임된 자격 증명을 사용하여 외부 데이터 원본에 연결하도록 구성된 보고서는 구독할 수 없습니다. 저장된 자격 증명은 Windows 계정이거나 데이터베이스 사용자 계정일 수 있습니다. 자세한 내용은 [보고서 데이터 원본에 대한 자격 증명 및 연결 정보 지정](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)을 참조하세요.<br /><br /> 사용자에게는 보고서를 보고 개별 구독을 만들 수 있는 권한이 있어야 합니다. 또한 보고서 서버에서**예약된 이벤트 및 보고서 배달** 을 설정해야 합니다. 자세한 내용은 [기존_기본 모드 보고서 서버 구독 만들기 및 관리](https://msdn.microsoft.com/7f46cbdb-5102-4941-bca2-5e0ff9012c6b)를 참조하세요.|  
+|저장된 자격 증명|구독을 만들려면 보고서는 런타임에 데이터를 검색하기 위해 저장된 자격 증명을 사용하거나 자격 증명을 사용하지 말아야 합니다. 현재 사용자의 가장된 자격 증명이나 위임된 자격 증명을 사용하여 외부 데이터 원본에 연결하도록 구성된 보고서는 구독할 수 없습니다. 저장된 자격 증명은 Windows 계정이거나 데이터베이스 사용자 계정일 수 있습니다. 자세한 내용은 [보고서 데이터 원본에 대한 자격 증명 및 연결 정보 지정](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)을 참조하세요.<br /><br /> 사용자에게는 보고서를 보고 개별 구독을 만들 수 있는 권한이 있어야 합니다. 또한 보고서 서버에서**예약된 이벤트 및 보고서 배달** 을 설정해야 합니다. 자세한 내용은 [기존_기본 모드 보고서 서버 구독 만들기 및 관리](https://docs.microsoft.com/sql/reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers)를 참조하세요.|  
 |보고서의 사용자 종속 값|표준 구독의 경우에는 사용자 계정 정보를 필터에 통합하거나 보고서에 표시되는 텍스트로 통합하는 보고서에 대한 구독을 만들 수 있습니다. 보고서에서 사용자 계정 이름은 현재 사용자로 확인되는 **User!UserID** 식을 통해 지정됩니다. 구독을 만들 때 구독을 만드는 사용자는 현재 사용자로 간주됩니다.|  
 |모델 항목 보안 불가|모델에 모델 항목 보안 설정이 포함된 경우 모델을 데이터 원본으로 사용하는 보고서 작성기 보고서를 구독할 수 없습니다. 모델 항목 보안을 사용하는 보고서만 이러한 제한을 받습니다.|  
 |매개 변수 값|보고서에서 매개 변수를 사용하는 경우 보고서 자체 또는 정의된 구독에 매개 변수 값을 지정해야 합니다. 보고서에 기본값이 정의된 경우 기본값을 사용하도록 매개 변수 값을 설정할 수 있습니다.|  

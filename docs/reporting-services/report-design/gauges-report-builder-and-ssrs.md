@@ -157,12 +157,12 @@ f1_keywords:
 ms.assetid: 1f086882-4834-48e9-ab30-c214beee2040
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 24fb81c9714e9008308721906505aab8cc4247fc
-ms.sourcegitcommit: f898aa83561e94626024916932568ab05e73b656
+ms.openlocfilehash: 03c4fa2ddf36130fb9ff96899870207c6427efe1
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84011861"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87939223"
 ---
 # <a name="gauges-report-builder-and-ssrs"></a>계기(보고서 작성기 및 SSRS)
   페이지가 매겨진 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 보고서의 계기 데이터 영역에는 데이터 세트의 단일 값이 표시됩니다. 개별 계기는 항상 자식 또는 인접 계기를 추가할 수 있는 계기 패널 안에 배치됩니다. 필터링, 그룹화, 정렬 등 일반적인 기능을 공유하는 여러 계기를 한 계기 패널 안에 만들 수 있습니다.  
@@ -283,16 +283,13 @@ ms.locfileid: "84011861"
   
 -   [계기의 최소값 또는 최대값 설정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs.md)  
   
--   [계기의 맞춤 간격 설정(보고서 작성기 및 SSRS)](https://msdn.microsoft.com/0ece7297-6e2f-47fb-835d-b9e9cce53fe2)  
-  
--   [이미지를 계기의 포인터로 지정(보고서 작성기 및 SSRS)](https://msdn.microsoft.com/9d73b3c3-a068-4868-a2be-0cd261b6e92b)  
+-   [계기의 맞춤 간격 설정(보고서 작성기 및 SSRS)](https://docs.microsoft.com/sql/reporting-services/report-design/set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs)  
   
 ##  <a name="in-this-section"></a><a name="InThisSection"></a> 섹션 내용  
  다음 항목에서는 계기 작업에 대한 추가 정보를 제공합니다.  
   
-|||  
-|-|-|  
 |용어|정의|  
+|-|-|  
 |[계기의 눈금 서식 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)|계기 눈금 서식 지정에 대한 일반적인 정보와 방사형/선형 계기 눈금의 서식 옵션에 대한 자세한 정보를 제공합니다.|  
 |[계기의 포인터 서식 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)|계기 포인터 서식 지정에 대한 일반적인 정보와 방사형/선형 계기에서 사용할 수 있는 포인터 스타일의 서식 옵션에 대한 자세한 정보를 제공합니다.|  
 |[계기에서 범위 서식 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)|계기에서 중요한 값 하위 섹션을 나타내거나 포인터 값이 특정 값 범위에 속하는지를 시각적으로 나타내기 위해 계기의 범위 서식을 지정하는 방법에 대한 정보를 제공합니다.|  

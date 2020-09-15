@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 66cd108b1f96e003645510e3a17a3627a45495e4
-ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
+ms.openlocfilehash: b1e4c3e685bd3dc294ae1a71d54a478b937df8a0
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83765041"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934292"
 ---
 # <a name="reporting-services-report-server-sharepoint-mode"></a>Reporting Services 보고서 서버(SharePoint 모드)
 
@@ -29,7 +29,7 @@ ms.locfileid: "83765041"
 
  설치 및 구성하는 방법은 다음 항목을 참조하세요.  
   
--   [SharePoint 2010용 Reporting Services SharePoint 모드 설치](https://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c)  
+-   [SharePoint 2010용 Reporting Services SharePoint 모드 설치](https://docs.microsoft.com/sql/reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode)  
   
 -   [팜에 추가 보고서 서버 추가](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md)  
   
@@ -129,7 +129,7 @@ ms.locfileid: "83765041"
   
 |**Task**|**링크**|  
 |--------------|--------------|  
-|SharePoint 모드에서 Reporting Services 설치 및 구성을 위한 세부 단계|[SharePoint 2010용 Reporting Services SharePoint 모드 설치](https://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c) 및 [팜에 추가 보고서 서버 추가](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md)|  
+|SharePoint 모드에서 Reporting Services 설치 및 구성을 위한 세부 단계|[SharePoint 2010용 Reporting Services SharePoint 모드 설치](https://docs.microsoft.com/sql/reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode) 및 [팜에 추가 보고서 서버 추가](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md)|  
 |보고서 서버를 추가하여 Reporting Services SharePoint 배포 스케일 아웃합니다.|[팜에 추가 보고서 서버 추가](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md) 및 [SharePoint의 SQL Server BI 기능에 대한 배포 토폴로지](https://msdn.microsoft.com/library/39f76bc7-94e6-4dbc-bfa5-d56f4430bb26)|  
 |보기용으로 설치된 Reporting Services 구성 요소 및 보고서 항목이 포함된 추가 SharePoint 웹 프런트 엔드를 추가합니다.|[팜에 추가 Reporting Services 웹 프런트 엔드 추가](../../reporting-services/install-windows/add-an-additional-reporting-services-web-front-end-to-a-farm.md)|  
 |SharePoint 내에서 보고서 서버에 대한 전자 메일을 구성합니다.|[Reporting Services 서비스 애플리케이션에 대한 전자 메일 구성](../install-windows/configure-e-mail-for-a-reporting-services-service-application.md)|

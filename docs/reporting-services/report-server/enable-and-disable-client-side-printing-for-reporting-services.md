@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0e709c96-7517-4547-8ef6-5632f8118524
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9ffa8d5781eb3ad7eb95a4dc5b360ad51ede6843
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: 4a2f61a8700c24a2cc41192103f57a51befbbd15
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84547475"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87390660"
 ---
 # <a name="enable-and-disable-client-side-printing-for-reporting-services"></a>Reporting Services에 대한 클라이언트 쪽 인쇄 기능 설정 및 해제
 
@@ -32,7 +32,7 @@ ms.locfileid: "84547475"
   
  ![보고서 도구 모음](../../reporting-services/media/ssrs-htmlviewer-toolbar.png "보고서 도구 모음")  
   
-|||  
+|상호 작용|사용자 인터페이스|  
 |-|-|  
 |첫 번째 대화 상자는 모든 브라우저에 대해 동일하며 방향과 같은 기본적인 레이아웃 속성을 변경할 수 있습니다. **인쇄**를 클릭할 때 환경은 사용 중인 브라우저에 따라 약간 다릅니다.|![ssrs_pdfprint_chrome1](../../reporting-services/report-server/media/ssrs-pdfprint-chrome1.png "ssrs_pdfprint_chrome1")|  
 |Chrome에서는 자세한 브라우저 인쇄 대화 상자가 열립니다.   인쇄 구성을 변경하고, 인쇄하고, 운영 체제 인쇄 대화 상자를 열 수 있습니다.|![ssrs_pdfprint_chrome2](../../reporting-services/report-server/media/ssrs-pdfprint-chrome2.png "ssrs_pdfprint_chrome2") ![ssrs_pdfprint_chrome3.png](../../reporting-services/report-server/media/ssrs-pdfprint-chrome3-png.png "ssrs_pdfprint_chrome3.png")|  
