@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 15280d88b2219587ee63b15e8e98421be2734fab
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a83e1ea4c96144f7188812522ee121530bac351c
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85885947"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88178660"
 ---
 # <a name="install-machine-learning-server-standalone-or-r-server-standalone-using-sql-server-setup"></a>SQL Server 설치 프로그램을 사용하여 Machine Learning Server(독립 실행형) 또는 R Server 설치
-[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 SQL Server 설치 프로그램에는 SQL Server 외부에서 실행되는 독립 실행형 기계 학습 서버 설치를 위한 **공유 기능** 옵션이 포함되어 있습니다. 이 기능은 **Machine Learning Server(독립 실행형)** 라고 하며 Python 및 R을 포함하고 있습니다. 
@@ -226,7 +226,7 @@ R 및 Python 개발의 경우 동일한 컴퓨터에 여러 버전을 설치하�
 R 개발자는 몇 가지 간단한 예제를 시작하고 R이 SQL Server에서 작동하는 방식의 기초를 알아볼 수 있습니다. 다음 단계로 가려면 아래 링크를 참조하세요.
 
 + [빠른 시작: T-SQL에서 R 사용](../tutorials/quickstart-r-create-script.md)
-+ [자습서: R 개발자를 위한 데이터베이스 내 분석](../tutorials/sqldev-in-database-r-for-sql-developers.md)
++ [자습서: R 개발자를 위한 데이터베이스 내 분석](../tutorials/r-taxi-classification-introduction.md)
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 Python 개발자는 다음 자습서에 따라 SQL Server에서 Python을 사용하는 방법을 알아볼 수 있습니다.

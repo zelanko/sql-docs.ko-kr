@@ -8,15 +8,15 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=azuresqldb-current||=sqlallproducts-allversions'
-ms.openlocfilehash: dca97c6ad00a0678d277447b03dd6b7c863e8fe3
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: d4ec56f02dd038d87e8b4e8e4c8597b7ba047ffa
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242396"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179818"
 ---
 # <a name="plot-histograms-in-python"></a>Python에서 히스토그램 그리기 
-[!INCLUDE[sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
+[!INCLUDE[SQL Server SQL DB SQL MI](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 이 문서에서는 Python 패키지 [pandas'.hist()](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.hist.html)를 사용하여 데이터를 그리는 방법을 설명합니다. SQL 데이터베이스가 중복되지 않는 연속 값이 포함된 히스토그램 데이터 간격을 시각화하는 데 사용되는 원본입니다.
 

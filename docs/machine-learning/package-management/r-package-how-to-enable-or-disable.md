@@ -9,15 +9,15 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: =sql-server-2016||=sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: 1a18d56d1dcf0733f080da7cf8247421c669a4aa
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 19fe9aaaa29f4b9d3e4454aa131e0ed6c261b557
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85757148"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88178930"
 ---
 # <a name="enable-or-disable-remote-package-management-for-sql-server"></a>SQL Server용 원격 패키지 관리 사용 또는 사용 안 함
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and 2017 only](../../includes/applies-to-version/sqlserver2016-2017-only.md)]
 
 이 문서에서는 클라이언트 워크스테이션 또는 다른 Machine Learning Server에서 R 패키지의 원격 관리를 사용하도록 설정하는 방법을 설명합니다. SQL Server에서 패키지 관리 기능을 사용하도록 설정한 후에는 클라이언트에서 RevoScaleR 명령을 사용하여 SQL Server에 패키지를 설치할 수 있습니다.
 

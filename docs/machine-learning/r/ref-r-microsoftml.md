@@ -8,15 +8,15 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 28f043ea0005f1020581218c358aed559285a5a4
-ms.sourcegitcommit: d1535944bff3f2580070cc036ece30f1d43ee2ce
+ms.openlocfilehash: d7b48e547d402e15404e39e849c262320c5ee59e
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86406176"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179949"
 ---
 # <a name="microsoftml-r-package-in-sql-server-machine-learning-services"></a>MicrosoftML(SQL Server Machine Learning Services의 R 패키지)
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 **MicrosoftML**은 고성능 기계 학습 알고리즘을 제공하는 Microsoft의 R 패키지입니다. 여기에는 학습 및 변환, 점수 매기기, 텍스트 및 이미지 분석, 기존 데이터에서 값을 파생하기 위한 기능 추출을 위한 함수가 포함됩니다. 이 패키지는 [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) 및 [SQL Server 2016 R Services](sql-server-r-services.md)에 포함되어 있으며, 다중 코어 처리 및 빠른 데이터 스트리밍을 사용하여 빅 데이터에 대한 고성능을 지원합니다. 또한 MicrosoftML에는 텍스트 및 이미지 처리를 위한 다양한 변환이 포함되어 있습니다.
 
@@ -152,6 +152,6 @@ logisticRegression(args);
 
 + [R 자습서](../tutorials/sql-server-r-tutorials.md)
 + [컴퓨팅 컨텍스트 사용 방법 알아보기](../tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)
-+ [SQL 개발자를 위한 R: 모델 학습 및 운영](../tutorials/sqldev-in-database-r-for-sql-developers.md)
++ [SQL 개발자를 위한 R: 모델 학습 및 운영](../tutorials/r-taxi-classification-introduction.md)
 + [GitHub의 Microsoft 제품 샘플](https://github.com/Microsoft/SQL-Server-R-Services-Samples)
 + [R 참조(Microsoft Machine Learning Server)](https://docs.microsoft.com/machine-learning-server/r-reference/introducing-r-server-r-package-reference) 

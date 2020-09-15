@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 1f3c5b72f562f4ba90de68f53911c067baa37189
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b39d73a46a5ac82c3b85606536f283e4d6bbf57e
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85735067"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88173712"
 ---
 # <a name="data-exploration-and-predictive-modeling-with-r-in-sql-server"></a>SQL Server에서 R을 사용한 데이터 탐색 및 예측 모델링
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 이 문서에서는 SQL Server와의 통합을 통해 가능한 데이터 과학 프로세스의 개선 사항에 대해 설명합니다.
 

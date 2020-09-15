@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 1af68324f613c0e47cd8cc5eaca73dca5881db04
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: a6afdda3975fc8f6c269f9c1fcbca35318f0c4da
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242333"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88180000"
 ---
 # <a name="performance-for-r-services-results-and-resources"></a>R Services에 대한 성능: 결과 및 리소스
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 이 문서는 R Services에 대한 성능 최적화를 설명하는 시리즈의 네 번째이자 최종입니다. 이 문서에서는 다양한 최적화 방법을 테스트한 두 가지 사례 연구의 방법, 결과 및 결론을 요약합니다.
 

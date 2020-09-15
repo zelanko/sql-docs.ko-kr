@@ -10,15 +10,15 @@ ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 14611369afe42da2e87aab87d675fd77e710c461
-ms.sourcegitcommit: d1535944bff3f2580070cc036ece30f1d43ee2ce
+ms.openlocfilehash: 2303fdda5ae28fb9a384a174a128b2487e637f7e
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86406296"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88173320"
 ---
 # <a name="extensibility-architecture-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services의 확장성 아키텍처 
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 이 문서에서는 SQL Server Machine Learning Services에서 외부 Python 또는 R 스크립트를 실행하기 위한 확장성 프레임워크의 아키텍처에 대해 설명합니다. 이 스크립트는 언어 런타임 환경에서 핵심 데이터베이스 엔진에 대한 확장으로 실행됩니다.
 

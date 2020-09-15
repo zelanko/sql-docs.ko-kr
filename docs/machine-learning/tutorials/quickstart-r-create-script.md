@@ -11,15 +11,15 @@ ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 2327b6644725c77949b49c661bc7d02d13c4e47d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 331e7b56087d75222d29c3bdabccbd8717b40171
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772357"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88178514"
 ---
 # <a name="quickstart-run-simple-r-scripts-with-sql-machine-learning"></a>빠른 시작: SQL 기계 학습에서 간단한 R 스크립트를 실행합니다.
-[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 이 빠른 시작에서는 [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) 또는 [빅 데이터 클러스터](../../big-data-cluster/machine-learning-services.md)를 사용하여 간단한 R 스크립트 세트를 실행합니다. 저장 프로시저 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)를 사용하여 SQL Server 인터페이스에서 스크립트를 실행하는 방법을 알아봅니다.
@@ -109,7 +109,7 @@ GO
 
 `sp_execute_external_script` 저장 프로시저에 대한 입력에는 다음이 포함됩니다.
 
-| | |
+| 입력 | Description |
 |-|-|
 | @language | 호출할 언어 확장을 정의합니다(이 경우에는 R). |
 | @script | R 런타임으로 전달되는 명령을 정의합니다. 전체 R 스크립트는 이 인수에 유니코드 텍스트로 묶어야 합니다. **nvarchar** 형식의 변수에 텍스트를 추가한 다음, 변수를 호출할 수도 있습니다. |

@@ -9,15 +9,15 @@ ms.author: davidph
 author: dphansen
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: bf294501b1cb613bf97b581a30a193469c78b9f6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 85ab092eb606fcc6896fa6a084a2cef0e5f018df
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756395"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179733"
 ---
 # <a name="tutorial-create-partition-based-models-in-r-on-sql-server"></a>자습서: SQL Server의 R에서 파티션 기반 모델 만들기
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016](../../includes/applies-to-version/sqlserver2016.md)]
 
 SQL Server 2019의 파티션 기반 모델링은 분할된 데이터에 대한 모델을 만들고 학습시키는 기능입니다. 지리적 지역, 날짜 및 시간, 연령 또는 성별 등의 특정 분류 스키마로 자연스럽게 분할되는 계층화 데이터의 경우 모든 작업에서 온전하게 유지되는 파티션을 모델링하고, 학습시키고, 채점하는 기능을 사용하여 전체 데이터 세트에 대해 스크립트를 실행할 수 있습니다. 
 

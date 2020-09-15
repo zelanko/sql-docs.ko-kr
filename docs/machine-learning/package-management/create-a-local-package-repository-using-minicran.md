@@ -10,15 +10,15 @@ ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: a980e356496e3e2e1cdbc5010e8f1c6f7ec7d8c7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: bf93d618ad03122cc7eecf641573d70b2b72158e
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783513"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88173528"
 ---
 # <a name="create-a-local-r-package-repository-using-minicran"></a>miniCRAN을 사용하여 로컬 R 패키지 리포지토리 만들기
-[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
 이 문서에서는 [miniCRAN](https://cran.r-project.org/web/packages/miniCRAN/index.html)을 사용하여 오프라인으로 R 패키지를 설치하고 패키지 및 종속성의 로컬 리포지토리를 만드는 방법을 설명합니다. **miniCRAN**은 패키지 및 종속성을 식별하여 단일 폴더에 다운로드합니다. 이것을 다른 컴퓨터에 복사하여 오프라인으로 R 패키지를 설치할 수 있습니다.
 

@@ -11,15 +11,15 @@ ms.reviewer: garye, davidph
 ms.date: 05/21/2020
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: e0c679ce4a146065223123e41cb2935e7d33ad71
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0be451ea14a6eec98872b3c21b16c5065d02f85f
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85784076"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88178736"
 ---
 # <a name="tutorial-prepare-data-to-train-a-predictive-model-in-r-with-sql-machine-learning"></a>자습서: R에서 SQL 기계 학습을 사용하여 예측 모델을 학습시키기 위한 데이터 준비
-[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 4부로 구성된 이 자습서 시리즈의 2부에서는 R을 사용하여 데이터베이스의 데이터를 준비합니다. 이 시리즈의 뒷부분에서는 R에서 SQL Server Machine Learning Services 또는 빅 데이터 클러스터를 사용하여 이 데이터로 예측 모델을 학습시키고 배포합니다.

@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 77cbd38bf873761496800cc4ad78d74eee414cf1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ad18fc08a06a647c626972cf3b3141d9d9861c87
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728574"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88178800"
 ---
 # <a name="tutorial-use-revoscaler-r-functions-with-sql-server-data"></a>자습서: RevoScaleR R 함수를 SQL Server 데이터와 함께 사용
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 여러 부분으로 이루어진 이 자습서 시리즈에서는 데이터 과학과 관련된 작업에 필요한 다양한 **RevoScaleR** 함수를 소개합니다. 이 프로세스에서는 원격 컴퓨팅 컨텍스트를 만들고, 로컬 및 원격 컴퓨팅 컨텍스트 간에 데이터를 이동하고, 원격 SQL Server에서 R 코드를 실행하는 방법을 알아봅니다. 또한 로컬 및 원격 서버에서 데이터를 분석하고 그리는 방법과 모델을 만들고 배포하는 방법을 알아봅니다.
 

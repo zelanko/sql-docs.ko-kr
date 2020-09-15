@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: aa50fd62b3f1d3c1d40f3603b6a0b3fc4182497f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 86aad616cc8c9fc54adc2fffd14bfc663acf3887
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771768"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179729"
 ---
 # <a name="install-pre-trained-machine-learning-models-on-sql-server"></a>SQL Server에 미리 학습된 기계 학습 모델 설치
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 이 문서에서는 Powershell을 사용하여 *감정 분석* 및 *이미지 기능화*용으로 미리 학습된 무료 기계 학습 모델을 R 또는 Python이 통합된 SQL Server 인스턴스에 추가하는 방법을 설명합니다. 미리 학습된 모델은 Microsoft에서 빌드하고 사용 가능한 상태가 되며 설치 후 작업으로 인스턴스에 추가됩니다. 이러한 모델에 대한 자세한 내용은 이 문서의 [리소스](#bkmk_resources) 섹션을 참조하세요.
 

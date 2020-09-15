@@ -9,16 +9,16 @@ author: cawrites
 ms.author: chadam
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: 8cbfbe14eba45d5bb82b0741fb2ccfa809001038
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c3cf6afe4f99e7a728368f3454cc125998d806fa
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85885966"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88178670"
 ---
 # <a name="install-sql-server-machine-learning-services-python-and-r-on-windows"></a>Windows에 SQL Server Machine Learning Services(Python 및 R) 설치
 
-[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server 2017 and later](../../includes/applies-to-version/sqlserver2017.md)]
 
 Windows에서 SQL Server Machine Learning Services를 설치하는 방법을 알아봅니다. Machine Learning Services를 사용하여 데이터베이스에서 R 또는 Python 스크립트를 실행할 수 있습니다.
 
@@ -369,4 +369,4 @@ Python 개발자는 다음 자습서에 따라 SQL Server에서 Python을 사용
 R 개발자는 몇 가지 간단한 예제를 시작하고 R이 SQL Server에서 작동하는 방식의 기초를 알아볼 수 있습니다. 다음 단계로 가려면 아래 링크를 참조하세요.
 
 + [빠른 시작: T-SQL에서 R 사용](../tutorials/quickstart-r-create-script.md)
-+ [자습서: R 개발자를 위한 데이터베이스 내 분석](../tutorials/sqldev-in-database-r-for-sql-developers.md)
++ [자습서: R 개발자를 위한 데이터베이스 내 분석](../tutorials/r-taxi-classification-introduction.md)

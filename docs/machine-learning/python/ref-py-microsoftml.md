@@ -8,15 +8,15 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ae408162ada9b43a9601c4058b9850db5a4afec4
-ms.sourcegitcommit: d1535944bff3f2580070cc036ece30f1d43ee2ce
+ms.openlocfilehash: c638b3c32af037b8c597c840d4bdf388aad56efc
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86406196"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88178591"
 ---
 # <a name="microsoftml-python-package-in-sql-server-machine-learning-services"></a>microsoftml(SQL Server Machine Learning Services의 Python 패키지)
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2017 and later](../../includes/applies-to-version/sqlserver2017.md)]
 
 **microsoftml**은 고성능 기계 학습 알고리즘을 제공하는 Microsoft의 Python 패키지입니다. 여기에는 학습 및 변환, 점수 매기기, 텍스트 및 이미지 분석, 기존 데이터에서 값을 파생하기 위한 기능 추출을 위한 함수가 포함됩니다. 이 패키지는 [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md)에 포함되어 있으며, 다중 코어 처리 및 빠른 데이터 스트리밍을 사용하여 빅 데이터에 대한 고성능을 지원합니다.
 

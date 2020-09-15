@@ -12,15 +12,15 @@ ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 2e88f0a826915a1250d3d6a83cf9789bf9bf4e02
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 144463853d677ee61e2d860caf975275dcd0a607
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730531"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88173445"
 ---
 # <a name="python-tutorial-build-a-model-to-categorize-customers-with-sql-machine-learning"></a>Python 자습서: SQL 기계 학습을 사용하여 고객을 분류하는 모델 빌드
-[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 4부로 구성된 자습서 시리즈의 3부에서는 Python에서 K-평균 모델을 빌드하여 클러스터링을 수행합니다. 이 시리즈의 다음 파트에서는 SQL Server Machine Learning Services 또는 빅 데이터 클러스터를 사용하여 이 모델을 데이터베이스에 배포합니다.

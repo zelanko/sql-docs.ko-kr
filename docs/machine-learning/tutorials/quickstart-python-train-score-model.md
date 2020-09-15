@@ -11,15 +11,15 @@ ms.author: chadam
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 7fe03849217dfe6e8ad7acedc39d891c5168f9c8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0198ec9c27523c3465a90fa569b819072bf6014d
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772372"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88178492"
 ---
 # <a name="quickstart-create-and-score-a-predictive-model-in-python-with-sql-machine-learning"></a>빠른 시작: Python에서 SQL 기계 학습을 사용하여 예측 모델 만들기 및 점수 매기기
-[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 이 빠른 시작에서는 Python을 사용하여 예측 모델을 만들고 학습합니다. SQL Server 인스턴스의 테이블에 모델을 저장한 다음, 해당 모델을 사용하여 [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) 또는 [빅 데이터 클러스터](../../big-data-cluster/machine-learning-services.md)에서 새 데이터로 값을 예측합니다.

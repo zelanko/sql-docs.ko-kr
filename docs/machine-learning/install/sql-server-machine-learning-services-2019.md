@@ -8,15 +8,15 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4ab748bf792362fdb799a9b2b7a3ea4a386b717d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 30097342700a9daccb6107f5fafe9e5acef3e225
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771746"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179422"
 ---
 # <a name="sql-server-2019-on-windows-isolation-changes-for-machine-learning-services"></a>Windows의 SQL Server 2019: Machine Learning Services에 대한 격리 변경 내용
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2019 - Windows only](../../includes/applies-to-version/sqlserver2019-windows-only.md)]
 
 이 문서에서는 Windows의 SQL Server 2019에서 사용되는 Machine Learning Services의 격리 메커니즘 변경 내용을 설명합니다. 이러한 변경 내용은 **SQLRUserGroup**, 방화벽 규칙, 파일 사용 권한 및 묵시적 인증에 영향을 줍니다.
 

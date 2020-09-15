@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b039af528200782d788394f49e0bd74ed2b54dd4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 241affaea232fcc916456b96ff724655b9289618
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728644"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88178836"
 ---
 # <a name="data-science-scenarios-and-solution-templates"></a>데이터 과학 시나리오 및 솔루션 템플릿
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 이 문서에서는 다양한 SQL Server 기계 학습 솔루션 템플릿을 설명합니다. 이 템플릿은 모범 사례를 보여주고 기계 학습 솔루션을 빠르게 구현할 수 있도록 구성 요소를 제공합니다. 각 템플릿은 특정 업종 또는 업계의 특정 데이터 과학 문제를 해결하도록 설계되었습니다.
 각 템플릿의 작업은 데이터 준비 및 기능 엔지니어링에서 모델 학습 및 점수 매기기까지 확장됩니다. 

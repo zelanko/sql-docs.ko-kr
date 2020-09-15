@@ -9,15 +9,15 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: f93fc25139a69f80afa15840d254c33d2195b335
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f417a92a00b290f06326433b24b73137a0a424fa
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730451"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88178550"
 ---
 # <a name="python-tutorials-for-sql-machine-learning"></a>SQL 기계 학습용 Python 자습서
-[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 이 문서에서는 [SQL Server의 Machine Learning Services](../sql-server-machine-learning-services.md) 및 [빅 데이터 클러스터](../../big-data-cluster/machine-learning-services.md)에 대한 Python 자습서와 빠른 시작에 대해 설명합니다.
@@ -39,7 +39,7 @@ ms.locfileid: "85730451"
 | [선형 회귀를 사용하여 스키 대여 예측](python-ski-rental-linear-regression.md) | Python 및 선형 회귀를 사용하여 스키 대여 수를 예측합니다. 데이터를 준비하고 모델을 학습할 때는 Azure Data Studio의 Notebook을 사용하고, 모델을 배포할 때는 T-SQL을 사용합니다. |
 | [k-means 클러스터링을 사용하여 고객 분류](python-clustering-model.md) | Python으로 K-Means 클러스터링 모델을 개발 및 배포하여 고객을 분류합니다. 데이터를 준비하고 모델을 학습할 때는 Azure Data Studio의 Notebook을 사용하고, 모델을 배포할 때는 T-SQL을 사용합니다. |
 | [revoscalepy를 사용하여 모델 만들기](use-python-revoscalepy-to-create-model.md) | SQL Server를 컴퓨팅 컨텍스트로 사용하여 원격 Python 클라이언트에서 코드를 실행하는 방법을 보여 줍니다. 이 자습서에서는 **revoscalepy** 라이브러리의 **rxLinMod**를 사용하여 모델을 만듭니다. |
-| [SQL 개발자를 위한 Python 데이터 분석](sqldev-in-database-python-for-sql-developers.md) | 이 엔드투엔드 연습은 T-SQL을 사용하여 완전한 Python 솔루션을 빌드하는 프로세스를 보여 줍니다. |
+| [SQL 개발자를 위한 Python 데이터 분석](python-taxi-classification-introduction.md) | 이 엔드투엔드 연습은 T-SQL을 사용하여 완전한 Python 솔루션을 빌드하는 프로세스를 보여 줍니다. |
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current"
 | 자습서 | Description |

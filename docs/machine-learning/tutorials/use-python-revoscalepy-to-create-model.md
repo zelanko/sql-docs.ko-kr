@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 268b8626fc3a121adfded58c1184b332da04139c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5f5cebd0fa6f45530ea5853cf365ea60a4c535ad
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730443"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179715"
 ---
 # <a name="use-python-with-revoscalepy-to-create-a-model-that-runs-remotely-on-sql-server"></a>revoscalepy와 함께 Python을 사용하여 SQL Server에서 원격으로 실행되는 모델 만들기
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2017](../../includes/applies-to-version/sqlserver2017.md)]
 
 Microsoft의 [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) Python 라이브러리는 데이터 탐색, 시각화, 변환 및 분석을 위한 데이터 과학 알고리즘을 제공합니다. 이 라이브러리는 SQL Server의 Python 통합 시나리오에서 전략적으로 중요합니다. 다중 코어 서버에서는 **revoscalepy** 함수를 병렬로 실행할 수 있습니다. 중앙 서버와 클라이언트 워크스테이션(별도의 물리적 컴퓨터, 모두 동일한 **revoscalepy** 라이브러리를 갖고 있음)을 사용하는 분산 아키텍처에서는 실행을 로컬로 시작한 후 데이터가 상주하는 원격 SQL Server 인스턴스로 이동하는 Python 코드를 작성할 수 있습니다.
 
@@ -176,5 +176,5 @@ SQL Server 컴퓨팅 컨텍스트의 경우 일괄 처리 크기를 설정하거
 
 다음 추가 Python 샘플 및 자습서에서는 원격 컴퓨팅 컨텍스트 사용 외에도 좀 더 복잡한 데이터 원본을 사용하는 엔드투엔드 시나리오를 보여줍니다.
 
-+ [SQL 개발자를 위한 데이터베이스 내 Python](sqldev-in-database-python-for-sql-developers.md)
++ [SQL 개발자를 위한 데이터베이스 내 Python](python-taxi-classification-introduction.md)
 + [Python 및 SQL Server를 사용하여 예측 모델 빌드](https://microsoft.github.io/sql-ml-tutorials/python/rentalprediction/)

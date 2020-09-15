@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2efa4bc739dcf39cd10672d81ebf66eceb6ecbb8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ee493ec09c5cfc8a5198239cd5cafcb2579f50d8
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85671121"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88178636"
 ---
 # <a name="data-type-mappings-between-python-and-sql-server"></a>Python과 SQL Server 간의 데이터 형식 매핑
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2017 and later](../../includes/applies-to-version/sqlserver2017.md)]
 
 SQL Server Machine Learning Services의 Python 통합 기능에서 실행되는 Python 솔루션의 경우 Python과 SQL Server 간에 데이터가 전달될 때 암시적으로 수행될 수 있는 지원되지 않는 데이터 형식 및 데이터 형식 변환의 목록을 검토합니다.
 

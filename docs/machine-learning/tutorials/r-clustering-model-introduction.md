@@ -11,15 +11,15 @@ ms.reviewer: garye, davidph
 ms.date: 05/26/2020
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: a9dab3e7cf8bda374b26003db83281bb1db275e5
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: a57b3daec82469f87f9a7905e0230587e742d967
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244044"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88178771"
 ---
 # <a name="tutorial-develop-a-clustering-model-in-r-with-sql-machine-learning"></a>자습서: SQL 기계 학습을 사용하여 R에서 클러스터링 모델 개발
-[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 4부로 구성된 이 자습서 시리즈에서는 고객 데이터를 분류하기 위해 R을 사용하여 [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) 또는 [빅 데이터 클러스터](../../big-data-cluster/machine-learning-services.md)에서 K-평균 클러스터링 모델을 개발하고 배포합니다.

@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 18fd4df2d2ae5764b5f3e9becaa872f863ed5ee5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: bff067202bccf585cce43c35443d466c033eff7d
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85781774"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179781"
 ---
 # <a name="view-and-summarize-sql-server-data-using-r-walkthrough"></a>R을 사용하여 SQL Server 데이터 보기 및 요약(연습)
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016](../../includes/applies-to-version/sqlserver2016.md)]
 
 이 단원에서는 **RevoScaleR** 패키지의 기능을 소개하고 다음 작업을 단계별로 안내합니다.
 

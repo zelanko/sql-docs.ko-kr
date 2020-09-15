@@ -10,16 +10,16 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: cecd267627b32b989913ace5e374c74543e69ba4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2232b844fc6955118e2da878caf9ff425f160c55
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85671099"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88178950"
 ---
 # <a name="get-python-package-information"></a>Python 패키지 정보 가져오기
 
-[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 이 문서에서는 [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) 및 [빅 데이터 클러스터](../../big-data-cluster/machine-learning-services.md)에서 버전 및 설치 위치를 포함하여 설치된 Python 패키지에 대한 정보를 가져오는 방법을 설명합니다. 예제 Python 스크립트는 설치 경로 및 버전과 같은 패키지 정보를 나열하는 방법을 보여 줍니다.

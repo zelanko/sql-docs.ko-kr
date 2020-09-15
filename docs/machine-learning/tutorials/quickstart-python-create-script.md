@@ -11,15 +11,15 @@ ms.author: chadam
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 111230ebcd1108cc6fc99830d186294534f13a05
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: adcd1b0fba892e904a3866235e7a59e3d1774f4f
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85784120"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88178540"
 ---
 # <a name="quickstart-run-simple-python-scripts-with-sql-machine-learning"></a>빠른 시작: SQL 기계 학습에서 간단한 Python 스크립트 실행
-[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 이 빠른 시작에서는 [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) 또는 [빅 데이터 클러스터](../../big-data-cluster/machine-learning-services.md)를 사용하여 간단한 Python 스크립트 세트를 실행합니다. 저장 프로시저 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)를 사용하여 SQL Server 인터페이스에서 스크립트를 실행하는 방법을 알아봅니다.
@@ -103,7 +103,7 @@ GO
 
 `sp_execute_external_script` 저장 프로시저에 대한 입력에는 다음이 포함됩니다.
 
-| | |
+| 입력 | Description |
 |-|-|
 | @language | 호출할 언어 확장을 정의합니다(이 경우에는 Python). |
 | @script | Python 런타임으로 전달되는 명령을 정의합니다. 이 인수에서 전체 Python 스크립트는 유니코드 텍스트로 묶어야 합니다. **nvarchar** 형식의 변수에 텍스트를 추가한 다음, 변수를 호출할 수도 있습니다. |

@@ -9,15 +9,15 @@ ms.topic: how-to
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=azuresqldb-current||=sqlallproducts-allversions'
-ms.openlocfilehash: a4f2c9c30c1655df531ca9b455ecfad3d9c75c7e
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 32b546107697dffdf3c77ea292b7b68c5c7dc9b5
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87248028"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179832"
 ---
 # <a name="insert-data-from-a-sql-table-into-a-python-pandas-dataframe"></a>SQL 테이블 데이터를 Python pandas 데이터 프레임에 삽입
-[!INCLUDE[sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
+[!INCLUDE[SQL Server SQL DB SQL MI](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 이 문서에서는 Python에서 [pyodbc](../../connect/python/pyodbc/python-sql-driver-pyodbc.md) 패키지를 사용하여 [pandas](https://pandas.pydata.org/) 데이터 프레임에 SQL 데이터를 삽입하는 방법을 설명합니다. 데이터 프레임에 포함된 데이터의 행과 열을 추가 데이터 탐색에 사용할 수 있습니다.
 

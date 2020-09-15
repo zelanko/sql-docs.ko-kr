@@ -8,16 +8,16 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2288c1898d9299fb346a80e2cd0a53104e308724
-ms.sourcegitcommit: d1535944bff3f2580070cc036ece30f1d43ee2ce
+ms.openlocfilehash: ab427983bdd327775ab817d6b56f496afe733127
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86406156"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179977"
 ---
 # <a name="revoscaler-r-package-in-sql-server-machine-learning-services"></a>RevoScaleR(SQL Server Machine Learning Services의 R 패키지)
 
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 **RevoScaleR**은 분산 컴퓨팅, 원격 컴퓨팅 컨텍스트 및 고성능 데이터 과학 알고리즘을 지원하는 Microsoft의 R 패키지입니다. 또한 데이터 가져오기, 데이터 변환, 요약, 시각화 및 분석을 지원합니다. 이 패키지는 [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) 및 [SQL Server 2016 R Services](sql-server-r-services.md)에 포함되어 있습니다.
 
@@ -151,6 +151,6 @@ RevoScaleR는 분산 데이터 과학을 위한 플랫폼 역할을 합니다. �
 
 + [R 자습서](../tutorials/sql-server-r-tutorials.md)
 + [컴퓨팅 컨텍스트 사용 방법 알아보기](../tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)
-+ [SQL 개발자를 위한 R: 모델 학습 및 운영](../tutorials/sqldev-in-database-r-for-sql-developers.md)
++ [SQL 개발자를 위한 R: 모델 학습 및 운영](../tutorials/r-taxi-classification-introduction.md)
 + [GitHub의 Microsoft 제품 샘플](https://github.com/Microsoft/SQL-Server-R-Services-Samples)
 + [R 참조(Microsoft Machine Learning Server)](https://docs.microsoft.com/machine-learning-server/r-reference/introducing-r-server-r-package-reference) 

@@ -1,6 +1,6 @@
 ---
 title: revoscalepy Python 패키지
-description: revoscalepy는 분산 컴퓨팅, 원격 컴퓨팅 컨텍스트 및 고성능 데이터 과학 알고리즘을 지원하는 Microsoft의 Python 패키지입니다. 이 패키지는 SQL Server Machine Learning Services에 포함되어 있습니다.
+description: revoscalepy는 분산 컴퓨팅, 원격 컴퓨팅 컨텍스트 및 고성능 데이터 과학 알고리즘을 지원하는 Microsoft의 Python 패키지입니다.
 ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 07/14/2020
@@ -8,15 +8,15 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ae5d05658d94f6967049d9b6857d407286661f3f
-ms.sourcegitcommit: d1535944bff3f2580070cc036ece30f1d43ee2ce
+ms.openlocfilehash: c5932a335dc1789256932f327ba9dab58c6afaf7
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86406186"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88178623"
 ---
 # <a name="revoscalepy-python-package-in-sql-server-machine-learning-services"></a>revoscalepy(SQL Server Machine Learning Services의 Python 패키지)
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2017 and later](../../includes/applies-to-version/sqlserver2017.md)]
 
 **revoscalepy**는 분산 컴퓨팅, 원격 컴퓨팅 컨텍스트 및 고성능 데이터 과학 알고리즘을 지원하는 Microsoft의 Python 패키지입니다. 이 패키지는 [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md)에 포함되어 있습니다.
 
@@ -105,7 +105,7 @@ ms.locfileid: "86406186"
 
 저장 프로시저 내에서 Python 스크립트 [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)를 캡슐화할 준비가 되면 코드를 입력 및 출력이 명확하게 정의된 단일 함수로 다시 작성하는 것이 좋습니다. 
 
-입력 및 출력은 **pandas** 데이터 프레임이어야 합니다. 이 작업이 완료되면 T-SQL을 지원하는 모든 클라이언트에서 저장 프로시저를 호출하고, SQL 쿼리를 입력으로 쉽게 전달하고, 결과를 SQL 테이블에 저장할 수 있습니다. 예제를 보려면 [SQL 개발자를 위한 데이터베이스 내 Python 분석 학습](../tutorials/sqldev-in-database-python-for-sql-developers.md)을 참조하세요.
+입력 및 출력은 **pandas** 데이터 프레임이어야 합니다. 이 작업이 완료되면 T-SQL을 지원하는 모든 클라이언트에서 저장 프로시저를 호출하고, SQL 쿼리를 입력으로 쉽게 전달하고, 결과를 SQL 테이블에 저장할 수 있습니다. 예제를 보려면 [SQL 개발자를 위한 데이터베이스 내 Python 분석 학습](../tutorials/python-taxi-classification-introduction.md)을 참조하세요.
 
 ### <a name="using-revoscalepy-with-microsoftml"></a>microsoftml에서 revoscalepy 사용
 

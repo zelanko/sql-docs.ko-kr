@@ -11,15 +11,15 @@ ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 21b3f8f93d3375789de9da92ab4bb2b1e136964c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 22cbb7c46e02ad989dd89b7296e2d0e824b94e44
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772341"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88178480"
 ---
 # <a name="quickstart-create-and-score-a-predictive-model-in-r-with-sql-machine-learning"></a>빠른 시작: R에서 SQL 기계 학습을 사용하여 예측 모델 만들기 및 채점
-[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 이 빠른 시작에서는 T를 사용하여 예측 모델을 만들어 학습시키고, 모델을 SQL Server 인스턴스의 테이블에 저장한 다음, 모델에서 [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) 또는 [빅 데이터 클러스터](../../big-data-cluster/machine-learning-services.md)를 사용하여 새 데이터로 값을 예측합니다.

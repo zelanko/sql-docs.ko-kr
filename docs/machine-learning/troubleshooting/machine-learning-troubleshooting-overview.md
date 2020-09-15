@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 036f4a7b604825f09dc884594e17c50396d84c0e
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 732a4c1c37367a6faa78dd3da9919fd1cec2f774
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87253721"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88178870"
 ---
 # <a name="troubleshoot-machine-learning-in-sql-server"></a>SQL Server의 기계 학습 문제 해결
-[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 이 문서를 사용하여 SQL Server 기계 학습을 사용할 때 발생하는 문제 해결을 시작할 수 있습니다.
 

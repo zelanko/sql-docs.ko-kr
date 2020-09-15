@@ -10,16 +10,16 @@ ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 80f14fc69a6abf0720f3f9d9fb3c170f0ab1da0d
-ms.sourcegitcommit: d1535944bff3f2580070cc036ece30f1d43ee2ce
+ms.openlocfilehash: 5110f96b654847a0288471d28c72afa37d3df8c2
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86406226"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179852"
 ---
 # <a name="security-overview-for-the-extensibility-framework-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services의 확장성 프레임워크에 대한 보안 개요
 
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 이 문서에서는 [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md)에서 SQL Server 데이터베이스 엔진 및 관련 구성 요소를 확장성 프레임워크와 통합하는 데 사용되는 전체 보안 아키텍처에 대해 설명합니다. 또한 보안 개체, 서비스, 프로세스 ID 및 사용 권한을 살펴봅니다. SQL Server 확장성의 주요 개념 및 구성 요소에 대한 자세한 내용은 [SQL Server Machine Learning Services의 확장성 아키텍처](extensibility-framework.md)를 참조하세요.
 
