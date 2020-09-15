@@ -1,4 +1,5 @@
 ---
+description: Arguments for External Tools
 title: Arguments for External Tools
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,20 +14,20 @@ helpviewer_keywords:
 ms.assetid: 3991c13a-f23f-450b-a2ba-19391c399735
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 23c2680b2043ff35e882e801a684f8aeb9503b21
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 4cf19970c7c742701248c362806bc823d38cf8a3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86010815"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88314959"
 ---
 # <a name="arguments-for-external-tools"></a>Arguments for External Tools
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-인수는 **도구** 메뉴에서 외부 도구가 시작될 때 Studio 환경에서 값을 제공하는 변수입니다. **외부 도구** 대화 상자를 사용하여 메모장과 같은 외부 도구를 **도구** 메뉴에 추가할 수 있습니다.  
+ 인수는 **도구** 메뉴에서 외부 도구가 시작될 때 Studio 환경에서 값을 제공하는 변수입니다. **외부 도구** 대화 상자를 사용하여 메모장과 같은 외부 도구를 **도구** 메뉴에 추가할 수 있습니다.  
   
 다음 표에서는 외부 도구에 대한 인수를 나열합니다.  
   
-|속성|인수|Description|  
+|이름|인수|설명|  
 |--------|------------|---------------|  
 |**항목 경로**|$(ItemPath)|현재 원본의 전체 파일 이름(드라이브 + 경로 + 파일 이름으로 정의됨)이며 비원본 창이 활성화된 경우에는 비어 있음|  
 |**항목 디렉터리**|$(ItemDir)|현재 원본의 디렉터리(드라이브 + 경로로 정의됨)이며 비원본 창이 활성화된 경우에는 비어 있음|  
