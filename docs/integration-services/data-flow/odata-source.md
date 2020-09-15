@@ -16,12 +16,12 @@ f1_keywords:
 ms.assetid: cc9003c9-638e-432b-867e-e949d50cec90
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8f74fa8478953c4c1353d35f49250896ab2a7ab8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 064b6294a33b87e41a9439e2759be2461131e388
+ms.sourcegitcommit: 8689a1abea3e2b768cdf365143b9c229194010c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425825"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89424423"
 ---
 # <a name="odata-source"></a>OData 원본
 
@@ -54,6 +54,13 @@ OData 원본은 단순 데이터 형식 int, byte[], bool, byte, DateTime, DateT
 
 > [!IMPORTANT]
 > OData 원본 구성 요소는 SharePoint 목록에서 다중 선택 항목과 같은 복합 형식을 지원하지 않습니다.
+
+> [!Note]
+> 원본에서 TLS 1.2 연결만 허용하는 경우 레지스트리 설정을 통해 머신에 TLS 1.2를 적용해야 합니다. 관리자 권한 명령 프롬프트에서 다음 명령을 실행합니다.
+>
+> reg add HKLM\SOFTWARE\Microsoft\.NETFramework\v4.0.30319 /v SchUseStrongCrypto /t REG_DWORD /d 1 /reg:64
+>
+> reg add HKLM\SOFTWARE\Microsoft\.NETFramework\v4.0.30319 /v SchUseStrongCrypto /t REG_DWORD /d 1 /reg:32
 
 ## <a name="odata-format-and-performance"></a>OData 형식 및 성능
  대부분의 OData 서비스는 여러 형식으로 결과를 반환할 수 있습니다. `$format` 쿼리 옵션을 사용하여 결과 집합의 형식을 지정할 수 있습니다. JSON 및 JSON Light와 같은 형식은 ATOM 또는 XML보다 효율적이며 많은 양의 데이터를 전송하는 경우 더 나은 성능을 제공할 수 있습니다. 다음 표에서는 샘플 테스트의 결과를 제공합니다. 표에 나와 있듯이 ATOM에서 JSON으로 전환하는 경우 성능이 30-53% 향상되었고, ATOM에서 새로운 JSON Light 형식(WCF Data Services 5.1에서 사용 가능)으로 전환하는 경우에는 성능이 67% 향상되었습니다.  

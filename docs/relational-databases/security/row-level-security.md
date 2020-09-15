@@ -2,7 +2,7 @@
 title: 행 수준 보안 | Microsoft 문서
 description: 행 수준 보안이 그룹 멤버 자격 또는 실행 컨텍스트를 사용하여 SQL Server 내 데이터베이스 테이블의 행에 대한 액세스를 제어하는 방법을 알아봅니다.
 ms.custom: ''
-ms.date: 05/14/2019
+ms.date: 09/01/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse
 ms.reviewer: ''
@@ -18,12 +18,12 @@ ms.assetid: 7221fa4e-ca4a-4d5c-9f93-1b8a4af7b9e8
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5573bcc6762e8a03651ba1573bc6254aaa2c80a0
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 88f809409337557603120cc87a24874319a96c9a
+ms.sourcegitcommit: c5f0c59150c93575bb2bd6f1715b42716001126b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000532"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89392191"
 ---
 # <a name="row-level-security"></a>행 수준 보안
 
@@ -256,7 +256,6 @@ GRANT SELECT ON security.fn_securitypredicate TO Sales1;
 GRANT SELECT ON security.fn_securitypredicate TO Sales2;  
 ```
 
-
 이제 각 사용자로 Sales 테이블에서 선택하여 필터링 조건자를 테스트합니다.
 
 ```sql
@@ -272,6 +271,7 @@ EXECUTE AS USER = 'Manager';
 SELECT * FROM Sales;
 REVERT;  
 ```
+
 관리자는 6개의 행을 모두 볼 수 있습니다. Sales1 및 Sales2 사용자는 자신의 판매 행만 볼 수 있습니다.
 
 정책을 사용하지 않도록 보안 정책을 변경합니다.
@@ -298,18 +298,26 @@ DROP SCHEMA Security;
 
 ### <a name="b-scenarios-for-using-row-level-security-on-an-azure-synapse-external-table"></a><a name="external"></a> 2. Azure Synapse 외부 테이블에 행 수준 보안을 사용하는 시나리오
 
-이 간단한 예제에서는 3명의 사용자와 6개의 행이 있는 외부 테이블을 만듭니다. 그런 다음 외부 테이블에 대한 인라인 테이블 반환 함수 및 보안 정책을 만듭니다. 예에서는 select 문이 다양한 사용자를 필터링하는 방법을 보여줍니다.
+이 간단한 예제에서는 3명의 사용자와 6개의 행이 있는 외부 테이블을 만듭니다. 그런 다음 외부 테이블에 대한 인라인 테이블 반환 함수 및 보안 정책을 만듭니다. 예에서는 select 문이 다양한 사용자를 필터링하는 방법을 보여줍니다. 
 
-서로 다른 액세스 기능을 보여주는 3개의 사용자 계정을 만듭니다.
+### <a name="prerequisites"></a>필수 조건
+
+1. SQL 풀이 있어야 합니다. [Synapse SQL 풀 만들기](/azure/synapse-analytics/sql-data-warehouse/create-data-warehouse-portal)를 참조하세요.
+1. SQL 풀을 호스트하는 서버는 AAD에 등록되어야 하며, 스토리지 블로그 기여자 권한이 있는 Azure Storage 계정이 있어야 합니다. [여기](/azure/azure-sql/database/vnet-service-endpoint-rule-overview#steps)의 단계를 따릅니다.
+1. Azure Storage 계정에 대한 파일 시스템을 만듭니다. Storage Explorer를 사용하여 스토리지 계정을 확인합니다. 컨테이너를 마우스 오른쪽 단추로 클릭하고 ‘파일 시스템 만들기’를 선택합니다.  
+
+필수 조건이 충족되면 서로 다른 액세스 기능을 보여 주는 3개의 사용자 계정을 만듭니다.
 
 ```sql
-CREATE LOGIN Manager WITH PASSWORD = 'somepassword'
+--run in master
+CREATE LOGIN Manager WITH PASSWORD = '<user_password>'
 GO
-CREATE LOGIN Sales1 WITH PASSWORD = 'somepassword'
+CREATE LOGIN Sales1 WITH PASSWORD = '<user_password>'
 GO
-CREATE LOGIN Sales2 WITH PASSWORD = 'somepassword'
+CREATE LOGIN Sales2 WITH PASSWORD = '<user_password>'
 GO
 
+--run in master and your SQL pool database
 CREATE USER Manager FOR LOGIN Manager;  
 CREATE USER Sales1  FOR LOGIN Sales1;  
 CREATE USER Sales2  FOR LOGIN Sales2 ;
@@ -330,12 +338,12 @@ CREATE TABLE Sales
 각 영업 담당자별로 세 개의 주문을 보여 주는 6개의 데이터 행으로 테이블을 채웁니다.  
 
 ```sql
-INSERT INTO Sales VALUES (1, 'Sales1', 'Valve', 5);
-INSERT INTO Sales VALUES (2, 'Sales1', 'Wheel', 2);
-INSERT INTO Sales VALUES (3, 'Sales1', 'Valve', 4);
-INSERT INTO Sales VALUES (4, 'Sales2', 'Bracket', 2);
-INSERT INTO Sales VALUES (5, 'Sales2', 'Wheel', 5);
-INSERT INTO Sales VALUES (6, 'Sales2', 'Seat', 5);
+INSERT INTO Sales VALUES (1, 'Sales1', 'Valve', 5);
+INSERT INTO Sales VALUES (2, 'Sales1', 'Wheel', 2);
+INSERT INTO Sales VALUES (3, 'Sales1', 'Valve', 4);
+INSERT INTO Sales VALUES (4, 'Sales2', 'Bracket', 2);
+INSERT INTO Sales VALUES (5, 'Sales2', 'Wheel', 5);
+INSERT INTO Sales VALUES (6, 'Sales2', 'Seat', 5);
 -- View the 6 rows in the table  
 SELECT * FROM Sales;
 ```
@@ -343,15 +351,15 @@ SELECT * FROM Sales;
 생성된 Sales 테이블에서 Azure Synapse 외부 테이블을 만듭니다.
 
 ```sql
-CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'somepassword';
+CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<user_password>';
 
 CREATE DATABASE SCOPED CREDENTIAL msi_cred WITH IDENTITY = 'Managed Service Identity';
 
-CREATE EXTERNAL DATA SOURCE ext_datasource_with_abfss WITH (TYPE = hadoop, LOCATION = 'abfss://myfile@mystorageaccount.dfs.core.windows.net', CREDENTIAL = msi_cred);
+CREATE EXTERNAL DATA SOURCE ext_datasource_with_abfss WITH (TYPE = hadoop, LOCATION = 'abfss://<file_system_name@storage_account>.dfs.core.windows.net', CREDENTIAL = msi_cred);
 
 CREATE EXTERNAL FILE FORMAT MSIFormat  WITH (FORMAT_TYPE=DELIMITEDTEXT);
   
-CREATE EXTERNAL TABLE Sales_ext WITH (LOCATION='RLSExtTabletest.tbl', DATA_SOURCE=ext_datasource_with_abfss, FILE_FORMAT=MSIFormat, REJECT_TYPE=Percentage, REJECT_SAMPLE_VALUE=100, REJECT_VALUE=100)
+CREATE EXTERNAL TABLE Sales_ext WITH (LOCATION='<your_table_name>', DATA_SOURCE=ext_datasource_with_abfss, FILE_FORMAT=MSIFormat, REJECT_TYPE=Percentage, REJECT_SAMPLE_VALUE=100, REJECT_VALUE=100)
 AS SELECT * FROM sales;
 ```
 
@@ -363,7 +371,21 @@ GRANT SELECT ON Sales_ext TO Sales2;
 GRANT SELECT ON Sales_ext TO Manager;
 ```
 
-필터 조건자로 세션 A의 함수를 사용하는 외부 테이블에 대한 보안 정책을 만듭니다. 정책을 활성화하려면 상태는 ON으로 설정해야 합니다.
+새 스키마를 만들고, 인라인 테이블 반환 함수를 만들면 예제 A에서 이를 완료했을 수 있습니다. SalesRep 열이 사용자가 실행한 쿼리와 동일한 경우(`@SalesRep = USER_NAME()`) 또는 쿼리를 실행한 사용자가 Manager 사용자(`USER_NAME() = 'Manager'`)인 경우 함수는 1을 반환합니다.
+
+```sql
+CREATE SCHEMA Security;  
+GO  
+  
+CREATE FUNCTION Security.fn_securitypredicate(@SalesRep AS sysname)  
+    RETURNS TABLE  
+WITH SCHEMABINDING  
+AS  
+    RETURN SELECT 1 AS fn_securitypredicate_result
+WHERE @SalesRep = USER_NAME() OR USER_NAME() = 'Manager';  
+```
+
+필터 조건자로 인라인 테이블 반환 함수를 사용하는 외부 테이블에 대한 보안 정책을 만듭니다. 정책을 활성화하려면 상태는 ON으로 설정해야 합니다.
 
 ```sql
 CREATE SECURITY POLICY SalesFilter_ext

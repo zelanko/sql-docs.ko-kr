@@ -37,12 +37,12 @@ helpviewer_keywords:
 ms.assetid: 8bf1316f-c0ef-49d0-90a7-3946bc8e7a89
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 88e4bea72d38e7c4a60bfb89d9962c58a99e4804
-ms.sourcegitcommit: 883435b4c7366f06ac03579752093737b098feab
+ms.openlocfilehash: 0c783f9db966605a3eeccaca453e7a5c249b8495
+ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89062332"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89288255"
 ---
 # <a name="hints-transact-sql---table"></a>힌트(Transact-SQL) - 테이블
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -307,13 +307,19 @@ READUNCOMMITTED 및 NOLOCK 힌트는 데이터 잠금에만 적용됩니다. REA
 격리 수준에 대한 자세한 내용은 [SET TRANSACTION ISOLATION LEVEL&#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)을 참조하세요.  
   
 > [!NOTE]  
-> READUNCOMMITTED를 지정할 때 오류 메시지 601이 표시되면 교착 상태 오류(1205)를 해결하는 방법으로 오류를 해결하고 문을 다시 시도하세요.  
+> READUNCOMMITTED를 지정할 때 [오류 메시지 601](../../relational-databases/errors-events/database-engine-events-and-errors.md#errors--2-to-999)이 표시되면 교착 상태([오류 메시지 1205](../../relational-databases/errors-events/mssqlserver-1205-database-engine-error.md))를 해결하는 방법으로 오류를 해결하고 문을 다시 시도하세요.  
   
 REPEATABLEREAD  
 REPEATABLE READ 격리 수준에서 실행되는 트랜잭션과 동일한 잠금 기능으로 검색이 수행되도록 지정합니다. 격리 수준에 대한 자세한 내용은 [SET TRANSACTION ISOLATION LEVEL&#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)을 참조하세요.  
   
 ROWLOCK  
-페이지 또는 테이블 잠금이 일반적으로 사용될 때 행 잠금을 사용하도록 지정합니다. SNAPSHOT 격리 수준에서 작동하는 트랜잭션에 지정하는 경우 UPDLOCK 및 HOLDLOCK과 같은 잠금이 필요한 다른 테이블 힌트와 함께 ROWLOCK을 사용하지 않으면 행 잠금이 수행되지 않습니다.  
+페이지 또는 테이블 잠금이 일반적으로 사용될 때 행 잠금을 사용하도록 지정합니다. SNAPSHOT 격리 수준에서 작동하는 트랜잭션에 지정하는 경우 UPDLOCK 및 HOLDLOCK과 같은 잠금이 필요한 다른 테이블 힌트와 함께 ROWLOCK을 사용하지 않으면 행 잠금이 수행되지 않습니다. ROWLOCK은 클러스터형 columnstore 인덱스가 있는 테이블에 사용할 수 없습니다. 다음 예제는 애플리케이션에 [오류 651](../../relational-databases/errors-events/database-engine-events-and-errors.md#errors--2-to-999)을 반환합니다.  
+
+```sql 
+UPDATE [dbo].[FactResellerSalesXL_CCI] WITH (ROWLOCK)
+SET UnitPrice = 50
+WHERE ProductKey = 150;
+```  
   
 직렬화 가능  
 HOLDLOCK과 동일합니다. 필요한 테이블 또는 데이터 페이지가 더 이상 필요 없을 때 트랜잭션의 완료 여부와 관계없이 즉시 공유 잠금을 해제하지 않고 트랜잭션 완료 시까지 유지함으로써 공유 잠금을 더욱 제한적으로 만듭니다. SERIALIZABLE 격리 수준에서 실행되는 트랜잭션과 동일한 잠금 기능으로 검색이 수행됩니다. 격리 수준에 대한 자세한 내용은 [SET TRANSACTION ISOLATION LEVEL&#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)을 참조하세요.  
@@ -321,11 +327,11 @@ HOLDLOCK과 동일합니다. 필요한 테이블 또는 데이터 페이지가 �
 SNAPSHOT  
 **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상 
   
-메모리 최적화 테이블은 SNAPSHOT 격리로 액세스됩니다. SNAPSHOT은 메모리 최적화 테이블에서만 사용할 수 있습니다(디스크 기반 테이블에서 사용할 수 없음). 자세한 내용은 [메모리 액세스에 최적화된 테이블 소개](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md)를 참조하세요.  
+메모리 최적화 테이블은 SNAPSHOT 격리로 액세스됩니다. SNAPSHOT은 다음 예제와 같이 메모리 최적화 테이블에서만 사용할 수 있습니다(디스크 기반 테이블에서 사용할 수 없음). 자세한 내용은 [메모리 액세스에 최적화된 테이블 소개](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md)를 참조하세요.  
   
 ```sql 
-SELECT * FROM dbo.Customers AS c   
-WITH (SNAPSHOT)   
+SELECT * 
+FROM dbo.Customers AS c WITH (SNAPSHOT)   
 LEFT JOIN dbo.[Order History] AS oh   
     ON c.customer_id=oh.customer_id;  
 ```  

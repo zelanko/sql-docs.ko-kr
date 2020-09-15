@@ -20,12 +20,12 @@ ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb7
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 12d986004250f40acb9dc99d225fc30c015ac734
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cab3daadc9c3fda3739db3c48fb623725098cba1
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88403059"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480955"
 ---
 # <a name="transaction-locking-and-row-versioning-guide"></a>트랜잭션 잠금 및 행 버전 관리 지침
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -388,7 +388,7 @@ GO
 |---------------------|----------------|------------------------|-------------|  
 |**READ UNCOMMITTED**|예|예|예|  
 |**READ COMMITTED**|예|예|예|  
-|**REPEATABLE READ**|예|예|예|  
+|**REPEATABLE READ**|예|아니요|예|  
 |**스냅샷**|예|예|예|  
 |**직렬화 가능**|예|예|예|  
   
@@ -424,7 +424,7 @@ GO
   
  일반적으로 애플리케이션은 잠금을 직접 요청하지 않습니다. 잠금은 잠금 관리자라고 하는 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]의 일부를 통해 내부적으로 관리됩니다. [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 인스턴스가 [!INCLUDE[tsql](../includes/tsql-md.md)] 문을 처리할 때 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 쿼리 프로세서는 액세스할 리소스를 확인합니다. 쿼리 프로세서는 액세스 유형과 트랜잭션 격리 수준 설정에 따라 각 리소스를 보호하는 데 필요한 잠금 유형을 결정합니다. 그런 다음 쿼리 프로세서는 잠금 관리자에게 적절한 잠금을 요청합니다. 잠금 관리자는 다른 트랜잭션에서 지속되는 잠금과 충돌되지 않는 잠금을 허용합니다.  
   
-### <a name="lock-granularity-and-hierarchies"></a>잠금 세분성 및 계층  
+## <a name="lock-granularity-and-hierarchies"></a>잠금 세분성 및 계층  
  [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]은 한 트랜잭션으로 여러 유형의 리소스를 잠글 수 있는 다양한 세분성의 잠금을 제공합니다. 잠금 비용을 최소화하기 위해 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]은 자동으로 태스크에 맞는 수준에서 리소스를 잠급니다. 행과 같이 작은 세분성에서 잠그면 동시성이 향상되지만 많은 행을 잠글 경우 더 많은 잠금을 보유해야 하므로 오버헤드가 늘어납니다. 테이블과 같이 큰 세분성에서 잠그면 전체 테이블이 잠겨 다른 트랜잭션이 테이블에 액세스하지 못하게 제한되므로 동시성은 떨어지지만 유지 관리할 잠금 수가 적으므로 오버헤드가 줄어듭니다.  
   
  [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]이 리소스를 완전히 보호하기 위해 여러 수준의 세분성에서 잠금을 획득해야 하는 경우가 많습니다. 이러한 여러 수준의 세분성 잠금 그룹을 잠금 계층 구조라고 합니다. 예를 들어 인덱스 읽기를 완전히 보호하기 위해 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]의 인스턴스에서는 행에 대한 공유 잠금과 페이지와 테이블에 대한 내재된 공유 잠금을 획득해야 합니다.  
@@ -448,7 +448,7 @@ GO
 > [!NOTE]  
 > HoBT 및 TABLE 잠금은 [ALTER TABLE](../t-sql/statements/alter-table-transact-sql.md)의 LOCK_ESCALATION 옵션의 영향을 받을 수 있습니다.  
   
-### <a name="lock-modes"></a><a name="lock_modes"></a> 잠금 모드  
+## <a name="lock-modes"></a><a name="lock_modes"></a> 잠금 모드  
  [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]은 동시 트랜잭션이 리소스에 액세스할 수 있는 방법을 결정하는 여러 가지 잠금 모드를 사용하여 리소스를 잠급니다.  
   
  다음 표에서는 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]에서 사용하는 리소스 잠금 모드를 보여 줍니다.  
@@ -463,20 +463,20 @@ GO
 |**대량 업데이트(BU)**|데이터를 테이블로 대량 복사하는 경우와 **TABLOCK** 힌트가 지정된 경우에 사용합니다.|  
 |**키 범위**|직렬화 가능 트랜잭션 격리 수준을 사용할 때 쿼리가 읽는 행 범위를 보호합니다. 쿼리가 다시 실행될 경우 직렬화 가능 트랜잭션의 쿼리에 대해 반환되는 행을 다른 트랜잭션이 삽입할 수 없도록 합니다.|  
   
-#### <a name="shared-locks"></a><a name="shared"></a> 공유 잠금  
+### <a name="shared-locks"></a><a name="shared"></a> 공유 잠금  
  공유(S) 잠금을 사용하면 비관적 동시성 제어 하에서 동시 트랜잭션이 리소스를 읽을(SELECT) 수 있습니다. 리소스에 공유(S) 잠금이 설정되어 있는 동안에는 다른 트랜잭션이 데이터를 수정할 수 없습니다. 트랜잭션 격리 수준을 반복 읽기 이상으로 설정하거나 잠금 힌트를 사용하여 트랜잭션 기간에 대한 공유(S) 잠금을 보유하지 않는 한, 리소스에 대한 공유(S) 잠금은 읽기 작업이 완료되면 바로 해제됩니다.  
   
-#### <a name="update-locks"></a><a name="update"></a> 업데이트 잠금  
+### <a name="update-locks"></a><a name="update"></a> 업데이트 잠금  
  업데이트(U) 잠금을 사용하면 일반적인 형태의 교착 상태가 방지됩니다. 반복 읽기 또는 직렬화 가능 트랜잭션의 경우 트랜잭션이 데이터를 읽고, 리소스(페이지 또는 행)에 대한 공유(S) 잠금을 얻은 다음 데이터를 수정하는데 행을 수정할 때는 배타적(X) 잠금으로 잠금을 변환해야 합니다. 두 트랜잭션이 리소스에 대해 공유 모드 잠금을 얻은 다음 데이터를 동시에 업데이트하려고 하면 한 트랜잭션이 배타적(X) 잠금으로 잠금을 변환하려고 합니다. 한 트랜잭션의 배타 잠금은 다른 트랜잭션의 공유 모드 잠금과 호환되지 않으므로 공유 모드를 배타 모드로 변환할 때는 잠금 대기가 발생합니다. 두 번째 트랜잭션이 해당 업데이트에 대해 배타적(X) 잠금을 얻으려고 합니다. 이 경우 두 트랜잭션 모두 배타적(X) 잠금으로 변환 중이고 각각 상대 트랜잭션이 공유 모드 잠금을 해제하기를 기다리므로 교착 상태가 발생합니다.  
   
  이러한 교착 상태를 방지하려면 업데이트(U) 잠금을 사용합니다. 한 번에 한 트랜잭션만 리소스에 대한 업데이트(U) 잠금을 얻을 수 있습니다. 트랜잭션이 리소스를 수정하면 업데이트(U) 잠금이 배타적(X) 잠금으로 변환됩니다.  
   
-#### <a name="exclusive-locks"></a><a name="exclusive"></a> 배타 잠금  
+### <a name="exclusive-locks"></a><a name="exclusive"></a> 배타 잠금  
  배타적(X) 잠금을 사용하면 동시 트랜잭션이 리소스에 액세스할 수 없습니다. 배타(X) 잠금을 사용하면 다른 트랜잭션이 데이터를 수정할 수 없습니다. 읽기 작업은 NOLOCK 힌트 또는 READ UNCOMMITED 격리 수준을 사용해서만 수행할 수 있습니다.  
   
  INSERT, UPDATE 및 DELETE 등의 데이터 수정 문은 데이터 수정과 읽기 작업을 함께 수행합니다. 해당 문은 먼저 읽기 작업을 수행하여 데이터를 확보한 후 필요한 수정 작업을 수행합니다. 따라서 데이터 수정 문은 대개 공유 잠금과 배타 잠금을 모두 필요로 합니다. 예를 들어 UPDATE 문은 다른 테이블과의 조인이 있는 테이블의 행을 수정할 수 있습니다. 이 경우 UPDATE 문은 조인 테이블에서 읽는 행에 대한 공유 잠금과 업데이트되는 행에 대한 배타 잠금을 함께 요청합니다.  
   
-#### <a name="intent-locks"></a><a name="intent"></a> 의도 잠금  
+### <a name="intent-locks"></a><a name="intent"></a> 의도 잠금  
  [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]에서는 의도 잠금을 사용하여 잠금 계층 구조 아래쪽에 있는 하위 수준 리소스에 설정되는 공유(S) 잠금 또는 배타적(X) 잠금을 보호합니다. 하위 수준의 잠금보다 먼저 확보되어 하위 수준에 잠금을 설정하려고 하는 의도를 나타내므로 의도 잠금이라고 합니다.  
   
  의도 잠금은 다음과 같은 두 가지 역할을 합니다.  
@@ -497,14 +497,14 @@ GO
 |**공유 의도 업데이트(SIU)**|S 잠금과 IU 잠금이 결합된 것으로, 두 잠금을 별도로 확보한 후 동시에 동시에 보유할 경우 설정됩니다. 예를 들어 트랜잭션이 PAGLOCK 힌트가 있는 쿼리를 실행한 다음 업데이트 작업을 실행하면 PAGLOCK 힌트가 있는 쿼리는 S 잠금을 확보하고 업데이트 작업은 IU 잠금을 확보합니다.|  
 |**업데이트 의도 배타(UIX)**|U 잠금과 IX 잠금이 결합된 것으로, 두 잠금을 별도로 확보한 후 동시에 동시에 보유할 경우 설정됩니다.|  
   
-#### <a name="schema-locks"></a><a name="schema"></a> 스키마 잠금  
+### <a name="schema-locks"></a><a name="schema"></a> 스키마 잠금  
  [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]은 열을 추가하거나 테이블을 삭제하는 등의 테이블 DDL(데이터 정의 언어) 작업 중에 스키마 수정(Sch-M) 잠금을 사용합니다. Sch-M 잠금이 유지되는 동안에는 테이블에 대한 동시 액세스가 방지됩니다. 즉, 잠금이 해제되기 전까지는 Sch-M 잠금이 모든 외부 작업을 차단합니다.  
   
  테이블 잘림 등의 일부 DML(데이터 조작 언어)은 Sch-M 잠금을 사용하여 영향을 받는 테이블에 대한 동시 작업의 액세스를 방지합니다.  
   
  [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]은 쿼리를 컴파일하고 실행할 때 스키마 안정성(Sch-S) 잠금을 사용합니다. Sch-S 잠금은 배타적(X) 잠금 등의 트랜잭션 잠금을 차단하지 않습니다. 따라서 쿼리가 컴파일되는 동안 테이블에 대한 X 잠금이 있는 트랜잭션을 포함하여 다른 트랜잭션이 계속 실행됩니다. 그러나 Sch-M 잠금을 획득하는 동시 DML 작업과 동시 DDL 작업은 테이블에서 수행할 수 없습니다.  
   
-#### <a name="bulk-update-locks"></a><a name="bulk_update"></a> 대량 업데이트 잠금  
+### <a name="bulk-update-locks"></a><a name="bulk_update"></a> 대량 업데이트 잠금  
  대량 업데이트(BU) 잠금을 사용하면 여러 스레드가 데이터를 동시에 같은 테이블로 대량 로드하는 것은 허용하고, 데이터를 대량 로드하지 않는 다른 프로세스가 테이블에 액세스하는 것은 방지할 수 있습니다. [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]에서는 다음 조건이 모두 충족되면 대량 업데이트(BU) 잠금을 사용합니다.  
   
 -   [!INCLUDE[tsql](../includes/tsql-md.md)] BULK INSERT 문 또는 OPENROWSET(BULK) 함수를 사용하거나 .NET SqlBulkCopy, OLEDB 빠른 로드 API 또는 ODBC 대량 복사 API와 같은 BULK INSERT 명령 중 하나를 사용하여 데이터를 테이블에 대량 복사합니다.  
@@ -513,10 +513,10 @@ GO
 > [!TIP]  
 > 덜 제한적인 대량 업데이트 잠금을 보유하는 BULK INSERT 문과 달리 TABLOCK 힌트를 사용하는 INSERT INTO...SELECT 문은 테이블에 대해 배타적(X) 잠금을 보유합니다. 즉, 병렬 삽입 작업을 사용하여 행을 삽입할 수 없습니다.  
   
-#### <a name="key-range-locks"></a><a name="key_range"></a> 키 범위 잠금  
+### <a name="key-range-locks"></a><a name="key_range"></a> 키 범위 잠금  
  키 범위 잠금은 직렬화 가능 트랜잭션 격리 수준을 사용하는 동안 [!INCLUDE[tsql](../includes/tsql-md.md)] 문에서 읽는 레코드 집합에 포함된 행 범위를 암시적으로 보호합니다. 키 범위 잠금은 가상 읽기를 방지합니다. 행 간에 키 범위를 보호하면 트랜잭션이 액세스하는 레코드 집합에 대한 가상 삽입이나 가상 삭제도 방지됩니다.  
   
-### <a name="lock-compatibility"></a><a name="lock_compatibility"></a> 잠금 호환성  
+## <a name="lock-compatibility"></a><a name="lock_compatibility"></a> 잠금 호환성  
  잠금 호환성에 따라 여러 트랜잭션이 동시에 같은 리소스에 대한 잠금을 획득할 수 있는지 여부가 결정됩니다. 이미 다른 트랜잭션에서 리소스를 잠근 경우에는 요청된 잠금 모드가 기존 잠금 모드와 호환되어야만 새 잠금 요청이 허용될 수 있습니다. 요청된 잠금의 모드가 기존 잠금과 호환되지 않을 경우 새 잠금을 요청하는 트랜잭션은 기존 잠금이 해제되거나 잠금 시간 초과 간격이 만료될 때까지 기다립니다. 예를 들어 배타적 잠금과 호환되는 잠금 모드는 없습니다. 배타적(X) 잠금이 설정되어 있는 동안 다른 트랜잭션은 배타적(X) 잠금이 해제될 때까지 해당 리소스에 대해 공유, 업데이트 또는 배타적 잠금을 비롯한 어떠한 유형의 잠금도 획득할 수 없습니다. 리소스에 공유(S) 잠금이 적용된 경우에는 첫 번째 트랜잭션이 완료되지 않아도 다른 트랜잭션이 해당 항목에 대해 공유 잠금 또는 업데이트(U) 잠금을 획득할 수 있습니다. 그러나 공유 잠금이 해제될 때까지는 다른 트랜잭션이 배타적 잠금을 획득할 수 없습니다.  
   
 <a name="lock_compat_table"></a> 다음 표에서는 가장 일반적인 잠금 모드의 호환성을 보여줍니다.  
@@ -538,14 +538,14 @@ GO
   
  ![lock_conflicts](../relational-databases/media/LockConflictTable.png)  
   
-### <a name="key-range-locking"></a>키 범위 잠금  
+## <a name="key-range-locking"></a>키 범위 잠금  
  키 범위 잠금은 직렬화 가능 트랜잭션 격리 수준을 사용하는 동안 [!INCLUDE[tsql](../includes/tsql-md.md)] 문에서 읽는 레코드 집합에 포함된 행 범위를 암시적으로 보호합니다. 직렬화 가능 격리 수준에서는 트랜잭션 중 실행되는 모든 쿼리가 트랜잭션 중 실행될 때마다 동일한 행 집합을 가져와야 합니다. 키 범위 잠금은 다른 트랜잭션에서 해당 키가 직렬화 가능 트랜잭션에서 읽은 키 범위에 속하는 새 행을 삽입하지 못하도록 하여 이 요구 사항을 보호합니다.  
   
  키 범위 잠금은 가상 읽기를 방지합니다. 또한 행 사이에서 키 범위를 보호하여 트랜잭션에서 액세스하는 레코드 집합에 대한 가상 삽입을 방지합니다.  
   
  키 범위 잠금은 인덱스에 배치되어 시작 키 값과 종료 키 값을 지정합니다. 이 잠금은 키 값이 해당 범위에 속하는 모든 행의 삽입, 업데이트 또는 삭제 시도를 차단합니다. 이는 이러한 작업을 수행하려면 먼저 인덱스에 대한 잠금을 획득해야 하기 때문입니다. 예를 들어 직렬화 가능 트랜잭션은 해당 키 값이 `BETWEEN 'AAA' AND 'CZZ'` 조건과 일치하는 모든 행을 읽는 `SELECT` 문을 실행할 수 있습니다. **'** AAA **'** 부터 **'** CZZ **'** 까지의 범위에 있는 키 값에 대한 키 범위 잠금은 다른 트랜잭션에서 해당 키 값이 **'** ADG **'** , **'** BBD **'** 또는 **'** CAL **'** 과 같이 해당 범위에 있는 행을 삽입하지 못하도록 합니다.  
   
-#### <a name="key-range-lock-modes"></a><a name="key_range_modes"></a> 키 범위 잠금 모드  
+### <a name="key-range-lock-modes"></a><a name="key_range_modes"></a> 키 범위 잠금 모드  
  키 범위 잠금에는 범위-행 형식으로 지정된 범위 및 행 구성 요소가 모두 포함됩니다.  
   
 -   범위는 두 개의 연속되는 인덱스 항목 간의 범위를 보호하는 잠금 모드를 나타냅니다.  
@@ -567,15 +567,15 @@ GO
 ||기존의 허가 모드|||||||  
 |------|---------------------------|------|------|------|------|------|------|  
 |**요청 모드**|**S**|**U**|**X**|**RangeS-S**|**RangeS-U**|**RangeI-N**|**RangeX-X**|  
-|**공유(S)**|예|예|예|예|예|예|예|  
+|**공유(S)**|예|예|아니요|예|예|예|예|  
 |**업데이트(U)**|예|예|아니요|예|아니요|예|예|  
-|**배타적(X)**|예|예|예|예|예|예|예|  
+|**배타적(X)**|예|예|예|예|아니요|예|예|  
 |**RangeS-S**|예|예|아니요|예|예|예|예|  
-|**RangeS-U**|예|예|예|예|예|예|예|  
+|**RangeS-U**|예|예|아니요|예|예|예|예|  
 |**RangeI-N**|예|예|예|예|아니요|예|예|  
 |**RangeX-X**|예|예|예|예|예|예|예|  
   
-#### <a name="conversion-locks"></a><a name="lock_conversion"></a> 변환 잠금  
+### <a name="conversion-locks"></a><a name="lock_conversion"></a> 변환 잠금  
  변환 잠금은 키 범위 잠금이 다른 잠금과 겹칠 때 만들어집니다.  
   
 |잠금 1|잠금 2|변환 잠금|  
@@ -588,7 +588,7 @@ GO
   
  변환 잠금은 다양한 복합 환경에서 짧은 시간 동안 나타날 수 있으며 때로는 동시 프로세스를 실행하는 동안에 나타납니다.  
   
-#### <a name="serializable-range-scan-singleton-fetch-delete-and-insert"></a>직렬화 가능 범위 검색, 단일 인출, 삭제 및 삽입  
+### <a name="serializable-range-scan-singleton-fetch-delete-and-insert"></a>직렬화 가능 범위 검색, 단일 인출, 삭제 및 삽입  
  키 범위 잠금을 사용하면 다음 작업을 직렬화할 수 있습니다.  
   
 -   범위 검색 쿼리  
@@ -601,12 +601,12 @@ GO
 -   트랜잭션 격리 수준을 SERIALIZABLE로 설정해야 합니다.  
 -   쿼리 프로세서가 인덱스를 사용하여 범위 필터 조건자를 구현해야 합니다. 예를 들어 SELECT 문의 WHERE 절은 다음 조건자를 사용하여 범위 조건을 설정할 수 있습니다. ColumnX BETWEEN N **'** AAA **'** AND N **'** CZZ **'** . 키 범위 잠금은 **ColumnX**가 인덱스 키 내에 있는 경우에만 얻을 수 있습니다.  
   
-#### <a name="examples"></a>예제  
+### <a name="examples"></a>예제  
  다음 테이블 및 인덱스는 이어지는 키 범위 잠금 예의 기준으로 사용됩니다.  
   
  ![btree](../relational-databases/media/btree4.png)  
   
-##### <a name="range-scan-query"></a>범위 검색 쿼리  
+#### <a name="range-scan-query"></a>범위 검색 쿼리  
  범위 검색 쿼리가 직렬화 가능인지 확인하려면 같은 트랜잭션 내에서 같은 쿼리를 실행할 때마다 같은 결과를 반환해야 합니다. 다른 트랜잭션에서는 범위 스캔 쿼리 내에 새 행을 추가하면 안됩니다. 그렇지 않으면 이러한 행은 가상 삽입이 됩니다. 예를 들어 다음 쿼리는 앞 그림의 테이블과 인덱스를 사용합니다.  
   
 ```sql  
@@ -615,12 +615,12 @@ FROM mytable
 WHERE name BETWEEN 'A' AND 'C';  
 ```  
   
- 키 범위 잠금은 이름이 Adam과 Dale 값 사이에 있는 데이터 행 범위에 해당하는 인덱스 항목에 설정되어 앞의 쿼리에서 한정하는 새 행의 추가 또는 삭제를 방지합니다. 이 범위의 첫 번째 이름은 Adam이지만 이 인덱스 항목에 대해 RangeS-S 모드 키 범위 잠금을 사용하면 Abigail과 같이 A로 시작하는 새 이름을 Adam 앞에 추가할 수 없습니다. 마찬가지로 Dale의 인덱스 항목에 대해 RangeS-S 키 범위 잠금을 사용하면 Clive와 같이 C로 시작하는 새 이름을 Carlos 뒤에 추가할 수 없습니다.  
+ 키 범위 잠금은 이름이 `Adam`과 `Dale` 값 사이에 있는 데이터 행 범위에 해당하는 인덱스 항목에 설정되어 앞의 쿼리에서 한정하는 새 행의 추가 또는 삭제를 방지합니다. 이 범위의 첫 번째 이름은 `Adam`이지만 이 인덱스 항목에 RangeS-S 모드 키 범위 잠금을 사용하면 `Abigail`과 같이 A로 시작하는 새 이름을 `Adam` 앞에 추가할 수 없습니다. 마찬가지로 `Dale`의 인덱스 항목에 RangeS-S 키 범위 잠금을 사용하면 `Clive`와 같이 C로 시작하는 새 이름을 `Carlos` 뒤에 추가할 수 없습니다.  
   
 > [!NOTE]  
 > 보유한 RangeS-S 잠금 수는 *n*+1입니다. 여기서 *n*은 쿼리를 만족하는 행 수입니다.  
   
-##### <a name="singleton-fetch-of-nonexistent-data"></a>존재하지 않는 데이터의 단일 인출  
+#### <a name="singleton-fetch-of-nonexistent-data"></a>존재하지 않는 데이터의 단일 인출  
  트랜잭션 내의 쿼리가 존재하지 않는 행을 선택하려고 하면 같은 트랜잭션 내에서 나중에 쿼리를 실행해도 같은 결과를 반환해야 합니다. 다른 트랜잭션도 존재하지 않는 행을 삽입할 수 없습니다. 다음과 같은 쿼리를 예로 들 수 있습니다.  
   
 ```sql  
@@ -631,7 +631,7 @@ WHERE name = 'Bill';
   
  이 경우 `Ben`이라는 이름이 인접한 두 인덱스 항목 사이에 삽입되므로 키 범위 잠금은 `Bing`부터 `Bill`까지의 이름 범위에 해당하는 인덱스 항목에 적용됩니다. RangeS-S 모드 키 범위 잠금은 인덱스 항목 `Bing`에 적용됩니다. 이렇게 되면 다른 모든 트랜잭션이 `Bill` 등의 값을 인덱스 항목 `Ben`과 `Bing` 사이에 삽입할 수 없습니다.  
   
-##### <a name="delete-operation"></a>삭제 작업  
+#### <a name="delete-operation"></a>삭제 작업  
  트랜잭션 내에서 값을 삭제할 때는 트랜잭션이 삭제 작업을 수행하는 동안 값이 속하는 범위를 잠글 필요가 없습니다. 삭제된 키 값을 트랜잭션이 끝날 때까지 잠그기만 해도 직렬화 기능이 유지됩니다. 다음과 같은 DELETE 문을 예로 들 수 있습니다.  
   
 ```sql  
@@ -641,9 +641,9 @@ WHERE name = 'Bob';
   
  배타적(X) 잠금이 `Bob`이라는 이름에 해당하는 인덱스 항목에 설정되어 있습니다. 다른 트랜잭션은 삭제된 값인 `Bob` 전후에 값을 삽입하거나 삭제할 수 있습니다. 그러나 값 `Bob`을 읽거나 삽입하거나 삭제하려는 트랜잭션은 삭제 트랜잭션이 커밋되거나 롤백될 때까지 차단됩니다.  
   
- 범위 삭제는 세 가지 기본 잠금 모드인 행 잠금, 페이지 잠금 또는 테이블 잠금을 사용하여 실행될 수 있습니다. 행, 페이지 또는 테이블 잠금 전략은 쿼리 최적화 프로그램에 의해 결정되거나 ROWLOCK, PAGLOCK 또는 TABLOCK 등의 최적화 프로그램 힌트를 통해 사용자가 지정할 수 있습니다. PAGLOCK 또는 TABLOCK을 사용하는 경우 이 페이지에서 모든 행이 삭제되면 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]은 즉시 인덱스 페이지 할당을 해제합니다. 반대로 ROWLOCK을 사용하면 삭제된 모든 행이 삭제된 것으로 표시만 되고 나중에 백그라운드 태스크를 사용하여 인덱스 페이지에서 제거됩니다.  
+ 범위 삭제는 세 가지 기본 잠금 모드인 행 잠금, 페이지 잠금 또는 테이블 잠금을 사용하여 실행될 수 있습니다. 행, 페이지 또는 테이블 잠금 전략은 쿼리 최적화 프로그램에 의해 결정되거나 ROWLOCK, PAGLOCK 또는 TABLOCK 등의 쿼리 최적화 프로그램 힌트를 통해 사용자가 지정할 수 있습니다. PAGLOCK 또는 TABLOCK을 사용하는 경우 이 페이지에서 모든 행이 삭제되면 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]은 즉시 인덱스 페이지 할당을 해제합니다. 반대로 ROWLOCK을 사용하면 삭제된 모든 행이 삭제된 것으로 표시만 되고 나중에 백그라운드 태스크를 사용하여 인덱스 페이지에서 제거됩니다.  
   
-##### <a name="insert-operation"></a>삽입 작업  
+#### <a name="insert-operation"></a>삽입 작업  
  트랜잭션 내에서 값을 삽입할 때는 트랜잭션이 삽입 작업을 수행하는 동안 값이 속하는 범위를 잠글 필요가 없습니다. 삽입된 키 값을 트랜잭션이 끝날 때까지 잠그기만 해도 직렬화 기능이 유지됩니다. 다음과 같은 INSERT 문을 예로 들 수 있습니다.  
   
 ```sql  
@@ -652,7 +652,162 @@ INSERT mytable VALUES ('Dan');
   
  범위를 테스트하기 위해 RangeI-N 모드 키 범위 잠금이 David 이름에 해당하는 인덱스 항목에 적용됩니다. 잠금이 허용되면 `Dan`이 삽입되고 `Dan` 값에 배타적(X) 잠금이 적용됩니다. Range-N 모드 키 범위 잠금은 범위를 테스트하는 데만 필요하며 트랜잭션이 삽입 작업을 수행하는 동안에는 보유되지 않습니다. 다른 트랜잭션은 삽입된 값 `Dan` 전후에 값을 삽입하거나 삭제할 수 있습니다. 그러나 값 `Dan`을 읽거나 삽입하거나 삭제하려는 트랜잭션은 삽입 트랜잭션이 커밋되거나 롤백될 때까지 차단됩니다.  
   
-### <a name="dynamic-locking"></a><a name="dynamic_locks"></a> 동적 잠금  
+## <a name="lock-escalation"></a>잠금 에스컬레이션
+잠금 에스컬레이션은 많은 수의 미세 잠금을 더 적은 수의 성긴 잠금으로 변환하여 동시성 경합 가능성은 높이고 시스템 오버헤드는 줄이는 프로세스입니다.
+
+[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]는 하위 수준의 잠금을 획득할 때 더 하위 수준의 개체를 포함하는 개체에 의도 잠금도 배치합니다.
+
+-   행 또는 인덱스 키 범위를 잠그는 경우 [!INCLUDE[ssde_md](../includes/ssde_md.md)]는 행 또는 키를 포함하는 페이지에 의도 잠금을 배치합니다.
+-   페이지를 잠그는 경우 [!INCLUDE[ssde_md](../includes/ssde_md.md)]는 페이지를 포함하는 더 상위 수준의 개체에 의도 잠금을 배치합니다. 개체에 배치된 의도 잠금 외에도 다음 개체에 대해 의도 페이지 잠금이 요청됩니다.
+    -  비클러스터형 인덱스의 리프 수준 페이지
+    -  클러스터형 인덱스의 데이터 페이지
+    -  힙 데이터 페이지
+
+[!INCLUDE[ssde_md](../includes/ssde_md.md)]는 동일한 문에 대해 행 잠금과 페이지 잠금을 모두 수행하여 잠금 수를 최소화하고 잠금 에스컬레이션이 필요할 가능성을 낮출 수 있습니다. 예를 들어 데이터베이스 엔진은 비클러스터형 인덱스에는 페이지 잠금을 배치(쿼리를 만족시키기 위해 인덱스 노드에서 충분히 인접한 키가 선택된 경우)하고 데이터에는 행 잠금을 배치할 수 있습니다.
+
+[!INCLUDE[ssde_md](../includes/ssde_md.md)]은 잠금을 에스컬레이션하기 위해 테이블의 의도 잠금을 해당 전체 잠금으로 변경하려고 시도합니다. 예를 들어 의도 배타(IX) 잠금을 배타(X) 잠금으로 변경하거나 내재된 공유(IS) 잠금을 공유(S) 잠금으로 변경하려고 시도합니다. 잠금 에스컬레이션 시도가 성공하여 전체 테이블 잠금을 획득하면 힙이나 인덱스에서 트랜잭션이 보유한 모든 힙 또는 B-트리, 페이지(PAGE) 또는 행 수준(RID) 잠금이 해제됩니다. 전체 잠금을 획득할 수 없는 경우에는 해당 시점에서 잠금 에스컬레이션이 발생하지 않고 데이터베이스 엔진은 행, 키 또는 페이지 잠금 획득을 계속 시도합니다.
+
+[!INCLUDE[ssde_md](../includes/ssde_md.md)]은 행 또는 키 범위 잠금을 페이지 잠금으로 에스컬레이션하지 않고 곧바로 테이블 잠금으로 에스컬레이션합니다. 마찬가지로 페이지 잠금도 항상 테이블 잠금으로 에스컬레이션됩니다. 분할된 테이블의 잠금이 테이블 잠금이 아니라 관련된 파티션에 대한 HoBT 수준으로 에스컬레이션될 수 있습니다. HoBT 수준 잠금이 해당 파티션에 대해 정렬된 HoBT를 반드시 잠그는 것은 아닙니다.
+
+> [!NOTE]
+> HoBT 수준 잠금은 일반적으로 동시성을 증가시키지만 각각 다른 파티션을 잠그는 트랜잭션이 배타적 잠금을 다른 파티션으로 확장하려는 경우 교착 상태가 발생할 수도 있습니다. 경우에 따라 TABLE 잠금 세분성이 향상될 수도 있습니다.
+
+동시 트랜잭션이 보유한 잠금의 충돌로 인해 잠금 에스컬레이션 시도가 실패하면 [!INCLUDE[ssde_md](../includes/ssde_md.md)]은 트랜잭션이 획득한 추가 1,250개의 잠금 각각에 대해 잠금 에스컬레이션을 다시 시도합니다.
+
+각 에스컬레이션 이벤트는 주로 단일 [!INCLUDE[tsql](../includes/tsql-md.md)] 문의 수준에서 작동합니다. 이벤트가 시작되면 [!INCLUDE[ssde_md](../includes/ssde_md.md)]은 에스컬레이션 임계값 요구 사항이 충족되는 경우 활성 문에서 참조한 테이블 중에서 현재 트랜잭션이 소유한 모든 잠금을 에스컬레이션하려고 시도합니다. 문이 테이블에 액세스하기 전에 에스컬레이션 이벤트가 시작되면 해당 테이블의 잠금에 대한 에스컬레이션은 시도되지 않습니다. 잠금 에스컬레이션이 성공한 경우 테이블이 현재 문에서 참조되고 에스컬레이션 이벤트에 포함되어 있다면 이전 문에서 트랜잭션이 획득하여 이벤트 시작 시에도 여전히 보유하는 모든 잠금이 에스컬레이션됩니다.
+
+예를 들어 다음 작업을 수행하는 세션이 있다고 가정합니다.
+
+-  트랜잭션을 시작합니다.
+-  `TableA`를 업데이트합니다. 그러면 TableA에 트랜잭션이 완료될 때까지 보유되는 배타 행 잠금이 생성됩니다.
+-  `TableB`를 업데이트합니다. 그러면 TableB에 트랜잭션이 완료될 때까지 보유되는 배타 행 잠금이 생성됩니다.
+-  `TableA`와 `TableC`를 조인하는 SELECT를 수행합니다. 쿼리 실행 계획에 따라 행은 `TableC`에서 검색되기 전에 `TableA`에서 검색되어야 합니다.
+-  SELECT 문은 `TableC`에 액세스하기 전에 `TableA`에서 행을 검색하는 동안 잠금 에스컬레이션을 트리거합니다.
+
+잠금 에스컬레이션이 성공하면 `TableA`에서 세션이 보유한 잠금만 에스컬레이션됩니다. 여기에는 SELECT 문의 공유 잠금과 이전 UPDATE 문의 배타 잠금이 모두 포함됩니다. 잠금 에스컬레이션을 수행할지 결정하기 위해 세션이 SELECT 문에 대해 `TableA`에서 획득한 잠금 수가 계산되는 동안 에스컬레이션이 성공하면 `TableA`에서 세션이 보유한 모든 잠금은 테이블의 배타 잠금으로 에스컬레이션되고 `TableA`에서 의도 잠금을 포함하여 세분성이 더 낮은 다른 모든 잠금은 해제됩니다.
+
+SELECT 문에 `TableB`에 대한 활성 참조가 없기 때문에 `TableB`의 잠금 에스컬레이션은 시도되지 않습니다. 마찬가지로 에스컬레이션이 발생할 때 아직 액세스되지 않았기 때문에 에스컬레이션되지 않은 `TableC`의 잠금에는 에스컬레이션이 시도되지 않습니다.
+
+### <a name="lock-escalation-thresholds"></a>잠금 에스컬레이션 임계값
+
+잠금 에스컬레이션은 `ALTER TABLE SET LOCK_ESCALATION` 옵션을 사용하여 테이블에서 잠금 에스컬레이션을 사용하지 않도록 설정하지 않은 경우와 다음 조건 중 하나에 해당하는 경우 트리거됩니다.
+
+-  단일 [!INCLUDE[tsql](../includes/tsql-md.md)] 문이 분할되지 않은 단일 테이블이나 인덱스에 대해 5,000개 이상의 잠금을 획득한 경우
+-  단일 [!INCLUDE[tsql](../includes/tsql-md.md)] 문이 분할된 테이블의 단일 파티션에 대해 5,000개 이상의 잠금을 획득하고 `ALTER TABLE SET LOCK_ESCALATION` 옵션이 AUTO로 설정된 경우
+-  [!INCLUDE[ssde_md](../includes/ssde_md.md)] 인스턴스의 잠금 수가 메모리 또는 구성 임계값을 초과한 경우
+
+잠금 충돌로 인해 잠금을 에스컬레이션할 수 없는 경우 [!INCLUDE[ssde_md](../includes/ssde_md.md)]은 1,250개의 잠금이 새로 획득될 때마다 주기적으로 잠금 에스컬레이션을 트리거합니다.
+
+### <a name="escalation-threshold-for-a-transact-sql-statement"></a>Transact-SQL 문의 에스컬레이션 임계값
+[!INCLUDE[ssde_md](../includes/ssde_md.md)]에서 새로 획득한 잠금 1,250개마다 가능한 에스컬레이션을 검사할 때 잠금 에스컬레이션은 [!INCLUDE[tsql](../includes/tsql-md.md)] 문에서 테이블의 단일 참조에 대해 5,000개 이상의 잠금을 획득한 경우에만 발생합니다. 잠금 에스컬레이션은 [!INCLUDE[tsql](../includes/tsql-md.md)] 문에서 테이블의 단일 참조에 대해 5,000개 이상의 잠금을 획득한 경우 트리거됩니다. 예를 들어 문이 한 인덱스에서 3,000개의 잠금을 획득하고 동일한 테이블의 다른 인덱스에서도 3,000개의 잠금을 획득하는 경우에는 잠금 에스컬레이션이 트리거되지 않습니다. 마찬가지로, 문에 테이블에 대한 자체 조인이 있고 테이블에 대한 각각의 참조가 해당 테이블에서 3,000개의 잠금만 획득하는 경우에는 잠금 에스컬레이션이 트리거되지 않습니다.
+
+잠금 에스컬레이션은 에스컬레이션이 트리거될 때 액세스한 테이블에 대해서만 발생합니다. 단일 SELECT 문이 이 시퀀스에서 `TableA`, `TableB` 및 `TableC`의 3개 테이블에 액세스하는 조인이라고 가정합니다. 이 문은 `TableA`에 대한 클러스터형 인덱스에서 3,000개의 행 잠금을 획득하고 `TableB`에 대한 클러스터형 인덱스에서 5,000개 이상의 행 잠금을 획득하지만 `TableC`에는 아직 액세스하지 않았습니다. [!INCLUDE[ssde_md](../includes/ssde_md.md)]에서 이 문이 `TableB`에서 5,000개 이상의 행 잠금을 획득한 것을 검색하면 `TableB`에서 현재 트랜잭션이 보유한 모든 잠금을 에스컬레이션하려고 시도합니다. 또한 `TableA`에서 현재 트랜잭션이 보유한 모든 잠금을 에스컬레이션하려고 시도하지만 `TableA`의 잠금 수가 5,000개 미만이므로 에스컬레이션은 발생하지 않습니다. 에스컬레이션이 발생할 때 아직 액세스되지 않았으므로 `TableC`에 대해서는 잠금 에스컬레이션이 시도되지 않습니다.
+
+### <a name="escalation-threshold-for-an-instance-of-the-database-engine"></a>데이터베이스 엔진 인스턴스의 에스컬레이션 임계값
+잠금 수가 잠금 에스컬레이션에 대한 메모리 임계값보다 커지면 [!INCLUDE[ssde_md](../includes/ssde_md.md)]에서 잠금 에스컬레이션을 트리거합니다. 메모리 임계값은 다음과 같은 [잠금 구성 옵션](../database-engine/configure-windows/configure-the-locks-server-configuration-option.md)의 설정에 따라 다릅니다.
+
+-   **잠금** 옵션을 기본값인 0으로 설정하면 잠금 개체에서 사용하는 메모리가 AWE 메모리를 제외하고 데이터베이스 엔진에서 사용하는 메모리의 24%일 때 잠금 에스컬레이션 임계값에 도달합니다. 잠금을 나타내는 데 사용되는 데이터 구조의 길이는 약 100바이트입니다. 데이터베이스 엔진이 다양한 작업에 맞추어 동적으로 메모리를 획득하거나 해제하기 때문에 이 임계값은 동적입니다.
+
+-   **잠금** 옵션을 0 이외의 값으로 설정하면 잠금 에스컬레이션 임계값은 잠금 옵션 값의 40%이고 메모리가 가중되는 경우에는 40% 미만입니다.
+
+[!INCLUDE[ssde_md](../includes/ssde_md.md)]은 에스컬레이션을 수행하기 위해 모든 세션에서 모든 활성 문을 선택할 수 있으며 인스턴스에 사용된 잠금 메모리가 임계값보다 높게 유지되는 경우에는 1,250개의 새 잠금마다 에스컬레이션을 수행할 문을 선택합니다.
+
+### <a name="escalating-mixed-lock-types"></a>혼합 잠금 유형 에스컬레이션
+잠금 에스컬레이션이 발생하면 힙이나 인덱스에 대해 선택한 잠금은 더 하위 수준의 가장 제한적인 잠금에 대한 요구 사항도 충분히 만족시킬 수 있습니다.
+
+예를 들어 하나의 세션이 있다고 가정합니다.
+
+-  트랜잭션을 시작합니다.
+-  클러스터형 인덱스를 포함하는 테이블을 업데이트합니다.
+-  동일한 테이블을 참조하는 SELECT 문을 실행합니다.
+
+UPDATE 문은 다음 잠금을 획득합니다.
+
+-  업데이트된 데이터 행에 대한 배타(X) 잠금
+-  이러한 행을 포함하는 클러스터형 인덱스 페이지에 대한 의도 배타(IX) 잠금
+-  클러스터형 인덱스에 대한 IX 잠금 및 테이블에 대한 IX 잠금
+
+SELECT 문은 다음 잠금을 획득합니다.
+
+-  행이 UPDATE 문에서 X 잠금으로 아직 보호되지 않은 경우 SELECT 문이 읽는 모든 데이터 행에 대한 공유(S) 잠금
+-  페이지가 IX 잠금으로 아직 보호되지 않은 경우 해당 행을 포함하는 모든 클러스터형 인덱스 페이지에 대한 내재된 공유 잠금
+-  이미 IX 잠금으로 보호되기 때문에 클러스터형 인덱스나 테이블에 대한 잠금은 없습니다.
+
+SELECT 문이 잠금 에스컬레이션을 트리거하기에 충분한 잠금을 획득하고 에스컬레이션이 성공하면 테이블에 대한 IX 잠금이 X 잠금으로 변환되고 모든 행, 페이지 및 인덱스 잠금이 해제됩니다. 업데이트와 읽기는 모두 테이블에 대한 X 잠금으로 보호됩니다.
+
+### <a name="reducing-locking-and-escalation"></a>잠금 및 에스컬레이션 줄이기
+대부분의 경우 [!INCLUDE[ssde_md](../includes/ssde_md.md)]은 잠금 및 잠금 에스컬레이션에 대한 기본 설정으로 작동할 때 최상의 성능을 발휘합니다. [!INCLUDE[ssde_md](../includes/ssde_md.md)] 인스턴스에서 많은 수의 잠금이 생성되고 잠금 에스컬레이션이 자주 발생하면 다음과 같이 잠금 수를 줄이는 것이 좋습니다.
+
+-   읽기 작업에서 공유 잠금을 생성하지 않는 격리 수준 사용:
+    -  READ_COMMITTED_SNAPSHOT 데이터베이스 옵션이 ON으로 설정된 READ COMMITTED 격리 수준
+    -  SNAPSHOT 격리 수준
+    -  READ UNCOMMITTED 격리 수준. 이 수준은 커밋되지 않은 읽기로 작동할 수 있는 시스템에서만 사용할 수 있습니다.    
+  
+    > [!NOTE]
+    > 격리 수준 변경은 [!INCLUDE[ssde_md](../includes/ssde_md.md)] 인스턴스의 모든 테이블에 영향을 미칩니다.
+
+-   데이터베이스 엔진이 행 잠금 대신 페이지, 힙 또는 인덱스 잠금을 사용하도록 PAGLOCK 또는 TABLOCK 테이블 힌트 사용. 그러나 이 옵션을 사용하면 한 사용자가 동일한 데이터에 액세스하려는 다른 사용자를 차단하는 문제가 증가하므로 동시 사용자가 많은 시스템에서 이 옵션을 사용하면 안 됩니다.
+
+-   분할된 테이블의 경우 [ALTER TABLE](../t-sql/statements/alter-table-transact-sql.md)의 LOCK_ESCALATION 옵션을 사용하면 테이블 수준이 아니라 HoBT 수준으로 잠금을 에스컬레이션하거나 잠금 에스컬레이션을 사용하지 않도록 설정할 수 있습니다.
+
+-   큰 일괄 작업을 여러 개의 작은 작업으로 분할합니다. 예를 들어 다음 쿼리를 실행하여 감사 테이블에서 수십만 개의 오래된 레코드를 제거하고, 다른 사용자를 차단하는 잠금 에스컬레이션이 발생했다고 가정합니다.
+   
+    ```sql
+    DELETE FROM LogMessages WHERE LogDate < '2/1/2002'
+    ```
+
+    이러한 레코드를 한 번에 수백 개씩 제거하면 트랜잭션당 누적된 잠금 수를 크게 줄이고 잠금 에스컬레이션을 방지할 수 있습니다. 다음은 그 예입니다.
+
+    ```sql
+    SET ROWCOUNT 500
+    delete_more:
+      DELETE FROM LogMessages WHERE LogDate < '2/1/2002'
+    IF @@ROWCOUNT > 0 GOTO delete_more
+    SET ROWCOUNT 0
+    ```
+
+-   쿼리를 최대한 효율적으로 만들어 쿼리 잠금 범위를 좁힙니다. 대규모 검색 또는 대량의 책갈피 조회로 인해 잠금 에스컬레이션 가능성이 증가할 수 있습니다. 또한 교착 상태 가능성이 증가하고, 일반적으로 동시성 및 성능에 부정적인 영향을 미칩니다. 잠금 에스컬레이션을 유발한 쿼리를 찾은 후 새 인덱스를 만들거나 기존 인덱스에 열을 추가하여 인덱스 또는 테이블 검색을 제거하고 인덱스 검색의 효율성을 극대화하는 기회를 찾습니다. [데이터베이스 엔진 튜닝 관리자](../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)를 사용하여 쿼리에 대한 자동 인덱스 분석을 수행하는 것이 좋습니다. 자세한 내용은 [자습서: 데이터베이스 엔진 튜닝 관리자](../tools/dta/tutorial-database-engine-tuning-advisor.md)를 참조하세요.
+    이러한 최적화의 한 가지 목표는 인덱스 검색 시 최소한의 행을 반환하여 책갈피 조회 비용을 최소화하는 것입니다(특정 쿼리에 대한 인덱스의 선택도 극대화). [!INCLUDE[ssde_md](../includes/ssde_md.md)]에서 책갈피 조회 논리 연산자가 여러 행을 반환할 수 있는 것으로 추정하는 경우 PREFETCH를 사용하여 책갈피 조회를 수행할 수 있습니다. [!INCLUDE[ssde_md](../includes/ssde_md.md)]에서 책갈피 조회를 위해 PREFETCH를 사용하는 경우 쿼리 일부의 트랜잭션 격리 수준을 쿼리 일부에 대한 반복 읽기로 높여야 합니다. 이것은 커밋된 읽기 격리 수준에서 SELECT 문과 유사한 것이 (클러스터형 인덱스 및 비클러스터형 인덱스 모두에서) 수천 개의 키 잠금을 획득할 수 있으므로 해당 쿼리가 잠금 에스컬레이션 임계값을 초과하게 될 수 있음을 의미합니다. 이는 에스컬레이션된 잠금이 공유 테이블 잠금이지만 일반적으로 기본값인 커밋된 읽기 격리 수준에서 표시되지 않는 경우에 특히 중요합니다. 책갈피 조회 WITH PREFETCH 절로 인해 에스컬레이션이 발생하는 경우 쿼리 계획의 책갈피 조회 논리 연산자 아래에 있는 인덱스 검색(Seek) 또는 인덱스 검색(Scan) 논리 연산자에 표시되는 비클러스터형 인덱스에 열을 추가하는 것이 좋습니다. 포함 인덱스(쿼리에 사용된 테이블의 모든 열을 포함하는 인덱스) 또는 조인 조건이나 WHERE 절(선택 열 목록에 모든 것을 포함하는 것이 불가능한 경우)에 사용된 열을 포함하는 인덱스를 만들 수 있습니다.
+    중첩 루프 조인은 PREFETCH를 사용할 수도 있으며, 이로 인해 동일한 잠금 동작이 발생합니다.
+   
+-   다른 SPID가 호환되지 않는 테이블 잠금을 보유하고 있는 경우 잠금 에스컬레이션이 발생할 수 없습니다. 잠금 에스컬레이션은 항상 테이블 잠금으로 에스컬레이션되지만 페이지 잠금으로는 에스컬레이션되지 않습니다. 추가로 다른 SPID에 호환되지 않은 TAB 잠금이 있어 잠금 에스컬레이션 시도가 실패하는 경우 에스컬레이션을 시도하는 쿼리가 TAB 잠금을 대기하는 동안 차단하지 않습니다. 대신 더욱 세분화된 수준(행, 키 또는 페이지)에서 계속 잠금을 획득하여 주기적으로 에스컬레이션을 시도합니다. 따라서 특정 테이블에 대한 잠금 에스컬레이션을 방지하는 한 가지 방법은 에스컬레이션된 잠금 유형과 호환되지 않는 다른 연결에 대한 잠금을 획득하고 유지하는 것입니다. 테이블 수준에서 IX(의도 배타) 잠금은 행 또는 페이지를 잠그지 않지만 에스컬레이션된 S(공유) 또는 X(배타) TAB 잠금과 호환되지 않습니다. 예를 들어 mytable 테이블에서 다수의 행을 수정하고 잠금 에스컬레이션으로 인해 발생하는 차단을 유발한 일괄 작업을 실행해야 한다고 가정합니다. 이 작업이 항상 1시간 이내에 완료되는 경우 다음 코드를 포함하는 [!INCLUDE[tsql](../includes/tsql-md.md)] 작업을 만들고, 일괄 작업의 시작 시간 몇 분 전에 시작되도록 새 작업을 예약할 수 있습니다.
+  
+    ```sql
+    BEGIN TRAN
+    SELECT * FROM mytable (UPDLOCK, HOLDLOCK) WHERE 1=0
+    WAITFOR DELAY '1:00:00'
+    COMMIT TRAN
+    ```
+   
+    이 쿼리는 1시간 동안 mytable에 대한 IX 잠금을 획득 및 유지하고, 이로 인해 이 시간 동안 테이블에 대한 잠금 에스컬레이션이 방지됩니다. 이 일괄 처리는 데이터를 수정하거나 다른 쿼리를 차단하지 않습니다(다른 쿼리에서 TABLOCK 힌트를 사용한 테이블 잠금을 적용하지 않는 경우 또는 관리자가 sp_indexoption 저장 프로시저를 사용하여 페이지 또는 행 잠금을 사용하지 않도록 설정한 경우).
+
+추적 플래그 1211 및 1224를 사용하여 잠금 에스컬레이션의 전부 또는 일부를 해제할 수도 있습니다. 하지만 [추적 플래그](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)는 전체 [!INCLUDE[ssde_md](../includes/ssde_md.md)]에 대해 전역으로 모든 잠금 에스컬레이션을 사용하지 않도록 설정합니다. 잠금 에스컬레이션은 수천 개의 잠금을 획득하고 해제하는 오버헤드로 인해 저하되는 쿼리의 효율성을 극대화하여 [!INCLUDE[ssde_md](../includes/ssde_md.md)]에서 매우 유용한 용도로 사용됩니다. 잠금 에스컬레이션은 잠금을 추적하는 데 필요한 메모리를 최소화하는 경우에도 도움이 됩니다. [!INCLUDE[ssde_md](../includes/ssde_md.md)]에서 잠금 구조에 대해 동적으로 할당할 수 있는 메모리는 유한하므로 잠금 에스컬레이션을 사용하지 않도록 설정하고 잠금 메모리가 충분히 커지면 모든 쿼리에 대한 추가 잠금 할당 시도가 실패할 수 있으며 다음 오류가 발생합니다.
+
+```Error: 1204, Severity: 19, State: 1
+The SQL Server cannot obtain a LOCK resource at this time. Rerun your statement when there are fewer active users or ask the system administrator to check the SQL Server lock and memory configuration.
+```
+
+> [!NOTE]
+> [오류 1204](../relational-databases/errors-events/mssqlserver-1204-database-engine-error.md)가 발생하면 현재 문의 처리를 중지하고 활성 트랜잭션 롤백을 유발합니다. 데이터베이스 서비스를 다시 시작하는 경우 롤백 자체가 사용자를 차단하거나 데이터베이스 복구 시간이 길어질 수 있습니다.
+
+> [!NOTE]
+> ROWLOCK과 같은 잠금 힌트를 사용하면 초기 잠금 계획만 변경됩니다. 잠금 힌트는 잠금 에스컬레이션을 방지하지 않습니다. 
+
+또한 다음 예제와 같이 `lock_escalation` xEvent(확장 이벤트)를 사용하여 잠금 에스컬레이션을 모니터링합니다.
+
+```sql
+-- Session creates a histogram of the number of lock escalations per database 
+CREATE EVENT SESSION [Track_lock_escalation] ON SERVER 
+ADD EVENT sqlserver.lock_escalation(SET collect_database_name=(1),collect_statement=(1)
+    ACTION(sqlserver.database_id,sqlserver.database_name,sqlserver.query_hash_signed,sqlserver.query_plan_hash_signed,sqlserver.sql_text,sqlserver.username))
+ADD TARGET package0.histogram(SET source=N'sqlserver.database_id')
+GO
+```
+
+> [!IMPORTANT]
+> SQL 추적 또는 SQL 프로파일러의 Lock:Escalation 이벤트 클래스 대신 `lock_escalation` xEvent(확장 이벤트)를 사용해야 합니다.
+
+## <a name="dynamic-locking"></a><a name="dynamic_locks"></a> 동적 잠금
  행 잠금과 같이 낮은 수준의 잠금을 사용하면 두 트랜잭션이 동일한 데이터에 대해 동시에 잠금을 요청할 확률이 줄어들어 동시성이 증가합니다. 또한 잠금 수 및 잠금 관리에 필요한 리소스 수도 늘어납니다. 테이블 또는 페이지 잠금과 같이 높은 수준의 잠금을 사용하면 오버헤드는 줄어들지만 동시성이 감소합니다.  
   
  ![lockcht](../relational-databases/media/lockcht.png) 
@@ -665,15 +820,15 @@ INSERT mytable VALUES ('Dan');
 -   성능이 향상됩니다. [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]에서 태스크에 적합한 잠금을 사용하므로 시스템 오버헤드가 줄어듭니다.  
 -   애플리케이션 개발자가 개발에만 전념할 수 있습니다. [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]에서 잠금을 자동으로 조정합니다.  
   
- [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)]부터 `LOCK_ESCALATION` 옵션이 도입되어 잠금 에스컬레이션 동작이 변경되었습니다. 자세한 내용은 [ALTER TABLE](../t-sql/statements/alter-table-transact-sql.md)의 `LOCK_ESCALATION` 옵션을 참조하세요.  
-  
+ [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)]부터 `LOCK_ESCALATION` 옵션이 도입되어 잠금 에스컬레이션 동작이 변경되었습니다. 자세한 내용은 [ALTER TABLE](../t-sql/statements/alter-table-transact-sql.md)의 `LOCK_ESCALATION` 옵션을 참조하세요. 
+   
 ## <a name="deadlocks"></a><a name="deadlocks"></a> 교착 상태  
  한 태스크에서 잠근 리소스를 다른 태스크에서 잠그려고 하여 둘 이상의 태스크가 서로 영구적으로 차단하면 교착 상태가 발생합니다. 예를 들면 다음과 같습니다.  
   
 -   트랜잭션 A가 1행에 대한 공유 잠금을 획득합니다.  
 -   트랜잭션 B가 2행에 대한 공유 잠금을 획득합니다.  
--   트랜잭션 A가 2행에 대한 배타적 잠금을 요청하고 트랜잭션 B가 2행에 대해 소유하고 있는 공유 잠금을 종료 및 해제할 때까지 트랜잭션 A가 차단됩니다.  
--   트랜잭션 B가 1행에 대한 배타적 잠금을 요청하고 트랜잭션 A가 1행에 대해 소유하고 있는 공유 잠금을 종료 및 해제할 때까지 트랜잭션 B가 차단됩니다.  
+-   이제 트랜잭션 A가 2행에 대한 배타적 잠금을 요청하고 트랜잭션 B가 2행에 대해 소유하고 있는 공유 잠금을 종료 및 해제할 때까지 트랜잭션 A가 차단됩니다.  
+-   이제 트랜잭션 B가 1행에 대한 배타적 잠금을 요청하고 트랜잭션 A가 1행에 대해 소유하고 있는 공유 잠금을 종료 및 해제할 때까지 트랜잭션 B가 차단됩니다.  
   
  트랜잭션 B가 완료되어야 트랜잭션 A도 완료될 수 있지만 트랜잭션 B는 트랜잭션 A에 의해 차단된 상태입니다. 이러한 상태를 순환 종속 관계라고 합니다. 트랜잭션 A는 트랜잭션 B에 종속되고 트랜잭션 B는 트랜잭션 A에 종속된 형태로 순환됩니다.  
   
@@ -688,7 +843,7 @@ INSERT mytable VALUES ('Dan');
   
  ![트랜잭션 교착 상태를 보여 주는 다이어그램](../relational-databases/media/deadlock.png)  
   
- 이 그림에서 트랜잭션 T1은 **Part** 테이블 잠금 리소스에 대해 트랜잭션 T2에 종속됩니다. 마찬가지로 스레드 T2는 **Supplier** 테이블 잠금 리소스에 대해 트랜잭션 T1에 종속됩니다. 이러한 종속 관계는 순환적이므로 스레드 T1과 T2 간에 교착 상태가 발생합니다.  
+ 이 그림에서 트랜잭션 T1은 `Part` 테이블 잠금 리소스에 대해 트랜잭션 T2에 종속됩니다. 마찬가지로 스레드 T2는 `Supplier` 테이블 잠금 리소스에 대해 트랜잭션 T1에 종속됩니다. 이러한 종속 관계는 순환적이므로 스레드 T1과 T2 간에 교착 상태가 발생합니다.  
   
  테이블이 분할되고 `ALTER TABLE`의 `LOCK_ESCALATION` 설정이 AUTO로 설정된 경우에도 교착 상태가 발생할 수 있습니다. `LOCK_ESCALATION`이 AUTO로 설정되면 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]에서 TABLE 수준이 아니라 HoBT 수준에서 테이블 파티션을 잠그도록 허용하여 동시성이 증가합니다. 그러나 개별 트랜잭션이 테이블에 파티션 잠금을 보유하고 다른 트랜잭션 파티션에서 잠금을 원하면 교착 상태가 발생합니다. 이런 유형의 교착 상태는 `LOCK_ESCALATION`을 `TABLE`로 설정하면 방지할 수 있습니다. 하지만 이 설정으로 인해 테이블 잠금을 기다리도록 파티션에 대규모 업데이트가 강제 적용되어 동시성이 감소됩니다.  
   
@@ -747,7 +902,7 @@ INSERT mytable VALUES ('Dan');
   
  교착 상태가 검색되면 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]은 교착 상태에 있는 스레드 중 처리하지 않을 스레드를 하나 선택하여 교착 상태를 끝냅니다. [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]은 스레드에 대해 실행되고 있는 현재 일괄 처리를 종료하고 해당 트랜잭션을 롤백한 후 애플리케이션에 1205 오류를 반환합니다. 처리하지 않도록 선택된 스레드의 트랜잭션이 롤백되면 이 트랜잭션에서 보유하는 모든 잠금이 해제됩니다. 이를 통해 다른 스레드의 트랜잭션이 차단 해제되고 계속됩니다. 1205 교착 상태 미처리 오류는 교착 상태와 관련된 스레드와 리소스에 대한 정보를 오류 로그에 기록합니다.  
   
- 기본적으로 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]은 롤백 비용이 가장 저렴한 트랜잭션을 실행하는 세션을 처리하지 않도록 선택합니다. 또는 사용자가 SET DEADLOCK_PRIORITY 문을 사용하여 교착 상태에 있는 세션의 우선 순위를 지정할 수 있습니다. DEADLOCK_PRIORITY를 LOW, NORMAL 또는 HIGH로 설정하거나 -10에서 10 사이의 정수 값으로 설정할 수 있습니다. 교착 상태 우선 순위는 기본적으로 NORMAL입니다. 두 세션의 교착 상태 우선 순위가 다르면 교착 상태 우선 순위가 낮은 세션이 처리하지 않을 세션으로 선택됩니다. 두 세션의 교착 상태 우선 순위가 같으면 롤백 비용이 가장 저렴한 트랜잭션의 세션이 선택됩니다. 교착 상태 순환과 관련된 세션의 교착 상태 우선 순위와 비용이 같으면 임의의 세션이 선택됩니다.  
+ 기본적으로 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]은 롤백 비용이 가장 저렴한 트랜잭션을 실행하는 세션을 처리하지 않도록 선택합니다. 또는 사용자가 `SET DEADLOCK_PRIORITY` 문을 사용하여 교착 상태에 있는 세션의 우선 순위를 지정할 수 있습니다. DEADLOCK_PRIORITY를 LOW, NORMAL 또는 HIGH로 설정하거나 -10에서 10 사이의 정수 값으로 설정할 수 있습니다. 교착 상태 우선 순위는 기본적으로 NORMAL입니다. 두 세션의 교착 상태 우선 순위가 다르면 교착 상태 우선 순위가 낮은 세션이 처리하지 않을 세션으로 선택됩니다. 두 세션의 교착 상태 우선 순위가 같으면 롤백 비용이 가장 저렴한 트랜잭션의 세션이 선택됩니다. 교착 상태 순환과 관련된 세션의 교착 상태 우선 순위와 비용이 같으면 임의의 세션이 선택됩니다.  
   
  CLR를 사용할 경우 교착 상태 모니터는 관리 프로시저 내부에서 액세스하는 모니터, 판독기/기록기 잠금, 스레드 조인 등의 동기화 리소스에 대한 교착 상태를 자동으로 검색합니다. 그러나 처리하지 않도록 선택된 프로시저에서 예외가 발생하면 교착 상태가 해결됩니다. 처리하지 않도록 선택된 프로시저에서 현재 소유하고 있는 리소스가 예외를 통해 자동으로 해제되지는 않습니다. 리소스는 명시적으로 해제해야 합니다. 예외 동작에 따라 처리하지 않도록 선택된 프로시저를 확인하는 데 사용되는 예외를 찾아 해제할 수 있습니다.  
   
@@ -757,7 +912,7 @@ INSERT mytable VALUES ('Dan');
 #### <a name="deadlock-extended-event"></a><a name="deadlock_xevent"></a> 교착 상태 확장 이벤트
 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]부터 SQL 추적 또는 SQL Profiler의 교착 상태 그래프 이벤트 클래스 대신 `xml_deadlock_report` 확장 이벤트(xEvent)를 사용해야 합니다.
 
-또한 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 이상에서는 교착 상태가 발생할 때 system\_health 세션이 교착 상태 그래프가 포함된 `xml_deadlock_report` xEvent를 모두 캡처합니다. system\_health 세션은 기본적으로 사용되므로, 교착 상태 정보를 캡처하기 위해 별도의 xEvent 세션을 구성하지 않아도 됩니다. 
+또한 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 이상에서는 교착 상태가 발생할 때 ***system\_health*** 세션이 이미 교착 상태 그래프가 포함된 `xml_deadlock_report` xEvent를 모두 캡처합니다. *system\_health* 세션은 기본적으로 사용하도록 설정되므로 교착 상태 정보를 캡처하기 위해 별도의 xEvent 세션을 구성하지 않아도 됩니다. 
 
 교착 상태 그래프에는 일반적으로 세 개의 서로 다른 노드가 있습니다.
 -   **victim-list**. 교착 상태 희생자 프로세스 식별자.
@@ -768,7 +923,7 @@ system\_health 세션 파일 또는 링 버퍼를 열어 `xml_deadlock_report` x
 
 ![xEvent 교착 상태 그래프](../relational-databases/media/udb9_xEventDeadlockGraphc.png)
 
-다음 쿼리는 system\_health 세션 링 버퍼를 통해 캡처된 교착 상태 이벤트를 모두 표시할 수 있습니다.
+다음 쿼리는 *system\_health* 세션 링 버퍼를 통해 캡처된 교착 상태 이벤트를 모두 표시할 수 있습니다.
 
 ```sql
 SELECT xdr.value('@timestamp', 'datetime') AS [Date],
@@ -1762,7 +1917,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
  특정 잠금 힌트와 해당 동작에 대한 자세한 내용은 [Table Hints&#40;Transact-SQL&#41;](../t-sql/queries/hints-transact-sql-table.md)를 참조하십시오.  
   
 > [!NOTE]  
-> [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 쿼리 최적화 프로그램에서는 거의 대부분 올바른 잠금 수준을 선택합니다. 필요할 때만 테이블 수준의 잠금 힌트를 사용하여 기본 잠금 동작을 변경하는 것이 좋습니다. 잠금 수준의 허용을 취소하면 동시성에 영향을 줄 수 있습니다.  
+> [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]에서는 거의 항상 올바른 잠금 수준을 선택합니다. 필요할 때만 테이블 수준의 잠금 힌트를 사용하여 기본 잠금 동작을 변경하는 것이 좋습니다. 잠금 수준의 허용을 취소하면 동시성에 영향을 줄 수 있습니다.  
   
  데이터를 읽을 때 공유 잠금 요청을 막는 잠금 힌트를 사용하여 SELECT를 처리하는 경우에도 메타데이터를 읽을 때 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]에서 잠금을 획득해야 할 수 있습니다. 예를 들어 `NOLOCK` 힌트를 사용하는 `SELECT`는 데이터를 읽을 때 공유 잠금을 획득하지 않지만 시스템 카탈로그 뷰를 읽을 때는 경우에 따라 잠금을 요청할 수 있습니다. 즉, `NOLOCK`를 사용하는 `SELECT` 문을 차단할 수 있습니다.  
   
@@ -1793,7 +1948,7 @@ ROLLBACK;
 GO  
 ```  
   
- *HumanResources.Employee*를 참조하는 유일한 잠금은 스키마 안정성(Sch-S) 잠금입니다. 이 경우 순차성은 더 이상 보장되지 않습니다.  
+ `HumanResources.Employee`를 참조하는 유일한 잠금은 스키마 안정성(Sch-S) 잠금입니다. 이 경우 순차성은 더 이상 보장되지 않습니다.  
   
  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]에서는 `ALTER TABLE`의 `LOCK_ESCALATION` 옵션에서 테이블 잠금을 선호하지 않을 수 있으며 분할된 테이블에 HoBT 잠금을 설정할 수 있습니다. 이 옵션은 잠금 힌트가 아니지만 잠금 에스컬레이션을 줄이는 데 사용할 수 있습니다. 자세한 내용은 [ALTER TABLE&#40;Transact-SQL&#41;](../t-sql/statements/alter-table-transact-sql.md)을 참조하세요.  
   
@@ -1957,7 +2112,7 @@ GO
  KILL 문을 사용해야 하는 경우도 있습니다. 그러나 특히 중요한 프로세스가 실행 중일 때는 이 문을 신중하게 사용하십시오. 자세한 내용은 [KILL&#40;Transact-SQL&#41;](../t-sql/language-elements/kill-transact-sql.md)을 참조하세요.  
   
 ##  <a name="additional-reading"></a><a name="Additional_Reading"></a> 더 보기   
-[행 버전 관리 오버헤드](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2008/03/30/overhead-of-row-versioning.aspx)   
+[행 버전 관리 오버헤드](https://docs.microsoft.com/archive/blogs/sqlserverstorageengine/overhead-of-row-versioning)   
 [확장 이벤트](../relational-databases/extended-events/extended-events.md)   
 [sys.dm_tran_locks &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)     
 [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)      

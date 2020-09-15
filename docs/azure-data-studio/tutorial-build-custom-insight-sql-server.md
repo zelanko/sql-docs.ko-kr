@@ -1,20 +1,20 @@
 ---
-title: '자습서: 사용자 지정 인사이트 위젯 빌드'
+title: 사용자 지정 인사이트 위젯 빌드
 description: 이 자습서에서는 사용자 지정 정보 위젯을 빌드하고 Azure Data Studio의 데이터베이스 및 서버 대시보드에 추가하는 방법을 보여 줍니다.
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
 ms.topic: tutorial
 author: markingmyname
 ms.author: maghan
-ms.reviewer: alayu, maghan, sstein
+ms.reviewer: alayu
 ms.custom: seodec18
-ms.date: 09/24/2018
-ms.openlocfilehash: efe6473dc716b8e8a2c70349b98e6433105d401a
-ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
+ms.date: 08/26/2020
+ms.openlocfilehash: 0cd248b323ebc6176dbad37f578da1c08141281b
+ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88745756"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89283754"
 ---
 # <a name="tutorial-build-a-custom-insight-widget"></a>자습서: 사용자 지정 인사이트 위젯 빌드
 
@@ -104,7 +104,7 @@ ms.locfileid: "88745756"
 
 7. *사용자 설정* 파일을 저장하고 *TutorialDB* 데이터베이스 대시보드를 열어 활성 세션 위젯을 표시합니다.
 
-   ![activesession 인사이트](./media/tutorial-build-custom-insight-sql-server/insight-activesession-dashboard.png)
+   ![activesession 인사이트 대시보드](./media/tutorial-build-custom-insight-sql-server/insight-activesession-dashboard.png)
 
 ## <a name="add-details-to-custom-insight"></a>사용자 지정 인사이트에 세부 정보 추가
 
@@ -159,7 +159,7 @@ ms.locfileid: "88745756"
 
 7. *사용자 설정* 파일을 저장하고 *TutorialDB* 데이터베이스 대시보드를 엽니다. 세부 정보를 표시하려면 *My-Widget* 옆에 있는 줄임표(...) 단추를 클릭합니다.
 
-    ![activesession 인사이트](./media/tutorial-build-custom-insight-sql-server/insight-activesession-detail.png)
+    ![activesession 인사이트 세부 정보](./media/tutorial-build-custom-insight-sql-server/insight-activesession-detail.png)
 
 ## <a name="next-steps"></a>다음 단계
 이 자습서에서는 다음 작업 방법을 알아보았습니다.

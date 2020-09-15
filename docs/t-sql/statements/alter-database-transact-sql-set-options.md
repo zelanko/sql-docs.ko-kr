@@ -2,7 +2,7 @@
 title: ALTER DATABASE SET 옵션(Transact-SQL) | Microsoft Docs
 description: SQL Server 및 Azure SQL Database에서 자동 튜닝, 암호화, 쿼리 저장소와 같은 데이터베이스 옵션을 설정하는 방법을 알아봅니다.
 ms.custom: ''
-ms.date: 06/22/2020
+ms.date: 09/04/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -22,6 +22,7 @@ helpviewer_keywords:
 - snapshot isolation framework option
 - checksums [SQL Server]
 - Automatic tuning
+- " Data Retention Policy"
 - query plan regression correction
 - auto_create_statistics
 - auto_update_statistics
@@ -30,12 +31,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: 1dd62f3d2d0a3ee3b63abd5d01fe33ba7dac196f
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: c7e35b474e33da25b2d323d4af4aced5c4fe50f1
+ms.sourcegitcommit: 678f513b0c4846797ba82a3f921ac95f7a5ac863
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88900961"
+ms.lasthandoff: 09/07/2020
+ms.locfileid: "89511305"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET 옵션(Transact-SQL)
 
@@ -115,6 +116,7 @@ SET
   | <target_recovery_time_option>
   | <termination>
   | <temporal_history_retention>
+  | <data_retention_policy>
 }
 ;
 
@@ -305,6 +307,10 @@ SET
 
 <temporal_history_retention> ::=
     TEMPORAL_HISTORY_RETENTION { ON | OFF }
+
+<data_retention_policy> ::=
+    DATA_RETENTION { ON | OFF }
+
 ```
 
 ## <a name="arguments"></a>인수
@@ -504,6 +510,17 @@ GLOBAL을 지정하고 커서를 만들 때 LOCAL로 정의하지 않으면 커�
 커서는 연결이 끊어질 때만 암시적으로 할당이 취소됩니다. 자세한 내용은 [DECLARE CURSOR](../../t-sql/language-elements/declare-cursor-transact-sql.md)를 참조하세요.
 
 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 카탈로그 뷰의 `is_local_cursor_default` 열을 검사하여 이 옵션의 상태를 확인할 수 있습니다. [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) 함수의 `IsLocalCursorsDefault` 속성을 검사하여 상태를 확인할 수도 있습니다.
+
+**\<data_retention_policy> ::=**
+
+**적용 대상**: Azure SQL Edge‘만’
+
+DATA_RETENTION { ON | OFF }   
+켜기    
+데이터베이스에서 데이터 보존 정책 기반 정리를 사용하도록 설정합니다.
+
+OFF   
+데이터베이스에서 데이터 보존 정책 기반 정리를 사용하지 않도록 설정합니다.
 
 **\<database_mirroring>**     
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
@@ -1227,13 +1244,13 @@ NO_WAIT
 |\<db_user_access_option>|예|예|
 |\<db_update_option>|예|예|
 |\<delayed_durability_option>|예|예|
-|\<external_access_option>|예|예|
+|\<external_access_option>|예|아니요|
 |\<cursor_option>|예|예|
 |\<auto_option>|예|예|
-|\<sql_option>|예|예|
+|\<sql_option>|예|아니요|
 |\<recovery_option>|예|예|
-|\<target_recovery_time_option>|예|예|
-|\<database_mirroring_option>|예|예|
+|\<target_recovery_time_option>|아니요|예|
+|\<database_mirroring_option>|아니요|예|
 |ALLOW_SNAPSHOT_ISOLATION|예|예|
 |READ_COMMITTED_SNAPSHOT|예|예|
 |MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT|예|예|
@@ -1290,7 +1307,7 @@ NO_WAIT
 
 계획 캐시를 삭제하면 모든 후속 실행 계획이 다시 컴파일되며 일시적으로 갑자기 쿼리 성능이 저하될 수 있습니다. 계획 캐시의 삭제된 각 캐시스토어에 대해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그에 `SQL Server has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to some database maintenance or reconfigure operations`라는 정보 메시지가 있습니다. 이 메시지는 캐시가 해당 시간 간격 내에 플러시되는 동안 5분마다 기록됩니다.
 
-## <a name="examples"></a>예
+## <a name="examples"></a>예제
 
 ### <a name="a-setting-options-on-a-database"></a>A. 데이터베이스 옵션 설정
 
@@ -2200,10 +2217,10 @@ NO_WAIT
 
 |옵션 범주|다른 옵션과 함께 지정할 수 있음|WITH \<termination> 절을 사용할 수 있음|
 |----------------------|-----------------------------------------|---------------------------------------------|
-|\<auto_option>|예|예|
+|\<auto_option>|예|아니요|
 |\<change_tracking_option>|예|예|
-|\<cursor_option>|예|예|
-|\<db_encryption_option>|예|예|
+|\<cursor_option>|예|아니요|
+|\<db_encryption_option>|예|아니요|
 |\<db_update_option>|예|예|
 |\<db_user_access_option>|예|예|
 |\<delayed_durability_option>|예|예|
@@ -2212,10 +2229,10 @@ NO_WAIT
 |READ_COMMITTED_SNAPSHOT|예|예|
 |MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT|예|예|
 |DATE_CORRELATION_OPTIMIZATION|예|예|
-|\<sql_option>|예|예|
-|\<target_recovery_time_option>|예|예|
+|\<sql_option>|예|아니요|
+|\<target_recovery_time_option>|아니요|예|
 
-## <a name="examples"></a>예
+## <a name="examples"></a>예제
 
 ### <a name="a-setting-the-database-to-read_only"></a>A. 데이터베이스를 READ_ONLY로 설정
 데이터베이스 또는 파일 그룹의 상태를 READ_ONLY 또는 READ_WRITE로 변경하려면 데이터베이스에 대한 단독 액세스 권한이 필요합니다. 다음 예제에서는 데이터베이스를 `RESTRICTED_USER` 모드로 설정하여 액세스를 제한합니다. [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스의 상태를 `READ_ONLY` 로 설정한 후 데이터베이스 액세스를 모든 사용자에게 반환합니다.
@@ -3010,7 +3027,7 @@ NO_WAIT
 
 새로 만드는 모든 데이터베이스에 대한 데이터베이스 옵션의 기본값을 변경할 수 있습니다. 이렇게 하려면 model 데이터베이스에서 해당 데이터베이스 옵션을 변경합니다.
 
-## <a name="examples"></a>예
+## <a name="examples"></a>예제
 
 ### <a name="a-setting-the-database-to-read_only"></a>A. 데이터베이스를 READ_ONLY로 설정
 데이터베이스 또는 파일 그룹의 상태를 READ_ONLY 또는 READ_WRITE로 변경하려면 데이터베이스에 대한 단독 액세스 권한이 필요합니다. 다음 예제에서는 데이터베이스를 `RESTRICTED_USER` 모드로 설정하여 액세스를 제한합니다. [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스의 상태를 `READ_ONLY` 로 설정한 후 데이터베이스 액세스를 모든 사용자에게 반환합니다.
@@ -3339,7 +3356,7 @@ READ_COMMITTED_SNAPSHOT이 설정된 데이터베이스에서 여러 데이터 �
 
 READ_COMMITTED_SNAPSHOT 옵션을 설정하려면 사용자에게 데이터베이스에 대한 ALTER 권한이 있어야 합니다.
 
-## <a name="examples"></a>예
+## <a name="examples"></a>예제
 
 ### <a name="check-statistics-setting-for-a-database"></a>데이터베이스에 대한 통계 설정 확인
 

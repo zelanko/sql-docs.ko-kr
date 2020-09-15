@@ -5,16 +5,16 @@ ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-ms.date: 01/10/2018
+ms.date: 09/01/2020
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 3db39ed328ca37cbc0eb03b2ce4f8cdbcda268dd
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 4da229070afa69dc9f6f181ada1db21bc87b713b
+ms.sourcegitcommit: 8689a1abea3e2b768cdf365143b9c229194010c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85902312"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89424413"
 ---
 # <a name="deploy-a-sql-server-container-in-kubernetes-with-azure-kubernetes-services-aks"></a>AKS(Azure Kubernetes Services)를 사용하여 Kubernetes에 SQL Server 컨테이너 배포
 
@@ -35,17 +35,17 @@ HA(고가용성)를 위한 영구적 스토리지를 사용하여 AKS(Azure Kube
 
 Kubernetes 1.6 이상에서는 [스토리지 클래스](https://kubernetes.io/docs/concepts/storage/storage-classes/), [영구적 볼륨 클레임](https://kubernetes.io/docs/concepts/storage/storage-classes/#persistentvolumeclaims) 및 [Azure 디스크 볼륨 유형](https://github.com/kubernetes/examples/tree/master/staging/volumes/azure_disk)을 지원합니다. Kubernetes에서 기본적으로 SQL Server 인스턴스를 만들고 관리할 수 있습니다. 이 문서의 예제에서는 [배포](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/)를 만들어 공유 디스크 장애 조치(failover) 클러스터 인스턴스와 비슷한 고가용성 구성을 얻는 방법을 보여 줍니다. 이 구성에서 Kubernetes는 클러스터 오케스트레이터의 역할을 수행합니다. 컨테이너의 SQL Server 인스턴스가 실패하면 오케스트레이터는 동일한 영구적 스토리지에 연결된 또 다른 컨테이너 인스턴스를 부트스트랩합니다.
 
-![Kubernetes SQL Server 클러스터의 다이어그램](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql.png)
+![Kubernetes 클러스터의 SQL Server 컨테이너](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql.png)
 
 위 다이어그램에서 `mssql-server`는 [Pod](https://kubernetes.io/docs/concepts/workloads/pods/pod/)의 컨테이너입니다. Kubernetes는 클러스터의 리소스를 오케스트레이션합니다. [복제본 세트](https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/)는 노드 실패 후에 Pod가 자동으로 복구되도록 합니다. 애플리케이션이 서비스에 연결됩니다. 이 경우 서비스는 `mssql-server` 실패 후에도 동일하게 유지되는 IP 주소를 호스트하는 부하 분산 장치를 나타냅니다.
 
 다음 다이어그램에서는 `mssql-server` 컨테이너에서 오류가 발생했습니다. 오케스트레이터인 Kubernetes는 복제본 세트에 올바른 개수의 정상적인 인스턴스가 있도록 보장하고 구성에 따라 새 컨테이너를 시작합니다. 오케스트레이터가 동일한 노드에서 새 Pod를 시작하고, `mssql-server`가 동일한 영구적 스토리지에 다시 연결됩니다. 서비스가 다시 생성된 `mssql-server`에 연결됩니다.
 
-![Kubernetes SQL Server 클러스터의 다이어그램](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql-after-pod-fail.png)
+![Kubernetes 클러스터의 SQL Server Pod 오류](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql-after-pod-fail.png)
 
 다음 다이어그램에서는 `mssql-server` 컨테이너를 호스트하는 노드에서 오류가 발생했습니다. 오케스트레이터가 다른 노드에서 새 Pod를 시작하고, `mssql-server`가 동일한 영구적 스토리지에 다시 연결됩니다. 서비스가 다시 생성된 `mssql-server`에 연결됩니다.
 
-![Kubernetes SQL Server 클러스터의 다이어그램](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql-after-node-fail.png)
+![Kubernetes 클러스터의 SQL Server Pod 복구](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql-after-node-fail.png)
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
@@ -174,10 +174,12 @@ Kubernetes 클러스터에서 [영구적 볼륨](https://kubernetes.io/docs/conc
          labels:
            app: mssql
        spec:
-         terminationGracePeriodSeconds: 10
+         terminationGracePeriodSeconds: 30
+         securityContext:
+           fsGroup: 10001
          containers:
          - name: mssql
-           image: mcr.microsoft.com/mssql/server:2017-latest
+           image: mcr.microsoft.com/mssql/server:2019-latest
            ports:
            - containerPort: 1433
            env:
@@ -227,10 +229,12 @@ Kubernetes 클러스터에서 [영구적 볼륨](https://kubernetes.io/docs/conc
      valueFrom:
        secretKeyRef:
          name: mssql
-         key: SA_PASSWORD 
+         key: SA_PASSWORD
      ```
 
-     Kubernetes는 컨테이너를 배포할 때 암호의 값을 얻기 위해 `mssql`이라는 비밀을 참조합니다. 
+    Kubernetes는 컨테이너를 배포할 때 암호의 값을 얻기 위해 `mssql`이라는 비밀을 참조합니다.
+
+   * `securityContext` : securityContext는 Pod 또는 컨테이너에 대한 권한 및 액세스 제어 설정을 정의합니다. 이 경우 Pod 수준에서 지정되므로 모든 컨테이너(이 경우에는 단 하나)는 해당 보안 컨텍스트를 준수합니다. 보안 컨텍스트에서 fsGroup을 값 10001(mssql 그룹의 GID)로 정의합니다. 즉, 컨테이너의 모든 프로세스도 보조 그룹 ID 10001(mssql)의 일부입니다. 볼륨 /var/opt/mssql 및 해당 볼륨에서 생성된 모든 파일의 소유자는 그룹 ID 10001(mssql 그룹)입니다.
 
    >[!NOTE]
    >`LoadBalancer` 서비스 유형을 사용하면 포트 1433에서 인터넷을 통해 원격으로 SQL Server 인스턴스에 액세스할 수 있습니다.
@@ -272,7 +276,19 @@ Kubernetes 클러스터에서 [영구적 볼륨](https://kubernetes.io/docs/conc
 
    ```azurecli
    az aks browse --resource-group <MyResourceGroup> --name <MyKubernetesClustername>
-   ```  
+   ```
+
+1. 다음 명령을 실행하여 컨테이너가 루트가 아닌 것으로 실행되는지 확인할 수도 있습니다.
+
+    ```azurecli
+    kubectl.exe exec <name of SQL POD> -it -- /bin/bash 
+    ```
+
+    ‘whoami’를 실행하면 사용자 이름이 mssql로 표시될 것입니다. 루트가 아닌 사용자입니다.
+
+    ```azurecli
+    whoami
+    ```
 
 ## <a name="connect-to-the-sql-server-instance"></a>SQL Server 인스턴스에 연결
 
@@ -285,7 +301,7 @@ Kubernetes 클러스터에서 [영구적 볼륨](https://kubernetes.io/docs/conc
 * [SSDT](https://docs.microsoft.com/sql/linux/sql-server-linux-develop-use-ssdt)
 
 * sqlcmd
-   
+
    `sqlcmd`에 연결하려면 다음 명령을 실행합니다.
 
    ```cmd
@@ -293,9 +309,9 @@ Kubernetes 클러스터에서 [영구적 볼륨](https://kubernetes.io/docs/conc
    ```
 
    다음 값을 바꿉니다.
-      
-    - `<External IP Address>`를 `mssql-deployment` 서비스의 IP 주소로 바꿉니다. 
-    - `MyC0m9l&xP@ssw0rd`를 해당 암호로 바꿉니다.
+
+  * `<External IP Address>`를 `mssql-deployment` 서비스의 IP 주소로 바꿉니다. 
+  * `MyC0m9l&xP@ssw0rd`를 해당 암호로 바꿉니다.
 
 ## <a name="verify-failure-and-recovery"></a>실패 및 복구 확인
 
@@ -314,6 +330,7 @@ Kubernetes 클러스터에서 [영구적 볼륨](https://kubernetes.io/docs/conc
    ```azurecli
    kubectl delete pod mssql-deployment-0
    ```
+
    `mssql-deployment-0`은 Pod 이름으로 이전 단계에서 반환된 값입니다. 
 
 Kubernetes는 Pod를 자동으로 다시 만들어 SQL Server 인스턴스를 복구하고 영구적 스토리지에 연결합니다. `kubectl get pods`를 사용하여 새 Pod가 배포되었는지 확인합니다. `kubectl get services`를 사용하여 새 컨테이너의 IP 주소가 동일한지 확인합니다. 
@@ -333,5 +350,3 @@ Kubernetes는 Pod를 자동으로 다시 만들어 SQL Server 인스턴스를 �
 
 > [!div class="nextstepaction"]
 >[Kubernetes 소개](https://docs.microsoft.com/azure/aks/intro-kubernetes)
-
-

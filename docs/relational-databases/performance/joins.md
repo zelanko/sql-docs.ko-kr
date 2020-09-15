@@ -18,19 +18,29 @@ ms.assetid: bfc97632-c14c-4768-9dc5-a9c512f4b2bd
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c4c93c73aa3f20304a5e58fda096565d0db0456a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f659e5aff803fd670082277430d795074b23470e
+ms.sourcegitcommit: 678f513b0c4846797ba82a3f921ac95f7a5ac863
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915849"
+ms.lasthandoff: 09/07/2020
+ms.locfileid: "89511315"
 ---
 # <a name="joins-sql-server"></a>조인(SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 메모리 내 정렬 및 해시 조인 기술을 사용하여 정렬, 교집합, 합집합 및 차집합 연산을 수행합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 이러한 유형의 쿼리 계획을 사용하여 종형 스토리지이라고 하는 수직 테이블 분할을 지원합니다.   
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 메모리 내 정렬 및 해시 조인 기술을 사용하여 정렬, 교집합, 합집합 및 차집합 연산을 수행합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 이러한 유형의 쿼리 계획을 사용하여 수직 테이블 분할을 지원합니다.   
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용되는 네 가지 유형의 조인 연산은 다음과 같습니다.    
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 구문에서 결정한 논리적 조인 작업을 구현합니다.
+-   내부 조인
+-   왼쪽 우선 외부 조인
+-   오른쪽 우선 외부 조인
+-   완전 외부 조인
+-   크로스 조인
+
+> [!NOTE]
+> 조인 구문에 대한 자세한 내용은 [FROM 절과 JOIN, APPLY, PIVOT(Transact-SQL)](../../t-sql/queries/from-transact-sql.md)을 참조하세요.
+
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 논리적 조인 작업을 수행하는 네 가지 유형의 물리적 조인 작업을 채택합니다.    
 -   중첩 루프 조인     
 -   병합 조인   
 -   해시 조인   
@@ -41,50 +51,57 @@ ms.locfileid: "86915849"
 
 조인 조건은 다음과 같이 쿼리에서 두 테이블의 관계를 정의합니다.    
 -   조인에 사용될 각 테이블에서 열을 지정합니다. 일반적으로 조인 조건은 한 테이블에서 외래 키를 지정하고 다른 테이블에서 이와 관련된 키를 지정합니다.    
--   열에서 값을 비교할 때 사용할 논리 연산자(예: =, <>)를 지정합니다.    
+-   열에서 값을 비교할 때 사용할 논리 연산자(예: =, <>)를 지정합니다.   
 
-내부 조인은 `FROM` 또는 `WHERE` 절에서 지정할 수 있습니다. 외부 조인은 `FROM` 절에서만 지정할 수 있습니다. `WHERE` 및 `HAVING` 검색 조건과 결합된 조인 조건은 `FROM` 절에서 참조되는 기본 테이블에서 선택된 행을 제어합니다.    
+조인은 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 구문을 사용하여 논리적으로 표현됩니다.
+-   INNER JOIN
+-   LEFT [ OUTER ] JOIN
+-   RIGHT [ OUTER ] JOIN
+-   FULL [ OUTER ] JOIN
+-   CROSS JOIN
 
-`FROM` 절에 조인 조건을 지정하면 `WHERE` 절에 지정할 수 있는 다른 검색 조건과 구분하기 쉬우므로 적합한 조인 지정 방법입니다. 간단한 ISO FROM 절의 조인 구문은 다음과 같습니다.
+**내부 조인**은 `FROM` 또는 `WHERE` 절에서 지정할 수 있습니다. **외부 조인** 및 **크로스 조인**은 `FROM` 절에서만 지정할 수 있습니다. `WHERE` 및 `HAVING` 검색 조건과 결합된 조인 조건은 `FROM` 절에서 참조되는 기본 테이블에서 선택된 행을 제어합니다.    
+
+`FROM` 절에 조인 조건을 지정하면 `WHERE` 절에 지정할 수 있는 다른 검색 조건과 구분하기 쉬우므로 적합한 조인 지정 방법입니다. 간단한 ISO `FROM` 절의 조인 구문은 다음과 같습니다.
 
 ```
-FROM first_table join_type second_table [ON (join_condition)]
+FROM first_table < join_type > second_table [ ON ( join_condition ) ]
 ```
 
-*join_type*는 어떤 유형의 조인을 실행할지 지정합니다. 조인 유형에는 내부 조인, 외부 조인, 크로스 조인이 있습니다. *join_condition*은 조인된 행의 각 쌍에 대해 평가할 조건자를 정의합니다. 다음은 FROM 절 조인 사양의 예입니다.
+*join_type*는 어떤 유형의 조인을 실행할지 지정합니다. 조인 유형에는 내부 조인, 외부 조인, 크로스 조인이 있습니다. *join_condition*은 조인된 행의 각 쌍에 대해 평가할 조건자를 정의합니다. 다음은 `FROM` 절 조인 사양의 예제입니다.
 
 ```sql
-FROM Purchasing.ProductVendor JOIN Purchasing.Vendor
-     ON (ProductVendor.BusinessEntityID = Vendor.BusinessEntityID)
+FROM Purchasing.ProductVendor INNER JOIN Purchasing.Vendor
+     ON ( ProductVendor.BusinessEntityID = Vendor.BusinessEntityID )
 ```
 
-다음은 위의 조인을 사용하는 간단한 SELECT 문입니다.
+다음은 위의 조인을 사용하는 간단한 `SELECT` 문입니다.
 
 ```sql
 SELECT ProductID, Purchasing.Vendor.BusinessEntityID, Name
-FROM Purchasing.ProductVendor JOIN Purchasing.Vendor
+FROM Purchasing.ProductVendor INNER JOIN Purchasing.Vendor
     ON (Purchasing.ProductVendor.BusinessEntityID = Purchasing.Vendor.BusinessEntityID)
 WHERE StandardPrice > $10
   AND Name LIKE N'F%'
 GO
 ```
 
-위의 SELECT 문은 회사 이름이 F로 시작하고 제품 가격이 $10 이상인 회사에서 공급되는 부품 조합에 대해 제품과 공급업체 정보를 반환합니다.   
+위의 `SELECT` 문은 회사 이름이 F로 시작하고 제품 가격이 $10 이상인 회사에서 공급되는 부품 조합에 대해 제품과 공급업체 정보를 반환합니다.   
 
-하나의 쿼리에서 여러 테이블이 참조될 경우 모든 열 참조는 명확해야 합니다. 앞의 예에서 ProductVendor 및 Vendor 테이블에는 BusinessEntityID라는 열이 있습니다. 쿼리에서 참조되는 둘 이상의 테이블 간에 중복된 열 이름이 있으면 테이블 이름으로 한정해야 합니다. 예에서 Vendor 열에 대한 모든 참조는 한정됩니다.   
+하나의 쿼리에서 여러 테이블이 참조될 경우 모든 열 참조는 명확해야 합니다. 위의 예제에서 `ProductVendor` 및 `Vendor` 테이블에 모두 `BusinessEntityID`라는 열이 있습니다. 쿼리에서 참조되는 둘 이상의 테이블 간에 중복된 열 이름이 있으면 테이블 이름으로 한정해야 합니다. 예제에서 `Vendor` 열에 대한 모든 참조는 한정됩니다.   
 
-쿼리에 사용된 둘 이상의 테이블에서 열 이름이 중복되지 않을 경우 해당 열에 대한 참조를 테이블 이름으로 한정할 필요가 없습니다. 위의 예에도 이러한 열이 포함되어 있습니다. 이러한 SELECT 문은 각 열을 제공하는 테이블을 나타내지 않기 때문에 이해하기 어려울 수도 있습니다. 모든 열이 테이블 이름으로 한정되면 쿼리의 가독성이 향상됩니다. 테이블 별칭을 사용하면 가독성이 더욱 향상되며 특히 테이블 이름을 데이터베이스 이름과 소유자 이름으로 한정해야 할 경우 그러합니다. 다음은 가독성 향상을 위해 테이블 별칭이 할당되고 열이 테이블 별칭으로 한정된 것을 제외하면 위 예와 동일합니다.
+쿼리에 사용된 둘 이상의 테이블에서 열 이름이 중복되지 않을 경우 해당 열에 대한 참조를 테이블 이름으로 한정할 필요가 없습니다. 위의 예에도 이러한 열이 포함되어 있습니다. 이러한 `SELECT` 절은 각 열을 제공하는 테이블을 나타내지 않기 때문에 이해하기 어려울 수도 있습니다. 모든 열이 테이블 이름으로 한정되면 쿼리의 가독성이 향상됩니다. 테이블 별칭을 사용하면 가독성이 더욱 향상되며 특히 테이블 이름을 데이터베이스 이름과 소유자 이름으로 한정해야 할 경우 그러합니다. 다음은 가독성 향상을 위해 테이블 별칭이 할당되고 열이 테이블 별칭으로 한정된 것을 제외하면 위 예와 동일합니다.
 
 ```sql
 SELECT pv.ProductID, v.BusinessEntityID, v.Name
 FROM Purchasing.ProductVendor AS pv 
-JOIN Purchasing.Vendor AS v
+INNER JOIN Purchasing.Vendor AS v
     ON (pv.BusinessEntityID = v.BusinessEntityID)
 WHERE StandardPrice > $10
     AND Name LIKE N'F%';
 ```
 
-위의 예는 일반적으로 사용되는 방법대로 조인 조건을 FROM 절에 지정했습니다. 다음은 동일한 조인 조건을 WHERE 절에 지정한 쿼리입니다.
+위의 예제는 일반적으로 사용되는 방법대로 조인 조건을 `FROM` 절에 지정했습니다. 다음은 동일한 조인 조건을 `WHERE` 절에 지정한 쿼리입니다.
 
 ```sql
 SELECT pv.ProductID, v.BusinessEntityID, v.Name
@@ -94,13 +111,13 @@ WHERE pv.BusinessEntityID=v.BusinessEntityID
     AND Name LIKE N'F%';
 ```
 
-조인의 선택 목록은 조인된 테이블의 모든 열이나 이러한 열의 하위 집합을 참조할 수 있습니다. 조인에 모든 테이블의 열을 포함시키는 데 선택 목록은 필요하지 않습니다. 예를 들면 세 개의 테이블 조인에서 한 테이블만 사용하여 다른 한 테이블을 세 번째 테이블과 연결하고 중간 테이블의 열은 선택 목록에서 참조되지 않아도 됩니다.   
+조인의 `SELECT` 목록은 조인된 테이블의 모든 열이나 이러한 열의 하위 집합을 참조할 수 있습니다. 모든 테이블의 열을 조인에 포함하는 데 `SELECT` 목록은 필요하지 않습니다. 예를 들면 세 개의 테이블 조인에서 한 테이블만 사용하여 다른 한 테이블을 세 번째 테이블과 연결하고 중간 테이블의 열은 선택 목록에서 참조되지 않아도 됩니다. 이를 **anti semi join**이라고도 합니다.  
 
 조인 조건에는 일반적으로 같음 연산자(=)를 사용하지만 다른 조건자처럼 기타 비교 연산자나 관계 연산자를 지정할 수 있습니다. 자세한 내용은 [Comparison Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/comparison-operators-transact-sql.md) 및 [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)를 참조하세요.  
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 조인을 처리할 경우 쿼리 엔진은 여러 가지 가능성 중에서 가장 효율적인 방법을 선택합니다. 다양한 조인의 물리적 실행에서는 다양한 최적화가 사용될 수 있으므로 이에 대해 신뢰할 수 있는 예측은 수행할 수 없습니다.   
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 조인을 처리할 때 쿼리 최적화 프로그램은 여러 가지 가능한 방법 중 가장 효율적인 방법을 선택합니다. 여기에는 가장 효율적인 유형의 물리적 조인 선택, 테이블이 조인되는 순서, **semi join** 및 **anti semi join**과 같이 [!INCLUDE[tsql](../../includes/tsql-md.md)] 구문으로 직접 표현할 수 없는 논리적 조인 작업 유형 사용이 포함됩니다. 다양한 조인의 물리적 실행에서는 다양한 최적화가 사용될 수 있으므로 이에 대해 신뢰할 수 있는 예측은 수행할 수 없습니다. semi join 및 anti semi join에 대한 자세한 내용은 [실행 계획 논리 및 물리 연산자 참조](../../relational-databases/showplan-logical-and-physical-operators-reference.md)를 확인하세요.  
 
-조인 조건에 사용된 열의 이름이나 데이터 형식은 반드시 동일하지 않아도 됩니다. 그러나 데이터 형식이 다를 경우 서로 호환이 가능하거나 SQL Server에서 암시적으로 변환할 수 있는 형식이어야 합니다. 데이터 형식을 암시적으로 변환할 수 없을 경우 조인 조건은 `CAST` 함수를 사용하여 데이터 형식을 명시적으로 변환해야 합니다. 암시적 및 명시적 데이터 변환에 대한 자세한 내용은 [데이터 형식 변환&#40;데이터베이스 엔진&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)을 참조하세요.    
+조인 조건에 사용된 열의 이름이나 데이터 형식은 반드시 동일하지 않아도 됩니다. 그러나 데이터 형식이 다를 경우 서로 호환이 가능하거나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 암시적으로 변환할 수 있는 형식이어야 합니다. 데이터 형식을 암시적으로 변환할 수 없을 경우 조인 조건은 `CAST` 함수를 사용하여 데이터 형식을 명시적으로 변환해야 합니다. 암시적 및 명시적 데이터 변환에 대한 자세한 내용은 [데이터 형식 변환&#40;데이터베이스 엔진&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)을 참조하세요.    
 
 조인을 사용하는 대부분의 쿼리는 하위 쿼리(다른 쿼리 내에 중첩된 쿼리)를 사용하여 다시 작성할 수 있으며 대부분의 하위 쿼리는 조인으로 다시 작성할 수 있습니다. 하위 쿼리에 대한 자세한 내용은 [Subqueries](../../relational-databases/performance/subqueries.md)를 참조하세요.   
 
@@ -355,4 +372,5 @@ NULL        three  NULL        NULL
 [비교 연산자&#40;Transact-SQL&#41;](../../t-sql/language-elements/comparison-operators-transact-sql.md)    
 [데이터 형식 변환&#40;Database Engine&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)   
 [Subqueries](../../relational-databases/performance/subqueries.md)      
-[Adaptive Joins](../../relational-databases/performance/intelligent-query-processing.md#batch-mode-adaptive-joins)    
+[적응 조인](../../relational-databases/performance/intelligent-query-processing.md#batch-mode-adaptive-joins)    
+[FROM 절과 JOIN, APPLY, PIVOT(Transact-SQL)](../../t-sql/queries/from-transact-sql.md)

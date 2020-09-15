@@ -2,7 +2,7 @@
 description: CREATE TABLE(Transact-SQL)
 title: CREATE TABLE(Transact-SQL)
 ms.custom: ''
-ms.date: 02/24/2020
+ms.date: 09/04/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -44,15 +44,16 @@ helpviewer_keywords:
 - CREATE TABLE statement
 - number of columns per table
 - maximum number of bytes per row
+- data retention policy
 ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 380d8d9dcd7d2812251203a91caaa2b9d056d616
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: 96dcd0aff5874db3f025496b1067d5d3d111b3a9
+ms.sourcegitcommit: 678f513b0c4846797ba82a3f921ac95f7a5ac863
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88862449"
+ms.lasthandoff: 09/07/2020
+ms.locfileid: "89511266"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE(Transact-SQL)
 
@@ -237,14 +238,19 @@ column_set_name XML COLUMN_SET FOR ALL_SPARSE_COLUMNS
           ON [ ( <table_stretch_options> [,...n] ) ]
         | OFF ( MIGRATION_STATE = PAUSED )
       }
-    ]
+    ]   
+    [ DATA_DELETION = ON ( FILTER_COLUMN = column_name
+        , RETENTION_PERIOD = {
+                              INFINITE | number {DAY | DAYS | WEEK | WEEKS
+                  | MONTH | MONTHS | YEAR | YEARS }
+                          }) ]
 }
   
 <table_stretch_options> ::=
 {  
     [ FILTER_PREDICATE = { null | table_predicate_function } , ]
       MIGRATION_STATE = { OUTBOUND | INBOUND | PAUSED }
- }
+ }   
   
 <index_option> ::=
 {
@@ -762,7 +768,8 @@ SYSTEM_VERSIONING **=** ON [ ( HISTORY_TABLE **=** *schema_name* .*history_table
 
 데이터 형식, NULL 허용 여부 제약 조건 및 기본 키 제약 조건 요구 사항이 충족된 경우 테이블의 시스템 버전 관리를 활성화합니다. `HISTORY_TABLE` 인수를 사용하지 않는 경우 시스템에서 현재 테이블의 동일한 파일 그룹에 있는 현재 테이블의 스키마와 일치하는 새 기록 테이블을 생성하여 두 테이블 간에 링크를 만들고 시스템이 기록 테이블의 현재 테이블에서 각 레코드의 기록을 기록할 수 있도록 합니다. 이 기록 테이블의 이름은 `MSSQL_TemporalHistoryFor<primary_table_object_id>`가 됩니다. 기본적으로 기록 테이블은 **PAGE** (으)로 압축됩니다. `HISTORY_TABLE` 인수를 사용하여 기존 기록 테이블에 대한 링크를 만들고 해당 테이블을 사용하면 현재 테이블과 지정된 테이블 간에 링크가 생성됩니다. 구성 분할은 현재 테이블에서 기록 테이블로 자동 복제를 수행하지 않기 때문에 현재 테이블이 분할된 경우 기록 테이블은 기본 파일 그룹에 생성됩니다. 기록 테이블 생성 도중 기록 테이블의 이름을 지정하는 경우 스키마와 테이블 이름을 지정해야 합니다. 기존 기록 테이블에 대한 링크를 만드는 경우 데이터 일관성 검사를 수행하도록 선택할 수 있습니다. 이 데이터 일관성 확인을 통해 기존 레코드가 겹치지 않도록 합니다. 기본값은 데이터 일관성 검사를 수행하는 것입니다. `PERIOD FOR SYSTEM_TIME` 및 `GENERATED ALWAYS AS ROW { START | END }` 인수를 이 인수와 함께 사용하여 테이블에서 시스템 버전 관리를 활성화합니다. 자세한 내용은 [Temporal Tables](../../relational-databases/tables/temporal-tables.md)을 참조하세요.
 
-REMOTE_DATA_ARCHIVE = { ON [ ( *table_stretch_options* [,...n] ) ] | OFF ( MIGRATION_STATE = PAUSED ) } **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상).
+REMOTE_DATA_ARCHIVE = { ON [ ( *table_stretch_options* [,...n] ) ] | OFF ( MIGRATION_STATE = PAUSED ) }   
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상).
 
 Stretch Database가 활성화 또는 비활성화된 상태에서 새 테이블을 만듭니다. 자세한 내용은 [Stretch Database](../../sql-server/stretch-database/stretch-database.md)를 참조하십시오.
 
@@ -793,6 +800,23 @@ MIGRATION_STATE = { OUTBOUND | INBOUND | PAUSED } **적용 대상**: [!INCLUDE[s
    이 작업은 데이터 전송 비용이 소요되며, 취소할 수 없습니다.
 
 - `PAUSED`를 지정하여 데이터 마이그레이션을 일시 중지하거나 연기합니다. 자세한 내용은 [데이터 마이그레이션 일시 중지 및 다시 계속 - Stretch Database](../../sql-server/stretch-database/pause-and-resume-data-migration-stretch-database.md)를 참조하세요.
+
+DATA_DELETION = { ON ( FILTER_COLUMN = column_name,   
+            RETENTION_PERIOD = { INFINITE | number {DAY | DAYS | WEEK | WEEKS | MONTH | MONTHS | YEAR | YEARS } }    
+**적용 대상:** Azure SQL Edge‘만’
+
+데이터베이스 내의 테이블에서 오래된 데이터의 보존 정책 기반 정리를 사용하도록 설정합니다. 자세한 내용은 [데이터 보존 사용 및 사용 안 함](https://docs.microsoft.com/azure/azure-sql-edge/data-retention-enable-disable)을 참조하세요. 데이터 보존을 사용하도록 설정하려면 다음 매개 변수를 지정해야 합니다. 
+
+- FILTER_COLUMN = { column_name }  
+테이블의 행이 사용되지 않는지 여부를 확인하는 데 사용되어야 하는 열을 지정합니다. 필터 열에 대해 허용되는 데이터 형식은 다음과 같습니다.
+  - Date
+  - DateTime
+  - DateTime2
+  - SmallDateTime
+  - DateTimeOffset
+
+- RETENTION_PERIOD = { INFINITE | number {DAY | DAYS | WEEK | WEEKS | MONTH | MONTHS | YEAR | YEARS }}       
+  테이블에 대한 보존 기간 정책을 지정합니다. 보존 기간은 양의 정수 값과 날짜 부분 단위의 조합으로 지정됩니다.   
 
 MEMORY_OPTIMIZED **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]). Azure SQL Managed Instance는 메모리 최적화 테이블을 지원하지 않습니다.
 
@@ -1573,6 +1597,20 @@ Invalid object name '##test'
 SELECT * FROM tempdb.sys.objects;
 SELECT * FROM tempdb.sys.columns;
 SELECT * FROM tempdb.sys.database_files;
+```   
+
+### <a name="w-enable-data-retention-policy-on-a-table"></a>W. 테이블에서 데이터 보존 정책 사용
+
+다음 예제에서는 데이터 보존이 사용하도록 설정된 테이블을 만들고 보존 기간을 1주로 설정합니다. 이 예제는 **Azure SQL Edge**에만 적용됩니다.
+
+```sql
+CREATE TABLE [dbo].[data_retention_table] 
+(
+  [dbdatetime2] datetime2(7), 
+  [product_code] int, 
+  [value] char(10)
+) 
+WITH (DATA_DELETION = ON ( FILTER_COLUMN = [dbdatetime2], RETENTION_PERIOD = 1 WEEKS ))
 ```
 
 ## <a name="next-steps"></a>다음 단계

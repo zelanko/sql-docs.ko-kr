@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 378d2d63-50b9-420b-bafb-d375543fda17
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9aec87c4b57016f862b671734a871f77bd84da15
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 769000368599b2dc4e39b851d3d0def2f8b40a38
+ms.sourcegitcommit: 8689a1abea3e2b768cdf365143b9c229194010c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395058"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89424433"
 ---
 # <a name="failover-and-failover-modes-always-on-availability-groups"></a>장애 조치(Failover) 및 장애 조치(Failover) 모드(Always On 가용성 그룹)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "87395058"
   가용성 그룹의 컨텍스트 내에서는 일반적으로 가용성 복제본의 주 역할과 보조 역할을 *장애 조치(Failover)* 라는 프로세스에서 서로 바꿀 수 있습니다. 자동 장애 조치(데이터가 손실되지 않음), 계획된 수동 장애 조치(데이터가 손실되지 않음)와 *강제 장애 조치(failover)* 라고 불리는 강제 수동 장애 조치(데이터가 손실될 수 있음)의 세 가지 형태가 있습니다. 자동 및 계획된 수동 장애 조치(Failover)는 모든 데이터를 보존합니다. 가용성 그룹은 가용성 복제본의 수준에서 장애 조치(Failover)됩니다. 즉, 가용성 그룹은 해당 보조 복제본 중 하나(현재 *장애 조치(Failover) 대상*)로 장애 조치(Failover)됩니다.  
   
 > [!NOTE]  
->  따라서 데이터 파일 손실, 데이터베이스 삭제, 트랜잭션 로그 손상 등으로 인해 주의 대상 데이터베이스가 발생할 경우 이러한 데이터베이스 수준의 문제로는 가용성 그룹의 장애 조치(Failover)가 수행되지 않습니다.  
+>   [데이터베이스 수준 상태 검색](../../../database-engine/availability-groups/windows/sql-server-always-on-database-health-detection-failover-option.md)이 구성되지 않는 경우 데이터베이스 수준의 문제(예: 데이터 파일 손실, 데이터베이스 삭제 또는 트랜잭션 로그 손상으로 인해 주의 대상 데이터베이스가 발생)로는 가용성 그룹에서 장애 조치(failover)가 수행되지 않습니다.  
   
  장애 조치(Failover) 동안에는 장애 조치(Failover) 대상이 주 역할을 맡아 데이터베이스를 복구하고 이 데이터베이스를 새로운 주 데이터베이스로 하여 온라인 상태로 만듭니다. 이전 주 복제본은 사용 가능한 경우 보조 역할로 전환되고 해당 데이터베이스는 보조 데이터베이스가 됩니다. 잠재적으로 여러 오류에 대한 응답이나 관리를 위해 이러한 역할이 상호 또는 다른 장애 조치(Failover) 대상으로 전환될 수 있습니다.  
   

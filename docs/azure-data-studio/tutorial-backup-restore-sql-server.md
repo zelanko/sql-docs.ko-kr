@@ -6,17 +6,17 @@ ms.technology: azure-data-studio
 ms.topic: tutorial
 author: markingmyname
 ms.author: maghan
-ms.reviewer: alayu, maghan, sstein
+ms.reviewer: alayu
 ms.custom: seodec18
 ms.date: 11/04/2019
-ms.openlocfilehash: 8594178dc6817cc8b826268c3fd0aebce59af2ec
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: a7d3ca36634e449dd26dfdb0df75f09608d25f51
+ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88765802"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89283694"
 ---
-# <a name="backup-and-restore-databases-using-azure-data-studio"></a>Azure Data Studio를 사용하여 데이터베이스 백업 및 복원
+# <a name="tutorial-backup-and-restore-databases-using-azure-data-studio"></a>자습서: Azure Data Studio를 사용하여 데이터베이스 백업 및 복원
 
 이 자습서에서는 Azure Data Studio를 사용하여 다음을 수행하는 방법을 알아봅니다.
 > [!div class="checklist"]
@@ -36,16 +36,16 @@ ms.locfileid: "88765802"
 
 ## <a name="back-up-a-database"></a>데이터베이스 백업
 
-1. TutorialDB 데이터베이스 대시보드를 열고 **서버** 사이드바를 연 후(**Ctrl+G**) **데이터베이스**를 확장하고 **TutorialDB**를 마우스 오른쪽 단추로 클릭한 후 **관리**를 선택합니다.
+1. TutorialDB 데이터베이스 대시보드를 엽니다(**서버** 사이드바를 연 다음(**Ctrl+G**), **데이터베이스**를 확장하고 **TutorialDB**를 마우스 오른쪽 단추로 선택한 후 **관리** 선택).
 
-2. **데이터베이스 백업** 대화 상자를 엽니다(**작업** 위젯에서 **백업** 클릭).
+2. **데이터베이스 백업** 대화 상자를 엽니다(**작업** 위젯에서 **백업** 선택).
 
    ![작업 위젯](./media/tutorial-backup-restore-sql-server/tasks.png)
 
-3. 이 자습서에서는 기본 백업 옵션을 사용하므로 **백업**을 클릭합니다.
+3. 이 자습서에서는 기본 백업 옵션을 사용하므로 **백업**을 선택합니다.
    ![백업 대화 상자](./media/tutorial-backup-restore-sql-server/backup-dialog.png)
 
-**백업**을 클릭하면 **데이터베이스 백업** 대화 상자가 사라지고 백업 프로세스가 시작됩니다.
+**백업**을 선택하면 **데이터베이스 백업** 대화 상자가 사라지고 백업 프로세스가 시작됩니다.
 
 ## <a name="view-the-backup-status-and-view-the-backup-script"></a>백업 상태 확인 및 백업 스크립트 확인
 
@@ -53,26 +53,26 @@ ms.locfileid: "88765802"
 
    ![작업 기록](./media/tutorial-backup-restore-sql-server/task-history.png)
 
-2. 편집기에서 백업 스크립트를 보려면 **데이터베이스 백업 성공**을 마우스 오른쪽 단추로 클릭하고 **스크립트**를 선택합니다.
+2. 편집기에서 백업 스크립트를 보려면 **데이터베이스 백업 성공**을 마우스 오른쪽 단추로 선택하고 **스크립트**를 선택합니다.
 
    ![백업 스크립트](./media/tutorial-backup-restore-sql-server/task-script.png)
 
 ## <a name="restore-a-database-from-a-backup-file"></a>백업 파일에서 데이터베이스 복원
 
-1. **서버** 사이드바를 열고(**Ctrl+G**) 서버를 마우스 오른쪽 단추로 클릭한 이후에 **관리**를 선택합니다.
+1. **서버** 사이드바를 열고(**Ctrl+G**) 서버를 마우스 오른쪽 단추로 선택한 이후에 **관리**를 선택합니다.
 
-2. **데이터베이스 복원** 대화 상자를 엽니다(**작업** 위젯에서 **복원** 클릭).
+2. **데이터베이스 복원** 대화 상자를 엽니다(**작업** 위젯에서 **복원** 선택).
 
    ![작업 복원](media/tutorial-backup-restore-sql-server/tasks-restore.png)
 
 3. **복원 원본** 필드에서 **백업 파일**을 선택합니다.
 
-4. **백업 파일 경로** 필드에서 줄임표(...)를 클릭하고 *TutorialDB*에 대한 최신 백업 파일을 선택합니다.
+4. **백업 파일 경로** 필드에서 줄임표(...)를 선택하고 *TutorialDB*에 대한 최신 백업 파일을 선택합니다.
 
 5. **대상** 섹션의 **대상 데이터베이스** 필드에 **TutorialDB_Restored**를 입력하여 백업 파일을 새 데이터베이스로 복원합니다. 그런 다음, **복원**을 선택합니다.
 
-   ![복원](./media/tutorial-backup-restore-sql-server/restore.png)
+   ![백업 복원](./media/tutorial-backup-restore-sql-server/restore.png)
 
 6. 복원 작업의 상태를 보려면 **CTRL+T**를 눌러 **작업 기록**을 엽니다.
 
-   ![복원](./media/tutorial-backup-restore-sql-server/task-history-restore.png)
+   ![기록 작업 복원](./media/tutorial-backup-restore-sql-server/task-history-restore.png)

@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: f0986c7af4ed3f6f8284db2e9faf99cad149b216
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: c8636dad789915289ef0f08c7355c5f443a7a87a
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457622"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480510"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>데이터베이스 엔진 튜닝 관리자 시작 및 사용
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "86457622"
   
 #### <a name="to-start-the-database-engine-tuning-advisor-from-the-sql-server-management-studio-query-editor"></a>SQL Server Management Studio 쿼리 편집기에서 데이터베이스 엔진 튜닝 관리자를 시작하려면  
   
-1.  [!INCLUDE[tsql](../../includes/tsql-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]스크립트 파일을 엽니다. 자세한 내용은 [쿼리 및 텍스트 편집기&#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)를 참조하세요.  
+1.  [!INCLUDE[tsql](../../includes/tsql-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]스크립트 파일을 엽니다. 자세한 내용은 [쿼리 및 텍스트 편집기&#40;SQL Server Management Studio&#41;](https://docs.microsoft.com/sql/ssms/f1-help/database-engine-query-editor-sql-server-management-studio?view=sql-server-ver15)를 참조하세요.  
   
 2.  [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트에서 쿼리를 선택하거나 전체 스크립트를 선택하고 선택 영역을 마우스 오른쪽 단추를 클릭한 다음 **데이터베이스 엔진 튜닝 관리자의 쿼리 분석**을 선택합니다. 데이터베이스 엔진 튜닝 관리자 GUI가 열리고 스크립트를 XML 파일 작업으로 가져옵니다. 세션 이름과 튜닝 옵션을 지정하여 선택한 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리를 작업으로 튜닝할 수 있습니다.  
   
@@ -180,7 +180,7 @@ ms.locfileid: "86457622"
 > [!NOTE]  
 >  데이터베이스 엔진 튜닝 관리자의 일시 중지 기능은 지원되지 않습니다. **분석 중지** 또는 **분석 중지(권장 구성)** 도구 모음 단추를 클릭한 후 **분석 시작** 도구 모음 단추를 클릭하면 데이터베이스 엔진 튜닝 관리자가 새 튜닝 세션을 시작합니다.  
   
-##### <a name="to-tune-a-database-using-a-workload-file-or-table-as-input"></a>작업 파일이나 테이블을 입력으로 사용하여 데이터베이스를 튜닝하려면  
+#### <a name="to-tune-a-database-using-a-workload-file-or-table-as-input"></a>작업 파일이나 테이블을 입력으로 사용하여 데이터베이스를 튜닝하려면  
   
 1.  데이터베이스 엔진 튜닝 관리자가 분석 중에 추가, 제거 또는 유지해야 할 데이터베이스 기능(인덱스, 인덱싱된 뷰, 분할)을 결정합니다.  
   
@@ -195,7 +195,6 @@ ms.locfileid: "86457622"
      테이블을 지정하는 형식  
   
     ```  
-  
     database_name.schema_name.table_name  
     ```  
   
@@ -235,7 +234,7 @@ ms.locfileid: "86457622"
   
  **dta** 유틸리티 구문에 대한 자세한 내용 및 예제는 [dta Utility](../../tools/dta/dta-utility.md)를 참조하세요.  
   
-##### <a name="to-tune-a-database-by-using-the-plan-cache"></a>계획 캐시를 사용하여 데이터베이스를 튜닝하려면  
+#### <a name="to-tune-a-database-by-using-the-plan-cache"></a>계획 캐시를 사용하여 데이터베이스를 튜닝하려면  
   
 1.  **-ip** 옵션을 지정합니다. 선택한 데이터베이스에 대한 상위 1,000개의 계획 캐시 이벤트가 분석됩니다.  
   
@@ -257,7 +256,7 @@ ms.locfileid: "86457622"
     dta -E -D DatabaseName -ip -ipf -n 2000 -s SessionName2  
     ```  
   
-##### <a name="to-tune-a-database-by-using-a-workload-and-dta-utility-default-settings"></a>작업 및 dta 유틸리티 기본 설정을 사용하여 데이터베이스를 튜닝하려면  
+#### <a name="to-tune-a-database-by-using-a-workload-and-dta-utility-default-settings"></a>작업 및 dta 유틸리티 기본 설정을 사용하여 데이터베이스를 튜닝하려면  
   
 1.  데이터베이스 엔진 튜닝 관리자가 분석 중에 추가, 제거 또는 유지해야 할 데이터베이스 기능(인덱스, 인덱싱된 뷰, 분할)을 결정합니다.  
   
@@ -273,7 +272,7 @@ ms.locfileid: "86457622"
   
      여기에 표시된 네 가지 옵션(데이터베이스 이름, 작업, 연결 유형, 세션 이름)은 필수 항목입니다.  
   
-##### <a name="to-tune-a-remote-database-or-a-named-instance-for-a-specific-duration"></a>원격 데이터베이스 또는 특정 기간 동안 명명된 인스턴스를 튜닝하려면  
+#### <a name="to-tune-a-remote-database-or-a-named-instance-for-a-specific-duration"></a>원격 데이터베이스 또는 특정 기간 동안 명명된 인스턴스를 튜닝하려면  
   
 1.  데이터베이스 엔진 튜닝 관리자가 분석 중에 추가, 제거 또는 유지해야 할 데이터베이스 기능(인덱스, 인덱싱된 뷰, 분할)을 결정합니다.  
   
@@ -288,7 +287,7 @@ ms.locfileid: "86457622"
   
      여기에서 `-S` 는 원격 서버 이름과 인스턴스(또는 로컬 서버에서 명명된 인스턴스)를 지정하고 `-D` 는 튜닝할 데이터베이스의 이름을 지정합니다. `-it` 옵션은 작업 테이블의 이름을 지정하고, `-U` 및 `-P` 는 원격 데이터베이스에 대한 로그인 ID와 암호를 지정하고, `-s` 는 튜닝 세션 이름을 지정하고, `-A` 는 튜닝 세션 기간(단위 분)을 지정합니다. 기본적으로 **dta** 유틸리티는 8시간 튜닝 기간을 사용합니다. 데이터베이스 엔진 튜닝 관리자가 시간 제한 없이 작업을 튜닝하도록 하려면 **옵션에** 0 `-A` (영)을 지정합니다.  
   
-##### <a name="to-tune-a-database-using-an-xml-input-file"></a>XML 입력 파일로 데이터베이스를 튜닝하려면  
+#### <a name="to-tune-a-database-using-an-xml-input-file"></a>XML 입력 파일로 데이터베이스를 튜닝하려면  
   
 1.  데이터베이스 엔진 튜닝 관리자가 분석 중에 추가, 제거 또는 유지해야 할 데이터베이스 기능(인덱스, 인덱싱된 뷰, 분할)을 결정합니다.  
   
@@ -311,7 +310,7 @@ ms.locfileid: "86457622"
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 튜닝 관리자 XML 스키마는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치의 다음 위치에 있습니다.  
   
- C:\Program Files\Microsoft SQL Server\100\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd  
+ `C:\Program Files\Microsoft SQL Server\100\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd` 
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 튜닝 관리자 XML 스키마는 [Microsoft 웹 사이트](https://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409)에서 온라인으로도 제공됩니다.  
   
@@ -415,7 +414,7 @@ database_name.owner_name.table_name
  현재 튜닝 세션의 시간을 제한합니다. 이 시간을 늘일수록 보다 정확한 권장 구성이 생성됩니다. 최적의 권장 구성을 생성하려면 이 옵션을 선택하지 않도록 해야 합니다.  
   
 > [!NOTE]  
->  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 튜닝 관리자를 사용하면 분석하는 동안 시스템 리소스가 사용됩니다. 튜닝 중인 서버에서 작업량이 많을 것으로 예상되는 기간 전에 튜닝을 중지하려면 **튜닝 시간 제한** 을 사용합니다.  
+> [!INCLUDE[ssDE](../../includes/ssde-md.md)] 튜닝 관리자를 사용하면 분석하는 동안 시스템 리소스가 사용됩니다. 튜닝 중인 서버에서 작업량이 많을 것으로 예상되는 기간 전에 튜닝을 중지하려면 **튜닝 시간 제한** 을 사용합니다.  
   
  **고급 옵션**  
  **고급 튜닝 옵션** 대화 상자를 사용하여 최대 공간, 최대 키 열 수, 온라인 인덱스 등에 대한 권장 설정을 구성할 수 있습니다.  
@@ -518,6 +517,6 @@ database_name.owner_name.table_name
   
 ## <a name="see-also"></a>참고 항목  
  [데이터베이스 엔진 튜닝 관리자의 출력 보기 및 작업](../../relational-databases/performance/view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md)   
- [dta 유틸리티](../../tools/dta/dta-utility.md)  
-  
+ [dta 유틸리티](../../tools/dta/dta-utility.md)    
+ [자습서: 데이테베이스 엔진 튜닝 관리자](../../tools/dta/tutorial-database-engine-tuning-advisor.md)
   
