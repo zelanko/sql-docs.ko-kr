@@ -1,4 +1,5 @@
 ---
+description: 스파스 열
 title: 스파스 열 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 7d4237e0-818f-4639-9093-d5ac9683fc71
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6767ff420defc32bf91559e11878672012de626b
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 406f4fea8df9a3c410f126f5a766aeb2e1ad4bb8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80909585"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88396299"
 ---
 # <a name="sparse-columns"></a>스파스 열
 
@@ -35,7 +36,7 @@ ms.locfileid: "80909585"
 
 ## <a name="example"></a>예제
 
-### <a name="description"></a>Description
+### <a name="description"></a>설명
 
 이 예제에서는 열 집합을 검색하는 방법을 보여 줍니다. 또한 열 집합의 XML 출력을 구문 분석하여 스파스 열에서 데이터를 가져오는 방법도 보여 줍니다.
 
@@ -158,6 +159,6 @@ public class SparseColumns {
 
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [JDBC 드라이버로 성능 및 안정성 개선](../../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md)

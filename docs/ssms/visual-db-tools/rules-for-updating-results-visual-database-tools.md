@@ -1,4 +1,5 @@
 ---
+description: 결과 업데이트 규칙(Visual Database Tools)
 title: 결과 업데이트 규칙
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ ms.assetid: de131ef0-ccbd-446f-9400-b93c7b8fa537
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: b71d1e6324465df97a174134463f8d5759a2d06a
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: bbf2a7a3ca1d25a6556a6f31667d3f406cf055dc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86010705"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88397349"
 ---
 # <a name="rules-for-updating-results-visual-database-tools"></a>결과 업데이트 규칙(Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -1,4 +1,5 @@
 ---
+description: XML 데이터 지원
 title: XML 데이터 지원 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
@@ -8,14 +9,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 32b7217e-1f0c-473d-9a45-176daa81584e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 799b22cfac669846c606456f1911e27353a9ba9f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: da49d5c0468f19768eff720e7f03690bea954432
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "69027710"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88396279"
 ---
 # <a name="supporting-xml-data"></a>XML 데이터 지원
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "69027710"
   
 ## <a name="in-this-section"></a>섹션 내용  
   
-|항목|Description|  
+|항목|설명|  
 |-----------|-----------------|  
 |[SQLXML 인터페이스](../../connect/jdbc/sqlxml-interface.md)|SQLXML 인터페이스 및 해당 메서드에 대해 설명합니다.|  
 |[SQLXML을 사용한 프로그래밍](../../connect/jdbc/programming-with-sqlxml.md)|[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] API 메서드를 사용하여 **SQLXML** Java 데이터 유형이 있는 관계형 데이터베이스에 XML 데이터를 저장하고 검색하는 방법을 설명합니다. 또한 SQLXML 개체 유형에 대한 정보 및 SQLXML 개체 사용과 관련된 중요한 지침 및 제한 사항이 포함되어 있습니다.|  
