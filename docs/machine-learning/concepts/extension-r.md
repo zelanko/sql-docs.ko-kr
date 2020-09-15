@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e51e4121a7e941512a84e3acf577af0ff687f4d7
-ms.sourcegitcommit: d1535944bff3f2580070cc036ece30f1d43ee2ce
+ms.openlocfilehash: 02516b35a75c39c967b916d2e424362114008480
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86406276"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88173278"
 ---
 # <a name="r-language-extension-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services의 R 언어 확장
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 이 문서에서는 [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) 및 [SQL Server 2016 R Services](../r/sql-server-r-services.md)에서 외부 Python 스크립트를 실행하는 R 확장에 대해 설명합니다. 이 확장은 다음을 추가합니다.
 

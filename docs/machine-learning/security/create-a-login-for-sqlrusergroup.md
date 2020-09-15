@@ -8,15 +8,15 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f3d7bd23c2a6b218e56f4de57d5b281b34d0687d
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 8273250360c9e60aae8ac1ae19ccebf4d76d8598
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484639"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88180432"
 ---
 # <a name="create-a-login-for-sqlrusergroup"></a>SQLRUserGroup에 대한 로그인 만들기
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 스크립트의 [루프백 연결](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/create-a-login)이 [신뢰할 수 있는 연결](../concepts/security.md#sqlrusergroup)을 지정하고 코드를 포함하는 개체를 실행하는 데 사용되는 ID가 Windows 사용자 계정인 경우 [SQLRUserGroup](../../machine-learning/concepts/security.md#implied-authentication)에 대한 *SQL Server 로그인*을 만듭니다.
 

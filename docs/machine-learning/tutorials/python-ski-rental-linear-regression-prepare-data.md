@@ -10,15 +10,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 424d61e24e9cd1163854d86961a34770eee36260
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 07b2cf5a77199f64d89d8dd61f8ec89268d759c5
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730483"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88173412"
 ---
 # <a name="python-tutorial-prepare-data-to-train-a-linear-regression-model-with-sql-machine-learning"></a>Python 자습서: SQL 기계 학습을 사용하여 선형 회귀 모델을 학습시킬 데이터 준비
-[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 4부로 구성된 이 자습서 시리즈의 2부에서는 Python을 사용하여 데이터베이스의 데이터를 준비합니다. 이 시리즈의 뒷부분에서 이 데이터를 사용하여 SQL Server Machine Learning Services 또는 빅 데이터 클러스터에서 Python으로 선형 회귀 모델을 학습시키고 배포할 것입니다.

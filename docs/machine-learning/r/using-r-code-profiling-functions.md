@@ -8,15 +8,15 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 16a1ed8df29de58450f87118068e43646c46fd90
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: e65171fa0222c0c581f692bede727dc4366c9c53
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484644"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88180444"
 ---
 # <a name="use-r-code-profiling-functions-to-improve-performance"></a>R 코드 프로파일링 함수를 사용하여 성능 향상
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 SQL Server 리소스 및 도구를 사용하여 R 스크립트 실행을 모니터링할 뿐 아니라 다른 R 패키지에서 제공된 성능 도구를 사용하여 내부 함수 호출에 대한 추가 정보를 가져올 수 있습니다. 
 

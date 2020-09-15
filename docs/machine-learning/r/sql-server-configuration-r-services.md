@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 1bfd7de9d7ee576c726a6b4473937cc1d9a294ff
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f9d4d3eab9f8f6d1d19b107eaf3825e9488df382
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730900"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88180475"
 ---
 # <a name="sql-server-configuration-for-use-with-r"></a>R 사용을 위한 SQL Server 구성
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 이 문서는 두 가지 사례 연구를 기준으로 R 서비스를 위한 성능 최적화를 기술하는 시리즈의 두 번째 문서입니다.  이 문서에서는 SQL Server R Services 실행을 위해 사용되는 컴퓨터의 하드웨어 및 네트워크 구성에 대한 지침을 제공합니다. 또한 솔루션에 사용되는 SQL Server 인스턴스, 데이터베이스 또는 테이블을 구성하기 위한 방법에 대한 정보도 포함되어 있습니다. SQL Server에서 NUMA를 사용하면 하드웨어 및 데이터베이스 최적화 간의 경계가 흐려지기 때문에 세 번째 섹션에서는 CPU affinitization 및 리소스 거버넌스에 대해 자세히 설명합니다.
 

@@ -1,7 +1,7 @@
 ---
 title: SQL Server 설명서 탐색 팁
 description: SQL Server 기술 문서 탐색을 위한 팁과 트릭 - 허브 페이지, 목차, 헤더, 이동 경로 사용 방법 및 버전 필터 사용 방법 등을 설명합니다.
-ms.date: 10/15/2019
+ms.date: 08/12/2020
 ms.prod: sql
 ms.technology: release-landing
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: f85c97e36900d3c6f4372004819690a8ede49d22
-ms.sourcegitcommit: 903856818acc657e5c42faa16d1c770aeb4e1d1b
+ms.openlocfilehash: cd724e9caf8f104e366e34b7f64f6461681620b0
+ms.sourcegitcommit: bf5acef60627f77883249bcec4c502b0205300a4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83731603"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88200314"
 ---
-# <a name="sql-server-docs-navigation-guide"></a>SQL Server 설명서 탐색 가이드 
+# <a name="sql-server-docs-navigation-guide"></a>SQL Server 설명서 탐색 가이드
 
 이 항목에서는 SQL Server 기술 설명서 공간을 탐색하기 위한 몇 가지 팁과 요령을 제공합니다.  
 

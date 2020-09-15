@@ -8,15 +8,15 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 05531f1a64430acfb1b7fd52cacdb7542719cdd6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f8cf14b294c85f90b0e44375f751a84a50b30e04
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756435"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88180420"
 ---
 # <a name="firewall-configuration-for-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services에 대한 방화벽 구성
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 이 문서에는 Machine Learning Services를 사용할 때 관리자나 설계자가 염두에 두어야 하는 방화벽 구성 고려 사항이 나열되어 있습니다.
 

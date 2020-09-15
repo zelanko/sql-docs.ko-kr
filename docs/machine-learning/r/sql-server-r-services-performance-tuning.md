@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 991f9f0ddbe58e5591a89ff16bf8455d5a5cdca4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: cedb8cd13db6c8d27b987c60881093caa91af50a
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756472"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88180463"
 ---
 # <a name="performance-tuning-for-r-in-sql-server"></a>SQL Server의 R 성능 튜닝
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 이 문서는 다음 두 가지 사례 연구를 바탕으로 R Services 성능 최적화를 설명하는 4가지 문서 시리즈의 첫 번째 문서입니다.
 

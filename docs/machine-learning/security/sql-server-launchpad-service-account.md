@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 5ce304db442ab9e4c1fd283cb43eed83829710b1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 38b00fd3a5f300a4038c6c302c1311a2f135d97b
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772387"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88180408"
 ---
 # <a name="sql-server-launchpad-service-configuration"></a>SQL Server 실행 패드 서비스 구성
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)]는 전체 텍스트 인덱싱 및 쿼리 서비스에서 전체 텍스트 쿼리를 처리하기 위해 별도의 호스트를 시작하는 것과 비슷한 방식으로 외부 스크립트를 관리하고 실행하는 서비스입니다.
 

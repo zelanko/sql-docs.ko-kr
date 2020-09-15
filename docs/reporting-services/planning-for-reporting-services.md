@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4dde9d4d-e4fa-4bbe-91b0-0bcb0dc7dde7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 569daf4b395e40d9bcaf444aace9565cd9fd3822
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 8b384e62220d15c53ddd500adc8260cf6a1b9d8a
+ms.sourcegitcommit: bf8cf755896a8c964774a438f2bd461a2a648c22
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247522"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88216742"
 ---
 # <a name="planning-for-reporting-services"></a>Reporting Services에 대한 계획
   다음 항목을 통해 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]를 더 잘 이해할 수 있습니다. 사용자의 요구에 가장 적합한 방식으로 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 환경을 설치 및 구성하는 방법을 자세히 알아보십시오.  
@@ -24,7 +24,7 @@ ms.locfileid: "87247522"
   
  [보고서 디자인 및 보고서 배포 계획 | Reporting Services](https://msdn.microsoft.com/1c1e265e-52a2-4de3-96fd-ca4abae01c02)  
   
- [Microsoft Surface 디바이스 및 Apple iOS 디바이스에서 Reporting Services 보고서 보기](https://msdn.microsoft.com/library/2124bcf5-d60a-475f-a4ae-de6df44d2860)  
+ [Microsoft Surface 디바이스 및 Apple iOS 디바이스에서 Reporting Services 보고서 보기](https://docs.microsoft.com/sql/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs)  
   
  ![작은 파일 폴더 아이콘](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "작은 파일 폴더 아이콘") **Reporting Services 설정**  
  [Reporting Services 보고서 서버](../reporting-services/report-server-sharepoint/reporting-services-report-server.md)  

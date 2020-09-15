@@ -9,14 +9,15 @@ ms.topic: reference
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: cd1ab5402383681172ff111b7daf5fcea675beaa
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.openlocfilehash: a0eb128a4b1c299d8a2d939582312cdc22ae4d40
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81298213"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88180504"
 ---
 # <a name="extensibility-framework-api-for-sql-server"></a>SQL Server용 확장성 프레임워크 API
+[!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
 확장성 프레임워크를 사용하여 SQL Server용 프로그래밍 언어 확장을 작성할 수 있습니다. Microsoft SQL Server용 확장성 프레임워크 API는 언어 확장에서 SQL Server와 상호 작용하고 데이터를 교환하는 데 사용할 수 있는 API입니다.
 

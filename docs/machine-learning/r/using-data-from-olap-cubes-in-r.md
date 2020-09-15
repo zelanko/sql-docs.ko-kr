@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f27866a242cb03839a67a8f68478bc786222aa64
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 4ae9985ae7d203387eb268a50d97ee91849b33a8
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86968034"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88180450"
 ---
 # <a name="using-data-from-olap-cubes-in-r"></a>R에서 OLAP 큐브의 데이터 사용
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 **olapR** 패키지는 Machine Learning Server 및 SQL Server와 함께 사용하도록 Microsoft에서 제공하는 R 패키지로, MDX 쿼리를 실행하여 OLAP 큐브에서 데이터를 가져올 수 있습니다. 이 패키지를 사용하면 연결된 서버를 만들거나 일반 행 세트를 정리할 필요가 없으며, R에서 직접 OLAP 데이터를 가져올 수 있습니다.
 
