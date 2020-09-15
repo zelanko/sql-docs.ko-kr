@@ -1,4 +1,5 @@
 ---
+description: SQLServerNClob 멤버
 title: SQLServerNClob 멤버 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -8,14 +9,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: b063f191-175e-4430-aab7-d88907f4ebec
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 303742b8e7b7bf8221565e09cf23d2e18cdca8de
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 3e23a4a5e9a4cb2d2c2a7ecd93db8615e814652c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67970950"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88354459"
 ---
 # <a name="sqlservernclob-members"></a>SQLServerNClob 멤버
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -33,7 +34,7 @@ ms.locfileid: "67970950"
   
 ## <a name="methods"></a>메서드  
   
-|속성|Description|  
+|속성|설명|  
 |----------|-----------------|  
 |[free](../../../connect/jdbc/reference/free-method-sqlservernclob.md)|이 메서드는 **NCLOB** 개체 및 이 개체가 보유한 리소스를 해제합니다.|  
 |[getAsciiStream](../../../connect/jdbc/reference/getasciistream-method-sqlservernclob.md)|**java.sql.NClob** 개체에 의해 ASCII 스트림으로 지정된 **NCLOB** 값을 검색합니다.|  

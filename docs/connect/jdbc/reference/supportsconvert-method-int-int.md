@@ -1,4 +1,5 @@
 ---
+description: supportsConvert 메서드(int, int)
 title: supportsConvert 메서드(int, int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 54741cfd-32ac-46c5-8b09-fd60fd8833d7
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0aba88276e92db310a64a1f179d97205c3325dbb
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 90be1de4f43794df4b4f78d50f557ea87daf6d7b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80913135"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88354429"
 ---
 # <a name="supportsconvert-method-int-int"></a>supportsConvert 메서드(int, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +45,7 @@ public boolean supportsConvert(int fromType,
   
  변환할 대상 JDBC 형식입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
  지원되는 경우 **true**입니다. 그렇지 않으면 **false**입니다.  
   
 ## <a name="exceptions"></a>예외  

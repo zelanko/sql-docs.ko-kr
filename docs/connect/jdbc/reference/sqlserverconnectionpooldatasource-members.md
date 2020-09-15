@@ -1,4 +1,5 @@
 ---
+description: SQLServerConnectionPoolDataSource 멤버
 title: SQLServerConnectionPoolDataSource 멤버 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: dac0337e-8088-488c-a25a-801a2190f6ca
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e5f75ad27e2e6a346adc098f59f5c54144bafb4d
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: ede3a0d4d6fea9451258cb6add2cbc4e6ba9ee3b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922001"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88354879"
 ---
 # <a name="sqlserverconnectionpooldatasource-members"></a>SQLServerConnectionPoolDataSource 멤버
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -24,7 +25,7 @@ ms.locfileid: "80922001"
   
 ## <a name="constructors"></a>생성자  
   
-|속성|Description|  
+|속성|설명|  
 |----------|-----------------|  
 |[SQLServerConnectionPoolDataSource ()](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-constructor.md)|[SQLServerConnectionPoolDataSource](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md) 클래스의 새 인스턴스를 초기화합니다.|  
   

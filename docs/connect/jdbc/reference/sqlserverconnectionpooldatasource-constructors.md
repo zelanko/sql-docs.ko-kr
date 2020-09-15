@@ -1,4 +1,5 @@
 ---
+description: SQLServerConnectionPoolDataSource 생성자
 title: SQLServerConnectionPoolDataSource 생성자 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: f10d228a-9c63-4b68-abec-c10b26b258a1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: cb700bdd97f6c72a63bf748f3581badf066283d2
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: c778ccf5dbdafb279eea8663014c6f6a5bc591fe
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80921022"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88354719"
 ---
 # <a name="sqlserverconnectionpooldatasource-constructors"></a>SQLServerConnectionPoolDataSource 생성자
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

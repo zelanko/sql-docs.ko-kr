@@ -1,4 +1,5 @@
 ---
+description: setTransactionTimeout 메서드(SQLServerXAResource)
 title: setTransactionTimeout 메서드(SQLServerXAResource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 38bf4a1a-6ad3-437c-b9ed-8792ab6dde7e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d234c7a30553b44fa9ad13c992e3e49116b01505
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 21c1771f0911bb3bf0fa91c0f1356b82fad2348f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926446"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88354969"
 ---
 # <a name="settransactiontimeout-method-sqlserverxaresource"></a>setTransactionTimeout 메서드(SQLServerXAResource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +40,7 @@ public boolean setTransactionTimeout(int seconds)
   
  **int** 값입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
  제한 시간이 성공적으로 설정되었으면 **true**이고, 그렇지 않으면 **false**입니다.  
   
 ## <a name="exceptions"></a>예외  

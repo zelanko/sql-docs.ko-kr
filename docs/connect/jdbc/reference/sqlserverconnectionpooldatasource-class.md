@@ -1,4 +1,5 @@
 ---
+description: SQLServerConnectionPoolDataSource 클래스
 title: SQLServerConnectionPoolDataSource 클래스 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: b00e5a90-2af7-4d04-8ef8-256183777dcf
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0accd21f53a4ba1a86e4b7555be9d2ba9a087474
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 2faa9b4df512d9b37bbba581353938120b85cbb1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80921047"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88354789"
 ---
 # <a name="sqlserverconnectionpooldatasource-class"></a>SQLServerConnectionPoolDataSource 클래스
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -24,7 +25,7 @@ ms.locfileid: "80921047"
   
  **패키지:** com.microsoft.sqlserver.jdbc  
   
- **확장:** [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
+ **Extends:** [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   
  **구현:** javax.sql.ConnectionPoolDataSource  
   
