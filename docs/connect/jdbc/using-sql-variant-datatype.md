@@ -1,4 +1,5 @@
 ---
+description: Sql_variant 데이터 형식 사용
 title: sql_variant 데이터 형식 사용 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ''
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 081e7d5a4c2c2b2620422e53c91c1e54abd272fa
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: bf29942e5d427a4a4852a6d1a856d81765690050
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80923986"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88414529"
 ---
 # <a name="using-sql_variant-data-type"></a>Sql_variant 데이터 형식 사용
 

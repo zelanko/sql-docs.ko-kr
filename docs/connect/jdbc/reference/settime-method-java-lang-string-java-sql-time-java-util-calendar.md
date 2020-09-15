@@ -1,4 +1,5 @@
 ---
+description: setTime 메서드(java.lang.String, java.sql.Time, java.util.Calendar)
 title: 시간 및 일정 값에 대한 setTime 메서드 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: ca08fea8-ee1a-49e4-a973-2923d325df79
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3f3cb2e75e65d997c5162d93827263b33483ac77
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: f3b14b5c914b54145c13fd57026e1f9568609110
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926543"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88431605"
 ---
 # <a name="settime-method-javalangstring-javasqltime-javautilcalendar"></a>setTime 메서드(java.lang.String, java.sql.Time, java.util.Calendar)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

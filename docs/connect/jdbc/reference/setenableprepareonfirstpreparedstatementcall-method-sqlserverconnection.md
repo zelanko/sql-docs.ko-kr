@@ -1,4 +1,5 @@
 ---
+description: setEnablePrepareOnFirstPreparedStatementCall 메서드(SQLServerConnection)
 title: setEnablePrepareOnFirstPreparedStatementCall 메서드(SQLServerConnection) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2018
@@ -15,17 +16,17 @@ apitype: Assembly
 ms.assetid: ''
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: bf48b4d280e9205a72025a346495f83aca68a064
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 7b631c70f7b146f16b2daf41333316376c2b409a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922396"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88431925"
 ---
 # <a name="setenableprepareonfirstpreparedstatementcall-method-sqlserverconnection"></a>setEnablePrepareOnFirstPreparedStatementCall 메서드(SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
- 특정 연결 인스턴스에 동작을 지정합니다. 값이 false일 경우에는 첫 번째 실행에서 sp_executesql이 호출되고 문은 준비되지 않습니다. 두 번째 실행에서는 sp_prepexec가 호출되고 준비된 문 핸들이 실제로 설정됩니다. 다음 실행에서는 sp_execute를 호출합니다. 이렇게 하면 문이 한 번만 실행될 때 준비된 문 닫기에서 sp_unprepare를 사용할 필요가 없습니다.
+ 특정 연결 인스턴스에 대한 동작을 지정합니다. 값이 false일 경우에는 첫 번째 실행에서 sp_executesql이 호출되고 문은 준비되지 않습니다. 두 번째 실행에서는 sp_prepexec가 호출되고 준비된 문 핸들이 실제로 설정됩니다. 다음 실행에서는 sp_execute를 호출합니다. 이렇게 하면 문이 한 번만 실행될 때 준비된 문 닫기에서 sp_unprepare를 사용할 필요가 없습니다.
 
 ## <a name="syntax"></a>구문  
   

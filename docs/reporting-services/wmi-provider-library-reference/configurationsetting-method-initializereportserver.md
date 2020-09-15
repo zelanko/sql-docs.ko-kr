@@ -1,4 +1,5 @@
 ---
+description: InitializeReportServer 메서드(WMI MSReportServer_ConfigurationSetting)
 title: InitializeReportServer 메서드(WMI MSReportServer_ConfigurationSetting) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0304acc2-1fd7-437b-94d9-1c1073dd3ca4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e5612bc9326a359a287501aedc5227436cc576eb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e38c90a85039fe8f4da6098faff4c8224de64ef1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570862"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423187"
 ---
 # <a name="configurationsetting-method---initializereportserver"></a>ConfigurationSetting 메서드 - InitializeReportServer
   지정된 보고서 서비스 인스턴스를 초기화합니다.  

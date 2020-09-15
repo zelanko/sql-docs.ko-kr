@@ -1,4 +1,5 @@
 ---
+description: updateNCharacterStream 메서드(java.lang.String, java.io.Reader, long)
 title: updateNCharacterStream 메서드 문자열 - Reader - long) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: db0a96a8-248f-4664-9c13-f480f309ab91
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0582672a9203e8efbae1de9767ff4c24a10919f9
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 9619cbfa343af4dee48a459a9a69981e3ea7511f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928344"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88431305"
 ---
 # <a name="updatencharacterstream-method-javalangstring-javaioreader-long"></a>updateNCharacterStream 메서드(java.lang.String, java.io.Reader, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

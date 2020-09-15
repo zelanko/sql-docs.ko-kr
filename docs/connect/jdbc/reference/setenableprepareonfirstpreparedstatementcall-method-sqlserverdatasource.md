@@ -1,4 +1,5 @@
 ---
+description: setEnablePrepareOnFirstPreparedStatementCall 메서드(SQLServerDataSource)
 title: setEnablePrepareOnFirstPreparedStatementCall 메서드(SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2018
@@ -10,17 +11,17 @@ ms.topic: conceptual
 ms.assetid: ''
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e4b63853122b14c3d967cb5dbdea3c3a91cf9a19
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 838696d89354d857c86aae0f6191d1dd08fba820
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922375"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88431915"
 ---
 # <a name="setenableprepareonfirstpreparedstatementcall-method-sqlserverdatasource"></a>setEnablePrepareOnFirstPreparedStatementCall 메서드(SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  특정 연결 인스턴스에 동작을 지정합니다. 이 구성이 false인 경우, 준비된 문의 첫 번째 실행은 sp_executesql을 호출하고 문을 준비하지 않습니다. 두 번째 실행이 발생하면 sp_prepexec를 호출하고 실제로 준비된 문 핸들을 설정합니다. 다음 실행에서는 sp_execute를 호출합니다. 이렇게 하면 문이 한 번만 실행될 때 준비된 문 닫기에서 sp_unprepare를 사용할 필요가 없습니다.  
+  특정 연결 인스턴스에 대한 동작을 지정합니다. 이 구성이 false인 경우, 준비된 문의 첫 번째 실행은 sp_executesql을 호출하고 문을 준비하지 않습니다. 두 번째 실행이 발생하면 sp_prepexec를 호출하고 실제로 준비된 문 핸들을 설정합니다. 다음 실행에서는 sp_execute를 호출합니다. 이렇게 하면 문이 한 번만 실행될 때 준비된 문 닫기에서 sp_unprepare를 사용할 필요가 없습니다.  
 ## <a name="syntax"></a>구문  
   
 ```

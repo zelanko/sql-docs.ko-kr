@@ -1,4 +1,5 @@
 ---
+description: 쿼리 및 뷰 디자이너에서 탐색(Visual Database Tools)
 title: 쿼리 및 뷰 디자이너에서 탐색
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ ms.assetid: 1c65acef-6dfa-463a-bf37-5a5335fe3865
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 57141f45ed985932d365bffb9479e085ba59e9bf
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: ff0153da9b3905fb57d0e1359ff71aaaeef663df
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85996776"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423077"
 ---
 # <a name="navigate-in-the-query-and-view-designer-visual-database-tools"></a>쿼리 및 뷰 디자이너에서 탐색(Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -28,7 +29,7 @@ ms.locfileid: "85996776"
   
 ## <a name="any-pane"></a>모든 창  
   
-|**수행할 작업**|**작업 방법**|**클릭 대상**|  
+|**수행할 작업**|**작업 방법**|**클릭**|  
 |----------|-------------|-------------|  
 |쿼리 및 뷰 디자이너 창 사이를 이동|F6 , Shift+F6|대상 창 내부의 임의 위치|  
   
@@ -37,7 +38,7 @@ ms.locfileid: "85996776"
   
 ## <a name="diagram-pane"></a>다이어그램 창  
   
-|**수행할 작업**|**작업 방법**|**클릭 대상**|  
+|**수행할 작업**|**작업 방법**|**클릭**|  
 |----------|-------------|-------------|  
 |테이블, 기타 테이블 구조 개체 및 조인 선(가능한 경우) 사이를 이동|Tab 키 또는 Shift+Tab|이동할 대상 테이블, 테이블 구조 개체 또는 조인 선|  
 |테이블 또는 테이블 구조 개체의 열 사이를 이동|화살표 키|이동할 대상 열|  
@@ -52,7 +53,7 @@ ms.locfileid: "85996776"
   
 ## <a name="criteria-pane"></a>조건 창  
   
-|수행할 작업|작업 방법|그런 다음|  
+|대상|작업 방법|클릭|  
 |------|---------|---------|  
 |셀 사이를 이동|화살표 키, Tab 키 또는 Shift+Tab|대상 셀|  
 |선택한 열의 마지막 행으로 이동|Ctrl+아래쪽 화살표||  
@@ -62,9 +63,9 @@ ms.locfileid: "85996776"
 |드롭다운 목록에서 이동|위쪽 화살표 또는 아래쪽 화살표|해당 셀의 단추|  
 |표 형태 창의 전체 열 선택|Ctrl+스페이스바|열 머리글입니다.|  
 |편집 모드와 셀 선택 모드 사이를 전환|F2||  
-|셀에서 선택한 텍스트를 클립보드에 복사(편집 모드에서)|CTRL+C||  
+|셀에서 선택한 텍스트를 클립보드에 복사(편집 모드에서)|Ctrl+C||  
 |셀에서 선택한 텍스트를 잘라내어 클립보드에 붙여넣기(편집 모드에서)|Ctrl+X||  
-|클립보드의 텍스트를 붙여넣기(편집 모드에서)|CTRL+V||  
+|클립보드의 텍스트를 붙여넣기(편집 모드에서)|Ctrl+V||  
 |셀 편집 중에 삽입 모드와 겹쳐쓰기 모드 사이를 전환|Ins||  
 |출력 열에서 확인란 선택/선택 취소|스페이스바|확인란|  
 |셀의 선택 내용 지우기|Delete||  
@@ -87,7 +88,7 @@ SQL 창에서 작업하는 경우 Ctrl+화살표 키 같은 표준 Windows 편�
   
 ## <a name="results-pane"></a>결과 창  
   
-|**수행할 작업**|**작업 방법**|**클릭 대상**|  
+|**수행할 작업**|**작업 방법**|**클릭**|  
 |----------|-------------|-------------|  
 |셀 사이를 이동|화살표 키, Tab 키 또는 Shift+Tab|대상 셀|  
 |현재 행의 첫째 셀 또는 마지막 셀로 이동|Home 키 또는 End 키||  
@@ -102,10 +103,10 @@ SQL 창에서 작업하는 경우 Ctrl+화살표 키 같은 표준 Windows 편�
 |현재 셀에 대한 변경 취소|변경된 셀에서 Esc 키||  
 |현재 행에 대한 변경 취소|변경되지 않은 셀에서 Esc 키||  
 |셀에 null 값 입력|Ctrl+0||  
-|선택한 열 또는 행을 클립보드에 복사|CTRL+C||  
-|셀에서 선택한 텍스트를 클립보드에 복사(편집 모드에서)|CTRL+C||  
+|선택한 열 또는 행을 클립보드에 복사|Ctrl+C||  
+|셀에서 선택한 텍스트를 클립보드에 복사(편집 모드에서)|Ctrl+C||  
 |셀에서 선택한 텍스트를 잘라내어 클립보드에 붙여넣기(편집 모드에서)|Ctrl+X||  
-|클립보드의 텍스트를 붙여넣기(편집 모드에서)|CTRL+V||  
+|클립보드의 텍스트를 붙여넣기(편집 모드에서)|Ctrl+V||  
   
 > [!NOTE]  
 > 여러 항목을 선택한 경우 이 키를 누르면 선택한 모든 항목에 영향을 줍니다.  

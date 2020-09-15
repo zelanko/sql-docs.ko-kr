@@ -1,4 +1,5 @@
 ---
+description: 이미 존재하는 개체
 title: 이미 존재하는 개체
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ ms.assetid: f80735dd-06aa-4d69-b226-32dc57e3223f
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 8927f5b9caaf96c4fa3172aa56144006436f89cc
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: fe865e4caa85ac9b9c6ad3c3d224fef644b68ea0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85996567"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423057"
 ---
 # <a name="object-already-exists"></a>이미 존재하는 개체
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -1,4 +1,5 @@
 ---
+description: sqlsrv_configure
 title: sqlsrv_configure | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9393f975-a4ef-4c50-b4dd-14892fc55cc9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 17c0024e75dacc56b2f5a10d26a899256dbad7fc
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: c99aff2e8453a2c2d16db34894935d5b1f7e5ff5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80902789"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88413869"
 ---
 # <a name="sqlsrv_configure"></a>sqlsrv_configure
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -40,14 +41,14 @@ sqlsrv_configure( string $setting, mixed $value )
   
 *$value*: *$setting* 매개 변수에 지정된 설정에 적용할 값입니다. 이 매개 변수의 가능한 값은 지정된 설정에 따라 달라집니다. 다음 표에서는 가능한 조합을 나열합니다.  
   
-|설정|$value 매개 변수의 가능한 값(괄호 안의 정수)|기본값|  
+|Setting|$value 매개 변수의 가능한 값(괄호 안의 정수)|기본값|  
 |-----------|------------------------------------------------------------------------------|-----------------|  
 |ClientBufferMaxKBSize<sup>1</sup>|최대 PHP 메모리 제한의 음수가 아닌 숫자<br /><br />0과 음수는 허용되지 않습니다.|10240KB|  
 |LogSeverity<sup>2</sup>|SQLSRV_LOG_SEVERITY_ALL(-1)<br /><br />SQLSRV_LOG_SEVERITY_ERROR(1)<br /><br />SQLSRV_LOG_SEVERITY_NOTICE(4)<br /><br />SQLSRV_LOG_SEVERITY_WARNING(2)|SQLSRV_LOG_SEVERITY_ERROR(1)|  
 |LogSubsystems<sup>2</sup>|SQLSRV_LOG_SYSTEM_ALL(-1)<br /><br />SQLSRV_LOG_SYSTEM_CONN(2)<br /><br />SQLSRV_LOG_SYSTEM_INIT(1)<br /><br />SQLSRV_LOG_SYSTEM_OFF(0)<br /><br />SQLSRV_LOG_SYSTEM_STMT(4)<br /><br />SQLSRV_LOG_SYSTEM_UTIL(8)|SQLSRV_LOG_SYSTEM_OFF(0)|  
 |WarningsReturnAsErrors<sup>3</sup>|**true**(1) 또는 **false**(0)|**true**(1)|  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
 **sqlsrv_configure**가 지원되지 않는 설정 또는 값을 사용하여 호출된 경우 함수가 **false**를 반환합니다. 그렇지 않으면 함수에서 **true**를 반환합니다.  
   
 ## <a name="remarks"></a>설명  
@@ -55,7 +56,7 @@ sqlsrv_configure( string $setting, mixed $value )
   
 (2) 작업 로깅에 대한 자세한 내용은 [작업 로깅](../../connect/php/logging-activity.md)을 참조하세요.  
   
-(3) 오류 및 경고 처리 구성에 대한 자세한 내용은 [방법: SQLSRV 드라이버를 사용하여 오류 및 경고 처리 구성](../../connect/php/how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver.md)을 참조하세요.  
+(3) 오류 및 경고 처리를 구성하는 방법에 대한 자세한 내용은 [방법: SQLSRV 드라이버를 사용하여 오류 및 경고 처리 구성](../../connect/php/how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
 [SQLSRV 드라이버 API 참조](../../connect/php/sqlsrv-driver-api-reference.md)

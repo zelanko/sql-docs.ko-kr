@@ -1,4 +1,5 @@
 ---
+description: setDateTimeOffset 메서드(SQLServerPreparedStatement)
 title: setDateTimeOffset 메서드(SQLServerPreparedStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 5014dba9-1755-4769-b070-6cbeecee864e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0049865a188677e38f5385187e7e5fd171a5dd61
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: c6a4ee90653703ef761962ca4772d883e89181af
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922412"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88432055"
 ---
 # <a name="setdatetimeoffset-method-sqlserverpreparedstatement"></a>setDateTimeOffset 메서드(SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

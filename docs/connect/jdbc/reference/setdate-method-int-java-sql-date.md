@@ -1,4 +1,5 @@
 ---
+description: setDate 메서드(int, java.sql.Date)
 title: 날짜 값에 대한 setDate 메서드 - int | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 12e5a4cc-45a2-4779-bbfc-e4da66829588
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 449afccc298437aa289c1a4d5bd4d9c847f8e225
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 1dc6bcc78636881dd88032bca38beaa2c9483ea5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926679"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88432045"
 ---
 # <a name="setdate-method-int-javasqldate"></a>setDate 메서드(int, java.sql.Date)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

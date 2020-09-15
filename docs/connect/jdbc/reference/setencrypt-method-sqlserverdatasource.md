@@ -1,4 +1,5 @@
 ---
+description: setEncrypt 메서드(SQLServerDataSource)
 title: setEncrypt 메서드(SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 0c85a9c1-f27c-457e-8461-403cc03e2d17
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: da0aa987f1ec773e2f61e738bc4045136c64859a
-ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
+ms.openlocfilehash: e7da98aa70be2066c370b75e2bc213c25ba16e03
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81219242"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88431975"
 ---
 # <a name="setencrypt-method-sqlserverdatasource"></a>setEncrypt 메서드(SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -48,7 +49,7 @@ public void setEncypt(boolean encrypt)
   
 -   보다 작은 RSA 공개 키를 사용하는 서버 인증서로 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 구성  
   
--   "\<java-home>/lib/security/java.security" 보안 속성 파일에서 다른 JSSE 보안 공급자를 사용하도록 JVM 구성  
+-   “\<java-home>/lib/security/java.security” 보안 속성 파일에서 다른 JSSE 보안 공급자를 사용하도록 JVM 구성  
   
 -   다른 JVM을 사용합니다.  
   

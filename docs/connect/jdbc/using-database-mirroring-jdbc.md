@@ -1,4 +1,5 @@
 ---
+description: 데이터베이스 미러링(JDBC) 사용
 title: 데이터베이스 미러링 사용(JDBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 4ff59218-0d3b-4274-b647-9839c4955865
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9eaec8e30d96e2b4360b42eeafc21ae2e405a72b
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: c9ed129792b32c403c9a3f7dcd6c31254cbdcad4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924051"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88414769"
 ---
 # <a name="using-database-mirroring-jdbc"></a>데이터베이스 미러링(JDBC) 사용
 

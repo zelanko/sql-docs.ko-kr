@@ -1,4 +1,5 @@
 ---
+description: 역할 할당
 title: 역할 할당 | Microsoft Docs
 ms.date: 05/07/2017
 ms.prod: reporting-services
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 600e112c-1897-48a6-93c0-6e9f3f12dc01
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a6fe3c0cd82d8ee8b92948d76d4f7cdb5fa4cf73
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9db55abd24cac0fa4cc6aacab03f0b1f68969d39
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570564"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423257"
 ---
 # <a name="role-assignments"></a>역할 할당
 

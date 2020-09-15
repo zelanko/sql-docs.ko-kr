@@ -1,4 +1,5 @@
 ---
+description: setCharacterStream 메서드(SQLServerClob)
 title: setCharacterStream 메서드(SQLServerClob) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: c02778f2-6681-4a84-a58b-2bcfac4233e4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4b4edd69c4712c1842163bcb48797edc154cc5cf
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: f79891e2a2492a225896495651f8f0746353e6a5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80929030"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88432235"
 ---
 # <a name="setcharacterstream-method-sqlserverclob"></a>setCharacterStream 메서드(SQLServerClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +40,7 @@ public java.io.Writer setCharacterStream(long pos)
   
  CLOB 개체에 쓰기 시작할 위치입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
  유니코드 인코딩 문자를 쓸 수 있는 스트림입니다.  
   
 ## <a name="exceptions"></a>예외  

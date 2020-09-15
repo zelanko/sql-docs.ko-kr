@@ -1,4 +1,5 @@
 ---
+description: 역할 만들기, 삭제 또는 수정(Management Studio)
 title: 역할 만들기, 삭제 또는 수정(Management Studio) | Microsoft Docs
 ms.date: 05/07/2019
 ms.prod: reporting-services
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3d1d56e6-a283-44a7-8417-36cb4d2c74d1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f079b7b16f485b92c60952d082281a1dba52d024
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a238f4421c86edea0d03ab52c1b739520f646222
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570551"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423237"
 ---
 # <a name="role-definitions---create-delete-or-modify"></a>역할 정의 - 만들기, 삭제 또는 수정
 
@@ -72,8 +73,8 @@ Reporting Services에서는 보고서 서버에 대한 액세스 수준을 정�
 
 - 시스템 역할 정의를 수정하려면 항목을 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다. **시스템 역할 속성** 대화 상자의 일반 페이지가 표시됩니다. 이 역할의 구성원이 수행할 수 있는 태스크를 선택하고 **확인**을 선택하여 변경 내용을 적용합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
  [Management Studio에서 보고서 서버에 연결](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)  
- [역할 할당 만들기 및 관리](../../reporting-services/security/create-and-manage-role-assignments.md)  
+ [역할 할당 생성 및 관리](../../reporting-services/security/create-and-manage-role-assignments.md)  
  [SQL Server Management Studio의 Reporting Services&#40;SSRS&#41;](../../reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs.md)

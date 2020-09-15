@@ -1,4 +1,5 @@
 ---
+description: sqlsrv_get_field
 title: sqlsrv_get_field | Microsoft Docs
 ms.custom: ''
 ms.date: 06/26/2018
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: fa17cc56-fb38-433b-a40d-65642f04dc23
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9770d24fc810860088f853a2effaadd8d125ab22
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 6b5fa8e85d6dc1af26c543c9c31cafa621b10bcd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922744"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426255"
 ---
 # <a name="sqlsrv_get_field"></a>sqlsrv_get_field
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -40,10 +41,10 @@ sqlsrv_get_field( resource $stmt, int $fieldIndex [, int $getAsType])
   
 *$fieldIndex*: 검색할 필드의 인덱스입니다. 인덱스는 0부터 시작합니다.  
   
-*$getAsType*[선택 사항]: 반환된 데이터에 대해 PHP 데이터 형식을 결정하는 **SQLSRV** 상수(**SQLSRV_PHPTYPE_&#x2a;** )입니다. 지원되는 데이터 형식에 대한 자세한 내용은 [상수&#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)를 참조하세요. 반환 형식이 지정되지 않은 경우 기본 PHP 형식이 반환됩니다. 기본 PHP 형식에 대한 자세한 내용은 [Default PHP Data Types](../../connect/php/default-php-data-types.md)을 참조하세요. PHP 데이터 형식을 지정하는 방법에 대한 자세한 내용은 [방법: PHP 데이터 형식 지정](../../connect/php/how-to-specify-php-data-types.md)을 참조하세요.  
+*$getAsType* [선택 사항]: 반환된 데이터에 대해 PHP 데이터 형식을 결정하는 **SQLSRV** 상수(**SQLSRV_PHPTYPE_&#x2a;**)입니다. 지원되는 데이터 형식에 대한 자세한 내용은 [상수&#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)를 참조하세요. 반환 형식이 지정되지 않은 경우 기본 PHP 형식이 반환됩니다. 기본 PHP 형식에 대한 자세한 내용은 [Default PHP Data Types](../../connect/php/default-php-data-types.md)을 참조하세요. PHP 데이터 형식을 지정하는 방법에 대한 자세한 내용은 [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md)을 참조하세요.  
   
-## <a name="return-value"></a>Return Value  
-필드 데이터입니다. *$getAsType* 매개 변수를 사용하여 반환된 데이터의 PHP 데이터 형식을 지정할 수 있습니다. 반환 데이터 형식이 지정되지 않은 경우 기본 PHP 데이터 형식이 반환됩니다. 기본 PHP 형식에 대한 자세한 내용은 [Default PHP Data Types](../../connect/php/default-php-data-types.md)을 참조하세요. PHP 데이터 형식을 지정하는 방법에 대한 자세한 내용은 [방법: PHP 데이터 형식 지정](../../connect/php/how-to-specify-php-data-types.md)을 참조하세요.  
+## <a name="return-value"></a>반환 값  
+필드 데이터입니다. *$getAsType* 매개 변수를 사용하여 반환된 데이터의 PHP 데이터 형식을 지정할 수 있습니다. 반환 데이터 형식이 지정되지 않은 경우 기본 PHP 데이터 형식이 반환됩니다. 기본 PHP 형식에 대한 자세한 내용은 [Default PHP Data Types](../../connect/php/default-php-data-types.md)을 참조하세요. PHP 데이터 형식을 지정하는 방법에 대한 자세한 내용은 [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md)을 참조하세요.  
   
 ## <a name="remarks"></a>설명  
 **sqlsrv_fetch** 및 **sqlsrv_get_field**의 조합은 데이터에 대한 정방향 전용 액세스를 제공합니다.  

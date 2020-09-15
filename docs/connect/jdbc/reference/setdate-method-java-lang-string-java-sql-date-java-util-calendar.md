@@ -1,4 +1,5 @@
 ---
+description: setDate 메서드(java.lang.String, java.sql.Date, java.util.Calendar)
 title: 날짜 및 일정에 대한 setDate 메서드 - string | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: fd152ad6-dd5e-49ef-b166-917371a2cba6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 42562914e8c99debbc9423c8a5d63cd921779c4a
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 1ecb8736217a1d0396838917edeccc0e1d563e7d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926664"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88432035"
 ---
 # <a name="setdate-method-javalangstring-javasqldate-javautilcalendar"></a>setDate 메서드(java.lang.String, java.sql.Date, java.util.Calendar)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

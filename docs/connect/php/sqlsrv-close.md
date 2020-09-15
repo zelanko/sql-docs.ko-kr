@@ -1,4 +1,5 @@
 ---
+description: sqlsrv_close
 title: sqlsrv_close | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,14 +15,14 @@ helpviewer_keywords:
 - sqlsrv_close
 - API Reference, sqlsrv_close
 ms.assetid: 6ac6209c-a134-4f8f-b88b-8eefaa1cbc7f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6b4610cfd971c7de8f729902bc09237b47e19dad
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 0ef31416d2ac40677e5907c96290ec8e32845862
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67935817"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88414179"
 ---
 # <a name="sqlsrv_close"></a>sqlsrv_close
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -38,7 +39,7 @@ sqlsrv_close( resource $conn )
 #### <a name="parameters"></a>매개 변수  
 *$conn*: 닫히는 연결입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
 잘못된 매개 변수를 사용하여 함수를 호출하지 않는 한 부울 값 **true** 입니다. 잘못된 매개 변수를 사용하여 함수를 호출하는 경우에는 **false** 가 반환됩니다.  
   
 > [!NOTE]  

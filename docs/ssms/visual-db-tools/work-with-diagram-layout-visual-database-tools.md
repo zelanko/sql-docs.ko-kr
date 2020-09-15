@@ -1,4 +1,5 @@
 ---
+description: 다이어그램 레이아웃 작업(Visual Database Tools)
 title: 다이어그램 레이아웃 작업
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ ms.assetid: 59ff07bd-a147-47e1-969f-3b260a9e2763
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 33f980cc239c10d115bd3b41130bdc728a3991e1
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: e970c3deff46a6e4b28a806ed07fc05e384074d6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002572"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422977"
 ---
 # <a name="work-with-diagram-layout-visual-database-tools"></a>다이어그램 레이아웃 작업(Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,8 +37,8 @@ ms.locfileid: "86002572"
   
 [다이어그램의 글꼴 색, 크기 및 스타일 변경&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/change-the-font-color-size-and-style-in-diagrams-visual-database-tools.md)  
   
-## <a name="reference"></a>참조  
+## <a name="reference"></a>참고  
   
-## <a name="related-sections"></a>관련 섹션  
+## <a name="related-sections"></a>관련 단원  
 [데이터베이스 다이어그램 작업&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
   

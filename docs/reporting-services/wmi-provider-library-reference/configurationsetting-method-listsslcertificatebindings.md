@@ -1,4 +1,5 @@
 ---
+description: ListSSLCertificateBindings 메서드(WMI MSReportServer_ConfigurationSetting)
 title: ListSSLCertificateBindings 메서드(WMI MSReportServer_ConfigurationSetting) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: d12d280c-9b6f-47a8-bcd9-34cde31c8886
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9fccf663b91dfba2c7b68da1c882c6c6f701e42f
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: bdd6cc584b43ee72c43eec7abc1ad50398f1b2eb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81636191"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423177"
 ---
 # <a name="configurationsetting-method---listsslcertificatebindings"></a>ConfigurationSetting 메서드 - ListSSLCertificateBindings
   컴퓨터에 설치된 TLS/SSL 인증서 목록을 반환합니다.  

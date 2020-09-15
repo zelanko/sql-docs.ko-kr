@@ -1,4 +1,5 @@
 ---
+description: SQL 주석 대화 상자(Visual Database Tools)
 title: SQL 주석 대화 상자
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ ms.assetid: a384b583-cec5-4f86-8353-954c989dd94d
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: feba67237f1b531fded85c8738d28a920bc54bd7
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 36cdde42470c97d67ac98a37b7592620ed697dce
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999215"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417749"
 ---
 # <a name="sql-comment-dialog-box-visual-database-tools"></a>SQL 주석 대화 상자(Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

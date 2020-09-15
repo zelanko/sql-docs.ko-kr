@@ -1,4 +1,5 @@
 ---
+description: sqlsrv_has_rows
 title: sqlsrv_has_rows | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4da7f640-cf12-409f-9e00-95b30a8d5e17
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f264a77b3fc96a4544b086f1b5b7cbe564b9487f
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 9b1964568848aaab67483dc019ee73b3d5ed552e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928210"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426245"
 ---
 # <a name="sqlsrv_has_rows"></a>sqlsrv_has_rows
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -35,7 +36,7 @@ sqlsrv_has_rows( resource $stmt )
 #### <a name="parameters"></a>매개 변수  
 *$stmt*: 실행된 문입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
 결과 집합에 행이 있는 경우 반환 값은 **true**입니다. 행이 없거나 함수 호출이 실패하는 경우 반환 값은 **false**입니다.  
   
 ## <a name="example"></a>예제  

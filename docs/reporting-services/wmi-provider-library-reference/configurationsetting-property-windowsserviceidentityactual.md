@@ -1,4 +1,5 @@
 ---
+description: ConfigurationSetting 속성 - WindowsServiceIdentityActual
 title: ConfigurationSetting 속성 - WindowsServiceIdentityActual | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 08289240-098d-4ad1-b165-227699747ba4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9a5cedf8b4a64007147c39d69913c51f1fb2d0c7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2425d8ebbc3e98801d3e77a1221ff47b37c4b2a3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65569155"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423067"
 ---
 # <a name="configurationsetting-property---windowsserviceidentityactual"></a>ConfigurationSetting 속성 - WindowsServiceIdentityActual
   보고서 서버의 Windows 서비스가 실행되고 있는 ID입니다. 읽기 전용입니다.  

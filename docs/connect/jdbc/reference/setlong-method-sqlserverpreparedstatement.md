@@ -1,4 +1,5 @@
 ---
+description: setLong 메서드(SQLServerPreparedStatement)
 title: setLong 메서드(SQLServerPreparedStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 08223a62-6489-44e4-85e8-b45bfbb11cfc
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 347f0eb1d35c2a9662fa4384d6f6bab46bae5003
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: eb3bff2cb201a8a6db22341c01d53037a8aebb77
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80925722"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88431705"
 ---
 # <a name="setlong-method-sqlserverpreparedstatement"></a>setLong 메서드(SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -1,4 +1,5 @@
 ---
+description: SQL Server Management Studio의 사용자 지원
 title: SQL Server Management Studio의 사용자 지원
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3c33a474-e507-4712-86fe-ae40e8370319
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b6fe67dc138f9c3661732f1c1cbbf5038d9013f1
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 26b2ecf32bb6c7a683f0321f342258b44ff4d214
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009341"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417839"
 ---
 # <a name="user-assistance-in-sql-server-management-studio"></a>SQL Server Management Studio의 사용자 지원
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -27,7 +28,7 @@ ms.locfileid: "86009341"
 ## <a name="the-help-interface"></a>도움말 인터페이스  
 **목차** 및 **인덱스** 는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 사용자에게 익숙한 기능과 인터페이스를 제공하지만, 다른 옵션은 다음과 같습니다.  
   
--   **어떻게 할까요?**  
+-   **작업 절차**  
   
     일반적인 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 태스크와 연관된 유용한 항목이 포함된 링크 페이지의 계층적 목록을 제공합니다. 내용은 구성 요소 및 태스크(예: 복제 항목)별로 구성됩니다.  
   
@@ -48,7 +49,7 @@ ms.locfileid: "86009341"
 도움말에 대한 도움말([!INCLUDE[msCoName](../includes/msconame_md.md)] Document Explorer 도움말)은 도움말 뷰어에 대한 설명서를 볼 수 있는 링크를 제공하지만 항목은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 온라인 설명서와 별개의 컬렉션에 있습니다. 도움말 뷰어에 대한 자세한 내용을 보려면 **온라인 설명서의 도움말 메뉴에서** 도움말에 대한 도움말 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 을 선택합니다.  
   
 ## <a name="msdn-online-and-sql-server-communities"></a>MSDN 온라인 및 SQL Server 커뮤니티  
-[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 의 도움말을 사용하면 정보를 얻기 위해 웹상의 MSDN 온라인 및 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]관련 커뮤니티에 연결할 수도 있습니다. 다음을 수행할 수 있습니다.  
+[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 의 도움말을 사용하면 정보를 얻기 위해 웹상의 MSDN 온라인 및 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]관련 커뮤니티에 연결할 수도 있습니다. 다음과 같습니다.  
   
 -   어떻게 할까요? 페이지에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 커뮤니티에 액세스합니다.  
   
@@ -79,7 +80,7 @@ ms.locfileid: "86009341"
   
 #### <a name="to-search-msdn-online-and-sql-server-focused-communities-from-the-search-page"></a>검색 페이지에서 MSDN 온라인 및 SQL Server 관련 커뮤니티를 검색하려면  
   
-1.  **도움말** 메뉴에서 **검색**을 클릭합니다.  
+1.  **도움말** 메뉴에서 **Search**를 클릭합니다.  
   
 2.  **검색 대상** 입력란에 검색어를 입력한 다음 **검색**을 클릭합니다.  
   

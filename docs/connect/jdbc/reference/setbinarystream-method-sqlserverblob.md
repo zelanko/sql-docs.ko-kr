@@ -1,4 +1,5 @@
 ---
+description: setBinaryStream 메서드(SQLServerBlob)
 title: setBinaryStream 메서드(SQLServerBlob) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: abcec31f-1a60-4765-9725-8cf7e9f1f8ab
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9d4dd274fd77de831f2ea7484cc759ab4cb771d7
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: dc75a5c48e9e1ce4efeefe646bceeb0d601b0f3d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928833"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88432435"
 ---
 # <a name="setbinarystream-method-sqlserverblob"></a>setBinaryStream 메서드(SQLServerBlob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +40,7 @@ public java.io.OutputStream setBinaryStream(long pos)
   
  BLOB 값에서 쓰기를 시작할 위치입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
  출력 스트림입니다.  
   
 ## <a name="exceptions"></a>예외  

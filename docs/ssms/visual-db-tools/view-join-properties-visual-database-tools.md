@@ -1,4 +1,5 @@
 ---
+description: 조인 속성 보기(Visual Database Tools)
 title: 조인 속성 보기
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ ms.assetid: e7985d14-8e6c-4fca-a1c9-9af1eeacb1e2
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: a34d754d9850e10cf852373cc7552459e171e693
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: e34fadc1c4f0b0863b20b057dde111412d6fa926
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002651"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422957"
 ---
 # <a name="view-join-properties-visual-database-tools"></a>조인 속성 보기(Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -1,4 +1,5 @@
 ---
+description: sqlsrv_begin_transaction
 title: sqlsrv_begin_transaction | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
@@ -15,14 +16,14 @@ helpviewer_keywords:
 - transaction support
 - API Reference, sqlsrv_begin_transaction
 ms.assetid: 0b223bc8-4047-4329-9cbf-d350ab0fb886
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 333a3b0c6434415c573907bdf0bdbf3e9667afcd
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 6ac4ca8e892fdc24af003ba69db6129a57c7870b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67992878"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88414309"
 ---
 # <a name="sqlsrv_begin_transaction"></a>sqlsrv_begin_transaction
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -45,7 +46,7 @@ sqlsrv_begin_transaction( resource $conn)
 #### <a name="parameters"></a>매개 변수  
 *$conn*: 트랜잭션과 관련된 연결입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
 부울 값: 트랜잭션이 성공적으로 시작하면 **true** 입니다. 그렇지 않으면 **false**입니다.  
   
 ## <a name="example"></a>예제  

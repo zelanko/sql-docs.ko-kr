@@ -1,4 +1,5 @@
 ---
+description: 로그인 감사 구성(SQL Server Management Studio)
 title: 로그인 감사 구성(SQL Server Management Studio)
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 16961116-57ac-4eef-8037-791b26ade548
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a203bc3f3c63c89cb94fad935e74197d81b77331
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 26a61a26350cb566a4526893c877eb5825afc6f1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921210"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417949"
 ---
 # <a name="configure-login-auditing-sql-server-management-studio"></a>로그인 감사 구성(SQL Server Management Studio)
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]

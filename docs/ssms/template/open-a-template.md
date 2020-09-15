@@ -1,4 +1,5 @@
 ---
+description: 템플릿 열기
 title: 템플릿 열기
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 605b0f4c-5ba1-4249-ad1c-6341df77cd7a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 419f3d4fe4d91165782e10e3dc638b8488ea05e5
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 730963488d34750ead61fe2662eb8201f91b30e1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001555"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417859"
 ---
 # <a name="open-a-template"></a>템플릿 열기
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -44,6 +45,6 @@ ms.locfileid: "86001555"
 새 편집기 창에서 템플릿을 열 경우 현재 활성 연결의 자격 증명을 사용하여 창이 열립니다. 예를 들어 개체 탐색기에서 [!INCLUDE[ssDE](../../includes/ssde_md.md)] 인스턴스에 포커스가 있는 상태에서 CREATE DATABASE 템플릿을 열면 새 편집기 창은 해당 인스턴스에 대한 연결을 사용하여 열립니다. 활성 연결이 없는 경우에는 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 에서 로그인 대화 상자가 표시됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
-[템플릿 탐색기](../../ssms/template/template-explorer.md)  
+[Template Explorer](../../ssms/template/template-explorer.md)  
 [템플릿 매개 변수 바꾸기](../../ssms/template/replace-template-parameters.md)  
   

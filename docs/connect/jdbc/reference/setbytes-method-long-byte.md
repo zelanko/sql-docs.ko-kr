@@ -1,4 +1,5 @@
 ---
+description: setBytes 메서드(long, byte)
 title: setBytes 메서드(long, byte) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: ffb8f107-0f9d-4410-957f-62b718e1e872
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 68d7727f367fa10cf173e392be27c22b98df75e6
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: d7c81dc36f8dbb917634404ddeceb35db16f36ae
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80929132"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88432345"
 ---
 # <a name="setbytes-method-long-byte"></a>setBytes 메서드(long, byte)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +45,7 @@ public int setBytes(long pos,
   
  BLOB에 쓸 바이트의 배열입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
  쓴 바이트 수를 지정하는 **long** 값입니다.  
   
 ## <a name="exceptions"></a>예외  

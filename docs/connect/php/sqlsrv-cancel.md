@@ -1,4 +1,5 @@
 ---
+description: sqlsrv_cancel
 title: sqlsrv_cancel | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,14 +15,14 @@ helpviewer_keywords:
 - sqlsrv_cancel
 - API Reference, sqlsrv_cancel
 ms.assetid: 75798c9b-f711-445d-9b8f-ba4d405ca50a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f109a264d394a47164966e602b264f0fcd337e12
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 463ccadd953bd628f7f7fc0f5a99f414fe2f8ed1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67935842"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88414239"
 ---
 # <a name="sqlsrv_cancel"></a>sqlsrv_cancel
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -38,7 +39,7 @@ sqlsrv_cancel( resource $stmt)
 #### <a name="parameters"></a>매개 변수  
 *$stmt*: 취소할 문입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
 부울 값: 작업이 성공하면 **true** 입니다. 그렇지 않으면 **false**입니다.  
   
 ## <a name="example"></a>예제  
@@ -91,7 +92,7 @@ sqlsrv_cancel( $stmt);
 ?>  
 ```  
   
-## <a name="comments"></a>주석  
+## <a name="comments"></a>의견  
 [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md) 및 [sqlsrv_execute](../../connect/php/sqlsrv-execute.md) 조합을 사용하여 준비되고 실행되는 명령문은 **sqlsrv_cancel**을 호출한 후 **sqlsrv_execute**를 사용하여 다시 실행될 수 있습니다. **sqlsrv_cancel**을 호출한 후에는 [sqlsrv_query](../../connect/php/sqlsrv-query.md)로 실행되는 명령문을 다시 실행할 수 없습니다.  
   
 ## <a name="see-also"></a>참고 항목  

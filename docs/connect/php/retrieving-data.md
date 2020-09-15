@@ -1,4 +1,5 @@
 ---
+description: 데이터 검색
 title: 데이터 검색 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 3414992c-61c0-4e7d-b509-72517e52c1bb
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 050197fe67724dba3ab2cb3c0de53661487b9ef5
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 35a9d9131b7c1cb382ab4e64baa26809d58c90d3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928392"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88414429"
 ---
 # <a name="retrieving-data"></a>데이터 검색
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -69,17 +70,17 @@ ms.locfileid: "80928392"
   
 ## <a name="in-this-section"></a>섹션 내용  
   
-|항목|Description|  
+|항목|설명|  
 |---------|---------------|  
 |[데이터를 스트림으로 검색](../../connect/php/retrieving-data-as-a-stream-using-the-sqlsrv-driver.md)|서버에서 데이터를 스트리밍하는 방법의 개요를 제공하고 특정 사용 사례에 대한 링크를 제공합니다.|  
 |[방향 매개 변수 사용](../../connect/php/using-directional-parameters.md)|저장 프로시저를 호출할 때 방향 매개 변수를 사용하는 방법을 설명합니다.|  
 |[커서 유형 지정 및 행 선택](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md)|순서에 관계없이 액세스할 수 있는 행으로 결과 집합을 만드는 방법을 보여 줍니다.|  
 |[방법: SQLSRV 드라이버를 사용하여 날짜 및 시간 형식을 문자열로 검색](../../connect/php/how-to-retrieve-date-and-time-type-as-strings-using-the-sqlsrv-driver.md)|SQLSRV 드라이버를 사용하여 날짜 및 시간 형식을 문자열로 검색하는 방법을 설명합니다.|  
-|[방법: PDO_SQLSRV 드라이버를 사용하여 날짜 및 시간 형식을 PHP Datetime 개체로 검색](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)|PDO_SQLSRV 드라이버를 사용하여 날짜 및 시간 형식을 개체로 검색하는 방법을 설명합니다.|  
+|[방법: PDO_SQLSRV 드라이버를 사용하여 날짜 및 시간 형식을 PHP 날짜/시간 개체로 검색](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)|PDO_SQLSRV 드라이버를 사용하여 날짜 및 시간 형식을 개체로 검색하는 방법을 설명합니다.|  
 |[SQLSRV 드라이버로 10진수 문자열 형식 지정](../../connect/php/formatting-decimals-sqlsrv-driver.md)|SQLSRV 드라이버로 10진수 값 또는 금액의 형식 지정 방법을 보여 줍니다.|  
 |[PDO_SQLSRV 드라이버로 10진수 문자열 형식 지정](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md)|PDO_SQLSRV 드라이버를 사용한 10진수 값 또는 금액 값 형식 지정 방법을 보여 줍니다.|  
   
-## <a name="related-sections"></a>관련 섹션  
+## <a name="related-sections"></a>관련 단원  
 [방법: PHP 데이터 형식 지정](../../connect/php/how-to-specify-php-data-types.md)  
   
 ## <a name="see-also"></a>참고 항목  

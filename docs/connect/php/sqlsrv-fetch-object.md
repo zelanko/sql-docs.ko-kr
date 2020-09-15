@@ -1,4 +1,5 @@
 ---
+description: sqlsrv_fetch_object
 title: sqlsrv_fetch_object | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4ce2df2c-083a-4a4d-a1e2-e866e63707d5
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 90d900af5fe86862ad59df61d4640e38797c0a01
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1e9b1d3357fe25ffd65492ba21b5dd74c819a66b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893174"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426305"
 ---
 # <a name="sqlsrv_fetch_object"></a>sqlsrv_fetch_object
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -42,7 +43,7 @@ sqlsrv_fetch_object( resource $stmt [, string $className [, array $ctorParams[, 
   
 *$ctorParams* [선택 사항]: *$className* 매개 변수로 지정된 클래스의 생성자에 전달된 값을 포함하는 배열입니다. 지정된 클래스의 생성자가 매개 변수 값을 허용하는 경우 *$ctorParams* object **sqlsrv_fetch_object**매개 변수를 사용해야 합니다.  
   
-*row* [선택 사항]: 다음 값 중 하나로, 스크롤 가능 커서를 사용하는 결과 집합에서 액세스할 행을 지정합니다. (*행*이 지정된 경우 *$className* 및 *$ctorParams*가 명시적으로 지정되어야 합니다. *$className* 및 *$ctorParams*에 null을 지정해야 하는 경우도 마찬가지입니다.)  
+*row* [선택 사항]: 다음 값 중 하나로 스크롤 가능 커서를 사용하는 결과 집합에서 액세스할 행을 지정합니다. (*행*이 지정된 경우 *$className* 및 *$ctorParams*가 명시적으로 지정되어야 합니다. *$className* 및 *$ctorParams*에 null을 지정해야 하는 경우도 마찬가지입니다.)  
   
 -   SQLSRV_SCROLL_NEXT  
   
@@ -58,7 +59,7 @@ sqlsrv_fetch_object( resource $stmt [, string $className [, array $ctorParams[, 
   
 이러한 값에 대한 자세한 내용은 [커서 유형 지정 및 행 선택](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md)을 참조하세요.  
   
-*offset* [선택 사항]: 검색할 행을 지정하는 데 SQLSRV_SCROLL_ABSOLUTE 및 SQLSRV_SCROLL_RELATIVE와 함께 사용됩니다. 결과 집합의 첫 번째 레코드는 0입니다.  
+*offset* [선택 사항]: 검색할 행을 지정하기 위해 SQLSRV_SCROLL_ABSOLUTE 및 SQLSRV_SCROLL_RELATIVE와 함께 사용됩니다. 결과 집합의 첫 번째 레코드는 0입니다.  
   
 ## <a name="return-value"></a>Return Value  
 결과 집합 필드 이름에 해당하는 속성을 가진 PHP 개체입니다. 속성 값은 해당 결과 집합 필드 값으로 채워집니다. 선택적 *$className* 매개 변수로 지정된 클래스가 존재하지 않거나 지정된 문과 연결된 활성 결과 집합이 없는 경우 **false** 가 반환됩니다. 검색할 행이 더 이상 없는 경우 **null** 이 반환됩니다.  
@@ -233,7 +234,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-기존 **sqlsrv_fetch_object** 함수는 항상 [Default PHP Data Types](../../connect/php/default-php-data-types.md)매개 변수를 사용해야 합니다. PHP 데이터 형식을 지정하는 방법에 대한 자세한 내용은 [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md)을 참조하세요.  
+기존 **sqlsrv_fetch_object** 함수는 항상 [Default PHP Data Types](../../connect/php/default-php-data-types.md)매개 변수를 사용해야 합니다. PHP 데이터 형식을 지정하는 방법에 대한 자세한 내용은 [방법: PHP 데이터 형식 지정](../../connect/php/how-to-specify-php-data-types.md)을 참조하세요.  
   
 이름이 없는 필드가 반환되면 **sqlsrv_fetch_object** 가 필드 값을 삭제하고 경고를 발생시킵니다. 예를 들어 값을 데이터베이스 테이블에 삽입하고 서버 생성 기본 키를 검색하는 다음 Transact-SQL 문을 고려해 보겠습니다.  
   

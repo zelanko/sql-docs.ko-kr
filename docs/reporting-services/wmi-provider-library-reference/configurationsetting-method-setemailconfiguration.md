@@ -1,4 +1,5 @@
 ---
+description: SetEmailConfiguration 메서드(WMI MSReportServer_ConfigurationSetting)
 title: SetEmailConfiguration 메서드(WMI MSReportServer_ConfigurationSetting) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b40a2224-2c90-4d32-892f-1fe73a0591ca
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3e2b3e3c1d3d9fc5193a8c87c2aa96f9ff2d3ba2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e1d746ec97ef320cb9527d3a4be4dc3011c7b875
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65581005"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423107"
 ---
 # <a name="configurationsetting-method---setemailconfiguration"></a>ConfigurationSetting 메서드 - SetEmailConfiguration
   보고서 서버가 전자 메일을 보낼 때 사용할 전자 메일 배달 확장 프로그램을 구성합니다.  
@@ -41,7 +42,7 @@ public void SetEmailConfiguration (Boolean SendUsingSMTPServer,
   
 ## <a name="parameters"></a>매개 변수  
  *SendUsingSMTPServer*  
- 전자 메일을 보내는 데 SMTP 서버를 사용하는지 여부를 나타내는 부울 값입니다. 이 값은 true로만 설정할 수 있습니다. 기본값은 False입니다.  
+ 전자 메일을 보내는 데 SMTP 서버를 사용하는지 여부를 나타내는 부울 값입니다. 이 값은 true로만 설정할 수 있습니다. 기본값은 false입니다.  
   
  *SMTPServer*  
  SMTP 서버의 이름이나 IP 주소가 들어 있는 문자열입니다.  

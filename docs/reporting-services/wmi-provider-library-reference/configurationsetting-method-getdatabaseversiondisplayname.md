@@ -1,4 +1,5 @@
 ---
+description: ConfigurationSetting 메서드 - GetDatabaseVersionDisplayName
 title: GetDatabaseVersionDisplayName 메서드(WMI) | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: e1286424-7043-4f12-a7ad-1cf69e81baa4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4d29ed7bc6e627f7ed670feca9b98b0b4fac3eb9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 598bc82d266bfff12f085275a03598f2caf6fc48
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570955"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423227"
 ---
 # <a name="configurationsetting-method---getdatabaseversiondisplayname"></a>ConfigurationSetting 메서드 - GetDatabaseVersionDisplayName
   지정된 보고서 서버 데이터베이스 버전 문자열의 표시 이름을 가져옵니다.  
@@ -31,10 +32,10 @@ public void GetDatabaseVersionDisplayName(string Version, string DisplayName, ou
 ```  
   
 ## <a name="parameters"></a>매개 변수  
- *버전*  
+ *Version*  
  보고서 서버 데이터베이스의 버전 문자열이 들어 있는 문자열입니다.  
   
- *DisplayName*  
+ *표시 이름*  
  [out] 제공된 버전에 해당하는 표시 이름이 들어 있는 문자열입니다.  
   
  *HRESULT*  
@@ -43,7 +44,7 @@ public void GetDatabaseVersionDisplayName(string Version, string DisplayName, ou
 ## <a name="remarks"></a>설명  
  다음 표에서는 표시 문자열에 대한 데이터베이스 버전의 매핑을 보여 줍니다.  
   
-|**릴리스**|**버전**|**표시 이름**|  
+|**릴리스**|**Version**|**표시 이름**|  
 |-----------------|-----------------|----------------------|  
 |RS 2005 SP2|@DBVersion = 'C.0.8.54'|SQL Server 2005 SP2|  
 |RS 2005 SP1|@DBVersion = 'C.0.8.43'|SQL Server 2005 SP1|  

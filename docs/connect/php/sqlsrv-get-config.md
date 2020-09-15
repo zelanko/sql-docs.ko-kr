@@ -1,4 +1,5 @@
 ---
+description: sqlsrv_get_config
 title: sqlsrv_get_config | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,14 +15,14 @@ helpviewer_keywords:
 - API Reference, sqlsrv_get_config
 - sqlsrv_get_config
 ms.assetid: ce2befc2-af98-45bb-8d41-60f1674dccfc
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f94c20c8aa6cf603c6588586e072813682b2ce68
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 1d8b78e001b666fbc45f204aee9488e740c95208
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67992705"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426295"
 ---
 # <a name="sqlsrv_get_config"></a>sqlsrv_get_config
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -38,7 +39,7 @@ sqlsrv_get_config( string $setting )
 #### <a name="parameters"></a>매개 변수  
 *$setting*: 값을 반환할 구성 설정입니다. 구성이 가능한 설정 목록을 보려면 [sqlsrv_configure](../../connect/php/sqlsrv-configure.md)를 참조하세요.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
 *$setting* 매개 변수에서 지정한 설정 값입니다. 잘못된 설정이 지정된 경우 **false** 가 반환되고 오류가 오류 수집에 추가됩니다.  
   
 ## <a name="remarks"></a>설명  

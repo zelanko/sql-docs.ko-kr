@@ -1,4 +1,5 @@
 ---
+description: sqlsrv_next_result
 title: sqlsrv_next_result | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,14 +17,14 @@ helpviewer_keywords:
 - stored procedure support
 - API Reference, sqlsrv_next_result
 ms.assetid: 41270d16-0003-417c-b837-ea51439654cd
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 59414abbc5c098382ec83d308d135af92f9dbb35
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: f10a69247a442c1fa7b369f46b65d8c0c04e7237
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68015005"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426235"
 ---
 # <a name="sqlsrv_next_result"></a>sqlsrv_next_result
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -43,7 +44,7 @@ sqlsrv_next_result( resource $stmt )
 #### <a name="parameters"></a>매개 변수  
 *$stmt*: 다음 결과가 활성화된 실행된 문입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
 다음 결과가 성공적으로 활성화되면 부울 값 **true** 가 반환됩니다. 다음 결과가 활성화될 때 오류가 발생한 경우 **false** 가 반환됩니다. 더 이상 결과가 없는 경우 **null** 이 반환됩니다.  
   
 ## <a name="example"></a>예제  

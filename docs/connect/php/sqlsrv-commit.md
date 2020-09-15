@@ -1,4 +1,5 @@
 ---
+description: sqlsrv_commit
 title: sqlsrv_commit | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: bad67571-61ad-45b5-b4ff-677e3544f809
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a219e0e9c1fd11a7a99fb941eca571fb59800a2a
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 0d42500c2764815ade1a2bf2292320f4b8745e88
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80902876"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88413969"
 ---
 # <a name="sqlsrv_commit"></a>sqlsrv_commit
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -45,7 +46,7 @@ sqlsrv_commit( resource $conn )
 #### <a name="parameters"></a>매개 변수  
 *$conn*: 트랜잭션이 활성화된 연결입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
 부울 값: 트랜잭션이 성공적으로 커밋되면 **true** 이고, 그렇지 않으면 **false**입니다.  
   
 ## <a name="example"></a>예제  

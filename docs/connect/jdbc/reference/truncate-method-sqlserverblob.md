@@ -1,4 +1,5 @@
 ---
+description: truncate 메서드(SQLServerBlob)
 title: truncate 메서드(SQLServerBlob) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: ef181e04-003a-442a-9b7e-0c508a7cc873
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ddcb67b6a679cadaa33775d11987d90a735ca799
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 37b206d17da25368038a60997393347096d81760
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80908465"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88431455"
 ---
 # <a name="truncate-method-sqlserverblob"></a>truncate 메서드(SQLServerBlob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
