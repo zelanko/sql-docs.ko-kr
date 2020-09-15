@@ -1,4 +1,5 @@
 ---
+description: SenderEmailAddress 속성(WMI MSReportServer_ConfigurationSetting)
 title: SenderEmailAddress 속성(WMI MSReportServer_ConfigurationSetting) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 087de0ab-6505-48c6-80f3-bd493f76282d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 62c64167886a28ad05a60a576cfa0a42a2cbbcf1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 982bb08909ab49a5f5f6faaffc610d2e7c3ebf2a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570249"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88373069"
 ---
 # <a name="configurationsetting-property---senderemailaddress"></a>ConfigurationSetting 속성 - SenderEmailAddress
   보고서 서버에서 전자 메일을 보낼 때 사용하는 주소를 가져옵니다. 읽기 전용입니다.  

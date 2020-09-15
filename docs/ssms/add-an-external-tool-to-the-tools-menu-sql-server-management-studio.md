@@ -1,4 +1,5 @@
 ---
+description: 외부 도구를 도구 메뉴에 추가(SQL Server Management Studio)
 title: 외부 도구를 도구 메뉴에 추가
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -15,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: 25c1399e-afb1-4337-b74b-57a199cf26db
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a322d43f7ceaa388df2a143723a3db3184091560
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: b07250f651776b8315d1cb99f6b88f792d082257
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86010928"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88372879"
 ---
 # <a name="add-an-external-tool-to-the-tools-menu-sql-server-management-studio"></a>외부 도구를 도구 메뉴에 추가(SQL Server Management Studio)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-[!INCLUDE[msCoName](../includes/msconame_md.md)]에서 모든 [!INCLUDE[msCoName](../includes/msconame_md.md)] Windows 또는 [!INCLUDE[dnprdnshort](../includes/dnprdnshort_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 애플리케이션을 시작할 수 있습니다. 외부 애플리케이션은 **도구** 메뉴에 추가하여 실행할 수 있습니다.  
+[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에서 모든 [!INCLUDE[msCoName](../includes/msconame_md.md)] Windows 또는 [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort_md.md)] 애플리케이션을 시작할 수 있습니다. 외부 애플리케이션은 **도구** 메뉴에 추가하여 실행할 수 있습니다.  
   
 ### <a name="to-add-an-external-tool-to-the-tools-menu"></a>외부 도구를 도구 메뉴에 추가하려면  
   

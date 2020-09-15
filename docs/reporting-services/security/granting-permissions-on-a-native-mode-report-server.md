@@ -1,4 +1,5 @@
 ---
+description: 기본 모드 보고서 서버에 대한 권한 부여
 title: 기본 모드 보고서 서버에 대한 권한 부여 | Microsoft Docs
 ms.date: 05/14/2019
 ms.prod: reporting-services
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 260dc2e9-546c-4f04-9fa1-977e23c9d68c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: be6b0825244dee9f80f88a1b211eee5881d2a96a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 82fba1144cdb970d97b8aac4938fd7c3e8fe0980
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77147373"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88373299"
 ---
 # <a name="grant-permissions-on-a-native-mode-report-server"></a>기본 모드 보고서 서버에 대한 권한 부여
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서는 역할 기반 권한 부여 및 인증 하위 시스템을 통해 보고서 서버에서 작업을 수행하거나 항목에 액세스할 수 있는 사용자를 지정합니다. 역할 기반 권한 부여는 사용자 또는 그룹이 수행할 수 있는 동작을 역할별로 분류합니다. 인증은 기본 제공 Windows 인증이나 사용자가 제공하는 사용자 지정 인증 모듈을 기반으로 합니다. 이러한 인증 유형 중 하나에 미리 정의된 역할이나 사용자 지정 역할을 사용할 수 있습니다.
@@ -68,7 +69,7 @@ ms.locfileid: "77147373"
 |Management Studio: 역할 정의를 확인, 수정, 작성 및 삭제하는 데 사용됩니다.|[역할 만들기, 삭제 또는 수정&#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)|  
 |웹 포털: 역할에 사용자 및 그룹을 할당하는 데 사용됩니다.|[보고서 서버에 사용자 액세스 권한 부여](../../reporting-services/security/grant-user-access-to-a-report-server.md)<br /><br /> [역할 할당 수정 또는 삭제](../../reporting-services/security/role-assignments-modify-or-delete.md)|  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
  - [미리 정의된 역할](../../reporting-services/security/role-definitions-predefined-roles.md)  
  - [SharePoint 사이트의 보고서 서버 항목에 대한 권한 부여](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)  
  - [보고서 서버 인증](../../reporting-services/security/authentication-with-the-report-server.md)  

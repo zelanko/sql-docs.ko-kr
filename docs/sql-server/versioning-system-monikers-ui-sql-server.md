@@ -1,18 +1,19 @@
 ---
+description: SQL 설명서용 버전 관리 시스템
 title: SQL 설명서 버전 관리 시스템
-ms.date: 07/22/2020
+ms.date: 08/12/2020
 ms.prod: sql
 ms.technology: release-landing
 ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
-monikerRange: =azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||>=sql-server-linux-2017||=sql-server-previousversions||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 7ca82e29d32bfe2721baa619ec37d4c7576a0533
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+monikerRange: =azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||>=sql-server-linux-2017||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: e4bdddf08a1d9b276b4e4714d75a0a231560ef19
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247369"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88373169"
 ---
 # <a name="versioning-system-for-sql-documentation"></a>SQL 설명서용 버전 관리 시스템
 
@@ -164,7 +165,7 @@ _최신_ 버전은 아직 완전히 릴리스되지 않았으며 _미리 보기_
     - [SQL Server 2014 오프라인 설명서](/sql/sql-server/sql-server-offline-documentation)
 
 - _2016 이상:_ &nbsp; 버전 관리 시스템은 SQL Server 2016 이상 버전에 대해 완전히 구현됩니다.
-    - [SQL Server 설명서 2016 이상 시작](/sql/sql-server/?view=sql-server-2016)
+    - [SQL Server 설명서 2016 이상 시작](/sql/sql-server/?view=sql-server-2016&preserve-view=true)
     - [SQL Server 2016 오프라인 설명서](sql-server-offline-documentation.md)
 
 ## <a name="see-also"></a>참고 항목

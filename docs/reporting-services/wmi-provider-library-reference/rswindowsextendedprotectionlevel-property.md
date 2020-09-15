@@ -1,4 +1,5 @@
 ---
+description: RSWindowsExtendedProtectionLevel 속성
 title: RSWindowsExtendedProtectionLevel 속성 | Microsoft Docs
 ms.date: 03/20/2017
 ms.prod: reporting-services
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 162ffe86-69c3-49d2-b9ed-49d097c05551
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7854821a9f43bc234490d915ff75339e250f6c39
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4098d19c86ab6940aebd254ba08a196ae880dc5e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65571075"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88373049"
 ---
 # <a name="rswindowsextendedprotectionlevel-property"></a>RSWindowsExtendedProtectionLevel 속성
   보고서 서버에서 지원하도록 구성된 보호 수준을 나타내는 문자열 값을 반환합니다. 이 속성은 읽기 전용입니다.  

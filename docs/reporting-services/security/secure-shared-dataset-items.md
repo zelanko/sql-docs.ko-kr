@@ -1,4 +1,5 @@
 ---
+description: 공유 데이터 세트 항목 보안
 title: 공유 데이터 세트 항목 보안 설정 | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 08e6d8b5-d88c-4ed2-9c05-55c757e00014
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a51e261d06933a30bf1c59adffa6963c9826f360
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 80cfeba2128e82c6254ba962e91c6c51461ff955
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570679"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88373219"
 ---
 # <a name="secure-shared-dataset-items"></a>공유 데이터 세트 항목 보안
   보고서 서버에서 공유 데이터 세트 항목을 여러 보고서에서 사용할 수 있습니다. 공유 데이터 세트에 보안을 설정하여 사용자가 해당 항목에 대해 갖는 액세스 수준을 제어할 수 있습니다. 기본적으로 **Administrators** 기본 제공 그룹의 멤버인 사용자만 공유 데이터 세트 보기, 속성 수정, 캐싱 설정, 캐시 새로 고침 계획 만들기, 항목 삭제 등의 작업을 수행할 수 있습니다. 다른 모든 사용자에 대해서는 공유 데이터 세트에 대한 액세스를 허용하는 역할 할당을 만들어야 합니다.  
