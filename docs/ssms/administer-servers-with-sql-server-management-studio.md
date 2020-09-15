@@ -1,4 +1,5 @@
 ---
+description: SQL Server Management Studio에서 서버 관리
 title: SQL Server Management Studio에서 서버 관리
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 938bb035-e07a-4082-9f93-229d9feb6b06
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 96119c90c8a187830fd5a2264e833bb326593a29
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 840e4d4b01cecabf2cfedc740de6eb285c5802a2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86010910"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88321079"
 ---
 # <a name="administer-servers-with-sql-server-management-studio"></a>SQL Server Management Studio에서 서버 관리
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -1,4 +1,5 @@
 ---
+description: 테이블에 있는 모든 행의 값 요약 또는 집계(Visual Database Tools)
 title: 테이블에 있는 모든 행의 값 요약 또는 집계
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ ms.assetid: f5af876e-f937-4110-ba09-07999c35a699
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: a953290e4d59e87e19aa4c920e426a5370f5723a
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 4c554f781aa8f6c8f6003de76f5dfe0979f77c85
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008165"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88312929"
 ---
 # <a name="summarize-or-aggregate-values-for-all-rows-in-a-table-visual-database-tools"></a>테이블에 있는 모든 행의 값 요약 또는 집계(Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
