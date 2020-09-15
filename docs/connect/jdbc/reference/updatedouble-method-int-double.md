@@ -1,4 +1,5 @@
 ---
+description: updateDouble 메서드(int, double)
 title: updateDouble 메서드(int, double) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 90c47643-e27e-425d-85a0-63866f858367
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 58959fb80595347b9ab7d09ccdb41a00bf446226
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 7d83a51b8c344f0472b402eb47999e3736384241
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80919802"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88353489"
 ---
 # <a name="updatedouble-method-int-double"></a>updateDouble 메서드(int, double)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -1,4 +1,5 @@
 ---
+description: updateBlob 메서드(int, java.io.InputStream, long)
 title: updateBlob 메서드(int, java.io.InputStream, long) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 2edf9b51-63e1-4c28-afdf-2d4af593d5f7
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 19c042913d3072a36b7b3caad1dffd2d4fafcda6
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 7dacb3d899e0833682671ff1c73d46f24caa3c1b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80903499"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88353879"
 ---
 # <a name="updateblob-method-int-javaioinputstream-long"></a>updateBlob 메서드(int, java.io.InputStream, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

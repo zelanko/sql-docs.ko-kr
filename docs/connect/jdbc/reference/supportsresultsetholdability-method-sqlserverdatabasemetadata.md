@@ -1,4 +1,5 @@
 ---
+description: supportsResultSetHoldability 메서드(SQLServerDatabaseMetaData)
 title: supportsResultSetHoldability 메서드(SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: ab575792-fd11-4ff3-8847-1368e7a322c5
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a0ea690a65d4373ea2a287c22ae9b48d40216c76
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: d0ed1388fd8e3d137fbaae9d7bc8b66235a8a5fe
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80919431"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88353999"
 ---
 # <a name="supportsresultsetholdability-method-sqlserverdatabasemetadata"></a>supportsResultSetHoldability 메서드(SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,7 +36,7 @@ public boolean supportsResultSetHoldability(int holdability)
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- *유지 기능*  
+ *유지 기능(holdability)*  
   
  다음 값 중 하나에 해당되는 결과 집합 유지 기능을 나타내는 **int**입니다.  
   
@@ -43,7 +44,7 @@ public boolean supportsResultSetHoldability(int holdability)
   
  ResultSet.CLOSE_CURSORS_AT_COMMIT  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
  지원되는 경우 **true**입니다. 그렇지 않으면 **false**입니다.  
   
 ## <a name="exceptions"></a>예외  

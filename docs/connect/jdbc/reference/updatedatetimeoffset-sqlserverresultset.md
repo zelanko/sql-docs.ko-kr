@@ -1,4 +1,5 @@
 ---
+description: updateDateTimeOffset(SQLServerResultSet)
 title: updateDateTimeOffset(SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 40d7fced-cce1-4534-b794-71bc735e53e0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f5941023335fcdf807457dddf5df38d38c7e34ee
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: df865957174d87b0dfb19fceebf38976187a0010
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80919849"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88353759"
 ---
 # <a name="updatedatetimeoffset-sqlserverresultset"></a>updateDateTimeOffset(SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -26,7 +27,7 @@ ms.locfileid: "80919849"
   
 ## <a name="overload-list"></a>오버로드 목록  
   
-|속성|Description|  
+|이름|설명|  
 |----------|-----------------|  
 |[updateDateTimeOffset(int, microsoft.sql.DateTimeOffset)](../../../connect/jdbc/reference/updatedatetimeoffset-int-microsoft-sql-datetimeoffset-sqlserverresultset.md)|열 서수(0부터 시작)가 지정된 경우 지정된 열 값을 [DateTimeOffset Class](../../../connect/jdbc/reference/datetimeoffset-class.md) 값으로 업데이트합니다.|  
 |[updateDateTimeOffset(string, microsoft.sql.DateTimeOffset)](../../../connect/jdbc/reference/updatedatetimeoffset-string-microsoft-sql-datetimeoffset-sqlserverresultset.md)|열 이름이 지정된 경우 지정된 열 값을 [DateTimeOffset Class](../../../connect/jdbc/reference/datetimeoffset-class.md) 값으로 업데이트합니다.|  
