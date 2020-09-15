@@ -1,4 +1,5 @@
 ---
+description: WMI를 구성하여 SQL Server 도구에 서버 상태 표시
 title: WMI를 구성하여 SQL Server 도구에 서버 상태 표시
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7e97197b-ed4d-40d1-9a52-9ab1d92401d7
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 848a0b7a22f0a90e355b32d1391f18bdbfab0ea6
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 199ce23eee967ff19a026cf267209247cab09eda
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000179"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88317729"
 ---
 # <a name="configure-wmi-to-show-server-status-in-sql-server-tools"></a>WMI를 구성하여 SQL Server 도구에 서버 상태 표시
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

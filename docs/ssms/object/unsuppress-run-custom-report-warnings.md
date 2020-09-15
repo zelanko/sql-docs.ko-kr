@@ -1,4 +1,5 @@
 ---
+description: 사용자 지정 보고서 실행 경고 표시
 title: 사용자 지정 보고서 실행 경고 표시
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0deed900-c910-4d12-aac0-6ab9e39eb068
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: df96d2b9b4f141fb84e373979d122fec62b5c9b0
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: c6fd8adef633e50591088c8859fd8071c96da992
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001842"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88317049"
 ---
 # <a name="unsuppress-run-custom-report-warnings"></a>사용자 지정 보고서 실행 경고 표시
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

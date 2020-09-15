@@ -1,4 +1,5 @@
 ---
+description: SQL 구문 오류 발생 대화 상자(Visual Database Tools)
 title: SQL 구문 오류 발생 대화 상자
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ ms.assetid: bc9e5784-227e-4c5d-8084-24274fa6c14a
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: ead59dd19fc8de97c46bc2546c649f3779cfbd6a
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: e143bbb2f094ee403b1cdab0defac86b999410cf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008182"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88313249"
 ---
 # <a name="sql-syntax-errors-encountered-dialog-box-visual-database-tools"></a>SQL 구문 오류 발생 대화 상자(Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -35,7 +36,7 @@ SQL 창에서 SQL 문을 입력하거나 편집한 다음 다른 창으로 이�
 > [!TIP]  
 > 문이 유효한지 여부는 **쿼리** 도구 모음의 **SQL 구문 검증** 단추를 사용하여 확인할 수 있습니다.  
   
-SQL 문을 구문 분석할 수 없으면 이 대화 상자에 문제의 원인이 표시됩니다. 계속 진행하려면 **확인** 을 클릭합니다.  
+SQL 문을 구문 분석할 수 없으면 이 대화 상자에 문제의 원인이 표시됩니다. **확인**을 클릭하여 계속합니다.  
   
 ## <a name="see-also"></a>참고 항목  
 [쿼리 및 뷰 디자인 방법 도움말 항목&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  

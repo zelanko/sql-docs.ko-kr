@@ -1,4 +1,5 @@
 ---
+description: 결과 창에서 행 편집(Visual Database Tools)
 title: 결과 창에서 행 편집
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -17,12 +18,12 @@ ms.assetid: de36f636-cfe9-4ae6-a474-06e9c51f9f0c
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 04ba4bc6804214e4d55fbd03c59a39a9b68951e2
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 48754f30862e7835717e6c22fc39f42316f7d5da
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012191"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88314359"
 ---
 # <a name="edit-rows-in-the-results-pane-visual-database-tools"></a>결과 창에서 행 편집(Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -1,4 +1,5 @@
 ---
+description: 쿼리와 연관된 연결 변경
 title: 쿼리와 연관된 연결 변경
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7b8851b8-eccb-4e6c-944a-68fa90fc5870
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 49801a4ac617de832b5a20e3803daa364a0ad614
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: ef80ec05c61edbe4ecff12fc53a251570f202601
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003280"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88316639"
 ---
 # <a name="change-the-connection-associated-with-a-query"></a>쿼리와 연관된 연결 변경
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

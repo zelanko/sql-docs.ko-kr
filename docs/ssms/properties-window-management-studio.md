@@ -1,4 +1,5 @@
 ---
+description: 속성 창(Management Studio)
 title: 속성 창(Management Studio)
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -15,22 +16,22 @@ helpviewer_keywords:
 ms.assetid: 6a9a1389-df8d-4cfc-928b-eccbf884a22d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2ff8df58824aee2e718284bbbb2201b2123c216e
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 2017d434218356a87cc1db079b3195f42030029f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001813"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88316659"
 ---
 # <a name="properties-window-management-studio"></a>속성 창(Management Studio)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-이 창을 사용하여 선택한 요소의 속성을 볼 수 있습니다. 또한 속성 창을 사용하여 파일, 프로젝트 및 솔루션 속성을 볼 수도 있습니다. **보기** 메뉴에서 **속성 창** 을 클릭하면 속성 창이 활성화됩니다.  
+이 창을 사용하여 선택한 요소의 속성을 볼 수 있습니다. 또한 속성 창을 사용하여 파일, 프로젝트 및 솔루션 속성을 볼 수도 있습니다. 속성 창은 **보기** 메뉴에서 **속성** 창을 클릭하여 사용할 수 있습니다.  
   
 속성 창에는 특정 속성의 필요 여부에 따라 다른 유형의 편집 필드가 표시됩니다. 회색으로 표시된 속성은 읽기 전용입니다.  
   
 ## <a name="options"></a>옵션  
   
-|요소|Description|  
+|요소|설명|  
 |-----------|---------------|  
 |**개체 이름**|현재 선택한 개체가 나열됩니다. 활성 편집기 또는 디자이너의 개체만 표시됩니다.|  
 |**범주별**|선택한 개체에 대한 모든 속성과 속성 값을 범주별로 나열합니다. 범주를 축소하여 표시되는 속성의 수를 줄일 수 있습니다. 범주를 확장하거나 축소할 경우 범주 이름 왼쪽에 있는 더하기(+) 또는 빼기(-) 기호를 각각 사용합니다. 범주는 사전순으로 나열됩니다.|  

@@ -14,12 +14,12 @@ ms.assetid: a0665916-7789-4f94-9086-879275802cf3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 7a8162132f884c1bda7ea673eedbbceffa604e44
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: a212013d950f6a8f39816361b7f9c6209d0fa3e3
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812636"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362518"
 ---
 # <a name="local-audit-for-sql-server-usage-and-diagnostic-data-collection-ceip"></a>SQL Server 사용 현황 및 진단 데이터 수집(CEIP)에 대한 로컬 감사
 
@@ -78,12 +78,12 @@ SQL Server CEIP 서비스 로그온 계정을 가져오려면 다음 단계를 �
   >[!NOTE] 
   >감사 기능 및 패치 허용으로 인해 SQL Server에 문제가 발생하는 것을 방지하려면 SQL Server 설치 경로 외부에 로컬 감사 디렉터리 경로를 구성하세요.
 
-  ||디자인 결정|권장|  
-  |------|-----------------|----------|  
-  |![확인란](../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "확인란")|공간 가용성 |약 10개의 데이터베이스를 사용하는 보통의 작업에서 인스턴스당 데이터베이스별로 약 2MB의 디스크 공간을 계획합니다.|  
-|![확인란](../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "확인란")|개별 디렉터리 | 각 인스턴스에 대한 디렉터리를 만듭니다. 예를 들어 `MSSQLSERVER`의 SQL Server 인스턴스의 경우 *c:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\* 를 사용합니다. 이렇게 하면 파일 관리가 간소화됩니다.
-|![확인란](../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "확인란")|개별 폴더 |각 서비스에 대해 특정 폴더를 사용합니다. 예를 들어 지정된 인스턴스 이름에 대해 데이터베이스 엔진에 하나의 폴더를 설정합니다. Analysis Services 인스턴스에서 동일한 인스턴스 이름을 사용할 경우 Analysis Services에 별도 폴더를 만듭니다. 데이터베이스 엔진 및 Analysis Services 인스턴스를 모두 동일한 폴더에 구성하면 모든 로컬 감사에서 두 인스턴스를 모두 동일한 로그 파일에 기록하게 됩니다.| 
-|![확인란](../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "확인란")|SQL Server CEIP 서비스 로그온 계정에 사용 권한 부여|SQL Server CEIP 서비스 로그온 계정에 대해 **폴더 내용 목록**, **읽기** 및 **쓰기** 액세스를 사용하도록 설정합니다.|
+|디자인 결정|권장|  
+|-----------------|----------|  
+|공간 가용성 |약 10개의 데이터베이스를 사용하는 보통의 작업에서 인스턴스당 데이터베이스별로 약 2MB의 디스크 공간을 계획합니다.|  
+|개별 디렉터리 | 각 인스턴스에 대한 디렉터리를 만듭니다. 예를 들어 `MSSQLSERVER`의 SQL Server 인스턴스의 경우 *c:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\*를 사용합니다. 이렇게 하면 파일 관리가 간소화됩니다.
+|개별 폴더 |각 서비스에 대해 특정 폴더를 사용합니다. 예를 들어 지정된 인스턴스 이름에 대해 데이터베이스 엔진에 하나의 폴더를 설정합니다. Analysis Services 인스턴스에서 동일한 인스턴스 이름을 사용할 경우 Analysis Services에 별도 폴더를 만듭니다. 데이터베이스 엔진 및 Analysis Services 인스턴스를 모두 동일한 폴더에 구성하면 모든 로컬 감사에서 두 인스턴스를 모두 동일한 로그 파일에 기록하게 됩니다.| 
+|SQL Server CEIP 서비스 로그온 계정에 사용 권한 부여|SQL Server CEIP 서비스 로그온 계정에 대해 **폴더 내용 목록**, **읽기** 및 **쓰기** 액세스를 사용하도록 설정합니다.|
 
 
 ### <a name="grant-permissions-to-the-sql-server-ceip-service-logon-account"></a>SQL Server CEIP 서비스 로그온 계정에 사용 권한 부여
@@ -160,7 +160,7 @@ SQL Server CEIP 서비스 로그온 계정을 가져오려면 다음 단계를 �
     - Integration Services의 경우 
         - SQL 2016의 경우 *SQL Server Integration Services CEIP 서비스 13.0*을 사용합니다.
         - SQL 2017의 경우 *SQL Server Integration Services CEIP 서비스 14.0*을 사용합니다.
-    - SQL 2019의 경우 ‘SQL Server Integration Services CEIP 서비스 15.0’을 사용합니다. 
+    - SQL 2019의 경우 ‘SQL Server Integration Services CEIP 서비스 15.0’을 사용합니다.**
 
 1. 서비스를 마우스 오른쪽 단추로 클릭하고 다시 시작을 선택합니다. 
 
@@ -201,7 +201,7 @@ SQL Server CEIP 서비스 로그온 계정을 가져오려면 다음 단계를 �
 
 아래 나열된 열은 로컬 감사 파일 출력 순서를 나타냅니다. SHA 256을 사용하는 단방향 해시를 통해 아래의 다양한 열이 익명 값으로 처리됩니다.  
 
-| 속성 | Description | 예제 값
+| 이름 | 설명 | 예제 값
 |-------|--------| ----------|
 |instanceUniqueID| 익명화된 인스턴스 식별자 | 888770C4D5A8C6729F76F33D472B28883AE518C92E1999888B171A085059FD 
 |schemaVersion| SQLCEIP의 스키마 버전 |  3 
@@ -214,7 +214,7 @@ SQL Server CEIP 서비스 로그온 계정을 가져오려면 다음 단계를 �
 |querySetVersion | 쿼리 정의의 그룹 버전 | 1.0.0.0 
 |queryIdentifier | 추적 범주: (SQLServerXeQueries, SQLServerPeriodicQueries, SQLServerOneSettingsException) | SQLServerPeriodicQueries 
 |traceName | 쿼리 식별자 | SQLServerProperties.002 
-|데이터   | T-SQL 쿼리, XE 세션 또는 애플리케이션의 출력으로 queryIdentifier에서 수집된 정보 출력 |  [{"Collation": "SQL_Latin1_General_CP1_CI_AS","SqlFTinstalled": "0" "SqlIntSec": "1","IsSingleUser": "0","SqlFilestreamMode": "0","SqlPbInstalled": "0","SqlPbNodeRole": "","SqlVersionMajor": "13","SqlVersionMinor": "0","SqlVersionBuild": "2161","ProductBuildType": "","ProductLevel": "RTM","ProductUpdateLevel": "CU2","ProductUpdateReference": "KB3182270","ProductRevision": "3","SQLEditionId": "-1534726760","IsClustered": "0","IsHadrEnabled": "0","SqlAdvAInstalled": "0","PacketReceived": "1210","Version": "Microsoft SQL Server 2016(RTM-CU2) (KB3182270) - Windows Server 2012 R2 Datacenter 6.3 \u003cX64\u003e (Build 9600: ) (Hypervisor)\n"}]의 13.0.2161.3 (X64) \n\tSep  7 2016 14:24:16 \n\tCopyright(c) Microsoft Corporation\n\tStandard Edition(64비트)
+|데이터   | T-SQL 쿼리, XE 세션 또는 애플리케이션의 출력으로 queryIdentifier에서 수집된 정보 출력 |  [{"Collation": "SQL_Latin1_General_CP1_CI_AS","SqlFTinstalled": "0" "SqlIntSec": "1","IsSingleUser": "0","SqlFilestreamMode": "0","SqlPbInstalled": "0","SqlPbNodeRole": "","SqlVersionMajor": "13","SqlVersionMinor": "0","SqlVersionBuild": "2161","ProductBuildType": "","ProductLevel": "RTM","ProductUpdateLevel": "CU2","ProductUpdateReference": "KB3182270","ProductRevision": "3","SQLEditionId": "-1534726760","IsClustered": "0","IsHadrEnabled": "0","SqlAdvAInstalled": "0","PacketReceived": "1210","Version": "Microsoft SQL Server 2016 (RTM-CU2) (KB3182270) - 13.0.2161.3 (X64) \n\tSep  7 2016 14:24:16 \n\tCopyright (c) Microsoft Corporation\n\tStandard Edition (64-bit) on Windows Server 2012 R2 Datacenter 6.3 \u003cX64\u003e (Build 9600: ) (Hypervisor)\n"}],
 |Query| 해당하는 경우 데이터를 생성하는 queryIdentifier와 관련된 T-SQL 쿼리 정의.        이 구성 요소는 SQL Server CEIP 서비스에서 업로드되지 않습니다. 고객에 대한 참조로만 로컬 감사에 포함됩니다.| SELECT\n      SERVERPROPERTY(\u0027Collation\u0027) AS [Collation],\n      SERVERPROPERTY(\u0027IsFullTextInstalled\u0027) AS [SqlFTinstalled],\n      SERVERPROPERTY(\u0027IsIntegratedSecurityOnly\u0027) AS [SqlIntSec],\n      SERVERPROPERTY(\u0027IsSingleUser\u0027) AS [IsSingleUser],\n      SERVERPROPERTY (\u0027FileStreamEffectiveLevel\u0027) AS [SqlFilestreamMode],\n      SERVERPROPERTY(\u0027IsPolyBaseInstalled\u0027) AS [SqlPbInstalled],\n      SERVERPROPERTY(\u0027PolyBaseRole\u0027) AS [SqlPbNodeRole],\n      SERVERPROPERTY(\u0027ProductMajorVersion\u0027) AS [SqlVersionMajor],\n      SERVERPROPERTY(\u0027ProductMinorVersion\u0027) AS [SqlVersionMinor],\n      SERVERPROPERTY(\u0027ProductBuild\u0027) AS [SqlVersionBuild],\n      SERVERPROPERTY(\u0027ProductBuildType\u0027) AS ProductBuildType,\n      SERVERPROPERTY(\u0027ProductLevel\u0027) AS ProductLevel,\n      SERVERPROPERTY(\u0027ProductUpdateLevel\u0027) AS ProductUpdateLevel,\n      SERVERPROPERTY(\u0027ProductUpdateReference\u0027) AS ProductUpdateReference,\n      RIGHT(CAST(SERVERPROPERTY(\u0027ProductVersion\u0027) AS NVARCHAR(30)),CHARINDEX(\u0027.\u0027, REVERSE(CAST(SERVERPROPERTY(\u0027ProductVersion\u0027) AS NVARCHAR(30)))) - 1) AS ProductRevision,\n      SERVERPROPERTY(\u0027EditionID\u0027) AS SQLEditionId,\n      SERVERPROPERTY(\u0027IsClustered\u0027) AS IsClustered,\n      SERVERPROPERTY(\u0027IsHadrEnabled\u0027) AS IsHadrEnabled,\n      SERVERPROPERTY(\u0027IsAdvancedAnalyticsInstalled\u0027) AS [SqlAdvAInstalled],\n      @@PACK_RECEIVED AS PacketReceived,\n      @@VERSION AS Version
 |queryTimeInTicks | 다음 추적 범주가 포함된 쿼리를 실행하는 데 소요되는 기간: (SQLServerXeQueries, SQLServerPeriodicQueries) |  0 
  
@@ -379,5 +379,5 @@ FROM OPENJSON(@JSONFile)
 WHERE queryIdentifier = 'DatabaseProperties.001'
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 [SSMS 사용 현황 및 진단 데이터 수집에 대한 로컬 감사](../ssms/sql-server-management-studio-telemetry-ssms.md)

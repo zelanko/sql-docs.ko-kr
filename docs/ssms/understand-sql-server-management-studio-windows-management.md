@@ -1,4 +1,5 @@
 ---
+description: SQL Server Management Studio의 창 관리 이해
 title: SQL Server Management Studio의 창 관리 이해
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bebf8383-dcaf-466e-84f5-63b81c9cfe52
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ee287295ca0d1e9912f5bb2f349f868734bcbc5b
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 9f7c34e9904cef3ce3719873aa907a7d06c74d08
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86010804"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88315409"
 ---
 # <a name="understand-sql-server-management-studio-windows-management"></a>SQL Server Management Studio의 창 관리 이해
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

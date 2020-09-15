@@ -1,4 +1,5 @@
 ---
+description: 테이블 속성(Visual Database Tools)
 title: 테이블 속성
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ ms.assetid: cc392987-1aab-45f5-b5af-a26be53409bf
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: e5b8873d5387bf80159c8687310b2116f16874b9
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 2c82638c23213db41aece277812522eb40a52e66
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000743"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88312819"
 ---
 # <a name="table-properties-visual-database-tools"></a>테이블 속성(Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "86000743"
 **ID 범주**  
 확장하면 **이름**, **설명**및 **스키마**에 대한 속성이 표시됩니다.  
   
-**이름**  
+**Name**  
 테이블의 이름을 표시합니다. 이름을 편집하려면 입력란에 입력합니다.  
   
 > [!CAUTION]  
@@ -66,7 +67,7 @@ ms.locfileid: "86000743"
 테이블이 다른 위치에 복제되었는지 여부를 나타냅니다.  
   
 **기본 데이터 공간 사양 범주**  
-확장하면 **(데이터 공간 형식)** , **파일 그룹 또는 파티션 구성표 이름**및 **파티션 열 목록**에 대한 속성이 표시됩니다.  
+확장하면 **(데이터 공간 형식)**, **파일 그룹 또는 파티션 구성표 이름**및 **파티션 열 목록**에 대한 속성이 표시됩니다.  
   
 **(데이터 공간 형식)**  
 현재 테이블을 저장하는 데 파일 그룹을 사용했는지 분할 구성표를 사용했는지 여부를 표시합니다.  

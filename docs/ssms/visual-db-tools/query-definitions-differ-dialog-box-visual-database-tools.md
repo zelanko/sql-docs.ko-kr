@@ -1,4 +1,5 @@
 ---
+description: 쿼리 정의 다름 대화 상자(Visual Database Tools)
 title: 쿼리 정의 다름 대화 상자
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ ms.assetid: 90383473-2922-40e5-9682-3850849aa856
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 530f7dafce6d34bf38de2407a94f792234743b1c
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: a2517d930333f9a17e7746db29074456281ecf9d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004198"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88313859"
 ---
 # <a name="query-definitions-differ-dialog-box-visual-database-tools"></a>쿼리 정의 다름 대화 상자(Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -34,12 +35,12 @@ SQL 창에서 SQL 문을 입력하거나 편집한 다음 다른 창으로 이�
 -   SQL 문이 유효하지만 현재 사용 중인 데이터 연결에만 한정된 구문이 포함된 경우  
   
 > [!TIP]  
-> 문이 유효한지 여부는 **쿼리** 도구 모음의 **SQL 문 확인** 단추를 사용하여 확인할 수 있습니다.  
+>  문이 유효한지 여부는 **쿼리** 도구 모음의 **SQL 문 확인** 단추를 사용하여 확인할 수 있습니다.  
   
 이 대화 상자에는 SQL 문을 표현할 수 없는 이유가 표시되고 작업을 어떻게 진행할지 묻는 메시지가 나타납니다.  
   
 > [!NOTE]  
-> 다이어그램 창과 조건 창을 숨기면 **쿼리 정의 다름** 대화 상자가 나타나지 않습니다.  
+>  다이어그램 창과 조건 창을 숨기면 **쿼리 정의 다름** 대화 상자가 나타나지 않습니다.  
   
 ## <a name="options"></a>옵션  
 **무시 단추**  

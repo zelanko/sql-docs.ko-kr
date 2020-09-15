@@ -1,4 +1,5 @@
 ---
+description: 데이터베이스의 단계적 개발 문제(Visual Database Tools)
 title: 데이터베이스 단계적 개발 문제
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ ms.assetid: 1ed6ae10-d212-4ec2-8569-1b94ab1cba6d
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 4fbb7ae6e91f843b84277fc14ab45058a3fa7fac
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 88f2c0cff6bd33bf5327c7c919370015873700ec
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86010376"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88314629"
 ---
 # <a name="issues-of-database-evolution-visual-database-tools"></a>데이터베이스의 단계적 개발 문제(Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

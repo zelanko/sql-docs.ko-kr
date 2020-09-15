@@ -1,4 +1,5 @@
 ---
+description: 솔루션 및 프로젝트 관리 파일
 title: 솔루션 및 프로젝트 관리 파일
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: e19d2859-0b97-4727-ac27-c4c226d86b2f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bec1f5859162d2438d2db137ef0637fc4900b32b
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: d611776bc72c9c95786f40269acb069d56fa5a48
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000842"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88315849"
 ---
 # <a name="files-that-manage-solutions-and-projects"></a>솔루션 및 프로젝트 관리 파일
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -33,7 +34,7 @@ ms.locfileid: "86000842"
 ## <a name="management-studio-solution-files"></a>Management Studio 솔루션 파일  
 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]는 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull_md.md)] 또는 [!INCLUDE[msCoName](../../includes/msconame_md.md)] Visual Studio와 다른 파일 형식을 사용합니다. 이는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 솔루션을 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull_md.md)] 또는 Visual Studio에서 열 수 없다는 것을 의미합니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 솔루션 파일의 경우 솔루션 탐색기에서 파일을 관리하기 위한 그래픽 인터페이스를 표시할 수 있습니다.  
    
-|내선 번호|파일 형식|Description|만든 사람|  
+|내선 번호|파일 형식|설명|만든 사람|  
 |-------------|-------------|---------------|--------------|  
 |.ssmssln|[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 솔루션 개체|[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로젝트, 프로젝트 항목 및 솔루션의 디스크 위치에 대한 참조를 환경에 제공합니다.|[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]|  
   
@@ -55,6 +56,6 @@ ms.locfileid: "86000842"
 [기타 파일](../../ssms/solution/miscellaneous-files.md)  
 [솔루션 탐색기](../../ssms/solution/solution-explorer.md)  
 [솔루션&#40;SQL Server Management Studio&#41;](../../ssms/solution/solutions-sql-server-management-studio.md)  
-[프로젝트&#40;SQL Server Management Studio&#41;](../../ssms/solution/projects-sql-server-management-studio.md)  
-[솔루션 탐색기 원본 제어](https://msdn.microsoft.com/library/ms173879.aspx)  
+[프로젝트 &#40;SQL Server Management Studio&#41;](../../ssms/solution/projects-sql-server-management-studio.md)  
+[솔루션 탐색기 원본 제어](https://docs.microsoft.com/sql/ssms/solution/solution-explorer)  
   

@@ -1,4 +1,5 @@
 ---
+description: SQL Visual Database Tools)
 title: SQL 창
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ ms.assetid: dbabab18-0614-415b-a2ef-9bcd0d320d5c
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 5b9136e9f24447f57bc375a8ff9d8ec83ef17bd9
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: d40b0d19d401f6fa9e0f21e1158b1b029b2bffac
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008195"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88313558"
 ---
 # <a name="sql-pane-visual-database-tools"></a>SQL Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

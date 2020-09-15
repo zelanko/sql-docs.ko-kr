@@ -1,4 +1,5 @@
 ---
+description: 쿼리 결과 요약(Visual Database Tools)
 title: 쿼리 결과 요약
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ ms.assetid: c9e15350-ed57-4d95-814d-815fbebfd86b
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 184fd75abaa14e495307e2e710ab5434cf0a21b8
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 5bd8a8f85fd0d26f206f8c6c3b352eb883d3aa61
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008141"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88312279"
 ---
 # <a name="summarize-query-results-visual-database-tools"></a>쿼리 결과 요약(Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -40,7 +41,7 @@ GROUP BY, WHERE 및 HAVING 절을 사용하여 열을 그룹화하고 요약하�
 [사용자 지정 식을 사용하여 값 요약 또는 집계&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/summarize-or-aggregate-values-using-custom-expressions-visual-database-tools.md)  
 미리 정의된 절을 사용하는 대신 요약 또는 집계 식을 사용하는 방법에 대해 설명합니다.  
   
-## <a name="related-sections"></a>관련 섹션  
+## <a name="related-sections"></a>관련 단원  
 [쿼리 및 뷰 디자인 방법 도움말 항목&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
 쿼리 및 뷰 디자이너를 사용하는 방법과 관련된 항목에 대한 링크를 제공합니다.  
   

@@ -1,4 +1,5 @@
 ---
+description: 도구 상자 사용
 title: 도구 상자 사용
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 16733e39-4dc5-416f-ab10-c1d823f79d2d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1bf323be4adf219bcf00dbf48fb6c40433b3611d
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: f1337cc28109bf1fce2d65b9a0bd46a2302e01db
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009354"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88315259"
 ---
 # <a name="use-the-toolbox"></a>도구 상자 사용
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -28,7 +29,7 @@ ms.locfileid: "86009354"
   
 도구 상자의 항목은 탭이라는 섹션으로 그룹화됩니다. 다음은 일반 도구 상자 태스크의 참조 목록과 이에 대한 사용 방법입니다.  
   
-|수행할 작업|단계|  
+|대상|단계|  
 |------|-----------|  
 |도구 상자 열기|**보기** 메뉴에서 **도구 상자**를 클릭합니다.|  
 |도구 상자 자동으로 닫기|도구 상자를 엽니다. **창** 메뉴에서 **자동 숨기기**를 선택합니다.|  
