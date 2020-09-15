@@ -1,4 +1,5 @@
 ---
+description: 서버에 연결(연결 속성 페이지) 데이터베이스 엔진
 title: 서버에 연결(연결 속성 페이지) 데이터베이스 엔진
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,12 +14,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 08/14/2017
-ms.openlocfilehash: d1136d29ee8ee62648922f008042266a59632475
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: e5b01c75e099facc54c65ce5ef0d4c290ec79694
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87123074"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88370849"
 ---
 # <a name="connect-to-server-connection-properties-page-database-engine"></a>서버에 연결(연결 속성 페이지) 데이터베이스 엔진
 
@@ -68,7 +69,7 @@ ms.locfileid: "87123074"
 **옵션**  
 대화 상자를 변경하여 암호 저장과 같은 추가 서버 연결 옵션을 숨기려면 클릭합니다.  
   
-**Test**  
+**테스트**  
 [!INCLUDE[ssDE](../../includes/ssde_md.md)] 을 **등록된 서버**에 등록하는 경우 연결을 테스트하려면 클릭합니다.  
   
 **저장**  

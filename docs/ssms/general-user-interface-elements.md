@@ -1,4 +1,5 @@
 ---
+description: 일반 사용자 인터페이스 요소
 title: 일반 사용자 인터페이스 요소
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: 436d9afb-09c3-4838-9b54-4449a5178d0f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: aba6becbf3ef8ceb2804f068ab6e1d848728b366
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 68517b526b042ad2085cc539b90ff769bb72e712
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004758"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88371089"
 ---
 # <a name="general-user-interface-elements"></a>일반 사용자 인터페이스 요소
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 **편집기**, **속성** 창 및 **도구 상자**는 [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]의 기본 요소 중 일부입니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
-[정보 대화 상자](../ssms/about-dialog-box.md)  
+[대화 상자 정보](../ssms/about-dialog-box.md)  
 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 정보 및 이를 실행하는 컴퓨터에 대한 정보를 제공하는 대화 상자에 대해 설명합니다.  
   
 [SQL Server Management Studio 웹 브라우저](../ssms/sql-server-management-studio-web-browser.md)  

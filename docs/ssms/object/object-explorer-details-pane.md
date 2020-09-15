@@ -1,4 +1,5 @@
 ---
+description: 개체 탐색기 세부 정보 창
 title: 개체 탐색기 세부 정보 창
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: b963e3c2-dc9e-4d38-bd28-2e00fe9e0e47
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8c3a13ad090b378e00ed43d0319100ec8e8a0638
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: c9ee38de46d4bcd689c471eb9f32fa79df40fa68
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001915"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88370789"
 ---
 # <a name="object-explorer-details-pane"></a>개체 탐색기 세부 정보 창
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -58,7 +59,7 @@ ms.locfileid: "86001915"
 ### <a name="sorting"></a>정렬  
 열 머리글을 한 번 클릭하면 해당 열을 기준으로 정렬됩니다. 동일한 머리글을 다시 클릭하면 해당 열을 기준으로 역순으로 정렬됩니다. 각 사용자가 선택한 정렬 설정은 다른 개체 및 폴더에서도 그대로 유지되며 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 를 다시 시작해도 그대로 유지됩니다.  
   
-### <a name="filtering"></a>Filtering  
+### <a name="filtering"></a>필터링  
 개체 탐색기 정보에 표시되는 특정 개체 목록은 개체 탐색기 정보 도구 모음의 **필터** 아이콘을 사용하여 필터링할 수 있습니다. 필터링이 가능하면 아이콘이 활성화됩니다.  
   
 ### <a name="details-pane"></a>정보 창  

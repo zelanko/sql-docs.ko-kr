@@ -1,4 +1,5 @@
 ---
+description: 결과 창에서 새 행 추가(Visual Database Tools)
 title: 결과 창에서 행 새로 추가
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -17,12 +18,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: d504f1c3aefd598a65848e34b1bd37c79de2c280
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: c9e976858478d896a1057cc561a2e61a540d0cfe
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009326"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88370239"
 ---
 # <a name="add-new-rows-in-the-results-pane-visual-database-tools"></a>결과 창에서 새 행 추가(Visual Database Tools)
 
@@ -50,7 +51,7 @@ ms.locfileid: "86009326"
   
 4.  해당 행에서 포커스를 옮기면 행이 데이터베이스에 커밋됩니다.  
   
-행을 저장할 때 오류가 발생하면 쿼리 및 뷰 디자이너에 오류 메시지가 나타나고 편집 중이던 행으로 되돌아갑니다. 그런 다음 아래의 작업을 수행할 수 있습니다.  
+행을 저장할 때 오류가 발생하면 쿼리 및 뷰 디자이너에 오류 메시지가 나타나고 편집 중이던 행으로 되돌아갑니다. 그러면 다음을 수행할 수 있습니다.  
   
 -   해당 행을 다시 편집하여 오류를 해결합니다.  
   
