@@ -1,4 +1,5 @@
 ---
+description: setPacketSize 메서드(SQLServerDataSource)
 title: setPacketSize 메서드(SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 5d490edc-a223-4870-a838-784952497e5f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 297d37f6e0451e207d92dbc8a342b087c4d28895
-ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
+ms.openlocfilehash: 7c1005f1acb2572bbdf118d16c045fe91bd8ac79
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81219372"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458513"
 ---
 # <a name="setpacketsize-method-sqlserverdatasource"></a>setPacketSize 메서드(SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

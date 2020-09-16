@@ -1,4 +1,5 @@
 ---
+description: 솔루션에서 항목 복사
 title: 솔루션에서 항목 복사
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f95f084e-9f3d-4d15-90b4-1094ab2eda51
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 690d3f570d34461c876a812251ac9a25cf1bc7b5
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: bf19a35acb25b984563fe05f3991e20425c96948
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999586"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462978"
 ---
 # <a name="copy-items-in-a-solution"></a>솔루션에서 항목 복사
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

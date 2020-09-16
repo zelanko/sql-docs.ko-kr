@@ -1,4 +1,5 @@
 ---
+description: 검색 조건 지정(Visual Database Tools)
 title: 검색 기준 지정
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -22,12 +23,12 @@ ms.assetid: 25fb4e31-6dbf-4cf6-8e47-0dd0998c836c
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: cd39173c634ea9ab17486644745a631cad700ce0
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 6d106d951fae9af667d96bd4ffbf28a8bddc88fa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999253"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468322"
 ---
 # <a name="specify-search-criteria-visual-database-tools"></a>검색 조건 지정(Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -75,7 +76,7 @@ AND 및 OR 연산자를 사용하는 데 필요한 기본 개념을 설명합니
 [하위 쿼리 만들기&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-subqueries-visual-database-tools.md)  
 하위 쿼리 또는 중첩된 쿼리를 만드는 방법에 대해 설명합니다.  
   
-## <a name="related-sections"></a>관련 섹션  
+## <a name="related-sections"></a>관련 단원  
 [쿼리 관련 기본 작업 수행&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
 가장 일반적인 쿼리 태스크를 수행하는 단계와 관련된 항목의 링크를 제공합니다.  
   

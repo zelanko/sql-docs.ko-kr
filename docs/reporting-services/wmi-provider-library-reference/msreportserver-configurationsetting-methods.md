@@ -1,4 +1,5 @@
 ---
+description: MSReportServer_ConfigurationSetting 메서드
 title: MSReportServer_ConfigurationSetting 메서드 | Microsoft Docs
 ms.date: 03/20/2017
 ms.prod: reporting-services
@@ -16,19 +17,19 @@ helpviewer_keywords:
 ms.assetid: a08c2476-5b8e-4792-94da-1360fe231c6e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b10f33a795a1c91db07f6cc97b091c8f68b34475
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 7b51e79a99f47886627f6479f58b7a2980629d88
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632497"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472611"
 ---
 # <a name="msreportserver_configurationsetting-methods"></a>MSReportServer_ConfigurationSetting 메서드
   보고서 서버 WMI 공급자의 MSReportServer_ConfigurationSetting 클래스는 다음과 같은 공용 메서드를 제공 합니다.  
   
 ## <a name="public-methods"></a>Public 메서드  
   
-|||  
+|메서드|설명|  
 |-|-|  
 |[BackupEncryptionKey](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-backupencryptionkey.md)|인스턴스에 대한 암호화 키를 백업합니다. 암호화 키는 암호로 암호화되어 저장됩니다.|  
 |[CreateSSLCertificateBinding 메서드&#40;WMI MSReportServer_ConfigurationSetting&#41;](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-createsslcertificatebinding.md)|TLS/SSL 인증서 바인딩을 만듭니다.|  

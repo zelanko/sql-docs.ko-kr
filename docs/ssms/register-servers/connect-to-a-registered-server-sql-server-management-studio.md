@@ -1,4 +1,5 @@
 ---
+description: 등록된 서버에 연결(SQL Server Management Studio)
 title: 등록된 서버에 연결
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,12 +14,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: fb639343a9037e57db69a7a96349d045c30fd6ea
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: c684e2fd784c6b12c2512f2ceef59946ede90101
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001774"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468573"
 ---
 # <a name="connect-to-a-registered-server-sql-server-management-studio"></a>등록된 서버에 연결(SQL Server Management Studio)
 

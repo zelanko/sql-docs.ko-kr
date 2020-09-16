@@ -1,4 +1,5 @@
 ---
+description: SQLServerSavepoint 멤버
 title: SQLServerSavepoint 멤버 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 3aef1550-3798-4095-bd1c-1a4be09804e8
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e3adc8469720ec87343325afd552b5630d3c3b39
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: c80da4d3b87c379bda298880ae1ac09c300f76e7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80927026"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462615"
 ---
 # <a name="sqlserversavepoint-members"></a>SQLServerSavepoint 멤버
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -24,7 +25,7 @@ ms.locfileid: "80927026"
   
 ## <a name="constructors"></a>생성자  
   
-|속성|Description|  
+|속성|설명|  
 |----------|-----------------|  
 |[SQLServerSavepoint(SQLServerConnection, java.lang.StringName)](../../../connect/jdbc/reference/sqlserversavepoint-constructor-sqlserverconnection-java-lang-stringname.md)|지정된 연결 및 이름에 따라 [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) 클래스의 새 인스턴스를 초기화합니다.|  
   
@@ -36,7 +37,7 @@ ms.locfileid: "80927026"
   
 ## <a name="methods"></a>메서드  
   
-|속성|Description|  
+|속성|설명|  
 |----------|-----------------|  
 |[getLabel](../../../connect/jdbc/reference/getlabel-method-sqlserversavepoint.md)|저장점 레이블의 이름을 가져옵니다.|  
 |[getSavepointId](../../../connect/jdbc/reference/getsavepointid-method-sqlserversavepoint.md)|저장점의 ID를 가져옵니다.|  

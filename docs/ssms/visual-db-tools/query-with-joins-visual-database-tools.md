@@ -1,4 +1,5 @@
 ---
+description: 조인을 사용한 쿼리(Visual Database Tools)
 title: 조인 관련 쿼리
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -18,12 +19,12 @@ ms.assetid: 8f068207-d777-4e64-8c4c-d821f0ddb450
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 06934b26d956d126257e531ba62a163e64901c31
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: e7b283b583560af392394ab1a057d27816efe928
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999491"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462734"
 ---
 # <a name="query-with-joins-visual-database-tools"></a>조인을 사용한 쿼리(Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -62,7 +63,7 @@ ms.locfileid: "85999491"
 [조인 속성 보기&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/view-join-properties-visual-database-tools.md)  
 조인의 속성을 보는 방법에 대해 설명합니다.  
   
-## <a name="related-sections"></a>관련 섹션  
+## <a name="related-sections"></a>관련 단원  
 [쿼리 형식&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/types-of-queries-visual-database-tools.md)  
 지원되는 쿼리 형식에 대해 설명하는 항목의 링크를 제공합니다.  
   

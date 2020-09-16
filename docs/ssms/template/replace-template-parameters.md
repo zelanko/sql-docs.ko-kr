@@ -1,4 +1,5 @@
 ---
+description: 템플릿 매개 변수 바꾸기
 title: 템플릿 매개 변수 바꾸기
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1234aa14-3464-4a3e-922a-5cfb8fb23627
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4f04595d222f037e875e85b1cb079cef435e1404
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 5daa809acf191527b72a6ea65b666b396dd51b68
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001542"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468532"
 ---
 # <a name="replace-template-parameters"></a>템플릿 매개 변수 바꾸기
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -43,6 +44,6 @@ ms.locfileid: "86001542"
 3.  **확인** 을 클릭하여 **템플릿 매개 변수 바꾸기** 대화 상자를 닫고 쿼리 편집기에서 스크립트를 수정합니다.  
   
 ## <a name="see-also"></a>참고 항목  
-[템플릿 탐색기](../../ssms/template/template-explorer.md)  
+[Template Explorer](../../ssms/template/template-explorer.md)  
 [템플릿 열기](../../ssms/template/open-a-template.md)  
   

@@ -1,4 +1,5 @@
 ---
+description: SQLServerBlob 멤버
 title: SQLServerBlob 멤버 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 90e48555-ea83-4a90-80a3-51bc685015ec
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 17f51e9b0ebe03da7772bd07de4ad0d525826050
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 223ed92379cce4baf294e7cdf6b16654aaa8fd49
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80927259"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462690"
 ---
 # <a name="sqlserverblob-members"></a>SQLServerBlob 멤버
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -24,7 +25,7 @@ ms.locfileid: "80927259"
   
 ## <a name="constructors"></a>생성자  
   
-|속성|Description|  
+|속성|설명|  
 |----------|-----------------|  
 |[SQLServerBlob](../../../connect/jdbc/reference/sqlserverblob-constructor-sqlserverconnection-byte.md)|SQLServerBlob 클래스의 새 인스턴스를 초기화합니다.|  
   
@@ -36,7 +37,7 @@ ms.locfileid: "80927259"
   
 ## <a name="methods"></a>메서드  
   
-|속성|Description|  
+|속성|설명|  
 |----------|-----------------|  
 |[free](../../../connect/jdbc/reference/free-method-sqlserverblob.md)|이 메서드는 BLOB 개체 및 이 개체가 보유한 리소스를 해제합니다.|  
 |[getBinaryStream](../../../connect/jdbc/reference/getbinarystream-method-sqlserverblob.md)|BLOB에서 데이터를 읽기 위한 입력 스트림을 반환합니다.|  

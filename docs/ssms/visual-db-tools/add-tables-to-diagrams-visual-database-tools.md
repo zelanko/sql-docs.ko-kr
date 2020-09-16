@@ -1,4 +1,5 @@
 ---
+description: 다이어그램에 테이블 추가(Visual Database Tools)
 title: 다이어그램에 테이블 추가
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,12 +14,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: da818756c2239d460af2d18b3050e9681aff2698
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 5aa8b90a1a6d3b03ec7a8c091d2f17cbb669823f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007443"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462935"
 ---
 # <a name="add-tables-to-diagrams-visual-database-tools"></a>다이어그램에 테이블 추가(Visual Database Tools)
 

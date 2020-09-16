@@ -1,4 +1,5 @@
 ---
+description: sqlsrv_send_stream_data
 title: sqlsrv_send_stream_data | Microsoft Docs
 ms.custom: ''
 ms.date: 02/28/2019
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 826c2d45-694f-42b8-b12b-cd4523a31883
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fe3207810e44929b392a385f481dbb52da57ae6a
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 5adff7f48cc08bfd75e6d46f6f8a9a5f66e7c8cd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80927230"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466704"
 ---
 # <a name="sqlsrv_send_stream_data"></a>sqlsrv_send_stream_data
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -42,7 +43,7 @@ sqlsrv_send_stream_data( resource $stmt)
 #### <a name="parameters"></a>매개 변수  
 *$stmt*: 실행된 문에 해당하는 문 리소스입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
 부울: 보낼 데이터가 더 있는 경우 **true** 입니다. 그렇지 않으면 **false**입니다.  
   
 ## <a name="example"></a>예제  

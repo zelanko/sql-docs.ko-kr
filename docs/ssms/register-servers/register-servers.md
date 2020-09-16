@@ -1,4 +1,5 @@
 ---
+description: 서버 등록
 title: 서버 등록
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -19,12 +20,12 @@ ms.manageR: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 4331f92cb0d20d967625c26445ea3fd54e25eafc
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: dd50ab7a771dd0cd479716c94fa26110198822b0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007435"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468553"
 ---
 # <a name="register-servers"></a>서버 등록
 

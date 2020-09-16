@@ -1,4 +1,5 @@
 ---
+description: 쿼리 및 뷰 디자이너 도구(Visual Database Tools)
 title: 쿼리 및 뷰 디자이너 도구
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -22,12 +23,12 @@ ms.assetid: 12e4b5a5-b793-4b6c-a0e5-c450c49bf26f
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 63418132e48a79c7a26cfc3dbc5133311207c27e
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: aa6bb9fc624cc3451ececdcc3f1ca0a98ad8687e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004207"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468356"
 ---
 # <a name="query-and-view-designer-tools-visual-database-tools"></a>쿼리 및 뷰 디자이너 도구(Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -1,4 +1,5 @@
 ---
+description: 데이터베이스 다이어그램의 이미지를 클립보드로 복사(Visual Database Tools)
 title: 데이터베이스 다이어그램 이미지를 클립보드로 복사
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ ms.assetid: 7fa6b709-e023-49c8-8f0d-b4476402cd73
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 36d23248776e614ea3185ca614beea5f124dd8e3
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: fc97c5a15ef25724a6b377007e727e5c26a6cf49
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005144"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462930"
 ---
 # <a name="copy-an-image-of-a-database-diagram-to-the-clipboard-visual-database-tools"></a>데이터베이스 다이어그램의 이미지를 클립보드로 복사(Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

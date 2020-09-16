@@ -1,4 +1,5 @@
 ---
+description: 쿼리 관련 기본 작업 수행(Visual Database Tools)
 title: 쿼리 관련 기본 작업 수행
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ ms.assetid: 88dbdbfe-bc60-4e11-b338-dbe7f26566d5
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 95811ef98c430bf5b2b0373ad4dcd7a862351b11
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 33488c5a709ca63bf42107ba0476211036735d36
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003210"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462756"
 ---
 # <a name="perform-basic-operations-with-queries-visual-database-tools"></a>쿼리 관련 기본 작업 수행(Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -95,7 +96,7 @@ SQL 주석, 매개 변수 목록, Top 사양 등과 같은 속성을 표시하�
 [쿼리 속성&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/query-properties-visual-database-tools.md)  
 쿼리에 사용할 수 있는 속성에 대해 설명합니다.  
   
-## <a name="related-sections"></a>관련 섹션  
+## <a name="related-sections"></a>관련 단원  
 [쿼리 형식&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/types-of-queries-visual-database-tools.md)  
 쿼리 및 뷰 디자이너에서 작업에 사용할 수 있는 쿼리와 관련된 항목을 나열합니다.  
   

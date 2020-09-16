@@ -1,4 +1,5 @@
 ---
+description: AND에 우선 순위가 있는 조건 조합(Visual Database Tools)
 title: AND에 우선 순위가 있는 경우 조건 조합
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -16,12 +17,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: e5f7932ecfedaace610bb9adc1e76825c8797e0a
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 6ad323d3efdbb760b315c16d94752d8c658fdab5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005161"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468484"
 ---
 # <a name="combine-conditions-when-and-has-precedence-visual-database-tools"></a>AND에 우선 순위가 있는 조건 조합(Visual Database Tools)
 
@@ -65,4 +66,4 @@ AND를 사용하여 조건을 조합하려면 각 조건에 한 번씩, 즉 쿼�
 [OR에 우선 순위가 있는 경우 조건 결합](../../ssms/visual-db-tools/combine-conditions-when-or-has-precedence-visual-database-tools.md)  
 [조건 창의 검색 조건 결합 규칙](../../ssms/visual-db-tools/conventions-combine-search-conditions-in-criteria-pane-visual-db-tools.md)  
 [검색 값 입력 규칙](../../ssms/visual-db-tools/rules-for-entering-search-values-visual-database-tools.md)  
-[검색 조건 지정](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)
+[검색 기준 지정](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)

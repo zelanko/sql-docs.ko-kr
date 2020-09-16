@@ -1,4 +1,5 @@
 ---
+description: sqlsrv_rows_affected
 title: sqlsrv_rows_affected | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6f43fbfc-fc92-449b-82d0-33fa780e8f09
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 06c661c0ab5075082df0c1753f7fcc17942e9ffa
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 77581d5effb8454f7ef34b38b5994f7d459f46e9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928545"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466720"
 ---
 # <a name="sqlsrv_rows_affected"></a>sqlsrv_rows_affected
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -38,7 +39,7 @@ sqlsrv_rows_affected( resource $stmt)
 #### <a name="parameters"></a>매개 변수  
 *$stmt*: 실행된 문에 해당하는 문 리소스입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
 마지막으로 실행된 문에서 수정된 행 수를 나타내는 정수입니다. 수정된 행이 없는 경우 0이 반환됩니다. 수정된 행 수에 대한 정보가 없는 경우 -1이 반환됩니다. 수정된 행 수를 검색할 때 오류가 발생한 경우 **false** 가 반환됩니다.  
   
 ## <a name="example"></a>예제  

@@ -1,4 +1,5 @@
 ---
+description: 색 대화 상자(Visual Database Tools)
 title: 색 대화 상자
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ ms.assetid: 89a19608-f24c-41fa-a1a9-6e2e2cd952fa
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 6bea7a1e8a660bd9f33112e1bbf8dc737621a8ef
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 98ac865345b0d5e71f1823fcb49d48c729dcb160
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003844"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468501"
 ---
 # <a name="color-dialog-box-visual-database-tools"></a>색 대화 상자(Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -39,7 +40,7 @@ ms.locfileid: "86003844"
 명도 막대  
 슬라이드를 끌어 색의 명도 또는 상대적 밝은/어두운 정도를 변경합니다. 해당 숫자 값이 **명도**에 나타납니다.  
   
-**Color**  
+**색상**  
 현재 선택한 색을 표시합니다.  
   
 **Hue**  
@@ -51,13 +52,13 @@ ms.locfileid: "86003844"
 **명도**  
 선택한 색의 명도(밝은/어두운 정도)입니다.  
   
-**빨강**  
+**Red**  
 빨강 구성 요소의 숫자 값으로 0에서 255까지 다양합니다.  
   
-**녹색**  
+**Green**  
 녹색 구성 요소의 숫자 값으로 0에서 255까지 다양합니다.  
   
-**파랑**  
+**Blue**  
 파랑 구성 요소의 숫자 값으로 0에서 255까지 다양합니다.  
   
 **사용자 지정 색에 추가**  

@@ -1,4 +1,5 @@
 ---
+description: unwrap 메서드(SQLServerDataSource)
 title: unwrap 메서드(SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: eb8abe29-f3ec-4752-a590-1d5dc3e48f08
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 5ad619a07e1eb10a74acd9ab5769baa7f0d1c653
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: e48b55729e1c459126567fab4bcc35740201e295
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926110"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462381"
 ---
 # <a name="unwrap-method-sqlserverdatasource"></a>unwrap 메서드(SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -34,7 +35,7 @@ public <T> T unwrap(Class<T> iface)
   
  인터페이스를 정의하는 T 형식의 클래스입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
  지정된 인터페이스를 구현하는 개체입니다.  
   
 ## <a name="exceptions"></a>예외  
@@ -47,7 +48,7 @@ public <T> T unwrap(Class<T> iface)
   
  이 메서드가 호출되면 개체가 [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md) 클래스로 래핑 해제됩니다.  
   
- 자세한 내용은 [래퍼와 인터페이스](../../../connect/jdbc/wrappers-and-interfaces.md)를 참조하세요.  
+ 자세한 내용은 [래퍼 및 인터페이스](../../../connect/jdbc/wrappers-and-interfaces.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [isWrapperFor 메서드(SQLServerDataSource)](../../../connect/jdbc/reference/iswrapperfor-method-sqlserverdatasource.md)   

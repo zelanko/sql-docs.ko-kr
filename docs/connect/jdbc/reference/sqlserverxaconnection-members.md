@@ -1,4 +1,5 @@
 ---
+description: SQLServerXAConnection 멤버
 title: SQLServerXAConnection 멤버 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -8,14 +9,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 4b61dabd-369b-460c-8450-9fe424f76541
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 85d106ad25c1823f873ade24800e44987d78a2f7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 9b0c1f613cfa44859c51bf4429939e93c157d75a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67970258"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462545"
 ---
 # <a name="sqlserverxaconnection-members"></a>SQLServerXAConnection 멤버
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -33,7 +34,7 @@ ms.locfileid: "67970258"
   
 ## <a name="methods"></a>메서드  
   
-|속성|Description|  
+|속성|설명|  
 |----------|-----------------|  
 |[addConnectionEventListener](../../../connect/jdbc/reference/addconnectioneventlistener-method-sqlserverpooledconnection.md)|[SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md)에서 상속되며, 지정된 이벤트 수신기를 등록하여 이 Connection 개체에서 이벤트가 발생할 때 해당 수신기가 알림을 받도록 합니다.|  
 |[close](../../../connect/jdbc/reference/close-method-sqlserverpooledconnection.md)|[SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md)에서 상속되며, 이 Connection 개체가 나타내는 실제 연결을 닫습니다.|  

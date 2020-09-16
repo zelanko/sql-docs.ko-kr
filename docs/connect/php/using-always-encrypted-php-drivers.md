@@ -1,4 +1,5 @@
 ---
+description: SQL Server용 PHP 드라이버와 함께 Always Encrypted 사용
 title: SQL Server용 PHP 드라이버와 함께 Always Encrypted 사용 | Microsoft Docs
 ms.date: 12/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.reviewer: v-kaywon
 ms.author: v-daenge
 author: David-Engel
 manager: v-mabarw
-ms.openlocfilehash: 81119187f1f00814e5b50dc97e41a506fe94131e
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 7f0e4ece6031f4aba769a9b9fee04e249ef553e4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926826"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466657"
 ---
 # <a name="using-always-encrypted-with-the-php-drivers-for-sql-server"></a>SQL Server용 PHP 드라이버와 함께 Always Encrypted 사용
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -256,7 +257,7 @@ ODBC Driver for SQL Server와 달리, 문/쿼리 수준에서 Always Encrypted�
 
 CEK(열 암호화 키)의 암호 해독을 위한 열 마스터 키 저장소 호출 수를 줄이기 위해 드라이버는 일반 텍스트 CEK를 메모리에 캐시합니다. 데이터베이스 메타데이터에서 ECEK(암호화된 CEK)를 받은 후 ODBC 드라이버는 먼저 캐시에 있는 암호화된 키 값에 해당하는 일반 텍스트 CEK를 찾으려고 합니다. 캐시에서 해당하는 일반 텍스트 CEK를 찾을 수 없는 경우에만 드라이버에서 CMK가 포함된 키 저장소를 호출합니다.
 
-참고: ODBC Driver for SQL Server에서는 2시간 제한이 경과하면 캐시에서 항목이 제거됩니다. 즉, 드라이버는 지정된 ECEK에 대해 애플리케이션 수명이나 2시간마다 중 더 짧은 시간에 한 번만 키 저장소에 연결합니다.
+참고: SQL Server용 ODBC 드라이버에서는 2시간 제한이 경과하면 캐시의 항목이 제거됩니다. 즉, 드라이버는 지정된 ECEK에 대해 애플리케이션 수명이나 2시간마다 중 더 짧은 시간에 한 번만 키 저장소에 연결합니다.
 
 ## <a name="working-with-column-master-key-stores"></a>열 마스터 키 저장소 작업
 

@@ -1,4 +1,5 @@
 ---
+description: sqlsrv_server_info
 title: sqlsrv_server_info | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: ef6fe2b7-d267-4379-b948-5626c4684367
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0831addcaec34e24d12f3b775125f7414e302b8f
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 7eaf032b121dc3e93cb13f001cbebd3eaa75b796
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928536"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466691"
 ---
 # <a name="sqlsrv_server_info"></a>sqlsrv_server_info
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -38,14 +39,14 @@ sqlsrv_server_info( resource $conn)
 #### <a name="parameters"></a>매개 변수  
 *$conn*: 클라이언트 및 서버를 연결하는 연결 리소스입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
 다음 키를 사용하는 결합형 배열입니다.  
   
 |키|Description|  
 |-------|---------------|  
 |CurrentDatabase|현재 대상이 되는 데이터베이스입니다.|  
 |SQLServerVersion|SQL Server의 버전입니다.|  
-|SQLServerName|서버 이름|  
+|SQLServerName|서버의 이름입니다.|  
   
 ## <a name="example"></a>예제  
 다음 예제에서는 명령줄에서 예제가 실행될 때 서버 정보를 콘솔에 씁니다.  

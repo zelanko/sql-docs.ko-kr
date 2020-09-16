@@ -1,4 +1,5 @@
 ---
+description: 등록된 서버 정보 가져오기(SQL Server Management Studio)
 title: 등록된 서버 정보 가져오기
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -16,12 +17,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 77ae5807a5a509ecfa83973fe07d34fed1f4dbd3
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: ed7c74f225998a7556ece2d6f62bf5ce6e47d7eb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011825"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463002"
 ---
 # <a name="import-registered-server-information-sql-server-management-studio"></a>등록된 서버 정보 가져오기(SQL Server Management Studio)
 
@@ -43,7 +44,7 @@ ms.locfileid: "86011825"
 3.  **등록된 서버 가져오기** 대화 상자에서 가져오려는 등록된 서버 파일을 선택한 다음 **확인**을 클릭합니다.  
   
      **파일 가져오기**  
-     입력란에 가져올 파일 이름을 입력하거나 찾아보기 단추( **...** )를 클릭하여 클라이언트 컴퓨터에서 가져올 파일을 찾습니다. 기존 파일을 선택하면 등록된 서버 정보가 파일에 추가됩니다. 이전에 내보낸 등록된 서버 파일만 가져올 수 있습니다. 등록된 서버 파일의 확장자는 .regsrvr입니다.  
+     입력란에 가져올 파일 이름을 입력하거나 찾아보기 단추(**...**)를 클릭하여 클라이언트 컴퓨터에서 가져올 파일을 찾습니다. 기존 파일을 선택하면 등록된 서버 정보가 파일에 추가됩니다. 이전에 내보낸 등록된 서버 파일만 가져올 수 있습니다. 등록된 서버 파일의 확장자는 .regsrvr입니다.  
   
      **가져올 서버 그룹을 선택하세요.**  
      파일의 등록된 서버 항목을 가져올 루트 노드나 특정 서버 그룹을 선택합니다. 등록된 모든 서버, 특정 서버 그룹에 속한 등록된 서버 또는 등록된 단일 서버를 내보내기 파일로 가져올 수 있습니다. 가져오기 기능은 재귀적입니다. 예를 들어 서버 그룹 A에는 서버 그룹 B가, 서버 그룹 B에는 서버 그룹 C와 D가 포함된 경우 서버 그룹 A를 가져오면 A, B, C, D의 모든 항목이 내보내집니다.  

@@ -1,4 +1,5 @@
 ---
+description: 검색 값 입력 규칙(Visual Database Tools)
 title: 검색 값 입력 규칙
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -20,12 +21,12 @@ ms.assetid: 3c8134b7-83f4-41b4-99c8-e3949a685ff5
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 469afd2894737fd0a1f6150650fce3fa08fe981c
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 6943034cbad433254c576d68a631d45be470b49c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009275"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462726"
 ---
 # <a name="rules-for-entering-search-values-visual-database-tools"></a>검색 값 입력 규칙(Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -95,7 +96,7 @@ ms.locfileid: "86009275"
   
 다음과 같은 날짜 형식을 쿼리 및 뷰 디자이너에서 사용할 수 있습니다.  
   
--   **로캘 관련** **Windows 국가별 설정 속성** 대화 상자에 지정된 날짜 형식  
+-   **로캘 관련****Windows 국가별 설정 속성** 대화 상자에 지정된 날짜 형식  
   
 -   **데이터베이스 관련** 해당 데이터베이스에서 인식하는 모든 형식  
   

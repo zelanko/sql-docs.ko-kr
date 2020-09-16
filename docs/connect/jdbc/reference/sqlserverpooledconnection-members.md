@@ -1,4 +1,5 @@
 ---
+description: SQLServerPooledConnection 멤버
 title: SQLServerPooledConnection 멤버 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 8aa2b24d-68ed-488f-ad33-e2c688f945cc
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 25371fdc7146d74a2796bf06963592515fd400a1
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 01d38c05ff999c808d4d3f2b574a739acbb9efc5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80923470"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472127"
 ---
 # <a name="sqlserverpooledconnection-members"></a>SQLServerPooledConnection 멤버
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -33,7 +34,7 @@ ms.locfileid: "80923470"
   
 ## <a name="methods"></a>메서드  
   
-|속성|Description|  
+|속성|설명|  
 |----------|-----------------|  
 |[addConnectionEventListener](../../../connect/jdbc/reference/addconnectioneventlistener-method-sqlserverpooledconnection.md)|지정된 이벤트 수신기를 등록하여 이 [SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md) 개체에서 이벤트가 발생할 때 해당 수신기가 알림을 받도록 합니다.|  
 |[close](../../../connect/jdbc/reference/close-method-sqlserverpooledconnection.md)|이 [SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md) 개체가 나타내는 실제 연결을 닫습니다.|  

@@ -1,4 +1,5 @@
 ---
+description: unwrap 메서드(SQLServerCallableStatement)
 title: unwrap 메서드(SQLServerCallableStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -8,14 +9,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: cbbf2728-b8c8-4c35-875a-6e967c8285dc
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0dc8ddf82859b8bf47853a3d72a7461567388b87
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c2909870e0aaa5bdd7db86a567fb11915ede2428
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67995200"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462408"
 ---
 # <a name="unwrap-method-sqlservercallablestatement"></a>unwrap 메서드(SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -34,7 +35,7 @@ public <T> T unwrap(Class<T> iface)
   
  인터페이스를 정의하는 **T** 형식의 클래스입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
  지정된 인터페이스를 구현하는 개체입니다.  
   
 ## <a name="exceptions"></a>예외  
@@ -47,7 +48,7 @@ public <T> T unwrap(Class<T> iface)
   
  [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)는 [ISQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)에서 확장된 [ISQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)를 구현합니다. 이 메서드가 호출되면 개체가 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md), [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 및 [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md) 클래스로 래핑 해제됩니다.  
   
- 자세한 내용은 [래퍼와 인터페이스](../../../connect/jdbc/wrappers-and-interfaces.md)를 참조하세요.  
+ 자세한 내용은 [래퍼 및 인터페이스](../../../connect/jdbc/wrappers-and-interfaces.md)를 참조하세요.  
   
  다음 코드 예제에서는 isWrapperFor 및 unwrap 메서드를 사용하여 드라이버 확장을 검사하고 [setResponseBuffering](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) 및 [getResponseBuffering](../../../connect/jdbc/reference/getresponsebuffering-method-sqlserverstatement.md) 등의 공급 업체별 메서드를 호출하는 방법을 보여줍니다.  
   

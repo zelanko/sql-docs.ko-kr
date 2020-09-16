@@ -1,4 +1,5 @@
 ---
+description: sqlsrv_free_stmt
 title: sqlsrv_free_stmt | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,14 +15,14 @@ helpviewer_keywords:
 - sqlsrv_free_stmt
 - API Reference, sqlsrv_free_stmt
 ms.assetid: 3c71f432-36ad-41e1-8ac7-587c82539448
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a6f062d1237cfc92c5697fa005b3f78268aa48f6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 8984bd68e56e0ccf4d8bb29f54da9c8369812a20
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67992721"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466747"
 ---
 # <a name="sqlsrv_free_stmt"></a>sqlsrv_free_stmt
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -38,7 +39,7 @@ sqlsrv_free_stmt( resource $stmt)
 #### <a name="parameters"></a>매개 변수  
 *$stmt*: 닫을 문입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
 잘못된 매개 변수를 사용하여 함수를 호출하지 않는 한 부울 값 **true** 입니다. 잘못된 매개 변수를 사용하여 함수를 호출하는 경우에는 **false** 가 반환됩니다.  
   
 > [!NOTE]  

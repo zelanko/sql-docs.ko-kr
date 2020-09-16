@@ -1,4 +1,5 @@
 ---
+description: setObject 메서드(SQLServerPreparedStatement)
 title: setObject 메서드(SQLServerPreparedStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 93a2b22c-82b4-48c7-a428-369ebe98a372
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 831225d105335826994c7802659d1e5bf69b8800
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 2edfcc51f704dee93c5d14490179b65b55907ddf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920792"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458544"
 ---
 # <a name="setobject-method-sqlserverpreparedstatement"></a>setObject 메서드(SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -33,7 +34,7 @@ ms.locfileid: "80920792"
   
 ## <a name="overload-list"></a>오버로드 목록  
   
-|속성|Description|  
+|이름|설명|  
 |----------|-----------------|  
 |[setObject(int, java.lang.Object)](../../../connect/jdbc/reference/setobject-method-int-java-lang-object.md)|지정된 개체를 사용하여 지정된 매개 변수의 값을 설정합니다.|  
 |[setObject(int, java.lang.Object, int)](../../../connect/jdbc/reference/setobject-method-int-java-lang-object-int.md)|지정된 개체와 대상 형식을 사용하여 지정된 매개 변수의 값을 설정합니다.|  

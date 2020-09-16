@@ -1,4 +1,5 @@
 ---
+description: 데이터 마이그레이션 일시 중지 및 다시 시작(Stretch Database)
 title: 데이터 마이그레이션 일시 중지 및 다시 시작
 ms.date: 06/14/2016
 ms.service: sql-server-stretch-database
@@ -12,15 +13,15 @@ ms.assetid: 65d6a990-b295-41b2-97f9-7b6bf3000e4d
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: b853d764d1cf7a6aa7252aa181b70dbcccc265fe
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5146c258c099c487643ca343ecd06402fc623c84
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73844538"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469005"
 ---
 # <a name="pause-and-resume-data-migration-stretch-database"></a>데이터 마이그레이션 일시 중지 및 다시 시작(Stretch Database)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
 
 
   Azure로의 데이터 마이그레이션을 일시 중지하거나 다시 시작하려면 SQL Server Management Studio에서 **스트레치** 를 선택한 다음 데이터 마이그레이션을 일시 중지하려면 **일시 중지** 를 선택하고 데이터 마이그레이션을 다시 시작하려면 **다시 시작** 을 선택합니다. Transact-SQL을 사용하여 데이터 마이그레이션을 일시 중지하거나 다시 시작할 수도 있습니다.  

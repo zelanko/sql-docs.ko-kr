@@ -1,4 +1,5 @@
 ---
+description: 다이어그램의 글꼴 색, 크기 및 스타일 변경(Visual Database Tools)
 title: 다이어그램의 글꼴 색, 크기 및 스타일 변경
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -14,12 +15,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: 1d8852d6e6f33dd6039e6350d19cd523f383bec8
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 7fd5a2f8dd1b40bbacb9967e8a9ce3b52e4ad3ed
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007648"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462917"
 ---
 # <a name="change-the-font-color-size-and-style-in-diagrams-visual-database-tools"></a>다이어그램의 글꼴 색, 크기 및 스타일 변경(Visual Database Tools)
 

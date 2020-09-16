@@ -1,4 +1,5 @@
 ---
+description: 데이터 업데이트(Microsoft Drivers for PHP for SQL Server)
 title: 데이터 업데이트(Microsoft Drivers for PHP for SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: dd323f83-f415-4fa4-8457-89dad6d321d0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6431ba7d874d93bfac7510eb21815dc79f093694
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 350b0d1cd368664598fa766f125956fb7bedf4f2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926844"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466678"
 ---
 # <a name="updating-data-microsoft-drivers-for-php-for-sql-server"></a>데이터 업데이트(Microsoft Drivers for PHP for SQL Server)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -32,7 +33,7 @@ ms.locfileid: "80926844"
   
 ## <a name="in-this-section"></a>섹션 내용  
   
-|항목|Description|  
+|항목|설명|  
 |---------|---------------|  
 |[방법: 매개 변수가 있는 쿼리 수행](../../connect/php/how-to-perform-parameterized-queries.md)|매개 변수가 있는 쿼리를 수행하는 방법을 설명합니다.|  
 |[방법: 데이터를 스트림으로 전송](../../connect/php/how-to-send-data-as-a-stream.md)|서버에 데이터를 스트림하는 방법을 설명합니다.|  

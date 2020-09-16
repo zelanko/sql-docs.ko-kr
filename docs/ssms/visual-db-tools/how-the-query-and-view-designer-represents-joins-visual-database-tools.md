@@ -1,4 +1,5 @@
 ---
+description: 쿼리 및 뷰 디자이너의 조인 표시 방법(Visual Database Tools)
 title: 쿼리 및 뷰 디자이너의 조인 표시 방법
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -14,16 +15,16 @@ ms.assetid: 20a99dcb-83bd-4aa6-9139-92e2e5ba4887
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 51c94c3d0cd6f5e86d8d6ed35e0ebf81606ecfdd
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 51728a73872bed843c8ea34190be21a19906cd1b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011752"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462803"
 ---
 # <a name="how-the-query-and-view-designer-represents-joins-visual-database-tools"></a>쿼리 및 뷰 디자이너의 조인 표시 방법(Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-테이블이 조인되면 [쿼리 및 뷰 디자이너](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) 는 [다이어그램 창](../../ssms/visual-db-tools/diagram-pane-visual-database-tools.md) 에 조인을 그래픽으로 나타내고 [SQL 창](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md)에 SQL 구문을 사용합니다.  
+ 테이블이 조인되면 [쿼리 및 뷰 디자이너](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md)는 [다이어그램 창](../../ssms/visual-db-tools/diagram-pane-visual-database-tools.md) 에 조인을 그래픽으로 나타내고 [SQL 창](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md)에 SQL 구문을 사용합니다.  
   
 ## <a name="diagram-pane"></a>다이어그램 창  
 다이어그램 창에서 쿼리 및 뷰 디자이너는 조인에 포함된 데이터 열 사이에 조인 선을 표시합니다. 쿼리 및 뷰 디자이너는 각 조인 조건에 대해 한 개의 조인 선을 표시합니다. 예를 들어, 아래 그림은 조인된 두 테이블 사이에 있는 조인 선을 보여 줍니다.  

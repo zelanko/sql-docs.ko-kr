@@ -1,4 +1,5 @@
 ---
+description: XML 인덱스 대화 상자(Visual Database Tools)
 title: XML 인덱스 대화 상자
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ ms.assetid: eef38310-4498-4ccc-bb77-5bbd1c7cc477
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: b6753441008d5c88681a0931be512e70a3e54458
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: f7b42b572c782ffa13436de6b8a687e1a594e03c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002551"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459988"
 ---
 # <a name="xml-indexes-dialog-box-visual-database-tools"></a>XML 인덱스 대화 상자(Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -48,13 +49,13 @@ ms.locfileid: "86002551"
 **보조 형식**  
 보조 인덱스의 형식을 표시합니다. 현재 인덱스가 보조 인덱스인 경우에만 사용할 수 있습니다.  
   
-**형식**  
+**유형**  
 현재 인덱스가 XML 인덱스인지 여부를 표시합니다.  
   
 **ID 범주**  
 확장하면 **이름** 및 **설명** 속성 필드가 표시됩니다.  
   
-**이름**  
+**Name**  
 XML 인덱스의 이름을 표시합니다. 키나 인덱스를 새로 만들면 테이블 디자이너의 활성 창에 있는 테이블을 기반으로 한 기본 이름이 지정됩니다. 언제든지 이름을 변경할 수 있습니다.  
   
 **설명**  

@@ -1,4 +1,5 @@
 ---
+description: 외부 도구 대화 상자
 title: 외부 도구 대화 상자
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ba797203-24d0-4922-9b97-8ab483f1db14
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d0b59445399a161e12bfdfeb5fad79f11f1bced9
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 8b0bb11779dc90e17f0646bfe747550df62e94ba
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000146"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463016"
 ---
 # <a name="external-tools-dialog-box"></a>외부 도구 대화 상자
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -75,6 +76,6 @@ ms.locfileid: "86000146"
 |**인수**|-A|  
   
 ## <a name="see-also"></a>참고 항목  
-[외부 도구에 대한 인수](../ssms/use-of-sql-server-features-and-capabilities-wwi-oltp.md)  
+[Arguments for External Tools](../ssms/use-of-sql-server-features-and-capabilities-wwi-oltp.md)  
 [일반 사용자 인터페이스 요소](../ssms/general-user-interface-elements.md)  
   

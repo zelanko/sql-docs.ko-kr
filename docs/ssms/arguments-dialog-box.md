@@ -1,4 +1,5 @@
 ---
+description: 인수 대화 상자
 title: 인수 대화 상자
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9a918855-efb8-44dc-9e6b-df0a2dac3651
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 82ddc00bcf23aae923047ef204587728107b0ada
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 3d4dec835ba0c084b2d3e0ad1bfa02d8944fc8c8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000212"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463011"
 ---
 # <a name="arguments-dialog-box"></a>인수 대화 상자
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -32,7 +33,7 @@ ms.locfileid: "86000212"
 **인수** 대화 상자에 지정된 인수의 값을 표시합니다.  
   
 ## <a name="see-also"></a>참고 항목  
-[외부 도구에 대한 인수](../ssms/use-of-sql-server-features-and-capabilities-wwi-oltp.md)  
+[Arguments for External Tools](../ssms/use-of-sql-server-features-and-capabilities-wwi-oltp.md)  
 [외부 도구 대화 상자](../ssms/external-tools-dialog-box.md)  
 [일반 사용자 인터페이스 요소](../ssms/general-user-interface-elements.md)  
   
