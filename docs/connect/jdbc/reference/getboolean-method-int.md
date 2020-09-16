@@ -1,4 +1,5 @@
 ---
+description: getBoolean 메서드(int)
 title: getBoolean 메서드(int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 4d9db847-df22-40ab-8a5c-ec9158c576ca
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4d42b6464850d1fb68fffeab45943dd27bf6d76d
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: be9582d842d9f298f0b72f05af7fd4ae8804d07d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926370"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88437075"
 ---
 # <a name="getboolean-method-int"></a>getBoolean 메서드(int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +40,7 @@ public boolean getBoolean(int index)
   
  매개 변수 인덱스를 나타내는 **int**입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
  **부울** 값입니다.  
   
 ## <a name="exceptions"></a>예외  

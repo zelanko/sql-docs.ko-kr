@@ -1,4 +1,5 @@
 ---
+description: getBoolean 메서드(SQLServerCallableStatement)
 title: getBoolean 메서드(SQLServerCallableStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 4ad50e54-8246-4012-bd88-4aaaaf7f0f77
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a9dee27e968b45edbe30fcdc33dea447f3ccff67
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: e1462d447119a1afe2c32ad94c4f09e2df729aaf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926351"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88437045"
 ---
 # <a name="getboolean-method-sqlservercallablestatement"></a>getBoolean 메서드(SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "80926351"
   
 ## <a name="overload-list"></a>오버로드 목록  
   
-|속성|Description|  
+|이름|설명|  
 |----------|-----------------|  
 |[getBoolean(int)](../../../connect/jdbc/reference/getboolean-method-int.md)|매개 변수 인덱스가 지정된 경우 지정된 매개 변수의 값을 **부울** 값으로 검색합니다.|  
 |[getBoolean(java.lang.String)](../../../connect/jdbc/reference/getboolean-method-java-lang-string.md)|매개 변수 이름이 지정된 경우 지정된 매개 변수의 값을 **부울** 값으로 검색합니다.|  

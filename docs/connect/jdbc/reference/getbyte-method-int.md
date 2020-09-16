@@ -1,4 +1,5 @@
 ---
+description: getByte 메서드(int)
 title: getByte 메서드(int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: cff3ad26-0b6c-4d98-8deb-e89217486d79
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d767b27c3e34cccc503c97c1be6f802e9434214d
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 04879ce76aacca9ea91e9db1e79fe34ab0b0d1a2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926316"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88437015"
 ---
 # <a name="getbyte-method-int"></a>getByte 메서드(int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +40,7 @@ public byte getByte(int index)
   
  매개 변수 인덱스를 나타내는 **int**입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
  **byte** 값입니다.  
   
 ## <a name="exceptions"></a>예외  

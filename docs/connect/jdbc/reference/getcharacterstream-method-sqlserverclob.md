@@ -1,4 +1,5 @@
 ---
+description: getCharacterStream 메서드(SQLServerClob)
 title: getCharacterStream 메서드(SQLServerClob) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 3d9bb5b0-f943-4463-99e3-cc7178a2fb1e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1c755b24da3157a5e4ba1612de72713b08513333
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 0a935192df4449d5092898ee342872592cd4a6fc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80907662"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88436765"
 ---
 # <a name="getcharacterstream-method-sqlserverclob"></a>getCharacterStream 메서드(SQLServerClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -24,7 +25,7 @@ ms.locfileid: "80907662"
   
 ## <a name="overload-list"></a>오버로드 목록  
   
-|속성|Description|  
+|이름|설명|  
 |----------|-----------------|  
 |[getCharacterStream 메서드&#40;&#41;](../../../connect/jdbc/reference/getcharacterstream-method.md)|Clob 데이터를 java.io.Reader 개체 또는 문자 스트림으로 반환합니다.|  
 |[getCharacterStream 메서드&#40;long, long&#41;](../../../connect/jdbc/reference/getcharacterstream-method-long-long.md)|Clob 데이터를 지정된 위치 및 길이의 문자 스트림 또는 java.io.Reader 개체로 반환합니다.|  

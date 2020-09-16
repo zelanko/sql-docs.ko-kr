@@ -1,4 +1,5 @@
 ---
+description: getBytes 메서드(java.lang.String)
 title: getBytes 메서드(java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 4d0dac7f-7f39-47a2-953e-80ab03688d82
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fe3dc103480899ccf5d174ca2a802cdee1c9a314
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 3301acbde3b79b8d4a679f41ba0f6ba05dc3c37a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80921637"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88436955"
 ---
 # <a name="getbytes-method-javalangstring"></a>getBytes 메서드(java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +40,7 @@ public byte[] getBytes(java.lang.String sCol)
   
  매개 변수 이름이 들어 있는 **문자열**입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
  **byte** 값의 배열입니다.  
   
 ## <a name="exceptions"></a>예외  

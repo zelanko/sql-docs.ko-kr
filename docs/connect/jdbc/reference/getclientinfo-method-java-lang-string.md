@@ -1,4 +1,5 @@
 ---
+description: getClientInfo 메서드(java.lang.String)
 title: getClientInfo 메서드(java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -8,14 +9,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: e8e632c4-d6cc-4c5e-b6ad-873579343b19
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7d3005e2b5ae8628ab31ceeb6314159afd796e83
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: d3db1e2b164ee4f9b49b5c4c1919c0a1ce713e16
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67953133"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88436735"
 ---
 # <a name="getclientinfo-method-javalangstring"></a>getClientInfo 메서드(java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -34,7 +35,7 @@ public java.lang.String getClientInfo (java.lang.String name)
   
  검색할 클라이언트 정보 속성의 이름이 들어 있는 String입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
  클라이언트 정보 속성의 값이 들어 있는 String입니다.  
   
 ## <a name="exceptions"></a>예외  

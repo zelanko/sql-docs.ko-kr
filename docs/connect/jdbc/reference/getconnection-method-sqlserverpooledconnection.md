@@ -1,4 +1,5 @@
 ---
+description: getConnection 메서드(SQLServerPooledConnection)
 title: getConnection 메서드(SQLServerPooledConnection) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 05bdb61f-26e8-480f-a1c1-1e46a8ed4b70
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: aad1cac0f8d627350ad3a4eab5730509148e8ffb
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 7ab3459b4fccd244a958ae772bf12cda4ab49457
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80923362"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88436515"
 ---
 # <a name="getconnection-method-sqlserverpooledconnection"></a>getConnection 메서드(SQLServerPooledConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -1,4 +1,5 @@
 ---
+description: getCatalogName 메서드(SQLServerResultSetMetaData)
 title: getCatalogName 메서드(SQLServerResultSetMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 64f62569-5d8e-411f-a98d-ddc52798391e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6282e994eff5b8b06ac59b97f6ef1223dd6172a7
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: ae1f48197f4ed5dc47e8ea84ad245c929908d9a6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80921547"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88436845"
 ---
 # <a name="getcatalogname-method-sqlserverresultsetmetadata"></a>getCatalogName 메서드(SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +40,7 @@ public java.lang.String getCatalogName(int column)
   
  열 인덱스를 나타내는 **int**입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
  카탈로그 이름이 포함하는 **문자열**입니다.  
   
 ## <a name="exceptions"></a>예외  

@@ -1,4 +1,5 @@
 ---
+description: getDateTimeOffset 메서드(int)
 title: getDateTimeOffset 메서드(int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -8,14 +9,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 8bb00356-4d6e-4625-b924-67646930fdf2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ec297d1b01b6d7cf8d292d2f4518aa5b51cd9704
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: f4c6aa2bfc8fb8a1045566d79853cdb28a2207a6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67983834"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88436315"
 ---
 # <a name="getdatetimeoffset-method-int"></a>getDateTimeOffset 메서드(int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,7 +37,7 @@ public microsoft.sql.DateTimeOffset getDateTimeOffset(int index)
   
  매개 변수 서수(1부터 시작)입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
  [DateTimeOffset Class](../../../connect/jdbc/reference/datetimeoffset-class.md) 개체입니다.  
   
 ## <a name="exceptions"></a>예외  

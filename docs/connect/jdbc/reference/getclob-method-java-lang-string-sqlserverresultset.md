@@ -1,4 +1,5 @@
 ---
+description: getClob 메서드(java.lang.String)(SQLServerResultSet)
 title: getClob 메서드(java.lang.String)(SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: c1de9804-1f27-4854-8985-3385fadcbebb
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4b549dd11a6b3d06b6d969e22d69ab7cbfa1d5c0
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 4490a495dbd7d7d34b0f277eae22c2244b6ff166
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80901424"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88436665"
 ---
 # <a name="getclob-method-javalangstring-sqlserverresultset"></a>getClob 메서드(java.lang.String)(SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +40,7 @@ public java.sql.Clob getClob(java.lang.String colName)
   
  열 이름이 포함된 **문자열**입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
  Clob 개체입니다.  
   
 ## <a name="exceptions"></a>예외  
