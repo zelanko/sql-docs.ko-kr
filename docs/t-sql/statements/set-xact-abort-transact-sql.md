@@ -24,15 +24,15 @@ helpviewer_keywords:
 - roll back transactions [SQL Server]
 - SET XACT_ABORT statement
 ms.assetid: cbcaa433-58f2-4dc3-a077-27273bef65b5
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b745de81c42af218c71c1b99e02369fad3feb797
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 142b1edf321de63fb6a2ee6552c9bfc1255c1f93
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444645"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89539817"
 ---
 # <a name="set-xact_abort-transact-sql"></a>SET XACT_ABORT(Transact-SQL)
 
@@ -128,7 +128,7 @@ GO
 
 - [THROW&#40;Transact-SQL&#41;](../../t-sql/language-elements/throw-transact-sql.md)
 - [BEGIN TRANSACTION&#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-transaction-transact-sql.md)
-- [COMMIT TransactION&#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-transaction-transact-sql.md)
+- [COMMIT TRANSACTION&#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-transaction-transact-sql.md)
 - [ROLLBACK TRANSACTION&#40;Transact-SQL&#41;](../../t-sql/language-elements/rollback-transaction-transact-sql.md)
 - [SET 문&#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)
 - [@@TRANCOUNT&#40;Transact-SQL&#41;](../../t-sql/functions/trancount-transact-sql.md)  

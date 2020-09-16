@@ -22,14 +22,14 @@ helpviewer_keywords:
 - triggers [SQL Server], disabling
 - disabling triggers
 ms.assetid: e6529f06-e442-437e-a7bf-41790bc092c5
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: fd967687eabaed290f02e52853e784a375468580
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: bf71a24ec82fdfe3f535e5307a6407501fc6f9e3
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88496846"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89540732"
 ---
 # <a name="disable-trigger-transact-sql"></a>DISABLE TRIGGER(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -84,7 +84,7 @@ ON { object_name | DATABASE | ALL SERVER } [ ; ]
   
  서버 범위(ON ALL SERVER)의 DDL 트리거 또는 로그온 트리거를 비활성화하려면 서버에 대한 CONTROL SERVER 권한이 필요합니다. 데이터베이스 범위(ON DATABASE)에서 DDL 트리거를 비활성화하려면 사용자에게 최소한 현재 데이터베이스에서 ALTER ANY DATABASE DDL TRIGGER 권한이 필요합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
 다음 샘플은 AdventureWorks2012 데이터베이스에서 설명됩니다.
   
 ### <a name="a-disabling-a-dml-trigger-on-a-table"></a>A. 테이블에 대한 DML 트리거 비활성화  

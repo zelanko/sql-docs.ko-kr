@@ -2,7 +2,7 @@
 title: Transact-SQL 디버거 실행
 description: Transact-SQL 디버거를 사용자 지정하는 방법과 이를 사용하여 Transact-SQL 코드를 디버그하는 방법을 알아봅니다. 다른 컴퓨터에 있는 데이터베이스 엔진 인스턴스에서 디버거를 실행할 수 있습니다.
 ms.prod: sql
-ms.technology: scripting
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - Transact-SQL debugger, sysadmin requirement
@@ -23,12 +23,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 24fc9e6fd00aa0586630e611ef09568b7bf61cba
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: d30830fae390788d81fc655e4c31dcbe3eea79b5
+ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87122837"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88901959"
 ---
 # <a name="run-the-transact-sql-debugger"></a>Transact-SQL 디버거 실행
 

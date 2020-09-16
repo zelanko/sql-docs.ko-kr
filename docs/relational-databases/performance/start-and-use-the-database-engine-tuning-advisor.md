@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: c8636dad789915289ef0f08c7355c5f443a7a87a
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 1f13fc030209957910284132b42c89a52b01ff31
+ms.sourcegitcommit: f7c9e562d6048f89d203d71685ba86f127d8d241
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480510"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90042832"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>데이터베이스 엔진 튜닝 관리자 시작 및 사용
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -88,7 +88,7 @@ ms.locfileid: "89480510"
   
 ###  <a name="to-create-transact-sql-script-workloads"></a><a name="SSMS"></a> Transact-SQL 스크립트 작업을 만들려면  
   
-1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 쿼리 편집기를 시작합니다. 자세한 내용은 [쿼리 및 텍스트 편집기&#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)를 참조하세요.  
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 쿼리 편집기를 시작합니다. 자세한 내용은 [쿼리 및 텍스트 편집기&#40;SQL Server Management Studio&#41;](https://docs.microsoft.com/sql/ssms/f1-help/database-engine-query-editor-sql-server-management-studio?view=sql-server-ver15)를 참조하세요.  
   
 2.  쿼리 편집기에 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트를 입력합니다. 이 스크립트는 튜닝하려는 데이터베이스에 대해 실행되는 일련의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 포함해야 합니다.  
   

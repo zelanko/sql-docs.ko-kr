@@ -4,7 +4,7 @@ description: 속성 창을 사용하여 연결과 같은 SQL Server Management S
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
-ms.technology: scripting
+ms.technology: ssms
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,12 +15,12 @@ ms.assetid: 903d4aca-f57c-43d9-a893-702eceaa7004
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 256355d1cf0d7b245832c0effe551a0236ed8597
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 9342ab54effc66185c6b4fe1df21f214f7da9842
+ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245541"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88901701"
 ---
 # <a name="use-the-properties-window-in-management-studio"></a>Management Studio에서 속성 창 사용
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

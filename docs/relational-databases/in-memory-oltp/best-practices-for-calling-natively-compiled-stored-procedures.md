@@ -9,15 +9,15 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: f39fc1c7-cfec-4a95-97f6-6b95954694b
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bc9fffa0c2b916163e0b9e8698cdf1f7df59667a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 053cd5f7aebf3b84de1bf08104b13aa30488704b
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85723387"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89537719"
 ---
 # <a name="best-practices-for-calling-natively-compiled-stored-procedures"></a>고유하게 컴파일된 저장 프로시저를 호출하는 최선의 구현 방법
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

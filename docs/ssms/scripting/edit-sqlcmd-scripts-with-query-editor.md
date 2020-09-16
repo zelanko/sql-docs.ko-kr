@@ -1,12 +1,9 @@
 ---
 title: 쿼리 편집기로 SQLCMD 스크립트 편집
 description: 같은 스크립트에서 Windows 시스템 명령과 Transact-SQL 문을 처리해야 하는 경우 SQLCMD 스크립트를 사용합니다. 데이터베이스 엔진 쿼리 편집기를 사용하여 SQLCMD 스크립트를 작성하고 편집하는 방법을 알아봅니다.
-ms.custom: seo-lt-2019
-ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.technology: scripting
-ms.reviewer: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - scripts [SQL Server], SQLCMD scripts
@@ -17,17 +14,22 @@ helpviewer_keywords:
 ms.assetid: f77b866d-c330-47c9-9e74-0b8d8dff4b31
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ed1171649c422ccb451fc7540cae8ca6629b65b1
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: 5df33c67466a355dd7b204dcfd6f12f146ac59bb
+ms.sourcegitcommit: 9e1f1c6ee8f5a10d18a2599bfd9f3eb6081829e1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87122965"
+ms.lasthandoff: 08/29/2020
+ms.locfileid: "89093450"
 ---
 # <a name="edit-sqlcmd-scripts-with-query-editor"></a>쿼리 편집기로 SQLCMD 스크립트 편집
+
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 의 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 쿼리 편집기를 사용하여 쿼리를 SQLCMD 스크립트로 작성 및 편집할 수 있습니다. 같은 스크립트에서 Windows 시스템 명령과 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 처리해야 하는 경우 SQLCMD 스크립트를 사용합니다.  
+
+[!INCLUDE[ssDE](../../includes/ssde-md.md)] 의 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 쿼리 편집기를 사용하여 쿼리를 SQLCMD 스크립트로 작성 및 편집할 수 있습니다. 같은 스크립트에서 Windows 시스템 명령과 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 처리해야 하는 경우 SQLCMD 스크립트를 사용합니다.  
   
 ## <a name="sqlcmd-mode"></a>SQLCMD 모드  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기를 사용하여 SQLCMD 스크립트를 작성하거나 편집하려면 SQLCMD 스크립팅 모드를 설정해야 합니다. 기본적으로 SQLCMD 모드는 쿼리 편집기에서 설정되지 않습니다. 도구 모음에서 **SQLCMD 모드** 아이콘을 클릭하거나 **쿼리** 메뉴에서 **SQLCMD 모드** 를 선택하여 스크립팅 모드를 설정할 수 있습니다.  

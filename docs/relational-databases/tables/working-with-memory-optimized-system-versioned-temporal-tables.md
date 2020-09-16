@@ -9,15 +9,15 @@ ms.reviewer: ''
 ms.technology: table-view-index
 ms.topic: conceptual
 ms.assetid: 691d4f80-6754-43f5-8b43-d4facf08f6fc
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ef5094e4b4128406a3cbae663d954c3d8fd5a34c
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: 5b7ede376b33e4e5f1e0065730510e2729d48b4c
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88645983"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89540184"
 ---
 # <a name="working-with-memory-optimized-system-versioned-temporal-tables"></a>메모리 액세스에 최적화된 시스템 버전 임시 테이블로 작업
 

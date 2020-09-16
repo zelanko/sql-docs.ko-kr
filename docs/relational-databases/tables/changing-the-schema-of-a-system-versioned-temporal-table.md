@@ -9,15 +9,15 @@ ms.reviewer: ''
 ms.technology: table-view-index
 ms.topic: conceptual
 ms.assetid: 9dbe5a21-9335-4f8b-85fd-9da83df79946
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 41fde9a9177aab888e7ae06c2d2cce662b2e794b
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: a433fbfe50e2a673ab29595729f7c8b83f9444ae
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88646685"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89538219"
 ---
 # <a name="changing-the-schema-of-a-system-versioned-temporal-table"></a>시스템 버전 관리 temporal 테이블의 스키마 변경
 
@@ -26,7 +26,7 @@ ms.locfileid: "88646685"
 
 **ALTER TABLE** 문을 사용하여 열을 추가, 변경 또는 제거합니다.
 
-## <a name="examples"></a>예제
+## <a name="examples"></a>예
 
 다음은 temporal 테이블의 스키마를 변경하는 몇 가지 예입니다.
 

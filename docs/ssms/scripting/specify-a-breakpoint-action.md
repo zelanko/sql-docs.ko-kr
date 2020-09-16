@@ -3,7 +3,7 @@ title: 중단점 동작 지정
 description: 중단점에 도달하고 다른 특정 조건이 충족될 때 Transact-SQL 디버거가 수행할 사용자 지정 태스크인 적중 작업을 지정하는 방법을 알아봅니다.
 titleSuffix: T-SQL debugger
 ms.prod: sql
-ms.technology: scripting
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - Transact-SQL debugger, breakpoint action
@@ -15,12 +15,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bbe5cd84c13c84f8902ac82bd8ef3ef54dc82bda
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: a9f25e1c75bfeef51562dddd71f5dc376d46b927
+ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87122734"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88901622"
 ---
 # <a name="specify-a-breakpoint-action"></a>중단점 동작 지정
 

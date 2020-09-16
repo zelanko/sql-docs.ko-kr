@@ -2,7 +2,7 @@
 title: 'SQL Server 2019: 하드웨어 및 소프트웨어 요구 사항'
 description: SQL Server 2019를 설치 및 실행하기 위한 하드웨어, 소프트웨어 및 운영 체제 요구 사항 목록입니다.
 ms.custom: sqlfreshmay19
-ms.date: 02/19/2020
+ms.date: 09/01/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: release-landing
@@ -45,12 +45,12 @@ helpviewer_keywords:
 ms.assetid: 09bcf20b-0a40-4131-907f-b61479d5e4d8
 ms.author: mikeray
 author: MikeRayMSFT
-ms.openlocfilehash: 0a8b1dc044dba9fc7ee8fef3623b82405bd9e109
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: c3513b7209cc5f79aa26486540c236ac7b7dca1c
+ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245640"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89288325"
 ---
 # <a name="sql-server-2019-hardware-and-software-requirements"></a>SQL Server 2019: 하드웨어 및 소프트웨어 요구 사항
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -113,11 +113,11 @@ ms.locfileid: "87245640"
 | Windows Server 2016 Datacenter    |    예     |    예    |    예   | 예 |   예   |
 | Windows Server 2016 Standard      |    예     |    예    |    예   | 예 |   예   |
 | Windows Server 2016 Essentials    |    예     |    예    |    예   | 예 |   예   |
+| Windows 10 IoT Enterprise         |    예      |    예    |    예   | 예  |   예   |
 | Windows 10 Enterprise             |    예      |    예    |    예   | 예  |   예   |
 | Windows 10 Professional           |    예      |    예    |    예   | 예  |   예   |
-| Windows 10 Home                   |    예      |    예    |    예   | 예  |   예   |
+| Windows 10 Home                   |    아니요      |    예    |    예   | 아니요  |   예   |
 | &nbsp; | &nbsp; |
-
 
 ### <a name="server-core-support"></a>Server Core 지원
 

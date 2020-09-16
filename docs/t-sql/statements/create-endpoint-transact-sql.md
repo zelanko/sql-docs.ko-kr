@@ -30,14 +30,14 @@ helpviewer_keywords:
 - SERVICE_BROKER option
 - Availability Groups [SQL Server], endpoint
 ms.assetid: 6405e7ec-0b5b-4afd-9792-1bfa5a2491f6
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 8851fcf2339196c3d35220341bc5f737a128aaff
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 93d44d07f8a6ba1be36e390e85991183fc749c01
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426805"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89539855"
 ---
 # <a name="create-endpoint-transact-sql"></a>CREATE ENDPOINT(Transact-SQL)
 

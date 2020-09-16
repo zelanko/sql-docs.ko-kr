@@ -4,7 +4,7 @@ description: sqlcmd를 사용하여 Transact-SQL 스크립트 파일을 실행�
 ms.custom: seo-lt-2019
 ms.date: 07/15/2016
 ms.prod: sql
-ms.technology: scripting
+ms.technology: ssms
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,12 +13,12 @@ ms.assetid: 90067eb8-ca3e-44e8-bb1a-bf7d1a359423
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 560eb5c224c700d5936c53c888af6af4eae08c6f
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 4d842772e4ca65e4905d1e8134c4247a965ba46a
+ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247402"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88901253"
 ---
 # <a name="sqlcmd---run-transact-sql-script-files"></a>sqlcmd - Transact-SQL 스크립트 파일 실행
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
