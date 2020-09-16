@@ -1,4 +1,5 @@
 ---
+description: getFunctions 메서드(SQLServerDatabaseMetaData)
 title: getFunctions 메서드(SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 44335cbd-c84d-4ef3-a6a1-fca7eb7ec768
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: cafef140d505197bfe1993f65ef17d4cb53e19f5
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 517cafe5157848948f0a6ffa9005a255510556a7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920326"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88435945"
 ---
 # <a name="getfunctions-method-sqlserverdatabasemetadata"></a>getFunctions 메서드(SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -60,7 +61,7 @@ public ResultSet getFunctions(java.lang.String catalog,
   
  각 함수 설명에는 다음과 같은 열이 포함됩니다.  
   
-|속성|Type|Description|  
+|이름|Type|Description|  
 |----------|----------|-----------------|  
 |FUNCTION_CAT|**String**|함수가 있는 데이터베이스의 이름입니다.|  
 |FUNCTION_SCHEM|**String**|함수가 있는 스키마의 이름입니다.|  

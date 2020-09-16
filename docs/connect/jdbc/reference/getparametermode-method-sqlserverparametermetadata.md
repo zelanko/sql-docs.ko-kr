@@ -1,4 +1,5 @@
 ---
+description: getParameterMode 메서드(SQLServerParameterMetaData)
 title: getParameterMode 메서드(SQLServerParameterMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: d93c9b70-18c2-44bb-a6de-70a7e940d806
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 223be5e4f95c8986f48dedcf907f7df4ad646056
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 714ddebbeea85613d10bdffb11b639ff93f3e2a9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80904439"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88435025"
 ---
 # <a name="getparametermode-method-sqlserverparametermetadata"></a>getParameterMode 메서드(SQLServerParameterMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +40,7 @@ public int getParameterMode(int param)
   
  매개 변수 인덱스를 나타내는 **int**입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
  지정된 매개 변수의 모드를 나타내는 **int**로, 다음 값 중 하나에 해당됩니다.  
   
  ParameterMetaData.parameterModeIn  

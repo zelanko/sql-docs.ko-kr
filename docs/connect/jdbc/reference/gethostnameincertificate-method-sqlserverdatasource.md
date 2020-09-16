@@ -1,4 +1,5 @@
 ---
+description: getHostNameInCertificate 메서드(SQLServerDataSource)
 title: getHostNameInCertificate 메서드(SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 45ea04e2-9ea5-4171-9136-d09f8a95e128
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 5f35af25109bc68a36560c6496cf5f5268bd9319
-ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
+ms.openlocfilehash: 26e931b104c1eba44a09e1b43b51e00d2beaad70
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81219262"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88435875"
 ---
 # <a name="gethostnameincertificate-method-sqlserverdatasource"></a>getHostNameInCertificate 메서드(SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

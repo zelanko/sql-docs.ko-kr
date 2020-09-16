@@ -1,4 +1,5 @@
 ---
+description: getFetchDirection 메서드(SQLServerStatement)
 title: getFetchDirection 메서드(SQLServerStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,14 +14,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: ceb4ae68-decc-46d3-83f1-0bbd23aaf58c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1be44732bb2843e7ce4b306a28dec7343d960ea1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: b2c42f7296f9bb4ac9cffd68f0d13d5ba7ca920c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67983234"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88436045"
 ---
 # <a name="getfetchdirection-method-sqlserverstatement"></a>getFetchDirection 메서드(SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

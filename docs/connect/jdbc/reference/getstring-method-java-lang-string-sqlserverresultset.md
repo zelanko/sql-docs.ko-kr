@@ -1,4 +1,5 @@
 ---
+description: getString 메서드(java.lang.String)(SQLServerResultSet)
 title: getString 메서드(java.lang.String)(SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 8a98c8a8-61d0-40c9-9335-25a87b732dc3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: da5cf4ad735ee650ea87f70687b5f22575921144
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 2abe464ba8c800dff256ebe2dfcec0d6e787c5dd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926218"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88434355"
 ---
 # <a name="getstring-method-javalangstring-sqlserverresultset"></a>getString 메서드(java.lang.String)(SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +40,7 @@ public java.lang.String getString(java.lang.String columnName)
   
  열 이름이 포함된 **문자열**입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
  **문자열** 값입니다.  
   
 ## <a name="exceptions"></a>예외  

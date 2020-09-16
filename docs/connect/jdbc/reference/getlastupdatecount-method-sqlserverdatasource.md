@@ -1,4 +1,5 @@
 ---
+description: getLastUpdateCount 메서드(SQLServerDataSource)
 title: getLastUpdateCount 메서드(SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 4c4fbb24-0b02-42da-928c-a903bb591cc7
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0e4d5fad788d2a695410035d8689330e25044976
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 44b5b9c19b07479aaeae6eb400d3212accd3e5fa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80921403"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88435775"
 ---
 # <a name="getlastupdatecount-method-sqlserverdatasource"></a>getLastUpdateCount 메서드(SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

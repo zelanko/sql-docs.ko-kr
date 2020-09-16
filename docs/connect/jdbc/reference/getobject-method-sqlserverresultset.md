@@ -1,4 +1,5 @@
 ---
+description: getObject 메서드(SQLServerResultSet)
 title: getObject 메서드(SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 924df406-14b2-40b8-a7bc-c2fd145d7d7c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 51014150475dfa614879a9327a62247a7347bc8d
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 56e7a96f530db0a6c2e7e0abff765848f794357b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80925265"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88435075"
 ---
 # <a name="getobject-method-sqlserverresultset"></a>getObject 메서드(SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "80925265"
   
 ## <a name="overload-list"></a>오버로드 목록  
   
-|속성|Description|  
+|이름|설명|  
 |----------|-----------------|  
 |[getObject(int)](../../../connect/jdbc/reference/getobject-method-int-sqlserverresultset.md)|이 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체의 현재 행에서 지정된 열 인덱스의 값을 Java 프로그래밍 언어의 개체로 가져옵니다.|  
 |[getObject(int, java.util.Map)](../../../connect/jdbc/reference/getobject-method-int-java-util-map-sqlserverresultset.md)|이 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체의 현재 행에서 지정된 열 인덱스의 값을 지정된 Map 개체를 사용하여 Java 프로그래밍 언어의 개체로 가져옵니다.|  

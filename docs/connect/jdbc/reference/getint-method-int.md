@@ -1,4 +1,5 @@
 ---
+description: getInt 메서드(int)
 title: getInt 메서드(int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: c86792bb-096e-4c58-8b9e-74491ccf83a6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 484830d5bdf8ed00334a7f695f4f67f31e13f565
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 5ed9433c57fc1256b06b2aefc8895397b47b4a83
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80921494"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88435905"
 ---
 # <a name="getint-method-int"></a>getInt 메서드(int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +40,7 @@ public int getInt(int index)
   
  매개 변수 인덱스를 나타내는 **int**입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
  **int** 값입니다.  
   
 ## <a name="exceptions"></a>예외  

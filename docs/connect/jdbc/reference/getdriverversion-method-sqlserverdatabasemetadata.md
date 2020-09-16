@@ -1,4 +1,5 @@
 ---
+description: getDriverVersion 메서드(SQLServerDatabaseMetaData)
 title: getDriverVersion 메서드(SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 3be84d65-af61-4c34-b052-74a5d488eaa9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1066be205916f23747da8fdd61a3ebf0784742ad
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 1cd592181628c19cc02605b11e61034eef63af35
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80902099"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88436095"
 ---
 # <a name="getdriverversion-method-sqlserverdatabasemetadata"></a>getDriverVersion 메서드(SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -1,4 +1,5 @@
 ---
+description: getResultSetType 메서드(SQLServerStatement)
 title: getResultSetType 메서드(SQLServerStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,14 +14,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 260da35f-ddf6-4111-8519-69956ea3072e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7a0293a48a354bba911a11ecf91a17211a9f8a12
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: e9b84f668d34452e4bdc00c19b1f3651a9c9be07
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67980305"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88434735"
 ---
 # <a name="getresultsettype-method-sqlserverstatement"></a>getResultSetType 메서드(SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -1,4 +1,5 @@
 ---
+description: getSendStringParametersAsUnicode 메서드(SQLServerDataSource)
 title: getSendStringParametersAsUnicode 메서드(SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 3836d0ab-c3fb-41ff-bb89-10389594ae51
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b54715e0eb4e813c65b0ea9cf750bc07388d291d
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 0fc9c5e4ba97f1e48e446768d59d5308604d5b29
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80929176"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88434585"
 ---
 # <a name="getsendstringparametersasunicode-method-sqlserverdatasource"></a>getSendStringParametersAsUnicode 메서드(SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

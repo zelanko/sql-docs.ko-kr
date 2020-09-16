@@ -1,4 +1,5 @@
 ---
+description: getMaxCharLiteralLength 메서드(SQLServerDatabaseMetaData)
 title: getMaxCharLiteralLength 메서드(SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 44e6e9df-4724-4c86-bbd2-ca750c248333
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a0eab3b622a5f61d5730d7f266ac99c2eba48253
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 895435613e989eb65bcee7bae7dc0be7a8f292fa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80921125"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88435655"
 ---
 # <a name="getmaxcharliterallength-method-sqlserverdatabasemetadata"></a>getMaxCharLiteralLength 메서드(SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

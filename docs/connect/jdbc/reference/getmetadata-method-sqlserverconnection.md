@@ -1,4 +1,5 @@
 ---
+description: getMetaData 메서드(SQLServerConnection)
 title: getMetaData 메서드(SQLServerConnection) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,14 +14,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 86223cb5-3bf4-489a-8c82-669a91764f2b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4fdf49c68acd2ef1b1544ad02efcb4079ceeac67
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 92beda80ff310c621ce1c849a8fff1d82d9f771e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67981875"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88435455"
 ---
 # <a name="getmetadata-method-sqlserverconnection"></a>getMetaData 메서드(SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

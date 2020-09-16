@@ -1,4 +1,5 @@
 ---
+description: getSQLXML 메서드(int)
 title: getSQLXML 메서드(int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: a1b32d3a-d7c9-4086-ae2b-fc1da96949b1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 88666bac9fce7658389ce5dbd469cb4334aa16ad
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 87e68d936f0d2c868cfb3fb3c63693076bb0e547
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920215"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88434475"
 ---
 # <a name="getsqlxml-method-int"></a>getSQLXML 메서드(int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -34,7 +35,7 @@ public final java.sql.SQLXML getSQLXML(int parameterIndex)
   
  매개 변수 인덱스를 나타내는 **int**입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
  ASQLXMLobject입니다.  
   
 ## <a name="exceptions"></a>예외  

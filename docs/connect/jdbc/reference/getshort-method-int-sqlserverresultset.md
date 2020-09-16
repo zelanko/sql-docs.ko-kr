@@ -1,4 +1,5 @@
 ---
+description: getShort 메서드(int)(SQLServerResultSet)
 title: getShort 메서드(int)(SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 0b543c92-feb8-46a4-8477-9b5f94f1cdc7
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 64c4eea3ad1663e6a5f83880de056d9e81ffe4ad
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 88ee4597295faded9dd48a6ce52d200cc3dca3a5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80925363"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88434625"
 ---
 # <a name="getshort-method-int-sqlserverresultset"></a>getShort 메서드(int)(SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +40,7 @@ public short getShort(int columnIndex)
   
  열 인덱스를 나타내는 **int**입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
  **short** 값입니다.  
   
 ## <a name="exceptions"></a>예외  

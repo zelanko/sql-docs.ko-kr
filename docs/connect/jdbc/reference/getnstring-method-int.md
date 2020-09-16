@@ -1,4 +1,5 @@
 ---
+description: getNString 메서드(int)
 title: getNString 메서드(int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 2048bb9f-7d9b-4aaa-b135-c716910cc800
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ae12095a915fdd1d6c0b47b934a5e0121c77df6f
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: ce9f155b5b386797ae10294530bf94019326371f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80905369"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88435235"
 ---
 # <a name="getnstring-method-int"></a>getNString 메서드(int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -34,7 +35,7 @@ public final java.lang.String getNString(int parameterIndex)
   
  매개 변수 인덱스를 나타내는 **int**입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
  String 개체입니다.  
   
 ## <a name="exceptions"></a>예외  

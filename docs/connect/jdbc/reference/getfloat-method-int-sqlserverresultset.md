@@ -1,4 +1,5 @@
 ---
+description: getFloat 메서드(int)(SQLServerResultSet)
 title: getFloat 메서드(int)(SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 30863ef5-7a7c-440e-8fbb-426a99266ee1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4c1e14164c1030813b8e40fd5468ee55c9b6c4b7
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: cd05df07b3be9da295bd39aae57dd15a2ff63d17
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80911559"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88436005"
 ---
 # <a name="getfloat-method-int-sqlserverresultset"></a>getFloat 메서드(int)(SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +40,7 @@ public float getFloat(int columnIndex)
   
  열 인덱스를 나타내는 **int**입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
  **float** 값입니다.  
   
 ## <a name="exceptions"></a>예외  

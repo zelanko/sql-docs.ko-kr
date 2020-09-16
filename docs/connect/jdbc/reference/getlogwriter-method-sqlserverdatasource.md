@@ -1,4 +1,5 @@
 ---
+description: getLogWriter 메서드(SQLServerDataSource)
 title: getLogWriter 메서드(SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: cde41743-1a5d-4930-91b3-4e5fccc1bc36
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 56fef00efe2054a7c973a3c3bbbfe251755a9ddf
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: bec90cfe08948535b11b7d2432778b1e0be13ddb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80921333"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88435725"
 ---
 # <a name="getlogwriter-method-sqlserverdatasource"></a>getLogWriter 메서드(SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

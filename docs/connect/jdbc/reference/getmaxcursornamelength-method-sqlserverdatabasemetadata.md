@@ -1,4 +1,5 @@
 ---
+description: getMaxCursorNameLength 메서드(SQLServerDatabaseMetaData)
 title: getMaxCursorNameLength 메서드(SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 2cd2bed9-adf4-4bcd-ae5a-d0e3428bc709
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 548fcee8a4ea2af139fd379fa455fec3571acf87
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 682164bb2233383ecf1a6e414367d4f114be1cf5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80906934"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88435575"
 ---
 # <a name="getmaxcursornamelength-method-sqlserverdatabasemetadata"></a>getMaxCursorNameLength 메서드(SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

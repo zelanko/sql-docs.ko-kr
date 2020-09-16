@@ -1,4 +1,5 @@
 ---
+description: getPropertyInfo 메서드(SQLServerDriver)
 title: getPropertyInfo 메서드(SQLServerDriver) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: b5eaad8a-31ef-44ac-af11-d5caa13ac3e2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fefcbd719689879ece66fe43df7d546d315d1e5f
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: cfdcc8917d818ff74d5897e9481f829f1284bdee
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80925186"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88434925"
 ---
 # <a name="getpropertyinfo-method-sqlserverdriver"></a>getPropertyInfo 메서드(SQLServerDriver)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,11 +41,11 @@ public java.sql.DriverPropertyInfo[] getPropertyInfo(java.lang.String Url,
   
  데이터베이스에 연결하는 데 사용되는 URL이 들어 있는 **String** 값입니다.  
   
- *Info*  
+ *정보*  
   
  속성 값 쌍(처음 사용할 때는 null)의 목록입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
  DriverPropertyInfo 개체의 배열입니다.  
   
 ## <a name="exceptions"></a>예외  

@@ -1,4 +1,5 @@
 ---
+description: getSchemaName 메서드(SQLServerResultSetMetaData)
 title: getSchemaName 메서드(SQLServerResultSetMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 2d0063ab-d5d7-420f-b388-36d5169b1358
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 407f993aba800e3835eb92fe6b9539818a26d2fe
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: f31896f9e001ecbfdafba91ca4a06e667d1430e9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80921742"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88434665"
 ---
 # <a name="getschemaname-method-sqlserverresultsetmetadata"></a>getSchemaName 메서드(SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +40,7 @@ public java.lang.String getSchemaName(int column)
   
  열 인덱스를 나타내는 **int**입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
  스키마 이름을 포함하는 **문자열**입니다.  
   
 ## <a name="exceptions"></a>예외  

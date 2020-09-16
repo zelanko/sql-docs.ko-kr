@@ -1,4 +1,5 @@
 ---
+description: getNString 메서드(java.lang.String)
 title: getNString 메서드(java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: b351e999-85bf-498b-915a-f91d89134bce
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 118025da1121f3e6c04fd17074dd3b2df53e9c26
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 1e76cfb9175b07d4d7bfae843f0011fe006abc05
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80905356"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88435215"
 ---
 # <a name="getnstring-method-javalangstring"></a>getNString 메서드(java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -34,7 +35,7 @@ public final java.lang.String getNString(java.lang.String parameterName)
   
  매개 변수 이름이 들어 있는 **문자열**입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
  String 개체입니다.  
   
 ## <a name="exceptions"></a>예외  

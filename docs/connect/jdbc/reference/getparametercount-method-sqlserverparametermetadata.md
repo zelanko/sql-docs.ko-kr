@@ -1,4 +1,5 @@
 ---
+description: getParameterCount 메서드(SQLServerParameterMetaData)
 title: getParameterCount 메서드(SQLServerParameterMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,14 +14,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 7dbbdacb-74ef-42e7-9bdc-a3229505dad8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 74c2228b944dce2f9c59f4f8fcfc4bc0ac2e5753
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 0b79fbb9b2da9d72067931e3b741839a57b1dba6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67980995"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88435045"
 ---
 # <a name="getparametercount-method-sqlserverparametermetadata"></a>getParameterCount 메서드(SQLServerParameterMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

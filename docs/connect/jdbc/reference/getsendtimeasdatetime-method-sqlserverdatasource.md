@@ -1,4 +1,5 @@
 ---
+description: getSendTimeAsDatetime 메서드(SQLServerDataSource)
 title: getSendTimeAsDatetime 메서드(SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 02287122-5dc1-455d-987f-95fd9a69d503
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 018d40464d6461cb4182daf5f93139e322517870
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 8036454468143c5910d9b5d7ba8135cc1a0ec4a8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80929204"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88434614"
 ---
 # <a name="getsendtimeasdatetime-method-sqlserverdatasource"></a>getSendTimeAsDatetime 메서드(SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

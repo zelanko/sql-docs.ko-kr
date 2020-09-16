@@ -1,4 +1,5 @@
 ---
+description: getRef 메서드(int)
 title: getRef 메서드(int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 905dd02a-0c7f-475b-8be4-341b4359c766
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c6a3103b7a6c9119d2c3892e8bca744f0d216263
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 0afbd40e226ff0f2c15c9d666b09f2c7b6873712
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80925152"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88434895"
 ---
 # <a name="getref-method-int"></a>getRef 메서드(int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +40,7 @@ public java.sql.Ref getRef(int i)
   
  매개 변수 인덱스를 나타내는 **int**입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
  Ref 개체입니다.  
   
 ## <a name="exceptions"></a>예외  

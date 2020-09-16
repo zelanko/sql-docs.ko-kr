@@ -1,4 +1,5 @@
 ---
+description: getStatement 메서드(SQLServerResultSet)
 title: getStatement 메서드(SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 7dea981b-b4fd-4f8d-954f-e686124627e2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f6a96d7bde4301c5789da402ebb58ab2a38295be
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: f5affe4faf9a3c4f732d13d4c5ac54b442a28c83
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926289"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88434395"
 ---
 # <a name="getstatement-method-sqlserverresultset"></a>getStatement 메서드(SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -1,4 +1,5 @@
 ---
+description: getSQLStateType 메서드(SQLServerDatabaseMetaData)
 title: getSQLStateType 메서드(SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: ee4d6751-68a3-4d04-831c-e6d704c59e63
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 762c22bbf2ed499fc2c0884014e374af17f60292
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: b158e27af86d09397e25ef474a2498a498391e55
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80921945"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88434495"
 ---
 # <a name="getsqlstatetype-method-sqlserverdatabasemetadata"></a>getSQLStateType 메서드(SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

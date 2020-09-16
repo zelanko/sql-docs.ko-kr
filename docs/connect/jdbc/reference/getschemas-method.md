@@ -1,4 +1,5 @@
 ---
+description: getSchemas 메서드()
 title: getSchemas 메서드() | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: adba0ee6-ff6d-4215-b646-62c735be3fe9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1c7951e25fd7dfbd089b21be066cfefd9828c231
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 8918b4806972ff6cf1cbb08250149049ecbec6b5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80929233"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88434675"
 ---
 # <a name="getschemas-method-"></a>getSchemas 메서드()
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -45,7 +46,7 @@ public java.sql.ResultSet getSchemas()
   
  getSchemas 메서드에서 반환되는 결과 집합에는 다음 정보가 포함됩니다.  
   
-|속성|Type|Description|  
+|이름|Type|설명|  
 |----------|----------|-----------------|  
 |TABLE_SCHEM|**String**|스키마의 이름입니다.|  
 |TABLE_CATALOG|**String**|스키마의 카탈로그 이름입니다.|  

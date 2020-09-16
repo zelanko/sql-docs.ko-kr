@@ -1,4 +1,5 @@
 ---
+description: getInt 메서드(java.lang.String)(SQLServerResultSet)
 title: getInt 메서드(java.lang.String)(SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 76b7054d-46dd-4d87-93a4-a7ea2ae9b7fd
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f27eefc74149c373555411e96304452b5756140e
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 3449a5e97b71bdc744790f21fc6410a51ff1329f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80921460"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88435855"
 ---
 # <a name="getint-method-javalangstring-sqlserverresultset"></a>getInt 메서드(java.lang.String)(SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +40,7 @@ public int getInt(java.lang.String columnName)
   
  열 이름이 포함된 **문자열**입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
  **int** 값입니다.  
   
 ## <a name="exceptions"></a>예외  

@@ -1,4 +1,5 @@
 ---
+description: getNCharacterStream 메서드(java.lang.String)
 title: getNCharacterStream 메서드(java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 45d2695b-0727-419d-8921-a51d6feef0aa
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0dd13d292aaade59348a7673e56c4beaa59865a9
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: f11e621f7acedee8d5a37ec055d45a388fe275b3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80905956"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88435335"
 ---
 # <a name="getncharacterstream-method-javalangstring"></a>getNCharacterStream 메서드(java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -34,7 +35,7 @@ public final java.io.Reader getNCharacterStream(java.lang.String columnLabel)
   
  열 레이블이 포함된 **문자열**입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
  Reader 개체입니다.  
   
 ## <a name="exceptions"></a>예외  

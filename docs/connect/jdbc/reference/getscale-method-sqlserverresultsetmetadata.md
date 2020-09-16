@@ -1,4 +1,5 @@
 ---
+description: getScale 메서드(SQLServerResultSetMetaData)
 title: getScale 메서드(SQLServerResultSetMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: fe29aa5f-4cc5-413f-8bbd-a58064993d87
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 923fbc9738f0b5bac9a4ded9c20a0a015ab377ae
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 1c36a67dc80a078308344105f2c1091a0d25f90d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80921800"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88434765"
 ---
 # <a name="getscale-method-sqlserverresultsetmetadata"></a>getScale 메서드(SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +40,7 @@ public int getScale(int column)
   
  열 인덱스를 나타내는 **int**입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
  열의 소수 자릿수를 나타내는 **int**입니다.  
   
 ## <a name="exceptions"></a>예외  

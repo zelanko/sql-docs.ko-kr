@@ -1,4 +1,5 @@
 ---
+description: getReference 메서드(SQLServerConnectionPoolDataSource)
 title: getReference 메서드(SQLServerConnectionPoolDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,14 +14,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 8c48de91-de55-4f25-a5f1-36a8e8c4629e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: afb317bfcca6ccea14c9a25c98e1c0bfbe29e19f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 718829d7313dcd91942b8db60cd8a033da2de4ca
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67980494"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88434825"
 ---
 # <a name="getreference-method-sqlserverconnectionpooldatasource"></a>getReference 메서드(SQLServerConnectionPoolDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

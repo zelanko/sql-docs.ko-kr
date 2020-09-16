@@ -1,4 +1,5 @@
 ---
+description: getDouble 메서드(int)
 title: getDouble 메서드(int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: c0ed63bb-5ebe-4155-9f91-8fbfeac9c3b2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 043ef60ff421e85b6cf108404b9587d3091d144e
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: d1630e44ac55c15bf025c4541e29f44e90e54d23
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80917376"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88436195"
 ---
 # <a name="getdouble-method-int"></a>getDouble 메서드(int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +40,7 @@ public double getDouble(int index)
   
  매개 변수 인덱스를 나타내는 **int**입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
  **double** 값입니다.  
   
 ## <a name="exceptions"></a>예외  
