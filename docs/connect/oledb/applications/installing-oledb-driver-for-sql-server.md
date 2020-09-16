@@ -19,14 +19,14 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, installing
 - data access [OLE DB Driver for SQL Server], installing OLE DB Driver for SQL Server
 - removing OLE DB Driver for SQL Server
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 1edd1c6e7a118e152fc1f8e85203434347061da5
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: b748efb2fecd7030622ee85b7dc9bb72d20dc674
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007064"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88860628"
 ---
 # <a name="installing-ole-db-driver-for-sql-server"></a>SQL Server용 OLE DB 드라이버 설치
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

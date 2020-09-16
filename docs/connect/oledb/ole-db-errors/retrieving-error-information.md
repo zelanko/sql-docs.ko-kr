@@ -1,6 +1,6 @@
 ---
 title: 오류 정보 검색(OLE DB 드라이버)
-description: OLE DB Driver for SQL Server를 사용하여 오류 정보 검색
+description: 이 예에서는 SQL Server용 OLE DB 드라이버에서 공개하는 다양한 오류 인터페이스에서 정보를 확인합니다.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - OLE DB error handling, retrieving information
 - errors [OLE DB], retrieving information
 - OLE DB error handling, examples
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: f380f983b191843b82f7ba6ee9d17b06d43e2ba3
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: d0dd82b6ff3cb708cd6136929d1bdfd503a297bf
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244801"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88862209"
 ---
 # <a name="retrieving-error-information"></a>오류 정보 검색
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
