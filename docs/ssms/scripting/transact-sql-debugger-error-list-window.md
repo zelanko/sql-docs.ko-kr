@@ -3,7 +3,7 @@ title: 오류 목록 창
 description: 오류 목록을 사용하여 Transact-SQL 스크립트를 편집할 때 Intellisense에서 생성하는 오류 및 경고를 확인하는 방법을 알아봅니다.
 titleSuffix: T-SQL debugger
 ms.prod: sql
-ms.technology: scripting
+ms.technology: ssms
 ms.topic: conceptual
 dev_langs:
 - TSQL
@@ -17,12 +17,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4755c439edafb5f38740e12f6ec57abf468bc01a
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 2ce203349f36ecf05d934903518ec0f783d12537
+ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247353"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88901413"
 ---
 # <a name="transact-sql-debugger---error-list-window"></a>Transact-SQL 디버거 - 오류 목록 창
 

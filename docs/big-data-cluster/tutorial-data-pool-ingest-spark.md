@@ -10,12 +10,12 @@ ms.date: 12/13/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d87d817f2bc7c23e2df3dd18d55ce21d12304cb4
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: 0eb0069b2f98a42b1069dcef283372c9711aae29
+ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86943215"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076648"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>자습서: Spark 작업을 사용하여 SQL Server 데이터 풀로 데이터 수집
 
@@ -60,9 +60,12 @@ ms.locfileid: "86943215"
    -- To create external tables in data pools
    GRANT ALTER ANY EXTERNAL DATA SOURCE TO sample_user;
 
-   -- To create external table
+   -- To create external tables
    GRANT CREATE TABLE TO sample_user;
    GRANT ALTER ANY SCHEMA TO sample_user;
+
+   -- To view database state for Sales
+   GRANT VIEW DATABASE STATE ON DATABASE::Sales TO sample_user;
 
    ALTER ROLE [db_datareader] ADD MEMBER sample_user
    ALTER ROLE [db_datawriter] ADD MEMBER sample_user

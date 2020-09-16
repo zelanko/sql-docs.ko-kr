@@ -3,7 +3,7 @@ title: 적중 횟수 지정
 description: 중단점이 적중 횟수에 도달할 때까지 디버거가 해당 중단점에서 중단하지 않도록 중단점 적중 횟수를 설정하는 방법을 알아봅니다.
 titleSuffix: T-SQL debugger
 ms.prod: sql
-ms.technology: scripting
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vs.debug.breakpt.hitcount
@@ -16,12 +16,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bdd2924500e7770f4c18b1f50908dd8cc0b437a0
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: d83f361efd4d822456366133729759cb16c18647
+ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245576"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88901416"
 ---
 # <a name="specify-a-hit-count"></a>적중 횟수 지정
 

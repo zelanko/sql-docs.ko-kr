@@ -1,26 +1,28 @@
 ---
 title: 편집기 열기(SQL Server Management Studio)
 description: SQL Server Management Studio에서 데이터베이스 엔진 쿼리, MDX, DMX 및 XML/A 편집기를 여는 방법을 알아봅니다.
-ms.custom: seo-lt-2019
-ms.date: 03/14/2017
 ms.prod: sql
-ms.technology: scripting
-ms.reviewer: ''
+ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: 5d654a60-d205-49d2-a831-b3d986d60024
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ab96c21c9ac7d6e8b90564d6759c85744adc27f8
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: c31d10b470271959f7bcb77b821847f9ff45b388
+ms.sourcegitcommit: 9e1f1c6ee8f5a10d18a2599bfd9f3eb6081829e1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87122574"
+ms.lasthandoff: 08/29/2020
+ms.locfileid: "89093491"
 ---
 # <a name="open-an-editor-sql-server-management-studio"></a>편집기 열기(SQL Server Management Studio)
+
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-  이 항목에서는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]쿼리, MDX, DMX 또는 XML/A 편집기를 여는 방법에 대해 설명합니다. 편집기를 열면 각 편집기 창이 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]가운데 창에 탭으로 표시됩니다.  
+
+이 항목에서는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]쿼리, MDX, DMX 또는 XML/A 편집기를 여는 방법에 대해 설명합니다. 편집기를 열면 각 편집기 창이 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]가운데 창에 탭으로 표시됩니다.  
   
 ## <a name="before-you-begin"></a>시작하기 전에  
  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기( [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트 편집용), DMX 및 MDX 편집기(해당 언어를 통한 스크립트 편집용) 및 XML/A 편집기(XML/A 스크립트 또는 XML 파일 편집용)의 네 가지 편집기를 지원합니다. 텍스트 파일은 어떠한 편집기로도 편집할 수 있습니다.  
@@ -81,6 +83,4 @@ ms.locfileid: "87122574"
   
 -   오른쪽 창에 **템플릿 브라우저** 창이 표시됩니다.  
   
--   템플릿을 두 번 클릭하여 데이터베이스 엔진 쿼리 창을 템플릿 텍스트와 함께 엽니다. 예를 들어 CREATE DATABASE 템플릿을 열려면 **SQL Server 템플릿** 폴더, **데이터베이스** 폴더를 차례로 열고 **데이터베이스 만들기**를 두 번 클릭합니다.  
-  
-  
+-   템플릿을 두 번 클릭하여 데이터베이스 엔진 쿼리 창을 템플릿 텍스트와 함께 엽니다. 예를 들어 CREATE DATABASE 템플릿을 열려면 **SQL Server 템플릿** 폴더, **데이터베이스** 폴더를 차례로 열고 **데이터베이스 만들기**를 두 번 클릭합니다.

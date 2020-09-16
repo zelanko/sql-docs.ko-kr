@@ -9,14 +9,14 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: 83d47694-e56d-4dae-b54e-14945bf8ba31
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 0e1b2bf585b1b44f0f8e3b01eca46faaeda2a053
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f4fafa88b228551aabab01cdb34bd5f119db5fa0
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85723400"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89537757"
 ---
 # <a name="backing-up-a-database-with-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블이 포함된 데이터베이스 백업
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

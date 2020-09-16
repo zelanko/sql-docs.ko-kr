@@ -15,12 +15,12 @@ ms.assetid: 925b42e0-c5ea-4829-8ece-a53c6cddad3b
 author: pmasl
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f61fad1afac14c2e6a27314e2a65371722ee9b23
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 3efda2f67cc2772739a7eaf0a8f1b0dbf947d421
+ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485582"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076808"
 ---
 # <a name="thread-and-task-architecture-guide"></a>스레드 및 태스크 아키텍처 가이드
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -177,9 +177,13 @@ Microsoft Windows에서는 1부터 31까지의 숫자 우선 순위 시스템을
 
 기본적으로 각 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]인스턴스의 우선 순위는 보통 우선 순위인 7입니다. 이 기본값은 다른 애플리케이션에 나쁜 영향을 주지 않고 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 스레드가 충분한 CPU 리소스를 얻을 수 있는 우선 순위를 제공합니다. 
 
+> [!IMPORTANT]  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../includes/ssnotedepfuturedontuse-md.md)]  
+
 [priority boost](../database-engine/configure-windows/configure-the-priority-boost-server-configuration-option.md) 구성 옵션을 사용하면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스 스레드의 우선 순위를 높은 우선 순위인 13으로 높일 수 있습니다. 이 설정은 대부분의 다른 애플리케이션보다 높은 우선 순위를 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 스레드에 제공합니다. 따라서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 스레드는 일반적으로 실행할 준비가 될 때마다 디스패치되고 다른 애플리케이션의 스레드에 의해 미리 점유되지 않습니다. 이는 서버가 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스만 실행하고 다른 애플리케이션은 실행하지 않을 때 성능을 향상시킬 수 있습니다. 그러나 메모리 집중형 작업이 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 발생할 경우 대개는 다른 애플리케이션이 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 스레드를 미리 점유할 만큼 충분히 높은 우선 순위를 갖고 있지 않습니다. 
 
 컴퓨터에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 여러 인스턴스를 실행하고 일부 인스턴스에 대해서만 priority boost 옵션이 설정되어 있는 경우 보통 우선 순위에서 실행되는 인스턴스의 성능에 나쁜 영향을 줄 수 있습니다. 또한 priority boost가 설정되어 있으면 서버의 다른 애플리케이션 및 구성 요소의 성능도 저하될 수 있습니다. 따라서 엄격하게 제어되는 환경에서만 이 설정을 사용해야 합니다.
+
 
 ## <a name="hot-add-cpu"></a>Hot add CPU
 Hot add CPU는 실행 중인 시스템에 CPU를 동적으로 추가할 수 있는 기능입니다. CPU는 새 하드웨어를 추가하여 물리적으로 추가하거나, 온라인으로 하드웨어를 분할하여 논리적으로 추가하거나, 가상화 계층을 통해 가상으로 추가할 수 있습니다. [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)]는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]부터 hot add CPU를 지원합니다.
