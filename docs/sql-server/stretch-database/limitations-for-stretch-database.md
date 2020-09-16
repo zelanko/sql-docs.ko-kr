@@ -1,4 +1,5 @@
 ---
+description: Stretch Database에 대한 제한 사항
 title: Stretch Database에 대한 제한 사항
 ms.date: 06/14/2016
 ms.service: sql-server-stretch-database
@@ -13,15 +14,15 @@ ms.assetid: 2b1fbec1-7859-44fc-8417-724fc57a59c0
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 12b3fae80a7bf2c46c8d1d10ad5c45d74212eef0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c53fe235850dbb932e5773c82cc22cc19d62e749
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73843791"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454361"
 ---
 # <a name="limitations-for-stretch-database"></a>Stretch Database에 대한 제한 사항
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
 
 
   스트레치 사용 데이터베이스와 관련된 제한 사항 및 현재 테이블에 스트레치를 사용할 수 없게 하는 제한 사항에 대해 알아봅니다.  

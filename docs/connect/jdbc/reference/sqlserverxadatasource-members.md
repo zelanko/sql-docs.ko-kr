@@ -1,4 +1,5 @@
 ---
+description: SQLServerXADataSource 멤버
 title: SQLServerXADataSource 멤버 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -8,14 +9,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 04178645-915f-4569-8907-d45e299bbe7d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f2baf4e745e18052646e842eb64445690229ed0b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ed2d2515dc742eca0ece6036dbf0b06dd9a9530c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67970178"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458205"
 ---
 # <a name="sqlserverxadatasource-members"></a>SQLServerXADataSource 멤버
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -24,7 +25,7 @@ ms.locfileid: "67970178"
   
 ## <a name="constructors"></a>생성자  
   
-|속성|Description|  
+|속성|설명|  
 |----------|-----------------|  
 |[SQLServerXADataSource ()](../../../connect/jdbc/reference/sqlserverxadatasource-constructor.md)|[SQLServerXADataSource](../../../connect/jdbc/reference/sqlserverxadatasource-class.md) 클래스의 새 인스턴스를 초기화합니다.|  
   

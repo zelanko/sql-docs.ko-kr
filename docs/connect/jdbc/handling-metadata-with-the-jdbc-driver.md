@@ -1,4 +1,5 @@
 ---
+description: JDBC 드라이버로 메타데이터 처리
 title: JDBC 드라이버로 메타데이터 처리 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 5cfb35d4-ddcd-40a2-8091-f29cddc32552
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 859932404e14a9ab1216665d211e1b6734ca9726
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 633629005eef8e9a47f616637e646886666f2200
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924684"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438425"
 ---
 # <a name="handling-metadata-with-the-jdbc-driver"></a>JDBC 드라이버로 메타데이터 처리
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -37,7 +38,7 @@ ms.locfileid: "80924684"
   
 ## <a name="in-this-section"></a>섹션 내용  
   
-|항목|Description|  
+|항목|설명|  
 |-----------|-----------------|  
 |[데이터베이스 메타데이터 사용](../../connect/jdbc/using-database-metadata.md)|현재 연결된 데이터베이스에 관한 메타데이터 정보를 검색하는 방법을 설명합니다.|  
 |[결과 집합 메타데이터 사용](../../connect/jdbc/using-result-set-metadata.md)|현재 결과 집합에 관한 메타데이터 정보를 검색하는 방법을 설명합니다.|  

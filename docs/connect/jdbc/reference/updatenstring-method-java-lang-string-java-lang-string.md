@@ -1,4 +1,5 @@
 ---
+description: updateNString 메서드(java.lang.String, java.lang.String)
 title: updateNString 메서드(java.lang.String, java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 6daca03f-c60f-4842-b9e3-11d136e78312
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 325832acffb99c76819bd842bd2954b891900ed0
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 21edbf36ab5817f02bcf049654bc083d2cd7624a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920043"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450112"
 ---
 # <a name="updatenstring-method-javalangstring-javalangstring"></a>updateNString 메서드(java.lang.String, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -45,7 +46,7 @@ public void updateNString(java.lang.String columnLabel,
 ## <a name="remarks"></a>설명  
  이 updateNString 메서드는 java.sql.ResultSet 인터페이스의 updateNString 메서드에 의해 지정됩니다.  
   
- 이 메서드는 Java **String**을 선택된 **nchar**, **nvarchar(max)** , **ntext** 및 **xml** 열에 전달합니다. 다른 데이터 형식 열에 이 메서드를 사용하면 예외가 발생합니다.  
+ 이 메서드는 Java **String**을 선택된 **nchar**, **nvarchar(max)**, **ntext** 및 **xml** 열에 전달합니다. 다른 데이터 형식 열에 이 메서드를 사용하면 예외가 발생합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [updateNString 메서드&#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatenstring-method-sqlserverresultset.md)   

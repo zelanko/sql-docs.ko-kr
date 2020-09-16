@@ -1,4 +1,5 @@
 ---
+description: 트랜잭션 크기 관리
 title: 트랜잭션 크기 관리 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 82900342-bc80-445f-98a4-468a303aae1e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 14729ba2782bfd9f88e718fbde50de30ae13e645
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 1ba88edf4c4c8f1dfb4e8b7cd27db3102be448c4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80923092"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438375"
 ---
 # <a name="managing-transaction-size"></a>트랜잭션 크기 관리
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

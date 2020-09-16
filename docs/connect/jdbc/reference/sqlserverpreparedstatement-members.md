@@ -1,4 +1,5 @@
 ---
+description: SQLServerPreparedStatement 멤버
 title: SQLServerPreparedStatement 멤버 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 2363902f-d4c6-4cd4-a5fc-86079eb9e418
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9a995211f7e485971ad71a5ae290e410b8604cb0
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 3b5025d8a7387777de1d95861fa6b2d09f436b68
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80925963"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458275"
 ---
 # <a name="sqlserverpreparedstatement-members"></a>SQLServerPreparedStatement 멤버
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,7 +37,7 @@ ms.locfileid: "80925963"
   
 ## <a name="methods"></a>메서드  
   
-|속성|Description|  
+|속성|설명|  
 |----------|-----------------|  
 |[addBatch](../../../connect/jdbc/reference/addbatch-method-sqlserverpreparedstatement.md)|이 Statement 개체의 명령 일괄 처리에 대한 매개 변수 집합을 추가합니다.|  
 |[cancel](../../../connect/jdbc/reference/cancel-method-sqlserverstatement.md)|[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)에서 상속되며, 이 Statement 개체에 의해 현재 실행되고 있는 SQL 문을 취소합니다.|  

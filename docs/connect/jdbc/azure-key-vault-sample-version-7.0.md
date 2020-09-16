@@ -1,4 +1,5 @@
 ---
+description: Azure Key Vault 샘플
 title: Azure Key Vault 샘플 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
@@ -9,12 +10,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0107b087da24faf1478adcca33880cc16dbe5989
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 9c3eefb724be4c92abed09b4fee6ff94968d6a36
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922604"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438435"
 ---
 # <a name="azure-key-vault-sample"></a>Azure Key Vault 샘플
 
@@ -243,7 +244,7 @@ public class AKV {
 }
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [Azure Key vault 샘플 버전 6.2.2](../../connect/jdbc/azure-key-vault-sample-version-6.2.2.md)  
 [Azure Key vault 샘플 버전 6.0.0](../../connect/jdbc/azure-key-vault-sample-version-6.0.0.md)  

@@ -1,4 +1,5 @@
 ---
+description: supportsMultipleTransactions 메서드(SQLServerDatabaseMetaData)
 title: supportsMultipleTransactions 메서드(SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 34ff8dcb-5487-46d1-a4c1-25e33eb3eee4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6753cb6ab567b00ac381364fcd8da81b4de39c0a
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: e71f854e7eebcb600515314d427dacce0e57f33c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80912619"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450325"
 ---
 # <a name="supportsmultipletransactions-method-sqlserverdatabasemetadata"></a>supportsMultipleTransactions 메서드(SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -1,4 +1,5 @@
 ---
+description: updateShort 메서드(int, short)
 title: updateShort 메서드(int, short) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 155b9189-cb97-4264-b42c-bbda1c7d624f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 94c51ee818a7e598e774aed9c37f08f028ccd027
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 2585d0c5485b3e64f051c6bffcd867f762fd7d21
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80919679"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450080"
 ---
 # <a name="updateshort-method-int-short"></a>updateShort 메서드(int, short)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

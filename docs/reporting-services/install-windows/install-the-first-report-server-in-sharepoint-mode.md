@@ -1,4 +1,5 @@
 ---
+description: SharePoint 모드에서 첫 번째 보고서 서버 설치
 title: SharePoint 모드에서 첫 번째 보고서 서버 설치 | Microsoft Docs
 ms.date: 10/05/2017
 ms.prod: reporting-services
@@ -7,12 +8,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 05ab2bfea73d7419613d21a3cce85135743e48f5
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: 73b90baf141289a8dbee8eebe0c788823a50aa6e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86941295"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446105"
 ---
 # <a name="install-the-first-report-server-in-sharepoint-mode"></a>SharePoint 모드에서 첫 번째 보고서 서버 설치
 

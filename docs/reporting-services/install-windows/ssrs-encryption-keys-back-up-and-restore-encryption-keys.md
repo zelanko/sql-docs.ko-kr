@@ -1,4 +1,5 @@
 ---
+description: SSRS 암호화 키 - 암호화 키 백업 및 복원
 title: Reporting Services 암호화 키 백업 및 복원 | Microsoft Docs
 ms.date: 05/31/2016
 ms.prod: reporting-services
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6773d5df-03ef-4781-beb7-9f6825bac979
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a49c9f3fbffc127fb4f81db5d82435b2d310fcda
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: 5da541204707bc3ad3b47a8ade5f1f1af6506ad5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86053669"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454570"
 ---
 # <a name="ssrs-encryption-keys---back-up-and-restore-encryption-keys"></a>SSRS 암호화 키 - 암호화 키 백업 및 복원
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]

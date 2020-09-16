@@ -1,4 +1,5 @@
 ---
+description: setServerPreparedStatementDiscardThreshold 메서드(SQLServerConnection)
 title: setServerPreparedStatementDiscardThreshold 메서드(SQLServerConnection) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2018
@@ -15,17 +16,17 @@ apitype: Assembly
 ms.assetid: ''
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a29b2d8124f0714a6201d88fbdd0a61d580a5429
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: ca004a1eeb2e0446126673f4d500cdef092915dd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80927620"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458345"
 ---
 # <a name="setserverpreparedstatementdiscardthreshold-method-sqlserverconnection"></a>setServerPreparedStatementDiscardThreshold 메서드(SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
- 특정 연결 인스턴스에 동작을 지정합니다. 이 설정은 서버의 미처리 핸들을 정리하기 위한 호출 실행 전에 연결별로 처리되지 않을 수 있는 미처리 준비 문 삭제 작업(sp_unprepare)의 수를 제어합니다. 설정이 <= 1로 되어 있을 때에는 준비된 문이 종료되자마자 준비 취소 작업이 곧바로 실행됩니다. 값이 > 1로 설정되어 있다면 이러한 호출은 sp_unprepare 호출이 너무 잦아지는 오버헤드를 방지하기 위해 모두 함께 일괄 처리됩니다.
+ 특정 연결 인스턴스에 대한 동작을 지정합니다. 이 설정은 서버의 미처리 핸들을 정리하기 위한 호출 실행 전에 연결별로 처리되지 않을 수 있는 미처리 준비 문 삭제 작업(sp_unprepare)의 수를 제어합니다. 설정이 <= 1로 되어 있을 때에는 준비된 문이 종료되자마자 준비 취소 작업이 곧바로 실행됩니다. 값이 > 1로 설정되어 있다면 이러한 호출은 sp_unprepare 호출이 너무 잦아지는 오버헤드를 방지하기 위해 모두 함께 일괄 처리됩니다.
 
 
 ## <a name="syntax"></a>구문  

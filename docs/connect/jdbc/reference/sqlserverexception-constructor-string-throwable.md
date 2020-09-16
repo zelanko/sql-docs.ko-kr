@@ -1,4 +1,5 @@
 ---
+description: SQLServerException 생성자(java.lang.String, java.lang.Throwable)
 title: SQLServerException 생성자(java.lang.String, java.lang.Throwable) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2018
@@ -11,14 +12,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: ''
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 14984450507b5eea63d2fbe88bb2e7f957f61868
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: cd671bcb9c29eb7ac835c5bcbb877dc72c794c0a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67971086"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450462"
 ---
 # <a name="sqlserverexception-constructor-javalangstring-javalangthrowable"></a>SQLServerException 생성자(java.lang.String, java.lang.Throwable)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,7 +37,7 @@ public SQLServerException(java.lang.String errText,
 #### <a name="parameters"></a>매개 변수  
  *errText*  
   
- 오류 문자를 포함하는 문자열입니다.
+ 오류 텍스트를 포함하는 문자열입니다.
  
  *cause*  
   

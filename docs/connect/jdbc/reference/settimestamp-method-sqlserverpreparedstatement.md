@@ -1,4 +1,5 @@
 ---
+description: setTimestamp 메서드(SQLServerPreparedStatement)
 title: setTimestamp 메서드(SQLServerPreparedStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 1de95320-3085-4b34-b722-a02aaa2dd6b0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 31c639beae2dae071641dfd0e6c2eb6b9689a629
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 0e3a2429c9e7e8f49403480b473f8b7985cb5e2d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926476"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450651"
 ---
 # <a name="settimestamp-method-sqlserverpreparedstatement"></a>setTimestamp 메서드(SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "80926476"
   
 ## <a name="overload-list"></a>오버로드 목록  
   
-|속성|Description|  
+|이름|설명|  
 |----------|-----------------|  
 |[setTimestamp(int, java.sql.Timestamp)](../../../connect/jdbc/reference/settimestamp-method-int-java-sql-timestamp.md)|지정된 매개 변수를 지정된 타임스탬프 값으로 설정합니다.|  
 |[setTimestamp(int, java.sql.Timestamp, java.util.Calendar)](../../../connect/jdbc/reference/settimestamp-method-int-java-sql-timestamp-java-util-calendar.md)|지정된 매개 변수를 지정된 타임스탬프 및 달력 값으로 설정합니다.|  

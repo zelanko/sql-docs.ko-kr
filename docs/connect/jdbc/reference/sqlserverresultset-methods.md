@@ -1,4 +1,5 @@
 ---
+description: SQLServerResultSet 메서드
 title: SQLServerResultSet 메서드 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9a1f4d07-ada9-43c7-9281-1f059554c4d6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 311aed0e3efd6d365a7327e0196adcc30d3a601e
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: a114d5d85e9066069cd42063399af18add58fd7f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80927074"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458185"
 ---
 # <a name="sqlserverresultset-methods"></a>SQLServerResultSet 메서드
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

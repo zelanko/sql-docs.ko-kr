@@ -1,4 +1,5 @@
 ---
+description: MSReportServer_Instance 멤버
 title: MSReportServer_Instance 멤버 | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -15,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: 154b78e6-59cc-44eb-a7d9-34908d1b6b1a
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 13b266ed09c4187070403837a47011b30b43aa99
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2f75e1f2cffcbfc09672dc60242ad955360c864f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65572215"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454416"
 ---
 # <a name="msreportserver_instance-members"></a>MSReportServer_Instance 멤버
   MSReportServer_Instance 클래스는 클라이언트에서 설치된 보고서 서버에 연결하는 데 필요한 기본 정보를 제공합니다.  
   
 ## <a name="public-properties"></a>Public 속성  
   
-|||  
+|속성|설명|  
 |-|-|  
 |[EditionID](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties-editionid.md)|보고서 서버의 버전을 반환합니다.|  
 |[EditionName](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties-editionname.md)|사람이 읽을 수 있는 보고서 서버 버전의 이름을 반환합니다.|  
@@ -38,7 +39,7 @@ ms.locfileid: "65572215"
   
 ## <a name="public-methods"></a>Public 메서드  
   
-|||  
+|메서드|설명|  
 |-|-|  
 |[GetReportServerUrls 메서드&#40;WMI MSReportServer_Instance&#41;](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-methods-getreportserverurls.md)|사용자가 보고서 서버 및 보고서 관리자에 액세스하는 데 사용할 수 있는 URL을 나열합니다.|  
   

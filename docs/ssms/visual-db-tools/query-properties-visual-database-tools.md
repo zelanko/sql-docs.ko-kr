@@ -1,4 +1,5 @@
 ---
+description: 쿼리 속성(Visual Database Tools)
 title: 쿼리 속성
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ ms.assetid: 07495669-6ed5-4004-904e-aae1230be5e4
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: d9d284d99b6dfddaf8936c36cf06e373a673e46a
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: ca80e60a35b9eccff0ada18854d4f8a33ddaa9dd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003181"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445989"
 ---
 # <a name="query-properties-visual-database-tools"></a>쿼리 속성(Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "86003181"
 **ID 범주**  
 확장하면 **이름** 속성이 표시됩니다.  
   
-**이름**  
+**Name**  
 현재 쿼리의 이름을 표시합니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서는 이를 변경할 수 없습니다.  
   
 **데이터베이스 이름**  

@@ -1,4 +1,5 @@
 ---
+description: 애플리케이션 보안
 title: 애플리케이션 보안 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 940879b4-aa0f-41ce-a369-6cfc0e78e01d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2f7d9c9a1610b5ebcd086bec1cc11d0ec85f7358
-ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
+ms.openlocfilehash: 9e869490e5012d6e353eadc0dc7acde68007235b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81219442"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438555"
 ---
 # <a name="application-security"></a>애플리케이션 보안
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

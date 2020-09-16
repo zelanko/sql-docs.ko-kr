@@ -1,4 +1,5 @@
 ---
+description: JDBC 드라이버의 국가별 기능
 title: JDBC 드라이버의 국가별 기능 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
@@ -8,14 +9,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: bbb74a1d-9278-401f-9530-7b5f45aa79de
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 64c046ade18bfdf8789ce9fec221f3d33517fcbb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 960f689f39007b4fbe4d7aa01d935ef1aaf640cd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "69028013"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438405"
 ---
 # <a name="international-features-of-the-jdbc-driver"></a>JDBC 드라이버의 국가별 기능
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -46,7 +47,7 @@ ms.locfileid: "69028013"
  반면 [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 및 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 클래스의 setString, setCharacterStream 및 setClob 메서드와 같은 비국가별 문자 API 메서드는 **sendStringParametersAsUnicode** 속성이 “true”로 설정(기본값)된 경우에만 해당 값을 유니코드로 서버에 전송합니다.  
   
 ## <a name="non-unicode-parameters"></a>유니코드가 아닌 매개 변수  
- 유니코드가 아닌 매개 변수의 **CHAR**, **VARCHAR** 또는 **LONGVARCHAR** **sendStringParametersAsUnicode** 속성을 사용 하는 최적의 성능을 위해, 연결 문자열 속성을 "false"로 설정 하 고 국가별 문자 메서드가 아닌 메서드를 사용 합니다.  
+ 유니코드가 아닌 매개 변수의 **CHAR**, **VARCHAR** 또는 **LONGVARCHAR****sendStringParametersAsUnicode** 속성을 사용 하는 최적의 성능을 위해, 연결 문자열 속성을 "false"로 설정 하 고 국가별 문자 메서드가 아닌 메서드를 사용 합니다.  
   
 ## <a name="formatting-issues"></a>서식 지정 문제  
  날짜, 시간 및 통화의 경우 지역화된 데이터에 관한 모든 서식 지정은 Locale 개체와 **Date**, **Calendar** 및 **Number** 데이터 형식의 다양한 서식 지정 메서드를 사용하여 Java 언어 수준에서 수행됩니다. 드문 경우이기는 하지만 JDBC 드라이버가 지역화된 형식으로 로캘 구분 데이터를 함께 전달해야 하는 경우 기본 JVM 로캘과 함께 적절한 포맷터가 사용됩니다.  

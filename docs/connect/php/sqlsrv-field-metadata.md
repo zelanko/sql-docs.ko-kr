@@ -1,4 +1,5 @@
 ---
+description: sqlsrv_field_metadata
 title: sqlsrv_field_metadata | Microsoft Docs
 ms.custom: ''
 ms.date: 01/31/2020
@@ -14,14 +15,14 @@ helpviewer_keywords:
 - API Reference, sqlsrv_field_metadata
 - sqlsrv_field_metadata
 ms.assetid: c02f6942-0484-4567-a78e-fe8aa2053536
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8ef4bd58d352216cd4c64fe6c18a9ffd6dd3b13a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: fd0c925808fda11127d1632e62c296f8cce30272
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "76939570"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449969"
 ---
 # <a name="sqlsrv_field_metadata"></a>sqlsrv_field_metadata
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -38,27 +39,27 @@ sqlsrv_field_metadata( resource $stmt)
 #### <a name="parameters"></a>매개 변수  
 *$stmt*: 필드 메타데이터를 찾은 문 리소스입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
 배열의 **array** 또는 **false**입니다. 배열은 결과 집합의 각 필드에 대한 하나의 배열로 구성됩니다. 각 하위 배열에는 아래 표에 설명된 키가 있습니다. 필드 메타데이터 검색 중 오류가 발생하면 **false** 가 반환됩니다.  
   
 |키|Description|  
 |-------|---------------|  
-|속성|필드에 해당하는 열의 이름입니다.|  
-|Type|SQL 형식에 해당하는 숫자 값입니다.|  
+|이름|필드에 해당하는 열의 이름입니다.|  
+|형식|SQL 형식에 해당하는 숫자 값입니다.|  
 |크기|문자 형식 필드(char(n), varchar(n), nchar(n), nvarchar(n), XML)의 문자 수입니다. 이진 형식 필드(binary(n), varbinary(n), UDT)의 바이트 수입니다. 기타 SQL Server 데이터 형식의 경우**NULL** 입니다.|  
-|자릿수|가변 전체 자릿수 형식(real, numeric, decimal, datetime2, datetimeoffset, time)의 전체 자릿수입니다. 기타 SQL Server 데이터 형식의 경우**NULL** 입니다.|  
+|전체 자릿수|가변 전체 자릿수 형식(real, numeric, decimal, datetime2, datetimeoffset, time)의 전체 자릿수입니다. 기타 SQL Server 데이터 형식의 경우**NULL** 입니다.|  
 |확장|가변 소수 자릿수 형식(numeric, decimal, datetime2, datetimeoffset, time)의 소수 자릿수입니다. 기타 SQL Server 데이터 형식의 경우**NULL** 입니다.|  
 |Nullable|열이 Null을 허용하는지(**SQLSRV_NULLABLE_YES**), 열이 Null을 허용하지 않는지(**SQLSRV_NULLABLE_NO**) 또는 열이 null 허용 여부를 알 수 없는지(**SQLSRV_NULLABLE_UNKNOWN**) 여부를 나타내는 열거형 값입니다.|  
   
 다음 표에서는 각 하위 배열 키에 대한 자세한 내용을 제공합니다. 이러한 형식에 대한 자세한 내용은 SQL Server 설명서를 참조하세요.  
   
-|SQL Server 2008 데이터 형식|Type|최소/최대 전체 자릿수|최소/최대 소수 자릿수|크기|  
+|SQL Server 2008 데이터 형식|형식|최소/최대 전체 자릿수|최소/최대 소수 자릿수|크기|  
 |-----------------------------|--------|----------------------|------------------|--------|  
 |bigint|SQL_BIGINT(-5)|||8|  
 |binary|SQL_BINARY (-2)|||0 < *n* < 8000 <sup>1</sup>|  
 |bit|SQL_BIT(-7)||||  
 |char|SQL_CHAR(1)|||0 < *n* < 8000 <sup>1</sup>|  
-|date|SQL_TYPE_DATE(91)|10/10|0/0||  
+|날짜|SQL_TYPE_DATE(91)|10/10|0/0||  
 |Datetime|SQL_TYPE_TIMESTAMP(93)|23/23|3/3||  
 |datetime2|SQL_TYPE_TIMESTAMP(93)|19/27|0/7||  
 |datetimeoffset|SQL_SS_TIMESTAMPOFFSET(-155)|26/34|0/7||  
@@ -73,7 +74,7 @@ sqlsrv_field_metadata( resource $stmt)
 |nvarchar|SQL_WVARCHAR(-9)|||0 < *n* < 4000 <sup>1</sup>|  
 |real|SQL_REAL(7)|4/4|||  
 |smalldatetime|SQL_TYPE_TIMESTAMP(93)|16/16|0/0||  
-|smallint|SQL_SMALLINT(5)|||2bytes|  
+|smallint|SQL_SMALLINT(5)|||2바이트|  
 |Smallmoney|SQL_DECIMAL(3)|10/10|4/4||  
 |sql_variant|SQL_SS_VARIANT(-150)|||변수|  
 |text|SQL_LONGVARCHAR(-1)|||2GB|  
@@ -132,7 +133,7 @@ sqlsrv_close($conn);
 
 기본적으로 `DataClassification`이라는 옵션은 `false`이지만 `true`로 설정하면 `sqlsrv_field_metadata`에서 반환하는 배열이 민감도 데이터 분류 메타데이터(있는 경우)로 채워집니다. 
 
-Patients 테이블을 예로 들어 보겠습니다.
+환자 테이블을 예로 들어 보겠습니다.
 
 ```
 CREATE TABLE Patients 

@@ -1,4 +1,5 @@
 ---
+description: 보고서 서버 데이터베이스 업그레이드
 title: 보고서 서버 데이터베이스 업그레이드 | Microsoft Docs
 ms.date: 08/17/2018
 ms.prod: reporting-services
@@ -11,18 +12,18 @@ helpviewer_keywords:
 ms.assetid: 4091cf87-9d97-4048-a393-67f1f9207401
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4873e91d33363743652f36d15c9015438e479476
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: fcf80ef99c06487f25b65a928aab25a24bfccffe
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65575236"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446008"
 ---
 # <a name="upgrade-a-report-server-database"></a>보고서 서버 데이터베이스 업그레이드
 
 보고서 서버 데이터베이스는 하나 이상의 보고서 서버 인스턴스를 위한 스토리지를 제공합니다. 보고서 서버 데이터베이스 스키마는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 새 릴리스마다 변경될 수 있으므로 데이터베이스 버전과 사용하는 보고서 서버 인스턴스 버전이 일치해야 합니다. 대부분의 경우 보고서 서버 데이터베이스는 사용자가 특별한 동작을 수행하지 않고도 자동으로 업그레이드할 수 있습니다.  
   
- **기본 모드:** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기본 모드에서는 보고서 서버 데이터베이스가 실제로 기본 이름이 ReportServer 및 ReportServerTempDB인 두 개의 데이터베이스로 구성됩니다.  
+ **기본 모드:**[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기본 모드에서는 보고서 서버 데이터베이스가 실제로 기본 이름이 ReportServer 및 ReportServerTempDB인 두 개의 데이터베이스로 구성됩니다.  
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   

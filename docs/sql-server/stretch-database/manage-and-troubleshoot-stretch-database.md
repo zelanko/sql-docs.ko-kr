@@ -1,4 +1,5 @@
 ---
+description: Stretch Database 관리 및 문제 해결
 title: 관리 및 문제 해결
 ms.date: 06/27/2016
 ms.service: sql-server-stretch-database
@@ -13,15 +14,15 @@ ms.assetid: 6334db3e-9297-44df-8d53-211187a95520
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 786ebc0529d9af47c34840e0e2cb11bf2a448fec
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: efe0b68c605c96423dae5206693ff733430aff63
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79285777"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454335"
 ---
 # <a name="manage-and-troubleshoot-stretch-database"></a>Stretch Database 관리 및 문제 해결
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
 
 
   Stretch Database를 관리하고 문제를 해결하려면 이 문서에서 설명하는 도구와 방법을 사용하세요.  
@@ -104,7 +105,7 @@ Azure에 이미 마이그레이션된 데이터를 삭제하려는 경우 [sys.s
  모든 사용자의 모든 쿼리의 범위를 변경하려면 저장 프로시저 **sys.sp_rda_set_query_mode**를 실행합니다. 로컬 데이터만 쿼리하는 범위를 줄이거나 모든 쿼리를 사용하지 않도록 설정하거나 기본 설정을 복원할 수 있습니다. 자세한 내용은 [sys.sp_rda_set_query_mode](../../relational-databases/system-stored-procedures/sys-sp-rda-set-query-mode-transact-sql.md)를 참조하세요.  
    
  ### <a name="change-the-scope-of-queries-for-a-single-query-by-an-administrator"></a><a name="queryHints"></a>관리자의 단일 쿼리에 대한 쿼리 범위 변경  
- db_owner 역할 멤버의 단일 쿼리 범위를 변경하려면 ***WITH ( REMOTE_DATA_ARCHIVE_OVERRIDE =* value** ) 쿼리 힌트를 SELECT 문에 추가합니다. REMOTE_DATA_ARCHIVE_OVERRIDE 쿼리 힌트는 다음 값을 가질 수 있습니다.  
+ db_owner 역할 멤버의 단일 쿼리 범위를 변경하려면 ***WITH ( REMOTE_DATA_ARCHIVE_OVERRIDE = *value** ) 쿼리 힌트를 SELECT 문에 추가합니다. REMOTE_DATA_ARCHIVE_OVERRIDE 쿼리 힌트는 다음 값을 가질 수 있습니다.  
  -   **LOCAL_ONLY** 로컬 데이터만 쿼리합니다.  
    
  -   **REMOTE_ONLY** 원격 데이터만 쿼리합니다.  
@@ -121,7 +122,7 @@ GO
 ```  
    
  ## <a name="make-administrative-updates-and-deletes"></a><a name="adminHints"></a>관리 업데이트 및 삭제 만들기  
- 기본적으로 스트레치 사용 테이블에서 마이그레이션에 적합한 행 또는 이미 마이그레이션된 행을 업데이트 또는 삭제할 수 없습니다. 문제를 해결해야 할 경우 db_owner 역할의 멤버가 ***WITH ( REMOTE_DATA_ARCHIVE_OVERRIDE =* value** ) 쿼리 힌트를 문에 추가하여 UPDATE 또는 DELETE 작업을 실행할 수 있습니다. REMOTE_DATA_ARCHIVE_OVERRIDE 쿼리 힌트는 다음 값을 가질 수 있습니다.  
+ 기본적으로 스트레치 사용 테이블에서 마이그레이션에 적합한 행 또는 이미 마이그레이션된 행을 업데이트 또는 삭제할 수 없습니다. 문제를 해결해야 할 경우 db_owner 역할의 멤버가 ***WITH ( REMOTE_DATA_ARCHIVE_OVERRIDE = *value** ) 쿼리 힌트를 문에 추가하여 UPDATE 또는 DELETE 작업을 실행할 수 있습니다. REMOTE_DATA_ARCHIVE_OVERRIDE 쿼리 힌트는 다음 값을 가질 수 있습니다.  
  -   **LOCAL_ONLY** 로컬 데이터만 업데이트하거나 삭제합니다.  
    
  -   **REMOTE_ONLY** 원격 데이터만 업데이트하거나 삭제합니다.  

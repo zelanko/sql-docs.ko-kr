@@ -1,4 +1,5 @@
 ---
+description: supportsResultSetType 메서드(SQLServerDatabaseMetaData)
 title: supportsResultSetType 메서드(SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: aded734f-c96e-460f-afaa-8f64a92560d7
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0cbf9a6f4798af6fa302cf3de1b495e89cf10eff
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: a08227ba9d2c82831b042d935bacbd65e0216e64
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80919414"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450265"
 ---
 # <a name="supportsresultsettype-method-sqlserverdatabasemetadata"></a>supportsResultSetType 메서드(SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -57,7 +58,7 @@ public boolean supportsResultSetType(int type)
   
  TYPE_SS_SCROLL_DYNAMIC  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
  지원되는 경우 **true**입니다. 그렇지 않으면 **false**입니다.  
   
 ## <a name="exceptions"></a>예외  

@@ -1,4 +1,5 @@
 ---
+description: acceptsURL 메서드(SQLServerDriver)
 title: acceptsURL 메서드(SQLServerDriver) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: fc744566-7191-4b15-9f76-b4b8087fb14a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 68e12a39cb4a27f170b7f12705f17791bb40b649
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 17dad07495a7297a70f005e95162ea3edd968296
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80923710"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438305"
 ---
 # <a name="acceptsurl-method-sqlserverdriver"></a>acceptsURL 메서드(SQLServerDriver)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +40,7 @@ public boolean acceptsURL(java.lang.String url)
   
  데이터베이스에 연결하는 데 사용되는 URL이 들어 있는 **String** 값입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
  지정된 URL이 유효하면 **true**이고, 그렇지 않으면 **false**입니다.  
   
 ## <a name="exceptions"></a>예외  

@@ -1,4 +1,5 @@
 ---
+description: SQLServerResultSetMetaData 클래스
 title: SQLServerResultSetMetaData 클래스 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9a36885f-83f3-44af-85f0-2b849dfd20d4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 5f0b0e6d23ab3fb659375492f8d0e376532005da
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 9f97f483e67279386f1ec3e28a0b0b3344d23c51
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80927066"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458175"
 ---
 # <a name="sqlserverresultsetmetadata-class"></a>SQLServerResultSetMetaData 클래스
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -1,4 +1,5 @@
 ---
+description: supportsLikeEscapeClause 메서드(SQLServerDatabaseMetaData)
 title: supportsLikeEscapeClause 메서드(SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: cfb43430-88bf-4386-847a-10ea1e5ce7db
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f2c062f1bf2235441be182d29af6bd3e83717fc1
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 393cda8f96f99b65de394bd29edef7eaae3501a5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80912959"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450390"
 ---
 # <a name="supportslikeescapeclause-method-sqlserverdatabasemetadata"></a>supportsLikeEscapeClause 메서드(SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

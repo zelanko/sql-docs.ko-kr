@@ -1,4 +1,5 @@
 ---
+description: setServerPreparedStatementDiscardThreshold 메서드(SQLServerDataSource)
 title: setServerPreparedStatementDiscardThreshold 메서드(SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2018
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ''
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 96c5454ed116c8e7264f475b6488db29bab66a9c
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: dfef943dda60696d9764466df2e880acad1e3d04
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80927793"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458340"
 ---
 # <a name="setserverpreparedstatementdiscardthreshold-method-sqlserverdatasource"></a>setServerPreparedStatementDiscardThreshold 메서드(SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

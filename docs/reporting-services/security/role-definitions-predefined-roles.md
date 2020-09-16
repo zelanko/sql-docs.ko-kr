@@ -1,4 +1,5 @@
 ---
+description: 역할 정의 - 미리 정의된 역할
 title: 역할 정의 - 미리 정의된 역할 | Microsoft Docs
 ms.date: 06/10/2020
 ms.prod: reporting-services
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6b46db51-7c30-467d-a251-50f50647fe21
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7c792804d9e7daae9209bcbafb8bae95fffb3492
-ms.sourcegitcommit: c8e45e0fdab8ea2ae1c7e709346354576b18ca1e
+ms.openlocfilehash: cb514f5580545c43752911257546d97bc67426d3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84716750"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454525"
 ---
 # <a name="role-definitions---predefined-roles"></a>역할 정의 - 미리 정의된 역할
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 보고서 서버 작업에 대한 액세스 권한을 부여하는 데 사용할 수 있는 미리 정의된 역할과 함께 설치됩니다. 미리 정의된 각 역할은 관련 태스크 모음을 설명합니다. 미리 정의된 역할에 그룹 및 사용자 계정을 할당하여 보고서 서버 작업에 즉시 액세스하도록 할 수 있습니다.  
@@ -55,7 +56,7 @@ ms.locfileid: "84716750"
 ### <a name="content-manager-tasks"></a>내용 관리자 태스크  
  다음 표에서는 **내용 관리자** 역할에 포함되는 태스크를 나열합니다.  
   
-|Task|Description|  
+|Task|설명|  
 |----------|-----------------|  
 |보고서 사용|보고서 정의를 읽습니다.|  
 |링크된 보고서 만들기|링크되지 않은 보고서를 기반으로 하는 링크된 보고서를 만듭니다.|  

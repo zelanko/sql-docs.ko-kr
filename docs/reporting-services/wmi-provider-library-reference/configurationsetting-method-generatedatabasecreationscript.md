@@ -1,4 +1,5 @@
 ---
+description: ConfigurationSetting 메서드 - GenerateDatabaseCreationScript
 title: ConfigurationSetting 메서드 - GenerateDatabaseCreationScript | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 25232dc7-00fe-4cd1-8a1c-7e36d552de00
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5bcbcf0fde93dbba2e1d664ef7768232355ba5de
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7d827c26e316280c1946f90bc35d69427fc672df
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65581045"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454515"
 ---
 # <a name="configurationsetting-method---generatedatabasecreationscript"></a>ConfigurationSetting 메서드 - GenerateDatabaseCreationScript
   보고서 서버 데이터베이스를 만드는 데 사용할 수 있는 SQL 스크립트를 생성합니다.  

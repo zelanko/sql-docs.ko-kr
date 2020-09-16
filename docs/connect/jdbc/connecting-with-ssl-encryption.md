@@ -1,4 +1,5 @@
 ---
+description: 암호화를 사용하여 연결
 title: 암호화를 사용하여 연결 | Microsoft Docs
 ms.custom: ''
 ms.date: 09/12/2019
@@ -8,14 +9,14 @@ ms.reviewer: vanto
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: ec91fa8a-ab7e-4c1e-a05a-d7951ddf33b1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: cff4228404690147d97a44f6f5dd43b1a180153c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 1f60a186626514ed5532cc2ffc0fa4ffd1af0674
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "71713289"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438465"
 ---
 # <a name="connecting-with-encryption"></a>암호화를 사용하여 연결
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -65,6 +66,6 @@ String connectionUrl =
   
  **encrypt** 속성이 **true**로 설정되고 **trustServerCertificate** 속성이 **false**로 설정되며 연결 문자열의 서버 이름이 TLS 인증서의 서버 이름과 일치하지 않는 경우 다음 오류가 발생합니다. `The driver couldn't establish a secure connection to SQL Server by using Secure Sockets Layer (SSL) encryption. Error: "java.security.cert.CertificateException: Failed to validate the server name in a certificate during Secure Sockets Layer (SSL) initialization."`. 버전 7.2부터 드라이버는 TLS 인증서에 있는 서버 이름의 맨 왼쪽 레이블에서 와일드카드 패턴 일치를 지원합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
  [암호화 사용](../../connect/jdbc/using-ssl-encryption.md) [JDBC 드라이버 애플리케이션 보안](../../connect/jdbc/securing-jdbc-driver-applications.md)

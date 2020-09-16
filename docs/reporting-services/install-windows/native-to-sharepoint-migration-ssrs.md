@@ -1,4 +1,5 @@
 ---
+description: 기본 모드에서 SharePoint 모드로의 마이그레이션(SSRS)
 title: 기본 모드에서 SharePoint 모드로 마이그레이션 | Microsoft Docs
 ms.date: 08/17/2017
 ms.prod: reporting-services
@@ -8,12 +9,12 @@ ms.assetid: c5b15bec-6fde-4174-bcde-d043307244dd
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 4ae49e1110a1d539cbe7095f946be7fc522b80b1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ba6eef61dd79dbbbe97326c888698b69152065ad
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082616"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454547"
 ---
 # <a name="native-to-sharepoint-migration-ssrs"></a>기본 모드에서 SharePoint 모드로의 마이그레이션(SSRS)
 
@@ -41,14 +42,14 @@ ms.locfileid: "77082616"
   
  다음 표에는 스크립트를 사용하여 마이그레이션할 수 있는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 개체가 요약되어 있습니다.  
   
-|Object|스크립팅 가능|주석|  
+|개체|스크립팅 가능|의견|  
 |------------|---------------------|--------------|  
-|보고서|yes|마이그레이션 후 데이터 원본에 대한 암호를 다시 입력합니다.|  
-|Datasources|yes|마이그레이션 후 보고서를 데이터 원본에 다시 연결 합니다.|  
-|모델|yes||  
-|데이터 세트|yes||  
+|보고서|예|마이그레이션 후 데이터 원본에 대한 암호를 다시 입력합니다.|  
+|Datasources|예|마이그레이션 후 보고서를 데이터 원본에 다시 연결 합니다.|  
+|모델|예||  
+|데이터 세트|예||  
 |보고서 파트||마이그레이션 후 보고서 파트에 대한 경로를 확인하거나 업데이트합니다.|  
-|일정|yes|ListSchedules 메서드 [Subscription and Delivery Methods](../../reporting-services/report-server-web-service/methods/subscription-and-delivery-methods.md)를 참조하세요.|  
+|일정|예|ListSchedules 메서드 [Subscription and Delivery Methods](../../reporting-services/report-server-web-service/methods/subscription-and-delivery-methods.md)를 참조하세요.|  
 |Subscriptions|예|List Subscriptions 메서드 [Subscription and Delivery Methods](../../reporting-services/report-server-web-service/methods/subscription-and-delivery-methods.md) 및 <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A> 메서드를 참조하세요.|  
 |스냅샷|||
 

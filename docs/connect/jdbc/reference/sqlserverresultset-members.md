@@ -1,4 +1,5 @@
 ---
+description: SQLServerResultSet 멤버
 title: SQLServerResultSet 멤버 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 2a438d5d-2d6a-46a0-a2ae-f35fbae4a472
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 17d15be7b332d899aa35a0ce7c3d7c2b9cac1edf
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: dd331cec7252fb0fd0b3099800837cf667fce336
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80927130"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458238"
 ---
 # <a name="sqlserverresultset-members"></a>SQLServerResultSet 멤버
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -27,7 +28,7 @@ ms.locfileid: "80927130"
   
 ## <a name="fields"></a>필드  
   
-|속성|Description|  
+|이름|설명|  
 |----------|-----------------|  
 |[CONCUR_SS_OPTIMISTIC_CC](../../../connect/jdbc/reference/concur-ss-optimistic-cc-field-sqlserverresultset.md)|행 잠금을 사용하지 않는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 읽기/쓰기 낙관적 동시성 유형을 지정하는 데 사용됩니다.|  
 |[CONCUR_SS_OPTIMISTIC_CCVAL](../../../connect/jdbc/reference/concur-ss-optimistic-ccval-field-sqlserverresultset.md)|행 잠금을 사용하지 않는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 읽기/쓰기 낙관적 동시성 유형을 지정하는 데 사용됩니다.|  
@@ -40,13 +41,13 @@ ms.locfileid: "80927130"
   
 ## <a name="inherited-fields"></a>상속된 필드  
   
-|상속하는 원본 클래스|Description|  
+|상속하는 원본 클래스|설명|  
 |---------------------------|-----------------|  
 |java.sql.ResultSet|CLOSE_CURSORS_AT_COMMIT, CONCUR_READ_ONLY, CONCUR_UPDATABLE, FETCH_FORWARD, FETCH_REVERSE, FETCH_UNKNOWN, HOLD_CURSORS_OVER_COMMIT, TYPE_FORWARD_ONLY, TYPE_SCROLL_INSENSITIVE, TYPE_SCROLL_SENSITIVE|  
   
 ## <a name="methods"></a>메서드  
   
-|속성|Description|  
+|속성|설명|  
 |----------|-----------------|  
 |[absolute](../../../connect/jdbc/reference/absolute-method-sqlserverresultset.md)|커서를 이 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체의 지정된 행으로 이동합니다.|  
 |[afterLast](../../../connect/jdbc/reference/afterlast-method-sqlserverresultset.md)|커서를 이 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체의 마지막 행 뒤로 이동합니다.|  
@@ -105,7 +106,7 @@ ms.locfileid: "80927130"
 |[last](../../../connect/jdbc/reference/last-method-sqlserverresultset.md)|커서를 이 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체의 마지막 행으로 이동합니다.|  
 |[moveToCurrentRow](../../../connect/jdbc/reference/movetocurrentrow-method-sqlserverresultset.md)|커서를 저장된 커서 위치(대개 현재 행)로 이동합니다.|  
 |[moveToInsertRow](../../../connect/jdbc/reference/movetoinsertrow-method-sqlserverresultset.md)|커서를 삽입 행으로 이동합니다.|  
-|[next](../../../connect/jdbc/reference/next-method-sqlserverresultset.md)|커서를 현재 위치에서 한 행 아래로 이동합니다.|  
+|[다음](../../../connect/jdbc/reference/next-method-sqlserverresultset.md)|커서를 현재 위치에서 한 행 아래로 이동합니다.|  
 |[previous](../../../connect/jdbc/reference/previous-method-sqlserverresultset.md)|커서를 이 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체의 이전 행으로 이동합니다.|  
 |[refreshRow](../../../connect/jdbc/reference/refreshrow-method-sqlserverresultset.md)|데이터베이스의 최신 값으로 현재 행을 새로 고칩니다.|  
 |[relative](../../../connect/jdbc/reference/relative-method-sqlserverresultset.md)|현재 행을 기준으로 지정된 행 수만큼 커서를 양의 방향 또는 음의 방향으로 이동합니다.|  

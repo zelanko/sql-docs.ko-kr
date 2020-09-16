@@ -1,4 +1,5 @@
 ---
+description: Stretch에 데이터베이스 사용 마법사를 실행하여 시작
 title: Stretch에 데이터베이스 사용 마법사를 실행하여 시작
 ms.date: 08/05/2016
 ms.service: sql-server-stretch-database
@@ -21,15 +22,15 @@ ms.assetid: 855dd9fc-f80c-4dbc-bf46-55a9736bfe15
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 5d730c8e71044154b9844174ac8d21837c9ea05f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6b06f82e5c51aa1c3843abec0daa7d3bebabe40a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73843797"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454364"
 ---
 # <a name="get-started-by-running-the-enable-database-for-stretch-wizard"></a>Stretch에 데이터베이스 사용 마법사를 실행하여 시작
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
 
 
  Stretch Database에 대해 데이터베이스를 구성하려면 스트레치에 데이터베이스 사용 마법사를 실행합니다.  이 문서에서는 입력해야 하는 정보와 마법사에서 선택해야 하는 항목에 대해 설명합니다.  
@@ -62,10 +63,10 @@ ms.locfileid: "73843797"
   
  ![Stretch Database 마법사의 테이블 선택 페이지](../../sql-server/stretch-database/media/stretch-wizard-2.png "Stretch Database 마법사의 테이블 선택 페이지")  
   
-|열|Description|  
+|열|설명|  
 |------------|-----------------|  
 |(제목 없음)|선택한 테이블에서 스트레치를 사용하려면 이 열의 확인란을 선택합니다.|  
-|**이름**|데이터베이스에서 테이블 이름을 지정합니다.|  
+|**Name**|데이터베이스에서 테이블 이름을 지정합니다.|  
 |(제목 없음)|이 열의 기호는 경고를 나타내지만 선택한 테이블에서 스트레치를 사용할 수는 있습니다. 또한 예를 들어 지원되지 않는 데이터 형식을 사용하는 등 선택한 테이블에서 스트레치를 사용하지 못하게 하는 차단 문제를 나타낼 수도 있습니다. 기호 위로 마우스를 올려 놓으면 도구 설명에 추가 정보가 표시됩니다. 자세한 내용은 [스트레치 데이터베이스에 대한 제한 사항](../../sql-server/stretch-database/limitations-for-stretch-database.md)을 참조하세요.|  
 |**확대됨**|테이블이 이미 스트레치에 대해 활성화되었는지 여부를 나타냅니다.|  
 |**마이그레이션**|전체 테이블(**전체 테이블**)을 마이그레이션하거나 테이블의 기존 열에 필터를 지정할 수 있습니다. 다른 필터 함수를 사용하여 마이그레이션할 행을 선택하려면 마법사를 종료한 다음 ALTER TABLE 문을 실행하여 필터 함수를 지정합니다. 필터 함수에 대한 자세한 내용은 [필터 함수를 사용하여 마이그레이션할 행 선택](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md)을 참조하세요. 함수를 적용하는 방법은 [테이블에서 Stretch Database 활성화](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md) 또는 [ALTER TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)을 참조하세요.|  
@@ -176,7 +177,7 @@ ms.locfileid: "73843797"
  ![Stretch Database 마법사의 결과 페이지](../../sql-server/stretch-database/media/stretch-wizard-9.PNG "Stretch Database 마법사의 결과 페이지")  
   
 ##  <a name="troubleshooting-the-wizard"></a><a name="KnownIssues"></a> 마법사 문제 해결  
- **Stretch Database 마법사에 실패했습니다.**  
+ **스트레치 데이터베이스 마법사가 실패했습니다.**  
  Stretch Database가 아직 서버 수준에서 사용하도록 설정되지 않은 경우 이를 사용하도록 설정하기 위해 시스템 관리자 권한 없이 마법사를 실행하면 마법사에 실패합니다. 시스템 관리자에게 로컬 서버 인스턴스에서 스트레치 데이터베이스를 설정하도록 요청한 후 마법사를 다시 실행합니다. 자세한 내용은 [필수 구성 요소: 서버에서 Stretch Database를 활성화할 수 있는 권한](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md#EnableTSQLServer)를 참조하십시오.  
   
 ## <a name="next-steps"></a>다음 단계  

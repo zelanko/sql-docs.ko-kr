@@ -1,4 +1,5 @@
 ---
+description: setString 메서드(long, java.lang.String)
 title: setString 메서드(long, java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 1b2190e9-5ace-497a-8554-0e913ea9b0cb
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 64b1800ddd64358a9a6bcc11027391ef258b82a9
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 147cca169c1106557c36e644f7166da6cad18b3f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926641"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450737"
 ---
 # <a name="setstring-method-long-javalangstring"></a>setString 메서드(long, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +45,7 @@ public int setString(long pos,
   
  CLOB에 쓸 **String**입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
  쓴 문자 수입니다.  
   
 ## <a name="exceptions"></a>예외  

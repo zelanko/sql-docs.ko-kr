@@ -1,4 +1,5 @@
 ---
+description: 여러 열에 여러 검색 조건 지정(Visual Database Tools)
 title: 여러 열에 여러 검색 조건 지정
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -16,16 +17,16 @@ ms.assetid: 06617729-0d0b-4da2-9890-b7e2f5cdbc7b
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 3a78fbabb45d634e88b7b6bf1c5b663b8d6d6b15
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 5a5f5d4e3396e3ccbff7280fbae14036015ba5eb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999280"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445996"
 ---
 # <a name="specify-multiple-search-conditions-for-multiple-columns-visual-database-tools"></a>여러 열에 여러 검색 조건 지정(Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-여러 개의 데이터 열을 검색 조건의 일부로 포함하여 쿼리의 범위를 확장하거나 축소할 수 있습니다. 예를 들면 다음과 같습니다.  
+여러 개의 데이터 열을 검색 조건의 일부로 포함하여 쿼리의 범위를 확장하거나 축소할 수 있습니다. 예를 들어, 다음을 수행합니다.  
   
 -   근무 연수가 5년이 넘었거나 특정 작업을 담당하는 직원을 검색하는 경우  
   
@@ -80,5 +81,5 @@ AND로 연결된 조건을 사용하여 서로 다른 데이터 열을 검색하
 [AND에 우선 순위가 있는 경우 조건 조합](../../ssms/visual-db-tools/combine-conditions-when-and-has-precedence-visual-database-tools.md)  
 [OR에 우선 순위가 있는 경우 조건 결합](../../ssms/visual-db-tools/combine-conditions-when-or-has-precedence-visual-database-tools.md)  
 [조건 창의 검색 조건 결합 규칙](../../ssms/visual-db-tools/conventions-combine-search-conditions-in-criteria-pane-visual-db-tools.md)  
-[검색 조건 지정](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
+[검색 기준 지정](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
   

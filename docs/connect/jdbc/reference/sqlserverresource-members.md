@@ -1,4 +1,5 @@
 ---
+description: SQLServerResource 멤버
 title: SQLServerResource 멤버 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 34b4b2e7-ec00-42aa-82ec-9cb01b538998
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3ca5d44b7b3afb6567e4bb922dd7a21acd8ff21e
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 26f1b018689eaee58309e5d2f4f3e30ce14e9e12
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80925921"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458227"
 ---
 # <a name="sqlserverresource-members"></a>SQLServerResource 멤버
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -24,7 +25,7 @@ ms.locfileid: "80925921"
   
 ## <a name="constructors"></a>생성자  
   
-|속성|Description|  
+|속성|설명|  
 |----------|-----------------|  
 |[SQLServerResource ()](../../../connect/jdbc/reference/sqlserverresource-constructor.md)|[SQLServerResource](../../../connect/jdbc/reference/sqlserverresource-class.md) 클래스의 새 인스턴스를 초기화합니다. 이 생성자는 내부 전용입니다.|  
   
@@ -33,13 +34,13 @@ ms.locfileid: "80925921"
   
 ## <a name="inherited-fields"></a>상속된 필드  
   
-|속성|Description|  
+|이름|설명|  
 |----------|-----------------|  
 |java.util.ResourceBundle|부모(parent)|  
   
 ## <a name="methods"></a>메서드  
   
-|속성|Description|  
+|속성|설명|  
 |----------|-----------------|  
 |[getContents](../../../connect/jdbc/reference/getcontents-method-sqlserverresource.md)|오류 문자열 정보를 검색합니다. 이 메서드는 내부 전용입니다.|  
   

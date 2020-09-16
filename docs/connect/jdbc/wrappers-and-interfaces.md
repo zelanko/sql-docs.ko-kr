@@ -1,4 +1,5 @@
 ---
+description: 래퍼 및 인터페이스
 title: 래퍼 및 인터페이스 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 27fc9b72-9f21-4728-abcb-5c015f28a6ab
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: dc8a8277147dd2dc136379471f6a4f7df789c3ee
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 504527843063bb3d5e3fd4a8c284dfc5e8e25b12
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80923932"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450055"
 ---
 # <a name="wrappers-and-interfaces"></a>래퍼 및 인터페이스
 
@@ -33,17 +34,17 @@ ms.locfileid: "80923932"
 
 - [isWrapperFor 메서드&#40;SQLServerCallableStatement&#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlservercallablestatement.md)
 
-- [unwrap 메서드&#40;SQLServerCallableStatement&#41;](../../connect/jdbc/reference/unwrap-method-sqlservercallablestatement.md)
+- [unwrap 메서드 &#40;SQLServerCallableStatement&#41;](../../connect/jdbc/reference/unwrap-method-sqlservercallablestatement.md)
 
 - [isWrapperFor 메서드&#40;SQLServerConnectionPoolDataSource&#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlserverconnectionpooldatasource.md)
 
-- [unwrap 메서드&#40;SQLServerConnectionPoolDataSource&#41;](../../connect/jdbc/reference/unwrap-method-sqlserverconnectionpooldatasource.md)
+- [unwrap 메서드 &#40;SQLServerConnectionPoolDataSource&#41;](../../connect/jdbc/reference/unwrap-method-sqlserverconnectionpooldatasource.md)
 
-- [isWrapperFor 메서드&#40;SQLServerDataSource&#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlserverdatasource.md)
+- [isWrapperFor 메서드(SQLServerDataSource)](../../connect/jdbc/reference/iswrapperfor-method-sqlserverdatasource.md)
 
 - [unwrap 메서드&#40;SQLServerDataSource&#41;](../../connect/jdbc/reference/unwrap-method-sqlserverdatasource.md)
 
-- [isWrapperFor 메서드&#40;SQLServerPreparedStatement&#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlserverpreparedstatement.md)
+- [isWrapperFor 메서드(SQLServerPreparedStatement)](../../connect/jdbc/reference/iswrapperfor-method-sqlserverpreparedstatement.md)
 
 - [unwrap 메서드&#40;SQLServerPreparedStatement&#41;](../../connect/jdbc/reference/unwrap-method-sqlserverpreparedstatement.md)
 
@@ -77,7 +78,7 @@ ms.locfileid: "80923932"
 
 ## <a name="example"></a>예제
 
-### <a name="description"></a>Description
+### <a name="description"></a>설명
 
 이 샘플에서는 DataSource 개체에서 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 관련 함수에 액세스하는 방법을 보여 줍니다. 이 DataSource 클래스는 애플리케이션 서버에 의해 래핑되었을 수 있습니다. JDBC 드라이버 관련 함수나 상수에 액세스하려면 데이터 원본을 ISQLServerDataSource 인터페이스로 래핑 해제하고 이 인터페이스에서 선언된 함수를 사용할 수 있습니다.
 
@@ -111,6 +112,6 @@ public class UnWrapTest {
 }  
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [JDBC 드라이버 데이터 형식 이해](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)

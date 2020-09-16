@@ -1,4 +1,5 @@
 ---
+description: MSReportServer_Instance 메서드
 title: MSReportServer_Instance 메서드 | Microsoft Docs
 ms.date: 06/09/2016
 ms.prod: reporting-services
@@ -15,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: ed079327-0bb0-4245-adb5-e46a90cf3586
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9ceb89253cea8feac0b4255984b30aa7fd74216d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e0a7f21bca900f4baf1a3e8c0e018b6da2b584c7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65571116"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454396"
 ---
 # <a name="msreportserver_instance-methods"></a>MSReportServer_Instance 메서드
   MSReportServer_Instance 클래스는 클라이언트에서 설치된 보고서 서버에 연결하는 데 필요한 기본 정보를 제공합니다.  
   
 ## <a name="public-methods"></a>Public 메서드  
   
-|||  
+|메서드|설명|  
 |-|-|  
 |[GetReportServerUrls 메서드&#40;WMI MSReportServer_Instance&#41;](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-methods-getreportserverurls.md)|사용자가 보고서 서버 및 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]에 액세스하는 데 사용할 수 있는 URL을 나열합니다.|  
   

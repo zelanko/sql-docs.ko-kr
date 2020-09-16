@@ -1,4 +1,5 @@
 ---
+description: Enable Stretch Database for a table
 title: Enable Stretch Database for a table
 ms.date: 08/05/2016
 ms.service: sql-server-stretch-database
@@ -11,15 +12,15 @@ ms.assetid: de4ac0c5-46ef-4593-a11e-9dd9bcd3ccdc
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 49d3f7fa266be69c767b0fb0450cc6898351f39b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 10f267dc42c7626ad89b576b00e2b80a07dae427
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73843814"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454401"
 ---
 # <a name="enable-stretch-database-for-a-table"></a>Enable Stretch Database for a table
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
 
 
   Stretch Database에 테이블을 구성하려면 SQL Server Management Studio에서 테이블에 대해 **늘이기 | 활성화**를 선택하여 **스트레치에 테이블 사용** 마법사를 엽니다. 또한 Transact-SQL을 사용하여 기존 테이블에 대해 Stretch Database를 사용하도록 설정하거나 Stretch Database를 사용하여 새 테이블을 만들 수도 있습니다.  

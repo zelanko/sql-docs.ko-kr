@@ -1,4 +1,5 @@
 ---
+description: SQLServerXAResource 메서드
 title: SQLServerXAResource 메서드 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 050548ca-c708-4224-8014-8b7830a860dd
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a6fdc911bc74b3086e088f1b3ec5695b4be0fd86
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 41c2dfc0b926f81653ec4484c196633353f2ff96
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80925652"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458135"
 ---
 # <a name="sqlserverxaresource-methods"></a>SQLServerXAResource 메서드
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -1,4 +1,5 @@
 ---
+description: 데이터베이스에 대해 Stretch Database를 사용하도록 설정
 title: 데이터베이스에 대해 Stretch Database를 사용하도록 설정
 ms.date: 08/05/2016
 ms.service: sql-server-stretch-database
@@ -11,15 +12,15 @@ ms.assetid: 37854256-8c99-4566-a552-432e3ea7c6da
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: db08d84dd1619d8c9e2e4d8e796abdd0c9d202fc
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 86ef68956fd948e485b221514dad588af40f4aac
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73844586"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454405"
 ---
 # <a name="enable-stretch-database-for-a-database"></a>데이터베이스에 대해 Stretch Database를 사용하도록 설정
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
 
 
   Stretch Database에 기존 데이터베이스를 구성하려면 SQL Server Management Studio에서 데이터베이스에 대해 **태스크 | 스트레치 | 사용**을 선택하여 **스트레치에 데이터베이스 사용** 마법사를 엽니다. Transact-SQL을 사용하여 데이터베이스에 대해 Stretch Database를 사용하도록 설정할 수도 있습니다.  
@@ -41,7 +42,7 @@ ms.locfileid: "73844586"
   
 -   새 Azure 서버를 만들거나 기존 Azure 서버를 선택하는 데 필요한 연결 및 로그인 정보를 준비합니다.  
   
-##  <a name="prerequisite-enable-stretch-database-on-the-server"></a><a name="EnableTSQLServer"></a> 필수 조건: 서버에서 스트레치 데이터베이스 사용  
+##  <a name="prerequisite-enable-stretch-database-on-the-server"></a><a name="EnableTSQLServer"></a> 필수 구성 요소: 서버에서 스트레치 데이터베이스 사용  
  데이터베이스 또는 테이블에서 스트레치 데이터베이스를 활성화하기 전에 로컬 서버에서 스트레치 데이터베이스를 먼저 활성화해야 합니다. 이 작업에는 sysadmin 또는 serveradmin 권한이 필요합니다.  
   
 -   필요한 관리 권한이 있으면 **스트레치에 데이터베이스 사용** 마법사가 스트레치에 사용할 서버를 구성합니다.  
@@ -87,7 +88,7 @@ GO
     ```  
     데이터베이스 마스터 키에 대한 자세한 내용은 [CREATE MASTER KEY&#40;Transact-SQL&#41;](../../t-sql/statements/create-master-key-transact-sql.md) 및 [데이터베이스 마스터 키 만들기](../../relational-databases/security/encryption/create-a-database-master-key.md)를 참조하세요.
     
-4.  Stretch Database에 대해 데이터베이스를 구성하는 경우 온-프레미스 SQL Server와 원격 Azure 서버 간의 통신에 사용할 Stretch Database의 자격 증명을 제공해야 합니다. 두 가지 옵션이 있습니다.  
+4.  Stretch Database에 대해 데이터베이스를 구성하는 경우 온-프레미스 SQL Server와 원격 Azure 서버 간의 통신에 사용할 Stretch Database의 자격 증명을 제공해야 합니다. 다음과 같은 두 가지 옵션이 있습니다.  
   
     -   관리자 자격 증명을 제공할 수 있습니다.  
   

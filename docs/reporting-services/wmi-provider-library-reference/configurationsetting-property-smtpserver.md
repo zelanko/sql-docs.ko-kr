@@ -1,4 +1,5 @@
 ---
+description: SMTPServer 속성(WMI MSReportServer_ConfigurationSetting)
 title: SMTPServer 속성(WMI MSReportServer_ConfigurationSetting) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8bcceeba-e1a0-44ef-bda1-600c6925e1db
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d54f229624f211d4244224a9b6f4765fd9095542
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4cc952bafb8113a186c9891b47903f637f0b04af
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570215"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454443"
 ---
 # <a name="configurationsetting-property---smtpserver"></a>ConfigurationSetting 속성 - SMTPServer
   보고서 서버 구성 파일에서 SMTP 서버 속성을 가져옵니다. 읽기 전용입니다.  

@@ -1,4 +1,5 @@
 ---
+description: supportsGroupBy 메서드(SQLServerDatabaseMetaData)
 title: supportsGroupBy 메서드(SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 6f368df5-e88a-4088-b0de-2b5ab655ebaa
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c701b2df14413f012398bf0fd52f2acfefb3e6fe
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: d7a0546e74b6be60947432275d40887686ece72a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80925393"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450391"
 ---
 # <a name="supportsgroupby-method-sqlserverdatabasemetadata"></a>supportsGroupBy 메서드(SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
