@@ -3,7 +3,7 @@ title: 중단점 필터 지정
 description: 지정된 컴퓨터, 운영 체제 프로세스 및 스레드에 디버깅이 설정된 경우에만 중단점이 작동하도록 중단점을 제한하는 중단점 필터를 구현하는 방법을 알아봅니다.
 titleSuffix: T-SQL debugger
 ms.prod: sql
-ms.technology: scripting
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - Transact-SQL debugger, breakpoint filter
@@ -14,12 +14,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 943168cc640f2a3373ed1baec1018962bf64123d
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: d6e2a3540ea758fa394ad0ebcdcd28777bf4237b
+ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87122838"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88901588"
 ---
 # <a name="specify-a-breakpoint-filter"></a>중단점 필터 지정
 

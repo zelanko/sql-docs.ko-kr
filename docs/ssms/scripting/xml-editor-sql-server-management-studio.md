@@ -1,11 +1,8 @@
 ---
 title: XML 편집기(SQL Server Management Studio)
 description: SQL Server Management Studio XML 편집기의 시각적 도구를 사용하여 XSD(XML 스키마), ADO.NET 데이터 세트 및 XML 문서에 대한 작업을 수행하는 방법을 알아봅니다.
-ms.custom: seo-lt-2019
-ms.date: 03/14/2017
 ms.prod: sql
-ms.technology: scripting
-ms.reviewer: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.editor.xml.f1
@@ -17,22 +14,27 @@ helpviewer_keywords:
 ms.assetid: 0824a5ce-e67b-4b53-98d9-d371faf2d23c
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 528293a500c391fa2d7efbcd9fe8a35f6a797f23
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 1de79327a877be44f6c17639a7c3a9e0fb1425ad
+ms.sourcegitcommit: 9e1f1c6ee8f5a10d18a2599bfd9f3eb6081829e1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87237073"
+ms.lasthandoff: 08/29/2020
+ms.locfileid: "89093568"
 ---
 # <a name="xml-editor-sql-server-management-studio"></a>XML 편집기(SQL Server Management Studio)
+
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-  XML 스키마, ADO.NET 데이터 세트 및 XML 문서 작업에 사용할 수 있는 다양한 시각적 도구를 제공합니다. XML 디자이너는 WC3(World Wide Web Consortium)에서 정의한 XSD(XML 스키마 정의) 언어를 지원합니다. DTD(문서 유형 정의)나 XDR(XML-Data Reduced)와 같은 다른 XML 스키마 언어는 지원하지 않습니다.  
-  
- 디자이너를 표시하려면 데이터 세트, XML 스키마 또는 XML 파일을 프로젝트에 추가하거나 아래 표에 나오는 파일 형식을 여십시오.  
-  
-> [!CAUTION]  
->  스키마 뷰에서 작업할 때는 **실행 취소** 명령을 사용할 수 없으므로 작업을 신중하게 계획하고 파일을 자주 저장하는 것이 좋습니다.  
+
+XML 스키마, ADO.NET 데이터 세트 및 XML 문서 작업에 사용할 수 있는 다양한 시각적 도구를 제공합니다. XML 디자이너는 WC3(World Wide Web Consortium)에서 정의한 XSD(XML 스키마 정의) 언어를 지원합니다. DTD(문서 유형 정의)나 XDR(XML-Data Reduced)와 같은 다른 XML 스키마 언어는 지원하지 않습니다.  
+
+디자이너를 표시하려면 데이터 세트, XML 스키마 또는 XML 파일을 프로젝트에 추가하거나 아래 표에 나오는 파일 형식을 여십시오.  
+
+> [!CAUTION]
+> 스키마 뷰에서 작업할 때는 **실행 취소** 명령을 사용할 수 없으므로 작업을 신중하게 계획하고 파일을 자주 저장하는 것이 좋습니다.  
   
  XML 디자이너는 XML 파일, XML 스키마 및 데이터 세트 작업에 다음 세 가지 뷰(또는 모드)를 제공합니다.  
   

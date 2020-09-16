@@ -3,20 +3,20 @@ title: R을 사용하여 SSIS 및 SSRS 워크플로 만들기
 description: SQL Server Machine Learning Services 및 R Services, Reporting Services(SSRS) 및 SSIS(SQL Server Integration Services)를 조합하는 통합 시나리오입니다.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 03/17/2019
+ms.date: 08/28/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 45443daacecb5423a8c5969b619391fea774bcd6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b907f4837810a2fdfabfbbfabbecc965627b86e9
+ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85680363"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89288292"
 ---
 # <a name="create-ssis-and-ssrs-workflows-with-r-on-sql-server"></a>SQL Server에서 R을 사용하여 SSIS 및 SSRS 워크플로 만들기
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 이 문서에서는 2가지 중요한 SQL Server 기능인 SSIS(SQL Server Integration Services) 및 SSRS(SQL Server Reporting Services)를 사용하여 SQL Server Machine Learning Services의 언어 및 데이터 과학 기능과 함께 포함된 R 및 Python 스크립트를 사용하는 방법을 설명합니다. SQL Server의 R 및 Python 라이브러리는 통계 및 예측 함수를 제공합니다. SSIS 및 SSRS는 각각 조정된 ETL 변환 및 시각화를 제공합니다. 이 문서에서는 이러한 모든 기능을 이 워크플로 패턴에 함께 포함하는 방법을 설명합니다.
 
@@ -192,19 +192,6 @@ SSIS 디자이너에서 F5 키를 눌러 패키지를 실행합니다. 다음 �
 R로 차트와 흥미로운 시각화를 만들 수 있지만, 외부 데이터 원본과 잘 통합되지 않기 때문에 각 차트와 그래프를 개별적으로 생성해야 합니다. 공유도 어려울 수 있습니다.
 
 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]을 사용하면 [!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저를 통해 R로 복잡한 작업을 실행할 수 있기 때문에, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 및 Power BI를 비롯한 다양한 엔터프라이즈 보고 도구에서 쉽게 사용할 수 있습니다.
-
-### <a name="ssrs-example"></a>SSRS 예제
-
-[Microsoft Reporting Services(SSRS)용 R 그래픽 디바이스](https://rgraphicsdevice.codeplex.com/)
-
-CodePlex 프로젝트는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서에 사용할 수 있는 이미지로 R의 그래픽 출력을 렌더링하는 사용자 지정 보고서 항목을 만드는 데 유용한 코드를 제공합니다.  사용자 지정 보고서 항목을 사용하여 다음을 수행할 수 있습니다.
-
-+ R 그래픽 디바이스를 사용하여 만든 차트 및 그림을 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 대시보드에 게시
-
-+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 매개 변수를 R 그림에 전달
-
-> [!NOTE]
-> 이 샘플의 경우 Reporting Services용 R 그래픽 디바이스를 지원하는 코드를 Visual Studio 및 Reporting Services 서버에 설치해야 합니다. 수동 컴파일 및 구성도 필요합니다.
 
 ## <a name="next-steps"></a>다음 단계
 

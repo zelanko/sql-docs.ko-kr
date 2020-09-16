@@ -5,19 +5,19 @@ ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.technology: scripting
+ms.technology: ssms
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 7d6b0f60-c6ac-4f71-a9d0-fc3c2ffa7e91
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 66bb25859efcd49f43a61e173156214ff9ca46e6
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: ff6f5f8cd3bd9300e38f0eaaebd9d7c442ab95e8
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87123115"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89479645"
 ---
 # <a name="intellisense-sql-server-management-studio"></a>IntelliSense(SQL Server Management Studio)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -38,6 +38,6 @@ ms.locfileid: "87123115"
 |Intellisense가 작동하지 않을 수 있는 조건을 설명 합니다.|IntelliSense(SQL Server Management Studio) 문제 해결|  
   
 ## <a name="see-also"></a>참고 항목  
- [쿼리 및 텍스트 편집기&#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)  
+ [쿼리 및 텍스트 편집기&#40;SQL Server Management Studio&#41;](https://docs.microsoft.com/sql/ssms/f1-help/database-engine-query-editor-sql-server-management-studio?view=sql-server-ver15)  
   
   

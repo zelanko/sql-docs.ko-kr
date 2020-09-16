@@ -3,7 +3,7 @@ title: 조사식 창
 description: 선택한 식에 대한 정보를 표시하는 조사식 창(한 번에 최대 4개)에 대해 알아봅니다. 이 정보는 디버그 모드에서만 표시됩니다.
 titleSuffix: T-SQL Debugger
 ms.prod: sql
-ms.technology: scripting
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - Watch Window [Transact-SQL]
@@ -14,12 +14,12 @@ ms.custom: seo-lt-2019
 ms.reviewer: ''
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 42ddd23645e866cd066f8d70ea2cded0f9c0fcd0
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: a4a19d53dc1c7788a2e5002bc1189b9df47b3ee5
+ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87248019"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88901807"
 ---
 # <a name="transact-sql-debugger---watch-window"></a>Transact-SQL 디버거 - 조사식 창
 

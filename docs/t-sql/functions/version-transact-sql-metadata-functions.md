@@ -14,12 +14,12 @@ ms.assetid: 95a79b33-98f2-4929-a1a5-93b522a9e152
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 82ae0f0b2ef46cf1082d5d0fe7fc064e3c538ee8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b7c153456f92783b26bda05a99e848b48909ced8
+ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88361589"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076702"
 ---
 # <a name="version---transact-sql-metadata-functions"></a>Version - Transact SQL 메타 데이터 함수
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "88361589"
 ## <a name="syntax"></a>구문  
   
 ```  
--- Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Azure Synapse Analytics and Parallel Data Warehouse  
 VERSION ( )  
 ```  
   
@@ -40,14 +40,14 @@ VERSION ( )
 ## <a name="general-remarks"></a>일반적인 주의 사항  
 이 함수가 결과를 반환하려면 테이블 이름이 이 함수에 대해 [FROM](../../t-sql/queries/from-transact-sql.md) 절에서 지정되어야 합니다. 쿼리에 대한 결과 집합에서 각 행에 대해 결과 행이 반환됩니다. 반환되는 행 수를 제한하려면 [TOP(Transact SQL)](../../t-sql/queries/top-transact-sql.md)을 사용합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
 다음 예에서는 버전 번호를 반환합니다.  
   
 ```  
 SELECT VERSION();  
 ```  
   
-## <a name="see-also"></a>관련 항목 
+## <a name="see-also"></a>참고 항목 
 [SESSION_ID(Transact-SQL)](../../t-sql/functions/session-id-transact-sql.md)  
 [DB_NAME&#40;Transact-SQL&#41;](../../t-sql/functions/db-name-transact-sql.md)  
   

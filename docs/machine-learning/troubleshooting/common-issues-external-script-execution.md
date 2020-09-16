@@ -9,19 +9,17 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 597b656c3f235ae59a22f7e85bf54dcc25fb1873
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: e814e135c7e7054231aea3988a30afe755e1fc9d
+ms.sourcegitcommit: 04fb4c2d7ccddd30745b334b319d9d2dd34325d6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87253682"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89570295"
 ---
 # <a name="troubleshoot-issues-with-launchpad-service-and-external-script-execution-in-sql-server"></a>SQL Server에서 실행 패드 서비스 및 외부 스크립트 실행에 대한 문제 해결
-[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 이 문서에서는 SQL Server 신뢰할 수 있는 실행 패드 서비스와 관련된 문제 해결 지침을 제공합니다. 이 실행 패드 서비스는 R 및 Python의 외부 스크립트 실행을 지원합니다. 구성 문제나 변경 또는 누락된 네트워크 프로토콜을 포함하여 다양한 문제로 인해 실행 패드가 시작되지 않을 수 있습니다.  
-
-여기에서 다루지 않은 문제가 발생하면 [Machine Learning Server 포럼](https://social.msdn.microsoft.com/Forums/home?category=MicrosoftR)에 질문을 게시할 수 있습니다.
 
 ## <a name="determine-whether-launchpad-is-running"></a>실행 패드 실행 여부 확인
 
@@ -240,6 +238,6 @@ R을 설치하는 볼륨에서 짧은 파일 이름을 지원하지 않는 경�
 
 [기계 학습 문제 해결을 위한 데이터 수집](data-collection-ml-troubleshooting-process.md)
 
-[업그레이드 및 설치 FAQ](upgrade-and-installation-faq-sql-server-r-services.md)
+[SQL Server Machine Learning Services 설치](../install/sql-machine-learning-services-windows-install.md)
 
 [데이터베이스 엔진 연결 문제 해결](../../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md)

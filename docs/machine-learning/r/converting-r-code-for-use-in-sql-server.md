@@ -3,21 +3,21 @@ title: SQL에 대한 R 코드 변환
 description: SQL Server의 관계형 데이터베이스에 대한 솔루션 배포 및 데이터 액세스를 위해 R 코드를 SQL Server 저장 프로시저로 마이그레이션합니다.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 04/15/2018
+ms.date: 08/28/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 47a96a6bf233a1d8f7fe70df6ab537a31fd2e896
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 009ce927481a455478e170cbe075e920d72571f3
+ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85723883"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89288305"
 ---
 # <a name="convert-r-code-for-execution-in-sql-server-in-database-instances"></a>SQL Server(데이터베이스 내) 인스턴스에서 실행할 수 있도록 R 코드를 변환합니다.
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 이 문서에서는 SQL Server에서 작동하도록 R 코드를 수정하는 방법에 대한 개략적인 지침을 제공합니다. 
 
@@ -121,7 +121,6 @@ R Studio 또는 다른 환경에서 SQL Server로 R 코드를 이동할 때 대�
 
 + 데이터베이스 개발자에게 문의하여 [메모리 최적화 테이블](https://docs.microsoft.com/sql/relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables)과 같은 SQL Server 기능을 사용하거나 Enterprise Edition이 있는 경우 [Resource Governor](https://docs.microsoft.com/sql/relational-databases/resource-governor/resource-governor))를 사용하여 성능을 개선하는 방법을 확인하세요.
 
-    자세한 내용은 [SQL Server Optimization Tips and Tricks for Analytics Services](https://gallery.cortanaintelligence.com/Tutorial/SQL-Server-Optimization-Tips-and-Tricks-for-Analytics-Services)(Analytics Services에 대한 SQL Server 최적화 팁과 요령)를 참조하세요.
 
 ### <a name="step-3-prepare-for-deployment"></a>3단계. 배포 준비
 
@@ -135,7 +134,7 @@ R Studio 또는 다른 환경에서 SQL Server로 R 코드를 이동할 때 대�
 
 + 코드가 비교적 간단한 경우 다음 샘플에 설명된 대로 수정 없이 T-SQL 사용자 정의 함수에 코드를 포함할 수 있습니다.
 
-    + [T-SQL 및 R을 사용하는 기능 엔지니어링](../tutorials/sqldev-create-data-features-using-t-sql.md)
+    + [T-SQL 및 R을 사용하는 기능 엔지니어링](../tutorials/r-taxi-classification-create-features.md)
 
 + 코드가 더 복잡한 경우 R 패키지 **sqlrutils**를 사용하여 코드를 변환합니다. 이 패키지는 숙련된 R 사용자가 적절한 저장 프로시저 코드를 작성하는 데 도움이 되도록 디자인되었습니다. 
 
@@ -165,6 +164,6 @@ SQL Server에 R 솔루션을 배포하는 방법에 대한 예제를 보려면 �
 
 + [Build a predictive model for  ski rental business using R and SQL Server](https://microsoft.github.io/sql-ml-tutorials/R/rentalprediction/)(R 및 SQL Server를 사용하여 스키 임대 비즈니스에 대한 예측 모델 빌드)
 
-+ [SQL 개발자를 위한 데이터베이스 내 분석](../tutorials/sqldev-in-database-r-for-sql-developers.md) 저장 프로시저에 래핑하여 R 코드를 더 모듈식으로 만들 수 있는 방법을 보여 줍니다.
++ [SQL 개발자를 위한 데이터베이스 내 분석](../tutorials/r-taxi-classification-introduction.md) 저장 프로시저에 래핑하여 R 코드를 더 모듈식으로 만들 수 있는 방법을 보여 줍니다.
 
 + [포괄적인 데이터 과학 솔루션](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md) R 및 T-SQL의 기능 엔지니어링 비교를 포함합니다.

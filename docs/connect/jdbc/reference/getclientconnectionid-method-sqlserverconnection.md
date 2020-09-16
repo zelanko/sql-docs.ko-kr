@@ -1,4 +1,5 @@
 ---
+description: getClientConnectionID 메서드(SQLServerConnection)
 title: getClientConnectionID 메서드(SQLServerConnection) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: bee39c11-733a-461f-92cc-33efcb2af87d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 461a3a0e217fb2ad973830eaffc86ff048830b83
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 84d4ac45655231430d444781738d47de57f732b8
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80907619"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480776"
 ---
 # <a name="getclientconnectionid-method-sqlserverconnection"></a>getClientConnectionID 메서드(SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -58,7 +59,7 @@ UUID conid = ((ISQLServerConnection)cn).getClientConnectionId();
   
  **getClientConnectionID**는 연결하는 서버의 버전에 상관없이 작동하지만 확장 이벤트 로그 및 연결 링 버퍼 오류에 대한 항목은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 2008 R2 이전 버전에 표시되지 않습니다.  
   
- 연결 ID 로깅이 활성화되어 있는 확장 이벤트이고 서버에서 실패가 발생한 경우 확장 이벤트 로그에서 연결 ID를 찾아 확인할 수 있습니다. 특정 연결 오류의 경우 연결 링 버퍼([연결 링 버퍼를 사용하여 SQL Server 2008의 연결 문제 해결](https://go.microsoft.com/fwlink/?LinkId=207752))에서 연결 ID를 찾을 수도 있습니다. 연결 ID가 연결 링 버퍼에 없는 경우 네트워크 오류를 가정해 볼 수 있습니다.  
+ 연결 ID 로깅이 활성화되어 있는 확장 이벤트이고 서버에서 실패가 발생한 경우 확장 이벤트 로그에서 연결 ID를 찾아 확인할 수 있습니다. 특정 연결 오류의 경우 연결 링 버퍼([연결 링 버퍼를 사용하여 SQL Server 2008의 연결 문제 해결](https://docs.microsoft.com/archive/blogs/sql_protocols/connectivity-troubleshooting-in-sql-server-2008-with-the-connectivity-ring-buffer))에서 연결 ID를 찾을 수도 있습니다. 연결 ID가 연결 링 버퍼에 없는 경우 네트워크 오류를 가정해 볼 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerConnection 멤버](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

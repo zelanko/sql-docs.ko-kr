@@ -9,15 +9,15 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: ea82a9b9-e9ed-4d6f-b3fd-917f6c687ae3
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9db29ecf6a5341e5f4cf68ef1364634a747dbe20
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6edd36bacc7c2316ac747156b7d1ccdbb0e4f7ce
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85735015"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89551591"
 ---
 # <a name="sql-server-integration-services-support-for-in-memory-oltp"></a>메모리 내 OLTP에 대한 SQL Server Integration Services 지원
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
