@@ -17,14 +17,14 @@ helpviewer_keywords:
 - DROP SEQUENCE statement
 - sequence number object, dropping
 ms.assetid: c25772d3-61af-4aa7-b58b-a6f67a793e3d
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 7c880111b104abc2de1b1d4d6c8f3cc3e672ef91
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 48192af5515f4a570908870fcdcc1af58b153032
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444610"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89547493"
 ---
 # <a name="drop-sequence-transact-sql"></a>DROP SEQUENCE(Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -80,7 +80,7 @@ GO
 ### <a name="audit"></a>감사  
  **DROP SEQUENCE**를 감사하려면 **SCHEMA_OBJECT_CHANGE_GROUP**을 모니터링합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 현재 데이터베이스에서 `CountBy1`이라는 시퀀스 개체를 제거합니다.  
   
 ```  

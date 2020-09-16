@@ -3,7 +3,7 @@ title: 중단점 설정/해제
 description: '중단점을 설정/해제하여 연결된 Transact-SQL 문을 강조 표시하는 방법과 문에 다양한 작업(예: 편집)을 수행하는 방법을 알아봅니다.'
 titleSuffix: T-SQL debugger
 ms.prod: sql
-ms.technology: scripting
+ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: c477ab89-a1cd-4f2c-aa7c-40525041100f
 author: markingmyname
@@ -12,12 +12,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 159834507edfc57466dc0872bf42e2976c4ca8cc
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: b6c43f4376d6e60607fd1fcfb1c64f1d25cea3af
+ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87248072"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88901476"
 ---
 # <a name="toggle-a-breakpoint"></a>중단점 설정/해제
 

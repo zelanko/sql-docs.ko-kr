@@ -1,12 +1,9 @@
 ---
 title: 쿼리 편집기에서 코드 색상 지정
 description: 특정 텍스트를 더 쉽게 찾을 수 있도록 텍스트 범주를 색으로 구분하는 방법과 사용자 지정 색 구성표를 구성하는 방법을 알아봅니다.
-ms.custom: seo-lt-2019
-ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.technology: scripting
-ms.reviewer: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - Query Editor [SQL Server Management Studio], color coding
@@ -14,17 +11,22 @@ helpviewer_keywords:
 ms.assetid: 802882dc-c997-4e3f-8a01-994bb43169ae
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 210ee62b952cddaf240f12322ebdcc3c702be4ea
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: f0361e410c73a18b2901ff11487a58925ce32fa8
+ms.sourcegitcommit: 9e1f1c6ee8f5a10d18a2599bfd9f3eb6081829e1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87122904"
+ms.lasthandoff: 08/29/2020
+ms.locfileid: "89093497"
 ---
 # <a name="color-coding-in-query-editors"></a>쿼리 편집기에서 코드 색상 지정
+
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-  코드 편집기에 입력하는 텍스트에는 범주가 할당되고 각 범주는 색으로 표시됩니다. 색을 통해 코드의 텍스트를 빠르게 찾을 수 있습니다. 예를 들어 주석은 진한 녹색으로 표시됩니다. 다음 표에서는 가장 일반적인 색을 나열합니다. **도구**, **옵션** 메뉴를 사용하여 전체 색 목록과 해당 범주를 볼 수 있으며 사용자 지정 색 구성표를 구성할 수 있습니다. 기본 색을 변경하는 방법은 [Change Font Color, Size, and Style](../../relational-databases/scripting/change-font-color-size-and-style.md)을 참조하십시오.  
+
+코드 편집기에 입력하는 텍스트에는 범주가 할당되고 각 범주는 색으로 표시됩니다. 색을 통해 코드의 텍스트를 빠르게 찾을 수 있습니다. 예를 들어 주석은 진한 녹색으로 표시됩니다. 다음 표에서는 가장 일반적인 색을 나열합니다. **도구**, **옵션** 메뉴를 사용하여 전체 색 목록과 해당 범주를 볼 수 있으며 사용자 지정 색 구성표를 구성할 수 있습니다. 기본 색을 변경하는 방법은 [Change Font Color, Size, and Style](../../relational-databases/scripting/change-font-color-size-and-style.md)을 참조하십시오.  
   
 ## <a name="default-code-colors"></a>기본 코드 색  
   

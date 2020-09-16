@@ -9,14 +9,14 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: 6e005de0-3a77-4b91-b497-14cc0f9f6605
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 4bff120f8fc20b9f37b441dbb1b9f34833822dbb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a88af1af1e814ee6340f72553d74fdba1247c51e
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85723333"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89542908"
 ---
 # <a name="configuring-storage-for-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블 스토리지 구성
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

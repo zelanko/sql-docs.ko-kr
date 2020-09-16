@@ -4,7 +4,7 @@ description: 중단점 창을 사용하여 중단점을 보고, 삭제하고, �
 titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.technology: scripting
+ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: 357b5874-273f-43a9-8e30-83872bdea5dc
 author: markingmyname
@@ -13,12 +13,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7ce9b445b5340680f53279a3c061f05c8999a5dd
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: 22a60f2f696a132bbcf7cc6b1497c286f5670cb5
+ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87122931"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88901274"
 ---
 # <a name="enable-disable-and-delete-breakpoints"></a>중단점 설정, 해제 및 삭제
 

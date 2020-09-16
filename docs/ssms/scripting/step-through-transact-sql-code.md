@@ -2,7 +2,7 @@
 title: Transact-SQL 코드 단계별 실행
 description: Transact-SQL 디버거를 사용하여 데이터베이스 엔진 쿼리 편집기 창에서 실행되는 Transact-SQL 문을 제어하는 방법을 알아봅니다.
 ms.prod: sql
-ms.technology: scripting
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - Transact-SQL debugger, debugging code
@@ -16,12 +16,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d7317f783df8cd8810cb4d2371f8469697bb9a45
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 087e3837ed8b1876216f847c956e0a4421f8a95c
+ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246192"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88901509"
 ---
 # <a name="step-through-transact-sql-code"></a>Transact-SQL 코드 단계별 실행
 

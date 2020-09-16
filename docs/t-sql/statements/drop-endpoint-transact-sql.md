@@ -20,14 +20,14 @@ helpviewer_keywords:
 - DROP ENDPOINT statement
 - dropping endpoints
 ms.assetid: 6aca7412-66a5-4fa4-86b2-061512ff2080
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: c9aabafbad425cf9f570a466bdb01283a141082d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a33cf6c43f2f01e3a897a0491954b98e5739db6e
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444690"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89539832"
 ---
 # <a name="drop-endpoint-transact-sql"></a>DROP ENDPOINT(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -55,7 +55,7 @@ DROP ENDPOINT endPointName
 ## <a name="permissions"></a>사용 권한  
  **sysadmin** 고정 서버 역할의 멤버 또는 엔드포인트 소유자이거나 엔드포인트에 대한 CONTROL 권한을 부여받아야 합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 이전에 만든 `sql_endpoint`라는 엔드포인트를 제거합니다.  
   
 ```  

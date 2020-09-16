@@ -1,28 +1,30 @@
 ---
 title: Transact-SQL 코드 조각 추가
 description: SQL Server에 포함된 미리 정의된 코드 조각 집합에 사용자 고유의 Transact-SQL 코드 조각을 추가하는 방법을 알아봅니다.
-ms.custom: seo-lt-2019
-ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.technology: scripting
-ms.reviewer: ''
+ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: 901c7995-8eb5-4d12-8bb0-de0a922b48f8
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 499cbf0dd9ea2f12e182f678bc61976e31df2504
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 8a04c680b5f9753619c0f069ad6c9956bc675cc1
+ms.sourcegitcommit: 9e1f1c6ee8f5a10d18a2599bfd9f3eb6081829e1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921349"
+ms.lasthandoff: 08/29/2020
+ms.locfileid: "89093569"
 ---
 # <a name="add-transact-sql-snippets"></a>Transact-SQL 코드 조각 추가
+
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 포함된 미리 정의된 코드 조각 집합에 사용자 고유의 Transact-SQL 코드 조각을 추가할 수 있습니다.  
-  
+
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 포함된 미리 정의된 코드 조각 집합에 사용자 고유의 Transact-SQL 코드 조각을 추가할 수 있습니다.  
+
 ## <a name="creating-a-transact-sql-snippet-file"></a>Transact-SQL 코드 조각 파일 만들기  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드 조각을 만드는 첫 번째 단계는 사용자 코드 조각의 텍스트가 포함된 XML 파일을 만드는 것입니다. 이 파일은 파일 확장명이 .snippet이고 [코드 조각 스키마](https://go.microsoft.com/fwlink/?LinkId=207504)의 요구 사항을 충족해야 합니다. 코드 조각 언어는 SQL로 설정합니다.  
   

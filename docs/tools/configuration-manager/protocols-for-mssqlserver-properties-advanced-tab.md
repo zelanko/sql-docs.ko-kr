@@ -6,18 +6,18 @@ ms.date: 01/24/2019
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.technology: configuration
+ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: abd5ca68-825f-4c07-b27c-3b3a79d03d74
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ccf8f2a6c80dbaf13c6e47ca835c7dc3c3e0d4d0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f430d2be5a9b1af495b296f59c172e16401c01eb
+ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897065"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88901116"
 ---
 # <a name="protocols-for-mssqlserver-properties-advanced-tab"></a>MSSQLSERVER 속성에 대한 프로토콜(고급 탭)
 
@@ -27,8 +27,8 @@ ms.locfileid: "85897065"
 
 > [!IMPORTANT]  
 > Windows에서는 기본적으로 **확장된 보호** 를 사용할 수 없습니다. **확장된 보호**를 사용하도록 설정하는 방법에 대한 자세한 내용은 다음을 참조하세요.
-> - [Windows 확장된 보호 \<extendedProtection\>](https://docs.microsoft.com/iis/configuration/system.webserver/security/authentication/windowsauthentication/extendedprotection/)
-> - [인증에 대한 확장된 보호 개요](https://docs.microsoft.com/dotnet/framework/wcf/feature-details/extended-protection-for-authentication-overview)
+> - [Windows 확장된 보호 \<extendedProtection\>](/iis/configuration/system.webserver/security/authentication/windowsauthentication/extendedprotection/)
+> - [인증에 대한 확장된 보호 개요](/dotnet/framework/wcf/feature-details/extended-protection-for-authentication-overview)
 
 기타 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스를 구성하는 방법과 **확장된 보호**에 대한 전체 설명을 보려면 [Microsoft.com](https://go.microsoft.com/fwlink/?LinkId=177752)의 최신 정보를 참조하십시오.
 
@@ -53,4 +53,3 @@ ms.locfileid: "85897065"
 ## <a name="see-also"></a>참고 항목
 
 [Reporting Services 인증에 대한 확장된 보호](../../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md)
-

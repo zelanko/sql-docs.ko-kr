@@ -3,7 +3,7 @@ title: 스크립트 생성
 description: 스크립트 생성 및 게시 마법사를 사용하여 여러 개체에 대한 Transact-SQL 스크립트를 만드는 방법과 개체 탐색기 메뉴를 사용하여 개별 개체 또는 여러 개체에 대한 스크립트를 생성하는 방법을 알아봅니다.
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.technology: scripting
+ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: 9711c617-3c68-4e5a-aea3-befc64d51524
 author: markingmyname
@@ -12,12 +12,12 @@ ms.reviewer: mathoma
 ms.custom: seo-lt-2019
 ms.date: 04/07/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 534d4982f46d0d83cb25718646b018dfa662cc35
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: d3fb8dc9157e7574835ee330b9c9e0f925c6e6f4
+ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87123134"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88901336"
 ---
 # <a name="generate-scripts-sql-server-management-studio"></a>스크립트 생성(SQL Server Management Studio)
 
@@ -67,7 +67,7 @@ SSMS(SQL Server Management Studio)를 사용하여 다양한 개체를 스크립
 
 4. **F7** 을 선택하거나 **보기**메뉴를 열고 **개체 탐색기 정보** 를 선택하여 **개체 탐색기 정보**창을 엽니다.
 
-    ![개체 탐색기](media/generate-scripts-sql-server-management-studio/object-explorer-details-view-menu.png)
+    ![보기 메뉴](media/generate-scripts-sql-server-management-studio/object-explorer-details-view-menu.png)
 
 5. 스크립팅할 개체 중 하나를 마우스 왼쪽 단추로 클릭합니다.
 
@@ -75,4 +75,4 @@ SSMS(SQL Server Management Studio)를 사용하여 다양한 개체를 스크립
 
 7. 선택한 개체 중 하나를 마우스 오른쪽 단추로 클릭하고 **\<object type> 스크립팅**을 선택합니다.
 
-    ![개체 탐색기](media/generate-scripts-sql-server-management-studio/object-explorer-details.png)
+    ![세부 정보](media/generate-scripts-sql-server-management-studio/object-explorer-details.png)

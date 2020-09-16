@@ -4,7 +4,7 @@ description: 찾기 및 바꾸기 대화 상자의 "찾을 내용" 필드에서 
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
-ms.technology: scripting
+ms.technology: ssms
 ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
@@ -17,12 +17,12 @@ ms.assetid: 449600f8-cc87-4b3f-878a-59c158a88a40
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c8e2766939038879d92de0f8f73b5c2eab38f45d
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: 0b650e4b280166580443e6f3395b060690e5c3eb
+ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87122794"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88901718"
 ---
 # <a name="search-text-with-wildcards"></a>와일드카드로 텍스트 검색
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

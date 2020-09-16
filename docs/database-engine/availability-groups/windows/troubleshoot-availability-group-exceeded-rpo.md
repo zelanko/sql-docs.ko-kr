@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 38de1841-9c99-435a-998d-df81c7ca0f1e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d8ae9d5fee06ae9db1415b53c41a1d1d23633824
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0c31375615a55d6ae8dfa12e9ffddfe921c066c3
+ms.sourcegitcommit: f7c9e562d6048f89d203d71685ba86f127d8d241
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882365"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90042844"
 ---
 # <a name="troubleshoot-availability-group-exceeded-rpo"></a>문제 해결: 가용성 그룹 초과 RPO
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "85882365"
   
  또한 두 성능 개체 `SQL Server:Availability Replica > Flow Control Time (ms/sec)` 및 `SQL Server:Availability Replica > Flow Control/sec`를 확인하는 것도 유용합니다. 이러한 두 값을 곱하면 흐름 제어가 해제될 때까지 대기하는 데 소비한 최종 시간이 나타납니다. 흐름 제어 대기 시간이 길수록 전송 속도가 더 느립니다.  
   
- 다음 메트릭은 네트워크 대기 시간 및 처리량 진단에 유용합니다. **ping.exe** 및 [네트워크 모니터](https://www.microsoft.com/download/details.aspx?id=4865) 등 다른 Windows 도구를 사용하여 대기 시간 및 네트워크 사용률을 평가할 수 있습니다.  
+ 다음 메트릭은 네트워크 대기 시간 및 처리량 진단에 유용합니다. **ping.exe** 및 [네트워크 모니터](https://www.microsoft.com/p/network-monitor-pro-free-edition/9n8gdvj32gp7) 등 다른 Windows 도구를 사용하여 대기 시간 및 네트워크 사용률을 평가할 수 있습니다.  
   
 -   DMV `sys.dm_hadr_database_replica_states, log_send_queue_size`  
   

@@ -4,7 +4,7 @@ description: 함수 또는 저장 프로시저에 필요한 매개 변수를 입
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
-ms.technology: scripting
+ms.technology: ssms
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,12 +16,12 @@ ms.assetid: 56c2aac9-c65c-4679-b62c-d9f689876dde
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ec0f385f78a7d6c4ab1747ab7b81efd90e3b70dd
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: cbd2f430583b125333f11184bf49d86fafdb8ae1
+ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87122567"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88901742"
 ---
 # <a name="parameter-info-intellisense"></a>매개 변수 정보(IntelliSense)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
