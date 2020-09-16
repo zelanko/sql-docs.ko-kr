@@ -10,12 +10,12 @@ ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 732db8e12b2923dfdd74727c5e9e0a5a56483fc4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d92479dbc8cc705e263b0828926bc2a5e86312b6
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75255925"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778452"
 ---
 # <a name="submit-spark-jobs-on-sql-server-big-data-cluster-in-visual-studio-code"></a>Visual Studio Code에서 SQL Server 빅 데이터 클러스터에 대한 Spark 작업 제출
 
@@ -31,7 +31,7 @@ Windows, Linux 및 macOS를 포함하여 Visual Studio Code에서 지원되는 �
 - SQL Server 빅 데이터 클러스터. [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](https://docs.microsoft.com/sql/big-data-cluster/big-data-cluster-overview?view=sqlallproducts-allversions)을 참조하세요.
 - [Visual Studio Code](https://code.visualstudio.com/)
 - [Mono](https://www.mono-project.com/docs/getting-started/install/). Mono는 Linux 및 macOS에만 필요합니다.
-- [Visual Studio Code용 PySpark 대화형 환경 설정](https://docs.microsoft.com/azure/hdinsight/set-up-pyspark-interactive-environment)
+- [Visual Studio Code용 PySpark 대화형 환경 설정](/azure/hdinsight/set-up-pyspark-interactive-environment)
 - **SQLBDCexample**라는 로컬 디렉터리.  이 문서에서는 **C:\SQLBDC\SQLBDCexample**을 사용합니다.
 
 ## <a name="install-spark--hive-tools"></a>Spark & Hive Tools 설치

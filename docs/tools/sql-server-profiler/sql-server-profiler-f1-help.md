@@ -12,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 07/07/2017
-ms.openlocfilehash: 72b9d67488e43a9d87ed52243b20fb49219887c4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 11e66adad7e724f0ed18c53693c4c56567fb9d8e
+ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722645"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88713801"
 ---
 # <a name="sql-server-profiler-dialog-boxes"></a>SQL Server Profiler 대화 상자
 
@@ -52,7 +52,7 @@ Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]는 서�
 |---|---
 |**Events** 열|이벤트 열에서 확인란을 선택하거나 선택 취소하여 추적된 이벤트를 지정합니다. **Events** 는 이벤트 범주별로 구성됩니다. 템플릿에 지정된 이벤트 클래스는 자동으로 선택됩니다. 자세한 내용은 [SQL Server Event Class Reference](../../relational-databases/event-classes/sql-server-event-class-reference.md)를 참조하세요.  
 |데이터 열|원하는 이벤트 및 데이터 열에 해당하는 확인란을 선택하여 추적된 데이터 열을 지정합니다. 추적에 포함된 각 이벤트와 관련된 모든 이벤트 열이 기본적으로 선택됩니다.  
-|필터|데이터 열 머리글을 클릭하고 필터 조건을 입력하여 필터를 지정합니다. 필터링된 데이터 열은 **필터 편집** 대화 상자에서 열 레이블 왼쪽에 있는 필터 아이콘으로 표시됩니다. 자세한 내용은 [SQL Server Profiler - 필터 편집](https://msdn.microsoft.com/library/a589eff5-6ec6-4f6e-94b8-831658257f14)을 참조하세요.  
+|필터|데이터 열 머리글을 클릭하고 필터 조건을 입력하여 필터를 지정합니다. 필터링된 데이터 열은 **필터 편집** 대화 상자에서 열 레이블 왼쪽에 있는 필터 아이콘으로 표시됩니다. 자세한 내용은 [SQL Server Profiler - 필터 편집](?view=sql-server-ver15)을 참조하세요.  
 |**모든 이벤트 표시**|사용할 수 있는 모든 이벤트를 표시합니다. 기본적으로 **이벤트 선택** 표에서 선택된 행만 표시됩니다. **이벤트 선택** 표에서 선택되지 않은 모든 이벤트를 숨기려면 이 확인란의 선택을 취소합니다.  
 |**모든 열 표시**|사용할 수 있는 모든 데이터 열을 표시합니다. 기본적으로 선택된 데이터 열만 표시됩니다. **이벤트 선택** 표에서 선택되지 않은 모든 데이터 열을 숨기려면 이 확인란의 선택을 취소합니다.  
 |**열 필터**|**필터 편집** 대화 상자를 시작합니다. 이 대화 상자를 사용하여 데이터 열 필터를 편집할 수 있습니다.  
@@ -279,5 +279,4 @@ Microsoft SQL Server Profiler 및 튜닝 관리자는 이 대화 상자를 사�
 ## <a name="see-also"></a>참고 항목 
 [SQL Server 프로파일러](../../tools/sql-server-profiler/sql-server-profiler.md)   
 [서버 성능 및 작업 모니터링](../../relational-databases/performance/server-performance-and-activity-monitoring.md)  
-  
   

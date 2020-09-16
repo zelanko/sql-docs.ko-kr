@@ -9,12 +9,12 @@ ms.date: 01/07/2020
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: bc83184b6cac6ab574090f8059e2a79fa9ca69ca
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: d21f5c3f572356a18f8567f798af8af10f58c001
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942790"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88765742"
 ---
 # <a name="what-are-big-data-clusters-2019"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]란 무엇인가요?
 
@@ -26,14 +26,14 @@ ms.locfileid: "86942790"
 
 SQL Server 빅 데이터 클러스터는 다음과 같은 용도로 사용할 수 있습니다.
 
-- Kubernetes에서 실행되는 SQL Server, Spark 및 HDFS 컨테이너의 [확장성 있는 클러스터 배포](../big-data-cluster/deploy-get-started.md) 
+- Kubernetes에서 실행되는 SQL Server, Spark 및 HDFS 컨테이너의 [확장성 있는 클러스터 배포](./deploy-get-started.md) 
 - Transact-SQL 또는 Spark에서 빅 데이터 읽기, 쓰기 및 처리
 - 대용량 빅 데이터를 사용하여 가치 높은 관계형 데이터를 쉽게 조합 및 분석
 - 외부 데이터 원본 쿼리
 - SQL Server에서 관리하는 HDFS에 빅 데이터 저장
 - 클러스터를 통해 여러 외부 데이터 원본에서 데이터 쿼리
 - AI, 기계 학습 및 기타 분석 작업에 데이터 사용
-- [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)]에서 [애플리케이션 배포 및 실행](../big-data-cluster/concept-application-deployment.md)
+- [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)]에서 [애플리케이션 배포 및 실행](./concept-application-deployment.md)
 - [PolyBase](../relational-databases/polybase/polybase-guide.md)를 사용하여 데이터 가상화 외부 테이블을 사용하여 외부 SQL Server, Oracle, Teradata, MongoDB 및 ODBC 데이터 원본의 데이터 쿼리
 - Always On 가용성 그룹 기술을 사용하여 SQL Server 마스터 인스턴스 및 모든 데이터베이스에 관해 고가용성 제공
 

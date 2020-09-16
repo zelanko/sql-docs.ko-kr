@@ -2,7 +2,7 @@
 title: SQL Server PowerShell
 description: PowerShell 공급자 및 cmdlet을 포함하는 두 개의 SQL Server PowerShell 모듈 SqlServer 및 SQLPS에 대해 알아봅니다.
 ms.prod: sql
-ms.technology: scripting
+ms.technology: sql-server-powershell
 ms.topic: conceptual
 ms.assetid: 89b70725-bbe7-4ffe-a27d-2a40005a97e7
 author: markingmyname
@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: matteot
 ms.custom: ''
 ms.date: 06/11/2020
-ms.openlocfilehash: f08c2917e225bf96422e7ea27aae9baab31390fd
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: e320408fd569cbf747c9f9ada68f51dd2bea8a41
+ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921537"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88714331"
 ---
 # <a name="sql-server-powershell"></a>SQL Server PowerShell
 

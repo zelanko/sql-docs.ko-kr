@@ -13,12 +13,12 @@ ms.assetid: 30f27f4d-8852-4b12-ba62-57f63e496f1d
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 7d0ffc5d1fa1ba7fa0fbf6b89ce5eea4c8d179c4
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 3afc39516bc50a6a4f1a2fb7ad67d7b0c3602e7e
+ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457519"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88713741"
 ---
 # <a name="lesson-3-using-the-dta-command-prompt-utility"></a>3단원: dta 명령 프롬프트 유틸리티 사용
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,19 +36,19 @@ ms.locfileid: "86457519"
   
  이 태스크에서는 **dta** 유틸리티를 시작하고 도움말을 본 다음, 이 유틸리티를 사용하여 명령 프롬프트에서 작업을 튜닝하는 과정을 안내합니다. 여기서는 데이터베이스 엔진 튜닝 관리자 GUI(그래픽 사용자 인터페이스) 연습인 [작업 튜닝](lesson-2-using-database-engine-tuning-advisor.md#tuning-a-workload)에 대해 만든 MyScript.sql 작업을 사용합니다.  
   
-이 자습서에서는 AdventureWorks2017 샘플 데이터베이스를 사용합니다. 보안을 위해 예제 데이터베이스는 기본적으로 설치되지 않습니다. 예제 데이터베이스를 설치하려면 [SQL Server 예제 및 예제 데이터베이스](https://docs.microsoft.com/sql/samples/adventureworks-install-configure)를 참조하세요.  
+이 자습서에서는 AdventureWorks2017 샘플 데이터베이스를 사용합니다. 보안을 위해 예제 데이터베이스는 기본적으로 설치되지 않습니다. 예제 데이터베이스를 설치하려면 [SQL Server 예제 및 예제 데이터베이스](../../samples/adventureworks-install-configure.md)를 참조하세요.  
   
-다음 태스크에서는 명령 프롬프트를 열고 **dta** 명령 프롬프트 유틸리티를 시작하고 구문 도움말을 본 다음 [Tuning a Workload](../../tools/dta/lesson-1-1-tuning-a-workload.md)에서 만든 단순 작업인 MyScript.sql을 튜닝하는 과정을 안내합니다.  
+다음 태스크에서는 명령 프롬프트를 열고 **dta** 명령 프롬프트 유틸리티를 시작하고 구문 도움말을 본 다음 [Tuning a Workload](./lesson-2-using-database-engine-tuning-advisor.md?view=sql-server-ver15)에서 만든 단순 작업인 MyScript.sql을 튜닝하는 과정을 안내합니다.  
 
 ## <a name="prerequisites"></a>필수 구성 요소 
 
 이 자습서를 완료하려면 SQL Server Management Studio, SQL Server를 실행하는 서버에 대한 액세스 및 AdventureWorks 데이터베이스가 필요합니다.
 
 - [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)을 설치합니다.
-- [AdventureWorks2017 샘플 데이터베이스](https://docs.microsoft.com/sql/samples/adventureworks-install-configure)를 다운로드합니다.
+- [AdventureWorks2017 샘플 데이터베이스](../../samples/adventureworks-install-configure.md)를 다운로드합니다.
 
 
-SSMS에서 데이터베이스를 복원하기 위한 지침은 [데이터베이스 복원](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms?view=sql-server-2017)을 참조하세요.
+SSMS에서 데이터베이스를 복원하기 위한 지침은 [데이터베이스 복원](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md?view=sql-server-2017)을 참조하세요.
 
   >[!NOTE]
   > 이 자습서는 SQL Server Management Studio 및 기본적인 데이터베이스 관리 작업을 사용하는 데 익숙한 사용자를 위한 것입니다. 
@@ -84,7 +84,7 @@ SSMS에서 데이터베이스를 복원하기 위한 지침은 [데이터베이�
 
   ![DTA로 CMD 사용](media/dta-tutorials/dta-cmd.png)
   
-3.  데이터베이스 엔진 튜닝 관리자에서 작업 튜닝을 마치면 튜닝 세션이 완료되었다는 메시지가 표시됩니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 로 MySession2OutputScript.sql 및 MySession2Output.xml 파일을 열어서 튜닝 결과를 볼 수 있습니다. 또는 [Viewing Tuning Recommendations](../../tools/dta/lesson-1-2-viewing-tuning-recommendations.md) 및 [Viewing Tuning Reports](../../tools/dta/lesson-1-3-viewing-tuning-reports.md)에서와 같은 방법으로 데이터베이스 엔진 튜닝 관리자 GUI에서 MySession2 튜닝 세션을 열고 해당 권장 구성과 보고서를 볼 수도 있습니다.  
+3.  데이터베이스 엔진 튜닝 관리자에서 작업 튜닝을 마치면 튜닝 세션이 완료되었다는 메시지가 표시됩니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 로 MySession2OutputScript.sql 및 MySession2Output.xml 파일을 열어서 튜닝 결과를 볼 수 있습니다. 또는 [Viewing Tuning Recommendations](./lesson-2-using-database-engine-tuning-advisor.md?view=sql-server-ver15) 및 [Viewing Tuning Reports](./lesson-2-using-database-engine-tuning-advisor.md?view=sql-server-ver15)에서와 같은 방법으로 데이터베이스 엔진 튜닝 관리자 GUI에서 MySession2 튜닝 세션을 열고 해당 권장 구성과 보고서를 볼 수도 있습니다.  
   
  
 ## <a name="after-you-finish-this-tutorial"></a>이 자습서를 마친 후  
@@ -97,4 +97,3 @@ SSMS에서 데이터베이스를 복원하기 위한 지침은 [데이터베이�
   
 ## <a name="see-also"></a>참고 항목  
 [데이터베이스 엔진 자습서](../../relational-databases/database-engine-tutorials.md)  
-    

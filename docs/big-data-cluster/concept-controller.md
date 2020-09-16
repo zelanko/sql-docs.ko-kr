@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 5a294bf705e4caf4a79c0f67ce925187e24c0f00
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8fd56c7b3c3177f1ae08c9b2c5d821d1c2552f70
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730698"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88765682"
 ---
 # <a name="what-is-the-controller-on-a-sql-server-big-data-cluster"></a>SQL Server 빅 데이터 클러스터의 컨트롤러란?
 
@@ -57,7 +57,7 @@ ms.locfileid: "85730698"
 컨트롤러 서비스 엔드포인트에 대한 인증은 Active Directory ID를 사용하거나 사용자 이름 및 암호를 기반으로 합니다. 이 자격 증명은 `AZDATA_USERNAME` 및 `AZDATA_PASSWORD` 환경 변수의 입력을 사용하여 클러스터 부트스트랩 시 프로비저닝됩니다.
 
 > [!NOTE]
-> [SQL Server 암호 복잡성 요구 사항](https://docs.microsoft.com/sql/relational-databases/security/password-policy?view=sql-server-2017)을 준수하는 암호를 제공해야 합니다.
+> [SQL Server 암호 복잡성 요구 사항](../relational-databases/security/password-policy.md?view=sql-server-2017)을 준수하는 암호를 제공해야 합니다.
 
 ## <a name="next-steps"></a>다음 단계
 

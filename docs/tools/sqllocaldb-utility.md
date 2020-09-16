@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: d785cdb7-1ea0-4871-bde9-1ae7881190f5
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c0fdaa59f094a44b90affc3fa256275fffdfc69a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b418baa8bf729746ac14382e0e9099055ee0fb5e
+ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920599"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88714001"
 ---
 # <a name="sqllocaldb-utility"></a>SqlLocalDB 유틸리티
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
-  **SqlLocalDB** 유틸리티를 사용하여 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssExpCurrent](../includes/ssexpcurrent-md.md)] **LocalDB** 인스턴스를 만들 수 있습니다. **SqlLocalDB** 유틸리티(SqlLocalDB.exe)는 사용자와 개발자가 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] **LocalDB**의 인스턴스를 만들고 관리하는 데 사용할 수 있는 간단한 명령줄 도구입니다. **LocalDB**를 사용하는 방법에 대한 자세한 내용은 [SQL Server 2016 Express LocalDB](../database-engine/configure-windows/sql-server-2016-express-localdb.md)를 참조하세요.  
+  **SqlLocalDB** 유틸리티를 사용하여 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssExpCurrent](../includes/ssexpcurrent-md.md)] **LocalDB** 인스턴스를 만들 수 있습니다. **SqlLocalDB** 유틸리티(SqlLocalDB.exe)는 사용자와 개발자가 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] **LocalDB**의 인스턴스를 만들고 관리하는 데 사용할 수 있는 간단한 명령줄 도구입니다. **LocalDB**를 사용하는 방법에 대한 자세한 내용은 [SQL Server 2016 Express LocalDB](../database-engine/configure-windows/sql-server-express-localdb.md?view=sql-server-ver15)를 참조하세요.  
   
 ## <a name="syntax"></a>구문  
   
@@ -114,6 +114,5 @@ sqlcmd -S (localdb)\.\DeptSharedLocalDB -U NewLogin -P Passw0rd!!@52
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [SQL Server 2016 Express LocalDB](../database-engine/configure-windows/sql-server-2016-express-localdb.md)  
+ [SQL Server 2016 Express LocalDB](../database-engine/configure-windows/sql-server-express-localdb.md?view=sql-server-ver15)  
 [명령줄 관리 도구: SqlLocalDB.exe](../relational-databases/express-localdb-instance-apis/command-line-management-tool-sqllocaldb-exe.md)  
-  

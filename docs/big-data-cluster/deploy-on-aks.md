@@ -10,12 +10,12 @@ ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 7e46d5bd2ad1fcb300c16ce3883f7b03f493fcdc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d82ac562495e916ce34b591190f6c427e6c8413e
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85661090"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88765942"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-big-data-cluster-deployments"></a>SQL Server 빅 데이터 클러스터 배포에 대해 Azure Kubernetes Service 구성
 
@@ -46,7 +46,7 @@ AKS를 사용하면 Kubernetes 클러스터로 미리 구성된 가상 머신 �
    - 모든 노드에서 24개 이상의 연결된 디스크
 
    > [!TIP]
-   > Azure 인프라는 VM에 대한 여러 가지 크기 옵션을 제공합니다. 배포하려는 지역에서 선택할 수 있는 옵션은 [여기](https://docs.microsoft.com/azure/virtual-machines/windows/sizes)를 참조하세요.
+   > Azure 인프라는 VM에 대한 여러 가지 크기 옵션을 제공합니다. 배포하려는 지역에서 선택할 수 있는 옵션은 [여기](/azure/virtual-machines/windows/sizes)를 참조하세요.
 
 ## <a name="create-a-resource-group"></a>리소스 그룹 만들기
 
@@ -110,7 +110,7 @@ Azure 리소스 그룹은 Azure 리소스가 배포되고 관리되는 논리 �
 
 ## <a name="create-a-kubernetes-cluster"></a>Kubernetes 클러스터 만들기
 
-1. [az aks create](https://docs.microsoft.com/cli/azure/aks) 명령을 사용하여 AKS에서 Kubernetes 클러스터를 만듭니다. 다음 예제에서는 크기가 **Standard_L8s**인 Linux 에이전트 노드 1개를 사용하여 *kubcluster*라는 Kubernetes 클러스터를 만듭니다.
+1. [az aks create](/cli/azure/aks) 명령을 사용하여 AKS에서 Kubernetes 클러스터를 만듭니다. 다음 예제에서는 크기가 **Standard_L8s**인 Linux 에이전트 노드 1개를 사용하여 *kubcluster*라는 Kubernetes 클러스터를 만듭니다.
 
    스크립트를 실행하기 전에 `<version number>`를 이전 단계에서 확인한 버전 번호로 바꿉니다.
 
@@ -149,7 +149,7 @@ Azure 리소스 그룹은 Azure 리소스가 배포되고 관리되는 논리 �
 
 ## <a name="connect-to-the-cluster"></a>클러스터에 연결
 
-1. Kubernetes 클러스터에 연결하도록 kubectl을 구성하려면 [az aks get-credentials](https://docs.microsoft.com/cli/azure/aks?view=azure-cli-latest#az-aks-get-credentials) 명령을 실행합니다. 이 단계에서는 자격 증명을 다운로드하고 해당 자격 증명을 사용하도록 kubectl CLI를 구성합니다.
+1. Kubernetes 클러스터에 연결하도록 kubectl을 구성하려면 [az aks get-credentials](/cli/azure/aks?view=azure-cli-latest#az-aks-get-credentials) 명령을 실행합니다. 이 단계에서는 자격 증명을 다운로드하고 해당 자격 증명을 사용하도록 kubectl CLI를 구성합니다.
 
    ```azurecli
    az aks get-credentials --resource-group=sqlbdcgroup --name kubcluster
@@ -165,9 +165,9 @@ Azure 리소스 그룹은 Azure 리소스가 배포되고 관리되는 논리 �
 
 위 명령을 사용하여 Azure Kubernetes Service를 만드는 데 문제가 있는 경우 다음 해결 방법을 사용해 보세요.
 
-- [최신 Azure CLI](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest)를 설치했는지 확인합니다.
+- [최신 Azure CLI](/cli/azure/install-azure-cli?view=azure-cli-latest)를 설치했는지 확인합니다.
 - 다른 리소스 그룹 및 클러스터 이름을 사용하여 동일한 단계를 시도합니다.
-- [AKS에 대한 자세한 문제 해결 설명서](https://docs.microsoft.com/azure/aks/troubleshooting)를 참조하세요.
+- [AKS에 대한 자세한 문제 해결 설명서](/azure/aks/troubleshooting)를 참조하세요.
 
 ## <a name="next-steps"></a>다음 단계
 

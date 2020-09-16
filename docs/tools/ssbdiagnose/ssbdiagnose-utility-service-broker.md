@@ -26,12 +26,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: e9b797710617be71643cbe1a7b2c721c90fe5a5e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2457f180cef24b13568a6718128efa78635c3e41
+ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85748611"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88714261"
 ---
 # <a name="ssbdiagnose-utility-service-broker"></a>ssbdiagnose 유틸리티(Service Broker)
 
@@ -310,7 +310,7 @@ WHERE database_id = DB_ID();
  **ssbdiagnose** 가 구성 분석을 완료하거나 대화를 모니터링하지 못하게 하는 문제를 보고합니다.  
   
 ## <a name="sqlcmd-environment-variables"></a>sqlcmd 환경 변수  
- **ssbdiagnose** 유틸리티는 **sqlcmd** 유틸리티도 사용하는 SQLCMDSERVER, SQLCMDUSER, SQLCMDPASSWORD 및 SQLCMDLOGINTIMOUT 환경 변수를 지원합니다. 환경 변수는 명령 프롬프트 SET 명령을 사용하여 설정하거나 **sqlcmd** 를 사용하여 실행하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트에서 **setvar**명령을 사용하여 설정할 수 있습니다. **sqlcmd** 에서 **setvar**을 사용하는 방법은 [스크립팅 변수와 함께 sqlcmd 사용](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)을 참조하세요.  
+ **ssbdiagnose** 유틸리티는 **sqlcmd** 유틸리티도 사용하는 SQLCMDSERVER, SQLCMDUSER, SQLCMDPASSWORD 및 SQLCMDLOGINTIMOUT 환경 변수를 지원합니다. 환경 변수는 명령 프롬프트 SET 명령을 사용하여 설정하거나 **sqlcmd** 를 사용하여 실행하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트에서 **setvar**명령을 사용하여 설정할 수 있습니다. **sqlcmd** 에서 **setvar**을 사용하는 방법은 [스크립팅 변수와 함께 sqlcmd 사용](../../ssms/scripting/sqlcmd-use-with-scripting-variables.md?view=sql-server-ver15)을 참조하세요.  
   
 ## <a name="permissions"></a>사용 권한  
  각 **connectionoptions** 절에서 **-E** 또는 **-U** 를 사용하여 지정된 로그인은 **-S** 에 지정된 인스턴스에 있는 **sysadmin**고정 서버 역할의 멤버여야 합니다.  
@@ -466,5 +466,4 @@ ssbdiagnose -XML -E -d MyDatabase CONFIGURATION FROM SERVICE
  [sys.transmission_queue&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-transmission-queue-transact-sql.md)   
  [sys.conversation_endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql.md)   
  [sys.conversation_groups&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-conversation-groups-transact-sql.md)  
-  
   
