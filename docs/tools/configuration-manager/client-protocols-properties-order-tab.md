@@ -6,7 +6,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.technology: configuration
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
 - client protocols [SQL Server]
@@ -14,12 +14,12 @@ ms.assetid: 64fd7135-1756-4885-bed9-9ab8997ecc6c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 841c923899900ecac354356c9599d5aad61d8cfd
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b4b16ac626cc68b6b989aa9c68d9ce93b69b6820
+ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892059"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88900561"
 ---
 # <a name="client-protocols-properties-order-tab"></a>클라이언트 프로토콜 속성(순서 탭)
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -58,6 +58,5 @@ ms.locfileid: "85892059"
 >  접두사를 통해 또는 연결 문자열의 일부로 프로토콜을 지정하면 지정한 프로토콜에 대해서만 연결이 시도됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [네트워크 프로토콜 선택](https://msdn.microsoft.com/library/6565fb7d-b076-4447-be90-e10d0dec359a)  
-  
+ [네트워크 프로토콜 선택](/previous-versions/sql/sql-server-2016/ms187892(v=sql.130))  
   

@@ -6,19 +6,19 @@ ms.date: 08/24/2016
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.technology: configuration
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
 - TCP/IP [SQL Server], configuration options
 ms.assetid: 007638fc-3a24-4460-adbe-545ded5d6f88
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2e9bf22b501a097e59af3bef953ffcbaa26780c1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1b53ae759c4a8875d329f9ac7b443f4168042c96
+ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85880294"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88900930"
 ---
 # <a name="tcpip-properties-protocols-tab"></a>TCP/IP 속성(프로토콜 탭)
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -40,7 +40,6 @@ ms.locfileid: "85880294"
  SQL Server는 이 속성에 대한 변경 내용을 구현하지 않습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [네트워크 프로토콜 선택](https://msdn.microsoft.com/library/ms187892(v=sql.130).aspx)   
+ [네트워크 프로토콜 선택](/previous-versions/sql/sql-server-2016/ms187892(v=sql.130))   
  [TCP/IP를 사용하여 유효한 연결 문자열 만들기](creating-a-valid-connection-string-using-tcp-ip.md)  
-  
   

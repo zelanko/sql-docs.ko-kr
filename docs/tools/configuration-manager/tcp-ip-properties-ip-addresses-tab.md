@@ -6,7 +6,7 @@ ms.date: 08/24/2016
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.technology: configuration
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
 - ports [SQL Server], listening on
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4c17ed45-9da7-4bec-bce6-970109fe7365
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c68b7a9f1da65862403750e32315ee7168ded6e6
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8824963894b70412ff4525f25b40de7ed53ccd3b
+ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85880305"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88901064"
 ---
 # <a name="tcpip-properties-ip-addresses-tab"></a>TCP/IP 속성(IP 주소 탭)
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -62,8 +62,7 @@ ms.locfileid: "85880305"
  **특정 TCP 포트로 수신하도록 서버 구성(SQL Server 구성 관리자)** 및 **여러 TCP 포트에서 수신하도록 데이터베이스 엔진 구성**과 같은 항목에 대해 MSDN을 검색합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [네트워크 프로토콜 선택](https://msdn.microsoft.com/library/ms187892(v=sql.120).aspx)   
+ [네트워크 프로토콜 선택](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)   
  [TCP/IP를 사용하여 유효한 연결 문자열 만들기](creating-a-valid-connection-string-using-tcp-ip.md)   
  [SQL Server Browser 서비스](sql-server-browser-service.md)  
-  
   
