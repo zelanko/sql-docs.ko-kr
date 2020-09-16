@@ -1,4 +1,5 @@
 ---
+description: DeleteEncryptedInformation 메서드(WMI MSReportServer_ConfigurationSetting)
 title: DeleteEncryptedInformation 메서드(WMI MSReportServer_ConfigurationSetting) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c14ed187-bdd9-4304-88e3-72072f03c21b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9e86c1964a4ece26115116b8e21c763caaab797b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6dea15e9dfe817d13b7a1178406b45ab4d8321f4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65572224"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497956"
 ---
 # <a name="configurationsetting-method---deleteencryptedinformation"></a>ConfigurationSetting 메서드 - DeleteEncryptedInformation
   보고서 서버 데이터베이스에서 암호화된 정보를 삭제합니다.  

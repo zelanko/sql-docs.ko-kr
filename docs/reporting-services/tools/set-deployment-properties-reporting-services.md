@@ -14,12 +14,12 @@ ms.assetid: 18201ca0-bf4a-484f-b3a2-95d1046a6a9b
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 05/15/2019
-ms.openlocfilehash: 45e168c5fa0e0edcb450ca4f302de2676303b5c3
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 8ebf9f5e6659659543c66634e71b0a4315dcc07e
+ms.sourcegitcommit: 291ae8f6b72fd355f8f24ce5300339306293ea7e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914891"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88512339"
 ---
 # <a name="set-deployment-properties-reporting-services"></a>배포 속성 설정(Reporting Services)
 
@@ -65,7 +65,7 @@ ms.locfileid: "86914891"
   
 10. **TargetServerURL** 입력란에 대상 보고서 서버의 URL을 입력합니다. 보고서를 게시하기 전에 이 속성을 유효한 보고서 서버 URL로 설정해야 합니다. 기본 모드로 실행 중인 보고서 서버에 게시하는 경우 보고서 서버의 가상 디렉터리 URL(예: http:*//server/reportserver* 또는 https:*//server/reportserver*)을 사용합니다. 이는 웹 포털이 아닌 보고서 서버의 가상 디렉터리입니다.  
   
-     SharePoint 통합 모드로 실행 중인 보고서 서버에 게시하는 경우 SharePoint 최상위 사이트나 하위 사이트에 대한 URL을 사용합니다. 사이트를 지정하지 않으면 기본 최상위 사이트(예: <https://*servername*>, <https://*servername*/*site*>또는 <https://*servername*/*site*/*subsite*>)으로 나열됩니다.  
+     SharePoint 통합 모드로 실행 중인 보고서 서버에 게시하는 경우 SharePoint 최상위 사이트나 하위 사이트에 대한 URL을 사용합니다. 사이트를 지정하지 않으면 기본 최상위 사이트(예: `https://*servername*`, `https://*servername*/*site*`또는 `https://*servername*/*site*/*subsite*`)으로 나열됩니다.  
   
 ## <a name="to-set-configuration-manager-properties"></a>구성 관리자 속성을 설정하려면  
   

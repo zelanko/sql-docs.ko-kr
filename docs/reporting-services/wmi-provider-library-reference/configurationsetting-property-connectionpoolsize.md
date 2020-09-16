@@ -1,4 +1,5 @@
 ---
+description: ConnectionPoolSize 속성(WMI MSReportServer_ConfigurationSetting)
 title: ConnectionPoolSize 속성(WMI MSReportServer_ConfigurationSetting) | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b80c8e5d-b725-4fe4-aec6-02fb18ec4434
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 052aef53b4a02e26757493ab6cdd89578c39f4f2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0170b595f9e729c847bd2ed72046722d0670d3a3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570932"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497986"
 ---
 # <a name="configurationsetting-property---connectionpoolsize"></a>ConfigurationSetting 속성 - ConnectionPoolSize
   보고서 서버 데이터베이스를 호스팅하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스와 통신하기 위해 보고서 서버에서 사용하는 연결 풀 크기입니다. 읽기 전용입니다.  

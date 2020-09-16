@@ -2,19 +2,19 @@
 title: 앱 배포 확장
 titleSuffix: SQL Server big data clusters
 description: Python 또는 R 스크립트를 SQL Server 빅 데이터 클러스터에 애플리케이션으로 배포합니다.
-author: jeroenterheerdt
-ms.author: jterh
+author: cloudmelon
+ms.author: melqin
 ms.reviewer: mikeray
 ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 6698e3beee1df32f6b88fcde2c034f60a4e56f21
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 01ff6844019cfed0dbfa614fee156680ecd8f38e
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728869"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680605"
 ---
 # <a name="how-to-use-visual-studio-code-to-deploy-applications-to-big-data-clusters-2019"></a>Visual Studio Code를 사용하여 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]에 애플리케이션을 배포하는 방법
 
@@ -155,7 +155,7 @@ Visual Studio Code에서 앱의 아티팩트를 저장할 *작업 영역을 열�
 
 ![Swagger](media/vs-extension/swagger.png)
 
-자세한 내용은 [빅 데이터 클러스터에서 애플리케이션 사용](big-data-cluster-consume-apps.md)을 참조하세요.
+자세한 내용은 [빅 데이터 클러스터에서 애플리케이션 사용](app-consume.md)을 참조하세요.
 
 ### <a name="app-run"></a>앱 실행
 
@@ -199,7 +199,7 @@ Visual Studio Code에서 앱의 아티팩트를 저장할 *작업 영역을 열�
 
 ## <a name="next-steps"></a>다음 단계
 
-[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]에 배포된 앱을 고유한 애플리케이션에 통합하는 방법을 살펴봅니다. 자세한 내용은 [빅 데이터 클러스터에서 애플리케이션 사용](big-data-cluster-consume-apps.md)을 참조하세요. 확장을 사용해 보려면 [앱 배포 샘플](https://aka.ms/sql-app-deploy)에서 추가 샘플을 확인할 수도 있습니다.
+[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]에 배포된 앱을 고유한 애플리케이션에 통합하는 방법을 살펴봅니다. 자세한 내용은 [빅 데이터 클러스터에서 애플리케이션 사용](app-consume.md)을 참조하세요. 확장을 사용해 보려면 [앱 배포 샘플](https://aka.ms/sql-app-deploy)에서 추가 샘플을 확인할 수도 있습니다.
 
 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]에 대한 자세한 내용은 [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]란?](big-data-cluster-overview.md)을 참조하세요.
 

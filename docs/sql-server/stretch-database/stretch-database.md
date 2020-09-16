@@ -1,4 +1,5 @@
 ---
+description: Stretch Database
 title: Stretch Database
 ms.date: 06/27/2016
 ms.service: sql-server-stretch-database
@@ -10,15 +11,15 @@ ms.assetid: ce6db775-21a5-40bc-95a1-f560376d4ee2
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 4ff3c8a24624b3833c04b4e6269fb3618b36568f
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 2338cfe80dafb68eefaba3d6302d4afc84a585c6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81488364"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497996"
 ---
 # <a name="stretch-database"></a>Stretch Database
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
 
 
   Stretch Database는 콜드 데이터를 투명하고 안전하게 Microsoft Azure 클라우드로 마이그레이션합니다.  
@@ -47,7 +48,7 @@ ms.locfileid: "81488364"
   
 -   테이블에 핫 데이터와 콜드 데이터가 모두 포함된 경우 필터 함수를 지정하여 마이그레이션할 행을 선택할 수 있습니다.
 
-**기존 쿼리 및 클라이언트 앱을 변경할 필요가 없습니다.** 데이터 마이그레이션 중에도 로컬 및 원격 데이터에 계속 원활하게 액세스할 수 있습니다. 원격 쿼리에 대한 짧은 대기 시간이 있지만 이러한 대기 시간은 콜드 데이터를 쿼리할 때만 발생합니다.
+**기존 쿼리 및 클라이언트 응용 프로그램을 변경할 필요가 없습니다.** 데이터 마이그레이션 중에도 로컬 및 원격 데이터에 계속 원활하게 액세스할 수 있습니다. 원격 쿼리에 대한 짧은 대기 시간이 있지만 이러한 대기 시간은 콜드 데이터를 쿼리할 때만 발생합니다.
 
 **Stretch Database는 마이그레이션 중에 오류가 발생할 경우 데이터가 손실되지 않도록 합니다** . 또한 마이그레이션하는 동안 발생할 수 있는 연결 문제를 처리하기 위한 재시도 논리도 있습니다. 동적 관리 뷰를 통해 마이그레이션 상태를 확인합니다.
 

@@ -1,4 +1,5 @@
 ---
+description: DeleteEncryptionKey 메서드(WMI MSReportServer_ConfigurationSetting)
 title: DeleteEncryptionKey 메서드(WMI MSReportServer_ConfigurationSetting) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ed2f25b6-6a63-468d-9279-a577ca01b096
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e40c53c5c46d37a996805105563b809ad278b9a1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6b34f0a58d8a0c65c71b353259c5445daea0c5e0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570796"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497946"
 ---
 # <a name="configurationsetting-method---deleteencryptionkey"></a>ConfigurationSetting 메서드 - DeleteEncryptionKey
   보고서 서버 데이터베이스에서 암호화 키를 삭제합니다.  
@@ -47,7 +48,7 @@ public void DeleteEncryptionKeys(string InstallationID, out Int32 HRESULT,
  *ExtendedErrors[]*  
  [out] 호출에서 반환되는 추가 오류가 들어 있는 문자열 배열입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
  메서드 호출의 성공 또는 실패를 나타내는 HRESULT를 반환합니다. 0 값은 메서드 호출이 성공했음을 나타냅니다. 0 이외의 값은 오류가 발생했음을 나타냅니다.  
   
 ## <a name="remarks"></a>설명  

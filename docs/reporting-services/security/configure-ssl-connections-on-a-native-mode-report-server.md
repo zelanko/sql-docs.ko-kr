@@ -1,4 +1,5 @@
 ---
+description: 기본 모드 보고서 서버에서 TLS 연결 구성
 title: 기본 모드 보고서 서버에서 TLS 연결 구성 | Microsoft Docs
 ms.date: 05/14/2019
 ms.prod: reporting-services
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 212f2042-456a-4c0a-8d76-480b18f02431
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8c2bd66eacb5a91def2a9f6c9f7cb2e807e404f1
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: 3362783a3558c2ce6d74e68d666bbf791957046a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82886500"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498042"
 ---
 # <a name="configure-tls-connections-on-a-native-mode-report-server"></a>기본 모드 보고서 서버에서 TLS 연결 구성
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기본 모드는 HTTP SSL(Secure Sockets Layer) 서비스를 사용하여 보고서 서버에 대한 암호화된 연결을 설정합니다. TLS(전송 계층 보안)는 이전에 SSL(Secure Sockets Layer)로 알려져 있었습니다. 보고서 서버 컴퓨터의 로컬 인증서 저장소에 설치된 인증서(.cer) 파일이 있는 경우 인증서를 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL 예약에 바인딩하여 암호화된 채널을 통한 보고서 서버 연결을 지원할 수 있습니다.  
