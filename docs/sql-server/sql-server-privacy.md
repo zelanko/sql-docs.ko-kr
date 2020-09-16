@@ -1,4 +1,5 @@
 ---
+description: SQL Server 개인 정보 제공
 title: SQL Server 개인 정보 제공 | Microsoft Docs
 ms.date: 01/19/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ f1_keywords: ''
 helpviewer_keywords: ''
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 9362402d6c02fe7ff140f4105c6f011441c457ad
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 0a4675d04349da1a8b1e92ce62b8dde3cbabb542
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916912"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480693"
 ---
 # <a name="sql-server-privacy-supplement"></a>SQL Server 개인 정보 제공
 
@@ -25,9 +26,9 @@ ms.locfileid: "86916912"
 
 - Azure SQL Database
 - [SSMS(SQL Server Management Studio)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-telemetry-ssms?view=sql-server-2017)
-- SSDT(SQL Server Data Tools)
+- SQL Server Data Tools(SSDT)
 - Azure Data Studio
-- Data Migration Assistant
+- Database Migration Assistant
 - SQL Server Migration Assistant
 - MS-SQL 확장
 
@@ -168,6 +169,6 @@ Microsoft는 SQL Server를 사용하는 다른 프로그램에서 설정한 애�
 
 ## <a name="telemetry-controls"></a>원격 분석 컨트롤
 
-제품에서 원격 분석을 켜고 끄는 방법에 대한 지침은 https://support.microsoft.com/help/3153756/how-to-configure-sql-server-2016-to-send-feedback-to-microsoft 의 내용을 참조하세요.
+제품에서 원격 분석을 켜고 끄는 방법에 대한 지침은 https://support.microsoft.com/help/3153756/how-to-configure-sql-server-2016-to-send-feedback-to-microsoft의 내용을 참조하세요.
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

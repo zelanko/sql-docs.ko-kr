@@ -1,4 +1,5 @@
 ---
+description: 인덱스 - 키 대화 상자(Visual Database Tools)
 title: 인덱스 - 키 대화 상자
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ ms.assetid: 9e4060ba-80c3-468f-bccb-e12e99f672c2
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: f251517d488324028af33e2749955cbb91c1193e
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 16d6c66945d46ecf2b82410d7ae573a450238922
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85981100"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485014"
 ---
 # <a name="indexes---keys-dialog-box-visual-database-tools"></a>인덱스 - 키 대화 상자(Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -46,13 +47,13 @@ ms.locfileid: "85981100"
 **고유**  
 현재 인덱스나 키에 입력한 데이터가 중복되지 않아야 하는지 여부를 나타냅니다. XML 인덱스에는 사용할 수 없습니다.  
   
-**형식**  
+**유형**  
 **선택된 기본/고유 키 또는 인덱스** 목록에서 선택한 항목이 고유 키, 기본 키 또는 인덱스인지 여부를 지정합니다. 기본 키의 경우 이 필드는 읽기 전용입니다.  
   
 **ID 범주**  
 확장하면 **이름** 및 **설명**에 대한 속성 필드가 표시됩니다.  
   
-**이름**  
+**Name**  
 키나 인덱스의 이름을 표시합니다. 키나 인덱스를 새로 만들면 테이블 디자이너의 활성 창에 있는 테이블을 기반으로 한 기본 이름이 지정됩니다. 언제든지 이름을 변경할 수 있습니다.  
   
 **설명**  
@@ -65,7 +66,7 @@ ms.locfileid: "85981100"
 클러스터형 키나 인덱스를 만듭니다. 한 테이블에는 클러스터형 인덱스가 하나만 허용됩니다. 테이블의 데이터는 클러스터형 인덱스의 순서대로 저장됩니다. 자세한 내용은 [클러스터형 인덱스 만들기](../../relational-databases/indexes/create-clustered-indexes.md) 및 [비클러스터형 인덱스 만들기](../../relational-databases/indexes/create-nonclustered-indexes.md)를 참조하세요.  
   
 **데이터 공간 사양**  
-확장하면 **(데이터 공간 형식)** , **파일 그룹 또는 파티션 구성표 이름**및 **파티션 열 목록**에 대한 정보가 표시됩니다.  
+확장하면 **(데이터 공간 형식)**, **파일 그룹 또는 파티션 구성표 이름**및 **파티션 열 목록**에 대한 정보가 표시됩니다.  
   
 **(데이터 공간 형식)**  
 현재 인덱스나 키가 파일 그룹 또는 분할 구성표에 속해 있는지 여부를 나타냅니다.  
@@ -115,6 +116,6 @@ ms.locfileid: "85981100"
 현재 인덱스에 대해 행 수준의 잠금이 허용되는지 여부를 지정합니다. 행 수준의 잠금 허용 여부는 데이터베이스 성능에 영향을 줍니다. 권장 설정은 **예**입니다.  
   
 ## <a name="see-also"></a>참고 항목  
-[제약 조건 작업(https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e) ]  
-[키 사용(https://msdn.microsoft.com/31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd) ]  
+[제약 조건 작업(https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e)]  
+[키 사용(https://msdn.microsoft.com/31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd)]  
   

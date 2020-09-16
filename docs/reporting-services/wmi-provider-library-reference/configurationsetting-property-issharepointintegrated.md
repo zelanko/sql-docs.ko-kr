@@ -1,4 +1,5 @@
 ---
+description: ConfigurationSetting 속성 - IsSharePointIntegrated
 title: IsSharePointIntegrated 속성(WMI) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: c548fed8-5e04-4faf-8b10-b37c86178056
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0bac72cf23cfebf48f58b24bea0b50aa9033bf5d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 628212c9538b3a2efea08b0fdfb5def7fe017e10
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65573733"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497906"
 ---
 # <a name="configurationsetting-property---issharepointintegrated"></a>ConfigurationSetting 속성 - IsSharePointIntegrated
   보고서 서버가 SharePoint 통합 모드에 있는지 여부를 지정합니다. SharePoint 모드에서는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]인스턴스가 SharePoint 공유 서비스이며 WMI 공급자를 통해 제어되지 않으므로 **부터는 이 속성이 항상** False [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 반환합니다.  

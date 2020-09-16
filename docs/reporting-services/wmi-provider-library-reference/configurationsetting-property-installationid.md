@@ -1,4 +1,5 @@
 ---
+description: InstallationID 속성(WMI MSReportServer_ConfigurationSetting)
 title: InstallationID 속성(WMI MSReportServer_ConfigurationSetting) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 39df58b1-86e0-438e-a22b-280feb3ac033
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a3fb6ba51d875807d4936e90b5d0cd1b3997bc3d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 98b65425eb6e2903189ba6660d9296eb91b37ee8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65573545"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497886"
 ---
 # <a name="configurationsetting-property---installationid"></a>ConfigurationSetting 속성 - InstallationID
   이 속성은 특정 보고서 서버 인스턴스의 고유 식별자를 반환합니다.  

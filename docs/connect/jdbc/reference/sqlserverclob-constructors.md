@@ -1,4 +1,5 @@
 ---
+description: SQLServerClob 생성자
 title: SQLServerClob 생성자 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -11,12 +12,12 @@ apitype: Assembly
 ms.assetid: 287d261a-0527-4890-b0d9-49d5645b41ae
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4943998961be8c2ed6a34a4cbd2bd2e3215c8a6e
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 60fa180d45718e3601f239a58aa8e1ad050b46fb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80908902"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478585"
 ---
 # <a name="sqlserverclob-constructors"></a>SQLServerClob 생성자
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

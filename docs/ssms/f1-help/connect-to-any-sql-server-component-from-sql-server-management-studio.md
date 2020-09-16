@@ -1,4 +1,5 @@
 ---
+description: SQL Server Management Studio에서 SQL Server 구성 요소로 연결
 title: SQL Server 구성 요소에 연결
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -15,12 +16,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: 2fb4150c0c1d659feebac2047094b479b7027087
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: 8f89371787c66271d8298beed886b04b2b4aade1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87123094"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497437"
 ---
 # <a name="connect-to-any-sql-server-component-from-sql-server-management-studio"></a>SQL Server Management Studio에서 SQL Server 구성 요소로 연결
 
@@ -33,7 +34,7 @@ ms.locfileid: "87123094"
   
 -   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]입니다.  
   
--   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]입니다.  
+-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 에서는 데이터 원본에 먼저 연결하지 않은 상태에서 쿼리 작업을 할 수 있지만 대부분의 다른 태스크를 하려면 연결이 필요합니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]**구성 요소에 대한 연결 속성을 구성하기 위한** 서버에 연결 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대화 상자를 제공합니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 가 시작되면 **서버에 연결** 대화 상자가 열리고 서버에 연결하라는 메시지가 나타납니다. **서버에 연결** 대화 상자에서는 마지막으로 사용된 연결 설정이 유지됩니다.  
   

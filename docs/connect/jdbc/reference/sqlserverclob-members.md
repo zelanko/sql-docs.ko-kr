@@ -1,4 +1,5 @@
 ---
+description: SQLServerClob 멤버
 title: SQLServerClob 멤버 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -11,12 +12,12 @@ apitype: Assembly
 ms.assetid: 7db785ca-edd5-4833-8053-17fdbf87279a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d69a32f3822a82d2395d51a375fedf0867b3f3e5
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: c08ab28a64ddbb463f8a86d2d5a8a66f14f1ca82
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80909598"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478575"
 ---
 # <a name="sqlserverclob-members"></a>SQLServerClob 멤버
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -25,7 +26,7 @@ ms.locfileid: "80909598"
   
 ## <a name="constructors"></a>생성자  
   
-|속성|Description|  
+|속성|설명|  
 |----------|-----------------|  
 |[SQLServerClob](../../../connect/jdbc/reference/sqlserverclob-constructor-sqlserverconnection-java-lang-string.md)|SQLServerClob 클래스의 새 인스턴스를 초기화합니다.|  
   
@@ -37,7 +38,7 @@ ms.locfileid: "80909598"
   
 ## <a name="methods"></a>메서드  
   
-|속성|Description|  
+|속성|설명|  
 |----------|-----------------|  
 |[free](../../../connect/jdbc/reference/free-method-sqlserverclob.md)|이 메서드는 CLOB 개체 및 이 개체가 보유한 리소스를 해제합니다.|  
 |[getAsciiStream](../../../connect/jdbc/reference/getasciistream-method-sqlserverclob.md)|Clob을 ASCII 스트림으로 구체화합니다.|  

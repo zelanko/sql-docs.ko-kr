@@ -1,4 +1,5 @@
 ---
+description: 개체 탐색기
 title: 개체 탐색기
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -26,12 +27,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: 4eae86044d8e0ec03268e23abc81df4945b46990
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: ea4cde409c05054614a4881b189ebef15abb5fef
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245569"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497407"
 ---
 # <a name="object-explorer"></a>개체 탐색기
 
@@ -48,5 +49,5 @@ ms.locfileid: "87245569"
 |개체 탐색기를 열고 탐색기의 동작을 정의하는 옵션을 구성하는 방법에 대해 설명합니다.|[개체 탐색기 열기 및 구성](../../ssms/object/open-and-configure-object-explorer.md)|  
 |개체 탐색기를 [!INCLUDE[ssDE](../../includes/ssde_md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]및 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]인스턴스에 연결하는 방법에 대해 설명합니다.|[개체 탐색기에서 인스턴스에 연결](../../ssms/object/connect-to-an-instance-from-object-explorer.md)|  
 |개체 탐색기 계층 구조에서 노드로 표시되는 개체를 관리하는 방법에 대해 설명합니다.|[개체 탐색기를 사용하여 개체 관리](../../ssms/object/manage-objects-by-using-object-explorer.md)|  
-|개체 탐색기 정보 창에 대해 설명합니다. 개체 탐색기 정보 창은 서버의 모든 개체를 관리하기 위한 사용자 인터페이스를 제공하는 테이블 형식 뷰입니다.|[개체 탐색기 정보 창](../../ssms/object/object-explorer-details-pane.md)|  
+|개체 탐색기 정보 창에 대해 설명합니다. 개체 탐색기 정보 창은 서버의 모든 개체를 관리하기 위한 사용자 인터페이스를 제공하는 테이블 형식 뷰입니다.|[개체 탐색기 세부 정보 창](../../ssms/object/object-explorer-details-pane.md)|  
 |[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 사용자 지정 보고서를 실행하는 방법에 대해 설명합니다.|[Management Studio의 사용자 지정 보고서](../../ssms/object/custom-reports-in-management-studio.md)|

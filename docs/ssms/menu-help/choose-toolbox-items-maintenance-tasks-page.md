@@ -1,4 +1,5 @@
 ---
+description: 도구 상자 항목 선택(유지 관리 태스크 페이지)
 title: 도구 상자 항목 선택(유지 관리 태스크 페이지)
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b92c9054-7479-45d8-a54c-c1bb6699bdb3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0924181e87591db6ac7ac21fd8f70429802a19e1
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: c2cc71bd272c0f2865d2e4491ff9a373e897b2bb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001676"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492002"
 ---
 # <a name="choose-toolbox-items-maintenance-tasks-page"></a>도구 상자 항목 선택(유지 관리 태스크 페이지)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "86001676"
 ## <a name="options"></a>옵션  
 **유지 관리 태스크** 탭에는 다음 정보 열이 포함되어 있습니다.  
   
-**이름**  
+**Name**  
 사용 가능한 구성 요소의 이름을 표시합니다. 각 이름 앞에는 확인란이 있습니다. 이 확인란이 선택되어 있으면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 가 컴퓨터의 레지스트리에서 해당 구성 요소에 대한 항목을 발견한 것입니다. 구성 요소는 활성 **도구 상자** 탭에 이미 표시되어 있거나, 표시되어 있지 않을 경우 **확인**을 클릭하면 해당 탭에 추가됩니다. 확인란이 선택되어 있지 않으면 구성 요소가 현재 **도구 상자**에 표시되어 있지 않거나 **확인** 을 클릭하면 **도구 상자**에서 제거된다는 것을 나타냅니다.  
   
 **Path**  
@@ -44,6 +45,6 @@ ms.locfileid: "86001676"
 **언어**  
 구성 요소의 언어입니다.  
   
-**버전**  
+**Version**  
 구성 요소의 버전입니다.  
   

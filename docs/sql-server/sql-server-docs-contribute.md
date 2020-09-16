@@ -1,4 +1,5 @@
 ---
+description: SQL Server 설명서에 기여하는 방법
 title: SQL Server 설명서에 기여하는 방법 | Microsoft Docs
 ms.date: 08/13/2018
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: d947ae25f6f01740e7c5826a7edf332ff422a9de
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 97b9d710ef77a7555d4e9bbe16157469ceaa4b74
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247386"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480615"
 ---
 # <a name="how-to-contribute-to-sql-server-documentation"></a>SQL Server 설명서에 기여하는 방법
 

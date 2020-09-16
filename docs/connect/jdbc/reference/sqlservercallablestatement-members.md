@@ -1,4 +1,5 @@
 ---
+description: SQLServerCallableStatement 멤버
 title: SQLServerCallableStatement 멤버 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -11,12 +12,12 @@ apitype: Assembly
 ms.assetid: 5ebdc186-e50f-4d14-bbf4-95af5051e4a4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c964e08ab62e67764197cd9f1ebc64e6ad735dee
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: e80e86c04716e8e305e15c1d49f3852e77b318e3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920413"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478615"
 ---
 # <a name="sqlservercallablestatement-members"></a>SQLServerCallableStatement 멤버
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,7 +38,7 @@ ms.locfileid: "80920413"
   
 ## <a name="methods"></a>메서드  
   
-|속성|Description|  
+|속성|설명|  
 |----------|-----------------|  
 |[addBatch](../../../connect/jdbc/reference/addbatch-method-sqlserverpreparedstatement.md)|[SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)에서 상속되며, 이 CallableStatement 개체의 명령 일괄 처리에 대한 매개 변수 세트를 추가합니다.|  
 |[cancel](../../../connect/jdbc/reference/cancel-method-sqlserverstatement.md)|[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)에서 상속되며, 이 CallableStatement 개체에 의해 현재 실행되고 있는 SQL 문을 취소합니다.|  

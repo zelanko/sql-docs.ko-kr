@@ -1,4 +1,5 @@
 ---
+description: 쿼리에서 테이블 제거(Visual Database Tools)
 title: 쿼리에서 테이블 제거
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ ms.assetid: 8fea0b4f-99b7-4050-8d6f-a97ffb839619
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 2df3bd96d6fa2e398b4a4be1effefcc80f732df2
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 51402e1a0017f80b192bde54d7ef53aff99f61d1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999437"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491601"
 ---
 # <a name="remove-tables-from-queries-visual-database-tools"></a>쿼리에서 테이블 제거(Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -42,7 +43,7 @@ ms.locfileid: "85999437"
 ## <a name="see-also"></a>참고 항목  
 [쿼리에 테이블 추가](../../ssms/visual-db-tools/add-tables-to-queries-visual-database-tools.md)  
 [테이블 별칭 만들기](../../ssms/visual-db-tools/create-table-aliases-visual-database-tools.md)  
-[검색 조건 지정](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
+[검색 기준 지정](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
 [쿼리 결과 요약](../../ssms/visual-db-tools/summarize-query-results-visual-database-tools.md)  
 [쿼리 관련 기본 작업 수행](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
   

@@ -1,4 +1,5 @@
 ---
+description: 프로젝트에 기존 항목 추가
 title: 프로젝트에 기존 항목 추가
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 084b3879-e96b-45a7-b421-6a4b0db2b92b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 60939da70ed334f4fc7c020f123fff9441a27088
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 3744d99ede7e4f50e7fb4393d8e58cff314f4f06
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003318"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480127"
 ---
 # <a name="add-existing-items-to-a-project"></a>프로젝트에 기존 항목 추가
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -33,7 +34,7 @@ ms.locfileid: "86003318"
     **Look in**  
     이 목록에서 프로젝트에 추가할 파일 또는 폴더를 찾습니다. XML 웹 서비스와 ASP.NET 웹 애플리케이션의 경우에는 파일이 웹 서버에 있습니다.  
   
-    **바탕 화면**  
+    **데스크톱**  
     바탕 화면에 있는 파일과 폴더를 표시합니다.  
   
     **내 프로젝트**  

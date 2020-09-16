@@ -1,4 +1,5 @@
 ---
+description: ListReportServersInDatabase 메서드(WMI MSReportServer_ConfigurationSetting)
 title: ListReportServersInDatabase 메서드(WMI MSReportServer_ConfigurationSetting) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a4bf5968-c46f-484f-a510-65e2dde65a0d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4b88e5006ab772d232f65016033738c0b46848c9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 67d5ee6e505a706248490f9fb6c74913657cd455
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65579896"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480625"
 ---
 # <a name="configurationsetting-method---listreportserversindatabase"></a>ConfigurationSetting 메서드 - ListReportServersInDatabase
   보고서 서버에 보안 정보에 대한 액세스 권한이 있는지 여부에 관계없이 보고서 서버 데이터베이스에 있는 보고서 서버 설치 목록을 반환합니다.  

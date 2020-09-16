@@ -1,4 +1,5 @@
 ---
+description: SQLServerClob 클래스
 title: SQLServerClob 클래스 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 24170524-e1ab-4e80-8fd1-6688efacfbde
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e09ad6c3021383fca9eb397e002f02ffe978a854
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: a61a0991d171aab5f7dd535ae96b03e4ad8d537b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920399"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478635"
 ---
 # <a name="sqlserverclob-class"></a>SQLServerClob 클래스
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -1,4 +1,5 @@
 ---
+description: 데이터 마이그레이션 모니터링 및 문제 해결(스트레치 데이터베이스)
 title: 데이터 마이그레이션 모니터링 및 문제 해결
 ms.date: 06/14/2016
 ms.service: sql-server-stretch-database
@@ -11,21 +12,21 @@ ms.assetid: 06950858-8c02-4ec6-9c59-42b787316a2d
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: d204c7acfbd8598a7cbb66a41dcf89915fc711ef
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7e4ca3f7b7a857e5c8592844c9523753b68a3728
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73843775"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492674"
 ---
 # <a name="monitor-and-troubleshoot-data-migration-stretch-database"></a>데이터 마이그레이션 모니터링 및 문제 해결(스트레치 데이터베이스)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
 
 
-  Stretch Database 모니터에서 데이터 마이그레이션을 모니터링하려면 SQL Server Management Studio에서 데이터베이스에 대한 **작업 | 스트레치 | 모니터**를 선택합니다.  
+  Stretch Database 모니터에서 데이터 마이그레이션을 모니터링하려면 SQL Server Management Studio에서 데이터베이스에 대해 **태스크 | 스트레치 | 모니터**를 선택합니다.  
   
 ## <a name="check-the-status-of-data-migration-in-the-stretch-database-monitor"></a>Stretch Database 모니터에서 데이터 마이그레이션 상태를 확인합니다.  
- SQL Server Management Studio의 데이터베이스에 대해 **작업 | 스트레치 | 모니터**를 선택하여 Stretch Database 모니터를 열고 데이터 마이그레이션을 모니터링합니다.  
+ Stretch Database 모니터를 열고 데이터 마이그레이션을 모니터링하려면 SQL Server Management Studio에서 데이터베이스에 대해 **태스크 | 스트레치 | 모니터**를 선택합니다.  
   
 -   모니터의 상단에는 스트레치 사용 SQL Server 데이터베이스 및 원격 Azure 데이터베이스 둘 다에 대한 일반 정보가 표시됩니다.  
   

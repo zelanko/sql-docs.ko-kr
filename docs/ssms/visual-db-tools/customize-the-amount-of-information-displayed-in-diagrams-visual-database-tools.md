@@ -1,4 +1,5 @@
 ---
+description: 다이어그램에 표시된 정보의 양 사용자 지정(Visual Database Tools)
 title: 다이어그램에 표시된 정보의 양 사용자 지정
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -15,24 +16,24 @@ ms.assetid: 31bb6772-7974-4329-bca0-c16d5875483d
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 51b2f7092e09043487e867aea70ef4e00438f989
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: ec512eeb7d07876e78cb3c450f86a8b3b728ecb7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007620"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497165"
 ---
 # <a name="customize-the-amount-of-information-displayed-in-diagrams-visual-database-tools"></a>다이어그램에 표시된 정보의 양 사용자 지정(Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 데이터베이스 다이어그램에 테이블을 추가하면 일정한 수의 속성이 표시됩니다. 표시할 정보의 양을 메뉴에서 각기 다르게 선택하거나 사용자 지정 속성 집합을 만들 수 있습니다.  
   
-선택 사항은 다음과 같습니다.  
+선택 항목은 다음과 같습니다.  
   
 -   Standard  
   
 -   열 이름  
   
--   구성  
+-   키  
   
 -   테이블 이름만  
   

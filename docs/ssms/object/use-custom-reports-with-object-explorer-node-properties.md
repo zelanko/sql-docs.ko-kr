@@ -1,4 +1,5 @@
 ---
+description: 개체 탐색기 노드 속성과 함께 사용자 지정 보고서 사용
 title: 개체 탐색기 노드 속성과 함께 사용자 지정 보고서 사용
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c7b84355-71ba-402d-85af-23826f18b7da
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 608c24801a19e003751d6455f86cd11e4c053719
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 715885ea3eaaa3601c56ddf296c91cf579dd4c52
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001835"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497394"
 ---
 # <a name="use-custom-reports-with-object-explorer-node-properties"></a>개체 탐색기 노드 속성과 함께 사용자 지정 보고서 사용
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "86001835"
 |------------------|-------------|  
 |**ObjectName**|**String**|  
 |**ObjectTypeName**|**String**|  
-|**필터링됨**|**Boolean**|  
+|**Filtered**|**Boolean**|  
 |**데이터 열이 추적에서 캡처되고 서버를 사용할 수 있으면**|**String**|  
 |**FontName**|**String**|  
 |**DatabaseName**|**String**|  

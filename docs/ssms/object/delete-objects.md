@@ -1,4 +1,5 @@
 ---
+description: 개체 삭제
 title: 개체 삭제
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 49541441-179c-40d3-ba0c-01bcae545984
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 07972c72c89d5098c528ab65f886b1935d47b2a1
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 71ae7cf7aaff0eab0701ef83f7258389e52eb37e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001978"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497446"
 ---
 # <a name="delete-objects"></a>개체 삭제
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

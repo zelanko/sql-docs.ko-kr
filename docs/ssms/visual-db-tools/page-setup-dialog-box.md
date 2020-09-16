@@ -1,4 +1,5 @@
 ---
+description: 페이지 설정 대화 상자
 title: 페이지 설정 대화 상자
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ ms.assetid: 03deb946-34c6-48b1-b639-5e888f47bddb
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: b395ad0cb0d570f74f84937ee78cb7118a5f8404
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 698e9022fc5fbb4b3ba5d33a13c7495b7d96c118
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003241"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491699"
 ---
 # <a name="page-setup-dialog-box"></a>페이지 설정 대화 상자
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -38,10 +39,10 @@ ms.locfileid: "86003241"
 페이지 위쪽에서 용지의 가장자리를 길게 하여 문서를 인쇄합니다.  
   
 ## <a name="margins-inches"></a>여백(인치)  
-Left  
+왼쪽  
 페이지의 왼쪽 가장자리와 왼쪽 정렬된 들여쓰지 않은 줄의 왼쪽 가장자리 간 거리를 설정합니다.  
   
-Right  
+오른쪽  
 페이지의 오른쪽 가장자리와 오른쪽 정렬된 들여쓰지 않은 줄의 오른쪽 가장자리 간 거리를 설정합니다.  
   
 상위  

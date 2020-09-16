@@ -1,4 +1,5 @@
 ---
+description: 서버 그룹 만들기 또는 편집(SQL Server Management Studio)
 title: 서버 그룹 만들기 또는 편집
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -17,12 +18,12 @@ ms.author: maghan
 ms.reviewer: mikeray
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: eb39627de23f236dcd3a7241f83883b747353501
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: ecf61bca3e0780aefedb989ab0d7bd3ead83a3bf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001746"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480172"
 ---
 # <a name="create-or-edit-a-server-group-sql-server-management-studio"></a>서버 그룹 만들기 또는 편집(SQL Server Management Studio)
 
@@ -45,7 +46,7 @@ ms.locfileid: "86001746"
 5. **새 서버 그룹의 위치를 선택하세요.** 상자에서 그룹의 위치를 클릭한 다음 **저장**을 클릭합니다.  
 
    > [!NOTE]
-   > 이외에도 서버를 등록할 때 **새 그룹**을 클릭하고 **새 그룹** 대화 상자를 완료하면 새 서버 그룹을 만들 수 있습니다.  
+   >  이외에도 서버를 등록할 때 **새 그룹**을 클릭하고 **새 그룹** 대화 상자를 완료하면 새 서버 그룹을 만들 수 있습니다.  
 
 ## <a name="see-also"></a>참고 항목
 

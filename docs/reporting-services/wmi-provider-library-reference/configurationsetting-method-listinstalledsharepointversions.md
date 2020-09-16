@@ -1,4 +1,5 @@
 ---
+description: ConfigurationSetting 메서드 - ListInstalledSharePointVersions
 title: ListInstalledSharePointVersions 메서드(WMI) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 8f0a5e9f-23f1-41e5-9a90-dfec19ef1df7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 88bc977ae684351227017e81793cb48749b454e4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3305eb8e802dbebc39960105813a58ea16ab3055
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65579945"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480675"
 ---
 # <a name="configurationsetting-method---listinstalledsharepointversions"></a>ConfigurationSetting 메서드 - ListInstalledSharePointVersions
   보고서 서버와 같은 컴퓨터에 설치되어 있는 Microsoft [!INCLUDE[winSPServ](../../includes/winspserv-md.md)], [!INCLUDE[offSPServ](../../includes/offspserv-md.md)], [!INCLUDE[SPF2010](../../includes/spf2010-md.md)]또는 [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] 버전을 나타내는 토큰 집합을 반환합니다.  

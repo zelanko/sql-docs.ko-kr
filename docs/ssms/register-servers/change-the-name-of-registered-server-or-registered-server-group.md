@@ -1,4 +1,5 @@
 ---
+description: 등록된 서버 또는 등록된 서버 그룹 이름 변경
 title: 등록된 서버 또는 등록된 서버 그룹 이름 변경
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -10,12 +11,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 08/02/2016
-ms.openlocfilehash: 32f59e2db98280a7d096e0f1f7d1a90895db010b
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 28ed9e04486fe587ea3bd25d6659283846a6fa8c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001783"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491818"
 ---
 # <a name="change-the-name-of-registered-server-or-registered-server-group"></a>등록된 서버 또는 등록된 서버 그룹 이름 변경
 

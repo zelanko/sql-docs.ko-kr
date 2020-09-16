@@ -1,4 +1,5 @@
 ---
+description: setTrustStorePassword 메서드(SQLServerDataSource)
 title: setTrustStorePassword 메서드(SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: fa87cbde-71cc-4f21-bc07-f8ba2b6a0a3f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2c68774b3613a07b978a869127c65cd47b28ebd0
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 6ded82d7db8e7dade5c203a348375812b4e04dfc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80927281"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478630"
 ---
 # <a name="settruststorepassword-method-sqlserverdatasource"></a>setTrustStorePassword 메서드(SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

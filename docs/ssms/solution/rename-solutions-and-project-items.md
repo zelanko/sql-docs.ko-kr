@@ -1,4 +1,5 @@
 ---
+description: 솔루션 및 프로젝트 항목의 이름 바꾸기
 title: 솔루션 및 프로젝트 항목의 이름 바꾸기
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2adca850-58a2-4ed5-bded-9dd091fc33f2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6af6e7febdf0477c502808dbc77fbf06343b5bc0
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: b9c64edee23946e7ca43a1a0aa686ae5b67dcd8c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009645"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491832"
 ---
 # <a name="rename-solutions-and-project-items"></a>솔루션 및 프로젝트 항목의 이름 바꾸기
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

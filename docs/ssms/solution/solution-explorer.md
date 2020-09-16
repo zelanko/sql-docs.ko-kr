@@ -1,4 +1,5 @@
 ---
+description: 솔루션 탐색기
 title: 솔루션 탐색기
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -17,12 +18,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: ac4584f715da631c13a56fa531334e9da20f6c55
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: b1c98d1e8cdf0525da76e65ef7481def4e3feb0a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243592"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491778"
 ---
 # <a name="solution-explorer"></a>솔루션 탐색기
 
@@ -55,6 +56,6 @@ ms.locfileid: "87243592"
 |Description|항목|  
 |-|-|    
 |솔루션에서 하나 이상의 프로젝트를 수집하는 방법을 설명합니다.|[솔루션&#40;SQL Server Management Studio&#41;](../../ssms/solution/solutions-sql-server-management-studio.md)|  
-|프로젝트를 만들고 스크립트 및 연결과 같은 항목을 추가하는 방법을 설명합니다.|[프로젝트&#40;SQL Server Management Studio&#41;](../../ssms/solution/projects-sql-server-management-studio.md)|  
+|프로젝트를 만들고 스크립트 및 연결과 같은 항목을 추가하는 방법을 설명합니다.|[프로젝트 &#40;SQL Server Management Studio&#41;](../../ssms/solution/projects-sql-server-management-studio.md)|  
 |솔루션과 파일을 관리하기 위해 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에 사용되는 파일에 대한 정보를 제공합니다.|[솔루션 및 프로젝트 관리 파일](../../ssms/solution/files-that-manage-solutions-and-projects.md)|  
   

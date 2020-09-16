@@ -1,4 +1,5 @@
 ---
+description: '3단계: Ruby를 사용하여 SQL과 연결된 개념 증명'
 title: '3단계: Ruby를 사용하여 SQL에 연결하는 개념 증명 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/22/2020
@@ -10,14 +11,14 @@ ms.topic: conceptual
 ms.assetid: cac20b18-0a6d-4243-bbda-a5d1b9476441
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d0431ce7aaa9c7e40196c689591b7d56ec5d42ef
-ms.sourcegitcommit: 4fe7b0d5e8ef1bc076caa3819f7a7b058635a486
+ms.openlocfilehash: 3553f57191dc462067fc48dc1cf2394437912240
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85263787"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484776"
 ---
-# <a name="step-3-proof-of-concept-connecting-to-sql-using-ruby"></a>3단계: Ruby를 사용하여 SQL에 연결하는 개념 증명
+# <a name="step-3-proof-of-concept-connecting-to-sql-using-ruby"></a>3단계: Ruby를 사용하여 SQL과 연결된 개념 증명
 
 이 예제는 개념 증명으로만 간주해야 합니다.  이 샘플 코드는 명확하게 하기 위해 단순화되었으며 반드시 Microsoft에서 권장하는 모범 사례를 대표하지는 않습니다.  
   

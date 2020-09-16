@@ -1,4 +1,5 @@
 ---
+description: 값이 일치하지 않는 행 선택(Visual Database Tools)
 title: 값이 일치하지 않는 행 선택
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ ms.assetid: 19898578-7b2f-401c-bb8f-9f2a017efdf7
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 56038b9497f60c2a3275c9216d5c2252d65d81f3
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 1aa7d78f219e2478e2c83cad549871995882ae25
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86010600"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497100"
 ---
 # <a name="select-rows-that-do-not-match-a-value-visual-database-tools"></a>값이 일치하지 않는 행 선택(Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -40,5 +41,5 @@ NOT LIKE 'A%'
   
 ## <a name="see-also"></a>참고 항목  
 [검색 값 입력 규칙](../../ssms/visual-db-tools/rules-for-entering-search-values-visual-database-tools.md)  
-[검색 조건 지정](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
+[검색 기준 지정](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
   

@@ -1,4 +1,5 @@
 ---
+description: Data Migration Assistant를 사용하여 Stretch Database용 데이터베이스 및 테이블 식별
 title: 데이터베이스 및 테이블 식별
 ms.date: 10/30/2017
 ms.service: sql-server-stretch-database
@@ -13,15 +14,15 @@ ms.assetid: 81bd93d8-eef8-4572-88d7-5c37ab5ac2bf
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: ec8df33c7af98889529232bbcd56437745339fba
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8ba45280f9a66c8d2b71841b8cae4272e850628f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73843746"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492602"
 ---
 # <a name="identify-databases-and-tables-for-stretch-database-with-data-migration-assistant"></a>Data Migration Assistant를 사용하여 Stretch Database용 데이터베이스 및 테이블 식별
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
 
 
   잠재적인 차단 문제와 함께 Stretch Database의 후보인 데이터베이스 및 테이블을 식별하려면 Microsoft Data Migration Assistant를 다운로드하여 실행합니다.

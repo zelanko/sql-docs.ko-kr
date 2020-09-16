@@ -1,4 +1,5 @@
 ---
+description: 검색 폴더 선택 대화 상자(Visual Studio)
 title: 검색 폴더 선택 대화 상자(Visual Studio)
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 2eaba888-68b2-4bc1-8f62-e96e710c3db9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 15d6c1e0cf13da4b8dd0fe38ffcf57e555bdd650
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 69c70680431019638dff53664393ce2256a5f01b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85983641"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492007"
 ---
 # <a name="choose-search-folders-dialog-box-visual-studio"></a>검색 폴더 선택 대화 상자(Visual Studio)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -41,7 +42,7 @@ ms.locfileid: "85983641"
 **폴더 목록**  
 **사용 가능한 폴더** 드롭다운 목록에서 선택한 범위 내에서 사용할 수 있는 드라이브와 폴더를 나열합니다. 목록의 드라이브나 폴더를 확장하려면 두 번 클릭합니다. 폴더를 하나 선택하거나 Shift 키나 Ctrl 키를 누른 채 여러 폴더를 선택합니다. **Add (>)** 를 클릭하여 선택한 폴더를 **선택한 폴더** 목록에 포함합니다.  
   
-**Parent**  
+**부모**  
 **폴더 목록** 에서 선택한 항목을 폴더 계층 구조의 한 수준 위로 이동합니다.  
   
 **추가(>)**  

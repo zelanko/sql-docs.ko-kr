@@ -1,4 +1,5 @@
 ---
+description: 외부 도구
 title: 외부 도구
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -12,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: d7dae88f-0781-4162-96cd-d3a3a4d82035
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3950d93088e98ebb5d69ae4a5647ee64f60a00d2
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 280180cda65f72bc2ea3fd4515e12ee46b3879cd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001648"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491960"
 ---
 # <a name="external-tools"></a>외부 도구
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-이 대화 상자를 사용하여 SQL Server 구성 관리자 또는 메모장과 같은 외부 도구를 **도구** 메뉴에 추가할 수 있습니다. 외부 도구를 추가하면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 작업하는 동안 간편하게 다른 애플리케이션을 실행할 수 있습니다. 도구를 실행할 때 인수 및 작업 디렉터리를 지정할 수 있습니다. 또한 일부 도구의 출력을 출력 창에 표시할 수도 있습니다. **외부 도구** 대화 상자는 **도구** 메뉴에서 사용할 수 있습니다.  
+ 이 대화 상자를 사용하여 SQL Server 구성 관리자 또는 메모장과 같은 외부 도구를 **도구** 메뉴에 추가할 수 있습니다. 외부 도구를 추가하면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 작업하는 동안 간편하게 다른 애플리케이션을 실행할 수 있습니다. 도구를 실행할 때 인수 및 작업 디렉터리를 지정할 수 있습니다. 또한 일부 도구의 출력을 출력 창에 표시할 수도 있습니다. **외부 도구** 대화 상자는 **도구** 메뉴에서 사용할 수 있습니다.  
   
 ## <a name="options"></a>옵션  
 **메뉴 내용**  
@@ -73,7 +74,7 @@ ms.locfileid: "86001648"
   
 3.  **명령** 입력란에 [!INCLUDE[msCoName](../../includes/msconame_md.md)] Management Console 실행 파일의 경로(예: **C:\WINNT\system32\mmc.exe**)를 입력합니다.  
   
-4.  **인수** 입력란에 .msc 파일의 경로(예: **"C:\WINNT\system32\SQLServerManager.msc"** )를 입력합니다.  
+4.  **인수** 입력란에 .msc 파일의 경로(예: **"C:\WINNT\system32\SQLServerManager.msc"**)를 입력합니다.  
   
 > [!NOTE]  
 > [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 시작 **메뉴에서** 바로 가기 속성을 보고 컴퓨터에 있는 파일의 위치를 확인합니다.  

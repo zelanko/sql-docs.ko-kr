@@ -1,4 +1,5 @@
 ---
+description: 프로젝트 만들기
 title: 프로젝트 만들기
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -12,12 +13,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: 41737a8e6c68c27266feec1be69abee28413d287
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 7e3bc58b9f702478bdef96535bc7c784d9e410df
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999550"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497362"
 ---
 # <a name="create-a-project"></a>프로젝트 만들기
 
@@ -35,7 +36,7 @@ ms.locfileid: "85999550"
     **템플릿**  
     **템플릿** 상자에서 템플릿을 선택합니다. 선택한 프로젝트 템플릿에 대한 간략한 설명이 **템플릿** 상자 아래에 나타납니다.  
   
-    **이름**  
+    **Name**  
     만들려는 스크립트 프로젝트의 이름을 입력합니다. **위치** 필드에 표시된 위치에 프로젝트와 동일한 이름을 가진 폴더도 생성됩니다. 일부 프로젝트의 경우 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 는 원본 파일과 기타 지원 파일을 만들어 새 프로젝트 파일에 추가합니다.  
   
     > [!NOTE]  

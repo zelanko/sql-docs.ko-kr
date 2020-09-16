@@ -1,4 +1,5 @@
 ---
+description: 하위 쿼리 만들기(Visual Database Tools)
 title: 하위 쿼리 만들기
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ ms.assetid: 34f6b9b4-ca3a-4a4f-9594-36e513f1c547
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: ecee42edc9a27cb746615b7343c5014893e23c17
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: bf5c7140e36f0767de84c04c56be84e1a8191c6c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999991"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497246"
 ---
 # <a name="create-subqueries-visual-database-tools"></a>하위 쿼리 만들기(Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

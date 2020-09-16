@@ -1,4 +1,5 @@
 ---
+description: updateInt 메서드(SQLServerResultSet)
 title: updateInt 메서드(SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 2bb0319e-12cb-4604-a7e3-b22a24b02296
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6345c9fb9f4dbc7ccb007b82267c2e0a2437ae95
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: d4ab1c14d9ca517a1c6a8ab515d82622716b8448
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80901003"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478405"
 ---
 # <a name="updateint-method-sqlserverresultset"></a>updateInt 메서드(SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "80901003"
   
 ## <a name="overload-list"></a>오버로드 목록  
   
-|속성|Description|  
+|이름|설명|  
 |----------|-----------------|  
 |[updateInt(int, int)](../../../connect/jdbc/reference/updateint-method-int-int.md)|열 인덱스가 지정된 경우 지정된 열을 **int** 값으로 업데이트합니다.|  
 |[updateInt(java.lang.String, int)](../../../connect/jdbc/reference/updateint-method-java-lang-string-int.md)|열 이름이 지정된 경우 지정된 열을 **int** 값으로 업데이트합니다.|  

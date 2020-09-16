@@ -1,4 +1,5 @@
 ---
+description: 필터 함수를 사용하여 마이그레이션할 행 선택(Stretch Database)
 title: 필터 함수를 사용하여 마이그레이션할 행 선택
 ms.date: 06/27/2016
 ms.service: sql-server-stretch-database
@@ -13,15 +14,15 @@ ms.assetid: 090890ee-7620-4a08-8e15-d2fbc71dd12f
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: f744dbde25bf5f7b307ccb44e03de70c1b60cc66
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 31199872a4a206469c44f91aa80c3606f129fdb9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73844545"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492616"
 ---
 # <a name="select-rows-to-migrate-by-using-a-filter-function-stretch-database"></a>필터 함수를 사용하여 마이그레이션할 행 선택(Stretch Database)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
 
 
   콜드 데이터를 별도 테이블에 저장하는 경우 전체 테이블을 마이그레이션하도록 스트레치 데이터베이스를 구성할 수 있습니다. 반면, 테이블에 핫 데이터와 콜드 데이터가 모두 포함된 경우 필터 조건자를 지정하여 마이그레이션할 행을 선택할 수 있습니다. 필터 조건자는 인라인 테이블 반환 함수입니다. 이 문서에서는 인라인 테이블 반환 함수를 작성하여 마이그레이션할 행을 선택하는 방법을 설명합니다.  
@@ -84,7 +85,7 @@ RETURN  SELECT 1 AS is_eligible
   
 ```  
   
--   함수 매개 변수를 상수 식과 비교합니다. `@column1 < 1000`)을 입력합니다.  
+-   함수 매개 변수를 상수 식과 비교합니다. 예들 들어 `@column1 < 1000`입니다.  
   
      다음은 *date* 열의 값이 &lt; 1/1/2016인지 확인하는 예제입니다.  
   
@@ -138,13 +139,13 @@ RETURN  SELECT 1 AS is_eligible
 ### <a name="constant-expressions"></a>상수 식  
  필터 함수에 사용하는 상수는 함수를 정의할 때 계산될 수 있는 모든 명확한 식일 수 있습니다. 상수 식에는 다음을 포함할 수 있습니다.  
   
--   리터럴. `N'abc', 123`)을 입력합니다.  
+-   리터럴. 예들 들어 `N'abc', 123`입니다.  
   
--   대수 식. `123 + 456`)을 입력합니다.  
+-   대수 식. 예들 들어 `123 + 456`입니다.  
   
--   명확한 함수. `SQRT(900)`)을 입력합니다.  
+-   명확한 함수. 예들 들어 `SQRT(900)`입니다.  
   
--   CAST 또는 CONVERT를 사용하는 명확한 변환. `CONVERT(datetime, '1/1/2016', 101)`)을 입력합니다.  
+-   CAST 또는 CONVERT를 사용하는 명확한 변환. 예들 들어 `CONVERT(datetime, '1/1/2016', 101)`입니다.  
   
 ### <a name="other-expressions"></a>다른 식  
  BETWEEN 및 NOT BETWEEN 연산자를 동등한 AND 및 OR 식으로 바꾼 후 결과 함수가 여기에 설명된 규칙을 준수하는 경우 BETWEEN 및 NOT BETWEEN 연산자를 사용할 수 있습니다.  
@@ -152,7 +153,7 @@ RETURN  SELECT 1 AS is_eligible
  하위 쿼리 또는 명확하지 않은 함수(예: RAND() 또는 GETDATE())를 사용할 수 없습니다.  
   
 ## <a name="add-a-filter-function-to-a-table"></a>테이블에 필터 함수 추가  
- **ALTER TABLE** 문을 실행하고 기존 인라인 테이블 반환 함수를 **FILTER_PREDICATE** 매개 변수 값으로 지정하여 테이블에 필터 함수를 추가합니다. 다음은 그 예입니다.  
+ **ALTER TABLE** 문을 실행하고 기존 인라인 테이블 반환 함수를 **FILTER_PREDICATE** 매개 변수 값으로 지정하여 테이블에 필터 함수를 추가합니다. 예를 들어:  
   
 ```sql  
 ALTER TABLE stretch_table_name SET ( REMOTE_DATA_ARCHIVE = ON (  
@@ -484,7 +485,7 @@ COMMIT ;
     ```  
   
 ## <a name="how-stretch-database-applies-the-filter-function"></a>스트레치 데이터베이스에서 필터 함수를 적용하는 방법  
- 스트레치 데이터베이스는 CROSS APPLY 연산자를 사용하여 테이블에 필터 함수를 적용하고 적합한 행을 결정합니다. 다음은 그 예입니다.  
+ 스트레치 데이터베이스는 CROSS APPLY 연산자를 사용하여 테이블에 필터 함수를 적용하고 적합한 행을 결정합니다. 예를 들어:  
   
 ```sql  
 SELECT * FROM stretch_table_name CROSS APPLY fn_stretchpredicate(column1, column2)  
@@ -493,12 +494,13 @@ SELECT * FROM stretch_table_name CROSS APPLY fn_stretchpredicate(column1, column
  함수에서 행에 대해 비어 있지 않은 결과가 반환되는 경우 해당 행은 마이그레이션에 적합합니다.  
   
 ## <a name="replace-an-existing-filter-function"></a><a name="replacePredicate"></a>기존 필터 함수 바꾸기  
- **ALTER TABLE** 문을 다시 실행하고 **FILTER_PREDICATE** 매개 변수에 대한 새 값을 지정하여 이전에 지정된 필터 함수를 바꿀 수 있습니다. 다음은 그 예입니다.  
+ **ALTER TABLE** 문을 다시 실행하고 **FILTER_PREDICATE** 매개 변수에 대한 새 값을 지정하여 이전에 지정된 필터 함수를 바꿀 수 있습니다. 예를 들어:  
   
 ```sql  
 ALTER TABLE stretch_table_name SET ( REMOTE_DATA_ARCHIVE = ON (  
     FILTER_PREDICATE = dbo.fn_stretchpredicate2(column1, column2),  
     MIGRATION_STATE = <desired_migration_state>  
+    ) ) 
   
 ```  
   
@@ -588,7 +590,7 @@ GO
 ```  
   
 ## <a name="remove-a-filter-function-from-a-table"></a>테이블에서 필터 함수 제거  
- 선택한 행이 아니라 전체 테이블을 마이그레이션하려면 **FILTER_PREDICATE**  를 null로 설정하여 기존 함수를 제거합니다. 다음은 그 예입니다.  
+ 선택한 행이 아니라 전체 테이블을 마이그레이션하려면 **FILTER_PREDICATE**  를 null로 설정하여 기존 함수를 제거합니다. 예를 들어:  
   
 ```sql  
 ALTER TABLE stretch_table_name SET ( REMOTE_DATA_ARCHIVE = ON (  

@@ -1,4 +1,5 @@
 ---
+description: 열 별칭 만들기(Visual Database Tools)
 title: 열 별칭 만들기
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ ms.assetid: e2e1c166-8ea7-47a2-b6a7-e419bf0fa3bb
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: c4feb18b5f01b1e999ecec5b5b8e022230912d8f
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 53d94906857c8a2e8c272d99f6545ee2eadb99f7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85977978"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480051"
 ---
 # <a name="create-column-aliases-visual-database-tools"></a>열 별칭 만들기(Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

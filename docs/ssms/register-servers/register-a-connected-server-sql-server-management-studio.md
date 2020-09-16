@@ -1,4 +1,5 @@
 ---
+description: 연결된 서버 등록(SQL Server Management Studio)
 title: 연결된 서버 등록
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -15,12 +16,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 07/28/2016
-ms.openlocfilehash: ecc063b1dabf0ea1c2b440ae8848fb10418cdfda
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: bcac629eef24a68f66d1e7043f5cedb5ff8923e3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011805"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497395"
 ---
 # <a name="register-a-connected-server-sql-server-management-studio"></a>연결된 서버 등록(SQL Server Management Studio)
 

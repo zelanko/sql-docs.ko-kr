@@ -1,4 +1,5 @@
 ---
+description: 데이터베이스 다이어그램 디자이너 열기(Visual Database Tools)
 title: 데이터베이스 다이어그램 디자이너 열기
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ ms.assetid: 9427c418-1e2f-464f-8a6c-9109f053e832
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: e76612ed9e9679ef6a46381bdb80af7fc0b0bf08
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: b25c138d9943120c8c375d6ed55bb0c034d93cec
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012594"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480008"
 ---
 # <a name="open-database-diagram-designer-visual-database-tools"></a>데이터베이스 다이어그램 디자이너 열기(Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -1,4 +1,5 @@
 ---
+description: 프로젝트의 연결 속성 보기 및 변경
 title: 프로젝트의 연결 속성 보기 및 변경
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 16e6e7f0-30d9-46f2-8e14-f4d6d3ab1a46
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ca6a1ef783f25f813d285d1a2708b55850a0b13d
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: b08c8f18f58e3b362bcd06e84191ca866c549f2f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000776"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491769"
 ---
 # <a name="view-or-change-the-properties-of-a-connection-in-a-project"></a>프로젝트의 연결 속성 보기 및 변경
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

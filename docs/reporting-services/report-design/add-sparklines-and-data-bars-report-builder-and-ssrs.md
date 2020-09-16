@@ -1,4 +1,5 @@
 ---
+description: 스파크라인 및 데이터 막대 추가(보고서 작성기 및 SSRS)
 title: 스파크라인 및 데이터 막대 추가(보고서 작성기) | Microsoft Docs
 ms.date: 03/03/2017
 ms.prod: reporting-services
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0b297c2e-d48b-41b0-aabd-29680cdcdb05
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c33752294c7335dca86dd51d7d06478188c20548
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 74db316bf1e8eb4d72f3419799f76e3c2742fa81
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081535"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484961"
 ---
 # <a name="add-sparklines-and-data-bars-report-builder-and-ssrs"></a>스파크라인 및 데이터 막대 추가(보고서 작성기 및 SSRS)
   스파크라인과 데이터 막대는 불필요한 정보는 거의 없이 많은 정보를 제공하는 작은 여분의 차트입니다. 자세한 내용은 [스파크라인 및 데이터 막대 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)를 참조하세요.  
@@ -37,9 +38,9 @@ ms.locfileid: "77081535"
   
      **차트 데이터** 창이 열립니다.  
   
-6.  **값** 영역에서 **필드 추가** 더하기 기호( **+** )를 클릭한 다음 차트에 표시할 값이 포함된 필드를 클릭합니다.  
+6.  **값** 영역에서 **필드 추가** 더하기 기호(**+**)를 클릭한 다음 차트에 표시할 값이 포함된 필드를 클릭합니다.  
   
-7.  **범주 그룹** 영역에서 **필드 추가** 더하기 기호( **+** )를 클릭한 다음 그룹화할 값이 포함된 필드를 클릭합니다.  
+7.  **범주 그룹** 영역에서 **필드 추가** 더하기 기호(**+**)를 클릭한 다음 그룹화할 값이 포함된 필드를 클릭합니다.  
   
      일반적으로 스파크라인과 데이터 막대의 경우 각 행에 한 계열만 필요하기 때문에 **계열 그룹** 영역에 필드를 추가하지 않습니다.  
   

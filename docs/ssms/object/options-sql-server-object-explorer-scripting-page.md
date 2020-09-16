@@ -1,4 +1,5 @@
 ---
+description: 옵션(SQL Server 개체 탐색기 - 스크립팅 페이지)
 title: 옵션(SQL Server 개체 탐색기 - 스크립팅 페이지)
 ms.custom: seo-lt-2019
 ms.date: 08/01/2017
@@ -13,16 +14,16 @@ f1_keywords:
 ms.assetid: 6105aec9-1b72-4cb2-bd24-fc35f6d95240
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6d1a775e42f37b5b224a2608c9055581376b0985
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: f89d245bddec039846aed82168fbe8c687d73e2e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001877"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491868"
 ---
 # <a name="options-sql-server-object-explorer---scripting-page"></a>옵션(SQL Server 개체 탐색기 - 스크립팅 페이지)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-이 페이지를 사용하여 **개체 탐색기**의 개체 컨텍스트 메뉴에서 다음 명령에 적용되는 스크립팅 옵션을 설정할 수 있습니다.  
+ 이 페이지를 사용하여 **개체 탐색기**의 개체 컨텍스트 메뉴에서 다음 명령에 적용되는 스크립팅 옵션을 설정할 수 있습니다.  
   
 -   사용자 테이블 및 뷰에 대한 **편집** 명령  
   
@@ -152,6 +153,6 @@ FOREIGN KEY 제약 조건에 대한 테이블 참조에 스키마 이름을 추�
 **서버 버전에 대한 스크립트**  
 생성된 스크립트는 지정된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에 대한 대상이 됩니다. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 의 새 기능은 이전 버전에 대해 스크립팅될 수 없습니다. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에 대해 생성된 일부 스크립트는 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 실행 중인 서버 또는 이전의 [데이터베이스 호환성 수준 설정](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)이 있는 데이터베이스에서 실행할 수 없습니다.  
 
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참조  
 [스크립트 생성(SQL Server Management Studio)](https://msdn.microsoft.com/9711c617-3c68-4e5a-aea3-befc64d51524)  
   

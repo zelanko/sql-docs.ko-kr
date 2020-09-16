@@ -1,4 +1,5 @@
 ---
+description: 매개 변수를 사용하여 쿼리(Visual Database Tools)
 title: 매개 변수를 사용한 쿼리
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ ms.assetid: 2e4fdeb6-c596-43cb-ac2e-9a18ea2bac0d
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: fd07a135a52ab90837cbcbe9ba32f2a0bb4561f6
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 2ddd13ce6d354656cd16d37ab0b2a864cb87084f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999523"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491674"
 ---
 # <a name="query-with-parameters-visual-database-tools"></a>매개 변수를 사용하여 쿼리(Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -32,7 +33,7 @@ ms.locfileid: "85999523"
 [명명되지 않은 매개 변수를 사용하여 쿼리 만들기&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-queries-with-unnamed-parameters-visual-database-tools.md)  
 명명되지 않은 매개 변수를 사용하여 쿼리를 만드는 방법에 대해 설명합니다.  
   
-## <a name="related-sections"></a>관련 섹션  
+## <a name="related-sections"></a>관련 단원  
 [쿼리 관련 기본 작업 수행&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
 가장 일반적인 쿼리 태스크에 관련된 항목의 링크를 제공합니다.  
   

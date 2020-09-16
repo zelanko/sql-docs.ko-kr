@@ -1,4 +1,5 @@
 ---
+description: SQL Server Management Studio 정보
 title: SQL Server Management Studio 정보
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b3568e0f-3227-45a0-ad6d-997ee87cdf0f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2837f9a4135832c99addaff0600d4e3c2aff9c52
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: d83cced538bcee201478a0101393ed343ea9a6d7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85983781"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480222"
 ---
 # <a name="about-sql-server-management-studio"></a>SQL Server Management Studio 정보
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

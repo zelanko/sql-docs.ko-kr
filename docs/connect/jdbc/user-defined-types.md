@@ -1,4 +1,5 @@
 ---
+description: 사용자 정의 형식
 title: 사용자 정의 형식 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 19a71b27-b788-43a3-a76d-fe3001a6f016
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9ce45cb7fb76c1b01b57d96d86e34b051dc73043
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 04c7d143e24efbd21e977c1538820e1cb2289049
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80916949"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487994"
 ---
 # <a name="user-defined-types"></a>사용자 정의 형식
 

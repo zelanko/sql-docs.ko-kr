@@ -1,4 +1,5 @@
 ---
+description: 보고서 서버에서 사용자 지정 또는 폼 인증 구성
 title: 보고서 서버에서 사용자 지정 또는 폼 인증 구성 | Microsoft Docs
 ms.date: 04/18/2017
 ms.prod: reporting-services
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: e8601a8f-e66d-4649-8e4d-a46ca20ec7d0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8c77e0f066c6342fb0b5bc58130cb20c80e40de3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 196b326a9854242369efbdc6c697d292a1eb6e94
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65571163"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492626"
 ---
 # <a name="configure-custom-or-forms-authentication-on-the-report-server"></a>보고서 서버에서 사용자 지정 또는 폼 인증 구성
 
@@ -35,7 +36,7 @@ Reporting Services에서는 사용자 지정 또는 폼 기반 인증 모듈을 
 
 1.  텍스트 편집기에서 RSReportServer.config를 엽니다.
 
-2.  \<**인증**>을 찾습니다.
+2.  \<**Authentication**> 찾기.
 
 3.  다음 XML 구조를 복사합니다.
 
@@ -48,7 +49,7 @@ Reporting Services에서는 사용자 지정 또는 폼 기반 인증 모듈을 
     </Authentication>
     ```
 
-4.  \<**인증**>의 기존 항목 위에 붙여넣습니다.
+4.  \<**Authentication**>의 기존 항목에 붙여넣습니다.
 
      **Custom** 은 다른 인증 유형과 함께 사용할 수 없습니다.
 

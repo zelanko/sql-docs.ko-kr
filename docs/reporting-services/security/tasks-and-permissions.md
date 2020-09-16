@@ -1,4 +1,5 @@
 ---
+description: 태스크 및 권한
 title: 태스크 및 권한 | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d7ff90b5-b976-4270-b9ad-9d7b801d8263
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8724bbcfdb410f573ea65fbc1b9364d44f9af23d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 410d8748e4ccdc853ab37d001685a5adebb0da69
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65578511"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480665"
 ---
 # <a name="tasks-and-permissions"></a>태스크 및 권한
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 *태스크* 는 사용자 또는 관리자가 수행할 수 있는 동작을 말하며 태스크는 미리 정의됩니다. 태스크는 사용자 지정할 수 없으며 프로그래밍 방식이나 도구를 통해 제공된 태스크를 수정할 수 없습니다. 모두 25가지의 태스크가 있습니다. 이러한 태스크는 역할 기반 보안에서 사용할 수 있는 전체 작업 집합을 구성합니다. "보고서 보기", "보고서 관리", "보고서 서버 속성 관리" 등과 같은 태스크가 있습니다.  
@@ -36,7 +37,7 @@ ms.locfileid: "65578511"
 ## <a name="system-and-item-level-tasks"></a>시스템 및 항목 수준 태스크  
  태스크는 시스템 수준 아니면 항목 수준 범주에 속합니다. 역할은 단일 범주의 태스크만 포함할 수 있습니다. 다음 표에서는 각 태스크 범주를 설명합니다.  
   
-|Category|Description|  
+|Category|설명|  
 |--------------|-----------------|  
 |[항목 수준의 태스크](../../reporting-services/security/tasks-and-permissions-item-level-tasks.md)|폴더, 보고서, 보고서 모델, 리소스 등 보고서 서버에서 관리되는 항목에 대해 수행하는 동작입니다.<br /><br /> 항목 수준 태스크의 범위는 보고서 서버 폴더 네임스페이스로 한정됩니다. 보고서 서버의 폴더 또는 URL 액세스를 통해 액세스하는 모든 항목의 보안은 항목 수준 태스크를 포함하는 역할 할당에 의해 설정됩니다.|  
 |[시스템 수준 태스크](../../reporting-services/security/tasks-and-permissions-system-level-tasks.md)|많은 항목에 사용할 수 있는 작업 또는 공유 일정 관리와 같이 시스템 수준에서 수행하는 동작입니다. 시스템 수준 태스크의 범위는 보고서 서버 폴더 네임스페이스 외부로 한정됩니다.|  

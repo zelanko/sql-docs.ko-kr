@@ -1,4 +1,5 @@
 ---
+description: 작업 및 사용 권한 - 항목 수준의 작업
 title: 항목 수준 작업 | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: fdeb7bc3-167a-4342-84e3-32e3faa1fa39
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7224b99b721a48f14467da7479137fb4c61d4da9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a6ff9b1cef9a4ee7edf5b71d669416921330e5d3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570273"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492576"
 ---
 # <a name="tasks-and-permissions---item-level-tasks"></a>작업 및 사용 권한 - 항목 수준의 작업
   항목 수준 태스크는 보고서, 폴더, 보고서 모델, 리소스 또는 공유 데이터 원본과 관련된 사용 권한 모음입니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에는 보고서 서버 사이트에 전체적으로 적용되는 시스템 수준 태스크도 있습니다. 자세한 내용은 [시스템 수준 태스크](../../reporting-services/security/tasks-and-permissions-system-level-tasks.md)를 참조하세요. 일반적인 태스크 및 사용 권한에 대한 자세한 내용은 [Tasks and Permissions](../../reporting-services/security/tasks-and-permissions.md)을 참조하십시오.  

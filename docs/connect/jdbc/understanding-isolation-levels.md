@@ -1,4 +1,5 @@
 ---
+description: 격리 수준 이해
 title: 격리 수준 이해 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
@@ -8,14 +9,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 2c41e23a-da6c-4650-b5fc-b5fe53ba65c3
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b4886b1bd0f4ff62df06334af469a76b64600839
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 758012112df2bce1b0a7624834bfde3c3c4ece10
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "69027387"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488046"
 ---
 # <a name="understanding-isolation-levels"></a>격리 수준 이해
 
@@ -47,11 +48,11 @@ ms.locfileid: "69027387"
   
 | 격리 수준  | 커밋되지 않은 읽기 | 반복하지 않는 읽기 | 가상 |
 | ---------------- | ---------- | ------------------- | ------- |
-| 커밋되지 않은 읽기 | yes        | yes                 | yes     |
-| 커밋된 읽기   | 예         | yes                 | yes     |
-| 반복 읽기  | 예         | 예                  | yes     |
-| 스냅샷         | 예         | 예                  | 예      |
-| 직렬화 가능     | 예         | 예                  | 예      |
+| 커밋되지 않은 읽기 | yes        | yes                 | 예     |
+| 커밋된 읽기   | 아니요         | yes                 | 예     |
+| 반복 읽기  | 예         | 아니요                  | 예     |
+| 스냅샷         | 예         | 예                  | 아니요      |
+| 직렬화 가능     | 예         | 예                  | 아니요      |
   
 두 트랜잭션이 각기 동일한 행을 검색할 때 발생할 수 있는 업데이트 손실을 방지하려면 반복 읽기 이상의 격리 수준에서 트랜잭션을 실행해야 합니다. 그런 다음 원래 검색된 값에 따라 행을 업데이트하십시오. 두 트랜잭션이 한 개의 UPDATE 문을 사용하여 행을 업데이트하더라도 업데이트가 이전에 검색된 값에 따라 수행되지 않을 경우 기본 격리 수준인 커밋된 읽기에서는 업데이트 손실이 발생하지 않습니다.  
 

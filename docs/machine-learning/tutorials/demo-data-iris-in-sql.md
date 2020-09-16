@@ -1,4 +1,5 @@
 ---
+description: SQL 기계 학습을 사용하는 Python 및 R 자습서용 아이리스 데모 데이터
 title: 자습서용 아이리스 데모 데이터 세트
 titleSuffix: SQL machine learning
 Description: 아이리스 데이터 세트 및 예상 모델을 포함하는 데이터베이스를 만듭니다. 이 데이터 세트는 SQL 기계 학습을 사용하는 R 및 Python 자습서에 사용됩니다.
@@ -10,15 +11,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 9a5b7cc5c89874bddfda0ac978bce5899b1cd64b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e5a1f9c36b6dc59988951a693be05b4e10e580f4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737843"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495006"
 ---
 # <a name="iris-demo-data-for-python-and-r-tutorials-with-sql-machine-learning"></a>SQL 기계 학습을 사용하는 Python 및 R 자습서용 아이리스 데모 데이터
-[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
 이 연습에서는 [아이리스 꽃 데이터 세트](https://en.wikipedia.org/wiki/Iris_flower_data_set)의 데이터를 저장할 데이터베이스를 만들고 동일한 데이터를 기반으로 모델을 만듭니다. 아이리스 데이터는 R 및 Python 배포판 모두에 포함되며, SQL 기계 학습용 기계 학습 자습서에서 사용됩니다.
 

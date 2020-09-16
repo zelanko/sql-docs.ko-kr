@@ -1,4 +1,5 @@
 ---
+description: 테이블 추가 대화 상자(쿼리 및 뷰 디자이너)(Visual Database Tools)
 title: 테이블 추가 대화 상자(쿼리 및 뷰 디자이너)
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,12 +14,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: 47ded1289c8daec463913060ce205c162143eeb1
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 25fa8fa0a204b4dba994be11123c3241d1f7cd0c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002516"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497296"
 ---
 # <a name="add-table-dialog-box-query-and-view-designers-visual-database-tools"></a>테이블 추가 대화 상자(쿼리 및 뷰 디자이너)(Visual Database Tools)
 
@@ -32,7 +33,7 @@ ms.locfileid: "86002516"
 **테이블**  
 **다이어그램** 창에 추가할 수 있는 테이블을 나열합니다. 테이블을 추가하려면 테이블을 선택하고 **추가**를 클릭합니다. 여러 테이블을 한번에 추가하려면 원하는 테이블을 모두 선택하고 **추가**를 클릭합니다.  
   
-**뷰**  
+**Views**  
 **다이어그램** 창에 추가할 수 있는 뷰를 나열합니다. 뷰를 추가하려면 뷰를 선택하고 **추가**를 클릭합니다. 여러 뷰를 한번에 추가하려면 원하는 뷰를 모두 선택하고 **추가**를 클릭합니다.  
   
 **함수**  

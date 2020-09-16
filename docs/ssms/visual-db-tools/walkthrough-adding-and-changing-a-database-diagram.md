@@ -1,4 +1,5 @@
 ---
+description: '연습: 데이터베이스 다이어그램 추가 및 변경'
 title: 데이터베이스 다이어그램 추가 및 변경
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -14,19 +15,19 @@ ms.assetid: 228caa0d-8f24-46ab-86d1-b6d8631322bc
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 41ecd01badd21d8c3198dfb661d63b7d14753d76
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 87ff469370e58c261e762cf9c4d6c604488ccfb4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002618"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479927"
 ---
 # <a name="walkthrough-adding-and-changing-a-database-diagram"></a>연습: 데이터베이스 다이어그램 추가 및 변경
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 이 연습에서는 데이터베이스 다이어그램을 만들고 수정하는 방법과 데이터베이스 다이어그램 구성 요소를 통해 데이터베이스를 변경하는 방법을 설명합니다. 또한 다이어그램에 테이블을 추가하고, 테이블 간에 관계를 만들고, 열에 대해 제약 조건과 인덱스를 만들며 각 테이블에 대해 표시할 정보 수준을 변경하는 방법을 설명합니다.  
   
 ## <a name="prerequisites"></a>사전 요구 사항  
-이 연습을 완료하려면 다음이 필요합니다.  
+이 연습을 완료하려면 다음 사항이 필요합니다.  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 예제 데이터베이스를 포함하는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 에 대한 액세스 권한  
   
@@ -79,9 +80,9 @@ ms.locfileid: "86002618"
   
     |**열 이름**|**데이터 형식**|**Null 허용**|  
     |-------------------|-----------------|-------------------|  
-    |**T1col1**|**int**|선택|  
-    |**T1col2**|**varchar(50)**|선택|  
-    |**T1col3**|**float**|선택|  
+    |**T1col1**|**int**|checked|  
+    |**T1col2**|**varchar(50)**|checked|  
+    |**T1col3**|**float**|checked|  
   
 4.  `T1col1` 을 마우스 오른쪽 단추로 클릭한 다음 **기본 키 설정**을 선택합니다.  
   
@@ -123,8 +124,8 @@ ms.locfileid: "86002618"
     |**열 이름**|**데이터 형식**|**Null 허용**|  
     |-------------------|-----------------|-------------------|  
     |**T2col1**|**int**|선택 안 함|  
-    |**T2col2**|**varchar(50)**|선택|  
-    |**T2col3**|**xml**|선택|  
+    |**T2col2**|**varchar(50)**|checked|  
+    |**T2col3**|**xml**|checked|  
   
     > [!NOTE]  
     > 외래 키 관계의 기본 키 쪽에 있는 열은 기본 키나 UNIQUE 제약 조건에 참여해야 합니다.  

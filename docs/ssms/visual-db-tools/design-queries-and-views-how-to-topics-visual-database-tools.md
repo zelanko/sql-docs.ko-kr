@@ -1,4 +1,5 @@
 ---
+description: 쿼리 및 뷰 디자인 방법 도움말 항목(Visual Database Tools)
 title: 쿼리 및 뷰 디자인 방법 도움말 항목
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -21,12 +22,12 @@ ms.assetid: 200903f4-1208-4563-9dca-26aabaacfa20
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: d736b1071b30cee921fcf766ab1fdeaaea543702
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 3ac0cda7693bde1b7e734539aa412dd12bf21d60
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008295"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497234"
 ---
 # <a name="design-queries-and-views-how-to-topics-visual-database-tools"></a>쿼리 및 뷰 디자인 방법 도움말 항목(Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -60,7 +61,7 @@ UPDATE, DELETE 및 MAKE TABLE 쿼리와 같은 다양한 유형의 쿼리를 만
 [매개 변수를 사용하여 쿼리&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/query-with-parameters-visual-database-tools.md)  
 쿼리를 실행할 때마다 서로 다른 값을 사용할 수 있도록 하는 매개 변수로 쿼리를 만드는 데 관련된 항목을 나열합니다.  
   
-## <a name="related-sections"></a>관련 섹션  
+## <a name="related-sections"></a>관련 단원  
 [테이블 디자인&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-tables-visual-database-tools.md)  
 테이블, 열, 키, 인덱스, 저장 프로시저 등을 통해 데이터베이스 구조를 디자인하고 유지 관리하는 단계를 자세히 설명합니다.  
   

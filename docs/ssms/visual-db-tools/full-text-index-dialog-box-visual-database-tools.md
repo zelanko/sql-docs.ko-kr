@@ -1,4 +1,5 @@
 ---
+description: 전체 텍스트 인덱스 대화 상자(Visual Database Tools)
 title: 전체 텍스트 인덱스 대화 상자
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ ms.assetid: ef45b585-2567-4abe-b421-9fd0994e0146
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 8330963e62c3185203c9b25c53785f12ec9fb8be
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 566239ac238afb66650c50cd9d96c8fa81d3f70c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004939"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497146"
 ---
 # <a name="full-text-index-dialog-box-visual-database-tools"></a>전체 텍스트 인덱스 대화 상자(Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -43,7 +44,7 @@ ms.locfileid: "86004939"
 확장하면 **열** 및 **전체 텍스트 카탈로그 이름**이 표시됩니다.  
   
 **열**  
-검색 가능한 전체 텍스트 열의 이름 목록을 쉼표로 구분하여 표시합니다. 전체 목록을 보려면 속성 필드의 왼쪽에 있는 줄임표 단추( **...** )를 클릭합니다.  
+검색 가능한 전체 텍스트 열의 이름 목록을 쉼표로 구분하여 표시합니다. 전체 목록을 보려면 속성 필드의 왼쪽에 있는 줄임표 단추(**...**)를 클릭합니다.  
   
 **Full-Text Catalog Name**  
 현재 전체 텍스트 인덱스가 저장되어 있는 전체 텍스트 카탈로그의 이름을 표시합니다. 인덱스를 다른 카탈로그에 저장하려면 카탈로그 이름을 클릭하고 드롭다운 목록에서 다른 이름을 선택합니다.  
@@ -54,7 +55,7 @@ ms.locfileid: "86004939"
 **ID 범주**  
 확장하면 현재 인덱스의 이름 필드가 표시됩니다.  
   
-**이름**  
+**Name**  
 현재 전체 텍스트 인덱스에 대해 자동으로 지정된 이름을 표시합니다.  
   
 **테이블 디자이너 범주**  

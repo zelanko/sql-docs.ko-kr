@@ -1,4 +1,5 @@
 ---
+description: SQL Server 2019 개인 정보 제공
 title: SQL Server 2019 개인 정보 제공 | Microsoft Docs
 ms.date: 09/20/2019
 ms.prod: sql
@@ -11,12 +12,12 @@ helpviewer_keywords: ''
 author: MsSQLGirl
 ms.author: jukoesma
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 393656057ae547c770f37e1e7db4c5b5373ac1bd
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c365f3e9aa5221e29d875d05ba3daf4337ca44cd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914679"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480692"
 ---
 # <a name="sql-server-2019-privacy-supplement"></a>SQL Server 2019 개인 정보 제공
 
@@ -26,9 +27,9 @@ ms.locfileid: "86914679"
 
 - Azure SQL Database
 - [SSMS(SQL Server Management Studio)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-telemetry-ssms?view=sql-server-2017)
-- SSDT(SQL Server Data Tools)
+- SQL Server Data Tools(SSDT)
 - Azure Data Studio
-- Data Migration Assistant
+- Database Migration Assistant
 - SQL Server Migration Assistant
 - MS-SQL 확장
 
@@ -48,7 +49,7 @@ SQL Server 설치 내에서 로그인, 사용자 또는 계정을 보호하는 �
 |시나리오 |액세스 제한 |보존 요구 사항 |
 |---------|---------|---------|
 |이러한 자격 증명은 사용 및 진단 데이터를 통해 사용자 머신에서 나가지 않습니다. |- |- |
-|크래시 덤프는 액세스 제어 데이터를 포함할 수 있습니다. |- |크래시 덤프: 최대 30일. |
+|크래시 덤프는 액세스 제어 데이터를 포함할 수 있습니다. |- |크래시 덤프: 최대 30일입니다. |
 |고객이 수동으로 삽입하지 않으면 이러한 자격 증명은 사용자 피드백을 통해 사용자 컴퓨터를 벗어나지 않습니다. |타사 액세스 권한 없이 Microsoft 내부 사용량을 제한합니다. |사용자 피드백: 최대 1년|
 |&nbsp;|&nbsp;|&nbsp;|
 
@@ -67,7 +68,7 @@ SQL Server 설치 내에서 로그인, 사용자 또는 계정을 보호하는 �
 |시나리오  |액세스 제한  |보존 요구 사항 |
 |---------|---------|---------|
 |이 데이터는 사용 및 진단 데이터를 통해 사용자 머신에서 나가지 않습니다. |- |- |
-|크래시 덤프에는 고객 콘텐츠가 포함되고 Microsoft로 내보내집니다. |- |크래시 덤프: 최대 30일. |
+|크래시 덤프에는 고객 콘텐츠가 포함되고 Microsoft로 내보내집니다. |- |크래시 덤프: 최대 30일입니다. |
 |동의하는 고객은 Microsoft에 고객 콘텐츠를 포함하는 사용자 피드백을 보낼 수 있습니다. |타사 액세스 권한 없이 Microsoft 내부를 제한합니다. Microsoft에서는 원래 고객에게 데이터를 노출할 수 있습니다. |사용자 피드백: 최대 1년 |
 
 ## <a name="end-user-identifiable-information-euii"></a>EUII(최종 사용자 식별 가능 정보)
@@ -183,6 +184,6 @@ Microsoft는 SQL Server를 사용하는 다른 프로그램에서 설정된 애�
 
 ## <a name="telemetry-controls"></a>원격 분석 컨트롤
 
-제품에서 원격 분석을 켜고 끄는 방법에 대한 지침은 https://support.microsoft.com/help/3153756/how-to-configure-sql-server-2016-to-send-feedback-to-microsoft 의 내용을 참조하세요.
+제품에서 원격 분석을 켜고 끄는 방법에 대한 지침은 https://support.microsoft.com/help/3153756/how-to-configure-sql-server-2016-to-send-feedback-to-microsoft의 내용을 참조하세요.
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

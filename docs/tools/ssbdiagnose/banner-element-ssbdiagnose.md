@@ -1,4 +1,5 @@
 ---
+description: Banner 요소(ssbdiagnose)
 title: Banner 요소
 diagnose: In SQL Server, the Banner element identifies which utility generated the ssbdiagnose output XML file.
 ms.prod: sql
@@ -15,12 +16,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: bc2a4c5da5db899289b05845eaef1564437ef8c3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: dae521477b4255c6e4f697631960d4647e736f01
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726817"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484946"
 ---
 # <a name="banner-element-ssbdiagnose"></a>Banner 요소(ssbdiagnose)
 
@@ -41,7 +42,7 @@ ms.locfileid: "85726817"
   
 ## <a name="element-attributes"></a>요소 특성  
   
-|attribute|Description|  
+|attribute|설명|  
 |---------------|-----------------|  
 |**title**|**ssbdiagnose** XML 출력 파일을 생성한 유틸리티를 식별합니다.|  
 |**product**|**ssbdiagnose** XML 출력 파일을 생성한 제품을 식별합니다.|  

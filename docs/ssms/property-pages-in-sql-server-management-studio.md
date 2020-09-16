@@ -1,4 +1,5 @@
 ---
+description: SQL Server Management Studio의 속성 페이지
 title: SQL Server Management Studio의 속성 페이지
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 719282c3-e9cc-4e0e-9a83-7fb8b8b17f67
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c865561f66f9f40ce131e9b8dce563f77ca187aa
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: b6e1d6d0b7f1b3910baa1a81e5fe1a682f6a9ed6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001804"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491825"
 ---
 # <a name="property-pages-in-sql-server-management-studio"></a>SQL Server Management Studio의 속성 페이지
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -25,7 +26,7 @@ ms.locfileid: "86001804"
   
 다음 표에서는 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 속성 페이지 대화 상자의 공통 요소를 설명합니다.  
   
-|요소|Description|  
+|요소|설명|  
 |-----------|---------------|  
 |**범주별**|선택한 개체에 대한 모든 속성과 속성 값을 범주별로 나열합니다. 범주별 보기에서 범주를 축소하여 표시되는 속성의 수를 줄일 수 있습니다. 범주를 확장하거나 축소할 경우 범주 이름 왼쪽에 있는 더하기(+) 또는 빼기(-) 기호를 각각 사용합니다. 범주는 사전순으로 나열됩니다.|  
 |**사전순**|선택한 개체에 대한 모든 속성과 속성 값을 사전순으로 나열합니다.|  
