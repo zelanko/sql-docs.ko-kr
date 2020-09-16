@@ -1,4 +1,5 @@
 ---
+description: executeUpdate 메서드(java.lang.String)
 title: executeUpdate 메서드(java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/07/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 91ecb1cd-001d-4ac9-9ae8-5db05c3c2959
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 428127147d00885dc379752e97154e8eabad54d1
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: fcfb5f6bf2c8697b4463b6726b844bd883e05c19
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924202"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88437615"
 ---
 # <a name="executeupdate-method-javalangstring"></a>executeUpdate 메서드(java.lang.String)
 
@@ -37,7 +38,7 @@ public final int executeUpdate(java.lang.String sql)
 
 SQL 문이 포함된 **문자열**입니다.
 
-## <a name="return-value"></a>Return Value
+## <a name="return-value"></a>반환 값
 영향을 받는 행 수를 나타내는 **int**이며, DDL 문을 사용하는 경우에는 0입니다.
 
 ## <a name="exceptions"></a>예외

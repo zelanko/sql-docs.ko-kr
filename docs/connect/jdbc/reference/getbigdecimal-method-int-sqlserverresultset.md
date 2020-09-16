@@ -1,4 +1,5 @@
 ---
+description: getBigDecimal 메서드(int)(SQLServerResultSet)
 title: getBigDecimal 메서드(int)(SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 49872b95-a11c-472e-a0d2-a794e8f32f52
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ce5fed0a79eb2023d456292f45c5f37f48ab9c73
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 3894ccc69733e3b90f6a84a903b8588cdfccbe7b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920650"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88437325"
 ---
 # <a name="getbigdecimal-method-int-sqlserverresultset"></a>getBigDecimal 메서드(int)(SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +40,7 @@ public java.math.BigDecimal getBigDecimal(int columnIndex)
   
  열 인덱스를 나타내는 **int**입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
  BigDecimal 개체입니다.  
   
 ## <a name="exceptions"></a>예외  

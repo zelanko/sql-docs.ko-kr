@@ -1,4 +1,5 @@
 ---
+description: execute 메서드(java.lang.String, java.lang.String)
 title: execute 메서드(java.lang.String, java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 9451c7c2-4c0d-4d1e-9b42-a26ff28e3f6a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4bbc0a0828bcc146cf2a49625e51baa77703593b
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 807b1ea0a1c81c85b6b715f881858bf88c733cc4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922110"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88437805"
 ---
 # <a name="execute-method-javalangstring-javalangstring"></a>execute 메서드(java.lang.String, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +45,7 @@ public final boolean execute(java.lang.String sql,
   
  자동 생성 키의 열 이름을 사용할 수 있도록 해야 하는지 여부를 나타내는 문자열의 배열입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
  첫 번째 결과가 결과 집합이면 **true**이고, 그렇지 않으면 **false**입니다.  
   
 ## <a name="exceptions"></a>예외  

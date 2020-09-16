@@ -1,4 +1,5 @@
 ---
+description: execute 메서드(java.lang.String)(SQLServerStatement)
 title: execute 메서드(java.lang.String)(SQLServerStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 64ac78b8-d5b3-4134-9b72-d2b0c52168a2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 98adf628c3cc84442d34d6f1f07431a3c5918a31
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: d45ec2af1a578d3d2495ff924ea5f3278fbeca6c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922085"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88437795"
 ---
 # <a name="execute-method-javalangstring-sqlserverstatement"></a>execute 메서드(java.lang.String)(SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +40,7 @@ public boolean execute(java.lang.String sql)
   
  SQL 문이 포함된 **문자열**입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
  첫 번째 결과가 결과 집합이면 **true**이고, 그렇지 않으면 **false**입니다.  
   
 ## <a name="exceptions"></a>예외  

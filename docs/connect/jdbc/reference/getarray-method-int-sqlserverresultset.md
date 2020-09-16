@@ -1,4 +1,5 @@
 ---
+description: getArray 메서드(int)(SQLServerResultSet)
 title: getArray 메서드(int)(SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 377746c7-8c9c-41f5-8490-ca0dd56fd57a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0db5041fb0d15ddce5d0ab31cb8ff1f1d1bada42
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 3c2019357a982dd81a9ef8f8c3d44a34243b97aa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924153"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88437505"
 ---
 # <a name="getarray-method-int-sqlserverresultset"></a>getArray 메서드(int)(SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +40,7 @@ public java.sql.Array getArray(int i)
   
  열 인덱스를 나타내는 **int**입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
  배열 개체입니다.  
   
 ## <a name="exceptions"></a>예외  

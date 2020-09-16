@@ -1,4 +1,5 @@
 ---
+description: executeUpdate 메서드(java.lang.String, int)
 title: executeUpdate 메서드(java.lang.String, int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,14 +14,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 4c52a20e-527e-4d14-9a5a-4cd195aac8ed
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 783058a764963637f2c91808424bac7bdd403c02
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: a0d549d4da78cb58688842e545d94efd8e0f4087
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67954752"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88437695"
 ---
 # <a name="executeupdate-method-javalangstring-int"></a>executeUpdate 메서드(java.lang.String, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -48,7 +49,7 @@ public final int executeUpdate(java.lang.String sql,
   
  NO_GENERATED_KEYS  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
  영향을 받는 행 수를 나타내는 **int**이며, DDL 문을 사용하는 경우에는 0입니다.  
   
 ## <a name="exceptions"></a>예외  

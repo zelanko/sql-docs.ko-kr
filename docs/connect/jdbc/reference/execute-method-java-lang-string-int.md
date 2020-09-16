@@ -1,4 +1,5 @@
 ---
+description: execute 메서드(java.lang.String, int[])
 title: execute 메서드(java.lang.String, int[]) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/07/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: dc73d1c3-e756-43af-b1fc-ac438cbd0965
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7195d5c5bf4efb593e53dea6e5404cc8adb70830
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 95c18d95e6014afc78fc53b8a37f3cd4d3509fd3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922126"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88437775"
 ---
 # <a name="execute-method-javalangstring-int"></a>execute 메서드(java.lang.String, int[])
 
@@ -43,7 +44,7 @@ SQL 문이 포함된 **문자열**입니다.
 
 자동 생성 키의 열 인덱스를 사용할 수 있도록 해야 하는지 여부를 나타내는 **int**의 배열입니다.
 
-## <a name="return-value"></a>Return Value
+## <a name="return-value"></a>반환 값
 첫 번째 결과가 결과 집합이면 **true**이고, 그렇지 않으면 **false**입니다.
   
 ## <a name="exceptions"></a>예외

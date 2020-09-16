@@ -1,4 +1,5 @@
 ---
+description: connect 메서드(SQLServerDriver)
 title: connect 메서드(SQLServerDriver) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 43813a4c-1cc7-4659-ba27-f1786f1371eb
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2a182f62796d70fe50f646f39d1afb7058d46fd8
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 0a5f962e64f2e20d49a8941e365d12794ce5d89e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80927730"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88437995"
 ---
 # <a name="connect-method-sqlserverdriver"></a>connect 메서드(SQLServerDriver)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +45,7 @@ public java.sql.Connection connect(java.lang.String Url,
   
  연결 인수로 사용되는 문자열 값 쌍의 집합입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
  연결 개체입니다.  
   
 ## <a name="exceptions"></a>예외  

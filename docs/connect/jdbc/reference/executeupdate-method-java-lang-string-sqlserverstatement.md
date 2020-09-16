@@ -1,4 +1,5 @@
 ---
+description: executeUpdate 메서드(java.lang.String)(SQLServerStatement)
 title: executeUpdate 메서드(java.lang.String)(SQLServerStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 85e7c3a2-f2da-49bf-9d90-5fd246fd60e1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6432cd0d09dac50857a0bd1da16a3ded92bb09c5
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 0805963e2172a570801d09912539f312fbfcad78
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924259"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88437715"
 ---
 # <a name="executeupdate-method-javalangstring-sqlserverstatement"></a>executeUpdate 메서드(java.lang.String)(SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +40,7 @@ public int executeUpdate(java.lang.String sql)
   
  SQL 문이 포함된 **문자열**입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
  영향을 받는 행 수를 나타내는 **int**이며, DDL 문을 사용하는 경우에는 0입니다.  
   
 ## <a name="exceptions"></a>예외  

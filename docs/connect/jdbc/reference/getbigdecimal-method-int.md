@@ -1,4 +1,5 @@
 ---
+description: getBigDecimal 메서드(int)
 title: getBigDecimal 메서드(int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: f74030d8-3789-463b-b414-2eb01cef8a30
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 86cf05d506da15903b4a2343d9bf8f325039ae76
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 163445b2adc2f7ddce94a8e2d198e6c0d938301e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920614"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88437315"
 ---
 # <a name="getbigdecimal-method-int"></a>getBigDecimal 메서드(int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +40,7 @@ public java.math.BigDecimal getBigDecimal(int index)
   
  매개 변수 인덱스를 나타내는 **int**입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
  BigDecimal 개체입니다.  
   
 ## <a name="exceptions"></a>예외  

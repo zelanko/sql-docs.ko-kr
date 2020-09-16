@@ -1,4 +1,5 @@
 ---
+description: getBlob 메서드(int)
 title: getBlob 메서드(int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: bef3ef12-cdda-4a18-90d6-4a501b8e30f0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c93bec37060ebdb7850ff2b678d7a68fce35e3a0
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: be2b5a9109042b03f2a248bd41225de5faddec83
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80921623"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88437145"
 ---
 # <a name="getblob-method-int"></a>getBlob 메서드(int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +40,7 @@ public java.sql.Blob getBlob(int index)
   
  매개 변수 인덱스를 나타내는 **int**입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
  Blob 개체입니다.  
   
 ## <a name="exceptions"></a>예외  

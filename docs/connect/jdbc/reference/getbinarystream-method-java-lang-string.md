@@ -1,4 +1,5 @@
 ---
+description: getBinaryStream 메서드(java.lang.String)
 title: getBinaryStream 메서드(java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 149609b5-a6de-4e23-a440-7061775d0899
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: cee701502468d1067ef188c82d29d6af56e031a7
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 8d0887b6cd8770310304596606ace6bba321465c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928732"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88437255"
 ---
 # <a name="getbinarystream-method-javalangstring"></a>getBinaryStream 메서드(java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +40,7 @@ public java.io.InputStream getBinaryStream(java.lang.String columnName)
   
  열 이름이 포함된 **문자열**입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
  InputStream 개체입니다.  
   
 ## <a name="exceptions"></a>예외  

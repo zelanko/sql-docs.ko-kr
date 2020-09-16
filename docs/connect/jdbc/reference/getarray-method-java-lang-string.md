@@ -1,4 +1,5 @@
 ---
+description: getArray 메서드(java.lang.String)
 title: getArray 메서드(java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 4610cbaf-5638-4a66-bd83-70aefca40e58
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: da3009077e1befd4f685a362ad6e224f988a1d01
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 93f45710e203032ea63f106ab0fac80b6806e0bb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80912189"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88437475"
 ---
 # <a name="getarray-method-javalangstring"></a>getArray 메서드(java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +40,7 @@ public java.sql.Array getArray(java.lang.String sCol)
   
  매개 변수 이름이 들어 있는 **문자열**입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
  배열 개체입니다.  
   
 ## <a name="exceptions"></a>예외  

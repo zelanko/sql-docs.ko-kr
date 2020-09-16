@@ -1,4 +1,5 @@
 ---
+description: createStatement 메서드(int, int, int)
 title: createStatement 메서드(int, int, int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,14 +14,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 2e4fa385-8f61-4394-8f75-3e839930a57d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 74cc1b97c121b5e1a6e7d55127ec18cd2caec4fd
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 53395cc630c161c15e50559fd1cc78b8faf5c044
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67955355"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88437945"
 ---
 # <a name="createstatement-method-int-int-int"></a>createStatement 메서드(int, int, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -49,7 +50,7 @@ public java.sql.Statement createStatement(int nType,
   
  유지 기능을 나타내는 **int** 값입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
  Statement 개체입니다.  
   
 ## <a name="exceptions"></a>예외  

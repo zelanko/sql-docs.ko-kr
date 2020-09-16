@@ -1,4 +1,5 @@
 ---
+description: executeUpdate 메서드(java.lang.String, int[])
 title: executeUpdate 메서드(java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 7b3d5b60-4285-4047-b13e-106754ca0d98
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 24afa57d67f19cc9f37e5980ccd9b2179f2b0ac5
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: ce46b5979b1d958e6e896fc32b03e45f591be289
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924232"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88437635"
 ---
 # <a name="executeupdate-method-javalangstring-int"></a>executeUpdate 메서드(java.lang.String, int[])
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +45,7 @@ public final int executeUpdate(java.lang.String sql,
   
  자동 생성 키의 열 인덱스를 사용할 수 있도록 해야 하는지 여부를 나타내는 int의 배열입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
  영향을 받는 행 수를 나타내는 **int**이며, DDL 문을 사용하는 경우에는 0입니다.  
   
 ## <a name="exceptions"></a>예외  
