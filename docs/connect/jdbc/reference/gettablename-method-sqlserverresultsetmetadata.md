@@ -1,4 +1,5 @@
 ---
+description: getTableName 메서드(SQLServerResultSetMetaData)
 title: getTableName 메서드(SQLServerResultSetMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 9a077b50-cc5a-4301-9398-49ea68544e89
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a28fb70257bf9978c63537d2f2b37555012f9c14
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 27002f0e425edafcd04bc0c73463d581fcd9eb39
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80927435"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88434225"
 ---
 # <a name="gettablename-method-sqlserverresultsetmetadata"></a>getTableName 메서드(SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +40,7 @@ public java.lang.String getTableName(int column)
   
  열 인덱스를 나타내는 **int**입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
  테이블 이름이 들어 있는 **문자열**입니다.  
   
 ## <a name="exceptions"></a>예외  

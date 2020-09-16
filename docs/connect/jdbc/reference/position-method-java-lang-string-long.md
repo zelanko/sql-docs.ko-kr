@@ -1,4 +1,5 @@
 ---
+description: position 메서드(java.lang.String, long)
 title: position 메서드(java.lang.String, long) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 86fad8ed-375a-42e1-b40e-1fa085957a2c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 432ee4fccc21a57130e1bccad9c43b50e2b992ba
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 6529acba826fb4e76c3c6f6612eacccc63ee7a30
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80914379"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88433045"
 ---
 # <a name="position-method-javalangstring-long"></a>position 메서드(java.lang.String, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +45,7 @@ public long position(java.lang.String searchstr,
   
  검색을 시작할 위치이며, 첫 번째 위치는 1입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
  부분 문자열이 나타나는 위치이며, 부분 문자열이 없으면 -1입니다. 첫 번째 위치는 1입니다.  
   
 ## <a name="exceptions"></a>예외  

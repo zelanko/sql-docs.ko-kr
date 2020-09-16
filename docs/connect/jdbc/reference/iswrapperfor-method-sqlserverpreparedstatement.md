@@ -1,4 +1,5 @@
 ---
+description: isWrapperFor 메서드(SQLServerPreparedStatement)
 title: isWrapperFor 메서드(SQLServerPreparedStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: b0e591b1-73e2-4f90-967f-5555eadfc3f1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c666a5cda962c91602d32e8b263b59229fad1e88
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 41f1855d202212d03561171a28e22d321d7547b0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80911919"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88433315"
 ---
 # <a name="iswrapperfor-method-sqlserverpreparedstatement"></a>isWrapperFor 메서드(SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -34,7 +35,7 @@ public boolean isWrapperFor(Class iface)
   
  인터페이스를 정의하는 **클래스**입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
  이 개체가 인터페이스를 구현하거나 인터페이스를 구현하는 개체를 래핑하면 **true**이고, 그렇지 않으면 **false**입니다.  
   
 ## <a name="exceptions"></a>예외  
@@ -45,7 +46,7 @@ public boolean isWrapperFor(Class iface)
   
  이 메서드가 true를 반환하는 경우 동일한 인수로 [unwrap](../../../connect/jdbc/reference/unwrap-method-sqlserverpreparedstatement.md)을 호출하는 데 성공합니다.  
   
- 자세한 내용은 [래퍼와 인터페이스](../../../connect/jdbc/wrappers-and-interfaces.md)를 참조하세요.  
+ 자세한 내용은 [래퍼 및 인터페이스](../../../connect/jdbc/wrappers-and-interfaces.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [unwrap 메서드&#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/unwrap-method-sqlserverpreparedstatement.md)   

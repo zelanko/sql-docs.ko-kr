@@ -1,4 +1,5 @@
 ---
+description: ISQLServerConnection 인터페이스
 title: ISQLServerConnection 인터페이스 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 031c01e2-2c65-4fe4-9700-fdbcc7a39f30
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4d2f63e094fa4ea4598163d419e221ad5a41b288
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 1cedc723bcaee3b8ca850d7671ea0c868f9e11fa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920684"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88433515"
 ---
 # <a name="isqlserverconnection-interface"></a>ISQLServerConnection 인터페이스
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -24,7 +25,7 @@ ms.locfileid: "80920684"
   
  **패키지:** com.microsoft.sqlserver.jdbc  
   
- **확장:** : java.sql.Connection  
+ **확장:**: java.sql.Connection  
   
 ## <a name="syntax"></a>구문  
   

@@ -1,4 +1,5 @@
 ---
+description: setAsciiStream 메서드(int, java.io.InputStream, long)
 title: setAsciiStream 메서드(int, java.io.InputStream, long) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9dfa7781-d72f-407a-a8d4-1c78c9446d09
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e095e139cb4f37fe44c3107d4f3a8f30f038bf06
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 5a9417a9c2dfb4d0408f73b08c1bccf6e797b0bb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920176"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88432645"
 ---
 # <a name="setasciistream-method-int-javaioinputstream-long"></a>setAsciiStream 메서드(int, java.io.InputStream, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

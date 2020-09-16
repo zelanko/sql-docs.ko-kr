@@ -1,4 +1,5 @@
 ---
+description: moveToInsertRow 메서드(SQLServerResultSet)
 title: moveToInsertRow 메서드(SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: f3c54bfe-d5b7-4f6e-ae6c-3e8954e5b1c9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 285bbb91734132f1ca74d739ec2a63394ace5108
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 637aab5fb6ea678bd95784c118367c1f4254d525
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80914799"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88433215"
 ---
 # <a name="movetoinsertrow-method-sqlserverresultset"></a>moveToInsertRow 메서드(SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

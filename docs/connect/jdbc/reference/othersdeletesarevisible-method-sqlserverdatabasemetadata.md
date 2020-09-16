@@ -1,4 +1,5 @@
 ---
+description: othersDeletesAreVisible 메서드(SQLServerDatabaseMetaData)
 title: othersDeletesAreVisible 메서드(SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: c4692a8c-e6b7-4edc-9dad-7af816988de5
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7ee84cea21eba37fd22b8ff40f7d14e4b63aadad
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 6bd0907c3d6992725ce9f9b43f8d00adab5b571a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80925976"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88433125"
 ---
 # <a name="othersdeletesarevisible-method-sqlserverdatabasemetadata"></a>othersDeletesAreVisible 메서드(SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -57,7 +58,7 @@ public boolean othersDeletesAreVisible(int type)
   
  TYPE_SS_SCROLL_DYNAMIC  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
  삭제 내용이 표시되면 **true**이고, 그렇지 않으면 **false**입니다.  
   
 ## <a name="exceptions"></a>예외  

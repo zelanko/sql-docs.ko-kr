@@ -1,4 +1,5 @@
 ---
+description: isLast 메서드(SQLServerResultSet)
 title: isLast 메서드(SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 85d4451f-6392-470e-ab21-78a495b45792
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: cf9eb027ba09042d5feaddb7d950bd85da920ff9
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: cbef8f4d7205a8433ee855568697f222a7f14b4c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80925837"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88433555"
 ---
 # <a name="islast-method-sqlserverresultset"></a>isLast 메서드(SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

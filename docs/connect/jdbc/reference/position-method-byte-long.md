@@ -1,4 +1,5 @@
 ---
+description: position 메서드(byte, long)
 title: position 메서드(byte, long) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 787412c2-4342-49c8-9ca2-7a9ddcd3277c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 938254b8076d78ebd1ac768d130904077828aa03
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 81248632dfff287d349a627dd4a82499e80d1d64
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80914389"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88433065"
 ---
 # <a name="position-method-byte-long"></a>position 메서드(byte, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +45,7 @@ public long position(byte[] bPattern,
   
  검색할 시작 인덱스입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
  패턴을 찾은 위치를 나타내는 **long** 값이거나, 패턴을 찾지 못한 경우 -1입니다.  
   
 ## <a name="exceptions"></a>예외  

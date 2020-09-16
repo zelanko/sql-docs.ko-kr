@@ -1,4 +1,5 @@
 ---
+description: ownDeletesAreVisible 메서드(SQLServerDatabaseMetaData)
 title: ownDeletesAreVisible 메서드(SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 2dd6d976-9f8f-4a24-9354-ff239cfd4364
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 44672d73e7bd99a83dd0e74559c718d63693bc45
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: dfc58d525e08e2db8ecd82849dcc8db735c02490
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80914579"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88433095"
 ---
 # <a name="owndeletesarevisible-method-sqlserverdatabasemetadata"></a>ownDeletesAreVisible 메서드(SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -57,7 +58,7 @@ public boolean ownDeletesAreVisible(int type)
   
  TYPE_SS_SCROLL_DYNAMIC  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
  삭제 내용이 표시되면 **true**이고, 그렇지 않으면 **false**입니다.  
   
 ## <a name="exceptions"></a>예외  

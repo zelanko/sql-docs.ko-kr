@@ -1,4 +1,5 @@
 ---
+description: getTime 메서드(java.lang.String, java.util.Calendar)
 title: getTime 메서드(java.lang.String, java.util.Calendar) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,14 +14,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 3d4c67c2-a3c8-4a26-a159-89c5d63fda0b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c6b8f6239fbc229af009fc9745b0f19ed27e7ee1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 47ecebd8694c8fc7d89d88b96599eeabd0c55fa0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67979056"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88434205"
 ---
 # <a name="gettime-method-javalangstring-javautilcalendar"></a>getTime 메서드(java.lang.String, java.util.Calendar)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

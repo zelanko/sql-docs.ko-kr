@@ -1,4 +1,5 @@
 ---
+description: registerOutParameter 메서드(java.lang.String, int, java.lang.String)
 title: 형식 및 이름에 대한 registerOutParameter 메서드 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: f962c912-2475-4e1f-a384-579be2d17f37
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9c80c07b557e79400908afa5c562ff2136d135a2
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 0fab9ba4e979780fedfb676fd779f8ed83da7566
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80904219"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88432805"
 ---
 # <a name="registeroutparameter-method-javalangstring-int-javalangstring"></a>registerOutParameter 메서드(java.lang.String, int, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

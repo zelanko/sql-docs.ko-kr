@@ -1,4 +1,5 @@
 ---
+description: position 메서드(java.sql.Blob, long)
 title: position 메서드(java.sql.Blob, long) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: ebd005e5-f6c5-4789-87f9-d2fdacd35060
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 70fd642677405adf98cce23826775a0cab45221a
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 941996adfc1fb23340da173d2c7f28393c25e17e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80923185"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88433035"
 ---
 # <a name="position-method-javasqlblob-long"></a>position 메서드(java.sql.Blob, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +45,7 @@ public long position(java.sql.Blob pattern,
   
  검색할 시작 인덱스입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
  패턴을 찾은 위치를 나타내는 **long** 값이거나, 패턴을 찾지 못한 경우 -1입니다.  
   
 ## <a name="exceptions"></a>예외  

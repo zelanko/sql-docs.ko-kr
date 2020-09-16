@@ -1,4 +1,5 @@
 ---
+description: prepareStatement 메서드(java.lang.String)
 title: prepareStatement 메서드(java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/07/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: e825765c-eb55-4800-951b-f3495da36641
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4b17c514a293f4566c3408e364acccbab721e1ce
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: f9cec12d2443e84ef3334e19253a64ff60fea1c9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80923134"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88432865"
 ---
 # <a name="preparestatement-method-javalangstring"></a>prepareStatement 메서드(java.lang.String)
 
@@ -37,7 +38,7 @@ public java.sql.PreparedStatement prepareStatement(java.lang.String sql)
 
 SQL 문이 포함된 **String**입니다.
 
-## <a name="return-value"></a>Return Value
+## <a name="return-value"></a>반환 값
 PreparedStatement 개체입니다.
 
 ## <a name="exceptions"></a>예외  

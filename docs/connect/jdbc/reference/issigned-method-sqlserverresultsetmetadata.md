@@ -1,4 +1,5 @@
 ---
+description: isSigned 메서드(SQLServerResultSetMetaData)
 title: isSigned 메서드(SQLServerResultSetMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 1d16672f-1515-4255-8b20-e7911c999f60
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 5076df102018bddf17f3484b24f31b23672c35a1
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 9639b4511a65d563a1ba7168aadbe80ee363b8b9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80925034"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88433385"
 ---
 # <a name="issigned-method-sqlserverresultsetmetadata"></a>isSigned 메서드(SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +40,7 @@ public boolean isSigned(int column)
   
  열 인덱스를 나타내는 **int**입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
  열에 부호 있는 숫자가 들어 있으면 **true**이고, 그렇지 않으면 **false**입니다.  
   
 ## <a name="exceptions"></a>예외  

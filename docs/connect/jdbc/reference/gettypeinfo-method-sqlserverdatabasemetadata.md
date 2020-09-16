@@ -1,4 +1,5 @@
 ---
+description: getTypeInfo 메서드(SQLServerDatabaseMetaData)
 title: getTypeInfo 메서드(SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,14 +14,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 23208f01-c1bf-4235-b29c-9051d3df59a3
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: cb9b1b632d5a17b7c8f497e30a4f033932f09b33
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: f58266a7b90b88c49aabfb60062e396181f8dde7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67978508"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88434015"
 ---
 # <a name="gettypeinfo-method-sqlserverdatabasemetadata"></a>getTypeInfo 메서드(SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -45,7 +46,7 @@ public java.sql.ResultSet getTypeInfo()
   
  getTypeInfo 메서드에서 반환되는 결과 집합에는 다음 정보가 포함됩니다.  
   
-|속성|Type|Description|  
+|이름|Type|설명|  
 |----------|----------|-----------------|  
 |TYPE_NAME|**String**|데이터 형식의 이름입니다.|  
 |DATA_TYPE|**short**|java.sql.Types의 SQL 데이터 형식입니다.|  
@@ -55,7 +56,7 @@ public java.sql.ResultSet getTypeInfo()
 |CREATE_PARAMS|**String**|데이터 형식의 생성 매개 변수에 대한 설명입니다.|  
 |NULLABLE|**short**|열에 null 값이 포함될 수 있는지 여부를 나타냅니다. 다음 값 중 하나일 수 있습니다.<br /><br /> typeNoNulls(0)<br /><br /> typeNullable(1)<br /><br /> typeNullableUnknown(2)|  
 |CASE_SENSITIVE|**boolean**|데이터 형식이 대/소문자를 구분하는지 여부를 나타냅니다. 데이터 형식이 대/소문자를 구분하면 “**true**”이고, 그렇지 않으면 “**false**”입니다.|  
-|SEARCHABLE|**short**|SQL WHERE 절에 열을 사용할 수 있는지 여부를 나타냅니다. 다음 값 중 하나일 수 있습니다.<br /><br /> typePredNone(0)<br /><br /> typePredChar(1)<br /><br /> typePredBasic(2)<br /><br /> typeSeachable(3)|  
+|검색 가능|**short**|SQL WHERE 절에 열을 사용할 수 있는지 여부를 나타냅니다. 다음 값 중 하나일 수 있습니다.<br /><br /> typePredNone(0)<br /><br /> typePredChar(1)<br /><br /> typePredBasic(2)<br /><br /> typeSeachable(3)|  
 |UNSIGNED_ATTRIBUTE|**boolean**|데이터 형식의 부호를 나타냅니다. 형식에 부호가 없으면 “**true**”이고, 그렇지 않으면 “**false**”입니다.|  
 |FIXED_PREC_SCALE|**boolean**|데이터 형식이 money 값일 수 있음을 나타냅니다. 데이터 형식이 money 형식이면 “**true**”이고, 그렇지 않으면 “**false**”입니다.|  
 |AUTO_INCREMENT|**boolean**|데이터 형식이 자동으로 증가될 수 있음을 나타냅니다. 데이터 형식이 자동으로 증가될 수 있으면 “**true**”이고, 그렇지 않으면 “**false**”입니다.|  

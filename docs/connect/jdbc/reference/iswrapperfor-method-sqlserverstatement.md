@@ -1,4 +1,5 @@
 ---
+description: isWrapperFor 메서드(SQLServerStatement)
 title: isWrapperFor 메서드(SQLServerStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 53f3291f-d43a-476b-a656-d86168dacf6c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e98b901663a63b353e14ae31308e244a55a78369
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: a4eaf93ee14ced763099ae6080775df5eac2d750
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80915129"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88433305"
 ---
 # <a name="iswrapperfor-method-sqlserverstatement"></a>isWrapperFor 메서드(SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -34,7 +35,7 @@ public boolean isWrapperFor(Class iface)
   
  인터페이스를 정의하는 **클래스**입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
  이 개체가 인터페이스를 구현하거나 인터페이스를 구현하는 개체를 래핑하면 **true**이고, 그렇지 않으면 **false**입니다.  
   
 ## <a name="exceptions"></a>예외  
@@ -47,7 +48,7 @@ public boolean isWrapperFor(Class iface)
   
  예제 코드는 [대규모 데이터 업데이트 샘플](../../../connect/jdbc/updating-large-data-sample.md)을 참조하세요.  
   
- 자세한 내용은 [래퍼와 인터페이스](../../../connect/jdbc/wrappers-and-interfaces.md)를 참조하세요.  
+ 자세한 내용은 [래퍼 및 인터페이스](../../../connect/jdbc/wrappers-and-interfaces.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [unwrap 메서드&#40;SQLServerStatement&#41;](../../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md)   

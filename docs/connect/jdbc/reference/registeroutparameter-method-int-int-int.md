@@ -1,4 +1,5 @@
 ---
+description: registerOutParameter 메서드(int, int, int)
 title: registerOutParameter 메서드(int, int, int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: d902d4e0-881f-4182-814c-0ede9a8da7fd
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 819f61774afc02a9585e5d6476524634f9248112
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 1c5e8a296768d6c6e26e3ca7ce6e5bba52167608
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920664"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88432855"
 ---
 # <a name="registeroutparameter-method-int-int-int"></a>registerOutParameter 메서드(int, int, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

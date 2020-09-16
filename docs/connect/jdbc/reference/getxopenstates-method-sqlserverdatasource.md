@@ -1,4 +1,5 @@
 ---
+description: getXopenStates 메서드(SQLServerDataSource)
 title: getXopenStates 메서드(SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: de6fdf6b-8345-4490-b35e-7115b61e782e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c4367bd0df42400d2fd9352ae86dc43e4e98b801
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 654b7a56a98b0a70599e21ef55a12d4db420890d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80910129"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88433715"
 ---
 # <a name="getxopenstates-method-sqlserverdatasource"></a>getXopenStates 메서드(SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

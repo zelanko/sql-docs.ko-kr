@@ -1,4 +1,5 @@
 ---
+description: getTrustManagerConstructorArg 메서드(SQLServerDataSource)
 title: getTrustManagerConstructorArg 메서드(SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2018
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: ''
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f017b63d24794ae6b754f0b864b31180da7e5321
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: edda767e361b540833babd0125f3f13ad5f2fb08
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80911266"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88433975"
 ---
 # <a name="gettrustmanagerconstructorarg-method-sqlserverdatasource"></a>getTrustManagerConstructorArg 메서드(SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

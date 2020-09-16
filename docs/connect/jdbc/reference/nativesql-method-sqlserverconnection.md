@@ -1,4 +1,5 @@
 ---
+description: nativeSQL 메서드(SQLServerConnection)
 title: nativeSQL 메서드(SQLServerConnection) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 2188a6e1-792f-47bd-b207-1d01741231b2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8b277bd02624ea22030cb36c54588476ffe8d058
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 0aeaf5519924c96254b7c24526fec86b8363e457
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80914780"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88433225"
 ---
 # <a name="nativesql-method-sqlserverconnection"></a>nativeSQL 메서드(SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +43,7 @@ public java.lang.String nativeSQL(java.lang.String sql)
   
  SQL 문이 포함된 **String**입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
  변환된 SQL 문이 들어 있는 **String**입니다.  
   
 ## <a name="exceptions"></a>예외  

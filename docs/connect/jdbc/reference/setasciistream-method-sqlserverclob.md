@@ -1,4 +1,5 @@
 ---
+description: setAsciiStream 메서드(SQLServerClob)
 title: setAsciiStream 메서드(SQLServerClob) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 6e1779df-3b2a-41d1-8dca-99692cc9da14
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 665696770d4a683bc67aa469ff0e1b27a8378615
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 80438309cf2e8ee2368762197b0617b2443bc42d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80921952"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88432585"
 ---
 # <a name="setasciistream-method-sqlserverclob"></a>setAsciiStream 메서드(SQLServerClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +40,7 @@ public java.io.OutputStream setAsciiStream(long pos)
   
  CLOB 개체에 쓰기 시작할 위치입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
  ASCII 인코딩 문자를 쓸 수 있는 스트림입니다.  
   
 ## <a name="exceptions"></a>예외  

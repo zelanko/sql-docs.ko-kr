@@ -1,4 +1,5 @@
 ---
+description: position 메서드(java.sql.NClob, long)
 title: position 메서드(java.sql.NClob, long) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: f2354278-d128-4cf4-a170-22c05fcb763b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ed9313f31d30308b448381276608e119f279ea2a
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: e810a05d5c289babe665a398f27a670349c2b304
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80914155"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88433015"
 ---
 # <a name="position-method-javasqlnclob-long"></a>position 메서드(java.sql.NClob, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +40,7 @@ long position(java.sql.NClob searchstr,
   
  검색을 시작할 위치이며, 첫 번째 위치는 1입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
  부분 문자열이 나타나는 위치이며, 부분 문자열이 없으면 -1입니다. 첫 번째 위치는 1입니다.  
   
 ## <a name="exceptions"></a>예외  

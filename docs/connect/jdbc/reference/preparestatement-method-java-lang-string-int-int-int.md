@@ -1,4 +1,5 @@
 ---
+description: prepareStatement 메서드(java.lang.String, int, int, int)
 title: prepareStatement 메서드(java.lang.String, int, int, int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,14 +14,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: b78d2192-f315-4c45-9051-c77059e2c3f4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4a47ac1202ec73c15198b9b6f3c87ee53e027c83
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 644b5e0f1ff37ba3e955b0f74096d47df10bd01a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67976189"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88432925"
 ---
 # <a name="preparestatement-method-javalangstring-int-int-int"></a>prepareStatement 메서드(java.lang.String, int, int, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -54,7 +55,7 @@ public java.sql.PreparedStatement prepareStatement(java.lang.String sql,
   
  결과 집합 유지 기능을 나타내는 **int**입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
  PreparedStatement 개체입니다.  
   
 ## <a name="exceptions"></a>예외  

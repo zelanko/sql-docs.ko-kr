@@ -1,4 +1,5 @@
 ---
+description: position 메서드(java.lang.String, long)(SQLServerNClob)
 title: position 메서드(java.lang.String, long)(SQLServerNClob) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -8,14 +9,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 46d4beec-831a-449f-98b6-322a80cc499a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4dd9e30039b0d5ef429b8e729ce36f7b085e5cfc
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: a16db92eb2181cfe6db2ee9e6b1c3039acb6df93
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67976459"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88433055"
 ---
 # <a name="position-method-javalangstring-long-sqlservernclob"></a>position 메서드(java.lang.String, long)(SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +40,7 @@ public long position(java.lang.String searchstr,
   
  검색을 시작할 위치이며, 첫 번째 위치는 1입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
  부분 문자열이 나타나는 위치이며, 부분 문자열이 없으면 -1입니다. 첫 번째 위치는 1입니다.  
   
 ## <a name="exceptions"></a>예외  

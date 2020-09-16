@@ -1,4 +1,5 @@
 ---
+description: ISQLServerDataSource 인터페이스
 title: ISQLServerDataSource 인터페이스 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ba1d3242-19ca-4321-83fe-867a4f69f1d4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a1d8df253dad8f8315ba2744f8234f20a1b11d52
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: dce7958853170b8a72e86cdc0cae1b61e32ef666
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924726"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88433505"
 ---
 # <a name="isqlserverdatasource-interface"></a>ISQLServerDataSource 인터페이스
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,7 +39,7 @@ public interface ISQLServerDataSource
   
  이 인터페이스는 다음 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 관련 메서드를 노출합니다.  
   
-|방법|자세한 내용은 다음을 참조하세요.|  
+|메서드|자세한 내용은 다음을 참조하세요.|  
 |------------|-------------------------------|  
 |public String getApplicationName()|[getApplicationName](../../../connect/jdbc/reference/getapplicationname-method-sqlserverdatasource.md)|  
 |public String getDatabaseName()|[getDatabaseName](../../../connect/jdbc/reference/getdatabasename-method-sqlserverdatasource.md)|  

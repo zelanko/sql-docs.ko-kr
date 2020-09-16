@@ -1,4 +1,5 @@
 ---
+description: isSearchable 메서드(SQLServerResultSetMetaData)
 title: isSearchable 메서드(SQLServerResultSetMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 10cf54f9-ef42-475e-8397-790306934573
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 258e37ba0a901bf434ca7805315cdee36e5b1bb5
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: b10413932af2a231a9b3a9218bf887f9086f053d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80925055"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88433405"
 ---
 # <a name="issearchable-method-sqlserverresultsetmetadata"></a>isSearchable 메서드(SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +40,7 @@ public boolean isSearchable(int column)
   
  열 인덱스를 나타내는 **int**입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
  WHERE 절에 해당 열을 사용할 수 있으면 **true**이고, 그렇지 않으면 **false**입니다.  
   
 ## <a name="exceptions"></a>예외  

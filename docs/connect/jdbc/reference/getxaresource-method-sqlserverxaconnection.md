@@ -1,4 +1,5 @@
 ---
+description: getXAResource 메서드(SQLServerXAConnection)
 title: getXAResource 메서드(SQLServerXAConnection) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,14 +14,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: e1d2828f-fd20-44b0-b796-dc70f77c5b03
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c3d4b2132c3bbcf5612faa5f319a5358f158e2b7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 5a523a1a1b731288632c969baee1170408734a81
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67977981"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88433705"
 ---
 # <a name="getxaresource-method-sqlserverxaconnection"></a>getXAResource 메서드(SQLServerXAConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

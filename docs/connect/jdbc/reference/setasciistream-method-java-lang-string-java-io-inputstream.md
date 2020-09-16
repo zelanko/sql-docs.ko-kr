@@ -1,4 +1,5 @@
 ---
+description: setAsciiStream 메서드(java.lang.String, java.io.InputStream)
 title: 입력 스트림에 대한 setAsciiStream 메서드 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: dc2caa44-9eb5-4ed8-a889-36148b50901d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b8a50e1b93ce1fead2f69dc3680bbb90d2bf3170
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 2fef33d5b60bef1f26fde6711cf849d6fab7487f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80921966"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88432575"
 ---
 # <a name="setasciistream-method-javalangstring-javaioinputstream"></a>setAsciiStream 메서드(java.lang.String, java.io.InputStream)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
