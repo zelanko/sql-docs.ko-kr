@@ -75,7 +75,7 @@
         - name: PowerShell 확장
           href: powershell-extension.md
         - name: Managed Instance 확장
-          href: azure-sql-managed-instance-extension.md
+          href: extensions/azure-sql-managed-instance-extension.md
         - name: SandDance 확장
           href: sanddance-extension.md
     - name: 확장 작성
