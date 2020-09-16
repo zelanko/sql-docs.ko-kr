@@ -1,4 +1,5 @@
 ---
+description: SQL Server Management Studio를 사용하여 데이터베이스 프로젝트 빌드
 title: 데이터베이스 프로젝트 빌드
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -15,12 +16,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: f31fd59b604ad082143dc5189434cc24c660861f
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: dffd92620f8975b41f8ea8c13a956c3984e56ea3
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000198"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480103"
 ---
 # <a name="build-database-projects-by-using-sql-server-management-studio"></a>SQL Server Management Studio를 사용하여 데이터베이스 프로젝트 빌드
 
@@ -68,6 +69,5 @@ ms.locfileid: "86000198"
   
 ## <a name="see-also"></a>참고 항목  
 [SQL Server Management Studio 사용](../ssms/use-sql-server-management-studio.md)  
-[SQL Server Management Studio에서 쿼리 작성, 분석 및 편집](https://msdn.microsoft.com/062051e4-4b77-4969-98ae-d2547c24ce3e)  
 [솔루션&#40;SQL Server Management Studio&#41;](../ssms/solution/solutions-sql-server-management-studio.md)  
   

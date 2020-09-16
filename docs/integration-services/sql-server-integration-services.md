@@ -20,12 +20,12 @@ helpviewer_keywords:
 - Data Transformation Services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a4a512b91bbac1a84004643de2738468f21ee984
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: ab2ad7c0e824332d59f0c724c835b1f5fedfeb97
+ms.sourcegitcommit: 04fb4c2d7ccddd30745b334b319d9d2dd34325d6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87248671"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89570302"
 ---
 # <a name="sql-server-integration-services"></a>SQL Server Integration Services
 
@@ -46,7 +46,7 @@ SQL Server [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]는 엔터�
 SQL Server에 SQL Server Integration Services를 설치하는 방법과 추가 다운로드에 대한 자세한 내용은 [Integration Services 설치](install-windows/install-integration-services.md)를 참조하세요.
 
 ##  <a name="info_tip-resources"></a>![info_tip](../sql-server/media/info-tip.png) 리소스
--   [SSIS 포럼에서 도움말 보기](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlintegrationservices)
+-   [SSIS 포럼에서 도움말 보기](https://docs.microsoft.com/answers/topics/sql-server-integration-services.html)
 -   [Stack Overflow에서 도움말 보기](https://stackoverflow.com/questions/tagged/ssis)  
 -   [SSIS 팀 블로그 수행](https://blogs.msdn.microsoft.com/ssis/)
 -   [문제 보고 및 기능 요청](https://feedback.azure.com/forums/908035-sql-server)

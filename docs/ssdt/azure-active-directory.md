@@ -10,12 +10,12 @@ reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 10/28/2019
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 8be8ec4b61c42c0a25c01a6511b5bf69da6a47fd
-ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
+ms.openlocfilehash: f35d9ad1cf571708e547924d75efc9522db21cc1
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/29/2020
-ms.locfileid: "85519133"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480847"
 ---
 # <a name="azure-active-directory-support-in-sql-server-data-tools-ssdt"></a>SSDT(SQL Server Data Tools)의 Azure Active Directory 지원
 
@@ -89,6 +89,6 @@ MFA 방법을 지정하면 **사용자 이름**을 지정해야 하며 **암호*
 [다단계 인증](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication)  
 [SQL Database에서 Azure Active Directory 인증 ](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure)  
 [SSDT MSDN 포럼](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=ssdt)  
-[SSDT 팀 블로그](https://blogs.msdn.com/b/ssdt/)  
+[SSDT 팀 블로그](https://docs.microsoft.com/archive/blogs/ssdt/)  
 [DACFx API 참조](https://msdn.microsoft.com/library/dn645454.aspx)  
 [SSMS(SQL Server Management Studio) 다운로드](../ssms/download-sql-server-management-studio-ssms.md)  

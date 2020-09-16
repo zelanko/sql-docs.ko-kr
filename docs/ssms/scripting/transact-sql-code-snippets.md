@@ -2,7 +2,7 @@
 title: Transact-SQL 코드 조각
 description: Transact-SQL 코드 조각을 사용하여 용이하게 코드를 작성할 수 있습니다. 여기에서 코드 조각 태스크 목록과 각 태스크를 설명하는 문서에 대한 링크를 확인할 수 있습니다.
 ms.prod: sql
-ms.technology: scripting
+ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: 12834855-535a-4102-8b19-5d18b4080926
 author: markingmyname
@@ -11,12 +11,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/16/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1b2986e68cf58afaab0d0254f29ca6b0124af126
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: a70d930b53ac4c43428f2bb0dbe0da26ab5fbfc1
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246222"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480728"
 ---
 # <a name="transact-sql-code-snippets"></a>Transact-SQL 코드 조각
 
@@ -35,4 +35,4 @@ ms.locfileid: "87246222"
   
 ## <a name="see-also"></a>참고 항목
 
-[쿼리 및 텍스트 편집기&#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)
+[쿼리 및 텍스트 편집기&#40;SQL Server Management Studio&#41;](https://docs.microsoft.com/sql/ssms/f1-help/database-engine-query-editor-sql-server-management-studio?view=sql-server-ver15)

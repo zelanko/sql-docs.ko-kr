@@ -1,4 +1,5 @@
 ---
+description: 옵션(환경 - 글꼴 및 색 페이지)
 title: 옵션(환경 - 글꼴 및 색 페이지)
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ea3aa222-538d-485f-99dc-01eb02cdcfea
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fac8e4cdb99d19da39f60585db3f77a27975983a
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 8981ada42e88eadcb263e01dd65f1b2cf9015852
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011835"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480235"
 ---
 # <a name="options-environment---fonts-and-colors-page"></a>옵션(환경 - 글꼴 및 색 페이지)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -83,5 +84,3 @@ ms.locfileid: "86011835"
   
 ## <a name="see-also"></a>참고 항목  
 [코드 편집기의 코드 색 구분](../../relational-databases/scripting/color-coding-in-query-editors.md)  
-[옵션(텍스트 편집기/편집기 탭 및 상태 표시줄 페이지)](https://msdn.microsoft.com/e4815678-7885-4631-878f-c6a2b857ee05)  
-  

@@ -14,12 +14,12 @@ ms.assetid: e2bd3de7-674c-4ea7-8d53-bb40bba86fae
 author: rothja
 ms.author: jroth
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a8ed0a9892110f4469a9adeb4d586c8eec7f081c
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: a54c7de35f9707701213488a4f51d23d5e314417
+ms.sourcegitcommit: 04fb4c2d7ccddd30745b334b319d9d2dd34325d6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111010"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89570312"
 ---
 # <a name="sql-server-2008-r2-sp2-release-notes"></a>SQL Server 2008 R2 SP2 Release Notes
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -31,7 +31,7 @@ DMV(동적 관리 뷰) **sys.dm_db_stats_properties**. 이 DMV를 사용하여 �
 ## <a name="20-before-you-install"></a>2.0 설치 전 준비 사항  
 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 업데이트 설치 방법에 대한 자세한 내용은 [SQL Server 2008 R2 서비스 설명서](https://msdn.microsoft.com/library/dd638062(SQL.105).aspx)를 참조하세요.  
   
-SQL Server 2008 R2를 시작하고 설치하는 방법은 SQL Server 2008 R2 추가 정보를 참조하십시오. 이 추가 정보 문서는 설치 미디어에서 다운로드할 수 있습니다. [SQL Server 포럼](https://social.msdn.microsoft.com/Forums/category/sqlserver/)에서 자세한 정보를 찾을 수도 있습니다.
+SQL Server 2008 R2를 시작하고 설치하는 방법은 SQL Server 2008 R2 추가 정보를 참조하십시오. 이 추가 정보 문서는 설치 미디어에서 다운로드할 수 있습니다.
   
 ### <a name="21-choose-the-correct-file-to-download-and-install"></a>2.1 다운로드 및 설치할 올바른 파일 선택  
 다음 표를 사용하여 다운로드 및 설치할 파일을 결정합니다. 서비스 팩을 설치하기 전에 올바른 시스템 요구 사항을 갖추고 있는지 확인합니다. 시스템 요구 사항은 표에 링크되어 있는 다운로드 페이지에서 확인할 수 있습니다.  

@@ -5,7 +5,7 @@ ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.technology: scripting
+ms.technology: ssms
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,12 +17,12 @@ ms.assetid: 9978a884-59a2-4e7f-a82a-335149f3a261
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 42305b48b6446788e3e8ffbb11f13ea1a64346cc
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: 59c89e2923d9f8b4e67da94a8455cc8a441de61a
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87122994"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480213"
 ---
 # <a name="database-engine-scripting"></a>데이터베이스 엔진 스크립팅
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -74,7 +74,7 @@ ms.locfileid: "87122994"
   
 |태스크 설명|항목|  
 |----------------------|-----------|  
-|[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 에서 코드 및 텍스트 편집기를 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트를 대화식으로 개발, 디버그 및 실행하는 방법에 대해 설명합니다.|[쿼리 및 텍스트 편집기&#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)|  
+|[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 에서 코드 및 텍스트 편집기를 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트를 대화식으로 개발, 디버그 및 실행하는 방법에 대해 설명합니다.|[쿼리 및 텍스트 편집기&#40;SQL Server Management Studio&#41;](https://docs.microsoft.com/sql/ssms/f1-help/database-engine-query-editor-sql-server-management-studio?view=sql-server-ver15)|  
 |스크립트를 대화식으로 개발하는 기능을 포함하여 **유틸리티와 함께 실행되도록** 유틸리티를 사용하여 명령 프롬프트에서 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트를 실행하는 방법에 대해 설명합니다.|[sqlcmd 방법 도움말 항목](https://msdn.microsoft.com/library/dd7a2d2b-6327-4d77-ac5a-580d36073ad4)|  
 |SQL Server 구성 요소를 Windows PowerShell 환경에 통합한 다음 SQL Server 인스턴스 및 개체를 관리하는 PowerShell 스크립트를 작성하는 방법에 대해 설명합니다.|[SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md)|  
 |**스크립트 생성 및 게시 마법사** 를 사용하여 데이터베이스에서 하나 이상의 개체를 다시 만드는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트를 작성하는 방법에 대해 설명합니다.|[스크립트 생성&#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/generate-scripts-sql-server-management-studio.md)|  
