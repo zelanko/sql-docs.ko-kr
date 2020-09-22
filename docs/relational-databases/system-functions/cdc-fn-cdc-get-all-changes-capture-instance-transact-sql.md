@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: c6bad147-1449-4e20-a42e-b51aed76963c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c3877214c5df16b8c9bf48f9ee20bd2ec83109d7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: aa461859dcc7d2adc359139e4740ea9272161bf8
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88397569"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90989946"
 ---
 # <a name="cdcfn_cdc_get_all_changes_ltcapture_instancegt--transact-sql"></a>cdc.fn_cdc_get_all_changes_&lt;capture_instance&gt;  (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,7 +54,7 @@ cdc.fn_cdc_get_all_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
  *to_lsn*  
  결과 집합에 포함할 LSN 범위의 상위 엔드포인트를 나타내는 LSN 값입니다. *to_lsn* 는 **binary (10)** 입니다.  
   
- [&#91;capture_instance&#93;_CT](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md) 변경 테이블의 행만 **_ _ $ start_lsn** *from_lsn 보다* 작거나 같은 값을 *to_lsn* 하는 행만 결과 집합에 포함 됩니다.  
+ [&#91;capture_instance&#93;_CT](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md) 변경 테이블의 행만 **_ _ $ start_lsn** *from_lsn* 보다 크거나 같고 *to_lsn* 보다 작거나 같은 행만 결과 집합에 포함 됩니다.  
   
  <row_filter_option>:: = {all | 모든 업데이트 이전}  
  결과 집합에 반환되는 행과 메타데이터 열의 내용을 제어하는 옵션입니다.  
@@ -85,7 +85,7 @@ cdc.fn_cdc_get_all_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
   
  **__ $ Operation** 이 1 이거나 **__ $ operation** 이 3 인 경우에는 **image**, **text**및 **ntext** 데이터 형식의 열에 항상 NULL 값이 할당 됩니다. 업데이트 중에 열이 변경 되지 **않은 경우** **varbinary (max)**, **varchar (max)** 또는 **nvarchar (MAX)** 데이터 형식의 열에는 NULL 값이 할당 됩니다. **__ $ Operation** 이 1 인 경우에는 삭제 시 이러한 열에 해당 값이 할당 됩니다. 캡처 인스턴스에 포함된 계산 열은 항상 NULL 값을 갖습니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]변경 데이터 캡처 쿼리 함수를 사용 하는 방법을 보여 주는 몇 가지 템플릿을 사용할 수 있습니다. 이러한 템플릿은의 **보기** 메뉴에서 사용할 수 있습니다 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] . 자세한 내용은 [템플릿 탐색기](../../ssms/template/template-explorer.md)를 참조 하세요.  
   
  이 예에서는 `Enumerate All Changes for Valid Range Template`을 보여 줍니다. 이 템플릿은 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스의 HumanResources.Department 원본 테이블에 대해 정의된 `cdc.fn_cdc_get_all_changes_HR_Department` 함수를 사용하여 `HR_Department` 캡처 인스턴스에서 현재 사용할 수 있는 모든 변경 내용을 보고합니다.  

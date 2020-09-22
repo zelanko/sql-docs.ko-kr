@@ -19,12 +19,12 @@ ms.assetid: 6f016da6-dfee-4228-8b0d-7cd8e7d5a354
 author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: f1e2134b008d07a12043c4b1bd4fbf6dc0986d90
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 5ca659670cb68bafa10f758bc2a7997243f5c1a8
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546169"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90990130"
 ---
 # <a name="sp_describe_undeclared_parameters-transact-sql"></a>sp_describe_undeclared_parameters(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)] 
@@ -43,7 +43,7 @@ sp_describe_undeclared_parameters
 ```  
 
 > [!Note] 
-> Azure Synapse Analytics (이전의 SQL DW)에서이 저장 프로시저를 사용 하려면 데이터베이스의 호환성 수준이 10 보다 커야 합니다. 
+> Azure Synapse Analytics (이전의 SQL DW)에서이 저장 프로시저를 사용 하려면 데이터베이스 호환성 수준을 20 이상으로 설정 합니다.   옵트아웃 하려면 데이터베이스 호환성 수준을 10으로 변경 합니다.
 
 ## <a name="arguments"></a>인수  
 `[ \@tsql = ] 'Transact-SQL\_batch'` 하나 이상의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문입니다. *SQL_batch* 는 **nvarchar (**_n_**)** 또는 **nvarchar (max)** 일 수 있습니다.  
@@ -170,7 +170,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
 -   단순 추론  
   
-     E ( \@ p) = \@ p 및 TT (p)가 있는 경우 (예 \@ : \@ p가 2 단계 시작 부분에 나열 된 식 중 하나에 대 한 인수) 이면 형식 추론 알고리즘에서 p의 데이터 형식을 \@ TT ( \@ p)로 추론 합니다. 예를 들면 다음과 같습니다.  
+     E ( \@ p) = \@ p 및 TT (p)가 있는 경우 (예 \@ : \@ p가 2 단계 시작 부분에 나열 된 식 중 하나에 대 한 인수) 이면 형식 추론 알고리즘에서 p의 데이터 형식을 \@ TT ( \@ p)로 추론 합니다. 다음은 그 예입니다.   
   
     ```sql
     SELECT * FROM t WHERE c1 = @p1 AND @p2 = dbo.tbl(@p3)  
@@ -218,7 +218,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
 1.  E (p)에서 가장 적은 수의 암시적 변환을 생성 하는 데이터 형식이 \@ 선택 됩니다. 특정 데이터 형식이 E (p)에 대해 TT (p)와 다른 데이터 형식을 생성 하는 경우 \@ \@ 형식 추론 알고리즘은이를 e (p)의 데이터 형식에서 \@ tt (p)로 추가 암시적 변환으로 간주 합니다 \@ .  
   
-     예를 들면 다음과 같습니다.  
+     다음은 그 예입니다.   
   
     ```sql
     SELECT * FROM t WHERE Col_Int = Col_Int + @p  
@@ -226,7 +226,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
      이 경우 E ( \@ p)는 Col_Int + p이 \@ 고 TT ( \@ p)는 **Int**입니다. **int** 는 \@ 암시적 변환을 생성 하지 않으므로 p에 대해 선택 됩니다. 다른 데이터 형식은 하나 이상의 암시적 변환을 생성합니다.  
   
-2.  변환 수가 가장 적은 데이터 형식에 여러 데이터 형식이 연결된 경우 우선 순위가 가장 높은 데이터 형식이 사용됩니다. 예를 들면 다음과 같습니다.  
+2.  변환 수가 가장 적은 데이터 형식에 여러 데이터 형식이 연결된 경우 우선 순위가 가장 높은 데이터 형식이 사용됩니다. 예  
   
     ```sql
     SELECT * FROM t WHERE Col_Int = Col_smallint + @p  
@@ -255,7 +255,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
 ## <a name="permissions"></a>사용 권한  
  Tsql 인수를 실행할 수 있는 권한이 필요 \@ 합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 예에서는 선언되지 않은 `@id` 및 `@name` 매개 변수에 필요한 데이터 형식과 같은 정보를 반환합니다.  
   
 ```sql

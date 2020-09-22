@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 35ffdb79-a931-4271-a3bb-0cd804cf173e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6194c9374258e23e7c5a388df9424f986fc899b0
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 887730cdedd1dca884bca18bb6df449fdec2e1dc
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991574"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90989956"
 ---
 # <a name="calling-a-stored-procedure-as-a-method-on-a-connection-object"></a>연결 개체의 메서드로 저장 프로시저 호출
 저장 프로시저는 연결 된 열린 **연결** 개체의 네이티브 메서드인 것 처럼 호출할 수 있습니다. 이는 **Connection** 개체에서 명명 된 명령을 호출 하는 것과 유사 합니다.  
@@ -62,7 +62,9 @@ Set objComm.ActiveConnection = objConn
 ' the active connection object...  
 '    "ALFKI" is the required input parameter,  
 '    objRs is the resultant output variable.  
-  
+objComm(1) = "ALFKI"
+Set objRs = objComm.Execute
+
 ' Display the result.  
 Debug.Print "Results returned from sp_CustOrdersOrders for ALFKI: "  
 Do While Not objRs.EOF  
