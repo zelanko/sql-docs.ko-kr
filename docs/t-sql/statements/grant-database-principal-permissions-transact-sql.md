@@ -27,12 +27,12 @@ ms.assetid: 012588a2-cbe1-48f0-a731-b4a2b83203d5
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 81488cc34df6c86d47473e522fcc5ca9e5900ed8
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 0e46ee18c46206470e3f1286ffb2e94f81c4cea8
+ms.sourcegitcommit: 76d31f456982dabb226239b424eaa7139d8cc6c1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484097"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90570604"
 ---
 # <a name="grant-database-principal-permissions-transact-sql"></a>GRANT 데이터베이스 보안 주체 사용 권한(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -174,7 +174,7 @@ GRANT permission [ ,...n ]
 ### <a name="a-granting-control-permission-on-a-user-to-another-user"></a>A. 다른 사용자에게 사용자에 대한 CONTROL 권한 부여  
  다음 예에서는 사용자 `CONTROL`에게 사용자 `AdventureWorks2012`의 `Wanida`에 대한 `RolandX` 권한을 부여합니다.  
   
-```  
+```sql  
 GRANT CONTROL ON USER::Wanida TO RolandX;  
 GO  
 ```  
@@ -182,7 +182,7 @@ GO
 ### <a name="b-granting-view-definition-permission-on-a-role-to-a-user-with-grant-option"></a>B. GRANT OPTION을 지정하여 사용자에게 역할에 대한 VIEW DEFINITION 권한 부여  
  다음 예에서는 `VIEW DEFINITION`을 지정하여 데이터베이스 사용자 `AdventureWorks2012`에게 `SammamishParking` 역할 `GRANT OPTION`에 대한 `JinghaoLiu` 권한을 부여합니다.  
   
-```  
+```sql  
 GRANT VIEW DEFINITION ON ROLE::SammamishParking   
     TO JinghaoLiu WITH GRANT OPTION;  
 GO  
@@ -193,7 +193,7 @@ GO
   
 **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
-```  
+```sql  
 GRANT IMPERSONATE ON USER::HamithaL TO AccountsPayable17;  
 GO    
 ```  

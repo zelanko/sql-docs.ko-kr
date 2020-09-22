@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 876b6348-fb29-49e1-befc-4217979f6416
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: efef9df2254c9f0c27e23733e24afaddf23f4435
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 95c7f778abe9417a108e4df6982b73d3037f5ae9
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88479210"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688769"
 ---
 # <a name="alter-cryptographic-provider-transact-sql"></a>ALTER CRYPTOGRAPHIC PROVIDER(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "88479210"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```syntaxsql  
 ALTER CRYPTOGRAPHIC PROVIDER provider_name   
     [ FROM FILE = path_of_DLL ]  
     ENABLE | DISABLE  
@@ -83,21 +83,21 @@ EKM 공급자 dll을 만드는 데 사용한 헤더 파일이 오래된 경우�
  다음 예에서는 `SecurityProvider`의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]이라는 암호화 공급자를 새 버전의 .dll 파일로 변경합니다. 새 버전의 이름은 `c:\SecurityProvider\SecurityProvider_v2.dll`이며 서버에 설치됩니다. 공급자의 인증서는 서버에 설치되어야 합니다.  
   
 1. 공급자가 업그레이드를 수행하지 못하도록 설정합니다. 이렇게 하면 모든 열려 있는 암호화 세션이 종료됩니다.  
-```  
+```sql  
 ALTER CRYPTOGRAPHIC PROVIDER SecurityProvider   
 DISABLE;  
 GO  
 ```  
 
 2. 공급자 .dll 파일을 업그레이드합니다. GUID는 이전 버전과 동일해야 하지만 버전이 다를 수 있습니다.  
-```  
+```sql  
 ALTER CRYPTOGRAPHIC PROVIDER SecurityProvider  
 FROM FILE = 'c:\SecurityProvider\SecurityProvider_v2.dll';  
 GO  
 ```  
 
 3. 업그레이드된 공급자를 사용 하도록 설정합니다.   
-```  
+```sql  
 ALTER CRYPTOGRAPHIC PROVIDER SecurityProvider   
 ENABLE;  
 GO  

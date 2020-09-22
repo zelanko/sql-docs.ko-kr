@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: decc0760-029e-4baf-96c9-4a64073df1c2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 919b355458d7a3b975906f5bc6f5cb72322fdc2a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: ae8e04d348f6a3146030d4f0bf8856b2d343b682
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89544244"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688174"
 ---
 # <a name="alter-sequence-transact-sql"></a>ALTER SEQUENCE(Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +40,6 @@ ms.locfileid: "89544244"
 ## <a name="syntax"></a>구문  
   
 ```syntaxsql
-  
 ALTER SEQUENCE [schema_name. ] sequence_name  
     [ RESTART [ WITH <constant> ] ]  
     [ INCREMENT BY <constant> ]  
@@ -93,7 +92,7 @@ ALTER SEQUENCE [schema_name. ] sequence_name
 ### <a name="permissions"></a>사용 권한  
  시퀀스에 대한 **ALTER** 권한 또는 스키마에 대한 **ALTER** 권한이 필요합니다. 시퀀스에 대한 **ALTER** 권한을 부여하려면 다음 형식으로 **ALTER ON OBJECT**를 사용합니다.  
   
-```  
+```sql  
 GRANT ALTER ON OBJECT::Test.TinySeq TO [AdventureWorks\Larry]  
 ```  
   
@@ -108,7 +107,7 @@ GRANT ALTER ON OBJECT::Test.TinySeq TO [AdventureWorks\Larry]
 ### <a name="a-altering-a-sequence"></a>A. 시퀀스 변경  
  다음 예제에서는 범위가 100에서 200 사이인 **int** 데이터 형식을 사용하여 Test라는 스키마와 TestSeq라는 시퀀스를 만듭니다. 시퀀스는 125부터 시작하여 번호가 생성될 때마다 25씩 증가합니다. 시퀀스가 순환하도록 구성되었기 때문에 값이 최대값 200을 초과하는 경우 최소값 100에서 시퀀스가 다시 시작됩니다.  
   
-```  
+```sql  
 CREATE SCHEMA Test ;  
 GO  
   
@@ -126,7 +125,7 @@ GO
   
  다음 예제에서는 범위가 50에서 200 사이가 되도록 TestSeq 시퀀스를 변경합니다. 시퀀스는 100부터 번호가 매겨지도록 다시 시작되며 번호가 생성될 때마다 50씩 증가합니다.  
   
-```  
+```sql  
 ALTER SEQUENCE Test. TestSeq  
     RESTART WITH 100  
     INCREMENT BY 50  
@@ -143,25 +142,25 @@ GO
 ### <a name="b-restarting-a-sequence"></a>B. 시퀀스 다시 시작  
  다음 예에서는 CountBy1이라는 시퀀스를 만듭니다. 이 시퀀스는 기본값을 사용합니다.  
   
-```  
+```sql  
 CREATE SEQUENCE Test.CountBy1 ;  
 ```  
   
  시퀀스 값을 생성하기 위해 다음 문을 실행합니다.  
   
-```  
+```sql  
 SELECT NEXT VALUE FOR Test.CountBy1  
 ```  
   
  **bigint** 데이터 형식의 가능한 최소값인 -9,223,372,036,854,775,808이 반환되었습니다. 시퀀스를 1부터 시작하려고 했지만 시퀀스를 만들 때 **START WITH** 절을 사용하지 않았기 때문에 이러한 결과가 발생한 것입니다. 이 오류를 해결하려면 다음 문을 실행합니다.  
   
-```  
+```sql  
 ALTER SEQUENCE Test.CountBy1 RESTART WITH 1 ;  
 ```  
   
  그런 다음 다시 다음 문을 실행하여 시퀀스 번호를 생성합니다.  
   
-```  
+```sql  
 SELECT NEXT VALUE FOR Test.CountBy1;  
 ```  
   
@@ -169,11 +168,10 @@ SELECT NEXT VALUE FOR Test.CountBy1;
   
  CountBy1 시퀀스는 기본값 NO CYCLE을 사용하여 만들었기 때문에 9,223,372,036,854,775,807 번호를 생성한 후에 작동을 중지합니다. 이후에 시퀀스 개체를 호출하면 11728 오류가 반환됩니다. 다음 문은 시퀀스 개체를 순환하도록 변경하고 캐시를 20으로 설정합니다.  
   
-```  
+```sql  
 ALTER SEQUENCE Test.CountBy1  
     CYCLE  
-    CACHE 20 ;  
-  
+    CACHE 20 ; 
 ```  
   
  이제 9,223,372,036,854,775,807에 도달한 경우 시퀀스 개체는 데이터 형식의 최소값인 -9,223,372,036,854,775,808부터 순환합니다.  

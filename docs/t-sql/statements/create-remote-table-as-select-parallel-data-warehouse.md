@@ -11,12 +11,12 @@ author: ronortloff
 ms.author: rortloff
 ms.reviewer: jrasnick
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 841c8a62a90b6d14a1ee4d20bce7b57be097e9b9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a45d59e3891e08f2ae5c5b5d64258b5ebcc371a8
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88305092"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688330"
 ---
 # <a name="create-remote-table-as-select-parallel-data-warehouse"></a>CREATE REMOTE TABLE AS SELECT(병렬 데이터 웨어하우스)
 [!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
@@ -30,7 +30,6 @@ ms.locfileid: "88305092"
 ## <a name="syntax"></a>구문  
   
 ```syntaxsql
-  
 CREATE REMOTE TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }  AT ('<connection_string>')  
     [ WITH ( BATCH_SIZE = batch_size ) ]  
     AS <select_statement>  
@@ -138,7 +137,7 @@ CREATE REMOTE TABLE { database_name.schema_name.table_name | schema_name.table_n
 ### <a name="a-creating-a-remote-table"></a>A. 원격 테이블 만들기  
  이 예제에서는 데이터베이스 `OrderReporting` 및 스키마 `Orders`에 대해 `MyOrdersTable`라는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SMP 원격 테이블을 만듭니다. `OrderReporting` 데이터베이스는 기본 포트 1433에서 수신하는 `SQLA`라는 서버에 있습니다. 서버에 대한 연결에는 암호가 `e4n8@3`인 사용자 `David`의 자격 증명을 사용합니다.  
   
-```  
+```sql  
 CREATE REMOTE TABLE OrderReporting.Orders.MyOrdersTable  
 AT ( 'Data Source = SQLA, 1433; User ID = David; Password = e4n8@3;' )  
 AS SELECT <select_criteria>;  
@@ -147,7 +146,7 @@ AS SELECT <select_criteria>;
 ### <a name="b-querying-the-sysdm_pdw_dms_workers-dmv-for-remote-table-copy-status"></a>B. 원격 테이블 복사 상태에 대해 sys.dm_pdw_dms_workers DMV 쿼리  
  이 쿼리는 원격 테이블 복사본에 대한 복사 상태를 확인하는 방법을 보여 줍니다.  
   
-```  
+```sql  
 SELECT * FROM sys.dm_pdw_dms_workers   
 WHERE type = 'PARALLEL_COPY_READER';  
 ```  
@@ -155,7 +154,7 @@ WHERE type = 'PARALLEL_COPY_READER';
 ### <a name="c-using-a-query-join-hint-with-create-remote-table"></a>C. CREATE REMOTE TABLE로 쿼리 조인 힌트 사용  
  이 쿼리는 CREATE REMOTE TABLE 문에 쿼리 조인 힌트를 사용하는 기본 구문을 보여 줍니다. 쿼리가 제어 노드에 제출된 후 컴퓨팅 노드에서 실행되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 쿼리 계획을 생성할 때 해시 조인 전략을 적용합니다. 조인 힌트 및 OPTION 절을 사용하는 방법에 대한 자세한 내용은 [OPTION 절&#40;Transact-SQL&#41;](../../t-sql/queries/option-clause-transact-sql.md)을 참조하세요.  
   
-```  
+```sql  
 USE ssawPDW;  
 CREATE REMOTE TABLE OrderReporting.Orders.MyOrdersTable  
 AT ( 'Data Source = SQLA, 1433; User ID = David; Password = e4n8@3;' )  

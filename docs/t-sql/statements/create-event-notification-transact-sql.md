@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: dbbff0e8-9e25-4f12-a1ba-e12221d16ac2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: eb1de1713fa4f4a34bcda88e2c82519e05fadb11
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: f814c52713663a1977038f772ea1fc0389e87d09
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539890"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688736"
 ---
 # <a name="create-event-notification-transact-sql"></a>CREATE EVENT NOTIFICATION(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +41,6 @@ ms.locfileid: "89539890"
 ## <a name="syntax"></a>구문  
   
 ```syntaxsql
-  
 CREATE EVENT NOTIFICATION event_notification_name   
 ON { SERVER | DATABASE | QUEUE queue_name }   
 [ WITH FAN_IN ]  
@@ -142,18 +141,21 @@ TO SERVICE 'broker_service' , { 'broker_instance_specifier' | 'current database'
 --Create a queue to receive messages.  
 CREATE QUEUE NotifyQueue ;  
 GO  
+
 --Create a service on the queue that references  
 --the event notifications contract.  
 CREATE SERVICE NotifyService  
 ON QUEUE NotifyQueue  
 ([https://schemas.microsoft.com/SQL/Notifications/PostEventNotification]);  
 GO  
+
 --Create a route on the service to define the address   
 --to which Service Broker sends messages for the service.  
 CREATE ROUTE NotifyRoute  
 WITH SERVICE_NAME = 'NotifyService',  
 ADDRESS = 'LOCAL';  
-GO  
+GO 
+
 --Create the event notification.  
 CREATE EVENT NOTIFICATION log_ddl1   
 ON SERVER   
@@ -176,7 +178,7 @@ TO SERVICE 'NotifyService',
 ### <a name="c-getting-information-about-an-event-notification-that-is-server-scoped"></a>C. 서버에 한정되는 이벤트 알림에 대한 정보 얻기  
  다음 예에서는 서버 범위를 사용하여 생성한 이벤트 알림 `sys.server_event_notifications`에 대한 메타데이터에 대해 `log_ddl1` 카탈로그 뷰를 쿼리합니다.  
   
-```  
+```sql  
 SELECT * FROM sys.server_event_notifications  
 WHERE name = 'log_ddl1';  
 ```  

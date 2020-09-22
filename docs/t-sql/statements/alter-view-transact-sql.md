@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 03eba220-13e2-49e3-bd9d-ea9df84dc28c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ddbf9a7d6d6ce28764c572d22fd5829ce4f46ada
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 9aa2c82f83e20017778a9e5096977dedeb38646d
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538154"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688600"
 ---
 # <a name="alter-view-transact-sql"></a>ALTER VIEW(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -57,7 +57,6 @@ AS select_statement
 ALTER VIEW [ schema_name . ] view_name [  ( column_name [ ,...n ] ) ]   
 AS <select_statement>   
 [;]  
-
 ``` 
   
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
@@ -120,7 +119,7 @@ AS <select_statement>
 ## <a name="examples"></a>예제  
  다음 예에서는 모든 직원 및 이들의 채용일을 포함하는 `EmployeeHireDate`라는 뷰를 만듭니다. 해당 뷰에 권한이 부여되었지만 채용일이 특정 날짜 이전인 직원을 선택하도록 요구 사항이 변경됩니다. 그러면 `ALTER VIEW`를 사용하여 기존 뷰를 바꿉니다.  
   
-```  
+```sql 
 USE AdventureWorks2012 ;  
 GO  
 CREATE VIEW HumanResources.EmployeeHireDate  
@@ -129,12 +128,11 @@ SELECT p.FirstName, p.LastName, e.HireDate
 FROM HumanResources.Employee AS e JOIN Person.Person AS  p  
 ON e.BusinessEntityID = p.BusinessEntityID ;  
 GO  
-  
 ```  
   
  뷰는 `2002`년 이전에 채용된 직원만 포함하도록 변경되어야 합니다. ALTER VIEW를 사용하지 않고 대신 해당 뷰를 삭제하거나 새로 만든 경우 이전에 사용한 GRANT 문 및 이 뷰와 관련된 권한을 처리한 다른 모든 문을 다시 입력해야 합니다.  
   
-```  
+```sql  
 ALTER VIEW HumanResources.EmployeeHireDate  
 AS  
 SELECT p.FirstName, p.LastName, e.HireDate  
@@ -142,7 +140,6 @@ FROM HumanResources.Employee AS e JOIN Person.Person AS p
 ON e.BusinessEntityID = p.BusinessEntityID  
 WHERE HireDate < CONVERT(DATETIME,'20020101',101) ;  
 GO  
-  
 ```  
   
 ## <a name="see-also"></a>참고 항목  

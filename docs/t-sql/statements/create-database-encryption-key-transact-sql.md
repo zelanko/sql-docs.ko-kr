@@ -29,12 +29,12 @@ ms.assetid: 2ee95a32-5140-41bd-9ab3-a947b9990688
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest'
-ms.openlocfilehash: 7bf86dee77c7b6667f4acafed150855060b2d9dd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e5d833b75641c20116c49a7ab4907b9cb8522ab6
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88467233"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688109"
 ---
 # <a name="create-database-encryption-key-transact-sql"></a>CREATE DATABASE ENCRYPTION KEY(Transact-SQL)
 
@@ -106,7 +106,7 @@ TDE를 사용하는 추가 예제를 보려면 [투명한 데이터 암호화 &#
   
 다음 예에서는 `AES_256` 알고리즘을 사용하여 데이터베이스 암호화 키를 만들고 `MyServerCert`라는 인증서로 프라이빗 키를 보호합니다.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 CREATE DATABASE ENCRYPTION KEY  

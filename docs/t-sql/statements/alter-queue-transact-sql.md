@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: d54aa325-8761-4cd4-8da7-acf33df12296
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fa1828f1a6c684c0028ed3ada229aca3811a88a0
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 5a8ba9a6a1dbc0f1c6e6c6312c627f83335bbe09
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541498"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688229"
 ---
 # <a name="alter-queue-transact-sql"></a>ALTER QUEUE(Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -76,7 +76,6 @@ WITH
 {  
    ( MAXDOP = max_degree_of_parallelism )  
 }  
-  
 ```  
   
 
@@ -180,14 +179,14 @@ WITH
 ### <a name="a-making-a-queue-unavailable"></a>A. 큐를 사용할 수 없게 설정  
  다음 예에서는 `ExpenseQueue` 큐에서 메시지를 받을 수 없도록 설정합니다.  
   
-```  
+```sql  
 ALTER QUEUE ExpenseQueue WITH STATUS = OFF ;  
 ```  
   
 ### <a name="b-changing-the-activation-stored-procedure"></a>B. 활성화 저장 프로시저 변경  
  다음 예에서는 큐가 시작하는 저장 프로시저를 변경합니다. 이 저장 프로시저는 `ALTER QUEUE` 문을 실행한 사용자로 실행됩니다.  
   
-```  
+```sql  
 ALTER QUEUE ExpenseQueue  
     WITH ACTIVATION (  
         PROCEDURE_NAME = new_stored_proc,  
@@ -197,14 +196,14 @@ ALTER QUEUE ExpenseQueue
 ### <a name="c-changing-the-number-of-queue-readers"></a>C. 큐 판독기 수 변경  
  다음 예에서는 이 큐에 대해 [!INCLUDE[ssSB](../../includes/sssb-md.md)]가 시작하는 저장 프로시저 인스턴스의 최대 수를 `7`로 설정합니다.  
   
-```  
+```sql  
 ALTER QUEUE ExpenseQueue WITH ACTIVATION (MAX_QUEUE_READERS = 7) ;  
 ```  
   
 ### <a name="d-changing-the-activation-stored-procedure-and-the-execute-as-account"></a>D. 활성화 저장 프로시저 및 EXECUTE AS 계정 변경  
  다음 예에서는 [!INCLUDE[ssSB](../../includes/sssb-md.md)]가 시작하는 저장 프로시저를 변경합니다. 이 저장 프로시저는 `SecurityAccount` 사용자로 실행됩니다.  
   
-```  
+```sql  
 ALTER QUEUE ExpenseQueue  
     WITH ACTIVATION (  
         PROCEDURE_NAME = AdventureWorks2012.dbo.new_stored_proc ,  
@@ -214,7 +213,7 @@ ALTER QUEUE ExpenseQueue
 ### <a name="e-setting-the-queue-to-retain-messages"></a>E. 메시지를 유지하도록 큐 설정  
  다음 예에서는 메시지를 유지하도록 큐를 설정합니다. 이 큐에는 메시지가 포함된 대화가 종료될 때까지 이 큐를 사용하는 서비스와 주고 받은 모든 메시지가 유지됩니다.  
   
-```  
+```sql  
 ALTER QUEUE ExpenseQueue WITH RETENTION = ON ;  
 ```  
   
@@ -231,7 +230,7 @@ ALTER QUEUE ExpenseQueue WITH ACTIVATION (DROP) ;
   
  다음 예에서는 큐 인덱스를 다시 작성합니다.  
   
-```  
+```sql  
 ALTER QUEUE ExpenseQueue REBUILD WITH (MAXDOP = 2)   
 ```  
   
@@ -241,7 +240,7 @@ ALTER QUEUE ExpenseQueue REBUILD WITH (MAXDOP = 2)
   
  다음 예에서는 큐 인덱스를 다시 구성합니다.  
   
-```  
+```sql  
 ALTER QUEUE ExpenseQueue REORGANIZE   
 ```  
   
@@ -249,7 +248,7 @@ ALTER QUEUE ExpenseQueue REORGANIZE
   
 **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상  
   
-```  
+```sql  
 ALTER QUEUE ExpenseQueue MOVE TO [NewFilegroup]   
 ```  
   

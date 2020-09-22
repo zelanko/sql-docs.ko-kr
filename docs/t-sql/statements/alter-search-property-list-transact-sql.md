@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 0436e4a8-ca26-4d23-93f1-e31e2a1c8bfb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3f7354a8a8ea4e705df8eb54a3db6dd2531132e9
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 5cf5d6bcda6670c6cfc9a142be0569bc4bfeaf8e
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89544248"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688192"
 ---
 # <a name="alter-search-property-list-transact-sql"></a>ALTER SEARCH PROPERTY LIST(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -62,7 +62,7 @@ ALTER SEARCH PROPERTY LIST list_name
   
  기존 속성 목록의 이름을 보려면 다음과 같이 [sys.registered_search_property_lists](../../relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql.md) 카탈로그 뷰를 사용하십시오.  
   
-```  
+```sql  
 SELECT name FROM sys.registered_search_property_lists;  
 ```  
   
@@ -79,7 +79,7 @@ SELECT name FROM sys.registered_search_property_lists;
   
  현재 데이터베이스의 검색 속성 목록에 현재 존재하는 속성의 이름을 보려면 다음과 같이 [sys.registered_search_properties](../../relational-databases/system-catalog-views/sys-registered-search-properties-transact-sql.md) 카탈로그 뷰를 사용하십시오.  
   
-```  
+```sql  
 SELECT property_name FROM sys.registered_search_properties;  
 ```  
   
@@ -88,7 +88,7 @@ SELECT property_name FROM sys.registered_search_properties;
   
  현재 데이터베이스의 검색 속성 목록에 있는 속성의 속성 집합 GUID를 보려면 다음과 같이 [sys.registered_search_properties](../../relational-databases/system-catalog-views/sys-registered-search-properties-transact-sql.md) 카탈로그 뷰를 사용하십시오.  
   
-```  
+```sql  
 SELECT property_set_guid FROM sys.registered_search_properties;  
 ```  
   
@@ -97,7 +97,7 @@ SELECT property_set_guid FROM sys.registered_search_properties;
   
  현재 데이터베이스의 검색 속성 목록에 있는 속성의 정수 식별자를 보려면 다음과 같이 [sys.registered_search_properties](../../relational-databases/system-catalog-views/sys-registered-search-properties-transact-sql.md) 카탈로그 뷰를 사용하십시오.  
   
-```  
+```sql  
 SELECT property_int_id FROM sys.registered_search_properties;  
 ```  
   
@@ -117,7 +117,7 @@ SELECT property_int_id FROM sys.registered_search_properties;
   
  속성을 지정할 때는 다음 예와 같이 PROPERTY_SET_GUID, PROPERTY_INT_ID 및 PROPERTY_DESCRIPTION 절을 순서에 관계없이 괄호 안에 쉼표로 구분된 목록으로 정렬합니다.  
   
-```  
+```sql  
 ALTER SEARCH PROPERTY LIST CVitaProperties  
 ADD 'System.Author'   
 WITH (   
@@ -136,7 +136,7 @@ WITH (
 ## <a name="making-added-properties-searchable"></a>추가한 속성을 검색 가능하도록 설정  
  검색 속성 목록에 검색 속성을 추가하면 속성이 등록됩니다. 새로 추가한 속성을 [CONTAINS](../../t-sql/queries/contains-transact-sql.md) 쿼리에서 즉시 지정할 수 있습니다. 그러나 연결된 전체 텍스트 인덱스를 다시 채워야 새로 추가한 속성의 속성 범위 전체 텍스트 쿼리가 문서를 반환합니다. 예를 들어 대상 테이블(*table_name*)과 연결된 전체 텍스트 인덱스를 다시 채워야 새로 추가한 속성 *new_search_property*의 다음 속성 범위 쿼리가 문서를 반환합니다.  
   
-```  
+```sql  
 SELECT column_name  
 FROM table_name  
 WHERE CONTAINS( PROPERTY( column_name, 'new_search_property' ), 
@@ -146,7 +146,7 @@ GO
   
  전체 채우기를 시작하려면 다음 [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-index-transact-sql.md) 문을 사용하세요.  
   
-```  
+```sql  
 USE database_name;  
 GO  
 ALTER FULLTEXT INDEX ON table_name START FULL POPULATION;  
@@ -184,7 +184,7 @@ GO
 > [!NOTE]  
 >  `DocumentPropertyList` 속성 목록을 만드는 예는 [CREATE SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](../../t-sql/statements/create-search-property-list-transact-sql.md)을 참조하세요.  
   
-```  
+```sql  
 ALTER SEARCH PROPERTY LIST DocumentPropertyList  
    ADD 'Title'   
    WITH ( PROPERTY_SET_GUID = 'F29F85E0-4FF9-1068-AB91-08002B27B3D9', PROPERTY_INT_ID = 2,   
@@ -208,7 +208,7 @@ ALTER SEARCH PROPERTY LIST DocumentPropertyList
 ### <a name="b-dropping-a-property"></a>B. 속성 삭제  
  다음 예에서는 `Comments` 속성 목록에서 `DocumentPropertyList` 속성을 삭제합니다.  
   
-```  
+```sql  
 ALTER SEARCH PROPERTY LIST DocumentPropertyList  
 DROP 'Comments' ;  
 ```  

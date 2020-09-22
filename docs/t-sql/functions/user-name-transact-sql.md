@@ -25,12 +25,12 @@ ms.assetid: ab32d644-4228-449a-9ef0-5a975c305775
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: eb4be6c95f60be21e594b98725a636aebce62bfc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 13c27b4f23e6361592a72082c94fb033a96ce0d7
+ms.sourcegitcommit: 76d31f456982dabb226239b424eaa7139d8cc6c1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88467707"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90570674"
 ---
 # <a name="user_name-transact-sql"></a>USER_NAME(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "88467707"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```syntaxsql  
 USER_NAME ( [ id ] )  
 ```  
   
@@ -65,7 +65,7 @@ USER_NAME ( [ id ] )
 ### <a name="a-using-user_name"></a>A. USER_NAME 사용  
  다음 예에서는 사용자 ID `13`에 대한 사용자 이름을 반환합니다.  
   
-```  
+```sql  
 SELECT USER_NAME(13);  
 GO  
 ```  
@@ -73,7 +73,7 @@ GO
 ### <a name="b-using-user_name-without-an-id"></a>B. ID 없이 USER_NAME 사용  
  다음 예에서는 ID를 지정하지 않고 현재 사용자의 이름을 찾습니다.  
   
-```  
+```sql  
 SELECT USER_NAME();  
 GO  
 ```  
@@ -90,7 +90,7 @@ dbo
 ### <a name="c-using-user_name-in-the-where-clause"></a>C. WHERE 절에서 USER_NAME 사용  
  다음 예에서는 `sysusers`에서 `USER_NAME` 시스템 함수를 사용자 ID 번호 `1`에 적용하는 결과와 이름이 동일한 행을 찾습니다.  
   
-```  
+```sql  
 SELECT name FROM sysusers WHERE name = USER_NAME(1);  
 GO  
 ```  
@@ -108,7 +108,7 @@ dbo
 ### <a name="d-calling-user_name-during-impersonation-with-execute-as"></a>D. EXECUTE AS로 가장하는 동안 USER_NAME 호출  
  다음 예에서는 가장이 진행되는 동안의 `USER_NAME` 작동 방식을 보여 줍니다.  
   
-```  
+```sql  
 SELECT USER_NAME();  
 GO  
 EXECUTE AS USER = 'Zelig';  
@@ -134,7 +134,7 @@ DBO
 ### <a name="e-using-user_name-without-an-id"></a>E. ID 없이 USER_NAME 사용  
  다음 예에서는 ID를 지정하지 않고 현재 사용자의 이름을 찾습니다.  
   
-```  
+```sql  
 SELECT USER_NAME();  
 ```  
   
@@ -148,7 +148,7 @@ User7
 ### <a name="f-using-user_name-in-the-where-clause"></a>F. WHERE 절에서 USER_NAME 사용  
  다음 예에서는 `sysusers`에서 `USER_NAME` 시스템 함수를 사용자 ID 번호 `1`에 적용하는 결과와 이름이 동일한 행을 찾습니다.  
   
-```  
+```sql  
 SELECT name FROM sysusers WHERE name = USER_NAME(1);  
 ```  
   

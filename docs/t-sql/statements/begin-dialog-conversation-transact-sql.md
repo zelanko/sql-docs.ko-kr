@@ -31,12 +31,12 @@ helpviewer_keywords:
 ms.assetid: 8e814f9d-77c1-4906-b8e4-668a86fc94ba
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9dff53a56e9acd613322be5af1de6e5f0207abd6
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 60eca69999f7e21164eac2ce35add549d767dc26
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547585"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688529"
 ---
 # <a name="begin-dialog-conversation-transact-sql"></a>BEGIN DIALOG CONVERSATION(Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -48,7 +48,6 @@ ms.locfileid: "89547585"
 ## <a name="syntax"></a>구문  
   
 ```syntaxsql
-  
 BEGIN DIALOG [ CONVERSATION ] @dialog_handle  
    FROM SERVICE initiator_service_name  
    TO SERVICE 'target_service_name'  
@@ -79,7 +78,7 @@ BEGIN DIALOG [ CONVERSATION ] @dialog_handle
   
  *service_broker_guid*는 **nvarchar(128)** 형식입니다. 데이터베이스에 대한 *service_broker_guid*를 찾으려면 데이터베이스에서 다음 쿼리를 실행합니다.  
   
-```  
+```sql  
 SELECT service_broker_guid  
 FROM sys.databases  
 WHERE database_id = DB_ID() ;  
@@ -132,7 +131,7 @@ WHERE database_id = DB_ID() ;
 ### <a name="a-beginning-a-dialog"></a>A. 대화 시작  
  다음 예에서는 대화를 시작하고 `@dialog_handle.`에 대화 식별자를 저장합니다. `//Adventure-Works.com/ExpenseClient` 서비스는 대화의 시작자이고 `//Adventure-Works.com/Expenses` 서비스는 대화의 대상입니다. 대화는 `//Adventure-Works.com/Expenses/ExpenseSubmission` 계약을 따릅니다.  
   
-```  
+```sql  
 DECLARE @dialog_handle UNIQUEIDENTIFIER ;  
   
 BEGIN DIALOG CONVERSATION @dialog_handle  
@@ -144,7 +143,7 @@ BEGIN DIALOG CONVERSATION @dialog_handle
 ### <a name="b-beginning-a-dialog-with-an-explicit-lifetime"></a>B. 명시적으로 수명을 지정하고 대화 시작  
  다음 예에서는 대화를 시작하고 `@dialog_handle`에 대화 식별자를 저장합니다. `//Adventure-Works.com/ExpenseClient` 서비스는 대화의 시작자이고 `//Adventure-Works.com/Expenses` 서비스는 대화의 대상입니다. 대화는 `//Adventure-Works.com/Expenses/ExpenseSubmission` 계약을 따릅니다. END CONVERSATION 명령으로 `60`초 내에 대화가 닫히지 않으면 Broker에서 오류가 발생하여 대화가 종료됩니다.  
   
-```  
+```sql  
 DECLARE @dialog_handle UNIQUEIDENTIFIER ;  
   
 BEGIN DIALOG CONVERSATION @dialog_handle  
@@ -157,7 +156,7 @@ BEGIN DIALOG CONVERSATION @dialog_handle
 ### <a name="c-beginning-a-dialog-with-a-specific-broker-instance"></a>C. 특정 Broker 인스턴스로 대화 시작  
  다음 예에서는 대화를 시작하고 `@dialog_handle`에 대화 식별자를 저장합니다. `//Adventure-Works.com/ExpenseClient` 서비스는 대화의 시작자이고 `//Adventure-Works.com/Expenses` 서비스는 대화의 대상입니다. 대화는 `//Adventure-Works.com/Expenses/ExpenseSubmission` 계약을 따릅니다. Broker는 `a326e034-d4cf-4e8b-8d98-4d7e1926c904.` GUID에 의해 식별되는 Broker로 이 대화의 메시지를 라우팅합니다.  
   
-```  
+```sql  
 DECLARE @dialog_handle UNIQUEIDENTIFIER ;  
   
 BEGIN DIALOG CONVERSATION @dialog_handle  
@@ -170,7 +169,7 @@ BEGIN DIALOG CONVERSATION @dialog_handle
 ### <a name="d-beginning-a-dialog-and-relating-it-to-an-existing-conversation-group"></a>D. 대화를 시작하여 기존 대화 그룹에 연결  
  다음 예에서는 대화를 시작하고 `@dialog_handle`에 대화 식별자를 저장합니다. `//Adventure-Works.com/ExpenseClient` 서비스는 대화의 시작자이고 `//Adventure-Works.com/Expenses` 서비스는 대화의 대상입니다. 대화는 `//Adventure-Works.com/Expenses/ExpenseSubmission` 계약을 따릅니다. Broker는 새 대화 그룹을 만들지 않고 `@conversation_group_id`로 식별되는 대화 그룹에 대화를 연결합니다.  
   
-```  
+```sql  
 DECLARE @dialog_handle UNIQUEIDENTIFIER ;  
 DECLARE @conversation_group_id UNIQUEIDENTIFIER ;  
   
@@ -186,7 +185,7 @@ BEGIN DIALOG CONVERSATION @dialog_handle
 ### <a name="e-beginning-a-dialog-with-an-explicit-lifetime-and-relating-the-dialog-to-an-existing-conversation"></a>E. 명시적으로 수명을 지정하여 대화를 시작하고 기존 대화에 대화 연결  
  다음 예에서는 대화를 시작하고 `@dialog_handle`에 대화 식별자를 저장합니다. `//Adventure-Works.com/ExpenseClient` 서비스는 대화의 시작자이고 `//Adventure-Works.com/Expenses` 서비스는 대화의 대상입니다. 대화는 `//Adventure-Works.com/Expenses/ExpenseSubmission` 계약을 따릅니다. 새 대화는 `@existing_conversation_handle`이 속하는 대화 그룹에 똑같이 속합니다. END CONVERSATION 명령으로 `600`초 내에 대화가 닫히지 않으면 [!INCLUDE[ssSB](../../includes/sssb-md.md)]에서 오류가 발생하여 대화가 종료됩니다.  
   
-```  
+```sql  
 DECLARE @dialog_handle UNIQUEIDENTIFIER  
 DECLARE @existing_conversation_handle UNIQUEIDENTIFIER  
   
@@ -203,7 +202,7 @@ BEGIN DIALOG CONVERSATION @dialog_handle
 ### <a name="f-beginning-a-dialog-with-optional-encryption"></a>F. 선택적 암호화를 사용하여 대화 시작  
  다음 예에서는 대화를 시작하고 `@dialog_handle`에 대화 식별자를 저장합니다. `//Adventure-Works.com/ExpenseClient` 서비스는 대화의 시작자이고 `//Adventure-Works.com/Expenses` 서비스는 대화의 대상입니다. 대화는 `//Adventure-Works.com/Expenses/ExpenseSubmission` 계약을 따릅니다. 이 예의 대화에서는 암호화를 사용할 수 없는 경우 암호화를 사용하지 않고 네트워크를 통해 메시지를 전달할 수 있습니다.  
   
-```  
+```sql  
 DECLARE @dialog_handle UNIQUEIDENTIFIER  
   
 BEGIN DIALOG CONVERSATION @dialog_handle  

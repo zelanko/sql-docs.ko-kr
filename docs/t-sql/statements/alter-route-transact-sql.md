@@ -23,12 +23,12 @@ ms.assetid: 8dfb7b16-3dac-4e1e-8c97-adf2aad07830
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: ff8c86ef00124329600a99ef85cd471c81e25ff7
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 6aa1bf54d0d21ea05c16dc4808c6e7ff4191236d
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89544271"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688214"
 ---
 # <a name="alter-route-transact-sql"></a>ALTER ROUTE(Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -41,7 +41,6 @@ ms.locfileid: "89544271"
 ## <a name="syntax"></a>구문  
   
 ```syntaxsql
-  
 ALTER ROUTE route_name  
 WITH    
   [ SERVICE_NAME = 'service_name' [ , ] ]  
@@ -71,7 +70,7 @@ WITH
  BROKER_INSTANCE **=‘** _broker\_instance_ **’**  
  대상 서비스를 호스팅하는 데이터베이스를 지정합니다. *broker_instance* 매개 변수는 선택한 데이터베이스에서 다음 쿼리를 실행하여 가져올 수 있는 원격 데이터베이스의 Broker 인스턴스 식별자여야 합니다.  
   
-```  
+```sql  
 SELECT service_broker_guid  
 FROM sys.databases  
 WHERE database_id = DB_ID();  
@@ -95,7 +94,7 @@ WHERE database_id = DB_ID();
   
  지정된 *port_number*는 지정된 컴퓨터에서 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 인스턴스의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 엔드포인트의 포트 번호와 일치해야 합니다. 선택한 데이터베이스에서 다음 쿼리를 실행하여 얻을 수 있습니다.  
   
-```  
+```sql  
 SELECT tcpe.port  
 FROM sys.tcp_endpoints AS tcpe  
 INNER JOIN sys.service_broker_endpoints AS ssbe  
@@ -119,7 +118,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
   
  지정된 *port_number*는 지정된 컴퓨터에서 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 인스턴스의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 엔드포인트의 포트 번호와 일치해야 합니다. 선택한 데이터베이스에서 다음 쿼리를 실행하여 얻을 수 있습니다.  
   
-```  
+```sql  
 SELECT tcpe.port  
 FROM sys.tcp_endpoints AS tcpe  
 INNER JOIN sys.service_broker_endpoints AS ssbe  
@@ -151,7 +150,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
 ### <a name="a-changing-the-service-for-a-route"></a>A. 경로에 대한 서비스 변경  
  다음 예에서는 `ExpenseRoute` 원격 서비스를 가리키도록 `//Adventure-Works.com/Expenses` 경로를 수정합니다.  
   
-```  
+```sql  
 ALTER ROUTE ExpenseRoute  
    WITH   
      SERVICE_NAME = '//Adventure-Works.com/Expenses';  
@@ -160,7 +159,7 @@ ALTER ROUTE ExpenseRoute
 ### <a name="b-changing-the-target-database-for-a-route"></a>B. 경로의 대상 데이터베이스 변경  
  다음 예에서는 `ExpenseRoute` 경로의 대상 데이터베이스를 `D8D4D268-00A3-4C62-8F91-634B89B1E317.` 고유 식별자로 식별되는 데이터베이스로 변경합니다.  
   
-```  
+```sql  
 ALTER ROUTE ExpenseRoute  
    WITH   
      BROKER_INSTANCE = 'D8D4D268-00A3-4C62-8F91-634B89B1E317';  
@@ -169,7 +168,7 @@ ALTER ROUTE ExpenseRoute
 ### <a name="c-changing-the-address-for-a-route"></a>C. 경로의 주소 변경  
  다음 예에서는 `ExpenseRoute` 경로의 네트워크 주소를 IP 주소가 `1234`인 호스트의 TCP 포트 `10.2.19.72`로 변경합니다.  
   
-```  
+```sql  
 ALTER ROUTE ExpenseRoute   
    WITH   
      ADDRESS = 'TCP://10.2.19.72:1234';  
@@ -178,7 +177,7 @@ ALTER ROUTE ExpenseRoute
 ### <a name="d-changing-the-database-and-address-for-a-route"></a>D. 경로의 데이터베이스 및 주소 변경  
  다음 예에서는 `ExpenseRoute` 경로의 네트워크 주소를 DNS 이름이 `1234`인 호스트의 TCP 포트 `www.Adventure-Works.com`로 변경합니다. 또한 대상 데이터베이스를 고유 식별자 `D8D4D268-00A3-4C62-8F91-634B89B1E317`로 식별되는 데이터베이스로 변경합니다.  
   
-```  
+```sql  
 ALTER ROUTE ExpenseRoute  
    WITH   
      BROKER_INSTANCE = 'D8D4D268-00A3-4C62-8F91-634B89B1E317',  

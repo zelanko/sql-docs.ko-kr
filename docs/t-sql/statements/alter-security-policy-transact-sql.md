@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: a8efc37e-113d-489c-babc-b914fea2c316
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 74be76c08a9dbe58f0c9ae59b97679001812572b
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: 8ebe6f0764cd4993a101a43b9f9db753918d24c1
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88646290"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688156"
 ---
 # <a name="alter-security-policy-transact-sql"></a>ALTER SECURITY POLICY(Transact-SQL)
 
@@ -112,7 +112,7 @@ ALTER ANY SECURITY POLICY 권한이 필요합니다.
 ### <a name="a-adding-an-additional-predicate-to-a-policy"></a>A. 정책에 추가적인 조건자 추가  
 다음 구문은 `mytable` 테이블에서 필터 조건자를 추가하여 보안 정책을 변경합니다.  
   
-```  
+```sql  
 ALTER SECURITY POLICY pol1   
     ADD FILTER PREDICATE schema_preds.SecPredicate(column1)   
     ON myschema.mytable;  
@@ -121,14 +121,14 @@ ALTER SECURITY POLICY pol1
 ### <a name="b-enabling-an-existing-policy"></a>B. 기존 정책을 사용하도록 설정  
 다음 예에서는 ALTER 구문을 사용하여 보안 정책을 사용하도록 설정합니다.  
   
-```  
+```sql  
 ALTER SECURITY POLICY pol1 WITH ( STATE = ON );  
 ```  
   
 ### <a name="c-adding-and-dropping-multiple-predicates"></a>C. 여러 조건자 추가 및 삭제  
 다음 구문은 `mytable1` 및 `mytable3` 테이블에서 필터 조건자를 추가하고 `mytable2` 테이블에서 필터 조건자를 제거하여 보안 정책을 변경합니다.  
   
-```  
+```sql  
 ALTER SECURITY POLICY pol1  
 ADD FILTER PREDICATE schema_preds.SecPredicate1(column1)   
     ON myschema.mytable1,  
@@ -141,7 +141,7 @@ ADD FILTER PREDICATE schema_preds.SecPredicate2(column2, 1)
 ### <a name="d-changing-the-predicate-on-a-table"></a>D. 테이블의 조건자 변경  
 다음 구문에서는 mytable 테이블의 기존 필터 조건자를 변경하여 SecPredicate2 함수가 되게 합니다.  
   
-```  
+```sql  
 ALTER SECURITY POLICY pol1  
     ALTER FILTER PREDICATE schema_preds.SecPredicate2(column1)  
         ON myschema.mytable;  
@@ -150,7 +150,7 @@ ALTER SECURITY POLICY pol1
 ### <a name="e-changing-a-block-predicate"></a>E. 차단 조건자 변경  
 테이블 작업에 대한 차단 조건자 함수를 변경합니다.  
   
-```  
+```sql 
 ALTER SECURITY POLICY rls.SecPol  
     ALTER BLOCK PREDICATE rls.tenantAccessPredicate_v2(TenantId) 
     ON dbo.Sales AFTER INSERT;  

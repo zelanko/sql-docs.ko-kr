@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 442c54bf-a0a6-4108-ad20-db910ffa6e3c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5e14ff0dce201a195fa7a064cc7df604b52b8370
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 0f798856f7074aef0318f98d5d9c7415fe3e2846
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89544326"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688241"
 ---
 # <a name="alter-resource-governor-transact-sql"></a>ALTER RESOURCE GOVERNOR(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -117,14 +117,14 @@ ALTER RESOURCE GOVERNOR
 ### <a name="a-starting-the-resource-governor"></a>A. 리소스 관리자 시작  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 처음 설치하면 리소스 관리자를 사용할 수 없습니다. 다음 예에서는 리소스 관리자를 시작합니다. 이 문이 실행된 후에 리소스 관리자가 실행되면 미리 정의된 작업 그룹과 리소스 풀을 사용할 수 있습니다.  
   
-```  
+```sql  
 ALTER RESOURCE GOVERNOR RECONFIGURE;  
 ```  
   
 ### <a name="b-assigning-new-sessions-to-the-default-group"></a>B. 기본 그룹에 새 세션 할당  
  다음 예에서는 리소스 관리자 구성에서 기존 분류자 함수를 제거하여 기본 작업 그룹에 모든 새 세션을 할당합니다. 분류자 함수로 지정된 함수가 없으면 모든 새 세션이 기본 작업 그룹에 할당됩니다. 이 변경 내용은 새 세션에만 적용되고 기존 세션에는 적용되지 않습니다.  
   
-```  
+```sql  
 ALTER RESOURCE GOVERNOR WITH (CLASSIFIER_FUNCTION = NULL);  
 GO  
 ALTER RESOURCE GOVERNOR RECONFIGURE;  
@@ -133,7 +133,7 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 ### <a name="c-creating-and-registering-a-classifier-function"></a>C. 분류자 함수 작성 및 등록  
  다음 예에서는 `dbo.rgclassifier_v1`이라는 분류자 함수를 만듭니다. 이 함수는 사용자 이름이나 애플리케이션 이름을 기반으로 모든 새 세션을 분류하고 특정 작업 그룹에 세션 요청과 쿼리를 할당합니다. 지정한 사용자 또는 애플리케이션으로 매핑되지 않는 세션은 기본 작업 그룹에 할당됩니다. 그런 다음 분류자 함수가 등록되고 구성 변경 내용이 적용됩니다.  
   
-```  
+```sql  
 -- Store the classifier function in the master database.  
 USE master;  
 GO  
@@ -178,14 +178,14 @@ GO
 ### <a name="d-resetting-statistics"></a>D. 통계 다시 설정  
  다음 예에서는 모든 작업 그룹 및 리소스 풀 통계를 다시 설정합니다.  
   
-```  
+```sql 
 ALTER RESOURCE GOVERNOR RESET STATISTICS;  
 ```  
   
 ### <a name="e-setting-the-max_outstanding_io_per_volume-option"></a>E. MAX_OUTSTANDING_IO_PER_VOLUME 옵션 설정  
  다음 예에서는 MAX_OUTSTANDING_IO_PER_VOLUME 옵션을 20으로 설정합니다.  
   
-```  
+```sql  
 ALTER RESOURCE GOVERNOR  
 WITH (MAX_OUTSTANDING_IO_PER_VOLUME = 20);   
 ```  

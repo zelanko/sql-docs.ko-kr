@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: e2429a5d-e9be-4c05-be20-414d1038a63a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 4095c5fcfebdcaa531fc621684b95f4b1598142d
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 16f0dce09020c1139bc97b86453c96ed7ada95f1
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484841"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688889"
 ---
 # <a name="deny-database-principal-permissions-transact-sql"></a>DENY 데이터베이스 보안 주체 사용 권한(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -157,7 +157,7 @@ DENY permission [ ,...n ]
 ### <a name="a-denying-control-permission-on-a-user-to-another-user"></a>A. 다른 사용자에게 사용자에 대한 CONTROL 권한 거부  
  다음 예에서는 사용자 `CONTROL`에 대해 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 사용자 `Wanida`에 대`RolandX` 권한을 거부합니다.  
   
-```  
+```sql 
 USE AdventureWorks2012;  
 DENY CONTROL ON USER::Wanida TO RolandX;  
 GO  
@@ -166,7 +166,7 @@ GO
 ### <a name="b-denying-view-definition-permission-on-a-role-to-a-user-to-which-it-was-granted-with-grant-option"></a>B. GRANT OPTION이 부여된 사용자에 대해 역할에 대한 VIEW DEFINITION 권한 거부  
  다음 예에서는 데이터베이스 사용자 `VIEW DEFINITION`에 대해 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 역할 `SammamishParking`에 대한 `JinghaoLiu` 권한을 거부합니다. 사용자 `CASCADE`에게 GRANT OPTION을 사용하여 VIEW DEFINITION 권한이 부여되었기 때문에 `JinghaoLiu` 옵션이 지정되었습니다.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 DENY VIEW DEFINITION ON ROLE::SammamishParking   
     TO JinghaoLiu CASCADE;  
@@ -178,7 +178,7 @@ GO
   
 **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 DENY IMPERSONATE ON USER::HamithaL TO AccountsPayable17;  
 GO    

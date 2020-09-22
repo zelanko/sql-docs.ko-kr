@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 5440cbb8-3403-4d27-a2f9-8e1f5a1bc12b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bf08875b244a3184f8992efcb0c991ef36a73dc3
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: f2b347260ffc65ddf640678aed8d2728a087f981
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549318"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688879"
 ---
 # <a name="create-search-property-list-transact-sql"></a>CREATE SEARCH PROPERTY LIST(Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "89549318"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```syntaxsql  
 CREATE SEARCH PROPERTY LIST new_list_name  
    [ FROM [ database_name. ] source_list_name ]  
    [ AUTHORIZATION owner_name ]  
@@ -104,7 +104,7 @@ CREATE SEARCH PROPERTY LIST new_list_name
 > [!NOTE]  
 >  이 검색 속성 목록에 미리 정의되고 잘 알려진 검색 속성을 여러 개 추가하는 예에 대해서는 [ALTER SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](../../t-sql/statements/alter-search-property-list-transact-sql.md)을 참조하세요. 목록에 검색 속성을 추가한 후에는 데이터베이스 관리자가 다른 ALTER FULLTEXT INDEX 문을 START FULL POPULATION 절과 함께 사용해야 합니다.  
   
-```  
+```sql 
 CREATE SEARCH PROPERTY LIST DocumentPropertyList;  
 GO  
 USE AdventureWorks2012;  
@@ -117,14 +117,13 @@ GO
 ### <a name="b-creating-a-property-list-from-an-existing-one"></a>B. 기존 속성 목록을 사용하여 속성 목록 만들기  
  다음 예에서는 예 1에서 만든 목록 `JobCandidateProperties`로 새 검색 속성 목록 `DocumentPropertyList`를 만듭니다. 기존 목록은 `AdventureWorks2012` 데이터베이스에서 전체 텍스트 인덱스와 연결되어 있습니다. 그런 다음 이 예에서는 ALTER FULLTEXT INDEX 문을 사용하여 새 속성 목록을 `HumanResources.JobCandidate` 데이터베이스에 있는 `AdventureWorks2012` 테이블의 전체 텍스트 인덱스와 연결합니다. 이 ALTER FULLTEXT INDEX 문이 전체 채우기를 시작합니다. 전체 채우기는 SET SEARCH PROPERTY LIST 절의 기본 동작입니다.  
   
-```  
+```sql  
 CREATE SEARCH PROPERTY LIST JobCandidateProperties 
 FROM AdventureWorks2012.DocumentPropertyList;  
 GO  
 ALTER FULLTEXT INDEX ON HumanResources.JobCandidate   
    SET SEARCH PROPERTY LIST JobCandidateProperties;  
-GO  
-  
+GO
 ```  
   
 ## <a name="see-also"></a>관련 항목  

@@ -29,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: e311c425-742a-4b0d-b847-8b974bf66d53
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: c3fc7061750b7adea9cd90eda39b2364740dc9ae
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 615a18de5c90bec08d79579a038cb106f2a6d3fc
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88479060"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688549"
 ---
 # <a name="alter-xml-schema-collection-transact-sql"></a>ALTER XML SCHEMA COLLECTION(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,8 +45,7 @@ ms.locfileid: "88479060"
   
 ## <a name="syntax"></a>구문  
   
-```  
-  
+```syntaxsql
 ALTER XML SCHEMA COLLECTION [ relational_schema. ]sql_identifier ADD 'Schema Component'  
 ```  
   
@@ -67,7 +66,7 @@ ALTER XML SCHEMA COLLECTION [ relational_schema. ]sql_identifier ADD 'Schema Com
   
  다음 예에서는 `MyColl` 컬렉션에 있는 `https://MySchema/test_xml_schema` 기존 네임스페이스에 새 \<element>를 추가합니다.  
   
-```  
+```sql  
 -- First create an XML schema collection.  
 CREATE XML SCHEMA COLLECTION MyColl AS '  
    <schema   
@@ -99,7 +98,7 @@ ALTER XML SCHEMA COLLECTION MyColl ADD '
 ### <a name="a-creating-xml-schema-collection-in-the-database"></a>A. 데이터베이스에 XML 스키마 컬렉션 만들기  
  다음 예에서는 XML 스키마 컬렉션 `ManuInstructionsSchemaCollection`을 만듭니다. 이 컬렉션에는 스키마 네임스페이스가 하나만 있습니다.  
   
-```  
+```sql  
 -- Create a sample database in which to load the XML schema collection.  
 CREATE DATABASE SampleDB;  
 GO  
@@ -171,7 +170,7 @@ DROP DATABASE SampleDB;
   
  또는 다음과 같이 변수에 스키마 컬렉션을 할당하고 `CREATE XML SCHEMA COLLECTION` 문에 변수를 지정할 수 있습니다.  
   
-```  
+```sql  
 DECLARE @MySchemaCollection nvarchar(max);  
 SET @MySchemaCollection  = N' copy the schema collection here';  
 CREATE XML SCHEMA COLLECTION AS @MySchemaCollection;   
@@ -192,7 +191,7 @@ CREATE XML SCHEMA COLLECTION AS @MySchemaCollection;
 ### <a name="b-specifying-multiple-schema-namespaces-in-a-schema-collection"></a>B. 스키마 컬렉션에 여러 개의 스키마 네임스페이스 지정  
  XML 스키마 컬렉션을 만들 때 XML 스키마를 여러 개 지정할 수 있습니다. 예를 들면 다음과 같습니다.  
   
-```  
+```sql  
 CREATE XML SCHEMA COLLECTION N'  
 <xsd:schema>....</xsd:schema>  
 <xsd:schema>...</xsd:schema>';  
@@ -200,7 +199,7 @@ CREATE XML SCHEMA COLLECTION N'
   
  다음 예에서는 두 개의 XML 스키마 네임스페이스를 포함하는 XML 스키마 컬렉션 `ProductDescriptionSchemaCollection`을 만듭니다.  
   
-```  
+```sql  
 CREATE XML SCHEMA COLLECTION ProductDescriptionSchemaCollection AS   
 '<xsd:schema targetNamespace="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain"  
     xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain"   
@@ -247,7 +246,7 @@ GO
 ### <a name="c-importing-a-schema-that-does-not-specify-a-target-namespace"></a>C. 대상 네임스페이스를 지정하지 않는 스키마 가져오기  
  **targetNamespace** 특성이 포함되지 않은 스키마를 컬렉션으로 가져오는 경우 이 컬렉션의 구성 요소는 다음 예와 같이 빈 문자열 대상 네임스페이스와 연결됩니다. 컬렉션으로 가져온 하나 이상의 스키마를 연결하지 않으면 잠재적으로 관련이 없는 여러 개의 스키마 구성 요소가 기본 빈 문자열 네임스페이스에 연결되게 됩니다.  
   
-```  
+```sql  
 -- Create a collection that contains a schema with no target namespace.  
 CREATE XML SCHEMA COLLECTION MySampleCollection AS '  
 <schema xmlns="http://www.w3.org/2001/XMLSchema"  xmlns:ns="http://ns">  

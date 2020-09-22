@@ -29,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: 5b21c53a-b4f4-4988-89a2-801f512126e4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d5356c811b9e1e0118e7080afa91491066b6c434
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 2985351da1e1b0f1c0215df95c3e61440773e9c3
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549398"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688449"
 ---
 # <a name="create-partition-scheme-transact-sql"></a>CREATE PARTITION SCHEME(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -92,8 +92,8 @@ AS PARTITION partition_function_name
 ### <a name="a-creating-a-partition-scheme-that-maps-each-partition-to-a-different-filegroup"></a>A. 각 파티션을 다른 파일 그룹에 매핑하는 파티션 구성표 만들기  
  다음 예에서는 테이블이나 인덱스를 4개의 파티션으로 분할하는 파티션 함수를 만듭니다. 4개의 파티션 각각을 보유하도록 파일 그룹을 지정하는 파티션 구성표를 만듭니다. 이 예에서는 데이터베이스에 이미 파일 그룹이 있다고 가정합니다.  
   
-```  
-CREATE PARTITION FUNCTION myRangePF1 (int)  
+```sql  
+CREATE PARTITION FUNCTION myRangePF1 (INT)  
 AS RANGE LEFT FOR VALUES (1, 100, 1000);  
 GO  
 CREATE PARTITION SCHEME myRangePS1  
@@ -112,8 +112,8 @@ TO (test1fg, test2fg, test3fg, test4fg);
 ### <a name="b-creating-a-partition-scheme-that-maps-multiple-partitions-to-the-same-filegroup"></a>B. 여러 파티션을 같은 파일 그룹에 매핑하는 파티션 구성표 만들기  
  모든 파티션을 같은 파일 그룹에 매핑하는 경우 ALL 키워드를 사용하십시오. 그러나 모든 파티션이 아니라 여러 개의 일부 파티션을 같은 파일 그룹에 매핑하는 경우 다음 예와 같이 파일 그룹 이름을 반복해야 합니다.  
   
-```  
-CREATE PARTITION FUNCTION myRangePF2 (int)  
+```sql  
+CREATE PARTITION FUNCTION myRangePF2 (INT)  
 AS RANGE LEFT FOR VALUES (1, 100, 1000);  
 GO  
 CREATE PARTITION SCHEME myRangePS2  
@@ -132,8 +132,8 @@ TO ( test1fg, test1fg, test1fg, test2fg );
 ### <a name="c-creating-a-partition-scheme-that-maps-all-partitions-to-the-same-filegroup"></a>C. 모든 파티션을 같은 파일 그룹에 매핑하는 파티션 구성표 만들기  
  다음 예에서는 앞의 예와 같은 파티션 함수를 만들고 모든 파티션을 같은 파일 그룹에 매핑하는 파티션 구성표를 만드는 방법을 보여 줍니다.  
   
-```  
-CREATE PARTITION FUNCTION myRangePF3 (int)  
+```sql  
+CREATE PARTITION FUNCTION myRangePF3 (INT)  
 AS RANGE LEFT FOR VALUES (1, 100, 1000);  
 GO  
 CREATE PARTITION SCHEME myRangePS3  
@@ -144,8 +144,8 @@ ALL TO ( test1fg );
 ### <a name="d-creating-a-partition-scheme-that-specifies-a-next-used-filegroup"></a>D. 'NEXT USED' 파일 그룹을 지정하는 파티션 구성표 만들기  
  다음 예에서는 앞의 예와 같은 파티션 함수를 만들고 연관된 파티션 함수가 생성한 파티션보다 많은 파일 그룹을 나열하는 파티션 구성표를 만드는 방법을 보여 줍니다.  
   
-```  
-CREATE PARTITION FUNCTION myRangePF4 (int)  
+```sql  
+CREATE PARTITION FUNCTION myRangePF4 (INT)  
 AS RANGE LEFT FOR VALUES (1, 100, 1000);  
 GO  
 CREATE PARTITION SCHEME myRangePS4  
@@ -164,8 +164,8 @@ TO (test1fg, test2fg, test3fg, test4fg, test5fg)
 
  다음 예에서는 테이블이나 인덱스를 4개의 파티션으로 분할하는 파티션 함수를 만듭니다. 그러면 모든 파티션이 PRIMARY 파일 그룹에 만들어지도록 지정하는 파티션 구성표가 만들어집니다.  
   
-```  
-CREATE PARTITION FUNCTION myRangePF1 (int)  
+```sql  
+CREATE PARTITION FUNCTION myRangePF1 (INT)  
 AS RANGE LEFT FOR VALUES (1, 100, 1000);  
 GO  
 CREATE PARTITION SCHEME myRangePS1  

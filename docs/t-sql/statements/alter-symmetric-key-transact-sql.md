@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: d3c776a4-7d71-4e6f-84fc-1db47400c465
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 6bc807fe68e1e4ba8ca1e92fe40e048a82a6307f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a5635a7a0cc1d4c90ea70cf5973f0fc09b938f63
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426855"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688133"
 ---
 # <a name="alter-symmetric-key-transact-sql"></a>ALTER SYMMETRIC KEY(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -39,7 +39,6 @@ ms.locfileid: "88426855"
 ## <a name="syntax"></a>구문  
   
 ```syntaxsql
-  
 ALTER SYMMETRIC KEY Key_name <alter_option>  
   
 <alter_option> ::=  
@@ -98,7 +97,7 @@ ALTER SYMMETRIC KEY Key_name <alter_option>
 ## <a name="examples"></a>예제  
  다음 예에서는 대칭 키를 보호하는 데 사용되는 암호화 방법을 변경합니다. 대칭 키 `JanainaKey043`은 키가 만들어질 때 인증서 `Shipping04`를 사용하여 암호화됩니다. 키는 암호화되지 않은 상태로 저장될 수 없으므로 암호로 암호화를 추가한 다음 인증서별로 암호화를 제거합니다.  
   
-```  
+```sql  
 CREATE SYMMETRIC KEY JanainaKey043 WITH ALGORITHM = AES_256   
     ENCRYPTION BY CERTIFICATE Shipping04;  
 -- Open the key.   

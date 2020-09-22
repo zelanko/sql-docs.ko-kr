@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9c1c4cfb-0e3b-4f01-bf57-3fce94c7d1d4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6ce08b332255d43f1912454c7695b36998578a4b
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 3e1e705930e31cec8fa6b7b4913e3643cc25227e
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89544311"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688209"
 ---
 # <a name="alter-resource-pool-transact-sql"></a>ALTER RESOURCE POOL(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -94,7 +94,7 @@ ALTER RESOURCE POOL { pool_name | "default" }
   
  AFFINITY NAMANODE = (NUMA_node_range_spec)을 사용하면 리소스 풀의 선호도가 지정된 NUMA 노드 또는 노드 범위에 해당하는 물리적 CPU에 매핑되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 스케줄러로 설정됩니다. 다음 Transact-SQL 쿼리를 사용하여 물리적 NUMA 구성과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 스케줄러 ID 간의 매핑을 검색할 수 있습니다.  
   
-```  
+```sql  
 SELECT osn.memory_node_id AS [numa_node_id], sc.cpu_id, sc.scheduler_id  
 FROM sys.dm_os_nodes AS osn  
 INNER JOIN sys.dm_os_schedulers AS sc 
@@ -144,7 +144,7 @@ INNER JOIN sys.dm_os_schedulers AS sc
 ## <a name="examples"></a>예  
  다음 예에서는 `default`로 변경되는 `MAX_CPU_PERCENT`를 제외한 `25` 풀의 모든 기본 리소스 풀 설정을 유지합니다.  
   
-```  
+```sql  
 ALTER RESOURCE POOL "default"  
 WITH  
      ( MAX_CPU_PERCENT = 25);  
@@ -157,7 +157,7 @@ GO
   
 **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상  
   
-```  
+```sql  
 ALTER RESOURCE POOL Pool25  
 WITH(   
      MIN_CPU_PERCENT = 5,  
@@ -171,7 +171,6 @@ WITH(
 GO  
 ALTER RESOURCE GOVERNOR RECONFIGURE;  
 GO  
-  
 ```  
   
 ## <a name="see-also"></a>참고 항목  

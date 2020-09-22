@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 31a47aaf-6c7f-48a4-a86a-d57aec66c9cb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 15137c7a7f2996792151d56ffccc81fcbde850e9
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: dd983f16907332414cc6f726fb41583f8b928069
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538164"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688386"
 ---
 # <a name="alter-fulltext-catalog-transact-sql"></a>ALTER FULLTEXT CATALOG(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -39,8 +39,7 @@ ms.locfileid: "89538164"
   
 ## <a name="syntax"></a>구문  
   
-```syntaxsql
-  
+```syntaxsql 
 ALTER FULLTEXT CATALOG catalog_name   
 { REBUILD [ WITH ACCENT_SENSITIVITY = { ON | OFF } ]  
 | REORGANIZE  
@@ -83,7 +82,7 @@ ALTER FULLTEXT CATALOG catalog_name
 ## <a name="examples"></a>예제  
  다음 예에서는 악센트가 구분되는 기본 전체 텍스트 카탈로그 `accentsensitivity`의 `ftCatalog` 속성을 변경합니다.  
   
-```  
+```sql  
 --Change to accent insensitive  
 USE AdventureWorks2012;  
 GO  

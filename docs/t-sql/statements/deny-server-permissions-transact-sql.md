@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 68d6b2a9-c36f-465a-9cd2-01d43a667e99
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 50377ed7b719eee6a135af5db6161d9eed824915
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 67833e662688b6de418fc6d7db169f1107866035
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426625"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688608"
 ---
 # <a name="deny-server-permissions-transact-sql"></a>DENY 서버 사용 권한(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -155,7 +155,7 @@ DENY permission [ ,...n ]
 ### <a name="a-denying-connect-sql-permission-to-a-sql-server-login-and-principals-to-which-the-login-has-regranted-it"></a>A. SQL Server 로그인 및 이 로그인이 사용 권한을 다시 부여한 보안 주체에 대해 CONNECT SQL 권한 거부  
  다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 `CONNECT SQL` 및 이 사용자가 사용 권한을 부여한 보안 주체에 대해 `Annika` 권한을 거부합니다.  
   
-```  
+```sql  
 USE master;  
 DENY CONNECT SQL TO Annika CASCADE;  
 GO  
@@ -164,7 +164,7 @@ GO
 ### <a name="b-denying-create-endpoint-permission-to-a-sql-server-login-using-the-as-option"></a>B. AS 옵션을 사용하여 SQL Server 로그인에 대해 CREATE ENDPOINT 권한 거부  
  다음 예에서는 사용자 `CREATE ENDPOINT`에 대해 `ArifS` 권한을 거부합니다. 이 예에서는 `AS` 옵션을 사용하여 이를 위해 실행 보안 주체가 권한을 부여할 수 있는 보안 주체로 `MandarP`를 지정합니다.  
   
-```  
+```sql  
 USE master;  
 DENY CREATE ENDPOINT TO ArifS AS MandarP;  
 GO  

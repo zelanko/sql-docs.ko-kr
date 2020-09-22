@@ -21,12 +21,12 @@ ms.assetid: 658039ec-8dc2-4251-bc82-30ea23708cee
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c0091a060bc75b87ef40d03a48c25b5154c00ee4
-ms.sourcegitcommit: bf5acef60627f77883249bcec4c502b0205300a4
+ms.openlocfilehash: 33c985511b94b3ec5fcd03764a44d404b05078f8
+ms.sourcegitcommit: 76d31f456982dabb226239b424eaa7139d8cc6c1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88200438"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90570636"
 ---
 # <a name="case-transact-sql"></a>CASE(Transact-SQL)
 
@@ -145,7 +145,7 @@ FROM Data ;
 ### <a name="a-using-a-select-statement-with-a-simple-case-expression"></a>A. SELECT 문에 단순 CASE 식 사용  
  `SELECT` 문 내에서 단순 `CASE` 식은 동등성만 검사하고 다른 비교 작업은 수행할 수 없습니다. 다음 예에서는 `CASE` 식을 사용하여 제품 라인 범주 표시를 이해하기 쉽게 변경합니다.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT   ProductNumber, Category =  
@@ -160,13 +160,12 @@ SELECT   ProductNumber, Category =
 FROM Production.Product  
 ORDER BY ProductNumber;  
 GO  
-  
 ```  
   
 ### <a name="b-using-a-select-statement-with-a-searched-case-expression"></a>B. SELECT 문에 검색된 CASE 식 사용  
  `SELECT` 문 내에서 검색된 `CASE` 식은 비교 값에 따라 결과 집합의 값이 바뀌도록 합니다. 다음 예에서는 제품의 가격 범위에 따라 가격을 텍스트 설명으로 표시합니다.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT   ProductNumber, Name, "Price Range" =   
@@ -180,34 +179,31 @@ SELECT   ProductNumber, Name, "Price Range" =
 FROM Production.Product  
 ORDER BY ProductNumber ;  
 GO  
-  
 ```  
   
 ### <a name="c-using-case-in-an-order-by-clause"></a>C. ORDER BY 절에 CASE 사용  
  다음 예에서는 ORDER BY 절에 CASE 식을 사용하여 지정된 열 값에 따라 행의 정렬 순서를 결정합니다. 첫 번째 예에서는 `SalariedFlag` 테이블의 `HumanResources.Employee` 열의 값이 계산됩니다. `SalariedFlag`가 1로 설정된 직원은 `BusinessEntityID` 순서에 따라 내림차순으로 반환됩니다. `SalariedFlag`가 0으로 설정된 직원은 `BusinessEntityID` 순서에 따라 오름차순으로 반환됩니다. 두 번째 예에서 결과 집합은 `TerritoryName` 열이 'United States'와 동일하면 `CountryRegionName` 열을 기준으로 정렬되고 그 외 다른 행에는 `CountryRegionName` 열을 기준으로 정렬됩니다.  
   
-```  
+```sql  
 SELECT BusinessEntityID, SalariedFlag  
 FROM HumanResources.Employee  
 ORDER BY CASE SalariedFlag WHEN 1 THEN BusinessEntityID END DESC  
         ,CASE WHEN SalariedFlag = 0 THEN BusinessEntityID END;  
-GO  
-  
+GO    
 ```  
   
-```  
+```sql  
 SELECT BusinessEntityID, LastName, TerritoryName, CountryRegionName  
 FROM Sales.vSalesPerson  
 WHERE TerritoryName IS NOT NULL  
 ORDER BY CASE CountryRegionName WHEN 'United States' THEN TerritoryName  
-         ELSE CountryRegionName END;  
-  
+         ELSE CountryRegionName END; 
 ```  
   
 ### <a name="d-using-case-in-an-update-statement"></a>D. UPDATE 문에 CASE 사용  
  다음 예에서는 UPDATE 문에 CASE 식을 사용하여 `VacationHours`가 0으로 설정된 직원의 열 `SalariedFlag`에 설정된 값을 확인합니다. `VacationHours`에서 10시간을 뺀 결과 음수 값이 되면 `VacationHours`가 40시간 증가되고, 그렇지 않으면 `VacationHours`가 20시간 증가됩니다. OUTPUT 절은 휴가의 이전 값과 이후 값을 표시하는 데 사용됩니다.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 UPDATE HumanResources.Employee  
@@ -220,32 +216,30 @@ SET VacationHours =
 OUTPUT Deleted.BusinessEntityID, Deleted.VacationHours AS BeforeValue,   
        Inserted.VacationHours AS AfterValue  
 WHERE SalariedFlag = 0;  
-  
 ```  
   
 ### <a name="e-using-case-in-a-set-statement"></a>E. SET 문에 CASE 사용  
  다음 예에서는 테이블 반환 함수 `dbo.GetContactInfo`에서 SET 문에 CASE 식을 사용합니다. [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에서 사용자와 관련된 모든 데이터는 `Person.Person` 테이블에 저장됩니다. 예를 들어 사용자는 직원, 공급업체 담당자 또는 고객일 수 있습니다. 함수는 지정된 `BusinessEntityID`의 성과 이름 및 해당 사용자에 대한 연락처 유형을 반환합니다. SET 문의 CASE 식은 `Employee`, `Vendor` 또는 `Customer` 테이블에 `BusinessEntityID` 열이 있는지 여부에 따라 `ContactType` 열에 대해 표시할 값을 결정합니다.  
   
-```  
-  
+```sql   
 USE AdventureWorks2012;  
 GO  
-CREATE FUNCTION dbo.GetContactInformation(@BusinessEntityID int)  
+CREATE FUNCTION dbo.GetContactInformation(@BusinessEntityID INT)  
     RETURNS @retContactInformation TABLE   
 (  
-BusinessEntityID int NOT NULL,  
-FirstName nvarchar(50) NULL,  
-LastName nvarchar(50) NULL,  
-ContactType nvarchar(50) NULL,  
+BusinessEntityID INT NOT NULL,  
+FirstName NVARCHAR(50) NULL,  
+LastName NVARCHAR(50) NULL,  
+ContactType NVARCHAR(50) NULL,  
     PRIMARY KEY CLUSTERED (BusinessEntityID ASC)  
 )   
 AS   
 -- Returns the first name, last name and contact type for the specified contact.  
 BEGIN  
     DECLARE   
-        @FirstName nvarchar(50),   
-        @LastName nvarchar(50),   
-        @ContactType nvarchar(50);  
+        @FirstName NVARCHAR(50),   
+        @LastName NVARCHAR(50),   
+        @ContactType NVARCHAR(50);  
   
     -- Get common contact information  
     SELECT   
@@ -293,14 +287,13 @@ SELECT BusinessEntityID, FirstName, LastName, ContactType
 FROM dbo.GetContactInformation(2200);  
 GO  
 SELECT BusinessEntityID, FirstName, LastName, ContactType  
-FROM dbo.GetContactInformation(5);  
-  
+FROM dbo.GetContactInformation(5);
 ```  
   
 ### <a name="f-using-case-in-a-having-clause"></a>F. HAVING 절에 CASE 사용  
  다음 예에서는 HAVING 절에 CASE 식을 사용하여 SELECT 문에서 반환하는 행을 제한합니다. 이 명령문은 `HumanResources.Employee` 테이블에서 각 직함에 대한 최대 시간당 급여를 반환합니다. HAVING 절은 직함을 최대 급여가 40달러가 넘는 남자 직원의 직함 또는 최대 급여가 42달러가 넘는 여자 직원의 직함으로 제한합니다.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT JobTitle, MAX(ph1.Rate)AS MaximumRate  
@@ -313,8 +306,7 @@ HAVING (MAX(CASE WHEN Gender = 'M'
      OR MAX(CASE WHEN Gender  = 'F'   
         THEN ph1.Rate    
         ELSE NULL END) > 42.00)  
-ORDER BY MaximumRate DESC;  
-  
+ORDER BY MaximumRate DESC; 
 ```  
   
 ## <a name="examples-sssdwfull-and-sspdw"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
@@ -322,7 +314,7 @@ ORDER BY MaximumRate DESC;
 ### <a name="g-using-a-select-statement-with-a-case-expression"></a>G. CASE 식이 포함된 SELECT 문 사용  
  SELECT 문 내에서 CASE 식을 사용하면 비교 값에 따라 결과 집합에서 값을 바꿀 수 있습니다. 다음 예제에서는 CASE 식을 사용하여 제품 라인 범주의 표시를 더 쉽게 이해할 수 있도록 변경합니다. 값이 없으면 "Not for sale"(판매하지 않음) 텍스트가 표시됩니다.  
   
-```  
+```sql 
 -- Uses AdventureWorks  
   
 SELECT   ProductAlternateKey, Category =  
@@ -341,7 +333,7 @@ ORDER BY ProductKey;
 ### <a name="h-using-case-in-an-update-statement"></a>H. UPDATE 문에 CASE 사용  
  다음 예에서는 UPDATE 문에 CASE 식을 사용하여 `VacationHours`가 0으로 설정된 직원의 열 `SalariedFlag`에 설정된 값을 확인합니다. `VacationHours`에서 10시간을 뺀 결과 음수 값이 되면 `VacationHours`가 40시간 증가되고, 그렇지 않으면 `VacationHours`가 20시간 증가됩니다.  
   
-```  
+```sql  
 -- Uses AdventureWorks   
   
 UPDATE dbo.DimEmployee  
@@ -352,7 +344,6 @@ SET VacationHours =
        END  
     )   
 WHERE SalariedFlag = 0;  
-  
 ```  
   
 ## <a name="see-also"></a>참고 항목  

@@ -20,12 +20,12 @@ ms.assetid: bb2d2550-9c0e-4a88-b50c-12e481d4d3ae
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7671b2f961826e6c964afbaeeb2db694877adf01
-ms.sourcegitcommit: e4c36570c34cd7d7ae258061351bce6e54ea49f6
+ms.openlocfilehash: 1f6cd4c28efff1425a18fcef9e7ed60ee535a93f
+ms.sourcegitcommit: 76d31f456982dabb226239b424eaa7139d8cc6c1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88147954"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90570538"
 ---
 # <a name="grant-search-property-list-permissions-transact-sql"></a>GRANT 검색 속성 목록 사용 권한(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -137,7 +137,7 @@ GRANT permission [ ,...n ] ON
 ### <a name="granting-permissions-to-a-search-property-list"></a>검색 속성 목록에 대한 사용 권한 부여  
  다음 예에서는 `Mary`에게 검색 속성 목록 `VIEW DEFINITION`에 대한 `DocumentTablePropertyList` 사용 권한을 부여합니다.  
   
-```  
+```sql  
 GRANT VIEW DEFINITION  
     ON SEARCH PROPERTY LIST :: DocumentTablePropertyList  
     TO Mary ;  

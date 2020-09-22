@@ -38,12 +38,12 @@ helpviewer_keywords:
 ms.assetid: 4165c404-4d50-4063-9a6e-6e267d309376
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: b38d2349b2eb1982350caab9da79c6781b10d99f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a3339b5c4e7b54ce26f0760b22d0f0fed1a931b5
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88458725"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688440"
 ---
 # <a name="create-remote-service-binding-transact-sql"></a>CREATE REMOTE SERVICE BINDING(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -55,7 +55,6 @@ ms.locfileid: "88458725"
 ## <a name="syntax"></a>구문  
   
 ```syntaxsql
-  
 CREATE REMOTE SERVICE BINDING binding_name   
    [ AUTHORIZATION owner_name ]   
    TO SERVICE 'service_name'   
@@ -102,7 +101,7 @@ CREATE REMOTE SERVICE BINDING binding_name
 ### <a name="a-creating-a-remote-service-binding"></a>A. 원격 서비스 바인딩 만들기  
  다음 예에서는 `//Adventure-Works.com/services/AccountsPayable` 서비스에 대한 바인딩을 만듭니다. [!INCLUDE[ssSB](../../includes/sssb-md.md)]는 `APUser` 데이터베이스 보안 주체가 소유한 인증서를 사용하여 해당 원격 서비스와 세션 암호화 키를 교환합니다.  
   
-```  
+```sql  
 CREATE REMOTE SERVICE BINDING APBinding  
     TO SERVICE '//Adventure-Works.com/services/AccountsPayable'  
     WITH USER = APUser ;  
@@ -111,7 +110,7 @@ CREATE REMOTE SERVICE BINDING APBinding
 ### <a name="b-creating-a-remote-service-binding-using-anonymous-authentication"></a>B. 익명 인증을 사용하여 원격 서비스 바인딩 만들기  
  다음 예에서는 `//Adventure-Works.com/services/AccountsPayable` 서비스에 대한 바인딩을 만듭니다. [!INCLUDE[ssSB](../../includes/sssb-md.md)]는 `APUser` 데이터베이스 보안 주체가 소유한 인증서를 사용하여 해당 원격 서비스와 세션 암호화 키를 교환합니다. 원격 서비스를 인증하지는 않습니다. 원격 서비스를 호스팅하는 데이터베이스에서 메시지는 **guest** 사용자로 배달됩니다.  
   
-```  
+```sql  
 CREATE REMOTE SERVICE BINDING APBinding  
     TO SERVICE '//Adventure-Works.com/services/AccountsPayable'  
     WITH USER = APUser, ANONYMOUS=ON ;  

@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: db77fa77-fedb-40ac-83e6-06343063e518
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: c398b8a3ae8204e202954f667db1c99dc08a477a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ddd4bb610c9ed7d9a5da70c9633c31a86cc5b034
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444838"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688749"
 ---
 # <a name="create-server-audit-specification-transact-sql"></a>CREATE SERVER AUDIT SPECIFICATION(Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -35,7 +35,6 @@ ms.locfileid: "88444838"
 ## <a name="syntax"></a>구문  
   
 ```syntaxsql
-  
 CREATE SERVER AUDIT SPECIFICATION audit_specification_name  
 FOR SERVER AUDIT audit_name  
 {  
@@ -72,7 +71,7 @@ FOR SERVER AUDIT audit_name
 ## <a name="examples"></a>예제  
  다음 예에서는 `HIPAA_Audit_Specification`라는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit에 대해 실패한 로그인을 감사하는 `HIPAA_Audit`이라는 서버 감사 사양을 만듭니다.  
   
-```  
+```sql  
 CREATE SERVER AUDIT SPECIFICATION HIPAA_Audit_Specification  
 FOR SERVER AUDIT HIPAA_Audit  
     ADD (FAILED_LOGIN_GROUP)  

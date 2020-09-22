@@ -22,12 +22,12 @@ ms.assetid: 8429134f-c821-4033-a07c-f782a48d501c
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f7bde409031e86d65826505f03467c79fe5075ab
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6ebc5291ae6be0de2c1ea8961e05c4238db17b2d
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88467231"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688849"
 ---
 # <a name="create-table-transact-sql-identity-property"></a>CREATE TABLE(Transact-SQL) IDENTITY (Property)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "88467231"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```syntaxsql  
 IDENTITY [ (seed , increment) ]
 ```  
   
@@ -92,7 +92,7 @@ IDENTITY [ (seed , increment) ]
 ### <a name="a-using-the-identity-property-with-create-table"></a>A. CREATE TABLE에 IDENTITY 속성 사용  
  다음 예에서는 자동으로 ID를 증가시키는 `IDENTITY` 속성을 사용하여 새 테이블을 만듭니다.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
   
 IF OBJECT_ID ('dbo.new_employees', 'U') IS NOT NULL  
@@ -123,7 +123,7 @@ VALUES
 > [!NOTE]  
 >  다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트의 첫 번째 부분은 설명 목적으로만 제공되는 것입니다. 주석으로 시작하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트를 실행할 수 있습니다. `-- Create the img table`.  
   
-```  
+```sql 
 -- Here is the generic syntax for finding identity value gaps in data.  
 -- The illustrative example starts here.  
 SET IDENTITY_INSERT tablename ON;  
@@ -155,14 +155,14 @@ SET IDENTITY_INSERT tablename OFF;
 IF OBJECT_ID ('dbo.img', 'U') IS NOT NULL  
    DROP TABLE img;  
 GO  
-CREATE TABLE img (id_num int IDENTITY(1,1), company_name sysname);  
+CREATE TABLE img (id_num INT IDENTITY(1,1), company_name sysname);  
 INSERT img(company_name) VALUES ('New Moon Books');  
 INSERT img(company_name) VALUES ('Lucerne Publishing');  
 -- SET IDENTITY_INSERT ON and use in img table.  
 SET IDENTITY_INSERT img ON;  
   
-DECLARE @minidentval smallint;  
-DECLARE @nextidentval smallint;  
+DECLARE @minidentval SMALLINT;  
+DECLARE @nextidentval SMALLINT;  
 SELECT @minidentval = MIN($IDENTITY) FROM img  
  IF @minidentval = IDENT_SEED('img')  
     SELECT @nextidentval = MIN($IDENTITY) + IDENT_INCR('img')  

@@ -28,12 +28,12 @@ ms.assetid: 7e695364-1a98-4cfd-8ebd-137ac5a425b3
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 2c8b24889e99f5f0f3cdbaaad377a2d4e99f2da3
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 5eea276766b848033fc0fd8cd7487e7451c779ca
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549333"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688341"
 ---
 # <a name="create-route-transact-sql"></a>CREATE ROUTE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -45,7 +45,6 @@ ms.locfileid: "89549333"
 ## <a name="syntax"></a>구문  
   
 ```syntaxsql
-  
 CREATE ROUTE route_name  
 [ AUTHORIZATION owner_name ]  
 WITH    
@@ -73,7 +72,7 @@ WITH
  BROKER_INSTANCE = **'** _broker\_instance\_identifier_ **'**  
  대상 서비스를 호스팅하는 데이터베이스를 지정합니다. *broker_instance_identifier* 매개 변수는 선택한 데이터베이스에서 다음 쿼리를 실행하여 가져올 수 있는 원격 데이터베이스의 Broker 인스턴스 식별자여야 합니다.  
   
-```  
+```sql  
 SELECT service_broker_guid  
 FROM sys.databases  
 WHERE database_id = DB_ID()  
@@ -93,7 +92,7 @@ SQL Managed Instance의 경우 `ADDRESS`는 로컬이어야 합니다.
   
  지정된 *port_number*는 지정된 컴퓨터에서 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 인스턴스의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 엔드포인트의 포트 번호와 일치해야 합니다. 선택한 데이터베이스에서 다음 쿼리를 실행하여 얻을 수 있습니다.  
   
-```  
+```sql  
 SELECT tcpe.port  
 FROM sys.tcp_endpoints AS tcpe  
 INNER JOIN sys.service_broker_endpoints AS ssbe  
@@ -114,7 +113,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
   
  지정된 *port_number*는 지정된 컴퓨터에서 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 인스턴스의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 엔드포인트의 포트 번호와 일치해야 합니다. 선택한 데이터베이스에서 다음 쿼리를 실행하여 얻을 수 있습니다.  
   
-```  
+```sql  
 SELECT tcpe.port  
 FROM sys.tcp_endpoints AS tcpe  
 INNER JOIN sys.service_broker_endpoints AS ssbe  
@@ -145,7 +144,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
 ### <a name="a-creating-a-tcpip-route-by-using-a-dns-name"></a>A. DNS 이름을 사용하여 TCP/IP 경로 만들기  
  다음 예에서는 `//Adventure-Works.com/Expenses` 서비스에 대한 경로를 만듭니다. 경로는 이 서비스에 대한 메시지가 TCP를 통해 DNS 이름 `1234`으로 식별되는 호스트의 포트 `www.Adventure-Works.com`로 이동되도록 지정합니다. 메시지 도착 시 대상 서버는 고유 식별자 `D8D4D268-00A3-4C62-8F91-634B89C1E315`로 식별되는 Broker 인스턴스로 메시지를 배달합니다.  
   
-```  
+```sql 
 CREATE ROUTE ExpenseRoute  
     WITH  
     SERVICE_NAME = '//Adventure-Works.com/Expenses',  
@@ -156,7 +155,7 @@ CREATE ROUTE ExpenseRoute
 ### <a name="b-creating-a-tcpip-route-by-using-a-netbios-name"></a>B. NetBIOS 이름을 사용하여 TCP/IP 경로 만들기  
  다음 예에서는 `//Adventure-Works.com/Expenses` 서비스에 대한 경로를 만듭니다. 경로는 이 서비스에 대한 메시지가 TCP를 통해 NetBIOS 이름 `1234`로 식별되는 호스트의 포트 `SERVER02`로 이동되도록 지정합니다. 메시지 도착 시 대상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 고유 식별자 `D8D4D268-00A3-4C62-8F91-634B89C1E315`로 식별되는 데이터베이스 인스턴스로 메시지를 배달합니다.  
   
-```  
+```sql  
 CREATE ROUTE ExpenseRoute  
     WITH   
     SERVICE_NAME = '//Adventure-Works.com/Expenses',  
@@ -167,7 +166,7 @@ CREATE ROUTE ExpenseRoute
 ### <a name="c-creating-a-tcpip-route-by-using-an-ip-address"></a>C. IP 주소를 사용하여 TCP/IP 경로 만들기  
  다음 예에서는 `//Adventure-Works.com/Expenses` 서비스에 대한 경로를 만듭니다. 경로는 이 서비스에 대한 메시지가 TCP를 통해 IP 주소가 `1234`인 호스트의 포트 `192.168.10.2`로 이동되도록 지정합니다. 메시지 도착 시 대상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 고유 식별자 `D8D4D268-00A3-4C62-8F91-634B89C1E315`로 식별되는 Broker 인스턴스로 메시지를 배달합니다.  
   
-```  
+```sql  
 CREATE ROUTE ExpenseRoute  
     WITH  
     SERVICE_NAME = '//Adventure-Works.com/Expenses',  
@@ -178,7 +177,7 @@ CREATE ROUTE ExpenseRoute
 ### <a name="d-creating-a-route-to-a-forwarding-broker"></a>D. 전달 Broker에 대한 경로 만들기  
  다음 예에서는 `dispatch.Adventure-Works.com` 서버의 전달 Broker에 대한 경로를 만듭니다. 서비스 이름과 broker 인스턴스 식별자를 둘 다 지정하지 않으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 다른 경로가 정의되지 않은 서비스에 이 경로를 사용합니다.  
   
-```  
+```sql  
 CREATE ROUTE ExpenseRoute  
     WITH  
     ADDRESS = 'TCP://dispatch.Adventure-Works.com' ;   
@@ -187,7 +186,7 @@ CREATE ROUTE ExpenseRoute
 ### <a name="e-creating-a-route-to-a-local-service"></a>E. 로컬 서비스에 대한 경로 만들기  
  다음 예에서는 경로와 같은 인스턴스의 `//Adventure-Works.com/LogRequests` 서비스에 대한 경로를 만듭니다.  
   
-```  
+```sql  
 CREATE ROUTE LogRequests  
     WITH  
     SERVICE_NAME = '//Adventure-Works.com/LogRequests',  
@@ -197,7 +196,7 @@ CREATE ROUTE LogRequests
 ### <a name="f-creating-a-route-with-a-specified-lifetime"></a>F. 지정한 유효 기간으로 경로 만들기  
  다음 예에서는 `//Adventure-Works.com/Expenses` 서비스에 대한 경로를 만듭니다. 경로의 유효 기간은 `259200`초(72시간)입니다.  
   
-```  
+```sql  
 CREATE ROUTE ExpenseRoute  
     WITH  
     SERVICE_NAME = '//Adventure-Works.com/Expenses',  
@@ -208,7 +207,7 @@ CREATE ROUTE ExpenseRoute
 ### <a name="g-creating-a-route-to-a-mirrored-database"></a>G. 미러된 데이터베이스에 대한 경로 만들기  
  다음 예에서는 `//Adventure-Works.com/Expenses` 서비스에 대한 경로를 만듭니다. 서비스는 미러된 데이터베이스에서 호스팅됩니다. 미러된 데이터베이스 중 하나는 주소 `services.Adventure-Works.com:1234`에 있으며 다른 데이터베이스는 주소 `services-mirror.Adventure-Works.com:1234`에 있습니다.  
   
-```  
+```sql  
 CREATE ROUTE ExpenseRoute  
     WITH  
     SERVICE_NAME = '//Adventure-Works.com/Expenses',  
@@ -220,7 +219,7 @@ CREATE ROUTE ExpenseRoute
 ### <a name="h-creating-a-route-that-uses-the-service-name-for-routing"></a>H. 라우팅에 서비스 이름을 사용하는 경로 만들기  
  다음 예에서는 메시지를 보낼 네트워크 주소를 확인하는 데 서비스 이름을 사용하는 경로를 만듭니다. 네트워크 주소로 `'TRANSPORT'`를 지정하는 경로는 다른 경로보다 일치 시 우선 순위가 낮습니다.  
   
-```  
+```sql  
 CREATE ROUTE TransportRoute  
     WITH ADDRESS = 'TRANSPORT' ;  
 ```  

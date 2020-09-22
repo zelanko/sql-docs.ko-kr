@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7e880a5a-3bdc-491f-a167-7a9ed338be7f
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: a208dc9a99f18a9bfad061afc9caae7f3e859add
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 23ff7a537598cde913635d427bdbd58388e16803
+ms.sourcegitcommit: 76d31f456982dabb226239b424eaa7139d8cc6c1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444657"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90570528"
 ---
 # <a name="grant-server-permissions-transact-sql"></a>GRANT 서버 사용 권한(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -150,7 +150,7 @@ GRANT permission [ ,...n ]
 ### <a name="a-granting-a-permission-to-a-login"></a>A. 로그인에 사용 권한 부여  
  다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 `CONTROL SERVER`에 대해 `TerryEminhizer` 권한을 부여합니다.  
   
-```  
+```sql  
 USE master;  
 GRANT CONTROL SERVER TO TerryEminhizer;  
 GO  
@@ -159,7 +159,7 @@ GO
 ### <a name="b-granting-a-permission-that-has-grant-permission"></a>B. GRANT 권한이 있는 사용 권한 부여  
  다음 예에서는 다른 로그인에 사용 권한을 부여할 수 있는 권한이 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 `ALTER ANY EVENT NOTIFICATION`에 대해 `JanethEsteves`을 부여합니다.  
   
-```  
+```sql  
 USE master;  
 GRANT ALTER ANY EVENT NOTIFICATION TO JanethEsteves WITH GRANT OPTION;  
 GO  
@@ -168,7 +168,7 @@ GO
 ### <a name="c-granting-a-permission-to-a-server-role"></a>C. 서버 역할에 사용 권한 부여  
  다음 예에서는 `ITDevAdmin` 및 `ITDevelopers`라는 두 개의 서버 역할을 만듭니다. `ALTER ANY DATABASE` 서버 역할이 `ITDevAdmin` 권한을 다시 할당할 수 있도록 `WITH GRANT` 옵션을 포함하여 `ITDevAdmin` 사용자 정의 서버 역할에 `ALTER ANY DATABASE` 권한을 부여합니다. 그럼 다음 예에서 `ITDevelopers` 서버 역할의 `ALTER ANY DATABASE` 권한을 사용할 사용 권한을 `ITDevAdmin`에 부여합니다.  
   
-```  
+```sql  
 USE master;  
 CREATE SERVER ROLE ITDevAdmin ;  
 CREATE SERVER ROLE ITDevelopers ;  

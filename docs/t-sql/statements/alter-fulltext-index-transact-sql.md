@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: b6fbe9e6-3033-4d1b-b6bf-1437baeefec3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 63ef4a797c8e396d3ce3ca4b4db21d44519b8525
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 584fcb85f71d253fd2ecc471d64c58579cf2c233
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549483"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688377"
 ---
 # <a name="alter-fulltext-index-transact-sql"></a>ALTER FULLTEXT INDEX(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -39,7 +39,6 @@ ms.locfileid: "89549483"
 ## <a name="syntax"></a>구문  
   
 ```syntaxsql
-  
 ALTER FULLTEXT INDEX ON table_name  
    { ENABLE   
    | DISABLE  
@@ -238,7 +237,7 @@ ALTER FULLTEXT INDEX ON table_name
   
 1.  `table_1`에서 검색 속성 목록 `spl_1`을 사용하여 전체 텍스트 인덱스가 생성됩니다.  
   
-    ```  
+    ```sql  
     CREATE FULLTEXT INDEX ON table_1 (column_name) KEY INDEX unique_key_index   
        WITH SEARCH PROPERTY LIST=spl_1,   
        CHANGE_TRACKING OFF, NO POPULATION;   
@@ -246,13 +245,13 @@ ALTER FULLTEXT INDEX ON table_name
   
 2.  전체 텍스트 인덱스에서 전체 채우기가 실행됩니다.  
   
-    ```  
+    ```sql  
     ALTER FULLTEXT INDEX ON table_1 START FULL POPULATION;  
     ```  
   
 3.  다음 문을 사용하여 전체 텍스트 인덱스가 나중에 다른 검색 속성 목록 `spl_2`와 연결됩니다.  
   
-    ```  
+    ```sql  
     ALTER FULLTEXT INDEX ON table_1 SET SEARCH PROPERTY LIST spl_2;  
     ```  
   
@@ -262,14 +261,14 @@ ALTER FULLTEXT INDEX ON table_name
   
 1.  `table_1`에서 검색 속성 목록 `spl_1`을 사용하여 전체 텍스트 인덱스가 생성된 후 자동 전체 채우기가 실행됩니다(기본 동작).  
   
-    ```  
+    ```sql  
     CREATE FULLTEXT INDEX ON table_1 (column_name) KEY INDEX unique_key_index   
        WITH SEARCH PROPERTY LIST=spl_1;   
     ```  
   
 2.  다음과 같이 검색 속성 목록이 해제됩니다.  
   
-    ```  
+    ```sql  
     ALTER FULLTEXT INDEX ON table_1   
        SET SEARCH PROPERTY LIST OFF WITH NO POPULATION;   
     ```  
@@ -278,7 +277,7 @@ ALTER FULLTEXT INDEX ON table_name
   
      예를 들어 다음 명령문은 전체 텍스트 인덱스를 원래의 검색 속성 목록 `spl_1`과 다시 연결합니다.  
   
-    ```  
+    ```sql  
     ALTER FULLTEXT INDEX ON table_1 SET SEARCH PROPERTY LIST spl_1;  
     ```  
   
@@ -300,7 +299,7 @@ ALTER FULLTEXT INDEX ON table_name
 ### <a name="a-setting-manual-change-tracking"></a>A. 수동 변경 내용 추적 설정  
  다음 예에서는 `JobCandidate` 테이블에서 전체 텍스트 인덱스에 대한 수동 변경 내용 추적을 설정합니다.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 ALTER FULLTEXT INDEX ON HumanResources.JobCandidate  
@@ -317,7 +316,7 @@ GO
 > [!NOTE]  
 >  `DocumentPropertyList` 속성 목록을 만드는 예는 [CREATE SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](../../t-sql/statements/create-search-property-list-transact-sql.md)을 참조하세요.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 ALTER FULLTEXT INDEX ON Production.Document   
@@ -331,7 +330,7 @@ GO
   
  다음 예에서는 `DocumentPropertyList` 속성 목록을 `Production.Document`에 있는 전체 텍스트 인덱스에서 제거합니다. 이 예에서는 서둘러 인덱스에서 속성을 제거하지 않으므로 WITH NO POPULATION 옵션이 지정됩니다. 그러나 이 전체 텍스트 인덱스에 대해 속성 수준 검색이 더 이상 허용되지 않습니다.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 ALTER FULLTEXT INDEX ON Production.Document   
@@ -342,7 +341,7 @@ GO
 ### <a name="d-starting-a-full-population"></a>D. 전체 채우기 시작  
  다음 예에서는 `JobCandidate` 테이블에서 전체 텍스트 인덱스에 대한 전체 채우기를 시작합니다.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 ALTER FULLTEXT INDEX ON HumanResources.JobCandidate   

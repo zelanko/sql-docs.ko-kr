@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 41313809-e970-449c-bc35-85da2ef96e48
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0db46168ccaa488960db4f1a4aa9a0e7a73c5434
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 10d6e3fdfbb1614a24960d4d2115e0ca17e26be8
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538077"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688709"
 ---
 # <a name="create-synonym-transact-sql"></a>CREATE SYNONYM(Transact-SQL)
 
@@ -40,7 +40,7 @@ ms.locfileid: "89538077"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```syntaxsql  
 -- SQL Server Syntax  
   
 CREATE SYNONYM [ schema_name_1. ] synonym_name FOR <object>  
@@ -128,7 +128,7 @@ CREATE SYNONYM [ schema_name_1. ] synonym_name FOR < object >
 ### <a name="a-creating-a-synonym-for-a-local-object"></a>A. 로컬 개체의 동의어 만들기  
  다음 예에서는 먼저 `Product` 데이터베이스의 기준 개체인 `AdventureWorks2012`에 대한 동의어를 만든 다음 동의어를 사용하여 쿼리합니다.  
   
-```  
+```sql 
 -- Create a synonym for the Product table in AdventureWorks2012.  
 CREATE SYNONYM MyProduct  
 FOR AdventureWorks2012.Production.Product;  
@@ -160,7 +160,7 @@ GO
   
 **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상  
   
-```  
+```sql 
 EXEC sp_addlinkedserver Server_Remote;  
 GO  
 USE tempdb;  
@@ -172,10 +172,10 @@ GO
 ### <a name="c-creating-a-synonym-for-a-user-defined-function"></a>C. 사용자 정의 함수의 동의어 만들기  
  다음 예제에서는 주문 총계를 정확하게 12단위로 늘리는 `dbo.OrderDozen`라는 함수를 만듭니다. 그런 다음 `dbo.CorrectOrder` 함수에 대해 동의어 `dbo.OrderDozen`를 만듭니다.  
   
-```  
+```sql  
 -- Creating the dbo.OrderDozen function  
-CREATE FUNCTION dbo.OrderDozen (@OrderAmt int)  
-RETURNS int  
+CREATE FUNCTION dbo.OrderDozen (@OrderAmt INT)  
+RETURNS INT  
 WITH EXECUTE AS CALLER  
 AS  
 BEGIN  
@@ -188,7 +188,7 @@ END;
 GO  
   
 -- Using the dbo.OrderDozen function  
-DECLARE @Amt int;  
+DECLARE @Amt INT;  
 SET @Amt = 15;  
 SELECT @Amt AS OriginalOrder, dbo.OrderDozen(@Amt) AS ModifiedOrder;  
   
@@ -198,7 +198,7 @@ FOR dbo.OrderDozen;
 GO  
   
 -- Using the dbo.CorrectOrder synonym.  
-DECLARE @Amt int;  
+DECLARE @Amt INT;  
 SET @Amt = 15;  
 SELECT @Amt AS OriginalOrder, dbo.CorrectOrder(@Amt) AS ModifiedOrder;  
 ```  

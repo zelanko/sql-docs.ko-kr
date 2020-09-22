@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 2a99c7c1-ac2f-4637-aa7c-3d1bf514e500
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a203d4a3b3d1b8f945779fe9b255f2c3a8cfcd5e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: e1fce1957dce037d33f1906ecea59b24292b813b
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538175"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688573"
 ---
 # <a name="alter-trigger-transact-sql"></a>ALTER TRIGGER(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -250,7 +250,7 @@ AS { sql_statement
 ## <a name="examples"></a>예제  
  다음 예에서는 사용자가 `SalesPersonQuotaHistory` 테이블에 데이터를 추가 또는 변경하려고 시도하면 클라이언트에 사용자 정의 메시지를 인쇄하는 AdventureWorks 2012 데이터베이스의 DML 트리거를 만드는 방법을 보여 줍니다. 그런 다음 `ALTER TRIGGER` 작업에만 해당 트리거를 적용하도록 `INSERT`를 사용하여 트리거를 수정합니다. 이 트리거는 테이블에 행을 삽입하거나 업데이트하는 사용자에게 `Compensation` 부서에도 해당 사실을 통지하도록 알려 줍니다.  
   
-```  
+```sql  
 CREATE TRIGGER Sales.bonus_reminder  
 ON Sales.SalesPersonQuotaHistory  
 WITH ENCRYPTION  

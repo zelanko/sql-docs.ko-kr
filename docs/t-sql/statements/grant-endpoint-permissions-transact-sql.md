@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9eda885c-fc3a-4c9d-8de6-ce07fb35a934
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: b7c5fa05a31a3087970a12acbe8d6a69a6a647ac
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ac369044de3cbc01e3087e7f3619950ebcaa8010
+ms.sourcegitcommit: 76d31f456982dabb226239b424eaa7139d8cc6c1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88472256"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90570574"
 ---
 # <a name="grant-endpoint-permissions-transact-sql"></a>GRANT 엔드포인트 사용 권한(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -101,7 +101,7 @@ GRANT permission  [ ,...n ] ON ENDPOINT :: endpoint_name
 ### <a name="a-granting-view-definition-permission-on-an-endpoint"></a>A. 엔드포인트에 대한 VIEW DEFINITION 권한 부여  
  다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 `VIEW DEFINITION`에 대해 엔드포인트 `Mirror7`에 대한 `ZArifin` 권한을 부여합니다.  
   
-```  
+```sql  
 USE master;  
 GRANT VIEW DEFINITION ON ENDPOINT::Mirror7 TO ZArifin;  
 GO  
@@ -110,7 +110,7 @@ GO
 ### <a name="b-granting-take-ownership-permission-with-the-grant-option"></a>B. GRANT OPTION을 지정하여 TAKE OWNERSHIP 권한 부여  
  다음 예에서는 `TAKE OWNERSHIP`으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용자 `Shipping83`에 대해 엔드포인트 `PKomosinski`에 대한 `GRANT OPTION` 권한을 부여합니다.  
   
-```  
+```sql  
 USE master;  
 GRANT TAKE OWNERSHIP ON ENDPOINT::Shipping83 TO PKomosinski   
     WITH GRANT OPTION;  

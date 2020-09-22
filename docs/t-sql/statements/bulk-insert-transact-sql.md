@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: be3984e1-5ab3-4226-a539-a9f58e1e01e2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2dd6b8be1bcaf19c6c5134c70ff60b535e47aa6a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 83ccbac5d01fca3e7ca237e0debedcd4c1ad9e83
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547600"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688809"
 ---
 # <a name="bulk-insert-transact-sql"></a>BULK INSERT(Transact-SQL)
 
@@ -249,7 +249,7 @@ BULK INSERT에 사용되는 String 데이터 형식에서 Decimal 데이터 형�
 이 예에서는 다음 테이블을 사용합니다.
 
 ```sql
-CREATE TABLE t_float(c1 float, c2 decimal (5,4));
+CREATE TABLE t_float(c1 FLOAT, c2 DECIMAL (5,4));
 ```
 
  사용자가 `t_float` 테이블로 데이터를 대량 가져오려고 합니다. 데이터 파일 C:\t_float-c.dat에는 과학적 표기법 **float** 데이터가 들어 있습니다. 예를 들면 다음과 같습니다.
@@ -398,7 +398,7 @@ BULK INSERT AdventureWorks2012.Sales.SalesOrderDetail
  다음 예에서는 UNIX 출력 같은 행 종결자로 줄 바꿈을 사용하는 파일을 가져옵니다.
 
 ```sql
-DECLARE @bulk_cmd varchar(1000);
+DECLARE @bulk_cmd VARCHAR(1000);
 SET @bulk_cmd = 'BULK INSERT AdventureWorks2012.Sales.SalesOrderDetail
 FROM ''<drive>:\<path>\<filename>''
 WITH (ROWTERMINATOR = '''+CHAR(10)+''')';

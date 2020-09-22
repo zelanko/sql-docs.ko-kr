@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: e0bbebfa-b7c3-4825-8169-7281f7e6de98
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0a17f41df5e7b35abe757be7a5e2e98997e253c6
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 9c50ce97995322a025feb1e201682717d7d2234d
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539927"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688502"
 ---
 # <a name="create-broker-priority-transact-sql"></a>CREATE BROKER PRIORITY(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +43,6 @@ ms.locfileid: "89539927"
 ## <a name="syntax"></a>구문  
   
 ```syntaxsql
-  
 CREATE BROKER PRIORITY ConversationPriorityName  
 FOR CONVERSATION  
 [ SET ( [ CONTRACT_NAME = {ContractName | ANY } ]  
@@ -169,7 +168,7 @@ FOR CONVERSATION
 ### <a name="a-assigning-a-priority-level-to-both-directions-of-a-conversation"></a>A. 대화의 양쪽 방향에 우선 순위 수준 할당  
  다음 두 대화 우선 순위는 `SimpleContract`와 `TargetService` 사이에서 `InitiatorAService`를 사용하는 모든 작업에 우선 순위 수준 3을 할당합니다.  
   
-```  
+```sql  
 CREATE BROKER PRIORITY InitiatorAToTargetPriority  
     FOR CONVERSATION  
     SET (CONTRACT_NAME = SimpleContract,  
@@ -187,7 +186,7 @@ CREATE BROKER PRIORITY TargetToInitiatorAPriority
 ### <a name="b-setting-the-priority-level-for-all-conversations-that-use-a-contract"></a>B. 계약을 사용하는 모든 대화의 우선 순위 수준 설정  
  `7`라는 계약을 사용하는 모든 작업에 우선 순위 수준 `SimpleContract`을 할당합니다. 이 경우 `SimpleContract`와 로컬 또는 원격 서비스를 모두 지정하는 다른 우선 순위가 없다고 가정합니다.  
   
-```  
+```sql 
 CREATE BROKER PRIORITY SimpleContractDefaultPriority  
     FOR CONVERSATION  
     SET (CONTRACT_NAME = SimpleContract,  
@@ -199,7 +198,7 @@ CREATE BROKER PRIORITY SimpleContractDefaultPriority
 ### <a name="c-setting-a-base-priority-level-for-a-database"></a>C. 데이터베이스의 기본 우선 순위 수준 설정  
  두 특정 서비스의 대화 우선 순위를 정의한 다음 다른 모든 대화 엔드포인트와 일치하는 대화 우선 순위를 정의합니다. 이는 항상 5인 기본 우선 순위를 대체하지 않지만 기본값이 할당되는 항목 수를 최소화합니다.  
   
-```  
+```sql 
 CREATE BROKER PRIORITY [//Adventure-Works.com/Expenses/ClaimPriority]  
     FOR CONVERSATION  
     SET (CONTRACT_NAME = ANY,  

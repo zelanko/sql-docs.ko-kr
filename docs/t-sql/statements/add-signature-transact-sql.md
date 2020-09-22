@@ -18,12 +18,12 @@ ms.author: vanto
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/10/2020
-ms.openlocfilehash: da1072eb299fa4ad65e82210126a9a6f8af25619
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0f0ed0ee3619abae19df06879fbfd1d60b22a0b0
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88488134"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688428"
 ---
 # <a name="add-signature-transact-sql"></a>ADD SIGNATURE(Transact-SQL)
 
@@ -113,7 +113,7 @@ ADD [ COUNTER ] SIGNATURE TO module_class::module_name
 
  다음 예에서는 `HumanResources.uspUpdateEmployeeLogin` 인증서를 사용하여 `HumanResourcesDP` 저장 프로시저에 서명합니다.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 ADD SIGNATURE TO HumanResources.uspUpdateEmployeeLogin   
     BY CERTIFICATE HumanResourcesDP;  
@@ -124,7 +124,7 @@ GO
 
 다음 예에서는 새 데이터베이스를 만들고 예에서 사용할 인증서를 만듭니다. 예에서는 간단한 저장 프로시저를 만들어 서명하고 `sys.crypt_properties`에서 서명 BLOB을 검색합니다. 서명이 삭제된 후 다시 추가됩니다. 예에서는 WITH SIGNATURE 구문을 사용하여 프로시저에 서명합니다.  
   
-```  
+```sql  
 CREATE DATABASE TestSignature ;  
 GO  
 USE TestSignature ;  
@@ -134,6 +134,7 @@ CREATE CERTIFICATE cert_signature_demo
     ENCRYPTION BY PASSWORD = 'pGFD4bb925DGvbd2439587y'  
     WITH SUBJECT = 'ADD SIGNATURE demo';  
 GO  
+
 -- Create a simple procedure.  
 CREATE PROC [sp_signature_demo]  
 AS  
@@ -144,6 +145,7 @@ ADD SIGNATURE TO [sp_signature_demo]
     BY CERTIFICATE [cert_signature_demo]   
     WITH PASSWORD = 'pGFD4bb925DGvbd2439587y' ;  
 GO  
+
 -- Get the signature binary BLOB for the sp_signature_demo procedure.  
 SELECT cp.crypt_property  
     FROM sys.crypt_properties AS cp  
@@ -155,11 +157,12 @@ GO
   
  이 문에서 반환하는 `crypt_property` 서명은 프로시저를 만들 때마다 달라집니다. 이 예의 뒷부분에서 사용할 수 있도록 결과를 적어 두십시오. 이 예의 경우 나타나는 결과는 `0x831F5530C86CC8ED606E5BC2720DA835351E46219A6D5DE9CE546297B88AEF3B6A7051891AF3EE7A68EAB37CD8380988B4C3F7469C8EABDD9579A2A5C507A4482905C2F24024FFB2F9BD7A953DD5E98470C4AA90CE83237739BB5FAE7BAC796E7710BDE291B03C43582F6F2D3B381F2102EEF8407731E01A51E24D808D54B373`입니다.  
   
-```  
+```sql  
 -- Drop the signature so that it can be signed again.  
 DROP SIGNATURE FROM [sp_signature_demo]   
     BY CERTIFICATE [cert_signature_demo];  
 GO  
+
 -- Add the signature. Use the signature BLOB obtained earlier.  
 ADD SIGNATURE TO [sp_signature_demo]   
     BY CERTIFICATE [cert_signature_demo]  
@@ -171,14 +174,14 @@ GO
 
 다음 예에서는 연대 서명을 통해 개체 액세스를 제어하는 방법을 보여 줍니다.  
   
-```  
+```sql  
 -- Create tesT1 database  
 CREATE DATABASE testDB;  
 GO  
 USE testDB;  
 GO  
 -- Create table T1  
-CREATE TABLE T1 (c varchar(11));  
+CREATE TABLE T1 (c VARCHAR(11));  
 INSERT INTO T1 VALUES ('This is T1.');  
   
 -- Create a TestUser user to own table T1  
@@ -251,7 +254,6 @@ USE master;
 GO  
 DROP DATABASE testDB;  
 DROP LOGIN Alice;  
-  
 ```  
   
 ## <a name="see-also"></a>참고 항목

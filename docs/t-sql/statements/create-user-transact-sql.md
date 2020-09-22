@@ -30,12 +30,12 @@ ms.assetid: 01de7476-4b25-4d58-85b7-1118fe64aa80
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 54734c9b463ab6450e0f5793d637b32d9e60553e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f0f7889af18a605ae5c6b02c8eaaac573fec1abc
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88467281"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688839"
 ---
 # <a name="create-user-transact-sql"></a>CREATE USER(Transact-SQL)
 
@@ -354,13 +354,13 @@ SQL Managed Instance 데이터베이스에서 사용자를 만들 때 login_name
 ### <a name="a-creating-a-database-user-based-on-a-sql-server-login"></a>A. SQL Server 로그인 기반 데이터베이스 사용자 만들기  
  다음 예에서는 먼저 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]이라는 `AbolrousHazem` 로그인을 만든 다음 `AbolrousHazem`에 이에 해당하는 `AdventureWorks2012`이라는 데이터베이스 사용자를 만듭니다.  
   
-```  
+```sql  
 CREATE LOGIN AbolrousHazem   
     WITH PASSWORD = '340$Uuxwp7Mcxo7Khy';  
 ```   
 사용자 데이터베이스로 변경합니다. 예를 들어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 `USE AdventureWorks2012` 문을 사용합니다. [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에서 사용자 데이터베이스에 새 연결을 만들어야 합니다.
 
-```   
+```sql   
 CREATE USER AbolrousHazem FOR LOGIN AbolrousHazem;  
 GO   
 ```  
@@ -368,7 +368,7 @@ GO
 ### <a name="b-creating-a-database-user-with-a-default-schema"></a>B. 기본 스키마로 데이터베이스 사용자 만들기  
  다음 예에서는 암호를 사용하여 `WanidaBenshoof`라는 서버 로그인을 만든 다음 기본 스키마인 `Wanida`을 사용하여 해당 데이터베이스 사용자 `Marketing`를 만듭니다.  
   
-```  
+```sql  
 CREATE LOGIN WanidaBenshoof   
     WITH PASSWORD = '8fdKJl3$nlNv3049jsKK';  
 USE AdventureWorks2012;  
@@ -382,7 +382,7 @@ GO
   
 **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 CREATE CERTIFICATE CarnationProduction50  
     WITH SUBJECT = 'Carnation Production Facility Supervisors',  
@@ -395,7 +395,7 @@ GO
 ###  <a name="d-creating-and-using-a-user-without-a-login"></a><a name="withoutLogin"></a> 4. 로그인이 없는 사용자 만들기 및 사용  
  다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인에 매핑되지 않는 데이터베이스 사용자 `CustomApp`를 만듭니다. 그런 다음 `adventure-works\tengiz0` 사용자를 가장하도록 사용자에게 `CustomApp` 권한을 부여합니다.  
   
-```  
+```sql  
 USE AdventureWorks2012 ;  
 CREATE USER CustomApp WITHOUT LOGIN ;  
 GRANT IMPERSONATE ON USER::CustomApp TO [adventure-works\tengiz0] ;  
@@ -404,14 +404,14 @@ GO
   
  `CustomApp` 자격 증명을 사용하기 위해 사용자 `adventure-works\tengiz0`이 다음 문을 실행합니다.  
   
-```  
+```sql  
 EXECUTE AS USER = 'CustomApp' ;  
 GO  
 ```  
   
  `adventure-works\tengiz0` 자격 증명으로 다시 돌아가려면 사용자는 다음 문을 실행합니다.  
   
-```  
+```sql  
 REVERT ;  
 GO  
 ```  
@@ -421,7 +421,7 @@ GO
   
 **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상 DEFAULT_LANGUAGE가 삭제된 경우 이 예제가 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]에서 동작합니다.  
   
-```  
+```sql  
 USE AdventureWorks2012 ;  
 GO  
 CREATE USER Carlo  
@@ -436,7 +436,7 @@ GO
   
 **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상  
   
-```  
+```sql  
 USE AdventureWorks2012 ;  
 GO  
 CREATE USER [Contoso\Fritz] ;  
@@ -448,12 +448,11 @@ GO
   
 **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상  
   
-```  
+```sql  
 USE AdventureWorks2012 ;  
 GO  
 CREATE USER CarmenW WITH PASSWORD = 'a8ea v*(Rd##+'  
-, SID = 0x01050000000000090300000063FF0451A9E7664BA705B10E37DDC4B7;  
-  
+, SID = 0x01050000000000090300000063FF0451A9E7664BA705B10E37DDC4B7;
 ```  
   
 ### <a name="h-creating-a-user-to-copy-encrypted-data"></a>H. 암호화된 데이터를 복사할 사용자 만들기  
@@ -461,7 +460,7 @@ CREATE USER CarmenW WITH PASSWORD = 'a8ea v*(Rd##+'
   
 **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상, [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
-```  
+```sql  
 CREATE USER [Chin]   
 WITH   
       DEFAULT_SCHEMA = dbo  

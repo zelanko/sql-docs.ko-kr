@@ -27,12 +27,12 @@ ms.assetid: 8c805ae2-91ed-4133-96f6-9835c908f373
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1f47d0489955f0e7104449395a2fe3f8f591a1b1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a2e3c5df24d4d4e5897ad8f48384ac1bc5d49f9e
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88306045"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688281"
 ---
 # <a name="alter-authorization-transact-sql"></a>ALTER AUTHORIZATION(Transact-SQL)
 
@@ -239,7 +239,7 @@ Azure AD 사용자     |Azure AD 사용자         |Success
   
 데이터베이스의 Azure AD 소유자를 확인하려면 사용자 데이터베이스에서(이 예제의 `testdb`에서) 다음의 Transact-SQL 명령을 실행합니다.  
     
-```    
+```sql    
 SELECT CAST(owner_sid as uniqueidentifier) AS Owner_SID   
 FROM sys.databases   
 WHERE name = 'testdb';  
@@ -248,7 +248,7 @@ WHERE name = 'testdb';
 출력은 `richel@cqclinic.onmicrosoft.com`에 할당된 Azure AD ObjectID에 해당하는 식별자(예, 6D8B81F6-7C79-444C-8858-4AF896C03C67) 입니다  
 SQL Server 인증 로그인 사용자가 데이터베이스 소유자인 경우 해당 데이터베이스 소유자를 확인하려면 마스터 데이터베이스에서 다음 명령문을 실행합니다.  
     
-```    
+```sql    
 SELECT d.name, d.owner_sid, sl.name   
 FROM sys.databases AS d  
 JOIN sys.sql_logins AS sl  
@@ -259,16 +259,19 @@ ON d.owner_sid = sl.sid;
 ### <a name="best-practice"></a>모범 사례  
   
 데이터베이스의 개별 소유자로 Azure AD 사용자를 사용하는 대신 **db_owner** 고정된 데이터베이스 역할의 구성원으로 Azure AD 그룹을 사용합니다. 다음 단계에서는 데이터베이스 소유자로 비활성화된 로그인을 구성하고 Azure Active Directory 그룹(`mydbogroup`)을 **db_owner** 역할의 멤버가 되게 하는 방법을 보여줍니다. 
+
 1.  Azure AD 관리자로서 SQL Server에 로그인해 데이터베이스의 소유자를 비활성화된 SQL Server 인증 로그인으로 변경합니다. 예를 들어 사용자 데이터베이스에서 다음을 실행 합니다.  
-  ```    
+  ```sql    
   ALTER AUTHORIZATION ON database::testdb TO DisabledLogin;  
-  ```    
+  ```  
+  
 2.  데이터베이스를 소유하고 사용자 데이터베이스에 사용자로서 추가해야 하는 Azure AD 그룹을 만듭니다. 예를 들면 다음과 같습니다.  
-  ```    
+  ```sql    
   CREATE USER [mydbogroup] FROM EXTERNAL PROVIDER;  
-  ```    
+  ```   
+  
 3.  사용자 데이터베이스에서 Azure AD 그룹을 나타내는 사용자를 **db_owner** 고정 데이터베이스 역할에 추가합니다. 예를 들면 다음과 같습니다.  
-  ```    
+  ```sql    
   ALTER ROLE db_owner ADD MEMBER mydbogroup;  
   ```    
   
@@ -278,7 +281,7 @@ ON d.owner_sid = sl.sid;
   
 특정 사용자에게 효과적인 dbo 권한이 있는지를 확인하려면 사용자가 다음 명령문을 실행하게 합니다.  
     
-```    
+```sql    
 SELECT IS_MEMBER ('db_owner');  
 ```    
   
@@ -293,21 +296,21 @@ SELECT IS_MEMBER ('db_owner');
 ### <a name="a-transfer-ownership-of-a-table"></a>A. 테이블의 소유권 이전    
  다음 예에서는 `Sprockets` 테이블의 소유권을 `MichikoOsada` 사용자에게 이전합니다. 테이블은 `Parts` 스키마 내부에 있습니다.    
     
-```    
+```sql    
 ALTER AUTHORIZATION ON OBJECT::Parts.Sprockets TO MichikoOsada;    
 GO    
 ```    
     
- 쿼리가 다음과 같을 수도 있습니다.    
+쿼리가 다음과 같을 수도 있습니다.    
     
-```    
+```sql    
 ALTER AUTHORIZATION ON Parts.Sprockets TO MichikoOsada;    
 GO    
 ```    
     
- 개체 스키마가 문의 일부로 포함되지 않으면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 사용자 기본 스키마에서 개체를 찾게 됩니다. 예를 들면 다음과 같습니다.    
+개체 스키마가 문의 일부로 포함되지 않으면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 사용자 기본 스키마에서 개체를 찾게 됩니다. 예를 들면 다음과 같습니다.    
     
-```    
+```sql    
 ALTER AUTHORIZATION ON Sprockets TO MichikoOsada;    
 ALTER AUTHORIZATION ON OBJECT::Sprockets TO MichikoOsada;    
 ```    
@@ -315,7 +318,7 @@ ALTER AUTHORIZATION ON OBJECT::Sprockets TO MichikoOsada;
 ### <a name="b-transfer-ownership-of-a-view-to-the-schema-owner"></a>B. 뷰 소유권을 스키마 소유자에게 이전    
  다음 예에서는 `ProductionView06` 뷰의 소유권을 뷰가 포함된 스키마의 소유자에게 이전합니다. 뷰는 `Production` 스키마 내부에 있습니다.    
     
-```    
+```sql    
 ALTER AUTHORIZATION ON OBJECT::Production.ProductionView06 TO SCHEMA OWNER;    
 GO    
 ```    
@@ -323,7 +326,7 @@ GO
 ### <a name="c-transfer-ownership-of-a-schema-to-a-user"></a>C. 스키마의 소유권을 사용자에게 이전    
  다음 예에서는 `SeattleProduction11` 스키마의 소유권을 `SandraAlayo` 사용자에게 이전합니다.    
     
-```    
+```sql    
 ALTER AUTHORIZATION ON SCHEMA::SeattleProduction11 TO SandraAlayo;    
 GO    
 ```    
@@ -333,14 +336,15 @@ GO
     
 **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상    
     
-```    
+```sql    
 ALTER AUTHORIZATION ON ENDPOINT::CantabSalesServer1 TO JaePak;    
 GO    
 ```    
     
 ### <a name="e-changing-the-owner-of-a-table"></a>E. 테이블의 소유자 변경    
  다음 각 예제는 `Parts` 데이터베이스에서 `Sprockets` 테이블의 소유자를 `MichikoOsada` 데이터베이스 사용자로 변경합니다.    
-```    
+ 
+```sql    
 ALTER AUTHORIZATION ON Sprockets TO MichikoOsada;    
 ALTER AUTHORIZATION ON dbo.Sprockets TO MichikoOsada;    
 ALTER AUTHORIZATION ON OBJECT::Sprockets TO MichikoOsada;    
@@ -352,14 +356,14 @@ ALTER AUTHORIZATION ON OBJECT::dbo.Sprockets TO MichikoOsada;
     
  다음 예에서는 `Parts` 데이터베이스의 소유자를 로그인 `MichikoOsada`로 변경합니다.    
     
-```    
+```sql    
 ALTER AUTHORIZATION ON DATABASE::Parts TO MichikoOsada;    
 ```    
   
 ### <a name="g-changing-the-owner-of-a-sql-database-to-an-azure-ad-user"></a>G. SQL 데이터베이스의 소유자를 Azure AD 사용자로 변경  
 다음 예에서는 `cqclinic.onmicrosoft.com` Active Directory로 지명된 조직에서 SQL Server용 Azure Active Directory 관리자가 현재 데이터베이스의 소유권을 `targetDB` 변경하고, 다음 명령을 사용해 AAD 사용자를 `richel@cqclinic.onmicorsoft.com` 새 데이터베이스 소유자로 만들 수 있습니다.  
     
-```    
+```sql    
 ALTER AUTHORIZATION ON database::targetDB TO [rachel@cqclinic.onmicrosoft.com];   
 ```    
     

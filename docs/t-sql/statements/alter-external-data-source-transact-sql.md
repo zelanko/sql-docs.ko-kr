@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: a34b9e90-199d-46d0-817a-a7e69387bf5f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ce602b13c79f45e5bba58664a165f74c7712a81a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 5d90bacf17953eee4874343fadf2e9daf97a8664
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538139"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688419"
 ---
 # <a name="alter-external-data-source-transact-sql"></a>ALTER EXTERNAL DATA SOURCE(Transact-SQL)
 [!INCLUDE [sqlserver2016-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdbmi-asa-pdw.md)]
@@ -87,17 +87,16 @@ TYPE = [HADOOP | BLOB_STORAGE]
 ## <a name="examples"></a>예제  
  다음 예제에서는 기존 데이터 원본의 위치 및 리소스 관리자 위치를 변경합니다.
 
-```  
+```sql  
 ALTER EXTERNAL DATA SOURCE hadoop_eds SET
      LOCATION = 'hdfs://10.10.10.10:8020',
      RESOURCE_MANAGER_LOCATION = '10.10.10.10:8032'
     ;
-  
 ```
 
  다음 예제에서는 자격 증명을 변경하여 기존 데이터 원본에 연결합니다.
 
-```  
+```sql 
 ALTER EXTERNAL DATA SOURCE hadoop_eds SET
    CREDENTIAL = new_hadoop_user
     ;
@@ -105,7 +104,7 @@ ALTER EXTERNAL DATA SOURCE hadoop_eds SET
 
  다음 예제에서는 자격 증명을 새 위치로 변경 합니다. 이 예제는 Azure SQL Data Warehouse에 대해 생성되는 외부 데이터 원본입니다. 
 
-```  
+```sql  
 ALTER EXTERNAL DATA SOURCE AzureStorage_west SET
    LOCATION = 'wasbs://loadingdemodataset@updatedproductioncontainer.blob.core.windows.net',
    CREDENTIAL = AzureStorageCredential

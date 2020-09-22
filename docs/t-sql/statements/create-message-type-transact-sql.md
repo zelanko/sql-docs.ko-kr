@@ -29,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: 98fe0fff-1a2e-4ca2-b37f-83a06fdf098e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 509117125c468d3ef8854f624060805b1a360990
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 3ad277a8538eee95404be124068635bc4d9ea5fa
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541377"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688453"
 ---
 # <a name="create-message-type-transact-sql"></a>CREATE MESSAGE TYPE(Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -99,7 +99,7 @@ CREATE MESSAGE TYPE message_type_name
 ### <a name="a-creating-a-message-type-containing-well-formed-xml"></a>A. 올바른 형식의 XML을 포함하는 메시지 유형 만들기  
  다음 예에서는 올바른 형식의 XML을 포함하는 새로운 메시지 유형을 만듭니다.  
   
-```  
+```sql  
 CREATE MESSAGE TYPE  
   [//Adventure-Works.com/Expenses/SubmitExpense]  
   VALIDATION = WELL_FORMED_XML ;     
@@ -108,7 +108,7 @@ CREATE MESSAGE TYPE
 ### <a name="b-creating-a-message-type-containing-typed-xml"></a>B. XML 유형을 포함하는 메시지 유형 만들기  
  다음 예에서는 XML로 인코딩된 경비 보고서에 대한 메시지 유형을 만듭니다. 이 예에서는 간단한 경비 보고서에 대한 스키마를 보유하는 XML 스키마 컬렉션을 만듭니다. 그런 다음 스키마에 대해 메시지의 유효성을 검사하는 새로운 메시지 유형을 만듭니다.  
   
-```  
+```sql  
 CREATE XML SCHEMA COLLECTION ExpenseReportSchema AS  
 N'<?xml version="1.0" encoding="UTF-16" ?>  
   <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -147,7 +147,7 @@ N'<?xml version="1.0" encoding="UTF-16" ?>
 ### <a name="c-creating-a-message-type-for-an-empty-message"></a>C. 빈 메시지에 대한 메시지 유형 만들기  
  다음 예에서는 빈 인코딩으로 새로운 메시지 유형을 만듭니다.  
   
-```  
+```sql  
 CREATE MESSAGE TYPE  
     [//Adventure-Works.com/Expenses/SubmitExpense]  
     VALIDATION = EMPTY ;  
@@ -156,7 +156,7 @@ CREATE MESSAGE TYPE
 ### <a name="d-creating-a-message-type-containing-binary-data"></a>D. 이진 데이터를 포함하는 메시지 유형 만들기  
  다음 예에서는 이진 데이터를 보유하는 새로운 메시지 유형을 만듭니다. 메시지에는 XML이 아닌 데이터가 포함되므로 메시지 유형은 유효성 검사 유형을 `NONE`으로 지정합니다. 이런 경우 이 유형의 메시지를 받는 애플리케이션은 메시지에 데이터가 있는지, 데이터가 예상된 유형인지를 확인해야 합니다.  
   
-```  
+```sql  
 CREATE MESSAGE TYPE  
     [//Adventure-Works.com/Expenses/ReceiptImage]  
     VALIDATION = NONE ;  

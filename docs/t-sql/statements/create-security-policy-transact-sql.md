@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: d6ab70ee-0fa2-469c-96f6-a3c16d673bc8
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: d59e3d1577d368ef80f7bb10598a9db7f52c49a2
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: d21a0588eb508b8a5e75ff8caef7636a530a5ccd
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88646254"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688869"
 ---
 # <a name="create-security-policy-transact-sql"></a>CREATE SECURITY POLICY(Transact-SQL)
 
@@ -122,7 +122,7 @@ ON [dbo].[Customer];
 ### <a name="b-creating-a-policy-that-affects-multiple-tables"></a>B. 여러 테이블에 영향을 주는 정책 만들기  
  다음 구문은 서로 다른 세 테이블에서 3개의 필터 조건자를 사용하여 보안 정책을 만들고 보안 정책을 사용하도록 설정합니다.  
   
-```  
+```sql  
 CREATE SECURITY POLICY [FederatedSecurityPolicy]   
 ADD FILTER PREDICATE [rls].[fn_securitypredicate1]([CustomerId])   
     ON [dbo].[Customer],  
@@ -136,7 +136,7 @@ WITH (STATE = ON);
 ### <a name="c-creating-a-policy-with-multiple-types-of-security-predicates"></a>C. 여러 형식의 보안 조건자를 사용해 정책 만들기  
  영업 테이블에 필터 조건자와 차단 조건자 둘 다 추가합니다.  
   
-```  
+```sql  
 CREATE SECURITY POLICY rls.SecPol  
     ADD FILTER PREDICATE rls.tenantAccessPredicate(TenantId) ON dbo.Sales,  
     ADD BLOCK PREDICATE rls.tenantAccessPredicate(TenantId) ON dbo.Sales AFTER INSERT;  

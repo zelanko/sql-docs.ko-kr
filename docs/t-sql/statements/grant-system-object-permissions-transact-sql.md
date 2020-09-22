@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9d4e89f4-478f-419a-8b50-b096771e3880
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0f3df51eec3f0b2e1c084a1fb373c8b1595f8c15
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: abfc897a88941c6220235616a3476dae7ea6c1e9
+ms.sourcegitcommit: 76d31f456982dabb226239b424eaa7139d8cc6c1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88496714"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90570596"
 ---
 # <a name="grant-system-object-permissions-transact-sql"></a>GRANT 시스템 개체 사용 권한(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -65,7 +65,7 @@ GRANT { SELECT | EXECUTE } ON [ sys.]system_object TO principal
   
  다음 쿼리는 시스템 개체의 사용 권한에 대한 정보를 반환합니다.  
   
-```  
+```sql  
 SELECT * FROM master.sys.database_permissions AS dp   
     JOIN sys.system_objects AS so  
     ON dp.major_id = so.object_id  
@@ -81,7 +81,7 @@ GO
 ### <a name="a-granting-select-permission-on-a-view"></a>A. 뷰에 대한 SELECT 권한 부여  
  다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인이 나열된 뷰를 선택할 수 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 `Sylvester1` 권한을 부여합니다. 그런 다음 이 사용자가 소유하지 않은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인에 대한 메타데이터를 보는 데 필요한 추가 사용 권한을 부여합니다.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GRANT SELECT ON sys.sql_logins TO Sylvester1;  
 GRANT VIEW SERVER STATE to Sylvester1;  
@@ -91,7 +91,7 @@ GO
 ### <a name="b-granting-execute-permission-on-an-extended-stored-procedure"></a>B. 확장 저장 프로시저에 대한 EXECUTE 권한 부여  
  다음 예에서는 `EXECUTE`에 대한 `xp_readmail` 권한을 `Sylvester1`에 부여합니다.  
   
-```  
+```sql  
 GRANT EXECUTE ON xp_readmail TO Sylvester1;  
 GO  
 ```  

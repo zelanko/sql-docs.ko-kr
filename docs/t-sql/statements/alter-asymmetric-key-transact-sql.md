@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 958e95d6-fbe6-43e8-abbd-ccedbac2dbac
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0e911a6680545e1b9d1b018e257bf191abd0edd0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 814df70ce91d6cc65b6c2a86d0617dc42bbb4489
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88472362"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688695"
 ---
 # <a name="alter-asymmetric-key-transact-sql"></a>ALTER ASYMMETRIC KEY(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -92,7 +92,7 @@ ALTER ASYMMETRIC KEY Asym_Key_Name <alter_option>
 ### <a name="a-changing-the-password-of-the-private-key"></a>A. 프라이빗 키의 암호 변경  
  다음 예에서는 비대칭 키 `PacificSales09`의 프라이빗 키를 보호하는 데 사용된 암호를 변경합니다. 새 암호는 `<enterStrongPasswordHere>`입니다.  
   
-```  
+```sql  
 ALTER ASYMMETRIC KEY PacificSales09   
     WITH PRIVATE KEY (  
     DECRYPTION BY PASSWORD = '<oldPassword>',  
@@ -103,7 +103,7 @@ GO
 ### <a name="b-removing-the-private-key-from-an-asymmetric-key"></a>B. 비대칭 키로부터 프라이빗 키 제거  
  다음 예에서는 `PacificSales19`에서 프라이빗 키를 제거하여 퍼블릭 키만 남겨 둡니다.  
   
-```  
+```sql  
 ALTER ASYMMETRIC KEY PacificSales19 REMOVE PRIVATE KEY;  
 GO  
 ```  
@@ -111,7 +111,7 @@ GO
 ### <a name="c-removing-password-protection-from-a-private-key"></a>C. 프라이빗 키로부터 암호 보호 제거  
  다음 예에서는 프라이빗 키에서 암호 보호를 제거하고 데이터베이스 마스터 키로 보호합니다.  
   
-```  
+```sql  
 OPEN MASTER KEY DECRYPTION BY PASSWORD = '<database master key password>';  
 ALTER ASYMMETRIC KEY PacificSales09 WITH PRIVATE KEY (  
     DECRYPTION BY PASSWORD = '<enterStrongPasswordHere>' );  

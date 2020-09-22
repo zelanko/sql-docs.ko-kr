@@ -30,12 +30,12 @@ helpviewer_keywords:
 ms.assetid: b016a289-3a74-46b1-befc-a13183be51e4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a3cb79af34c03699225a291b3da6cab7602922da
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: e0b6c3ae3d269b8617d3d032c8aa2d947c211834
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549411"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688779"
 ---
 # <a name="create-rule-transact-sql"></a>CREATE RULE(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -52,7 +52,6 @@ ms.locfileid: "89549411"
 ## <a name="syntax"></a>구문  
   
 ```syntaxsql
-  
 CREATE RULE [ schema_name . ] rule_name   
 AS condition_expression  
 [ ; ]  
@@ -105,7 +104,7 @@ AS condition_expression
 ### <a name="a-creating-a-rule-with-a-range"></a>A. 범위가 있는 규칙 만들기  
  다음 예에서는 규칙이 바인딩된 열에 삽입되는 정수의 범위를 제한하는 규칙을 만듭니다.  
   
-```  
+```sql  
 CREATE RULE range_rule  
 AS   
 @range>= $1000 AND @range <$20000;  
@@ -114,7 +113,7 @@ AS
 ### <a name="b-creating-a-rule-with-a-list"></a>B. 목록이 있는 규칙 만들기  
  다음 예에서는 해당 규칙이 바인딩된 열에 입력하는 실제 값을 규칙에 나열된 값으로 제한하는 규칙을 만듭니다.  
   
-```  
+```sql  
 CREATE RULE list_rule  
 AS   
 @list IN ('1389', '0736', '0877');  
@@ -123,7 +122,7 @@ AS
 ### <a name="c-creating-a-rule-with-a-pattern"></a>C. 패턴이 있는 규칙 만들기  
  다음 예에서는 하이픈(`-`) 다음에 임의의 두 문자, 임의의 문자 수(또는 0개 문자) 및 `0`부터 `9`까지의 정수로 끝나는 패턴의 규칙을 만듭니다.  
   
-```  
+```sql  
 CREATE RULE pattern_rule   
 AS  
 @value LIKE '__-%[0-9]'  

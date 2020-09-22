@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 30c92f80-f7f6-4a84-ae89-16e69add0de6
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 61a2e779e61d76f81c4ec818b2f07e4f1cd628b4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ac14d633e221e50fb821d92c0c1a0f61b2ce5efd
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88416849"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688713"
 ---
 # <a name="create-server-role-transact-sql"></a>CREATE SERVER ROLE(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "88416849"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```syntaxsql  
 CREATE SERVER ROLE role_name [ AUTHORIZATION server_principal ]  
 ```  
   
@@ -81,7 +81,7 @@ CREATE SERVER ROLE role_name [ AUTHORIZATION server_principal ]
 ### <a name="a-creating-a-server-role-that-is-owned-by-a-login"></a>A. 로그인이 소유하는 서버 역할 만들기  
  다음 예에서는 `buyers` 로그인이 소유하는 `BenMiller` 서버 역할을 만듭니다.  
   
-```  
+```sql  
 USE master;  
 CREATE SERVER ROLE buyers AUTHORIZATION BenMiller;  
 GO  
@@ -90,7 +90,7 @@ GO
 ### <a name="b-creating-a-server-role-that-is-owned-by-a-fixed-server-role"></a>B. 고정 서버 역할이 소유하는 서버 역할 만들기  
  다음 예에서는 `auditors` 고정 서버 역할이 소유하는 `securityadmin` 서버 역할을 만듭니다.  
   
-```  
+```sql  
 USE master;  
 CREATE SERVER ROLE auditors AUTHORIZATION securityadmin;  
 GO  

@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 564e3500-c567-43dc-993b-9ab50e99cf3f
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: d19b40869a7b69645918edb62eb9f654d595dcc1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b133edabc8501bbce30b938f2ea30a13c96efdf3
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88416879"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688565"
 ---
 # <a name="deny-type-permissions-transact-sql"></a>DENY 유형 사용 권한(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -120,7 +120,7 @@ DENY permission  [ ,...n ] ON TYPE :: [ schema_name . ] type_name
 ## <a name="examples"></a>예제  
  다음 예에서는 `VIEW DEFINITION`를 지정하여 `CASCADE`에 대해 사용자 정의 형식 `PhoneNumber`에 대한 `KhalidR` 사용 권한을 거부합니다. `PhoneNumber`는 스키마 `Telemarketing`에 있습니다.  
   
-```  
+```sql 
 DENY VIEW DEFINITION ON TYPE::Telemarketing.PhoneNumber   
     TO KhalidR CASCADE;  
 GO  

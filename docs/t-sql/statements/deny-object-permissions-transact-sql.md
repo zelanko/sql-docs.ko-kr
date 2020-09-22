@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0b8d3ddc-38c0-4241-b7bb-ee654a5081aa
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 8be1d18c6caae4751ab1168f99aa7b5192510185
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fae275453fd14afacc700150c93cc6a091141a11
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444725"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688621"
 ---
 # <a name="deny-object-permissions-transact-sql"></a>DENY 개체 사용 권한(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -145,7 +145,7 @@ PRIVILEGES
 ### <a name="a-denying-select-permission-on-a-table"></a>A. 테이블에 대한 SELECT 권한 거부  
  다음 예에서는 `Person.Address` 테이블에 대해 사용자 `RosaQdM`의 `SELECT` 권한을 거부합니다.  
   
-```  
+```sql  
 DENY SELECT ON OBJECT::Person.Address TO RosaQdM;  
 GO  
 ```  
@@ -153,7 +153,7 @@ GO
 ### <a name="b-denying-execute-permission-on-a-stored-procedure"></a>B. 저장 프로시저에 대한 EXECUTE 권한 거부  
  다음 예에서는 `EXECUTE`이라는 애플리케이션 역할에 대해 저장 프로시저 `HumanResources.uspUpdateEmployeeHireInfo`에 대한 `Recruiting11` 권한을 거부합니다.  
   
-```  
+```sql  
 DENY EXECUTE ON OBJECT::HumanResources.uspUpdateEmployeeHireInfo  
     TO Recruiting11;  
 GO   
@@ -162,7 +162,7 @@ GO
 ### <a name="c-denying-references-permission-on-a-view-with-cascade"></a>C. CASCADE를 지정하여 뷰에 대한 REFERENCES 권한 거부  
  다음 예에서는 `REFERENCES`를 지정하여 사용자 `BusinessEntityID`에 대해 `HumanResources.vEmployee` 뷰의 `Wanida` 열에 대한 `CASCADE` 권한을 거부합니다.  
   
-```  
+```sql  
 DENY REFERENCES (BusinessEntityID) ON OBJECT::HumanResources.vEmployee   
     TO Wanida CASCADE;  
 GO  

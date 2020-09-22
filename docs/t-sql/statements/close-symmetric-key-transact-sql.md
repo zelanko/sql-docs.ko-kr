@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 3b083cbb-3c6a-4f59-8d34-601db1efcc83
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: b279b48adb0a72060d9e7700c57f25782eb83587
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 39b9fdbb63a515f74640ff1e4c18366652584980
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88496929"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688799"
 ---
 # <a name="close-symmetric-key-transact-sql"></a>CLOSE SYMMETRIC KEY(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -60,7 +60,7 @@ CLOSE { SYMMETRIC KEY key_name | ALL SYMMETRIC KEYS }
 ### <a name="a-closing-a-symmetric-key"></a>A. 하나의 대칭 키 닫기  
  다음 예에서는 대칭 키 `ShippingSymKey04`를 닫습니다.  
   
-```  
+```sql  
 CLOSE SYMMETRIC KEY ShippingSymKey04;  
 GO  
 ```  
@@ -68,7 +68,7 @@ GO
 ### <a name="b-closing-all-symmetric-keys"></a>B. 모든 대칭 키 닫기  
  다음 예에서는 현재 세션에서 열려 있는 모든 대칭 키를 닫고 명시적으로 연 데이터베이스 마스터 키도 닫습니다.  
   
-```  
+```sql  
 CLOSE ALL SYMMETRIC KEYS;  
 GO  
 ```  

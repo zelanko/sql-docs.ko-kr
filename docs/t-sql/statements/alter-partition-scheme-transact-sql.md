@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: f01d6880-9800-4cfb-8d11-d4be21efc8ca
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8d195ca82f1f137b4777bc0d4c442c7c9af1a624
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 8ca48f836b6d14b85d3f8d0286fd31e60c403afe
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89540767"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688264"
 ---
 # <a name="alter-partition-scheme-transact-sql"></a>ALTER PARTITION SCHEME(Transact-SQL)
 
@@ -43,7 +43,6 @@ ms.locfileid: "89540767"
 ## <a name="syntax"></a>구문  
   
 ```syntaxsql
-  
 ALTER PARTITION SCHEME partition_scheme_name   
 NEXT USED [ filegroup_name ] [ ; ]  
 ```  
@@ -79,7 +78,7 @@ NEXT USED [ filegroup_name ] [ ; ]
 ## <a name="examples"></a>예제  
  다음 예에서는 현재 데이터베이스에 `MyRangePS1` 파티션 구성표와 `test5fg` 파일 그룹이 있다고 가정합니다.  
   
-```  
+```sql  
 ALTER PARTITION SCHEME MyRangePS1  
 NEXT USED test5fg;  
 ```  

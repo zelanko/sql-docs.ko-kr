@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 20e6e803-d6d5-48d5-b626-d1e0a73d174c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2c8c60b6777165496dca1fc2c131cfe8798e6d72
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 513b7850956ad0bd639edec3c8ec3b4aa876a03a
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89540747"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688308"
 ---
 # <a name="alter-database-transact-sql-set-hadr"></a>ALTER DATABASE(Transact-SQL) SET HADR 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +41,6 @@ ms.locfileid: "89540747"
 ## <a name="syntax"></a>구문  
   
 ```syntaxsql
-  
 ALTER DATABASE database_name  
    SET HADR   
    {  
@@ -137,7 +136,7 @@ ALTER DATABASE database_name
 ## <a name="examples"></a>예제  
  다음 예에서는 `AccountsDb1`이라는 보조 데이터베이스를 `AccountsAG` 가용성 그룹의 로컬 보조 복제본에 조인합니다.  
   
-```  
+```sql  
 ALTER DATABASE AccountsDb1 SET HADR AVAILABILITY GROUP = AccountsAG;  
 ```  
   

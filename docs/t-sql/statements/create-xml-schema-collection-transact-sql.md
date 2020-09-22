@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 350684e8-b3f6-4b58-9dbc-0f05cc776ebb
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: aa614b7b0496c1547f85106758f6ff5d7dd2835a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cb9a8dbb4b67a514d56febaed13a33d7f7eb2a8a
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444787"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688651"
 ---
 # <a name="create-xml-schema-collection-transact-sql"></a>CREATE XML SCHEMA COLLECTION(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -42,8 +42,7 @@ ms.locfileid: "88444787"
   
 ## <a name="syntax"></a>구문  
   
-```  
-  
+```syntaxsql
 CREATE XML SCHEMA COLLECTION [ <relational_schema>. ]sql_identifier AS Expression  
 ```  
   
@@ -84,7 +83,7 @@ CREATE XML SCHEMA COLLECTION [ <relational_schema>. ]sql_identifier AS Expressio
 ### <a name="a-creating-xml-schema-collection-in-the-database"></a>A. 데이터베이스에 XML 스키마 컬렉션 만들기  
  다음 예에서는 XML 스키마 컬렉션 `ManuInstructionsSchemaCollection`을 만듭니다. 이 컬렉션에는 스키마 네임스페이스가 하나만 있습니다.  
   
-```  
+```sql  
 -- Create a sample database in which to load the XML schema collection.  
 CREATE DATABASE SampleDB;  
 GO  
@@ -176,7 +175,7 @@ CREATE XML SCHEMA COLLECTION MyCollection AS @MySchemaCollection
 ### <a name="b-specifying-multiple-schema-namespaces-in-a-schema-collection"></a>B. 스키마 컬렉션에 여러 개의 스키마 네임스페이스 지정  
  XML 스키마 컬렉션을 만들 때 XML 스키마를 여러 개 지정할 수 있습니다. 예를 들면 다음과 같습니다.  
   
-```  
+```sql  
 CREATE XML SCHEMA COLLECTION MyCollection AS N'  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">  
 <!-- Contents of schema here -->    
@@ -188,7 +187,7 @@ CREATE XML SCHEMA COLLECTION MyCollection AS N'
   
  다음 예에서는 두 개의 XML 스키마 네임스페이스를 포함하는 XML 스키마 컬렉션 `ProductDescriptionSchemaCollection`을 만듭니다.  
   
-```  
+```sql  
 CREATE XML SCHEMA COLLECTION ProductDescriptionSchemaCollection AS   
 '<xsd:schema targetNamespace="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain"  
     xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain"   
@@ -234,7 +233,7 @@ GO
 ### <a name="c-importing-a-schema-that-does-not-specify-a-target-namespace"></a>C. 대상 네임스페이스를 지정하지 않는 스키마 가져오기  
  **targetNamespace** 특성이 포함되지 않은 스키마를 컬렉션으로 가져오는 경우 이 컬렉션의 구성 요소는 다음 예와 같이 빈 문자열 대상 네임스페이스와 연결됩니다. 컬렉션으로 가져온 하나 이상의 스키마를 연결하지 않으면 잠재적으로 관련되지 않은 여러 스키마 구성 요소가 기본 빈 문자열 네임스페이스와 연결됩니다.  
   
-```  
+```sql  
 -- Create a collection that contains a schema with no target namespace.  
 CREATE XML SCHEMA COLLECTION MySampleCollection AS '  
 <schema xmlns="http://www.w3.org/2001/XMLSchema"  xmlns:ns="http://ns">  
@@ -254,7 +253,7 @@ WHERE  sys.xml_schema_namespaces.name='';
 ### <a name="d-using-an-xml-schema-collection-and-batches"></a>D. XML 스키마 컬렉션 및 일괄 처리 사용  
  스키마 컬렉션은 해당 컬렉션이 생성된 것과 같은 일괄 처리에서 참조할 수 없습니다. 해당 컬렉션이 생성된 것과 같은 일괄 처리에서 컬렉션을 참조하려고 하면 컬렉션이 없다는 오류 메시지가 표시됩니다. 다음 예는 제대로 실행되지만 `GO`를 제거하고 XML 스키마 컬렉션을 참조하여 같은 일괄 처리에 `xml` 변수를 입력하려고 하면 오류가 반환됩니다.  
   
-```  
+```sql  
 CREATE XML SCHEMA COLLECTION mySC AS '  
 <schema xmlns="http://www.w3.org/2001/XMLSchema">  
       <element name="root" type="string"/>  

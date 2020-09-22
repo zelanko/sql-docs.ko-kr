@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4e43f954-0982-470b-a239-08a13c61563a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5d3e39d3a9533a75089c3126503abdd338c25ca1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: abfb423e90d8c7776fe9d2f5eb8815a37254a3b8
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88472335"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688514"
 ---
 # <a name="deny-system-object-permissions-transact-sql"></a>DENY 시스템 개체 사용 권한(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -35,7 +35,6 @@ ms.locfileid: "88472335"
 ## <a name="syntax"></a>구문  
   
 ```syntaxsql
-  
 DENY { SELECT | EXECUTE } ON [ sys.]system_object TO principal   
 ```  
   
@@ -67,7 +66,7 @@ DENY { SELECT | EXECUTE } ON [ sys.]system_object TO principal
   
  다음 쿼리는 시스템 개체의 사용 권한에 대한 정보를 반환합니다.  
   
-```  
+```sql
 SELECT * FROM master.sys.database_permissions AS dp   
     JOIN sys.system_objects AS so  
     ON dp.major_id = so.object_id  
@@ -81,7 +80,7 @@ GO
 ## <a name="examples"></a>예  
  다음 예에서는 `EXECUTE`에 대한 `xp_cmdshell` 권한을 `public`에 대해 거부합니다.  
   
-```  
+```sql
 DENY EXECUTE ON sys.xp_cmdshell TO public;  
 GO  
 ```  
