@@ -13,12 +13,12 @@ ms.assetid: 390225cc-23e8-4051-a5f6-221e33e4c0b4
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 2892e881434cad1fca2686b6522938584b221045
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4deccd8bcfd4650a8f670969d1ec112f9f99d08d
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447473"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90990246"
 ---
 # <a name="sysdm_pdw_exec_requests-transact-sql"></a>sys. dm_pdw_exec_requests (Transact-sql)
 
@@ -45,16 +45,16 @@ ms.locfileid: "88447473"
 |group_name|**sysname** |리소스를 활용 하는 요청의 경우 group_name은 요청을 실행 중인 작업 그룹의 이름입니다.  요청에서 리소스를 사용 하지 않는 경우 group_name은 null입니다.</br>적용 대상: Azure SQL Data Warehouse|
 |classifier_name|**sysname**|리소스를 활용 하는 요청의 경우 리소스 및 중요도를 할당 하는 데 사용 되는 분류자의 이름입니다.||
 |resource_allocation_percentage|**decimal (5, 2)**|요청에 할당 된 리소스의 비율입니다.</br>적용 대상: Azure SQL Data Warehouse|
-|result_cache_hit|**decimal**|완료 된 쿼리가 결과 집합 캐시를 사용 했는지 여부를 자세히 나타냅니다.  </br>적용 대상: Azure SQL Data Warehouse| 1 = 결과 집합 캐시 적중 </br> 0 = 결과 집합 캐시 누락 </br> 음수 값 = 결과 집합 캐싱이 사용 되지 않은 이유입니다.  자세한 내용은 설명 부분을 참조 하세요.|
+|result_cache_hit|**int**|완료 된 쿼리가 결과 집합 캐시를 사용 했는지 여부를 자세히 나타냅니다.  </br>적용 대상: Azure SQL Data Warehouse| 1 = 결과 집합 캐시 적중 </br> 0 = 결과 집합 캐시 누락 </br> 음수 정수 값 = 결과 집합 캐싱이 사용 되지 않는 이유입니다.  자세한 내용은 설명 부분을 참조 하세요.|
 ||||
   
 ## <a name="remarks"></a>설명 
  이 보기에 의해 유지 되는 최대 행에 대 한 자세한 내용은 [용량 제한](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) 항목에서 메타 데이터 섹션을 참조 하세요.
 
- Result_cache_hit은 쿼리의 결과 집합 캐시 사용에 대 한 비트 마스크입니다.  이 열은 [| (비트 or)](../../t-sql/language-elements/bitwise-or-transact-sql.md) 다음 값 중 하나 이상의 곱입니다.  
+Result_cache_hit 열의 음의 정수 값은 쿼리의 결과 집합을 캐시할 수 없는 모든 적용 된 이유에 대 한 비트맵 값입니다.  이 열은 [| (비트 or)](../../t-sql/language-elements/bitwise-or-transact-sql.md) 다음 값 중 하나 이상의 곱입니다.  
   
-|값 16 진수 (10 진수)|Description|  
-|-----------|-----------------|  
+|값            |Description  |  
+|-----------------|-----------------|  
 |**1**|결과 집합 캐시 적중|  
 |**0x00** (**0**)|결과 집합 캐시 누락|  
 |-**0x01** (**-1**)|데이터베이스에서 결과 집합 캐싱이 사용 되지 않습니다.|  
@@ -63,8 +63,10 @@ ms.locfileid: "88447473"
 |-**0x08** (**-8**)|행 수준 보안 조건자로 인해 결과 집합 캐싱이 사용 하지 않도록 설정 되었습니다.|  
 |-**0x10** (**-16**)|쿼리에서 시스템 테이블, 임시 테이블 또는 외부 테이블을 사용 하 여 결과 집합 캐싱을 사용할 수 없습니다.|  
 |-**0x20** (**-32**)|쿼리는 런타임 상수, 사용자 정의 함수 또는 비 결정적인 함수를 포함 하기 때문에 결과 집합 캐싱을 사용할 수 없습니다.|  
-|-**0x40** (**-64**)|예상 결과 집합 >크기가 10GB로 설정 되어 결과 집합 캐싱이 사용 하지 않도록 설정 되었습니다.|  
-|-**0x80** (**-128**)|결과 집합에 크기가 큰 행 (>64kb)이 포함 되어 있으므로 결과 집합 캐싱이 사용 되지 않습니다.|  
+|-**0x40**(**-64**)|예상 결과 집합 >크기가 10GB로 설정 되어 결과 집합 캐싱이 사용 하지 않도록 설정 되었습니다.|  
+|-**0x80**(**-128**) |결과 집합에 크기가 큰 행 (>64kb)이 포함 되어 있으므로 결과 집합 캐싱이 사용 되지 않습니다.|  
+|-**0x100**(**-256**) |세부적인 동적 데이터 마스킹을 사용 하 여 결과 집합 캐싱을 사용할 수 없습니다.|  
+
   
 ## <a name="permissions"></a>사용 권한
 
@@ -77,6 +79,6 @@ ms.locfileid: "88447473"
 >[!WARNING]  
 >공격자는 보기 서버 상태 권한만 있고 데이터베이스 관련 사용 권한을가지고 있지 않기 때문에 특정 데이터베이스 개체에 대 한 정보를 검색 하는 데 dm_pdw_exec_requests를 사용할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목
+## <a name="see-also"></a>참고 항목
 
  [Transact-sql&#41;&#40;SQL Data Warehouse 및 병렬 데이터 웨어하우스 동적 관리 뷰 ](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)

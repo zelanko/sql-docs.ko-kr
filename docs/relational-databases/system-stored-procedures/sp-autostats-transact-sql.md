@@ -19,12 +19,12 @@ ms.assetid: d1df8c15-ee73-49eb-9d13-6e98943c3e38
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c34e314e08f206ebfcf34956e7b4555f91166a3e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 79995dc681db76f3de5b6d6af200f6f57f087464
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548288"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90989941"
 ---
 # <a name="sp_autostats-transact-sql"></a>sp_autostats(Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -69,7 +69,7 @@ sp_autostats [ @tblname = ] 'table_or_indexed_view_name'
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**Index Name**|**varchar(60)**|인덱스 또는 통계의 이름입니다.|  
+|**Index Name**|**sysname**|인덱스 또는 통계의 이름입니다.|  
 |**AUTOSTATS**|**varchar (3)**|AUTO_UPDATE_STATISTICS 옵션의 현재 값입니다.|  
 |**마지막으로 업데이트한 날짜**|**datetime**|가장 최근의 통계 업데이트 날짜입니다.|  
   
@@ -83,7 +83,7 @@ sp_autostats [ @tblname = ] 'table_or_indexed_view_name'
 ## <a name="permissions"></a>사용 권한  
  AUTO_UPDATE_STATISTICS 옵션을 변경 하려면 **db_owner** 고정 데이터베이스 역할의 멤버 자격 또는 *table_name*에 대 한 ALTER 권한이 필요 합니다. AUTO_UPDATE_STATISTICS 옵션을 표시 하려면 **public** 역할의 멤버 자격이 필요 합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 ### <a name="a-display-the-status-of-all-statistics-on-a-table"></a>A. 테이블의 모든 통계에 대한 상태 표시  
  다음은 `Product` 테이블의 모든 통계에 대한 상태를 표시합니다.  
