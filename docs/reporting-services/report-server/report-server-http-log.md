@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6cc433b7-165c-4b16-9034-79256dd6735f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f640506f2f247c31c74d111d30b64f4fa0016dae
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: c1f270bb3f26cada3944979ee32019737dcb13e3
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84548005"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87392079"
 ---
 # <a name="report-server-http-log"></a>보고서 서버 HTTP 로그
   보고서 서버 HTTP 로그 파일은 보고서 서버에서 처리하는 모든 HTTP 요청 및 응답에 대한 기록을 유지합니다. 요청 오버플로 및 제한 시간 오류는 보고서 서버에 도달하지 않으므로 로그 파일에 기록되지 않습니다.  
@@ -26,7 +26,7 @@ ms.locfileid: "84548005"
 ## <a name="viewing-log-information"></a>로그 정보 보기  
  로그는 ASCII 텍스트 파일입니다. 이 파일은 아무 텍스트 편집기에서 열어볼 수 있습니다. 보고서 서버 HTTP 로그 파일은 IIS의 W3C 확장 로그 파일에 해당하며 유사한 필드를 사용하므로 기존 IIS 로그 파일 뷰어를 사용하여 보고서 서버 HTTP 로그 파일을 읽을 수 있습니다. 다음 표에서는 HTTP 로그 파일에 대한 추가 정보를 제공합니다.  
   
-|||  
+|로그 파일 정보|Description|  
 |-|-|  
 |파일 이름|기본적으로 파일 이름은 ReportServerService_HTTP_\<timestamp>.log입니다. ReportingServicesService.exe.config 파일에서 HttpTraceFileName 특성을 수정하여 파일 이름의 접두사를 사용자 지정할 수 있습니다. 타임스탬프는 UTC(Coordinated Universal Time)를 기반으로 합니다.|  
 |파일 위치|이 파일은 \Microsoft SQL Server\\ *\<SQL Server Instance>* \Reporting Services\LogFiles에 있습니다.|  

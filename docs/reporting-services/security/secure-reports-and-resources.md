@@ -1,4 +1,5 @@
 ---
+description: 보고서 및 리소스 보안
 title: 보고서 및 리소스 보안 | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 63cd55c7-fd2a-49e3-a3f8-59eb1a1c6e83
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e6ad66da4f9741753db693792edefd808f69b0e9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0dc9ee5a8bcdf2afd2ca02703eed1a6d0b782587
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570623"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454495"
 ---
 # <a name="secure-reports-and-resources"></a>보고서 및 리소스 보안
   개별 보고서 및 리소스에 보안을 설정하여 사용자가 해당 항목에 대해 갖는 액세스 수준을 제어할 수 있습니다. 기본적으로 **Administrators** 기본 제공 그룹의 멤버인 사용자만 보고서 실행, 리소스 보기, 속성 수정, 항목 삭제 등의 작업을 수행할 수 있습니다. 다른 모든 사용자는 보고서나 리소스에 대한 액세스를 허용하는 역할 할당이 만들어져 있어야 합니다.  

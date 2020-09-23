@@ -1,7 +1,8 @@
 ---
+description: Java EE 지원 이해
 title: Java EE 지원 이해 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/24/2020
+ms.date: 08/24/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: a9448b80-b7a3-49cf-8bb4-322c73676005
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 45d77963651ee5d7c796204c02bb65d88c60fcb8
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 91972cab6a1471bada3815d85d6f699bbef82ba3
+ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920282"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89042356"
 ---
 # <a name="understanding-java-ee-support"></a>Java EE 지원 이해
 
@@ -40,6 +41,8 @@ JDBC Driver 7.2의 경우 드라이버는 **mssql-jdbc-7.2.2.jre8.jar** 또는 *
 JDBC Driver 7.4의 경우 드라이버는 **mssql-jdbc-7.4.1.jre8.jar**, **mssql-jdbc-7.4.1.jre11.jar** 또는 **mssql-jdbc-7.4.1.jre12.jar**에 포함되어 있습니다.
 
 JDBC Driver 8.2의 경우 드라이버는 **mssql-jdbc-8.2.2.jre8.jar**, **mssql-jdbc-8.2.2.jre11.jar** 또는 **mssql-jdbc-8.2.2.jre13.jar**에 포함되어 있습니다.
+
+JDBC Driver 8.4의 경우 드라이버는 **mssql-jdbc-8.4.1.jre8.jar**, **mssql-jdbc-8.4.1.jre11.jar** 또는 **mssql-jdbc-8.4.1.jre14.jar**에 포함되어 있습니다.
 
 클래스 이름은 JDBC DriverManager 클래스를 사용하여 드라이버를 로드할 때마다, 그리고 드라이버 구성에서 드라이버의 클래스 이름을 지정할 때마다 사용됩니다. 예를 들어 Java EE 애플리케이션 서버 내에서 데이터 원본을 구성하려면 드라이버 클래스 이름을 입력해야 할 수 있습니다.  
   

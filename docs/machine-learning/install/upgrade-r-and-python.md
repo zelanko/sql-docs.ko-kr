@@ -1,53 +1,46 @@
 ---
-title: Python 및 R 구성 요소 업그레이드
-description: sqlbindr.exe를 사용해서 Machine Learning Server에 바인딩하여 SQL Server Machine Learning Services 또는 SQL Server R Services에서 Python 및 R을 업그레이드합니다.
+title: Python 및 R 런타임 업그레이드(바인딩)
+description: sqlbindr.exe를 사용해서 Machine Learning Server에 바인딩하여 SQL Server Machine Learning Services 또는 SQL Server R Services에서 Python 및 R 런타임을 업그레이드합니다.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 04/03/2020
+ms.date: 08/17/2020
 ms.topic: how-to
 author: cawrites
 ms.author: chadam
 monikerRange: =sql-server-2016||=sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: 918ab8c2b1e643196e99cd11ff92c07c3978e078
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 63bd14d9229d276966a3e118d097316a3ab58a4f
+ms.sourcegitcommit: 5f658b286f56001b055a8898d97e74906516dc99
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900076"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90009379"
 ---
-# <a name="upgrade-machine-learning-python-and-r-components-in-sql-server-instances"></a>SQL Server 인스턴스에서 Machine Learning(Python 및 R) 구성 요소 업그레이드
-[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+# <a name="upgrade-python-and-r-runtime-with-binding-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services에서 바인딩을 사용하여 Python 및 R 런타임 업그레이드
+[!INCLUDE [SQL Server 2016 and 2017](../../includes/applies-to-version/sqlserver2016-2017-only.md)]
 
-SQL Server의 Python 및 R 통합에는 오픈 소스 및 Microsoft 고유 패키지가 포함되어 있습니다.
-                                                                               
-표준 SQL Server 서비스:
-                                                                               
-- 패키지는 SQL Server 릴리스 주기에 따라 업데이트됩니다.
-- 버그 수정은 현재 버전에서 기존 패키지에 적용됩니다.
-- 주 버전 업그레이드는 없습니다.
+이 문서에서는 **바인딩**이라는 설치 프로세스를 사용하여 [SQL Server 2016 R Services](../r/sql-server-r-services.md) 또는 [SQL Server 2017 Machine Learning Services](../sql-server-machine-learning-services.md)에서 R 또는 Python 런타임을 업그레이드하는 방법을 설명합니다.
 
-**Microsoft Machine Learning Server**에 *바인딩*하여 [최신 버전의 Python 및 R](#version-map)을 가져올 수 있습니다. 버전은 SQL Server Machine Learning Services(데이터베이스 내) 및 SQL Server R Services(데이터베이스 내) 모두에 적용됩니다.
+> [!IMPORTANT]
+> 이 문서에서는 바인딩이라고 하는 R 및 Python 런타임을 업그레이드하는 이전 방법을 설명합니다. **SQL Server 2016 SP(서비스 팩) 2에 대한 CU(누적 업데이트) 14 이상** 또는 **SQL Server 2017에 대한 CU(누적 업데이트) 22 이상**을 설치한 경우에는 대신 [기본 R 또는 Python 언어 런타임을 이후 버전으로 변경](change-default-language-runtime-version.md)하는 방법을 참조하세요.
 
-데이터 과학자 같이 데이터 관련 분야에 종사하는 경우 최신 패키지를 가져오는 기능이 선호됩니다.
+Microsoft Machine Learning Server에 바인딩하여 [최신 버전의 Python 및 R](#version-map)을 가져올 수 있습니다. 버전은 SQL Server Machine Learning Services(데이터베이스 내) 및 SQL Server R Services(데이터베이스 내) 모두에 적용됩니다.
 
 ## <a name="what-is-binding"></a>바인딩이란?
 
-바인딩은 R_SERVICES 및 PYTHON_SERVICES 폴더 내용을 [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/index)에서 제공되는 새로운 실행 파일, 라이브러리 및 도구들로 바꾸는 설치 프로세스입니다.
+바인딩은 **R_SERVICES** 및 **PYTHON_SERVICES** 폴더 내용을 [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/index)에서 제공되는 새로운 실행 파일, 라이브러리 및 도구들로 바꾸는 설치 프로세스입니다.
 
-서비스 모델에 포함된 업로드된 구성 요소가 변경되었습니다.
-
-서비스 업데이트는 [최신 수명 주기](https://support.microsoft.com/help/30881/modern-lifecycle-policy)에서 [Microsoft R Server & Machine Learning Server 지원 타임라인](https://docs.microsoft.com/machine-learning-server/resources-servicing-support)과 일치합니다.
+서비스 모델에 포함된 업로드된 구성 요소가 변경되었습니다. 서비스 업데이트는 [최신 수명 주기](https://support.microsoft.com/help/30881/modern-lifecycle-policy)에서 [Microsoft R Server & Machine Learning Server 지원 타임라인](https://docs.microsoft.com/machine-learning-server/resources-servicing-support)과 일치합니다.
 
 구성 요소 버전 및 서비스 업데이트를 제외하고, 바인딩에서는 설치의 기본 사항을 변경하지 않습니다.
 
 - Python 및 R 통합은 여전히 데이터베이스 엔진 인스턴스의 일부입니다.
 - 라이선스는 변경되지 않습니다(바인딩과 관련된 추가 비용 없음).
-- 데이터베이스 엔진에 대한 SQL Server 지원 정책은 계속 유지됩니다. 
+- 데이터베이스 엔진에 대한 SQL Server 지원 정책은 계속 유지됩니다.
 
 이 문서의 나머지 부분에서는 바인딩 메커니즘과 각 버전의 SQL Server에서의 작동 방식을 설명합니다.
 
 > [!NOTE]
-> 바인딩은 SQL Server 인스턴스에 바인딩된 (데이터베이스 내) 인스턴스에만 적용됩니다. 이 경우 독립 실행형 설치에는 바인딩이 필요하지 않습니다.
+> 바인딩은 SQL Server 인스턴스에 바인딩된 데이터베이스 내 인스턴스에만 적용됩니다. 이 경우 독립 실행형 설치에는 바인딩이 필요하지 않습니다.
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 **SQL Server 2016 바인딩 고려 사항**
@@ -55,7 +48,7 @@ SQL Server의 Python 및 R 통합에는 오픈 소스 및 Microsoft 고유 패�
 SQL Server 2016 R Services 고객의 경우 바인딩은 다음을 제공합니다.
 
 - 업데이트된 R 패키지.
-- 원래 설치의 일부가 아닌 새 패키지([MicrosoftML](https://  docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package))
+- 원래 설치의 일부가 아닌 새 패키지([MicrosoftML](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package))
 - 감정 분석 및 이미지 검색을 위한 미리 학습된 기계 학습 [모델](https://docs.microsoft.com/machine-learning-server/install/microsoftml-install-pretrained-models).
 
 모든 바인딩은 [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/index)의 새로운 주/부 릴리스 각각에서 추가로 새로 고쳐질 수 있습니다.
@@ -83,17 +76,17 @@ R 기반 Microsoft R Open(MRO) | R 3.2.2     | R 3.3.2   |R 3.3.3   | R 3.4.1  |
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 [**SQL Server 2017 Machine Learning Services**](../install/sql-machine-learning-services-windows-install.md)
 
-구성 요소 |초기 릴리스 | Machine Learning Server 9.3 | | | |
-----------|----------------|---------|-|-|-|-|
-R 기반 Microsoft R Open(MRO) | R 3.3.3 | R 3.4.3 | | | |
-[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) |   9.2 |  9.3 | | | |
-[MicrosoftML](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package) | 9.2  | 9.3| | | |
-[sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils)| 1.0 |  1.0 | | | |
-[olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) | 1.0 |  1.0 | | | |
-Python 3.5 기반 Anaconda 4.2  | 4.2/3.5.2 | 4.2/3.5.2 | | | |
-[revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) | 9.2  | 9.3| | | |
-[microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) | 9.2  | 9.3| | | |
-[미리 학습된 모델](https://docs.microsoft.com/machine-learning-server/install/microsoftml-install-pretrained-models) | 9.2 | 9.3| | | |
+구성 요소 |초기 릴리스 | Machine Learning Server 9.3 |
+----------|----------------|---------|
+R 기반 Microsoft R Open(MRO) | R 3.3.3 | R 3.4.3 |
+[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) |   9.2 |  9.3 |
+[MicrosoftML](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package) | 9.2  | 9.3|
+[sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils)| 1.0 |  1.0 |
+[olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) | 1.0 |  1.0 |
+Python 3.5 기반 Anaconda 4.2  | 4.2/3.5.2 | 4.2/3.5.2 |
+[revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) | 9.2  | 9.3|
+[microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) | 9.2  | 9.3|
+[미리 학습된 모델](https://docs.microsoft.com/machine-learning-server/install/microsoftml-install-pretrained-models) | 9.2 | 9.3|
 ::: moniker-end
 
 ## <a name="how-component-upgrade-works"></a>구성 요소 업그레이드 작동 방법

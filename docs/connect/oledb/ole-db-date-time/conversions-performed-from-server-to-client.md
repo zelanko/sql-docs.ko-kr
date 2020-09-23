@@ -1,6 +1,6 @@
 ---
 title: 서버에서 클라이언트로 수행되는 변환 | Microsoft Docs
-description: 서버에서 클라이언트로 수행되는 변환
+description: SQL Server와 OLE DB Driver for SQL Server를 사용하여 작성된 클라이언트 애플리케이션 간에 수행되는 날짜/시간 변환에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -10,14 +10,14 @@ ms.technology: connectivity
 ms.topic: reference
 helpviewer_keywords:
 - conversions [OLE DB], server to client
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: dc72f9d19f0a41d1e33527135e85807c7567e5ed
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 83d09f15b916f164aa63105bd494d12a18ca8abf
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004490"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88862365"
 ---
 # <a name="conversions-performed-from-server-to-client"></a>서버에서 클라이언트로 수행되는 변환
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

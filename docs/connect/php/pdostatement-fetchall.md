@@ -1,7 +1,8 @@
 ---
-title: PDOStatement::fetchAll | Microsoft Docs
+title: PDOStatement::fetchAll
+description: Microsoft PDO_SQLSRV Driver for PHP for SQL Server의 PDOStatement::fetchAll 함수에 대한 API 참조입니다.
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: be74188a-77cd-4d19-b16e-77278373c979
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 71b4bd02d09ee8ab9b4637d0d555cc5b862d84a8
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 0c3ab50febea25e68b634d2f2afeb6a20b71bf82
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928600"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88645100"
 ---
 # <a name="pdostatementfetchall"></a>PDOStatement::fetchAll
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -36,7 +37,7 @@ $*column_index*: $*fetch_style*이 PDO::FETCH_COLUMN인 경우 반환할 열을 
   
 $*ctor_args*: $*fetch_style*이 PDO::FETCH_CLASS 또는 PDO::FETCH_OBJ인 경우 클래스 생성자에 대한 매개 변수 배열입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
 결과 집합의 나머지 행 배열 또는 메서드 호출에 실패하면 false입니다.  
   
 ## <a name="remarks"></a>설명  

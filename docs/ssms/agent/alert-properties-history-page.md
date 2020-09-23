@@ -1,4 +1,5 @@
 ---
+description: 경고 속성(기록 페이지)
 title: 경고 속성(기록 페이지)
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,19 +14,19 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 78504c87d25e0287cafb2930c6a44d140228992f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b318730bd1e45059e447e14c4b90b054d73709a2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85749254"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88372439"
 ---
 # <a name="alert-properties-history-page"></a>경고 속성(기록 페이지)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 
 > [!IMPORTANT]  
-> 현재 [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)에서 일부 SQL Server 에이전트 기능이 지원됩니다. 자세한 내용은 [SQL Server에서 Azure SQL Database Managed Instance T-SQL 차이점](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)을 참조하세요.
+> 현재 [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)에서는 SQL Server 에이전트 기능이 대부분 지원됩니다. 자세한 내용은 [SQL Server와 Azure SQL Managed Instance 간의 T-SQL 차이점](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)을 참조하세요.
 
 
 이 페이지를 사용하여 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 경고의 기록을 확인하고 수정할 수 있습니다.  
@@ -37,7 +38,7 @@ ms.locfileid: "85749254"
 **마지막 응답 날짜**  
 경고가 이벤트에 마지막으로 응답한 날짜를 표시하거나, 경고가 생성된 이후로 이벤트가 발생한 적이 없으면 **(응답한 적 없음)** 을 표시합니다.  
   
-**발생 수**  
+**발생 횟수**  
 경고가 생성된 이후 또는 카운트가 마지막으로 다시 설정된 이후에 이벤트가 발생한 총 횟수입니다.  
   
 **카운트 원래대로**  

@@ -1,6 +1,6 @@
 ---
 title: SSMS 스크립트 개체
-description: SSMS에서 개체 스크립팅에 대한 자습서
+description: SSMS(SQL Server Management Studio) 내에서 발견되는 다양한 개체에 대한 T-SQL(Transact-SQL) 스크립트를 생성합니다.
 keywords: SQL Server, SSMS, SQL Server Management Studio, 스크립트, 스크립팅
 author: MashaMSFT
 ms.author: mathoma
@@ -19,12 +19,12 @@ helpviewer_keywords:
 - solutions [SQL Server Management Studio], tutorials
 - SQL Server Management Studio [SQL Server], tutorials
 - scripts [SQL Server], SQL Server Management Studio
-ms.openlocfilehash: f1709114c064e6d46ab69ba7a15143bab24ea280
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0cc0e394e622880dc60991b1c0ca3b0c00597be6
+ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75247304"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87523335"
 ---
 # <a name="script-objects-in-sql-server-management-studio"></a>SQL Server Management Studio에서 개체 스크립팅
 

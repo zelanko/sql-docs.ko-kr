@@ -1,7 +1,6 @@
 ---
+description: Configure a User to Create and Manage SQL Server Agent Jobs
 title: Configure a User to Create and Manage SQL Server Agent Jobs
-ms.custom: seo-lt-2019
-ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssms
@@ -15,26 +14,29 @@ ms.assetid: 67897e3e-b7d0-43dd-a2e2-2840ec4dd1ef
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: b266b6baa81ab9786b33641355baae5cdd0b81f6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2d1d75a6ff5dbdce3d3201abc9db6ce85a8e602a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85749134"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497856"
 ---
 # <a name="configure-a-user-to-create-and-manage-sql-server-agent-jobs"></a>Configure a User to Create and Manage SQL Server Agent Jobs
+
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> 현재 [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)에서 일부 SQL Server 에이전트 기능이 지원됩니다. 자세한 내용은 [SQL Server에서 Azure SQL Database Managed Instance T-SQL 차이점](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)을 참조하세요.
+> 현재 [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)에서는 SQL Server 에이전트 기능이 대부분 지원됩니다. 자세한 내용은 [SQL Server와 Azure SQL Managed Instance 간의 T-SQL 차이점](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)을 참조하세요.
 
 이 문서에서는 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업을 만들거나 실행하도록 사용자를 구성하는 방법에 대해 설명합니다.  
-  
--   **시작하기 전 주의 사항:**  [보안](#Security)  
-  
--   **SQL Server 에이전트 작업을 만들고 관리하도록 사용자를 구성하려면 다음을 사용합니다.**  [SQL Server Management Studio](#SSMS)  
-  
+
+- **시작하기 전 주의 사항:**  [보안](#Security)  
+ 
+- **다음을 사용하여 SQL Server 에이전트 작업을 만들고 관리하도록 사용자 구성**  [SQL Server Management Studio](#SSMS)  
+
 ## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a>시작하기 전 주의 사항  
   
 ### <a name="security"></a><a name="Security"></a>보안  
@@ -68,10 +70,15 @@ ms.locfileid: "85749134"
   
 4.  **새 프록시 계정** 대화 상자의 **일반** 페이지에서 새 프록시의 프록시 이름, 자격 증명 이름 및 설명을 지정합니다. SQL Server 에이전트 프록시를 만들기 전에 자격 증명을 먼저 만들어야 합니다. 자격 증명을 만드는 방법에 대한 자세한 내용은 [방법: 자격 증명 만들기](https://msdn.microsoft.com/c1e77e91-2a69-40d9-b8b3-97cffc710586) 및 [CREATE CREDENTIAL(Transact-SQL)](https://msdn.microsoft.com/d5e9ae69-41d9-4e46-b13d-404b88a32d9d)을 참조하세요.  
   
-5.  이 프록시에 대한 적절한 하위 시스템을 선택합니다.  
+5.  이 프록시에 대한 적절한 하위 시스템을 선택합니다.
+    1. [운영 체제(CmdExec)](create-a-cmdexec-job-step.md)
+    1. [SQL Server Analysis Services 쿼리](create-an-analysis-services-job-step.md#to-create-an-analysis-services-query-job-step)
+    1. [SQL Server Analysis Services 명령](create-an-analysis-services-job-step.md#to-create-an-analysis-services-command-job-step-1)
+    1. [SQL Server Integration Services 패키지](../../integration-services/packages/run-integration-services-ssis-packages.md)
+    1. [PowerShell](../../powershell/run-windows-powershell-steps-in-sql-server-agent.md)
   
 6.  **보안 주체** 페이지에서 프록시 계정에 대한 액세스 권한을 부여 또는 제거할 로그인이나 역할을 추가하거나 제거합니다.  
-  
-## <a name="see-also"></a>참고 항목  
-[SQL Server 에이전트 보안 구현](../../ssms/agent/implement-sql-server-agent-security.md)  
-  
+
+## <a name="see-also"></a>관련 항목
+- [SQL Server 에이전트 보안 구현](../../ssms/agent/implement-sql-server-agent-security.md)  
+

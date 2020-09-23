@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: v-chojas
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: c2fe32e1a86273d071801fed9d2ffb8806d54ce6
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: 79c86e34a759e65f858621932fea5772e51756e2
+ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922206"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87899524"
 ---
 # <a name="release-notes-for-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Linux 및 macOS 기반 Microsoft ODBC Driver for SQL Server에 대한 릴리스 정보
 
@@ -36,6 +36,18 @@ NOW NEW FILE NAME:    linux-mac/release-notes-odbc-sql-server-linux-mac.md
 Thank you.
 GeneMi.  2019/04/03.
 -->
+
+
+## <a name="176-july-2020"></a>17.6, 2020년 7월
+
+| 새 항목 | 세부 정보 |
+| :------- | :------ |
+| 지원되는 새 배포. | Ubuntu 20.04 |
+| 페더레이션된 인증 지원 | [Azure Active Directory 사용](../using-azure-active-directory.md)을 참조하세요. |
+| 준비된 문에 대한 메타데이터 캐싱 | [Always Encrypted 사용](../using-always-encrypted-with-the-odbc-driver.md)을 참조하세요. |
+| ROLLBACK 또는 COMMIT 후 자동 BEGIN TRANSACTION이 발생하는지 여부를 제어하는 SQL_COPT_SS_AUTOBEGINTXN 연결 특성 | [DSN 및 연결 문자열 특성과 키워드](../dsn-connection-string-attribute.md)를 참조하세요. |
+| 버그 수정. | [버그 수정](../bug-fixes.md). |
+| &nbsp; | &nbsp; |
 
 ## <a name="17522-april-2020-alpine-linux-only"></a>17.5.2.2, 2020년 4월(Alpine Linux만 해당)
 
@@ -91,7 +103,7 @@ GeneMi.  2019/04/03.
 | 새 항목 | 세부 정보 |
 | :------- | :------ |
 | 지원되는 새 배포. | &bull; &nbsp; &nbsp; SUSE 15<br/>&bull; &nbsp; &nbsp; Ubuntu 18.10<br/>&bull; &nbsp; &nbsp; macOS 10.14 |
-| Azure Active Directory 관리 서비스 ID(시스템 및 사용자 할당) 인증 모드. | [ODBC 드라이버에서 Azure Active Directory 사용](../using-azure-active-directory.md)을 참조하세요. |
+| Azure Active Directory 관리 ID(시스템 및 사용자 할당) 인증 모드. | [ODBC 드라이버에서 Azure Active Directory 사용](../using-azure-active-directory.md)을 참조하세요. |
 | Always Encrypted 열에 대해 입력 매개 변수를 스트리밍할 수 있음. | 자세한 내용은 [Always Encrypted를 사용할 때 ODBC 드라이버의 제한 사항](../using-always-encrypted-with-the-odbc-driver.md#limitations-of-the-odbc-driver-when-using-always-encrypted)을 참조하세요. |
 | XA 분산 트랜잭션. | [XA 트랜잭션 사용](../use-xa-with-dtc.md)을 참조하세요.<br/><br/>XA는 둘 이상의 서버 쪽 데이터 스토리지 시스템에 액세스하는 전역 트랜잭션을 실행하기 위한 표준인 _확장 아키텍처_에 대한 두문자어입니다. |
 | &nbsp; | &nbsp; |

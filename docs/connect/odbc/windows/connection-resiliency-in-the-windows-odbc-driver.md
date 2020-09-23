@@ -1,21 +1,22 @@
 ---
-title: Windows ODBC 드라이버에서 연결 복원 | Microsoft Docs
+title: Windows ODBC 드라이버에서 연결 복원
+description: 서버에서 유휴 연결을 닫을 때 ODBC 드라이버의 연결 복원력이 투명하게 연결을 복원하고 애플리케이션 동작을 향상시키는 방법을 알아봅니다.
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 09/01/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 614fa0b4-e9fd-4c68-aab3-183f9b9df143
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: eecf4868791a9dcd963a31963f742f90a2cf3843
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 01b8da5d2a7f7c0e49d54a9fe237367ab3ed405f
+ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68008428"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89288125"
 ---
 # <a name="connection-resiliency-in-the-windows-odbc-driver"></a>Windows ODBC 드라이버에서 연결 복원
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -137,7 +138,7 @@ void func2() {
   
 #define MAXBUFLEN 255  
   
-   SQLCHAR ConnStrIn[MAXBUFLEN] = "DRIVER={ODBC Driver 13 for SQL Server};SERVER=server_that_supports_connection_resiliency;UID=userID;PWD= password_for_userID;ConnectRetryCount=2";
+   SQLCHAR ConnStrIn[MAXBUFLEN] = "DRIVER={ODBC Driver 17 for SQL Server};SERVER=server_that_supports_connection_resiliency;UID=userID;PWD= password_for_userID;ConnectRetryCount=2";
    SQLCHAR ConnStrOut[MAXBUFLEN];
 
    SQLSMALLINT cbConnStrOut = 0;  

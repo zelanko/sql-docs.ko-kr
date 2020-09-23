@@ -1,4 +1,5 @@
 ---
+description: SQLXML 인터페이스
 title: SQLXML 인터페이스 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
@@ -8,14 +9,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 7c67be98-efb5-446c-a0e3-ee67c43cb170
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 72cccce89d5e30a92f38b956c8b7996949d3bb46
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: bac370362700a4a5f1b500ebd1b01eb8063d5f03
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "69027697"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88396269"
 ---
 # <a name="sqlxml-interface"></a>SQLXML 인터페이스
 
@@ -49,6 +50,6 @@ free() 메서드가 호출되면 SQLXML 개체가 더 이상 유효하지 않고
   
 애플리케이션에서 getter 메서드인 setResult, setCharacterStream, setBinaryStream 및 setString 중 하나를 호출하면 SQLXML 개체를 쓰거나 읽을 수 없게 됩니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참조  
 
 [XML 데이터 지원](../../connect/jdbc/supporting-xml-data.md)  

@@ -1,5 +1,6 @@
 ---
-title: SQL이 있는 문 사용 | Microsoft Docs
+title: SQL이 있는 문 사용
+description: SQL Server용 Microsoft JDBC Driver for에서 다양한 유형의 SQL 문을 사용하는 방법을 개략적으로 알아봅니다.
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -8,14 +9,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: fe28f48a-e1bc-48ff-a5e7-c24cd6e5ecc7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 553c0e742b34406b23a68f1403c372dcc7080088
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 49ab0f6367353847bdf3a9e0a7aff13975b4d711
+ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "69025836"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87435286"
 ---
 # <a name="using-statements-with-sql"></a>SQL이 있는 문 사용
 
@@ -32,13 +33,13 @@ SQL 문에 입력 매개 변수가 없는 경우 [SQLServerStatement](../../conn
 
 ## <a name="in-this-section"></a>섹션 내용  
 
-| 항목                                                                                                                        | Description                                                       |
+| 항목                                                                                                                        | 설명                                                       |
 | ---------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------- |
 | [매개 변수가 없는 SQL 문 사용](../../connect/jdbc/using-an-sql-statement-with-no-parameters.md)                 | 매개 변수가 없는 SQL 문 사용 방법을 설명합니다.   |
 | [매개 변수가 있는 SQL 문 사용](../../connect/jdbc/using-an-sql-statement-with-parameters.md)                       | 매개 변수가 있는 SQL 문 사용 방법을 설명합니다.      |
 | [SQL 문을 사용하여 데이터베이스 개체 수정](../../connect/jdbc/using-an-sql-statement-to-modify-database-objects.md) | SQL 문을 사용하여 데이터베이스의 개체를 수정하는 방법을 설명합니다.   |
 | [SQL 문을 사용하여 데이터 수정](../../connect/jdbc/using-an-sql-statement-to-modify-data.md)                         | SQL 문을 사용하여 데이터베이스의 데이터를 수정하는 방법을 설명합니다. |
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [JDBC 드라이버에서 문 사용](../../connect/jdbc/using-statements-with-the-jdbc-driver.md)  

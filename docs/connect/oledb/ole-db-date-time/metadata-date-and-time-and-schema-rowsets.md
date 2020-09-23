@@ -1,6 +1,6 @@
 ---
 title: 날짜 및 시간과 스키마 행 집합 | Microsoft Docs
-description: 날짜 및 시간과 스키마 행 집합
+description: OLE DB Driver for SQL Server에서 COLUMNS 행 집합 및 PROCEDURE_PARAMETERS 행 집합과 관련된 OLE DB 날짜 및 시간 기능 향상에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -10,14 +10,14 @@ ms.technology: connectivity
 ms.topic: reference
 helpviewer_keywords:
 - date/time [OLE DB], schema rowsets
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: f9d852689f008fcaaff53a3325a298a66be5f4e9
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 44b3959b72d07cb12d6523e063a0ddfa75b59c97
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004460"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88862012"
 ---
 # <a name="metadata---date-and-time-and-schema-rowsets"></a>메타데이터 - 날짜 및 시간과 스키마 행 집합
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -1,4 +1,5 @@
 ---
+description: 연산자
 title: 연산자
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -24,18 +25,18 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a500a4c03562d024bb64a65053fe1afc374844c8
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 9727e0ac0270b32fe4df943e6ab91d2748cc7994
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246452"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88319019"
 ---
 # <a name="operators"></a>연산자
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> 현재 [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)에서 일부 SQL Server 에이전트 기능이 지원됩니다. 자세한 내용은 [SQL Server에서 Azure SQL Database Managed Instance T-SQL 차이점](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)을 참조하세요.
+> 현재 [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)에서는 SQL Server 에이전트 기능이 대부분 지원됩니다. 자세한 내용은 [SQL Server와 Azure SQL Managed Instance 간의 T-SQL 차이점](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)을 참조하세요.
 
 운영자는 작업이 완료되거나 경고가 발생할 때 전자 메일 알림을 받을 수 있는 사람이나 그룹의 별칭입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스는 운영자를 통해 관리자 알림을 지원합니다. 운영자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트의 알림 및 모니터링 기능을 사용하도록 설정합니다.  
   

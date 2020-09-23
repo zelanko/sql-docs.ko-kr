@@ -2,10 +2,9 @@
 title: 쿼리 저장소에 대한 모범 사례 | Microsoft Docs
 description: '워크로드에 SQL Server 쿼리 저장소를 사용하는 모범 사례(예: 최신 SQL Server Management Studio 및 Query Performance Insight 사용)에 대해 알아봅니다.'
 ms.custom: ''
-ms.date: 03/04/2020
+ms.date: 09/02/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: carlrab
 ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,12 +13,12 @@ ms.assetid: 5b13b5ac-1e4c-45e7-bda7-ebebe2784551
 author: pmasl
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 721cb6dca81681fec19d30a30ae0067bb4df1745
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: c19088caa9942d3eafaf6ccf8c6195851f05c27f
+ms.sourcegitcommit: f7c9e562d6048f89d203d71685ba86f127d8d241
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970084"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90042826"
 ---
 # <a name="best-practices-with-query-store"></a>쿼리 저장소에 대한 모범 사례
 
@@ -421,7 +420,7 @@ WHERE is_forced_plan = 1;
 
 데이터베이스의 이름을 바꾸면 계획 강제 적용에 실패하여 모든 후속 쿼리 실행 시 다시 컴파일됩니다.
 
-## <a name="use-trace-flags-on-mission-critical-servers"></a><a name="Recovery"></a> 중요 업무용 서버에서 추적 플래그 사용
+## <a name="using-query-store-in-mission-critical-servers"></a><a name="Recovery"></a> 중요 업무용 서버에서 쿼리 저장소 사용
 
 전역 추적 플래그 7745 및 7752를 사용하여 쿼리 저장소를 통해 데이터베이스의 가용성을 개선할 수 있습니다. 자세한 내용은 [추적 플래그](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)를 참조하세요.
 
@@ -432,7 +431,10 @@ WHERE is_forced_plan = 1;
 > [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터 이 동작은 엔진에서 제어되며, 7752 추적 플래그가 적용되지 않습니다.
 
 > [!IMPORTANT]
-> [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]에서 Just-In-Time 워크로드 인사이트를 위해 쿼리 저장소를 사용하는 경우, 최대한 빨리 [KB 4340759](https://support.microsoft.com/help/4340759)의 성능 확장성 수정을 설치하세요.
+> [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]에서 Just-In-Time 워크로드 인사이트를 위해 쿼리 저장소를 사용하는 경우, 최대한 빨리 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU2([KB 4340759](https://support.microsoft.com/help/4340759))의 성능 확장성 기능 향상을 설치하세요. 이러한 기능 향상이 없으면 데이터베이스의 작업량이 많을 때 스핀 잠금 경합이 발생할 수 있으며 서버 성능이 저하될 수 있습니다. 특히 `QUERY_STORE_ASYNC_PERSIST` 스핀 잠금 또는 `SPL_QUERY_STORE_STATS_COOKIE_CACHE` 스핀 잠금에 상당한 경합이 발생할 수 있습니다. 이러한 기능 향상이 적용되면 쿼리 저장소에서 더 이상 스핀 잠금 경합이 발생하지 않습니다.
+
+> [!IMPORTANT]
+> [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]에서 Just-In-Time 워크로드 인사이트를 위해 쿼리 저장소를 사용하는 경우, 최대한 빨리 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU22의 성능 확장성 기능 향상을 설치하세요. 이러한 기능 향상을 사용하지 않으면 데이터베이스의 사용량이 많은 경우에는 쿼리 저장소에서 많은 양의 메모리를 사용할 수 있으며 서버 성능이 저하될 수 있습니다. 이러한 기능 향상이 적용되면 쿼리 저장소의 다양한 구성 요소에서 사용할 수 있는 메모리 양에 대한 내부 제한을 적용하고 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]에 충분한 메모리가 반환될 때까지 자동으로 작업 모드를 읽기 전용으로 전환할 수 있습니다. 쿼리 저장소 내부 메모리 제한은 변경될 수 있으므로 문서화되지 않습니다.  
 
 ## <a name="see-also"></a>참고 항목
 

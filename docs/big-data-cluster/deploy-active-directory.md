@@ -5,16 +5,16 @@ description: Active Directory 도메인에서 SQL Server 빅 데이터 클러스
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 06/22/2020
+ms.date: 08/04/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 037c8bd26249ab3dc2cb3d0d8f4adf718f56000e
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 345002bdf21ee13fc6d33c9cbc1e9938a8b58377
+ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243084"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076660"
 ---
 # <a name="deploy-big-data-clusters-2019-in-active-directory-mode"></a>Active Directory 모드에서 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 배포
 
@@ -31,9 +31,16 @@ AD(Active Directory) 인증을 사용하도록 설정하려면 BDC에서 클러�
 
 Active Directory에 필요한 모든 개체를 자동으로 만들려면 배포하는 동안 BDC에 AD 계정이 필요합니다. 이 계정에는 제공된 OU 내에 사용자, 그룹 및 머신 계정을 만들 수 있는 권한이 있어야 합니다.
 
-아래 단계에서는 Active Directory 도메인 컨트롤러가 이미 있다고 가정합니다. 도메인 컨트롤러가 없는 경우 도움이 될 수 있는 단계는 이 [가이드](https://social.technet.microsoft.com/wiki/contents/articles/37528.create-and-configure-active-directory-domain-controller-in-azure-windows-server.aspx)에 포함되어 있습니다.
+>[!IMPORTANT]
+>도메인 컨트롤러에 설정된 암호 만료 정책에 따라 이러한 계정의 암호는 만료될 수 있습니다. 기본 만료 정책은 42일입니다. BDC의 모든 계정에 대한 자격 증명을 회전하는 메커니즘은 없으므로 만료 기간이 경과하면 클러스터가 작동하지 않게 됩니다. 이 문제를 해결하려면 도메인 컨트롤러에서 BDC 서비스 계정의 만료 정책을 "암호 사용 기간 제한 없음"으로 업데이트합니다. 이 작업은 만료 이전 또는 이후에 수행할 수 있습니다. 후자의 경우 만료된 암호를 Active Directory가 다시 활성화합니다.
+>
+>다음 이미지에서는 Active Directory 사용자 및 컴퓨터에서 이 속성을 설정하는 위치를 보여 줍니다.
+>
+>:::image type="content" source="media/deploy-active-directory/image25.png" alt-text="암호 만료 정책 설정":::
 
 AD 계정 및 그룹 목록은 [자동 생성된 Active Directory 개체](active-directory-objects.md)를 참조하세요.
+
+아래 단계에서는 Active Directory 도메인 컨트롤러가 이미 있다고 가정합니다. 도메인 컨트롤러가 없는 경우 도움이 될 수 있는 단계는 이 [가이드](https://social.technet.microsoft.com/wiki/contents/articles/37528.create-and-configure-active-directory-domain-controller-in-azure-windows-server.aspx)에 포함되어 있습니다.
 
 ## <a name="create-ad-objects"></a>AD 개체 만들기
 
@@ -180,6 +187,9 @@ AD 통합에 필요한 매개 변수는 다음과 같습니다. 이 문서의 �
 
 - `security.activeDirectory.realm` **선택적 매개 변수**: 대부분의 경우 영역은 도메인 이름과 동일합니다. 동일하지 않은 경우 이 매개 변수를 사용하여 영역 이름(예: `CONTOSO.LOCAL`)을 정의합니다. 이 매개 변수에 제공된 값은 정규화된 값이어야 합니다.
 
+  > [!IMPORTANT]
+  > 지금은 BDC가 Active Directory 도메인 이름이 Active Directory 도메인의 **NETBIOS** 이름과 다른 구성을 지원하지 않습니다.
+
 - `security.activeDirectory.domainDnsName`: 클러스터에 사용될 DNS 도메인의 이름입니다(예: `contoso.local`).
 
 - `security.activeDirectory.clusterAdmins`: 이 매개 변수는 하나의 AD 그룹을 사용합니다. AD 그룹 범위는 유니버설 또는 글로벌이어야 합니다. 이 그룹의 멤버는 클러스터에서 관리자 권한을 부여하는 *bdcAdmin* 클러스터 역할을 갖습니다. 즉, 컨트롤러 엔드포인트에 연결된 경우 [SQL Server의 `sysadmin` 권한](../relational-databases/security/authentication-access/server-level-roles.md#fixed-server-level-roles), [HDFS의 `superuser` 권한](https://hadoop.apache.org/docs/current/hadoop-project-dist/hadoop-hdfs/HdfsPermissionsGuide.html#The_Super-User) 및 관리자 권한을 얻습니다.
@@ -192,6 +202,9 @@ AD 통합에 필요한 매개 변수는 다음과 같습니다. 이 문서의 �
 이 목록에 있는 AD 그룹은 *bdcUser* 빅 데이터 클러스터 역할에 매핑되며, SQL Server([SQL Server 사용 권한](../relational-databases/security/permissions-hierarchy-database-engine.md) 참조) 또는 HDFS([HDFS 사용 권한 가이드](https://hadoop.apache.org/docs/current/hadoop-project-dist/hadoop-hdfs/HdfsPermissionsGuide.html#:~:text=Permission%20Checks%20%20%20%20Operation%20%20,%20%20N%2FA%20%2029%20more%20rows%20) 참조)에 대한 액세스 권한이 부여되어야 합니다. 컨트롤러 엔드포인트에 연결된 경우 이러한 사용자는 *azdata bdc endpoint list* 명령을 사용하여 클러스터에서 사용할 수 있는 엔드포인트만 나열할 수 있습니다.
 
 이 설정에 대해 AD 그룹을 업데이트하는 방법에 대한 자세한 내용은 [Active Directory 모드에서 빅 데이터 클러스터 액세스 관리](manage-user-access.md)를 참조하세요.
+
+  >[!TIP]
+  >Azure Data Studio에서 SQL Server 마스터에 연결된 HDFS 검색 환경을 사용하도록 설정하려면 bdcUser 역할을 가진 사용자에게 VIEW SERVER STATE 권한을 부여해야 합니다. Azure Data Studio에서는 *sys.dm_cluster_endpoints* DMV를 사용하여 HDFS에 연결하는 데 필요한 Knox 게이트웨이 엔드포인트를 가져오기 때문입니다.
 
   >[!IMPORTANT]
   >배포를 시작하기 전에 AD에서 이 그룹을 만듭니다. 이 AD 그룹의 범위가 도메인이면 로컬 배포에 실패합니다.
@@ -263,7 +276,7 @@ AD 통합에 필요한 매개 변수는 다음과 같습니다. 이 문서의 �
   >[!NOTE]
   >Active Directory에서는 계정 이름을 20자로 제한합니다. BDC 클러스터는 Pod 및 StatefulSets를 구별하기 위해 8자를 사용해야 합니다. 따라서 계정 접두사로 사용할 12자가 남습니다.
 
-[AD 그룹 범위를 확인](https://docs.microsoft.com/powershell/module/activedirectory/get-adgroup?view=winserver2012-ps&viewFallbackFrom=winserver2012r2-ps)하여 DomainLocal인지 확인합니다.
+[AD 그룹 범위를 확인](/powershell/module/activedirectory/get-adgroup?view=winserver2012-ps&viewFallbackFrom=winserver2012r2-ps)하여 DomainLocal인지 확인합니다.
 
 배포 구성 파일을 아직 초기화하지 않은 경우 다음 명령을 실행하여 구성의 복사본을 가져올 수 있습니다. 아래 예에서는 `kubeadm-prod` 프로필을 사용하며 `openshift-prod`에도 동일하게 적용됩니다.
 
@@ -422,7 +435,7 @@ curl -k -v --negotiate -u : https://<Gateway DNS name>:30443/gateway/default/web
 
 - SQL Server 2019 CU5 릴리스 전까지는 도메인(Active Directory)당 하나의 BDC만 허용됩니다. 도메인당 여러 BDC를 사용하도록 설정하는 것은 CU5 릴리스부터 지원됩니다.
 
-- 보안 구성에 지정된 AD 그룹은 DomainLocal 범위를 지정할 수 없습니다. [이러한 지침](https://docs.microsoft.com/powershell/module/activedirectory/get-adgroup?view=winserver2012-ps&viewFallbackFrom=winserver2012r2-ps)에 따라 AD 그룹의 범위를 확인할 수 있습니다.
+- 보안 구성에 지정된 AD 그룹은 DomainLocal 범위를 지정할 수 없습니다. [이러한 지침](/powershell/module/activedirectory/get-adgroup?view=winserver2012-ps&viewFallbackFrom=winserver2012r2-ps)에 따라 AD 그룹의 범위를 확인할 수 있습니다.
 
 - BDC에 대해 구성된 도메인의 AD 계정을 사용하여 BDC에 로그인할 수 있습니다. 다른 트러스트된 도메인의 로그인을 사용하는 것은 지원되지 않습니다.
 

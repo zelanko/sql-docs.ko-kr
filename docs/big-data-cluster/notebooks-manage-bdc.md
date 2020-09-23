@@ -1,7 +1,7 @@
 ---
 title: '관리: Azure Data Studio Notebook'
 titleSuffix: SQL Server Big Data Clusters
-description: Azure Data Studio에서 Notebook을 사용하여 빅 데이터 클러스터를 관리하고 문제를 해결합니다.
+description: Azure Data Studio에서 Notebook을 사용하여 SQL Server 빅 데이터 클러스터를 관리하고 문제를 해결할 수 있습니다.
 author: yualan
 ms.author: alanyu
 ms.reviewer: mikeray
@@ -10,12 +10,12 @@ ms.date: 03/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 4d5a1f176cba1212b305f4f2f3b2031e7882d692
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 372520b7bc4d5c80f67e6206194d8e02e2562e7b
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85660397"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778532"
 ---
 # <a name="manage-sql-server-big-data-clusters-with-azure-data-studio-notebooks"></a>Azure Data Studio Notebooks를 사용하여 SQL Server 빅 데이터 클러스터 관리
 
@@ -23,7 +23,7 @@ ms.locfileid: "85660397"
 
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]에서는 Notebook을 포함하는 Azure Data Studio에 대한 확장을 제공합니다. Notebook은 Azure Data Studio에서 SQL Server 2019 빅 데이터 클러스터를 관리하는 데 사용할 수 있는 설명서와 코드를 제공합니다.
 
-원래 오픈 소스 프로젝트로 구현된 [Notebooks](../azure-data-studio/notebooks-guidance.md)는 [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download)에 통합되었습니다. 사용 가능한 커널 중 하나와 텍스트 셀에 있는 텍스트의 Markdown을 사용하여 코드 셀에 코드를 작성할 수 있습니다.
+원래 오픈 소스 프로젝트로 구현된 [Notebooks](../azure-data-studio/notebooks-guidance.md)는 [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md?view=sql-server-ver15)에 통합되었습니다. 사용 가능한 커널 중 하나와 텍스트 셀에 있는 텍스트의 Markdown을 사용하여 코드 셀에 코드를 작성할 수 있습니다.
 
 Notebook을 사용하여 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]의 빅 데이터 클러스터를 배포할 수 있습니다.
 

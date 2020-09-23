@@ -1,5 +1,6 @@
 ---
-title: sqlsrv_errors | Microsoft Docs
+title: sqlsrv_errors
+description: Microsoft SQLSRV Driver for PHP for SQL Server의 sqlsrv_errors 함수에 대한 API 참조입니다.
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d1fcffec-f34f-46de-9a0e-343f3b5dbae2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ffd866d5e4493fe327dfb29b54d2fadda8cda3be
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: c0922e0ec7f3072b15b61f76908116bb86f4fe04
+ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928213"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87435197"
 ---
 # <a name="sqlsrv_errors"></a>sqlsrv_errors
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -57,7 +58,7 @@ sqlsrv_errors( [int $errorsAndOrWarnings] )
 #### <a name="parameters"></a>매개 변수  
 *$errorsAndOrWarnings*[선택 사항]: 미리 정의된 상수입니다. 이 매개 변수는 다음 표에 나열된 값 중 하나를 사용할 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |---------|---------------|  
 |SQLSRV_ERR_ALL|마지막 **sqlsrv** 함수 호출 시 생성된 오류 및 경고가 반환됩니다.|  
 |SQLSRV_ERR_ERRORS|마지막 **sqlsrv** 함수 호출 시 생성된 오류가 반환됩니다.|  
@@ -65,13 +66,13 @@ sqlsrv_errors( [int $errorsAndOrWarnings] )
   
 매개 변수 값을 지정하지 않은 경우 마지막 **sqlsrv** 함수 호출 시 생성된 오류 및 경고가 반환됩니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
 배열의 **배열** 또는 **null**입니다. 반환된 **배열**의 각 **배열**에는 세 쌍의 키 값이 들어 있습니다. 다음 표에는 각 키와 해당 설명이 나와 있습니다.  
   
 |키|Description|  
 |-------|---------------|  
 |SQLSTATE|ODBC 드라이버에서 발생하는 오류의 경우 ODBC 드라이버에서 반환한 SQLSTATE입니다. ODBC의 SQLSTATE 값에 대한 자세한 내용은 [ODBC 오류 코드](../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)를 참조하세요.<br /><br />[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]에서 발생하는 오류의 경우 IMSSP의 SQLSTATE입니다.<br /><br />[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]에서 발생하는 경고의 경우 01SSP의 SQLSTATE입니다.|  
-|코드|SQL Server에서 발생하는 오류의 경우 네이티브 SQL Server 오류 코드입니다.<br /><br />ODBC 드라이버에서 발생하는 오류의 경우 ODBC 드라이버에서 반환된 오류 코드입니다.<br /><br />[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]에서 발생하는 오류의 경우 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 오류 코드입니다. 자세한 내용은 [Handling Errors and Warnings](../../connect/php/handling-errors-and-warnings.md)을 참조하세요.|  
+|code|SQL Server에서 발생하는 오류의 경우 네이티브 SQL Server 오류 코드입니다.<br /><br />ODBC 드라이버에서 발생하는 오류의 경우 ODBC 드라이버에서 반환된 오류 코드입니다.<br /><br />[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]에서 발생하는 오류의 경우 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 오류 코드입니다. 자세한 내용은 [Handling Errors and Warnings](../../connect/php/handling-errors-and-warnings.md)을 참조하세요.|  
 |message|오류에 대한 설명입니다.|  
   
 배열 값은 숫자 키 0, 1 및 2를 사용하여 액세스할 수도 있습니다. 오류나 경고가 발생하지 않는 경우 **null** 이 반환됩니다.  

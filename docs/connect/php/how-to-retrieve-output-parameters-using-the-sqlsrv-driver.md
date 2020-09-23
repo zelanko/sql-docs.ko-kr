@@ -1,5 +1,6 @@
 ---
-title: '방법: SQLSRV 드라이버를 사용하여 출력 매개 변수 검색 | Microsoft Docs'
+title: '방법: SQLSRV 드라이버를 사용하여 출력 매개 변수 검색'
+description: Microsoft SQLSRV Driver for PHP for SQL Server를 사용하여 저장 프로시저에서 출력 매개 변수를 사용하고 검색하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 04/11/2018
 ms.prod: sql
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1157bab7-6ad1-4bdb-a81c-662eea3e7fcd
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fe3ac42280791083d5443b1bf004908a301971e5
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 6b23f80859a572ea8bb3f96a0460d0f5eba0183a
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80916029"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87410965"
 ---
 # <a name="how-to-retrieve-output-parameters-using-the-sqlsrv-driver"></a>방법: SQLSRV 드라이버를 사용하여 출력 매개 변수 검색
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -24,7 +25,7 @@ ms.locfileid: "80916029"
 이 항목에서는 하나의 매개 변수가 출력 매개 변수로 정의된 저장 프로시저를 호출하는 방법을 설명합니다. 출력 또는 입출력 매개 변수를 검색할 때 반환되는 매개 변수 값에 액세스하기 전에 저장 프로시저에서 반환된 모든 결과를 사용해야 합니다.  
   
 > [!NOTE]  
-> 초기화되거나 **null**, **날짜/시간**또는 스트림 형식으로 업데이트되는 변수는 출력 매개 변수로 사용할 수 없습니다.  
+>  초기화되거나 **null**, **날짜/시간**또는 스트림 형식으로 업데이트되는 변수는 출력 매개 변수로 사용할 수 없습니다.  
   
 SQLSRV_SQLTYPE_VARCHAR('max') 같은 스트림 형식을 출력 매개 변수로 사용하면 데이터가 잘릴 수 있습니다. 스트림 형식은 출력 매개 변수로 지원되지 않습니다. 스트림이 아닌 형식의 경우 출력 매개 변수의 길이를 지정하지 않거나 출력 매개 변수에 지정된 길이가 충분히 크지 않은 경우 데이터가 잘릴 수 있습니다.  
   

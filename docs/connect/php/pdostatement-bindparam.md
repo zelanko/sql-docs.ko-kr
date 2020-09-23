@@ -1,7 +1,8 @@
 ---
-title: PDOStatement::bindParam | Microsoft Docs
+title: PDOStatement::bindParam
+description: Microsoft PDO_SQLSRV Driver for PHP for SQL Server의 PDOStatement::bindParam 함수에 대한 API 참조입니다.
 ms.custom: ''
-ms.date: 05/22/2018
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 65212058-2632-47a4-ba7d-2206883abf09
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 245cdc56e47c87bc5c31435e1967ecb74a8c05bc
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: c6b8b1f838ce3351299e4069e80f692efb487df1
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80918763"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88646615"
 ---
 # <a name="pdostatementbindparam"></a>PDOStatement::bindParam
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -32,7 +33,7 @@ bool PDOStatement::bindParam($parameter, &$variable[, $data_type[, $length[, $dr
 #### <a name="parameters"></a>매개 변수  
 $*parameter*: (혼합) 매개 변수 식별자입니다. 명명된 자리 표시자를 사용하는 명령문의 경우 매개 변수 이름(:name)을 사용합니다. 물음표 구문을 사용하는 준비된 명령문의 경우 매개 변수의 1부터 시작하는 인덱스입니다.  
   
-&$*변수*: SQL 문 매개 변수에 바인딩할 PHP 변수의 (혼합) 이름입니다.  
+&$variable**: SQL 문 매개 변수에 바인딩할 PHP 변수의 (혼합) 이름입니다.  
   
 $*data_type*: 선택적 (정수) PDO::PARAM_* 상수입니다. 기본값은 PDO::PARAM_STR입니다.  
   
@@ -40,7 +41,7 @@ $*length*: 데이터 형식의 선택적 (정수) 길이입니다. $*data_type*�
   
 $*driver_options*: 선택적 (혼합) 드라이버 관련 옵션입니다. 예를 들어 PDO::SQLSRV_ENCODING_UTF8을 지정하여 UTF-8로 인코드된 문자열로 변수에 열을 바인딩할 수 있습니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
 성공하면 TRUE이고, 그렇지 않으면 FALSE입니다.  
   
 ## <a name="remarks"></a>설명  

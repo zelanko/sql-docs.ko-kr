@@ -1,6 +1,6 @@
 ---
-title: 향상된 날짜 및 시간 기능 사용(OLE DB) | Microsoft Docs
-description: 향상된 날짜 및 시간 기능 사용(OLE DB)
+title: 향상된 날짜 및 시간 기능 사용(OLE DB 드라이버)
+description: OLE DB Driver for SQL Server에서 날짜/시간 기능 date, time, datetime2 및 datetimeoffset을 사용하여 명령을 실행하고 행 집합 결과를 검색하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -8,14 +8,14 @@ ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: reference
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 013e933fe4aeab69abf28148949dfcb0b5b4d47d
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 25fe260204a1cf95f5d6a1ed93c0b2fb1b0bab06
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012021"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88861979"
 ---
 # <a name="use-enhanced-date-and-time-features-ole-db"></a>향상된 날짜 및 시간 기능 사용(OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

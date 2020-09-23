@@ -1,22 +1,22 @@
 ---
-title: 10진수 문자열 및 금액 값 형식 지정(PDO_SQLSRV 드라이버) | Microsoft Docs
+title: 10진수 문자열 및 금액 값 서식 지정(PDO_SQLSRV 드라이버)
+description: PDO_SQLSRV 드라이버를 사용할 때 PDO::SQLSRV_ATTR_FORMAT_DECIMALS 및 SQLSRV_ATTR_DECIMAL_PLACES 특성을 사용하여 10진수 또는 금액 값의 서식을 지정하는 방법을 알아봅니다.
 ms.custom: ''
-ms.date: 02/11/2019
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
 - formatting, decimal types, money values
-author: yitam
-ms.author: v-yitam
-manager: v-mabarw
-ms.openlocfilehash: 76c314159faf15e63bf77b17a8a45abf217b205c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ae61b239fca2a923645b9de963309c62a3919b3d
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68265147"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680658"
 ---
 # <a name="formatting-decimal-strings-and-money-values-pdo_sqlsrv-driver"></a>10진수 문자열 및 금액 값 형식 지정(PDO_SQLSRV 드라이버)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

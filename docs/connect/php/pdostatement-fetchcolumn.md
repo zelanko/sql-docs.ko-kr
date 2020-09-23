@@ -1,7 +1,8 @@
 ---
-title: PDOStatement::fetchColumn | Microsoft Docs
+title: PDOStatement::fetchColumn
+description: Microsoft PDO_SQLSRV Driver for PHP for SQL Server의 PDOStatement::fetchColumn 함수에 대한 API 참조입니다.
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 6ebf385c-ddb0-4c53-9dc6-7df0d3740b04
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9619ca2292416f6f28b14edd0ee0801826aae8f6
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: cbfc332339e3cd5e17890ef3a7ef9341474a8189
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928574"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88645089"
 ---
 # <a name="pdostatementfetchcolumn"></a>PDOStatement::fetchColumn
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -32,7 +33,7 @@ string PDOStatement::fetchColumn ([ $column_number ] );
 #### <a name="parameters"></a>매개 변수  
 $*column_number*: 0부터 시작하는 열 번호를 나타내는 선택적 정수입니다. 기본값은 0입니다(행의 첫 번째 열).  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
 한 열이거나 행이 더 이상 없는 경우 false입니다.  
   
 ## <a name="remarks"></a>설명  

@@ -1,4 +1,5 @@
 ---
+description: getDate 메서드(java.lang.String) 매개 변수
 title: getDate 메서드(java.lang.String) 매개 변수 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: a605bca6-d960-4756-ad14-0f42b313e60a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 435e6eaf5e6078fc2d61a359d6e8a40323e59b67
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 9ec829f3f4f5717b0a493c69f6b5c4733a2fc1fa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922705"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88436345"
 ---
 # <a name="getdate-method-javalangstring"></a>getDate 메서드(java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +40,7 @@ public java.sql.Date getDate(java.lang.String sCol)
   
  매개 변수 이름이 들어 있는 **문자열**입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
  Date 개체입니다.  
   
 ## <a name="exceptions"></a>예외  

@@ -1,7 +1,8 @@
 ---
-title: PDOStatement::setAttribute | Microsoft Docs
+title: PDOStatement::setAttribute
+description: Microsoft PDO_SQLSRV Driver for PHP for SQL Server의 PDOStatement::setAttribute 함수에 대한 API 참조입니다.
 ms.custom: ''
-ms.date: 01/31/2020
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 329d9b5e-1c5d-40b0-9127-1051d0646fc7
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1e5c5c0670ceb9725c04a63a59a09b25cf72c810
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 33bd5d23ab35eda7fc6416dc18cf720eabd71f58
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80925252"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88646533"
 ---
 # <a name="pdostatementsetattribute"></a>PDOStatement::setAttribute
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -33,13 +34,13 @@ $*attribute*: PDO::ATTR_* 또는 PDO::SQLSRV_ATTR_\* 상수 중 하나인 정수
   
 $*value*: 지정된 $*attribute*에 대해 설정할 (혼합) 값입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
 성공하면 TRUE이고, 그렇지 않으면 FALSE입니다.  
   
 ## <a name="remarks"></a>설명  
 다음 표에는 사용 가능한 특성 목록이 나와 있습니다.  
   
-|attribute|값|Description|  
+|attribute|값|설명|  
 |-------------|----------|---------------|  
 |PDO::SQLSRV_ATTR_CLIENT_BUFFER_MAX_KB_SIZE|1부터 PHP 메모리 제한까지입니다.|클라이언트 쪽 커서에 대한 결과 집합을 보유하는 버퍼의 크기를 구성합니다.<br /><br />기본값은 10240KB(10MB)입니다.<br /><br />클라이언트 쪽 커서에 대한 자세한 내용은 [커서 유형&#40;PDO_SQLSRV 드라이버&#41;](../../connect/php/cursor-types-pdo-sqlsrv-driver.md)를 참조하세요.|  
 |PDO::SQLSRV_ATTR_DATA_CLASSIFICATION|true 또는 false|[PDOStatement::getColumnMeta](../../connect/php/pdostatement-getcolumnmeta.md)를 호출할 때 데이터 분류 메타데이터를 검색할지 여부를 지정합니다. 기본값은 false입니다.|

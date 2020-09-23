@@ -1,6 +1,6 @@
 ---
-title: SQL Azure 연결 형식 | Microsoft Docs
-description: SQL Azure 연결 데이터 확장 프로그램은 다중값 매개 변수, 서버 집계 및 연결 문자열과 별개로 관리되는 자격 증명을 지원합니다.
+title: Azure SQL 연결 형식 | Microsoft Docs
+description: Azure SQL 연결 데이터 확장 프로그램은 다중값 매개 변수, 서버 집계 및 연결 문자열과 별개로 관리되는 자격 증명을 지원합니다.
 author: maggiesMSFT
 ms.author: maggies
 ms.prod: reporting-services
@@ -9,14 +9,14 @@ ms.technology: report-data
 ms.topic: conceptual
 ms.date: 02/15/2019
 monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 0d81923ba623765e8929cf0c1cb4da2e73ac6e8c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d49fdea8dbc41624a565b685f9a2baa580b7a59c
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081758"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988472"
 ---
-# <a name="sql-azure-connection-type-ssrs"></a>SQL Azure 연결 형식(SSRS)
+# <a name="azure-sql-connection-type-ssrs"></a>Azure SQL 연결 형식(SSRS)
 
 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기술을 기반으로 작성된 클라우드 기반의 호스트되는 관계형 데이터베이스입니다. 보고서에 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]의 데이터를 포함하려면 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]유형의 보고서 데이터 원본을 기반으로 하는 데이터 세트가 있어야 합니다. 이 기본 제공 데이터 원본 유형은 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 데이터 확장 프로그램을 기반으로 합니다. 이 데이터 원본 유형을 사용하여 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에 연결하고 데이터를 검색할 수 있습니다.  
   

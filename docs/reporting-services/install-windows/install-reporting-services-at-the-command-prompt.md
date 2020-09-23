@@ -1,4 +1,5 @@
 ---
+description: 명령 프롬프트에 Reporting Services 2016 설치 - SSRS
 title: 명령 프롬프트에 Reporting Services 2016 설치 - SSRS | Microsoft Docs
 ms.date: 01/09/2018
 ms.prod: reporting-services
@@ -10,12 +11,12 @@ ms.assetid: 048169b3-512c-41e4-895a-0416eff41268
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7c4597a19b3fbcde0a5b4f6a82cb2398b6776128
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e4d02c4130ae089ba7b625688b8e4c6c227cc1c5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "62513688"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498066"
 ---
 # <a name="install-reporting-services-2016-at-the-command-prompt"></a>명령 프롬프트에 Reporting Services 2016 설치
 
@@ -36,11 +37,11 @@ ms.locfileid: "62513688"
   
 -   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
--   [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]입니다.  
+-   [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]  
   
 -   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구독 기능에 필요한 SQL Server 에이전트입니다.  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]입니다.  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 ```  
 Setup.exe /q /IACCEPTSQLSERVERLICENSETERMS /ACTION="install" /ERRORREPORTING=1 /UPDATEENABLED="False" /INSTANCENAME="MSSQLSERVER" /FEATURES="SQLEngine,Adv_SSMS,RS" /RSINSTALLMODE="DefaultNativeMode" /SQLSVCACCOUNT="[DOMAIN\ACCOUNT]" /SQLSVCPASSWORD="[PASSWORD]" /AGTSVCACCOUNT="[DOMAIN\ACCOUNT]" /AGTSVCPASSWORD="[PASSWORD]" /SQLSYSADMINACCOUNTS="[DOMAIN\ACCOUNT]"  
@@ -86,6 +87,6 @@ Setup.exe /q /ACTION="Upgrade" /INSTANCENAME="MSSQLSERVER" /PID="[Your PID Value
 
 [명령 프롬프트에서 SQL Server 설치](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)   
 [SysPrep 매개 변수](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#SysPrep)   
-[명령 프롬프트에서 파워 피벗 설치](https://msdn.microsoft.com/7f1f2b28-c9f5-49ad-934b-02f2fa6b9328)  
+[명령 프롬프트에서 파워 피벗 설치](https://docs.microsoft.com/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013#bkmk_install)  
 
 추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](https://go.microsoft.com/fwlink/?LinkId=620231)

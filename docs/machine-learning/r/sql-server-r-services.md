@@ -4,20 +4,21 @@ titleSuffix: ''
 description: R Services는 관계형 데이터를 사용하여 R 스크립트를 실행하는 기능을 제공하는 SQL Server 2016의 기능입니다. 예측 분석 및 기계 학습에 오픈 소스 패키지와 프레임워크 및 Microsoft R 패키지를 사용할 수 있습니다. 스크립트는 SQL Server 외부에서 또는 네트워크를 통해 데이터를 이동하지 않고 데이터베이스 내에서 실행됩니다. 이 문서에서는 SQL Server R Services의 기본 사항에 대해 설명합니다.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 08/12/2019
+ms.date: 08/06/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: =sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 974562d95ebf756de5f95eca0e89a6d5fc6e958f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0fabca5748849e0dd2e708ae02c11dc8f028a14d
+ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775397"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87898835"
 ---
 # <a name="what-is-sql-server-2016-r-services"></a>SQL Server 2016 R Services란?
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+
+[!INCLUDE[SQL Server 2016 only](../../includes/applies-to-version/sqlserver2016-only.md)]
 
 R Services는 관계형 데이터를 사용하여 R 스크립트를 실행하는 기능을 제공하는 SQL Server 2016의 기능입니다. 예측 분석 및 기계 학습에 오픈 소스 패키지와 프레임워크 및 [Microsoft R 패키지](#packages)를 사용할 수 있습니다. 스크립트는 SQL Server 외부에서 또는 네트워크를 통해 데이터를 이동하지 않고 데이터베이스 내에서 실행됩니다. 이 문서에서는 SQL Server R Services의 기본 사항에 대해 설명합니다.
 
@@ -41,7 +42,7 @@ R Services를 사용하여 SQL Server 내에서 기계 학습 및 딥 러닝 모
 
 SQL Server R Services를 사용할 수 있는 예측 유형의 예는 다음과 같습니다.
 
-|||
+|예측 유형|예제|
 |-|-|
 |분류/범주화|사용자 의견을 긍정 및 부정 범주로 자동으로 구분|
 |회귀/연속 값 예측|크기 및 위치를 기준으로 주택 가격 예측|
@@ -58,9 +59,18 @@ R Services에서 R 스크립트를 실행하는 방법에는 다음 두 가지�
 
 <a name="version"></a>
 
-## <a name="r-version"></a>R 버전
+## <a name="r-versions"></a>R 버전
 
-R 버전 3.2.2는 SQL Server 2016 R Services에 포함되어 있습니다. 최신 버전 R의 경우 [SQL Server 2017 이상용 Machine Learning Services](../sql-server-machine-learning-services.md)를 사용합니다.
+다음은 SQL Server 2016 R Services에 포함된 R 런타임 버전입니다.
+
+SQL Server 버전 | 기본 R 런타임 버전 |
+|-|-|
+| SQL Server 2016 RTM - SP2 CU13 | 3.2.2 |
+| SQL Server 2016 SP2 CU14 이상 | 3.2.2 및 3.5.2 |
+
+SQL Server 2016 SP(서비스 팩) 2 이상에 대한 CU(누적 업데이트 ) 14에는 최신 R 런타임이 포함되어 있습니다. 자세한 내용은 [기본 언어 런타임 버전 변경](../install/change-default-language-runtime-version.md)을 참조하세요.
+
+다른 버전의 R을 사용하거나 Python을 실행하려면 [SQL Server 2017 이상용 Machine Learning Services](../sql-server-machine-learning-services.md)를 사용합니다.
 
 <a name="packages"></a>
 
@@ -89,7 +99,7 @@ Microsoft의 엔터프라이즈 패키지 외에도 오픈 소스 패키지 및 
 
     + 빠른 시작: [SQL Server에서 간단한 R 스크립트를 만들고 실행](../tutorials/quickstart-r-create-script.md)
     + 빠른 시작: [R에서 예측 모델 만들기 및 학습](../tutorials/quickstart-r-train-score-model.md)
-    + 자습서: [T-SQL에서 R 사용](../tutorials/sqldev-in-database-r-for-sql-developers.md): 데이터 살펴보기, 기능 엔지니어링 수행, 모델 학습 및 배포, 예측 수행(5부 시리즈)
+    + 자습서: [T-SQL에서 R 사용](../tutorials/r-taxi-classification-introduction.md): 데이터 살펴보기, 기능 엔지니어링 수행, 모델 학습 및 배포, 예측 수행(5부 시리즈)
     + 자습서: [R 도구에서 R Services 사용](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md): 데이터 살펴보기, 그래프와 그림 만들기, 기능 엔지니어링 수행, 모델 학습 및 배포, 예측 수행(6부 시리즈)
 
 ## <a name="next-steps"></a>다음 단계

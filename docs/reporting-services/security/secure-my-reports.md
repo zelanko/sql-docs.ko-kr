@@ -1,4 +1,5 @@
 ---
+description: 내 보고서 보안 설정
 title: 내 보고서 보안 설정 | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3b23a382-13b8-4196-9a93-7fe62d03a63c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7973c4ad5483193aa4ed2116b714f6d404c4da1c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: aba081c02ca027a861ab6c7680e038bac7a18304
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570694"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498046"
 ---
 # <a name="secure-my-reports"></a>내 보고서 보안 설정
   내 보고서 기능은 보고서 작업을 위한 사용자 관리 작업 영역을 제공합니다. 원래 용도대로 사용하려면 내 보고서 폴더는 여러 사용자가 사용할 수 있는 다른 폴더보다 권한 제한이 적어야 합니다. 다른 폴더의 보고서를 보고 실행할 수 있는 권한만 있는 사용자가 내 보고서 폴더와 자신이 소유한 내용을 관리하려면 확장된 권한이 있어야 합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 이 용도에 맞는 특별한 역할 할당과 역할 정의를 제공합니다.  
@@ -32,7 +33,7 @@ ms.locfileid: "65570694"
   
  **내 보고서** 역할 할당은 다음과 같은 요소로 구성됩니다.  
   
--   사용자 폴더\\ *\<username>* \내 보고서 폴더에 있는 사용자의 내 보고서 폴더  
+-   사용자의 내 보고서 폴더(Users Folders\\ *\<username>* \My Reports 폴더에 있음).  
   
 -   내 보고서 폴더 활성화 시 결정되는 사용자 계정. 사용자가 보고서 관리자에서 내 보고서 폴더를 클릭하거나 보고서 디자이너에서 내 보고서 폴더에 보고서를 게시할 때 폴더가 활성화됩니다. 이 폴더는 사용자가 내 보고서 링크에 대한 속성을 요청할 때도 활성화됩니다.  
   

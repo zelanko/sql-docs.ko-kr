@@ -13,12 +13,12 @@ dev_langs:
 author: pmasl
 ms.author: umajay
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: a221857278cdd2e8b88d8f6f13084b4def9d3c88
-ms.sourcegitcommit: 173dbecfe78fd1bcc13a922b579a2bb9ad37b713
+ms.openlocfilehash: 52fdb12c425f8d6e3faf9fb0f0ee3ce1a1c76195
+ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88942306"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076818"
 ---
 # <a name="dbcc-pdw_showexecutionplan-transact-sql"></a>DBCC PDW_SHOWEXECUTIONPLAN(Transact-SQL)
 
@@ -31,17 +31,18 @@ ms.locfileid: "88942306"
 ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙&#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>구문  
-Azure SQL Data Warehouse용 구문:
+[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 구문:
 
 ```syntaxsql
 DBCC PDW_SHOWEXECUTIONPLAN ( distribution_id, spid )  
-[;]  
+[ ; ]  
 ```  
-구문 Azure 병렬 데이터 웨어하우스:
+
+[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 구문:
   
 ```syntaxsql
 DBCC PDW_SHOWEXECUTIONPLAN ( pdw_node_id, spid )  
-[;]  
+[ ; ]  
 ```  
 
 ## <a name="arguments"></a>인수  

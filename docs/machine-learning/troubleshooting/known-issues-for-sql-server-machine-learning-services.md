@@ -9,21 +9,21 @@ author: dphansen
 ms.author: davidph
 ms.custom: contperfq4
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2142e67f7e758b6e949b160842adc954390b42db
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 914f8626a297dd233d6b22230d579623e0e98cf6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87253730"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495054"
 ---
 # <a name="known-issues-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services의 알려진 문제
-[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 이 문서에서는 [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) 및 [SQL Server 2016 R Services](../r/sql-server-r-services.md)에서 제공되는 Python 및 R 구성 요소의 알려진 문제 또는 제한 사항을 설명합니다.
 
 ## <a name="setup-and-configuration-issues"></a>설치 및 구성 문제
 
-초기 설정 및 구성에 관련된 프로세스와 일반적인 질문에 대한 설명은 [업그레이드 및 설치 FAQ](upgrade-and-installation-faq-sql-server-r-services.md)를 참조하세요. 업그레이드, 함께 설치, 새로운 R 또는 Python 구성 요소 설치에 대한 정보가 포함되어 있습니다.
+초기 설치 및 구성과 관련된 프로세스에 대한 설명은 [SQL Server Machine Learning Services 설치](../install/sql-machine-learning-services-windows-install.md)를 참조하세요. 업그레이드, 함께 설치, 새로운 R 또는 Python 구성 요소 설치에 대한 정보가 포함되어 있습니다.
 
 ### <a name="1-inconsistent-results-in-mkl-computations-due-to-missing-environment-variable"></a>1. 환경 변수 누락으로 인한 MKL 계산 결과 불일치
 

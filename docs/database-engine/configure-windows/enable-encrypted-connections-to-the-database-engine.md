@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 952f527b248d6491c3a6f3acf3c4e5570e3ad54e
-ms.sourcegitcommit: 19ae05bc69edce1e3b3d621d7fdd45ea5f74969d
+ms.openlocfilehash: ba50d65054b0a72424955f5d669a15d2c1846b67
+ms.sourcegitcommit: 780a81c02bc469c6e62a9c307e56a973239983b6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88564663"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90027294"
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine"></a>데이터베이스 엔진에 암호화된 연결 사용
 
@@ -84,7 +84,7 @@ TLS 암호화를 사용하면 네트워크에서 [!INCLUDE[ssNoVersion](../../in
 
 - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 계정에는 TLS 인증서에 액세스하는 데 필요한 권한이 있어야 합니다.
 
-- 현재 시스템 시간은 인증서의 **유효 기간(시작)** 속성 이후이고 인증서의 유효 기간(끝) 속성 이전이어야 합니다.
+- 현재 시스템 시간은 인증서의 **유효 기간(시작)** 속성 이후이고 인증서의 **유효 기간(끝)** 속성 이전이어야 합니다.
 
 - 인증서는 서버 인증용이어야 합니다. 이를 위해서는 인증서의 **확장된 키 사용** 속성으로 **서버 인증(1.3.6.1.5.5.7.3.1)** 을 지정해야 합니다.
 

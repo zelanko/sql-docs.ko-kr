@@ -1,6 +1,6 @@
 ---
 title: ICommandWithParameters(OLE DB 드라이버) | Microsoft Docs
-description: ICommandWithParameters 인터페이스
+description: 향상된 기능에서 ICommandWithParameters::GetParameterInfo를 사용하여 OLE DB Driver for SQL Server의 예상 결과를 보다 정확하게 설명하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -8,14 +8,14 @@ ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: reference
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: afb49ad0dd1d1bf6275fb093b42c97e34cb7d670
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 21f3643737d1d6682133a252d52a072f73e81dfb
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244493"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88861372"
 ---
 # <a name="icommandwithparameters"></a>ICommandWithParameters
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

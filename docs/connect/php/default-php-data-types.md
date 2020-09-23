@@ -1,7 +1,8 @@
 ---
-title: 기본 PHP 데이터 형식 | Microsoft Docs
+title: 기본 PHP 데이터 형식
+description: 이 항목에는 Microsoft SQLSRV Driver for PHP for SQL Server를 사용할 때 모든 기본 PHP 데이터 형식과 해당 SQL Server 데이터 형식이 나열되어 있습니다.
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b66c301d-3d20-45b8-a112-225d8f01c0bd
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e3f5210d54fdd5a0a693f9cb7fdf8a7d4fc0f183
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: c1e1cf91baf80fd6298eaaca9c9e12a0b5858d9f
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928025"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680794"
 ---
 # <a name="default-php-data-types"></a>기본 PHP 데이터 형식
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -29,7 +30,7 @@ PDO_SQLSRV 드라이버를 사용하여 데이터가 반환되는 경우 데이�
   
 이 항목의 나머지 부분에서는 SQLSRV 드라이버를 사용하는 기본 데이터 형식을 설명합니다.  
   
-다음 표에서는 SQL Server 데이터 형식(서버에서 검색 중인 데이터 형식), 기본 PHP 데이터 형식(데이터를 변환할 대상 데이터 형식) 및 스트림과 문자열에 대한 기본 인코딩을 보여 줍니다. 서버에서 데이터를 검색할 때 데이터 형식을 지정하는 방법에 대한 자세한 내용은 [방법: PHP 데이터 형식 지정](../../connect/php/how-to-specify-php-data-types.md)을 참조하세요.  
+다음 표에서는 SQL Server 데이터 형식(서버에서 검색 중인 데이터 형식), 기본 PHP 데이터 형식(데이터를 변환할 대상 데이터 형식) 및 스트림과 문자열에 대한 기본 인코딩을 보여 줍니다. 서버에서 데이터를 검색할 때 데이터 형식을 지정하는 방법에 대한 자세한 내용은 [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md)을 참조하세요.  
   
 |SQL Server 형식|기본 PHP 형식|기본 인코딩|  
 |-------------------|--------------------|--------------------|  
@@ -97,13 +98,13 @@ SQL Server 2008에 새로 추가되었지만 열에 포함되지 않은 데이�
   
 |기능|PHP 지원|  
 |-----------|---------------|  
-|테이블 반환 매개 변수|예|  
-|스파스 열|부분|  
+|테이블 반환 매개 변수|아니요|  
+|스파스 열|Partial|  
 |Null 비트 압축|예|  
 |큰 CLR UDT(사용자 정의 형식)|예|  
-|서비스 사용자 이름|예|  
+|서비스 사용자 이름|아니요|  
 |MERGE|예|  
-|FILESTREAM|부분|  
+|FILESTREAM|Partial|  
   
 부분 형식 지원이란 열 형식에 대해 프로그래밍 방식으로 쿼리할 수 없다는 의미입니다.  
   

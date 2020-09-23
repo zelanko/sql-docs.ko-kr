@@ -1,4 +1,5 @@
 ---
+description: GenerateDatabaseRightsScript 메서드(WMI MSReportServer_ConfigurationSetting)
 title: GenerateDatabaseRightsScript 메서드(WMI MSReportServer_ConfigurationSetting) | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f2e6dcc9-978f-4c2c-bafe-36c330247fd0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8714aee2b5bb33c84a1d9f11b626d3e21e06ed1f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3a54cd6367cea9caf2f72ec7412d15e878233a51
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570965"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423267"
 ---
 # <a name="configurationsetting-method---generatedatabaserightsscript"></a>ConfigurationSetting 메서드 - GenerateDatabaseRightsScript
   보고서 서버 데이터베이스와 보고서 서버 실행에 필요한 기타 데이터베이스에 사용자 권한을 부여하는 데 사용할 수 있는 SQL 스크립트를 생성합니다. 호출자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 서버에 연결하여 해당 스크립트를 실행합니다.  

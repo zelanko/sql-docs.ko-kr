@@ -1,6 +1,6 @@
 ---
 title: 방법 도움말 항목(OLE DB 드라이버)
-description: OLE DB 방법 도움말 항목
+description: 이러한 방법 문서를 사용하여 OLE DB Driver for SQL Server가 서버에 연결하고, 명령을 실행하고, 결과를 처리하는 방법을 이해할 수 있습니다.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -10,14 +10,14 @@ ms.technology: connectivity
 ms.topic: reference
 helpviewer_keywords:
 - OLE DB, how-to topics
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: c8491c084e166b48e9436838879fd66386b9da38
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ca01ad2797e0f39c1195416c21a1bb030f6d0576
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244741"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88860328"
 ---
 # <a name="ole-db-how-to-topics"></a>OLE DB 방법 도움말 항목
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

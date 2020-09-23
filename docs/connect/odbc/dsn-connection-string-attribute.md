@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.reviewer: v-chojas
 ms.author: v-jizho2
 author: karinazhou
-ms.openlocfilehash: bf0c3d880b9ebd13106be4247d42afd9d9316da9
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.openlocfilehash: 61b3e618b413ddb1a8b52f7fb377148b282fcb66
+ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81528985"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87878418"
 ---
 # <a name="dsn-and-connection-string-keywords-and-attributes"></a>DSN 및 연결 문자열 키워드 및 특성
 
@@ -97,6 +97,7 @@ ms.locfileid: "81528985"
 | | [SQL_ATTR_TXN_ISOLATION](../../odbc/reference/syntax/sqlsetconnectattr-function.md) <br> (SQL_TXN_ISOLATION) | LMW |
 | | [SQL_COPT_SS_ACCESS_TOKEN](dsn-connection-string-attribute.md#sql_copt_ss_access_token) | LMW |
 | | [SQL_COPT_SS_ANSI_OEM](dsn-connection-string-attribute.md#sql_copt_ss_ansi_oem)| W |
+| | [SQL_COPT_SS_AUTOBEGINTXN](dsn-connection-string-attribute.md#sql_copt_ss_autobegintxn)| LMW |
 | | [SQL_COPT_SS_BCP](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssbcp) | LMW |
 | | [SQL_COPT_SS_BROWSE_CACHE_DATA](../../relational-databases/native-client-odbc-api/sqlbrowseconnect.md) | LMW |
 | | [SQL_COPT_SS_BROWSE_CONNECT](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssbrowseconnect) | LMW |
@@ -137,6 +138,15 @@ ANSI에서 OEM으로 데이터 변환을 제어합니다.
 | SQL_AO_OFF | (기본값) 변환이 수행되지 않습니다. |
 | SQL_AO_ON | 변환이 수행됩니다. |
 
+### <a name="sql_copt_ss_autobegintxn"></a>SQL_COPT_SS_AUTOBEGINTXN
+
+버전 17.6+ 자동 커밋이 해제된 상태에서 ROLLBACK 또는 COMMIT 후 자동 BEGIN TRANSACTION을 제어합니다.
+
+| 특성 값 | Description |
+|-|-|
+| SQL_AUTOBEGINTXN_ON | (기본값) ROLLBACK 또는 COMMIT 후 자동 BEGIN TRANSACTION을 수행합니다. |
+| SQL_AUTOBEGINTXN_OFF | ROLLBACK 또는 COMMIT 후 자동 BEGIN TRANSACTION이 적용되지 않습니다. |
+
 ### <a name="sql_copt_ss_fallback_connect"></a>SQL_COPT_SS_FALLBACK_CONNECT
 
 SQL Server 대체 연결의 사용을 제어합니다. 이 값은 더 이상 지원되지 않습니다.
@@ -161,7 +171,7 @@ SQL Server에 연결할 때 사용할 인증 모드를 설정합니다. 자세�
 |ActiveDirectoryIntegrated|SQL_AU_AD_INTEGRATED|Azure Active Directory 통합 인증|
 |ActiveDirectoryPassword|SQL_AU_AD_PASSWORD|Azure Active Directory 암호 인증|
 |ActiveDirectoryInteractive|SQL_AU_AD_INTERACTIVE|Azure Active Directory 대화형 인증|
-|ActiveDirectoryMsi|SQL_AU_AD_MSI|Azure Active Directory 관리 서비스 ID 인증입니다. 사용자 할당 ID의 경우 UID를 사용자 ID의 개체 ID로 설정합니다. |
+|ActiveDirectoryMsi|SQL_AU_AD_MSI|Azure Active Directory 관리 ID 인증 사용자 할당 ID의 경우 UID를 사용자 ID의 개체 ID로 설정합니다. |
 | |SQL_AU_RESET|설정하지 않습니다. DSN 또는 연결 문자열 설정을 재정의합니다.|
 
 > [!NOTE]

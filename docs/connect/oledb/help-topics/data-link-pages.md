@@ -1,6 +1,6 @@
 ---
 title: UDL(유니버설 데이터 링크) 구성 | Microsoft Docs
-description: Microsoft OLE DB Driver for SQL Server를 사용하는 UDL(Universal Data Link) 구성
+description: 연결 탭에서 OLE DB Driver for SQL Server를 사용하여 데이터에 연결하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 10/11/2019
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 ms.author: v-beaziz
 author: bazizi
-ms.openlocfilehash: c83def9454ab3477e1c08102bb0b7ac66d7e2f65
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: d23957c6f735ce7a69830eaf53d6aff113c9b720
+ms.sourcegitcommit: e4c36570c34cd7d7ae258061351bce6e54ea49f6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85986724"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88147574"
 ---
 # <a name="universal-data-link-udl-configuration"></a>UDL(유니버설 데이터 링크) 구성
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

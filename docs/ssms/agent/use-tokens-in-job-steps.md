@@ -1,4 +1,5 @@
 ---
+description: 작업 단계에서 토큰 사용
 title: 작업 단계에서 토큰 사용
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -17,18 +18,18 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6980c7914a10498d2f1d5cc08d60d63d9dd1f0ac
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 933848c0d0056a67a561a6468db8f10c2bd8c478
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895206"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88317639"
 ---
 # <a name="use-tokens-in-job-steps"></a>작업 단계에서 토큰 사용
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> 현재 [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)에서 일부 SQL Server 에이전트 기능이 지원됩니다. 자세한 내용은 [SQL Server에서 Azure SQL Database Managed Instance T-SQL 차이점](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)을 참조하세요.
+> 현재 [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)에서는 SQL Server 에이전트 기능이 대부분 지원됩니다. 자세한 내용은 [SQL Server와 Azure SQL Managed Instance 간의 T-SQL 차이점](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)을 참조하세요.
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트를 사용하면 [!INCLUDE[tsql](../../includes/tsql-md.md)] 작업 단계 스크립트에 토큰을 사용할 수 있습니다. 작업 단계를 작성할 때 토큰을 사용하면 소프트웨어 프로그램 작성 시 변수를 사용하는 것과 같은 유연성이 있습니다. 작업 단계 스크립트에 토큰을 삽입하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 하위 시스템에서 해당 작업 단계를 실행하기 전에 [!INCLUDE[tsql](../../includes/tsql-md.md)] 에이전트가 런타임 시 토큰을 바꿉니다.  
   
@@ -36,7 +37,7 @@ ms.locfileid: "85895206"
 ## <a name="understanding-using-tokens"></a>토큰 사용 이해  
   
 > [!IMPORTANT]  
-> Windows 이벤트 로그에 대한 쓰기 권한이 있는 모든 Windows 사용자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 경고 또는 WMI 경고로 활성화되는 작업 단계에 액세스할 수 있습니다. 이러한 보안상 위험을 방지하기 위해 경고로 활성화되는 작업에 사용할 수 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 토큰은 기본적으로 해제됩니다. 이러한 토큰에는 **A-DBN**, **A-SVR**, **A-ERR**, **A-SEV**, **A-MSG**및 **WMI(** _property_ **)** 가 있습니다. 이번 릴리스에서는 모든 경고에 토큰을 사용할 수 있습니다.  
+> Windows 이벤트 로그에 대한 쓰기 권한이 있는 모든 Windows 사용자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 경고 또는 WMI 경고로 활성화되는 작업 단계에 액세스할 수 있습니다. 이러한 보안상 위험을 방지하기 위해 경고로 활성화되는 작업에 사용할 수 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 토큰은 기본적으로 해제됩니다. 이러한 토큰은 다음과 같습니다. **A-DBN**, **A-SVR**, **A-ERR**, **A-SEV**, **A-MSG**. 및 **WMI(** _property_ **)** 가 있습니다. 이번 릴리스에서는 모든 경고에 토큰을 사용할 수 있습니다.  
 >   
 > 이러한 토큰을 사용해야 하는 경우 먼저 Administrators 그룹과 같은 트러스트된 Windows 보안 그룹의 멤버만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 설치된 컴퓨터의 이벤트 로그에 대한 쓰기 권한이 있는지 확인합니다. 그런 다음 개체 탐색기에서 **SQL Server 에이전트** 를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 선택하고 **경고 시스템** 페이지에서 **경고에 대한 모든 응답 작업에 대해 토큰 바꾸기** 를 선택하여 이러한 토큰을 설정합니다.  
   
@@ -61,7 +62,7 @@ ms.locfileid: "85895206"
   
 ### <a name="sql-server-agent-tokens"></a>SQL Server 에이전트 토큰  
   
-|토큰|Description|  
+|토큰|설명|  
 |---------|---------------|  
 |**(A-DBN)**|데이터베이스 이름 작업이 경고로 실행되면 이 토큰은 작업 단계에서 자동으로 데이터베이스 이름 값으로 대체됩니다.|  
 |**(A-SVR)**|서버 이름입니다. 작업이 경고로 실행되면 이 토큰은 작업 단계에서 자동으로 서버 이름 값으로 대체됩니다.|  
@@ -88,7 +89,7 @@ ms.locfileid: "85895206"
   
 ### <a name="sql-server-agent-escape-macros"></a>SQL Server 에이전트 이스케이프 매크로  
   
-|이스케이프 매크로|Description|  
+|이스케이프 매크로|설명|  
 |-----------------|---------------|  
 |**$(ESCAPE_SQUOTE(** _token\_name_ **))**|토큰 교체 문자열에서 작은따옴표(')를 이스케이프합니다. 작은따옴표 하나를 작은따옴표 두 개로 바꿉니다.|  
 |**$(ESCAPE_DQUOTE(** _token\_name_ **))**|토큰 교체 문자열에서 큰따옴표(")를 이스케이프합니다. 큰따옴표 하나를 큰따옴표 두 개로 바꿉니다.|  

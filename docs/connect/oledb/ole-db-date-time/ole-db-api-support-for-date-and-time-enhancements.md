@@ -1,6 +1,6 @@
 ---
 title: 날짜 및 시간 기능 향상을 위한 API 지원(OLE DB 드라이버)
-description: 날짜 및 시간 기능 향상을 위한 OLE DB API 지원
+description: 함수 이름 및 설명을 포함하여 향상된 날짜/시간 기능을 지원하는 OLE DB API에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -8,14 +8,14 @@ ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: reference
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 3003ed2de3b3c732ac9ef57e21ed5d6cf9415ec7
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 8209c1b1ca6f3c00ce4cd10455c35c8b9d4dfad4
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244894"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88862357"
 ---
 # <a name="ole-db-api-support-for-date-and-time-enhancements"></a>날짜 및 시간 기능 향상을 위한 OLE DB API 지원
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

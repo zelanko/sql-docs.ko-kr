@@ -1,6 +1,6 @@
 ---
 title: 행 집합 및 SQL Server 커서(OLE DB 드라이버)
-description: 행 집합 및 SQL Server 커서
+description: OLE DB Driver for SQL Server에서 SQL Server가 결과 집합을 소비자에게 반환하는 방법 및 기본 결과 집합과 서버 커서의 차이점에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - rowsets [OLE DB], cursors
 - properties [OLE DB]
 - cursors [OLE DB]
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 4c87699f389d487354b562fafa8cfab378c2ff0d
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: fbcac0300b3abe337e39bccb84a78f74e0de61bb
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244158"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88859975"
 ---
 # <a name="rowsets-and-sql-server-cursors"></a>행 집합 및 SQL Server 커서
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

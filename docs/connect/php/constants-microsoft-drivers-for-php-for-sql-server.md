@@ -1,5 +1,6 @@
 ---
-title: 상수(Microsoft Drivers for PHP for SQL Server) | Microsoft Docs
+title: 상수(Microsoft Drivers for PHP for SQL Server)
+description: Microsoft SQLSRV 및 PDO_SQLSRV Drivers for PHP for SQL Server에 정의된 상수에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 02/11/2019
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9727c944-b645-48d6-9012-18dbde35ee3c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c54021d6165d0fbf221c7af1c4f10235efb55820
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 771a14e8705af72f57571503c2dba9012c2e9879
+ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928073"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87435256"
 ---
 # <a name="constants-microsoft-drivers-for-php-for-sql-server"></a>상수(Microsoft Drivers for PHP for SQL Server)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -49,14 +50,14 @@ PDO::SQLSRV_ATTR_ENCODING 특성은 [PDOStatement::setAttribute](../../connect/p
   
 PDO::SQLSRV_ATTR_ENCODING에 전달할 수 있는 값은 다음과 같습니다.  
   
-|PDO_SQLSRV 드라이버 상수|Description|  
+|PDO_SQLSRV 드라이버 상수|설명|  
 |-------------------------------|---------------|  
 |PDO::SQLSRV_ENCODING_BINARY|데이터는 인코딩 또는 변환을 수행하지 않고 서버에서 반환되는 원시 바이트 스트림입니다.<br /><br />PDO::setAttribute에 유효하지 않습니다.|  
 |PDO::SQLSRV_ENCODING_SYSTEM|데이터는 시스템에 설정된 Windows 로캘의 코드 페이지에 지정된 8비트 문자입니다. 모든 멀티바이트 문자 또는 이 코드 페이지에 매핑되지 않는 문자는 싱글바이트 물음표(?) 문자로 대체됩니다.|  
 |PDO::SQLSRV_ENCODING_UTF8|데이터는 UTF-8 인코딩 형식입니다. 이는 기본 인코딩입니다.|  
 |PDO::SQLSRV_ENCODING_DEFAULT|연결하는 동안 지정된 경우 PDO::SQLSRV_ENCODING_SYSTEM을 사용합니다.<br /><br />prepare 문에 지정된 경우 연결의 인코딩을 사용합니다.|  
   
-### <a name="query-timeout"></a>쿼리 제한 시간  
+### <a name="query-timeout"></a>쿼리 시간 제한  
 PDO::SQLSRV_ATTR_QUERY_TIMEOUT 특성은 시간 제한 기간(초)을 나타내는 음수가 아닌 정수입니다. 0이 기본값이며 시간 제한이 없다는 것입니다.  
   
 [PDOStatement::setAttribute](../../connect/php/pdostatement-setattribute.md), [PDO::setAttribute](../../connect/php/pdo-setattribute.md) 및 [PDO::prepare](../../connect/php/pdo-prepare.md)를 사용하여 PDO::SQLSRV_ATTR_QUERY_TIMEOUT 특성을 지정할 수 있습니다.  
@@ -79,19 +80,19 @@ PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE는 날짜 및 시간 형식을 [PHP DateT
 ### <a name="err-constants"></a>ERR 상수  
 다음 표는 [sqlsrv_errors](../../connect/php/sqlsrv-errors.md)가 오류, 경고 또는 둘 다 반환하는지 여부를 지정하는 데 사용되는 상수를 나열합니다.  
   
-|값|Description|  
+|값|설명|  
 |---------|---------------|  
-|SQLSRV_ERR_ALL|마지막 **sqlsrv** 함수 호출 시 생성된 오류 및 경고가 반환됩니다. 이것은 기본값입니다.|  
+|SQLSRV_ERR_ALL|마지막 **sqlsrv** 함수 호출 시 생성된 오류 및 경고가 반환됩니다. 기본값입니다.|  
 |SQLSRV_ERR_ERRORS|마지막 **sqlsrv** 함수 호출 시 생성된 오류가 반환됩니다.|  
 |SQLSRV_ERR_WARNINGS|마지막 **sqlsrv** 함수 호출 시 생성된 경고가 반환됩니다.|  
   
 ### <a name="fetch-constants"></a>FETCH 상수  
 다음 표는 [sqlsrv_fetch_array](../../connect/php/sqlsrv-fetch-array.md)에서 반환된 배열 유형을 지정하는 데 사용되는 상수를 나열합니다.  
   
-|SQLSRV 상수|Description|  
+|SQLSRV 상수|설명|  
 |-------------------|---------------|  
 |SQLSRV_FETCH_ASSOC|**sqlsrv_fetch_array** 는 데이터의 다음 행을 결합형 배열로 반환합니다.|  
-|SQLSRV_FETCH_BOTH|**sqlsrv_fetch_array** 는 데이터의 다음 행을 숫자와 결합형 키를 모두 가진 배열로 반환합니다. 이것은 기본값입니다.|  
+|SQLSRV_FETCH_BOTH|**sqlsrv_fetch_array** 는 데이터의 다음 행을 숫자와 결합형 키를 모두 가진 배열로 반환합니다. 기본값입니다.|  
 |SQLSRV_FETCH_NUMERIC|**sqlsrv_fetch_array** 는 데이터의 다음 행을 숫자로 인덱싱된 배열로 반환합니다.|  
   
 ### <a name="logging-constants"></a>로깅 상수  
@@ -99,7 +100,7 @@ PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE는 날짜 및 시간 형식을 [PHP DateT
   
 다음 표는 **LogSubsystems** 설정에 대한 값으로 사용할 수 있는 상수를 나열합니다.  
   
-|SQLSRV 상수(괄호 안의 정수)|Description|  
+|SQLSRV 상수(괄호 안의 정수)|설명|  
 |----------------------------------------------------------|---------------|  
 |SQLSRV_LOG_SYSTEM_ALL(-1)|모든 하위 시스템의 로깅을 설정합니다.|  
 |SQLSRV_LOG_SYSTEM_CONN(2)|연결 작업의 로깅을 설정합니다.|  
@@ -110,7 +111,7 @@ PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE는 날짜 및 시간 형식을 [PHP DateT
   
 다음 표는 **LogSeverity** 설정에 대한 값으로 사용할 수 있는 상수를 나열합니다.  
   
-|SQLSRV 상수(괄호 안의 정수)|Description|  
+|SQLSRV 상수(괄호 안의 정수)|설명|  
 |----------------------------------------------------------|---------------|  
 |SQLSRV_LOG_SEVERITY_ALL(-1)|오류, 경고 및 알림이 기록된다는 것을 지정합니다.|  
 |SQLSRV_LOG_SEVERITY_ERROR(1)|오류가 기록된다는 것을 지정합니다.|  
@@ -120,7 +121,7 @@ PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE는 날짜 및 시간 형식을 [PHP DateT
 ### <a name="nullable-constants"></a>Null을 허용하는 상수  
 다음 표는 열이 Null을 허용하는지 여부 또는 이 정보를 사용할 수 있는지 여부를 확인하는 데 사용할 수 있는 상수를 나열합니다. 열의 null 허용 상태를 확인하려면 **sqlsrv_field_metadata** 에서 반환되는 [Nullable](../../connect/php/sqlsrv-field-metadata.md) 키의 값을 비교하면 됩니다.  
   
-|SQLSRV 상수(괄호 안의 정수)|Description|  
+|SQLSRV 상수(괄호 안의 정수)|설명|  
 |----------------------------------------------------------|---------------|  
 |SQLSRV_NULLABLE_YES(0)|열이 Null을 허용합니다.|  
 |SQLSRV_NULLABLE_NO(1)|열이 Null을 허용하지 않습니다.|  
@@ -129,7 +130,7 @@ PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE는 날짜 및 시간 형식을 [PHP DateT
 ### <a name="param-constants"></a>PARAM 상수  
 다음 목록에는 [sqlsrv_query](../../connect/php/sqlsrv-query.md) 또는 [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md)를 호출할 때 매개 변수 방향을 지정하기 위한 상수가 들어 있습니다.  
   
-|SQLSRV 상수|Description|  
+|SQLSRV 상수|설명|  
 |-------------------|---------------|  
 |SQLSRV_PARAM_IN|입력 매개 변수를 나타냅니다.|  
 |SQLSRV_PARAM_INOUT|양방향 매개 변수를 나타냅니다.|  
@@ -143,12 +144,12 @@ PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE는 날짜 및 시간 형식을 [PHP DateT
 |SQLSRV_PHPTYPE_INT|정수|  
 |SQLSRV_PHPTYPE_DATETIME|DateTime|  
 |SQLSRV_PHPTYPE_FLOAT|Float|  
-|SQLSRV_PHPTYPE_STREAM($encoding<sup>1</sup>)|STREAM|  
+|SQLSRV_PHPTYPE_STREAM($encoding<sup>1</sup>)|스트림|  
 |SQLSRV_PHPTYPE_STRING($encoding<sup>1</sup>)|String|  
   
 1. **SQLSRV_PHPTYPE_STREAM** 및 **SQLSRV_PHPTYPE_STRING**은 스트림 인코딩을 지정하는 매개 변수를 수락합니다. 다음 표에는 허용 가능한 매개 변수인 SQLSRV 상수 및 해당 인코딩에 대한 설명이 있습니다.  
   
-|SQLSRV 상수|Description|  
+|SQLSRV 상수|설명|  
 |-------------------|---------------|  
 |SQLSRV_ENC_BINARY|데이터는 인코딩 또는 변환을 수행하지 않은 원시 바이트 스트림으로 서버에서 반환됩니다.|  
 |SQLSRV_ENC_CHAR|데이터는 시스템에 설정된 Windows 로캘의 코드 페이지에 지정된 8비트 문자로 반환됩니다. 모든 멀티바이트 문자 또는 이 코드 페이지에 매핑되지 않는 문자는 싱글바이트 물음표(?) 문자로 대체됩니다.<br /><br />이는 기본 인코딩입니다.|  
@@ -223,7 +224,7 @@ PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE는 날짜 및 시간 형식을 [PHP DateT
 |SQLSRV_SQLTYPE_CHAR,<br /><br />SQLSRV_SQLTYPE_VARCHAR|charCount|1 - 8000|  
 |SQLSRV_SQLTYPE_NCHAR,<br /><br />SQLSRV_SQLTYPE_NVARCHAR|charCount|1 - 4000|  
 |SQLSRV_SQLTYPE_BINARY,<br /><br />SQLSRV_SQLTYPE_VARBINARY|byteCount|1 - 8000|  
-|SQLSRV_SQLTYPE_DECIMAL,<br /><br />SQLSRV_SQLTYPE_NUMERIC|자릿수|1 - 38|  
+|SQLSRV_SQLTYPE_DECIMAL,<br /><br />SQLSRV_SQLTYPE_NUMERIC|정밀도|1 - 38|  
 |SQLSRV_SQLTYPE_DECIMAL,<br /><br />SQLSRV_SQLTYPE_NUMERIC|소수 자릿수|1 - 전체 자릿수|  
   
 ### <a name="transaction-isolation-level-constants"></a>트랜잭션 격리 수준 상수  

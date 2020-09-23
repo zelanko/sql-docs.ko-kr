@@ -1,6 +1,6 @@
 ---
 title: 'R 자습서: SQL에서 모델 개발'
-description: 데이터베이스 내 분석을 위한 엔드투엔드 R 솔루션을 만드는 방법을 보여 주는 자습서입니다.
+description: SQL Server 2016 또는 SQL Server 2017에서 R 기능 지원을 기준으로 예측 모델링을 수행하기 위한 엔드투엔드 솔루션을 빌드하는 방법을 알아봅니다.
 ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 10/11/2019
@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 24f83b1bae1a550a56c64ffdd8ebc069bbc4d9f9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: cc423acd1e8c703b5890984df556b65f46cf5d4a
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85781797"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179772"
 ---
 # <a name="tutorial-sql-development-for-r-data-scientists"></a>자습서: R 데이터 과학자를 위한 SQL 개발
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016](../../includes/applies-to-version/sqlserver2016.md)]
 
 데이터 과학자를 위한 이 자습서에서는 SQL Server 2016 또는 SQL Server 2017에서 R 기능 지원을 기준으로 예측 모델링을 수행하기 위한 엔드투엔드 솔루션을 빌드하는 방법을 알아봅니다. 이 자습서에서는 SQL Server에서 [NYCTaxi_sample](demo-data-nyctaxi-in-sql.md) 데이터베이스를 사용합니다. 
 

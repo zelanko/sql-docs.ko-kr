@@ -1,6 +1,6 @@
 ---
-title: SQL Server 오류 세부 정보 | Microsoft Docs
-description: SQL Server 오류 세부 정보
+title: SQL Server 오류 정보(OLE DB 드라이버)
+description: SQL Server 오류에 대한 세부 정보를 반환하는 OLE DB Driver for SQL Server의 공급자별 오류 인터페이스 ISQLServerErrorInfo에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -15,21 +15,21 @@ helpviewer_keywords:
 - IErrorInfo interface
 - OLE DB error handling, error details
 - ISQLServerErrorInfo interface
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 6488a8f266a9d72f4f7522a2428a9a38c2027f42
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: f532b124fa23a65a71480b4bcb1bf31272a3081e
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85998294"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88862227"
 ---
 # <a name="sql-server-error-detail"></a>SQL Server 오류 세부 정보
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  OLE DB Driver for SQL Server는 공급자 관련 오류 인터페이스인 [ISQLServerErrorInfo](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1)를 정의합니다. 이 인터페이스는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 오류에 대한 세부 정보를 반환하며 명령 실행이나 행 집합 작업이 실패할 경우에 유용합니다.  
+  OLE DB Driver for SQL Server는 공급자 관련 오류 인터페이스인 [ISQLServerErrorInfo](https://docs.microsoft.com/sql/connect/oledb/ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db?view=sql-server-ver15)를 정의합니다. 이 인터페이스는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 오류에 대한 세부 정보를 반환하며 명령 실행이나 행 집합 작업이 실패할 경우에 유용합니다.  
   
  **ISQLServerErrorInfo** 인터페이스에 액세스하는 두 가지 방법이 있습니다.  
   

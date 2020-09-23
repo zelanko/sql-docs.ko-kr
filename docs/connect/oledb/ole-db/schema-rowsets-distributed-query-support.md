@@ -1,6 +1,6 @@
 ---
 title: 스키마 행 집합에서 분산 쿼리 지원 | Microsoft Docs
-description: 스키마 행 집합에서 분산 쿼리 지원
+description: OLE DB Driver for SQL Server IDBSchemaRowset 인터페이스는 SQL Server 분산 쿼리를 지원하기 위해 연결된 서버에 대한 메타데이터를 반환합니다.
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - OLE DB, schema rowsets
 - OLE DB rowsets, schema
 - rowsets [OLE DB], schema
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 9c1207278d194df83a69109b14768eb3b99a719e
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 61105b2e974cd111cd4f5dfd10e7f528cd04519a
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012796"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88861561"
 ---
 # <a name="schema-rowsets---distributed-query-support"></a>스키마 행 집합 - 분산 쿼리 지원
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

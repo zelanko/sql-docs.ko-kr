@@ -1,6 +1,6 @@
 ---
 title: 저장 프로시저 실행(OLE DB) | Microsoft Docs
-description: 저장 프로시저 실행(OLE DB)
+description: 데이터 원본에서 저장 프로시저를 호출하는 이점 및 OLE DB Driver for SQL Server가 제공하는 데이터 반환 메커니즘에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - stored procedures [OLE DB], executing
 - OLE DB, stored procedures
 - OLE DB Driver for SQL Server, stored procedures
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 47b47bade745c8113423678a818a513f962d1cb0
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 244a5719285589b182b14e5214fd0b27050db2a0
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012744"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88858832"
 ---
 # <a name="stored-procedures---running"></a>저장 프로시저 - 실행
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

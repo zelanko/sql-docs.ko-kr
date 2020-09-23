@@ -1,6 +1,6 @@
 ---
 title: SQL Server용 OLE DB 드라이버의 시스템 요구 사항
-description: OLE DB Driver for SQL Server의 시스템 요구 사항을 나열합니다.
+description: OLE DB Driver for SQL Server의 MARS와 같이 SQL Server의 데이터 액세스 기능을 사용하는 데 필요한 소프트웨어 필수 구성 요소에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 03/18/2020
 ms.prod: sql
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - data access [OLE DB Driver for SQL Server], system requirements
 - OLE DB Driver for SQL Server, system requirements
 - MSOLEDBSQL, system requirements
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 9c9bbda0480d4d1e85da3962392fe14a241e4840
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c86f62f98e81ce3c4fdd86e1e79e8f73e1422851
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86393021"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88861814"
 ---
 # <a name="system-requirements-for-ole-db-driver-for-sql-server"></a>SQL Server용 OLE DB 드라이버의 시스템 요구 사항
 

@@ -1,22 +1,22 @@
 ---
-title: '방법: PDO_SQLSRV 드라이버를 사용하여 날짜 및 시간 형식을 PHP DateTime 개체로 검색| Microsoft Docs'
+title: '방법: PDO_SQLSRV 드라이버를 사용하여 날짜 및 시간 형식을 PHP 날짜/시간 개체로 검색'
+description: 이 항목에서는 Microsoft PDO_SQLSRV Driver for PHP를 사용할 때 날짜 및 시간 형식을 PHP 날짜/시간 개체로 검색하는 방법을 설명합니다.
 ms.custom: ''
-ms.date: 02/11/2019
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
 - date and time types, retrieving as datetime objects
-author: yitam
-ms.author: v-yitam
-manager: v-mabarw
-ms.openlocfilehash: 165e91cee3b0b4592f9b746f8b35b46bc73bce50
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 507dc2a228419fb695d10a437681229ec6586f11
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68264575"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680758"
 ---
 # <a name="how-to-retrieve-date-and-time-types-as-php-datetime-objects-using-the-pdo_sqlsrv-driver"></a>방법: PDO_SQLSRV 드라이버를 사용하여 날짜 및 시간 형식을 PHP DateTime 개체로 검색
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

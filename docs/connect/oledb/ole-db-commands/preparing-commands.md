@@ -1,6 +1,6 @@
 ---
 title: 명령 준비(OLE DB 드라이버)
-description: OLE DB Driver for SQL Server를 사용하여 명령 준비
+description: 여러 번 실행되는 단일 명령의 경우 OLE DB Driver for SQL Server에서 명령 준비를 지원하여 성능을 향상시킵니다.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - prepared statements [OLE DB Driver for SQL Server]
 - commands [OLE DB]
 - command preparation [OLE DB Driver for SQL Server]
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 285b6549f146e2a94e807481e93a97191398b8ed
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 5b2bb5f167361ad5fec4a5580c49378144cbbf26
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244973"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88862419"
 ---
 # <a name="preparing-commands"></a>명령 준비
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

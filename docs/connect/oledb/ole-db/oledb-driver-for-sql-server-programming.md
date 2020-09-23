@@ -1,6 +1,6 @@
 ---
-title: SQL Server 프로그래밍용 OLE DB 드라이버 | Microsoft Docs
-description: SQL Server 프로그래밍용 OLE DB 드라이버
+title: SQL Server 프로그래밍용 OLE DB 드라이버
+description: OLE DB Driver for SQL Server를 사용하여 애플리케이션이 데이터베이스에 연결할 수 있도록 OLE DB API를 구현하는 애플리케이션 프로그래밍에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - OLE DB
 - OLE DB Driver for SQL Server
 - OLE DB Driver for SQL Server, OLE DB
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: db35ada2ace8a5fedad05b56ce9784b51c239523
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 4e72dc1e1ea82df68d3dc766e460e7a433d78a43
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012852"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88861820"
 ---
 # <a name="ole-db-driver-for-sql-server-programming"></a>SQL Server 프로그래밍용 OLE DB 드라이버
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -1,6 +1,6 @@
 ---
-title: SQL Server 커서의 데이터 업데이트 | Microsoft Docs
-description: SQL Server 커서의 데이터 업데이트
+title: 커서 데이터 업데이트(OLE DB 드라이버)
+description: OLE DB Driver for SQL Server 소비자 애플리케이션이 SQL Server 커서를 사용하여 수정 가능한 행 집합에서 요청을 처리하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -15,21 +15,21 @@ helpviewer_keywords:
 - immediate update mode [OLE DB]
 - cursors [OLE DB]
 - data updates [SQL Server], OLE DB
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 7a1a476c9e8588cb5dc14ce7f24b335c0b433b68
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: eae7b9119803615a2d18fe4710ff1eda2b91ac5b
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999615"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88859922"
 ---
 # <a name="updating-data-in-sql-server-cursors"></a>SQL Server 커서의 데이터 업데이트
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 커서를 통해 데이터를 인출하고 업데이트할 때는 SQL Server용 OLE DB 드라이버 소비자 애플리케이션에 다른 모든 클라이언트 애플리케이션에 적용되는 것과 동일한 고려 사항 및 제약 조건이 적용됩니다.  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 커서를 통해 데이터를 페치하고 업데이트할 때는 OLE DB Driver for SQL Server 소비자 애플리케이션에 다른 모든 클라이언트 애플리케이션에 적용되는 것과 동일한 고려 사항 및 제약 조건이 적용됩니다.  
   
  동시 데이터 액세스 제어에는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 커서의 행만 참여합니다. 소비자가 수정이 가능한 행 집합을 요청하면 DBPROP_LOCKMODE에서 동시성 제어를 관리합니다. 소비자는 행 집합을 열기 전에 DBPROP_LOCKMODE 속성을 설정하여 동시 액세스 제어의 수준을 변경합니다.  
   

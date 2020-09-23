@@ -5,7 +5,7 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.technology: scripting
+ms.technology: sql-server-powershell
 ms.topic: conceptual
 helpviewer_keywords:
 - query expressions
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e0d30dbe-7daf-47eb-8412-1b96792b6fb9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 84c9067c00962878d058871151eb0e47d06294f2
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 26483454e805bf8dcaa780fed352cbe984c61f71
+ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921229"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88714121"
 ---
 # <a name="query-expressions-and-uniform-resource-names"></a>쿼리 식 및 URN
 
@@ -91,9 +91,9 @@ Object1[<FilterExpression1>]/ ... /ObjectN[<FilterExpressionN>]
  지정된 문자열 속성 값이 '*PatternString*'에 지정된 문자 패턴과 정확하게 같은 개체를 모두 열거합니다.  
   
  \@*DatePropertyName*= datetime('*DateString*')  
- 지정된 날짜 속성 값이 '*DateString*'에 지정된 날짜와 일치하는 개체를 모두 열거합니다. *DateString* 은 yyyy-mm-dd hh:mi:ss.mmm 형식을 따라야 합니다.  
+ 지정된 날짜 속성 값이 '*DateString*'에 지정된 날짜와 일치하는 개체를 모두 열거합니다. *DateString*은 yyyy-mm-dd hh:mi:ss.mmm 형식을 따라야 합니다.  
   
-|||  
+|DateString 구성 요소|설명|  
 |-|-|  
 |yyyy|4자리 연도|  
 |MM|두 자리 월(01 - 12)|  

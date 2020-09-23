@@ -1,5 +1,6 @@
 ---
-title: sqlsrv_prepare | Microsoft Docs
+title: sqlsrv_prepare
+description: Microsoft SQLSRV Driver for PHP for SQL Server의 sqlsrv_prepare 함수에 대한 API 참조입니다.
 ms.custom: ''
 ms.date: 04/11/2019
 ms.prod: sql
@@ -15,14 +16,14 @@ helpviewer_keywords:
 - API Reference, sqlsrv_prepare
 - sqlsrv_prepare
 ms.assetid: 8c74c697-3296-4f5d-8fb9-e361f53f19a6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b16e58b8535d91fd29281aa986ab5ba26875dc38
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 9e82a25d3386de2f86d7e43fe5bde13eb25c6416
+ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79286547"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87435126"
 ---
 # <a name="sqlsrv_prepare"></a>sqlsrv_prepare
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -41,7 +42,7 @@ sqlsrv_prepare(resource $conn, string $tsql [, array $params [, array $options]]
   
 *$tsql*: 만들어진 명령문에 해당하는 Transact-SQL 식입니다.  
   
-*$params* [선택 사항]: 매개 변수가 있는 쿼리의 매개 변수에 해당하는 값의 **배열**입니다. 배열의 각 요소는 다음 중 하나일 수 있습니다.
+*$params*[선택 사항]: 매개 변수가 있는 쿼리의 매개 변수에 해당하는 값의 **배열**입니다. 배열의 각 요소는 다음 중 하나일 수 있습니다.
   
 -   리터럴 값입니다.  
   
@@ -58,16 +59,16 @@ sqlsrv_prepare(resource $conn, string $tsql [, array $params [, array $options]]
   
     다음 표에서는 이러한 배열 요소를 설명합니다.  
   
-    |요소|Description|  
+    |요소|설명|  
     |-----------|---------------|  
     |*&$value*|PHP 변수에 대한 리터럴 값 또는 참조입니다.|  
-    |*$direction*[선택 사항]|매개 변수 방향을 나타내기 위해 사용되는 다음 **SQLSRV_PARAM_\*** 상수 중 하나입니다. **SQLSRV_PARAM_IN**, **SQLSRV_PARAM_OUT**, **SQLSRV_PARAM_INOUT**. 기본값은 **SQLSRV_PARAM_IN**입니다.<br /><br />PHP 상수에 대한 자세한 내용은 [상수&#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)를 참조하세요.|  
+    |*$direction*[선택 사항]|매개 변수 방향을 지정하는 데 사용되는 **SQLSRV_PARAM_\*** 상수(**SQLSRV_PARAM_IN**, **SQLSRV_PARAM_OUT**, **SQLSRV_PARAM_INOUT**) 중 하나입니다. 기본값은 **SQLSRV_PARAM_IN**입니다.<br /><br />PHP 상수에 대한 자세한 내용은 [상수&#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)를 참조하세요.|  
     |*$phpType*[선택 사항]|반환된 값의 PHP 데이터 형식을 지정하는 **SQLSRV_PHPTYPE_\*** 상수입니다.|  
     |*$sqlType*[선택 사항]|입력 값의 SQL Server 데이터 형식을 지정하는 **SQLSRV_SQLTYPE_\*** 상수입니다.|  
   
 *$options*[선택 사항]: <a name="properties">쿼리 속성</a>을 설정하는 결합형 배열입니다. 다음 표는 지원되는 키와 해당 값을 나열합니다.
 
-|키|지원되는 값|Description|  
+|Key|지원되는 값|설명|  
 |-------|--------------------|---------------|  
 |ClientBufferMaxKBSize|양의 정수|클라이언트 쪽 커서에 대한 결과 집합을 보유하는 버퍼의 크기를 구성합니다.<br /><br />기본값은 10240KB입니다. 자세한 내용은 [커서 유형 지정 및 행 선택](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md)을 참조하세요.|
 |DecimalPlaces|0과 4(포함) 사이의 정수|가져온 money 값의 서식을 지정할 때 소수 자릿수를 지정합니다.<br /><br />음의 정수 또는 4보다 큰 값은 무시됩니다.<br /><br />이 옵션은 FormatDecimals가 **true**인 경우에만 작동합니다.|
@@ -87,7 +88,7 @@ sqlsrv_prepare(resource $conn, string $tsql [, array $params [, array $options]]
   
 많은 양의 정보를 읽고 쓰기 위한 대체 전략은 [SQL 문 일괄 처리](../../odbc/reference/develop-app/batches-of-sql-statements.md) 및 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)를 참조하세요.  
   
-자세한 내용은 [방법: SQLSRV 드라이버를 사용하여 날짜 및 시간 형식을 문자열로 검색](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)을 참조하세요.  
+자세한 내용은 [방법: SQLSRV 드라이버를 사용하여 출력 매개 변수 검색](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)을 참조하세요.  
   
 ## <a name="example"></a>예제  
 다음 예제에서는 문을 준비하고 실행합니다. 명령문은 실행될 때([sqlsrv_execute 참조](../../connect/php/sqlsrv-execute.md)) AdventureWorks 데이터베이스의 *Sales.SalesOrderDetail* 테이블에 있는 필드를 업데이트합니다. 이 예제에서는 SQL Server 및 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 데이터베이스가 로컬 컴퓨터에 설치된 것으로 가정합니다. 모든 출력은 명령줄에서 예제가 실행될 때 콘솔에 기록됩니다.  

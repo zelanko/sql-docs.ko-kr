@@ -11,12 +11,12 @@ ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
 ms.date: 07/22/2020
-ms.openlocfilehash: 0a9b93190f0240c917c6331ae69d1e8461cb7ea2
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 7df66b1102a315dc80eac9ac989f3cb8067e3a27
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243789"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88180052"
 ---
 # <a name="release-notes-for-sql-server-management-studio-ssms"></a>SSMS(SQL Server Management Studio) 릴리스 정보
 
@@ -84,14 +84,15 @@ SSMS 18.6은 SSMS의 최신 GA(일반 공급) 릴리스입니다. 이전 버전�
 | 일반 SSMS | SSMS에서 일반적인 세 가지 중단 원인을 수정했습니다. |
 | 일반 SSMS | SSMS 연결 대화 상자가 항목(서버/사용자/암호)을 ‘잊어버리는’ 것과 관련된 몇 가지 문제를 해결했습니다. [SQL Server 사용자 피드백](https://feedback.azure.com/forums/908035/suggestions/40256401) 및 [SQL Server 사용자 피드백](https://feedback.azure.com/forums/908035/suggestions/40015519)을 참조하세요. |
 | 일반 SSMS | **통계 속성** 대화 상자에서 **이 열에 대한 통계 업데이트** 확인란을 선택하고 **확인**을 선택하면 아무런 변화가 없는 문제를 해결했습니다. 통계가 업데이트되지 않았고, 작업을 스크립팅하려고 시도하면 ‘스크립팅할 동작이 없습니다’ 메시지가 표시되었습니다. [SQL Server 사용자 피드백](https://feedback.azure.com/forums/908035/suggestions/37799992)을 참조하세요. |
+| 일반 SSMS | [CVE-2020-1455](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2020-1455)와 관련된 문제를 해결했습니다. | 
 | 데이터 계층 애플리케이션 가져오기/내보내기 | bacpac 파일을 가져올 때 SSMS에서 오류를 발생시키는 문제를 해결했습니다. [SQL Server 사용자 피드백](https://feedback.azure.com/forums/908035/suggestions/40229137)을 참조하세요. |
 | Integration Services | SSMS 18.4 또는 이전 버전을 사용하여 Azure SQL Managed Instance에서 SSIS 패키지를 실행할 때 고객이 SQL 에이전트 작업 단계를 편집할 수 없는 버그가 해결했습니다. |
 | Integration Services | **실행 옵션** 탭에 SQL 에이전트 작업 단계에서 온-프레미스 SQL Server에 대해 SSIS 패키지를 실행할 때 **32비트 런타임 사용** 옵션이 누락되는 버그가 해결했습니다. |
 | Intellisense/편집기 | 파일 -> 새로 만들기 -> 데이터베이스 엔진 쿼리를 수행할 때 오류 대화 상자가 팝업으로 표시되는 문제가 수정되었습니다. |
-| 개체 탐색기 | 개체 탐색기에서 테이블 또는 인덱스 노드를 마우스 오른쪽 단추로 클릭할 때 SQL Azure Database에 대한 ‘속성 창’이 표시되지 않는 문제를 해결했습니다. |
+| 개체 탐색기 | 개체 탐색기에서 테이블 또는 인덱스 노드를 마우스 오른쪽 단추로 클릭할 때 Azure SQL Database에 대한 속성 창이 표시되지 않는 문제를 해결했습니다. |
 | 개체 탐색기 | sys.database_service_objectives에 영향을 주는 컨트롤 플레인 중단이 있는 경우 SSMS가 Azure의 마스터에 대해 데이터베이스 노드를 확장하지 못하는 문제가 수정되었습니다. |
 | 보고서 | Linux에서 손상되었던 몇 가지 표준 보고서가 수정되었습니다. </br></br> 예제: “/var/opt/mssql/log/log_116.trc\log.trc' is invalid…”와 비슷한 오류와 함께 메모리 사용 보고서에서 실패가 발생했습니다). |
-| SMO/스크립팅 | Gen5_2를 기본 SLO로 사용하도록 새로운 SQL Azure Database를 만드는 로직이 업데이트되었습니다. |
+| SMO/스크립팅 | Azure SQL Database에서 새 데이터베이스를 만드는 논리를 기본 SLO로 Gen5_2를 사용하도록 업데이트했습니다. |
 | Xevent UI | SSMS 18.0에서 발생한 “XEL 파일에 저장...” 오류를 발생시키던 오래된 문제를 해결되었습니다. [SQL Server 사용자 피드백](https://feedback.azure.com/forums/908035/suggestions/37695592)을 참조하세요. |
 
 #### <a name="known-issues-186"></a>알려진 문제(18.6)
@@ -102,6 +103,7 @@ SSMS 18.6은 SSMS의 최신 GA(일반 공급) 릴리스입니다. 이전 버전�
 | 일반 SSMS | 새 서버 감사 사양 대화 상자에서 SSMS가 액세스 위반 오류로 인해 충돌을 일으킬 수 있습니다. | 해당 없음 |
 | 일반 SSMS | SMO를 사용하는 SSMS 확장을 새로운 SSMS용 v161 패키지를 대상으로 지정하여 다시 컴파일해야 합니다. https://www.nuget.org/packages/Microsoft.SqlServer.SqlManagementObjects.SSMS/ 에서 미리 보기 버전을 사용할 수 있습니다. </br></br> Microsoft.SqlServer.SqlManagementObjects 패키지의 이전 160개 버전에 대해 컴파일된 확장도 계속해서 작동합니다. | 해당 없음 |
 | Integration Services | Azure-SSIS Integration Runtime에서 패키지를 가져오거나 내보낼 때 Integration Services 스크립트 태스크/구성 요소가 포함된 패키지에 대한 스크립트가 손실됩니다. 해결 방법: “C:\Program Files (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\CommonExtensions\MSBuild” 폴더를 제거합니다. | 해당 없음|
+| Integration Services | 최신 운영 체제에서 Integration Services에 대한 원격 연결이 "지정된 서비스가 설치된 서비스로 존재하지 않습니다." 오류와 함께 실패할 수 있습니다. 해결 방법: Computer\HKEY_CLASSES_ROOT\AppID & Computer\HKEY_CLASSES_ROOT\ WOW6432Node\AppID에서 Integration Services 관련 레지스트리 위치를 확인하고, 이러한 하이브 내에서 연결하려는 특정 버전의 Integration Services에 대해 'LocalService'라는 레지스트리 키 이름을 'LocalService_A'로 바꿉니다. | 해당 없음|
 
 
 다른 알려진 문제를 확인하고 제품 팀에 피드백을 제공하려면 [SQL Server 사용자 피드백](https://feedback.azure.com/forums/908035-sql-server)을 참조하세요.
@@ -144,6 +146,7 @@ SSMS 18.6은 SSMS의 최신 GA(일반 공급) 릴리스입니다. 이전 버전�
 ### <a name="known-issues-1851"></a>알려진 문제 18.5.1
 
 | 새 항목 | 세부 정보 | 해결 방법 | |----------|---------||-----------| | 일반 SSMS | 다이어그램 디자인에 기존 다이어그램이 손상되도록 하는 알려진 버그가 있습니다. 예를 들어 SSMS 17.9.1을 사용하여 다이어그램 디자인을 만든 다음 SSMS 18.x를 사용하여 업데이트/저장한 후 나중에 17.9.1을 사용하여 엽니다. 자세한 내용은 [SQL Server 사용자 피드백](https://feedback.azure.com/forums/908035/suggestions/37992649)을 참조하세요. | N/A | | 일반 SSMS | 새 서버 감사 사양 대화 상자에서 SSMS가 액세스 위반 오류로 인해 충돌을 일으킬 수 있습니다. | N/A || | SMO/스크립팅 | SMO를 사용하는 SSMS 확장을 새로운 SMO v160을 대상으로 지정하여 다시 컴파일해야 합니다. | N/A | | Integration Services | Azure-SSIS Integration Runtime에서 패키지를 가져오거나 내보낼 때 Integration Services 스크립트 태스크/구성 요소가 포함된 패키지에 대한 스크립트가 손실됩니다. 해결 방법: | “C:\Program Files (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\CommonExtensions\MSBuild” 폴더를 제거합니다. |
+
 
 ### <a name="185"></a>18.5
 
@@ -227,7 +230,7 @@ SSMS 18.6은 SSMS의 최신 GA(일반 공급) 릴리스입니다. 이전 버전�
 | SMO/스크립팅 | SqlOnDemand에 대한 스크립팅을 수정하는 명시적인 sqlvariant 캐스트(SqlOnDemand에 대한 잘못된 T-SQL 구문)를 제거하는 중입니다. |
 | SMO/스크립팅 | SQL Azure 인덱스에 대한 FILLFACTOR를 건너뛰는 문제를 해결했습니다. |
 | SMO/스크립팅 | 외부 개체 스크립팅과 관련된 문제를 해결했습니다. |
-| SMO/스크립팅 | *스크립트 생성*이 SQL DB에 대해 확장 속성 스크립팅 옵션을 선택하는 것을 허용하지 않는 문제를 해결했습니다. 또한 이러한 확장 속성의 스크립팅도 수정했습니다. |
+| SMO/스크립팅 | 스크립트 생성이 SQL Database에 대해 확장 속성 스크립팅 옵션을 선택하는 것을 허용하지 않는 문제를 해결했습니다. 또한 이러한 확장 속성의 스크립팅도 수정했습니다. |
 | SMO/스크립팅 | [SQL 평가 API](../sql-assessment-api/sql-assessment-api-overview.md) - XTPHashAvgChainBuckets 규칙에서 도움말 링크가 잘못되었습니다. |
 | XEvent UI | 표에서 마우스로 가리키면 항목이 선택되는 문제를 수정했습니다. [SQL Server 사용자 피드백](https://feedback.azure.com/forums/908035/suggestions/38262124) 및 [SQL Server 사용자 피드백](https://feedback.azure.com/forums/908035-sql-server/suggestions/37873921)을 참조하세요. |
 
@@ -316,10 +319,10 @@ SSMS 18.6은 SSMS의 최신 GA(일반 공급) 릴리스입니다. 이전 버전�
 | Intellisense/편집기 | 최근 SQL Server 2019에 추가된 기능에 대한 지원이 업데이트되었습니다(예: *ALTER SERVER CONFIGURATION*). |
 | Integration Services | ADF 파이프라인에서 SSIS 패키지 실행 작업으로 Azure-SSIS Integration Runtime에서 SSIS 패키지 실행을 호출하는 새 선택 메뉴 항목 `Tools > Migrate to Azure > Configure Azure-enabled DTExec`가 추가되었습니다. |
 | SMO/스크립팅 | Azure SQL DW UNIQUE 제약 조건의 스크립팅 지원에 대한 지원이 추가되었습니다. |
-| SMO/스크립팅 | 데이터 분류 </br> - SQL 버전 10(SQL 2008) 이상에 대한 지원이 추가되었습니다. </br> - SQL 버전 15(SQL 2019) 이상 및 Azure SQL DB에 대한 새 민감도 특성 '순위'가 추가되었습니다. |
+| SMO/스크립팅 | 데이터 분류 </br> - SQL 버전 10(SQL 2008) 이상에 대한 지원이 추가되었습니다. </br> - SQL 버전 15(SQL 2019) 이상 및 Azure SQL Database에 대한 새 민감도 특성 '순위'를 추가했습니다. |
 | SMO/스크립팅 | [SQL 평가 API](../sql-assessment-api/sql-assessment-api-overview.md) - 규칙 집합 형식에 대한 버전 관리를 추가했습니다. |
 | SMO/스크립팅 | [SQL 평가 API](../sql-assessment-api/sql-assessment-api-overview.md) - 새로운 검사를 추가했습니다. |
-| SMO/스크립팅 | [SQL 평가 API](../sql-assessment-api/sql-assessment-api-overview.md) - Azure SQL Database Managed Instance에 대한 지원을 추가했습니다. |
+| SMO/스크립팅 | [SQL 평가 API](../sql-assessment-api/sql-assessment-api-overview.md) - Azure SQL Managed Instance에 대한 지원을 추가했습니다. |
 | SMO/스크립팅 | [SQL 평가 API](../sql-assessment-api/sql-assessment-api-overview.md) - 결과를 테이블로 표시하는 cmdlet의 기본 보기가 업데이트되었습니다. |
 
 #### <a name="bug-fixes-in-1831"></a>18.3.1의 버그 수정
@@ -342,7 +345,7 @@ SSMS 18.6은 SSMS의 최신 GA(일반 공급) 릴리스입니다. 이전 버전�
 | Integration Services | Azure 사용 `DTExec` 유틸리티에서 생성된 Azure Data Factory 파이프라인의 문제가 올바른 매개 변수 형식을 사용하도록 해결되었습니다. (18.3.1에서는 명시적) |
 | SMO/스크립팅 | **SMO.Server.SetDefaultInitFields(true)** 사용 중 속성을 가져올 때 SMO로 인해 에러가 발생하는 문제를 수정했습니다.|
 | 쿼리 저장소 UI | *실행 수* 메트릭이 *추적된 쿼리* 보기에서 선택되었을 때 Y축의 비율 크기가 조정되지 않는 문제를 수정했습니다. |
-| 취약성 평가 | Azure SQL DB에 대한 기준선을 지우고 승인하는 기능을 비활성화했습니다.|
+| 취약성 평가 | Azure SQL Database에 대한 기준선을 지우고 승인하는 기능을 비활성화했습니다.|
 
 #### <a name="known-issues-1831"></a>알려진 문제(18.3.1)
 
@@ -407,7 +410,7 @@ SSMS 18.6은 SSMS의 최신 GA(일반 공급) 릴리스입니다. 이전 버전�
 | SMO/스크립팅 | 수천 개의 테이블을 포함하는 데이터베이스에 대해 *스크립트 생성*을 실행하려고 하면 진행률 대화 상자가 중단된 것처럼 나타내는 문제를 해결했습니다. |
 | SMO/스크립팅 | SQL 2019에서 *외부 테이블* 스크립팅이 작동하지 않는 문제가 해결되었습니다. |
 | SMO/스크립팅 | SQL 2019에서 *외부 데이터 원본* 스크립팅이 작동하지 않는 문제가 해결되었습니다. 자세한 내용은 [SQL Server 사용자 피드백](https://feedback.azure.com/forums/908035/suggestions/34295080)을 참조하세요. |
-| SMO/스크립팅 | Azure SQL DB를 대상으로 할 때 열의 *확장 속성*이 스크립팅되지 않는 문제를 해결했습니다. 자세한 내용은 [stackoverflow](https://stackoverflow.com/questions/56952337/how-can-i-script-the-descriptions-of-columns-in-ms-sql-server-management-studio)를 참조하세요. |
+| SMO/스크립팅 | Azure SQL Database를 대상으로 할 때 열의 *확장 속성*이 스크립팅되지 않는 문제를 해결했습니다. 자세한 내용은 [stackoverflow](https://stackoverflow.com/questions/56952337/how-can-i-script-the-descriptions-of-columns-in-ms-sql-server-management-studio)를 참조하세요. |
 | SMO/스크립팅 | 마지막 페이지 삽입: SMO - 속성 *Index.IsOptimizedForSequentialKey* 추가 |
 |**SSMS 설치**| **SSMS 설치 프로그램이 언어 불일치를 보고하는 SSMS의 설치를 잘못 차단하는 문제를 완화했습니다. 이러한 특성은 중단된 설치 또는 이전 버전 SSMS의 잘못된 제거와 같은 일부 비정상적인 상황에서 문제가 될 수 있습니다. 자세한 내용은 [SQL Server 사용자 피드백](https://feedback.azure.com/forums/908035/suggestions/37483594/)을 참조하세요.** |
 | XEvent 프로파일러 | 뷰어를 닫을 때 발생하는 충돌이 해결되었습니다. |
@@ -440,7 +443,7 @@ SSMS 18.6은 SSMS의 최신 GA(일반 공급) 릴리스입니다. 이전 버전�
 | :-------| :------|
 | 데이터베이스 다이어그램 | [데이터베이스 다이어그램이 SSMS에 다시 추가됨](https://feedback.azure.com/forums/908035/suggestions/37507828).
 | SSBDIAGNOSE.EXE |SQL Server 진단 명령줄 도구가 SSMS 패키지에 다시 추가되었습니다.|
-| Integration Services(SSIS) | Azure의 SSIS 카탈로그 또는 Azure의 파일 시스템에 있는 SSIS 패키지 일정 예약이 지원됩니다. 새 일정 대화 상자를 실행할 수 있는 항목은 세 가지입니다. *새 일정…* 메뉴 항목은 Azure의 SSIS 카탈로그에서 SSIS 패키지를 마우스 오른쪽 단추로 클릭하면 나타납니다. *Schedule SSIS Package in Azure* 메뉴 항목은 *도구* 메뉴 항목 아래 *Azure로 마이그레이션* 메뉴 항목에 있습니다. "Schedule SSIS in Azure"는 Azure SQL Database Managed Instance의 SQL Server 에이전트 아래 있는 작업 폴더를 마우스 오른쪽 단추로 클릭하면 표시됩니다.|
+| Integration Services(SSIS) | Azure의 SSIS 카탈로그 또는 Azure의 파일 시스템에 있는 SSIS 패키지 일정 예약이 지원됩니다. 새 일정 대화 상자를 실행할 수 있는 항목은 세 가지입니다. *새 일정…* 메뉴 항목은 Azure의 SSIS 카탈로그에서 SSIS 패키지를 마우스 오른쪽 단추로 클릭하면 나타납니다. Azure에서 SSIS 패키지 예약 메뉴 항목은 도구 메뉴 항목 아래 Azure로 마이그레이션 메뉴 항목에 있습니다. "Schedule SSIS in Azure"는 Azure SQL Managed Instance의 SQL Server 에이전트 아래 있는 작업 폴더를 마우스 오른쪽 단추로 클릭하면 표시됩니다.|
 
 #### <a name="bug-fixes-in-181"></a>18.1의 버그 수정
 
@@ -557,8 +560,8 @@ SSMS 18.6은 SSMS의 최신 GA(일반 공급) 릴리스입니다. 이전 버전�
 |데이터 계층 애플리케이션 마법사|그래프 테이블을 통한 데이터 계층 애플리케이션 가져오기/내보내기 지원이 추가되었습니다.|
 |플랫 파일 가져오기 마법사|가져오기로 인해 열 이름이 변경되었을 수 있음을 사용자에게 알리는 논리가 추가되었습니다.|
 |Integration Services(SSIS)|고객이 Azure Government 클라우드에 있는 Azure-SSIS IR에서 SSIS 패키지를 예약할 수 있도록 하는 지원이 추가되었습니다.|
-|Integration Services(SSIS)|SSMS를 통해 Azure SQL Managed Instance의 SQL 에이전트를 사용하는 경우 SSIS 에이전트 작업 단계에서 매개 변수 및 연결 관리자를 구성할 수 있습니다.|
-|Integration Services(SSIS)|Azure SQL DB/Managed Instance에 연결할 때 *기본값*을 사용하여 초기 db로 연결할 수 있습니다.|
+|Integration Services(SSIS)|SSMS를 통해 SQL Managed Instance의 SQL 에이전트를 사용하는 경우 SSIS 에이전트 작업 단계에서 매개 변수 및 연결 관리자를 구성할 수 있습니다.|
+|Integration Services(SSIS)|Azure SQL Database/Azure SQL Managed Instance에 연결할 때 기본값을 사용하여 초기 db로 연결할 수 있습니다.|
 |Integration Services(SSIS)|"Integration Services 카탈로그" 노드에 새로운 **Azure Data Factory에서 SSIS 시도** 항목이 추가되었습니다. 이 항목을 사용하면 "Integration Runtime 만들기 마법사"를 시작하고 "Azure-SSIS Integration Runtime"을 빠르게 만들 수 있습니다.
 |Integration Services(SSIS)|"카탈로그 만들기 마법사"에 **SSIS IR 만들기** 단추가 추가되었습니다. 이 단추를 사용하면 "Integration Runtime 만들기 마법사"를 시작하고 "Azure-SSIS Integration Runtime"을 빠르게 만들 수 있습니다.|
 |Integration Services(SSIS)|이제 ISDeploymentWizard는 명령줄 모드에서 SQL 인증, Azure Active Directory 통합 인증 및 Azure Active Directory 암호 인증을 지원합니다.|
@@ -585,7 +588,7 @@ SSMS 18.6은 SSMS의 최신 GA(일반 공급) 릴리스입니다. 이전 버전�
 |SMO|SMO 및 SSMS 모두에 "Edge 제약 조건"에 대한 계단식 삭제 지원이 추가되었습니다.|
 |SMO|데이터 분류에 "읽기-쓰기" 권한에 대한 지원이 추가되었습니다.|
 |취약성 평가| Azure SQL DW에서 취약성 평가 작업 메뉴를 사용할 수 있습니다.|
-|취약성 평가|“취약성 평가” 검사 결과가 Azure SQL DB의 검사 결과와 일치하도록 Azure SQL 관리되는 인스턴스 서버에서 실행되는 취약성 평가 규칙 세트가 변경되었습니다.|
+|취약성 평가|"취약성 평가" 검사 결과가 Azure SQL DB의 검사 결과와 일치하도록 Azure SQL Managed Instance에서 실행되는 취약성 평가 규칙 세트가 변경되었습니다.|
 |취약성 평가| "취약성 평가"는 이제 Azure SQL DW를 지원합니다.|
 |취약성 평가|취약성 평가 검사 결과를 Excel로 내보내는 새로운 내보내기 기능이 추가되었습니다.|
 |XEvent 뷰어|XEvent 뷰어: 더 많은 XEvent에 대한 실행 계획 창을 활성화합니다.|
@@ -596,7 +599,7 @@ SSMS 18.6은 SSMS의 최신 GA(일반 공급) 릴리스입니다. 이전 버전�
 | :-------| :------|
 |크래시 및 중지|GDI 개체와 관련된 일반적인 SSMS 크래시의 소스를 수정했습니다.|
 |크래시 및 중지|"만들기/업데이트/삭제"로 스크립트를 선택할 때 반응이 없거나 성능이 저하되는 공통 소스를 수정했습니다(SMO 개체의 불필요한 페치를 제거함).|
-|크래시 및 중지|ADAL 추적이 사용하도록 설정된 동안 MFA를 사용하여 Azure SQL DB에 연결할 때 시스템이 반응하지 않는 문제를 해결했습니다.|
+|크래시 및 중지|ADAL 추적이 사용하도록 설정된 동안 MFA를 사용하여 Azure SQL Database에 연결할 때 시스템이 반응하지 않는 문제를 해결했습니다.|
 |크래시 및 중지|활동 모니터에서 호출하면 라이브 쿼리 통계에서 시스템이 반응하지 않는(또는 인지된 반응이 없는) 문제(“보안 정보 유지”가 설정되지 않은 SQL Server 인증을 사용할 때 발생하는 문제)가 수정되었습니다.|
 |크래시 및 중지|개체 탐색기에서 “보고서”를 선택할 때 시스템이 반응하지 않는 문제(리소스 연결 대기 시간이 길거나 일시적으로 리소스에 액세스할 수 없으면 발생하는 문제)가 해결했습니다.|
 |크래시 및 중지|중앙 관리 서버 및 Azure SQL 서버를 사용하려고 할 때 SSMS에서 발생하는 충돌 문제가 해결되었습니다. 자세한 내용은 [중앙 관리 서버를 사용할 때 SMSS 17.5 애플리케이션 오류 및 충돌](https://feedback.azure.com/forums/908035/suggestions/33374884)을 참조하세요.|
@@ -613,31 +616,31 @@ SSMS 18.6은 SSMS의 최신 GA(일반 공급) 릴리스입니다. 이전 버전�
 |일반 SSMS|올바른 모니터에서 대화 상자를 열어 SSMS를 추가 다중 모니터로 인식하도록 다시 수정했습니다.|
 |AS(Analysis Services)|AS XEvent UI에 대한 "고급 설정"이 잘리는 문제를 해결했습니다.|
 |AS(Analysis Services)|DAX 구문 분석에서 파일을 찾을 수 없음 예외가 throw되는 문제가 해결되었습니다.|
-|Azure SQL Database|마스터 대신 Azure SQL DB에서 사용자 데이터베이스에 연결했을 때 Azure SQL Database 쿼리 창에 대해 데이터베이스 목록이 올바로 채워지지 않는 문제가 해결되었습니다.|
+|Azure SQL Database|마스터 대신 Azure SQL Database에서 사용자 데이터베이스에 연결했을 때 Azure SQL Database 쿼리 창에 대해 데이터베이스 목록이 올바로 채워지지 않는 문제가 해결되었습니다.|
 |Azure SQL Database|Azure SQL Database에 “임시 테이블”을 추가할 수 없는 문제를 해결했습니다.|
 |Azure SQL Database|Azure의 통계 메뉴 아래에서 통계 속성 하위 메뉴 옵션을 사용하도록 설정했습니다. 이는 꽤 오랫동안 완벽하게 지원되었기 때문입니다.|
 |Azure SQL - 일반 지원|일반적인 Azure UI 컨트롤에서 사용자가 Azure 구독(50개가 넘는 경우)을 표시하지 못하는 문제를 해결했습니다. 또한 정렬 기준이 구독 ID가 아니라 이름으로 변경되었습니다. 예를 들어, URL에서 백업을 복원하려 할 때 이 문제가 발생할 수 있습니다.|
 |Azure SQL - 일반 지원|사용자의 일부 테넌트에 구독이 없는 경우 "인덱스가 범위를 벗어났습니다. 인덱스는 음수가 아니어야 하며 컬렉션의 크기보다 작아야 합니다”라는 오류를 발생시킬 수 있는 구독을 열거할 때 일반적인 Azure UI 컨트롤에 있는 문제를 해결했습니다. 예를 들어, URL에서 백업을 복원하려 할 때 이 문제가 발생할 수 있습니다.|
 |Azure SQL - 일반 지원|서비스 수준 목표가 하드코딩되어 SSMS가 최신 Azure SQL SLO를 지원하기 어렵게 만드는 문제가 해결되었습니다. 이제 사용자는 Azure에 로그인하여 SSMS에서 모든 해당 SLO 데이터(버전 및 최대 크기)를 검색할 수 있습니다.|
-|Azure SQL DB Managed Instance 지원|관리되는 인스턴스 지원을 개선했습니다. UI에서 지원되지 않는 옵션을 사용할 수 없도록 설정하고 URL 감사 대상을 처리하도록 [감사 로그 보기] 옵션을 수정했습니다.|
-|Azure SQL DB Managed Instance 지원|“스크립트 생성 및 게시” 마법사는 지원되지 않는 CREATE DATABASE 절을 스크립팅합니다.|
-|Azure SQL DB Managed Instance 지원|관리되는 인스턴스에 대한 라이브 쿼리 통계를 사용합니다.|
-|Azure SQL DB Managed Instance 지원|데이터베이스 속성->파일이 ALTER DB ADD FILE을 잘못 스크립팅했습니다.|
-|Azure SQL DB Managed Instance 지원|일부 다른 일정 유형을 선택한 경우에도 ONIDLE 일정 예약이 선택되는 SQL Agent 스케줄러의 재발 문제를 해결했습니다.|
-|Azure SQL DB Managed Instance 지원|Azure Storage에서 백업을 수행하기 위해 MAXTRANSFERRATE, MAXBLOCKSIZE를 조정하는 중입니다.|
-|Azure SQL DB Managed Instance 지원|RESTORE 작업(CL에서 지원되지 않음) 전에 비상 로그 백업이 스크립팅되는 문제.|
-|Azure SQL DB Managed Instance 지원|데이터베이스 만들기 마법사가 CREATE DATABASE 문을 올바로 스크립팅하지 않습니다.|
-|Azure SQL DB Managed Instance 지원|관리되는 인스턴스에 연결하는 경우 SSMS 내의 SSIS 패키지를 특별 처리합니다.|
-|Azure SQL DB Managed Instance 지원|관리되는 인스턴스에 연결된 상태에서 “활동 모니터”를 사용하려 할 때 오류가 표시되는 문제를 해결했습니다.|
-|Azure SQL DB Managed Instance 지원|SSMS 탐색기의 AAD 로그인 지원이 향상되었습니다.|
-|Azure SQL DB Managed Instance 지원|SMO 파일 그룹 개체의 스크립팅이 향상되었습니다.|
-|Azure SQL DB Managed Instance 지원|자격 증명에 대한 UI가 향상되었습니다.|
-|Azure SQL DB Managed Instance 지원|논리적 복제 지원이 추가되었습니다.|
-|Azure SQL DB Managed Instance 지원|데이터베이스를 마우스 오른쪽 단추로 클릭하고 '데이터 계층 애플리케이션 가져오기'를 선택하지 않는 문제가 해결되었습니다.|
-|Azure SQL DB Managed Instance 지원|"TempDB"를 마우스 오른쪽 단추로 클릭하여 오류를 표시하는 문제가 해결되었습니다.|
-|Azure SQL DB Managed Instance 지원|SMO에서 ALTER DB ADD FILE 문을 스크립팅하려고 할 때 생성된 T-SQL 스크립트가 비어 있는 문제가 해결되었습니다.|
-|Azure SQL DB Managed Instance 지원|관리되는 인스턴스 서버별 속성(하드웨어 생성, 서비스 계층, 사용 및 예약된 스토리지)의 표시가 개선되었습니다.|
-|Azure SQL DB Managed Instance 지원|데이터베이스의 스크립팅("생성 시 스크립팅...")이 추가 파일 그룹 및 파일을 스크립팅하지 않는 문제가 해결되었습니다. 자세한 내용은 [https://feedback.azure.com/forums/908035/suggestions/37326799](https://feedback.azure.com/forums/908035/suggestions/37326799)를 참조하세요. |
+|Azure SQL Managed Instance 지원|관리되는 인스턴스 지원을 개선했습니다. UI에서 지원되지 않는 옵션을 사용할 수 없도록 설정하고 URL 감사 대상을 처리하도록 [감사 로그 보기] 옵션을 수정했습니다.|
+|Azure SQL Managed Instance 지원|“스크립트 생성 및 게시” 마법사는 지원되지 않는 CREATE DATABASE 절을 스크립팅합니다.|
+|Azure SQL Managed Instance 지원|관리되는 인스턴스에 대한 라이브 쿼리 통계를 사용합니다.|
+|Azure SQL Managed Instance 지원|데이터베이스 속성->파일이 ALTER DB ADD FILE을 잘못 스크립팅했습니다.|
+|Azure SQL Managed Instance 지원|일부 다른 일정 유형을 선택한 경우에도 ONIDLE 일정 예약이 선택되는 SQL Agent 스케줄러의 재발 문제를 해결했습니다.|
+|Azure SQL Managed Instance 지원|Azure Storage에서 백업을 수행하기 위해 MAXTRANSFERRATE, MAXBLOCKSIZE를 조정하는 중입니다.|
+|Azure SQL Managed Instance 지원|RESTORE 작업(CL에서 지원되지 않음) 전에 비상 로그 백업이 스크립팅되는 문제.|
+|Azure SQL Managed Instance 지원|데이터베이스 만들기 마법사가 CREATE DATABASE 문을 올바로 스크립팅하지 않습니다.|
+|Azure SQL Managed Instance 지원|관리되는 인스턴스에 연결하는 경우 SSMS 내의 SSIS 패키지를 특별 처리합니다.|
+|Azure SQL Managed Instance 지원|관리되는 인스턴스에 연결된 상태에서 “활동 모니터”를 사용하려 할 때 오류가 표시되는 문제를 해결했습니다.|
+|Azure SQL Managed Instance 지원|SSMS 탐색기의 AAD 로그인 지원이 향상되었습니다.|
+|Azure SQL Managed Instance 지원|SMO 파일 그룹 개체의 스크립팅이 향상되었습니다.|
+|Azure SQL Managed Instance 지원|자격 증명에 대한 UI가 향상되었습니다.|
+|Azure SQL Managed Instance 지원|논리적 복제 지원이 추가되었습니다.|
+|Azure SQL Managed Instance 지원|데이터베이스를 마우스 오른쪽 단추로 클릭하고 '데이터 계층 애플리케이션 가져오기'를 선택하지 않는 문제가 해결되었습니다.|
+|Azure SQL Managed Instance 지원|"TempDB"를 마우스 오른쪽 단추로 클릭하여 오류를 표시하는 문제가 해결되었습니다.|
+|Azure SQL Managed Instance 지원|SMO에서 ALTER DB ADD FILE 문을 스크립팅하려고 할 때 생성된 T-SQL 스크립트가 비어 있는 문제가 해결되었습니다.|
+|Azure SQL Managed Instance 지원|관리되는 인스턴스 서버별 속성(하드웨어 생성, 서비스 계층, 사용 및 예약된 스토리지)의 표시가 개선되었습니다.|
+|Azure SQL Managed Instance 지원|데이터베이스의 스크립팅("생성 시 스크립팅...")이 추가 파일 그룹 및 파일을 스크립팅하지 않는 문제가 해결되었습니다. 자세한 내용은 [https://feedback.azure.com/forums/908035/suggestions/37326799](https://feedback.azure.com/forums/908035/suggestions/37326799)를 참조하세요. |
 |DB 백업/복원/연결/분리|.mdf 파일의 실제 파일 이름이 원래 파일 이름과 일치하지 않을 때 사용자가 데이터베이스를 연결할 수 없는 문제를 해결했습니다.|
 |DB 백업/복원/연결/분리|SSMS가 유효한 복원 계획을 찾지 못하거나 최적이 아닌 계획을 찾을 수 있는 문제를 해결했습니다. 자세한 내용은 [https://feedback.azure.com/forums/908035-sql-server/suggestions/32897752](https://feedback.azure.com/forums/908035-sql-server/suggestions/32897752)를 참조하세요. |
 |DB 백업/복원/연결/분리|"데이터베이스 연결" 마법사에서 이름이 변경된 보조 파일을 표시하지 않는 문제가 해결되었습니다. 이제 파일이 표시되며 이에 대한 주석(예: "찾을 수 없음")이 추가되었습니다. 자세한 내용은 [https://feedback.azure.com/forums/908035/suggestions/32897434](https://feedback.azure.com/forums/908035/suggestions/32897434)를 참조하세요. |
@@ -688,8 +691,8 @@ SSMS 18.6은 SSMS의 최신 GA(일반 공급) 릴리스입니다. 이전 버전�
 |개체 스크립팅|개체를 스크립팅할 때 기본값이 있는 DB 범위 지정 구성이 생략됩니다.|
 |개체 스크립팅|스크립팅 시 동적 T-SQL을 생성하지 마세요. 자세한 내용은 [https://feedback.azure.com/forums/908035-sql-server/suggestions/32898391](https://feedback.azure.com/forums/908035-sql-server/suggestions/32898391)를 참조하세요. |
 |개체 스크립팅|SQL Server 2016 및 그 이전 버전에서 테이블을 스크립팅할 때 그래프 구문 “as edge” 및 “as node”를 생략하세요.|
-|개체 스크립팅|MFA와 함께 AAD를 사용하여 Azure SQL DB에 연결할 때 데이터베이스 개체의 스크립팅이 실패하는 문제를 해결했습니다.|
-|개체 스크립팅|Azure SQL DB에서 GEOMETRY_AUTO_GRID/GEOGRAPHY_AUTO_GRID를 사용하여 공간 인덱스를 스크립팅하려고 할 때 오류가 throw되는 문제를 해결했습니다.|
+|개체 스크립팅|MFA와 함께 AAD를 사용하여 Azure SQL Database에 연결할 때 데이터베이스 개체의 스크립팅이 실패한 문제를 해결했습니다.|
+|개체 스크립팅|Azure SQL Database에서 GEOMETRY_AUTO_GRID/GEOGRAPHY_AUTO_GRID를 사용하여 공간 인덱스를 스크립팅하려고 할 때 오류가 throw되는 문제를 해결했습니다.|
 |개체 스크립팅|“개체 탐색기” 스크립팅 설정이 원본과 일치하도록 설정되어 있는 경우에도 Azure SQL Database의 데이터베이스 스크립팅이 항상 온-프레미스 SQL을 대상으로 하는 문제를 해결했습니다.|
 |개체 스크립팅|클러스터형 및 비클러스터형 인덱스와 관련된 SQL DW 데이터베이스의 테이블을 스크립팅하려고 할 때 잘못된 T-SQL 문이 생성되는 문제가 해결되었습니다.|
 |개체 스크립팅|"클러스터형 Columnstore 인덱스"와 "클러스터형 인덱스"를 모두 사용하여 SQL DW 데이터베이스의 테이블을 스크립팅하려고 할 때 잘못된 T-SQL(중복 문)이 생성되는 문제가 해결되었습니다.|

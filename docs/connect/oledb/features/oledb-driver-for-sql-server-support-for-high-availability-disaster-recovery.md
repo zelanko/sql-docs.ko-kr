@@ -1,6 +1,6 @@
 ---
-title: SQL Server용 OLE DB 드라이버의 고가용성, 재해 복구 지원 | Microsoft Docs
-description: SQL Server용 OLE DB 드라이버의 고가용성, 재해 복구 지원
+title: SQL Server용 OLE DB 드라이버의 고가용성, 재해 복구 지원
+description: 구성된 기능을 사용하여 데이터베이스에 연결할 때 OLE DB Driver for SQL Server의 고가용성 및 재해 복구 지원에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -8,14 +8,14 @@ ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: reference
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 26c340a10118f115db87c742e570831edc8b65f6
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 6f7e926485480bb18979350eea69ace972c0a102
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86006915"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88860700"
 ---
 # <a name="ole-db-driver-for-sql-server-support-for-high-availability-disaster-recovery"></a>SQL Server용 OLE DB 드라이버의 고가용성, 재해 복구 지원
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

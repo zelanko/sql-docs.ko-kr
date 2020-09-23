@@ -1,7 +1,8 @@
 ---
+description: 공간 데이터 형식 사용
 title: 공간 데이터 형식 사용 | Microsoft Docs
 ms.custom: ''
-ms.date: 08/12/2019
+ms.date: 07/31/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ''
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 83f64df45036091985ccb6e26b86907882939313
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 0f4b01775e2c78c0cc8602539169a794eb476f92
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80916809"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487964"
 ---
 # <a name="using-spatial-datatypes"></a>공간 데이터 형식 사용
 
@@ -25,7 +26,7 @@ ms.locfileid: "80916809"
 
 ## <a name="creating-a-geometry--geography-object"></a>기하 도형/지리 개체 만들기
 
-기하 도형/지리 개체를 만드는 두 가지 주요 방법은 WKT(Well-Known Text)에서 변환하거나 WKB(Well-Known Binary)로 변환하는 것입니다.
+기하 도형/지리 개체를 만드는 두 가지 주요 방법은 WKT(Well-Known Text) 또는 CLR(내부 SQL Server 형식)에서 변환하는 것입니다.
 
 ### <a name="creating-from-wkt"></a>WKT에서 만들기
 
@@ -37,14 +38,14 @@ Geography geogWKT = Geography.STGeomFromText(geoWKT, 4326);
 
 SRID(Spatial Reference System Identifier)가 0인 LINESTRING 기하 도형 개체와 SRID 4326이 있는 지리 개체가 생성됩니다.
 
-### <a name="creating-from-wkb"></a>WKB에서 만들기
+### <a name="creating-from-clr"></a>CLR에서 만들기
 
 ```java
-byte[] geomWKB = Hex.decodeHex("00000000010403000000000000000000F03F00000000000000000000000000000000000000000000F03F000000000000F0BF000000000000000001000000010000000001000000FFFFFFFF0000000002".toCharArray());
-byte[] geogWKB = Hex.decodeHex("E61000000104030000000000000000000000000000000000F03F000000000000F03F00000000000000000000000000000000000000000000F0BF01000000010000000001000000FFFFFFFF0000000002".toCharArray());
+byte[] geomCLR = Hex.decodeHex("00000000010403000000000000000000F03F00000000000000000000000000000000000000000000F03F000000000000F0BF000000000000000001000000010000000001000000FFFFFFFF0000000002".toCharArray());
+byte[] geogCLR = Hex.decodeHex("E61000000104030000000000000000000000000000000000F03F000000000000F03F00000000000000000000000000000000000000000000F0BF01000000010000000001000000FFFFFFFF0000000002".toCharArray());
 
-Geometry geomWKT = Geometry.deserialize(geomWKB);
-Geography geogWKT = Geography.deserialize(geogWKB);
+Geometry geomWKT = Geometry.deserialize(geomCLR);
+Geography geogWKT = Geography.deserialize(geogCLR);
 ```
 
 이전에 WKT에서 만든 것과 동일한 기하 도형 및 지리 개체가 생성됩니다.
@@ -87,31 +88,31 @@ try(SQLServerResultSet rs = (SQLServerResultSet)stmt.executeQuery("select * from
 
 ### <a name="sqlserverpreparedstatement"></a>SQLServerPreparedStatement
 
-|방법|Description|
+|메서드|설명|
 |:------|:----------|
 |void setGeometry(int n, Geometry x)| 지정된 매개 변수를 지정된 microsoft.sql.Geometry 클래스 개체로 설정합니다.
 |void setGeography(int n, Geography x)| 지정된 매개 변수를 지정된 microsoft.sql.Geography 클래스 개체로 설정합니다.
 
 ### <a name="sqlserverresultset"></a>SQLServerResultSet
 
-|방법|Description|
+|메서드|설명|
 |:------|:----------|
 |Geometry getGeometry(int colunIndex)| 이 ResultSet 개체의 현재 행에서 지정된 열의 값을 Java 프로그래밍 언어의 com.microsoft.sqlserver.jdbc.Geometry 개체로 반환합니다.
 |Geometry getGeometry(String columnName)| 이 ResultSet 개체의 현재 행에서 지정된 열의 값을 Java 프로그래밍 언어의 com.microsoft.sqlserver.jdbc.Geometry 개체로 반환합니다.
 |Geography getGeography(int colunIndex)| 이 ResultSet 개체의 현재 행에서 지정된 열의 값을 Java 프로그래밍 언어의 com.microsoft.sqlserver.jdbc.Geography 개체로 반환합니다.
 |Geography getGeography(String columnName)| 이 ResultSet 개체의 현재 행에서 지정된 열의 값을 Java 프로그래밍 언어의 com.microsoft.sqlserver.jdbc.Geography 개체로 반환합니다.
 
-### <a name="geometry"></a>geometry
+### <a name="geometry"></a>기하 도형
 
-|방법|Description|
+|메서드|설명|
 |:------|:----------|
 |Geometry STGeomFromText(String wkt, int SRID)| 인스턴스에서 얻어진 Z(높이) 값 및 M(측정값) 값을 사용하여 보강된 OGC(Open Geospatial Consortium) WKT(Well-Known Text) 표현의 기하 도형 인스턴스에 대한 생성자입니다.
-|Geometry STGeomFromWKB(byte[] wkb)| OGC(Open Geospatial Consortium) WKB(Well-Known Binary) 표현의 기하 도형 인스턴스에 대한 생성자입니다.
-|Geometries deserialize(byte[] wkb)| 공간 데이터에 대한 내부 SQL Server 형식의 기하 도형 인스턴스 생성자입니다.
+|Geometry STGeomFromWKB(byte[] wkb)| OGC(Open Geospatial Consortium) WKB(Well-Known Binary) 표현의 기하 도형 인스턴스에 대한 생성자입니다. 참고: 이 메서드는 현재 CLR(내부 SQL Server 형식)을 사용하여 기하 도형 인스턴스를 만듭니다. 이는 알려진 드라이버 문제이며 대신 WKB 데이터를 수락하도록 변경될 예정입니다. 이 메서드를 이미 사용하고 있는 기존 사용자의 경우 대신 deserialize(byte)로 전환하는 것이 좋습니다.
+|Geometries deserialize(byte[] clr)| 공간 데이터에 대한 내부 SQL Server 형식의 기하 도형 인스턴스 생성자입니다.
 |Geometry parse(String wkt)| OGC(Open Geospatial Consortium) WKT(Well-Known Text) 표현의 기하 도형 인스턴스에 대한 생성자입니다. SRID(Spatial Reference Identifier)의 기본값은 0입니다.
 |Geometry point(double x, double y, int SRID)| 해당 X 및 Y 값과 SRID(Spatial Reference Identifier)의 지점 인스턴스를 나타내는 기하 도형 인스턴스에 대한 생성자입니다.
 |String STAsText()| 기하 도형 인스턴스의 OGC(Open Geospatial Consortium) WKT(Well-Known Text) 표현을 반환합니다. 이 텍스트에는 인스턴스에서 얻어진 Z(높이) 값 또는 M(측정값) 값이 포함되지 않습니다.
-|byte[] STAsBinary()| 기하 도형 인스턴스의 OGC(Open Geospatial Consortium) WKB(Well-Known Binary) 표현을 반환합니다. 이 값에는 인스턴스에서 얻어진 Z값 또는 M값이 포함되지 않습니다.
+|byte[] STAsBinary()| 기하 도형 인스턴스의 CLR(내부 SQL Server 형식) 표현을 반환합니다. 이 값에는 인스턴스에서 얻어진 Z값 또는 M값이 포함되지 않습니다.
 |byte[] serialize()| 기하 도형 형식의 내부 SQL Server 형식을 나타내는 바이트를 반환합니다.
 |boolean hasM()| 개체에 M(측정값) 값이 포함되어 있으면 반환합니다.
 |boolean hasZ()| 개체에 Z(높이) 값이 포함되어 있으면 반환합니다.
@@ -128,15 +129,15 @@ try(SQLServerResultSet rs = (SQLServerResultSet)stmt.executeQuery("select * from
 
 ### <a name="geography"></a>Geography
 
-|방법|Description|
+|메서드|설명|
 |:------|:----------|
 |Geography STGeomFromText(String wkt, int SRID)| 인스턴스에서 얻어진 Z(높이) 값 및 M(측정값) 값을 사용하여 보강된 OGC(Open Geospatial Consortium) WKT(Well-Known Text) 표현의 지리 인스턴스에 대한 생성자입니다.
-|Geography STGeomFromWKB(byte[] wkb)| OGC(Open Geospatial Consortium) WKB(Well-Known Binary) 표현의 지리 인스턴스에 대한 생성자입니다.
-|Geography deserialize(byte[] wkb)| 공간 데이터에 대한 내부 SQL Server 형식의 지리 인스턴스 생성자입니다.
+|Geography STGeomFromWKB(byte[] wkb)| OGC(Open Geospatial Consortium) WKB(Well-Known Binary) 표현의 지리 인스턴스에 대한 생성자입니다. 참고: 이 메서드는 현재 CLR(내부 SQL Server 형식)을 사용하여 기하 도형 인스턴스를 만들지만 SQL Server에서는 동등한 메서드(STGeomFromWKB)가 WKB를 사용하므로 WKB 데이터를 수락하도록 변경될 예정입니다. 이 메서드를 이미 사용하고 있는 기존 사용자의 경우 대신 deserialize(byte)로 전환하는 것이 좋습니다.
+|Geography deserialize(byte[] clr)| 공간 데이터에 대한 내부 SQL Server 형식의 지리 인스턴스 생성자입니다.
 |Geography parse(String wkt)| OGC(Open Geospatial Consortium) WKT(Well-Known Text) 표현의 지리 인스턴스에 대한 생성자입니다. SRID(Spatial Reference Identifier)의 기본값은 0입니다.
 |Geography point(double lon, double lat, int SRID)| 해당 위도 및 경도와 SRID(Spatial Reference Identifier)의 지점 인스턴스를 나타내는 지리 인스턴스에 대한 생성자입니다.
 |String STAsText()| 지리 인스턴스의 OGC(Open Geospatial Consortium) WKT(Well-Known Text) 표현을 반환합니다. 이 텍스트에는 인스턴스에서 얻어진 Z(높이) 값 또는 M(측정값) 값이 포함되지 않습니다.
-|byte[] STAsBinary())| 지리 인스턴스의 OGC(Open Geospatial Consortium) WKB(Well-Known Binary) 표현을 반환합니다. 이 값에는 인스턴스에서 얻어진 Z값 또는 M값이 포함되지 않습니다.
+|byte[] STAsBinary())| 지리 인스턴스의 CLR(내부 SQL Server 형식) 표현을 반환합니다. 이 값에는 인스턴스에서 얻어진 Z값 또는 M값이 포함되지 않습니다.
 |byte[] serialize()| 지리 형식의 내부 SQL Server 형식을 나타내는 바이트를 반환합니다.
 |boolean hasM()| 개체에 M(측정값) 값이 포함되어 있으면 반환합니다.
 |boolean hasZ()| 개체에 Z(높이) 값이 포함되어 있으면 반환합니다.
@@ -159,6 +160,6 @@ try(SQLServerResultSet rs = (SQLServerResultSet)stmt.executeQuery("select * from
 
 3. 저장 프로시저, TVP 및 BulkCopy 작업은 현재 공간 데이터 형식에서 지원되지 않습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [공간 데이터 형식 샘플(JDBC)](../../connect/jdbc/spatial-data-types-sample.md)

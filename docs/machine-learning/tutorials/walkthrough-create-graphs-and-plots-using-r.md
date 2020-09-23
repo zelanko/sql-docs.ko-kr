@@ -1,6 +1,6 @@
 ---
 title: 'R 자습서: 그래프 및 플롯 만들기'
-description: SQL Server에서 R 언어 함수를 사용하여 그래프 및 플롯을 만드는 방법을 보여 주는 자습서입니다.
+description: R 언어를 사용하여 SQL Server 데이터로 플롯 및 지도를 생성하는 기술을 알아봅니다. 간단한 히스토그램을 만들고 더 복잡한 지도 그림을 개발합니다.
 ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 06/13/2019
@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 491c85f0f5c3a9532c6c196e14f49a06998e387e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5b6643cec32cc3581c0f91e4479fff0d908e7532
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85781810"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88178430"
 ---
 # <a name="create-graphs-and-plots-using-sql-and-r-walkthrough"></a>SQL 및 R을 사용하여 그래프 및 플롯 만들기(연습)
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016](../../includes/applies-to-version/sqlserver2016.md)]
 
 이 연습 부분에서는 SQL Server 데이터에 R을 사용하여 플롯 및 지도를 생성하는 기술을 알아봅니다. 간단한 히스토그램을 만들고 더 복잡한 지도 그림을 개발합니다.
 

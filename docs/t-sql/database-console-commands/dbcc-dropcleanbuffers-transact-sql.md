@@ -26,12 +26,12 @@ ms.assetid: a4121927-f2ce-4926-aa2c-9b1519dac048
 author: pmasl
 ms.author: umajay
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f756dda5a0fc09eaad4e20fb6436a8fb5957fb2a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c820f664d6d8b56453c39f117d373f44312f898e
+ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88468263"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076748"
 ---
 # <a name="dbcc-dropcleanbuffers-transact-sql"></a>DBCC DROPCLEANBUFFERS(Transact-SQL)
 
@@ -42,12 +42,12 @@ ms.locfileid: "88468263"
 ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>구문
-SQL Server용 구문:
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구문:
 
 ```syntaxsql
 DBCC DROPCLEANBUFFERS [ WITH NO_INFOMSGS ]  
 ```  
-SQL Data Warehouse 및 병렬 데이터 웨어하우스용 구문:
+[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 구문:
 
 ```sql  
 DBCC DROPCLEANBUFFERS ( COMPUTE | ALL ) [ WITH NO_INFOMSGS ]  
@@ -77,14 +77,8 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 ```  
   
 ## <a name="permissions"></a>사용 권한  
-
-적용 대상: SQL Server, 병렬 데이터 웨어하우스 
-
-- **sysadmin** 고정 서버 역할의 멤버 자격이 필요합니다.  
-
-적용 대상: Azure SQL Data Warehouse
-
-- DB_OWNER 고정 데이터베이스 역할의 멤버 자격이 필요합니다.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에 대한 `sysadmin` 고정 서버 역할의 멤버 자격이 필요합니다.  
+[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]에 대한 `DB_OWNER` 고정 서버 역할의 멤버 자격이 필요합니다.  
   
 ## <a name="see-also"></a>참고 항목  
 [DBCC&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  

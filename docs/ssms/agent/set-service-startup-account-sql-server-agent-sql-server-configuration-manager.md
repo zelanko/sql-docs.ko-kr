@@ -1,4 +1,5 @@
 ---
+description: Set the Service Startup Account for SQL Server Agent (SQL Server Configuration Manager)
 title: 서비스 시작 계정 설정
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -15,19 +16,19 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: eaebc08b30cab88ab5563f98ed63739b2f36c2f2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 05602500c18f85168eee996b1685cd9d907ae5dc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85729755"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497529"
 ---
 # <a name="set-the-service-startup-account-for-sql-server-agent-sql-server-configuration-manager"></a>Set the Service Startup Account for SQL Server Agent (SQL Server Configuration Manager)
 
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> 현재 [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)에서 일부 SQL Server 에이전트 기능이 지원됩니다. 자세한 내용은 [SQL Server에서 Azure SQL Database Managed Instance T-SQL 차이점](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)을 참조하세요.
+> 현재 [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)에서는 SQL Server 에이전트 기능이 대부분 지원됩니다. 자세한 내용은 [SQL Server와 Azure SQL Managed Instance 간의 T-SQL 차이점](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)을 참조하세요.
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스 시작 계정은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 실행되는 Windows 계정과 해당 네트워크 권한을 정의합니다. 이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 구성 관리자를 통해 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에이전트 서비스 계정을 설정하는 방법에 대해 설명합니다.  
   
@@ -68,14 +69,14 @@ ms.locfileid: "85729755"
   
 5.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자의 콘솔 창에서 **SQL Server 서비스**를 선택합니다.  
   
-6.  세부 정보 창에서 **SQL Server 에이전트** _(server\_name)_ 를 마우스 오른쪽 단추로 클릭합니다. 여기서 *server_name*은 서비스 시작 계정을 변경하려는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 인스턴스의 이름입니다. 그런 다음, **속성**을 선택합니다.  
+6.  세부 정보 창에서 **SQL Server 에이전트**_(server\_name)_ 를 마우스 오른쪽 단추로 클릭합니다. 여기서 *server_name*은 서비스 시작 계정을 변경하려는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 인스턴스의 이름입니다. 그런 다음, **속성**을 선택합니다.  
   
-7.  **SQL Server 에이전트** _(server\_name)_ **속성** 대화 상자의 **로그온** 탭에 있는 **다음 계정으로 로그온**에서 다음 옵션 중 하나를 선택합니다.  
+7.  **SQL Server 에이전트**_(server\_name)_ **속성** 대화 상자의 **로그온** 탭에 있는 **다음 계정으로 로그온**에서 다음 옵션 중 하나를 선택합니다.  
   
     -   **기본 제공 계정**: 로컬 서버의 리소스만 작업에 필요한 경우 이 옵션을 선택합니다. Windows 기본 제공 계정 유형을 선택하는 방법은 [SQL Server 에이전트 서비스에 대한 계정 선택](https://msdn.microsoft.com/library/ms191543.aspx)을 참조하세요.  
   
         > [!IMPORTANT]  
-        > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스는 **에서** 로컬 서비스 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]계정을 지원하지 않습니다.  
+        > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스는 **** 에서 로컬 서비스 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]계정을 지원하지 않습니다.  
   
     -   **이 계정**: 작업을 수행하는 데 애플리케이션 리소스를 포함하여 네트워크의 리소스가 필요할 경우나, 다른 Windows 애플리케이션 로그에 이벤트를 전달하거나, 전자 메일 또는 호출기로 운영자에게 알리려고 할 경우 이 옵션을 선택합니다.  
   

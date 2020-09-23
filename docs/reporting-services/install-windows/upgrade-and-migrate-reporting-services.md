@@ -1,4 +1,5 @@
 ---
+description: Upgrade and Migrate Reporting Services
 title: Reporting Services 업그레이드 및 마이그레이션 | Microsoft Docs
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ author: maggiesMSFT
 ms.author: maggies
 ms.topic: conceptual
 ms.date: 05/01/2020
-ms.openlocfilehash: ca9ffd01b7553cb343a83565615a786467371891
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 41add7a1ac27a0fba9eb364ec5e5da3dde37585c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82719527"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446090"
 ---
 # <a name="upgrade-and-migrate-reporting-services"></a>Upgrade and Migrate Reporting Services
 
@@ -114,7 +115,7 @@ ms.locfileid: "82719527"
   
 3.  업그레이드를 진행할 수 있는 경우 업그레이드 프로세스를 계속할지 묻는 메시지가 표시됩니다.  
   
-4.  설치 프로그램이 SQL Server Reporting Services 프로그램 파일용 새 폴더를 만듭니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설치용 프로그램 폴더는 MSRS13.\<*인스턴스 이름*>입니다.  
+4.  설치 프로그램이 SQL Server Reporting Services 프로그램 파일용 새 폴더를 만듭니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설치용 프로그램 폴더는 MSRS13.\<*instance name*>입니다.  
   
 5.  설치 프로그램이 보고서 서버 기능의 일부인 SQL Server Reporting Services 보고서 서버 프로그램 파일, 구성 도구 및 명령줄 유틸리티를 추가합니다.  
   

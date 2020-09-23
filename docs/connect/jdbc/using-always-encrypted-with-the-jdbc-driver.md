@@ -2,7 +2,7 @@
 title: 상시 암호화와 JDBC 드라이버 사용
 description: SQL Server에 대한 JDBC 드라이버를 통해 Java 애플리케이션에서 Always Encrypted를 사용하여 서버에서 중요한 데이터를 암호화하는 방법을 알아봅니다.
 ms.custom: ''
-ms.date: 07/10/2020
+ms.date: 08/24/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b2005416234f517a8414f3d9405968659f7e553a
-ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
+ms.openlocfilehash: d0623450d73b47328a71bc84e46dda22824eaf5f
+ms.sourcegitcommit: 04fb4c2d7ccddd30745b334b319d9d2dd34325d6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2020
-ms.locfileid: "86279622"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89570328"
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>상시 암호화와 JDBC 드라이버 사용
 
@@ -98,6 +98,9 @@ String connectionUrl = "jdbc:sqlserver://<server>:<port>;user=<user>;password=<p
 ```
 JDBC 드라이버는 연결 속성 중에 이러한 자격 증명이 있는 경우 **SQLServerColumnEncryptionAzureKeyVaultProvider** 개체를 자동으로 인스턴스화합니다.
 
+> [!IMPORTANT]
+> 연결 속성 **keyVaultProviderClientId** 및 **keyVaultProviderClientKey**는 v8.4.1부터 더 이상 사용되지 않습니다. **keyStoreAuthentication**, **KeyStorePrincipalId** 및 **KeyStoreSecret**을 대신 사용하는 것이 좋습니다.
+
 #### <a name="jdbc-driver-version-prior-to-741"></a>7\.4.1 이전 JDBC 드라이버 버전
 
 이 섹션에서는 7.4.1 이전 JDBC 드라이버 버전에 대해 설명합니다.
@@ -126,6 +129,42 @@ SQLServerConnection.registerColumnEncryptionKeyStoreProviders(keyStoreMap);
 >  [azure-activedirectory-library-for-java libraries](https://github.com/AzureAD/azure-activedirectory-library-for-java)
 >
 > Maven 프로젝트에 이러한 종속성을 포함시키는 방법에 대한 예는 [Apache Maven으로 ADAL4J 및 AKV 종속성 다운로드](https://github.com/Microsoft/mssql-jdbc/wiki/Download-ADAL4J-And-AKV-Dependencies-with-Apache-Maven)를 참조하세요.
+
+### <a name="using-azure-key-vault-authentication-with-managed-identities"></a>관리 ID로 Azure Key Vault 인증 사용
+
+JDBC Driver **8.4.1**부터 드라이버는 관리 ID를 사용하는 Azure Key Vault 인증에 대한 지원을 추가했습니다.
+
+애플리케이션이 Azure에서 호스트되는 경우 사용자는 [관리 ID](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview)를 사용하여 Azure Key Vault에 인증하므로 코드에서 자격 증명을 제공하고 노출할 필요가 없습니다. 
+
+#### <a name="connection-properties-for-key-vault-authentication-with-managed-identities"></a>관리 ID를 사용하는 Key Vault 인증을 위한 연결 속성
+
+JDBC Driver 8.4.1 이상에서 드라이버는 다음 연결 속성을 도입했습니다.
+
+| ConnectionProperty    | 가능한 값 쌍 1 | 가능한 값 쌍 2 | 가능한 값 쌍 3 |
+| ---|---|---|----|
+| keyStoreAuthentication| KeyVaultClientSecret   |KeyVaultManagedIdentity |JavaKeyStorePassword |  
+| keyStorePrincipalId   | \<Azure AD Application Client ID\>    | \<Azure AD Application object ID\>(선택 사항)| 해당 없음 |
+| keyStoreSecret        | \<Azure AD Application Client Secret\>|해당 없음|\<secret/password for the Java Key Store\> |
+
+다음 예제에서는 연결 문자열에서 연결 속성을 사용하는 방법을 보여 줍니다.
+
+#### <a name="use-managed-identity-to-authenticate-to-akv"></a>관리 ID를 사용하여 AKV에 인증
+```
+"jdbc:sqlserver://<server>:<port>;columnEncryptionSetting=Enabled;keyStoreAuthentication=KeyVaultManagedIdentity;"
+```
+#### <a name="use-managed-identity-and-the-principal-id-to-authenticate-to-akv"></a>관리 ID 및 보안 주체 ID를 사용하여 AKV에 인증
+```
+"jdbc:sqlserver://<server>:<port>;columnEncryptionSetting=Enabled;keyStoreAuthentication=KeyVaultManagedIdentity;keyStorePrincipal=<principalId>"
+```
+#### <a name="use-clientid-and-clientsecret-to-authentication-to-akv"></a>clientId 및 clientSecret을 사용하여 AKV에 인증
+```
+"jdbc:sqlserver://<server>:<port>;columnEncryptionSetting=Enabled;keyStoreAuthentication=KeyVaultClientSecret;keyStorePrincipalId=<clientId>;keyStoreSecret=<clientSecret>"
+```
+사용자는 `SQLServerColumnEncryptionAzureKeyVaultProvider`를 사용하는 대신 이러한 연결 속성을 사용하여 키 저장소에 사용되는 인증 유형을 지정하는 것이 좋습니다.
+
+이전에 추가된 연결 속성 `keyVaultProviderClientId` 및 `keyVaultProviderClientKey`는 더 이상 사용되지 않으며 위에 설명된 연결 속성으로 대체되었습니다.
+
+관리 ID를 구성하는 방법에 대한 자세한 내용은 [Azure Portal을 사용하여 VM에서 Azure 리소스에 대한 관리 ID 구성](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/qs-configure-portal-windows-vm)을 참조하세요.
 
 ### <a name="using-windows-certificate-store-provider"></a>Windows 인증서 저장소 공급자 사용
 SQLServerColumnEncryptionCertificateStoreProvider는 Windows 인증서 저장소에 열 마스터 키를 저장하는 데 사용될 수 있습니다. SSMS(SQL Server Management Studio) Always Encrypted 마법사 또는 기타 지원되는 도구를 사용하여 데이터베이스에서 열 마스터 키 및 열 암호화 키 정의를 만듭니다. 동일한 마법사를 사용하여 Windows 인증서 저장소에서 Always Encrypted 데이터에 대한 열 마스터 키로 사용할 수 있는 자체 서명된 인증서를 생성할 수 있습니다. 열 마스터 키 및 열 암호화 키 T-SQL 구문에 대한 자세한 내용은 각각 [열 마스터 키 만들기](../../t-sql/statements/create-column-master-key-transact-sql.md) 및 [열 암호화 키 만들기](../../t-sql/statements/create-column-encryption-key-transact-sql.md)를 참조하세요.

@@ -1,4 +1,5 @@
 ---
+description: JDBC에서의 FIPS 모드
 title: JDBC에서의 FIPS 모드 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
@@ -9,12 +10,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 83ce3690d194b8b06fc79d58c2d7bc7efa996619
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.openlocfilehash: 9a8e6af7e191576ec4fe056c048a4f4a4b7901c4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81293383"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438395"
 ---
 # <a name="fips-mode"></a>FIPS 모드
 
@@ -84,7 +85,7 @@ FIPS 준수 모드에서 JDBC 드라이버를 실행하려면 연결 속성을 �
 
 #### <a name="properties"></a>속성 
 
-|속성|Type|기본값|Description|메모|
+|속성|Type|기본값|설명|메모|
 |---|---|---|---|---|
 |encrypt|부울 ["true / false"]|"false"|FIPS가 사용 설정된 JVM의 경우 암호화 속성이 **true**여야 합니다.||
 |TrustServerCertificate|부울 ["true / false"]|"false"|FIPS의 경우 사용자의 인증서 체인 유효성 검사가 필요하므로 사용자가 이 속성에 대해 **"false"** 값을 사용해야 합니다. ||

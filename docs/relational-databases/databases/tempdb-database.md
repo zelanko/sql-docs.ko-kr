@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: ce4053fb-e37a-4851-b711-8e504059a780
 author: stevestein
 ms.author: sstein
-ms.reviewer: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: eafc98ea91b60ec21396e1b25eca2684e24f5cfc
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: 5090a021f1402c88abf84d502ae3538eeced5bd1
+ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88861368"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076828"
 ---
 # <a name="tempdb-database"></a>tempdb 데이터베이스
 
@@ -228,15 +227,33 @@ GO
 > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/How-and-When-To-Memory-Optimized-TempDB-Metadata/player?WT.mc_id=dataexposed-c9-niner]
 
 
+### <a name="configuring-and-using-memory-optimized-tempdb-metadata"></a>메모리 최적화 tempdb 메타데이터 구성 및 사용
+
 해당 새 기능으로 옵트인하려면 다음 스크립트를 사용합니다.
 
 ```sql
-ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED TEMPDB_METADATA = ON 
+ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED TEMPDB_METADATA = ON;
 ```
 
 이 구성 변경이 적용되려면 서비스를 다시 시작해야 합니다.
 
-이 구현에는 몇 가지 제한 사항이 있습니다.
+다음 T-SQL 명령을 사용하여 `tempdb`가 메모리 최적화인지 여부를 확인할 수 있습니다.
+
+```sql
+SELECT SERVERPROPERTY('IsTempdbMetadataMemoryOptimized');
+```
+
+메모리 최적화 `tempdb` 메타데이터를 사용하도록 설정한 후 어떤 이유로든 서버를 시작할 수 없는 경우, **-f** 시작 옵션을 통해 [minimal 구성](../../database-engine/configure-windows/start-sql-server-with-minimal-configuration.md)으로 SQL Server 인스턴스를 시작하여 기능을 무시할 수 있습니다. 이후 기능을 사용하지 않도록 설정한 다음 표준 모드로 SQL Server를 다시 시작할 수 있습니다.
+
+서버 메모리 부족을 방지하기 위해 `tempdb`를 [리소스 풀](../in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)에 바인딩할 수 있습니다. 이 작업은 리소스 풀을 데이터베이스에 바인딩하기 위해 일반적으로 수행하는 단계가 아니라 [`ALTER SERVER`](../../t-sql/statements/alter-server-configuration-transact-sql.md) 명령을 통해 수행됩니다.
+
+```sql
+ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED TEMPDB_METADATA = ON (RESOURCE_POOL = 'pool_name');
+```
+
+메모리 최적화 tempdb 메타데이터를 이미 사용하도록 설정한 경우에도 이 변경을 적용하려면 다시 시작해야 합니다.
+
+### <a name="memory-optimized-tempdb-limitations"></a>메모리 최적화 tempdb 제한 사항
 
 - 기능 설정 및 해제가 동적으로 이루어지지 않습니다. `tempdb`의 구조를 변경해야 하는 고유한 사항 때문에 이 기능을 설정하거나 해제하려면 다시 시작해야 합니다.
 
@@ -249,12 +266,15 @@ ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED TEMPDB_METADATA = ON
   예:
     
   ```sql
-  BEGIN TRAN
+  BEGIN TRAN;
+  
   SELECT *
-  FROM tempdb.sys.tables  -----> Creates a user in-memory OLTP transaction on tempdb
+  FROM tempdb.sys.tables;  -----> Creates a user in-memory OLTP transaction in tempdb
+  
   INSERT INTO <user database>.<schema>.<mem-optimized table>
-  VALUES (1)  ----> Tries to create user in-memory OLTP transaction but will fail
-   COMMIT TRAN
+  VALUES (1); ----> Tries to create a user in-memory OLTP transaction in the user database but will fail
+  
+  COMMIT TRAN;
   ```
     
 - 메모리 최적화 테이블에 대한 쿼리가 잠금 및 분리 힌트를 지원하지 않으므로, 메모리 최적화 `tempdb` 카탈로그 보기에 대한 쿼리는 잠금 및 분리 힌트를 유지하지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 다른 시스템 카탈로그 보기와 마찬가지로 시스템 보기에 대한 모든 트랜잭션은 `READ COMMITTED`(또는 이 경우 `READ COMMITTED SNAPSHOT`) 분리 내에 있습니다.
@@ -265,14 +285,6 @@ ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED TEMPDB_METADATA = ON
 
 > [!NOTE] 
 > 이러한 제한 사항은 `tempdb` 시스템 보기를 참조하는 경우에만 적용됩니다. 원하는 경우 사용자 데이터베이스에서 메모리 최적화 테이블에 액세스할 때와 동일한 트랜잭션에서 임시 테이블을 만들 수 있습니다.
-
-다음 T-SQL 명령을 사용하여 `tempdb`가 메모리 최적화인지 여부를 확인할 수 있습니다.
-
-```
-SELECT SERVERPROPERTY('IsTempdbMetadataMemoryOptimized')
-```
-
-메모리 최적화 `tempdb` 메타데이터를 사용하도록 설정한 후 어떤 이유로든 서버를 시작할 수 없는 경우, **-f** 시작 옵션을 통해 [minimal 구성](../../database-engine/configure-windows/start-sql-server-with-minimal-configuration.md)으로 SQL Server 인스턴스를 시작하여 기능을 무시할 수 있습니다. 이후 기능을 사용하지 않도록 설정한 다음 표준 모드로 SQL Server를 다시 시작할 수 있습니다.
 
 ## <a name="capacity-planning-for-tempdb-in-sql-server"></a>SQL Server의 tempdb 용량 계획
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로덕션 환경에서 `tempdb`의 적절한 크기는 많은 요인에 따라 결정됩니다. 앞서 설명한 것처럼 기존 작업, 사용된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기능 등이 이러한 요인에 포함됩니다. SQL Server 테스트 환경에서 다음 태스크를 수행하여 기존 작업을 분석하는 것이 좋습니다.

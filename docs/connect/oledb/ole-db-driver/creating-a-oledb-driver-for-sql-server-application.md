@@ -1,6 +1,6 @@
 ---
 title: SQL Server 애플리케이션용 OLE DB 드라이버 만들기 | Microsoft Docs
-description: SQL Server 애플리케이션용 OLE DB 드라이버 만들기
+description: OLE DB Driver for SQL Server 애플리케이션을 만들고 추가 리소스를 찾는 데 필요한 단계에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, application creation
 - applications [OLE DB Driver for SQL Server]
 - OLE DB, creating applications
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: e6b1ef5d4c4cbf486bd041c3bc39668fb9595e4b
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 49a9f20904c5719960cbffc7ca94c825def7231c
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004433"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88862333"
 ---
 # <a name="creating-an-ole-db-driver-for-sql-server-application"></a>SQL Server 애플리케이션용 OLE DB 드라이버 만들기
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

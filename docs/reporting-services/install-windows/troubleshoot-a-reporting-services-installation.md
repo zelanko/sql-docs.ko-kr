@@ -1,4 +1,5 @@
 ---
+description: Reporting Services 설치 문제 해결
 title: Reporting Services 설치 문제 해결 | Microsoft Docs
 ms.date: 01/17/2018
 ms.prod: reporting-services
@@ -7,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: e2536f7f-d90c-4571-9ffd-6bbfe69018d6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 281eeffa237a24e6da8794e99ff6d4fd3a716181
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b3d3bf132fb869ac2273a1db76dd34c4f24970ad
+ms.sourcegitcommit: 04fb4c2d7ccddd30745b334b319d9d2dd34325d6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68889693"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89569893"
 ---
 # <a name="troubleshoot-a-reporting-services-installation"></a>Reporting Services 설치 문제 해결
 
@@ -83,7 +84,7 @@ ms.locfileid: "68889693"
   
 -   SharePoint 2013/2016 중앙 관리 -&gt; "애플리케이션 관리" -&gt; "서비스 애플리케이션 관리" -&gt; "새로 만들기" 메뉴  
   
- **해결 방법:** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint Services를 등록하고 시작하려면 다음 단계를 완료합니다.  
+ **해결 방법:**[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint Services를 등록하고 시작하려면 다음 단계를 완료합니다.  
   
 1.  SharePoint 2013/2016 중앙 관리를 실행하는 컴퓨터에서  
   
@@ -106,7 +107,7 @@ ms.locfileid: "68889693"
  ![맨 위로 이동 링크와 함께 사용되는 화살표 아이콘](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "맨 위로 이동 링크와 함께 사용되는 화살표 아이콘") [SharePoint 모드 설치 관련 문제 해결](#bkmk_tshoot_sharepoint)  
   
 ###  <a name="reporting-services-powershell-cmdlets-are-not-available-and-commands-are-not-recognized"></a><a name="bkmk_cmdlets_not_recognized"></a> Reporting Services PowerShell cmdlet을 사용할 수 없으며 명령이 인식되지 않습니다.  
- **설명:** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] PowerShell cmdlet을 실행하려고 하면 다음과 비슷한 오류 메시지가 표시됩니다.  
+ **설명:**[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] PowerShell cmdlet을 실행하려고 하면 다음과 비슷한 오류 메시지가 표시됩니다.  
   
 -   'Install-SPRSServiceInstall-SPRSService' 용어는 cmdlet, 함수, 스크립트 파일 또는 실행 프로그램의 이름으로 **인식되지 않습니다** . 이름의 철자를 확인하거나 경로가 포함되어 있으면 경로가 올바른지 확인하고 다시 시도합니다. 줄:1 char:39+ Install-SPRSServiceInstall-SPRSService <<<<    + CategoryInfo          : ObjectNotFound: (Install-SPRSServiceInstall-SPRSService:String) [], CommandNotFoundExcep  
   
@@ -118,7 +119,7 @@ ms.locfileid: "68889693"
   
  해결 방법 중 하나를 완료할 때 **SharePoint 2013/2016 관리 셸**이 열려 있는 경우 관리 셸을 닫고 다시 엽니다.  
   
- 자세한 내용은 다음 문서를 참조하세요.  
+ 자세한 내용은 다음 아티클을 참조하세요.  
   
 -   [SharePoint 제품용 Reporting Services 추가 기능 검색 위치](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)  
   
@@ -139,7 +140,7 @@ ms.locfileid: "68889693"
   
  **해결 방법:** 오류 메시지에는 이 문제를 해결하기 위한 세 가지 제안 단계가 포함되어 있습니다. '보고서 서버 URL이 구성되지 않았습니다.'라는 메시지의 첫 번째 제안은 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]이전의 보고서 서버 버전과 통합하는 경우 관련됩니다. 이전 보고서 서버 버전의 SharePoint 구성은 **SQL Server Reporting Services(2008 및 2008 R2)** 를 사용하여 **일반 애플리케이션 설정**페이지에서 완료됩니다.  
   
- **추가 정보:** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스에 연결해야 하는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기능을 사용하려고 하면 이 오류 메시지가 표시됩니다. 다음 내용이 포함됩니다.  
+ **추가 정보:**[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스에 연결해야 하는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기능을 사용하려고 하면 이 오류 메시지가 표시됩니다. 다음 내용이 포함됩니다.  
   
 -   SharePoint 문서 라이브러리에서 SQL Server 보고서 작성기 열기  
   
@@ -178,12 +179,12 @@ ms.locfileid: "68889693"
   
  이 기능은 SQL Server Reporting Services 서비스 애플리케이션이 없거나 보고서 서버 URL이 중앙 관리에 구성되지 않았기 때문에 지원되지 않습니다.  
   
- **해결 방법:** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 애플리케이션이 있고 올바르게 구성되었는지 확인합니다. 자세한 내용은 [SharePoint 모드에서 첫 번째 보고서 서버 설치](install-the-first-report-server-in-sharepoint-mode.md)를 참조하세요.
+ **해결 방법:**[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 애플리케이션이 있고 올바르게 구성되었는지 확인합니다. 자세한 내용은 [SharePoint 모드에서 첫 번째 보고서 서버 설치](install-the-first-report-server-in-sharepoint-mode.md)를 참조하세요.
   
  ![맨 위로 이동 링크와 함께 사용되는 화살표 아이콘](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "맨 위로 이동 링크와 함께 사용되는 화살표 아이콘") [SharePoint 모드 설치 관련 문제 해결](#bkmk_tshoot_sharepoint)  
   
 ###  <a name="you-see-an-error-message-that-rs_shp-is-not-supported-with-prepareimage"></a><a name="bkmk_RS_SHP_notsupported"></a> PREPAREIMAGE에는 RS_SHP가 지원되지 않는다는 오류 메시지가 표시됩니다.  
- **설명:** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에 대한 PREPAREIMAGE를 실행하려고 하면 다음과 비슷한 오류 메시지가 표시됩니다.  
+ **설명:**[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에 대한 PREPAREIMAGE를 실행하려고 하면 다음과 비슷한 오류 메시지가 표시됩니다.  
   
  "SysPrep이 지원되지 않으므로 PREPAREIMAGE 동작을 실행할 때 지정된 'RS_SHP' 기능이 지원되지 않습니다. SysPrep과 호환되지 않는 기능을 제거하고 설치 프로그램을 다시 실행합니다."  
   
@@ -211,7 +212,7 @@ ms.locfileid: "68889693"
     -   **run \<** *.NET 4.0 Framework directory* **>\InstallUtil.exe \<** *Report Server Bin directory* **>\ReportingServicesLibrary.dll**  
   
         > [!NOTE]  
-        >  \< *.NET 4.0 Framework 디렉터리*>를 .NET Framework 4.0 파일의 실제 경로로 바꾸고 \<*Report Server Bin 디렉터리*>를 보고서 서버 bin 파일의 실제 경로로 바꿉니다.  
+        >  \<*.NET 4.0 Framework directory*>를 .NET Framework 4.0 파일의 실제 경로로 바꾸고 \<*Report Server Bin directory*>를 보고서 서버 bin 파일의 실제 경로로 바꿉니다.  
   
 3.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스를 다시 시작합니다.  
   
@@ -255,7 +256,7 @@ ms.locfileid: "68889693"
 
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]를 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]로 업그레이드할 때 NTLM 인증에 보고서 서버 서비스 계정에 대한 기본 제공 계정을 사용하는 경우 업그레이드 후에 보고서 서버 또는 웹 포털에 액세스할 때 401-권한이 없음 오류가 발생할 수 있습니다.  
   
- Windows 인증에 대한 기본 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 구성이 변경되었기 때문에 이 메시지가 표시됩니다. 보고서 서버 서비스 계정이 네트워크 서비스 또는 로컬 시스템인 경우 협상 인증이 구성됩니다. NTLM은 보고서 서버 서비스 계정이 이러한 기본 제공 계정 중 하나가 아닌 경우에 구성됩니다. 업그레이드 후에 이 문제를 해결하려면 RSReportServer.config 파일을 편집하여 **AuthenticationType** 을 **RSWindowsNTLM**으로 구성하면 됩니다. 자세한 내용은 [Configure Windows Authentication on the Report Server](../../reporting-services/security/configure-windows-authentication-on-the-report-server.md)을 참조하세요.  
+ Windows 인증에 대한 기본 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 구성이 변경되었기 때문에 이 메시지가 표시됩니다. 보고서 서버 서비스 계정이 네트워크 서비스 또는 로컬 시스템인 경우 협상 인증이 구성됩니다. NTLM은 보고서 서버 서비스 계정이 이러한 기본 제공 계정 중 하나가 아닌 경우에 구성됩니다. 업그레이드 후에 이 문제를 해결하려면 RSReportServer.config 파일을 편집하여 **AuthenticationType** 을 **RSWindowsNTLM**으로 구성하면 됩니다. 자세한 내용은 [Report Server에서 Windows 인증 구성](../../reporting-services/security/configure-windows-authentication-on-the-report-server.md)을 참조하세요.  
 
 ### <a name="uninstalling-32-bit-instance-of-sql-server-2016-reporting-services-in-side-by-side-deployment-with-a-64-bit-instance-breaks-the-64-bit-instance"></a><a name="Uninstall32BitBreaks64Bit"></a> 64비트 인스턴스와 함께 배포된 환경에서 SQL Server 2016 Reporting Services의 32비트 인스턴스를 제거하면 64비트 인스턴스가 중단되는 경우
 
@@ -273,7 +274,7 @@ ms.locfileid: "68889693"
   
 -   TechNet Wiki: [SharePoint 2010 통합 모드에서 SSRS(SQL Server Reporting Services) 문제 해결](https://social.technet.microsoft.com/wiki/contents/articles/troubleshoot-sql-server-reporting-services-ssrs-in-sharepoint-integrated-mode.aspx)  
   
--   [포럼: SQL Server Reporting Services](https://social.msdn.microsoft.com/Forums/sqlreportingservices/threads)  
+-   [Microsoft Q & A: SQL Server Reporting Services](https://docs.microsoft.com/answers/topics/sql-server-reporting-services.html)  
   
 -   피드백이나 추가 질문이 있으신가요? [Microsoft SQL Server UserVoice](https://feedback.azure.com/forums/908035-sql-server)를 방문하세요.  
   

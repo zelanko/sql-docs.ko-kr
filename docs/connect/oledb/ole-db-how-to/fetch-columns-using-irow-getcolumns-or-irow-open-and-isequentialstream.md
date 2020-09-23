@@ -1,6 +1,6 @@
 ---
 title: IRow::GetColumns(또는 IRow::Open) 및 ISequentialStream을 사용하여 열 인출 | Microsoft Docs
-description: IRow::GetColumns(또는 IRow::Open) 및 ISequentialStream을 사용하여 열 인출
+description: OLE DB Driver for SQL Server의 ISequentialStream 인터페이스를 사용하여 대형 데이터를 바인딩하거나 검색하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -12,16 +12,16 @@ helpviewer_keywords:
 - Open method
 - ISequentialStream interface, samples
 - GetColumns method
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 099c2ded895cae98a63d1c6e74688a2b26fb171f
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: eeaebe20dd27eb24edc1d23060d7a64fec8f0916
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003622"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88860603"
 ---
-# <a name="fetch-columns-using-irowgetcolumns-or-irowopen-and-isequentialstream"></a>IRow::GetColumns/IRow::Open 및 ISequentialStream을 사용하여 열 인출
+# <a name="fetch-columns-by-using-irowgetcolumns-or-irowopen-and-isequentialstream"></a>IRow::GetColumns(또는 IRow::Open) 및 ISequentialStream을 사용하여 열 페치
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]

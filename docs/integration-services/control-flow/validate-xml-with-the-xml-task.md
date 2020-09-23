@@ -2,7 +2,7 @@
 description: Validate XML with the XML Task
 title: XML 태스크를 사용하여 XML 유효성 검사 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 09/08/2020
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 224fc025-c21f-4d43-aa9d-5ffac337f9b0
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2dd292ea05ae40ff5cd19a1a8e8de55f9f0b9095
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d5009a7a1c0b51feb555223294e1cc4cb5ff490f
+ms.sourcegitcommit: 04fb4c2d7ccddd30745b334b319d9d2dd34325d6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88349259"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89570359"
 ---
 # <a name="validate-xml-with-the-xml-task"></a>Validate XML with the XML Task
 
@@ -28,7 +28,7 @@ ms.locfileid: "88349259"
 
   XML 태스크의 **ValidationDetails** 속성을 사용하도록 설정하여 XML 문서의 유효성을 검사하고 풍부한 오류 출력을 가져올 수 있습니다.  
   
- 다음 스크린샷에는 다양한 오류 출력을 제공하는 XML 유효성 검사에 필요한 설정이 포함된 **XML 태스크 편집기** 가 나와 있습니다.  
+ 다음 스크린샷에는 다양한 오류 출력을 제공하는 XML 유효성 검사에 필요한 설정이 포함된 **XML 태스크 편집기**가 나와 있습니다.  
   
  ![XML 태스크 편집기의 XML 태스크 속성](../../integration-services/control-flow/media/xmltaskproperties.jpg "XML 태스크 편집기의 XML 태스크 속성")  
   
@@ -121,7 +121,7 @@ ORDER BY 2 DESC, COALESCE(error, 'Z');
   
  위 텍스트에 나와 있는 두 번째 샘플 쿼리를 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 에서 표시한 결과는 다음과 같습니다.  
   
- ![Management Studio에서 XML 오류를 그룹화하는 쿼리](../../integration-services/control-flow/media/queryforxmlerrors.jpg "Management Studio에서 XML 오류를 그룹화하는 쿼리")  
+ ![Management Studio에서 XML 오류를 그룹화하는 쿼리](../../integration-services/control-flow/media/query-for-xml-errors.png "Management Studio에서 XML 오류를 그룹화하는 쿼리")  
   
 ## <a name="see-also"></a>참고 항목  
  [XML 태스크](../../integration-services/control-flow/xml-task.md)   

@@ -1,7 +1,7 @@
 ---
 title: 애플리케이션 배포란?
 titleSuffix: SQL Server Big Data Clusters
-description: 이 문서에서는 SQL Server 2019 빅 데이터 클러스터의 애플리케이션 배포를 설명합니다.
+description: 애플리케이션 배포가 SQL Server 2019 빅 데이터 클러스터에서 애플리케이션을 만들고, 관리하고, 실행하는 인터페이스를 제공하는 방법을 알아봅니다.
 author: cloudmelon
 ms.author: melqin
 ms.reviewer: mikeray
@@ -10,12 +10,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 4423e6fe624c27c0b9c06d3ff59c56648762af99
-ms.sourcegitcommit: d973b520f387b568edf1d637ae37d117e1d4ce32
+ms.openlocfilehash: 4bde49046ab8d4f4ea7217970ec85c7a7966f487
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85215452"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88765332"
 ---
 # <a name="what-is-application-deployment-on-a-big-data-cluster"></a>빅 데이터 클러스터의 애플리케이션 배포란?
 
@@ -57,7 +57,7 @@ ReplicaSet가 생성되고 Pod가 시작된 후에는 `spec.yaml` 파일에 `sch
 
 SQL Server 2019 CU5는 Red Hat OpenShift의 빅 데이터 클러스터 배포뿐만 아니라 BDC의 업데이트된 보안 모델도 지원하므로, 권한 있는 컨테이너가 더 이상 필요하지 않습니다. 권한 없는 컨테이너 외에도, 컨테이너는 SQL Server 2019 CU5를 사용하는 모든 신규 배포에 대해 기본적으로 루트가 아닌 사용자로 실행됩니다.
 
-CU5 릴리스 시점에 [앱 배포](concept-application-deployment.md) 인터페이스를 사용하여 배포되는 애플리케이션의 설치 단계는 여전히 ‘루트’ 사용자로 실행됩니다. 이 동작은 설치 도중에 애플리케이션에서 사용할 추가 패키지가 설치되기 때문에 필요합니다. 애플리케이션의 일부로 배포된 다른 사용자 코드는 권한이 낮은 사용자로 실행됩니다. 
+CU5 릴리스 시점에 [앱 배포]() 인터페이스를 사용하여 배포되는 애플리케이션의 설치 단계는 여전히 ‘루트’ 사용자로 실행됩니다. 이 동작은 설치 도중에 애플리케이션에서 사용할 추가 패키지가 설치되기 때문에 필요합니다. 애플리케이션의 일부로 배포된 다른 사용자 코드는 권한이 낮은 사용자로 실행됩니다. 
 
 또한 **CAP_AUDIT_WRITE** 기능은 cron 작업을 사용하여 SSIS 애플리케이션 예약을 허용하는 데 필요한 선택적 기능입니다. 애플리케이션의 yaml 사양 파일에서 일정을 지정하는 경우 애플리케이션은 추가 기능을 필요로 하는 cron 작업을 통해 트리거됩니다.  또는 *azdata app run*을 사용하여 웹 서비스 호출을 통해 요청 시 애플리케이션을 트리거할 수 있으며, 여기에는 CAP_AUDIT_WRITE 기능이 필요하지 않습니다. 
 
@@ -78,18 +78,18 @@ allowedCapabilities:
 ## <a name="how-to-work-with-application-deployment"></a>애플리케이션 배포를 사용하는 방법
 
 애플리케이션 배포의 두 가지 주요 인터페이스는 다음과 같습니다. 
-- [명령줄 인터페이스 `azdata`](big-data-cluster-create-apps.md)
+- [명령줄 인터페이스 `azdata`](app-create.md)
 - [Visual Studio Code 및 Azure Data Studio 확장](app-deployment-extension.md)
 
-RESTful 웹 서비스를 사용하여 애플리케이션을 실행할 수도 있습니다. 자세한 내용은 [빅 데이터 클러스터에서 애플리케이션 사용](big-data-cluster-consume-apps.md)을 참조하세요.
+RESTful 웹 서비스를 사용하여 애플리케이션을 실행할 수도 있습니다. 자세한 내용은 [빅 데이터 클러스터에서 애플리케이션 사용](app-consume.md)을 참조하세요.
 
 ## <a name="next-steps"></a>다음 단계
 
 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]에서 애플리케이션을 만들고 실행하는 방법에 대한 자세한 내용은 다음을 참조하세요.
 
-- [azdata를 사용하여 애플리케이션 배포](big-data-cluster-create-apps.md)
+- [azdata를 사용하여 애플리케이션 배포](app-create.md)
 - [앱 배포 확장을 사용하여 애플리케이션 배포](app-deployment-extension.md)
-- [빅 데이터 클러스터에서 애플리케이션 사용](big-data-cluster-consume-apps.md)
+- [빅 데이터 클러스터에서 애플리케이션 사용](app-consume.md)
 
 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]에 대한 자세한 내용은 다음 개요를 참조하세요.
 

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2c4adf2f-e9c4-4fae-bd3c-97fe64436caf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5d98e13b0d42dd61ae87e52ef3cc757d12093f4b
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: d01a7cdd6d81d0c27e9c8d8562f71f5605ed4df2
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86455685"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396692"
 ---
 # <a name="sharepoint-list-connection-type-ssrs"></a>SharePoint 목록 연결 형식(SSRS)
 
@@ -40,7 +40,7 @@ Microsoft SharePoint 목록의 데이터를 보고서에 포함하려면 Microso
   
  **표 1**  
   
-||지원되는 자격 증명|클래식 모드 Windows 인증|*클레임 인증|  
+|검색 유형|지원되는 자격 증명|클래식 모드 Windows 인증|*클레임 인증|  
 |-|---------------------------|-----------------------------------------|-----------------------------|  
 |로컬 팜 SharePoint 팜 목록|Windows 인증(통합) 또는 SharePoint 사용자 토큰|예|예|  
 ||저장됨, 프롬프트, 없음(Windows 자격 증명 사용)<br /><br /> Windows 자격 증명이 아닌 다른 자격 증명이 포함된 저장된 자격 증명 및 프롬프트 자격 증명은 지원되지 않습니다.|예|예|  
@@ -51,7 +51,7 @@ Microsoft SharePoint 목록의 데이터를 보고서에 포함하려면 Microso
   
  **표 2**  
   
-||지원되는 자격 증명|클래식 모드 Windows 인증|*클레임 인증|  
+|검색 유형|지원되는 자격 증명|클래식 모드 Windows 인증|*클레임 인증|  
 |-|---------------------------|-----------------------------------------|-----------------------------|  
 |로컬 팜 SharePoint 팜 목록|Windows 인증(통합) 또는 SharePoint 사용자 토큰|예|예|  
 ||저장됨, 프롬프트, 없음(Windows 자격 증명 사용)<br /><br /> Windows 자격 증명이 아닌 다른 자격 증명이 포함된 저장된 자격 증명 및 프롬프트 자격 증명은 지원되지 않습니다.|예|예|  

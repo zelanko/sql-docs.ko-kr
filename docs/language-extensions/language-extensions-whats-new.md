@@ -1,7 +1,7 @@
 ---
 title: SQL Server 언어 확장의 새로운 기능
 titleSuffix: ''
-description: SQL Server 언어 확장의 새로운 기능에 관해 알아봅니다.
+description: 외부 언어와 데이터 플랫폼 간의 통합을 확장하고 심화하는 SQL Server 언어 확장의 새로운 기능에 대해 알아봅니다.
 author: dphansen
 ms.author: davidph
 ms.date: 11/05/2019
@@ -9,15 +9,15 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b52daf4ad0e789dc1508b5903cc95a92c39e0929
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 4a38bba48d9accd16a3e8ca68bd3136c3419e5ad
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921061"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88173518"
 ---
 # <a name="whats-new-in-sql-server-language-extensions"></a>SQL Server 언어 확장의 새로운 기능
-[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2019 and later](../includes/applies-to-version/sqlserver2019.md)]
 
 Microsoft는 외부 언어와 데이터 플랫폼 간의 통합을 계속 확장하고 발전시키고 있으며, 릴리스마다 SQL Server에 [언어 확장](language-extensions-overview.md) 기능을 추가하고 있습니다. 
 

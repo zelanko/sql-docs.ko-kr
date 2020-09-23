@@ -4,24 +4,27 @@ titleSuffix: ''
 description: 언어 확장은 외부 코드를 실행하는 데 사용되는 SQL Server의 기능입니다. SQL Server 2019에서는 Java가 지원됩니다. 확장성 프레임워크를 사용하여 외부 코드에 관계형 데이터를 사용할 수 있습니다.
 author: dphansen
 ms.author: davidph
-ms.date: 11/05/2019
+ms.date: 08/19/2020
 ms.topic: overview
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f5ef0b9dd1023f662850e6e680507f5bf4041051
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 3877e08c3f8976fc6a5c0aedfca594b8dee165a6
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921072"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88645932"
 ---
 # <a name="what-is-sql-server-language-extensions"></a>SQL Server 언어 확장이란?
-[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2019 and later](../includes/applies-to-version/sqlserver2019.md)]
 
 언어 확장은 외부 코드를 실행하는 데 사용되는 SQL Server의 기능입니다. [확장성 프레임워크](concepts/extensibility-framework.md)를 사용하여 외부 코드에 관계형 데이터를 사용할 수 있습니다.
 
 SQL Server 2019에서는 Java가 지원됩니다. 기본 Java 런타임은 Zulu Open JRE입니다. 다른 Java JRE 또는 SDK를 사용할 수도 있습니다.
+
+> [!NOTE]
+> SQL Server에서 Python 또는 R을 실행하는 방법에 대한 자세한 내용은 [Machine Learning Services](../machine-learning/sql-server-machine-learning-services.md) 설명서를 참조하세요.
 
 ## <a name="what-you-can-do-with-language-extensions"></a>언어 확장으로 수행 가능한 작업
 

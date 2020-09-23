@@ -1,6 +1,6 @@
 ---
 title: 향상된 날짜 및 시간 형식에 대한 대량 복사 변경 사항(OLE DB) | Microsoft Docs
-description: 향상된 날짜 및 시간 형식에 대한 대량 복사 변경 사항(OLE DB)
+description: OLE DB Driver for SQL Server에서 대량 복사 기능을 지원하기 위한 날짜/시간 기능 향상에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -10,14 +10,14 @@ ms.technology: connectivity
 ms.topic: reference
 helpviewer_keywords:
 - OLE DB, bulk copy operations
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 89a19fa639c7ae20aad776bdcd196dea0f0c8700
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 808454606f24ab397f5423edf901393ab3f7ccfa
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004534"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88860232"
 ---
 # <a name="bulk-copy-changes-for-enhanced-date-and-time-types-ole-db"></a>향상된 날짜 및 시간 형식에 대한 대량 복사 변경 사항(OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -1,5 +1,6 @@
 ---
-title: SQLSRV 드라이버를 사용하여 날짜 및 시간 형식을 문자열로 검색 | Microsoft Docs
+title: SQLSRV 드라이버를 사용하여 날짜 및 시간 형식을 문자열로 검색
+description: SQLSRV driver for PHP for SQL Server를 사용하여 날짜 및 시간 형식을 문자열로 검색하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 02/11/2019
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 58a974ea-4daf-4e3b-98ed-9731b9c9250f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3b8cd038579c471891e6e9ae0d81075b22016f6d
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 51135c202b40cbae5a251a2ab36a695f6981c68e
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80916137"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87410967"
 ---
 # <a name="how-to-retrieve-date-and-time-types-as-strings-using-the-sqlsrv-driver"></a>방법: SQLSRV 드라이버를 사용하여 날짜 및 시간 형식을 문자열로 검색
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -194,4 +195,4 @@ sqlsrv_close($conn);
 ## <a name="see-also"></a>참고 항목
 [데이터 검색](../../connect/php/retrieving-data.md)
 
-[방법: PDO_SQLSRV를 사용하여 날짜 및 시간 형식을 PHP Datetime 개체로 검색](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)을 참조하세요.
+[방법: PDO_SQLSRV를 사용하여 날짜 및 시간 형식을 PHP Datetime 개체로 검색](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)

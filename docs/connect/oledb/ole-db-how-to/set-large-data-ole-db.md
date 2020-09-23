@@ -1,6 +1,6 @@
 ---
 title: 대형 데이터 설정(OLE DB 드라이버)
-description: 대형 데이터 설정(OLE DB)
+description: OLE DB Driver for SQL Server에서 BLOB 데이터를 설정하고, 테이블을 만들고, 레코드를 추가하고, 행 집합에서 해당 레코드를 페치하고, BLOB 필드의 값을 설정하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -10,14 +10,14 @@ ms.technology: connectivity
 ms.topic: reference
 helpviewer_keywords:
 - large data
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 9650f475da3fd15d2956cc8a64c9fcb995b562ce
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 51ca3f7d977b558f196e95cb826b11cd22cc0ce7
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244681"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88860269"
 ---
 # <a name="set-large-data-ole-db"></a>대형 데이터 설정(OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

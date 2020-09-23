@@ -34,25 +34,32 @@ ms.assetid: 12be2923-7289-4150-b497-f17e76a50b2e
 author: pmasl
 ms.author: umajay
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d6c14ef618f8f2e64a4b3a59f7bd29dfaf327b6a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bff0a596c457ee5ce24b665be3897f86e625b3b0
+ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459906"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076716"
 ---
 # <a name="dbcc-show_statistics-transact-sql"></a>DBCC SHOW_STATISTICS(Transact-SQL)
 
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-DBCC SHOW_STATISTICS는 테이블 또는 인덱싱된 뷰에 대한 현재 쿼리 최적화 통계를 표시합니다. 쿼리 최적화 프로그램은 통계를 사용하여 쿼리 결과의 카디널리티 또는 행 수를 예상함으로써 고품질의 쿼리 계획을 생성할 수 있습니다. 예를 들어 쿼리 최적화 프로그램은 카디널리티 예상치를 통해 쿼리 계획에서 index scan 연산자 대신 index seek 연산자를 선택하여 리소스가 많이 소요되는 index scan을 피함으로써 쿼리 성능을 개선할 수 있습니다.
+DBCC SHOW_STATISTICS는 테이블 또는 인덱싱된 뷰에 대한 현재 쿼리 최적화 통계를 표시합니다. 쿼리 최적화 프로그램은 통계를 사용하여 쿼리 결과의 카디널리티 또는 행 수를 예상하며, 이를 통해 쿼리 최적화 프로그램이 고품질 쿼리 계획을 만들 수 있습니다. 예를 들어 쿼리 최적화 프로그램은 카디널리티 예상치를 통해 쿼리 계획에서 인덱스 스캔 연산자 대신 인덱스 검색 연산자를 선택하여 리소스가 많이 소요되는 인덱스 스캔을 피함으로써 쿼리 성능을 개선할 수 있습니다.
   
-쿼리 최적화 프로그램은 테이블 또는 인덱싱된 뷰에 대한 통계를 통계 개체에 저장합니다. 테이블의 경우 통계 개체는 인덱스 또는 테이블 열의 목록에 생성됩니다. 통계 개체에는 통계에 대한 메타데이터가 있는 헤더, 통계 개체의 첫 번째 키 열에 있는 값의 분포에 대한 히스토그램, 그리고 열 간 상관 관계를 측정하는 밀도 벡터가 포함됩니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 통계 개체의 일부 데이터를 사용하여 카디널리티 예상치를 계산할 수 있습니다.
+쿼리 최적화 프로그램은 테이블 또는 인덱싱된 뷰에 대한 통계를 통계 개체에 저장합니다. 테이블의 경우 통계 개체는 인덱스 또는 테이블 열의 목록에 생성됩니다. 통계 개체에는 통계에 대한 메타데이터가 있는 헤더, 통계 개체의 첫 번째 키 열에 있는 값의 분포에 대한 히스토그램, 그리고 열 간 상관 관계를 측정하는 밀도 벡터가 포함됩니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 통계 개체의 일부 데이터를 사용하여 카디널리티 예상치를 계산할 수 있습니다. 자세한 내용은 [통계](../../relational-databases/statistics/statistics.md) 및 [카디널리티 추정(SQL Server)](../../relational-databases/performance/cardinality-estimation-sql-server.md)을 참조하세요.
   
 DBCC SHOW_STATISTICS는 통계 개체에 저장된 데이터를 바탕으로 헤더, 히스토그램 및 밀도 벡터를 표시합니다. 이 구문을 사용하면 대상 인덱스 이름, 통계 이름 또는 열 이름과 함께 테이블 또는 인덱싱된 뷰를 지정할 수 있습니다. 이 항목에서는 통계를 표시하고 표시된 결과를 읽는 방법을 설명합니다.
-  
-자세한 내용은 [통계](../../relational-databases/statistics/statistics.md)를 참조하세요.
-  
+
+> [!IMPORTANT]
+> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1부터 [sys.dm_db_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md) 동적 관리 뷰를 사용하여 비 증분 통계에 대한 통계 개체에 포함된 헤더 정보를 프로그래밍 방식으로 검색할 수 있습니다.
+
+> [!IMPORTANT]
+> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 및 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1부터 [sys.dm_db_incremental_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-incremental-stats-properties-transact-sql.md) 동적 관리 뷰를 사용하여 증분 통계에 대한 통계 개체에 포함된 헤더 정보를 프로그래밍 방식으로 검색할 수 있습니다.
+
+> [!IMPORTANT]
+> [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU2부터 [sys.dm_db_stats_histogram](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)을 사용하여 통계 개체에 포함된 히스토그램 정보를 프로그래밍 방식으로 검색할 수 있습니다.
+
 ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>구문
@@ -67,10 +74,10 @@ DBCC SHOW_STATISTICS ( table_or_indexed_view_name , target )
 ```  
   
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
 
 DBCC SHOW_STATISTICS ( table_name , target )   
-    [ WITH {STAT_HEADER | DENSITY_VECTOR | HISTOGRAM } [ ,...n ] ]  
+    [ WITH { STAT_HEADER | DENSITY_VECTOR | HISTOGRAM } [ ,...n ] ]  
 [;]
 ```
 
@@ -99,7 +106,7 @@ DBCC SHOW_STATISTICS ( table_name , target )
 
 다음 표에서는 STAT_HEADER를 지정한 경우 결과 집합에 반환되는 열을 설명합니다.
   
-|열 이름|Description|  
+|열 이름|설명|  
 |-----------------|-----------------|  
 |Name|통계 개체의 이름입니다.|  
 |업데이트|통계가 마지막으로 업데이트된 날짜와 시간입니다. [STATS_DATE](../../t-sql/functions/stats-date-transact-sql.md) 함수를 사용하여 이 정보를 검색할 수도 있습니다. 자세한 내용은 이 페이지의 [주의](#Remarks) 섹션을 참조하세요.|  
@@ -162,15 +169,15 @@ DBCC SHOW_STATISTICS ( table_name , target )
 |(CustomerId, ItemId, Price)|CustomerId, ItemId 및 Price의 값이 일치하는 행|  
   
 ## <a name="restrictions"></a>제한  
- DBCC SHOW_STATISTICS는 공간 인덱스 또는 xVelocity 메모리 최적화 columnstore 인덱스에 대한 통계를 제공하지 않습니다.  
+ DBCC SHOW_STATISTICS는 공간 인덱스 또는 메모리 최적화 columnstore 인덱스에 대한 통계를 제공하지 않습니다.  
   
 ## <a name="permissions-for-ssnoversion-and-sssds"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에 대한 사용 권한  
-통계 개체를 보려면 사용자에게 테이블에 대한 SELECT 권한이 있어야 합니다.
+통계 개체를 보려면 사용자에게 테이블에 대한 `SELECT` 권한이 있어야 합니다.
 다음 요구 사항에서는 명령을 실행하기 위해 SELECT 권한이 있어야 합니다.
 -   사용자는 통계 개체의 모든 열에 대해 권한이 있어야 합니다.  
 -   사용자는 필터 조건(있는 경우)에서 모든 열에 대해 권한이 있어야 합니다.  
 -   테이블에 행 수준 보안 정책을 사용할 수 없습니다.
--   통계 개체 내의 열이 SELECT 권한 외에 동적 데이터 마스킹 규칙을 사용하여 마스킹되는 경우 사용자는 UNMASK 권한이 있어야 합니다.
+-   통계 개체 내의 열이 동적 데이터 마스킹 규칙을 사용하여 마스킹되는 경우 사용자는 `SELECT` 권한 외에 `UNMASK` 권한이 있어야 합니다.
 
 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 이전 버전의 경우 사용자는 테이블의 소유자이거나 `sysadmin` 고정 서버 역할, `db_owner` 고정 데이터베이스 역할 또는 `db_ddladmin` 고정 데이터베이스 역할의 멤버여야 합니다.
 
@@ -178,10 +185,7 @@ DBCC SHOW_STATISTICS ( table_name , target )
  > 이전 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 동작으로 동작을 다시 변경하려면 traceflag 9485를 사용합니다.
   
 ## <a name="permissions-for-sssdw-and-sspdw"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에 대한 사용 권한  
-DBCC SHOW_STATISTICS에는 다음 중 하나의 테이블이나 멤버 자격에 대한 SELECT 권한이 필요합니다.
--   고정 서버 역할(fixed server role)  
--   db_owner 고정 데이터베이스 역할  
--   db_ddladmin 고정 데이터베이스 역할  
+DBCC SHOW_STATISTICS에는 테이블에 대한 `SELECT` 권한이나 `sysadmin` 고정 서버 역할, `db_owner` 고정 데이터베이스 역할 또는 `db_ddladmin` 고정 데이터베이스 역할의 멤버 자격이 필요합니다.  
   
 ## <a name="limitations-and-restrictions-for-sssdw-and-sspdw"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에 대한 제한 사항  
 DBCC SHOW_STATISTICS는 셸 데이터베이스의 제어 노드 수준에 저장된 통계를 표시합니다. 컴퓨팅 노드에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 의해 자동 생성된 통계는 표시되지 않습니다.
@@ -233,4 +237,5 @@ GO
 [STATS_DATE&#40;Transact-SQL&#41;](../../t-sql/functions/stats-date-transact-sql.md)  
 [UPDATE STATISTICS&#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md)  
 [sys.dm_db_stats_properties(Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)  
-[sys.dm_db_stats_histogram (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)   
+[sys.dm_db_stats_histogram(Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)   
+[sys.dm_db_incremental_stats_properties (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-incremental-stats-properties-transact-sql.md)   

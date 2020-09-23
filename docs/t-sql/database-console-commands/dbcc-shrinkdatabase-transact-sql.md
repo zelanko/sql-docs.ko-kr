@@ -29,12 +29,12 @@ ms.assetid: fc976afd-1edb-4341-bf41-c4a42a69772b
 author: pmasl
 ms.author: umajay
 monikerRange: = azuresqldb-current ||>= sql-server-2016 ||>= sql-server-linux-2017||=azure-sqldw-latest||= sqlallproducts-allversions
-ms.openlocfilehash: 48181379c0ad20f5e9d8dc1ac8a9dd304fbc5e81
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 57cab52a5edfde4e7469243d7d57ede2e22c0161
+ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88479818"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076618"
 ---
 # <a name="dbcc-shrinkdatabase-transact-sql"></a>DBCC SHRINKDATABASE(Transact-SQL)
 [!INCLUDE [sql-asdb-asa.md](../../includes/applies-to-version/sql-asdb-asa.md)]
@@ -75,14 +75,14 @@ _대상\_백분율_
 데이터베이스를 축소한 후 데이터베이스에 남겨둘 여유 공간의 비율입니다.  
   
 NOTRUNCATE  
-할당된 페이지를 파일 끝에서 파일 앞의 할당되지 않은 페이지로 이동합니다. 이 작업은 파일 내의 데이터를 압축합니다. _대상\_백분율_은 선택 사항입니다. Azure SQL Data Warehouse는 이 옵션을 지원하지 않습니다. 
+할당된 페이지를 파일 끝에서 파일 앞의 할당되지 않은 페이지로 이동합니다. 이 작업은 파일 내의 데이터를 압축합니다. _대상\_백분율_은 선택 사항입니다. [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]에서는 이 옵션을 지원하지 않습니다. 
   
 파일 끝의 여유 공간이 운영 체제로 반환되지 않고, 파일의 실제 크기가 변경되지 않습니다. 따라서 NOTRUNCATE를 지정할 때 데이터베이스는 축소되지 않는 것으로 나타납니다.  
   
 NOTRUNCATE는 데이터 파일에만 적용되며 NOTRUNCATE는 로그 파일에 영향을 주지 않습니다.  
   
 TRUNCATEONLY  
-파일 끝의 모든 여유 공간을 운영 체제로 릴리스합니다. 파일 내의 어떤 페이지도 이동하지 않습니다. 데이터 파일은 마지막으로 할당된 익스텐트까지 축소됩니다. TRUNCATEONLY로 지정된 경우 _대상\_백분율_은 무시됩니다. Azure SQL Data Warehouse는 이 옵션을 지원하지 않습니다.
+파일 끝의 모든 여유 공간을 운영 체제로 릴리스합니다. 파일 내의 어떤 페이지도 이동하지 않습니다. 데이터 파일은 마지막으로 할당된 익스텐트까지 축소됩니다. TRUNCATEONLY로 지정된 경우 _대상\_백분율_은 무시됩니다. [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]에서는 이 옵션을 지원하지 않습니다.
   
 TRUNCATEONLY는 로그 파일에 영향을 줍니다. 데이터 파일만 자르려면 DBCC SHRINKFILE을 사용합니다.  
   

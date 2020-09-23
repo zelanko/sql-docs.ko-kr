@@ -1,6 +1,6 @@
 ---
 title: 날짜 및 시간 기능 향상을 위한 데이터 형식 지원(OLE DB 드라이버) | Microsoft Docs
-description: OLE DB 날짜 및 시간 기능 향상을 위한 데이터 형식 지원
+description: OLE DB Driver for SQL Server에서 SQL Server 날짜/시간 데이터 형식을 지원하는 OLE DB 형식에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -11,14 +11,14 @@ ms.topic: reference
 helpviewer_keywords:
 - date/time [OLE DB], data type support
 - OLE DB, date/time improvements
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: c4306574aca251ad1f530cfeb3c26ce91e0a48b1
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: f914b211e1b573f1c3e91ac0fe50acf3e6f6a3a8
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244881"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88860014"
 ---
 # <a name="data-type-support-for-ole-db-date-and-time-improvements"></a>OLE DB 날짜 및 시간 기능 향상을 위한 데이터 형식 지원
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

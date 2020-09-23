@@ -1,5 +1,6 @@
 ---
-title: sqlsrv_num_rows | Microsoft Docs
+title: sqlsrv_num_rows
+description: Microsoft SQLSRV Driver for PHP for SQL Server의 sqlsrv_num_rows 함수에 대한 API 참조입니다.
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c832210e-bb2a-47b5-a505-160b02d1d95e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3478580ae0670036e64ae6774f420485aec30ef3
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 52366287eb25cb9932e8e80c97abc1c97ddbbcae
+ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926414"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87435131"
 ---
 # <a name="sqlsrv_num_rows"></a>sqlsrv_num_rows
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -35,7 +36,7 @@ sqlsrv_num_rows( resource $stmt )
 #### <a name="parameters"></a>매개 변수  
 *$stmt*: 행 수를 계산할 결과 집합입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
 행 수를 계산하는 중 오류가 발생하면**false** 이고, 그렇지 않으면 결과 집합의 행 수를 반환합니다.  
   
 ## <a name="remarks"></a>설명  

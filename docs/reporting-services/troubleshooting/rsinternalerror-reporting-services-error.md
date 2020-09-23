@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: 52613d52-fc78-4870-93f0-7d393ab9c335
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3f134f1c071b62c1c32f48855f76f62d5a1b0a69
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: d8df18bf9487d1d8797eff4e60f5ec5eefb87c4f
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487246"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394725"
 ---
 # <a name="rsinternalerror---reporting-services-error"></a>rsInternalError - Reporting Services 오류
     
 ## <a name="details"></a>세부 정보  
   
-|||  
+|범주|값|  
 |-|-|  
 |제품 이름|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |이벤트 ID|rsInternalError|  

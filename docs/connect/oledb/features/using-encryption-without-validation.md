@@ -1,6 +1,6 @@
 ---
 title: 유효성 검사 없이 암호화 사용 | Microsoft Docs
-description: 유효성 검사 없이 암호화 사용
+description: SQL Server 연결에 대한 유효성 검사 없이 암호화에 대해 알아봅니다. OLE DB Driver for SQL Server는 유효성 검사 없이 암호화를 지원합니다.
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - MSOLEDBSQL, encryption
 - encryption [OLE DB Driver for SQL Server]
 - OLE DB Driver for SQL Server, encryption
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: e728440447e9e7dbdd13ce52a60781ea3b240ebe
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 7b4e69fcc506f8e52dc8104067b9e7454e4022f5
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86006851"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88861620"
 ---
 # <a name="using-encryption-without-validation"></a>유효성 검사 없이 암호화 사용
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -42,13 +42,13 @@ ms.locfileid: "86006851"
   
 |프로토콜 암호화 강제 사용 클라이언트 설정|서버 인증서 신뢰 클라이언트 설정|연결 문자열/연결 특성 Encrypt/Use Encryption for Data|연결 문자열/연결 특성 서버 인증서 신뢰|결과|  
 |----------------------------------------------|---------------------------------------------|------------------------------------------------------------------------------|----------------------------------------------------------------------|------------|  
-|예|해당 없음|아니요(기본값)|무시됨|암호화가 수행되지 않습니다.|  
-|예|해당 없음|yes|아니요(기본값)|확인할 수 있는 서버 인증서가 있는 경우에만 암호화가 수행되고 그렇지 않으면 연결 시도가 실패합니다.|  
-|예|해당 없음|yes|yes|항상 암호화가 수행되지만 자체 서명된 서버 인증서가 사용될 수 있습니다.|  
-|yes|예|무시됨|무시됨|확인할 수 있는 서버 인증서가 있는 경우에만 암호화가 수행되고 그렇지 않으면 연결 시도가 실패합니다.|  
-|yes|yes|아니요(기본값)|무시됨|항상 암호화가 수행되지만 자체 서명된 서버 인증서가 사용될 수 있습니다.|  
-|yes|yes|yes|아니요(기본값)|확인할 수 있는 서버 인증서가 있는 경우에만 암호화가 수행되고 그렇지 않으면 연결 시도가 실패합니다.|  
-|yes|yes|yes|yes|항상 암호화가 수행되지만 자체 서명된 서버 인증서가 사용될 수 있습니다.|  
+|아니요|해당 없음|아니요(기본값)|무시됨|암호화가 수행되지 않습니다.|  
+|아니요|해당 없음|예|아니요(기본값)|확인할 수 있는 서버 인증서가 있는 경우에만 암호화가 수행되고 그렇지 않으면 연결 시도가 실패합니다.|  
+|아니요|해당 없음|yes|예|항상 암호화가 수행되지만 자체 서명된 서버 인증서가 사용될 수 있습니다.|  
+|예|아니요|무시됨|무시됨|확인할 수 있는 서버 인증서가 있는 경우에만 암호화가 수행되고 그렇지 않으면 연결 시도가 실패합니다.|  
+|yes|예|아니요(기본값)|무시됨|항상 암호화가 수행되지만 자체 서명된 서버 인증서가 사용될 수 있습니다.|  
+|yes|yes|예|아니요(기본값)|확인할 수 있는 서버 인증서가 있는 경우에만 암호화가 수행되고 그렇지 않으면 연결 시도가 실패합니다.|  
+|yes|yes|yes|예|항상 암호화가 수행되지만 자체 서명된 서버 인증서가 사용될 수 있습니다.|  
 ||||||
 
 > [!CAUTION]

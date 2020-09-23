@@ -10,12 +10,12 @@ ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 07/22/2020
-ms.openlocfilehash: 0d8bdd09fd1ae946c78aeb4860d1d5cfd89eabb8
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: d4a0c1c88e890ed7aa92a50a83eff795a83f42e9
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245152"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395301"
 ---
 # <a name="analysis-and-reporting-with-microsoft-business-intelligence-bi-tools"></a>Microsoft BI(business intelligence) 도구로 분석 및 보고
 
@@ -28,9 +28,8 @@ ms.locfileid: "87245152"
 > [!NOTE]
 > SQL Server 2016 이후부터 SharePoint와의 Reporting Services 통합을 사용할 수 없습니다.
   
-|워크로드|사용자|||BI 도구|||  
+|워크로드|사용자|Excel 기반 BI&nbsp;도구|SharePoint 기반 BI&nbsp;도구|SharePoint&nbsp;온라인 기반 BI&nbsp;도구|Power&nbsp;BI 기반 BI&nbsp;도구|SQL&nbsp;Server 기반 BI&nbsp;도구|  
 |---------------|----------|-|-|--------------|-|-|  
-|||**Excel**|**SharePoint**|**SharePoint Online**|**Power BI**|**SQL Server**|  
 |**셀프 서비스 BI**|분석가/최종 사용자||||||  
 |쉽게 공용 및 회사 데이터 검색 및 액세스||[Excel 2016](https://support.office.com/article/What-s-new-in-Excel-2016-for-Windows-5fdb9208-ff33-45b6-9e08-1f5cdb3a6c73?ui=en-US&rs=en-US&ad=US)|||[Azure Data Catalog](https://azure.microsoft.com/services/data-catalog/)||  
 |강력한 데이터 모델 만들기||[Power Pivot](https://support.office.com/article/Power-Pivot-Overview-and-Learning-f9001958-7901-4caa-ad80-028a6d2432ed?ui=en-US&rs=en-US&ad=US)|||[Power BI Desktop](/power-bi/fundamentals/desktop-get-the-desktop)||  

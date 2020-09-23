@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9c9d97be-de1d-412f-901d-5d9860c3df8c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 16e6758e6846c6258c0345bd8ceca8aed3c3f3c6
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: ae19b292788af43226de12a342e870768ad2ac26
+ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85054257"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87899014"
 ---
 # <a name="connecting-using-azure-active-directory-authentication"></a>Azure Active Directory 인증을 사용하여 연결
 
@@ -24,14 +24,14 @@ ms.locfileid: "85054257"
 
 이 문서에서는 Microsoft JDBC Driver for SQL Server에서 Azure Active Directory 인증 기능을 사용하는 Java 애플리케이션을 개발하는 방법을 설명합니다.
 
-AAD(Azure Active Directory)의 ID를 사용하여 Azure SQL Database v12에 연결하는 메커니즘인 AAD 인증을 사용할 수 있습니다. Azure Active Directory 인증을 사용하여 중앙에서 데이터베이스 사용자의 ID를 관리하고 SQL Server 인증 대신 사용할 수 있습니다. JDBC 드라이버를 사용하면 JDBC 연결 문자열에서 Azure SQL DB에 연결할 Azure Active Directory 자격 증명을 지정할 수 있습니다. Azure Active Directory 인증을 구성하는 방법에 대한 자세한 내용은 [Azure Active Directory 인증을 사용하여 SQL Database에 연결](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)을 참조하세요. 
+Azure AD(Azure Active Directory)의 ID를 사용하여 Azure SQL Database v12에 연결하는 메커니즘인 Azure AD 인증을 사용할 수 있습니다. Azure Active Directory 인증을 사용하여 중앙에서 데이터베이스 사용자의 ID를 관리하고 SQL Server 인증 대신 사용할 수 있습니다. JDBC 드라이버를 사용하면 JDBC 연결 문자열에서 Azure SQL Database에 연결할 Azure Active Directory 자격 증명을 지정할 수 있습니다. Azure Active Directory 인증을 구성하는 방법에 대한 자세한 내용은 [Azure Active Directory 인증을 사용하여 SQL Database에 연결](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)을 참조하세요. 
 
 Microsoft JDBC Driver for SQL Server에서 Azure Active Directory 인증을 지원하는 연결 속성은 다음과 같습니다.
 *   **인증**:  이 속성을 사용하여 연결에 사용할 SQL 인증 방법을 지정합니다. 가능한 값은 다음과 같습니다. 
     * **ActiveDirectoryMSI**
-        * 드라이버 버전 **v7.2**부터 지원되며, `authentication=ActiveDirectoryMSI`를 사용하여 "ID" 지원이 사용하도록 설정된 Azure 리소스 내부로부터 Azure SQL Database/Data Warehouse에 연결할 수 있습니다. 필요에 따라 이 인증 모드와 함께 연결/데이터 원본 속성에 **msiClientId**를 지정할 수도 있습니다. 여기에는 연결 설정을 위한 **accessToken**을 획득하는 데 사용할 관리 서비스 ID의 클라이언트 ID가 포함되어야 합니다.
+        * 드라이버 버전 **v7.2**부터 지원되며, `authentication=ActiveDirectoryMSI`를 사용하여 "ID" 지원이 사용하도록 설정된 Azure 리소스 내부로부터 Azure SQL Database/Data Warehouse에 연결할 수 있습니다. 필요에 따라 이 인증 모드와 함께 연결/데이터 원본 속성에 **msiClientId**를 지정할 수도 있습니다. 여기에는 연결 설정을 위한 **accessToken**을 획득하는 데 사용할 관리 ID의 클라이언트 ID가 포함되어야 합니다.
     * **ActiveDirectoryIntegrated**
-        * 드라이버 버전 **v6.0**부터 지원되며, `authentication=ActiveDirectoryIntegrated`를 사용하여 통합 인증을 통해 Azure SQL Database/Data Warehouse에 연결할 수 있습니다. 이 인증 모드를 사용하려면 온-프레미스 ADFS(Active Directory Federation Services)를 클라우드의 Azure Active Directory와 페더레이션해야 합니다. 설정되면 네이티브 라이브러리 ‘mssql-jdbc_auth-\<version>-\<arch>.dll’을 Windows OS의 애플리케이션 클래스 경로에 추가하거나 플랫폼 간 인증 지원을 위한 Kerberos 티켓을 설정하여 연결할 수 있습니다. 도메인 가입 컴퓨터에 로그인하는 경우 자격 증명을 묻는 메시지가 표시되지 않고 Azure SQL DB/DW에 액세스할 수 있습니다.
+        * 드라이버 버전 **v6.0**부터 지원되며, `authentication=ActiveDirectoryIntegrated`를 사용하여 통합 인증을 통해 Azure SQL Database/Data Warehouse에 연결할 수 있습니다. 이 인증 모드를 사용하려면 온-프레미스 ADFS(Active Directory Federation Services)를 클라우드의 Azure Active Directory와 페더레이션해야 합니다. 설정되면 네이티브 라이브러리 ‘mssql-jdbc_auth-\<version>-\<arch>.dll’을 Windows OS의 애플리케이션 클래스 경로에 추가하거나 플랫폼 간 인증 지원을 위한 Kerberos 티켓을 설정하여 연결할 수 있습니다. 도메인 가입 컴퓨터에 로그인하는 경우 자격 증명을 묻는 메시지가 표시되지 않고 Azure SQL Database/SQL Data Warehouse에 액세스할 수 있습니다.
     * **ActiveDirectoryPassword**
         * 드라이버 버전 **v6.0**부터 지원되며, `authentication=ActiveDirectoryPassword`를 사용하여 Azure AD 보안 주체 이름 및 암호를 통해 Azure SQL Database/Data Warehouse에 연결할 수 있습니다.
     * **SqlPassword**
@@ -49,7 +49,7 @@ Microsoft JDBC Driver for SQL Server에서 Azure Active Directory 인증을 지�
 * Java 8 이상
 * Microsoft JDBC Driver 7.2 for SQL Server(이상)
 * 클라이언트 환경은 Azure 리소스여야 하며 "ID" 기능 지원이 사용하도록 설정되어 있어야 합니다.
-* Azure 리소스의 시스템 할당 관리 ID 또는 사용자 할당 관리 ID를 나타내거나 MSI가 속한 그룹 중 하나를 나타내는 포함된 데이터베이스 사용자가 대상 데이터베이스에 존재해야 하며 CONNECT 권한이 있어야 합니다.
+* Azure 리소스의 시스템 할당 관리 ID 또는 사용자 할당 관리 ID를 나타내거나 관리 ID가 속한 그룹 중 하나를 나타내는 포함된 데이터베이스 사용자가 대상 데이터베이스에 존재해야 하며 CONNECT 권한이 있어야 합니다.
 
 다른 인증 모드의 경우 클라이언트 컴퓨터에 아래 구성 요소를 설치해야 합니다.
 * Java 7 이상
@@ -67,7 +67,7 @@ Microsoft JDBC Driver for SQL Server에서 Azure Active Directory 인증을 지�
 ds.setServerName("aad-managed-demo.database.windows.net"); // replace 'aad-managed-demo' with your server name
 ds.setDatabaseName("demo"); // replace with your database name
 //Optional
-ds.setMSIClientId("94de34e9-8e8c-470a-96df-08110924b814"); // Replace with Client ID of User-Assigned MSI to be used
+ds.setMSIClientId("94de34e9-8e8c-470a-96df-08110924b814"); // Replace with Client ID of User-Assigned Managed Identity to be used
 ```
 
 ActiveDirectoryMSI 인증 모드를 사용하는 예제는 다음과 같습니다.
@@ -87,7 +87,7 @@ public class AAD_MSI {
         ds.setDatabaseName("demo"); // Replace with your database name
         ds.setAuthentication("ActiveDirectoryMSI");
         // Optional
-        ds.setMsiClientId("94de34e9-8e8c-470a-96df-08110924b814"); // Replace with Client ID of User-Assigned MSI to be used
+        ds.setMsiClientId("94de34e9-8e8c-470a-96df-08110924b814"); // Replace with Client ID of User-Assigned Managed Identity to be used
 
         try (Connection connection = ds.getConnection(); 
                 Statement stmt = connection.createStatement();
@@ -103,7 +103,7 @@ public class AAD_MSI {
 Azure 가상 머신에서 이 예제를 실행하면 _시스템 할당 관리 ID_ 또는 _사용자 할당 관리 ID_(**msiClientId**가 지정된 경우)에서 액세스 토큰을 가져오고 이 액세스 토큰을 사용하여 연결을 설정합니다. 연결이 설정되면 다음과 같은 메시지가 표시됩니다.
 
 ```bash
-You have successfully logged on as: <your MSI username>
+You have successfully logged on as: <your Managed Identity username>
 ```
 
 ## <a name="connecting-using-activedirectoryintegrated-authentication-mode"></a>ActiveDirectoryIntegrated 인증 모드를 사용하여 연결
@@ -223,7 +223,7 @@ Kerberos 도메인 컨트롤러를 쿼리하기 위해 Windows 도메인에 가�
     ds.setServerName("aad-managed-demo.database.windows.net"); // replace 'aad-managed-demo' with your server name
     ds.setDatabaseName("demo"); // replace with your database name
     ```
-3.  다음 코드 줄을 찾아 사용자 이름을 연결하려는 AAD 사용자의 이름으로 바꿉니다.
+3.  다음 코드 줄을 찾아 사용자 이름을 연결하려는 Azure AD 사용자의 이름으로 바꿉니다.
     ```java
     ds.setUser("bob@cqclinic.onmicrosoft.com"); // replace with your user name
     ds.setPassword("password");     // replace with your password
@@ -293,7 +293,7 @@ You have successfully logged on as: <your user name>
     CREATE USER [mytokentest] FROM EXTERNAL PROVIDER
     ```
 
-3.  예제를 실행하려는 클라이언트 컴퓨터에서 [azure-activedirectory-library-for-java](https://github.com/AzureAD/azure-activedirectory-library-for-java) 및 해당 종속성을 다운로드하여 Java 빌드 경로에 포함합니다. azure-activedirectory-library-for-java는 이 예제를 실행하는 데만 필요합니다. 이 예제에서는 이 라이브러리의 API를 사용하여 Azure AAD에서 액세스 토큰을 검색합니다. 액세스 토큰이 이미 있는 경우 이 단계를 건너뜁니다. 또한 예제에서 액세스 토큰을 검색하는 섹션을 제거해야 합니다.
+3.  예제를 실행하려는 클라이언트 컴퓨터에서 [azure-activedirectory-library-for-java](https://github.com/AzureAD/azure-activedirectory-library-for-java) 및 해당 종속성을 다운로드하여 Java 빌드 경로에 포함합니다. azure-activedirectory-library-for-java는 이 예제를 실행하는 데만 필요합니다. 이 예제에서는 이 라이브러리의 API를 사용하여 Azure AD에서 액세스 토큰을 검색합니다. 액세스 토큰이 이미 있는 경우 이 단계를 건너뜁니다. 또한 예제에서 액세스 토큰을 검색하는 섹션을 제거해야 합니다.
 
 다음 예제에서는 STS URL, 클라이언트 ID, 클라이언트 암호, 서버 및 데이터베이스 이름을 자신의 값으로 바꿉니다.
 

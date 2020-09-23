@@ -1,7 +1,7 @@
 ---
 title: 'Spark 작업 실행: IntelliJ용 Azure 도구 키트'
 titleSuffix: SQL Server Big Data Clusters
-description: Azure Toolkit for IntelliJ의 SQL Server 빅 데이터 클러스터에 Spark 작업 제출
+description: 로컬 Jar 또는 Py 파일을 제출하여 Azure Toolkit for IntelliJ에서 SQL Server 빅 데이터 클러스터에 대한 Spark 작업을 제출하는 방법을 알아봅니다.
 author: jejiang
 ms.author: jejiang
 ms.reviewer: mikeray
@@ -10,12 +10,12 @@ ms.metadata: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 25e200cf5a38a98289dcba91d08a1ce7c0cab340
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8ef3a0d73535061ef2c9f2ce32556a0a86202d70
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726729"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778542"
 ---
 # <a name="submit-spark-jobs-on-big-data-clusters-2019-in-intellij"></a>IntelliJ에서 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]에 Spark 작업 제출
 
@@ -28,7 +28,7 @@ ms.locfileid: "85726729"
 - SQL Server 빅 데이터 클러스터
 - Oracle Java Development Kit. [Oracle 웹 사이트](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)에서 설치할 수 있습니다.
 - IntelliJ IDEA. [JetBrains 웹 사이트](https://www.jetbrains.com/idea/download/)에서 설치할 수 있습니다.
-- Azure Toolkit for IntelliJ 확장. 설치 지침은 [Azure Toolkit for IntelliJ 설치](https://docs.microsoft.com/azure/azure-toolkit-for-intellij-installation)를 참조하세요.
+- Azure Toolkit for IntelliJ 확장. 설치 지침은 [Azure Toolkit for IntelliJ 설치](/azure/azure-toolkit-for-intellij-installation)를 참조하세요.
 
 ## <a name="link-sql-server-big-data-cluster"></a>SQL Server 빅 데이터 클러스터 연결
 1. IntelliJ IDEA 도구를 엽니다.
@@ -118,7 +118,7 @@ SQL Server 빅 데이터 클러스터에 연결한 후 애플리케이션을 제
       ![Spark 제출 대화 상자 jar 파일 의미](./media/spark-submit-job-intellij-tool-plugin/jar-files-meaning.png)
 
        > [!NOTE]  
-       > 참조되는 Jar 및 참조 파일을 업로드하려면 다음을 참조하세요. [클러스터에 리소스를 업로드하는 방법](https://docs.microsoft.com/azure/storage/blobs/storage-quickstart-blobs-storage-explorer)
+       > 참조되는 Jar 및 참조 파일을 업로드하려면 다음을 참조하세요. [클러스터에 리소스를 업로드하는 방법](/azure/storage/blobs/storage-quickstart-blobs-storage-explorer)
                          
     * **업로드 경로**: Jar 또는 Scala 프로젝트 리소스 제출을 위한 스토리지 위치를 나타낼 수 있습니다. 지원되는 몇 가지 스토리지 유형은 다음과 같습니다. **Spark 대화형 세션을 사용하여 업로드** 및 **WebHDFS를 사용하여 업로드**
     

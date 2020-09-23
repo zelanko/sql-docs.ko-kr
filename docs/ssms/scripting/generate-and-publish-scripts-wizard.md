@@ -3,7 +3,7 @@ title: 스크립트 생성 및 게시 마법사
 description: 스크립트 생성 및 게시 마법사를 사용하여 데이터베이스 인스턴스 간에 데이터베이스를 전송하는 스크립트를 만드는 방법을 알아봅니다. 인스턴스는 SQL Server 데이터베이스 엔진 또는 Azure SQL Database 인스턴스가 될 수 있습니다.
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.technology: scripting
+ms.technology: ssms
 ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
@@ -44,12 +44,12 @@ ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 04/07/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2e6b5619628bd9974a2b690fc9c8472543d3ca12
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: bf51bcec55fbd11e386eb127a3bec57f37ec7f37
+ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87122624"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88901370"
 ---
 # <a name="generate-and-publish-scripts-wizard"></a>스크립트 생성 및 게시 마법사
 
@@ -128,7 +128,7 @@ ms.locfileid: "87122624"
 
 **특정 위치에 스크립트 저장** - 하나 이상의 Transact-SQL 스크립트 파일을 지정한 위치에 저장합니다.
 
-![저장](media/generate-and-publish-scripts-wizard/save.png)
+![Notebook으로 저장](media/generate-and-publish-scripts-wizard/save.png)
 
 - **[Notebook으로 저장](../../azure-data-studio/notebooks-guidance.md)** - 스크립트를 하나 이상의 .sql 파일로 저장합니다. 파일의 이름과 위치를 지정하려면 찾아보기 단추( **…** )를 선택합니다.
 
@@ -222,7 +222,7 @@ ms.locfileid: "87122624"
 
 ### <a name="summary-page"></a><a name="Summary"></a> 요약 페이지
 
-![요약](media/generate-and-publish-scripts-wizard/summary.png)
+![GS 요약](media/generate-and-publish-scripts-wizard/summary.png)
 
 이 페이지에서는 이 마법사에서 선택한 옵션을 요약합니다. 옵션을 변경하려면 **이전**을 선택합니다. 저장 또는 게시된 스크립트를 생성하기 시작하려면 **다음**을 선택합니다.
 

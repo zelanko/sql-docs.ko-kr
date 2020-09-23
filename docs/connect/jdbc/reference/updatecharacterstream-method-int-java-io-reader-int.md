@@ -1,5 +1,6 @@
 ---
-title: updateCharacterStream 메서드(java.io.Reader, int) | Microsoft Docs
+description: updateCharacterStream 메서드(int, java.io.Reader, int)
+title: updateCharacterStream 메서드(int, java.io.Reader, int)
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: b692c372-f6d7-4528-9c5d-cd8421bdb12e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 99fd70ae40709f02813504b601a211bbd38f763c
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 29d660a9bc91cc37e3882aa7f9ae025a84c65f4e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920475"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458015"
 ---
 # <a name="updatecharacterstream-method-int-javaioreader-int"></a>updateCharacterStream 메서드(int, java.io.Reader, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -1,26 +1,26 @@
 ---
-title: SQL 루프백 연결
+title: Python 및 R의 SQL 루프백 연결
 description: 루프백 연결을 사용해서 ODBC로 SQL Server에 다시 연결하여 sp_execute_external_script로부터 실행된 Python 또는 R 스크립트에서 데이터를 읽거나 쓰는 방법을 알아봅니다.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 08/21/2019
+ms.date: 08/20/2020
 ms.topic: conceptual
 author: Aniruddh25
 ms.author: anmunde
 ms.reviewer: dphansen
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 00938d1fe628c4984a55cb5c0b76e6910293808a
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 21c32a27a94dcf8a1981f1fde2eb4db0b71b1b8a
+ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86482674"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88714141"
 ---
 # <a name="loopback-connection-to-sql-server-from-a-python-or-r-script"></a>Python 또는 R 스크립트에서 SQL Server에 루프백 연결
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
-루프백 연결을 사용해서 [ODBC](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md)로 SQL Server에 다시 연결하여 `sp_execute_external_script`로부터 실행된 Python 또는 R 스크립트에서 데이터를 읽거나 쓰는 방법을 알아봅니다. 이 방법은 `sp_execute_external_script`의 **InputDataSet** 및 **OutputDataSet** 인수 사용이 불가능할 때 사용할 수 있습니다.
+루프백 연결을 [Machine Learning Services](../sql-server-machine-learning-services.md)와 함께 사용해서 [ODBC](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md)로 SQL Server에 다시 연결하여 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)로부터 실행된 Python 또는 R 스크립트에서 데이터를 읽거나 쓰는 방법을 알아봅니다. 이 방법은 `sp_execute_external_script`의 **InputDataSet** 및 **OutputDataSet** 인수 사용이 불가능할 때 사용할 수 있습니다.
 
 ## <a name="connection-string"></a>연결 문자열
 

@@ -1,6 +1,6 @@
 ---
 title: dbSqlPackage 공급자와 함께 MSDeploy 사용
-description: 사용되지 않는 MSDeploy 공급자 DbSqlPackage에 대해 알아봅니다. 매개 변수, 예, 대체 SQL Server 및 SQL Azure 데이터베이스 게시 도구를 봅니다.
+description: 사용되지 않는 MSDeploy 공급자 DbSqlPackage에 대해 알아봅니다. 매개 변수, 예제 및 대체 SQL Server/Azure SQL Database 게시 도구를 봅니다.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -10,18 +10,18 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 04/26/2017
-ms.openlocfilehash: 5a0bda3b935a7123de3c8766a40e7d7f8df5a0d0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: daeff5e44e714354cb8e0edc525779b197ec7d19
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899741"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934088"
 ---
 # <a name="using-msdeploy-with-dbsqlpackage-provider"></a>dbSqlPackage 공급자와 함께 MSDeploy 사용
 
-**DbSqlPackage**는 SQL Server/SQL Azure 데이터베이스와 상호 작용할 수 있는 **MSDeploy** 공급자입니다. **DbSqlPackage**에서는 다음 작업을 지원합니다.  
+**DbSqlPackage**는 SQL Server/SQL Azure Database와 상호 작용할 수 있는 **MSDeploy** 공급자입니다. **DbSqlPackage**에서는 다음 작업을 지원합니다.  
   
--   **추출**: 라이브 SQL Server 또는 SQL Azure 데이터베이스에서 데이터베이스 스냅샷(.dacpac) 파일을 만듭니다.  
+-   **추출**: 라이브 SQL Server 또는 Azure SQL Database에서 데이터베이스 스냅샷(.dacpac) 파일을 만듭니다.  
   
 -   **게시**: 원본 .dacpac 파일의 스키마와 일치하도록 데이터베이스 스키마를 증분식으로 업데이트합니다.  
   
@@ -57,7 +57,7 @@ MS-Deploy 명령줄에서 **–verb** 스위치를 사용하여 MS-Deploy 동사
 |---------|-----------|---------------|  
 |**-source:dbSqlPackage=** {*input*}|**해당 사항 없음**|*input*은 유효한 SQL Server 또는 SQL Azure 연결 문자열 또는 디스크의 .dacpac 파일에 대한 경로입니다.<br /><br />**참고:** 연결 문자열을 입력 원본으로 사용할 때 지원되는 연결 문자열 속성은 *InitialCatalog, DataSource, UserID, Password, IntegratedSecurity, Encrypt, TrustServerCertificate* 및 *ConnectionTimeout*뿐입니다.|  
   
-입력 원본이 라이브 SQL Server/SQL Azure 데이터베이스에 대한 연결 문자열인 경우 **dbSqlPackage** 라이브 SQL Server/SQL Azure 데이터베이스에서 데이터베이스 스냅샷(.dacpac 파일 형식)을 추출합니다.  
+입력 원본이 SQL Server/Azure SQL Database에 대한 연결 문자열인 경우 **dbSqlPackage**는 SQL Server/Azure SQL Database에서 데이터베이스 스냅샷을 .dacpac 파일 형식으로 추출합니다.  
   
 **원본** 매개 변수는 다음과 같습니다.  
   

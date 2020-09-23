@@ -1,4 +1,5 @@
 ---
+description: 보고서 업그레이드(SSRS)
 title: 보고서 업그레이드 | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: reporting-services
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: a1a10c67-7462-4562-9b07-a8822188a161
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bae0cffce8cfacd56feaab289d75b7c70d509ce7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1454c579739c892cc3d0c03211283589ba3e6b82
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082276"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446030"
 ---
 # <a name="upgrade-reports-ssrs"></a>보고서 업그레이드(SSRS)
 
@@ -127,7 +128,7 @@ ms.locfileid: "77082276"
   
 -   **아니요** 보고서에서 CRI를 변환하지 않으려면 **아니요** 를 선택합니다. 이러한 CRI는 현재 버전의 보고서 처리기에서는 표시할 수 없습니다. 시스템 관리자가 새 보고서 정의 형식과 호환되는 타사 소프트웨어 공급업체가 제공하는 새 버전의 CRI를 설치하려는 경우에는 **아니요**를 선택해야 합니다. 새 버전을 사용할 수 있을 때까지 보고서에 CRI가 빨간색 X가 있는 비어 있는 입력란으로 표시됩니다.  
   
- 두 경우 모두 보고서는 새 보고서 정의 형식으로 업그레이드되며 원래 보고서의 백업 복사본은 *\<보고서 이름>* `-` Backup.rdl로 저장됩니다. 보고서를 보고서 작성 도구에 저장하는 경우 업그레이드된 보고서가 새 보고서 정의 형식으로 저장됩니다. 보고서를 게시하는 경우 보고서는 컴퓨터에 먼저 저장된 다음 보고서 서버에 게시됩니다. 업그레이드된 버전의 보고서가 보고서 서버에 게시됩니다.  
+ 두 경우 모두 보고서는 새 보고서 정의 형식으로 업그레이드되며 원래 보고서의 백업 복사본은 *\<Report Name>* `-` Backup.rdl로 저장됩니다. 보고서를 보고서 작성 도구에 저장하는 경우 업그레이드된 보고서가 새 보고서 정의 형식으로 저장됩니다. 보고서를 게시하는 경우 보고서는 컴퓨터에 먼저 저장된 다음 보고서 서버에 게시됩니다. 업그레이드된 버전의 보고서가 보고서 서버에 게시됩니다.  
   
  보고서를 저장하지 않는 경우 원래 보고서가 그대로 유지됩니다. 그러나 이 보고서를 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]의 SQL Server 2016 버전이나 최신 보고서 정의 형식을 사용하는 보고서 제작 환경에서 편집할 수는 없습니다. 웹 포털을 사용하여 보고서를 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 보고서 서버로 업로드하여 원래 버전의 보고서를 계속 실행할 수 있습니다. 자세한 내용은 [웹 포털](../../reporting-services/web-portal-ssrs-native-mode.md)을 참조하세요.  
   

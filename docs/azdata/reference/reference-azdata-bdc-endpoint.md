@@ -1,0 +1,52 @@
+---
+title: azdata bdc endpoint 참조
+titleSuffix: SQL Server big data clusters
+description: 이 참조 문서를 사용하여 azdata 도구의 SQL 명령, 특히 bdc endpoint 명령을 이해할 수 있습니다.
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
+ms.date: 06/22/2020
+ms.topic: reference
+ms.prod: sql
+ms.technology: big-data-cluster
+ms.openlocfilehash: 06d910dd241a567e4b7f01281fdf403e646c6845
+ms.sourcegitcommit: 883435b4c7366f06ac03579752093737b098feab
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89734030"
+---
+# <a name="azdata-bdc-endpoint"></a>azdata bdc endpoint
+
+[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
+
+다음 문서에서는 `azdata` 도구의 `sql` 명령에 대한 참조를 제공합니다. 다른 `azdata` 명령에 대한 자세한 내용은 [azdata 참조](reference-azdata.md)를 참조하세요.
+
+## <a name="commands"></a>명령
+| 명령 | 설명 |
+| --- | --- |
+[azdata bdc endpoint list](#azdata-bdc-endpoint-list) | 빅 데이터 클러스터의 엔드포인트를 나열합니다.
+## <a name="azdata-bdc-endpoint-list"></a>azdata bdc endpoint list
+빅 데이터 클러스터의 엔드포인트를 나열합니다.
+```bash
+azdata bdc endpoint list [--endpoint-name -e] 
+                         
+```
+### <a name="optional-parameters"></a>선택적 매개 변수
+#### `--endpoint-name -e`
+빅 데이터 클러스터 엔드포인트 이름입니다.
+### <a name="global-arguments"></a>전역 인수
+#### `--debug`
+로깅의 자세한 정도를 늘려 모든 디버그 로그를 표시합니다.
+#### `--help -h`
+이 도움말 메시지를 표시하고 종료합니다.
+#### `--output -o`
+출력 형식입니다.  허용되는 값: json, jsonc, table, tsv  기본값: json
+#### `--query -q`
+JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmespath.org/](http://jmespath.org)를 참조하세요.
+#### `--verbose`
+로깅의 자세한 정도를 늘립니다. 전체 디버그 로그를 표시하려면 --debug를 사용합니다.
+
+## <a name="next-steps"></a>다음 단계
+
+다른 `azdata` 명령에 대한 자세한 내용은 [azdata 참조](reference-azdata.md)를 참조하세요. `azdata` 도구를 설치하는 방법에 대한 자세한 내용은 [azdata를 설치하여 SQL Server 2019 빅 데이터 클러스터 관리](../install/deploy-install-azdata.md)를 참조하세요.

@@ -1,7 +1,7 @@
 ---
 title: Microsoft JDBC Driver for SQL Server 다운로드
 description: Microsoft JDBC Driver for SQL Server를 다운로드하여 SQL Server 및 Azure SQL Database에 연결하는 Java 애플리케이션을 개발합니다.
-ms.date: 03/24/2020
+ms.date: 08/24/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 451181b8-11e6-4d01-b547-9ac5aada8238
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7ab209588a1bf05380ed1856ddfb90683e3259b3
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: d48c3f0384a805debe13472fae1841515207d160
+ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487187"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89042446"
 ---
 # <a name="download-microsoft-jdbc-driver-for-sql-server"></a>Microsoft JDBC Driver for SQL Server 다운로드
 
@@ -23,15 +23,15 @@ SQL Server용 Microsoft JDBC Driver는 Java 플랫폼에서 사용 가능한 표
 
 ## <a name="download"></a>다운로드
 
-버전 8.2는 최신 GA(일반 공급) 버전입니다. 이 버전은 Java 8, 11 및 13을 지원합니다. 이보다 오래된 Java 런타임에서 실행해야 하는 경우, [Java 및 JDBC 사양 지원 매트릭스](microsoft-jdbc-driver-for-sql-server-support-matrix.md#java-and-jdbc-specification-support)를 참고하여 사용할 수 있는 지원되는 드라이버 버전이 있는지 확인하세요. Microsoft는 Java 연결 지원을 지속적으로 개선하고 있습니다. 따라서 최신 버전의 Microsoft JDBC 드라이버를 사용하는 것이 좋습니다.
+버전 8.4는 최신 GA(일반 공급) 버전입니다. 이 버전은 Java 8, 11 및 14를 지원합니다. 이보다 오래된 Java 런타임에서 실행해야 하는 경우, [Java 및 JDBC 사양 지원 매트릭스](microsoft-jdbc-driver-for-sql-server-support-matrix.md#java-and-jdbc-specification-support)를 참고하여 사용할 수 있는 지원되는 드라이버 버전이 있는지 확인하세요. Microsoft는 Java 연결 지원을 지속적으로 개선하고 있습니다. 따라서 최신 버전의 Microsoft JDBC 드라이버를 사용하는 것이 좋습니다.
 
-**[![다운로드](../../ssms/media/download-icon.png) SQL Server용 Microsoft JDBC Driver 8.2(zip) 다운로드](https://go.microsoft.com/fwlink/?linkid=2122433)**  
-**[![다운로드](../../ssms/media/download-icon.png) SQL Server용 Microsoft JDBC Driver 8.2(tar.gz) 다운로드](https://go.microsoft.com/fwlink/?linkid=2122536)**  
+**[![다운로드](../../ssms/media/download-icon.png) SQL Server용 Microsoft JDBC Driver 8.4(zip) 다운로드](https://go.microsoft.com/fwlink/?linkid=2137600)**  
+**[![다운로드](../../ssms/media/download-icon.png) SQL Server용 Microsoft JDBC Driver 8.4(tar.gz) 다운로드](https://go.microsoft.com/fwlink/?linkid=2137502)**  
 
 ### <a name="version-information"></a>버전 정보
 
-- 릴리스 번호: 8.2.2
-- 릴리스 날짜: 2020년 3월 24일
+- 릴리스 번호: 8.4.1
+- 릴리스 날짜: 2020년 8월 27일
 
 드라이버를 다운로드할 때 여러 JAR 파일이 있습니다. JAR 파일의 이름은 지원되는 Java 버전을 나타냅니다.
 
@@ -42,9 +42,9 @@ SQL Server용 Microsoft JDBC Driver는 Java 플랫폼에서 사용 가능한 표
 
 이 SQL Server용 Microsoft JDBC Driver 릴리스는 다음 언어로 제공됩니다.
 
-SQL Server용 Microsoft JDBC Driver 8.2.2(zip): [중국어(간체)](https://go.microsoft.com/fwlink/?linkid=2122433&clcid=0x804) | [중국어(번체)](https://go.microsoft.com/fwlink/?linkid=2122433&clcid=0x404) | [영어(미국)](https://go.microsoft.com/fwlink/?linkid=2122433&clcid=0x409) | [프랑스어](https://go.microsoft.com/fwlink/?linkid=2122433&clcid=0x40c) | [독일어](https://go.microsoft.com/fwlink/?linkid=2122433&clcid=0x407) | [이탈리아어](https://go.microsoft.com/fwlink/?linkid=2122433&clcid=0x410) | [일본어](https://go.microsoft.com/fwlink/?linkid=2122433&clcid=0x411) | [한국어](https://go.microsoft.com/fwlink/?linkid=2122433&clcid=0x412) | [포르투갈어(브라질)](https://go.microsoft.com/fwlink/?linkid=2122433&clcid=0x416) | [러시아어](https://go.microsoft.com/fwlink/?linkid=2122433&clcid=0x419) | [스페인어](https://go.microsoft.com/fwlink/?linkid=2122433&clcid=0x40a)
+SQL Server용 Microsoft JDBC Driver 8.4.1(zip): [중국어(간체)](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x804) | [중국어(번체)](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x404) | [영어(미국)](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x409) | [프랑스어](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x40c) | [독일어](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x407) | [이탈리아어](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x410) | [일본어](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x411) | [한국어](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x412) | [포르투갈어(브라질)](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x416) | [러시아어](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x419) | [스페인어](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x40a)
 
-SQL Server용 Microsoft JDBC Driver 8.2.2(tar.gz): [중국어(간체)](https://go.microsoft.com/fwlink/?linkid=2122536&clcid=0x804) | [중국어(번체)](https://go.microsoft.com/fwlink/?linkid=2122536&clcid=0x404) | [영어(미국)](https://go.microsoft.com/fwlink/?linkid=2122536&clcid=0x409) | [프랑스어](https://go.microsoft.com/fwlink/?linkid=2122536&clcid=0x40c) | [독일어](https://go.microsoft.com/fwlink/?linkid=2122536&clcid=0x407) | [이탈리아어](https://go.microsoft.com/fwlink/?linkid=2122536&clcid=0x410) | [일본어](https://go.microsoft.com/fwlink/?linkid=2122536&clcid=0x411) | [한국어](https://go.microsoft.com/fwlink/?linkid=2122536&clcid=0x412) | [포르투갈어(브라질)](https://go.microsoft.com/fwlink/?linkid=2122536&clcid=0x416) | [러시아어](https://go.microsoft.com/fwlink/?linkid=2122536&clcid=0x419) | [스페인어](https://go.microsoft.com/fwlink/?linkid=2122536&clcid=0x40a)
+SQL Server용 Microsoft JDBC Driver 8.4.1(tar.gz): [중국어(간체)](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x804) | [중국어(번체)](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x404) | [영어(미국)](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x409) | [프랑스어](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x40c) | [독일어](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x407) | [이탈리아어](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x410) | [일본어](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x411) | [한국어](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x412) | [포르투갈어(브라질)](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x416) | [러시아어](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x419) | [스페인어](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x40a)
 
 ### <a name="release-notes"></a>릴리스 정보
 
@@ -62,7 +62,7 @@ POM.xml에서 다음 코드로 JDBC 드라이버를 종속성으로 추가하여
 <dependency>
     <groupId>com.microsoft.sqlserver</groupId>
     <artifactId>mssql-jdbc</artifactId>
-    <version>8.2.2.jre11</version>
+    <version>8.4.1.jre11</version>
 </dependency>
 ```  
 

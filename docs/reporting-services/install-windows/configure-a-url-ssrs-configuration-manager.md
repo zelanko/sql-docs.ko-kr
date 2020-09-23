@@ -1,4 +1,5 @@
 ---
+description: URL 구성(SSRS 구성 관리자)
 title: URL 구성(구성 관리자) | Microsoft Docs
 ms.date: 05/26/2016
 ms.prod: reporting-services
@@ -9,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 851e163a-ad2a-491e-bc1e-4df92327092f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 910918a3dd0162bc29eef882cf12b529f98fa05f
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: ea8162493584be5d4cb9d312c57af16ff40d08a2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487172"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427095"
 ---
 # <a name="configure-a-url--ssrs-configuration-manager"></a>URL 구성(SSRS 구성 관리자)
   [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 또는 보고서 서버 웹 서비스를 사용하려면 먼저 각 애플리케이션에 대한 URL을 한 개 이상 구성해야 합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 "파일만" 모드(즉, 설치 마법사의 보고서 서버 설치 옵션 페이지에서 **서버 구성 없이 설치** 옵션을 선택한 경우)에서 설치한 경우에는 URL을 반드시 구성해야 합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 기본 구성으로 설치한 경우 각 애플리케이션에 대해 URL이 이미 구성되어 있습니다.  
@@ -68,7 +69,7 @@ ms.locfileid: "81487172"
   
     -   **::1** - IPv6 형식의 루프백 주소입니다.  
   
-    -   특정 IP 주소가 이 목록에 표시될 수도 있습니다. IP 주소는 IPv4 및 IPv6 형식일 수 있습니다. *Nnn.nnn.nnn.nnn* 는 컴퓨터에 설치된 네트워크 어댑터 카드의 32비트 IPv4 주소입니다. IPv6 주소는 128비트이며 8개의 4바이트 필드가 콜론으로 구분되어 있습니다. \<prefix>:*nnnn:nnnn:nnnn:nnnn:nnnn:nnnn*  
+    -   특정 IP 주소가 이 목록에 표시될 수도 있습니다. IP 주소는 IPv4 및 IPv6 형식일 수 있습니다. *Nnn.nnn.nnn.nnn* 는 컴퓨터에 설치된 네트워크 어댑터 카드의 32비트 IPv4 주소입니다. IPv6 주소는 128비트이며 다음과 같이 8개의 4바이트 필드가 콜론으로 구분되어 있습니다. \<prefix>:*nnnn:nnnn:nnnn:nnnn:nnnn:nnnn*  
   
          카드가 여러 개 있거나 네트워크에서 IPv4와 IPv6 주소를 모두 지원하는 경우 IP 주소가 여러 개 표시됩니다. IP 주소를 한 개만 선택할 경우 선택한 IP 주소(및 도메인 이름 서버가 이 IP 주소에 매핑한 호스트 이름)만 애플리케이션에 액세스할 수 있습니다. localhost를 사용하여 보고서 서버에 액세스할 수 없으며, 보고서 서버 컴퓨터에 설치된 다른 네트워크 어댑터 카드의 IP 주소를 사용할 수 없습니다. 일반적으로 이 값을 선택하는 경우는 명시적 IP 주소 또는 호스트 이름도 지정하는 URL 예약을 여러 개 구성하고 있기 때문입니다. 예를 들면 한 개는 인트라넷 연결에 사용되는 네트워크 어댑터 카드용으로, 다른 한 개는 익스트라넷 연결에 사용되는 네트워크 어댑터 카드용으로 구성할 수 있습니다.  
   

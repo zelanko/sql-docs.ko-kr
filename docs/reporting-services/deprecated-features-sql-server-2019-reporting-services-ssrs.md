@@ -1,7 +1,7 @@
 ---
 title: SQL Server 2019 Reporting Services에서 사용되지 않는 기능 | Microsoft Docs
-description: 이 문서에서는 다음 버전의 SQL Server Reporting Services에서 더 이상 사용되지 않는 기능을 설명합니다.
-ms.date: 11/21/2019
+description: 이 문서에서는 다음 버전의 SQL Server Reporting Services에서 더 이상 사용되지 않을 SQL Server 2019 Reporting Services의 기능을 설명합니다.
+ms.date: 08/31/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -15,12 +15,12 @@ ms.assetid: 3876c01e-f81d-4cce-9104-5106a8c369e6
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: eaa7edebe99a7c444fe1bfa23971317517399ea2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d3e48ab45f34e583dbbeca883a64d04dc965b018
+ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74320277"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89283820"
 ---
 # <a name="deprecated-features-in-sql-server-2019-reporting-services"></a>SQL Server 2019 Reporting Services에서 사용되지 않는 기능
 
@@ -42,8 +42,9 @@ SQL Server Reporting Services는 다음 버전의 SQL Server에서 다음 기능
 | 보고서 서버 | 모바일 보고서 및 모바일 보고서 게시자 | Power BI Report Server에서 Power BI 보고서는 모바일 기능을 제공합니다. |
 | 보고서 서버 | XLS 및 DOC 렌더링 형식 | .XLSX 및 DOCX 형식이 사용 가능하고 지원됩니다. |
 | 보고서 서버 | Atom 데이터 피드 | oData 피드는 SSRS 및 Power BI Report Server의 공유 데이터 세트에 대해 지원됩니다. |
+| 보고서 서버 | Power BI에 고정 | 이제 페이지가 매겨진 보고서를 Power BI 서비스에서 직접 지원합니다.  |
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [SQL Server 2019 Reporting Services(SSRS)에서 지원되지 않는 기능](discontinued-functionality-sql-server-reporting-services-2019.md)
 

@@ -1,6 +1,6 @@
 ---
 title: 데이터 형식(OLE DB 드라이버) | Microsoft Docs
-description: 데이터 형식(OLE DB)
+description: OLE DB Driver for SQL Server가 ITableDefinition을 사용하여 매개 변수/열 바인딩 및 테이블 만들기를 위해 SQL Server 데이터 형식을 OLE DB 형식에 매핑하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, data types
 - data types [OLE DB]
 - OLE DB, data types
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 28ff4bfc3262803ba8bafcb405e477a1692cb93f
-ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: cf62e63ba0912c6fb6ccfa8d2aa9352838ebca19
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86977753"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88862372"
 ---
 # <a name="data-types-ole-db"></a>데이터 형식(OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

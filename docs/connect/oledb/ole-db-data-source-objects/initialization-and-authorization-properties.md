@@ -1,6 +1,6 @@
 ---
 title: 초기화 및 권한 부여 속성(OLE DB 드라이버) | Microsoft Docs
-description: 초기화 및 권한 부여 속성
+description: OLE DB Driver for SQL Server가 OLE DB 초기화 및 권한 부여 속성을 해석하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 01/02/2020
 ms.prod: sql
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, initialization properties
 - OLE DB Driver for SQL Server, authorization properties
 - initialization properties [OLE DB]
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 1a133b8b259b7746ff6f5e8750f31c5288c88aa9
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 702b6058e09a49528f96184d8591a0b6c97b3f86
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244962"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88862083"
 ---
 # <a name="initialization-and-authorization-properties"></a>초기화 및 권한 부여 속성
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "87244962"
 |속성 ID|Description|  
 |-----------------|-----------------|  
 |SSPROP_AUTH_ACCESS_TOKEN<a href="#table1_1"><sup>**1**</sup></a>|유형: VT_BSTR<br /><br /> R/W: 읽기/쓰기<br /><br /> Default: VT_EMPTY<br /><br /> 설명: Azure Active Directory에서 인증을 받는 데 사용하는 액세스 토큰입니다. <br/><br/>**참고:** 이 속성을 지정하면 오류가 발생하고 `UID`, `PWD`, `Trusted_Connection` 또는 `Authentication` 연결 문자열 키워드 또는 해당 속성/키워드를 지정해도 오류가 발생합니다.|
-|SSPROP_AUTH_MODE<a href="#table1_1"><sup>**1**</sup></a>|유형: VT_BSTR<br /><br /> R/W: 읽기/쓰기<br /><br /> Default: VT_EMPTY<br /><br /> 설명: 사용되는 SQL 또는 Active Directory 인증을 지정합니다. 유효한 값은 다음과 같습니다.<br/><ul><li>`(not set)`: 다른 키워드에 의해 결정되는 인증 모드입니다.</li><li>`(empty string)`: 이전에 설정된 인증 모드를 설정 해제합니다.</li><li>`ActiveDirectoryPassword:` Azure Active Directory ID를 사용하는 사용자 ID 및 암호 인증입니다.</li><li>`ActiveDirectoryIntegrated:` Azure Active Directory ID를 사용하는 통합 인증입니다.</li><br/>**참고:** `ActiveDirectoryIntegrated` 키워드는 SQL Server에 대한 Windows 인증에도 사용할 수 있습니다. `Integrated Security`(또는 `Trusted_Connection`) 인증 키워드를 대체합니다. `Integrated Security`(또는 `Trusted_Connection`) 키워드 또는 해당 속성을 사용하는 애플리케이션은 `Authentication` 키워드(또는 해당 속성)의 값을 `ActiveDirectoryIntegrated`로 설정하여 새 암호화 및 인증서 유효성 검사 동작을 사용할 것을 **권장**합니다.<br/><br/><li>`ActiveDirectoryInteractive:` Azure Active Directory ID를 사용하는 대화형 인증입니다. 이 방법은 Azure MFA(다단계 인증)를 지원합니다. </li><li>`ActiveDirectoryMSI:` [MSI(관리 서비스 ID)](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview) 인증입니다. 사용자 할당 ID의 경우 사용자 ID를 사용자 ID의 개체 ID로 설정해야 합니다.</li><li>`SqlPassword:` 사용자 ID 및 암호를 사용하는 인증입니다.</li><br/>**참고:** `SQL Server` 인증을 사용하는 애플리케이션은 `Authentication` 키워드(또는 해당 속성)의 값을 `SqlPassword`로 설정하여 [새 암호화 및 인증서 유효성 검사 동작](../features/using-azure-active-directory.md#encryption-and-certificate-validation)을 사용할 것을 **권장**합니다.</ul>|
+|SSPROP_AUTH_MODE<a href="#table1_1"><sup>**1**</sup></a>|유형: VT_BSTR<br /><br /> R/W: 읽기/쓰기<br /><br /> Default: VT_EMPTY<br /><br /> 설명: 사용되는 SQL 또는 Active Directory 인증을 지정합니다. 유효한 값은 다음과 같습니다.<br/><ul><li>`(not set)`: 다른 키워드에 의해 결정되는 인증 모드입니다.</li><li>`(empty string)`: 이전에 설정된 인증 모드를 설정 해제합니다.</li><li>`ActiveDirectoryPassword:` Azure Active Directory ID를 사용하는 사용자 ID 및 암호 인증입니다.</li><li>`ActiveDirectoryIntegrated:` Azure Active Directory ID를 사용하는 통합 인증입니다.</li><br/>**참고:** `ActiveDirectoryIntegrated` 키워드는 SQL Server에 대한 Windows 인증에도 사용할 수 있습니다. `Integrated Security`(또는 `Trusted_Connection`) 인증 키워드를 대체합니다. `Integrated Security`(또는 `Trusted_Connection`) 키워드 또는 해당 속성을 사용하는 애플리케이션은 `Authentication` 키워드(또는 해당 속성)의 값을 `ActiveDirectoryIntegrated`로 설정하여 새 암호화 및 인증서 유효성 검사 동작을 사용할 것을 **권장**합니다.<br/><br/><li>`ActiveDirectoryInteractive:` Azure Active Directory ID를 사용하는 대화형 인증입니다. 이 방법은 Azure MFA(다단계 인증)를 지원합니다. </li><li>`ActiveDirectoryMSI:` [MSI(관리 ID)](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview) 인증. 사용자 할당 ID의 경우 사용자 ID를 사용자 ID의 개체 ID로 설정해야 합니다.</li><li>`SqlPassword:` 사용자 ID 및 암호를 사용하는 인증입니다.</li><br/>**참고:** `SQL Server` 인증을 사용하는 애플리케이션은 `Authentication` 키워드(또는 해당 속성)의 값을 `SqlPassword`로 설정하여 [새 암호화 및 인증서 유효성 검사 동작](../features/using-azure-active-directory.md#encryption-and-certificate-validation)을 사용할 것을 **권장**합니다.</ul>|
 |SSPROP_AUTH_OLD_PASSWORD|유형: VT_BSTR<br /><br /> R/W: 쓰기<br /><br /> Default: VT_EMPTY<br /><br /> 설명: 현재 또는 만료된 암호입니다. 자세한 내용은 [프로그래밍 방식으로 암호 변경](../../oledb/features/changing-passwords-programmatically.md)을 참조하세요.|  
 |SSPROP_INIT_APPNAME|유형: VT_BSTR<br /><br /> R/W: 읽기/쓰기<br /><br /> 설명: 클라이언트 애플리케이션 이름입니다.|  
 |SSPROP_INIT_AUTOTRANSLATE|유형: VT_BOOL<br /><br /> R/W: 읽기/쓰기<br /><br /> Default: VARIANT_TRUE<br /><br /> 설명: OEM/ANSI 문자 변환입니다.<br /><br /> VARIANT_TRUE: OLE DB Driver for SQL Server는 클라이언트와 서버 코드 페이지 간의 확장 문자 일치에서 문제를 최소화하기 위해 유니코드를 통한 변환으로 클라이언트와 서버 간에 전송된 ANSI 문자열을 변환합니다.<br /><br /> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**char**, **varchar**또는 **text** 변수, 매개 변수 또는 열 인스턴스로 전송된 클라이언트 DBTYPE_STR 데이터는 클라이언트 ACP(ANSI 코드 페이지)를 사용하여 문자에서 유니코드로 변환된 후 서버의 ACP를 사용하여 유니코드에서 문자로 변환됩니다.<br /><br /> 클라이언트 DBTYPE_STR 변수로 전송된 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **char**, **varchar** 또는 **text** 데이터는 서버 ACP를 사용하여 문자에서 유니코드로 변환된 후 클라이언트 ACP를 사용하여 유니코드에서 문자로 변환됩니다.<br /><br /> 이러한 변환은 OLE DB Driver for SQL Server에 의해 클라이언트에서 수행됩니다. 이를 위해서는 서버에 사용된 것과 동일한 ACP를 클라이언트에서 사용할 수 있어야 합니다.<br /><br /> 이러한 설정은 다음 전송에 대해 발생하는 변환에는 영향을 미치지 않습니다.<br /><br /> 서버의 **char**, **varchar** 또는 **text**로 전송된 유니코드 DBTYPE_WSTR 클라이언트 데이터.<br /><br /> 클라이언트의 유니코드 DBTYPE_WSTR 변수에 전송된 **char**, **varchar** 또는 **text** 서버 데이터.<br /><br /> 서버의 유니코드 **nchar**, **nvarchar** 또는 **ntext**로 전송된 ANSI DBTYPE_STR 클라이언트 데이터.<br /><br /> 클라이언트의 ANSI DBTYPE_STR 변수로 전송된 유니코드 **char**, **varchar** 또는 **text** 서버 데이터.<br /><br /> VARIANT_FALSE: OLE DB Driver for SQL Server는 문자 변환을 수행하지 않습니다.<br /><br /> SQL Server용 OLE DB 드라이버는 서버의 **char**, **varchar** 또는 **text** 변수, 매개 변수 또는 열로 전송된 클라이언트 ANSI 문자 DBTYPE_STR 데이터를 변환하지 않습니다. 서버에서 클라이언트의 DBTYPE_STR 변수로 전송된 **char**, **varchar** 또는 **text** 데이터에 대해 변환이 수행되지 않습니다.<br /><br /> 클라이언트와 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스가 서로 다른 ACP를 사용하는 경우 확장 문자가 잘못 해석될 수 있습니다.|  

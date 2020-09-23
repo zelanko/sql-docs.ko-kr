@@ -1,6 +1,6 @@
 ---
 title: RxSqlServerData 개체 만들기
-description: 'RevoScaleR 자습서 2: SQL Server에서 R 언어를 사용하여 데이터 개체를 만드는 방법.'
+description: SQL Server에서 RevoScaleR 함수를 사용하는 방법을 알아봅니다. 이 자습서는 테이블을 추가하고 데이터를 로드하는 데이터 생성 작업에 이어지는 것입니다.
 ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 11/26/2018
@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a2c7daa106429f4db1382a3e73aa6b280b14dc57
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 664deeae61b664d3818f7d748ad6177b79917d86
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728607"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88178810"
 ---
 # <a name="create-sql-server-data-objects-using-rxsqlserverdata-sql-server-and-revoscaler-tutorial"></a>RxSqlServerData를 사용하여 SQL Server 데이터 개체 만들기(SQL Server 및 RevoScaleR 자습서)
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 이것은 SQL Server에서 [RevoScaleR 함수](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)를 사용하는 방법에 대한 [RevoScaleR 자습서 시리즈](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) 중 자습서 2에 해당됩니다.
 
@@ -145,7 +145,7 @@ R 작업 영역에서 연결 문자열 및 기타 매개 변수를 변수로 이
     
     연결 문자열에 문제가 없다고 가정하면 잠시 후 다음과 같은 결과가 표시됩니다.
   
-    *Total Rows written: 10000, Total time: 0.466* *읽은 행: 10000, Total Rows Processed: 10000, Total Chunk Time: 0.577 seconds*
+    *Total Rows written: 10000, Total time: 0.466* *Rows Read: 10000, Total Rows Processed: 10000, Total Chunk Time: 0.577 seconds*
   
 5. 테이블 목록을 새로 고칩니다. 각 변수의 데이터 형식이 올바르고 각 변수를 가져왔는지 확인하려면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 테이블을 마우스 오른쪽 단추로 클릭하고 **상위 1,000개의 행 선택**을 선택할 수도 있습니다.
 

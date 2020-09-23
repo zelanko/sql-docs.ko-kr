@@ -3,21 +3,21 @@ title: 리소스 풀 만들기
 description: SQL Server Machine Learning Services에서 Python 및 R 워크로드를 관리하기 위해 리소스 풀을 만들고 사용하는 방법에 대해 알아봅니다.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 02/28/2020
+ms.date: 08/06/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 5679a02542777e2302dcefc98274957b2f837445
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 08f2c66fec80ce27e3e7a9ffca7a00194ff3b81b
+ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85902320"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89283765"
 ---
 # <a name="create-a-resource-pool-for-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services의 사용자 계정 풀 만들기
-[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 SQL Server Machine Learning Services에서 Python 및 R 워크로드를 관리하기 위해 리소스 풀을 만들고 사용하는 방법에 대해 알아봅니다. 
 
@@ -57,7 +57,7 @@ SQL Server Machine Learning Services에서 Python 및 R 워크로드를 관리�
     |-|-|-|-|-|-|
     |2|기본값|100|20|0|2|
  
-3.  이러한 서버 기본 설정에서 외부 런타임은 대부분의 작업을 완료하기 위한 리소스가 부족합니다. 이를 변경하려면 다음과 같이 서버 리소스 사용을 수정해야 합니다.
+3.  이러한 서버 기본 설정에서 외부 런타임은 대부분의 작업을 완료하기 위한 리소스가 부족합니다. 리소스를 향상시키려면 다음과 같이 서버 리소스 사용을 수정해야 합니다.
   
     -   데이터베이스 엔진에서 사용할 수 있는 최대 컴퓨터 메모리를 줄입니다.
   
@@ -71,7 +71,7 @@ SQL Server Machine Learning Services에서 Python 및 R 워크로드를 관리�
     ALTER RESOURCE POOL "default" WITH (max_memory_percent = 60);
     ```
   
-2.  마찬가지로, 다음 문을 실행하여 외부 프로세스의 메모리 사용을 총 컴퓨터 리소스의 **40%** 로 제한합니다.
+2. 다음 문을 실행하여 외부 프로세스의 메모리 사용을 총 컴퓨터 리소스의 **40%** 로 제한합니다.
   
     ```sql
     ALTER EXTERNAL RESOURCE POOL "default" WITH (max_memory_percent = 40);
@@ -88,11 +88,11 @@ SQL Server Machine Learning Services에서 Python 및 R 워크로드를 관리�
 
 ## <a name="create-a-user-defined-external-resource-pool"></a>사용자 정의 외부 리소스 풀 만들기
   
-1.  리소스 관리자의 구성 변경 내용은 서버 전체에 적용되고 서버에 대한 기본 풀을 사용하는 워크로드 및 외부 풀을 사용하는 워크로드에 영향을 줍니다.
+1.  Resource Governor의 구성에 대한 모든 변경 내용은 전체 서버에 적용됩니다. 변경 내용은 서버의 기본 풀을 사용하는 워크로드뿐 아니라 외부 풀을 사용하는 워크로드에도 영향을 줍니다.
   
-     따라서 우선 순위가 있는 워크로드를 보다 세부적으로 제어하려면 사용자 정의 외부 리소스 풀을 새로 만들 수 있습니다. 또한 분류 함수를 정의하고 외부 리소스 풀에 할당해야 합니다. **EXTERNAL** 키워드가 새로 생성되었습니다.
+     우선 순위가 있는 워크로드를 보다 세부적으로 제어하려면 사용자 정의 외부 리소스 풀을 새로 만들 수 있습니다. 분류 함수를 정의하고 외부 리소스 풀에 할당합니다. **EXTERNAL** 키워드가 새로 생성되었습니다.
   
-     먼저 새 *사용자 정의 외부 리소스 풀*을 만듭니다. 다음 예제에서는 풀 이름이 **ds_ep**로 지정됩니다.
+     새 사용자 정의 외부 리소스 풀을 만듭니다. 다음 예제에서는 풀 이름이 **ds_ep**로 지정됩니다.
   
     ```sql
     CREATE EXTERNAL RESOURCE POOL ds_ep WITH (max_memory_percent = 40);
@@ -105,12 +105,13 @@ SQL Server Machine Learning Services에서 Python 및 R 워크로드를 관리�
     ```
   
      요청을 분류할 수 없을 때마다 또는 다른 분류 오류가 있을 경우 요청이 기본 그룹에 할당됩니다.
-  
-     자세한 내용은 [리소스 관리자 워크로드 그룹](../../relational-databases/resource-governor/resource-governor-workload-group.md) 및 [CREATE WORKLOAD GROUP&#40;Transact-SQL&#41;](../../t-sql/statements/create-workload-group-transact-sql.md)을 참조하세요.
+
+ 
+자세한 내용은 [리소스 관리자 워크로드 그룹](../../relational-databases/resource-governor/resource-governor-workload-group.md) 및 [CREATE WORKLOAD GROUP&#40;Transact-SQL&#41;](../../t-sql/statements/create-workload-group-transact-sql.md)을 참조하세요.
   
 ## <a name="create-a-classification-function-for-machine-learning"></a>기계 학습에 대한 분류 함수 만들기
   
-분류 함수는 들어오는 태스크를 검사하고 현재 리소스 풀을 사용하여 실행할 수 있는 태스크인지 확인합니다. 분류 함수의 조건을 충족하지 않는 태스크는 서버의 기본 리소스 풀에 다시 할당됩니다.
+분류 함수는 수신되는 태스크를 검사하여 현재 리소스 풀을 사용하여 실행할 수 있는 태스크인지 여부를 판단합니다. 분류 함수의 조건을 충족하지 않는 태스크는 서버의 기본 리소스 풀에 다시 할당됩니다.
   
 1. 리소스 Resource Governor가 리소스 풀을 확인하기 위해 분류자 함수를 사용해야 함을 지정하여 시작합니다. 분류자 함수의 자리 표시자로 **null**을 할당할 수 있습니다.
   
@@ -149,7 +150,7 @@ SQL Server Machine Learning Services에서 Python 및 R 워크로드를 관리�
 
 ## <a name="verify-new-resource-pools-and-affinity"></a>새 리소스 풀 및 선호도 확인
 
-변경 내용이 있는지 확인하려면 다음 인스턴스 리소스 풀과 연결된 각 작업 그룹에 대한 서버 메모리와 CPU의 구성을 확인해야 합니다.
+각 워크로드 그룹의 서버 메모리 구성과 CPU를 확인합니다. 다음을 검토하여 인스턴스 리소스가 변경되었는지 확인합니다.
 
 + [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서버에 대한 기본 풀
 + 외부 프로세스에 대한 기본 리소스 풀
@@ -165,8 +166,8 @@ SQL Server Machine Learning Services에서 Python 및 R 워크로드를 관리�
 
     |group_id|name|importance|request_max_memory_grant_percent|request_max_cpu_time_sec|request_memory_grant_timeout_sec|max_dop|group_max_requests pool_id|pool_idd|external_pool_id|
     |-|-|-|-|-|-|-|-|-|-|
-    |1|내부|중간|25|0|0|0|0|1|2|
-    |2|기본값|중간|25|0|0|0|0|2|2|
+    |1|internal|중간|25|0|0|0|0|1|2|
+    |2|default|중간|25|0|0|0|0|2|2|
     |256|ds_wg|중간|25|0|0|0|0|2|256|
   
 2.  새 카탈로그 보기인 [sys.resource_governor_external_resource_pools&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-external-resource-pools-transact-sql.md)를 사용하여 모든 외부 리소스 풀을 봅니다.
@@ -179,7 +180,7 @@ SQL Server Machine Learning Services에서 Python 및 R 워크로드를 관리�
     
     |external_pool_id|name|max_cpu_percent|max_memory_percent|max_processes|버전|
     |-|-|-|-|-|-|
-    |2|기본값|100|20|0|2|
+    |2|default|100|20|0|2|
     |256|ds_ep|100|40|0|1|
   
      자세한 내용은 [리소스 관리자 카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md)를 참조하세요.
@@ -190,7 +191,7 @@ SQL Server Machine Learning Services에서 Python 및 R 워크로드를 관리�
     SELECT * FROM sys.resource_governor_external_resource_pool_affinity;
     ```
   
-     이 경우 풀이 AUTO 선호도로 생성되었으므로 정보가 표시되지 않습니다. 자세한 내용은 [sys.dm_resource_governor_resource_pool_affinity&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pool-affinity-transact-sql.md)를 참조하세요.
+     풀이 AUTO 선호도로 생성되었으므로 정보가 표시되지 않을 것입니다. 자세한 내용은 [sys.dm_resource_governor_resource_pool_affinity&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pool-affinity-transact-sql.md)를 참조하세요.
 
 ## <a name="next-steps"></a>다음 단계
 

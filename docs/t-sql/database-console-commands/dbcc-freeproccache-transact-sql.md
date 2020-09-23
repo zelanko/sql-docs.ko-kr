@@ -26,31 +26,31 @@ ms.assetid: 0e09d210-6f23-4129-aedb-3d56b2980683
 author: pmasl
 ms.author: umajay
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d8b3b9733500dc56f4994dd13fd42939b0885a02
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 583bed1efb0f19b1924fe007be7a6f49c2587a52
+ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88367789"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076597"
 ---
 # <a name="dbcc-freeproccache-transact-sql"></a>DBCC FREEPROCCACHE(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 계획 캐시에서 모든 요소를 제거하거나, 계획 핸들이나 SQL 핸들을 지정하여 계획 캐시에서 특정 계획을 제거하거나, 지정한 리소스 풀에 연결된 모든 캐시 항목을 제거합니다.
 
->[!NOTE]
->DBCC FREEPROCCACHE는 고유하게 컴파일된 저장 프로시저에 대한 실행 통계를 지우지 않습니다. 프로시저 캐시는 고유하게 컴파일된 저장 프로시저에 대한 정보를 포함하지 않습니다. 프로시저 실행에서 수집된 모든 실행 통계는 실행 통계 DMV([sys.dm_exec_procedure_stats&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md) 및 [sys.dm_exec_query_plan&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md))에 표시됩니다.  
+> [!NOTE]
+> DBCC FREEPROCCACHE는 고유하게 컴파일된 저장 프로시저에 대한 실행 통계를 지우지 않습니다. 프로시저 캐시는 고유하게 컴파일된 저장 프로시저에 대한 정보를 포함하지 않습니다. 프로시저 실행에서 수집된 모든 실행 통계는 실행 통계 DMV([sys.dm_exec_procedure_stats&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md) 및 [sys.dm_exec_query_plan&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md))에 표시됩니다.  
   
 ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>구문  
-SQL Server용 구문:
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구문:
 
 ```sql
 DBCC FREEPROCCACHE [ ( { plan_handle | sql_handle | pool_name } ) ] [ WITH NO_INFOMSGS ]  
 ```  
 
-Azure SQL Data Warehouse 및 병렬 데이터 웨어하우스용 구문:
+[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 구문:
   
 ```sql
 DBCC FREEPROCCACHE [ ( COMPUTE | ALL ) ] 

@@ -1,7 +1,7 @@
 ---
 title: Kubernetes의 데이터 지속성
 titleSuffix: SQL Server big data clusters
-description: SQL Server 2019 빅 데이터 클러스터에서 데이터 지속성이 작동하는 방식을 알아봅니다.
+description: Kubernetes에서 영구 볼륨이 스토리지에 대한 플러그 인 모델을 제공하는 방법을 알아봅니다. 또한 SQL Server 2019 빅 데이터 클러스터에서 데이터 지속성이 작동하는 방식도 알아봅니다.
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 8a3ca863818d11471b0ae6aadd38458faf8b9daf
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 970b049ec7933af9fab1d213d7441f101e01f7c1
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85661074"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88765692"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-in-kubernetes"></a>Kubernetes에서 SQL Server 빅 데이터 클러스터를 사용한 데이터 지속성
 
@@ -28,7 +28,7 @@ SQL Server 빅 데이터 클러스터는 [스토리지 클래스](https://kubern
 
 빅 데이터 클러스터의 스토리지 구성을 계획할 때 다음과 같은 중요한 사항을 고려해야 합니다.
 
-- 빅 데이터 클러스터를 성공적으로 배포하려면 사용 가능한 영구적 볼륨을 필요한 만큼 확보해야 합니다. AKS(Azure Kubernetes Service) 클러스터에 배포하는 경우 기본 제공 스토리지 클래스(`default` 또는 `managed-premium`)를 사용하는 경우 이 클래스는 영구적 볼륨에 대한 동적 프로비저닝을 지원합니다. 따라서 영구적 볼륨을 미리 만들 필요가 없지만 AKS 클러스터에서 사용할 수 있는 작업자 노드가 배포에 필요한 영구적 볼륨 수 만큼의 디스크를 연결할 수 있는지 확인해야 합니다. 작업자 노드에 지정된 [VM 크기](https://docs.microsoft.com/azure/virtual-machines/linux/sizes)에 따라 각 노드에서 특정 개수의 디스크를 연결할 수 있습니다. 기본 크기 클러스터(고가용성 없음)의 경우 최소 24개의 디스크가 필요합니다. 고가용성을 설정하거나 풀을 확장하는 경우 확장하는 리소스에 관계 없이 각 추가 복제본당 두 개 이상의 영구적 볼륨이 있어야 합니다.
+- 빅 데이터 클러스터를 성공적으로 배포하려면 사용 가능한 영구적 볼륨을 필요한 만큼 확보해야 합니다. AKS(Azure Kubernetes Service) 클러스터에 배포하는 경우 기본 제공 스토리지 클래스(`default` 또는 `managed-premium`)를 사용하는 경우 이 클래스는 영구적 볼륨에 대한 동적 프로비저닝을 지원합니다. 따라서 영구적 볼륨을 미리 만들 필요가 없지만 AKS 클러스터에서 사용할 수 있는 작업자 노드가 배포에 필요한 영구적 볼륨 수 만큼의 디스크를 연결할 수 있는지 확인해야 합니다. 작업자 노드에 지정된 [VM 크기](/azure/virtual-machines/linux/sizes)에 따라 각 노드에서 특정 개수의 디스크를 연결할 수 있습니다. 기본 크기 클러스터(고가용성 없음)의 경우 최소 24개의 디스크가 필요합니다. 고가용성을 설정하거나 풀을 확장하는 경우 확장하는 리소스에 관계 없이 각 추가 복제본당 두 개 이상의 영구적 볼륨이 있어야 합니다.
 
 - 구성에서 제공하려는 스토리지 클래스의 스토리지 프로비저닝 프로그램이 동적 프로비저닝을 지원하지 않는 경우 영구적 볼륨을 미리 만들어야 합니다. 예를 들어 `local-storage` 프로비저닝 프로그램은 동적 프로비저닝을 지원하지 않습니다. `kubeadm`을 사용하여 배포된 Kubernetes 클러스터에서 진행하는 방법에 대한 지침은 이 [샘플 스크립트](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm/ubuntu)를 참조하세요.
 
@@ -40,7 +40,7 @@ SQL Server 빅 데이터 클러스터는 [스토리지 클래스](https://kubern
 
 - Kubernetes에 컨테이너화된 애플리케이션으로 배포하고 상태 저장 세트 및 영구적 스토리지와 같은 기능을 사용하여 Kubernetes는 상태 문제가 발생하면 Pod를 다시 시작하여 동일한 영구적 스토리지에 연결합니다. 그러나 노드 오류가 발생하여 Pod를 다른 노드에서 다시 시작해야 하는 경우에는 스토리지가 실패한 노드에 로컬이면 서비스를 사용할 수 없게 될 위험이 증가합니다. 이 위험을 완화하려면 추가 중복성을 구성하고 [고가용성 기능](deployment-high-availability.md)을 사용하도록 설정하거나 원격 중복 스토리지를 사용해야 합니다. 다음은 빅 데이터 클러스터의 다양한 구성 요소에 대한 스토리지 옵션의 개요입니다.
 
-| 리소스 | 데이터의 스토리지 유형 | 로그의 스토리지 유형 |  메모 |
+| 리소스 | 데이터의 스토리지 유형 | 로그의 스토리지 유형 |  참고 |
 |---|---|---|--|
 | SQL Server 마스터 인스턴스 | 로컬(복제본>=3) 또는 원격 중복 스토리지(복제본=1) | 로컬 스토리지 | Pod가 노드에 유지되는 상태 저장 세트 기반 구현은 다시 시작 및 일시적인 오류로 인해 데이터가 손상되지 않도록 보장합니다. |
 | 풀 컴퓨팅 | 로컬 스토리지 | 로컬 스토리지 | 사용자 데이터가 저장되지 않았습니다. |

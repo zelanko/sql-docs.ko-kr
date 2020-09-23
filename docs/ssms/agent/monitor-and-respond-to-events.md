@@ -1,4 +1,5 @@
 ---
+description: 이벤트 모니터링 및 응답
 title: 이벤트 모니터링 및 응답
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -22,20 +23,20 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f1a7ca692b7720906ead843b4579d7d023a4797e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e4ffa92061bf4d3fca9214a9875a8bac41ec1c4a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715729"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463114"
 ---
 # <a name="monitor-and-respond-to-events"></a>이벤트 모니터링 및 응답
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> 현재 [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)에서 일부 SQL Server 에이전트 기능이 지원됩니다. 자세한 내용은 [SQL Server에서 Azure SQL Database Managed Instance T-SQL 차이점](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)을 참조하세요.
+> 현재 [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)에서는 SQL Server 에이전트 기능이 대부분 지원됩니다. 자세한 내용은 [SQL Server와 Azure SQL Managed Instance 간의 T-SQL 차이점](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)을 참조하세요.
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트는 *의 메시지, 특정 성능 조건 및 WMI(Windows Management Instrumentation) 이벤트와 같은*이벤트 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 모니터링하고 자동으로 응답할 수 있습니다.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 메시지, 특정 성능 조건 및 WMI(Windows Management Instrumentation) 이벤트와 같은 *이벤트*를 모니터링하고 자동으로 응답할 수 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
 [경고](../../ssms/agent/alerts.md)  

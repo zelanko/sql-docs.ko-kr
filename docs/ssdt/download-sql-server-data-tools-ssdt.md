@@ -13,18 +13,18 @@ ms.reviewer: maghan
 ms.custom: seo-lt-2019
 ms.date: 02/20/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: dbaaa71b61129d0bb1917644c017122e6ed88bf4
-ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
+ms.openlocfilehash: eed51327477f40aa4e093d9b28cbaa641bfd4a86
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2020
-ms.locfileid: "86279003"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480535"
 ---
 # <a name="download-sql-server-data-tools-ssdt-for-visual-studio"></a>Visual Studio용 SSDT(SQL Server Data Tools) 다운로드
 
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-**SSDT(SQL Server Data Tools)** 는 SQL Server 관계형 데이터베이스, Azure SQL Database, AS(Analysis Services) 데이터 모델, IS(Integration Services) 패키지 및 RS(Reporting Services) 보고서를 빌드하기 위한 최신형 개발 도구입니다. SSDT를 사용하면 Visual Studio에서 애플리케이션을 개발할 때처럼 쉽게 SQL Server 콘텐츠 형식을 디자인 및 배포할 수 있습니다.
+**SSDT(SQL Server Data Tools)** 는 SQL Server 관계형 데이터베이스, Azure SQL 데이터베이스, AS(Analysis Services) 데이터 모델, IS(Integration Services) 패키지 및 RS(Reporting Services) 보고서를 빌드하기 위한 최신형 개발 도구입니다. SSDT를 사용하면 Visual Studio에서 애플리케이션을 개발할 때처럼 쉽게 SQL Server 콘텐츠 형식을 디자인 및 배포할 수 있습니다.
 
 ## <a name="ssdt-for-visual-studio-2019"></a>Visual Studio 2019용 SSDT
 
@@ -79,10 +79,10 @@ Analysis Services, Integration Services 및 Reporting Services 프로젝트 지�
 
 ## <a name="ssdt-for-vs-2017-standalone-installer"></a>VS 2017용 SSDT(독립 실행형 설치 관리자)
 
-:::image type="icon" source="media/download.png" border="false"::: **[Visual Studio 2017용 SSDT(15.9.5) 다운로드](https://go.microsoft.com/fwlink/?linkid=2131035)**
+:::image type="icon" source="media/download.png" border="false"::: **[Visual Studio 2017용 SSDT(15.9.6) 다운로드](https://go.microsoft.com/fwlink/?linkid=2139376)**
 
 > [!IMPORTANT]
-> * Visual Studio 2017용 SSDT(15.9.5)를 설치하기 전에 *Analysis Services Projects* 및 *Reporting Services Projects* 확장이 이미 설치되어 있는 경우 모두 제거하고, VS 인스턴스를 모두 닫습니다. 
+> * Visual Studio 2017용 SSDT(15.9.6)를 설치하기 전에 *Analysis Services Projects* 및 *Reporting Services Projects* 확장이 이미 설치되어 있는 경우 모두 제거하고, VS 인스턴스를 모두 닫습니다. 
 > * SQL Server 2017용 수신함 구성 요소 파워 쿼리 원본을 제거했습니다. 이제 SQL Server 2017 및 2019용 파워 쿼리 원본을 기본 구성 요소로 발표했습니다. 이 구성 요소는 [여기](https://www.microsoft.com/download/details.aspx?id=100619)에서 다운로드할 수 있습니다.
 > * Oracle 및 Teradata 커넥터를 사용하고 SQL 2019보다 이전 버전의 SQL Server를 대상으로 지정하여 패키지를 디자인하려면 [Microsoft Oracle Connector for SQL 2019](https://www.microsoft.com/download/details.aspx?id=58228) 및 [Microsoft Teradata Connector for SQL 2019](https://www.microsoft.com/download/details.aspx?id=100599) 외에도 해당 버전의 Microsoft Connector for Oracle 및 Teradata by Attunity를 설치해야 합니다.
 >    * [SQL Server 2017을 대상으로 하는 Microsoft Connector Version 5.0 for Oracle 및 Teradata by Attunity](https://www.microsoft.com/download/details.aspx?id=55179)
@@ -102,17 +102,17 @@ Visual Studio 2017용 SSDT는 Visual Studio와 동일한 [시스템 요구 사�
 
 이 **VS 2017용 SSDT** 릴리스는 다음 언어로 설치할 수 있습니다.
 
-* [중국어(간체)](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x804)
-* [중국어(번체)](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x404)
-* [영어(미국)](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x409)
-* [프랑스어](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x40c)
-* [독일어](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x407)
-* [이탈리아어](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x410)
-* [일본어](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x411)
-* [한국어](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x412)
-* [포르투갈어(브라질)](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x416)
-* [러시아어](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x419)
-* [스페인어](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x40a)
+* [중국어(간체)](https://go.microsoft.com/fwlink/?linkid=2139376&clcid=0x804)
+* [중국어(번체)](https://go.microsoft.com/fwlink/?linkid=2139376&clcid=0x404)
+* [영어(미국)](https://go.microsoft.com/fwlink/?linkid=2139376&clcid=0x409)
+* [프랑스어](https://go.microsoft.com/fwlink/?linkid=2139376&clcid=0x40c)
+* [독일어](https://go.microsoft.com/fwlink/?linkid=2139376&clcid=0x407)
+* [이탈리아어](https://go.microsoft.com/fwlink/?linkid=2139376&clcid=0x410)
+* [일본어](https://go.microsoft.com/fwlink/?linkid=2139376&clcid=0x411)
+* [한국어](https://go.microsoft.com/fwlink/?linkid=2139376&clcid=0x412)
+* [포르투갈어(브라질)](https://go.microsoft.com/fwlink/?linkid=2139376&clcid=0x416)
+* [러시아어](https://go.microsoft.com/fwlink/?linkid=2139376&clcid=0x419)
+* [스페인어](https://go.microsoft.com/fwlink/?linkid=2139376&clcid=0x40a)
 
 ### <a name="considerations-and-limitations"></a>고려 사항 및 제한 사항
 
@@ -166,7 +166,7 @@ Visual Studio 2015용 SSDT 또는 SSDT의 이전 버전을 다운로드하고 �
 
 * [SSDT MSDN 포럼](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=ssdt) 
 
-* [SSDT 팀 블로그](https://blogs.msdn.com/b/ssdt/)
+* [SSDT 팀 블로그](https://docs.microsoft.com/archive/blogs/ssdt/)
 
 * [DACFx API 참조](https://msdn.microsoft.com/library/dn645454.aspx)
 

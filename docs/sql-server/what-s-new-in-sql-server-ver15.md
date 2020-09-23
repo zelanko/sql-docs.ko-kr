@@ -9,12 +9,12 @@ ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 299182ad45f8c96f4b2f07d38f1b3f366eea7b33
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c1232571931a8260e545aa21d483a5fbe2d93c70
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923415"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864327"
 ---
 # <a name="whats-new-in-sql-server-2019"></a>[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]의 새로운 기능
 
@@ -262,7 +262,7 @@ ms.locfileid: "86923415"
 
 | 새로운 기능 또는 업데이트 | 세부 정보 |
 |:---|:---|
-|Azure SQL Database 관리되는 인스턴스 데이터베이스 지원| 관리형 인스턴스에서 [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)]를 호스팅합니다. [[!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)] 설치 및 구성](../master-data-services/master-data-services-installation-and-configuration.md#SetUpWeb)을 참조하세요.|
+|Azure SQL Managed Instance 데이터베이스를 지원합니다.| Azure SQL Managed Instance에서 [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)]를 호스트합니다. [[!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)] 설치 및 구성](../master-data-services/master-data-services-installation-and-configuration.md#SetUpWeb)을 참조하세요.|
 |새 HTML 컨트롤| HTML 컨트롤은 이전의 모든 Silverlight 구성 요소를 대체합니다. Silverlight 종속성이 제거되었습니다.|
 | &nbsp; | &nbsp; |
 

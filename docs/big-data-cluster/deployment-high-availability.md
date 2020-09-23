@@ -5,16 +5,16 @@ description: 고가용성을 사용하여 SQL Server 빅 데이터 클러스터�
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 02/13/2020
+ms.date: 08/04/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 08574ef070803a8612d12e595169bbc00b99b139
-ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
+ms.openlocfilehash: 2ed7a1b5169c7104ea089410d244095cd953aaf2
+ms.sourcegitcommit: 6ab28d954f3a63168463321a8bc6ecced099b247
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2020
-ms.locfileid: "86279465"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87790281"
 ---
 # <a name="deploy-sql-server-big-data-cluster-with-high-availability"></a>고가용성을 사용하여 SQL Server 빅 데이터 클러스터 배포
 
@@ -133,6 +133,9 @@ SQL Server Master Readable Secondary Replicas  11.11.111.11,11111  sql-server-ma
 
 > [!IMPORTANT]
 > SQL Server 인스턴스 연결에 공개된 엔드포인트는 Active Directory를 사용하도록 설정된 클러스터에서도 SQL 인증만 지원합니다. 빅 데이터 클러스터를 배포하는 동안 기본적으로 `sa` 로그인을 사용하지 않도록 설정되고, 배포 시 `AZDATA_USERNAME` 및 `AZDATA_PASSWORD` 환경 변수에 제공되는 값에 따라 새 `sysadmin` 로그인이 프로비저닝됩니다.
+
+> [!IMPORTANT]
+> 포함된 가용성 그룹 DDL은 BDC가 단독으로 자체 관리합니다. 포함된 가용성 또는 데이터베이스 미러링 엔드포인트를 삭제하려는 (외부 사용자의) 시도는 지원되지 않으며, 이로 인해 복구할 수 없는 BDC 상태가 될 수 있습니다.
 
 이 엔드포인트를 공개한 다음, 복원 워크플로를 사용하여 만든 데이터베이스를 가용성 그룹에 추가하는 방법을 보여 주는 예제는 다음과 같습니다. `sp_configure`를 사용하여 서버 구성을 변경하려는 경우 SQL Server 마스터 인스턴스에 대한 연결을 설정하는 방법에 대한 비슷한 지침이 적용됩니다.
 

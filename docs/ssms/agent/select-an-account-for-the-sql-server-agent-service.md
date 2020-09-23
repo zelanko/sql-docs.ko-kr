@@ -1,4 +1,5 @@
 ---
+description: SQL Server 에이전트 서비스의 계정 선택
 title: SQL Server 에이전트 서비스의 계정 선택
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -22,19 +23,19 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 05/04/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 4356764f50b816a05e9bcfbfb294c65cdc8080fe
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0bab74ab5bbd51099ef8d38b7ad8471e1d7fee55
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85644690"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88318459"
 ---
 # <a name="select-an-account-for-the-sql-server-agent-service"></a>SQL Server 에이전트 서비스의 계정 선택
 
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> 현재 [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)에서 일부 SQL Server 에이전트 기능이 지원됩니다. 자세한 내용은 [SQL Server에서 Azure SQL Database Managed Instance T-SQL 차이점](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)을 참조하세요.
+> 현재 [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)에서는 SQL Server 에이전트 기능이 대부분 지원됩니다. 자세한 내용은 [SQL Server와 Azure SQL Managed Instance 간의 T-SQL 차이점](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)을 참조하세요.
 
 서비스 시작 계정은 [!INCLUDE[msCoName](../../includes/msconame_md.md)] 에이전트를 실행하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows 계정과 해당 네트워크 사용 권한을 정의합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트는 지정된 사용자 계정으로 실행됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자에서 다음 옵션 중 하나를 선택하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스의 계정을 선택하십시오.  
   
@@ -91,14 +92,14 @@ ms.locfileid: "85644690"
 |로컬 서비스 계정(NT AUTHORITY\LocalService)|지원되지 않음|지원되지 않음|지원되지 않음|  
   
 ### <a name="limitation-1-using-non-administrative-accounts-for-multiserver-administration"></a>제한 사항 1: 다중 서버 관리에 비관리자 계정 사용  
-대상 서버를 마스터 서버에 등록하면 다음 오류 메시지와 함께 실패할 수 있습니다. "등록 작업이 실패했습니다."  
+대상 서버를 마스터 서버에 참여시키면 실패하고 "참여 작업이 실패했습니다."라는 오류 메시지가 표시될 수 있습니다.  
   
 이 오류를 해결하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스를 모두 다시 시작합니다. 자세한 내용은 [SQL Server 서비스 시작, 중지, 일시 중지, 재개 및 다시 시작](https://msdn.microsoft.com/32660a02-e5a1-411a-9e57-7066ca459df6)을 참조하세요.  
   
 ### <a name="limitation-2-using-the-local-system-account-for-multiserver-administration"></a>제한 사항 2: 다중 서버 관리에 로컬 시스템 계정 사용  
 마스터 서버와 대상 서버가 같은 컴퓨터에 있을 경우에만 로컬 시스템 계정으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스를 실행할 때 다중 서버 관리가 지원됩니다. 이 구성을 사용하면 대상 서버를 마스터 서버에 참여시킬 때 다음 메시지가 반환됩니다.  
   
-" *<target_server_computer_name>* 의 에이전트 시작 계정에 대상 서버로 로그인할 권한이 있는지 확인하세요."  
+"*<target_server_computer_name>* 의 에이전트 시작 계정에 대상 서버로 로그인할 권한이 있는지 확인하세요."  
   
 이 정보 메시지는 무시해도 됩니다. 참여 작업이 성공적으로 완료됩니다. 자세한 내용은 [다중 서버 환경 만들기](../../ssms/agent/create-a-multiserver-environment.md)를 참조하세요.  
   

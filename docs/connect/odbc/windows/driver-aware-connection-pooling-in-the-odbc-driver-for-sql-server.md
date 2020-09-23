@@ -2,7 +2,7 @@
 title: ODBC 드라이버에서 드라이버 인식 연결 풀링
 description: Windows 기반의 Microsoft ODBC Driver for SQL Server에서 드라이버 인식 연결 풀링 개선 사항을 알아봅니다.
 ms.custom: ''
-ms.date: 05/06/2020
+ms.date: 09/01/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 455ab165-8e4d-4df9-a1d7-2b532bfd55d6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1e9da7b59f6acccbc95e3d3a797a0a1d507baee4
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: b1d8700e6868781480771c4a62f2a5fc6c92ddfc
+ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922082"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89288115"
 ---
 # <a name="driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server"></a>ODBC Driver for SQL Server에서 드라이버 인식 연결 풀링
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "82922082"
   
 -   다음 연결 키워드에서 연결 문자열과 풀링된 연결 문자열 사이에 차이가 있는 경우 풀링된 연결이 사용되지 않습니다.  
   
-    |키워드|ODBC 드라이버 13|ODBC 드라이버 11|
+    |키워드|ODBC 드라이버 17/13|ODBC 드라이버 11|
     |-|-|-|
     |`Address`|예|예|
     |`AnsiNPW`|예|예|
@@ -68,7 +68,7 @@ ms.locfileid: "82922082"
     
 - 다음 연결 특성에서 연결 문자열과 풀링된 연결 문자열 사이에 차이가 있는 경우 풀링된 연결이 사용되지 않습니다.  
   
-    |attribute|ODBC 드라이버 13|ODBC 드라이버 11|  
+    |attribute|ODBC 드라이버 17/13|ODBC 드라이버 11|  
     |-|-|-|  
     |`SQL_ATTR_CURRENT_CATALOG`|예|예|
     |`SQL_ATTR_PACKET_SIZE`|예|예|
@@ -94,7 +94,7 @@ ms.locfileid: "82922082"
   
      드라이버 관리자가 연결을 풀의 연결과 일치시키려고 할 때 이러한 연결 키워드는 고려되지 않습니다. (이러한 매개 변수 중 하나를 변경하는 경우에도 기존 연결을 재사용할 수 있습니다. 드라이버가 필요에 따라 옵션을 재설정합니다. 이러한 특성은 추가로 네트워크를 호출하지 않고 클라이언트 쪽에서 재설정할 수 있습니다.  
   
-    |키워드|ODBC 드라이버 13|ODBC 드라이버 11|  
+    |키워드|ODBC 드라이버 17/13|ODBC 드라이버 11|  
     |-|-|-|  
     |`AutoTranslate`|예|예|
     |`Description`|예|예|
@@ -108,7 +108,7 @@ ms.locfileid: "82922082"
   
      다음 연결 특성 중 하나를 변경하는 경우 기존 연결을 재사용할 수 있습니다.  필요에 따라 드라이버가 값을 재설정합니다. 드라이버가 추가로 네트워크를 호출하지 않고 클라이언트에서 이러한 특성을 재설정할 수 있습니다.  
   
-    |attribute|ODBC 드라이버 13|ODBC 드라이버 11|  
+    |attribute|ODBC 드라이버 17/13|ODBC 드라이버 11|  
     |-|-|-|  
     |모든 문 특성|예|예|
     |`SQL_ATTR_AUTOCOMMIT`|예|예|

@@ -1,4 +1,5 @@
 ---
+description: 경고 속성 - 새 경고(일반 페이지)
 title: 경고 속성 - 새 경고(일반 페이지)
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,19 +14,19 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 90141295bbb68d6401bb8fade13776ef4dc65def
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5ed13dc3f03a82adb3cfb85a9ecabce6742a4071
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85749243"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418409"
 ---
 # <a name="alert-properties---new-alert-general-page"></a>경고 속성 - 새 경고(일반 페이지)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 
 > [!IMPORTANT]  
-> 현재 [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)에서 일부 SQL Server 에이전트 기능이 지원됩니다. 자세한 내용은 [SQL Server에서 Azure SQL Database Managed Instance T-SQL 차이점](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)을 참조하세요.
+> 현재 [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)에서는 SQL Server 에이전트 기능이 대부분 지원됩니다. 자세한 내용은 [SQL Server와 Azure SQL Managed Instance 간의 T-SQL 차이점](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)을 참조하세요.
 
 이 페이지를 사용하여 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 경고의 일반 속성을 확인하고 수정할 수 있습니다.  
 
@@ -36,7 +37,7 @@ ms.locfileid: "85749243"
 **사용**  
 경고를 설정합니다. 경고를 설정하지 않으면 경고에 지정된 동작이 수행되지 않습니다.  
   
-**형식**  
+**유형**  
 경고 유형을 선택합니다.  
   
 -   **SQL Server 이벤트 경고** - [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows 이벤트 로그의 메시지에 응답합니다.  
@@ -52,7 +53,7 @@ ms.locfileid: "85749243"
 **오류 번호**  
 이 이벤트가 오류에 응답하도록 지정하고 오류 번호를 지정합니다.  
   
-**Severity**  
+**심각도**  
 이 이벤트가 특정 심각도를 지닌 메시지에 응답하도록 지정하고 심각도를 지정합니다.  
   
 **메시지에 다음 텍스트가 포함될 때 경고 발생**  

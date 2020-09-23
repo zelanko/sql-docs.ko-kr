@@ -15,20 +15,27 @@ helpviewer_keywords:
 ms.assetid: 054c4a87-60bf-4556-9a8c-8b2d77a534e6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d5c5b4965489544cfd1f6ee5ccfb1ce4170381bf
-ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
+ms.openlocfilehash: 05ee90e9ccbf781e0145665b8f1dd06ca2fb8d45
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80742038"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396094"
 ---
 # <a name="monitor-reporting-services-subscriptions"></a>Reporting Services 구독 모니터링
   사용자 인터페이스, Windows PowerShell 또는 로그 파일을 통해 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구독을 모니터링할 수 있습니다. 모니터링에 사용할 수 있는 옵션은 실행 중인 보고서 서버의 모드에 따라 달라집니다.  
   
-||  
-|-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기본 모드 &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 모드.|  
-  
+**[!INCLUDE[applies](../../includes/applies-md.md)]**
+
+:::row:::
+    :::column:::
+        [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기본 모드  
+    :::column-end:::
+    :::column:::
+        [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 모드  
+    :::column-end:::
+:::row-end:::
+
  **문서 내용:**  
   
 -   [기본 모드 사용자 인터페이스](#bkmk_native_mode)  
@@ -49,15 +56,15 @@ ms.locfileid: "80742038"
 |새 구독|구독을 처음 만들 때 나타납니다.|  
 |비활성|구독을 처리할 수 없을 때 나타납니다. 자세한 내용은 이 문서의 뒷부분에 있는 "비활성 구독 관리"를 참고하세요.|  
 |완료: 총 \<*number*>개 중 \<*number*>개가 처리되었으며 \<*number*>개의 오류가 발생했습니다.|데이터 기반 구독 실행 상태를 나타냅니다. 이 메시지는 일정 예약 및 배달 프로세서에서 제공합니다.|  
-|\<*number*>개가 처리됨|일정 예약 및 배달 프로세서에서 성공적으로 배달했거나 더 이상 배달하지 않는 알림의 수입니다. 데이터 기반 배달이 완료되면 처리된 알림 수가 생성된 알림의 총 수와 같아야 합니다.|  
+|\<*number*>개 처리됨|일정 예약 및 배달 프로세서에서 성공적으로 배달했거나 더 이상 배달하지 않는 알림의 수입니다. 데이터 기반 배달이 완료되면 처리된 알림 수가 생성된 알림의 총 수와 같아야 합니다.|  
 |총 \<*number*>개|구독의 마지막 배달에 대해 생성된 알림의 총 수입니다.|  
-|\<*number*>개의 오류|일정 예약 및 배달 프로세서에서 배달하지 못했거나 더 이상 배달하지 않는 알림의 수입니다.|  
+|\<*number*>개 오류|일정 예약 및 배달 프로세서에서 배달하지 못했거나 더 이상 배달하지 않는 알림의 수입니다.|  
 |메일 전송 실패: 서버에 연결하지 못해 전송하지 못했습니다.|보고서 서버가 메일 서버에 연결하지 못했음을 나타냅니다. 이 메시지는 전자 메일 배달 확장 프로그램에서 제공합니다.|  
 |\<*filename*> 파일을 \<path>에 썼습니다.|파일 공유 위치에 성공적으로 배달했음을 나타냅니다. 이 메시지는 파일 공유 배달 확장 프로그램에서 제공합니다.|  
 |파일에 쓰는 동안 알 수 없는 오류가 발생했습니다.|파일 공유 위치에 배달하지 못했음을 나타냅니다. 이 메시지는 파일 공유 배달 확장 프로그램에서 제공합니다.|  
 |대상 폴더 \<path>에 연결하지 못했습니다. 대상 폴더가 있거나 파일이 공유되어 있는지 확인하십시오.|지정한 폴더를 찾을 수 없음을 나타냅니다. 이 메시지는 파일 공유 배달 확장 프로그램에서 제공합니다.|  
 |\<filename> 파일을 \<path>에 쓸 수 없습니다. 다시 시도하는 중입니다.|파일을 새 버전으로 업데이트할 수 없음을 나타냅니다. 이 메시지는 파일 공유 배달 확장 프로그램에서 제공합니다.|  
-|\<filename>: \<message> 파일에 쓰지 못했습니다.|파일 공유 위치에 배달하지 못했음을 나타냅니다. 이 메시지는 파일 공유 배달 확장 프로그램에서 제공합니다.|  
+|\<filename> 파일에 쓰지 했습니다. \<message>|파일 공유 위치에 배달하지 못했음을 나타냅니다. 이 메시지는 파일 공유 배달 확장 프로그램에서 제공합니다.|  
 |\<custom status messages>|배달 확장 프로그램에서 제공하는 배달 성공 및 실패에 대한 상태 메시지입니다. 타사 또는 사용자 지정 배달 확장 프로그램을 사용할 경우 추가 상태 메시지가 제공될 수 있습니다.|  
   
  또한, 보고서 서버 관리자는 현재 처리 중인 표준 구독을 모니터링할 수 있습니다. 데이터 기반 구독은 모니터링할 수 없습니다. 자세한 내용은 [실행 중인 프로세스 관리](../../reporting-services/subscriptions/manage-a-running-process.md)를 참조하세요.  
@@ -95,9 +102,8 @@ ms.locfileid: "80742038"
 ### <a name="sharepoint-uls-log-files"></a>SharePoint ULS 로그 파일  
  구독 관련 정보는 SharePoint ULS 로그에 기록됩니다. ULS 로그에 대한 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 이벤트를 구성하는 방법에 대한 자세한 내용은 [SharePoint 추적 로그에 대한 Reporting Services 이벤트 설정&#40;ULS&#41;](../../reporting-services/report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)를 참조하세요.  다음은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구독과 관련된 ULS 로그 항목의 예입니다.  
   
-||||||||  
-|-|-|-|-|-|-|-|  
 |Date|Process|영역|Category|Level|Correlation|메시지|  
+|-|-|-|-|-|-|-|  
 |2019/5/21 14:34:06:15|응용 프로그램 풀: a0ba039332294f40bc4a81544afde01d|SQL Server Reporting Services|보고서 서버 전자 메일 확장 프로그램|예기치 않은 오류|(empty)|**메일을 보내는 중 오류가 발생했습니다.** 예외:  System.Net.Mail.SmtpException: 사서함을 사용할 수 없습니다. 서버 응답: 5.7.1 클라이언트가 Microsoft.ReportingServices.EmailDeliveryProvider.EmailProvider.Deliver(Notification 알림)의 System.Net.Mail.DataStopCommand.Send(SmtpConnection conn)  at System.Net.Mail.SmtpClient.Send(MailMessage 메시지)의 System.Net.Mail.DataStopCommand.CheckResponse(SmtpStatusCode statusCode, 문자열 serverResponse)에서 이 보낸 사람으로 보낼 수 있는 권한이 없습니다.|  
   
 ##  <a name="use-powershell-to-monitor-subscriptions"></a><a name="bkmk_use_powershell"></a> PowerShell을 사용한 구독 모니터링  

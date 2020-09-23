@@ -2,7 +2,7 @@
 title: Microsoft Drivers for PHP에 대한 시스템 요구 사항
 description: Microsoft Drivers for PHP for SQL Server는 광범위한 PHP 버전, 운영 체제 및 SQL Server 버전을 지원합니다.
 ms.custom: ''
-ms.date: 01/31/2020
+ms.date: 08/06/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -11,14 +11,13 @@ helpviewer_keywords:
 - requirements
 ms.assetid: 5db4b75f-c605-4785-9560-399a533c0fc9
 author: David-Engel
-ms.reviewer: carlrab
 ms.author: v-daenge
-ms.openlocfilehash: 0537f39c83239e148541a4739ccdfb83c8f5e6c9
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: e0ae11dd3a13ac8b2071943c49ef1ae4b8c400f4
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635696"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89540467"
 ---
 # <a name="system-requirements-for-the-microsoft-drivers-for-php-for-sql-server"></a>Microsoft Drivers for PHP for SQL Server에 대한 시스템 요구 사항
 
@@ -47,30 +46,18 @@ PHP가 실행되는 컴퓨터에 Microsoft ODBC Driver for SQL Server의 올바�
 
 64비트 버전의 Windows에서 Windows 버전의 드라이버를 다운로드하는 경우 ODBC 64비트 설치 프로그램은 32비트 및 64비트 ODBC 드라이버를 모두 설치합니다. 32비트 버전의 Windows를 사용하는 경우 ODBC x86 설치 프로그램을 사용합니다. Windows가 아닌 플랫폼에서는 64비트 버전의 드라이버만 사용할 수 있습니다.
 
-|SQL Server 드라이버 버전용 PHP &#8594;<br />&#8595; ODBC 드라이버 버전|5.8|5.6|5.3|5.2|4.3|4.0|3.2|
+|PHP 드라이버 버전 &#8594;<br />&#8595; ODBC 드라이버 버전|5.8|5.6|5.3|5.2|4.3|4.0|3.2|
 |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-|ODBC 드라이버 17+ |Y|Y|Y|Y| | | |
-|ODBC 드라이버 13.1|Y|Y|Y|Y|Y|Y| |
-|ODBC 드라이버 13  | | | | | |Y| |
-|ODBC 드라이버 11  |Y|Y|Y|Y|Y|Y|Y|
+|ODBC 드라이버 17+ |예|예|예|예|   |   |   |
+|ODBC 드라이버 13.1|예|예|예|예|예|예|   |
+|ODBC 드라이버 13  |   |   |   |   |   |예|   |
+|ODBC 드라이버 11  |예|예|예|예|예|예|예|
 
 SQLSRV 드라이버를 사용하는 경우 [sqlsrv_client_info](sqlsrv-client-info.md)는 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]에서 사용되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Microsoft ODBC Driver for SQL Server 버전에 대한 정보를 반환합니다. PDO_SQLSRV 드라이버를 사용하는 경우 [PDO::getAttribute](pdo-getattribute.md)를 사용하여 버전을 검색할 수 있습니다.
 
 ## <a name="sql-server"></a>SQL Server
 
-Azure SQL Database에서 PHP를 사용하는 방법에 대한 자세한 내용은 [Microsoft Azure SQL Database에 연결](connecting-to-microsoft-azure-sql-database.md)을 참조하세요.
-
-|SQL Server 드라이버 버전용 PHP &#8594;<br />&#8595; SQL Server 버전|5.8|5.6|5.3|5.2|4.3|4.0|3.2|
-|---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-|Azure SQL Database(모든 배포 옵션)        |Y|Y|Y|Y| | | |
-|Azure SQL Synapse  |Y|Y|Y|Y| | | |
-|SQL Server 2019           |Y|Y|Y|Y| | | |
-|SQL Server 2017           |Y|Y|Y|Y| | | |
-|SQL Server 2016           |Y|Y|Y|Y|Y| | |
-|SQL Server 2014           |Y|Y|Y|Y|Y|Y|Y|
-|SQL Server 2012           |Y|Y|Y|Y|Y|Y|Y|
-|SQL Server 2008 R2        | |Y|Y|Y|Y|Y|Y|
-|SQL Server 2008           | | | | |Y|Y|Y|
+지원되는 SQL Server 버전에 대한 자세한 내용은 [지원되는 데이터베이스 버전](microsoft-php-drivers-for-sql-server-support-matrix.md#sql-server-version-certified-compatibility)을 참조하세요.
 
 ## <a name="operating-systems"></a>운영 체제
 

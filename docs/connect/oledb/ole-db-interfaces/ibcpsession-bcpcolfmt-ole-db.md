@@ -1,6 +1,6 @@
 ---
 title: IBCPSession::BCPColFmt(OLE DB 드라이버) | Microsoft Docs
-description: IBCPSession::BCPColFmt(OLE DB)
+description: OLE DB Driver for SQL Server에서 IBCPSession::BCPColFmt 메서드가 프로그램 변수와 SQL Server 열 간에 바인딩을 만드는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 05/25/2020
 ms.prod: sql
@@ -13,14 +13,14 @@ apiname:
 apitype: COM
 helpviewer_keywords:
 - BCPColFmt method
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 4d4d55b6e950ccf7e1e9bfac54bf357d070ab09f
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 6170c513a57521d74a23d91af1fa24f66dc375d4
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244669"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88861977"
 ---
 # <a name="ibcpsessionbcpcolfmt-ole-db"></a>IBCPSession::BCPColFmt(OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -122,7 +122,7 @@ HRESULT BCPColFmt(
  메서드가 성공했습니다.  
   
  E_FAIL  
- 공급자 관련 오류가 발생했습니다. 자세한 내용을 보려면 [ISQLServerErrorInfo](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1) 인터페이스를 사용하세요.  
+ 공급자 관련 오류가 발생했습니다. 자세한 내용을 보려면 [ISQLServerErrorInfo](https://docs.microsoft.com/sql/connect/oledb/ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db?view=sql-server-ver15) 인터페이스를 사용하세요.  
   
  E_UNEXPECTED  
  예기치 않은 메서드가 호출되었습니다. 예를 들어 이 메서드를 호출하기 전에 [IBCPSession::BCPInit](../../oledb/ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) 메서드를 호출하지 않았습니다.  

@@ -3,22 +3,22 @@ title: 오프라인 설치를 위한 업데이트 다운로드
 description: SQL Server Machine Learning Services용 Python 및 R CAB 파일을 다운로드합니다. 이러한 CAB 파일은 Machine Learning Services(Python 및 R) 기능에 대한 업데이트를 포함하며 인터넷에 액세스할 수 없는 서버에 SQL Server를 설치할 때 사용됩니다.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 03/24/2020
+ms.date: 08/06/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 21e95b5e3fa15a48e62974aa7f574a370b3aeba1
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: e3ca3a5640a6de6f985cb90449a1f3ba22a42ddd
+ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247992"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076688"
 ---
 # <a name="cab-downloads-for-cumulative-updates-of-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services의 누적 업데이트를 위한 CAB 다운로드
 
-[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 SQL Server Machine Learning Services용 Python 및 R CAB 파일을 다운로드합니다. 이러한 CAB 파일은 Machine Learning Services(Python 및 R) 기능에 대한 업데이트를 포함하며 인터넷에 액세스할 수 없는 서버에 SQL Server를 설치할 때 사용됩니다.
@@ -50,6 +50,11 @@ CAB 파일은 시간의 역순으로 나열됩니다. CAB 파일을 다운로드
 
 |해제 | 구성 요소 | 다운로드 링크 | 해결된 문제 |
 |------- | --------- | ------------- | ---------------- |
+|**[SQL Server 2019 CU7](https://support.microsoft.com/help/4552255)** |  |  |  |
+| | Microsoft R Open      | [SRO_3.5.2.777_1033.cab](https://go.microsoft.com/fwlink/?linkid=2134897)  |  |
+| | R Server              | [SRS_9.4.7.958_1033.cab](https://go.microsoft.com/fwlink/?linkid=2136942)  |  |
+| | Microsoft Python Open | [SPO_4.5.12.479_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2118341) |  |
+| | Python 서버         | [SPS_9.4.7.958_1033.cab](https://go.microsoft.com/fwlink/?linkid=2136731)  |  |
 |**[SQL Server 2019 CU5](https://support.microsoft.com/help/4552255)** |  |  |  |
 | | Microsoft R Open      | [SRO_3.5.2.293_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2118178)  |  |
 | | R Server              | [SRS_9.4.7.804_1033.cab](https://go.microsoft.com/fwlink/?linkid=2122004)  |  |
@@ -154,6 +159,9 @@ SQL Server 2016 R Services의 경우 기본 릴리스는 RTM 버전 또는 서�
 
 |해제  |다운로드 링크  |
 |---------|---------------|
+|**SQL Server 2016 SP2 CU14**     |
+|Microsoft R Open      |[SRO_3.5.2.777_1033.cab](https://go.microsoft.com/fwlink/?linkid=2134897)|
+|Microsoft R 서버    |[SRS_9.4.7.958_1033.cab](https://go.microsoft.com/fwlink/?linkid=2136942)|
 |**SQL Server 2016 SP2 CU6-CU13**     |
 |Microsoft R Open     |[SRO_3.2.2.20100_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2079936&clcid=1033)|
 |Microsoft R 서버    |[SRS_8.0.3.20100_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2079933&clcid=1033)|

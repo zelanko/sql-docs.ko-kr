@@ -10,16 +10,16 @@ ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 23a3e746996615cac0fa902e21733f9ce3ea4f45
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4e467fb50ae2b2c76deea885990b160745c691eb
+ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85723967"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89042527"
 ---
 # <a name="install-new-r-packages-with-sqlmlutils"></a>sqlmlutils를 사용하여 새 R 패키지 설치
 
-[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [SQL Server 2019 SQL MI](../../includes/applies-to-version/sqlserver2019-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 이 문서에서는 [**sqlmlutils**](https://github.com/Microsoft/sqlmlutils) 패키지의 함수를 사용하여 [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) 및 [빅 데이터 클러스터](../../big-data-cluster/machine-learning-services.md) 인스턴스에 새 R 패키지를 설치하는 방법을 설명합니다. 설치하는 패키지는 [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) T-SQL 문을 사용하여 데이터베이스 내에서 실행되는 R 스크립트에서 사용할 수 있습니다.
@@ -38,6 +38,8 @@ ms.locfileid: "85723967"
 - SQL Server에 연결하는 데 사용하는 클라이언트 컴퓨터에 [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/what-is)를 설치합니다. 다른 데이터베이스 관리 또는 쿼리 도구를 사용할 수 있지만, 이 문서에서는 Azure Data Studio를 사용한다고 가정합니다.
 
 ### <a name="other-considerations"></a>기타 고려 사항
+
+- 패키지 설치는 **sqlmlutils**에 제공하는 연결 정보를 통해 지정한 SQL 인스턴스, 데이터베이스 및 사용자에게 적용됩니다. 패키지를 여러 SQL 인스턴스 또는 데이터베이스에서 사용하거나 여러 사용자가 사용하도록 하려면 각각에 대해 패키지를 설치해야 합니다. 단, 패키지를 `dbo`의 멤버가 설치하는 경우 패키지는 공용이며 모든 사용자와 공유됩니다. 사용자가 새 버전의 공용 패키지를 설치하는 경우 공용 패키지는 영향을 받지 않지만 해당 사용자는 새 버전에 액세스할 수 있습니다.
 
 - SQL Server에서 실행되는 R 스크립트는 기본 인스턴스 라이브러리에 설치된 패키지만 사용할 수 있습니다. SQL Server는 외부 라이브러리의 패키지를 로드할 수 없으며, 라이브러리가 동일한 컴퓨터에 있더라도 마찬가지입니다. 여기에는 다른 Microsoft 제품과 함께 설치된 R 라이브러리가 포함됩니다.
 

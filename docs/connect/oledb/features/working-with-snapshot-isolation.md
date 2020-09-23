@@ -1,6 +1,6 @@
 ---
 title: 스냅샷 격리 작업 | Microsoft Docs
-description: OLE DB Driver for SQL Server에서 스냅샷을 격리하는 작업
+description: OLE DB Driver for SQL Server 기능 향상이 스냅숏 격리를 사용하여 온라인 트랜잭션 처리 애플리케이션의 동시성을 향상시키는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -19,14 +19,14 @@ helpviewer_keywords:
 - SQLGetInfo function
 - concurrency [OLE DB Driver for SQL Server]
 - SQLSetConnectAttr function
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: acbb39726ede983d3c0909235d1fb2ddb588d65b
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 700ce06359188f05c7f3e152003dfa9dde06da76
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85986757"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88861419"
 ---
 # <a name="working-with-snapshot-isolation"></a>스냅샷 격리 작업
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

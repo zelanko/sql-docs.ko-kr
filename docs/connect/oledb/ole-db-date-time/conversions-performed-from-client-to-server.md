@@ -1,6 +1,6 @@
 ---
 title: 클라이언트에서 서버로 수행되는 변환 | Microsoft Docs
-description: 클라이언트에서 서버로 수행되는 변환
+description: OLE DB Driver for SQL Server를 사용하여 작성된 클라이언트 애플리케이션과 SQL Server 간에 수행되는 날짜/시간 변환에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -10,14 +10,14 @@ ms.technology: connectivity
 ms.topic: reference
 helpviewer_keywords:
 - conversions [OLE DB], client to server
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: ccf1505fd896b627a83fe2ee7b3d1e6e19ab556e
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c5a43604c485c2baf7bb5b4430303db7fedd9bd8
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244893"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88860229"
 ---
 # <a name="conversions-performed-from-client-to-server"></a>클라이언트에서 서버로 수행되는 변환
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -70,8 +70,8 @@ ms.locfileid: "87244893"
 |15|**datetime**에 대한 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 이전의 변환 의미가 유지됩니다. 초는 가장 근사한 300초로 반올림됩니다.|  
 |16|SSVARIANT 클라이언트 구조에 포함된 값(지정된 형식)의 변환 동작은 SSVARIANT 클라이언트 구조에 포함되지 않은 동일한 값 및 형식의 동작과 같습니다.|  
   
-|Type|길이(문자)|확장|  
-|-|-|-|  
+| Type | 길이(문자) | 확장 |  
+| ---- | ----------------- | ----- |  
 |DBTIME2|8, 10..18|0,1..9|  
 |DBTIMESTAMP|19, 21..29|0,1..9|  
 |DBTIMESTAMPOFFSET|26, 28..36|0,1..9|  

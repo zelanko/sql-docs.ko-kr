@@ -1,7 +1,8 @@
 ---
-title: PDO::setAttribute | Microsoft Docs
+title: PDO::setAttribute
+description: Microsoft PDO_SQLSRV Driver for PHP for SQL Server의 PDO::setAttribute 함수에 대한 API 참조입니다.
 ms.custom: ''
-ms.date: 04/22/2019
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 56f9ee96-e1d2-46cc-b137-38f06a251863
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: bdf399d03a74aabfd703507b185a95c5b14f50c2
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: fc64e04ee53b6b654974312a8a7050bbb120a804
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80918954"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88645893"
 ---
 # <a name="pdosetattribute"></a>PDO::setAttribute
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -33,12 +34,12 @@ bool PDO::setAttribute ( $attribute, $value );
   
 *$value*: 값(혼합 형식)입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
 성공하면 true이고, 그렇지 않으면 false입니다.  
   
 ## <a name="remarks"></a>설명  
   
-|attribute|처리기|지원되는 값|Description|  
+|attribute|처리기|지원되는 값|설명|  
 |-------------|----------------|--------------------|---------------|  
 |PDO::ATTR_CASE|PDO|PDO::CASE_LOWER<br /><br />PDO::CASE_NATURAL<br /><br />PDO::CASE_UPPER|열 이름의 대/소문자를 지정합니다.<br /><br />PDO::CASE_LOWER를 사용하면 열 이름이 소문자가 됩니다.<br /><br />PDO::CASE_NATURAL(기본값)은 데이터베이스에서 반환된 열 이름을 표시합니다.<br /><br />PDO::CASE_UPPER를 사용하면 열 이름이 대문자가 됩니다.<br /><br />PDO::setAttribute를 사용하면 이 특성을 설정할 수 있습니다.|  
 |PDO::ATTR_DEFAULT_FETCH_MODE|PDO|PDO 설명서를 참조하세요.|PDO 설명서를 참조하세요.|  
@@ -54,7 +55,7 @@ bool PDO::setAttribute ( $attribute, $value );
 |PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|true 또는 false|날짜 및 시간 형식을 [PHP DateTime](http://php.net/manual/en/class.datetime.php) 개체로 검색할지를 지정합니다. false로 유지하면, 기본적으로 문자열로 반환됩니다.<br /><br />문 수준에서 이 옵션을 설정할 수도 있습니다. 문 수준에서 설정하면, 문 수준 옵션이 이 옵션을 재정의합니다.<br /><br />자세한 내용은 [방법: PDO_SQLSRV 드라이버를 사용하여 날짜 및 시간 형식을 PHP DateTime 개체로 검색](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)을 참조하세요.|  
 |PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|true 또는 false|숫자 SQL 형식(bit, integer, smallint, tinyint, float, real)의 열에서 숫자 가져오기를 처리합니다.<br /><br />연결 옵션 플래그 ATTR_STRINGIFY_FETCHES를 켜면, SQLSRV_ATTR_FETCHES_NUMERIC_TYPE이 켜져 있더라도 반환 값이 문자열입니다.<br /><br />바인딩 열에 반환된 PDO 형식이 PDO_PARAM_INT이면, SQLSRV_ATTR_FETCHES_NUMERIC_TYPE이 꺼져 있더라도 정수 열의 반환 값이 int입니다.|  
 |PDO::SQLSRV_ATTR_FORMAT_DECIMALS|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|true 또는 false|해당하는 경우 10진수 문자열에 앞에 오는 0을 추가할지를 지정합니다. 이 옵션을 설정하면 money 형식의 서식 지정을 위한 PDO::SQLSRV_ATTR_DECIMAL_PLACES 옵션을 사용할 수 있습니다. false로 유지하면, 1 미만의 값에서 앞에 오는 0을 생략하고 정확한 전체 자릿수를 반환하는 기본 동작이 사용됩니다.<br /><br />문 수준에서 이 옵션을 설정할 수도 있습니다. 문 수준에서 설정하면, 문 수준 옵션이 이 옵션을 재정의합니다.<br /><br />자세한 내용은 [10진수 문자열 및 Money 값 서식 지정(PDO_SQLSRV 드라이버)](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md)을 참조하세요.| 
-|PDO::SQLSRV_ATTR_QUERY_TIMEOUT|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|integer|쿼리 시간 제한(초)을 설정합니다.<br /><br />기본값은 0이며, 드라이버가 결과를 무한정 기다린다는 것을 의미합니다.<br /><br />음수 값은 허용되지 않습니다.|  
+|PDO::SQLSRV_ATTR_QUERY_TIMEOUT|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|정수|쿼리 시간 제한(초)을 설정합니다.<br /><br />기본값은 0이며, 드라이버가 결과를 무한정 기다린다는 것을 의미합니다.<br /><br />음수 값은 허용되지 않습니다.|  
   
 PDO는 미리 정의된 몇 가지 특성을 처리하지만 다른 특성을 처리하려면 드라이버가 필요합니다. 모든 사용자 지정 특성 및 연결 옵션이 드라이버에 의해 처리됩니다. 지원되지 않는 특성, 연결 옵션 또는 지원되지 않는 값이 PDO::ATTR_ERRMODE의 설정에 따라 보고됩니다.  
   

@@ -1,6 +1,6 @@
 ---
 title: 영어가 아닌 언어 버전 설치
-description: 영어가 아닌 언어 버전의 SSMS(SQL Server Management Studio) 설치
+description: 영어가 아닌 언어 버전의 SSMS(SQL Server Management Studio)를 설치합니다. 이 문서는 SSMS 17.x에 적용됩니다.
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: ssms
@@ -9,12 +9,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 04/25/2019
-ms.openlocfilehash: cc4d98322f0422053402bdf097674c90807e11a1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 044813df5fc1e222c24418c60d0a1c7d40d8c011
+ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75246880"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87523005"
 ---
 # <a name="install-non-english-language-versions-of-sql-server-management-studio-ssms"></a>영어가 아닌 언어 버전의 SSMS(SQL Server Management Studio) 설치
 

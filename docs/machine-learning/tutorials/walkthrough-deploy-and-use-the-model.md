@@ -1,6 +1,6 @@
 ---
 title: 'R 자습서: 모델 배포'
-description: 데이터베이스 내 분석을 위해 SQL Server에 R 모델을 배포하는 방법을 보여 주는 자습서입니다.
+description: 저장 프로시저에서 학습된 모델을 호출하여 프로덕션 환경에서 R 모델을 배포하는 방법을 알아봅니다.
 ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 11/26/2018
@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: bdf7446497d242d3cc2773daad0adfa8d3a700e3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8eccd11403f93b1307995a44d38100d680fa8149
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85781784"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179767"
 ---
 # <a name="deploy-the-r-model-and-use-it-in-sql-server-walkthrough"></a>R 모델을 배포하고 SQL Server에서 사용(연습)
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016](../../includes/applies-to-version/sqlserver2016.md)]
 
 이 단원에서는 저장 프로시저에서 학습된 모델을 호출하여 프로덕션 환경에서 R 모델을 배포하는 방법을 알아봅니다. R 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 지원하는 모든 애플리케이션 프로그래밍 언어(예: C#, Java, Python 등)에서 저장 프로시저를 호출하고 해당 모델을 사용하여 새로운 관찰에 따라 예측을 수행할 수 있습니다.
 
@@ -228,6 +228,6 @@ ms.locfileid: "85781784"
 다음과 같은 추가 샘플과 리소스를 살펴볼 수도 있습니다.
 
 + [데이터 과학 시나리오 및 솔루션 템플릿](data-science-scenarios-and-solution-templates.md)
-+ [데이터베이스 내 고급 분석](sqldev-in-database-r-for-sql-developers.md)
++ [데이터베이스 내 고급 분석](r-taxi-classification-introduction.md)
 + [Machine Learning Server 방법 가이드](https://docs.microsoft.com/machine-learning-server/r/how-to-introduction)
 + [Machine Learning Server 추가 리소스](https://docs.microsoft.com//machine-learning-server/resources-more)

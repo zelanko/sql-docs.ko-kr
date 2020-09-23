@@ -2,7 +2,7 @@
 title: JDBC 드라이버에서 대량 복사 사용
 description: SQLServerBulkCopy 클래스를 사용하면 표준 JDBC API에 비해 상당한 성능 이점을 제공하는 데이터 로드 솔루션을 Java로 작성할 수 있습니다.
 ms.custom: ''
-ms.date: 07/24/2020
+ms.date: 08/24/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 21e19635-340d-49bb-b39d-4867102fb5df
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b3af2624e46e6e61516ce015760544de3ca112e8
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 69379b9af3dc126713cb2bbd3172003692a7d4de
+ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245012"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89042236"
 ---
 # <a name="using-bulk-copy-with-the-jdbc-driver"></a>JDBC 드라이버에서 대량 복사 사용
 
@@ -357,6 +357,36 @@ public class BulkCopyMultiple {
  대량 복사 작업은 격리된 작업이나 여러 단계 트랜잭션의 일부로 수행할 수 있습니다. 후자 옵션을 사용하면 동일한 트랜잭션 내에서 둘 이상의 대량 복사 작업을 수행할 뿐만 아니라 전체 트랜잭션을 커밋하거나 롤백하면서 다른 데이터베이스 작업(예: 삽입, 업데이트 및 삭제)을 수행할 수 있습니다.  
   
  기본적으로 대량 복사 작업은 격리된 작업으로 수행됩니다. 대량 복사 작업은 트랜잭션되지 않은 방식으로 수행되어 롤백할 수 없습니다. 오류가 발생하여 대량 복사의 일부 또는 전체를 롤백해야 하는 경우 `SQLServerBulkCopy` 관리형 트랜잭션을 사용하거나 기존 트랜잭션 내에서 대량 복사 작업을 수행할 수 있습니다.  
+
+## <a name="extended-bulk-copy-for-azure-data-warehouse"></a>Azure Data Warehouse용 대량 복사 확대
+
+드라이버 버전 v8.4.1는 새 연결 속성 `sendTemporalDataTypesAsStringForBulkCopy`를 추가했습니다. 이 부울 속성은 기본적으로 `true`입니다.
+
+이 연결 속성을 `false`로 설정하면 **DATE**, **DATETIME**, **DATIMETIME2**, **DATETIMEOFFSET**, **SMALLDATETIME** 및 **TIME** 데이터를 문자열로 전송하는 대신 해당 형식으로 전송합니다.
+
+시간 데이터 형식을 해당 형식으로 전송하면 사용자가 Azure Synapse Analytics(SQL DW)의 해당 열로 데이터를 보낼 수 있습니다(이전에는 데이터를 문자열로 변환하기 때문에 가능하지 않았음). SQL Server에서는 시간 열에 문자열 데이터를 보낼 수 있습니다. SQL Server가 자동으로 암시적 변환을 수행하기 때문입니다. 그러나 Azure Synapse Analytics(SQL DW)에서는 문자열 데이터를 보낼 수 없습니다.
+
+또한 이 연결 문자열을 'false'로 설정하지 않아도 **v8.4.1** 이상에서는 **MONEY** 및 **SMALLMONEY** 데이터 형식이 **DECIMAL** 대신 **MONEY** / **SMALLMONEY** 데이터 형식으로 전송됩니다. 그러므로 이 경우에도 해당 데이터 형식을 Azure Synapse Analytics(SQL DW)로 대량 복사할 수 있습니다.
+
+### <a name="extended-bulk-copy-for-azure-data-warehouse-limitations"></a>Azure Data Warehouse용 대량 복사 확대 제한 사항
+
+현재 두 가지 제한 사항이 있습니다.
+
+1. 이 연결 속성을 `false`로 설정하면 드라이버는 각 시간 데이터 형식의 기본 문자열 리터럴 형식만 허용합니다. 예를 들면 다음과 같습니다.
+
+    `DATE: YYYY-MM-DD`
+
+    `DATETIME: YYYY-MM-DD hh:mm:ss[.nnn]`
+
+    `DATETIME2: YYYY-MM-DD hh:mm:ss[.nnnnnnn]`
+
+    `DATETIMEOFFSET: YYYY-MM-DD hh:mm:ss[.nnnnnnn] [{+/-}hh:mm]`
+
+    `SMALLDATETIME:YYYY-MM-DD hh:mm:ss`
+
+    `TIME: hh:mm:ss[.nnnnnnn]`
+
+2. 이 연결 속성을 `false`로 설정한 경우 대량 복사가 지정된 열 유형이 [여기](../../connect/jdbc/using-basic-data-types.md)의 데이터 형식 매핑 차트를 준수해야 합니다. 예를 들어 이전에는 사용자가 `java.sql.Types.TIMESTAMP`를 지정하여 데이터를 `DATE` 열에 대량 복사할 수 있지만 이 기능을 사용하도록 설정한 경우에는 `java.sql.Types.DATE`를 지정하여 동일한 작업을 수행해야 합니다.
   
 ### <a name="performing-a-non-transacted-bulk-copy-operation"></a>트랜잭션되지 않은 대량 복사 작업 수행
 
@@ -648,6 +678,15 @@ public class BulkCopyCSV {
     }
 }
 ```  
+
+### <a name="bulk-copy-with-delimiters-as-data-in-csv-file"></a>CSV 파일에서 데이터로 구분 기호를 사용하여 대량 복사
+
+드라이버 버전 8.4.1은 새 API `SQLServerBulkCSVFileRecord.setEscapeColumnDelimitersCSV(boolean)`를 추가했습니다. True로 설정되면 다음 규칙이 적용됩니다.
+
+- 각 필드는 큰따옴표로 묶을 수도 있고 그렇지 않을 수도 있습니다.
+- 필드를 큰따옴표로 묶지 않은 경우 필드 내부에 큰따옴표를 사용할 수 없습니다.
+- 큰따옴표 및 구분 기호를 포함하는 필드는 큰따옴표로 묶어야 합니다.
+- 필드를 큰따옴표로 묶은 경우 필드 내부에 나타나는 큰따옴표는 앞에 다른 큰따옴표를 배치하여 이스케이프해야 합니다.
 
 ### <a name="bulk-copy-with-always-encrypted-columns"></a>Always Encrypted 열을 포함하는 대량 복사  
 

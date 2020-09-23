@@ -51,12 +51,12 @@ helpviewer_keywords:
 ms.assetid: 309b9dac-0b3a-4617-85ef-c4519ce9d014
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 483832a0460b404a76d11bac4beaf2836d5534fa
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: fd2a061d3eba753530f7f86b858563b2168157a2
+ms.sourcegitcommit: f7c9e562d6048f89d203d71685ba86f127d8d241
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901002"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90042804"
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>Windows 서비스 계정 및 권한 구성
 
@@ -264,7 +264,7 @@ ms.locfileid: "88901002"
 
 ### <a name="windows-privileges-and-rights"></a><a name="Windows"></a> Windows 사용 권한 및 권한
 
-서비스를 시작하도록 할당된 계정은 해당 서비스에 대해 **시작, 중지 및 일시 중지 권한** 이 필요합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램은 이를 자동으로 할당합니다. 먼저 RSAT(원격 서버 관리 도구)를 설치하세요. [Windows 7 원격 서버 관리 도구](https://www.microsoft.com/download/details.aspx?id=7887)를 참조하세요.
+서비스를 시작하도록 할당된 계정은 해당 서비스에 대해 **시작, 중지 및 일시 중지 권한** 이 필요합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램은 이를 자동으로 할당합니다. 먼저 RSAT(원격 서버 관리 도구)를 설치하세요. [Windows 10 원격 서버 관리 도구](https://www.microsoft.com/download/details.aspx?id=45520)를 참조하세요.
 
 다음 표에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소에서 사용된 서비스별 SID 또는 Windows 그룹에 대해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램이 요청하는 사용 권한을 보여 줍니다.
 

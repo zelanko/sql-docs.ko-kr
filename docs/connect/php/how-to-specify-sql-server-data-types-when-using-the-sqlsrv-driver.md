@@ -1,7 +1,8 @@
 ---
-title: '방법: SQLSRV 드라이버를 사용하여 SQL Server 데이터 형식 지정 | Microsoft Docs'
+title: '방법: SQLSRV 드라이버를 사용하여 SQL Server 데이터 형식 지정'
+description: SQLSRV Driver for PHP를 사용할 때 준비된 문 또는 직접 쿼리에 선택적 *$params* 배열을 사용하여 SQL Server 데이터 형식을 지정하는 방법을 알아봅니다.
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,14 +12,14 @@ helpviewer_keywords:
 - converting data types
 - streaming data
 ms.assetid: 1fcf73cb-5634-4d89-948f-9326f1dbd030
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b9ddb359c34e929247357713c5c48035a3eed9a9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 0720c14429aa4088d906a2063feeb34057065682
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67993361"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680572"
 ---
 # <a name="how-to-specify-sql-server-data-types-when-using-the-sqlsrv-driver"></a>방법: SQLSRV 드라이버를 사용하여 SQL Server 데이터 형식 지정
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

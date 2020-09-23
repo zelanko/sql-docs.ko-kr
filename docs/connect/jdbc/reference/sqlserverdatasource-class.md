@@ -1,5 +1,6 @@
 ---
-title: SQLServerDataSource 클래스 | Microsoft Docs
+title: SQLServerDataSource 클래스
+description: SQL Server용 JDBC Driver의 SQLServerDataSource 클래스에 대한 공용 API를 자세히 알아봅니다.
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 097434fd-2b74-411c-a5ed-eba04481dde5
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 253934056218c36d21694869dcc51707e8ab8b5d
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 084cf5f7c1b3927f86de1ff4f174a8f8358662d7
+ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928701"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87435366"
 ---
 # <a name="sqlserverdatasource-class"></a>SQLServerDataSource 클래스
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

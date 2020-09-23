@@ -1,21 +1,22 @@
 ---
-title: PDOStatement::bindValue | Microsoft Docs
+title: PDOStatement::bindValue
+description: Microsoft PDO_SQLSRV Driver for PHP for SQL Server의 PDOStatement::bindValue 함수에 대한 API 참조입니다.
 ms.custom: ''
-ms.date: 05/22/2018
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 13bc4ece-420e-4887-8809-bf0705ddf126
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 89126d696f7210132adb5ef10ec557604ebc543f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ebb895ac26aaff16ef4fb0d51a56243a9401e4d1
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67993116"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88645364"
 ---
 # <a name="pdostatementbindvalue"></a>PDOStatement::bindValue
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -36,7 +37,7 @@ $*value*: 매개 변수에 바인딩할 (혼합) 값입니다.
   
 $*data_type*: PDO::PARAM_* 상수로 표현되는 선택적(정수) 데이터 형식입니다. 기본값은 PDO::PARAM_STR입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
 성공하면 TRUE이고, 그렇지 않으면 FALSE입니다.  
   
 ## <a name="remarks"></a>설명  

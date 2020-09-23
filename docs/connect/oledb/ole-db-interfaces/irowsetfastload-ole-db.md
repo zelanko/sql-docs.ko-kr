@@ -1,6 +1,6 @@
 ---
 title: IRowsetFastLoad(OLE DB 드라이버) | Microsoft Docs
-description: IRowsetFastLoad(OLE DB)
+description: OLE DB Driver for SQL Server 소비자는 IRowsetFastLoad 인터페이스를 사용하여 기존 SQL Server 테이블에 신속하게 데이터를 추가할 수 있습니다.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -11,14 +11,14 @@ ms.topic: reference
 apitype: COM
 helpviewer_keywords:
 - IRowsetFastLoad interface
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 27e14d3f4095f8d53772dd25c6e9f722c75f4ce3
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 7e56ccf1ada807a06523003788eaf930d24d37db
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244473"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88860099"
 ---
 # <a name="irowsetfastload-ole-db"></a>IRowsetFastLoad(OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

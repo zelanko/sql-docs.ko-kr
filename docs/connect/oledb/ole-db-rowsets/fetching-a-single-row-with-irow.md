@@ -1,6 +1,6 @@
 ---
 title: IRow를 사용하여 단일 행 페치(OLE DB 드라이버) | Microsoft Docs
-description: OLE DB Driver for SQL Server의 IRow 인터페이스를 사용하여 단일 행 페치
+description: IRow를 사용하여 단일 행 개체의 열에 직접 액세스할 수 있습니다. OLE DB Driver for SQL Server의 IRow 인터페이스는 단순화되어 성능이 향상되었습니다.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - OLE DB rowsets, fetching
 - rowsets [OLE DB], fetching
 - OLE DB Driver for SQL Server, fetching
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: fba517134c69914914da95daacafdf634de7b15c
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: a305692bb544d9a9bbb0572cbd93449781aaabe9
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244282"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88862470"
 ---
 # <a name="fetching-a-single-row-with-irow-ole-db-driver"></a>IRow를 사용하여 단일 행 페치(OLE DB 드라이버)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

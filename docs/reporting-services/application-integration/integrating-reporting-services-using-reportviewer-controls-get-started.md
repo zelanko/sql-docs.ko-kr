@@ -2,7 +2,7 @@
 title: 보고서 뷰어 컨트롤 시작
 description: 보고서 뷰어 컨트롤은 Reporting Services RDL 보고서를 WebForms 및 WinForms 앱에 통합하는 데 사용할 수 있습니다.
 ms.custom: seo-lt-2019
-ms.date: 06/03/2020
+ms.date: 09/01/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: application-integration
@@ -10,22 +10,24 @@ ms.topic: conceptual
 ms.assetid: 01a821c4-2920-400c-be03-93d26c749bb1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a559bdb5b525b8d95c121b8059076d86029a37fd
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: 009c70da7365cc232dc5b00da6b4f1f62bfca8e2
+ms.sourcegitcommit: 04fb4c2d7ccddd30745b334b319d9d2dd34325d6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86943196"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89569963"
 ---
-# <a name="integrating-reporting-services-using-the-report-viewer-controls---get-started"></a>보고서 뷰어 컨트롤을 사용하여 Reporting Services 통합 - 시작
+# <a name="integrate-reporting-services-using-the-report-viewer-controls---get-started"></a>보고서 뷰어 컨트롤을 사용하여 Reporting Services 통합 - 시작하기
 
 보고서 뷰어 컨트롤은 Reporting Services RDL 보고서를 WebForms 및 WinForms 앱에 통합하는 데 사용할 수 있습니다. 최근 업데이트에 대한 자세한 내용은 [변경 로그](changelog.md)를 참조하세요.
 
-## <a name="adding-the-report-viewer-control-to-a-new-web-project"></a>새 웹 프로젝트에 보고서 뷰어 컨트롤 추가
+## <a name="add-the-report-viewer-control-to-a-new-web-project"></a>새 웹 프로젝트에 보고서 뷰어 컨트롤 추가
 
 1. 새 **ASP.NET 빈 웹 사이트**를 만들거나 기존 ASP.NET 프로젝트를 엽니다.
 
-    ![ssRS-새-ASPNET-프로젝트-만들기](../../reporting-services/application-integration/media/ssrs-create-new-aspnet-project.png)
+    .NET Framework 4.6 이상의 모든 버전을 사용할 수 있습니다.
+
+    ![ASP.NET 빈 웹 사이트를 새로 만드는 스크린샷](../../reporting-services/application-integration/media/ssrs-create-new-aspnet-project-4-6.png)
 
 2. **NuGet 패키지 관리자 콘솔**을 통해 보고서 뷰어 컨트롤 NuGet 패키지를 설치합니다.
 
@@ -73,7 +75,7 @@ ms.locfileid: "86943196"
 </html>
 ```
 
-## <a name="updating-an-existing-project-to-use-the-report-viewer-control"></a>보고서 뷰어 컨트롤을 사용하도록 기존 프로젝트 업데이트
+## <a name="update-an-existing-project-to-use-the-report-viewer-control"></a>보고서 뷰어 컨트롤을 사용하도록 기존 프로젝트 업데이트
 
 어셈블리 참조를 프로젝트의 web.config 및 뷰어 컨트롤을 참조하는 모든 .aspx 페이지를 포함하는 버전 *15.0.0.0*으로 업데이트해야 합니다.
 
@@ -87,7 +89,7 @@ ms.locfileid: "86943196"
   -->
 <configuration>
   <system.web>
-    <compilation debug="true" targetFramework="4.5.2">
+    <compilation debug="true" targetFramework="4.6">
       <assemblies>
         <!-- All assemblies updated to version 15.0.0.0. -->
         <add assembly="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845DCD8080CC91"/>
@@ -104,7 +106,7 @@ ms.locfileid: "86943196"
           type="Microsoft.Reporting.RdlBuildProvider, Microsoft.ReportViewer.WebForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845DCD8080CC91"/>
       </buildProviders>
     </compilation>
-    <httpRuntime targetFramework="4.5.2"/>
+    <httpRuntime targetFramework="4.6"/>
     <httpHandlers>
       <!-- Version updated to 15.0.0.0 -->
       <add path="Reserved.ReportViewerWebControl.axd" verb="*"
@@ -135,18 +137,20 @@ ms.locfileid: "86943196"
 <!DOCTYPE html>
 ```
 
-## <a name="adding-the-report-viewer-control-to-a-new-windows-forms-project"></a>새 Windows Forms 프로젝트에 보고서 뷰어 컨트롤 추가
+## <a name="add-the-report-viewer-control-to-a-new-windows-forms-project"></a>새 Windows Forms 프로젝트에 보고서 뷰어 컨트롤 추가
 
 1. 새 **Windows Forms 애플리케이션**을 만들거나 기존 프로젝트를 엽니다.
 
-    ![ssRS-새-winforms-프로젝트-만들기](../../reporting-services/application-integration/media/ssrs-create-new-winforms-project.png)
+    .NET Framework 4.6 이상의 모든 버전을 사용할 수 있습니다.
+    
+    ![새 Windows Forms 애플리케이션을 만드는 스크린샷](../../reporting-services/application-integration/media/ssrs-create-new-winforms-project-4-6.png)
 
 2. **NuGet 패키지 관리자 콘솔**을 통해 보고서 뷰어 컨트롤 NuGet 패키지를 설치합니다.
 
     ```
     Install-Package Microsoft.ReportingServices.ReportViewerControl.WinForms
     ```
-3. 코드에서 새 컨트롤을 추가하거나 [도구 상자에 컨트롤을 추가](#adding-control-to-visual-studio-toolbar)합니다.
+3. 코드에서 새 컨트롤을 추가하거나 [도구 상자에 컨트롤을 추가](#add-the-control-to-visual-studio-toolbar)합니다.
 
     ```csharp
     private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
@@ -174,7 +178,7 @@ ms.locfileid: "86943196"
 
 뷰어 컨트롤의 높이를 100%로 설정하면 부모 요소에 높이가 정의되어 있거나 모든 상위 항목에 백분율 높이가 정의되어야 합니다.
 
-### <a name="setting-the-height-of-all-the-ancestors-to-100"></a>모든 상위 항목의 높이 100%로 설정
+### <a name="set-the-height-of-all-the-ancestors-to-100"></a>모든 상위 항목의 높이를 100%로 설정
 
 ```html
 <!DOCTYPE html>
@@ -199,7 +203,7 @@ ms.locfileid: "86943196"
 </html>
 ```
 
-### <a name="setting-the-parents-height-attribute"></a>부모의 높이 특성 설정
+### <a name="set-the-parents-height-attribute"></a>부모의 높이 특성 설정
 
 뷰포트 백분율 길이 대한 자세한 내용은 [뷰포트 백분율 길이](http://www.w3.org/TR/css3-values/#viewport-relative-lengths)를 참조하세요.
 
@@ -221,7 +225,7 @@ ms.locfileid: "86943196"
 </html>
 ```
 
-## <a name="adding-control-to-visual-studio-toolbar"></a>Visual Studio 도구 모음에 컨트롤 추가
+## <a name="add-the-control-to-visual-studio-toolbar"></a>Visual Studio 도구 모음에 컨트롤 추가
 
 보고서 뷰어 컨트롤은 이제 NuGet 패키지로 제공되며, 더 이상 기본적으로 Visual Studio 도구 상자에 표시되지 않습니다. 이 도구 상자에 수동으로 컨트롤을 추가할 수 있습니다.
 
@@ -229,15 +233,15 @@ ms.locfileid: "86943196"
 
 2. 도구 상자에 나열된 보고서 뷰어 컨트롤을 제거합니다.
 
-    ![ssRS-이전-rvcontrol-도구 상자-제거](../../reporting-services/application-integration/media/ssrs-remove-old-rvcontrol-toolbox.png)
+    ![ReportViewer 컨트롤을 삭제하는 스크린샷](../../reporting-services/application-integration/media/ssrs-remove-old-rvcontrol-toolbox.png)
 
 3. 도구 상자의 아무 곳이나 마우스 오른쪽 단추로 클릭한 다음, **항목 선택...** 을 선택합니다.
 
-    ![ssRS-도구 상자-항목-선택](../../reporting-services/application-integration/media/ssrs-toolbox-choose-item.png)
+    ![도구 상자에서 항목 선택 옵션을 보여 주는 스크린샷](../../reporting-services/application-integration/media/ssrs-toolbox-choose-item.png)
     
 4. **.NET Framework 구성 요소**에서 **찾아보기**를 선택합니다.
 
-    ![ssRS-도구 상자-찾아보기](../../reporting-services/application-integration/media/ssrs-toolbox-browse.png)
+    ![.NET Framework 구성 요소 대화 상자에 있는 찾아보기 단추의 스크린샷](../../reporting-services/application-integration/media/ssrs-toolbox-browse.png)
 
 5. 설치한 NuGet 패키지에서 **Microsoft.ReportViewer.WinForms.dll** 또는 **Microsoft.ReportViewer.WebForms.dll**을 선택합니다.
 
@@ -246,7 +250,7 @@ ms.locfileid: "86943196"
 
 6. 도구 상자 내에서 새 컨트롤이 표시됩니다. 그런 다음 원하는 경우 도구 상자 내에서 다른 탭으로 이동할 수 있습니다.
 
-    ![ssRS-도구 상자-rvcontrol](../../reporting-services/application-integration/media/ssrs-toolbox-rvcontrol.png)
+    ![도구 상자의 새 ReportViewer 컨트롤을 보여 주는 스크린샷](../../reporting-services/application-integration/media/ssrs-toolbox-rvcontrol.png)
 
 ## <a name="common-issues"></a>일반적인 문제
     
@@ -264,12 +268,11 @@ ms.locfileid: "86943196"
 - Microsoft.ReportingServices.ReportViewerControl.Winforms [https://www.nuget.org/packages/Microsoft.ReportingServices.ReportViewerControl.WinForms/](https://www.nuget.org/packages/Microsoft.ReportingServices.ReportViewerControl.WinForms/)
 
 
-## <a name="feedback"></a>사용자 의견
+## <a name="forum-feedback"></a>포럼 피드백
 
-[Reporting Services 포럼](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=sqlreportingservices)에서 문제를 게시하여 팀에 알려주세요.
+[Reporting Services 포럼](https://docs.microsoft.com/answers/topics/sql-server-reporting-services.html)에서 문제를 게시하여 팀에 알려주세요.
 
 ## <a name="see-also"></a>참고 항목
 
 [보고서 뷰어 컨트롤의 데이터 컬렉션](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls-data-collection.md)  
-추가 질문이 있으신가요? [Reporting Services 포럼을 이용해 보세요.](https://go.microsoft.com/fwlink/?LinkId=620231)
 

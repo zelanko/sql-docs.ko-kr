@@ -2,7 +2,7 @@
 title: Windows 기반 ODBC Driver for SQL Server 릴리스 정보
 description: 이 릴리스 정보 문서에서는 Windows 기반 Microsoft ODBC driver for SQL Server의 각 릴리스의 변경 사항을 설명합니다.
 ms.custom: ''
-ms.date: 03/10/2020
+ms.date: 07/29/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,12 +12,12 @@ ms.reviewer: v-chojas
 author: v-makouz
 ms.author: v-chojas
 manager: kenvh
-ms.openlocfilehash: 5054a00901251bc9b947e7c147619b785f52ae9d
-ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
+ms.openlocfilehash: d066353c17822781c264388d284949b7b43391de
+ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81728458"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87898812"
 ---
 # <a name="release-notes-for-microsoft-odbc-driver-for-sql-server-on-windows"></a>Windows 기반 Microsoft ODBC Driver for SQL Server 릴리스 정보
 
@@ -43,13 +43,34 @@ Thank you.
 GeneMi (and CraigG).  2019/03/30.
 -->
 
+## <a name="176"></a>17.6
+
+![다운로드](../../../ssms/media/download-icon.png) [x64 설치 관리자 다운로드](https://go.microsoft.com/fwlink/?linkid=2137027)  
+![다운로드](../../../ssms/media/download-icon.png) [x86 설치 관리자 다운로드](https://go.microsoft.com/fwlink/?linkid=2137028)  
+
+버전 번호: 17.6.1.1  
+릴리스 날짜: 2020년 7월 31일
+
+검색된 언어가 아닌 다른 언어로 설치 관리자를 다운로드해야 하는 경우 다음과 같은 직접 링크를 사용할 수 있습니다.  
+x64 드라이버의 경우: [중국어(간체)](https://go.microsoft.com/fwlink/?linkid=2137027&clcid=0x804) | [중국어(번체)](https://go.microsoft.com/fwlink/?linkid=2137027&clcid=0x404) | [영어(미국)](https://go.microsoft.com/fwlink/?linkid=2137027&clcid=0x409) | [프랑스어](https://go.microsoft.com/fwlink/?linkid=2137027&clcid=0x40c) | [독일어](https://go.microsoft.com/fwlink/?linkid=2137027&clcid=0x407) | [이탈리아어](https://go.microsoft.com/fwlink/?linkid=2137027&clcid=0x410) | [일본어](https://go.microsoft.com/fwlink/?linkid=2137027&clcid=0x411) | [한국어](https://go.microsoft.com/fwlink/?linkid=2137027&clcid=0x412) | [포르투갈어(브라질)](https://go.microsoft.com/fwlink/?linkid=2137027&clcid=0x416) | [러시아어](https://go.microsoft.com/fwlink/?linkid=2137027&clcid=0x419) | [스페인어](https://go.microsoft.com/fwlink/?linkid=2137027&clcid=0x40a)  
+x86 드라이버의 경우: [중국어(간체)](https://go.microsoft.com/fwlink/?linkid=2137028&clcid=0x804) | [중국어(번체)](https://go.microsoft.com/fwlink/?linkid=2137028&clcid=0x404) | [영어(미국)](https://go.microsoft.com/fwlink/?linkid=2137028&clcid=0x409) | [프랑스어](https://go.microsoft.com/fwlink/?linkid=2137028&clcid=0x40c) | [독일어](https://go.microsoft.com/fwlink/?linkid=2137028&clcid=0x407) | [이탈리아어](https://go.microsoft.com/fwlink/?linkid=2137028&clcid=0x410) | [일본어](https://go.microsoft.com/fwlink/?linkid=2137028&clcid=0x411) | [한국어](https://go.microsoft.com/fwlink/?linkid=2137028&clcid=0x412) | [포르투갈어(브라질)](https://go.microsoft.com/fwlink/?linkid=2137028&clcid=0x416) | [러시아어](https://go.microsoft.com/fwlink/?linkid=2137028&clcid=0x419) | [스페인어](https://go.microsoft.com/fwlink/?linkid=2137028&clcid=0x40a)
+
+| 추가된 기능 | 세부 정보 |
+| :------- | :------ |
+| 준비된 문에 대한 메타데이터 캐싱 | [Always Encrypted 사용](../using-always-encrypted-with-the-odbc-driver.md)을 참조하세요. |
+| ROLLBACK 또는 COMMIT 후 자동 BEGIN TRANSACTION이 발생하는지 여부를 제어하는 SQL_COPT_SS_AUTOBEGINTXN 연결 특성 | [DSN 및 연결 문자열 특성과 키워드](../dsn-connection-string-attribute.md)를 참조하세요. |
+| 버그 수정. | [버그 수정](../bug-fixes.md). |
+| &nbsp; | &nbsp; |
+
+## <a name="previous-releases"></a>이전 릴리스
+
 ## <a name="1752"></a>17.5.2
 
 ![다운로드](../../../ssms/media/download-icon.png) [x64 설치 관리자 다운로드](https://go.microsoft.com/fwlink/?linkid=2120137)  
 ![다운로드](../../../ssms/media/download-icon.png) [x86 설치 관리자 다운로드](https://go.microsoft.com/fwlink/?linkid=2120140)  
 
 버전 번호: 17.5.2.1  
-릴리스 날짜: 2019년 3월 6일
+릴리스 날짜: 2020년 3월 6일
 
 검색된 언어가 아닌 다른 언어로 설치 관리자를 다운로드해야 하는 경우 다음과 같은 직접 링크를 사용할 수 있습니다.  
 x64 드라이버의 경우: [중국어(간체)](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x804) | [중국어(번체)](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x404) | [영어(미국)](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x409) | [프랑스어](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x40c) | [독일어](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x407) | [이탈리아어](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x410) | [일본어](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x411) | [한국어](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x412) | [포르투갈어(브라질)](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x416) | [러시아어](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x419) | [스페인어](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x40a)  
@@ -64,8 +85,6 @@ x86 드라이버의 경우: [중국어(간체)](https://go.microsoft.com/fwlink/
 | 버그 수정. | [버그 수정](../bug-fixes.md)을 참조하세요. |
 | &nbsp; | &nbsp; |
 
-## <a name="previous-releases"></a>이전 릴리스
-
 다음 섹션에서 다운로드 링크를 클릭하여 이전 ODBC 드라이버 버전을 다운로드합니다.
 
 ## <a name="175"></a>17.5
@@ -74,7 +93,7 @@ x86 드라이버의 경우: [중국어(간체)](https://go.microsoft.com/fwlink/
 ![다운로드](../../../ssms/media/download-icon.png) [x86 설치 관리자 다운로드](https://go.microsoft.com/fwlink/?linkid=2120353)  
 
 버전 번호: 17.5.1.1  
-릴리스 날짜: 2019년 1월 31일
+릴리스 날짜: 2020년 1월 31일
 
 검색된 언어가 아닌 다른 언어로 설치 관리자를 다운로드해야 하는 경우 다음과 같은 직접 링크를 사용할 수 있습니다.  
 x64 드라이버의 경우: [중국어(간체)](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x804) | [중국어(번체)](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x404) | [영어(미국)](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x409) | [프랑스어](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x40c) | [독일어](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x407) | [이탈리아어](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x410) | [일본어](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x411) | [한국어](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x412) | [포르투갈어(브라질)](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x416) | [러시아어](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x419) | [스페인어](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x40a)  
@@ -147,7 +166,7 @@ x86 드라이버의 경우: [중국어(간체)](https://go.microsoft.com/fwlink/
 
 | 추가된 기능 | 세부 정보 |
 | :------------ | :------ |
-| Azure Active Directory 관리 서비스 ID(시스템 및 사용자 할당) 인증 모드. | [ODBC 드라이버에서 Azure Active Directory 사용](../using-azure-active-directory.md)을 참조하세요. |
+| Azure Active Directory 관리 ID(시스템 및 사용자 할당) 인증 모드. | [ODBC 드라이버에서 Azure Active Directory 사용](../using-azure-active-directory.md)을 참조하세요. |
 | Always Encrypted 열에 대해 입력 매개 변수를 스트리밍할 수 있음. | [Always Encrypted를 사용할 때 ODBC 드라이버의 제한 사항](../using-always-encrypted-with-the-odbc-driver.md#limitations-of-the-odbc-driver-when-using-always-encrypted)을 참조하세요. |
 | XA 분산 트랜잭션. | [XA 트랜잭션 사용](../use-xa-with-dtc.md). |
 | 버그 수정. | [버그 수정](../bug-fixes.md)을 참조하세요. |

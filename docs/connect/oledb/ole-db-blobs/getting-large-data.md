@@ -1,6 +1,6 @@
 ---
 title: 대규모 데이터 가져오기(OLE DB 드라이버) | Microsoft Docs
-description: OLE DB Driver for SQL Server를 사용하여 대규모 데이터 가져오기
+description: 이 예제에서는 OLE DB Driver for SQL Server 소비자가 단일 열에서 대형 데이터 값을 검색할 수 있는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - DBPROP_ACCESSORDER property
 - OLE DB Driver for SQL Server, BLOBs
 - large data, OLE objects
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 08c1a4d419317f481994980facb0f625730fe484
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 547f5afc56d0a2cffef0c73c716721fc2dfa9183
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244985"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88862301"
 ---
 # <a name="getting-large-data"></a>대규모 데이터 가져오기
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

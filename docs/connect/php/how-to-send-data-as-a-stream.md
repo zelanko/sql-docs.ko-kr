@@ -1,5 +1,6 @@
 ---
-title: '방법: 데이터를 스트림으로 전송 | Microsoft Docs'
+title: '방법: 데이터를 스트림으로 전송'
+description: Microsoft SQLSRV 및 PDO_SQLSRV driver for PHP for SQL Server에서 스트림을 사용하여 대형 개체를 데이터베이스에 전송하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 02/28/2019
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ab6b95d6-b6e6-4bd7-a18c-50f2918f7532
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: bc5a0c6fc4c6331dfa0398b2d6faca4ac482ffe3
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: c2d986336a369698b107b2437beae322d91508fb
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80915949"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411440"
 ---
 # <a name="how-to-send-data-as-a-stream"></a>방법: 데이터를 스트림으로 전송
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

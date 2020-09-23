@@ -1,6 +1,6 @@
 ---
 title: 행 집합(OLE DB 드라이버)
-description: SQL Server용 OLE DB 드라이버의 행 집합
+description: OLE DB Driver for SQL Server에서 소비자가 한 세션에서 한 행 집합을 만들도록 지원하는 인터페이스에 대해 알아봅니다. 자세한 내용은 이 섹션의 문서를 참조하세요.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - OLE DB rowsets
 - OLE DB rowsets, about rowsets
 - rowsets [OLE DB]
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 7cb9a52e9b7b1cd5ec243db15f666a5b5ef9c4a9
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 55100932092abeb81da7fa1c156ccb5a61fc193c
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244181"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88859942"
 ---
 # <a name="rowsets"></a>행 집합
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

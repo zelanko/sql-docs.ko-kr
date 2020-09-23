@@ -1,21 +1,22 @@
 ---
+description: 데이터 원본 마법사 화면 2(ODBC Driver for SQL Server)
 title: 데이터 원본 마법사 화면 2(ODBC Driver for SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/21/2018
+ms.date: 08/06/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
-author: MightyPen
+author: David-Engel
 ms.author: v-jizho2
-ms.openlocfilehash: 4ab8be02351a23c78251a99ca707e946ee8944c8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d1e18939ab9d3f2e86452dd3f1847971157ca92c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "70152564"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462212"
 ---
 # <a name="data-source-wizard-screen-2"></a>데이터 원본 마법사 화면 2
 
@@ -43,15 +44,19 @@ ms.locfileid: "70152564"
 
 ### <a name="with-active-directory-interactive-authentication"></a>Active Directory 대화형 인증 사용
 
-드라이버가 Azure Active Directory 대화형 모드에서 로그인 ID를 제공하여 SQL Server에 인증하도록 지정합니다. 그러면 Azure 인증 프롬프트 대화 상자가 트리거됩니다.
+드라이버가 Azure Active Directory 대화형 모드에서 로그인 ID를 제공하여 SQL Server에 인증하도록 지정합니다. 이 옵션은 Azure 인증 프롬프트 대화 상자를 트리거합니다.
+
+### <a name="with-managed-identity-authentication"></a>관리 ID 인증 사용
+
+드라이버가 관리 ID를 사용하여 SQL Server에 인증하도록 지정합니다.
 
 ### <a name="login-id"></a>로그인 ID
 
-**사용자가 입력한 로그인 ID 및 암호를 사용하는 SQL Server 인증 사용** 또는 **사용자가 입력한 로그인 ID 및 암호를 사용하는 Azure Active Directory 암호 인증 사용** 또는 **사용자가 입력한 로그인 ID를 사용하는 Azure Active Directory 대화형 인증 사용**이 선택된 경우 SQL Server에 연결할 때 드라이버가 사용하는 로그인 ID를 지정합니다. 이 옵션은 서버 기본 설정을 확인하기 위한 연결에만 적용되며, 데이터 원본이 만들어진 후 이 데이터 원본을 사용하여 설정된 후속 연결에는 적용되지 않습니다.
+**사용자가 입력한 로그인 ID 및 암호를 사용하는 SQL Server 인증 사용** 또는 **사용자가 입력한 로그인 ID 및 암호를 사용하는 Azure Active Directory 암호 인증 사용** 또는 **사용자가 입력한 로그인 ID를 사용하는 Azure Active Directory 대화형 인증 사용**이 선택된 경우 SQL Server에 연결할 때 드라이버가 사용하는 로그인 ID를 지정합니다. **관리 ID 인증**을 선택한 경우 관리 ID의 개체 ID를 지정하거나 기본 ID를 사용하려면 비워 둡니다. 이 필드는 서버 기본 설정을 확인하기 위한 연결에만 적용되며, 관리 ID 인증을 사용하는 경우를 제외하고 데이터 원본이 만들어진 후 이 데이터 원본을 사용하여 설정된 후속 연결에는 적용되지 않습니다.
 
 ### <a name="password"></a>암호
 
-**사용자가 입력한 로그인 ID 및 암호를 사용하는 SQL Server 인증 사용** 또는 **사용자가 입력한 로그인 ID 및 암호를 사용하는 Azure Active Directory 암호 인증 사용**가 선택된 경우 SQL Server에 연결할 때 드라이버가 사용하는 암호를 지정합니다. 이 옵션은 서버 기본 설정을 확인하기 위한 연결에만 적용되며, 새 데이터 원본을 사용하여 설정된 후속 연결에는 적용되지 않습니다.
+**사용자가 입력한 로그인 ID 및 암호를 사용하는 SQL Server 인증 사용** 또는 **사용자가 입력한 로그인 ID 및 암호를 사용하는 Azure Active Directory 암호 인증 사용**가 선택된 경우 SQL Server에 연결할 때 드라이버가 사용하는 암호를 지정합니다. 이 필드는 서버 기본 설정을 확인하기 위한 연결에만 적용되며, 새 데이터 원본을 사용하여 설정된 후속 연결에는 적용되지 않습니다.
 
 **Windows 통합 인증 사용** 또는 **Active Directory 통합 인증 사용**이 선택되면 **로그인 ID** 및 **암호** 상자가 모두 사용하지 않도록 설정됩니다.
 

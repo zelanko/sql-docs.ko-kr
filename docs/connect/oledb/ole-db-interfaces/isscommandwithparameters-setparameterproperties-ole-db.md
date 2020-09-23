@@ -1,6 +1,6 @@
 ---
 title: ISSCommandWithParameters::SetParameterProperties(OLE DB) | Microsoft Docs
-description: ISSCommandWithParameters::SetParameterProperties(OLE DB)
+description: OLE DB Driver for SQL Server에서 ISSCommandWithParameters::SetParameterProperties 메서드가 매개 변수 속성을 설정하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -13,14 +13,14 @@ apiname:
 apitype: COM
 helpviewer_keywords:
 - SetParameterProperties method
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 643549a08c10bd43e9c6c9b676fab380b7731965
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 6340c4f52106b15adb2fec651a3cca213dad5d19
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86006713"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88862167"
 ---
 # <a name="isscommandwithparameterssetparameterproperties-ole-db"></a>ISSCommandWithParameters::SetParameterProperties(OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

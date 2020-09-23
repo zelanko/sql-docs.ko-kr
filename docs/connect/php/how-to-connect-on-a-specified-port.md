@@ -1,5 +1,6 @@
 ---
-title: '방법: 지정된 포트에서 연결 | Microsoft Docs'
+title: '방법: 지정된 포트에서 연결'
+description: Microsoft SQLSRV 및 PDO_SQLSRV Drivers for PHP for SQL Server를 사용하여 특정 포트에 구성된 데이터베이스에 연결하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 65a154d1-375c-439b-a653-7815c9d70ff3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 44df1e9c8809fed016a5c041d34f0f46cae83654
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: b55f12bbfe4bbe255af2d62c2ed0c5ab3f968e98
+ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80916509"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87435236"
 ---
 # <a name="how-to-connect-on-a-specified-port"></a>방법: 지정된 포트에서 연결
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

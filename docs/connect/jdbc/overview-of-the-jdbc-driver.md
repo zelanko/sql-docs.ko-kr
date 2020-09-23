@@ -2,7 +2,7 @@
 title: JDBC 드라이버 개요 | Microsoft Docs
 description: Microsoft JDBC Driver for SQL Server는 SQL 데이터베이스에 대한 데이터 액세스를 제공하는 유형 4 JDBC(Java Database Connectivity) 4.2 규격 드라이버입니다.
 ms.custom: ''
-ms.date: 10/28/2019
+ms.date: 08/06/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,24 +11,24 @@ ms.topic: conceptual
 ms.assetid: 939a8773-2583-49a4-bf00-6b892fbe39dc
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a405918283f1e72c63cf56bd6ac9da1bcb498d36
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.openlocfilehash: 5455169782503939330c32829a89bf0701aac25a
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81529341"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87943676"
 ---
 # <a name="overview-of-the-jdbc-driver"></a>JDBC 드라이버 개요
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-SQL Server용 Microsoft JDBC Driver는 SQL Server 2017, SQL Server 2016, SQL Server 2014, SQL Server 2012, SQL Server 2008 R2, SQL Server 2008 및 Azure SQL Database에 대한 강력한 데이터 액세스를 제공하는 유형 4 JDBC(Java Database Connectivity) 4.2 규격 드라이버입니다.  
+SQL Server용 Microsoft JDBC Driver는 SQL Server 및 Azure SQL 데이터베이스에 대한 강력한 데이터 액세스를 제공하는 Type 4 JDBC(Java Database Connectivity) 4.2 규격 드라이버입니다.  
 
 ## <a name="redistribution"></a>재배포
 
-JDBC 드라이버 버전 6.0, 6.2, 6.4 및 7.0은 재배포 가능합니다. 라이선스 계약의 _배포 가능 코드_ 절을 검토하세요.
+JDBC Driver 버전 6.0 이상은 재배포 가능합니다. 라이선스 계약의 _배포 가능 코드_ 절을 검토하세요.
 
-JDBC 드라이버 버전 4.x는 더 이상 사용되지 않습니다. 4\.x에 대한 지원은 2018년 이전에 만료되었습니다.
+JDBC Driver 버전 4.x는 더 이상 사용되지 않습니다. 4\.x에 대한 지원은 2018년 이전에 만료되었습니다.
 
 ## <a name="in-this-section"></a>섹션 내용  
 

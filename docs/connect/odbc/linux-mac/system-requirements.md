@@ -2,7 +2,7 @@
 title: 시스템 요구 사항(ODBC Driver for SQL Server)
 description: Linux 및 macOS 운영 체제 기반 ODBC Driver for SQL Server의 시스템 요구 사항을 나열합니다.
 ms.custom: ''
-ms.date: 03/18/2020
+ms.date: 08/06/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f03b7fdd-0e9d-4e74-958d-e8c87e027348
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 01a5dd44d111fd72d76db244c8135d3bdde00ec8
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: 74b7bf1680dd956dfca85917939ad24a3559d7de
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86391758"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934462"
 ---
 # <a name="system-requirements-linux-and-macos"></a>시스템 요구 사항(Linux 및 macOS)
 
@@ -36,28 +36,28 @@ Linux 및 macOS 드라이버 SQL 버전 호환성은 [Windows 드라이버 SQL �
 
 Linux 및 macOS 드라이버 버전 17, 13.1 및 13은 다음 운영 체제의 x64 아키텍처에서 지원됩니다.
 
-|지원되는 운영 체제     |17.5|17.4|17.3|17.2|17.1|17.0|13.1|13|
-|-------------------------------|----|----|----|----|----|----|----|--|
-|Apple OS X 10.11(El Capitan)  | |Y|Y|Y|Y|Y|Y|Y|
-|Apple macOS 10.12(Sierra)     | |Y|Y|Y|Y|Y|Y|Y|
-|Apple macOS 10.13(Sierra)|Y|Y|Y|Y|Y|Y|Y|Y|
-|Apple macOS 10.14(Mojave)     |Y|Y|Y| | | | | |
-|Apple macOS 10.15(Catalina.properties)   |Y| | | | | | | |
-|Alpine Linux 3.11              |Y| | | | | | | |
-|Debian Linux 8                 | |Y|Y|Y|Y|Y|Y|Y|
-|Debian Linux 9                 |Y|Y|Y|Y|Y|Y|Y|Y|
-|Debian Linux 10                |Y|Y| | | | | | |
-|Oracle Linux 8                 |Y| | | | | | | |
-|RedHat Enterprise Linux 6      |Y|Y|Y|Y|Y|Y|Y|Y|
-|RedHat Enterprise Linux 7      |Y|Y|Y|Y|Y|Y|Y|Y|
-|RedHat Enterprise Linux 8      |Y|Y| | | | | | |
-|SUSE Linux Enterprise Server 11<sup>1</sup>|Y|Y|Y|Y|Y|Y|Y|Y|
-|SUSE Linux Enterprise Server 12|Y|Y|Y|Y|Y|Y|Y|Y|
-|SUSE Linux Enterprise Server 15|Y|Y|Y| | | | | |
-|Ubuntu Linux 14.04             | |Y|Y|Y|Y|Y|Y|Y|
-|Ubuntu Linux 16.04             |Y|Y|Y|Y|Y|Y|Y|Y|
-|Ubuntu Linux 18.04             |Y|Y|Y|Y| | | | |
-|Ubuntu Linux 19.10             |Y| | | | | | | |
+|드라이버 버전&nbsp;&#8594;<br />&#8595; 운영 체제     |17.6|17.5|17.4|17.3|17.2|17.1|17.0|13.1|13|
+|-------------------------------|----|----|----|----|----|----|----|----|---|
+|Apple OS X 10.11(El Capitan)  |    |    |예 |예 |예 |예 |예 |예 |예|
+|Apple macOS 10.12(Sierra)     |    |    |예 |예 |예 |예 |예 |예 |예|
+|Apple macOS 10.13(Sierra)|예 |예 |예 |예 |예 |예 |예 |예 |예|
+|Apple macOS 10.14(Mojave)     |예 |예 |예 |예 |    |    |    |    |   |
+|Apple macOS 10.15(Catalina.properties)   |예 |예 |    |    |    |    |    |    |   |
+|Alpine Linux 3.11              |예 |예 |    |    |    |    |    |    |   |
+|Debian Linux 8                 |예 |예 |예 |예 |예 |예 |예 |예 |예|
+|Debian Linux 9                 |예 |예 |예 |예 |예 |예 |예 |예 |예|
+|Debian Linux 10                |예 |예 |예 |    |    |    |    |    |   |
+|Oracle Linux 8                 |예 |예 |    |    |    |    |    |    |   |
+|RedHat Enterprise Linux 6      |예 |예 |예 |예 |예 |예 |예 |예 |예|
+|RedHat Enterprise Linux 7      |예 |예 |예 |예 |예 |예 |예 |예 |예|
+|RedHat Enterprise Linux 8      |예 |예 |예 |    |    |    |    |    |   |
+|SUSE Linux Enterprise Server 11<sup>1</sup>|예 |예 |예 |예 |예 |예 |예 |예 |예|
+|SUSE Linux Enterprise Server 12|예 |예 |예 |예 |예 |예 |예 |예 |예|
+|SUSE Linux Enterprise Server 15|예 |예 |예 |예 |    |    |    |    |   |
+|Ubuntu Linux 14.04             |    |    |예 |예 |예 |예 |예 |예 |예|
+|Ubuntu Linux 16.04             |예 |예 |예 |예 |예 |예 |예 |예 |예|
+|Ubuntu Linux 18.04             |예 |예 |예 |예 |예 |    |    |    |   |
+|Ubuntu Linux 20.04             |예 |    |    |    |    |    |    |    |   |
 
 <sup>1</sup> ODBC Driver 17은 SUSE Linux Enterprise Server 11 SP4만 지원합니다.
 

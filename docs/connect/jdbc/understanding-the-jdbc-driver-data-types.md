@@ -1,5 +1,6 @@
 ---
-title: JDBC 드라이버 데이터 형식 이해 | Microsoft Docs
+title: JDBC 드라이버 데이터 형식 이해
+description: JDBC 데이터 형식에 대해 살펴보고 SQL Server용 Microsoft JDBC Driver에서 해당 형식을 데이터베이스 형식으로 변환하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 7802328d-4d23-4775-9573-4169b127d258
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 15ecca3277dcba3cd2235da9bff9a8d9fc2e4f6f
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 48090db2e671fdfb1fb076645b06c9315b32bdd5
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920273"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87410919"
 ---
 # <a name="understanding-the-jdbc-driver-data-types"></a>JDBC 드라이버 데이터 형식 이해
 
@@ -29,7 +30,7 @@ JDBC 유형 시스템은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md
   
 ## <a name="in-this-section"></a>섹션 내용  
   
-| 항목                                                                                                                                            | Description                                                                                                                                                                                                                                                          |
+| 항목                                                                                                                                            | 설명                                                                                                                                                                                                                                                          |
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [기본 데이터 형식 사용](../../connect/jdbc/using-basic-data-types.md)                                                                           | JDBC 기본 데이터 형식을 설명합니다. 결과 집합, 매개 변수가 있는 쿼리 및 저장 프로시저로 데이터 형식을 사용하는 방법에 대한 예가 포함되어 있습니다.                                                                                                        |
 | [java.sql.Time 값을 서버에 보내는 방식 구성](../../connect/jdbc/configuring-how-java-sql-time-values-are-sent-to-the-server.md) | JDBC 드라이버에서 날짜를 생성하는 방식을 설명합니다.                                                                                                                                                                                                                       |

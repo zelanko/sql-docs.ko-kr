@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: 414ee58a-8251-4367-9a8e-10c068d17280
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4b8f4bd0718d0fa9785d3a2f87c437a6b732f39a
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 8a3ab7a079106cf009bbae82a1116a93499e0d71
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487222"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396840"
 ---
 # <a name="rsprocessingerror---reporting-services-error"></a>rsProcessingError - Reporting Services 오류
     
 ## <a name="details"></a>세부 정보  
   
-|||  
+|범주|값|  
 |-|-|  
 |제품 이름|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |이벤트 ID|rsProcessingError|  
@@ -97,11 +97,11 @@ ms.locfileid: "81487222"
 ### <a name="cannot-compare-data-types-for-a-filter"></a>필터에 대한 데이터 형식을 비교할 수 없음  
  필터 수식에서 필터링 대상을 정의하는 필터 식과 필터 값은 데이터 형식이 같아야 비교할 수 있습니다. 다음 오류가 발생할 경우 데이터 형식이 일치하도록 필드 식 또는 필터 값을 수정하세요.  
   
--   *\<report item name>* 에 대한 *\<report item type>* 처리를 수행할 수 없습니다. 형식이 *\<type>* 인 데이터와 *\<type>* 인 데이터를 비교할 수 없습니다. *\<report item name>* 에서 반환되는 데이터 형식을 확인하세요.  
+-   *\<report item name>* 에 대한 *\<report item type>* 을(를) 처리할 수 없습니다. 형식이 *\<type>* 인 데이터와 *\<type>* 인 데이터를 비교할 수 없습니다. *\<report item name>* 에서 반환되는 데이터 형식을 확인하세요.  
   
--   *\<property name>* 을 계산하지 못했습니다.  
+-   *\<property name>* 을(를) 계산하지 못했습니다.  
   
--   *\<property name>* 을 계산하지 못했습니다. *\<error string&gt;* 오류가 있는 데이터 세트 필드를 참조합니다.  
+-   *\<property name>* 을(를) 계산하지 못했습니다. *\<error string>* 오류가 있는 데이터베이스 필드를 참조합니다.  
   
  자세한 내용은 [데이터 필터링, 그룹화 및 정렬&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)를 참조하세요.  
   
@@ -110,13 +110,13 @@ ms.locfileid: "81487222"
   
  집계 함수에 특정 범위의 이름을 전달할 수도 있습니다. 범위는 데이터 영역, 데이터 세트의 이름 또는 데이터 계층에서 높은 범위의 이름을 참조할 수 있습니다. 다음과 같은 메시지가 이에 해당합니다.  
   
--   *\<report item type>* ' *\<report item name>* '에 잘못된 범위 " *\<scope name>* "이 있습니다. 범위는 현재 범위이거나 현재 범위 내에 포함되어야 합니다.  
+-   *\<report item type>* ' *\<report item name>* '에 잘못된 범위 " *\<scope name>* "이(가) 있습니다. 범위는 현재 범위이거나 현재 범위 내에 포함되어야 합니다.  
   
 -   *\<report item type>* ' *\<report item name>* '에 대한 *\<property name>* 식에 집계 함수에 유효하지 않은 범위 매개 변수가 있습니다. 범위 매개 변수는 포함 그룹의 이름, 포함 데이터 영역의 이름 또는 데이터 세트의 이름 중 하나와 동일한 문자열 상수로 설정되어야 합니다.  
   
  누계를 계산하는 집계 함수의 경우(**Previous**, **RunningValue**또는 **RowNumber**) 행 그룹 이름 또는 열 그룹 이름 중 하나인 범위 매개 변수를 지정할 수 있습니다. 다음과 같은 오류 메시지가 이에 해당합니다.  
   
--   *\<report item type>* ' *\<report item name>* '의 데이터 셀에 사용된 **Previous**, **RunningValue** 또는 **RowNumber** 집계 함수가 *\<report item type>* 의 열과 행 모두에 있는 그룹화 범위를 참조합니다. *\<report item type>* 내의 모든 **Previous**, **RunningValue** 및 **RowNumber** 집계 함수의 범위 매개 변수는 행 그룹화나 데이터 열 그룹화 중 하나만 참조할 수 있습니다.  
+-   *\<report item type>* ' *\<report item name>* '의 데이터 셀에 사용된 **Previous**, **RunningValue** 또는 **RowNumber** 집계 함수가 *\<report item type>* 의 열과 행 모두에서 그룹화 범위를 참조합니다. *\<report item type>* 내의 모든 **Previous**, **RunningValue** 및 **RowNumber** 집계 함수의 범위 매개 변수는 행 그룹화나 데이터 열 그룹화 중 하나만 참조할 수 있습니다.  
   
  자세한 내용은 [합계, 집계 및 기본 제공 컬렉션의 식 범위&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md) 및 [기본 제공 컬렉션&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)을 참조하세요.  
   

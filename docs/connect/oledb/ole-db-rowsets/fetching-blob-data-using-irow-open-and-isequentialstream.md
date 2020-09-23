@@ -1,6 +1,6 @@
 ---
 title: IRow::Open 및 ISequentialStream을 사용하여 BLOB 데이터 인출 | Microsoft Docs
-description: IRow::Open 및 ISequentialStream을 사용하여 BLOB 데이터 인출
+description: 이 예제 함수에서는 OLE DB Driver for SQL Server에서 IRow::Open 및 ISequentialStream을 사용하여 BLOB 데이터를 가져오는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Open method
 - ISequentialStream interface
 - BLOBs, fetching
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 31ac457df7800e61b19375b223f622a6ff4ad358
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: d5719b8e487b3ba48a61a006ec998c682178e20d
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999890"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88859982"
 ---
 # <a name="fetching-blob-data-using-irowopen-and-isequentialstream"></a>IRow::Open 및 ISequentialStream을 사용하여 BLOB 데이터 인출
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

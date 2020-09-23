@@ -1,7 +1,8 @@
 ---
-title: '방법: SQLSRV 드라이버를 사용하여 I/O 매개 변수 검색 | Microsoft Docs'
+title: '방법: SQLSRV 드라이버를 사용하여 I/O 매개 변수 검색'
+description: 이 항목에서는 Microsoft SQLSRV Driver for PHP for SQL Server와 저장 프로시저를 사용하여 입출력 매개 변수를 검색하는 방법을 설명합니다.
 ms.custom: ''
-ms.date: 04/12/2018
+ms.date: 08/10/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: connectivity
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9a7c5f60-67f9-4968-a3a8-c256ee481da2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2bad5942e98271638b4b929d55c54c1562629e44
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 8ce35c6c0b3025a328c71de657fd1e89358379be
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80916099"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680688"
 ---
 # <a name="how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver"></a>방법: SQLSRV 드라이버를 사용하여 입력 및 출력 매개 변수 검색
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -24,7 +25,7 @@ ms.locfileid: "80916099"
 이 항목에서는 SQLSRV 드라이버를 사용하여 하나의 매개 변수가 입출력 매개 변수로 정의된 저장 프로시저를 호출하는 방법 및 결과를 검색하는 방법을 보여 줍니다. 출력 또는 입출력 매개 변수를 검색할 때 반환되는 매개 변수 값에 액세스하기 전에 저장 프로시저에서 반환된 모든 결과를 사용해야 합니다.  
   
 > [!NOTE]  
-> 초기화되거나 **null**, **날짜/시간**또는 스트림 형식으로 업데이트되는 변수는 출력 매개 변수로 사용할 수 없습니다.  
+>  초기화되거나 **null**, **날짜/시간**또는 스트림 형식으로 업데이트되는 변수는 출력 매개 변수로 사용할 수 없습니다.  
   
 ## <a name="example-1"></a>예 1
 다음 예제에서는 지정된 직원이 사용할 수 있는 휴가 시간에서 사용한 휴가 시간을 빼는 저장 프로시저를 호출합니다. 사용한 휴가 시간을 나타내는 변수 *$vacationHrs*가 저장 프로시저에 입력 매개 변수로 전달됩니다. 사용할 수 있는 휴가 시간을 업데이트한 다음 저장 프로시저는 동일한 매개 변수를 사용하여 나머지 휴가 시간 수를 반환합니다.  

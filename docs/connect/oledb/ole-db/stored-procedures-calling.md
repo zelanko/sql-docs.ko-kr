@@ -1,6 +1,6 @@
 ---
 title: 저장 프로시저 호출(OLE DB) | Microsoft Docs
-description: 저장 프로시저 호출(OLE DB)
+description: 매개 변수 값을 전달하는 방법을 비롯하여 OLE DB Driver for SQL Server에서 저장 프로시저를 호출하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - ODBC CALL escape sequence
 - stored procedures [OLE DB], calling
 - OLE DB Driver for SQL Server, stored procedures
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 7835af6a0e0cb42d63dd6670e863d3c0aea28d44
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 3df02e0bee4a0e0f83851a913e0e09961e6320c6
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012751"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88859118"
 ---
 # <a name="stored-procedures---calling"></a>저장 프로시저 - 호출
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -1,21 +1,22 @@
 ---
-title: PDOStatement::execute | Microsoft Docs
+title: PDOStatement::execute
+description: Microsoft PDO_SQLSRV Driver for PHP for SQL Server의 PDOStatement::execute 함수에 대한 API 참조입니다.
 ms.custom: ''
-ms.date: 05/22/2018
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: c2e80566-fa41-4918-8521-cf2e05374cbd
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 31e7465b2fca0d76f569afb83e3a7d8501fd6036
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 71b9592a35fcc28b302c7aadb1ca5de0c75c3d6c
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67936040"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88645124"
 ---
 # <a name="pdostatementexecute"></a>PDOStatement::execute
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -32,7 +33,7 @@ bool PDOStatement::execute ([ $input ] );
 #### <a name="parameters"></a>매개 변수  
 *$input*: (선택 사항) 매개 변수 표식에 대한 값이 포함된 결합형 배열입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
 성공하면 true이고, 그렇지 않으면 false입니다.  
   
 ## <a name="remarks"></a>설명  

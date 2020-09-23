@@ -2,7 +2,7 @@
 title: JDBC 드라이버에 대한 FAQ(질문과 대답)
 description: 이 페이지에서는 Microsoft JDBC Driver for SQL Server에 대한 자주 묻는 질문에 대한 답변을 제공합니다.
 ms.custom: ''
-ms.date: 03/24/2020
+ms.date: 08/24/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: cbc0e397-ecf2-4494-87b2-a492609bceae
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 835b8850d68b49f1701767e314d08c843bd77fc3
-ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
+ms.openlocfilehash: e4ca5823ac73868400d9f9a370e053d263143c0f
+ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81728314"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89042426"
 ---
 # <a name="frequently-asked-questions-faq-for-jdbc-driver"></a>JDBC 드라이버에 대한 FAQ(질문과 대답)
 
@@ -36,6 +36,15 @@ JDBC Driver는 오픈 소스이며 소스 코드는 [GitHub](https://github.com/
 Microsoft JDBC Driver용 GitHub 리포지토리에서 사용할 수 있는 JDBC Driver 파일은 JDBC Driver의 핵심이며 리포지토리에 나열된 오픈 소스 라이선스가 적용됩니다. [Microsoft 다운로드 페이지](download-microsoft-jdbc-driver-for-sql-server.md)의 드라이버 패키지에는 Windows 통합 인증에 필요하고 JDBC 드라이버에서 XA 트랜잭션을 사용하도록 설정하기 위해 필요한 추가 라이브러리가 포함됩니다. 이러한 추가 라이브러리에는 다운로드 가능한 패키지에 포함되는 라이선스가 적용됩니다.
 
 **내 드라이버를 업그레이드할 때 어떤 정보를 알아야 하나요?**  
+Microsoft JDBC Driver 8.4는 JDBC 4.2 및 4.3(부분) 사양을 지원하며 설치 패키지에 다음과 같은 세 개의 JAR 클래스 라이브러리를 포함합니다.
+
+| JAR                        | JDBC 사양            | JDK 버전 |
+| -------------------------- | ----------------------------- | ----------- |
+| mssql-jdbc-8.4.1.jre14.jar | JDBC 4.3(부분) 및 4.2 | JDK 14.0    |
+| mssql-jdbc-8.4.1.jre11.jar | JDBC 4.3(부분) 및 4.2 | JDK 11.0    |
+| mssql-jdbc-8.4.1.jre8.jar  | JDBC 4.2                      | JDK 8.0     |
+| &nbsp;                     | &nbsp;                        | &nbsp;      |
+
 Microsoft JDBC Driver 8.2는 JDBC 4.2 및 4.3(부분) 사양을 지원하며 설치 패키지에 다음과 같은 세 개의 JAR 클래스 라이브러리를 포함합니다.
 
 | JAR                        | JDBC 사양            | JDK 버전 |
@@ -155,7 +164,7 @@ JDBC 드라이버 6.0, 6.2, 6.4 및 7.0은 재배포 가능합니다. 라이선�
 이러한 드라이버 버전은 더 이상 지원되지 않으므로 다운로드할 수 없습니다. Java 연결 지원을 지속적으로 개선하고 있습니다. 따라서 최신 버전의 Microsoft JDBC 드라이버를 사용하는 것이 좋습니다.
 
 **현재 JRE 1.4를 사용하고 있습니다. 어떤 드라이버가 JRE 1.4와 호환되나요?**  
-SAP 제품을 사용하고 있으며 JRE 1.4 지원이 필요한 고객의 경우 [SAPService 마켓플레이스](https://service.sap.com/) 에 연결하여 1.2 Microsoft JDBC Driver를 얻을 수 있습니다.
+SAP 제품을 사용하고 있으며 JRE 1.4 지원이 필요한 고객의 경우 [SAP Service Marketplace](https://service.sap.com/)에 연결하여 1.2 Microsoft JDBC Driver를 얻을 수 있습니다.
 
 **이 드라이버가 FIPS 유효성 검사 알고리즘을 사용하여 통신할 수 있나요?**  
 Microsoft JDBC Driver에는 암호화 알고리즘이 포함되어 있지 않습니다. 고객이 FIPS(Federal Information Processing Standards)에서 허용될 수 있는 운영 체제, 애플리케이션 및 JVM 알고리즘을 활용하며 해당 알고리즘을 사용하도록 드라이버를 구성하는 경우 해당 드라이버는 지정된 알고리즘만 통신에 사용합니다.

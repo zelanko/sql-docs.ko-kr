@@ -1,6 +1,6 @@
 ---
 title: 명령(OLE DB 드라이버) | Microsoft Docs
-description: SQL Server용 OLE DB 드라이버의 명령
+description: 구문, 매개 변수, 명령 준비, 여러 결과가 포함된 명령 등 OLE DB Driver for SQL Server의 ICommand 인터페이스에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -11,14 +11,14 @@ ms.topic: reference
 helpviewer_keywords:
 - OLE DB Driver for SQL Server, commands
 - commands [OLE DB]
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: da86675b244ac3424c6ffaf04df6c42bc133c4d7
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 715ab31652697643e473a6b7cd944c89c46037c8
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86943074"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88860141"
 ---
 # <a name="commands"></a>명령
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -1,6 +1,6 @@
 ---
 title: 행 집합 및 매개 변수의 데이터 형식 매핑(OLE DB 드라이버) | Microsoft Docs
-description: 행 집합 및 매개 변수의 데이터 형식 매핑
+description: OLE DB Driver for SQL Server가 OLE DB 정의 데이터 형식을 사용하여 행 집합에서 또한 매개 변수 값으로 SQL Server 데이터를 나타내는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 02/21/2020
 ms.prod: sql
@@ -19,14 +19,14 @@ helpviewer_keywords:
 - SSPROP_ALLOWNATIVEVARIANT property
 - GetParameterInfo function
 - OLE DB, data types
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 373bb0165c663232342b690711d5f56e18544211
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: cbe23a1e1edce96997968bf40075b2fc3b13db49
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244922"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88861604"
 ---
 # <a name="data-type-mapping-in-rowsets-and-parameters"></a>행 집합 및 매개 변수의 데이터 형식 매핑
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

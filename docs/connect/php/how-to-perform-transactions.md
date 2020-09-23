@@ -1,7 +1,8 @@
 ---
-title: '방법: 트랜잭션 수행 | Microsoft Docs'
+title: '방법: 트랜잭션 수행'
+description: 이 항목에서는 Microsoft Drivers for PHP for SQL Server를 사용할 때 트랜잭션을 수행하는 방법을 설명하고 보여 줍니다.
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: f4643b85-f929-4919-8951-23394bc5bfa7
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3945b20d7aaf3b6de778aaa3dee83f028be06a23
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: c5a04b2a68c47b85ce89512f4ae772fb6c9408b9
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80916136"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680638"
 ---
 # <a name="how-to-perform-transactions"></a>방법: 트랜잭션 수행
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -61,7 +62,7 @@ PDO_SQLSRV 드라이버는 트랜잭션을 수행하기 위해 세 가지 메서
   
 ## <a name="example"></a>예제  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>설명  
 다음 예제는 트랜잭션의 일부로 여러 개의 쿼리를 실행합니다. 모든 쿼리가 성공하면 트랜잭션이 커밋됩니다. 쿼리 중 하나라도 실패하면 트랜잭션이 롤백됩니다.  
   
 이 예제에서는 *Sales.SalesOrderDetail* 테이블에서 판매 주문을 삭제하고 판매 주문의 각 제품에 대해 *Product.ProductInventory* 테이블에서 제품 재고 수준을 조정합니다. 두 쿼리 모두 성공해야 데이터베이스에 주문 및 제품 가용성 상태가 정확하게 반영되므로 이러한 쿼리가 트랜잭션에 포함되어 있습니다.  

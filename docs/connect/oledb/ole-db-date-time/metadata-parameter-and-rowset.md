@@ -1,6 +1,6 @@
 ---
 title: 매개 변수 및 행 집합 메타데이터(OLE DB 드라이버)
-description: 매개 변수 및 행 집합 메타데이터
+description: OLE DB Driver for SQL Server 날짜 및 시간 기능 향상과 관련된 DBBINDING 형식 및 형식 멤버에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -10,14 +10,14 @@ ms.technology: connectivity
 ms.topic: reference
 helpviewer_keywords:
 - metadata [OLE DB]
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: a3356134c542cf90c194924a8fbfc44b357c7123
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 5f48366cc887d2c06c3f230cf6bf8f84d767b798
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244906"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88862020"
 ---
 # <a name="metadata---parameter-and-rowset"></a>메타데이터 - 매개 변수 및 행 집합
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

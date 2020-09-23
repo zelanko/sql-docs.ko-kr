@@ -1,6 +1,6 @@
 ---
 title: 비동기 작업 수행 | Microsoft Docs
-description: OLE DB Driver for SQL Server로 비동기 작업 수행
+description: OLE DB Driver for SQL Server는 비동기 데이터베이스 작업을 지원하므로 메서드는 호출 스레드에서 차단되지 않고 반환할 수 있습니다.
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -17,14 +17,14 @@ helpviewer_keywords:
 - rowsets [SQL Server], initializing
 - MSOLEDBSQL, asynchronous operations
 - OLE DB Driver for SQL Server, asynchronous operations
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: b7d53e5e66d65bd09f672bd8d2b3fcd6cd319e20
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 9b9005314e248f5aff1f377944395143d67363fd
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86006938"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88861332"
 ---
 # <a name="performing-asynchronous-operations"></a>비동기 작업 수행
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

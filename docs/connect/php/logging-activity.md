@@ -1,7 +1,8 @@
 ---
-title: 작업 로깅 | Microsoft Docs
+title: 작업 로깅
+description: Microsoft Drivers for PHP for SQL Server를 사용할 때 다양한 조합의 로깅 옵션을 구성하는 방법을 알아봅니다.
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: a777b3d9-2262-4e82-bc82-b62ad60d0e55
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 5486f32894b04a211be26bd7c55d58294ad36367
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 6301b429191b0f563a5f1dea08bd6e8d92a0c46a
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922852"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680548"
 ---
 # <a name="logging-activity"></a>작업 로깅
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -36,7 +37,7 @@ pdo_sqlsrv.log_severity = <number>
   
 **log_severity** 는 다음 값 중 하나가 될 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |---------|---------------|  
 |0|로깅이 사용되지 않습니다(아무 것도 정의되지 않은 경우 기본값).|  
 |-1|오류, 경고 및 알림이 기록된다는 것을 지정합니다.|  
@@ -61,7 +62,7 @@ PHP가 초기화에서 구성 파일을 읽고 데이터를 캐시에 저장합�
   
 다음 표는 **LogSubsystems** 설정에 대한 값으로 사용할 수 있는 상수를 설명합니다.  
   
-|값(괄호 안의 정수)|Description|  
+|값(괄호 안의 정수)|설명|  
 |-----------------------------------------------|---------------|  
 |SQLSRV_LOG_SYSTEM_ALL(-1)|모든 하위 시스템의 로깅을 설정합니다.|  
 |SQLSRV_LOG_SYSTEM_OFF(0)|로깅을 해제합니다. 이것이 기본값입니다.|  
@@ -92,7 +93,7 @@ php.ini 파일에서 **LogSubsystems** 설정에 대한 정수 값을 지정하�
   
 다음 표는 **LogSeverity** 설정에 대한 값으로 사용할 수 있는 상수를 설명합니다.  
   
-|값(괄호 안의 정수)|Description|  
+|값(괄호 안의 정수)|설명|  
 |-----------------------------------------------|---------------|  
 |SQLSRV_LOG_SEVERITY_ALL(-1)|오류, 경고 및 알림이 기록된다는 것을 지정합니다.|  
 |SQLSRV_LOG_SEVERITY_ERROR(1)|오류를 기록하도록 지정합니다. 이것이 기본값입니다.|  

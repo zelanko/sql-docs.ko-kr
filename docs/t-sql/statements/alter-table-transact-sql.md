@@ -58,15 +58,15 @@ helpviewer_keywords:
 - data retention policy
 - table changes [SQL Server]
 ms.assetid: f1745145-182d-4301-a334-18f799d361d1
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cb5fa8a9f667ff94d05dbfd67e4115b599042f57
-ms.sourcegitcommit: 678f513b0c4846797ba82a3f921ac95f7a5ac863
+ms.openlocfilehash: 701b4240ccf6dedd79ce9de7baf22b3ae295baab
+ms.sourcegitcommit: 49706fb7efb46ee467e88dc794a1eab916a9af25
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2020
-ms.locfileid: "89511275"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90013696"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE(Transact-SQL)
 
@@ -175,18 +175,12 @@ ALTER TABLE { database_name.schema_name.table_name | schema_name.table_name | ta
                         )
                       ]
                   }
-            | DATA_DELETION =
-                  {
-                     OFF 
-                  | ON
-                      ( FILTER_COLUMN = column_name
-                         , RETENTION_PERIOD =
-                          {
-                           INFINITE | number {DAY | DAYS | WEEK | WEEKS
-                            | MONTH | MONTHS | YEAR | YEARS }
-                          }
-                        )
-                  }  
+            | DATA_DELETION =  OFF | ON  
+                      [(    
+                         [ FILTER_COLUMN = column_name ],   
+                         [ RETENTION_PERIOD = { INFINITE | number {DAY | DAYS | WEEK | WEEKS 
+                              | MONTH | MONTHS | YEAR | YEARS }}]    
+                      )]
           )
 
     | REBUILD
@@ -806,8 +800,12 @@ HISTORY_RETENTION_PERIOD = { **INFINITE** \| number {DAY \| DAYS \| WEEK \| WEEK
 
 temporal 테이블의 기록 데이터에 대한 유한 또는 무한 보존을 지정합니다. 생략할 경우 무한 보존이 가정됩니다.
 
-SET (DATA_DELETION = { ON ( FILTER_COLUMN = column_name,   
-            RETENTION_PERIOD = { INFINITE | number {DAY | DAYS | WEEK | WEEKS | MONTH | MONTHS | YEAR | YEARS } }  ) **적용 대상:** Azure SQL Edge‘만’
+SET (DATA_DELETION =  OFF | ON  
+            [( [ FILTER_COLUMN = column_name ],    
+                [ RETENTION_PERIOD = { INFINITE | number {DAY | DAYS | WEEK | WEEKS | MONTH | MONTHS | YEAR | YEARS }}]    
+            )]    
+          )   
+**적용 대상:** Azure SQL Edge‘만’
 
 데이터베이스 내의 테이블에서 오래된 데이터의 보존 정책 기반 정리를 사용하도록 설정합니다. 자세한 내용은 [데이터 보존 사용 및 사용 안 함](https://docs.microsoft.com/azure/azure-sql-edge/data-retention-enable-disable)을 참조하세요. 데이터 보존을 사용하도록 설정하려면 다음 매개 변수를 지정해야 합니다. 
 
@@ -820,7 +818,7 @@ SET (DATA_DELETION = { ON ( FILTER_COLUMN = column_name,
   - DateTimeOffset
 
 - RETENTION_PERIOD = { INFINITE | number {DAY | DAYS | WEEK | WEEKS | MONTH | MONTHS | YEAR | YEARS }}       
-  테이블에 대한 보존 기간 정책을 지정합니다. 보존 기간은 양의 정수 값과 날짜 부분 단위의 조합으로 지정됩니다. 
+테이블에 대한 보존 기간 정책을 지정합니다. 보존 기간은 양의 정수 값과 날짜 부분 단위의 조합으로 지정됩니다. 
 
 SET **(** LOCK_ESCALATION = { AUTO \| TABLE \| DISABLE } **)**  
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
@@ -1115,7 +1113,7 @@ ALTER TABLE 문의 열을 CLR(공용 언어 런타임) 사용자 정의 형식 �
 
 ## <a name="examples"></a><a name="Example_Top"></a> 예
 
-|범주|중요한 구문 요소|
+|Category|중요한 구문 요소|
 |--------------|------------------------------|
 |[열 및 제약 조건 추가](#add)|ADD * 인덱스 옵션이 있는 PRIMARY KEY * 스파스 열과 열 집합 *|
 |[열 및 제약 조건 삭제](#Drop)|DROP|

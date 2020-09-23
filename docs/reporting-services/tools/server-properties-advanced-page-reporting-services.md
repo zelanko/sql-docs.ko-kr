@@ -7,14 +7,14 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
-ms.date: 01/28/2020
+ms.date: 08/17/2020
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: d1bfbb7a1abb13df05ce402fa79a1598ee04ca1f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e3ea21418a058f3d4b8db13ea498c1bb94564964
+ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79286467"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89282403"
 ---
 # <a name="server-properties-advanced-page---power-bi-report-server--reporting-services"></a>서버 속성 고급 페이지 - Power BI Report Server 및 Reporting Services
 
@@ -51,7 +51,17 @@ ms.locfileid: "79286467"
 
 (Power BI Report Server 2020년 1월, Reporting Services 2019 이상에만 해당)
 
-지정된 regex 패턴과 일치하는 모든 URL에 대한 헤더 값을 설정합니다. 사용자는 유효한 XML로 CustomHeaders 값을 업데이트하여 선택한 요청 URL에 대한 헤더 값을 설정할 수 있습니다. 관리자는 XML에 원하는 수의 헤더를 추가할 수 있습니다. 기본적으로 사용자 지정 헤더는 없으며 값은 비어 있습니다. 
+지정된 regex 패턴과 일치하는 모든 URL에 대한 헤더 값을 설정합니다. 사용자는 유효한 XML로 CustomHeaders 값을 업데이트하여 선택한 요청 URL에 대한 헤더 값을 설정할 수 있습니다. 관리자는 XML에 원하는 수의 헤더를 추가할 수 있습니다. 기본적으로 Reporting Services 2019에는 사용자 지정 헤더가 없으며 값이 비어 있습니다. 기본적으로 Power BI Report Server 2020년 1월 이상에서는 값이 다음과 같습니다.
+
+```xml
+<CustomHeaders>
+    <Header>
+        <Name>X-Frame-Options</Name>
+        <Pattern>(?(?=.*api.*|.*rs:embed=true.*|.*rc:toolbar=false.*)(^((?!(.+)((\/api)|(\/(mobilereport|report|excel|pages|powerbi)\/(.+)(rs:embed=true|rc:toolbar=false)))).*$))|(^(?!(http|https):\/\/([^\/]+)\/powerbi.*$)))</Pattern>
+        <Value>SAMEORIGIN</Value>
+    </Header>
+</CustomHeaders>
+```
 
 > [!NOTE]
 > 헤더가 너무 많으면 성능에 영향을 줄 수 있습니다. 
@@ -154,7 +164,7 @@ ms.locfileid: "79286467"
 실행 로그에 보고서 실행 정보를 보관하는 일 수입니다. 이 속성에 유효한 값은 **-1** 부터 **2**,**147**,**483**,**647**입니다. 값이 **-1** 이면 실행 로그 테이블에서 항목이 삭제되지 않습니다. 기본값은 **60**입니다.  
 
 > [!NOTE]
-> 값을 **0**으로 설정하면 모든 항목이 실행 로그에서 *삭제*됩니다. 값이 **-1**이면 실행 로그의 항목을 유지하고 삭제하지는 않습니다.
+> 값을 **0으로 설정하면 모든 항목이 실행 로그에서 ** *삭제*됩니다. 값이 **-1**이면 실행 로그의 항목을 유지하고 삭제하지는 않습니다.
 
 ### <a name="executionloglevel"></a>ExecutionLogLevel
 실행 로그 수준을 설정합니다. *기본값은 보통입니다.*
@@ -210,7 +220,7 @@ ms.locfileid: "79286467"
 ### <a name="snapshotcompression"></a>SnapshotCompression
 스냅샷의 압축 방식을 정의합니다. 기본값은 **SQL**입니다. 유효한 값은 다음과 같습니다.
 
-|값|Description|
+|값|설명|
 |---------|---------|
 |**SQL**|보고서 서버 데이터베이스에 저장될 때 스냅샷이 압축됩니다. 이 압축은 현재 동작입니다.|
 |**없음**|스냅샷이 압축되지 않습니다.|
@@ -223,7 +233,7 @@ ms.locfileid: "79286467"
 보고서 서버에서 저장할 수 있는 매개 변수 값의 최대 수를 지정합니다. 유효한 값은 **-1**, **+1** 에서 **2,147,483,647**까지입니다. 기본값은 **1500**입니다.  
 
 ### <a name="supportedhyperlinkschemes"></a>SupportedHyperlinkSchemes 
-(Power BI Report Server 2019년 1월, Reporting Services 2019 이상에만 해당) 허용된 URI 체계의 쉼표로 구분된 목록을 렌더링될 수 있는 하이퍼링크 작업에서 정의되도록 설정하거나 "&ast;"를 모든 하이퍼링크 체계를 사용하도록 설정할 수 있습니다. 예를 들어 "http, https"를 설정하면 "https://www contoso.com"에 대한 하이퍼링크를 허용하지만, "mailto:bill@contoso.com" 또는 "javascript:window.open(‘ www.contoso.com’, ‘_blank’)"에 대한 하이퍼링크를 제거합니다. 기본값은 "&ast;"입니다.
+(Power BI Report Server 2019년 1월, Reporting Services 2019 이상에만 해당) 허용된 URI 체계의 쉼표로 구분된 목록을 렌더링될 수 있는 하이퍼링크 작업에서 정의되도록 설정하거나 "&ast;"를 모든 하이퍼링크 체계를 사용하도록 설정할 수 있습니다. 예를 들어 "http, https"를 설정하면 "https://www contoso.com”에 대한 하이퍼링크가 허용되지만 “mailto:bill@contoso.com” 또는 “javascript:window.open(‘ www.contoso.com’, ‘_blank’)”에 대한 하이퍼링크를 제거합니다. 기본값은 “&ast;”입니다.
 
 ### <a name="systemreporttimeout"></a>SystemReportTimeout
 보고서 서버 네임스페이스에서 관리되는 모든 보고서에 대한 기본 보고서 처리 제한 시간 값(초)입니다. 이 값은 보고서 수준에서 무시할 수 있습니다. 이 속성을 설정하면 지정된 시간이 만료될 경우 보고서 서버가 보고서 처리를 중지합니다. 유효한 값은 **-1** 에서 **2**까지,**147**,**483**,**647**입니다. 값이 **-1**이면 네임스페이스의 보고서 처리 중 시간 제한으로 인한 중지가 발생하지 않습니다. 기본값은 **1800**입니다.  

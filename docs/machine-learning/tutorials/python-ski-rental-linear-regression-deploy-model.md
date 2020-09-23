@@ -4,21 +4,21 @@ titleSuffix: SQL machine learning
 description: 4부로 구성된 이 자습서 시리즈의 4부에서는 SQL 기계 학습을 사용하여 스키 대여 수량을 예측하는 Python 모델을 데이터베이스에 배포합니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/21/2020
+ms.date: 08/06/2020
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 030a172d35800becce17f804f67973368581fc05
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 07c62ab016f7db61d3619b19bb194bee1109651e
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730487"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88173411"
 ---
 # <a name="python-tutorial-deploy-a-linear-regression-model-with-sql-machine-learning"></a>Python 자습서: SQL 기계 학습을 사용하여 선형 회귀 모델 배포
-[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 4부로 구성된 이 자습서 시리즈의 4부에서는 Machine Learning Services 또는 빅 데이터 클러스터를 사용하여 Python에서 개발한 선형 회귀 모델을 SQL Server 데이터베이스에 배포합니다.
@@ -55,7 +55,7 @@ ms.locfileid: "85730487"
 Azure Data Studio에서 다음 T-SQL 문을 실행하여 모델을 학습하는 저장 프로시저를 만듭니다.
 
 ```sql
--- Stored procedure that trains and generates a Python model using the rental_data and a decision tree algorithm
+-- Stored procedure that trains and generates a Python model using the rental_data and a linear regression algorithm
 DROP PROCEDURE IF EXISTS generate_rental_py_model;
 go
 CREATE PROCEDURE generate_rental_py_model (@trained_model varbinary(max) OUTPUT)

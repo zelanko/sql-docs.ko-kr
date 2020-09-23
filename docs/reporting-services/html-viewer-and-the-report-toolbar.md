@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: cd86b319-babd-45af-a6a4-f659fdcc40c3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 825e169f3819cc19b042715662f4ec554f02d65b
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: b413cf8f3fd5b8e85a94e5ed26add2717dcc2376
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247202"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396480"
 ---
 # <a name="html-viewer-and-the-report-toolbar"></a>HTML 뷰어 및 보고서 도구 모음
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 는 보고서 서버의 요청에 따라 보고서를 표시하는 데 사용되는 HTML 뷰어를 제공합니다. HTML 뷰어는 HTML 형식의 보고서를 표시하는 프레임워크, 즉 보고서 도구 모음, 매개 변수 섹션, 자격 증명 섹션 및 문서 구조를 제공합니다. HTML 뷰어의 보고서 도구 모음에는 보고서를 HTML이 아닌 다른 형식으로 표시할 수 있도록 하는 내보내기 옵션을 비롯하여 보고서 작업에 사용할 수 있는 다양한 기능이 있습니다. 매개 변수 섹션과 문서 구조는 매개 변수 및 문서 구조 컨트롤을 사용하도록 구성된 보고서를 열 경우에만 표시됩니다.  
@@ -35,7 +35,7 @@ ms.locfileid: "87247202"
   
  다음 표에서는 일반적으로 사용되는 보고서 도구 모음 기능을 설명합니다. 각 기능은 해당 기능을 액세스하는 데 사용하는 컨트롤로 구분됩니다.  
   
-|아이콘 또는 컨트롤||수행할 작업|  
+|아이콘 또는 컨트롤|이름|설명|  
 |------------------------------|-|--------|  
 |![페이지 이동 컨트롤](../reporting-services/media/htmlviewer-pagenav.gif "페이지 이동 컨트롤")|**페이지 이동 컨트롤**|보고서의 첫 번째 또는 마지막 페이지를 열고, 페이지 단위로 스크롤하고, 특정 페이지를 엽니다. 특정 페이지를 보려면 페이지 번호를 입력한 다음 Enter 키를 누릅니다.|  
 |![페이지 표시 컨트롤](../reporting-services/media/htmlviewer-pagesize.gif "페이지 표시 컨트롤")|**페이지 표시 컨트롤**|보고서 페이지의 크기를 확대하거나 축소합니다. 비율에 따라 보고서 페이지 크기를 조정할 수 있을 뿐만 아니라 **페이지 너비** 를 선택하여 페이지의 가로 길이를 브라우저 창에 맞추거나 **전체 페이지** 를 선택하여 페이지의 세로 길이를 브라우저 창에 맞출 수도 있습니다. **확대/축소** 옵션은 [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Explorer 5.5 이상에서 지원됩니다.|  

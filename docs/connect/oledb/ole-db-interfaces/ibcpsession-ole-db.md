@@ -1,6 +1,6 @@
 ---
 title: IBCPSession(OLE DB 드라이버) | Microsoft Docs
-description: IBCPSession 인터페이스(OLE DB)
+description: OLE DB Driver for SQL Server가 IBCPSession을 사용하여 SQL Server 파일 기반 대량 복사 작업을 지원하는 방법과 해당 멤버에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -11,14 +11,14 @@ ms.topic: reference
 apitype: COM
 helpviewer_keywords:
 - IBCPSession interface
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: fab636f43a8ee4f6e9e0040cf7400cb29e87873b
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 3d00a0bff09785fde1c27b89426ca680b2a0f889
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244565"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88861916"
 ---
 # <a name="ibcpsession-ole-db"></a>IBCPSession(OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

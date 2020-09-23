@@ -3,17 +3,17 @@ title: SQL Server 2017 on Linux 릴리스 정보
 description: 이 문서에는 Linux에서 실행되는 SQL Server 2017에 대한 릴리스 정보 및 지원되는 기능이 포함됩니다. 최신 릴리스 및 여러 이전 릴리스에 대한 릴리스 정보가 포함됩니다.
 author: VanMSFT
 ms.author: vanto
-ms.date: 07/01/2020
+ms.date: 09/10/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
-ms.openlocfilehash: 4c66ddc41fab7366d6419e1906a5bff2ce1b2d12
-ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
+ms.openlocfilehash: dd0473eea265df700c1224ba4db8edf2dbff9e9e
+ms.sourcegitcommit: 49706fb7efb46ee467e88dc794a1eab916a9af25
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89042376"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90013676"
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>SQL Server 2017 on Linux 릴리스 정보
 
@@ -22,7 +22,7 @@ ms.locfileid: "89042376"
 다음 릴리스 정보는 Linux에서 실행되는 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]에 적용됩니다. 이 문서는 각 릴리스에 대한 섹션으로 나뉩니다. GA 릴리스에는 자세한 지원 가능성 및 알려진 문제가 나열되어 있습니다. 각 CU(누적 업데이트) 또는 GDR(일반 배포 릴리스)에는 CU 변경 내용을 설명하는 지원 문서 링크 및 Linux 패키지 다운로드 링크가 있습니다.
 
 > [!TIP]
-> 이 릴리스 정보는 특히 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] 릴리스에 해당합니다. 새 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]에 대한 자세한 내용은 [Linux의 SQL Server 2019 미리 보기 릴리스 정보](sql-server-linux-release-notes-2019.md?view=sql-server-ver15)를 참조하세요.
+> 이 릴리스 정보는 특히 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] 릴리스에 해당합니다. 새 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]에 대한 자세한 내용은 [Linux의 SQL Server 2019 미리 보기 릴리스 정보](sql-server-linux-release-notes-2019.md?view=sql-server-ver15&preserve-view=true)를 참조하세요.
 
 ## <a name="supported-platforms"></a>지원 플랫폼
 
@@ -46,6 +46,7 @@ ms.locfileid: "89042376"
 
 | 해제               | 버전       | 릴리스 날짜 |
 |-----------------------|---------------|--------------|
+| [CU22](#CU22)         | 14.0.3356.20  | 2020-09-10   |
 | [CU21](#CU21)         | 14.0.3335.7   | 2020-07-01   |
 | [CU20](#CU20)         | 14.0.3294.2   | 2020-04-10   |
 | [CU19](#CU19)         | 14.0.3281.6   | 2020-02-05   |
@@ -82,6 +83,27 @@ CU 리포지토리(**mssql-server-2017**)를 구성한 경우에는 새 설치�
 - [전체 텍스트 검색 패키지 설치](sql-server-linux-setup-full-text-search.md)
 - [SQL Server Integration Services 설치](sql-server-linux-setup-ssis.md)
 - [SQL Server 에이전트 사용](sql-server-linux-setup-sql-agent.md)
+
+## <a name="cu22-september-2020"></a><a id="CU22"></a> CU22(2020년 9월)
+
+이것은 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]의 CU22(누적 업데이트 22) 릴리스입니다. 이 릴리스의 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 버전은 14.0.3356.20입니다. 이 릴리스의 수정 사항 및 향상된 기능에 대한 자세한 내용은 <https://support.microsoft.com/help/4577467>을 참조하세요.
+
+### <a name="package-details"></a>패키지 세부 정보
+
+수동 또는 오프라인 패키지 설치의 경우 다음 표의 정보를 사용하여 RPM 및 Debian 패키지를 다운로드할 수 있습니다.
+
+> [!NOTE]
+> **Ubuntu 18.04** 및 **RHEL 8**은 CU20부터 SQL Server 2017에서 지원됩니다.
+>
+> Ubuntu에 대한 오프라인 패키지 설치 링크는 SSIS 패키지(Ubuntu 18.04에는 사용할 수 없음)를 제외하고 Ubuntu 18.04 패키지를 가리킵니다. Ubuntu 16.04 패키지를 찾고 있는 경우 다운로드 경로 <https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/>을 참조하세요.
+>
+> Red Hat에 대한 오프라인 패키지 설치 링크는 SSIS 패키지(RHEL 8에는 사용할 수 없음)를 제외하고 RHEL 8 패키지를 가리킵니다. RHEL 7 패키지를 찾고 있는 경우 다운로드 경로 <https://packages.microsoft.com/rhel/7/mssql-server-2017/>을 참조하세요.
+
+| 패키지 | 패키지 버전 | 다운로드 |
+|-----|-----|-----|
+| Red Hat RPM 패키지 | 14.0.3356.20~23 | [엔진 RPM 패키지](https://packages.microsoft.com/rhel/8/mssql-server-2017/mssql-server-14.0.3356.20-23.x86_64.rpm)</br>[고가용성 RPM 패키지](https://packages.microsoft.com/rhel/8/mssql-server-2017/mssql-server-ha-14.0.3356.20-23.x86_64.rpm)</br>[전체 텍스트 검색 RPM 패키지](https://packages.microsoft.com/rhel/8/mssql-server-2017/mssql-server-fts-14.0.3356.20-23.x86_64.rpm)</br>[SSIS 패키지](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) | 
+| SLES RPM 패키지 | 14.0.3356.20~23 | [mssql-server 엔진 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3356.20-23.x86_64.rpm)</br>[고가용성 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3356.20-23.x86_64.rpm)</br>[전체 텍스트 검색 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3356.20-23.x86_64.rpm) | 
+| Ubuntu 18.04 Debian 패키지 | 14.0.3356.20~23 | [엔진 Debian 패키지](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3356.20-23_amd64.deb)</br>[고가용성 Debian 패키지](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3356.20-23_amd64.deb)</br>[전체 텍스트 검색 Debian 패키지](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3356.20-23_amd64.deb)<br/>[SSIS 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
 ## <a name="cu21-july-2020"></a><a id="CU21"></a> CU21(2020년 7월)
 

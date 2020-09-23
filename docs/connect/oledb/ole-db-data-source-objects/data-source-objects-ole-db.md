@@ -1,6 +1,6 @@
 ---
 title: 데이터 원본 개체(OLE DB 드라이버) | Microsoft Docs
-description: 데이터 원본 개체(OLE DB)
+description: OLE DB Driver for SQL Server 소비자가 공급자에 대한 데이터 원본 개체 인스턴스를 만드는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - OLE DB data source objects [OLE DB Driver for SQL Server]
 - data source objects [OLE DB]
 - CLSID
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 5bdfdd91daf1e41b7eae33cd504e127c249de1b8
-ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 9abdf54d533eab604ff564c9f32b99b2eba566d9
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86976395"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88862401"
 ---
 # <a name="data-source-objects-ole-db"></a>데이터 원본 개체(OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

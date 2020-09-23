@@ -1,6 +1,6 @@
 ---
 title: 테이블 반환 매개 변수 형식 지원(OLE DB 드라이버)
-description: OLE DB 테이블 반환 매개 변수 형식 지원
+description: OLE DB Driver for SQL Server에서 테이블 반환 매개 변수에 대한 특수 행 집합 개체를 만드는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -10,14 +10,14 @@ ms.technology: connectivity
 ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters (OLE DB), API support (OLE DB)
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 453609d2d5633b6270ab565a2da50a98c909e86a
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 1a113783462962eed8af91c0d0f23a6024392b58
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244144"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88861871"
 ---
 # <a name="ole-db-table-valued-parameter-type-support"></a>OLE DB 테이블 반환 매개 변수 형식 지원
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

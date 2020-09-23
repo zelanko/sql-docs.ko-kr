@@ -1,4 +1,5 @@
 ---
+description: JDBC 드라이버에 대해 Always Encrypted API 참조
 title: JDBC 드라이버에 대해 Always Encrypted API 참조 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
@@ -8,14 +9,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 6962a2aa-9508-4d4f-a78c-905e2bc68615
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7b5e17a6b7a98101eac8e3ddbb29a8438bc10075
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 3f6ac184e3a514bab20802d3513691eb4b3295af
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75681704"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438515"
 ---
 # <a name="always-encrypted-api-reference-for-the-jdbc-driver"></a>JDBC 드라이버에 대해 Always Encrypted API 참조
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "75681704"
   
  **SQLServerConnection 클래스**  
   
-|속성|Description|  
+|이름|설명|  
 |----------|-----------------|  
 |새 연결 문자열 키워드:<br /><br /> columnEncryptionSetting|columnEncryptionSetting=Enabled로 설정하면 연결에 대해 상시 암호화 기능이 사용되고 columnEncryptionSetting=Disabled로 설정하면 상시 암호화 기능이 사용되지 않습니다. 허용되는 값이 사용/사용 안 함으로 설정되었습니다. 기본값은 Disabled입니다.|  
 |새 연결 문자열 키워드:(MS JDBC 7.4 이상)<br /><br /> keyVaultProviderClientId <br /><br /> keyVaultProviderClientKey |keyVaultProviderClientId=\<ClientID>;keyVaultProviderClientKey=\<ClientKey> <br/><br/> SQLServerColumnEncryptionAzureKeyVaultProvider를 등록하고 ClientID 및 ClientKey 값을 사용하여 Azure Key Vault에서 열 마스터 키를 검색합니다.|  
@@ -43,7 +44,7 @@ ms.locfileid: "75681704"
 
  **SQLServerConnectionPoolProxy 클래스**
  
-|속성|Description|  
+|이름|설명|  
 |----------|-----------------|  
 |`public final boolean getSendTimeAsDatetime()` | sendTimeAsDatetime 연결 속성의 설정을 반환합니다.|
 |`public void setSendTimeAsDatetime(boolean sendTimeAsDateTimeValue)` | sendTimeAsDatetime 연결 속성의 설정을 수정합니다.|
@@ -51,7 +52,7 @@ ms.locfileid: "75681704"
   
  **SQLServerDataSource 클래스**  
   
-|속성|Description|  
+|이름|설명|  
 |----------|-----------------|  
 |`public void setColumnEncryptionSetting(String columnEncryptionSetting)`|데이터 원본 개체에 대해 상시 암호화 기능을 사용하거나 사용하지 않습니다.<br /><br /> 기본값은 Disabled입니다.|  
 |`public String getColumnEncryptionSetting()`|데이터 원본 개체에 대한 상시 암호화 기능 설정을 가져옵니다.|
@@ -67,16 +68,16 @@ ms.locfileid: "75681704"
   
  생성자  
   
-|속성|Description|  
+|속성|설명|  
 |----------|-----------------|  
 |`public SQLServerColumnEncryptionJavaKeyStoreProvider (String keyStoreLocation, char[] keyStoreSecret)`|Java 키 저장소의 키 저장소 공급자입니다.|  
   
  메서드  
   
-|속성|Description|  
+|속성|설명|  
 |----------|-----------------|  
-|`public byte[] decryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[] encryptedColumnEncryptionKey)`|열 암호화 키의 지정된 암호화 값을 암호 해독합니다. 암호화 값은 지정된 키 경로가 있는 인증서와 지정된 알고리즘을 사용하여 암호화해야 합니다.<br /><br /> **키 경로 형식은 다음 중 하나여야 합니다.**<br /><br /> 지문:<certificate_thumbprint><br /><br /> 별칭:<certificate_alias><br /><br /> (SQLServerColumnEncryptionKeyStoreProvider를 재정의합니다. decryptColumnEncryptionKey(String, String, Byte[]).)|  
-|`public byte[] encryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[] plainTextColumnEncryptionKey)`|지정된 키 경로가 있는 인증서와 지정된 알고리즘을 사용하여 열 암호화 키를 암호화합니다.<br /><br /> **키 경로 형식은 다음 중 하나여야 합니다.**<br /><br /> 지문:<certificate_thumbprint><br /><br /> 별칭:<certificate_alias><br /><br /> (SQLServerColumnEncryptionKeyStoreProvider를 재정의합니다. encryptColumnEncryptionKey(String, String, Byte[]).)|  
+|`public byte[] decryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[] encryptedColumnEncryptionKey)`|열 암호화 키의 지정된 암호화된 값의 암호를 해독합니다. 암호화된 값은 지정된 키 경로를 포함한 인증서와 지정된 알고리즘을 사용하여 암호화되어야 합니다.<br /><br /> **키 경로 형식은 다음 중 하나여야 합니다.**<br /><br /> 지문:<certificate_thumbprint><br /><br /> 별칭:<certificate_alias><br /><br /> (SQLServerColumnEncryptionKeyStoreProvider를 재정의합니다. decryptColumnEncryptionKey(String, String, Byte[]).)|  
+|`public byte[] encryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[] plainTextColumnEncryptionKey)`|지정된 키 경로를 포함한 인증서와 지정된 알고리즘을 사용하여 열 암호화 키를 암호화합니다.<br /><br /> **키 경로 형식은 다음 중 하나여야 합니다.**<br /><br /> 지문:<certificate_thumbprint><br /><br /> 별칭:<certificate_alias><br /><br /> (SQLServerColumnEncryptionKeyStoreProvider를 재정의합니다. encryptColumnEncryptionKey(String, String, Byte[]).)|  
 |`public void setName (String name)`|이 키 저장소 공급자의 이름을 설정합니다.|
 |`public String getName ()`|이 키 저장소 공급자의 이름을 가져옵니다.|
   
@@ -86,13 +87,13 @@ ms.locfileid: "75681704"
   
  생성자  
   
-|속성|Description|  
+|속성|설명|  
 |----------|-----------------|  
 |`public SQLServerColumnEncryptionAzureKeyVaultProvider (String clientId, String clientKey)`|Azure Key Vault에 대한 키 저장소 공급자입니다.  Azure Key Vault를 인증하기 위해 토큰을 요청하는 클라이언트의 식별자 및 키를 제공해야 합니다.|  
   
  메서드  
   
-|속성|Description|  
+|속성|설명|  
 |----------|-----------------|  
 | `public byte[] decryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[] encryptedColumnEncryptionKey)` | 암호화된 CEK(열 암호화 키)를 암호 해독합니다. 이 암호 해독은 마스터 키 경로에 지정된 비대칭 키를 사용하는 RSA 암호화 알고리즘을 사용하여 수행됩니다.<br />(SQLServerColumnEncryptionKeyStoreProvider를 재정의합니다. decryptColumnEncryptionKey(String, String, Byte[]).) |  
 | `public byte[] encryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[] columnEncryptionKey)` | 지정된 알고리즘에 지정된 열 마스터 키를 제공하여 열 암호화 키를 암호화합니다.<br />(SQLServerColumnEncryptionKeyStoreProvider를 재정의합니다. encryptColumnEncryptionKey(String, String, Byte[]).) |  
@@ -106,7 +107,7 @@ ms.locfileid: "75681704"
   
  메서드  
   
-|속성|Description|  
+|속성|설명|  
 |----------|-----------------|  
 |`public String getAccessToken(String authority, String resource, String scope);`|메서드를 재정의해야 합니다. 메서드는 Azure Key Vault에 대한 액세스 토큰을 가져오는 데 사용됩니다.|  
   
@@ -114,13 +115,13 @@ ms.locfileid: "75681704"
   
  사용자 지정 키 저장소 공급자를 구현하려면 이 클래스를 확장합니다.  
   
-|속성|Description|  
+|이름|설명|  
 |----------|-----------------|  
-|SQLServerColumnEncryptionKeyStoreProvider|모든 키 저장소 공급자에 대한 기본 클래스입니다. 사용자 지정 공급자는 이 클래스에서 파생되어 해당 멤버 함수를 재정의한 다음, SQLServerConnection을 사용하여 등록해야 합니다. registerColumnEncryptionKeyStoreProviders().|  
+|SQLServerColumnEncryptionKeyStoreProvider|모든 키 저장소 공급자의 기본 클래스입니다. 사용자 지정 공급자는 이 클래스에서 파생되어 해당 멤버 함수를 재정의한 다음, SQLServerConnection을 사용하여 등록해야 합니다. registerColumnEncryptionKeyStoreProviders().|  
   
  메서드  
   
-|속성|Description|  
+|속성|설명|  
 |----------|-----------------|  
 |`public abstract byte[] decryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte [] encryptedColumnEncryptionKey)`|열 암호화 키의 지정된 암호화 값을 암호 해독하는 기본 클래스 메서드입니다. 암호화된 값은 지정된 키 경로와 지정된 알고리즘이 있는 열 마스터 키를 사용하여 암호화해야 합니다.|  
 |`public abstract byte[] encryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[]  columnEncryptionKey)`|지정된 키 경로가 있는 열 마스터 키와 지정된 알고리즘을 사용하여 열 암호화 키를 암호화하기 위한 기본 클래스 메서드입니다.|
@@ -129,7 +130,7 @@ ms.locfileid: "75681704"
   
  **SQLServerPreparedStatement** 클래스의 새 메서드 또는 오버로드된 메서드  
   
-|속성|Description|  
+|이름|설명|  
 |----------|-----------------|  
 |`public void setBigDecimal(int parameterIndex, BigDecimal x, int precision, int scale)`<br /><br /> `public void setObject(int parameterIndex, Object x, int targetSqlType, Integer precision, int scale)`<br /><br /> `public void setObject(int parameterIndex, Object x, SQLType targetSqlType, Integer precision, Integer scale)`<br /><br /> `public void setTime(int parameterIndex, java.sql.Time x, int scale)`<br /><br /> `public void setTimestamp(int parameterIndex, java.sql.Timestamp x, int scale)` <br />`public void setDateTimeOffset(int parameterIndex, microsoft.sql.DateTimeOffset x, int scale)`|이러한 메서드는 전체 자릿수 및 소수 자릿수 정보를 필요로 하는 특정 데이터 형식에 대한 Always Encrypted를 지원하기 위해 전체 자릿수 또는 소수 자릿수 인수를 사용하여 오버로드됩니다.|  
 |`public void setMoney(int parameterIndex, BigDecimal x)`<br /><br /> `public void setSmallMoney(int parameterIndex, BigDecimal x)`<br /><br /> `public void setUniqueIdentifier(int parameterIndex, String guid)`<br /><br /> `public void setDateTime(int parameterIndex, java.sql.Timestamp x)`<br /><br /> `public void setSmallDateTime(int parameterIndex, java.sql.Timestamp x)`|이러한 메서드는 money, smallmoney, uniqueidentifier, datetime 및 smalldatetime 데이터 형식에 대한 Always Encrypted를 지원하기 위해 추가되었습니다. <br/><br/>기존 `setTimestamp()` 메서드는 암호화된 datetime2 열에 매개 변수 값을 보내는 데 사용됩니다. 암호화된 datetime 및 smalldatetime 열에는 새로운 메서드인 `setDateTime()` 및 `setSmallDateTime()`을 각각 사용합니다.|  
@@ -137,7 +138,7 @@ ms.locfileid: "75681704"
   
  **SQLServerCallableStatement** 클래스의 새 메서드 또는 오버로드된 메서드  
   
-|속성|Description|  
+|이름|설명|  
 |----------|-----------------|  
 |`public void registerOutParameter(int parameterIndex, int sqlType, int precision, int scale)`<br /><br /> `public void registerOutParameter(int parameterIndex, SQLType sqlType, int precision, int scale)`<br /><br /> `public void registerOutParameter(String parameterName, int sqlType, int precision, int scale)`<br /><br /> `public void registerOutParameter(String parameterName, SQLType sqlType, int precision, int scale)`<br />`public void setBigDecimal(String parameterName, BigDecimal bd, int precision, int scale)`<br /><br /> `public void setTime(String parameterName, java.sql.Time t, int scale)`<br /><br /> `public void setTimestamp(String parameterName, java.sql.Timestamp t, int scale)`<br /><br /> `public void setDateTimeOffset(String parameterName, microsoft.sql.DateTimeOffset t, int scale)`<br/><br/>`public final void setObject(String sCol, Object x, int targetSqlType, Integer precision, int scale)`|이러한 메서드는 전체 자릿수 및 소수 자릿수 정보를 필요로 하는 특정 데이터 형식에 대한 Always Encrypted를 지원하기 위해 전체 자릿수 또는 소수 자릿수 인수를 사용하여 오버로드됩니다.|  
 |`public void setDateTime(String parameterName, java.sql.Timestamp x)`<br /><br /> `public void setSmallDateTime(String parameterName, java.sql.Timestamp x)`<br /><br /> `public void setUniqueIdentifier(String parameterName, String guid)`<br /><br /> `public void setMoney(String parameterName, BigDecimal bd)`<br /><br /> `public void setSmallMoney(String parameterName, BigDecimal bd)`<br/><br/>`public Timestamp getDateTime(int index)`<br/><br/>`public Timestamp getDateTime(String sCol)`<br/><br/>`public Timestamp getDateTime(int index, Calendar cal)`<br/><br/>`public Timestamp getSmallDateTime(int index)`<br/><br/>`public Timestamp getSmallDateTime(String sCol)`<br/><br/>`public Timestamp getSmallDateTime(int index, Calendar cal)`<br/><br/>`public Timestamp getSmallDateTime(String name, Calendar cal)`<br/><br/>`public BigDecimal getMoney(int index)`<br/><br/>`public BigDecimal getMoney(String sCol)`<br/><br/>`public BigDecimal getSmallMoney(int index)`<br/><br/>`public BigDecimal getSmallMoney(String sCol)`|이러한 메서드는 money, smallmoney, uniqueidentifier, datetime 및 smalldatetime 데이터 형식에 대한 Always Encrypted를 지원하기 위해 추가되었습니다. <br/><br/>기존 `setTimestamp()` 메서드는 암호화된 datetime2 열에 매개 변수 값을 보내는 데 사용됩니다. 암호화된 datetime 및 smalldatetime 열에는 새로운 메서드인 `setDateTime()` 및 `setSmallDateTime()`을 각각 사용합니다.|  
@@ -146,7 +147,7 @@ ms.locfileid: "75681704"
 
  **SQLServerResultSet** 클래스의 새 메서드 또는 오버로드된 메서드  
   
-|속성|Description|  
+|이름|설명|  
 |----------|-----------------|  
 |`public String getUniqueIdentifier(int columnIndex)`<br/><br/>`public String getUniqueIdentifier(String columnLabel)`<br/><br/>   `public java.sql.Timestamp getDateTime(int columnIndex)` <br/><br/> `public java.sql.Timestamp getDateTime(String columnName)`   <br/><br/> `public java.sql.Timestamp getDateTime(int columnIndex, Calendar cal)`   <br/><br/>`public java.sql.Timestamp getDateTime(String colName, Calendar cal)`    <br/><br/>`public java.sql.Timestamp getSmallDateTime(int columnIndex)`    <br/><br/> `public java.sql.Timestamp getSmallDateTime(String columnName)`   <br/><br/> `public java.sql.Timestamp getSmallDateTime(int columnIndex, Calendar cal)`   <br/><br/> `public java.sql.Timestamp getSmallDateTime(String colName, Calendar cal)`   <br/><br/>  `public BigDecimal getMoney(int columnIndex)`  <br/><br/> `public BigDecimal getMoney(String columnName)`   <br/><br/> `public BigDecimal getSmallMoney(int columnIndex)`   <br/><br/>  `public BigDecimal getSmallMoney(String columnName)`  <br/><br/>`public void updateMoney(String columnName, BigDecimal x)`    <br/><br/>  `public void updateSmallMoney(String columnName, BigDecimal x)`  <br/><br/>     `public void updateDateTime(int index, java.sql.Timestamp x)` <br/><br/> `public void updateSmallDateTime(int index, java.sql.Timestamp x)` |이러한 메서드는 money, smallmoney, uniqueidentifier, datetime 및 smalldatetime 데이터 형식에 대한 Always Encrypted를 지원하기 위해 추가되었습니다. <br/><br/>기존 `updateTimestamp()` 메서드는 암호화된 datetime2 열을 업데이트하는 데 사용됩니다. 암호화된 datetime 및 smalldatetime 열에는 새로운 메서드인 `updateDateTime()` 및 `updateSmallDateTime()`을 각각 사용합니다.|
 |`public void updateBoolean(int index, boolean x, boolean forceEncrypt)`  <br/><br/>  `public void updateByte(int index, byte x, boolean forceEncrypt)`  <br/><br/>  `public void updateShort(int index, short x, boolean forceEncrypt)`  <br/><br/> `public void updateInt(int index, int x, boolean forceEncrypt)`   <br/><br/>  `public void updateLong(int index, long x, boolean forceEncrypt)`  <br/><br/> `public void updateFloat(int index, float x, boolean forceEncrypt)`   <br/><br/> `public void updateDouble(int index, double x, boolean forceEncrypt)`   <br/><br/> `public void updateMoney(int index, BigDecimal x, boolean forceEncrypt)`   <br/><br/>  `public void updateMoney(String columnName, BigDecimal x, boolean forceEncrypt)`  <br/><br/> `public void updateSmallMoney(int index, BigDecimal x, boolean forceEncrypt)`   <br/><br/>  `public void updateSmallMoney(String columnName, BigDecimal x, boolean forceEncrypt)`  <br/><br/> `public void updateBigDecimal(int index, BigDecimal x, Integer precision, Integer scale, boolean forceEncrypt)`   <br/><br/>  `public void updateString(int columnIndex, String stringValue, boolean forceEncrypt)`  <br/><br/>  `public void updateNString(int columnIndex, String nString, boolean forceEncrypt)`  <br/><br/>  `public void updateNString(String columnLabel, String nString, boolean forceEncrypt)`  <br/><br/> `public void updateBytes(int index, byte x[], boolean forceEncrypt)   <br/><br/>  public void updateDate(int index, java.sql.Date x, boolean forceEncrypt)`  <br/><br/> `public void updateTime(int index, java.sql.Time x, Integer scale, boolean forceEncrypt)`   <br/><br/> `public void updateTimestamp(int index, java.sql.Timestamp x, int scale, boolean forceEncrypt)`   <br/><br/> `public void updateDateTime(int index, java.sql.Timestamp x, Integer scale, boolean forceEncrypt)`   <br/><br/> `public void updateSmallDateTime(int index, java.sql.Timestamp x, Integer scale, boolean forceEncrypt)`   <br/><br/>  `public void updateDateTimeOffset(int index, microsoft.sql.DateTimeOffset x, Integer scale, boolean forceEncrypt)`  <br/><br/> `public void updateUniqueIdentifier(int index, String x, boolean forceEncrypt)`    <br/><br/>  `public void updateObject(int index, Object x, int precision, int scale, boolean forceEncrypt)`  <br/><br/>  `public void updateObject(int index, Object obj, SQLType targetSqlType, int scale, boolean forceEncrypt)`  <br/><br/> `public void updateBoolean(String columnName, boolean x, boolean forceEncrypt)`    <br/><br/>  `public void updateByte(String columnName, byte x, boolean forceEncrypt)`  <br/><br/>  `public void updateShort(String columnName, short x, boolean forceEncrypt)`  <br/><br/> `public void updateInt(String columnName, int x, boolean forceEncrypt)`   <br/><br/>   `public void updateLong(String columnName, long x, boolean forceEncrypt)` <br/><br/>  `public void updateFloat(String columnName, float x, boolean forceEncrypt)`  <br/><br/>  `public void updateDouble(String columnName, double x, boolean forceEncrypt)  <br/><br/> public void updateBigDecimal(String columnName, BigDecimal x, boolean forceEncrypt)`   <br/><br/>  `public void updateBigDecimal(String columnName, BigDecimal x, Integer precision, Integer scale, boolean forceEncrypt)`  <br/><br/> `public void updateString(String columnName, String x, boolean forceEncrypt)`   <br/><br/>  `public void updateBytes(String columnName, byte x[], boolean forceEncrypt)`  <br/><br/> `public void updateDate(String columnName, java.sql.Date x, boolean forceEncrypt)`   <br/><br/>  `public void updateTime(String columnName, java.sql.Time x, int scale, boolean forceEncrypt)`  <br/><br/>  `public void updateTimestamp(String columnName, java.sql.Timestamp x, int scale, boolean forceEncrypt)`  <br/><br/> `public void updateDateTime(String columnName, java.sql.Timestamp x, int scale, boolean forceEncrypt)`   <br/><br/>  `public void updateSmallDateTime(String columnName, java.sql.Timestamp x, int scale, boolean forceEncrypt)`  <br/><br/>  `public void updateDateTimeOffset(String columnName, microsoft.sql.DateTimeOffset x, int scale, boolean forceEncrypt)`  <br/><br/>  `public void updateUniqueIdentifier(String columnName, String x, boolean forceEncrypt)`<br/><br/>`public void updateObject(String columnName, Object x, int precision, int scale, boolean forceEncrypt)`<br/><br/>`public void updateObject(String columnName, Object obj, SQLType targetSqlType, int scale, boolean forceEncrypt)`|지정된 열을 지정된 java 값으로 업데이트합니다.<br/><br/>부울 forceEncrypt를 true로 설정하면 열이 암호화되고 연결 또는 문에서 Always Encrypted를 사용하도록 설정된 경우에만 열이 설정됩니다.<br/><br/>부울 forceEncrypt가 false로 설정된 경우 드라이버는 매개 변수를 강제로 암호화하지 않습니다.|
@@ -154,14 +155,14 @@ ms.locfileid: "75681704"
   
 **microsoft.sql.Types** 클래스의 새 형식
 
-|속성|Description|  
+|이름|설명|  
 |----------|-----------------|  
 |DATETIME, SMALLDATETIME, MONEY, SMALLMONEY, GUID|`setObject()/updateObject()` API 메서드를 사용하여 **암호화된** datetime, smalldatetime, money, smallmoney, uniqueidentifier 열에 매개 변수 값을 보낼 때 이러한 형식을 대상 SQL 형식으로 사용합니다.|  
   
   
  **SQLServerStatementColumnEncryptionSetting 열거형**  
   
- 암호화된 열을 읽고 쓸 때 데이터를 보내고 받는 방법을 지정합니다. 특정 쿼리에 따라 암호화되지 않은 열을 사용하는 경우에 Always Encrypted 드라이버의 처리를 무시하여 성능 영향을 줄일 수 있습니다. 이러한 설정을 사용하여 암호화를 우회하고 일반 텍스트 데이터에 액세스할 수는 없습니다.  
+ 암호화된 열을 읽고 쓸 때 데이터를 보내고 받는 방식을 지정합니다. 특정 쿼리에 따라 암호화되지 않은 열을 사용하는 경우에 Always Encrypted 드라이버의 처리를 무시하여 성능에 미치는 영향을 줄일 수 있습니다. 이러한 설정을 사용하여 암호화를 우회하고 일반 텍스트 데이터에 액세스할 수는 없습니다.  
   
  **구문**  
   
@@ -171,16 +172,16 @@ Public enum  SQLServerStatementColumnEncryptionSetting
   
  **멤버**  
   
-|속성|Description|  
+|이름|설명|  
 |----------|-----------------|  
-|UseConnectionSetting|명령이 연결 문자열에서 Always Encrypted 설정 기본값이 되도록 지정합니다.|  
-|사용|쿼리에 Always Encrypted를 사용하도록 설정합니다.|  
-|ResultSetOnly|명령의 결과만 드라이버의 Always Encrypted 루틴에서 처리하도록 지정합니다. 명령에 암호화가 필요한 매개 변수가 없는 경우 이 값을 사용합니다.|  
-|사용 안 함|쿼리에 Always Encrypted를 사용하지 않도록 설정합니다.|  
+|UseConnectionSetting|연결 문자열에서 명령이 항상 암호화 설정으로 지정되도록 지정합니다.|  
+|사용|쿼리에 대해 항상 암호화를 사용하도록 설정합니다.|  
+|ResultSetOnly|명령의 결과만 드라이버의 항상 암호화 루틴으로 처리되도록 지정합니다. 명령에 암호화가 필요한 매개 변수가 없을 때 이 값을 사용합니다.|  
+|사용 안 함|쿼리에 대해 항상 암호화를 사용하지 않도록 설정합니다.|  
   
  AE에 대한 문 수준 설정이 SQLServerConnection 클래스 및 SQLServerConnectionPoolProxy 클래스에 추가됩니다. 이러한 클래스에서 다음 메서드는 새 설정으로 오버로드됩니다.  
   
-|속성|Description|  
+|이름|설명|  
 |----------|-----------------|  
 |`public Statement createStatement(int nType, int nConcur, int statementHoldability, SQLServerStatementColumnEncryptionSetting stmtColEncSetting)`|지정된 형식, 동시성, 유지 기능 및 열 암호화 설정을 사용하여 ResultSet 개체를 생성하는 문 개체를 만듭니다.|  
 |`public CallableStatement prepareCall(String sql, int nType, int nConcur, int statementHoldability, SQLServerStatementColumnEncryptionSetting stmtColEncSetiing)`|지정된 형식, 동시성 및 유지 기능을 갖는 ResultSet 개체를 생성하는 CallableStatement 개체를 지정된 열 암호화 설정을 사용하여 만듭니다.|  
@@ -190,7 +191,7 @@ Public enum  SQLServerStatementColumnEncryptionSetting
 |`public PreparedStatement prepareStatement(String sql, int nType, int nConcur, int nHold, SQLServerStatementColumnEncryptionSetting stmtColEncSetting)`|지정된 형식, 동시성 및 유지 기능을 갖는 ResultSet 개체를 생성하는 PreparedStatement 개체를 지정된 열 암호화 설정을 사용하여 만듭니다.|  
   
 > [!NOTE]  
->  쿼리에 대해 Always Encrypted를 사용하지 않도록 설정하고 쿼리에 암호화해야 하는 매개 변수(암호화된 열에 해당하는 매개 변수)가 있는 경우 쿼리가 실패합니다.  
+>  쿼리에 대해 상시 암호화 사용 하지 않도록 설정 하 고 쿼리에 암호화 된 (매개 변수 암호화 된 열에 해당 하는) 해야 하는 매개 변수가 있는 경우 쿼리가 실패 합니다.  
 >   
 >  쿼리에 대해 Always Encrypted를 사용하지 않도록 설정하고 쿼리가 암호화된 열에서 결과를 반환하는 경우 쿼리는 암호화된 값을 반환합니다. 암호화된 값은 varbinary 데이터 형식입니다.  
   

@@ -1,6 +1,6 @@
 ---
 title: 큰 CLR 사용자 정의 형식(OLE DB) | Microsoft Docs
-description: 큰 CLR 사용자 정의 형식(OLE DB)
+description: OLE DB Driver for SQL Server에서 큰 CLR(공용 언어 런타임) UDT(사용자 정의 형식)를 지원하기 위한 OLE DB 변경 내용에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -10,14 +10,14 @@ ms.technology: connectivity
 ms.topic: reference
 helpviewer_keywords:
 - large CLR user-defined types [OLE DB]
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 29be423525a3623a21566de18c08dc6e4f61ec95
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c1099b71aa4e600efff3951b9b35f3bdb9ea5d4b
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011225"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88861831"
 ---
 # <a name="large-clr-user-defined-types-ole-db"></a>큰 CLR 사용자 정의 형식(OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

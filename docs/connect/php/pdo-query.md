@@ -1,5 +1,6 @@
 ---
-title: PDO::query | Microsoft Docs
+title: PDO::query
+description: Microsoft PDO_SQLSRV Driver for PHP for SQL Server의 PDO::query 함수에 대한 API 참조입니다.
 ms.custom: ''
 ms.date: 08/01/2018
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: f6f5e6d4-8ca9-4f06-89ed-de65ad3952a2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 809ced4a32081375ebd98c61f7429c22e06cb90a
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: dfceb71c40b7214d9570a62c7ff65925b4f19849
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80919169"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87410949"
 ---
 # <a name="pdoquery"></a>PDO::query
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -32,9 +33,9 @@ PDOStatement PDO::query ($statement[, $fetch_style);
 #### <a name="parameters"></a>매개 변수  
 *$statement*: 실행하려는 SQL 문입니다.  
   
-*$fetch_style*: 쿼리를 수행하는 방법에 대한 선택적 지침입니다. 자세한 내용은 설명 섹션을 참조하세요.PDO::query의 $ $*fetch_style*은 PDO::fetch의 $*fetch_style*로 재정의할 수 있습니다.  
+*$fetch_style*: 쿼리를 수행하는 방법에 대한 선택적 명령입니다. 자세한 내용은 설명 섹션을 참조하세요.PDO::query의 $ $*fetch_style*은 PDO::fetch의 $*fetch_style*로 재정의할 수 있습니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
 호출이 성공하면 PDO::query에서 PDOStatement 개체를 반환합니다. 호출이 실패하면 PDO::ATTR_ERRMODE의 설정에 따라 PDO::query에서 PDOException 개체를 발생시키거나 false를 반환합니다.  
   
 ## <a name="exceptions"></a>예외  
@@ -47,7 +48,7 @@ PDO::SQLSRV_ATTR_QUERY_TIMEOUT은 또한 PDO::exec의 동작에 영향을 줍니
   
 $*fetch_style*에 대해 다음 옵션을 지정할 수 있습니다.  
   
-|Style|Description|  
+|스타일|Description|  
 |---------|---------------|  
 |PDO::FETCH_COLUMN, *num*|지정된 열의 데이터에 대한 쿼리입니다. 테이블의 첫 번째 열은 0입니다.|  
 |PDO::FETCH_CLASS, '*classname*', array( *arglist* )|클래스의 인스턴스를 만들고 열 이름을 클래스의 속성에 할당합니다. 클래스 생성자가 하나 이상의 매개 변수를 사용하는 경우 *arglist*를 전달할 수도 있습니다.|  

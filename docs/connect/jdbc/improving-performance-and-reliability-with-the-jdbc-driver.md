@@ -2,7 +2,7 @@
 title: JDBC 드라이버로 성능 및 안정성 개선
 description: Microsoft JDBC driver for SQL Server를 사용하는 경우 애플리케이션 성능 및 안정성을 향상시키는 다양한 기술에 대해 알아봅니다.
 ms.custom: ''
-ms.date: 08/12/2019
+ms.date: 07/31/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: e1592499-b87b-45ee-bab8-beaba8fde841
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4d8dc1105443222ece454b4da5c434f688131d16
-ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
+ms.openlocfilehash: bc04a90569974acbc99dcb66680d66289db1c0d1
+ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81728482"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565382"
 ---
 # <a name="improving-performance-and-reliability-with-the-jdbc-driver"></a>JDBC 드라이버로 성능 및 안정성 개선
 
@@ -37,6 +37,7 @@ ms.locfileid: "81728482"
 |[스파스 열](../../connect/jdbc/sparse-columns.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 스파스 열에 대한 JDBC Driver의 지원을 설명합니다.|  
 |[JDBC 드라이버에 대한 준비된 명령문 메타데이터 캐싱](../../connect/jdbc/prepared-statement-metadata-caching-for-the-jdbc-driver.md)|준비된 문 쿼리를 사용하여 성능을 향상하는 기술을 설명합니다.|
 |[일괄 처리 삽입 작업에 대량 복사 API 사용](../../connect/jdbc/use-bulk-copy-api-batch-insert-operation.md)|일괄 삽입 작업 및 관련 이점을 위해 대량 복사 API를 사용하는 방법을 설명합니다.|
+|[문자열 매개 변수를 유니코드로 보내지 않음](../../connect/jdbc/setting-the-connection-properties.md)|**CHAR**, **VARCHAR** 및 **LONGVARCHAR** 데이터를 사용하여 작업하는 경우 최적의 성능을 얻을 수 있도록 연결 속성 **sendStringParametersAsUnicode**를 `false`로 설정할 수 있습니다.|
 
 ## <a name="see-also"></a>참고 항목
 

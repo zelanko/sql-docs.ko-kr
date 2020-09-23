@@ -10,12 +10,12 @@ ms.assetid: 8c234077-b670-45c0-803f-51c5a5e0866e
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 7a3d3d4cc792afdef44a6c5ff6684e1e6aa4ff14
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: bc11c5b511b879e0b1f97987d8ff7a9ff3f435d2
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246682"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87928654"
 ---
 # <a name="reporting-services-data-alerts"></a>Reporting Services 데이터 경고
 
@@ -117,7 +117,7 @@ SQL Server Reporting Services 데이터 경고는 사용자가 관심을 가지�
 ##  <a name="install-data-alerts"></a><a name="InstallAlerting"></a> 데이터 경고 설치  
  데이터 경고 기능은 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 가 SharePoint 모드로 설치된 경우에만 사용할 수 있습니다. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 를 SharePoint 모드로 설치하면 데이터 경고 정보 및 경고 메타데이터를 저장하는 경고 데이터베이스와 경고 관리를 위한 두 개의 SharePoint 페이지가 자동으로 생성되고 SharePoint 사이트에 데이터 경고 디자이너가 추가됩니다. 수행할 특수 단계 또는 설치 중 경고에 대해 설정할 옵션이 없습니다.  
   
- [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]를 SharePoint 모드로 설치하는 방법과 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 에서 새로 도입된 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 공유 서비스 및 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 기능을 사용하기 전에 만들고 구성해야 하는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 서비스 애플리케이션에 대한 자세한 내용은 MSDN Library의 [SharePoint 2010용 Reporting Services SharePoint 모드 설치](https://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c)를 참조하세요.  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]를 SharePoint 모드로 설치하는 방법과 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 에서 새로 도입된 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 공유 서비스 및 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 기능을 사용하기 전에 만들고 구성해야 하는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 서비스 애플리케이션에 대한 자세한 내용은 MSDN Library의 [SharePoint 2010용 Reporting Services SharePoint 모드 설치](https://docs.microsoft.com/sql/reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode)를 참조하세요.  
   
  이 항목 앞부분의 다이어그램에 나와 있는 것처럼 데이터 경고에는 SQL Server 에이전트 작업이 사용됩니다. 작업을 만들려면 SQL Server 에이전트가 실행되고 있어야 합니다. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]를 설치할 때 SQL Server 에이전트가 자동으로 시작되도록 구성했을 수 있습니다. 그렇지 않은 경우 SQL Server 에이전트를 수동으로 시작할 수 있습니다. 자세한 내용은 [SQL Server 에이전트 구성](../ssms/agent/configure-sql-server-agent.md) 및 [데이터베이스 엔진, SQL Server 에이전트 또는 SQL Server Browser 서비스 시작, 중지, 일시 중지, 재개 및 다시 시작](../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)을 참조하세요.  
   
@@ -158,9 +158,8 @@ SQL Server Reporting Services 데이터 경고는 사용자가 관심을 가지�
   
  다음 표에는 이벤트 처리기 및 재시도 발생 시기가 요약되어 있습니다.  
   
-|오류 범주|<|\<|이벤트 유형||>|>|>|  
+|오류 범주/이벤트 유형|FireAlert|FireSchedule|CreateSchedule|UpdateSchedule|DeleteSchedule|GenerateAlert|DeliverAlert|  
 |--------------------|--------|--------|----------------|-|--------|--------|--------|  
-||**FireAlert**|**FireSchedule**|**CreateSchedule**|**UpdateSchedule**|**DeleteSchedule**|**GenerateAlert**|**DeliverAlert**|  
 |메모리가 부족합니다.|X|X|X|X|X|X|X|  
 |스레드 중단|X|X|X|X|X|X|X|  
 |SQL 에이전트가 실행되고 있지 않습니다.|X||X|X|X|||  

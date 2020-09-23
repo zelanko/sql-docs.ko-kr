@@ -1,4 +1,5 @@
 ---
+description: 보고서 서버 초기화(구성 관리자)
 title: 보고서 서버 초기화(구성 관리자) | Microsoft Docs
 ms.date: 05/31/2016
 ms.prod: reporting-services
@@ -14,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: 861d4ec4-1085-412c-9a82-68869a77bd55
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 264159f4c892cc688b15293c0e4283fc46520720
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d04dce2fa829938ede09ebbceaa4980c110002cf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080832"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446084"
 ---
 # <a name="ssrs-encryption-keys---initialize-a-report-server"></a>SSRS 암호화 키 - 보고서 서버 시작
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 초기화된 서버는 보고서 서버 데이터베이스의 데이터를 암호화하고 해독할 수 있는 서버입니다. 보고서 서버 작업을 위해서는 초기화가 필요합니다. 초기화는 보고서 서버 서비스가 처음 시작될 때 발생합니다. 또한 보고서 서버를 기존 배포에 참여시키거나 복구 프로세스의 일환으로 키를 수동으로 다시 만들 때도 발생합니다. 암호화 키를 사용하는 방법과 이유에 대한 자세한 내용은 [암호화 키 구성 및 관리&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md) 및 [암호화된 보고서 서버 데이터 저장&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)을 참조하세요.  
   
  암호화 키는 부분적으로 보고서 서버 서비스의 프로필 정보를 기반으로 합니다. 보고서 서버 서비스를 실행하는 데 사용되는 사용자 ID를 변경한 경우 그에 맞게 키도 업데이트해야 합니다. Reporting Services 구성 도구를 사용하여 ID를 변경한 경우에는 이 단계가 자동으로 수행됩니다.  
   
- 여타의 이유로 초기화가 실패하면 보고서 서버는 사용자 및 서비스 요청에 대한 응답으로 **RSReportServerNotActivated** 오류를 반환합니다. 이 경우 시스템 또는 서버 구성과 관련된 문제를 해결해야 할 수 있습니다. 자세한 내용은 [Troubleshoot issues and errors with Reporting Services(Reporting Services 문제 및 오류 해결)](https://social.technet.microsoft.com/wiki/contents/articles/1633.aspx)(TechNet Wiki의 https://social.technet.microsoft.com/wiki/contents/articles/1633.aspx) )을 참조하세요.  
+ 여타의 이유로 초기화가 실패하면 보고서 서버는 사용자 및 서비스 요청에 대한 응답으로 **RSReportServerNotActivated** 오류를 반환합니다. 이 경우 시스템 또는 서버 구성과 관련된 문제를 해결해야 할 수 있습니다. 자세한 내용은 Technet Wiki에서 [SSRS: Troubleshoot Issues and Errors with Reporting Services](https://social.technet.microsoft.com/wiki/contents/articles/1633.aspx)(https://social.technet.microsoft.com/wiki/contents/articles/1633.aspx) (SSRS: Reporting Services 문제 및 오류 해결)를 참조하세요.  
   
 ## <a name="overview-of-the-initialization-process"></a>초기화 프로세스의 개요  
  초기화 프로세스가 진행되면 암호화에 사용되는 대칭 키가 생성 및 저장됩니다. 대칭 키는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 암호화 서비스에 의해 생성되며 그런 다음 데이터 암호화 및 암호 해독을 위해 보고서 서버 서비스에 사용됩니다. 대칭 키는 비대칭 키와 함께 암호화됩니다.  

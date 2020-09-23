@@ -1,4 +1,5 @@
 ---
+description: 보고서 서버에 데이터베이스 액세스 권한 부여
 title: 사용자에게 보고서 서버에 대한 액세스 권한 부여 | Microsoft Docs
 ms.date: 05/6/2019
 ms.prod: reporting-services
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2144c020-3253-4b47-8cda-e14c928bb471
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1622da633dca63eb5ddf8bef0dc46e71e3db850b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0eb38550a0fc9e395b651783af4d449626de1d63
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65619606"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88373889"
 ---
 # <a name="grant-user-access-to-a-report-server"></a>보고서 서버에 데이터베이스 액세스 권한 부여
 
@@ -61,7 +62,7 @@ ms.locfileid: "65619606"
 
 4. **그룹 또는 사용자 추가**를 선택합니다.
 
-5. **그룹 또는 사용자**에 Windows 도메인 사용자 또는 \<domain>\\<account\> 형식으로 그룹 계정을 입력합니다.
+5. **그룹 또는 사용자**에 Windows 도메인 사용자 또는 그룹 계정을 \<domain>\\<account\> 형식으로 입력합니다.
 
     > [!NOTE]
     > 폼 인증 또는 사용자 지정 보안을 사용하는 경우에는 해당 배포에 적절한 형식으로 사용자 또는 그룹 계정을 지정합니다.
@@ -76,7 +77,7 @@ ms.locfileid: "65619606"
 
 1. **웹 포털**을 시작하고 사용자 또는 그룹을 추가할 보고서 항목을 찾습니다.
 
-2. 항목에서 **...** (줄임표)를 선택합니다.
+2. 항목에서 **...**(줄임표)를 선택합니다.
 
 3. 드롭다운 메뉴에서 **관리**를 선택합니다.
 
@@ -87,7 +88,7 @@ ms.locfileid: "65619606"
     > [!NOTE]
     > 항목이 현재 부모 항목의 보안을 상속하는 경우에는 도구 모음에서 **보안 사용자 지정**을 선택하여 보안 설정을 변경합니다. 그런 다음 **그룹 또는 사용자 추가**를 선택합니다.
 
-6. **그룹 또는 사용자**에 Windows 도메인 사용자 또는 \<domain>\\<account\> 형식으로 그룹 계정을 입력합니다. 폼 인증 또는 사용자 지정 보안을 사용하는 경우에는 해당 배포에 적절한 형식으로 사용자 또는 그룹 계정을 지정합니다.
+6. **그룹 또는 사용자**에 Windows 도메인 사용자 또는 그룹 계정을 \<domain>\\<account\> 형식으로 입력합니다. 폼 인증 또는 사용자 지정 보안을 사용하는 경우에는 해당 배포에 적절한 형식으로 사용자 또는 그룹 계정을 지정합니다.
 
 7. 사용자 또는 그룹에서 항목에 액세스하는 방법을 설명하는 역할 정의를 하나 이상 선택한 다음 **확인**을 선택합니다.
 
@@ -95,7 +96,7 @@ ms.locfileid: "65619606"
 
 ## <a name="next-steps"></a>다음 단계
 
-[역할 할당 만들기 및 관리](../../reporting-services/security/create-and-manage-role-assignments.md)  
+[역할 할당 생성 및 관리](../../reporting-services/security/create-and-manage-role-assignments.md)  
 [역할 할당](../../reporting-services/security/role-assignments.md)  
 [역할 정의](../../reporting-services/security/role-definitions.md)  
 

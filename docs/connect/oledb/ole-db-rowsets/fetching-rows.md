@@ -1,6 +1,6 @@
 ---
 title: 행 페치(OLE DB 드라이버) | Microsoft Docs
-description: IRowset 인터페이스를 사용하여 행 페치
+description: OLE DB Driver for SQL Server에서 소비자가 IRowset 인터페이스를 사용하여 행을 페치하고, 행에서 데이터를 가져오고, 행을 관리하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - rowsets [OLE DB], fetching
 - IRowset interface
 - OLE DB Driver for SQL Server, fetching
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 2d803da7e8930eccb66843a025cb3426f5af62f5
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 992ec376a8f881dc06a72a5c9d6502faae9f9cc3
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244198"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88862465"
 ---
 # <a name="fetching-rows"></a>행 인출
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

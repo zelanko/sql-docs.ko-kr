@@ -1,6 +1,6 @@
 ---
 title: 세션(OLE DB 드라이버)
-description: SQL Server용 OLE DB 드라이버의 세션
+description: OLE DB Driver for SQL Server를 사용하여 SQL Server 데이터베이스에 연결하는 방법을 알아봅니다. 세션은 SQL Server 인스턴스에 대한 단일 연결을 나타냅니다.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -11,14 +11,14 @@ ms.topic: reference
 helpviewer_keywords:
 - sessions [OLE DB]
 - OLE DB Driver for SQL Server, sessions
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: ba9d1dcfbc3ac57d9f24ba78e992443d6d7d6453
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 0187f42ab9389f18d35d4f400c2ea494a6d6dcd4
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244948"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88862479"
 ---
 # <a name="sessions"></a>세션
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

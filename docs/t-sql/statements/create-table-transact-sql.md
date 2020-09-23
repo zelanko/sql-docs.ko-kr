@@ -46,14 +46,14 @@ helpviewer_keywords:
 - maximum number of bytes per row
 - data retention policy
 ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 96dcd0aff5874db3f025496b1067d5d3d111b3a9
-ms.sourcegitcommit: 678f513b0c4846797ba82a3f921ac95f7a5ac863
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 6b55f70cd23047de6fa1b344cbe1c9c89ab3a94c
+ms.sourcegitcommit: 780a81c02bc469c6e62a9c307e56a973239983b6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2020
-ms.locfileid: "89511266"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90027314"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE(Transact-SQL)
 
@@ -239,11 +239,13 @@ column_set_name XML COLUMN_SET FOR ALL_SPARSE_COLUMNS
         | OFF ( MIGRATION_STATE = PAUSED )
       }
     ]   
-    [ DATA_DELETION = ON ( FILTER_COLUMN = column_name
-        , RETENTION_PERIOD = {
-                              INFINITE | number {DAY | DAYS | WEEK | WEEKS
-                  | MONTH | MONTHS | YEAR | YEARS }
-                          }) ]
+    [ DATA_DELETION =  {OFF | ON }  
+          [(    
+              [ FILTER_COLUMN = column_name ],   
+              [ RETENTION_PERIOD = { INFINITE | number {DAY | DAYS | WEEK | WEEKS 
+                      | MONTH | MONTHS | YEAR | YEARS }}]    
+          )]
+     ]
 }
   
 <table_stretch_options> ::=
@@ -801,8 +803,12 @@ MIGRATION_STATE = { OUTBOUND | INBOUND | PAUSED } **적용 대상**: [!INCLUDE[s
 
 - `PAUSED`를 지정하여 데이터 마이그레이션을 일시 중지하거나 연기합니다. 자세한 내용은 [데이터 마이그레이션 일시 중지 및 다시 계속 - Stretch Database](../../sql-server/stretch-database/pause-and-resume-data-migration-stretch-database.md)를 참조하세요.
 
-DATA_DELETION = { ON ( FILTER_COLUMN = column_name,   
-            RETENTION_PERIOD = { INFINITE | number {DAY | DAYS | WEEK | WEEKS | MONTH | MONTHS | YEAR | YEARS } }    
+[ DATA_DELETION =  {OFF | ON }  
+          [(  
+              [ FILTER_COLUMN = column_name ],   
+              [ RETENTION_PERIOD = { INFINITE | number {DAY | DAYS | WEEK | WEEKS | MONTH | MONTHS | YEAR | YEARS }}]    
+          )]  
+     ]  
 **적용 대상:** Azure SQL Edge‘만’
 
 데이터베이스 내의 테이블에서 오래된 데이터의 보존 정책 기반 정리를 사용하도록 설정합니다. 자세한 내용은 [데이터 보존 사용 및 사용 안 함](https://docs.microsoft.com/azure/azure-sql-edge/data-retention-enable-disable)을 참조하세요. 데이터 보존을 사용하도록 설정하려면 다음 매개 변수를 지정해야 합니다. 

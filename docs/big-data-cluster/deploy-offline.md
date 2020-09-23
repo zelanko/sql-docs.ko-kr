@@ -1,7 +1,7 @@
 ---
 title: 오프라인 배포
 titleSuffix: SQL Server big data clusters
-description: SQL Server 빅 데이터 클러스터의 오프라인 배포를 수행하는 방법을 알아봅니다.
+description: SQL Server 2019 빅 데이터 클러스터를 오프라인 배포하는 방법과 컨테이너 이미지를 프라이빗 리포지토리로 로드하는 방법을 알아봅니다.
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: a3e437e722665cb156fbd4c1bb474e1d9f095f95
-ms.sourcegitcommit: dc6ea6665cd2fb58a940c722e86299396b329fec
+ms.openlocfilehash: c0218bd24bd24ee17a8d6addfbcf071788a48156
+ms.sourcegitcommit: e274d51df09f9163fa6e22b36d48c60bc3d7c7d1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84423162"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89875562"
 ---
 # <a name="perform-an-offline-deployment-of-a-sql-server-big-data-cluster"></a>SQL Server 빅 데이터 클러스터의 오프라인 배포 수행
 
@@ -80,7 +80,6 @@ ms.locfileid: "84423162"
 - **mssql-security-domainctl**
 - **mssql-security-knox**
 - **mssql-security-support**
-- **mssql-server**
 - **mssql-server-controller**
 - **mssql-server-data**
 - **mssql-ha-operator**

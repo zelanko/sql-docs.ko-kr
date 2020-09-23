@@ -1,4 +1,5 @@
 ---
+description: 작업 단계 속성 - 새 작업 단계(일반 페이지)
 title: 새 작업 단계 속성(일반 페이지)
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,19 +14,19 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 44b333c1865046f779581265fb49186810f8944c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9c16c9895eb6fdcec859a20651f9912b78ee9946
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731403"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497572"
 ---
 # <a name="job-step-properties---new-job-step-general-page"></a>작업 단계 속성 - 새 작업 단계(일반 페이지)
 
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> 현재 [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)에서 일부 SQL Server 에이전트 기능이 지원됩니다. 자세한 내용은 [SQL Server에서 Azure SQL Database Managed Instance T-SQL 차이점](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)을 참조하세요.
+> 현재 [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)에서는 SQL Server 에이전트 기능이 대부분 지원됩니다. 자세한 내용은 [SQL Server와 Azure SQL Managed Instance 간의 T-SQL 차이점](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)을 참조하세요.
 
 이 페이지를 사용하여 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업 단계의 속성을 확인하고 변경하거나 새 작업 단계를 정의할 수 있습니다.  
   
@@ -35,7 +36,7 @@ ms.locfileid: "85731403"
 **단계 이름**  
 작업 단계의 이름을 설정합니다.  
   
-**형식**  
+**유형**  
 작업 단계에서 사용하는 하위 시스템을 설정합니다. 선택한 하위 시스템에 따라 작업 단계 정의에 표시되는 옵션이 달라집니다.  
   
 **다음 계정으로 실행**  
@@ -54,13 +55,13 @@ ms.locfileid: "85731403"
 **모두 선택**  
 명령의 텍스트를 선택합니다.  
   
-**Copy**  
+**복사**  
 선택한 텍스트를 클립보드에 복사합니다.  
   
 **붙여넣기**  
 클립보드의 내용을 붙여 넣습니다.  
   
-**구문 분석**  
+**Parse**  
 명령의 구문을 확인합니다.  
   
 ## <a name="options-for-activex-script-job-steps"></a>ActiveX 스크립트 작업 단계 옵션  
@@ -83,7 +84,7 @@ ms.locfileid: "85731403"
 **모두 선택**  
 명령의 텍스트를 선택합니다.  
   
-**Copy**  
+**복사**  
 선택한 텍스트를 복사합니다.  
   
 **붙여넣기**  
@@ -99,7 +100,7 @@ ms.locfileid: "85731403"
 **모두 선택**  
 명령의 텍스트를 선택합니다.  
   
-**Copy**  
+**복사**  
 선택한 텍스트를 복사합니다.  
   
 **붙여넣기**  
@@ -112,7 +113,7 @@ ms.locfileid: "85731403"
 **모두 선택**  
 스크립트의 텍스트를 선택합니다.  
   
-**Copy**  
+**복사**  
 선택한 텍스트를 복사합니다.  
   
 **붙여넣기**  
@@ -122,7 +123,7 @@ ms.locfileid: "85731403"
 **모두 선택**  
 명령의 텍스트를 선택합니다.  
   
-**Copy**  
+**복사**  
 선택한 텍스트를 복사합니다.  
   
 **붙여넣기**  
@@ -132,7 +133,7 @@ ms.locfileid: "85731403"
 **모두 선택**  
 명령의 텍스트를 선택합니다.  
   
-**Copy**  
+**복사**  
 선택한 텍스트를 복사합니다.  
   
 **붙여넣기**  
@@ -145,7 +146,7 @@ ms.locfileid: "85731403"
 **모두 선택**  
 명령의 텍스트를 선택합니다.  
   
-**Copy**  
+**복사**  
 선택한 텍스트를 복사합니다.  
   
 **붙여넣기**  
@@ -155,7 +156,7 @@ ms.locfileid: "85731403"
 **모두 선택**  
 명령의 텍스트를 선택합니다.  
   
-**Copy**  
+**복사**  
 선택한 텍스트를 복사합니다.  
   
 **붙여넣기**  
@@ -165,7 +166,7 @@ ms.locfileid: "85731403"
 **모두 선택**  
 명령의 텍스트를 선택합니다.  
   
-**Copy**  
+**복사**  
 선택한 텍스트를 복사합니다.  
   
 **붙여넣기**  
@@ -181,7 +182,7 @@ ms.locfileid: "85731403"
 **모두 선택**  
 명령의 텍스트를 선택합니다.  
   
-**Copy**  
+**복사**  
 선택한 텍스트를 복사합니다.  
   
 **붙여넣기**  
@@ -200,7 +201,7 @@ ms.locfileid: "85731403"
 **모두 선택**  
 명령의 텍스트를 선택합니다.  
   
-**Copy**  
+**복사**  
 선택한 텍스트를 복사합니다.  
   
 **붙여넣기**  

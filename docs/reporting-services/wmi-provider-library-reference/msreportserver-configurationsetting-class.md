@@ -1,4 +1,5 @@
 ---
+description: MSReportServer_ConfigurationSetting 클래스
 title: MSReportServer_ConfigurationSetting 클래스 | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 874be718-54b9-49e8-a3d6-b83a0ba13dc3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 74382531162bb691cd47838fa2896169abd7ce58
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e7b535ba8ce57cad4ddf1a43d2bfda97e4a26e25
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65569143"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454430"
 ---
 # <a name="msreportserver_configurationsetting-class"></a>MSReportServer_ConfigurationSetting 클래스
   보고서 서버 인스턴스의 설치 및 런타임 매개 변수를 나타냅니다. 이러한 매개 변수는 보고서 서버의 구성 파일에 저장됩니다.  

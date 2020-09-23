@@ -1,6 +1,6 @@
 ---
 title: 클라이언트 연결의 SPN(서비스 사용자 이름)(OLE DB) | Microsoft Docs
-description: 클라이언트 연결의 SPN(서비스 사용자 이름)(OLE DB)
+description: 클라이언트 애플리케이션에서 서비스 사용자 이름을 지원하는 OLE DB Driver for SQL Server 속성 및 멤버 함수에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -8,14 +8,14 @@ ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: reference
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: bd4128e3b53ffdeeaa793bbe39510bbee67e492a
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 5a97e889a8e36e0c9fc918f3f4724d283b8cfa5d
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244096"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88862231"
 ---
 # <a name="service-principal-names-spns-in-client-connections-ole-db-in-sql-server-native-client"></a>SQL Server Native Client에서 클라이언트 연결(OLE DB)의 SPN(서비스 사용자 이름)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

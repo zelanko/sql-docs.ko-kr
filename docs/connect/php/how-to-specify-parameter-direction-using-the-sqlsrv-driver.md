@@ -1,7 +1,8 @@
 ---
-title: '방법: SQLSRV 드라이버를 사용하여 매개 변수 방향 지정 | Microsoft Docs'
+title: '방법: SQLSRV 드라이버를 사용하여 매개 변수 방향 지정'
+description: Microsoft SQLSRV Driver for PHP for SQL Server를 사용하여 저장 프로시저를 호출할 때 매개 변수 방향을 지정하는 방법을 알아봅니다.
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1209eeca-df75-4283-96dc-714f39956b95
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 85a106a8e6a7f9afcac449b241b0255a16c51233
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: f085fc40ded15310b81d6a447f30676ed011e7f8
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80915929"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680248"
 ---
 # <a name="how-to-specify-parameter-direction-using-the-sqlsrv-driver"></a>방법: SQLSRV 드라이버를 사용하여 매개 변수 방향 지정
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -43,7 +44,7 @@ ms.locfileid: "80915929"
     ```  
   
     > [!NOTE]  
-    > 초기화되거나 **null**, **날짜/시간**또는 스트림 형식으로 업데이트되는 변수는 출력 매개 변수로 사용할 수 없습니다.  
+    >  초기화되거나 **null**, **날짜/시간**또는 스트림 형식으로 업데이트되는 변수는 출력 매개 변수로 사용할 수 없습니다.  
   
 3.  2단계의 PHP 변수를 사용하여 Transact-SQL  문자열의 매개 변수 자리 표시자에 순서대로 해당 매개 변수 값의 배열을 만들거나 업데이트합니다. 배열에서 각 매개 변수의 방향을 지정합니다. 각 매개 변수의 방향은 두 가지 방법 중 하나로 결정됩니다. 즉, 입력 매개 변수는 기본값, 출력 매개 변수 및 양방향 매개 변수는 **SQLSRV_PARAM_\*** 상수를 사용합니다. 예를 들어 다음 코드는 입력 매개 변수로 *$employeeId* 매개 변수를 지정하고 양방향 매개 변수로 *$usedVacationHours* 매개 변수를 지정합니다.  
   

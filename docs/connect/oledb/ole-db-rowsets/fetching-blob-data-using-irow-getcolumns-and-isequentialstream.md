@@ -1,6 +1,6 @@
 ---
 title: IRow::GetColumns 및 ISequentialStream을 사용하여 BLOB 데이터 인출 | Microsoft Docs
-description: IRow::GetColumns 및 ISequentialStream을 사용하여 BLOB 데이터 인출
+description: 이 함수는 OLE DB Driver for SQL Server의 IRow::GetColumns 및 ISequentialStream을 사용하여 BLOB 데이터를 페치합니다.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - ISequentialStream interface
 - GetColumns method
 - BLOBs, fetching
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 80d7a8ccce0a0713c9dc2cb2dbbd4914fd391e96
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 37bd5d3570d0392ef97e4ad8878bc9ad437a0a34
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244214"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88861351"
 ---
 # <a name="fetching-blob-data-by-using-irowgetcolumns-and-isequentialstream"></a>IRow::GetColumns 및 ISequentialStream을 사용하여 BLOB 데이터 인출
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

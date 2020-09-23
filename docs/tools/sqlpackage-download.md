@@ -10,12 +10,12 @@ author: pensivebrian
 ms.author: broneill
 ms.reviewer: alayu; sstein
 ms.date: 06/20/2018
-ms.openlocfilehash: 67fdb2d5d78f5068f8379d046221ceb9c564a176
-ms.sourcegitcommit: 48d60fe6b6991303a88936fb32322c005dfca2d8
+ms.openlocfilehash: 93979ba5b0bf7ffb26726db86dbc5d6ee548df15
+ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85352430"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89283684"
 ---
 # <a name="download-and-install-sqlpackage"></a>sqlpackage 다운로드 및 설치
 
@@ -63,6 +63,19 @@ sqlpackage의 릴리스는 표준 Windows 설치 관리자 환경 및 .zip을 �
    $ echo 'export PATH="$PATH:~/sqlpackage"' >> ~/.bash_profile
    $ source ~/.bash_profile
    $ sqlpackage
+   ```
+
+   > [!NOTE]
+   > macOS에서 sqlpackage를 실행하려면 보안 설정을 수정해야 할 수 있습니다. 다음 명령을 사용하여 명령줄에서 Gatekeeper와 상호 작용합니다.
+
+   **sqlpackage를 실행하기 전:**
+   ```bash
+   $ sudo spctl --master-disable
+   ```
+
+   **sqlpackage를 실행한 후:**
+   ```bash
+   $ sudo spctl --master-enable
    ```
 
 ## <a name="get-sqlpackage-net-core-for-linux"></a>Linux용 sqlpackage .NET Core 가져오기
@@ -123,9 +136,11 @@ sqlpackage는 Windows, macOS 및 Linux에서 실행되고, 다음 플랫폼에�
 - 윈도우 10
 - Windows 8.1
 - Windows 7 SP1
+- Windows Server Core
 - Windows Server 2008 R2
 - Windows Server 2012 R2
 - Windows Server 2016
+- Windows Server 2019
 
 ### <a name="macos"></a>macOS
 

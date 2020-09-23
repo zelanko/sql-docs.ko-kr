@@ -1,5 +1,6 @@
 ---
-title: Azure Active Directory 사용 | Microsoft Docs for SQL Server
+title: Azure Active Directory 사용
+description: Azure SQL 데이터베이스에 연결하기 위해 Microsoft OLE DB Driver for SQL Server에서 사용할 수 있는 Azure Active Directory 인증 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 10/11/2019
 ms.prod: sql
@@ -9,19 +10,19 @@ ms.technology: connectivity
 ms.topic: reference
 author: bazizi
 ms.author: v-beaziz
-ms.openlocfilehash: 9c3586c8b51495ed3c49dd88f9f85a2b60d09aa0
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: e4591d74ba5e11b65cc3ede83533d72a11dbec96
+ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007250"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87899052"
 ---
 # <a name="using-azure-active-directory"></a>Azure Active Directory 사용
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-## <a name="purpose"></a>목적
+## <a name="purpose"></a>용도
 
 버전 18.2.1부터 Microsoft OLE DB Driver for SQL Server를 사용하면 OLE DB 애플리케이션에서 페더레이션 ID를 사용하여 Azure SQL Database 인스턴스에 연결할 수 있습니다. 새 인증 방법에는 다음이 포함됩니다.
 - Azure Active Directory 로그인 ID 및 암호
@@ -31,7 +32,7 @@ ms.locfileid: "86007250"
 
 버전 18.3에는 다음 인증 방법에 대한 지원이 추가되었습니다.
 - Azure Active Directory 대화형 인증
-- Azure Active Directory MSI 인증
+- Azure Active Directory 관리 ID 인증
 
 > [!NOTE]
 > `DataTypeCompatibility`(또는 해당 속성)를 `80`으로 설정하면 다음 인증 모드가 지원되지 **않습니다**.
@@ -39,12 +40,12 @@ ms.locfileid: "86007250"
 > - 액세스 토큰을 사용하여 Azure Active Directory 인증
 > - Azure Active Directory 통합 인증
 > - Azure Active Directory 대화형 인증
-> - Azure Active Directory MSI 인증
+> - Azure Active Directory 관리 ID 인증
 
 ## <a name="connection-string-keywords-and-properties"></a>연결 문자열 키워드 및 속성
 Azure Active Directory 인증을 지원하기 위해 다음과 같은 연결 문자열 키워드가 도입되었습니다.
 
-|연결 문자열 키워드|연결 속성|Description|
+|연결 문자열 키워드|Connection 속성|설명|
 |---               |---                |---        |
 |액세스 토큰|SSPROP_AUTH_ACCESS_TOKEN|Azure Active Directory에 인증할 액세스 토큰을 지정합니다. |
 |인증|SSPROP_AUTH_MODE|사용할 인증 방법을 지정합니다.|
@@ -118,7 +119,7 @@ Azure Active Directory 인증을 허용하도록 드라이버 그래픽 사용�
 ### <a name="azure-active-directory-authentication-using-an-access-token"></a>액세스 토큰을 사용하여 Azure Active Directory 인증
 
 - `IDataInitialize::GetDataSource`사용:
-    > Provider=MSOLEDBSQL;Data Source=[server];Initial Catalog=[database];**Access Token=[access token]** ;Use Encryption for Data=true
+    > Provider=MSOLEDBSQL;Data Source=[server];Initial Catalog=[database];**Access Token=[access token]**;Use Encryption for Data=true
 - `DBPROP_INIT_PROVIDERSTRING`사용:
     > `DBPROP_INIT_PROVIDERSTRING`를 통해 액세스 토큰을 제공하는 것은 지원되지 않습니다.
 
@@ -129,7 +130,7 @@ Azure Active Directory 인증을 허용하도록 드라이버 그래픽 사용�
 - `DBPROP_INIT_PROVIDERSTRING`사용:
     > Server=[server];Database=[database];**Authentication=ActiveDirectoryInteractive**;UID=[username];Encrypt=yes
 
-### <a name="azure-active-directory-msi-authentication"></a>Azure Active Directory MSI 인증
+### <a name="azure-active-directory-managed-identity-authentication"></a>Azure Active Directory 관리 ID 인증
 
 - `IDataInitialize::GetDataSource`사용:
     - 사용자가 할당한 관리형 ID:

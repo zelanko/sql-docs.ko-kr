@@ -1,6 +1,6 @@
 ---
 title: 쿼리 알림 작업 | Microsoft Docs
-description: OLE DB Driver for SQL Server에서 쿼리 알림 작업
+description: OLE DB Driver for SQL Server에서 데이터가 변경된 경우 쿼리 알림을 통해 애플리케이션에 알림을 보내는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -19,14 +19,14 @@ helpviewer_keywords:
 - MSOLEDBSQL, query notifications
 - OLE DB Driver for SQL Server, query notifications
 - consumer notification for rowset changes [OLE DB Driver for SQL Server]
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: ca5c67517b3ee3a06331a062d812fabc236aebaa
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 83dc1ddc2aed6852a36bc2d32b94564451d8a08e
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897594"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88861445"
 ---
 # <a name="working-with-query-notifications"></a>쿼리 알림 작업
 

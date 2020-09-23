@@ -8,20 +8,20 @@ ms.topic: conceptual
 ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: pensivebrian
 ms.author: broneill
-ms.reviewer: alayu; sstein
-ms.date: 03/17/2020
-ms.openlocfilehash: 1209945c167f26dd7011cc4ce210e61ac24f7134
-ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
+ms.reviewer: drswkier; sstein
+ms.date: 07/06/2020
+ms.openlocfilehash: 3d162630d029fcde31275ce4d09cfe05bdf78c36
+ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85441260"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88714251"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
 **SqlPackage.exe**는 다음 데이터베이스 개발 작업을 자동화하는 명령줄 유틸리티입니다.  
   
-- [추출](#help-for-the-extract-action): 라이브 SQL Server 또는 Azure SQL Database에서 데이터베이스 스냅샷(.dacpac) 파일을 만듭니다.  
+- [추출](#extract-parameters-and-properties): 라이브 SQL Server 또는 Azure SQL Database에서 데이터베이스 스냅샷(.dacpac) 파일을 만듭니다.  
   
 - [게시](#publish-parameters-properties-and-sqlcmd-variables): 원본 .dacpac 파일의 스키마와 일치하도록 데이터베이스 스키마를 증분식으로 업데이트합니다. 데이터베이스가 서버에 존재하지 않을 경우 게시 작업을 통해 생성됩니다. 존재하는 경우 기존 데이터베이스가 업데이트됩니다.  
   
@@ -69,9 +69,12 @@ sqlpackage.exe /TargetFile:"C:\sqlpackageoutput\output_current_version.dacpac" /
 sqlpackage.exe /Action:Script /SourceFile:"C:\sqlpackageoutput\output_current_version.dacpac" /TargetFile:"C:\sqlpackageoutput\output_target.dacpac" /TargetDatabaseName:"Contoso.Database" /OutputPath:"C:\sqlpackageoutput\output.sql"
  ```
 
+## <a name="extract-parameters-and-properties"></a>매개 변수 및 속성 추출
+SqlPackage.exe 추출 작업은 SQL Server 또는 Azure SQL Database에서 DACPAC 패키지(.dacpac 파일)로 라이브 데이터베이스 스키마를 만듭니다. 기본적으로 데이터는 .dacpac 파일에 포함되지 않습니다. 데이터를 포함하려면 [내보내기 작업](#export-parameters-and-properties)을 사용합니다. 
+
 ### <a name="help-for-the-extract-action"></a>Extract 동작에 대한 도움말
 
-|매개 변수|약식|값|Description|
+|매개 변수|약식|값|설명|
 |---|---|---|---|
 |**/Action:**|**/a**|Extract|수행할 작업을 지정합니다. |
 |**/AccessToken:**|**/at**|{string}| 대상 데이터베이스에 연결할 때 사용할 액세스 토큰 기반 인증 액세스 토큰을 지정합니다. |
@@ -90,12 +93,12 @@ sqlpackage.exe /Action:Script /SourceFile:"C:\sqlpackageoutput\output_current_ve
 |**/SourceTrustServerCertificate:**|**/stsc**|{True&#124;False}|원본 데이터베이스 연결을 암호화하고 신뢰의 유효성을 검증하기 위한 인증서 체인 검색을 건너뛰는 데 TLS를 사용할지 여부를 지정합니다. |
 |**/SourceUser:**|**/su**|{string}|SQL Server 인증 시나리오에서 원본 데이터베이스에 액세스하는 데 사용할 SQL Server 사용자를 정의합니다. |
 |**/TargetFile:**|**/tf**|{string}| 데이터베이스 대신 작업 대상으로 사용될 대상 파일(.dacpac 파일)을 지정합니다. 이 매개 변수를 사용하는 경우 다른 대상 매개 변수가 무효화됩니다. 이 매개 변수는 데이터베이스 대상만 지원하는 동작에는 유효하지 않습니다.| 
-|**/TenantId:**|**/tid**|{string}|Azure AD 테넌트 ID 또는 도메인 이름을 나타냅니다. 이 옵션은 outlook.com, hotmail.com 또는 live.com과 같은 Microsoft 계정뿐만 아니라 게스트 또는 가져온 Azure AD 사용자를 지원해야 합니다. 이 매개 변수를 생략하면 인증된 사용자가 이 AD의 기본 사용자라고 가정하여 Azure AD의 기본 테넌트 ID가 사용됩니다. 그러나 이 경우 이 Azure AD에서 호스트되는 모든 게스트 또는 가져온 사용자 및/또는 Microsoft 계정은 지원되지 않으며 작업이 실패합니다. <br/> Active Directory 유니버설 인증에 대한 자세한 내용은 [SQL Database 및 SQL Data Warehouse에 대한 유니버설 인증(MFA에 대한 SSMS 지원)](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication)을 참조하세요.|
-|**/UniversalAuthentication:**|**/ua**|{True&#124;False}|유니버설 인증을 사용해야 하는지 여부를 지정합니다. True로 설정되면 대화형 인증 프로토콜이 MFA를 지원하도록 활성화됩니다. 이 옵션은 사용자가 사용자 이름 및 암호 또는 통합 인증(Windows 자격 증명)을 입력해야 하는 대화형 프로토콜을 사용하여 MFA가 없는 Azure AD 인증에도 사용할 수 있습니다. /UniversalAuthentication을 True로 설정하면 SourceConnectionString(/scs)에 Azure AD 인증을 지정할 수 없습니다. /UniversalAuthentication을 False로 설정하면 SourceConnectionString(/scs)에 Azure AD 인증을 지정해야 합니다. <br/> Active Directory 유니버설 인증에 대한 자세한 내용은 [SQL Database 및 SQL Data Warehouse에 대한 유니버설 인증(MFA에 대한 SSMS 지원)](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication)을 참조하세요.|
+|**/TenantId:**|**/tid**|{string}|Azure AD 테넌트 ID 또는 도메인 이름을 나타냅니다. 이 옵션은 outlook.com, hotmail.com 또는 live.com과 같은 Microsoft 계정뿐만 아니라 게스트 또는 가져온 Azure AD 사용자를 지원해야 합니다. 이 매개 변수를 생략하면 인증된 사용자가 이 AD의 기본 사용자라고 가정하여 Azure AD의 기본 테넌트 ID가 사용됩니다. 그러나 이 경우 이 Azure AD에서 호스트되는 모든 게스트 또는 가져온 사용자 및/또는 Microsoft 계정은 지원되지 않으며 작업이 실패합니다. <br/> Active Directory 유니버설 인증에 대한 자세한 내용은 [SQL Database 및 SQL Data Warehouse에 대한 유니버설 인증(MFA에 대한 SSMS 지원)](/azure/sql-database/sql-database-ssms-mfa-authentication)을 참조하세요.|
+|**/UniversalAuthentication:**|**/ua**|{True&#124;False}|유니버설 인증을 사용해야 하는지 여부를 지정합니다. True로 설정되면 대화형 인증 프로토콜이 MFA를 지원하도록 활성화됩니다. 이 옵션은 사용자가 사용자 이름 및 암호 또는 통합 인증(Windows 자격 증명)을 입력해야 하는 대화형 프로토콜을 사용하여 MFA가 없는 Azure AD 인증에도 사용할 수 있습니다. /UniversalAuthentication을 True로 설정하면 SourceConnectionString(/scs)에 Azure AD 인증을 지정할 수 없습니다. /UniversalAuthentication을 False로 설정하면 SourceConnectionString(/scs)에 Azure AD 인증을 지정해야 합니다. <br/> Active Directory 유니버설 인증에 대한 자세한 내용은 [SQL Database 및 SQL Data Warehouse에 대한 유니버설 인증(MFA에 대한 SSMS 지원)](/azure/sql-database/sql-database-ssms-mfa-authentication)을 참조하세요.|
 
 ### <a name="properties-specific-to-the-extract-action"></a>Extract 동작과 관련된 속성
 
-|속성|Value|Description|
+|속성|값|Description|
 |---|---|---|
 |**/p:**|CommandTimeout=(INT32 '60')|SQL Server에 대한 쿼리를 실행할 때 명령 시간 제한(초)을 지정합니다.|
 |**/p:**|DacApplicationDescription=(STRING)|DACPAC 메타데이터에 저장할 애플리케이션 설명을 정의합니다.|
@@ -155,8 +158,8 @@ SqlPackage.exe 게시 작업은 원본 데이터베이스의 구조와 일치하
 |**/TargetTimeout:**|**/tt**|{int}|대상 데이터베이스에 대한 연결을 설정하는 데 대한 제한 시간(초)을 지정합니다. Azure AD의 경우 이 값을 30초보다 크거나 같게 하는 것이 좋습니다.|
 |**/TargetTrustServerCertificate:**|**/ttsc**|{True&#124;False}|대상 데이터베이스 연결을 암호화하고 신뢰의 유효성을 검증하기 위한 인증서 체인 검색을 건너뛰는 데 TLS를 사용할지 여부를 지정합니다. |
 |**/TargetUser:**|**/tu**|{string}|SQL Server 인증 시나리오에서 대상 데이터베이스에 액세스하는 데 사용할 SQL Server 사용자를 정의합니다. |
-|**/TenantId:**|**/tid**|{string}|Azure AD 테넌트 ID 또는 도메인 이름을 나타냅니다. 이 옵션은 outlook.com, hotmail.com 또는 live.com과 같은 Microsoft 계정뿐만 아니라 게스트 또는 가져온 Azure AD 사용자를 지원해야 합니다. 이 매개 변수를 생략하면 인증된 사용자가 이 AD의 기본 사용자라고 가정하여 Azure AD의 기본 테넌트 ID가 사용됩니다. 그러나 이 경우 이 Azure AD에서 호스트되는 모든 게스트 또는 가져온 사용자 및/또는 Microsoft 계정은 지원되지 않으며 작업이 실패합니다. <br/> Active Directory 유니버설 인증에 대한 자세한 내용은 [SQL Database 및 SQL Data Warehouse에 대한 유니버설 인증(MFA에 대한 SSMS 지원)](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication)을 참조하세요.|
-|**/UniversalAuthentication:**|**/ua**|{True&#124;False}|유니버설 인증을 사용해야 하는지 여부를 지정합니다. True로 설정되면 대화형 인증 프로토콜이 MFA를 지원하도록 활성화됩니다. 이 옵션은 사용자가 사용자 이름 및 암호 또는 통합 인증(Windows 자격 증명)을 입력해야 하는 대화형 프로토콜을 사용하여 MFA가 없는 Azure AD 인증에도 사용할 수 있습니다. /UniversalAuthentication을 True로 설정하면 SourceConnectionString(/scs)에 Azure AD 인증을 지정할 수 없습니다. /UniversalAuthentication을 False로 설정하면 SourceConnectionString(/scs)에 Azure AD 인증을 지정해야 합니다. <br/> Active Directory 유니버설 인증에 대한 자세한 내용은 [SQL Database 및 SQL Data Warehouse에 대한 유니버설 인증(MFA에 대한 SSMS 지원)](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication)을 참조하세요.|
+|**/TenantId:**|**/tid**|{string}|Azure AD 테넌트 ID 또는 도메인 이름을 나타냅니다. 이 옵션은 outlook.com, hotmail.com 또는 live.com과 같은 Microsoft 계정뿐만 아니라 게스트 또는 가져온 Azure AD 사용자를 지원해야 합니다. 이 매개 변수를 생략하면 인증된 사용자가 이 AD의 기본 사용자라고 가정하여 Azure AD의 기본 테넌트 ID가 사용됩니다. 그러나 이 경우 이 Azure AD에서 호스트되는 모든 게스트 또는 가져온 사용자 및/또는 Microsoft 계정은 지원되지 않으며 작업이 실패합니다. <br/> Active Directory 유니버설 인증에 대한 자세한 내용은 [SQL Database 및 SQL Data Warehouse에 대한 유니버설 인증(MFA에 대한 SSMS 지원)](/azure/sql-database/sql-database-ssms-mfa-authentication)을 참조하세요.|
+|**/UniversalAuthentication:**|**/ua**|{True&#124;False}|유니버설 인증을 사용해야 하는지 여부를 지정합니다. True로 설정되면 대화형 인증 프로토콜이 MFA를 지원하도록 활성화됩니다. 이 옵션은 사용자가 사용자 이름 및 암호 또는 통합 인증(Windows 자격 증명)을 입력해야 하는 대화형 프로토콜을 사용하여 MFA가 없는 Azure AD 인증에도 사용할 수 있습니다. /UniversalAuthentication을 True로 설정하면 SourceConnectionString(/scs)에 Azure AD 인증을 지정할 수 없습니다. /UniversalAuthentication을 False로 설정하면 SourceConnectionString(/scs)에 Azure AD 인증을 지정해야 합니다. <br/> Active Directory 유니버설 인증에 대한 자세한 내용은 [SQL Database 및 SQL Data Warehouse에 대한 유니버설 인증(MFA에 대한 SSMS 지원)](/azure/sql-database/sql-database-ssms-mfa-authentication)을 참조하세요.|
 |**/Variables:**|**/v**|{PropertyName}={Value}|작업별 변수에 대한 이름 값 쌍을 지정합니다. {VariableName}={Value}. DACPAC 파일에는 유효한 SQLCMD 변수 목록이 포함됩니다. 모든 변수에 대해 값을 제공하지 않으면 오류가 발생합니다. |
 
 ### <a name="properties-specific-to-the-publish-action"></a>Publish 동작과 관련된 속성
@@ -289,8 +292,8 @@ SqlPackage.exe Export 작업은 SQL Server 또는 Azure SQL Database의 라이�
 |**/SourceTrustServerCertificate:**|**/stsc**|{True&#124;False}|원본 데이터베이스 연결을 암호화하고 신뢰의 유효성을 검증하기 위한 인증서 체인 검색을 건너뛰는 데 TLS를 사용할지 여부를 지정합니다. |
 |**/SourceUser:**|**/su**|{string}|SQL Server 인증 시나리오에서 원본 데이터베이스에 액세스하는 데 사용할 SQL Server 사용자를 정의합니다. |
 |**/TargetFile:**|**/tf**|{string}| 데이터베이스 대신 작업 대상으로 사용될 대상 파일(.dacpac 파일)을 지정합니다. 이 매개 변수를 사용하는 경우 다른 대상 매개 변수가 무효화됩니다. 이 매개 변수는 데이터베이스 대상만 지원하는 동작에는 유효하지 않습니다.|
-|**/TenantId:**|**/tid**|{string}|Azure AD 테넌트 ID 또는 도메인 이름을 나타냅니다. 이 옵션은 outlook.com, hotmail.com 또는 live.com과 같은 Microsoft 계정뿐만 아니라 게스트 또는 가져온 Azure AD 사용자를 지원해야 합니다. 이 매개 변수를 생략하면 인증된 사용자가 이 AD의 기본 사용자라고 가정하여 Azure AD의 기본 테넌트 ID가 사용됩니다. 그러나 이 경우 이 Azure AD에서 호스트되는 모든 게스트 또는 가져온 사용자 및/또는 Microsoft 계정은 지원되지 않으며 작업이 실패합니다. <br/> Active Directory 유니버설 인증에 대한 자세한 내용은 [SQL Database 및 SQL Data Warehouse에 대한 유니버설 인증(MFA에 대한 SSMS 지원)](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication)을 참조하세요.|
-|**/UniversalAuthentication:**|**/ua**|{True&#124;False}|유니버설 인증을 사용해야 하는지 여부를 지정합니다. True로 설정되면 대화형 인증 프로토콜이 MFA를 지원하도록 활성화됩니다. 이 옵션은 사용자가 사용자 이름 및 암호 또는 통합 인증(Windows 자격 증명)을 입력해야 하는 대화형 프로토콜을 사용하여 MFA가 없는 Azure AD 인증에도 사용할 수 있습니다. /UniversalAuthentication을 True로 설정하면 SourceConnectionString(/scs)에 Azure AD 인증을 지정할 수 없습니다. /UniversalAuthentication을 False로 설정하면 SourceConnectionString(/scs)에 Azure AD 인증을 지정해야 합니다. <br/> Active Directory 유니버설 인증에 대한 자세한 내용은 [SQL Database 및 SQL Data Warehouse에 대한 유니버설 인증(MFA에 대한 SSMS 지원)](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication)을 참조하세요.|
+|**/TenantId:**|**/tid**|{string}|Azure AD 테넌트 ID 또는 도메인 이름을 나타냅니다. 이 옵션은 outlook.com, hotmail.com 또는 live.com과 같은 Microsoft 계정뿐만 아니라 게스트 또는 가져온 Azure AD 사용자를 지원해야 합니다. 이 매개 변수를 생략하면 인증된 사용자가 이 AD의 기본 사용자라고 가정하여 Azure AD의 기본 테넌트 ID가 사용됩니다. 그러나 이 경우 이 Azure AD에서 호스트되는 모든 게스트 또는 가져온 사용자 및/또는 Microsoft 계정은 지원되지 않으며 작업이 실패합니다. <br/> Active Directory 유니버설 인증에 대한 자세한 내용은 [SQL Database 및 SQL Data Warehouse에 대한 유니버설 인증(MFA에 대한 SSMS 지원)](/azure/sql-database/sql-database-ssms-mfa-authentication)을 참조하세요.|
+|**/UniversalAuthentication:**|**/ua**|{True&#124;False}|유니버설 인증을 사용해야 하는지 여부를 지정합니다. True로 설정되면 대화형 인증 프로토콜이 MFA를 지원하도록 활성화됩니다. 이 옵션은 사용자가 사용자 이름 및 암호 또는 통합 인증(Windows 자격 증명)을 입력해야 하는 대화형 프로토콜을 사용하여 MFA가 없는 Azure AD 인증에도 사용할 수 있습니다. /UniversalAuthentication을 True로 설정하면 SourceConnectionString(/scs)에 Azure AD 인증을 지정할 수 없습니다. /UniversalAuthentication을 False로 설정하면 SourceConnectionString(/scs)에 Azure AD 인증을 지정해야 합니다. <br/> Active Directory 유니버설 인증에 대한 자세한 내용은 [SQL Database 및 SQL Data Warehouse에 대한 유니버설 인증(MFA에 대한 SSMS 지원)](/azure/sql-database/sql-database-ssms-mfa-authentication)을 참조하세요.|
 
 ### <a name="properties-specific-to-the-export-action"></a>Export 동작과 관련된 속성
 
@@ -311,7 +314,7 @@ SqlPackage.exe Import 작업은 BACPAC 패키지(.bacpac 파일)의 스키마 �
   
 ### <a name="help-for-command-actions"></a>명령 동작에 대한 도움말
 
-|매개 변수|약식|값|Description|
+|매개 변수|약식|값|설명|
 |---|---|---|---|
 |**/Action:**|**/a**|가져오기|수행할 작업을 지정합니다. |
 |**/AccessToken:**|**/at**|{string}| 대상 데이터베이스에 연결할 때 사용할 액세스 토큰 기반 인증 액세스 토큰을 지정합니다. |
@@ -329,12 +332,12 @@ SqlPackage.exe Import 작업은 BACPAC 패키지(.bacpac 파일)의 스키마 �
 |**/TargetTimeout:**|**/tt**|{int}|대상 데이터베이스에 대한 연결을 설정하는 데 대한 제한 시간(초)을 지정합니다. Azure AD의 경우 이 값을 30초보다 크거나 같게 하는 것이 좋습니다.|
 |**/TargetTrustServerCertificate:**|**/ttsc**|{True&#124;False}|대상 데이터베이스 연결을 암호화하고 신뢰의 유효성을 검증하기 위한 인증서 체인 검색을 건너뛰는 데 TLS를 사용할지 여부를 지정합니다. |
 |**/TargetUser:**|**/tu**|{string}|SQL Server 인증 시나리오에서 대상 데이터베이스에 액세스하는 데 사용할 SQL Server 사용자를 정의합니다. |
-|**/TenantId:**|**/tid**|{string}|Azure AD 테넌트 ID 또는 도메인 이름을 나타냅니다. 이 옵션은 outlook.com, hotmail.com 또는 live.com과 같은 Microsoft 계정뿐만 아니라 게스트 또는 가져온 Azure AD 사용자를 지원해야 합니다. 이 매개 변수를 생략하면 인증된 사용자가 이 AD의 기본 사용자라고 가정하여 Azure AD의 기본 테넌트 ID가 사용됩니다. 그러나 이 경우 이 Azure AD에서 호스트되는 모든 게스트 또는 가져온 사용자 및/또는 Microsoft 계정은 지원되지 않으며 작업이 실패합니다. <br/> Active Directory 유니버설 인증에 대한 자세한 내용은 [SQL Database 및 SQL Data Warehouse에 대한 유니버설 인증(MFA에 대한 SSMS 지원)](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication)을 참조하세요.|
-|**/UniversalAuthentication:**|**/ua**|{True&#124;False}|유니버설 인증을 사용해야 하는지 여부를 지정합니다. True로 설정되면 대화형 인증 프로토콜이 MFA를 지원하도록 활성화됩니다. 이 옵션은 사용자가 사용자 이름 및 암호 또는 통합 인증(Windows 자격 증명)을 입력해야 하는 대화형 프로토콜을 사용하여 MFA가 없는 Azure AD 인증에도 사용할 수 있습니다. /UniversalAuthentication을 True로 설정하면 SourceConnectionString(/scs)에 Azure AD 인증을 지정할 수 없습니다. /UniversalAuthentication을 False로 설정하면 SourceConnectionString(/scs)에 Azure AD 인증을 지정해야 합니다. <br/> Active Directory 유니버설 인증에 대한 자세한 내용은 [SQL Database 및 SQL Data Warehouse에 대한 유니버설 인증(MFA에 대한 SSMS 지원)](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication)을 참조하세요.|
+|**/TenantId:**|**/tid**|{string}|Azure AD 테넌트 ID 또는 도메인 이름을 나타냅니다. 이 옵션은 outlook.com, hotmail.com 또는 live.com과 같은 Microsoft 계정뿐만 아니라 게스트 또는 가져온 Azure AD 사용자를 지원해야 합니다. 이 매개 변수를 생략하면 인증된 사용자가 이 AD의 기본 사용자라고 가정하여 Azure AD의 기본 테넌트 ID가 사용됩니다. 그러나 이 경우 이 Azure AD에서 호스트되는 모든 게스트 또는 가져온 사용자 및/또는 Microsoft 계정은 지원되지 않으며 작업이 실패합니다. <br/> Active Directory 유니버설 인증에 대한 자세한 내용은 [SQL Database 및 SQL Data Warehouse에 대한 유니버설 인증(MFA에 대한 SSMS 지원)](/azure/sql-database/sql-database-ssms-mfa-authentication)을 참조하세요.|
+|**/UniversalAuthentication:**|**/ua**|{True&#124;False}|유니버설 인증을 사용해야 하는지 여부를 지정합니다. True로 설정되면 대화형 인증 프로토콜이 MFA를 지원하도록 활성화됩니다. 이 옵션은 사용자가 사용자 이름 및 암호 또는 통합 인증(Windows 자격 증명)을 입력해야 하는 대화형 프로토콜을 사용하여 MFA가 없는 Azure AD 인증에도 사용할 수 있습니다. /UniversalAuthentication을 True로 설정하면 SourceConnectionString(/scs)에 Azure AD 인증을 지정할 수 없습니다. /UniversalAuthentication을 False로 설정하면 SourceConnectionString(/scs)에 Azure AD 인증을 지정해야 합니다. <br/> Active Directory 유니버설 인증에 대한 자세한 내용은 [SQL Database 및 SQL Data Warehouse에 대한 유니버설 인증(MFA에 대한 SSMS 지원)](/azure/sql-database/sql-database-ssms-mfa-authentication)을 참조하세요.|
 
 Import 동작과 관련된 속성:
 
-|속성|Value|Description|
+|속성|값|Description|
 |---|---|---|
 |**/p:**|CommandTimeout=(INT32 '60')|SQL Server에 대한 쿼리를 실행할 때 명령 시간 제한(초)을 지정합니다.|
 |**/p:**|DatabaseEdition=({Basic&#124;Standard&#124;Premium&#124;DataWarehouse&#124;GeneralPurpose&#124;BusinessCritical&#124;Hyperscale&#124;Default} 'Default')|Azure SQL Database의 버전을 정의합니다.|
@@ -383,8 +386,8 @@ Import 동작과 관련된 속성:
 |**/TargetTimeout:**|**/tt**|{int}|대상 데이터베이스에 대한 연결을 설정하는 데 대한 제한 시간(초)을 지정합니다. Azure AD의 경우 이 값을 30초보다 크거나 같게 하는 것이 좋습니다.|
 |**/TargetTrustServerCertificate:**|**/ttsc**|{True&#124;False}|대상 데이터베이스 연결을 암호화하고 신뢰의 유효성을 검증하기 위한 인증서 체인 검색을 건너뛰는 데 TLS를 사용할지 여부를 지정합니다. |
 |**/TargetUser:**|**/tu**|{string}|SQL Server 인증 시나리오에서 대상 데이터베이스에 액세스하는 데 사용할 SQL Server 사용자를 정의합니다. |
-|**/TenantId:**|**/tid**|{string}|Azure AD 테넌트 ID 또는 도메인 이름을 나타냅니다. 이 옵션은 outlook.com, hotmail.com 또는 live.com과 같은 Microsoft 계정뿐만 아니라 게스트 또는 가져온 Azure AD 사용자를 지원해야 합니다. 이 매개 변수를 생략하면 인증된 사용자가 이 AD의 기본 사용자라고 가정하여 Azure AD의 기본 테넌트 ID가 사용됩니다. 그러나 이 경우 이 Azure AD에서 호스트되는 모든 게스트 또는 가져온 사용자 및/또는 Microsoft 계정은 지원되지 않으며 작업이 실패합니다. <br/> Active Directory 유니버설 인증에 대한 자세한 내용은 [SQL Database 및 SQL Data Warehouse에 대한 유니버설 인증(MFA에 대한 SSMS 지원)](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication)을 참조하세요.|
-|**/UniversalAuthentication:**|**/ua**|{True&#124;False}|유니버설 인증을 사용해야 하는지 여부를 지정합니다. True로 설정되면 대화형 인증 프로토콜이 MFA를 지원하도록 활성화됩니다. 이 옵션은 사용자가 사용자 이름 및 암호 또는 통합 인증(Windows 자격 증명)을 입력해야 하는 대화형 프로토콜을 사용하여 MFA가 없는 Azure AD 인증에도 사용할 수 있습니다. /UniversalAuthentication을 True로 설정하면 SourceConnectionString(/scs)에 Azure AD 인증을 지정할 수 없습니다. /UniversalAuthentication을 False로 설정하면 SourceConnectionString(/scs)에 Azure AD 인증을 지정해야 합니다. <br/> Active Directory 유니버설 인증에 대한 자세한 내용은 [SQL Database 및 SQL Data Warehouse에 대한 유니버설 인증(MFA에 대한 SSMS 지원)](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication)을 참조하세요.|
+|**/TenantId:**|**/tid**|{string}|Azure AD 테넌트 ID 또는 도메인 이름을 나타냅니다. 이 옵션은 outlook.com, hotmail.com 또는 live.com과 같은 Microsoft 계정뿐만 아니라 게스트 또는 가져온 Azure AD 사용자를 지원해야 합니다. 이 매개 변수를 생략하면 인증된 사용자가 이 AD의 기본 사용자라고 가정하여 Azure AD의 기본 테넌트 ID가 사용됩니다. 그러나 이 경우 이 Azure AD에서 호스트되는 모든 게스트 또는 가져온 사용자 및/또는 Microsoft 계정은 지원되지 않으며 작업이 실패합니다. <br/> Active Directory 유니버설 인증에 대한 자세한 내용은 [SQL Database 및 SQL Data Warehouse에 대한 유니버설 인증(MFA에 대한 SSMS 지원)](/azure/sql-database/sql-database-ssms-mfa-authentication)을 참조하세요.|
+|**/UniversalAuthentication:**|**/ua**|{True&#124;False}|유니버설 인증을 사용해야 하는지 여부를 지정합니다. True로 설정되면 대화형 인증 프로토콜이 MFA를 지원하도록 활성화됩니다. 이 옵션은 사용자가 사용자 이름 및 암호 또는 통합 인증(Windows 자격 증명)을 입력해야 하는 대화형 프로토콜을 사용하여 MFA가 없는 Azure AD 인증에도 사용할 수 있습니다. /UniversalAuthentication을 True로 설정하면 SourceConnectionString(/scs)에 Azure AD 인증을 지정할 수 없습니다. /UniversalAuthentication을 False로 설정하면 SourceConnectionString(/scs)에 Azure AD 인증을 지정해야 합니다. <br/> Active Directory 유니버설 인증에 대한 자세한 내용은 [SQL Database 및 SQL Data Warehouse에 대한 유니버설 인증(MFA에 대한 SSMS 지원)](/azure/sql-database/sql-database-ssms-mfa-authentication)을 참조하세요.|
 |**/Variables:**|**/v**|{PropertyName}={Value}|작업별 변수에 대한 이름 값 쌍을 지정합니다. {VariableName}={Value}. DACPAC 파일에는 유효한 SQLCMD 변수 목록이 포함됩니다. 모든 변수에 대해 값을 제공하지 않으면 오류가 발생합니다. |
 
 ## <a name="properties-specific-to-the-deployreport-action"></a>DeployReport 동작과 관련된 속성
@@ -489,7 +492,7 @@ Import 동작과 관련된 속성:
   
 ### <a name="help-for-driftreport-action"></a>DriftReport 동작에 대한 도움말
 
-|매개 변수|약식|값|Description|
+|매개 변수|약식|값|설명|
 |---|---|---|---|
 |**/Action:**|**/a**|DriftReport|수행할 작업을 지정합니다. |
 |**/AccessToken:**|**/at**|{string}| 대상 데이터베이스에 연결할 때 사용할 액세스 토큰 기반 인증 액세스 토큰을 지정합니다. |
@@ -507,8 +510,8 @@ Import 동작과 관련된 속성:
 |**/TargetTimeout:**|**/tt**|{int}|대상 데이터베이스에 대한 연결을 설정하는 데 대한 제한 시간(초)을 지정합니다. Azure AD의 경우 이 값을 30초보다 크거나 같게 하는 것이 좋습니다.|
 |**/TargetTrustServerCertificate:**|**/ttsc**|{True&#124;False}|대상 데이터베이스 연결을 암호화하고 신뢰의 유효성을 검증하기 위한 인증서 체인 검색을 건너뛰는 데 TLS를 사용할지 여부를 지정합니다. |
 |**/TargetUser:**|**/tu**|{string}|SQL Server 인증 시나리오에서 대상 데이터베이스에 액세스하는 데 사용할 SQL Server 사용자를 정의합니다. |
-|**/TenantId:**|**/tid**|{string}|Azure AD 테넌트 ID 또는 도메인 이름을 나타냅니다. 이 옵션은 outlook.com, hotmail.com 또는 live.com과 같은 Microsoft 계정뿐만 아니라 게스트 또는 가져온 Azure AD 사용자를 지원해야 합니다. 이 매개 변수를 생략하면 인증된 사용자가 이 AD의 기본 사용자라고 가정하여 Azure AD의 기본 테넌트 ID가 사용됩니다. 그러나 이 경우 이 Azure AD에서 호스트되는 모든 게스트 또는 가져온 사용자 및/또는 Microsoft 계정은 지원되지 않으며 작업이 실패합니다. <br/> Active Directory 유니버설 인증에 대한 자세한 내용은 [SQL Database 및 SQL Data Warehouse에 대한 유니버설 인증(MFA에 대한 SSMS 지원)](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication)을 참조하세요.|
-|**/UniversalAuthentication:**|**/ua**|{True&#124;False}|유니버설 인증을 사용해야 하는지 여부를 지정합니다. True로 설정되면 대화형 인증 프로토콜이 MFA를 지원하도록 활성화됩니다. 이 옵션은 사용자가 사용자 이름 및 암호 또는 통합 인증(Windows 자격 증명)을 입력해야 하는 대화형 프로토콜을 사용하여 MFA가 없는 Azure AD 인증에도 사용할 수 있습니다. /UniversalAuthentication을 True로 설정하면 SourceConnectionString(/scs)에 Azure AD 인증을 지정할 수 없습니다. /UniversalAuthentication을 False로 설정하면 SourceConnectionString(/scs)에 Azure AD 인증을 지정해야 합니다. <br/> Active Directory 유니버설 인증에 대한 자세한 내용은 [SQL Database 및 SQL Data Warehouse에 대한 유니버설 인증(MFA에 대한 SSMS 지원)](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication)을 참조하세요.|
+|**/TenantId:**|**/tid**|{string}|Azure AD 테넌트 ID 또는 도메인 이름을 나타냅니다. 이 옵션은 outlook.com, hotmail.com 또는 live.com과 같은 Microsoft 계정뿐만 아니라 게스트 또는 가져온 Azure AD 사용자를 지원해야 합니다. 이 매개 변수를 생략하면 인증된 사용자가 이 AD의 기본 사용자라고 가정하여 Azure AD의 기본 테넌트 ID가 사용됩니다. 그러나 이 경우 이 Azure AD에서 호스트되는 모든 게스트 또는 가져온 사용자 및/또는 Microsoft 계정은 지원되지 않으며 작업이 실패합니다. <br/> Active Directory 유니버설 인증에 대한 자세한 내용은 [SQL Database 및 SQL Data Warehouse에 대한 유니버설 인증(MFA에 대한 SSMS 지원)](/azure/sql-database/sql-database-ssms-mfa-authentication)을 참조하세요.|
+|**/UniversalAuthentication:**|**/ua**|{True&#124;False}|유니버설 인증을 사용해야 하는지 여부를 지정합니다. True로 설정되면 대화형 인증 프로토콜이 MFA를 지원하도록 활성화됩니다. 이 옵션은 사용자가 사용자 이름 및 암호 또는 통합 인증(Windows 자격 증명)을 입력해야 하는 대화형 프로토콜을 사용하여 MFA가 없는 Azure AD 인증에도 사용할 수 있습니다. /UniversalAuthentication을 True로 설정하면 SourceConnectionString(/scs)에 Azure AD 인증을 지정할 수 없습니다. /UniversalAuthentication을 False로 설정하면 SourceConnectionString(/scs)에 Azure AD 인증을 지정해야 합니다. <br/> Active Directory 유니버설 인증에 대한 자세한 내용은 [SQL Database 및 SQL Data Warehouse에 대한 유니버설 인증(MFA에 대한 SSMS 지원)](/azure/sql-database/sql-database-ssms-mfa-authentication)을 참조하세요.|
 
 ## <a name="script-parameters-and-properties"></a>스크립트 매개 변수 및 속성
 
@@ -516,7 +519,7 @@ Import 동작과 관련된 속성:
   
 ### <a name="help-for-the-script-action"></a>Script 동작에 대한 도움말
 
-|매개 변수|약식|값|Description|
+|매개 변수|약식|값|설명|
 |---|---|---|---|
 |**/Action:**|**/a**|스크립트|수행할 작업을 지정합니다. |
 |**/AccessToken:**|**/at**|{string}| 대상 데이터베이스에 연결할 때 사용할 액세스 토큰 기반 인증 액세스 토큰을 지정합니다. |
@@ -548,8 +551,8 @@ Import 동작과 관련된 속성:
 |**/TargetTimeout:**|**/tt**|{int}|대상 데이터베이스에 대한 연결을 설정하는 데 대한 제한 시간(초)을 지정합니다. Azure AD의 경우 이 값을 30초보다 크거나 같게 하는 것이 좋습니다.|
 |**/TargetTrustServerCertificate:**|**/ttsc**|{True&#124;False}|대상 데이터베이스 연결을 암호화하고 신뢰의 유효성을 검증하기 위한 인증서 체인 검색을 건너뛰는 데 TLS를 사용할지 여부를 지정합니다. |
 |**/TargetUser:**|**/tu**|{string}|SQL Server 인증 시나리오에서 대상 데이터베이스에 액세스하는 데 사용할 SQL Server 사용자를 정의합니다. |
-|**/TenantId:**|**/tid**|{string}|Azure AD 테넌트 ID 또는 도메인 이름을 나타냅니다. 이 옵션은 outlook.com, hotmail.com 또는 live.com과 같은 Microsoft 계정뿐만 아니라 게스트 또는 가져온 Azure AD 사용자를 지원해야 합니다. 이 매개 변수를 생략하면 인증된 사용자가 이 AD의 기본 사용자라고 가정하여 Azure AD의 기본 테넌트 ID가 사용됩니다. 그러나 이 경우 이 Azure AD에서 호스트되는 모든 게스트 또는 가져온 사용자 및/또는 Microsoft 계정은 지원되지 않으며 작업이 실패합니다. <br/> Active Directory 유니버설 인증에 대한 자세한 내용은 [SQL Database 및 SQL Data Warehouse에 대한 유니버설 인증(MFA에 대한 SSMS 지원)](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication)을 참조하세요.|
-|**/UniversalAuthentication:**|**/ua**|{True&#124;False}|유니버설 인증을 사용해야 하는지 여부를 지정합니다. True로 설정되면 대화형 인증 프로토콜이 MFA를 지원하도록 활성화됩니다. 이 옵션은 사용자가 사용자 이름 및 암호 또는 통합 인증(Windows 자격 증명)을 입력해야 하는 대화형 프로토콜을 사용하여 MFA가 없는 Azure AD 인증에도 사용할 수 있습니다. /UniversalAuthentication을 True로 설정하면 SourceConnectionString(/scs)에 Azure AD 인증을 지정할 수 없습니다. /UniversalAuthentication을 False로 설정하면 SourceConnectionString(/scs)에 Azure AD 인증을 지정해야 합니다. <br/> Active Directory 유니버설 인증에 대한 자세한 내용은 [SQL Database 및 SQL Data Warehouse에 대한 유니버설 인증(MFA에 대한 SSMS 지원)](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication)을 참조하세요.|
+|**/TenantId:**|**/tid**|{string}|Azure AD 테넌트 ID 또는 도메인 이름을 나타냅니다. 이 옵션은 outlook.com, hotmail.com 또는 live.com과 같은 Microsoft 계정뿐만 아니라 게스트 또는 가져온 Azure AD 사용자를 지원해야 합니다. 이 매개 변수를 생략하면 인증된 사용자가 이 AD의 기본 사용자라고 가정하여 Azure AD의 기본 테넌트 ID가 사용됩니다. 그러나 이 경우 이 Azure AD에서 호스트되는 모든 게스트 또는 가져온 사용자 및/또는 Microsoft 계정은 지원되지 않으며 작업이 실패합니다. <br/> Active Directory 유니버설 인증에 대한 자세한 내용은 [SQL Database 및 SQL Data Warehouse에 대한 유니버설 인증(MFA에 대한 SSMS 지원)](/azure/sql-database/sql-database-ssms-mfa-authentication)을 참조하세요.|
+|**/UniversalAuthentication:**|**/ua**|{True&#124;False}|유니버설 인증을 사용해야 하는지 여부를 지정합니다. True로 설정되면 대화형 인증 프로토콜이 MFA를 지원하도록 활성화됩니다. 이 옵션은 사용자가 사용자 이름 및 암호 또는 통합 인증(Windows 자격 증명)을 입력해야 하는 대화형 프로토콜을 사용하여 MFA가 없는 Azure AD 인증에도 사용할 수 있습니다. /UniversalAuthentication을 True로 설정하면 SourceConnectionString(/scs)에 Azure AD 인증을 지정할 수 없습니다. /UniversalAuthentication을 False로 설정하면 SourceConnectionString(/scs)에 Azure AD 인증을 지정해야 합니다. <br/> Active Directory 유니버설 인증에 대한 자세한 내용은 [SQL Database 및 SQL Data Warehouse에 대한 유니버설 인증(MFA에 대한 SSMS 지원)](/azure/sql-database/sql-database-ssms-mfa-authentication)을 참조하세요.|
 |**/Variables:**|**/v**|{PropertyName}={Value}|작업별 변수에 대한 이름 값 쌍을 지정합니다. {VariableName}={Value}. DACPAC 파일에는 유효한 SQLCMD 변수 목록이 포함됩니다. 모든 변수에 대해 값을 제공하지 않으면 오류가 발생합니다. |
 
 ### <a name="properties-specific-to-the-script-action"></a>Script 동작과 관련된 속성

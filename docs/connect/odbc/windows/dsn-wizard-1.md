@@ -1,4 +1,5 @@
 ---
+description: 데이터 원본 마법사 화면 1(ODBC Driver for SQL Server)
 title: 데이터 원본 마법사 화면 1(ODBC Driver for SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/27/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 28c89bd90a8182a8fd8114de4a9e2ec9da4e9464
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 78009925b5d62e8a314d0a3fdc27c29acaee5c5d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928256"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462227"
 ---
 # <a name="data-source-wizard-screen-1"></a>데이터 원본 마법사 화면 1
 
@@ -23,11 +24,11 @@ ms.locfileid: "80928256"
     
 ## <a name="options"></a>옵션
 
-### <a name="name"></a>속성
+### <a name="name"></a>이름
 
 ODBC 애플리케이션에서 데이터 원본에 대한 연결을 요청할 때 사용되는 데이터 원본 이름입니다(예: "Personnel"). 데이터 원본 이름은 ODBC 데이터 원본 관리자 대화 상자에 표시됩니다.
 
-### <a name="description"></a>Description
+### <a name="description"></a>설명
 
 (선택 사항) 데이터 원본의 설명입니다(예: "고용 날짜, 급여 내역, 모든 직원에 대한 현재 평가").
 

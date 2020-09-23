@@ -1,6 +1,6 @@
 ---
 title: BLOB 및 OLE 개체(OLE DB 드라이버) | Microsoft Docs
-description: BLOB 및 OLE 개체
+description: OLE DB Driver for SQL Server에서 ISequentialStream 인터페이스를 사용하여 대형 이진 개체로 SQL Server 데이터 형식에 대한 소비자 액세스를 지원하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 05/25/2020
 ms.prod: sql
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - storage object [OLE DB]
 - OLE DB Driver for SQL Server, BLOBs
 - large data, OLE objects
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 54f8b4c38c22bcb32b039d9f0f0887c298051302
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 50c19527b536da0a61d8aa6c7c76ec34010ea268
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942801"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88861416"
 ---
 # <a name="blobs-and-ole-objects"></a>BLOB 및 OLE 개체
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

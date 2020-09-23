@@ -1,4 +1,5 @@
 ---
+description: 작업 범주에 작업 할당
 title: 작업 범주에 작업 할당
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -18,21 +19,21 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 06/03/2020
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 70adaeed56ef0d209f83ba16d74f476a4e3f7d75
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5eb8916235521a4afcaa5df60776ef2778cda2ca
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755324"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88320189"
 ---
 # <a name="assign-a-job-to-a-job-category"></a>작업 범주에 작업 할당
 
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> 현재 [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)에서 일부 SQL Server 에이전트 기능이 지원됩니다. 자세한 내용은 [SQL Server에서 Azure SQL Database Managed Instance T-SQL 차이점](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)을 참조하세요.
+> 현재 [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)에서는 SQL Server 에이전트 기능이 대부분 지원됩니다. 자세한 내용은 [SQL Server와 Azure SQL Managed Instance 간의 T-SQL 차이점](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)을 참조하세요.
 
-이 문서에서는 [!INCLUDE[msCoName](../../includes/msconame_md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Server 관리 개체를 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] 에이전트 작업을 작업 범주에 할당하는 방법에 대해 설명합니다.  
+이 문서에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] 또는 SQL Server 관리 개체를 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업을 작업 범주에 할당하는 방법에 대해 설명합니다.  
   
 작업 범주를 사용하면 작업을 쉽게 필터링하고 그룹화할 수 있게 구성할 수 있습니다. 예를 들어 데이터베이스 유지 관리 범주에 있는 모든 데이터베이스 백업 작업을 구성할 수 있습니다. 작업을 기본 제공 작업 범주에 할당하거나 사용자 정의 작업 범주를 만든 다음 여기에 작업을 할당할 수 있습니다.  
 
@@ -53,7 +54,7 @@ ms.locfileid: "85755324"
   
 4.  편집할 작업을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 선택합니다.  
   
-5.  **작업 속성 -** _job\_name_ 대화 상자의 **범주** 목록에서 작업에 할당하려는 작업 범주를 선택합니다.  
+5.  **작업 속성 -**_job\_name_ 대화 상자의 **범주** 목록에서 작업에 할당하려는 작업 범주를 선택합니다.  
   
 6.  **확인**을 클릭합니다.  
   

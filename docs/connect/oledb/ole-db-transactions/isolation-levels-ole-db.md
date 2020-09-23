@@ -1,6 +1,6 @@
 ---
 title: 격리 수준(OLE DB 드라이버) | Microsoft Docs
-description: 격리 수준(OLE DB)
+description: OLE DB Driver for SQL Server 소비자가 연결에 대한 트랜잭션 격리 수준을 제어할 수 있는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - isolation levels [OLE DB]
 - transactions [OLE DB]
 - OLE DB Driver for SQL Server, transactions
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 60fce8b96ff116f1c1e92a75e1335a33207d36d3
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 87b3a348a7219eda5868223b167b2ecf851c2079
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244104"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88861878"
 ---
 # <a name="isolation-levels-ole-db"></a>격리 수준(OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

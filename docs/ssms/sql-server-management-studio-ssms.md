@@ -1,6 +1,6 @@
 ---
 title: SSMS(SQL Server Management Studio)
-description: SSMS(SQL Server Management Studio)란 무엇이며 수행할 수 있는 작업을 설명합니다.
+description: SSMS(SQL Server Management Studio)의 자세한 내용과 Analysis Services 솔루션을 관리하는 방법을 비롯하여 SMMS에서 수행할 수 있는 작업에 대해 알아봅니다.
 ms.prod: sql
 ms.technology: ssms
 ms.topic: overview
@@ -16,12 +16,12 @@ helpviewer_keywords:
 - SQL Server Management Studio for Analysis Services
 ms.custom: seo-lt-2019
 ms.date: 09/11/2019
-ms.openlocfilehash: 80f6a13c952c09153713a36e3e0f8f979ee7bcd3
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 0b46427196ad48bc6dbfaeaca25fa7e327d114f8
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001592"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480454"
 ---
 # <a name="what-is-sql-server-management-studio-ssms"></a>SSMS(SQL Server Management Studio)란?
 
@@ -43,7 +43,7 @@ ms.locfileid: "86001592"
 |**템플릿 탐색기**를 사용하여 쿼리 및 스크립트 개발 속도를 높이는 데 사용하는 상용구 텍스트 파일을 작성 및 관리하는 방법입니다.|[템플릿 탐색기](../ssms/template/template-explorer.md)|  
 |사용되지 않는 **솔루션 탐색기** 를 사용하여 쿼리 및 스크립트와 같은 관리 항목을 관리하는 데 사용되는 프로젝트를 작성하는 방법입니다.|[솔루션 탐색기](../ssms/solution/solution-explorer.md)|  
 |[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]에 포함된 비주얼 디자인 도구를 사용하는 방법입니다.|[Visual Database Tools](../ssms/visual-db-tools/visual-database-tools.md)|  
-|[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 언어 편집기를 사용하여 쿼리와 스크립트를 대화식으로 작성 및 디버깅하는 방법입니다.|[쿼리 및 텍스트 편집기](scripting/query-and-text-editors-sql-server-management-studio.md)
+|[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 언어 편집기를 사용하여 쿼리와 스크립트를 대화식으로 작성 및 디버깅하는 방법입니다.|[쿼리 및 텍스트 편집기](https://docs.microsoft.com/sql/ssms/f1-help/database-engine-query-editor-sql-server-management-studio?view=sql-server-ver15)
 
 ## <a name="sql-server-management-studio-for-business-intelligence"></a>비즈니스 인텔리전스용 SQL Server Management Studio
 

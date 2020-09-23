@@ -1,7 +1,8 @@
 ---
-title: '방법: MARS(Multiple Active Result Set)를 사용하지 않도록 설정 | Microsoft Docs'
+title: '방법: MARS(Multiple Active Rresultsets)를 사용하지 않도록 설정'
+description: Microsoft Drivers for PHP for SQL Server를 사용할 때 MARS(Multiple Active Resultsets) 지원을 사용하지 않도록 설정하는 방법을 알아봅니다.
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: 1912ad05-d0a4-40ff-8888-0d85bb36a807
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2fb65eee416fd82ae36b020049d318a2c5d2333d
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 544d64a8c81342fbb3592371098a5e2ddec60ee5
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80916349"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680698"
 ---
 # <a name="how-to-disable-multiple-active-resultsets-mars"></a>방법: MARS(Multiple Active Resultsets)를 사용하지 않도록 설정
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 MARS(Multiple Active Result Sets)를 사용하지 않도록 설정된 SQL Server 데이터 원본에 연결해야 하는 경우 MultipleActiveResultSets 연결 옵션을 사용하여 MARS를 사용하거나 사용하지 않도록 설정할 수 있습니다.  
   
-## <a name="procedure"></a>절차  
+## <a name="procedure"></a>프로시저  
   
 #### <a name="to-disable-mars-support"></a>MARS 지원을 사용하지 않도록 설정하려면  
   

@@ -1,4 +1,5 @@
 ---
+description: SQL Server 에이전트
 title: SQL Server 에이전트
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -14,19 +15,19 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9914ebe147344b24352b97d018166601077a8895
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ec94ebc0b62194a8b6201ccd9a7a2c6cfe8c3ba8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755116"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418019"
 ---
 # <a name="sql-server-agent"></a>SQL Server 에이전트
 
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> 현재 [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)에서 일부 SQL Server 에이전트 기능이 지원됩니다. 자세한 내용은 [SQL Server에서 Azure SQL Database Managed Instance T-SQL 차이점](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)을 참조하세요.
+> 현재 [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)에서는 SQL Server 에이전트 기능이 대부분 지원됩니다. 자세한 내용은 [SQL Server와 Azure SQL Managed Instance 간의 T-SQL 차이점](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)을 참조하세요.
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트는 *에서* 작업 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]이라고 하는 일정이 지정된 관리 태스크를 실행하는 Microsoft Windows 서비스입니다.  
 
@@ -39,10 +40,10 @@ ms.locfileid: "85755116"
 > [!NOTE]  
 > 기본적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스는 자동으로 시작되도록 사용자가 명시적으로 선택하지 않으면 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 설치 시 해제됩니다.  
   
-## <a name="sql-server-agent-components"></a><a name="Components"></a>SQL Server 에이전트 구성 요소  
+## <a name="sql-server-agent-components"></a><a name="Components"></a>SQL Server Agent Components  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트에서는 다음 구성 요소를 사용하여 수행될 태스크, 태스크를 수행할 시기 및 태스크의 성공 또는 실패를 보고하는 방법을 정의합니다.  
   
-### <a name="jobs"></a>교육  
+### <a name="jobs"></a>작업  
 *작업* 은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트에서 수행하도록 지정된 일련의 동작입니다. 작업을 사용하여 두 번 이상 실행할 수 있으며 성공 또는 실패를 모니터링하는 관리 작업을 정의합니다. 하나의 로컬 서버 또는 여러 원격 서버에서 작업을 실행할 수 있습니다.  
   
 > [!IMPORTANT]  
@@ -111,7 +112,7 @@ ms.locfileid: "85755116"
   
 전자 메일 또는 호출기를 사용하여 운영자에게 알림을 보내려면 데이터베이스 메일을 사용하도록 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트를 구성해야 합니다. 자세한 내용은 [데이터베이스 메일](../../relational-databases/database-mail/database-mail.md)을 참조하세요.  
   
-개인으로 구성된 그룹의 별칭으로 운영자를 정의할 수 있습니다. 이런 방법으로 해당 별칭에 속하는 모든 멤버는 동시에 알림을 받습니다. 자세한 내용은 [운영자](../../ssms/agent/operators.md)를 참조하세요.  
+개인으로 구성된 그룹의 별칭으로 운영자를 정의할 수 있습니다. 이런 방법으로 해당 별칭에 속하는 모든 멤버는 동시에 알림을 받습니다. 자세한 내용은 [연산자](../../ssms/agent/operators.md)를 참조하세요.  
   
 ## <a name="security-for-sql-server-agent-administration"></a><a name="Security"></a>SQL Server 에이전트 관리 보안  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트는 **msdb**데이터베이스에서 **sysadmin**고정 서버 역할의 멤버가 아닌 사용자의 **에이전트에 대한 액세스를 제어하는** SQLAgentUserRole **,** SQLAgentReaderRole [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 **SQLAgentOperatorRole** 고정 데이터베이스 역할을 사용합니다. 이러한 고정 데이터베이스 역할 외에도 데이터베이스 관리자는 하위 시스템과 프록시를 사용하여 각 작업 단계가 태스크 수행에 필요한 최소 권한으로 실행되도록 합니다.  
@@ -124,7 +125,7 @@ ms.locfileid: "85755116"
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 정의되어 있는 하위 시스템을 나열합니다.  
   
-|하위 시스템 이름|Description|  
+|하위 시스템 이름|설명|  
 |--------------|-----------|  
 |Microsoft ActiveX 스크립트|ActiveX 스크립팅 작업 단계를 실행합니다.<br /><br />**경고** 이후 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 ActiveX 스크립팅 하위 시스템이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트에서 제거될 예정입니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요.|  
 |운영 체제(**CmdExec**)|실행 프로그램을 실행합니다.|  

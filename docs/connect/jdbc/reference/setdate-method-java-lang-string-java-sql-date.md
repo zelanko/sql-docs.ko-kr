@@ -1,4 +1,5 @@
 ---
+description: setDate 메서드 - 날짜 값에 대한 setDate 메서드 - string
 title: setDate 메서드 - 날짜 값에 대한 setDate 메서드 - string | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 4762e2bd-5e94-4562-97d5-f023ecffc08c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6866a4c91a05911eccde71993db8526e8301c152
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 7026d1594a8c5d1dde27cedf926787231b0889e4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80901955"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88432025"
 ---
 # <a name="setdate-method-javalangstring-javasqldate"></a>setDate 메서드(java.lang.String, java.sql.Date)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 65ede143baab867d77704ce4e776515d5d7d32de
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 66abbc624cfb4126a55ce36b9ea67cbdd9aaeff2
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110176"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88860023"
 ---
 # <a name="monitor-python-and-r-scripts-with-extended-events-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services에서 확장 이벤트를 사용하여 Python 및 R 스크립트 모니터링
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 확장 이벤트를 사용하여 SQL Server Machine Learning Services, SQL Server 실행 패드, Python 또는 R 작업 외부 스크립트와 관련된 작업을 모니터링하고 문제를 해결하는 방법에 대해 알아봅니다.
 
@@ -53,8 +53,8 @@ AND p.name = 'SQLSatellite';
 |satellite_abort_connection|연결 기록을 중단합니다.||  
 |satellite_abort_received|위성 연결을 통해 중단 메시지를 수신하는 경우 실행됩니다.||  
 |satellite_abort_sent|위성 연결을 통해 중단 메시지가 전송되는 경우 실행됩니다.||  
-|satellite_authentication_completion|TCP 또는 Namedpipe를 통해 연결 인증이 완료되면 실행됩니다.||  
-|satellite_authorization_completion|TCP 또는 Namedpipe를 통해 연결 권한 부여가 완료되면 실행됩니다.||  
+|satellite_authentication_completion|TCP 또는 명명된 파이프를 통해 연결 인증이 완료되면 실행됩니다.||  
+|satellite_authorization_completion|TCP 또는 명명된 파이프를 통해 연결 권한 부여가 완료되면 실행됩니다.||  
 |satellite_cleanup|위성 호출을 정리할 때 실행됩니다.|외부 프로세스를 통해서만 실행됩니다. 외부 프로세스 이벤트 수집에 대한 지침을 참조하십시오.|  
 |satellite_data_chunk_sent|위성 연결이 단일 데이터 청크 보내기를 마칠 때 실행됩니다.|이 이벤트는 전송된 행 수, 열 수, 사용된 SNI 패킷 수, 청크를 전송하는 동안 경과된 시간(밀리초)을 보고합니다. 이 정보는 각 유형의 데이터를 전달하는 데 소비된 시간 및 사용된 패킷 수를 파악하는 데 도움이 됩니다.|  
 |satellite_data_receive_completion|위성 연결을 통해 쿼리에 필요한 모든 데이터를 수신한 경우에 실행됩니다.|외부 프로세스를 통해서만 실행됩니다. 외부 프로세스 이벤트 수집에 대한 지침을 참조하십시오.|  
@@ -102,7 +102,7 @@ SQL Server Machine Learning Services는 SQL Server 프로세스 외부에서 실
      
     **R:** `C:\Program Files\Microsoft SQL Server\MSSQL_version_number.MSSQLSERVER\R_SERVICES\library\RevoScaleR\rxLibs\x64`.  
 
-    **Python:** `C:\Program Files\Microsoft SQL Server\MSSQL_version_number.MSSQLSERVER\PYTHON_SERVICES\library\RevoScaleR\rxLibs\x64`.
+    **Python:** `C:\Program Files\Microsoft SQL Server\MSSQL_version_number.MSSQLSERVER\PYTHON_SERVICES\Lib\site-packages\revoscalepy\rxLibs`.
 
 구성 파일은 "[name].xevents.xml" 형식을 사용하여 실행 파일과 같은 이름을 지정해야 합니다. 즉, 파일 이름을 다음과 같이 지정해야 합니다.
 
@@ -112,7 +112,7 @@ SQL Server Machine Learning Services는 SQL Server 프로세스 외부에서 실
 구성 파일 자체의 형식은 다음과 같습니다.
 
 ```xml
-\<?xml version="1.0" encoding="utf-8"?>  
+<?xml version="1.0" encoding="utf-8"?>  
 <event_sessions>  
 <event_session name="[session name]" maxMemory="1" dispatchLatency="1" MaxDispatchLatency="2 SECONDS">  
     <description owner="you">Xevent for launchpad or bxl server.</description>  

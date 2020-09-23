@@ -1,20 +1,20 @@
 ---
 title: 지원 종료 옵션
 description: SQL Server 2005, SQL Server 2008 및 SQL Server 2008 R2와 같이 지원 종료에 도달하는 SQL Server 제품에 사용할 수 있는 다양한 옵션에 대해 알아봅니다.
-ms.date: 12/18/2019
+ms.date: 08/12/2020
 ms.prod: sql
 ms.technology: install
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 ms.reviewer: pmasl
-monikerRange: =sql-server-previousversions||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: d3143a586c54f0c908e80ca9e78041c9f1996931
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
+ms.openlocfilehash: 378af311994d2aa478df0c673e0a1f0162d4dbfd
+ms.sourcegitcommit: bf5acef60627f77883249bcec4c502b0205300a4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112100"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88200298"
 ---
 # <a name="sql-server-end-of-support-options"></a>SQL Server 지원 종료 옵션 
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -80,7 +80,7 @@ ms.locfileid: "87112100"
 - [SQL Server 2019](../install/hardware-and-software-requirements-for-installing-sql-server-ver15.md)    
 
 지원되는 버전 및 에디션 업그레이드:
-- [SQL Server 2016](../../database-engine/install-windows/supported-version-and-edition-upgrades.md?view=sql-server-2016) 
+- [SQL Server 2016](../../database-engine/install-windows/supported-version-and-edition-upgrades.md?view=sql-server-2016&preserve-view=true) 
 - [SQL Server 2017](../../database-engine/install-windows/supported-version-and-edition-upgrades-2017.md)
 - [SQL Server 2019](../../database-engine/install-windows/supported-version-and-edition-upgrades-version-15.md)
 
@@ -165,7 +165,7 @@ ms.locfileid: "87112100"
 
 - **비용**: 단일 데이터베이스는 하드웨어, 소프트웨어 및 유지 관리가 오프로드되고 초당 또는 시간당 사용량에 대해 비용을 지불할 수 있으므로 비용 효율적일 수 있습니다. 
 - **유연성**: 단일 데이터베이스는 개발자 생산성과 신속한 솔루션 출시가 중요하거나 외부 액세스가 필요한 클라우드용 애플리케이션에 특히 적합합니다.  
-- **일반 기능**: 흔히 사용되는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 기능을 사용할 수 있지만 Azure SQL Database 관리되는 인스턴스만큼 많지는 않습니다.  
+- **일반 기능**: 흔히 사용되는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 기능을 사용할 수 있지만 SQL Managed Instance만큼 많지는 않습니다.  
 - **신속한 배포**: 단일 데이터베이스를 신속하게 배포할 수 있습니다. 
 - **확장성**: 비즈니스 필요에 따라 빠르고 쉽게 확장 및 축소할 수 있어 추가로 비용 절감 혜택을 제공합니다. 
 - **가용성**: 서비스 비용은 스토리지 및 고가용성(99.995% 가용성을 보장)을 모두 포함합니다.  
@@ -177,7 +177,7 @@ ms.locfileid: "87112100"
 ### <a name="considerations"></a>고려 사항
 
 - **제한된 마이그레이션 옵션**:  전체 인스턴스가 아니라 한 번에 하나의 데이터베이스만 마이그레이션할 수 있습니다.   
-- **기능 제한**:  가장 일반적으로 사용되는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 기능을 사용할 수 있지만 단일 데이터베이스의 기능 집합은 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 관리되는 인스턴스 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]만큼 완벽하지 않습니다. 
+- **기능 제한**:  가장 일반적으로 사용되는 Azure SQL Database 기능을 사용할 수 있지만 단일 데이터베이스의 기능 집합은 Azure SQL Managed Instance 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]만큼 완벽하지 않습니다. 
 - **Transact-SQL 차이점**:  단일 데이터베이스와 온-프레미스 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 간에는 몇 가지 [!INCLUDE[tsql](../../includes/tsql-md.md)](T-SQL) 차이가 있습니다. 
 - **크기 제한**:  단일 데이터베이스의 최대 데이터베이스 크기는 100TB로, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 524PB와는 차이가 있습니다. 
 - **유지 관리 시간**: 거의 투명하기는 하지만 정확한 유지 관리 시간에 대한 보장은 없습니다. 
@@ -197,9 +197,9 @@ ms.locfileid: "87112100"
 - [데이터 Migration Assistant](../../dma/dma-overview.md)
 - [Database Migration Service](/azure/dms/dms-overview)
 
-## <a name="azure-sql-database-managed-instance"></a>Azure SQL Database Managed Instance
+## <a name="sql-managed-instance"></a>SQL Managed Instance
 
-유지 관리 오프로딩과 비용을 활용하고 싶지만 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 단일 데이터베이스의 기능 집합이 너무 제한적이라면 [Azure SQL Database 관리되는 인스턴스](/azure/sql-database/sql-database-managed-instance)로 이동할 수 있습니다. 관리되는 인스턴스는 온-프레미스 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 매우 비슷하지만 하드웨어 오류 또는 패치 적용 등은 걱정할 필요가 없습니다. 관리되는 인스턴스는 공유 리소스 집합을 사용하는 시스템 및 사용자 데이터베이스 컬렉션으로, 리프트 앤 시프트가 준비되어 대부분의 클라우드 마이그레이션에 사용할 수 있습니다. 이 옵션은 최소한의 변경으로 클라우드 마이그레이션이 가능하고 안정적인 최신 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 기능을 사용하려는 새 애플리케이션 또는 기존 온-프레미스 애플리케이션에 가장 적합합니다. 
+유지 관리 오프로딩과 비용을 활용하고 싶지만 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 단일 데이터베이스의 기능 집합이 너무 제한적이라면 [SQL Managed Instance](/azure/sql-database/sql-database-managed-instance)로 이동할 수 있습니다. 관리되는 인스턴스는 온-프레미스 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 매우 비슷하지만 하드웨어 오류 또는 패치 적용 등은 걱정할 필요가 없습니다. Managed Instance는 공유 리소스 집합을 사용하는 시스템 및 사용자 데이터베이스 컬렉션으로, 리프트 앤 시프트가 준비되어 대부분의 클라우드 마이그레이션에 사용할 수 있습니다. 이 옵션은 최소한의 변경으로 클라우드 마이그레이션이 가능하고 안정적인 최신 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 기능을 사용하려는 새 애플리케이션 또는 기존 온-프레미스 애플리케이션에 가장 적합합니다. 
 
 ### <a name="benefits"></a>이점
 
@@ -225,10 +225,10 @@ ms.locfileid: "87112100"
 
 ### <a name="resources"></a>리소스
 
-[Azure SQL Database Managed Instance 개요](/azure/sql-database/sql-database-managed-instance)       
+[SQL Managed Instance 개요](/azure/sql-database/sql-database-managed-instance)       
 [Azure SQL 옵션 선택](/azure/sql-database/sql-database-paas-vs-sql-server-iaas)       
 [SQL Database 기능 비교](/azure/sql-database/sql-database-features)       
-[SQL Server를 관리되는 인스턴스로 마이그레이션](/azure/sql-database/sql-database-managed-instance-migrate)       
+[SQL Server를 Azure SQL Managed Instance로 마이그레이션](/azure/sql-database/sql-database-managed-instance-migrate)       
 [광범위한 마이그레이션 프로세스](/azure/cloud-adoption-framework/migrate/expanded-scope/sql-migration)       
 
 도구:

@@ -1,4 +1,5 @@
 ---
+description: 경고
 title: 경고
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -23,19 +24,19 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 338493592a01031542d316df2c454bb09ff9b68d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7fa31500bd90ab993f58a2e27e1a41c937ad0370
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755311"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88320269"
 ---
 # <a name="alerts"></a>경고
 
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 > [!IMPORTANT]  
-> 현재 [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)에서 일부 SQL Server 에이전트 기능이 지원됩니다. 자세한 내용은 [SQL Server에서 Azure SQL Database Managed Instance T-SQL 차이점](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)을 참조하세요.
+> 현재 [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)에서는 SQL Server 에이전트 기능이 대부분 지원됩니다. 자세한 내용은 [SQL Server와 Azure SQL Managed Instance 간의 T-SQL 차이점](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)을 참조하세요.
 
 이벤트는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 생성되어 [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows 애플리케이션 로그에 입력됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트에서 애플리케이션 로그를 판독하고 기록된 이벤트와 사용자가 정의한 경고를 비교합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 일치하는 내용을 찾으면 이벤트에 대해 자동화된 응답으로 경고가 발생합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이벤트를 모니터링할 뿐 아니라 성능 조건 및 WMI(Windows Management Instrumentation) 이벤트도 모니터링할 수 있습니다.  
   
@@ -68,7 +69,7 @@ ms.locfileid: "85755311"
   
     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 특정 오류가 발생하면 에이전트에서 경고를 표시합니다. 예를 들어 무단으로 DBCC(Database Console Commands)를 호출하려는 시도에 응답하도록 오류 번호 2571을 지정해야 합니다.  
   
--   **심각도**  
+-   **심각도 수준**  
   
     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 특정 심각도에 이르는 오류가 발생하면 에이전트에서 경고를 표시합니다. 예를 들어 Transact-SQL 문의 구문 오류에 응답하도록 심각도 15를 지정할 수 있습니다.  
   
@@ -99,7 +100,7 @@ ms.locfileid: "85755311"
   
     경고의 임계값과 경고를 생성하는 동작입니다. 임계값은 숫자입니다. 동작은 값에 지정된 숫자 **미만**, **동일**또는 **초과**중 하나입니다. **값** 은 성능 조건 카운터를 나타내는 숫자입니다. 예를 들어 **Lock Wait Time** 이 30분을 초과할 때 성능 개체 **SQLServer:Locks** 에 대해 경고가 발생하도록 설정하려면 **초과** 를 선택하고 **값으로30을 지정**합니다.  
   
-    다른 예로 **tempdb** 의 사용 가능한 공간이 1000KB 미만일 때 성능 개체 **SQLServer:Transactions** 에 대해 경고가 발생하도록 지정할 수도 있습니다. 이렇게 설정하려면 **Free space in tempdb (KB)** 카운터, **미만**및 **값** **1000**을 선택합니다.  
+    다른 예로 **tempdb** 의 사용 가능한 공간이 1000KB 미만일 때 성능 개체 **SQLServer:Transactions** 에 대해 경고가 발생하도록 지정할 수도 있습니다. 이렇게 설정하려면 **Free space in tempdb (KB)** 카운터, **미만**및 **값****1000**을 선택합니다.  
   
     > [!NOTE]  
     > 성능 데이터를 주기적으로 샘플링하므로 도달할 임계값과 성능 경고의 발생 간에 몇 초 정도 지연될 수 있습니다.  

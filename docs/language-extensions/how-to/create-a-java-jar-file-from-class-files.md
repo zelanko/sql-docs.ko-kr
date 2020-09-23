@@ -1,6 +1,6 @@
 ---
 title: 클래스 파일에서 Java jar 파일 만들기
-description: 클래스 파일에서 Java jar 파일을 만드는 방법을 알아봅니다.
+description: SQL Server 언어 확장을 사용하여 Java 코드를 실행할 때 클래스 파일을 jar 파일로 패키지합니다.
 author: dphansen
 ms.author: davidph
 ms.date: 11/05/2019
@@ -8,15 +8,15 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a105dde9046167257a86705f678466872785b4be
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c324fca6893af35cafe6e9f65eccd0e8a0e478f9
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85735089"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88180285"
 ---
 # <a name="create-a-java-jar-file-from-class-files"></a>클래스 파일에서 Java jar 파일 만들기
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
 [SQL Server 언어 확장](../language-extensions-overview.md)을 사용하여 Java 코드를 실행할 때 클래스 파일을 jar 파일로 패키징하는 방법을 알아봅니다. 파일을 패키징하는 것이 좋습니다.
 

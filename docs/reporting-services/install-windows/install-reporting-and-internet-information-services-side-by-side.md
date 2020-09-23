@@ -1,4 +1,5 @@
 ---
+description: Reporting Services와 인터넷 정보 서비스 함께 설치
 title: Reporting Services와 인터넷 정보 서비스 함께 설치 | Microsoft Docs
 ms.date: 07/02/2017
 ms.prod: reporting-services
@@ -9,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 9b651fa5-f582-4f18-a77d-0dde95d9d211
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b854add44b256078cd19963f2ef22d55a7b3d300
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6e32958f17e4cdb57b37fcf4a85ad54a11b48821
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "64330624"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472685"
 ---
 # <a name="install-reporting-and-internet-information-services-side-by-side"></a>Reporting Services와 인터넷 정보 서비스 함께 설치
 
@@ -24,7 +25,7 @@ ms.locfileid: "64330624"
 
 SSRS(SQL Server Reporting Services)와 IIS(인터넷 정보 서비스)를 같은 컴퓨터에 설치하고 실행할 수 있습니다. 사용하는 IIS 버전에 따라 해결해야 하는 상호 운용성 문제가 결정됩니다.  
   
-|IIS 버전|문제|Description|  
+|IIS 버전|문제|설명|  
 |-----------------|------------|-----------------|  
 |8.0, 8.5|한 애플리케이션을 대상으로 하는 요청이 다른 애플리케이션에 받아들여집니다.<br /><br /> HTTP.SYS는 URL 예약에 대한 선행 규칙을 적용합니다. URL 예약이 다른 애플리케이션의 URL 예약에 비해 약한 경우에는 가상 디렉터리 이름이 동일하며 포트 80을 함께 모니터링하는 애플리케이션으로 전송된 요청이 의도한 대상에 도달하지 않을 수 있습니다.|상황에 따라 URL 예약 스키마의 다른 URL 엔드포인트를 대체하는 등록된 엔드포인트가 다른 애플리케이션을 대상으로 하는 HTTP 요청을 받을 수 있습니다.<br /><br /> 보고서 서버 웹 서비스 및 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] 에 고유한 가상 디렉터리 이름을 사용하면 이러한 충돌을 방지할 수 있습니다.<br /><br /> 이 시나리오에 대한 자세한 내용은 이 항목에 제공되어 있습니다.|  
   
@@ -52,10 +53,10 @@ SSRS(SQL Server Reporting Services)와 IIS(인터넷 정보 서비스)를 같은
 ## <a name="url-reservations-for-iis-80-85-with-sql-server-reporting-services"></a>SQL Server Reporting Services를 사용하여 IIS 8.0, 8.5에 대해 URL 예약  
  이전 섹션에 요약된 우선 순위 규칙을 기반으로 Reporting Services 및 IIS에 대해 정의된 URL 예약이 상호 운용성을 향상시키는 방식을 이해할 수 있습니다. Reporting Services는 해당 애플리케이션의 가상 디렉터리 이름을 명시적으로 지정하는 요청을 받습니다. IIS는 나머지 요청을 모두 받은 다음 이를 IIS 프로세스 모델 내에서 실행되는 애플리케이션으로 전송할 수 있습니다.  
   
-|애플리케이션|URL 예약|Description|요청 수신|  
+|애플리케이션|URL 예약|설명|요청 수신|  
 |-----------------|---------------------|-----------------|---------------------|  
-|보고서 서버|`https://+:80/ReportServer`|포트 80에서 ReportServer 가상 디렉터리가 있는 강력한 와일드카드입니다.|포트 80에서 ReportServer 가상 디렉터리를 지정하는 모든 요청을 받습니다. 보고서 서버 웹 서비스는 https://\<computername>/reportserver에 대한 모든 요청을 받습니다.|  
-|웹 포털|`https://+:80/Reports`|포트 80에서 Reports 가상 디렉터리가 있는 강력한 와일드카드입니다.|포트 80에서 Reports 가상 디렉터리를 지정하는 모든 요청을 받습니다. [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]는 https://\<computername>/reports에 대한 모든 요청을 받습니다.|  
+|보고서 서버|`https://+:80/ReportServer`|포트 80에서 ReportServer 가상 디렉터리가 있는 강력한 와일드카드입니다.|포트 80에서 ReportServer 가상 디렉터리를 지정하는 모든 요청을 받습니다. 보고서 서버 웹 서비스는 https://\<computername>/reportserver에 대한 모든 요청을 수신합니다.|  
+|웹 포털|`https://+:80/Reports`|포트 80에서 Reports 가상 디렉터리가 있는 강력한 와일드카드입니다.|포트 80에서 Reports 가상 디렉터리를 지정하는 모든 요청을 받습니다. [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]는 https://\<computername>/reports에 대한 모든 요청을 수신합니다.|  
 |IIS|`https://*:80/`|포트 80의 약한 와일드카드입니다.|포트 80에서 다른 애플리케이션이 받지 않은 모든 나머지 요청을 받습니다.|  
 
 ## <a name="side-by-side-deployments-of-sql-server-reporting-services-on-iis-80-85"></a>IIS 8.0, 8.5에서 SQL Server Reporting Services 함께 배포

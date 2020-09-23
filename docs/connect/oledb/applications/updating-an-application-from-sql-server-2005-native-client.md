@@ -1,6 +1,6 @@
 ---
 title: SQL Server 2005 Native Client에서 애플리케이션 업데이트 | Microsoft Docs
-description: SQL Server 2005 Native Client에서 애플리케이션 업데이트
+description: SQL Server 2005(9.x)에서 SQL Server Native Client 이후 OLE DB Driver for SQL Server의 주요 변경 내용에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -10,14 +10,14 @@ ms.technology: connectivity
 ms.topic: reference
 helpviewer_keywords:
 - OLE DB Driver for SQL Server, updating applications
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: e2bf701b09740174cce2bf0df118ff0bb2609502
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 40b101c189832a91dd06d1bba58b17c341d11130
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245082"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88860044"
 ---
 # <a name="updating-applications-from-sql-server-2005-native-client"></a>SQL Server 2005 Native Client에서 애플리케이션 업데이트
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

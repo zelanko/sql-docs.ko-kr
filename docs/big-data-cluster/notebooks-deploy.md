@@ -1,7 +1,7 @@
 ---
 title: '배포: Azure Data Studio Notebook'
 titleSuffix: SQL Server Big Data Clusters
-description: Azure Data Studio에서 Notebook을 사용하여 빅 데이터 클러스터를 배포합니다.
+description: Azure Data Studio에서 Notebook의 코드 및 설명서를 사용하여 SQL Server 빅 데이터 클러스터를 배포하는 방법을 알아봅니다.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -10,12 +10,12 @@ ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 67cbd034cd2b5fc36b9f98bbfb2f8bbc43f1598e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6e85889a3a1118ab60595a9b0c6bd614b6071829
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85699964"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88772442"
 ---
 # <a name="deploy-sql-server-big-data-cluster-with-azure-data-studio-notebook"></a>Azure Data Studio Notebook을 사용하여 SQL Server 빅 데이터 클러스터 배포
 
@@ -23,7 +23,7 @@ ms.locfileid: "85699964"
 
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]에서는 배포 Notebook을 포함하는 Azure Data Studio 확장을 제공합니다. 배포 Notebook에는 SQL Server 빅 데이터 클러스터를 만들기 위해 Azure Data Studio에서 사용할 수 있는 코드와 설명서가 포함되어 있습니다.
 
-처음에 오픈 소스 프로젝트로 구현된 [Notebook](../azure-data-studio/notebooks-guidance.md)이 [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download)에 구현되었습니다. 사용 가능한 커널 중 하나와 텍스트 셀에 있는 텍스트의 Markdown을 사용하여 코드 셀에 코드를 작성할 수 있습니다.
+처음에 오픈 소스 프로젝트로 구현된 [Notebook](../azure-data-studio/notebooks-guidance.md)이 [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md?view=sql-server-ver15)에 구현되었습니다. 사용 가능한 커널 중 하나와 텍스트 셀에 있는 텍스트의 Markdown을 사용하여 코드 셀에 코드를 작성할 수 있습니다.
 
 Notebook을 사용하여 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]의 빅 데이터 클러스터를 배포할 수 있습니다.
 
@@ -37,7 +37,7 @@ Notebook을 시작하는 데 필요한 필수 조건은 다음과 같습니다.
 
 * [azdata](deploy-install-azdata.md)
 * [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-native-package-management)
-* [Azure CLI(Azure에서 배포하는 경우)](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest)
+* [Azure CLI(Azure에서 배포하는 경우)](/cli/azure/install-azure-cli?view=azure-cli-latest)
 
 ## <a name="launch-the-notebook"></a>Notebook 시작
 

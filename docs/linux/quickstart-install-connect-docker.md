@@ -13,16 +13,18 @@ ms.prod_service: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
 zone_pivot_groups: cs1-command-shell
-ms.openlocfilehash: df08f0434247f3235d9316c064e669d6bf453d1f
-ms.sourcegitcommit: 678f513b0c4846797ba82a3f921ac95f7a5ac863
+ms.openlocfilehash: b58763dc5bf126e164ada0c0d808a75270819171
+ms.sourcegitcommit: 71a334c5120a1bc3809d7657294fe44f6c909282
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2020
-ms.locfileid: "89511250"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89614610"
 ---
 # <a name="quickstart-run-sql-server-container-images-with-docker"></a>빠른 시작: Docker에서 SQL Server 컨테이너 이미지 실행
-
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
+
+> [!NOTE]
+> 아래에 표시된 예제는 docker.exe를 사용하지만 대부분의 명령은 Podman에서도 작동합니다. 이것도 Docker 컨테이너 엔진과 비슷한 CLI를 제공합니다. Podman에 대한 자세한 내용은 [여기](http://docs.podman.io/en/latest)를 참조하세요.
 
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
@@ -99,7 +101,7 @@ any changes to one section should be duplicated in the other-->
    ::: zone pivot="cs1-bash"
    ```bash
    sudo docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong@Passw0rd>" \
-      -p 1433:1433 --name sql1 \
+      -p 1433:1433 --name sql1 -h sql1 \
       -d \
       mcr.microsoft.com/mssql/server:2017-latest
    ```
@@ -112,7 +114,7 @@ any changes to one section should be duplicated in the other-->
    
    ```PowerShell
    docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong@Passw0rd>" `
-      -p 1433:1433 --name sql1 `
+      -p 1433:1433 --name sql1 -h sql1 `
       -d `
       mcr.microsoft.com/mssql/server:2017-latest
    ```
@@ -121,7 +123,7 @@ any changes to one section should be duplicated in the other-->
    ::: zone pivot="cs1-cmd"
    ```cmd
    docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong@Passw0rd>" `
-      -p 1433:1433 --name sql1 `
+      -p 1433:1433 --name sql1 -h sql1 `
       -d `
       mcr.microsoft.com/mssql/server:2017-latest
    ```
@@ -140,6 +142,7 @@ any changes to one section should be duplicated in the other-->
    | **-e "SA_PASSWORD=\<YourStrong@Passw0rd\>"** | 8자 이상이고 [SQL Server 암호 요구 사항](../relational-databases/security/password-policy.md)을 충족하는 자신만의 강력한 암호를 지정합니다. SQL Server 이미지에 대한 설정을 해야 합니다. |
    | **-p 1433:1433** | 호스트 환경의 TCP 포트(첫 번째 값)를 컨테이너의 TCP 포트(두 번째 값)로 매핑합니다. 이 예제에서 SQL Server는 컨테이너의 TCP 1433에서 수신 대기하고 호스트의 포트 1433에 공개됩니다. |
    | **--name sql1** | 컨테이너에 대해 임의로 생성된 이름보다는 사용자 지정 이름을 지정합니다. 둘 이상의 컨테이너를 실행하는 경우 이 동일한 이름을 다시 사용할 수 없습니다. |
+   | **-h sql1** | 컨테이너 호스트 이름을 명시적으로 설정하는 데 사용됩니다. 지정하지 않으면 임의로 생성된 시스템 GUID인 컨테이너 ID가 기본값으로 사용됩니다. |
    | **-d** | 백그라운드(디먼)에서 컨테이너를 실행합니다. |
    | **mcr.microsoft.com/mssql/server:2017-latest** | SQL Server 2017 Linux 컨테이너 이미지입니다. |
 
@@ -170,7 +173,7 @@ any changes to one section should be duplicated in the other-->
 
 4. **상태** 열이 **Up**의 상태를 표시하는 경우, SQL Server는 컨테이너에서 실행되며 **포트** 열의 지정된 포트에서 수신 대기합니다. SQL Server 컨테이너의 **상태** 열이 **Exited**를 표시하는 경우, [구성 가이드의 문제 해결 섹션](sql-server-linux-configure-docker.md#troubleshooting)을 참조하세요.
 
-`-h`(호스트 이름) 매개 변수도 유용하지만 간단한 설명을 위해 이 자습서에서 사용되지 않습니다. 이렇게 하면 컨테이너의 내부 이름이 사용자 지정 값으로 변경됩니다. 이 값은 다음 Transact SQL 쿼리에서 반환되는 이름입니다.
+위에서 설명한 것처럼 `-h`(호스트 이름) 매개 변수는 컨테이너의 내부 이름을 사용자 지정 값으로 변경합니다. 이 값은 다음 Transact SQL 쿼리에서 반환되는 이름입니다.
 
 ```sql
 SELECT @@SERVERNAME,
@@ -231,7 +234,7 @@ SELECT @@SERVERNAME,
    ::: zone pivot="cs1-bash"
    ```bash
    sudo docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong@Passw0rd>" \
-      -p 1433:1433 --name sql1 \
+      -p 1433:1433 --name sql1 -h sql1 \
       -d mcr.microsoft.com/mssql/server:2019-latest
    ```
    ::: zone-end
@@ -239,7 +242,7 @@ SELECT @@SERVERNAME,
    ::: zone pivot="cs1-powershell"
    ```PowerShell
    docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong@Passw0rd>" `
-      -p 1433:1433 --name sql1 `
+      -p 1433:1433 --name sql1 -h sql1 `
       -d mcr.microsoft.com/mssql/server:2019-latest
    ```
    ::: zone-end
@@ -247,7 +250,7 @@ SELECT @@SERVERNAME,
    ::: zone pivot="cs1-cmd"
    ```cmd
    docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong@Passw0rd>" `
-      -p 1433:1433 --name sql1 `
+      -p 1433:1433 --name sql1 -h sql1 `
       -d mcr.microsoft.com/mssql/server:2019-latest
    ```
    ::: zone-end
@@ -265,6 +268,7 @@ SELECT @@SERVERNAME,
    | **-e "SA_PASSWORD=\<YourStrong@Passw0rd\>"** | 8자 이상이고 [SQL Server 암호 요구 사항](../relational-databases/security/password-policy.md)을 충족하는 자신만의 강력한 암호를 지정합니다. SQL Server 이미지에 대한 설정을 해야 합니다. |
    | **-p 1433:1433** | 호스트 환경의 TCP 포트(첫 번째 값)를 컨테이너의 TCP 포트(두 번째 값)로 매핑합니다. 이 예제에서 SQL Server는 컨테이너의 TCP 1433에서 수신 대기하고 호스트의 포트 1433에 공개됩니다. |
    | **--name sql1** | 컨테이너에 대해 임의로 생성된 이름보다는 사용자 지정 이름을 지정합니다. 둘 이상의 컨테이너를 실행하는 경우 이 동일한 이름을 다시 사용할 수 없습니다. |
+   | **-h sql1** | 컨테이너 호스트 이름을 명시적으로 설정하는 데 사용됩니다. 지정하지 않으면 임의로 생성된 시스템 GUID인 컨테이너 ID가 기본값으로 사용됩니다. |
    | **mcr.microsoft.com/mssql/server:2019-latest** | SQL Server 2019 Ubuntu Linux 컨테이너 이미지입니다. |
 
 3. Docker 컨테이너를 보려면 `docker ps` 명령을 사용합니다.
@@ -293,7 +297,7 @@ SELECT @@SERVERNAME,
 
 4. **상태** 열이 **Up**의 상태를 표시하는 경우, SQL Server는 컨테이너에서 실행되며 **포트** 열의 지정된 포트에서 수신 대기합니다. SQL Server 컨테이너의 **상태** 열이 **Exited**를 표시하는 경우, [SQL Server Docker 컨테이너 문제 해결](sql-server-linux-docker-container-troubleshooting.md)을 참조하세요.
 
-`-h`(호스트 이름) 매개 변수도 유용하지만 간단한 설명을 위해 이 자습서에서 사용되지 않습니다. 이렇게 하면 컨테이너의 내부 이름이 사용자 지정 값으로 변경됩니다. 이 값은 다음 Transact SQL 쿼리에서 반환되는 이름입니다.
+위에서 설명한 것처럼 `-h`(호스트 이름) 매개 변수는 컨테이너의 내부 이름을 사용자 지정 값으로 변경합니다. 이렇게 하면 컨테이너의 내부 이름이 사용자 지정 값으로 변경됩니다. 이 값은 다음 Transact SQL 쿼리에서 반환되는 이름입니다.
 
 ```sql
 SELECT @@SERVERNAME,

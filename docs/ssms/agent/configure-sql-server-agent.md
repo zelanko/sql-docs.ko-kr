@@ -1,4 +1,5 @@
 ---
+description: Configure SQL Server Agent
 title: Configure SQL Server Agent
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -16,19 +17,19 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 50021dca6e570e7150ffb6a16ac030804ad3f4ea
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f8321fef50a76e08a3d6c4eb82bedbffad4f9d0e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755294"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497635"
 ---
 # <a name="configure-sql-server-agent"></a>Configure SQL Server Agent
 
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> 현재 [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)에서 일부 SQL Server 에이전트 기능이 지원됩니다. SQL Server 에이전트를 사용하거나 사용하지 않도록 설정하는 기능은 현재 Azure SQL Database 관리형 인스턴스에서 지원되지 않습니다. SQL 에이전트는 항상 실행됩니다. 자세한 내용은 [SQL Server와 Azure SQL Database 관리형 인스턴스 T-SQL의 차이점](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)을 참조하세요.
+> 현재 [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)에서는 SQL Server 에이전트 기능이 대부분 지원됩니다. SQL Server 에이전트를 사용하거나 사용하지 않도록 설정하는 기능은 현재 SQL Managed Instance에서 지원되지 않습니다. SQL 에이전트는 항상 실행됩니다. 자세한 내용은 [SQL Server와 SQL Managed Instance 간의 T-SQL 차이점](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)을 참조하세요.
 
 이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 중에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에이전트의 일부 구성 옵션을 지정하는 방법에 대해 설명합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 구성 옵션의 전체 집합은 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], SMO( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관리 개체) 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 저장 프로시저 내에서만 사용할 수 있습니다.  
   
@@ -67,7 +68,7 @@ ms.locfileid: "85755294"
   
 4.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 와 함께 사용하도록 구성할 사용 권한을 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
   
-5.  사용 권한의 속성 대화 상자에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 실행되는 계정이 나열되는지 확인합니다. 나열되지 않으면 **사용자 또는 그룹 추가**를 클릭하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용자, 컴퓨터, 서비스 계정 또는 그룹 선택 **대화 상자에** 에이전트가 실행되는 계정을 입력한 다음 **확인**을 클릭합니다.  
+5.  사용 권한의 속성 대화 상자에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 실행되는 계정이 나열되는지 확인합니다. 나열되지 않으면 **사용자 또는 그룹 추가**를 클릭하고 **사용자, 컴퓨터, 서비스 계정 또는 그룹 선택** 대화 상자에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 실행되는 계정을 입력한 다음 **확인**을 클릭합니다.  
   
 6.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트와 함께 실행하기 위해 추가할 각 사용 권한에 대해 이 작업을 반복합니다. 완료되었으면 **확인**을 클릭합니다.  
   

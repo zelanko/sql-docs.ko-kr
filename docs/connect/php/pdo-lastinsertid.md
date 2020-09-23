@@ -1,7 +1,8 @@
 ---
-title: PDO::lastInsertId | Microsoft Docs
+title: PDO::lastInsertId
+description: Microsoft PDO_SQLSRV Driver for PHP for SQL Server의 PDO::lastInsertId 함수에 대한 API 참조입니다.
 ms.custom: ''
-ms.date: 07/31/2018
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 0c617b53-a74b-4d5b-b76b-3ec7f1b8e8de
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d63244d93ab8fcbf2cbc6957dc3ddfcef435bb27
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 004125e217b1e2bf79ef26dc9ebffae2877890b2
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80919154"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88646733"
 ---
 # <a name="pdolastinsertid"></a>PDO::lastInsertId
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -32,7 +33,7 @@ string PDO::lastInsertId ([ $name = NULL ] );
 #### <a name="parameters"></a>매개 변수  
 $*name*: 시퀀스 이름을 지정할 수 있는 선택적 문자열입니다. 
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
 시퀀스 이름이 제공되지 않은 경우 가장 최근에 추가된 행에 대한 식별자의 문자열입니다.
 시퀀스 이름이 제공된 경우 가장 최근에 추가된 시퀀스에 대한 식별자의 문자열입니다.
 메서드 호출이 실패하면 빈 문자열이 반환됩니다.
@@ -40,8 +41,8 @@ $*name*: 시퀀스 이름을 지정할 수 있는 선택적 문자열입니다.
 ## <a name="remarks"></a>설명  
 PDO 지원이 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]의 버전 2.0에 추가되었습니다.  
 버전 2.0부터 4.3까지 선택적 매개 변수는 테이블 이름이고 반환 값은 제공된 테이블에 가장 최근에 추가된 행의 ID입니다.
-5\.0부터 선택적 매개 변수는 시퀀스 이름으로 간주되고 반환 값은 제공된 시퀀스 이름에 가장 최근에 추가된 시퀀스입니다.
-4\.3 이후 버전에서 테이블 이름이 제공된 경우 `lastInsertId`는 빈 문자열을 반환합니다.
+5.0부터 선택적 매개 변수는 시퀀스 이름으로 간주되고 반환 값은 제공된 시퀀스 이름에 가장 최근에 추가된 시퀀스입니다.
+4.3 이후 버전에서 테이블 이름이 제공된 경우 `lastInsertId`는 빈 문자열을 반환합니다.
 시퀀스는 SQL Server 2012 이상에서만 지원됩니다.
   
 ## <a name="example"></a>예제

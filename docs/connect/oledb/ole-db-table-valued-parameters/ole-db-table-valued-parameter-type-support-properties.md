@@ -1,6 +1,6 @@
 ---
 title: OLE DB 테이블 반환 매개 변수 형식 지원(속성) | Microsoft Docs
-description: OLE DB 테이블 반환 매개 변수 형식 지원(속성)
+description: OLE DB Driver for SQL Server의 테이블 반환 매개 변수 행 집합 개체와 연결된 OLE DB 속성 및 속성 집합에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -10,14 +10,14 @@ ms.technology: connectivity
 ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters (OLE DB), API support (properties)
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 476c45419d57d71f48028dc6b103e41e2d8dfa9b
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 24a7c544bc713a571c22d137dcd0554ff01cc864
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008732"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88859885"
 ---
 # <a name="ole-db-table-valued-parameter-type-support-properties"></a>OLE DB 테이블 반환 매개 변수 형식 지원(속성)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

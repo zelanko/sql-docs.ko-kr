@@ -2,7 +2,7 @@
 title: 시스템 요구 사항, 설치 및 드라이버 파일 | Microsoft Docs
 description: 이 문서에서는 Microsoft ODBC Driver for SQL Server에 대한 시스템 요구 사항을 설명합니다.
 ms.custom: ''
-ms.date: 03/18/2020
+ms.date: 08/06/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: d90fa182-1dab-4d6f-bd85-a04dd1479986
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e2b56528a369d58238a545afc20b35787003b6b1
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 2f0ce55639f5d6835c50744114a48d510d41c887
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81484472"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87930404"
 ---
 # <a name="system-requirements-installation-and-driver-files"></a>시스템 요구 사항, 설치 및 드라이버 파일
 
@@ -28,17 +28,18 @@ ms.locfileid: "81484472"
 
 호환성은 드라이버가 드라이버의 릴리스 시점에 기존 SQL 릴리스와 호환되는지 테스트되었음을 나타냅니다. 일반적으로 SQL Server 릴리스는 기존 클라이언트 드라이버와 이전 버전과의 호환성을 유지하려고 시도합니다. 그러나 SQL Server 릴리스의 새로운 기능은 이전 클라이언트 드라이버에서 사용하지 못할 수 있습니다.
 
-|드라이버 버전|Azure SQL Database|Azure SQL DW|Azure SQL Managed Instance|SQL Server 2019|SQL Server 2017|SQL Server 2016|SQL Server 2014|SQL Server 2012|SQL Server 2008 R2|SQL Server 2008|SQL Server 2005|
-|-|-|-|-|-|-|-|-|-|-|-|-|
-|17.5|Y|Y|Y|Y|Y|Y|Y|Y| | | |
-|17.4|Y|Y|Y|Y|Y|Y|Y|Y| | | |
-|17.3|Y|Y|Y|Y|Y|Y|Y|Y|Y|Y| |
-|17.2|Y|Y|Y| |Y|Y|Y|Y|Y|Y| |
-|17.1|Y|Y|Y| |Y|Y|Y|Y|Y|Y| |
-|17.0|Y|Y|Y| |Y|Y|Y|Y|Y|Y| |
-|13.1| | | | |Y|Y|Y|Y|Y|Y| |
-|13  | | | | | |Y|Y|Y|Y|Y| |
-|11  | | | | | | |Y|Y|Y|Y|Y|
+|데이터베이스 버전&nbsp;&#8594;<br />&#8595; 드라이버 버전|Azure SQL Database|Azure Synapse Analytics|Azure SQL Managed Instance|SQL Server 2019|SQL Server 2017|SQL Server 2016|SQL Server 2014|SQL Server 2012|SQL Server 2008 R2|SQL Server 2008|SQL Server 2005|
+|----|---|---|---|---|---|---|---|---|---|---|---|
+|17.6|예|예|예|예|예|예|예|예|   |   |   |
+|17.5|예|예|예|예|예|예|예|예|   |   |   |
+|17.4|예|예|예|예|예|예|예|예|   |   |   |
+|17.3|예|예|예|예|예|예|예|예|예|예|   |
+|17.2|예|예|예|   |예|예|예|예|예|예|   |
+|17.1|예|예|예|   |예|예|예|예|예|예|   |
+|17.0|예|예|예|   |예|예|예|예|예|예|   |
+|13.1|   |   |   |   |예|예|예|예|예|예|   |
+|13  |   |   |   |   |   |예|예|예|예|예|   |
+|11  |   |   |   |   |   |   |예|예|예|예|예|
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
 ### <a name="connection-string-details"></a>연결 문자열 정보
@@ -49,17 +50,18 @@ ms.locfileid: "81484472"
 
 다음 매트릭스는 Windows 운영 체제 버전별 드라이버 버전 지원 여부를 보여 줍니다.
 
-|드라이버 버전|Windows Server 2019|Windows Server 2016|Windows Server 2012 R2|Windows Server 2012|Windows Server 2008 R2|윈도우 10|Windows 8.1|Windows 7|Windows Vista SP2|
-|-|-|-|-|-|-|-|-|-|-|
-|17.5|Y|Y|Y|Y| |Y|Y| | |
-|17.4|Y|Y|Y|Y|Y|Y|Y|Y| |
-|17.3|Y|Y|Y|Y|Y|Y|Y|Y| |
-|17.2| |Y|Y|Y|Y|Y|Y|Y| |
-|17.1| |Y|Y|Y|Y|Y|Y|Y| |
-|17.0| |Y|Y|Y|Y|Y|Y|Y| |
-|13.1| |Y|Y|Y|Y|Y|Y|Y| |
-|13  | | | |Y|Y| |Y|Y| |
-|11  | | | |Y|Y| | |Y|Y|
+|운영 체제&nbsp;&#8594;<br />&#8595; 드라이버 버전|Windows Server 2019|Windows Server 2016|Windows Server 2012 R2|Windows Server 2012|Windows Server 2008 R2|Windows 10|Windows 8.1|Windows 7|Windows Vista SP2|
+|----|---|---|---|---|---|---|---|---|---|
+|17.6|예|예|예|예|   |예|예|   |   |
+|17.5|예|예|예|예|   |예|예|   |   |
+|17.4|예|예|예|예|예|예|예|예|   |
+|17.3|예|예|예|예|예|예|예|예|   |
+|17.2|   |예|예|예|예|예|예|예|   |
+|17.1|   |예|예|예|예|예|예|예|   |
+|17.0|   |예|예|예|예|예|예|예|   |
+|13.1|   |예|예|예|예|예|예|예|   |
+|13  |   |   |   |예|예|   |예|예|   |
+|11  |   |   |   |예|예|   |   |예|예|
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
 ## <a name="installing-microsoft-odbc-driver-for-sql-server"></a>Microsoft SQL Server용 ODBC 드라이버 설치

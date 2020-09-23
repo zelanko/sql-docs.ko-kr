@@ -1,4 +1,5 @@
 ---
+description: RSExecRole 만들기
 title: RSExecRole 만들기 | Microsoft Docs
 ms.date: 06/12/2019
 ms.prod: reporting-services
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 7ac17341-df7e-4401-870e-652caa2859c0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 50347f9a975aeb4856a5ee140697f7b13de3e3b2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 08895328856056d01b927a8c80962ff0b90570f7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67140481"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492646"
 ---
 # <a name="create-the-rsexecrole"></a>RSExecRole 만들기
 
@@ -216,7 +217,7 @@ ms.locfileid: "67140481"
   
 8.  데이터베이스에서 보고서 서버 데이터베이스를 선택합니다.  
   
-9.  **다음** 을 클릭하고 마법사를 완료합니다.  
+9.  **다음** 을 클릭하여 마법사를 완료합니다.  
   
 10. **암호화 키**를 클릭합니다.  
   

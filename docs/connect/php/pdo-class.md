@@ -1,7 +1,8 @@
 ---
-title: PDO 클래스 | Microsoft Docs
+title: PDO 클래스
+description: Microsoft PDO_SQLSRV Driver for PHP for SQL Server의 PDO 클래스에 대한 API 참조입니다.
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9c77b68d-0649-44af-96fa-586cbb319f5f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fbacc1c79789a21b0dbb76ff6f13007ad6368d22
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 9efde910074d92b35fbe6338f79f71ac87d11d80
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80919435"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88646231"
 ---
 # <a name="pdo-class"></a>PDO 클래스
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

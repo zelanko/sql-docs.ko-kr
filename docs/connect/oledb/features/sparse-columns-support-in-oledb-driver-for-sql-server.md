@@ -1,6 +1,6 @@
 ---
 title: SQL Server용 OLE DB 드라이버에서 스파스 열 지원 | Microsoft Docs
-description: SQL Server용 OLE DB 드라이버에서 스파스 열 지원
+description: OLE DB Driver for SQL Server가 스파스 열을 지원하는 방법을 알아보고 SQL Server의 스파스 열에 대한 정보를 확인합니다.
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -11,14 +11,14 @@ ms.topic: reference
 helpviewer_keywords:
 - sparse columns, OLE DB Driver for SQL Server
 - sparse columns, OLE DB
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 786adbde3519ef859e316a82cdb66af199dbf139
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 1397d69f72cfc1362decf84959046d581befea5b
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86006869"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88862287"
 ---
 # <a name="sparse-columns-support-in-ole-db-driver-for-sql-server"></a>SQL Server용 OLE DB 드라이버에서 스파스 열 지원
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

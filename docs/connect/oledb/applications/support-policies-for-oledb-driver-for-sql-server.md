@@ -1,21 +1,21 @@
 ---
-title: SQL Server용 OLE DB 드라이버 지원 정책 | Microsoft Docs
-description: SQL Server용 OLE DB 드라이버에 대한 지원 정책
-ms.date: 05/25/2020
+title: SQL Server용 OLE DB 드라이버에 대한 지원 정책
+description: OLE DB Driver for SQL Server에 대한 지원 정책과 각 드라이버 버전에서 지원되는 운영 체제 및 SQL 데이터베이스 버전에 대해 알아봅니다.
+ms.date: 08/06/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.custom: ''
 ms.technology: connectivity
 ms.topic: reference
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 7e4b77a700d494f1ed8f11a0004c60b37c5cc361
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ca90e20ef6dab5a61bfa6b2969a1220d4a22db2e
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007048"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88860640"
 ---
 # <a name="support-policies-for-ole-db-driver-for-sql-server"></a>SQL Server용 OLE DB 드라이버에 대한 지원 정책
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -28,26 +28,26 @@ ms.locfileid: "86007048"
 
 OLE DB Driver for SQL Server는 다음 버전의 SQL Server에 대한 연결이 테스트되었으며 이를 지원합니다.
 
-| 드라이버 버전 | Azure SQL Database | Azure SQL DW | Azure SQL Managed Instance | SQL Server 2019 | SQL Server 2017 | SQL Server 2016 | SQL Server 2014 | SQL Server 2012 |
-|----|-|-|-|-|-|-|-|-|
-|18.4|Y|Y|Y|Y|Y|Y|Y|Y|
-|18.3|Y|Y|Y|Y|Y|Y|Y|Y|
-|18.2|Y|Y|Y|Y|Y|Y|Y|Y|
-|18.1|Y|Y|Y| |Y|Y|Y|Y|
-|18.0|Y|Y|Y| |Y|Y|Y|Y|
+| 데이터베이스 버전&nbsp;&#8594;<br />&#8595; 드라이버 버전 | Azure SQL Database | Azure Synapse Analytics | Azure SQL Managed Instance | SQL Server 2019 | SQL Server 2017 | SQL Server 2016 | SQL Server 2014 | SQL Server 2012 |
+|----|---|---|---|---|---|---|---|---|
+|18.4|예|예|예|예|예|예|예|예|
+|18.3|예|예|예|예|예|예|예|예|
+|18.2|예|예|예|예|예|예|예|예|
+|18.1|예|예|예|   |예|예|예|예|
+|18.0|예|예|예|   |예|예|예|예|
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
 ## <a name="supported-operating-system-versions"></a>지원되는 운영 체제 버전  
 
 다음 표에서는 OLE DB Driver for SQL Server에서 지원하는 운영 체제를 보여 줍니다.  
 
-| 드라이버 버전 | Windows Server 2019 | Windows Server 2016 | Windows Server 2012<sup>1</sup> | Windows Server 2012 R2<sup>2</sup> | 윈도우 10 | Windows 8.1<sup>3</sup> |
-|----|-|-|-|-|-|-|
-|18.4|Y|Y|Y|Y|Y|Y|
-|18.3|Y|Y|Y|Y|Y|Y|
-|18.2|Y|Y|Y|Y|Y|Y|
-|18.1| |Y|Y|Y|Y|Y|
-|18.0| |Y|Y|Y|Y|Y|
+| 운영 체제&nbsp;&#8594;<br />&#8595; 드라이버 버전 | Windows Server 2019 | Windows Server 2016 | Windows Server 2012<sup>1</sup> | Windows Server 2012 R2<sup>2</sup> | 윈도우 10 | Windows 8.1<sup>3</sup> |
+|----|---|---|---|---|---|---|
+|18.4|예|예|예|예|예|예|
+|18.3|예|예|예|예|예|예|
+|18.2|예|예|예|예|예|예|
+|18.1|   |예|예|예|예|예|
+|18.0|   |예|예|예|예|예|
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
 <sup>1</sup> [KB2999226](https://go.microsoft.com/fwlink/?linkid=2074061)이 적용된 Windows Server 2012에서 지원됩니다.  

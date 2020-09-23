@@ -14,16 +14,24 @@ ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 author: v-chojas
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: cf563e5d074f9e4629eb3b9f63304104167394a4
-ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
+ms.openlocfilehash: fb686e3c70723cf847853ad558f47cf37da23972
+ms.sourcegitcommit: bc10ec0be5ddfc5f0bc220a9ac36c77dd6b80f1d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86091807"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87544306"
 ---
 # <a name="list-of-bugs-fixed"></a>버그 수정 목록
 
 이 페이지에는 [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]부터 각 릴리스에서 수정된 버그의 목록이 포함되어 있습니다.
+
+### <a name="bug-fixes-in-the-msconame-odbc-driver-176-for-ssnoversion"></a>[!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17.6 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대한 버그 수정
+
+- 페더레이션 계정(Windows)으로 인증할 때의 ADAL 오류 수정
+- 비동기 알림 작업 중 시간 초과가 발생하는 경우 드라이버가 응답하지 않는 문제 해결
+- Alpine Linux에서 업그레이드 시 드라이버 참조 횟수 수정
+- Ubuntu용 libc6 종속성 버전 수정
+- Linux/Mac msodbcsql.h에 누락된 정의 추가
 
 ### <a name="bug-fixes-in-the-msconame-odbc-driver-17522-for-ssnoversion-alpine-linux-only"></a>[!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17.5.2.2 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 버그 수정(Alpine Linux만 해당)
 

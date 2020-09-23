@@ -5,17 +5,17 @@ description: Azure Data Studio용 Machine Learning 확장을 사용하면 패키
 ms.date: 05/19/2020
 ms.reviewer: sstein
 ms.prod: azure-data-studio
-ms.technology: azure-data-studio
+ms.technology: machine-learning
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 5b54ec71ec3debaf39b0788cac0c1534300a4a72
-ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
+ms.openlocfilehash: a6a86baeb3c206c722aa91eae386ca80c287644c
+ms.sourcegitcommit: b9871e6cffb4c2c65d1f27f797630c43fc02cfb0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88745553"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90101123"
 ---
 # <a name="machine-learning-extension-preview-for-azure-data-studio"></a>Azure Data Studio용 Machine Learning 확장(미리 보기)
 
@@ -101,7 +101,7 @@ Machine Learning 확장 설정을 변경하려면 다음 단계를 수행하세�
 
 Azure Data Studio에서 Machine Learning 확장을 사용하려면 다음 단계를 수행하세요.
 
-1. Azure Data Studio에서 연결을 엽니다.
+1. Azure Data Studio에서 **연결** 뷰렛을 엽니다.
 
 1. 서버를 마우스 오른쪽 단추로 클릭하고 **관리**를 선택합니다.
 

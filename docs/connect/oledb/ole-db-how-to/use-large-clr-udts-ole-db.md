@@ -1,6 +1,6 @@
 ---
-title: 큰 CLR UDT 사용(OLE DB) | Microsoft Docs
-description: 큰 CLR UDT 사용(OLE DB)
+title: 대형 CLR UDT 사용(OLE DB 드라이버)
+description: 이 예제에서는 OLE DB Driver for SQL Server의 결과 집합에서 대형 사용자 정의 형식이 포함된 행을 페치하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -8,14 +8,14 @@ ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: reference
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: ed3fd1d54b0b505d3ec6486a8d4cff7dee6449fb
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: dda2e8221c825ee9ca5aad3d14eba14c6d7315f2
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007227"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88862309"
 ---
 # <a name="use-large-clr-udts-ole-db"></a>큰 CLR UDT 사용(OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "86007227"
   이 예제에서는 결과 집합에서 큰 사용자 정의 형식의 행을 인출하는 방법을 보여 줍니다. 자세한 내용은 [큰 CLR 사용자 정의 형식&#40;OLE DB&#41;](../../oledb/ole-db/large-clr-user-defined-types-ole-db.md)을 참조하세요. 이 예제는 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 이상에서만 작동합니다.  
   
 ## <a name="example"></a>예제  
- 이 예제에는 두 개의 프로젝트가 포함되어 있습니다. 첫 번째 프로젝트는 C# 원본 코드에서 어셈블리(DLL)를 만듭니다. 이 어셈블리에는 CLR 유형이 포함되어 있습니다. 테이블이 데이터베이스에 추가됩니다. 테이블의 열은 어셈블리에 정의된 유형으로 지정됩니다. 기본적으로 이 예제에서는 master 데이터베이스를 사용합니다. 두 번째 프로젝트는 테이블에서 데이터를 읽는 네이티브 C 애플리케이션입니다.  
+ 이 예제에는 두 개의 프로젝트가 포함되어 있습니다. 첫 번째 프로젝트는 C# 원본 코드에서 어셈블리(DLL)를 만듭니다. 이 어셈블리에는 CLR 유형이 포함되어 있습니다. 테이블이 데이터베이스에 추가됩니다. 테이블의 열은 어셈블리에 정의된 형식입니다. 기본적으로 이 예제에서는 마스터 데이터베이스를 사용합니다. 두 번째 프로젝트는 테이블에서 데이터를 읽는 네이티브 C 애플리케이션입니다.  
   
  첫 번째(C#) 코드 목록을 DLL로 컴파일합니다.  그리고 나서 DLL을 C 드라이브의 루트 디렉터리에 복사합니다.  
   

@@ -1,22 +1,22 @@
 ---
-title: 비시스템 로캘 설정 | Microsoft Docs
+title: 비 시스템 로캘 설정
+description: Linux 및 macOS의 여러 로캘 설정이 Microsoft Drivers for PHP for SQL Server에 어떤 영향을 미치는지 알아봅니다.
 ms.custom: ''
-ms.date: 01/31/2020
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
 - locale, linux, macOS, system
-author: yitam
-ms.author: v-yitam
-manager: v-mabarw
-ms.openlocfilehash: bd60bff3ab9ee19b1a1d2435e69651ea054689e7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 303037729164d4165fc106529a901b58d4d049f4
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "76913326"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680528"
 ---
 # <a name="non-system-locale-settings"></a>비시스템 로캘 설정
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

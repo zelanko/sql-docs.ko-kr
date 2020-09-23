@@ -1,6 +1,6 @@
 ---
 title: IBCPSession2::BCPSetBulkMode(OLE DB 드라이버) | Microsoft Docs
-description: IBCPSession2::BCPSetBulkMode를 사용하여 쿼리 또는 테이블에서 대량 복사 만들기
+description: OLE DB Driver for SQL Server에서 IBCPSession2::BCPSetBulkMode 메서드를 사용하여 쿼리 또는 테이블에서 대량 복사를 만드는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -10,14 +10,14 @@ ms.technology: connectivity
 ms.topic: reference
 helpviewer_keywords:
 - BCPSetBulkMode function
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 7dede556c75be45eddf23dbbe327ab1367023b1b
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: b04ede3efe3d77119a4aaadbc904f32a7c51a201
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244547"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88860204"
 ---
 # <a name="ibcpsession2bcpsetbulkmode"></a>IBCPSession2::BCPSetBulkMode
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

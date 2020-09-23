@@ -1,5 +1,6 @@
 ---
-title: SQL Server 로그인 대화 상자(ODBC) | Microsoft Docs
+title: SQL Server 로그인 대화 상자(ODBC)
+description: 애플리케이션이 데이터베이스를 연결하는 데 충분한 정보를 지정하지 않고 ODBC 연결을 시도하는 경우 SQL Server 로그인 대화 상자가 표시될 수 있습니다.
 ms.custom: ''
 ms.date: 03/21/2018
 ms.prod: sql
@@ -8,14 +9,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
-author: MightyPen
+author: David-Engel
 ms.author: v-jizho2
-ms.openlocfilehash: fcfde122b978fa1e77baa690a1f3e09417dab1c0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7c0a2be5961e4fab07941d999da1a2b2fe5f9dbe
+ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67989425"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87898802"
 ---
 # <a name="sql-server-login-dialog-box-odbc"></a>SQL Server 로그인 대화 상자(ODBC)
 
@@ -39,6 +40,7 @@ SQL Server와 동일한 컴퓨터를 사용하는 경우에는 "(로컬)"을 입
 - 로그인 ID 및 암호를 사용하여 **Active Directory 암호**
 - 현재 로그인한 사용자 계정을 사용하여 **Active Directory 통합** 인증
 - 로그인 ID를 사용하여 **Active Directory 대화형** 인증
+- 관리 ID를 사용하여 **관리 서비스 ID** 인증
 
 인증 모드에 대한 자세한 내용은 [데이터 원본 마법사 화면 2](../../../connect/odbc/windows/dsn-wizard-2.md)를 참조하세요.
 
@@ -48,7 +50,7 @@ SQL Server와 동일한 컴퓨터를 사용하는 경우에는 "(로컬)"을 입
 
 ### <a name="login-id"></a>로그인 ID
 
-**인증 모드**가 **SQL Server** 또는 **Active Directory 암호** 또는 **Active Directory 대화형**으로 설정된 경우 연결에 사용할 SQL Server 또는 Azure Active Directory 로그인 ID를 지정합니다. 그렇지 않으면 **로그인 ID** 상자를 사용할 수 없습니다.
+**인증 모드**가 **SQL Server**, **Active Directory 암호**, **Active Directory 대화형** 또는 **관리 서비스 ID**로 설정된 경우 연결에 사용할 SQL Server 또는 Azure Active Directory 로그인 ID를 지정합니다. 그렇지 않으면 **로그인 ID** 상자를 사용할 수 없습니다.
 
 ### <a name="password"></a>암호
 

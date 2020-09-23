@@ -1,5 +1,6 @@
 ---
-title: 커서 형식(SQLSRV 드라이버) | Microsoft Docs
+title: 커서 형식(SQLSRV 드라이버)
+description: Microsoft Drivers for PHP for SQL Server에서 커서 형식을 사용하여 어떤 순서로든 액세스할 수 있는 결과 집합을 만드는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 02/11/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 8472d839-8124-4a62-a83c-7e771b0d4962
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 763795618eb90fe24db313b801bc01af3cd6737b
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 8e72381eed4aa89ccd9656d3eabadb22bccd357d
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928035"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411469"
 ---
 # <a name="cursor-types-sqlsrv-driver"></a>커서 형식(SQLSRV 드라이버)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -27,7 +28,7 @@ SQLSRV 드라이버를 사용하면 커서 유형에 따라 어떤 순서로든�
   
 스크롤 가능한 커서로 결과 집합을 만들면 임의의 순서로 결과 집합의 모든 행에 액세스할 수 있습니다. 다음 표에서는 sqlsrv_query 또는 sqlsrv_prepare에서 **스크롤 가능한** 옵션으로 전달될 수 있는 값을 나열합니다.  
   
-|옵션|Description|  
+|옵션|설명|  
 |----------|---------------|  
 |SQLSRV_CURSOR_FORWARD|결과 집합의 첫 번째 행부터 결과 집합의 끝에 도달할 때까지 한 번에 한 행씩 이동할 수 있습니다.<br /><br />이는 기본적인 커서 형식입니다.<br /><br />[sqlsrv_num_rows](../../connect/php/sqlsrv-num-rows.md)는 이 커서 형식을 사용하여 만들어진 결과 집합에 대한 오류를 반환합니다.<br /><br />**forward**는 SQLSRV_CURSOR_FORWARD의 약어 형식입니다.|  
 |SQLSRV_CURSOR_STATIC|순서에 관계없이 행에 액세스할 수 있지만 데이터베이스에 변경 내용은 반영되지 않습니다.<br /><br />**static**은 SQLSRV_CURSOR_STATIC의 약어 형식입니다.|  
@@ -42,7 +43,7 @@ SQLSRV 드라이버를 사용하면 커서 유형에 따라 어떤 순서로든�
   
 다음 표에서는 *행* 매개 변수에 지정할 수 있는 값을 설명합니다.  
   
-|매개 변수|Description|  
+|매개 변수|설명|  
 |-------------|---------------|  
 |SQLSRV_SCROLL_NEXT|다음 행을 지정합니다. 스크롤 가능 결과 집합의 *행* 매개 변수를 지정하지 않으면 이 값이 기본값입니다.|  
 |SQLSRV_SCROLL_PRIOR|현재 행 앞의 행을 지정합니다.|  

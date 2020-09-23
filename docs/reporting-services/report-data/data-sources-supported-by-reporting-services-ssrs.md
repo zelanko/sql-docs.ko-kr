@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9d11d055-a3be-45aa-99a7-46447a94ed42
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9d373e347df9207a3cbea8bd0fc1682a865323c2
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 4eea801493f87b2c6e11cdca0d42143d54f08bff
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458965"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988430"
 ---
 # <a name="data-sources-supported-by-reporting-services-ssrs"></a>Reporting Services에서 지원하는 데이터 원본(SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서는 데이터 처리 확장 프로그램을 사용하는 확장 가능한 모듈식 데이터 계층을 통해 데이터 원본에서 보고서 데이터를 검색합니다. 데이터 원본에서 보고서 데이터를 검색하려면 데이터 원본 유형, 데이터 원본에서 실행 중인 소프트웨어 버전 및 데이터 원본 플랫폼(32비트 또는 64비트 [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)])을 지원하는 데이터 처리 확장 프로그램을 선택해야 합니다.  
@@ -157,7 +157,7 @@ ms.locfileid: "86458965"
   
  그래픽 모드에서 이 쿼리 디자이너를 사용하면 쿼리가 분석되고 다시 작성될 수 있습니다. 텍스트 기반 쿼리 디자이너를 사용하여 쿼리를 작성할 수도 있습니다. 쿼리에 사용되는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 구문을 정확히 제어하려면 텍스트 기반 쿼리 디자이너를 사용합니다.   
   
- [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에서의 데이터 검색은 SQL Data Warehouse 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 비슷하지만 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에는 몇 가지 요구 사항이 적용됩니다. 자세한 내용은 [SQL Azure 연결 형식&#40;SSRS&#41;](../../reporting-services/report-data/sql-azure-connection-type-ssrs.md)을 참조하세요.  
+ [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에서의 데이터 검색은 SQL Data Warehouse 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 비슷하지만 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에는 몇 가지 요구 사항이 적용됩니다. 자세한 내용은 [Azure SQL 연결 형식&#40;SSRS&#41;](../../reporting-services/report-data/sql-azure-connection-type-ssrs.md)을 참조하세요.  
   
  [데이터 원본 표로 돌아가기](#DataSourcesTable)  
   

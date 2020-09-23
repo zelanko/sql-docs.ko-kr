@@ -3,25 +3,25 @@ title: Resource Governor를 사용하여 관리
 description: Resource Governor를 사용하여 SQL Server Machine Learning Services에서 Python 및 R 워크로드를 위해 CPU, 물리적 IO 및 메모리 리소스 할당을 관리하는 방법을 알아봅니다.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 10/02/2019
+ms.date: 08/06/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: f5a567ee0d4937341bb6d9f62a75955635118d1c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 55fd9d7c699523856ad2623298c62d6f986904a5
+ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881971"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89283554"
 ---
 # <a name="manage-python-and-r-workloads-with-resource-governor-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services에서 Resource Governor를 사용하여 Python 및 R 워크로드 관리
-[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)를 사용하여 SQL Server Machine Learning Services에서 Python 및 R 워크로드를 위해 CPU, 물리적 IO 및 메모리 리소스 할당을 관리하는 방법을 알아봅니다.
 
-Python 및 R에서 Machine Learning은 일반적으로 컴퓨팅 집약적입니다. 워크로드 우선 순위에 따라 Machine Learning Services에 사용 가능한 리소스를 늘리거나 줄여야 할 수 있습니다.
+Python 및 R의 기계 학습 알고리즘은 일반적으로 컴퓨팅 집약적입니다. 워크로드 우선 순위에 따라 Machine Learning Services에 사용 가능한 리소스를 늘리거나 줄여야 할 수 있습니다.
 
 자세한 내용은 [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)를 참조하세요.
 
@@ -36,7 +36,7 @@ Python 및 R에서 Machine Learning은 일반적으로 컴퓨팅 집약적입니
  
 기본적으로 외부 프로세스는 로컬 서버에서 총 호스트 메모리를 최대 20%까지 사용합니다. 기본 리소스 풀을 수정하여 외부 프로세스에 대해 지정한 용량이 R 및 Python 프로세스에 사용되도록 서버 전체의 설정을 변경할 수 있습니다.
 
-또는 특정 프로그램이나 호스트로부터 시작되는 요청 또는 사용자가 제공한 다른 기준에 따라 리소스 할당을 결정하기 위해 워크로드 그룹 및 분류자가 연결된 사용자 지정 **외부 리소스 풀**을 만들 수 있습니다. 외부 리소스 풀은 데이터베이스 엔진 외부의 R 및 Python 프로세스 관리를 돕기 위해 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]에 도입된 리소스 풀 유형입니다.
+선택적으로 특정 프로그램이나 호스트로부터 시작되는 요청 또는 사용자가 제공한 다른 기준에 따라 리소스 할당을 결정하기 위해 워크로드 그룹 및 분류자가 연결된 사용자 지정 **외부 리소스 풀**을 만들 수 있습니다. 외부 리소스 풀은 데이터베이스 엔진 외부의 R 및 Python 프로세스 관리를 돕기 위해 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]에 도입된 리소스 풀 유형입니다.
 
 1. [리소스 관리를 사용하도록 설정합니다](https://docs.microsoft.com/sql/relational-databases/resource-governor/enable-resource-governor)(기본적으로 해제되어 있음).
 

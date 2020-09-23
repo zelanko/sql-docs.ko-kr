@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 94bcfbe3-f00e-4774-bda8-bb7577518fec
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1089960af020e648586f59914ccc91e99bf0b9af
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: f88a1bbe3554b74e3dae67ddb1fad93122fc41fe
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487968"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988620"
 ---
 # <a name="connecting-to-sql-server-with-the-jdbc-driver"></a>JDBC 드라이버로 SQL Server에 연결
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -43,7 +43,7 @@ System.setProperty("java.net.preferIPv6Addresses", "true");
 |[데이터베이스 미러링 사용 &#40;JDBC&#41;](../../connect/jdbc/using-database-mirroring-jdbc.md)|JDBC 드라이버에서 데이터베이스 미러링 사용을 지원하는 방법을 설명합니다.|  
 |[고가용성, 재해 복구를 위한 JDBC 드라이브 지원](../../connect/jdbc/jdbc-driver-support-for-high-availability-disaster-recovery.md)|AlwaysOn 가용성 그룹에 연결할 애플리케이션을 개발하는 방법을 설명합니다.|  
 |[Kerberos 통합 인증을 사용하여 SQL Server에 연결](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md)|Kerberos 통합 인증을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 연결하는 애플리케이션을 위한 Java 구현을 설명합니다.|  
-|[Azure SQL 데이터베이스에 연결](../../connect/jdbc/connecting-to-an-azure-sql-database.md)|SQL Azure에서 데이터베이스의 연결 문제를 설명합니다.|  
+|[Azure SQL 데이터베이스에 연결](../../connect/jdbc/connecting-to-an-azure-sql-database.md)|Azure SQL에서 데이터베이스의 연결 문제를 설명합니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [JDBC 드라이버 개요](../../connect/jdbc/overview-of-the-jdbc-driver.md)  

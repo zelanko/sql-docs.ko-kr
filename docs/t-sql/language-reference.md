@@ -16,12 +16,12 @@ ms.assetid: dbba47d7-e08e-4435-b876-35dced1f325d
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 362d2643557229b64961217d9a5b5b3c4f784bff
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 727dc40389d803cc81bb07011f799bc2d44365a0
+ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88360699"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076666"
 ---
 # <a name="transact-sql-reference-database-engine"></a>Transact-SQL 참조(데이터베이스 엔진)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -60,14 +60,14 @@ T-SQL 토픽을 찾으려면 이 페이지의 오른쪽 위에 있는 검색을 
   
  [!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]   
 
-또 다른 예로, 다음 레이블은 Azure SQL Data Warehouse 및 병렬 데이터 웨어하우스에만 적용되는 토픽을 나타냅니다.
+또 다른 예로, 다음 레이블은 Azure Synapse Analytics 및 병렬 데이터 웨어하우스에만 적용되는 토픽을 나타냅니다.
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../includes/applies-to-version/asa-pdw.md)]
 
 경우에 따라 토픽이 제품이나 서비스에서 사용되지만 모든 인수는 지원되지 않습니다. 이 경우 추가적인 **적용 대상** 섹션이 토픽 본문의 적절한 인수 설명에 삽입됩니다.  
  
-## <a name="get-help-from-the-msdn-forum"></a>MSDN 포럼에서 도움말 보기  
-온라인 도움말은 [MSDN Transact-SQL 포럼](https://social.msdn.microsoft.com/Forums/home)을 참조하세요.  
+## <a name="get-help-from-microsoft-q--a"></a>Microsoft Q & A에서 도움 받기  
+온라인 도움말을 보려면 [Microsoft Q & A Transact-SQL 포럼](https://docs.microsoft.com/answers/topics/sql-server-transact-sql.html)을 참조하세요.  
  
 ## <a name="see-other-language-references"></a>다른 언어 참조 보기
 SQL 문서에는 이러한 다른 언어 참조가 포함됩니다.

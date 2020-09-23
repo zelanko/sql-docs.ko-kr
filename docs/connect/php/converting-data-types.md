@@ -1,7 +1,8 @@
 ---
-title: 데이터 형식 변환 | Microsoft Docs
+title: 데이터 형식 변환
+description: Microsoft Drivers for PHP for SQL Server를 사용할 때 데이터 형식을 지정하고 기본 데이터 형식에 대한 세부 정보를 제공하는 방법을 알아봅니다.
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 508542ec-cc28-4a17-80f4-52325d6a48db
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c6b6d52f7a38bf59574ef6b6ec1b6c3ba303d150
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: b72b4e61331754a0bfead58710709552652a176f
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928064"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680618"
 ---
 # <a name="converting-data-types"></a>데이터 형식 변환
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -24,7 +25,7 @@ ms.locfileid: "80928064"
   
 ## <a name="in-this-section"></a>섹션 내용  
   
-|항목|Description|  
+|항목|설명|  
 |---------|---------------|  
 |[기본 SQL Server 데이터 형식](../../connect/php/default-sql-server-data-types.md)|데이터를 서버에 보낼 때 기본 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식에 대한 정보를 제공합니다.|  
 |[기본 PHP 데이터 형식](../../connect/php/default-php-data-types.md)|서버에서 데이터를 검색할 때 기본 PHP 데이터 형식에 대한 정보를 제공합니다.|  

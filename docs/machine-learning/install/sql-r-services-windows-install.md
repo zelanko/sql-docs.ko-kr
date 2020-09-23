@@ -4,28 +4,29 @@ titleSuffix: ''
 description: Windows에 SQL Server 2016 R Services를 설치하는 방법을 알아봅니다. R Services를 사용하여 데이터베이스 내에서 R 스크립트를 실행할 수 있습니다.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 06/03/2020
+ms.date: 08/06/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: contperfq4
 monikerRange: =sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: af1d1c36971e3c6e47a97874bca26d55694d4491
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 14dca3774771a3cb3a83c99811f3145dfd582de9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246422"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487656"
 ---
 # <a name="install-sql-server-2016-r-services"></a>SQL Server 2016 R Services 설치
-[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+
+[!INCLUDE[SQL Server 2016 only](../../includes/applies-to-version/sqlserver2016-only.md)]
 
 Windows에 SQL Server 2016 R Services를 설치하는 방법을 알아봅니다. R Services를 사용하여 데이터베이스 내에서 R 스크립트를 실행할 수 있습니다.
 
 > [!NOTE]
 > SQL Server 2017 이상에서 R은 Python과 함께 [Machine Learning Services](../sql-server-machine-learning-services.md)에 포함되어 있습니다. R이 필요하고 SQL Server 2017 이상이 있는 경우 [SQL Server Machine Learning Services 설치](sql-machine-learning-services-windows-install.md)를 참조하여 기능을 추가하세요.
 
-<a name="bkmk_prereqs"> </a> 
+<a name="bkmk_prereqs"></a>
 
 ## <a name="pre-install-checklist"></a>설치 전 검사 목록
 
@@ -188,7 +189,10 @@ SSMS 인스턴스에 대한 오른쪽 클릭 **다시 시작** 명령을 사용�
 
 1. R 배포판에 대한 사용 조건에 동의하여 마법사를 계속 진행합니다.
 
-<a name="bkmk_FollowUp"></a> 
+> [!NOTE]
+> SQL Server 2016 SP2에 대한 CU(누적 업데이트) 14 이상에는 최신 버전의 R 런타임이 포함되어 있습니다. 자세한 내용은 [기본 언어 런타임 버전 변경](change-default-language-runtime-version.md)을 참조하세요.
+
+<a name="bkmk_FollowUp"></a>
 
 ## <a name="additional-configuration"></a>추가 구성
 
@@ -212,7 +216,7 @@ SSMS 인스턴스에 대한 오른쪽 클릭 **다시 시작** 명령을 사용�
 * [SQLRUserGroup을 데이터베이스 사용자로 추가](../../machine-learning/security/create-a-login-for-sqlrusergroup.md)
 
 > [!NOTE]
-> 나열된 변경 내용 중 일부는 필요하지 않으며, 모든 변경 내용이 필요하지 않을 수도 있습니다. 요구 사항은 보안 스키마, SQL Server를 설치한 위치, 사용자가 데이터베이스에 연결하여 외부 스크립트를 실행하는 방법에 따라 결정됩니다. 추가 문제 해결 팁은 다음에서 찾을 수 있습니다. [업그레이드 및 설치 FAQ](../troubleshooting/upgrade-and-installation-faq-sql-server-r-services.md)
+> 나열된 변경 내용 중 일부는 필요하지 않으며, 모든 변경 내용이 필요하지 않을 수도 있습니다. 요구 사항은 보안 스키마, SQL Server를 설치한 위치, 사용자가 데이터베이스에 연결하여 외부 스크립트를 실행하는 방법에 따라 결정됩니다. 추가 설치 지침은 여기에서 확인할 수 있습니다. [SQL Server Machine Learning Services 설치](../install/sql-machine-learning-services-windows-install.md)
 
 ## <a name="suggested-optimizations"></a>권장 최적화
 

@@ -1,4 +1,5 @@
 ---
+description: 일정 관리
 title: 일정 관리
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,18 +14,18 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: cc4923611fd9f90bffd5ff58d11c79da8d920122
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a2a6ab42623dbf84dd62a67c53d5bace9550bfab
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726965"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480294"
 ---
 # <a name="manage-schedules"></a>일정 관리
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> 현재 [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)에서 일부 SQL Server 에이전트 기능이 지원됩니다. 자세한 내용은 [SQL Server에서 Azure SQL Database Managed Instance T-SQL 차이점](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)을 참조하세요.
+> 현재 [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)에서는 SQL Server 에이전트 기능이 대부분 지원됩니다. 자세한 내용은 [SQL Server와 Azure SQL Managed Instance 간의 T-SQL 차이점](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)을 참조하세요.
 
 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업 일정의 속성을 확인하고 변경할 수 있습니다.  
   
@@ -32,7 +33,7 @@ ms.locfileid: "85726965"
 **사용 가능한 일정**  
 이 사용자가 사용할 수 있는 일정을 나열합니다. 작업 및 일정은 소유자가 동일해야 합니다. 따라서 이 목록에는 작업의 소유자가 소유한 일정만 표시됩니다.  
   
-**이름**  
+**Name**  
 일정 이름을 표시합니다.  
   
 **Enabled**  

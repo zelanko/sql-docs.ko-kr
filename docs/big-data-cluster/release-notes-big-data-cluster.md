@@ -5,16 +5,16 @@ description: 이 문서에서는 SQL Server 빅 데이터 클러스터의 최신
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 06/22/2020
+ms.date: 09/02/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 212c80adf64c9991aaf80cb422ded8fcbd1266ef
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 32cfd85d1b07a315a196c2728c776297c4d85d9d
+ms.sourcegitcommit: c5f0c59150c93575bb2bd6f1715b42716001126b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772902"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89392177"
 ---
 # <a name="sql-server-2019-big-data-clusters-release-notes"></a>SQL Server 2019 빅 데이터 클러스터 릴리스 정보
 
@@ -47,7 +47,7 @@ ms.locfileid: "85772902"
 
 |버전|메모|
 |---------|---------|
-|Enterprise<br/>Standard<br/>Developer| 빅 데이터 클러스터 버전은 SQL Server 마스터 인스턴스에 의해 결정됩니다. 배포 시점에는 기본적으로 개발자 버전이 배포됩니다. 배포 후에 버전을 변경할 수 있습니다. [SQL Server 마스터 인스턴스 구성](../big-data-cluster/configure-sql-server-master-instance.md)을 참조하세요. |
+|Enterprise<br/>Standard<br/>Developer| 빅 데이터 클러스터 버전은 SQL Server 마스터 인스턴스에 의해 결정됩니다. 배포 시점에는 기본적으로 개발자 버전이 배포됩니다. 배포 후에 버전을 변경할 수 있습니다. [SQL Server 마스터 인스턴스 구성](./configure-sql-server-master-instance.md)을 참조하세요. |
 
 ## <a name="tools"></a>도구
 
@@ -64,6 +64,7 @@ ms.locfileid: "85772902"
 
 | 해제          | BDC 버전    | `azdata` 버전| 릴리스 날짜 |
 |------------------|----------------|-----------------|--------------|
+| [CU6](#cu6)      | 15.0.4053.23   | 20.0.1          | 2020-08-04   |
 | [CU5](#cu5)      | 15.0.4043.16   | 20.0.0          | 2020-06-22   |
 | [CU4](#cu4)      | 15.0.4033.1    | 15.0.4033       | 2020-03-31   |
 | [CU3](#cu3)      | 15.0.4023.6    | 15.0.4023       | 2020-03-12   |
@@ -71,9 +72,31 @@ ms.locfileid: "85772902"
 | [CU1](#cu1)      | 15.0.4003.23   | 15.0.4003       | 2020-01-07   |
 | [GDR1](#rtm)     | 15.0.2070.34   | 15.0.2070       | 2019-11-04   |
 
+> [!NOTE]
+> CU7에는 SQL Server 2019 빅 데이터 클러스터 업데이트가 없습니다.
+
 ## <a name="how-to-install-updates"></a>업데이트 설치 방법
 
 업데이트를 설치하려면 [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]를 업그레이드하는 방법](deployment-upgrade.md)을 참조하세요.
+
+## <a name="cu6-july-2020"></a><a id="cu6"></a> CU6(2020년 7월)
+
+SQL Server 2019의 CU6(누적 업데이트 6) 릴리스입니다.
+
+|패키지 버전 | 이미지 태그 |
+|-----|-----|
+|15.0.4053.23 |[2019-CU6-ubuntu-16.04]
+
+이 릴리스에는 사소한 수정과 향상된 기능이 포함되어 있습니다. 다음 문서에는 이러한 업데이트와 관련된 정보가 포함되어 있습니다.
+
+- [Active Directory 모드에서 빅 데이터 클러스터 액세스 관리](manage-user-access.md)
+- [Active Directory 모드에서 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 배포](deploy-active-directory.md)
+- [고가용성을 사용하여 SQL Server 빅 데이터 클러스터 배포](deployment-high-availability.md)
+- [SQL Server 빅 데이터 클러스터 구성](configure-cluster.md)
+- [빅 데이터 클러스터에서 Apache Spark 및 Apache Hadoop 구성](configure-spark-hdfs.md)
+- [SQL Server 마스터 인스턴스 구성 속성](reference-config-master-instance.md)
+- [Apache Spark 및 Apache Hadoop(HDFS) 구성 속성](reference-config-spark-hadoop.md)
+- [Kubernetes RBAC 모델과 BDC를 관리하는 사용자 및 서비스 계정에 대한 영향](kubernetes-rbac.md)
 
 ## <a name="cu5-june-2020"></a><a id="cu5"></a> CU5(2020년 6월)
 
@@ -89,7 +112,7 @@ SQL Server 2019의 CU5(누적 업데이트 5) 릴리스입니다.
 - BDC의 일부로 배포된 권한 있는 컨테이너가 더 이상 ‘필요’하지 않도록 BDC 배포 보안 모델을 업데이트했습니다. 권한 없는 컨테이너 외에도, 컨테이너는 SQL Server 2019 CU5를 사용하는 모든 신규 배포에 대해 기본적으로 루트가 아닌 사용자로 실행됩니다. 
 - Active Directory 도메인에 여러 개의 빅 데이터 클러스터를 배포하도록 지원을 추가했습니다.
 - `azdata` CLI에는 서버와 별개인 고유한 의미 체계 버전이 있습니다. 클라이언트 버전과 서버 버전의 azdata 간에 모든 종속성이 제거되었습니다. 최신 향상 기능 및 수정 사항을 활용할 수 있도록 클라이언트와 서버 모두의 최신 버전을 사용하는 것이 좋습니다.
-- 특정 외부 데이터 원본의 검사를 지원하기 위해 두 개의 새로운 저장 프로시저 sp_data_source_objects 및 sp_data_source_columns를 도입했습니다. 고객이 T-SQL을 통해 직접 이 저장 프로시저를 사용하여 스키마를 검색하고 가상화가 가능한 테이블을 확인할 수 있습니다. SQL Server, Oracle, MongoDB 및 Teradata에서 외부 테이블을 만들 수 있도록 이러한 변경 내용을 Azure Data Studio용 [데이터 가상화 확장](../azure-data-studio/data-virtualization-extension.md)의 외부 테이블 마법사에서 활용합니다.
+- 특정 외부 데이터 원본의 검사를 지원하기 위해 두 개의 새로운 저장 프로시저 sp_data_source_objects 및 sp_data_source_table_columns를 도입했습니다. 고객이 T-SQL을 통해 직접 이 저장 프로시저를 사용하여 스키마를 검색하고 가상화가 가능한 테이블을 확인할 수 있습니다. SQL Server, Oracle, MongoDB 및 Teradata에서 외부 테이블을 만들 수 있도록 이러한 변경 내용을 Azure Data Studio용 [데이터 가상화 확장](../azure-data-studio/data-virtualization-extension.md)의 외부 테이블 마법사에서 활용합니다.
 - Grafana에서 수행되는 사용자 지정을 유지하도록 지원을 추가했습니다. CU5 이전에는 (Grafana 대시보드를 호스트하는) `metricsui` Pod가 다시 시작될 때 Grafana 구성의 편집 내용이 손실되었습니다. 이 문제를 해결하여 이제 모든 구성이 유지됩니다. 
 - Telegraf(`metricsdc` Pod에서 호스팅)를 사용하여 Pod 및 노드 메트릭을 수집하는 데 사용되는 API와 관련된 보안 문제를 해결했습니다. 이 변경으로 인해 이제 Telegraf에서는 서비스 계정, 클러스터 역할 및 클러스터 바인딩에서 필수 권한이 있어야 Pod 및 노드 메트릭을 수집할 수 있습니다. 자세한 내용은 [Cluster role required for Pods and nodes metrics collection](kubernetes-rbac.md#cluster-role-required-for-pods-and-nodes-metrics-collection)(Pod 및 노드 메트릭 수집에 필요한 클러스터 역할)을 참조하세요.
 - Pod 및 노드 메트릭의 수집을 제어하는 두 가지 기능 스위치를 추가했습니다. Kubernetes 인프라를 모니터링하기 위해 다른 솔루션을 사용하는 경우 control.json 배포 구성 파일에서 *allowNodeMetricsCollection* 및 *allowPodMetricsCollection*을 false로 설정하면 기본 제공되는 Pod 및 호스트 노드 메트릭 수집을 해제할 수 있습니다. OpenShift 환경의 경우 Pod 및 노드 메트릭을 수집하려면 권한 기능이 필요하므로 기본 제공 배포 프로필에서 이 설정은 기본적으로 false로 설정됩니다.
@@ -144,6 +167,28 @@ SQL Server 2019 GDR1(일반 배포 릴리스 1) - [!INCLUDE[big-data-clusters-20
 [!INCLUDE [sql-server-servicing-updates-version-15](../includes/sql-server-servicing-updates-version-15.md)]
 
 ## <a name="known-issues"></a>알려진 문제
+
+### <a name="empty-livy-jobs-before-you-apply-cumulative-updates"></a>누적 업데이트를 적용하기 전의 빈 Livy 작업
+
+- **영향을 받는 릴리스**: 현재 누적 업데이트를 통해
+
+- **문제 및 고객에게 미치는 영향**: 업그레이드하는 동안 sparkhead에서 404 오류를 반환합니다.
+
+- **해결 방법**: BDC를 업그레이드하기 전에 활성 Livy 세션 또는 일괄 처리 작업이 없는지 확인합니다. 이 문제를 방지하려면 [지원되는 릴리스에서 업그레이드](deployment-upgrade.md#upgrade-from-supported-release)의 지침을 따르세요. 
+
+   업그레이드 프로세스 중에 Livy에서 404 오류를 반환하는 경우 두 sparkhead 노드 모두에서 Livy 서버를 다시 시작합니다. 예를 들어:
+
+   ```console
+   kubectl -n <clustername> exec -it sparkhead-0/sparkhead-1 -c hadoop-livy-sparkhistory -- exec supervisorctl restart livy
+   ```
+
+### <a name="big-data-cluster-generated-service-accounts-passwords-expiration"></a>빅 데이터 클러스터 생성 서비스 계정 암호 만료
+
+- **영향을 받는 릴리스**: 릴리스에 관계없이 Active Directory 통합을 사용한 모든 빅 데이터 클러스터 배포
+
+- **문제 및 고객에게 미치는 영향**: 빅 데이터 클러스터를 배포하는 동안 워크플로는 [서비스 계정](active-directory-objects.md) 집합을 생성합니다. 도메인 컨트롤러에 설정된 암호 만료 정책에 따라 이러한 계정의 암호는 만료될 수 있습니다(기본값은 42일). 지금은 BDC의 모든 계정에 대한 자격 증명을 회전하는 메커니즘이 없으므로 만료 기간이 경과하면 클러스터가 작동하지 않게 됩니다.
+
+- **해결 방법**: 도메인 컨트롤러에서 BDC 서비스 계정의 만료 정책을 "암호 사용 기간 제한 없음"으로 업데이트합니다. 이러한 계정의 전체 목록은 [자동 생성 Active Directory 개체](active-directory-objects.md)를 참조하세요. 이 작업은 만료 이전 또는 이후에 수행할 수 있습니다. 후자의 경우 만료된 암호를 Active Directory가 다시 활성화합니다.
 
 ### <a name="credentials-for-accessing-services-through-gateway-endpoint"></a>게이트웨이 엔드포인트를 통해 서비스에 액세스하기 위한 자격 증명
 

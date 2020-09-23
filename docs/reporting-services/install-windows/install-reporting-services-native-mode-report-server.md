@@ -1,4 +1,5 @@
 ---
+description: Reporting Services 2016 기본 모드 보고서 서버 설치
 title: Reporting Services 2016 기본 모드 보고서 서버 설치 | Microsoft Docs
 ms.date: 12/20/2017
 ms.prod: reporting-services
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8f25e6dc-b753-400e-9e9a-50f4f35bf6c4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9ea3cde2e407600dab0b595df1dace43dc6b1ca3
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 2c05251bb8ac19f3c4594a263c7b108a8dbc90a4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81486855"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498087"
 ---
 # <a name="install-reporting-services-2016-native-mode-report-server"></a>Reporting Services 2016 기본 모드 보고서 서버 설치
 
@@ -93,7 +94,7 @@ URL 예약은 접두사, 호스트 이름, 포트 및 가상 디렉터리로 구
 |접두사|기본 접두사는 HTTP입니다. 이전에 SSL(Secure Sockets Layer)로 알려진 TLS(전송 계층 보안) 인증서를 설치한 경우 설치 프로그램에서 HTTPS 접두사를 사용하는 URL 예약을 만들려고 시도합니다.|
 |호스트 이름|기본 호스트 이름은 강력한 와일드카드(+)로서 보고서 서버가 `https://<computername>/reportserver`, `https://localhost/reportserver` 또는 `https://<IPAddress>/reportserver`를 포함하여 컴퓨터로 확인되는 모든 호스트 이름에 대해 지정된 포트에서 HTTP 요청을 수락하도록 지정합니다.|
 |포트|기본 포트는 80입니다. 80 이외의 포트를 사용하는 경우 브라우저 창에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 웹 애플리케이션을 열 때 URL에 해당 포트를 명시적으로 추가해야 합니다.|
-|가상 디렉터리|기본적으로 가상 디렉터리는 보고서 서버 웹 서비스의 경우 ReportServer_\<*instance_name*> 형식으로, [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]의 경우 Reports_\<*instance_name*> 형식으로 만들어집니다. 보고서 서버 웹 서비스의 기본 가상 디렉터리는 **reportserver**이고 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]의 기본 가상 디렉터리는 **reports**입니다.|
+|가상 디렉터리|기본적으로 가상 디렉터리는 보고서 서버 웹 서비스의 경우 ReportServer_\<*instance_name*> 형식, [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]의 경우 Reports_\<*instance_name*> 형식으로 만들어집니다. 보고서 서버 웹 서비스의 기본 가상 디렉터리는 **reportserver**이고 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]의 기본 가상 디렉터리는 **reports**입니다.|
 
 전체 URL 문자열의 예는 다음과 같습니다.
 

@@ -1,7 +1,8 @@
 ---
-title: PDO::quote | Microsoft Docs
+title: PDO::quote
+description: Microsoft PDO_SQLSRV Driver for PHP for SQL Server의 PDO::quote 함수에 대한 API 참조입니다.
 ms.custom: ''
-ms.date: 01/31/2020
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ab9ddc48-42f8-4edf-aa8b-b0fc66706161
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: db661eea0ea4b3b46e3a73f7e1f4609267bbae41
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 2cc39e175c46317428836af6562abc9af3d02dd9
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80919066"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88645564"
 ---
 # <a name="pdoquote"></a>PDO::quote
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -30,9 +31,9 @@ string PDO::quote( $string[, $parameter_type ] )
 ```  
   
 #### <a name="parameters"></a>매개 변수  
-$*string*: 따옴표로 묶을 문자열입니다.  
+$*문자열*: 따옴표로 묶을 문자열입니다.  
   
-$parameter*type*: 데이터 형식을 나타내는 선택적 (정수) 기호입니다.  기본값은 PDO::PARAM_STR입니다.  
+$*parameter_type*: 데이터 형식을 나타내는 선택적 (정수) 기호입니다.  기본값은 PDO::PARAM_STR입니다.  
 
 [유니코드 및 비유니코드 문자열 바인딩](https://wiki.php.net/rfc/extended-string-types-for-pdo)에 대한 지원을 추가하기 위해 새 PDO 상수를 PHP 7.2에 도입하였습니다. 유니코드 문자열은 N을 접두사로 하여 따옴표로 묶을 수 있습니다(예: ‘문자열’ 대신 N‘문자열’).
 
@@ -40,9 +41,9 @@ $parameter*type*: 데이터 형식을 나타내는 선택적 (정수) 기호입�
 1. PDO::PARAM_STR_CHAR - 유니코드가 아닌 문자열의 새 형식으로서 PDO::PARAM_STR에 대한 비트 OR로 적용됩니다.
 1. PDO::ATTR_DEFAULT_STR_PARAM - PDO::PARAM_STR_NATL 또는 PDO::PARAM_STR_CHAR로 설정하여 PDO::PARAM_STR에 대한 비트 OR로 값을 지정합니다.
 
-5\.8.0 버전부터 이러한 상수를 PDO::quote와 함께 사용할 수 있습니다.
+5.8.0 버전부터 이러한 상수를 PDO::quote와 함께 사용할 수 있습니다.
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
 SQL 문에 전달할 수 있는 따옴표로 묶은 문자열이고, 실패하면 false입니다.  
   
 ## <a name="remarks"></a>설명  

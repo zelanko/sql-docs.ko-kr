@@ -1,7 +1,7 @@
 ---
 title: 배포 구성
 titleSuffix: SQL Server big data clusters
-description: 구성 파일을 사용하여 빅 데이터 클러스터 배포를 사용자 지정하는 방법을 알아봅니다.
+description: azdata 관리 도구에 기본 제공되는 구성 파일을 사용하여 빅 데이터 클러스터 배포를 사용자 지정하는 방법을 알아봅니다.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ad43f370db096450a88bf1ffe3dd742c86be3206
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: db42b544127041a0d06cce8ff5f94466198bfa9f
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728018"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88860575"
 ---
 # <a name="configure-deployment-settings-for-cluster-resources-and-services"></a>클러스터 리소스 및 서비스에 대한 배포 설정 구성
 
@@ -307,58 +307,67 @@ azdata bdc config replace --config-file custom-bdc/bdc.json --json-values "$.spe
 
 ## <a name="configure-storage"></a><a id="storage"></a> 스토리지 구성
 
-각 풀에 사용되는 특성 및 스토리지 클래스를 변경할 수도 있습니다. 다음 예제에서는 사용자 지정 스토리지 클래스를 스토리지와 데이터 풀에 할당하고, 데이터를 저장하기 위한 영구 볼륨 클레임의 크기를 HDFS(스토리지 풀)의 경우 500Gb, 데이터 풀의 경우 100Gb로 업데이트합니다. 
+각 풀에 사용되는 특성 및 스토리지 클래스를 변경할 수도 있습니다. 다음 예제에서는 사용자 지정 스토리지 클래스를 스토리지와 데이터 풀에 할당하고, 데이터를 저장하기 위한 영구 볼륨 클레임의 크기를 HDFS(스토리지 풀)의 경우 500Gb, 마스터 및 데이터 풀의 경우 100Gb로 업데이트합니다. 
 
 > [!TIP]
 > 스토리지 구성에 대한 자세한 내용은 [Kubernetes의 SQL Server 빅 데이터 클러스터를 사용한 데이터 지속성](concept-data-persistence.md)을 참조하세요.
 
-먼저 *type* 및 *replicas* 외에 새 *storage* 섹션을 포함하는 patch.json 파일을 아래와 같이 만듭니다.
+먼저 아래와 같이 스토리지 설정을 조정하는 patch.json 파일을 만듭니다.
 
 ```json
 {
-  "patch": [
-    {
-      "op": "replace",
-      "path": "spec.resources.storage-0.spec",
-      "value": {
-        "type": "Storage",
-        "replicas": 2,
-        "storage": {
-          "data": {
-            "size": "500Gi",
-            "className": "myHDFSStorageClass",
-            "accessMode": "ReadWriteOnce"
-          },
-          "logs": {
-            "size": "32Gi",
-            "className": "myHDFSStorageClass",
-            "accessMode": "ReadWriteOnce"
-          }
-        }
-      }
-    },
-    {
-      "op": "replace",
-      "path": "spec.resources.data-0.spec",
-      "value": {
-        "type": "Data",
-        "replicas": 2,
-        "storage": {
-          "data": {
-            "size": "100Gi",
-            "className": "myDataStorageClass",
-            "accessMode": "ReadWriteOnce"
-          },
-          "logs": {
-            "size": "32Gi",
-            "className": "myDataStorageClass",
-            "accessMode": "ReadWriteOnce"
-          }
-        }
-      }
-    }
-  ]
+        "patch": [
+                {
+                        "op": "add",
+                        "path": "spec.resources.storage-0.spec.storage",
+                        "value": {
+                                "data": {
+                                        "size": "500Gi",
+                                        "className": "default",
+                                        "accessMode": "ReadWriteOnce"
+                                },
+                                "logs": {
+                                        "size": "30Gi",
+                                        "className": "default",
+                                        "accessMode": "ReadWriteOnce"
+                                }
+                        }
+                },
+        {
+                        "op": "add",
+                        "path": "spec.resources.master.spec.storage",
+                        "value": {
+                                "data": {
+                                        "size": "100Gi",
+                                        "className": "default",
+                                        "accessMode": "ReadWriteOnce"
+                                },
+                                "logs": {
+                                        "size": "30Gi",
+                                        "className": "default",
+                                        "accessMode": "ReadWriteOnce"
+                                }
+                        }
+                },
+                {
+                        "op": "add",
+                        "path": "spec.resources.data-0.spec.storage",
+                        "value": {
+                                "data": {
+                                        "size": "100Gi",
+                                        "className": "default",
+                                        "accessMode": "ReadWriteOnce"
+                                },
+                                "logs": {
+                                        "size": "30Gi",
+                                        "className": "default",
+                                        "accessMode": "ReadWriteOnce"
+                                }
+                        }
+                }
+        ]
 }
+
 ```
 
 그런 다음, `azdata bdc config patch` 명령을 사용하여 `bdc.json` 구성 파일을 업데이트할 수 있습니다.
@@ -666,7 +675,7 @@ azdata bdc config patch --config-file custom-bdc/control.json --patch-file elast
 > [!IMPORTANT]
 > [이 문서](https://www.elastic.co/guide/en/elasticsearch/reference/current/vm-max-map-count.html)의 지침에 따라 Kubernetes 클러스터의 각 호스트에서 `max_map_count` 설정을 수동으로 업데이트하는 것이 좋습니다.
 
-## <a name="turn-pods-and-nodes-metrics-colelction-onoff"></a>Pod 및 노드 메트릭 수집 설정/해제
+## <a name="turn-pods-and-nodes-metrics-collection-onoff"></a>Pod 및 노드 메트릭 수집 설정/해제
 
 SQL Server 2019 CU5에서는 Pod 및 노드 메트릭의 수집을 제어하는 두 가지 기능 스위치를 사용하도록 설정했습니다. Kubernetes 인프라를 모니터링하기 위해 다른 솔루션을 사용하는 경우 *control.json* 배포 구성 파일에서 *allowNodeMetricsCollection* 및 *allowPodMetricsCollection*을 *false*로 설정하면 기본 제공되는 Pod 및 호스트 노드 메트릭 수집을 해제할 수 있습니다. OpenShift 환경의 경우 Pod 및 노드 메트릭을 수집하려면 권한 기능이 필요하므로 기본 제공 배포 프로필에서 이 설정은 기본적으로 *false*로 설정됩니다.
 *azdata* CLI를 사용하여 사용자 지정 구성 파일에서 이 설정의 값을 업데이트하려면 다음 명령을 실행합니다.

@@ -1,5 +1,6 @@
 ---
-title: JDBC 드라이버로 트랜잭션 수행 | Microsoft Docs
+title: JDBC 드라이버로 트랜잭션 수행
+description: SQL Server용 JDBC Driver에서 격리 수준, 저장점, 결과 집합 유지 기능을 비롯한 트랜잭션을 지원하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: afbb776f-05dc-4e79-bb25-2c340483e401
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: aa86cde4d8c7d0aa91b5864f5beb3317b91bf0ee
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: ff851fc3d62be939eab7983eee80a173160f0d5c
+ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80923746"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87435405"
 ---
 # <a name="performing-transactions-with-the-jdbc-driver"></a>JDBC 드라이버로 트랜잭션 수행
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -26,7 +27,7 @@ ms.locfileid: "80923746"
   
 ## <a name="in-this-section"></a>섹션 내용  
   
-|항목|Description|  
+|항목|설명|  
 |-----------|-----------------|  
 |[트랜잭션 이해](../../connect/jdbc/understanding-transactions.md)|JDBC 드라이버에서 트랜잭션을 사용하는 방법의 개요를 제공합니다.|  
 |[XA 트랜잭션 이해](../../connect/jdbc/understanding-xa-transactions.md)|JDBC 드라이버에서 XA 트랜잭션을 사용하는 방법의 개요를 제공합니다.|  

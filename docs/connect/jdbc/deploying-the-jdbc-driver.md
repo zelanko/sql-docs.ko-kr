@@ -2,7 +2,7 @@
 title: JDBC 드라이버 배포
 description: 애플리케이션과 함께 Microsoft JDBC driver for SQL Server를 다시 배포 또는 배포할 수 있는 방법 및 필요한 파일을 알아봅니다.
 ms.custom: ''
-ms.date: 03/13/2020
+ms.date: 07/31/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 3ad3508d-d9b1-47fb-a63b-21cdc3ed44e0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7c99a7e4f491f2c00dc860ed85c453415f993593
-ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
+ms.openlocfilehash: 08365944acd071f21b3b4fadf950c23b65c6cfe5
+ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81728356"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565434"
 ---
 # <a name="deploying-the-jdbc-driver"></a>JDBC 드라이버 배포
 
@@ -51,7 +51,7 @@ JDBC 드라이버를 설치하기 전에 gzip 및 tar 유틸리티가 모두 사
 
 ## <a name="legalities-of-driver-redistribution"></a>드라이버 재배포의 법률적 측면
 
-JDBC 드라이버 버전 6.0, 6.2, 6.4, 7.0, 7.2, 7.4 및 8.2는 재배포 가능합니다. 라이선스 계약의 _배포 가능 코드_ 절을 검토하세요.
+JDBC Driver 버전 6.0, 6.2, 6.4, 7.0, 7.2, 7.4, 8.2 및 8.4는 재배포 가능합니다. 라이선스 계약의 _배포 가능 코드_ 절을 검토하세요.
 
 JDBC 드라이버 버전 4.x는 더 이상 사용되지 않습니다. 4\.x에 대한 지원은 2018년 이전에 만료되었습니다.
 

@@ -1,7 +1,8 @@
 ---
-title: Linux 및 macOS에서 ODBC 드라이버를 사용하여 데이터 액세스 추적 | Microsoft Docs
+title: Linux 및 macOS에서 ODBC 드라이버를 사용하여 데이터 액세스 추적
+description: 애플리케이션 동작 문제를 해결할 때 로그 파일을 출력할 수 있도록 Microsoft ODBC Driver for SQL Server를 사용하여 Linux 및 macOS에서 추적을 활성화하는 방법을 알아봅니다.
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 09/01/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3149173a-588e-47a0-9f50-edb8e9adf5e8
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c6abf282656681d3f798215282adb784b29c3846
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 69f55104ed73f4d6468de3dcacca54d05cf0ac9a
+ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80921985"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89288209"
 ---
 # <a name="data-access-tracing-with-the-odbc-driver-on-linux-and-macos"></a>Linux 및 macOS에서 ODBC 드라이버를 사용하여 데이터 액세스 추적
 
@@ -38,13 +39,13 @@ TraceFile=/home/myappuser/odbctrace.log
 
 애플리케이션 추적을 마친 후 추적의 성능 저하를 방지하기 위해 `odbcinst.ini` 파일에서 `Trace=Yes`를 제거하고 불필요한 추적 파일이 제거되었는지 확인합니다.
 
-추적은 `odbcinst.ini`에서 드라이버를 사용하는 모든 애플리케이션에 적용됩니다. 일부 애플리케이션을 추적하지 않으려면(예: 중요한 사용자별 정보가 공개되는 것을 방지하려는 경우) `ODBCSYSINI` 환경 변수를 사용하여 프라이빗 `odbcinst.ini`의 위치를 제공함으로써 개별 애플리케이션 인스턴스를 추적할 수 있습니다. 다음은 그 예입니다.
+추적은 `odbcinst.ini`에서 드라이버를 사용하는 모든 애플리케이션에 적용됩니다. 일부 애플리케이션을 추적하지 않으려면(예: 중요한 사용자별 정보가 공개되는 것을 방지하려는 경우) `ODBCSYSINI` 환경 변수를 사용하여 프라이빗 `odbcinst.ini`의 위치를 제공함으로써 개별 애플리케이션 인스턴스를 추적할 수 있습니다. 예를 들어:
 
 ```bash
 $ ODBCSYSINI=/home/myappuser myapp
 ```
 
-이 경우 `/home/myappuser/odbcinst.ini`의 `[ODBC Driver 13 for SQL Server]` 섹션에 `Trace=Yes`를 추가할 수 있습니다.
+이 경우 `/home/myappuser/odbcinst.ini`의 `[ODBC Driver 17 for SQL Server]` 섹션에 `Trace=Yes`를 추가할 수 있습니다.
 
 ## <a name="determining-which-odbcini-file-the-driver-is-using"></a>드라이버가 사용 중인 odbc.ini 파일 확인
 

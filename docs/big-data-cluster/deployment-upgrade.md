@@ -5,16 +5,16 @@ description: SQL Server 빅 데이터 클러스터를 새 릴리스로 업그레
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 02/13/2020
+ms.date: 09/02/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: dedae90b5242282fb550ebc59c5a4d98d21506f3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 009853cd960a49ec559edd1d8a619e458102364d
+ms.sourcegitcommit: c5f0c59150c93575bb2bd6f1715b42716001126b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85764069"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89392181"
 ---
 # <a name="how-to-upgrade-big-data-clusters-2019"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]를 업그레이드하는 방법
 
@@ -36,24 +36,32 @@ ms.locfileid: "85764069"
 
 이 섹션에서는 지원되는 릴리스(SQL Server 2019 GDR1)에서 지원되는 최신 릴리스로 SQL Server BDC를 업그레이드하는 방법에 대해 설명합니다.
 
+1. 활성 Livy 세션이 없음을 확인합니다.
+
+   Azure Data Studio에서 실행 중인 활성 Livy 세션 또는 일괄 처리 작업이 없는지 확인합니다. 이를 간단하게 확인하는 방법은 `curl` 명령 또는 브라우저를 통해 다음 URL을 요청하는 것입니다.
+
+    - `<your-gateway-endpoint>/gateway/default/livy/v1/sessions`
+    - `<your-gateway-endpoint>/gateway/default/livy/v1/batches`
+
 1. SQL Server 마스터 인스턴스를 백업합니다.
-2. HDFS를 백업합니다.
+
+1. HDFS를 백업합니다.
 
    ```
    azdata bdc hdfs cp --from-path <path> --to-path <path>
    ```
    
-   다음은 그 예입니다. 
+   예를 들어: 
 
    ```
    azdata bdc hdfs cp --from-path hdfs://user/hive/warehouse/%%D --to-path ./%%D
    ```
 
-3. `azdata`를 업데이트합니다.
+1. `azdata`를 업데이트합니다.
 
    `azdata` 설치를 위한 지침을 따릅니다. 
    - [Windows Installer](deploy-install-azdata-installer.md)
-   - [apt를 사용하는 Linux](deploy-install-azdata-linux-package.md)
+   - [Apt를 사용하는 Linux](deploy-install-azdata-linux-package.md)
    - [yum을 사용하는 Linux](deploy-install-azdata-yum.md)
    - [zypper를 사용하는 Linux](deploy-install-azdata-zypper.md)
 
@@ -66,10 +74,10 @@ ms.locfileid: "85764069"
    azdata bdc upgrade -n <clusterName> -t <imageTag> -r <containerRegistry>/<containerRepository>
    ```
 
-   예를 들어 다음 스크립트는 `2019-CU4-ubuntu-16.04` 이미지 태그를 사용합니다.
+   예를 들어 다음 스크립트는 `2019-CU6-ubuntu-16.04` 이미지 태그를 사용합니다.
 
    ```
-   azdata bdc upgrade -n bdc -t 2019-CU4-ubuntu-16.04 -r mcr.microsoft.com/mssql/bdc
+   azdata bdc upgrade -n bdc -t 2019-CU6-ubuntu-16.04 -r mcr.microsoft.com/mssql/bdc
    ```
 
 >[!NOTE]
@@ -93,10 +101,10 @@ ms.locfileid: "85764069"
    Control plane upgrade failed. Failed to upgrade controller.
    ```
 
-업그레이드에 대한 시간 제한을 늘리려면 **--controller-timeout** 및 **--component-timeout** 매개 변수를 사용하여 업그레이드를 실행할 때 더 높은 값을 지정합니다. 이 옵션은 SQL Server 2019 CU2 릴리스부터 사용할 수 있습니다. 다음은 그 예입니다.
+업그레이드에 대한 시간 제한을 늘리려면 **--controller-timeout** 및 **--component-timeout** 매개 변수를 사용하여 업그레이드를 실행할 때 더 높은 값을 지정합니다. 이 옵션은 SQL Server 2019 CU2 릴리스부터 사용할 수 있습니다. 예를 들어:
 
    ```bash
-   azdata bdc upgrade -t 2019-CU4-ubuntu-16.04 --controller-timeout=40 --component-timeout=40 --stability-threshold=3
+   azdata bdc upgrade -t 2019-CU6-ubuntu-16.04 --controller-timeout=40 --component-timeout=40 --stability-threshold=3
    ```
 **--controller-timeout**은 컨트롤러 또는 컨트롤러 db의 업그레이드가 완료될 때까지 대기할 시간(분)을 지정합니다.
 **--component-timeout**은 업그레이드의 각 후속 단계를 완료해야 하는 기간을 지정합니다.

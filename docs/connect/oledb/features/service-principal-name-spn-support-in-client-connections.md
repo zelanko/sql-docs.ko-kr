@@ -1,6 +1,6 @@
 ---
 title: 클라이언트 연결의 SPN(서비스 사용자 이름) 지원 | Microsoft Docs
-description: 클라이언트 연결의 SPN(서비스 사용자 이름) 지원
+description: SQL Server가 클라이언트 연결에서 서비스 사용자 이름을 지원하는 방법을 알아봅니다. 가장 일반적인 사용 시나리오를 살펴봅니다.
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -12,17 +12,18 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, SPNs
 - OLE DB, SPNs
 - SPNs [SQL Server]
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 6c1cfc2ff97c29f7ee22f6b4050634c95ae6a846
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: f369b492536ee432385e3babef0e42924f86926d
+ms.sourcegitcommit: fe5dedb2a43516450696b754e6fafac9f5fdf3cf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007265"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89195149"
 ---
 # <a name="service-principal-name-spn-support-in-client-connections"></a>클라이언트 연결의 SPN(서비스 사용자 이름) 지원
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -36,7 +37,7 @@ ms.locfileid: "86007265"
 >  클라이언트 애플리케이션에서 지정한 SPN은 Windows 통합 보안으로 연결이 설정되는 경우에만 사용됩니다.  
   
 > [!TIP]  
->  **[!INCLUDE[msCoName](../../../includes/msconame-md.md)]용 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Kerberos 구성 관리자**는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]과의 Kerberos 관련 연결 문제를 해결하는 진단 도구입니다. 자세한 내용은 [SQL Server용 Microsoft Kerberos 구성 관리자](https://www.microsoft.com/download/details.aspx?id=39046)를 참조하십시오.  
+>  **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]용 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Kerberos 구성 관리자**는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]과의 Kerberos 관련 연결 문제를 해결하는 진단 도구입니다. 자세한 내용은 [SQL Server용 Microsoft Kerberos 구성 관리자](https://www.microsoft.com/download/details.aspx?id=39046)를 참조하십시오.  
   
  Kerberos에 대한 자세한 내용은 다음 문서를 참조하십시오.  
   
@@ -44,10 +45,10 @@ ms.locfileid: "86007265"
   
 -   [Microsoft Kerberos](https://go.microsoft.com/fwlink/?LinkID=100758)  
   
-## <a name="usage"></a>사용  
+## <a name="usage"></a>사용량  
  다음 표에서는 클라이언트 애플리케이션이 보안 인증을 사용할 수 있는 가장 일반적인 시나리오에 대해 설명합니다.  
   
-|시나리오|Description|  
+|시나리오|설명|  
 |--------------|-----------------|  
 |레거시 애플리케이션이 SPN을 지정하지 않습니다.|이 호환성 시나리오는 이전 버전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]용으로 개발된 애플리케이션의 동작에 변화가 없을 것임을 보장합니다. 지정된 SPN이 없으면 해당 애플리케이션은 생성된 SPN에 의존하며, 어떤 인증 방법이 사용되는지 알 수 없습니다.|  
 |현재 버전의 SQL Server용 OLE DB 드라이버를 사용하는 클라이언트 애플리케이션이 연결 문자열의 SPN을 도메인 사용자 또는 컴퓨터 계정으로, 인스턴스별 SPN으로, 또는 사용자 정의 문자열로 지정합니다.|공급자, 초기화 또는 연결 문자열에서 **ServerSPN** 키워드를 사용하여 다음을 수행할 수 있습니다.<br /><br /> -[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에서 연결에 사용하는 계정을 지정합니다. 이를 통해 Kerberos 인증에 대한 액세스가 간소화됩니다. Kerberos KDC(키 배포 센터)가 있고 올바른 계정이 지정된 경우 NTLM보다 Kerberos 인증이 사용될 가능성이 더 높습니다. KDC는 일반적으로 도메인 컨트롤러와 동일한 컴퓨터에 위치합니다.<br /><br /> -[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 대한 서비스 계정을 조회하기 위해 SPN을 지정합니다. 모든 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 대해 이 용도로 사용할 수 있는 두 개의 기본 SPN이 생성됩니다. 그러나 키가 Active Directory에 있다는 보장은 없으므로 이 경우 Kerberos 인증이 보장되지는 않습니다.<br /><br /> -[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 대한 서비스 계정을 조회하는 데 사용될 SPN을 지정합니다. 이는 서비스 계정에 매핑되는 사용자 정의 문자열일 수 있습니다. 이 경우 키는 KDC에 수동으로 등록해야 하며 사용자 정의 SPN에 대한 규칙을 충족해야 합니다.<br /><br /> **FailoverPartnerSPN** 키워드를 사용하여 장애 조치(Failover) 파트너 서버에 대한 SPN을 지정할 수 있습니다. 계정 및 Active Directory 키 값의 범위는 주 서버에 지정할 수 있는 값과 동일합니다.|  
@@ -102,7 +103,7 @@ ms.locfileid: "86007265"
 ## <a name="ole-db-syntax-supporting-spns"></a>SPN을 지원하는 OLE DB 구문  
  구문별 정보는 다음 항목을 참조하십시오.  
   
--   [클라이언트 연결&#40;OLE DB&#41;의 SPN&#40;서비스 사용자 이름&#41;](../../oledb/ole-db/service-principal-names-spns-in-client-connections-ole-db.md)  
+-   [클라이언트 연결의 SPN&#40;서비스 사용자 이름&#41;&#40;OLE DB&#41;](../../oledb/ole-db/service-principal-names-spns-in-client-connections-ole-db.md)  
   
  이 기능을 보여 주는 예제 애플리케이션에 대한 자세한 내용은 [SQL Server 데이터 프로그래밍 기능 예제](https://msftdpprodsamples.codeplex.com/)를 참조하십시오.  
   

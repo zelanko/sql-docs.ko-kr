@@ -1,4 +1,5 @@
 ---
+description: 보고서 서버에서 기본 인증 구성
 title: 보고서 서버의 기본 인증 구성 | Microsoft Docs
 ms.date: 08/26/2016
 ms.prod: reporting-services
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8faf2938-b71b-4e61-a172-46da2209ff55
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 18b08fdca61a423353f53406432791d758818ea0
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 8b2b130f85b556d6fdeb2e3c0c3c4a32644a80d6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81625872"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492643"
 ---
 # <a name="configure-basic-authentication-on-the-report-server"></a>보고서 서버에서 기본 인증 구성
   기본적으로 Reporting Services는 Negotiate 및 NTLM 인증을 지정하는 요청을 수락합니다. 현재 배포에 기본 인증을 사용하는 클라이언트 애플리케이션 또는 브라우저가 포함된 경우 지원되는 유형 목록에 기본 인증을 추가해야 합니다. 또한 보고서 작성기를 사용하려면 보고서 작성기 파일에 대한 익명 액세스를 설정해야 합니다.  
@@ -36,9 +37,9 @@ ms.locfileid: "81625872"
   
 1.  텍스트 편집기에서 RSReportServer.config를 엽니다.  
   
-     이 파일은 *\<드라이브>:* \Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\ReportServer에 있습니다.  
+     이 파일은 *\<drive>:* \Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\ReportServer에 있습니다.  
   
-2.  \<**인증**>을 찾습니다.  
+2.  \<**Authentication**> 찾기.  
   
 3.  다음 중 필요에 가장 맞는 XML 구조를 복사합니다. 첫 번째 XML 구조는 다음 섹션에 설명되어 있는 모든 요소를 지정하기 위한 자리 표시자를 제공합니다.  
   
@@ -63,13 +64,13 @@ ms.locfileid: "81625872"
           </AuthenticationTypes>  
     ```  
   
-4.  \<**인증**>의 기존 항목 위에 붙여넣습니다.  
+4.  \<**Authentication**>의 기존 항목에 붙여넣습니다.  
   
      여러 인증 유형을 사용하는 경우 **RSWindowsBasic** 요소만 추가하고 **RSWindowsNegotiate**, **RSWindowsNTLM**또는 **RSWindowsKerberos**에 대한 요소는 삭제하지 마십시오.  
   
      **Custom** 은 다른 인증 유형과 함께 사용할 수 없습니다.  
   
-5.  \<**Realm**> 또는 \<**DefaultDomain**>에 대한 빈 값을 현재 환경에 유효한 값으로 대체합니다.  
+5.  \<**Realm**> 또는 \<**DefaultDomain**>의 빈 값을 현재 환경에 유효한 값으로 대체합니다.  
   
 6.  파일을 저장합니다.  
   

@@ -1,6 +1,6 @@
 ---
 title: 여러 행 집합 결과를 생성하는 명령(OLE DB 드라이버) | Microsoft Docs
-description: 여러 행 집합 결과를 생성하는 명령
+description: OLE DB Driver for SQL Server가 일괄 처리된 SQL 문에 대해 여러 행 집합을 반환하는 방법과 저장 프로시저가 일괄 처리된 SQL 문을 구현하는 경우를 알아봅니다.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, multiple rowsets
 - commands [OLE DB]
 - multiple-rowset results
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: f24f338252ab788cd395147c0a9a1cfdcd94162a
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 93c2d5ec6f5965edc56fea26b8474d3b8926a0cb
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942805"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88860153"
 ---
 # <a name="commands-generating-multiple-rowset-results"></a>여러 행 집합 결과를 생성하는 명령
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

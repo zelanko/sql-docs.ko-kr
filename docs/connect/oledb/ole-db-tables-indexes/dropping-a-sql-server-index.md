@@ -1,6 +1,6 @@
 ---
 title: SQL Server 인덱스 삭제(OLE DB 드라이버) | Microsoft Docs
-description: OLE DB Driver for SQL Server를 사용하여 SQL Server 인덱스 삭제
+description: OLE DB Driver for SQL Server에서 소비자가 SQL Server 테이블에서 인덱스를 제거할 수 있도록 하는 IIndexDefinition::DropIndex 함수에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - dropping indexes
 - OLE DB Driver for SQL Server, indexes
 - indexes [OLE DB]
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: bd31e30247493e887709ad5dbf38bacb3e3444ab
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 91b9dd9e5ae5978eb8e0290e8d023a0ebca5e9c3
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244130"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88858863"
 ---
 # <a name="dropping-a-sql-server-index"></a>SQL Server 인덱스 삭제
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

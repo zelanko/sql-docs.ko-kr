@@ -1,4 +1,5 @@
 ---
+description: 작업 단계 관리
 title: 작업 단계 관리
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -25,18 +26,18 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 5cc337a6a6676e47ac2541d0559829ad4ec6e6ae
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: ddcd4cde0412590e051a1d2f34ebce10435b2e55
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247398"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480313"
 ---
 # <a name="manage-job-steps"></a>작업 단계 관리
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> 현재 [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)에서 일부 SQL Server 에이전트 기능이 지원됩니다. 자세한 내용은 [SQL Server에서 Azure SQL Database Managed Instance T-SQL 차이점](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)을 참조하세요.
+> 현재 [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)에서는 SQL Server 에이전트 기능이 대부분 지원됩니다. 자세한 내용은 [SQL Server와 Azure SQL Managed Instance 간의 T-SQL 차이점](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)을 참조하세요.
 
 작업 단계는 데이터베이스나 서버에서 작업이 수행하는 동작입니다. 모든 작업에는 작업 단계가 하나 이상 있어야 합니다. 작업 단계가 될 수 있는 항목은 다음과 같습니다.  
   
@@ -81,7 +82,7 @@ sysadmin 고정 서버 역할의 멤버인 사용자가 실행한 작업 단계�
   
 -   명령이 성공한 경우 반환되는 프로세스 종료 코드를 지정합니다.  
   
--   실행할 명령입니다. 운영 체제 명령을 실행하려면 명령 자체를 지정하면 되고 외부 프로그램을 실행하려면 프로그램 이름과 프로그램 인수를 지정합니다. 예를 들면 다음과 같습니다. **C:\Program Files\Microsoft SQL Server\100\Tools\Binn\sqlcmd.exe -e -q "sp_who"**  
+-   실행할 명령입니다. 운영 체제 명령을 실행하려면 명령 자체를 지정하면 되고 외부 프로그램을 실행하려면 프로그램 이름과 프로그램 인수를 지정합니다(예: **C:\Program Files\Microsoft SQL Server\100\Tools\Binn\sqlcmd.exe -e -q "sp_who"**).  
   
     > [!NOTE]  
     > 실행 파일이 시스템 경로나 작업 단계가 실행되는 계정의 사용자 경로에 지정된 디렉터리에 있지 않은 경우 실행 파일의 전체 경로를 지정해야 합니다.  
@@ -211,7 +212,7 @@ SSIS 카탈로그에 패키지를 배포하고 패키지 원본으로 **SSIS 카
 |ActiveX 스크립트 작업 단계를 만드는 방법에 대해 설명합니다.|[Create an ActiveX Script Job Step](../../ssms/agent/create-an-activex-script-job-step.md)|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Analysis Services 명령과 쿼리를 실행하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업 단계를 만들고 정의하는 방법에 대해 설명합니다.|[Create an Analysis Services Job Step](../../ssms/agent/create-an-analysis-services-job-step.md)|  
 |작업 실행 중에 오류가 발생하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 수행해야 하는 동작에 대해 설명합니다.|[Set Job Step Success or Failure Flow](../../ssms/agent/set-job-step-success-or-failure-flow.md)|  
-|작업 단계 속성 대화 상자에서 작업 단계의 세부 사항을 보는 방법에 대해 설명합니다.|[작업 단계 정보 보기](../../ssms/agent/view-job-step-information.md)|  
+|작업 단계 속성 대화 상자에서 작업 단계의 세부 사항을 보는 방법에 대해 설명합니다.|[View Job Step Information](../../ssms/agent/view-job-step-information.md)|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업 단계 로그를 삭제하는 방법에 대해 설명합니다.|[Delete a Job Step Log](../../ssms/agent/delete-a-job-step-log.md)|  
   
 ## <a name="see-also"></a>참고 항목  

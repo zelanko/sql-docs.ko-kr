@@ -2,19 +2,19 @@
 title: Always Encrypted와 ODBC Driver 사용
 description: Always Encrypted 및 Microsoft ODBC Driver for SQL Server를 사용하여 ODBC 애플리케이션을 개발하는 방법을 알아봅니다.
 ms.custom: ''
-ms.date: 05/06/2020
+ms.date: 09/01/2020
 ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
 author: v-chojas
-ms.openlocfilehash: 938dba82797db23a9199c2c03fa8ec3c8bd010da
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: 303131cd528abee1884c2454a46df3380528ebad
+ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82886300"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89288185"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>SQL Server용 ODBC 드라이버와 함께 상시 암호화 사용
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -41,7 +41,7 @@ Always Encrypted를 사용하면 클라이언트 애플리케이션이 중요한
 매개 변수 암호화와 결과 집합의 암호화된 열 암호 해독을 둘 다 사용하는 가장 쉬운 방법은 `ColumnEncryption` 연결 문자열 키워드 값을 **Enabled**로 설정하는 것입니다. 다음은 상시 암호화를 사용하는 연결 문자열의 예제입니다.
 
 ```
-SQLWCHAR *connString = L"Driver={ODBC Driver 13 for SQL Server};Server={myServer};Trusted_Connection=yes;ColumnEncryption=Enabled;";
+SQLWCHAR *connString = L"Driver={ODBC Driver 17 for SQL Server};Server={myServer};Trusted_Connection=yes;ColumnEncryption=Enabled;";
 ```
 
 DSN 구성에서 동일한 키와 값(연결 문자열 설정이 있으면 해당 설정으로 재정의됨)을 사용하거나, `SQL_COPT_SS_COLUMN_ENCRYPTION` 연결 전 특성을 통해 프로그래밍 방식으로 Always Encrypted를 사용하도록 설정할 수도 있습니다. 이런 방식으로 설정하면 연결 문자열 또는 DSN에서 설정된 값이 재정의됩니다.
@@ -309,6 +309,8 @@ Always Encrypted는 클라이언트 쪽 암호화 기술이므로 데이터베�
 
 연결에 대한 상시 암호화가 설정된 경우 기본적으로 드라이버는 각 매개 변수화된 쿼리에 대해 [sys.sp_describe_parameter_encryption](../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md)을 호출하고 매개 변수 값 없이 쿼리 문을 SQL Server에 전달합니다. 이 저장 프로시저는 쿼리 문을 분석하여 암호화해야 하는 매개 변수가 있는지 확인하고, 있을 경우 드라이버에서 매개 변수를 암호화할 수 있도록 각 매개 변수에 대한 암호화 관련 정보를 반환합니다. 위의 동작은 클라이언트 애플리케이션에 대한 높은 수준의 투명도를 보장합니다. 애플리케이션(및 애플리케이션 개발자)에서는 암호화된 열을 대상으로 하는 값이 매개 변수로 드라이버에 전달되는 한, 어떤 쿼리가 암호화된 열에 액세스하는지 유의하지 않아도 됩니다.
 
+버전 17.6부터 드라이버는 준비된 문에 대해서도 암호화 메타데이터를 캐시하고 `SQLExecute`에 대한 후속 호출이 암호화 메타데이터를 검색하기 위해 추가 왕복을 요구하지 않도록 함으로써 성능을 향상시킵니다.
+
 ### <a name="per-statement-always-encrypted-behavior"></a>문 단위의 Always Encrypted 동작
 
 매개 변수가 있는 쿼리에 대한 암호화 메타데이터를 검색할 때 성능에 미치는 영향을 제어하기 위해, 연결에서 Always Encrypted가 사용되는 경우 개별 쿼리에 대해 Always Encrypted 동작을 변경할 수 있습니다. 이렇게 하면 암호화된 열을 대상으로 하는 매개 변수가 있는 쿼리에 대해서만 `sys.sp_describe_parameter_encryption`가 호출되도록 할 수 있습니다. 단, 이 경우 암호화의 투명성이 저하될 수 있습니다. 데이터베이스에서 추가 열을 암호화하는 경우 스키마 변경에 맞게 애플리케이션 코드를 변경해야 할 수 있습니다.
@@ -330,6 +332,8 @@ Always Encrypted가 사용되는 연결에서 새로 만든 문 핸들은 기본
 - 암호화된 열에 액세스하지 않는 문에서는 `SQL_SOPT_SS_COLUMN_ENCRYPTION` 특성을 `SQL_CE_DISABLED`로 설정합니다. 이렇게 하면 `sys.sp_describe_parameter_encryption`이 호출되지 않고, 결과 집합의 값 암호도 해독되지 않습니다.
     
 - 암호화를 요구하는 매개 변수는 없지만 암호화된 열에서 데이터를 검색하는 문에서는 `SQL_SOPT_SS_COLUMN_ENCRYPTION` 특성을 `SQL_CE_RESULTSETONLY`로 설정합니다. 이렇게 하면 `sys.sp_describe_parameter_encryption` 및 매개 변수 암호화가 호출되지 않습니다. 암호화된 열을 포함하는 결과의 암호 해독은 계속됩니다.
+
+- 두 번 이상 실행되는 쿼리에 준비된 문을 사용합니다. `SQLPrepare`를 사용하여 쿼리를 준비하고 문 핸들을 저장하여 `SQLExecute`가 실행될 때마다 다시 사용합니다. 암호화된 열이 없는 경우에도 이 기능을 사용하는 것이 좋습니다. 그러면 드라이버가 캐시된 메타데이터를 활용할 수 있습니다.
 
 ## <a name="always-encrypted-security-settings"></a>Always Encrypted 보안 설정
 
@@ -395,7 +399,7 @@ AKV(Azure Key Vault)는 Always Encrypted에 대한 열 마스터 키를 저장 �
 
 드라이버가 AKV에 저장된 CMK를 열 암호화에 사용할 수 있게 하려면 다음과 같은 연결 문자열 전용 키워드를 사용합니다.
 
-|자격 증명 유형| `KeyStoreAuthentication` |`KeyStorePrincipalId`| `KeyStoreSecret` |
+|자격 증명 유형|<code>KeyStoreAuthentication</code>|<code>KeyStorePrincipalId</code>|<code>KeyStoreSecret</code>|
 |-|-|-|-|
 |사용자 이름/암호| `KeyVaultPassword`|사용자 계정 이름|암호|
 |클라이언트 ID/비밀| `KeyVaultClientSecret`|클라이언트 ID|비밀|
@@ -408,13 +412,13 @@ AKV(Azure Key Vault)는 Always Encrypted에 대한 열 마스터 키를 저장 �
 **클라이언트 ID/비밀**:
 
 ```
-DRIVER=ODBC Driver 13 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultClientSecret;KeyStorePrincipalId=<clientId>;KeyStoreSecret=<secret>
+DRIVER=ODBC Driver 17 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultClientSecret;KeyStorePrincipalId=<clientId>;KeyStoreSecret=<secret>
 ```
 
 **사용자 이름/암호**:
 
 ```
-DRIVER=ODBC Driver 13 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultPassword;KeyStorePrincipalId=<username>;KeyStoreSecret=<password>
+DRIVER=ODBC Driver 17 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultPassword;KeyStorePrincipalId=<username>;KeyStoreSecret=<password>
 ```
 
 **관리 ID(시스템 할당)** :
@@ -596,7 +600,7 @@ ODBC Driver 17 for SQL Server부터 Always Encrypted에서 [SQL 대량 복사 �
 
 다음 표에는 암호화된 열에서 작업하는 경우의 작업 요약이 나와 있습니다.
 
-|`ColumnEncryption`|BCP 방향|Description|
+|<code>ColumnEncryption</code>|BCP 방향|Description|
 |----------------|-------------|-----------|
 |`Disabled`|OUT(클라이언트로)|암호 텍스트를 검색합니다. 관찰한 데이터 형식은 **varbinary(max)** 입니다.|
 |`Enabled`|OUT(클라이언트로)|일반 텍스트를 검색합니다. 드라이버에서 열 데이터의 암호를 해독합니다.|
@@ -641,7 +645,7 @@ ODBC Driver 17 for SQL Server부터 Always Encrypted에서 [SQL 대량 복사 �
 
 |IPD 필드|크기/형식|기본값|Description|
 |-|-|-|-|  
-|`SQL_CA_SS_FORCE_ENCRYPT` (1236)|WORD(2바이트)|0|0(기본값)인 경우: 이 매개 변수의 암호화가 암호화 메타데이터의 사용 가능 여부에 따라 결정됩니다.<br><br>0이 아닌 경우: 이 매개 변수에 대한 암호화 메타데이터를 사용할 수 있으면 암호화됩니다. 암호화 메타데이터를 사용할 수 없으면 다음 오류가 발생하고 요청이 실패합니다. [CE300] [Microsoft][ODBC Driver 13 for SQL Server]매개 변수에 대해 필수 암호화가 지정되었지만 서버에서 제공된 암호화 메타데이터가 없습니다.|
+|`SQL_CA_SS_FORCE_ENCRYPT` (1236)|WORD(2바이트)|0|0(기본값)인 경우: 이 매개 변수의 암호화가 암호화 메타데이터의 사용 가능 여부에 따라 결정됩니다.<br><br>0이 아닌 경우: 이 매개 변수에 대한 암호화 메타데이터를 사용할 수 있으면 암호화됩니다. 암호화 메타데이터를 사용할 수 없으면 다음 오류가 발생하고 요청이 실패합니다. [CE300] [Microsoft][ODBC Driver 17 for SQL Server]매개 변수에 대해 필수 암호화가 지정되었지만 서버에서 제공된 암호화 메타데이터가 없습니다.|
 
 ### <a name="bcp_control-options"></a>bcp_control 옵션
 

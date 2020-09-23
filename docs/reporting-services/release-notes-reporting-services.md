@@ -1,7 +1,7 @@
 ---
 title: Reporting Services(2017 이상)의 릴리스 정보 | Microsoft Docs
 description: SSRS(SQL Server Reporting Services) 버전 2017 이상의 변경 내용을 자세히 알아봅니다.
-ms.date: 04/28/2020
+ms.date: 08/31/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -10,12 +10,12 @@ ms.reviewer: maggies
 author: casualoak
 ms.author: rhys
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: 4a97ab8d68a1b265a25eb3b97a5146a402aa9b3b
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: a3b1984133387f1cbf5405f0c90b4532e56e776b
+ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247512"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89282398"
 ---
 # <a name="release-notes-for-sql-server-reporting-services-ssrs-2017-and-later"></a>SSRS(SQL Server Reporting Services)(2017 이상)의 릴리스 정보
 
@@ -53,12 +53,39 @@ GeneMi, DevOps = 1467988 (MsEng > TechnicalContent) , 2019/03/19
 -->
 ## <a name="sql-server-2019-reporting-services"></a>SQL Server 2019 Reporting Services
 
+## <a name="15075454810-20200831"></a>15.0.7545.4810, 2020/08/31 
+
+| 해결된 문제 | 세부 정보 |
+| :---------- | :------ |
+| 보안 업데이트  | &nbsp; |
+| PDF 문서를 더 이상 허용하지 않도록 주석 첨부 파일 지원을 제한했습니다.  | &nbsp; |
+| 이름에 마침표가 포함된 보고서를 내보낼 때 파일 이름 잘림을 수정했습니다.  | &nbsp; |
+| 잘못된 날짜 형식 오류가 발생한 구독 및 zh-TW 문화권 관련 문제를 해결했습니다.  | &nbsp; |
+| 특정 보고서에서 매개 변수 옵션에 액세스하면 무한 스핀으로 이어질 수 있는 문제를 해결했습니다.  | &nbsp; |
+| 보고서 이름에서 작은따옴표와 관련된 문제를 해결했습니다.  | &nbsp; |
+| URL 액세스에서 FindString이 일치 항목을 찾지 못하는 문제를 해결했습니다.  | &nbsp; |
+| PDF 내보내기용 대체 텍스트가 멀티 바이트 문자로 올바르게 인코딩되지 않은 문제를 해결했습니다.  | &nbsp; |
+| 선형 요소 아래에 원치 않게 표시되는 빈 이미지를 수정했습니다.  | &nbsp; |
+| 웹 버전에서 사용자 지정 인증에 대해 잘못된 지원되지 않음 오류를 수정했습니다.  | &nbsp; |
+| 화면 판독기가 테이블릭스의 추가 행 및 추가 열을 읽을 때의 문제를 해결했습니다.  | &nbsp; |
+| 이미지를 전체 페이지로 확대할 때 크기에 맞추기에서 이미지 잘림 문제를 수정했습니다.  | &nbsp; |
+| 명령줄 업그레이드에 더 이상 EULA 플래그가 필요하지 않습니다.  | &nbsp; |
+
 ## <a name="150724337714-20191101"></a>15.0.7243.37714, 2019/11/01
 
 초기 릴리스
 
 
 ## <a name="sql-server-2017-reporting-services"></a>SQL Server 2017 Reporting Services
+
+## <a name="1406001669-20200831"></a>14.0.600.1669, 2020/08/31 
+
+| 해결된 문제 | 세부 정보 |
+| :---------- | :------ |
+| 보안 업데이트  | &nbsp; |
+| PDF 문서를 더 이상 허용하지 않도록 주석 첨부 파일 지원을 제한했습니다.  | &nbsp; |
+| 이름에 마침표가 포함된 보고서를 내보낼 때 파일 이름 잘림을 수정했습니다.  | &nbsp; |
+| 잘못된 날짜 형식 오류가 발생한 구독 및 zh-TW 문화권 관련 문제를 해결했습니다.  | &nbsp; |
 
 ## <a name="1406001572-20200406"></a>14.0.600.1572, 2020/04/06 
 

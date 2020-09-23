@@ -2,7 +2,7 @@
 title: Microsoft Drivers for PHP 지원 매트릭스
 description: 이 페이지에는 Microsoft PHP Driver for SQL Server에 대한 지원 매트릭스 및 지원 드라이버에 대한 지원 주기 정책이 포함되어 있습니다.
 ms.custom: ''
-ms.date: 04/15/2020
+ms.date: 08/06/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 635c6ecbe6404b7e5466ecf5929dd2330183e7a0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 778d9aa4ee666ba3719095508d5f5e28516f954d
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85793148"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87942162"
 ---
 # <a name="microsoft-php-drivers-for-sql-server-support-matrix"></a>Microsoft PHP Drivers for SQL Server 지원 매트릭스
 
@@ -53,26 +53,29 @@ MSL(Microsoft 지원 수명 주기) 정책은 Microsoft 제품 지원 수명 주
 | &nbsp; | &nbsp; | &nbsp; |
 
 ## <a name="sql-server-version-certified-compatibility"></a>SQL Server 버전 인증 호환성
- 다음 매트릭스는 테스트를 통해 해당 드라이버 버전과 호환되는 것으로 인증된 SQL Server 버전을 나열합니다. 이전 드라이버 버전과의 호환성을 유지하기 위해 노력하고 있지만 SQL Server가 출시될 때 최신 지원 드라이버는 새 SQL Server 버전에서만 테스트하고 인증됩니다.
+ 다음 매트릭스에는 테스트를 통해 해당 드라이버 버전과 호환되는 것으로 인증된 데이터베이스 버전이 나열되어 있습니다. 이전 드라이버 버전과의 호환성을 유지하기 위해 노력하고 있지만 SQL Server가 출시될 때 최신 지원 드라이버는 새 SQL Server 버전에서만 테스트하고 인증됩니다.
 
-|PHP for SQL Server 드라이버 버전 &#8594;<br />&#8595; SQL Server 버전|5.8|5.6|5.3|5.2|4.3|4.0|3.2|
+|드라이버 버전&nbsp;&#8594;<br />&#8595; 데이터베이스 버전|5.8|5.6|5.3|5.2|4.3|4.0|3.2|
 |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-|Azure SQL Managed Instance|Y|Y|Y|Y|Y| | |
-|Azure SQL Data Warehouse|Y|Y|Y|Y|Y| | |
-|SQL Server 2019         |Y| | | | | | |
-|SQL Server 2017         |Y|Y|Y|Y|Y| | |
-|SQL Server 2016         |Y|Y|Y|Y|Y|Y| |
-|SQL Server 2014         |Y|Y|Y|Y|Y|Y|Y|
-|SQL Server 2012         |Y|Y|Y|Y|Y|Y|Y|
-|SQL Server 2008 R2      | |Y|Y|Y|Y|Y|Y|
-|SQL Server 2008         | | | | | |Y|Y|
+|Azure SQL Database        |예|예|예|예|예|   |   |
+|Azure SQL Managed Instance|yes|예|예|예|예|   |   |
+|Azure Synapse Analytics   |예|예|예|예|예|   |   |
+|SQL Server 2019           |예|   |   |   |   |   |   |
+|SQL Server 2017           |예|예|예|예|예|   |   |
+|SQL Server 2016           |예|예|예|예|예|예|   |
+|SQL Server 2014           |예|예|예|예|예|예|예|
+|SQL Server 2012           |예|예|예|예|예|예|예|
+|SQL Server 2008 R2        |   |예|예|예|예|예|예|
+|SQL Server 2008           |   |   |   |   |   |예|예|
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
+
+Azure SQL Database에서 PHP를 사용하는 방법에 대한 자세한 내용은 [Microsoft Azure SQL Database에 연결](connecting-to-microsoft-azure-sql-database.md)을 참조하세요.
 
 ## <a name="php-version-support"></a>PHP 버전 지원
 
 다음 버전의 PHP는 나열된 버전의 Microsoft PHP Drivers에서 지원됩니다.
 
-|PHP for SQL Server 드라이버 버전 &#8594;<br />&#8595; PHP 버전|5.8|5.6|5.3|5.2|4.3|4.0|3.2|
+|드라이버 버전&nbsp;&#8594;<br />&#8595; PHP 버전|5.8|5.6|5.3|5.2|4.3|4.0|3.2|
 |:---:|---|---|---|---|---|---|---|
 |7.4|7.4.0+          |                |                |                |       |        |        |
 |7.3|7.3.0+          |7.3.0+          |                |                |       |        |        |
@@ -90,46 +93,47 @@ MSL(Microsoft 지원 수명 주기) 정책은 Microsoft 제품 지원 수명 주
 
 다음 Windows 운영 체제 버전이 나열된 버전의 Microsoft PHP Drivers에서 지원됩니다.
 
-|PHP for SQL Server 드라이버 버전 &#8594;<br />&#8595; 운영 체제|5.8|5.6|5.3|5.2|4.3|4.0|3.2|
+|드라이버 버전&nbsp;&#8594;<br />&#8595; 운영 체제|5.8|5.6|5.3|5.2|4.3|4.0|3.2|
 |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-|Windows Server 2019                 |Y  |Y  |   |   |   |   |   |
-|Windows Server 2016                 |Y  |Y  |Y  |Y  |Y  |   |   |
-|Windows Server 2012 R2              |Y  |Y  |Y  |Y  |Y  |Y  |Y  |
-|Windows Server 2012                 |Y  |Y  |Y  |Y  |Y  |Y  |Y  |
-|Windows Server 2008 R2 SP1          |   |   |   |   |   |Y  |Y  |
+|Windows Server 2019                 |예|예|   |   |   |   |   |
+|Windows Server 2016                 |예|예|예|예|예|   |   |
+|Windows Server 2012 R2              |예|예|예|예|예|예|예|
+|Windows Server 2012                 |예|예|예|예|예|예|예|
+|Windows Server 2008 R2 SP1          |   |   |   |   |   |예|예|
 |Windows Server 2008 R2              |   |   |   |   |   |   |   |
-|Windows Server 2008 SP2             |   |   |   |   |   |Y  |Y  |
-|윈도우 10                          |Y  |Y  |Y  |Y  |Y  |Y  |   |
-|Windows 8.1                         |Y  |Y  |Y  |Y  |Y  |Y  |Y  |
-|Windows 8                           |   |   |   |   |Y  |Y  |Y  |
-|Windows 7 SP1                       |   |   |   |   |   |Y  |Y  |
-|Windows Vista SP2                   |   |   |   |   |   |Y  |Y  |
+|Windows Server 2008 SP2             |   |   |   |   |   |예|예|
+|Windows 10                          |예|예|예|예|예|예|   |
+|Windows 8.1                         |예|예|예|예|예|예|예|
+|Windows 8                           |   |   |   |   |예|예|예|
+|Windows 7 SP1                       |   |   |   |   |   |예|예|
+|Windows Vista SP2                   |   |   |   |   |   |예|예|
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
 다음 Linux 및 macOS 운영 체제 버전(64비트만 해당)은 나열된 Microsoft PHP Drivers 버전에서 지원됩니다.
 
-|PHP for SQL Server 드라이버 버전 &#8594;<br />&#8595; 운영 체제|5.8|5.6|5.3|5.2|4.3|4.0|3.2|
+|드라이버 버전&nbsp;&#8594;<br />&#8595; 운영 체제|5.8|5.6|5.3|5.2|4.3|4.0|3.2|
 |--|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-|Ubuntu 19.10(64비트)               |Y  |   |   |   |   |   |   |
-|Ubuntu 18.10(64비트)               |   |Y  |   |   |   |   |   |
-|Ubuntu 18.04(64비트)               |Y  |Y  |Y  |   |   |   |   |
-|Ubuntu 17.10(64비트)               |   |   |Y  |Y  |   |   |   |
-|Ubuntu 16.04(64비트)               |Y  |Y  |Y  |Y  |Y  |Y  |   |
-|Ubuntu 15.10(64비트)               |   |   |   |   |Y  |   |   |
-|Ubuntu 15.04(64비트)               |   |   |   |   |   |Y  |   |
-|Debian 10(64비트)                  |Y  |   |   |   |   |   |   |
-|Debian 9(64비트)                   |Y  |Y  |Y  |Y  |   |   |   |
-|Debian 8(64비트)                   |Y  |Y  |Y  |Y  |Y  |   |   |
-|Red Hat Enterprise Linux 8(64비트) |Y  |   |   |   |   |   |   |
-|Red Hat Enterprise Linux 7(64비트) |Y  |Y  |Y  |Y  |Y  |Y  |   |
-|Suse Enterprise Linux 15(64 비트)   |Y  |Y  |   |   |   |   |   |
-|Suse Enterprise Linux 12(64비트)   |Y  |Y  |Y  |Y  |   |   |   |
-|Alpine Linux 3.11(64비트)<sup>1</sup>|Y  |   |   |   |   |   |   |
-|macOS Catalina(64비트)             |Y  |   |   |   |   |   |   |
-|macOS Mojave(64비트)               |Y  |Y  |   |   |   |   |   |
-|macOS High Sierra(64비트)          |Y  |Y  |Y  |   |   |   |   |
-|macOS Sierra(64비트)               |   |Y  |Y  |Y  |Y  |   |   |
-|macOS El Capitan(64비트)           |   |   |Y  |Y  |Y  |   |   |
+|Ubuntu 20.04(64비트)               |예|   |   |   |   |   |   |
+|Ubuntu 19.10(64비트)               |예|   |   |   |   |   |   |
+|Ubuntu 18.10(64비트)               |   |예|   |   |   |   |   |
+|Ubuntu 18.04(64비트)               |예|예|예|   |   |   |   |
+|Ubuntu 17.10(64비트)               |   |   |예|예|   |   |   |
+|Ubuntu 16.04(64비트)               |예|예|예|예|예|예|   |
+|Ubuntu 15.10(64비트)               |   |   |   |   |예|   |   |
+|Ubuntu 15.04(64비트)               |   |   |   |   |   |예|   |
+|Debian 10(64비트)                  |예|   |   |   |   |   |   |
+|Debian 9(64비트)                   |예|예|예|예|   |   |   |
+|Debian 8(64비트)                   |예|예|예|예|예|   |   |
+|Red Hat Enterprise Linux 8(64비트) |예|   |   |   |   |   |   |
+|Red Hat Enterprise Linux 7(64비트) |예|예|예|예|예|예|   |
+|Suse Enterprise Linux 15(64 비트)   |예|예|   |   |   |   |   |
+|Suse Enterprise Linux 12(64비트)   |예|예|예|예|   |   |   |
+|Alpine Linux 3.11(64비트)<sup>1</sup>|예|   |   |   |   |   |   |
+|macOS Catalina(64비트)             |예|   |   |   |   |   |   |
+|macOS Mojave(64비트)               |예|예|   |   |   |   |   |
+|macOS High Sierra(64비트)          |예|예|예|   |   |   |   |
+|macOS Sierra(64비트)               |   |예|예|예|예|   |   |
+|macOS El Capitan(64비트)           |   |   |예|예|예|   |   |
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
 <sup>1</sup> Alpine Linux 지원은 버전 5.8.0에서 실험적입니다. 버전 5.8.1은 프로덕션 지원을 도입합니다.

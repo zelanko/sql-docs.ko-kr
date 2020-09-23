@@ -1,7 +1,8 @@
 ---
-title: '방법: SQLSRV 드라이버를 사용하여 오류 및 경고 처리 | Microsoft Docs'
+title: '방법: SQLSRV 드라이버를 사용하여 오류 및 경고 처리'
+description: Microsoft SQLSRV Driver for PHP for SQL Server를 사용할 때 오류 및 경고를 처리하는 방법을 알아봅니다.
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: fa231d60-4c06-4137-89e8-097c28638c5d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0605fc5a0fc27abfbcd15c22d5553587eecb0349
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: ebb3ef454e23ad181bfee856a5b09d01b20632e9
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80916267"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680648"
 ---
 # <a name="how-to-handle-errors-and-warnings-using-the-sqlsrv-driver"></a>방법: SQLSRV 드라이버를 사용하여 오류 및 경고 처리
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

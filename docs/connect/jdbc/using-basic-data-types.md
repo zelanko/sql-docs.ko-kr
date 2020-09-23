@@ -2,7 +2,7 @@
 title: 기본 JDBC 데이터 형식 사용
 description: Microsoft JDBC Driver for SQL Server는 기본 JDBC 데이터 형식을 사용하여 SQL Server 데이터 형식을 Java에서 인식할 수 있는 형식으로 변환합니다.
 ms.custom: ''
-ms.date: 08/12/2019
+ms.date: 08/24/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: d7044936-5b8c-4def-858c-28a11ef70a97
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 97c0d4b269bfda9a9c01bf8b08f93e2b2f5f83d5
-ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
+ms.openlocfilehash: 3c26c3c065ddf415d966c8fd3613e284c3c7a2b6
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81728376"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806995"
 ---
 # <a name="using-basic-data-types"></a>기본 데이터 형식 사용
 
@@ -35,9 +35,9 @@ ms.locfileid: "81728376"
 | bit                | BIT                                                | boolean                      |
 | char               | CHAR                                               | String                       |
 | date               | DATE                                               | java.sql.Date                |
-| Datetime           | timestamp                                          | java.sql.Timestamp           |
+| datetime<sup>3</sup>          | timestamp                               | java.sql.Timestamp           |
 | datetime2          | timestamp                                          | java.sql.Timestamp           |
-| datetimeoffset(2) | microsoft.sql.Types.DATETIMEOFFSET                 | microsoft.sql.DateTimeOffset |
+| datetimeoffset<sup>2</sup> | microsoft.sql.Types.DATETIMEOFFSET         | microsoft.sql.DateTimeOffset |
 | decimal            | DECIMAL                                            | java.math.BigDecimal         |
 | float              | DOUBLE                                             | double                       |
 | 이미지              | LONGVARBINARY                                      | byte[]                       |
@@ -53,7 +53,7 @@ ms.locfileid: "81728376"
 | smallint           | SMALLINT                                           | short                        |
 | smallmoney         | DECIMAL                                            | java.math.BigDecimal         |
 | text               | LONGVARCHAR                                        | String                       |
-| time               | TIME(1)                                           | java.sql.Time(1)            |
+| time               | TIME<sup>1</sup>                                   | java.sql.Time<sup>1</sup>            |
 | timestamp          | BINARY                                             | byte[]                       |
 | tinyint            | TINYINT                                            | short                        |
 | udt                | VARBINARY                                          | byte[]                       |
@@ -67,9 +67,11 @@ ms.locfileid: "81728376"
 | geometry           | VARBINARY                                          | byte[]                       |
 | geography          | VARBINARY                                          | byte[]                       |
   
-(1) time [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 형식과 함께 java.sql.Time을 사용하려면 **sendTimeAsDatetime** 연결 속성을 false로 설정해야 합니다.  
+<sup>1</sup> time [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 형식과 함께 java.sql.Time을 사용하려면 **sendTimeAsDatetime** 연결 속성을 false로 설정해야 합니다.  
   
-(2) [DateTimeOffset 클래스](reference/datetimeoffset-class.md)를 사용하여 **datetimeoffset** 값에 프로그래밍 방식으로 액세스할 수 있습니다.  
+<sup>2</sup> [DateTimeOffset](reference/datetimeoffset-class.md) 클래스를 사용하여 **datetimeoffset** 값에 프로그래밍 방식으로 액세스할 수 있습니다.  
+  
+<sup>3</sup> SQL Server 2016부터 datetime 열의 값을 비교하는 데 더 이상 java.sql.Timestamp 값을 사용할 수 없습니다. 이 제한은 datetime을 datetime2로 다르게 변환하는 서버 쪽 변경으로 인해 결과 값이 동등하지 않기 때문입니다. 이 문제를 해결하는 방법은 datetime 열을 datetime2(3)로 변경하거나, java.sql.Timestamp 대신 String을 사용하거나, 데이터베이스 호환성 수준을 120 이하로 변경하는 것입니다.
   
 다음 섹션에서는 JDBC 드라이버와 기본 데이터 형식을 사용하는 방법의 예를 보여 줍니다. Java 애플리케이션에서 기본 데이터 형식을 사용하는 방법에 대한 자세한 예는 [기본 데이터 형식 샘플](basic-data-types-sample.md)을 참조하세요.  
   
@@ -81,7 +83,7 @@ JDBC 기본 데이터 형식에 매핑되는 데이터 원본에서 데이터를
   
 ## <a name="retrieving-data-by-data-type"></a>데이터 형식별 데이터 검색
 
-데이터 원본에서 데이터를 검색해야 하고 검색할 데이터 형식을 알고 있는 경우 SQLServerResultSet 클래스의 get\<Type> 메서드(*getter 메서드*라고도 함) 중 하나를 사용합니다. get\<Type> 메서드는 다음과 같이 열 이름 또는 열 인덱스와 함께 사용할 수 있습니다.  
+데이터 원본에서 데이터를 검색해야 하고 검색할 데이터 형식을 알고 있는 경우 SQLServerResultSet 클래스의 get\<Type> 메서드(getter 메서드라고도 함) 중 하나를 사용합니다. get\<Type> 메서드는 다음과 같이 열 이름 또는 열 인덱스와 함께 사용할 수 있습니다.  
   
 [!code[JDBC#UsingBasicDataTypes2](codesnippet/Java/using-basic-data-types_2.java)]  
   
@@ -99,7 +101,7 @@ JDBC 기본 데이터 형식에 매핑되는 데이터 원본에서 데이터를
   
 ## <a name="updating-data-by-parameterized-query"></a>매개 변수가 있는 쿼리로 데이터 업데이트
 
-매개 변수가 있는 쿼리를 사용하여 데이터 원본의 데이터를 업데이트해야 하는 경우 [SQLServerPreparedStatement](reference/sqlserverpreparedstatement-class.md) 클래스의 set\<Type> 메서드*setter 메서드*라고도 함 중 하나를 사용하여 매개 변수의 데이터 형식을 설정합니다. 다음 예제에서는 [prepareStatement](reference/preparestatement-method-sqlserverconnection.md) 메서드를 사용하여 매개 변수가 있는 쿼리를 미리 컴파일한 다음, [setString](reference/setstring-method-sqlserverpreparedstatement.md) 메서드로 매개 변수의 문자열 값을 설정한 후 [executeUpdate](reference/executeupdate-method.md) 메서드를 호출합니다.  
+매개 변수가 있는 쿼리를 사용하여 데이터 원본의 데이터를 업데이트해야 하는 경우 [SQLServerPreparedStatement](reference/sqlserverpreparedstatement-class.md) 클래스의 set\<Type> 메서드(setter 메서드라고도 함) 중 하나를 사용하여 매개 변수의 데이터 형식을 설정합니다. 다음 예제에서는 [prepareStatement](reference/preparestatement-method-sqlserverconnection.md) 메서드를 사용하여 매개 변수가 있는 쿼리를 미리 컴파일한 다음, [setString](reference/setstring-method-sqlserverpreparedstatement.md) 메서드로 매개 변수의 문자열 값을 설정한 후 [executeUpdate](reference/executeupdate-method.md) 메서드를 호출합니다.  
   
 [!code[JDBC#UsingBasicDataTypes4](codesnippet/Java/using-basic-data-types_4.java)]  
   
@@ -107,7 +109,7 @@ JDBC 기본 데이터 형식에 매핑되는 데이터 원본에서 데이터를
 
 ## <a name="passing-parameters-to-a-stored-procedure"></a>저장 프로시저에 매개 변수 전달
 
-형식화된 매개 변수를 저장 프로시저에 전달하려면 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 클래스의 \<Type> 메서드 중 하나를 사용하여 인덱스 또는 이름으로 매개 변수를 설정합니다. 다음 예제에서는 [prepareCall](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md) 메서드를 사용하여 저장 프로시저 호출을 설정한 다음, [setString](../../connect/jdbc/reference/setstring-method-sqlservercallablestatement.md) 메서드로 호출에 필요한 매개 변수를 설정한 후 [executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverstatement.md) 메서드를 호출합니다.  
+형식화된 매개 변수를 저장 프로시저에 전달하려면 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 클래스의 set\<Type> 메서드 중 하나를 사용하여 인덱스 또는 이름으로 매개 변수를 설정합니다. 다음 예제에서는 [prepareCall](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md) 메서드를 사용하여 저장 프로시저 호출을 설정한 다음, [setString](../../connect/jdbc/reference/setstring-method-sqlservercallablestatement.md) 메서드로 호출에 필요한 매개 변수를 설정한 후 [executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverstatement.md) 메서드를 호출합니다.  
   
 [!code[JDBC#UsingBasicDataTypes5](codesnippet/Java/using-basic-data-types_5.java)]  
   

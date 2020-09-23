@@ -1,7 +1,8 @@
 ---
-title: PDOStatement::fetch | Microsoft Docs
+title: PDOStatement::fetch
+description: Microsoft PDO_SQLSRV Driver for PHP for SQL Server의 PDOStatement::fetch 함수에 대한 API 참조입니다.
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 4368e362-5bda-4da1-8462-33714683c39f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0f1c5684ac655d0fa2b653138ff55042e9266048
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 338d871e7e0cbbfa2da04d04d33fe672f85d8083
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928604"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88645110"
 ---
 # <a name="pdostatementfetch"></a>PDOStatement::fetch
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -36,13 +37,13 @@ $*cursor_orientation*: prepare 문이 `PDO::ATTR_CURSOR => PDO::CURSOR_SCROLL`�
   
 $*cursor_offset*: $*cursor_orientation*이 PDO::FETCH_ORI_ABS이거나 PDO::FETCH_ORI_REL 및 PDO::ATTR_CURSOR가 PDO::CURSOR_SCROLL인 경우 페치할 행을 지정하는 선택적 (정수) 기호입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
 행 또는 false를 반환하는 혼합 값입니다.  
   
 ## <a name="remarks"></a>설명  
 페치가 호출되면 커서가 자동으로 이동합니다. 다음 표에는 가능한 $*fetch_style* 값 목록이 나와 있습니다.  
   
-|$*fetch_style*|Description|  
+|$*fetch_style*|설명|  
 |-------------------|---------------|  
 |PDO::FETCH_ASSOC|열 이름으로 인덱싱된 배열을 지정합니다.|  
 |PDO::FETCH_BOTH|열 이름 및 0부터 시작하는 순서에 따라 인덱싱된 배열을 지정합니다. 이것이 기본값입니다.|  
@@ -57,7 +58,7 @@ $*cursor_offset*: $*cursor_orientation*이 PDO::FETCH_ORI_ABS이거나 PDO::FETC
   
 커서가 스크롤 가능한 경우(PDO::ATTR_CURSOR = PDO::CURSOR_SCROLL) 페치는 결과 집합 경계 내에서 커서를 이동합니다. 다음 표에는 가능한 $*cursor_orientation* 값 목록이 나와 있습니다.  
   
-|$*cursor_orientation*|Description|  
+|$*cursor_orientation*|설명|  
 |--------------------------|---------------|  
 |PDO::FETCH_ORI_NEXT|다음 행을 검색합니다. 이것이 기본값입니다.|  
 |PDO::FETCH_ORI_PRIOR|이전 행을 검색합니다.|  

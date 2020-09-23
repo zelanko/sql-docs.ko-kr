@@ -7,12 +7,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 000d7c39221f54459783fc9117a35a880fb02c92
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: cb1d1cff13865981f30495ac406495593a778180
+ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86006980"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076778"
 ---
 # <a name="download-microsoft-ole-db-driver-for-sql-server"></a>SQL Server용 Microsoft OLE DB 드라이버 다운로드
 
@@ -21,6 +21,8 @@ ms.locfileid: "86006980"
 OLE DB Driver for SQL Server는 OLE DB에 사용되는 독립 실행형 데이터 액세스 API(애플리케이션 프로그래밍 인터페이스)입니다. OLE DB Driver for SQL Server는 Windows에서 사용할 수 있으며, 하나의 DLL(동적 연결 라이브러리)로 SQL OLE DB 드라이버를 제공합니다.
 
 ## <a name="download"></a>다운로드
+
+Microsoft OLE DB Driver for SQL Server 재배포 가능 설치 관리자는 런타임에 최신 SQL Server 기능을 활용하는 데 필요한 클라이언트 구성 요소를 설치합니다. 버전 18.3부터 설치 관리자는 Microsoft Active Directory 인증 라이브러리(ADAL.dll)도 포함하고 설치합니다.
 
 Microsoft OLE DB Driver 18.4 for SQL Server는 최신 GA(일반 공급) 버전입니다. 이전 버전의 Microsoft OLE DB Driver 18 for SQL Server가 설치되어 있는 경우 18.4를 설치하면 18.4로 업그레이드됩니다.
 

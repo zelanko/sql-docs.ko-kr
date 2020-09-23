@@ -1,5 +1,6 @@
 ---
-title: SQLServerConnection 클래스 | Microsoft Docs
+title: SQLServerConnection 클래스
+description: SQL Server용 JDBC Driver의 SQLServerConnection 클래스에 대한 공용 API를 자세히 알아봅니다.
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 937292a6-1525-423e-a2b2-a18fd34c2893
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6248e126806b15592bbc3d6c458045ca7d9db042
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: c6827b79b4d1cc7b3f66db3c53c338614ec49fc3
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920675"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411479"
 ---
 # <a name="sqlserverconnection-class"></a>SQLServerConnection 클래스
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -24,7 +25,7 @@ ms.locfileid: "80920675"
   
  **패키지:** com.microsoft.sqlserver.jdbc  
   
- **구현:** [ISQLServerConnection](../../../connect/jdbc/reference/isqlserverconnection-interface.md), java.io.Serializable  
+ **Implements:** [ISQLServerConnection](../../../connect/jdbc/reference/isqlserverconnection-interface.md), java.io.Serializable  
   
 ## <a name="syntax"></a>구문  
   

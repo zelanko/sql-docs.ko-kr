@@ -1,4 +1,5 @@
 ---
+description: 이벤트 관리
 title: 이벤트 관리
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -19,18 +20,18 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c9f3e94252e955b5191ecdaef0188861f503aa77
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 98b162787254ed49ed64e5acd38d1ff8cb13f84f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85749005"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418119"
 ---
 # <a name="manage-events"></a>이벤트 관리
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> 현재 [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)에서 일부 SQL Server 에이전트 기능이 지원됩니다. 자세한 내용은 [SQL Server에서 Azure SQL Database Managed Instance T-SQL 차이점](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)을 참조하세요.
+> 현재 [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)에서는 SQL Server 에이전트 기능이 대부분 지원됩니다. 자세한 내용은 [SQL Server와 Azure SQL Managed Instance 간의 T-SQL 차이점](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)을 참조하세요.
 
 특정 오류 심각도에 도달하거나 넘어선 모든 이벤트 메시지를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 전달할 수 있습니다. 이를 *이벤트 전달*이라고 합니다. 전달 서버는 마스터 서버의 역할도 할 수 있는 전용 서버입니다. 이벤트 전달을 사용하면 서버 그룹에 대한 경고 관리를 중앙 집중화함으로써 많이 사용되는 서버의 작업을 줄일 수 있습니다.  
   

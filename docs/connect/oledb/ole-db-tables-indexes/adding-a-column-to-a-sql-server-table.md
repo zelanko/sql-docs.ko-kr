@@ -1,6 +1,6 @@
 ---
 title: SQL Server 테이블에 열 추가(OLE DB 드라이버) | Microsoft Docs
-description: OLE DB Driver for SQL Server를 사용하여 SQL Server 테이블에 열 추가
+description: OLE DB Driver for SQL Server에서 소비자가 ITableDefinition::AddColumn 메서드를 사용하여 SQL Server 테이블에 열을 추가할 수 있는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - AddColumn function
 - OLE DB Driver for SQL Server, columns
 - adding columns
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: ce22cc49060451e7d47a1f9452f1c10a134ae610
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 4366011d2f417dc7c35383a4460bfe5871065940
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86943145"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88859801"
 ---
 # <a name="adding-a-column-to-a-sql-server-table"></a>SQL Server 테이블에 열 추가
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

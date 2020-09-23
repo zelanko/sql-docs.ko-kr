@@ -1,5 +1,6 @@
 ---
 title: Microsoft Drivers for PHP for SQL Server 프로그래밍 가이드 | Microsoft Docs
+description: Microsoft Drivers for PHP for SQL Server를 사용하여 PHP 프로그래밍을 시작하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: a7acb507-670b-4a97-92df-90f0c0b3dd32
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f1221d85e40fc3bd8e05137a808f0873a404179a
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 352e42c226d20aa4df09fbb5251b633a56ad0516
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80915679"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87410929"
 ---
 # <a name="programming-guide-for-the-microsoft-drivers-for-php-for-sql-server"></a>Microsoft Drivers for PHP for SQL Server 프로그래밍 가이드 | Microsoft Docs
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -24,7 +25,7 @@ ms.locfileid: "80915679"
   
 ## <a name="in-this-section"></a>섹션 내용  
   
-|항목|Description|  
+|항목|설명|  
 |---------|---------------|  
 |[서버에 연결](../../connect/php/connecting-to-the-server.md)|SQL Server에 연결하기 위한 옵션 및 절차를 설명합니다.|  
 |[함수 실행 비교](../../connect/php/comparing-execution-functions.md)|각각에 대해 다른 사용 사례를 검토하여 쿼리를 실행하는 데 사용하는 함수를 비교합니다. 특히 이 문서는 단일 쿼리를 실행하는 것과 준비된 쿼리를 여러 번 실행하는 것을 비교합니다.|  

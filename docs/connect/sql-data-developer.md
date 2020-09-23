@@ -2,7 +2,7 @@
 title: SQL 데이터 개발자 | Microsoft Docs
 description: Microsoft의 SQL 데이터 플랫폼을 사용하여 웹 서버, 엔터프라이즈 서버 및 클라우드의 모바일 디바이스 및 데스크톱에서 데이터 중심 솔루션을 만들 수 있습니다.
 ms.custom: ''
-ms.date: 05/06/2020
+ms.date: 08/05/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -11,25 +11,26 @@ ms.topic: conceptual
 ms.assetid: 249e3794-e3fa-41cb-ad9c-f46e19e6805c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0b60eb6ca02ef446fe05bb109123e5c48951905a
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: ff3fb2b5e789d9eb9d89100e1722b37c9eae6385
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922298"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988484"
 ---
 # <a name="sql-data-developer"></a>SQL 데이터 개발자
 Microsoft의 SQL 데이터 플랫폼을 사용하여 웹 서버, 엔터프라이즈 서버 및 클라우드의 모바일 디바이스 및 데스크톱에서 데이터 중심 솔루션을 만들 수 있습니다.  
 
 ## <a name="sql-data-storage"></a>SQL 데이터 스토리지
 * [SQL Server 데이터베이스 엔진](../database-engine/configure-windows/sql-server-database-engine.md) SQL Server 데이터베이스 엔진을 사용하여 OLTP(온라인 트랜잭션 처리) 또는 OLAP(온라인 분석 처리) 데이터에 사용할 관계형 데이터베이스를 만들 수 있습니다. 
-* [SQL Azure](https://docs.microsoft.com/azure/sql-database/): SQL Azure를 사용하여 데이터베이스를 클라우드로 이동합니다. 
-* [SQL Compact](https://www.microsoft.com/download/details.aspx?id=30709): 모바일 디바이스, 데스크톱 및 웹 클라이언트를 위한 독립 실행형 애플리케이션과 간헐적으로 연결되는 애플리케이션을 구축하는 SQL Server Compact입니다.
+* [Azure SQL](https://docs.microsoft.com/azure/azure-sql/azure-sql-iaas-vs-paas-what-is-overview): Azure SQL을 사용하여 데이터베이스를 클라우드로 이동 
+* [SQL Compact](https://www.microsoft.com/download/details.aspx?id=30709): SQL Server Compact를 사용하여 모바일 디바이스, 데스크톱 및 웹 클라이언트를 위한 독립 실행형 애플리케이션과 간헐적으로 연결되는 애플리케이션을 빌드합니다.
 * [LocalDB](../database-engine/configure-windows/sql-server-2016-express-localdb.md): SQL Server의 전체 서버 인스턴스를 관리할 필요 없이 개발 중에 LocalDB를 사용하여 Transact-SQL 코드를 작성하고 테스트할 수 있습니다.
 
 ## <a name="sql-data-tools"></a>SQL 데이터 도구
-* [SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md): SSDT를 사용하여 관계형 데이터베이스, Azure SQL 데이터베이스, Integration Services 패키지, Analysis Services 데이터 모델 및 Reporting Services 보고서를 작성할 수 있습니다.
-* [SQL Server 관리 도구](../ssms/download-sql-server-management-studio-ssms.md)  SSMS를 사용하여 SQL Server 인스턴스를 구성, 모니터링 및 관리합니다.
+* [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md): Windows, macOS 및 Linux에서 Azure Data Studio를 사용하여 SQL Server, Azure SQL Database, PostgreSQL, Jupyter Notebook 등을 실행할 수 있습니다.
+* [SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md): Visual Studio 내부에서 SSDT를 사용하여 관계형 데이터베이스, Azure SQL 데이터베이스, Integration Services 패키지, Analysis Services 데이터 모델 및 Reporting Services 보고서를 작성할 수 있습니다.
+* [SQL Server 관리 도구](../ssms/download-sql-server-management-studio-ssms.md)  Windows에서 SSMS를 사용하여 SQL Server 인스턴스를 구성, 모니터링 및 관리할 수 있습니다.
 
 ## <a name="sql-data-access"></a>SQL 데이터 액세스
 * [SQL 클라이언트 드라이버](sql-connection-libraries.md):  SQL 드라이버를 사용하여 SQL 데이터베이스에서 데이터를 연결, 쿼리, 업데이트, 삽입 또는 삭제할 수 있습니다.

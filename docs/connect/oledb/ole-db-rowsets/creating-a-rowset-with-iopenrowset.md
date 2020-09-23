@@ -1,6 +1,6 @@
 ---
 title: IOpenRowset을 사용하여 행 집합 만들기(OLE DB 드라이버) | Microsoft Docs
-description: OLE DB Driver for SQL Server의 IOpenRowset 인터페이스를 사용하여 행 집합 만들기
+description: OLE DB Driver for SQL Server가 행 집합 및 해당 사용에 대한 제한을 반환하도록 IOpenRowset::OpenRowset 메서드를 지원하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - rowsets [OLE DB], creating
 - OLE DB Driver for SQL Server, rowsets
 - OLE DB rowsets, creating
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 721a54d4e423675fa5dad39d22e8f94c178228d6
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 4a39ff5a60f13a25c271be61d4db20a604364420
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942391"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88862267"
 ---
 # <a name="creating-a-rowset-with-iopenrowset"></a>IOpenRowset을 사용하여 행 집합 만들기
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

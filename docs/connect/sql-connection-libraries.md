@@ -8,14 +8,14 @@ ms.custom: ''
 ms.topic: article
 ms.date: 03/06/2020
 ms.author: v-daenge
-ms.openlocfilehash: f6f75adc047f39ae3e0e0c21143f64cf57d2803a
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: c2f282e9ba4c3b182640989e2365e9be70a258da
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244054"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988511"
 ---
-# <a name="connection-modules-for-microsoft-sql-databases"></a>Microsoft SQL Database용 연결 모듈
+# <a name="connection-modules-for-microsoft-sql-database"></a>Microsoft SQL Database용 연결 모듈
 
 이 문서에서는 클라이언트 프로그램이 [Microsoft SQL Server](../relational-databases/database-features.md) 및 클라우드 [Azure SQL Database](/azure/sql-database/) 내 해당 쌍과의 상호 작용에 사용할 수 있는 연결 모듈 또는 *드라이버*의 다운로드 링크를 제공합니다. 드라이버는 다음의 운영 체제에서 실행되는 다양한 프로그래밍 언어에 사용할 수 있습니다.
 

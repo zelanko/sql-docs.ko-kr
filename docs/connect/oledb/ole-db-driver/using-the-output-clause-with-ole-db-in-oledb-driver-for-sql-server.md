@@ -1,6 +1,6 @@
 ---
 title: SQL Server용 OLE DB 드라이버에서 OLE DB와 함께 OUTPUT 절 사용 | Microsoft Docs
-description: SQL Server용 OLE DB 드라이버에서 OLE DB와 함께 OUTPUT 절 사용
+description: OLE DB Driver for SQL Server에서 INSERT, UPDATE, DELETE 또는 MERGE 명령에 OUTPUT 절을 사용하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -8,14 +8,14 @@ ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: reference
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: df9868d5cd5c7a47c88891abe6b837c68edc784b
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 1374dab2ac4954d173d8d131d59bfa4b39f2ad0a
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003382"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88861512"
 ---
 # <a name="using-the-output-clause-with-ole-db-in-ole-db-driver-for-sql-server"></a>SQL Server용 OLE DB 드라이버에서 OLE DB와 함께 OUTPUT 절 사용
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

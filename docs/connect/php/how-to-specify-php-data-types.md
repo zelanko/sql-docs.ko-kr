@@ -1,7 +1,8 @@
 ---
-title: '방법: PHP 데이터 형식 지정 | Microsoft Docs'
+title: '방법: PHP 데이터 형식 지정'
+description: Microsoft Drivers for PHP for SQL Server를 사용하여 데이터를 검색할 때 PHP 데이터 형식을 지정하는 방법을 알아봅니다.
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: fee6e6b8-aad9-496b-84a2-18d2950470a4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8453b2cd2db36ed2c69b8ada941bcde0050a0759
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 9a47fd479449a8725c2e8a86d960ef020d1ee1ba
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80915809"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680678"
 ---
 # <a name="how-to-specify-php-data-types"></a>방법: PHP 데이터 형식 지정
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

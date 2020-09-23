@@ -1,6 +1,6 @@
 ---
 title: 지속형 데이터 원본 개체(OLE DB 드라이버)
-description: 지속형 데이터 원본 개체
+description: 이러한 예제에서는 OLE DB Driver for SQL Server가 IPersistFile 인터페이스를 사용하여 지속형 데이터 원본 개체를 지원하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - data source objects [OLE DB]
 - OLE DB Driver for SQL Server, persisted data source objects
 - persisted data source objects
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 5b8b939d0f82905971ee1656bf03b1212a5179d1
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 49013eeca8561275a1ce78cef9f02d4beac9c190
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244935"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88862049"
 ---
 # <a name="persisted-data-source-objects"></a>지속형 데이터 원본 개체
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

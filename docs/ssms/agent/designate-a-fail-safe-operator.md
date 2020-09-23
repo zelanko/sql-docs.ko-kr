@@ -1,4 +1,5 @@
 ---
+description: 유사 시 대기 운영자 지정
 title: 유사 시 대기 운영자 지정
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -16,20 +17,20 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 1f91a6c3548c944d3b2bcf075f2189a5fe4112df
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0be299ee081043e03a55a3cd0fa7a5a0aaf2c2be
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85724500"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88371409"
 ---
 # <a name="designate-a-fail-safe-operator"></a>유사 시 대기 운영자 지정
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> 현재 [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)에서 일부 SQL Server 에이전트 기능이 지원됩니다. 자세한 내용은 [SQL Server에서 Azure SQL Database Managed Instance T-SQL 차이점](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)을 참조하세요.
+> 현재 [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)에서는 SQL Server 에이전트 기능이 대부분 지원됩니다. 자세한 내용은 [SQL Server와 Azure SQL Managed Instance 간의 T-SQL 차이점](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)을 참조하세요.
 
-유사 시 대기 운영자는 지정된 운영자에게 알릴 수 없을 경우 경고를 받는 사용자입니다. 이 문서에서는 [!INCLUDE[msCoName](../../includes/msconame_md.md)]를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에이전트 경고 알림을 받을 유사 시 대기 운영자를 설정하는 방법에 대해 설명합니다.  
+유사 시 대기 운영자는 지정된 운영자에게 알릴 수 없을 경우 경고를 받는 사용자입니다. 이 문서에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 경고 알림을 받을 유사 시 대기 운영자를 설정하는 방법에 대해 설명합니다.  
   
 ## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a>시작하기 전 주의 사항  
   
@@ -54,7 +55,7 @@ ms.locfileid: "85724500"
   
 2.  **SQL Server 에이전트** 를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
   
-3.  **SQL Server 에이전트 속성 –** _server\_name_ 대화 상자의 **페이지 선택**에서 **경고 시스템**을 선택합니다.  
+3.  **SQL Server 에이전트 속성 –**_server\_name_ 대화 상자의 **페이지 선택**에서 **경고 시스템**을 선택합니다.  
   
 4.  **유사 시 대기 운영자**에서 **유사 시 대기 운영자 설정**을 선택합니다.  
   

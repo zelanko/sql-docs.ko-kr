@@ -12,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 05/01/2020
-ms.openlocfilehash: 93fb645af08eaef372694e492cc211ed4f82b922
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 485bb37dee0c118cf313bd7b3740b56c41e20c90
+ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914813"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88713781"
 ---
 # <a name="sql-server-profiler"></a>SQL Server Profiler
 
@@ -34,11 +34,11 @@ ms.locfileid: "86914813"
 > Analysis Services 워크로드를 위한 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]이(가) 지원됩니다.
 
 > [!NOTE]
-> SQL Server Profiler에서 SQL Azure 데이터베이스에 연결하려고 하면 다음과 같은 오류 메시지가 잘못 throw됩니다.
+> SQL Server Profiler에서 Azure SQL Database에 연결하려고 하면 다음과 같은 오류 메시지가 잘못 throw됩니다.
 >
 > - SQL Server에 대해 추적을 실행하려면 sysadmin 고정 서버 역할의 멤버이거나 ALTER TRACE 권한이 있어야 합니다.
 >
-> 메시지는 SQL Server Profiler에서 SQL Azure Database 인스턴스를 지원하지 않는다고 설명해야 합니다.
+> 이 메시지는 SQL Server 프로파일러에서 Azure SQL Database를 지원하지 않는다고 설명했어야 합니다.
 
 ## <a name="where-is-the-profiler"></a>프로파일러는 어디에 있나요?
 
@@ -164,7 +164,7 @@ Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 는 [!IN
 |커서까지 재생하는 방법을 설명합니다.|[커서까지 재생&#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/replay-to-a-cursor-sql-server-profiler.md)|  
 |[!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트를 재생하는 방법에 대해 설명합니다.|[Transact-SQL 스크립트 재생&#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/replay-a-transact-sql-script-sql-server-profiler.md)|  
 |추적 템플릿을 만드는 방법에 대해 설명합니다.|[추적 템플릿 만들기&#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)|  
-|추적 템플릿을 수정하는 방법에 대해 설명합니다.|[추적 템플릿 수정&#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/modify-a-trace-template-sql-server-profiler.md)|  
+|추적 템플릿을 수정하는 방법에 대해 설명합니다.|[추적 템플릿 수정&#40;SQL Server Profiler&#41;](./modify-trace-templates.md?view=sql-server-ver15)|  
 |전역 추적 옵션을 설정하는 방법에 대해 설명합니다.|[전역 추적 옵션 설정&#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/set-global-trace-options-sql-server-profiler.md)|  
 |추적 중에 값 또는 데이터 열을 찾는 방법에 대해 설명합니다.|[추적 중 값 또는 데이터 열 찾기&#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/find-a-value-or-data-column-while-tracing-sql-server-profiler.md)|  
 |실행 중인 추적에서 템플릿을 파생하는 방법에 대해 설명합니다.|[실행 중인 추적으로부터 템플릿 파생&#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/derive-a-template-from-a-running-trace-sql-server-profiler.md)|  
@@ -173,7 +173,7 @@ Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 는 [!IN
 |추적 템플릿을 내보내는 방법에 대해 설명합니다.|[추적 템플릿 내보내기&#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/export-a-trace-template-sql-server-profiler.md)|  
 |추적 템플릿을 가져오는 방법에 대해 설명합니다.|[추적 템플릿 가져오기&#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/import-a-trace-template-sql-server-profiler.md)|  
 |추적에서 스크립트를 추출하는 방법에 대해 설명합니다.|[추적에서 스크립트 추출&#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/extract-a-script-from-a-trace-sql-server-profiler.md)|  
-|추적과 Windows 성능 로그 데이터의 상관 관계를 지정하는 방법에 대해 설명합니다.|[추적과 Windows 성능 로그 데이터의 상관 관계 지정&#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/correlate-a-trace-with-windows-performance-log-data-sql-server-profiler.md)|  
+|추적과 Windows 성능 로그 데이터의 상관 관계를 지정하는 방법에 대해 설명합니다.|[추적과 Windows 성능 로그 데이터의 상관 관계 지정&#40;SQL Server Profiler&#41;](./correlate-a-trace-with-windows-performance-log-data.md?view=sql-server-ver15)|  
 |추적에 표시되는 열을 구성하는 방법에 대해 설명합니다.|[표시된 열 추적으로 구성&#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/organize-columns-displayed-in-a-trace-sql-server-profiler.md)|  
 |[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 시작하는 방법에 대해 설명합니다.|[SQL Server Profiler 시작](../../tools/sql-server-profiler/start-sql-server-profiler.md)|  
 |추적 및 추적 템플릿을 저장하는 방법에 대해 설명합니다.|[추적 및 추적 템플릿 저장](../../tools/sql-server-profiler/save-traces-and-trace-templates.md)|  

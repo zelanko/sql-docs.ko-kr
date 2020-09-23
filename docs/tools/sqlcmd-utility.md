@@ -26,20 +26,20 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
-ms.date: 07/22/2020
+ms.date: 09/11/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 1898259aef928b749396d0560965aea1d2816624
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 018bce8226fc534694b230c18bb2f272787ec144
+ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246652"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076768"
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd 유틸리티
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-> SQL Server 2014 이하는 [sqlcmd 유틸리티](/previous-versions/sql/2014/tools/sqlcmd-utility?view=sql-server-2014)를 참조하세요.
+> SQL Server 2014 이하는 [sqlcmd 유틸리티](/previous-versions/sql/2014/tools/sqlcmd-utility?view=sql-server-2014&preserve-view=true)를 참조하세요.
 >
 > Linux에서 sqlcmd를 사용하는 방법은 [Linux에 sqlcmd 및 bcp 설치](../linux/sql-server-linux-setup-tools.md)를 참조하세요.
 
@@ -54,25 +54,25 @@ ms.locfileid: "87246652"
 
 ## <a name="download-the-latest-version-of-sqlcmd-utility"></a>최신 버전의 sqlcmd 유틸리티 다운로드
 
-**[![다운로드](../ssdt/media/download.png) SQL Server용 Microsoft 명령줄 유틸리티 15(x64) 다운로드(2.6MB)](https://go.microsoft.com/fwlink/?linkid=2082790)**
-<br>**[![다운로드](../ssdt/media/download.png) SQL Server용 Microsoft 명령줄 유틸리티 15(x86) 다운로드(2.3MB)](https://go.microsoft.com/fwlink/?linkid=2082695)**
+**[![sqlcmd for x64 다운로드](../ssdt/media/download.png) SQL Server용 Microsoft 명령줄 유틸리티 15(x64) 다운로드(2.6MB)](https://go.microsoft.com/fwlink/?linkid=2142258)**
+<br>**[![sqlcmd for x86 다운로드](../ssdt/media/download.png) SQL Server용 Microsoft 명령줄 유틸리티 15(x86) 다운로드(2.3MB)](https://go.microsoft.com/fwlink/?linkid=2142257)**
 
 명령줄 도구는 일반 공급(GA)이지만 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]의 설치 프로그램 패키지로 릴리스됩니다.
 
 **버전 정보**
 
-릴리스 번호: 15.0 <br>
-빌드 번호: 15.0.1300.359<br>
-릴리스 날짜: 2019년 3월 13일
+릴리스 번호: 15.0.2<br>
+빌드 번호: 15.0.2000.5<br>
+릴리스 날짜: 2020년 9월 11일
 
 신규 버전의 SQLCMD는 Azure AD 인증을 지원하며, 여기에는 SQL Database, SQL Data Warehouse, Always Encrypted 기능에 대한 다단계 인증(MFA) 지원이 포함됩니다.
 신규 버전의 BCP는 Azure AD 인증을 지원하며, 여기에는 SQL Database, SQL Data Warehouse 기능에 대한 다단계 인증(MFA) 지원이 포함됩니다.
 
 **시스템 요구 사항** Windows 10 , Windows 7, Windows 8, Windows 8.1, Windows Server 2008~2019.
 
-이 구성 요소에는 [Windows Installer 4.5](https://www.microsoft.com/download/details.aspx?id=8483) 및 [Microsoft ODBC Driver 17 for SQL Server](https://www.microsoft.com/download/details.aspx?id=56567)가 둘 다 필요합니다.
+이 구성 요소에는 [Windows Installer 4.5](https://www.microsoft.com/download/details.aspx?id=8483) 및 [Microsoft ODBC Driver 17 for SQL Server](https://aka.ms/downloadmsodbcsql)가 둘 다 필요합니다.
  
-SQLCMD 버전을 확인하려면 `sqlcmd -?` 명령을 실행하여 15.0.1300.359 버전 이상을 사용하는지 확인합니다.
+SQLCMD 버전을 확인하려면 `sqlcmd -?` 명령을 실행하여 15.0.2000.5 버전 이상을 사용하는지 확인합니다.
 
 > [!NOTE]
 > Always Encrypted(`-g`) 및 Azure Active Directory 인증(`-G`)을 지원하려면 버전 13.1 이상이 필요합니다. (컴퓨터에 설치된 sqlcmd.exe 버전이 여러 개일 수 있습니다. 올바른 버전을 사용해야 합니다. 버전을 확인하려면 `sqlcmd -?`를 실행하세요.)
@@ -89,8 +89,8 @@ SSMS에서 sqlcmd 문을 실행하려면 위쪽 탐색 쿼리 메뉴 드롭다�
 
  다른 항목: 
 
-- [sqlcmd 유틸리티 시작](../relational-databases/scripting/sqlcmd-start-the-utility.md)   
-- [sqlcmd 유틸리티 사용](../relational-databases/scripting/sqlcmd-use-the-utility.md)   
+- [sqlcmd 유틸리티 시작](../ssms/scripting/sqlcmd-start-the-utility.md)
+- [sqlcmd 유틸리티 사용](../ssms/scripting/sqlcmd-use-the-utility.md)
   
 ## <a name="syntax"></a>구문
 
@@ -169,11 +169,11 @@ DAC(관리자 전용 연결)를 사용하여 SQL Server에 로그인합니다. �
 열 암호화 설정을 `Enabled`로 설정합니다. 자세한 내용은 [Always Encrypted](../relational-databases/security/encryption/always-encrypted-database-engine.md)를 참조하세요. Windows 인증서 저장소에 저장된 마스터 키만 지원됩니다. -g 스위치를 사용하려면 적어도 **sqlcmd** 버전 [13.1](https://go.microsoft.com/fwlink/?LinkID=825643)이 필요합니다. 사용 중인 버전을 확인하려면 `sqlcmd -?`를 실행하세요.
 
 **-G**  
-이 스위치는 Azure Active Directory 인증을 사용하여 사용자를 인증하도록 지정하기 위해 SQL 데이터 웨어하우스 또는 SQL 데이터베이스에 연결할 때 클라이언트에서 사용됩니다. 이 옵션은 **sqlcmd** 스크립팅 변수 SQLCMDUSEAAD = true를 설정합니다. -G 스위치를 사용하려면 적어도 **sqlcmd** 버전 [13.1](https://go.microsoft.com/fwlink/?LinkID=825643)이 필요합니다. 사용 중인 버전을 확인하려면 `sqlcmd -?`를 실행하세요. 자세한 내용은 [Azure Active Directory 인증을 사용하여 SQL Database 및 SQL Data Warehouse에 연결](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)을 참조하세요. -A 옵션은-G 옵션과 함께 지원되지 않습니다.
+이 스위치는 Azure Active Directory 인증을 사용하여 사용자를 인증하도록 지정하기 위해 SQL 데이터 웨어하우스 또는 SQL 데이터베이스에 연결할 때 클라이언트에서 사용됩니다. 이 옵션은 **sqlcmd** 스크립팅 변수 SQLCMDUSEAAD = true를 설정합니다. -G 스위치를 사용하려면 적어도 **sqlcmd** 버전 [13.1](https://go.microsoft.com/fwlink/?LinkID=825643)이 필요합니다. 사용 중인 버전을 확인하려면 `sqlcmd -?`를 실행하세요. 자세한 내용은 [Azure Active Directory 인증을 사용하여 SQL Database 및 SQL Data Warehouse에 연결](/azure/azure-sql/database/authentication-aad-overview)을 참조하세요. -A 옵션은-G 옵션과 함께 지원되지 않습니다.
 
 > [!IMPORTANT]
 > `-G` 옵션은 Azure SQL Database 및 Azure Data Warehouse에만 적용됩니다.
-> AAD 통합 및 대화형 인증은 현재 Linux 또는 macOS에서 지원되지 않습니다.
+> AAD 대화형 인증은 현재 Linux 또는 macOS에서 지원되지 않습니다. AAD 통합 인증을 사용하려면 [Microsoft ODBC Driver 17 for SQL Server](https://aka.ms/downloadmsodbcsql) 버전 17.6.1 이상과 올바르게 구성된 Kerberos 환경이 필요합니다.
 
 - **Azure Active Directory 사용자 이름 및 암호:** 
 
@@ -211,7 +211,7 @@ DAC(관리자 전용 연결)를 사용하여 SQL Server에 로그인합니다. �
 
     사용자는 Azure SQL Database와 SQL Data Warehouse의 Azure AD 대화형 인증으로 다단계 인증을 지원하는 대화형 메서드를 사용할 수 있습니다. 자세한 내용은 [Active Directory 대화형 인증](../ssdt/azure-active-directory.md#active-directory-interactive-authentication)을 참조하세요. 
 
-   Azure AD 대화형에는 **sqlcmd** [버전 15.0.1000.34](#download-the-latest-version-of-sqlcmd-utility) 이상과 [ODBC 버전 17.2 이상](https://www.microsoft.com/download/details.aspx?id=56567)이 필요합니다.  
+   Azure AD 대화형에는 **sqlcmd** [버전 15.0.1000.34](#download-the-latest-version-of-sqlcmd-utility) 이상과 [ODBC 버전 17.2 이상](https://aka.ms/downloadmsodbcsql)이 필요합니다.  
 
    대화형 인증을 사용 설정하려면 암호 없이 사용자 이름(-U)으로만 -G 옵션을 제공해야 합니다.
 
@@ -235,7 +235,7 @@ DAC(관리자 전용 연결)를 사용하여 SQL Server에 로그인합니다. �
    sqlcmd -S testsrv.database.windows.net -d Target_DB_or_DW -G -U joe@contoso.com  
    ```
 
-   특정 Azure AD에 있는 게스트 사용자가 sqlcmd 명령을 실행할 데이터베이스 권한이 있는 SQL DB 내의 그룹에 포함되는 경우, 이들의 게스트 사용자 별칭이 사용됩니다(예: *keith0@adventureworks.com* ).
+   특정 Azure AD에 있는 게스트 사용자가 sqlcmd 명령을 실행할 데이터베이스 권한이 있는 SQL Database 내의 그룹에 포함되는 경우, 이들의 게스트 사용자 별칭이 사용됩니다(예: *keith0@adventureworks.com* ).
 
   >[!IMPORTANT]
   >SQLCMD를 사용하여 `-G` 및 `-U` 옵션을 사용하는 경우 알려진 문제가 있습니다. `-G` 옵션 앞에 `-U` 옵션을 배치하면 인증이 실패할 수 있습니다. 항상 `-G` 옵션부터 시작하고 그 다음에 `-U` 옵션을 사용합니다.
@@ -251,7 +251,7 @@ DAC(관리자 전용 연결)를 사용하여 SQL Server에 로그인합니다. �
  서버에 연결할 때 애플리케이션 작업 유형을 선언합니다. 현재 **ReadOnly**값만 지원됩니다. **-K** 를 지정하지 않으면 sqlcmd 유틸리티가 Always On 가용성 그룹에 있는 보조 복제본에 연결할 수 없습니다. 자세한 내용은 [활성 보조 복제본: 읽기 가능한 보조 복제본(Always On 가용성 그룹)](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)을 참조하세요.  
   
 **-M** _multisubnet_failover_  
- SQL Server 가용성 그룹 또는 SQL Server 장애 조치(failover) 클러스터 인스턴스의 가용성 그룹 수신기에 연결할 때는 항상 **-M**을 지정합니다. **-M** 은 현재 활성 상태인 서버를 빠르게 검색하여 연결할 수 있도록 제공합니다. **–M**이 지정되지 않으면 **-M** 이 해제되어 있습니다. [수신기, 클라이언트 연결 및 애플리케이션 장애 조치(Failover)](../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)에 대한 자세한 내용은 [가용성 그룹의 생성 및 구성 &#40;SQL Server&#41;](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [장애 조치(Failover) 클러스터링 및 Always On 가용성 그룹(SQL Server)](https://msdn.microsoft.com/library/ff929171.aspx) 및 [활성 보조 복제본: 읽기 가능한 보조 복제본(Always On 가용성 그룹)](https://msdn.microsoft.com/library/ff878253.aspx)을 참조하세요.
+ SQL Server 가용성 그룹 또는 SQL Server 장애 조치(failover) 클러스터 인스턴스의 가용성 그룹 수신기에 연결할 때는 항상 **-M**을 지정합니다. **-M** 은 현재 활성 상태인 서버를 빠르게 검색하여 연결할 수 있도록 제공합니다. **–M**이 지정되지 않으면 **-M** 이 해제되어 있습니다. [수신기, 클라이언트 연결 및 애플리케이션 장애 조치(Failover)](../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)에 대한 자세한 내용은 [가용성 그룹의 생성 및 구성 &#40;SQL Server&#41;](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [장애 조치(Failover) 클러스터링 및 Always On 가용성 그룹(SQL Server)](../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md) 및 [활성 보조 복제본: 읽기 가능한 보조 복제본(Always On 가용성 그룹)](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)을 참조하세요.
   
  **-N**  
  이 스위치는 클라이언트에서 암호화된 연결을 요청하는 데 사용됩니다.  
@@ -612,7 +612,7 @@ DAC(관리자 전용 연결)를 사용하여 SQL Server에 로그인합니다. �
 |**GO** [*count*]|**:List**|  
 |[ **:** ] **RESET**|**:Error**|  
 |[ **:** ] **ED**|**:Out**|  
-|[ **:** ] **!!**|**:Perftrace**|  
+|[**:**] **!!**|**:Perftrace**|  
 |[ **:** ] **QUIT**|**:Connect**|  
 |[ **:** ] **EXIT**|**:On Error**|  
 |**:r**|**:Help**|  
@@ -928,9 +928,5 @@ sqlcmd -S Target_DB_or_DW.testsrv.database.windows.net -G -U bob@contoso.com -P 
 - [쿼리 편집기로 SQLCMD 스크립트 편집](~/relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md)
 - [작업 단계 관리](~/ssms/agent/manage-job-steps.md)   
 - [CmdExec 작업 단계 만들기](~/ssms/agent/create-a-cmdexec-job-step.md)  
-
-## <a name="feedback"></a>사용자 의견
-
-![needhelp_person_icon](../ssms/media/needhelp_person_icon.png) [SQL 클라이언트 도구 포럼](https://social.msdn.microsoft.com/Forums/home?forum=sqltools)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

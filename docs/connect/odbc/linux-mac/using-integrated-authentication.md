@@ -1,8 +1,8 @@
 ---
 title: 통합 인증 사용
-descrption: The Microsoft ODBC Driver for SQL Server on Linux and macOS supports connections that use Kerberos integrated authentication.
+description: Linux 및 macOS 기반 Microsoft ODBC Driver for SQL Server는 Kerberos 통합 인증을 사용하는 연결을 지원합니다.
 ms.custom: ''
-ms.date: 01/20/2017
+ms.date: 09/01/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,24 +13,26 @@ helpviewer_keywords:
 ms.assetid: 9499ffdf-e0ee-4d3c-8bca-605371eb52d9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 391d81c46640eb10a0ab2968f278412e55f57611
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: b1be7086c66ed6450e8e23f90c0804274bc6b37d
+ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81629663"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89288215"
 ---
 # <a name="using-integrated-authentication"></a>통합 인증 사용
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
 Linux 및 macOS 기반 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]는 Kerberos 통합된 인증을 사용하는 연결을 지원합니다. MIT Kerberos KDC(키 배포 센터)를 지원하고 GSSAPI(Generic Security Services Application Program Interface) 및 Kerberos v5 라이브러리를 사용하여 작동합니다.
-  
+
+버전 17.6부터 드라이버는 페더레이션 계정을 사용하는 Azure Active Directory에서도 통합 인증을 지원합니다. 그러나 시스템 라이브러리 제한이 있습니다. 자세한 내용은 [Azure Active Directory 사용](../using-azure-active-directory.md)을 참조하세요.
+
 ## <a name="using-integrated-authentication-to-connect-to-ssnoversion-from-an-odbc-application"></a>통합 인증을 사용하여 ODBC 애플리케이션에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 연결  
 
 **SQLDriverConnect** 또는 **SQLConnect**의 연결 문자열에서 **Trusted_Connection = yes**를 지정하여 Kerberos 통합 인증을 사용하도록 설정할 수 있습니다. 다음은 그 예입니다.  
 
 ```
-Driver='ODBC Driver 13 for SQL Server';Server=your_server;Trusted_Connection=yes  
+Driver='ODBC Driver 17 for SQL Server';Server=your_server;Trusted_Connection=yes  
 ```
   
 DSN과 연결하는 경우 `odbc.ini`의 DSN 항목에 **Trusted_Connection = yes**를 추가할 수도 있습니다.

@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 49645b1f-39b1-4757-bda1-c51ebc375c34
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8d709a8dee2577a9689a43a839126dcb2ec741e7
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 52821d92728e5d54f98e6d977e7829dd13ed5bf0
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632536"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988588"
 ---
 # <a name="connecting-to-an-azure-sql-database"></a>Azure SQL 데이터베이스에 연결
 
@@ -24,9 +24,9 @@ ms.locfileid: "81632536"
 
 이 문서에서는 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]를 사용하여 [!INCLUDE[ssAzure](../../includes/ssazure_md.md)]에 연결하는 경우의 문제에 대해 논의합니다. [!INCLUDE[ssAzure](../../includes/ssazure_md.md)]에 연결하는 방법에 대한 자세한 내용은 다음을 참조하세요.  
   
-- [SQL Azure 데이터베이스](https://docs.microsoft.com/azure/sql-database/sql-database-technical-overview)  
+- [Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-technical-overview)  
   
-- [방법: JDBC를 사용하여 SQL Azure에 연결](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-java)  
+- [방법: JDBC를 사용하여 Azure SQL에 연결](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-java)  
 
 - [Azure Active Directory 인증을 사용하여 연결](connecting-using-azure-active-directory-authentication.md)  
   
@@ -41,7 +41,7 @@ ms.locfileid: "81632536"
 
 - 네트워크 디바이스에서 연결을 삭제할 수 있는 TCP 계층에서 유휴 연결(Idle at the TCP layer) 및  
 
-- TCP **keepalive** 메시지가 발생할 수 있으나(TCP 쪽에서 유휴 상태가 아닌 연결하기) 30분간 활성 쿼리가 없는 SQL Azure 게이트웨이에서 유휴 연결(Idle by the SQL Azure Gateway)의 두 가지 종류가 있습니다. 이 시나리오에서 게이트웨이가 TDS 연결이 30분간 유휴 상태이고 연결을 종료됨을 결정합니다.  
+- TCP **keepalive** 메시지가 발생할 수 있으나(TCP 쪽에서 유휴 상태가 아닌 연결하기) 30분간 활성 쿼리가 없는 Azure SQL 게이트웨이에서 유휴 연결(Idle by the Azure SQL Gateway)의 두 가지 종류가 있습니다. 이 시나리오에서 게이트웨이가 TDS 연결이 30분간 유휴 상태이고 연결을 종료됨을 결정합니다.  
   
 네트워크 구성 요소에서 유휴 연결을 삭제하지 않도록 하려면 드라이버가 로드된 운영 체제에서 다음 레지스트리 설정(또는 Windows가 아닌 경우 이에 해당하는 설정)을 설정해야 합니다.  
   
@@ -67,7 +67,7 @@ Azure에서 실행 시 이 작업을 수행하려면 시작 작업을 생성하�
 ```bat
 if exist keepalive.txt goto done  
 time /t > keepalive.txt  
-REM Workaround for JDBC keep alive on SQL Azure  
+REM Workaround for JDBC keep alive on Azure SQL  
 REG ADD HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters /v KeepAliveTime /t REG_DWORD /d 30000 >> keepalive.txt  
 REG ADD HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters /v KeepAliveInterval /t REG_DWORD /d 1000 >> keepalive.txt  
 REG ADD HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters /v TcpMaxDataRetransmissions /t REG_DWORD /d 10 >> keepalive.txt  

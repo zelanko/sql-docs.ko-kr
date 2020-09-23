@@ -1,6 +1,6 @@
 ---
 title: ISSAsynchStatus::WaitForAsynchCompletion(OLE DB 드라이버) | Microsoft Docs
-description: ISSAsynchStatus::WaitForAsynchCompletion(OLE DB)
+description: OLE DB Driver for SQL Server에서 ISSAsynchStatus::WaitForAsynchCompletion 메서드가 비동기 작업이 완료되거나 시간 초과될 때까지 대기하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -13,14 +13,14 @@ apiname:
 apitype: COM
 helpviewer_keywords:
 - WaitForAsynchCompletion method
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 96f614cd9839fa66b0baa07bc6b64d714a6c0220
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: b10988fb12dac4a315569958a4f457a0a83af72f
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244234"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88862175"
 ---
 # <a name="issasynchstatuswaitforasynchcompletion-ole-db"></a>ISSAsynchStatus::WaitForAsynchCompletion(OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -1,6 +1,6 @@
 ---
 title: IDBProperties(OLE DB 드라이버) | Microsoft Docs
-description: IDBProperties 인터페이스(OLE DB)
+description: IDBProperties::GetPropertyInfo 메서드를 포함하여 OLE DB Driver for SQL Server의 IDBProperties 인터페이스에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -8,14 +8,14 @@ ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: reference
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: afaf7fc8e0ea60a1ee8576e0afa5b279653a2272
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 7e5122c4f8e78caa4fd28d595a09a58af21aacb4
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244499"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88861344"
 ---
 # <a name="idbproperties-ole-db"></a>IDBProperties(OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

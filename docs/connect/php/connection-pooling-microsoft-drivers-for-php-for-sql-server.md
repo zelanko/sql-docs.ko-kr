@@ -1,7 +1,8 @@
 ---
-title: 연결 풀링(Microsoft Drivers for PHP for SQL Server) | Microsoft Docs
+title: 연결 풀링(Microsoft Drivers for PHP for SQL Server)
+description: Microsoft Drivers for PHP for SQL Server를 사용할 경우의 연결 풀링 및 운영 체제에 따라 달라지는 환경에 대해 자세히 알아봅니다.
 ms.custom: ''
-ms.date: 08/01/2018
+ms.date: 08/01/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4d9a83d4-08de-43a1-975c-0a94005edc94
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 714a3436cc79f3568e14c5e2609e16fd408f288e
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 147e744a69850a5c76b9706c03a96fa67d2efb5f
+ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80900989"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87435266"
 ---
 # <a name="connection-pooling-microsoft-drivers-for-php-for-sql-server"></a>연결 풀링(Microsoft Drivers for PHP for SQL Server)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -28,7 +29,7 @@ ms.locfileid: "80900989"
   
 -   기본적으로 Windows에서는 연결 풀링이 사용하도록 설정되어 있습니다. Linux 및 macOS에서 연결은 ODBC에 대해 연결 풀링을 사용하도록 설정된 경우에만 풀링됩니다([연결 풀링 사용/사용 안 함](#enablingdisabling-connection-pooling) 참조). 연결 풀링을 사용하도록 설정하고 서버에 연결하면 드라이버는 새 연결을 만들기 전에 풀링된 연결을 사용하려고 시도합니다. 해당 연결이 풀에 없는 경우 새 연결이 만들어지고 풀에 추가됩니다. 드라이버가 연결 문자열을 비교하여 연결이 동일한지 여부를 확인합니다.  
   
--   풀에서 연결이 사용되는 경우 연결 상태가 재설정됩니다.  
+-   풀에서 연결이 사용되는 경우 연결 상태가 재설정됩니다(Windows만 해당).  
   
 -   연결을 닫으면 풀에 대한 연결을 반환합니다.  
   
@@ -39,8 +40,12 @@ ms.locfileid: "80900989"
 연결 풀에서 동일한 연결을 찾지 않고 연결 문자열의 *ConnectionPooling* 특성 값을 **false**(또는 0)로 설정하여 드라이버에서 새 연결을 강제로 만들 수 있습니다.  
   
 *ConnectionPooling* 특성이 연결 문자열에서 생략되거나 **true**(또는 1)로 설정되면 동등한 연결이 연결 풀에 존재하지 않는 경우에만 드라이버가 새 연결을 만듭니다.  
+
+> [!NOTE]  
+> MARS(Multiple Active Result Sets)는 기본적으로 사용하도록 설정되어 있습니다. MARS와 풀링을 모두 사용 중인 경우 MARS가 제대로 작동하려면 첫 번째 쿼리에서 연결을 다시 설정하는 데 시간이 더 오래 걸립니다. 따라서 지정된 쿼리 시간 제한이 무시됩니다. 그러나 후속 쿼리에서는 쿼리 제한 시간 설정이 적용됩니다.
   
-다른 연결 특성에 대한 자세한 내용은 [Connection Options](../../connect/php/connection-options.md)을 참조하세요.  
+필요한 경우 [방법: MARS(Multiple Active Result Set)를 사용하지 않도록 설정](../../connect/php/how-to-disable-multiple-active-resultsets-mars.md)을 참조하세요. 다른 연결 특성에 대한 자세한 내용은 [Connection Options](../../connect/php/connection-options.md)을 참조하세요.  
+
 ### <a name="linux-and-macos"></a>Linux 및 macOS
 연결 풀링을 사용하거나 사용하지 않도록 설정하는 데 *ConnectionPooling* 특성을 사용할 수 없습니다. 
 
@@ -51,7 +56,7 @@ odbcinst.ini 구성 파일을 편집하여 연결 풀링을 사용/사용하지 
 [ODBC]
 Pooling=Yes
 
-[ODBC Driver 13 for SQL Server]
+[ODBC Driver 17 for SQL Server]
 CPTimeout=<int value>
 ```
   
@@ -61,9 +66,9 @@ CPTimeout=<int value>
 [ODBC]
 Pooling=Yes
 
-[ODBC Driver 13 for SQL Server]
-Description=Microsoft ODBC Driver 13 for SQL Server
-Driver=/opt/microsoft/msodbcsql/lib64/libmsodbcsql-13.1.so.3.0
+[ODBC Driver 17 for SQL Server]
+Description=Microsoft ODBC Driver 17 for SQL Server
+Driver=/opt/microsoft/msodbcsql17/lib64/libmsodbcsql-17.5.so.2.1
 UsageCount=1
 CPTimeout=120
 ```
@@ -75,8 +80,8 @@ Pooling=No
 ```
 
 ## <a name="remarks"></a>설명
-- Linux 또는 macOS에서는 odbcinst.ini 파일에서 풀링이 사용하도록 설정된 경우 모든 연결이 풀링됩니다. 즉, ConnectionPooling 연결 옵션이 적용되지 않습니다. 풀링을 사용하지 않도록 설정하려면 odbcinst.ini 파일에서 Pooling=No를 설정하고 드라이버를 다시 로드합니다.
-  - 2\.3.4 이하 unixODBC(Linux 및 macOS)는 오류 메시지, 경고 및 정보 메시지와 같은 적절한 진단 정보를 반환하지 않을 수 있습니다.
+- Linux 또는 macOS에서는 2.3.7 이전의 unixODBC를 사용한 연결 풀링을 권장하지 않습니다. odbcinst.ini 파일에서 풀링을 사용하도록 설정하는 경우 모든 연결이 풀링됩니다. 즉, ConnectionPooling 연결 옵션이 적용되지 않습니다. 풀링을 사용하지 않도록 설정하려면 odbcinst.ini 파일에서 Pooling=No를 설정하고 드라이버를 다시 로드합니다. 
+  - 2.3.4 이하 unixODBC(Linux 및 macOS)는 오류 메시지, 경고 및 정보 메시지와 같은 적절한 진단 정보를 반환하지 않을 수 있습니다.
   - 따라서 SQLSRV 및 PDO_SQLSRV 드라이버는 긴 데이터(예: xml, 이진)를 문자열로 제대로 페치하지 못할 수 있습니다. 해결 방법으로 긴 데이터를 스트림으로 페치할 수 있습니다. 아래의 SQLSRV 예제를 참조하세요.
 
 ```

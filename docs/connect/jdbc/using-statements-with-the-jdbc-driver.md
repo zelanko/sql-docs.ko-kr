@@ -1,5 +1,6 @@
 ---
-title: JDBC 드라이버에서 문 사용 | Microsoft Docs
+title: JDBC 드라이버에서 문 사용
+description: SQL Server용 Microsoft JDBC Driver를 통해 SQL 문 및 저장 프로시저를 실행하여 데이터베이스 작업을 수행하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 7f8f3e8f-841e-4449-9154-b5366870121f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b94782d6e36f6ef6fb2997ceb195bf9ecdb1e947
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: de6f5340375a3a9a5c39e2405943729b997e9198
+ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80923959"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87435292"
 ---
 # <a name="using-statements-with-the-jdbc-driver"></a>JDBC 드라이버에서 문 사용
 
@@ -35,7 +36,7 @@ JDBC 드라이버는 다음과 같은 세 개의 클래스를 통해 [!INCLUDE[s
   
 ## <a name="in-this-section"></a>섹션 내용  
 
-| 항목                                                                                                    | Description                                                                                                                                            |
+| 항목                                                                                                    | 설명                                                                                                                                            |
 | -------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | [SQL이 있는 문 사용](../../connect/jdbc/using-statements-with-sql.md)                             | JDBC 드라이버에서 SQL 문을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 데이터를 사용하는 방법을 설명합니다.    |
 | [저장 프로시저가 있는 문 사용](../../connect/jdbc/using-statements-with-stored-procedures.md) | JDBC 드라이버에서 저장 프로시저를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 데이터를 사용하는 방법을 설명합니다. |

@@ -1,7 +1,8 @@
 ---
-title: 기본 SQL Server 데이터 형식 | Microsoft Docs
+title: 기본 SQL Server 데이터 형식
+description: 이 항목에는 Microsoft SQLSRV Driver for PHP for SQL Server를 사용할 때 PHP 데이터 형식을 기반으로 하는 모든 SQL Server 데이터 형식이 나열되어 있습니다.
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 65c7c211-96d3-4e65-a1de-1fe8d21348e7
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: dcfe4dd998f320da7e23ea28df99a28c48d2abba
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: a5f60111e8a98e3f187e4db39eec06ab35e38195
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928013"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680778"
 ---
 # <a name="default-sql-server-data-types"></a>기본 SQL Server 데이터 형식
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -36,8 +37,8 @@ ms.locfileid: "80928013"
 |리소스|지원되지 않습니다.|지원되지 않습니다.|  
 |Stream(인코딩: 이진 아님)|varchar(max)|varchar(max)|  
 |Stream(인코딩: 이진)|varbinary|varbinary|  
-|Array|지원되지 않습니다.|지원되지 않습니다.|  
-|Object|지원되지 않습니다.|지원되지 않습니다.|  
+|배열|지원되지 않습니다.|지원되지 않습니다.|  
+|개체|지원되지 않습니다.|지원되지 않습니다.|  
 |DateTime(1)|Datetime|지원되지 않습니다.|  
   
 ## <a name="see-also"></a>참고 항목  

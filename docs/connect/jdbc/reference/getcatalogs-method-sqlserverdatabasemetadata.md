@@ -1,4 +1,5 @@
 ---
+description: getCatalogs 메서드(SQLServerDatabaseMetaData)
 title: getCatalogs 메서드(SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,14 +14,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 7f8bd0f1-f340-4bb9-b559-0a6176124033
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 786f55e436b9582eaed875f8c7cd265b1d3e2cc5
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: a31fca087c206104d197a3121db90991ff38f8c8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67953450"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88436905"
 ---
 # <a name="getcatalogs-method-sqlserverdatabasemetadata"></a>getCatalogs 메서드(SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,11 +45,11 @@ public java.sql.ResultSet getCatalogs()
  이 getCatalogs 메서드는 java.sql.DatabaseMetaData 인터페이스의 getCatalogs 메서드에 의해 지정됩니다.  
   
 > [!NOTE]  
->  SQL Azure에서는 **SQLServerDatabaseMetaData.getCatalogs**를 호출하려면 master 데이터베이스에 연결해야 합니다. SQL Azure는 사용자 데이터베이스에서 전체 카탈로그 집합을 반환하는 기능을 지원하지 않습니다. **SQLServerDatabaseMetaData.getCatalogs**는 sys.databases 보기를 사용하여 카탈로그를 가져옵니다. SQL Azure에서 **SQLServerDatabaseMetaData.getCatalogs** 동작을 이해하려면 [sys.database_usage(Azure SQL Database)](../../../relational-databases/system-catalog-views/sys-database-usage-azure-sql-database.md)의 사용 권한에 대한 설명을 참조하세요.  
+>  Azure SQL Database에서는 **SQLServerDatabaseMetaData.getCatalogs**를 호출하려면 마스터 데이터베이스에 연결해야 합니다. SQL Database는 사용자 데이터베이스에서 전체 카탈로그 집합을 반환하는 기능을 지원하지 않습니다. **SQLServerDatabaseMetaData.getCatalogs**는 sys.databases 보기를 사용하여 카탈로그를 가져옵니다. SQL에서 **SQLServerDatabaseMetaData.getCatalogs** 동작을 이해하려면 [sys.database_usage(Azure SQL Database)](../../../relational-databases/system-catalog-views/sys-database-usage-azure-sql-database.md)의 사용 권한에 대한 설명을 참조하세요. Azure SQL Database에서는 **SQLServerDatabaseMetaData.getCatalogs**를 호출하여 마스터 데이터베이스에 연결해야 합니다. SQL Database는 사용자 데이터베이스에서 전체 카탈로그 집합을 반환하는 기능을 지원하지 않습니다. **SQLServerDatabaseMetaData.getCatalogs**는 sys.databases 보기를 사용하여 카탈로그를 가져옵니다. SQL Database에서 **SQLServerDatabaseMetaData.getCatalogs** 동작을 이해하려면 [sys.database_usage(Azure SQL Database)](../../../relational-databases/system-catalog-views/sys-database-usage-azure-sql-database.md)의 사용 권한에 대한 설명을 참조하세요.                      .  
   
  getCatalogs 메서드에서 반환되는 결과 집합에는 다음 정보가 포함됩니다.  
   
-|속성|Type|Description|  
+|이름|Type|설명|  
 |----------|----------|-----------------|  
 |TABLE_CAT|**String**|[!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 시스템 데이터베이스를 비롯한 카탈로그의 이름입니다.|  
   

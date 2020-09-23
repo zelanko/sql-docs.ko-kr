@@ -1,7 +1,7 @@
 ---
 title: Windows에 SQL Server 언어 확장 설치
 titleSuffix: ''
-description: Windows에 SQL Server 언어 확장을 설치하는 방법을 알아봅니다.
+description: SQL Server 설치 마법사를 실행하여 Windows 기반 SQL Server에 언어 확장 기능을 설치하는 방법을 알아봅니다.
 author: dphansen
 ms.author: davidph
 ms.date: 11/06/2019
@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e32918309d2a51b6bf030d3287b4440d64ee34a6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 62a4b97216f990d207070e76eaf38d12154757bf
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85735105"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88173564"
 ---
 # <a name="install-sql-server-language-extensions-on-windows"></a>Windows에 SQL Server 언어 확장 설치
 
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 마법사를 실행하여 SQL Server에서 언어 확장 구성 요소를 설치하는 방법을 알아봅니다.
 

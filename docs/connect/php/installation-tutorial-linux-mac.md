@@ -7,26 +7,26 @@ ms.prod_service: connectivity
 ms.custom: ''
 ms.technology: connectivity
 ms.topic: conceptual
-author: ulvii
-ms.author: v-ulibra
+author: David-Engel
+ms.author: v-daenge
 manager: v-mabarw
-ms.openlocfilehash: 3fc2747f21ff50af6206e59da594c0a06b2bb909
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: ee4938e8a0d226f668fabf3aaf4db1359ab6bf61
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82886280"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88807016"
 ---
 # <a name="linux-and-macos-installation-tutorial-for-the-microsoft-drivers-for-php-for-sql-server"></a>Microsoft Drivers for PHP for SQL Server의 Linux 및 macOS 설치 자습서
-다음 지침은 정리된 환경을 가정하며 Ubuntu 16.04, 18.04 및 19.10, RedHat 7 및 8, Debian 8, 9 및 10, Suse 12 및 15, Alpine 3.11 및 macOS 10.13, 10.14 및 10.15에 PHP 7.x, Microsoft ODBC 드라이버, Apache 웹 서버 및 Microsoft Drivers for PHP for SQL Server를 설치하는 방법을 보여 줍니다. 이 지침에서는 PECL을 사용하여 드라이버를 설치할 것을 권장하지만, [Microsoft Drivers for PHP for SQL Server](https://github.com/Microsoft/msphpsql/releases) GitHub 프로젝트 페이지에서 미리 작성된 이진 파일을 다운로드하고 [Microsoft Drivers for PHP for SQL Server 로드](../../connect/php/loading-the-php-sql-driver.md)의 지침에 따라 설치할 수도 있습니다. 확장 로드에 대한 설명과 php.ini에 확장을 추가하지 않는 이유는 [드라이버 로드](../../connect/php/loading-the-php-sql-driver.md#loading-the-driver-at-php-startup) 섹션을 참조하세요.
+다음 지침은 정리된 환경을 가정하며 Ubuntu 16.04, 18.04 및 20.04, RedHat 7 및 8, Debian 8, 9 및 10, Suse 12 및 15, Alpine 3.11 및 macOS 10.13, 10.14 및 10.15에 PHP 7.x, Microsoft ODBC 드라이버, Apache 웹 서버 및 Microsoft Drivers for PHP for SQL Server를 설치하는 방법을 보여 줍니다. 이 지침에서는 PECL을 사용하여 드라이버를 설치할 것을 권장하지만, [Microsoft Drivers for PHP for SQL Server](https://github.com/Microsoft/msphpsql/releases) GitHub 프로젝트 페이지에서 미리 작성된 이진 파일을 다운로드하고 [Microsoft Drivers for PHP for SQL Server 로드](../../connect/php/loading-the-php-sql-driver.md)의 지침에 따라 설치할 수도 있습니다. 확장 로드에 대한 설명과 php.ini에 확장을 추가하지 않는 이유는 [드라이버 로드](../../connect/php/loading-the-php-sql-driver.md#loading-the-driver-at-php-startup) 섹션을 참조하세요.
 
 이 지침에서는 `pecl install`을 사용하여 기본적으로 PHP 7.4를 설치합니다. `pecl channel-update pecl.php.net`을 먼저 실행해야 할 수 있습니다. 지원되는 일부 Linux 배포판은 기본적으로 SQL Server용 PHP 드라이버에서 지원되지 않는 PHP 7.1 또는 이전 버전을 설치합니다. PHP 7.2 또는 7.3을 설치하려면 각 섹션의 시작 부분에 있는 참고 내용을 참조하세요.
 
 또한 Ubuntu에서 PHP-FPM(PHP FastCGI 프로세스 관리자)를 설치하는 방법에 대한 지침도 포함되어 있습니다. 이 서비스는 Apache 대신 nginx 웹 서버를 사용하는 경우에 필요합니다.
 
-## <a name="contents-of-this-page"></a>이 페이지의 내용:
+## <a name="contents-of-this-page"></a>이 페이지의 내용
 
-- [Ubuntu 16.04, 18.04, 및 19.10에 드라이버 설치](#installing-the-drivers-on-ubuntu-1604-1804-and-1910)
+- [Ubuntu 16.04, 18.04, 및 20.04에 드라이버 설치](#installing-the-drivers-on-ubuntu-1604-1804-and-2004)
 - [Ubuntu에서 PHP-FPM을 사용하여 드라이버 설치](#installing-the-drivers-with-php-fpm-on-ubuntu)
 - [Red Hat 7 및 8에 드라이버 설치](#installing-the-drivers-on-red-hat-7-and-8)
 - [Debian 8, 9 및 10에 드라이버 설치](#installing-the-drivers-on-debian-8-9-and-10)
@@ -34,7 +34,7 @@ ms.locfileid: "82886280"
 - [Alpine 3.11에 드라이버 설치](#installing-the-drivers-on-alpine-311)
 - [macOS High Sierra, Mojave 및 Catalina에 드라이버 설치](#installing-the-drivers-on-macos-high-sierra-mojave-and-catalina)
 
-## <a name="installing-the-drivers-on-ubuntu-1604-1804-and-1910"></a>Ubuntu 16.04, 18.04, 및 19.10에 드라이버 설치
+## <a name="installing-the-drivers-on-ubuntu-1604-1804-and-2004"></a>Ubuntu 16.04, 18.04, 및 20.04에 드라이버 설치
 
 > [!NOTE]
 > PHP 7.2 또는 7.3을 설치하려면 다음 명령에서 7.4를 7.2 또는 7.3으로 바꿉니다.

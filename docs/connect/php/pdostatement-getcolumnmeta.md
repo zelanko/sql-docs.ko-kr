@@ -1,21 +1,22 @@
 ---
-title: PDOStatement::getColumnMeta | Microsoft Docs
+title: PDOStatement::getColumnMeta
+description: Microsoft PDO_SQLSRV Driver for PHP for SQL Server의 PDOStatement::getColumnMeta 함수에 대한 API 참조입니다.
 ms.custom: ''
-ms.date: 01/31/2020
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: c92a21cc-8e53-43d0-a4bf-542c77c100c9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: cb7e9e37d568659a71917df66016f2333ed4be46
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: e29418276e6209f669ae57160809120d61e19a05
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "76918796"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88645083"
 ---
 # <a name="pdostatementgetcolumnmeta"></a>PDOStatement::getColumnMeta
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -32,13 +33,13 @@ array PDOStatement::getColumnMeta ( $column );
 #### <a name="parameters"></a>매개 변수  
 *$conn*: (정수) 메타데이터를 검색할 열의 번호(0부터 시작)입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
 열에 대한 메타데이터를 포함하는 결합형 배열(키 및 값)입니다. 배열에 있는 필드에 대한 설명은 설명 섹션을 참조하세요.  
   
 ## <a name="remarks"></a>설명  
 다음 표에서는 getColumnMeta에서 반환된 배열에 있는 필드에 대해 설명합니다.  
   
-|NAME|VALUES|  
+|이름|Values|  
 |--------|----------|  
 |native_type|열에 대한 PHP 형식을 지정합니다. 항상 문자열입니다.|  
 |driver:decl_type|데이터베이스의 열 값을 나타내는 데 사용되는 SQL 형식을 지정합니다. 결과 집합의 열이 함수의 결과인 경우 PDOStatement::getColumnMeta에서 이 값을 반환하지 않습니다.|  
@@ -46,7 +47,7 @@ array PDOStatement::getColumnMeta ( $column );
 |name|데이터베이스 열의 이름을 지정합니다.|  
 |테이블|데이터베이스 열을 포함하는 테이블 이름을 지정합니다. 항상 비어 있습니다.|  
 |len|열 길이를 지정합니다.|  
-|자릿수|이 열의 전체 자릿수를 지정합니다.|  
+|정밀도|이 열의 전체 자릿수를 지정합니다.|  
 |pdo_type|PDO::PARAM_* 상수에 의해 표시된 대로 이 열의 형식을 지정합니다. 항상 PDO::PARAM_STR(2)입니다.|  
   
 PDO 지원이 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]의 버전 2.0에 추가되었습니다.  
@@ -75,7 +76,7 @@ print $metadata['name'];
 
 `PDO::SQLSRV_ATTR_DATA_CLASSIFICATION` 특성은 기본적으로 `false`이지만 `true`로 설정된 경우 앞서 언급한 배열 필드 `flags`에는 민감도 데이터 분류 메타데이터(있는 경우)가 채워집니다. 
 
-Patients 테이블을 예로 들어 보겠습니다.
+환자 테이블을 예로 들어 보겠습니다.
 
 ```
 CREATE TABLE Patients 

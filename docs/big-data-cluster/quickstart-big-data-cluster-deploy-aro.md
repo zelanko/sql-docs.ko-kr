@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ea5c622385b4350fb74362451eef3bb061d78fbc
-ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
+ms.openlocfilehash: fe4b026047ea98350283c1beedf87988d39df4bd
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86160161"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472339"
 ---
 # <a name="use-a-python-script-to-deploy-a-sql-server-big-data-cluster-on-azure-red-hat-openshift-aro"></a>python 스크립트를 사용하여 ARO(Azure Red Hat OpenShift)에 SQL Server 빅 데이터 클러스터 배포
 
@@ -25,9 +25,13 @@ ms.locfileid: "86160161"
 > [!TIP]
 > ARO는 빅 데이터 클러스터를 위해 Kubernetes를 호스팅하는 옵션 중 하나일 뿐입니다. 다른 배포 옵션 및 배포 옵션을 사용자 지정하는 방법에 대한 자세한 내용은 [Kubernetes에 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]를 배포하는 방법](deployment-guidance.md)을 참조하세요.
 
+
+> [!WARNING]
+> 기본 제공 스토리지 클래스인 *managed-premium*을 사용하여 만든 영구 볼륨에는 삭제 회수 정책이 지정됩니다. 따라서 빅 데이터 클러스터 SQL Server를 삭제하는 경우 영구적 볼륨과 마찬가지로 영구적 볼륨 클레임이 삭제됩니다. [스토리지 개념](/azure/aks/concepts-storage/#storage-classes)에 설명된 대로 유지 회수 정책으로 azure-disk 프로비저닝 프로그램을 사용하여 사용자 지정 스토리지 클래스를 만들어야 합니다. 아래 스크립트는 *managed-premium* 스토리지 클래스를 사용합니다. 자세한 내용은 [데이터 지속성](concept-data-persistence.md) 항목을 참조하세요.
+
 여기서 사용하는 기본 빅 데이터 클러스터 배포는 SQL 마스터 인스턴스 1개, 컴퓨팅 풀 인스턴스 1개, 데이터 풀 인스턴스 2개, 스토리지 풀 인스턴스 2개로 구성되어 있습니다. 데이터는 ARO 기본 스토리지 클래스를 사용하는 Kubernetes 영구적 볼륨을 사용하여 유지됩니다. 이 자습서에서 사용하는 기본 구성은 개발/테스트 환경에 적합합니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 - Azure 구독
 - [oc](https://docs.openshift.com/container-platform/4.4/cli_reference/openshift_cli/getting-started-cli.html)

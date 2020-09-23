@@ -1,5 +1,6 @@
 ---
-title: '방법: Linux 및 macOS(SQL)에서 ASCII 데이터 전송 및 검색 | Microsoft Docs'
+title: '방법: Linux 및 macOS에서 ASCII 데이터 전송 및 검색(SQL)'
+description: 이 항목에서는 Microsoft Drivers for PHP for SQL Server를 사용할 때 Linux 및 macOS에서 ASCII 데이터를 보내고 검색하는 방법을 설명합니다.
 ms.custom: ''
 ms.date: 01/16/2018
 ms.prod: sql
@@ -11,15 +12,14 @@ helpviewer_keywords:
 - sending data
 - linux
 - macOS
-author: yitam
-ms.author: v-yitam
-manager: v-mabarw
-ms.openlocfilehash: 9edd73f5ef01d1d3f22db78400cc3c204efe1379
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 015562e9a783cef79a9466778b89edecffee5fe0
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68251900"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680428"
 ---
 # <a name="how-to-send-and-retrieve-ascii-data-in-linux-and-macos"></a>방법: Linux 및 macOS에서 ASCII 데이터 전송 및 검색 
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

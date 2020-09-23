@@ -1,6 +1,6 @@
 ---
 title: IRow::GetColumns를 사용하여 열 페치(OLE DB 드라이버) | Microsoft Docs
-description: IRow::GetColumns를 사용하여 열 인출(OLE DB)
+description: OLE DB Driver for SQL Server에서 IRow::GetColumns 메서드를 사용하여 열을 페치하는 방법을 알아봅니다. 이 예제에서는 행에서 한 번에 하나의 열을 가져옵니다.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -10,14 +10,14 @@ ms.technology: connectivity
 ms.topic: reference
 helpviewer_keywords:
 - IRow interface
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: d2ca2ba9284c0e1fca7eef3f6b8911111c4559f6
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c22a948cad5fdc2b41f1ac14b73d728be06b9c3f
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244803"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88860617"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-ole-db"></a>IRow::GetColumns를 사용하여 열 인출(OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

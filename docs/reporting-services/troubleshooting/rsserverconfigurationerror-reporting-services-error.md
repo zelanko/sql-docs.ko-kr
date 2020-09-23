@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: 0913afc2-34b4-4713-b570-cfd5718975ac
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0ff0a0b7c59dc70e085c5a61d9b88e28dd41cded
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 3076c0f00a358a1a2adbee57178561649e6a44c2
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487213"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395195"
 ---
 # <a name="rsserverconfigurationerror---reporting-services-error"></a>rsServerConfigurationError - Reporting Services 오류
     
 ## <a name="details"></a>세부 정보  
   
-|||  
+|범주|값|  
 |-|-|  
 |제품 이름|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |이벤트 ID|rsServerConfiguration|  

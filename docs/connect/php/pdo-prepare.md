@@ -1,5 +1,6 @@
 ---
-title: PDO::prepare | Microsoft Docs
+title: PDO::prepare
+description: Microsoft PDO_SQLSRV Driver for PHP for SQL Server의 PDO::prepare 함수에 대한 API 참조입니다.
 ms.custom: ''
 ms.date: 01/31/2020
 ms.prod: sql
@@ -8,14 +9,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: a8b16fdc-c748-49be-acf2-a6ac7432d16b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 902a1e986f79205dfd676c635ac54814382c2ec3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 92e2e9093c5435512f853c9680640784f82e9db6
+ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "76941203"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87435208"
 ---
 # <a name="pdoprepare"></a>PDO::prepare
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -29,11 +30,11 @@ PDOStatement PDO::prepare ( $statement [, array(key_pair)] )
 ```
 
 #### <a name="parameters"></a>매개 변수
-$*statement*: SQL 문이 포함된 문자열입니다.
+$*문*: SQL 문이 포함된 문자열입니다.
 
-*key_pair*: 특성 이름 및 값이 포함된 배열입니다. 자세한 내용은 주의 섹션을 참조하십시오.
+*key_pair*: 특성 이름 및 값이 들어 있는 배열입니다. 자세한 내용은 설명 부분을 참조하세요.
 
-## <a name="return-value"></a>Return Value
+## <a name="return-value"></a>반환 값
 성공하면 PDOStatement 개체를 반환합니다. 실패하면 `PDO::ATTR_ERRMODE` 값에 따라 PDOException 개체 또는 false를 반환합니다.
 
 ## <a name="remarks"></a>설명
@@ -43,7 +44,7 @@ $*statement*: SQL 문이 포함된 문자열입니다.
 
 |키|Description|
 |-------|---------------|
-|PDO::ATTR_CURSOR|커서 동작을 지정합니다. 기본값은 `PDO::CURSOR_FWDONLY`로, 스크롤할 수 없는 정방향 커서입니다. `PDO::CURSOR_SCROLL`은 스크롤 가능 커서입니다.<br /><br />`array( PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY )`)을 입력합니다.<br /><br />`PDO::CURSOR_SCROLL`로 설정하면, `PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE`을 사용하여 아래에 설명된 스크롤 가능 커서 형식을 설정할 수 있습니다.<br /><br />PDO_SQLSRV 드라이버의 결과 집합 및 커서에 대한 자세한 내용은 [커서 유형&#40;PDO_SQLSRV 드라이버&#41;](../../connect/php/cursor-types-pdo-sqlsrv-driver.md)를 참조하세요.|
+|PDO::ATTR_CURSOR|커서 동작을 지정합니다. 기본값은 `PDO::CURSOR_FWDONLY`로, 스크롤할 수 없는 정방향 커서입니다. `PDO::CURSOR_SCROLL`은 스크롤 가능 커서입니다.<br /><br />예들 들어 `array( PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY )`입니다.<br /><br />`PDO::CURSOR_SCROLL`로 설정하면, `PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE`을 사용하여 아래에 설명된 스크롤 가능 커서 형식을 설정할 수 있습니다.<br /><br />PDO_SQLSRV 드라이버의 결과 집합 및 커서에 대한 자세한 내용은 [커서 유형&#40;PDO_SQLSRV 드라이버&#41;](../../connect/php/cursor-types-pdo-sqlsrv-driver.md)를 참조하세요.|
 |PDO::ATTR_EMULATE_PREPARES|기본적으로 이 특성은 false이며, `PDO::ATTR_EMULATE_PREPARES => true`를 사용하여 변경할 수 있습니다. 자세한 내용과 예제는 [Emulate Prepare](#emulate-prepare)를 참조하세요.|
 |PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE|스크롤 가능 커서 형식을 지정합니다. `PDO::ATTR_CURSOR`를 `PDO::CURSOR_SCROLL`로 설정한 경우에만 유효합니다. 이 특성에 사용할 수 있는 값은 아래를 참조하세요.|
 |PDO::SQLSRV_ATTR_DECIMAL_PLACES|가져온 money 값의 서식을 지정할 때 사용할 소수 자릿수를 지정합니다. 이 옵션은 `PDO::SQLSRV_ATTR_FORMAT_DECIMALS`가 true인 경우에만 실행됩니다. 자세한 내용은 [10진수 문자열 및 Money 값 서식 지정(PDO_SQLSRV 드라이버)](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md)을 참조하세요.|
@@ -60,7 +61,7 @@ array(PDO::ATTR_CURSOR => PDO::CURSOR_SCROLL, PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYP
 ```
 다음 표에서는 `PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE`에 사용할 수 있는 값을 보여 줍니다. 스크롤 가능 커서에 대한 자세한 내용은 [커서 형식 &#40;PDO_SQLSRV 드라이버&#41;](../../connect/php/cursor-types-pdo-sqlsrv-driver.md)을 참조하세요.
 
-|값|Description|
+|값|설명|
 |---------|---------------|
 |PDO::SQLSRV_CURSOR_BUFFERED|클라이언트 머신의 메모리에 결과 집합을 버퍼링하는 클라이언트 쪽(버퍼링됨) 정적 커서를 만듭니다.|
 |PDO::SQLSRV_CURSOR_DYNAMIC|서버 쪽(버퍼되지 않음) 동적 커서를 만들고 이를 통해 순서에 관계없이 행에 액세스할 수 있으며 데이터베이스에 변경 내용이 반영됩니다.|

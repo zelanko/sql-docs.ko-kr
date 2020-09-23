@@ -20,19 +20,19 @@ helpviewer_keywords:
 ms.assetid: 3cf9a240-24cc-46d4-bec6-976f82d8f830
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f82420b687c3714c75b69e778c1bcc881aad8e82
-ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
+ms.openlocfilehash: ffdfc6e3a2141eddb484bc4dde3b25bda5a8b70a
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80742093"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396112"
 ---
 # <a name="disable-or-pause-report-and-subscription-processing"></a>보고서 및 구독 처리 해제 또는 일시 중지  
-[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 및 구독 처리를 해제하거나 일시 중지하는 데 사용할 수 있는 몇 가지 방법이 있습니다. 이 문서에는 구독을 해제하는 방법에서부터 데이터 원본 연결을 중단하는 방법이 포함되어 있습니다. 두 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서버 모드 모두에 사용할 수 없는 접근 방식도 있습니다. 다음 표에는 메서드와 지원되는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서버 모드가 요약되어 있습니다.  
+[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 및 구독 처리를 해제하거나 일시 중지하는 데 사용할 수 있는 몇 가지 방법이 있습니다. 이 문서에는 구독을 해제하는 방법에서부터 데이터 원본 연결을 중단하는 방법이 포함되어 있습니다. 두 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서버 모드 모두에 사용할 수 없는 접근 방식도 있습니다. 다음 표에는 방법 및 지원되는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서버 모드가 요약되어 있습니다.  
   
 ##  <a name="in-this-article"></a><a name="bkmk_top"></a> 문서 내용  
   
-||지원되는 서버 모드|  
+|접근 방식|지원되는 서버 모드|  
 |-|---------------------------|  
 |[구독 설정 및 해제](#bkmk_disable_subscription)|기본 모드|  
 |[공유 일정 일시 중지](#bkmk_pause_schedule)|기본 및 SharePoint 모드|  

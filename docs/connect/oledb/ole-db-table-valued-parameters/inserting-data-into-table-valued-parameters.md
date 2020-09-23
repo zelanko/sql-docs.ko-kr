@@ -1,6 +1,6 @@
 ---
 title: 테이블 반환 매개 변수에 데이터 삽입(OLE DB 드라이버) | Microsoft Docs
-description: OLE DB Driver for SQL Server를 사용하여 테이블 반환 매개 변수에 데이터 삽입
+description: OLE DB Driver for SQL Server는 소비자가 테이블 반환 매개 변수 행의 데이터를 지정할 수 있도록 밀어넣기 모델과 끌어오기 모델을 지원합니다.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -10,14 +10,14 @@ ms.technology: connectivity
 ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters, inserting data into
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 31cfbbd1afd2e5b249c3f3106aec471965038c86
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 5317574a09194b2a926bed88de7edf7db913df6a
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244167"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88859902"
 ---
 # <a name="inserting-data-into-table-valued-parameters"></a>테이블 반환 매개 변수에 데이터 삽입
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

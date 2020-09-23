@@ -1,7 +1,8 @@
 ---
-title: PDO::__construct | Microsoft Docs
+title: PDO::__construct
+description: Microsoft PDO_SQLSRV Driver for PHP for SQL Server의 PDO::__construct 함수에 대한 API 참조입니다.
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 3ee53aff-6fe4-44cd-a15b-51770c98c712
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3a6a96099a3e0e478fa08dc2aff3af73a0e14f99
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: ded33f50037c510fadd5016ffe2c72f664e70e12
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80919405"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88646230"
 ---
 # <a name="pdo__construct"></a>PDO::__construct
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -30,15 +31,15 @@ PDO::__construct($dsn [,$username [,$password [,$driver_options ]]] )
 ```  
   
 #### <a name="parameters"></a>매개 변수  
-*$dsn*: 접두사 이름(항상 `sqlsrv`), 콜론 및 서버 키워드를 포함하는 문자열입니다. `"sqlsrv:server=(local)"`)을 입력합니다. 필요에 따라 다른 연결 키워드를 지정할 수 있습니다. 서버 키워드 및 다른 연결 키워드에 대한 설명은 [Connection Options](../../connect/php/connection-options.md) 를 참조하세요. 전체 *$dsn* 가 따옴표 안에 있으므로 각 연결 키워드를 각각 따옴표로 묶으면 안 됩니다.  
+*$dsn*: 접두사 이름(항상 `sqlsrv`), 콜론 및 서버 키워드를 포함하는 문자열입니다. 예들 들어 `"sqlsrv:server=(local)"`입니다. 필요에 따라 다른 연결 키워드를 지정할 수 있습니다. 서버 키워드 및 다른 연결 키워드에 대한 설명은 [Connection Options](../../connect/php/connection-options.md) 를 참조하세요. 전체 *$dsn* 가 따옴표 안에 있으므로 각 연결 키워드를 각각 따옴표로 묶으면 안 됩니다.  
   
 *$username*: (선택 사항) 사용자 이름을 포함하는 문자열입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하여 연결하려면 로그인 ID를 지정합니다. Windows 인증을 사용하여 연결하려면 `""`를 지정합니다.  
   
-*$password*: (선택 사항) 사용자의 암호를 포함하는 문자열입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하여 연결하려면 암호를 지정합니다. Windows 인증을 사용하여 연결하려면 `""`를 지정합니다.  
+*$password*: 선택 사항입니다. 사용자의 암호를 포함하는 문자열입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하여 연결하려면 암호를 지정합니다. Windows 인증을 사용하여 연결하려면 `""`를 지정합니다.  
   
 *$driver_options*: (선택 사항) PDO 드라이버 관리자 특성 및 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 관련 드라이버 특성(PDO::SQLSRV_ATTR_ENCODING, PDO::SQLSRV_ATTR_DIRECT_QUERY)을 지정할 수 있습니다. 잘못된 특성은 예외를 생성하지 않습니다. [PDO::setAttribute](../../connect/php/pdo-setattribute.md)로 지정되면 잘못된 특성이 예외를 생성합니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
 PDO 개체를 반환합니다. 실패하는 경우 PDOException 개체를 반환합니다.  
   
 ## <a name="exceptions"></a>예외  

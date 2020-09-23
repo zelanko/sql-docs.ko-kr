@@ -1,4 +1,5 @@
 ---
+description: 역할 할당 수정 또는 삭제(SSRS 웹 포털)
 title: 역할 할당 수정 또는 삭제(SSRS 웹 포털) | Microsoft Docs
 ms.date: 05/07/2019
 ms.prod: reporting-services
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 523bdd32-92cb-4b48-a3a9-d58b2385bde7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 28695a4849b29c6e593f42489fc149efd9a8db53
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: defe3952f9fd3c5c4eb4453c2071820cb44a3fb8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570642"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480655"
 ---
 # <a name="role-assignments---modify-or-delete"></a>역할 할당 - 수정 또는 삭제
 
@@ -59,7 +60,7 @@ ms.locfileid: "65570642"
 
 6. 역할 할당을 삭제하려면 사용자 또는 그룹 이름 옆의 확인란을 선택하고 **삭제**를 선택합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
-[역할 할당 만들기 및 관리](../../reporting-services/security/create-and-manage-role-assignments.md)  
+[역할 할당 생성 및 관리](../../reporting-services/security/create-and-manage-role-assignments.md)  
 [역할 할당](../../reporting-services/security/role-assignments.md)  

@@ -1,4 +1,5 @@
 ---
+description: 성능 개체 사용
 title: 성능 개체 사용
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -21,18 +22,18 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d86b710c38fb02a14e2b1baf4f6cf50a2d992e32
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 372390ed9f6c893c1762ca635e5aa9b5f3e3c9ff
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755024"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480247"
 ---
 # <a name="use-performance-objects"></a>성능 개체 사용
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> 현재 [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)에서 일부 SQL Server 에이전트 기능이 지원됩니다. 자세한 내용은 [SQL Server에서 Azure SQL Database Managed Instance T-SQL 차이점](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)을 참조하세요.
+> 현재 [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)에서는 SQL Server 에이전트 기능이 대부분 지원됩니다. 자세한 내용은 [SQL Server와 Azure SQL Managed Instance 간의 T-SQL 차이점](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)을 참조하세요.
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트에는 서비스 수행 방법을 모니터링하는 성능 개체와 카운터가 포함됩니다. 이러한 성능 개체를 사용하면 Windows 도구인 성능 모니터를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스가 백그라운드에서 수행하는 작업을 식별할 수 있습니다. 예를 들어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스가 현재 실행 중인 활성 작업 수를 확인하여 차단된 작업을 식별할 수 있습니다.  
   
@@ -42,12 +43,12 @@ ms.locfileid: "85755024"
   
 |인스턴스 유형|개체 이름|  
 |-----------------|---------------|  
-|기본값|**SQLAgent:** _object_:_counter_|  
-|named|**SQLAgent$**<br /> **&#42;instance_name&#42; :** _object_:_counter_|  
+|기본값|**SQLAgent:**_object_:_counter_|  
+|named|**SQLAgent$**<br /> **&#42;instance_name&#42; :**_object_:_counter_|  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 다음과 같은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 성능 개체가 포함됩니다.  
   
-|개체 이름|Description|  
+|개체 이름|설명|  
 |---------------|---------------|  
 |[SQLAgent:Jobs](../../relational-databases/performance-monitor/sql-server-agent-jobs-object.md)|시작된 작업, 성공률 및 현재 상태에 대한 성능 정보|  
 |[SQLAgent:JobSteps](../../relational-databases/performance-monitor/sql-server-agent-jobsteps-object.md)|작업 단계에 대한 상태 정보|  

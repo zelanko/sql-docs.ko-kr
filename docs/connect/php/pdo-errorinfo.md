@@ -1,5 +1,6 @@
 ---
-title: PDO::errorInfo | Microsoft Docs
+title: PDO::errorInfo
+description: Microsoft PDO_SQLSRV Driver for PHP for SQL Server의 PDO::errorInfo 함수에 대한 API 참조입니다.
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -8,14 +9,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 9d5481d5-13bc-4388-b3aa-78676c0fc709
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: fe0f0cc2ec15fcdb871f290f03565482a8477995
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 579b516481c6349396a342e2c98200d70d731d25
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67936264"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88646173"
 ---
 # <a name="pdoerrorinfo"></a>PDO::errorInfo
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

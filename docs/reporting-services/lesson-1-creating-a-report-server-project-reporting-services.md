@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 675671ca-e6c9-48a2-82e9-386778f3a49f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: db412b18a0189f9f68caff79f8e904db5424d673
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6c4ed5c985340e45b46b664dc4b6a53ff70f1b1a
+ms.sourcegitcommit: 83e5cfd2654233befd95e3ff37de936f9dc8549c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75244320"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89468348"
 ---
 # <a name="lesson-1-create-a-report-server-project-reporting-services"></a>1단원: 보고서 서버 프로젝트 만들기(Reporting Services)
 
@@ -36,7 +36,8 @@ ms.locfileid: "75244320"
     ![select-report-server-project-template](../reporting-services/media/lesson-1-creating-a-report-server-project-reporting-services/select-report-server-project-template.png)
 
     > [!IMPORTANT]
-    > VS에서 왼쪽 열에 Reporting Services가 표시되지 않는 경우, SSDT 워크로드를 설치하여 보고서 디자이너를 추가합니다. **도구** 메뉴에서 **도구 및 기능 가져오기...** 를 선택한 다음, 표시되는 워크로드에서 **SQL Server Data Tools**를 선택합니다. 가운데 열에 Report Services 개체가 표시되지 않는 경우 Reporting Services 확장을 추가합니다. **도구** 메뉴에서 **확장 및 업데이트** > **온라인**을 선택합니다. 가운데 열에 표시된 확장에서 **Microsoft Reporting Services Projects** > **다운로드**를 선택합니다. SSDT의 경우 [SSDT(SQL Server Data Tools) 다운로드](../ssdt/download-sql-server-data-tools-ssdt.md)를 참조하세요.
+    > VS에서 왼쪽 열에 Reporting Services가 표시되지 않는 경우, SSDT 워크로드를 설치하여 보고서 디자이너를 추가합니다. **도구** 메뉴에서 **도구 및 기능 가져오기...** 를 선택한 다음, 표시되는 워크로드에서 **SQL Server Data Tools**를 선택합니다. 가운데 열에 Report Services 개체가 표시되지 않는 경우 Reporting Services 확장을 추가합니다. **도구** 메뉴에서 **확장 및 업데이트** > **온라인**을 선택합니다. 가운데 열에 표시된 확장에서 **Microsoft Reporting Services Projects** > **다운로드**를 선택합니다. SSDT의 경우 [SSDT(SQL Server Data Tools) 다운로드](../ssdt/download-sql-server-data-tools-ssdt.md)를 참조하세요. Visual Studio 2019에서 위의 단계가 작동하지 않는 경우 [Microsoft 보고 서비스 프로젝트 확장](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftReportProjectsforVisualStudio)을 설치해 보세요.
+
 
 3. **새 프로젝트** 대화 상자의 가운데 열에서 **보고서 서버 프로젝트** 아이콘 &nbsp;&nbsp;![ssrs_ssdt_report_server_project](media/ssrs-ssdt-report-server-project.png)를 선택합니다.&nbsp;&nbsp;
 
@@ -68,4 +69,4 @@ ms.locfileid: "75244320"
 - 데이터 원본에서 데이터 세트 만들기
 - 보고서 레이아웃 디자인 및 서식 지정
 
-다음으로 [2단원: 연결 정보 지정&#40;Reporting Services&#41;](../reporting-services/lesson-2-specifying-connection-information-reporting-services.md)을 참조하세요.
+[2단원: 연결 정보 지정 &#40;Reporting Services&#41;](../reporting-services/lesson-2-specifying-connection-information-reporting-services.md)에서 계속 진행하세요.

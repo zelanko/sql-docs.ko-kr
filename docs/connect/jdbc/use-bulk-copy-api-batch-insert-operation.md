@@ -1,6 +1,6 @@
 ---
 title: JDBC에서 일괄 처리 삽입 작업을 위한 대량 복사 API
-description: Microsoft JDBC Driver for SQL Server는 Azure Data Warehouse에 대한 일괄 처리 삽입 작업을 위해 대량 복사 API를 사용할 수 있도록 지원합니다.
+description: SQL Server 용 Microsoft JDBC Driver는 데이터베이스에 데이터를 더 빠르게 로드할 수 있도록 Azure Data Warehouse에 대한 일괄 처리 삽입 작업에 대량 복사를 지원합니다.
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ''
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 497b68b2b1f19d5d67ca3e790f06844592205d70
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 09eac13d41656721a9a4cc6d8fb8fa9790779018
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633993"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87943032"
 ---
 # <a name="using-bulk-copy-api-for-batch-insert-operation"></a>일괄 처리 삽입 작업에 대량 복사 API 사용
 
@@ -71,7 +71,7 @@ Connection connection = DriverManager.getConnection("jdbc:sqlserver://<server>:<
 
 ## <a name="example"></a>예제
 
-아래에서는 1,000개 행의 Azure DW에 대한 일괄 처리 삽입 작업의 사용 사례를 일반 및 대량 복사 API 시나리오 모두에 대해 소개합니다.
+아래에서는 1,000개 행의 Azure Synapse Analytics(SQL DW)에 대한 일괄 처리 삽입 작업의 사용 사례를 일반 및 대량 복사 API 시나리오 모두에 대해 소개합니다.
 
 ```java
     public static void main(String[] args) throws Exception

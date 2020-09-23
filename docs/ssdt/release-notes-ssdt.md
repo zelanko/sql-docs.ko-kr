@@ -12,12 +12,12 @@ ms.reviewer: maghan
 ms.custom: seo-lt-2019
 ms.date: 12/15/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 212cf0c286ec0f55a76d16c27a66fac6a6f1f5e4
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 83d50d14f47c5b25de4bc3749bd2fd06dffff3df
+ms.sourcegitcommit: fe5dedb2a43516450696b754e6fafac9f5fdf3cf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003951"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89195129"
 ---
 # <a name="release-notes-for-sql-server-data-tools-ssdt"></a>SSDT(SQL Server Data Tools) 릴리스 정보
 
@@ -44,6 +44,35 @@ GeneMi , 2019/03/22.
 
 P.S.  there's no need to keep this large HTML comment indefinitely.
 -->
+
+## <a name="1596nbsp-ssdt-for-vs-2017"></a>15.9.6,&nbsp; VS 2017용 SSDT
+
+_릴리스 날짜:_ &nbsp; 2020년 8월 31일  
+_빌드 번호:_ &nbsp; 14.0.16222.0  
+_Visual Studio 2017용 SSDT._
+
+### <a name="whats-new"></a>새로운 기능
+
+| 새 항목 | 세부 정보 |
+|-----------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Integration Services(SSIS) | SSAS(SQL Server Analysis Services) 데이터 원본에 연결할 때 OLE DB 원본에서 **미리 보기** 단추가 작동하지 않는 문제를 해결했습니다. |
+| Integration Services(SSIS) | 연결된 경로를 제거하기 전에 데이터 흐름 구성 요소의 입력 또는 출력을 제거하면 COMException 오류가 발생할 수 있는 문제를 해결했습니다. |
+| Integration Services(SSIS) | SSAS 처리 태스크가 Power BI 작업 영역에 연결하여 해당 모델을 새로 고칠 수 없는 문제를 해결했습니다. |
+| Integration Services(SSIS) | SQL Server 2017을 대상으로 x64 런타임을 사용하는 경우 스크립트 태스크/구성 요소를 디버깅하는 동안 Visual Studio가 중단되는 문제를 해결했습니다. |
+| Integration Services(SSIS) | 일부 환경에서 MySQL 드라이버를 선택할 때 가져오기/내보내기 마법사가 충돌하는 문제를 해결했습니다. |
+| Integration Services(SSIS) | 접근성 및 높은 DPI와 관련된 몇 가지 문제를 수정했습니다. |
+| Integration Services(SSIS) | 사용자가 패키지를 열 때 유효성 검사를 건너뛸 수 있으므로 성능이 향상됩니다. 자세한 내용은 [SSDT에서 SSIS 패키지 열기 가속화](https://techcommunity.microsoft.com/t5/sql-server-integration-services/accelerate-the-opening-of-ssis-package-in-ssdt/ba-p/1607099)를 참조하세요. |
+| Integration Services(SSIS) | 대상 서버 버전이 2017 SQL Server가 아닌 경우 Azure-SSIS에 대한 배포를 차단합니다. |
+
+### <a name="known-issues"></a>알려진 문제
+
+| 알려진 문제 | 세부 정보 |
+| :---------- | :------ |
+| SSIS 패키지 실행 태스크는 ExecuteOutOfProcess가 True로 설정되었을 때 디버깅을 지원하지 않습니다. | 이 문제는 디버깅에만 적용됩니다. DTExec.exe 또는 SSIS 카탈로그를 통한 저장, 배포 및 실행은 영향을 받지 않습니다. |
+| SSIS 및 SSAS가 동일한 Visual Studio 인스턴스에 설치되면 파워 쿼리 원본이 OData v4를 지원하지 않을 수 있습니다. | &nbsp; |
+| SSIS 및 SSAS가 동일한 Visual Studio 인스턴스에 설치되면 파워 쿼리 원본이 Oracle에 연결하는 데 ODBC를 사용하도록 지원하지 않을 수 있습니다. | &nbsp; |
+| 파워 쿼리 원본이 지역화되지 않았습니다. | &nbsp; |
+| &nbsp; | &nbsp; |
 
 ## <a name="1595nbsp-ssdt-for-vs-2017"></a>15.9.5,&nbsp; VS 2017용 SSDT
 
@@ -640,7 +669,7 @@ _Visual Studio 2015용 SSDT._
 
 **AS 프로젝트:**
 - DAX 측정값 변경 내용 및 기타 모델 편집 내용을 커밋할 때 환경 개선을 위해 중대한 성능을 수정함.
-- Analysis Services 프로젝트에서 1400 호환성 수준의 테이블 형식 모델을 사용하여 파워 쿼리 통합과 관련된 여러 가지 문제를 해결함.
+- Analysis Services 프로젝트에서 1400 호환성 수준의 테이블 형식 모델을 사용하여 파워 쿼리 통합과 관련된 여러 가지 문제를 해결했습니다.
 - VS2017의 다차원 프로젝트에서 디자인 집계 디자이너가 로드에 실패할 수 있는 문제를 해결함.
 - Analysis Services 다차원 DSV 다이어그램에 항목을 끌어 올 때 VS 2017 작동이 중단될 수 있는 문제를 해결함.
 - AS 프로젝트에서 [배포] 대화 상자가 항상 Visual Studio 위의 전경에 표시되지 않았던 문제를 해결함.
@@ -989,7 +1018,7 @@ _SQL Server 2016의 경우._
 **업데이트 및 수정**
 * **데이터베이스 도구**
     * 이제 SSDT에서 데이터베이스의 TDE(투명한 데이터 암호화)를 해제하지 않습니다. 이전에는 프로젝트 데이터베이스 설정의 기본 암호화 옵션이 사용하지 않도록 설정되었으므로 암호화가 꺼졌습니다. 이 수정을 통해 게시 중에 암호화를 사용하도록 설정할 수 있지만 해제할 수는 없습니다. 
-    * 초기 연결 중 Azure SQL DB 연결에 대한 다시 시도 횟수와 복원력이 증가되었습니다.
+    * 초기 연결 중 Azure SQL Database 연결에 대한 다시 시도 횟수와 복원력이 증가되었습니다.
     * 기본 파일 그룹이 PRIMARY가 아닌 경우 Azure V12로 가져오기/게시에 실패했습니다. 이제 게시할 때 이 설정이 무시됩니다.
     * 따옴표 붙은 식별자가 설정된 개체를 포함하는 데이터베이스를 내보낼 경우 일부 인스턴스에서 내보내기 유효성 검사에 실패할 수 있는 문제가 수정되었습니다.
     * TEXTIMAGE_ON 옵션이 이 옵션을 사용할 수 없는 Hekaton 테이블 생성에 대해 잘못 추가되는 문제가 수정되었습니다.

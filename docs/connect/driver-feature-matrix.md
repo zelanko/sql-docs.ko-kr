@@ -2,19 +2,19 @@
 title: 드라이버 기능 지원 매트릭스
 description: SQL Server용 드라이버에서 지원되는 인기 기능 및 해당 기능에 대한 정보를 찾을 수 있는 위치에 대해 알아봅니다.
 ms.custom: ''
-ms.date: 06/17/2020
+ms.date: 08/05/2020
 ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-daenge
-ms.openlocfilehash: a879b3784b19de4e7d30e1af213953b8e592abf9
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+ms.openlocfilehash: 4071353214f7ffde54ecd1097defaa6c60aa19d6
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84947893"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823358"
 ---
 # <a name="driver-feature-support-matrix-for-microsoft-sql-server"></a>Microsoft SQL Server용 드라이버 기능 지원 매트릭스
 
@@ -60,8 +60,8 @@ Microsoft에서는 모든 드라이버가 모든 기능을 지원하기를 희�
 | [Always Encrypted](../relational-databases/security/encryption/always-encrypted-database-engine.md) | [예](odbc/using-always-encrypted-with-the-odbc-driver.md) | [예](odbc/using-always-encrypted-with-the-odbc-driver.md) | [예](jdbc/using-always-encrypted-with-the-jdbc-driver.md) |
 | [보안 enclave를 사용한 Always Encrypted](../relational-databases/security/encryption/always-encrypted-enclaves.md) | [예](odbc/using-always-encrypted-with-the-odbc-driver.md#enabling-always-encrypted-with-secure-enclaves) | [예](odbc/using-always-encrypted-with-the-odbc-driver.md#enabling-always-encrypted-with-secure-enclaves) | [예](jdbc/using-always-encrypted-with-the-jdbc-driver.md) | |
 | [Azure Active Directory 액세스 토큰 인증](/azure/active-directory/develop/access-tokens) | [예](odbc/using-azure-active-directory.md#authenticating-with-an-access-token) | [예](odbc/using-azure-active-directory.md#authenticating-with-an-access-token) | [예](jdbc/connecting-using-azure-active-directory-authentication.md#connecting-using-access-token) | [예](oledb/features/using-azure-active-directory.md) |
-| [Azure Active Directory 암호 인증](/azure/sql-database/sql-database-aad-authentication) |  [예](odbc/using-azure-active-directory.md) | [예](odbc/using-azure-active-directory.md)<sup>[1](#note1)</sup> | [예](jdbc/connecting-using-azure-active-directory-authentication.md) | [예](oledb/features/using-azure-active-directory.md) |
-| [Azure Active Directory 통합 인증](/azure/sql-database/sql-database-aad-authentication) | [예](odbc/using-azure-active-directory.md) | | [예](jdbc/connecting-using-azure-active-directory-authentication.md) | [예](oledb/features/using-azure-active-directory.md) |
+| [Azure Active Directory 암호 인증](/azure/sql-database/sql-database-aad-authentication) |  [예](odbc/using-azure-active-directory.md) | [예](odbc/using-azure-active-directory.md) | [예](jdbc/connecting-using-azure-active-directory-authentication.md) | [예](oledb/features/using-azure-active-directory.md) |
+| [Azure Active Directory 통합 인증](/azure/sql-database/sql-database-aad-authentication) | [예](odbc/using-azure-active-directory.md) | [예](odbc/using-azure-active-directory.md) | [예](jdbc/connecting-using-azure-active-directory-authentication.md) | [예](oledb/features/using-azure-active-directory.md) |
 | [Azure Active Directory 대화형(MFA) 인증](/azure/sql-database/sql-database-aad-authentication) | [예](odbc/using-azure-active-directory.md) | | | [예](oledb/features/using-azure-active-directory.md) |
 | [Azure Active Directory 관리 ID 인증](/azure/active-directory/managed-identities-azure-resources/overview) | [예](odbc/using-azure-active-directory.md) | [예](odbc/using-azure-active-directory.md) | [예](jdbc/connecting-using-azure-active-directory-authentication.md) | [예](oledb/features/using-azure-active-directory.md) |
 | [Azure Active Directory 서비스 사용자 인증](/azure/active-directory/develop/app-objects-and-service-principals) | | | | |
@@ -75,14 +75,14 @@ Microsoft에서는 모든 드라이버가 모든 기능을 지원하기를 희�
 | [투명 네트워크 IP 확인](odbc/using-transparent-network-ip-resolution.md) | [예](odbc/using-transparent-network-ip-resolution.md) | [예](odbc/using-transparent-network-ip-resolution.md) | [예](jdbc/setting-the-connection-properties.md) | [예](oledb/features/using-transparent-network-ip-resolution.md) |
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
-| <a id="table3"></a>기능 | [Windows 기반 Drivers for PHP for SQL Server](php/microsoft-php-driver-for-sql-server.md)<sup>[2](#note2)</sup> | [Linux 및 macOS 기반 Drivers for PHP for SQL Server](php/microsoft-php-driver-for-sql-server.md)<sup>[2](#note2)</sup> | [Tedious(Node.js)](node-js/node-js-driver-for-sql-server.md) | [pyODBC(Python)](python/pyodbc/python-sql-driver-pyodbc.md)<sup>[2](#note2)</sup> |
+| <a id="table3"></a>기능 | [Windows 기반 Drivers for PHP for SQL Server](php/microsoft-php-driver-for-sql-server.md)<sup>[1](#note1)</sup> | [Linux 및 macOS 기반 Drivers for PHP for SQL Server](php/microsoft-php-driver-for-sql-server.md)<sup>[1](#note1)</sup> | [Tedious(Node.js)](node-js/node-js-driver-for-sql-server.md) | [pyODBC(Python)](python/pyodbc/python-sql-driver-pyodbc.md)<sup>[1](#note1)</sup> |
 | :-- | :-- | :-- | :-- | :-- |
 | [Always Encrypted](../relational-databases/security/encryption/always-encrypted-database-engine.md) | [예](php/using-always-encrypted-php-drivers.md) | [예](php/using-always-encrypted-php-drivers.md) | | 예 |
 | [보안 enclave를 사용한 Always Encrypted](../relational-databases/security/encryption/always-encrypted-enclaves.md) | [예](php/always-encrypted-secure-enclaves.md) | [예](php/always-encrypted-secure-enclaves.md) | | 예 |
 | [Azure Active Directory 액세스 토큰 인증](/azure/active-directory/develop/access-tokens) | [예](php/azure-active-directory.md) | [예](php/azure-active-directory.md) | [예](https://tediousjs.github.io/tedious/api-connection.html#function_newConnection) | 예 |
-| [Azure Active Directory 암호 인증](/azure/sql-database/sql-database-aad-authentication) | [예](php/azure-active-directory.md) | [예](php/azure-active-directory.md)<sup>[1](#note1)</sup> | [예](https://tediousjs.github.io/tedious/api-connection.html#function_newConnection) | 예 |
-| [Azure Active Directory 통합 인증](/azure/sql-database/sql-database-aad-authentication) | | | | 예<sup>[3](#note3)</sup> |
-| [Azure Active Directory 대화형(MFA) 인증](/azure/sql-database/sql-database-aad-authentication) | | | | 예<sup>[3](#note3)</sup> |
+| [Azure Active Directory 암호 인증](/azure/sql-database/sql-database-aad-authentication) | [예](php/azure-active-directory.md) | [예](php/azure-active-directory.md) | [예](https://tediousjs.github.io/tedious/api-connection.html#function_newConnection) | 예 |
+| [Azure Active Directory 통합 인증](/azure/sql-database/sql-database-aad-authentication) | [예](php/azure-active-directory.md) | [예](php/azure-active-directory.md) | | 예 |
+| [Azure Active Directory 대화형(MFA) 인증](/azure/sql-database/sql-database-aad-authentication) | | | | 예<sup>[2](#note2)</sup> |
 | [Azure Active Directory 관리 ID 인증](/azure/active-directory/managed-identities-azure-resources/overview) | [예](php/azure-active-directory.md) | [예](php/azure-active-directory.md) | [예](https://tediousjs.github.io/tedious/api-connection.html#function_newConnection) | 예 |
 | [Azure Active Directory 서비스 사용자 인증](/azure/active-directory/develop/app-objects-and-service-principals) | | | | |
 | [Windows 통합 인증](/windows-server/security/windows-authentication/windows-authentication-overview) | [예](php/how-to-connect-using-windows-authentication.md) | [예](odbc/linux-mac/using-integrated-authentication.md) | | 예 |
@@ -95,11 +95,9 @@ Microsoft에서는 모든 드라이버가 모든 기능을 지원하기를 희�
 | [투명 네트워크 IP 확인](odbc/using-transparent-network-ip-resolution.md) | [예](php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md) | [예](php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md) | | [예](odbc/using-transparent-network-ip-resolution.md) |
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
-<a id="note1"></a><sup>1</sup> 암호 해시 동기화 또는 통과 인증이 없는 Active Directory 페더레이션 인증은 Linux 및 macOS에서 지원되지 않습니다.
+<a id="note1"></a><sup>1</sup> 이러한 드라이버는 Microsoft ODBC Driver for SQL Server에 의존하므로 기능을 지원하는 드라이버 버전도 사용해야 합니다.
 
-<a id="note2"></a><sup>2</sup> 이러한 드라이버는 Microsoft ODBC Driver for SQL Server에 의존하므로 기능을 지원하는 드라이버 버전도 사용해야 합니다.
-
-<a id="note3"></a><sup>3</sup> Windows에서만 지원됩니다.
+<a id="note2"></a><sup>2</sup> Windows에서만 지원됩니다.
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 

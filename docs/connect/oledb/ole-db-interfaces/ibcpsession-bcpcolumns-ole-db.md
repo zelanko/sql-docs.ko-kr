@@ -1,6 +1,6 @@
 ---
 title: IBCPSession::BCPColumns(OLE DB 드라이버) | Microsoft Docs
-description: IBCPSession::BCPColumns(OLE DB)
+description: OLE DB Driver for SQL Server에서 IBCPSession::BCPColumns 메서드가 SQL Server 테이블 열에 바인딩할 필드 수를 설정하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -12,14 +12,14 @@ apiname:
 apitype: COM
 helpviewer_keywords:
 - BCPColumns method
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: ba6126113fef947aa1253ff5ac4b9291ec2f6924
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 2eb8456d75a1dd04be2c547db957edf2e01bcaca
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244690"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88860213"
 ---
 # <a name="ibcpsessionbcpcolumns-ole-db"></a>IBCPSession::BCPColumns(OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -55,7 +55,7 @@ HRESULT BCPColumns(
  메서드가 성공했습니다.  
   
  E_FAIL  
- 공급자 관련 오류가 발생했습니다. 자세한 내용을 보려면 [ISQLServerErrorInfo](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1) 인터페이스를 사용하세요.  
+ 공급자 관련 오류가 발생했습니다. 자세한 내용을 보려면 [ISQLServerErrorInfo](https://docs.microsoft.com/sql/connect/oledb/ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db?view=sql-server-ver15) 인터페이스를 사용하세요.  
   
  E_UNEXPECTED  
  예기치 않은 메서드가 호출되었습니다. 예를 들어 이 메서드를 호출하기 전에 **BCPInit** 메서드를 호출하지 않았습니다. 대량 복사 작업에 이 메서드를 두 번 이상 호출한 경우에도 발생합니다.  

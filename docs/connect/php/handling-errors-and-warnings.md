@@ -1,7 +1,8 @@
 ---
-title: 오류 및 경고 처리 | Microsoft Docs
+title: 오류 및 경고 처리
+description: 이 항목에서는 Microsoft SQLSRV Driver for PHP for SQL Server를 사용할 때 발생하는 오류 및 경고 처리에 대한 정보를 제공합니다.
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 0afea5d5-8797-4a85-b1b4-8cde1f3888a3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 464daee0f6c6bbb18b63b7a7cc9fab9cad827fdb
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 28aba75d57c8bec09478266f2231900cd53197cf
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80916599"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680718"
 ---
 # <a name="handling-errors-and-warnings"></a>오류 및 경고 처리
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -26,7 +27,7 @@ PDO_SQLSRV 드라이버를 사용하는 경우 [PDO](https://php.net/manual/book
   
 ## <a name="in-this-section"></a>섹션 내용  
   
-|항목|Description|  
+|항목|설명|  
 |---------|---------------|  
 |[방법: SQLSRV 드라이버를 사용하여 오류 및 경고 처리 구성](../../connect/php/how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver.md)|오류 및 경고 처리에 대한 구성 설정을 변경하는 방법을 보여 줍니다.|  
 |[방법: SQLSRV 드라이버를 사용하여 오류 및 경고 처리](../../connect/php/how-to-handle-errors-and-warnings-using-the-sqlsrv-driver.md)|오류와 경고를 별도로 처리하는 방법을 보여 줍니다.|  

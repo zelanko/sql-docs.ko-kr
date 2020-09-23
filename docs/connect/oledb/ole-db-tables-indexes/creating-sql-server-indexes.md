@@ -1,6 +1,6 @@
 ---
 title: SQL Server 인덱스 만들기(OLE DB 드라이버) | Microsoft Docs
-description: OLE DB Driver for SQL Server를 사용하여 SQL Server 인덱스 만들기
+description: OLE DB Driver for SQL Server는 소비자가 SQL Server 테이블에 새 인덱스를 정의할 수 있도록 IIndexDefinition::CreateIndex 함수를 노출합니다.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, indexes
 - indexes [OLE DB]
 - adding indexes
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 96521e592f1c44d4929c93dca7463d8e20189726
-ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 2e0868c24fe17c7c386ca78198e72e74a5be6cde
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86977820"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88858760"
 ---
 # <a name="creating-sql-server-indexes"></a>SQL Server 인덱스 만들기
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

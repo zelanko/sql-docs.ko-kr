@@ -2,7 +2,7 @@
 description: 상수(Transact-SQL)
 title: 상수(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/22/2017
+ms.date: 09/09/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -33,12 +33,12 @@ ms.assetid: 58ae3ff3-b1d5-41b2-9a2f-fc7ab8c83e0e
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cd464b8b08948d913dc003df0b488fd85f5bdda7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0b8b68b99fa522b69401eab47d54e40cdf8621c2
+ms.sourcegitcommit: 780a81c02bc469c6e62a9c307e56a973239983b6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422937"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90027284"
 ---
 # <a name="constants-transact-sql"></a>상수(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -46,9 +46,12 @@ ms.locfileid: "88422937"
 상수는 리터럴 값 또는 스칼라 값이라고도 하며 특정 데이터 값을 나타내는 기호입니다. 상수의 형식은 나타내는 값의 데이터 형식에 따라 다릅니다.
   
 ## <a name="character-string-constants"></a>문자열 상수
-문자열 상수는 작은따옴표로 묶으며 영숫자(a-z, A-Z, 0-9)와 특수 문자(!, @, 및 #)가 포함됩니다. 데이터 정렬을 지정하는 데 COLLATE 절을 사용하지 않으면 현재 데이터베이스의 기본 데이터 정렬이 문자열 상수에 할당됩니다. 사용자가 입력한 문자열은 컴퓨터의 코드 페이지를 통해 평가되고 필요한 경우 데이터베이스 기본 코드 페이지로 변환됩니다.
+문자열 상수는 작은따옴표로 묶으며 영숫자(a-z, A-Z, 0-9)와 특수 문자(!, @, 및 #)가 포함됩니다. 문자열 상수에는 현재 데이터베이스의 기본 데이터 정렬이 할당됩니다. COLLATE 절을 사용하는 경우에는 COLLATE 절에서 지정된 데이터 정렬로 변환하기 전에 데이터베이스 기본 코드 페이지로 변환이 계속 수행됩니다. 사용자가 입력한 문자열은 컴퓨터의 코드 페이지를 통해 평가되고 필요한 경우 데이터베이스 기본 코드 페이지로 변환됩니다.
+
+> [!NOTE]
+> COLLATE 절을 사용하여 [UTF8 사용 데이터 정렬](../../relational-databases/collations/collation-and-unicode-support.md#utf8)을 지정하면 COLLATE 절에서 지정된 데이터 정렬로 변환하기 전에 데이터베이스 기본 코드 페이지로 변환이 계속 수행됩니다. 지정된 유니코드 사용 데이터 정렬로 직접 변환되지 않습니다. 자세한 내용은 [유니코드 문자열](#unicode-strings)을 참조하세요.
   
-연결에 대해 QUOTED_IDENTIFIER 옵션이 OFF로 설정된 경우에는 문자열을 큰따옴표로 묶을 수도 있지만 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 제공자와 ODBC 드라이버는 자동으로 SET QUOTED_IDENTIFIER ON을 사용합니다. 작은따옴표를 사용하는 것이 좋습니다.
+연결에 대해 QUOTED_IDENTIFIER 옵션을 OFF로 설정한 경우에는 문자열을 큰따옴표로 묶을 수도 있지만 Microsoft [OLE DB Driver for SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) 및 [ODBC Driver for SQL Server](../../connect/odbc/download-odbc-driver-for-sql-server.md)는 자동으로 `SET QUOTED_IDENTIFIER ON`을 사용합니다. 작은따옴표를 사용하는 것이 좋습니다.
   
 작은따옴표로 묶인 문자열이 삽입된 작은따옴표를 포함하는 경우에 두 개의 작은따옴표가 하나의 작은따옴표를 나타냅니다. 큰따옴표로 묶인 문자열에는 이렇게 하지 않아도 됩니다.
   
@@ -64,18 +67,23 @@ ms.locfileid: "88422937"
   
 빈 문자열은 두 개의 작은따옴표 사이에 아무 것도 없을 경우로 나타냅니다. 6.x 호환성 모드에서 빈 문자열은 하나의 공백으로 처리됩니다.
   
-문자열 상수는 고급 데이터 정렬을 지원합니다.
+문자열 상수는 고급 [데이터 정렬](../../relational-databases/collations/collation-and-unicode-support.md)을 지원합니다.
   
 > [!NOTE]  
->  8000바이트보다 큰 문자 상수는 **varchar(max)** 데이터로 형식화됩니다.  
+> 8000바이트보다 큰 문자 상수는 **varchar(max)** 데이터로 형식화됩니다.  
   
 ## <a name="unicode-strings"></a>유니코드 문자열
-유니코드 문자열의 형식은 문자열 상수와 비슷하지만 N 식별자로 시작합니다(N은 SQL-92 표준에서 National Language를 나타냄). N 접두사는 대문자여야 합니다. 예를 들어 'Michél'은는 문자열 상수이고 N'Michél'은 유니코드 상수입니다. 유니코드 상수는 유니코드 데이터로 해석되며 코드 페이지를 사용하여 평가되지 않습니다. 유니코드 상수는 데이터 정렬을 가집니다. 이 데이터 정렬은 주로 비교와 대/소문자 구분을 제어합니다. COLLATE 절을 사용하여 데이터 정렬을 지정하지 않으면 현재 데이터베이스의 기본 데이터 정렬이 유니코드 상수에 할당됩니다. 유니코드 데이터는 문자당 1바이트가 아닌 문자당 2바이트를 사용하여 저장됩니다. 자세한 내용은 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)을 참조하세요.
+유니코드 문자열의 형식은 문자열 상수와 비슷하지만 N 식별자로 시작합니다(N은 SQL-92 표준에서 National Language를 나타냄). 
+
+> [!IMPORTANT]  
+> N 접두사는 대문자여야 합니다. 
+
+예를 들어 `'Michél'`은 문자 상수이고 `N'Michél'`은 유니코드 상수입니다. 유니코드 상수는 유니코드 데이터로 해석되며 코드 페이지를 사용하여 평가되지 않습니다. 유니코드 상수는 데이터 정렬을 가집니다. 이 데이터 정렬은 주로 비교와 대/소문자 구분을 제어합니다. 유니코드 상수에는 현재 데이터베이스의 기본 데이터 정렬이 할당됩니다. COLLATE 절을 사용하는 경우에는 COLLATE 절에서 지정된 데이터 정렬로 변환하기 전에 데이터베이스 기본 데이터 정렬로 변환이 계속 수행됩니다. 자세한 내용은 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md#storage_differences)을 참조하세요.
   
 유니코드 문자열 상수는 고급 데이터 정렬을 지원합니다.
   
 > [!NOTE]  
->  8000 바이트보다 큰 유니 코드 상수는 ** nvarchar(max) ** 데이터로 입력됩니다.  
+> 8000 바이트보다 큰 유니 코드 상수는 ** nvarchar(max) ** 데이터로 입력됩니다.  
   
 ## <a name="binary-constants"></a>이진 상수
 이진 상수는 `0x` 접미사를 가지며 16진수로 구성된 문자열입니다. 이진 상수는 인용 부호로 묶지 않습니다.
@@ -200,11 +208,12 @@ $542023.14
 ```
   
 ## <a name="enhanced-collations"></a>고급 데이터 정렬  
-SQL Server는 고급 데이터 정렬을 지원하는 문자 및 유니코드 문자열 상수를 지원합니다. 자세한 내용은 [COLLATE &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9) 절을 참조하세요.
+[!INCLUDE[ssde_md](../../includes/ssde_md.md)]는 고급 데이터 정렬을 지원하는 문자 및 유니코드 문자열 상수를 지원합니다. 자세한 내용은 [COLLATE &#40;Transact-SQL&#41;](../../t-sql/statements/collations.md) 절을 참조하세요.
   
 ## <a name="see-also"></a>참고 항목
 [데이터 형식&#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
 [식&#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
-[연산자&#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)
-  
+[연산자 &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)
+[데이터 정렬 및 유니코드 지원](../../relational-databases/collations/collation-and-unicode-support.md)  
+[데이터 정렬 선행 규칙](../../t-sql/statements/collation-precedence-transact-sql.md)    
   

@@ -1,6 +1,6 @@
 ---
 title: IROWSETFASTLOAD 및 ISEQUENTIALSTREAM을 사용하여 BLOB 데이터를 SQL Server로 보내기 | Microsoft Docs
-description: IROWSETFASTLOAD 및 ISEQUENTIALSTREAM을 사용하여 BLOB 데이터를 SQL Server로 보내기
+description: IRowsetFastLoad를 사용하여 SQL Server로 다양한 길이의 BLOB 데이터를 행별로 스트리밍하는 방법을 알아봅니다. 또한 이 예제에서는 ISequentialStream을 보여 줍니다.
 ms.custom: ''
 ms.date: 05/25/2020
 ms.prod: sql
@@ -8,14 +8,14 @@ ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: reference
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 2add5bbc762709122a6cf7c7292fd139c42cd39f
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 543b717031ff3217b2c71a636d0d3efd38cd8238
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001484"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88860243"
 ---
 # <a name="send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db"></a>IROWSETFASTLOAD 및 ISEQUENTIALSTREAM을 사용하여 BLOB 데이터를 SQL Server로 보내기(OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

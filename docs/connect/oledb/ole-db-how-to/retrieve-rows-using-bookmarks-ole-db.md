@@ -1,6 +1,6 @@
 ---
 title: 책갈피를 사용하여 행 검색(OLE DB 드라이버)
-description: 책갈피를 사용하여 행 검색(OLE DB)
+description: 이 예제에서는 OLE DB Driver for SQL Server에서 소비자가 책갈피를 사용하여 행을 검색하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -11,14 +11,14 @@ ms.topic: reference
 helpviewer_keywords:
 - bookmarks [OLE DB]
 - rows [OLE DB]
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 51d4b45e42aa9545825ef6c59be6d82b8945e799
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 01adeff5f66d1d37309967147b00f63b1d5b75a4
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244664"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88860250"
 ---
 # <a name="retrieve-rows-using-bookmarks-ole-db"></a>책갈피를 사용하여 행 검색(OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
