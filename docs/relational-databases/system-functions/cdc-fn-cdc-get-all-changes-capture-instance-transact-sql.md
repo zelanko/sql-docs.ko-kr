@@ -85,7 +85,7 @@ cdc.fn_cdc_get_all_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
   
  **__ $ Operation** 이 1 이거나 **__ $ operation** 이 3 인 경우에는 **image**, **text**및 **ntext** 데이터 형식의 열에 항상 NULL 값이 할당 됩니다. 업데이트 중에 열이 변경 되지 **않은 경우** **varbinary (max)**, **varchar (max)** 또는 **nvarchar (MAX)** 데이터 형식의 열에는 NULL 값이 할당 됩니다. **__ $ Operation** 이 1 인 경우에는 삭제 시 이러한 열에 해당 값이 할당 됩니다. 캡처 인스턴스에 포함된 계산 열은 항상 NULL 값을 갖습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]변경 데이터 캡처 쿼리 함수를 사용 하는 방법을 보여 주는 몇 가지 템플릿을 사용할 수 있습니다. 이러한 템플릿은의 **보기** 메뉴에서 사용할 수 있습니다 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] . 자세한 내용은 [템플릿 탐색기](../../ssms/template/template-explorer.md)를 참조 하세요.  
   
  이 예에서는 `Enumerate All Changes for Valid Range Template`을 보여 줍니다. 이 템플릿은 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스의 HumanResources.Department 원본 테이블에 대해 정의된 `cdc.fn_cdc_get_all_changes_HR_Department` 함수를 사용하여 `HR_Department` 캡처 인스턴스에서 현재 사용할 수 있는 모든 변경 내용을 보고합니다.  
